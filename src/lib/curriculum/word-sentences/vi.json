@@ -1199,6 +1199,38 @@
    "src": "made"
   }
  ],
+ "w|áp thấp": [
+  {
+   "text": "Đài báo có một vùng áp thấp đang tiến vào, nên Quang vội thu hoạch lúa.",
+   "en": "The radio reported a low-pressure area approaching, so Quang rushed to harvest his rice.",
+   "ko": "라디오에서 저기압이 다가온다고 해서 꽝은 서둘러 벼를 거둬요.",
+   "blank": "áp thấp",
+   "src": "made"
+  },
+  {
+   "text": "Hà nghe đài báo một vùng áp thấp sẽ gây mưa to ở miền Trung.",
+   "en": "Hà hears on the radio that a low-pressure area will bring heavy rain to central Vietnam.",
+   "ko": "하는 라디오에서 저기압 때문에 중부 지방에 큰비가 온다는 소식을 들어요.",
+   "blank": "áp thấp",
+   "src": "made"
+  }
+ ],
+ "w|áp thấp nhiệt đới": [
+  {
+   "text": "Quang gặt lúa sớm vì sợ áp thấp nhiệt đới gây mưa lớn.",
+   "en": "Quang harvests early, afraid the tropical depression will bring heavy rain.",
+   "ko": "꽝은 열대 저기압이 큰비를 몰고 올까 봐 벼를 일찍 베요.",
+   "blank": "áp thấp nhiệt đới",
+   "src": "made"
+  },
+  {
+   "text": "Chuyến bay của Hà bị hủy vì một cơn áp thấp nhiệt đới.",
+   "en": "Hà's flight was canceled because of a tropical depression.",
+   "ko": "열대 저기압 때문에 하의 비행기가 결항됐어요.",
+   "blank": "áp thấp nhiệt đới",
+   "src": "made"
+  }
+ ],
  "w|ấu trùng": [
   {
    "text": "Đức giải thích cho khách rằng ấu trùng muỗi thường sống trong vũng nước đọng gần bờ.",
@@ -2631,6 +2663,22 @@
    "src": "made"
   }
  ],
+ "w|bằng không": [
+  {
+   "text": "Quang phải tiêm phòng cho đàn lợn, bằng không dịch bệnh có thể lây lan.",
+   "en": "Quang has to vaccinate his pigs, otherwise disease could spread.",
+   "ko": "꽝은 돼지들에게 예방접종을 해야 해요, 그렇지 않으면 병이 퍼질 수 있어요.",
+   "blank": "bằng không",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhắc em trai mặc áo ấm, bằng không sẽ bị cảm lạnh.",
+   "en": "Hà reminds her younger brother to wear warm clothes, otherwise he'll catch a cold.",
+   "ko": "하는 남동생에게 따뜻하게 입으라고, 안 그러면 감기 걸린다고 일러요.",
+   "blank": "bằng không",
+   "src": "made"
+  }
+ ],
  "w|bằng mọi giá": [
   {
    "text": "Chủ thầu muốn bằng mọi giá phải cất nóc trước Tết, nên Hùng tăng ca liên tục.",
@@ -3400,6 +3448,22 @@
    "en": "The teacher taught Linh how to maintain the blender so it lasts long.",
    "ko": "선생님은 믹서기를 오래 쓰도록 관리하는 법을 린에게 가르쳐 줬어요.",
    "blank": "bảo trì",
+   "src": "made"
+  }
+ ],
+ "w|bão tuyết": [
+  {
+   "text": "Quang xem tin bão tuyết ở xứ lạnh trên tivi và mừng vì quê mình không có tuyết.",
+   "en": "Quang watches news of a blizzard in a cold country on TV and is glad there's no snow back home.",
+   "ko": "꽝은 텔레비전에서 추운 나라의 눈보라 소식을 보며 고향엔 눈이 없어 다행이라고 생각해요.",
+   "blank": "bão tuyết",
+   "src": "made"
+  },
+  {
+   "text": "Hà xem phim về một gia đình bị kẹt trong bão tuyết suốt mùa đông.",
+   "en": "Hà watches a film about a family trapped in a blizzard all winter.",
+   "ko": "하는 겨울 내내 눈보라에 갇힌 가족에 관한 영화를 봐요.",
+   "blank": "bão tuyết",
    "src": "made"
   }
  ],
@@ -10771,6 +10835,22 @@
    "blank": "chất lượng"
   }
  ],
+ "w|chật ních": [
+  {
+   "text": "Kho thóc của Quang chật ních sau vụ mùa bội thu.",
+   "en": "Quang's granary is packed full after the bumper harvest.",
+   "ko": "풍년이 든 뒤 꽝의 곡식 창고가 꽉 찼어요.",
+   "blank": "chật ních",
+   "src": "made"
+  },
+  {
+   "text": "Ngày đầu hè, bãi biển chật ních người và Hà chẳng tìm được chỗ trải khăn.",
+   "en": "On the first day of summer the beach is packed, and Hà can't find a spot for her towel.",
+   "ko": "초여름 첫날 해변이 사람으로 꽉 차서 하는 수건 펼 자리도 못 찾았어요.",
+   "blank": "chật ních",
+   "src": "made"
+  }
+ ],
  "w|chất thải": [
   {
    "text": "Hùng ủ chất thải chăn nuôi làm phân bón cho nương ngô.",
@@ -10921,6 +11001,22 @@
    "en": "It's on fire, everyone get outside quick!",
    "ko": "불이야, 다들 빨리 밖으로 나와!",
    "blank": "Cháy"
+  }
+ ],
+ "w|chảy": [
+  {
+   "text": "Quang đào rãnh cho nước chảy ra khỏi vườn rau.",
+   "en": "Quang digs a trench so the water drains out of the vegetable garden.",
+   "ko": "꽝은 물이 채소밭 밖으로 흘러가도록 도랑을 파요.",
+   "blank": "chảy",
+   "src": "made"
+  },
+  {
+   "text": "Hà ngồi nghe tiếng nước chảy róc rách từ mái hiên sau cơn mưa.",
+   "en": "Hà sits listening to the water trickling from the eaves after the rain.",
+   "ko": "하는 비 그친 뒤 처마에서 졸졸 흐르는 물소리를 들으며 앉아 있어요.",
+   "blank": "chảy",
+   "src": "made"
   }
  ],
  "w|chạy": [
@@ -11200,6 +11296,22 @@
    "en": "The ancient trees grow so close together that Linh has to squeeze her way through.",
    "ko": "고목들이 빽빽하게 들어차서 린은 비집고 지나가야 해요.",
    "blank": "chen chúc",
+   "src": "made"
+  }
+ ],
+ "w|chen vào": [
+  {
+   "text": "Quang đang tính sổ thì đứa cháu chen vào hỏi đủ thứ chuyện.",
+   "en": "Quang was doing the accounts when his nephew butted in with all sorts of questions.",
+   "ko": "꽝이 장부를 계산하는데 조카가 끼어들어 이것저것 물어봤어요.",
+   "blank": "chen vào",
+   "src": "made"
+  },
+  {
+   "text": "Ánh nắng đầu xuân chen vào qua khe cửa phòng Hà.",
+   "en": "The early spring sunlight squeezes in through the gap in Hà's door.",
+   "ko": "이른 봄 햇살이 하의 방문 틈으로 비집고 들어와요.",
+   "blank": "chen vào",
    "src": "made"
   }
  ],
@@ -17029,6 +17141,22 @@
    "src": "made"
   }
  ],
+ "w|cuộc nói chuyện": [
+  {
+   "text": "Một cuộc nói chuyện với kỹ sư nông nghiệp đã giúp Quang quyết định đổi giống lúa.",
+   "en": "A conversation with an agricultural engineer helped Quang decide to switch rice varieties.",
+   "ko": "농업 기술자와 나눈 대화 덕분에 꽝은 벼 품종을 바꾸기로 했어요.",
+   "blank": "cuộc nói chuyện",
+   "src": "made"
+  },
+  {
+   "text": "Hà có một cuộc nói chuyện dài với bà về những mùa đông ngày xưa.",
+   "en": "Hà has a long conversation with her grandmother about the winters of the old days.",
+   "ko": "하는 할머니와 옛날 겨울 이야기로 긴 대화를 나눠요.",
+   "blank": "cuộc nói chuyện",
+   "src": "made"
+  }
+ ],
  "w|cuộc sống": [
   {
    "text": "Cuộc sống ở quê chậm rãi.",
@@ -18339,6 +18467,22 @@
    "src": "made"
   }
  ],
+ "w|dâng": [
+  {
+   "text": "Thấy nước suối dâng nhanh, Quang lùa đàn trâu lên đồi.",
+   "en": "Seeing the stream rising fast, Quang drives the buffaloes up the hill.",
+   "ko": "개울물이 빠르게 불어나자 꽝은 물소 떼를 언덕 위로 몰아요.",
+   "blank": "dâng",
+   "src": "made"
+  },
+  {
+   "text": "Hà ngồi trên bờ đê nhìn nước sông dâng cao mỗi mùa lũ.",
+   "en": "Hà sits on the dike watching the river rise high every flood season.",
+   "ko": "하는 홍수철마다 둑에 앉아 강물이 높이 불어나는 걸 지켜봐요.",
+   "blank": "dâng",
+   "src": "made"
+  }
+ ],
  "w|dạng": [
   {
    "text": "Cả hai dạng đều chính xác như nhau.",
@@ -19635,6 +19779,22 @@
    "blank": "đau đầu"
   }
  ],
+ "w|đâu đâu": [
+  {
+   "text": "Mùa này đâu đâu trên trang trại của Quang cũng thơm mùi lúa chín.",
+   "en": "This season, everywhere on Quang's farm smells of ripe rice.",
+   "ko": "이맘때면 꽝의 농장 어디서나 익은 벼 냄새가 나요.",
+   "blank": "đâu đâu",
+   "src": "made"
+  },
+  {
+   "text": "Mùa xuân về, đâu đâu trong khu phố của Hà cũng có hoa đào nở.",
+   "en": "When spring comes, peach blossoms bloom everywhere in Hà's neighborhood.",
+   "ko": "봄이 오면 하네 동네 어디서나 복숭아꽃이 피어요.",
+   "blank": "đâu đâu",
+   "src": "made"
+  }
+ ],
  "w|đậu đen": [
   {
    "text": "Xôi đậu đen của Quang được cô giáo khen dẻo và thơm.",
@@ -19896,6 +20056,22 @@
    "en": "Taking a walk helps relax the mind.",
    "ko": "산책하면 머리가 맑아져요.",
    "blank": "đầu óc",
+   "src": "made"
+  }
+ ],
+ "w|đâu phải": [
+  {
+   "text": "Quang bảo nuôi bò đâu phải chuyện dễ như người ta nghĩ.",
+   "en": "Quang says raising cattle is by no means as easy as people think.",
+   "ko": "꽝은 소 키우는 게 사람들 생각처럼 쉬운 일이 아니라고 해요.",
+   "blank": "đâu phải",
+   "src": "made"
+  },
+  {
+   "text": "Hà bảo mùa thu ở phố cổ đâu phải chỉ có hoa sữa.",
+   "en": "Hà says autumn in the old quarter is about far more than just milk flowers.",
+   "ko": "하는 옛 거리의 가을이 밀크플라워만 있는 게 아니라고 해요.",
+   "blank": "đâu phải",
    "src": "made"
   }
  ],
@@ -20228,6 +20404,22 @@
    "en": "Mai bought her child a car seat with its seat belt still intact.",
    "ko": "마이는 안전벨트가 멀쩡한 어린이 카시트를 아이에게 사 줬어요.",
    "blank": "dây an toàn",
+   "src": "made"
+  }
+ ],
+ "w|đầy ắp": [
+  {
+   "text": "Giỏ trứng của Quang đầy ắp sau một buổi sáng nhặt trong chuồng.",
+   "en": "Quang's egg basket is brimming after a morning of collecting in the coop.",
+   "ko": "아침 내내 닭장에서 주운 달걀로 꽝의 바구니가 가득 찼어요.",
+   "blank": "đầy ắp",
+   "src": "made"
+  },
+  {
+   "text": "Giỏ xe đạp của Hà đầy ắp hoa cúc họa mi mua đầu đông.",
+   "en": "Hà's bicycle basket is overflowing with daisies bought at the start of winter.",
+   "ko": "하의 자전거 바구니에 초겨울에 산 데이지가 가득해요.",
+   "blank": "đầy ắp",
    "src": "made"
   }
  ],
@@ -22233,6 +22425,22 @@
    "src": "made"
   }
  ],
+ "w|dính dáng": [
+  {
+   "text": "Quang chẳng muốn dính dáng gì đến mấy tay buôn đất.",
+   "en": "Quang wants nothing to do with those land speculators.",
+   "ko": "꽝은 땅 투기꾼들과 엮이고 싶지 않아요.",
+   "blank": "dính dáng",
+   "src": "made"
+  },
+  {
+   "text": "Hà cười bảo chuyện cảm lạnh chẳng dính dáng gì đến việc ăn kem mùa đông.",
+   "en": "Hà laughs that catching a cold has nothing to do with eating ice cream in winter.",
+   "ko": "하는 감기는 겨울에 아이스크림 먹는 것과 아무 상관이 없다며 웃어요.",
+   "blank": "dính dáng",
+   "src": "made"
+  }
+ ],
  "w|dinh dưỡng": [
   {
    "text": "Vợ Tuấn rất chú ý đến dinh dưỡng trong suất cơm trẻ em.",
@@ -22294,6 +22502,22 @@
    "en": "Trang wants to change the prejudice that girls can't farm as well as boys.",
    "ko": "짱은 여자가 남자만큼 농사를 못 짓는다는 편견을 바꾸고 싶어요.",
    "blank": "định kiến",
+   "src": "made"
+  }
+ ],
+ "w|dính líu": [
+  {
+   "text": "Quang khẳng định mình không dính líu gì đến vụ bán phân bón giả.",
+   "en": "Quang insists he had nothing to do with the fake fertilizer sales.",
+   "ko": "꽝은 가짜 비료 판매 사건과 아무 관련이 없다고 단언해요.",
+   "blank": "dính líu",
+   "src": "made"
+  },
+  {
+   "text": "Hà xem bản tin về một công ty dính líu đến vụ xả thải gây ô nhiễm sông.",
+   "en": "Hà watches a news report about a company implicated in dumping waste that polluted a river.",
+   "ko": "하는 강을 오염시킨 폐수 방류 사건에 연루된 회사 뉴스를 봐요.",
+   "blank": "dính líu",
    "src": "made"
   }
  ],
@@ -22536,6 +22760,22 @@
    "en": "On weekdays the restaurant opens around six in the morning.",
    "ko": "평일에 식당은 아침 여섯 시쯤 문을 열어요.",
    "blank": "độ",
+   "src": "made"
+  }
+ ],
+ "w|độ ẩm": [
+  {
+   "text": "Quang kiểm tra độ ẩm của đất trước khi tưới cho vườn cà phê.",
+   "en": "Quang checks the soil moisture before watering the coffee garden.",
+   "ko": "꽝은 커피밭에 물을 주기 전에 흙의 습도를 확인해요.",
+   "blank": "độ ẩm",
+   "src": "made"
+  },
+  {
+   "text": "Hà mua máy hút ẩm vì độ ẩm mùa nồm quá cao.",
+   "en": "Hà bought a dehumidifier because the humidity during the damp season is too high.",
+   "ko": "하는 습한 철에 습도가 너무 높아서 제습기를 샀어요.",
+   "blank": "độ ẩm",
    "src": "made"
   }
  ],
@@ -28843,6 +29083,22 @@
    "blank": "giờ"
   }
  ],
+ "w|gió bão": [
+  {
+   "text": "Mấy cây chuối của Quang bị gió bão quật ngã hết.",
+   "en": "Quang's banana trees were all knocked down by the storm winds.",
+   "ko": "꽝의 바나나 나무들이 폭풍에 모두 쓰러졌어요.",
+   "blank": "gió bão",
+   "src": "made"
+  },
+  {
+   "text": "Hà giúp mẹ chằng lại cửa sổ trước khi gió bão ập đến.",
+   "en": "Hà helps her mother secure the windows before the storm winds hit.",
+   "ko": "하는 폭풍이 들이닥치기 전에 어머니를 도와 창문을 단단히 묶어요.",
+   "blank": "gió bão",
+   "src": "made"
+  }
+ ],
  "w|giờ giấc": [
   {
    "text": "Giữ giờ giấc giúp công việc suôn sẻ hơn.",
@@ -28902,6 +29158,22 @@
    "en": "The classmate next to Hà offers her a slice of pork roll brought from home.",
    "ko": "옆자리 친구가 집에서 가져온 조루어 한 조각을 하에게 권해요.",
    "blank": "giò lụa",
+   "src": "made"
+  }
+ ],
+ "w|gió mùa": [
+  {
+   "text": "Quang chờ gió mùa đến mới bắt đầu gieo mạ.",
+   "en": "Quang waits for the monsoon before he starts sowing rice seedlings.",
+   "ko": "꽝은 계절풍이 불어와야 모를 뿌리기 시작해요.",
+   "blank": "gió mùa",
+   "src": "made"
+  },
+  {
+   "text": "Hà lôi áo khoác ra khi gió mùa đông bắc bắt đầu về.",
+   "en": "Hà pulls out her coat when the northeast monsoon starts to arrive.",
+   "ko": "북동 계절풍이 불기 시작하면 하는 외투를 꺼내요.",
+   "blank": "gió mùa",
    "src": "made"
   }
  ],
@@ -29748,6 +30020,22 @@
    "en": "Everyone contributed a bit of food to the party.",
    "ko": "각자 파티 음식을 조금씩 가져왔어요.",
    "blank": "góp",
+   "src": "made"
+  }
+ ],
+ "w|góp phần": [
+  {
+   "text": "Quang tin rằng trồng rừng sẽ góp phần giữ đất cho cả làng.",
+   "en": "Quang believes planting forests will help protect the soil for the whole village.",
+   "ko": "꽝은 숲을 가꾸면 온 마을의 땅을 지키는 데 도움이 된다고 믿어요.",
+   "blank": "góp phần",
+   "src": "made"
+  },
+  {
+   "text": "Hà trồng thêm cây xanh trên ban công để góp phần làm mát khu phố.",
+   "en": "Hà plants more greenery on her balcony to help cool the neighborhood.",
+   "ko": "하는 동네를 시원하게 하는 데 보탬이 되려고 발코니에 식물을 더 심어요.",
+   "blank": "góp phần",
    "src": "made"
   }
  ],
@@ -34087,6 +34375,22 @@
    "src": "made"
   }
  ],
+ "w|hữu tình": [
+  {
+   "text": "Trang trại của Quang nằm giữa một vùng sơn thủy hữu tình.",
+   "en": "Quang's farm lies in the middle of a charming landscape of hills and rivers.",
+   "ko": "꽝의 농장은 산과 물이 어우러진 아름다운 고장 한가운데 있어요.",
+   "blank": "hữu tình",
+   "src": "made"
+  },
+  {
+   "text": "Mùa thu, Hà thích đạp xe dọc hồ ngắm cảnh hữu tình.",
+   "en": "In autumn, Hà loves cycling along the lake to enjoy the lovely scenery.",
+   "ko": "가을이면 하는 호숫가를 따라 자전거를 타며 아름다운 경치를 즐겨요.",
+   "blank": "hữu tình",
+   "src": "made"
+  }
+ ],
  "w|hủy": [
   {
    "text": "Họ phải hủy chuyến đi vì mưa lớn.",
@@ -35969,6 +36273,22 @@
    "en": "They chose to live somewhere with a mild climate.",
    "ko": "그들은 온화한 기후인 곳에서 살기로 했어.",
    "blank": "khí hậu"
+  }
+ ],
+ "w|khí hậu nhiệt đới": [
+  {
+   "text": "Quang nói khí hậu nhiệt đới rất hợp để trồng xoài và mít.",
+   "en": "Quang says a tropical climate is perfect for growing mangoes and jackfruit.",
+   "ko": "꽝은 열대 기후가 망고와 잭프루트를 기르기에 딱 맞다고 해요.",
+   "blank": "khí hậu nhiệt đới",
+   "src": "made"
+  },
+  {
+   "text": "Hà giải thích cho bạn ở xứ lạnh rằng khí hậu nhiệt đới không chỉ có nắng nóng.",
+   "en": "Hà explains to a friend from a cold country that a tropical climate isn't just heat and sun.",
+   "ko": "하는 추운 나라 친구에게 열대 기후가 덥기만 한 건 아니라고 설명해요.",
+   "blank": "khí hậu nhiệt đới",
+   "src": "made"
   }
  ],
  "w|khi mà": [
@@ -41335,6 +41655,22 @@
    "src": "made"
   }
  ],
+ "w|lốc xoáy": [
+  {
+   "text": "Một trận lốc xoáy bất ngờ đã thổi bay mái chuồng gà của Quang.",
+   "en": "A sudden whirlwind blew the roof off Quang's chicken coop.",
+   "ko": "갑작스러운 회오리바람에 꽝의 닭장 지붕이 날아갔어요.",
+   "blank": "lốc xoáy",
+   "src": "made"
+  },
+  {
+   "text": "Hà đọc báo thấy lốc xoáy đã làm tốc mái nhiều nhà ở ngoại thành.",
+   "en": "Hà read that a whirlwind tore the roofs off many houses on the outskirts.",
+   "ko": "하는 회오리바람에 외곽 집 여러 채의 지붕이 날아갔다는 기사를 읽었어요.",
+   "blank": "lốc xoáy",
+   "src": "made"
+  }
+ ],
  "w|lôi": [
   {
    "text": "Anh ấy lôi chiếc vali ra khỏi xe.",
@@ -42348,6 +42684,22 @@
    "en": "Mai is always on guard against people who use fake money to cheat sellers.",
    "ko": "마이는 위조지폐로 상인을 속이는 사람들을 늘 경계해요.",
    "blank": "lừa gạt",
+   "src": "made"
+  }
+ ],
+ "w|lưa thưa": [
+  {
+   "text": "Ruộng ngô năm nay mọc lưa thưa vì hạn hán, Quang buồn lắm.",
+   "en": "The corn field grew sparse this year because of drought, and Quang is very sad.",
+   "ko": "올해 가뭄으로 옥수수밭이 듬성듬성 자라서 꽝은 많이 속상해요.",
+   "blank": "lưa thưa",
+   "src": "made"
+  },
+  {
+   "text": "Cuối thu, cây bàng trước nhà Hà chỉ còn lưa thưa vài chiếc lá đỏ.",
+   "en": "In late autumn, the almond tree in front of Hà's house has only a few scattered red leaves left.",
+   "ko": "늦가을이면 하네 집 앞 반 나무에는 붉은 잎이 몇 장만 듬성듬성 남아요.",
+   "blank": "lưa thưa",
    "src": "made"
   }
  ],
@@ -46281,6 +46633,22 @@
    "blank": "Mưa"
   }
  ],
+ "w|mưa axit": [
+  {
+   "text": "Quang đọc báo thấy mưa axit có thể làm hại cây trồng ở vùng gần nhà máy.",
+   "en": "Quang read in the paper that acid rain can harm crops near factories.",
+   "ko": "꽝은 산성비가 공장 근처 농작물에 해를 줄 수 있다는 기사를 읽었어요.",
+   "blank": "mưa axit",
+   "src": "made"
+  },
+  {
+   "text": "Thầy giáo giải thích cho lớp của Hà rằng khói nhà máy có thể gây ra mưa axit.",
+   "en": "The teacher explained to Hà's class that factory smoke can cause acid rain.",
+   "ko": "선생님은 하의 반에 공장 연기가 산성비를 일으킬 수 있다고 설명했어요.",
+   "blank": "mưa axit",
+   "src": "made"
+  }
+ ],
  "w|mua bán": [
   {
    "text": "Mua bán nhà đất lúc này khá khó.",
@@ -46293,6 +46661,22 @@
    "en": "They specialize in buying and selling used goods online.",
    "ko": "그들은 온라인에서 중고 물건 매매를 전문으로 해.",
    "blank": "mua bán"
+  }
+ ],
+ "w|mưa bão": [
+  {
+   "text": "Mùa mưa bão nào Quang cũng gia cố lại chuồng trại.",
+   "en": "Every storm season, Quang reinforces the barns and pens.",
+   "ko": "폭풍우 철마다 꽝은 축사를 다시 보강해요.",
+   "blank": "mưa bão",
+   "src": "made"
+  },
+  {
+   "text": "Cứ đến tháng Chín là Hà lại lo mùa mưa bão kéo đến.",
+   "en": "Every September, Hà starts worrying about the storm season arriving.",
+   "ko": "구월만 되면 하는 폭풍우 철이 올까 걱정해요.",
+   "blank": "mưa bão",
+   "src": "made"
   }
  ],
  "w|mua chịu": [
@@ -46308,6 +46692,22 @@
    "en": "The stall owner, who knows Mai, let her buy the wooden cabinet on credit to pay at month's end.",
    "ko": "단골 가게 주인 할머니가 마이에게 나무 장을 외상으로 주고 월말에 갚으라고 했어요.",
    "blank": "mua chịu",
+   "src": "made"
+  }
+ ],
+ "w|mưa đá": [
+  {
+   "text": "Trận mưa đá chiều qua làm dập nát cả luống rau của Quang.",
+   "en": "Yesterday afternoon's hailstorm crushed Quang's whole vegetable bed.",
+   "ko": "어제 오후 우박에 꽝의 채소밭 이랑이 다 짓뭉개졌어요.",
+   "blank": "mưa đá",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhớ có một năm vào tháng Tư có mưa đá to bằng hạt ngô.",
+   "en": "Hà remembers one year in April when there was hail as big as corn kernels.",
+   "ko": "하는 어느 해 사월에 옥수수알만 한 우박이 내렸던 걸 기억해요.",
+   "blank": "mưa đá",
    "src": "made"
   }
  ],
@@ -46384,6 +46784,22 @@
    "en": "There was drizzle this morning, so fewer customers came into Hà's shop than usual.",
    "ko": "오늘 아침 이슬비가 와서 하 씨 가게에 손님이 평소보다 적어요.",
    "blank": "mưa phùn",
+   "src": "made"
+  }
+ ],
+ "w|mưa rào": [
+  {
+   "text": "Quang tranh thủ phơi thóc trước khi cơn mưa rào kéo đến.",
+   "en": "Quang hurries to dry the paddy before the shower arrives.",
+   "ko": "꽝은 소나기가 오기 전에 서둘러 벼를 말려요.",
+   "blank": "mưa rào",
+   "src": "made"
+  },
+  {
+   "text": "Mùa hè hay có mưa rào bất chợt nên Hà luôn mang ô theo.",
+   "en": "Sudden showers are common in summer, so Hà always carries an umbrella.",
+   "ko": "여름엔 소나기가 갑자기 자주 내려서 하는 늘 우산을 들고 다녀요.",
+   "blank": "mưa rào",
    "src": "made"
   }
  ],
@@ -48625,6 +49041,22 @@
    "src": "made"
   }
  ],
+ "w|ngập lụt": [
+  {
+   "text": "Năm ngoái ruộng lúa của Quang bị ngập lụt, mất trắng nửa vụ.",
+   "en": "Last year Quang's rice fields flooded and he lost half the harvest.",
+   "ko": "작년에 꽝의 논이 물에 잠겨 수확의 절반을 잃었어요.",
+   "blank": "ngập lụt",
+   "src": "made"
+  },
+  {
+   "text": "Mỗi khi mưa lớn, con phố nhà Hà lại ngập lụt đến đầu gối.",
+   "en": "Whenever it rains hard, the street where Hà lives floods knee-deep.",
+   "ko": "비가 많이 올 때마다 하네 동네 거리는 무릎까지 물에 잠겨요.",
+   "blank": "ngập lụt",
+   "src": "made"
+  }
+ ],
  "w|ngất": [
   {
    "text": "Giữa buổi họp dân, một ông cụ bị ngất vì nóng, Đức vội gọi y tế.",
@@ -50144,6 +50576,22 @@
    "en": "After a long practice, the bowl of beef noodle soup tasted unusually good to Thảo.",
    "ko": "긴 연습 뒤에 먹은 분보 한 그릇이 타오에게 유난히 맛있었어요.",
    "blank": "ngon miệng",
+   "src": "made"
+  }
+ ],
+ "w|ngổn ngang": [
+  {
+   "text": "Sau cơn bão, sân nhà Quang ngổn ngang cành cây gãy.",
+   "en": "After the storm, Quang's yard is strewn with broken branches.",
+   "ko": "폭풍이 지나간 뒤 꽝의 마당에는 부러진 나뭇가지가 어지럽게 널려 있어요.",
+   "blank": "ngổn ngang",
+   "src": "made"
+  },
+  {
+   "text": "Đồ mùa hè và đồ mùa đông nằm ngổn ngang trên giường khi Hà dọn tủ quần áo.",
+   "en": "Summer and winter clothes lie in a jumble on the bed as Hà sorts her wardrobe.",
+   "ko": "하가 옷장을 정리하는 동안 여름옷과 겨울옷이 침대 위에 어지럽게 널려 있어요.",
+   "blank": "ngổn ngang",
    "src": "made"
   }
  ],
@@ -54367,6 +54815,22 @@
    "blank": "nhưng mà"
   }
  ],
+ "w|nhúng tay": [
+  {
+   "text": "Quang không muốn nhúng tay vào chuyện tranh chấp đất của hàng xóm.",
+   "en": "Quang doesn't want to get involved in the neighbors' land dispute.",
+   "ko": "꽝은 이웃의 땅 분쟁에 끼어들고 싶지 않아요.",
+   "blank": "nhúng tay",
+   "src": "made"
+  },
+  {
+   "text": "Hà ngại nhúng tay vào nước lạnh buốt những sáng tháng Chạp.",
+   "en": "Hà dreads dipping her hands into icy water on mornings in the last lunar month.",
+   "ko": "하는 음력 섣달 아침마다 얼음장 같은 물에 손 담그기가 싫어요.",
+   "blank": "nhúng tay",
+   "src": "made"
+  }
+ ],
  "w|nhuộm": [
   {
    "text": "Ở tầng ba có tiệm tóc, vợ Phong vào nhuộm tóc màu nâu.",
@@ -56225,6 +56689,22 @@
    "src": "made"
   }
  ],
+ "w|ở đâu": [
+  {
+   "text": "Quang hỏi khắp xóm xem con bê lạc đang ở đâu.",
+   "en": "Quang asks around the hamlet where the lost calf might be.",
+   "ko": "꽝은 잃어버린 송아지가 어디 있는지 동네방네 물어봐요.",
+   "blank": "ở đâu",
+   "src": "made"
+  },
+  {
+   "text": "Hà hỏi bạn bè mùa hè này nên đi biển ở đâu cho mát.",
+   "en": "Hà asks her friends where they should go to the beach this summer to stay cool.",
+   "ko": "하는 친구들에게 이번 여름 시원하게 어느 바다로 가면 좋을지 물어요.",
+   "blank": "ở đâu",
+   "src": "made"
+  }
+ ],
  "w|ở đây": [
   {
    "text": "Bạn chờ mình ở đây một lát nhé.",
@@ -56772,6 +57252,22 @@
    "en": "When baking, Linh has to keep the oven temperature stable.",
    "ko": "빵을 구울 때 린은 오븐 온도를 일정하게 유지해야 해요.",
    "blank": "ổn định",
+   "src": "made"
+  }
+ ],
+ "w|ôn đới": [
+  {
+   "text": "Quang thử trồng táo, một loại cây của vùng ôn đới, nhưng không thành.",
+   "en": "Quang tried growing apples, a temperate-zone tree, but it didn't work.",
+   "ko": "꽝은 온대 지방 나무인 사과를 길러 봤지만 잘 안 됐어요.",
+   "blank": "ôn đới",
+   "src": "made"
+  },
+  {
+   "text": "Hà ước được sống một mùa thu ở xứ ôn đới để ngắm lá phong.",
+   "en": "Hà wishes she could spend an autumn in a temperate country to see the maple leaves.",
+   "ko": "하는 단풍잎을 보러 온대 나라에서 가을을 한 번 보내 보고 싶어 해요.",
+   "blank": "ôn đới",
    "src": "made"
   }
  ],
@@ -62909,6 +63405,22 @@
    "src": "made"
   }
  ],
+ "w|sấm sét": [
+  {
+   "text": "Đàn bò của Quang sợ hãi chạy tán loạn khi có sấm sét.",
+   "en": "Quang's cattle scatter in fear whenever there's thunder and lightning.",
+   "ko": "천둥 번개가 치면 꽝의 소 떼가 겁에 질려 흩어져 달아나요.",
+   "blank": "sấm sét",
+   "src": "made"
+  },
+  {
+   "text": "Hồi bé, Hà sợ sấm sét đến mức chui xuống gầm giường.",
+   "en": "As a child, Hà was so scared of thunder and lightning that she hid under the bed.",
+   "ko": "어릴 때 하는 천둥 번개가 무서워서 침대 밑으로 숨곤 했어요.",
+   "blank": "sấm sét",
+   "src": "made"
+  }
+ ],
  "w|sầm uất": [
   {
    "text": "Bệnh viện của Nam nằm ngay trên con phố sầm uất nhất thành phố.",
@@ -63581,6 +64093,38 @@
    "ko": "이건 나무로 만든 거예요, 쇠로 만든 거예요?",
    "blank": "sắt",
    "src": "tatoeba:9012112/dotheduyet1999 en:998984/ellasevia"
+  }
+ ],
+ "w|sạt lở": [
+  {
+   "text": "Quang lo con mương sau vườn có nguy cơ sạt lở sau mấy trận mưa.",
+   "en": "Quang worries the ditch behind the garden might collapse after the recent rains.",
+   "ko": "꽝은 몇 차례 비가 온 뒤 정원 뒤 도랑이 무너질까 걱정해요.",
+   "blank": "sạt lở",
+   "src": "made"
+  },
+  {
+   "text": "Hà xem tin sạt lở bờ sông ở miền Tây trên tivi.",
+   "en": "Hà watches news on TV about riverbank erosion in the Mekong Delta.",
+   "ko": "하는 텔레비전에서 메콩 델타 강둑이 무너졌다는 소식을 봐요.",
+   "blank": "sạt lở",
+   "src": "made"
+  }
+ ],
+ "w|sạt lở đất": [
+  {
+   "text": "Quang trồng tre dọc sườn đồi để chống sạt lở đất.",
+   "en": "Quang plants bamboo along the hillside to prevent landslides.",
+   "ko": "꽝은 산사태를 막으려고 언덕 비탈을 따라 대나무를 심어요.",
+   "blank": "sạt lở đất",
+   "src": "made"
+  },
+  {
+   "text": "Hà hoãn chuyến đi Sa Pa vì đường bị sạt lở đất.",
+   "en": "Hà postponed her trip to Sa Pa because the road was hit by a landslide.",
+   "ko": "하는 길에 산사태가 나서 사파 여행을 미뤘어요.",
+   "blank": "sạt lở đất",
+   "src": "made"
   }
  ],
  "w|sắt thép": [
@@ -69365,6 +69909,22 @@
    "src": "made"
   }
  ],
+ "w|thấp kém": [
+  {
+   "text": "Quang không bao giờ coi nghề nông là thấp kém.",
+   "en": "Quang never considers farming a lowly profession.",
+   "ko": "꽝은 농사일을 천하다고 여긴 적이 없어요.",
+   "blank": "thấp kém",
+   "src": "made"
+  },
+  {
+   "text": "Hà không đồng ý khi có người bảo nghề bán hoa theo mùa là thấp kém.",
+   "en": "Hà disagrees when someone says selling seasonal flowers is a lowly job.",
+   "ko": "하는 철마다 꽃을 파는 일이 천하다는 말에 동의하지 않아요.",
+   "blank": "thấp kém",
+   "src": "made"
+  }
+ ],
  "w|thập kỷ": [
   {
    "text": "Đã gần một thập kỷ kể từ lần cuối Hùng gặp người bạn ấy.",
@@ -73293,6 +73853,22 @@
    "src": "made"
   }
  ],
+ "w|tia chớp": [
+  {
+   "text": "Một tia chớp lóe lên, và Quang thấy rõ cái cây đổ ngang cổng.",
+   "en": "A flash of lightning lit up, and Quang clearly saw the tree fallen across the gate.",
+   "ko": "번갯불이 번쩍하자 꽝은 대문을 가로막고 쓰러진 나무를 똑똑히 봤어요.",
+   "blank": "tia chớp",
+   "src": "made"
+  },
+  {
+   "text": "Hà chụp được một tia chớp rạch ngang bầu trời mùa hạ.",
+   "en": "Hà captured a bolt of lightning slicing across the summer sky.",
+   "ko": "하는 여름 하늘을 가르는 번개를 사진에 담았어요.",
+   "blank": "tia chớp",
+   "src": "made"
+  }
+ ],
  "w|tía tô": [
   {
    "text": "Minh thích gói chả cá với lá tía tô mua ở chợ.",
@@ -74564,6 +75140,22 @@
    "en": "Only after finishing her coffee did Ngọc really wake up from her nap.",
    "ko": "커피를 다 마시고 나서야 응옥은 낮잠에서 제대로 정신이 들었어요.",
    "blank": "tỉnh lại",
+   "src": "made"
+  }
+ ],
+ "w|tĩnh lặng": [
+  {
+   "text": "Buổi sớm trên trang trại tĩnh lặng, Quang chỉ nghe tiếng gà gáy.",
+   "en": "Early morning on the farm is still, and Quang hears only the roosters crowing.",
+   "ko": "이른 아침 농장은 고요해서 꽝의 귀엔 닭 우는 소리만 들려요.",
+   "blank": "tĩnh lặng",
+   "src": "made"
+  },
+  {
+   "text": "Hà yêu những buổi sáng mùa đông tĩnh lặng, khi phố còn chưa thức dậy.",
+   "en": "Hà loves still winter mornings, when the streets haven't yet woken up.",
+   "ko": "하는 거리가 아직 깨어나지 않은 고요한 겨울 아침을 사랑해요.",
+   "blank": "tĩnh lặng",
    "src": "made"
   }
  ],
@@ -76289,6 +76881,22 @@
    "src": "tatoeba:13769784/leucammieuvu en:1868100/CK"
   }
  ],
+ "w|tràn": [
+  {
+   "text": "Nước sông tràn vào ao cá, nên Quang phải đắp bờ suốt đêm.",
+   "en": "River water spilled into the fish pond, so Quang had to build up the bank all night.",
+   "ko": "강물이 양어장으로 넘쳐 들어와서 꽝은 밤새 둑을 쌓아야 했어요.",
+   "blank": "tràn",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể mùa lũ, nước sông tràn cả vào sân nhà bà ngoại.",
+   "en": "Hà says that in flood season the river overflows right into her grandmother's yard.",
+   "ko": "하는 홍수철이면 강물이 외할머니 집 마당까지 넘쳐 들어온다고 해요.",
+   "blank": "tràn",
+   "src": "made"
+  }
+ ],
  "w|trận": [
   {
    "text": "Trận đấu tối nay xem không?",
@@ -77574,6 +78182,22 @@
    "en": "The first year without Grandpa, Hương's house at Tet feels so empty.",
    "ko": "할아버지가 안 계신 첫해라 흐엉네 설날 집이 텅 빈 것 같아요.",
    "blank": "trống trải",
+   "src": "made"
+  }
+ ],
+ "w|trống trơn": [
+  {
+   "text": "Sau đợt lũ, chuồng gà của Quang trống trơn.",
+   "en": "After the flood, Quang's chicken coop is completely empty.",
+   "ko": "홍수가 지나간 뒤 꽝의 닭장은 텅 비었어요.",
+   "blank": "trống trơn",
+   "src": "made"
+  },
+  {
+   "text": "Mùa đông, sân chơi trước nhà Hà trống trơn vì trẻ con ở cả trong nhà.",
+   "en": "In winter, the playground in front of Hà's house is empty because the children all stay inside.",
+   "ko": "겨울이면 아이들이 다 집 안에 있어서 하네 집 앞 놀이터가 텅 비어요.",
+   "blank": "trống trơn",
    "src": "made"
   }
  ],
@@ -79434,6 +80058,22 @@
    "en": "Linh's first investor was a middle-aged man who loves technology.",
    "ko": "린의 첫 투자자는 기술을 아주 좋아하는 중년 아저씨였어요.",
    "blank": "tuổi trung niên",
+   "src": "made"
+  }
+ ],
+ "w|tuôn": [
+  {
+   "text": "Mồ hôi tuôn ròng ròng trên lưng Quang khi anh cuốc đất giữa trưa.",
+   "en": "Sweat pours down Quang's back as he hoes the soil at noon.",
+   "ko": "한낮에 땅을 일구는 꽝의 등에 땀이 줄줄 흘러요.",
+   "blank": "tuôn",
+   "src": "made"
+  },
+  {
+   "text": "Đọc lá thư bố gửi từ xa, nước mắt Hà tuôn như mưa.",
+   "en": "Reading the letter her father sent from afar, Hà's tears poured like rain.",
+   "ko": "멀리서 아버지가 보낸 편지를 읽으며 하는 눈물을 비 오듯 쏟았어요.",
+   "blank": "tuôn",
    "src": "made"
   }
  ],

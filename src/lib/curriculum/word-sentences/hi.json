@@ -225,6 +225,22 @@
    "blank": "अक्षर"
   }
  ],
+ "w|अक्षांश": [
+  {
+   "text": "रवि ने फ़ोन में अपने कैंप का अक्षांश और देशांतर नोट कर लिया।",
+   "en": "Ravi noted down his camp's latitude and longitude on his phone.",
+   "ko": "라비는 휴대폰에 캠프의 위도와 경도를 적어 두었어요.",
+   "blank": "अक्षांश",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के मौसम वाले ऐप को हर शहर का अक्षांश चाहिए होता है।",
+   "en": "Anjali's weather app needs the latitude of every city.",
+   "ko": "안잘리의 날씨 앱에는 도시마다 위도가 필요해요.",
+   "blank": "अक्षांश",
+   "src": "made"
+  }
+ ],
  "w|अक्सर": [
   {
    "text": "वह अक्सर देर से दफ़्तर पहुँचता है।",
@@ -852,6 +868,22 @@
    "en": "The kite got stuck on a high branch of the tree.",
    "ko": "연이 나무 높은 가지에 걸렸어요.",
    "blank": "अटक",
+   "src": "made"
+  }
+ ],
+ "w|अटकाना": [
+  {
+   "text": "रवि ने तंबू का दरवाज़ा एक लकड़ी से अटकाया ताकि हवा से न खुले।",
+   "en": "Ravi wedged the tent flap with a stick so the wind wouldn't open it.",
+   "ko": "라비는 바람에 열리지 않게 텐트 문을 나뭇가지로 걸어 두었어요.",
+   "blank": "अटकाया",
+   "src": "made"
+  },
+  {
+   "text": "एक छोटी-सी ग़लती ने पूरे सिस्टम को अटका दिया, और अंजलि रात भर जागती रही।",
+   "en": "A tiny mistake jammed the whole system, and Anjali stayed up all night.",
+   "ko": "작은 실수 하나가 시스템 전체를 멈춰 세워서 안잘리는 밤을 새웠어요.",
+   "blank": "अटका",
    "src": "made"
   }
  ],
@@ -4201,6 +4233,22 @@
    "blank": "अलग अलग"
   }
  ],
+ "w|अलगाना": [
+  {
+   "text": "रवि ने गीली और सूखी लकड़ियों को अलगाया, ताकि आग जल्दी पकड़े।",
+   "en": "Ravi separated the wet wood from the dry so the fire would catch quickly.",
+   "ko": "라비는 불이 잘 붙도록 젖은 나무와 마른 나무를 갈라 놓았어요.",
+   "blank": "अलगाया",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने ग्राहकों के डेटा को उम्र के हिसाब से अलगाया।",
+   "en": "Anjali separated the customer data by age.",
+   "ko": "안잘리는 고객 데이터를 나이별로 나눴어요.",
+   "blank": "अलगाया",
+   "src": "made"
+  }
+ ],
  "w|अलगाव": [
   {
    "text": "इतने साल के अलगाव के बाद भी अजय को विनोद की हँसी साफ़ याद है।",
@@ -5025,6 +5073,22 @@
    "blank": "असाधारण"
   }
  ],
+ "w|असाध्य": [
+  {
+   "text": "डॉक्टर ने कहा कि मसूड़ों की यह बीमारी असाध्य नहीं है, तो सुनील को राहत मिली।",
+   "en": "Sunil was relieved when the doctor said this gum disease was not incurable.",
+   "ko": "의사가 이 잇몸 병은 불치병이 아니라고 하자 수닐은 안심했어요.",
+   "blank": "असाध्य",
+   "src": "made"
+  },
+  {
+   "text": "कविता के नाटक की नायिका एक असाध्य बीमारी से जूझते हुए भी मुस्कुराती रहती है।",
+   "en": "The heroine of Kavita's play keeps smiling even as she battles an incurable illness.",
+   "ko": "카비타 연극의 여주인공은 불치병과 싸우면서도 늘 웃어요.",
+   "blank": "असाध्य",
+   "src": "made"
+  }
+ ],
  "w|असीम": [
   {
    "text": "राहुल ने लिखा कि सुमन की दोस्ती उसके लिए असीम ख़ज़ाना है।",
@@ -5164,6 +5228,22 @@
    "en": "The trail markers were unclear, so Shalini kept checking the map.",
    "ko": "길 표시가 흐릿해서 샬리니는 계속 지도를 봤어요.",
    "blank": "अस्पष्ट",
+   "src": "made"
+  }
+ ],
+ "w|अस्वस्थ": [
+  {
+   "text": "सुनील उस दिन अस्वस्थ था, इसलिए उसने अपॉइंटमेंट आगे बढ़ा दिया।",
+   "en": "Sunil was unwell that day, so he postponed his appointment.",
+   "ko": "그날 수닐은 몸이 안 좋아서 예약을 미뤘어요.",
+   "blank": "अस्वस्थ",
+   "src": "made"
+  },
+  {
+   "text": "मुख्य अभिनेता अस्वस्थ था, इसलिए कविता को आख़िरी समय पर उसका रोल भी याद करना पड़ा।",
+   "en": "The lead actor was unwell, so Kavita had to learn his part too at the last minute.",
+   "ko": "주연 배우가 몸이 안 좋아서 카비타는 막판에 그 역할 대사까지 외워야 했어요.",
+   "blank": "अस्वस्थ",
    "src": "made"
   }
  ],
@@ -5441,6 +5521,22 @@
    "en": "Clouds covered the sky.",
    "ko": "구름이 하늘을 덮었어.",
    "blank": "आकाश"
+  }
+ ],
+ "w|आकाशगंगा": [
+  {
+   "text": "शहर की रोशनी से दूर रवि ने पहली बार आकाशगंगा को अपनी आँखों से देखा।",
+   "en": "Far from the city lights, Ravi saw the Milky Way with his own eyes for the first time.",
+   "ko": "도시 불빛에서 멀리 떨어진 곳에서 라비는 처음으로 은하수를 직접 봤어요.",
+   "blank": "आकाशगंगा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने अपनी कंपनी के नए सर्वर का नाम आकाशगंगा रखा।",
+   "en": "Anjali named her company's new server Akashganga, after the Milky Way.",
+   "ko": "안잘리는 회사의 새 서버 이름을 은하수라고 지었어요.",
+   "blank": "आकाशगंगा",
+   "src": "made"
   }
  ],
  "w|आकृति": [
@@ -9219,6 +9315,22 @@
    "src": "made"
   }
  ],
+ "w|उखड़ना": [
+  {
+   "text": "आँधी में रवि के तंबू की एक खूँटी उखड़ गई।",
+   "en": "In the storm one of the pegs of Ravi's tent was pulled out.",
+   "ko": "폭풍에 라비 텐트의 말뚝 하나가 뽑혔어요.",
+   "blank": "उखड़",
+   "src": "made"
+  },
+  {
+   "text": "सर्वर बदलते समय पुराने कनेक्शन उखड़ गए, और अंजलि को सब दोबारा जोड़ना पड़ा।",
+   "en": "While switching servers the old connections came loose, and Anjali had to reconnect everything.",
+   "ko": "서버를 바꾸다가 기존 연결이 끊어져서 안잘리는 전부 다시 이어야 했어요.",
+   "blank": "उखड़",
+   "src": "made"
+  }
+ ],
  "w|उखाड़ना": [
   {
    "text": "बगीचे से खरपतवार उखाड़ना आसान नहीं।",
@@ -9245,6 +9357,22 @@
    "en": "Grass started growing on the roof by itself.",
    "ko": "지붕에 풀이 저절로 나기 시작했어.",
    "blank": "उगना"
+  }
+ ],
+ "w|उगलना": [
+  {
+   "text": "रवि ने बच्चों को बताया कि ज्वालामुखी फटने पर आग और राख उगलता है।",
+   "en": "Ravi told the children that a volcano spews out fire and ash when it erupts.",
+   "ko": "라비는 아이들에게 화산이 터지면 불과 재를 뿜어낸다고 알려 줬어요.",
+   "blank": "उगलता",
+   "src": "made"
+  },
+  {
+   "text": "नई मशीन ने पल भर में हज़ारों रिपोर्टें उगल दीं, और अंजलि की टीम दंग रह गई।",
+   "en": "The new machine spat out thousands of reports in a moment, and Anjali's team was stunned.",
+   "ko": "새 기계가 순식간에 보고서 수천 장을 쏟아 내서 안잘리 팀은 깜짝 놀랐어요.",
+   "blank": "उगल",
+   "src": "made"
   }
  ],
  "w|उँगली": [
@@ -9323,6 +9451,22 @@
    "src": "made"
   }
  ],
+ "w|उघाड़ना": [
+  {
+   "text": "डॉक्टर ने दाँत की ऊपरी परत उघाड़कर देखा कि सड़न कितनी गहरी है।",
+   "en": "The doctor uncovered the tooth's top layer to see how deep the decay went.",
+   "ko": "의사는 이의 겉층을 벗겨 내고 충치가 얼마나 깊은지 살펴봤어요.",
+   "blank": "उघाड़कर",
+   "src": "made"
+  },
+  {
+   "text": "नाटक के आख़िरी दृश्य में कविता का किरदार परिवार का एक पुराना राज़ उघाड़ता है।",
+   "en": "In the play's final scene Kavita's character exposes an old family secret.",
+   "ko": "연극 마지막 장면에서 카비타가 맡은 인물이 집안의 오랜 비밀을 폭로해요.",
+   "blank": "उघाड़ता",
+   "src": "made"
+  }
+ ],
  "w|उचित": [
   {
    "text": "यह फ़ैसला बिल्कुल उचित है।",
@@ -9395,6 +9539,22 @@
    "en": "Stopping the ball from bouncing is not easy.",
    "ko": "공이 튀는 걸 막기는 쉽지 않아.",
    "blank": "उछलना"
+  }
+ ],
+ "w|उजड़ना": [
+  {
+   "text": "सुनील के बचपन के दंत चिकित्सक का पुराना क्लिनिक अब उजड़ चुका है।",
+   "en": "The old clinic of Sunil's childhood dentist is now derelict.",
+   "ko": "수닐이 어릴 때 다니던 치과는 이제 폐허가 됐어요.",
+   "blank": "उजड़",
+   "src": "made"
+  },
+  {
+   "text": "कविता के नाटक में एक हरा-भरा गाँव बाढ़ में उजड़ जाता है।",
+   "en": "In Kavita's play a lush green village is laid waste by a flood.",
+   "ko": "카비타의 연극에서 푸르른 마을 하나가 홍수에 폐허가 돼요.",
+   "blank": "उजड़",
+   "src": "made"
   }
  ],
  "w|उजला": [
@@ -9637,6 +9797,22 @@
    "en": "Come down the mountain slowly.",
    "ko": "산에서 천천히 내려와.",
    "blank": "उतरो"
+  }
+ ],
+ "w|उतराना": [
+  {
+   "text": "सुनील ने देखा कि कुल्ला करने वाले कप में पानी पर एक तिनका उतराता रहा।",
+   "en": "Sunil noticed a bit of straw floating on the water in the rinsing cup.",
+   "ko": "수닐은 입 헹구는 컵 물 위에 지푸라기 하나가 떠 있는 걸 봤어요.",
+   "blank": "उतराता",
+   "src": "made"
+  },
+  {
+   "text": "मंच पर बने तालाब में काग़ज़ की नाव उतराती रही, और दर्शक तालियाँ बजाने लगे।",
+   "en": "A paper boat floated on the pond built on stage, and the audience began to clap.",
+   "ko": "무대 위 연못에 종이배가 떠다니자 관객들이 박수를 치기 시작했어요.",
+   "blank": "उतराती",
+   "src": "made"
   }
  ],
  "w|उतारना": [
@@ -10340,6 +10516,22 @@
    "en": "Seema borrowed money from the bank to buy a new X-ray machine.",
    "ko": "시마는 새 엑스레이 기계를 사려고 은행에서 돈을 빌렸어요.",
    "blank": "उधार लिए",
+   "src": "made"
+  }
+ ],
+ "w|उधेड़ना": [
+  {
+   "text": "इंतज़ार करते हुए सुनील अपनी कमीज़ की जेब का ढीला धागा उधेड़ता रहा।",
+   "en": "While waiting, Sunil kept picking at a loose thread on his shirt pocket.",
+   "ko": "기다리는 동안 수닐은 셔츠 주머니의 풀린 실을 계속 뜯었어요.",
+   "blank": "उधेड़ता",
+   "src": "made"
+  },
+  {
+   "text": "ग़लत सिली पोशाक को कविता ने रात भर बैठकर उधेड़ा और फिर से सिला।",
+   "en": "Kavita sat up all night unpicking the badly stitched costume and sewing it again.",
+   "ko": "카비타는 잘못 꿰맨 의상을 밤새 뜯고 다시 꿰맸어요.",
+   "blank": "उधेड़ा",
    "src": "made"
   }
  ],
@@ -11147,6 +11339,22 @@
    "blank": "उभरना"
   }
  ],
+ "w|उभारना": [
+  {
+   "text": "डॉक्टर ने एक्स-रे पर सड़न वाले हिस्से को उभारकर सुनील को दिखाया।",
+   "en": "The doctor highlighted the decayed area on the X-ray and showed it to Sunil.",
+   "ko": "의사는 엑스레이에서 충치 부분을 도드라지게 해서 수닐에게 보여 줬어요.",
+   "blank": "उभारकर",
+   "src": "made"
+  },
+  {
+   "text": "निर्देशक ने कविता से कहा कि इस संवाद में ग़ुस्सा थोड़ा और उभारो।",
+   "en": "The director told Kavita to bring out the anger a little more in this line.",
+   "ko": "연출가는 카비타에게 이 대사에서 분노를 조금 더 드러내라고 했어요.",
+   "blank": "उभारो",
+   "src": "made"
+  }
+ ],
  "w|उमंग": [
   {
    "text": "नई नौकरी की उमंग में रवि सुबह सबसे पहले दफ़्तर पहुँच गया।",
@@ -11315,6 +11523,22 @@
    "blank": "उलझना"
   }
  ],
+ "w|उलझाना": [
+  {
+   "text": "डॉक्टर ने भारी शब्दों में सुनील को उलझाने के बजाय सीधी भाषा में सब समझाया।",
+   "en": "Instead of confusing Sunil with heavy terms, the doctor explained everything in plain language.",
+   "ko": "의사는 어려운 말로 수닐을 헷갈리게 하지 않고 쉬운 말로 다 설명했어요.",
+   "blank": "उलझाने",
+   "src": "made"
+  },
+  {
+   "text": "नाटक का कथानक दर्शकों को जानबूझकर उलझाता है, और कविता को यही पसंद है।",
+   "en": "The play's plot deliberately confuses the audience, and that's exactly what Kavita likes.",
+   "ko": "연극 줄거리가 일부러 관객을 헷갈리게 하는데 카비타는 바로 그게 좋아요.",
+   "blank": "उलझाता",
+   "src": "made"
+  }
+ ],
  "w|उलटना": [
   {
    "text": "करण ने हल से खेत की मिट्टी उलट दी।",
@@ -11328,6 +11552,22 @@
    "en": "In the children's running around, the plate of sweets got knocked over.",
    "ko": "아이들이 뛰어다니다가 과자 쟁반이 엎어졌어요.",
    "blank": "उलट",
+   "src": "made"
+  }
+ ],
+ "w|उलीचना": [
+  {
+   "text": "बारिश में क्लिनिक के बाहर पानी भर गया, तो सुनील ने स्टाफ़ के साथ बाल्टी से पानी उलीचा।",
+   "en": "Water flooded outside the clinic in the rain, so Sunil bailed it out with a bucket along with the staff.",
+   "ko": "비에 치과 밖이 물에 잠기자 수닐은 직원들과 함께 양동이로 물을 퍼냈어요.",
+   "blank": "उलीचा",
+   "src": "made"
+  },
+  {
+   "text": "बारिश वाले दृश्य के बाद मंच पर पानी भर गया, तो कविता बाल्टी से पानी उलीचने लगी।",
+   "en": "After the rain scene the stage was flooded, so Kavita started bailing out the water with a bucket.",
+   "ko": "비 장면이 끝나고 무대에 물이 차자 카비타는 양동이로 물을 퍼내기 시작했어요.",
+   "blank": "उलीचने",
    "src": "made"
   }
  ],
@@ -11465,6 +11705,22 @@
    "en": "Her voice is very sweet.",
    "ko": "목소리가 아주 고와.",
    "blank": "उसकी"
+  }
+ ],
+ "w|ऊँघना": [
+  {
+   "text": "वेटिंग रूम में बैठा सुनील इंतज़ार करते-करते ऊँघने लगा।",
+   "en": "Sitting in the waiting room, Sunil began to doze off as he waited.",
+   "ko": "대기실에 앉아 기다리던 수닐은 꾸벅꾸벅 졸기 시작했어요.",
+   "blank": "ऊँघने",
+   "src": "made"
+  },
+  {
+   "text": "अगली पंक्ति में एक दर्शक को ऊँघते देखकर कविता ने अपनी आवाज़ ऊँची कर दी।",
+   "en": "Seeing a spectator dozing in the front row, Kavita raised her voice.",
+   "ko": "앞줄 관객이 조는 걸 보고 카비타는 목소리를 높였어요.",
+   "blank": "ऊँघते",
+   "src": "made"
   }
  ],
  "w|ऊँचा": [
@@ -12375,6 +12631,22 @@
    "src": "made"
   }
  ],
+ "w|ओझल होना": [
+  {
+   "text": "धुंध में रवि का दोस्त कुछ ही क़दमों में आँखों से ओझल हो गया।",
+   "en": "In the mist Ravi's friend vanished from sight within a few steps.",
+   "ko": "안개 속에서 라비의 친구는 몇 걸음 만에 시야에서 사라졌어요.",
+   "blank": "ओझल हो",
+   "src": "made"
+  },
+  {
+   "text": "स्क्रीन पर एक बग दिखा और अगले ही पल ओझल हो गया, जिससे अंजलि उलझन में पड़ गई।",
+   "en": "A bug appeared on screen and vanished the next instant, leaving Anjali puzzled.",
+   "ko": "화면에 버그가 떴다가 다음 순간 사라져서 안잘리는 어리둥절했어요.",
+   "blank": "ओझल हो",
+   "src": "made"
+  }
+ ],
  "w|ओटीपी": [
   {
    "text": "ऑनलाइन परीक्षा में लॉग इन करने के लिए राहुल के फ़ोन पर ओटीपी आया।",
@@ -12480,6 +12752,22 @@
    "en": "When hail began falling mid-match, everyone was called in from the open court.",
    "ko": "경기 중에 우박이 내리기 시작하자 야외 코트에서 모두 안으로 불려 들어왔어요.",
    "blank": "ओले",
+   "src": "made"
+  }
+ ],
+ "w|ओलावृष्टि": [
+  {
+   "text": "रात को अचानक ओलावृष्टि हुई, और रवि का तंबू ओलों की आवाज़ से गूँज उठा।",
+   "en": "There was a sudden hailstorm at night, and Ravi's tent rang with the sound of hailstones.",
+   "ko": "밤에 갑자기 우박이 쏟아져서 라비의 텐트가 우박 소리로 울렸어요.",
+   "blank": "ओलावृष्टि",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की टीम ने एक ऐप बनाया है जो किसानों को ओलावृष्टि की चेतावनी पहले ही दे देता है।",
+   "en": "Anjali's team has built an app that warns farmers of hailstorms in advance.",
+   "ko": "안잘리 팀은 농부들에게 우박을 미리 알려 주는 앱을 만들었어요.",
+   "blank": "ओलावृष्टि",
    "src": "made"
   }
  ],
@@ -13041,6 +13329,22 @@
    "src": "made"
   }
  ],
+ "w|कंठ": [
+  {
+   "text": "दाँत के साथ-साथ सुनील के कंठ में भी दर्द था, तो डॉक्टर ने उसका गला भी देखा।",
+   "en": "Along with his tooth, Sunil's throat hurt as well, so the doctor examined it too.",
+   "ko": "이뿐 아니라 목구멍도 아파서 의사가 수닐의 목도 봐 줬어요.",
+   "blank": "कंठ",
+   "src": "made"
+  },
+  {
+   "text": "कविता के गुरु कहते हैं कि अभिनेता की आवाज़ सिर्फ़ कंठ से नहीं, पेट से आनी चाहिए।",
+   "en": "Kavita's teacher says an actor's voice should come not just from the throat but from the belly.",
+   "ko": "카비타의 스승은 배우의 목소리는 목구멍만이 아니라 배에서 나와야 한다고 해요.",
+   "blank": "कंठ",
+   "src": "made"
+  }
+ ],
  "w|कठिन": [
   {
    "text": "यह परीक्षा सच में कठिन थी।",
@@ -13519,6 +13823,22 @@
    "blank": "कप"
   }
  ],
+ "w|कपकपाना": [
+  {
+   "text": "ड्रिल की आवाज़ सुनते ही सुनील के हाथ कपकपाने लगे।",
+   "en": "The moment he heard the drill, Sunil's hands began to tremble.",
+   "ko": "드릴 소리가 들리자마자 수닐의 손이 떨리기 시작했어요.",
+   "blank": "कपकपाने",
+   "src": "made"
+  },
+  {
+   "text": "पहली बार मंच पर जाते हुए कविता के पैर कपकपा रहे थे।",
+   "en": "Going on stage for the first time, Kavita's legs were trembling.",
+   "ko": "처음 무대에 오를 때 카비타는 다리가 후들거렸어요.",
+   "blank": "कपकपा",
+   "src": "made"
+  }
+ ],
  "w|कपड़ा": [
   {
    "text": "गीला कपड़ा धूप में डालो।",
@@ -13744,6 +14064,22 @@
    "en": "Priya admitted that she doesn't like long summer afternoons at all.",
    "ko": "프리야는 여름의 긴 오후가 전혀 좋지 않다고 털어놨어요.",
    "blank": "कबूल किया",
+   "src": "made"
+  }
+ ],
+ "w|कब्ज़": [
+  {
+   "text": "वेटिंग रूम में सुनील के पास बैठे बुज़ुर्ग अपनी कब्ज़ की शिकायत कर रहे थे।",
+   "en": "The elderly man sitting next to Sunil in the waiting room was complaining about his constipation.",
+   "ko": "대기실에서 수닐 옆에 앉은 어르신이 변비 때문에 힘들다고 하셨어요.",
+   "blank": "कब्ज़",
+   "src": "made"
+  },
+  {
+   "text": "कविता के नाटक का एक हास्य दृश्य ऐसे मरीज़ पर है जो हमेशा कब्ज़ का रोना रोता है।",
+   "en": "One comic scene in Kavita's play is about a patient who is forever moaning about constipation.",
+   "ko": "카비타 연극의 웃긴 장면 하나는 늘 변비 타령을 하는 환자 이야기예요.",
+   "blank": "कब्ज़",
    "src": "made"
   }
  ],
@@ -16659,6 +16995,22 @@
    "src": "made"
   }
  ],
+ "w|कुतरना": [
+  {
+   "text": "सुनील तनाव में पेंसिल कुतरता है, और इसी आदत से उसका दाँत चटक गया।",
+   "en": "Sunil gnaws on pencils when he's stressed, and that habit cracked his tooth.",
+   "ko": "수닐은 스트레스를 받으면 연필을 갉아 대는데, 그 버릇 때문에 이가 금 갔어요.",
+   "blank": "कुतरता",
+   "src": "made"
+  },
+  {
+   "text": "पुराने थिएटर में चूहों ने कविता की पोशाक का किनारा कुतर दिया था।",
+   "en": "In the old theatre, rats had gnawed the edge of Kavita's costume.",
+   "ko": "낡은 극장에서 쥐들이 카비타 의상의 가장자리를 갉아 놓았어요.",
+   "blank": "कुतर",
+   "src": "made"
+  }
+ ],
  "w|कुत्ता": [
   {
    "text": "पार्क में कुत्ता भौंक रहा था।",
@@ -16734,6 +17086,22 @@
    "en": "Seema's daughter had hidden a packet of kurkure among the boxes.",
    "ko": "시마의 딸은 상자들 사이에 쿠르쿠레 한 봉지를 숨겨 두었어요.",
    "blank": "कुरकुरे",
+   "src": "made"
+  }
+ ],
+ "w|कुरेदना": [
+  {
+   "text": "सुनील दाँत में फँसा खाना माचिस की तीली से कुरेदता था, और डॉक्टर ने यह आदत छोड़ने को कहा।",
+   "en": "Sunil used to pick food out of his teeth with a matchstick, and the doctor told him to quit the habit.",
+   "ko": "수닐이 이 사이에 낀 음식을 성냥개비로 쑤시곤 해서 의사가 그 버릇을 버리라고 했어요.",
+   "blank": "कुरेदता",
+   "src": "made"
+  },
+  {
+   "text": "घबराहट में कविता मेकअप रूम की मेज़ को नाख़ून से कुरेदती रहती है।",
+   "en": "When she's nervous, Kavita keeps scraping at the make-up room table with her fingernail.",
+   "ko": "긴장하면 카비타는 분장실 탁자를 손톱으로 긁적거려요.",
+   "blank": "कुरेदती",
    "src": "made"
   }
  ],
@@ -16890,6 +17258,22 @@
    "en": "At the office sports day, Neha watched a wrestling bout for the first time.",
    "ko": "회사 체육대회에서 네하는 처음으로 레슬링 경기를 봤어요.",
    "blank": "कुश्ती",
+   "src": "made"
+  }
+ ],
+ "w|कूटना": [
+  {
+   "text": "सुनील की माँ उसके लिए बादाम कूटकर दूध में डालती हैं, ताकि उसे चबाना न पड़े।",
+   "en": "Sunil's mother pounds almonds and adds them to his milk so he doesn't have to chew.",
+   "ko": "수닐의 어머니는 수닐이 씹지 않아도 되게 아몬드를 빻아 우유에 넣어 주세요.",
+   "blank": "कूटकर",
+   "src": "made"
+  },
+  {
+   "text": "एक लोक नाटक में कविता ओखली में धान कूटती दिखाई देती है।",
+   "en": "In a folk play Kavita is seen pounding paddy in a mortar.",
+   "ko": "한 민속극에서 카비타는 절구에 벼를 찧는 모습으로 나와요.",
+   "blank": "कूटती",
    "src": "made"
   }
  ],
@@ -17555,6 +17939,22 @@
    "src": "made"
   }
  ],
+ "w|कैप्सूल": [
+  {
+   "text": "डॉक्टर ने सुनील को सूजन के लिए सुबह-शाम एक कैप्सूल लेने को कहा।",
+   "en": "The doctor told Sunil to take one capsule morning and evening for the swelling.",
+   "ko": "의사는 수닐에게 붓기를 빼려면 아침저녁으로 캡슐 하나씩 먹으라고 했어요.",
+   "blank": "कैप्सूल",
+   "src": "made"
+  },
+  {
+   "text": "शो से पहले कविता ने गले के लिए एक कैप्सूल लिया।",
+   "en": "Before the show Kavita took a capsule for her throat.",
+   "ko": "공연 전에 카비타는 목에 좋은 캡슐 하나를 먹었어요.",
+   "blank": "कैप्सूल",
+   "src": "made"
+  }
+ ],
  "w|कैमरा": [
   {
    "text": "नया कैमरा तस्वीरें साफ़ लेता है।",
@@ -18076,6 +18476,22 @@
    "en": "At the neighborhood birthday party the kids had soft drinks with cake.",
    "ko": "동네 생일 파티에서 아이들은 케이크에 탄산음료를 마셨어요.",
    "blank": "कोल्ड ड्रिंक",
+   "src": "made"
+  }
+ ],
+ "w|कोशिका": [
+  {
+   "text": "डॉक्टर ने सुनील को समझाया कि दाँत की जड़ में भी जीवित कोशिकाएँ होती हैं।",
+   "en": "The doctor explained to Sunil that there are living cells even in the root of a tooth.",
+   "ko": "의사는 수닐에게 이뿌리에도 살아 있는 세포가 있다고 설명했어요.",
+   "blank": "कोशिकाएँ",
+   "src": "made"
+  },
+  {
+   "text": "विज्ञान पर बने बच्चों के नाटक में कविता ने एक कोशिका का किरदार निभाया।",
+   "en": "In a children's play about science, Kavita played a cell.",
+   "ko": "과학을 다룬 어린이 연극에서 카비타는 세포 역을 맡았어요.",
+   "blank": "कोशिका",
    "src": "made"
   }
  ],
@@ -18981,6 +19397,38 @@
    "src": "made"
   }
  ],
+ "w|खपना": [
+  {
+   "text": "इलाज में सुनील का पूरा दिन खप गया, और वह दफ़्तर भी नहीं जा सका।",
+   "en": "The treatment ate up Sunil's whole day, and he couldn't even go to the office.",
+   "ko": "치료에 하루가 다 들어가서 수닐은 회사에도 못 갔어요.",
+   "blank": "खप",
+   "src": "made"
+  },
+  {
+   "text": "इस शो की तैयारी में कविता के कई महीने खप गए।",
+   "en": "Kavita spent many months preparing for this show.",
+   "ko": "이 공연을 준비하느라 카비타는 몇 달을 쏟아부었어요.",
+   "blank": "खप",
+   "src": "made"
+  }
+ ],
+ "w|खपाना": [
+  {
+   "text": "सुनील ने काम पर बहुत दिमाग़ खपाया, पर दाँत के दर्द में कुछ नहीं हो सका।",
+   "en": "Sunil racked his brains over his work, but with the toothache nothing got done.",
+   "ko": "수닐은 일에 머리를 짜냈지만 치통 때문에 아무것도 못 했어요.",
+   "blank": "खपाया",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने नए किरदार को समझने में बहुत दिमाग़ खपाया।",
+   "en": "Kavita racked her brains trying to understand the new character.",
+   "ko": "카비타는 새 배역을 이해하려고 머리를 엄청 굴렸어요.",
+   "blank": "खपाया",
+   "src": "made"
+  }
+ ],
  "w|ख़बर": [
   {
    "text": "ख़बर सुनकर माँ चुप हो गई।",
@@ -19175,6 +19623,38 @@
    "en": "Online shopping has become easy now.",
    "ko": "온라인 쇼핑이 이제 쉬워졌어.",
    "blank": "ख़रीदारी"
+  }
+ ],
+ "w|खरोंच": [
+  {
+   "text": "ब्रश ज़ोर से रगड़ने की वजह से सुनील के मसूड़ों पर खरोंच आ गई थी।",
+   "en": "Scrubbing hard with the brush had left a scratch on Sunil's gums.",
+   "ko": "칫솔질을 세게 해서 수닐의 잇몸에 긁힌 상처가 났어요.",
+   "blank": "खरोंच",
+   "src": "made"
+  },
+  {
+   "text": "तलवारबाज़ी के दृश्य में कविता के हाथ पर हल्की खरोंच आ गई।",
+   "en": "Kavita got a slight scratch on her hand during the sword-fight scene.",
+   "ko": "칼싸움 장면에서 카비타의 손에 살짝 긁힌 상처가 났어요.",
+   "blank": "खरोंच",
+   "src": "made"
+  }
+ ],
+ "w|खरोंचना": [
+  {
+   "text": "क्लिनिक आने से पहले सुनील की बिल्ली ने उसकी कलाई को खरोंचा था, तो नर्स ने पट्टी लगा दी।",
+   "en": "Sunil's cat had scratched his wrist before he came to the clinic, so the nurse put a bandage on it.",
+   "ko": "치과에 오기 전에 고양이가 수닐의 손목을 할퀴어서 간호사가 붕대를 감아 줬어요.",
+   "blank": "खरोंचा",
+   "src": "made"
+  },
+  {
+   "text": "नाटक में बिल्ली बनी कविता की साथी ने परदा खरोंचने का अभिनय किया।",
+   "en": "Kavita's co-actor, playing a cat, mimed scratching the curtain.",
+   "ko": "연극에서 고양이 역을 맡은 카비타의 동료는 커튼을 할퀴는 연기를 했어요.",
+   "blank": "खरोंचने",
+   "src": "made"
   }
  ],
  "w|ख़र्च": [
@@ -19806,6 +20286,22 @@
    "en": "From the window Seema heard the sound of a horse's hooves slipping on the ice.",
    "ko": "시마는 창문 너머로 얼음 위에서 미끄러지는 말발굽 소리를 들었어요.",
    "blank": "खुर",
+   "src": "made"
+  }
+ ],
+ "w|खुरचना": [
+  {
+   "text": "डॉक्टर ने सुनील के दाँतों से जमा हुआ मैल खुरचकर साफ़ किया।",
+   "en": "The doctor scraped the built-up tartar off Sunil's teeth.",
+   "ko": "의사는 수닐 이에 낀 치석을 긁어내 깨끗이 했어요.",
+   "blank": "खुरचकर",
+   "src": "made"
+  },
+  {
+   "text": "मंच के फ़र्श से पुराना पेंट खुरचने में कविता की टीम को पूरा दिन लगा।",
+   "en": "It took Kavita's team a whole day to scrape the old paint off the stage floor.",
+   "ko": "카비타 팀은 무대 바닥의 낡은 페인트를 긁어내는 데 하루가 꼬박 걸렸어요.",
+   "blank": "खुरचने",
    "src": "made"
   }
  ],
@@ -20465,6 +20961,22 @@
    "src": "made"
   }
  ],
+ "w|गठिया": [
+  {
+   "text": "एक बुज़ुर्ग महिला गठिया के कारण कुर्सी से धीरे-धीरे उठीं, तो सुनील ने उनका हाथ थाम लिया।",
+   "en": "An elderly woman rose slowly from her chair because of arthritis, so Sunil took her hand.",
+   "ko": "관절염 때문에 의자에서 천천히 일어나는 할머니의 손을 수닐이 잡아 드렸어요.",
+   "blank": "गठिया",
+   "src": "made"
+  },
+  {
+   "text": "कविता की बूढ़ी चाची को गठिया है, फिर भी वे उसका हर नाटक देखने आती हैं।",
+   "en": "Kavita's elderly aunt has arthritis, yet she comes to see every one of her plays.",
+   "ko": "카비타의 나이 든 숙모는 관절염이 있는데도 카비타의 연극을 빠짐없이 보러 오세요.",
+   "blank": "गठिया",
+   "src": "made"
+  }
+ ],
  "w|गड़ना": [
   {
    "text": "सुनील की नज़र एक कोने में छपी छोटी सी ख़बर पर गड़ी रह गई।",
@@ -20769,6 +21281,22 @@
    "en": "Fresh sugarcane juice is sweet.",
    "ko": "신선한 사탕수수 주스는 달아.",
    "blank": "गन्ना"
+  }
+ ],
+ "w|गपशप करना": [
+  {
+   "text": "अलाव के पास बैठकर रवि और उसके दोस्त देर रात तक गपशप करते रहे।",
+   "en": "Sitting by the campfire, Ravi and his friends chatted till late at night.",
+   "ko": "라비와 친구들은 모닥불 옆에 앉아 밤늦도록 수다를 떨었어요.",
+   "blank": "गपशप करते",
+   "src": "made"
+  },
+  {
+   "text": "चाय के ब्रेक में अंजलि अपनी टीम के साथ गपशप करना पसंद करती है।",
+   "en": "Anjali likes to chat with her team during the tea break.",
+   "ko": "안잘리는 차 마시는 쉬는 시간에 팀원들과 수다 떠는 걸 좋아해요.",
+   "blank": "गपशप करना",
+   "src": "made"
   }
  ],
  "w|गंभीर": [
@@ -23351,6 +23879,22 @@
    "blank": "घास"
   }
  ],
+ "w|घास फूस": [
+  {
+   "text": "आग जलाने के लिए रवि ने सूखा घास फूस इकट्ठा किया।",
+   "en": "Ravi gathered dry grass and straw to light the fire.",
+   "ko": "라비는 불을 피우려고 마른 풀과 지푸라기를 모았어요.",
+   "blank": "घास फूस",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने कहा कि हमारे कोड में बहुत घास फूस भर गया है, अब सफ़ाई का समय है।",
+   "en": "Anjali said a lot of clutter had built up in the code and it was time to clean it.",
+   "ko": "안잘리는 코드에 잡동사니가 너무 쌓였으니 이제 정리할 때라고 했어요.",
+   "blank": "घास फूस",
+   "src": "made"
+  }
+ ],
  "w|घिरना": [
   {
    "text": "अमित की फ़ैक्टरी चारों ओर से खेतों से घिरी है।",
@@ -23777,6 +24321,38 @@
    "src": "made"
   }
  ],
+ "w|घोंसला बनाना": [
+  {
+   "text": "तंबू के पास एक चिड़िया तिनकों से घोंसला बना रही थी, और रवि चुपचाप देखता रहा।",
+   "en": "Near the tent a bird was building a nest from twigs, and Ravi watched quietly.",
+   "ko": "텐트 옆에서 새 한 마리가 지푸라기로 둥지를 짓고 있었고 라비는 조용히 지켜봤어요.",
+   "blank": "घोंसला बना",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने हँसकर बताया कि दफ़्तर के एसी के ऊपर कबूतरों ने घोंसला बना लिया है।",
+   "en": "Anjali laughed as she told how pigeons had built a nest on top of the office AC.",
+   "ko": "안잘리는 사무실 에어컨 위에 비둘기가 둥지를 틀었다며 웃었어요.",
+   "blank": "घोंसला बना",
+   "src": "made"
+  }
+ ],
+ "w|चकमा देना": [
+  {
+   "text": "एक चालाक बंदर रवि को चकमा देकर बिस्किट का पैकेट ले भागा।",
+   "en": "A clever monkey gave Ravi the slip and ran off with the packet of biscuits.",
+   "ko": "약삭빠른 원숭이가 라비를 속이고 과자 봉지를 들고 달아났어요.",
+   "blank": "चकमा देकर",
+   "src": "made"
+  },
+  {
+   "text": "एक हैकर ने सुरक्षा जाँच को चकमा देने की कोशिश की, पर अंजलि की टीम ने उसे पकड़ लिया।",
+   "en": "A hacker tried to dodge the security check, but Anjali's team caught him.",
+   "ko": "해커가 보안 검사를 속이려 했지만 안잘리 팀이 잡아냈어요.",
+   "blank": "चकमा देने",
+   "src": "made"
+  }
+ ],
  "w|चकला": [
   {
    "text": "राहुल को चकला मिला, पर उसका एक कोना टूट गया था।",
@@ -23806,6 +24382,22 @@
    "en": "Far from the dazzle of the city, Kavita breathed easy in the forest.",
    "ko": "도시의 번쩍임에서 벗어난 숲에서 카비타는 편히 숨을 쉬었어요.",
    "blank": "चकाचौंध",
+   "src": "made"
+  }
+ ],
+ "w|चकोर": [
+  {
+   "text": "गाइड ने रवि को एक पुरानी कहानी सुनाई कि चकोर रात भर चाँद को निहारता है।",
+   "en": "The guide told Ravi an old tale that the chakor bird gazes at the moon all night.",
+   "ko": "안내인은 라비에게 차코르 새가 밤새 달을 바라본다는 옛이야기를 들려줬어요.",
+   "blank": "चकोर",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के पक्षियों वाले ऐप में चकोर की आवाज़ भी रिकॉर्ड की गई है।",
+   "en": "Anjali's bird app even has a recording of the chakor's call.",
+   "ko": "안잘리의 새 앱에는 차코르 울음소리도 녹음돼 있어요.",
+   "blank": "चकोर",
    "src": "made"
   }
  ],
@@ -24111,6 +24703,22 @@
    "src": "made"
   }
  ],
+ "w|चंपा": [
+  {
+   "text": "कैंप के पास चंपा का पेड़ था, और रवि को रात भर उसकी ख़ुशबू आती रही।",
+   "en": "There was a champa tree near the camp, and Ravi could smell its fragrance all night.",
+   "ko": "캠프 옆에 참파 나무가 있어서 라비는 밤새 꽃향기를 맡았어요.",
+   "blank": "चंपा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के दफ़्तर के बाहर ज़मीन पर चंपा के फूल बिखरे रहते हैं।",
+   "en": "Champa flowers always lie scattered on the ground outside Anjali's office.",
+   "ko": "안잘리의 사무실 밖 땅에는 늘 참파 꽃이 흩어져 있어요.",
+   "blank": "चंपा",
+   "src": "made"
+  }
+ ],
  "w|चपाती": [
   {
    "text": "माँ गरम-गरम चपाती बना रही हैं।",
@@ -24353,6 +24961,22 @@
    "blank": "चरण"
   }
  ],
+ "w|चरना": [
+  {
+   "text": "सुबह रवि ने देखा कि घाटी में भेड़ें आराम से घास चर रही थीं।",
+   "en": "In the morning Ravi saw sheep grazing peacefully in the valley.",
+   "ko": "아침에 라비는 골짜기에서 양들이 한가로이 풀을 뜯는 걸 봤어요.",
+   "blank": "चर",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के ऐप में चरवाहे दर्ज करते हैं कि उनकी गायें कहाँ चर रही हैं।",
+   "en": "In Anjali's app, herders record where their cows are grazing.",
+   "ko": "안잘리의 앱에서 목동들은 자기 소들이 어디서 풀을 뜯고 있는지 기록해요.",
+   "blank": "चर",
+   "src": "made"
+  }
+ ],
  "w|चरम": [
   {
    "text": "गर्मी के चरम दिनों में नगर निगम चौराहों पर पानी के स्टॉल लगाता है।",
@@ -24529,6 +25153,22 @@
    "en": "Put on dark glasses in the sunlight.",
    "ko": "햇볕에선 검은 안경을 써.",
    "blank": "चश्मा"
+  }
+ ],
+ "w|चहकना": [
+  {
+   "text": "सुबह-सुबह पेड़ों पर चिड़ियाँ चहकने लगीं और रवि की नींद खुल गई।",
+   "en": "Early in the morning birds began chirping in the trees and Ravi woke up.",
+   "ko": "이른 아침 나무 위에서 새들이 지저귀기 시작해 라비는 잠에서 깼어요.",
+   "blank": "चहकने",
+   "src": "made"
+  },
+  {
+   "text": "लॉन्च सफल होने पर अंजलि की पूरी टीम चहक उठी।",
+   "en": "When the launch succeeded, Anjali's whole team burst into cheerful chatter.",
+   "ko": "출시가 성공하자 안잘리 팀 전체가 신이 나서 재잘거렸어요.",
+   "blank": "चहक",
+   "src": "made"
   }
  ],
  "w|चाकू": [
@@ -24984,6 +25624,22 @@
    "en": "Every month Kavita makes khichdi and sends it to the patients of the nearby hospital.",
    "ko": "카비타는 매달 근처 병원 환자들을 위해 키치디를 만들어 보내요.",
    "blank": "चिकित्सालय",
+   "src": "made"
+  }
+ ],
+ "w|चिंघाड़ना": [
+  {
+   "text": "दूर जंगल में किसी हाथी के चिंघाड़ने की आवाज़ सुनकर रवि के बच्चे सहम गए।",
+   "en": "Hearing an elephant trumpeting far off in the forest, Ravi's children got scared.",
+   "ko": "멀리 숲에서 코끼리 울음소리가 들리자 라비의 아이들은 움찔했어요.",
+   "blank": "चिंघाड़ने",
+   "src": "made"
+  },
+  {
+   "text": "ग़ुस्से में मैनेजर ऐसे चिंघाड़ने लगा कि अंजलि को बीच में बोलना पड़ा।",
+   "en": "The manager started bellowing so angrily that Anjali had to step in.",
+   "ko": "매니저가 화가 나서 고함을 지르기 시작하자 안잘리가 끼어들어야 했어요.",
+   "blank": "चिंघाड़ने",
    "src": "made"
   }
  ],
@@ -28141,6 +28797,22 @@
    "src": "made"
   }
  ],
+ "w|जलधारा": [
+  {
+   "text": "चट्टानों से गिरती जलधारा के पास रवि ने पानी की बोतलें भरीं।",
+   "en": "Ravi filled the water bottles by the stream tumbling down the rocks.",
+   "ko": "라비는 바위를 타고 떨어지는 물줄기 옆에서 물병을 채웠어요.",
+   "blank": "जलधारा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के ऐप की पहली स्क्रीन पर पहाड़ से गिरती एक जलधारा की तस्वीर है।",
+   "en": "The first screen of Anjali's app shows a picture of a stream falling from a mountain.",
+   "ko": "안잘리 앱의 첫 화면에는 산에서 떨어지는 물줄기 사진이 있어요.",
+   "blank": "जलधारा",
+   "src": "made"
+  }
+ ],
  "w|जलन": [
   {
    "text": "मिर्च से मुँह में जलन हो गई।",
@@ -30205,6 +30877,22 @@
    "blank": "जो"
   }
  ],
+ "w|जोंक": [
+  {
+   "text": "बरसात के जंगल में रवि के पैर पर एक जोंक चिपक गई, और उसने नमक डालकर उसे हटाया।",
+   "en": "In the rainy forest a leech stuck to Ravi's leg, and he removed it with salt.",
+   "ko": "장마철 숲에서 라비 다리에 거머리가 붙어서 소금을 뿌려 떼어 냈어요.",
+   "blank": "जोंक",
+   "src": "made"
+  },
+  {
+   "text": "एक निवेशक जोंक की तरह मुनाफ़ा चूसना चाहता था, इसलिए अंजलि ने उससे पैसे नहीं लिए।",
+   "en": "One investor wanted to suck out profits like a leech, so Anjali didn't take his money.",
+   "ko": "한 투자자가 거머리처럼 이익만 빨아먹으려 해서 안잘리는 그 돈을 받지 않았어요.",
+   "blank": "जोंक",
+   "src": "made"
+  }
+ ],
  "w|जोकर": [
   {
    "text": "टीम का सबसे मज़ाकिया आदमी ख़ुद को दफ़्तर का जोकर कहता है, और अमित पहले दिन ही हँस पड़ा।",
@@ -31815,6 +32503,22 @@
    "src": "made"
   }
  ],
+ "w|ठिठुरना": [
+  {
+   "text": "रात की ठंड में रवि तंबू के अंदर भी ठिठुरता रहा।",
+   "en": "In the cold of the night Ravi kept shivering even inside the tent.",
+   "ko": "밤 추위에 라비는 텐트 안에서도 계속 덜덜 떨었어요.",
+   "blank": "ठिठुरता",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर का एसी इतना ठंडा था कि अंजलि ठिठुरते हुए कोड लिखती रही।",
+   "en": "The office AC was so cold that Anjali kept writing code while shivering.",
+   "ko": "사무실 에어컨이 너무 세서 안잘리는 덜덜 떨면서 코드를 짰어요.",
+   "blank": "ठिठुरते",
+   "src": "made"
+  }
+ ],
  "w|ठीक": [
   {
    "text": "अब बुखार ठीक है।",
@@ -31980,6 +32684,22 @@
    "en": "The carpenter is hammering nails into the new shelf, so the reading room is closed today.",
    "ko": "목수가 새 책장에 못을 박고 있어서 오늘 열람실은 문을 닫아요.",
    "blank": "ठोक",
+   "src": "made"
+  }
+ ],
+ "w|ठोकर खाना": [
+  {
+   "text": "अंधेरे में रवि ने एक पत्थर से ठोकर खाई और गिरते-गिरते बचा।",
+   "en": "In the dark Ravi stumbled on a stone and nearly fell.",
+   "ko": "어둠 속에서 라비는 돌에 걸려 넘어질 뻔했어요.",
+   "blank": "ठोकर खाई",
+   "src": "made"
+  },
+  {
+   "text": "कई बार ठोकर खाने के बाद ही अंजलि ने सही बिज़नेस मॉडल ढूँढा।",
+   "en": "Only after stumbling many times did Anjali find the right business model.",
+   "ko": "여러 번 넘어진 끝에야 안잘리는 맞는 사업 모델을 찾았어요.",
+   "blank": "ठोकर खाने",
    "src": "made"
   }
  ],
@@ -33276,6 +33996,22 @@
    "en": "In the evening Kavita read an article in the paper about the education system.",
    "ko": "저녁에 카비타는 신문에서 교육 제도에 관한 기사를 읽었어요.",
    "blank": "तंत्र",
+   "src": "made"
+  }
+ ],
+ "w|तंत्रिका": [
+  {
+   "text": "दाँत की तंत्रिका खुली होने से सुनील को ठंडा पानी पीने पर तेज़ झनझनाहट होती थी।",
+   "en": "Because the tooth's nerve was exposed, Sunil felt a sharp tingle whenever he drank cold water.",
+   "ko": "이의 신경이 드러나서 수닐은 찬물을 마실 때마다 찌릿했어요.",
+   "blank": "तंत्रिका",
+   "src": "made"
+  },
+  {
+   "text": "एक भूमिका के लिए कविता ने पढ़ा कि डर लगने पर तंत्रिका तंत्र कैसे काम करता है।",
+   "en": "For a role, Kavita read about how the nervous system works when we feel fear.",
+   "ko": "한 배역을 위해 카비타는 두려울 때 신경계가 어떻게 작동하는지 공부했어요.",
+   "blank": "तंत्रिका",
    "src": "made"
   }
  ],
@@ -35825,6 +36561,22 @@
    "blank": "थूकना"
   }
  ],
+ "w|थेरेपी": [
+  {
+   "text": "सुनील की रूट कैनाल थेरेपी में कई बैठकें लगेंगी।",
+   "en": "Sunil's root canal therapy will take several sittings.",
+   "ko": "수닐의 신경 치료는 여러 번 받아야 해요.",
+   "blank": "थेरेपी",
+   "src": "made"
+  },
+  {
+   "text": "मंच के डर से छुटकारा पाने के लिए कविता ने कुछ महीने थेरेपी ली।",
+   "en": "Kavita had therapy for a few months to get over her stage fright.",
+   "ko": "카비타는 무대 공포증을 이기려고 몇 달 동안 상담 치료를 받았어요.",
+   "blank": "थेरेपी",
+   "src": "made"
+  }
+ ],
  "w|थैला": [
   {
    "text": "बाज़ार से सब्ज़ी का थैला ले आया।",
@@ -37753,6 +38505,22 @@
    "blank": "दीया"
   }
  ],
+ "w|दीर्घायु": [
+  {
+   "text": "दंत चिकित्सक ने सुनील को बताया कि दीर्घायु लोगों में अक्सर दाँतों की अच्छी देखभाल देखी जाती है।",
+   "en": "The dentist told Sunil that long-lived people often take good care of their teeth.",
+   "ko": "치과 의사는 수닐에게 장수하는 사람들은 대개 이를 잘 관리한다고 했어요.",
+   "blank": "दीर्घायु",
+   "src": "made"
+  },
+  {
+   "text": "कविता के नाटक में एक दीर्घायु राजा की कहानी है, जो सौ बरस तक राज करता है।",
+   "en": "Kavita's play tells the story of a long-lived king who reigns for a hundred years.",
+   "ko": "카비타의 연극은 백 년 동안 나라를 다스린 장수한 왕의 이야기예요.",
+   "blank": "दीर्घायु",
+   "src": "made"
+  }
+ ],
  "w|दीवान": [
   {
    "text": "अजय ने बैठक के पुराने दीवान पर बैठकर कॉलेज की तस्वीरें देखीं।",
@@ -38237,6 +39005,22 @@
    "src": "made"
   }
  ],
+ "w|दुष्प्रभाव": [
+  {
+   "text": "सुनील ने पूछा कि दर्द की इस दवा का कोई दुष्प्रभाव तो नहीं होगा।",
+   "en": "Sunil asked whether this painkiller would have any side effects.",
+   "ko": "수닐은 이 진통제에 부작용은 없냐고 물었어요.",
+   "blank": "दुष्प्रभाव",
+   "src": "made"
+  },
+  {
+   "text": "मंच की तेज़ रोशनी का एक दुष्प्रभाव यह है कि कविता की आँखें जल्दी थक जाती हैं।",
+   "en": "One side effect of the bright stage lights is that Kavita's eyes tire quickly.",
+   "ko": "무대의 강한 조명 때문에 생기는 부작용 하나는 카비타의 눈이 금방 피로해진다는 거예요.",
+   "blank": "दुष्प्रभाव",
+   "src": "made"
+  }
+ ],
  "w|दुहराना": [
   {
    "text": "कृपया अपना सवाल दुहराइए।",
@@ -38547,6 +39331,22 @@
    "en": "The villagers revere the deity.",
    "ko": "마을 사람들이 신을 믿어.",
    "blank": "देवता"
+  }
+ ],
+ "w|देवदार": [
+  {
+   "text": "रवि ने देवदार के ऊँचे पेड़ों के बीच अपना तंबू लगाया।",
+   "en": "Ravi pitched his tent among the tall deodar trees.",
+   "ko": "라비는 키 큰 히말라야삼나무 사이에 텐트를 쳤어요.",
+   "blank": "देवदार",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के दफ़्तर की खिड़की से देवदार के पेड़ दिखते हैं, जो उसे शांत रखते हैं।",
+   "en": "Deodar trees are visible from Anjali's office window, and they keep her calm.",
+   "ko": "안잘리의 사무실 창밖으로 히말라야삼나무가 보여서 마음이 차분해져요.",
+   "blank": "देवदार",
+   "src": "made"
   }
  ],
  "w|देवर": [
@@ -39108,6 +39908,22 @@
    "en": "My heart won't stop racing when I see her.",
    "ko": "그녀를 보면 가슴이 계속 두근거려요.",
    "blank": "धड़कना",
+   "src": "made"
+  }
+ ],
+ "w|धड़ल्ले से": [
+  {
+   "text": "रवि का दोस्त जंगल में धड़ल्ले से घूमता है, उसे किसी जानवर का डर नहीं।",
+   "en": "Ravi's friend roams the forest boldly; he isn't afraid of any animal.",
+   "ko": "라비의 친구는 숲을 거침없이 돌아다녀요. 어떤 동물도 무서워하지 않아요.",
+   "blank": "धड़ल्ले से",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की टीम हर हफ़्ते धड़ल्ले से नए फ़ीचर जारी करती है।",
+   "en": "Anjali's team rolls out new features every week without hesitation.",
+   "ko": "안잘리 팀은 매주 거침없이 새 기능을 내놓아요.",
+   "blank": "धड़ल्ले से",
    "src": "made"
   }
  ],
@@ -39904,6 +40720,22 @@
    "en": "The washerman ironed the clothes and returned them.",
    "ko": "세탁부가 옷을 다려서 돌려줬어요.",
    "blank": "धोबी",
+   "src": "made"
+  }
+ ],
+ "w|धौंस जमाना": [
+  {
+   "text": "कैंप का एक बड़ा लड़का छोटे बच्चों पर धौंस जमाता था, तो रवि ने उसे समझाया।",
+   "en": "One of the older boys at camp was bossing the little ones around, so Ravi had a word with him.",
+   "ko": "캠프의 큰 남자아이가 어린아이들에게 으스대자 라비가 타일렀어요.",
+   "blank": "धौंस जमाता",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि को वह मैनेजर पसंद नहीं था जो हर मीटिंग में सब पर धौंस जमाता था।",
+   "en": "Anjali didn't like the manager who bullied everyone at every meeting.",
+   "ko": "안잘리는 회의 때마다 모두에게 으름장을 놓는 그 매니저가 싫었어요.",
+   "blank": "धौंस जमाता",
    "src": "made"
   }
  ],
@@ -44421,6 +45253,22 @@
    "src": "made"
   }
  ],
+ "w|पंखुड़ी": [
+  {
+   "text": "रवि की बेटी ने जंगली फूल की एक पंखुड़ी अपनी डायरी में दबा ली।",
+   "en": "Ravi's daughter pressed a petal of a wildflower in her diary.",
+   "ko": "라비의 딸은 들꽃 꽃잎 하나를 일기장에 끼워 말렸어요.",
+   "blank": "पंखुड़ी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की डिज़ाइनर ने ऐप के आइकन में गुलाब की एक पंखुड़ी जोड़ी।",
+   "en": "Anjali's designer added a rose petal to the app icon.",
+   "ko": "안잘리 회사의 디자이너가 앱 아이콘에 장미 꽃잎 하나를 넣었어요.",
+   "blank": "पंखुड़ी",
+   "src": "made"
+  }
+ ],
  "w|पगडंडी": [
   {
    "text": "पहाड़ी गाँव तक पहुँचने के लिए सुनील को एक पतली पगडंडी पर घंटों चलना पड़ा।",
@@ -44628,6 +45476,22 @@
    "en": "Anjali still regrets not buying the coat during the sale.",
    "ko": "안잘리는 세일 때 코트를 안 산 걸 아직도 후회해요.",
    "blank": "पछतावा",
+   "src": "made"
+  }
+ ],
+ "w|पछाड़ देना": [
+  {
+   "text": "पहाड़ी की दौड़ में रवि के छोटे बेटे ने सबको पछाड़ दिया।",
+   "en": "In the hill race Ravi's younger son beat everyone.",
+   "ko": "언덕 달리기에서 라비의 작은아들이 모두를 제쳤어요.",
+   "blank": "पछाड़ दिया",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के ऐप ने डाउनलोड में बड़ी-बड़ी कंपनियों को पछाड़ दिया।",
+   "en": "Anjali's app beat big companies in downloads.",
+   "ko": "안잘리의 앱은 내려받기 수에서 큰 회사들을 앞질렀어요.",
+   "blank": "पछाड़ दिया",
    "src": "made"
   }
  ],
@@ -48913,6 +49777,22 @@
    "src": "made"
   }
  ],
+ "w|पेंगुइन": [
+  {
+   "text": "अलाव के पास रवि के भतीजे ने पूछा कि क्या पेंगुइन भी पहाड़ों पर रहते हैं।",
+   "en": "By the campfire Ravi's nephew asked whether penguins live in the mountains too.",
+   "ko": "모닥불 옆에서 라비의 조카가 펭귄도 산에 사느냐고 물었어요.",
+   "blank": "पेंगुइन",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के ऐप का लोगो एक छोटा-सा पेंगुइन है।",
+   "en": "The logo of Anjali's app is a little penguin.",
+   "ko": "안잘리 앱의 로고는 작은 펭귄이에요.",
+   "blank": "पेंगुइन",
+   "src": "made"
+  }
+ ],
  "w|पेंच": [
   {
    "text": "दरवाज़े का कब्ज़ा ढीला था, तो अजय ने खुद पेंच कस दिया।",
@@ -49809,6 +50689,22 @@
    "blank": "प्रकाश"
   }
  ],
+ "w|प्रकाश संश्लेषण": [
+  {
+   "text": "रवि ने बच्चों को हरे पत्ते दिखाकर प्रकाश संश्लेषण समझाया।",
+   "en": "Ravi explained photosynthesis to the children by showing them green leaves.",
+   "ko": "라비는 아이들에게 초록 잎을 보여 주며 광합성을 설명했어요.",
+   "blank": "प्रकाश संश्लेषण",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की एक टीम ऐसे सेंसर पर काम कर रही है जो पत्तों में प्रकाश संश्लेषण नापते हैं।",
+   "en": "One of Anjali's teams is working on sensors that measure photosynthesis in leaves.",
+   "ko": "안잘리의 한 팀은 잎의 광합성을 재는 센서를 개발하고 있어요.",
+   "blank": "प्रकाश संश्लेषण",
+   "src": "made"
+  }
+ ],
  "w|प्रकाशक": [
   {
    "text": "मीना की कहानियाँ छापने के लिए एक प्रकाशक ने हाँ कह दी थी।",
@@ -50335,6 +51231,22 @@
    "en": "She won a prize in the painting competition.",
    "ko": "그가 그림 대회에서 상을 탔어.",
    "blank": "प्रतियोगिता"
+  }
+ ],
+ "w|प्रतिरक्षा": [
+  {
+   "text": "डॉक्टर ने सुनील को बताया कि मसूड़ों की सूजन का असर शरीर की प्रतिरक्षा पर भी पड़ता है।",
+   "en": "The doctor told Sunil that swollen gums also affect the body's immunity.",
+   "ko": "의사는 수닐에게 잇몸 염증이 몸의 면역에도 영향을 준다고 했어요.",
+   "blank": "प्रतिरक्षा",
+   "src": "made"
+  },
+  {
+   "text": "लगातार रिहर्सल से कविता की प्रतिरक्षा कमज़ोर पड़ गई और उसे सर्दी लग गई।",
+   "en": "Non-stop rehearsals weakened Kavita's immunity and she caught a cold.",
+   "ko": "쉴 새 없는 연습에 카비타는 면역력이 떨어져 감기에 걸렸어요.",
+   "blank": "प्रतिरक्षा",
+   "src": "made"
   }
  ],
  "w|प्रतिरोध": [
@@ -52691,6 +53603,22 @@
    "src": "made"
   }
  ],
+ "w|फलाँ": [
+  {
+   "text": "रवि का दोस्त हमेशा कहता है कि फलाँ जगह पर उसने भालू देखा था, पर जगह कभी नहीं बताता।",
+   "en": "Ravi's friend always says he saw a bear at such-and-such a place, but never says where.",
+   "ko": "라비의 친구는 늘 어디어디에서 곰을 봤다고 하면서 정확한 곳은 절대 말 안 해요.",
+   "blank": "फलाँ",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने टीम से कहा कि फलाँ कंपनी क्या कर रही है, इससे हमें फ़र्क़ नहीं पड़ना चाहिए।",
+   "en": "Anjali told the team that what so-and-so company is doing shouldn't matter to them.",
+   "ko": "안잘리는 팀에게 어느 회사가 뭘 하든 우리는 신경 쓰지 말자고 했어요.",
+   "blank": "फलाँ",
+   "src": "made"
+  }
+ ],
  "w|फँसना": [
   {
    "text": "जूता कीचड़ में फँस गया।",
@@ -54779,6 +55707,22 @@
    "src": "made"
   }
  ],
+ "w|बमुश्किल": [
+  {
+   "text": "ऊँची चढ़ाई के बाद रवि बमुश्किल साँस ले पा रहा था।",
+   "en": "After the steep climb Ravi could barely breathe.",
+   "ko": "가파른 오르막을 오른 뒤 라비는 숨쉬기도 힘들었어요.",
+   "blank": "बमुश्किल",
+   "src": "made"
+  },
+  {
+   "text": "पहले साल अंजलि बमुश्किल अपने कर्मचारियों की तनख़्वाह दे पाई।",
+   "en": "In the first year Anjali could barely pay her employees' salaries.",
+   "ko": "첫해에 안잘리는 직원들 월급을 겨우 줄 수 있었어요.",
+   "blank": "बमुश्किल",
+   "src": "made"
+  }
+ ],
  "w|बयान": [
   {
    "text": "मंत्री ने प्रेस में बयान दिया।",
@@ -55177,6 +56121,22 @@
    "en": "Push the door with force.",
    "ko": "힘을 줘서 문을 밀쳐.",
    "blank": "बल"
+  }
+ ],
+ "w|बलगम": [
+  {
+   "text": "सर्दी की वजह से सुनील के गले में बलगम था, इसलिए उसे बार-बार खाँसी आ रही थी।",
+   "en": "Because of a cold Sunil had phlegm in his throat, so he kept coughing.",
+   "ko": "감기 때문에 수닐은 목에 가래가 있어서 자꾸 기침이 났어요.",
+   "blank": "बलगम",
+   "src": "made"
+  },
+  {
+   "text": "ज़ुकाम के बाद भी कविता के गले में बलगम था, फिर भी उसने गीत पूरा गाया।",
+   "en": "Even after the cold Kavita still had phlegm in her throat, yet she sang the whole song.",
+   "ko": "감기가 나은 뒤에도 카비타는 목에 가래가 남아 있었지만 노래를 끝까지 불렀어요.",
+   "blank": "बलगम",
+   "src": "made"
   }
  ],
  "w|बलिदान": [
@@ -55830,6 +56790,22 @@
    "en": "Priya won the city's cooking competition.",
    "ko": "프리야는 시 요리 대회에서 우승했어요.",
    "blank": "बाज़ी मारी",
+   "src": "made"
+  }
+ ],
+ "w|बाज़ू": [
+  {
+   "text": "इंजेक्शन से पहले नर्स ने सुनील की बाज़ू पर हाथ रखकर उसे तसल्ली दी।",
+   "en": "Before the injection the nurse put her hand on Sunil's arm to reassure him.",
+   "ko": "주사 놓기 전에 간호사가 수닐의 팔에 손을 얹고 안심시켜 줬어요.",
+   "blank": "बाज़ू",
+   "src": "made"
+  },
+  {
+   "text": "नाचते हुए कविता के साथी ने उसकी बाज़ू पकड़कर उसे हवा में उठाया।",
+   "en": "While dancing, Kavita's partner took her by the arm and lifted her into the air.",
+   "ko": "춤을 추다가 카비타의 파트너가 카비타의 팔을 잡고 공중으로 들어 올렸어요.",
+   "blank": "बाज़ू",
    "src": "made"
   }
  ],
@@ -56757,6 +57733,22 @@
    "en": "A small seed becomes a big tree.",
    "ko": "작은 씨앗이 큰 나무가 돼.",
    "blank": "बीज"
+  }
+ ],
+ "w|बीड़ी": [
+  {
+   "text": "डॉक्टर ने सुनील के दाँतों के दाग़ देखकर पूछा कि क्या वह बीड़ी पीता है।",
+   "en": "Seeing the stains on Sunil's teeth, the doctor asked if he smokes bidis.",
+   "ko": "의사는 수닐 이의 얼룩을 보고 비디 담배를 피우느냐고 물었어요.",
+   "blank": "बीड़ी",
+   "src": "made"
+  },
+  {
+   "text": "कविता के नाटक में बूढ़े चौकीदार का किरदार हर दृश्य में बीड़ी सुलगाता है।",
+   "en": "In Kavita's play the old watchman character lights a bidi in every scene.",
+   "ko": "카비타의 연극에서 늙은 경비 역은 장면마다 비디 담배에 불을 붙여요.",
+   "blank": "बीड़ी",
+   "src": "made"
   }
  ],
  "w|बीतना": [
@@ -59749,6 +60741,22 @@
    "blank": "भूनना"
   }
  ],
+ "w|भूमध्य रेखा": [
+  {
+   "text": "रवि का सपना है कि एक दिन भूमध्य रेखा के पास किसी वर्षावन में कैंप लगाए।",
+   "en": "Ravi dreams of one day camping in a rainforest near the equator.",
+   "ko": "라비의 꿈은 언젠가 적도 근처 열대 우림에서 캠핑하는 거예요.",
+   "blank": "भूमध्य रेखा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की कंपनी के ग्राहक अब भूमध्य रेखा के पास के देशों में भी हैं।",
+   "en": "Anjali's company now has customers in countries near the equator too.",
+   "ko": "안잘리 회사의 고객은 이제 적도 근처 나라들에도 있어요.",
+   "blank": "भूमध्य रेखा",
+   "src": "made"
+  }
+ ],
  "w|भूमि": [
   {
    "text": "कंपनी ने शहर के बाहर नई फ़ैक्टरी के लिए भूमि ख़रीदी है।",
@@ -61469,6 +62477,22 @@
    "blank": "मनुष्य"
   }
  ],
+ "w|मनोचिकित्सक": [
+  {
+   "text": "दाँतों के डॉक्टर से डरने वाले सुनील को उसके दोस्त ने एक मनोचिकित्सक से मिलने की सलाह दी।",
+   "en": "Sunil, who is scared of dentists, was advised by his friend to see a psychiatrist.",
+   "ko": "치과를 무서워하는 수닐에게 친구가 정신과 의사를 만나 보라고 권했어요.",
+   "blank": "मनोचिकित्सक",
+   "src": "made"
+  },
+  {
+   "text": "मनोचिकित्सक का किरदार निभाने से पहले कविता ने असली डॉक्टरों से बात की।",
+   "en": "Before playing a psychiatrist, Kavita talked to real doctors.",
+   "ko": "정신과 의사 역을 맡기 전에 카비타는 실제 의사들과 이야기를 나눴어요.",
+   "blank": "मनोचिकित्सक",
+   "src": "made"
+  }
+ ],
  "w|मनोरंजन": [
   {
    "text": "संगीत अच्छा मनोरंजन है।",
@@ -61647,6 +62671,22 @@
    "en": "The patient needs rest.",
    "ko": "환자는 휴식이 필요해.",
    "blank": "मरीज़"
+  }
+ ],
+ "w|मरुस्थल": [
+  {
+   "text": "रवि का अगला कैंपिंग सफ़र मरुस्थल में रेत के टीलों के बीच होगा।",
+   "en": "Ravi's next camping trip will be among the sand dunes of the desert.",
+   "ko": "라비의 다음 캠핑은 사막의 모래 언덕 사이에서 할 거예요.",
+   "blank": "मरुस्थल",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की कंपनी मरुस्थल के गाँवों में सौर पंपों के लिए सॉफ़्टवेयर बनाती है।",
+   "en": "Anjali's company makes software for solar pumps in desert villages.",
+   "ko": "안잘리의 회사는 사막 마을의 태양광 펌프용 소프트웨어를 만들어요.",
+   "blank": "मरुस्थल",
+   "src": "made"
   }
  ],
  "w|मरोड़ना": [
@@ -63987,6 +65027,22 @@
    "src": "made"
   }
  ],
+ "w|मुखड़ा": [
+  {
+   "text": "धूप में बेटी का खिला हुआ मुखड़ा देखकर रवि की सारी थकान उतर गई।",
+   "en": "Seeing his daughter's beaming face in the sunshine, all of Ravi's tiredness melted away.",
+   "ko": "햇살 아래 환하게 웃는 딸의 얼굴을 보자 라비의 피로가 싹 가셨어요.",
+   "blank": "मुखड़ा",
+   "src": "made"
+  },
+  {
+   "text": "लॉन्च की कामयाबी पर अंजलि का मुखड़ा ख़ुशी से चमक उठा।",
+   "en": "Anjali's face lit up with joy at the success of the launch.",
+   "ko": "출시가 성공하자 안잘리의 얼굴이 기쁨으로 환해졌어요.",
+   "blank": "मुखड़ा",
+   "src": "made"
+  }
+ ],
  "w|मुखपृष्ठ": [
   {
    "text": "रवि का मुक़दमा अगले दिन अख़बार के मुखपृष्ठ पर छपा।",
@@ -64540,6 +65596,22 @@
    "en": "Kavita too went with a gift to the face-viewing ceremony of worker Ramesh's new daughter-in-law.",
    "ko": "카비타도 인부 라메시네 새 며느리 얼굴 보기 잔치에 축의금을 들고 갔어요.",
    "blank": "मुँह दिखाई",
+   "src": "made"
+  }
+ ],
+ "w|मुँह मोड़ना": [
+  {
+   "text": "ठंडी हवा का झोंका आया तो रवि ने उससे मुँह मोड़ लिया।",
+   "en": "When a gust of cold wind came, Ravi turned his face away from it.",
+   "ko": "찬 바람이 훅 불어오자 라비는 고개를 돌렸어요.",
+   "blank": "मुँह मोड़",
+   "src": "made"
+  },
+  {
+   "text": "बड़ी कंपनी के ऑफ़र से अंजलि ने मुँह मोड़ लिया और अपने स्टार्टअप पर टिकी रही।",
+   "en": "Anjali turned her back on the big company's offer and stuck with her startup.",
+   "ko": "안잘리는 대기업의 제안을 외면하고 자기 스타트업에 남았어요.",
+   "blank": "मुँह मोड़",
    "src": "made"
   }
  ],
@@ -66230,6 +67302,22 @@
    "en": "Deepa reminded the children that they had to do homework even during the holidays.",
    "ko": "디파는 방학에도 숙제를 해야 한다고 아이들에게 일러 줬어요.",
    "blank": "याद दिलाया",
+   "src": "made"
+  }
+ ],
+ "w|याददाश्त": [
+  {
+   "text": "सुनील की याददाश्त इतनी कमज़ोर है कि वह हर बार अपॉइंटमेंट का समय भूल जाता है।",
+   "en": "Sunil's memory is so poor that he forgets his appointment time every time.",
+   "ko": "수닐은 기억력이 너무 나빠서 매번 예약 시간을 잊어요.",
+   "blank": "याददाश्त",
+   "src": "made"
+  },
+  {
+   "text": "कविता की याददाश्त इतनी तेज़ है कि वह पूरा नाटक एक हफ़्ते में याद कर लेती है।",
+   "en": "Kavita's memory is so sharp that she learns a whole play in a week.",
+   "ko": "카비타는 기억력이 아주 좋아서 연극 한 편을 일주일이면 다 외워요.",
+   "blank": "याददाश्त",
    "src": "made"
   }
  ],
@@ -69013,6 +70101,22 @@
    "blank": "लकड़ी"
   }
  ],
+ "w|लकवा": [
+  {
+   "text": "दंत चिकित्सक ने सुनील को बताया कि चेहरे का लकवा होने पर भी कुछ मरीज़ दाँतों का इलाज करवाने आते हैं।",
+   "en": "The dentist told Sunil that some patients come for dental treatment even with facial paralysis.",
+   "ko": "치과 의사는 수닐에게 안면 마비가 있어도 치과 치료를 받으러 오는 환자들이 있다고 했어요.",
+   "blank": "लकवा",
+   "src": "made"
+  },
+  {
+   "text": "कविता के नाटक में एक चित्रकार लकवा मारने के बाद बाएँ हाथ से रंगना सीखता है।",
+   "en": "In Kavita's play a painter learns to paint with his left hand after being struck by paralysis.",
+   "ko": "카비타의 연극에서 한 화가는 마비가 온 뒤 왼손으로 그림 그리는 법을 배워요.",
+   "blank": "लकवा",
+   "src": "made"
+  }
+ ],
  "w|लक्षण": [
   {
    "text": "बुखार बीमारी का लक्षण हो सकता है।",
@@ -69865,6 +70969,22 @@
    "en": "You are a friend worthy of trust.",
    "ko": "너는 믿을 만한 친구야.",
    "blank": "लायक"
+  }
+ ],
+ "w|लार": [
+  {
+   "text": "इलाज के दौरान सुनील के मुँह में लार भर गई, तो नर्स ने पाइप लगाई।",
+   "en": "During the treatment Sunil's mouth filled with saliva, so the nurse put in a suction tube.",
+   "ko": "치료 중에 수닐 입에 침이 고이자 간호사가 석션 관을 넣었어요.",
+   "blank": "लार",
+   "src": "made"
+  },
+  {
+   "text": "घबराहट में कविता का मुँह इतना सूख गया कि लार तक नहीं बन रही थी।",
+   "en": "Kavita's mouth went so dry from nerves that she couldn't even make saliva.",
+   "ko": "긴장해서 카비타는 입이 바싹 말라 침도 안 나왔어요.",
+   "blank": "लार",
+   "src": "made"
   }
  ],
  "w|लाल": [
@@ -73461,6 +74581,22 @@
    "src": "made"
   }
  ],
+ "w|विषाक्त": [
+  {
+   "text": "पुराने भराव में विषाक्त धातु होने के डर से सुनील ने उसे बदलवा दिया।",
+   "en": "Fearing there was toxic metal in his old filling, Sunil had it replaced.",
+   "ko": "옛 충전재에 독성 금속이 있을까 봐 수닐은 그걸 바꿨어요.",
+   "blank": "विषाक्त",
+   "src": "made"
+  },
+  {
+   "text": "मंच पर इस्तेमाल होने वाला एक पुराना रंग विषाक्त निकला, इसलिए कविता की टीम ने उसे फेंक दिया।",
+   "en": "An old paint used on the stage turned out to be toxic, so Kavita's team threw it away.",
+   "ko": "무대에 쓰던 오래된 물감이 독성이 있는 걸로 밝혀져서 카비타 팀은 그걸 버렸어요.",
+   "blank": "विषाक्त",
+   "src": "made"
+  }
+ ],
  "w|विषाणु": [
   {
    "text": "फ़्लू का विषाणु फैला हुआ था, इसलिए जिम में हर मशीन रोज़ साफ़ की गई।",
@@ -75743,6 +76879,22 @@
    "src": "made"
   }
  ],
+ "w|शिशिर": [
+  {
+   "text": "रवि ने शिशिर ऋतु में कैंपिंग करने की ठानी, ताकि बर्फ़ देख सके।",
+   "en": "Ravi resolved to go camping in the cold season so he could see snow.",
+   "ko": "라비는 눈을 보려고 한겨울에 캠핑을 가기로 마음먹었어요.",
+   "blank": "शिशिर",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने नए प्रोडक्ट का नाम शिशिर रखा, क्योंकि वह कड़ाके की सर्दी में लॉन्च हुआ।",
+   "en": "Anjali named the new product Shishir, after the cold season, because it launched in the depths of winter.",
+   "ko": "새 제품이 한겨울에 나와서 안잘리는 이름을 겨울이라는 뜻의 시시르로 지었어요.",
+   "blank": "शिशिर",
+   "src": "made"
+  }
+ ],
  "w|शिशु": [
   {
    "text": "शिशु अभी सो रहा है।",
@@ -76171,6 +77323,22 @@
    "en": "The lion is called the king of the jungle.",
    "ko": "사자는 정글의 왕이라고 불려.",
    "blank": "शेर"
+  }
+ ],
+ "w|शेरनी": [
+  {
+   "text": "गाइड ने रवि को बताया कि इस जंगल में एक शेरनी अपने शावकों के साथ घूमती है।",
+   "en": "The guide told Ravi that a lioness roams this forest with her cubs.",
+   "ko": "안내인은 라비에게 이 숲에 암사자 한 마리가 새끼들과 돌아다닌다고 했어요.",
+   "blank": "शेरनी",
+   "src": "made"
+  },
+  {
+   "text": "निवेशकों के सामने अंजलि शेरनी की तरह डटी रही और अपने आइडिया का बचाव किया।",
+   "en": "In front of the investors Anjali stood firm like a lioness and defended her idea.",
+   "ko": "투자자들 앞에서 안잘리는 암사자처럼 버티며 자기 아이디어를 지켜 냈어요.",
+   "blank": "शेरनी",
+   "src": "made"
   }
  ],
  "w|शेष": [
@@ -76872,6 +78040,22 @@
    "en": "Kavita explained that if you don't wash your hands after touching raw chicken, food can get contaminated.",
    "ko": "카비타는 생닭을 만진 뒤 손을 안 씻으면 음식이 오염될 수 있다고 설명했어요.",
    "blank": "संक्रमित हो",
+   "src": "made"
+  }
+ ],
+ "w|संक्रामक": [
+  {
+   "text": "डॉक्टर ने सुनील को भरोसा दिलाया कि मसूड़ों का यह संक्रमण संक्रामक नहीं है।",
+   "en": "The doctor assured Sunil that this gum infection is not contagious.",
+   "ko": "의사는 수닐에게 이 잇몸 감염은 전염되지 않는다고 안심시켰어요.",
+   "blank": "संक्रामक",
+   "src": "made"
+  },
+  {
+   "text": "फ़्लू संक्रामक होता है, इसलिए कविता ने बीमार कलाकारों को रिहर्सल से घर भेज दिया।",
+   "en": "Flu is contagious, so Kavita sent the sick actors home from rehearsal.",
+   "ko": "독감은 전염되니까 카비타는 아픈 배우들을 연습에서 집으로 돌려보냈어요.",
+   "blank": "संक्रामक",
    "src": "made"
   }
  ],
@@ -83125,6 +84309,22 @@
    "src": "made"
   }
  ],
+ "w|सीप": [
+  {
+   "text": "नदी किनारे रवि को एक चमकती हुई सीप मिली, जो उसने बेटी को दे दी।",
+   "en": "Ravi found a shiny shell by the river and gave it to his daughter.",
+   "ko": "라비는 강가에서 반짝이는 조개껍데기를 주워 딸에게 줬어요.",
+   "blank": "सीप",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की मेज़ पर समुद्र किनारे से लाई एक सीप रखी है।",
+   "en": "A shell brought back from the seashore sits on Anjali's desk.",
+   "ko": "안잘리의 책상 위에는 바닷가에서 가져온 조개껍데기가 놓여 있어요.",
+   "blank": "सीप",
+   "src": "made"
+  }
+ ],
  "w|सीपी": [
   {
    "text": "अजय के खेत के पास वाली नहर में बच्चे सीपी चुनते हैं।",
@@ -83232,6 +84432,22 @@
    "en": "Kavita's niece printed her CV on the shop's printer.",
    "ko": "카비타의 조카딸은 가게 프린터로 이력서를 뽑았어요.",
    "blank": "सीवी",
+   "src": "made"
+  }
+ ],
+ "w|सीसा": [
+  {
+   "text": "रवि ने मछली पकड़ने की डोरी में सीसे का एक छोटा-सा वज़न बाँधा।",
+   "en": "Ravi tied a small lead weight to his fishing line.",
+   "ko": "라비는 낚싯줄에 작은 납추를 달았어요.",
+   "blank": "सीसे",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि का एक क्लाइंट पुरानी बैटरियों से सीसा निकालने का काम करता है।",
+   "en": "One of Anjali's clients extracts lead from old batteries.",
+   "ko": "안잘리의 고객사 하나는 폐배터리에서 납을 뽑아내는 일을 해요.",
+   "blank": "सीसा",
    "src": "made"
   }
  ],
@@ -84507,6 +85723,22 @@
    "blank": "सेहत"
   }
  ],
+ "w|सेहतमंद": [
+  {
+   "text": "सेहतमंद दाँतों के लिए सुनील ने मीठा खाना कम कर दिया है।",
+   "en": "Sunil has cut down on sweets for the sake of healthy teeth.",
+   "ko": "수닐은 건강한 이를 위해 단 음식을 줄였어요.",
+   "blank": "सेहतमंद",
+   "src": "made"
+  },
+  {
+   "text": "लंबे शो के लिए कविता सेहतमंद खाना खाती है और रोज़ योग करती है।",
+   "en": "For long shows Kavita eats healthy food and does yoga every day.",
+   "ko": "긴 공연을 위해 카비타는 건강한 음식을 먹고 매일 요가를 해요.",
+   "blank": "सेहतमंद",
+   "src": "made"
+  }
+ ],
  "w|सैकड़ों": [
   {
    "text": "संपत्ति कर भरने की आख़िरी तारीख़ पर नगर भवन के बाहर सैकड़ों लोग खड़े थे।",
@@ -84965,6 +86197,22 @@
    "src": "made"
   }
  ],
+ "w|सौरमंडल": [
+  {
+   "text": "साफ़ आसमान के नीचे रवि ने बच्चों को सौरमंडल के ग्रहों के बारे में बताया।",
+   "en": "Under the clear sky Ravi told the children about the planets of the solar system.",
+   "ko": "맑은 하늘 아래서 라비는 아이들에게 태양계 행성 이야기를 해 줬어요.",
+   "blank": "सौरमंडल",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बच्चों के लिए सौरमंडल पर एक खेल वाला ऐप बनाया।",
+   "en": "Anjali made a game app about the solar system for children.",
+   "ko": "안잘리는 아이들을 위해 태양계를 다룬 게임 앱을 만들었어요.",
+   "blank": "सौरमंडल",
+   "src": "made"
+  }
+ ],
  "w|स्कूटर": [
   {
    "text": "विकास दूध के डिब्बे पुराने स्कूटर पर लादकर शहर ले जाता है।",
@@ -85399,6 +86647,22 @@
    "en": "Please speak cleanly and clearly.",
    "ko": "또박또박 분명하게 말해 줘.",
    "blank": "स्पष्ट"
+  }
+ ],
+ "w|स्फूर्ति": [
+  {
+   "text": "दाँत का दर्द ठीक होते ही सुनील में फिर से स्फूर्ति लौट आई।",
+   "en": "As soon as the toothache went away, Sunil's energy came back.",
+   "ko": "치통이 낫자마자 수닐에게 다시 활기가 돌아왔어요.",
+   "blank": "स्फूर्ति",
+   "src": "made"
+  },
+  {
+   "text": "सुबह की सैर से कविता को रिहर्सल के लिए पूरी स्फूर्ति मिलती है।",
+   "en": "Her morning walk gives Kavita plenty of energy for rehearsal.",
+   "ko": "아침 산책을 하고 나면 카비타는 연습할 기운이 넘쳐요.",
+   "blank": "स्फूर्ति",
+   "src": "made"
   }
  ],
  "w|स्मरण": [
@@ -87206,6 +88470,22 @@
    "en": "The dog was panting after the run.",
    "ko": "달리고 나서 개가 헐떡이고 있었어요.",
    "blank": "हाँफ",
+   "src": "made"
+  }
+ ],
+ "w|हामी भरना": [
+  {
+   "text": "रवि ने रात में तारे देखने का सुझाव दिया, तो सबने ख़ुशी से हामी भरी।",
+   "en": "When Ravi suggested stargazing at night, everyone happily agreed.",
+   "ko": "라비가 밤에 별을 보자고 하자 모두 기꺼이 찬성했어요.",
+   "blank": "हामी भरी",
+   "src": "made"
+  },
+  {
+   "text": "लंबी बातचीत के बाद निवेशक ने अंजलि के प्रस्ताव पर हामी भर दी।",
+   "en": "After a long discussion the investor agreed to Anjali's proposal.",
+   "ko": "긴 대화 끝에 투자자가 안잘리의 제안을 받아들였어요.",
+   "blank": "हामी भर",
    "src": "made"
   }
  ],

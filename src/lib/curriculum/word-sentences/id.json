@@ -1161,6 +1161,22 @@
    "src": "made"
   }
  ],
+ "w|amatiran": [
+  {
+   "text": "Fajar tertawa melihat perban amatiran buatan adik sendiri.",
+   "en": "Fajar laughed at the amateurish bandage his own little brother had made.",
+   "ko": "파자르는 동생이 직접 감은 서툰 붕대를 보고 웃었어요.",
+   "blank": "amatiran",
+   "src": "made"
+  },
+  {
+   "text": "Di samping rekan baru yang berpengalaman, Lestari merasa masih amatiran.",
+   "en": "Next to the experienced new coworker, Lestari feels like she's still an amateur.",
+   "ko": "경험 많은 새 동료 옆에서 레스타리는 자신이 아직 아마추어 같다고 느껴요.",
+   "blank": "amatiran",
+   "src": "made"
+  }
+ ],
  "w|ambisi": [
   {
    "text": "Bayu dulu punya ambisi menjadi pilot, dan Rudi ingin tahu apakah itu tercapai.",
@@ -2018,6 +2034,22 @@
    "en": "A motorbike taxi company sent the phones of its whole fleet of drivers to Ayu's shop for servicing.",
    "ko": "오토바이 택시 회사가 기사 전원의 휴대폰을 아유 가게에 수리 맡겼어요.",
    "blank": "armada",
+   "src": "made"
+  }
+ ],
+ "w|arogan": [
+  {
+   "text": "Awalnya Bayu dikira arogan, padahal cuma pemalu.",
+   "en": "At first people thought Bayu was arrogant, but he's just shy.",
+   "ko": "처음엔 다들 바유가 거만하다고 생각했지만 사실 수줍음이 많을 뿐이에요.",
+   "blank": "arogan",
+   "src": "made"
+  },
+  {
+   "text": "Ada anggota arogan yang suka memonopoli alat beban.",
+   "en": "There's an arrogant member who likes to hog the weight machines.",
+   "ko": "웨이트 기구를 독차지하는 거만한 회원이 있어요.",
+   "blank": "arogan",
    "src": "made"
   }
  ],
@@ -2897,6 +2929,22 @@
    "en": "They won in the final round yesterday.",
    "ko": "그들은 어제 결승전에서 이겼어.",
    "blank": "babak"
+  }
+ ],
+ "w|babak belur": [
+  {
+   "text": "Seorang pemuda datang dengan wajah babak belur setelah jatuh dari motor.",
+   "en": "A young man came in with a badly bruised face after falling off his motorbike.",
+   "ko": "한 청년이 오토바이에서 넘어져 얼굴이 엉망이 된 채로 왔어요.",
+   "blank": "babak belur",
+   "src": "made"
+  },
+  {
+   "text": "Tim Lestari babak belur dalam presentasi pertama, tetapi rekan baru tetap semangat.",
+   "en": "Lestari's team got hammered in the first presentation, but the new coworker stayed upbeat.",
+   "ko": "레스타리 팀은 첫 발표에서 완전히 깨졌지만 새 동료는 여전히 의욕이 넘쳤어요.",
+   "blank": "babak belur",
+   "src": "made"
   }
  ],
  "w|babi": [
@@ -5667,6 +5715,22 @@
    "blank": "Berbahaya"
   }
  ],
+ "w|berbaikan": [
+  {
+   "text": "Setelah salah paham soal laporan, Bayu dan rekan kerja akhirnya berbaikan.",
+   "en": "After a misunderstanding over a report, Bayu and his coworker finally made up.",
+   "ko": "보고서 때문에 오해가 생긴 뒤 바유와 동료는 결국 화해했어요.",
+   "blank": "berbaikan",
+   "src": "made"
+  },
+  {
+   "text": "Intan dan pelatih lama akhirnya berbaikan setelah lama tidak saling sapa.",
+   "en": "Intan and her old trainer finally made up after not speaking for a long time.",
+   "ko": "인탄과 예전 트레이너는 오랫동안 말도 안 하다가 결국 화해했어요.",
+   "blank": "berbaikan",
+   "src": "made"
+  }
+ ],
  "w|berbaju": [
   {
    "text": "Pada upacara hari Senin, semua pegawai berbaju putih, termasuk Fajar.",
@@ -6935,6 +6999,22 @@
    "en": "Just hurry before the shop closes.",
    "ko": "가게 닫기 전에 서둘러.",
    "blank": "Bergegas"
+  }
+ ],
+ "w|bergejolak": [
+  {
+   "text": "Harga masker bergejolak setiap kali musim flu tiba.",
+   "en": "The price of masks fluctuates every time flu season arrives.",
+   "ko": "독감철이 올 때마다 마스크 값이 요동쳐요.",
+   "blank": "bergejolak",
+   "src": "made"
+  },
+  {
+   "text": "Perasaan Lestari bergejolak saat tahu rekan baru akan menjadi atasan.",
+   "en": "Lestari's feelings were in turmoil when she found out the new coworker would become her boss.",
+   "ko": "새 동료가 상사가 된다는 걸 알고 레스타리의 마음이 요동쳤어요.",
+   "blank": "bergejolak",
+   "src": "made"
   }
  ],
  "w|bergema": [
@@ -8401,6 +8481,22 @@
    "src": "made"
   }
  ],
+ "w|berkompetisi": [
+  {
+   "text": "Bayu senang berkompetisi secara sehat dengan rekan setim.",
+   "en": "Bayu enjoys competing in a healthy way with his teammates.",
+   "ko": "바유는 팀원들과 건전하게 경쟁하는 걸 좋아해요.",
+   "blank": "berkompetisi",
+   "src": "made"
+  },
+  {
+   "text": "Intan berkompetisi di kejuaraan angkat beban tingkat provinsi.",
+   "en": "Intan competes in the provincial weightlifting championship.",
+   "ko": "인탄은 도 단위 역도 대회에 출전해요.",
+   "blank": "berkompetisi",
+   "src": "made"
+  }
+ ],
  "w|berkompromi": [
   {
    "text": "Kata Budi, persahabatan bertahan lama karena kita mau berkompromi.",
@@ -8627,6 +8723,22 @@
    "en": "That car passed by without stopping at all.",
    "ko": "그 차는 잠깐도 멈추지 않고 지나갔어.",
    "blank": "berlalu"
+  }
+ ],
+ "w|berlama-lama": [
+  {
+   "text": "Bayu tidak suka berlama-lama di pantry saat jam kerja.",
+   "en": "Bayu doesn't like lingering in the pantry during working hours.",
+   "ko": "바유는 근무 시간에 탕비실에서 오래 머무는 걸 싫어해요.",
+   "blank": "berlama-lama",
+   "src": "made"
+  },
+  {
+   "text": "Intan tidak pernah berlama-lama di ruang ganti.",
+   "en": "Intan never lingers in the locker room.",
+   "ko": "인탄은 탈의실에 오래 머무는 법이 없어요.",
+   "blank": "berlama-lama",
+   "src": "made"
   }
  ],
  "w|berlangsung": [
@@ -9176,6 +9288,22 @@
    "en": "According to Rina, new stalls pop up at the flea market every Sunday morning.",
    "ko": "리나 말로는 일요일 아침마다 벼룩시장에 새 노점이 생겨나요.",
    "blank": "bermunculan",
+   "src": "made"
+  }
+ ],
+ "w|bermurah hati": [
+  {
+   "text": "Bayu bermurah hati membagikan oleh-oleh kepada seluruh tim.",
+   "en": "Bayu generously shared souvenirs with the whole team.",
+   "ko": "바유는 팀 전체에 기념품을 넉넉하게 나눠 줬어요.",
+   "blank": "bermurah hati",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik gym bermurah hati memberi diskon untuk mahasiswa.",
+   "en": "The gym owner generously gives discounts to university students.",
+   "ko": "헬스장 주인은 대학생들에게 너그럽게 할인을 해 줘요.",
+   "blank": "bermurah hati",
    "src": "made"
   }
  ],
@@ -11089,6 +11217,22 @@
    "blank": "Bertingkah"
   }
  ],
+ "w|bertinju": [
+  {
+   "text": "Di akhir pekan, Bayu ternyata hobi bertinju di sasana dekat rumah.",
+   "en": "It turns out that on weekends Bayu enjoys boxing at a gym near his home.",
+   "ko": "알고 보니 바유는 주말마다 집 근처 체육관에서 권투를 즐겨요.",
+   "blank": "bertinju",
+   "src": "made"
+  },
+  {
+   "text": "Intan belajar bertinju untuk melepas stres sepulang kerja.",
+   "en": "Intan is learning to box to relieve stress after work.",
+   "ko": "인탄은 퇴근 후 스트레스를 풀려고 권투를 배우고 있어요.",
+   "blank": "bertinju",
+   "src": "made"
+  }
+ ],
  "w|bertiup": [
   {
    "text": "Angin laut bertiup kencang saat Bayu berhenti di jembatan.",
@@ -11828,6 +11972,22 @@
    "en": "In the letter, Wati wrote about the rose seedlings she planted in the yard.",
    "ko": "와티는 편지에 마당에 심은 장미 묘목 이야기를 썼어요.",
    "blank": "bibit",
+   "src": "made"
+  }
+ ],
+ "w|bidadari": [
+  {
+   "text": "Bagi Bayu, rekan yang membantu memperbaiki laptop di hari pertama ibarat bidadari penolong.",
+   "en": "To Bayu, the coworker who helped fix his laptop on the first day was like a guardian angel.",
+   "ko": "바유에게 첫날 노트북을 고쳐 준 동료는 구원의 천사 같았어요.",
+   "blank": "bidadari",
+   "src": "made"
+  },
+  {
+   "text": "Dengan kostum putih, para penari di kelas balet tampak seperti bidadari.",
+   "en": "In white costumes, the dancers in the ballet class look like angels.",
+   "ko": "하얀 의상을 입은 발레반 무용수들은 선녀처럼 보여요.",
+   "blank": "bidadari",
    "src": "made"
   }
  ],
@@ -13017,6 +13177,22 @@
    "en": "The flowers in the garden bloomed.",
    "ko": "정원의 꽃이 피었어.",
    "blank": "Bunga"
+  }
+ ],
+ "w|bungsu": [
+  {
+   "text": "Bayu ternyata anak bungsu dari lima bersaudara.",
+   "en": "It turns out Bayu is the youngest of five siblings.",
+   "ko": "알고 보니 바유는 오 남매 중 막내예요.",
+   "blank": "bungsu",
+   "src": "made"
+  },
+  {
+   "text": "Adik bungsu Intan ikut mendaftar di gym bulan ini.",
+   "en": "Intan's youngest sibling also signed up at the gym this month.",
+   "ko": "인탄의 막냇동생도 이번 달에 헬스장에 등록했어요.",
+   "blank": "bungsu",
+   "src": "made"
   }
  ],
  "w|buntu": [
@@ -15117,6 +15293,22 @@
    "src": "made"
   }
  ],
+ "w|delusi": [
+  {
+   "text": "Kata Fajar, pasien dengan delusi berat biasanya mendapat obat dari psikiater.",
+   "en": "Fajar says patients with severe delusions usually get medication from a psychiatrist.",
+   "ko": "파자르 말로는 망상이 심한 환자는 보통 정신과 의사에게서 약을 받는대요.",
+   "blank": "delusi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bilang target penjualan bos sudah seperti delusi.",
+   "en": "Lestari says the boss's sales target is practically a delusion.",
+   "ko": "레스타리는 사장의 판매 목표가 거의 망상 수준이라고 해요.",
+   "blank": "delusi",
+   "src": "made"
+  }
+ ],
  "w|demam": [
   {
    "text": "Anaknya demam tinggi sejak tadi malam.",
@@ -15685,6 +15877,22 @@
    "en": "Secretly they planned the trip.",
    "ko": "그들은 몰래 여행을 계획했어.",
    "blank": "Diam-diam"
+  }
+ ],
+ "w|diare": [
+  {
+   "text": "Oralit adalah obat pertama yang Fajar sarankan untuk diare.",
+   "en": "Oral rehydration salts are the first thing Fajar recommends for diarrhea.",
+   "ko": "파자르가 설사에 가장 먼저 권하는 건 경구 수액염이에요.",
+   "blank": "diare",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu izin pulang lebih awal karena diare.",
+   "en": "The new coworker asked to go home early because of diarrhea.",
+   "ko": "새 동료는 설사 때문에 일찍 퇴근하겠다고 했어요.",
+   "blank": "diare",
+   "src": "made"
   }
  ],
  "w|diatas": [
@@ -17307,6 +17515,22 @@
    "blank": "enyah"
   }
  ],
+ "w|enzim": [
+  {
+   "text": "Fajar menjual tablet enzim untuk orang yang sulit mencerna susu.",
+   "en": "Fajar sells enzyme tablets for people who have trouble digesting milk.",
+   "ko": "파자르는 우유를 잘 소화하지 못하는 사람을 위한 효소 알약을 팔아요.",
+   "blank": "enzim",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu bekerja di bagian riset enzim untuk deterjen.",
+   "en": "The new coworker works in enzyme research for detergents.",
+   "ko": "새 동료는 세제용 효소 연구 부서에서 일해요.",
+   "blank": "enzim",
+   "src": "made"
+  }
+ ],
  "w|episode": [
   {
    "text": "Episode baru akan tayang malam ini.",
@@ -17719,6 +17943,22 @@
    "en": "We watched the lantern festival at night.",
    "ko": "우리는 밤에 등불 축제를 봤어.",
    "blank": "festival"
+  }
+ ],
+ "w|figur": [
+  {
+   "text": "Bayu menganggap kepala divisi sebagai figur panutan.",
+   "en": "Bayu sees the division head as a role model.",
+   "ko": "바유는 부서장을 본받을 만한 인물로 여겨요.",
+   "blank": "figur",
+   "src": "made"
+  },
+  {
+   "text": "Intan ingin menjadi figur inspiratif bagi anggota yang baru mulai.",
+   "en": "Intan wants to be an inspiring figure for members who are just starting out.",
+   "ko": "인탄은 이제 막 시작한 회원들에게 영감을 주는 사람이 되고 싶어요.",
+   "blank": "figur",
+   "src": "made"
   }
  ],
  "w|fiksi": [
@@ -18307,6 +18547,22 @@
    "en": "He didn't say anything.",
    "ko": "그는 아무 말도 안 했어.",
    "blank": "gak"
+  }
+ ],
+ "w|galak": [
+  {
+   "text": "Bayu sempat takut pada manajer yang terkenal galak.",
+   "en": "Bayu was a bit scared of the manager, who is known for being fierce.",
+   "ko": "바유는 무섭기로 소문난 매니저를 처음엔 겁냈어요.",
+   "blank": "galak",
+   "src": "made"
+  },
+  {
+   "text": "Pelatih tinju itu galak, tetapi murid-murid menyukainya.",
+   "en": "That boxing coach is fierce, but the students like him.",
+   "ko": "그 권투 코치는 무섭지만 학생들은 그를 좋아해요.",
+   "blank": "galak",
+   "src": "made"
   }
  ],
  "w|galaksi": [
@@ -19430,6 +19686,22 @@
    "en": "Putri studies how the kidneys filter toxins from the blood.",
    "ko": "푸트리는 콩팥이 피에서 독소를 걸러 내는 방식을 연구해요.",
    "blank": "ginjal",
+   "src": "made"
+  }
+ ],
+ "w|gipsi": [
+  {
+   "text": "Bayu bercerita bahwa dulu hidup berpindah-pindah kota seperti gipsi.",
+   "en": "Bayu said he used to move from city to city like a gypsy.",
+   "ko": "바유는 예전에 집시처럼 이 도시 저 도시를 떠돌며 살았다고 했어요.",
+   "blank": "gipsi",
+   "src": "made"
+  },
+  {
+   "text": "Musik gipsi diputar saat kelas dansa di gym itu.",
+   "en": "Gypsy music plays during the dance class at that gym.",
+   "ko": "그 헬스장 댄스 수업 시간에는 집시 음악이 나와요.",
+   "blank": "gipsi",
    "src": "made"
   }
  ],
@@ -21497,6 +21769,22 @@
    "blank": "ikut"
   }
  ],
+ "w|ikutan": [
+  {
+   "text": "Walau baru seminggu bekerja, Bayu ikutan lomba lari kantor.",
+   "en": "Even though he'd only worked there a week, Bayu joined in the office running race.",
+   "ko": "일한 지 일주일밖에 안 됐지만 바유는 회사 달리기 대회에 끼었어요.",
+   "blank": "ikutan",
+   "src": "made"
+  },
+  {
+   "text": "Melihat Intan rajin berolahraga, ibu Intan ikutan mendaftar.",
+   "en": "Seeing Intan exercise so regularly, Intan's mother signed up too.",
+   "ko": "인탄이 꾸준히 운동하는 걸 보고 인탄 어머니도 따라 등록했어요.",
+   "blank": "ikutan",
+   "src": "made"
+  }
+ ],
  "w|ilahi": [
   {
    "text": "Lagu penutup drama itu dinyanyikan dengan suasana yang hampir ilahi.",
@@ -21920,6 +22208,22 @@
    "en": "Lestari complains that the old building's infrastructure often breaks down, especially the elevator.",
    "ko": "레스타리는 그 오래된 건물의 설비가 자주 고장 난다고, 특히 엘리베이터가 그렇다고 불평해요.",
    "blank": "infrastruktur",
+   "src": "made"
+  }
+ ],
+ "w|infus": [
+  {
+   "text": "Apotek itu juga menyediakan cairan infus untuk klinik di sebelah.",
+   "en": "The pharmacy also supplies IV fluids to the clinic next door.",
+   "ko": "그 약국은 옆 병원에 수액도 공급해요.",
+   "blank": "infus",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu sempat dirawat dan dipasangi infus karena kelelahan.",
+   "en": "The new coworker was briefly hospitalized and put on an IV due to exhaustion.",
+   "ko": "새 동료는 과로로 입원해 링거를 맞은 적이 있어요.",
+   "blank": "infus",
    "src": "made"
   }
  ],
@@ -22442,6 +22746,22 @@
    "en": "Somewhat ironically, the scheduling reminder app itself often misses its release date.",
    "ko": "좀 아이러니하게도 일정 알림 앱 자체가 출시일을 자주 놓쳐요.",
    "blank": "ironis",
+   "src": "made"
+  }
+ ],
+ "w|iseng": [
+  {
+   "text": "Seorang rekan iseng menyembunyikan kursi Bayu di hari pertama.",
+   "en": "A coworker playfully hid Bayu's chair on his first day.",
+   "ko": "한 동료가 장난으로 첫날 바유의 의자를 숨겼어요.",
+   "blank": "iseng",
+   "src": "made"
+  },
+  {
+   "text": "Intan iseng mencoba kelas yoga dan malah ketagihan.",
+   "en": "Intan tried a yoga class on a whim and ended up hooked.",
+   "ko": "인탄은 심심해서 요가 수업을 해 봤다가 오히려 푹 빠졌어요.",
+   "blank": "iseng",
    "src": "made"
   }
  ],
@@ -23699,6 +24019,22 @@
    "en": "A young spirit is full of energy.",
    "ko": "젊은 영혼은 열정이 가득해.",
    "blank": "Jiwa"
+  }
+ ],
+ "w|jomblo": [
+  {
+   "text": "Rekan-rekan langsung bertanya apakah Bayu masih jomblo.",
+   "en": "The coworkers immediately asked whether Bayu was still single.",
+   "ko": "동료들은 바유에게 아직 솔로냐고 대뜸 물었어요.",
+   "blank": "jomblo",
+   "src": "made"
+  },
+  {
+   "text": "Teman Intan yang masih jomblo rajin ke gym demi mencari kenalan.",
+   "en": "Intan's single friend goes to the gym diligently hoping to meet someone.",
+   "ko": "아직 솔로인 인탄 친구는 새 인연을 찾으려고 헬스장에 열심히 다녀요.",
+   "blank": "jomblo",
+   "src": "made"
   }
  ],
  "w|jorok": [
@@ -26379,6 +26715,22 @@
    "src": "made"
   }
  ],
+ "w|kebersamaan": [
+  {
+   "text": "Makan siang bersama membuat Bayu merasakan kebersamaan tim sejak minggu pertama.",
+   "en": "Eating lunch together let Bayu feel the team's togetherness from the first week.",
+   "ko": "함께 점심을 먹으며 바유는 첫 주부터 팀의 끈끈함을 느꼈어요.",
+   "blank": "kebersamaan",
+   "src": "made"
+  },
+  {
+   "text": "Intan suka kelas senam karena ada rasa kebersamaan.",
+   "en": "Intan likes the aerobics class because there's a sense of togetherness.",
+   "ko": "인탄은 함께하는 느낌이 있어서 에어로빅 수업을 좋아해요.",
+   "blank": "kebersamaan",
+   "src": "made"
+  }
+ ],
  "w|kebersihan": [
   {
    "text": "Pengelola apartemen menempelkan pengumuman soal kebersihan di dekat lift.",
@@ -27165,6 +27517,22 @@
    "en": "They laughed at the madness of that idea.",
    "ko": "그들은 그 아이디어의 터무니없음을 비웃었어.",
    "blank": "kegilaan"
+  }
+ ],
+ "w|keguguran": [
+  {
+   "text": "Fajar berbicara pelan dengan seorang ibu yang baru saja mengalami keguguran.",
+   "en": "Fajar spoke gently with a woman who had just had a miscarriage.",
+   "ko": "파자르는 막 유산을 겪은 여성과 조용히 이야기를 나눴어요.",
+   "blank": "keguguran",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membaca kebijakan cuti bagi karyawan yang mengalami keguguran.",
+   "en": "Lestari read the leave policy for employees who have had a miscarriage.",
+   "ko": "레스타리는 유산을 겪은 직원을 위한 휴가 규정을 읽었어요.",
+   "blank": "keguguran",
+   "src": "made"
   }
  ],
  "w|kegunaan": [
@@ -28113,6 +28481,22 @@
    "en": "The opposing team exploited a defensive weakness.",
    "ko": "상대 팀이 수비 약점을 이용했어.",
    "blank": "kelemahan"
+  }
+ ],
+ "w|kelenjar": [
+  {
+   "text": "Dokter curiga kelenjar tiroid pasien itu bermasalah, jadi Fajar menyiapkan obat sesuai resep.",
+   "en": "The doctor suspected a thyroid gland problem, so Fajar prepared the medicine as prescribed.",
+   "ko": "의사가 그 환자의 갑상샘을 의심해서 파자르는 처방대로 약을 지었어요.",
+   "blank": "kelenjar",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu izin ke dokter karena kelenjar di leher bengkak.",
+   "en": "The new coworker took leave to see a doctor because a gland in the neck was swollen.",
+   "ko": "새 동료는 목의 림프샘이 부어서 병원에 간다고 했어요.",
+   "blank": "kelenjar",
+   "src": "made"
   }
  ],
  "w|kelewatan": [
@@ -29625,6 +30009,22 @@
    "src": "made"
   }
  ],
+ "w|keriput": [
+  {
+   "text": "Ibu-ibu sering menanyakan krim untuk mengurangi keriput di sekitar mata.",
+   "en": "Women often ask about creams to reduce wrinkles around the eyes.",
+   "ko": "아주머니들이 눈가 주름을 줄이는 크림을 자주 물어봐요.",
+   "blank": "keriput",
+   "src": "made"
+  },
+  {
+   "text": "Senyum lebar manajer membuat keriput di sudut mata terlihat jelas.",
+   "en": "The manager's broad smile made the wrinkles at the corners of the eyes clearly visible.",
+   "ko": "매니저가 활짝 웃자 눈가 주름이 또렷이 보였어요.",
+   "blank": "keriput",
+   "src": "made"
+  }
+ ],
  "w|keriting": [
   {
    "text": "Seorang anak berambut keriting melambaikan boneka kepada Budi dari ranjang.",
@@ -30370,6 +30770,22 @@
    "en": "Lestari loves the quiet of the top floor in the morning.",
    "ko": "레스타리는 아침의 꼭대기 층 고요함을 좋아해요.",
    "blank": "kesunyian",
+   "src": "made"
+  }
+ ],
+ "w|ketagihan": [
+  {
+   "text": "Fajar mengingatkan pembeli agar tidak sampai ketagihan obat tidur.",
+   "en": "Fajar warned the customer not to get hooked on sleeping pills.",
+   "ko": "파자르는 손님에게 수면제에 중독되지 않도록 조심하라고 했어요.",
+   "blank": "ketagihan",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru Lestari mengaku ketagihan kopi susu sejak hari pertama kerja.",
+   "en": "Lestari's new coworker admits to being hooked on milk coffee since the first day of work.",
+   "ko": "레스타리의 새 동료는 출근 첫날부터 밀크커피에 중독됐다고 털어놨어요.",
+   "blank": "ketagihan",
    "src": "made"
   }
  ],
@@ -31269,6 +31685,22 @@
    "blank": "klinik"
   }
  ],
+ "w|klinis": [
+  {
+   "text": "Kata Fajar, obat baru itu sudah lolos uji klinis.",
+   "en": "According to Fajar, the new drug has already passed clinical trials.",
+   "ko": "파자르 말로는 그 신약이 임상 시험을 이미 통과했대요.",
+   "blank": "klinis",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bilang ruangan kantor yang serba putih terasa terlalu klinis.",
+   "en": "Lestari says the all-white office feels too clinical.",
+   "ko": "레스타리는 온통 하얀 사무실이 너무 병원 같다고 해요.",
+   "blank": "klinis",
+   "src": "made"
+  }
+ ],
  "w|klip": [
   {
    "text": "Bayu menyertakan klip video wawancara di versi daring artikelnya.",
@@ -31298,6 +31730,22 @@
    "en": "Wati doesn't want to put up a clichéd slogan like \"five-star taste\" in front of her restaurant.",
    "ko": "와티는 식당 앞에 \"오성급 맛\" 같은 뻔한 문구를 걸고 싶지 않아요.",
    "blank": "klise",
+   "src": "made"
+  }
+ ],
+ "w|klon": [
+  {
+   "text": "Fajar membaca bahwa ilmuwan pernah membuat klon domba di laboratorium.",
+   "en": "Fajar read that scientists once made a clone of a sheep in a laboratory.",
+   "ko": "파자르는 과학자들이 실험실에서 복제 양을 만든 적이 있다는 걸 읽었어요.",
+   "blank": "klon",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bercanda bahwa rekan baru itu klon dari bos karena gaya bicara mereka mirip.",
+   "en": "Lestari joked that the new coworker is the boss's clone because they talk alike.",
+   "ko": "레스타리는 새 동료가 말투가 비슷해서 사장 복제인간 같다고 농담했어요.",
+   "blank": "klon",
    "src": "made"
   }
  ],
@@ -32083,6 +32531,22 @@
    "blank": "Konsekuensi"
   }
  ],
+ "w|konseling": [
+  {
+   "text": "Apotek tempat Fajar bekerja menyediakan konseling gratis soal penggunaan obat.",
+   "en": "The pharmacy where Fajar works offers free counseling on how to use medicines.",
+   "ko": "파자르가 일하는 약국은 약 복용에 대한 무료 상담을 해 줘요.",
+   "blank": "konseling",
+   "src": "made"
+  },
+  {
+   "text": "Kantor menawarkan konseling bagi karyawan baru yang merasa tertekan.",
+   "en": "The office offers counseling to new employees who feel stressed.",
+   "ko": "회사는 스트레스를 받는 신입 직원에게 상담을 제공해요.",
+   "blank": "konseling",
+   "src": "made"
+  }
+ ],
  "w|konselor": [
   {
    "text": "Eko berbicara dengan konselor karier sebelum pindah ke dunia kuliner.",
@@ -32318,6 +32782,22 @@
    "en": "Rina entered the stall-arranging contest held by the market management.",
    "ko": "리나는 시장 관리소가 연 좌판 꾸미기 대회에 나갔어요.",
    "blank": "kontes",
+   "src": "made"
+  }
+ ],
+ "w|kontestan": [
+  {
+   "text": "Rekan-rekan baru tahu bahwa Bayu dulu kontestan lomba menyanyi di televisi.",
+   "en": "The coworkers just found out that Bayu used to be a contestant on a TV singing contest.",
+   "ko": "동료들은 바유가 예전에 TV 노래 대회 참가자였다는 걸 막 알았어요.",
+   "blank": "kontestan",
+   "src": "made"
+  },
+  {
+   "text": "Intan melatih kontestan lomba binaraga di gym itu.",
+   "en": "Intan trains bodybuilding contestants at that gym.",
+   "ko": "인탄은 그 헬스장에서 보디빌딩 대회 참가자들을 지도해요.",
+   "blank": "kontestan",
    "src": "made"
   }
  ],
@@ -34415,6 +34895,22 @@
    "blank": "lebih"
   }
  ],
+ "w|lecet": [
+  {
+   "text": "Fajar memberikan salep untuk lecet di tumit akibat sepatu baru.",
+   "en": "Fajar gave an ointment for the blister on the heel from new shoes.",
+   "ko": "파자르는 새 신발 때문에 까진 발뒤꿈치에 바를 연고를 줬어요.",
+   "blank": "lecet",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu memakai sepatu baru sampai tumit lecet.",
+   "en": "The new coworker wore new shoes until her heels got blistered.",
+   "ko": "새 동료는 새 구두를 신다가 뒤꿈치가 까졌어요.",
+   "blank": "lecet",
+   "src": "made"
+  }
+ ],
  "w|ledakan": [
   {
    "text": "Kami mendengar ledakan dari jauh.",
@@ -35181,6 +35677,22 @@
    "src": "made"
   }
  ],
+ "w|lincah": [
+  {
+   "text": "Kucing apotek yang lincah suka melompat ke atas etalase.",
+   "en": "The pharmacy's nimble cat likes to jump onto the display counter.",
+   "ko": "약국의 날렵한 고양이는 진열대 위로 뛰어오르길 좋아해요.",
+   "blank": "lincah",
+   "src": "made"
+  },
+  {
+   "text": "Jari rekan baru itu lincah sekali saat mengetik.",
+   "en": "The new coworker's fingers are very nimble when typing.",
+   "ko": "새 동료는 타자 칠 때 손가락이 아주 빨라요.",
+   "blank": "lincah",
+   "src": "made"
+  }
+ ],
  "w|lingkaran": [
   {
    "text": "Anak-anak membentuk lingkaran di lapangan.",
@@ -35329,6 +35841,22 @@
    "en": "Pay the electricity bill.",
    "ko": "전기 요금 내.",
    "blank": "listrik"
+  }
+ ],
+ "w|liur": [
+  {
+   "text": "Fajar menjelaskan bahwa obat itu bisa membuat air liur berkurang dan mulut terasa kering.",
+   "en": "Fajar explained that the medicine can reduce saliva and make the mouth feel dry.",
+   "ko": "파자르는 그 약이 침을 줄여 입이 마를 수 있다고 설명했어요.",
+   "blank": "liur",
+   "src": "made"
+  },
+  {
+   "text": "Bau rendang dari bekal rekan baru membuat air liur Lestari hampir menetes.",
+   "en": "The smell of rendang from the new coworker's lunch box almost made Lestari drool.",
+   "ko": "새 동료 도시락에서 나는 른당 냄새에 레스타리는 침이 고일 뻔했어요.",
+   "blank": "liur",
+   "src": "made"
   }
  ],
  "w|lobak": [
@@ -36011,6 +36539,22 @@
    "en": "Don't get drunk on the street.",
    "ko": "길에서 취하지 마.",
    "blank": "mabuk"
+  }
+ ],
+ "w|mabuk-mabukan": [
+  {
+   "text": "Fajar menasihati seorang pembeli muda supaya berhenti mabuk-mabukan demi kesehatan hati.",
+   "en": "Fajar advised a young customer to stop binge drinking for the sake of his liver.",
+   "ko": "파자르는 젊은 손님에게 간 건강을 위해 술독에 빠져 지내지 말라고 충고했어요.",
+   "blank": "mabuk-mabukan",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu menolak ajakan mabuk-mabukan setelah acara kantor.",
+   "en": "The new coworker turned down the invitation to go out drinking after the office event.",
+   "ko": "새 동료는 회사 행사 뒤 술 마시러 가자는 제안을 거절했어요.",
+   "blank": "mabuk-mabukan",
+   "src": "made"
   }
  ],
  "w|macam": [
@@ -37893,6 +38437,22 @@
    "src": "made"
   }
  ],
+ "w|melancarkan": [
+  {
+   "text": "Bayu membawa kue untuk melancarkan perkenalan dengan tim.",
+   "en": "Bayu brought cake to smooth his introduction to the team.",
+   "ko": "바유는 팀과 인사를 순조롭게 나누려고 케이크를 가져왔어요.",
+   "blank": "melancarkan",
+   "src": "made"
+  },
+  {
+   "text": "Intan melancarkan pukulan cepat ke samsak.",
+   "en": "Intan threw quick punches at the punching bag.",
+   "ko": "인탄은 샌드백에 빠른 주먹을 날렸어요.",
+   "blank": "melancarkan",
+   "src": "made"
+  }
+ ],
  "w|melanda": [
   {
    "text": "Rasa gugup sempat melanda Andi saat ujian praktik dimulai.",
@@ -38738,6 +39298,22 @@
    "en": "Rina's friends set aside their Sunday to help carry boxes.",
    "ko": "리나의 친구들은 상자 나르는 걸 도우려고 일요일을 비워 줬어요.",
    "blank": "meluangkan",
+   "src": "made"
+  }
+ ],
+ "w|melucu": [
+  {
+   "text": "Fajar suka melucu supaya pasien anak tidak takut minum obat.",
+   "en": "Fajar likes to joke around so that young patients aren't afraid to take medicine.",
+   "ko": "파자르는 어린 환자들이 약 먹기를 무서워하지 않게 농담을 잘해요.",
+   "blank": "melucu",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru Lestari pandai melucu sehingga rapat pagi jadi santai.",
+   "en": "Lestari's new coworker is good at cracking jokes, so the morning meeting feels relaxed.",
+   "ko": "레스타리의 새 동료가 농담을 잘해서 아침 회의 분위기가 편해졌어요.",
+   "blank": "melucu",
    "src": "made"
   }
  ],
@@ -40235,6 +40811,22 @@
    "blank": "membebaskan"
   }
  ],
+ "w|membeberkan": [
+  {
+   "text": "Dalam rapat, Bayu membeberkan data penjualan yang mengejutkan.",
+   "en": "In the meeting, Bayu laid out some surprising sales figures.",
+   "ko": "회의에서 바유는 놀라운 판매 자료를 낱낱이 공개했어요.",
+   "blank": "membeberkan",
+   "src": "made"
+  },
+  {
+   "text": "Intan membeberkan rahasia pola makan yang membuat tubuh tetap bugar.",
+   "en": "Intan revealed the eating habits that keep her body fit.",
+   "ko": "인탄은 몸을 탄탄하게 유지하는 식단 비결을 털어놨어요.",
+   "blank": "membeberkan",
+   "src": "made"
+  }
+ ],
  "w|membedah": [
   {
    "text": "Waktu kuliah, Dimas belajar membedah katak di laboratorium.",
@@ -40983,6 +41575,22 @@
    "en": "Today's lesson feels boring.",
    "ko": "오늘 수업이 지루하게 느껴져.",
    "blank": "membosankan"
+  }
+ ],
+ "w|membran": [
+  {
+   "text": "Fajar menjelaskan cara kerja obat yang bisa menembus membran sel.",
+   "en": "Fajar explained how a drug that can pass through the cell membrane works.",
+   "ko": "파자르는 세포막을 통과하는 약이 어떻게 작용하는지 설명했어요.",
+   "blank": "membran",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru di laboratorium itu meneliti membran penyaring air.",
+   "en": "The new coworker in the lab researches water-filtering membranes.",
+   "ko": "실험실의 새 동료는 물 거르는 막을 연구해요.",
+   "blank": "membran",
+   "src": "made"
   }
  ],
  "w|membual": [
@@ -42658,6 +43266,22 @@
    "en": "Siti dedicated her role in this film to her late father.",
    "ko": "시티는 이 영화의 배역을 돌아가신 아버지께 바쳤어요.",
    "blank": "mempersembahkan",
+   "src": "made"
+  }
+ ],
+ "w|mempersempit": [
+  {
+   "text": "Bayu membantu mempersempit pilihan nama produk baru.",
+   "en": "Bayu helped narrow down the options for the new product name.",
+   "ko": "바유는 새 제품 이름 후보를 좁히는 걸 도왔어요.",
+   "blank": "mempersempit",
+   "src": "made"
+  },
+  {
+   "text": "Intan mempersempit jarak tangan saat melakukan push-up.",
+   "en": "Intan narrows the distance between her hands when doing push-ups.",
+   "ko": "인탄은 팔굽혀펴기를 할 때 손 간격을 좁혀요.",
+   "blank": "mempersempit",
    "src": "made"
   }
  ],
@@ -45415,6 +46039,22 @@
    "src": "made"
   }
  ],
+ "w|mendokumentasikan": [
+  {
+   "text": "Fajar mendokumentasikan setiap obat keras yang keluar dari apotek.",
+   "en": "Fajar documents every prescription-only drug that leaves the pharmacy.",
+   "ko": "파자르는 약국에서 나가는 전문 의약품을 하나하나 기록해요.",
+   "blank": "mendokumentasikan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari meminta rekan baru mendokumentasikan setiap langkah pekerjaan.",
+   "en": "Lestari asked the new coworker to document every step of the work.",
+   "ko": "레스타리는 새 동료에게 작업 단계를 하나하나 기록해 달라고 했어요.",
+   "blank": "mendokumentasikan",
+   "src": "made"
+  }
+ ],
  "w|mendominasi": [
   {
    "text": "Pohon pinus mendominasi hutan di sekitar perkemahan.",
@@ -45927,6 +46567,22 @@
    "en": "Don't go against workplace safety rules.",
    "ko": "작업 안전 규칙을 거스르지 마.",
    "blank": "menentang"
+  }
+ ],
+ "w|menentu": [
+  {
+   "text": "Cuaca yang tidak menentu membuat banyak orang datang membeli obat flu.",
+   "en": "The unpredictable weather has many people coming in to buy flu medicine.",
+   "ko": "날씨가 오락가락해서 감기약을 사러 오는 사람이 많아요.",
+   "blank": "menentu",
+   "src": "made"
+  },
+  {
+   "text": "Jadwal kerja rekan baru masih tidak menentu selama masa percobaan.",
+   "en": "The new coworker's work schedule is still irregular during the probation period.",
+   "ko": "수습 기간 동안 새 동료의 근무 일정은 아직 들쭉날쭉해요.",
+   "blank": "menentu",
+   "src": "made"
   }
  ],
  "w|menentukan": [
@@ -47445,6 +48101,22 @@
    "src": "made"
   }
  ],
+ "w|mengayun": [
+  {
+   "text": "Saat acara golf kantor, Bayu mengayun tongkat dengan canggung.",
+   "en": "At the office golf outing, Bayu swung the club awkwardly.",
+   "ko": "회사 골프 행사에서 바유는 어색하게 골프채를 휘둘렀어요.",
+   "blank": "mengayun",
+   "src": "made"
+  },
+  {
+   "text": "Intan mengayun kettlebell dengan gerakan pinggul yang kuat.",
+   "en": "Intan swings the kettlebell with a strong hip movement.",
+   "ko": "인탄은 엉덩이 힘을 써서 케틀벨을 휘둘러요.",
+   "blank": "mengayun",
+   "src": "made"
+  }
+ ],
  "w|mengayunkan": [
   {
    "text": "Penjual palu itu mengayunkan barang dagangannya untuk menunjukkan bahwa gagangnya kuat.",
@@ -47458,6 +48130,22 @@
    "en": "The little kids swung their legs from their chairs while waiting for food.",
    "ko": "아이들은 음식을 기다리며 의자에 앉아 다리를 흔들었어요.",
    "blank": "mengayunkan",
+   "src": "made"
+  }
+ ],
+ "w|mengebor": [
+  {
+   "text": "Tukang sedang mengebor dinding apotek untuk memasang rak baru.",
+   "en": "A handyman is drilling into the pharmacy wall to put up new shelves.",
+   "ko": "목수가 새 선반을 달려고 약국 벽에 구멍을 뚫고 있어요.",
+   "blank": "mengebor",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru Lestari dulu bekerja mengebor sumur minyak di lepas pantai.",
+   "en": "Lestari's new coworker used to work drilling offshore oil wells.",
+   "ko": "레스타리의 새 동료는 예전에 해상 유정을 시추하는 일을 했어요.",
+   "blank": "mengebor",
    "src": "made"
   }
  ],
@@ -49833,6 +50521,22 @@
    "src": "made"
   }
  ],
+ "w|mengindikasikan": [
+  {
+   "text": "Hasil tes gula darah mengindikasikan bahwa pembeli itu perlu ke dokter.",
+   "en": "The blood sugar test indicated that the customer needed to see a doctor.",
+   "ko": "혈당 검사 결과는 그 손님이 병원에 가야 한다는 걸 보여 줬어요.",
+   "blank": "mengindikasikan",
+   "src": "made"
+  },
+  {
+   "text": "Raut wajah rekan baru mengindikasikan bahwa tugas itu terlalu berat.",
+   "en": "The new coworker's expression indicated that the task was too heavy.",
+   "ko": "새 동료의 표정은 그 일이 너무 버겁다는 걸 보여 줬어요.",
+   "blank": "mengindikasikan",
+   "src": "made"
+  }
+ ],
  "w|menginfeksi": [
   {
    "text": "Dimas menjelaskan bahwa jamur bisa menginfeksi kuku kaki.",
@@ -50821,6 +51525,22 @@
    "src": "made"
   }
  ],
+ "w|mengumpat": [
+  {
+   "text": "Pembeli itu mengumpat pelan ketika tahu resep dokter sudah kedaluwarsa.",
+   "en": "The customer swore under his breath when he found out the prescription had expired.",
+   "ko": "그 손님은 처방전이 만료된 걸 알고 작게 욕을 했어요.",
+   "blank": "mengumpat",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mengumpat dalam hati ketika komputer mati sebelum berkas tersimpan.",
+   "en": "Lestari cursed inwardly when the computer died before the file was saved.",
+   "ko": "파일이 저장되기 전에 컴퓨터가 꺼지자 레스타리는 속으로 욕을 했어요.",
+   "blank": "mengumpat",
+   "src": "made"
+  }
+ ],
  "w|mengumpulkan": [
   {
    "text": "Dia suka mengumpulkan perangko.",
@@ -51547,6 +52267,22 @@
    "en": "That trip is only ten minutes.",
    "ko": "그 길은 십 분이면 돼.",
    "blank": "menit"
+  }
+ ],
+ "w|menitipkan": [
+  {
+   "text": "Bayu menitipkan kunci motor pada satpam kantor.",
+   "en": "Bayu left his motorbike key with the office security guard.",
+   "ko": "바유는 오토바이 열쇠를 회사 경비원에게 맡겼어요.",
+   "blank": "menitipkan",
+   "src": "made"
+  },
+  {
+   "text": "Intan menitipkan tas di loker resepsionis.",
+   "en": "Intan left her bag in the locker at the front desk.",
+   "ko": "인탄은 가방을 안내 데스크 사물함에 맡겼어요.",
+   "blank": "menitipkan",
+   "src": "made"
   }
  ],
  "w|meniup": [
@@ -53831,6 +54567,22 @@
    "src": "made"
   }
  ],
+ "w|menyemprotkan": [
+  {
+   "text": "Bayu menyemprotkan pewangi ruangan di sekitar meja baru.",
+   "en": "Bayu sprayed air freshener around his new desk.",
+   "ko": "바유는 새 책상 주변에 방향제를 뿌렸어요.",
+   "blank": "menyemprotkan",
+   "src": "made"
+  },
+  {
+   "text": "Intan menyemprotkan cairan pembersih ke matras setelah dipakai.",
+   "en": "Intan sprays cleaning fluid onto the mat after it's been used.",
+   "ko": "인탄은 쓰고 난 매트에 세정제를 뿌려요.",
+   "blank": "menyemprotkan",
+   "src": "made"
+  }
+ ],
  "w|menyempurnakan": [
   {
    "text": "Agus menambahkan lampu gantung kecil untuk menyempurnakan tampilan dapurnya.",
@@ -54285,6 +55037,22 @@
    "en": "We have to prepare those documents.",
    "ko": "우리는 그 서류를 준비해야 해.",
    "blank": "menyiapkan"
+  }
+ ],
+ "w|menyibukkan": [
+  {
+   "text": "Bayu menyibukkan diri dengan membaca dokumen lama perusahaan.",
+   "en": "Bayu kept himself busy reading the company's old documents.",
+   "ko": "바유는 회사의 옛 문서를 읽으며 바쁘게 지냈어요.",
+   "blank": "menyibukkan",
+   "src": "made"
+  },
+  {
+   "text": "Sejak putus cinta, Intan menyibukkan diri dengan latihan setiap sore.",
+   "en": "Since her breakup, Intan has kept herself busy working out every afternoon.",
+   "ko": "이별한 뒤로 인탄은 매일 오후 운동하며 바쁘게 지내요.",
+   "blank": "menyibukkan",
+   "src": "made"
   }
  ],
  "w|menyiksa": [
@@ -55574,6 +56342,22 @@
    "en": "The villagers' communal work greatly eased Siti's burden after her roof leaked.",
    "ko": "주민들의 공동 작업 덕분에 지붕이 샌 뒤 시티의 짐이 크게 덜어졌어요.",
    "blank": "meringankan",
+   "src": "made"
+  }
+ ],
+ "w|meringkuk": [
+  {
+   "text": "Seorang anak meringkuk di kursi tunggu karena sakit perut.",
+   "en": "A child curled up on the waiting chair with a stomachache.",
+   "ko": "한 아이가 배가 아파서 대기 의자에 웅크리고 있었어요.",
+   "blank": "meringkuk",
+   "src": "made"
+  },
+  {
+   "text": "Saat lembur, rekan baru itu tertidur meringkuk di sofa kantor.",
+   "en": "While working overtime, the new coworker fell asleep curled up on the office sofa.",
+   "ko": "야근하던 새 동료는 사무실 소파에 웅크린 채 잠들었어요.",
+   "blank": "meringkuk",
    "src": "made"
   }
  ],
@@ -59867,6 +60651,22 @@
    "blank": "Parah"
   }
  ],
+ "w|paralel": [
+  {
+   "text": "Fajar menyusun rak dengan dua lorong paralel supaya pembeli tidak berdesakan.",
+   "en": "Fajar arranged the shelves in two parallel aisles so customers wouldn't crowd together.",
+   "ko": "파자르는 손님들이 붐비지 않게 선반을 평행한 통로 두 줄로 배치했어요.",
+   "blank": "paralel",
+   "src": "made"
+  },
+  {
+   "text": "Lestari dan rekan baru mengerjakan dua proyek paralel.",
+   "en": "Lestari and the new coworker are working on two parallel projects.",
+   "ko": "레스타리와 새 동료는 두 프로젝트를 동시에 진행하고 있어요.",
+   "blank": "paralel",
+   "src": "made"
+  }
+ ],
  "w|paramedis": [
   {
    "text": "Rudi dibantu seorang paramedis veteriner yang sudah berpengalaman.",
@@ -60667,6 +61467,22 @@
    "blank": "pejuang"
   }
  ],
+ "w|peka": [
+  {
+   "text": "Bayu cukup peka terhadap suasana hati rekan kerja.",
+   "en": "Bayu is quite sensitive to his coworkers' moods.",
+   "ko": "바유는 동료들의 기분을 꽤 잘 알아차려요.",
+   "blank": "peka",
+   "src": "made"
+  },
+  {
+   "text": "Intan peka terhadap tanda kelelahan pada anggota baru.",
+   "en": "Intan is quick to notice signs of fatigue in new members.",
+   "ko": "인탄은 신규 회원이 지친 기색을 금방 알아차려요.",
+   "blank": "peka",
+   "src": "made"
+  }
+ ],
  "w|pekan": [
   {
    "text": "Minggu depan adalah pekan ujian.",
@@ -61008,6 +61824,22 @@
    "en": "A former sailor sells a brass compass and binoculars at the flea market.",
    "ko": "전직 뱃사람이 벼룩시장에서 놋쇠 나침반과 망원경을 팔아요.",
    "blank": "pelaut",
+   "src": "made"
+  }
+ ],
+ "w|pelawak": [
+  {
+   "text": "Kata rekan-rekan, gaya bicara Bayu lucu seperti pelawak di acara televisi.",
+   "en": "The coworkers say Bayu talks as funnily as a comedian on a TV show.",
+   "ko": "동료들 말로는 바유 말투가 TV 개그맨처럼 웃기대요.",
+   "blank": "pelawak",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pelawak terkenal ternyata rutin berlatih di gym tempat Intan bekerja.",
+   "en": "A well-known comedian turns out to work out regularly at the gym where Intan works.",
+   "ko": "유명한 개그맨이 인탄이 일하는 헬스장에서 꾸준히 운동한대요.",
+   "blank": "pelawak",
    "src": "made"
   }
  ],
@@ -62151,6 +62983,22 @@
    "src": "made"
   }
  ],
+ "w|pembicara": [
+  {
+   "text": "Baru seminggu bekerja, Bayu sudah diminta menjadi pembicara di rapat bulanan.",
+   "en": "After just a week on the job, Bayu was asked to be a speaker at the monthly meeting.",
+   "ko": "일한 지 겨우 일주일 만에 바유는 월례 회의 발표자를 맡게 됐어요.",
+   "blank": "pembicara",
+   "src": "made"
+  },
+  {
+   "text": "Gym itu mengundang pembicara tentang gizi untuk anggota baru.",
+   "en": "The gym invited a speaker on nutrition for new members.",
+   "ko": "그 헬스장은 신규 회원을 위해 영양 강연자를 초대했어요.",
+   "blank": "pembicara",
+   "src": "made"
+  }
+ ],
  "w|pembicaraan": [
   {
    "text": "Pembicaraan itu berlangsung lama.",
@@ -62667,6 +63515,22 @@
    "src": "made"
   }
  ],
+ "w|peminum": [
+  {
+   "text": "Bayu bukan peminum kopi, jadi selalu membawa teh ke kantor.",
+   "en": "Bayu isn't a coffee drinker, so he always brings tea to the office.",
+   "ko": "바유는 커피를 안 마셔서 늘 차를 회사에 가져와요.",
+   "blank": "peminum",
+   "src": "made"
+  },
+  {
+   "text": "Dulu Intan seorang peminum soda berat sebelum rajin ke gym.",
+   "en": "Intan used to be a heavy soda drinker before she started going to the gym regularly.",
+   "ko": "인탄은 헬스장에 꾸준히 다니기 전엔 탄산음료를 엄청 마셨어요.",
+   "blank": "peminum",
+   "src": "made"
+  }
+ ],
  "w|pemirsa": [
   {
    "text": "Pernikahan Fajar disiarkan langsung lewat internet untuk kerabat yang tidak bisa datang, dan pemirsa terus mengirim ucapan selamat.",
@@ -63123,6 +63987,22 @@
    "blank": "penangkapan"
   }
  ],
+ "w|penantang": [
+  {
+   "text": "Dalam turnamen catur kantor, Bayu menjadi penantang juara bertahan.",
+   "en": "In the office chess tournament, Bayu became the challenger to the reigning champion.",
+   "ko": "회사 체스 대회에서 바유는 디펜딩 챔피언의 도전자가 됐어요.",
+   "blank": "penantang",
+   "src": "made"
+  },
+  {
+   "text": "Intan menjadi penantang juara lomba lari di gym itu.",
+   "en": "Intan became the challenger to the running champion at that gym.",
+   "ko": "인탄은 그 헬스장 달리기 챔피언의 도전자가 됐어요.",
+   "blank": "penantang",
+   "src": "made"
+  }
+ ],
  "w|penari": [
   {
    "text": "Penari itu bergerak sangat anggun.",
@@ -63286,6 +64166,22 @@
    "en": "The agricultural extension worker brought new insight on better ways to grow coffee.",
    "ko": "농업 지도사가 커피를 더 잘 기르는 방법에 대해 새로운 깨우침을 줬어요.",
    "blank": "pencerahan",
+   "src": "made"
+  }
+ ],
+ "w|pencernaan": [
+  {
+   "text": "Fajar menyarankan probiotik untuk membantu pencernaan.",
+   "en": "Fajar recommended probiotics to help with digestion.",
+   "ko": "파자르는 소화를 돕는 프로바이오틱스를 권했어요.",
+   "blank": "pencernaan",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu membawa yoghurt setiap hari demi pencernaan yang lancar.",
+   "en": "The new coworker brings yogurt every day for smooth digestion.",
+   "ko": "새 동료는 소화가 잘되라고 매일 요구르트를 가져와요.",
+   "blank": "pencernaan",
    "src": "made"
   }
  ],
@@ -64105,6 +65001,22 @@
    "blank": "Pengadilan"
   }
  ],
+ "w|pengagum": [
+  {
+   "text": "Bayu adalah pengagum berat karya desainer senior di kantor itu.",
+   "en": "Bayu is a big admirer of the senior designer's work at that office.",
+   "ko": "바유는 그 회사 선임 디자이너 작품의 열렬한 팬이에요.",
+   "blank": "pengagum",
+   "src": "made"
+  },
+  {
+   "text": "Intan punya banyak pengagum di kelas zumba.",
+   "en": "Intan has many admirers in the Zumba class.",
+   "ko": "인탄은 줌바 수업에 팬이 많아요.",
+   "blank": "pengagum",
+   "src": "made"
+  }
+ ],
  "w|pengakuan": [
   {
    "text": "Pengakuan jujurnya mengharukan semua orang.",
@@ -64192,6 +65104,22 @@
    "en": "Since the cameras were installed, Ayu's shop doesn't need extra security at night.",
    "ko": "카메라를 단 뒤로 아유의 가게는 밤에 경비를 더 둘 필요가 없어요.",
    "blank": "pengamanan",
+   "src": "made"
+  }
+ ],
+ "w|pengamat": [
+  {
+   "text": "Di rapat pertama, Bayu memilih menjadi pengamat dulu sebelum berpendapat.",
+   "en": "At his first meeting, Bayu chose to be an observer before giving his opinion.",
+   "ko": "첫 회의에서 바유는 의견을 내기 전에 먼저 지켜보기로 했어요.",
+   "blank": "pengamat",
+   "src": "made"
+  },
+  {
+   "text": "Pelatih Intan adalah pengamat yang jeli terhadap postur tubuh.",
+   "en": "Intan's trainer is a sharp observer of body posture.",
+   "ko": "인탄의 트레이너는 자세를 예리하게 살피는 사람이에요.",
+   "blank": "pengamat",
    "src": "made"
   }
  ],
@@ -65767,6 +66695,22 @@
    "blank": "penjelasan"
   }
  ],
+ "w|penjilat": [
+  {
+   "text": "Bayu tidak mau dicap penjilat, jadi jarang memuji atasan di depan umum.",
+   "en": "Bayu doesn't want to be labeled a bootlicker, so he rarely praises the boss in public.",
+   "ko": "바유는 아첨꾼 소리를 듣기 싫어서 사람들 앞에서 상사를 거의 칭찬하지 않아요.",
+   "blank": "penjilat",
+   "src": "made"
+  },
+  {
+   "text": "Intan kesal pada anggota penjilat yang hanya baik kepada pemilik gym.",
+   "en": "Intan is annoyed by the bootlicking member who is only nice to the gym owner.",
+   "ko": "인탄은 헬스장 주인에게만 잘하는 아첨꾼 회원이 못마땅해요.",
+   "blank": "penjilat",
+   "src": "made"
+  }
+ ],
  "w|penjual": [
   {
    "text": "Penjual di pasar itu ramah kepada pembeli.",
@@ -66238,6 +67182,22 @@
    "en": "The organizers call this marathon a symbol of bringing together residents from many villages.",
    "ko": "주최 측은 이 마라톤을 여러 마을 주민이 하나 되는 상징이라고 불러요.",
    "blank": "penyatuan",
+   "src": "made"
+  }
+ ],
+ "w|penyayang": [
+  {
+   "text": "Rekan-rekan tahu Bayu orang yang penyayang karena sering bercerita tentang kucing peliharaan.",
+   "en": "The coworkers know Bayu is a loving person because he often talks about his pet cats.",
+   "ko": "바유가 키우는 고양이 얘기를 자주 해서 동료들은 그가 정이 많은 사람이라는 걸 알아요.",
+   "blank": "penyayang",
+   "src": "made"
+  },
+  {
+   "text": "Pelatih Intan dikenal tegas tetapi penyayang.",
+   "en": "Intan's trainer is known for being strict but caring.",
+   "ko": "인탄의 트레이너는 엄하지만 다정하기로 알려져 있어요.",
+   "blank": "penyayang",
    "src": "made"
   }
  ],
@@ -70237,6 +71197,22 @@
    "blank": "Plastik"
   }
  ],
+ "w|plester": [
+  {
+   "text": "Fajar menempelkan plester di jari anak yang tergores.",
+   "en": "Fajar put a plaster on the child's scratched finger.",
+   "ko": "파자르는 아이의 긁힌 손가락에 반창고를 붙여 줬어요.",
+   "blank": "plester",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memberi plester kepada rekan baru yang jarinya tergores kertas.",
+   "en": "Lestari gave a plaster to the new coworker who got a paper cut.",
+   "ko": "레스타리는 종이에 손가락을 벤 새 동료에게 반창고를 줬어요.",
+   "blank": "plester",
+   "src": "made"
+  }
+ ],
  "w|podium": [
   {
    "text": "Kepala museum berdiri di podium untuk membuka pameran baru.",
@@ -71711,6 +72687,22 @@
    "src": "made"
   }
  ],
+ "w|pusar": [
+  {
+   "text": "Bidan menyuruh ibu muda itu membeli kasa untuk merawat pusar bayi.",
+   "en": "The midwife told the young mother to buy gauze to care for the baby's navel.",
+   "ko": "조산사는 젊은 엄마에게 아기 배꼽을 돌볼 거즈를 사라고 했어요.",
+   "blank": "pusar",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu bercerita bahwa sisa tali pusar sang bayi baru saja lepas.",
+   "en": "The new coworker said the baby's umbilical stump had just fallen off.",
+   "ko": "새 동료는 아기의 탯줄이 막 떨어졌다고 이야기했어요.",
+   "blank": "pusar",
+   "src": "made"
+  }
+ ],
  "w|pusaran": [
   {
    "text": "Budi melihat pusaran air kecil di saluran irigasi.",
@@ -72135,6 +73127,22 @@
    "src": "made"
   }
  ],
+ "w|rakus": [
+  {
+   "text": "Bayu bercanda bahwa rekan yang menghabiskan kue sendirian itu rakus.",
+   "en": "Bayu joked that the coworker who finished the cake alone was greedy.",
+   "ko": "바유는 케이크를 혼자 다 먹은 동료가 욕심쟁이라고 농담했어요.",
+   "blank": "rakus",
+   "src": "made"
+  },
+  {
+   "text": "Setelah latihan berat, Intan jadi rakus makan nasi.",
+   "en": "After a hard workout, Intan gets greedy for rice.",
+   "ko": "힘든 운동 뒤에는 인탄이 밥을 게걸스럽게 먹어요.",
+   "blank": "rakus",
+   "src": "made"
+  }
+ ],
  "w|rakyat": [
   {
    "text": "Pemerintah harus mendengar suara rakyat.",
@@ -72222,6 +73230,22 @@
    "en": "Putri's younger sibling called the shopping bags from the sale \"the loot.\"",
    "ko": "푸트리 동생은 세일에서 산 쇼핑백들을 전리품이라고 불렀어요.",
    "blank": "rampasan",
+   "src": "made"
+  }
+ ],
+ "w|ramping": [
+  {
+   "text": "Seorang remaja bertanya soal obat diet, padahal badan remaja itu sudah ramping.",
+   "en": "A teenager asked about diet pills even though she was already slim.",
+   "ko": "한 십 대가 이미 날씬한데도 다이어트 약을 물어봤어요.",
+   "blank": "ramping",
+   "src": "made"
+  },
+  {
+   "text": "Laptop rekan baru yang ramping langsung jadi bahan obrolan.",
+   "en": "The new coworker's sleek laptop immediately became a topic of conversation.",
+   "ko": "새 동료의 얇은 노트북이 바로 이야깃거리가 됐어요.",
+   "blank": "ramping",
    "src": "made"
   }
  ],
@@ -72511,6 +73535,22 @@
    "en": "He received hundreds of messages last night.",
    "ko": "그는 어젯밤 수백 개의 메시지를 받았어.",
    "blank": "ratusan"
+  }
+ ],
+ "w|raut": [
+  {
+   "text": "Rekan-rekan melihat raut tegang di wajah Bayu sebelum presentasi.",
+   "en": "The coworkers saw a tense look on Bayu's face before the presentation.",
+   "ko": "동료들은 발표 전 바유 얼굴에 서린 긴장한 기색을 봤어요.",
+   "blank": "raut",
+   "src": "made"
+  },
+  {
+   "text": "Intan bisa membaca raut lelah di wajah anggota baru.",
+   "en": "Intan can read the tired look on new members' faces.",
+   "ko": "인탄은 신규 회원 얼굴에 드러난 피곤한 기색을 읽을 수 있어요.",
+   "blank": "raut",
+   "src": "made"
   }
  ],
  "w|rawa": [
@@ -73282,6 +74322,22 @@
    "en": "For Ayu, paying by phone is a revolutionary change for small shops.",
    "ko": "아유에게 휴대폰 결제는 작은 가게에 혁명적인 변화예요.",
    "blank": "revolusioner",
+   "src": "made"
+  }
+ ],
+ "w|rewel": [
+  {
+   "text": "Bayu harus menghadapi klien rewel yang sering mengubah permintaan.",
+   "en": "Bayu has to deal with a fussy client who keeps changing requests.",
+   "ko": "바유는 요구를 자주 바꾸는 까다로운 고객을 상대해야 해요.",
+   "blank": "rewel",
+   "src": "made"
+  },
+  {
+   "text": "Mesin lari di pojok sudah tua dan rewel.",
+   "en": "The treadmill in the corner is old and temperamental.",
+   "ko": "구석에 있는 러닝머신은 낡아서 자꾸 말썽이에요.",
+   "blank": "rewel",
    "src": "made"
   }
  ],
@@ -75871,6 +76927,22 @@
    "src": "made"
   }
  ],
+ "w|segi": [
+  {
+   "text": "Dari segi harga, obat generik jauh lebih murah.",
+   "en": "In terms of price, generic drugs are much cheaper.",
+   "ko": "가격 면에서는 복제약이 훨씬 싸요.",
+   "blank": "segi",
+   "src": "made"
+  },
+  {
+   "text": "Dari segi pengalaman, rekan baru itu jauh lebih senior daripada Lestari.",
+   "en": "In terms of experience, the new coworker is far more senior than Lestari.",
+   "ko": "경력 면에서는 새 동료가 레스타리보다 훨씬 선배예요.",
+   "blank": "segi",
+   "src": "made"
+  }
+ ],
  "w|segitiga": [
   {
    "text": "Fajar memotong roti lapis berbentuk segitiga untuk menu anak.",
@@ -76868,6 +77940,22 @@
    "en": "Rina first heard about this race from a flyer at the gym.",
    "ko": "리나는 이 대회를 헬스장에 있던 전단지에서 처음 알았어요.",
    "blank": "selebaran",
+   "src": "made"
+  }
+ ],
+ "w|selebihnya": [
+  {
+   "text": "Bayu mengerjakan bagian desain, selebihnya diurus tim pemasaran.",
+   "en": "Bayu handles the design part, and the rest is taken care of by the marketing team.",
+   "ko": "바유는 디자인 부분을 맡고 나머지는 마케팅팀이 처리해요.",
+   "blank": "selebihnya",
+   "src": "made"
+  },
+  {
+   "text": "Intan berlatih kaki selama setengah jam, selebihnya dipakai untuk peregangan.",
+   "en": "Intan trains legs for half an hour and uses the rest for stretching.",
+   "ko": "인탄은 삼십 분 동안 하체 운동을 하고 나머지 시간엔 스트레칭을 해요.",
+   "blank": "selebihnya",
    "src": "made"
   }
  ],
@@ -78042,6 +79130,22 @@
    "en": "Wati wrote that their long friendship deserves to be celebrated.",
    "ko": "와티는 오랜 우정을 마땅히 축하해야 한다고 썼어요.",
    "blank": "sepantasnya",
+   "src": "made"
+  }
+ ],
+ "w|separah": [
+  {
+   "text": "Luka pembeli itu ternyata tidak separah dugaan Fajar.",
+   "en": "The customer's wound turned out to be less serious than Fajar had thought.",
+   "ko": "그 손님의 상처는 파자르가 생각한 것만큼 심하지 않았어요.",
+   "blank": "separah",
+   "src": "made"
+  },
+  {
+   "text": "Kesalahan rekan baru itu ternyata tidak separah gosip yang beredar.",
+   "en": "The new coworker's mistake turned out to be less serious than the rumors going around.",
+   "ko": "새 동료의 실수는 떠도는 소문만큼 심각하지 않았어요.",
+   "blank": "separah",
    "src": "made"
   }
  ],
@@ -79281,6 +80385,22 @@
    "blank": "Siang"
   }
  ],
+ "w|sianida": [
+  {
+   "text": "Kata Fajar, biji apel mengandung zat yang bisa berubah menjadi sianida.",
+   "en": "According to Fajar, apple seeds contain a substance that can turn into cyanide.",
+   "ko": "파자르 말로는 사과 씨에 시안화물로 변할 수 있는 성분이 있대요.",
+   "blank": "sianida",
+   "src": "made"
+  },
+  {
+   "text": "Lestari dan rekan baru membahas novel detektif tentang racun sianida.",
+   "en": "Lestari and the new coworker talked about a detective novel involving cyanide poison.",
+   "ko": "레스타리와 새 동료는 청산가리 독이 나오는 추리 소설 이야기를 나눴어요.",
+   "blank": "sianida",
+   "src": "made"
+  }
+ ],
  "w|siap": [
   {
    "text": "Aku sudah siap.",
@@ -79999,6 +81119,22 @@
    "en": "Each student brings their own notebook.",
    "ko": "학생마다 자기 공책을 가져와.",
    "blank": "siswa"
+  }
+ ],
+ "w|siswi": [
+  {
+   "text": "Bayu dulu mengajar para siswi SMA sebelum pindah ke kantor ini.",
+   "en": "Bayu used to teach high school girls before moving to this office.",
+   "ko": "바유는 이 회사로 오기 전에 여고생들을 가르쳤어요.",
+   "blank": "siswi",
+   "src": "made"
+  },
+  {
+   "text": "Beberapa siswi sekolah dekat situ ikut kelas bela diri yang diajar Intan.",
+   "en": "Some schoolgirls from a nearby school join the self-defense class Intan teaches.",
+   "ko": "근처 학교 여학생 몇 명이 인탄이 가르치는 호신술 수업에 나와요.",
+   "blank": "siswi",
+   "src": "made"
   }
  ],
  "w|situ": [
@@ -84605,6 +85741,22 @@
    "src": "made"
   }
  ],
+ "w|terekam": [
+  {
+   "text": "Pencurian vitamin di rak depan terekam kamera pengawas.",
+   "en": "The theft of vitamins from the front shelf was caught on the security camera.",
+   "ko": "앞 선반의 비타민 도난이 감시 카메라에 찍혔어요.",
+   "blank": "terekam",
+   "src": "made"
+  },
+  {
+   "text": "Perkenalan rekan baru terekam dalam video rapat daring.",
+   "en": "The new coworker's introduction was recorded in the online meeting video.",
+   "ko": "새 동료의 자기소개가 온라인 회의 영상에 녹화됐어요.",
+   "blank": "terekam",
+   "src": "made"
+  }
+ ],
  "w|terelakkan": [
   {
    "text": "Agus tahu longsor kecil tak terelakkan kalau hujan turun berhari-hari.",
@@ -84789,6 +85941,22 @@
    "en": "Regarding this problem, we must be careful.",
    "ko": "이 문제에 대해 우리는 조심해야 해.",
    "blank": "Terhadap"
+  }
+ ],
+ "w|terhalang": [
+  {
+   "text": "Pintu darurat apotek terhalang kardus obat, jadi Fajar segera memindahkan kardus itu.",
+   "en": "The pharmacy's emergency exit was blocked by boxes of medicine, so Fajar moved them right away.",
+   "ko": "약국 비상문이 약 상자에 막혀 있어서 파자르가 바로 옮겼어요.",
+   "blank": "terhalang",
+   "src": "made"
+  },
+  {
+   "text": "Pandangan Lestari ke papan tulis terhalang monitor besar.",
+   "en": "Lestari's view of the whiteboard is blocked by a big monitor.",
+   "ko": "큰 모니터 때문에 레스타리는 화이트보드가 안 보여요.",
+   "blank": "terhalang",
+   "src": "made"
   }
  ],
  "w|terhapus": [
@@ -85331,6 +86499,22 @@
    "en": "He was so impressed hearing that speech.",
    "ko": "그 연설을 듣고 그는 정말 감명받았어.",
    "blank": "Terkesan"
+  }
+ ],
+ "w|terkilir": [
+  {
+   "text": "Fajar memberikan salep untuk pergelangan kaki yang terkilir.",
+   "en": "Fajar gave an ointment for the sprained ankle.",
+   "ko": "파자르는 삔 발목에 바를 연고를 줬어요.",
+   "blank": "terkilir",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru Lestari datang pincang karena kaki terkilir saat main futsal.",
+   "en": "Lestari's new coworker came in limping after spraining an ankle playing futsal.",
+   "ko": "레스타리의 새 동료는 풋살을 하다 발을 삐어서 절뚝이며 왔어요.",
+   "blank": "terkilir",
+   "src": "made"
   }
  ],
  "w|terkirim": [
@@ -86969,6 +88153,22 @@
    "blank": "tertutup"
   }
  ],
+ "w|terukir": [
+  {
+   "text": "Nama Bayu terukir di papan karyawan terbaik bulan ini.",
+   "en": "Bayu's name is engraved on this month's best employee plaque.",
+   "ko": "바유의 이름이 이달의 우수 직원 명패에 새겨졌어요.",
+   "blank": "terukir",
+   "src": "made"
+  },
+  {
+   "text": "Kalimat penyemangat terukir di dinding kayu gym itu.",
+   "en": "Motivational sayings are carved into the wooden wall of that gym.",
+   "ko": "그 헬스장 나무 벽에는 힘을 주는 문구가 새겨져 있어요.",
+   "blank": "terukir",
+   "src": "made"
+  }
+ ],
  "w|terulang": [
   {
    "text": "Budi tidak ingin kejadian kucing kabur dari kandang terulang lagi.",
@@ -87089,6 +88289,22 @@
    "en": "That test was quite hard.",
    "ko": "그 시험이 꽤 어려웠어.",
    "blank": "Tes"
+  }
+ ],
+ "w|testis": [
+  {
+   "text": "Fajar membagikan brosur pemeriksaan kanker testis untuk pria muda.",
+   "en": "Fajar handed out brochures on testicular cancer screening for young men.",
+   "ko": "파자르는 젊은 남성을 위한 고환암 검진 안내지를 나눠 줬어요.",
+   "blank": "testis",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru Lestari ikut lari amal untuk kampanye kesadaran kanker testis.",
+   "en": "Lestari's new coworker joined a charity run for testicular cancer awareness.",
+   "ko": "레스타리의 새 동료는 고환암 인식 캠페인 자선 달리기에 참가했어요.",
+   "blank": "testis",
+   "src": "made"
   }
  ],
  "w|tetangga": [
@@ -88223,6 +89439,22 @@
    "blank": "trik"
   }
  ],
+ "w|triliun": [
+  {
+   "text": "Fajar membaca bahwa industri obat di negeri ini bernilai ratusan triliun rupiah.",
+   "en": "Fajar read that the drug industry in this country is worth hundreds of trillions of rupiah.",
+   "ko": "파자르는 이 나라 제약 산업 규모가 수백조 루피아라는 걸 읽었어요.",
+   "blank": "triliun",
+   "src": "made"
+  },
+  {
+   "text": "Rekan baru itu pernah mengurus proyek senilai satu triliun rupiah.",
+   "en": "The new coworker once managed a project worth one trillion rupiah.",
+   "ko": "새 동료는 일조 루피아짜리 프로젝트를 맡은 적이 있어요.",
+   "blank": "triliun",
+   "src": "made"
+  }
+ ],
  "w|tropis": [
   {
    "text": "Budi menanam buah-buahan tropis seperti nanas dan pepaya.",
@@ -88468,6 +89700,22 @@
    "en": "Putri was touched by the sincere smile of the conductor who helped her lift her suitcase.",
    "ko": "푸트리는 가방 드는 걸 도와준 차장의 진심 어린 미소에 감동했어요.",
    "blank": "tulus",
+   "src": "made"
+  }
+ ],
+ "w|tumbang": [
+  {
+   "text": "Setelah lembur berhari-hari, Bayu akhirnya tumbang karena demam.",
+   "en": "After days of overtime, Bayu finally collapsed with a fever.",
+   "ko": "며칠 동안 야근한 끝에 바유는 결국 열이 나서 쓰러졌어요.",
+   "blank": "tumbang",
+   "src": "made"
+  },
+  {
+   "text": "Seorang anggota baru hampir tumbang karena lupa sarapan.",
+   "en": "A new member nearly collapsed because she forgot to eat breakfast.",
+   "ko": "한 신규 회원이 아침을 거르는 바람에 쓰러질 뻔했어요.",
+   "blank": "tumbang",
    "src": "made"
   }
  ],
@@ -88757,6 +90005,22 @@
    "en": "Prices are starting to drop.",
    "ko": "가격이 떨어지기 시작해.",
    "blank": "turun"
+  }
+ ],
+ "w|turunan": [
+  {
+   "text": "Bayu ditugaskan memasarkan produk turunan dari minyak kelapa.",
+   "en": "Bayu was assigned to market products derived from coconut oil.",
+   "ko": "바유는 코코넛 기름으로 만든 파생 제품을 홍보하는 일을 맡았어요.",
+   "blank": "turunan",
+   "src": "made"
+  },
+  {
+   "text": "Pelatih menjelaskan bahwa bentuk tubuh juga dipengaruhi faktor turunan.",
+   "en": "The trainer explained that body shape is also influenced by hereditary factors.",
+   "ko": "트레이너는 체형이 유전적 요인의 영향도 받는다고 설명했어요.",
+   "blank": "turunan",
+   "src": "made"
   }
  ],
  "w|turut": [
@@ -89290,6 +90554,22 @@
    "en": "The tour guide on the train told about the tribute that used to be carried along this route.",
    "ko": "열차 안 관광 안내원이 옛날 이 길로 실어 나르던 조공 이야기를 해 줬어요.",
    "blank": "upeti",
+   "src": "made"
+  }
+ ],
+ "w|urat": [
+  {
+   "text": "Fajar menyarankan krim pereda nyeri untuk urat leher yang tegang.",
+   "en": "Fajar suggested a pain-relief cream for the tense muscles in the neck.",
+   "ko": "파자르는 뭉친 목 근육에 바를 진통 크림을 권했어요.",
+   "blank": "urat",
+   "src": "made"
+  },
+  {
+   "text": "Lestari melihat urat di dahi manajer menegang saat rapat.",
+   "en": "Lestari saw the vein on the manager's forehead tense up during the meeting.",
+   "ko": "레스타리는 회의 중에 매니저 이마에 핏대가 서는 걸 봤어요.",
+   "blank": "urat",
    "src": "made"
   }
  ],

@@ -241,6 +241,22 @@
    "src": "made"
   }
  ],
+ "w|ก้มหัว": [
+  {
+   "text": "ธนาก้มหัวขอโทษเมื่อโทรศัพท์ดังกลางห้องอ่านหนังสือ",
+   "en": "Thana bowed his head in apology when his phone rang in the middle of the reading room.",
+   "ko": "열람실 한가운데서 전화가 울리자 타나는 고개 숙여 사과했어요.",
+   "blank": "ก้มหัว",
+   "src": "made"
+  },
+  {
+   "text": "มานพก้มหัวทักทายครูเก่าอย่างนอบน้อม",
+   "en": "Manop bowed his head and greeted his old teacher respectfully.",
+   "ko": "마놉은 옛 선생님께 공손하게 고개 숙여 인사했어요.",
+   "blank": "ก้มหัว",
+   "src": "made"
+  }
+ ],
  "w|กรกฎาคม": [
   {
    "text": "เกิดเดือนกรกฎาคม",
@@ -424,6 +440,22 @@
    "en": "The car radio news reported that the transport committee will inspect this road in person.",
    "ko": "차 라디오 뉴스에서 교통 위원회가 이 도로를 현장 점검할 거라고 했어요.",
    "blank": "กรรมาธิการ",
+   "src": "made"
+  }
+ ],
+ "w|กรวย": [
+  {
+   "text": "เจ้าหน้าที่วางกรวยสีส้มกั้นทางเดินตรงที่พื้นเปียก",
+   "en": "Staff put orange cones to block off the walkway where the floor was wet.",
+   "ko": "직원이 바닥이 젖은 곳에 주황색 고깔을 세워 통로를 막았어요.",
+   "blank": "กรวย",
+   "src": "made"
+  },
+  {
+   "text": "วิชัยต้องขับเลี่ยงกรวยจราจรหลายอันกว่าจะหาที่จอดหน้าร้านได้",
+   "en": "Wichai had to drive around several traffic cones before finding parking in front of the restaurant.",
+   "ko": "위차이는 교통 고깔 여러 개를 피해 간 끝에 식당 앞에 차를 댔어요.",
+   "blank": "กรวย",
    "src": "made"
   }
  ],
@@ -4571,6 +4603,22 @@
    "blank": "เกรด"
   }
  ],
+ "w|เกร็ด": [
+  {
+   "text": "หนังสือเล่มบางนี้รวมเกร็ดความรู้เรื่องดวงดาวไว้มากมาย",
+   "en": "This thin book is full of little facts about the stars.",
+   "ko": "이 얇은 책에는 별에 관한 토막 지식이 가득해요.",
+   "blank": "เกร็ด",
+   "src": "made"
+  },
+  {
+   "text": "วิชัยเล่าเกร็ดชีวิตตอนไปทำงานต่างจังหวัดให้ทุกคนฟัง",
+   "en": "Wichai told everyone little anecdotes from his time working upcountry.",
+   "ko": "위차이는 지방에서 일하던 시절의 소소한 일화를 모두에게 들려줬어요.",
+   "blank": "เกร็ด",
+   "src": "made"
+  }
+ ],
  "w|เกราะ": [
   {
    "text": "เด็ก ๆ ทำชุดเกราะจากกล่องกระดาษสำหรับงานวันเด็ก",
@@ -7783,6 +7831,22 @@
    "src": "made"
   }
  ],
+ "w|ข้าศึก": [
+  {
+   "text": "ในนิยายอิงประวัติศาสตร์เล่มนั้น ทหารต้องเฝ้ากำแพงเมืองไม่ให้ข้าศึกบุกเข้ามา",
+   "en": "In that historical novel, soldiers must guard the city wall so the enemy can't break in.",
+   "ko": "그 역사 소설에서 병사들은 적이 쳐들어오지 못하게 성벽을 지켜야 해요.",
+   "blank": "ข้าศึก",
+   "src": "made"
+  },
+  {
+   "text": "สองห้องที่เคยเป็นเหมือนข้าศึกกันตอนกีฬาสี วันนี้นั่งกินข้าวโต๊ะเดียวกัน",
+   "en": "The two classes that were like enemies on sports day now sit and eat at the same table.",
+   "ko": "운동회 때 원수 같던 두 반이 오늘은 한 식탁에서 밥을 먹어요.",
+   "blank": "ข้าศึก",
+   "src": "made"
+  }
+ ],
  "w|ข้าหลวง": [
   {
    "text": "ภาพถ่ายเก่าในห้องเอกสารมีรูปข้าหลวงอังกฤษยืนหน้าศาลากลาง",
@@ -7900,6 +7964,22 @@
    "en": "Wanna crossed out the misspelled letters and rewrote them above.",
    "ko": "완나는 잘못 쓴 글자를 줄을 그어 지우고 위에 다시 썼어요.",
    "blank": "ขีด",
+   "src": "made"
+  }
+ ],
+ "w|ขี้เหร่": [
+  {
+   "text": "ปกหนังสือเล่มนี้ขี้เหร่ แต่เนื้อหาข้างในสนุกมาก",
+   "en": "This book's cover is ugly, but the content inside is really fun.",
+   "ko": "이 책 표지는 못생겼지만 안의 내용은 정말 재미있어요.",
+   "blank": "ขี้เหร่",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อน ๆ หัวเราะกับทรงผมขี้เหร่ของสุดาสมัยมัธยม",
+   "en": "The friends laughed at Suda's ugly high school hairstyle.",
+   "ko": "친구들은 수다의 고등학교 시절 못난 머리 모양을 보고 웃었어요.",
+   "blank": "ขี้เหร่",
    "src": "made"
   }
  ],
@@ -10197,6 +10277,22 @@
    "src": "made"
   }
  ],
+ "w|คลั่ง": [
+  {
+   "text": "นักอ่านวัยรุ่นคลั่งนิยายชุดนี้จนต้องต่อคิวยืมกันยาวเหยียด",
+   "en": "Teen readers are so crazy about this novel series that they line up in long queues to borrow it.",
+   "ko": "십대 독자들이 이 소설 시리즈에 열광해서 빌리려고 길게 줄을 서요.",
+   "blank": "คลั่ง",
+   "src": "made"
+  },
+  {
+   "text": "สมัยเรียน สุดาคลั่งวงดนตรีวงหนึ่งจนติดโปสเตอร์เต็มห้อง",
+   "en": "Back in school, Suda was so crazy about a band that she covered her room in posters.",
+   "ko": "학창 시절 수다는 어떤 밴드에 푹 빠져서 방을 포스터로 도배했어요.",
+   "blank": "คลั่ง",
+   "src": "made"
+  }
+ ],
  "w|คลับ": [
   {
    "text": "ทุกวันศุกร์ชัยไปตีแบดที่คลับกีฬาของพนักงานเทศบาล",
@@ -11356,6 +11452,22 @@
    "en": "The housewives' group splits the profit from vegetable sales equally every month.",
    "ko": "주부 모임은 매달 채소 판매 이익을 공평하게 나눠요.",
    "blank": "ความเท่าเทียมกัน",
+   "src": "made"
+  }
+ ],
+ "w|ความแน่ใจ": [
+  {
+   "text": "ธนาตอบด้วยความแน่ใจว่าหนังสือเล่มนั้นถูกยืมไปแล้ว",
+   "en": "Thana answered with certainty that the book had already been borrowed.",
+   "ko": "타나는 그 책이 이미 대출됐다고 확신을 갖고 대답했어요.",
+   "blank": "ความแน่ใจ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาพูดด้วยความแน่ใจว่าปีหน้าทุกคนจะกลับมาเจอกันอีก",
+   "en": "Suda said with certainty that everyone would meet again next year.",
+   "ko": "수다는 내년에 모두 다시 만날 거라고 확신에 차서 말했어요.",
+   "blank": "ความแน่ใจ",
    "src": "made"
   }
  ],
@@ -13585,6 +13697,22 @@
    "blank": "คำนวณ"
   }
  ],
+ "w|คำนำ": [
+  {
+   "text": "ธนาชอบอ่านคำนำก่อนตัดสินใจยืมหนังสือ",
+   "en": "Thana likes to read the preface before deciding to borrow a book.",
+   "ko": "타나는 책을 빌릴지 정하기 전에 머리말을 읽는 걸 좋아해요.",
+   "blank": "คำนำ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเขียนคำนำให้หนังสือรุ่นที่เพื่อน ๆ ทำขึ้นใหม่",
+   "en": "Suda wrote the foreword for the new yearbook her friends put together.",
+   "ko": "수다는 친구들이 새로 만든 졸업 앨범의 머리말을 썼어요.",
+   "blank": "คำนำ",
+   "src": "made"
+  }
+ ],
  "w|คำนิยาม": [
   {
    "text": "ป้ายในล็อบบี้ให้คำนิยามของโรงแรมสีเขียวว่าเป็นโรงแรมที่ลดขยะ",
@@ -13644,6 +13772,22 @@
    "en": "The editing team added subtitles to the scenes in dialect.",
    "ko": "편집팀이 사투리로 말하는 장면에 자막을 넣었어요.",
    "blank": "คำบรรยาย",
+   "src": "made"
+  }
+ ],
+ "w|คำบอกเล่า": [
+  {
+   "text": "ธนารวบรวมคำบอกเล่าของคนเฒ่าคนแก่ในชุมชนมาทำเป็นหนังสือ",
+   "en": "Thana collected the accounts of the community's elders and made them into a book.",
+   "ko": "타나는 마을 어르신들의 이야기를 모아 책으로 만들었어요.",
+   "blank": "คำบอกเล่า",
+   "src": "made"
+  },
+  {
+   "text": "ตามคำบอกเล่าของนิดา ครูพละเกษียณแล้วไปเปิดร้านกาแฟ",
+   "en": "According to Nida, the PE teacher retired and opened a coffee shop.",
+   "ko": "니다 말로는 체육 선생님이 은퇴하고 카페를 열었대요.",
+   "blank": "คำบอกเล่า",
    "src": "made"
   }
  ],
@@ -15533,6 +15677,22 @@
    "blank": "โครงการ"
   }
  ],
+ "w|โครงเรื่อง": [
+  {
+   "text": "นักเขียนมาบรรยายวิธีวางโครงเรื่องนิยายสืบสวนที่ห้องสมุด",
+   "en": "An author came to the library to give a talk on how to plot a detective novel.",
+   "ko": "작가가 도서관에 와서 추리 소설의 줄거리를 짜는 법을 강연했어요.",
+   "blank": "โครงเรื่อง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาชวนเพื่อนช่วยคิดโครงเรื่องละครสั้นสำหรับงานคืนสู่เหย้า",
+   "en": "Suda asked her friends to help come up with the plot for a short skit for the homecoming.",
+   "ko": "수다는 동창회 때 할 짧은 연극의 줄거리를 같이 짜자고 친구들에게 제안했어요.",
+   "blank": "โครงเรื่อง",
+   "src": "made"
+  }
+ ],
  "w|โครงสร้าง": [
   {
    "text": "ห้องสมุดแห่งนี้มีโครงสร้างไม้เก่าแก่ที่สร้างมาเกือบร้อยปี",
@@ -17083,6 +17243,22 @@
    "src": "made"
   }
  ],
+ "w|จับตาดู": [
+  {
+   "text": "บรรณารักษ์จับตาดูกลุ่มนักเรียนที่คุยเสียงดังตรงมุมห้อง",
+   "en": "The librarian kept an eye on the group of students talking loudly in the corner.",
+   "ko": "사서는 구석에서 시끄럽게 떠드는 학생들을 주시했어요.",
+   "blank": "จับตาดู",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อน ๆ จับตาดูมานพกับนิดาว่าจะกลับมาคบกันอีกไหม",
+   "en": "The friends are watching closely to see whether Manop and Nida will get back together.",
+   "ko": "친구들은 마놉과 니다가 다시 사귈지 눈여겨보고 있어요.",
+   "blank": "จับตาดู",
+   "src": "made"
+  }
+ ],
  "w|จับมือ": [
   {
    "text": "จับมือกันไว้แน่น",
@@ -17567,6 +17743,22 @@
    "src": "made"
   }
  ],
+ "w|จิก": [
+  {
+   "text": "นกพิราบมาจิกเศษขนมปังหน้าห้องสมุดทุกเช้า",
+   "en": "Pigeons come to peck at bread crumbs in front of the library every morning.",
+   "ko": "비둘기들이 매일 아침 도서관 앞에 와서 빵 부스러기를 쪼아 먹어요.",
+   "blank": "จิก",
+   "src": "made"
+  },
+  {
+   "text": "ไก่ในสวนบ้านเจ้าภาพเดินมาจิกเท้าสุดาจนทุกคนหัวเราะ",
+   "en": "A chicken in the host's garden came and pecked at Suda's foot, making everyone laugh.",
+   "ko": "주최자 집 마당의 닭이 와서 수다의 발을 쪼는 바람에 모두 웃었어요.",
+   "blank": "จิก",
+   "src": "made"
+  }
+ ],
  "w|จิ้งจก": [
   {
    "text": "จิ้งจกเกาะอยู่บนผนัง",
@@ -17628,6 +17820,22 @@
    "en": "Fon says long overcast spells make her spirits gloomy too.",
    "ko": "폰은 오래 흐린 날씨가 마음까지 우울하게 만든다고 해요.",
    "blank": "จิตใจ",
+   "src": "made"
+  }
+ ],
+ "w|จิตใต้สำนึก": [
+  {
+   "text": "ธนายืมหนังสือจิตวิทยาว่าด้วยจิตใต้สำนึกไปอ่านช่วงปิดเทอม",
+   "en": "Thana borrowed a psychology book on the subconscious to read over the break.",
+   "ko": "타나는 방학 동안 읽으려고 잠재의식에 관한 심리학 책을 빌렸어요.",
+   "blank": "จิตใต้สำนึก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาบอกว่าจิตใต้สำนึกคงจำทางไปโรงเรียนเก่าได้ เพราะเดินถึงโดยไม่ต้องดูแผนที่",
+   "en": "Suda says her subconscious must remember the way to the old school, since she got there without a map.",
+   "ko": "수다는 지도도 안 보고 옛 학교에 도착한 걸 보면 잠재의식이 길을 기억하나 보다고 해요.",
+   "blank": "จิตใต้สำนึก",
    "src": "made"
   }
  ],
@@ -23481,6 +23689,22 @@
    "src": "made"
   }
  ],
+ "w|ด้านนอก": [
+  {
+   "text": "ด้านนอกห้องสมุดมีม้านั่งให้คนนั่งอ่านใต้ต้นไม้",
+   "en": "Outside the library there are benches for people to read under the trees.",
+   "ko": "도서관 바깥에는 나무 아래서 책을 읽을 수 있는 벤치가 있어요.",
+   "blank": "ด้านนอก",
+   "src": "made"
+  },
+  {
+   "text": "ด้านนอกร้านอาหาร เพื่อนบางคนยืนคุยกันจนดึก",
+   "en": "Outside the restaurant, some of the friends stood talking until late.",
+   "ko": "식당 바깥에서 몇몇 친구들은 늦게까지 서서 이야기를 나눴어요.",
+   "blank": "ด้านนอก",
+   "src": "made"
+  }
+ ],
  "w|ด้านบน": [
   {
    "text": "ประยุทธมัดกระเป๋าไว้ด้านบนหลังคารถเพราะท้ายรถเต็ม",
@@ -25694,6 +25918,22 @@
    "en": "Every warranty card from Chan's shop is stamped with the shop's seal.",
    "ko": "짠 가게의 보증서에는 모두 가게 도장이 찍혀 있어요.",
    "blank": "ตรา",
+   "src": "made"
+  }
+ ],
+ "w|ตราบใด": [
+  {
+   "text": "ธนาเชื่อว่าตราบใดที่ยังมีคนอ่าน ห้องสมุดก็ยังมีความหมาย",
+   "en": "Thana believes that as long as people still read, the library still matters.",
+   "ko": "타나는 읽는 사람이 있는 한 도서관은 여전히 의미가 있다고 믿어요.",
+   "blank": "ตราบใด",
+   "src": "made"
+  },
+  {
+   "text": "ตราบใดที่ยังมีคนจัดงาน สุดาก็จะมาร่วมทุกปี",
+   "en": "As long as someone keeps organizing it, Suda will come every year.",
+   "ko": "누군가 모임을 여는 한 수다는 해마다 올 거예요.",
+   "blank": "ตราบใด",
    "src": "made"
   }
  ],
@@ -29715,6 +29955,22 @@
    "blank": "ถือ"
   }
  ],
+ "w|ถือครอง": [
+  {
+   "text": "ห้องสมุดถือครองลิขสิทธิ์ภาพถ่ายเก่าของจังหวัดอยู่หลายพันภาพ",
+   "en": "The library holds the copyright to several thousand old photos of the province.",
+   "ko": "도서관은 그 지방의 옛 사진 수천 장의 저작권을 보유하고 있어요.",
+   "blank": "ถือครอง",
+   "src": "made"
+  },
+  {
+   "text": "วิชัยถือครองที่ดินของครอบครัวหลายไร่และเริ่มทำสวนผลไม้",
+   "en": "Wichai holds several rai of family land and has started a fruit orchard.",
+   "ko": "위차이는 가족 땅 여러 라이를 소유하고 있고 과수원을 시작했어요.",
+   "blank": "ถือครอง",
+   "src": "made"
+  }
+ ],
  "w|ถือว่า": [
   {
    "text": "หัวหน้าบอกประยุทธว่าการมาสายครั้งแรกถือว่าไม่เป็นปัญหา",
@@ -29939,6 +30195,22 @@
    "en": "They argued about the holiday plan.",
    "ko": "휴가 계획을 두고 말다툼했어.",
    "blank": "เถียง"
+  }
+ ],
+ "w|เถื่อน": [
+  {
+   "text": "ธนาเตือนว่าห้องสมุดไม่รับบริจาคหนังสือเถื่อนที่พิมพ์ซ้ำโดยไม่ได้รับอนุญาต",
+   "en": "Thana warned that the library doesn't accept donations of pirated books reprinted without permission.",
+   "ko": "타나는 도서관이 허락 없이 다시 찍은 해적판 책은 기증받지 않는다고 알렸어요.",
+   "blank": "เถื่อน",
+   "src": "made"
+  },
+  {
+   "text": "นิดายังเก็บเทปเพลงเถื่อนที่ซื้อจากตลาดนัดสมัยก่อนไว้",
+   "en": "Nida still keeps the bootleg music tapes she bought at the market long ago.",
+   "ko": "니다는 옛날 장터에서 산 불법 복제 음악 테이프를 아직도 갖고 있어요.",
+   "blank": "เถื่อน",
+   "src": "made"
   }
  ],
  "w|แถบ": [
@@ -34001,6 +34273,22 @@
    "blank": "โทรกลับ"
   }
  ],
+ "w|โทรคมนาคม": [
+  {
+   "text": "ตำราวิศวกรรมโทรคมนาคมอยู่บนชั้นเดียวกับตำราไฟฟ้า",
+   "en": "Telecommunications engineering textbooks are on the same shelf as electrical ones.",
+   "ko": "통신 공학 교재는 전기 교재와 같은 책장에 있어요.",
+   "blank": "โทรคมนาคม",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเป็นวิศวกรบริษัทโทรคมนาคมมาเกือบสิบปีแล้ว",
+   "en": "Piya has been an engineer at a telecom company for almost ten years.",
+   "ko": "피야는 통신 회사 엔지니어로 일한 지 거의 십 년이 됐어요.",
+   "blank": "โทรคมนาคม",
+   "src": "made"
+  }
+ ],
  "w|โทรทัศน์": [
   {
    "text": "คืนวันสิ้นปี สมชายเปิดโทรทัศน์ดูการนับถอยหลัง",
@@ -36126,6 +36414,22 @@
    "en": "I forgot to set the alarm clock.",
    "ko": "알람 맞추는 걸 깜빡했어.",
    "blank": "นาฬิกาปลุก",
+   "src": "made"
+  }
+ ],
+ "w|น่าอนาถ": [
+  {
+   "text": "ธนาบอกว่าสภาพหนังสือเก่าที่ถูกปลวกกินนั้นน่าอนาถมาก",
+   "en": "Thana says the state of the old termite-eaten books is truly pitiful.",
+   "ko": "타나는 흰개미가 갉아먹은 옛 책들의 상태가 정말 처참하다고 해요.",
+   "blank": "น่าอนาถ",
+   "src": "made"
+  },
+  {
+   "text": "หอพักสมัยเรียนของสุดากับเพื่อน ๆ เคยรกจนน่าอนาถ",
+   "en": "Suda and her friends' dorm back in college used to be pitifully messy.",
+   "ko": "수다와 친구들의 대학 시절 기숙사는 처참할 정도로 지저분했어요.",
+   "blank": "น่าอนาถ",
    "src": "made"
   }
  ],
@@ -42231,6 +42535,22 @@
    "src": "made"
   }
  ],
+ "w|ปริญญาเอก": [
+  {
+   "text": "วิทยานิพนธ์ปริญญาเอกเล่มเก่า ๆ ถูกเก็บไว้ที่ชั้นบนสุด",
+   "en": "Old doctoral dissertations are kept on the top floor.",
+   "ko": "옛 박사 학위 논문들은 꼭대기 층에 보관돼 있어요.",
+   "blank": "ปริญญาเอก",
+   "src": "made"
+  },
+  {
+   "text": "มานพเพิ่งเรียนจบปริญญาเอกด้านเคมี",
+   "en": "Manop just finished his doctorate in chemistry.",
+   "ko": "마놉은 얼마 전 화학 박사 과정을 마쳤어요.",
+   "blank": "ปริญญาเอก",
+   "src": "made"
+  }
+ ],
  "w|ปริมณฑล": [
   {
    "text": "สมชายนั่งรถจากปริมณฑลเข้ามาเรียนในกรุงเทพฯ ทุกเช้า",
@@ -45193,6 +45513,22 @@
    "blank": "ผลิต"
   }
  ],
+ "w|ผลิตผล": [
+  {
+   "text": "นิทรรศการในห้องสมุดเล่าถึงผลิตผลทางการเกษตรของจังหวัด",
+   "en": "The exhibition in the library tells about the province's agricultural produce.",
+   "ko": "도서관 전시회는 그 지방의 농산물을 소개해요.",
+   "blank": "ผลิตผล",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าภาพเลี้ยงผลไม้ที่เป็นผลิตผลจากสวนของตัวเอง",
+   "en": "The host served fruit that was produce from their own orchard.",
+   "ko": "주최자는 자기 과수원에서 난 과일을 대접했어요.",
+   "blank": "ผลิตผล",
+   "src": "made"
+  }
+ ],
  "w|ผลิตภัณฑ์": [
   {
    "text": "ผลิตภัณฑ์ใหม่เปิดตัวสัปดาห์หน้า",
@@ -47179,6 +47515,22 @@
    "en": "I still use a paper map.",
    "ko": "종이 지도를 아직도 써.",
    "blank": "แผนที่"
+  }
+ ],
+ "w|แผ่นเสียง": [
+  {
+   "text": "ห้องสมุดมีมุมฟังแผ่นเสียงเพลงลูกกรุงเก่า ๆ",
+   "en": "The library has a corner for listening to old Thai classic records.",
+   "ko": "도서관에는 옛 루끄룽 가요 레코드를 듣는 코너가 있어요.",
+   "blank": "แผ่นเสียง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเปิดแผ่นเสียงเพลงฮิตสมัยที่ทุกคนยังเรียนอยู่",
+   "en": "Suda put on a record of the hits from when everyone was still in school.",
+   "ko": "수다는 다들 학생이던 시절의 히트곡 레코드를 틀었어요.",
+   "blank": "แผ่นเสียง",
+   "src": "made"
   }
  ],
  "w|แผล": [
@@ -50030,6 +50382,22 @@
    "en": "This shop's admin talks a lot but never answers the question directly.",
    "ko": "이 가게 관리자는 말은 많은데 질문에는 제대로 답을 안 해요.",
    "blank": "พูดมาก",
+   "src": "made"
+  }
+ ],
+ "w|เพ่ง": [
+  {
+   "text": "ธนาเพ่งตัวอักษรเล็ก ๆ ในแผนที่โบราณจนปวดตา",
+   "en": "Thana stared at the tiny letters on the ancient map until his eyes hurt.",
+   "ko": "타나는 눈이 아플 때까지 고지도의 작은 글자를 뚫어지게 봤어요.",
+   "blank": "เพ่ง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเพ่งรูปหมู่เก่าอยู่นานกว่าจะจำหน้าเพื่อนได้ครบ",
+   "en": "Suda studied the old group photo for a long time before she could recognize every friend.",
+   "ko": "수다는 옛 단체 사진을 한참 들여다보고서야 친구들 얼굴을 다 알아봤어요.",
+   "blank": "เพ่ง",
    "src": "made"
   }
  ],
@@ -54823,6 +55191,22 @@
    "blank": "แม่สามี"
   }
  ],
+ "w|แม่เหล็ก": [
+  {
+   "text": "ประกาศของห้องสมุดติดไว้ด้วยแม่เหล็กบนกระดานเหล็ก",
+   "en": "The library's notices are stuck to a steel board with magnets.",
+   "ko": "도서관 공지문은 철판 게시판에 자석으로 붙어 있어요.",
+   "blank": "แม่เหล็ก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาแจกแม่เหล็กติดตู้เย็นลายรูปรุ่นเป็นของที่ระลึก",
+   "en": "Suda handed out fridge magnets with the class photo as souvenirs.",
+   "ko": "수다는 반 단체 사진이 들어간 냉장고 자석을 기념품으로 나눠 줬어요.",
+   "blank": "แม่เหล็ก",
+   "src": "made"
+  }
+ ],
  "w|โมโห": [
   {
    "text": "อนันต์เล่าว่าเมื่อก่อนเป็นคนขี้โมโหแต่ตอนนี้ใจเย็นลงมาก",
@@ -57100,6 +57484,22 @@
    "en": "The new train station has a ramp so wheelchair users can board easily.",
    "ko": "새 기차역에는 휠체어 이용자가 편하게 탈 수 있도록 경사로가 있어요.",
    "blank": "รถเข็น",
+   "src": "made"
+  }
+ ],
+ "w|รถถัง": [
+  {
+   "text": "เด็กชายคนหนึ่งยืมหนังสือภาพรถถังสมัยสงครามโลกไปสามเล่ม",
+   "en": "A boy borrowed three picture books about World War tanks.",
+   "ko": "한 남자아이가 세계 대전 시절 탱크 그림책을 세 권 빌려 갔어요.",
+   "blank": "รถถัง",
+   "src": "made"
+  },
+  {
+   "text": "มานพเคยสะสมรถถังของเล่นไว้เต็มตู้",
+   "en": "Manop once collected enough toy tanks to fill a cabinet.",
+   "ko": "마놉은 예전에 장난감 탱크를 장식장 가득 모았어요.",
+   "blank": "รถถัง",
    "src": "made"
   }
  ],
@@ -60071,6 +60471,22 @@
    "src": "made"
   }
  ],
+ "w|เรขาคณิต": [
+  {
+   "text": "ธนาช่วยเด็กมัธยมหาหนังสือเรขาคณิตไว้เตรียมสอบ",
+   "en": "Thana helped a high schooler find a geometry book to prepare for exams.",
+   "ko": "타나는 중고등학생이 시험 준비용 기하학 책을 찾도록 도와줬어요.",
+   "blank": "เรขาคณิต",
+   "src": "made"
+  },
+  {
+   "text": "ทุกคนยังจำได้ว่าครูวิชาเรขาคณิตดุที่สุดในโรงเรียน",
+   "en": "Everyone still remembers that the geometry teacher was the strictest in the school.",
+   "ko": "다들 기하학 선생님이 학교에서 제일 무서웠다는 걸 아직 기억해요.",
+   "blank": "เรขาคณิต",
+   "src": "made"
+  }
+ ],
  "w|เร่ง": [
   {
    "text": "คนขับรถไฟเร่งความเร็วหลังพ้นช่วงสะพาน",
@@ -61107,6 +61523,22 @@
    "src": "made"
   }
  ],
+ "w|ลงชื่อ": [
+  {
+   "text": "ผู้มาเยือนทุกคนต้องลงชื่อในสมุดที่ประตูทางเข้า",
+   "en": "Every visitor has to sign the book at the entrance.",
+   "ko": "방문객은 모두 입구에 있는 방명록에 이름을 적어야 해요.",
+   "blank": "ลงชื่อ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาให้เพื่อนทุกคนลงชื่อในการ์ดอวยพรครูประจำชั้น",
+   "en": "Suda had all the friends sign a greeting card for their homeroom teacher.",
+   "ko": "수다는 친구들 모두에게 담임 선생님께 드릴 축하 카드에 이름을 쓰게 했어요.",
+   "blank": "ลงชื่อ",
+   "src": "made"
+  }
+ ],
  "w|ลงตัว": [
   {
    "text": "หลังลองจัดหลายแบบ ห้องครัวใหม่ของประยุทธก็ออกมาลงตัว",
@@ -61639,6 +62071,22 @@
    "src": "made"
   }
  ],
+ "w|ล้อมรอบ": [
+  {
+   "text": "ห้องสมุดประจำเมืองมีสวนเล็ก ๆ ล้อมรอบ",
+   "en": "The city library is surrounded by a small garden.",
+   "ko": "시립 도서관은 작은 정원으로 둘러싸여 있어요.",
+   "blank": "ล้อมรอบ",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนเก่าล้อมรอบครูประจำชั้นเพื่อถ่ายรูปด้วยกัน",
+   "en": "The old classmates gathered around their homeroom teacher to take a photo together.",
+   "ko": "옛 친구들이 담임 선생님을 둘러싸고 함께 사진을 찍었어요.",
+   "blank": "ล้อมรอบ",
+   "src": "made"
+  }
+ ],
  "w|ลอย": [
   {
    "text": "เรือใบลอยอยู่กลางทะเลสาบ",
@@ -61737,6 +62185,22 @@
    "en": "This drama is really touching.",
    "ko": "이 드라마가 정말 감동적이야.",
    "blank": "ละคร"
+  }
+ ],
+ "w|ละติจูด": [
+  {
+   "text": "แผนที่โลกบนผนังห้องสมุดบอกละติจูดของเมืองหลวงทุกแห่ง",
+   "en": "The world map on the library wall shows the latitude of every capital city.",
+   "ko": "도서관 벽의 세계 지도에는 모든 수도의 위도가 나와 있어요.",
+   "blank": "ละติจูด",
+   "src": "made"
+  },
+  {
+   "text": "นิดาทำงานที่สถานีวิจัยในละติจูดสูงใกล้ขั้วโลก",
+   "en": "Nida works at a research station at a high latitude near the pole.",
+   "ko": "니다는 극지방 가까운 고위도의 연구 기지에서 일해요.",
+   "blank": "ละติจูด",
+   "src": "made"
   }
  ],
  "w|ละเมิด": [
@@ -64007,6 +64471,22 @@
    "blank": "โลก"
   }
  ],
+ "w|โลกทัศน์": [
+  {
+   "text": "การอ่านวรรณกรรมต่างประเทศช่วยเปิดโลกทัศน์ของธนาให้กว้างขึ้น",
+   "en": "Reading foreign literature helped broaden Thana's worldview.",
+   "ko": "외국 문학을 읽으면서 타나의 세계관이 넓어졌어요.",
+   "blank": "โลกทัศน์",
+   "src": "made"
+  },
+  {
+   "text": "หลังไปทำงานมาหลายประเทศ โลกทัศน์ของนิดาเปลี่ยนไปมาก",
+   "en": "After working in many countries, Nida's outlook changed a lot.",
+   "ko": "여러 나라에서 일하고 나서 니다의 세계관이 많이 바뀌었어요.",
+   "blank": "โลกทัศน์",
+   "src": "made"
+  }
+ ],
  "w|โลกาภิวัตน์": [
   {
    "text": "ละครเรื่องนี้ตั้งคำถามว่าโลกาภิวัตน์เปลี่ยนหมู่บ้านไปอย่างไร",
@@ -64385,6 +64865,22 @@
    "src": "made"
   }
  ],
+ "w|วรรณะ": [
+  {
+   "text": "ธนาช่วยนักศึกษาหาหนังสือเรื่องระบบวรรณะในสังคมโบราณ",
+   "en": "Thana helped a student find books on the caste system in ancient societies.",
+   "ko": "타나는 대학생이 고대 사회의 카스트 제도에 관한 책을 찾도록 도와줬어요.",
+   "blank": "วรรณะ",
+   "src": "made"
+  },
+  {
+   "text": "นิดาบอกว่าตอนมัธยม เด็กในห้องแบ่งกลุ่มกันราวกับมีวรรณะ",
+   "en": "Nida says that in high school the kids in class split into groups as if there were castes.",
+   "ko": "니다는 고등학교 때 반 아이들이 마치 계급이 있는 것처럼 무리를 나눴다고 해요.",
+   "blank": "วรรณะ",
+   "src": "made"
+  }
+ ],
  "w|วลี": [
   {
    "text": "ประยุทธพูดวลีเด็ดของตัวละครจนคนดูปรบมือ",
@@ -64490,6 +64986,22 @@
    "en": "Weeds grow very fast in the rainy season.",
    "ko": "우기에는 잡초가 아주 빨리 자라.",
    "blank": "วัชพืช",
+   "src": "made"
+  }
+ ],
+ "w|วัฏจักร": [
+  {
+   "text": "หนังสือภาพเรื่องวัฏจักรของน้ำเป็นเล่มโปรดของเด็กเล็ก",
+   "en": "The picture book about the water cycle is the little kids' favorite.",
+   "ko": "물의 순환에 관한 그림책은 어린아이들이 제일 좋아하는 책이에요.",
+   "blank": "วัฏจักร",
+   "src": "made"
+  },
+  {
+   "text": "มานพพูดขำ ๆ ว่าชีวิตเป็นวัฏจักร เรียน ทำงาน แล้วก็กลับมาเจอกันอีก",
+   "en": "Manop joked that life is a cycle: study, work, and then meet again.",
+   "ko": "마놉은 인생은 돌고 도는 거라며, 공부하고 일하고 다시 만난다고 농담했어요.",
+   "blank": "วัฏจักร",
    "src": "made"
   }
  ],
@@ -66469,6 +66981,22 @@
    "src": "made"
   }
  ],
+ "w|ศาลปกครอง": [
+  {
+   "text": "นักศึกษากฎหมายมาค้นคำพิพากษาของศาลปกครองที่ห้องสมุดบ่อย ๆ",
+   "en": "Law students often come to the library to look up rulings of the administrative court.",
+   "ko": "법대생들이 행정법원 판결을 찾으러 도서관에 자주 와요.",
+   "blank": "ศาลปกครอง",
+   "src": "made"
+  },
+  {
+   "text": "นิดาเป็นตุลาการศาลปกครองแล้ว ทำเอาเพื่อนทั้งโต๊ะทึ่ง",
+   "en": "Nida is now an administrative court judge, which amazed the whole table.",
+   "ko": "니다가 이제 행정법원 판사라는 말에 식탁의 친구들이 모두 놀랐어요.",
+   "blank": "ศาลปกครอง",
+   "src": "made"
+  }
+ ],
  "w|ศาลา": [
   {
    "text": "เอกนัดสัมภาษณ์ผู้ใหญ่บ้านที่ศาลากลางหมู่บ้าน",
@@ -68072,6 +68600,22 @@
    "en": "Wanna tried to imagine how much bigger the kitchen would be if, say, she took down this wall.",
    "ko": "완나는 이 벽을 허문다고 치면 부엌이 얼마나 넓어질지 상상해 봤어요.",
    "blank": "สมมุติ",
+   "src": "made"
+  }
+ ],
+ "w|สมรรถนะ": [
+  {
+   "text": "ห้องสมุดเปลี่ยนมาใช้คอมพิวเตอร์ที่มีสมรรถนะสูงกว่าเดิม",
+   "en": "The library switched to computers with higher performance than before.",
+   "ko": "도서관은 전보다 성능이 좋은 컴퓨터로 바꿨어요.",
+   "blank": "สมรรถนะ",
+   "src": "made"
+  },
+  {
+   "text": "วิชัยเพิ่งไปอบรมเพิ่มสมรรถนะสำหรับผู้จัดการมา",
+   "en": "Wichai just came back from a training course to build managers' competencies.",
+   "ko": "위차이는 얼마 전 관리자 역량 강화 연수를 다녀왔어요.",
+   "blank": "สมรรถนะ",
    "src": "made"
   }
  ],
@@ -70319,6 +70863,22 @@
    "en": "This public park is beautiful.",
    "ko": "이 공원은 정말 예뻐.",
    "blank": "สาธารณะ"
+  }
+ ],
+ "w|สาธารณูปโภค": [
+  {
+   "text": "ห้องสมุดต้องจ่ายค่าสาธารณูปโภคเดือนละหลายหมื่นบาท",
+   "en": "The library has to pay tens of thousands of baht a month in utility bills.",
+   "ko": "도서관은 공공요금으로 매달 수만 바트를 내야 해요.",
+   "blank": "สาธารณูปโภค",
+   "src": "made"
+  },
+  {
+   "text": "วิชัยบ่นว่าค่าสาธารณูปโภคที่บ้านขึ้นทุกปี",
+   "en": "Wichai complained that his household utility bills go up every year.",
+   "ko": "위차이는 집 공과금이 해마다 오른다고 투덜거렸어요.",
+   "blank": "สาธารณูปโภค",
+   "src": "made"
   }
  ],
  "w|สาธิต": [
@@ -73105,6 +73665,22 @@
    "src": "made"
   }
  ],
+ "w|ไสยศาสตร์": [
+  {
+   "text": "ชั้นหนังสือไสยศาสตร์มีคนยืมมากกว่าที่ธนาคิดไว้",
+   "en": "The shelf of books on black magic gets borrowed more than Thana expected.",
+   "ko": "주술 관련 책장은 타나가 생각한 것보다 많이 대출돼요.",
+   "blank": "ไสยศาสตร์",
+   "src": "made"
+  },
+  {
+   "text": "นิดาเล่าว่าตอนค้างบ้านเพื่อนสมัยเรียน ทุกคนเคยลองเล่นไสยศาสตร์กันขำ ๆ",
+   "en": "Nida recalled that at a sleepover back in school, everyone once tried dabbling in black magic for fun.",
+   "ko": "니다는 학창 시절 친구 집에서 자던 날 다 같이 장난으로 주술 놀이를 해 봤다고 했어요.",
+   "blank": "ไสยศาสตร์",
+   "src": "made"
+  }
+ ],
  "w|หก": [
   {
    "text": "มาหกคน",
@@ -73117,6 +73693,22 @@
    "en": "Six pieces left.",
    "ko": "여섯 조각 남았어.",
    "blank": "หก"
+  }
+ ],
+ "w|หงาย": [
+  {
+   "text": "ธนาวางสมุดบันทึกหงายไว้บนโต๊ะเพื่อให้หมึกแห้ง",
+   "en": "Thana laid the notebook face up on the table so the ink could dry.",
+   "ko": "타나는 잉크가 마르도록 공책을 펼친 채 책상 위에 뒀어요.",
+   "blank": "หงาย",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าภาพวางแก้วหงายเรียงไว้บนโต๊ะรอเทเครื่องดื่ม",
+   "en": "The host lined up the glasses upright on the table, ready for drinks to be poured.",
+   "ko": "주최자는 음료를 따르려고 잔을 바로 세워 식탁에 줄지어 놓았어요.",
+   "blank": "หงาย",
+   "src": "made"
   }
  ],
  "w|หงุดหงิด": [
@@ -74779,6 +75371,22 @@
    "en": "I fell for the smell of coffee.",
    "ko": "나는 커피 향에 반했어.",
    "blank": "หลงรัก"
+  }
+ ],
+ "w|หลงเหลือ": [
+  {
+   "text": "บันทึกของวัดเก่าแห่งนั้นหลงเหลืออยู่เพียงไม่กี่หน้า",
+   "en": "Only a few pages of that old temple's records remain.",
+   "ko": "그 옛 절의 기록은 몇 쪽밖에 남아 있지 않아요.",
+   "blank": "หลงเหลือ",
+   "src": "made"
+  },
+  {
+   "text": "ความสนิทสนมระหว่างสุดากับเพื่อนยังหลงเหลืออยู่แม้ไม่ได้เจอกันนาน",
+   "en": "The closeness between Suda and her friends still remains even though they haven't met in a long time.",
+   "ko": "수다와 친구들 사이의 친밀함은 오래 못 만났어도 여전히 남아 있어요.",
+   "blank": "หลงเหลือ",
+   "src": "made"
   }
  ],
  "w|หลงใหล": [
@@ -79775,6 +80383,22 @@
    "src": "made"
   }
  ],
+ "w|อัศจรรย์": [
+  {
+   "text": "หนังสือภาพเล่มใหญ่นี้รวบรวมสิ่งอัศจรรย์ของโลกเอาไว้",
+   "en": "This big picture book gathers the wonders of the world.",
+   "ko": "이 큰 그림책은 세계의 경이로운 것들을 모아 놓았어요.",
+   "blank": "อัศจรรย์",
+   "src": "made"
+  },
+  {
+   "text": "สุดาบอกว่าการได้เจอเพื่อนครบทุกคนเป็นเรื่องอัศจรรย์จริง ๆ",
+   "en": "Suda says getting to see every single friend is truly a miracle.",
+   "ko": "수다는 친구들을 한 명도 빠짐없이 만난 게 정말 기적 같은 일이라고 해요.",
+   "blank": "อัศจรรย์",
+   "src": "made"
+  }
+ ],
  "w|อัศวิน": [
   {
    "text": "เด็กๆ เรียกวิชัยว่าอัศวินเพราะเคยช่วยแมวที่ตกท่อ",
@@ -81192,6 +81816,22 @@
    "en": "The riverside reforestation project Napha helped with is sponsored by a private company.",
    "ko": "나파가 도우러 간 강변 숲 가꾸기 사업은 민간 기업의 후원을 받아요.",
    "blank": "อุปถัมภ์",
+   "src": "made"
+  }
+ ],
+ "w|อุปโภค": [
+  {
+   "text": "ป้ายในห้องน้ำห้องสมุดบอกว่าน้ำก๊อกใช้อุปโภคได้ แต่ไม่ควรดื่ม",
+   "en": "A sign in the library restroom says the tap water is fine for washing but shouldn't be drunk.",
+   "ko": "도서관 화장실 안내문에는 수돗물을 생활용수로는 써도 되지만 마시지는 말라고 적혀 있어요.",
+   "blank": "อุปโภค",
+   "src": "made"
+  },
+  {
+   "text": "วิชัยเปิดร้านขายสินค้าอุปโภคอยู่ในตลาดใกล้บ้าน",
+   "en": "Wichai runs a shop selling household goods in the market near his home.",
+   "ko": "위차이는 집 근처 시장에서 생활용품 가게를 해요.",
+   "blank": "อุปโภค",
    "src": "made"
   }
  ],
