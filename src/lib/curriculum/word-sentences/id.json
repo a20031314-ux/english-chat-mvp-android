@@ -279,6 +279,22 @@
    "src": "made"
   }
  ],
+ "w|agresi": [
+  {
+   "text": "Psikolog kepolisian menjelaskan kepada Rudi tanda-tanda agresi pada pengemudi yang marah.",
+   "en": "The police psychologist explained to Rudi the signs of aggression in angry drivers.",
+   "ko": "경찰 심리 상담사가 루디에게 화난 운전자의 공격성 징후를 설명했어요.",
+   "blank": "agresi",
+   "src": "made"
+  },
+  {
+   "text": "Rina menjelaskan bahwa agresi pada kucing sering muncul karena rasa sakit.",
+   "en": "Rina explained that aggression in cats often comes from pain.",
+   "ko": "리나는 고양이의 공격성이 통증 때문에 생기는 경우가 많다고 설명했어요.",
+   "blank": "agresi",
+   "src": "made"
+  }
+ ],
  "w|agresif": [
   {
    "text": "Guru olahraga meminta Budi bermain tidak terlalu agresif saat latihan.",
@@ -814,6 +830,22 @@
    "en": "The dust from the attic made Wati's allergy flare up.",
    "ko": "다락방 먼지 때문에 와티의 알레르기가 도졌어요.",
    "blank": "alergi",
+   "src": "made"
+  }
+ ],
+ "w|algojo": [
+  {
+   "text": "Rudi sedang membaca novel sejarah tentang seorang algojo istana.",
+   "en": "Rudi is reading a historical novel about a palace executioner.",
+   "ko": "루디는 궁궐 망나니에 관한 역사 소설을 읽고 있어요.",
+   "blank": "algojo",
+   "src": "made"
+  },
+  {
+   "text": "Kucing klinik itu dijuluki algojo oleh Rina karena jago menangkap kecoak.",
+   "en": "Rina nicknamed the clinic cat \"the executioner\" because it's great at catching cockroaches.",
+   "ko": "리나는 병원 고양이가 바퀴벌레를 잘 잡아서 망나니라는 별명을 붙였어요.",
+   "blank": "algojo",
    "src": "made"
   }
  ],
@@ -6995,6 +7027,38 @@
    "src": "made"
   }
  ],
+ "w|berjemur": [
+  {
+   "text": "Kucing liar di halaman kantor polisi suka berjemur di atas mobil patroli Rudi.",
+   "en": "The stray cat in the police station yard likes to sunbathe on top of Rudi's patrol car.",
+   "ko": "경찰서 마당의 길고양이는 루디의 순찰차 위에서 햇볕 쬐는 걸 좋아해요.",
+   "blank": "berjemur",
+   "src": "made"
+  },
+  {
+   "text": "Rina menyarankan kura-kura itu berjemur setiap pagi agar cangkangnya kuat.",
+   "en": "Rina recommended that the turtle bask in the sun every morning to keep its shell strong.",
+   "ko": "리나는 등껍질이 튼튼해지도록 거북이 매일 아침 햇볕을 쬐게 하라고 권했어요.",
+   "blank": "berjemur",
+   "src": "made"
+  }
+ ],
+ "w|berjodoh": [
+  {
+   "text": "Rekan kerja Rudi bercanda bahwa Rudi dan petugas arsip itu berjodoh.",
+   "en": "Rudi's coworkers joke that Rudi and the records clerk are meant to be together.",
+   "ko": "루디의 동료들은 루디와 문서 담당 직원이 천생연분이라고 놀려요.",
+   "blank": "berjodoh",
+   "src": "made"
+  },
+  {
+   "text": "Rina tertawa saat pemilik kucing bilang kucing jantan dan betina itu berjodoh.",
+   "en": "Rina laughed when the owner said the tomcat and the female cat were a perfect match.",
+   "ko": "고양이 주인이 수컷과 암컷 고양이가 천생연분이라고 하자 리나는 웃었어요.",
+   "blank": "berjodoh",
+   "src": "made"
+  }
+ ],
  "w|berjongkok": [
   {
    "text": "Rudi berjongkok untuk memungut kunci yang jatuh di bawah meja piket.",
@@ -7470,6 +7534,22 @@
    "en": "Lestari, in a green headscarf, went on stage to introduce her app.",
    "ko": "초록 히잡을 쓴 레스타리가 무대에 올라 자기 앱을 소개했어요.",
    "blank": "berkerudung",
+   "src": "made"
+  }
+ ],
+ "w|berkhayal": [
+  {
+   "text": "Waktu kecil, Rudi sering berkhayal menjadi detektif seperti di film.",
+   "en": "As a child, Rudi often fantasized about being a detective like in the movies.",
+   "ko": "루디는 어릴 때 영화 속 탐정이 되는 상상을 자주 했어요.",
+   "blank": "berkhayal",
+   "src": "made"
+  },
+  {
+   "text": "Anak pemilik anjing itu berkhayal ingin menjadi dokter hewan seperti Rina.",
+   "en": "The dog owner's child dreams of becoming a vet like Rina.",
+   "ko": "그 개 주인의 아이는 리나 같은 수의사가 되는 상상을 해요.",
+   "blank": "berkhayal",
    "src": "made"
   }
  ],
@@ -8398,6 +8478,22 @@
    "en": "Ayu's repair shop operates from morning until nine at night.",
    "ko": "아유의 수리점은 아침부터 밤 아홉 시까지 문을 열어요.",
    "blank": "beroperasi",
+   "src": "made"
+  }
+ ],
+ "w|berorientasi": [
+  {
+   "text": "Kepala polisi ingin pelayanan di kantor Rudi lebih berorientasi pada warga.",
+   "en": "The police chief wants the service at Rudi's station to be more citizen-oriented.",
+   "ko": "경찰서장은 루디가 일하는 서의 민원 업무가 더 주민 중심이 되길 바라요.",
+   "blank": "berorientasi",
+   "src": "made"
+  },
+  {
+   "text": "Rina ingin klinik hewan miliknya berorientasi pada kesejahteraan hewan, bukan keuntungan.",
+   "en": "Rina wants her vet clinic to focus on animal welfare, not profit.",
+   "ko": "리나는 자기 동물병원이 이익이 아니라 동물 복지를 중심에 두길 바라요.",
+   "blank": "berorientasi",
    "src": "made"
   }
  ],
@@ -9334,6 +9430,22 @@
    "en": "Lestari doesn't require her employees to wear uniforms because she wants a relaxed office atmosphere.",
    "ko": "레스타리는 편한 분위기를 원해서 직원들에게 제복을 입으라고 하지 않아요.",
    "blank": "berseragam",
+   "src": "made"
+  }
+ ],
+ "w|berseru": [
+  {
+   "text": "Rudi berseru memanggil rekannya ketika pencuri itu kabur lewat pintu belakang.",
+   "en": "Rudi shouted for his partner when the thief ran out the back door.",
+   "ko": "도둑이 뒷문으로 달아나자 루디는 동료를 소리쳐 불렀어요.",
+   "blank": "berseru",
+   "src": "made"
+  },
+  {
+   "text": "Rina berseru gembira ketika anak kucing itu mulai menyusu.",
+   "en": "Rina cried out with joy when the kitten began to nurse.",
+   "ko": "새끼 고양이가 젖을 빨기 시작하자 리나는 기뻐서 소리쳤어요.",
+   "blank": "berseru",
    "src": "made"
   }
  ],
@@ -14515,6 +14627,22 @@
    "blank": "diri"
   }
  ],
+ "w|disahkan": [
+  {
+   "text": "Rudi memberi tahu para pengendara bahwa aturan baru tentang helm sudah disahkan.",
+   "en": "Rudi told the riders that the new helmet rule had been passed.",
+   "ko": "루디는 운전자들에게 헬멧에 관한 새 규정이 통과됐다고 알렸어요.",
+   "blank": "disahkan",
+   "src": "made"
+  },
+  {
+   "text": "Rina senang undang-undang perlindungan hewan akhirnya disahkan.",
+   "en": "Rina is glad the animal protection law was finally passed.",
+   "ko": "리나는 동물 보호법이 마침내 통과돼서 기뻐요.",
+   "blank": "disahkan",
+   "src": "made"
+  }
+ ],
  "w|disengaja": [
   {
    "text": "Polisi masih menyelidiki apakah kebakaran pasar itu disengaja atau tidak.",
@@ -15219,6 +15347,22 @@
    "en": "It is so selfish to only think of yourself.",
    "ko": "자기만 생각하면 정말 이기적이야.",
    "blank": "Egois"
+  }
+ ],
+ "w|ejaan": [
+  {
+   "text": "Rudi memeriksa ejaan nama pelapor sebelum mencetak laporan.",
+   "en": "Rudi checked the spelling of the complainant's name before printing the report.",
+   "ko": "루디는 신고서를 출력하기 전에 신고자 이름의 철자를 확인했어요.",
+   "blank": "ejaan",
+   "src": "made"
+  },
+  {
+   "text": "Rina membetulkan ejaan nama anjing di kartu pasien.",
+   "en": "Rina corrected the spelling of the dog's name on the patient card.",
+   "ko": "리나는 진료 카드에 적힌 개 이름의 철자를 고쳤어요.",
+   "blank": "ejaan",
+   "src": "made"
   }
  ],
  "w|ejekan": [
@@ -18969,6 +19113,22 @@
    "blank": "Hijau"
   }
  ],
+ "w|hinaan": [
+  {
+   "text": "Rudi tetap tenang meski menerima hinaan dari pengendara yang ditilang.",
+   "en": "Rudi stayed calm even when a ticketed driver hurled insults at him.",
+   "ko": "루디는 딱지를 뗀 운전자에게 모욕을 당해도 침착했어요.",
+   "blank": "hinaan",
+   "src": "made"
+  },
+  {
+   "text": "Rina tidak peduli pada hinaan orang yang menganggap merawat kucing liar itu membuang waktu.",
+   "en": "Rina ignores the insults of people who think caring for stray cats is a waste of time.",
+   "ko": "리나는 길고양이를 돌보는 게 시간 낭비라는 사람들의 비난을 신경 쓰지 않아요.",
+   "blank": "hinaan",
+   "src": "made"
+  }
+ ],
  "w|hingga": [
   {
    "text": "Kami menunggu hingga malam.",
@@ -22513,6 +22673,22 @@
    "blank": "kamu"
   }
  ],
+ "w|kamuflase": [
+  {
+   "text": "Rudi menjelaskan kepada wartawan bahwa toko itu hanya kamuflase untuk menyimpan barang curian.",
+   "en": "Rudi told reporters that the shop was just a cover for storing stolen goods.",
+   "ko": "루디는 기자들에게 그 가게가 장물을 숨기려는 위장일 뿐이었다고 설명했어요.",
+   "blank": "kamuflase",
+   "src": "made"
+  },
+  {
+   "text": "Rina menunjukkan kepada anak-anak bagaimana bunglon memakai kamuflase.",
+   "en": "Rina showed the children how a chameleon uses camouflage.",
+   "ko": "리나는 아이들에게 카멜레온이 어떻게 위장하는지 보여 줬어요.",
+   "blank": "kamuflase",
+   "src": "made"
+  }
+ ],
  "w|kan": [
   {
    "text": "Kamu lapar, kan?",
@@ -23348,6 +23524,22 @@
    "en": "That night, the sound of frogs came from the gutter in front of Putri's house.",
    "ko": "그날 밤 푸트리네 집 앞 도랑에서 개구리 소리가 들렸어요.",
    "blank": "katak",
+   "src": "made"
+  }
+ ],
+ "w|katedral": [
+  {
+   "text": "Rudi berjaga di dekat katedral saat ada konser musik klasik.",
+   "en": "Rudi stood guard near the cathedral during a classical music concert.",
+   "ko": "루디는 클래식 음악회가 열리는 동안 대성당 근처에서 경비를 섰어요.",
+   "blank": "katedral",
+   "src": "made"
+  },
+  {
+   "text": "Klinik Rina terletak di jalan kecil di belakang katedral tua.",
+   "en": "Rina's clinic is on a small street behind the old cathedral.",
+   "ko": "리나의 동물병원은 오래된 대성당 뒤 작은 길에 있어요.",
+   "blank": "katedral",
    "src": "made"
   }
  ],
@@ -24970,6 +25162,22 @@
    "en": "The restaurant's waiter once learned how to help someone having a seizure.",
    "ko": "그 식당 종업원은 발작을 일으킨 사람을 돕는 법을 배운 적이 있어요.",
    "blank": "kejang",
+   "src": "made"
+  }
+ ],
+ "w|kejatuhan": [
+  {
+   "text": "Rudi menolong seorang pedagang yang kejatuhan papan reklame.",
+   "en": "Rudi helped a vendor who had been hit by a falling billboard.",
+   "ko": "루디는 떨어진 광고판에 맞은 상인을 도와줬어요.",
+   "blank": "kejatuhan",
+   "src": "made"
+  },
+  {
+   "text": "Saat jam istirahat, Rina membaca buku tentang kejatuhan sebuah kerajaan kuno.",
+   "en": "During her break, Rina reads a book about the fall of an ancient kingdom.",
+   "ko": "리나는 쉬는 시간에 한 고대 왕국의 몰락에 관한 책을 읽어요.",
+   "blank": "kejatuhan",
    "src": "made"
   }
  ],
@@ -27308,6 +27516,22 @@
    "en": "For Putri, waiting eight hours at the airport felt like misery.",
    "ko": "푸트리에게 공항에서 여덟 시간을 기다리는 건 고역 같았어요.",
    "blank": "kesengsaraan",
+   "src": "made"
+  }
+ ],
+ "w|kesenian": [
+  {
+   "text": "Rudi menjaga keamanan di acara kesenian rakyat di alun-alun.",
+   "en": "Rudi kept watch at the folk arts event in the town square.",
+   "ko": "루디는 광장에서 열린 민속 예술 행사의 경비를 섰어요.",
+   "blank": "kesenian",
+   "src": "made"
+  },
+  {
+   "text": "Rina merawat burung merak milik sanggar kesenian.",
+   "en": "Rina looks after a peacock that belongs to an arts studio.",
+   "ko": "리나는 예술 공방에서 키우는 공작새를 돌봐요.",
+   "blank": "kesenian",
    "src": "made"
   }
  ],
@@ -31159,6 +31383,22 @@
    "blank": "Layanan"
   }
  ],
+ "w|layangan": [
+  {
+   "text": "Rudi menurunkan layangan yang tersangkut di kabel listrik depan kantor.",
+   "en": "Rudi took down a kite caught on the power line in front of the station.",
+   "ko": "루디는 서 앞 전깃줄에 걸린 연을 내려 줬어요.",
+   "blank": "layangan",
+   "src": "made"
+  },
+  {
+   "text": "Rina mengobati burung yang tersangkut benang layangan.",
+   "en": "Rina treated a bird that got tangled in kite string.",
+   "ko": "리나는 연줄에 걸린 새를 치료했어요.",
+   "blank": "layangan",
+   "src": "made"
+  }
+ ],
  "w|layar": [
   {
    "text": "Layar ponselnya retak di sudut.",
@@ -34386,6 +34626,22 @@
    "en": "Ayu usually relieves stress by chewing ice cubes, a habit her dentist forbade.",
    "ko": "아유는 얼음을 씹으며 스트레스를 푸는 버릇이 있는데, 의사가 하지 말라고 했어요.",
    "blank": "melampiaskan",
+   "src": "made"
+  }
+ ],
+ "w|melamun": [
+  {
+   "text": "Rudi menegur petugas jaga yang melamun di meja depan.",
+   "en": "Rudi scolded the duty officer who was daydreaming at the front desk.",
+   "ko": "루디는 안내 데스크에서 멍하니 있던 당직 경찰을 나무랐어요.",
+   "blank": "melamun",
+   "src": "made"
+  },
+  {
+   "text": "Rina melihat seekor burung beo yang seperti melamun di dalam kandang.",
+   "en": "Rina saw a parrot that seemed to be daydreaming in its cage.",
+   "ko": "리나는 새장 안에서 멍하니 있는 듯한 앵무새를 봤어요.",
+   "blank": "melamun",
    "src": "made"
   }
  ],
@@ -39568,6 +39824,22 @@
    "en": "Ayu's father instilled honesty in trading in her from when she was little.",
    "ko": "아유의 아버지는 어릴 때부터 장사에서의 정직함을 심어 주셨어요.",
    "blank": "menanamkan",
+   "src": "made"
+  }
+ ],
+ "w|menancap": [
+  {
+   "text": "Rudi menemukan paku yang menancap di ban mobil patroli.",
+   "en": "Rudi found a nail stuck in the patrol car's tire.",
+   "ko": "루디는 순찰차 타이어에 박힌 못을 발견했어요.",
+   "blank": "menancap",
+   "src": "made"
+  },
+  {
+   "text": "Rina mencabut duri yang menancap di kaki anjing.",
+   "en": "Rina pulled out the thorn stuck in the dog's paw.",
+   "ko": "리나는 개 발에 박힌 가시를 뽑았어요.",
+   "blank": "menancap",
    "src": "made"
   }
  ],
@@ -48883,6 +49155,22 @@
    "src": "made"
   }
  ],
+ "w|menyeimbangkan": [
+  {
+   "text": "Rudi berusaha menyeimbangkan tugas malam dengan waktu untuk keluarga.",
+   "en": "Rudi tries to balance night shifts with time for his family.",
+   "ko": "루디는 야간 근무와 가족과 보내는 시간 사이에서 균형을 잡으려고 애써요.",
+   "blank": "menyeimbangkan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menyeimbangkan pakan anjing tua itu antara daging dan sayur.",
+   "en": "Rina balanced the old dog's food between meat and vegetables.",
+   "ko": "리나는 그 늙은 개의 사료를 고기와 채소로 균형 있게 맞췄어요.",
+   "blank": "menyeimbangkan",
+   "src": "made"
+  }
+ ],
  "w|menyelam": [
   {
    "text": "Untuk liputan terumbu karang, Eko ikut menyelam bersama para peneliti.",
@@ -49397,6 +49685,22 @@
    "en": "Regretting the past does not change anything.",
    "ko": "과거를 후회해도 아무것도 바뀌지 않아.",
    "blank": "Menyesali"
+  }
+ ],
+ "w|menyesatkan": [
+  {
+   "text": "Rudi mengingatkan warga agar tidak menyebarkan kabar yang menyesatkan.",
+   "en": "Rudi reminded residents not to spread misleading news.",
+   "ko": "루디는 주민들에게 잘못된 소문을 퍼뜨리지 말라고 당부했어요.",
+   "blank": "menyesatkan",
+   "src": "made"
+  },
+  {
+   "text": "Rina bilang informasi di internet soal makanan kucing sering menyesatkan.",
+   "en": "Rina says information online about cat food is often misleading.",
+   "ko": "리나는 인터넷에 있는 고양이 사료 정보가 잘못된 경우가 많다고 해요.",
+   "blank": "menyesatkan",
+   "src": "made"
   }
  ],
  "w|menyesuaikan": [
@@ -55203,6 +55507,22 @@
    "src": "made"
   }
  ],
+ "w|pawai": [
+  {
+   "text": "Rudi bertugas mengatur lalu lintas saat pawai hari kemerdekaan.",
+   "en": "Rudi was on duty directing traffic during the Independence Day parade.",
+   "ko": "루디는 독립기념일 행진 때 교통정리를 맡았어요.",
+   "blank": "pawai",
+   "src": "made"
+  },
+  {
+   "text": "Rina merawat kuda yang kelelahan setelah ikut pawai budaya.",
+   "en": "Rina treated a horse that was exhausted after taking part in a cultural parade.",
+   "ko": "리나는 문화 행진에 참가하고 지친 말을 돌봤어요.",
+   "blank": "pawai",
+   "src": "made"
+  }
+ ],
  "w|payah": [
   {
    "text": "Performa tim itu payah sekali.",
@@ -56571,6 +56891,22 @@
    "src": "made"
   }
  ],
+ "w|pembatasan": [
+  {
+   "text": "Rudi menjelaskan pembatasan jam masuk kota untuk truk besar.",
+   "en": "Rudi explained the restricted hours for large trucks entering the city.",
+   "ko": "루디는 대형 트럭의 도심 진입 시간 제한을 설명했어요.",
+   "blank": "pembatasan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menyarankan pembatasan camilan untuk kucing yang gemuk.",
+   "en": "Rina recommended limiting treats for the overweight cat.",
+   "ko": "리나는 살찐 고양이에게 간식을 줄이라고 권했어요.",
+   "blank": "pembatasan",
+   "src": "made"
+  }
+ ],
  "w|pembawa": [
   {
    "text": "Polisi mencari pembawa tas hitam yang tertinggal di halte.",
@@ -56680,6 +57016,22 @@
    "en": "Wati put off buying a new umbrella until the rainy season really arrived.",
    "ko": "와티는 우기가 정말 올 때까지 새 우산 사는 걸 미뤘어요.",
    "blank": "pembelian",
+   "src": "made"
+  }
+ ],
+ "w|pembentukan": [
+  {
+   "text": "Rudi ikut rapat tentang pembentukan unit patroli sepeda.",
+   "en": "Rudi joined a meeting about forming a bicycle patrol unit.",
+   "ko": "루디는 자전거 순찰대를 만드는 일에 관한 회의에 참석했어요.",
+   "blank": "pembentukan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menjelaskan pembentukan gigi pada anak anjing kepada pemiliknya.",
+   "en": "Rina explained to the owner how a puppy's teeth form.",
+   "ko": "리나는 주인에게 강아지 이빨이 어떻게 자라는지 설명했어요.",
+   "blank": "pembentukan",
    "src": "made"
   }
  ],
@@ -57588,6 +57940,22 @@
    "en": "Rina used to be a scaredy-cat, but now she dares to report from flooded areas.",
    "ko": "리나는 예전엔 겁쟁이였지만 이제는 홍수 지역 취재도 해요.",
    "blank": "penakut",
+   "src": "made"
+  }
+ ],
+ "w|penalti": [
+  {
+   "text": "Saat jaga malam, Rudi menonton tendangan penalti di televisi pos jaga.",
+   "en": "On night duty, Rudi watched the penalty kick on the guard post's TV.",
+   "ko": "야간 근무 중에 루디는 초소 텔레비전으로 페널티킥을 봤어요.",
+   "blank": "penalti",
+   "src": "made"
+  },
+  {
+   "text": "Rina menonton adu penalti di ponsel sambil menunggu hasil tes darah.",
+   "en": "Rina watched the penalty shootout on her phone while waiting for the blood test results.",
+   "ko": "리나는 혈액 검사 결과를 기다리며 휴대폰으로 승부차기를 봤어요.",
+   "blank": "penalti",
    "src": "made"
   }
  ],
@@ -59663,6 +60031,38 @@
    "blank": "pengiriman"
   }
  ],
+ "w|pengisap": [
+  {
+   "text": "Rudi membersihkan karpet ruang tunggu dengan pengisap debu.",
+   "en": "Rudi cleaned the waiting room carpet with a vacuum cleaner.",
+   "ko": "루디는 진공청소기로 대기실 카펫을 청소했어요.",
+   "blank": "pengisap",
+   "src": "made"
+  },
+  {
+   "text": "Rina memakai alat pengisap lendir untuk membersihkan hidung anak anjing.",
+   "en": "Rina used a suction device to clear the puppy's nose of mucus.",
+   "ko": "리나는 흡인기로 강아지 코의 콧물을 빼 줬어요.",
+   "blank": "pengisap",
+   "src": "made"
+  }
+ ],
+ "w|pengisian": [
+  {
+   "text": "Rudi membantu seorang nenek dalam pengisian formulir laporan kehilangan.",
+   "en": "Rudi helped an old woman fill in the lost property report form.",
+   "ko": "루디는 할머니 한 분이 분실 신고서를 작성하는 걸 도와드렸어요.",
+   "blank": "pengisian",
+   "src": "made"
+  },
+  {
+   "text": "Rina mengawasi pengisian tabung oksigen untuk ruang operasi.",
+   "en": "Rina oversaw the refilling of oxygen tanks for the operating room.",
+   "ko": "리나는 수술실에 쓸 산소통 충전을 지켜봤어요.",
+   "blank": "pengisian",
+   "src": "made"
+  }
+ ],
  "w|pengkhianat": [
   {
    "text": "Pengkhianat itu akhirnya tertangkap.",
@@ -61007,6 +61407,22 @@
    "blank": "peradaban"
   }
  ],
+ "w|peradilan": [
+  {
+   "text": "Berkas kasus itu sudah Rudi serahkan ke lembaga peradilan.",
+   "en": "Rudi has already handed the case file over to the judiciary.",
+   "ko": "루디는 그 사건 서류를 이미 사법 기관에 넘겼어요.",
+   "blank": "peradilan",
+   "src": "made"
+  },
+  {
+   "text": "Kasus penyiksaan hewan itu dibawa ke peradilan, dan Rina menjadi saksi ahli.",
+   "en": "The animal cruelty case was taken to court, and Rina served as an expert witness.",
+   "ko": "그 동물 학대 사건은 재판에 넘겨졌고 리나가 전문가 증인으로 나섰어요.",
+   "blank": "peradilan",
+   "src": "made"
+  }
+ ],
  "w|perahu": [
   {
    "text": "Perahu kecil mengapung di danau.",
@@ -62106,6 +62522,22 @@
    "en": "By the doctor's estimate, Dewi's surgical wound will heal in two weeks.",
    "ko": "의사의 예상으로는 데위의 수술 상처가 이 주 안에 나을 거예요.",
    "blank": "perkiraan",
+   "src": "made"
+  }
+ ],
+ "w|perkotaan": [
+  {
+   "text": "Rudi bertugas di kawasan perkotaan yang padat.",
+   "en": "Rudi works in a crowded urban area.",
+   "ko": "루디는 사람이 붐비는 도심 지역에서 근무해요.",
+   "blank": "perkotaan",
+   "src": "made"
+  },
+  {
+   "text": "Rina sering merawat kucing liar dari daerah perkotaan.",
+   "en": "Rina often treats stray cats from urban areas.",
+   "ko": "리나는 도시 지역에서 온 길고양이를 자주 돌봐요.",
+   "blank": "perkotaan",
    "src": "made"
   }
  ],
@@ -67179,6 +67611,22 @@
    "blank": "risiko"
   }
  ],
+ "w|ritme": [
+  {
+   "text": "Rudi sudah terbiasa dengan ritme kerja yang berganti antara siang dan malam.",
+   "en": "Rudi is used to a work rhythm that alternates between day and night.",
+   "ko": "루디는 낮과 밤을 오가는 근무 리듬에 익숙해졌어요.",
+   "blank": "ritme",
+   "src": "made"
+  },
+  {
+   "text": "Rina mendengarkan ritme detak jantung anjing itu dengan stetoskop.",
+   "en": "Rina listened to the rhythm of the dog's heartbeat with a stethoscope.",
+   "ko": "리나는 청진기로 그 개의 심장 박동 리듬을 들었어요.",
+   "blank": "ritme",
+   "src": "made"
+  }
+ ],
  "w|ritual": [
   {
    "text": "Ritual pagi membantunya tetap tenang.",
@@ -67265,6 +67713,22 @@
    "en": "His spirit is still strong.",
    "ko": "그의 기운은 아직 강해.",
    "blank": "Roh"
+  }
+ ],
+ "w|rohani": [
+  {
+   "text": "Kantor Rudi mengadakan kegiatan rohani setiap Jumat pagi untuk para petugas.",
+   "en": "Rudi's station holds a spiritual gathering for the officers every Friday morning.",
+   "ko": "루디가 일하는 서에서는 매주 금요일 아침 경찰관들을 위한 신앙 모임이 있어요.",
+   "blank": "rohani",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pemilik anjing bercerita kepada Rina bahwa hewan peliharaan memberinya ketenangan rohani.",
+   "en": "A dog owner told Rina that her pet gives her spiritual peace.",
+   "ko": "한 개 주인은 리나에게 반려동물이 마음의 평화를 준다고 말했어요.",
+   "blank": "rohani",
+   "src": "made"
   }
  ],
  "w|rok": [
@@ -69055,6 +69519,22 @@
    "blank": "seberapa"
   }
  ],
+ "w|seberat": [
+  {
+   "text": "Rudi menjelaskan bahwa hukuman untuk pelanggaran kecil tidak seberat yang dibayangkan warga.",
+   "en": "Rudi explained that the penalty for minor offenses isn't as heavy as people imagine.",
+   "ko": "루디는 가벼운 위반의 처벌이 주민들이 생각하는 만큼 무겁지 않다고 설명했어요.",
+   "blank": "seberat",
+   "src": "made"
+  },
+  {
+   "text": "Anjing itu kini seberat karung beras, jadi Rina menyarankan diet.",
+   "en": "That dog now weighs as much as a sack of rice, so Rina recommended a diet.",
+   "ko": "그 개는 이제 쌀 한 포대만큼 무거워서 리나가 다이어트를 권했어요.",
+   "blank": "seberat",
+   "src": "made"
+  }
+ ],
  "w|sebesar": [
   {
    "text": "Batu itu sebesar kepalan tangan.",
@@ -69586,6 +70066,22 @@
    "en": "Ayu cried so loudly that everyone in the waiting room turned around.",
    "ko": "아유가 너무 크게 울어서 대기실에 있던 모두가 돌아봤어요.",
    "blank": "seisi",
+   "src": "made"
+  }
+ ],
+ "w|sejahtera": [
+  {
+   "text": "Rudi bermimpi semua warga di kampung halaman hidup sejahtera.",
+   "en": "Rudi dreams that everyone in his home village will live in prosperity.",
+   "ko": "루디는 고향 마을 사람들이 모두 넉넉하게 사는 날을 꿈꿔요.",
+   "blank": "sejahtera",
+   "src": "made"
+  },
+  {
+   "text": "Rina ingin semua hewan di penampungan hidup sejahtera.",
+   "en": "Rina wants all the animals in the shelter to live well.",
+   "ko": "리나는 보호소의 모든 동물이 잘 지내기를 바라요.",
+   "blank": "sejahtera",
    "src": "made"
   }
  ],
@@ -72667,6 +73163,22 @@
    "blank": "siaran"
   }
  ],
+ "w|siasat": [
+  {
+   "text": "Rudi menyusun siasat untuk menangkap penipu daring.",
+   "en": "Rudi worked out a plan to catch an online scammer.",
+   "ko": "루디는 온라인 사기꾼을 잡을 작전을 짰어요.",
+   "blank": "siasat",
+   "src": "made"
+  },
+  {
+   "text": "Rina punya siasat untuk memberi obat kepada kucing yang rewel, yaitu menyembunyikan pil di dalam ikan.",
+   "en": "Rina has a trick for giving medicine to a fussy cat: hiding the pill inside fish.",
+   "ko": "리나는 까다로운 고양이에게 약을 먹이는 요령이 있는데, 알약을 생선 속에 숨기는 거예요.",
+   "blank": "siasat",
+   "src": "made"
+  }
+ ],
  "w|sibuk": [
   {
    "text": "Hari ini aku sibuk.",
@@ -73011,6 +73523,22 @@
    "src": "made"
   }
  ],
+ "w|singgasana": [
+  {
+   "text": "Rudi bercanda bahwa kursi komandan yang besar itu seperti singgasana.",
+   "en": "Rudi joked that the commander's big chair looked like a throne.",
+   "ko": "루디는 지휘관의 큰 의자가 왕좌 같다고 농담했어요.",
+   "blank": "singgasana",
+   "src": "made"
+  },
+  {
+   "text": "Kucing Persia itu duduk di keranjang seperti di atas singgasana, membuat Rina tersenyum.",
+   "en": "The Persian cat sat in its basket as if on a throne, making Rina smile.",
+   "ko": "페르시안 고양이가 왕좌에 앉은 듯 바구니에 앉아 있어서 리나는 미소 지었어요.",
+   "blank": "singgasana",
+   "src": "made"
+  }
+ ],
  "w|singkat": [
   {
    "text": "Pidatonya singkat tetapi sangat jelas.",
@@ -73126,6 +73654,22 @@
    "en": "The coach said Ayu ran as slow as a snail in the first training session.",
    "ko": "코치는 첫 훈련 때 아유가 달팽이처럼 느리게 달렸다고 했어요.",
    "blank": "siput",
+   "src": "made"
+  }
+ ],
+ "w|sirene": [
+  {
+   "text": "Rudi menyalakan sirene dan mengejar mobil yang melanggar lampu merah.",
+   "en": "Rudi turned on the siren and chased the car that ran the red light.",
+   "ko": "루디는 사이렌을 켜고 신호를 위반한 차를 쫓았어요.",
+   "blank": "sirene",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik anjing itu bercerita kepada Rina bahwa anjingnya melolong setiap kali mendengar sirene ambulans.",
+   "en": "The dog's owner told Rina that the dog howls every time it hears an ambulance siren.",
+   "ko": "그 개 주인은 리나에게 개가 구급차 사이렌 소리만 들으면 운다고 말했어요.",
+   "blank": "sirene",
    "src": "made"
   }
  ],
@@ -73529,6 +74073,22 @@
    "en": "We drink tea every afternoon on the terrace.",
    "ko": "우리는 매일 오후에 테라스에서 차를 마셔.",
    "blank": "sore"
+  }
+ ],
+ "w|sorot": [
+  {
+   "text": "Rudi mengarahkan sorot senter ke lorong yang gelap.",
+   "en": "Rudi pointed the flashlight beam down the dark hallway.",
+   "ko": "루디는 어두운 복도 쪽으로 손전등 불빛을 비췄어요.",
+   "blank": "sorot",
+   "src": "made"
+  },
+  {
+   "text": "Rina memeriksa telinga kucing dengan sorot lampu kecil.",
+   "en": "Rina examined the cat's ear with the beam of a small light.",
+   "ko": "리나는 작은 불빛을 비춰 고양이 귀를 살폈어요.",
+   "blank": "sorot",
+   "src": "made"
   }
  ],
  "w|sorotan": [
@@ -78053,6 +78613,22 @@
    "blank": "Terkesan"
   }
  ],
+ "w|terkontaminasi": [
+  {
+   "text": "Rudi memakai sarung tangan agar barang bukti tidak terkontaminasi.",
+   "en": "Rudi wears gloves so the evidence doesn't get contaminated.",
+   "ko": "루디는 증거물이 오염되지 않게 장갑을 껴요.",
+   "blank": "terkontaminasi",
+   "src": "made"
+  },
+  {
+   "text": "Rina membuang perban yang sudah terkontaminasi darah.",
+   "en": "Rina threw away the bandages contaminated with blood.",
+   "ko": "리나는 피로 오염된 붕대를 버렸어요.",
+   "blank": "terkontaminasi",
+   "src": "made"
+  }
+ ],
  "w|terkuat": [
   {
    "text": "Dia adalah pemain terkuat di tim itu.",
@@ -78167,6 +78743,22 @@
    "en": "Don't be late again.",
    "ko": "또 늦지 마.",
    "blank": "terlambat"
+  }
+ ],
+ "w|terlanjur": [
+  {
+   "text": "Ketika Rudi tiba, pelaku sudah terlanjur kabur dengan motor.",
+   "en": "When Rudi arrived, the culprit had already escaped on a motorbike.",
+   "ko": "루디가 도착했을 때 범인은 이미 오토바이를 타고 달아난 뒤였어요.",
+   "blank": "terlanjur",
+   "src": "made"
+  },
+  {
+   "text": "Rina sudah terlanjur menyiapkan obat sebelum pemilik kucing membatalkan janji.",
+   "en": "Rina had already prepared the medicine before the cat's owner canceled the appointment.",
+   "ko": "고양이 주인이 예약을 취소하기 전에 리나는 이미 약을 준비해 버렸어요.",
+   "blank": "terlanjur",
+   "src": "made"
   }
  ],
  "w|terlarang": [
@@ -79329,6 +79921,22 @@
    "en": "At certain times he looks sad.",
    "ko": "어떤 때에는 그가 슬퍼 보여.",
    "blank": "tertentu"
+  }
+ ],
+ "w|tertib": [
+  {
+   "text": "Rudi meminta antrean di loket SIM tetap tertib.",
+   "en": "Rudi asked that the line at the driver's license counter stay orderly.",
+   "ko": "루디는 운전면허 창구 앞 줄이 질서를 지키도록 했어요.",
+   "blank": "tertib",
+   "src": "made"
+  },
+  {
+   "text": "Para pemilik hewan menunggu dengan tertib di ruang tunggu klinik Rina.",
+   "en": "The pet owners waited in an orderly way in the waiting room of Rina's clinic.",
+   "ko": "반려동물 주인들은 리나네 병원 대기실에서 질서 있게 기다렸어요.",
+   "blank": "tertib",
+   "src": "made"
   }
  ],
  "w|tertidur": [
@@ -80995,6 +81603,22 @@
    "src": "made"
   }
  ],
+ "w|tumpul": [
+  {
+   "text": "Pensil-pensil di meja Rudi sudah tumpul semua.",
+   "en": "The pencils on Rudi's desk have all gone blunt.",
+   "ko": "루디 책상 위 연필은 다 뭉툭해졌어요.",
+   "blank": "tumpul",
+   "src": "made"
+  },
+  {
+   "text": "Rina mengganti gunting kuku yang sudah tumpul.",
+   "en": "Rina replaced the nail clippers that had gone dull.",
+   "ko": "리나는 무뎌진 발톱깎이를 새것으로 바꿨어요.",
+   "blank": "tumpul",
+   "src": "made"
+  }
+ ],
  "w|tunai": [
   {
    "text": "Dia membayar dengan uang tunai.",
@@ -81539,6 +82163,22 @@
    "en": "My younger sibling entered university this year.",
    "ko": "동생이 올해 대학교에 들어갔어.",
    "blank": "universitas"
+  }
+ ],
+ "w|unjuk rasa": [
+  {
+   "text": "Rudi menjaga unjuk rasa mahasiswa agar berjalan damai.",
+   "en": "Rudi kept watch over the student demonstration so it would stay peaceful.",
+   "ko": "루디는 대학생 시위가 평화롭게 진행되도록 지켰어요.",
+   "blank": "unjuk rasa",
+   "src": "made"
+  },
+  {
+   "text": "Rina ikut unjuk rasa damai menentang perdagangan satwa liar.",
+   "en": "Rina joined a peaceful demonstration against the wildlife trade.",
+   "ko": "리나는 야생동물 거래에 반대하는 평화 시위에 참여했어요.",
+   "blank": "unjuk rasa",
+   "src": "made"
   }
  ],
  "w|unsur": [
