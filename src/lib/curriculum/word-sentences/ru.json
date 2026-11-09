@@ -1131,6 +1131,22 @@
    "blank": "без"
   }
  ],
+ "w|бездомный": [
+  {
+   "text": "Алексей с одноклассниками сделали будку для бездомного кота у школы.",
+   "en": "Alexei and his classmates made a little house for a stray cat by the school.",
+   "ko": "알렉세이는 반 친구들과 학교 앞 떠돌이 고양이에게 집을 만들어 줬어요.",
+   "blank": "бездомного",
+   "src": "made"
+  },
+  {
+   "text": "Наталья подкармливает бездомную собаку, которая живёт у бассейна.",
+   "en": "Natalia feeds a homeless dog that lives near the pool.",
+   "ko": "나탈리야는 수영장 근처에 사는 떠돌이 개에게 먹이를 챙겨 줘요.",
+   "blank": "бездомную",
+   "src": "made"
+  }
+ ],
  "w|безопасность": [
   {
    "text": "Твоя безопасность важнее.",
@@ -1772,6 +1788,22 @@
    "en": "In the comedy Anna plays two twin sisters at once.",
    "ko": "코미디에서 안나는 쌍둥이 자매 둘을 혼자 연기해요.",
    "blank": "близнецов",
+   "src": "made"
+  }
+ ],
+ "w|блок": [
+  {
+   "text": "Кабинет математики, где учится Алексей, находится в новом блоке школы.",
+   "en": "The maths room where Alexei studies is in the new block of the school.",
+   "ko": "알렉세이가 수업 듣는 수학실은 학교 신관 동에 있어요.",
+   "blank": "блоке",
+   "src": "made"
+  },
+  {
+   "text": "Бассейн, куда ходит Наталья, построили в новом блоке спортивного центра.",
+   "en": "The pool Natalia goes to was built in the new block of the sports centre.",
+   "ko": "나탈리야가 다니는 수영장은 스포츠 센터 신관 동에 지어졌어요.",
+   "blank": "блоке",
    "src": "made"
   }
  ],
@@ -3583,6 +3615,22 @@
    "src": "made"
   }
  ],
+ "w|взлом": [
+  {
+   "text": "После взлома школьного сайта Алексея попросили помочь учителю информатики.",
+   "en": "After the school website was hacked, Alexei was asked to help the IT teacher.",
+   "ko": "학교 사이트가 해킹당한 뒤 알렉세이는 정보 선생님을 도와 달라는 부탁을 받았어요.",
+   "blank": "взлома",
+   "src": "made"
+  },
+  {
+   "text": "После взлома шкафчиков Наталья носит телефон в водонепроницаемом чехле.",
+   "en": "After the lockers were broken into, Natalia carries her phone in a waterproof case.",
+   "ko": "사물함이 털린 뒤로 나탈리야는 휴대폰을 방수 케이스에 넣어 다녀요.",
+   "blank": "взлома",
+   "src": "made"
+  }
+ ],
  "w|взломать": [
   {
    "text": "Кто-то взломал страницу ресторана и выложил странные фото.",
@@ -4555,6 +4603,22 @@
    "src": "tatoeba:7872710/marafon en:6438734/CK"
   }
  ],
+ "w|воевать": [
+  {
+   "text": "В учебнике Алексей прочитал, как долго две страны воевали за эти земли.",
+   "en": "In the textbook Alexei read how long two countries fought over these lands.",
+   "ko": "알렉세이는 교과서에서 두 나라가 이 땅을 두고 얼마나 오래 싸웠는지 읽었어요.",
+   "blank": "воевали",
+   "src": "made"
+  },
+  {
+   "text": "Тренер Натальи шутит, что с этой дорожкой ему приходится воевать каждое утро.",
+   "en": "Natalia's coach jokes that he has to fight over this lane every morning.",
+   "ko": "나탈리야의 코치는 아침마다 이 레인을 두고 싸워야 한다고 농담해요.",
+   "blank": "воевать",
+   "src": "made"
+  }
+ ],
  "w|военный": [
   {
    "text": "Какой прекрасный военный парад!",
@@ -5043,6 +5107,22 @@
    "ko": "나보고 도둑이라는 거야?",
    "blank": "вор",
    "src": "tatoeba:5294677/marafon en:5294671/Hybrid"
+  }
+ ],
+ "w|воровать": [
+  {
+   "text": "Кто-то стал воровать мел из класса, и Алексей решил выяснить, кто это.",
+   "en": "Someone started stealing chalk from the classroom, and Alexei decided to find out who.",
+   "ko": "누군가 교실 분필을 훔치기 시작해서 알렉세이가 범인을 찾아보기로 했어요.",
+   "blank": "воровать",
+   "src": "made"
+  },
+  {
+   "text": "Охранник сказал Наталье, что в раздевалках снова начали воровать.",
+   "en": "The security guard told Natalia that thefts in the changing rooms had started again.",
+   "ko": "경비원은 탈의실에서 또 도난이 생기기 시작했다고 나탈리야에게 말했어요.",
+   "blank": "воровать",
+   "src": "made"
   }
  ],
  "w|ворота": [
@@ -6087,6 +6167,22 @@
    "src": "made"
   }
  ],
+ "w|выбить": [
+  {
+   "text": "Алексей случайно выбил мячом стекло в спортзале.",
+   "en": "Alexei accidentally broke a window in the gym with the ball.",
+   "ko": "알렉세이는 공으로 체육관 유리창을 실수로 깨뜨렸어요.",
+   "blank": "выбил",
+   "src": "made"
+  },
+  {
+   "text": "Наталья выбила себе абонемент со скидкой на весь год.",
+   "en": "Natalia got herself a discounted pass for the whole year.",
+   "ko": "나탈리야는 일 년짜리 회원권을 할인받아 끊어 냈어요.",
+   "blank": "выбила",
+   "src": "made"
+  }
+ ],
  "w|выбор": [
   {
    "text": "Выбор за тобой.",
@@ -6774,6 +6870,22 @@
    "en": "The motel owner asked Olga to put the rubbish outside the door.",
    "ko": "모텔 주인이 올가에게 쓰레기를 문밖에 내놓아 달라고 했어요.",
    "blank": "выставить",
+   "src": "made"
+  }
+ ],
+ "w|выставка": [
+  {
+   "text": "Рисунок Алексея отобрали для городской выставки детского творчества.",
+   "en": "Alexei's drawing was selected for the city exhibition of children's art.",
+   "ko": "알렉세이의 그림이 시 어린이 미술 전시회에 뽑혔어요.",
+   "blank": "выставки",
+   "src": "made"
+  },
+  {
+   "text": "В холле бассейна открылась выставка фотографий, и Наталья нашла там себя.",
+   "en": "A photo exhibition opened in the pool lobby, and Natalia found herself in it.",
+   "ko": "수영장 로비에 사진 전시회가 열렸는데 나탈리야는 거기서 자기 사진을 찾았어요.",
+   "blank": "выставка",
    "src": "made"
   }
  ],
@@ -8009,6 +8121,22 @@
    "en": "Are you ready?",
    "ko": "준비됐어?",
    "blank": "готова"
+  }
+ ],
+ "w|грабитель": [
+  {
+   "text": "В детективе, который Алексей читал на перемене, грабитель оставил на месте шарф.",
+   "en": "In the detective story Alexei read during break, the robber left his scarf at the scene.",
+   "ko": "알렉세이가 쉬는 시간에 읽은 추리 소설에서 강도는 현장에 목도리를 두고 갔어요.",
+   "blank": "грабитель",
+   "src": "made"
+  },
+  {
+   "text": "По радио в бассейне Наталья услышала, что полиция поймала грабителя с соседней улицы.",
+   "en": "On the radio at the pool Natalia heard that the police had caught the robber from the next street.",
+   "ko": "나탈리야는 수영장 라디오에서 경찰이 옆 동네 강도를 잡았다는 소식을 들었어요.",
+   "blank": "грабителя",
+   "src": "made"
   }
  ],
  "w|градус": [
@@ -9747,6 +9875,22 @@
    "en": "Be kind and give up your seat.",
    "ko": "착하게 자리 좀 양보해.",
    "blank": "добрым"
+  }
+ ],
+ "w|добыча": [
+  {
+   "text": "На уроке географии Алексей сделал доклад о добыче нефти.",
+   "en": "In geography class Alexei gave a report on oil extraction.",
+   "ko": "지리 시간에 알렉세이는 석유 채굴에 대해 발표했어요.",
+   "blank": "добыче",
+   "src": "made"
+  },
+  {
+   "text": "В бассейне Наталья подслушала, как два рыбака хвастались своей добычей.",
+   "en": "At the pool Natalia overheard two fishermen boasting about their catch.",
+   "ko": "수영장에서 나탈리야는 낚시꾼 둘이 잡은 고기를 자랑하는 걸 엿들었어요.",
+   "blank": "добычей",
+   "src": "made"
   }
  ],
  "w|доверие": [
@@ -13327,6 +13471,22 @@
    "src": "tatoeba:5530442/marafon en:5515389/Mar1L"
   }
  ],
+ "w|засада": [
+  {
+   "text": "Одноклассники устроили Алексею засаду со снежками у ворот школы.",
+   "en": "Alexei's classmates set up a snowball ambush for him at the school gates.",
+   "ko": "반 친구들이 학교 정문에서 눈덩이를 들고 알렉세이를 기다리며 매복했어요.",
+   "blank": "засаду",
+   "src": "made"
+  },
+  {
+   "text": "Подруги устроили Наталье засаду у выхода из бассейна с тортом на день рождения.",
+   "en": "Natalia's friends ambushed her at the pool exit with a birthday cake.",
+   "ko": "친구들이 생일 케이크를 들고 수영장 출구에서 나탈리야를 기다리고 있었어요.",
+   "blank": "засаду",
+   "src": "made"
+  }
+ ],
  "w|заседание": [
   {
    "text": "Павел опоздал на заседание совета директоров.",
@@ -13419,6 +13579,22 @@
    "ko": "그를 기다리게 하고 싶진 않잖아.",
    "blank": "заставлять",
    "src": "tatoeba:8682768/marafon en:1879741/Spamster"
+  }
+ ],
+ "w|застать": [
+  {
+   "text": "Директор застал Алексея в пустом классе за подготовкой к олимпиаде.",
+   "en": "The head teacher found Alexei in an empty classroom preparing for the olympiad.",
+   "ko": "교장 선생님은 빈 교실에서 올림피아드를 준비하는 알렉세이를 마주쳤어요.",
+   "blank": "застал",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пришла рано и застала бассейн совсем пустым.",
+   "en": "Natalia came early and found the pool completely empty.",
+   "ko": "나탈리야가 일찍 갔더니 수영장이 텅 비어 있었어요.",
+   "blank": "застала",
+   "src": "made"
   }
  ],
  "w|застрелить": [
@@ -15003,6 +15179,22 @@
    "src": "tatoeba:6821763/marafon en:6662354/CK"
   }
  ],
+ "w|инстинкт": [
+  {
+   "text": "Учитель биологии рассказал Алексею, что у птиц инстинкт строить гнёзда врождённый.",
+   "en": "The biology teacher told Alexei that birds' instinct to build nests is innate.",
+   "ko": "생물 선생님은 알렉세이에게 새의 둥지 짓는 본능은 타고난 것이라고 말해 줬어요.",
+   "blank": "инстинкт",
+   "src": "made"
+  },
+  {
+   "text": "Тренер сказал Наталье, что умение держаться на воде у детей — почти инстинкт.",
+   "en": "The coach told Natalia that children's ability to stay afloat is almost an instinct.",
+   "ko": "코치는 나탈리야에게 아이들이 물에 뜨는 건 거의 본능이라고 말했어요.",
+   "blank": "инстинкт",
+   "src": "made"
+  }
+ ],
  "w|институт": [
   {
    "text": "Павел пригласил на работу двух выпускников местного института.",
@@ -15579,6 +15771,22 @@
    "en": "So, what do we decide?",
    "ko": "그래서 뭘로 할까?",
    "blank": "Итак"
+  }
+ ],
+ "w|итальянский": [
+  {
+   "text": "Алексей выбрал итальянский язык как второй иностранный.",
+   "en": "Alexei chose Italian as his second foreign language.",
+   "ko": "알렉세이는 제2외국어로 이탈리아어를 골랐어요.",
+   "blank": "итальянский",
+   "src": "made"
+  },
+  {
+   "text": "После тренировки Наталья с подругой зашли в итальянский ресторан.",
+   "en": "After training Natalia and her friend dropped into an Italian restaurant.",
+   "ko": "운동이 끝나고 나탈리야는 친구와 이탈리아 식당에 들렀어요.",
+   "blank": "итальянский",
+   "src": "made"
   }
  ],
  "w|итог": [
@@ -17082,6 +17290,22 @@
    "en": "The parents handed Natalia an envelope with a Teacher's Day card.",
    "ko": "학부모들이 스승의 날 카드가 든 봉투를 나탈리야에게 건넸어요.",
    "blank": "конверт",
+   "src": "made"
+  }
+ ],
+ "w|конгресс": [
+  {
+   "text": "Учитель рассказал Алексею, как конгресс принимает законы.",
+   "en": "The teacher told Alexei how congress passes laws.",
+   "ko": "선생님은 알렉세이에게 의회가 법을 어떻게 통과시키는지 설명해 줬어요.",
+   "blank": "конгресс",
+   "src": "made"
+  },
+  {
+   "text": "Наталья поедет на конгресс спортивных врачей вместе со своим тренером.",
+   "en": "Natalia will go to a congress of sports doctors together with her coach.",
+   "ko": "나탈리야는 코치와 함께 스포츠 의학 학회에 갈 거예요.",
+   "blank": "конгресс",
    "src": "made"
   }
  ],
@@ -19193,6 +19417,22 @@
    "src": "made"
   }
  ],
+ "w|лишиться": [
+  {
+   "text": "За драку на перемене Алексей лишился места в школьной команде.",
+   "en": "For fighting during break Alexei lost his place on the school team.",
+   "ko": "쉬는 시간에 싸운 탓에 알렉세이는 학교 대표팀에서 빠졌어요.",
+   "blank": "лишился",
+   "src": "made"
+  },
+  {
+   "text": "Наталья лишилась любимых очков для плавания — их кто-то унёс из раздевалки.",
+   "en": "Natalia lost her favourite swimming goggles — someone took them from the changing room.",
+   "ko": "나탈리야는 아끼던 수경을 잃어버렸어요. 누가 탈의실에서 가져갔거든요.",
+   "blank": "лишилась",
+   "src": "made"
+  }
+ ],
  "w|лишний": [
   {
    "text": "Михаил взял в дорогу лишний свитер на случай холода.",
@@ -19917,6 +20157,22 @@
    "ko": "버터가 좋아, 마가린이 좋아?",
    "blank": "масло",
    "src": "tatoeba:11835482/marafon en:9731172/marvinibahs2020"
+  }
+ ],
+ "w|масса": [
+  {
+   "text": "На физике Алексей узнал, чем масса отличается от веса.",
+   "en": "In physics Alexei learned how mass differs from weight.",
+   "ko": "물리 시간에 알렉세이는 질량과 무게가 어떻게 다른지 배웠어요.",
+   "blank": "масса",
+   "src": "made"
+  },
+  {
+   "text": "В субботу в бассейне была масса народу, и Наталья плавала медленно.",
+   "en": "On Saturday the pool was packed with people, and Natalia swam slowly.",
+   "ko": "토요일에 수영장에 사람이 엄청 많아서 나탈리야는 천천히 수영했어요.",
+   "blank": "масса",
+   "src": "made"
   }
  ],
  "w|массаж": [
@@ -23509,6 +23765,22 @@
    "src": "tatoeba:4606627/odexed en:906823/CK"
   }
  ],
+ "w|нация": [
+  {
+   "text": "На истории Алексей писал реферат о том, как складывалась нация.",
+   "en": "In history Alexei wrote a paper on how the nation took shape.",
+   "ko": "역사 시간에 알렉세이는 민족이 어떻게 형성됐는지 보고서를 썼어요.",
+   "blank": "нация",
+   "src": "made"
+  },
+  {
+   "text": "На соревнованиях Наталья плыла за сборную, и вся нация смотрела финал.",
+   "en": "At the competition Natalia swam for the national team, and the whole nation watched the final.",
+   "ko": "대회에서 나탈리야는 국가대표로 출전했고 온 국민이 결승을 지켜봤어요.",
+   "blank": "нация",
+   "src": "made"
+  }
+ ],
  "w|начало": [
   {
    "text": "Начало мне понравилось.",
@@ -26101,6 +26373,22 @@
    "src": "tatoeba:3953302/sharptoothed en:3328175/CK"
   }
  ],
+ "w|обращение": [
+  {
+   "text": "Алексей написал обращение к директору с просьбой открыть кружок робототехники.",
+   "en": "Alexei wrote an appeal to the head teacher asking to start a robotics club.",
+   "ko": "알렉세이는 로봇 동아리를 만들어 달라고 교장 선생님께 건의서를 썼어요.",
+   "blank": "обращение",
+   "src": "made"
+  },
+  {
+   "text": "Администрация бассейна ответила на обращение Натальи за один день.",
+   "en": "The pool management replied to Natalia's request within a day.",
+   "ko": "수영장 관리실은 나탈리야의 요청에 하루 만에 답했어요.",
+   "blank": "обращение",
+   "src": "made"
+  }
+ ],
  "w|обстановка": [
   {
    "text": "Дмитрию понравилась уютная обстановка ресторана, где собрались друзья.",
@@ -27215,6 +27503,38 @@
    "ko": "가장 위험한 적은 눈에 보이지 않는 적이에요.",
    "blank": "опасный",
    "src": "tatoeba:12427626/marafon en:12427624/adamtrousers"
+  }
+ ],
+ "w|опека": [
+  {
+   "text": "Пока родители в командировке, Алексей живёт под опекой бабушки.",
+   "en": "While his parents are on a business trip, Alexei lives in his grandmother's care.",
+   "ko": "부모님이 출장 가신 동안 알렉세이는 할머니 보살핌을 받으며 지내요.",
+   "blank": "опекой",
+   "src": "made"
+  },
+  {
+   "text": "Наталья водит в бассейн племянника, над которым у неё оформлена опека.",
+   "en": "Natalia takes her nephew, whose guardian she is, to the pool.",
+   "ko": "나탈리야는 자기가 후견인을 맡은 조카를 수영장에 데려가요.",
+   "blank": "опека",
+   "src": "made"
+  }
+ ],
+ "w|опера": [
+  {
+   "text": "Класс Алексея водили в театр на оперу, и ему понравилось больше, чем он ожидал.",
+   "en": "Alexei's class was taken to the opera, and he liked it more than he expected.",
+   "ko": "알렉세이네 반은 오페라를 보러 갔는데 알렉세이는 생각보다 더 재미있었어요.",
+   "blank": "оперу",
+   "src": "made"
+  },
+  {
+   "text": "Во время заплыва Наталья напевает про себя арии, потому что обожает оперу.",
+   "en": "While swimming Natalia hums arias to herself because she adores opera.",
+   "ko": "나탈리야는 오페라를 무척 좋아해서 수영하면서 속으로 아리아를 흥얼거려요.",
+   "blank": "оперу",
+   "src": "made"
   }
  ],
  "w|оператор": [
@@ -29921,6 +30241,22 @@
    "src": "made"
   }
  ],
+ "w|патрон": [
+  {
+   "text": "В музее при школе Алексей увидел старый патрон времён войны.",
+   "en": "In the school museum Alexei saw an old cartridge from the war.",
+   "ko": "알렉세이는 학교 박물관에서 전쟁 때 쓰던 낡은 탄피를 봤어요.",
+   "blank": "патрон",
+   "src": "made"
+  },
+  {
+   "text": "Наталья заменила патрон в лампе над своим шкафчиком, потому что тот болтался.",
+   "en": "Natalia replaced the socket in the lamp above her locker because it was loose.",
+   "ko": "나탈리야는 사물함 위 전등 소켓이 흔들거려서 갈아 끼웠어요.",
+   "blank": "патрон",
+   "src": "made"
+  }
+ ],
  "w|патруль": [
   {
    "text": "Задержание провёл ночной патруль недалеко от вокзала.",
@@ -30608,6 +30944,22 @@
    "en": "Yesterday a pilot who had flown in on a night flight brought Irina a broken phone.",
    "ko": "어제 야간 비행으로 온 조종사가 깨진 휴대폰을 이리나에게 가져왔어요.",
    "blank": "пилот",
+   "src": "made"
+  }
+ ],
+ "w|пират": [
+  {
+   "text": "На школьном карнавале Алексей нарядился пиратом с повязкой на глазу.",
+   "en": "At the school carnival Alexei dressed up as a pirate with an eye patch.",
+   "ko": "학교 가장행렬에서 알렉세이는 안대를 한 해적으로 분장했어요.",
+   "blank": "пиратом",
+   "src": "made"
+  },
+  {
+   "text": "В детском бассейне, куда Наталья водит сына, стоит надувной пиратский корабль, а на нём фигура пирата.",
+   "en": "In the children's pool where Natalia takes her son there's an inflatable pirate ship with a pirate figure on it.",
+   "ko": "나탈리야가 아들을 데려가는 어린이 수영장에는 해적 인형이 달린 공기 주입식 해적선이 있어요.",
+   "blank": "пирата",
    "src": "made"
   }
  ],
@@ -35731,6 +36083,22 @@
    "blank": "появится"
   }
  ],
+ "w|появление": [
+  {
+   "text": "В классе Алексея все оживились с появлением нового учителя физики.",
+   "en": "Everyone in Alexei's class livened up with the arrival of the new physics teacher.",
+   "ko": "새 물리 선생님이 오자 알렉세이네 반은 모두 활기를 띠었어요.",
+   "blank": "появлением",
+   "src": "made"
+  },
+  {
+   "text": "С появлением новой дорожки для быстрых пловцов Наталье стало удобнее тренироваться.",
+   "en": "With the appearance of a new lane for fast swimmers, it became easier for Natalia to train.",
+   "ko": "빠른 사람 전용 레인이 생기고 나서 나탈리야는 훈련하기가 편해졌어요.",
+   "blank": "появлением",
+   "src": "made"
+  }
+ ],
  "w|появляться": [
   {
    "text": "У меня начинали появляться сомнения.",
@@ -36819,6 +37187,22 @@
    "src": "tatoeba:4734248/odexed en:247384/CK"
   }
  ],
+ "w|привидение": [
+  {
+   "text": "Младшие уверяют Алексея, что в школьном подвале живёт привидение.",
+   "en": "The younger kids assure Alexei that a ghost lives in the school basement.",
+   "ko": "저학년 아이들은 학교 지하실에 유령이 산다고 알렉세이에게 우겨요.",
+   "blank": "привидение",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вздрогнула, когда в тёмной раздевалке увидела белый халат, похожий на привидение.",
+   "en": "Natalia jumped when she saw a white robe in the dark changing room that looked like a ghost.",
+   "ko": "나탈리야는 어두운 탈의실에서 유령 같은 흰 가운을 보고 깜짝 놀랐어요.",
+   "blank": "привидение",
+   "src": "made"
+  }
+ ],
  "w|привлекательный": [
   {
    "text": "Иван считает зарплату на заводе вполне привлекательной.",
@@ -37795,6 +38179,22 @@
    "src": "made"
   }
  ],
+ "w|приход": [
+  {
+   "text": "С приходом весны Алексей стал чаще опаздывать на первый урок.",
+   "en": "With the arrival of spring Alexei started being late for first lesson more often.",
+   "ko": "봄이 오자 알렉세이는 첫 수업에 더 자주 늦기 시작했어요.",
+   "blank": "приходом",
+   "src": "made"
+  },
+  {
+   "text": "К приходу тренера Наталья уже проплыла разминку.",
+   "en": "By the time the coach arrived, Natalia had already swum her warm-up.",
+   "ko": "코치가 왔을 때 나탈리야는 이미 몸풀기 수영을 마쳤어요.",
+   "blank": "приходу",
+   "src": "made"
+  }
+ ],
  "w|приходить": [
   {
    "text": "Приходи к чаю вечером.",
@@ -38004,6 +38404,22 @@
    "en": "Elena's first pie turned out to be a complete flop.",
    "ko": "엘레나가 처음 만든 파이는 완전히 실패였어요.",
    "blank": "провалом",
+   "src": "made"
+  }
+ ],
+ "w|провалиться": [
+  {
+   "text": "Алексей боялся провалиться на экзамене по химии, но сдал на отлично.",
+   "en": "Alexei was afraid of failing his chemistry exam, but he got top marks.",
+   "ko": "알렉세이는 화학 시험에서 떨어질까 봐 걱정했는데 만점을 받았어요.",
+   "blank": "провалиться",
+   "src": "made"
+  },
+  {
+   "text": "Наталья поскользнулась у бассейна и чуть не провалилась ногой в водосток.",
+   "en": "Natalia slipped by the pool and almost put her foot through the drain.",
+   "ko": "나탈리야는 수영장 옆에서 미끄러져 배수구에 발이 빠질 뻔했어요.",
+   "blank": "провалилась",
    "src": "made"
   }
  ],
@@ -38463,6 +38879,22 @@
    "src": "made"
   }
  ],
+ "w|произносить": [
+  {
+   "text": "Алексей до сих пор неправильно произносит некоторые немецкие слова.",
+   "en": "Alexei still mispronounces some German words.",
+   "ko": "알렉세이는 아직도 독일어 단어 몇 개를 틀리게 발음해요.",
+   "blank": "произносит",
+   "src": "made"
+  },
+  {
+   "text": "Новый тренер так быстро произносит команды, что Наталья не всегда успевает понять.",
+   "en": "The new coach says the commands so fast that Natalia doesn't always catch them.",
+   "ko": "새 코치가 구령을 너무 빨리 해서 나탈리야는 가끔 못 알아들어요.",
+   "blank": "произносит",
+   "src": "made"
+  }
+ ],
  "w|произойти": [
   {
    "text": "Что тут произошло?",
@@ -38519,6 +38951,22 @@
    "en": "The thunderstorm has passed.",
    "ko": "천둥비는 이미 그쳤어.",
    "blank": "прошла"
+  }
+ ],
+ "w|пройтись": [
+  {
+   "text": "На большой перемене Алексей любит пройтись по школьному саду.",
+   "en": "During the long break Alexei likes to take a walk around the school garden.",
+   "ko": "긴 쉬는 시간에 알렉세이는 학교 정원을 거니는 걸 좋아해요.",
+   "blank": "пройтись",
+   "src": "made"
+  },
+  {
+   "text": "После тренировки Наталья решила пройтись до дома пешком.",
+   "en": "After training Natalia decided to walk home.",
+   "ko": "운동이 끝나고 나탈리야는 집까지 걸어가기로 했어요.",
+   "blank": "пройтись",
+   "src": "made"
   }
  ],
  "w|прокатиться": [
@@ -39221,6 +39669,22 @@
    "src": "tatoeba:8412446/marafon en:6242035/CK"
   }
  ],
+ "w|прыгнуть": [
+  {
+   "text": "На физкультуре Алексей сумел прыгнуть в длину дальше всех в классе.",
+   "en": "In PE Alexei managed to long-jump farther than anyone in his class.",
+   "ko": "체육 시간에 알렉세이는 반에서 가장 멀리 멀리뛰기를 했어요.",
+   "blank": "прыгнуть",
+   "src": "made"
+  },
+  {
+   "text": "Тренер впервые разрешил Наталье прыгнуть в воду с высокой вышки.",
+   "en": "The coach let Natalia jump into the water from the high board for the first time.",
+   "ko": "코치가 처음으로 나탈리야에게 높은 다이빙대에서 물에 뛰어들어도 된다고 했어요.",
+   "blank": "прыгнуть",
+   "src": "made"
+  }
+ ],
  "w|прямо": [
   {
    "text": "Иди прямо.",
@@ -39595,6 +40059,22 @@
    "en": "Don't try to lie.",
    "ko": "거짓말하려고 들지 마.",
    "blank": "пытайся"
+  }
+ ],
+ "w|пытка": [
+  {
+   "text": "Для Алексея сидеть шесть уроков подряд — настоящая пытка.",
+   "en": "For Alexei, sitting through six lessons in a row is real torture.",
+   "ko": "알렉세이에게 여섯 시간 연속 수업은 정말 고문이에요.",
+   "blank": "пытка",
+   "src": "made"
+  },
+  {
+   "text": "Для Натальи холодный душ после бассейна — настоящая пытка.",
+   "en": "For Natalia a cold shower after the pool is real torture.",
+   "ko": "나탈리야에게 수영 후 찬물 샤워는 정말 고문이에요.",
+   "blank": "пытка",
+   "src": "made"
   }
  ],
  "w|пьеса": [
@@ -40767,6 +41247,22 @@
    "src": "made"
   }
  ],
+ "w|рассматривать": [
+  {
+   "text": "На биологии Алексей рассматривал клетки лука под микроскопом.",
+   "en": "In biology Alexei examined onion cells under a microscope.",
+   "ko": "생물 시간에 알렉세이는 현미경으로 양파 세포를 관찰했어요.",
+   "blank": "рассматривал",
+   "src": "made"
+  },
+  {
+   "text": "Наталья долго рассматривала расписание, чтобы найти удобное время.",
+   "en": "Natalia studied the timetable for a long time to find a convenient time.",
+   "ko": "나탈리야는 편한 시간을 찾으려고 시간표를 한참 들여다봤어요.",
+   "blank": "рассматривала",
+   "src": "made"
+  }
+ ],
  "w|рассмотреть": [
   {
    "text": "Наш руководитель обещал рассмотреть идею Ольги на следующей неделе.",
@@ -40924,6 +41420,22 @@
    "en": "Svetlana got through another round of inspections from the health service.",
    "ko": "스베틀라나는 위생 당국의 점검을 또 한 차례 견뎠어요.",
    "blank": "раунд",
+   "src": "made"
+  }
+ ],
+ "w|реагировать": [
+  {
+   "text": "Учительница похвалила Алексея за то, что он спокойно реагирует на критику.",
+   "en": "The teacher praised Alexei for reacting calmly to criticism.",
+   "ko": "선생님은 알렉세이가 비판에 차분하게 반응한다고 칭찬했어요.",
+   "blank": "реагирует",
+   "src": "made"
+  },
+  {
+   "text": "Тренер учит Наталью быстрее реагировать на стартовый сигнал.",
+   "en": "The coach is teaching Natalia to react faster to the starting signal.",
+   "ko": "코치는 나탈리야에게 출발 신호에 더 빨리 반응하는 법을 가르쳐요.",
+   "blank": "реагировать",
    "src": "made"
   }
  ],
@@ -41441,6 +41953,22 @@
    "en": "Decide today.",
    "ko": "오늘 정해.",
    "blank": "Реши"
+  }
+ ],
+ "w|решиться": [
+  {
+   "text": "Алексей долго не решался задать вопрос учительнице при всём классе.",
+   "en": "For a long time Alexei didn't dare ask the teacher a question in front of the whole class.",
+   "ko": "알렉세이는 반 친구들 앞에서 선생님께 질문할 용기가 오래 나지 않았어요.",
+   "blank": "решался",
+   "src": "made"
+  },
+  {
+   "text": "Наталья наконец решилась записаться в группу синхронного плавания.",
+   "en": "Natalia finally made up her mind to sign up for the synchronised swimming group.",
+   "ko": "나탈리야는 마침내 싱크로나이즈드 수영반에 등록하기로 마음먹었어요.",
+   "blank": "решилась",
+   "src": "made"
   }
  ],
  "w|рис": [
@@ -42749,6 +43277,22 @@
    "ko": "저는 그 신부님이 좋아요.",
    "blank": "священник",
    "src": "tatoeba:13341235/amanshi en:12200852/Miktsoanit"
+  }
+ ],
+ "w|сгореть": [
+  {
+   "text": "Пока Алексей решал задачи, у него в микроволновке сгорел пирожок.",
+   "en": "While Alexei was solving problems, his pie burned in the microwave.",
+   "ko": "알렉세이가 문제를 푸는 동안 전자레인지에 넣어 둔 파이가 타 버렸어요.",
+   "blank": "сгорел",
+   "src": "made"
+  },
+  {
+   "text": "Летом Наталья сгорела на открытом бассейне, потому что забыла крем.",
+   "en": "In summer Natalia got sunburned at the outdoor pool because she forgot her sunscreen.",
+   "ko": "여름에 나탈리야는 선크림을 깜빡해서 야외 수영장에서 살이 탔어요.",
+   "blank": "сгорела",
+   "src": "made"
   }
  ],
  "w|сдаваться": [
@@ -46769,6 +47313,22 @@
    "src": "tatoeba:12012574/carlosalberto en:12012563/carlosalberto"
   }
  ],
+ "w|сражение": [
+  {
+   "text": "Алексей нарисовал карту знаменитого сражения для урока истории.",
+   "en": "Alexei drew a map of a famous battle for history class.",
+   "ko": "알렉세이는 역사 수업을 위해 유명한 전투의 지도를 그렸어요.",
+   "blank": "сражения",
+   "src": "made"
+  },
+  {
+   "text": "Финальный заплыв стал для Натальи настоящим сражением за медаль.",
+   "en": "The final race became a real battle for a medal for Natalia.",
+   "ko": "결승 레이스는 나탈리야에게 메달을 건 진짜 전쟁이었어요.",
+   "blank": "сражением",
+   "src": "made"
+  }
+ ],
  "w|сразу": [
   {
    "text": "Я сразу понял.",
@@ -49511,6 +50071,22 @@
    "src": "made"
   }
  ],
+ "w|тонкий": [
+  {
+   "text": "Алексей сделал на труде тонкую деревянную полочку для мамы.",
+   "en": "In woodwork class Alexei made a thin wooden shelf for his mum.",
+   "ko": "기술 시간에 알렉세이는 엄마에게 줄 얇은 나무 선반을 만들었어요.",
+   "blank": "тонкую",
+   "src": "made"
+  },
+  {
+   "text": "Наталья надела тонкую шапочку, и вода всё равно попала в уши.",
+   "en": "Natalia put on a thin cap, and water still got into her ears.",
+   "ko": "나탈리야는 얇은 수영모를 썼는데도 귀에 물이 들어갔어요.",
+   "blank": "тонкую",
+   "src": "made"
+  }
+ ],
  "w|торговля": [
   {
    "text": "Бывший сосед Дмитрия по комнате теперь занимается торговлей мебелью.",
@@ -51415,6 +51991,22 @@
    "src": "made"
   }
  ],
+ "w|укусить": [
+  {
+   "text": "На экскурсии в лес Алексея укусил комар прямо в нос.",
+   "en": "On the field trip to the forest a mosquito bit Alexei right on the nose.",
+   "ko": "숲 견학에서 알렉세이는 모기에게 코를 물렸어요.",
+   "blank": "укусил",
+   "src": "made"
+  },
+  {
+   "text": "Наталья рассказала тренеру, что в детстве её укусила медуза на море.",
+   "en": "Natalia told the coach that a jellyfish stung her at the seaside when she was a child.",
+   "ko": "나탈리야는 어릴 때 바다에서 해파리에 쏘였다고 코치에게 말했어요.",
+   "blank": "укусила",
+   "src": "made"
+  }
+ ],
  "w|уладить": [
   {
    "text": "Мне нужно было уладить кое-какие дела.",
@@ -52593,6 +53185,22 @@
    "src": "made"
   }
  ],
+ "w|фея": [
+  {
+   "text": "В младших классах Алексей играл в спектакле злую фею.",
+   "en": "In the lower grades Alexei played a wicked fairy in a play.",
+   "ko": "저학년 때 알렉세이는 연극에서 못된 요정 역을 맡았어요.",
+   "blank": "фею",
+   "src": "made"
+  },
+  {
+   "text": "Дочь Натальи пришла в бассейн в купальнике с крыльями феи.",
+   "en": "Natalia's daughter came to the pool in a swimsuit with fairy wings.",
+   "ko": "나탈리야의 딸은 요정 날개가 달린 수영복을 입고 수영장에 왔어요.",
+   "blank": "феи",
+   "src": "made"
+  }
+ ],
  "w|физически": [
   {
    "text": "К концу приёма граждан Алексей физически не мог больше говорить.",
@@ -52843,6 +53451,22 @@
    "ko": "이걸 프랑스어로 어떻게 옮기시겠어요?",
    "blank": "французский",
    "src": "tatoeba:8454306/marafon en:8436050/CK"
+  }
+ ],
+ "w|фронт": [
+  {
+   "text": "Прадед Алексея ушёл на фронт прямо из школы, и в классе об этом знают все.",
+   "en": "Alexei's great-grandfather went to the front straight from school, and everyone in class knows it.",
+   "ko": "알렉세이의 증조할아버지가 학교에서 바로 전선에 나갔다는 걸 반 친구들 모두 알아요.",
+   "blank": "фронт",
+   "src": "made"
+  },
+  {
+   "text": "Перед стартом Наталья вспомнила, как дед рассказывал про фронт и смелость.",
+   "en": "Before the start Natalia remembered how her grandfather told stories about the front and courage.",
+   "ko": "출발 전에 나탈리야는 할아버지가 들려준 전선과 용기 이야기를 떠올렸어요.",
+   "blank": "фронт",
+   "src": "made"
   }
  ],
  "w|фрукт": [
@@ -53221,6 +53845,22 @@
    "ko": "저는 차가운 차보다 뜨거운 차가 좋아요.",
    "blank": "холодный",
    "src": "tatoeba:9016699/marafon en:8997934/CK"
+  }
+ ],
+ "w|хор": [
+  {
+   "text": "В школьном хоре Алексей поёт басом.",
+   "en": "In the school choir Alexei sings bass.",
+   "ko": "학교 합창단에서 알렉세이는 베이스를 맡아요.",
+   "blank": "хоре",
+   "src": "made"
+  },
+  {
+   "text": "После плавания Наталья спешит на репетицию церковного хора.",
+   "en": "After swimming Natalia hurries to a church choir rehearsal.",
+   "ko": "수영이 끝나면 나탈리야는 성가대 연습에 서둘러 가요.",
+   "blank": "хора",
+   "src": "made"
   }
  ],
  "w|хорошенько": [
