@@ -401,6 +401,22 @@
    "blank": "aceitar"
   }
  ],
+ "w|acelerar": [
+  {
+   "text": "O Pedro mandou um áudio ao síndico para acelerar o conserto do portão.",
+   "en": "Pedro sent the building manager a voice message to speed up the gate repair.",
+   "ko": "페드루는 대문 수리를 서두르게 하려고 관리인에게 음성 메시지를 보냈어요.",
+   "blank": "acelerar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz pagou a mais para acelerar a entrega.",
+   "en": "Beatriz paid extra to speed up the delivery.",
+   "ko": "베아트리스는 배송을 앞당기려고 돈을 더 냈어요.",
+   "blank": "acelerar",
+   "src": "made"
+  }
+ ],
  "w|acender": [
   {
    "text": "No fim do dia, um funcionário foi acender as luzes da vitrine de Natal.",
@@ -945,6 +961,38 @@
    "en": "So, who's paying the bill?",
    "ko": "그래서 계산은 누가 해?",
    "blank": "Afinal"
+  }
+ ],
+ "w|afogar": [
+  {
+   "text": "O salva-vidas do hotel impediu que um menino se afogasse na piscina.",
+   "en": "The hotel lifeguard stopped a boy from drowning in the pool.",
+   "ko": "호텔 안전 요원이 수영장에서 한 남자아이가 물에 빠지지 않게 막았어요.",
+   "blank": "afogasse",
+   "src": "made"
+  },
+  {
+   "text": "No filme da Ana, a personagem quase se afoga num lago gelado.",
+   "en": "In Ana's film, the character almost drowns in a frozen lake.",
+   "ko": "아나의 영화에서 주인공은 얼어붙은 호수에서 거의 물에 빠져 죽을 뻔해요.",
+   "blank": "afoga",
+   "src": "made"
+  }
+ ],
+ "w|afundar": [
+  {
+   "text": "O João viu o barquinho de um hóspede afundar perto do píer.",
+   "en": "João saw a guest's little boat sink near the pier.",
+   "ko": "주앙은 한 투숙객의 작은 배가 부두 근처에서 가라앉는 걸 봤어요.",
+   "blank": "afundar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana construiu um barco falso só para o ver afundar no fim do filme.",
+   "en": "Ana built a fake boat just to watch it sink at the end of the film.",
+   "ko": "아나는 영화 마지막에 가라앉는 장면을 위해 가짜 배를 만들었어요.",
+   "blank": "afundar",
+   "src": "made"
   }
  ],
  "w|agarrar": [
@@ -1829,6 +1877,22 @@
    "src": "tatoeba:8224241/josivangoncalves en:8224295/josivangoncalves"
   }
  ],
+ "w|alugar": [
+  {
+   "text": "O Pedro resolveu alugar um apartamento menor, perto do trabalho.",
+   "en": "Pedro decided to rent a smaller apartment near work.",
+   "ko": "페드루는 회사 근처에 더 작은 아파트를 빌리기로 했어요.",
+   "blank": "alugar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz achou um site para alugar ferramentas sem sair de casa.",
+   "en": "Beatriz found a website to rent tools without leaving home.",
+   "ko": "베아트리스는 집에서 공구를 빌릴 수 있는 사이트를 찾았어요.",
+   "blank": "alugar",
+   "src": "made"
+  }
+ ],
  "w|aluguel": [
   {
    "text": "Quanto vocês pagam de aluguel?",
@@ -2511,6 +2575,22 @@
    "src": "made"
   }
  ],
+ "w|anunciar": [
+  {
+   "text": "O gerente reuniu a equipe para anunciar a reforma da piscina.",
+   "en": "The manager gathered the staff to announce the pool renovation.",
+   "ko": "매니저는 수영장 공사를 알리려고 직원들을 모았어요.",
+   "blank": "anunciar",
+   "src": "made"
+  },
+  {
+   "text": "A produtora vai anunciar o elenco do filme da Ana na semana que vem.",
+   "en": "The production company will announce the cast of Ana's film next week.",
+   "ko": "제작사는 다음 주에 아나 영화의 출연진을 발표할 거예요.",
+   "blank": "anunciar",
+   "src": "made"
+  }
+ ],
  "w|anúncio": [
   {
    "text": "Eu tenho um anúncio animador.",
@@ -2812,6 +2892,22 @@
    "en": "The doctors got a round of applause from the neighbors at the end of the shift.",
    "ko": "교대가 끝날 때 의사들은 이웃들에게서 박수를 받았어요.",
    "blank": "aplauso",
+   "src": "made"
+  }
+ ],
+ "w|aplicar": [
+  {
+   "text": "O pintor vai aplicar duas demãos de tinta na parede do Pedro.",
+   "en": "The painter is going to apply two coats of paint to Pedro's wall.",
+   "ko": "칠장이는 페드루네 벽에 페인트를 두 번 칠할 거예요.",
+   "blank": "aplicar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz esqueceu de aplicar o código de desconto antes de pagar.",
+   "en": "Beatriz forgot to apply the discount code before paying.",
+   "ko": "베아트리스는 결제 전에 할인 코드를 적용하는 걸 잊었어요.",
+   "blank": "aplicar",
    "src": "made"
   }
  ],
@@ -3413,6 +3509,38 @@
    "ko": "펜 하나 구해야 해요.",
    "blank": "arranjar",
    "src": "tatoeba:8082574/Mecamute en:2387614/CK"
+  }
+ ],
+ "w|arrasar": [
+  {
+   "text": "A tempestade de ontem arrasou o jardim do hotel do João.",
+   "en": "Yesterday's storm wrecked the garden at João's hotel.",
+   "ko": "어제 폭풍이 주앙네 호텔 정원을 망가뜨렸어요.",
+   "blank": "arrasou",
+   "src": "made"
+  },
+  {
+   "text": "A atriz principal arrasou no teste e ganhou o papel no filme da Ana.",
+   "en": "The lead actress nailed the audition and won the role in Ana's film.",
+   "ko": "주연 여배우는 오디션에서 끝내주게 해내서 아나 영화의 배역을 따냈어요.",
+   "blank": "arrasou",
+   "src": "made"
+  }
+ ],
+ "w|arrastar": [
+  {
+   "text": "O João ajudou a senhora a arrastar a mala pesada até o elevador.",
+   "en": "João helped the lady drag her heavy suitcase to the elevator.",
+   "ko": "주앙은 부인이 무거운 가방을 엘리베이터까지 끌고 가는 걸 도왔어요.",
+   "blank": "arrastar",
+   "src": "made"
+  },
+  {
+   "text": "Os técnicos da Ana tiveram que arrastar os trilhos da câmera pela areia.",
+   "en": "Ana's technicians had to drag the camera tracks across the sand.",
+   "ko": "아나의 기술진은 카메라 레일을 모래 위로 끌고 가야 했어요.",
+   "blank": "arrastar",
+   "src": "made"
   }
  ],
  "w|arrepender": [
@@ -4575,6 +4703,22 @@
    "src": "tatoeba:1406515/alexmarcelo en:1406501/Spamster"
   }
  ],
+ "w|avenida": [
+  {
+   "text": "O hotel do João fica numa avenida movimentada perto do mar.",
+   "en": "João's hotel is on a busy avenue near the sea.",
+   "ko": "주앙의 호텔은 바다 근처 번화한 대로에 있어요.",
+   "blank": "avenida",
+   "src": "made"
+  },
+  {
+   "text": "A Ana pediu para filmar a avenida principal de madrugada, quando está vazia.",
+   "en": "Ana asked to film the main avenue at dawn, when it's empty.",
+   "ko": "아나는 텅 빈 새벽에 큰 대로를 찍게 해 달라고 했어요.",
+   "blank": "avenida",
+   "src": "made"
+  }
+ ],
  "w|aventura": [
   {
    "text": "Ele foi viajar em busca de aventura.",
@@ -4775,6 +4919,22 @@
    "src": "made"
   }
  ],
+ "w|bagagem": [
+  {
+   "text": "O João guardou a bagagem dos hóspedes até a hora do check-in.",
+   "en": "João stored the guests' luggage until check-in time.",
+   "ko": "주앙은 체크인 시간까지 손님들의 짐을 맡아 줬어요.",
+   "blank": "bagagem",
+   "src": "made"
+  },
+  {
+   "text": "A bagagem com os figurinos da Ana se perdeu no aeroporto.",
+   "en": "The luggage with Ana's costumes got lost at the airport.",
+   "ko": "아나의 의상이 든 짐이 공항에서 분실됐어요.",
+   "blank": "bagagem",
+   "src": "made"
+  }
+ ],
  "w|bagunça": [
   {
    "text": "Meu quarto está uma bagunça!",
@@ -4881,6 +5041,22 @@
    "ko": "나랑 같이 그네 타자.",
    "blank": "balançar",
    "src": "tatoeba:1189946/alexmarcelo en:563200/shekitten"
+  }
+ ],
+ "w|balde": [
+  {
+   "text": "O Pedro pôs um balde embaixo da goteira do banheiro.",
+   "en": "Pedro put a bucket under the leak in the bathroom.",
+   "ko": "페드루는 화장실 물 새는 곳 아래에 양동이를 받쳤어요.",
+   "blank": "balde",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz devolveu o balde porque ele veio rachado.",
+   "en": "Beatriz returned the bucket because it arrived cracked.",
+   "ko": "양동이가 금이 간 채 와서 베아트리스는 반품했어요.",
+   "blank": "balde",
+   "src": "made"
   }
  ],
  "w|baleia": [
@@ -5219,6 +5395,22 @@
    "ko": "기본적으로 당신 의견에 동의해요.",
    "blank": "Basicamente",
    "src": "tatoeba:8545626/adl en:20647/CK"
+  }
+ ],
+ "w|básico": [
+  {
+   "text": "O apartamento do Pedro é pequeno e só tem o básico.",
+   "en": "Pedro's apartment is small and has only the basics.",
+   "ko": "페드루의 아파트는 작고 꼭 필요한 것만 있어요.",
+   "blank": "básico",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz escolheu o modelo mais básico do aspirador para economizar.",
+   "en": "Beatriz chose the most basic vacuum model to save money.",
+   "ko": "베아트리스는 돈을 아끼려고 가장 기본형 청소기를 골랐어요.",
+   "blank": "básico",
+   "src": "made"
   }
  ],
  "w|basquete": [
@@ -6034,10 +6226,10 @@
    "src": "made"
   },
   {
-   "text": "A Rita sentiu uma borboleta no estômago antes da largada.",
+   "text": "A Rita sentiu borboletas no estômago antes da largada.",
    "en": "Rita felt butterflies in her stomach before the start.",
    "ko": "출발 전에 리타는 긴장으로 속이 울렁거렸어요.",
-   "blank": "borboleta",
+   "blank": "borboletas",
    "src": "made"
   }
  ],
@@ -6737,6 +6929,22 @@
    "src": "tatoeba:1710989/alexmarcelo en:401809/CK"
   }
  ],
+ "w|caiar": [
+  {
+   "text": "O síndico chamou um pintor para caiar o muro do prédio do Pedro.",
+   "en": "The building manager called a painter to whitewash the wall of Pedro's building.",
+   "ko": "관리인은 페드루네 건물 담장에 회칠을 하려고 칠장이를 불렀어요.",
+   "blank": "caiar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou cal pela internet para caiar o muro do quintal.",
+   "en": "Beatriz bought lime online to whitewash the backyard wall.",
+   "ko": "베아트리스는 뒷마당 담장에 회칠을 하려고 석회를 인터넷으로 샀어요.",
+   "blank": "caiar",
+   "src": "made"
+  }
+ ],
  "w|cair": [
   {
    "text": "Cuidado para não cair.",
@@ -6809,6 +7017,22 @@
    "ko": "청바지가 줄어들었어요.",
    "blank": "calça",
    "src": "tatoeba:5541856/bill en:2369625/Hybrid"
+  }
+ ],
+ "w|calçada": [
+  {
+   "text": "Na frente do hotel, o João varre a calçada todas as manhãs.",
+   "en": "In front of the hotel, João sweeps the sidewalk every morning.",
+   "ko": "주앙은 아침마다 호텔 앞 인도를 쓸어요.",
+   "blank": "calçada",
+   "src": "made"
+  },
+  {
+   "text": "A Ana mandou molhar a calçada para a cena parecer noite de chuva.",
+   "en": "Ana had the sidewalk wetted so the scene would look like a rainy night.",
+   "ko": "아나는 장면이 비 오는 밤처럼 보이게 인도에 물을 뿌리게 했어요.",
+   "blank": "calçada",
+   "src": "made"
   }
  ],
  "w|calcanhar": [
@@ -7025,6 +7249,22 @@
    "blank": "caminho"
   }
  ],
+ "w|caminhonete": [
+  {
+   "text": "O hotel tem uma caminhonete para buscar os hóspedes no aeroporto.",
+   "en": "The hotel has a pickup truck to collect guests at the airport.",
+   "ko": "호텔에는 공항에서 손님을 태워 오는 픽업트럭이 있어요.",
+   "blank": "caminhonete",
+   "src": "made"
+  },
+  {
+   "text": "Os equipamentos da Ana chegaram ao set numa caminhonete alugada.",
+   "en": "Ana's equipment arrived at the set in a rented pickup truck.",
+   "ko": "아나의 장비는 빌린 픽업트럭으로 촬영장에 도착했어요.",
+   "blank": "caminhonete",
+   "src": "made"
+  }
+ ],
  "w|camisa": [
   {
    "text": "A camisa encolheu na lavagem.",
@@ -7052,6 +7292,22 @@
    "en": "Inês slept in an old T-shirt from college.",
    "ko": "이네스는 대학 때 입던 낡은 티셔츠를 입고 잤어요.",
    "blank": "camiseta",
+   "src": "made"
+  }
+ ],
+ "w|campainha": [
+  {
+   "text": "O Pedro ouviu a campainha e achou que era a entrega do jantar.",
+   "en": "Pedro heard the doorbell and thought it was the dinner delivery.",
+   "ko": "페드루는 초인종 소리를 듣고 저녁 배달이 온 줄 알았어요.",
+   "blank": "campainha",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz instalou uma campainha com câmera que comprou num site.",
+   "en": "Beatriz installed a doorbell with a camera she bought from a website.",
+   "ko": "베아트리스는 사이트에서 산 카메라 달린 초인종을 달았어요.",
+   "blank": "campainha",
    "src": "made"
   }
  ],
@@ -8027,6 +8283,22 @@
    "blank": "cavalo"
   }
  ],
+ "w|cavar": [
+  {
+   "text": "No jardim do prédio, o Pedro ajudou o porteiro a cavar um buraco para a árvore.",
+   "en": "In the building's garden, Pedro helped the doorman dig a hole for the tree.",
+   "ko": "건물 정원에서 페드루는 경비원이 나무 심을 구덩이를 파는 걸 도왔어요.",
+   "blank": "cavar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz encomendou uma pá para cavar a terra dos canteiros.",
+   "en": "Beatriz ordered a shovel to dig the soil in the flower beds.",
+   "ko": "베아트리스는 화단 흙을 팔 삽을 주문했어요.",
+   "blank": "cavar",
+   "src": "made"
+  }
+ ],
  "w|caverna": [
   {
    "text": "Nós nos escondemos juntos na caverna.",
@@ -8891,6 +9163,22 @@
    "src": "tatoeba:6401864/bill en:4097127/CK"
   }
  ],
+ "w|chupar": [
+  {
+   "text": "A filha do Pedro adora chupar picolé sentada no degrau da portaria.",
+   "en": "Pedro's daughter loves sucking on a popsicle sitting on the lobby step.",
+   "ko": "페드루의 딸은 현관 계단에 앉아 아이스바 빨아 먹는 걸 좋아해요.",
+   "blank": "chupar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou balas de menta para chupar durante as reuniões.",
+   "en": "Beatriz bought mints to suck on during meetings.",
+   "ko": "베아트리스는 회의 중에 빨아 먹을 박하사탕을 샀어요.",
+   "blank": "chupar",
+   "src": "made"
+  }
+ ],
  "w|churrasco": [
   {
    "text": "No domingo, o Bruno fecha a padaria cedo para ir a um churrasco com a família.",
@@ -9485,6 +9773,22 @@
    "blank": "clube"
   }
  ],
+ "w|cobertor": [
+  {
+   "text": "No inverno, o Pedro dorme com um cobertor bem grosso.",
+   "en": "In winter, Pedro sleeps with a very thick blanket.",
+   "ko": "겨울에 페드루는 아주 두꺼운 이불을 덮고 자요.",
+   "blank": "cobertor",
+   "src": "made"
+  },
+  {
+   "text": "O cobertor que a Beatriz comprou era bem menor do que na foto.",
+   "en": "The blanket Beatriz bought was much smaller than in the picture.",
+   "ko": "베아트리스가 산 담요는 사진보다 훨씬 작았어요.",
+   "blank": "cobertor",
+   "src": "made"
+  }
+ ],
  "w|cobertura": [
   {
    "text": "Você gosta de cobertura de chocolate?",
@@ -9651,6 +9955,22 @@
    "en": "He stuck the poster on backwards.",
    "ko": "그 사람이 포스터를 거꾸로 붙였어.",
    "blank": "colou"
+  }
+ ],
+ "w|colchão": [
+  {
+   "text": "O Pedro carregou o colchão novo pela escada porque o elevador estava parado.",
+   "en": "Pedro carried the new mattress up the stairs because the elevator was out.",
+   "ko": "엘리베이터가 멈춰서 페드루는 새 매트리스를 계단으로 옮겼어요.",
+   "blank": "colchão",
+   "src": "made"
+  },
+  {
+   "text": "O colchão da Beatriz chegou enrolado numa caixa pequena.",
+   "en": "Beatriz's mattress arrived rolled up in a small box.",
+   "ko": "베아트리스의 매트리스는 작은 상자에 말린 채 도착했어요.",
+   "blank": "colchão",
+   "src": "made"
   }
  ],
  "w|coleção": [
@@ -10735,6 +11055,22 @@
    "src": "made"
   }
  ],
+ "w|conferir": [
+  {
+   "text": "Antes de sair de viagem, o Pedro voltou para conferir se o gás estava fechado.",
+   "en": "Before leaving on a trip, Pedro went back to check that the gas was off.",
+   "ko": "여행을 떠나기 전에 페드루는 가스가 잠겼는지 확인하러 다시 들어갔어요.",
+   "blank": "conferir",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz abriu a caixa na hora para conferir se estava tudo certo.",
+   "en": "Beatriz opened the box right away to check that everything was fine.",
+   "ko": "베아트리스는 바로 상자를 열어 다 제대로 왔는지 확인했어요.",
+   "blank": "conferir",
+   "src": "made"
+  }
+ ],
  "w|confessar": [
   {
    "text": "Devo confessar que eu sou bem maluco.",
@@ -10920,6 +11256,22 @@
    "en": "The company replaced the chairs to give Luísa's team more comfort.",
    "ko": "회사는 루이자네 팀이 더 편하도록 의자를 바꿨어요.",
    "blank": "conforto",
+   "src": "made"
+  }
+ ],
+ "w|confundir": [
+  {
+   "text": "O João sempre acaba por confundir os nomes dos gêmeos do quarto andar.",
+   "en": "João always ends up mixing up the names of the twins on the fourth floor.",
+   "ko": "주앙은 사 층 쌍둥이의 이름을 늘 헷갈려요.",
+   "blank": "confundir",
+   "src": "made"
+  },
+  {
+   "text": "A Ana usou dois atores parecidos para confundir o público.",
+   "en": "Ana used two look-alike actors to confuse the audience.",
+   "ko": "아나는 관객을 헷갈리게 하려고 닮은 배우 둘을 썼어요.",
+   "blank": "confundir",
    "src": "made"
   }
  ],
@@ -11949,6 +12301,22 @@
    "blank": "corte"
   }
  ],
+ "w|cortina": [
+  {
+   "text": "O sol da manhã entra pela cortina fina do quarto do Pedro.",
+   "en": "The morning sun comes through the thin curtain in Pedro's bedroom.",
+   "ko": "아침 햇살이 페드루 방의 얇은 커튼 사이로 들어와요.",
+   "blank": "cortina",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz mediu a janela antes de encomendar a cortina.",
+   "en": "Beatriz measured the window before ordering the curtain.",
+   "ko": "베아트리스는 커튼을 주문하기 전에 창문을 쟀어요.",
+   "blank": "cortina",
+   "src": "made"
+  }
+ ],
  "w|costa": [
   {
    "text": "Nós deixamos nosso barco na costa.",
@@ -12803,6 +13171,22 @@
    "src": "tatoeba:4719483/anthrax26 en:2485957/CM"
   }
  ],
+ "w|curva": [
+  {
+   "text": "O João avisou que a estrada até a cachoeira tem uma curva perigosa.",
+   "en": "João warned that the road to the waterfall has a dangerous bend.",
+   "ko": "주앙은 폭포 가는 길에 위험한 커브가 있다고 알려 줬어요.",
+   "blank": "curva",
+   "src": "made"
+  },
+  {
+   "text": "O carro da cena de perseguição precisava fazer a curva bem rápido, explicou a Ana.",
+   "en": "The car in the chase scene had to take the bend very fast, Ana explained.",
+   "ko": "추격 장면의 차는 커브를 아주 빠르게 돌아야 한다고 아나가 설명했어요.",
+   "blank": "curva",
+   "src": "made"
+  }
+ ],
  "w|custar": [
   {
    "text": "Custa os olhos da cara.",
@@ -13133,6 +13517,22 @@
    "src": "tatoeba:9446718/Ricardo14 en:436683/lukaszpp"
   }
  ],
+ "w|dedicar": [
+  {
+   "text": "O Pedro quer dedicar o sábado à arrumação do apartamento.",
+   "en": "Pedro wants to devote Saturday to tidying the apartment.",
+   "ko": "페드루는 토요일을 아파트 정리하는 데 쓰고 싶어요.",
+   "blank": "dedicar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz vai dedicar a noite a montar o armário que chegou.",
+   "en": "Beatriz is going to spend the evening assembling the wardrobe that arrived.",
+   "ko": "베아트리스는 저녁 내내 도착한 옷장을 조립할 거예요.",
+   "blank": "dedicar",
+   "src": "made"
+  }
+ ],
  "w|dedo": [
   {
    "text": "Bati o dedo na quina.",
@@ -13175,6 +13575,22 @@
    "en": "I have no excuse at all.",
    "ko": "변명거리가 전혀 없어.",
    "blank": "defesa"
+  }
+ ],
+ "w|definir": [
+  {
+   "text": "O Pedro e a esposa ainda precisam definir a cor da sala.",
+   "en": "Pedro and his wife still need to decide on the living room color.",
+   "ko": "페드루와 아내는 아직 거실 색을 정해야 해요.",
+   "blank": "definir",
+   "src": "made"
+  },
+  {
+   "text": "Antes de comprar o sofá, a Beatriz precisa definir o tamanho certo.",
+   "en": "Before buying the sofa, Beatriz needs to decide on the right size.",
+   "ko": "소파를 사기 전에 베아트리스는 알맞은 크기를 정해야 해요.",
+   "blank": "definir",
+   "src": "made"
   }
  ],
  "w|definitivamente": [
@@ -13399,6 +13815,22 @@
    "en": "The movie has a demon in it.",
    "ko": "그 영화에 악마가 나와.",
    "blank": "demônio"
+  }
+ ],
+ "w|demonstrar": [
+  {
+   "text": "O João gosta de demonstrar gentileza com pequenos gestos.",
+   "en": "João likes to show kindness with small gestures.",
+   "ko": "주앙은 작은 행동으로 친절을 보여 주는 걸 좋아해요.",
+   "blank": "demonstrar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana quer que o ator consiga demonstrar medo só com o olhar.",
+   "en": "Ana wants the actor to be able to show fear with just his eyes.",
+   "ko": "아나는 배우가 눈빛만으로 두려움을 표현하길 바라요.",
+   "blank": "demonstrar",
+   "src": "made"
   }
  ],
  "w|demorar": [
@@ -13903,6 +14335,22 @@
    "en": "I suddenly longed for the beach.",
    "ko": "갑자기 바다가 가고 싶어졌어.",
    "blank": "desejo"
+  }
+ ],
+ "w|desembarcar": [
+  {
+   "text": "Os hóspedes do cruzeiro vão desembarcar no porto e dormir no hotel do João.",
+   "en": "The cruise passengers will disembark at the port and sleep at João's hotel.",
+   "ko": "크루즈 승객들은 항구에 내려서 주앙의 호텔에서 묵을 거예요.",
+   "blank": "desembarcar",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Ana viu os atores desembarcar do barco com câmeras na mão.",
+   "en": "Ana's crew watched the actors get off the boat with cameras in hand.",
+   "ko": "아나의 촬영팀은 카메라를 들고 배에서 내리는 배우들을 지켜봤어요.",
+   "blank": "desembarcar",
+   "src": "made"
   }
  ],
  "w|desenhar": [
@@ -14911,6 +15359,22 @@
    "src": "tatoeba:10723433/Cangarejo en:10723432/Cangarejo"
   }
  ],
+ "w|dispensar": [
+  {
+   "text": "O Pedro resolveu dispensar a faxineira e limpar a casa sozinho.",
+   "en": "Pedro decided to let the cleaner go and clean the house himself.",
+   "ko": "페드루는 가사 도우미를 그만 부르고 혼자 집을 청소하기로 했어요.",
+   "blank": "dispensar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz preferiu dispensar a embalagem de presente para pagar menos.",
+   "en": "Beatriz chose to skip the gift wrapping to pay less.",
+   "ko": "베아트리스는 돈을 덜 내려고 선물 포장을 빼기로 했어요.",
+   "blank": "dispensar",
+   "src": "made"
+  }
+ ],
  "w|disponível": [
   {
    "text": "Eu conheço alguém que está disponível.",
@@ -14987,6 +15451,22 @@
    "ko": "그와 저는 먼 나라에서 왔어요.",
    "blank": "distante",
    "src": "tatoeba:7371778/Ricardo14 en:770043/marloncori"
+  }
+ ],
+ "w|distar": [
+  {
+   "text": "A praia mais bonita dista poucos minutos do hotel do João.",
+   "en": "The most beautiful beach is just a few minutes from João's hotel.",
+   "ko": "가장 아름다운 해변은 주앙의 호텔에서 몇 분 거리예요.",
+   "blank": "dista",
+   "src": "made"
+  },
+  {
+   "text": "O set da Ana dista uma hora da cidade, então a equipe sai cedo.",
+   "en": "Ana's set is an hour from the city, so the crew leaves early.",
+   "ko": "아나의 촬영장은 도시에서 한 시간 거리라서 팀은 일찍 출발해요.",
+   "blank": "dista",
+   "src": "made"
   }
  ],
  "w|distrito": [
@@ -15355,6 +15835,22 @@
    "ko": "그는 음악에 재능이 있어요.",
    "blank": "dom",
    "src": "tatoeba:902615/alexmarcelo en:284745/shekitten"
+  }
+ ],
+ "w|dominar": [
+  {
+   "text": "O João conseguiu dominar o espanhol depois de anos atendendo turistas.",
+   "en": "João managed to master Spanish after years of serving tourists.",
+   "ko": "주앙은 관광객을 응대하며 몇 년 만에 스페인어를 완전히 익혔어요.",
+   "blank": "dominar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana precisou dominar a técnica de filmar debaixo d'água.",
+   "en": "Ana had to master the technique of filming underwater.",
+   "ko": "아나는 수중 촬영 기술을 익혀야 했어요.",
+   "blank": "dominar",
+   "src": "made"
   }
  ],
  "w|domingo": [
@@ -16201,6 +16697,38 @@
    "src": "made"
   }
  ],
+ "w|embarcar": [
+  {
+   "text": "O João chamou um táxi para a família que ia embarcar no navio.",
+   "en": "João called a taxi for the family that was going to board the ship.",
+   "ko": "주앙은 배를 탈 가족을 위해 택시를 불렀어요.",
+   "blank": "embarcar",
+   "src": "made"
+  },
+  {
+   "text": "Na cena final, a personagem da Ana precisa embarcar num trem antigo.",
+   "en": "In the final scene, Ana's character has to board an old train.",
+   "ko": "마지막 장면에서 아나 영화의 주인공은 낡은 기차에 올라타야 해요.",
+   "blank": "embarcar",
+   "src": "made"
+  }
+ ],
+ "w|embarque": [
+  {
+   "text": "Um hóspede pediu ao João para confirmar o horário de embarque do voo.",
+   "en": "A guest asked João to confirm the flight's boarding time.",
+   "ko": "한 투숙객이 주앙에게 비행기 탑승 시간을 확인해 달라고 했어요.",
+   "blank": "embarque",
+   "src": "made"
+  },
+  {
+   "text": "A cena mais difícil da Ana se passa no portão de embarque de um aeroporto.",
+   "en": "Ana's hardest scene takes place at an airport boarding gate.",
+   "ko": "아나의 가장 어려운 장면은 공항 탑승구에서 벌어져요.",
+   "blank": "embarque",
+   "src": "made"
+  }
+ ],
  "w|embora": [
   {
    "text": "Vou embora cedo.",
@@ -16743,6 +17271,22 @@
    "src": "tatoeba:8197492/josivangoncalves en:8197615/josivangoncalves"
   }
  ],
+ "w|engarrafamento": [
+  {
+   "text": "Um casal chegou atrasado ao hotel por causa de um engarrafamento enorme.",
+   "en": "A couple arrived late at the hotel because of a huge traffic jam.",
+   "ko": "한 부부가 엄청난 교통 체증 때문에 호텔에 늦게 도착했어요.",
+   "blank": "engarrafamento",
+   "src": "made"
+  },
+  {
+   "text": "A Ana quis filmar um engarrafamento de verdade na hora do rush.",
+   "en": "Ana wanted to film a real traffic jam at rush hour.",
+   "ko": "아나는 출퇴근 시간의 진짜 교통 체증을 찍고 싶었어요.",
+   "blank": "engarrafamento",
+   "src": "made"
+  }
+ ],
  "w|engenheiro": [
   {
    "text": "O engenheiro revisou a planta junto com o Miguel.",
@@ -16756,6 +17300,22 @@
    "en": "An engineer comes every morning to read the newspaper at the library.",
    "ko": "한 엔지니어가 아침마다 도서관에 와서 신문을 읽어요.",
    "blank": "engenheiro",
+   "src": "made"
+  }
+ ],
+ "w|engolir": [
+  {
+   "text": "O João teve que engolir a raiva quando o hóspede gritou com ele.",
+   "en": "João had to swallow his anger when the guest yelled at him.",
+   "ko": "손님이 소리를 질렀을 때 주앙은 화를 꾹 참아야 했어요.",
+   "blank": "engolir",
+   "src": "made"
+  },
+  {
+   "text": "O ator teve que engolir um pedaço de bolo enorme em cada tomada da Ana.",
+   "en": "The actor had to swallow a huge piece of cake in every one of Ana's takes.",
+   "ko": "배우는 아나가 찍을 때마다 커다란 케이크 조각을 삼켜야 했어요.",
+   "blank": "engolir",
    "src": "made"
   }
  ],
@@ -16831,6 +17391,22 @@
    "en": "Stay while I get some water.",
    "ko": "물 떠 오는 동안 있어.",
    "blank": "enquanto"
+  }
+ ],
+ "w|enrolar": [
+  {
+   "text": "Antes da mudança, o Pedro precisou enrolar os tapetes e prendê-los com fita.",
+   "en": "Before the move, Pedro had to roll up the rugs and tape them.",
+   "ko": "이사 전에 페드루는 테이프로 러그를 돌돌 말았어요.",
+   "blank": "enrolar",
+   "src": "made"
+  },
+  {
+   "text": "O atendente da loja tentou enrolar a Beatriz em vez de resolver o problema.",
+   "en": "The store's agent tried to string Beatriz along instead of solving the problem.",
+   "ko": "가게 상담원은 문제를 해결하는 대신 베아트리스를 얼버무리며 넘어가려 했어요.",
+   "blank": "enrolar",
+   "src": "made"
   }
  ],
  "w|ensaio": [
@@ -17431,6 +18007,38 @@
    "blank": "escondida"
   }
  ],
+ "w|escova": [
+  {
+   "text": "O Pedro esqueceu a escova de cabelo no banheiro da academia do prédio.",
+   "en": "Pedro left his hairbrush in the bathroom of the building's gym.",
+   "ko": "페드루는 건물 헬스장 화장실에 머리빗을 두고 왔어요.",
+   "blank": "escova",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz encomendou uma escova de dentes elétrica em promoção.",
+   "en": "Beatriz ordered an electric toothbrush on sale.",
+   "ko": "베아트리스는 할인 중인 전동 칫솔을 주문했어요.",
+   "blank": "escova",
+   "src": "made"
+  }
+ ],
+ "w|escovar": [
+  {
+   "text": "Toda noite, o Pedro faz questão de escovar os dentes do filho.",
+   "en": "Every night, Pedro makes a point of brushing his son's teeth.",
+   "ko": "페드루는 밤마다 꼭 아들의 이를 닦아 줘요.",
+   "blank": "escovar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou uma luva especial para escovar o gato.",
+   "en": "Beatriz bought a special glove to brush the cat.",
+   "ko": "베아트리스는 고양이 털을 빗길 특수 장갑을 샀어요.",
+   "blank": "escovar",
+   "src": "made"
+  }
+ ],
  "w|escravo": [
   {
    "text": "Eu trabalho como um escravo!",
@@ -17578,6 +18186,22 @@
    "en": "The coach says Beatriz is the hardest-working player on the team.",
    "ko": "코치는 베아트리스가 팀에서 가장 성실한 선수라고 해요.",
    "blank": "esforçada",
+   "src": "made"
+  }
+ ],
+ "w|esforçar": [
+  {
+   "text": "O João sabe que precisa se esforçar para ser promovido a gerente.",
+   "en": "João knows he needs to make an effort to be promoted to manager.",
+   "ko": "주앙은 매니저로 승진하려면 노력해야 한다는 걸 알아요.",
+   "blank": "esforçar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana pediu aos atores para se esforçar no sotaque da região.",
+   "en": "Ana asked the actors to work hard on the regional accent.",
+   "ko": "아나는 배우들에게 그 지역 억양을 열심히 연습해 달라고 했어요.",
+   "blank": "esforçar",
    "src": "made"
   }
  ],
@@ -18053,6 +18677,22 @@
    "blank": "esse"
   }
  ],
+ "w|estabelecer": [
+  {
+   "text": "Os moradores querem estabelecer um horário de silêncio depois das dez.",
+   "en": "The residents want to establish quiet hours after ten.",
+   "ko": "주민들은 열 시 이후 조용히 하는 시간을 정하고 싶어 해요.",
+   "blank": "estabelecer",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz quer estabelecer um limite de gastos online por mês.",
+   "en": "Beatriz wants to set a monthly limit on online spending.",
+   "ko": "베아트리스는 한 달 인터넷 쇼핑 한도를 정하고 싶어요.",
+   "blank": "estabelecer",
+   "src": "made"
+  }
+ ],
  "w|estação": [
   {
    "text": "Desce na próxima estação.",
@@ -18081,6 +18721,22 @@
    "ko": "주차장이 거의 비어 있었어요.",
    "blank": "estacionamento",
    "src": "tatoeba:5305077/bill en:2540844/CK"
+  }
+ ],
+ "w|estacionar": [
+  {
+   "text": "O João pediu ao motorista para estacionar na garagem dos fundos.",
+   "en": "João asked the driver to park in the back garage.",
+   "ko": "주앙은 운전기사에게 뒤쪽 차고에 주차해 달라고 했어요.",
+   "blank": "estacionar",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Ana não achava lugar para estacionar o caminhão de luz.",
+   "en": "Ana's crew couldn't find anywhere to park the lighting truck.",
+   "ko": "아나의 팀은 조명 트럭을 주차할 곳을 찾지 못했어요.",
+   "blank": "estacionar",
+   "src": "made"
   }
  ],
  "w|estado": [
@@ -19013,6 +19669,22 @@
    "src": "tatoeba:2105326/MarlonX19 en:1318766/CH"
   }
  ],
+ "w|expulsar": [
+  {
+   "text": "O segurança do hotel do João precisou expulsar um homem que fazia barulho no corredor.",
+   "en": "The security guard had to throw out a man who was making noise in the hallway.",
+   "ko": "경비원은 복도에서 소란을 피우던 남자를 내쫓아야 했어요.",
+   "blank": "expulsar",
+   "src": "made"
+  },
+  {
+   "text": "Na história da Ana, o rei decide expulsar o filho do castelo.",
+   "en": "In Ana's story, the king decides to banish his son from the castle.",
+   "ko": "아나의 이야기에서 왕은 아들을 성에서 쫓아내기로 해요.",
+   "blank": "expulsar",
+   "src": "made"
+  }
+ ],
  "w|exterior": [
   {
    "text": "Eu sempre sonhei em viver no exterior.",
@@ -19603,6 +20275,22 @@
    "src": "tatoeba:12369401/piterkeo en:463350/lukaszpp"
   }
  ],
+ "w|fechadura": [
+  {
+   "text": "A fechadura da porta do Pedro emperrou, e ele chamou o chaveiro.",
+   "en": "The lock on Pedro's door jammed, and he called the locksmith.",
+   "ko": "페드루네 문 자물쇠가 걸려서 열쇠공을 불렀어요.",
+   "blank": "fechadura",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz pediu uma fechadura digital para não perder mais a chave.",
+   "en": "Beatriz ordered a digital lock so she wouldn't lose her key anymore.",
+   "ko": "베아트리스는 열쇠를 더 이상 잃어버리지 않으려고 디지털 도어락을 주문했어요.",
+   "blank": "fechadura",
+   "src": "made"
+  }
+ ],
  "w|fechar": [
   {
    "text": "Pode fechar a janela?",
@@ -19615,6 +20303,22 @@
    "en": "Don't forget to close the shop.",
    "ko": "가게 문 닫는 거 잊지 마.",
    "blank": "fechar"
+  }
+ ],
+ "w|feder": [
+  {
+   "text": "O lixo esquecido no corredor começou a feder, e o João chamou a limpeza.",
+   "en": "The trash left in the hallway started to stink, and João called housekeeping.",
+   "ko": "복도에 버려진 쓰레기에서 냄새가 나기 시작해서 주앙은 청소 담당을 불렀어요.",
+   "blank": "feder",
+   "src": "made"
+  },
+  {
+   "text": "O peixe usado na cena do mercado começou a feder com o calor do set.",
+   "en": "The fish used in the market scene started to stink in the heat of the set.",
+   "ko": "시장 장면에 쓴 생선이 촬영장 열기에 냄새를 풍기기 시작했어요.",
+   "blank": "feder",
+   "src": "made"
   }
  ],
  "w|federal": [
@@ -21635,6 +22339,22 @@
    "en": "There's a cat in the garage.",
    "ko": "차고에 고양이가 있어.",
    "blank": "gato"
+  }
+ ],
+ "w|gaveta": [
+  {
+   "text": "O Pedro guarda as contas do condomínio na gaveta da cozinha.",
+   "en": "Pedro keeps the building fee bills in the kitchen drawer.",
+   "ko": "페드루는 관리비 고지서를 부엌 서랍에 보관해요.",
+   "blank": "gaveta",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz encomendou divisórias para organizar a gaveta de talheres.",
+   "en": "Beatriz ordered dividers to organize the cutlery drawer.",
+   "ko": "베아트리스는 수저 서랍을 정리할 칸막이를 주문했어요.",
+   "blank": "gaveta",
+   "src": "made"
   }
  ],
  "w|geladeira": [
@@ -25679,6 +26399,22 @@
    "src": "made"
   }
  ],
+ "w|lâmpada": [
+  {
+   "text": "O síndico trocou a lâmpada queimada do corredor do Pedro.",
+   "en": "The building manager replaced the burnt-out bulb in Pedro's hallway.",
+   "ko": "관리인이 페드루네 복도의 나간 전구를 갈았어요.",
+   "blank": "lâmpada",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz escolheu uma lâmpada inteligente que muda de cor pelo celular.",
+   "en": "Beatriz chose a smart bulb that changes color through her phone.",
+   "ko": "베아트리스는 휴대폰으로 색이 바뀌는 스마트 전구를 골랐어요.",
+   "blank": "lâmpada",
+   "src": "made"
+  }
+ ],
  "w|lançamento": [
   {
    "text": "Quando ocorreu o lançamento do primeiro satélite?",
@@ -25740,6 +26476,22 @@
    "en": "Sofia stopped working in the middle of the afternoon to have a snack.",
    "ko": "소피아는 오후 중간에 일을 멈추고 간식을 먹었어요.",
    "blank": "lanche",
+   "src": "made"
+  }
+ ],
+ "w|lanterna": [
+  {
+   "text": "Quando a luz do prédio acabou, o Pedro desceu a escada com uma lanterna.",
+   "en": "When the building's power went out, Pedro went down the stairs with a flashlight.",
+   "ko": "건물이 정전되자 페드루는 손전등을 들고 계단을 내려갔어요.",
+   "blank": "lanterna",
+   "src": "made"
+  },
+  {
+   "text": "A lanterna que a Beatriz comprou online veio sem pilhas.",
+   "en": "The flashlight Beatriz bought online came without batteries.",
+   "ko": "베아트리스가 인터넷으로 산 손전등은 건전지 없이 왔어요.",
+   "blank": "lanterna",
    "src": "made"
   }
  ],
@@ -26051,6 +26803,22 @@
    "en": "I have to remember the password.",
    "ko": "비밀번호를 기억해야 해.",
    "blank": "lembrar"
+  }
+ ],
+ "w|lençol": [
+  {
+   "text": "Aos domingos, o Pedro troca o lençol da cama.",
+   "en": "On Sundays, Pedro changes the bedsheet.",
+   "ko": "일요일마다 페드루는 침대 시트를 갈아요.",
+   "blank": "lençol",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz recebeu um lençol de casal em vez de solteiro.",
+   "en": "Beatriz received a double bedsheet instead of a single.",
+   "ko": "베아트리스는 싱글 대신 더블 침대 시트를 받았어요.",
+   "blank": "lençol",
+   "src": "made"
   }
  ],
  "w|lenda": [
@@ -26665,6 +27433,22 @@
    "en": "I left the book on the table.",
    "ko": "책을 탁자에 두고 왔어.",
    "blank": "livro"
+  }
+ ],
+ "w|lixeira": [
+  {
+   "text": "O Pedro leva o lixo até a lixeira do térreo toda noite.",
+   "en": "Pedro takes the trash to the bin on the ground floor every night.",
+   "ko": "페드루는 밤마다 쓰레기를 일 층 쓰레기통까지 가져가요.",
+   "blank": "lixeira",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou uma lixeira com pedal para a cozinha.",
+   "en": "Beatriz bought a pedal bin for the kitchen.",
+   "ko": "베아트리스는 부엌에 둘 페달식 쓰레기통을 샀어요.",
+   "blank": "lixeira",
+   "src": "made"
   }
  ],
  "w|lixo": [
@@ -27645,6 +28429,22 @@
    "en": "Don't put your hand in the machine.",
    "ko": "기계에 손 넣지 마.",
    "blank": "máquina"
+  }
+ ],
+ "w|máquina de lavar": [
+  {
+   "text": "A lavanderia do prédio tem uma máquina de lavar para todos os moradores.",
+   "en": "The building's laundry room has a washing machine for all residents.",
+   "ko": "건물 세탁실에는 모든 주민이 쓰는 세탁기가 있어요.",
+   "blank": "máquina de lavar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz passou semanas comparando preços de máquina de lavar.",
+   "en": "Beatriz spent weeks comparing washing machine prices.",
+   "ko": "베아트리스는 몇 주 동안 세탁기 가격을 비교했어요.",
+   "blank": "máquina de lavar",
+   "src": "made"
   }
  ],
  "w|mar": [
@@ -28735,6 +29535,22 @@
    "src": "tatoeba:11383315/bill en:8115550/CK"
   }
  ],
+ "w|metrô": [
+  {
+   "text": "O João sempre indica o metrô para quem quer ir ao centro.",
+   "en": "João always recommends the subway to anyone going downtown.",
+   "ko": "주앙은 시내에 가려는 사람에게 늘 지하철을 권해요.",
+   "blank": "metrô",
+   "src": "made"
+  },
+  {
+   "text": "Para não pegar trânsito, a Ana vai ao set de metrô.",
+   "en": "To avoid traffic, Ana takes the subway to the set.",
+   "ko": "차가 막히지 않게 아나는 지하철을 타고 촬영장에 가요.",
+   "blank": "metrô",
+   "src": "made"
+  }
+ ],
  "w|meu": [
   {
    "text": "Cadê meu casaco?",
@@ -29319,6 +30135,22 @@
    "src": "made"
   }
  ],
+ "w|molhar": [
+  {
+   "text": "O Pedro pediu ao porteiro para molhar as plantas do hall durante a viagem.",
+   "en": "Pedro asked the doorman to water the lobby plants during the trip.",
+   "ko": "페드루는 여행하는 동안 로비 화분에 물을 달라고 경비원에게 부탁했어요.",
+   "blank": "molhar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou um regador para molhar as plantas da janela.",
+   "en": "Beatriz bought a watering can to water the window plants.",
+   "ko": "베아트리스는 창가 화분에 물을 줄 물뿌리개를 샀어요.",
+   "blank": "molhar",
+   "src": "made"
+  }
+ ],
  "w|molho": [
   {
    "text": "O molho queimou minha língua.",
@@ -29619,6 +30451,22 @@
    "en": "I want to show you the house.",
    "ko": "집을 보여 주고 싶어.",
    "blank": "mostrar"
+  }
+ ],
+ "w|motel": [
+  {
+   "text": "O João explicou a um turista estrangeiro que, no Brasil, motel não é igual a hotel.",
+   "en": "João explained to a foreign tourist that, in Brazil, a motel isn't the same as a hotel.",
+   "ko": "주앙은 외국인 관광객에게 브라질에서는 모텔이 호텔과 다르다고 설명했어요.",
+   "blank": "motel",
+   "src": "made"
+  },
+  {
+   "text": "O roteiro da Ana tem uma cena de suspense num motel de estrada.",
+   "en": "Ana's script has a suspense scene in a roadside motel.",
+   "ko": "아나의 대본에는 길가 모텔에서 벌어지는 긴장감 넘치는 장면이 있어요.",
+   "blank": "motel",
+   "src": "made"
   }
  ],
  "w|motivo": [
@@ -30259,6 +31107,22 @@
    "ko": "인간에게 가장 기본적인 욕구는 뭘까요?",
    "blank": "necessidade",
    "src": "tatoeba:7066773/iart61 en:8991335/Nylez"
+  }
+ ],
+ "w|necessitar": [
+  {
+   "text": "Se necessitar de alguma coisa, é só ligar para a recepção, disse o João ao hóspede.",
+   "en": "If you need anything, just call the front desk, João told the guest.",
+   "ko": "필요한 게 있으면 프런트로 전화만 하시면 된다고 주앙이 손님에게 말했어요.",
+   "blank": "necessitar",
+   "src": "made"
+  },
+  {
+   "text": "Para a cena da festa, a Ana vai necessitar de cem figurantes.",
+   "en": "For the party scene, Ana is going to need a hundred extras.",
+   "ko": "파티 장면을 위해 아나는 엑스트라 백 명이 필요할 거예요.",
+   "blank": "necessitar",
+   "src": "made"
   }
  ],
  "w|negar": [
@@ -31148,6 +32012,22 @@
    "en": "When the pizza arrived on the night shift, Ana's team let out a cheer.",
    "ko": "새벽 근무 중에 피자가 오자 아나의 팀은 환호했어요.",
    "blank": "oba",
+   "src": "made"
+  }
+ ],
+ "w|obedecer": [
+  {
+   "text": "O cachorro do hóspede costuma obedecer ao João mais que ao dono.",
+   "en": "The guest's dog tends to obey João more than its owner.",
+   "ko": "투숙객의 개는 주인보다 주앙의 말을 더 잘 들어요.",
+   "blank": "obedecer",
+   "src": "made"
+  },
+  {
+   "text": "O cavalo da cena se recusou a obedecer, e a Ana teve que esperar.",
+   "en": "The horse in the scene refused to obey, and Ana had to wait.",
+   "ko": "장면 속 말이 말을 듣지 않아서 아나는 기다려야 했어요.",
+   "blank": "obedecer",
    "src": "made"
   }
  ],
@@ -33151,6 +34031,22 @@
    "src": "made"
   }
  ],
+ "w|pasta de dente": [
+  {
+   "text": "O Pedro acordou tarde e saiu sem colocar pasta de dente na mala.",
+   "en": "Pedro woke up late and left without putting toothpaste in his bag.",
+   "ko": "페드루는 늦잠을 자서 가방에 치약을 안 넣고 나갔어요.",
+   "blank": "pasta de dente",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz aproveitou o frete grátis e comprou pasta de dente para o ano todo.",
+   "en": "Beatriz took advantage of free shipping and bought toothpaste for the whole year.",
+   "ko": "베아트리스는 무료 배송을 틈타 일 년 치 치약을 샀어요.",
+   "blank": "pasta de dente",
+   "src": "made"
+  }
+ ],
  "w|pastor": [
   {
    "text": "Ele confessou os pecados ao pastor.",
@@ -33180,6 +34076,22 @@
    "en": "Carla thought her own performance was pathetic, but the audience gave a standing ovation.",
    "ko": "카를라는 자기 공연이 한심했다고 생각했지만 관객은 기립 박수를 쳤어요.",
    "blank": "patética",
+   "src": "made"
+  }
+ ],
+ "w|pátio": [
+  {
+   "text": "As crianças do prédio do Pedro jogam bola no pátio depois da escola.",
+   "en": "The kids in Pedro's building play ball in the courtyard after school.",
+   "ko": "페드루네 건물 아이들은 방과 후에 안뜰에서 공놀이를 해요.",
+   "blank": "pátio",
+   "src": "made"
+  },
+  {
+   "text": "O entregador deixou a caixa da Beatriz no pátio do prédio, na chuva.",
+   "en": "The delivery man left Beatriz's box in the building's courtyard, in the rain.",
+   "ko": "배달원이 베아트리스의 상자를 비 오는 건물 안뜰에 두고 갔어요.",
+   "blank": "pátio",
    "src": "made"
   }
  ],
@@ -34283,6 +35195,22 @@
    "src": "tatoeba:1843635/nowasky en:1532076/LittleBoy"
   }
  ],
+ "w|pia": [
+  {
+   "text": "A louça do fim de semana ficou acumulada na pia do Pedro.",
+   "en": "The weekend's dishes piled up in Pedro's sink.",
+   "ko": "주말 설거지가 페드루네 싱크대에 쌓여 있었어요.",
+   "blank": "pia",
+   "src": "made"
+  },
+  {
+   "text": "A torneira nova que a Beatriz pediu não serviu na pia do banheiro.",
+   "en": "The new faucet Beatriz ordered didn't fit the bathroom sink.",
+   "ko": "베아트리스가 주문한 새 수도꼭지는 세면대에 맞지 않았어요.",
+   "blank": "pia",
+   "src": "made"
+  }
+ ],
  "w|piada": [
   {
    "text": "Conta outra piada.",
@@ -34671,6 +35599,22 @@
    "src": "tatoeba:994219/alexmarcelo en:958848/CM"
   }
  ],
+ "w|plataforma": [
+  {
+   "text": "O hotel do João fica bem perto da plataforma de embarque dos ônibus.",
+   "en": "João's hotel is very close to the bus boarding platform.",
+   "ko": "주앙의 호텔은 버스 승강장 바로 근처에 있어요.",
+   "blank": "plataforma",
+   "src": "made"
+  },
+  {
+   "text": "A Ana filmou a despedida dos personagens na plataforma da estação.",
+   "en": "Ana filmed the characters' goodbye on the station platform.",
+   "ko": "아나는 역 승강장에서 인물들이 작별하는 장면을 찍었어요.",
+   "blank": "plataforma",
+   "src": "made"
+  }
+ ],
  "w|pneu": [
   {
    "text": "Minha bicicleta está com um pneu furado.",
@@ -34973,6 +35917,22 @@
    "en": "The bus stop changed.",
    "ko": "버스 정류장이 바뀌었어.",
    "blank": "ponto"
+  }
+ ],
+ "w|ponto de ônibus": [
+  {
+   "text": "O João mostrou ao hóspede onde fica o ponto de ônibus mais próximo.",
+   "en": "João showed the guest where the nearest bus stop is.",
+   "ko": "주앙은 손님에게 가장 가까운 버스 정류장을 알려 줬어요.",
+   "blank": "ponto de ônibus",
+   "src": "made"
+  },
+  {
+   "text": "A protagonista do filme da Ana espera o amor dela num ponto de ônibus.",
+   "en": "The lead in Ana's film waits for her love at a bus stop.",
+   "ko": "아나 영화의 주인공은 버스 정류장에서 사랑하는 사람을 기다려요.",
+   "blank": "ponto de ônibus",
+   "src": "made"
   }
  ],
  "w|população": [
@@ -35371,6 +36331,22 @@
    "blank": "posto"
   }
  ],
+ "w|posto de gasolina": [
+  {
+   "text": "O João indicou um posto de gasolina para o hóspede que ia viajar de carro.",
+   "en": "João pointed out a gas station for the guest who was going on a road trip.",
+   "ko": "주앙은 차로 여행하려는 손님에게 주유소를 알려 줬어요.",
+   "blank": "posto de gasolina",
+   "src": "made"
+  },
+  {
+   "text": "Uma cena do filme da Ana foi gravada num posto de gasolina abandonado.",
+   "en": "A scene of Ana's film was shot at an abandoned gas station.",
+   "ko": "아나 영화의 한 장면은 버려진 주유소에서 찍었어요.",
+   "blank": "posto de gasolina",
+   "src": "made"
+  }
+ ],
  "w|potencial": [
   {
    "text": "Eu só queria apontar alguns problemas em potencial.",
@@ -35449,6 +36425,22 @@
    "src": "tatoeba:868807/alexmarcelo en:31234/CK"
   }
  ],
+ "w|pousada": [
+  {
+   "text": "Antes do hotel, o João trabalhou numa pousada pequena na serra.",
+   "en": "Before the hotel, João worked at a small inn in the mountains.",
+   "ko": "호텔에 오기 전에 주앙은 산속 작은 민박집에서 일했어요.",
+   "blank": "pousada",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Ana ficou hospedada numa pousada perto do set.",
+   "en": "Ana's crew stayed at an inn near the set.",
+   "ko": "아나의 팀은 촬영장 근처 민박집에 묵었어요.",
+   "blank": "pousada",
+   "src": "made"
+  }
+ ],
  "w|povo": [
   {
    "text": "O povo encheu a praça.",
@@ -35461,6 +36453,22 @@
    "en": "Let the people in.",
    "ko": "사람들 들여보내.",
    "blank": "povo"
+  }
+ ],
+ "w|praça": [
+  {
+   "text": "Da janela do hotel, o João vê a praça cheia de pombos.",
+   "en": "From the hotel window, João sees the square full of pigeons.",
+   "ko": "호텔 창문으로 주앙은 비둘기로 가득한 광장을 봐요.",
+   "blank": "praça",
+   "src": "made"
+  },
+  {
+   "text": "A Ana gravou a cena da briga numa praça do centro histórico.",
+   "en": "Ana shot the fight scene in a square in the historic center.",
+   "ko": "아나는 싸움 장면을 구시가지 광장에서 찍었어요.",
+   "blank": "praça",
+   "src": "made"
   }
  ],
  "w|praga": [
@@ -36687,6 +37695,22 @@
    "blank": "pronto"
   }
  ],
+ "w|propor": [
+  {
+   "text": "O Pedro decidiu propor uma horta no telhado na reunião de condomínio.",
+   "en": "Pedro decided to propose a rooftop garden at the residents' meeting.",
+   "ko": "페드루는 주민 회의에서 옥상 텃밭을 제안하기로 했어요.",
+   "blank": "propor",
+   "src": "made"
+  },
+  {
+   "text": "A loja quis propor um desconto para a Beatriz não cancelar o pedido.",
+   "en": "The store wanted to offer Beatriz a discount so she wouldn't cancel the order.",
+   "ko": "가게는 베아트리스가 주문을 취소하지 않게 할인을 제안하려 했어요.",
+   "blank": "propor",
+   "src": "made"
+  }
+ ],
  "w|propósito": [
   {
    "text": "Foi de propósito, sim.",
@@ -37419,6 +38443,22 @@
    "src": "tatoeba:9013821/lucasmg123 en:6534842/kayano"
   }
  ],
+ "w|quarteirão": [
+  {
+   "text": "A farmácia mais próxima fica a um quarteirão do hotel, disse o João.",
+   "en": "The nearest pharmacy is one block from the hotel, João said.",
+   "ko": "가장 가까운 약국은 호텔에서 한 블록 떨어져 있다고 주앙이 말했어요.",
+   "blank": "quarteirão",
+   "src": "made"
+  },
+  {
+   "text": "A produção da Ana fechou um quarteirão inteiro para a gravação.",
+   "en": "Ana's production closed off an entire block for the shoot.",
+   "ko": "아나의 제작진은 촬영을 위해 한 블록 전체를 막았어요.",
+   "blank": "quarteirão",
+   "src": "made"
+  }
+ ],
  "w|quarto": [
   {
    "text": "Meu quarto é bagunçado.",
@@ -37667,6 +38707,22 @@
    "en": "Leave that issue for later.",
    "ko": "그 문제는 나중으로 미뤄.",
    "blank": "questão"
+  }
+ ],
+ "w|questionar": [
+  {
+   "text": "Na reunião, o Pedro resolveu questionar o aumento da taxa do condomínio.",
+   "en": "At the meeting, Pedro decided to question the increase in the building fee.",
+   "ko": "회의에서 페드루는 관리비 인상에 의문을 제기하기로 했어요.",
+   "blank": "questionar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz decidiu questionar a cobrança dupla no cartão.",
+   "en": "Beatriz decided to dispute the double charge on her card.",
+   "ko": "베아트리스는 카드에 두 번 청구된 것에 이의를 제기하기로 했어요.",
+   "blank": "questionar",
+   "src": "made"
   }
  ],
  "w|quieto": [
@@ -38151,6 +39207,22 @@
    "src": "tatoeba:10166453/DavidDias en:320966/CK"
   }
  ],
+ "w|reagir": [
+  {
+   "text": "O João não soube como reagir quando um famoso entrou no hotel.",
+   "en": "João didn't know how to react when a celebrity walked into the hotel.",
+   "ko": "유명인이 호텔에 들어오자 주앙은 어떻게 반응해야 할지 몰랐어요.",
+   "blank": "reagir",
+   "src": "made"
+  },
+  {
+   "text": "A Ana pediu à atriz para reagir com calma à notícia ruim.",
+   "en": "Ana asked the actress to react calmly to the bad news.",
+   "ko": "아나는 여배우에게 나쁜 소식에 차분하게 반응해 달라고 했어요.",
+   "blank": "reagir",
+   "src": "made"
+  }
+ ],
  "w|real": [
   {
    "text": "Não tenho nem um real.",
@@ -38383,6 +39455,22 @@
    "src": "made"
   }
  ],
+ "w|recomendar": [
+  {
+   "text": "O vizinho do lado quis recomendar um bom eletricista ao Pedro.",
+   "en": "The next-door neighbor wanted to recommend a good electrician to Pedro.",
+   "ko": "옆집 이웃은 페드루에게 좋은 전기 기사를 추천해 주고 싶어 했어요.",
+   "blank": "recomendar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz gostou tanto do produto que vai recomendar a loja às amigas.",
+   "en": "Beatriz liked the product so much that she's going to recommend the store to her friends.",
+   "ko": "베아트리스는 제품이 너무 마음에 들어서 친구들에게 그 가게를 추천할 거예요.",
+   "blank": "recomendar",
+   "src": "made"
+  }
+ ],
  "w|recompensa": [
   {
    "text": "Toda tentativa merece uma recompensa.",
@@ -38585,6 +39673,22 @@
    "en": "Look around, I thought it was odd.",
    "ko": "주위를 봐, 이상해.",
    "blank": "redor"
+  }
+ ],
+ "w|reduzir": [
+  {
+   "text": "O Pedro trocou as lâmpadas para reduzir a conta de luz.",
+   "en": "Pedro changed the bulbs to reduce the electricity bill.",
+   "ko": "페드루는 전기 요금을 줄이려고 전구를 바꿨어요.",
+   "blank": "reduzir",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz usou um cupom para reduzir o valor do frete.",
+   "en": "Beatriz used a coupon to reduce the shipping cost.",
+   "ko": "베아트리스는 쿠폰으로 배송비를 줄였어요.",
+   "blank": "reduzir",
+   "src": "made"
   }
  ],
  "w|refeição": [
@@ -38957,6 +40061,22 @@
    "src": "made"
   }
  ],
+ "w|reparar": [
+  {
+   "text": "O João pediu ao técnico para reparar o ar-condicionado do quarto.",
+   "en": "João asked the technician to repair the room's air conditioning.",
+   "ko": "주앙은 기사에게 객실 에어컨을 고쳐 달라고 했어요.",
+   "blank": "reparar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana nem chegou a reparar que o figurino estava rasgado.",
+   "en": "Ana didn't even notice that the costume was torn.",
+   "ko": "아나는 의상이 찢어진 걸 미처 알아채지 못했어요.",
+   "blank": "reparar",
+   "src": "made"
+  }
+ ],
  "w|repente": [
   {
    "text": "De repente a luz caiu.",
@@ -39079,6 +40199,22 @@
    "ko": "예약하셨어요?",
    "blank": "reserva",
    "src": "tatoeba:8662187/bill en:54308/CK"
+  }
+ ],
+ "w|reservar": [
+  {
+   "text": "Uma senhora ligou para reservar o quarto com vista para o mar.",
+   "en": "A lady called to book the room with a sea view.",
+   "ko": "한 부인이 바다 전망 방을 예약하려고 전화했어요.",
+   "blank": "reservar",
+   "src": "made"
+  },
+  {
+   "text": "A assistente da Ana precisou reservar um teatro inteiro para a filmagem.",
+   "en": "Ana's assistant had to book an entire theater for the shoot.",
+   "ko": "아나의 조수는 촬영을 위해 극장 하나를 통째로 예약해야 했어요.",
+   "blank": "reservar",
+   "src": "made"
   }
  ],
  "w|resgate": [
@@ -39365,6 +40501,22 @@
    "ko": "한 번에 책을 몇 권 빌릴 수 있어요?",
    "blank": "retirar",
    "src": "tatoeba:1001883/alexmarcelo en:27474/CK"
+  }
+ ],
+ "w|reto": [
+  {
+   "text": "Para chegar à praia, basta seguir reto pela rua do hotel, explicou o João.",
+   "en": "To get to the beach, just go straight down the hotel's street, João explained.",
+   "ko": "해변에 가려면 호텔 앞 길을 따라 쭉 가면 된다고 주앙이 설명했어요.",
+   "blank": "reto",
+   "src": "made"
+  },
+  {
+   "text": "A Ana pediu ao ator para olhar reto para a câmera.",
+   "en": "Ana asked the actor to look straight at the camera.",
+   "ko": "아나는 배우에게 카메라를 똑바로 보라고 했어요.",
+   "blank": "reto",
+   "src": "made"
   }
  ],
  "w|retornar": [
@@ -40999,6 +42151,22 @@
    "blank": "sem que"
   }
  ],
+ "w|semáforo": [
+  {
+   "text": "O João explica aos hóspedes que o restaurante fica depois do semáforo.",
+   "en": "João explains to guests that the restaurant is past the traffic light.",
+   "ko": "주앙은 손님들에게 식당이 신호등 지나서 있다고 설명해요.",
+   "blank": "semáforo",
+   "src": "made"
+  },
+  {
+   "text": "A equipe da Ana precisou desligar um semáforo para filmar na rua.",
+   "en": "Ana's crew had to switch off a traffic light to film on the street.",
+   "ko": "아나의 촬영팀은 거리 촬영을 위해 신호등을 꺼야 했어요.",
+   "blank": "semáforo",
+   "src": "made"
+  }
+ ],
  "w|semana": [
   {
    "text": "A semana foi puxada.",
@@ -42611,6 +43779,22 @@
    "ko": "아이스크림 사러 가도 돼요?",
    "blank": "sorvete",
    "src": "tatoeba:4939974/alexmarcelo en:4938419/CK"
+  }
+ ],
+ "w|sótão": [
+  {
+   "text": "O prédio do Pedro tem um sótão onde os moradores guardam caixas velhas.",
+   "en": "Pedro's building has an attic where residents keep old boxes.",
+   "ko": "페드루네 건물에는 주민들이 낡은 상자를 넣어 두는 다락이 있어요.",
+   "blank": "sótão",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou caixas organizadoras para arrumar o sótão da casa da mãe.",
+   "en": "Beatriz bought storage boxes to tidy up the attic at her mother's house.",
+   "ko": "베아트리스는 엄마 집 다락을 정리하려고 수납 상자를 샀어요.",
+   "blank": "sótão",
+   "src": "made"
   }
  ],
  "w|sotaque": [
@@ -44613,6 +45797,22 @@
    "blank": "tomar"
   }
  ],
+ "w|tomar banho": [
+  {
+   "text": "O chuveiro quebrou, e o Pedro teve que tomar banho na casa do vizinho.",
+   "en": "The shower broke, and Pedro had to take a shower at his neighbor's.",
+   "ko": "샤워기가 고장 나서 페드루는 이웃집에서 샤워해야 했어요.",
+   "blank": "tomar banho",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz estava indo tomar banho quando o pedido chegou.",
+   "en": "Beatriz was about to take a shower when the order arrived.",
+   "ko": "주문한 게 왔을 때 베아트리스는 막 샤워하러 가던 참이었어요.",
+   "blank": "tomar banho",
+   "src": "made"
+  }
+ ],
  "w|tomate": [
   {
    "text": "O Bruno corta o tomate bem fino para a torta salgada.",
@@ -45363,6 +46563,22 @@
    "src": "made"
   }
  ],
+ "w|travesseiro": [
+  {
+   "text": "O Pedro comprou um travesseiro novo porque acordava com dor no pescoço.",
+   "en": "Pedro bought a new pillow because he woke up with a sore neck.",
+   "ko": "페드루는 목이 아파서 깨곤 해서 새 베개를 샀어요.",
+   "blank": "travesseiro",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz leu muitas avaliações antes de escolher o travesseiro.",
+   "en": "Beatriz read many reviews before choosing the pillow.",
+   "ko": "베아트리스는 베개를 고르기 전에 후기를 많이 읽었어요.",
+   "blank": "travesseiro",
+   "src": "made"
+  }
+ ],
  "w|trazer": [
   {
    "text": "Pode trazer um casaco?",
@@ -45839,6 +47055,38 @@
    "ko": "산을 뚫어 새 터널이 생겼어요.",
    "blank": "túnel",
    "src": "tatoeba:376483/brauliobezerra en:245084/Zifre"
+  }
+ ],
+ "w|turismo": [
+  {
+   "text": "O João trabalha na recepção de um hotel e entende bem de turismo na região.",
+   "en": "João works at a hotel front desk and knows a lot about tourism in the region.",
+   "ko": "주앙은 호텔 프런트에서 일하고 이 지역 관광을 잘 알아요.",
+   "blank": "turismo",
+   "src": "made"
+  },
+  {
+   "text": "A Ana dirige um filme sobre turismo nas cidades do interior.",
+   "en": "Ana is directing a film about tourism in small inland towns.",
+   "ko": "아나는 시골 도시 관광에 관한 영화를 감독하고 있어요.",
+   "blank": "turismo",
+   "src": "made"
+  }
+ ],
+ "w|turista": [
+  {
+   "text": "O João explicou a um turista estrangeiro que, no Brasil, motel não é igual a hotel.",
+   "en": "João explained to a foreign tourist that, in Brazil, a motel isn't the same as a hotel.",
+   "ko": "주앙은 외국인 관광객에게 브라질에서는 모텔이 호텔과 다르다고 설명했어요.",
+   "blank": "turista",
+   "src": "made"
+  },
+  {
+   "text": "Um turista curioso pediu uma foto com a Ana no meio da gravação.",
+   "en": "A curious tourist asked for a photo with Ana in the middle of filming.",
+   "ko": "호기심 많은 관광객이 촬영 도중에 아나와 사진을 찍자고 했어요.",
+   "blank": "turista",
+   "src": "made"
   }
  ],
  "w|turma": [
@@ -46399,6 +47647,22 @@
    "src": "tatoeba:2827912/MarlonX19 en:945535/spockofvulcan"
   }
  ],
+ "w|varanda": [
+  {
+   "text": "À noite, o Pedro toma café na varanda olhando a cidade.",
+   "en": "At night, Pedro drinks coffee on the balcony looking at the city.",
+   "ko": "밤이면 페드루는 발코니에서 도시를 바라보며 커피를 마셔요.",
+   "blank": "varanda",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz pediu cadeiras dobráveis para a varanda do apartamento.",
+   "en": "Beatriz ordered folding chairs for the apartment's balcony.",
+   "ko": "베아트리스는 아파트 발코니에 둘 접이식 의자를 주문했어요.",
+   "blank": "varanda",
+   "src": "made"
+  }
+ ],
  "w|vário": [
   {
    "text": "Na escola do João, vários alunos chegaram atrasados por causa da chuva.",
@@ -46442,6 +47706,22 @@
    "en": "The cleaner comes by every afternoon to sweep Luísa's office.",
    "ko": "청소부가 매일 오후 루이자의 사무실을 쓸러 와요.",
    "blank": "varrer",
+   "src": "made"
+  }
+ ],
+ "w|vaso": [
+  {
+   "text": "O Pedro colocou um vaso de samambaia na entrada do apartamento.",
+   "en": "Pedro put a fern pot at the entrance of the apartment.",
+   "ko": "페드루는 아파트 입구에 고사리 화분을 놓았어요.",
+   "blank": "vaso",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz comprou pela internet um vaso de cerâmica para a sala.",
+   "en": "Beatriz bought a ceramic vase online for the living room.",
+   "ko": "베아트리스는 거실에 둘 도자기 화병을 인터넷으로 샀어요.",
+   "blank": "vaso",
    "src": "made"
   }
  ],
