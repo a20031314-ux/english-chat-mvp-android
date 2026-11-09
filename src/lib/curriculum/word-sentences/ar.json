@@ -7277,6 +7277,22 @@
    "blank": "اثنان"
   }
  ],
+ "w|اثنتان": [
+  {
+   "text": "قال الطبيب ليوسف إن عنده حشوات قديمة، اثنتان منها تحتاجان إلى تغيير.",
+   "en": "The doctor told Youssef he had old fillings, two of which need replacing.",
+   "ko": "의사는 유세프에게 오래된 때움 중 두 개를 바꿔야 한다고 말했어요.",
+   "blank": "اثنتان",
+   "src": "made"
+  },
+  {
+   "text": "في فريق سارة ثلاث نساء، اثنتان منهن من المدينة نفسها.",
+   "en": "There are three women on Sara's team, two of whom are from the same city.",
+   "ko": "사라의 팀에는 여자가 셋인데 그중 둘은 같은 도시 출신이에요.",
+   "blank": "اثنتان",
+   "src": "made"
+  }
+ ],
  "w|اجتاز": [
   {
    "text": "اجتاز أحمد امتحان الرياضيات بعد أسابيع من المراجعة.",
@@ -12239,6 +12255,22 @@
    "blank": "بأنه"
   }
  ],
+ "w|بؤبؤ": [
+  {
+   "text": "ضاق بؤبؤ يوسف حين وجه الطبيب الضوء القوي نحو وجهه.",
+   "en": "Youssef's pupil narrowed when the doctor pointed the strong light at his face.",
+   "ko": "의사가 강한 불빛을 얼굴에 비추자 유세프의 동공이 작아졌어요.",
+   "blank": "بؤبؤ",
+   "src": "made"
+  },
+  {
+   "text": "اتسع بؤبؤ عيني سارة حين أطفأ الزميل أضواء قاعة العرض.",
+   "en": "Sara's pupils widened when her colleague turned off the lights in the presentation hall.",
+   "ko": "동료가 발표장 불을 끄자 사라의 동공이 커졌어요.",
+   "blank": "بؤبؤ",
+   "src": "made"
+  }
+ ],
  "w|بئر": [
   {
    "text": "استخرجوا الماء من بئر قديم.",
@@ -14841,6 +14873,22 @@
    "en": "I saw a girl playing in the park.",
    "ko": "나는 공원에서 노는 소녀를 봤다.",
    "blank": "بنتاً"
+  }
+ ],
+ "w|بنج": [
+  {
+   "text": "لم يشعر يوسف بشيء لأن البنج كان قويا.",
+   "en": "Youssef felt nothing because the anesthetic was strong.",
+   "ko": "마취가 세서 유세프는 아무것도 느끼지 못했어요.",
+   "blank": "البنج",
+   "src": "made"
+  },
+  {
+   "text": "لم تأكل سارة شيئا في الغداء لأن البنج لم يزل بعد من فمها.",
+   "en": "Sara ate nothing at lunch because the anesthetic hadn't worn off from her mouth yet.",
+   "ko": "사라는 입 마취가 아직 안 풀려서 점심에 아무것도 못 먹었어요.",
+   "blank": "البنج",
+   "src": "made"
   }
  ],
  "w|بنجاح": [
@@ -18075,6 +18123,22 @@
    "en": "I downloaded an app on my phone yesterday.",
    "ko": "어제 내 휴대폰에 앱을 설치했다.",
    "blank": "تطبيق"
+  }
+ ],
+ "w|تطعيم": [
+  {
+   "text": "سألت الممرضة يوسف عن آخر تطعيم أخذه.",
+   "en": "The nurse asked Youssef about the last vaccination he got.",
+   "ko": "간호사는 유세프에게 마지막으로 맞은 예방접종을 물었어요.",
+   "blank": "تطعيم",
+   "src": "made"
+  },
+  {
+   "text": "طلبت الشركة من سارة شهادة تطعيم قبل سفرها في مهمة.",
+   "en": "The company asked Sara for a vaccination certificate before her business trip.",
+   "ko": "회사는 출장 가기 전에 사라에게 예방접종 증명서를 요구했어요.",
+   "blank": "تطعيم",
+   "src": "made"
   }
  ],
  "w|تطلب": [
@@ -21443,6 +21507,22 @@
    "blank": "ثم"
   }
  ],
+ "w|ثمالة": [
+  {
+   "text": "شرب يوسف قهوته حتى الثمالة قبل أن يدخل إلى الطبيب.",
+   "en": "Youssef drank his coffee to the last drop before going in to the doctor.",
+   "ko": "유세프는 진료실에 들어가기 전에 커피를 마지막 한 방울까지 마셨어요.",
+   "blank": "الثمالة",
+   "src": "made"
+  },
+  {
+   "text": "وجدت سارة في فنجانها ثمالة قهوة باردة من الصباح.",
+   "en": "Sara found the cold dregs of the morning's coffee in her cup.",
+   "ko": "사라는 컵 바닥에 아침에 남긴 식은 커피 찌꺼기를 발견했어요.",
+   "blank": "ثمالة",
+   "src": "made"
+  }
+ ],
  "w|ثمان": [
   {
    "text": "يسكن حسن في هذا الحي منذ ثماني سنوات.",
@@ -22066,6 +22146,22 @@
    "en": "Rana wiped the sweat from her forehead after a long day of work.",
    "ko": "라나는 긴 근무를 마치고 이마의 땀을 닦았어요.",
    "blank": "جبهتها",
+   "src": "made"
+  }
+ ],
+ "w|جبيرة": [
+  {
+   "text": "جلس بجانب يوسف طفل في يده جبيرة ملونة.",
+   "en": "Next to Youssef sat a child with a colorful cast on his hand.",
+   "ko": "유세프 옆에 손에 알록달록한 깁스를 한 아이가 앉아 있었어요.",
+   "blank": "جبيرة",
+   "src": "made"
+  },
+  {
+   "text": "وقع زملاء سارة أسماءهم على جبيرة زميلهم المكسورة يده.",
+   "en": "Sara's colleagues signed their names on the cast of their colleague with the broken hand.",
+   "ko": "사라의 동료들은 손이 부러진 동료의 깁스에 이름을 적어 줬어요.",
+   "blank": "جبيرة",
    "src": "made"
   }
  ],
@@ -23679,6 +23775,22 @@
    "blank": "جولة"
   }
  ],
+ "w|جوهري": [
+  {
+   "text": "قال الطبيب ليوسف إن تنظيف الأسنان مرتين يوميا أمر جوهري.",
+   "en": "The doctor told Youssef that brushing teeth twice a day is essential.",
+   "ko": "의사는 유세프에게 하루 두 번 이를 닦는 게 아주 중요하다고 말했어요.",
+   "blank": "جوهري",
+   "src": "made"
+  },
+  {
+   "text": "تعلمت سارة في يومها الأول أن الالتزام بالمواعيد أمر جوهري في هذه الشركة.",
+   "en": "On her first day Sara learned that punctuality is essential at this company.",
+   "ko": "사라는 첫날에 이 회사에서는 시간을 지키는 게 아주 중요하다는 걸 배웠어요.",
+   "blank": "جوهري",
+   "src": "made"
+  }
+ ],
  "w|جوي": [
   {
    "text": "في اضطراب جوي فوق المطار.",
@@ -24467,6 +24579,22 @@
    "en": "I will definitely pass the exam.",
    "ko": "나는 반드시 시험에 합격할 거야.",
    "blank": "حتما"
+  }
+ ],
+ "w|حتمي": [
+  {
+   "text": "أصبح خلع الضرس أمرا حتميا بعد أن تأخر يوسف في العلاج.",
+   "en": "Pulling the molar became inevitable after Youssef delayed treatment.",
+   "ko": "유세프가 치료를 미루는 바람에 어금니를 뽑는 게 피할 수 없게 됐어요.",
+   "blank": "حتميا",
+   "src": "made"
+  },
+  {
+   "text": "رأت سارة أن تأخير المشروع أصبح حتميا بعد مرض المدير.",
+   "en": "Sara saw that delaying the project became inevitable after the manager fell ill.",
+   "ko": "사라는 관리자가 아프면서 프로젝트 지연이 피할 수 없게 됐다고 봤어요.",
+   "blank": "حتميا",
+   "src": "made"
   }
  ],
  "w|حتى": [
@@ -25419,6 +25547,22 @@
    "blank": "حصل"
   }
  ],
+ "w|حصوة": [
+  {
+   "text": "أخبر يوسف الطبيب أنه أجرى عملية حصوة في الكلية العام الماضي.",
+   "en": "Youssef told the doctor he had a kidney stone operation last year.",
+   "ko": "유세프는 의사에게 작년에 신장 결석 수술을 받았다고 말했어요.",
+   "blank": "حصوة",
+   "src": "made"
+  },
+  {
+   "text": "غاب مدير سارة أسبوعا بسبب حصوة في المرارة.",
+   "en": "Sara's manager was absent for a week because of a gallstone.",
+   "ko": "사라의 관리자는 담석 때문에 일주일 동안 결근했어요.",
+   "blank": "حصوة",
+   "src": "made"
+  }
+ ],
  "w|حصول": [
   {
    "text": "في احتمال حصول تغيير.",
@@ -25445,6 +25589,22 @@
    "en": "Every civilization has a unique history and distinctive culture.",
    "ko": "모든 문명은 독특한 역사와 고유한 문화를 가지고 있다.",
    "blank": "حضارة"
+  }
+ ],
+ "w|حضاري": [
+  {
+   "text": "يرى يوسف أن ابتسامة الموظفين في العيادة سلوك حضاري.",
+   "en": "Youssef thinks the clinic staff's smiles are civilized behavior.",
+   "ko": "유세프는 병원 직원들이 웃으며 맞이하는 게 품위 있는 태도라고 생각해요.",
+   "blank": "حضاري",
+   "src": "made"
+  },
+  {
+   "text": "أعجب الفريق بأسلوب سارة الحضاري في النقاش.",
+   "en": "The team admired Sara's civilized manner in discussion.",
+   "ko": "팀원들은 토론할 때 사라의 점잖은 태도에 감탄했어요.",
+   "blank": "الحضاري",
+   "src": "made"
   }
  ],
  "w|حضانة": [
@@ -29849,6 +30009,22 @@
    "src": "made"
   }
  ],
+ "w|ديمقراطي": [
+  {
+   "text": "تدار عيادة الأسنان بأسلوب ديمقراطي، فكل موظف يبدي رأيه.",
+   "en": "The dental clinic is run democratically, with every employee voicing an opinion.",
+   "ko": "치과는 민주적으로 운영돼서 직원 모두 의견을 말해요.",
+   "blank": "ديمقراطي",
+   "src": "made"
+  },
+  {
+   "text": "اقترحت سارة تصويتا ديمقراطيا لاختيار مكان الغداء.",
+   "en": "Sara proposed a democratic vote to choose the lunch place.",
+   "ko": "사라는 점심 장소를 민주적으로 투표로 정하자고 했어요.",
+   "blank": "ديمقراطيا",
+   "src": "made"
+  }
+ ],
  "w|ديمقراطية": [
   {
    "text": "ألقى أستاذ محاضرة في المكتبة عن تاريخ الديمقراطية.",
@@ -31451,6 +31627,22 @@
    "en": "Parental approval is a reason for happiness.",
    "ko": "부모님의 만족은 행복의 이유다.",
    "blank": "رضا"
+  }
+ ],
+ "w|رضاعة": [
+  {
+   "text": "قالت الممرضة ليوسف إن الرضاعة الطويلة بالزجاجة تضر أسنان الأطفال.",
+   "en": "The nurse told Youssef that long bottle feeding harms children's teeth.",
+   "ko": "간호사는 유세프에게 젖병을 오래 물리면 아이 이가 상한다고 말했어요.",
+   "blank": "الرضاعة",
+   "src": "made"
+  },
+  {
+   "text": "خصصت الشركة غرفة هادئة للأمهات في فترة الرضاعة.",
+   "en": "The company set aside a quiet room for breastfeeding mothers.",
+   "ko": "회사는 수유 중인 엄마들을 위해 조용한 방을 마련했어요.",
+   "blank": "الرضاعة",
+   "src": "made"
   }
  ],
  "w|رضة": [
@@ -35075,6 +35267,22 @@
    "blank": "سمكة"
   }
  ],
+ "w|سمنة": [
+  {
+   "text": "علقت العيادة ملصقا عن العلاقة بين السكر والسمنة.",
+   "en": "The clinic put up a poster about the link between sugar and obesity.",
+   "ko": "치과는 설탕과 비만의 관계에 관한 포스터를 붙였어요.",
+   "blank": "والسمنة",
+   "src": "made"
+  },
+  {
+   "text": "تشارك سارة في برنامج رياضي تنظمه الشركة لمكافحة السمنة.",
+   "en": "Sara takes part in a sports program the company organizes to fight obesity.",
+   "ko": "사라는 회사가 비만 예방을 위해 여는 운동 프로그램에 참여해요.",
+   "blank": "السمنة",
+   "src": "made"
+  }
+ ],
  "w|سميك": [
   {
    "text": "هذا الكتاب سميك وثقيل.",
@@ -35835,6 +36043,22 @@
    "en": "Did everyone participate in the discussion?",
    "ko": "모두 토론에 참여했니?",
    "blank": "شارك"
+  }
+ ],
+ "w|شاش": [
+  {
+   "text": "وضع الطبيب قطعة شاش في فم يوسف بعد الخلع.",
+   "en": "The doctor put a piece of gauze in Youssef's mouth after the extraction.",
+   "ko": "의사는 이를 뽑은 뒤 유세프의 입에 거즈를 물려 줬어요.",
+   "blank": "شاش",
+   "src": "made"
+  },
+  {
+   "text": "وجدت سارة في صندوق الإسعافات شاشا ولاصقا.",
+   "en": "Sara found gauze and a bandage in the first-aid box.",
+   "ko": "사라는 구급상자에서 거즈와 반창고를 찾았어요.",
+   "blank": "شاشا",
+   "src": "made"
   }
  ],
  "w|شاشة": [
@@ -36913,6 +37137,22 @@
    "en": "He did that out of pity.",
    "ko": "그는 동정심 때문에 그랬어.",
    "blank": "الشفقة"
+  }
+ ],
+ "w|شفهي": [
+  {
+   "text": "أعطت الممرضة يوسف تعليمات شفهية لأنه نسي نظارته.",
+   "en": "The nurse gave Youssef verbal instructions because he forgot his glasses.",
+   "ko": "유세프가 안경을 놓고 와서 간호사가 말로 설명해 줬어요.",
+   "blank": "شفهية",
+   "src": "made"
+  },
+  {
+   "text": "اجتازت سارة امتحانا شفهيا قبل أن تقبلها الشركة.",
+   "en": "Sara passed an oral exam before the company accepted her.",
+   "ko": "사라는 회사에 붙기 전에 구술 시험을 통과했어요.",
+   "blank": "شفهيا",
+   "src": "made"
   }
  ],
  "w|شفي": [
@@ -39365,6 +39605,22 @@
    "blank": "ضرر"
   }
  ],
+ "w|ضرس": [
+  {
+   "text": "أصبح خلع الضرس أمرا حتميا بعد أن تأخر يوسف في العلاج.",
+   "en": "Pulling the molar became inevitable after Youssef delayed treatment.",
+   "ko": "유세프가 치료를 미루는 바람에 어금니를 뽑는 게 피할 수 없게 됐어요.",
+   "blank": "الضرس",
+   "src": "made"
+  },
+  {
+   "text": "تألمت سارة من ضرس العقل طوال الاجتماع.",
+   "en": "Sara was in pain from her wisdom tooth throughout the meeting.",
+   "ko": "사라는 회의 내내 사랑니 때문에 아팠어요.",
+   "blank": "ضرس",
+   "src": "made"
+  }
+ ],
  "w|ضرورة": [
   {
    "text": "اتفق الجيران على ضرورة تركيب باب جديد للعمارة.",
@@ -40077,6 +40333,22 @@
    "src": "made"
   }
  ],
+ "w|طبقي": [
+  {
+   "text": "يقول طبيب يوسف إن العلاج يجب ألا يكون امتيازا طبقيا.",
+   "en": "Youssef's doctor says treatment shouldn't be a class privilege.",
+   "ko": "유세프의 의사는 치료가 계층의 특권이 되어서는 안 된다고 말해요.",
+   "blank": "طبقيا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت سارة في الجامعة بحثا عن الفوارق الطبقية في المدن الكبيرة.",
+   "en": "At university Sara wrote a paper on class differences in big cities.",
+   "ko": "사라는 대학에서 대도시의 계층 차이에 관한 논문을 썼어요.",
+   "blank": "الطبقية",
+   "src": "made"
+  }
+ ],
  "w|طبل": [
   {
    "text": "دق الطبل بصوت عالٍ.",
@@ -40147,6 +40419,22 @@
    "en": "This is normal and there's no need to worry.",
    "ko": "이것은 자연스러운 일이라 걱정할 필요 없어요.",
    "blank": "طبيعي"
+  }
+ ],
+ "w|طحال": [
+  {
+   "text": "ذكر يوسف في الاستمارة أنه أجرى عملية في الطحال وهو صغير.",
+   "en": "Youssef noted on the form that he had a spleen operation as a child.",
+   "ko": "유세프는 서류에 어릴 때 비장 수술을 받았다고 적었어요.",
+   "blank": "الطحال",
+   "src": "made"
+  },
+  {
+   "text": "تعلمت سارة من مقال طبي أن الطحال يقع في الجهة اليسرى من البطن.",
+   "en": "Sara learned from a medical article that the spleen is on the left side of the abdomen.",
+   "ko": "사라는 의학 기사에서 비장이 배 왼쪽에 있다는 것을 배웠어요.",
+   "blank": "الطحال",
+   "src": "made"
   }
  ],
  "w|طحين": [
@@ -40571,6 +40859,22 @@
    "en": "Red tomatoes are very delicious.",
    "ko": "빨간 토마토가 정말 맛있어.",
    "blank": "طماطم"
+  }
+ ],
+ "w|طمث": [
+  {
+   "text": "سمع يوسف الطبيبة تشرح لمريضة أن آلام الطمث لا علاقة لها بالأسنان.",
+   "en": "Youssef heard the doctor explain to a patient that menstrual pain has nothing to do with teeth.",
+   "ko": "유세프는 의사가 한 환자에게 생리통은 치아와 상관없다고 설명하는 것을 들었어요.",
+   "blank": "الطمث",
+   "src": "made"
+  },
+  {
+   "text": "تسمح الشركة للموظفات بإجازة قصيرة إذا اشتدت آلام الطمث.",
+   "en": "The company allows female employees short leave if menstrual pain becomes severe.",
+   "ko": "회사는 생리통이 심하면 여직원들에게 짧은 휴가를 허락해요.",
+   "blank": "الطمث",
+   "src": "made"
   }
  ],
  "w|طموح": [
@@ -43027,6 +43331,22 @@
    "src": "made"
   }
  ],
+ "w|عكاز": [
+  {
+   "text": "دخل رجل يمشي على عكاز إلى غرفة الانتظار، فقام يوسف وأعطاه كرسيه.",
+   "en": "A man walking on a crutch came into the waiting room, so Youssef got up and gave him his chair.",
+   "ko": "목발을 짚은 남자가 대기실에 들어오자 유세프가 일어나 자리를 내줬어요.",
+   "blank": "عكاز",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت سارة زميلها الذي يمشي على عكاز في حمل ملفاته.",
+   "en": "Sara helped her colleague who walks on a crutch carry his files.",
+   "ko": "사라는 목발을 짚은 동료가 서류를 옮기는 것을 도왔어요.",
+   "blank": "عكاز",
+   "src": "made"
+  }
+ ],
  "w|عكس": [
   {
    "text": "عكس السيارة في الاتجاه الآخر.",
@@ -44401,6 +44721,22 @@
    "blank": "الغرب"
   }
  ],
+ "w|غرزة": [
+  {
+   "text": "أغلق الطبيب الجرح في لثة يوسف بغرزة واحدة.",
+   "en": "The doctor closed the wound in Youssef's gum with a single stitch.",
+   "ko": "의사는 유세프의 잇몸 상처를 한 바늘로 꿰맸어요.",
+   "blank": "بغرزة",
+   "src": "made"
+  },
+  {
+   "text": "جرحت سارة إصبعها بالورق واحتاجت إلى غرزة صغيرة.",
+   "en": "Sara cut her finger on paper and needed a small stitch.",
+   "ko": "사라는 종이에 손가락을 베여서 한 바늘 꿰매야 했어요.",
+   "blank": "غرزة",
+   "src": "made"
+  }
+ ],
  "w|غرض": [
   {
    "text": "اشتريت هذا غرض من السوق.",
@@ -44545,6 +44881,22 @@
    "blank": "غزال"
   }
  ],
+ "w|غزو": [
+  {
+   "text": "قرأ يوسف في غرفة الانتظار مقالا عن غزو المغول لبغداد.",
+   "en": "In the waiting room Youssef read an article about the Mongol invasion of Baghdad.",
+   "ko": "유세프는 대기실에서 몽골의 바그다드 침공에 관한 글을 읽었어요.",
+   "blank": "غزو",
+   "src": "made"
+  },
+  {
+   "text": "تحدث زملاء سارة عن غزو المنتجات الأجنبية للسوق المحلية.",
+   "en": "Sara's colleagues talked about the invasion of foreign products into the local market.",
+   "ko": "사라의 동료들은 외국 제품이 국내 시장을 휩쓴 일을 이야기했어요.",
+   "blank": "غزو",
+   "src": "made"
+  }
+ ],
  "w|غسالة": [
   {
    "text": "اشتريت غسالة جديدة للملابس.",
@@ -44627,6 +44979,22 @@
    "en": "Don't let anger control you.",
    "ko": "화를 네가 통제하도록 두지 마라.",
    "blank": "غضب"
+  }
+ ],
+ "w|غضروف": [
+  {
+   "text": "سمع يوسف صوتا من غضروف فكه حين فتح فمه واسعا.",
+   "en": "Youssef heard a sound from his jaw cartilage when he opened his mouth wide.",
+   "ko": "유세프는 입을 크게 벌리자 턱 연골에서 소리가 나는 걸 들었어요.",
+   "blank": "غضروف",
+   "src": "made"
+  },
+  {
+   "text": "يعاني زميل سارة من مشكلة في غضروف الركبة.",
+   "en": "Sara's colleague has a problem with his knee cartilage.",
+   "ko": "사라의 동료는 무릎 연골에 문제가 있어요.",
+   "blank": "غضروف",
+   "src": "made"
   }
  ],
  "w|غطاء": [
@@ -47647,6 +48015,22 @@
    "blank": "قرب"
   }
  ],
+ "w|قرحة": [
+  {
+   "text": "أصيب يوسف بقرحة صغيرة في فمه بسبب أكل حار.",
+   "en": "Youssef got a small ulcer in his mouth from spicy food.",
+   "ko": "유세프는 매운 음식 때문에 입안에 작은 궤양이 생겼어요.",
+   "blank": "بقرحة",
+   "src": "made"
+  },
+  {
+   "text": "يعاني زميل سارة من قرحة في المعدة فلا يشرب القهوة.",
+   "en": "Sara's colleague suffers from a stomach ulcer, so he doesn't drink coffee.",
+   "ko": "사라의 동료는 위궤양이 있어서 커피를 안 마셔요.",
+   "blank": "قرحة",
+   "src": "made"
+  }
+ ],
  "w|قرد": [
   {
    "text": "قرد يتسلق الشجرة بسرعة.",
@@ -47828,6 +48212,22 @@
    "en": "Maryam saw the birds migrating south and took it as a sign that winter was near.",
    "ko": "마리암은 새들이 남쪽으로 날아가는 걸 보고 겨울이 가까워졌다는 징조로 여겼어요.",
    "blank": "قرينة",
+   "src": "made"
+  }
+ ],
+ "w|قزحية": [
+  {
+   "text": "لاحظت الممرضة أن قزحية عين يوسف خضراء فاتحة.",
+   "en": "The nurse noticed that the iris of Youssef's eye was light green.",
+   "ko": "간호사는 유세프의 홍채가 연한 초록색이라는 걸 알아챘어요.",
+   "blank": "قزحية",
+   "src": "made"
+  },
+  {
+   "text": "تفتح الأبواب في الشركة بجهاز يقرأ قزحية العين.",
+   "en": "The doors at the company open with a device that reads the iris of the eye.",
+   "ko": "회사 문은 눈의 홍채를 읽는 기기로 열려요.",
+   "blank": "قزحية",
    "src": "made"
   }
  ],
@@ -50149,6 +50549,22 @@
    "blank": "كمون"
   }
  ],
+ "w|كمي": [
+  {
+   "text": "أجرت العيادة دراسة كمية عن عدد المرضى الذين يخافون من الإبرة.",
+   "en": "The clinic ran a quantitative study on the number of patients afraid of needles.",
+   "ko": "치과는 주사를 무서워하는 환자 수를 조사하는 양적 연구를 했어요.",
+   "blank": "كمية",
+   "src": "made"
+  },
+  {
+   "text": "تحب سارة التحليل الكمي أكثر من كتابة التقارير الطويلة.",
+   "en": "Sara likes quantitative analysis more than writing long reports.",
+   "ko": "사라는 긴 보고서를 쓰는 것보다 양적 분석을 더 좋아해요.",
+   "blank": "الكمي",
+   "src": "made"
+  }
+ ],
  "w|كمية": [
   {
    "text": "أحتاج كمية كبيرة من الماء.",
@@ -51013,6 +51429,22 @@
    "src": "made"
   }
  ],
+ "w|لثة": [
+  {
+   "text": "أغلق الطبيب الجرح في لثة يوسف بغرزة واحدة.",
+   "en": "The doctor closed the wound in Youssef's gum with a single stitch.",
+   "ko": "의사는 유세프의 잇몸 상처를 한 바늘로 꿰맸어요.",
+   "blank": "لثة",
+   "src": "made"
+  },
+  {
+   "text": "نزفت لثة سارة قليلا بعد أن نظفت أسنانها بقوة.",
+   "en": "Sara's gum bled a little after she brushed her teeth hard.",
+   "ko": "사라는 이를 세게 닦았더니 잇몸에서 피가 조금 났어요.",
+   "blank": "لثة",
+   "src": "made"
+  }
+ ],
  "w|لجأ": [
   {
    "text": "لجأ السكان إلى خالد حين رفضت الشركة إصلاح المصعد.",
@@ -51456,6 +51888,22 @@
    "en": "The cause of the app's slowness remained a mystery until Huda discovered a huge image on the home page.",
    "ko": "앱이 느린 이유는 수수께끼였는데, 후다가 홈 화면에서 아주 큰 이미지를 찾아냈어요.",
    "blank": "لغزا",
+   "src": "made"
+  }
+ ],
+ "w|لغوي": [
+  {
+   "text": "لاحظ يوسف خطأ لغويا في لافتة العيادة فأخبر الموظفة.",
+   "en": "Youssef noticed a linguistic error on the clinic sign and told the receptionist.",
+   "ko": "유세프는 병원 간판에서 맞춤법 오류를 발견하고 직원에게 알렸어요.",
+   "blank": "لغويا",
+   "src": "made"
+  },
+  {
+   "text": "طلب المدير من سارة مراجعة لغوية لنص الإعلان.",
+   "en": "The manager asked Sara for a language review of the ad text.",
+   "ko": "관리자는 사라에게 광고 문구의 문장 검토를 부탁했어요.",
+   "blank": "لغوية",
    "src": "made"
   }
  ],
@@ -51995,6 +52443,22 @@
    "en": "The coach helps us improve physical fitness.",
    "ko": "코치가 우리 체력을 높이도록 도와줘요.",
    "blank": "لياقة"
+  }
+ ],
+ "w|ليبرالي": [
+  {
+   "text": "قرأ يوسف في الانتظار مقالا عن تاريخ الفكر الليبرالي.",
+   "en": "While waiting Youssef read an article on the history of liberal thought.",
+   "ko": "유세프는 기다리면서 자유주의 사상의 역사에 관한 글을 읽었어요.",
+   "blank": "الليبرالي",
+   "src": "made"
+  },
+  {
+   "text": "تقرأ سارة في المواصلات جريدة ذات توجه ليبرالي.",
+   "en": "On her commute Sara reads a newspaper with a liberal leaning.",
+   "ko": "사라는 출퇴근길에 자유주의 성향의 신문을 읽어요.",
+   "blank": "ليبرالي",
+   "src": "made"
   }
  ],
  "w|ليت": [
@@ -53015,6 +53479,22 @@
    "src": "made"
   }
  ],
+ "w|مبيض": [
+  {
+   "text": "قرأ يوسف في مجلة العيادة مقالا عن أمراض المبيض عند النساء.",
+   "en": "In the clinic magazine Youssef read an article about ovarian diseases in women.",
+   "ko": "유세프는 병원 잡지에서 여성의 난소 질환에 관한 글을 읽었어요.",
+   "blank": "المبيض",
+   "src": "made"
+  },
+  {
+   "text": "أخذت زميلة سارة إجازة لإجراء فحص روتيني للمبيض.",
+   "en": "Sara's colleague took leave for a routine ovarian checkup.",
+   "ko": "사라의 동료는 난소 정기 검사를 받으려고 휴가를 냈어요.",
+   "blank": "للمبيض",
+   "src": "made"
+  }
+ ],
  "w|متأخر": [
   {
    "text": "وصلت متأخر إلى العمل اليوم.",
@@ -53475,6 +53955,22 @@
    "blank": "متضايق"
   }
  ],
+ "w|متطرف": [
+  {
+   "text": "حذر الطبيب يوسف من القلق المتطرف قبل كل زيارة.",
+   "en": "The doctor warned Youssef against extreme anxiety before every visit.",
+   "ko": "의사는 유세프에게 매번 오기 전에 지나치게 걱정하지 말라고 했어요.",
+   "blank": "المتطرف",
+   "src": "made"
+  },
+  {
+   "text": "رفضت سارة رأي زميلها المتطرف عن طرد كل الموظفين الكسالى.",
+   "en": "Sara rejected her colleague's extreme view about firing all lazy employees.",
+   "ko": "사라는 게으른 직원을 다 내보내자는 동료의 극단적인 의견에 반대했어요.",
+   "blank": "المتطرف",
+   "src": "made"
+  }
+ ],
  "w|متعاف": [
   {
    "text": "زار يوسف جناح المرضى المتعافين ليشجع صديقه.",
@@ -53781,6 +54277,22 @@
    "en": "This solution is perfect for the problem.",
    "ko": "이 해결책은 문제에 완벽해요.",
    "blank": "مثالي"
+  }
+ ],
+ "w|مثانة": [
+  {
+   "text": "سأل الطبيب يوسف عن أدوية المثانة التي يأخذها.",
+   "en": "The doctor asked Youssef about the bladder medicines he takes.",
+   "ko": "의사는 유세프에게 먹고 있는 방광 약을 물었어요.",
+   "blank": "المثانة",
+   "src": "made"
+  },
+  {
+   "text": "تشرب سارة ماء كثيرا لأن طبيبها قال إن ذلك مفيد للمثانة.",
+   "en": "Sara drinks a lot of water because her doctor said it's good for the bladder.",
+   "ko": "사라는 의사가 방광에 좋다고 해서 물을 많이 마셔요.",
+   "blank": "للمثانة",
+   "src": "made"
   }
  ],
  "w|مثقف": [
@@ -56035,6 +56547,22 @@
    "blank": "مركزي"
   }
  ],
+ "w|مرن": [
+  {
+   "text": "اختار يوسف فرشاة أسنان ذات شعيرات مرنة.",
+   "en": "Youssef chose a toothbrush with flexible bristles.",
+   "ko": "유세프는 모가 부드러운 칫솔을 골랐어요.",
+   "blank": "مرنة",
+   "src": "made"
+  },
+  {
+   "text": "أعجب سارة أن دوام الشركة مرن في أيام الجمعة.",
+   "en": "Sara liked that the company's hours are flexible on Fridays.",
+   "ko": "사라는 금요일에 근무 시간이 유연한 점이 마음에 들었어요.",
+   "blank": "مرن",
+   "src": "made"
+  }
+ ],
  "w|مرهق": [
   {
    "text": "دخلت ممرضة الصيدلية بوجه مرهق بعد مناوبة ليلية، فقدم لها كريم كوب ماء.",
@@ -56859,6 +57387,22 @@
    "en": "There is a warehouse for storing grains here.",
    "ko": "여기 곡물을 저장하는 창고가 있어요.",
    "blank": "مستودع"
+  }
+ ],
+ "w|مستوصف": [
+  {
+   "text": "كان يوسف يعالج أسنانه في صغره في مستوصف الحي.",
+   "en": "As a child Youssef had his teeth treated at the neighborhood clinic.",
+   "ko": "유세프는 어릴 때 동네 보건소에서 이를 치료받았어요.",
+   "blank": "مستوصف",
+   "src": "made"
+  },
+  {
+   "text": "زارت سارة المستوصف القريب من الشركة حين أصابها صداع شديد.",
+   "en": "Sara visited the clinic near the company when she got a bad headache.",
+   "ko": "사라는 두통이 심해서 회사 근처 보건소에 갔어요.",
+   "blank": "المستوصف",
+   "src": "made"
   }
  ],
  "w|مستوى": [
@@ -59815,6 +60359,22 @@
    "blank": "مكسور"
   }
  ],
+ "w|مكمل": [
+  {
+   "text": "نصح الطبيب يوسف بتناول مكمل غذائي فيه الكالسيوم.",
+   "en": "The doctor advised Youssef to take a dietary supplement containing calcium.",
+   "ko": "의사는 유세프에게 칼슘이 든 영양제를 먹으라고 권했어요.",
+   "blank": "مكمل",
+   "src": "made"
+  },
+  {
+   "text": "تأخذ سارة مكملا من الحديد بنصيحة طبيبها.",
+   "en": "Sara takes an iron supplement on her doctor's advice.",
+   "ko": "사라는 의사의 권유로 철분 보충제를 먹어요.",
+   "blank": "مكملا",
+   "src": "made"
+  }
+ ],
  "w|مكنسة": [
   {
    "text": "استخدم مكنسة لتنظيف الأرض.",
@@ -61191,6 +61751,22 @@
    "src": "made"
   }
  ],
+ "w|منقطع": [
+  {
+   "text": "انتظر يوسف خمس دقائق ثم عاد الاتصال المنقطع مع العيادة.",
+   "en": "Youssef waited five minutes, then the cut-off call with the clinic resumed.",
+   "ko": "유세프가 오 분을 기다리자 끊겼던 치과와의 통화가 다시 이어졌어요.",
+   "blank": "المنقطع",
+   "src": "made"
+  },
+  {
+   "text": "عملت سارة بنشاط منقطع النظير في أسبوعها الأول.",
+   "en": "Sara worked with unmatched energy in her first week.",
+   "ko": "사라는 첫 주에 누구보다도 열심히 일했어요.",
+   "blank": "منقطع",
+   "src": "made"
+  }
+ ],
  "w|منهار": [
   {
    "text": "وصل حسن إلى البيت منهارا من التعب بعد يوم طويل.",
@@ -61219,6 +61795,22 @@
    "en": "The student reviewed the language curriculum before the exam.",
    "ko": "학생이 시험 전에 언어 과정을 복습했어.",
    "blank": "منهج"
+  }
+ ],
+ "w|منوم": [
+  {
+   "text": "لا يحب يوسف أخذ منوم حتى عندما يؤلمه ضرسه.",
+   "en": "Youssef doesn't like taking a sleeping pill even when his tooth hurts.",
+   "ko": "유세프는 어금니가 아파도 수면제는 먹고 싶어 하지 않아요.",
+   "blank": "منوم",
+   "src": "made"
+  },
+  {
+   "text": "قالت سارة إن اجتماعات الصباح الطويلة تعمل مثل المنوم.",
+   "en": "Sara said long morning meetings work like a sleeping pill.",
+   "ko": "사라는 긴 아침 회의가 수면제 같다고 말했어요.",
+   "blank": "المنوم",
+   "src": "made"
   }
  ],
  "w|مهاجر": [
@@ -61765,6 +62357,22 @@
    "en": "The topic of this lesson is easy.",
    "ko": "이 수업의 주제는 쉬워.",
    "blank": "موضوع"
+  }
+ ],
+ "w|موضوعي": [
+  {
+   "text": "أعطى الطبيب يوسف رأيا موضوعيا عن تكلفة العلاج.",
+   "en": "The doctor gave Youssef an objective opinion about the cost of treatment.",
+   "ko": "의사는 유세프에게 치료비에 대해 객관적인 의견을 줬어요.",
+   "blank": "موضوعيا",
+   "src": "made"
+  },
+  {
+   "text": "طلبت سارة من زملائها نقدا موضوعيا لعرضها الأول.",
+   "en": "Sara asked her colleagues for objective criticism of her first presentation.",
+   "ko": "사라는 동료들에게 첫 발표에 대한 객관적인 비판을 부탁했어요.",
+   "blank": "موضوعيا",
+   "src": "made"
   }
  ],
  "w|موطن": [
@@ -62841,6 +63449,22 @@
    "en": "This wire is made of copper.",
    "ko": "이 전선은 구리로 만들어졌어.",
    "blank": "نحاس"
+  }
+ ],
+ "w|نحافة": [
+  {
+   "text": "لاحظ الطبيب نحافة يوسف وسأله عن نظام أكله.",
+   "en": "The doctor noticed Youssef's thinness and asked about his diet.",
+   "ko": "의사는 유세프가 마른 것을 보고 식습관을 물었어요.",
+   "blank": "نحافة",
+   "src": "made"
+  },
+  {
+   "text": "قالت زميلة لسارة مازحة إن نحافتها سببها كثرة الحركة في المكتب.",
+   "en": "A colleague joked to Sara that her thinness comes from moving around the office so much.",
+   "ko": "동료는 사라가 마른 건 사무실에서 너무 많이 돌아다녀서라고 농담했어요.",
+   "blank": "نحافتها",
+   "src": "made"
   }
  ],
  "w|نحت": [
@@ -65873,6 +66497,22 @@
    "en": "My mother scolded my brother when he broke the window.",
    "ko": "엄마가 동생이 창문을 깼을 때 혼냈어요.",
    "blank": "وبخت"
+  }
+ ],
+ "w|وتر": [
+  {
+   "text": "أصيب يوسف قبل شهر في وتر كاحله أثناء الجري.",
+   "en": "A month ago Youssef injured the tendon in his ankle while running.",
+   "ko": "유세프는 한 달 전에 달리다가 발목 힘줄을 다쳤어요.",
+   "blank": "وتر",
+   "src": "made"
+  },
+  {
+   "text": "أصيب وتر في كتف سارة وهي تحمل الصناديق الثقيلة.",
+   "en": "Sara strained a tendon in her shoulder while carrying the heavy boxes.",
+   "ko": "사라는 무거운 상자를 옮기다가 어깨 힘줄을 다쳤어요.",
+   "blank": "وتر",
+   "src": "made"
   }
  ],
  "w|وثق": [

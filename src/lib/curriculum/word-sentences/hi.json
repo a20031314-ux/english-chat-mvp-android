@@ -779,6 +779,22 @@
    "src": "made"
   }
  ],
+ "w|अंदाज़ा": [
+  {
+   "text": "विकास को अंदाज़ा नहीं था कि उसकी ख़बर पर इतना हंगामा होगा।",
+   "en": "Vikas had no idea his story would cause such an uproar.",
+   "ko": "비카스는 자기 기사가 그렇게 큰 소동을 일으킬 줄 몰랐어요.",
+   "blank": "अंदाज़ा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी को अंदाज़ा था कि बारात देर से आएगी, इसलिए उसने खाना बाद में लगवाया।",
+   "en": "Shalini guessed the procession would arrive late, so she had the food served later.",
+   "ko": "샬리니는 신랑 행렬이 늦을 걸 짐작하고 음식을 나중에 차리게 했어요.",
+   "blank": "अंदाज़ा",
+   "src": "made"
+  }
+ ],
  "w|अदालत": [
   {
    "text": "मामला कल अदालत में पेश होगा।",
@@ -997,6 +1013,22 @@
    "en": "The chair heard everyone out.",
    "ko": "의장이 모두 말을 들어 줬어.",
    "blank": "अध्यक्ष"
+  }
+ ],
+ "w|अध्यक्षता": [
+  {
+   "text": "चैनल की सालाना बैठक की अध्यक्षता इस बार विकास ने की।",
+   "en": "This time Vikas chaired the channel's annual meeting.",
+   "ko": "이번에는 비카스가 방송국 연례 회의를 주재했어요.",
+   "blank": "अध्यक्षता",
+   "src": "made"
+  },
+  {
+   "text": "शादी की सारी तैयारी की अध्यक्षता शालिनी की दादी ने की।",
+   "en": "Shalini's grandmother presided over all the wedding preparations.",
+   "ko": "결혼식 준비는 샬리니 할머니가 모두 진두지휘했어요.",
+   "blank": "अध्यक्षता",
+   "src": "made"
   }
  ],
  "w|अध्ययन": [
@@ -1409,6 +1441,22 @@
    "src": "made"
   }
  ],
+ "w|अनुसंधान": [
+  {
+   "text": "विकास ने बताया कि यह ख़बर महीनों के अनुसंधान के बाद लिखी गई है।",
+   "en": "Vikas said this story was written after months of research.",
+   "ko": "비카스는 이 기사가 몇 달 동안 조사한 끝에 쓰였다고 했어요.",
+   "blank": "अनुसंधान",
+   "src": "made"
+  },
+  {
+   "text": "शादी में शालिनी के चाचा अपने कैंसर अनुसंधान के बारे में बताते रहे।",
+   "en": "At the wedding, Shalini's uncle kept talking about his cancer research.",
+   "ko": "결혼식에서 샬리니의 삼촌은 자기 암 연구 얘기를 계속했어요.",
+   "blank": "अनुसंधान",
+   "src": "made"
+  }
+ ],
  "w|अनेक": [
   {
    "text": "अनेक लोग कतार में खड़े थे।",
@@ -1643,6 +1691,22 @@
    "en": "We will go traveling in April.",
    "ko": "우리는 사월에 여행 갈 거야.",
    "blank": "अप्रैल"
+  }
+ ],
+ "w|अफ़सर": [
+  {
+   "text": "ज़िले के एक बड़े अफ़सर ने विकास के सवालों का जवाब देने से मना कर दिया।",
+   "en": "A senior district officer refused to answer Vikas's questions.",
+   "ko": "군의 고위 공무원 한 명이 비카스의 질문에 답하길 거부했어요.",
+   "blank": "अफ़सर",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का होने वाला पति रेलवे में अफ़सर है।",
+   "en": "Shalini's husband-to-be is an officer in the railways.",
+   "ko": "샬리니의 예비 신랑은 철도청 공무원이에요.",
+   "blank": "अफ़सर",
+   "src": "made"
   }
  ],
  "w|अफ़सोस": [
@@ -2130,6 +2194,22 @@
    "en": "Priya ordered an embroidered bedsheet made by a minority artisan community.",
    "ko": "프리야는 소수 장인 공동체가 만든 자수 침대보를 주문했어요.",
    "blank": "अल्पसंख्यक",
+   "src": "made"
+  }
+ ],
+ "w|अवगत": [
+  {
+   "text": "विकास ने दर्शकों को बाढ़ की ताज़ा हालत से अवगत कराया।",
+   "en": "Vikas informed viewers of the latest flood situation.",
+   "ko": "비카스는 시청자들에게 홍수 최신 상황을 알렸어요.",
+   "blank": "अवगत",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने सब मेहमानों को कार्यक्रम के बदले समय से अवगत करा दिया।",
+   "en": "Shalini informed all the guests of the programme's changed timing.",
+   "ko": "샬리니는 손님들에게 바뀐 행사 시간을 모두 알렸어요.",
+   "blank": "अवगत",
    "src": "made"
   }
  ],
@@ -5625,6 +5705,22 @@
    "blank": "उपलब्ध"
   }
  ],
+ "w|उपलब्धि": [
+  {
+   "text": "विकास की सबसे बड़ी उपलब्धि एक पुराने घोटाले को सामने लाना थी।",
+   "en": "Vikas's greatest achievement was bringing an old scam to light.",
+   "ko": "비카스의 가장 큰 업적은 오래된 비리를 밝혀낸 거였어요.",
+   "blank": "उपलब्धि",
+   "src": "made"
+  },
+  {
+   "text": "बिना किसी झगड़े के शादी निपट जाना ही परिवार की उपलब्धि थी।",
+   "en": "Getting through the wedding without a single quarrel was the family's achievement.",
+   "ko": "다툼 하나 없이 결혼식을 치른 것만으로도 가족에게는 큰 성과였어요.",
+   "blank": "उपलब्धि",
+   "src": "made"
+  }
+ ],
  "w|उपवन": [
   {
    "text": "लौटते हुए वे आम के एक पुराने उपवन में सुस्ताने रुके।",
@@ -7671,6 +7767,22 @@
    "src": "made"
   }
  ],
+ "w|कमीना": [
+  {
+   "text": "विकास ने एक फ़िल्म समीक्षा में लिखा कि खलनायक का किरदार बेहद कमीना है।",
+   "en": "In a film review, Vikas wrote that the villain's character is utterly mean.",
+   "ko": "비카스는 영화평에 악당 캐릭터가 지독히 비열하다고 썼어요.",
+   "blank": "कमीना",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के भाई ने मज़ाक में अपने दोस्त को कमीना कहा, तो दोनों हँस पड़े।",
+   "en": "Shalini's brother jokingly called his friend a rascal, and both burst out laughing.",
+   "ko": "샬리니 오빠가 장난으로 친구를 나쁜 놈이라고 부르자 둘 다 웃음을 터뜨렸어요.",
+   "blank": "कमीना",
+   "src": "made"
+  }
+ ],
  "w|कर": [
   {
    "text": "आय पर कर काफ़ी बढ़ गया है।",
@@ -7725,6 +7837,22 @@
    "en": "The coach is putting the players through practice.",
    "ko": "코치가 선수들에게 연습을 시키고 있어.",
    "blank": "करा"
+  }
+ ],
+ "w|क़रार": [
+  {
+   "text": "चैनल और एक अख़बार के बीच ख़बरें बाँटने का क़रार हुआ है।",
+   "en": "An agreement to share news has been made between the channel and a newspaper.",
+   "ko": "방송국과 한 신문사가 기사를 공유하기로 협약을 맺었어요.",
+   "blank": "क़रार",
+   "src": "made"
+  },
+  {
+   "text": "टेंट वाले के साथ क़रार में लिखा था कि बारिश हुई तो छत लगेगी।",
+   "en": "The agreement with the tent supplier said a roof would be put up if it rained.",
+   "ko": "천막 업체와의 계약서에는 비가 오면 지붕을 친다고 적혀 있었어요.",
+   "blank": "क़रार",
+   "src": "made"
   }
  ],
  "w|करियर": [
@@ -8681,6 +8809,22 @@
    "blank": "कार्यक्रम"
   }
  ],
+ "w|कार्यरत": [
+  {
+   "text": "विकास की बहन भी इसी चैनल में संपादक के रूप में कार्यरत है।",
+   "en": "Vikas's sister also works at this channel as an editor.",
+   "ko": "비카스의 누나도 이 방송국에서 편집자로 일하고 있어요.",
+   "blank": "कार्यरत",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की सहेली मुंबई के एक अस्पताल में डॉक्टर के रूप में कार्यरत है।",
+   "en": "Shalini's friend is working as a doctor at a hospital in Mumbai.",
+   "ko": "샬리니의 친구는 뭄바이의 병원에서 의사로 일하고 있어요.",
+   "blank": "कार्यरत",
+   "src": "made"
+  }
+ ],
  "w|कार्यवाही": [
   {
    "text": "नाटक का दूसरा अंक अदालत की कार्यवाही के दृश्य से शुरू होता है।",
@@ -9421,6 +9565,22 @@
    "blank": "कुल"
   }
  ],
+ "w|कुल मिलाकर": [
+  {
+   "text": "विकास ने कहा कि कुल मिलाकर आज का बुलेटिन अच्छा रहा।",
+   "en": "Vikas said that all in all today's bulletin went well.",
+   "ko": "비카스는 전체적으로 오늘 뉴스가 잘 나갔다고 했어요.",
+   "blank": "कुल मिलाकर",
+   "src": "made"
+  },
+  {
+   "text": "थोड़ी गड़बड़ के बावजूद कुल मिलाकर शादी बहुत अच्छी रही।",
+   "en": "Despite a few hiccups, all in all the wedding went very well.",
+   "ko": "자잘한 실수가 있었지만 대체로 결혼식은 아주 잘 끝났어요.",
+   "blank": "कुल मिलाकर",
+   "src": "made"
+  }
+ ],
  "w|कुली": [
   {
    "text": "नए सहकर्मी ने बताया कि स्टेशन पर कुली ने उसका भारी बक्सा उठाया।",
@@ -9450,6 +9610,22 @@
    "en": "On a summer night all the kids ran out on hearing the kulfi seller's bell in the lane.",
    "ko": "여름밤 골목에 쿨피 장수 종소리가 들리자 아이들이 모두 뛰어나왔어요.",
    "blank": "कुल्फ़ी",
+   "src": "made"
+  }
+ ],
+ "w|कुशल": [
+  {
+   "text": "चैनल को एक कुशल वीडियो एडिटर की ज़रूरत है।",
+   "en": "The channel needs a skilled video editor.",
+   "ko": "방송국에는 솜씨 좋은 영상 편집자가 필요해요.",
+   "blank": "कुशल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की बुआ बहुत कुशल रसोइया हैं, उनके हाथ की खीर सबको याद रहती है।",
+   "en": "Shalini's aunt is a very skilled cook; everyone remembers her kheer.",
+   "ko": "샬리니 고모는 솜씨 좋은 요리사라 고모가 만든 키르는 모두 잊지 못해요.",
+   "blank": "कुशल",
    "src": "made"
   }
  ],
@@ -10743,6 +10919,22 @@
    "en": "There is a cricket match tonight.",
    "ko": "오늘 밤 크리켓 경기가 있어.",
    "blank": "क्रिकेट"
+  }
+ ],
+ "w|क्रिया": [
+  {
+   "text": "विकास ने नए रिपोर्टर को समझाया कि हर वाक्य में क्रिया साफ़ होनी चाहिए।",
+   "en": "Vikas explained to the new reporter that the verb should be clear in every sentence.",
+   "ko": "비카스는 새 기자에게 문장마다 동사가 분명해야 한다고 설명했어요.",
+   "blank": "क्रिया",
+   "src": "made"
+  },
+  {
+   "text": "पंडित जी ने फेरों की हर क्रिया का अर्थ शालिनी को समझाया।",
+   "en": "The priest explained to Shalini the meaning of every rite of the circling ceremony.",
+   "ko": "사제는 샬리니에게 혼례 의식 하나하나의 뜻을 설명해 줬어요.",
+   "blank": "क्रिया",
+   "src": "made"
   }
  ],
  "w|क्रिसमस": [
@@ -22917,6 +23109,22 @@
    "blank": "दर"
   }
  ],
+ "w|दरअसल": [
+  {
+   "text": "सब सोच रहे थे कि विकास छुट्टी पर है, दरअसल वह एक गुप्त रिपोर्ट पर काम कर रहा था।",
+   "en": "Everyone thought Vikas was on leave; actually he was working on a secret report.",
+   "ko": "다들 비카스가 휴가 중인 줄 알았지만 사실은 비밀 취재를 하고 있었어요.",
+   "blank": "दरअसल",
+   "src": "made"
+  },
+  {
+   "text": "सब समझे शालिनी रो रही है, दरअसल उसकी आँख में काजल चला गया था।",
+   "en": "Everyone thought Shalini was crying; actually kohl had got into her eye.",
+   "ko": "다들 샬리니가 우는 줄 알았는데 사실은 눈에 카잘이 들어간 거였어요.",
+   "blank": "दरअसल",
+   "src": "made"
+  }
+ ],
  "w|दरख़्वास्त": [
   {
    "text": "बच्चों ने प्रिंसिपल से दरख़्वास्त की कि खेल का पीरियड बढ़ाया जाए।",
@@ -24275,6 +24483,22 @@
    "blank": "दूसरी"
   }
  ],
+ "w|दृढ़": [
+  {
+   "text": "विकास दृढ़ है कि सच दिखाने से वह पीछे नहीं हटेगा।",
+   "en": "Vikas is firm that he won't back off from showing the truth.",
+   "ko": "비카스는 진실을 보여 주는 데서 물러서지 않겠다고 굳게 다짐했어요.",
+   "blank": "दृढ़",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने दृढ़ फ़ैसला किया कि शादी में दहेज की कोई बात नहीं होगी।",
+   "en": "Shalini firmly decided there would be no talk of dowry at the wedding.",
+   "ko": "샬리니는 결혼식에서 지참금 얘기는 절대 없게 하겠다고 굳게 마음먹었어요.",
+   "blank": "दृढ़",
+   "src": "made"
+  }
+ ],
  "w|दृश्य": [
   {
    "text": "पहाड़ से समुद्र का दृश्य सुंदर है।",
@@ -25074,6 +25298,22 @@
    "en": "Deepa said the blade's edge is very sharp, so hold it with gloves on.",
    "ko": "디파는 칼날이 아주 날카로우니 장갑을 끼고 잡으라고 했어요.",
    "blank": "धार",
+   "src": "made"
+  }
+ ],
+ "w|धारण करना": [
+  {
+   "text": "विकास ने बताया कि न्यायाधीश काला चोगा धारण करके अदालत में आते हैं।",
+   "en": "Vikas explained that judges come to court wearing a black robe.",
+   "ko": "비카스는 판사들이 검은 법복을 입고 법정에 나온다고 설명했어요.",
+   "blank": "धारण करके",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने अपनी माँ के गहने धारण किए, जो उन्होंने अपनी शादी में पहने थे।",
+   "en": "Shalini wore her mother's jewellery, which her mother had worn at her own wedding.",
+   "ko": "샬리니는 엄마가 결혼할 때 했던 장신구를 걸쳤어요.",
+   "blank": "धारण किए",
    "src": "made"
   }
  ],
@@ -26957,6 +27197,22 @@
    "src": "made"
   }
  ],
+ "w|निम्नलिखित": [
+  {
+   "text": "विकास ने नए रिपोर्टरों को निम्नलिखित नियम याद रखने को कहा।",
+   "en": "Vikas told the new reporters to remember the following rules.",
+   "ko": "비카스는 새 기자들에게 다음 규칙을 기억하라고 했어요.",
+   "blank": "निम्नलिखित",
+   "src": "made"
+  },
+  {
+   "text": "कार्ड पर लिखा था कि निम्नलिखित कार्यक्रमों में आपकी उपस्थिति प्रार्थनीय है।",
+   "en": "The card said your presence is requested at the following events.",
+   "ko": "청첩장에는 다음 행사에 참석해 주시길 바란다고 적혀 있었어요.",
+   "blank": "निम्नलिखित",
+   "src": "made"
+  }
+ ],
  "w|नियंत्रण": [
   {
    "text": "गुस्से में भी विकास ने अपनी आवाज़ पर नियंत्रण नहीं खोया।",
@@ -27115,6 +27371,22 @@
    "en": "Read the directions given on the packet.",
    "ko": "포장에 적힌 안내를 읽어.",
    "blank": "निर्देश"
+  }
+ ],
+ "w|निर्देशक": [
+  {
+   "text": "विकास ने एक मशहूर फ़िल्म निर्देशक का इंटरव्यू लिया।",
+   "en": "Vikas interviewed a well-known film director.",
+   "ko": "비카스는 유명한 영화감독을 인터뷰했어요.",
+   "blank": "निर्देशक",
+   "src": "made"
+  },
+  {
+   "text": "शादी का वीडियो बनाने के लिए शालिनी ने एक युवा निर्देशक को बुलाया।",
+   "en": "Shalini called in a young director to make the wedding video.",
+   "ko": "샬리니는 결혼식 영상을 찍으려고 젊은 감독을 불렀어요.",
+   "blank": "निर्देशक",
+   "src": "made"
   }
  ],
  "w|निर्धारित": [
@@ -27889,6 +28161,22 @@
    "en": "The judge delivered justice.",
    "ko": "판사가 정의를 실현했어.",
    "blank": "न्याय"
+  }
+ ],
+ "w|न्यायाधीश": [
+  {
+   "text": "विकास अदालत से ख़बर लाया कि न्यायाधीश ने फ़ैसला अगले हफ़्ते तक टाल दिया है।",
+   "en": "Vikas brought news from the court that the judge has deferred the verdict until next week.",
+   "ko": "비카스는 판사가 판결을 다음 주로 미뤘다는 소식을 법원에서 가져왔어요.",
+   "blank": "न्यायाधीश",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के पिता एक सेवानिवृत्त न्यायाधीश हैं, इसलिए मेहमानों में कई वकील भी थे।",
+   "en": "Shalini's father is a retired judge, so there were many lawyers among the guests.",
+   "ko": "샬리니 아버지가 은퇴한 판사라서 손님 중에 변호사도 많았어요.",
+   "blank": "न्यायाधीश",
+   "src": "made"
   }
  ],
  "w|न्यायालय": [
@@ -31761,6 +32049,22 @@
    "src": "made"
   }
  ],
+ "w|प्रकाशन": [
+  {
+   "text": "विकास की किताब का प्रकाशन अगले महीने होगा।",
+   "en": "Vikas's book will be published next month.",
+   "ko": "비카스의 책은 다음 달에 출간돼요.",
+   "blank": "प्रकाशन",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के मामा एक प्रकाशन कंपनी चलाते हैं और उन्होंने शादी के कार्ड छपवाए।",
+   "en": "Shalini's uncle runs a publishing company and had the wedding cards printed.",
+   "ko": "샬리니의 외삼촌은 출판사를 운영하는데 청첩장을 찍어 줬어요.",
+   "blank": "प्रकाशन",
+   "src": "made"
+  }
+ ],
  "w|प्रकाशित": [
   {
    "text": "फ़ैक्टरी की सुरक्षा पर अमित का लेख कंपनी की पत्रिका में प्रकाशित हुआ।",
@@ -32215,6 +32519,22 @@
    "blank": "प्रदर्शन"
   }
  ],
+ "w|प्रदर्शित": [
+  {
+   "text": "न्यूज़रूम की बड़ी स्क्रीन पर चुनाव के नतीजे प्रदर्शित हो रहे थे।",
+   "en": "Election results were being displayed on the big screen in the newsroom.",
+   "ko": "보도국 대형 화면에 선거 결과가 떠 있었어요.",
+   "blank": "प्रदर्शित",
+   "src": "made"
+  },
+  {
+   "text": "मंडप में शालिनी की दादी की पुरानी साड़ियाँ प्रदर्शित की गईं।",
+   "en": "Shalini's grandmother's old saris were displayed in the wedding pavilion.",
+   "ko": "결혼식 천막에 샬리니 할머니의 옛 사리가 전시됐어요.",
+   "blank": "प्रदर्शित",
+   "src": "made"
+  }
+ ],
  "w|प्रदान करना": [
   {
    "text": "पुलिस ने बुज़ुर्गों को मुफ़्त कानूनी सलाह प्रदान करने की योजना शुरू की।",
@@ -32319,6 +32639,22 @@
    "src": "made"
   }
  ],
+ "w|प्रभारी": [
+  {
+   "text": "रात की पाली में विकास न्यूज़रूम का प्रभारी होता है।",
+   "en": "On the night shift, Vikas is the one in charge of the newsroom.",
+   "ko": "야간 근무 때는 비카스가 보도국 책임자예요.",
+   "blank": "प्रभारी",
+   "src": "made"
+  },
+  {
+   "text": "खाने के इंतज़ाम का प्रभारी शालिनी का बड़ा भाई था।",
+   "en": "Shalini's elder brother was in charge of the food arrangements.",
+   "ko": "음식 준비 책임자는 샬리니 오빠였어요.",
+   "blank": "प्रभारी",
+   "src": "made"
+  }
+ ],
  "w|प्रभाव": [
   {
    "text": "फिल्म का गहरा प्रभाव पड़ा।",
@@ -32331,6 +32667,22 @@
    "en": "The effect of sunlight shows on the skin.",
    "ko": "햇빛의 영향이 피부에 나타나.",
    "blank": "प्रभाव"
+  }
+ ],
+ "w|प्रभावशाली": [
+  {
+   "text": "विकास की आवाज़ इतनी प्रभावशाली है कि लोग रुककर ख़बर सुनते हैं।",
+   "en": "Vikas's voice is so impressive that people stop to listen to the news.",
+   "ko": "비카스 목소리가 워낙 인상적이라 사람들이 멈춰서 뉴스를 들어요.",
+   "blank": "प्रभावशाली",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का लाल लहँगा इतना प्रभावशाली था कि सब देखते रह गए।",
+   "en": "Shalini's red lehenga was so striking that everyone kept staring.",
+   "ko": "샬리니의 빨간 레헹가가 워낙 눈부셔서 모두 넋을 잃고 봤어요.",
+   "blank": "प्रभावशाली",
+   "src": "made"
   }
  ],
  "w|प्रभावित": [
@@ -32417,6 +32769,22 @@
    "en": "The team congratulated the new manager on the promotion.",
    "ko": "팀이 새 매니저의 승진을 축하했어.",
    "blank": "प्रमोशन"
+  }
+ ],
+ "w|प्रयत्न": [
+  {
+   "text": "काफ़ी प्रयत्न के बाद विकास को मंत्री से पाँच मिनट का समय मिला।",
+   "en": "After a lot of effort, Vikas got five minutes with the minister.",
+   "ko": "비카스는 한참 애쓴 끝에 장관과 오 분 만날 시간을 얻었어요.",
+   "blank": "प्रयत्न",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने अपने प्रयत्न से सारे रिश्तेदारों को एक जगह इकट्ठा कर लिया।",
+   "en": "By her own effort, Shalini gathered all the relatives in one place.",
+   "ko": "샬리니는 애써서 친척들을 한자리에 다 모았어요.",
+   "blank": "प्रयत्न",
+   "src": "made"
   }
  ],
  "w|प्रयास": [
@@ -32613,6 +32981,22 @@
    "blank": "प्रशिक्षण"
   }
  ],
+ "w|प्रशिक्षित": [
+  {
+   "text": "कैमरे वाले सभी लोग आग के बीच काम करने के लिए प्रशिक्षित हैं।",
+   "en": "All the camera crew are trained to work amid fires.",
+   "ko": "카메라 담당자들은 모두 화재 현장에서 일하도록 훈련받았어요.",
+   "blank": "प्रशिक्षित",
+   "src": "made"
+  },
+  {
+   "text": "शादी में आए ढोल वाले बचपन से प्रशिक्षित कलाकार थे।",
+   "en": "The drummers at the wedding were artists trained since childhood.",
+   "ko": "결혼식에 온 북 연주자들은 어릴 때부터 훈련받은 연주자였어요.",
+   "blank": "प्रशिक्षित",
+   "src": "made"
+  }
+ ],
  "w|प्रश्न": [
   {
    "text": "अगर कोई प्रश्न हो तो पूछो।",
@@ -32774,6 +33158,22 @@
    "en": "At the school function the children performed a mountain folk song.",
    "ko": "학교 행사에서 아이들이 산골 민요를 선보였어요.",
    "blank": "प्रस्तुत",
+   "src": "made"
+  }
+ ],
+ "w|प्रस्तुत करना": [
+  {
+   "text": "विकास ने मीटिंग में अपने नए शो का प्रस्ताव प्रस्तुत किया।",
+   "en": "Vikas presented his proposal for a new show at the meeting.",
+   "ko": "비카스는 회의에서 새 프로그램 기획안을 내놓았어요.",
+   "blank": "प्रस्तुत किया",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की छोटी बहन ने संगीत की रात एक सुंदर नृत्य प्रस्तुत किया।",
+   "en": "Shalini's little sister performed a beautiful dance on the music night.",
+   "ko": "샬리니 여동생은 음악의 밤에 아름다운 춤을 선보였어요.",
+   "blank": "प्रस्तुत किया",
    "src": "made"
   }
  ],
@@ -38307,6 +38707,22 @@
    "blank": "भीतर"
   }
  ],
+ "w|भीषण": [
+  {
+   "text": "विकास ने भीषण गर्मी में धूप में खड़े होकर लाइव रिपोर्ट दी।",
+   "en": "Vikas gave a live report standing in the sun in the scorching heat.",
+   "ko": "비카스는 무시무시한 더위 속에 햇볕 아래 서서 생방송 보도를 했어요.",
+   "blank": "भीषण",
+   "src": "made"
+  },
+  {
+   "text": "शादी वाले दिन भीषण बारिश हुई, फिर भी सारे मेहमान पहुँचे।",
+   "en": "There was torrential rain on the wedding day, yet all the guests arrived.",
+   "ko": "결혼식 날 폭우가 쏟아졌는데도 손님이 모두 왔어요.",
+   "blank": "भीषण",
+   "src": "made"
+  }
+ ],
  "w|भुगतान": [
   {
    "text": "भुगतान कार्ड से हो गया।",
@@ -40501,6 +40917,22 @@
    "blank": "मान"
   }
  ],
+ "w|मानक": [
+  {
+   "text": "संपादक कहते हैं कि ख़बर की जाँच का मानक कभी नीचे नहीं आना चाहिए।",
+   "en": "The editor says the standard for checking news should never drop.",
+   "ko": "편집장은 기사 검증 기준을 절대 낮춰선 안 된다고 말해요.",
+   "blank": "मानक",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की माँ के लिए खाने का स्वाद ही मेहमाननवाज़ी का असली मानक है।",
+   "en": "For Shalini's mother, the taste of the food is the real measure of hospitality.",
+   "ko": "샬리니 엄마에게는 음식 맛이 손님 대접의 진짜 기준이에요.",
+   "blank": "मानक",
+   "src": "made"
+  }
+ ],
  "w|मानना": [
   {
    "text": "मेरी एक बात मान लो।",
@@ -40799,6 +41231,22 @@
    "en": "A teacher becomes a good guide in life.",
    "ko": "선생님은 인생의 좋은 길잡이가 돼.",
    "blank": "मार्गदर्शक"
+  }
+ ],
+ "w|मार्गदर्शन": [
+  {
+   "text": "नए रिपोर्टर विकास के मार्गदर्शन में काम सीख रहे हैं।",
+   "en": "The new reporters are learning the job under Vikas's guidance.",
+   "ko": "새 기자들은 비카스의 지도 아래 일을 배우고 있어요.",
+   "blank": "मार्गदर्शन",
+   "src": "made"
+  },
+  {
+   "text": "रस्मों के बारे में शालिनी ने अपनी नानी से मार्गदर्शन लिया।",
+   "en": "Shalini sought guidance from her grandmother about the rituals.",
+   "ko": "샬리니는 의식에 대해 외할머니께 조언을 구했어요.",
+   "blank": "मार्गदर्शन",
+   "src": "made"
   }
  ],
  "w|मार्च": [
@@ -41148,6 +41596,22 @@
    "en": "Neha's mission is for every girl in the village to go to school.",
    "ko": "네하의 목표는 마을 소녀가 모두 학교에 다니는 거예요.",
    "blank": "मिशन",
+   "src": "made"
+  }
+ ],
+ "w|मिसाल": [
+  {
+   "text": "विकास की ईमानदारी पूरे न्यूज़रूम के लिए एक मिसाल है।",
+   "en": "Vikas's honesty is an example to the whole newsroom.",
+   "ko": "비카스의 정직함은 보도국 전체에 본보기예요.",
+   "blank": "मिसाल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की सादी शादी अब मोहल्ले में एक मिसाल बन गई है।",
+   "en": "Shalini's simple wedding has now become an example in the neighbourhood.",
+   "ko": "샬리니의 소박한 결혼식은 이제 동네의 본보기가 됐어요.",
+   "blank": "मिसाल",
    "src": "made"
   }
  ],
@@ -42567,6 +43031,22 @@
    "src": "made"
   }
  ],
+ "w|मौलिक": [
+  {
+   "text": "संपादक को विकास के मौलिक विचार हमेशा पसंद आते हैं।",
+   "en": "The editor always likes Vikas's original ideas.",
+   "ko": "편집장은 비카스의 독창적인 아이디어를 늘 좋아해요.",
+   "blank": "मौलिक",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के भाई ने अपनी लिखी एक मौलिक कविता दुल्हन के लिए पढ़ी।",
+   "en": "Shalini's brother read an original poem he had written for the bride.",
+   "ko": "샬리니 오빠는 신부를 위해 직접 쓴 시를 낭독했어요.",
+   "blank": "मौलिक",
+   "src": "made"
+  }
+ ],
  "w|मौसम": [
   {
    "text": "आज मौसम बहुत सुहावना है।",
@@ -43351,6 +43831,22 @@
    "src": "made"
   }
  ],
+ "w|रणनीति": [
+  {
+   "text": "चुनाव की रात की कवरेज के लिए विकास ने टीम के साथ पूरी रणनीति बनाई।",
+   "en": "Vikas worked out a full strategy with the team for election-night coverage.",
+   "ko": "비카스는 선거 당일 밤 방송을 위해 팀과 전략을 짰어요.",
+   "blank": "रणनीति",
+   "src": "made"
+  },
+  {
+   "text": "जूता छिपाने की रस्म के लिए शालिनी की सहेलियों ने पक्की रणनीति बनाई।",
+   "en": "For the shoe-hiding ritual, Shalini's friends made a solid strategy.",
+   "ko": "신발 숨기기 의식을 위해 샬리니 친구들은 철저히 작전을 짰어요.",
+   "blank": "रणनीति",
+   "src": "made"
+  }
+ ],
  "w|रद्द": [
   {
    "text": "बारिश की वजह से शाम की बड़ी बुकिंग रद्द हो गई।",
@@ -43587,6 +44083,22 @@
    "en": "He revealed the story's mystery at the end.",
    "ko": "그는 이야기 비밀을 마지막에 풀었어.",
    "blank": "रहस्य"
+  }
+ ],
+ "w|रहित": [
+  {
+   "text": "विकास चाहता है कि उसकी ख़बरें पक्षपात से रहित हों।",
+   "en": "Vikas wants his reports to be free of bias.",
+   "ko": "비카스는 자기 기사가 치우침 없기를 바라요.",
+   "blank": "रहित",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने कहा कि वह प्लास्टिक रहित शादी करना चाहती है।",
+   "en": "Shalini said she wanted a plastic-free wedding.",
+   "ko": "샬리니는 플라스틱 없는 결혼식을 하고 싶다고 했어요.",
+   "blank": "रहित",
+   "src": "made"
   }
  ],
  "w|राक्षस": [
@@ -45362,6 +45874,22 @@
    "en": "It was necessary to fill in name, age and gender on the form.",
    "ko": "신청서에는 이름, 나이, 성별을 꼭 적어야 했어요.",
    "blank": "लिंग",
+   "src": "made"
+  }
+ ],
+ "w|लिपि": [
+  {
+   "text": "विकास ने एक ऐसे गाँव पर रिपोर्ट की जहाँ बुज़ुर्ग आज भी पुरानी लिपि में लिखते हैं।",
+   "en": "Vikas reported on a village where elders still write in an old script.",
+   "ko": "비카스는 노인들이 아직도 옛 문자로 글을 쓰는 마을을 취재했어요.",
+   "blank": "लिपि",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के निमंत्रण पत्र पर नाम एक ओर हिंदी में और दूसरी ओर रोमन लिपि में छपे थे।",
+   "en": "On Shalini's invitation the names were printed in Hindi on one side and in Roman script on the other.",
+   "ko": "샬리니 청첩장에는 이름이 한쪽은 힌디어로, 다른 쪽은 로마자로 찍혀 있었어요.",
+   "blank": "लिपि",
    "src": "made"
   }
  ],
@@ -48905,6 +49433,22 @@
    "src": "made"
   }
  ],
+ "w|शीर्षक": [
+  {
+   "text": "संपादक ने विकास से ख़बर के लिए छोटा और तीखा शीर्षक माँगा।",
+   "en": "The editor asked Vikas for a short, sharp headline for the story.",
+   "ko": "편집장은 비카스에게 짧고 날카로운 제목을 달라고 했어요.",
+   "blank": "शीर्षक",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने अपनी शादी के एल्बम का शीर्षक \"नई शुरुआत\" रखा।",
+   "en": "Shalini titled her wedding album \"A New Beginning\".",
+   "ko": "샬리니는 결혼 앨범 제목을 \"새로운 시작\"이라고 지었어요.",
+   "blank": "शीर्षक",
+   "src": "made"
+  }
+ ],
  "w|शीशा": [
   {
    "text": "कमरे का शीशा साफ़ करो।",
@@ -49298,6 +49842,22 @@
    "en": "In memory of an old shopkeeper, the market paid tribute by closing for a day.",
    "ko": "오래된 상인을 기리려고 시장은 하루 문을 닫고 추모했어요.",
    "blank": "श्रद्धांजलि",
+   "src": "made"
+  }
+ ],
+ "w|श्रम": [
+  {
+   "text": "विकास ने ईंट भट्ठों पर मज़दूरों के कठिन श्रम पर एक रिपोर्ट बनाई।",
+   "en": "Vikas made a report on the hard labour of workers at brick kilns.",
+   "ko": "비카스는 벽돌 가마 노동자들의 고된 노동을 다룬 보도를 만들었어요.",
+   "blank": "श्रम",
+   "src": "made"
+  },
+  {
+   "text": "शादी की तैयारी में पूरे परिवार का श्रम लगा।",
+   "en": "The whole family's labour went into the wedding preparations.",
+   "ko": "결혼식 준비에는 온 가족의 수고가 들어갔어요.",
+   "blank": "श्रम",
    "src": "made"
   }
  ],
@@ -50804,6 +51364,22 @@
    "en": "Next month Deepa has to present her research before scientists.",
    "ko": "디파는 다음 달 과학자들 앞에서 연구를 발표해야 해요.",
    "blank": "समक्ष",
+   "src": "made"
+  }
+ ],
+ "w|समग्र": [
+  {
+   "text": "विकास शहर की यातायात समस्या पर एक समग्र रिपोर्ट तैयार कर रहा है।",
+   "en": "Vikas is preparing a comprehensive report on the city's traffic problem.",
+   "ko": "비카스는 도시 교통 문제에 관한 종합 보도를 준비하고 있어요.",
+   "blank": "समग्र",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की माँ ने शादी के बजट का एक समग्र हिसाब बनाया।",
+   "en": "Shalini's mother drew up an overall account of the wedding budget.",
+   "ko": "샬리니 엄마는 결혼식 예산 전체를 정리했어요.",
+   "blank": "समग्र",
    "src": "made"
   }
  ],
@@ -52569,6 +53145,22 @@
    "blank": "साथी"
   }
  ],
+ "w|साधन": [
+  {
+   "text": "पहाड़ों में रिपोर्टिंग के लिए विकास के पास आने-जाने का कोई साधन नहीं था।",
+   "en": "Vikas had no means of transport for reporting in the mountains.",
+   "ko": "비카스는 산간 지역 취재를 갈 교통수단이 없었어요.",
+   "blank": "साधन",
+   "src": "made"
+  },
+  {
+   "text": "बारात के आने-जाने के लिए परिवार ने हर साधन का इंतज़ाम किया।",
+   "en": "The family arranged every means of transport for the wedding procession.",
+   "ko": "신랑 행렬이 오가도록 가족은 탈것을 모두 마련했어요.",
+   "blank": "साधन",
+   "src": "made"
+  }
+ ],
  "w|साधना": [
   {
    "text": "ड्यूटी से पहले सुनील रोज़ सुबह योग साधना करते हैं।",
@@ -53199,6 +53791,22 @@
    "en": "The phone signal is weak here.",
    "ko": "여기선 휴대전화 신호가 약해.",
    "blank": "सिग्नल"
+  }
+ ],
+ "w|सिंचाई": [
+  {
+   "text": "विकास की अगली रिपोर्ट गाँवों में सिंचाई की कमी पर है।",
+   "en": "Vikas's next report is on the lack of irrigation in villages.",
+   "ko": "비카스의 다음 보도는 시골의 관개 부족 문제예요.",
+   "blank": "सिंचाई",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी का ससुराल गाँव में है, जहाँ खेतों की सिंचाई नहर से होती है।",
+   "en": "Shalini's in-laws live in a village where the fields are irrigated by canal.",
+   "ko": "샬리니 시댁은 운하로 논밭에 물을 대는 시골에 있어요.",
+   "blank": "सिंचाई",
+   "src": "made"
   }
  ],
  "w|सिटकनी": [
@@ -55145,6 +55753,22 @@
    "src": "made"
   }
  ],
+ "w|स्रोत": [
+  {
+   "text": "विकास अपने स्रोत का नाम किसी को नहीं बताता।",
+   "en": "Vikas doesn't tell anyone the name of his source.",
+   "ko": "비카스는 취재원 이름을 누구에게도 말하지 않아요.",
+   "blank": "स्रोत",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी कहती है कि मेहंदी की ख़ुशबू उसकी ख़ुशी का स्रोत है।",
+   "en": "Shalini says the scent of henna is a source of her happiness.",
+   "ko": "샬리니는 헤나 향이 자기 기쁨의 원천이라고 말해요.",
+   "blank": "स्रोत",
+   "src": "made"
+  }
+ ],
  "w|स्लीपर": [
   {
    "text": "फल वाला रात की ट्रेन के स्लीपर डिब्बे में आम की पेटियाँ लाता है।",
@@ -56171,6 +56795,22 @@
    "en": "A thorn pricked my hand.",
    "ko": "손에 가시가 찔렸어.",
    "blank": "हाथ"
+  }
+ ],
+ "w|हाथ मिलाना": [
+  {
+   "text": "बहस के बाद दोनों नेताओं ने कैमरे के सामने हाथ मिलाया।",
+   "en": "After the debate both leaders shook hands in front of the camera.",
+   "ko": "토론이 끝나자 두 정치인은 카메라 앞에서 악수했어요.",
+   "blank": "हाथ मिलाया",
+   "src": "made"
+  },
+  {
+   "text": "दोनों परिवारों के पिताओं ने गले लगने से पहले हाथ मिलाया।",
+   "en": "The fathers of both families shook hands before embracing.",
+   "ko": "양가 아버지들은 포옹하기 전에 악수를 나눴어요.",
+   "blank": "हाथ मिलाया",
+   "src": "made"
   }
  ],
  "w|हाथी": [

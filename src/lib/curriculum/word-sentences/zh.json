@@ -865,6 +865,22 @@
    "blank": "下车"
   }
  ],
+ "w|下载": [
+  {
+   "text": "小明下载了一个菜谱应用，有空就学新菜。",
+   "en": "Xiao Ming downloaded a recipe app and learns new dishes when he has time.",
+   "ko": "샤오밍은 레시피 앱을 내려받아서 시간 날 때마다 새 요리를 배워요.",
+   "blank": "下载",
+   "src": "made"
+  },
+  {
+   "text": "丽丽从网上下载了一篇国外的论文。",
+   "en": "Lili downloaded a paper from abroad online.",
+   "ko": "리리는 인터넷에서 해외 논문 한 편을 내려받았어요.",
+   "blank": "下载",
+   "src": "made"
+  }
+ ],
  "w|下降": [
   {
    "text": "这几年辖区里的盗窃案明显下降了。",
@@ -982,6 +998,22 @@
    "en": "What Li Na wants isn't just to win but to earn everyone's respect.",
    "ko": "리나가 원하는 건 이기는 것만이 아니라 모두의 인정이에요.",
    "blank": "不仅仅",
+   "src": "made"
+  }
+ ],
+ "w|不但": [
+  {
+   "text": "小明不但会做中餐，还会烤面包。",
+   "en": "Xiao Ming can not only cook Chinese food but also bake bread.",
+   "ko": "샤오밍은 중국 요리뿐 아니라 빵도 구울 줄 알아요.",
+   "blank": "不但",
+   "src": "made"
+  },
+  {
+   "text": "这种新材料不但轻，而且非常结实。",
+   "en": "This new material is not only light but also very strong.",
+   "ko": "이 신소재는 가벼울 뿐 아니라 아주 튼튼해요.",
+   "blank": "不但",
    "src": "made"
   }
  ],
@@ -2597,6 +2629,22 @@
    "blank": "买"
   }
  ],
+ "w|买卖": [
+  {
+   "text": "老板年轻时在码头做海鲜买卖，后来才开了餐厅。",
+   "en": "When he was young, the owner traded seafood at the docks before opening the restaurant.",
+   "ko": "사장님은 젊었을 때 부두에서 해산물 장사를 하다가 나중에 식당을 열었어요.",
+   "blank": "买卖",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的爸爸一辈子做水果买卖，最希望女儿读博士。",
+   "en": "Lili's father traded fruit his whole life and most wanted his daughter to get a doctorate.",
+   "ko": "리리 아빠는 평생 과일 장사를 해서 딸이 박사가 되기를 가장 바랐어요.",
+   "blank": "买卖",
+   "src": "made"
+  }
+ ],
  "w|乱": [
   {
    "text": "房间太乱了。",
@@ -2723,6 +2771,22 @@
    "en": "Nothing's up.",
    "ko": "별일 없어.",
    "blank": "事儿"
+  }
+ ],
+ "w|事务": [
+  {
+   "text": "经理忙着处理订座和排班这些日常事务。",
+   "en": "The manager is busy handling day-to-day matters like reservations and shift schedules.",
+   "ko": "매니저는 예약이랑 근무표 같은 일상 업무를 처리하느라 바빠요.",
+   "blank": "事务",
+   "src": "made"
+  },
+  {
+   "text": "实验室的行政事务都交给一位秘书处理。",
+   "en": "The lab's administrative matters are all handled by a secretary.",
+   "ko": "실험실 행정 업무는 전부 비서 한 분이 처리해요.",
+   "blank": "事务",
+   "src": "made"
   }
  ],
  "w|事实": [
@@ -3015,6 +3079,22 @@
    "src": "made"
   }
  ],
+ "w|产业": [
+  {
+   "text": "这几年餐饮产业竞争越来越激烈。",
+   "en": "In recent years, competition in the food service industry has gotten fiercer.",
+   "ko": "요 몇 년 외식 산업 경쟁이 점점 치열해졌어요.",
+   "blank": "产业",
+   "src": "made"
+  },
+  {
+   "text": "教授的研究跟新能源产业关系很密切。",
+   "en": "The professor's research is closely tied to the new energy industry.",
+   "ko": "교수님의 연구는 신에너지 산업과 아주 밀접해요.",
+   "blank": "产业",
+   "src": "made"
+  }
+ ],
  "w|产品": [
   {
    "text": "有个摊位专门卖旧的电子产品，黄涛在那里转了很久。",
@@ -3150,6 +3230,22 @@
    "en": "During the holiday, lots of relatives came to Liu Fang's place, and the stairwell was full of shoes.",
    "ko": "명절에 류팡네 집에 친척이 많이 와서 복도가 신발로 가득했어요.",
    "blank": "亲戚",
+   "src": "made"
+  }
+ ],
+ "w|亲手": [
+  {
+   "text": "这道红烧肉是主厨亲手教小明做的。",
+   "en": "The head chef personally taught Xiao Ming how to make this braised pork.",
+   "ko": "이 홍샤오러우는 주방장이 샤오밍에게 직접 가르쳐 준 요리예요.",
+   "blank": "亲手",
+   "src": "made"
+  },
+  {
+   "text": "这个装置是丽丽亲手做的，花了两个月。",
+   "en": "Lili made this device with her own hands, and it took two months.",
+   "ko": "이 장치는 리리가 직접 만든 거라서 두 달이 걸렸어요.",
+   "blank": "亲手",
    "src": "made"
   }
  ],
@@ -3709,6 +3805,22 @@
    "blank": "从没"
   }
  ],
+ "w|从而": [
+  {
+   "text": "餐厅改用本地食材，从而降低了成本。",
+   "en": "The restaurant switched to local ingredients, thereby lowering its costs.",
+   "ko": "식당은 현지 식재료로 바꿔서 원가를 낮췄어요.",
+   "blank": "从而",
+   "src": "made"
+  },
+  {
+   "text": "丽丽改进了加热方法，从而缩短了实验时间。",
+   "en": "Lili improved the heating method, thereby shortening the experiment time.",
+   "ko": "리리는 가열 방법을 개선해서 실험 시간을 줄였어요.",
+   "blank": "从而",
+   "src": "made"
+  }
+ ],
  "w|仓库": [
   {
    "text": "过期的报纸都堆在地下仓库里，一年清理一次。",
@@ -3866,6 +3978,22 @@
    "en": "Lili's agent is sick, so another colleague at the agency is handling her work this month.",
    "ko": "리리의 매니저가 아파서 이번 달은 회사 다른 직원이 일을 대신 맡아요.",
    "blank": "代理",
+   "src": "made"
+  }
+ ],
+ "w|代码": [
+  {
+   "text": "点菜系统出了问题，老板的侄子连夜改了代码。",
+   "en": "The ordering system had a problem, so the owner's nephew fixed the code overnight.",
+   "ko": "주문 시스템에 문제가 생겨서 사장님 조카가 밤새 코드를 고쳤어요.",
+   "blank": "代码",
+   "src": "made"
+  },
+  {
+   "text": "丽丽写了一段代码，让仪器自动记录数据。",
+   "en": "Lili wrote some code so the instrument records data automatically.",
+   "ko": "리리는 코드를 짜서 장비가 데이터를 자동으로 기록하게 했어요.",
+   "blank": "代码",
    "src": "made"
   }
  ],
@@ -6179,6 +6307,22 @@
    "blank": "光"
   }
  ],
+ "w|光明": [
+  {
+   "text": "主厨觉得小明很有天分，将来的路一片光明。",
+   "en": "The head chef thinks Xiao Ming is very talented and has a bright future ahead.",
+   "ko": "주방장은 샤오밍이 재능이 있어서 앞날이 밝다고 생각해요.",
+   "blank": "光明",
+   "src": "made"
+  },
+  {
+   "text": "老教授说，搞科研的年轻人前途光明。",
+   "en": "The old professor says young people in research have a bright future.",
+   "ko": "노교수님은 연구하는 젊은이들의 앞날이 밝다고 말해요.",
+   "blank": "光明",
+   "src": "made"
+  }
+ ],
  "w|克": [
   {
    "text": "称一下几克。",
@@ -7949,6 +8093,22 @@
    "src": "made"
   }
  ],
+ "w|出售": [
+  {
+   "text": "餐厅把用旧的炉灶便宜出售给了一家小面馆。",
+   "en": "The restaurant sold its old stove cheaply to a small noodle shop.",
+   "ko": "식당은 쓰던 화덕을 작은 국숫집에 싸게 팔았어요.",
+   "blank": "出售",
+   "src": "made"
+  },
+  {
+   "text": "这种试剂只出售给有资质的研究机构。",
+   "en": "This reagent is only sold to qualified research institutions.",
+   "ko": "이 시약은 자격을 갖춘 연구 기관에만 판매돼요.",
+   "blank": "出售",
+   "src": "made"
+  }
+ ],
  "w|出席": [
   {
    "text": "王刚受邀出席了一场保护森林的讲座。",
@@ -8217,6 +8377,22 @@
    "blank": "分析"
   }
  ],
+ "w|分离": [
+  {
+   "text": "小明熟练地把蛋黄和蛋清分离开来。",
+   "en": "Xiao Ming skillfully separated the yolks from the whites.",
+   "ko": "샤오밍은 능숙하게 노른자와 흰자를 분리했어요.",
+   "blank": "分离",
+   "src": "made"
+  },
+  {
+   "text": "丽丽用离心机把血液里的成分分离出来。",
+   "en": "Lili used the centrifuge to separate the components in the blood.",
+   "ko": "리리는 원심분리기로 혈액 속 성분을 분리했어요.",
+   "blank": "分离",
+   "src": "made"
+  }
+ ],
  "w|分配": [
   {
    "text": "物业按面积分配每家的停车位。",
@@ -8410,6 +8586,22 @@
    "en": "Lili finds it hard to decide which old things to throw out and which to keep.",
    "ko": "리리는 어떤 물건을 버리고 어떤 걸 남길지 판단하기 어려웠어요.",
    "blank": "判断",
+   "src": "made"
+  }
+ ],
+ "w|利润": [
+  {
+   "text": "节假日生意好，餐厅的利润能翻一倍。",
+   "en": "Business is good on holidays, and the restaurant's profit can double.",
+   "ko": "명절에는 장사가 잘돼서 식당 이익이 두 배가 되기도 해요.",
+   "blank": "利润",
+   "src": "made"
+  },
+  {
+   "text": "教授的专利卖给了一家药厂，每年都有利润分成。",
+   "en": "The professor's patent was sold to a pharmaceutical company, and he gets a share of the profit every year.",
+   "ko": "교수님의 특허가 제약회사에 팔려서 해마다 이익을 나눠 받아요.",
+   "blank": "利润",
    "src": "made"
   }
  ],
@@ -10119,6 +10311,22 @@
    "blank": "厉害"
   }
  ],
+ "w|压": [
+  {
+   "text": "小明用刀背把蒜压扁，再切成末。",
+   "en": "Xiao Ming crushed the garlic flat with the back of the knife, then minced it.",
+   "ko": "샤오밍은 칼등으로 마늘을 눌러 으깬 다음 다졌어요.",
+   "blank": "压",
+   "src": "made"
+  },
+  {
+   "text": "丽丽轻轻压住玻璃片，把气泡赶出去。",
+   "en": "Lili gently pressed down on the glass slide to push out the air bubbles.",
+   "ko": "리리는 유리판을 살짝 눌러서 기포를 밀어냈어요.",
+   "blank": "压",
+   "src": "made"
+  }
+ ],
  "w|压力": [
   {
    "text": "压力太大了。",
@@ -10502,6 +10710,22 @@
    "en": "She didn't fight back; she just cried.",
    "ko": "그녀는 저항하지 않고 울기만 했어요.",
    "blank": "反抗",
+   "src": "made"
+  }
+ ],
+ "w|反映": [
+  {
+   "text": "客人向经理反映，汤有点太咸了。",
+   "en": "A customer told the manager the soup was a bit too salty.",
+   "ko": "손님이 매니저에게 국이 좀 짜다고 말했어요.",
+   "blank": "反映",
+   "src": "made"
+  },
+  {
+   "text": "这些数据反映出河水的污染越来越严重。",
+   "en": "These data reflect that the river pollution is getting worse.",
+   "ko": "이 데이터는 강물 오염이 점점 심해지고 있다는 걸 보여 줘요.",
+   "blank": "反映",
    "src": "made"
   }
  ],
@@ -13283,6 +13507,22 @@
    "src": "made"
   }
  ],
+ "w|商品": [
+  {
+   "text": "餐厅门口的小柜台也卖一些自家做的辣酱等商品。",
+   "en": "The small counter at the restaurant entrance also sells some goods like homemade chili sauce.",
+   "ko": "식당 입구의 작은 카운터에서는 직접 만든 고추장 같은 상품도 팔아요.",
+   "blank": "商品",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的研究是检查市场上商品里的塑料成分。",
+   "en": "Lili's research checks the plastic content in products on the market.",
+   "ko": "리리의 연구는 시중 상품 속 플라스틱 성분을 조사하는 거예요.",
+   "blank": "商品",
+   "src": "made"
+  }
+ ],
  "w|商店": [
   {
    "text": "附近有一家小商店。",
@@ -15801,6 +16041,22 @@
    "src": "made"
   }
  ],
+ "w|大规模": [
+  {
+   "text": "婚礼季节到了，厨房要准备大规模的宴席。",
+   "en": "Wedding season has arrived, and the kitchen has to prepare large-scale banquets.",
+   "ko": "결혼식 철이 돼서 주방은 대규모 연회를 준비해야 해요.",
+   "blank": "大规模",
+   "src": "made"
+  },
+  {
+   "text": "下个月，研究所要进行一次大规模的调查。",
+   "en": "Next month, the institute will carry out a large-scale survey.",
+   "ko": "다음 달에 연구소는 대규모 조사를 한 번 해요.",
+   "blank": "大规模",
+   "src": "made"
+  }
+ ],
  "w|大道": [
   {
    "text": "酒店就在城里最热闹的那条大道旁边。",
@@ -16284,6 +16540,22 @@
    "en": "Xiaoxue's deskmate always exaggerates when telling stories, and she can't help laughing.",
    "ko": "짝꿍은 이야기를 할 때 늘 과장이 심해서 샤오쉐는 듣다가 웃음을 참지 못해요.",
    "blank": "夸张",
+   "src": "made"
+  }
+ ],
+ "w|夹": [
+  {
+   "text": "小明用筷子夹起一块鱼，尝了尝咸淡。",
+   "en": "Xiao Ming picked up a piece of fish with chopsticks to taste the seasoning.",
+   "ko": "샤오밍은 젓가락으로 생선 한 점을 집어 간을 봤어요.",
+   "blank": "夹",
+   "src": "made"
+  },
+  {
+   "text": "丽丽用镊子夹起一小片叶子，放到显微镜下。",
+   "en": "Lili picked up a small piece of leaf with tweezers and put it under the microscope.",
+   "ko": "리리는 핀셋으로 작은 잎 조각을 집어 현미경 아래에 놓았어요.",
+   "blank": "夹",
    "src": "made"
   }
  ],
@@ -27283,6 +27555,22 @@
    "blank": "改变"
   }
  ],
+ "w|改善": [
+  {
+   "text": "装了新的排风扇，厨房的空气改善了很多。",
+   "en": "After a new exhaust fan was installed, the air in the kitchen improved a lot.",
+   "ko": "새 환풍기를 달고 나서 주방 공기가 많이 좋아졌어요.",
+   "blank": "改善",
+   "src": "made"
+  },
+  {
+   "text": "换了新的通风系统后，实验室的环境改善了不少。",
+   "en": "After the new ventilation system was installed, the lab environment improved quite a bit.",
+   "ko": "새 환기 장치로 바꾼 뒤 실험실 환경이 꽤 좋아졌어요.",
+   "blank": "改善",
+   "src": "made"
+  }
+ ],
  "w|改造": [
   {
    "text": "这栋老楼去年改造过，现在有了电梯。",
@@ -27990,6 +28278,22 @@
    "en": "On the back of the race bib is a line of text with the emergency number.",
    "ko": "배번 뒷면에는 응급 전화번호가 적힌 글이 한 줄 있어요.",
    "blank": "文字",
+   "src": "made"
+  }
+ ],
+ "w|文学": [
+  {
+   "text": "小明下班后爱读文学杂志，常看到半夜。",
+   "en": "After work Xiao Ming loves reading literary magazines, often until midnight.",
+   "ko": "샤오밍은 퇴근 후 문학 잡지 읽기를 좋아해서 자주 한밤중까지 봐요.",
+   "blank": "文学",
+   "src": "made"
+  },
+  {
+   "text": "丽丽本来想学文学，后来却爱上了化学。",
+   "en": "Lili originally wanted to study literature but later fell in love with chemistry.",
+   "ko": "리리는 원래 문학을 공부하고 싶었는데 나중에 화학에 빠졌어요.",
+   "blank": "文学",
    "src": "made"
   }
  ],
@@ -29769,6 +30073,22 @@
    "blank": "服务"
   }
  ],
+ "w|服装": [
+  {
+   "text": "小明换上白色的工作服装，戴好帽子进了厨房。",
+   "en": "Xiao Ming changed into his white work clothes, put on his hat, and went into the kitchen.",
+   "ko": "샤오밍은 하얀 작업복으로 갈아입고 모자를 쓴 뒤 주방에 들어갔어요.",
+   "blank": "服装",
+   "src": "made"
+  },
+  {
+   "text": "进实验室前，丽丽换上了防护服装。",
+   "en": "Before entering the lab, Lili changed into protective clothing.",
+   "ko": "실험실에 들어가기 전에 리리는 보호복으로 갈아입었어요.",
+   "blank": "服装",
+   "src": "made"
+  }
+ ],
  "w|望": [
   {
    "text": "马林站在阳台上，望着远处的烟花发呆。",
@@ -30869,6 +31189,22 @@
    "blank": "检查"
   }
  ],
+ "w|检测": [
+  {
+   "text": "卫生局的人来检测了冰箱的温度。",
+   "en": "People from the health department came to check the refrigerator temperature.",
+   "ko": "보건 당국 사람들이 와서 냉장고 온도를 검사했어요.",
+   "blank": "检测",
+   "src": "made"
+  },
+  {
+   "text": "丽丽每天要检测几十份水样。",
+   "en": "Lili has to test dozens of water samples every day.",
+   "ko": "리리는 매일 물 시료 수십 개를 검사해야 해요.",
+   "blank": "检测",
+   "src": "made"
+  }
+ ],
  "w|棒": [
   {
    "text": "你真棒！",
@@ -31064,6 +31400,22 @@
    "en": "Lin Jing switched her phone to airplane mode and had a good sleep.",
    "ko": "린징은 휴대폰을 비행기 모드로 바꾸고 푹 잤어요.",
    "blank": "模式",
+   "src": "made"
+  }
+ ],
+ "w|模样": [
+  {
+   "text": "小明刚来时手忙脚乱的模样，大家现在还常拿来开玩笑。",
+   "en": "Everyone still often jokes about how flustered Xiao Ming looked when he first arrived.",
+   "ko": "샤오밍이 처음 왔을 때 허둥대던 모습을 다들 지금도 자주 놀려요.",
+   "blank": "模样",
+   "src": "made"
+  },
+  {
+   "text": "显微镜下，细胞的模样看得清清楚楚。",
+   "en": "Under the microscope, the cells' appearance could be seen clearly.",
+   "ko": "현미경 아래에서 세포의 모양이 또렷하게 보였어요.",
+   "blank": "模样",
    "src": "made"
   }
  ],
@@ -32992,6 +33344,22 @@
    "en": "Liu Fang put mousetraps in the storeroom to wipe out all the mice.",
    "ko": "류팡은 창고에 쥐덫을 놓아 쥐를 다 없애 버리려고 해요.",
    "blank": "消灭",
+   "src": "made"
+  }
+ ],
+ "w|消除": [
+  {
+   "text": "厨房每晚关门后都要消毒，消除细菌。",
+   "en": "The kitchen is disinfected every night after closing to eliminate bacteria.",
+   "ko": "주방은 매일 밤 문을 닫은 뒤 소독해서 세균을 없애요.",
+   "blank": "消除",
+   "src": "made"
+  },
+  {
+   "text": "丽丽重新做了一遍实验，想消除测量误差。",
+   "en": "Lili redid the experiment, trying to eliminate measurement error.",
+   "ko": "리리는 측정 오차를 없애려고 실험을 다시 했어요.",
+   "blank": "消除",
    "src": "made"
   }
  ],
@@ -38107,6 +38475,22 @@
    "blank": "秘密"
   }
  ],
+ "w|租": [
+  {
+   "text": "小明在餐厅附近租了一间小屋，走路五分钟就到。",
+   "en": "Xiao Ming rented a small room near the restaurant, just a five-minute walk away.",
+   "ko": "샤오밍은 식당 근처에 작은 방을 얻어서 걸어서 오 분이면 가요.",
+   "blank": "租",
+   "src": "made"
+  },
+  {
+   "text": "实验室的设备太贵，有些只能向别的大学租。",
+   "en": "The lab equipment is too expensive, so some has to be rented from other universities.",
+   "ko": "실험 장비가 너무 비싸서 어떤 건 다른 대학에서 빌려 써야 해요.",
+   "blank": "租",
+   "src": "made"
+  }
+ ],
  "w|秩序": [
   {
    "text": "午饭时食堂排队很有秩序，小明从来不插队。",
@@ -38892,6 +39276,22 @@
    "en": "When registering, every runner has to sign a safety declaration.",
    "ko": "등록할 때 선수마다 안전 서약서에 서명해야 해요.",
    "blank": "签字",
+   "src": "made"
+  }
+ ],
+ "w|签署": [
+  {
+   "text": "老板和蔬菜供应商签署了一年的合同。",
+   "en": "The owner signed a one-year contract with the vegetable supplier.",
+   "ko": "사장님은 채소 공급업체와 일 년 계약을 맺었어요.",
+   "blank": "签署",
+   "src": "made"
+  },
+  {
+   "text": "进实验室工作前，每个人都要签署安全协议。",
+   "en": "Before working in the lab, everyone has to sign a safety agreement.",
+   "ko": "실험실에서 일하기 전에 모두 안전 협약서에 서명해야 해요.",
+   "blank": "签署",
    "src": "made"
   }
  ],
@@ -41451,6 +41851,22 @@
    "en": "Take off your coat.",
    "ko": "외투를 벗어.",
    "blank": "脱"
+  }
+ ],
+ "w|脱离": [
+  {
+   "text": "小明终于脱离了洗碗的岗位，开始学炒菜。",
+   "en": "Xiao Ming finally left the dishwashing post and started learning to stir-fry.",
+   "ko": "샤오밍은 드디어 설거지 자리를 벗어나 볶음 요리를 배우기 시작했어요.",
+   "blank": "脱离",
+   "src": "made"
+  },
+  {
+   "text": "这种细菌一旦脱离水环境，很快就会死亡。",
+   "en": "Once this bacterium leaves a water environment, it dies quickly.",
+   "ko": "이 세균은 물 환경을 벗어나면 금방 죽어요.",
+   "blank": "脱离",
+   "src": "made"
   }
  ],
  "w|脸": [
@@ -44059,6 +44475,22 @@
    "src": "tatoeba:4757238/ryanwoo en:4756241/cairnhead"
   }
  ],
+ "w|设施": [
+  {
+   "text": "新厨房的设施很齐全，连洗碗机都有两台。",
+   "en": "The new kitchen is fully equipped, with even two dishwashers.",
+   "ko": "새 주방은 시설이 잘 갖춰져 있어서 식기세척기도 두 대나 있어요.",
+   "blank": "设施",
+   "src": "made"
+  },
+  {
+   "text": "学校新建了一栋楼，实验设施比以前先进多了。",
+   "en": "The school built a new building, and the lab facilities are much more advanced than before.",
+   "ko": "학교가 건물을 새로 지어서 실험 시설이 예전보다 훨씬 좋아졌어요.",
+   "blank": "设施",
+   "src": "made"
+  }
+ ],
  "w|设法": [
   {
    "text": "客人丢了护照，马林设法联系上了警察局。",
@@ -45123,6 +45555,22 @@
    "src": "made"
   }
  ],
+ "w|财富": [
+  {
+   "text": "老板常说，好厨师的手艺才是餐厅真正的财富。",
+   "en": "The owner often says a good chef's skill is the restaurant's real wealth.",
+   "ko": "사장님은 좋은 요리사의 솜씨가 식당의 진짜 재산이라고 자주 말해요.",
+   "blank": "财富",
+   "src": "made"
+  },
+  {
+   "text": "教授说，知识是一个人最大的财富。",
+   "en": "The professor says knowledge is a person's greatest wealth.",
+   "ko": "교수님은 지식이 사람의 가장 큰 재산이라고 말해요.",
+   "blank": "财富",
+   "src": "made"
+  }
+ ],
  "w|责任": [
   {
    "text": "这是责任。",
@@ -45150,6 +45598,54 @@
    "en": "Yang Yang thought his sister had returned the goods he'd ordered online and was so angry he didn't speak all evening.",
    "ko": "양양은 누나가 자기가 인터넷으로 산 물건을 반품한 줄 알고 화가 나서 저녁 내내 말을 안 했어요.",
    "blank": "货",
+   "src": "made"
+  }
+ ],
+ "w|货币": [
+  {
+   "text": "有外国游客问能不能用他们国家的货币结账。",
+   "en": "A foreign tourist asked whether they could pay in their own country's currency.",
+   "ko": "외국 관광객이 자기 나라 화폐로 계산할 수 있냐고 물었어요.",
+   "blank": "货币",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在博物馆见过几千年前的古代货币。",
+   "en": "Lili once saw ancient currency from thousands of years ago in a museum.",
+   "ko": "리리는 박물관에서 수천 년 전의 옛날 화폐를 본 적이 있어요.",
+   "blank": "货币",
+   "src": "made"
+  }
+ ],
+ "w|质量": [
+  {
+   "text": "主厨对食材的质量要求非常严格。",
+   "en": "The head chef is very strict about the quality of ingredients.",
+   "ko": "주방장은 식재료 품질에 아주 엄격해요.",
+   "blank": "质量",
+   "src": "made"
+  },
+  {
+   "text": "实验结果的质量取决于样品是否干净。",
+   "en": "The quality of the results depends on whether the samples are clean.",
+   "ko": "실험 결과의 품질은 시료가 깨끗한지에 달려 있어요.",
+   "blank": "质量",
+   "src": "made"
+  }
+ ],
+ "w|购买": [
+  {
+   "text": "餐厅每天早上从市场购买新鲜蔬菜。",
+   "en": "Every morning the restaurant buys fresh vegetables from the market.",
+   "ko": "식당은 매일 아침 시장에서 신선한 채소를 구입해요.",
+   "blank": "购买",
+   "src": "made"
+  },
+  {
+   "text": "实验室打算购买一台新的离心机。",
+   "en": "The lab plans to buy a new centrifuge.",
+   "ko": "실험실은 새 원심분리기를 한 대 구입할 계획이에요.",
+   "blank": "购买",
    "src": "made"
   }
  ],
@@ -45249,6 +45745,22 @@
    "src": "made"
   }
  ],
+ "w|费用": [
+  {
+   "text": "这个月厨房的燃气费用比上个月高了不少。",
+   "en": "This month the kitchen's gas costs were quite a bit higher than last month.",
+   "ko": "이번 달 주방 가스 비용이 지난달보다 꽤 많이 올랐어요.",
+   "blank": "费用",
+   "src": "made"
+  },
+  {
+   "text": "这台显微镜的维修费用由学校承担。",
+   "en": "The repair costs for this microscope are covered by the school.",
+   "ko": "이 현미경의 수리 비용은 학교가 부담해요.",
+   "blank": "费用",
+   "src": "made"
+  }
+ ],
  "w|贼": [
   {
    "text": "那个贼在法庭上低着头，一句话也不说。",
@@ -45277,6 +45789,22 @@
    "en": "Check the info.",
    "ko": "자료 확인해 봐.",
    "blank": "资料"
+  }
+ ],
+ "w|资本": [
+  {
+   "text": "老板想开第二家店，但手里的资本还不够。",
+   "en": "The owner wants to open a second restaurant, but he doesn't have enough capital yet.",
+   "ko": "사장님은 두 번째 가게를 내고 싶지만 아직 자본이 부족해요.",
+   "blank": "资本",
+   "src": "made"
+  },
+  {
+   "text": "一家公司愿意投入资本，把丽丽的发明做成产品。",
+   "en": "A company is willing to invest capital to turn Lili's invention into a product.",
+   "ko": "한 회사가 리리의 발명을 제품으로 만들려고 자본을 투자하겠다고 했어요.",
+   "blank": "资本",
+   "src": "made"
   }
  ],
  "w|资格": [
@@ -46334,6 +46862,22 @@
    "en": "Lin Jing locked the door, turned to go downstairs, and only then remembered she'd forgotten her umbrella.",
    "ko": "린징은 문을 잠그고 돌아서 내려가다가 그제야 우산을 깜빡한 게 생각났어요.",
    "blank": "转身",
+   "src": "made"
+  }
+ ],
+ "w|软件": [
+  {
+   "text": "餐厅用一个软件管理每天的库存。",
+   "en": "The restaurant uses software to manage its daily inventory.",
+   "ko": "식당은 소프트웨어로 매일 재고를 관리해요.",
+   "blank": "软件",
+   "src": "made"
+  },
+  {
+   "text": "实验室新装的软件能自动画出图表。",
+   "en": "The software newly installed in the lab can draw charts automatically.",
+   "ko": "실험실에 새로 깐 소프트웨어는 그래프를 자동으로 그려 줘요.",
+   "blank": "软件",
    "src": "made"
   }
  ],
@@ -48045,6 +48589,22 @@
    "blank": "遗憾"
   }
  ],
+ "w|遥远": [
+  {
+   "text": "有些香料来自很遥远的地方，价格很贵。",
+   "en": "Some spices come from very faraway places and are expensive.",
+   "ko": "어떤 향신료는 아주 먼 곳에서 와서 값이 비싸요.",
+   "blank": "遥远",
+   "src": "made"
+  },
+  {
+   "text": "望远镜拍到了一颗十分遥远的星星。",
+   "en": "The telescope captured an extremely distant star.",
+   "ko": "망원경이 아주 먼 별 하나를 찍었어요.",
+   "blank": "遥远",
+   "src": "made"
+  }
+ ],
  "w|遭到": [
   {
    "text": "马林的辩护意见遭到了检察官的强烈反对。",
@@ -48831,6 +49391,22 @@
    "src": "made"
   }
  ],
+ "w|金融": [
+  {
+   "text": "附近金融区的白领中午都来这里吃饭。",
+   "en": "Office workers from the nearby financial district all come here for lunch.",
+   "ko": "근처 금융가 직장인들이 점심때 다들 여기 와서 밥을 먹어요.",
+   "blank": "金融",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的同学毕业后去了金融公司，工资比她高很多。",
+   "en": "Lili's classmate went to a finance company after graduating and earns much more than she does.",
+   "ko": "리리의 동기는 졸업 후 금융 회사에 가서 월급이 리리보다 훨씬 많아요.",
+   "blank": "金融",
+   "src": "made"
+  }
+ ],
  "w|金钱": [
   {
    "text": "黄涛说，逛跳蚤市场的乐趣不在金钱，而在发现。",
@@ -48860,6 +49436,22 @@
    "en": "This inspection is mainly aimed at street vendors without business licences.",
    "ko": "이번 단속은 주로 영업 허가가 없는 노점상을 겨냥한 거예요.",
    "blank": "针对",
+   "src": "made"
+  }
+ ],
+ "w|钢琴": [
+  {
+   "text": "餐厅大厅里放着一台钢琴，周末有人来弹。",
+   "en": "There's a piano in the dining hall, and someone comes to play on weekends.",
+   "ko": "식당 홀에는 피아노가 한 대 있어서 주말마다 누가 와서 쳐요.",
+   "blank": "钢琴",
+   "src": "made"
+  },
+  {
+   "text": "丽丽小时候学过八年钢琴，手指很灵活。",
+   "en": "Lili studied piano for eight years as a child, so her fingers are nimble.",
+   "ko": "리리는 어릴 때 피아노를 팔 년 배워서 손가락이 아주 유연해요.",
+   "blank": "钢琴",
    "src": "made"
   }
  ],
@@ -49937,6 +50529,22 @@
    "src": "made"
   }
  ],
+ "w|难怪": [
+  {
+   "text": "原来主厨在五星酒店干过十年，难怪手艺这么好。",
+   "en": "It turns out the head chef worked at a five-star hotel for ten years—no wonder he's so skilled.",
+   "ko": "알고 보니 주방장이 오성급 호텔에서 십 년을 일했대요. 어쩐지 솜씨가 좋더라고요.",
+   "blank": "难怪",
+   "src": "made"
+  },
+  {
+   "text": "丽丽天天熬夜做实验，难怪眼睛这么红。",
+   "en": "Lili stays up late every day doing experiments—no wonder her eyes are so red.",
+   "ko": "리리는 매일 밤새 실험을 하니 눈이 이렇게 빨간 것도 당연해요.",
+   "blank": "难怪",
+   "src": "made"
+  }
+ ],
  "w|难过": [
   {
    "text": "别太难过了。",
@@ -50162,6 +50770,22 @@
    "en": "The campsite warden said a bear had come by last night, and everyone was shocked.",
    "ko": "캠핑장 관리인이 어젯밤 곰이 왔었다고 하자 다들 충격을 받았어요.",
    "blank": "震惊",
+   "src": "made"
+  }
+ ],
+ "w|露出": [
+  {
+   "text": "听到客人夸菜好吃，小明露出了得意的笑容。",
+   "en": "Hearing a customer praise the food, Xiao Ming broke into a proud smile.",
+   "ko": "손님이 음식이 맛있다고 칭찬하자 샤오밍은 뿌듯한 웃음을 지었어요.",
+   "blank": "露出",
+   "src": "made"
+  },
+  {
+   "text": "实验终于成功，丽丽露出了轻松的表情。",
+   "en": "The experiment finally succeeded, and Lili's face showed relief.",
+   "ko": "실험이 드디어 성공하자 리리는 홀가분한 표정을 지었어요.",
+   "blank": "露出",
    "src": "made"
   }
  ],
@@ -50626,6 +51250,22 @@
    "en": "The guide looked at the clouds and predicted it would rain in the afternoon.",
    "ko": "가이드는 구름을 보더니 오후에 비가 한바탕 올 거라고 예측했어요.",
    "blank": "预测",
+   "src": "made"
+  }
+ ],
+ "w|预算": [
+  {
+   "text": "这个月采购的预算已经快用完了。",
+   "en": "This month's purchasing budget is almost used up.",
+   "ko": "이번 달 구매 예산이 벌써 거의 다 떨어졌어요.",
+   "blank": "预算",
+   "src": "made"
+  },
+  {
+   "text": "今年的研究预算被砍了一半，教授很头疼。",
+   "en": "This year's research budget was cut in half, and the professor is very troubled.",
+   "ko": "올해 연구 예산이 절반으로 깎여서 교수님이 골치 아파해요.",
+   "blank": "预算",
    "src": "made"
   }
  ],

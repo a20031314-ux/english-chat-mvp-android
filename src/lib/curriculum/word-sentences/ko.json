@@ -4089,6 +4089,22 @@
    "blank": "경찰차가"
   }
  ],
+ "w|경치": [
+  {
+   "text": "성호는 창가에서 내려다본 바다 경치를 사진으로 남겼어요.",
+   "en": "Seongho took photos of the ocean view he looked down on from the window.",
+   "ko": "성호는 창가에서 내려다본 바다 경치를 사진으로 남겼어요.",
+   "blank": "경치를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 해 질 무렵 농장 경치를 제일 좋아해요.",
+   "en": "Mikyung loves the view of the farm at sunset most of all.",
+   "ko": "미경은 해 질 무렵 농장 경치를 제일 좋아해요.",
+   "blank": "경치를",
+   "src": "made"
+  }
+ ],
  "w|경향": [
   {
    "text": "준호는 시험이 다가오면 밤을 새우는 경향이 있어요.",
@@ -4895,6 +4911,22 @@
    "en": "Roasting sesame smelled so nutty I smiled.",
    "ko": "깨를 볶으니 고소하다 싶어 미소가 났어.",
    "blank": "고소하다"
+  }
+ ],
+ "w|고속도로": [
+  {
+   "text": "성호는 공항 가는 고속도로가 막힐까 봐 일찍 출발했어요.",
+   "en": "Seongho left early, worried the highway to the airport would be jammed.",
+   "ko": "성호는 공항 가는 고속도로가 막힐까 봐 일찍 출발했어요.",
+   "blank": "고속도로가",
+   "src": "made"
+  },
+  {
+   "text": "농장 앞에 고속도로가 생기면서 차 소리가 커졌어요.",
+   "en": "Since a highway was built in front of the farm, the traffic noise has gotten louder.",
+   "ko": "농장 앞에 고속도로가 생기면서 차 소리가 커졌어요.",
+   "blank": "고속도로가",
+   "src": "made"
   }
  ],
  "w|고아": [
@@ -6829,6 +6861,22 @@
    "blank": "교통을"
   }
  ],
+ "w|교통사고": [
+  {
+   "text": "공항 가는 길에 교통사고가 나서 성호가 탄 택시가 한참 서 있었어요.",
+   "en": "There was a traffic accident on the way to the airport, so Seongho's taxi was stuck for a while.",
+   "ko": "공항 가는 길에 교통사고가 나서 성호가 탄 택시가 한참 서 있었어요.",
+   "blank": "교통사고가",
+   "src": "made"
+  },
+  {
+   "text": "미경은 시골길 교통사고 소식을 듣고 트랙터에 반사판을 달았어요.",
+   "en": "After hearing about an accident on a country road, Mikyung put reflectors on her tractor.",
+   "ko": "미경은 시골길 교통사고 소식을 듣고 트랙터에 반사판을 달았어요.",
+   "blank": "교통사고",
+   "src": "made"
+  }
+ ],
  "w|교환": [
   {
    "text": "사이즈가 안 맞아서 교환했어.",
@@ -7057,6 +7105,22 @@
    "en": "I can tell the twins apart easily.",
    "ko": "쌍둥이도 쉽게 구별해.",
    "blank": "구별해"
+  }
+ ],
+ "w|구부리다": [
+  {
+   "text": "성호는 몸을 구부려서 좌석 밑에 떨어진 휴대폰을 주웠어요.",
+   "en": "Seongho bent down and picked up the phone that had fallen under the seat.",
+   "ko": "성호는 몸을 구부려서 좌석 밑에 떨어진 휴대폰을 주웠어요.",
+   "blank": "구부려서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 허리를 구부리고 하루 종일 고구마를 캤어요.",
+   "en": "Mikyung bent over and dug sweet potatoes all day.",
+   "ko": "미경은 허리를 구부리고 하루 종일 고구마를 캤어요.",
+   "blank": "구부리고",
+   "src": "made"
   }
  ],
  "w|구식": [
@@ -8445,6 +8509,22 @@
    "en": "I explained it. And yet they still don't get it.",
    "ko": "설명했는데. 그런데도 이해를 못 해.",
    "blank": "그런데도"
+  }
+ ],
+ "w|그럴듯하다": [
+  {
+   "text": "옆자리 승객은 비행기가 왜 늦었는지 그럴듯한 이유를 늘어놓았어요.",
+   "en": "The passenger in the next seat rattled off plausible reasons why the flight was late.",
+   "ko": "옆자리 승객은 비행기가 왜 늦었는지 그럴듯한 이유를 늘어놓았어요.",
+   "blank": "그럴듯한",
+   "src": "made"
+  },
+  {
+   "text": "허수아비가 제법 그럴듯해서 참새들이 밭에 덜 와요.",
+   "en": "The scarecrow looks quite convincing, so fewer sparrows come to the field.",
+   "ko": "허수아비가 제법 그럴듯해서 참새들이 밭에 덜 와요.",
+   "blank": "그럴듯해서",
+   "src": "made"
   }
  ],
  "w|그럼": [
@@ -10093,6 +10173,22 @@
    "en": "That journalist's article caused a big stir.",
    "ko": "그 기자의 기사가 큰 반향을 일으켰어.",
    "blank": "기자의"
+  }
+ ],
+ "w|기장": [
+  {
+   "text": "기장이 곧 흔들림이 있을 거라고 방송했어요.",
+   "en": "The captain announced that there would be some turbulence soon.",
+   "ko": "기장이 곧 흔들림이 있을 거라고 방송했어요.",
+   "blank": "기장이",
+   "src": "made"
+  },
+  {
+   "text": "미경의 아들은 이제 큰 여객기의 기장이 됐어요.",
+   "en": "Mikyung's son has now become the captain of a large passenger plane.",
+   "ko": "미경의 아들은 이제 큰 여객기의 기장이 됐어요.",
+   "blank": "기장이",
+   "src": "made"
   }
  ],
  "w|기적": [
@@ -14811,6 +14907,22 @@
    "blank": "다정하게"
   }
  ],
+ "w|다채롭다": [
+  {
+   "text": "공항 면세점에는 다채로운 기념품이 진열되어 있었어요.",
+   "en": "The airport duty-free shop had a colorful variety of souvenirs on display.",
+   "ko": "공항 면세점에는 다채로운 기념품이 진열되어 있었어요.",
+   "blank": "다채로운",
+   "src": "made"
+  },
+  {
+   "text": "미경의 농장에서는 봄마다 다채로운 꽃이 피어요.",
+   "en": "Colorful flowers bloom every spring on Mikyung's farm.",
+   "ko": "미경의 농장에서는 봄마다 다채로운 꽃이 피어요.",
+   "blank": "다채로운",
+   "src": "made"
+  }
+ ],
  "w|다치다": [
   {
    "text": "무릎 살짝 다쳤어.",
@@ -18737,6 +18849,22 @@
    "blank": "드라마가"
   }
  ],
+ "w|드러내다": [
+  {
+   "text": "비행기가 지연되자 몇몇 승객이 불만을 드러냈어요.",
+   "en": "When the flight was delayed, some passengers showed their dissatisfaction.",
+   "ko": "비행기가 지연되자 몇몇 승객이 불만을 드러냈어요.",
+   "blank": "드러냈어요",
+   "src": "made"
+  },
+  {
+   "text": "비가 많이 와서 밭의 돌들이 흙 위로 모습을 드러냈어요.",
+   "en": "After heavy rain, the stones in the field showed up above the soil.",
+   "ko": "비가 많이 와서 밭의 돌들이 흙 위로 모습을 드러냈어요.",
+   "blank": "드러냈어요",
+   "src": "made"
+  }
+ ],
  "w|드리다": [
   {
    "text": "선물을 드리다 못해 마음이 급해졌어.",
@@ -19039,6 +19167,22 @@
    "en": "I received love in abundance.",
    "ko": "사랑을 듬뿍 받았어.",
    "blank": "듬뿍"
+  }
+ ],
+ "w|듬성듬성하다": [
+  {
+   "text": "새벽 비행기라 공항 의자에 사람들이 듬성듬성해요.",
+   "en": "Since it's a dawn flight, the people on the airport chairs are scattered here and there.",
+   "ko": "새벽 비행기라 공항 의자에 사람들이 듬성듬성해요.",
+   "blank": "듬성듬성해요",
+   "src": "made"
+  },
+  {
+   "text": "씨앗을 너무 아껴 뿌려서 새싹이 듬성듬성하게 났어요.",
+   "en": "She was so sparing with the seeds that the sprouts came up sparse.",
+   "ko": "씨앗을 너무 아껴 뿌려서 새싹이 듬성듬성하게 났어요.",
+   "blank": "듬성듬성하게",
+   "src": "made"
   }
  ],
  "w|듯": [
@@ -20034,6 +20178,22 @@
    "en": "Haeun's nephew jumped off the sofa and got scolded by his mom.",
    "ko": "하은의 조카가 소파에서 뛰어내려서 엄마한테 혼났어요.",
    "blank": "뛰어내려서",
+   "src": "made"
+  }
+ ],
+ "w|뛰어다니다": [
+  {
+   "text": "아이들이 공항 대기실에서 신나게 뛰어다녔어요.",
+   "en": "The children ran around excitedly in the airport waiting room.",
+   "ko": "아이들이 공항 대기실에서 신나게 뛰어다녔어요.",
+   "blank": "뛰어다녔어요",
+   "src": "made"
+  },
+  {
+   "text": "강아지가 마당을 뛰어다니며 닭을 쫓았어요.",
+   "en": "The puppy ran around the yard chasing the chickens.",
+   "ko": "강아지가 마당을 뛰어다니며 닭을 쫓았어요.",
+   "blank": "뛰어다니며",
    "src": "made"
   }
  ],
@@ -21467,6 +21627,22 @@
    "en": "There was a long line in front of the hotspot.",
    "ko": "맛집 앞에서 줄이 길었어.",
    "blank": "맛집"
+  }
+ ],
+ "w|망가뜨리다": [
+  {
+   "text": "짐을 험하게 다루는 바람에 누가 성호의 캐리어 바퀴를 망가뜨렸어요.",
+   "en": "Someone broke the wheel of Seongho's suitcase by handling the luggage roughly.",
+   "ko": "짐을 험하게 다루는 바람에 누가 성호의 캐리어 바퀴를 망가뜨렸어요.",
+   "blank": "망가뜨렸어요",
+   "src": "made"
+  },
+  {
+   "text": "멧돼지가 밤새 들어와서 옥수수밭을 다 망가뜨렸어요.",
+   "en": "A wild boar got in overnight and wrecked the whole corn field.",
+   "ko": "멧돼지가 밤새 들어와서 옥수수밭을 다 망가뜨렸어요.",
+   "blank": "망가뜨렸어요",
+   "src": "made"
   }
  ],
  "w|망가지다": [
@@ -23125,6 +23301,22 @@
    "blank": "목적으로"
   }
  ],
+ "w|목적지": [
+  {
+   "text": "성호의 최종 목적지는 할머니가 사시는 작은 섬이에요.",
+   "en": "Seongho's final destination is the small island where his grandmother lives.",
+   "ko": "성호의 최종 목적지는 할머니가 사시는 작은 섬이에요.",
+   "blank": "목적지는",
+   "src": "made"
+  },
+  {
+   "text": "농장 체험이 목적지인 학생들이 버스를 타고 도착했어요.",
+   "en": "Students whose destination was the farm experience arrived by bus.",
+   "ko": "농장 체험이 목적지인 학생들이 버스를 타고 도착했어요.",
+   "blank": "목적지인",
+   "src": "made"
+  }
+ ],
  "w|목표": [
   {
    "text": "올해 목표가 뭐야?",
@@ -23449,6 +23641,22 @@
    "en": "Words are the strongest weapon.",
    "ko": "말이 제일 강한 무기야.",
    "blank": "무기야"
+  }
+ ],
+ "w|무난하다": [
+  {
+   "text": "성호는 기내식이 특별하진 않아도 무난했다고 했어요.",
+   "en": "Seongho said the in-flight meal wasn't special but was decent.",
+   "ko": "성호는 기내식이 특별하진 않아도 무난했다고 했어요.",
+   "blank": "무난했다고",
+   "src": "made"
+  },
+  {
+   "text": "미경은 올해 고추 농사가 무난하게 끝나서 안심했어요.",
+   "en": "Mikyung was relieved that this year's pepper crop turned out fine.",
+   "ko": "미경은 올해 고추 농사가 무난하게 끝나서 안심했어요.",
+   "blank": "무난하게",
+   "src": "made"
   }
  ],
  "w|무너지다": [
@@ -24611,6 +24819,22 @@
    "en": "It's under a thousand won.",
    "ko": "천 원 미만이야.",
    "blank": "미만이야"
+  }
+ ],
+ "w|미미하다": [
+  {
+   "text": "흔들림은 미미해서 성호는 거의 느끼지 못했어요.",
+   "en": "The turbulence was so slight that Seongho barely felt it.",
+   "ko": "흔들림은 미미해서 성호는 거의 느끼지 못했어요.",
+   "blank": "미미해서",
+   "src": "made"
+  },
+  {
+   "text": "가뭄 피해는 다행히 미미했다고 미경이 말했어요.",
+   "en": "Mikyung said the drought damage was fortunately minimal.",
+   "ko": "가뭄 피해는 다행히 미미했다고 미경이 말했어요.",
+   "blank": "미미했다고",
+   "src": "made"
   }
  ],
  "w|미성년자": [
@@ -28823,6 +29047,22 @@
    "ko": "요즘 집을 팔기 위해 부동산을 찾아오는 손님이 늘었다.",
    "blank": "부동산을",
    "src": "krdict"
+  }
+ ],
+ "w|부두": [
+  {
+   "text": "성호는 섬에 도착하면 부두에서 배를 한 번 더 타야 해요.",
+   "en": "When Seongho reaches the island, he has to take a boat once more from the pier.",
+   "ko": "성호는 섬에 도착하면 부두에서 배를 한 번 더 타야 해요.",
+   "blank": "부두에서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 수확한 감자를 부두까지 실어 날라 섬으로 보냈어요.",
+   "en": "Mikyung hauled the harvested potatoes to the dock and shipped them to the island.",
+   "ko": "미경은 수확한 감자를 부두까지 실어 날라 섬으로 보냈어요.",
+   "blank": "부두까지",
+   "src": "made"
   }
  ],
  "w|부드럽다": [
@@ -37642,6 +37882,22 @@
    "src": "made"
   }
  ],
+ "w|순조롭다": [
+  {
+   "text": "출국 수속이 순조로워서 성호는 커피 마실 시간까지 생겼어요.",
+   "en": "Check-in went so smoothly that Seongho even had time for coffee.",
+   "ko": "출국 수속이 순조로워서 성호는 커피 마실 시간까지 생겼어요.",
+   "blank": "순조로워서",
+   "src": "made"
+  },
+  {
+   "text": "올해는 비가 적당히 와서 모내기가 순조롭게 끝났어요.",
+   "en": "It rained just enough this year, so the rice planting finished smoothly.",
+   "ko": "올해는 비가 적당히 와서 모내기가 순조롭게 끝났어요.",
+   "blank": "순조롭게",
+   "src": "made"
+  }
+ ],
  "w|순종하다": [
   {
    "text": "아이가 규칙을 잘 순종해.",
@@ -38198,6 +38454,22 @@
    "blank": "습한"
   }
  ],
+ "w|승객": [
+  {
+   "text": "탑승구 앞에는 출발을 기다리는 승객이 가득했어요.",
+   "en": "The gate was full of passengers waiting to depart.",
+   "ko": "탑승구 앞에는 출발을 기다리는 승객이 가득했어요.",
+   "blank": "승객이",
+   "src": "made"
+  },
+  {
+   "text": "마을 버스에는 승객이 미경 한 명뿐이었어요.",
+   "en": "Mikyung was the only passenger on the village bus.",
+   "ko": "마을 버스에는 승객이 미경 한 명뿐이었어요.",
+   "blank": "승객이",
+   "src": "made"
+  }
+ ],
  "w|승리": [
   {
    "text": "마지막에 승리를 거뒀어.",
@@ -38210,6 +38482,22 @@
    "en": "It feels like victory is coming.",
    "ko": "승리가 다가오는 느낌이야.",
    "blank": "승리가"
+  }
+ ],
+ "w|승무원": [
+  {
+   "text": "승무원이 성호에게 담요를 한 장 더 가져다줬어요.",
+   "en": "A flight attendant brought Seongho one more blanket.",
+   "ko": "승무원이 성호에게 담요를 한 장 더 가져다줬어요.",
+   "blank": "승무원이",
+   "src": "made"
+  },
+  {
+   "text": "미경의 딸은 비행기 승무원으로 일해서 명절에만 집에 와요.",
+   "en": "Mikyung's daughter works as a flight attendant and only comes home for holidays.",
+   "ko": "미경의 딸은 비행기 승무원으로 일해서 명절에만 집에 와요.",
+   "blank": "승무원으로",
+   "src": "made"
   }
  ],
  "w|승산": [
@@ -38762,6 +39050,22 @@
    "en": "I had nerve back in those days.",
    "ko": "그 시절엔 용기가 있었어.",
    "blank": "시절엔"
+  }
+ ],
+ "w|시점": [
+  {
+   "text": "비행기가 지연된다는 방송이 나온 시점에 성호는 이미 탑승구에 있었어요.",
+   "en": "By the time the delay was announced, Seongho was already at the gate.",
+   "ko": "비행기가 지연된다는 방송이 나온 시점에 성호는 이미 탑승구에 있었어요.",
+   "blank": "시점에",
+   "src": "made"
+  },
+  {
+   "text": "미경은 사과를 따는 시점을 날씨를 보고 정해요.",
+   "en": "Mikyung decides when to pick the apples by watching the weather.",
+   "ko": "미경은 사과를 따는 시점을 날씨를 보고 정해요.",
+   "blank": "시점을",
+   "src": "made"
   }
  ],
  "w|시청": [
@@ -41850,6 +42154,22 @@
    "en": "Please let me hold the puppy in my arms.",
    "ko": "강아지를 품에 안겨 줘.",
    "blank": "안겨"
+  }
+ ],
+ "w|안내": [
+  {
+   "text": "성호는 안내 데스크에서 환승하는 곳을 물어봤어요.",
+   "en": "Seongho asked at the information desk where to transfer.",
+   "ko": "성호는 안내 데스크에서 환승하는 곳을 물어봤어요.",
+   "blank": "안내",
+   "src": "made"
+  },
+  {
+   "text": "미경은 체험 학생들에게 농장 안내를 직접 해 줬어요.",
+   "en": "Mikyung personally gave the visiting students a tour of the farm.",
+   "ko": "미경은 체험 학생들에게 농장 안내를 직접 해 줬어요.",
+   "blank": "안내를",
+   "src": "made"
   }
  ],
  "w|안내하다": [
@@ -47620,6 +47940,22 @@
    "src": "made"
   }
  ],
+ "w|외곽": [
+  {
+   "text": "이 공항은 도시 외곽에 있어서 버스로 한 시간쯤 걸려요.",
+   "en": "This airport is on the outskirts of the city, so it takes about an hour by bus.",
+   "ko": "이 공항은 도시 외곽에 있어서 버스로 한 시간쯤 걸려요.",
+   "blank": "외곽에",
+   "src": "made"
+  },
+  {
+   "text": "미경의 농장은 읍내 외곽의 조용한 언덕에 있어요.",
+   "en": "Mikyung's farm is on a quiet hill on the outskirts of town.",
+   "ko": "미경의 농장은 읍내 외곽의 조용한 언덕에 있어요.",
+   "blank": "외곽의",
+   "src": "made"
+  }
+ ],
  "w|외교": [
   {
    "text": "사회 시간에 민수네 반은 두 나라의 외교 관계를 토론했어요.",
@@ -48672,6 +49008,22 @@
    "blank": "운전사가"
   }
  ],
+ "w|운전자": [
+  {
+   "text": "공항 앞에서는 운전자가 차를 오래 세워 둘 수 없어요.",
+   "en": "Drivers can't leave their cars parked for long in front of the airport.",
+   "ko": "공항 앞에서는 운전자가 차를 오래 세워 둘 수 없어요.",
+   "blank": "운전자가",
+   "src": "made"
+  },
+  {
+   "text": "경운기 운전자는 늘 좁은 논두렁을 조심해야 해요.",
+   "en": "A tiller driver always has to be careful on narrow paddy ridges.",
+   "ko": "경운기 운전자는 늘 좁은 논두렁을 조심해야 해요.",
+   "blank": "운전자는",
+   "src": "made"
+  }
+ ],
  "w|운전하다": [
   {
    "text": "피곤하면 내가 운전할게.",
@@ -49116,6 +49468,22 @@
    "en": "I try not to live holding a grudge.",
    "ko": "원한을 품고 살지 않으려 해.",
    "blank": "원한을"
+  }
+ ],
+ "w|원활하다": [
+  {
+   "text": "새 시스템 덕분에 짐 찾는 과정이 훨씬 원활해졌어요.",
+   "en": "Thanks to the new system, picking up luggage has become much smoother.",
+   "ko": "새 시스템 덕분에 짐 찾는 과정이 훨씬 원활해졌어요.",
+   "blank": "원활해졌어요",
+   "src": "made"
+  },
+  {
+   "text": "새 수로 덕분에 밭에 물이 원활하게 들어와요.",
+   "en": "Thanks to the new channel, water flows smoothly into the field.",
+   "ko": "새 수로 덕분에 밭에 물이 원활하게 들어와요.",
+   "blank": "원활하게",
+   "src": "made"
   }
  ],
  "w|월급": [
@@ -50997,6 +51365,22 @@
    "en": "Seoyeon's long-held dream finally came true, and she got into music school.",
    "ko": "서연의 오랜 꿈이 드디어 이루어져서 음대에 붙었어요.",
    "blank": "이루어져서",
+   "src": "made"
+  }
+ ],
+ "w|이륙": [
+  {
+   "text": "안개 때문에 이륙이 삼십 분 넘게 늦어졌어요.",
+   "en": "Because of the fog, takeoff was delayed by more than thirty minutes.",
+   "ko": "안개 때문에 이륙이 삼십 분 넘게 늦어졌어요.",
+   "blank": "이륙이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 밭에서 일하다가 근처 공항에서 비행기가 이륙하는 모습을 자주 봐요.",
+   "en": "While working in the field, Mikyung often sees planes taking off from the nearby airport.",
+   "ko": "미경은 밭에서 일하다가 근처 공항에서 비행기가 이륙하는 모습을 자주 봐요.",
+   "blank": "이륙하는",
    "src": "made"
   }
  ],
@@ -58278,6 +58662,22 @@
    "src": "made"
   }
  ],
+ "w|조종사": [
+  {
+   "text": "성호는 어릴 때 비행기 조종사가 되는 게 꿈이었어요.",
+   "en": "When he was young, Seongho dreamed of becoming an airplane pilot.",
+   "ko": "성호는 어릴 때 비행기 조종사가 되는 게 꿈이었어요.",
+   "blank": "조종사가",
+   "src": "made"
+  },
+  {
+   "text": "미경의 아들은 농장 일을 돕다가 결국 조종사가 됐어요.",
+   "en": "Mikyung's son used to help on the farm but eventually became a pilot.",
+   "ko": "미경의 아들은 농장 일을 돕다가 결국 조종사가 됐어요.",
+   "blank": "조종사가",
+   "src": "made"
+  }
+ ],
  "w|조종하다": [
   {
    "text": "항공사에서는 전투기를 조종했던 경력이 있는 파일럿을 우대했다.",
@@ -58684,6 +59084,22 @@
    "en": "Do you like spicy food?",
    "ko": "매운 거 좋아해요?",
    "blank": "좋아해요"
+  }
+ ],
+ "w|좌석": [
+  {
+   "text": "성호는 좌석을 뒤로 젖히기 전에 뒷사람에게 양해를 구했어요.",
+   "en": "Seongho asked the person behind him before reclining his seat.",
+   "ko": "성호는 좌석을 뒤로 젖히기 전에 뒷사람에게 양해를 구했어요.",
+   "blank": "좌석을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 낡은 트랙터 좌석에 방석을 깔았어요.",
+   "en": "Mikyung put a cushion on the old tractor seat.",
+   "ko": "미경은 낡은 트랙터 좌석에 방석을 깔았어요.",
+   "blank": "좌석에",
+   "src": "made"
   }
  ],
  "w|좌절": [
@@ -59097,6 +59513,22 @@
    "en": "Jiyoung summarized the major events of that era in her report.",
    "ko": "지영은 보고서에 그 시대의 주요한 사건들을 정리했어요.",
    "blank": "주요한",
+   "src": "made"
+  }
+ ],
+ "w|주유소": [
+  {
+   "text": "렌터카를 반납하기 전에 성호는 주유소에 들러 기름을 채웠어요.",
+   "en": "Before returning the rental car, Seongho stopped at a gas station to fill up.",
+   "ko": "렌터카를 반납하기 전에 성호는 주유소에 들러 기름을 채웠어요.",
+   "blank": "주유소에",
+   "src": "made"
+  },
+  {
+   "text": "가장 가까운 주유소가 멀어서 미경은 기름을 미리 넉넉히 사 둬요.",
+   "en": "The nearest gas station is far, so Mikyung buys plenty of fuel in advance.",
+   "ko": "가장 가까운 주유소가 멀어서 미경은 기름을 미리 넉넉히 사 둬요.",
+   "blank": "주유소가",
    "src": "made"
   }
  ],
@@ -62534,6 +62966,22 @@
    "blank": "착각했어"
   }
  ],
+ "w|착륙": [
+  {
+   "text": "비행기가 착륙을 앞두고 천천히 고도를 낮췄어요.",
+   "en": "The plane slowly lowered its altitude ahead of landing.",
+   "ko": "비행기가 착륙을 앞두고 천천히 고도를 낮췄어요.",
+   "blank": "착륙을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 농약을 뿌리던 드론의 착륙을 지켜봤어요.",
+   "en": "Mikyung watched the landing of the drone that had been spraying pesticide.",
+   "ko": "미경은 농약을 뿌리던 드론의 착륙을 지켜봤어요.",
+   "blank": "착륙을",
+   "src": "made"
+  }
+ ],
  "w|착오": [
   {
    "text": "채점에 착오가 있어서 현우의 점수가 다시 올라갔어요.",
@@ -64127,6 +64575,22 @@
    "en": "Even though the old novel's cover was dated, Jiyoung read it to the end because the story was good.",
    "ko": "지영은 오래된 소설의 표지가 촌스러워도 내용이 좋아서 끝까지 읽었어요.",
    "blank": "촌스러워도",
+   "src": "made"
+  }
+ ],
+ "w|촘촘하다": [
+  {
+   "text": "성호는 출장 일정이 너무 촘촘해서 여행할 틈이 없었어요.",
+   "en": "Seongho's business trip schedule was so packed that he had no time for sightseeing.",
+   "ko": "성호는 출장 일정이 너무 촘촘해서 여행할 틈이 없었어요.",
+   "blank": "촘촘해서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 새가 못 들어오게 촘촘한 그물을 쳤어요.",
+   "en": "Mikyung put up a fine-meshed net so birds can't get in.",
+   "ko": "미경은 새가 못 들어오게 촘촘한 그물을 쳤어요.",
+   "blank": "촘촘한",
    "src": "made"
   }
  ],
@@ -66076,6 +66540,22 @@
    "blank": "코너를"
   }
  ],
+ "w|코스": [
+  {
+   "text": "성호는 섬에 가면 해안 산책 코스를 꼭 걸어 볼 거예요.",
+   "en": "When Seongho gets to the island, he'll definitely walk the coastal trail.",
+   "ko": "성호는 섬에 가면 해안 산책 코스를 꼭 걸어 볼 거예요.",
+   "blank": "코스를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 농장 체험 코스에 딸기 따기를 새로 넣었어요.",
+   "en": "Mikyung added strawberry picking to the farm experience course.",
+   "ko": "미경은 농장 체험 코스에 딸기 따기를 새로 넣었어요.",
+   "blank": "코스에",
+   "src": "made"
+  }
+ ],
  "w|코치": [
   {
    "text": "이번에 새로 온 코치는 실력이 아주 뛰어나다.",
@@ -66292,6 +66772,22 @@
    "en": "The room is bigger than I thought.",
    "ko": "방이 생각보다 크네.",
    "blank": "크네"
+  }
+ ],
+ "w|크루즈": [
+  {
+   "text": "성호 옆자리 부부는 크루즈 여행을 하러 항구 도시로 가는 길이었어요.",
+   "en": "The couple next to Seongho were on their way to a port city for a cruise.",
+   "ko": "성호 옆자리 부부는 크루즈 여행을 하러 항구 도시로 가는 길이었어요.",
+   "blank": "크루즈",
+   "src": "made"
+  },
+  {
+   "text": "미경은 농사를 그만두면 남편과 크루즈를 타 보고 싶대요.",
+   "en": "Mikyung says she'd like to go on a cruise with her husband when she stops farming.",
+   "ko": "미경은 농사를 그만두면 남편과 크루즈를 타 보고 싶대요.",
+   "blank": "크루즈를",
+   "src": "made"
   }
  ],
  "w|크리스마스": [
@@ -67132,6 +67628,22 @@
    "en": "I'm glad I passed the final interview.",
    "ko": "최종 면접을 통과해서 기뻐.",
    "blank": "통과해서"
+  }
+ ],
+ "w|통로": [
+  {
+   "text": "성호는 화장실에 자주 가려고 통로 쪽 자리를 골랐어요.",
+   "en": "Seongho chose an aisle seat so he could go to the restroom often.",
+   "ko": "성호는 화장실에 자주 가려고 통로 쪽 자리를 골랐어요.",
+   "blank": "통로",
+   "src": "made"
+  },
+  {
+   "text": "미경은 비닐하우스 통로에 떨어진 잎을 쓸었어요.",
+   "en": "Mikyung swept up the leaves that had fallen in the greenhouse aisle.",
+   "ko": "미경은 비닐하우스 통로에 떨어진 잎을 쓸었어요.",
+   "blank": "통로에",
+   "src": "made"
   }
  ],
  "w|통역": [
@@ -68308,6 +68820,22 @@
    "blank": "팬이라고"
   }
  ],
+ "w|팽팽하다": [
+  {
+   "text": "성호는 비행기 안에서 다리가 팽팽하게 당겨서 스트레칭을 했어요.",
+   "en": "Seongho's legs felt tight on the plane, so he stretched.",
+   "ko": "성호는 비행기 안에서 다리가 팽팽하게 당겨서 스트레칭을 했어요.",
+   "blank": "팽팽하게",
+   "src": "made"
+  },
+  {
+   "text": "미경은 비닐이 바람에 날리지 않게 줄을 팽팽하게 묶었어요.",
+   "en": "Mikyung tied the ropes taut so the plastic sheeting wouldn't blow away.",
+   "ko": "미경은 비닐이 바람에 날리지 않게 줄을 팽팽하게 묶었어요.",
+   "blank": "팽팽하게",
+   "src": "made"
+  }
+ ],
  "w|퍼뜨리다": [
   {
    "text": "소식을 퍼뜨리다 보니 다들 알았어.",
@@ -69338,6 +69866,22 @@
    "src": "made"
   }
  ],
+ "w|풍경": [
+  {
+   "text": "구름 위의 풍경이 너무 아름다워서 성호는 잠도 안 잤어요.",
+   "en": "The scenery above the clouds was so beautiful that Seongho didn't even sleep.",
+   "ko": "구름 위의 풍경이 너무 아름다워서 성호는 잠도 안 잤어요.",
+   "blank": "풍경이",
+   "src": "made"
+  },
+  {
+   "text": "황금빛 논 풍경을 찍으러 사진작가들이 미경의 마을을 찾아와요.",
+   "en": "Photographers come to Mikyung's village to capture the golden rice field scenery.",
+   "ko": "황금빛 논 풍경을 찍으러 사진작가들이 미경의 마을을 찾아와요.",
+   "blank": "풍경을",
+   "src": "made"
+  }
+ ],
  "w|풍부하다": [
   {
    "text": "재료가 풍부하다 보니 요리가 풍성해.",
@@ -69350,6 +69894,22 @@
    "en": "The wording was so abundant the explanation ran long.",
    "ko": "표현이 풍부하다 못해 설명이 길었어.",
    "blank": "풍부하다"
+  }
+ ],
+ "w|풍성하다": [
+  {
+   "text": "성호는 풍성한 꽃다발을 들고 할머니를 만나러 갔어요.",
+   "en": "Seongho went to meet his grandmother carrying a lush bouquet of flowers.",
+   "ko": "성호는 풍성한 꽃다발을 들고 할머니를 만나러 갔어요.",
+   "blank": "풍성한",
+   "src": "made"
+  },
+  {
+   "text": "올가을엔 감이 풍성하게 열려서 미경이 이웃들과 나눴어요.",
+   "en": "The persimmons grew abundantly this fall, so Mikyung shared them with her neighbors.",
+   "ko": "올가을엔 감이 풍성하게 열려서 미경이 이웃들과 나눴어요.",
+   "blank": "풍성하게",
+   "src": "made"
   }
  ],
  "w|풍습": [
@@ -70636,6 +71196,22 @@
    "blank": "합치자"
   }
  ],
+ "w|항공": [
+  {
+   "text": "성호는 항공 마일리지를 모아서 이번 표를 샀어요.",
+   "en": "Seongho bought this ticket with airline miles he had saved.",
+   "ko": "성호는 항공 마일리지를 모아서 이번 표를 샀어요.",
+   "blank": "항공",
+   "src": "made"
+  },
+  {
+   "text": "이웃 농장은 항공 방제로 넓은 논에 약을 뿌려요.",
+   "en": "The neighboring farm sprays its wide rice paddies by aerial spraying.",
+   "ko": "이웃 농장은 항공 방제로 넓은 논에 약을 뿌려요.",
+   "blank": "항공",
+   "src": "made"
+  }
+ ],
  "w|항구": [
   {
    "text": "항구에서 배를 탔어.",
@@ -71492,6 +72068,22 @@
    "blank": "허리"
   }
  ],
+ "w|허물다": [
+  {
+   "text": "공항을 넓히려고 옛 터미널 건물을 허문대요.",
+   "en": "They say they're tearing down the old terminal building to expand the airport.",
+   "ko": "공항을 넓히려고 옛 터미널 건물을 허문대요.",
+   "blank": "허문대요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 낡은 창고를 허물고 그 자리에 비닐하우스를 지었어요.",
+   "en": "Mikyung tore down the old storehouse and built a greenhouse in its place.",
+   "ko": "미경은 낡은 창고를 허물고 그 자리에 비닐하우스를 지었어요.",
+   "blank": "허물고",
+   "src": "made"
+  }
+ ],
  "w|헌": [
   {
    "text": "헌 신발을 버려.",
@@ -71550,6 +72142,22 @@
    "en": "Holy, that freaked me out.",
    "ko": "헐, 나 깜짝 놀랐어.",
    "blank": "헐"
+  }
+ ],
+ "w|헐렁하다": [
+  {
+   "text": "성호는 오래 앉아 있어야 해서 헐렁한 바지를 입고 왔어요.",
+   "en": "Seongho wore loose pants since he'd have to sit for a long time.",
+   "ko": "성호는 오래 앉아 있어야 해서 헐렁한 바지를 입고 왔어요.",
+   "blank": "헐렁한",
+   "src": "made"
+  },
+  {
+   "text": "미경은 일할 때 남편의 헐렁한 작업복을 빌려 입어요.",
+   "en": "Mikyung borrows her husband's baggy work clothes when she works.",
+   "ko": "미경은 일할 때 남편의 헐렁한 작업복을 빌려 입어요.",
+   "blank": "헐렁한",
+   "src": "made"
   }
  ],
  "w|험하다": [
@@ -72566,6 +73174,22 @@
    "blank": "화려한"
   }
  ],
+ "w|화물": [
+  {
+   "text": "창밖으로 화물을 싣는 차들이 바쁘게 움직이고 있었어요.",
+   "en": "Outside the window, vehicles loading cargo were busily moving around.",
+   "ko": "창밖으로 화물을 싣는 차들이 바쁘게 움직이고 있었어요.",
+   "blank": "화물을",
+   "src": "made"
+  },
+  {
+   "text": "수확한 배추는 화물 트럭에 실려 도시로 갔어요.",
+   "en": "The harvested cabbages were loaded onto a cargo truck and sent to the city.",
+   "ko": "수확한 배추는 화물 트럭에 실려 도시로 갔어요.",
+   "blank": "화물",
+   "src": "made"
+  }
+ ],
  "w|화산": [
   {
    "text": "멀리서 화산 연기가 보여.",
@@ -72955,6 +73579,22 @@
    "en": "Mikyeong's art class has a lively atmosphere where people share opinions.",
    "ko": "미경의 미술반은 서로 의견을 나누는 분위기가 활발해요.",
    "blank": "활발해요",
+   "src": "made"
+  }
+ ],
+ "w|활주로": [
+  {
+   "text": "비행기가 활주로를 따라 점점 빨리 달리기 시작했어요.",
+   "en": "The plane began to speed up along the runway.",
+   "ko": "비행기가 활주로를 따라 점점 빨리 달리기 시작했어요.",
+   "blank": "활주로를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 옛날 비행장 활주로였던 땅을 빌려 콩을 심었어요.",
+   "en": "Mikyung rented land that used to be an old airfield runway and planted beans.",
+   "ko": "미경은 옛날 비행장 활주로였던 땅을 빌려 콩을 심었어요.",
+   "blank": "활주로였던",
    "src": "made"
   }
  ],
