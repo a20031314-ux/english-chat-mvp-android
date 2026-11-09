@@ -1335,6 +1335,22 @@
    "src": "made"
   }
  ],
+ "w|adhésif": [
+  {
+   "text": "L'infirmière fixe le tube de Thomas avec un adhésif transparent.",
+   "en": "The nurse secures Thomas's tube with clear adhesive tape.",
+   "ko": "간호사가 투명 테이프로 토마의 관을 고정해요.",
+   "blank": "adhésif",
+   "src": "made"
+  },
+  {
+   "text": "Avant l'hiver, Chloé colle un adhésif isolant autour des fenêtres.",
+   "en": "Before winter, Chloé sticks insulating tape around the windows.",
+   "ko": "겨울이 오기 전에 클로에는 창문 둘레에 단열 테이프를 붙여요.",
+   "blank": "adhésif",
+   "src": "made"
+  }
+ ],
  "w|adieu": [
   {
    "text": "Il lui a dit adieu à la gare.",
@@ -5739,6 +5755,22 @@
    "blank": "article"
   }
  ],
+ "w|articulation": [
+  {
+   "text": "Le chirurgien explique à Thomas que son articulation du genou est très usée.",
+   "en": "The surgeon explains to Thomas that his knee joint is very worn.",
+   "ko": "외과 의사가 토마에게 무릎 관절이 많이 닳았다고 설명해요.",
+   "blank": "articulation",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'humidité revient, chaque articulation de Chloé se fait sentir.",
+   "en": "When the damp returns, every one of Chloé's joints makes itself felt.",
+   "ko": "습기가 돌아오면 클로에는 관절 마디마디가 쑤셔요.",
+   "blank": "articulation",
+   "src": "made"
+  }
+ ],
  "w|artifice": [
   {
    "text": "Nicolas met en vitrine un livre sur les feux d'artifice pour la fête de juillet.",
@@ -5906,6 +5938,22 @@
    "en": "To celebrate the funding round, Claire's team has fun spraying everyone with champagne.",
    "ko": "투자 유치를 축하하며 클레르의 팀은 서로에게 샴페인을 뿌려요.",
    "blank": "asperger",
+   "src": "made"
+  }
+ ],
+ "w|asphyxie": [
+  {
+   "text": "Le médecin rassure Thomas : son malaise n'était pas dû à une asphyxie.",
+   "en": "The doctor reassures Thomas: his fainting wasn't due to asphyxia.",
+   "ko": "의사가 토마를 안심시켜요. 쓰러진 건 질식 때문이 아니었대요.",
+   "blank": "asphyxie",
+   "src": "made"
+  },
+  {
+   "text": "En hiver, les pompiers rappellent à Chloé les risques d'asphyxie liés aux vieux poêles.",
+   "en": "In winter, the firefighters remind Chloé of the risks of asphyxiation from old stoves.",
+   "ko": "겨울이면 소방관들이 클로에에게 낡은 난로로 인한 질식 위험을 일깨워 줘요.",
+   "blank": "asphyxie",
    "src": "made"
   }
  ],
@@ -8263,6 +8311,22 @@
    "blank": "balancer"
   }
  ],
+ "w|balayage": [
+  {
+   "text": "Thomas regarde l'agent d'entretien faire le balayage du couloir à l'aube.",
+   "en": "Thomas watches the cleaner sweep the corridor at dawn.",
+   "ko": "토마는 새벽에 청소원이 복도를 쓰는 걸 지켜봐요.",
+   "blank": "balayage",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Chloé se fait faire un balayage blond chez le coiffeur.",
+   "en": "In spring, Chloé gets blonde highlights at the hairdresser's.",
+   "ko": "봄이 되면 클로에는 미용실에서 금발 하이라이트를 넣어요.",
+   "blank": "balayage",
+   "src": "made"
+  }
+ ],
  "w|balayer": [
   {
    "text": "Le soir, le gardien vient balayer les papiers que Paul laisse tomber par terre.",
@@ -8754,6 +8818,22 @@
    "en": "The bearded pastry chef lends Camille his whisk.",
    "ko": "수염 난 제과 담당이 카미유에게 거품기를 빌려줘요.",
    "blank": "barbu",
+   "src": "made"
+  }
+ ],
+ "w|barge": [
+  {
+   "text": "Depuis sa chambre d'hôpital, Thomas regarde une barge descendre lentement le fleuve.",
+   "en": "From his hospital room, Thomas watches a barge slowly going down the river.",
+   "ko": "병실에서 토마는 바지선이 천천히 강을 내려가는 걸 바라봐요.",
+   "blank": "barge",
+   "src": "made"
+  },
+  {
+   "text": "En été, Chloé aime regarder les barges glisser sur le canal.",
+   "en": "In summer, Chloé likes to watch the barges glide along the canal.",
+   "ko": "여름이면 클로에는 운하를 미끄러지듯 지나는 바지선을 즐겨 봐요.",
+   "blank": "barges",
    "src": "made"
   }
  ],
@@ -9847,6 +9927,22 @@
    "en": "She always wears an elegant piece of jewelry.",
    "ko": "그녀는 항상 우아한 보석을 착용해.",
    "blank": "bijou"
+  }
+ ],
+ "w|bijouterie": [
+  {
+   "text": "Avant d'entrer au bloc, Thomas doit laisser sa montre et sa bague, achetées à la même bijouterie.",
+   "en": "Before going into surgery, Thomas has to leave his watch and ring, bought at the same jeweler's.",
+   "ko": "수술실에 들어가기 전 토마는 같은 보석 가게에서 산 시계와 반지를 맡겨야 해요.",
+   "blank": "bijouterie",
+   "src": "made"
+  },
+  {
+   "text": "Chaque hiver, la bijouterie du quartier décore sa vitrine, et Chloé s'arrête pour la regarder.",
+   "en": "Every winter, the neighborhood jeweler's decorates its window, and Chloé stops to look.",
+   "ko": "겨울마다 동네 보석 가게가 진열창을 꾸미면 클로에는 멈춰 서서 구경해요.",
+   "blank": "bijouterie",
+   "src": "made"
   }
  ],
  "w|bikini": [
@@ -11451,6 +11547,22 @@
    "en": "My bracelet turned green at the wrist.",
    "ko": "팔찌가 손목 쪽에서 초록색으로 변했어.",
    "blank": "bracelet"
+  }
+ ],
+ "w|brancard": [
+  {
+   "text": "Les infirmiers transportent Thomas sur un brancard jusqu'à la radiologie.",
+   "en": "The nurses carry Thomas on a stretcher to radiology.",
+   "ko": "간호사들이 토마를 들것에 실어 영상의학과로 옮겨요.",
+   "blank": "brancard",
+   "src": "made"
+  },
+  {
+   "text": "L'hiver dernier, Chloé a glissé sur le verglas et les secours l'ont emmenée sur un brancard.",
+   "en": "Last winter, Chloé slipped on black ice and the emergency services took her away on a stretcher.",
+   "ko": "지난겨울 클로에는 빙판에 미끄러져 구급대원이 들것에 실어 갔어요.",
+   "blank": "brancard",
+   "src": "made"
   }
  ],
  "w|branche": [
@@ -16049,6 +16161,22 @@
    "blank": "chaussette"
   }
  ],
+ "w|chausson": [
+  {
+   "text": "La sœur de Thomas lui apporte des chaussons chauds pour marcher dans les couloirs.",
+   "en": "Thomas's sister brings him warm slippers for walking in the corridors.",
+   "ko": "토마의 누나가 복도를 걸을 때 신을 따뜻한 실내화를 가져와요.",
+   "blank": "chaussons",
+   "src": "made"
+  },
+  {
+   "text": "Dès les premiers froids, Chloé sort ses chaussons en laine.",
+   "en": "As soon as the first cold arrives, Chloé gets out her wool slippers.",
+   "ko": "첫추위가 오자마자 클로에는 털 실내화를 꺼내요.",
+   "blank": "chaussons",
+   "src": "made"
+  }
+ ],
  "w|chaussure": [
   {
    "text": "J'ai perdu une chaussure dans le parc.",
@@ -17732,6 +17860,22 @@
    "en": "Inès fastens her notes to the board with a metal clip.",
    "ko": "이네스는 금속 집게로 메모를 칠판에 꽂아 둬요.",
    "blank": "clip",
+   "src": "made"
+  }
+ ],
+ "w|clique": [
+  {
+   "text": "Les internes forment une petite clique bruyante dans le couloir, remarque Thomas.",
+   "en": "The interns form a noisy little clique in the corridor, Thomas notes.",
+   "ko": "인턴들이 복도에서 시끄러운 무리를 이룬다고 토마가 말해요.",
+   "blank": "clique",
+   "src": "made"
+  },
+  {
+   "text": "À la rentrée, Chloé retrouve sa petite clique d'amies au café.",
+   "en": "When autumn term starts, Chloé meets up with her little clique of friends at the café.",
+   "ko": "가을 새 학기가 되면 클로에는 카페에서 친한 친구 무리를 다시 만나요.",
+   "blank": "clique",
    "src": "made"
   }
  ],
@@ -20269,6 +20413,22 @@
    "blank": "conclusion"
   }
  ],
+ "w|concombre": [
+  {
+   "text": "Au déjeuner, l'hôpital sert à Thomas une salade de concombre sans sauce.",
+   "en": "At lunch, the hospital serves Thomas a cucumber salad without dressing.",
+   "ko": "점심에 병원은 토마에게 드레싱 없는 오이 샐러드를 줘요.",
+   "blank": "concombre",
+   "src": "made"
+  },
+  {
+   "text": "En plein été, Chloé ne mange presque que du concombre et des tomates.",
+   "en": "In midsummer, Chloé eats almost nothing but cucumber and tomatoes.",
+   "ko": "한여름에 클로에는 거의 오이와 토마토만 먹어요.",
+   "blank": "concombre",
+   "src": "made"
+  }
+ ],
  "w|concours": [
   {
    "text": "Elle participe à un concours de chant.",
@@ -21688,6 +21848,22 @@
    "en": "Léa has a contagious cold, so she wears a mask during class.",
    "ko": "레아는 옮기 쉬운 감기에 걸려서 수업 내내 마스크를 써요.",
    "blank": "contagieux",
+   "src": "made"
+  }
+ ],
+ "w|contamination": [
+  {
+   "text": "Pour éviter toute contamination, Thomas porte un masque dans le service.",
+   "en": "To avoid any contamination, Thomas wears a mask in the ward.",
+   "ko": "감염을 막으려고 토마는 병동에서 마스크를 써요.",
+   "blank": "contamination",
+   "src": "made"
+  },
+  {
+   "text": "Chaque automne, Chloé lave bien ses mains pour limiter la contamination au bureau.",
+   "en": "Every autumn, Chloé washes her hands carefully to limit contamination at the office.",
+   "ko": "가을마다 클로에는 사무실 감염을 줄이려고 손을 꼼꼼히 씻어요.",
+   "blank": "contamination",
    "src": "made"
   }
  ],
@@ -24175,6 +24351,22 @@
    "en": "Do you want cream in your coffee?",
    "ko": "커피에 크림 넣을래?",
    "blank": "crème"
+  }
+ ],
+ "w|créneau": [
+  {
+   "text": "La secrétaire propose à Thomas un créneau tôt le matin pour son scanner.",
+   "en": "The secretary offers Thomas an early-morning slot for his scan.",
+   "ko": "비서가 토마에게 이른 아침 시간대로 CT 촬영을 잡아 줘요.",
+   "blank": "créneau",
+   "src": "made"
+  },
+  {
+   "text": "Chloé profite d'un créneau ensoleillé pour étendre son linge dehors.",
+   "en": "Chloé takes advantage of a sunny window to hang her washing outside.",
+   "ko": "클로에는 해가 잠깐 난 틈을 타서 빨래를 밖에 널어요.",
+   "blank": "créneau",
+   "src": "made"
   }
  ],
  "w|crêpe": [
@@ -28686,6 +28878,22 @@
    "en": "At the office, someone has to be chosen to organise the leaving drinks, and everyone looks at Inès.",
    "ko": "사무실에서 송별회 맡을 사람을 정해야 하는데 다들 이네스를 쳐다봐요.",
    "blank": "désigner",
+   "src": "made"
+  }
+ ],
+ "w|désintoxication": [
+  {
+   "text": "Le voisin de chambre de Thomas sort d'une cure de désintoxication et se sent fier.",
+   "en": "Thomas's roommate is coming out of a rehab program and feels proud.",
+   "ko": "토마와 같은 병실 환자는 해독 치료를 마치고 뿌듯해해요.",
+   "blank": "désintoxication",
+   "src": "made"
+  },
+  {
+   "text": "Après les fêtes, Chloé fait une cure de désintoxication au chocolat, dit-elle en riant.",
+   "en": "After the holidays, Chloé does a chocolate detox, she says laughing.",
+   "ko": "연말이 지나면 클로에는 초콜릿 끊기 기간을 갖는다며 웃어요.",
+   "blank": "désintoxication",
    "src": "made"
   }
  ],
@@ -34251,6 +34459,22 @@
    "src": "made"
   }
  ],
+ "w|embryon": [
+  {
+   "text": "Sur l'affiche du couloir, Thomas voit les étapes du développement de l'embryon.",
+   "en": "On the corridor poster, Thomas sees the stages of embryo development.",
+   "ko": "토마는 복도 포스터에서 배아의 발달 단계를 봐요.",
+   "blank": "embryon",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Chloé montre à sa classe un embryon de grenouille dans un aquarium.",
+   "en": "In spring, Chloé shows her class a frog embryo in an aquarium.",
+   "ko": "봄이 되면 클로에는 반 아이들에게 수조 속 개구리 배아를 보여 줘요.",
+   "blank": "embryon",
+   "src": "made"
+  }
+ ],
  "w|émetteur": [
   {
    "text": "Le livreur parle à son collègue grâce à un petit émetteur radio fixé à sa ceinture.",
@@ -34927,6 +35151,22 @@
    "en": "I'm looking for a place to eat.",
    "ko": "밥 먹을 곳을 찾고 있어.",
    "blank": "endroit"
+  }
+ ],
+ "w|endurance": [
+  {
+   "text": "Thomas travaille son endurance en marchant chaque jour un peu plus loin dans le couloir.",
+   "en": "Thomas builds his endurance by walking a little farther down the corridor each day.",
+   "ko": "토마는 매일 복도를 조금씩 더 걸으며 지구력을 길러요.",
+   "blank": "endurance",
+   "src": "made"
+  },
+  {
+   "text": "Chloé prépare son endurance tout l'hiver pour la course du printemps.",
+   "en": "Chloé builds up her endurance all winter for the spring race.",
+   "ko": "클로에는 봄 경주를 위해 겨우내 지구력을 길러요.",
+   "blank": "endurance",
+   "src": "made"
   }
  ],
  "w|endurer": [
@@ -45429,6 +45669,22 @@
    "src": "made"
   }
  ],
+ "w|globule": [
+  {
+   "text": "Les analyses de Thomas montrent un taux de globules blancs un peu élevé.",
+   "en": "Thomas's tests show a slightly high white blood cell count.",
+   "ko": "토마의 검사 결과 백혈구 수치가 조금 높게 나와요.",
+   "blank": "globules",
+   "src": "made"
+  },
+  {
+   "text": "Après un hiver fatigant, une prise de sang montre que Chloé manque de globules rouges.",
+   "en": "After a tiring winter, a blood test shows Chloé is short of red blood cells.",
+   "ko": "지친 겨울을 보낸 뒤 피검사에서 클로에의 적혈구가 부족하다고 나와요.",
+   "blank": "globules",
+   "src": "made"
+  }
+ ],
  "w|gloire": [
   {
    "text": "Il a cherché la gloire toute sa vie.",
@@ -46765,6 +47021,22 @@
    "src": "made"
   }
  ],
+ "w|gymnastique": [
+  {
+   "text": "La kiné propose à Thomas une gymnastique douce dans son lit.",
+   "en": "The physiotherapist offers Thomas gentle exercises in his bed.",
+   "ko": "물리치료사가 토마에게 침대에서 하는 가벼운 체조를 권해요.",
+   "blank": "gymnastique",
+   "src": "made"
+  },
+  {
+   "text": "Quand il pleut trop, Chloé remplace la course par une séance de gymnastique à la maison.",
+   "en": "When it rains too much, Chloé replaces running with an exercise session at home.",
+   "ko": "비가 너무 오면 클로에는 달리기 대신 집에서 체조를 해요.",
+   "blank": "gymnastique",
+   "src": "made"
+  }
+ ],
  "w|habile": [
   {
    "text": "Lucas admire le conducteur habile qui manœuvre le train dans la gare.",
@@ -47323,6 +47595,22 @@
    "blank": "hauteur"
   }
  ],
+ "w|hebdomadaire": [
+  {
+   "text": "Thomas attend avec impatience la visite hebdomadaire de ses enfants.",
+   "en": "Thomas eagerly waits for his children's weekly visit.",
+   "ko": "토마는 아이들이 매주 찾아오는 날을 손꼽아 기다려요.",
+   "blank": "hebdomadaire",
+   "src": "made"
+  },
+  {
+   "text": "Chloé note le changement de saison dans sa chronique hebdomadaire pour le journal local.",
+   "en": "Chloé notes the change of season in her weekly column for the local paper.",
+   "ko": "클로에는 지역 신문 주간 칼럼에 계절 변화를 적어요.",
+   "blank": "hebdomadaire",
+   "src": "made"
+  }
+ ],
  "w|héberger": [
   {
    "text": "Antoine aimerait héberger ses amis dès que la chambre d'amis sera prête.",
@@ -47429,6 +47717,22 @@
    "src": "made"
   }
  ],
+ "w|hépatite": [
+  {
+   "text": "Avant l'opération, Thomas fait une prise de sang pour exclure une hépatite.",
+   "en": "Before the operation, Thomas has a blood test to rule out hepatitis.",
+   "ko": "수술 전에 토마는 간염이 아닌지 확인하려고 피검사를 해요.",
+   "blank": "hépatite",
+   "src": "made"
+  },
+  {
+   "text": "Avant son voyage d'été, Chloé se fait vacciner contre l'hépatite.",
+   "en": "Before her summer trip, Chloé gets vaccinated against hepatitis.",
+   "ko": "여름 여행을 앞두고 클로에는 간염 예방 주사를 맞아요.",
+   "blank": "hépatite",
+   "src": "made"
+  }
+ ],
  "w|herbe": [
   {
    "text": "L’herbe est très verte après la pluie.",
@@ -47502,6 +47806,22 @@
    "en": "Manon is playing in an opera where the king's heir falls in love with a servant.",
    "ko": "마농은 왕위 계승자가 하녀와 사랑에 빠지는 오페라에서 연주해요.",
    "blank": "héritier",
+   "src": "made"
+  }
+ ],
+ "w|hernie": [
+  {
+   "text": "Thomas est opéré d'une hernie après avoir porté des charges trop lourdes.",
+   "en": "Thomas is operated on for a hernia after carrying loads that were too heavy.",
+   "ko": "토마는 너무 무거운 짐을 들다가 탈장이 와서 수술받아요.",
+   "blank": "hernie",
+   "src": "made"
+  },
+  {
+   "text": "En pelletant la neige, le voisin de Chloé s'est fait une hernie.",
+   "en": "Shoveling snow, Chloé's neighbor gave himself a hernia.",
+   "ko": "눈을 치우다가 클로에의 이웃은 탈장이 왔어요.",
+   "blank": "hernie",
    "src": "made"
   }
  ],
@@ -47877,6 +48197,22 @@
    "en": "The man wears a black hat.",
    "ko": "그 남자는 검은 모자를 썼어.",
    "blank": "homme"
+  }
+ ],
+ "w|homosexualité": [
+  {
+   "text": "Thomas lit un article sur l'histoire de la dépénalisation de l'homosexualité dans la salle d'attente.",
+   "en": "Thomas reads an article on the history of the decriminalization of homosexuality in the waiting room.",
+   "ko": "토마는 대기실에서 동성애 비범죄화의 역사에 관한 기사를 읽어요.",
+   "blank": "homosexualité",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Chloé défile avec ses amis pour les droits liés à l'homosexualité.",
+   "en": "In spring, Chloé marches with her friends for rights related to homosexuality.",
+   "ko": "봄이면 클로에는 친구들과 동성애자 권리 행진에 함께해요.",
+   "blank": "homosexualité",
+   "src": "made"
   }
  ],
  "w|homosexuel": [
@@ -49767,6 +50103,22 @@
    "en": "I will import all the documents tonight.",
    "ko": "오늘 밤에 모든 문서를 가져올 거야.",
    "blank": "importer"
+  }
+ ],
+ "w|importuner": [
+  {
+   "text": "Thomas ne veut pas importuner l'infirmière de nuit pour un simple verre d'eau.",
+   "en": "Thomas doesn't want to bother the night nurse for a mere glass of water.",
+   "ko": "토마는 물 한 잔 때문에 야간 간호사를 귀찮게 하고 싶지 않아요.",
+   "blank": "importuner",
+   "src": "made"
+  },
+  {
+   "text": "Les guêpes de septembre viennent importuner Chloé pendant ses pique-niques.",
+   "en": "September wasps come to bother Chloé during her picnics.",
+   "ko": "구월 말벌이 소풍 나온 클로에를 귀찮게 해요.",
+   "blank": "importuner",
+   "src": "made"
   }
  ],
  "w|imposer": [
@@ -56940,6 +57292,22 @@
    "en": "Léa won her cooking class through a supermarket lottery.",
    "ko": "레아는 슈퍼마켓 경품 추첨으로 요리 수업을 따냈어요.",
    "blank": "loterie",
+   "src": "made"
+  }
+ ],
+ "w|lotion": [
+  {
+   "text": "Thomas passe une lotion apaisante sur ses mains abîmées par le gel désinfectant.",
+   "en": "Thomas applies a soothing lotion to his hands, damaged by the sanitizer gel.",
+   "ko": "토마는 소독젤 때문에 거칠어진 손에 진정 로션을 발라요.",
+   "blank": "lotion",
+   "src": "made"
+  },
+  {
+   "text": "En été, Chloé applique une lotion solaire avant de sortir.",
+   "en": "In summer, Chloé applies sun lotion before going out.",
+   "ko": "여름에 클로에는 나가기 전에 자외선 차단 로션을 발라요.",
+   "blank": "lotion",
    "src": "made"
   }
  ],
@@ -64155,6 +64523,22 @@
    "src": "made"
   }
  ],
+ "w|neurone": [
+  {
+   "text": "Le neurologue montre à Thomas un schéma de neurone pour expliquer ses fourmillements.",
+   "en": "The neurologist shows Thomas a neuron diagram to explain his tingling.",
+   "ko": "신경과 의사가 토마에게 신경 세포 그림을 보여 주며 저림 증상을 설명해요.",
+   "blank": "neurone",
+   "src": "made"
+  },
+  {
+   "text": "Le froid de l'hiver ralentit chaque neurone de Chloé, plaisante-t-elle le matin.",
+   "en": "The winter cold slows down every one of Chloé's neurons, she jokes in the morning.",
+   "ko": "겨울 추위에 뇌세포가 하나하나 느려진다고 클로에가 아침마다 농담해요.",
+   "blank": "neurone",
+   "src": "made"
+  }
+ ],
  "w|neutraliser": [
   {
    "text": "Louis explique que ce sirop sert à neutraliser l'acidité de l'estomac.",
@@ -68909,6 +69293,22 @@
    "src": "made"
   }
  ],
+ "w|pastille": [
+  {
+   "text": "Thomas suce une pastille pour calmer sa gorge sèche après l'intubation.",
+   "en": "Thomas sucks a lozenge to soothe his dry throat after the intubation.",
+   "ko": "토마는 삽관 뒤 마른 목을 달래려고 목캔디를 빨아요.",
+   "blank": "pastille",
+   "src": "made"
+  },
+  {
+   "text": "Dès l'automne, Chloé garde des pastilles au miel dans son sac.",
+   "en": "From autumn on, Chloé keeps honey lozenges in her bag.",
+   "ko": "가을부터 클로에는 가방에 꿀 목캔디를 넣고 다녀요.",
+   "blank": "pastilles",
+   "src": "made"
+  }
+ ],
  "w|patate": [
   {
    "text": "Au café du musée, Lucas commande un gratin de patates et une salade.",
@@ -69453,6 +69853,22 @@
    "src": "made"
   }
  ],
+ "w|pédiatre": [
+  {
+   "text": "Dans l'ascenseur, Thomas croise la pédiatre qui soignait ses enfants.",
+   "en": "In the elevator, Thomas runs into the pediatrician who treated his children.",
+   "ko": "엘리베이터에서 토마는 아이들을 진료하던 소아과 의사와 마주쳐요.",
+   "blank": "pédiatre",
+   "src": "made"
+  },
+  {
+   "text": "Chaque automne, Chloé emmène son fils chez le pédiatre pour le vaccin contre la grippe.",
+   "en": "Every autumn, Chloé takes her son to the pediatrician for the flu shot.",
+   "ko": "가을마다 클로에는 아들을 데리고 소아과에 독감 주사를 맞히러 가요.",
+   "blank": "pédiatre",
+   "src": "made"
+  }
+ ],
  "w|peigne": [
   {
    "text": "Nicolas range un peigne en ivoire du Moyen Âge dans une petite vitrine.",
@@ -69986,6 +70402,22 @@
    "en": "Claire films her performance to correct her turn.",
    "ko": "클레르는 턴 동작을 고치려고 자기 경기 모습을 찍어요.",
    "blank": "performance",
+   "src": "made"
+  }
+ ],
+ "w|perfusion": [
+  {
+   "text": "Thomas reste sous perfusion pendant toute la première nuit.",
+   "en": "Thomas stays on a drip for the whole first night.",
+   "ko": "토마는 첫날 밤 내내 링거를 맞아요.",
+   "blank": "perfusion",
+   "src": "made"
+  },
+  {
+   "text": "Avec la grippe de l'hiver, la grand-mère de Chloé a dû passer une nuit sous perfusion.",
+   "en": "With the winter flu, Chloé's grandmother had to spend a night on a drip.",
+   "ko": "겨울 독감 때문에 클로에의 할머니는 하룻밤 링거를 맞아야 했어요.",
+   "blank": "perfusion",
    "src": "made"
   }
  ],
@@ -70715,6 +71147,22 @@
    "en": "Stop by the pharmacy for the syrup.",
    "ko": "시럽 사러 약국에 들러.",
    "blank": "pharmacie"
+  }
+ ],
+ "w|pharmacien": [
+  {
+   "text": "En sortant, Thomas apporte son ordonnance au pharmacien de l'hôpital.",
+   "en": "On his way out, Thomas takes his prescription to the hospital pharmacist.",
+   "ko": "퇴원하면서 토마는 처방전을 병원 약사에게 가져가요.",
+   "blank": "pharmacien",
+   "src": "made"
+  },
+  {
+   "text": "Dès le printemps, le pharmacien conseille à Chloé un traitement contre le pollen.",
+   "en": "As soon as spring comes, the pharmacist recommends a pollen treatment to Chloé.",
+   "ko": "봄이 오자마자 약사가 클로에에게 꽃가루 알레르기 약을 권해요.",
+   "blank": "pharmacien",
+   "src": "made"
   }
  ],
  "w|phase": [
@@ -72978,6 +73426,22 @@
    "en": "A group of Polish tourists arrives at midnight, and Léa hands them their keys.",
    "ko": "폴란드 관광객 단체가 자정에 도착해서 레아가 열쇠를 건네요.",
    "blank": "polonais",
+   "src": "made"
+  }
+ ],
+ "w|pommade": [
+  {
+   "text": "L'infirmière applique une pommade sur la cicatrice de Thomas.",
+   "en": "The nurse applies an ointment to Thomas's scar.",
+   "ko": "간호사가 토마의 흉터에 연고를 발라요.",
+   "blank": "pommade",
+   "src": "made"
+  },
+  {
+   "text": "En hiver, Chloé met de la pommade sur ses lèvres gercées.",
+   "en": "In winter, Chloé puts ointment on her chapped lips.",
+   "ko": "겨울이면 클로에는 튼 입술에 연고를 발라요.",
+   "blank": "pommade",
    "src": "made"
   }
  ],
@@ -76035,6 +76499,22 @@
    "src": "made"
   }
  ],
+ "w|prolongé": [
+  {
+   "text": "Après l'opération, le médecin recommande à Thomas un repos prolongé.",
+   "en": "After the operation, the doctor recommends extended rest for Thomas.",
+   "ko": "수술 뒤 의사는 토마에게 오래 쉬라고 권해요.",
+   "blank": "prolongé",
+   "src": "made"
+  },
+  {
+   "text": "Cette année, l'été prolongé a retardé la chute des feuilles, note Chloé.",
+   "en": "This year, the extended summer delayed the falling of the leaves, Chloé notes.",
+   "ko": "올해는 여름이 길어서 낙엽이 늦게 졌다고 클로에가 말해요.",
+   "blank": "prolongé",
+   "src": "made"
+  }
+ ],
  "w|prolonger": [
   {
    "text": "Le soleil brille encore, alors Hugo décide de prolonger la balade.",
@@ -76428,6 +76908,22 @@
    "en": "The ornaments on the façade date from a time of great prosperity.",
    "ko": "건물 앞면 장식은 크게 번영하던 시절의 것이에요.",
    "blank": "prospérité",
+   "src": "made"
+  }
+ ],
+ "w|prostate": [
+  {
+   "text": "Le médecin propose à Thomas un dépistage de la prostate, par précaution.",
+   "en": "The doctor offers Thomas a prostate screening as a precaution.",
+   "ko": "의사가 만약을 위해 토마에게 전립선 검사를 권해요.",
+   "blank": "prostate",
+   "src": "made"
+  },
+  {
+   "text": "À l'automne, le père de Chloé participe à une campagne sur le cancer de la prostate.",
+   "en": "In autumn, Chloé's father takes part in a prostate cancer campaign.",
+   "ko": "가을에 클로에의 아버지는 전립선암 캠페인에 참여해요.",
+   "blank": "prostate",
    "src": "made"
   }
  ],
@@ -76968,6 +77464,22 @@
    "en": "Claire invited a friend who's a psychologist and tells fascinating stories.",
    "ko": "클레르는 재미있는 이야기를 잘하는 심리학자 친구를 초대했어요.",
    "blank": "psychologue",
+   "src": "made"
+  }
+ ],
+ "w|psychose": [
+  {
+   "text": "La psychiatre explique à Thomas que la psychose se soigne mieux aujourd'hui.",
+   "en": "The psychiatrist explains to Thomas that psychosis is better treated today.",
+   "ko": "정신과 의사가 토마에게 요즘은 정신증 치료가 더 잘 된다고 설명해요.",
+   "blank": "psychose",
+   "src": "made"
+  },
+  {
+   "text": "La sœur de Chloé, infirmière, explique qu'une psychose ne dépend pas des saisons.",
+   "en": "Chloé's sister, a nurse, explains that a psychosis doesn't depend on the seasons.",
+   "ko": "간호사인 클로에의 언니는 정신증이 계절과는 상관없다고 설명해요.",
+   "blank": "psychose",
    "src": "made"
   }
  ],
@@ -77901,6 +78413,22 @@
    "en": "Anyone who wants to try can come now.",
    "ko": "시도하고 싶은 사람은 지금 올 수 있어요.",
    "blank": "Quiconque"
+  }
+ ],
+ "w|quincaillerie": [
+  {
+   "text": "Thomas tenait une quincaillerie avant son accident, raconte-t-il à l'infirmière.",
+   "en": "Thomas ran a hardware store before his accident, he tells the nurse.",
+   "ko": "토마는 사고 전에 철물점을 했다고 간호사에게 얘기해요.",
+   "blank": "quincaillerie",
+   "src": "made"
+  },
+  {
+   "text": "À l'automne, Chloé achète une pelle à la quincaillerie pour ramasser les feuilles.",
+   "en": "In autumn, Chloé buys a shovel at the hardware store to pick up the leaves.",
+   "ko": "가을이면 클로에는 낙엽을 치우려고 철물점에서 삽을 사요.",
+   "blank": "quincaillerie",
+   "src": "made"
   }
  ],
  "w|quinze": [
@@ -79323,6 +79851,22 @@
    "en": "He often confuses dream and reality.",
    "ko": "그는 종종 꿈과 현실을 혼동해.",
    "blank": "réalité"
+  }
+ ],
+ "w|réanimation": [
+  {
+   "text": "Thomas passe devant le service de réanimation en allant à la cafétéria.",
+   "en": "Thomas walks past the intensive care unit on his way to the cafeteria.",
+   "ko": "토마는 카페테리아에 가다가 중환자실 앞을 지나가요.",
+   "blank": "réanimation",
+   "src": "made"
+  },
+  {
+   "text": "Le frère de Chloé travaille en réanimation et connaît bien les pics de grippe de l'hiver.",
+   "en": "Chloé's brother works in intensive care and knows the winter flu peaks well.",
+   "ko": "클로에의 오빠는 중환자실에서 일해서 겨울 독감 절정기를 잘 알아요.",
+   "blank": "réanimation",
+   "src": "made"
   }
  ],
  "w|réapparaître": [
@@ -87263,6 +87807,22 @@
    "src": "made"
   }
  ],
+ "w|secouriste": [
+  {
+   "text": "C'est un secouriste bénévole qui a porté les premiers soins à Thomas après sa chute.",
+   "en": "It was a volunteer first-aider who gave Thomas first aid after his fall.",
+   "ko": "토마가 넘어진 뒤 응급처치를 해 준 건 자원봉사 응급 구조원이었어요.",
+   "blank": "secouriste",
+   "src": "made"
+  },
+  {
+   "text": "Chloé suit une formation de secouriste au printemps.",
+   "en": "Chloé takes a first-aid course in the spring.",
+   "ko": "클로에는 봄에 응급 구조원 교육을 받아요.",
+   "blank": "secouriste",
+   "src": "made"
+  }
+ ],
  "w|secours": [
   {
    "text": "Appelle les secours si tu as un problème.",
@@ -89251,6 +89811,22 @@
    "blank": "sms"
   }
  ],
+ "w|snack": [
+  {
+   "text": "Thomas achète un snack au distributeur du hall en attendant ses résultats.",
+   "en": "Thomas buys a snack from the lobby vending machine while waiting for his results.",
+   "ko": "토마는 결과를 기다리며 로비 자판기에서 간식을 사요.",
+   "blank": "snack",
+   "src": "made"
+  },
+  {
+   "text": "En été, le snack de la plage ouvre enfin, et Chloé y achète une glace.",
+   "en": "In summer, the beach snack bar finally opens, and Chloé buys an ice cream there.",
+   "ko": "여름이 되면 해변 간이식당이 드디어 문을 열고 클로에는 거기서 아이스크림을 사요.",
+   "blank": "snack",
+   "src": "made"
+  }
+ ],
  "w|snob": [
   {
    "text": "Un visiteur un peu snob a corrigé la prononciation de Nicolas devant le groupe.",
@@ -89280,6 +89856,22 @@
    "en": "All week before the race, Claire stayed sober.",
    "ko": "경주 전 일주일 내내 클레르는 술을 한 방울도 안 마셨어요.",
    "blank": "sobre",
+   "src": "made"
+  }
+ ],
+ "w|sobriété": [
+  {
+   "text": "Pour sa convalescence, le médecin conseille à Thomas la sobriété pendant un mois.",
+   "en": "For his recovery, the doctor advises Thomas to stay sober for a month.",
+   "ko": "회복을 위해 의사는 토마에게 한 달 동안 술을 끊으라고 해요.",
+   "blank": "sobriété",
+   "src": "made"
+  },
+  {
+   "text": "En janvier, Chloé choisit la sobriété après les excès des fêtes.",
+   "en": "In January, Chloé chooses sobriety after the excesses of the holidays.",
+   "ko": "일월이면 클로에는 연말에 과하게 마신 뒤라 술을 멀리해요.",
+   "blank": "sobriété",
    "src": "made"
   }
  ],
@@ -97203,6 +97795,22 @@
    "src": "made"
   }
  ],
+ "w|trio": [
+  {
+   "text": "Un trio de clowns passe chaque mercredi dans le service, et Thomas les attend avec impatience.",
+   "en": "A trio of clowns comes through the ward every Wednesday, and Thomas waits eagerly for them.",
+   "ko": "광대 세 명이 수요일마다 병동을 찾아오는데, 토마는 그들을 손꼽아 기다려요.",
+   "blank": "trio",
+   "src": "made"
+  },
+  {
+   "text": "Chloé et ses deux sœurs forment un trio inséparable lors des cueillettes d'automne.",
+   "en": "Chloé and her two sisters form an inseparable trio during autumn picking.",
+   "ko": "가을 열매 따기 때면 클로에와 두 자매는 떼려야 뗄 수 없는 삼총사가 돼요.",
+   "blank": "trio",
+   "src": "made"
+  }
+ ],
  "w|triomphe": [
   {
    "text": "Pour la sœur de Julien, avoir le dernier mot est toujours un petit triomphe.",
@@ -97745,6 +98353,22 @@
    "en": "Pass me the glue tube, please.",
    "ko": "풀 튜브 좀 건네줘.",
    "blank": "tube"
+  }
+ ],
+ "w|tuberculose": [
+  {
+   "text": "Thomas lit dans une brochure que la tuberculose n'a pas complètement disparu.",
+   "en": "Thomas reads in a brochure that tuberculosis hasn't completely disappeared.",
+   "ko": "토마는 안내 책자에서 결핵이 완전히 사라지지 않았다는 걸 읽어요.",
+   "blank": "tuberculose",
+   "src": "made"
+  },
+  {
+   "text": "Chloé lit qu'autrefois, les malades de la tuberculose passaient l'hiver à la montagne.",
+   "en": "Chloé reads that in the past, tuberculosis patients spent the winter in the mountains.",
+   "ko": "클로에는 예전엔 결핵 환자들이 산에서 겨울을 났다는 걸 읽어요.",
+   "blank": "tuberculose",
+   "src": "made"
   }
  ],
  "w|tuer": [
@@ -99396,6 +100020,22 @@
    "en": "Émilie's daughter locks her room with a bolt to write in her diary.",
    "ko": "에밀리의 딸은 일기를 쓰려고 방문 빗장을 걸어요.",
    "blank": "verrou",
+   "src": "made"
+  }
+ ],
+ "w|verrouillage": [
+  {
+   "text": "Thomas oublie le code de verrouillage de son téléphone après l'anesthésie.",
+   "en": "Thomas forgets his phone's lock code after the anesthesia.",
+   "ko": "마취에서 깬 토마는 휴대폰 잠금 비밀번호를 까먹어요.",
+   "blank": "verrouillage",
+   "src": "made"
+  },
+  {
+   "text": "Avec le gel, le verrouillage de la voiture de Chloé reste bloqué.",
+   "en": "With the frost, the lock on Chloé's car stays stuck.",
+   "ko": "서리 때문에 클로에의 자동차 잠금장치가 얼어붙어요.",
+   "blank": "verrouillage",
    "src": "made"
   }
  ],
