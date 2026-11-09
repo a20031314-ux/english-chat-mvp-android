@@ -77,6 +77,22 @@
    "src": "tatoeba:10934929/marafon en:35258/CK"
   }
  ],
+ "w|автомат": [
+  {
+   "text": "На перемене Сергей купил в автомате бутылку воды.",
+   "en": "During the break Sergei bought a bottle of water from the vending machine.",
+   "ko": "쉬는 시간에 세르게이는 자판기에서 물 한 병을 샀어요.",
+   "blank": "автомате",
+   "src": "made"
+  },
+  {
+   "text": "В подвале дома Марии стоит автомат для стирки, которым пользуются все жильцы.",
+   "en": "In the basement of Maria's building there's a washing machine that all the residents use.",
+   "ko": "마리아네 건물 지하에는 주민 모두가 쓰는 세탁기가 있어요.",
+   "blank": "автомат",
+   "src": "made"
+  }
+ ],
  "w|автомобиль": [
   {
    "text": "Ты собираешься купить этот автомобиль?",
@@ -688,6 +704,22 @@
    "en": "At the station pie sellers started besieging Natalia.",
    "ko": "역에서 피로시키 장수들이 나탈리야에게 몰려들기 시작했어요.",
    "blank": "атаковать",
+   "src": "made"
+  }
+ ],
+ "w|атмосфера": [
+  {
+   "text": "В классе у Сергея дружная атмосфера, и новичков принимают сразу.",
+   "en": "There's a friendly atmosphere in Sergei's class, and newcomers are accepted right away.",
+   "ko": "세르게이네 반은 분위기가 화목해서 전학생도 금방 어울려요.",
+   "blank": "атмосфера",
+   "src": "made"
+  },
+  {
+   "text": "После ремонта во дворе атмосфера стала спокойнее, и Мария вечером гуляет с собакой.",
+   "en": "After the courtyard was renovated the atmosphere became calmer, and Maria walks her dog there in the evenings.",
+   "ko": "마당 공사가 끝나고 분위기가 차분해져서 마리아는 저녁마다 개를 데리고 산책해요.",
+   "blank": "атмосфера",
    "src": "made"
   }
  ],
@@ -1818,6 +1850,22 @@
    "en": "Natalia saw an old highlanders' battle axe in the local museum.",
    "ko": "나탈리야는 마을 박물관에서 산악 부족의 옛 전투 도끼를 봤어요.",
    "blank": "боевой",
+   "src": "made"
+  }
+ ],
+ "w|боец": [
+  {
+   "text": "Тренер назвал Сергея настоящим бойцом после трудной игры.",
+   "en": "The coach called Sergei a real fighter after the tough game.",
+   "ko": "힘든 경기가 끝나고 코치는 세르게이를 진짜 투사라고 불렀어요.",
+   "blank": "бойцом",
+   "src": "made"
+  },
+  {
+   "text": "Сосед Марии в молодости был бойцом пожарной команды.",
+   "en": "When he was young, Maria's neighbour was a firefighter in a fire brigade.",
+   "ko": "마리아의 이웃은 젊었을 때 소방대원이었어요.",
+   "blank": "бойцом",
    "src": "made"
   }
  ],
@@ -4225,6 +4273,22 @@
    "src": "made"
   }
  ],
+ "w|внешний": [
+  {
+   "text": "Учительница сказала Сергею, что внешний вид работы тоже важен.",
+   "en": "The teacher told Sergei that the outward appearance of his work matters too.",
+   "ko": "선생님은 세르게이에게 과제의 겉모양도 중요하다고 했어요.",
+   "blank": "внешний",
+   "src": "made"
+  },
+  {
+   "text": "Рабочие начали красить внешние стены дома, где живёт Мария.",
+   "en": "Workers began painting the outer walls of the building where Maria lives.",
+   "ko": "인부들이 마리아가 사는 건물의 바깥벽을 칠하기 시작했어요.",
+   "blank": "внешние",
+   "src": "made"
+  }
+ ],
  "w|вниз": [
   {
    "text": "Мы скатились на лыжах вниз по склону.",
@@ -6269,6 +6333,22 @@
    "blank": "выиграть"
   }
  ],
+ "w|выигрывать": [
+  {
+   "text": "Команда Сергея выигрывает почти все школьные турниры по волейболу.",
+   "en": "Sergei's team wins almost all the school volleyball tournaments.",
+   "ko": "세르게이네 팀은 학교 배구 대회에서 거의 매번 이겨요.",
+   "blank": "выигрывает",
+   "src": "made"
+  },
+  {
+   "text": "Сосед Марии постоянно выигрывает в лотерею какие-то мелочи.",
+   "en": "Maria's neighbour keeps winning little things in the lottery.",
+   "ko": "마리아의 이웃은 복권에서 자잘한 경품을 자꾸 타요.",
+   "blank": "выигрывает",
+   "src": "made"
+  }
+ ],
  "w|выйти": [
   {
    "text": "Мне надо выйти.",
@@ -6443,6 +6523,22 @@
    "src": "tatoeba:12864299/LanguagesLover en:12864298/Lumi_alt"
   }
  ],
+ "w|выписать": [
+  {
+   "text": "Сергей выписал из учебника все новые слова в отдельную тетрадь.",
+   "en": "Sergei copied all the new vocabulary from the textbook into a separate notebook.",
+   "ko": "세르게이는 교과서의 새 단어를 모두 따로 공책에 옮겨 적었어요.",
+   "blank": "выписал",
+   "src": "made"
+  },
+  {
+   "text": "Врач выписал Марии лекарство, и соседка сходила за ним в аптеку.",
+   "en": "The doctor prescribed Maria some medicine, and her neighbour went to the pharmacy for it.",
+   "ko": "의사가 마리아에게 약을 처방해 줬고 이웃이 약국에 가서 사다 줬어요.",
+   "blank": "выписал",
+   "src": "made"
+  }
+ ],
  "w|выпить": [
   {
    "text": "Выпьем чаю?",
@@ -6583,6 +6679,22 @@
    "ko": "사과 씨를 심으면 나무로 자랄 수도 있어요.",
    "blank": "вырасти",
    "src": "tatoeba:912700/joulin en:681742/Source_VOA"
+  }
+ ],
+ "w|вырвать": [
+  {
+   "text": "Сергей аккуратно вырвал лист из тетради и написал записку другу.",
+   "en": "Sergei carefully tore a page out of his exercise book and wrote a note to his friend.",
+   "ko": "세르게이는 공책에서 한 장을 조심스럽게 뜯어 친구에게 쪽지를 썼어요.",
+   "blank": "вырвал",
+   "src": "made"
+  },
+  {
+   "text": "Мария вырвала сорняки на клумбе у подъезда.",
+   "en": "Maria pulled out the weeds in the flower bed by the entrance.",
+   "ko": "마리아는 현관 앞 화단의 잡초를 뽑았어요.",
+   "blank": "вырвала",
+   "src": "made"
   }
  ],
  "w|выслушать": [
@@ -7071,6 +7183,38 @@
    "ko": "사람들이 나보고 전쟁 영웅이래.",
    "blank": "герой",
    "src": "tatoeba:6325398/marafon en:5852021/CK"
+  }
+ ],
+ "w|гигантский": [
+  {
+   "text": "В школьном коридоре повесили гигантскую карту, и Сергей нашёл на ней свой город.",
+   "en": "A giant map was hung in the school corridor, and Sergei found his town on it.",
+   "ko": "학교 복도에 커다란 지도가 걸렸고 세르게이는 거기서 자기 도시를 찾았어요.",
+   "blank": "гигантскую",
+   "src": "made"
+  },
+  {
+   "text": "Во двор к Марии привезли гигантскую ёлку, и дети водили вокруг неё хоровод.",
+   "en": "A giant Christmas tree was brought to Maria's courtyard, and the children danced in a circle around it.",
+   "ko": "마리아네 마당에 커다란 트리가 들어와서 아이들이 그 둘레를 돌며 춤을 췄어요.",
+   "blank": "гигантскую",
+   "src": "made"
+  }
+ ],
+ "w|гитара": [
+  {
+   "text": "На школьном концерте Сергей играл на гитаре вместе с учителем музыки.",
+   "en": "At the school concert Sergei played the guitar together with the music teacher.",
+   "ko": "학교 음악회에서 세르게이는 음악 선생님과 함께 기타를 쳤어요.",
+   "blank": "гитаре",
+   "src": "made"
+  },
+  {
+   "text": "По вечерам за стеной у Марии сосед тихо играет на гитаре.",
+   "en": "In the evenings Maria's neighbour quietly plays the guitar on the other side of the wall.",
+   "ko": "저녁마다 마리아네 옆집 사람이 벽 너머에서 조용히 기타를 쳐요.",
+   "blank": "гитаре",
+   "src": "made"
   }
  ],
  "w|глава": [
@@ -10299,6 +10443,22 @@
    "src": "tatoeba:4194190/Lenin_1917 en:3541785/CK"
   }
  ],
+ "w|достоинство": [
+  {
+   "text": "Сергей принял поражение в турнире с достоинством и поздравил соперника.",
+   "en": "Sergei accepted defeat in the tournament with dignity and congratulated his opponent.",
+   "ko": "세르게이는 대회에서 진 것을 의연하게 받아들이고 상대를 축하해 줬어요.",
+   "blank": "достоинством",
+   "src": "made"
+  },
+  {
+   "text": "Мария считает, что у её квартиры есть одно главное достоинство — вид на парк.",
+   "en": "Maria thinks her flat has one main advantage — the view of the park.",
+   "ko": "마리아는 자기 집의 가장 큰 장점이 공원 전망이라고 생각해요.",
+   "blank": "достоинство",
+   "src": "made"
+  }
+ ],
  "w|достойный": [
   {
    "text": "Иван считает, что это самый достойный семейный ресторан в районе.",
@@ -11267,6 +11427,22 @@
    "en": "Luckily, nobody was hurt.",
    "ko": "다행히 다친 사람은 없어.",
    "blank": "жертв"
+  }
+ ],
+ "w|жёсткий": [
+  {
+   "text": "У нового директора жёсткие правила, и Сергей теперь не опаздывает.",
+   "en": "The new head teacher has strict rules, and Sergei is no longer late.",
+   "ko": "새 교장 선생님은 규칙이 엄해서 세르게이는 이제 지각하지 않아요.",
+   "blank": "жёсткие",
+   "src": "made"
+  },
+  {
+   "text": "Мария постелила на новый диван жёсткий плед, и кот сразу его разлюбил.",
+   "en": "Maria put a stiff blanket on the new sofa, and the cat immediately took a dislike to it.",
+   "ko": "마리아가 새 소파에 뻣뻣한 담요를 깔았더니 고양이가 바로 싫어했어요.",
+   "blank": "жёсткий",
+   "src": "made"
   }
  ],
  "w|жестокий": [
@@ -13459,6 +13635,22 @@
    "src": "tatoeba:5280703/odexed en:2018876/CK"
   }
  ],
+ "w|защитник": [
+  {
+   "text": "В школьной футбольной команде Сергей играет защитником.",
+   "en": "In the school football team Sergei plays as a defender.",
+   "ko": "학교 축구팀에서 세르게이는 수비수로 뛰어요.",
+   "blank": "защитником",
+   "src": "made"
+  },
+  {
+   "text": "На собрании жильцов Мария выступила защитником старых деревьев во дворе.",
+   "en": "At the residents' meeting Maria spoke as a defender of the old trees in the courtyard.",
+   "ko": "주민 회의에서 마리아는 마당의 오래된 나무들을 지키자고 나섰어요.",
+   "blank": "защитником",
+   "src": "made"
+  }
+ ],
  "w|защищать": [
   {
    "text": "Как я теперь буду защищать своих детей?",
@@ -14077,6 +14269,22 @@
    "ko": "시력이 예전 같지 않아요.",
    "blank": "Зрение",
    "src": "tatoeba:3293272/marafon en:4016969/CK"
+  }
+ ],
+ "w|зритель": [
+  {
+   "text": "На школьном спектакле Сергей увидел среди зрителей свою бабушку.",
+   "en": "At the school play Sergei saw his grandmother among the audience.",
+   "ko": "학교 연극에서 세르게이는 관객 사이에 할머니가 있는 걸 봤어요.",
+   "blank": "зрителей",
+   "src": "made"
+  },
+  {
+   "text": "Мария пришла на концерт соседа как обычный зритель и купила билет.",
+   "en": "Maria came to her neighbour's concert as an ordinary spectator and bought a ticket.",
+   "ko": "마리아는 이웃의 공연에 평범한 관객으로 가서 표를 샀어요.",
+   "blank": "зритель",
+   "src": "made"
   }
  ],
  "w|зря": [
@@ -16753,6 +16961,22 @@
    "src": "tatoeba:2690186/Lenin_1917 en:28251/CK"
   }
  ],
+ "w|комментарий": [
+  {
+   "text": "Учительница оставила под сочинением Сергея длинный комментарий.",
+   "en": "The teacher left a long comment under Sergei's essay.",
+   "ko": "선생님은 세르게이의 글 아래에 긴 평을 남겼어요.",
+   "blank": "комментарий",
+   "src": "made"
+  },
+  {
+   "text": "Мария написала в чате дома комментарий о сломанном лифте.",
+   "en": "Maria posted a comment in the building chat about the broken lift.",
+   "ko": "마리아는 아파트 단톡방에 엘리베이터 고장에 대한 글을 남겼어요.",
+   "blank": "комментарий",
+   "src": "made"
+  }
+ ],
  "w|комната": [
   {
    "text": "В комнате душно.",
@@ -17821,6 +18045,22 @@
    "src": "tatoeba:6394143/marafon en:6381203/OsoHombre"
   }
  ],
+ "w|кровавый": [
+  {
+   "text": "В учебнике истории Сергей прочитал о кровавой битве, которая шла три дня.",
+   "en": "In his history textbook Sergei read about a bloody battle that lasted three days.",
+   "ko": "세르게이는 역사 교과서에서 사흘 동안 이어진 피비린내 나는 전투에 대해 읽었어요.",
+   "blank": "кровавой",
+   "src": "made"
+  },
+  {
+   "text": "Мария не любит кровавые фильмы, поэтому сосед принёс ей комедию.",
+   "en": "Maria doesn't like bloody films, so her neighbour brought her a comedy.",
+   "ko": "마리아는 잔인한 영화를 싫어해서 이웃이 코미디를 가져다줬어요.",
+   "blank": "кровавые",
+   "src": "made"
+  }
+ ],
  "w|кровать": [
   {
    "text": "Какую кровать ты хочешь использовать?",
@@ -18186,6 +18426,22 @@
    "en": "For the impact experiment Elena used a dummy that looked like a big doll.",
    "ko": "옐레나는 충격 실험에 큰 인형처럼 생긴 마네킹을 썼어요.",
    "blank": "куклу",
+   "src": "made"
+  }
+ ],
+ "w|культура": [
+  {
+   "text": "Сергею больше всего нравятся уроки, где рассказывают о культуре других стран.",
+   "en": "Sergei likes lessons about the culture of other countries best of all.",
+   "ko": "세르게이는 다른 나라 문화를 배우는 수업을 가장 좋아해요.",
+   "blank": "культуре",
+   "src": "made"
+  },
+  {
+   "text": "В доме Марии живут люди из разных городов, и у каждого своя культура праздников.",
+   "en": "People from different cities live in Maria's building, and each has their own culture of celebrations.",
+   "ko": "마리아네 건물에는 여러 도시에서 온 사람들이 살아서 명절 문화가 저마다 달라요.",
+   "blank": "культура",
    "src": "made"
   }
  ],
@@ -19063,6 +19319,22 @@
    "src": "made"
   }
  ],
+ "w|ложный": [
+  {
+   "text": "На уроке физики Сергей доказал, что утверждение в задаче ложное.",
+   "en": "In physics class Sergei proved that the statement in the problem was false.",
+   "ko": "물리 시간에 세르게이는 문제의 주장이 틀렸다는 걸 증명했어요.",
+   "blank": "ложное",
+   "src": "made"
+  },
+  {
+   "text": "Ночью сработала ложная пожарная тревога, и Мария вышла на лестницу в халате.",
+   "en": "At night there was a false fire alarm, and Maria went out to the stairwell in her dressing gown.",
+   "ko": "밤에 화재경보가 잘못 울려서 마리아는 가운 차림으로 계단에 나갔어요.",
+   "blank": "ложная",
+   "src": "made"
+  }
+ ],
  "w|ложь": [
   {
    "text": "Какую самую страшную ложь ты когда-либо говорил?",
@@ -19583,6 +19855,22 @@
    "src": "tatoeba:828975/Arkadeko en:2436429/Hybrid"
   }
  ],
+ "w|маршал": [
+  {
+   "text": "Сергей готовил доклад о маршале, который командовал армией в прошлом веке.",
+   "en": "Sergei was preparing a report on a marshal who commanded an army in the last century.",
+   "ko": "세르게이는 지난 세기에 군대를 지휘한 원수에 대한 발표를 준비했어요.",
+   "blank": "маршале",
+   "src": "made"
+  },
+  {
+   "text": "Мария узнала, что улица у её дома названа в честь маршала.",
+   "en": "Maria found out that the street by her building is named after a marshal.",
+   "ko": "마리아는 집 앞 거리가 어느 원수의 이름을 땄다는 걸 알게 됐어요.",
+   "blank": "маршала",
+   "src": "made"
+  }
+ ],
  "w|маршрут": [
   {
    "text": "Вечером Андрей проложил на карте маршрут на следующий день.",
@@ -19881,6 +20169,22 @@
    "blank": "Между"
   }
  ],
+ "w|международный": [
+  {
+   "text": "Школа Сергея участвует в международном обмене учениками.",
+   "en": "Sergei's school takes part in an international student exchange.",
+   "ko": "세르게이의 학교는 국제 학생 교류에 참여해요.",
+   "blank": "международном",
+   "src": "made"
+  },
+  {
+   "text": "Мария работает в международной компании и часто говорит по телефону на лестнице.",
+   "en": "Maria works for an international company and often talks on the phone in the stairwell.",
+   "ko": "마리아는 외국계 회사에 다녀서 계단에서 전화하는 일이 많아요.",
+   "blank": "международной",
+   "src": "made"
+  }
+ ],
  "w|мелкий": [
   {
    "text": "Ты мелкий шрифт весь прочитал?",
@@ -20021,6 +20325,22 @@
    "en": "In a way, you're right.",
    "ko": "어느 정도는 네가 맞아.",
    "blank": "мере"
+  }
+ ],
+ "w|мероприятие": [
+  {
+   "text": "Сергей помогал украшать зал к праздничному мероприятию.",
+   "en": "Sergei helped decorate the hall for the festive event.",
+   "ko": "세르게이는 기념 행사를 위해 강당 꾸미는 걸 도왔어요.",
+   "blank": "мероприятию",
+   "src": "made"
+  },
+  {
+   "text": "Мария помогает организовать во дворе мероприятие ко Дню соседей.",
+   "en": "Maria is helping to organise an event in the courtyard for Neighbours' Day.",
+   "ko": "마리아는 이웃의 날을 맞아 마당에서 하는 행사 준비를 돕고 있어요.",
+   "blank": "мероприятие",
+   "src": "made"
   }
  ],
  "w|мёртвый": [
@@ -21184,6 +21504,22 @@
    "en": "Svetlana nearly sent money to a scammer who was selling fake race numbers.",
    "ko": "스베틀라나는 가짜 배번을 팔던 사기꾼에게 돈을 보낼 뻔했어요.",
    "blank": "мошеннику",
+   "src": "made"
+  }
+ ],
+ "w|мощный": [
+  {
+   "text": "В кабинете информатики Сергею дали самый мощный компьютер.",
+   "en": "In the computer lab Sergei was given the most powerful computer.",
+   "ko": "컴퓨터실에서 세르게이는 가장 성능 좋은 컴퓨터를 받았어요.",
+   "blank": "мощный",
+   "src": "made"
+  },
+  {
+   "text": "Сосед сверху купил мощный пылесос, и Мария слышит его каждое утро.",
+   "en": "The upstairs neighbour bought a powerful vacuum cleaner, and Maria hears it every morning.",
+   "ko": "윗집이 강력한 청소기를 사서 마리아는 아침마다 그 소리를 들어요.",
+   "blank": "мощный",
    "src": "made"
   }
  ],
@@ -23520,6 +23856,22 @@
    "en": "Because of a misunderstanding, the movers first went to the wrong address.",
    "ko": "착오가 생겨서 이삿짐 직원들이 처음에 엉뚱한 주소로 갔어요.",
    "blank": "недоразумения",
+   "src": "made"
+  }
+ ],
+ "w|недостаток": [
+  {
+   "text": "Главный недостаток Сергея, по словам учителей, — вечная спешка.",
+   "en": "Sergei's main shortcoming, according to the teachers, is that he's always in a hurry.",
+   "ko": "선생님들 말로는 세르게이의 가장 큰 단점이 늘 서두르는 거예요.",
+   "blank": "недостаток",
+   "src": "made"
+  },
+  {
+   "text": "Единственный недостаток квартиры Марии — тонкие стены.",
+   "en": "The only drawback of Maria's flat is the thin walls.",
+   "ko": "마리아 집의 유일한 단점은 벽이 얇다는 거예요.",
+   "blank": "недостаток",
    "src": "made"
   }
  ],
@@ -31405,6 +31757,22 @@
    "src": "tatoeba:7993297/marafon en:6824204/CK"
   }
  ],
+ "w|поглядеть": [
+  {
+   "text": "Перед выходом к доске Сергей успел поглядеть в шпаргалку соседа.",
+   "en": "Before going up to the board Sergei managed to glance at his neighbour's cheat sheet.",
+   "ko": "칠판 앞에 나가기 전에 세르게이는 옆 친구의 커닝 쪽지를 슬쩍 봤어요.",
+   "blank": "поглядеть",
+   "src": "made"
+  },
+  {
+   "text": "Мария вышла на балкон поглядеть, кто так шумит во дворе.",
+   "en": "Maria went out onto the balcony to see who was making so much noise in the courtyard.",
+   "ko": "마리아는 마당에서 누가 그렇게 시끄럽게 하는지 보려고 발코니에 나갔어요.",
+   "blank": "поглядеть",
+   "src": "made"
+  }
+ ],
  "w|погнать": [
   {
    "text": "Охранник отеля погнал с парковки подростков на скейтах.",
@@ -32155,6 +32523,22 @@
    "ko": "그의 결백을 증언할 수 있어요.",
    "blank": "подтвердить",
    "src": "tatoeba:9946878/Ooneykcall en:9934466/ddnktr"
+  }
+ ],
+ "w|подтверждать": [
+  {
+   "text": "Опыты Сергея на уроке химии подтверждают то, что написано в учебнике.",
+   "en": "Sergei's experiments in chemistry class confirm what's written in the textbook.",
+   "ko": "세르게이가 화학 시간에 한 실험은 교과서 내용을 그대로 뒷받침해요.",
+   "blank": "подтверждают",
+   "src": "made"
+  },
+  {
+   "text": "Управляющая компания подтверждает, что воду Марии отключат только на день.",
+   "en": "The management company confirms that Maria's water will only be off for a day.",
+   "ko": "관리 회사는 마리아네 집 물이 하루만 끊긴다고 확인해 줬어요.",
+   "blank": "подтверждает",
+   "src": "made"
   }
  ],
  "w|подтверждение": [
@@ -34427,6 +34811,22 @@
    "en": "I made it at the last second.",
    "ko": "마지막 순간에 간신히 됐어.",
    "blank": "последнюю"
+  }
+ ],
+ "w|последовать": [
+  {
+   "text": "Учитель показал, как решать уравнение, и Сергей последовал его примеру.",
+   "en": "The teacher showed how to solve the equation, and Sergei followed his example.",
+   "ko": "선생님이 방정식 푸는 법을 보여 주자 세르게이도 그대로 따라 했어요.",
+   "blank": "последовал",
+   "src": "made"
+  },
+  {
+   "text": "Мария первой подписала жалобу на шум, и соседи последовали её примеру.",
+   "en": "Maria was the first to sign the noise complaint, and the neighbours followed her example.",
+   "ko": "마리아가 먼저 소음 민원서에 서명하자 이웃들도 따라 했어요.",
+   "blank": "последовали",
+   "src": "made"
   }
  ],
  "w|последствие": [
@@ -38091,6 +38491,22 @@
    "blank": "происходит"
   }
  ],
+ "w|происшествие": [
+  {
+   "text": "После небольшого происшествия в спортзале Сергею перевязали колено.",
+   "en": "After a minor incident in the gym, Sergei's knee was bandaged.",
+   "ko": "체육관에서 작은 사고가 난 뒤 세르게이는 무릎에 붕대를 감았어요.",
+   "blank": "происшествия",
+   "src": "made"
+  },
+  {
+   "text": "О ночном происшествии в подъезде Мария узнала из домового чата.",
+   "en": "Maria learned about the night-time incident in the entrance hall from the building chat.",
+   "ko": "마리아는 현관에서 밤에 있었던 일을 아파트 단톡방에서 알았어요.",
+   "blank": "происшествии",
+   "src": "made"
+  }
+ ],
  "w|пройти": [
   {
    "text": "Пройди, не стой.",
@@ -38274,6 +38690,22 @@
    "en": "Svetlana's daughter prepared for her music school audition right in the back room.",
    "ko": "스베틀라나의 딸은 창고에서 음악 학교 오디션을 준비했어요.",
    "blank": "прослушиванию",
+   "src": "made"
+  }
+ ],
+ "w|просмотреть": [
+  {
+   "text": "Перед контрольной Сергей успел только просмотреть свои записи.",
+   "en": "Before the test Sergei only had time to look through his notes.",
+   "ko": "시험 전에 세르게이는 필기를 훑어볼 시간밖에 없었어요.",
+   "blank": "просмотреть",
+   "src": "made"
+  },
+  {
+   "text": "Мария попросила управляющего просмотреть счета за отопление ещё раз.",
+   "en": "Maria asked the building manager to look over the heating bills once more.",
+   "ko": "마리아는 관리인에게 난방비 고지서를 다시 한번 살펴봐 달라고 했어요.",
+   "blank": "просмотреть",
    "src": "made"
   }
  ],
@@ -39165,6 +39597,22 @@
    "blank": "пытайся"
   }
  ],
+ "w|пьеса": [
+  {
+   "text": "Для школьного театра Сергей выучил всю роль в пьесе за неделю.",
+   "en": "For the school theatre Sergei learned his whole part in the play in a week.",
+   "ko": "세르게이는 학교 연극의 배역 대사를 일주일 만에 다 외웠어요.",
+   "blank": "пьесе",
+   "src": "made"
+  },
+  {
+   "text": "Соседка пригласила Марию на пьесу, которую ставит её внучка.",
+   "en": "Maria's neighbour invited her to a play her granddaughter is staging.",
+   "ko": "이웃 할머니가 손녀가 올리는 연극에 마리아를 초대했어요.",
+   "blank": "пьесу",
+   "src": "made"
+  }
+ ],
  "w|пьяный": [
   {
    "text": "Ты был пьяный, когда это делал?",
@@ -39565,6 +40013,22 @@
    "src": "made"
   }
  ],
+ "w|развлечение": [
+  {
+   "text": "Для Сергея шахматный кружок — не только учёба, но и развлечение.",
+   "en": "For Sergei the chess club is not only study but also entertainment.",
+   "ko": "세르게이에게 체스 동아리는 공부이면서 놀이이기도 해요.",
+   "blank": "развлечение",
+   "src": "made"
+  },
+  {
+   "text": "Главное развлечение детей во дворе Марии — старая горка.",
+   "en": "The main entertainment for the children in Maria's courtyard is an old slide.",
+   "ko": "마리아네 마당 아이들의 가장 큰 놀거리는 낡은 미끄럼틀이에요.",
+   "blank": "развлечение",
+   "src": "made"
+  }
+ ],
  "w|развод": [
   {
    "text": "Хочешь сказать, ты просишь развод?",
@@ -39765,6 +40229,22 @@
    "ko": "한 번 더 해 볼 만해요.",
    "blank": "разок",
    "src": "tatoeba:4206593/odexed en:10177303/AlanF_US"
+  }
+ ],
+ "w|разорвать": [
+  {
+   "text": "Сергей так расстроился из-за оценки, что разорвал черновик.",
+   "en": "Sergei was so upset about his mark that he tore up his rough draft.",
+   "ko": "세르게이는 점수 때문에 너무 속상해서 초안을 찢어 버렸어요.",
+   "blank": "разорвал",
+   "src": "made"
+  },
+  {
+   "text": "Ветер разорвал пакет у Марии в руках, и апельсины покатились по лестнице.",
+   "en": "The wind tore the bag in Maria's hands, and the oranges rolled down the stairs.",
+   "ko": "바람에 마리아가 들고 있던 봉지가 찢어져 오렌지가 계단으로 굴러갔어요.",
+   "blank": "разорвал",
+   "src": "made"
   }
  ],
  "w|разочарованный": [
@@ -40113,6 +40593,22 @@
    "en": "Come earlier next time.",
    "ko": "다음엔 더 일찍 와.",
    "blank": "раньше"
+  }
+ ],
+ "w|раса": [
+  {
+   "text": "Учитель биологии объяснил Сергею, что все люди принадлежат к одной биологической расе.",
+   "en": "The biology teacher explained to Sergei that all people belong to one biological race.",
+   "ko": "생물 선생님은 세르게이에게 모든 사람이 하나의 생물학적 종족이라고 설명했어요.",
+   "blank": "расе",
+   "src": "made"
+  },
+  {
+   "text": "Мария прочитала статью о том, что делить людей по расе ненаучно.",
+   "en": "Maria read an article saying that dividing people by race is unscientific.",
+   "ko": "마리아는 사람을 인종으로 나누는 건 과학적이지 않다는 기사를 읽었어요.",
+   "blank": "расе",
+   "src": "made"
   }
  ],
  "w|раскрыть": [
@@ -40523,6 +41019,22 @@
    "src": "made"
   }
  ],
+ "w|революция": [
+  {
+   "text": "Сергей читал в учебнике о промышленной революции и делал заметки.",
+   "en": "Sergei read about the industrial revolution in his textbook and took notes.",
+   "ko": "세르게이는 교과서에서 산업 혁명에 대해 읽으며 필기했어요.",
+   "blank": "революции",
+   "src": "made"
+  },
+  {
+   "text": "Мария пошутила, что новые правила для мусора — настоящая революция в доме.",
+   "en": "Maria joked that the new rubbish rules were a real revolution in the building.",
+   "ko": "마리아는 새 쓰레기 규칙이 건물의 진짜 혁명이라고 농담했어요.",
+   "blank": "революция",
+   "src": "made"
+  }
+ ],
  "w|редактировать": [
   {
    "text": "Никита помогает менеджеру редактировать сайт ресторана.",
@@ -40742,6 +41254,22 @@
    "en": "The farmer boasted to Maria that his pumpkin had broken the weight record.",
    "ko": "농부는 자기 호박이 무게 기록을 깼다고 마리야에게 자랑했어요.",
    "blank": "рекорд",
+   "src": "made"
+  }
+ ],
+ "w|религия": [
+  {
+   "text": "На уроке обществознания Сергей узнал, как религия влияла на древние города.",
+   "en": "In social studies Sergei learned how religion influenced ancient cities.",
+   "ko": "사회 시간에 세르게이는 종교가 고대 도시에 어떤 영향을 줬는지 배웠어요.",
+   "blank": "религия",
+   "src": "made"
+  },
+  {
+   "text": "Мария никогда не спорит с соседями про религию и политику.",
+   "en": "Maria never argues with her neighbours about religion and politics.",
+   "ko": "마리아는 이웃들과 종교나 정치 이야기로 절대 다투지 않아요.",
+   "blank": "религию",
    "src": "made"
   }
  ],
@@ -41089,6 +41617,22 @@
    "ko": "그녀는 무슨 일을 해요?",
    "blank": "род",
    "src": "tatoeba:5244323/Selena777 en:5244317/Objectivesea"
+  }
+ ],
+ "w|родина": [
+  {
+   "text": "На уроке литературы Сергей читал стихи поэта, тосковавшего по родине.",
+   "en": "In literature class Sergei read poems by a poet who longed for his homeland.",
+   "ko": "문학 시간에 세르게이는 고향을 그리워한 시인의 시를 읽었어요.",
+   "blank": "родине",
+   "src": "made"
+  },
+  {
+   "text": "Соседка Марии каждое лето уезжает на родину, к своим сёстрам.",
+   "en": "Maria's neighbour goes back to her homeland every summer to see her sisters.",
+   "ko": "마리아의 이웃은 여름마다 고향에 사는 언니들에게 가요.",
+   "blank": "родину",
+   "src": "made"
   }
  ],
  "w|родитель": [
@@ -41513,6 +42057,22 @@
    "ko": "어제 시장에 갔었어?",
    "blank": "рынок",
    "src": "tatoeba:4537303/phoenix3000 en:4536791/CK"
+  }
+ ],
+ "w|рыцарь": [
+  {
+   "text": "На истории Сергей делал доклад о том, как жили средневековые рыцари.",
+   "en": "In history Sergei gave a report on how medieval knights lived.",
+   "ko": "역사 시간에 세르게이는 중세 기사들의 생활에 대해 발표했어요.",
+   "blank": "рыцари",
+   "src": "made"
+  },
+  {
+   "text": "Сосед Марии всегда придерживает ей дверь, как настоящий рыцарь.",
+   "en": "Maria's neighbour always holds the door for her, like a real knight.",
+   "ko": "마리아의 이웃은 진짜 기사처럼 늘 문을 잡아 줘요.",
+   "blank": "рыцарь",
+   "src": "made"
   }
  ],
  "w|рюкзак": [
@@ -43979,6 +44539,22 @@
    "src": "made"
   }
  ],
+ "w|смертный": [
+  {
+   "text": "На литературе Сергей писал сочинение о том, что все люди смертны.",
+   "en": "In literature class Sergei wrote an essay on the idea that all people are mortal.",
+   "ko": "문학 시간에 세르게이는 모든 사람은 죽는다는 주제로 글을 썼어요.",
+   "blank": "смертны",
+   "src": "made"
+  },
+  {
+   "text": "Старый сосед Марии любит повторять, что все мы смертные, так что надо жить дружно.",
+   "en": "Maria's elderly neighbour likes to repeat that we're all mortal, so we should live in harmony.",
+   "ko": "마리아의 이웃 할아버지는 우리 모두 언젠가 죽으니 사이좋게 살아야 한다는 말을 자주 해요.",
+   "blank": "смертные",
+   "src": "made"
+  }
+ ],
  "w|смерть": [
   {
    "text": "Я до смерти устал.",
@@ -46319,6 +46895,22 @@
    "src": "made"
   }
  ],
+ "w|ссориться": [
+  {
+   "text": "Сергей и его лучший друг иногда ссорятся из-за футбола, но быстро мирятся.",
+   "en": "Sergei and his best friend sometimes quarrel about football but quickly make up.",
+   "ko": "세르게이와 단짝은 가끔 축구 때문에 다투지만 금방 화해해요.",
+   "blank": "ссорятся",
+   "src": "made"
+  },
+  {
+   "text": "Соседи сверху часто ссорятся, и Мария делает музыку погромче.",
+   "en": "The upstairs neighbours often quarrel, and Maria turns her music up.",
+   "ko": "윗집 사람들이 자주 다퉈서 마리아는 음악 소리를 키워요.",
+   "blank": "ссорятся",
+   "src": "made"
+  }
+ ],
  "w|ставить": [
   {
    "text": "Я не могу ставить тебе это в вину.",
@@ -46997,6 +47589,22 @@
    "en": "I got scared.",
    "ko": "무서워졌어.",
    "blank": "страшно"
+  }
+ ],
+ "w|стрела": [
+  {
+   "text": "На физкультуре Сергей впервые стрелял из лука, и стрела попала прямо в мишень.",
+   "en": "In PE Sergei shot a bow for the first time, and the arrow hit the target dead centre.",
+   "ko": "체육 시간에 세르게이는 처음으로 활을 쐈는데 화살이 과녁 한가운데 맞았어요.",
+   "blank": "стрела",
+   "src": "made"
+  },
+  {
+   "text": "Указатель со стрелой помог курьеру найти квартиру Марии.",
+   "en": "A sign with an arrow helped the courier find Maria's flat.",
+   "ko": "화살표 표지판 덕분에 배달원이 마리아의 집을 찾았어요.",
+   "blank": "стрелой",
+   "src": "made"
   }
  ],
  "w|стрелка": [
@@ -51585,6 +52193,22 @@
    "src": "tatoeba:806269/Arkadeko en:5083129/corvard"
   }
  ],
+ "w|участник": [
+  {
+   "text": "Сергей стал самым младшим участником школьной олимпиады по истории.",
+   "en": "Sergei became the youngest participant in the school history olympiad.",
+   "ko": "세르게이는 학교 역사 올림피아드의 최연소 참가자가 됐어요.",
+   "blank": "участником",
+   "src": "made"
+  },
+  {
+   "text": "Самый активный участник домового чата — муж Марии, он знает все новости.",
+   "en": "The most active member of the building chat is Maria's husband; he knows all the news.",
+   "ko": "아파트 단톡방에서 가장 활발한 사람은 마리아의 남편이라 모든 소식을 다 알아요.",
+   "blank": "участник",
+   "src": "made"
+  }
+ ],
  "w|участок": [
   {
    "text": "Ты знаешь, где находится полицейский участок?",
@@ -55045,6 +55669,22 @@
    "en": "Is everything clear to you?",
    "ko": "다 이해됐어?",
    "blank": "ясно"
+  }
+ ],
+ "w|ясный": [
+  {
+   "text": "Учительница попросила Сергея дать ясный ответ, а не гадать.",
+   "en": "The teacher asked Sergei to give a clear answer rather than guess.",
+   "ko": "선생님은 세르게이에게 짐작하지 말고 분명하게 대답하라고 했어요.",
+   "blank": "ясный",
+   "src": "made"
+  },
+  {
+   "text": "Утро выдалось ясное, и Мария вывесила бельё на балконе.",
+   "en": "The morning turned out clear, and Maria hung the laundry out on the balcony.",
+   "ko": "아침 날씨가 맑아서 마리아는 발코니에 빨래를 널었어요.",
+   "blank": "ясное",
+   "src": "made"
   }
  ],
  "w|ящик": [

@@ -1029,6 +1029,22 @@
    "blank": "กว้าง"
   }
  ],
+ "w|กว้างขวาง": [
+  {
+   "text": "ห้องน้ำบนรถไฟขบวนใหม่กว้างขวางกว่าที่ชัยคิดไว้มาก",
+   "en": "The restroom on the new train is much more spacious than Chai expected.",
+   "ko": "새 열차 화장실은 차이가 생각한 것보다 훨씬 넓었어요.",
+   "blank": "กว้างขวาง",
+   "src": "made"
+  },
+  {
+   "text": "ห้องพักของพรกว้างขวางและมองเห็นทะเลจากระเบียง",
+   "en": "Phon's room is spacious and has a sea view from the balcony.",
+   "ko": "폰의 방은 넓고 발코니에서 바다가 보여요.",
+   "blank": "กว้างขวาง",
+   "src": "made"
+  }
+ ],
  "w|กว่าจะ": [
   {
    "text": "กว่าจะถึงบ้านก็มืดแล้ว",
@@ -2227,6 +2243,22 @@
    "src": "made"
   }
  ],
+ "w|กำจัด": [
+  {
+   "text": "พนักงานฉีดสเปรย์กำจัดยุงในตู้ก่อนผู้โดยสารเข้านอน",
+   "en": "Staff sprayed to get rid of mosquitoes in the carriage before passengers went to sleep.",
+   "ko": "직원들은 승객들이 잠들기 전에 객차에 모기 퇴치 스프레이를 뿌렸어요.",
+   "blank": "กำจัด",
+   "src": "made"
+  },
+  {
+   "text": "อาสาสมัครมาช่วยกันกำจัดขยะพลาสติกบนชายหาดทุกเดือน",
+   "en": "Volunteers come every month to get rid of plastic waste on the beach.",
+   "ko": "자원봉사자들이 매달 와서 해변의 플라스틱 쓰레기를 치워요.",
+   "blank": "กำจัด",
+   "src": "made"
+  }
+ ],
  "w|กำเนิด": [
   {
    "text": "ประยุทธช่วยคุณยายคนหนึ่งขอใบสูติบัตรเพื่อยืนยันวันกำเนิดของหลาน",
@@ -3405,6 +3437,22 @@
    "en": "I bought a fresh loaf of bread.",
    "ko": "빵 한 덩이 새로 사 왔어.",
    "blank": "ขนมปัง"
+  }
+ ],
+ "w|ขนส่ง": [
+  {
+   "text": "ตู้ท้ายขบวนใช้ขนส่งพัสดุไปส่งตามสถานีต่างๆ",
+   "en": "The last carriage is used to carry parcels to the various stations.",
+   "ko": "맨 뒤 칸은 여러 역으로 소포를 실어 나르는 데 써요.",
+   "blank": "ขนส่ง",
+   "src": "made"
+  },
+  {
+   "text": "เรือลำใหญ่ขนส่งน้ำจืดจากฝั่งมาให้คนบนเกาะ",
+   "en": "A big boat ships fresh water from the mainland for people on the island.",
+   "ko": "큰 배가 육지에서 섬사람들에게 민물을 실어 날라요.",
+   "blank": "ขนส่ง",
+   "src": "made"
   }
  ],
  "w|ขนาด": [
@@ -4835,6 +4883,22 @@
    "blank": "ขู่"
   }
  ],
+ "w|เขต": [
+  {
+   "text": "พอเข้าเขตจังหวัดลำปาง ชัยก็เห็นภูเขาอยู่สองข้างทาง",
+   "en": "As soon as they entered Lampang province, Chai saw mountains on both sides.",
+   "ko": "람빵도 경계에 들어서자 차이는 양옆으로 산을 봤어요.",
+   "blank": "เขต",
+   "src": "made"
+  },
+  {
+   "text": "ชายหาดเขตนี้เป็นอุทยาน ห้ามเก็บเปลือกหอยกลับบ้าน",
+   "en": "This stretch of beach is a national park zone, so taking shells home is forbidden.",
+   "ko": "이 구역 해변은 국립공원이라 조개껍데기를 가져가면 안 돼요.",
+   "blank": "เขต",
+   "src": "made"
+  }
+ ],
  "w|เข็ม": [
   {
    "text": "กลัวเข็มมากเลย",
@@ -4963,6 +5027,22 @@
    "en": "I got in the house.",
    "ko": "집에 들어왔어.",
    "blank": "เข้า"
+  }
+ ],
+ "w|เข้าคิว": [
+  {
+   "text": "ที่สถานีหัวลำโพง ชัยเข้าคิวซื้อตั๋วนานเกือบครึ่งชั่วโมง",
+   "en": "At Hua Lamphong station, Chai queued for tickets for almost half an hour.",
+   "ko": "후알람퐁역에서 차이는 표를 사려고 거의 삼십 분을 줄 섰어요.",
+   "blank": "เข้าคิว",
+   "src": "made"
+  },
+  {
+   "text": "ร้านไอศกรีมริมหาดคนเยอะจนพรต้องเข้าคิวยาว",
+   "en": "The beachside ice cream shop was so busy that Phon had to stand in a long queue.",
+   "ko": "해변 아이스크림 가게에 사람이 많아서 폰은 긴 줄을 서야 했어요.",
+   "blank": "เข้าคิว",
+   "src": "made"
   }
  ],
  "w|เข้าใจ": [
@@ -8857,6 +8937,22 @@
    "src": "made"
   }
  ],
+ "w|คุม": [
+  {
+   "text": "นายสถานีคุมการสับรางอยู่ที่ห้องควบคุมสัญญาณ",
+   "en": "The stationmaster oversees the track switching from the signal room.",
+   "ko": "역장은 신호실에서 선로 전환을 지휘해요.",
+   "blank": "คุม",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์ช่วยคุมเด็กๆ ไม่ให้ว่ายน้ำออกไปไกลเกินทุ่น",
+   "en": "The guide helped keep the kids from swimming out past the buoys.",
+   "ko": "가이드는 아이들이 부표 너머로 헤엄쳐 나가지 않게 지켜봤어요.",
+   "blank": "คุม",
+   "src": "made"
+  }
+ ],
  "w|คุ้มครอง": [
   {
    "text": "กฎหมายคุ้มครองสิทธิของผู้บริโภค",
@@ -9264,6 +9360,22 @@
    "en": "The neighbor auntie taught Suda the secrets of growing coffee on the mountain.",
    "ko": "옆집 아주머니는 수다에게 산에서 커피 키우는 비결을 알려 줬어요.",
    "blank": "เคล็ดลับ",
+   "src": "made"
+  }
+ ],
+ "w|เคลียร์": [
+  {
+   "text": "เจ้าหน้าที่ต้องเคลียร์ต้นไม้ที่ล้มขวางรางก่อนรถไฟจะไปต่อได้",
+   "en": "Officials had to clear a fallen tree off the tracks before the train could go on.",
+   "ko": "기차가 다시 가려면 직원들이 선로를 막은 쓰러진 나무를 치워야 했어요.",
+   "blank": "เคลียร์",
+   "src": "made"
+  },
+  {
+   "text": "หลังพายุผ่านไป ชาวบ้านออกมาเคลียร์กิ่งไม้บนชายหาด",
+   "en": "After the storm passed, locals came out to clear branches off the beach.",
+   "ko": "폭풍이 지나간 뒤 마을 사람들이 나와 해변의 나뭇가지를 치웠어요.",
+   "blank": "เคลียร์",
    "src": "made"
   }
  ],
@@ -11049,6 +11161,22 @@
    "blank": "เจ็บคอ"
   }
  ],
+ "w|เจ็บป่วย": [
+  {
+   "text": "ชัยซื้อประกันการเดินทางเผื่อเจ็บป่วยระหว่างทาง",
+   "en": "Chai bought travel insurance in case he falls ill on the way.",
+   "ko": "차이는 가는 길에 아플 경우를 대비해 여행자 보험을 들었어요.",
+   "blank": "เจ็บป่วย",
+   "src": "made"
+  },
+  {
+   "text": "ยายของพรย้ายมาอยู่ริมทะเลเพราะอากาศดีและไม่ค่อยเจ็บป่วย",
+   "en": "Phon's grandmother moved to the seaside because the air is good and she rarely gets sick.",
+   "ko": "폰의 할머니는 공기가 좋고 잘 아프지 않아서 바닷가로 이사했어요.",
+   "blank": "เจ็บป่วย",
+   "src": "made"
+  }
+ ],
  "w|เจรจา": [
   {
    "text": "ผู้จัดการโรงงานเจรจากับบริษัทขนส่งเรื่องค่าส่งของมาหลายวัน",
@@ -11814,6 +11942,22 @@
    "en": "The driver who hit the house fence agreed to pay the owner for the damage.",
    "ko": "집 울타리를 들이받은 운전자는 주인에게 손해를 물어 주기로 했어요.",
    "blank": "ชดใช้",
+   "src": "made"
+  }
+ ],
+ "w|ชน": [
+  {
+   "text": "ข่าวในมือถือบอกว่ารถกระบะชนไม้กั้นทางรถไฟที่สถานีข้างหน้า",
+   "en": "The news on his phone said a pickup truck hit a railway barrier at the station ahead.",
+   "ko": "휴대폰 뉴스에 앞 역에서 픽업트럭이 철도 차단기를 들이받았다고 나왔어요.",
+   "blank": "ชน",
+   "src": "made"
+  },
+  {
+   "text": "คลื่นแรงซัดเรือเล็กไปชนโขดหินใกล้ท่า",
+   "en": "Strong waves pushed a small boat into the rocks near the pier.",
+   "ko": "거센 파도가 작은 배를 부두 근처 바위에 부딪히게 했어요.",
+   "blank": "ชน",
    "src": "made"
   }
  ],
@@ -13177,6 +13321,22 @@
    "blank": "เชื่อ"
   }
  ],
+ "w|เชื้อ": [
+  {
+   "text": "ชัยเช็ดมือด้วยเจลล้างมือเพราะกลัวติดเชื้อจากราวจับ",
+   "en": "Chai cleaned his hands with sanitiser for fear of catching germs from the handrail.",
+   "ko": "차이는 손잡이에서 균이 옮을까 봐 손 소독제로 손을 닦았어요.",
+   "blank": "เชื้อ",
+   "src": "made"
+  },
+  {
+   "text": "พรล้างแผลที่โดนหอยบาดทันทีเพราะกลัวติดเชื้อ",
+   "en": "Phon washed the cut from a shell right away for fear of infection.",
+   "ko": "폰은 감염될까 봐 조개에 베인 상처를 바로 씻었어요.",
+   "blank": "เชื้อ",
+   "src": "made"
+  }
+ ],
  "w|เชื่องช้า": [
   {
    "text": "เต่าเดินเชื่องช้า",
@@ -13247,6 +13407,22 @@
    "en": "Help connect this cable.",
    "ko": "이 선 좀 연결해 줘.",
    "blank": "เชื่อมต่อ"
+  }
+ ],
+ "w|เชื่อมโยง": [
+  {
+   "text": "ทางรถไฟสายนี้เชื่อมโยงเมืองเล็กๆ หลายเมืองเข้าด้วยกัน",
+   "en": "This railway line links many small towns together.",
+   "ko": "이 철길은 작은 도시 여러 곳을 서로 이어 줘요.",
+   "blank": "เชื่อมโยง",
+   "src": "made"
+  },
+  {
+   "text": "สะพานใหม่เชื่อมโยงเกาะกับฝั่ง ทำให้เดินทางสะดวกขึ้น",
+   "en": "The new bridge connects the island to the mainland, making travel easier.",
+   "ko": "새 다리가 섬과 육지를 이어 줘서 오가기가 편해졌어요.",
+   "blank": "เชื่อมโยง",
+   "src": "made"
   }
  ],
  "w|เชื้อโรค": [
@@ -13787,6 +13963,22 @@
    "src": "made"
   }
  ],
+ "w|แซง": [
+  {
+   "text": "ชายคนหนึ่งพยายามแซงคิวขึ้นรถไฟ แต่พนักงานเรียกให้กลับไปต่อแถว",
+   "en": "A man tried to jump the queue to board, but staff called him back to the end of the line.",
+   "ko": "한 남자가 새치기해서 기차에 타려 했지만 직원이 줄 뒤로 가라고 불렀어요.",
+   "blank": "แซง",
+   "src": "made"
+  },
+  {
+   "text": "เรือหางยาวลำหนึ่งแซงเรือของพรไปอย่างเร็ว",
+   "en": "A longtail boat overtook Phon's boat at speed.",
+   "ko": "긴꼬리배 한 척이 폰이 탄 배를 빠르게 앞질렀어요.",
+   "blank": "แซง",
+   "src": "made"
+  }
+ ],
  "w|แซนด์วิช": [
   {
    "text": "ทำแซนด์วิชไปกินที่ทำงาน",
@@ -13962,6 +14154,22 @@
    "en": "Children like to count the stars.",
    "ko": "아이들은 별 세는 걸 좋아해.",
    "blank": "ดวงดาว",
+   "src": "made"
+  }
+ ],
+ "w|ดวงตา": [
+  {
+   "text": "ชัยมองวิวทุ่งนาจนดวงตาเริ่มเหนื่อยแล้วงีบหลับไป",
+   "en": "Chai gazed at the rice fields until his eyes grew tired and he dozed off.",
+   "ko": "차이는 논 풍경을 바라보다 눈이 피곤해져서 깜빡 잠들었어요.",
+   "blank": "ดวงตา",
+   "src": "made"
+  },
+  {
+   "text": "พรหยีดวงตามองเรือประมงที่อยู่ไกลออกไป",
+   "en": "Phon squinted her eyes to look at the fishing boats far out.",
+   "ko": "폰은 눈을 가늘게 뜨고 멀리 있는 고깃배들을 바라봤어요.",
+   "blank": "ดวงตา",
    "src": "made"
   }
  ],
@@ -14777,6 +14985,22 @@
    "en": "The girl helps mom clear the table.",
    "ko": "여자아이가 엄마를 도와 상을 치워.",
    "blank": "เด็กหญิง"
+  }
+ ],
+ "w|เด็ดขาด": [
+  {
+   "text": "ป้ายในตู้เขียนว่าห้ามสูบบุหรี่บนรถไฟโดยเด็ดขาด",
+   "en": "The sign in the carriage says smoking on the train is strictly forbidden.",
+   "ko": "객차 표지판에는 기차 안 흡연을 절대 금지한다고 쓰여 있어요.",
+   "blank": "เด็ดขาด",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่อุทยานห้ามจับปลาในแนวปะการังอย่างเด็ดขาด",
+   "en": "Park officials strictly forbid fishing on the coral reef.",
+   "ko": "국립공원 직원들은 산호초에서 낚시를 엄격히 금지해요.",
+   "blank": "เด็ดขาด",
+   "src": "made"
   }
  ],
  "w|เดา": [
@@ -16865,6 +17089,38 @@
    "blank": "ตาม"
   }
  ],
+ "w|ตามตรง": [
+  {
+   "text": "พูดกันตามตรง ชัยชอบนั่งรถไฟมากกว่าเครื่องบิน",
+   "en": "To be honest, Chai prefers the train to flying.",
+   "ko": "솔직히 말하면 차이는 비행기보다 기차를 더 좋아해요.",
+   "blank": "ตามตรง",
+   "src": "made"
+  },
+  {
+   "text": "ตามตรงแล้วพรไม่อยากกลับไปทำงานเลย",
+   "en": "To tell the truth, Phon doesn't want to go back to work at all.",
+   "ko": "솔직히 폰은 일하러 돌아가기 싫어요.",
+   "blank": "ตามตรง",
+   "src": "made"
+  }
+ ],
+ "w|ตามมา": [
+  {
+   "text": "รถไฟจอดนาน แล้วเสียงบ่นของผู้โดยสารก็ตามมา",
+   "en": "The train stopped for a long time, and complaints from passengers followed.",
+   "ko": "기차가 오래 서 있자 승객들의 불만이 뒤따랐어요.",
+   "blank": "ตามมา",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตกหนักทั้งคืน แล้วน้ำทะเลขุ่นก็ตามมาในวันรุ่งขึ้น",
+   "en": "It rained heavily all night, and murky sea water followed the next day.",
+   "ko": "밤새 비가 쏟아지더니 다음 날 바닷물이 흐려졌어요.",
+   "blank": "ตามมา",
+   "src": "made"
+  }
+ ],
  "w|ตามลำพัง": [
   {
    "text": "เอกเคยออกไปทำข่าวตามลำพังในหมู่บ้านกลางป่า",
@@ -18089,6 +18345,22 @@
    "src": "made"
   }
  ],
+ "w|ถัด": [
+  {
+   "text": "ชัยลงที่สถานีถัดไปเพื่อซื้อน้ำเย็นที่ชานชาลา",
+   "en": "Chai got off at the next station to buy cold water on the platform.",
+   "ko": "차이는 승강장에서 시원한 물을 사려고 다음 역에서 내렸어요.",
+   "blank": "ถัด",
+   "src": "made"
+  },
+  {
+   "text": "บ้านถัดจากรีสอร์ตขายปลาหมึกย่างทุกเย็น",
+   "en": "The house next to the resort sells grilled squid every evening.",
+   "ko": "리조트 옆집은 매일 저녁 오징어구이를 팔아요.",
+   "blank": "ถัด",
+   "src": "made"
+  }
+ ],
  "w|ถัดจาก": [
   {
    "text": "ห้องน้ำอยู่ถัดจากลิฟต์",
@@ -18499,6 +18771,22 @@
    "en": "They argued about the holiday plan.",
    "ko": "휴가 계획을 두고 말다툼했어.",
    "blank": "เถียง"
+  }
+ ],
+ "w|แถบ": [
+  {
+   "text": "รถไฟวิ่งผ่านแถบชนบทที่มีทุ่งนาเขียวขจี",
+   "en": "The train runs through a rural area full of lush green rice fields.",
+   "ko": "기차는 푸른 논이 펼쳐진 시골 지역을 지나가요.",
+   "blank": "แถบ",
+   "src": "made"
+  },
+  {
+   "text": "พรเช่าบ้านพักแถบชายหาดที่เงียบกว่าฝั่งตัวเมือง",
+   "en": "Phon rented a house in the beach area that's quieter than the town side.",
+   "ko": "폰은 시내 쪽보다 조용한 해변 일대에 집을 빌렸어요.",
+   "blank": "แถบ",
+   "src": "made"
   }
  ],
  "w|แถว": [
@@ -20065,6 +20353,22 @@
    "blank": "ทีเดียว"
   }
  ],
+ "w|ที่ตั้ง": [
+  {
+   "text": "ชัยเปิดแผนที่ดูที่ตั้งของโฮสเทลที่จองไว้ใกล้สถานี",
+   "en": "Chai opened the map to check the location of the hostel he booked near the station.",
+   "ko": "차이는 역 근처에 예약한 호스텔 위치를 지도로 확인했어요.",
+   "blank": "ที่ตั้ง",
+   "src": "made"
+  },
+  {
+   "text": "ที่ตั้งของรีสอร์ตห่างจากหาดแค่เดินไม่กี่นาที",
+   "en": "The resort is located just a few minutes' walk from the beach.",
+   "ko": "리조트 위치는 해변에서 걸어서 몇 분밖에 안 돼요.",
+   "blank": "ที่ตั้ง",
+   "src": "made"
+  }
+ ],
  "w|ที่นอน": [
   {
    "text": "ที่นอนนี้แข็งเกินไป",
@@ -21303,6 +21607,22 @@
    "en": "Don't turn anyone's life into hell.",
    "ko": "누구의 삶도 지옥으로 만들지 마.",
    "blank": "นรก"
+  }
+ ],
+ "w|นวด": [
+  {
+   "text": "นั่งรถไฟมาทั้งคืน ชัยเลยให้เพื่อนช่วยนวดไหล่ให้หน่อย",
+   "en": "After sitting on the train all night, Chai asked his friend to massage his shoulders a bit.",
+   "ko": "밤새 기차를 타고 와서 차이는 친구에게 어깨를 좀 주물러 달라고 했어요.",
+   "blank": "นวด",
+   "src": "made"
+  },
+  {
+   "text": "พรนอนให้ป้าริมหาดนวดน้ำมันหลังเดินเล่นมาทั้งวัน",
+   "en": "After walking all day, Phon lay down for an oil massage from an auntie on the beach.",
+   "ko": "폰은 하루 종일 걸은 뒤 해변 아주머니에게 오일 마사지를 받았어요.",
+   "blank": "นวด",
+   "src": "made"
   }
  ],
  "w|นอก": [
@@ -24375,6 +24695,22 @@
    "blank": "เบคอน"
   }
  ],
+ "w|เบรก": [
+  {
+   "text": "รถไฟเบรกแรงจนกาแฟของชัยหกเลอะโต๊ะ",
+   "en": "The train braked so hard that Chai's coffee spilled all over the table.",
+   "ko": "기차가 세게 브레이크를 밟아서 차이의 커피가 테이블에 쏟아졌어요.",
+   "blank": "เบรก",
+   "src": "made"
+  },
+  {
+   "text": "พรเบรกจักรยานแทบไม่ทันตอนหมาวิ่งตัดหน้า",
+   "en": "Phon barely braked in time when a dog ran in front of her bike.",
+   "ko": "개가 앞을 가로질러서 폰은 간신히 자전거 브레이크를 잡았어요.",
+   "blank": "เบรก",
+   "src": "made"
+  }
+ ],
  "w|เบา": [
   {
    "text": "กล่องนี้เบามากเลย",
@@ -24843,6 +25179,22 @@
    "en": "I left the receipt at the store.",
    "ko": "영수증을 가게에 두고 왔어.",
    "blank": "ใบเสร็จ"
+  }
+ ],
+ "w|ใบหน้า": [
+  {
+   "text": "แดดยามเช้าส่องเข้ามากระทบใบหน้าของชัยจนต้องตื่น",
+   "en": "The morning sun shone on Chai's face until he had to wake up.",
+   "ko": "아침 햇살이 차이의 얼굴을 비춰서 결국 잠이 깼어요.",
+   "blank": "ใบหน้า",
+   "src": "made"
+  },
+  {
+   "text": "ลมทะเลพัดเม็ดทรายมาโดนใบหน้าของพรตลอดทาง",
+   "en": "The sea breeze blew sand onto Phon's face the whole way.",
+   "ko": "바닷바람이 가는 내내 폰의 얼굴에 모래를 날렸어요.",
+   "blank": "ใบหน้า",
+   "src": "made"
   }
  ],
  "w|ใบอนุญาต": [
@@ -25686,6 +26038,22 @@
    "en": "Young employees quitting quickly has become a phenomenon many companies face.",
    "ko": "젊은 직원들이 금방 그만두는 것은 많은 회사가 겪는 현상이 됐어요.",
    "blank": "ปรากฏการณ์",
+   "src": "made"
+  }
+ ],
+ "w|ปราศจาก": [
+  {
+   "text": "ตู้นอนชั้นหนึ่งสะอาดและปราศจากเสียงรบกวน",
+   "en": "The first-class sleeper carriage is clean and free of noise.",
+   "ko": "일등 침대칸은 깨끗하고 소음이 없어요.",
+   "blank": "ปราศจาก",
+   "src": "made"
+  },
+  {
+   "text": "น้ำทะเลแถวนี้ใสและปราศจากขยะ",
+   "en": "The sea water around here is clear and free of rubbish.",
+   "ko": "이 근처 바닷물은 맑고 쓰레기가 없어요.",
+   "blank": "ปราศจาก",
    "src": "made"
   }
  ],
@@ -27103,6 +27471,22 @@
    "blank": "แปลก"
   }
  ],
+ "w|แปลง": [
+  {
+   "text": "ตอนกลางคืนพนักงานมาแปลงเบาะนั่งเป็นเตียงนอนให้ผู้โดยสาร",
+   "en": "At night the staff convert the seats into beds for the passengers.",
+   "ko": "밤이 되면 직원들이 좌석을 침대로 바꿔 줘요.",
+   "blank": "แปลง",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าของรีสอร์ตแปลงบ้านไม้เก่าเป็นร้านกาแฟริมทะเล",
+   "en": "The resort owner converted an old wooden house into a seaside cafe.",
+   "ko": "리조트 주인은 오래된 나무집을 바닷가 카페로 바꿨어요.",
+   "blank": "แปลง",
+   "src": "made"
+  }
+ ],
  "w|แปลว่า": [
   {
    "text": "คำนี้แปลว่าอะไร",
@@ -28375,6 +28759,22 @@
    "en": "I'm not good with spicy food.",
    "ko": "나는 매운 걸 잘 못 먹어.",
    "blank": "เผ็ด"
+  }
+ ],
+ "w|เผยแพร่": [
+  {
+   "text": "การรถไฟเผยแพร่ตารางเดินรถใหม่ทางเว็บไซต์เมื่อวาน",
+   "en": "The railway published the new timetable on its website yesterday.",
+   "ko": "철도청은 어제 웹사이트에 새 운행 시간표를 공개했어요.",
+   "blank": "เผยแพร่",
+   "src": "made"
+  },
+  {
+   "text": "พรเผยแพร่คลิปเต่าทะเลวางไข่ลงในช่องของตัวเอง",
+   "en": "Phon posted a clip of a sea turtle laying eggs on her channel.",
+   "ko": "폰은 바다거북이 알을 낳는 영상을 자기 채널에 올렸어요.",
+   "blank": "เผยแพร่",
+   "src": "made"
   }
  ],
  "w|เผลอ": [
@@ -30145,6 +30545,22 @@
    "blank": "พูด"
   }
  ],
+ "w|พูดคุย": [
+  {
+   "text": "ชัยนั่งพูดคุยกับคุณลุงที่นั่งตรงข้ามจนลืมดูเวลา",
+   "en": "Chai chatted with the old man sitting opposite until he lost track of time.",
+   "ko": "차이는 맞은편에 앉은 아저씨와 이야기하다 시간 가는 줄 몰랐어요.",
+   "blank": "พูดคุย",
+   "src": "made"
+  },
+  {
+   "text": "พรนั่งพูดคุยกับชาวประมงเรื่องฤดูมรสุม",
+   "en": "Phon sat chatting with the fishermen about the monsoon season.",
+   "ko": "폰은 어부들과 앉아 장마철 이야기를 나눴어요.",
+   "blank": "พูดคุย",
+   "src": "made"
+  }
+ ],
  "w|พูดถึง": [
   {
    "text": "ในที่ประชุมลูกบ้าน ทุกคนพูดถึงที่จอดรถไม่พอ",
@@ -30479,6 +30895,22 @@
    "blank": "แพง"
   }
  ],
+ "w|แพทย์": [
+  {
+   "text": "ผู้โดยสารคนหนึ่งเป็นลมในตู้ โชคดีที่มีแพทย์นั่งมาด้วย",
+   "en": "A passenger fainted in the carriage, and luckily a doctor was on board.",
+   "ko": "한 승객이 객차에서 쓰러졌는데 다행히 의사가 같이 타고 있었어요.",
+   "blank": "แพทย์",
+   "src": "made"
+  },
+  {
+   "text": "แพทย์ประจำเกาะบอกพรให้ทาครีมกันแดดทุกสองชั่วโมง",
+   "en": "The island's doctor told Phon to put on sunscreen every two hours.",
+   "ko": "섬 의사는 폰에게 두 시간마다 선크림을 바르라고 했어요.",
+   "blank": "แพทย์",
+   "src": "made"
+  }
+ ],
  "w|แพร่": [
   {
    "text": "เอกเตือนว่าหมัดแพร่จากแมวตัวหนึ่งไปทั้งบ้านได้ในไม่กี่วัน",
@@ -30741,6 +31173,22 @@
    "en": "The economy is gradually recovering.",
    "ko": "경제가 서서히 회복되고 있어.",
    "blank": "ฟื้น"
+  }
+ ],
+ "w|ฟื้นตัว": [
+  {
+   "text": "ชัยเพิ่งฟื้นตัวจากไข้หวัด แม่เลยให้พกยาติดกระเป๋าไปด้วย",
+   "en": "Chai has just recovered from the flu, so his mum made him carry medicine in his bag.",
+   "ko": "차이는 감기에서 막 회복해서 어머니가 약을 가방에 챙겨 줬어요.",
+   "blank": "ฟื้นตัว",
+   "src": "made"
+  },
+  {
+   "text": "ปะการังแถวนี้ค่อยๆ ฟื้นตัวหลังห้ามนักท่องเที่ยวเข้ามาสองปี",
+   "en": "The coral around here is slowly recovering after tourists were banned for two years.",
+   "ko": "이 근처 산호는 이 년 동안 관광객 출입을 막은 뒤 서서히 회복하고 있어요.",
+   "blank": "ฟื้นตัว",
+   "src": "made"
   }
  ],
  "w|ฟื้นฟู": [
@@ -31053,6 +31501,22 @@
    "en": "I want to travel the southern region in summer.",
    "ko": "여름에 남부 지역을 여행하고 싶어.",
    "blank": "ภาค"
+  }
+ ],
+ "w|ภาคใต้": [
+  {
+   "text": "รอบหน้าชัยอยากนั่งรถไฟลงภาคใต้ไปถึงหาดใหญ่",
+   "en": "Next time Chai wants to take the train down south to Hat Yai.",
+   "ko": "다음에는 차이가 기차를 타고 남부 핫야이까지 가 보고 싶어 해요.",
+   "blank": "ภาคใต้",
+   "src": "made"
+  },
+  {
+   "text": "ทะเลทางภาคใต้ของไทยใสกว่าที่พรเคยเห็นมา",
+   "en": "The sea in southern Thailand is clearer than any Phon has seen before.",
+   "ko": "태국 남부 바다는 폰이 본 어떤 바다보다 맑아요.",
+   "blank": "ภาคใต้",
+   "src": "made"
   }
  ],
  "w|ภาคเรียน": [
@@ -31497,6 +31961,22 @@
    "blank": "ภูมิแพ้"
   }
  ],
+ "w|ภูมิภาค": [
+  {
+   "text": "ชัยอยากเที่ยวให้ครบทุกภูมิภาคของประเทศด้วยรถไฟ",
+   "en": "Chai wants to visit every region of the country by train.",
+   "ko": "차이는 기차로 나라의 모든 지방을 다 여행하고 싶어 해요.",
+   "blank": "ภูมิภาค",
+   "src": "made"
+  },
+  {
+   "text": "อาหารทะเลของภูมิภาคนี้ขึ้นชื่อเรื่องความสด",
+   "en": "The seafood of this region is famous for its freshness.",
+   "ko": "이 지방의 해산물은 신선하기로 유명해요.",
+   "blank": "ภูมิภาค",
+   "src": "made"
+  }
+ ],
  "w|ภูมิศาสตร์": [
   {
    "text": "ภูมิศาสตร์สอนเรื่องแผนที่และภูมิประเทศ",
@@ -31654,6 +32134,22 @@
    "en": "It's a miracle that he survived.",
    "ko": "그가 살아남은 건 기적이야.",
    "blank": "มหัศจรรย์",
+   "src": "made"
+  }
+ ],
+ "w|มหานคร": [
+  {
+   "text": "ชัยออกจากมหานครที่วุ่นวายเพื่อไปหาความสงบทางเหนือ",
+   "en": "Chai left the hectic metropolis to find some peace in the north.",
+   "ko": "차이는 복잡한 대도시를 떠나 북쪽으로 평온을 찾으러 갔어요.",
+   "blank": "มหานคร",
+   "src": "made"
+  },
+  {
+   "text": "พรหนีความวุ่นวายของมหานครมาพักผ่อนที่เกาะเล็กๆ",
+   "en": "Phon escaped the chaos of the big city to rest on a little island.",
+   "ko": "폰은 대도시의 번잡함을 피해 작은 섬으로 쉬러 왔어요.",
+   "blank": "มหานคร",
    "src": "made"
   }
  ],
@@ -36151,6 +36647,22 @@
    "blank": "รู้สึก"
   }
  ],
+ "w|เร่ง": [
+  {
+   "text": "คนขับรถไฟเร่งความเร็วหลังพ้นช่วงสะพาน",
+   "en": "The train driver sped up after passing the bridge section.",
+   "ko": "기관사는 다리 구간을 지나자 속도를 올렸어요.",
+   "blank": "เร่ง",
+   "src": "made"
+  },
+  {
+   "text": "เห็นเมฆดำมา พรรีบเร่งฝีเท้ากลับที่พัก",
+   "en": "Seeing dark clouds coming, Phon quickened her pace back to her room.",
+   "ko": "먹구름이 몰려오자 폰은 숙소로 발걸음을 서둘렀어요.",
+   "blank": "เร่ง",
+   "src": "made"
+  }
+ ],
  "w|เร็ว": [
   {
    "text": "เร็วเข้า",
@@ -37432,6 +37944,22 @@
    "en": "Sorry for the late reply.",
    "ko": "답이 늦어서 미안해.",
    "blank": "ล่าช้า",
+   "src": "made"
+  }
+ ],
+ "w|ลาน": [
+  {
+   "text": "หน้าสถานีเชียงใหม่มีลานกว้างให้คนนั่งรอรถ",
+   "en": "In front of Chiang Mai station there's a wide square where people wait for rides.",
+   "ko": "치앙마이역 앞에는 사람들이 차를 기다리는 넓은 광장이 있어요.",
+   "blank": "ลาน",
+   "src": "made"
+  },
+  {
+   "text": "ตอนเย็นมีตลาดนัดบนลานหน้าท่าเรือ",
+   "en": "In the evening there's a market on the square in front of the pier.",
+   "ko": "저녁이면 부두 앞 광장에 장이 서요.",
+   "blank": "ลาน",
    "src": "made"
   }
  ],
@@ -38827,6 +39355,22 @@
    "en": "Go get the vaccine at the clinic.",
    "ko": "클리닉에서 백신을 맞아.",
    "blank": "วัคซีน"
+  }
+ ],
+ "w|วัง": [
+  {
+   "text": "ระหว่างพักที่เมืองเก่า ชัยแวะเดินชมวังโบราณใกล้สถานี",
+   "en": "During a stop in the old town, Chai walked around an ancient palace near the station.",
+   "ko": "옛 도시에 머무는 동안 차이는 역 근처 옛 궁전을 둘러봤어요.",
+   "blank": "วัง",
+   "src": "made"
+  },
+  {
+   "text": "ริมทะเลมีวังเก่าที่เคยเป็นที่พักร้อนของเจ้านายสมัยก่อน",
+   "en": "By the sea there's an old palace that was once a summer retreat for royalty.",
+   "ko": "바닷가에는 옛날 왕족의 여름 별장이던 옛 궁전이 있어요.",
+   "blank": "วัง",
+   "src": "made"
   }
  ],
  "w|วัชพืช": [
@@ -40441,6 +40985,22 @@
    "blank": "สถานการณ์"
   }
  ],
+ "w|สถานที่": [
+  {
+   "text": "ชัยจดชื่อสถานที่ที่อยากแวะไว้ในสมุดเล่มเล็ก",
+   "en": "Chai noted the places he wants to stop at in a little notebook.",
+   "ko": "차이는 들르고 싶은 장소 이름을 작은 수첩에 적어 뒀어요.",
+   "blank": "สถานที่",
+   "src": "made"
+  },
+  {
+   "text": "ร้านกาแฟเล็กๆ บนหน้าผาเป็นสถานที่ที่พรชอบที่สุดบนเกาะ",
+   "en": "The little cafe on the cliff is Phon's favourite place on the island.",
+   "ko": "절벽 위 작은 카페는 섬에서 폰이 가장 좋아하는 장소예요.",
+   "blank": "สถานที่",
+   "src": "made"
+  }
+ ],
  "w|สถานทูต": [
   {
    "text": "ฉันไปยื่นวีซ่าที่สถานทูต",
@@ -40541,6 +41101,22 @@
    "en": "Anyone interested can join.",
    "ko": "관심 있는 사람은 참여해도 돼.",
    "blank": "สนใจ"
+  }
+ ],
+ "w|สนทนา": [
+  {
+   "text": "นักท่องเที่ยวต่างชาติขอสนทนาภาษาไทยกับชัยเพื่อฝึกพูด",
+   "en": "A foreign tourist asked to converse with Chai in Thai to practise speaking.",
+   "ko": "외국인 여행객이 말하기 연습을 하려고 차이에게 태국어로 대화하자고 했어요.",
+   "blank": "สนทนา",
+   "src": "made"
+  },
+  {
+   "text": "คืนนั้นพรนั่งสนทนากับเจ้าของที่พักจนดึก",
+   "en": "That night Phon sat talking with the guesthouse owner until late.",
+   "ko": "그날 밤 폰은 숙소 주인과 늦게까지 대화했어요.",
+   "blank": "สนทนา",
+   "src": "made"
   }
  ],
  "w|สนับสนุน": [
@@ -42169,6 +42745,22 @@
    "src": "made"
   }
  ],
+ "w|สายตา": [
+  {
+   "text": "ชัยอ่านหนังสือบนรถไฟนานๆ ไม่ได้เพราะสายตาสั้น",
+   "en": "Chai can't read on the train for long because he's short-sighted.",
+   "ko": "차이는 근시라서 기차에서 오래 책을 읽지 못해요.",
+   "blank": "สายตา",
+   "src": "made"
+  },
+  {
+   "text": "พรใส่แว่นกันแดดเพื่อถนอมสายตาจากแสงสะท้อนน้ำทะเล",
+   "en": "Phon wears sunglasses to protect her eyesight from the glare off the sea.",
+   "ko": "폰은 바닷물에 반사된 빛에서 눈을 보호하려고 선글라스를 껴요.",
+   "blank": "สายตา",
+   "src": "made"
+  }
+ ],
  "w|สายไฟ": [
   {
    "text": "สายไฟขาดต้องซ่อมด่วน",
@@ -43083,6 +43675,22 @@
    "en": "The team worked all night to meet the deadline.",
    "ko": "팀이 마감을 맞추려 밤새 일했어.",
    "blank": "เส้นตาย"
+  }
+ ],
+ "w|เส้นทาง": [
+  {
+   "text": "เส้นทางรถไฟสายเหนือผ่านอุโมงค์ยาวที่ขุนตาน",
+   "en": "The northern railway route goes through a long tunnel at Khun Tan.",
+   "ko": "북부선 철길은 쿤딴의 긴 터널을 지나요.",
+   "blank": "เส้นทาง",
+   "src": "made"
+  },
+  {
+   "text": "พรเลือกเส้นทางเดินเลียบหาดแทนถนนใหญ่",
+   "en": "Phon chose the path along the beach instead of the main road.",
+   "ko": "폰은 큰길 대신 해변을 따라 걷는 길을 골랐어요.",
+   "blank": "เส้นทาง",
+   "src": "made"
   }
  ],
  "w|เส้นผม": [
@@ -45227,6 +45835,22 @@
    "blank": "หลีกเลี่ยง"
   }
  ],
+ "w|หลุด": [
+  {
+   "text": "กระดุมเสื้อของชัยหลุดตอนปีนขึ้นเตียงชั้นบน",
+   "en": "Chai's shirt button came off while he was climbing into the upper bunk.",
+   "ko": "차이가 위층 침대로 올라가다 셔츠 단추가 떨어졌어요.",
+   "blank": "หลุด",
+   "src": "made"
+  },
+  {
+   "text": "คลื่นซัดจนรองเท้าแตะของพรหลุดลอยไปกับน้ำ",
+   "en": "The waves crashed so hard that Phon's flip-flop came off and floated away.",
+   "ko": "파도가 세게 쳐서 폰의 슬리퍼가 벗겨져 물에 떠내려갔어요.",
+   "blank": "หลุด",
+   "src": "made"
+  }
+ ],
  "w|ห่วง": [
   {
    "text": "แม่ห่วงเธอ",
@@ -46713,6 +47337,22 @@
    "en": "Little time remains—hurry up.",
    "ko": "시간이 얼마 안 남았어. 서두르자.",
    "blank": "เหลือ"
+  }
+ ],
+ "w|เหลือเกิน": [
+  {
+   "text": "ข้าวผัดบนรถเสบียงอร่อยเหลือเกินจนชัยสั่งเพิ่มอีกจาน",
+   "en": "The fried rice in the dining car was so delicious that Chai ordered another plate.",
+   "ko": "식당칸 볶음밥이 너무 맛있어서 차이는 한 접시 더 시켰어요.",
+   "blank": "เหลือเกิน",
+   "src": "made"
+  },
+  {
+   "text": "พระอาทิตย์ตกที่หาดนี้สวยเหลือเกิน",
+   "en": "The sunset at this beach is incredibly beautiful.",
+   "ko": "이 해변의 노을은 정말 너무 아름다워요.",
+   "blank": "เหลือเกิน",
+   "src": "made"
   }
  ],
  "w|เหลือง": [

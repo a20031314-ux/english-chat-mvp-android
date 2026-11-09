@@ -939,6 +939,22 @@
    "blank": "갇혀"
   }
  ],
+ "w|갈다": [
+  {
+   "text": "준호네 가족이 간 식당은 직원이 후추를 즉석에서 갈아 줬어요.",
+   "en": "At the restaurant Junho's family went to, the server ground pepper fresh at the table.",
+   "ko": "준호네 가족이 간 식당은 직원이 후추를 즉석에서 갈아 줬어요.",
+   "blank": "갈아",
+   "src": "made"
+  },
+  {
+   "text": "하은은 명절 전날 녹두를 갈아서 빈대떡 반죽을 만들었어요.",
+   "en": "The day before the holiday, Haeun ground mung beans to make bindaetteok batter.",
+   "ko": "하은은 명절 전날 녹두를 갈아서 빈대떡 반죽을 만들었어요.",
+   "blank": "갈아서",
+   "src": "made"
+  }
+ ],
  "w|갈등": [
   {
    "text": "팀 안에 갈등이 생겼어.",
@@ -6391,6 +6407,22 @@
    "blank": "구청에서"
   }
  ],
+ "w|구체적": [
+  {
+   "text": "준호는 알레르기가 있어서 들어간 재료를 구체적으로 물어봤어요.",
+   "en": "Junho has allergies, so he asked specifically about the ingredients.",
+   "ko": "준호는 알레르기가 있어서 들어간 재료를 구체적으로 물어봤어요.",
+   "blank": "구체적으로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 장보기 전에 필요한 재료를 구체적으로 적었어요.",
+   "en": "Before going grocery shopping, Haeun wrote down the ingredients she needed in detail.",
+   "ko": "하은은 장보기 전에 필요한 재료를 구체적으로 적었어요.",
+   "blank": "구체적으로",
+   "src": "made"
+  }
+ ],
  "w|구하다": [
   {
    "text": "도움이 필요해서 구했어.",
@@ -6621,6 +6653,22 @@
    "blank": "굳이"
   }
  ],
+ "w|굴": [
+  {
+   "text": "준호는 겨울 메뉴로 나온 굴 국밥을 시켰어요.",
+   "en": "Junho ordered the oyster rice soup on the winter menu.",
+   "ko": "준호는 겨울 메뉴로 나온 굴 국밥을 시켰어요.",
+   "blank": "굴",
+   "src": "made"
+  },
+  {
+   "text": "하은의 엄마는 연휴에 굴을 넣은 전을 부치셨어요.",
+   "en": "Haeun's mom fried oyster pancakes over the holiday.",
+   "ko": "하은의 엄마는 연휴에 굴을 넣은 전을 부치셨어요.",
+   "blank": "굴을",
+   "src": "made"
+  }
+ ],
  "w|굴다": [
   {
    "text": "애처럼 굴다 보니 웃음이 났어.",
@@ -6661,6 +6709,38 @@
    "en": "Please write the letters bold.",
    "ko": "글씨를 굵게 써 줘.",
    "blank": "굵게"
+  }
+ ],
+ "w|굶다": [
+  {
+   "text": "준호는 점심을 굶어서 식당에 들어서자마자 배가 꼬르륵거렸어요.",
+   "en": "Junho had skipped lunch, so his stomach growled as soon as he walked into the restaurant.",
+   "ko": "준호는 점심을 굶어서 식당에 들어서자마자 배가 꼬르륵거렸어요.",
+   "blank": "굶어서",
+   "src": "made"
+  },
+  {
+   "text": "하은은 연휴 내내 너무 많이 먹어서 하루는 저녁을 굶었어요.",
+   "en": "Haeun ate so much over the holiday that she skipped dinner one day.",
+   "ko": "하은은 연휴 내내 너무 많이 먹어서 하루는 저녁을 굶었어요.",
+   "blank": "굶었어요",
+   "src": "made"
+  }
+ ],
+ "w|굶주리다": [
+  {
+   "text": "식당 벽에는 전쟁 때 굶주리던 시절을 기억하자는 옛 사진이 걸려 있었어요.",
+   "en": "On the restaurant wall hung an old photo reminding people of the hungry wartime years.",
+   "ko": "식당 벽에는 전쟁 때 굶주리던 시절을 기억하자는 옛 사진이 걸려 있었어요.",
+   "blank": "굶주리던",
+   "src": "made"
+  },
+  {
+   "text": "하은의 할머니는 어릴 때 굶주리며 지낸 겨울 이야기를 들려주셨어요.",
+   "en": "Haeun's grandmother told the story of a winter in her childhood when she went hungry.",
+   "ko": "하은의 할머니는 어릴 때 굶주리며 지낸 겨울 이야기를 들려주셨어요.",
+   "blank": "굶주리며",
+   "src": "made"
   }
  ],
  "w|굽다": [
@@ -7947,6 +8027,22 @@
    "en": "The theater was almost full.",
    "ko": "극장이 거의 찼어.",
    "blank": "극장이"
+  }
+ ],
+ "w|극히": [
+  {
+   "text": "이 식당에서 예약 없이 자리를 잡는 일은 극히 드물대요.",
+   "en": "Getting a table at this restaurant without a reservation is extremely rare, they say.",
+   "ko": "이 식당에서 예약 없이 자리를 잡는 일은 극히 드물대요.",
+   "blank": "극히",
+   "src": "made"
+  },
+  {
+   "text": "하은네 가족이 연휴에 다 모이는 일은 극히 드물어요.",
+   "en": "It's extremely rare for Haeun's whole family to gather over a holiday.",
+   "ko": "하은네 가족이 연휴에 다 모이는 일은 극히 드물어요.",
+   "blank": "극히",
+   "src": "made"
   }
  ],
  "w|근거": [
@@ -10234,6 +10330,22 @@
    "en": "The high notes in the last piece were absolutely amazing.",
    "ko": "마지막 곡의 고음은 정말 끝장이었어요.",
    "blank": "끝장이었어요",
+   "src": "made"
+  }
+ ],
+ "w|끼니": [
+  {
+   "text": "준호는 바빠서 오늘 처음으로 제대로 된 끼니를 먹었어요.",
+   "en": "Junho was so busy that this was his first proper meal of the day.",
+   "ko": "준호는 바빠서 오늘 처음으로 제대로 된 끼니를 먹었어요.",
+   "blank": "끼니를",
+   "src": "made"
+  },
+  {
+   "text": "하은은 연휴에도 세 끼니를 꼬박꼬박 챙겨 먹었어요.",
+   "en": "Haeun made sure to eat three meals a day even over the holiday.",
+   "ko": "하은은 연휴에도 세 끼니를 꼬박꼬박 챙겨 먹었어요.",
+   "blank": "끼니를",
    "src": "made"
   }
  ],
@@ -13587,6 +13699,22 @@
    "blank": "단점을"
   }
  ],
+ "w|단정하다": [
+  {
+   "text": "식당 직원들은 모두 단정한 앞치마를 두르고 있었어요.",
+   "en": "All the restaurant staff wore neat aprons.",
+   "ko": "식당 직원들은 모두 단정한 앞치마를 두르고 있었어요.",
+   "blank": "단정한",
+   "src": "made"
+  },
+  {
+   "text": "하은은 손님이 오기 전에 단정한 옷으로 갈아입었어요.",
+   "en": "Haeun changed into neat clothes before the guests arrived.",
+   "ko": "하은은 손님이 오기 전에 단정한 옷으로 갈아입었어요.",
+   "blank": "단정한",
+   "src": "made"
+  }
+ ],
  "w|단지": [
   {
    "text": "단지 궁금해서 물어봤어.",
@@ -14755,6 +14883,22 @@
    "en": "We voted to choose a new captain.",
    "ko": "새 대장을 뽑는 투표를 했어.",
    "blank": "대장을"
+  }
+ ],
+ "w|대접": [
+  {
+   "text": "준호는 승진 기념으로 부모님께 저녁 대접을 했어요.",
+   "en": "Junho treated his parents to dinner to celebrate his promotion.",
+   "ko": "준호는 승진 기념으로 부모님께 저녁 대접을 했어요.",
+   "blank": "대접을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 집에 온 친척들에게 정성껏 차 대접을 했어요.",
+   "en": "Haeun carefully served tea to the relatives who came over.",
+   "ko": "하은은 집에 온 친척들에게 정성껏 차 대접을 했어요.",
+   "blank": "대접을",
+   "src": "made"
   }
  ],
  "w|대접하다": [
@@ -18117,6 +18261,22 @@
    "src": "made"
   }
  ],
+ "w|뛰어내리다": [
+  {
+   "text": "준호의 조카가 의자에서 뛰어내리다가 물컵을 엎었어요.",
+   "en": "Junho's nephew jumped off his chair and knocked over a glass of water.",
+   "ko": "준호의 조카가 의자에서 뛰어내리다가 물컵을 엎었어요.",
+   "blank": "뛰어내리다가",
+   "src": "made"
+  },
+  {
+   "text": "하은의 조카가 소파에서 뛰어내려서 엄마한테 혼났어요.",
+   "en": "Haeun's nephew jumped off the sofa and got scolded by his mom.",
+   "ko": "하은의 조카가 소파에서 뛰어내려서 엄마한테 혼났어요.",
+   "blank": "뛰어내려서",
+   "src": "made"
+  }
+ ],
  "w|뛰어들다": [
   {
    "text": "물에 뛰어들다 보니 시원했어.",
@@ -19000,6 +19160,22 @@
    "en": "Jiyoung wanted to be an actor, but when she actually stood in front of the camera, no words came out.",
    "ko": "지영은 배우가 되고 싶었지만 막상 카메라 앞에 서니 말이 안 나왔어요.",
    "blank": "막상",
+   "src": "made"
+  }
+ ],
+ "w|막연하다": [
+  {
+   "text": "준호는 언젠가 가족 식당을 차리고 싶다는 막연한 꿈이 있어요.",
+   "en": "Junho has a vague dream of opening a family restaurant someday.",
+   "ko": "준호는 언젠가 가족 식당을 차리고 싶다는 막연한 꿈이 있어요.",
+   "blank": "막연한",
+   "src": "made"
+  },
+  {
+   "text": "하은은 연휴에 뭘 할지 막연하게만 생각하고 있었어요.",
+   "en": "Haeun had only a vague idea of what to do over the holiday.",
+   "ko": "하은은 연휴에 뭘 할지 막연하게만 생각하고 있었어요.",
+   "blank": "막연하게만",
    "src": "made"
   }
  ],
@@ -25627,6 +25803,22 @@
    "src": "made"
   }
  ],
+ "w|보리": [
+  {
+   "text": "이 식당은 물 대신 구수한 보리 차를 내줘요.",
+   "en": "This restaurant serves nutty barley tea instead of water.",
+   "ko": "이 식당은 물 대신 구수한 보리 차를 내줘요.",
+   "blank": "보리",
+   "src": "made"
+  },
+  {
+   "text": "하은의 할머니는 쌀에 보리를 섞어서 밥을 지으세요.",
+   "en": "Haeun's grandmother cooks rice mixed with barley.",
+   "ko": "하은의 할머니는 쌀에 보리를 섞어서 밥을 지으세요.",
+   "blank": "보리를",
+   "src": "made"
+  }
+ ],
  "w|보모": [
   {
    "text": "성호 씨는 맞벌이라서 아이를 보모에게 맡기고 출근해요.",
@@ -26650,6 +26842,22 @@
    "blank": "부장"
   }
  ],
+ "w|부적절하다": [
+  {
+   "text": "옆 테이블 손님이 직원에게 부적절한 농담을 해서 준호는 눈살을 찌푸렸어요.",
+   "en": "Junho frowned when a customer at the next table made an inappropriate joke to the server.",
+   "ko": "옆 테이블 손님이 직원에게 부적절한 농담을 해서 준호는 눈살을 찌푸렸어요.",
+   "blank": "부적절한",
+   "src": "made"
+  },
+  {
+   "text": "하은은 식사 자리에서 정치 이야기는 부적절하다고 생각해요.",
+   "en": "Haeun thinks politics is an inappropriate topic at the dinner table.",
+   "ko": "하은은 식사 자리에서 정치 이야기는 부적절하다고 생각해요.",
+   "blank": "부적절하다고",
+   "src": "made"
+  }
+ ],
  "w|부정": [
   {
    "text": "입시 부정을 파헤친 기사 덕분에 학교가 조사를 받게 됐어요.",
@@ -26678,6 +26886,22 @@
    "en": "Denying the facts won't help.",
    "ko": "사실을 부정해도 소용없어.",
    "blank": "부정해도"
+  }
+ ],
+ "w|부정확하다": [
+  {
+   "text": "영수증 금액이 부정확해서 준호가 계산대에 다시 물어봤어요.",
+   "en": "The amount on the receipt was inaccurate, so Junho asked again at the counter.",
+   "ko": "영수증 금액이 부정확해서 준호가 계산대에 다시 물어봤어요.",
+   "blank": "부정확해서",
+   "src": "made"
+  },
+  {
+   "text": "인터넷 레시피의 분량이 부정확해서 하은의 떡이 너무 질어졌어요.",
+   "en": "The amounts in the online recipe were off, so Haeun's rice cake came out too mushy.",
+   "ko": "인터넷 레시피의 분량이 부정확해서 하은의 떡이 너무 질어졌어요.",
+   "blank": "부정확해서",
+   "src": "made"
   }
  ],
  "w|부족": [
@@ -26940,6 +27164,22 @@
    "en": "Let's analyze the cause together.",
    "ko": "원인을 함께 살펴보자.",
    "blank": "분석해"
+  }
+ ],
+ "w|분식": [
+  {
+   "text": "준호는 어릴 때 학교 앞 분식 가게에서 떡볶이를 자주 사 먹었어요.",
+   "en": "As a kid Junho often bought tteokbokki at the snack shop in front of school.",
+   "ko": "준호는 어릴 때 학교 앞 분식 가게에서 떡볶이를 자주 사 먹었어요.",
+   "blank": "분식",
+   "src": "made"
+  },
+  {
+   "text": "하은은 명절 음식이 질려서 김밥 같은 분식이 먹고 싶었어요.",
+   "en": "Haeun got tired of holiday food and craved snack food like gimbap.",
+   "ko": "하은은 명절 음식이 질려서 김밥 같은 분식이 먹고 싶었어요.",
+   "blank": "분식이",
+   "src": "made"
   }
  ],
  "w|분야": [
@@ -27408,6 +27648,22 @@
    "blank": "불행히"
   }
  ],
+ "w|불확실하다": [
+  {
+   "text": "준호는 대기 시간이 불확실해서 다른 식당으로 갈까 고민했어요.",
+   "en": "The wait time was uncertain, so Junho wondered whether to try another restaurant.",
+   "ko": "준호는 대기 시간이 불확실해서 다른 식당으로 갈까 고민했어요.",
+   "blank": "불확실해서",
+   "src": "made"
+  },
+  {
+   "text": "고모가 올지 말지 불확실해서 하은은 음식을 넉넉히 준비했어요.",
+   "en": "It was uncertain whether her aunt would come, so Haeun prepared plenty of food.",
+   "ko": "고모가 올지 말지 불확실해서 하은은 음식을 넉넉히 준비했어요.",
+   "blank": "불확실해서",
+   "src": "made"
+  }
+ ],
  "w|불황": [
   {
    "text": "민수는 경제 수업에서 불황 때 실업률이 오르는 이유를 배웠어요.",
@@ -27508,6 +27764,22 @@
    "en": "I held the child's hand and crossed the street.",
    "ko": "아이를 붙잡고 길을 건넜어.",
    "blank": "붙잡고"
+  }
+ ],
+ "w|뷔페": [
+  {
+   "text": "준호네 가족은 생일마다 호텔 뷔페에 가요.",
+   "en": "Junho's family goes to a hotel buffet every birthday.",
+   "ko": "준호네 가족은 생일마다 호텔 뷔페에 가요.",
+   "blank": "뷔페에",
+   "src": "made"
+  },
+  {
+   "text": "하은은 음식을 상에 뷔페처럼 차려서 각자 덜어 먹게 했어요.",
+   "en": "Haeun laid out the food buffet-style so everyone could serve themselves.",
+   "ko": "하은은 음식을 상에 뷔페처럼 차려서 각자 덜어 먹게 했어요.",
+   "blank": "뷔페처럼",
+   "src": "made"
   }
  ],
  "w|브랜드": [
@@ -27784,6 +28056,22 @@
    "en": "I made it home through the wind and rain.",
    "ko": "비바람을 뚫고 집에 도착했어.",
    "blank": "비바람을"
+  }
+ ],
+ "w|비비다": [
+  {
+   "text": "준호는 돌솥에 담긴 밥을 숟가락으로 쓱쓱 비볐어요.",
+   "en": "Junho mixed the rice in the stone pot briskly with a spoon.",
+   "ko": "준호는 돌솥에 담긴 밥을 숟가락으로 쓱쓱 비볐어요.",
+   "blank": "비볐어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 남은 나물에 고추장을 넣고 밥을 비볐어요.",
+   "en": "Haeun mixed rice with the leftover greens and gochujang.",
+   "ko": "하은은 남은 나물에 고추장을 넣고 밥을 비볐어요.",
+   "blank": "비볐어요",
+   "src": "made"
   }
  ],
  "w|비빔밥": [
@@ -28394,6 +28682,22 @@
    "ko": "아버지는 장도리를 이용해 벽에 박힌 못을 빼내셨다.",
    "blank": "빼내셨다",
    "src": "krdict"
+  }
+ ],
+ "w|빼놓다": [
+  {
+   "text": "준호는 식당에 오면서 지갑을 집에 빼놓고 왔어요.",
+   "en": "Junho left his wallet at home on his way to the restaurant.",
+   "ko": "준호는 식당에 오면서 지갑을 집에 빼놓고 왔어요.",
+   "blank": "빼놓고",
+   "src": "made"
+  },
+  {
+   "text": "하은은 장 볼 목록에서 깜빡하고 대파를 빼놓았어요.",
+   "en": "Haeun forgot and left green onions off her shopping list.",
+   "ko": "하은은 장 볼 목록에서 깜빡하고 대파를 빼놓았어요.",
+   "blank": "빼놓았어요",
+   "src": "made"
   }
  ],
  "w|빼다": [
@@ -33814,6 +34118,22 @@
    "src": "made"
   }
  ],
+ "w|수월하다": [
+  {
+   "text": "태블릿으로 주문하니까 준호는 생각보다 수월했어요.",
+   "en": "Ordering on the tablet turned out easier than Junho expected.",
+   "ko": "태블릿으로 주문하니까 준호는 생각보다 수월했어요.",
+   "blank": "수월했어요",
+   "src": "made"
+  },
+  {
+   "text": "가족이 다 같이 도와줘서 하은은 설거지가 수월했어요.",
+   "en": "The whole family pitched in, so the dishes were easy for Haeun.",
+   "ko": "가족이 다 같이 도와줘서 하은은 설거지가 수월했어요.",
+   "blank": "수월했어요",
+   "src": "made"
+  }
+ ],
  "w|수익": [
   {
    "text": "도서관 바자회 수익은 모두 새 책을 사는 데 쓰였어요.",
@@ -35308,6 +35628,22 @@
    "en": "I drank quickly, not wanting the coffee to go cold.",
    "ko": "커피가 식다 싶어 빨리 마셨어.",
    "blank": "식다"
+  }
+ ],
+ "w|식단": [
+  {
+   "text": "준호는 다이어트 중이라 식단에 맞는 샐러드를 골랐어요.",
+   "en": "Junho is on a diet, so he picked a salad that fits his meal plan.",
+   "ko": "준호는 다이어트 중이라 식단에 맞는 샐러드를 골랐어요.",
+   "blank": "식단에",
+   "src": "made"
+  },
+  {
+   "text": "하은은 아버지 건강을 생각해서 연휴 식단을 짰어요.",
+   "en": "Haeun planned the holiday menu with her father's health in mind.",
+   "ko": "하은은 아버지 건강을 생각해서 연휴 식단을 짰어요.",
+   "blank": "식단을",
+   "src": "made"
   }
  ],
  "w|식당": [
@@ -38696,6 +39032,22 @@
    "src": "made"
   }
  ],
+ "w|야식": [
+  {
+   "text": "준호는 남은 음식을 포장해서 야식으로 먹기로 했어요.",
+   "en": "Junho had the leftovers packed up to eat as a late-night snack.",
+   "ko": "준호는 남은 음식을 포장해서 야식으로 먹기로 했어요.",
+   "blank": "야식으로",
+   "src": "made"
+  },
+  {
+   "text": "하은네 가족은 밤늦게 야식으로 치킨을 시켰어요.",
+   "en": "Haeun's family ordered fried chicken as a late-night snack.",
+   "ko": "하은네 가족은 밤늦게 야식으로 치킨을 시켰어요.",
+   "blank": "야식으로",
+   "src": "made"
+  }
+ ],
  "w|야외": [
   {
    "text": "날씨가 좋아서 미술 수업을 야외에서 했어요.",
@@ -40930,6 +41282,22 @@
    "src": "made"
   }
  ],
+ "w|여하튼": [
+  {
+   "text": "줄이 길었지만 여하튼 준호네 가족은 자리에 앉았어요.",
+   "en": "The line was long, but anyway Junho's family got a table.",
+   "ko": "줄이 길었지만 여하튼 준호네 가족은 자리에 앉았어요.",
+   "blank": "여하튼",
+   "src": "made"
+  },
+  {
+   "text": "음식이 좀 짰지만 여하튼 하은의 가족은 맛있게 먹었어요.",
+   "en": "The food was a bit salty, but anyway Haeun's family enjoyed it.",
+   "ko": "음식이 좀 짰지만 여하튼 하은의 가족은 맛있게 먹었어요.",
+   "blank": "여하튼",
+   "src": "made"
+  }
+ ],
  "w|여행": [
   {
    "text": "여행 가고 싶어.",
@@ -41542,6 +41910,22 @@
    "blank": "연필"
   }
  ],
+ "w|연하다": [
+  {
+   "text": "준호의 할머니는 고기가 연해서 드시기 편하다고 하셨어요.",
+   "en": "Junho's grandmother said the meat was tender and easy to eat.",
+   "ko": "준호의 할머니는 고기가 연해서 드시기 편하다고 하셨어요.",
+   "blank": "연해서",
+   "src": "made"
+  },
+  {
+   "text": "하은은 할머니를 위해 갈비를 오래 삶아서 연하게 만들었어요.",
+   "en": "Haeun simmered the ribs for a long time to make them tender for her grandmother.",
+   "ko": "하은은 할머니를 위해 갈비를 오래 삶아서 연하게 만들었어요.",
+   "blank": "연하게",
+   "src": "made"
+  }
+ ],
  "w|연휴": [
   {
    "text": "연휴에 고향에 내려갈 거야.",
@@ -41990,6 +42374,22 @@
    "en": "The movie theater is nearby.",
    "ko": "영화관이 가까워.",
    "blank": "영화관이"
+  }
+ ],
+ "w|옅다": [
+  {
+   "text": "준호의 동생은 맛이 옅은 국을 싫어해서 소금을 조금 넣었어요.",
+   "en": "Junho's sibling dislikes bland soup, so he added a little salt.",
+   "ko": "준호의 동생은 맛이 옅은 국을 싫어해서 소금을 조금 넣었어요.",
+   "blank": "옅은",
+   "src": "made"
+  },
+  {
+   "text": "하은은 아버지를 위해 간을 옅게 해서 국을 끓였어요.",
+   "en": "Haeun made the soup lightly seasoned for her father.",
+   "ko": "하은은 아버지를 위해 간을 옅게 해서 국을 끓였어요.",
+   "blank": "옅게",
+   "src": "made"
   }
  ],
  "w|옆": [
@@ -43492,6 +43892,22 @@
    "en": "The cook is chopping quickly with a knife.",
    "ko": "요리사가 칼질을 빠르게 하고 있어.",
    "blank": "요리사가"
+  }
+ ],
+ "w|요리하다": [
+  {
+   "text": "준호는 주방장이 눈앞에서 요리하는 모습을 신기하게 봤어요.",
+   "en": "Junho watched in fascination as the chef cooked right in front of him.",
+   "ko": "준호는 주방장이 눈앞에서 요리하는 모습을 신기하게 봤어요.",
+   "blank": "요리하는",
+   "src": "made"
+  },
+  {
+   "text": "하은은 연휴 동안 가족을 위해 매일 요리했어요.",
+   "en": "Haeun cooked for her family every day during the holiday.",
+   "ko": "하은은 연휴 동안 가족을 위해 매일 요리했어요.",
+   "blank": "요리했어요",
+   "src": "made"
   }
  ],
  "w|요새": [
@@ -45366,6 +45782,22 @@
    "en": "The food around here is all good.",
    "ko": "이 동네 음식 다 맛있어.",
    "blank": "음식"
+  }
+ ],
+ "w|음식점": [
+  {
+   "text": "준호네 동네에는 가족끼리 가기 좋은 음식점이 많아요.",
+   "en": "Junho's neighborhood has lots of restaurants that are good for families.",
+   "ko": "준호네 동네에는 가족끼리 가기 좋은 음식점이 많아요.",
+   "blank": "음식점이",
+   "src": "made"
+  },
+  {
+   "text": "연휴라서 하은네 동네 음식점이 거의 다 문을 닫았어요.",
+   "en": "Because of the holiday, almost every restaurant in Haeun's neighborhood was closed.",
+   "ko": "연휴라서 하은네 동네 음식점이 거의 다 문을 닫았어요.",
+   "blank": "음식점이",
+   "src": "made"
   }
  ],
  "w|음악": [
@@ -47472,6 +47904,22 @@
    "ko": "과거에 여성은 가정에서 아이를 낳아 키우고 집안일을 하며 일생을 보냈다.",
    "blank": "일생을",
    "src": "krdict"
+  }
+ ],
+ "w|일식": [
+  {
+   "text": "준호의 누나는 초밥이 나오는 일식 코스를 주문했어요.",
+   "en": "Junho's older sister ordered the Japanese course that comes with sushi.",
+   "ko": "준호의 누나는 초밥이 나오는 일식 코스를 주문했어요.",
+   "blank": "일식",
+   "src": "made"
+  },
+  {
+   "text": "하은은 일식 요리책을 보고 연어 덮밥을 만들었어요.",
+   "en": "Haeun made a salmon rice bowl from a Japanese cookbook.",
+   "ko": "하은은 일식 요리책을 보고 연어 덮밥을 만들었어요.",
+   "blank": "일식",
+   "src": "made"
   }
  ],
  "w|일어나다": [
@@ -51590,6 +52038,22 @@
    "src": "made"
   }
  ],
+ "w|정돈되다": [
+  {
+   "text": "준호는 테이블 위가 깔끔하게 정돈돼 있어서 기분이 좋았어요.",
+   "en": "Junho was pleased that the table was neatly arranged.",
+   "ko": "준호는 테이블 위가 깔끔하게 정돈돼 있어서 기분이 좋았어요.",
+   "blank": "정돈돼",
+   "src": "made"
+  },
+  {
+   "text": "하은은 냉장고 안이 잘 정돈되어 있어야 마음이 편해요.",
+   "en": "Haeun feels at ease only when the fridge is well organized.",
+   "ko": "하은은 냉장고 안이 잘 정돈되어 있어야 마음이 편해요.",
+   "blank": "정돈되어",
+   "src": "made"
+  }
+ ],
  "w|정돈하다": [
   {
    "text": "방을 가지런히 정돈해.",
@@ -53840,6 +54304,22 @@
    "src": "made"
   }
  ],
+ "w|중식": [
+  {
+   "text": "준호네 가족은 짜장면이 먹고 싶어서 중식 코너로 갔어요.",
+   "en": "Junho's family wanted jjajangmyeon, so they went to the Chinese food corner.",
+   "ko": "준호네 가족은 짜장면이 먹고 싶어서 중식 코너로 갔어요.",
+   "blank": "중식",
+   "src": "made"
+  },
+  {
+   "text": "하은네 가족은 연휴 마지막 날 중식을 배달시켰어요.",
+   "en": "Haeun's family had Chinese food delivered on the last day of the holiday.",
+   "ko": "하은네 가족은 연휴 마지막 날 중식을 배달시켰어요.",
+   "blank": "중식을",
+   "src": "made"
+  }
+ ],
  "w|중심": [
   {
    "text": "도시 중심에 살고 싶어.",
@@ -55372,6 +55852,22 @@
    "blank": "진통제"
   }
  ],
+ "w|진하다": [
+  {
+   "text": "준호는 국물이 진한 갈비탕을 한 그릇 비웠어요.",
+   "en": "Junho finished a bowl of galbitang with a rich broth.",
+   "ko": "준호는 국물이 진한 갈비탕을 한 그릇 비웠어요.",
+   "blank": "진한",
+   "src": "made"
+  },
+  {
+   "text": "하은은 아침마다 진한 커피를 한 잔 내려 마셔요.",
+   "en": "Haeun brews and drinks a cup of strong coffee every morning.",
+   "ko": "하은은 아침마다 진한 커피를 한 잔 내려 마셔요.",
+   "blank": "진한",
+   "src": "made"
+  }
+ ],
  "w|진행": [
   {
    "text": "회의 진행이 생각보다 빨랐어.",
@@ -55606,6 +56102,22 @@
    "blank": "집이"
   }
  ],
+ "w|집게": [
+  {
+   "text": "준호는 집게로 고기를 뒤집으며 동생 접시에 하나씩 놓아 줬어요.",
+   "en": "Junho flipped the meat with tongs and placed pieces on his sibling's plate one by one.",
+   "ko": "준호는 집게로 고기를 뒤집으며 동생 접시에 하나씩 놓아 줬어요.",
+   "blank": "집게로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 집게로 숯불 위의 고기를 하나씩 뒤집었어요.",
+   "en": "Haeun flipped the meat on the charcoal grill one piece at a time with tongs.",
+   "ko": "하은은 집게로 숯불 위의 고기를 하나씩 뒤집었어요.",
+   "blank": "집게로",
+   "src": "made"
+  }
+ ],
  "w|집다": [
   {
    "text": "젓가락으로 나물을 집어 먹었어.",
@@ -55795,6 +56307,22 @@
    "en": "The big spider that came out of the warehouse corner was so creepy that Yuna screamed.",
    "ko": "창고 구석에서 나온 커다란 거미가 징그러워서 유나는 소리를 질렀어요.",
    "blank": "징그러워서",
+   "src": "made"
+  }
+ ],
+ "w|짙다": [
+  {
+   "text": "준호는 커피 향이 짙게 나는 디저트를 주문했어요.",
+   "en": "Junho ordered a dessert with a strong coffee aroma.",
+   "ko": "준호는 커피 향이 짙게 나는 디저트를 주문했어요.",
+   "blank": "짙게",
+   "src": "made"
+  },
+  {
+   "text": "부엌에 참기름 냄새가 짙게 퍼지자 하은의 동생이 달려왔어요.",
+   "en": "When the smell of sesame oil spread through the kitchen, Haeun's sibling came running.",
+   "ko": "부엌에 참기름 냄새가 짙게 퍼지자 하은의 동생이 달려왔어요.",
+   "blank": "짙게",
    "src": "made"
   }
  ],
@@ -59940,6 +60468,22 @@
    "blank": "크리스마스"
   }
  ],
+ "w|크림": [
+  {
+   "text": "준호의 동생은 크림 소스가 듬뿍 들어간 요리를 골랐어요.",
+   "en": "Junho's younger sibling picked a dish loaded with cream sauce.",
+   "ko": "준호의 동생은 크림 소스가 듬뿍 들어간 요리를 골랐어요.",
+   "blank": "크림",
+   "src": "made"
+  },
+  {
+   "text": "하은은 조카들과 케이크에 바를 크림을 직접 만들었어요.",
+   "en": "Haeun made the cream for the cake herself with her nieces and nephews.",
+   "ko": "하은은 조카들과 케이크에 바를 크림을 직접 만들었어요.",
+   "blank": "크림을",
+   "src": "made"
+  }
+ ],
  "w|큰아버지": [
   {
    "text": "큰아버지가 제사를 주관하셔.",
@@ -61492,6 +62036,22 @@
    "blank": "파리를"
   }
  ],
+ "w|파스타": [
+  {
+   "text": "준호의 엄마는 해산물 파스타를 시키고 아주 만족하셨어요.",
+   "en": "Junho's mom ordered the seafood pasta and was very pleased.",
+   "ko": "준호의 엄마는 해산물 파스타를 시키고 아주 만족하셨어요.",
+   "blank": "파스타를",
+   "src": "made"
+  },
+  {
+   "text": "하은은 조카들이 좋아하는 토마토 파스타를 만들어 줬어요.",
+   "en": "Haeun made the tomato pasta her nieces and nephews love.",
+   "ko": "하은은 조카들이 좋아하는 토마토 파스타를 만들어 줬어요.",
+   "blank": "파스타를",
+   "src": "made"
+  }
+ ],
  "w|파악": [
   {
    "text": "선생님은 학생들의 수준을 파악하려고 짧은 퀴즈를 내셨어요.",
@@ -61779,6 +62339,22 @@
    "en": "At the airport, there were photographers taking pictures of travelers' airport fashion.",
    "ko": "공항에서는 여행객들의 공항 패션을 찍는 사진기자들이 있었어요.",
    "blank": "패션을",
+   "src": "made"
+  }
+ ],
+ "w|패스트푸드": [
+  {
+   "text": "준호는 시간이 없을 땐 패스트푸드로 대충 때우곤 해요.",
+   "en": "When he's short on time, Junho tends to get by on fast food.",
+   "ko": "준호는 시간이 없을 땐 패스트푸드로 대충 때우곤 해요.",
+   "blank": "패스트푸드로",
+   "src": "made"
+  },
+  {
+   "text": "하은의 조카들은 집밥보다 패스트푸드를 더 좋아해요.",
+   "en": "Haeun's nieces and nephews like fast food more than home cooking.",
+   "ko": "하은의 조카들은 집밥보다 패스트푸드를 더 좋아해요.",
+   "blank": "패스트푸드를",
    "src": "made"
   }
  ],
@@ -63022,6 +63598,22 @@
    "src": "made"
   }
  ],
+ "w|필요없다": [
+  {
+   "text": "준호는 반찬이 넉넉하니까 추가 주문은 필요없다고 말했어요.",
+   "en": "Junho said there were plenty of side dishes so no extra order was needed.",
+   "ko": "준호는 반찬이 넉넉하니까 추가 주문은 필요없다고 말했어요.",
+   "blank": "필요없다고",
+   "src": "made"
+  },
+  {
+   "text": "하은은 반찬이 많으니까 국은 필요없겠다고 했어요.",
+   "en": "Haeun said they wouldn't need soup since there were plenty of side dishes.",
+   "ko": "하은은 반찬이 많으니까 국은 필요없겠다고 했어요.",
+   "blank": "필요없겠다고",
+   "src": "made"
+  }
+ ],
  "w|필요하다": [
   {
    "text": "영수증이 필요해요.",
@@ -63568,6 +64160,22 @@
    "en": "I sighed and looked out the window.",
    "ko": "한숨을 쉬며 창밖을 봤어.",
    "blank": "한숨을"
+  }
+ ],
+ "w|한식": [
+  {
+   "text": "준호의 할아버지는 외식할 때 꼭 한식을 고르세요.",
+   "en": "Junho's grandfather always chooses Korean food when eating out.",
+   "ko": "준호의 할아버지는 외식할 때 꼭 한식을 고르세요.",
+   "blank": "한식을",
+   "src": "made"
+  },
+  {
+   "text": "하은의 부모님은 명절에는 늘 한식으로 상을 차리세요.",
+   "en": "Haeun's parents always set the table with Korean food on holidays.",
+   "ko": "하은의 부모님은 명절에는 늘 한식으로 상을 차리세요.",
+   "blank": "한식으로",
+   "src": "made"
   }
  ],
  "w|한심하다": [
@@ -66090,6 +66698,22 @@
    "src": "krdict"
   }
  ],
+ "w|회": [
+  {
+   "text": "준호의 아버지는 바닷가 식당에서 광어 회를 제일 좋아하세요.",
+   "en": "Junho's father likes the flatfish sashimi at the seaside restaurant best.",
+   "ko": "준호의 아버지는 바닷가 식당에서 광어 회를 제일 좋아하세요.",
+   "blank": "회를",
+   "src": "made"
+  },
+  {
+   "text": "하은의 삼촌은 시장에서 회를 떠 와서 상에 올렸어요.",
+   "en": "Haeun's uncle got sashimi sliced at the market and put it on the table.",
+   "ko": "하은의 삼촌은 시장에서 회를 떠 와서 상에 올렸어요.",
+   "blank": "회를",
+   "src": "made"
+  }
+ ],
  "w|회계": [
   {
    "text": "동민은 회계 장부를 꼼꼼히 뒤져서 비리를 찾아냈어요.",
@@ -66350,6 +66974,22 @@
    "en": "The descendants carry on the family business.",
    "ko": "후손이 가업을 이어받아.",
    "blank": "후손이"
+  }
+ ],
+ "w|후식": [
+  {
+   "text": "식사가 끝나자 직원이 후식으로 수정과를 가져다줬어요.",
+   "en": "When the meal was over, the server brought sujeonggwa for dessert.",
+   "ko": "식사가 끝나자 직원이 후식으로 수정과를 가져다줬어요.",
+   "blank": "후식으로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 후식으로 식혜를 꺼내 왔어요.",
+   "en": "Haeun brought out sikhye for dessert.",
+   "ko": "하은은 후식으로 식혜를 꺼내 왔어요.",
+   "blank": "후식으로",
+   "src": "made"
   }
  ],
  "w|후원": [

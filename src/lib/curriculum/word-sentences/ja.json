@@ -2473,6 +2473,22 @@
    "blank": "カレー"
   }
  ],
+ "w|カロリー": [
+  {
+   "text": "隣のおばさんは、カロリーを気にして夕食を軽くしている。",
+   "en": "The woman next door keeps her dinners light because she watches her calories.",
+   "ko": "옆집 아주머니는 칼로리를 신경 써서 저녁을 가볍게 먹어요.",
+   "blank": "カロリー",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、海で一時間泳いで、かなりのカロリーを使った。",
+   "en": "Yoko swam in the sea for an hour and burned quite a few calories.",
+   "ko": "요코는 바다에서 한 시간 헤엄쳐서 칼로리를 꽤 소모했어요.",
+   "blank": "カロリー",
+   "src": "made"
+  }
+ ],
  "w|かわいい": [
   {
    "text": "本当にかわいいね。",
@@ -2500,6 +2516,22 @@
    "en": "Keiko felt sorry for the kitten abandoned in the garden and let it into the house.",
    "ko": "정원에 버려진 새끼 고양이가 불쌍해서 게이코는 집에 들여 줬어요.",
    "blank": "かわいそう",
+   "src": "made"
+  }
+ ],
+ "w|ヵ月": [
+  {
+   "text": "誠がこの町に引っ越して、もう三ヵ月がたった。",
+   "en": "Three months have already passed since Makoto moved to this town.",
+   "ko": "마코토가 이 동네로 이사 온 지 벌써 석 달이 지났어요.",
+   "blank": "ヵ月",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、海の家で二ヵ月だけアルバイトをした。",
+   "en": "Yoko worked part-time at a beach hut for just two months.",
+   "ko": "요코는 해변 매점에서 두 달만 아르바이트를 했어요.",
+   "blank": "ヵ月",
    "src": "made"
   }
  ],
@@ -2665,6 +2697,22 @@
    "blank": "キャスト"
   }
  ],
+ "w|キャプテン": [
+  {
+   "text": "隣の家の高校生は、サッカー部のキャプテンを務めている。",
+   "en": "The high schooler next door is captain of the soccer team.",
+   "ko": "옆집 고등학생은 축구부 주장을 맡고 있어요.",
+   "blank": "キャプテン",
+   "src": "made"
+  },
+  {
+   "text": "陽子が乗った観光船のキャプテンは、日に焼けた陽気な人だった。",
+   "en": "The captain of the sightseeing boat Yoko rode was a cheerful, sun-tanned man.",
+   "ko": "요코가 탄 관광선의 선장은 햇볕에 그을린 쾌활한 사람이었어요.",
+   "blank": "キャプテン",
+   "src": "made"
+  }
+ ],
  "w|キャラ": [
   {
    "text": "キャラが立ってるね。",
@@ -2811,6 +2859,22 @@
    "en": "Please take another look.",
    "ko": "한 번 더 봐 주세요.",
    "blank": "ください"
+  }
+ ],
+ "w|クッキー": [
+  {
+   "text": "隣の家の子どもが、焼きたてのクッキーを誠に届けてくれた。",
+   "en": "The child next door brought Makoto some freshly baked cookies.",
+   "ko": "옆집 아이가 갓 구운 쿠키를 마코토에게 갖다줬어요.",
+   "blank": "クッキー",
+   "src": "made"
+  },
+  {
+   "text": "海辺のカフェで、陽子は貝の形をしたクッキーを買った。",
+   "en": "At a café by the sea, Yoko bought cookies shaped like shells.",
+   "ko": "바닷가 카페에서 요코는 조개 모양 쿠키를 샀어요.",
+   "blank": "クッキー",
+   "src": "made"
   }
  ],
  "w|グッズ": [
@@ -8747,6 +8811,22 @@
    "blank": "ファッション"
   }
  ],
+ "w|ファミリー": [
+  {
+   "text": "向かいの新しい家には、子どもが三人いるファミリーが入った。",
+   "en": "A family with three children moved into the new house across the street.",
+   "ko": "건너편 새집에는 아이가 셋인 가족이 들어왔어요.",
+   "blank": "ファミリー",
+   "src": "made"
+  },
+  {
+   "text": "夏の浜辺は、パラソルを広げたファミリーでにぎわっていた。",
+   "en": "The summer beach was bustling with families under beach umbrellas.",
+   "ko": "여름 해변은 파라솔을 편 가족들로 북적였어요.",
+   "blank": "ファミリー",
+   "src": "made"
+  }
+ ],
  "w|ファン": [
   {
    "text": "ファンが増えたね。",
@@ -9206,6 +9286,22 @@
    "en": "This customer always comes to pick up medicine at the same pace.",
    "ko": "이 손님은 늘 같은 간격으로 약을 받으러 와요.",
    "blank": "ペース",
+   "src": "made"
+  }
+ ],
+ "w|ヘア": [
+  {
+   "text": "近所の美容院は、ヘアカットが安くて評判だ。",
+   "en": "The hair salon in the neighborhood is popular for its cheap haircuts.",
+   "ko": "동네 미용실은 커트가 싸서 평판이 좋아요.",
+   "blank": "ヘア",
+   "src": "made"
+  },
+  {
+   "text": "海水で傷まないように、陽子はヘアオイルを塗った。",
+   "en": "Yoko put on hair oil so the seawater wouldn't damage her hair.",
+   "ko": "요코는 바닷물에 상하지 않게 헤어 오일을 발랐어요.",
+   "blank": "ヘア",
    "src": "made"
   }
  ],
@@ -11473,6 +11569,38 @@
    "src": "made"
   }
  ],
+ "w|レモン": [
+  {
+   "text": "隣の庭のレモンの木に、たくさん実がなった。",
+   "en": "The lemon tree in the neighbor's garden bore lots of fruit.",
+   "ko": "옆집 마당 레몬 나무에 열매가 많이 열렸어요.",
+   "blank": "レモン",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、焼いた魚にレモンをしぼって食べた。",
+   "en": "Yoko squeezed lemon over the grilled fish and ate it.",
+   "ko": "요코는 구운 생선에 레몬을 짜서 먹었어요.",
+   "blank": "レモン",
+   "src": "made"
+  }
+ ],
+ "w|レンズ": [
+  {
+   "text": "誠は、隣の人に壊れたカメラのレンズを直してもらった。",
+   "en": "Makoto had his neighbor fix his broken camera lens.",
+   "ko": "마코토는 옆집 사람에게 고장 난 카메라 렌즈를 고쳐 받았어요.",
+   "blank": "レンズ",
+   "src": "made"
+  },
+  {
+   "text": "陽子のカメラのレンズに、砂が入ってしまった。",
+   "en": "Sand got into Yoko's camera lens.",
+   "ko": "요코의 카메라 렌즈에 모래가 들어가 버렸어요.",
+   "blank": "レンズ",
+   "src": "made"
+  }
+ ],
  "w|レンタル": [
   {
    "text": "机とテントは、主催者からレンタルした。",
@@ -11929,6 +12057,22 @@
    "en": "We haven't shown it to the public.",
    "ko": "일반에는 안 보여 줬어.",
    "blank": "一般"
+  }
+ ],
+ "w|一般人": [
+  {
+   "text": "隣に住む人は有名な俳優に似ているが、ただの一般人だ。",
+   "en": "The person living next door looks like a famous actor, but he's just an ordinary person.",
+   "ko": "옆집 사는 사람은 유명한 배우를 닮았지만 그냥 일반인이에요.",
+   "blank": "一般人",
+   "src": "made"
+  },
+  {
+   "text": "海辺でドラマの撮影があり、一般人は近づけなかった。",
+   "en": "A TV drama was being filmed on the beach, so the general public couldn't get close.",
+   "ko": "바닷가에서 드라마 촬영이 있어서 일반인은 가까이 갈 수 없었어요.",
+   "blank": "一般人",
+   "src": "made"
   }
  ],
  "w|一覧": [
@@ -12959,6 +13103,22 @@
    "blank": "主催"
   }
  ],
+ "w|主婦": [
+  {
+   "text": "隣の主婦が、町内会の当番表を誠に持ってきた。",
+   "en": "The housewife next door brought Makoto the neighborhood association's duty roster.",
+   "ko": "옆집 주부가 반상회 당번표를 마코토에게 가져왔어요.",
+   "blank": "主婦",
+   "src": "made"
+  },
+  {
+   "text": "浜辺では、地元の主婦たちが朝早くから海藻を拾っていた。",
+   "en": "On the beach, local housewives were gathering seaweed from early morning.",
+   "ko": "해변에서는 동네 주부들이 아침 일찍부터 해초를 줍고 있었어요.",
+   "blank": "主婦",
+   "src": "made"
+  }
+ ],
  "w|主張": [
   {
    "text": "自分の主張、はっきり言って。",
@@ -13125,6 +13285,22 @@
    "src": "made"
   }
  ],
+ "w|乙女": [
+  {
+   "text": "隣のおばあさんは、恋の話になると乙女のような顔をする。",
+   "en": "The old woman next door gets a girlish look whenever talk turns to romance.",
+   "ko": "옆집 할머니는 연애 이야기가 나오면 소녀 같은 얼굴을 해요.",
+   "blank": "乙女",
+   "src": "made"
+  },
+  {
+   "text": "この岬には、海に消えた乙女の悲しい伝説が残っている。",
+   "en": "A sad legend of a maiden who vanished into the sea lives on at this cape.",
+   "ko": "이 곶에는 바다로 사라진 처녀의 슬픈 전설이 남아 있어요.",
+   "blank": "乙女",
+   "src": "made"
+  }
+ ],
  "w|乾く": [
   {
    "text": "空気が乾くと、喉も渇いて咳が出る。",
@@ -13202,6 +13378,22 @@
    "en": "The management company gave notice of water works next month.",
    "ko": "관리 회사에서 다음 달 수도 공사 예고가 왔어요.",
    "blank": "予告",
+   "src": "made"
+  }
+ ],
+ "w|予報": [
+  {
+   "text": "天気の予報を見て、誠は近所の人に洗濯物を取り込むよう声をかけた。",
+   "en": "Seeing the weather forecast, Makoto told his neighbors to bring in their laundry.",
+   "ko": "일기 예보를 보고 마코토는 이웃에게 빨래를 걷으라고 말해 줬어요.",
+   "blank": "予報",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、波の予報を確かめてからサーフィンに出かけた。",
+   "en": "Yoko checked the wave forecast before going out surfing.",
+   "ko": "요코는 파도 예보를 확인하고 서핑을 하러 나갔어요.",
+   "blank": "予報",
    "src": "made"
   }
  ],
@@ -13631,6 +13823,22 @@
    "en": "I'll use public transit.",
    "ko": "대중교통을 쓸게.",
    "blank": "交通"
+  }
+ ],
+ "w|交際": [
+  {
+   "text": "誠は、近所の人たちと昔から家族のような交際を続けている。",
+   "en": "Makoto has long kept up family-like relations with his neighbors.",
+   "ko": "마코토는 이웃들과 오래전부터 가족 같은 교제를 이어 오고 있어요.",
+   "blank": "交際",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、海辺の町で出会った人と交際を始めた。",
+   "en": "Yoko started dating someone she met in a seaside town.",
+   "ko": "요코는 바닷가 마을에서 만난 사람과 교제를 시작했어요.",
+   "blank": "交際",
+   "src": "made"
   }
  ],
  "w|人": [
@@ -16437,6 +16645,22 @@
    "blank": "兄弟"
   }
  ],
+ "w|兄貴": [
+  {
+   "text": "隣の家の弟は、「兄貴みたいになりたい」といつも言っている。",
+   "en": "The younger brother next door always says, \"I want to be like my big bro.\"",
+   "ko": "옆집 남동생은 \"형처럼 되고 싶어\"라고 늘 말해요.",
+   "blank": "兄貴",
+   "src": "made"
+  },
+  {
+   "text": "陽子の弟は、「兄貴と海で釣りをした」とうれしそうに話した。",
+   "en": "Yoko's younger brother happily said, \"I went fishing in the sea with my big bro.\"",
+   "ko": "요코의 남동생은 \"형이랑 바다에서 낚시했어\"라고 기쁘게 말했어요.",
+   "blank": "兄貴",
+   "src": "made"
+  }
+ ],
  "w|充分": [
   {
    "text": "このコートは、真冬でも充分暖かいと店員が言った。",
@@ -17255,6 +17479,22 @@
    "blank": "再び"
   }
  ],
+ "w|再会": [
+  {
+   "text": "誠は、近所の夏祭りで小学校の先生と偶然再会した。",
+   "en": "Makoto happened to run into his old elementary school teacher at the neighborhood summer festival.",
+   "ko": "마코토는 동네 여름 축제에서 초등학교 선생님과 우연히 재회했어요.",
+   "blank": "再会",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、海辺の町で十年ぶりに幼なじみと再会した。",
+   "en": "Yoko met her childhood friend again in a seaside town for the first time in ten years.",
+   "ko": "요코는 바닷가 마을에서 십 년 만에 소꿉친구와 재회했어요.",
+   "blank": "再会",
+   "src": "made"
+  }
+ ],
  "w|再度": [
   {
    "text": "拓也は、間違いを直した見積書を再度お客さんに送った。",
@@ -17796,6 +18036,22 @@
    "en": "In case of fire, Sakura checked both of the building's exits.",
    "ko": "화재에 대비해 사쿠라는 맨션 출구 두 곳을 모두 확인했어요.",
    "blank": "出口",
+   "src": "made"
+  }
+ ],
+ "w|出品": [
+  {
+   "text": "隣の奥さんは、使わなくなった服をネットのフリマに出品している。",
+   "en": "The wife next door lists clothes she no longer uses on an online flea market.",
+   "ko": "옆집 부인은 안 입게 된 옷을 인터넷 중고 장터에 내놓고 있어요.",
+   "blank": "出品",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、浜辺で拾った貝で作ったアクセサリーを手作り市に出品した。",
+   "en": "Yoko entered accessories made from shells she picked up on the beach in a handicraft market.",
+   "ko": "요코는 해변에서 주운 조개로 만든 액세서리를 핸드메이드 장터에 출품했어요.",
+   "blank": "出品",
    "src": "made"
   }
  ],
@@ -20169,6 +20425,22 @@
    "blank": "友人"
   }
  ],
+ "w|友情": [
+  {
+   "text": "誠と隣のご主人の友情は、もう二十年も続いている。",
+   "en": "The friendship between Makoto and the man next door has lasted twenty years.",
+   "ko": "마코토와 옆집 남편의 우정은 벌써 이십 년째 이어지고 있어요.",
+   "blank": "友情",
+   "src": "made"
+  },
+  {
+   "text": "海辺の合宿で、陽子と仲間たちの友情は深まった。",
+   "en": "At the seaside camp, the friendship between Yoko and her friends grew deeper.",
+   "ko": "바닷가 합숙에서 요코와 친구들의 우정은 깊어졌어요.",
+   "blank": "友情",
+   "src": "made"
+  }
+ ],
  "w|友達": [
   {
    "text": "友達と飲む。",
@@ -21078,6 +21350,22 @@
    "en": "The school's computers were donated by a local company, and its employees also came to teach how to use them.",
    "ko": "학교 컴퓨터는 지역 회사에서 기부받았어요. 그 회사 직원들도 사용법을 가르치러 왔어요.",
    "blank": "同社",
+   "src": "made"
+  }
+ ],
+ "w|同級生": [
+  {
+   "text": "向かいの家に引っ越してきたのは、誠の中学の同級生だった。",
+   "en": "The person who moved into the house across the street was Makoto's middle school classmate.",
+   "ko": "건너편 집에 이사 온 사람은 마코토의 중학교 동창이었어요.",
+   "blank": "同級生",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、高校の同級生たちと海辺でバーベキューをした。",
+   "en": "Yoko had a barbecue by the sea with her high school classmates.",
+   "ko": "요코는 고등학교 동창들과 바닷가에서 바비큐를 했어요.",
+   "blank": "同級生",
    "src": "made"
   }
  ],
@@ -22495,6 +22783,22 @@
    "blank": "地震"
   }
  ],
+ "w|地面": [
+  {
+   "text": "大雨の後、誠の家の前の地面がぬかるんでいた。",
+   "en": "After the heavy rain, the ground in front of Makoto's house was muddy.",
+   "ko": "폭우가 지나고 마코토네 집 앞 땅이 질척거렸어요.",
+   "blank": "地面",
+   "src": "made"
+  },
+  {
+   "text": "砂浜の地面は、昼の日差しでとても熱くなっていた。",
+   "en": "The ground on the sandy beach had become very hot in the midday sun.",
+   "ko": "모래사장 바닥은 한낮 햇볕에 아주 뜨거워져 있었어요.",
+   "blank": "地面",
+   "src": "made"
+  }
+ ],
  "w|坂": [
   {
    "text": "急な坂を登った。",
@@ -23743,6 +24047,22 @@
    "src": "made"
   }
  ],
+ "w|大震災": [
+  {
+   "text": "近所のおじいさんは、大震災のときの助け合いを今でもよく話す。",
+   "en": "The old man in the neighborhood still often talks about how people helped each other during the great earthquake.",
+   "ko": "동네 할아버지는 대지진 때 서로 도운 이야기를 지금도 자주 해요.",
+   "blank": "大震災",
+   "src": "made"
+  },
+  {
+   "text": "この海辺の町には、大震災の津波の高さを示す看板がある。",
+   "en": "This seaside town has a sign showing how high the tsunami reached during the great earthquake.",
+   "ko": "이 바닷가 마을에는 대지진 때 쓰나미 높이를 알려 주는 간판이 있어요.",
+   "blank": "大震災",
+   "src": "made"
+  }
+ ],
  "w|天": [
   {
    "text": "天を仰いだよ。",
@@ -24137,6 +24457,22 @@
    "blank": "女子"
   }
  ],
+ "w|女子大": [
+  {
+   "text": "隣の娘さんは、この春から女子大に通っている。",
+   "en": "The daughter next door has been attending a women's college since this spring.",
+   "ko": "옆집 딸은 올봄부터 여대에 다녀요.",
+   "blank": "女子大",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、女子大のヨット部の仲間と海に出た。",
+   "en": "Yoko went out to sea with friends from her women's college sailing club.",
+   "ko": "요코는 여대 요트부 친구들과 바다로 나갔어요.",
+   "blank": "女子大",
+   "src": "made"
+  }
+ ],
  "w|女性": [
   {
    "text": "女性の声だった。",
@@ -24377,6 +24713,22 @@
    "src": "made"
   }
  ],
+ "w|姉ちゃん": [
+  {
+   "text": "隣の家から「姉ちゃん、早く!」と呼ぶ子どもの声が聞こえた。",
+   "en": "From next door came a child's voice calling, \"Sis, hurry up!\"",
+   "ko": "옆집에서 \"누나, 빨리!\" 하고 부르는 아이 목소리가 들렸어요.",
+   "blank": "姉ちゃん",
+   "src": "made"
+  },
+  {
+   "text": "浜辺で、小さな男の子が「姉ちゃん、見て!」と貝を見せた。",
+   "en": "On the beach, a little boy showed a shell, saying, \"Sis, look!\"",
+   "ko": "해변에서 어린 남자아이가 \"누나, 봐!\" 하며 조개를 보여 줬어요.",
+   "blank": "姉ちゃん",
+   "src": "made"
+  }
+ ],
  "w|姉妹": [
   {
    "text": "私には姉妹が三人いる。一人は看護婦で、残る二人は学生である。",
@@ -24519,6 +24871,22 @@
    "en": "Ask my daughter.",
    "ko": "딸한테 물어봐.",
    "blank": "娘"
+  }
+ ],
+ "w|婦人": [
+  {
+   "text": "町内会の婦人部が、お年寄りのためにお弁当を作った。",
+   "en": "The neighborhood association's women's group made boxed lunches for the elderly.",
+   "ko": "반상회 부녀회가 어르신들을 위해 도시락을 만들었어요.",
+   "blank": "婦人",
+   "src": "made"
+  },
+  {
+   "text": "浜辺の売店には、日焼けを防ぐ婦人用の帽子が並んでいた。",
+   "en": "The beach shop had women's hats for preventing sunburn on display.",
+   "ko": "해변 매점에는 햇볕을 막는 여성용 모자가 진열돼 있었어요.",
+   "blank": "婦人",
+   "src": "made"
   }
  ],
  "w|嫁": [
@@ -27289,6 +27657,22 @@
    "src": "tatoeba:149211 en:265347"
   }
  ],
+ "w|延期": [
+  {
+   "text": "雨のため、町内会の草取りは来週に延期になった。",
+   "en": "Because of rain, the neighborhood weeding was postponed until next week.",
+   "ko": "비 때문에 반상회 풀 뽑기는 다음 주로 연기됐어요.",
+   "blank": "延期",
+   "src": "made"
+  },
+  {
+   "text": "台風が近づき、海辺の花火大会は延期された。",
+   "en": "With a typhoon approaching, the seaside fireworks show was postponed.",
+   "ko": "태풍이 다가와 바닷가 불꽃 축제는 연기됐어요.",
+   "blank": "延期",
+   "src": "made"
+  }
+ ],
  "w|延長": [
   {
    "text": "会議の延長が決まった。",
@@ -28011,6 +28395,22 @@
    "en": "No regret remains.",
    "ko": "후회는 안 남아.",
    "blank": "後悔"
+  }
+ ],
+ "w|後者": [
+  {
+   "text": "町内会は、公園の掃除と花植えのうち、後者を選んだ。",
+   "en": "Of cleaning the park and planting flowers, the neighborhood association chose the latter.",
+   "ko": "반상회는 공원 청소와 꽃 심기 중 후자를 골랐어요.",
+   "blank": "後者",
+   "src": "made"
+  },
+  {
+   "text": "海で泳ぐか、砂浜で寝るか迷って、陽子は後者にした。",
+   "en": "Torn between swimming in the sea and lying on the sand, Yoko chose the latter.",
+   "ko": "바다에서 수영할지 모래사장에서 누울지 고민하다 요코는 후자를 택했어요.",
+   "blank": "後者",
+   "src": "made"
   }
  ],
  "w|後輩": [
@@ -28997,6 +29397,22 @@
    "blank": "悲しむ"
   }
  ],
+ "w|悲劇": [
+  {
+   "text": "近所のおじいさんは、昔見た映画の悲劇を涙ながらに話した。",
+   "en": "The old man in the neighborhood tearfully talked about the tragedy in a movie he once saw.",
+   "ko": "동네 할아버지는 예전에 본 영화의 비극을 눈물을 글썽이며 이야기했어요.",
+   "blank": "悲劇",
+   "src": "made"
+  },
+  {
+   "text": "港には、昔の船の事故の悲劇を伝える石碑がある。",
+   "en": "At the harbor, there's a stone monument telling of an old shipwreck tragedy.",
+   "ko": "항구에는 옛 배 사고의 비극을 전하는 비석이 있어요.",
+   "blank": "悲劇",
+   "src": "made"
+  }
+ ],
  "w|情報": [
   {
    "text": "情報、ありがとう。",
@@ -29212,6 +29628,22 @@
    "en": "The village grandmothers shower Misaki with affection as if she were their grandchild.",
    "ko": "마을 할머니들은 미사키에게 손주 같은 애정을 쏟아 줘요.",
    "blank": "愛情",
+   "src": "made"
+  }
+ ],
+ "w|愛用": [
+  {
+   "text": "隣のおじさんは、何十年も愛用している自転車に乗っている。",
+   "en": "The man next door rides a bicycle he has used and loved for decades.",
+   "ko": "옆집 아저씨는 수십 년 동안 애용해 온 자전거를 타요.",
+   "blank": "愛用",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、愛用の麦わら帽子をかぶって浜辺を歩いた。",
+   "en": "Yoko walked along the beach in her favorite straw hat.",
+   "ko": "요코는 즐겨 쓰는 밀짚모자를 쓰고 해변을 걸었어요.",
+   "blank": "愛用",
    "src": "made"
   }
  ],
@@ -30526,6 +30958,22 @@
    "en": "During cleaning time, Keiko picked up trash in the schoolyard.",
    "ko": "청소 시간에 게이코는 운동장 쓰레기를 주웠어요.",
    "blank": "拾った",
+   "src": "made"
+  }
+ ],
+ "w|持ち主": [
+  {
+   "text": "誠は、道に落ちていた鍵の持ち主を近所で探した。",
+   "en": "Makoto searched the neighborhood for the owner of a key he found on the road.",
+   "ko": "마코토는 길에 떨어져 있던 열쇠의 주인을 동네에서 찾았어요.",
+   "blank": "持ち主",
+   "src": "made"
+  },
+  {
+   "text": "浜辺に落ちていたサンダルの持ち主は、小さな女の子だった。",
+   "en": "The owner of the sandal left on the beach was a little girl.",
+   "ko": "해변에 떨어져 있던 샌들의 주인은 어린 여자아이였어요.",
+   "blank": "持ち主",
    "src": "made"
   }
  ],
@@ -32533,6 +32981,22 @@
    "en": "Busy days keep going.",
    "ko": "바쁜 나날이 이어져.",
    "blank": "日々"
+  }
+ ],
+ "w|日付": [
+  {
+   "text": "回覧板には、ゴミの日が変わる日付が書いてあった。",
+   "en": "The neighborhood circular listed the date when garbage day would change.",
+   "ko": "회람판에는 쓰레기 버리는 날이 바뀌는 날짜가 적혀 있었어요.",
+   "blank": "日付",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、砂の上に今日の日付を大きく書いた。",
+   "en": "Yoko wrote today's date in big letters in the sand.",
+   "ko": "요코는 모래 위에 오늘 날짜를 크게 썼어요.",
+   "blank": "日付",
+   "src": "made"
   }
  ],
  "w|日常": [
@@ -39457,6 +39921,22 @@
    "blank": "異常"
   }
  ],
+ "w|異性": [
+  {
+   "text": "隣の娘さんは、最近異性の友達をよく家に連れてくる。",
+   "en": "The daughter next door has recently been bringing friends of the opposite sex home often.",
+   "ko": "옆집 딸은 요즘 이성 친구를 자주 집에 데려와요.",
+   "blank": "異性",
+   "src": "made"
+  },
+  {
+   "text": "海辺のカフェは、異性との出会いを求める若者でいっぱいだった。",
+   "en": "The seaside café was full of young people hoping to meet someone of the opposite sex.",
+   "ko": "바닷가 카페는 이성과의 만남을 찾는 젊은이로 가득했어요.",
+   "blank": "異性",
+   "src": "made"
+  }
+ ],
  "w|番": [
   {
    "text": "君の番だよ。",
@@ -41199,6 +41679,22 @@
    "blank": "社長"
   }
  ],
+ "w|祖父": [
+  {
+   "text": "誠の祖父は、この町内で一番の古株だった。",
+   "en": "Makoto's grandfather was the longest-standing resident of this neighborhood.",
+   "ko": "마코토의 할아버지는 이 동네에서 가장 오래 산 분이었어요.",
+   "blank": "祖父",
+   "src": "made"
+  },
+  {
+   "text": "陽子の祖父は、昔この海で漁師をしていた。",
+   "en": "Yoko's grandfather used to be a fisherman on this sea.",
+   "ko": "요코의 할아버지는 예전에 이 바다에서 어부였어요.",
+   "blank": "祖父",
+   "src": "made"
+  }
+ ],
  "w|神": [
   {
    "text": "神対応だったよ。",
@@ -41443,6 +41939,22 @@
    "en": "I'm on my way.",
    "ko": "지금 이동하고 있어.",
    "blank": "移動"
+  }
+ ],
+ "w|移植": [
+  {
+   "text": "隣のおじさんは、去年腎臓の移植手術を受けたそうだ。",
+   "en": "The man next door apparently had a kidney transplant last year.",
+   "ko": "옆집 아저씨는 작년에 신장 이식 수술을 받았대요.",
+   "blank": "移植",
+   "src": "made"
+  },
+  {
+   "text": "港町では、弱ったサンゴを別の場所へ移植する活動をしている。",
+   "en": "In the port town, there's an effort to transplant weakened coral to another place.",
+   "ko": "항구 마을에서는 약해진 산호를 다른 곳으로 이식하는 활동을 하고 있어요.",
+   "blank": "移植",
+   "src": "made"
   }
  ],
  "w|移民": [
@@ -44202,6 +44714,22 @@
    "en": "The builder Keiko hired employs carpenters it trained itself.",
    "ko": "게이코가 맡긴 시공사는 자체적으로 키운 목수를 두고 있어요.",
    "blank": "自社",
+   "src": "made"
+  }
+ ],
+ "w|自称": [
+  {
+   "text": "向かいのおじさんは、自称料理の名人で、よくおかずを分けてくれる。",
+   "en": "The man across the street calls himself a master cook and often shares side dishes.",
+   "ko": "건너편 아저씨는 자칭 요리 명인이라 반찬을 자주 나눠 줘요.",
+   "blank": "自称",
+   "src": "made"
+  },
+  {
+   "text": "浜辺で会った男は、自称プロのサーファーだった。",
+   "en": "The man Yoko met on the beach claimed to be a professional surfer.",
+   "ko": "해변에서 만난 남자는 자칭 프로 서퍼였어요.",
+   "blank": "自称",
    "src": "made"
   }
  ],
@@ -47943,6 +48471,38 @@
    "src": "tatoeba:1119909/bunbuku en:1094574/CK"
   }
  ],
+ "w|貯金": [
+  {
+   "text": "隣の家の子どもは、お年玉を全部貯金するそうだ。",
+   "en": "The child next door apparently saves all of his New Year's money.",
+   "ko": "옆집 아이는 세뱃돈을 전부 저금한대요.",
+   "blank": "貯金",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、海の近くに住むために少しずつ貯金している。",
+   "en": "Yoko is saving little by little so she can live near the sea.",
+   "ko": "요코는 바다 근처에 살려고 조금씩 저금하고 있어요.",
+   "blank": "貯金",
+   "src": "made"
+  }
+ ],
+ "w|貴族": [
+  {
+   "text": "近所の古い屋敷は、昔は貴族の別荘だったらしい。",
+   "en": "The old mansion in the neighborhood was apparently once an aristocrat's villa.",
+   "ko": "동네 오래된 저택은 예전에 귀족의 별장이었대요.",
+   "blank": "貴族",
+   "src": "made"
+  },
+  {
+   "text": "岬の上の白い洋館は、昔ある貴族が夏を過ごした場所だ。",
+   "en": "The white Western-style house on the cape is where an aristocrat once spent his summers.",
+   "ko": "곶 위의 하얀 서양식 저택은 옛날 어느 귀족이 여름을 보내던 곳이에요.",
+   "blank": "貴族",
+   "src": "made"
+  }
+ ],
  "w|貴重": [
   {
    "text": "貴重な時間をありがとう。",
@@ -48251,6 +48811,22 @@
    "en": "I decided to buy it.",
    "ko": "구매 정했어.",
    "blank": "購入"
+  }
+ ],
+ "w|贅沢": [
+  {
+   "text": "誠の隣の夫婦は、たまの休みに温泉旅行という贅沢をしている。",
+   "en": "The couple next door to Makoto treat themselves to the luxury of a hot spring trip on their occasional days off.",
+   "ko": "마코토의 옆집 부부는 가끔 쉬는 날에 온천 여행이라는 사치를 누려요.",
+   "blank": "贅沢",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、海の見えるホテルに泊まるという贅沢をした。",
+   "en": "Yoko treated herself to the luxury of staying at a hotel with an ocean view.",
+   "ko": "요코는 바다가 보이는 호텔에 묵는 사치를 부렸어요.",
+   "blank": "贅沢",
+   "src": "made"
   }
  ],
  "w|赤": [
@@ -48568,6 +49144,22 @@
    "en": "The order form had a delivery option for people with physical disabilities.",
    "ko": "주문서에는 몸이 불편한 사람을 위한 배송 옵션이 있었어요.",
    "blank": "身体",
+   "src": "made"
+  }
+ ],
+ "w|身分": [
+  {
+   "text": "マンションの管理人は、訪ねてきた人に身分を確認している。",
+   "en": "The building manager checks the identity of visitors.",
+   "ko": "맨션 관리인은 방문한 사람의 신분을 확인해요.",
+   "blank": "身分",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、ボートを借りるときに身分を証明するものを見せた。",
+   "en": "Yoko showed proof of identity when she rented a boat.",
+   "ko": "요코는 보트를 빌릴 때 신분증을 보여 줬어요.",
+   "blank": "身分",
    "src": "made"
   }
  ],
@@ -49000,6 +49592,22 @@
    "en": "Keiko wanted to fix the old house's windows before winter came.",
    "ko": "게이코는 겨울이 다가오기 전에 오래된 집 창문을 고치고 싶었어요.",
    "blank": "近づく",
+   "src": "made"
+  }
+ ],
+ "w|近代": [
+  {
+   "text": "誠の住む町には、近代に建てられた洋館が今も残っている。",
+   "en": "In the town where Makoto lives, a Western-style house built in the modern era still remains.",
+   "ko": "마코토가 사는 동네에는 근대에 지어진 서양식 저택이 지금도 남아 있어요.",
+   "blank": "近代",
+   "src": "made"
+  },
+  {
+   "text": "港町の資料館には、近代の漁業の道具が並んでいる。",
+   "en": "The port town's museum displays fishing tools from the modern era.",
+   "ko": "항구 마을 자료관에는 근대 어업 도구들이 전시돼 있어요.",
+   "blank": "近代",
    "src": "made"
   }
  ],
@@ -51599,6 +52207,22 @@
    "blank": "間違え"
   }
  ],
+ "w|関わり": [
+  {
+   "text": "誠は、近所との関わりを大事にしたいと思っている。",
+   "en": "Makoto wants to value his ties with the neighbors.",
+   "ko": "마코토는 이웃과의 관계를 소중히 하고 싶어 해요.",
+   "blank": "関わり",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、漁師の仕事と海との関わりについて話を聞いた。",
+   "en": "Yoko listened to a fisherman talk about his work and his connection to the sea.",
+   "ko": "요코는 어부의 일과 바다와의 관계에 대해 이야기를 들었어요.",
+   "blank": "関わり",
+   "src": "made"
+  }
+ ],
  "w|関わる": [
   {
    "text": "沖縄県民は、命に関わる危険と背中合わせの暮らしを強いられてきました。",
@@ -52975,6 +53599,22 @@
    "en": "I have no choice but to ask him.",
    "ko": "그에게 부탁하는 수밖에 없어.",
    "blank": "頼む"
+  }
+ ],
+ "w|頼り": [
+  {
+   "text": "一人暮らしの誠にとって、隣の夫婦は何かと頼りになる。",
+   "en": "For Makoto, who lives alone, the couple next door are dependable in many ways.",
+   "ko": "혼자 사는 마코토에게 옆집 부부는 여러모로 의지가 돼요.",
+   "blank": "頼り",
+   "src": "made"
+  },
+  {
+   "text": "知らない海では、陽子は地元の人の話だけが頼りだった。",
+   "en": "At an unfamiliar beach, Yoko relied only on what the locals told her.",
+   "ko": "낯선 바다에서 요코는 현지 사람들 말만 믿고 의지했어요.",
+   "blank": "頼り",
+   "src": "made"
   }
  ],
  "w|顔": [
