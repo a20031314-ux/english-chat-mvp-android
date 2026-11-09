@@ -715,6 +715,22 @@
    "blank": "Aku"
   }
  ],
+ "w|akuarium": [
+  {
+   "text": "Agus membersihkan akuarium kecil berisi ikan cupang.",
+   "en": "Agus cleaned the small aquarium with the betta fish.",
+   "ko": "아구스는 베타가 사는 작은 어항을 청소했어요.",
+   "blank": "akuarium",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak senang menonton ikan di akuarium dekat pintu masuk.",
+   "en": "Children love watching the fish in the aquarium near the entrance.",
+   "ko": "아이들은 입구 옆 수족관의 물고기를 구경하는 걸 좋아해요.",
+   "blank": "akuarium",
+   "src": "made"
+  }
+ ],
  "w|akun": [
   {
    "text": "Sekolah membuatkan akun email untuk setiap siswa baru.",
@@ -3899,6 +3915,22 @@
    "src": "made"
   }
  ],
+ "w|bantalan": [
+  {
+   "text": "Agus memasang bantalan karet di kaki kursi agar lantai tidak tergores.",
+   "en": "Agus put rubber pads on the chair legs so the floor wouldn't get scratched.",
+   "ko": "아구스는 바닥이 긁히지 않게 의자 다리에 고무 패드를 붙였어요.",
+   "blank": "bantalan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menambahkan bantalan empuk di kursi kayu untuk tamu.",
+   "en": "Wati added soft cushions to the wooden chairs for the guests.",
+   "ko": "와티는 손님용 나무 의자에 푹신한 방석을 깔았어요.",
+   "blank": "bantalan",
+   "src": "made"
+  }
+ ],
  "w|banteng": [
   {
    "text": "Dimas pelan-pelan mendekati banteng yang sedang makan rumput.",
@@ -4427,6 +4459,22 @@
    "en": "There's a strange smell here.",
    "ko": "여기 이상한 냄새가 나.",
    "blank": "bau"
+  }
+ ],
+ "w|baut": [
+  {
+   "text": "Agus mengencangkan baut rak buku yang mulai goyang.",
+   "en": "Agus tightened the bolts on the bookshelf that had started to wobble.",
+   "ko": "아구스는 흔들리기 시작한 책장의 볼트를 조였어요.",
+   "blank": "baut",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengencangkan baut meja yang goyang di pojok ruangan.",
+   "en": "Wati tightened the bolts on the wobbly table in the corner.",
+   "ko": "와티는 구석에 있는 흔들리는 탁자의 볼트를 조였어요.",
+   "blank": "baut",
+   "src": "made"
   }
  ],
  "w|bawaan": [
@@ -6972,6 +7020,22 @@
    "en": "Siti feels excited every time the running season begins.",
    "ko": "시티는 마라톤 시즌이 시작될 때마다 의욕이 넘쳐요.",
    "blank": "bergairah",
+   "src": "made"
+  }
+ ],
+ "w|bergandengan": [
+  {
+   "text": "Pasangan lansia di lantai dua selalu turun tangga sambil bergandengan tangan.",
+   "en": "The elderly couple on the second floor always walk down the stairs holding hands.",
+   "ko": "이 층의 노부부는 늘 손을 잡고 계단을 내려가요.",
+   "blank": "bergandengan",
+   "src": "made"
+  },
+  {
+   "text": "Sepasang kakek dan nenek masuk ke rumah makan sambil bergandengan tangan.",
+   "en": "An elderly couple walked into the restaurant holding hands.",
+   "ko": "할아버지 할머니 한 쌍이 손을 잡고 식당에 들어왔어요.",
+   "blank": "bergandengan",
    "src": "made"
   }
  ],
@@ -10377,6 +10441,22 @@
    "src": "made"
   }
  ],
+ "w|bersangkutan": [
+  {
+   "text": "Pengelola meminta warga yang bersangkutan memindahkan sepeda dari tangga darurat.",
+   "en": "The management asked the residents concerned to move their bicycles off the emergency stairs.",
+   "ko": "관리 사무소는 해당 주민들에게 비상계단에서 자전거를 치워 달라고 했어요.",
+   "blank": "bersangkutan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyuruh pelayan yang bersangkutan minta maaf kepada tamu.",
+   "en": "Wati told the waiter in question to apologize to the guest.",
+   "ko": "와티는 해당 종업원에게 손님께 사과하라고 했어요.",
+   "blank": "bersangkutan",
+   "src": "made"
+  }
+ ],
  "w|bersantai": [
   {
    "text": "Mereka bersantai di taman setelah makan siang.",
@@ -10665,6 +10745,22 @@
    "blank": "bersenjata"
   }
  ],
+ "w|bersentuhan": [
+  {
+   "text": "Lift sangat penuh sampai bahu Agus bersentuhan dengan bahu orang lain.",
+   "en": "The elevator was so full that Agus's shoulder touched other people's shoulders.",
+   "ko": "엘리베이터가 너무 꽉 차서 아구스의 어깨가 다른 사람 어깨에 닿았어요.",
+   "blank": "bersentuhan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menata gelas di rak agar tidak saling bersentuhan.",
+   "en": "Wati arranges the glasses on the rack so they don't touch each other.",
+   "ko": "와티는 잔끼리 닿지 않게 선반에 정리해요.",
+   "blank": "bersentuhan",
+   "src": "made"
+  }
+ ],
  "w|bersepeda": [
   {
    "text": "Bayu menyewa sepeda dan bersepeda keliling danau sore itu.",
@@ -10694,6 +10790,22 @@
    "en": "Lestari doesn't require her employees to wear uniforms because she wants a relaxed office atmosphere.",
    "ko": "레스타리는 편한 분위기를 원해서 직원들에게 제복을 입으라고 하지 않아요.",
    "blank": "berseragam",
+   "src": "made"
+  }
+ ],
+ "w|berserakan": [
+  {
+   "text": "Kardus pindahan masih berserakan di unit baru Agus.",
+   "en": "Moving boxes are still scattered around Agus's new unit.",
+   "ko": "아구스의 새집에는 아직 이삿짐 상자가 여기저기 널려 있어요.",
+   "blank": "berserakan",
+   "src": "made"
+  },
+  {
+   "text": "Remah kerupuk berserakan di bawah meja setelah rombongan anak sekolah pulang.",
+   "en": "Cracker crumbs were scattered under the tables after the group of schoolchildren left.",
+   "ko": "학생 단체가 돌아간 뒤 탁자 밑에 크루푹 부스러기가 흩어져 있었어요.",
+   "blank": "berserakan",
    "src": "made"
   }
  ],
@@ -12409,6 +12521,22 @@
    "en": "Don't hurt animals.",
    "ko": "동물을 괴롭히지 마.",
    "blank": "binatang"
+  }
+ ],
+ "w|bingkai": [
+  {
+   "text": "Agus memasang foto keluarga dalam bingkai kayu di ruang tamu.",
+   "en": "Agus put up a family photo in a wooden frame in the living room.",
+   "ko": "아구스는 거실에 나무 액자에 넣은 가족사진을 걸었어요.",
+   "blank": "bingkai",
+   "src": "made"
+  },
+  {
+   "text": "Foto pendiri rumah makan dipajang dalam bingkai besar di dekat kasir.",
+   "en": "A photo of the restaurant's founder hangs in a big frame near the cashier.",
+   "ko": "식당 창업자 사진이 계산대 옆 큰 액자에 걸려 있어요.",
+   "blank": "bingkai",
+   "src": "made"
   }
  ],
  "w|bingung": [
@@ -14467,6 +14595,22 @@
    "en": "It was so careless to leave the stove on.",
    "ko": "가스불을 켜 둔 채 나가다니 너무 부주의해.",
    "blank": "Ceroboh"
+  }
+ ],
+ "w|cerobong": [
+  {
+   "text": "Asap dari cerobong pabrik di seberang sering masuk ke unit Agus.",
+   "en": "Smoke from the factory chimney across the way often gets into Agus's unit.",
+   "ko": "건너편 공장 굴뚝 연기가 아구스네 집에 자주 들어와요.",
+   "blank": "cerobong",
+   "src": "made"
+  },
+  {
+   "text": "Asap sate keluar lewat cerobong di atas dapur Wati.",
+   "en": "The smoke from the satay goes out through the chimney above Wati's kitchen.",
+   "ko": "사테 굽는 연기가 와티네 주방 위 굴뚝으로 빠져나가요.",
+   "blank": "cerobong",
+   "src": "made"
   }
  ],
  "w|cerutu": [
@@ -17553,6 +17697,22 @@
    "src": "made"
   }
  ],
+ "w|elektrik": [
+  {
+   "text": "Agus memainkan gitar elektrik dengan headphone agar tetangga tidak terganggu.",
+   "en": "Agus plays his electric guitar with headphones so the neighbors aren't disturbed.",
+   "ko": "아구스는 이웃에게 방해가 안 되게 헤드폰을 끼고 일렉트릭 기타를 쳐요.",
+   "blank": "elektrik",
+   "src": "made"
+  },
+  {
+   "text": "Dapur Wati kini memakai panggangan elektrik agar tidak terlalu berasap.",
+   "en": "Wati's kitchen now uses an electric grill so it's not too smoky.",
+   "ko": "와티네 주방은 연기가 덜 나도록 이제 전기 그릴을 써요.",
+   "blank": "elektrik",
+   "src": "made"
+  }
+ ],
  "w|elektronik": [
   {
    "text": "Musik pengiring drama itu dimainkan dengan alat musik elektronik.",
@@ -18809,6 +18969,22 @@
    "en": "Don't be afraid to fail.",
    "ko": "실패를 두려워하지 마.",
    "blank": "gagal"
+  }
+ ],
+ "w|gagang": [
+  {
+   "text": "Agus mengganti gagang pintu yang sudah longgar.",
+   "en": "Agus replaced the door handle that had come loose.",
+   "ko": "아구스는 헐거워진 문손잡이를 갈았어요.",
+   "blank": "gagang",
+   "src": "made"
+  },
+  {
+   "text": "Wati memegang gagang wajan erat-erat sambil membalik nasi goreng.",
+   "en": "Wati gripped the wok handle tightly while tossing the fried rice.",
+   "ko": "와티는 웍 손잡이를 꽉 잡고 볶음밥을 뒤집었어요.",
+   "blank": "gagang",
+   "src": "made"
   }
  ],
  "w|gagap": [
@@ -20404,6 +20580,22 @@
    "en": "From the plane window, Putri saw a farmer's hut at the edge of a rice field.",
    "ko": "비행기 창문으로 푸트리는 논 가장자리의 농부 오두막을 봤어요.",
    "blank": "gubuk",
+   "src": "made"
+  }
+ ],
+ "w|guci": [
+  {
+   "text": "Agus menaruh guci keramik pemberian ibunya di sudut ruangan.",
+   "en": "Agus placed the ceramic jar his mother gave him in the corner of the room.",
+   "ko": "아구스는 어머니가 준 도자기 항아리를 방 구석에 두었어요.",
+   "blank": "guci",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyimpan air minum dalam guci tanah liat agar tetap sejuk.",
+   "en": "Wati keeps drinking water in a clay jar so it stays cool.",
+   "ko": "와티는 마실 물이 시원하게 유지되도록 흙 항아리에 담아 둬요.",
+   "blank": "guci",
    "src": "made"
   }
  ],
@@ -25201,6 +25393,22 @@
    "en": "The emperor ruled with a fair hand.",
    "ko": "황제가 공정한 손으로 다스렸어.",
    "blank": "Kaisar"
+  }
+ ],
+ "w|kait": [
+  {
+   "text": "Agus memasang kait di balik pintu untuk menggantung jaket.",
+   "en": "Agus put a hook on the back of the door to hang his jacket.",
+   "ko": "아구스는 재킷을 걸려고 문 뒤에 고리를 달았어요.",
+   "blank": "kait",
+   "src": "made"
+  },
+  {
+   "text": "Wati menggantung celemek pada kait di dinding dapur.",
+   "en": "Wati hangs her apron on a hook on the kitchen wall.",
+   "ko": "와티는 주방 벽 고리에 앞치마를 걸어요.",
+   "blank": "kait",
+   "src": "made"
   }
  ],
  "w|kak": [
@@ -30449,6 +30657,22 @@
    "src": "made"
   }
  ],
+ "w|keran": [
+  {
+   "text": "Sepanjang malam keran kamar mandi Agus terus menetes.",
+   "en": "All night long the tap in Agus's bathroom kept dripping.",
+   "ko": "밤새 아구스네 욕실 수도꼭지에서 물이 똑똑 떨어졌어요.",
+   "blank": "keran",
+   "src": "made"
+  },
+  {
+   "text": "Wati memasang keran baru di tempat cuci tangan.",
+   "en": "Wati installed a new tap at the handwashing station.",
+   "ko": "와티는 손 씻는 곳에 새 수도꼭지를 달았어요.",
+   "blank": "keran",
+   "src": "made"
+  }
+ ],
  "w|kerangka": [
   {
    "text": "Tukang sudah memasang kerangka atap rumah baru di seberang rumah Andi.",
@@ -33038,6 +33262,22 @@
    "en": "The small repair shop didn't have the part Lestari's car needed.",
    "ko": "그 작은 정비소에는 레스타리의 차에 필요한 부품이 없었어요.",
    "blank": "komponen",
+   "src": "made"
+  }
+ ],
+ "w|kompor": [
+  {
+   "text": "Agus lupa mematikan kompor dan panci hampir gosong.",
+   "en": "Agus forgot to turn off the stove and the pot nearly burned.",
+   "ko": "아구스는 가스레인지 끄는 걸 잊어서 냄비를 태울 뻔했어요.",
+   "blank": "kompor",
+   "src": "made"
+  },
+  {
+   "text": "Wati membeli kompor baru dengan empat tungku.",
+   "en": "Wati bought a new stove with four burners.",
+   "ko": "와티는 화구가 네 개인 새 레인지를 샀어요.",
+   "blank": "kompor",
    "src": "made"
   }
  ],
@@ -35709,6 +35949,22 @@
    "blank": "Ledakan"
   }
  ],
+ "w|ledeng": [
+  {
+   "text": "Air ledeng di gedung Agus mati sejak pagi.",
+   "en": "The tap water in Agus's building has been off since morning.",
+   "ko": "아구스네 건물에 아침부터 수돗물이 끊겼어요.",
+   "blank": "ledeng",
+   "src": "made"
+  },
+  {
+   "text": "Wati mencuci sayur di bawah air ledeng yang mengalir.",
+   "en": "Wati washes the vegetables under running tap water.",
+   "ko": "와티는 흐르는 수돗물에 채소를 씻어요.",
+   "blank": "ledeng",
+   "src": "made"
+  }
+ ],
  "w|lega": [
   {
    "text": "Dia merasa lega setelah ujian selesai.",
@@ -36162,6 +36418,22 @@
    "en": "Dewi examined a tiny insect under a magnifying lens.",
    "ko": "데위는 돋보기 렌즈 아래의 작은 곤충을 관찰했어요.",
    "blank": "lensa",
+   "src": "made"
+  }
+ ],
+ "w|lentera": [
+  {
+   "text": "Agus menggantung lentera kecil di balkon untuk menghias malam.",
+   "en": "Agus hung a small lantern on the balcony to brighten up the evening.",
+   "ko": "아구스는 밤 분위기를 내려고 발코니에 작은 등불을 걸었어요.",
+   "blank": "lentera",
+   "src": "made"
+  },
+  {
+   "text": "Teras rumah makan Wati dihiasi lentera kertas warna-warni.",
+   "en": "The terrace of Wati's restaurant is decorated with colorful paper lanterns.",
+   "ko": "와티네 식당 테라스는 알록달록한 종이 등으로 꾸며져 있어요.",
+   "blank": "lentera",
    "src": "made"
   }
  ],
@@ -40023,6 +40295,22 @@
    "src": "made"
   }
  ],
+ "w|melolong": [
+  {
+   "text": "Anjing tetangga Agus melolong setiap kali ada sirene lewat.",
+   "en": "Agus's neighbor's dog howls every time a siren goes by.",
+   "ko": "아구스네 이웃집 개는 사이렌이 지나갈 때마다 울부짖어요.",
+   "blank": "melolong",
+   "src": "made"
+  },
+  {
+   "text": "Anjing di gang belakang melolong saat Wati menutup rumah makan malam-malam.",
+   "en": "A dog in the back alley howled as Wati closed the restaurant late at night.",
+   "ko": "와티가 밤늦게 식당 문을 닫을 때 뒷골목 개가 울부짖었어요.",
+   "blank": "melolong",
+   "src": "made"
+  }
+ ],
  "w|meloloskan": [
   {
    "text": "Pemimpin redaksi akhirnya meloloskan tulisan Bayu untuk halaman depan.",
@@ -40918,6 +41206,22 @@
    "en": "The light reflected off the freshly mopped factory floor.",
    "ko": "막 닦은 공장 바닥에 불빛이 반사됐어요.",
    "blank": "memantul",
+   "src": "made"
+  }
+ ],
+ "w|memapah": [
+  {
+   "text": "Agus memapah nenek tetangga yang terpeleset di tangga.",
+   "en": "Agus helped the elderly neighbor who had slipped on the stairs walk.",
+   "ko": "아구스는 계단에서 미끄러진 이웃 할머니를 부축했어요.",
+   "blank": "memapah",
+   "src": "made"
+  },
+  {
+   "text": "Wati memapah tamu lansia yang kesulitan menaiki tangga.",
+   "en": "Wati helped an elderly guest who was having trouble climbing the stairs.",
+   "ko": "와티는 계단을 오르기 힘들어하는 노인 손님을 부축했어요.",
+   "blank": "memapah",
    "src": "made"
   }
  ],
@@ -48973,6 +49277,22 @@
    "src": "made"
   }
  ],
+ "w|mengasah": [
+  {
+   "text": "Agus mengasah pisau dapur di balkon setiap akhir pekan.",
+   "en": "Agus sharpens his kitchen knives on the balcony every weekend.",
+   "ko": "아구스는 주말마다 발코니에서 부엌칼을 갈아요.",
+   "blank": "mengasah",
+   "src": "made"
+  },
+  {
+   "text": "Setiap pagi Wati mengasah pisau sebelum memotong daging.",
+   "en": "Every morning Wati sharpens the knives before cutting the meat.",
+   "ko": "와티는 매일 아침 고기를 썰기 전에 칼을 갈아요.",
+   "blank": "mengasah",
+   "src": "made"
+  }
+ ],
  "w|mengasihani": [
   {
    "text": "Rudi tidak mau dikasihani, jadi Rudi minta orang tuanya tidak mengasihani dirinya di depan kakak.",
@@ -49296,6 +49616,22 @@
    "en": "Putri decided to make the kitchen smaller so the dining room would be bigger.",
    "ko": "푸트리는 식당을 넓히려고 부엌을 줄이기로 했어요.",
    "blank": "mengecilkan",
+   "src": "made"
+  }
+ ],
+ "w|mengedipkan": [
+  {
+   "text": "Agus mengedipkan mata kepada anak tetangga yang sedang menunggu lift.",
+   "en": "Agus winked at the neighbor's kid who was waiting for the elevator.",
+   "ko": "아구스는 엘리베이터를 기다리던 이웃집 아이에게 윙크했어요.",
+   "blank": "mengedipkan",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengedipkan mata kepada pelayan baru sebagai tanda semuanya beres.",
+   "en": "Wati winked at the new waiter as a sign that everything was fine.",
+   "ko": "와티는 다 괜찮다는 뜻으로 새 종업원에게 윙크했어요.",
+   "blank": "mengedipkan",
    "src": "made"
   }
  ],
@@ -49926,6 +50262,22 @@
    "en": "The passenger behind Intan groaned because his ears hurt as the plane descended.",
    "ko": "비행기가 내려갈 때 인탄 뒷자리 승객이 귀가 아파서 신음했어요.",
    "blank": "mengerang",
+   "src": "made"
+  }
+ ],
+ "w|mengeras": [
+  {
+   "text": "Agus menunggu semen di lantai balkon mengeras sebelum memasang pot.",
+   "en": "Agus waited for the cement on the balcony floor to harden before putting down pots.",
+   "ko": "아구스는 발코니 바닥 시멘트가 굳기를 기다렸다가 화분을 놓았어요.",
+   "blank": "mengeras",
+   "src": "made"
+  },
+  {
+   "text": "Wati menunggu agar-agar mengeras di kulkas sebelum dipotong.",
+   "en": "Wati waits for the agar jelly to set in the fridge before cutting it.",
+   "ko": "와티는 한천 젤리가 냉장고에서 굳기를 기다렸다가 잘라요.",
+   "blank": "mengeras",
    "src": "made"
   }
  ],
@@ -56343,6 +56695,22 @@
    "src": "made"
   }
  ],
+ "w|menyiratkan": [
+  {
+   "text": "Senyum tipis pengelola gedung menyiratkan bahwa harga sewa akan naik.",
+   "en": "The building manager's thin smile hinted that the rent was going up.",
+   "ko": "건물 관리인의 엷은 미소는 월세가 오를 거라는 걸 암시했어요.",
+   "blank": "menyiratkan",
+   "src": "made"
+  },
+  {
+   "text": "Piring yang kembali bersih menyiratkan bahwa tamu suka masakan Wati.",
+   "en": "Plates coming back clean suggest that the guests like Wati's cooking.",
+   "ko": "깨끗하게 비워져 돌아온 접시는 손님들이 와티의 음식을 좋아한다는 뜻이에요.",
+   "blank": "menyiratkan",
+   "src": "made"
+  }
+ ],
  "w|menyisakan": [
   {
    "text": "Redaktur memangkas tulisan Budi dan hanya menyisakan tiga paragraf.",
@@ -56715,6 +57083,22 @@
    "en": "That team achieved victory in the final.",
    "ko": "그 팀이 결승에서 승리를 거뒀어.",
    "blank": "meraih"
+  }
+ ],
+ "w|merajut": [
+  {
+   "text": "Tetangga Agus yang sudah pensiun suka merajut syal di bangku lobi.",
+   "en": "Agus's retired neighbor likes knitting scarves on the lobby bench.",
+   "ko": "아구스의 은퇴한 이웃은 로비 벤치에서 목도리 뜨는 걸 좋아해요.",
+   "blank": "merajut",
+   "src": "made"
+  },
+  {
+   "text": "Saat rumah makan sepi, Wati merajut taplak kecil untuk meja.",
+   "en": "When the restaurant is quiet, Wati knits small tablecloths for the tables.",
+   "ko": "식당이 한가할 때 와티는 탁자에 깔 작은 식탁보를 떠요.",
+   "blank": "merajut",
+   "src": "made"
   }
  ],
  "w|merak": [
@@ -57166,6 +57550,22 @@
    "en": "The stage lights dimmed, and Dewi's students began playing the opening piece.",
    "ko": "무대 조명이 어두워지자 데위의 학생들이 첫 곡을 연주하기 시작했어요.",
    "blank": "meredup",
+   "src": "made"
+  }
+ ],
+ "w|meregangkan": [
+  {
+   "text": "Setiap pagi Agus meregangkan badan sambil melihat matahari terbit.",
+   "en": "Every morning Agus stretches while watching the sunrise.",
+   "ko": "아구스는 매일 아침 해돋이를 보며 몸을 풀어요.",
+   "blank": "meregangkan",
+   "src": "made"
+  },
+  {
+   "text": "Selepas jam makan siang, Wati meregangkan punggung di belakang dapur.",
+   "en": "After the lunch rush, Wati stretches her back behind the kitchen.",
+   "ko": "점심시간이 지나면 와티는 주방 뒤에서 허리를 펴요.",
+   "blank": "meregangkan",
    "src": "made"
   }
  ],
@@ -63523,6 +63923,22 @@
    "blank": "pemadam"
   }
  ],
+ "w|pemadaman": [
+  {
+   "text": "Ada pemadaman listrik bergilir di gedung Agus malam ini.",
+   "en": "There's a rolling power cut in Agus's building tonight.",
+   "ko": "오늘 밤 아구스네 건물에 순환 정전이 있어요.",
+   "blank": "pemadaman",
+   "src": "made"
+  },
+  {
+   "text": "Saat terjadi pemadaman listrik, Wati tetap melayani tamu dengan cahaya lilin.",
+   "en": "During the power outage, Wati kept serving guests by candlelight.",
+   "ko": "정전이 됐을 때도 와티는 촛불을 켜고 손님을 받았어요.",
+   "blank": "pemadaman",
+   "src": "made"
+  }
+ ],
  "w|pemahaman": [
   {
    "text": "Setelah les tambahan, pemahaman Eko tentang pecahan meningkat.",
@@ -63993,6 +64409,22 @@
    "en": "He works as an assistant at that shop.",
    "ko": "그는 그 가게에서 조수로 일해.",
    "blank": "pembantu"
+  }
+ ],
+ "w|pembasmi": [
+  {
+   "text": "Pengelola gedung memanggil jasa pembasmi rayap minggu lalu.",
+   "en": "The building manager called in a termite exterminator last week.",
+   "ko": "건물 관리인이 지난주에 흰개미 방역 업체를 불렀어요.",
+   "blank": "pembasmi",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyimpan pembasmi serangga jauh dari bahan makanan.",
+   "en": "Wati keeps the insecticide well away from the food ingredients.",
+   "ko": "와티는 살충제를 식재료와 멀리 떨어진 곳에 둬요.",
+   "blank": "pembasmi",
+   "src": "made"
   }
  ],
  "w|pembatalan": [
@@ -64651,6 +65083,22 @@
    "src": "made"
   }
  ],
+ "w|pemeliharaan": [
+  {
+   "text": "Pengelola apartemen menagih biaya pemeliharaan setiap bulan.",
+   "en": "The apartment management charges a maintenance fee every month.",
+   "ko": "아파트 관리 사무소는 매달 관리비를 걷어요.",
+   "blank": "pemeliharaan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyisihkan uang untuk pemeliharaan dapur setiap tahun.",
+   "en": "Wati sets aside money for kitchen maintenance every year.",
+   "ko": "와티는 해마다 주방 유지 보수를 위해 돈을 따로 모아요.",
+   "blank": "pemeliharaan",
+   "src": "made"
+  }
+ ],
  "w|pemenang": [
   {
    "text": "Pemenang akan mendapat hadiah besar.",
@@ -65190,6 +65638,22 @@
    "en": "The train passed the factory where smuggled goods are destroyed every year.",
    "ko": "열차는 해마다 밀수품을 폐기하는 공장 옆을 지나갔어요.",
    "blank": "pemusnahan",
+   "src": "made"
+  }
+ ],
+ "w|pemutar": [
+  {
+   "text": "Agus masih menyimpan pemutar piringan hitam milik ayahnya.",
+   "en": "Agus still keeps his father's record player.",
+   "ko": "아구스는 아직도 아버지의 레코드플레이어를 간직하고 있어요.",
+   "blank": "pemutar",
+   "src": "made"
+  },
+  {
+   "text": "Lagu-lagu lama mengalun dari pemutar musik di sudut rumah makan.",
+   "en": "Old songs drift from the music player in the corner of the restaurant.",
+   "ko": "식당 구석의 음악 플레이어에서 옛 노래가 흘러나와요.",
+   "blank": "pemutar",
    "src": "made"
   }
  ],
@@ -67955,6 +68419,22 @@
    "src": "made"
   }
  ],
+ "w|pengurangan": [
+  {
+   "text": "Warga meminta pengurangan biaya parkir karena lift sering rusak.",
+   "en": "Residents asked for a reduction in parking fees because the elevator often breaks down.",
+   "ko": "주민들은 엘리베이터가 자주 고장 나니 주차비를 깎아 달라고 했어요.",
+   "blank": "pengurangan",
+   "src": "made"
+  },
+  {
+   "text": "Wati melakukan pengurangan porsi nasi agar harga tidak perlu naik.",
+   "en": "Wati reduced the rice portions so she wouldn't have to raise prices.",
+   "ko": "와티는 값을 올리지 않으려고 밥 양을 줄였어요.",
+   "blank": "pengurangan",
+   "src": "made"
+  }
+ ],
  "w|pengusaha": [
   {
    "text": "Pemilik proyek itu pengusaha hotel yang jarang datang ke lokasi.",
@@ -68229,6 +68709,22 @@
    "en": "He gave a short explanation about the rules.",
    "ko": "그는 규칙에 대해 짧게 설명했어.",
    "blank": "penjelasan"
+  }
+ ],
+ "w|penjepit": [
+  {
+   "text": "Agus menjemur kemeja di balkon memakai penjepit baju.",
+   "en": "Agus hung his shirts out to dry on the balcony with clothespins.",
+   "ko": "아구스는 빨래집게로 셔츠를 발코니에 널었어요.",
+   "blank": "penjepit",
+   "src": "made"
+  },
+  {
+   "text": "Wati membalik ayam di atas panggangan dengan penjepit besi.",
+   "en": "Wati turned the chicken on the grill with metal tongs.",
+   "ko": "와티는 쇠집게로 석쇠 위의 닭고기를 뒤집었어요.",
+   "blank": "penjepit",
+   "src": "made"
   }
  ],
  "w|penjilat": [
@@ -69046,6 +69542,22 @@
    "en": "Ayu's braces need adjusting every month.",
    "ko": "아유의 치아 교정기는 매달 조정이 필요해요.",
    "blank": "penyesuaian",
+   "src": "made"
+  }
+ ],
+ "w|penyewa": [
+  {
+   "text": "Agus adalah penyewa paling lama di gedung apartemen itu.",
+   "en": "Agus is the longest-standing tenant in that apartment building.",
+   "ko": "아구스는 그 아파트에서 가장 오래 산 세입자예요.",
+   "blank": "penyewa",
+   "src": "made"
+  },
+  {
+   "text": "Wati adalah penyewa ruko yang kini menjadi rumah makan keluarga.",
+   "en": "Wati is the tenant of the shophouse that is now a family restaurant.",
+   "ko": "와티는 지금 가족 식당이 된 상가 건물의 세입자예요.",
+   "blank": "penyewa",
    "src": "made"
   }
  ],
@@ -69948,6 +70460,22 @@
    "en": "Siti did some stretching in the lounge corridor before boarding.",
    "ko": "시티는 탑승 전에 대합실 통로에서 스트레칭을 했어요.",
    "blank": "peregangan",
+   "src": "made"
+  }
+ ],
+ "w|perekam": [
+  {
+   "text": "Agus memasang kamera perekam di depan pintu unit.",
+   "en": "Agus installed a recording camera in front of his unit door.",
+   "ko": "아구스는 현관문 앞에 녹화 카메라를 달았어요.",
+   "blank": "perekam",
+   "src": "made"
+  },
+  {
+   "text": "Wati memasang kamera perekam di dekat kasir.",
+   "en": "Wati installed a recording camera near the cashier.",
+   "ko": "와티는 계산대 근처에 녹화 카메라를 달았어요.",
+   "blank": "perekam",
    "src": "made"
   }
  ],
@@ -70887,6 +71415,22 @@
    "en": "Water covered the road surface after the rain.",
    "ko": "비 뒤에 물이 도로 표면을 덮었어.",
    "blank": "permukaan"
+  }
+ ],
+ "w|permukiman": [
+  {
+   "text": "Dari balkon, Agus bisa melihat permukiman padat di tepi sungai.",
+   "en": "From the balcony, Agus can see the crowded settlement on the riverbank.",
+   "ko": "아구스는 발코니에서 강가의 빽빽한 주택가를 볼 수 있어요.",
+   "blank": "permukiman",
+   "src": "made"
+  },
+  {
+   "text": "Rumah makan Wati berada di tengah permukiman, jadi banyak pelanggan datang jalan kaki.",
+   "en": "Wati's restaurant is in the middle of a residential area, so many customers come on foot.",
+   "ko": "와티네 식당은 주택가 한가운데 있어서 걸어오는 손님이 많아요.",
+   "blank": "permukiman",
+   "src": "made"
   }
  ],
  "w|permulaan": [
@@ -73500,6 +74044,22 @@
    "en": "Intan put a privacy screen on her monitor.",
    "ko": "인탄은 사생활 보호를 위해 모니터에 보호 필름을 붙였어요.",
    "blank": "privasi",
+   "src": "made"
+  }
+ ],
+ "w|privat": [
+  {
+   "text": "Agus menyewa unit dengan balkon privat di lantai atas.",
+   "en": "Agus rents a unit with a private balcony on the top floor.",
+   "ko": "아구스는 꼭대기 층에 전용 발코니가 있는 집을 빌렸어요.",
+   "blank": "privat",
+   "src": "made"
+  },
+  {
+   "text": "Rumah makan Wati punya ruang privat untuk acara keluarga.",
+   "en": "Wati's restaurant has a private room for family events.",
+   "ko": "와티네 식당에는 가족 모임용 별실이 있어요.",
+   "blank": "privat",
    "src": "made"
   }
  ],
@@ -76977,6 +77537,22 @@
    "blank": "sakit"
   }
  ],
+ "w|saklar": [
+  {
+   "text": "Agus meraba-raba dinding mencari saklar lampu di lorong yang gelap.",
+   "en": "Agus felt along the wall for the light switch in the dark hallway.",
+   "ko": "아구스는 어두운 복도에서 전등 스위치를 찾으려고 벽을 더듬었어요.",
+   "blank": "saklar",
+   "src": "made"
+  },
+  {
+   "text": "Wati menekan saklar papan nama sebelum rumah makan dibuka.",
+   "en": "Wati flips the switch for the signboard before the restaurant opens.",
+   "ko": "와티는 식당 문을 열기 전에 간판 스위치를 켜요.",
+   "blank": "saklar",
+   "src": "made"
+  }
+ ],
  "w|sakral": [
   {
    "text": "Fajar memastikan upacara adat yang sakral itu tidak terganggu pengeras suara.",
@@ -80263,6 +80839,22 @@
    "src": "made"
   }
  ],
+ "w|semprotan": [
+  {
+   "text": "Agus membersihkan kaca jendela dengan semprotan pembersih.",
+   "en": "Agus cleaned the window glass with a cleaning spray.",
+   "ko": "아구스는 세정 스프레이로 유리창을 닦았어요.",
+   "blank": "semprotan",
+   "src": "made"
+  },
+  {
+   "text": "Wati membersihkan meja dengan semprotan disinfektan setelah tamu pergi.",
+   "en": "Wati wipes the tables with disinfectant spray after the guests leave.",
+   "ko": "와티는 손님이 가고 나면 소독 스프레이로 탁자를 닦아요.",
+   "blank": "semprotan",
+   "src": "made"
+  }
+ ],
  "w|sempurna": [
   {
    "text": "Hasilnya hampir sempurna.",
@@ -80632,6 +81224,22 @@
    "en": "Siti loves the feeling of the morning wind on her face as she runs.",
    "ko": "시티는 달릴 때 얼굴에 닿는 아침 바람의 감촉을 좋아해요.",
    "blank": "sensasi",
+   "src": "made"
+  }
+ ],
+ "w|sensasional": [
+  {
+   "text": "Kabar sensasional tentang hantu di lantai atas beredar di grup warga.",
+   "en": "Sensational rumors about a ghost on the top floor are going around the residents' group chat.",
+   "ko": "꼭대기 층에 귀신이 나온다는 자극적인 소문이 주민 단톡방에 돌고 있어요.",
+   "blank": "sensasional",
+   "src": "made"
+  },
+  {
+   "text": "Ulasan sensasional seorang pengunjung membuat rumah makan Wati mendadak ramai.",
+   "en": "A visitor's sensational review suddenly made Wati's restaurant packed.",
+   "ko": "한 손님의 화제의 후기 덕에 와티네 식당이 갑자기 붐볐어요.",
+   "blank": "sensasional",
    "src": "made"
   }
  ],
@@ -89215,6 +89823,22 @@
    "blank": "terpilih"
   }
  ],
+ "w|terpintar": [
+  {
+   "text": "Anak tetangga Agus dikenal sebagai murid terpintar di sekolah.",
+   "en": "Agus's neighbor's child is known as the smartest student in school.",
+   "ko": "아구스네 이웃집 아이는 학교에서 가장 똑똑한 학생으로 알려져 있어요.",
+   "blank": "terpintar",
+   "src": "made"
+  },
+  {
+   "text": "Anak sulung Wati, murid terpintar di kelas, membantu menghitung uang di kasir.",
+   "en": "Wati's eldest child, the smartest student in class, helps count money at the cashier.",
+   "ko": "반에서 가장 똑똑한 와티의 큰아이가 계산대에서 돈 세는 걸 도와요.",
+   "blank": "terpintar",
+   "src": "made"
+  }
+ ],
  "w|terpisah": [
   {
    "text": "Terpisah lama, mereka akhirnya bertemu lagi.",
@@ -93181,6 +93805,22 @@
    "en": "Be cautious of online scams.",
    "ko": "온라인 사기에 조심해.",
    "blank": "Waspada"
+  }
+ ],
+ "w|wastafel": [
+  {
+   "text": "Agus memanggil tukang karena wastafel dapur tersumbat.",
+   "en": "Agus called a repairman because the kitchen sink was clogged.",
+   "ko": "부엌 개수대가 막혀서 아구스는 수리공을 불렀어요.",
+   "blank": "wastafel",
+   "src": "made"
+  },
+  {
+   "text": "Wati menaruh sabun cair di samping wastafel untuk tamu.",
+   "en": "Wati put liquid soap next to the sink for the guests.",
+   "ko": "와티는 손님용 세면대 옆에 물비누를 놓았어요.",
+   "blank": "wastafel",
+   "src": "made"
   }
  ],
  "w|wawancara": [

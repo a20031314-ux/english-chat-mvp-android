@@ -3125,6 +3125,22 @@
    "blank": "allarme"
   }
  ],
+ "w|allattare": [
+  {
+   "text": "Una giovane madre chiede a Davide se può allattare dopo l'anestesia.",
+   "en": "A young mother asks Davide whether she can breastfeed after the anesthetic.",
+   "ko": "젊은 엄마가 다비데에게 마취 후에 모유를 먹여도 되는지 물어요.",
+   "blank": "allattare",
+   "src": "made"
+  },
+  {
+   "text": "La cugina di Elena si allontana dalla festa per allattare il neonato.",
+   "en": "Elena's cousin steps away from the party to breastfeed her newborn.",
+   "ko": "엘레나의 사촌은 아기에게 젖을 먹이려고 잠시 자리를 비워요.",
+   "blank": "allattare",
+   "src": "made"
+  }
+ ],
  "w|alleanza": [
   {
    "text": "Due liste civiche hanno fatto un'alleanza, e Davide ne ha parlato con il sindaco.",
@@ -3216,6 +3232,22 @@
    "en": "At home Martina trains her hand to chop onions faster and faster.",
    "ko": "집에서 마르티나는 양파를 점점 더 빨리 써는 연습을 해요.",
    "blank": "allena",
+   "src": "made"
+  }
+ ],
+ "w|allenarsi": [
+  {
+   "text": "Dopo il lavoro Davide va in palestra ad allenarsi per scaricare la tensione.",
+   "en": "After work Davide goes to the gym to train and release the tension.",
+   "ko": "퇴근 후 다비데는 긴장을 풀려고 헬스장에 운동하러 가요.",
+   "blank": "allenarsi",
+   "src": "made"
+  },
+  {
+   "text": "Per entrare nell'abito, Elena ha cominciato ad allenarsi tre mesi prima.",
+   "en": "To fit into the dress, Elena started working out three months before.",
+   "ko": "드레스를 입으려고 엘레나는 석 달 전부터 운동을 시작했어요.",
+   "blank": "allenarsi",
    "src": "made"
   }
  ],
@@ -4067,6 +4099,22 @@
    "en": "Drop by my place, friend.",
    "ko": "집에 들러, 친구야.",
    "blank": "amico"
+  }
+ ],
+ "w|ammalarsi": [
+  {
+   "text": "D'inverno Davide ha paura di ammalarsi e di dover chiudere lo studio.",
+   "en": "In winter Davide is afraid of getting sick and having to close the practice.",
+   "ko": "겨울이면 다비데는 병이 나서 병원 문을 닫게 될까 봐 걱정해요.",
+   "blank": "ammalarsi",
+   "src": "made"
+  },
+  {
+   "text": "La settimana prima delle nozze Elena ha paura di ammalarsi e prende la vitamina C.",
+   "en": "The week before the wedding Elena is afraid of getting sick and takes vitamin C.",
+   "ko": "결혼식 한 주 전에 엘레나는 아플까 봐 비타민 C를 먹어요.",
+   "blank": "ammalarsi",
+   "src": "made"
   }
  ],
  "w|ammalato": [
@@ -6742,6 +6790,22 @@
    "en": "Sara buys a travel book with photos of the Arctic landscape.",
    "ko": "사라는 북극 풍경 사진이 실린 여행책을 사요.",
    "blank": "artico",
+   "src": "made"
+  }
+ ],
+ "w|articolazione": [
+  {
+   "text": "Davide controlla l'articolazione della mandibola di un paziente che digrigna i denti.",
+   "en": "Davide checks the jaw joint of a patient who grinds his teeth.",
+   "ko": "다비데는 이를 가는 환자의 턱관절을 살펴봐요.",
+   "blank": "articolazione",
+   "src": "made"
+  },
+  {
+   "text": "Dopo tanti balli Elena sente dolore a ogni articolazione.",
+   "en": "After so much dancing Elena feels pain in every joint.",
+   "ko": "춤을 많이 춘 엘레나는 관절마다 아파요.",
+   "blank": "articolazione",
    "src": "made"
   }
  ],
@@ -11951,6 +12015,22 @@
    "src": "made"
   }
  ],
+ "w|brevetto": [
+  {
+   "text": "Davide ha depositato il brevetto di un nuovo spazzolino per bambini.",
+   "en": "Davide has filed a patent for a new toothbrush for children.",
+   "ko": "다비데는 어린이용 새 칫솔 특허를 냈어요.",
+   "blank": "brevetto",
+   "src": "made"
+  },
+  {
+   "text": "Il padre di Elena racconta agli invitati del brevetto che lo ha reso ricco.",
+   "en": "Elena's father tells the guests about the patent that made him rich.",
+   "ko": "엘레나의 아버지는 하객들에게 자신을 부자로 만든 특허 이야기를 해요.",
+   "blank": "brevetto",
+   "src": "made"
+  }
+ ],
  "w|brezza": [
   {
    "text": "La brezza della sera porta a Luca il profumo del fieno.",
@@ -12151,6 +12231,22 @@
    "en": "The sun can burn the skin.",
    "ko": "햇볕이 피부를 태울 수 있어.",
    "blank": "bruciare"
+  }
+ ],
+ "w|bruciore": [
+  {
+   "text": "Il paziente sente un bruciore alla gengiva dopo il collutorio e Davide lo rassicura.",
+   "en": "The patient feels a burning on his gum after the mouthwash and Davide reassures him.",
+   "ko": "가글을 한 뒤 환자가 잇몸이 화끈거린다고 하자 다비데가 안심시켜요.",
+   "blank": "bruciore",
+   "src": "made"
+  },
+  {
+   "text": "Dopo ore sui tacchi Elena sente un bruciore ai piedi e si toglie le scarpe.",
+   "en": "After hours in heels Elena feels a burning in her feet and takes off her shoes.",
+   "ko": "몇 시간 동안 구두를 신은 엘레나는 발이 화끈거려서 신발을 벗어요.",
+   "blank": "bruciore",
+   "src": "made"
   }
  ],
  "w|bruno": [
@@ -12985,6 +13081,22 @@
    "blank": "calma"
   }
  ],
+ "w|calmante": [
+  {
+   "text": "Prima dell'estrazione Davide dà al paziente agitato un leggero calmante.",
+   "en": "Before the extraction Davide gives the anxious patient a mild sedative.",
+   "ko": "발치 전에 다비데는 불안해하는 환자에게 약한 진정제를 줘요.",
+   "blank": "calmante",
+   "src": "made"
+  },
+  {
+   "text": "La mattina delle nozze la nonna offre a Elena una camomilla come calmante.",
+   "en": "On the morning of the wedding her grandmother offers Elena a chamomile tea to calm her.",
+   "ko": "결혼식 날 아침 할머니는 엘레나에게 마음을 진정시키라고 캐모마일 차를 줘요.",
+   "blank": "calmante",
+   "src": "made"
+  }
+ ],
  "w|calmare": [
   {
    "text": "Prova a calmare il bambino.",
@@ -13521,6 +13633,22 @@
    "blank": "cancellato"
   }
  ],
+ "w|cancellazione": [
+  {
+   "text": "Dopo l'ennesima cancellazione dell'ultimo minuto, Davide introduce una penale.",
+   "en": "After yet another last-minute cancellation, Davide introduces a penalty fee.",
+   "ko": "막판 취소가 또 생기자 다비데는 위약금을 도입해요.",
+   "blank": "cancellazione",
+   "src": "made"
+  },
+  {
+   "text": "Per lo sciopero aereo arriva la cancellazione del volo per il viaggio di nozze di Elena.",
+   "en": "Because of the air strike Elena's honeymoon flight gets cancelled.",
+   "ko": "항공 파업으로 엘레나의 신혼여행 항공편이 취소돼요.",
+   "blank": "cancellazione",
+   "src": "made"
+  }
+ ],
  "w|cancelliere": [
   {
    "text": "Marco porta i documenti dal cancelliere del tribunale per il deposito.",
@@ -14017,6 +14145,22 @@
    "src": "made"
   }
  ],
+ "w|capogiro": [
+  {
+   "text": "Alzandosi dalla poltrona il paziente ha un capogiro e Davide lo fa sedere di nuovo.",
+   "en": "Getting up from the chair the patient feels dizzy and Davide makes him sit down again.",
+   "ko": "의자에서 일어나던 환자가 어지러워하자 다비데가 다시 앉혀요.",
+   "blank": "capogiro",
+   "src": "made"
+  },
+  {
+   "text": "Per l'emozione Elena ha un capogiro all'altare e lo sposo la sostiene.",
+   "en": "Overwhelmed with emotion Elena feels dizzy at the altar and the groom holds her up.",
+   "ko": "감격한 엘레나가 제단 앞에서 어지러워하자 신랑이 부축해요.",
+   "blank": "capogiro",
+   "src": "made"
+  }
+ ],
  "w|capolinea": [
   {
    "text": "Il palazzo di Simone è proprio al capolinea dell'autobus, così trova sempre posto a sedere.",
@@ -14340,6 +14484,22 @@
    "en": "At the entrance Sara noticed a defibrillator for cardiac emergencies.",
    "ko": "사라는 입구에서 심장 응급 상황용 제세동기를 봤어요.",
    "blank": "cardiache",
+   "src": "made"
+  }
+ ],
+ "w|cardiologo": [
+  {
+   "text": "Prima dell'intervento Davide chiede il parere del cardiologo del paziente.",
+   "en": "Before the procedure Davide asks for the opinion of the patient's cardiologist.",
+   "ko": "시술 전에 다비데는 환자의 심장 전문의에게 의견을 구해요.",
+   "blank": "cardiologo",
+   "src": "made"
+  },
+  {
+   "text": "Al tavolo di Elena siede un cardiologo che balla meglio di tutti.",
+   "en": "At Elena's table sits a cardiologist who dances better than anyone.",
+   "ko": "엘레나의 테이블에는 누구보다 춤을 잘 추는 심장 전문의가 앉아 있어요.",
+   "blank": "cardiologo",
    "src": "made"
   }
  ],
@@ -17535,6 +17695,22 @@
    "src": "made"
   }
  ],
+ "w|cocciuto": [
+  {
+   "text": "Il bambino è cocciuto e non vuole aprire la bocca, così Davide gli racconta una storia.",
+   "en": "The child is stubborn and won't open his mouth, so Davide tells him a story.",
+   "ko": "아이가 고집을 부리며 입을 안 벌리자 다비데는 이야기를 들려줘요.",
+   "blank": "cocciuto",
+   "src": "made"
+  },
+  {
+   "text": "Il futuro marito di Elena è cocciuto e vuole scegliere da solo la musica.",
+   "en": "Elena's future husband is stubborn and wants to choose the music by himself.",
+   "ko": "엘레나의 예비 신랑은 고집이 세서 음악을 혼자 고르려고 해요.",
+   "blank": "cocciuto",
+   "src": "made"
+  }
+ ],
  "w|cocco": [
   {
    "text": "Per il dolce estivo Andrea grattugia il cocco fresco.",
@@ -17901,6 +18077,22 @@
    "en": "The necklace broke during the party.",
    "ko": "목걸이가 파티 중에 끊어졌어.",
    "blank": "collana"
+  }
+ ],
+ "w|collant": [
+  {
+   "text": "L'assistente di Davide si accorge di avere un buco nei collant poco prima di aprire lo studio.",
+   "en": "Davide's assistant notices a hole in her tights just before opening the practice.",
+   "ko": "다비데의 조수는 병원 문을 열기 직전에 스타킹에 구멍이 난 걸 알아차려요.",
+   "blank": "collant",
+   "src": "made"
+  },
+  {
+   "text": "Elena compra un paio di collant di ricambio, nel caso si smaglino durante la festa.",
+   "en": "Elena buys a spare pair of tights in case they ladder during the party.",
+   "ko": "엘레나는 파티 중에 올이 나갈 경우를 대비해 여분 스타킹을 사요.",
+   "blank": "collant",
+   "src": "made"
   }
  ],
  "w|collare": [
@@ -21363,6 +21555,22 @@
    "src": "made"
   }
  ],
+ "w|contemporaneo": [
+  {
+   "text": "Nella sala d'attesa di Davide sono appese stampe di arte contemporanea.",
+   "en": "In Davide's waiting room there are contemporary art prints on the walls.",
+   "ko": "다비데 병원 대기실에는 현대 미술 판화가 걸려 있어요.",
+   "blank": "contemporanea",
+   "src": "made"
+  },
+  {
+   "text": "Elena sceglie un abito da sposa dallo stile contemporaneo e semplice.",
+   "en": "Elena chooses a wedding dress with a simple, contemporary style.",
+   "ko": "엘레나는 단순하고 현대적인 스타일의 웨딩드레스를 골라요.",
+   "blank": "contemporaneo",
+   "src": "made"
+  }
+ ],
  "w|contenere": [
   {
    "text": "Questa scatola può contenere molti libri.",
@@ -24147,6 +24355,22 @@
    "blank": "curare"
   }
  ],
+ "w|curarsi": [
+  {
+   "text": "Davide ricorda ai pazienti che curarsi presto costa meno che aspettare.",
+   "en": "Davide reminds patients that getting treatment early costs less than waiting.",
+   "ko": "다비데는 환자들에게 일찍 치료받는 게 기다리는 것보다 돈이 덜 든다고 일러 줘요.",
+   "blank": "curarsi",
+   "src": "made"
+  },
+  {
+   "text": "Lo zio di Elena non vuole curarsi l'influenza e viene lo stesso al matrimonio.",
+   "en": "Elena's uncle won't treat his flu and comes to the wedding anyway.",
+   "ko": "엘레나의 삼촌은 독감 치료도 안 하고 그냥 결혼식에 와요.",
+   "blank": "curarsi",
+   "src": "made"
+  }
+ ],
  "w|curiosare": [
   {
    "text": "La sorella ha visto Simone curiosare nel suo telefono, e da lì è nato il malinteso.",
@@ -24407,6 +24631,22 @@
    "en": "Smoking is bad and causes lung damage.",
    "ko": "흡연은 해롭고 폐에 손상을 줘.",
    "blank": "danno"
+  }
+ ],
+ "w|dannoso": [
+  {
+   "text": "Davide spiega che lo zucchero tra i pasti è dannoso per i denti.",
+   "en": "Davide explains that sugar between meals is harmful to teeth.",
+   "ko": "다비데는 식사 사이에 먹는 설탕이 이에 해롭다고 설명해요.",
+   "blank": "dannoso",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha letto che il riso lanciato agli sposi è dannoso per gli uccelli.",
+   "en": "Elena has read that rice thrown at newlyweds is harmful to birds.",
+   "ko": "엘레나는 신랑 신부에게 뿌리는 쌀이 새들에게 해롭다는 글을 읽었어요.",
+   "blank": "dannoso",
+   "src": "made"
   }
  ],
  "w|danza": [
@@ -24990,6 +25230,22 @@
    "en": "The final version of Anna's painting will be ready in June.",
    "ko": "안나 그림의 최종본은 6월에 완성될 거예요.",
    "blank": "definitiva",
+   "src": "made"
+  }
+ ],
+ "w|degenza": [
+  {
+   "text": "Dopo l'operazione alla mascella il paziente di Davide affronta una breve degenza in clinica.",
+   "en": "After the jaw operation Davide's patient faces a short stay in the clinic.",
+   "ko": "턱 수술을 받은 다비데의 환자는 병원에 잠깐 입원해요.",
+   "blank": "degenza",
+   "src": "made"
+  },
+  {
+   "text": "Il nonno di Elena esce dall'ospedale dopo una lunga degenza giusto in tempo per il matrimonio.",
+   "en": "Elena's grandfather leaves hospital after a long stay just in time for the wedding.",
+   "ko": "엘레나의 할아버지는 오랜 입원을 마치고 결혼식에 딱 맞춰 퇴원해요.",
+   "blank": "degenza",
    "src": "made"
   }
  ],
@@ -31665,6 +31921,22 @@
    "src": "made"
   }
  ],
+ "w|esaurito": [
+  {
+   "text": "Il dentifricio che Davide consiglia è esaurito in tutte le farmacie.",
+   "en": "The toothpaste Davide recommends is sold out at every pharmacy.",
+   "ko": "다비데가 권하는 치약이 약국마다 다 팔렸어요.",
+   "blank": "esaurito",
+   "src": "made"
+  },
+  {
+   "text": "Le bomboniere preferite da Elena sono già esaurite in negozio.",
+   "en": "Elena's favorite wedding favors are already sold out in the shop.",
+   "ko": "엘레나가 마음에 둔 답례품이 가게에서 이미 다 팔렸어요.",
+   "blank": "esaurite",
+   "src": "made"
+  }
+ ],
  "w|esausto": [
   {
    "text": "Dopo la corsa campestre Marco era così esausto che si è addormentato sul pullman.",
@@ -34497,6 +34769,22 @@
    "src": "made"
   }
  ],
+ "w|fertilità": [
+  {
+   "text": "Una paziente chiede a Davide se l'anestesia può influire sulla fertilità.",
+   "en": "A patient asks Davide whether the anesthetic can affect fertility.",
+   "ko": "한 환자가 다비데에게 마취가 임신 능력에 영향을 줄 수 있는지 물어요.",
+   "blank": "fertilità",
+   "src": "made"
+  },
+  {
+   "text": "Nel suo discorso il nonno augura agli sposi fortuna e fertilità, ed Elena arrossisce.",
+   "en": "In his speech grandpa wishes the couple luck and fertility, and Elena blushes.",
+   "ko": "할아버지가 축사에서 신랑 신부에게 행운과 다산을 빌자 엘레나가 얼굴을 붉혀요.",
+   "blank": "fertilità",
+   "src": "made"
+  }
+ ],
  "w|festa": [
   {
    "text": "Che festa, ieri sera.",
@@ -35547,6 +35835,22 @@
    "src": "made"
   }
  ],
+ "w|fitta": [
+  {
+   "text": "Il paziente sente una fitta quando Davide tocca il dente cariato.",
+   "en": "The patient feels a sharp pain when Davide touches the decayed tooth.",
+   "ko": "다비데가 썩은 이를 건드리자 환자가 찌릿한 통증을 느껴요.",
+   "blank": "fitta",
+   "src": "made"
+  },
+  {
+   "text": "Mentre aspetta all'altare Elena sente una fitta allo stomaco per l'ansia.",
+   "en": "While waiting at the altar Elena feels a stab in her stomach from anxiety.",
+   "ko": "제단에서 기다리며 엘레나는 긴장해서 배가 콕콕 쑤셔요.",
+   "blank": "fitta",
+   "src": "made"
+  }
+ ],
  "w|fiume": [
   {
    "text": "Il fiume attraversa tutta la valle.",
@@ -36530,6 +36834,22 @@
    "en": "From the viewing terrace a photographer takes pictures of the planes, and Giulia watches him.",
    "ko": "전망대에서 사진가가 비행기를 찍는 모습을 줄리아가 지켜봐요.",
    "blank": "fotografo",
+   "src": "made"
+  }
+ ],
+ "w|foulard": [
+  {
+   "text": "Una paziente elegante si toglie il foulard di seta prima di sedersi sulla poltrona di Davide.",
+   "en": "An elegant patient takes off her silk scarf before sitting in Davide's chair.",
+   "ko": "우아한 환자가 다비데의 진료 의자에 앉기 전에 실크 스카프를 풀어요.",
+   "blank": "foulard",
+   "src": "made"
+  },
+  {
+   "text": "La madre di Elena porta un foulard di seta azzurro sulle spalle.",
+   "en": "Elena's mother wears a light blue silk scarf over her shoulders.",
+   "ko": "엘레나의 어머니는 어깨에 하늘색 실크 스카프를 둘러요.",
+   "blank": "foulard",
    "src": "made"
   }
  ],
@@ -41103,6 +41423,22 @@
    "blank": "ideale"
   }
  ],
+ "w|idealista": [
+  {
+   "text": "Da giovane Davide era idealista e voleva curare i denti gratis a tutti.",
+   "en": "As a young man Davide was idealistic and wanted to treat everyone's teeth for free.",
+   "ko": "젊을 때 다비데는 이상주의자여서 모두의 이를 무료로 치료하고 싶어 했어요.",
+   "blank": "idealista",
+   "src": "made"
+  },
+  {
+   "text": "La damigella di Elena è un'idealista e crede nell'amore a prima vista.",
+   "en": "Elena's bridesmaid is an idealist and believes in love at first sight.",
+   "ko": "엘레나의 들러리는 이상주의자라서 첫눈에 반하는 사랑을 믿어요.",
+   "blank": "idealista",
+   "src": "made"
+  }
+ ],
  "w|identico": [
   {
    "text": "Andrea e suo fratello gemello hanno uno zaino identico e se lo scambiano sempre.",
@@ -45597,6 +45933,22 @@
    "blank": "insomma"
   }
  ],
+ "w|insonne": [
+  {
+   "text": "Un paziente insonne racconta a Davide che di notte stringe i denti.",
+   "en": "A sleepless patient tells Davide that he clenches his teeth at night.",
+   "ko": "잠 못 드는 환자가 다비데에게 밤에 이를 악문다고 털어놓아요.",
+   "blank": "insonne",
+   "src": "made"
+  },
+  {
+   "text": "La notte prima delle nozze Elena resta insonne fino all'alba.",
+   "en": "The night before the wedding Elena lies awake until dawn.",
+   "ko": "결혼식 전날 밤 엘레나는 새벽까지 잠을 못 이뤄요.",
+   "blank": "insonne",
+   "src": "made"
+  }
+ ],
  "w|insonnia": [
   {
    "text": "Molti clienti chiedono a Paolo una tisana contro l'insonnia.",
@@ -46599,6 +46951,22 @@
    "src": "made"
   }
  ],
+ "w|invalido": [
+  {
+   "text": "Davide ha fatto installare una rampa per far entrare ogni invalido in carrozzina.",
+   "en": "Davide had a ramp installed so that every disabled person in a wheelchair can get in.",
+   "ko": "다비데는 휠체어를 탄 장애인도 들어올 수 있게 경사로를 설치했어요.",
+   "blank": "invalido",
+   "src": "made"
+  },
+  {
+   "text": "Lo zio di Elena è un invalido di guerra e siede al tavolo d'onore.",
+   "en": "Elena's uncle is a disabled war veteran and sits at the head table.",
+   "ko": "엘레나의 삼촌은 상이용사여서 주빈석에 앉아요.",
+   "blank": "invalido",
+   "src": "made"
+  }
+ ],
  "w|invasione": [
   {
    "text": "Il processo storico sull'invasione del paese ha riempito l'aula, racconta Andrea.",
@@ -47013,6 +47381,22 @@
    "en": "I'm not giving up.",
    "ko": "나는 포기 안 해.",
    "blank": "Io"
+  }
+ ],
+ "w|ipertensione": [
+  {
+   "text": "Prima di anestetizzare, Davide chiede al paziente se soffre di ipertensione.",
+   "en": "Before giving the anesthetic, Davide asks the patient if he suffers from high blood pressure.",
+   "ko": "마취하기 전에 다비데는 환자에게 고혈압이 있는지 물어요.",
+   "blank": "ipertensione",
+   "src": "made"
+  },
+  {
+   "text": "Il nonno di Elena soffre di ipertensione e beve solo un bicchiere di vino.",
+   "en": "Elena's grandfather has high blood pressure and drinks just one glass of wine.",
+   "ko": "엘레나의 할아버지는 고혈압이 있어서 와인을 한 잔만 마셔요.",
+   "blank": "ipertensione",
+   "src": "made"
   }
  ],
  "w|ipocrisia": [
@@ -48867,6 +49251,22 @@
    "en": "The car moved slowly through traffic.",
    "ko": "차가 교통 체증 속에서 천천히 나아갔어.",
    "blank": "lentamente"
+  }
+ ],
+ "w|lente": [
+  {
+   "text": "Davide si mette la lente d'ingrandimento sugli occhiali per vedere meglio il dente.",
+   "en": "Davide puts the magnifying lens on his glasses to see the tooth better.",
+   "ko": "다비데는 이를 더 잘 보려고 안경에 확대경을 달아요.",
+   "blank": "lente",
+   "src": "made"
+  },
+  {
+   "text": "Durante il ballo Elena perde una lente a contatto sulla pista.",
+   "en": "During the dance Elena loses a contact lens on the dance floor.",
+   "ko": "춤을 추다가 엘레나는 무대에서 콘택트렌즈 하나를 잃어버려요.",
+   "blank": "lente",
+   "src": "made"
   }
  ],
  "w|lenticchia": [
@@ -50905,6 +51305,22 @@
    "src": "made"
   }
  ],
+ "w|malanno": [
+  {
+   "text": "Per un piccolo malanno di stagione, Davide lavora con la mascherina tutto il giorno.",
+   "en": "Because of a minor seasonal ailment, Davide works with a mask on all day.",
+   "ko": "가벼운 환절기 감기 때문에 다비데는 하루 종일 마스크를 쓰고 일해요.",
+   "blank": "malanno",
+   "src": "made"
+  },
+  {
+   "text": "Elena passa il viaggio di nozze a letto con un malanno preso in aereo.",
+   "en": "Elena spends the honeymoon in bed with a bug she caught on the plane.",
+   "ko": "엘레나는 비행기에서 걸린 감기 때문에 신혼여행 내내 침대에 누워 있어요.",
+   "blank": "malanno",
+   "src": "made"
+  }
+ ],
  "w|malapena": [
   {
    "text": "A malapena ho fatto in tempo per il treno.",
@@ -51020,6 +51436,22 @@
    "en": "A rude tourist left rubbish on the trail, and Laura picked it up.",
    "ko": "무례한 관광객이 산길에 쓰레기를 두고 가서 라우라가 주웠어요.",
    "blank": "maleducato",
+   "src": "made"
+  }
+ ],
+ "w|maleducazione": [
+  {
+   "text": "Davide non sopporta la maleducazione dei pazienti che arrivano in ritardo senza avvisare.",
+   "en": "Davide can't stand the rudeness of patients who arrive late without warning.",
+   "ko": "다비데는 연락도 없이 늦게 오는 환자들의 무례함을 못 참아요.",
+   "blank": "maleducazione",
+   "src": "made"
+  },
+  {
+   "text": "Elena perdona la maleducazione di un invitato che arriva senza regalo.",
+   "en": "Elena forgives the rudeness of a guest who arrives without a present.",
+   "ko": "엘레나는 선물도 없이 온 하객의 무례함을 너그럽게 넘겨요.",
+   "blank": "maleducazione",
    "src": "made"
   }
  ],
@@ -60007,6 +60439,22 @@
    "src": "made"
   }
  ],
+ "w|ortopedico": [
+  {
+   "text": "Il fratello di Davide fa l'ortopedico nello stesso palazzo.",
+   "en": "Davide's brother is an orthopedist in the same building.",
+   "ko": "다비데의 형은 같은 건물에서 정형외과 의사로 일해요.",
+   "blank": "ortopedico",
+   "src": "made"
+  },
+  {
+   "text": "Il testimone di Elena è un ortopedico e controlla la caviglia della damigella caduta.",
+   "en": "Elena's best man is an orthopedist and checks the ankle of the bridesmaid who fell.",
+   "ko": "엘레나의 증인은 정형외과 의사라서 넘어진 들러리의 발목을 살펴봐요.",
+   "blank": "ortopedico",
+   "src": "made"
+  }
+ ],
  "w|osare": [
   {
    "text": "Non oso chiedergli un favore.",
@@ -60079,6 +60527,22 @@
    "en": "Mom is in the hospital.",
    "ko": "엄마가 병원에 계셔.",
    "blank": "ospedale"
+  }
+ ],
+ "w|ospedaliero": [
+  {
+   "text": "Prima di aprire lo studio, Davide ha lavorato nel reparto ospedaliero di chirurgia orale.",
+   "en": "Before opening his practice, Davide worked in the hospital's oral surgery ward.",
+   "ko": "개업하기 전에 다비데는 병원 구강외과 병동에서 일했어요.",
+   "blank": "ospedaliero",
+   "src": "made"
+  },
+  {
+   "text": "Il fratello di Elena arriva in ritardo dal turno ospedaliero ancora in camice.",
+   "en": "Elena's brother arrives late from his hospital shift still in his white coat.",
+   "ko": "엘레나의 오빠는 병원 근무를 마치고 가운을 입은 채 늦게 도착해요.",
+   "blank": "ospedaliero",
+   "src": "made"
   }
  ],
  "w|ospitare": [
@@ -60370,6 +60834,22 @@
    "en": "Martina has learned to ignore hostile comments about her paintings.",
    "ko": "마르티나는 자기 그림에 대한 적대적인 말은 무시하는 법을 배웠어요.",
    "blank": "ostili",
+   "src": "made"
+  }
+ ],
+ "w|ostinato": [
+  {
+   "text": "Il paziente è ostinato e continua a mangiare caramelle, nonostante gli avvertimenti di Davide.",
+   "en": "The patient is obstinate and keeps eating sweets despite Davide's warnings.",
+   "ko": "그 환자는 다비데가 주의를 줘도 고집스럽게 사탕을 계속 먹어요.",
+   "blank": "ostinato",
+   "src": "made"
+  },
+  {
+   "text": "Il fotografo è ostinato e vuole fare la foto di gruppo sotto il sole cocente, nota Elena.",
+   "en": "The photographer is obstinate and wants the group photo in the scorching sun, Elena notes.",
+   "ko": "엘레나는 사진작가가 고집스럽게 땡볕 아래서 단체 사진을 찍으려 한다는 걸 알아차려요.",
+   "blank": "ostinato",
    "src": "made"
   }
  ],
@@ -69251,6 +69731,22 @@
    "blank": "Proprio"
   }
  ],
+ "w|proroga": [
+  {
+   "text": "Davide chiede al comune una proroga per i lavori di ristrutturazione dello studio.",
+   "en": "Davide asks the town for an extension on the renovation work at his practice.",
+   "ko": "다비데는 병원 공사 기한을 연장해 달라고 시청에 요청해요.",
+   "blank": "proroga",
+   "src": "made"
+  },
+  {
+   "text": "Elena ottiene dal catering una proroga per decidere il menù definitivo.",
+   "en": "Elena gets an extension from the caterer to decide on the final menu.",
+   "ko": "엘레나는 케이터링 업체에서 최종 메뉴를 정할 기한을 연장받아요.",
+   "blank": "proroga",
+   "src": "made"
+  }
+ ],
  "w|prosciutto": [
   {
    "text": "Simone taglia il prosciutto a fette sottilissime davanti ai clienti.",
@@ -69810,6 +70306,22 @@
    "en": "Giulia borrows an essay written by a child psychologist.",
    "ko": "줄리아는 아동 심리학자가 쓴 책을 빌려요.",
    "blank": "psicologo",
+   "src": "made"
+  }
+ ],
+ "w|psicoterapia": [
+  {
+   "text": "Davide consiglia la psicoterapia a una paziente con una forte fobia del dentista.",
+   "en": "Davide recommends psychotherapy to a patient with a severe fear of the dentist.",
+   "ko": "다비데는 치과 공포증이 심한 환자에게 심리 치료를 권해요.",
+   "blank": "psicoterapia",
+   "src": "made"
+  },
+  {
+   "text": "Prima del matrimonio Elena e il fidanzato hanno fatto qualche seduta di psicoterapia di coppia.",
+   "en": "Before the wedding Elena and her fiancé did a few sessions of couples therapy.",
+   "ko": "결혼 전에 엘레나와 약혼자는 부부 상담을 몇 번 받았어요.",
+   "blank": "psicoterapia",
    "src": "made"
   }
  ],
@@ -72967,6 +73479,22 @@
    "en": "The pediatric ward is on the second floor.",
    "ko": "소아과 병동은 이층에 있어.",
    "blank": "reparto"
+  }
+ ],
+ "w|reportage": [
+  {
+   "text": "Una rivista pubblica un reportage sulle cure dentali gratuite e intervista Davide.",
+   "en": "A magazine publishes a report on free dental care and interviews Davide.",
+   "ko": "한 잡지가 무료 치과 진료에 관한 르포를 싣고 다비데를 인터뷰해요.",
+   "blank": "reportage",
+   "src": "made"
+  },
+  {
+   "text": "Un amico fotografo prepara un reportage in bianco e nero sul matrimonio di Elena.",
+   "en": "A photographer friend prepares a black-and-white photo story on Elena's wedding.",
+   "ko": "사진작가 친구가 엘레나의 결혼식을 흑백 르포 사진으로 담아요.",
+   "blank": "reportage",
+   "src": "made"
   }
  ],
  "w|represso": [
@@ -76729,6 +77257,22 @@
    "blank": "rompere"
   }
  ],
+ "w|rompersi": [
+  {
+   "text": "Davide avverte che un dente devitalizzato può rompersi più facilmente.",
+   "en": "Davide warns that a root-canal-treated tooth can break more easily.",
+   "ko": "다비데는 신경 치료를 한 이는 더 쉽게 부러질 수 있다고 주의를 줘요.",
+   "blank": "rompersi",
+   "src": "made"
+  },
+  {
+   "text": "Elena prega che il tacco non decida di rompersi proprio durante il primo ballo.",
+   "en": "Elena prays that the heel won't decide to break right during the first dance.",
+   "ko": "엘레나는 첫 춤을 출 때 구두 굽이 부러지지 않기를 빌어요.",
+   "blank": "rompersi",
+   "src": "made"
+  }
+ ],
  "w|rosa": [
   {
    "text": "Le ho regalato una rosa rossa.",
@@ -77958,6 +78502,22 @@
    "en": "Anna walks up to the sanctuary at the top of the valley.",
    "ko": "안나는 골짜기 꼭대기에 있는 성지까지 걸어 올라가요.",
    "blank": "santuario",
+   "src": "made"
+  }
+ ],
+ "w|sanzione": [
+  {
+   "text": "Lo studio dentistico di Davide ha ricevuto una sanzione per i rifiuti smaltiti male.",
+   "en": "Davide's dental practice received a fine for improperly disposed waste.",
+   "ko": "다비데의 치과는 폐기물을 잘못 처리해서 벌금을 받았어요.",
+   "blank": "sanzione",
+   "src": "made"
+  },
+  {
+   "text": "Il ristorante del matrimonio ha preso una sanzione per la musica alta, ed Elena ride.",
+   "en": "The wedding restaurant got a fine for loud music, and Elena laughs.",
+   "ko": "결혼식 식당이 시끄러운 음악 때문에 벌금을 물자 엘레나가 웃어요.",
+   "blank": "sanzione",
    "src": "made"
   }
  ],
@@ -85969,6 +86529,22 @@
    "src": "made"
   }
  ],
+ "w|spiccioli": [
+  {
+   "text": "Il paziente paga la visita con tutti gli spiccioli che ha in tasca, e Davide sorride.",
+   "en": "The patient pays for the visit with all the loose change in his pocket, and Davide smiles.",
+   "ko": "환자가 주머니의 잔돈을 털어 진료비를 내자 다비데가 웃어요.",
+   "blank": "spiccioli",
+   "src": "made"
+  },
+  {
+   "text": "Per tradizione i bambini raccolgono gli spiccioli lanciati dagli sposi, e il nipote di Elena corre per primo.",
+   "en": "By tradition the children collect the coins thrown by the newlyweds, and Elena's nephew runs first.",
+   "ko": "관례대로 아이들이 신랑 신부가 던진 동전을 줍는데, 엘레나의 조카가 제일 먼저 달려가요.",
+   "blank": "spiccioli",
+   "src": "made"
+  }
+ ],
  "w|spiegare": [
   {
    "text": "Spiegami tutto con calma.",
@@ -88993,6 +89569,22 @@
    "src": "made"
   }
  ],
+ "w|supervisionare": [
+  {
+   "text": "Davide deve supervisionare il lavoro dei due giovani assistenti.",
+   "en": "Davide has to supervise the work of the two young assistants.",
+   "ko": "다비데는 젊은 조수 두 명의 일을 감독해야 해요.",
+   "blank": "supervisionare",
+   "src": "made"
+  },
+  {
+   "text": "Elena chiede alla sorella di supervisionare la disposizione dei tavoli.",
+   "en": "Elena asks her sister to supervise the table layout.",
+   "ko": "엘레나는 언니에게 테이블 배치를 감독해 달라고 부탁해요.",
+   "blank": "supervisionare",
+   "src": "made"
+  }
+ ],
  "w|supervisione": [
   {
    "text": "Il giovane cuoco lavora sotto la supervisione di Stefano.",
@@ -91821,6 +92413,22 @@
    "en": "I took my jacket off.",
    "ko": "재킷을 벗었어.",
    "blank": "tolto"
+  }
+ ],
+ "w|tollerante": [
+  {
+   "text": "Davide è tollerante con i pazienti che hanno paura del trapano.",
+   "en": "Davide is tolerant with patients who are afraid of the drill.",
+   "ko": "다비데는 드릴을 무서워하는 환자들에게 너그러워요.",
+   "blank": "tollerante",
+   "src": "made"
+  },
+  {
+   "text": "La suocera di Elena è più tollerante del previsto sulla lista degli invitati.",
+   "en": "Elena's mother-in-law is more tolerant than expected about the guest list.",
+   "ko": "엘레나의 시어머니는 하객 명단에 대해 생각보다 너그러워요.",
+   "blank": "tollerante",
+   "src": "made"
   }
  ],
  "w|tolleranza": [
@@ -95159,6 +95767,22 @@
    "src": "made"
   }
  ],
+ "w|vaccinazione": [
+  {
+   "text": "Davide controlla il libretto della vaccinazione prima di operare.",
+   "en": "Davide checks the vaccination record before operating.",
+   "ko": "다비데는 수술 전에 예방 접종 기록을 확인해요.",
+   "blank": "vaccinazione",
+   "src": "made"
+  },
+  {
+   "text": "Prima del viaggio di nozze Elena fa una vaccinazione contro la febbre gialla.",
+   "en": "Before the honeymoon Elena gets vaccinated against yellow fever.",
+   "ko": "신혼여행 전에 엘레나는 황열병 예방 접종을 맞아요.",
+   "blank": "vaccinazione",
+   "src": "made"
+  }
+ ],
  "w|vaccino": [
   {
    "text": "Prima del piccolo intervento il dentista chiede a Paolo se ha fatto il vaccino contro il tetano.",
@@ -98011,6 +98635,22 @@
    "en": "The dog vomited on the carpet.",
    "ko": "개가 카펫에 토했어.",
    "blank": "vomitato"
+  }
+ ],
+ "w|vomito": [
+  {
+   "text": "Il bambino ha un conato di vomito durante l'impronta e Davide si ferma.",
+   "en": "The child gags during the impression and Davide stops.",
+   "ko": "본을 뜨는 동안 아이가 구역질을 하자 다비데가 멈춰요.",
+   "blank": "vomito",
+   "src": "made"
+  },
+  {
+   "text": "Il nipotino ha mangiato troppa torta e la mamma pulisce il vomito dal vestito di Elena.",
+   "en": "The little nephew ate too much cake and his mum cleans the sick off Elena's dress.",
+   "ko": "꼬마 조카가 케이크를 너무 먹어서, 엄마가 엘레나 드레스에 묻은 토사물을 닦아요.",
+   "blank": "vomito",
+   "src": "made"
   }
  ],
  "w|vongola": [
