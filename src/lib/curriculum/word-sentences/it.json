@@ -3057,6 +3057,22 @@
    "src": "made"
   }
  ],
+ "w|amnesia": [
+  {
+   "text": "Dopo la caduta, Paolo ha una breve amnesia e non ricorda il viaggio.",
+   "en": "After the fall, Paolo has brief amnesia and doesn't remember the trip.",
+   "ko": "넘어진 뒤 파올로는 잠깐 기억을 잃어서 그 여행이 기억나지 않아요.",
+   "blank": "amnesia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha un'amnesia improvvisa e non ricorda dove ha messo il sale.",
+   "en": "Francesca has a sudden bout of amnesia and can't remember where she put the salt.",
+   "ko": "프란체스카는 갑자기 기억이 하얘져서 소금을 어디 뒀는지 생각이 안 나요.",
+   "blank": "amnesia",
+   "src": "made"
+  }
+ ],
  "w|amore": [
   {
    "text": "Amore, la pasta è pronta.",
@@ -3564,6 +3580,22 @@
    "en": "The signal is weak, so Chiara moves the router near the aerial.",
    "ko": "신호가 약해서 키아라는 공유기를 안테나 가까이 옮겨요.",
    "blank": "antenna",
+   "src": "made"
+  }
+ ],
+ "w|anteprima": [
+  {
+   "text": "Il primario mostra a Paolo in anteprima il nuovo reparto.",
+   "en": "The head physician gives Paolo a preview of the new ward.",
+   "ko": "과장은 파올로에게 새 병동을 미리 보여 줘요.",
+   "blank": "anteprima",
+   "src": "made"
+  },
+  {
+   "text": "Francesca assaggia in anteprima il menù della cena di fine corso.",
+   "en": "Francesca gets a preview taste of the menu for the end-of-course dinner.",
+   "ko": "프란체스카는 수료 만찬 메뉴를 미리 맛봐요.",
+   "blank": "anteprima",
    "src": "made"
   }
  ],
@@ -6047,6 +6079,22 @@
    "blank": "aumento"
   }
  ],
+ "w|aurora": [
+  {
+   "text": "Paolo esce dall'ospedale all'aurora, dopo il turno di notte.",
+   "en": "Paolo leaves the hospital at dawn, after the night shift.",
+   "ko": "파올로는 야간 근무를 마치고 새벽녘에 병원을 나서요.",
+   "blank": "aurora",
+   "src": "made"
+  },
+  {
+   "text": "Francesca si alza all'aurora per comprare il pesce al mercato.",
+   "en": "Francesca gets up at dawn to buy fish at the market.",
+   "ko": "프란체스카는 시장에서 생선을 사려고 새벽녘에 일어나요.",
+   "blank": "aurora",
+   "src": "made"
+  }
+ ],
  "w|australiano": [
   {
    "text": "Accanto a Paolo, una coppia australiana chiede informazioni sulle mummie.",
@@ -6412,6 +6460,22 @@
    "en": "The constant arguments have poisoned the atmosphere in the office, Anna thinks.",
    "ko": "끊임없는 말다툼이 사무실 분위기를 망쳤다고 안나는 생각해요.",
    "blank": "avvelenato",
+   "src": "made"
+  }
+ ],
+ "w|avvenimento": [
+  {
+   "text": "La nascita della nipote è il grande avvenimento della settimana per Paolo.",
+   "en": "His granddaughter's birth is the big event of the week for Paolo.",
+   "ko": "손녀가 태어난 것이 파올로에게는 이번 주의 큰 사건이에요.",
+   "blank": "avvenimento",
+   "src": "made"
+  },
+  {
+   "text": "La cena finale del corso è un avvenimento per Francesca e i compagni.",
+   "en": "The course's final dinner is a big event for Francesca and her classmates.",
+   "ko": "수업의 마지막 만찬은 프란체스카와 동기들에게 큰 행사예요.",
+   "blank": "avvenimento",
    "src": "made"
   }
  ],
@@ -7365,6 +7429,22 @@
    "en": "The boat rocks with the waves.",
    "ko": "배가 파도에 흔들려.",
    "blank": "barca"
+  }
+ ],
+ "w|barella": [
+  {
+   "text": "Due infermieri portano Paolo in sala operatoria sulla barella.",
+   "en": "Two nurses carry Paolo to the operating room on the stretcher.",
+   "ko": "간호사 두 명이 들것에 실린 파올로를 수술실로 옮겨요.",
+   "blank": "barella",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha visto un cuoco svenire per il caldo e uscire in barella.",
+   "en": "Francesca saw a cook faint from the heat and be carried out on a stretcher.",
+   "ko": "프란체스카는 요리사가 더위에 쓰러져 들것에 실려 나가는 걸 봤어요.",
+   "blank": "barella",
+   "src": "made"
   }
  ],
  "w|barile": [
@@ -8960,6 +9040,22 @@
    "en": "For a snack Sara gives the children on the ward a vanilla pudding.",
    "ko": "간식으로 사라는 병동 아이들에게 바닐라 푸딩을 줘요.",
    "blank": "budino",
+   "src": "made"
+  }
+ ],
+ "w|bue": [
+  {
+   "text": "Paolo ha lavorato come un bue tutta la notte in reparto.",
+   "en": "Paolo worked like an ox all night on the ward.",
+   "ko": "파올로는 밤새 병동에서 소처럼 일했어요.",
+   "blank": "bue",
+   "src": "made"
+  },
+  {
+   "text": "Oggi Francesca impara a cucinare lo stracotto di bue.",
+   "en": "Today Francesca learns to cook slow-braised beef.",
+   "ko": "오늘 프란체스카는 소고기 찜 요리를 배워요.",
+   "blank": "bue",
    "src": "made"
   }
  ],
@@ -10999,6 +11095,22 @@
    "blank": "causato"
   }
  ],
+ "w|cautela": [
+  {
+   "text": "Paolo si alza dal letto con cautela.",
+   "en": "Paolo gets out of bed carefully.",
+   "ko": "파올로는 조심스럽게 침대에서 일어나요.",
+   "blank": "cautela",
+   "src": "made"
+  },
+  {
+   "text": "Francesca maneggia il coltello nuovo con molta cautela.",
+   "en": "Francesca handles the new knife with great caution.",
+   "ko": "프란체스카는 새 칼을 아주 조심스럽게 다뤄요.",
+   "blank": "cautela",
+   "src": "made"
+  }
+ ],
  "w|cauto": [
   {
    "text": "Quando sale sul tetto, Marco è sempre molto cauto.",
@@ -12955,6 +13067,22 @@
    "blank": "codice"
   }
  ],
+ "w|cofano": [
+  {
+   "text": "L'ambulanza arriva con il cofano ammaccato, e Paolo si spaventa.",
+   "en": "The ambulance arrives with a dented bonnet, and Paolo gets a fright.",
+   "ko": "구급차가 보닛이 찌그러진 채로 도착해서 파올로는 깜짝 놀라요.",
+   "blank": "cofano",
+   "src": "made"
+  },
+  {
+   "text": "Francesca lascia il cesto delle verdure sul cofano della macchina.",
+   "en": "Francesca leaves the basket of vegetables on the car's bonnet.",
+   "ko": "프란체스카는 채소 바구니를 자동차 보닛 위에 올려 둬요.",
+   "blank": "cofano",
+   "src": "made"
+  }
+ ],
  "w|cogliere": [
   {
    "text": "Marco coglie i pomodori dal piccolo orto sul terrazzo condominiale.",
@@ -13255,6 +13383,22 @@
    "en": "They linked the two cities with a train.",
    "ko": "그들은 두 도시를 기차로 연결했어.",
    "blank": "collegato"
+  }
+ ],
+ "w|collera": [
+  {
+   "text": "Paolo trattiene la collera dopo ore di attesa al pronto soccorso.",
+   "en": "Paolo holds back his anger after hours of waiting in the emergency room.",
+   "ko": "파올로는 응급실에서 몇 시간을 기다린 뒤에도 화를 참아요.",
+   "blank": "collera",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef va in collera quando Francesca lascia il fuoco acceso.",
+   "en": "The chef flies into a rage when Francesca leaves the burner on.",
+   "ko": "프란체스카가 불을 켜 둔 채로 두면 셰프는 버럭 화를 내요.",
+   "blank": "collera",
+   "src": "made"
   }
  ],
  "w|collettivo": [
@@ -13952,6 +14096,22 @@
    "en": "For Elena it's moving to see the first shoots after a long winter.",
    "ko": "엘레나에게 긴 겨울 뒤 첫 새싹을 보는 건 감동적이에요.",
    "blank": "commovente",
+   "src": "made"
+  }
+ ],
+ "w|commozione": [
+  {
+   "text": "Paolo non nasconde la commozione quando vede il figlio appena nato.",
+   "en": "Paolo doesn't hide his emotion when he sees his newborn son.",
+   "ko": "파올로는 갓 태어난 아들을 보고 감격을 감추지 않아요.",
+   "blank": "commozione",
+   "src": "made"
+  },
+  {
+   "text": "Francesca assaggia la torta della nonna con grande commozione.",
+   "en": "Francesca tastes her grandmother's cake with deep emotion.",
+   "ko": "프란체스카는 할머니의 케이크를 맛보며 크게 감동해요.",
+   "blank": "commozione",
    "src": "made"
   }
  ],
@@ -19261,6 +19421,22 @@
    "src": "made"
   }
  ],
+ "w|determinazione": [
+  {
+   "text": "Con grande determinazione Paolo ricomincia a camminare.",
+   "en": "With great determination Paolo starts walking again.",
+   "ko": "파올로는 큰 결심으로 다시 걷기 시작해요.",
+   "blank": "determinazione",
+   "src": "made"
+  },
+  {
+   "text": "Francesca rifà la pasta sfoglia con determinazione finché non viene perfetta.",
+   "en": "Francesca remakes the puff pastry with determination until it comes out perfect.",
+   "ko": "프란체스카는 퍼프 페이스트리가 완벽해질 때까지 굳은 결심으로 다시 만들어요.",
+   "blank": "determinazione",
+   "src": "made"
+  }
+ ],
  "w|detestare": [
   {
    "text": "Simone scherza dicendo che detesta ancora i compiti di matematica.",
@@ -19417,6 +19593,22 @@
    "src": "made"
   }
  ],
+ "w|diagnosticare": [
+  {
+   "text": "I medici riescono a diagnosticare il problema di Paolo in un solo giorno.",
+   "en": "The doctors manage to diagnose Paolo's problem in a single day.",
+   "ko": "의사들은 단 하루 만에 파올로의 문제를 진단해 내요.",
+   "blank": "diagnosticare",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef riesce a diagnosticare subito perché la maionese di Francesca è impazzita.",
+   "en": "The chef can immediately diagnose why Francesca's mayonnaise has split.",
+   "ko": "셰프는 프란체스카의 마요네즈가 왜 분리됐는지 바로 짚어 내요.",
+   "blank": "diagnosticare",
+   "src": "made"
+  }
+ ],
  "w|diamante": [
   {
    "text": "L'anello ha un diamante al centro.",
@@ -19457,6 +19649,22 @@
    "en": "She found her school diary again.",
    "ko": "그녀는 학교 일기를 다시 찾았어.",
    "blank": "diario"
+  }
+ ],
+ "w|diarrea": [
+  {
+   "text": "Paolo ha la diarrea da due giorni e beve molta acqua.",
+   "en": "Paolo has had diarrhea for two days and is drinking lots of water.",
+   "ko": "파올로는 이틀째 설사를 해서 물을 많이 마셔요.",
+   "blank": "diarrea",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef avverte Francesca che il pollo crudo può dare la diarrea.",
+   "en": "The chef warns Francesca that raw chicken can cause diarrhea.",
+   "ko": "셰프는 프란체스카에게 덜 익은 닭고기가 설사를 일으킬 수 있다고 경고해요.",
+   "blank": "diarrea",
+   "src": "made"
   }
  ],
  "w|diavolo": [
@@ -19676,6 +19884,22 @@
    "en": "The coach says Chiara's flaw is that she doesn't pass the ball enough.",
    "ko": "코치는 키아라의 약점이 패스를 너무 안 하는 거라고 해요.",
    "blank": "difetto",
+   "src": "made"
+  }
+ ],
+ "w|difettoso": [
+  {
+   "text": "Paolo segnala che il termometro del reparto è difettoso.",
+   "en": "Paolo reports that the ward's thermometer is faulty.",
+   "ko": "파올로는 병동 체온계가 고장 났다고 알려요.",
+   "blank": "difettoso",
+   "src": "made"
+  },
+  {
+   "text": "Il forno di Francesca è difettoso e brucia sempre i biscotti.",
+   "en": "Francesca's oven is faulty and always burns the biscuits.",
+   "ko": "프란체스카의 오븐은 고장이 나서 늘 과자를 태워요.",
+   "blank": "difettoso",
    "src": "made"
   }
  ],
@@ -21275,6 +21499,22 @@
    "blank": "dodici"
   }
  ],
+ "w|dogana": [
+  {
+   "text": "Il collega di Paolo è rimasto bloccato alla dogana con le medicine.",
+   "en": "Paolo's colleague got stuck at customs with the medicines.",
+   "ko": "파올로의 동료는 약을 가지고 세관에서 발이 묶였어요.",
+   "blank": "dogana",
+   "src": "made"
+  },
+  {
+   "text": "Le spezie che Francesca ha comprato in viaggio sono state fermate alla dogana.",
+   "en": "The spices Francesca bought on her trip were stopped at customs.",
+   "ko": "프란체스카가 여행에서 산 향신료는 세관에서 압수됐어요.",
+   "blank": "dogana",
+   "src": "made"
+  }
+ ],
  "w|dolce": [
   {
    "text": "Questo dolce è troppo zuccherato.",
@@ -22295,6 +22535,22 @@
    "src": "made"
   }
  ],
+ "w|ecografia": [
+  {
+   "text": "Paolo accompagna la moglie a fare un'ecografia.",
+   "en": "Paolo goes with his wife to have an ultrasound.",
+   "ko": "파올로는 아내와 함께 초음파 검사를 받으러 가요.",
+   "blank": "ecografia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca arriva tardi a lezione perché aveva un'ecografia.",
+   "en": "Francesca arrives late to class because she had an ultrasound.",
+   "ko": "프란체스카는 초음파 검사가 있어서 수업에 늦게 와요.",
+   "blank": "ecografia",
+   "src": "made"
+  }
+ ],
  "w|economia": [
   {
    "text": "In classe Marco ha guardato una trasmissione sull'economia del dopoguerra.",
@@ -22871,6 +23127,22 @@
    "src": "made"
   }
  ],
+ "w|emicrania": [
+  {
+   "text": "Paolo soffre di emicrania quando dorme poco.",
+   "en": "Paolo suffers from migraines when he doesn't sleep enough.",
+   "ko": "파올로는 잠을 적게 자면 편두통에 시달려요.",
+   "blank": "emicrania",
+   "src": "made"
+  },
+  {
+   "text": "L'odore forte dell'aglio fritto fa venire l'emicrania a Francesca.",
+   "en": "The strong smell of fried garlic gives Francesca a migraine.",
+   "ko": "튀긴 마늘의 강한 냄새 때문에 프란체스카는 편두통이 와요.",
+   "blank": "emicrania",
+   "src": "made"
+  }
+ ],
  "w|emorragia": [
   {
    "text": "Hanno fermato l'emorragia in ospedale.",
@@ -23423,6 +23695,22 @@
    "en": "That's not right, check again.",
    "ko": "정확하지 않아, 다시 봐.",
    "blank": "esatto"
+  }
+ ],
+ "w|esaurimento": [
+  {
+   "text": "Dopo mesi di lavoro senza pause, Paolo è ricoverato per esaurimento.",
+   "en": "After months of work without breaks, Paolo is hospitalized for exhaustion.",
+   "ko": "몇 달 동안 쉬지 않고 일한 끝에 파올로는 탈진으로 입원해요.",
+   "blank": "esaurimento",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra il formaggio in offerta, valida fino a esaurimento scorte.",
+   "en": "Francesca buys the cheese on offer, valid while stocks last.",
+   "ko": "프란체스카는 재고 소진 시까지 하는 할인 치즈를 사요.",
+   "blank": "esaurimento",
+   "src": "made"
   }
  ],
  "w|esaurire": [
@@ -28429,6 +28717,22 @@
    "blank": "gemello"
   }
  ],
+ "w|gemito": [
+  {
+   "text": "Dal letto accanto Paolo sente un gemito di dolore.",
+   "en": "From the next bed Paolo hears a groan of pain.",
+   "ko": "파올로는 옆 침대에서 아파서 내는 신음 소리를 들어요.",
+   "blank": "gemito",
+   "src": "made"
+  },
+  {
+   "text": "Francesca si scotta un dito e le sfugge un gemito.",
+   "en": "Francesca burns a finger and lets out a groan.",
+   "ko": "프란체스카는 손가락을 데어서 신음 소리를 내요.",
+   "blank": "gemito",
+   "src": "made"
+  }
+ ],
  "w|generale": [
   {
    "text": "In generale sono d'accordo con te.",
@@ -33147,6 +33451,22 @@
    "src": "made"
   }
  ],
+ "w|ingrassare": [
+  {
+   "text": "Il dottore dice a Paolo che deve ingrassare un po'.",
+   "en": "The doctor tells Paolo he needs to put on a bit of weight.",
+   "ko": "의사는 파올로에게 살을 조금 찌워야 한다고 말해요.",
+   "blank": "ingrassare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca scherza che con questo corso finirà per ingrassare.",
+   "en": "Francesca jokes that with this course she'll end up putting on weight.",
+   "ko": "프란체스카는 이 수업 때문에 결국 살이 찌겠다고 농담해요.",
+   "blank": "ingrassare",
+   "src": "made"
+  }
+ ],
  "w|ingrato": [
   {
    "text": "Il vicino, ingrato, non ringrazia Simone per avergli innaffiato le piante.",
@@ -35311,6 +35631,22 @@
    "src": "made"
   }
  ],
+ "w|lacerazione": [
+  {
+   "text": "Il chirurgo cuce la lacerazione sul braccio di Paolo.",
+   "en": "The surgeon stitches up the laceration on Paolo's arm.",
+   "ko": "외과 의사가 파올로 팔의 찢어진 상처를 꿰매요.",
+   "blank": "lacerazione",
+   "src": "made"
+  },
+  {
+   "text": "Un coltello scivolato lascia una lacerazione sulla mano di Francesca.",
+   "en": "A slipping knife leaves a laceration on Francesca's hand.",
+   "ko": "미끄러진 칼에 프란체스카의 손이 찢어져요.",
+   "blank": "lacerazione",
+   "src": "made"
+  }
+ ],
  "w|lacrima": [
   {
    "text": "Una lacrima le scese sul viso.",
@@ -37063,6 +37399,22 @@
    "en": "He has already left.",
    "ko": "그는 이미 떠났어.",
    "blank": "Lui"
+  }
+ ],
+ "w|lumaca": [
+  {
+   "text": "Dopo l'operazione al ginocchio, Paolo cammina lento come una lumaca.",
+   "en": "After his knee operation, Paolo walks as slowly as a snail.",
+   "ko": "무릎 수술 뒤에 파올로는 달팽이처럼 느리게 걸어요.",
+   "blank": "lumaca",
+   "src": "made"
+  },
+  {
+   "text": "Francesca non ha mai assaggiato le lumache al burro.",
+   "en": "Francesca has never tasted snails in butter.",
+   "ko": "프란체스카는 버터에 요리한 달팽이를 한 번도 먹어 본 적이 없어요.",
+   "blank": "lumache",
+   "src": "made"
   }
  ],
  "w|luminoso": [
@@ -40232,6 +40584,22 @@
    "en": "Giulia visits the mine where her great-grandfather worked as a miner.",
    "ko": "줄리아는 증조할아버지가 광부로 일하던 광산을 찾아가요.",
    "blank": "minatore",
+   "src": "made"
+  }
+ ],
+ "w|minerale": [
+  {
+   "text": "Il medico spiega a Paolo che al suo corpo manca un minerale importante, il ferro.",
+   "en": "The doctor explains to Paolo that his body is missing an important mineral, iron.",
+   "ko": "의사는 파올로의 몸에 중요한 미네랄인 철분이 부족하다고 설명해요.",
+   "blank": "minerale",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef spiega a Francesca che il sale è un minerale e va usato con misura.",
+   "en": "The chef explains to Francesca that salt is a mineral and should be used in moderation.",
+   "ko": "셰프는 프란체스카에게 소금은 미네랄이라 적당히 써야 한다고 설명해요.",
+   "blank": "minerale",
    "src": "made"
   }
  ],
@@ -45697,6 +46065,22 @@
    "src": "made"
   }
  ],
+ "w|pantaloncino": [
+  {
+   "text": "Paolo porta al figlio ricoverato un pantaloncino pulito e una maglietta.",
+   "en": "Paolo brings his hospitalized son a clean pair of shorts and a T-shirt.",
+   "ko": "파올로는 입원한 아들에게 깨끗한 반바지와 티셔츠를 가져다줘요.",
+   "blank": "pantaloncino",
+   "src": "made"
+  },
+  {
+   "text": "Francesca si macchia di sugo il pantaloncino nuovo.",
+   "en": "Francesca gets tomato sauce on her new shorts.",
+   "ko": "프란체스카는 새 반바지에 소스를 묻혀요.",
+   "blank": "pantaloncino",
+   "src": "made"
+  }
+ ],
  "w|pantaloni": [
   {
    "text": "Questi pantaloni mi stanno un po' stretti.",
@@ -47087,6 +47471,22 @@
    "en": "This pepper is very strong.",
    "ko": "이 후추는 아주 매워.",
    "blank": "pepe"
+  }
+ ],
+ "w|peperoncino": [
+  {
+   "text": "Il medico consiglia a Paolo di evitare il peperoncino per qualche giorno.",
+   "en": "The doctor advises Paolo to avoid chili pepper for a few days.",
+   "ko": "의사는 파올로에게 며칠 동안 고추를 피하라고 권해요.",
+   "blank": "peperoncino",
+   "src": "made"
+  },
+  {
+   "text": "Francesca mette troppo peperoncino nel sugo e tutti tossiscono.",
+   "en": "Francesca puts too much chili in the sauce and everyone coughs.",
+   "ko": "프란체스카가 소스에 고추를 너무 많이 넣어서 모두 기침을 해요.",
+   "blank": "peperoncino",
+   "src": "made"
   }
  ],
  "w|per": [
@@ -50193,6 +50593,22 @@
    "blank": "presa"
   }
  ],
+ "w|prescrizione": [
+  {
+   "text": "Il medico firma la prescrizione e Paolo la porta in farmacia.",
+   "en": "The doctor signs the prescription and Paolo takes it to the pharmacy.",
+   "ko": "의사가 처방전에 서명하고 파올로가 그걸 약국에 가져가요.",
+   "blank": "prescrizione",
+   "src": "made"
+  },
+  {
+   "text": "Per via di una prescrizione medica, Francesca cucina senza sale.",
+   "en": "Because of a doctor's prescription, Francesca cooks without salt.",
+   "ko": "의사의 처방 때문에 프란체스카는 소금 없이 요리해요.",
+   "blank": "prescrizione",
+   "src": "made"
+  }
+ ],
  "w|presentare": [
   {
    "text": "Ti presento il mio vicino.",
@@ -52321,6 +52737,22 @@
    "src": "made"
   }
  ],
+ "w|pupilla": [
+  {
+   "text": "Il medico illumina la pupilla di Paolo con una piccola torcia.",
+   "en": "The doctor shines a small torch into Paolo's pupil.",
+   "ko": "의사가 작은 손전등으로 파올로의 동공을 비춰요.",
+   "blank": "pupilla",
+   "src": "made"
+  },
+  {
+   "text": "Francesca è la pupilla dello chef, che le affida i piatti più difficili.",
+   "en": "Francesca is the chef's favorite student, and he trusts her with the hardest dishes.",
+   "ko": "프란체스카는 셰프가 아끼는 제자라서 셰프가 가장 어려운 요리를 맡겨요.",
+   "blank": "pupilla",
+   "src": "made"
+  }
+ ],
  "w|pure": [
   {
    "text": "Accomodati pure.",
@@ -54115,6 +54547,22 @@
    "src": "made"
   }
  ],
+ "w|referto": [
+  {
+   "text": "Paolo legge il referto delle analisi insieme al medico.",
+   "en": "Paolo reads the test report together with the doctor.",
+   "ko": "파올로는 의사와 함께 검사 결과지를 읽어요.",
+   "blank": "referto",
+   "src": "made"
+  },
+  {
+   "text": "Francesca mostra allo chef il referto che conferma la sua allergia alle noci.",
+   "en": "Francesca shows the chef the medical report confirming her nut allergy.",
+   "ko": "프란체스카는 셰프에게 견과류 알레르기를 확인해 주는 진단서를 보여 줘요.",
+   "blank": "referto",
+   "src": "made"
+  }
+ ],
  "w|regalare": [
   {
    "text": "Voglio regalare un libro alla mia amica.",
@@ -54735,6 +55183,38 @@
    "en": "Learn to breathe more slowly.",
    "ko": "더 천천히 숨 쉬는 법을 배워.",
    "blank": "respirare"
+  }
+ ],
+ "w|respiratorio": [
+  {
+   "text": "Il medico controlla l'apparato respiratorio di Paolo.",
+   "en": "The doctor checks Paolo's respiratory system.",
+   "ko": "의사가 파올로의 호흡기를 검사해요.",
+   "blank": "respiratorio",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef di Francesca porta la mascherina per un'allergia respiratoria alla farina.",
+   "en": "Francesca's chef wears a mask because of a respiratory allergy to flour.",
+   "ko": "프란체스카의 셰프는 밀가루 호흡기 알레르기 때문에 마스크를 써요.",
+   "blank": "respiratoria",
+   "src": "made"
+  }
+ ],
+ "w|respirazione": [
+  {
+   "text": "Il fisioterapista insegna a Paolo esercizi di respirazione profonda.",
+   "en": "The physiotherapist teaches Paolo deep breathing exercises.",
+   "ko": "물리치료사가 파올로에게 깊은 호흡 운동을 가르쳐 줘요.",
+   "blank": "respirazione",
+   "src": "made"
+  },
+  {
+   "text": "Il fumo del forno rende difficile la respirazione e Francesca apre la finestra.",
+   "en": "The smoke from the oven makes breathing difficult, and Francesca opens the window.",
+   "ko": "오븐 연기 때문에 숨쉬기가 힘들어서 프란체스카는 창문을 열어요.",
+   "blank": "respirazione",
+   "src": "made"
   }
  ],
  "w|respiro": [
@@ -55856,6 +56336,22 @@
    "en": "If she had stayed home, Sara would have ended up regretting missing this concert.",
    "ko": "집에 있었다면 사라는 이 공연을 두고두고 아쉬워했을 거예요.",
    "blank": "rimpiangere",
+   "src": "made"
+  }
+ ],
+ "w|rimpianto": [
+  {
+   "text": "Il paziente confida a Paolo il rimpianto di non aver smesso di fumare prima.",
+   "en": "The patient confides to Paolo his regret at not having quit smoking sooner.",
+   "ko": "환자는 담배를 더 일찍 끊지 못한 후회를 파올로에게 털어놓아요.",
+   "blank": "rimpianto",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha un solo rimpianto: non aver iniziato il corso prima.",
+   "en": "Francesca has only one regret: not having started the course sooner.",
+   "ko": "프란체스카의 후회는 하나뿐이에요. 수업을 더 일찍 시작하지 않은 거예요.",
+   "blank": "rimpianto",
    "src": "made"
   }
  ],
@@ -58684,6 +59180,22 @@
    "en": "This year the cherry harvest has been poor, the farmer tells Francesca.",
    "ko": "농부는 프란체스카에게 올해 체리 수확이 적었다고 말해요.",
    "blank": "scarsa",
+   "src": "made"
+  }
+ ],
+ "w|scartare": [
+  {
+   "text": "L'infermiera aiuta Paolo a scartare il regalo dei colleghi.",
+   "en": "The nurse helps Paolo unwrap the present from his colleagues.",
+   "ko": "간호사가 파올로가 동료들의 선물을 뜯는 걸 도와줘요.",
+   "blank": "scartare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca impara a scartare le foglie esterne del carciofo.",
+   "en": "Francesca learns to discard the outer leaves of the artichoke.",
+   "ko": "프란체스카는 아티초크의 바깥 잎을 떼어 내는 법을 배워요.",
+   "blank": "scartare",
    "src": "made"
   }
  ],
@@ -62515,6 +63027,22 @@
    "blank": "sogno"
   }
  ],
+ "w|soia": [
+  {
+   "text": "Nella mensa dell'ospedale Paolo trova sempre il latte di soia.",
+   "en": "In the hospital cafeteria Paolo can always find soy milk.",
+   "ko": "병원 구내식당에서 파올로는 늘 두유를 찾을 수 있어요.",
+   "blank": "soia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca prepara una salsa con soia, zenzero e miele.",
+   "en": "Francesca makes a sauce with soy, ginger and honey.",
+   "ko": "프란체스카는 간장, 생강, 꿀로 소스를 만들어요.",
+   "blank": "soia",
+   "src": "made"
+  }
+ ],
  "w|solamente": [
   {
    "text": "Voglio solamente un po' di pace.",
@@ -62844,6 +63372,22 @@
    "en": "At the end the organisers ask Giulia to answer a survey.",
    "ko": "끝나고 주최 측이 줄리아에게 설문에 답해 달라고 해요.",
    "blank": "sondaggio",
+   "src": "made"
+  }
+ ],
+ "w|sonnifero": [
+  {
+   "text": "Paolo chiede un sonnifero perché in corsia c'è troppo rumore.",
+   "en": "Paolo asks for a sleeping pill because the ward is too noisy.",
+   "ko": "병동이 너무 시끄러워서 파올로는 수면제를 달라고 해요.",
+   "blank": "sonnifero",
+   "src": "made"
+  },
+  {
+   "text": "Dopo la cena abbondante, Francesca dice che la lasagna è un vero sonnifero.",
+   "en": "After the big dinner, Francesca says the lasagna is a real sleeping pill.",
+   "ko": "배부른 저녁을 먹고 나서 프란체스카는 라자냐가 진짜 수면제라고 말해요.",
+   "blank": "sonnifero",
    "src": "made"
   }
  ],
@@ -64973,6 +65517,22 @@
    "src": "made"
   }
  ],
+ "w|stallone": [
+  {
+   "text": "Il vecchio contadino ricoverato racconta a Paolo del suo stallone nero.",
+   "en": "The old farmer in the hospital tells Paolo about his black stallion.",
+   "ko": "입원한 늙은 농부가 파올로에게 자기 검은 종마 이야기를 해요.",
+   "blank": "stallone",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef racconta a Francesca che da ragazzo allevava uno stallone.",
+   "en": "The chef tells Francesca that as a boy he raised a stallion.",
+   "ko": "셰프는 어렸을 때 종마를 길렀다고 프란체스카에게 이야기해요.",
+   "blank": "stallone",
+   "src": "made"
+  }
+ ],
  "w|stamattina": [
   {
    "text": "Stamattina ho preso il caffè al bar.",
@@ -65266,6 +65826,22 @@
    "en": "Laura barely finishes the article, five minutes before the deadline.",
    "ko": "라우라는 마감 오 분 전에 겨우 기사를 끝내요.",
    "blank": "stento",
+   "src": "made"
+  }
+ ],
+ "w|sterile": [
+  {
+   "text": "L'infermiera apre una garza sterile davanti a Paolo.",
+   "en": "The nurse opens a sterile gauze pad in front of Paolo.",
+   "ko": "간호사가 파올로 앞에서 멸균 거즈를 뜯어요.",
+   "blank": "sterile",
+   "src": "made"
+  },
+  {
+   "text": "Francesca versa la marmellata in barattoli sterili.",
+   "en": "Francesca pours the jam into sterile jars.",
+   "ko": "프란체스카는 잼을 소독한 병에 담아요.",
+   "blank": "sterili",
    "src": "made"
   }
  ],
@@ -67017,6 +67593,22 @@
    "en": "They changed the license plate yesterday.",
    "ko": "그들은 어제 번호판을 바꿨어.",
    "blank": "targa"
+  }
+ ],
+ "w|tariffa": [
+  {
+   "text": "Al parcheggio dell'ospedale Paolo paga una tariffa altissima.",
+   "en": "At the hospital car park Paolo pays a very high rate.",
+   "ko": "병원 주차장에서 파올로는 아주 비싼 요금을 내요.",
+   "blank": "tariffa",
+   "src": "made"
+  },
+  {
+   "text": "La tariffa del corso comprende anche il grembiule di Francesca.",
+   "en": "The course fee also includes Francesca's apron.",
+   "ko": "수업료에는 프란체스카의 앞치마도 포함돼 있어요.",
+   "blank": "tariffa",
+   "src": "made"
   }
  ],
  "w|tartaruga": [
@@ -70167,6 +70759,22 @@
    "blank": "tuo"
   }
  ],
+ "w|tuonare": [
+  {
+   "text": "Durante la notte fuori comincia a tuonare e Paolo chiude la finestra.",
+   "en": "During the night it starts to thunder outside and Paolo closes the window.",
+   "ko": "밤에 밖에서 천둥이 치기 시작해서 파올로는 창문을 닫아요.",
+   "blank": "tuonare",
+   "src": "made"
+  },
+  {
+   "text": "La voce dello chef comincia a tuonare quando Francesca brucia il burro.",
+   "en": "The chef's voice starts to thunder when Francesca burns the butter.",
+   "ko": "프란체스카가 버터를 태우자 셰프의 목소리가 쩌렁쩌렁 울리기 시작해요.",
+   "blank": "tuonare",
+   "src": "made"
+  }
+ ],
  "w|turbare": [
   {
    "text": "Il cellulare che squilla in sala lettura turba la concentrazione di Luca.",
@@ -72035,6 +72643,22 @@
    "blank": "verso"
   }
  ],
+ "w|vertigine": [
+  {
+   "text": "Quando si alza troppo in fretta, Paolo ha una vertigine.",
+   "en": "When he stands up too quickly, Paolo gets dizzy.",
+   "ko": "너무 빨리 일어나면 파올로는 현기증이 나요.",
+   "blank": "vertigine",
+   "src": "made"
+  },
+  {
+   "text": "Salendo sulla scala per prendere la pentola, Francesca ha una vertigine.",
+   "en": "Climbing the ladder to get the pot, Francesca feels dizzy.",
+   "ko": "냄비를 꺼내려고 사다리에 오르다가 프란체스카는 현기증을 느껴요.",
+   "blank": "vertigine",
+   "src": "made"
+  }
+ ],
  "w|vescica": [
   {
    "text": "Prima dell'ecografia a Simone dicono di non svuotare la vescica.",
@@ -72634,6 +73258,22 @@
    "en": "At the corner of the market a young man plays the violin, and Francesca leaves him a coin.",
    "ko": "시장 모퉁이에서 한 청년이 바이올린을 켜자 프란체스카는 동전을 놓고 가요.",
    "blank": "violino",
+   "src": "made"
+  }
+ ],
+ "w|virtù": [
+  {
+   "text": "Per Paolo la pazienza è una virtù fondamentale in corsia.",
+   "en": "For Paolo, patience is an essential virtue on the ward.",
+   "ko": "파올로에게 병동에서 인내는 꼭 필요한 미덕이에요.",
+   "blank": "virtù",
+   "src": "made"
+  },
+  {
+   "text": "Lo chef dice a Francesca che la precisione in cucina è una virtù rara.",
+   "en": "The chef tells Francesca that precision in the kitchen is a rare virtue.",
+   "ko": "셰프는 프란체스카에게 부엌에서 정확함은 드문 미덕이라고 말해요.",
+   "blank": "virtù",
    "src": "made"
   }
  ],

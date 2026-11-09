@@ -1163,6 +1163,22 @@
    "blank": "bác sĩ"
   }
  ],
+ "w|bác sĩ chuyên khoa": [
+  {
+   "text": "Hùng giới thiệu bà cụ đến một bác sĩ chuyên khoa tai mũi họng quen.",
+   "en": "Hùng referred the old woman to an ear, nose and throat specialist he knows.",
+   "ko": "훙은 할머니를 아는 이비인후과 전문의에게 소개해 드렸어요.",
+   "blank": "bác sĩ chuyên khoa",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể chồng giờ là bác sĩ chuyên khoa tim ở thành phố.",
+   "en": "Hương writes that her husband is now a heart specialist in the city.",
+   "ko": "흐엉은 남편이 지금 도시에서 심장 전문의로 일한다고 써요.",
+   "blank": "bác sĩ chuyên khoa",
+   "src": "made"
+  }
+ ],
  "w|bạch cầu": [
   {
    "text": "Nha sĩ giải thích với Tuấn rằng bạch cầu tăng cao vì chỗ lợi đang viêm.",
@@ -5879,6 +5895,22 @@
    "src": "made"
   }
  ],
+ "w|ca nô": [
+  {
+   "text": "Có một người đảo xa đi ca nô vào đất liền chỉ để Hùng chữa răng.",
+   "en": "A man from a distant island came to the mainland by speedboat just so Hùng could treat his teeth.",
+   "ko": "먼 섬의 한 남자는 훙에게 이를 치료받으려고 쾌속정을 타고 육지로 왔어요.",
+   "blank": "ca nô",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể chuyến ra đảo, cả đoàn ngồi ca nô say sóng hết lượt.",
+   "en": "Hương recounts the trip to the island, where everyone on the speedboat got seasick.",
+   "ko": "흐엉은 섬 여행에서 쾌속정을 탄 일행이 모두 뱃멀미를 했다고 써요.",
+   "blank": "ca nô",
+   "src": "made"
+  }
+ ],
  "w|cà phê": [
   {
    "text": "Sáng nào mình cũng uống cà phê đen.",
@@ -6059,6 +6091,22 @@
    "en": "They found a way to resolve the dispute.",
    "ko": "그들은 분쟁의 해결 방법을 찾았어.",
    "blank": "cách giải quyết"
+  }
+ ],
+ "w|cách ly": [
+  {
+   "text": "Hồi có dịch, phòng khám của Hùng phải cách ly hai tuần vì một ca nhiễm.",
+   "en": "During the epidemic, Hùng's clinic had to quarantine for two weeks because of one infection.",
+   "ko": "전염병이 돌 때 훙의 치과는 감염자 한 명 때문에 두 주 동안 격리해야 했어요.",
+   "blank": "cách ly",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể năm dịch bệnh, cả nhà phải cách ly ở nhà suốt một tháng.",
+   "en": "Hương recounts how in the year of the epidemic the whole family had to isolate at home for a month.",
+   "ko": "흐엉은 전염병이 돌던 해에 온 가족이 한 달 내내 집에서 격리했다고 써요.",
+   "blank": "cách ly",
+   "src": "made"
   }
  ],
  "w|cai": [
@@ -6585,6 +6633,22 @@
    "src": "made"
   }
  ],
+ "w|cân bằng": [
+  {
+   "text": "Hùng cố giữ cuộc sống cân bằng giữa phòng khám và gia đình.",
+   "en": "Hùng tries to keep a balanced life between the clinic and his family.",
+   "ko": "훙은 치과 일과 가족 사이에서 균형 잡힌 생활을 하려고 애써요.",
+   "blank": "cân bằng",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết rằng cuối cùng mình đã tìm được cuộc sống cân bằng hơn.",
+   "en": "Hương writes that she has finally found a more balanced life.",
+   "ko": "흐엉은 마침내 더 균형 잡힌 삶을 찾았다고 썼어요.",
+   "blank": "cân bằng",
+   "src": "made"
+  }
+ ],
  "w|căn bệnh": [
   {
    "text": "Huấn luyện viên kể với Tuấn rằng tiểu đường là căn bệnh có thể phòng được nhờ tập đều đặn.",
@@ -6630,6 +6694,22 @@
    "en": "That hardworking housekeeper cleans twenty rooms every morning, and Linh really respects her.",
    "ko": "그 부지런한 청소 직원은 매일 아침 방 스무 개를 치워서 린은 무척 감탄해요.",
    "blank": "cần cù",
+   "src": "made"
+  }
+ ],
+ "w|cân đối": [
+  {
+   "text": "Hàm răng của cô bé đã cân đối hơn nhiều sau một năm niềng ở chỗ Hùng.",
+   "en": "The little girl's teeth are much more even after a year of braces at Hùng's clinic.",
+   "ko": "훙에게 일 년 동안 교정을 받은 뒤 그 아이의 치열이 훨씬 고르게 됐어요.",
+   "blank": "cân đối",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể dạo này ăn uống cân đối hơn nên người khỏe ra nhiều.",
+   "en": "Hương writes that she eats a more balanced diet these days and feels much healthier.",
+   "ko": "흐엉은 요즘 골고루 먹어서 몸이 훨씬 건강해졌다고 써요.",
+   "blank": "cân đối",
    "src": "made"
   }
  ],
@@ -8677,6 +8757,22 @@
    "blank": "Chạy trốn"
   }
  ],
+ "w|chạy xe": [
+  {
+   "text": "Mỗi sáng, Hùng chạy xe máy hơn nửa tiếng mới tới phòng khám nha khoa.",
+   "en": "Every morning Hùng rides his motorbike over half an hour to reach the dental clinic.",
+   "ko": "매일 아침 훙은 오토바이를 삼십 분 넘게 타고 치과에 가요.",
+   "blank": "chạy xe",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết thư kể cho Thảo rằng giờ mình đã tự chạy xe đi làm.",
+   "en": "Hương wrote to Thảo that she now rides to work by herself.",
+   "ko": "흐엉은 타오에게 이제 혼자 오토바이를 타고 출근한다고 편지에 썼어요.",
+   "blank": "chạy xe",
+   "src": "made"
+  }
+ ],
  "w|che": [
   {
    "text": "Anh ấy đã dùng lá chuối để che đi cái nóng của mặt trời.",
@@ -10601,6 +10697,22 @@
    "blank": "Chữa"
   }
  ],
+ "w|chưa bao giờ": [
+  {
+   "text": "Nha sĩ Hùng chưa bao giờ đến muộn một buổi hẹn nào.",
+   "en": "Dentist Hùng has never been late for a single appointment.",
+   "ko": "치과 의사 훙은 예약에 한 번도 늦은 적이 없어요.",
+   "blank": "chưa bao giờ",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết: từ ngày Thảo đi, Hương chưa bao giờ quên sinh nhật bạn.",
+   "en": "Hương wrote that since Thảo left, she has never forgotten her friend's birthday.",
+   "ko": "흐엉은 타오가 떠난 뒤로 친구 생일을 한 번도 잊은 적이 없다고 썼어요.",
+   "blank": "chưa bao giờ",
+   "src": "made"
+  }
+ ],
  "w|chữa bệnh": [
   {
    "text": "Bác sĩ này chữa bệnh rất tận tâm.",
@@ -11310,6 +11422,22 @@
    "en": "Mai knows how to transform her nerves into energy on stage.",
    "ko": "마이는 긴장감을 무대 위 에너지로 바꾸는 법을 알아요.",
    "blank": "chuyển hóa",
+   "src": "made"
+  }
+ ],
+ "w|chuyên khoa": [
+  {
+   "text": "Hùng học thêm hai năm để lấy chứng chỉ chuyên khoa chỉnh nha.",
+   "en": "Hùng studied two more years to get his specialist certificate in orthodontics.",
+   "ko": "훙은 치아 교정 전문 자격을 따려고 이 년을 더 공부했어요.",
+   "blank": "chuyên khoa",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể bệnh viện tỉnh giờ đã có thêm nhiều chuyên khoa mới.",
+   "en": "Hương writes that the provincial hospital now has many new specialties.",
+   "ko": "흐엉은 도립 병원에 새 전문 진료과가 많이 생겼다고 써요.",
+   "blank": "chuyên khoa",
    "src": "made"
   }
  ],
@@ -12308,6 +12436,22 @@
    "en": "A young woman carrying her first baby comes in to ask Thảo about fever medicine for newborns.",
    "ko": "첫아이를 안은 젊은 엄마가 신생아 해열제를 물으러 타오에게 와요.",
    "blank": "con đầu lòng",
+   "src": "made"
+  }
+ ],
+ "w|côn đồ": [
+  {
+   "text": "Hùng từng khâu môi cho một cậu thanh niên bị bọn côn đồ đánh ngoài quán.",
+   "en": "Hùng once stitched the lip of a young man who'd been beaten by thugs outside a bar.",
+   "ko": "훙은 술집 밖에서 깡패들에게 맞은 청년의 입술을 꿰매 준 적이 있어요.",
+   "blank": "côn đồ",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết rằng đầu ngõ giờ yên tĩnh, không còn đám côn đồ tụ tập nữa.",
+   "en": "Hương writes that the end of the lane is quiet now, with no more gangs of thugs hanging around.",
+   "ko": "흐엉은 골목 어귀가 이제 조용하고 깡패들이 더는 모이지 않는다고 썼어요.",
+   "blank": "côn đồ",
    "src": "made"
   }
  ],
@@ -18519,6 +18663,22 @@
    "src": "made"
   }
  ],
+ "w|đồ dùng": [
+  {
+   "text": "Hùng luôn khử trùng đồ dùng khám bệnh sau mỗi lượt bệnh nhân.",
+   "en": "Hùng always sterilizes the instruments after every patient.",
+   "ko": "훙은 환자를 볼 때마다 진료 도구를 꼭 소독해요.",
+   "blank": "đồ dùng",
+   "src": "made"
+  },
+  {
+   "text": "Hương hỏi Thảo cần đồ dùng gì cho em bé để gửi vào.",
+   "en": "Hương asks Thảo what things she needs for the baby so she can send them.",
+   "ko": "흐엉은 아기에게 필요한 물건이 뭔지 보내 주겠다며 타오에게 물어요.",
+   "blank": "đồ dùng",
+   "src": "made"
+  }
+ ],
  "w|đồ gia dụng": [
   {
    "text": "Ở thị trấn biển của Đức, đồ gia dụng làm bằng tre rất được khách du lịch ưa chuộng.",
@@ -18822,6 +18982,22 @@
    "en": "The press praised the original storytelling in Lan's debut film.",
    "ko": "언론은 란의 데뷔작에서 독특한 이야기 방식을 칭찬했어요.",
    "blank": "độc đáo",
+   "src": "made"
+  }
+ ],
+ "w|độc hại": [
+  {
+   "text": "Hùng không dùng loại thuốc tẩy trắng rẻ tiền vì sợ có chất độc hại.",
+   "en": "Hùng doesn't use cheap whitening products for fear of harmful substances.",
+   "ko": "훙은 해로운 성분이 있을까 봐 싸구려 미백제를 쓰지 않아요.",
+   "blank": "độc hại",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể khu nhà mới gần nhà máy nên khói bụi độc hại lắm.",
+   "en": "Hương writes that her new home is near a factory, so the smoke and dust are very harmful.",
+   "ko": "흐엉은 새 집이 공장 근처라 연기와 먼지가 아주 해롭다고 써요.",
+   "blank": "độc hại",
    "src": "made"
   }
  ],
@@ -20141,6 +20317,22 @@
    "src": "made"
   }
  ],
+ "w|du thuyền": [
+  {
+   "text": "Một vị khách của Hùng bị gãy răng khi đi du thuyền trên vịnh.",
+   "en": "One of Hùng's patients broke a tooth while on a cruise in the bay.",
+   "ko": "훙의 환자 한 명은 만에서 유람선을 타다가 이가 부러졌어요.",
+   "blank": "du thuyền",
+   "src": "made"
+  },
+  {
+   "text": "Hương gửi kèm tấm ảnh chụp trên du thuyền ở Hạ Long.",
+   "en": "Hương enclosed a photo taken on a cruise boat in Hạ Long.",
+   "ko": "흐엉은 하롱베이 유람선에서 찍은 사진을 함께 보냈어요.",
+   "blank": "du thuyền",
+   "src": "made"
+  }
+ ],
  "w|dự tính": [
   {
    "text": "Minh dự tính đổ mái vào thứ bảy nếu trời không mưa.",
@@ -21103,6 +21295,22 @@
    "src": "made"
   }
  ],
+ "w|ép giá": [
+  {
+   "text": "Nhà cung cấp định ép giá vật liệu trám răng nên Hùng đổi sang chỗ khác.",
+   "en": "The supplier tried to force up the price of filling material, so Hùng switched to another one.",
+   "ko": "공급업체가 충전재 값을 억지로 올리려 해서 훙은 다른 곳으로 바꿨어요.",
+   "blank": "ép giá",
+   "src": "made"
+  },
+  {
+   "text": "Hương phàn nàn rằng mùa lễ, mấy tiệm ở chợ hay ép giá khách lạ.",
+   "en": "Hương complains that during the holidays the shops at the market tend to overcharge strangers.",
+   "ko": "흐엉은 명절이면 시장 가게들이 낯선 손님에게 값을 바가지 씌운다고 투덜대요.",
+   "blank": "ép giá",
+   "src": "made"
+  }
+ ],
  "w|ga": [
   {
    "text": "Ga này gần nhà tớ.",
@@ -21785,6 +21993,22 @@
    "en": "Causing trouble in class will get you a warning.",
    "ko": "교실에서 소란 피우면 주의를 받아.",
    "blank": "Gây rối"
+  }
+ ],
+ "w|gây tê": [
+  {
+   "text": "Trước khi nhổ răng khôn, Hùng tiêm gây tê cho bệnh nhân.",
+   "en": "Before pulling the wisdom tooth, Hùng gives the patient a local anesthetic.",
+   "ko": "사랑니를 뽑기 전에 훙은 환자에게 마취 주사를 놓아요.",
+   "blank": "gây tê",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể mình vừa nhổ răng, đến giờ thuốc gây tê vẫn chưa hết.",
+   "en": "Hương writes that she just had a tooth pulled and the anesthetic still hasn't worn off.",
+   "ko": "흐엉은 방금 이를 뽑았는데 아직도 마취가 안 풀렸다고 썼어요.",
+   "blank": "gây tê",
+   "src": "made"
   }
  ],
  "w|gãy xương": [
@@ -23547,6 +23771,22 @@
    "blank": "giường"
   }
  ],
+ "w|giường bệnh": [
+  {
+   "text": "Năm ngoái, Hùng nằm trên giường bệnh một tuần sau ca mổ ruột thừa.",
+   "en": "Last year Hùng spent a week in a hospital bed after an appendix operation.",
+   "ko": "작년에 훙은 맹장 수술 뒤 일주일 동안 병상에 누워 있었어요.",
+   "blank": "giường bệnh",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết lá thư này khi ngồi cạnh giường bệnh của bà ngoại.",
+   "en": "Hương wrote this letter sitting beside her grandmother's hospital bed.",
+   "ko": "흐엉은 외할머니 병상 옆에 앉아 이 편지를 썼어요.",
+   "blank": "giường bệnh",
+   "src": "made"
+  }
+ ],
  "w|giúp": [
   {
    "text": "Anh giúp em với.",
@@ -24911,6 +25151,22 @@
    "en": "These seeds are small but very fragrant when roasted.",
    "ko": "이 씨앗은 작지만 볶으면 아주 고소해.",
    "blank": "Hạt"
+  }
+ ],
+ "w|hắt hơi": [
+  {
+   "text": "Cậu bé hắt hơi ngay lúc Hùng đang khám, cả hai cùng bật cười.",
+   "en": "The boy sneezed right while Hùng was examining him, and they both burst out laughing.",
+   "ko": "훙이 진찰하는 순간 남자아이가 재채기를 해서 둘 다 웃음을 터뜨렸어요.",
+   "blank": "hắt hơi",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể mùa này phấn hoa nhiều, ra đường là hắt hơi liên tục.",
+   "en": "Hương writes that there's a lot of pollen this season and she sneezes nonstop whenever she goes out.",
+   "ko": "흐엉은 이맘때 꽃가루가 많아 밖에 나가면 재채기를 계속한다고 써요.",
+   "blank": "hắt hơi",
+   "src": "made"
   }
  ],
  "w|hàu": [
@@ -27239,6 +27495,22 @@
    "src": "made"
   }
  ],
+ "w|hút bụi": [
+  {
+   "text": "Cuối ngày, Hùng hút bụi phòng chờ trước khi khóa cửa.",
+   "en": "At the end of the day, Hùng vacuums the waiting room before locking up.",
+   "ko": "하루가 끝나면 훙은 문을 잠그기 전에 대기실을 청소기로 밀어요.",
+   "blank": "hút bụi",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể con trai mười tuổi đã biết tự hút bụi nhà cửa.",
+   "en": "Hương writes that her ten-year-old son can vacuum the house by himself now.",
+   "ko": "흐엉은 열 살 아들이 이제 혼자 집 청소기를 돌린다고 써요.",
+   "blank": "hút bụi",
+   "src": "made"
+  }
+ ],
  "w|hút thuốc": [
   {
    "text": "Tôi có được hút thuốc ở đây không?",
@@ -27752,6 +28024,22 @@
    "en": "Lan's mother warns her not to go out alone at night in case there are bad people around.",
    "ko": "란의 엄마는 나쁜 사람이 있을지 모르니 밤에 혼자 다니지 말라고 일러요.",
    "blank": "kẻ xấu",
+   "src": "made"
+  }
+ ],
+ "w|kệch cỡm": [
+  {
+   "text": "Hùng thấy tấm biển hiệu mới của phòng khám trông hơi kệch cỡm nên nhờ vẽ lại.",
+   "en": "Hùng thought the clinic's new sign looked a bit tacky, so he had it redone.",
+   "ko": "훙은 새 치과 간판이 좀 촌스럽고 어색해 보여서 다시 그려 달라고 했어요.",
+   "blank": "kệch cỡm",
+   "src": "made"
+  },
+  {
+   "text": "Hương tự giễu bức ảnh cưới của mình trông kệch cỡm vì váy quá rộng.",
+   "en": "Hương jokes that her wedding photo looks awkward because the dress was too big.",
+   "ko": "흐엉은 드레스가 너무 커서 결혼사진이 우스꽝스러워 보인다고 스스로 놀려요.",
+   "blank": "kệch cỡm",
    "src": "made"
   }
  ],
@@ -29173,6 +29461,70 @@
    "src": "made"
   }
  ],
+ "w|khoa ngoại": [
+  {
+   "text": "Ca gãy xương hàm phức tạp, Hùng phải chuyển bệnh nhân sang khoa ngoại.",
+   "en": "The broken jaw was complicated, so Hùng had to send the patient to surgery.",
+   "ko": "턱뼈 골절이 복잡해서 훙은 환자를 외과로 보내야 했어요.",
+   "blank": "khoa ngoại",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể anh trai bị gãy chân, phải nằm khoa ngoại mấy tuần.",
+   "en": "Hương writes that her brother broke his leg and had to stay in the surgical ward for weeks.",
+   "ko": "흐엉은 오빠가 다리가 부러져 몇 주 동안 외과 병동에 있었다고 써요.",
+   "blank": "khoa ngoại",
+   "src": "made"
+  }
+ ],
+ "w|khoa nhi": [
+  {
+   "text": "Vợ Hùng là bác sĩ ở khoa nhi của bệnh viện tỉnh.",
+   "en": "Hùng's wife is a doctor in the pediatrics department of the provincial hospital.",
+   "ko": "훙의 아내는 도립 병원 소아과 의사예요.",
+   "blank": "khoa nhi",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể đứa út vừa nằm viện ở khoa nhi vì sốt cao.",
+   "en": "Hương writes that her youngest was just in the pediatric ward with a high fever.",
+   "ko": "흐엉은 막내가 고열로 소아과 병동에 입원했었다고 써요.",
+   "blank": "khoa nhi",
+   "src": "made"
+  }
+ ],
+ "w|khoa nội": [
+  {
+   "text": "Thấy ông cụ hay chóng mặt, Hùng khuyên ông đi khám khoa nội.",
+   "en": "Seeing the old man often gets dizzy, Hùng advises him to see internal medicine.",
+   "ko": "할아버지가 자주 어지러워하자 훙은 내과 진료를 받아 보라고 권했어요.",
+   "blank": "khoa nội",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể bố đi khám khoa nội mới biết bị cao huyết áp.",
+   "en": "Hương writes that her father only found out about his high blood pressure after a visit to internal medicine.",
+   "ko": "흐엉은 아빠가 내과에 가서야 고혈압인 걸 알았다고 써요.",
+   "blank": "khoa nội",
+   "src": "made"
+  }
+ ],
+ "w|khoa sản": [
+  {
+   "text": "Bệnh nhân mang thai được Hùng gửi giấy hỏi ý kiến khoa sản trước khi chụp phim.",
+   "en": "For pregnant patients, Hùng sends a note to the obstetrics department before taking X-rays.",
+   "ko": "임신한 환자는 엑스레이를 찍기 전에 훙이 산부인과에 의견을 묻는 서류를 보내요.",
+   "blank": "khoa sản",
+   "src": "made"
+  },
+  {
+   "text": "Hương báo tin em gái vừa sinh con ở khoa sản bệnh viện huyện.",
+   "en": "Hương shares the news that her younger sister just gave birth in the maternity ward of the district hospital.",
+   "ko": "흐엉은 여동생이 군 병원 산부인과에서 아기를 낳았다는 소식을 전해요.",
+   "blank": "khoa sản",
+   "src": "made"
+  }
+ ],
  "w|khoai": [
   {
    "text": "Mẹ luộc khoai cho cả nhà.",
@@ -30569,6 +30921,22 @@
    "blank": "ký"
   }
  ],
+ "w|kỳ": [
+  {
+   "text": "Tối về, Hùng tắm và kỳ lưng thật kỹ cho đỡ mỏi.",
+   "en": "When he gets home at night, Hùng takes a bath and scrubs his back well to ease the aches.",
+   "ko": "밤에 집에 오면 훙은 피로가 풀리게 목욕하며 등을 꼼꼼히 밀어요.",
+   "blank": "kỳ",
+   "src": "made"
+  },
+  {
+   "text": "Trong thư, Hương nhắc lại những buổi hai đứa ra sông kỳ cọ cho nhau.",
+   "en": "In her letter, Hương recalls the days the two of them went to the river and scrubbed each other's backs.",
+   "ko": "흐엉은 편지에서 둘이 강에 가서 서로 등을 밀어 주던 날들을 떠올려요.",
+   "blank": "kỳ",
+   "src": "made"
+  }
+ ],
  "w|kỳ diệu": [
   {
    "text": "Hùng viết rằng tình bạn kéo dài cả đời là điều kỳ diệu.",
@@ -31143,6 +31511,22 @@
    "blank": "lắm"
   }
  ],
+ "w|làm bạn": [
+  {
+   "text": "Con chó nhỏ ở phòng khám của Hùng làm bạn với mấy đứa trẻ sợ khám răng.",
+   "en": "The little dog at Hùng's clinic keeps the kids who are scared of the dentist company.",
+   "ko": "훙의 치과에 있는 작은 개는 치과를 무서워하는 아이들의 친구가 되어 줘요.",
+   "blank": "làm bạn",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết rằng hai đứa đã làm bạn với nhau hơn hai mươi năm rồi.",
+   "en": "Hương writes that the two of them have been friends for over twenty years now.",
+   "ko": "흐엉은 둘이 친구로 지낸 지 이십 년이 넘었다고 썼어요.",
+   "blank": "làm bạn",
+   "src": "made"
+  }
+ ],
  "w|làm chứng": [
   {
    "text": "Theo bài của Phong, một nhân viên kế toán đã đồng ý ra tòa làm chứng.",
@@ -31634,6 +32018,22 @@
    "en": "The novel tells of a freezing winter in the mountains.",
    "ko": "그 소설은 산간 지역의 몹시 추운 겨울 이야기예요.",
    "blank": "lạnh giá",
+   "src": "made"
+  }
+ ],
+ "w|lành mạnh": [
+  {
+   "text": "Hùng tin rằng ăn uống lành mạnh là cách giữ răng tốt nhất.",
+   "en": "Hùng believes healthy eating is the best way to keep your teeth.",
+   "ko": "훙은 건강하게 먹는 게 이를 지키는 가장 좋은 방법이라고 믿어요.",
+   "blank": "lành mạnh",
+   "src": "made"
+  },
+  {
+   "text": "Hương nhắn Thảo giữ lối sống lành mạnh, bớt thức khuya.",
+   "en": "Hương tells Thảo to keep a healthy lifestyle and stay up late less.",
+   "ko": "흐엉은 타오에게 건강한 생활을 하고 밤을 덜 새우라고 써요.",
+   "blank": "lành mạnh",
    "src": "made"
   }
  ],
@@ -34129,6 +34529,22 @@
    "en": "Remember to save the new address on your phone.",
    "ko": "새 주소를 휴대폰에 저장하는 거 잊지 마.",
    "blank": "lưu"
+  }
+ ],
+ "w|lưu manh": [
+  {
+   "text": "Hùng kể hồi nhỏ từng bị một tên lưu manh giật mất chiếc xe đạp.",
+   "en": "Hùng recalls that as a child a hoodlum snatched his bicycle.",
+   "ko": "훙은 어릴 때 건달에게 자전거를 빼앗긴 적이 있다고 얘기해요.",
+   "blank": "lưu manh",
+   "src": "made"
+  },
+  {
+   "text": "Hương nhắc lại hồi bé hai đứa từng bị một gã lưu manh dọa ở cổng trường.",
+   "en": "Hương recalls how as kids they were once threatened by a hoodlum at the school gate.",
+   "ko": "흐엉은 어릴 때 둘이 학교 앞에서 건달에게 위협당한 적이 있다고 떠올려요.",
+   "blank": "lưu manh",
+   "src": "made"
   }
  ],
  "w|lưu trú": [
@@ -38705,6 +39121,22 @@
    "src": "made"
   }
  ],
+ "w|ngăn ngừa": [
+  {
+   "text": "Hùng hướng dẫn cách chải răng đúng để ngăn ngừa mảng bám.",
+   "en": "Hùng shows the correct way to brush to prevent plaque.",
+   "ko": "훙은 치석을 막는 올바른 양치법을 알려 줘요.",
+   "blank": "ngăn ngừa",
+   "src": "made"
+  },
+  {
+   "text": "Hương khuyên Thảo rửa tay thường xuyên để ngăn ngừa bệnh lây.",
+   "en": "Hương advises Thảo to wash her hands often to prevent infections.",
+   "ko": "흐엉은 전염병을 막으려면 손을 자주 씻으라고 타오에게 권해요.",
+   "blank": "ngăn ngừa",
+   "src": "made"
+  }
+ ],
  "w|ngân sách": [
   {
    "text": "Bếp trưởng phải cân đối ngân sách mua nguyên liệu mỗi tuần.",
@@ -39153,6 +39585,22 @@
    "ko": "그들은 비참하게 살고 있어요.",
    "blank": "nghèo khổ",
    "src": "tatoeba:3468107/tucm en:1806185"
+  }
+ ],
+ "w|nghẹt mũi": [
+  {
+   "text": "Bệnh nhân bị nghẹt mũi thì Hùng cho nghỉ lâu hơn giữa các lần há miệng.",
+   "en": "When a patient has a stuffy nose, Hùng gives longer breaks between opening wide.",
+   "ko": "코가 막힌 환자에게는 훙이 입 벌리는 사이사이 더 오래 쉬게 해 줘요.",
+   "blank": "nghẹt mũi",
+   "src": "made"
+  },
+  {
+   "text": "Hương hỏi thăm Thảo đã đỡ nghẹt mũi chưa.",
+   "en": "Hương asks whether Thảo's stuffy nose has gotten better.",
+   "ko": "흐엉은 타오에게 코막힘이 좀 나아졌는지 물어요.",
+   "blank": "nghẹt mũi",
+   "src": "made"
   }
  ],
  "w|nghêu": [
@@ -43653,6 +44101,22 @@
    "src": "made"
   }
  ],
+ "w|nôn mửa": [
+  {
+   "text": "Có bệnh nhân sợ đến mức suýt nôn mửa khi vừa ngồi lên ghế của Hùng.",
+   "en": "One patient was so scared she nearly threw up as soon as she sat in Hùng's chair.",
+   "ko": "어떤 환자는 훙의 의자에 앉자마자 거의 토할 뻔할 만큼 겁을 냈어요.",
+   "blank": "nôn mửa",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể chuyến xe về quê đường xóc quá, cả nhà nôn mửa liên tục.",
+   "en": "Hương writes that the bus ride home was so bumpy the whole family kept throwing up.",
+   "ko": "흐엉은 고향 가는 버스 길이 너무 덜컹거려서 온 가족이 계속 토했다고 써요.",
+   "blank": "nôn mửa",
+   "src": "made"
+  }
+ ],
  "w|nóng": [
   {
    "text": "Hôm nay trời nóng quá.",
@@ -46167,6 +46631,22 @@
    "src": "made"
   }
  ],
+ "w|phòng bệnh": [
+  {
+   "text": "Hùng khuyên khách súc miệng nước muối để phòng bệnh viêm lợi.",
+   "en": "Hùng advises patients to rinse with salt water to prevent gum disease.",
+   "ko": "훙은 잇몸병을 예방하려면 소금물로 입을 헹구라고 환자들에게 권해요.",
+   "blank": "phòng bệnh",
+   "src": "made"
+  },
+  {
+   "text": "Hương dặn bạn mùa lạnh nhớ tiêm cúm để phòng bệnh.",
+   "en": "Hương reminds her friend to get a flu shot in the cold season to stay healthy.",
+   "ko": "흐엉은 추운 철엔 병을 막으려면 독감 주사를 꼭 맞으라고 친구에게 일러요.",
+   "blank": "phòng bệnh",
+   "src": "made"
+  }
+ ],
  "w|phòng bếp": [
   {
    "text": "Từ phòng bếp nhà Đức có thể nghe rõ tiếng sóng vỗ vào bờ đá.",
@@ -46325,6 +46805,22 @@
    "src": "made"
   }
  ],
+ "w|phòng mổ": [
+  {
+   "text": "Hồi thực tập, Hùng từng đứng trong phòng mổ suốt sáu tiếng.",
+   "en": "As an intern, Hùng once stood in the operating room for six hours straight.",
+   "ko": "인턴 시절 훙은 수술실에 여섯 시간 내내 서 있었던 적이 있어요.",
+   "blank": "phòng mổ",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể cả nhà chờ ngoài phòng mổ suốt đêm khi bố mổ tim.",
+   "en": "Hương recounts how the whole family waited outside the operating room all night during her father's heart surgery.",
+   "ko": "흐엉은 아빠가 심장 수술을 받을 때 온 가족이 밤새 수술실 밖에서 기다렸다고 써요.",
+   "blank": "phòng mổ",
+   "src": "made"
+  }
+ ],
  "w|phòng ngủ": [
   {
    "text": "Phòng ngủ bên trái là của mình.",
@@ -46337,6 +46833,22 @@
    "en": "Tidy the bedroom before guests arrive.",
    "ko": "손님 오기 전에 침실 치워.",
    "blank": "phòng ngủ"
+  }
+ ],
+ "w|phòng ngừa": [
+  {
+   "text": "Để phòng ngừa sâu răng, Hùng dặn bọn trẻ bớt ăn kẹo.",
+   "en": "To prevent cavities, Hùng tells the kids to eat less candy.",
+   "ko": "충치를 막으려고 훙은 아이들에게 사탕을 덜 먹으라고 일러요.",
+   "blank": "phòng ngừa",
+   "src": "made"
+  },
+  {
+   "text": "Hương gửi kèm vài gói trà gừng để Thảo phòng ngừa cảm lạnh.",
+   "en": "Hương sends a few packets of ginger tea so Thảo can ward off colds.",
+   "ko": "흐엉은 타오가 감기를 예방하도록 생강차 몇 봉지를 같이 보내요.",
+   "blank": "phòng ngừa",
+   "src": "made"
   }
  ],
  "w|phòng nhân sự": [
@@ -46526,6 +47038,22 @@
    "en": "An architecture magazine reporter asks Mai if he can photograph the house.",
    "ko": "건축 잡지 기자가 마이에게 집 사진을 찍어도 되는지 물어요.",
    "blank": "phóng viên",
+   "src": "made"
+  }
+ ],
+ "w|phóng xe": [
+  {
+   "text": "Hùng mắng cậu em trai vì hay phóng xe trên đường đông người.",
+   "en": "Hùng scolds his younger brother for speeding on crowded streets.",
+   "ko": "훙은 붐비는 길에서 오토바이를 쌩쌩 모는 남동생을 혼내요.",
+   "blank": "phóng xe",
+   "src": "made"
+  },
+  {
+   "text": "Đọc thư, Thảo bật cười khi Hương nhắc lại vụ hai đứa phóng xe đạp xuống dốc.",
+   "en": "Reading the letter, Thảo laughs when Hương mentions the time they raced their bikes down the hill.",
+   "ko": "타오는 둘이 자전거로 비탈을 쏜살같이 내려가던 일을 흐엉이 꺼내자 편지를 읽다 웃었어요.",
+   "blank": "phóng xe",
    "src": "made"
   }
  ],
@@ -49869,6 +50397,22 @@
    "src": "made"
   }
  ],
+ "w|sáng mai": [
+  {
+   "text": "Hùng hẹn chị Mai sáng mai quay lại tháo chỉ.",
+   "en": "Hùng asks Mai to come back tomorrow morning to have the stitches taken out.",
+   "ko": "훙은 마이에게 내일 아침 실밥을 뽑으러 다시 오라고 했어요.",
+   "blank": "sáng mai",
+   "src": "made"
+  },
+  {
+   "text": "Hương viết vội vì sáng mai phải đi công tác sớm.",
+   "en": "Hương writes in a hurry because she has to leave early on a business trip tomorrow morning.",
+   "ko": "흐엉은 내일 아침 일찍 출장을 가야 해서 서둘러 썼어요.",
+   "blank": "sáng mai",
+   "src": "made"
+  }
+ ],
  "w|sáng nay": [
   {
    "text": "Sáng nay ăn phở chưa?",
@@ -50779,6 +51323,22 @@
    "src": "made"
   }
  ],
+ "w|số đo": [
+  {
+   "text": "Để làm răng giả, Hùng phải lấy số đo hàm của bà cụ thật chính xác.",
+   "en": "To make the dentures, Hùng has to take very precise measurements of the old woman's jaw.",
+   "ko": "틀니를 만들려고 훙은 할머니 턱 치수를 아주 정확히 재야 해요.",
+   "blank": "số đo",
+   "src": "made"
+  },
+  {
+   "text": "Hương nhờ Thảo gửi số đo để may tặng bạn một chiếc áo dài.",
+   "en": "Hương asks Thảo to send her measurements so she can sew her an áo dài as a gift.",
+   "ko": "흐엉은 아오자이를 지어 선물하려고 타오에게 치수를 보내 달라고 해요.",
+   "blank": "số đo",
+   "src": "made"
+  }
+ ],
  "w|so giá": [
   {
    "text": "Trước khi mua đèn bàn, Hùng đi hết một vòng chợ để so giá.",
@@ -50821,6 +51381,22 @@
    "en": "Check the quantity of goods before delivery.",
    "ko": "배송 전에 상품 수량을 확인해.",
    "blank": "số lượng"
+  }
+ ],
+ "w|sổ mũi": [
+  {
+   "text": "Bé Na sổ mũi nên Hùng hẹn lùi lịch nhổ răng sang tuần sau.",
+   "en": "Little Na has a runny nose, so Hùng moves her tooth extraction to next week.",
+   "ko": "나가 콧물을 흘려서 훙은 이 뽑는 날을 다음 주로 미뤘어요.",
+   "blank": "sổ mũi",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể mấy hôm nay trời trở gió, hai đứa nhỏ cứ sổ mũi suốt.",
+   "en": "Hương writes that the weather has turned windy lately and both kids keep having runny noses.",
+   "ko": "흐엉은 요 며칠 바람이 바뀌어서 두 아이가 계속 콧물을 흘린다고 써요.",
+   "blank": "sổ mũi",
+   "src": "made"
   }
  ],
  "w|số phận": [
@@ -53619,6 +54195,22 @@
    "en": "Mention me, all right?",
    "ko": "내 이름도 전해 줘.",
    "blank": "tên"
+  }
+ ],
+ "w|tên trộm": [
+  {
+   "text": "Tuần trước, tên trộm phá cửa phòng khám của Hùng nhưng không lấy được gì.",
+   "en": "Last week a thief broke the door of Hùng's clinic but couldn't take anything.",
+   "ko": "지난주 도둑이 훙의 치과 문을 부쉈지만 아무것도 못 가져갔어요.",
+   "blank": "tên trộm",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể khu phố cũ vừa bắt được một tên trộm chuyên lấy xe đạp.",
+   "en": "Hương writes that the old neighborhood just caught a thief who specialized in stealing bicycles.",
+   "ko": "흐엉은 옛 동네에서 자전거만 훔치던 도둑이 잡혔다고 전해요.",
+   "blank": "tên trộm",
+   "src": "made"
   }
  ],
  "w|tết": [
@@ -59205,6 +59797,22 @@
    "src": "made"
   }
  ],
+ "w|toa thuốc": [
+  {
+   "text": "Sau khi nhổ răng, Hùng kê toa thuốc giảm đau cho anh Tuấn.",
+   "en": "After the extraction, Hùng wrote Tuấn a prescription for painkillers.",
+   "ko": "이를 뽑은 뒤 훙은 뚜언에게 진통제 처방전을 써 줬어요.",
+   "blank": "toa thuốc",
+   "src": "made"
+  },
+  {
+   "text": "Hương chép lại toa thuốc ho của bà để Thảo mua cho mẹ.",
+   "en": "Hương copies out her grandmother's cough prescription so Thảo can buy it for her mother.",
+   "ko": "흐엉은 타오가 엄마에게 사 드릴 수 있게 할머니의 기침약 처방전을 베껴 적어요.",
+   "blank": "toa thuốc",
+   "src": "made"
+  }
+ ],
  "w|toán": [
   {
    "text": "Tôi là một giáo viên dạy toán cấp ba.",
@@ -60206,6 +60814,22 @@
    "en": "The chase scene was shot at an abandoned gas station.",
    "ko": "추격 장면은 버려진 주유소에서 찍었어요.",
    "blank": "trạm xăng",
+   "src": "made"
+  }
+ ],
+ "w|trạm y tế": [
+  {
+   "text": "Mỗi tháng, Hùng về trạm y tế xã khám răng miễn phí cho học sinh.",
+   "en": "Every month Hùng goes to the commune health station to check pupils' teeth for free.",
+   "ko": "훙은 달마다 면 보건소에 가서 학생들 이를 무료로 봐 줘요.",
+   "blank": "trạm y tế",
+   "src": "made"
+  },
+  {
+   "text": "Hương kể mẹ mình giờ làm ở trạm y tế phường.",
+   "en": "Hương writes that her mother now works at the ward health station.",
+   "ko": "흐엉은 엄마가 지금 동네 보건소에서 일한다고 써요.",
+   "blank": "trạm y tế",
    "src": "made"
   }
  ],
@@ -67314,6 +67938,22 @@
    "en": "With just a glance, Hương knows her teammate wants to pass.",
    "ko": "눈빛 하나만으로 흐엉은 동료가 패스하려는 뜻을 알아요.",
    "blank": "ý",
+   "src": "made"
+  }
+ ],
+ "w|y bác sĩ": [
+  {
+   "text": "Phòng khám của Hùng có năm y bác sĩ và hai lễ tân.",
+   "en": "Hùng's clinic has five medical staff and two receptionists.",
+   "ko": "훙의 치과에는 의료진 다섯 명과 접수원 두 명이 있어요.",
+   "blank": "y bác sĩ",
+   "src": "made"
+  },
+  {
+   "text": "Hương rất cảm phục các y bác sĩ đã chăm bà suốt mùa dịch.",
+   "en": "Hương deeply admires the medical staff who cared for her grandmother throughout the epidemic.",
+   "ko": "흐엉은 전염병 내내 할머니를 돌본 의료진에게 깊이 감사해요.",
+   "blank": "y bác sĩ",
    "src": "made"
   }
  ],
