@@ -1103,6 +1103,22 @@
    "src": "made"
   }
  ],
+ "w|간하다": [
+  {
+   "text": "민수는 국을 맛보고 소금으로 살짝 간했어요.",
+   "en": "Minsu tasted the soup and seasoned it lightly with salt.",
+   "ko": "민수는 국을 맛보고 소금으로 살짝 간했어요.",
+   "blank": "간했어요",
+   "src": "made"
+  },
+  {
+   "text": "배달 온 국이 싱거워서 지영은 국간장으로 다시 간했어요.",
+   "en": "The delivered soup was bland, so Jiyoung re-seasoned it with soup soy sauce.",
+   "ko": "배달 온 국이 싱거워서 지영은 국간장으로 다시 간했어요.",
+   "blank": "간했어요",
+   "src": "made"
+  }
+ ],
  "w|간호사": [
   {
    "text": "간호사가 혈압 재 줬어.",
@@ -1443,6 +1459,22 @@
    "en": "Emotion welled up at my eyes.",
    "ko": "감동이 눈가에 고였어.",
    "blank": "감동이"
+  }
+ ],
+ "w|감동적": [
+  {
+   "text": "친구의 결혼식 축사는 경민이 들어 본 것 중 가장 감동적인 연설이었어요.",
+   "en": "The speech at his friend's wedding was the most moving one Gyeongmin had ever heard.",
+   "ko": "친구의 결혼식 축사는 경민이 들어 본 것 중 가장 감동적인 연설이었어요.",
+   "blank": "감동적인",
+   "src": "made"
+  },
+  {
+   "text": "다은은 화가가 시력을 잃고도 그림을 계속 그렸다는 이야기가 감동적이었어요.",
+   "en": "Daeun found the story of a painter who kept painting even after losing his sight very moving.",
+   "ko": "다은은 화가가 시력을 잃고도 그림을 계속 그렸다는 이야기가 감동적이었어요.",
+   "blank": "감동적이었어요",
+   "src": "made"
   }
  ],
  "w|감동하다": [
@@ -4021,6 +4053,22 @@
    "src": "made"
   }
  ],
+ "w|결석": [
+  {
+   "text": "김장철에는 일손이 모자라서 민수가 하루 결석을 할 뻔했어요.",
+   "en": "During kimchi-making season they were so short-handed that Minsu almost missed a day of school.",
+   "ko": "김장철에는 일손이 모자라서 민수가 하루 결석을 할 뻔했어요.",
+   "blank": "결석을",
+   "src": "made"
+  },
+  {
+   "text": "아들이 감기로 결석을 하는 바람에 지영은 해열제를 급히 주문했어요.",
+   "en": "Her son was absent from school with a cold, so Jiyoung quickly ordered fever medicine.",
+   "ko": "아들이 감기로 결석을 하는 바람에 지영은 해열제를 급히 주문했어요.",
+   "blank": "결석을",
+   "src": "made"
+  }
+ ],
  "w|결석하다": [
   {
    "text": "아파서 오늘 수업에 결석했어.",
@@ -5697,6 +5745,22 @@
    "src": "made"
   }
  ],
+ "w|고속버스": [
+  {
+   "text": "요즘은 고속버스로도 서울에서 부산까지 금방이라고 경민이 썼어요.",
+   "en": "Gyeongmin wrote that these days it doesn't take long to get from Seoul to Busan even by express bus.",
+   "ko": "요즘은 고속버스로도 서울에서 부산까지 금방이라고 경민이 썼어요.",
+   "blank": "고속버스로도",
+   "src": "made"
+  },
+  {
+   "text": "다은은 미술 대회에 나가려고 새벽 고속버스를 탔어요.",
+   "en": "Daeun took an early-morning express bus to enter an art contest.",
+   "ko": "다은은 미술 대회에 나가려고 새벽 고속버스를 탔어요.",
+   "blank": "고속버스를",
+   "src": "made"
+  }
+ ],
  "w|고아": [
   {
    "text": "신부는 어린 시절 고아로 자랐지만 지금은 든든한 가족이 생겼어요.",
@@ -6763,6 +6827,22 @@
    "blank": "공짜는"
   }
  ],
+ "w|공책": [
+  {
+   "text": "민수 어머니는 외상 장부 대신 낡은 공책에 단골 이름을 적어요.",
+   "en": "Instead of a credit ledger, Minsu's mother writes regulars' names in an old notebook.",
+   "ko": "민수 어머니는 외상 장부 대신 낡은 공책에 단골 이름을 적어요.",
+   "blank": "공책에",
+   "src": "made"
+  },
+  {
+   "text": "새 학기를 앞두고 지영은 공책을 열 권 묶음으로 주문했어요.",
+   "en": "Ahead of the new semester, Jiyoung ordered notebooks in a bundle of ten.",
+   "ko": "새 학기를 앞두고 지영은 공책을 열 권 묶음으로 주문했어요.",
+   "blank": "공책을",
+   "src": "made"
+  }
+ ],
  "w|공통점": [
   {
    "text": "우리 둘의 공통점을 찾았어.",
@@ -6989,6 +7069,22 @@
    "blank": "과수원이"
   }
  ],
+ "w|과식하다": [
+  {
+   "text": "상인들이 자꾸 음식을 권해서 민수는 장날마다 과식해요.",
+   "en": "The vendors keep offering him food, so Minsu overeats on every market day.",
+   "ko": "상인들이 자꾸 음식을 권해서 민수는 장날마다 과식해요.",
+   "blank": "과식해요",
+   "src": "made"
+  },
+  {
+   "text": "배달 음식은 양이 많아서 지영은 남기기 아까워 자꾸 과식했어요.",
+   "en": "Delivery food comes in big portions, and Jiyoung kept overeating because she hated leaving any.",
+   "ko": "배달 음식은 양이 많아서 지영은 남기기 아까워 자꾸 과식했어요.",
+   "blank": "과식했어요",
+   "src": "made"
+  }
+ ],
  "w|과연": [
   {
    "text": "과연 그렇게 될까?",
@@ -7001,6 +7097,22 @@
    "en": "Indeed, what he said was right.",
    "ko": "과연 그의 말이 맞았어.",
    "blank": "과연"
+  }
+ ],
+ "w|과외": [
+  {
+   "text": "떡집 아들은 민수에게 수학 과외를 공짜로 해 주겠다고 했어요.",
+   "en": "The rice-cake shop owner's son offered to tutor Minsu in math for free.",
+   "ko": "떡집 아들은 민수에게 수학 과외를 공짜로 해 주겠다고 했어요.",
+   "blank": "과외를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 과외 선생님을 구하는 대신 인터넷 강의를 결제했어요.",
+   "en": "Instead of finding a private tutor, Jiyoung paid for online lectures.",
+   "ko": "지영은 과외 선생님을 구하는 대신 인터넷 강의를 결제했어요.",
+   "blank": "과외",
+   "src": "made"
   }
  ],
  "w|과일": [
@@ -7072,6 +7184,22 @@
    "en": "Sohee took photos at the beach for a vacation assignment.",
    "ko": "소희는 바닷가에서 방학 과제로 쓸 사진을 찍었어요.",
    "blank": "과제로",
+   "src": "made"
+  }
+ ],
+ "w|과제물": [
+  {
+   "text": "민수는 가게를 보면서 틈틈이 학교 과제물을 계산대 옆에서 해요.",
+   "en": "Minsu does his school assignments next to the register whenever he has a spare moment while minding the shop.",
+   "ko": "민수는 가게를 보면서 틈틈이 학교 과제물을 계산대 옆에서 해요.",
+   "blank": "과제물을",
+   "src": "made"
+  },
+  {
+   "text": "지영의 딸이 미술 과제물에 쓸 재료를 급하게 새벽 배송으로 시켰어요.",
+   "en": "Jiyoung urgently ordered materials for her daughter's art assignment by dawn delivery.",
+   "ko": "지영의 딸이 미술 과제물에 쓸 재료를 급하게 새벽 배송으로 시켰어요.",
+   "blank": "과제물에",
    "src": "made"
   }
  ],
@@ -7765,6 +7893,22 @@
    "en": "There were a ton of people.",
    "ko": "사람이 굉장히 많았어.",
    "blank": "굉장히"
+  }
+ ],
+ "w|교과서": [
+  {
+   "text": "민수는 손님이 없을 때 계산대 밑에 둔 교과서를 꺼내 읽어요.",
+   "en": "When there are no customers, Minsu takes out the textbook he keeps under the counter and reads.",
+   "ko": "민수는 손님이 없을 때 계산대 밑에 둔 교과서를 꺼내 읽어요.",
+   "blank": "교과서를",
+   "src": "made"
+  },
+  {
+   "text": "아들이 학교에 교과서를 두고 와서 지영은 중고로 한 권 더 주문했어요.",
+   "en": "Her son left his textbook at school, so Jiyoung ordered another used copy.",
+   "ko": "아들이 학교에 교과서를 두고 와서 지영은 중고로 한 권 더 주문했어요.",
+   "blank": "교과서를",
+   "src": "made"
   }
  ],
  "w|교대": [
@@ -9069,6 +9213,22 @@
    "blank": "귀"
   }
  ],
+ "w|귀가": [
+  {
+   "text": "요즘은 야근 때문에 귀가 시간이 자정을 넘긴다고 경민이 하소연했어요.",
+   "en": "Gyeongmin complained that these days he gets home after midnight because of overtime.",
+   "ko": "요즘은 야근 때문에 귀가 시간이 자정을 넘긴다고 경민이 하소연했어요.",
+   "blank": "귀가",
+   "src": "made"
+  },
+  {
+   "text": "수업이 늦게 끝나서 다은의 귀가가 평소보다 한 시간 늦어졌어요.",
+   "en": "Class ended late, so Daeun got home an hour later than usual.",
+   "ko": "수업이 늦게 끝나서 다은의 귀가가 평소보다 한 시간 늦어졌어요.",
+   "blank": "귀가가",
+   "src": "made"
+  }
+ ],
  "w|귀걸이": [
   {
    "text": "작은 귀걸이를 양쪽에 달았어.",
@@ -9081,6 +9241,22 @@
    "en": "I lost one earring.",
    "ko": "한쪽 귀걸이를 잃어버렸어.",
    "blank": "귀걸이를"
+  }
+ ],
+ "w|귀국": [
+  {
+   "text": "경민은 친구의 귀국 날짜가 정해지면 공항에 마중 나가겠다고 약속했어요.",
+   "en": "Gyeongmin promised to go meet his friend at the airport once the date of the return home is set.",
+   "ko": "경민은 친구의 귀국 날짜가 정해지면 공항에 마중 나가겠다고 약속했어요.",
+   "blank": "귀국",
+   "src": "made"
+  },
+  {
+   "text": "유학 갔던 선생님의 귀국 소식에 다은과 친구들이 환영 카드를 만들었어요.",
+   "en": "At the news that their teacher was returning home from studying abroad, Daeun and her friends made a welcome card.",
+   "ko": "유학 갔던 선생님의 귀국 소식에 다은과 친구들이 환영 카드를 만들었어요.",
+   "blank": "귀국",
+   "src": "made"
   }
  ],
  "w|귀국하다": [
@@ -11047,6 +11223,22 @@
    "src": "made"
   }
  ],
+ "w|기념품": [
+  {
+   "text": "민수네 가게는 시장 입구에 있어서 관광객들이 기념품을 사러 자주 들러요.",
+   "en": "Minsu's shop is at the market entrance, so tourists often stop by to buy souvenirs.",
+   "ko": "민수네 가게는 시장 입구에 있어서 관광객들이 기념품을 사러 자주 들러요.",
+   "blank": "기념품을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 여행 가서 깜빡한 기념품을 결국 인터넷으로 주문했어요.",
+   "en": "Jiyoung ended up ordering online the souvenir she forgot to buy on her trip.",
+   "ko": "지영은 여행 가서 깜빡한 기념품을 결국 인터넷으로 주문했어요.",
+   "blank": "기념품을",
+   "src": "made"
+  }
+ ],
  "w|기능": [
   {
    "text": "민주주의 사회에서는 언론 기관의 기능이 매우 중요하다.",
@@ -11251,6 +11443,22 @@
    "en": "There's too much oil.",
    "ko": "기름이 너무 많아.",
    "blank": "기름이"
+  }
+ ],
+ "w|기름지다": [
+  {
+   "text": "시장 빈대떡은 기름져서 민수는 한 장만 먹어도 배가 불러요.",
+   "en": "The market's mung bean pancakes are greasy, so Minsu gets full after just one.",
+   "ko": "시장 빈대떡은 기름져서 민수는 한 장만 먹어도 배가 불러요.",
+   "blank": "기름져서",
+   "src": "made"
+  },
+  {
+   "text": "기름진 치킨을 시킬 때 지영은 꼭 무를 추가해요.",
+   "en": "When she orders greasy fried chicken, Jiyoung always adds pickled radish.",
+   "ko": "기름진 치킨을 시킬 때 지영은 꼭 무를 추가해요.",
+   "blank": "기름진",
+   "src": "made"
   }
  ],
  "w|기린": [
@@ -11815,6 +12023,22 @@
    "en": "The train just left.",
    "ko": "기차가 막 출발했어.",
    "blank": "기차가"
+  }
+ ],
+ "w|기차역": [
+  {
+   "text": "경민은 시골 기차역에서 마지막 열차를 놓쳤던 밤을 아직도 기억해요.",
+   "en": "Gyeongmin still remembers the night they missed the last train at a country station.",
+   "ko": "경민은 시골 기차역에서 마지막 열차를 놓쳤던 밤을 아직도 기억해요.",
+   "blank": "기차역에서",
+   "src": "made"
+  },
+  {
+   "text": "이번 과제는 오래된 기차역 건물을 연필로 스케치하는 거예요.",
+   "en": "This assignment is to sketch an old train station building in pencil.",
+   "ko": "이번 과제는 오래된 기차역 건물을 연필로 스케치하는 거예요.",
+   "blank": "기차역",
+   "src": "made"
   }
  ],
  "w|기초": [
@@ -12543,6 +12767,22 @@
    "en": "I took it out of my pocket.",
    "ko": "주머니에서 꺼냈어.",
    "blank": "꺼냈어"
+  }
+ ],
+ "w|꺼림칙하다": [
+  {
+   "text": "경민은 친구가 빌려 간 돈 이야기를 편지에 쓰기가 꺼림칙했어요.",
+   "en": "Gyeongmin felt uncomfortable bringing up the money his friend borrowed in the letter.",
+   "ko": "경민은 친구가 빌려 간 돈 이야기를 편지에 쓰기가 꺼림칙했어요.",
+   "blank": "꺼림칙했어요",
+   "src": "made"
+  },
+  {
+   "text": "인터넷에서 본 그림을 참고했다는 게 다은은 왠지 꺼림칙했어요.",
+   "en": "Somehow Daeun felt uneasy about having used a picture she saw online as a reference.",
+   "ko": "인터넷에서 본 그림을 참고했다는 게 다은은 왠지 꺼림칙했어요.",
+   "blank": "꺼림칙했어요",
+   "src": "made"
   }
  ],
  "w|꺼지다": [
@@ -13653,6 +13893,22 @@
    "en": "Age is just a number.",
    "ko": "나이가 숫자에 불과해.",
    "blank": "나이가"
+  }
+ ],
+ "w|나이프": [
+  {
+   "text": "민수는 칼국수집 사장님이 나이프 대신 가위로 면을 자르는 걸 신기하게 봤어요.",
+   "en": "Minsu watched with interest as the noodle shop owner cut noodles with scissors instead of a knife.",
+   "ko": "민수는 칼국수집 사장님이 나이프 대신 가위로 면을 자르는 걸 신기하게 봤어요.",
+   "blank": "나이프",
+   "src": "made"
+  },
+  {
+   "text": "스테이크용 나이프가 생각보다 무뎌서 지영은 반품을 신청했어요.",
+   "en": "The steak knives were duller than expected, so Jiyoung requested a return.",
+   "ko": "스테이크용 나이프가 생각보다 무뎌서 지영은 반품을 신청했어요.",
+   "blank": "나이프가",
+   "src": "made"
   }
  ],
  "w|나중": [
@@ -15467,6 +15723,22 @@
    "src": "made"
   }
  ],
+ "w|노선도": [
+  {
+   "text": "경민은 서울 지하철 노선도가 너무 복잡해져서 처음엔 길을 헤맸다고 털어놨어요.",
+   "en": "Gyeongmin admitted he got lost at first because the Seoul subway map has become so complicated.",
+   "ko": "경민은 서울 지하철 노선도가 너무 복잡해져서 처음엔 길을 헤맸다고 털어놨어요.",
+   "blank": "노선도가",
+   "src": "made"
+  },
+  {
+   "text": "다은은 지하철 노선도의 색깔을 빌려 추상화를 완성했어요.",
+   "en": "Daeun finished an abstract painting by borrowing the colors of the subway map.",
+   "ko": "다은은 지하철 노선도의 색깔을 빌려 추상화를 완성했어요.",
+   "blank": "노선도의",
+   "src": "made"
+  }
+ ],
  "w|노숙자": [
   {
    "text": "동민은 동창회에서 노숙자 쉼터에서 봉사하는 친구 이야기를 들었어요.",
@@ -17211,6 +17483,22 @@
    "blank": "다정하게"
   }
  ],
+ "w|다지다": [
+  {
+   "text": "민수는 만두소에 넣을 고기를 칼로 곱게 다져요.",
+   "en": "Minsu finely minces the meat for the dumpling filling with a knife.",
+   "ko": "민수는 만두소에 넣을 고기를 칼로 곱게 다져요.",
+   "blank": "다져요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 마늘을 직접 다지기 귀찮아서 냉동 마늘 큐브를 샀어요.",
+   "en": "Jiyoung didn't want to bother mincing garlic herself, so she bought frozen garlic cubes.",
+   "ko": "지영은 마늘을 직접 다지기 귀찮아서 냉동 마늘 큐브를 샀어요.",
+   "blank": "다지기",
+   "src": "made"
+  }
+ ],
  "w|다채롭다": [
   {
    "text": "공항 면세점에는 다채로운 기념품이 진열되어 있었어요.",
@@ -17841,6 +18129,22 @@
    "en": "The voice was so alike it surprised me.",
    "ko": "목소리를 닮다 못해 놀랐어.",
    "blank": "닮다"
+  }
+ ],
+ "w|담그다": [
+  {
+   "text": "민수네 가게는 해마다 할머니 방식대로 김치를 담가요.",
+   "en": "Every year Minsu's shop makes kimchi the way grandmother did.",
+   "ko": "민수네 가게는 해마다 할머니 방식대로 김치를 담가요.",
+   "blank": "담가요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 인터넷으로 산 매실로 매실청을 담갔어요.",
+   "en": "Jiyoung made plum syrup with the green plums she bought online.",
+   "ko": "지영은 인터넷으로 산 매실로 매실청을 담갔어요.",
+   "blank": "담갔어요",
+   "src": "made"
   }
  ],
  "w|담기다": [
@@ -19799,6 +20103,22 @@
    "blank": "데이터가"
   }
  ],
+ "w|데치다": [
+  {
+   "text": "민수는 시금치를 끓는 물에 살짝 데쳐요.",
+   "en": "Minsu blanches the spinach briefly in boiling water.",
+   "ko": "민수는 시금치를 끓는 물에 살짝 데쳐요.",
+   "blank": "데쳐요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 배송 온 브로콜리를 바로 데쳐서 냉동실에 넣었어요.",
+   "en": "Jiyoung blanched the delivered broccoli right away and put it in the freezer.",
+   "ko": "지영은 배송 온 브로콜리를 바로 데쳐서 냉동실에 넣었어요.",
+   "blank": "데쳐서",
+   "src": "made"
+  }
+ ],
  "w|도구": [
   {
    "text": "필요한 도구를 챙겨 와.",
@@ -21625,6 +21945,22 @@
    "blank": "뒤지다가"
   }
  ],
+ "w|뒤집개": [
+  {
+   "text": "민수는 전 부치는 할머니께 뒤집개를 새로 사다 드렸어요.",
+   "en": "Minsu bought a new spatula for the grandmother who makes pancakes.",
+   "ko": "민수는 전 부치는 할머니께 뒤집개를 새로 사다 드렸어요.",
+   "blank": "뒤집개를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 프라이팬이 긁히지 않는 실리콘 뒤집개를 찾고 있어요.",
+   "en": "Jiyoung is looking for a silicone spatula that won't scratch her frying pan.",
+   "ko": "지영은 프라이팬이 긁히지 않는 실리콘 뒤집개를 찾고 있어요.",
+   "blank": "뒤집개를",
+   "src": "made"
+  }
+ ],
  "w|뒤집다": [
   {
    "text": "팬케이크를 뒤집는 타이밍을 놓쳤어.",
@@ -21993,6 +22329,22 @@
    "blank": "들이마시다"
   }
  ],
+ "w|들이키다": [
+  {
+   "text": "땀을 뻘뻘 흘린 민수는 식혜 한 사발을 단숨에 들이켰어요.",
+   "en": "Drenched in sweat, Minsu gulped down a bowl of sikhye in one go.",
+   "ko": "땀을 뻘뻘 흘린 민수는 식혜 한 사발을 단숨에 들이켰어요.",
+   "blank": "들이켰어요",
+   "src": "made"
+  },
+  {
+   "text": "늦게 배달 온 피자를 기다리다 목이 탄 지영은 탄산수를 벌컥벌컥 들이켰어요.",
+   "en": "Parched from waiting for the late pizza delivery, Jiyoung gulped down sparkling water.",
+   "ko": "늦게 배달 온 피자를 기다리다 목이 탄 지영은 탄산수를 벌컥벌컥 들이켰어요.",
+   "blank": "들이켰어요",
+   "src": "made"
+  }
+ ],
  "w|들추다": [
   {
    "text": "이불을 들추고 일어나려다 말았어.",
@@ -22151,6 +22503,22 @@
    "en": "Please register an account on the site.",
    "ko": "사이트에 계정을 등록해 줘.",
    "blank": "등록해"
+  }
+ ],
+ "w|등산": [
+  {
+   "text": "경민은 주말마다 등산을 다니면서 친구 생각을 자주 한다고 썼어요.",
+   "en": "Gyeongmin wrote that he often thinks of his friend while going hiking every weekend.",
+   "ko": "경민은 주말마다 등산을 다니면서 친구 생각을 자주 한다고 썼어요.",
+   "blank": "등산을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 지난주 등산 때 본 단풍을 유화로 옮겨 보고 있어요.",
+   "en": "Daeun is trying to put the autumn leaves she saw on last week's hike into an oil painting.",
+   "ko": "다은은 지난주 등산 때 본 단풍을 유화로 옮겨 보고 있어요.",
+   "blank": "등산",
+   "src": "made"
   }
  ],
  "w|등산하다": [
@@ -23391,6 +23759,22 @@
    "en": "Resident life is busier than I thought.",
    "ko": "레지던트 생활이 생각보다 바빠.",
    "blank": "레지던트"
+  }
+ ],
+ "w|렌터카": [
+  {
+   "text": "제주도에서 렌터카를 빌려 해안 도로를 달리던 날을 경민은 편지에서 떠올렸어요.",
+   "en": "In his letter, Gyeongmin recalled the day they rented a car on Jeju and drove the coastal road.",
+   "ko": "제주도에서 렌터카를 빌려 해안 도로를 달리던 날을 경민은 편지에서 떠올렸어요.",
+   "blank": "렌터카를",
+   "src": "made"
+  },
+  {
+   "text": "야외 수업 날 선생님이 렌터카를 빌려 학생들을 강가로 데려갔어요.",
+   "en": "On the outdoor class day, the teacher rented a car and took the students to the riverside.",
+   "ko": "야외 수업 날 선생님이 렌터카를 빌려 학생들을 강가로 데려갔어요.",
+   "blank": "렌터카를",
+   "src": "made"
   }
  ],
  "w|로그인": [
@@ -26903,6 +27287,22 @@
    "blank": "못된"
   }
  ],
+ "w|못마땅하다": [
+  {
+   "text": "경민의 아내는 남편이 밤새 편지만 쓰는 게 좀 못마땅해요.",
+   "en": "Gyeongmin's wife is a little displeased that her husband spends the whole night writing letters.",
+   "ko": "경민의 아내는 남편이 밤새 편지만 쓰는 게 좀 못마땅해요.",
+   "blank": "못마땅해요",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 다은이 색을 너무 진하게 칠하는 게 늘 못마땅했어요.",
+   "en": "The teacher was always unhappy that Daeun painted the colors too dark.",
+   "ko": "선생님은 다은이 색을 너무 진하게 칠하는 게 늘 못마땅했어요.",
+   "blank": "못마땅했어요",
+   "src": "made"
+  }
+ ],
  "w|못생기다": [
   {
    "text": "사진이 좀 못생겼어.",
@@ -27629,6 +28029,22 @@
    "blank": "무척"
   }
  ],
+ "w|무치다": [
+  {
+   "text": "민수 어머니가 콩나물을 참기름에 무쳤어요.",
+   "en": "Minsu's mother seasoned the bean sprouts with sesame oil.",
+   "ko": "민수 어머니가 콩나물을 참기름에 무쳤어요.",
+   "blank": "무쳤어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 주문한 도라지를 초고추장에 새콤하게 무쳤어요.",
+   "en": "Jiyoung seasoned the bellflower roots she ordered with sweet-and-sour chili paste.",
+   "ko": "지영은 주문한 도라지를 초고추장에 새콤하게 무쳤어요.",
+   "blank": "무쳤어요",
+   "src": "made"
+  }
+ ],
  "w|무한하다": [
   {
    "text": "선생님은 아이들의 가능성은 무한하다고 늘 말씀하세요.",
@@ -28235,6 +28651,22 @@
    "src": "made"
   }
  ],
+ "w|뭉클하다": [
+  {
+   "text": "친구가 아직도 옛날 편지를 간직하고 있다는 말에 경민은 가슴이 뭉클했어요.",
+   "en": "Gyeongmin was moved to hear his friend still keeps their old letters.",
+   "ko": "친구가 아직도 옛날 편지를 간직하고 있다는 말에 경민은 가슴이 뭉클했어요.",
+   "blank": "뭉클했어요",
+   "src": "made"
+  },
+  {
+   "text": "할머니의 손을 그린 그림을 본 엄마가 뭉클한 얼굴로 다은을 안아 줬어요.",
+   "en": "After seeing the painting of grandmother's hands, Daeun's mom hugged her with a moved face.",
+   "ko": "할머니의 손을 그린 그림을 본 엄마가 뭉클한 얼굴로 다은을 안아 줬어요.",
+   "blank": "뭉클한",
+   "src": "made"
+  }
+ ],
  "w|뭐": [
   {
    "text": "뭐 먹고 싶어?",
@@ -28690,6 +29122,22 @@
    "en": "On her way home, Haeun felt like someone was following her and looked back, but no one was there.",
    "ko": "하은은 퇴근길에 누가 미행하는 것 같아서 뒤를 돌아봤지만 아무도 없었어요.",
    "blank": "미행하는",
+   "src": "made"
+  }
+ ],
+ "w|믹서": [
+  {
+   "text": "방앗간 믹서가 고장 나서 민수는 고추를 갈러 다른 데로 갔어요.",
+   "en": "The mill's blender broke, so Minsu went somewhere else to grind the peppers.",
+   "ko": "방앗간 믹서가 고장 나서 민수는 고추를 갈러 다른 데로 갔어요.",
+   "blank": "믹서가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 아침마다 과일 주스를 만들려고 소음이 적은 믹서를 샀어요.",
+   "en": "Jiyoung bought a quiet blender to make fruit juice every morning.",
+   "ko": "지영은 아침마다 과일 주스를 만들려고 소음이 적은 믹서를 샀어요.",
+   "blank": "믹서를",
    "src": "made"
   }
  ],
@@ -30239,6 +30687,22 @@
    "blank": "밥"
   }
  ],
+ "w|밥솥": [
+  {
+   "text": "민수네 가게 커다란 밥솥에서는 하루 종일 김이 나요.",
+   "en": "Steam rises all day from the huge rice cooker at Minsu's shop.",
+   "ko": "민수네 가게 커다란 밥솥에서는 하루 종일 김이 나요.",
+   "blank": "밥솥에서는",
+   "src": "made"
+  },
+  {
+   "text": "십 년 쓴 밥솥이 고장 나서 지영은 새 제품을 최저가로 찾아봤어요.",
+   "en": "Her rice cooker broke after ten years, so Jiyoung searched for a new one at the lowest price.",
+   "ko": "십 년 쓴 밥솥이 고장 나서 지영은 새 제품을 최저가로 찾아봤어요.",
+   "blank": "밥솥이",
+   "src": "made"
+  }
+ ],
  "w|방": [
   {
    "text": "방 좀 치워.",
@@ -30561,6 +31025,38 @@
    "en": "The shirt is short so my belly button shows.",
    "ko": "옷이 짧아서 배꼽이 보여.",
    "blank": "배꼽이"
+  }
+ ],
+ "w|배낭": [
+  {
+   "text": "경민은 대학 때 메던 낡은 배낭을 아직도 버리지 못했다고 편지에 썼어요.",
+   "en": "Gyeongmin wrote in the letter that he still hasn't been able to throw away the old backpack he carried in college.",
+   "ko": "경민은 대학 때 메던 낡은 배낭을 아직도 버리지 못했다고 편지에 썼어요.",
+   "blank": "배낭을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 스케치북과 물감을 배낭에 넣고 미술 학원에 가요.",
+   "en": "Daeun puts her sketchbook and paints in her backpack and goes to art class.",
+   "ko": "다은은 스케치북과 물감을 배낭에 넣고 미술 학원에 가요.",
+   "blank": "배낭에",
+   "src": "made"
+  }
+ ],
+ "w|배낭여행": [
+  {
+   "text": "경민은 스무 살 여름에 친구와 떠난 배낭여행이 인생 최고의 추억이래요.",
+   "en": "Gyeongmin says the backpacking trip he took with his friend the summer he was twenty is his best memory.",
+   "ko": "경민은 스무 살 여름에 친구와 떠난 배낭여행이 인생 최고의 추억이래요.",
+   "blank": "배낭여행이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 유럽 배낭여행 중에 본 성당을 기억에 의지해서 그렸어요.",
+   "en": "Daeun painted a cathedral she saw while backpacking in Europe from memory.",
+   "ko": "다은은 유럽 배낭여행 중에 본 성당을 기억에 의지해서 그렸어요.",
+   "blank": "배낭여행",
+   "src": "made"
   }
  ],
  "w|배달": [
@@ -31055,6 +31551,22 @@
    "blank": "버렸어"
   }
  ],
+ "w|버무리다": [
+  {
+   "text": "민수는 고무장갑을 끼고 무생채를 손으로 버무렸어요.",
+   "en": "Minsu put on rubber gloves and mixed the radish salad by hand.",
+   "ko": "민수는 고무장갑을 끼고 무생채를 손으로 버무렸어요.",
+   "blank": "버무렸어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 택배로 받은 겉절이 재료를 양념에 버무려서 저녁상에 올렸어요.",
+   "en": "Jiyoung mixed the fresh kimchi ingredients she got by courier with seasoning and put it on the dinner table.",
+   "ko": "지영은 택배로 받은 겉절이 재료를 양념에 버무려서 저녁상에 올렸어요.",
+   "blank": "버무려서",
+   "src": "made"
+  }
+ ],
  "w|버섯": [
   {
    "text": "버섯을 볶아 반찬으로 했어.",
@@ -31109,6 +31621,22 @@
    "en": "I somehow held out until the deadline.",
    "ko": "마감까지 어떻게든 버텼어.",
    "blank": "버텼어"
+  }
+ ],
+ "w|벅차다": [
+  {
+   "text": "경민은 친구에게서 딸이 태어났다는 소식을 듣고 가슴이 벅찼어요.",
+   "en": "Gyeongmin's heart was full when he heard from his friend that a daughter had been born.",
+   "ko": "경민은 친구에게서 딸이 태어났다는 소식을 듣고 가슴이 벅찼어요.",
+   "blank": "벅찼어요",
+   "src": "made"
+  },
+  {
+   "text": "처음으로 전시회에 그림이 걸린 날 다은은 벅찬 마음에 잠을 설쳤어요.",
+   "en": "The day her painting first hung in an exhibition, Daeun couldn't sleep well because her heart was so full.",
+   "ko": "처음으로 전시회에 그림이 걸린 날 다은은 벅찬 마음에 잠을 설쳤어요.",
+   "blank": "벅찬",
+   "src": "made"
   }
  ],
  "w|번": [
@@ -32739,6 +33267,22 @@
    "en": "I opened a can of peaches.",
    "ko": "복숭아 통조림을 열었어.",
    "blank": "복숭아"
+  }
+ ],
+ "w|복습": [
+  {
+   "text": "민수는 손님이 뜸한 오후에 그날 배운 걸 복습해요.",
+   "en": "Minsu reviews what he learned that day in the afternoon when customers are few.",
+   "ko": "민수는 손님이 뜸한 오후에 그날 배운 걸 복습해요.",
+   "blank": "복습해요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 아이들의 복습을 도우려고 문제집을 한꺼번에 주문했어요.",
+   "en": "Jiyoung ordered workbooks all at once to help the kids with their review.",
+   "ko": "지영은 아이들의 복습을 도우려고 문제집을 한꺼번에 주문했어요.",
+   "blank": "복습을",
+   "src": "made"
   }
  ],
  "w|복습하다": [
@@ -37189,6 +37733,22 @@
    "blank": "사진기가"
   }
  ],
+ "w|사진사": [
+  {
+   "text": "잡지 사진사가 민수네 반찬 가게를 찍으러 시장에 왔어요.",
+   "en": "A magazine photographer came to the market to take pictures of Minsu's side-dish shop.",
+   "ko": "잡지 사진사가 민수네 반찬 가게를 찍으러 시장에 왔어요.",
+   "blank": "사진사가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 가족사진을 찍으려고 출장 사진사를 온라인으로 예약했어요.",
+   "en": "Jiyoung booked a visiting photographer online to take a family photo.",
+   "ko": "지영은 가족사진을 찍으려고 출장 사진사를 온라인으로 예약했어요.",
+   "blank": "사진사를",
+   "src": "made"
+  }
+ ],
  "w|사진작가": [
   {
    "text": "사진작가가 일몰을 오래 기다렸어.",
@@ -38805,6 +39365,22 @@
    "blank": "샘물을"
   }
  ],
+ "w|샘나다": [
+  {
+   "text": "경민은 친구가 외국에서 자유롭게 사는 게 솔직히 좀 샘나요.",
+   "en": "Honestly, Gyeongmin is a little jealous that his friend lives freely abroad.",
+   "ko": "경민은 친구가 외국에서 자유롭게 사는 게 솔직히 좀 샘나요.",
+   "blank": "샘나요",
+   "src": "made"
+  },
+  {
+   "text": "옆자리 친구가 선생님께 칭찬을 독차지하니 다은은 괜히 샘났어요.",
+   "en": "When her deskmate got all the teacher's praise, Daeun felt a bit jealous for no reason.",
+   "ko": "옆자리 친구가 선생님께 칭찬을 독차지하니 다은은 괜히 샘났어요.",
+   "blank": "샘났어요",
+   "src": "made"
+  }
+ ],
  "w|샘플": [
   {
    "text": "화장품을 사기 전에 샘플을 써 보고 부작용이 없는지 확인해 보는 것이 좋다.",
@@ -39431,6 +40007,22 @@
    "en": "The first frost fell in late autumn.",
    "ko": "늦가을에 첫 서리가 내렸어.",
    "blank": "서리가"
+  }
+ ],
+ "w|서먹하다": [
+  {
+   "text": "오랜만에 만나면 처음엔 서먹할 거라고 경민은 미리 걱정했어요.",
+   "en": "Gyeongmin worried in advance that it would feel awkward at first when they met after so long.",
+   "ko": "오랜만에 만나면 처음엔 서먹할 거라고 경민은 미리 걱정했어요.",
+   "blank": "서먹할",
+   "src": "made"
+  },
+  {
+   "text": "다투고 난 뒤로 다은과 짝꿍은 사이가 서먹해졌어요.",
+   "en": "After their fight, Daeun and her partner became awkward with each other.",
+   "ko": "다투고 난 뒤로 다은과 짝꿍은 사이가 서먹해졌어요.",
+   "blank": "서먹해졌어요",
+   "src": "made"
   }
  ],
  "w|서명하다": [
@@ -40627,6 +41219,22 @@
    "en": "I showed my report card to my parents.",
    "ko": "성적표를 부모님께 보여 드렸어.",
    "blank": "성적표를"
+  }
+ ],
+ "w|성적표": [
+  {
+   "text": "민수의 성적표를 본 옆 가게 아주머니가 떡을 하나 더 얹어 줬어요.",
+   "en": "The lady at the next shop saw Minsu's report card and added an extra rice cake.",
+   "ko": "민수의 성적표를 본 옆 가게 아주머니가 떡을 하나 더 얹어 줬어요.",
+   "blank": "성적표를",
+   "src": "made"
+  },
+  {
+   "text": "딸의 성적표가 잘 나와서 지영은 딸이 갖고 싶어 하던 운동화를 주문했어요.",
+   "en": "Her daughter's report card was good, so Jiyoung ordered the sneakers she wanted.",
+   "ko": "딸의 성적표가 잘 나와서 지영은 딸이 갖고 싶어 하던 운동화를 주문했어요.",
+   "blank": "성적표가",
+   "src": "made"
   }
  ],
  "w|성직자": [
@@ -42369,6 +42977,22 @@
    "blank": "수녀가"
   }
  ],
+ "w|수능": [
+  {
+   "text": "수능 날 아침 시장 상인들이 민수에게 찹쌀떡을 한 아름 안겨 줬어요.",
+   "en": "On the morning of the college entrance exam, the market vendors gave Minsu an armful of sticky rice cakes.",
+   "ko": "수능 날 아침 시장 상인들이 민수에게 찹쌀떡을 한 아름 안겨 줬어요.",
+   "blank": "수능",
+   "src": "made"
+  },
+  {
+   "text": "지영은 수능을 앞둔 조카에게 영양제를 택배로 보냈어요.",
+   "en": "Jiyoung sent nutritional supplements by courier to her nephew, who is about to take the college entrance exam.",
+   "ko": "지영은 수능을 앞둔 조카에게 영양제를 택배로 보냈어요.",
+   "blank": "수능을",
+   "src": "made"
+  }
+ ],
  "w|수다스럽다": [
   {
    "text": "경민이 만난 택시 기사는 수다스러웠지만 좋은 이야기를 많이 들려줬어요.",
@@ -42873,6 +43497,22 @@
    "en": "I raised my monthly income a bit.",
    "ko": "월 수입을 조금 올렸어.",
    "blank": "수입을"
+  }
+ ],
+ "w|수저": [
+  {
+   "text": "국밥집에서는 손님이 앉자마자 민수가 수저를 놓아요.",
+   "en": "At the gukbap place, Minsu sets out the spoon and chopsticks as soon as a customer sits down.",
+   "ko": "국밥집에서는 손님이 앉자마자 민수가 수저를 놓아요.",
+   "blank": "수저를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 시어머니 생신 선물로 은으로 된 수저 세트를 골랐어요.",
+   "en": "Jiyoung picked a silver spoon-and-chopsticks set as a birthday gift for her mother-in-law.",
+   "ko": "지영은 시어머니 생신 선물로 은으로 된 수저 세트를 골랐어요.",
+   "blank": "수저",
+   "src": "made"
   }
  ],
  "w|수준": [
@@ -44483,6 +45123,22 @@
    "blank": "시어머니께"
   }
  ],
+ "w|시외버스": [
+  {
+   "text": "경민은 친구를 만나러 시외버스를 세 번이나 갈아탔던 겨울을 적었어요.",
+   "en": "Gyeongmin wrote about the winter he changed intercity buses three times to see his friend.",
+   "ko": "경민은 친구를 만나러 시외버스를 세 번이나 갈아탔던 겨울을 적었어요.",
+   "blank": "시외버스를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 시외버스 창밖으로 지나가는 논밭을 머릿속에 담아 그림으로 옮겼어요.",
+   "en": "Daeun kept the rice fields passing outside the intercity bus window in her head and put them into a painting.",
+   "ko": "다은은 시외버스 창밖으로 지나가는 논밭을 머릿속에 담아 그림으로 옮겼어요.",
+   "blank": "시외버스",
+   "src": "made"
+  }
+ ],
  "w|시원하다": [
   {
    "text": "에어컨 켜니 시원해.",
@@ -44956,6 +45612,22 @@
    "en": "When autumn came, fresh chestnuts and apples appeared on Sujin's dining table.",
    "ko": "가을이 되자 수진의 식탁에는 햇밤과 사과가 올라왔어요.",
    "blank": "식탁에는",
+   "src": "made"
+  }
+ ],
+ "w|식탁보": [
+  {
+   "text": "시장 잔칫날이라 민수는 긴 상에 하얀 식탁보를 깔았어요.",
+   "en": "It was the market's festival day, so Minsu spread a white tablecloth on the long table.",
+   "ko": "시장 잔칫날이라 민수는 긴 상에 하얀 식탁보를 깔았어요.",
+   "blank": "식탁보를",
+   "src": "made"
+  },
+  {
+   "text": "배송 온 식탁보가 사진과 색깔이 달라서 지영은 실망했어요.",
+   "en": "Jiyoung was disappointed because the tablecloth that arrived was a different color from the photo.",
+   "ko": "배송 온 식탁보가 사진과 색깔이 달라서 지영은 실망했어요.",
+   "blank": "식탁보가",
    "src": "made"
   }
  ],
@@ -45607,6 +46279,22 @@
    "src": "made"
   }
  ],
+ "w|신혼여행": [
+  {
+   "text": "경민은 신혼여행으로 다녀온 섬에서 친구에게 엽서를 한 장 더 보냈어요.",
+   "en": "Gyeongmin sent his friend one more postcard from the island he visited on his honeymoon.",
+   "ko": "경민은 신혼여행으로 다녀온 섬에서 친구에게 엽서를 한 장 더 보냈어요.",
+   "blank": "신혼여행으로",
+   "src": "made"
+  },
+  {
+   "text": "미술 선생님은 신혼여행 때 찍은 노을 사진을 수업 자료로 보여 줬어요.",
+   "en": "The art teacher showed a sunset photo from her honeymoon as class material.",
+   "ko": "미술 선생님은 신혼여행 때 찍은 노을 사진을 수업 자료로 보여 줬어요.",
+   "blank": "신혼여행",
+   "src": "made"
+  }
+ ],
  "w|신화": [
   {
    "text": "준호는 그리스 신화에 나오는 신들의 이름을 다 외웠어요.",
@@ -45754,6 +46442,22 @@
    "en": "The waterfall Sohee had looked forward to was dry, so she was very disappointed.",
    "ko": "기대했던 폭포가 말라 있어서 소희는 실망감이 컸어요.",
    "blank": "실망감이",
+   "src": "made"
+  }
+ ],
+ "w|실망스럽다": [
+  {
+   "text": "약속한 방문이 또 미뤄져서 경민은 조금 실망스러웠어요.",
+   "en": "Gyeongmin was a little disappointed that the promised visit was put off again.",
+   "ko": "약속한 방문이 또 미뤄져서 경민은 조금 실망스러웠어요.",
+   "blank": "실망스러웠어요",
+   "src": "made"
+  },
+  {
+   "text": "공들인 작품이 입선도 못 해서 다은은 결과가 실망스러웠어요.",
+   "en": "Daeun was disappointed with the result because the work she put so much effort into didn't even get an honorable mention.",
+   "ko": "공들인 작품이 입선도 못 해서 다은은 결과가 실망스러웠어요.",
+   "blank": "실망스러웠어요",
    "src": "made"
   }
  ],
@@ -46909,6 +47613,22 @@
    "src": "made"
   }
  ],
+ "w|씁쓸하다": [
+  {
+   "text": "답장 대신 짧은 문자만 와서 경민은 좀 씁쓸했어요.",
+   "en": "Gyeongmin felt a bit bitter that only a short text came instead of a reply letter.",
+   "ko": "답장 대신 짧은 문자만 와서 경민은 좀 씁쓸했어요.",
+   "blank": "씁쓸했어요",
+   "src": "made"
+  },
+  {
+   "text": "자기 그림이 친구 작품을 따라 한 것 같다는 말을 듣고 다은은 씁쓸한 웃음을 지었어요.",
+   "en": "Hearing that her painting seemed to copy a friend's work, Daeun gave a bitter smile.",
+   "ko": "자기 그림이 친구 작품을 따라 한 것 같다는 말을 듣고 다은은 씁쓸한 웃음을 지었어요.",
+   "blank": "씁쓸한",
+   "src": "made"
+  }
+ ],
  "w|씌우다": [
   {
    "text": "재원은 비 오는 날 누나에게 우산을 씌워 주며 먼저 말을 걸었어요.",
@@ -47079,6 +47799,22 @@
    "en": "You left it behind earlier.",
    "ko": "아까 네가 두고 갔어.",
    "blank": "아까"
+  }
+ ],
+ "w|아깝다": [
+  {
+   "text": "경민은 십 년 넘게 연락을 못 하고 지낸 시간이 아까워요.",
+   "en": "Gyeongmin regrets the more than ten years they spent without being in touch.",
+   "ko": "경민은 십 년 넘게 연락을 못 하고 지낸 시간이 아까워요.",
+   "blank": "아까워요",
+   "src": "made"
+  },
+  {
+   "text": "물을 엎질러서 거의 다 그린 그림을 버리게 되니 다은은 너무 아까웠어요.",
+   "en": "Daeun felt it was such a waste to throw away an almost-finished painting because she spilled water on it.",
+   "ko": "물을 엎질러서 거의 다 그린 그림을 버리게 되니 다은은 너무 아까웠어요.",
+   "blank": "아까웠어요",
+   "src": "made"
   }
  ],
  "w|아끼다": [
@@ -48221,6 +48957,22 @@
    "src": "made"
   }
  ],
+ "w|안쓰럽다": [
+  {
+   "text": "혼자 타지에서 아픈 친구를 생각하면 경민은 마음이 안쓰러워요.",
+   "en": "When Gyeongmin thinks of his friend being sick alone far from home, he feels sorry for him.",
+   "ko": "혼자 타지에서 아픈 친구를 생각하면 경민은 마음이 안쓰러워요.",
+   "blank": "안쓰러워요",
+   "src": "made"
+  },
+  {
+   "text": "붓을 쥐는 법도 몰라 쩔쩔매는 새 친구가 다은에게는 안쓰러웠어요.",
+   "en": "The new student struggling without even knowing how to hold a brush looked pitiful to Daeun.",
+   "ko": "붓을 쥐는 법도 몰라 쩔쩔매는 새 친구가 다은에게는 안쓰러웠어요.",
+   "blank": "안쓰러웠어요",
+   "src": "made"
+  }
+ ],
  "w|안전": [
   {
    "text": "안전이 제일 중요해.",
@@ -48995,6 +49747,22 @@
    "blank": "야"
   }
  ],
+ "w|야경": [
+  {
+   "text": "경민은 회사 옥상에서 보는 야경이 생각보다 근사하다고 자랑했어요.",
+   "en": "Gyeongmin bragged that the night view from his office rooftop is nicer than expected.",
+   "ko": "경민은 회사 옥상에서 보는 야경이 생각보다 근사하다고 자랑했어요.",
+   "blank": "야경이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 검은 종이에 형광 물감으로 도시의 야경을 표현했어요.",
+   "en": "Daeun depicted the city's night view with fluorescent paint on black paper.",
+   "ko": "다은은 검은 종이에 형광 물감으로 도시의 야경을 표현했어요.",
+   "blank": "야경을",
+   "src": "made"
+  }
+ ],
  "w|야구": [
   {
    "text": "야구 좋아해?",
@@ -49331,6 +50099,22 @@
    "en": "Add a little more seasoning.",
    "ko": "양념을 조금만 더 넣어.",
    "blank": "양념을"
+  }
+ ],
+ "w|양념하다": [
+  {
+   "text": "민수 아버지는 갈비를 전날 밤에 미리 양념해요.",
+   "en": "Minsu's father marinates the ribs the night before.",
+   "ko": "민수 아버지는 갈비를 전날 밤에 미리 양념해요.",
+   "blank": "양념해요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 양념한 불고기를 주문하면 굽기만 하면 돼서 편하대요.",
+   "en": "Jiyoung says ordering pre-marinated bulgogi is convenient because she only has to grill it.",
+   "ko": "지영은 양념한 불고기를 주문하면 굽기만 하면 돼서 편하대요.",
+   "blank": "양념한",
+   "src": "made"
   }
  ],
  "w|양말": [
@@ -50463,6 +51247,22 @@
    "blank": "언젠가"
   }
  ],
+ "w|언짢다": [
+  {
+   "text": "경민은 친구가 자기 결혼식에 안 온 게 한동안 언짢았어요.",
+   "en": "For a while, Gyeongmin was upset that his friend didn't come to his wedding.",
+   "ko": "경민은 친구가 자기 결혼식에 안 온 게 한동안 언짢았어요.",
+   "blank": "언짢았어요",
+   "src": "made"
+  },
+  {
+   "text": "누가 다은의 팔레트를 허락도 없이 써서 다은은 기분이 언짢았어요.",
+   "en": "Someone used Daeun's palette without asking, so she was annoyed.",
+   "ko": "누가 다은의 팔레트를 허락도 없이 써서 다은은 기분이 언짢았어요.",
+   "blank": "언짢았어요",
+   "src": "made"
+  }
+ ],
  "w|얻다": [
   {
    "text": "부모님 허락은 얻었어?",
@@ -50651,6 +51451,22 @@
    "en": "Ice water fogs up the glass.",
    "ko": "얼음물을 두면 컵에 김이 서려.",
    "blank": "얼음물을"
+  }
+ ],
+ "w|얼큰하다": [
+  {
+   "text": "추운 날이면 민수는 시장 끝 집의 얼큰한 해장국이 생각나요.",
+   "en": "On cold days, Minsu craves the spicy hangover soup at the place at the end of the market.",
+   "ko": "추운 날이면 민수는 시장 끝 집의 얼큰한 해장국이 생각나요.",
+   "blank": "얼큰한",
+   "src": "made"
+  },
+  {
+   "text": "비 오는 날 지영은 얼큰한 짬뽕을 배달시켰어요.",
+   "en": "On a rainy day Jiyoung had spicy jjamppong delivered.",
+   "ko": "비 오는 날 지영은 얼큰한 짬뽕을 배달시켰어요.",
+   "blank": "얼큰한",
+   "src": "made"
   }
  ],
  "w|엄격하다": [
@@ -52669,6 +53485,22 @@
    "blank": "열정을"
   }
  ],
+ "w|염려하다": [
+  {
+   "text": "경민은 혼자 지내는 친구의 건강을 늘 염려해요.",
+   "en": "Gyeongmin always worries about the health of his friend who lives alone.",
+   "ko": "경민은 혼자 지내는 친구의 건강을 늘 염려해요.",
+   "blank": "염려해요",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 다은이 밤늦게까지 작업하다 건강을 해칠까 봐 염려했어요.",
+   "en": "The teacher worried that Daeun might ruin her health working until late at night.",
+   "ko": "선생님은 다은이 밤늦게까지 작업하다 건강을 해칠까 봐 염려했어요.",
+   "blank": "염려했어요",
+   "src": "made"
+  }
+ ],
  "w|염소": [
   {
    "text": "염소가 언덕을 가뿐히 올라가.",
@@ -54034,6 +54866,22 @@
    "en": "For that evening at least, Daeun focused fully on her friends.",
    "ko": "다은은 그날 저녁만큼은 친구들에게 온전히 집중했어요.",
    "blank": "온전히",
+   "src": "made"
+  }
+ ],
+ "w|온천": [
+  {
+   "text": "경민은 다음에 만나면 부모님을 모시고 온천에 같이 가자고 했어요.",
+   "en": "Gyeongmin suggested that next time they meet, they take their parents to a hot spring together.",
+   "ko": "경민은 다음에 만나면 부모님을 모시고 온천에 같이 가자고 했어요.",
+   "blank": "온천에",
+   "src": "made"
+  },
+  {
+   "text": "다은은 김이 모락모락 나는 노천 온천을 그리면서 수증기 표현에 애를 먹었어요.",
+   "en": "While painting an open-air hot spring with steam rising, Daeun had a hard time showing the vapor.",
+   "ko": "다은은 김이 모락모락 나는 노천 온천을 그리면서 수증기 표현에 애를 먹었어요.",
+   "blank": "온천을",
    "src": "made"
   }
  ],
@@ -56832,6 +57680,22 @@
    "en": "Sujin is considered the most capable nurse at this hospital.",
    "ko": "수진은 이 병원에서 가장 유능한 간호사로 꼽혀요.",
    "blank": "유능한",
+   "src": "made"
+  }
+ ],
+ "w|유람선": [
+  {
+   "text": "경민은 친구와 유람선 갑판에서 갈매기에게 과자를 던져 주던 사진을 동봉했어요.",
+   "en": "Gyeongmin enclosed a photo of him and his friend tossing snacks to seagulls from the deck of a cruise boat.",
+   "ko": "경민은 친구와 유람선 갑판에서 갈매기에게 과자를 던져 주던 사진을 동봉했어요.",
+   "blank": "유람선",
+   "src": "made"
+  },
+  {
+   "text": "다은은 한강을 떠가는 유람선을 수채화로 그렸어요.",
+   "en": "Daeun painted a cruise boat floating down the Han River in watercolor.",
+   "ko": "다은은 한강을 떠가는 유람선을 수채화로 그렸어요.",
+   "blank": "유람선을",
    "src": "made"
   }
  ],
@@ -60797,6 +61661,22 @@
    "en": "My lips are cracked so it hurts to talk.",
    "ko": "입술이 트어서 말할 때 아파.",
    "blank": "입술이"
+  }
+ ],
+ "w|입시": [
+  {
+   "text": "민수 부모님은 입시가 끝날 때까지 민수에게 가게 일을 시키지 않기로 했어요.",
+   "en": "Minsu's parents decided not to have him work at the shop until his entrance exams are over.",
+   "ko": "민수 부모님은 입시가 끝날 때까지 민수에게 가게 일을 시키지 않기로 했어요.",
+   "blank": "입시가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 큰딸 입시 때문에 온라인 설명회를 밤마다 찾아봐요.",
+   "en": "Because of her eldest daughter's entrance exams, Jiyoung looks up online info sessions every night.",
+   "ko": "지영은 큰딸 입시 때문에 온라인 설명회를 밤마다 찾아봐요.",
+   "blank": "입시",
+   "src": "made"
   }
  ],
  "w|입양": [
@@ -64933,6 +65813,22 @@
    "blank": "절망을"
   }
  ],
+ "w|절망적": [
+  {
+   "text": "친구는 실직했을 때 모든 게 절망적으로 느껴졌다고 경민에게 고백했어요.",
+   "en": "His friend confessed to Gyeongmin that everything felt hopeless when he lost his job.",
+   "ko": "친구는 실직했을 때 모든 게 절망적으로 느껴졌다고 경민에게 고백했어요.",
+   "blank": "절망적으로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마감 전날까지 밑그림도 못 끝내서 상황이 절망적이었어요.",
+   "en": "Daeun hadn't even finished the sketch by the day before the deadline, so things looked hopeless.",
+   "ko": "다은은 마감 전날까지 밑그림도 못 끝내서 상황이 절망적이었어요.",
+   "blank": "절망적이었어요",
+   "src": "made"
+  }
+ ],
  "w|절벽": [
   {
    "text": "동민은 강가 절벽 위에 둥지를 튼 독수리를 발견했어요.",
@@ -64977,6 +65873,22 @@
    "en": "I saved a lot on living costs.",
    "ko": "생활비를 많이 아꼈어.",
    "blank": "절약했어"
+  }
+ ],
+ "w|절이다": [
+  {
+   "text": "민수는 김장 전날 배추를 소금물에 절였어요.",
+   "en": "The day before kimchi-making, Minsu salted the napa cabbages in brine.",
+   "ko": "민수는 김장 전날 배추를 소금물에 절였어요.",
+   "blank": "절였어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 이미 절인 배추를 주문해서 김장이 훨씬 편해졌어요.",
+   "en": "Jiyoung ordered pre-salted cabbage, so making kimchi got much easier.",
+   "ko": "지영은 이미 절인 배추를 주문해서 김장이 훨씬 편해졌어요.",
+   "blank": "절인",
+   "src": "made"
   }
  ],
  "w|절차": [
@@ -65315,6 +66227,22 @@
    "en": "We shared a meal and warmth.",
    "ko": "정을 나누며 밥을 먹었어.",
    "blank": "정을"
+  }
+ ],
+ "w|정겹다": [
+  {
+   "text": "편지 끝에 붙은 고향 사투리가 경민에게 참 정겨웠어요.",
+   "en": "The hometown dialect at the end of the letter felt so warm and familiar to Gyeongmin.",
+   "ko": "편지 끝에 붙은 고향 사투리가 경민에게 참 정겨웠어요.",
+   "blank": "정겨웠어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 골목길의 정겨운 풍경을 그리려고 동네를 천천히 걸었어요.",
+   "en": "Daeun walked slowly through the neighborhood to paint its warm, homey alley scenes.",
+   "ko": "다은은 골목길의 정겨운 풍경을 그리려고 동네를 천천히 걸었어요.",
+   "blank": "정겨운",
+   "src": "made"
   }
  ],
  "w|정교하다": [
@@ -66570,6 +67498,22 @@
    "en": "Yuna put on a waterproof vest over her blouse instead of an apron.",
    "ko": "유나는 블라우스 위에 앞치마 대신 방수 조끼를 걸쳤어요.",
    "blank": "조끼를",
+   "src": "made"
+  }
+ ],
+ "w|조리하다": [
+  {
+   "text": "민수 아버지는 손님 앞에서 바로 조리해서 생선구이를 내놓아요.",
+   "en": "Minsu's father cooks the grilled fish right in front of customers and serves it.",
+   "ko": "민수 아버지는 손님 앞에서 바로 조리해서 생선구이를 내놓아요.",
+   "blank": "조리해서",
+   "src": "made"
+  },
+  {
+   "text": "지영은 전자레인지에 데우기만 하면 되는 조리된 반찬을 주로 시켜요.",
+   "en": "Jiyoung mostly orders pre-cooked side dishes that only need to be heated in the microwave.",
+   "ko": "지영은 전자레인지에 데우기만 하면 되는 조리된 반찬을 주로 시켜요.",
+   "blank": "조리된",
    "src": "made"
   }
  ],
@@ -68691,6 +69635,22 @@
    "blank": "즐거움을"
   }
  ],
+ "w|즐거워하다": [
+  {
+   "text": "경민의 아들은 아빠 친구가 보낸 외국 동전을 보며 즐거워했어요.",
+   "en": "Gyeongmin's son enjoyed looking at the foreign coins his dad's friend sent.",
+   "ko": "경민의 아들은 아빠 친구가 보낸 외국 동전을 보며 즐거워했어요.",
+   "blank": "즐거워했어요",
+   "src": "made"
+  },
+  {
+   "text": "아이들이 손바닥에 물감을 묻혀 찍으며 즐거워하는 모습을 다은이 사진으로 남겼어요.",
+   "en": "Daeun took a photo of the kids having fun pressing their paint-covered palms onto paper.",
+   "ko": "아이들이 손바닥에 물감을 묻혀 찍으며 즐거워하는 모습을 다은이 사진으로 남겼어요.",
+   "blank": "즐거워하는",
+   "src": "made"
+  }
+ ],
  "w|즐겁다": [
   {
    "text": "오늘 하루 즐거웠어.",
@@ -68869,6 +69829,22 @@
    "src": "made"
   }
  ],
+ "w|지각": [
+  {
+   "text": "새벽 장을 보고 등교한 민수는 결국 지각을 했어요.",
+   "en": "Minsu went to school after the early-morning market run and ended up being late.",
+   "ko": "새벽 장을 보고 등교한 민수는 결국 지각을 했어요.",
+   "blank": "지각을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 아들이 지각을 자주 해서 소리가 큰 알람 시계를 샀어요.",
+   "en": "Jiyoung bought a loud alarm clock because her son is often late for school.",
+   "ko": "지영은 아들이 지각을 자주 해서 소리가 큰 알람 시계를 샀어요.",
+   "blank": "지각을",
+   "src": "made"
+  }
+ ],
  "w|지각하다": [
   {
    "text": "알람을 못 들어서 지각했어.",
@@ -68987,6 +69963,22 @@
    "ko": "지수는 학창 시절에 머리를 자른 이후로 지금껏 머리를 길러 왔다.",
    "blank": "지금껏",
    "src": "krdict"
+  }
+ ],
+ "w|지긋지긋하다": [
+  {
+   "text": "경민은 매일 똑같은 출퇴근길이 이제 지긋지긋하다고 편지에 털어놨어요.",
+   "en": "Gyeongmin confessed in the letter that he is sick and tired of the same commute every day.",
+   "ko": "경민은 매일 똑같은 출퇴근길이 이제 지긋지긋하다고 편지에 털어놨어요.",
+   "blank": "지긋지긋하다고",
+   "src": "made"
+  },
+  {
+   "text": "다은은 석고상 데생만 몇 달째 하다 보니 지긋지긋해요.",
+   "en": "Daeun is sick of it after months of doing nothing but plaster cast drawings.",
+   "ko": "다은은 석고상 데생만 몇 달째 하다 보니 지긋지긋해요.",
+   "blank": "지긋지긋해요",
+   "src": "made"
   }
  ],
  "w|지껄이다": [
@@ -69887,6 +70879,22 @@
    "en": "The subway was delayed.",
    "ko": "지하철이 지연됐어.",
    "blank": "지하철이"
+  }
+ ],
+ "w|지하철역": [
+  {
+   "text": "경민의 새 회사는 지하철역에서 내리면 바로 앞이라 출근이 편하대요.",
+   "en": "Gyeongmin says his new office is right in front of the subway station exit, so commuting is easy.",
+   "ko": "경민의 새 회사는 지하철역에서 내리면 바로 앞이라 출근이 편하대요.",
+   "blank": "지하철역에서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 사람들이 바삐 오가는 지하철역 풍경을 크로키로 그려 왔어요.",
+   "en": "Daeun brought in quick croquis drawings of people hurrying through the subway station.",
+   "ko": "다은은 사람들이 바삐 오가는 지하철역 풍경을 크로키로 그려 왔어요.",
+   "blank": "지하철역",
+   "src": "made"
   }
  ],
  "w|지혜": [
@@ -71387,6 +72395,22 @@
    "src": "made"
   }
  ],
+ "w|찝찝하다": [
+  {
+   "text": "마지막 통화를 서로 언성을 높이며 끝내서 경민은 내내 찝찝했어요.",
+   "en": "Gyeongmin felt uneasy the whole time because their last call ended with raised voices.",
+   "ko": "마지막 통화를 서로 언성을 높이며 끝내서 경민은 내내 찝찝했어요.",
+   "blank": "찝찝했어요",
+   "src": "made"
+  },
+  {
+   "text": "붓을 제대로 안 빨고 와서 다은은 수업 내내 마음이 찝찝했어요.",
+   "en": "Daeun felt uneasy the whole class because she hadn't washed her brushes properly.",
+   "ko": "붓을 제대로 안 빨고 와서 다은은 수업 내내 마음이 찝찝했어요.",
+   "blank": "찝찝했어요",
+   "src": "made"
+  }
+ ],
  "w|찡그리다": [
   {
    "text": "햇빛에 눈을 찡그리며 걸었어.",
@@ -71773,6 +72797,22 @@
    "src": "made"
   }
  ],
+ "w|착잡하다": [
+  {
+   "text": "경민은 옛 동네가 재개발로 사라진다는 소식에 마음이 착잡했어요.",
+   "en": "Gyeongmin had mixed feelings at the news that their old neighborhood would vanish due to redevelopment.",
+   "ko": "경민은 옛 동네가 재개발로 사라진다는 소식에 마음이 착잡했어요.",
+   "blank": "착잡했어요",
+   "src": "made"
+  },
+  {
+   "text": "오래 다닌 학원이 문을 닫는다는 말에 다은은 착잡한 표정으로 붓을 씻었어요.",
+   "en": "At the news that the studio she attended for years was closing, Daeun washed her brushes with a troubled look.",
+   "ko": "오래 다닌 학원이 문을 닫는다는 말에 다은은 착잡한 표정으로 붓을 씻었어요.",
+   "blank": "착잡한",
+   "src": "made"
+  }
+ ],
  "w|착하다": [
   {
    "text": "그 사람은 정말 착해.",
@@ -71873,6 +72913,22 @@
    "blank": "참견해서"
   }
  ],
+ "w|참고서": [
+  {
+   "text": "민수의 참고서에는 고춧가루 자국이 군데군데 묻어 있어요.",
+   "en": "Minsu's study guide has red pepper powder stains here and there.",
+   "ko": "민수의 참고서에는 고춧가루 자국이 군데군데 묻어 있어요.",
+   "blank": "참고서에는",
+   "src": "made"
+  },
+  {
+   "text": "서점보다 싸서 지영은 영어 참고서를 온라인에서 샀어요.",
+   "en": "It was cheaper than the bookstore, so Jiyoung bought the English study guide online.",
+   "ko": "서점보다 싸서 지영은 영어 참고서를 온라인에서 샀어요.",
+   "blank": "참고서를",
+   "src": "made"
+  }
+ ],
  "w|참기름": [
   {
    "text": "나물에는 참기름이 잘 어울려.",
@@ -71899,6 +72955,22 @@
    "en": "I barely held back my laughter.",
    "ko": "웃음을 겨우 참았어.",
    "blank": "참았어"
+  }
+ ],
+ "w|참담하다": [
+  {
+   "text": "경민은 친구 아버지의 부고를 늦게 알게 돼서 참담했어요.",
+   "en": "Gyeongmin felt terrible that he learned of his friend's father's death so late.",
+   "ko": "경민은 친구 아버지의 부고를 늦게 알게 돼서 참담했어요.",
+   "blank": "참담했어요",
+   "src": "made"
+  },
+  {
+   "text": "대회 당일 물감 통을 통째로 두고 와서 다은은 참담한 기분이었어요.",
+   "en": "Daeun felt awful because she left her whole paint box at home on the day of the contest.",
+   "ko": "대회 당일 물감 통을 통째로 두고 와서 다은은 참담한 기분이었어요.",
+   "blank": "참담한",
+   "src": "made"
   }
  ],
  "w|참석자": [
@@ -72550,6 +73622,22 @@
    "en": "Her flight was canceled, so Sujin ended up having to spend the night at the airport.",
    "ko": "비행기가 결항돼서 수진은 공항에서 밤을 새워야 하는 처지가 됐어요.",
    "blank": "처지가",
+   "src": "made"
+  }
+ ],
+ "w|처참하다": [
+  {
+   "text": "경민은 지진 뉴스에서 친구가 사는 마을의 처참한 모습을 보고 바로 편지를 썼어요.",
+   "en": "Gyeongmin wrote a letter right away after seeing the devastated state of his friend's town on the earthquake news.",
+   "ko": "경민은 지진 뉴스에서 친구가 사는 마을의 처참한 모습을 보고 바로 편지를 썼어요.",
+   "blank": "처참한",
+   "src": "made"
+  },
+  {
+   "text": "비가 새서 작업실 그림들이 젖은 걸 보고 다은은 그 처참한 광경에 말을 잃었어요.",
+   "en": "Seeing the paintings in the studio soaked by a leak, Daeun was speechless at the dreadful sight.",
+   "ko": "비가 새서 작업실 그림들이 젖은 걸 보고 다은은 그 처참한 광경에 말을 잃었어요.",
+   "blank": "처참한",
    "src": "made"
   }
  ],
@@ -73257,6 +74345,22 @@
    "ko": "시민들의 제보로 경찰이 현장에서 김 씨를 체포할 수 있었다.",
    "blank": "체포할",
    "src": "krdict"
+  }
+ ],
+ "w|체하다": [
+  {
+   "text": "민수는 바쁜 점심에 밥을 급하게 먹다가 체했어요.",
+   "en": "Minsu ate too fast during the busy lunch rush and got indigestion.",
+   "ko": "민수는 바쁜 점심에 밥을 급하게 먹다가 체했어요.",
+   "blank": "체했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 야식으로 시킨 족발을 급하게 먹다가 체해서 소화제를 주문했어요.",
+   "en": "Jiyoung got indigestion from eating late-night pork trotters too fast and ordered digestive medicine.",
+   "ko": "지영은 야식으로 시킨 족발을 급하게 먹다가 체해서 소화제를 주문했어요.",
+   "blank": "체해서",
+   "src": "made"
   }
  ],
  "w|쳐다보다": [
@@ -74297,6 +75401,22 @@
    "src": "made"
   }
  ],
+ "w|출석": [
+  {
+   "text": "민수는 주말에 가게 일을 돕지만 학교 출석은 한 번도 빠진 적이 없어요.",
+   "en": "Minsu helps at the shop on weekends but has never missed a day of school attendance.",
+   "ko": "민수는 주말에 가게 일을 돕지만 학교 출석은 한 번도 빠진 적이 없어요.",
+   "blank": "출석은",
+   "src": "made"
+  },
+  {
+   "text": "지영의 아들은 출석 도장을 다 모으면 학교에서 상을 받는대요.",
+   "en": "Jiyoung's son says he gets a prize at school if he collects all the attendance stamps.",
+   "ko": "지영의 아들은 출석 도장을 다 모으면 학교에서 상을 받는대요.",
+   "blank": "출석",
+   "src": "made"
+  }
+ ],
  "w|출석하다": [
   {
    "text": "이번 학기 수업에 꼬박 출석했어.",
@@ -74755,6 +75875,22 @@
    "src": "made"
   }
  ],
+ "w|측은하다": [
+  {
+   "text": "경민은 사업에 실패하고도 웃는 친구의 사진을 보고 측은한 마음이 들었어요.",
+   "en": "Seeing a photo of his friend smiling even after his business failed, Gyeongmin felt pity.",
+   "ko": "경민은 사업에 실패하고도 웃는 친구의 사진을 보고 측은한 마음이 들었어요.",
+   "blank": "측은한",
+   "src": "made"
+  },
+  {
+   "text": "비 맞은 길고양이를 그린 다은의 그림은 보는 사람을 측은하게 만들어요.",
+   "en": "Daeun's painting of a rain-soaked stray cat makes viewers feel pity.",
+   "ko": "비 맞은 길고양이를 그린 다은의 그림은 보는 사람을 측은하게 만들어요.",
+   "blank": "측은하게",
+   "src": "made"
+  }
+ ],
  "w|측정하다": [
   {
    "text": "환경 단체는 공장 근처 공기의 미세먼지를 직접 측정했어요.",
@@ -75062,6 +76198,22 @@
    "en": "Haeun remembered the day she visited a newspaper on a field trip with her high school friends.",
    "ko": "하은은 고등학교 친구들과 함께 신문사 견학을 왔던 날을 떠올렸어요.",
    "blank": "친구들과",
+   "src": "made"
+  }
+ ],
+ "w|친숙하다": [
+  {
+   "text": "친구의 삐뚤빼뚤한 글씨가 경민에게는 여전히 친숙해요.",
+   "en": "His friend's crooked handwriting still feels familiar to Gyeongmin.",
+   "ko": "친구의 삐뚤빼뚤한 글씨가 경민에게는 여전히 친숙해요.",
+   "blank": "친숙해요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 매일 앉던 창가 자리의 물감 냄새가 이제 친숙하게 느껴져요.",
+   "en": "The smell of paint at the window seat she sits at every day now feels familiar to Daeun.",
+   "ko": "다은은 매일 앉던 창가 자리의 물감 냄새가 이제 친숙하게 느껴져요.",
+   "blank": "친숙하게",
    "src": "made"
   }
  ],
@@ -77007,6 +78159,22 @@
    "blank": "토마토가"
   }
  ],
+ "w|토스터": [
+  {
+   "text": "시장 빵집 토스터에서 구운 식빵 냄새가 골목까지 퍼졌어요.",
+   "en": "The smell of bread from the market bakery's toaster spread all the way to the alley.",
+   "ko": "시장 빵집 토스터에서 구운 식빵 냄새가 골목까지 퍼졌어요.",
+   "blank": "토스터에서",
+   "src": "made"
+  },
+  {
+   "text": "새로 산 토스터가 빵을 너무 태워서 지영은 고객 센터에 전화했어요.",
+   "en": "The new toaster burns the bread too much, so Jiyoung called customer service.",
+   "ko": "새로 산 토스터가 빵을 너무 태워서 지영은 고객 센터에 전화했어요.",
+   "blank": "토스터가",
+   "src": "made"
+  }
+ ],
  "w|토스트": [
   {
    "text": "버터 바른 토스트가 고소해.",
@@ -78299,6 +79467,22 @@
    "blank": "판매"
   }
  ],
+ "w|판매원": [
+  {
+   "text": "맞은편 그릇 가게 판매원은 손님이 오면 늘 노래하듯 인사해요.",
+   "en": "The salesclerk at the dish shop across the way always greets customers as if singing.",
+   "ko": "맞은편 그릇 가게 판매원은 손님이 오면 늘 노래하듯 인사해요.",
+   "blank": "판매원은",
+   "src": "made"
+  },
+  {
+   "text": "매장 판매원이 알려 준 할인 코드로 지영은 앱에서 더 싸게 샀어요.",
+   "en": "Jiyoung bought it cheaper in the app with the discount code the store salesperson gave her.",
+   "ko": "매장 판매원이 알려 준 할인 코드로 지영은 앱에서 더 싸게 샀어요.",
+   "blank": "판매원이",
+   "src": "made"
+  }
+ ],
  "w|판사": [
   {
    "text": "판사가 판결문을 차분히 읽었어.",
@@ -78697,6 +79881,22 @@
    "en": "I moved it to a convenient spot.",
    "ko": "편리한 위치로 옮겼어.",
    "blank": "편리한"
+  }
+ ],
+ "w|편식하다": [
+  {
+   "text": "민수의 막냇동생은 편식해서 시장 나물 반찬에는 손도 안 대요.",
+   "en": "Minsu's youngest sibling is a picky eater and won't touch the market's vegetable side dishes.",
+   "ko": "민수의 막냇동생은 편식해서 시장 나물 반찬에는 손도 안 대요.",
+   "blank": "편식해서",
+   "src": "made"
+  },
+  {
+   "text": "아들이 편식하지 않게 지영은 채소가 숨어 있는 냉동 만두를 골랐어요.",
+   "en": "So her son wouldn't be picky, Jiyoung chose frozen dumplings with vegetables hidden inside.",
+   "ko": "아들이 편식하지 않게 지영은 채소가 숨어 있는 냉동 만두를 골랐어요.",
+   "blank": "편식하지",
+   "src": "made"
   }
  ],
  "w|편안하다": [
@@ -79213,6 +80413,22 @@
    "en": "Please pack the food separately.",
    "ko": "음식은 따로 포장해 주세요.",
    "blank": "포장해"
+  }
+ ],
+ "w|포크": [
+  {
+   "text": "시장 분식집은 외국 손님을 위해 떡볶이에 포크를 꽂아 줘요.",
+   "en": "The snack bar in the market sticks a fork in the tteokbokki for foreign customers.",
+   "ko": "시장 분식집은 외국 손님을 위해 떡볶이에 포크를 꽂아 줘요.",
+   "blank": "포크를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 집들이를 앞두고 포크와 접시를 세트로 주문했어요.",
+   "en": "Ahead of her housewarming, Jiyoung ordered forks and plates as a set.",
+   "ko": "지영은 집들이를 앞두고 포크와 접시를 세트로 주문했어요.",
+   "blank": "포크와",
+   "src": "made"
   }
  ],
  "w|포함되다": [
@@ -80131,6 +81347,22 @@
    "en": "The rescued victim felt relieved.",
    "ko": "구조를 받은 피해자가 안도했어.",
    "blank": "피해자가"
+  }
+ ],
+ "w|필기": [
+  {
+   "text": "민수는 수업 시간 필기를 가게에서 다시 정리해요.",
+   "en": "Minsu reorganizes his class notes at the shop.",
+   "ko": "민수는 수업 시간 필기를 가게에서 다시 정리해요.",
+   "blank": "필기를",
+   "src": "made"
+  },
+  {
+   "text": "지영의 딸은 태블릿으로 필기를 하고 싶다며 전용 펜을 장바구니에 담았어요.",
+   "en": "Jiyoung's daughter put a stylus in the cart, saying she wants to take notes on a tablet.",
+   "ko": "지영의 딸은 태블릿으로 필기를 하고 싶다며 전용 펜을 장바구니에 담았어요.",
+   "blank": "필기를",
+   "src": "made"
   }
  ],
  "w|필수": [
@@ -81741,6 +82973,22 @@
    "blank": "해산물"
   }
  ],
+ "w|해수욕장": [
+  {
+   "text": "경민은 해수욕장 모래사장에 둘의 이름을 크게 써 놓았던 날을 떠올렸어요.",
+   "en": "Gyeongmin recalled the day they wrote their names big in the sand at the beach.",
+   "ko": "경민은 해수욕장 모래사장에 둘의 이름을 크게 써 놓았던 날을 떠올렸어요.",
+   "blank": "해수욕장",
+   "src": "made"
+  },
+  {
+   "text": "여름 방학 과제로 다은은 붐비는 해수욕장을 그렸어요.",
+   "en": "For her summer vacation assignment, Daeun painted a crowded beach.",
+   "ko": "여름 방학 과제로 다은은 붐비는 해수욕장을 그렸어요.",
+   "blank": "해수욕장을",
+   "src": "made"
+  }
+ ],
  "w|해안": [
   {
    "text": "해안을 따라 오래 걸었어.",
@@ -82095,6 +83343,22 @@
    "blank": "행복했어"
   }
  ],
+ "w|행복해하다": [
+  {
+   "text": "사진 속 친구 가족이 행복해하는 모습을 보니 경민도 덩달아 기뻤어요.",
+   "en": "Seeing his friend's family looking happy in the photo, Gyeongmin was glad too.",
+   "ko": "사진 속 친구 가족이 행복해하는 모습을 보니 경민도 덩달아 기뻤어요.",
+   "blank": "행복해하는",
+   "src": "made"
+  },
+  {
+   "text": "다은의 그림을 선물받은 할아버지가 무척 행복해하셨어요.",
+   "en": "Daeun's grandfather was very happy to receive her painting as a gift.",
+   "ko": "다은의 그림을 선물받은 할아버지가 무척 행복해하셨어요.",
+   "blank": "행복해하셨어요",
+   "src": "made"
+  }
+ ],
  "w|행사": [
   {
    "text": "행사 때문에 길이 막혀.",
@@ -82197,6 +83461,22 @@
    "en": "I reported the illegal act.",
    "ko": "불법 행위를 신고했어.",
    "blank": "행위를"
+  }
+ ],
+ "w|행주": [
+  {
+   "text": "민수는 장사를 마치면 행주를 삶아서 널어 둬요.",
+   "en": "After closing up, Minsu boils the dishcloths and hangs them to dry.",
+   "ko": "민수는 장사를 마치면 행주를 삶아서 널어 둬요.",
+   "blank": "행주를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 잘 마르는 행주를 후기만 보고 열 장이나 샀어요.",
+   "en": "Going only by the reviews, Jiyoung bought ten quick-drying dishcloths.",
+   "ko": "지영은 잘 마르는 행주를 후기만 보고 열 장이나 샀어요.",
+   "blank": "행주를",
+   "src": "made"
   }
  ],
  "w|향": [

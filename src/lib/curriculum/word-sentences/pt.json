@@ -1353,6 +1353,22 @@
    "blank": "admitiu"
   }
  ],
+ "w|adoção": [
+  {
+   "text": "A ONG do parque incentiva a adoção simbólica de árvores nativas.",
+   "en": "The park's NGO encourages the symbolic adoption of native trees.",
+   "ko": "공원의 비영리 단체는 토종 나무 상징적 입양을 장려해요.",
+   "blank": "adoção",
+   "src": "made"
+  },
+  {
+   "text": "No carro, a Rita e a irmã conversaram sobre a adoção do sobrinho.",
+   "en": "In the car, Rita and her sister talked about their nephew's adoption.",
+   "ko": "차 안에서 히타와 언니는 조카 입양에 대해 이야기했어요.",
+   "blank": "adoção",
+   "src": "made"
+  }
+ ],
  "w|adolescente": [
   {
    "text": "O meu filho é um adolescente rebelde.",
@@ -7527,6 +7543,22 @@
    "src": "tatoeba:8566416/JGEN en:8554094/CK"
   }
  ],
+ "w|baía": [
+  {
+   "text": "O rio deságua numa baía cheia de barcos de pescadores.",
+   "en": "The river flows into a bay full of fishing boats.",
+   "ko": "강은 고깃배로 가득한 만으로 흘러들어요.",
+   "blank": "baía",
+   "src": "made"
+  },
+  {
+   "text": "A Rita almoçou num quiosque com vista para a baía.",
+   "en": "Rita had lunch at a beach kiosk overlooking the bay.",
+   "ko": "히타는 만이 내려다보이는 작은 가게에서 점심을 먹었어요.",
+   "blank": "baía",
+   "src": "made"
+  }
+ ],
  "w|baile": [
   {
    "text": "Não fui ao meu baile de formatura.",
@@ -8479,6 +8511,22 @@
    "src": "made"
   }
  ],
+ "w|batom": [
+  {
+   "text": "A irmã do Miguel passou batom antes da foto em frente à cachoeira.",
+   "en": "Miguel's sister put on lipstick before the photo in front of the waterfall.",
+   "ko": "미겔의 여동생은 폭포 앞에서 사진 찍기 전에 립스틱을 발랐어요.",
+   "blank": "batom",
+   "src": "made"
+  },
+  {
+   "text": "A Rita esqueceu o batom no porta-luvas e ele derreteu com o calor.",
+   "en": "Rita forgot her lipstick in the glove compartment and it melted in the heat.",
+   "ko": "히타는 립스틱을 글러브박스에 두고 잊어버려서 더위에 녹아 버렸어요.",
+   "blank": "batom",
+   "src": "made"
+  }
+ ],
  "w|bêbado": [
   {
    "text": "Ele saiu bêbado do bar.",
@@ -9124,6 +9172,22 @@
    "en": "Carla's cheeks turned red after playing the trumpet for an hour.",
    "ko": "카를라는 트럼펫을 한 시간 불고 나서 볼이 빨개졌어요.",
    "blank": "bochecha",
+   "src": "made"
+  }
+ ],
+ "w|bode": [
+  {
+   "text": "Um bode teimoso parou no meio da ponte, e o Miguel teve que esperar.",
+   "en": "A stubborn billy goat stopped in the middle of the bridge, and Miguel had to wait.",
+   "ko": "고집 센 숫염소가 다리 한가운데 멈춰 서서 미겔은 기다려야 했어요.",
+   "blank": "bode",
+   "src": "made"
+  },
+  {
+   "text": "A Rita fotografou um bode de chifres enormes na beira da estrada.",
+   "en": "Rita photographed a billy goat with huge horns by the roadside.",
+   "ko": "히타는 길가에서 뿔이 엄청 큰 숫염소를 사진 찍었어요.",
+   "blank": "bode",
    "src": "made"
   }
  ],
@@ -9815,6 +9879,22 @@
    "ko": "내 장난감이 망가졌어.",
    "blank": "brinquedo",
    "src": "tatoeba:1288507/alexmarcelo en:456487/lukaszpp"
+  }
+ ],
+ "w|brisa": [
+  {
+   "text": "Uma brisa fresca subia do rio e balançava as folhas perto do Miguel.",
+   "en": "A cool breeze rose from the river and stirred the leaves near Miguel.",
+   "ko": "강에서 시원한 바람이 불어와 미겔 곁의 나뭇잎을 흔들었어요.",
+   "blank": "brisa",
+   "src": "made"
+  },
+  {
+   "text": "Com a janela aberta, a Rita sentia a brisa do mar no rosto.",
+   "en": "With the window open, Rita felt the sea breeze on her face.",
+   "ko": "창문을 열어 두니 히타의 얼굴에 바닷바람이 느껴졌어요.",
+   "blank": "brisa",
+   "src": "made"
   }
  ],
  "w|britânico": [
@@ -11973,6 +12053,22 @@
    "blank": "casar"
   }
  ],
+ "w|casco": [
+  {
+   "text": "O Miguel ouviu o casco do cavalo batendo nas pedras da trilha.",
+   "en": "Miguel heard the horse's hoof striking the stones on the trail.",
+   "ko": "미겔은 말발굽이 산길 돌을 두드리는 소리를 들었어요.",
+   "blank": "casco",
+   "src": "made"
+  },
+  {
+   "text": "A Rita parou para fotografar um barco de pesca com o casco virado na areia.",
+   "en": "Rita stopped to photograph a fishing boat with its hull upturned on the sand.",
+   "ko": "히타는 선체가 뒤집힌 채 모래 위에 놓인 고깃배를 찍으려고 차를 세웠어요.",
+   "blank": "casco",
+   "src": "made"
+  }
+ ],
  "w|caseiro": [
   {
    "text": "A mãe do João mandou um pote de doce caseiro para a casa nova.",
@@ -13015,6 +13111,22 @@
    "blank": "chão"
   }
  ],
+ "w|chapa": [
+  {
+   "text": "No jantar, o Miguel assou peixe numa chapa de ferro sobre a fogueira.",
+   "en": "For dinner, Miguel grilled fish on an iron griddle over the campfire.",
+   "ko": "저녁에 미겔은 모닥불 위 철판에 생선을 구웠어요.",
+   "blank": "chapa",
+   "src": "made"
+  },
+  {
+   "text": "Num restaurante de beira de estrada, a Rita comeu um misto-quente feito na chapa.",
+   "en": "At a roadside diner, Rita ate a ham and cheese toastie made on the griddle.",
+   "ko": "도로변 식당에서 히타는 철판에 구운 햄치즈 토스트를 먹었어요.",
+   "blank": "chapa",
+   "src": "made"
+  }
+ ],
  "w|chapéu": [
   {
    "text": "Onde estão meu chapéu e minhas luvas?",
@@ -13481,6 +13593,22 @@
    "ko": "내일 비 올 것 같아요?",
    "blank": "chover",
    "src": "tatoeba:6401864/bill en:4097127/CK"
+  }
+ ],
+ "w|chumbo": [
+  {
+   "text": "Os pescadores do rio prendem pesos de chumbo nas redes para elas afundarem.",
+   "en": "The river fishermen attach lead weights to their nets so they sink.",
+   "ko": "강 어부들은 그물이 가라앉도록 납 추를 달아요.",
+   "blank": "chumbo",
+   "src": "made"
+  },
+  {
+   "text": "A Rita abasteceu com gasolina sem chumbo num posto no meio do nada.",
+   "en": "Rita filled up with unleaded gas at a station in the middle of nowhere.",
+   "ko": "히타는 인적 드문 주유소에서 무연 휘발유를 넣었어요.",
+   "blank": "chumbo",
+   "src": "made"
   }
  ],
  "w|chupar": [
@@ -14220,6 +14348,22 @@
    "en": "The museum has a room with instruments from the city's first clinical hospital.",
    "ko": "박물관에는 도시 최초 임상 병원의 기구들이 있는 방이 있어요.",
    "blank": "clínico",
+   "src": "made"
+  }
+ ],
+ "w|clone": [
+  {
+   "text": "A bióloga explicou ao Miguel que certas plantas formam um clone de si mesmas pelas raízes.",
+   "en": "The biologist explained to Miguel that certain plants form a clone of themselves through their roots.",
+   "ko": "생물학자는 미겔에게 어떤 식물은 뿌리로 자기 복제체를 만든다고 설명했어요.",
+   "blank": "clone",
+   "src": "made"
+  },
+  {
+   "text": "No rádio, a Rita ouviu um cientista explicar como foi feito o clone de uma ovelha famosa.",
+   "en": "On the radio, Rita heard a scientist explain how a famous sheep's clone was made.",
+   "ko": "라디오에서 히타는 한 과학자가 유명한 복제 양을 어떻게 만들었는지 설명하는 걸 들었어요.",
+   "blank": "clone",
    "src": "made"
   }
  ],
@@ -15920,6 +16064,22 @@
    "en": "On Sunday there's a chorinho concert in the market square, and Mariana is going.",
    "ko": "일요일에 시장 광장에서 쇼리뉴 공연이 있는데 마리아나도 가요.",
    "blank": "concerto",
+   "src": "made"
+  }
+ ],
+ "w|concha": [
+  {
+   "text": "O Miguel achou uma concha de caramujo na areia da margem.",
+   "en": "Miguel found a snail shell in the sand on the bank.",
+   "ko": "미겔은 강가 모래에서 달팽이 껍데기를 찾았어요.",
+   "blank": "concha",
+   "src": "made"
+  },
+  {
+   "text": "A Rita comprou um colar de concha numa barraca da praia.",
+   "en": "Rita bought a shell necklace at a beach stall.",
+   "ko": "히타는 해변 노점에서 조개껍데기 목걸이를 샀어요.",
+   "blank": "concha",
    "src": "made"
   }
  ],
@@ -18285,6 +18445,22 @@
    "src": "made"
   }
  ],
+ "w|corvo": [
+  {
+   "text": "Um corvo pousou no galho e ficou olhando o Miguel comer.",
+   "en": "A crow landed on the branch and kept watching Miguel eat.",
+   "ko": "까마귀 한 마리가 나뭇가지에 앉아 미겔이 먹는 걸 지켜봤어요.",
+   "blank": "corvo",
+   "src": "made"
+  },
+  {
+   "text": "Um corvo ficou pulando ao lado do carro da Rita no estacionamento.",
+   "en": "A crow kept hopping beside Rita's car in the parking lot.",
+   "ko": "까마귀 한 마리가 주차장에서 히타의 차 옆을 깡충거렸어요.",
+   "blank": "corvo",
+   "src": "made"
+  }
+ ],
  "w|costa": [
   {
    "text": "Nós deixamos nosso barco na costa.",
@@ -18907,6 +19083,22 @@
    "src": "tatoeba:8558782/Capistrano en:2825894/marcelostockle"
   }
  ],
+ "w|crocodilo": [
+  {
+   "text": "O guia explicou ao Miguel que o jacaré é parente distante do crocodilo.",
+   "en": "The guide explained to Miguel that the caiman is a distant relative of the crocodile.",
+   "ko": "가이드는 미겔에게 카이만이 악어의 먼 친척이라고 설명했어요.",
+   "blank": "crocodilo",
+   "src": "made"
+  },
+  {
+   "text": "Num parque à beira da estrada, a Rita viu um crocodilo dormindo no lago.",
+   "en": "At a park by the road, Rita saw a crocodile sleeping in the lake.",
+   "ko": "길가 공원에서 히타는 호수에서 자고 있는 악어를 봤어요.",
+   "blank": "crocodilo",
+   "src": "made"
+  }
+ ],
  "w|cru": [
   {
    "text": "A sobrinha do Tiago não come peixe cru de jeito nenhum.",
@@ -19000,6 +19192,22 @@
    "en": "Ana saw the suspect cross the avenue and ran after him.",
    "ko": "아나는 용의자가 대로를 건너는 걸 보고 뒤쫓아 갔어요.",
    "blank": "cruzar",
+   "src": "made"
+  }
+ ],
+ "w|cruzeiro": [
+  {
+   "text": "Do mirante, o Miguel viu um navio de cruzeiro passando ao longe na foz do rio.",
+   "en": "From the lookout, Miguel saw a cruise ship passing far off at the river mouth.",
+   "ko": "전망대에서 미겔은 저 멀리 강 하구를 지나가는 크루즈선을 봤어요.",
+   "blank": "cruzeiro",
+   "src": "made"
+  },
+  {
+   "text": "A Rita prefere viajar de carro a passar uma semana num cruzeiro.",
+   "en": "Rita would rather travel by car than spend a week on a cruise.",
+   "ko": "히타는 크루즈에서 일주일을 보내느니 차로 여행하는 게 더 좋아요.",
+   "blank": "cruzeiro",
    "src": "made"
   }
  ],
@@ -19915,6 +20123,22 @@
    "ko": "신고할 물건이 없어요.",
    "blank": "declarar",
    "src": "tatoeba:9446718/Ricardo14 en:436683/lukaszpp"
+  }
+ ],
+ "w|decolar": [
+  {
+   "text": "Antes do amanhecer, o Miguel viu um avião decolar por cima das árvores.",
+   "en": "Before dawn, Miguel saw a plane take off above the trees.",
+   "ko": "동트기 전에 미겔은 비행기가 나무 위로 이륙하는 걸 봤어요.",
+   "blank": "decolar",
+   "src": "made"
+  },
+  {
+   "text": "Da estrada, a Rita viu um avião decolar bem baixo sobre os carros.",
+   "en": "From the road, Rita saw a plane take off very low over the cars.",
+   "ko": "히타는 도로에서 비행기가 차들 위로 아주 낮게 이륙하는 걸 봤어요.",
+   "blank": "decolar",
+   "src": "made"
   }
  ],
  "w|dedicado": [
@@ -23447,6 +23671,22 @@
    "src": "tatoeba:1573339/paula_guisard en:16907/gracefully"
   }
  ],
+ "w|doca": [
+  {
+   "text": "O barco do Miguel fica amarrado numa doca de madeira perto da cachoeira.",
+   "en": "Miguel's boat is tied to a wooden dock near the waterfall.",
+   "ko": "미겔의 배는 폭포 근처 나무 부두에 묶여 있어요.",
+   "blank": "doca",
+   "src": "made"
+  },
+  {
+   "text": "Na cidade portuária, a Rita estacionou perto da doca onde descarregam os contêineres.",
+   "en": "In the port city, Rita parked near the dock where they unload the containers.",
+   "ko": "항구 도시에서 히타는 컨테이너를 내리는 부두 근처에 차를 세웠어요.",
+   "blank": "doca",
+   "src": "made"
+  }
+ ],
  "w|doce": [
   {
    "text": "A manga está doce hoje.",
@@ -26881,6 +27121,22 @@
    "src": "made"
   }
  ],
+ "w|escurecer": [
+  {
+   "text": "Na mata, começa a escurecer bem mais cedo do que na cidade, e o Miguel sabe disso.",
+   "en": "In the woods it starts getting dark much earlier than in the city, and Miguel knows it.",
+   "ko": "숲에서는 도시보다 훨씬 일찍 어두워지기 시작하고, 미겔도 그걸 알아요.",
+   "blank": "escurecer",
+   "src": "made"
+  },
+  {
+   "text": "A Rita queria chegar à pousada antes de escurecer.",
+   "en": "Rita wanted to reach the inn before it got dark.",
+   "ko": "히타는 어두워지기 전에 숙소에 도착하고 싶었어요.",
+   "blank": "escurecer",
+   "src": "made"
+  }
+ ],
  "w|escuridão": [
   {
    "text": "Eu odeio a escuridão.",
@@ -28073,6 +28329,22 @@
    "en": "That's not my style.",
    "ko": "그런 건 내 스타일이 아니야.",
    "blank": "estilo"
+  }
+ ],
+ "w|estimação": [
+  {
+   "text": "O Miguel levou o seu animal de estimação, um vira-lata chamado Pipoca, para a trilha.",
+   "en": "Miguel took his pet, a mutt named Pipoca, on the trail.",
+   "ko": "미겔은 반려동물인 잡종견 피포카를 데리고 산길에 갔어요.",
+   "blank": "estimação",
+   "src": "made"
+  },
+  {
+   "text": "A Rita deixou o seu bichinho de estimação, um gato gordo, com a vizinha.",
+   "en": "Rita left her pet, a fat cat, with the neighbor.",
+   "ko": "히타는 반려동물인 뚱뚱한 고양이를 이웃에게 맡겼어요.",
+   "blank": "estimação",
+   "src": "made"
   }
  ],
  "w|estimar": [
@@ -31731,6 +32003,22 @@
    "blank": "floresta"
   }
  ],
+ "w|fluido": [
+  {
+   "text": "O guia mostrou a seiva, um fluido grudento que escorre do tronco da seringueira.",
+   "en": "The guide showed the sap, a sticky fluid that runs down the rubber tree's trunk.",
+   "ko": "가이드는 고무나무 줄기에서 흘러나오는 끈적한 액체인 수액을 보여 줬어요.",
+   "blank": "fluido",
+   "src": "made"
+  },
+  {
+   "text": "O mecânico disse à Rita que o carro estava perdendo fluido de freio.",
+   "en": "The mechanic told Rita the car was leaking brake fluid.",
+   "ko": "정비사는 히타에게 차에서 브레이크액이 새고 있다고 말했어요.",
+   "blank": "fluido",
+   "src": "made"
+  }
+ ],
  "w|fluir": [
   {
    "text": "O João gosta de ouvir a água fluir entre as pedras antes de dormir.",
@@ -33455,6 +33743,22 @@
    "src": "made"
   }
  ],
+ "w|ganso": [
+  {
+   "text": "Um ganso bravo correu atrás do Miguel na beira da lagoa.",
+   "en": "An angry goose chased Miguel along the edge of the pond.",
+   "ko": "성난 거위가 연못가에서 미겔을 쫓아왔어요.",
+   "blank": "ganso",
+   "src": "made"
+  },
+  {
+   "text": "Numa cidadezinha, um ganso fugiu do quintal e passou na frente do carro da Rita.",
+   "en": "In a small town, a goose escaped from a yard and crossed in front of Rita's car.",
+   "ko": "작은 마을에서 거위 한 마리가 마당을 빠져나와 히타의 차 앞을 지나갔어요.",
+   "blank": "ganso",
+   "src": "made"
+  }
+ ],
  "w|garagem": [
   {
    "text": "Estacionei meu carro na garagem e saí.",
@@ -34330,6 +34634,22 @@
    "en": "Sofia cleaned the grease built up in the kitchen hood.",
    "ko": "소피아는 주방 후드에 낀 기름때를 닦았어요.",
    "blank": "gordura",
+   "src": "made"
+  }
+ ],
+ "w|gorila": [
+  {
+   "text": "No zoológico perto da reserva, o Miguel passou um tempão olhando o gorila.",
+   "en": "At the zoo near the reserve, Miguel spent ages watching the gorilla.",
+   "ko": "보호구역 근처 동물원에서 미겔은 한참 동안 고릴라를 구경했어요.",
+   "blank": "gorila",
+   "src": "made"
+  },
+  {
+   "text": "Numa loja de conveniência, a Rita comprou um gorila de pelúcia para o sobrinho.",
+   "en": "At a convenience store, Rita bought a stuffed gorilla for her nephew.",
+   "ko": "편의점에서 히타는 조카에게 줄 고릴라 인형을 샀어요.",
+   "blank": "gorila",
    "src": "made"
   }
  ],
@@ -35483,6 +35803,22 @@
    "src": "tatoeba:5887547/sergiomelo en:5886929/OsoHombre"
   }
  ],
+ "w|homossexual": [
+  {
+   "text": "No acampamento, o Miguel conheceu um casal homossexual que guia trilhas na região há anos.",
+   "en": "At the campsite, Miguel met a gay couple who have been leading trails in the area for years.",
+   "ko": "야영장에서 미겔은 몇 년째 그 지역에서 트레킹 가이드를 하는 동성 커플을 만났어요.",
+   "blank": "homossexual",
+   "src": "made"
+  },
+  {
+   "text": "Num museu da estrada, a Rita viu uma exposição sobre a história do movimento homossexual no país.",
+   "en": "At a museum along the road, Rita saw an exhibition on the history of the gay rights movement in the country.",
+   "ko": "길가 박물관에서 히타는 그 나라 동성애 운동의 역사에 관한 전시를 봤어요.",
+   "blank": "homossexual",
+   "src": "made"
+  }
+ ],
  "w|honestamente": [
   {
    "text": "Honestamente, eu preferia estar errado.",
@@ -35621,6 +35957,22 @@
    "ko": "덕분에 제시간에 도착했어요.",
    "blank": "horário",
    "src": "tatoeba:12778262/Advanced en:2267791/_undertoad"
+  }
+ ],
+ "w|horizonte": [
+  {
+   "text": "Ao entardecer, o Miguel vê o sol sumir no horizonte atrás das montanhas.",
+   "en": "At dusk, Miguel watches the sun disappear on the horizon behind the mountains.",
+   "ko": "해 질 녘에 미겔은 산 너머 지평선으로 해가 사라지는 걸 봐요.",
+   "blank": "horizonte",
+   "src": "made"
+  },
+  {
+   "text": "Na estrada reta do sertão, a Rita só via asfalto até o horizonte.",
+   "en": "On the straight road through the backlands, Rita saw nothing but asphalt to the horizon.",
+   "ko": "내륙의 곧은 도로에서 히타 눈에는 지평선까지 아스팔트뿐이었어요.",
+   "blank": "horizonte",
+   "src": "made"
   }
  ],
  "w|horrível": [
@@ -39379,6 +39731,38 @@
    "src": "tatoeba:405319/brauliobezerra en:23576/adamtrousers"
   }
  ],
+ "w|jato": [
+  {
+   "text": "A cachoeira solta um jato de água tão forte que ninguém consegue ficar embaixo dela.",
+   "en": "The waterfall shoots out a jet of water so strong that nobody can stand under it.",
+   "ko": "폭포 물줄기가 너무 세서 아무도 그 아래 서 있을 수 없어요.",
+   "blank": "jato",
+   "src": "made"
+  },
+  {
+   "text": "Um jato passou tão baixo que a Rita levou um susto no volante.",
+   "en": "A jet flew so low that Rita got a fright at the wheel.",
+   "ko": "제트기가 너무 낮게 지나가서 히타는 운전하다 깜짝 놀랐어요.",
+   "blank": "jato",
+   "src": "made"
+  }
+ ],
+ "w|jaula": [
+  {
+   "text": "O centro de resgate mantém um filhote de onça numa jaula ampla enquanto ele se recupera.",
+   "en": "The rescue center keeps a jaguar cub in a roomy cage while it recovers.",
+   "ko": "구조 센터는 새끼 재규어가 회복하는 동안 넓은 우리에 두고 있어요.",
+   "blank": "jaula",
+   "src": "made"
+  },
+  {
+   "text": "Num posto, a Rita viu um papagaio preso numa jaula pequena e ficou com pena.",
+   "en": "At a gas station, Rita saw a parrot trapped in a small cage and felt sorry for it.",
+   "ko": "주유소에서 히타는 작은 새장에 갇힌 앵무새를 보고 안쓰러웠어요.",
+   "blank": "jaula",
+   "src": "made"
+  }
+ ],
  "w|jazz": [
   {
    "text": "O professor de música apresentou o jazz à turma, e o Rafael adorou.",
@@ -40077,6 +40461,22 @@
    "en": "Watch out, there's a thief at the market.",
    "ko": "조심해, 장에 도둑이 있어.",
    "blank": "ladrão"
+  }
+ ],
+ "w|lagarto": [
+  {
+   "text": "Um lagarto ficou tomando sol numa pedra ao lado do Miguel.",
+   "en": "A lizard sat sunbathing on a rock next to Miguel.",
+   "ko": "도마뱀 한 마리가 미겔 옆 바위에서 햇볕을 쬐고 있었어요.",
+   "blank": "lagarto",
+   "src": "made"
+  },
+  {
+   "text": "Um lagarto atravessou a pista correndo, e a Rita freou a tempo.",
+   "en": "A lizard darted across the road, and Rita braked in time.",
+   "ko": "도마뱀이 도로를 쏜살같이 건너가서 히타는 제때 브레이크를 밟았어요.",
+   "blank": "lagarto",
+   "src": "made"
   }
  ],
  "w|lago": [
@@ -41639,6 +42039,22 @@
    "en": "The kitchen trash stinks.",
    "ko": "부엌 쓰레기가 냄새 나.",
    "blank": "lixo"
+  }
+ ],
+ "w|lobisomem": [
+  {
+   "text": "O avô do Miguel conta a lenda do lobisomem que vagava pela mata nas noites de lua cheia.",
+   "en": "Miguel's grandfather tells the legend of the werewolf that roamed the woods on full-moon nights.",
+   "ko": "미겔의 할아버지는 보름달 밤마다 숲을 떠돌던 늑대인간 전설을 들려줘요.",
+   "blank": "lobisomem",
+   "src": "made"
+  },
+  {
+   "text": "No rádio do carro, a Rita ouviu um programa sobre filmes de lobisomem.",
+   "en": "On the car radio, Rita heard a show about werewolf movies.",
+   "ko": "히타는 차 라디오에서 늑대인간 영화에 관한 프로그램을 들었어요.",
+   "blank": "lobisomem",
+   "src": "made"
   }
  ],
  "w|lobo": [
@@ -44756,6 +45172,22 @@
    "en": "During the June festival season, Inês can barely keep up with all the corn to sell.",
    "ko": "6월 축제철이면 이네스는 팔 옥수수가 너무 많아 감당을 못 해요.",
    "blank": "milho",
+   "src": "made"
+  }
+ ],
+ "w|milionário": [
+  {
+   "text": "Dizem que um milionário comprou metade da margem do rio para construir uma mansão.",
+   "en": "They say a millionaire bought half the riverbank to build a mansion.",
+   "ko": "어떤 백만장자가 저택을 지으려고 강가 절반을 샀다고 해요.",
+   "blank": "milionário",
+   "src": "made"
+  },
+  {
+   "text": "A Rita passou por uma fazenda tão grande que parecia coisa de milionário.",
+   "en": "Rita drove past a farm so big it looked like a millionaire's.",
+   "ko": "히타는 백만장자 것처럼 보일 만큼 큰 농장을 지나갔어요.",
+   "blank": "milionário",
    "src": "made"
   }
  ],
@@ -48867,6 +49299,22 @@
    "src": "made"
   }
  ],
+ "w|organismo": [
+  {
+   "text": "Segundo o guia, cada organismo do rio depende da água limpa para sobreviver.",
+   "en": "According to the guide, every organism in the river depends on clean water to survive.",
+   "ko": "가이드 말로는 강의 모든 생물이 살아가려면 깨끗한 물이 필요해요.",
+   "blank": "organismo",
+   "src": "made"
+  },
+  {
+   "text": "Depois de tantas horas dirigindo, o organismo da Rita pediu descanso.",
+   "en": "After so many hours of driving, Rita's body was begging for rest.",
+   "ko": "몇 시간이나 운전하고 나니 히타의 몸이 쉬고 싶어 했어요.",
+   "blank": "organismo",
+   "src": "made"
+  }
+ ],
  "w|organização": [
   {
    "text": "Que tipo de pesquisa faz a organização?",
@@ -51077,6 +51525,22 @@
    "src": "made"
   }
  ],
+ "w|penhasco": [
+  {
+   "text": "A trilha do Miguel termina num penhasco de onde se vê o vale todo.",
+   "en": "Miguel's trail ends at a cliff where you can see the whole valley.",
+   "ko": "미겔이 걷는 산길은 계곡 전체가 보이는 절벽에서 끝나요.",
+   "blank": "penhasco",
+   "src": "made"
+  },
+  {
+   "text": "A estrada costeira passa à beira de um penhasco, e a Rita dirigiu bem devagar.",
+   "en": "The coastal road runs along the edge of a cliff, and Rita drove very slowly.",
+   "ko": "해안 도로가 절벽 가장자리를 지나서 히타는 아주 천천히 운전했어요.",
+   "blank": "penhasco",
+   "src": "made"
+  }
+ ],
  "w|pensamento": [
   {
    "text": "Um pensamento me acordou.",
@@ -52185,6 +52649,22 @@
    "src": "made"
   }
  ],
+ "w|pico": [
+  {
+   "text": "Do pico da serra, o Miguel enxergou o rio inteiro serpenteando pela mata.",
+   "en": "From the mountain peak, Miguel could see the whole river winding through the forest.",
+   "ko": "산봉우리에서 미겔은 숲 사이로 굽이치는 강 전체를 볼 수 있었어요.",
+   "blank": "pico",
+   "src": "made"
+  },
+  {
+   "text": "A Rita saiu bem cedo para fugir do horário de pico na saída da cidade.",
+   "en": "Rita left very early to avoid rush hour on the way out of the city.",
+   "ko": "히타는 도시를 빠져나가는 출퇴근 시간을 피하려고 아주 일찍 출발했어요.",
+   "blank": "pico",
+   "src": "made"
+  }
+ ],
  "w|piedade": [
   {
    "text": "Tem piedade desta pobre mulher!",
@@ -52637,6 +53117,22 @@
    "ko": "식물 하나만 가져갈게요.",
    "blank": "planta",
    "src": "tatoeba:2166995/alexmarcelo en:2167412"
+  }
+ ],
+ "w|plantação": [
+  {
+   "text": "Depois da mata, a estrada do Miguel passa por uma plantação de café.",
+   "en": "After the forest, Miguel's road runs past a coffee plantation.",
+   "ko": "숲을 지나면 미겔이 가는 길은 커피 농장을 지나요.",
+   "blank": "plantação",
+   "src": "made"
+  },
+  {
+   "text": "A estrada atravessa uma plantação de soja sem fim, e a Rita achou a paisagem monótona.",
+   "en": "The road crosses an endless soybean plantation, and Rita found the scenery dull.",
+   "ko": "길이 끝없는 콩밭을 가로질러서 히타는 풍경이 단조롭다고 느꼈어요.",
+   "blank": "plantação",
+   "src": "made"
   }
  ],
  "w|plantão": [
@@ -53102,6 +53598,22 @@
    "en": "A pigeon landed on Beatriz's balcony just as she was hanging the decorations.",
    "ko": "베아트리스가 장식을 걸고 있을 때 비둘기 한 마리가 베란다에 내려앉았어요.",
    "blank": "pombo",
+   "src": "made"
+  }
+ ],
+ "w|pônei": [
+  {
+   "text": "A filha do Miguel andou de pônei num sítio perto do rio.",
+   "en": "Miguel's daughter rode a pony at a small farm near the river.",
+   "ko": "미겔의 딸은 강 근처 농장에서 조랑말을 탔어요.",
+   "blank": "pônei",
+   "src": "made"
+  },
+  {
+   "text": "Numa feira rural, a Rita viu crianças fazendo fila para andar de pônei.",
+   "en": "At a country fair, Rita saw kids lining up to ride a pony.",
+   "ko": "시골 장터에서 히타는 아이들이 조랑말을 타려고 줄 선 걸 봤어요.",
+   "blank": "pônei",
    "src": "made"
   }
  ],
@@ -57713,6 +58225,22 @@
    "src": "made"
   }
  ],
+ "w|rebanho": [
+  {
+   "text": "Um rebanho de vacas atravessou o rio devagar, para a alegria do Miguel.",
+   "en": "A herd of cows slowly crossed the river, to Miguel's delight.",
+   "ko": "소 떼가 천천히 강을 건너자 미겔은 신이 났어요.",
+   "blank": "rebanho",
+   "src": "made"
+  },
+  {
+   "text": "Um rebanho de ovelhas bloqueou a estrada, e a Rita esperou com paciência.",
+   "en": "A flock of sheep blocked the road, and Rita waited patiently.",
+   "ko": "양 떼가 길을 막아서 히타는 참을성 있게 기다렸어요.",
+   "blank": "rebanho",
+   "src": "made"
+  }
+ ],
  "w|rebelde": [
   {
    "text": "Ele tem cabelo rebelde.",
@@ -58581,6 +59109,22 @@
    "en": "Without a rule this turns into a mess.",
    "ko": "규칙이 없으면 난장판이 돼.",
    "blank": "regra"
+  }
+ ],
+ "w|regressar": [
+  {
+   "text": "O Miguel prometeu regressar à floresta na próxima primavera.",
+   "en": "Miguel promised to return to the forest next spring.",
+   "ko": "미겔은 내년 봄에 숲으로 돌아오겠다고 약속했어요.",
+   "blank": "regressar",
+   "src": "made"
+  },
+  {
+   "text": "A Rita pretende regressar para casa pelo litoral.",
+   "en": "Rita plans to return home along the coast.",
+   "ko": "히타는 해안 길로 집에 돌아갈 생각이에요.",
+   "blank": "regressar",
+   "src": "made"
   }
  ],
  "w|regulamento": [
@@ -59765,6 +60309,22 @@
    "ko": "한 번에 책을 몇 권 빌릴 수 있어요?",
    "blank": "retirar",
    "src": "tatoeba:1001883/alexmarcelo en:27474/CK"
+  }
+ ],
+ "w|retiro": [
+  {
+   "text": "A cabana do Miguel funciona como um retiro para quem quer fugir da cidade.",
+   "en": "Miguel's cabin works as a retreat for anyone who wants to escape the city.",
+   "ko": "미겔의 오두막은 도시를 벗어나고 싶은 사람들의 휴식처예요.",
+   "blank": "retiro",
+   "src": "made"
+  },
+  {
+   "text": "No meio da viagem, a Rita passou um fim de semana num retiro de ioga na serra.",
+   "en": "Halfway through the trip, Rita spent a weekend at a yoga retreat in the mountains.",
+   "ko": "여행 중간에 히타는 산속 요가 수련원에서 주말을 보냈어요.",
+   "blank": "retiro",
+   "src": "made"
   }
  ],
  "w|reto": [
@@ -62383,6 +62943,22 @@
    "blank": "senhora"
   }
  ],
+ "w|senhorio": [
+  {
+   "text": "O senhorio da cabana deixou lenha seca na varanda para o Miguel.",
+   "en": "The cabin's landlord left dry firewood on the porch for Miguel.",
+   "ko": "오두막 주인은 미겔을 위해 마른 장작을 현관에 두고 갔어요.",
+   "blank": "senhorio",
+   "src": "made"
+  },
+  {
+   "text": "Antes de viajar, a Rita deixou uma cópia da chave com o senhorio.",
+   "en": "Before traveling, Rita left a copy of the key with the landlord.",
+   "ko": "여행을 떠나기 전에 히타는 집주인에게 열쇠 사본을 맡겼어요.",
+   "blank": "senhorio",
+   "src": "made"
+  }
+ ],
  "w|senhorita": [
   {
    "text": "Senhorita, o elevador chegou.",
@@ -64827,6 +65403,22 @@
    "src": "made"
   }
  ],
+ "w|suíte": [
+  {
+   "text": "A pousada da floresta tem uma suíte com varanda virada para o rio.",
+   "en": "The forest inn has a suite with a balcony facing the river.",
+   "ko": "숲속 펜션에는 강 쪽으로 난 발코니가 있는 스위트룸이 있어요.",
+   "blank": "suíte",
+   "src": "made"
+  },
+  {
+   "text": "No hotel de beira de estrada, a Rita pediu uma suíte com banheira.",
+   "en": "At the roadside hotel, Rita asked for a suite with a bathtub.",
+   "ko": "도로변 호텔에서 히타는 욕조가 있는 스위트룸을 달라고 했어요.",
+   "blank": "suíte",
+   "src": "made"
+  }
+ ],
  "w|sujar": [
   {
    "text": "Tom não tem medo de se sujar.",
@@ -66472,6 +67064,22 @@
    "en": "Almost a third of Luísa's team budget goes to travel.",
    "ko": "루이자네 팀 예산의 거의 삼분의 일이 출장비로 나가요.",
    "blank": "terço",
+   "src": "made"
+  }
+ ],
+ "w|terminal": [
+  {
+   "text": "O ônibus para a reserva sai do terminal rodoviário logo cedo.",
+   "en": "The bus to the reserve leaves the bus terminal early in the morning.",
+   "ko": "보호구역행 버스는 아침 일찍 버스 터미널에서 출발해요.",
+   "blank": "terminal",
+   "src": "made"
+  },
+  {
+   "text": "A Rita deixou a amiga no terminal do aeroporto antes de pegar a estrada.",
+   "en": "Rita dropped her friend off at the airport terminal before hitting the road.",
+   "ko": "히타는 길을 나서기 전에 친구를 공항 터미널에 내려 줬어요.",
+   "blank": "terminal",
    "src": "made"
   }
  ],
@@ -69733,6 +70341,22 @@
    "src": "made"
   }
  ],
+ "w|vagão": [
+  {
+   "text": "Na beira do rio, o Miguel achou um vagão de trem abandonado, coberto de musgo.",
+   "en": "On the riverbank, Miguel found an abandoned train car covered in moss.",
+   "ko": "강가에서 미겔은 이끼로 덮인 버려진 기차 객차를 발견했어요.",
+   "blank": "vagão",
+   "src": "made"
+  },
+  {
+   "text": "Numa estação antiga, a Rita tomou café num vagão transformado em lanchonete.",
+   "en": "At an old station, Rita had coffee in a train car turned into a snack bar.",
+   "ko": "오래된 역에서 히타는 간이식당으로 바뀐 객차에서 커피를 마셨어요.",
+   "blank": "vagão",
+   "src": "made"
+  }
+ ],
  "w|vagar": [
   {
    "text": "A Ana passou a tarde a vagar com o Lucas pelos corredores, mostrando cada setor.",
@@ -70389,6 +71013,22 @@
    "ko": "의심은 우정을 망치는 독이에요.",
    "blank": "veneno",
    "src": "tatoeba:4035453/Balamax en:4035469/Balamax"
+  }
+ ],
+ "w|venenoso": [
+  {
+   "text": "O guia avisou o Miguel que aquele cogumelo vermelho é venenoso.",
+   "en": "The guide warned Miguel that the red mushroom is poisonous.",
+   "ko": "가이드는 미겔에게 그 빨간 버섯은 독이 있다고 경고했어요.",
+   "blank": "venenoso",
+   "src": "made"
+  },
+  {
+   "text": "O frentista contou à Rita que o escorpião amarelo da região é venenoso.",
+   "en": "The gas station attendant told Rita that the region's yellow scorpion is venomous.",
+   "ko": "주유소 직원은 히타에게 그 지역 노란 전갈은 독이 있다고 말해 줬어요.",
+   "blank": "venenoso",
+   "src": "made"
   }
  ],
  "w|ventar": [

@@ -6203,6 +6203,22 @@
    "blank": "依然"
   }
  ],
+ "w|依照": [
+  {
+   "text": "依照当地的习惯，渔民出海前要先祭海。",
+   "en": "Following local custom, fishermen make an offering to the sea before setting out.",
+   "ko": "현지 풍습에 따라 어부들은 바다에 나가기 전에 먼저 제사를 지내요.",
+   "blank": "依照",
+   "src": "made"
+  },
+  {
+   "text": "依照农历，今天已经立秋了。",
+   "en": "According to the lunar calendar, today is already the start of autumn.",
+   "ko": "음력에 따르면 오늘은 벌써 입추예요.",
+   "blank": "依照",
+   "src": "made"
+  }
+ ],
  "w|依赖": [
   {
    "text": "阿杰笑着承认，上学时他特别依赖小明的作业。",
@@ -7632,6 +7648,22 @@
    "en": "The old professor says young people in research have a bright future.",
    "ko": "노교수님은 연구하는 젊은이들의 앞날이 밝다고 말해요.",
    "blank": "光明",
+   "src": "made"
+  }
+ ],
+ "w|光线": [
+  {
+   "text": "傍晚的光线很柔和，陈杰拍了很多海边的照片。",
+   "en": "The evening light was soft, and Chen Jie took lots of photos by the sea.",
+   "ko": "저녁 햇살이 부드러워서 천제는 바닷가 사진을 많이 찍었어요.",
+   "blank": "光线",
+   "src": "made"
+  },
+  {
+   "text": "冬天下午的光线很短，四点多天就暗了。",
+   "en": "The light on winter afternoons doesn't last long; it gets dark a little after four.",
+   "ko": "겨울 오후는 해가 짧아서 네 시 조금 넘으면 어두워져요.",
+   "blank": "光线",
    "src": "made"
   }
  ],
@@ -12219,6 +12251,22 @@
    "src": "made"
   }
  ],
+ "w|占据": [
+  {
+   "text": "一群海狮占据了码头边最舒服的那块石头。",
+   "en": "A group of sea lions took over the most comfortable rock by the pier.",
+   "ko": "바다사자 무리가 부두 옆 가장 편한 바위를 차지했어요.",
+   "blank": "占据",
+   "src": "made"
+  },
+  {
+   "text": "一到冬天，寒冷的北风就占据了整个城市。",
+   "en": "As soon as winter comes, the cold north wind takes over the whole city.",
+   "ko": "겨울만 되면 차가운 북풍이 도시 전체를 차지해요.",
+   "blank": "占据",
+   "src": "made"
+  }
+ ],
  "w|占领": [
   {
    "text": "课本里讲到，这座城市在战争中曾被敌军占领。",
@@ -12622,6 +12670,22 @@
    "en": "This primeval forest has many trees that are over a hundred years old.",
    "ko": "이 원시림에는 수백 년 된 큰 나무가 많아요.",
    "blank": "原始",
+   "src": "made"
+  }
+ ],
+ "w|原子": [
+  {
+   "text": "陈杰在海边读一本科普书，讲的是原子是怎么组成的。",
+   "en": "Chen Jie read a popular-science book by the sea about how atoms are made up.",
+   "ko": "천제는 바닷가에서 원자가 어떻게 이루어지는지 다룬 과학책을 읽었어요.",
+   "blank": "原子",
+   "src": "made"
+  },
+  {
+   "text": "物理老师说，雪花的形状和水分子里原子的排列有关。",
+   "en": "The physics teacher said a snowflake's shape is related to how the atoms in water molecules are arranged.",
+   "ko": "물리 선생님은 눈송이 모양이 물 분자 속 원자의 배열과 관계있다고 했어요.",
+   "blank": "原子",
    "src": "made"
   }
  ],
@@ -13336,6 +13400,22 @@
    "en": "Wang Fang posted an article online about her phone-repair experience, and it got lots of likes.",
    "ko": "왕팡이 인터넷에 휴대폰 수리 경험담을 올렸는데 '좋아요'가 많이 달렸어요.",
    "blank": "发表",
+   "src": "made"
+  }
+ ],
+ "w|发觉": [
+  {
+   "text": "回到旅馆，陈杰才发觉自己的背被晒伤了。",
+   "en": "Back at the inn, Chen Jie only then noticed his back was sunburned.",
+   "ko": "숙소에 돌아와서야 천제는 등이 햇볕에 탔다는 걸 알아챘어요.",
+   "blank": "发觉",
+   "src": "made"
+  },
+  {
+   "text": "一天早上，小雪发觉窗外的树叶全黄了。",
+   "en": "One morning, Xiaoxue noticed the leaves outside the window had all turned yellow.",
+   "ko": "어느 날 아침 샤오쉐는 창밖 나뭇잎이 전부 노랗게 변한 걸 알아챘어요.",
+   "blank": "发觉",
    "src": "made"
   }
  ],
@@ -15297,6 +15377,22 @@
    "en": "I heard footsteps.",
    "ko": "나 발소리 들었어.",
    "blank": "听见"
+  }
+ ],
+ "w|听话": [
+  {
+   "text": "陈杰的侄子很听话，没有大人陪就不下水。",
+   "en": "Chen Jie's nephew is very obedient and won't go into the water without an adult.",
+   "ko": "천제의 조카는 말을 잘 들어서 어른 없이는 물에 들어가지 않아요.",
+   "blank": "听话",
+   "src": "made"
+  },
+  {
+   "text": "天冷了，小雪很听话地戴上了围巾。",
+   "en": "It got cold, and Xiaoxue obediently put on her scarf.",
+   "ko": "날이 추워지자 샤오쉐는 말 잘 듣고 목도리를 둘렀어요.",
+   "blank": "听话",
+   "src": "made"
   }
  ],
  "w|听说": [
@@ -17563,6 +17659,22 @@
    "blank": "土地"
   }
  ],
+ "w|土壤": [
+  {
+   "text": "海边的土壤含盐太多，很多蔬菜长不好。",
+   "en": "The soil by the sea is too salty for many vegetables to grow well.",
+   "ko": "바닷가 흙은 소금기가 너무 많아서 채소가 잘 자라지 않아요.",
+   "blank": "土壤",
+   "src": "made"
+  },
+  {
+   "text": "春雨过后，土壤变得又松又软。",
+   "en": "After the spring rain, the soil becomes loose and soft.",
+   "ko": "봄비가 내린 뒤 흙이 푸석하고 부드러워졌어요.",
+   "blank": "土壤",
+   "src": "made"
+  }
+ ],
  "w|土豆": [
   {
    "text": "周强为了道歉，做了妹妹最爱吃的土豆丝。",
@@ -18146,6 +18258,22 @@
    "en": "He was in prison for three years.",
    "ko": "그는 삼 년 동안 복역했어요.",
    "blank": "坐牢",
+   "src": "made"
+  }
+ ],
+ "w|坑": [
+  {
+   "text": "孩子们在沙滩上挖了个大坑，陈杰帮他们装满了海水。",
+   "en": "The kids dug a big hole on the beach, and Chen Jie helped fill it with seawater.",
+   "ko": "아이들이 해변에 큰 구덩이를 팠고 천제는 거기에 바닷물을 채워 줬어요.",
+   "blank": "坑",
+   "src": "made"
+  },
+  {
+   "text": "雨水把路上的坑都灌满了，小雪只好绕着走。",
+   "en": "The rain filled all the potholes in the road, so Xiaoxue had to walk around them.",
+   "ko": "빗물이 길의 웅덩이를 다 채워서 샤오쉐는 돌아서 갈 수밖에 없었어요.",
+   "blank": "坑",
    "src": "made"
   }
  ],
@@ -19713,6 +19841,22 @@
    "blank": "天使"
   }
  ],
+ "w|天地": [
+  {
+   "text": "站在海边，陈杰觉得天地一下子变得很开阔。",
+   "en": "Standing by the sea, Chen Jie felt the world suddenly open up.",
+   "ko": "바닷가에 서니 천제는 하늘과 땅이 갑자기 탁 트인 느낌이 들었어요.",
+   "blank": "天地",
+   "src": "made"
+  },
+  {
+   "text": "一场大雪过后，小雪眼前的天地一片洁白。",
+   "en": "After a heavy snowfall, the world before Xiaoxue was pure white.",
+   "ko": "큰눈이 내린 뒤 샤오쉐 앞의 세상은 온통 새하얬어요.",
+   "blank": "天地",
+   "src": "made"
+  }
+ ],
  "w|天堂": [
   {
    "text": "这里像天堂一样。",
@@ -20021,6 +20165,22 @@
    "en": "Don't let me down.",
    "ko": "날 실망시키지 마.",
    "blank": "失望"
+  }
+ ],
+ "w|失误": [
+  {
+   "text": "陈杰划船时一个失误，桨掉进了海里。",
+   "en": "Chen Jie made a slip while rowing, and the oar fell into the sea.",
+   "ko": "천제가 노를 젓다 실수하는 바람에 노가 바다에 빠졌어요.",
+   "blank": "失误",
+   "src": "made"
+  },
+  {
+   "text": "天气预报失误了，说好的晴天下了一整天雨。",
+   "en": "The forecast got it wrong: the promised sunny day turned into a full day of rain.",
+   "ko": "일기 예보가 빗나가서 맑다던 날에 하루 종일 비가 왔어요.",
+   "blank": "失误",
+   "src": "made"
   }
  ],
  "w|失败": [
@@ -23857,6 +24017,22 @@
    "blank": "尽量"
   }
  ],
+ "w|尾巴": [
+  {
+   "text": "一条小狗摇着尾巴，跟着陈杰在沙滩上跑。",
+   "en": "A little dog wagged its tail and ran along the beach after Chen Jie.",
+   "ko": "강아지 한 마리가 꼬리를 흔들며 해변에서 천제를 따라 뛰었어요.",
+   "blank": "尾巴",
+   "src": "made"
+  },
+  {
+   "text": "秋天的松鼠尾巴特别蓬松，小雪看了好久。",
+   "en": "Squirrels' tails are especially fluffy in autumn, and Xiaoxue watched them for a long time.",
+   "ko": "가을 다람쥐는 꼬리가 유난히 복슬복슬해서 샤오쉐는 한참 지켜봤어요.",
+   "blank": "尾巴",
+   "src": "made"
+  }
+ ],
  "w|尿": [
   {
    "text": "孩子尿湿了。",
@@ -27470,6 +27646,22 @@
    "en": "Sleeping alone in the tent, Wang Fang felt a little uneasy inside.",
    "ko": "혼자 텐트에서 자려니 왕팡은 마음이 좀 불안했어요.",
    "blank": "心里",
+   "src": "made"
+  }
+ ],
+ "w|必定": [
+  {
+   "text": "老渔民说，天边起了这种云，明天必定有大风。",
+   "en": "The old fisherman said that when clouds like this appear on the horizon, there will certainly be strong winds tomorrow.",
+   "ko": "늙은 어부는 하늘가에 이런 구름이 끼면 내일은 틀림없이 바람이 세다고 했어요.",
+   "blank": "必定",
+   "src": "made"
+  },
+  {
+   "text": "燕子回来了，小雪说春天必定不远了。",
+   "en": "The swallows are back, and Xiaoxue says spring can't be far off.",
+   "ko": "제비가 돌아오자 샤오쉐는 봄이 틀림없이 머지않았다고 했어요.",
+   "blank": "必定",
    "src": "made"
   }
  ],
@@ -31355,6 +31547,22 @@
    "blank": "拒绝"
   }
  ],
+ "w|拔": [
+  {
+   "text": "陈杰帮渔民把搁浅的小船从泥里拔了出来。",
+   "en": "Chen Jie helped the fishermen pull the stranded boat out of the mud.",
+   "ko": "천제는 어부들을 도와 갯벌에 박힌 작은 배를 끌어냈어요.",
+   "blank": "拔",
+   "src": "made"
+  },
+  {
+   "text": "春天一到，小雪就和奶奶去菜园里拔草。",
+   "en": "As soon as spring comes, Xiaoxue goes to the vegetable garden with her grandma to pull weeds.",
+   "ko": "봄이 오면 샤오쉐는 할머니와 텃밭에 가서 풀을 뽑아요.",
+   "blank": "拔",
+   "src": "made"
+  }
+ ],
  "w|拖": [
   {
    "text": "别拖地板。",
@@ -32795,6 +33003,22 @@
    "blank": "提醒"
   }
  ],
+ "w|提问": [
+  {
+   "text": "讲解员讲完海龟的故事，陈杰第一个举手提问。",
+   "en": "When the guide finished the story about sea turtles, Chen Jie was the first to raise his hand with a question.",
+   "ko": "해설사가 바다거북 이야기를 마치자 천제가 제일 먼저 손을 들고 질문했어요.",
+   "blank": "提问",
+   "src": "made"
+  },
+  {
+   "text": "上自然课时，小雪提问为什么秋天叶子会变红。",
+   "en": "In nature class, Xiaoxue asked why leaves turn red in autumn.",
+   "ko": "자연 수업 시간에 샤오쉐는 가을에 잎이 왜 빨개지는지 질문했어요.",
+   "blank": "提问",
+   "src": "made"
+  }
+ ],
  "w|提高": [
   {
    "text": "为了提高阅读速度，赵磊每天坚持读一小时英语报纸。",
@@ -33402,6 +33626,22 @@
    "en": "Yang Yang saw his sister holding a check and assumed she'd lent someone money again.",
    "ko": "양양은 누나 손에 수표가 들린 걸 보고 또 남에게 돈을 빌려준 줄 알았어요.",
    "blank": "支票",
+   "src": "made"
+  }
+ ],
+ "w|支配": [
+  {
+   "text": "陈杰发现，海边小镇的生活完全受潮水支配。",
+   "en": "Chen Jie found that life in the seaside town is entirely governed by the tides.",
+   "ko": "천제는 바닷가 마을의 삶이 완전히 밀물과 썰물에 좌우된다는 걸 알았어요.",
+   "blank": "支配",
+   "src": "made"
+  },
+  {
+   "text": "小雪觉得，自己的心情好像被天气支配着。",
+   "en": "Xiaoxue feels as if her mood is controlled by the weather.",
+   "ko": "샤오쉐는 자기 기분이 날씨에 좌우되는 것 같다고 느껴요.",
+   "blank": "支配",
    "src": "made"
   }
  ],
@@ -35327,6 +35567,22 @@
    "blank": "时间"
   }
  ],
+ "w|昆虫": [
+  {
+   "text": "傍晚的海边昆虫很多，陈杰被咬了好几个包。",
+   "en": "There were lots of insects by the sea at dusk, and Chen Jie got several bites.",
+   "ko": "저녁 무렵 바닷가에는 벌레가 많아서 천제는 여러 군데 물렸어요.",
+   "blank": "昆虫",
+   "src": "made"
+  },
+  {
+   "text": "天一暖和，花园里的昆虫就多了起来。",
+   "en": "As soon as it warms up, there are more insects in the garden.",
+   "ko": "날이 따뜻해지자 정원의 곤충이 많아졌어요.",
+   "blank": "昆虫",
+   "src": "made"
+  }
+ ],
  "w|明天": [
   {
    "text": "明天见。",
@@ -35551,6 +35807,22 @@
    "en": "Kids like looking at planets.",
    "ko": "아이들은 행성을 보는 걸 좋아해.",
    "blank": "星球"
+  }
+ ],
+ "w|星系": [
+  {
+   "text": "夜里没有灯，陈杰躺在沙滩上能看到银河星系。",
+   "en": "At night with no lights, Chen Jie could see the Milky Way galaxy lying on the beach.",
+   "ko": "밤에 불빛이 없어서 천제는 해변에 누워 은하수 은하를 볼 수 있었어요.",
+   "blank": "星系",
+   "src": "made"
+  },
+  {
+   "text": "冬天的夜空特别清楚，小雪用望远镜看到了一个模糊的星系。",
+   "en": "The winter night sky is especially clear, and Xiaoxue saw a faint galaxy through her telescope.",
+   "ko": "겨울 밤하늘은 유난히 맑아서 샤오쉐는 망원경으로 희미한 은하를 봤어요.",
+   "blank": "星系",
+   "src": "made"
   }
  ],
  "w|春天": [
@@ -36642,6 +36914,22 @@
    "en": "Sun Yue's desk is an old wooden one, and the drawers always stick.",
    "ko": "쑨웨의 책상은 옛날식 나무 책상이라 서랍이 자꾸 걸려요.",
    "blank": "木头",
+   "src": "made"
+  }
+ ],
+ "w|木材": [
+  {
+   "text": "海水冲上岸很多旧木材，陈杰捡了几块回去做书架。",
+   "en": "The sea washed up a lot of old timber, and Chen Jie took some pieces home to make a bookshelf.",
+   "ko": "바닷물에 오래된 목재가 많이 밀려와서 천제는 몇 개 주워 가서 책꽂이를 만들었어요.",
+   "blank": "木材",
+   "src": "made"
+  },
+  {
+   "text": "入冬前，爷爷把劈好的木材整整齐齐地堆在院子里。",
+   "en": "Before winter, Grandpa stacked the chopped wood neatly in the yard.",
+   "ko": "겨울이 오기 전에 할아버지는 쪼갠 장작을 마당에 가지런히 쌓았어요.",
+   "blank": "木材",
    "src": "made"
   }
  ],
@@ -39543,6 +39831,38 @@
    "src": "made"
   }
  ],
+ "w|气温": [
+  {
+   "text": "今天海边气温不高，陈杰只在沙滩上散了会儿步。",
+   "en": "It wasn't warm by the sea today, so Chen Jie only took a short walk on the beach.",
+   "ko": "오늘 바닷가 기온이 높지 않아서 천제는 해변을 잠깐 산책만 했어요.",
+   "blank": "气温",
+   "src": "made"
+  },
+  {
+   "text": "这几天气温忽高忽低，小雪感冒了。",
+   "en": "The temperature has been jumping up and down these days, and Xiaoxue caught a cold.",
+   "ko": "요 며칠 기온이 오르락내리락해서 샤오쉐는 감기에 걸렸어요.",
+   "blank": "气温",
+   "src": "made"
+  }
+ ],
+ "w|氧气": [
+  {
+   "text": "潜水教练让陈杰下水前检查好氧气瓶。",
+   "en": "The diving instructor told Chen Jie to check his oxygen tank before going in.",
+   "ko": "다이빙 강사는 천제에게 물에 들어가기 전에 산소통을 잘 확인하라고 했어요.",
+   "blank": "氧气",
+   "src": "made"
+  },
+  {
+   "text": "老师告诉小雪，春天树叶长出来，会制造更多氧气。",
+   "en": "The teacher told Xiaoxue that when leaves grow in spring, they produce more oxygen.",
+   "ko": "선생님은 샤오쉐에게 봄에 나뭇잎이 나면 산소를 더 많이 만든다고 알려 줬어요.",
+   "blank": "氧气",
+   "src": "made"
+  }
+ ],
  "w|水": [
   {
    "text": "给我一杯水。",
@@ -39570,6 +39890,22 @@
    "en": "Liu Fang's English is good, so the manager put her in charge of contacting overseas clients.",
    "ko": "류팡은 영어 실력이 좋아서 매니저가 해외 고객 연락을 맡겼어요.",
    "blank": "水平",
+   "src": "made"
+  }
+ ],
+ "w|水晶": [
+  {
+   "text": "阳光下，海水清得像水晶一样。",
+   "en": "In the sunlight, the seawater was as clear as crystal.",
+   "ko": "햇빛 아래 바닷물이 수정처럼 맑았어요.",
+   "blank": "水晶",
+   "src": "made"
+  },
+  {
+   "text": "屋檐下的冰柱亮晶晶的，像一串串水晶。",
+   "en": "The icicles under the eaves sparkled like strings of crystal.",
+   "ko": "처마 밑 고드름이 반짝반짝해서 수정 꿰미 같았어요.",
+   "blank": "水晶",
    "src": "made"
   }
  ],
@@ -40229,6 +40565,22 @@
    "src": "made"
   }
  ],
+ "w|注册": [
+  {
+   "text": "陈杰在网上注册了一个帆船体验课。",
+   "en": "Chen Jie signed up online for a sailing trial class.",
+   "ko": "천제는 온라인에서 요트 체험 수업에 등록했어요.",
+   "blank": "注册",
+   "src": "made"
+  },
+  {
+   "text": "小雪注册了一个观鸟小组，秋天一起去看候鸟。",
+   "en": "Xiaoxue registered with a birdwatching group to go see migratory birds together in autumn.",
+   "ko": "샤오쉐는 탐조 모임에 가입해서 가을에 함께 철새를 보러 가요.",
+   "blank": "注册",
+   "src": "made"
+  }
+ ],
  "w|注定": [
   {
    "text": "遇上这么大的雾，这趟航班注定要晚点了。",
@@ -40347,6 +40699,22 @@
    "en": "Watch out for that hole.",
    "ko": "그 구멍 조심해.",
    "blank": "洞"
+  }
+ ],
+ "w|洞穴": [
+  {
+   "text": "退潮以后，陈杰沿着岩石走进了一个海边的洞穴。",
+   "en": "After the tide went out, Chen Jie walked along the rocks into a seaside cave.",
+   "ko": "물이 빠진 뒤 천제는 바위를 따라 바닷가 동굴로 들어갔어요.",
+   "blank": "洞穴",
+   "src": "made"
+  },
+  {
+   "text": "冬天来了，熊躲进洞穴里睡觉。",
+   "en": "When winter comes, bears hide in caves to sleep.",
+   "ko": "겨울이 오면 곰은 굴속에 들어가 잠을 자요.",
+   "blank": "洞穴",
+   "src": "made"
   }
  ],
  "w|活": [
@@ -40648,6 +41016,22 @@
    "en": "Scientists found a shipwreck on the seabed, and Sun Yue was the first to break the news.",
    "ko": "과학자들이 해저에서 침몰선을 발견하자 쑨웨가 가장 먼저 소식을 냈어요.",
    "blank": "海底",
+   "src": "made"
+  }
+ ],
+ "w|海拔": [
+  {
+   "text": "陈杰住的小镇海拔很低，涨大潮时街上会进水。",
+   "en": "The town where Chen Jie lives is at a very low altitude, and the streets flood at spring tide.",
+   "ko": "천제가 사는 마을은 해발이 낮아서 큰 사리 때면 거리에 물이 들어와요.",
+   "blank": "海拔",
+   "src": "made"
+  },
+  {
+   "text": "小雪去了一个海拔很高的地方，那里的夏天也很凉快。",
+   "en": "Xiaoxue went to a place at a very high altitude, where even summer is cool.",
+   "ko": "샤오쉐는 해발이 아주 높은 곳에 갔는데 거기는 여름에도 시원했어요.",
+   "blank": "海拔",
    "src": "made"
   }
  ],
@@ -41923,6 +42307,22 @@
    "blank": "热"
   }
  ],
+ "w|热带": [
+  {
+   "text": "陈杰一直想去热带的海岛看看珊瑚。",
+   "en": "Chen Jie has always wanted to visit a tropical island to see the coral.",
+   "ko": "천제는 늘 열대 섬에 가서 산호를 보고 싶어 했어요.",
+   "blank": "热带",
+   "src": "made"
+  },
+  {
+   "text": "小雪说，热带地区好像没有明显的四季。",
+   "en": "Xiaoxue said the tropics don't seem to have four distinct seasons.",
+   "ko": "샤오쉐는 열대 지방에는 뚜렷한 사계절이 없는 것 같다고 했어요.",
+   "blank": "热带",
+   "src": "made"
+  }
+ ],
  "w|热情": [
   {
    "text": "张伟一直记得老朋友一家人的热情。",
@@ -42880,6 +43280,22 @@
    "en": "The clerk said the outfit still cost three thousand after the discount, and Li Na silently cursed, \"Some discount.\"",
    "ko": "직원이 할인해도 삼천 위안이라고 하자 리나는 속으로 \"할인은 무슨\" 하고 투덜댔어요.",
    "blank": "狗屁",
+   "src": "made"
+  }
+ ],
+ "w|狩猎": [
+  {
+   "text": "讲解员说，这片海域早就禁止狩猎海豹了。",
+   "en": "The guide said hunting seals has long been banned in these waters.",
+   "ko": "해설사는 이 해역에서 물개 사냥이 이미 오래전에 금지됐다고 했어요.",
+   "blank": "狩猎",
+   "src": "made"
+  },
+  {
+   "text": "在古代，秋天是贵族们狩猎的季节。",
+   "en": "In ancient times, autumn was the season when nobles went hunting.",
+   "ko": "옛날에는 가을이 귀족들의 사냥철이었어요.",
+   "blank": "狩猎",
    "src": "made"
   }
  ],
@@ -45845,6 +46261,22 @@
    "src": "made"
   }
  ],
+ "w|着想": [
+  {
+   "text": "陈杰说，保护海洋也是为子孙后代着想。",
+   "en": "Chen Jie said protecting the ocean is also thinking of future generations.",
+   "ko": "천제는 바다를 지키는 게 후손을 생각하는 일이기도 하다고 했어요.",
+   "blank": "着想",
+   "src": "made"
+  },
+  {
+   "text": "换季时，妈妈总为小雪着想，提前准备好厚衣服。",
+   "en": "When the seasons change, Mom always thinks ahead for Xiaoxue and gets her warm clothes ready early.",
+   "ko": "계절이 바뀔 때면 엄마는 늘 샤오쉐를 생각해서 두꺼운 옷을 미리 챙겨 둬요.",
+   "blank": "着想",
+   "src": "made"
+  }
+ ],
  "w|睡": [
   {
    "text": "我去睡。",
@@ -47043,6 +47475,22 @@
    "src": "made"
   }
  ],
+ "w|种植": [
+  {
+   "text": "海边的村民在沙地上种植耐盐的植物。",
+   "en": "The villagers by the sea grow salt-tolerant plants in the sandy soil.",
+   "ko": "바닷가 마을 사람들은 모래땅에 소금기에 강한 식물을 심어요.",
+   "blank": "种植",
+   "src": "made"
+  },
+  {
+   "text": "农民们在春天种植水稻，秋天收割。",
+   "en": "Farmers plant rice in spring and harvest it in autumn.",
+   "ko": "농부들은 봄에 벼를 심고 가을에 거둬요.",
+   "blank": "种植",
+   "src": "made"
+  }
+ ],
  "w|种类": [
   {
    "text": "这里收藏的古钱币种类非常多。",
@@ -47986,6 +48434,22 @@
    "en": "This marathon has been rated a top-tier event in the country.",
    "ko": "이 마라톤은 국내 최고 등급 대회로 평가받았어요.",
    "blank": "等级",
+   "src": "made"
+  }
+ ],
+ "w|答复": [
+  {
+   "text": "陈杰发邮件问能不能参加清理海滩的活动，对方很快答复了。",
+   "en": "Chen Jie emailed to ask if he could join the beach cleanup, and they replied quickly.",
+   "ko": "천제가 해변 청소 활동에 참여할 수 있는지 메일로 묻자 상대방이 금방 답했어요.",
+   "blank": "答复",
+   "src": "made"
+  },
+  {
+   "text": "小雪写信问气象台为什么今年冬天这么暖，没想到收到了答复。",
+   "en": "Xiaoxue wrote to the weather bureau asking why this winter was so warm, and to her surprise she got a reply.",
+   "ko": "샤오쉐가 기상대에 올겨울이 왜 이렇게 따뜻하냐고 편지를 썼는데 뜻밖에 답장을 받았어요.",
+   "blank": "答复",
    "src": "made"
   }
  ],
@@ -49029,6 +49493,22 @@
    "blank": "终于"
   }
  ],
+ "w|终身": [
+  {
+   "text": "那位老船长终身没有离开过这个海湾。",
+   "en": "The old captain never left this bay in his whole life.",
+   "ko": "그 늙은 선장은 평생 이 만을 떠난 적이 없어요.",
+   "blank": "终身",
+   "src": "made"
+  },
+  {
+   "text": "小雪的爷爷说，在山里看过一次极光，终身难忘。",
+   "en": "Xiaoxue's grandpa said he once saw the aurora in the mountains and will never forget it.",
+   "ko": "샤오쉐의 할아버지는 산에서 한 번 오로라를 봤는데 평생 잊지 못한다고 했어요.",
+   "blank": "终身",
+   "src": "made"
+  }
+ ],
  "w|经典": [
   {
    "text": "这是一部经典电影。",
@@ -49638,6 +50118,22 @@
    "en": "The ER doctor gave the child who fell a few stitches, and Lili helped beside him.",
    "ko": "응급실 의사가 넘어져 다친 아이를 몇 바늘 꿰맸고 리리는 옆에서 도왔어요.",
    "blank": "缝",
+   "src": "made"
+  }
+ ],
+ "w|繁殖": [
+  {
+   "text": "每年春天，成千上万只海鸟来这片礁石上繁殖。",
+   "en": "Every spring, thousands of seabirds come to these rocks to breed.",
+   "ko": "해마다 봄이면 수많은 바닷새가 이 바위에 와서 번식해요.",
+   "blank": "繁殖",
+   "src": "made"
+  },
+  {
+   "text": "春天一到，池塘里的青蛙就开始繁殖了。",
+   "en": "As soon as spring arrives, the frogs in the pond start breeding.",
+   "ko": "봄이 오자마자 연못의 개구리들이 번식하기 시작해요.",
+   "blank": "繁殖",
    "src": "made"
   }
  ],
@@ -52786,6 +53282,22 @@
    "en": "Yang Yang bought a box of scented candles online to use on the weekend.",
    "ko": "양양은 주말에 쓰려고 인터넷으로 향초 한 상자를 샀어요.",
    "blank": "蜡烛",
+   "src": "made"
+  }
+ ],
+ "w|蝴蝶": [
+  {
+   "text": "海边的花丛里飞着几只白色的蝴蝶。",
+   "en": "A few white butterflies were flying among the flowers by the sea.",
+   "ko": "바닷가 꽃밭에 하얀 나비 몇 마리가 날고 있었어요.",
+   "blank": "蝴蝶",
+   "src": "made"
+  },
+  {
+   "text": "春天来了，小雪在花丛里追着一只黄色的蝴蝶。",
+   "en": "Spring arrived, and Xiaoxue chased a yellow butterfly among the flowers.",
+   "ko": "봄이 오자 샤오쉐는 꽃밭에서 노란 나비 한 마리를 쫓아다녔어요.",
+   "blank": "蝴蝶",
    "src": "made"
   }
  ],
@@ -56205,6 +56717,22 @@
    "blank": "赌"
   }
  ],
+ "w|赌博": [
+  {
+   "text": "当地新闻报道，有人在海边的船上聚众赌博被抓了。",
+   "en": "Local news reported that people were caught gambling in a group on a boat by the sea.",
+   "ko": "지역 뉴스에 따르면 바닷가 배 위에서 여럿이 도박하던 사람들이 붙잡혔어요.",
+   "blank": "赌博",
+   "src": "made"
+  },
+  {
+   "text": "过年时亲戚们打牌，奶奶说只是娱乐，不是赌博。",
+   "en": "When relatives played cards over the New Year, Grandma said it was just for fun, not gambling.",
+   "ko": "설에 친척들이 카드놀이를 하자 할머니는 그냥 놀이지 도박이 아니라고 했어요.",
+   "blank": "赌博",
+   "src": "made"
+  }
+ ],
  "w|赌场": [
   {
    "text": "这起案件的被告曾经在赌场欠下巨债。",
@@ -56218,6 +56746,22 @@
    "en": "Sun Yue has never been to a casino; she says money can only be saved cent by cent.",
    "ko": "쑨웨는 카지노에 가 본 적이 없어요. 돈은 한 푼씩 모으는 거라고 해요.",
    "blank": "赌场",
+   "src": "made"
+  }
+ ],
+ "w|赔偿": [
+  {
+   "text": "陈杰租的皮划艇被撞坏了，只好照价赔偿。",
+   "en": "The kayak Chen Jie rented got damaged, so he had to pay for it at the listed price.",
+   "ko": "천제가 빌린 카약이 부딪혀 망가져서 정해진 값대로 변상해야 했어요.",
+   "blank": "赔偿",
+   "src": "made"
+  },
+  {
+   "text": "冰雹砸坏了邻居的车，保险公司答应赔偿。",
+   "en": "Hail damaged the neighbor's car, and the insurance company agreed to compensate.",
+   "ko": "우박에 이웃 차가 망가져서 보험사가 배상하기로 했어요.",
+   "blank": "赔偿",
    "src": "made"
   }
  ],
@@ -58455,6 +58999,22 @@
    "src": "made"
   }
  ],
+ "w|违背": [
+  {
+   "text": "在保护区捡贝壳违背了规定，陈杰把贝壳放回了沙滩。",
+   "en": "Collecting shells in the reserve goes against the rules, so Chen Jie put them back on the beach.",
+   "ko": "보호 구역에서 조개껍데기를 줍는 건 규정에 어긋나서 천제는 다시 해변에 내려놓았어요.",
+   "blank": "违背",
+   "src": "made"
+  },
+  {
+   "text": "小雪说，冬天穿短袖是违背常识的。",
+   "en": "Xiaoxue said wearing short sleeves in winter goes against common sense.",
+   "ko": "샤오쉐는 겨울에 반팔을 입는 건 상식에 어긋난다고 했어요.",
+   "blank": "违背",
+   "src": "made"
+  }
+ ],
  "w|连": [
   {
    "text": "连我也去。",
@@ -60447,6 +61007,22 @@
    "src": "made"
   }
  ],
+ "w|钢铁": [
+  {
+   "text": "港口的大吊车是用钢铁造的，在海风里锈得很快。",
+   "en": "The big cranes at the port are made of steel and rust quickly in the sea air.",
+   "ko": "항구의 큰 크레인은 강철로 만들어서 바닷바람에 금방 녹슬어요.",
+   "blank": "钢铁",
+   "src": "made"
+  },
+  {
+   "text": "冬天摸到外面的钢铁栏杆，小雪的手冻得发麻。",
+   "en": "Touching the steel railing outside in winter, Xiaoxue's hand went numb with cold.",
+   "ko": "겨울에 바깥 강철 난간을 만졌더니 샤오쉐의 손이 얼얼해졌어요.",
+   "blank": "钢铁",
+   "src": "made"
+  }
+ ],
  "w|钥匙": [
   {
    "text": "钥匙呢？",
@@ -60550,6 +61126,22 @@
    "en": "The railway runs right behind Lin Jing's home, and at night she can often hear trains passing.",
    "ko": "린징네 집 바로 뒤가 철도라서 밤에는 기차 지나가는 소리가 자주 들려요.",
    "blank": "铁路",
+   "src": "made"
+  }
+ ],
+ "w|铜": [
+  {
+   "text": "陈杰在旧船上找到一个铜铃，已经发绿了。",
+   "en": "Chen Jie found a copper bell on the old boat; it had already turned green.",
+   "ko": "천제는 낡은 배에서 구리 종을 하나 찾았는데 이미 푸르게 변해 있었어요.",
+   "blank": "铜",
+   "src": "made"
+  },
+  {
+   "text": "秋天的银杏叶黄得发亮，像铜做的一样。",
+   "en": "Ginkgo leaves in autumn are such a shiny yellow they look as if made of copper.",
+   "ko": "가을 은행잎은 반짝이게 노래서 구리로 만든 것 같아요.",
+   "blank": "铜",
    "src": "made"
   }
  ],
@@ -60834,6 +61426,22 @@
    "en": "Early in the morning, the hospital entrance was already lined with people registering.",
    "ko": "이른 아침부터 병원 입구에는 접수하러 온 사람들이 줄을 섰어요.",
    "blank": "门口",
+   "src": "made"
+  }
+ ],
+ "w|闪电": [
+  {
+   "text": "海面上空划过一道闪电，陈杰赶紧跑回了屋里。",
+   "en": "A bolt of lightning flashed over the sea, and Chen Jie hurried back inside.",
+   "ko": "바다 위로 번개가 번쩍이자 천제는 얼른 집 안으로 뛰어 들어갔어요.",
+   "blank": "闪电",
+   "src": "made"
+  },
+  {
+   "text": "夏天的雷雨来得快，小雪数着闪电和雷声之间隔了几秒。",
+   "en": "Summer thunderstorms come quickly, and Xiaoxue counts the seconds between the lightning and the thunder.",
+   "ko": "여름 뇌우는 빨리 와서 샤오쉐는 번개와 천둥 사이가 몇 초인지 세어 봐요.",
+   "blank": "闪电",
    "src": "made"
   }
  ],
@@ -61209,6 +61817,22 @@
    "en": "He's nearby.",
    "ko": "그 사람 근처에 있어.",
    "blank": "附近"
+  }
+ ],
+ "w|陆地": [
+  {
+   "text": "船开了两个小时，陈杰终于又看到了陆地。",
+   "en": "After two hours at sea, Chen Jie finally saw land again.",
+   "ko": "배가 두 시간을 달린 끝에 천제는 드디어 다시 육지를 봤어요.",
+   "blank": "陆地",
+   "src": "made"
+  },
+  {
+   "text": "冬天湖面结了冰，看起来就像一块陆地。",
+   "en": "In winter the lake freezes over and looks just like a stretch of land.",
+   "ko": "겨울에 호수가 얼면 꼭 땅처럼 보여요.",
+   "blank": "陆地",
+   "src": "made"
   }
  ],
  "w|陌生": [
@@ -63291,6 +63915,22 @@
    "en": "It'll be ready any second.",
    "ko": "금방 돼.",
    "blank": "马上"
+  }
+ ],
+ "w|驴": [
+  {
+   "text": "沙滩上有人骑着驴招揽游客拍照。",
+   "en": "Someone on the beach was riding a donkey to attract tourists for photos.",
+   "ko": "해변에서 누군가 당나귀를 타고 관광객에게 사진 찍으라고 손님을 끌었어요.",
+   "blank": "驴",
+   "src": "made"
+  },
+  {
+   "text": "秋收时，村里的老驴拉着一车玉米慢慢往回走。",
+   "en": "At autumn harvest, the village's old donkey slowly pulled a cart of corn home.",
+   "ko": "가을걷이 때 마을의 늙은 당나귀가 옥수수 한 수레를 끌고 천천히 돌아왔어요.",
+   "blank": "驴",
+   "src": "made"
   }
  ],
  "w|驾驶": [

@@ -4689,6 +4689,22 @@
    "blank": "berburu"
   }
  ],
+ "w|bercahaya": [
+  {
+   "text": "Kunang-kunang bercahaya di sawah saat awal musim hujan.",
+   "en": "Fireflies glow in the rice fields at the start of the rainy season.",
+   "ko": "우기 초에는 논에서 반딧불이가 반짝여요.",
+   "blank": "bercahaya",
+   "src": "made"
+  },
+  {
+   "text": "Lantai kayu yang baru dipoles tampak bercahaya terkena sinar matahari.",
+   "en": "The newly polished wooden floor looked glowing in the sunlight.",
+   "ko": "새로 광을 낸 나무 바닥이 햇빛을 받아 반짝였어요.",
+   "blank": "bercahaya",
+   "src": "made"
+  }
+ ],
  "w|bercakap": [
   {
    "text": "Agus belajar bercakap dengan teman sebangkunya dalam bahasa Inggris.",
@@ -5501,6 +5517,22 @@
    "blank": "berharga"
   }
  ],
+ "w|berhari-hari": [
+  {
+   "text": "Kabut asap menyelimuti kota Dimas berhari-hari selama kemarau panjang.",
+   "en": "Haze blanketed Dimas's town for days during the long dry season.",
+   "ko": "긴 건기 동안 연무가 며칠씩 디마스네 도시를 뒤덮었어요.",
+   "blank": "berhari-hari",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengampelas lantai kayu itu berhari-hari sampai halus.",
+   "en": "Putri sanded the wooden floor for days until it was smooth.",
+   "ko": "푸트리는 나무 바닥을 매끈해질 때까지 며칠 동안 사포질했어요.",
+   "blank": "berhari-hari",
+   "src": "made"
+  }
+ ],
  "w|berhasil": [
   {
    "text": "Akhirnya dia berhasil.",
@@ -5701,6 +5733,22 @@
    "en": "This morning's news was shocking.",
    "ko": "오늘 아침 뉴스가 충격적이었어.",
    "blank": "Berita"
+  }
+ ],
+ "w|berjabat": [
+  {
+   "text": "Setelah musim panen, Dimas berjabat tangan dengan para petani di desa pamannya.",
+   "en": "After the harvest season, Dimas shook hands with the farmers in his uncle's village.",
+   "ko": "수확철이 끝나고 디마스는 삼촌 마을의 농부들과 악수했어요.",
+   "blank": "berjabat",
+   "src": "made"
+  },
+  {
+   "text": "Putri berjabat tangan dengan kontraktor setelah harga disepakati.",
+   "en": "Putri shook hands with the contractor after they agreed on a price.",
+   "ko": "푸트리는 가격이 정해지자 시공업자와 악수했어요.",
+   "blank": "berjabat",
+   "src": "made"
   }
  ],
  "w|berjaga": [
@@ -6776,6 +6824,22 @@
    "en": "Two large companies are interested in buying shares in Rina's company.",
    "ko": "대기업 두 곳이 리나 회사의 지분을 사고 싶어 해요.",
    "blank": "berminat",
+   "src": "made"
+  }
+ ],
+ "w|berminggu-minggu": [
+  {
+   "text": "Sawah milik paman Dimas kering berminggu-minggu karena hujan tak kunjung turun.",
+   "en": "Dimas's uncle's rice field stayed dry for weeks because the rain never came.",
+   "ko": "비가 오지 않아서 디마스 삼촌의 논은 몇 주 동안 말라 있었어요.",
+   "blank": "berminggu-minggu",
+   "src": "made"
+  },
+  {
+   "text": "Putri menunggu berminggu-minggu sampai genteng antik pesanannya datang.",
+   "en": "Putri waited weeks for the antique roof tiles she ordered to arrive.",
+   "ko": "푸트리는 주문한 옛날 기와가 올 때까지 몇 주를 기다렸어요.",
+   "blank": "berminggu-minggu",
    "src": "made"
   }
  ],
@@ -8239,6 +8303,22 @@
    "src": "made"
   }
  ],
+ "w|berturut-turut": [
+  {
+   "text": "Kota Dimas dilanda banjir tiga tahun berturut-turut.",
+   "en": "Dimas's town was hit by floods three years in a row.",
+   "ko": "디마스네 도시는 삼 년 연속 홍수를 겪었어요.",
+   "blank": "berturut-turut",
+   "src": "made"
+  },
+  {
+   "text": "Putri bekerja tiga akhir pekan berturut-turut untuk mengecat ulang dinding.",
+   "en": "Putri worked three weekends in a row to repaint the walls.",
+   "ko": "푸트리는 벽을 다시 칠하려고 주말 세 번을 연달아 일했어요.",
+   "blank": "berturut-turut",
+   "src": "made"
+  }
+ ],
  "w|beruang": [
   {
    "text": "Beruang itu hidup di hutan dingin.",
@@ -8296,6 +8376,22 @@
    "en": "Dewi practiced free throws over and over until her arms ached.",
    "ko": "데위는 팔이 저릴 때까지 자유투를 몇 번이고 연습했어요.",
    "blank": "berulang",
+   "src": "made"
+  }
+ ],
+ "w|berulang-ulang": [
+  {
+   "text": "Adik Dimas bertanya berulang-ulang kapan musim hujan selesai.",
+   "en": "Dimas's little brother asked over and over when the rainy season would end.",
+   "ko": "디마스의 동생은 우기가 언제 끝나냐고 몇 번이고 물었어요.",
+   "blank": "berulang-ulang",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengukur pintu itu berulang-ulang agar engselnya pas.",
+   "en": "Putri measured the door over and over so the hinges would fit.",
+   "ko": "푸트리는 경첩이 딱 맞도록 그 문을 몇 번이고 쟀어요.",
+   "blank": "berulang-ulang",
    "src": "made"
   }
  ],
@@ -13195,6 +13291,22 @@
    "blank": "favorit"
   }
  ],
+ "w|februari": [
+  {
+   "text": "Biasanya angin kencang mulai mereda pada akhir bulan Februari.",
+   "en": "The strong winds usually start to die down at the end of February.",
+   "ko": "강한 바람은 보통 이월 말이면 잦아들기 시작해요.",
+   "blank": "Februari",
+   "src": "made"
+  },
+  {
+   "text": "Tukang kayu berjanji menyelesaikan tangga baru sebelum akhir Februari.",
+   "en": "The carpenter promised to finish the new staircase before the end of February.",
+   "ko": "목수는 이월 말 전에 새 계단을 끝내겠다고 약속했어요.",
+   "blank": "Februari",
+   "src": "made"
+  }
+ ],
  "w|federasi": [
   {
    "text": "Kelompok teater Eko bergabung dengan federasi teater nasional.",
@@ -13961,6 +14073,22 @@
    "en": "We work in the building next door.",
    "ko": "우리 옆 건물에서 일해.",
    "blank": "gedung"
+  }
+ ],
+ "w|gegabah": [
+  {
+   "text": "Ayah Dimas bilang menyeberangi sungai saat banjir adalah tindakan gegabah.",
+   "en": "Dimas's father said crossing the river during a flood is reckless.",
+   "ko": "디마스의 아빠는 홍수 때 강을 건너는 건 무모한 짓이라고 했어요.",
+   "blank": "gegabah",
+   "src": "made"
+  },
+  {
+   "text": "Tukang kayu menyarankan Putri agar tidak gegabah membongkar dinding penyangga.",
+   "en": "The carpenter advised Putri not to be hasty about tearing down the load-bearing wall.",
+   "ko": "목수는 푸트리에게 내력벽을 섣불리 허물지 말라고 했어요.",
+   "blank": "gegabah",
+   "src": "made"
   }
  ],
  "w|gejala": [
@@ -17215,6 +17343,22 @@
    "blank": "jantungnya"
   }
  ],
+ "w|januari": [
+  {
+   "text": "Di kota Dimas, hujan paling deras biasanya turun pada bulan Januari.",
+   "en": "In Dimas's town, the heaviest rain usually falls in January.",
+   "ko": "디마스네 도시에서는 보통 일월에 비가 가장 많이 와요.",
+   "blank": "Januari",
+   "src": "made"
+  },
+  {
+   "text": "Putri mulai memperbaiki rumah tua warisan kakeknya pada bulan Januari.",
+   "en": "Putri started fixing up the old house inherited from her grandfather in January.",
+   "ko": "푸트리는 일월에 할아버지가 물려준 낡은 집을 고치기 시작했어요.",
+   "blank": "Januari",
+   "src": "made"
+  }
+ ],
  "w|jarak": [
   {
    "text": "Jarak ke stasiun jauh.",
@@ -17417,6 +17561,22 @@
    "en": "That trap was hidden under the leaves.",
    "ko": "그 함정이 나뭇잎 아래에 숨겨져 있었어.",
    "blank": "Jebakan"
+  }
+ ],
+ "w|jeda": [
+  {
+   "text": "Dimas memanfaatkan jeda antara dua hujan untuk berbelanja.",
+   "en": "Dimas used the break between two showers to go shopping.",
+   "ko": "디마스는 비가 잠깐 그친 틈을 타 장을 봤어요.",
+   "blank": "jeda",
+   "src": "made"
+  },
+  {
+   "text": "Putri dan tukang minum teh saat jeda makan siang di beranda.",
+   "en": "Putri and the workman drank tea on the veranda during the lunch break.",
+   "ko": "푸트리와 인부는 점심 쉬는 시간에 베란다에서 차를 마셨어요.",
+   "blank": "jeda",
+   "src": "made"
   }
  ],
  "w|jejak": [
@@ -18469,6 +18629,22 @@
    "en": "Let me know when you get there.",
    "ko": "도착하면 연락해.",
    "blank": "kalau"
+  }
+ ],
+ "w|kalender": [
+  {
+   "text": "Dimas menandai hari pertama musim hujan di kalender dapur.",
+   "en": "Dimas marked the first day of the rainy season on the kitchen calendar.",
+   "ko": "디마스는 부엌 달력에 우기 첫날을 표시했어요.",
+   "blank": "kalender",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan kalender tahun lama yang masih tergantung di dapur.",
+   "en": "Putri found a calendar from years ago still hanging in the kitchen.",
+   "ko": "푸트리는 부엌에 아직 걸려 있는 오래전 달력을 발견했어요.",
+   "blank": "kalender",
+   "src": "made"
   }
  ],
  "w|kaleng": [
@@ -19609,6 +19785,22 @@
    "blank": "ke"
   }
  ],
+ "w|keabadian": [
+  {
+   "text": "Dimas pernah membaca puisi tentang musim yang berganti dan keabadian alam.",
+   "en": "Dimas once read a poem about the changing seasons and the eternity of nature.",
+   "ko": "디마스는 계절의 변화와 자연의 영원함에 관한 시를 읽은 적이 있어요.",
+   "blank": "keabadian",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Putri dulu mengukir kata keabadian di atas pintu kayu rumah itu.",
+   "en": "Putri's grandfather once carved the word eternity above the house's wooden door.",
+   "ko": "푸트리의 할아버지는 예전에 그 집 나무 문 위에 영원이라는 말을 새겼어요.",
+   "blank": "keabadian",
+   "src": "made"
+  }
+ ],
  "w|keadaan": [
   {
    "text": "Keadaan sekarang lebih baik.",
@@ -20471,6 +20663,22 @@
    "src": "made"
   }
  ],
+ "w|keesokan": [
+  {
+   "text": "Badai reda malam itu, dan keesokan harinya Dimas membersihkan halaman.",
+   "en": "The storm died down that night, and the next day Dimas cleaned the yard.",
+   "ko": "그날 밤 폭풍이 잦아들었고, 다음 날 디마스는 마당을 치웠어요.",
+   "blank": "keesokan",
+   "src": "made"
+  },
+  {
+   "text": "Putri memasang jendela baru, dan keesokan paginya kamar terasa lebih terang.",
+   "en": "Putri installed a new window, and the next morning the room felt brighter.",
+   "ko": "푸트리가 새 창문을 달았더니 다음 날 아침 방이 더 환해졌어요.",
+   "blank": "keesokan",
+   "src": "made"
+  }
+ ],
  "w|kegagalan": [
   {
    "text": "Kegagalan itu mengajarinya banyak pelajaran.",
@@ -21086,6 +21294,22 @@
    "en": "Rina writes down every concern from users in the weekly meeting.",
    "ko": "리나는 주간 회의에서 사용자들의 걱정을 하나하나 적어요.",
    "blank": "kekhawatiran",
+   "src": "made"
+  }
+ ],
+ "w|kekosongan": [
+  {
+   "text": "Setelah teman-temannya pindah, Dimas merasakan kekosongan di akhir pekan.",
+   "en": "After his friends moved away, Dimas felt an emptiness on weekends.",
+   "ko": "친구들이 이사 간 뒤로 디마스는 주말마다 허전함을 느꼈어요.",
+   "blank": "kekosongan",
+   "src": "made"
+  },
+  {
+   "text": "Setelah lemari tua dikeluarkan, Putri merasakan kekosongan di kamar kakeknya.",
+   "en": "After the old wardrobe was taken out, Putri felt an emptiness in her grandfather's room.",
+   "ko": "낡은 옷장을 내가자 푸트리는 할아버지 방에서 허전함을 느꼈어요.",
+   "blank": "kekosongan",
    "src": "made"
   }
  ],
@@ -26981,6 +27205,22 @@
    "blank": "Lu"
   }
  ],
+ "w|luang": [
+  {
+   "text": "Di waktu luang, Dimas suka memotret langit yang berubah warna.",
+   "en": "In his free time, Dimas likes photographing the sky as it changes color.",
+   "ko": "디마스는 쉬는 시간에 색이 바뀌는 하늘을 찍는 걸 좋아해요.",
+   "blank": "luang",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengisi waktu luang dengan memilih ubin untuk kamar mandi.",
+   "en": "Putri fills her free time choosing tiles for the bathroom.",
+   "ko": "푸트리는 여가 시간에 욕실 타일을 골라요.",
+   "blank": "luang",
+   "src": "made"
+  }
+ ],
  "w|luar": [
   {
    "text": "Ayo main di luar.",
@@ -27199,6 +27439,22 @@
    "en": "That line must stay straight.",
    "ko": "그 선은 계속 곧아야 해.",
    "blank": "lurus"
+  }
+ ],
+ "w|lusa": [
+  {
+   "text": "Prakiraan cuaca bilang hujan baru berhenti lusa.",
+   "en": "The weather forecast says the rain won't stop until the day after tomorrow.",
+   "ko": "일기예보에 따르면 비는 모레에야 그친대요.",
+   "blank": "lusa",
+   "src": "made"
+  },
+  {
+   "text": "Tukang listrik bilang bisa datang ke rumah Putri lusa.",
+   "en": "The electrician said he could come to Putri's house the day after tomorrow.",
+   "ko": "전기 기사는 모레 푸트리네 집에 올 수 있다고 했어요.",
+   "blank": "lusa",
+   "src": "made"
   }
  ],
  "w|lusin": [
@@ -31447,6 +31703,22 @@
    "blank": "membutuhkan"
   }
  ],
+ "w|memecah": [
+  {
+   "text": "Suara petir memecah keheningan malam di rumah Dimas.",
+   "en": "The sound of thunder broke the silence of the night at Dimas's house.",
+   "ko": "천둥소리가 디마스네 집의 밤 고요를 깼어요.",
+   "blank": "memecah",
+   "src": "made"
+  },
+  {
+   "text": "Tukang memakai palu besar untuk memecah ubin lama di kamar mandi.",
+   "en": "The workman used a big hammer to break up the old bathroom tiles.",
+   "ko": "인부는 큰 망치로 욕실의 낡은 타일을 깼어요.",
+   "blank": "memecah",
+   "src": "made"
+  }
+ ],
  "w|memecahkan": [
   {
    "text": "Dia berhasil memecahkan teka-teki itu.",
@@ -31547,6 +31819,22 @@
    "en": "She wants to win the grand prize.",
    "ko": "그녀는 대상 상품을 타고 싶어해.",
    "blank": "memenangkan"
+  }
+ ],
+ "w|memengaruhi": [
+  {
+   "text": "Cuaca mendung bisa memengaruhi suasana hati Dimas seharian.",
+   "en": "Cloudy weather can affect Dimas's mood all day.",
+   "ko": "흐린 날씨는 하루 종일 디마스의 기분에 영향을 줄 수 있어요.",
+   "blank": "memengaruhi",
+   "src": "made"
+  },
+  {
+   "text": "Kelembapan udara bisa memengaruhi kekuatan kayu di rumah itu.",
+   "en": "Humidity can affect the strength of the wood in that house.",
+   "ko": "습도는 그 집 나무의 강도에 영향을 줄 수 있어요.",
+   "blank": "memengaruhi",
+   "src": "made"
   }
  ],
  "w|memenjarakan": [
@@ -31726,6 +32014,22 @@
    "en": "After a year of hard work, Putri's team finally reaped the rewards.",
    "ko": "1년 동안 고생한 끝에 푸트리의 팀은 드디어 결실을 거뒀어요.",
    "blank": "memetik",
+   "src": "made"
+  }
+ ],
+ "w|memfitnah": [
+  {
+   "text": "Dimas kesal karena tetangga memfitnah dirinya menyumbat selokan.",
+   "en": "Dimas was upset because a neighbor falsely accused him of clogging the drain.",
+   "ko": "이웃이 자기가 도랑을 막았다고 모함해서 디마스는 속상했어요.",
+   "blank": "memfitnah",
+   "src": "made"
+  },
+  {
+   "text": "Seorang kerabat jauh memfitnah Putri ingin menjual rumah warisan itu diam-diam.",
+   "en": "A distant relative falsely claimed Putri wanted to secretly sell the inherited house.",
+   "ko": "먼 친척 하나가 푸트리가 물려받은 집을 몰래 팔려 한다고 모함했어요.",
+   "blank": "memfitnah",
    "src": "made"
   }
  ],
@@ -34165,6 +34469,22 @@
    "blank": "mendarat"
   }
  ],
+ "w|mendatang": [
+  {
+   "text": "Badan cuaca memperkirakan musim hujan akan datang dalam minggu-minggu mendatang.",
+   "en": "The weather agency predicts the rainy season will arrive in the coming weeks.",
+   "ko": "기상청은 앞으로 몇 주 안에 우기가 올 거라고 내다봤어요.",
+   "blank": "mendatang",
+   "src": "made"
+  },
+  {
+   "text": "Putri berencana mengganti semua jendela tahun mendatang.",
+   "en": "Putri plans to replace all the windows next year.",
+   "ko": "푸트리는 내년에 창문을 전부 갈 계획이에요.",
+   "blank": "mendatang",
+   "src": "made"
+  }
+ ],
  "w|mendatangi": [
   {
    "text": "Mereka mendatangi kantor untuk meminta bantuan.",
@@ -35197,6 +35517,22 @@
    "src": "made"
   }
  ],
+ "w|mengabarkan": [
+  {
+   "text": "Teman Dimas mengabarkan bahwa sungai di desanya mulai meluap.",
+   "en": "Dimas's friend reported that the river in his village had started to overflow.",
+   "ko": "디마스의 친구는 자기 마을 강이 넘치기 시작했다고 알려 왔어요.",
+   "blank": "mengabarkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri mengabarkan kemajuan renovasi kepada keluarganya lewat foto.",
+   "en": "Putri updated her family on the renovation's progress through photos.",
+   "ko": "푸트리는 사진으로 가족에게 수리 진행 상황을 알렸어요.",
+   "blank": "mengabarkan",
+   "src": "made"
+  }
+ ],
  "w|mengabdi": [
   {
    "text": "Budi menulis kisah bidan yang mengabdi di desa terpencil selama puluhan tahun.",
@@ -36209,6 +36545,22 @@
    "en": "Disappointing his parents made him sad.",
    "ko": "부모님을 실망시켜 그는 슬펐어.",
    "blank": "Mengecewakan"
+  }
+ ],
+ "w|mengecilkan": [
+  {
+   "text": "Saat malam mulai dingin, Dimas mengecilkan kipas angin di kamarnya.",
+   "en": "When the nights start getting cold, Dimas turns down the fan in his room.",
+   "ko": "밤이 쌀쌀해지면 디마스는 방 선풍기를 약하게 줄여요.",
+   "blank": "mengecilkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri memutuskan mengecilkan ukuran dapur supaya ruang makan lebih luas.",
+   "en": "Putri decided to make the kitchen smaller so the dining room would be bigger.",
+   "ko": "푸트리는 식당을 넓히려고 부엌을 줄이기로 했어요.",
+   "blank": "mengecilkan",
+   "src": "made"
   }
  ],
  "w|mengedit": [
@@ -39429,6 +39781,22 @@
    "src": "made"
   }
  ],
+ "w|menjelang": [
+  {
+   "text": "Dimas membeli payung baru yang lebih kuat menjelang musim hujan.",
+   "en": "Dimas bought a new, sturdier umbrella ahead of the rainy season.",
+   "ko": "우기를 앞두고 디마스는 더 튼튼한 새 우산을 샀어요.",
+   "blank": "menjelang",
+   "src": "made"
+  },
+  {
+   "text": "Putri ingin rumah itu selesai menjelang ulang tahun neneknya.",
+   "en": "Putri wants the house finished before her grandmother's birthday.",
+   "ko": "푸트리는 할머니 생신 전에 집이 다 고쳐지길 바라요.",
+   "blank": "menjelang",
+   "src": "made"
+  }
+ ],
  "w|menjelaskan": [
   {
    "text": "Bisakah kau menjelaskan situasinya?",
@@ -40147,6 +40515,22 @@
    "en": "Clouds are covering the sun this morning.",
    "ko": "오늘 아침 구름이 태양을 가렸어.",
    "blank": "menutupi"
+  }
+ ],
+ "w|menyabotase": [
+  {
+   "text": "Hujan deras seolah menyabotase rencana piknik Dimas setiap akhir pekan.",
+   "en": "The heavy rain seemed to sabotage Dimas's picnic plans every weekend.",
+   "ko": "폭우가 주말마다 디마스의 소풍 계획을 망치는 것 같았어요.",
+   "blank": "menyabotase",
+   "src": "made"
+  },
+  {
+   "text": "Tikus di loteng seolah menyabotase kabel yang baru dipasang Putri.",
+   "en": "The rats in the attic seemed to be sabotaging the cables Putri had just installed.",
+   "ko": "다락방 쥐들이 푸트리가 막 깐 전선을 망가뜨리는 것 같았어요.",
+   "blank": "menyabotase",
+   "src": "made"
   }
  ],
  "w|menyadap": [
@@ -40915,6 +41299,22 @@
    "en": "His friend is really pleasant.",
    "ko": "그 친구가 정말 유쾌해.",
    "blank": "menyenangkan"
+  }
+ ],
+ "w|menyendiri": [
+  {
+   "text": "Di hari hujan, Dimas suka menyendiri di loteng sambil membaca.",
+   "en": "On rainy days, Dimas likes to be alone in the attic reading.",
+   "ko": "비 오는 날이면 디마스는 다락방에서 혼자 책 읽는 걸 좋아해요.",
+   "blank": "menyendiri",
+   "src": "made"
+  },
+  {
+   "text": "Saat lelah, Putri suka menyendiri di beranda belakang rumah tua itu.",
+   "en": "When she's tired, Putri likes to be alone on the old house's back veranda.",
+   "ko": "지치면 푸트리는 그 낡은 집 뒤 베란다에서 혼자 있는 걸 좋아해요.",
+   "blank": "menyendiri",
+   "src": "made"
   }
  ],
  "w|menyengat": [
@@ -53711,6 +54111,22 @@
    "src": "made"
   }
  ],
+ "w|primitif": [
+  {
+   "text": "Dimas membaca bahwa manusia primitif menandai musim dari letak bintang.",
+   "en": "Dimas read that primitive humans marked the seasons by the position of the stars.",
+   "ko": "디마스는 원시인들이 별의 위치로 계절을 알았다는 글을 읽었어요.",
+   "blank": "primitif",
+   "src": "made"
+  },
+  {
+   "text": "Instalasi listrik di rumah tua itu masih sangat primitif.",
+   "en": "The electrical wiring in the old house is still very primitive.",
+   "ko": "그 낡은 집의 전기 배선은 아직 아주 원시적이에요.",
+   "blank": "primitif",
+   "src": "made"
+  }
+ ],
  "w|prinsip": [
   {
    "text": "Bayu punya prinsip untuk selalu datang satu jam sebelum pentas.",
@@ -55221,6 +55637,22 @@
    "blank": "Rela"
   }
  ],
+ "w|relatif": [
+  {
+   "text": "Musim kemarau tahun ini relatif lebih pendek daripada tahun lalu.",
+   "en": "This year's dry season was relatively shorter than last year's.",
+   "ko": "올해 건기는 작년보다 비교적 짧았어요.",
+   "blank": "relatif",
+   "src": "made"
+  },
+  {
+   "text": "Biaya memperbaiki rumah tua itu relatif murah karena Putri mengerjakan banyak hal sendiri.",
+   "en": "Fixing up the old house was relatively cheap because Putri did a lot of the work herself.",
+   "ko": "푸트리가 많은 일을 직접 해서 낡은 집 수리비는 비교적 적게 들었어요.",
+   "blank": "relatif",
+   "src": "made"
+  }
+ ],
  "w|relawan": [
   {
    "text": "Teman-teman Fajar datang sebagai relawan untuk menata kursi tamu.",
@@ -56147,6 +56579,38 @@
    "en": "The driver chose a quiet route.",
    "ko": "기사가 한산한 경로를 골랐어.",
    "blank": "rute"
+  }
+ ],
+ "w|rutin": [
+  {
+   "text": "Setiap pergantian musim, Dimas rutin memeriksa talang rumahnya.",
+   "en": "At every change of season, Dimas routinely checks his house's gutters.",
+   "ko": "계절이 바뀔 때마다 디마스는 집 홈통을 꼬박꼬박 점검해요.",
+   "blank": "rutin",
+   "src": "made"
+  },
+  {
+   "text": "Putri menyewa tukang untuk perawatan rutin pada kayu-kayu rumah.",
+   "en": "Putri hired a handyman for routine maintenance on the house's woodwork.",
+   "ko": "푸트리는 집 목재를 정기적으로 손보려고 목수를 불렀어요.",
+   "blank": "rutin",
+   "src": "made"
+  }
+ ],
+ "w|rutinitas": [
+  {
+   "text": "Pergantian musim mengubah rutinitas pagi Dimas.",
+   "en": "The change of seasons altered Dimas's morning routine.",
+   "ko": "계절이 바뀌면서 디마스의 아침 일과가 달라졌어요.",
+   "blank": "rutinitas",
+   "src": "made"
+  },
+  {
+   "text": "Memperbaiki rumah tua kini sudah menjadi rutinitas akhir pekan Putri.",
+   "en": "Fixing up the old house has now become Putri's weekend routine.",
+   "ko": "낡은 집 고치기는 이제 푸트리의 주말 일과가 됐어요.",
+   "blank": "rutinitas",
+   "src": "made"
   }
  ],
  "w|saat": [
@@ -57741,6 +58205,22 @@
    "blank": "Sehari"
   }
  ],
+ "w|sehari-hari": [
+  {
+   "text": "Saat musim hujan, Dimas memakai sepatu bot dalam kegiatan sehari-hari.",
+   "en": "During the rainy season, Dimas wears boots for his daily activities.",
+   "ko": "우기에는 디마스가 평소에 장화를 신고 다녀요.",
+   "blank": "sehari-hari",
+   "src": "made"
+  },
+  {
+   "text": "Putri ingin rumah tua itu nyaman dipakai sehari-hari, bukan cuma cantik.",
+   "en": "Putri wants the old house to be comfortable for everyday use, not just pretty.",
+   "ko": "푸트리는 그 낡은 집이 예쁘기만 한 게 아니라 평소에 살기 편하길 바라요.",
+   "blank": "sehari-hari",
+   "src": "made"
+  }
+ ],
  "w|seharian": [
   {
    "text": "Dia bekerja seharian tanpa istirahat.",
@@ -57987,6 +58467,22 @@
    "src": "made"
   }
  ],
+ "w|sekadar": [
+  {
+   "text": "Bagi Dimas, payung bukan sekadar alat, tapi teman setia di musim hujan.",
+   "en": "For Dimas, an umbrella isn't just a tool but a loyal companion in the rainy season.",
+   "ko": "디마스에게 우산은 그냥 도구가 아니라 우기의 든든한 친구예요.",
+   "blank": "sekadar",
+   "src": "made"
+  },
+  {
+   "text": "Putri tidak ingin sekadar mengecat ulang, tapi juga memperkuat struktur rumah.",
+   "en": "Putri doesn't want to just repaint; she also wants to strengthen the house's structure.",
+   "ko": "푸트리는 그냥 다시 칠하는 게 아니라 집 구조도 튼튼하게 하고 싶어요.",
+   "blank": "sekadar",
+   "src": "made"
+  }
+ ],
  "w|sekali": [
   {
    "text": "Enak sekali.",
@@ -58131,6 +58627,22 @@
    "en": "There is a flock of birds in the tree.",
    "ko": "나무 위에 새 한 무리가 있어.",
    "blank": "sekelompok"
+  }
+ ],
+ "w|seketika": [
+  {
+   "text": "Langit yang tadinya cerah seketika menjadi gelap di atas kepala Dimas.",
+   "en": "The sky that had been clear instantly turned dark above Dimas's head.",
+   "ko": "맑던 하늘이 디마스 머리 위에서 순식간에 어두워졌어요.",
+   "blank": "seketika",
+   "src": "made"
+  },
+  {
+   "text": "Debu tebal seketika beterbangan saat Putri membuka lemari tua.",
+   "en": "Thick dust instantly flew everywhere when Putri opened the old wardrobe.",
+   "ko": "푸트리가 낡은 옷장을 열자 두꺼운 먼지가 순식간에 날렸어요.",
+   "blank": "seketika",
+   "src": "made"
   }
  ],
  "w|sekian": [
@@ -58383,6 +58895,22 @@
    "blank": "selama"
   }
  ],
+ "w|selama-lamanya": [
+  {
+   "text": "Dimas berharap pohon di halaman rumah neneknya bisa berdiri selama-lamanya.",
+   "en": "Dimas hopes the tree in his grandmother's yard can stand forever.",
+   "ko": "디마스는 할머니 집 마당의 나무가 영원히 서 있기를 바라요.",
+   "blank": "selama-lamanya",
+   "src": "made"
+  },
+  {
+   "text": "Putri bertekad menjaga rumah kakeknya selama-lamanya.",
+   "en": "Putri is determined to keep her grandfather's house forever.",
+   "ko": "푸트리는 할아버지 집을 영원히 지키겠다고 마음먹었어요.",
+   "blank": "selama-lamanya",
+   "src": "made"
+  }
+ ],
  "w|selamat": [
   {
    "text": "Selamat pagi!",
@@ -58468,6 +58996,22 @@
    "en": "A celebrity joined in raising funds for this season's flood victims.",
    "ko": "한 유명인이 이번 철 홍수 피해자를 위한 모금에 나섰어요.",
    "blank": "selebriti",
+   "src": "made"
+  }
+ ],
+ "w|selepas": [
+  {
+   "text": "Dimas langsung menyiram tanaman selepas hujan reda.",
+   "en": "Dimas watered the plants right after the rain stopped.",
+   "ko": "디마스는 비가 그치자마자 화분에 물을 줬어요.",
+   "blank": "selepas",
+   "src": "made"
+  },
+  {
+   "text": "Putri biasanya datang ke rumah tua itu selepas pulang kerja.",
+   "en": "Putri usually goes to the old house after getting off work.",
+   "ko": "푸트리는 보통 퇴근하고 그 낡은 집에 가요.",
+   "blank": "selepas",
    "src": "made"
   }
  ],
@@ -58677,6 +59221,22 @@
    "en": "His spirit inspires us.",
    "ko": "그의 열정이 우리에게 힘이 돼.",
    "blank": "Semangat"
+  }
+ ],
+ "w|semasa": [
+  {
+   "text": "Dimas ingat semasa kecil ia suka bermain hujan di lapangan.",
+   "en": "Dimas remembers that as a child he loved playing in the rain on the field.",
+   "ko": "디마스는 어릴 때 운동장에서 비 맞으며 노는 걸 좋아했던 게 기억나요.",
+   "blank": "semasa",
+   "src": "made"
+  },
+  {
+   "text": "Rumah itu dibangun semasa kakek Putri masih muda.",
+   "en": "The house was built when Putri's grandfather was still young.",
+   "ko": "그 집은 푸트리의 할아버지가 젊었을 때 지어졌어요.",
+   "blank": "semasa",
+   "src": "made"
   }
  ],
  "w|sembarang": [
@@ -59163,6 +59723,22 @@
    "en": "The club seniors held a meeting.",
    "ko": "클럽의 선배들이 모임을 열었어.",
    "blank": "Senior"
+  }
+ ],
+ "w|senja": [
+  {
+   "text": "Langit senja di musim kemarau berwarna jingga kemerahan.",
+   "en": "The dusk sky in the dry season is a reddish orange.",
+   "ko": "건기의 해 질 녘 하늘은 붉은 주황색이에요.",
+   "blank": "senja",
+   "src": "made"
+  },
+  {
+   "text": "Putri duduk di beranda menikmati senja setelah seharian mengecat.",
+   "en": "Putri sat on the veranda enjoying the dusk after a whole day of painting.",
+   "ko": "푸트리는 하루 종일 칠을 하고 베란다에 앉아 해 질 녘을 즐겼어요.",
+   "blank": "senja",
+   "src": "made"
   }
  ],
  "w|senjata": [
@@ -61500,6 +62076,22 @@
    "en": "In language class, Wati learned to find the subject of the sentence in song lyrics.",
    "ko": "언어 수업에서 와티는 노래 가사에서 문장의 주어를 찾는 법을 배웠어요.",
    "blank": "subjek",
+   "src": "made"
+  }
+ ],
+ "w|subuh": [
+  {
+   "text": "Saat musim kemarau, udara waktu subuh terasa sangat sejuk bagi Dimas.",
+   "en": "In the dry season, the air at dawn feels very cool to Dimas.",
+   "ko": "건기에는 새벽 공기가 디마스에게 아주 시원하게 느껴져요.",
+   "blank": "subuh",
+   "src": "made"
+  },
+  {
+   "text": "Tukang bangunan sudah mulai bekerja di rumah Putri sejak subuh.",
+   "en": "The builders had started working at Putri's house since dawn.",
+   "ko": "인부들은 새벽부터 푸트리네 집에서 일을 시작했어요.",
+   "blank": "subuh",
    "src": "made"
   }
  ],
@@ -65405,6 +65997,22 @@
    "blank": "terpisah"
   }
  ],
+ "w|terpukul": [
+  {
+   "text": "Para petani sangat terpukul karena hujan es merusak tanaman cabai.",
+   "en": "The farmers were hit hard because hail destroyed the chili crops.",
+   "ko": "우박이 고추밭을 망쳐서 농민들은 큰 타격을 입었어요.",
+   "blank": "terpukul",
+   "src": "made"
+  },
+  {
+   "text": "Putri sempat terpukul ketika tahu fondasi rumah itu retak parah.",
+   "en": "Putri was shaken when she learned the house's foundation was badly cracked.",
+   "ko": "푸트리는 집 기초에 금이 심하게 간 걸 알고 큰 충격을 받았어요.",
+   "blank": "terpukul",
+   "src": "made"
+  }
+ ],
  "w|terputus": [
   {
    "text": "Panggilan video dengan dokter sempat terputus karena sinyal lemah.",
@@ -65587,6 +66195,22 @@
    "en": "There is a hidden door in that wall.",
    "ko": "그 벽에 숨겨진 문이 있어.",
    "blank": "tersembunyi"
+  }
+ ],
+ "w|tersendiri": [
+  {
+   "text": "Bau tanah setelah hujan pertama punya pesona tersendiri bagi Dimas.",
+   "en": "The smell of earth after the first rain has a charm of its own for Dimas.",
+   "ko": "첫비가 온 뒤 흙냄새는 디마스에게 특별한 매력이 있어요.",
+   "blank": "tersendiri",
+   "src": "made"
+  },
+  {
+   "text": "Jendela kaca patri di ruang tamu punya keindahan tersendiri.",
+   "en": "The stained-glass window in the living room has a beauty of its own.",
+   "ko": "거실의 스테인드글라스 창은 남다른 아름다움이 있어요.",
+   "blank": "tersendiri",
+   "src": "made"
   }
  ],
  "w|tersentuh": [
@@ -65941,6 +66565,22 @@
    "en": "He kept talking.",
    "ko": "그는 계속 말했어.",
    "blank": "terus"
+  }
+ ],
+ "w|terus-menerus": [
+  {
+   "text": "Hujan turun terus-menerus sejak pagi sehingga Dimas batal bersepeda.",
+   "en": "It rained nonstop since the morning, so Dimas canceled his bike ride.",
+   "ko": "아침부터 비가 쉬지 않고 와서 디마스는 자전거 타기를 취소했어요.",
+   "blank": "terus-menerus",
+   "src": "made"
+  },
+  {
+   "text": "Atap rumah tua itu bocor terus-menerus setiap kali hujan.",
+   "en": "The old house's roof leaks constantly whenever it rains.",
+   "ko": "그 낡은 집 지붕은 비만 오면 계속 새요.",
+   "blank": "terus-menerus",
+   "src": "made"
   }
  ],
  "w|terutama": [

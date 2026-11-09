@@ -1,4 +1,20 @@
 {
+ "w|аборт": [
+  {
+   "text": "По радио в больничном кафе обсуждали новый закон об абортах.",
+   "en": "On the radio in the hospital café they were discussing a new law on abortion.",
+   "ko": "병원 카페 라디오에서 낙태에 관한 새 법을 두고 토론하고 있었어요.",
+   "blank": "абортах",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна разбирала с классом известный социальный плакат против абортов.",
+   "en": "Tatyana went over a well-known public poster against abortion with the class.",
+   "ko": "타티야나는 반 학생들과 낙태 반대를 다룬 유명한 공익 포스터를 분석했어요.",
+   "blank": "абортов",
+   "src": "made"
+  }
+ ],
  "w|абсолютно": [
   {
    "text": "Я абсолютно согласен.",
@@ -261,6 +277,22 @@
    "src": "made"
   }
  ],
+ "w|адреналин": [
+  {
+   "text": "Перед операцией у Никиты в крови было столько адреналина, что он не мог сидеть спокойно.",
+   "en": "Before the operation Nikita had so much adrenaline in his blood that he couldn't sit still.",
+   "ko": "수술 전에 니키타는 아드레날린이 넘쳐서 가만히 앉아 있을 수가 없었어요.",
+   "blank": "адреналина",
+   "src": "made"
+  },
+  {
+   "text": "Перед первой выставкой у Татьяны зашкаливал адреналин.",
+   "en": "Before her first exhibition Tatyana's adrenaline was off the charts.",
+   "ko": "첫 전시회를 앞두고 타티야나는 아드레날린이 치솟았어요.",
+   "blank": "адреналин",
+   "src": "made"
+  }
+ ],
  "w|адрес": [
   {
    "text": "Можешь дать мне твой теперешний адрес?",
@@ -467,6 +499,22 @@
    "ko": "월요일 밤 알리바이가 없어요.",
    "blank": "алиби",
    "src": "tatoeba:4851741/venticello en:2315265/CK"
+  }
+ ],
+ "w|алкоголик": [
+  {
+   "text": "Сосед Никиты по палате честно признался, что его отец был алкоголиком.",
+   "en": "Nikita's ward neighbour admitted honestly that his father had been an alcoholic.",
+   "ko": "니키타의 병실 옆 사람은 아버지가 알코올 중독자였다고 솔직히 털어놓았어요.",
+   "blank": "алкоголиком",
+   "src": "made"
+  },
+  {
+   "text": "На занятии Татьяна рассказала, что один знаменитый пейзажист был алкоголиком.",
+   "en": "In class Tatyana mentioned that one famous landscape painter had been an alcoholic.",
+   "ko": "타티야나는 수업에서 어느 유명한 풍경화가가 알코올 중독자였다고 이야기했어요.",
+   "blank": "алкоголиком",
+   "src": "made"
   }
  ],
  "w|алкоголь": [
@@ -3131,6 +3179,22 @@
    "src": "tatoeba:5124274/marafon en:4563416/mailohilohi"
   }
  ],
+ "w|бренд": [
+  {
+   "text": "Никите выписали то же лекарство, только другого бренда.",
+   "en": "Nikita was prescribed the same medicine, just a different brand.",
+   "ko": "니키타는 같은 약을 처방받았는데 브랜드만 달랐어요.",
+   "blank": "бренда",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна советует ученикам не гнаться за дорогим брендом кистей.",
+   "en": "Tatyana advises her students not to chase an expensive brand of brushes.",
+   "ko": "타티야나는 학생들에게 비싼 붓 브랜드를 쫓지 말라고 조언해요.",
+   "blank": "брендом",
+   "src": "made"
+  }
+ ],
  "w|бригада": [
   {
    "text": "Алексей руководит бригадой из восьми сварщиков.",
@@ -3639,6 +3703,22 @@
    "en": "We have an important meeting.",
    "ko": "우리는 중요한 약속이 있어.",
    "blank": "важная"
+  }
+ ],
+ "w|вакцина": [
+  {
+   "text": "Перед выпиской Никите сделали прививку новой вакциной от гриппа.",
+   "en": "Before discharge Nikita was given a shot of the new flu vaccine.",
+   "ko": "퇴원 전에 니키타는 새 독감 백신을 맞았어요.",
+   "blank": "вакциной",
+   "src": "made"
+  },
+  {
+   "text": "Для поликлиники Татьяна нарисовала плакат о вакцине от кори.",
+   "en": "Tatyana drew a poster about the measles vaccine for the clinic.",
+   "ko": "타티야나는 동네 병원에 걸 홍역 백신 포스터를 그렸어요.",
+   "blank": "вакцине",
+   "src": "made"
   }
  ],
  "w|валить": [
@@ -10747,6 +10827,22 @@
    "src": "tatoeba:2825224/AqQoyriq en:10649925/AlanF_US"
   }
  ],
+ "w|гриб": [
+  {
+   "text": "Врач спросил Никиту, не ел ли он вчера лесные грибы.",
+   "en": "The doctor asked Nikita whether he had eaten wild mushrooms yesterday.",
+   "ko": "의사가 니키타에게 어제 숲에서 딴 버섯을 먹지 않았냐고 물었어요.",
+   "blank": "грибы",
+   "src": "made"
+  },
+  {
+   "text": "Для натюрморта Татьяна положила на стол корзинку с грибами.",
+   "en": "For the still life Tatyana put a basket of mushrooms on the table.",
+   "ko": "타티야나는 정물화를 위해 버섯 바구니를 탁자에 올려놓았어요.",
+   "blank": "грибами",
+   "src": "made"
+  }
+ ],
  "w|грипп": [
   {
    "text": "Никита пропустил две недели тренировок из-за гриппа.",
@@ -12217,6 +12313,22 @@
    "ko": "넌 진정한 신사야.",
    "blank": "джентльмен",
    "src": "tatoeba:3626055/marafon en:2713449/CK"
+  }
+ ],
+ "w|джинсы": [
+  {
+   "text": "Никите разрешили переодеться из пижамы в джинсы.",
+   "en": "Nikita was allowed to change out of his pyjamas into jeans.",
+   "ko": "니키타는 환자복을 벗고 청바지로 갈아입어도 된다는 허락을 받았어요.",
+   "blank": "джинсы",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна всегда приходит на занятия в джинсах, перепачканных краской.",
+   "en": "Tatyana always comes to class in jeans smeared with paint.",
+   "ko": "타티야나는 늘 물감 범벅이 된 청바지를 입고 수업에 와요.",
+   "blank": "джинсах",
+   "src": "made"
   }
  ],
  "w|джунгли": [
@@ -16871,6 +16983,22 @@
    "src": "made"
   }
  ],
+ "w|зануда": [
+  {
+   "text": "Сосед по палате оказался ужасным занудой, но Никите он всё равно понравился.",
+   "en": "His ward neighbour turned out to be a terrible bore, but Nikita liked him anyway.",
+   "ko": "병실 옆 사람은 지독한 잔소리꾼이었지만 니키타는 그래도 그가 마음에 들었어요.",
+   "blank": "занудой",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна боялась показаться занудой, когда в третий раз объясняла про светотень.",
+   "en": "Tatyana was afraid of seeming a bore as she explained light and shade for the third time.",
+   "ko": "타티야나는 명암을 세 번째로 설명하면서 지루한 사람처럼 보일까 봐 걱정했어요.",
+   "blank": "занудой",
+   "src": "made"
+  }
+ ],
  "w|занятие": [
   {
    "text": "Почему тебе нравится это занятие?",
@@ -17629,6 +17757,22 @@
    "src": "made"
   }
  ],
+ "w|засыпать": [
+  {
+   "text": "По ночам Никита долго не мог засыпать из-за шума в коридоре.",
+   "en": "At night Nikita couldn't fall asleep for a long time because of the noise in the corridor.",
+   "ko": "밤마다 니키타는 복도 소음 때문에 한참 잠들지 못했어요.",
+   "blank": "засыпать",
+   "src": "made"
+  },
+  {
+   "text": "Пожилой ученик Татьяны часто засыпает, пока все рисуют вазу.",
+   "en": "Tatyana's elderly student often dozes off while everyone is drawing the vase.",
+   "ko": "타티야나의 나이 든 학생은 다들 꽃병을 그리는 동안 자주 졸아요.",
+   "blank": "засыпает",
+   "src": "made"
+  }
+ ],
  "w|затем": [
   {
    "text": "Сперва суп, затем чай.",
@@ -18369,6 +18513,22 @@
    "ko": "제일 좋아하는 문장 부호가 뭐야?",
    "blank": "знак",
    "src": "tatoeba:12421634/marafon en:12417957/ddnktr"
+  }
+ ],
+ "w|знакомиться": [
+  {
+   "text": "В первый день Никита знакомился с соседями по палате.",
+   "en": "On the first day Nikita was getting to know his roommates in the ward.",
+   "ko": "첫날 니키타는 병실 사람들과 인사를 나눴어요.",
+   "blank": "знакомился",
+   "src": "made"
+  },
+  {
+   "text": "На первом занятии ученики знакомятся друг с другом и с Татьяной.",
+   "en": "At the first class the students get to know each other and Tatyana.",
+   "ko": "첫 수업에서 학생들은 서로, 그리고 타티야나와 인사를 나눠요.",
+   "blank": "знакомятся",
+   "src": "made"
   }
  ],
  "w|знакомство": [
@@ -20775,6 +20935,22 @@
    "ko": "빗방울이 떨어지는 게 느껴졌어요.",
    "blank": "капля",
    "src": "tatoeba:3278468/marafon en:2326207/CK"
+  }
+ ],
+ "w|капсула": [
+  {
+   "text": "Никита запил капсулу стаканом тёплой воды.",
+   "en": "Nikita washed the capsule down with a glass of warm water.",
+   "ko": "니키타는 캡슐을 따뜻한 물 한 잔과 함께 삼켰어요.",
+   "blank": "капсулу",
+   "src": "made"
+  },
+  {
+   "text": "Для урока о будущем Татьяна нарисовала космическую капсулу на фоне звёзд.",
+   "en": "For a lesson about the future Tatyana painted a space capsule against the stars.",
+   "ko": "타티야나는 미래를 주제로 한 수업을 위해 별을 배경으로 우주 캡슐을 그렸어요.",
+   "blank": "капсулу",
+   "src": "made"
   }
  ],
  "w|карандаш": [
@@ -23911,6 +24087,22 @@
    "src": "tatoeba:2040539/marafon en:487626/minshirui"
   }
  ],
+ "w|крышка": [
+  {
+   "text": "Медсестра плотно закрыла крышку контейнера с анализами.",
+   "en": "The nurse tightly closed the lid of the sample container.",
+   "ko": "간호사가 검체 용기 뚜껑을 꼭 닫았어요.",
+   "blank": "крышку",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна никак не могла открыть крышку банки с гуашью.",
+   "en": "Tatyana just couldn't get the lid off the jar of gouache.",
+   "ko": "타티야나는 과슈 물감 통 뚜껑을 도무지 열 수가 없었어요.",
+   "blank": "крышку",
+   "src": "made"
+  }
+ ],
  "w|крючок": [
   {
    "text": "Михаил насадил наживку на крючок и закинул удочку.",
@@ -23997,6 +24189,22 @@
    "en": "Someone is standing there.",
    "ko": "거기 누군가 서 있어.",
    "blank": "кто-то"
+  }
+ ],
+ "w|кубок": [
+  {
+   "text": "Никита попросил друга принести в палату его футбольный кубок.",
+   "en": "Nikita asked a friend to bring his football trophy to the ward.",
+   "ko": "니키타는 친구에게 축구 우승컵을 병실로 가져와 달라고 부탁했어요.",
+   "blank": "кубок",
+   "src": "made"
+  },
+  {
+   "text": "Ученики Татьяны рисовали серебряный кубок с яркими бликами.",
+   "en": "Tatyana's students were drawing a silver goblet with bright highlights.",
+   "ko": "타티야나의 학생들은 반짝이는 은 잔을 그렸어요.",
+   "blank": "кубок",
+   "src": "made"
   }
  ],
  "w|куда": [
@@ -24435,6 +24643,22 @@
    "en": "Fine, I'll wait.",
    "ko": "그래, 기다릴게.",
    "blank": "ладно"
+  }
+ ],
+ "w|ладонь": [
+  {
+   "text": "Врач попросил Никиту показать ладонь и сжать кулак.",
+   "en": "The doctor asked Nikita to show his palm and make a fist.",
+   "ko": "의사가 니키타에게 손바닥을 보여 주고 주먹을 쥐어 보라고 했어요.",
+   "blank": "ладонь",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна предложила детям обвести свою ладонь и превратить её в птицу.",
+   "en": "Tatyana suggested the children trace their palm and turn it into a bird.",
+   "ko": "타티야나는 아이들에게 손바닥을 따라 그려서 새로 바꿔 보자고 했어요.",
+   "blank": "ладонь",
+   "src": "made"
   }
  ],
  "w|лампа": [
@@ -25005,6 +25229,22 @@
    "src": "tatoeba:6317373/marafon en:3043615/CK"
   }
  ],
+ "w|лихорадка": [
+  {
+   "text": "Ночью у Никиты началась лихорадка, и дежурный врач дал ему жаропонижающее.",
+   "en": "At night Nikita came down with a fever, and the doctor on duty gave him something for it.",
+   "ko": "밤에 니키타가 열이 나기 시작해서 당직 의사가 해열제를 줬어요.",
+   "blank": "лихорадка",
+   "src": "made"
+  },
+  {
+   "text": "Перед выставкой в мастерской Татьяны царила настоящая лихорадка.",
+   "en": "Before the exhibition there was a real frenzy in Tatyana's studio.",
+   "ko": "전시회를 앞두고 타티야나의 작업실은 그야말로 정신없이 들끓었어요.",
+   "blank": "лихорадка",
+   "src": "made"
+  }
+ ],
  "w|лицензия": [
   {
    "text": "Для работы на кране Ивану нужна специальная лицензия.",
@@ -25237,6 +25477,22 @@
    "ko": "더 큰 배가 필요할 거야.",
    "blank": "лодка",
    "src": "tatoeba:6334505/marafon en:4023954/hellosunshine"
+  }
+ ],
+ "w|лодыжка": [
+  {
+   "text": "У Никиты так опухла лодыжка, что он не мог надеть ботинок.",
+   "en": "Nikita's ankle was so swollen that he couldn't put his shoe on.",
+   "ko": "니키타는 발목이 너무 부어서 신발을 신을 수 없었어요.",
+   "blank": "лодыжка",
+   "src": "made"
+  },
+  {
+   "text": "Рисуя натурщицу, Татьяна долго поправляла линию лодыжки.",
+   "en": "Drawing the model, Tatyana spent a long time correcting the line of the ankle.",
+   "ko": "타티야나는 모델을 그리면서 발목 선을 한참 고쳤어요.",
+   "blank": "лодыжки",
+   "src": "made"
   }
  ],
  "w|ложиться": [
@@ -25948,6 +26204,22 @@
    "en": "Tatiana jokingly calls herself a clean-code maniac.",
    "ko": "타티야나는 농담으로 자기를 깔끔한 코드 광이라고 불러요.",
    "blank": "маньяком",
+   "src": "made"
+  }
+ ],
+ "w|марихуана": [
+  {
+   "text": "В больничной брошюре Никита прочитал, как марихуана влияет на память.",
+   "en": "In a hospital leaflet Nikita read how marijuana affects memory.",
+   "ko": "니키타는 병원 안내 책자에서 마리화나가 기억력에 어떤 영향을 주는지 읽었어요.",
+   "blank": "марихуана",
+   "src": "made"
+  },
+  {
+   "text": "На выставке плакатов Татьяна разбирала с учениками работу о вреде марихуаны.",
+   "en": "At a poster exhibition Tatyana discussed with her students a piece about the harm of marijuana.",
+   "ko": "포스터 전시회에서 타티야나는 학생들과 마리화나의 해로움을 다룬 작품을 살펴봤어요.",
+   "blank": "марихуаны",
    "src": "made"
   }
  ],
@@ -32945,6 +33217,22 @@
    "src": "made"
   }
  ],
+ "w|нынешний": [
+  {
+   "text": "При нынешнем лечении Никита должен поправиться через пару недель.",
+   "en": "With the current treatment Nikita should recover in a couple of weeks.",
+   "ko": "지금 치료대로라면 니키타는 두어 주 뒤에 나을 거예요.",
+   "blank": "нынешнем",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна считает, что нынешние студенты рисуют смелее, чем раньше.",
+   "en": "Tatyana thinks today's students draw more boldly than they used to.",
+   "ko": "타티야나는 요즘 학생들이 예전보다 더 과감하게 그린다고 생각해요.",
+   "blank": "нынешние",
+   "src": "made"
+  }
+ ],
  "w|няня": [
   {
    "text": "Ольга уходит в шесть, потому что дома её сменяет няня.",
@@ -33778,6 +34066,22 @@
    "en": "In literature class Irina argued about who doomed the hero to loneliness.",
    "ko": "문학 시간에 이리나는 누가 주인공을 외롭게 만들었는지를 두고 토론했어요.",
    "blank": "обрёк",
+   "src": "made"
+  }
+ ],
+ "w|обследование": [
+  {
+   "text": "Никите назначили полное обследование сердца.",
+   "en": "Nikita was scheduled for a full heart examination.",
+   "ko": "니키타는 심장 정밀 검사를 받게 됐어요.",
+   "blank": "обследование",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна отменила занятие, потому что ей нужно было пройти обследование.",
+   "en": "Tatyana cancelled the class because she had to have a medical check-up.",
+   "ko": "타티야나는 건강 검진을 받아야 해서 수업을 취소했어요.",
+   "blank": "обследование",
    "src": "made"
   }
  ],
@@ -34815,6 +35119,22 @@
    "ko": "나한테 너무 많은 걸 기대하지 마.",
    "blank": "ожидать",
    "src": "tatoeba:1673409/fanty en:9972004/ddnktr"
+  }
+ ],
+ "w|ожог": [
+  {
+   "text": "Медсестра аккуратно обработала ожог на руке Никиты.",
+   "en": "The nurse carefully treated the burn on Nikita's arm.",
+   "ko": "간호사가 니키타 팔의 화상을 조심스럽게 치료했어요.",
+   "blank": "ожог",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна получила лёгкий ожог, когда доставала керамику из печи.",
+   "en": "Tatyana got a minor burn while taking ceramics out of the kiln.",
+   "ko": "타티야나는 가마에서 도자기를 꺼내다가 가벼운 화상을 입었어요.",
+   "blank": "ожог",
+   "src": "made"
   }
  ],
  "w|озеро": [
@@ -37493,6 +37813,22 @@
    "src": "made"
   }
  ],
+ "w|отравление": [
+  {
+   "text": "Никиту привезли в больницу с пищевым отравлением.",
+   "en": "Nikita was brought to the hospital with food poisoning.",
+   "ko": "니키타는 식중독으로 병원에 실려 왔어요.",
+   "blank": "отравлением",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна предупредила учеников, что старые свинцовые белила могут вызвать отравление.",
+   "en": "Tatyana warned her students that old lead white paint can cause poisoning.",
+   "ko": "타티야나는 옛 납 성분 흰 물감이 중독을 일으킬 수 있다고 학생들에게 주의를 줬어요.",
+   "blank": "отравление",
+   "src": "made"
+  }
+ ],
  "w|отреагировать": [
   {
    "text": "Павел не успел отреагировать, и волна окатила его с головой.",
@@ -40045,6 +40381,22 @@
    "src": "tatoeba:12160172/marafon en:953989/CK"
   }
  ],
+ "w|питаться": [
+  {
+   "text": "В больнице Никите приходится питаться по строгой диете.",
+   "en": "In the hospital Nikita has to eat according to a strict diet.",
+   "ko": "병원에서 니키타는 엄격한 식단대로 먹어야 해요.",
+   "blank": "питаться",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна шутит, что художники питаются одним кофе и вдохновением.",
+   "en": "Tatyana jokes that artists live on nothing but coffee and inspiration.",
+   "ko": "타티야나는 화가들은 커피와 영감만 먹고 산다고 농담해요.",
+   "blank": "питаются",
+   "src": "made"
+  }
+ ],
  "w|пить": [
   {
    "text": "Хочешь пить?",
@@ -40089,6 +40441,22 @@
    "ko": "저는 중국 음식을 정말 좋아해요.",
    "blank": "пища",
    "src": "tatoeba:3682838/Lenin_1917 en:1254482/CK"
+  }
+ ],
+ "w|плавание": [
+  {
+   "text": "Врач посоветовал Никите заняться плаванием после выписки.",
+   "en": "The doctor advised Nikita to take up swimming after discharge.",
+   "ko": "의사가 니키타에게 퇴원하면 수영을 해 보라고 권했어요.",
+   "blank": "плаванием",
+   "src": "made"
+  },
+  {
+   "text": "В детстве Татьяна занималась плаванием, а потом увлеклась живописью.",
+   "en": "As a child Tatyana did swimming, and later got into painting.",
+   "ko": "타티야나는 어릴 때 수영을 하다가 나중에 그림에 빠졌어요.",
+   "blank": "плаванием",
+   "src": "made"
   }
  ],
  "w|плавать": [
@@ -40277,6 +40645,22 @@
    "ko": "운다고 부모님이 돌아오시진 않아.",
    "blank": "Плач",
    "src": "tatoeba:6812517/odexed en:7929644/AlanF_US"
+  }
+ ],
+ "w|плащ": [
+  {
+   "text": "Никита приехал в больницу под дождём в старом плаще.",
+   "en": "Nikita came to the hospital in the rain wearing an old raincoat.",
+   "ko": "니키타는 비를 맞으며 낡은 우비를 입고 병원에 왔어요.",
+   "blank": "плаще",
+   "src": "made"
+  },
+  {
+   "text": "Сегодня ученикам Татьяны позировала девушка в красном плаще.",
+   "en": "Today a girl in a red cloak posed for Tatyana's students.",
+   "ko": "오늘은 빨간 망토를 입은 여자가 타티야나의 학생들 앞에서 모델을 섰어요.",
+   "blank": "плаще",
+   "src": "made"
   }
  ],
  "w|плевать": [
@@ -41306,6 +41690,22 @@
    "en": "Nurse Tatiana has been waiting for a promotion for two years.",
    "ko": "간호사 타티야나는 승진을 이 년째 기다려요.",
    "blank": "повышения",
+   "src": "made"
+  }
+ ],
+ "w|повязка": [
+  {
+   "text": "Каждое утро Никите меняют повязку на ноге.",
+   "en": "Every morning they change the bandage on Nikita's leg.",
+   "ko": "매일 아침 니키타 다리의 붕대를 갈아 줘요.",
+   "blank": "повязку",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна рисовала одной рукой, потому что другая была в повязке.",
+   "en": "Tatyana was painting with one hand because the other was bandaged.",
+   "ko": "타티야나는 다른 손에 붕대를 감고 있어서 한 손으로 그렸어요.",
+   "blank": "повязке",
    "src": "made"
   }
  ],
@@ -43505,6 +43905,22 @@
    "src": "tatoeba:5254952/Wezel en:1954499/CK"
   }
  ],
+ "w|полегчать": [
+  {
+   "text": "К вечеру Никите немного полегчало, и он даже попросил чаю.",
+   "en": "By evening Nikita felt a little better and even asked for some tea.",
+   "ko": "저녁이 되자 니키타는 조금 나아져서 차까지 달라고 했어요.",
+   "blank": "полегчало",
+   "src": "made"
+  },
+  {
+   "text": "Когда картину приняли на выставку, Татьяне сразу полегчало.",
+   "en": "When the painting was accepted for the exhibition, Tatyana immediately felt relieved.",
+   "ko": "그림이 전시회에 걸리게 되자 타티야나는 금세 마음이 놓였어요.",
+   "blank": "полегчало",
+   "src": "made"
+  }
+ ],
  "w|полезный": [
   {
    "text": "Вы дали мне один очень полезный совет.",
@@ -44060,6 +44476,22 @@
    "en": "Natalia's suitcase couldn't be fitted onto the top shelf.",
    "ko": "나탈리야의 여행 가방은 위 선반에 들어가지 않았어요.",
    "blank": "поместить",
+   "src": "made"
+  }
+ ],
+ "w|поместье": [
+  {
+   "text": "Дед Никиты когда-то лечился в санатории, который раньше был старинным поместьем.",
+   "en": "Nikita's grandfather was once treated at a sanatorium that used to be an old estate.",
+   "ko": "니키타의 할아버지는 예전에 옛 영지였던 요양원에서 치료를 받았어요.",
+   "blank": "поместьем",
+   "src": "made"
+  },
+  {
+   "text": "Летом Татьяна возит учеников рисовать на природе в старое поместье.",
+   "en": "In summer Tatyana takes her students to paint outdoors at an old estate.",
+   "ko": "여름이면 타티야나는 학생들을 데리고 옛 영지로 야외 스케치를 하러 가요.",
+   "blank": "поместье",
    "src": "made"
   }
  ],
@@ -45728,6 +46160,22 @@
    "en": "From the forest settlement Maria sent her mom a parcel of dried mushrooms.",
    "ko": "마리야는 숲속 마을에서 어머니께 말린 버섯 소포를 보냈어요.",
    "blank": "посылку",
+   "src": "made"
+  }
+ ],
+ "w|пот": [
+  {
+   "text": "После операции у Никиты на лбу выступил холодный пот.",
+   "en": "After the operation a cold sweat broke out on Nikita's forehead.",
+   "ko": "수술 뒤 니키타의 이마에 식은땀이 맺혔어요.",
+   "blank": "пот",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна вытерла пот со лба и отошла от мольберта.",
+   "en": "Tatyana wiped the sweat from her forehead and stepped back from the easel.",
+   "ko": "타티야나는 이마의 땀을 닦고 이젤에서 물러섰어요.",
+   "blank": "пот",
    "src": "made"
   }
  ],
@@ -53491,6 +53939,22 @@
    "src": "tatoeba:10133244/marafon en:934420/LittleBoy"
   }
  ],
+ "w|расплатиться": [
+  {
+   "text": "При выписке Никита расплатился за отдельную палату картой.",
+   "en": "When he was discharged, Nikita paid for the private room by card.",
+   "ko": "퇴원할 때 니키타는 1인실 비용을 카드로 계산했어요.",
+   "blank": "расплатился",
+   "src": "made"
+  },
+  {
+   "text": "За холсты для всего класса Татьяна расплатилась из своего кармана.",
+   "en": "Tatyana paid for the canvases for the whole class out of her own pocket.",
+   "ko": "타티야나는 반 전체의 캔버스 값을 자기 돈으로 치렀어요.",
+   "blank": "расплатилась",
+   "src": "made"
+  }
+ ],
  "w|расположение": [
   {
    "text": "На уроке географии Иван изучал расположение рек на карте.",
@@ -54029,6 +54493,22 @@
    "blank": "ребёнка"
   }
  ],
+ "w|ребро": [
+  {
+   "text": "На снимке врач заметил у Никиты трещину в ребре.",
+   "en": "On the X-ray image the doctor noticed a crack in Nikita's rib.",
+   "ko": "의사가 사진에서 니키타의 갈비뼈에 금이 간 것을 발견했어요.",
+   "blank": "ребре",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна объясняла, как рисовать грудную клетку, прорисовывая каждое ребро отдельно.",
+   "en": "Tatyana explained how to draw the ribcage, drawing each rib separately.",
+   "ko": "타티야나는 갈비뼈를 하나씩 따로 그려 가며 흉곽 그리는 법을 설명했어요.",
+   "blank": "ребро",
+   "src": "made"
+  }
+ ],
  "w|ребята": [
   {
    "text": "Ребята, тише!",
@@ -54470,6 +54950,22 @@
    "en": "The bank sent Anna a rejection of her loan for the kitchen renovation.",
    "ko": "은행은 안나의 부엌 수리 대출을 거절했어요.",
    "blank": "ремонт",
+   "src": "made"
+  }
+ ],
+ "w|рентген": [
+  {
+   "text": "Никиту отправили на рентген грудной клетки.",
+   "en": "Nikita was sent for a chest X-ray.",
+   "ko": "니키타는 흉부 엑스레이를 찍으러 갔어요.",
+   "blank": "рентген",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна принесла на урок рентген своей руки, чтобы показать строение костей.",
+   "en": "Tatyana brought an X-ray of her hand to class to show the structure of the bones.",
+   "ko": "타티야나는 뼈 구조를 보여 주려고 자기 손 엑스레이를 수업에 가져왔어요.",
+   "blank": "рентген",
    "src": "made"
   }
  ],
@@ -60595,6 +61091,22 @@
    "src": "made"
   }
  ],
+ "w|сосуд": [
+  {
+   "text": "Врач объяснил Никите, что у него слабые сосуды.",
+   "en": "The doctor explained to Nikita that he has weak blood vessels.",
+   "ko": "의사가 니키타에게 혈관이 약하다고 설명했어요.",
+   "blank": "сосуды",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна поставила в центр стола глиняный сосуд с узким горлом.",
+   "en": "Tatyana placed a clay vessel with a narrow neck in the middle of the table.",
+   "ko": "타티야나는 목이 좁은 흙 항아리를 탁자 한가운데에 놓았어요.",
+   "blank": "сосуд",
+   "src": "made"
+  }
+ ],
  "w|сотворить": [
   {
    "text": "Повар отеля сумел сотворить для Сергея торт за один час.",
@@ -61839,6 +62351,22 @@
    "src": "tatoeba:4671335/yappie en:4667163/CK"
   }
  ],
+ "w|стадион": [
+  {
+   "text": "Никита повредил ногу во время матча на стадионе.",
+   "en": "Nikita injured his leg during a match at the stadium.",
+   "ko": "니키타는 경기장에서 시합하다가 다리를 다쳤어요.",
+   "blank": "стадионе",
+   "src": "made"
+  },
+  {
+   "text": "Однажды Татьяна водила класс делать наброски на стадион.",
+   "en": "Once Tatyana took the class to the stadium to make sketches.",
+   "ko": "한번은 타티야나가 반 학생들을 데리고 경기장에 크로키를 하러 갔어요.",
+   "blank": "стадион",
+   "src": "made"
+  }
+ ],
  "w|стадия": [
   {
    "text": "Реставратор объяснил Сергею, на какой стадии находится работа над фреской.",
@@ -61869,6 +62397,22 @@
    "ko": "식사할 때 우유 큰 잔으로 한 잔 주실래요?",
    "blank": "стакан",
    "src": "tatoeba:14082255/marafon en:6457894/Eccles17"
+  }
+ ],
+ "w|стаканчик": [
+  {
+   "text": "Медсестра принесла Никите таблетки в маленьком пластиковом стаканчике.",
+   "en": "The nurse brought Nikita his pills in a small plastic cup.",
+   "ko": "간호사가 작은 플라스틱 컵에 약을 담아 니키타에게 가져왔어요.",
+   "blank": "стаканчике",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна раздала всем по стаканчику с водой для акварели.",
+   "en": "Tatyana handed everyone a little cup of water for watercolours.",
+   "ko": "타티야나는 모두에게 수채화용 물컵을 하나씩 나눠 줬어요.",
+   "blank": "стаканчику",
+   "src": "made"
   }
  ],
  "w|сталкиваться": [
@@ -62493,6 +63037,22 @@
    "en": "I'm on your side.",
    "ko": "나는 네 편이야.",
    "blank": "стороне"
+  }
+ ],
+ "w|стошнить": [
+  {
+   "text": "После наркоза Никиту стошнило прямо в коридоре.",
+   "en": "After the anaesthetic Nikita threw up right in the corridor.",
+   "ko": "마취가 풀린 뒤 니키타는 복도에서 그만 토하고 말았어요.",
+   "blank": "стошнило",
+   "src": "made"
+  },
+  {
+   "text": "От запаха растворителя одного ученика Татьяны чуть не стошнило.",
+   "en": "The smell of the solvent nearly made one of Tatyana's students throw up.",
+   "ko": "타티야나의 한 학생은 시너 냄새에 하마터면 토할 뻔했어요.",
+   "blank": "стошнило",
+   "src": "made"
   }
  ],
  "w|стоянка": [
@@ -63312,6 +63872,22 @@
    "en": "Svetlana told her friend that her first borscht turned out super.",
    "ko": "스베틀라나는 친구에게 첫 보르시가 끝내주게 됐다고 말했어요.",
    "blank": "супер",
+   "src": "made"
+  }
+ ],
+ "w|супермаркет": [
+  {
+   "text": "Мама Никиты купила ему фрукты в супермаркете возле больницы.",
+   "en": "Nikita's mum bought him fruit at the supermarket near the hospital.",
+   "ko": "니키타의 엄마가 병원 근처 슈퍼마켓에서 과일을 사 왔어요.",
+   "blank": "супермаркете",
+   "src": "made"
+  },
+  {
+   "text": "Простые краски для занятий Татьяна иногда покупает прямо в супермаркете.",
+   "en": "Tatyana sometimes buys basic paints for class right at the supermarket.",
+   "ko": "타티야나는 수업용 기본 물감을 가끔 슈퍼마켓에서 그냥 사요.",
+   "blank": "супермаркете",
    "src": "made"
   }
  ],
@@ -65933,6 +66509,22 @@
    "src": "tatoeba:4094787/Ooneykcall en:3724369/CM"
   }
  ],
+ "w|тряпка": [
+  {
+   "text": "Уборщица протирала пол в палате Никиты мокрой тряпкой.",
+   "en": "The cleaner was wiping the floor in Nikita's ward with a wet rag.",
+   "ko": "청소부가 니키타 병실 바닥을 젖은 걸레로 닦고 있었어요.",
+   "blank": "тряпкой",
+   "src": "made"
+  },
+  {
+   "text": "У каждого ученика Татьяны под рукой лежит тряпка, чтобы вытирать кисти.",
+   "en": "Each of Tatyana's students keeps a rag at hand to wipe the brushes.",
+   "ko": "타티야나의 학생들은 저마다 붓을 닦을 헝겊을 곁에 두고 있어요.",
+   "blank": "тряпка",
+   "src": "made"
+  }
+ ],
  "w|туалет": [
   {
    "text": "Вы не подскажете, где туалет?",
@@ -67944,6 +68536,22 @@
    "en": "Olga thinks the route past Baikal is unique in its own way.",
    "ko": "올가는 바이칼을 지나는 노선이 나름대로 특별하다고 생각해요.",
    "blank": "уникальный",
+   "src": "made"
+  }
+ ],
+ "w|унитаз": [
+  {
+   "text": "В палате Никиты сломался унитаз, и пришлось звать сантехника.",
+   "en": "The toilet in Nikita's ward broke, and they had to call a plumber.",
+   "ko": "니키타 병실의 변기가 고장 나서 배관공을 불러야 했어요.",
+   "blank": "унитаз",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна рассказала классу про художника, который выставил в музее обычный унитаз.",
+   "en": "Tatyana told the class about an artist who exhibited an ordinary toilet in a museum.",
+   "ko": "타티야나는 박물관에 평범한 변기를 전시한 화가 이야기를 반에 들려줬어요.",
+   "blank": "унитаз",
    "src": "made"
   }
  ],
@@ -70009,6 +70617,22 @@
    "src": "made"
   }
  ],
+ "w|хирургия": [
+  {
+   "text": "Никиту перевели в отделение хирургии на третьем этаже.",
+   "en": "Nikita was moved to the surgery department on the third floor.",
+   "ko": "니키타는 3층 외과 병동으로 옮겨졌어요.",
+   "blank": "хирургии",
+   "src": "made"
+  },
+  {
+   "text": "Одна ученица Татьяны работает в хирургии и рисует, чтобы отдохнуть.",
+   "en": "One of Tatyana's students works in surgery and paints to unwind.",
+   "ko": "타티야나의 한 학생은 외과에서 일하고 쉬려고 그림을 그려요.",
+   "blank": "хирургии",
+   "src": "made"
+  }
+ ],
  "w|хищник": [
   {
    "text": "Михаил знает, что в этих лесах водится лишь один крупный хищник — медведь.",
@@ -71919,6 +72543,22 @@
    "ko": "낯선 침대에서는 잠을 잘 못 자요.",
    "blank": "чужой",
    "src": "tatoeba:10165503/marafon en:5228913/AlanF_US"
+  }
+ ],
+ "w|чума": [
+  {
+   "text": "В холле больницы Никита читал статью об эпидемии чумы в Средние века.",
+   "en": "In the hospital lobby Nikita was reading an article about the plague epidemic in the Middle Ages.",
+   "ko": "니키타는 병원 로비에서 중세 흑사병 유행에 관한 기사를 읽었어요.",
+   "blank": "чумы",
+   "src": "made"
+  },
+  {
+   "text": "Татьяна показала классу средневековую гравюру о чуме.",
+   "en": "Tatyana showed the class a medieval engraving about the plague.",
+   "ko": "타티야나는 흑사병을 다룬 중세 판화를 반에 보여 줬어요.",
+   "blank": "чуме",
+   "src": "made"
   }
  ],
  "w|чуточку": [

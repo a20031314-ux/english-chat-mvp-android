@@ -375,6 +375,22 @@
    "src": "made"
   }
  ],
+ "w|กระจ่าง": [
+  {
+   "text": "หลังโทรถามตำรวจอีกรอบ เรื่องนี้ก็กระจ่างสำหรับกิตติ",
+   "en": "After calling the police again, the matter became clear to Kitti.",
+   "ko": "경찰에 한 번 더 전화해 보고 나서 끼띠에게 이 일이 분명해졌어요.",
+   "blank": "กระจ่าง",
+   "src": "made"
+  },
+  {
+   "text": "หลังวาดแผนภาพบนกระดาน ขั้นตอนทั้งหมดก็กระจ่างขึ้น",
+   "en": "After drawing a diagram on the board, the whole process became clearer.",
+   "ko": "칠판에 도표를 그리고 나니 전체 과정이 명확해졌어요.",
+   "blank": "กระจ่าง",
+   "src": "made"
+  }
+ ],
  "w|กระจาย": [
   {
    "text": "เจ้าหน้าที่เดินกระจายกันไปตรวจตั๋วทุกตู้",
@@ -899,6 +915,22 @@
    "en": "A round table seats many people.",
    "ko": "둥근 테이블은 여러 명이 앉아.",
    "blank": "กลม"
+  }
+ ],
+ "w|กลยุทธ์": [
+  {
+   "text": "หัวหน้าข่าวคุยเรื่องกลยุทธ์เพิ่มผู้อ่านบนโซเชียลมีเดีย",
+   "en": "The news chief discussed strategies for gaining readers on social media.",
+   "ko": "보도국장은 소셜 미디어 독자를 늘릴 전략을 논의했어요.",
+   "blank": "กลยุทธ์",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเสนอกลยุทธ์ให้ผู้ใช้ทดลองฟรีหนึ่งเดือน",
+   "en": "Wanna proposed a strategy of giving users a one-month free trial.",
+   "ko": "완나는 사용자에게 한 달 무료 체험을 주는 전략을 제안했어요.",
+   "blank": "กลยุทธ์",
+   "src": "made"
   }
  ],
  "w|กล้วย": [
@@ -2089,6 +2121,22 @@
    "src": "made"
   }
  ],
+ "w|การจัดการ": [
+  {
+   "text": "กิตติตั้งคำถามถึงการจัดการขยะของเทศบาลในบทความล่าสุด",
+   "en": "Kitti questioned the city's waste management in his latest article.",
+   "ko": "끼띠는 최근 기사에서 시의 쓰레기 관리에 의문을 제기했어요.",
+   "blank": "การจัดการ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาไปอบรมเรื่องการจัดการทีมที่ทำงานจากบ้าน",
+   "en": "Wanna attended training on managing remote teams.",
+   "ko": "완나는 재택근무 팀 관리에 관한 교육을 받았어요.",
+   "blank": "การจัดการ",
+   "src": "made"
+  }
+ ],
  "w|การชุมนุม": [
   {
    "text": "ตำรวจดูแลความปลอดภัยในการชุมนุม",
@@ -2331,6 +2379,22 @@
    "src": "made"
   }
  ],
+ "w|การบัญชี": [
+  {
+   "text": "กิตติขอให้ผู้เชี่ยวชาญการบัญชีช่วยอ่านงบของบริษัทนั้น",
+   "en": "Kitti asked an accounting expert to help read that company's financial statements.",
+   "ko": "끼띠는 회계 전문가에게 그 회사의 재무제표를 봐 달라고 부탁했어요.",
+   "blank": "การบัญชี",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทจ้างสำนักงานภายนอกดูแลการบัญชีให้ทุกเดือน",
+   "en": "The company hires an outside firm to handle the accounting every month.",
+   "ko": "회사는 매달 외부 업체에 회계를 맡겨요.",
+   "blank": "การบัญชี",
+   "src": "made"
+  }
+ ],
  "w|การบ้าน": [
   {
    "text": "เด็กทำการบ้านก่อนดูทีวี",
@@ -2432,6 +2496,22 @@
    "en": "Napa's job also involves translating documents from English into Thai.",
    "ko": "나파의 일에는 영어 문서를 태국어로 번역하는 것도 있어요.",
    "blank": "การแปล",
+   "src": "made"
+  }
+ ],
+ "w|การผลิต": [
+  {
+   "text": "กิตติรายงานว่าการผลิตรถยนต์ในประเทศลดลงเพราะขาดชิป",
+   "en": "Kitti reported that domestic car production fell because of a chip shortage.",
+   "ko": "끼띠는 칩 부족으로 국내 자동차 생산이 줄었다고 보도했어요.",
+   "blank": "การผลิต",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทร่วมมือกับโรงงานเพื่อใช้แอปติดตามการผลิตแบบเรียลไทม์",
+   "en": "The company partnered with a factory to use the app to track production in real time.",
+   "ko": "회사는 공장과 손잡고 앱으로 생산 현황을 실시간 추적해요.",
+   "blank": "การผลิต",
    "src": "made"
   }
  ],
@@ -2616,6 +2696,38 @@
    "en": "On election day the restaurant closed early so the staff could go vote.",
    "ko": "선거일에 가게는 직원들이 투표하러 갈 수 있게 일찍 문을 닫았어요.",
    "blank": "การเลือกตั้ง",
+   "src": "made"
+  }
+ ],
+ "w|การว่างงาน": [
+  {
+   "text": "ตัวเลขการว่างงานของคนจบใหม่เป็นข่าวเด่นของสัปดาห์",
+   "en": "The unemployment figures for new graduates were the top story of the week.",
+   "ko": "신규 졸업자의 실업 수치가 이번 주 주요 뉴스였어요.",
+   "blank": "การว่างงาน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาทำแอปหางานเพื่อช่วยลดการว่างงานในต่างจังหวัด",
+   "en": "Wanna made a job-search app to help reduce unemployment in the provinces.",
+   "ko": "완나는 지방의 실업을 줄이려고 구직 앱을 만들었어요.",
+   "blank": "การว่างงาน",
+   "src": "made"
+  }
+ ],
+ "w|การวิจัย": [
+  {
+   "text": "กิตติอ่านผลการวิจัยเรื่องฝุ่นควันก่อนเขียนข่าว",
+   "en": "Kitti read the research findings on haze before writing the story.",
+   "ko": "끼띠는 기사를 쓰기 전에 미세먼지에 관한 연구 결과를 읽었어요.",
+   "blank": "การวิจัย",
+   "src": "made"
+  },
+  {
+   "text": "สตาร์ตอัปได้ทุนจากรัฐเพื่อทำการวิจัยด้านปัญญาประดิษฐ์",
+   "en": "The startup got government funding to do research in artificial intelligence.",
+   "ko": "스타트업은 인공지능 분야 연구를 하려고 정부 지원금을 받았어요.",
+   "blank": "การวิจัย",
    "src": "made"
   }
  ],
@@ -2936,6 +3048,22 @@
    "en": "Please send me the meeting agenda.",
    "ko": "회의 일정 좀 보내 줘.",
    "blank": "กำหนดการ",
+   "src": "made"
+  }
+ ],
+ "w|กำหนดเวลา": [
+  {
+   "text": "กิตติส่งต้นฉบับทันกำหนดเวลาเพียงไม่กี่นาที",
+   "en": "Kitti submitted his copy just a few minutes before the deadline.",
+   "ko": "끼띠는 마감 몇 분 전에 겨우 원고를 넘겼어요.",
+   "blank": "กำหนดเวลา",
+   "src": "made"
+  },
+  {
+   "text": "ทีมขอเลื่อนกำหนดเวลาส่งงานออกไปอีกสามวัน",
+   "en": "The team asked to push the deadline back by three more days.",
+   "ko": "팀은 마감 기한을 사흘 더 미뤄 달라고 요청했어요.",
+   "blank": "กำหนดเวลา",
    "src": "made"
   }
  ],
@@ -8027,6 +8155,22 @@
    "src": "made"
   }
  ],
+ "w|ควบคู่": [
+  {
+   "text": "กิตติทำข่าวออนไลน์ควบคู่กับเขียนลงหนังสือพิมพ์",
+   "en": "Kitti covers online news alongside writing for the newspaper.",
+   "ko": "끼띠는 신문 기사를 쓰면서 온라인 뉴스도 함께 맡고 있어요.",
+   "blank": "ควบคู่",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเรียนปริญญาโทควบคู่กับทำงานที่สตาร์ตอัป",
+   "en": "Wanna is studying for a master's degree alongside working at the startup.",
+   "ko": "완나는 스타트업에서 일하면서 석사 과정도 함께 하고 있어요.",
+   "blank": "ควบคู่",
+   "src": "made"
+  }
+ ],
  "w|ควร": [
   {
    "text": "ควรพักบ้าง",
@@ -8233,6 +8377,22 @@
    "en": "This idea is awesome.",
    "ko": "이 생각 진짜 멋져.",
    "blank": "ความคิด"
+  }
+ ],
+ "w|ความคิดสร้างสรรค์": [
+  {
+   "text": "ทีมกราฟิกใช้ความคิดสร้างสรรค์ทำแผนที่น้ำท่วมให้อ่านง่าย",
+   "en": "The graphics team used creativity to make the flood map easy to read.",
+   "ko": "그래픽팀은 창의력을 발휘해 홍수 지도를 알아보기 쉽게 만들었어요.",
+   "blank": "ความคิดสร้างสรรค์",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทให้วันศุกร์บ่ายเป็นเวลาปล่อยความคิดสร้างสรรค์ทำโปรเจกต์ส่วนตัว",
+   "en": "The company gives Friday afternoons as time to unleash creativity on personal projects.",
+   "ko": "회사는 금요일 오후를 창의력을 발휘해 개인 프로젝트를 하는 시간으로 줘요.",
+   "blank": "ความคิดสร้างสรรค์",
+   "src": "made"
   }
  ],
  "w|ความคิดเห็น": [
@@ -8498,6 +8658,22 @@
    "en": "The humidity is very high today.",
    "ko": "오늘은 습도가 아주 높아.",
    "blank": "ความชื้น",
+   "src": "made"
+  }
+ ],
+ "w|ความเชี่ยวชาญ": [
+  {
+   "text": "กิตติมีความเชี่ยวชาญด้านข่าวพลังงานมากกว่าสิบปี",
+   "en": "Kitti has over ten years of expertise in energy news.",
+   "ko": "끼띠는 에너지 뉴스 분야에서 십 년 넘게 전문성을 쌓았어요.",
+   "blank": "ความเชี่ยวชาญ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณามีความเชี่ยวชาญเรื่องความปลอดภัยของข้อมูล",
+   "en": "Wanna has expertise in data security.",
+   "ko": "완나는 데이터 보안에 전문성이 있어요.",
+   "blank": "ความเชี่ยวชาญ",
    "src": "made"
   }
  ],
@@ -12185,6 +12361,22 @@
    "src": "made"
   }
  ],
+ "w|ใครก็ตาม": [
+  {
+   "text": "บรรณาธิการบอกว่าใครก็ตามที่ได้ข่าวด่วนให้แจ้งเข้ากลุ่มทันที",
+   "en": "The editor said whoever gets breaking news should post it to the group right away.",
+   "ko": "편집장은 누구든 속보를 잡으면 바로 단체방에 올리라고 했어요.",
+   "blank": "ใครก็ตาม",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าบอกว่าใครก็ตามที่เจอบั๊กร้ายแรงให้แจ้งวรรณาทันที",
+   "en": "The boss said anyone who finds a serious bug should tell Wanna right away.",
+   "ko": "팀장은 심각한 버그를 발견하면 누구든 바로 완나에게 알리라고 했어요.",
+   "blank": "ใครก็ตาม",
+   "src": "made"
+  }
+ ],
  "w|ใครบางคน": [
   {
    "text": "มีใครบางคนโทรมา",
@@ -13585,6 +13777,22 @@
    "en": "Hire a worker to fix the house.",
    "ko": "집 고칠 사람을 고용해.",
    "blank": "จ้าง"
+  }
+ ],
+ "w|จ้างงาน": [
+  {
+   "text": "โรงงานแห่งใหม่จะจ้างงานคนในพื้นที่กว่าพันคนตามข่าวของกิตติ",
+   "en": "According to Kitti's report, the new factory will employ over a thousand local people.",
+   "ko": "끼띠의 기사에 따르면 새 공장은 지역 주민 천여 명을 고용할 거예요.",
+   "blank": "จ้างงาน",
+   "src": "made"
+  },
+  {
+   "text": "สตาร์ตอัปของวรรณาวางแผนจะจ้างงานนักพัฒนาเพิ่มในปีหน้า",
+   "en": "Wanna's startup plans to hire more developers next year.",
+   "ko": "완나의 스타트업은 내년에 개발자를 더 고용할 계획이에요.",
+   "blank": "จ้างงาน",
+   "src": "made"
   }
  ],
  "w|จาน": [
@@ -16641,6 +16849,22 @@
    "blank": "ชื่อ"
   }
  ],
+ "w|ชื่อดัง": [
+  {
+   "text": "กิตติได้สัมภาษณ์นักเขียนชื่อดังเรื่องหนังสือเล่มใหม่",
+   "en": "Kitti got to interview a famous writer about her new book.",
+   "ko": "끼띠는 유명 작가를 만나 새 책에 대해 인터뷰했어요.",
+   "blank": "ชื่อดัง",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทเทคโนโลยีชื่อดังติดต่อขอซื้อสตาร์ตอัปของวรรณา",
+   "en": "A famous tech company reached out to buy Wanna's startup.",
+   "ko": "유명한 기술 기업이 완나의 스타트업을 인수하고 싶다고 연락해 왔어요.",
+   "blank": "ชื่อดัง",
+   "src": "made"
+  }
+ ],
  "w|ชื่อเสียง": [
   {
    "text": "โรงเรียนของกิตติมีชื่อเสียงเรื่องวงดนตรีไทย",
@@ -18938,6 +19162,22 @@
    "en": "Malee's daughter's fever has gone down after two days of rest.",
    "ko": "말리 딸의 열은 이틀 쉬고 나서 나아졌어요.",
    "blank": "ดีขึ้น",
+   "src": "made"
+  }
+ ],
+ "w|ดีงาม": [
+  {
+   "text": "กองบรรณาธิการอยากเล่าเรื่องดีงามของคนธรรมดาให้มากขึ้น",
+   "en": "The editorial team wants to tell more good stories about ordinary people.",
+   "ko": "편집부는 평범한 사람들의 훈훈한 이야기를 더 많이 전하고 싶어 해요.",
+   "blank": "ดีงาม",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ก่อตั้งอยากสร้างวัฒนธรรมองค์กรที่ดีงามตั้งแต่วันแรก",
+   "en": "The founder wants to build a good company culture from day one.",
+   "ko": "창업자는 첫날부터 좋은 조직 문화를 만들고 싶어 해요.",
+   "blank": "ดีงาม",
    "src": "made"
   }
  ],
@@ -23029,6 +23269,22 @@
    "blank": "ไต"
   }
  ],
+ "w|ไตรมาส": [
+  {
+   "text": "กิตติสรุปตัวเลขเศรษฐกิจไตรมาสล่าสุดลงหน้าหนึ่ง",
+   "en": "Kitti summarized the latest quarter's economic figures for the front page.",
+   "ko": "끼띠는 최근 분기 경제 수치를 정리해 1면에 실었어요.",
+   "blank": "ไตรมาส",
+   "src": "made"
+  },
+  {
+   "text": "ทีมตั้งเป้าว่าไตรมาสหน้าจะมีผู้ใช้เพิ่มเป็นสองเท่า",
+   "en": "The team aims to double its users next quarter.",
+   "ko": "팀은 다음 분기에 사용자를 두 배로 늘리는 걸 목표로 해요.",
+   "blank": "ไตรมาส",
+   "src": "made"
+  }
+ ],
  "w|ไต่สวน": [
   {
    "text": "ตำรวจมาไต่สวนเพื่อนบ้านทีละคนหลังมีรถหายในซอย",
@@ -25331,6 +25587,22 @@
    "blank": "ทำงาน"
   }
  ],
+ "w|ทำงานหนัก": [
+  {
+   "text": "ช่วงน้ำท่วมกิตติทำงานหนักจนแทบไม่ได้กลับบ้าน",
+   "en": "During the floods Kitti worked so hard he barely went home.",
+   "ko": "홍수 기간에 끼띠는 집에도 거의 못 갈 만큼 고되게 일했어요.",
+   "blank": "ทำงานหนัก",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาทำงานหนักทั้งเดือนเพื่อปล่อยแอปเวอร์ชันใหม่",
+   "en": "Wanna worked hard all month to release the new version of the app.",
+   "ko": "완나는 앱 새 버전을 내려고 한 달 내내 열심히 일했어요.",
+   "blank": "ทำงานหนัก",
+   "src": "made"
+  }
+ ],
  "w|ทำใจ": [
   {
    "text": "ฉันต้องทำใจกับข่าวนี้",
@@ -25467,6 +25739,22 @@
    "blank": "ทำพลาด"
   }
  ],
+ "w|ทำมาหากิน": [
+  {
+   "text": "กิตติเขียนสารคดีชีวิตแม่ค้าที่ทำมาหากินริมทางรถไฟ",
+   "en": "Kitti wrote a feature on the life of a vendor who makes a living beside the railway.",
+   "ko": "끼띠는 철길 옆에서 생계를 꾸리는 상인의 삶을 다큐 기사로 썼어요.",
+   "blank": "ทำมาหากิน",
+   "src": "made"
+  },
+  {
+   "text": "แอปของวรรณาช่วยให้แม่ค้าออนไลน์ทำมาหากินได้ง่ายขึ้น",
+   "en": "Wanna's app helps online vendors make a living more easily.",
+   "ko": "완나의 앱은 온라인 상인들이 더 쉽게 생계를 꾸리도록 도와요.",
+   "blank": "ทำมาหากิน",
+   "src": "made"
+  }
+ ],
  "w|ทำไม": [
   {
    "text": "ทำไมไม่มา",
@@ -25507,6 +25795,22 @@
    "en": "The fire destroyed the whole house.",
    "ko": "불이 집 전체를 망가뜨렸어.",
    "blank": "ทำลาย"
+  }
+ ],
+ "w|ทำสำเร็จ": [
+  {
+   "text": "กิตติทำสำเร็จแล้วกับการสัมภาษณ์นายกเทศมนตรีที่ไม่ค่อยให้ข่าว",
+   "en": "Kitti succeeded in interviewing the mayor who rarely talks to the press.",
+   "ko": "끼띠는 좀처럼 인터뷰를 안 하는 시장과의 인터뷰를 해냈어요.",
+   "blank": "ทำสำเร็จ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาทำสำเร็จในการย้ายระบบทั้งหมดขึ้นคลาวด์ภายในคืนเดียว",
+   "en": "Wanna succeeded in moving the entire system to the cloud in a single night.",
+   "ko": "완나는 하룻밤 만에 시스템 전체를 클라우드로 옮기는 데 성공했어요.",
+   "blank": "ทำสำเร็จ",
+   "src": "made"
   }
  ],
  "w|ทำหน้าที่": [
@@ -26843,6 +27147,22 @@
    "blank": "แท็กซี่"
   }
  ],
+ "w|แทง": [
+  {
+   "text": "กิตติเขียนข่าวคดีชายถูกแทงที่ป้ายรถเมล์โดยไม่ลงรายละเอียดรุนแรง",
+   "en": "Kitti wrote a story about a man stabbed at a bus stop without graphic details.",
+   "ko": "끼띠는 버스 정류장에서 남자가 칼에 찔린 사건을 잔인한 묘사 없이 기사로 썼어요.",
+   "blank": "แทง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเผลอเอาดินสอแทงแขนตัวเองตอนรีบเขียนบนไวต์บอร์ด",
+   "en": "Wanna accidentally jabbed her own arm with a pencil while rushing to write on the whiteboard.",
+   "ko": "완나는 화이트보드에 급히 쓰다가 연필로 자기 팔을 찔렀어요.",
+   "blank": "แทง",
+   "src": "made"
+  }
+ ],
  "w|แท่ง": [
   {
    "text": "สมชายหักชอล์กเป็นแท่งเล็กๆ แจกให้เด็กวาดรูปบนพื้น",
@@ -27927,6 +28247,22 @@
    "blank": "นักเรียน"
   }
  ],
+ "w|นักลงทุน": [
+  {
+   "text": "กิตติโทรสัมภาษณ์นักลงทุนรายย่อยเรื่องราคาหุ้นที่ร่วงลง",
+   "en": "Kitti phoned small investors for interviews about the falling share prices.",
+   "ko": "끼띠는 주가 하락에 대해 소액 투자자들과 전화 인터뷰를 했어요.",
+   "blank": "นักลงทุน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเตรียมสไลด์นำเสนอแอปให้นักลงทุนดูสัปดาห์หน้า",
+   "en": "Wanna is preparing slides to present the app to investors next week.",
+   "ko": "완나는 다음 주 투자자들에게 앱을 소개할 슬라이드를 준비하고 있어요.",
+   "blank": "นักลงทุน",
+   "src": "made"
+  }
+ ],
  "w|นักวิจัย": [
   {
    "text": "ก่อนมาที่นี่ สมชายเป็นนักวิจัยในห้องแล็บของมหาวิทยาลัย",
@@ -28321,6 +28657,22 @@
    "en": "It will probably rain tomorrow.",
    "ko": "내일은 비가 올 것 같아.",
    "blank": "น่าจะ"
+  }
+ ],
+ "w|น่าจะเป็น": [
+  {
+   "text": "บรรณาธิการบอกกิตติว่าสาเหตุที่น่าจะเป็นของไฟไหม้คือไฟฟ้าลัดวงจร",
+   "en": "The editor told Kitti that the likely cause of the fire was a short circuit.",
+   "ko": "편집장은 끼띠에게 화재의 유력한 원인이 누전이라고 말했어요.",
+   "blank": "น่าจะเป็น",
+   "src": "made"
+  },
+  {
+   "text": "ทีมคิดว่าสาเหตุที่น่าจะเป็นของแอปล่มคือเซิร์ฟเวอร์รับคนไม่ไหว",
+   "en": "The team thinks the likely cause of the app crash is that the server couldn't handle the users.",
+   "ko": "팀은 앱이 멈춘 유력한 원인이 서버 과부하라고 봐요.",
+   "blank": "น่าจะเป็น",
+   "src": "made"
   }
  ],
  "w|น่าเชื่อ": [
@@ -30090,6 +30442,22 @@
    "en": "He was negligent in his duties.",
    "ko": "그는 자기 직무를 소홀히 했어.",
    "blank": "บกพร่อง",
+   "src": "made"
+  }
+ ],
+ "w|บ่งบอก": [
+  {
+   "text": "ตัวเลขยอดผู้อ่านบ่งบอกว่าคนสนใจข่าวสิ่งแวดล้อมมากขึ้น",
+   "en": "The readership numbers indicate that people are more interested in environmental news.",
+   "ko": "독자 수치는 사람들이 환경 뉴스에 더 관심을 갖는다는 걸 보여 줘요.",
+   "blank": "บ่งบอก",
+   "src": "made"
+  },
+  {
+   "text": "ยอดดาวน์โหลดที่พุ่งขึ้นบ่งบอกว่าผู้ใช้ชอบฟีเจอร์ใหม่",
+   "en": "The surge in downloads shows that users like the new feature.",
+   "ko": "급증한 다운로드 수는 사용자들이 새 기능을 좋아한다는 걸 말해 줘요.",
+   "blank": "บ่งบอก",
    "src": "made"
   }
  ],
@@ -32363,6 +32731,22 @@
    "blank": "ประกาศ"
   }
  ],
+ "w|ประจักษ์": [
+  {
+   "text": "ผลงานข่าวสืบสวนของกิตติเป็นที่ประจักษ์แก่คนทั้งประเทศ",
+   "en": "Kitti's investigative reporting has become evident to the whole country.",
+   "ko": "끼띠의 탐사 보도는 온 나라에 널리 알려졌어요.",
+   "blank": "ประจักษ์",
+   "src": "made"
+  },
+  {
+   "text": "ความตั้งใจของวรรณาประจักษ์ชัดเมื่อแอปได้รางวัล",
+   "en": "Wanna's dedication became plainly evident when the app won an award.",
+   "ko": "앱이 상을 받자 완나의 열정이 분명히 드러났어요.",
+   "blank": "ประจักษ์",
+   "src": "made"
+  }
+ ],
  "w|ประจำ": [
   {
    "text": "เธอไปยิมเป็นประจำ",
@@ -32390,6 +32774,22 @@
    "en": "Fon carries painkillers in case her period comes during the trip.",
    "ko": "폰은 여행 중에 생리를 할까 봐 진통제를 챙겨요.",
    "blank": "ประจำเดือน",
+   "src": "made"
+  }
+ ],
+ "w|ประจำตัว": [
+  {
+   "text": "กล้องตัวเก่าเป็นของประจำตัวกิตติมาตั้งแต่เริ่มเป็นนักข่าว",
+   "en": "The old camera has been Kitti's personal item since he became a reporter.",
+   "ko": "낡은 카메라는 끼띠가 기자가 된 뒤로 늘 지니고 다니는 물건이에요.",
+   "blank": "ประจำตัว",
+   "src": "made"
+  },
+  {
+   "text": "แก้วกาแฟลายแมวเป็นของประจำตัววรรณาที่วางบนโต๊ะทุกวัน",
+   "en": "The cat-pattern coffee mug is Wanna's signature item that sits on her desk every day.",
+   "ko": "고양이 무늬 커피잔은 매일 완나의 책상 위에 있는 그녀의 애장품이에요.",
+   "blank": "ประจำตัว",
    "src": "made"
   }
  ],
@@ -32887,6 +33287,22 @@
    "en": "His background is very interesting.",
    "ko": "그의 이력이 아주 흥미로워.",
    "blank": "ประวัติ"
+  }
+ ],
+ "w|ประวัติย่อ": [
+  {
+   "text": "นักศึกษาฝึกงานส่งประวัติย่อมาให้กิตติช่วยดู",
+   "en": "An intern sent her résumé to Kitti for him to look over.",
+   "ko": "인턴이 끼띠에게 이력서를 봐 달라고 보냈어요.",
+   "blank": "ประวัติย่อ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาอ่านประวัติย่อของผู้สมัครกว่าห้าสิบฉบับในวันเดียว",
+   "en": "Wanna read more than fifty applicants' résumés in one day.",
+   "ko": "완나는 하루에 지원자 이력서를 쉰 장 넘게 읽었어요.",
+   "blank": "ประวัติย่อ",
+   "src": "made"
   }
  ],
  "w|ประวัติศาสตร์": [
@@ -35185,6 +35601,38 @@
    "src": "made"
   }
  ],
+ "w|ผลตอบแทน": [
+  {
+   "text": "กิตติอธิบายในบทความว่ากองทุนนี้ให้ผลตอบแทนต่ำกว่าเงินเฟ้อ",
+   "en": "Kitti explained in his article that this fund returns less than inflation.",
+   "ko": "끼띠는 기사에서 이 펀드의 수익률이 물가 상승률보다 낮다고 설명했어요.",
+   "blank": "ผลตอบแทน",
+   "src": "made"
+  },
+  {
+   "text": "นักลงทุนถามวรรณาว่าจะได้ผลตอบแทนเมื่อไหร่",
+   "en": "The investor asked Wanna when they would see a return.",
+   "ko": "투자자는 완나에게 언제 수익이 날지 물었어요.",
+   "blank": "ผลตอบแทน",
+   "src": "made"
+  }
+ ],
+ "w|ผลประกอบการ": [
+  {
+   "text": "กิตติเขียนข่าวผลประกอบการของสายการบินที่ขาดทุนหนัก",
+   "en": "Kitti wrote a story on the business results of an airline that lost heavily.",
+   "ko": "끼띠는 큰 적자를 낸 항공사의 실적 기사를 썼어요.",
+   "blank": "ผลประกอบการ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ก่อตั้งแชร์ผลประกอบการปีแรกให้พนักงานทุกคนดู",
+   "en": "The founder shared the first year's business results with all employees.",
+   "ko": "창업자는 첫해 실적을 모든 직원에게 공유했어요.",
+   "blank": "ผลประกอบการ",
+   "src": "made"
+  }
+ ],
  "w|ผลประโยชน์": [
   {
    "text": "เอกขุดคุ้ยว่าใครได้ผลประโยชน์จากโครงการสร้างถนนสายใหม่",
@@ -37084,6 +37532,22 @@
    "en": "Chan's aunt is an opposition politician and came to see the class exhibition.",
    "ko": "짠의 이모는 야당 정치인인데 교실 전시회를 보러 왔어요.",
    "blank": "ฝ่ายค้าน",
+   "src": "made"
+  }
+ ],
+ "w|ฝ่ายบุคคล": [
+  {
+   "text": "ฝ่ายบุคคลของสำนักข่าวประกาศรับช่างภาพเพิ่มสองคน",
+   "en": "The news agency's HR department announced it is hiring two more photographers.",
+   "ko": "언론사 인사부는 사진기자 두 명을 더 뽑는다고 공고했어요.",
+   "blank": "ฝ่ายบุคคล",
+   "src": "made"
+  },
+  {
+   "text": "ตอนนี้ยังไม่มีฝ่ายบุคคล วรรณาจึงต้องสัมภาษณ์คนเองทั้งหมด",
+   "en": "There's no HR department yet, so Wanna has to interview everyone herself.",
+   "ko": "아직 인사부가 없어서 완나가 면접을 전부 직접 봐야 해요.",
+   "blank": "ฝ่ายบุคคล",
    "src": "made"
   }
  ],
@@ -43943,6 +44407,22 @@
    "src": "made"
   }
  ],
+ "w|ยึดถือ": [
+  {
+   "text": "กิตติยึดถือหลักว่าข่าวต้องถูกต้องก่อนจะเร็ว",
+   "en": "Kitti holds to the principle that news must be accurate before it is fast.",
+   "ko": "끼띠는 뉴스는 빠르기 전에 정확해야 한다는 원칙을 지켜요.",
+   "blank": "ยึดถือ",
+   "src": "made"
+  },
+  {
+   "text": "ทีมยึดถือว่าผู้ใช้ต้องมาก่อนเสมอ",
+   "en": "The team holds that users must always come first.",
+   "ko": "팀은 사용자가 늘 먼저라는 원칙을 지켜요.",
+   "blank": "ยึดถือ",
+   "src": "made"
+  }
+ ],
  "w|ยืด": [
   {
    "text": "ผ้ายืดได้เล็กน้อย",
@@ -45081,6 +45561,22 @@
    "blank": "รอบ"
   }
  ],
+ "w|รอบคอบ": [
+  {
+   "text": "กิตติเป็นนักข่าวที่รอบคอบ ตรวจแหล่งข่าวทุกครั้งก่อนเขียน",
+   "en": "Kitti is a careful reporter who checks his sources every time before writing.",
+   "ko": "끼띠는 기사를 쓰기 전에 매번 취재원을 확인하는 신중한 기자예요.",
+   "blank": "รอบคอบ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเป็นโปรแกรมเมอร์ที่รอบคอบ เขียนเทสต์ก่อนส่งโค้ดเสมอ",
+   "en": "Wanna is a careful programmer who always writes tests before submitting code.",
+   "ko": "완나는 코드를 올리기 전에 늘 테스트를 짜는 꼼꼼한 프로그래머예요.",
+   "blank": "รอบคอบ",
+   "src": "made"
+  }
+ ],
  "w|รอย": [
   {
    "text": "ช่างภาพถ่ายรอยล้อรถบนถนนให้เอกใช้ประกอบข่าว",
@@ -45499,6 +45995,22 @@
    "en": "Treatment will take several months.",
    "ko": "몇 달 동안 치료해야 해.",
    "blank": "รักษา"
+  }
+ ],
+ "w|รักษาการ": [
+  {
+   "text": "กิตติรายงานว่ารองผู้ว่าฯ รักษาการแทนผู้ว่าฯ ที่ลาป่วย",
+   "en": "Kitti reported that the deputy governor is acting on behalf of the governor who is on sick leave.",
+   "ko": "끼띠는 부지사가 병가를 낸 지사를 대행한다고 보도했어요.",
+   "blank": "รักษาการ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณารักษาการหัวหน้าทีมระหว่างที่หัวหน้าลาคลอด",
+   "en": "Wanna is acting team lead while the lead is on maternity leave.",
+   "ko": "완나는 팀장이 출산 휴가 중인 동안 팀장 대행을 맡고 있어요.",
+   "blank": "รักษาการ",
+   "src": "made"
   }
  ],
  "w|รัง": [
@@ -48428,6 +48940,22 @@
    "en": "Pranee arranged the performance order so the youngest children go on stage first.",
    "ko": "쁘라니는 어린아이들이 먼저 무대에 오르도록 공연 순서를 정했어요.",
    "blank": "ลำดับ",
+   "src": "made"
+  }
+ ],
+ "w|ลำดับความสำคัญ": [
+  {
+   "text": "ในวันข่าวเยอะ บรรณาธิการต้องจัดลำดับความสำคัญของข่าวหน้าหนึ่ง",
+   "en": "On busy news days, the editor has to set the priority of front-page stories.",
+   "ko": "뉴스가 많은 날 편집장은 1면 기사의 우선순위를 정해야 해요.",
+   "blank": "ลำดับความสำคัญ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเขียนลำดับความสำคัญของงานไว้บนกระดานทุกเช้าวันจันทร์",
+   "en": "Wanna writes the task priorities on the board every Monday morning.",
+   "ko": "완나는 매주 월요일 아침 칠판에 업무 우선순위를 적어 둬요.",
+   "blank": "ลำดับความสำคัญ",
    "src": "made"
   }
  ],
@@ -54489,6 +55017,22 @@
    "blank": "สัปดาห์"
   }
  ],
+ "w|สัมปทาน": [
+  {
+   "text": "กิตติเจาะข่าวสัมปทานเหมืองแร่ที่ชาวบ้านคัดค้าน",
+   "en": "Kitti dug into the story of the mining concession that villagers oppose.",
+   "ko": "끼띠는 주민들이 반대하는 광산 채굴권 기사를 파고들었어요.",
+   "blank": "สัมปทาน",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทยื่นขอสัมปทานทำแอปเรียกรถให้สนามบิน",
+   "en": "The company applied for a concession to run a ride-hailing app for the airport.",
+   "ko": "회사는 공항 차량 호출 앱 운영권을 신청했어요.",
+   "blank": "สัมปทาน",
+   "src": "made"
+  }
+ ],
  "w|สัมผัส": [
   {
    "text": "สมชายเปิดหน้าต่างให้ได้สัมผัสลมเย็นยามเช้า",
@@ -54682,6 +55226,22 @@
    "en": "A yellow triangular sign warns that the floor here is slippery.",
    "ko": "노란 삼각형 표지판이 여기 바닥이 미끄럽다고 경고해요.",
    "blank": "สามเหลี่ยม",
+   "src": "made"
+  }
+ ],
+ "w|สามัคคี": [
+  {
+   "text": "คืนเลือกตั้งทีมข่าวสามัคคีกันทำงานจนเช้า",
+   "en": "On election night the news team worked together in unity until morning.",
+   "ko": "선거 날 밤 보도팀은 똘똘 뭉쳐 아침까지 일했어요.",
+   "blank": "สามัคคี",
+   "src": "made"
+  },
+  {
+   "text": "ทีมเล็กๆ ของวรรณาสามัคคีกันดีแม้งานจะหนัก",
+   "en": "Wanna's small team sticks together well even though the work is hard.",
+   "ko": "완나의 작은 팀은 일이 힘들어도 잘 뭉쳐요.",
+   "blank": "สามัคคี",
    "src": "made"
   }
  ],
@@ -55256,6 +55816,22 @@
    "en": "Piya applied for a loan to open a second branch.",
    "ko": "삐야는 두 번째 지점을 열려고 대출을 신청했어요.",
    "blank": "สินเชื่อ",
+   "src": "made"
+  }
+ ],
+ "w|สินทรัพย์": [
+  {
+   "text": "ข่าวของกิตติเปิดเผยว่านักการเมืองบางคนไม่แจ้งสินทรัพย์ครบ",
+   "en": "Kitti's story revealed that some politicians didn't fully declare their assets.",
+   "ko": "끼띠의 기사는 일부 정치인이 자산을 다 신고하지 않았다고 밝혔어요.",
+   "blank": "สินทรัพย์",
+   "src": "made"
+  },
+  {
+   "text": "ซอร์สโค้ดคือสินทรัพย์ที่มีค่าที่สุดของบริษัทเล็กๆ นี้",
+   "en": "The source code is this small company's most valuable asset.",
+   "ko": "소스 코드는 이 작은 회사의 가장 값진 자산이에요.",
+   "blank": "สินทรัพย์",
    "src": "made"
   }
  ],
@@ -58217,6 +58793,22 @@
    "blank": "หลักฐาน"
   }
  ],
+ "w|หลักทรัพย์": [
+  {
+   "text": "ตลาดหลักทรัพย์ปิดลบติดต่อกันหลายวันตามที่กิตติรายงาน",
+   "en": "The stock exchange closed lower several days in a row, as Kitti reported.",
+   "ko": "끼띠가 보도한 대로 증권 시장은 며칠째 하락 마감했어요.",
+   "blank": "หลักทรัพย์",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ก่อตั้งฝันว่าสักวันบริษัทจะได้เข้าตลาดหลักทรัพย์",
+   "en": "The founder dreams the company will someday list on the stock exchange.",
+   "ko": "창업자는 언젠가 회사가 증권 시장에 상장되는 꿈을 꿔요.",
+   "blank": "หลักทรัพย์",
+   "src": "made"
+  }
+ ],
  "w|หลักประกัน": [
   {
    "text": "ธนาคารขอหลักประกันสำหรับสินเชื่อ",
@@ -60735,6 +61327,22 @@
    "blank": "อดีต"
   }
  ],
+ "w|อธิการบดี": [
+  {
+   "text": "กิตติไปสัมภาษณ์อธิการบดีเรื่องค่าเทอมที่ขึ้นใหม่",
+   "en": "Kitti went to interview the university president about the new tuition increase.",
+   "ko": "끼띠는 등록금 인상에 대해 총장을 인터뷰하러 갔어요.",
+   "blank": "อธิการบดี",
+   "src": "made"
+  },
+  {
+   "text": "อธิการบดีของมหาวิทยาลัยเชิญวรรณาไปเล่าเรื่องการตั้งบริษัท",
+   "en": "The university president invited Wanna to talk about starting a company.",
+   "ko": "대학 총장이 완나를 초청해 창업 이야기를 들려 달라고 했어요.",
+   "blank": "อธิการบดี",
+   "src": "made"
+  }
+ ],
  "w|อธิบาย": [
   {
    "text": "ช่วยอธิบายอีกที",
@@ -60775,6 +61383,22 @@
    "en": "The future is still a long way off.",
    "ko": "미래는 아직 멀었어.",
    "blank": "อนาคต"
+  }
+ ],
+ "w|อนึ่ง": [
+  {
+   "text": "บทบรรณาธิการปิดท้ายว่า อนึ่ง ทางสำนักข่าวขอขอบคุณผู้อ่านทุกท่าน",
+   "en": "The editorial closed by saying, furthermore, the news agency thanks all readers.",
+   "ko": "사설은 끝으로 아울러 본사는 모든 독자께 감사드린다고 맺었어요.",
+   "blank": "อนึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "อีเมลแจ้งพนักงานลงท้ายว่า อนึ่ง ออฟฟิศจะปิดวันศุกร์นี้",
+   "en": "The staff email ended with, in addition, the office will be closed this Friday.",
+   "ko": "직원 공지 메일은 끝에 아울러 이번 금요일은 사무실이 쉰다고 덧붙였어요.",
+   "blank": "อนึ่ง",
+   "src": "made"
   }
  ],
  "w|อนุญาต": [
@@ -62423,6 +63047,22 @@
    "en": "The rural district has very good air.",
    "ko": "시골 군은 공기가 아주 좋아.",
    "blank": "อำเภอ"
+  }
+ ],
+ "w|อิง": [
+  {
+   "text": "ข่าวนี้อิงข้อมูลจากรายงานของกรมอุตุนิยมวิทยา",
+   "en": "This story is based on data from the meteorological department's report.",
+   "ko": "이 기사는 기상청 보고서의 자료를 근거로 했어요.",
+   "blank": "อิง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาออกแบบหน้าจอโดยอิงความเห็นของผู้ใช้จริง",
+   "en": "Wanna designed the screens based on feedback from real users.",
+   "ko": "완나는 실제 사용자 의견을 바탕으로 화면을 설계했어요.",
+   "blank": "อิง",
+   "src": "made"
   }
  ],
  "w|อิจฉา": [
