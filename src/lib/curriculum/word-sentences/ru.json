@@ -2205,6 +2205,22 @@
    "blank": "был"
   }
  ],
+ "w|бюджет": [
+  {
+   "text": "В этом году Павлу урезали бюджет на рекламу.",
+   "en": "This year Pavel's advertising budget was cut.",
+   "ko": "올해 파벨의 광고 예산이 깎였어요.",
+   "blank": "бюджет",
+   "src": "made"
+  },
+  {
+   "text": "Елена старается вести семейный бюджет в таблице.",
+   "en": "Elena tries to keep the family budget in a spreadsheet.",
+   "ko": "엘레나는 가계부를 표로 관리하려고 해요.",
+   "blank": "бюджет",
+   "src": "made"
+  }
+ ],
  "w|бюро": [
   {
    "text": "Я работаю в справочном бюро аэропорта.",
@@ -4609,6 +4625,22 @@
    "src": "tatoeba:2821725/marafon en:1326216/bmaynard87"
   }
  ],
+ "w|впрямь": [
+  {
+   "text": "Новый стажёр Павла и впрямь оказался очень толковым.",
+   "en": "Pavel's new intern really did turn out to be very capable.",
+   "ko": "파벨의 새 인턴은 정말로 아주 똑똑한 사람이었어요.",
+   "blank": "впрямь",
+   "src": "made"
+  },
+  {
+   "text": "Погода и впрямь была отличная, и Елена пошла гулять.",
+   "en": "The weather really was great, and Elena went for a walk.",
+   "ko": "날씨가 정말 좋아서 엘레나는 산책하러 나갔어요.",
+   "blank": "впрямь",
+   "src": "made"
+  }
+ ],
  "w|впустую": [
   {
    "text": "Сергей полчаса впустую искал зал с мамонтом, пока не спросил охранника.",
@@ -4989,6 +5021,22 @@
    "en": "Where do you usually meet?",
    "ko": "너희는 보통 어디서 만나?",
    "blank": "встречаетесь"
+  }
+ ],
+ "w|вступить": [
+  {
+   "text": "В новую должность Павел вступит со следующего месяца.",
+   "en": "Pavel will take up his new position next month.",
+   "ko": "파벨은 다음 달부터 새 직책을 맡아요.",
+   "blank": "вступит",
+   "src": "made"
+  },
+  {
+   "text": "Недавно Елена решила вступить в книжный клуб.",
+   "en": "Recently Elena decided to join a book club.",
+   "ko": "최근에 엘레나는 독서 모임에 들어가기로 했어요.",
+   "blank": "вступить",
+   "src": "made"
   }
  ],
  "w|всякий": [
@@ -8723,6 +8771,22 @@
    "src": "made"
   }
  ],
+ "w|дополнительный": [
+  {
+   "text": "За работу в выходные Павлу дали дополнительный выходной.",
+   "en": "Pavel was given an extra day off for working on the weekend.",
+   "ko": "주말에 일한 대가로 파벨은 추가 휴일을 받았어요.",
+   "blank": "дополнительный",
+   "src": "made"
+  },
+  {
+   "text": "На кассе Елене пришлось купить дополнительный пакет.",
+   "en": "At the checkout Elena had to buy an extra bag.",
+   "ko": "계산대에서 엘레나는 봉투를 하나 더 사야 했어요.",
+   "blank": "дополнительный",
+   "src": "made"
+  }
+ ],
  "w|допрос": [
   {
    "text": "Не устраивай мне допрос!",
@@ -8840,6 +8904,22 @@
    "en": "Who is supposed to get this apartment?",
    "ko": "이 아파트는 누구한테 가야 해요?",
    "blank": "достаться",
+   "src": "made"
+  }
+ ],
+ "w|достигнуть": [
+  {
+   "text": "За год отдел Павла сумел достигнуть отличных результатов.",
+   "en": "In a year Pavel's department managed to achieve excellent results.",
+   "ko": "일 년 만에 파벨의 부서는 훌륭한 성과를 냈어요.",
+   "blank": "достигнуть",
+   "src": "made"
+  },
+  {
+   "text": "Чтобы достигнуть своей цели, Елена каждое утро делает зарядку.",
+   "en": "To reach her goal, Elena does exercises every morning.",
+   "ko": "목표를 이루려고 엘레나는 매일 아침 체조를 해요.",
+   "blank": "достигнуть",
    "src": "made"
   }
  ],
@@ -10057,6 +10137,22 @@
    "src": "made"
   }
  ],
+ "w|завод": [
+  {
+   "text": "Павел часто ездит на завод, чтобы проверить качество продукции.",
+   "en": "Pavel often goes to the factory to check the quality of the products.",
+   "ko": "파벨은 제품 품질을 확인하러 공장에 자주 가요.",
+   "blank": "завод",
+   "src": "made"
+  },
+  {
+   "text": "Отец Елены всю жизнь проработал на заводе.",
+   "en": "Elena's father worked at a factory all his life.",
+   "ko": "엘레나의 아버지는 평생 공장에서 일했어요.",
+   "blank": "заводе",
+   "src": "made"
+  }
+ ],
  "w|завтра": [
   {
    "text": "Увидимся завтра.",
@@ -11101,6 +11197,22 @@
    "ko": "제 월급은 아주 적어요.",
    "blank": "зарплата",
    "src": "tatoeba:5530442/marafon en:5515389/Mar1L"
+  }
+ ],
+ "w|заседание": [
+  {
+   "text": "Павел опоздал на заседание совета директоров.",
+   "en": "Pavel was late for the board of directors meeting.",
+   "ko": "파벨은 이사회 회의에 늦었어요.",
+   "blank": "заседание",
+   "src": "made"
+  },
+  {
+   "text": "Пока Елена завтракала, по телевизору показывали заседание парламента.",
+   "en": "While Elena was having breakfast, a parliament session was on TV.",
+   "ko": "엘레나가 아침을 먹는 동안 텔레비전에서 국회 회의를 보여 줬어요.",
+   "blank": "заседание",
+   "src": "made"
   }
  ],
  "w|заслуживать": [
@@ -12343,6 +12455,22 @@
    "blank": "изменился"
   }
  ],
+ "w|изначально": [
+  {
+   "text": "Проект Павла изначально планировали закончить к весне.",
+   "en": "Pavel's project was originally planned to be finished by spring.",
+   "ko": "파벨의 프로젝트는 원래 봄까지 끝낼 계획이었어요.",
+   "blank": "изначально",
+   "src": "made"
+  },
+  {
+   "text": "Елена изначально хотела приготовить суп, но в итоге заказала пиццу.",
+   "en": "Elena originally wanted to make soup, but in the end she ordered pizza.",
+   "ko": "엘레나는 원래 수프를 끓이려 했지만 결국 피자를 시켰어요.",
+   "blank": "изначально",
+   "src": "made"
+  }
+ ],
  "w|изнутри": [
   {
    "text": "Изнутри мы все похожи.",
@@ -12372,6 +12500,38 @@
    "en": "On the old tiles in the bathroom Anna made out a picture of a lighthouse.",
    "ko": "안나는 욕실의 오래된 타일에서 등대 그림을 발견했어요.",
    "blank": "изображение",
+   "src": "made"
+  }
+ ],
+ "w|изучать": [
+  {
+   "text": "Павел целый день изучал отчёты конкурентов.",
+   "en": "Pavel spent the whole day studying competitors' reports.",
+   "ko": "파벨은 하루 종일 경쟁사 보고서를 살펴봤어요.",
+   "blank": "изучал",
+   "src": "made"
+  },
+  {
+   "text": "По вечерам Елена изучает испанский язык.",
+   "en": "In the evenings Elena studies Spanish.",
+   "ko": "엘레나는 저녁마다 스페인어를 공부해요.",
+   "blank": "изучает",
+   "src": "made"
+  }
+ ],
+ "w|изучить": [
+  {
+   "text": "Перед встречей Павлу нужно внимательно изучить договор.",
+   "en": "Before the meeting Pavel needs to study the contract carefully.",
+   "ko": "회의 전에 파벨은 계약서를 꼼꼼히 살펴봐야 해요.",
+   "blank": "изучить",
+   "src": "made"
+  },
+  {
+   "text": "В магазине Елена решила внимательно изучить состав печенья.",
+   "en": "In the shop Elena decided to read the cookies' ingredients carefully.",
+   "ko": "가게에서 엘레나는 과자 성분을 꼼꼼히 살펴보기로 했어요.",
+   "blank": "изучить",
    "src": "made"
   }
  ],
@@ -12521,6 +12681,22 @@
    "ko": "톰은 감독관이에요.",
    "blank": "инспектор",
    "src": "tatoeba:6821763/marafon en:6662354/CK"
+  }
+ ],
+ "w|институт": [
+  {
+   "text": "Павел пригласил на работу двух выпускников местного института.",
+   "en": "Pavel hired two graduates from the local institute.",
+   "ko": "파벨은 지역 대학 졸업생 두 명을 채용했어요.",
+   "blank": "института",
+   "src": "made"
+  },
+  {
+   "text": "По дороге домой Елена встретила подругу по институту.",
+   "en": "On the way home Elena ran into a friend from university.",
+   "ko": "집에 가는 길에 엘레나는 대학 동기를 만났어요.",
+   "blank": "институту",
+   "src": "made"
   }
  ],
  "w|инструкция": [
@@ -14065,6 +14241,22 @@
    "src": "tatoeba:10238238/marafon en:10725715/AlanF_US"
   }
  ],
+ "w|комиссия": [
+  {
+   "text": "Проект Павла будет рассматривать специальная комиссия.",
+   "en": "Pavel's project will be reviewed by a special committee.",
+   "ko": "파벨의 프로젝트는 특별 위원회가 심사할 거예요.",
+   "blank": "комиссия",
+   "src": "made"
+  },
+  {
+   "text": "Банк взял с Елены комиссию за перевод.",
+   "en": "The bank charged Elena a fee for the transfer.",
+   "ko": "은행이 엘레나에게 송금 수수료를 받았어요.",
+   "blank": "комиссию",
+   "src": "made"
+  }
+ ],
  "w|комитет": [
   {
    "text": "Комитет присутствует в полном составе.",
@@ -14565,6 +14757,22 @@
    "src": "tatoeba:12845287/marafon en:12506846/sundown"
   }
  ],
+ "w|корпорация": [
+  {
+   "text": "Павел работает в крупной международной корпорации.",
+   "en": "Pavel works for a large international corporation.",
+   "ko": "파벨은 큰 다국적 기업에서 일해요.",
+   "blank": "корпорации",
+   "src": "made"
+  },
+  {
+   "text": "Соседка Елены работает юристом в огромной корпорации.",
+   "en": "Elena's neighbor works as a lawyer at a huge corporation.",
+   "ko": "엘레나의 이웃은 거대 기업에서 변호사로 일해요.",
+   "blank": "корпорации",
+   "src": "made"
+  }
+ ],
  "w|корпус": [
   {
    "text": "Зал заседаний находится во втором корпусе здания.",
@@ -14858,6 +15066,22 @@
    "en": "The patient admitted to Tatiana that what worried him most was his loan.",
    "ko": "환자는 타티야나에게 대출이 가장 걱정이라고 털어놨어요.",
    "blank": "кредита",
+   "src": "made"
+  }
+ ],
+ "w|крепкий": [
+  {
+   "text": "Без крепкого кофе Павел не может начать рабочий день.",
+   "en": "Pavel can't start his working day without strong coffee.",
+   "ko": "파벨은 진한 커피 없이는 일과를 시작하지 못해요.",
+   "blank": "крепкого",
+   "src": "made"
+  },
+  {
+   "text": "Елена любит крепкий чай с лимоном.",
+   "en": "Elena likes strong tea with lemon.",
+   "ko": "엘레나는 레몬을 넣은 진한 차를 좋아해요.",
+   "blank": "крепкий",
    "src": "made"
   }
  ],
@@ -16913,6 +17137,22 @@
    "src": "made"
   }
  ],
+ "w|механизм": [
+  {
+   "text": "Павел долго объяснял клиентам механизм расчёта скидок.",
+   "en": "Pavel spent a long time explaining to clients how the discounts are calculated.",
+   "ko": "파벨은 고객들에게 할인 계산 방식을 오래 설명했어요.",
+   "blank": "механизм",
+   "src": "made"
+  },
+  {
+   "text": "У Елены остановились часы, потому что сломался механизм.",
+   "en": "Elena's watch stopped because the mechanism broke.",
+   "ko": "태엽 장치가 고장 나서 엘레나의 시계가 멈췄어요.",
+   "blank": "механизм",
+   "src": "made"
+  }
+ ],
  "w|меч": [
   {
    "text": "Этот меч тяжелее, чем я думала.",
@@ -17006,6 +17246,22 @@
    "en": "For a moment it seemed to Maria that they were back in the classroom.",
    "ko": "잠깐 동안 마리아는 다시 교실에 있는 것 같았어요.",
    "blank": "миг",
+   "src": "made"
+  }
+ ],
+ "w|микрофон": [
+  {
+   "text": "Перед выступлением Павел проверил, работает ли микрофон.",
+   "en": "Before his talk Pavel checked whether the microphone was working.",
+   "ko": "발표 전에 파벨은 마이크가 되는지 확인했어요.",
+   "blank": "микрофон",
+   "src": "made"
+  },
+  {
+   "text": "У Елены в телефоне сломался микрофон, и подруга её не слышала.",
+   "en": "The microphone on Elena's phone broke, and her friend couldn't hear her.",
+   "ko": "엘레나 휴대폰 마이크가 고장 나서 친구가 엘레나 말을 못 들었어요.",
+   "blank": "микрофон",
    "src": "made"
   }
  ],
@@ -18485,6 +18741,22 @@
    "src": "tatoeba:6630906/marafon en:6349451/CK"
   }
  ],
+ "w|налог": [
+  {
+   "text": "Бухгалтер объяснила Павлу, как правильно заплатить налог.",
+   "en": "The accountant explained to Pavel how to pay the tax correctly.",
+   "ko": "회계 담당자가 파벨에게 세금을 제대로 내는 법을 설명해 줬어요.",
+   "blank": "налог",
+   "src": "made"
+  },
+  {
+   "text": "Днём Елена заплатила налог на машину через приложение.",
+   "en": "In the afternoon Elena paid the car tax through an app.",
+   "ko": "낮에 엘레나는 앱으로 자동차세를 냈어요.",
+   "blank": "налог",
+   "src": "made"
+  }
+ ],
  "w|намерение": [
   {
    "text": "Иван честно рассказал классному руководителю о своём намерении поступать в медицинский.",
@@ -18881,6 +19153,22 @@
    "src": "tatoeba:7030101/marafon en:4014477/CK"
   }
  ],
+ "w|нарисовать": [
+  {
+   "text": "На доске Павел быстро нарисовал схему нового процесса.",
+   "en": "Pavel quickly drew a diagram of the new process on the board.",
+   "ko": "파벨은 화이트보드에 새 업무 과정을 빠르게 그렸어요.",
+   "blank": "нарисовал",
+   "src": "made"
+  },
+  {
+   "text": "Сын попросил Елену нарисовать ему динозавра.",
+   "en": "Her son asked Elena to draw him a dinosaur.",
+   "ko": "아들이 엘레나에게 공룡을 그려 달라고 했어요.",
+   "blank": "нарисовать",
+   "src": "made"
+  }
+ ],
  "w|наркотик": [
   {
    "text": "Алкоголь - это наркотик.",
@@ -19051,6 +19339,22 @@
    "ko": "인생을 즐기려고 노력 중이에요.",
    "blank": "наслаждаться",
    "src": "tatoeba:7726972/odexed en:7725805/CK"
+  }
+ ],
+ "w|настаивать": [
+  {
+   "text": "Павел настаивал, чтобы встречу перенесли на утро.",
+   "en": "Pavel insisted that the meeting be moved to the morning.",
+   "ko": "파벨은 회의를 아침으로 옮기자고 고집했어요.",
+   "blank": "настаивал",
+   "src": "made"
+  },
+  {
+   "text": "Мама Елены настаивает, чтобы дочь звонила ей каждый вечер.",
+   "en": "Elena's mother insists that her daughter call her every evening.",
+   "ko": "엘레나의 엄마는 딸에게 매일 저녁 전화하라고 고집해요.",
+   "blank": "настаивает",
+   "src": "made"
   }
  ],
  "w|настать": [
@@ -20777,6 +21081,22 @@
    "blank": "носи"
   }
  ],
+ "w|ноутбук": [
+  {
+   "text": "У Павла сломался ноутбук прямо перед презентацией.",
+   "en": "Pavel's laptop broke right before the presentation.",
+   "ko": "발표 바로 전에 파벨의 노트북이 고장 났어요.",
+   "blank": "ноутбук",
+   "src": "made"
+  },
+  {
+   "text": "После ужина Елена открыла ноутбук и посмотрела сериал.",
+   "en": "After dinner Elena opened her laptop and watched a series.",
+   "ko": "저녁을 먹고 엘레나는 노트북을 열어 드라마를 봤어요.",
+   "blank": "ноутбук",
+   "src": "made"
+  }
+ ],
  "w|ночной": [
   {
    "text": "Я твой самый ужасный ночной кошмар.",
@@ -22201,6 +22521,22 @@
    "src": "tatoeba:2056665/marafon en:256165/CK"
   }
  ],
+ "w|окончить": [
+  {
+   "text": "Павел окончил экономический факультет и сразу пришёл в эту фирму.",
+   "en": "Pavel graduated from the economics department and came straight to this firm.",
+   "ko": "파벨은 경제학과를 졸업하고 바로 이 회사에 들어왔어요.",
+   "blank": "окончил",
+   "src": "made"
+  },
+  {
+   "text": "Племянница Елены в этом году окончила школу.",
+   "en": "Elena's niece finished school this year.",
+   "ko": "엘레나의 조카는 올해 학교를 졸업했어요.",
+   "blank": "окончила",
+   "src": "made"
+  }
+ ],
  "w|округ": [
   {
    "text": "Этот округ беден природными ресурсами.",
@@ -23576,6 +23912,22 @@
    "en": "The students decided to celebrate Natalia's birthday with a little concert.",
    "ko": "학생들은 작은 연주회로 나탈리야의 생일을 축하하기로 했어요.",
    "blank": "отметить",
+   "src": "made"
+  }
+ ],
+ "w|отнести": [
+  {
+   "text": "Секретарь попросила Павла отнести документы в бухгалтерию.",
+   "en": "The secretary asked Pavel to take the documents to the accounting department.",
+   "ko": "비서가 파벨에게 서류를 회계팀에 갖다 달라고 했어요.",
+   "blank": "отнести",
+   "src": "made"
+  },
+  {
+   "text": "Утром Елена отнесла посылку на почту.",
+   "en": "In the morning Elena took a parcel to the post office.",
+   "ko": "아침에 엘레나는 소포를 우체국에 가져갔어요.",
+   "blank": "отнесла",
    "src": "made"
   }
  ],
@@ -26885,6 +27237,22 @@
    "src": "tatoeba:13893951/marafon en:34562/CK"
   }
  ],
+ "w|пожарный": [
+  {
+   "text": "В офис Павла пришёл пожарный проверить огнетушители.",
+   "en": "A firefighter came to Pavel's office to check the fire extinguishers.",
+   "ko": "소방관이 소화기를 점검하러 파벨의 사무실에 왔어요.",
+   "blank": "пожарный",
+   "src": "made"
+  },
+  {
+   "text": "Сосед Елены уже много лет работает пожарным.",
+   "en": "Elena's neighbor has worked as a firefighter for many years.",
+   "ko": "엘레나의 이웃은 오랫동안 소방관으로 일해 왔어요.",
+   "blank": "пожарным",
+   "src": "made"
+  }
+ ],
  "w|пожениться": [
   {
    "text": "Вы действительно хотите пожениться?",
@@ -28171,6 +28539,22 @@
    "src": "made"
   }
  ],
+ "w|попадать": [
+  {
+   "text": "Павел вечно попадает в пробки по дороге в офис.",
+   "en": "Pavel always gets stuck in traffic on his way to the office.",
+   "ko": "파벨은 출근길에 늘 차가 막혀요.",
+   "blank": "попадает",
+   "src": "made"
+  },
+  {
+   "text": "Ключ долго не попадал в замок, и Елена начала нервничать.",
+   "en": "The key kept missing the lock, and Elena started getting nervous.",
+   "ko": "열쇠가 자꾸 열쇠 구멍에 안 들어가서 엘레나는 초조해지기 시작했어요.",
+   "blank": "попадал",
+   "src": "made"
+  }
+ ],
  "w|попасть": [
   {
    "text": "Мяч попал в лужу.",
@@ -28414,6 +28798,22 @@
    "en": "One theatergoer left an umbrella in the buffet.",
    "ko": "한 관람객이 매점에 우산을 두고 갔어요.",
    "blank": "посетитель",
+   "src": "made"
+  }
+ ],
+ "w|посетить": [
+  {
+   "text": "На следующей неделе Павлу предстоит посетить филиал в другом городе.",
+   "en": "Next week Pavel has to visit a branch in another city.",
+   "ko": "다음 주에 파벨은 다른 도시의 지점을 방문해야 해요.",
+   "blank": "посетить",
+   "src": "made"
+  },
+  {
+   "text": "В субботу Елена собирается посетить выставку современного искусства.",
+   "en": "On Saturday Elena is going to visit a modern art exhibition.",
+   "ko": "토요일에 엘레나는 현대 미술 전시회에 갈 거예요.",
+   "blank": "посетить",
    "src": "made"
   }
  ],
@@ -29995,6 +30395,22 @@
    "src": "made"
   }
  ],
+ "w|преодолеть": [
+  {
+   "text": "Команде Павла удалось преодолеть все трудности с запуском.",
+   "en": "Pavel's team managed to overcome all the difficulties with the launch.",
+   "ko": "파벨의 팀은 출시 과정의 어려움을 모두 이겨 냈어요.",
+   "blank": "преодолеть",
+   "src": "made"
+  },
+  {
+   "text": "Елена смогла преодолеть лень и всё-таки пошла на пробежку.",
+   "en": "Elena managed to overcome her laziness and went for a run after all.",
+   "ko": "엘레나는 게으름을 이겨 내고 결국 달리러 나갔어요.",
+   "blank": "преодолеть",
+   "src": "made"
+  }
+ ],
  "w|преследовать": [
   {
    "text": "Какое право ты имел меня преследовать?",
@@ -30617,6 +31033,22 @@
    "src": "made"
   }
  ],
+ "w|прикольный": [
+  {
+   "text": "Коллеги подарили Павлу на день рождения прикольную кружку.",
+   "en": "His colleagues gave Pavel a cool mug for his birthday.",
+   "ko": "동료들이 파벨에게 생일 선물로 재미있는 머그잔을 줬어요.",
+   "blank": "прикольную",
+   "src": "made"
+  },
+  {
+   "text": "Подруга прислала Елене прикольный ролик про котов.",
+   "en": "A friend sent Elena a funny video about cats.",
+   "ko": "친구가 엘레나에게 고양이가 나오는 재미있는 영상을 보냈어요.",
+   "blank": "прикольный",
+   "src": "made"
+  }
+ ],
  "w|прикрытие": [
   {
    "text": "Мафия использует законные деловые операции как прикрытие.",
@@ -31223,6 +31655,22 @@
    "src": "tatoeba:8664021/AntonKhorev en:2573233/Hybrid"
   }
  ],
+ "w|провал": [
+  {
+   "text": "После провала прошлой рекламной кампании Павел стал осторожнее.",
+   "en": "After the failure of the last ad campaign, Pavel became more careful.",
+   "ko": "지난 광고 캠페인이 실패한 뒤로 파벨은 더 신중해졌어요.",
+   "blank": "провала",
+   "src": "made"
+  },
+  {
+   "text": "Первый пирог Елены оказался полным провалом.",
+   "en": "Elena's first pie turned out to be a complete flop.",
+   "ko": "엘레나가 처음 만든 파이는 완전히 실패였어요.",
+   "blank": "провалом",
+   "src": "made"
+  }
+ ],
  "w|проверить": [
   {
    "text": "Проверь карман куртки.",
@@ -31599,6 +32047,22 @@
    "src": "made"
   }
  ],
+ "w|произнести": [
+  {
+   "text": "Директор попросил Павла произнести тост на корпоративе.",
+   "en": "The director asked Pavel to make a toast at the office party.",
+   "ko": "사장님이 파벨에게 회식에서 건배사를 해 달라고 했어요.",
+   "blank": "произнести",
+   "src": "made"
+  },
+  {
+   "text": "Елена так и не смогла правильно произнести название нового кафе.",
+   "en": "Elena never managed to pronounce the name of the new café correctly.",
+   "ko": "엘레나는 끝내 새 카페 이름을 제대로 발음하지 못했어요.",
+   "blank": "произнести",
+   "src": "made"
+  }
+ ],
  "w|произойти": [
   {
    "text": "Что тут произошло?",
@@ -31882,6 +32346,22 @@
    "en": "In the duel scene Anna performs against an experienced opponent.",
    "ko": "결투 장면에서 안나는 노련한 상대와 맞서요.",
    "blank": "противника",
+   "src": "made"
+  }
+ ],
+ "w|противный": [
+  {
+   "text": "В офисе весь день гудел противный кондиционер.",
+   "en": "A nasty air conditioner hummed in the office all day.",
+   "ko": "사무실에서 하루 종일 거슬리는 에어컨 소리가 났어요.",
+   "blank": "противный",
+   "src": "made"
+  },
+  {
+   "text": "С утра шёл противный мелкий дождь, и Елена взяла зонт.",
+   "en": "A nasty drizzle had been falling since morning, so Elena took an umbrella.",
+   "ko": "아침부터 지겨운 이슬비가 내려서 엘레나는 우산을 챙겼어요.",
+   "blank": "противный",
    "src": "made"
   }
  ],
@@ -33987,6 +34467,22 @@
    "src": "tatoeba:12037263/marafon en:7736495/CK"
   }
  ],
+ "w|рискнуть": [
+  {
+   "text": "Павел решил рискнуть и предложил свою идею директору.",
+   "en": "Pavel decided to take a chance and pitched his idea to the director.",
+   "ko": "파벨은 모험을 걸어 보기로 하고 사장님께 자기 아이디어를 제안했어요.",
+   "blank": "рискнуть",
+   "src": "made"
+  },
+  {
+   "text": "В кафе Елена решила рискнуть и заказать незнакомое блюдо.",
+   "en": "At the café Elena decided to take a chance and order an unfamiliar dish.",
+   "ko": "카페에서 엘레나는 모험 삼아 처음 보는 요리를 시켜 보기로 했어요.",
+   "blank": "рискнуть",
+   "src": "made"
+  }
+ ],
  "w|рисковать": [
   {
    "text": "Почему я должен рисковать?",
@@ -34016,6 +34512,22 @@
    "en": "The boy in the ward was drawing Tatiana in his exercise book.",
    "ko": "병실 남자아이가 공책에 타티야나를 그렸어요.",
    "blank": "рисовал",
+   "src": "made"
+  }
+ ],
+ "w|рисунок": [
+  {
+   "text": "На стене в кабинете Павла висит детский рисунок его дочери.",
+   "en": "A child's drawing by his daughter hangs on the wall of Pavel's office.",
+   "ko": "파벨의 사무실 벽에는 딸이 그린 그림이 걸려 있어요.",
+   "blank": "рисунок",
+   "src": "made"
+  },
+  {
+   "text": "Дочка показала Елене свой новый рисунок с котом.",
+   "en": "Her daughter showed Elena her new drawing of a cat.",
+   "ko": "딸이 엘레나에게 고양이를 그린 새 그림을 보여 줬어요.",
+   "blank": "рисунок",
    "src": "made"
   }
  ],
@@ -34411,6 +34923,22 @@
    "src": "made"
   }
  ],
+ "w|руководство": [
+  {
+   "text": "Новый график работы одобрило руководство компании.",
+   "en": "The company's management approved the new work schedule.",
+   "ko": "회사 경영진이 새 근무 일정을 승인했어요.",
+   "blank": "руководство",
+   "src": "made"
+  },
+  {
+   "text": "Елена внимательно прочитала руководство к новой стиральной машине.",
+   "en": "Elena carefully read the manual for the new washing machine.",
+   "ko": "엘레나는 새 세탁기 설명서를 꼼꼼히 읽었어요.",
+   "blank": "руководство",
+   "src": "made"
+  }
+ ],
  "w|руль": [
   {
    "text": "Ты уверен, что не хочешь сесть за руль?",
@@ -34779,6 +35307,22 @@
    "ko": "윗집에서 물이 새서 우리 집이 잠겼어요.",
    "blank": "сверху",
    "src": "tatoeba:11383794/marafon en:11383791/ddnktr"
+  }
+ ],
+ "w|свести": [
+  {
+   "text": "Павлу пришлось свести все данные в одну таблицу.",
+   "en": "Pavel had to put all the data together into one table.",
+   "ko": "파벨은 모든 데이터를 표 하나로 정리해야 했어요.",
+   "blank": "свести",
+   "src": "made"
+  },
+  {
+   "text": "В выходной Елене удалось свести домашние дела к минимуму.",
+   "en": "On her day off Elena managed to keep the housework to a minimum.",
+   "ko": "쉬는 날 엘레나는 집안일을 최소한으로 줄였어요.",
+   "blank": "свести",
+   "src": "made"
   }
  ],
  "w|свет": [
@@ -35455,6 +35999,22 @@
    "src": "tatoeba:3815928/marafon en:3271216/sundown"
   }
  ],
+ "w|серийный": [
+  {
+   "text": "Чтобы оформить гарантию, Павел записал серийный номер принтера.",
+   "en": "To register the warranty, Pavel wrote down the printer's serial number.",
+   "ko": "보증을 등록하려고 파벨은 프린터 일련번호를 적어 뒀어요.",
+   "blank": "серийный",
+   "src": "made"
+  },
+  {
+   "text": "В новостях Елена прочитала, что начался серийный выпуск нового электромобиля.",
+   "en": "Elena read in the news that mass production of a new electric car has started.",
+   "ko": "엘레나는 새 전기차 양산이 시작됐다는 뉴스를 읽었어요.",
+   "blank": "серийный",
+   "src": "made"
+  }
+ ],
  "w|серия": [
   {
    "text": "Ты помнишь, чем закончилась предыдущая серия?",
@@ -35799,6 +36359,22 @@
    "en": "I already said it.",
    "ko": "나는 이미 말했어.",
    "blank": "сказал"
+  }
+ ],
+ "w|сказка": [
+  {
+   "text": "Начальник обещал Павлу премию, но коллеги считают это сказкой.",
+   "en": "The boss promised Pavel a bonus, but his colleagues think it's a fairy tale.",
+   "ko": "상사가 파벨에게 보너스를 약속했지만 동료들은 그걸 동화 같은 얘기로 여겨요.",
+   "blank": "сказкой",
+   "src": "made"
+  },
+  {
+   "text": "Вечером Елена прочитала сыну сказку перед сном.",
+   "en": "In the evening Elena read her son a bedtime story.",
+   "ko": "저녁에 엘레나는 아들에게 잠자리 동화를 읽어 줬어요.",
+   "blank": "сказку",
+   "src": "made"
   }
  ],
  "w|скандал": [
@@ -37038,6 +37614,22 @@
    "en": "I won't give you any advice, decide for yourself.",
    "ko": "조언은 안 할게, 네가 정해.",
    "blank": "советовать",
+   "src": "made"
+  }
+ ],
+ "w|совещание": [
+  {
+   "text": "Утреннее совещание у Павла затянулось почти до обеда.",
+   "en": "Pavel's morning meeting dragged on almost until lunch.",
+   "ko": "파벨의 아침 회의가 거의 점심때까지 길어졌어요.",
+   "blank": "совещание",
+   "src": "made"
+  },
+  {
+   "text": "Муж Елены вернулся поздно, потому что у него было совещание.",
+   "en": "Elena's husband came home late because he had a meeting.",
+   "ko": "엘레나의 남편은 회의가 있어서 늦게 들어왔어요.",
+   "blank": "совещание",
    "src": "made"
   }
  ],
@@ -40497,6 +41089,22 @@
    "src": "tatoeba:11475860/carlosalberto en:11475836/carlosalberto"
   }
  ],
+ "w|техника": [
+  {
+   "text": "Павел жалуется, что вся офисная техника давно устарела.",
+   "en": "Pavel complains that all the office equipment is long out of date.",
+   "ko": "파벨은 사무실 기기가 다 낡았다고 불평해요.",
+   "blank": "техника",
+   "src": "made"
+  },
+  {
+   "text": "Елена плохо разбирается в технике и всегда зовёт брата.",
+   "en": "Elena isn't good with gadgets and always calls her brother.",
+   "ko": "엘레나는 기계를 잘 몰라서 늘 남동생을 불러요.",
+   "blank": "технике",
+   "src": "made"
+  }
+ ],
  "w|технически": [
   {
    "text": "Технически это возможно?",
@@ -43487,6 +44095,22 @@
    "src": "made"
   }
  ],
+ "w|финансовый": [
+  {
+   "text": "Каждый квартал Павел готовит финансовый отчёт.",
+   "en": "Every quarter Pavel prepares the financial report.",
+   "ko": "파벨은 분기마다 재무 보고서를 만들어요.",
+   "blank": "финансовый",
+   "src": "made"
+  },
+  {
+   "text": "Вечером Елена записалась на курс по финансовой грамотности.",
+   "en": "In the evening Elena signed up for a financial literacy course.",
+   "ko": "저녁에 엘레나는 금융 이해력 강좌에 등록했어요.",
+   "blank": "финансовой",
+   "src": "made"
+  }
+ ],
  "w|фиолетовый": [
   {
    "text": "Мне нравится фиолетовый цвет.",
@@ -43627,6 +44251,22 @@
    "en": "The photo came out blurry.",
    "ko": "사진이 흐리게 나왔어.",
    "blank": "Фотография"
+  }
+ ],
+ "w|фраза": [
+  {
+   "text": "Начальник Павла повторяет одну и ту же фразу на каждой планёрке.",
+   "en": "Pavel's boss repeats the same line at every briefing.",
+   "ko": "파벨의 상사는 회의 때마다 같은 말을 되풀이해요.",
+   "blank": "фразу",
+   "src": "made"
+  },
+  {
+   "text": "Весь день у Елены в голове крутилась фраза из песни.",
+   "en": "All day a line from a song kept going round in Elena's head.",
+   "ko": "하루 종일 엘레나의 머릿속에 노래 가사 한 줄이 맴돌았어요.",
+   "blank": "фраза",
+   "src": "made"
   }
  ],
  "w|французский": [

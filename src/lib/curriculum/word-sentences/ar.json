@@ -451,6 +451,22 @@
    "blank": "الأجرة"
   }
  ],
+ "w|أجرى": [
+  {
+   "text": "أجرى علي مكالمة طويلة مع أخيه الأكبر ليفهم ما حدث.",
+   "en": "Ali made a long call to his older brother to understand what had happened.",
+   "ko": "알리는 무슨 일이 있었는지 알아보려고 형과 오래 통화했어요.",
+   "blank": "أجرى",
+   "src": "made"
+  },
+  {
+   "text": "أجرت نور بعض التعديلات على التقرير قبل إرساله.",
+   "en": "Nour made a few changes to the report before sending it.",
+   "ko": "누르는 보고서를 보내기 전에 몇 군데를 고쳤어요.",
+   "blank": "أجرت",
+   "src": "made"
+  }
+ ],
  "w|أجل": [
   {
    "text": "أجل، فهمت ما قلت.",
@@ -1775,6 +1791,22 @@
    "en": "I always wear black shoes.",
    "ko": "나는 항상 검은 신발을 신어.",
    "blank": "أسود"
+  }
+ ],
+ "w|أسى": [
+  {
+   "text": "نظر علي إلى أخته بأسى حين رفضت أن تكلمه.",
+   "en": "Ali looked at his sister sadly when she refused to talk to him.",
+   "ko": "누나가 말도 안 하려 하자 알리는 서글프게 누나를 바라봤어요.",
+   "blank": "بأسى",
+   "src": "made"
+  },
+  {
+   "text": "قرأت نور خبر إغلاق مكتبة الحي بأسى.",
+   "en": "Nour read the news of the neighborhood bookshop closing with sorrow.",
+   "ko": "누르는 동네 서점이 문을 닫는다는 소식을 씁쓸하게 읽었어요.",
+   "blank": "بأسى",
+   "src": "made"
   }
  ],
  "w|أسير": [
@@ -3463,6 +3495,22 @@
    "blank": "الأناناس"
   }
  ],
+ "w|أناني": [
+  {
+   "text": "صرخت سلمى في وجه علي: أنت أناني ولا تفكر إلا في نفسك!",
+   "en": "Salma shouted at Ali, \"You're selfish and only think about yourself!\"",
+   "ko": "살마가 알리에게 소리쳤어요. \"넌 이기적이야, 네 생각만 하잖아!\"",
+   "blank": "أناني",
+   "src": "made"
+  },
+  {
+   "text": "غضبت نور من سائق أناني أوقف سيارته أمام مدخل البناية.",
+   "en": "Nour got angry at a selfish driver who parked in front of the building entrance.",
+   "ko": "누르는 건물 입구 앞에 차를 세운 이기적인 운전자에게 화가 났어요.",
+   "blank": "أناني",
+   "src": "made"
+  }
+ ],
  "w|أنبوب": [
   {
    "text": "انفجر أنبوب ماء في المكتب، فنقل سامي أوراقه بسرعة.",
@@ -4697,6 +4745,22 @@
    "blank": "إضراب"
   }
  ],
+ "w|إطفاء": [
+  {
+   "text": "نسي علي إطفاء الفرن، فلامته أخته بصوت عال.",
+   "en": "Ali forgot to turn off the oven, so his sister scolded him loudly.",
+   "ko": "알리가 오븐 끄는 걸 잊어서 누나가 큰 소리로 나무랐어요.",
+   "blank": "إطفاء",
+   "src": "made"
+  },
+  {
+   "text": "قبل النوم، تتأكد نور من إطفاء كل الأنوار.",
+   "en": "Before bed, Nour makes sure all the lights are off.",
+   "ko": "자기 전에 누르는 불을 다 껐는지 확인해요.",
+   "blank": "إطفاء",
+   "src": "made"
+  }
+ ],
  "w|إطلاق": [
   {
    "text": "تم إطلاق الصاروخ اليوم.",
@@ -5659,6 +5723,22 @@
    "blank": "الاجتماع"
   }
  ],
+ "w|اجتماعي": [
+  {
+   "text": "سلمى شخص اجتماعي، أما علي فيحب الهدوء.",
+   "en": "Salma is a sociable person, while Ali likes quiet.",
+   "ko": "살마는 사교적인 사람이고, 알리는 조용한 걸 좋아해요.",
+   "blank": "اجتماعي",
+   "src": "made"
+  },
+  {
+   "text": "نشرت نور صورة غدائها على مواقع التواصل الاجتماعي.",
+   "en": "Nour posted a picture of her lunch on social media.",
+   "ko": "누르는 점심 사진을 SNS에 올렸어요.",
+   "blank": "الاجتماعي",
+   "src": "made"
+  }
+ ],
  "w|اجتماعية": [
   {
    "text": "يكتب سامي عمودا أسبوعيا عن القضايا الاجتماعية.",
@@ -6029,6 +6109,22 @@
    "blank": "ادعى"
   }
  ],
+ "w|ارتاب": [
+  {
+   "text": "ارتاب علي في صمت أخته طوال العشاء.",
+   "en": "Ali grew suspicious of his sister's silence throughout dinner.",
+   "ko": "알리는 저녁 내내 말이 없는 누나가 수상하다고 느꼈어요.",
+   "blank": "ارتاب",
+   "src": "made"
+  },
+  {
+   "text": "ارتابت نور في رسالة تطلب منها رقم بطاقتها.",
+   "en": "Nour was suspicious of a message asking for her card number.",
+   "ko": "누르는 카드 번호를 달라는 메시지를 수상하게 여겼어요.",
+   "blank": "ارتابت",
+   "src": "made"
+  }
+ ],
  "w|ارتاح": [
   {
    "text": "بعد المشي الطويل، ارتاح قليلاً.",
@@ -6057,6 +6153,22 @@
    "blank": "ارتبط"
   }
  ],
+ "w|ارتبك": [
+  {
+   "text": "ارتبك علي ولم يعرف ماذا يقول لأخته.",
+   "en": "Ali got flustered and didn't know what to say to his sister.",
+   "ko": "알리는 당황해서 누나에게 뭐라고 해야 할지 몰랐어요.",
+   "blank": "ارتبك",
+   "src": "made"
+  },
+  {
+   "text": "ارتبكت نور حين سألها المدير سؤالا مفاجئا.",
+   "en": "Nour got flustered when the manager asked her an unexpected question.",
+   "ko": "부장님이 갑자기 질문하자 누르는 당황했어요.",
+   "blank": "ارتبكت",
+   "src": "made"
+  }
+ ],
  "w|ارتدى": [
   {
    "text": "ارتدى المعطف في الشتاء.",
@@ -6069,6 +6181,22 @@
    "en": "He wore formal attire for the party.",
    "ko": "파티에 정장을 입었다.",
    "blank": "ارتدى"
+  }
+ ],
+ "w|ارتعب": [
+  {
+   "text": "ارتعب علي حين رأى أخته تبكي لأول مرة.",
+   "en": "Ali was terrified when he saw his sister cry for the first time.",
+   "ko": "누나가 우는 걸 처음 보고 알리는 덜컥 겁이 났어요.",
+   "blank": "ارتعب",
+   "src": "made"
+  },
+  {
+   "text": "ارتعبت نور حين سمعت صوتا عاليا في المطبخ، ثم وجدت القطة.",
+   "en": "Nour was terrified when she heard a loud noise in the kitchen, then found the cat.",
+   "ko": "누르는 부엌에서 큰 소리가 나서 깜짝 놀랐는데, 고양이였어요.",
+   "blank": "ارتعبت",
+   "src": "made"
   }
  ],
  "w|ارتفاع": [
@@ -6097,6 +6225,22 @@
    "en": "The price of gold went up this month.",
    "ko": "이달에 금값이 올랐어.",
    "blank": "ارتفع"
+  }
+ ],
+ "w|ارتياح": [
+  {
+   "text": "تنفس علي بارتياح حين فهم أن أخته لم تقصد إيذاءه.",
+   "en": "Ali breathed a sigh of relief when he understood his sister hadn't meant to hurt him.",
+   "ko": "누나가 상처 줄 생각이 아니었다는 걸 알고 알리는 안도의 숨을 쉬었어요.",
+   "blank": "بارتياح",
+   "src": "made"
+  },
+  {
+   "text": "شعرت نور بارتياح كبير حين خلعت حذاءها في البيت.",
+   "en": "Nour felt great relief when she took off her shoes at home.",
+   "ko": "집에서 신발을 벗자 누르는 정말 편안해졌어요.",
+   "blank": "بارتياح",
+   "src": "made"
   }
  ],
  "w|ازداد": [
@@ -6139,6 +6283,22 @@
    "en": "Did you ask your teacher for permission to leave?",
    "ko": "선생님께 나가도 되냐고 허락받았니?",
    "blank": "استأذنت"
+  }
+ ],
+ "w|استاء": [
+  {
+   "text": "استاء علي لأن أخته لم تدعه إلى حفلتها.",
+   "en": "Ali was upset because his sister didn't invite him to her party.",
+   "ko": "누나가 파티에 초대하지 않아서 알리는 서운했어요.",
+   "blank": "استاء",
+   "src": "made"
+  },
+  {
+   "text": "استاءت نور من تأخر الحافلة مرة أخرى.",
+   "en": "Nour was annoyed that the bus was late again.",
+   "ko": "버스가 또 늦어서 누르는 짜증이 났어요.",
+   "blank": "استاءت",
+   "src": "made"
   }
  ],
  "w|استبدال": [
@@ -6499,6 +6659,22 @@
    "en": "I consulted my father about the matter.",
    "ko": "나는 이 일에 대해 아버지께 상의했어.",
    "blank": "استشرت"
+  }
+ ],
+ "w|استشاط": [
+  {
+   "text": "استشاط علي غضبا حين وجد دراجته مكسورة.",
+   "en": "Ali flew into a rage when he found his bike broken.",
+   "ko": "자전거가 망가진 걸 보고 알리는 불같이 화를 냈어요.",
+   "blank": "استشاط",
+   "src": "made"
+  },
+  {
+   "text": "استشاطت جارة نور غضبا من الضجيج في الشارع.",
+   "en": "Nour's neighbor was furious about the noise in the street.",
+   "ko": "누르의 이웃 아주머니는 길거리 소음에 몹시 화가 났어요.",
+   "blank": "استشاطت",
+   "src": "made"
   }
  ],
  "w|استضاف": [
@@ -7063,6 +7239,38 @@
    "blank": "اشتهيت"
   }
  ],
+ "w|اشمأز": [
+  {
+   "text": "اشمأز علي من الكذبة التي نشرها ابن عمه عن أخته.",
+   "en": "Ali was disgusted by the lie his cousin spread about his sister.",
+   "ko": "알리는 사촌이 누나에 대해 퍼뜨린 거짓말에 진저리가 났어요.",
+   "blank": "اشمأز",
+   "src": "made"
+  },
+  {
+   "text": "اشمأزت نور من الطعام البارد في مقصف الشركة.",
+   "en": "Nour was put off by the cold food in the company cafeteria.",
+   "ko": "누르는 회사 구내식당의 식은 음식에 질색했어요.",
+   "blank": "اشمأزت",
+   "src": "made"
+  }
+ ],
+ "w|اشمئزاز": [
+  {
+   "text": "نظرت سلمى باشمئزاز إلى غرفة علي المليئة بالصحون المتسخة.",
+   "en": "Salma looked in disgust at Ali's room full of dirty dishes.",
+   "ko": "살마는 더러운 접시로 가득한 알리의 방을 역겹다는 듯 쳐다봤어요.",
+   "blank": "باشمئزاز",
+   "src": "made"
+  },
+  {
+   "text": "شعرت نور بالاشمئزاز من رائحة القمامة في الشارع.",
+   "en": "Nour felt disgusted by the smell of garbage in the street.",
+   "ko": "누르는 길거리 쓰레기 냄새에 속이 메스꺼웠어요.",
+   "blank": "بالاشمئزاز",
+   "src": "made"
+  }
+ ],
  "w|اصطدم": [
   {
    "text": "اصطدم السائق بالحائط فجأة.",
@@ -7090,6 +7298,22 @@
    "en": "Mariam's patient has been suffering from a sleep disorder for weeks.",
    "ko": "마리암의 환자는 몇 주째 수면 장애를 겪고 있어요.",
    "blank": "اضطراب",
+   "src": "made"
+  }
+ ],
+ "w|اطمأن": [
+  {
+   "text": "اطمأن علي على أخته بعد أن ردت على رسالته.",
+   "en": "Ali was reassured about his sister after she answered his message.",
+   "ko": "누나가 메시지에 답하자 알리는 마음이 놓였어요.",
+   "blank": "اطمأن",
+   "src": "made"
+  },
+  {
+   "text": "اطمأنت نور على أمها بمكالمة قصيرة في الظهر.",
+   "en": "Nour checked on her mother with a short call at noon.",
+   "ko": "누르는 점심때 짧게 전화해서 엄마가 괜찮은지 확인했어요.",
+   "blank": "اطمأنت",
    "src": "made"
   }
  ],
@@ -7386,6 +7610,22 @@
    "en": "Layla read a historical novel about an assassination attempt on a prince in a mountain palace.",
    "ko": "라일라는 산속 궁전에서 왕자를 암살하려 한 이야기를 다룬 역사 소설을 읽었어요.",
    "blank": "اغتيال",
+   "src": "made"
+  }
+ ],
+ "w|افتخر": [
+  {
+   "text": "افتخر علي بأخته حين سمع أنها ساعدت صديقه.",
+   "en": "Ali was proud of his sister when he heard she had helped his friend.",
+   "ko": "누나가 자기 친구를 도와줬다는 말을 듣고 알리는 누나가 자랑스러웠어요.",
+   "blank": "افتخر",
+   "src": "made"
+  },
+  {
+   "text": "افتخرت نور بإنجاز كل مهامها قبل نهاية اليوم.",
+   "en": "Nour was proud of finishing all her tasks before the end of the day.",
+   "ko": "누르는 하루가 끝나기 전에 할 일을 다 끝낸 게 뿌듯했어요.",
+   "blank": "افتخرت",
    "src": "made"
   }
  ],
@@ -10713,6 +10953,22 @@
    "blank": "بلع"
   }
  ],
+ "w|بلغ": [
+  {
+   "text": "بلغ الغضب بعلي حدا جعله يغلق الباب بقوة.",
+   "en": "Ali's anger reached the point that he slammed the door.",
+   "ko": "알리는 문을 세게 닫을 정도로 화가 났어요.",
+   "blank": "بلغ",
+   "src": "made"
+  },
+  {
+   "text": "بلغت نور المكتب قبل الاجتماع بدقائق.",
+   "en": "Nour reached the office minutes before the meeting.",
+   "ko": "누르는 회의 몇 분 전에 사무실에 도착했어요.",
+   "blank": "بلغت",
+   "src": "made"
+  }
+ ],
  "w|بلل": [
   {
    "text": "بلل المطر ثيابي صباحًا.",
@@ -11395,6 +11651,22 @@
    "blank": "تألم"
   }
  ],
+ "w|تأمل": [
+  {
+   "text": "جلس علي على الشرفة وتأمل صورة قديمة له مع أخته.",
+   "en": "Ali sat on the balcony and gazed at an old photo of himself with his sister.",
+   "ko": "알리는 발코니에 앉아 누나와 함께 찍은 옛 사진을 가만히 바라봤어요.",
+   "blank": "وتأمل",
+   "src": "made"
+  },
+  {
+   "text": "تأملت نور السماء من نافذة المكتب لدقائق.",
+   "en": "Nour gazed at the sky from the office window for a few minutes.",
+   "ko": "누르는 사무실 창밖 하늘을 몇 분 동안 바라봤어요.",
+   "blank": "تأملت",
+   "src": "made"
+  }
+ ],
  "w|تأمين": [
   {
    "text": "أحتاج إلى تأمين صحي للسفر.",
@@ -11779,6 +12051,22 @@
    "en": "Every experience teaches us something new.",
    "ko": "모든 تجربة는 우리에게 새로운 것을 가르쳐줘.",
    "blank": "تجربة"
+  }
+ ],
+ "w|تجسس": [
+  {
+   "text": "اتهم علي أخته بالتجسس على هاتفه.",
+   "en": "Ali accused his sister of spying on his phone.",
+   "ko": "알리는 누나가 자기 휴대폰을 몰래 훔쳐봤다고 따졌어요.",
+   "blank": "بالتجسس",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت نور مساء فيلما قديما عن التجسس.",
+   "en": "In the evening Nour watched an old spy film.",
+   "ko": "누르는 저녁에 첩보를 다룬 옛날 영화를 봤어요.",
+   "blank": "التجسس",
+   "src": "made"
   }
  ],
  "w|تجمد": [
@@ -14193,6 +14481,22 @@
    "blank": "تكون"
   }
  ],
+ "w|تكوين": [
+  {
+   "text": "لعبت الطفولة المشتركة دورا في تكوين علاقة قوية بين علي وسلمى.",
+   "en": "Their shared childhood played a part in forming a strong bond between Ali and Salma.",
+   "ko": "함께 보낸 어린 시절은 알리와 살마 사이에 끈끈한 관계를 만드는 데 한몫했어요.",
+   "blank": "تكوين",
+   "src": "made"
+  },
+  {
+   "text": "تقرأ نور كتابا عن تكوين العادات الجيدة.",
+   "en": "Nour is reading a book about forming good habits.",
+   "ko": "누르는 좋은 습관 만들기에 관한 책을 읽고 있어요.",
+   "blank": "تكوين",
+   "src": "made"
+  }
+ ],
  "w|تكيف": [
   {
    "text": "تكيف الحيوان مع الجو البارد.",
@@ -14833,6 +15137,22 @@
    "blank": "تواجد"
   }
  ],
+ "w|توازن": [
+  {
+   "text": "سألت سلمى أخاها: كيف توازن بين عملك ودراستك؟",
+   "en": "Salma asked her brother, \"How do you balance your work and your studies?\"",
+   "ko": "살마가 동생에게 물었어요. \"일이랑 공부를 어떻게 균형 있게 해?\"",
+   "blank": "توازن",
+   "src": "made"
+  },
+  {
+   "text": "تحاول نور كل يوم أن توازن بين العمل والرياضة.",
+   "en": "Every day Nour tries to balance work and exercise.",
+   "ko": "누르는 매일 일과 운동 사이에서 균형을 잡으려고 해요.",
+   "blank": "توازن",
+   "src": "made"
+  }
+ ],
  "w|تواصل": [
   {
    "text": "من الأفضل أن نحافظ على تواصل دائم.",
@@ -15325,6 +15645,22 @@
    "en": "The mother sometimes feels pain in her breast.",
    "ko": "엄마는 가끔 가슴에 통증을 느껴.",
    "blank": "ثدي"
+  }
+ ],
+ "w|ثرثرة": [
+  {
+   "text": "بدأ الخلاف كله بسبب ثرثرة ابن عمهم في العشاء.",
+   "en": "The whole quarrel started because of their cousin's chatter at dinner.",
+   "ko": "이 다툼은 전부 저녁 자리에서 사촌이 수다를 떤 데서 시작됐어요.",
+   "blank": "ثرثرة",
+   "src": "made"
+  },
+  {
+   "text": "تعبت نور من ثرثرة زميلتها طوال الاستراحة.",
+   "en": "Nour got tired of her colleague's chatter throughout the break.",
+   "ko": "누르는 쉬는 시간 내내 이어진 동료의 수다에 지쳤어요.",
+   "blank": "ثرثرة",
+   "src": "made"
   }
  ],
  "w|ثروة": [
@@ -19707,6 +20043,22 @@
    "blank": "حمية"
   }
  ],
+ "w|حميم": [
+  {
+   "text": "عاد الجو حميما بين علي وسلمى بعد أن تصالحا.",
+   "en": "Things became warm again between Ali and Salma after they made up.",
+   "ko": "화해한 뒤 알리와 살마 사이는 다시 따뜻해졌어요.",
+   "blank": "حميما",
+   "src": "made"
+  },
+  {
+   "text": "تحب نور الجو الحميم في المقهى الصغير قرب بيتها.",
+   "en": "Nour loves the cozy atmosphere in the little café near her home.",
+   "ko": "누르는 집 근처 작은 카페의 아늑한 분위기를 좋아해요.",
+   "blank": "الحميم",
+   "src": "made"
+  }
+ ],
  "w|حن": [
   {
    "text": "حن إلى أيام الطفولة عندما رأى الصور القديمة.",
@@ -20557,6 +20909,22 @@
    "src": "made"
   }
  ],
+ "w|خرق": [
+  {
+   "text": "شعر علي أن أخته خرقت وعدها حين قرأت رسائله.",
+   "en": "Ali felt his sister had broken her promise when she read his messages.",
+   "ko": "알리는 누나가 자기 메시지를 읽어서 약속을 어겼다고 느꼈어요.",
+   "blank": "خرقت",
+   "src": "made"
+  },
+  {
+   "text": "خرق سائق الحافلة إشارة المرور، فشهقت نور.",
+   "en": "The bus driver ran the traffic light, and Nour gasped.",
+   "ko": "버스 기사가 신호를 위반해서 누르는 숨을 들이켰어요.",
+   "blank": "خرق",
+   "src": "made"
+  }
+ ],
  "w|خروج": [
   {
    "text": "أعلن عن خروج الفائز.",
@@ -21397,6 +21765,22 @@
    "en": "I was disappointed when I didn't find my friend at the party.",
    "ko": "파티에서 친구를 못 찾아서 실망했어.",
    "blank": "خيب"
+  }
+ ],
+ "w|خيبة": [
+  {
+   "text": "شعر علي بخيبة كبيرة حين نسيت أخته عيد ميلاده.",
+   "en": "Ali felt deeply let down when his sister forgot his birthday.",
+   "ko": "누나가 생일을 잊어버리자 알리는 크게 실망했어요.",
+   "blank": "بخيبة",
+   "src": "made"
+  },
+  {
+   "text": "عادت نور بخيبة أمل لأن المكتبة كانت مغلقة.",
+   "en": "Nour came back disappointed because the library was closed.",
+   "ko": "도서관이 닫혀 있어서 누르는 실망한 채 돌아왔어요.",
+   "blank": "بخيبة",
+   "src": "made"
   }
  ],
  "w|خير": [
@@ -23603,6 +23987,22 @@
    "blank": "رحلة"
   }
  ],
+ "w|رحم": [
+  {
+   "text": "رحم علي أخته الصغيرة ولم يخبر والديه بما فعلت.",
+   "en": "Ali took pity on his little sister and didn't tell their parents what she had done.",
+   "ko": "알리는 여동생을 봐줘서 부모님께 그 애가 한 일을 말하지 않았어요.",
+   "blank": "رحم",
+   "src": "made"
+  },
+  {
+   "text": "رحم المدير نور ومنحها ساعة راحة إضافية.",
+   "en": "The manager took pity on Nour and gave her an extra hour of rest.",
+   "ko": "부장님이 누르를 딱하게 여겨 한 시간 더 쉬게 해 줬어요.",
+   "blank": "رحم",
+   "src": "made"
+  }
+ ],
  "w|رحمة": [
   {
    "text": "كل إنسان يحتاج إلى رحمة في حياته.",
@@ -24079,6 +24479,22 @@
    "en": "Please raise the volume a little.",
    "ko": "소리를 조금 올려줘.",
    "blank": "رفع"
+  }
+ ],
+ "w|رفيع": [
+  {
+   "text": "يشغل أخو علي الأكبر منصبا رفيعا في البنك.",
+   "en": "Ali's older brother holds a high position at the bank.",
+   "ko": "알리의 형은 은행에서 높은 자리에 있어요.",
+   "blank": "رفيعا",
+   "src": "made"
+  },
+  {
+   "text": "استقبلت شركة نور اليوم ضيفا رفيع المستوى.",
+   "en": "Nour's company welcomed a high-ranking guest today.",
+   "ko": "오늘 누르의 회사에 고위급 손님이 찾아왔어요.",
+   "blank": "رفيع",
+   "src": "made"
   }
  ],
  "w|رفيق": [
@@ -26663,6 +27079,22 @@
    "blank": "سلاح"
   }
  ],
+ "w|سلالة": [
+  {
+   "text": "اختلف علي وأخته حول سلالة الكلب الذي سيشتريانه.",
+   "en": "Ali and his sister disagreed about the breed of the dog they would buy.",
+   "ko": "알리와 누나는 살 강아지의 품종을 두고 의견이 갈렸어요.",
+   "blank": "سلالة",
+   "src": "made"
+  },
+  {
+   "text": "سألت نور صاحب الكلب في الحديقة عن سلالته.",
+   "en": "Nour asked the dog owner in the park about its breed.",
+   "ko": "누르는 공원에서 개 주인에게 개 품종을 물어봤어요.",
+   "blank": "سلالته",
+   "src": "made"
+  }
+ ],
  "w|سلام": [
   {
    "text": "نحن نريد سلام في العالم.",
@@ -28401,6 +28833,22 @@
    "blank": "الشعب"
   }
  ],
+ "w|شعبي": [
+  {
+   "text": "اعتاد علي وأخته أن يأكلا الفول في مقهى شعبي قرب البيت.",
+   "en": "Ali and his sister used to eat fava beans at a local café near the house.",
+   "ko": "알리와 누나는 집 근처 서민적인 식당에서 콩 요리를 먹곤 했어요.",
+   "blank": "شعبي",
+   "src": "made"
+  },
+  {
+   "text": "تناولت نور الغداء في مطعم شعبي قرب عملها.",
+   "en": "Nour had lunch at a cheap local restaurant near her work.",
+   "ko": "누르는 회사 근처 서민 식당에서 점심을 먹었어요.",
+   "blank": "شعبي",
+   "src": "made"
+  }
+ ],
  "w|شعر": [
   {
    "text": "شعر بالفرح عند اللقاء.",
@@ -28829,6 +29277,22 @@
    "blank": "شهية"
   }
  ],
+ "w|شهير": [
+  {
+   "text": "أخذت سلمى أخاها علي إلى مطعم شهير لتصالحه.",
+   "en": "Salma took her brother Ali to a famous restaurant to make up with him.",
+   "ko": "살마는 화해하려고 동생 알리를 유명한 식당에 데려갔어요.",
+   "blank": "شهير",
+   "src": "made"
+  },
+  {
+   "text": "مرت نور أمام مخبز شهير واشترت كعكة صغيرة.",
+   "en": "Nour passed a famous bakery and bought a small cake.",
+   "ko": "누르는 유명한 빵집 앞을 지나다 작은 케이크를 샀어요.",
+   "blank": "شهير",
+   "src": "made"
+  }
+ ],
  "w|شوربة": [
   {
    "text": "طبخت شوربة دافئة.",
@@ -28968,6 +29432,22 @@
    "en": "Maryam doesn't accept payment by cheque, only cash or card.",
    "ko": "마리암은 수표는 받지 않고 현금이나 카드만 받아요.",
    "blank": "بشيك",
+   "src": "made"
+  }
+ ],
+ "w|صائب": [
+  {
+   "text": "كان رأي الأم صائبا: يجب أن يجلس علي وأخته ويتكلما.",
+   "en": "The mother's opinion was right: Ali and his sister needed to sit down and talk.",
+   "ko": "엄마 말이 옳았어요. 알리와 누나는 마주 앉아 이야기해야 했어요.",
+   "blank": "صائبا",
+   "src": "made"
+  },
+  {
+   "text": "كان قرار نور بأخذ المظلة صائبا.",
+   "en": "Nour's decision to take the umbrella was the right one.",
+   "ko": "우산을 챙긴 누르의 판단은 옳았어요.",
+   "blank": "صائبا",
    "src": "made"
   }
  ],
@@ -30587,6 +31067,22 @@
    "blank": "تضغط"
   }
  ],
+ "w|ضغينة": [
+  {
+   "text": "قال علي إنه لا يحمل أي ضغينة تجاه أخيه.",
+   "en": "Ali said he held no grudge against his brother.",
+   "ko": "알리는 형에게 아무 앙금도 없다고 말했어요.",
+   "blank": "ضغينة",
+   "src": "made"
+  },
+  {
+   "text": "نسيت نور خلاف الصباح مع زميلها، فهي لا تحب الضغينة.",
+   "en": "Nour forgot the morning's disagreement with her colleague; she doesn't like holding grudges.",
+   "ko": "누르는 아침에 동료와 다툰 걸 잊었어요. 앙금을 남기는 걸 싫어하거든요.",
+   "blank": "الضغينة",
+   "src": "made"
+  }
+ ],
  "w|ضفدع": [
   {
    "text": "سمعت صوت ضفدع بجانب البركة.",
@@ -32067,6 +32563,22 @@
    "en": "Today is the tenth day of the month.",
    "ko": "오늘은 달의 열 번째 날이야.",
    "blank": "عاشر"
+  }
+ ],
+ "w|عاشق": [
+  {
+   "text": "علي عاشق للقهوة، وسلمى تكره رائحتها.",
+   "en": "Ali is a coffee lover, and Salma hates its smell.",
+   "ko": "알리는 커피를 정말 좋아하는데, 살마는 그 냄새를 싫어해요.",
+   "blank": "عاشق",
+   "src": "made"
+  },
+  {
+   "text": "نور عاشقة للموسيقى، فتسمعها طوال طريق العودة.",
+   "en": "Nour loves music, so she listens to it all the way home.",
+   "ko": "누르는 음악을 무척 좋아해서 집에 오는 내내 들어요.",
+   "blank": "عاشقة",
+   "src": "made"
   }
  ],
  "w|عاصف": [
@@ -35157,6 +35669,22 @@
    "en": "Today there are clouds in the sky.",
    "ko": "오늘 하늘에 구름이 있다.",
    "blank": "غيم"
+  }
+ ],
+ "w|غيور": [
+  {
+   "text": "ظنت سلمى أن أخاها علي غيور من نجاحها في العمل.",
+   "en": "Salma thought her brother Ali was jealous of her success at work.",
+   "ko": "살마는 동생 알리가 자기가 직장에서 성공한 걸 질투한다고 생각했어요.",
+   "blank": "غيور",
+   "src": "made"
+  },
+  {
+   "text": "قال زميل نور مازحا إنه غيور من مكتبها الجديد.",
+   "en": "Nour's colleague joked that he was jealous of her new desk.",
+   "ko": "누르의 동료는 누르의 새 책상이 샘난다고 농담했어요.",
+   "blank": "غيور",
+   "src": "made"
   }
  ],
  "w|ف": [
@@ -42815,6 +43343,22 @@
    "blank": "محاولة"
   }
  ],
+ "w|محبة": [
+  {
+   "text": "رغم الخلاف، كانت المحبة بين علي وأخته أقوى من أي شيء.",
+   "en": "Despite the quarrel, the love between Ali and his sister was stronger than anything.",
+   "ko": "다퉜어도 알리와 누나 사이의 정은 무엇보다 강했어요.",
+   "blank": "المحبة",
+   "src": "made"
+  },
+  {
+   "text": "استقبلت والدة نور ابنتها بمحبة كما تفعل كل مساء.",
+   "en": "Nour's mother welcomed her daughter warmly, as she does every evening.",
+   "ko": "누르의 엄마는 매일 저녁처럼 다정하게 딸을 맞았어요.",
+   "blank": "بمحبة",
+   "src": "made"
+  }
+ ],
  "w|محبط": [
   {
    "text": "أنا محبط من النتيجة.",
@@ -45979,6 +46523,22 @@
    "src": "made"
   }
  ],
+ "w|معاناة": [
+  {
+   "text": "لم تعرف سلمى شيئا عن معاناة علي في الأشهر الماضية.",
+   "en": "Salma knew nothing about what Ali had been going through over the past months.",
+   "ko": "살마는 지난 몇 달 동안 알리가 겪은 고생을 전혀 몰랐어요.",
+   "blank": "معاناة",
+   "src": "made"
+  },
+  {
+   "text": "تبدأ معاناة نور اليومية في زحمة الحافلة صباحا.",
+   "en": "Nour's daily struggle begins in the crowded bus each morning.",
+   "ko": "누르의 하루 고생은 아침마다 붐비는 버스에서 시작돼요.",
+   "blank": "معاناة",
+   "src": "made"
+  }
+ ],
  "w|معبد": [
   {
    "text": "دخلت معبد قديم في الهند.",
@@ -46401,6 +46961,22 @@
    "en": "The Maghrib prayer begins after sunset.",
    "ko": "마그리브 기도는 해가 진 후에 시작된다.",
    "blank": "المغرب"
+  }
+ ],
+ "w|مغرم": [
+  {
+   "text": "اكتشف علي أن أخته مغرمة بزميلها، ففهم سبب انشغالها.",
+   "en": "Ali found out his sister had a crush on her colleague, and understood why she was so preoccupied.",
+   "ko": "알리는 누나가 동료에게 반했다는 걸 알고 왜 그렇게 바빴는지 이해했어요.",
+   "blank": "مغرمة",
+   "src": "made"
+  },
+  {
+   "text": "جار نور مغرم بزراعة الورود على شرفته.",
+   "en": "Nour's neighbor is passionate about growing roses on his balcony.",
+   "ko": "누르의 이웃은 발코니에서 장미 키우는 데 푹 빠져 있어요.",
+   "blank": "مغرم",
+   "src": "made"
   }
  ],
  "w|مغرور": [
@@ -49469,6 +50045,22 @@
    "blank": "نبيذ"
   }
  ],
+ "w|نبيل": [
+  {
+   "text": "تصرف علي بشكل نبيل واعتذر لأخته أولا رغم أنه لم يخطئ.",
+   "en": "Ali behaved nobly and apologized to his sister first, even though he hadn't done anything wrong.",
+   "ko": "알리는 잘못한 게 없는데도 품위 있게 먼저 누나에게 사과했어요.",
+   "blank": "نبيل",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت نور جارها العجوز في حمل الأكياس، وهذا تصرف نبيل منها.",
+   "en": "Nour helped her elderly neighbor carry his bags, which was a kind thing of her to do.",
+   "ko": "누르는 나이 든 이웃의 짐을 들어 줬어요. 참 따뜻한 행동이었어요.",
+   "blank": "نبيل",
+   "src": "made"
+  }
+ ],
  "w|نتيجة": [
   {
    "text": "ظهرت نتيجة الامتحان اليوم.",
@@ -50459,6 +51051,22 @@
    "blank": "نعم"
   }
  ],
+ "w|نعمة": [
+  {
+   "text": "قالت أم علي إن وجود الإخوة في حياة الإنسان نعمة كبيرة.",
+   "en": "Ali's mother said that having siblings in your life is a great blessing.",
+   "ko": "알리의 엄마는 형제가 있다는 건 큰 축복이라고 말했어요.",
+   "blank": "نعمة",
+   "src": "made"
+  },
+  {
+   "text": "قالت نور إن فنجان القهوة الهادئ قبل العمل نعمة حقيقية.",
+   "en": "Nour said a quiet cup of coffee before work is a real blessing.",
+   "ko": "누르는 출근 전 조용히 마시는 커피 한 잔이 정말 축복이라고 했어요.",
+   "blank": "نعمة",
+   "src": "made"
+  }
+ ],
  "w|نعناع": [
   {
    "text": "أحب شاي نعناع بعد الطعام.",
@@ -50709,6 +51317,38 @@
    "en": "He conveyed the news quickly.",
    "ko": "소식을 빠르게 전달했다.",
    "blank": "نقل"
+  }
+ ],
+ "w|نقلة": [
+  {
+   "text": "كان انتقال سلمى إلى مدينة أخرى نقلة كبيرة في حياة العائلة.",
+   "en": "Salma's move to another city was a big shift in the family's life.",
+   "ko": "살마가 다른 도시로 이사한 건 가족에게 큰 변화였어요.",
+   "blank": "نقلة",
+   "src": "made"
+  },
+  {
+   "text": "كان العمل من البيت نقلة جديدة في روتين نور.",
+   "en": "Working from home was a new shift in Nour's routine.",
+   "ko": "재택근무는 누르의 일상에 새로운 변화였어요.",
+   "blank": "نقلة",
+   "src": "made"
+  }
+ ],
+ "w|نقم": [
+  {
+   "text": "نقم علي على أخته لأنها أخبرت والديه بسره.",
+   "en": "Ali resented his sister because she told their parents his secret.",
+   "ko": "알리는 누나가 부모님께 자기 비밀을 말해서 원망했어요.",
+   "blank": "نقم",
+   "src": "made"
+  },
+  {
+   "text": "نقمت نور على المطر الذي أفسد شعرها في الطريق.",
+   "en": "Nour cursed the rain that ruined her hair on the way.",
+   "ko": "누르는 오는 길에 머리를 망쳐 놓은 비가 원망스러웠어요.",
+   "blank": "نقمت",
+   "src": "made"
   }
  ],
  "w|نقود": [

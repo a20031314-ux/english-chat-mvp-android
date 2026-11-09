@@ -311,6 +311,22 @@
    "blank": "अजीब"
   }
  ],
+ "w|अज्ञात": [
+  {
+   "text": "एक अज्ञात व्यक्ति ने फ़ोन करके बाज़ार में लावारिस बैग की सूचना दी।",
+   "en": "An unknown person called to report an unattended bag in the market.",
+   "ko": "신원 미상의 사람이 전화로 시장에 주인 없는 가방이 있다고 알렸어요.",
+   "blank": "अज्ञात",
+   "src": "made"
+  },
+  {
+   "text": "कविता के फ़ोन पर एक अज्ञात नंबर से बार-बार कॉल आ रही थी।",
+   "en": "Kavita kept getting calls on her phone from an unknown number.",
+   "ko": "카비타 휴대폰으로 모르는 번호에서 계속 전화가 왔어요.",
+   "blank": "अज्ञात",
+   "src": "made"
+  }
+ ],
  "w|अट्ठाईस": [
   {
    "text": "फ़रवरी में कभी अट्ठाईस दिन होते हैं।",
@@ -351,6 +367,22 @@
    "en": "Use less oil when frying an egg.",
    "ko": "계란 프라이할 때 기름을 적게 써.",
    "blank": "अंडा"
+  }
+ ],
+ "w|अतः": [
+  {
+   "text": "सबूत पक्के नहीं थे, अतः पुलिस ने उस आदमी को छोड़ दिया।",
+   "en": "The evidence was not solid, so the police let the man go.",
+   "ko": "증거가 확실하지 않아서 경찰은 그 남자를 풀어 줬어요.",
+   "blank": "अतः",
+   "src": "made"
+  },
+  {
+   "text": "मेट्रो बंद थी, अतः कविता ऑटो से दफ़्तर गई।",
+   "en": "The metro was shut, so Kavita went to the office by auto-rickshaw.",
+   "ko": "지하철이 멈춰서 카비타는 오토릭샤를 타고 출근했어요.",
+   "blank": "अतः",
+   "src": "made"
   }
  ],
  "w|अंत": [
@@ -422,6 +454,22 @@
    "en": "Anjali's father works under the government's water department.",
    "ko": "안잘리의 아빠는 정부 수도국 소속으로 일하세요.",
    "blank": "अंतर्गत",
+   "src": "made"
+  }
+ ],
+ "w|अति": [
+  {
+   "text": "सुनील ने समझाया कि यह मामला अति संवेदनशील है।",
+   "en": "Sunil explained that this case is extremely sensitive.",
+   "ko": "수닐은 이 사건이 매우 민감하다고 설명했어요.",
+   "blank": "अति",
+   "src": "made"
+  },
+  {
+   "text": "दोपहर की धूप अति तेज़ थी, इसलिए कविता छाता लेकर निकली।",
+   "en": "The afternoon sun was extremely strong, so Kavita went out with an umbrella.",
+   "ko": "오후 햇볕이 너무 강해서 카비타는 양산을 들고 나갔어요.",
+   "blank": "अति",
    "src": "made"
   }
  ],
@@ -635,6 +683,22 @@
    "en": "Most shops stay closed on Sunday.",
    "ko": "대부분의 가게는 일요일에 문을 닫아.",
    "blank": "अधिकांश"
+  }
+ ],
+ "w|अधिनियम": [
+  {
+   "text": "नए यातायात अधिनियम के तहत जुर्माना बढ़ा दिया गया है।",
+   "en": "Under the new traffic act, the fines have been raised.",
+   "ko": "새 교통법에 따라 벌금이 올랐어요.",
+   "blank": "अधिनियम",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार के अनुसार नया उपभोक्ता अधिनियम ग्राहकों को ज़्यादा अधिकार देता है।",
+   "en": "According to the newspaper, the new consumer act gives customers more rights.",
+   "ko": "신문에 따르면 새 소비자법은 소비자에게 더 많은 권리를 줘요.",
+   "blank": "अधिनियम",
+   "src": "made"
   }
  ],
  "w|अधूरा": [
@@ -1181,6 +1245,22 @@
    "blank": "अभियान"
   }
  ],
+ "w|अभिव्यक्ति": [
+  {
+   "text": "सुनील ने छात्रों से कहा कि शांतिपूर्ण प्रदर्शन अभिव्यक्ति की आज़ादी का हिस्सा है।",
+   "en": "Sunil told the students that peaceful protest is part of freedom of expression.",
+   "ko": "수닐은 학생들에게 평화로운 시위는 표현의 자유에 속한다고 말했어요.",
+   "blank": "अभिव्यक्ति",
+   "src": "made"
+  },
+  {
+   "text": "कविता के लिए चित्र बनाना अपनी भावनाओं की अभिव्यक्ति का तरीक़ा है।",
+   "en": "For Kavita, drawing is a way of expressing her feelings.",
+   "ko": "카비타에게 그림 그리기는 감정을 표현하는 방법이에요.",
+   "blank": "अभिव्यक्ति",
+   "src": "made"
+  }
+ ],
  "w|अभी": [
   {
    "text": "अभी मत जाओ, चाय बची है।",
@@ -1429,6 +1509,22 @@
    "blank": "अलविदा"
   }
  ],
+ "w|अवतार": [
+  {
+   "text": "मरम्मत के बाद पुराना थाना एक नए अवतार में दिख रहा है।",
+   "en": "After the repairs, the old police station looks like it has a whole new avatar.",
+   "ko": "수리 뒤 낡은 경찰서는 완전히 새 모습이 됐어요.",
+   "blank": "अवतार",
+   "src": "made"
+  },
+  {
+   "text": "कविता को अपने पसंदीदा ऐप का नया अवतार ज़रा भी पसंद नहीं आया।",
+   "en": "Kavita didn't like the new avatar of her favourite app at all.",
+   "ko": "카비타는 좋아하던 앱의 새 모습이 하나도 마음에 들지 않았어요.",
+   "blank": "अवतार",
+   "src": "made"
+  }
+ ],
  "w|अवधि": [
   {
    "text": "कोर्स की अवधि छह महीने है।",
@@ -1583,6 +1679,22 @@
    "en": "With extraordinary effort the goal was met.",
    "ko": "비범한 노력으로 목표를 이뤘어.",
    "blank": "असाधारण"
+  }
+ ],
+ "w|अस्तित्व": [
+  {
+   "text": "सुनील को उस कंपनी के अस्तित्व पर ही शक था, क्योंकि उसका कोई दफ़्तर नहीं मिला।",
+   "en": "Sunil doubted the company even existed, since no office of it could be found.",
+   "ko": "수닐은 사무실이 하나도 없어서 그 회사가 실제로 있는지부터 의심했어요.",
+   "blank": "अस्तित्व",
+   "src": "made"
+  },
+  {
+   "text": "दादी कहती हैं कि मोहल्ले का पुराना तालाब अब अस्तित्व में ही नहीं है।",
+   "en": "Grandma says the neighbourhood's old pond no longer even exists.",
+   "ko": "할머니는 동네의 옛 연못이 이제는 아예 없어졌다고 해요.",
+   "blank": "अस्तित्व",
+   "src": "made"
   }
  ],
  "w|अस्पताल": [
@@ -1981,6 +2093,22 @@
    "blank": "आठवाँ"
   }
  ],
+ "w|आतंकवाद": [
+  {
+   "text": "थाने में आतंकवाद से निपटने पर एक प्रशिक्षण शिविर लगा।",
+   "en": "A training camp on dealing with terrorism was held at the station.",
+   "ko": "경찰서에서 테러 대응 훈련 캠프가 열렸어요.",
+   "blank": "आतंकवाद",
+   "src": "made"
+  },
+  {
+   "text": "टीवी पर एक विशेषज्ञ आतंकवाद के ख़िलाफ़ सरकार की नई नीति समझा रहे थे।",
+   "en": "On TV an expert was explaining the government's new policy against terrorism.",
+   "ko": "텔레비전에서 한 전문가가 테러에 맞선 정부의 새 정책을 설명하고 있었어요.",
+   "blank": "आतंकवाद",
+   "src": "made"
+  }
+ ],
  "w|आतंकवादी": [
   {
    "text": "इस नाटक में करण एक ऐसे आतंकवादी का रोल करता है जो आख़िर में हथियार छोड़ देता है।",
@@ -1994,6 +2122,38 @@
    "en": "The TV news said the police had caught a terrorist near the border.",
    "ko": "텔레비전 뉴스에서 경찰이 국경 근처에서 테러범을 붙잡았다고 했어요.",
    "blank": "आतंकवादी",
+   "src": "made"
+  }
+ ],
+ "w|आतंकी": [
+  {
+   "text": "अख़बार के मुताबिक़ पकड़ा गया आतंकी कई सालों से फ़रार था।",
+   "en": "According to the newspaper, the captured terrorist had been on the run for several years.",
+   "ko": "신문에 따르면 붙잡힌 테러범은 여러 해 동안 도주 중이었어요.",
+   "blank": "आतंकी",
+   "src": "made"
+  },
+  {
+   "text": "रेडियो पर ख़बर आई कि सीमा के पास एक आतंकी पकड़ा गया।",
+   "en": "The radio reported that a terrorist had been caught near the border.",
+   "ko": "라디오에서 국경 근처에서 테러범이 붙잡혔다는 소식이 나왔어요.",
+   "blank": "आतंकी",
+   "src": "made"
+  }
+ ],
+ "w|आत्महत्या": [
+  {
+   "text": "सुनील ने बताया कि आत्महत्या के मामलों की जाँच बहुत सावधानी से होती है।",
+   "en": "Sunil explained that suicide cases are investigated with great care.",
+   "ko": "수닐은 자살 사건은 아주 신중하게 조사한다고 설명했어요.",
+   "blank": "आत्महत्या",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने अख़बार में किसानों की आत्महत्या पर एक गंभीर रिपोर्ट पढ़ी।",
+   "en": "Kavita read a serious report in the newspaper on farmer suicides.",
+   "ko": "카비타는 신문에서 농민 자살에 관한 무거운 기사를 읽었어요.",
+   "blank": "आत्महत्या",
    "src": "made"
   }
  ],
@@ -3697,6 +3857,22 @@
    "blank": "उत्तर"
   }
  ],
+ "w|उत्पन्न": [
+  {
+   "text": "पार्किंग को लेकर मोहल्ले में तनाव उत्पन्न हो गया था।",
+   "en": "Tension had arisen in the neighbourhood over parking.",
+   "ko": "주차 문제로 동네에 긴장이 생겼어요.",
+   "blank": "उत्पन्न",
+   "src": "made"
+  },
+  {
+   "text": "बिजली गुल होने से दफ़्तर में थोड़ी परेशानी उत्पन्न हो गई।",
+   "en": "The power cut caused a little trouble at the office.",
+   "ko": "정전 때문에 사무실에 약간 문제가 생겼어요.",
+   "blank": "उत्पन्न",
+   "src": "made"
+  }
+ ],
  "w|उत्पाद": [
   {
    "text": "यह उत्पाद स्थानीय बाज़ार में मिलता है।",
@@ -3837,6 +4013,22 @@
    "en": "The teacher wrote an example on the board.",
    "ko": "선생님이 칠판에 예시를 썼어.",
    "blank": "उदाहरण"
+  }
+ ],
+ "w|उद्घाटन": [
+  {
+   "text": "ज़िले के अधिकारी ने नए महिला थाने का उद्घाटन किया।",
+   "en": "The district official inaugurated the new women's police station.",
+   "ko": "군 관리가 새 여성 경찰서 개소식을 했어요.",
+   "blank": "उद्घाटन",
+   "src": "made"
+  },
+  {
+   "text": "कविता के दफ़्तर के पास कल एक नए पुल का उद्घाटन हुआ।",
+   "en": "A new bridge near Kavita's office was opened yesterday.",
+   "ko": "어제 카비타 회사 근처에서 새 다리 개통식이 있었어요.",
+   "blank": "उद्घाटन",
+   "src": "made"
   }
  ],
  "w|उद्देश्य": [
@@ -4051,6 +4243,22 @@
    "en": "Being present at the meeting is necessary.",
    "ko": "회의에 참석하는 게 중요해.",
    "blank": "उपस्थित"
+  }
+ ],
+ "w|उपाध्यक्ष": [
+  {
+   "text": "व्यापार मंडल के उपाध्यक्ष चोरी की रिपोर्ट लिखवाने ख़ुद थाने पहुँचे।",
+   "en": "The vice-president of the traders' association came to the station himself to file a theft report.",
+   "ko": "상인회 부회장이 도난 신고를 하러 직접 경찰서에 왔어요.",
+   "blank": "उपाध्यक्ष",
+   "src": "made"
+  },
+  {
+   "text": "हाउसिंग सोसाइटी के उपाध्यक्ष ने शाम को सबकी बैठक बुलाई।",
+   "en": "The vice-president of the housing society called a meeting of everyone in the evening.",
+   "ko": "아파트 주민회 부회장이 저녁에 모두를 모아 회의를 열었어요.",
+   "blank": "उपाध्यक्ष",
+   "src": "made"
   }
  ],
  "w|उपाय": [
@@ -5363,6 +5571,22 @@
    "src": "made"
   }
  ],
+ "w|क़ब्ज़ा": [
+  {
+   "text": "एक बुज़ुर्ग महिला ने शिकायत की कि पड़ोसी ने उनकी ज़मीन पर क़ब्ज़ा कर लिया है।",
+   "en": "An elderly woman complained that her neighbour had taken over her land.",
+   "ko": "한 할머니가 이웃이 자기 땅을 차지해 버렸다고 신고했어요.",
+   "blank": "क़ब्ज़ा",
+   "src": "made"
+  },
+  {
+   "text": "कविता की गली में ठेलेवालों ने आधे फ़ुटपाथ पर क़ब्ज़ा कर रखा है।",
+   "en": "In Kavita's lane, cart vendors have taken over half the footpath.",
+   "ko": "카비타네 골목에서는 노점상들이 인도 절반을 차지하고 있어요.",
+   "blank": "क़ब्ज़ा",
+   "src": "made"
+  }
+ ],
  "w|कभी": [
   {
    "text": "क्या तुम कभी आगरा गए हो?",
@@ -6113,6 +6337,22 @@
    "en": "The new law comes next month.",
    "ko": "새 법은 다음 달에 나와.",
    "blank": "कानून"
+  }
+ ],
+ "w|कानूनी": [
+  {
+   "text": "पुलिस ने बुज़ुर्गों को मुफ़्त कानूनी सलाह प्रदान करने की योजना शुरू की।",
+   "en": "The police started a scheme to provide free legal advice to the elderly.",
+   "ko": "경찰은 어르신들에게 무료 법률 상담을 제공하는 제도를 시작했어요.",
+   "blank": "कानूनी",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने किराये का कानूनी समझौता ध्यान से पढ़कर ही दस्तख़त किए।",
+   "en": "Kavita signed the legal rental agreement only after reading it carefully.",
+   "ko": "카비타는 임대 계약서를 꼼꼼히 읽고 나서야 서명했어요.",
+   "blank": "कानूनी",
+   "src": "made"
   }
  ],
  "w|काँपना": [
@@ -7671,6 +7911,22 @@
    "blank": "कोट"
   }
  ],
+ "w|कोटि": [
+  {
+   "text": "चौराहों पर उच्च कोटि के कैमरे लगने से चोरी के मामले घटे हैं।",
+   "en": "Thefts have gone down since high-quality cameras were installed at the crossroads.",
+   "ko": "교차로에 고급 카메라를 단 뒤로 절도 사건이 줄었어요.",
+   "blank": "कोटि",
+   "src": "made"
+  },
+  {
+   "text": "दर्ज़ी ने भरोसा दिलाया कि यह कपड़ा उत्तम कोटि का है।",
+   "en": "The tailor assured her that this fabric is of the finest quality.",
+   "ko": "재단사는 이 천이 최고급이라고 장담했어요.",
+   "blank": "कोटि",
+   "src": "made"
+  }
+ ],
  "w|कोड": [
   {
    "text": "मशीन की स्क्रीन पर एक एरर कोड बार-बार आ रहा था।",
@@ -8845,6 +9101,22 @@
    "blank": "खुला"
   }
  ],
+ "w|खुलासा": [
+  {
+   "text": "फ़र्ज़ी नौकरी गिरोह का खुलासा होते ही थाने में फ़ोन बजने लगे।",
+   "en": "As soon as the fake-job racket was exposed, the phones at the station started ringing.",
+   "ko": "가짜 취업 사기단이 드러나자마자 경찰서 전화가 울리기 시작했어요.",
+   "blank": "खुलासा",
+   "src": "made"
+  },
+  {
+   "text": "रात की ख़बरों में एक बड़े घोटाले का खुलासा हुआ।",
+   "en": "A big scam was exposed on the night news.",
+   "ko": "밤 뉴스에서 큰 비리가 폭로됐어요.",
+   "blank": "खुलासा",
+   "src": "made"
+  }
+ ],
  "w|ख़ुश": [
   {
    "text": "आज मैं बहुत ख़ुश हूँ।",
@@ -9118,6 +9390,22 @@
    "en": "The bald coconut seller ties a towel on his head to keep off the sun.",
    "ko": "코코넛 파는 대머리 아저씨는 햇볕을 피하려고 수건을 머리에 둘러요.",
    "blank": "गंजा",
+   "src": "made"
+  }
+ ],
+ "w|गठन": [
+  {
+   "text": "ऑनलाइन ठगी की जाँच के लिए एक विशेष टीम का गठन किया गया।",
+   "en": "A special team was formed to investigate online fraud.",
+   "ko": "온라인 사기를 수사할 특별팀이 꾸려졌어요.",
+   "blank": "गठन",
+   "src": "made"
+  },
+  {
+   "text": "मोहल्ले की सफ़ाई के लिए महिलाओं की एक समिति का गठन हुआ।",
+   "en": "A women's committee was formed to keep the neighbourhood clean.",
+   "ko": "동네 청소를 위해 여성 위원회가 꾸려졌어요.",
+   "blank": "गठन",
    "src": "made"
   }
  ],
@@ -11387,6 +11675,22 @@
    "blank": "चर्चा"
   }
  ],
+ "w|चर्चा करना": [
+  {
+   "text": "सुनील ने टीम के साथ नए मामले पर देर तक चर्चा की।",
+   "en": "Sunil discussed the new case with his team for a long time.",
+   "ko": "수닐은 팀과 새 사건을 두고 오래 의논했어요.",
+   "blank": "चर्चा की",
+   "src": "made"
+  },
+  {
+   "text": "रात को खाने पर कविता ने माँ से छुट्टियों की योजना पर चर्चा की।",
+   "en": "At dinner, Kavita discussed the holiday plans with her mother.",
+   "ko": "저녁을 먹으며 카비타는 엄마와 휴가 계획을 의논했어요.",
+   "blank": "चर्चा की",
+   "src": "made"
+  }
+ ],
  "w|चलना": [
   {
    "text": "चलो, देर हो रही है।",
@@ -12553,6 +12857,22 @@
    "src": "made"
   }
  ],
+ "w|छवि": [
+  {
+   "text": "सुनील चाहते हैं कि लोगों के मन में पुलिस की छवि सुधरे।",
+   "en": "Sunil wants the image of the police to improve in people's minds.",
+   "ko": "수닐은 사람들 마음속 경찰의 이미지가 나아지길 바라요.",
+   "blank": "छवि",
+   "src": "made"
+  },
+  {
+   "text": "आईने में अपनी छवि देखकर कविता मुस्कराई।",
+   "en": "Kavita smiled when she saw her reflection in the mirror.",
+   "ko": "카비타는 거울에 비친 자기 모습을 보고 웃었어요.",
+   "blank": "छवि",
+   "src": "made"
+  }
+ ],
  "w|छह": [
   {
    "text": "मेज़ पर छह किताबें पड़ी हैं।",
@@ -13117,6 +13437,22 @@
    "en": "The public is upset about this decision.",
    "ko": "사람들은 이 결정에 화가 나 있어.",
    "blank": "जनता"
+  }
+ ],
+ "w|जनपद": [
+  {
+   "text": "सुनील का तबादला पास के जनपद में होने वाला है।",
+   "en": "Sunil is about to be transferred to the neighbouring district.",
+   "ko": "수닐은 곧 이웃 군으로 전근을 가요.",
+   "blank": "जनपद",
+   "src": "made"
+  },
+  {
+   "text": "कविता की मौसी पास के जनपद के एक गाँव में रहती हैं।",
+   "en": "Kavita's aunt lives in a village in the neighbouring district.",
+   "ko": "카비타의 이모는 이웃 군의 한 마을에 살아요.",
+   "blank": "जनपद",
+   "src": "made"
   }
  ],
  "w|जनवरी": [
@@ -14599,6 +14935,22 @@
    "en": "Why did you take so long?",
    "ko": "왜 이렇게 오래 걸렸어?",
    "blank": "ज़्यादा"
+  }
+ ],
+ "w|ज़्यादातर": [
+  {
+   "text": "थाने में आने वाली ज़्यादातर शिकायतें ज़मीन के झगड़ों की होती हैं।",
+   "en": "Most of the complaints that come to the station are about land disputes.",
+   "ko": "경찰서에 들어오는 신고는 대부분 땅 문제 다툼이에요.",
+   "blank": "ज़्यादातर",
+   "src": "made"
+  },
+  {
+   "text": "कविता ज़्यादातर रात का खाना ख़ुद बनाती है।",
+   "en": "Kavita mostly cooks dinner herself.",
+   "ko": "카비타는 저녁을 대개 직접 만들어요.",
+   "blank": "ज़्यादातर",
+   "src": "made"
   }
  ],
  "w|झगड़ना": [
@@ -16237,6 +16589,22 @@
    "en": "This news needs an immediate reply.",
    "ko": "이 소식에는 즉각 답변이 필요해.",
    "blank": "तत्काल"
+  }
+ ],
+ "w|तंत्र": [
+  {
+   "text": "शहर का सुरक्षा तंत्र अब कैमरों और कंट्रोल रूम से जुड़ा है।",
+   "en": "The city's security system is now linked to cameras and a control room.",
+   "ko": "도시의 보안 체계는 이제 카메라와 관제실로 연결돼 있어요.",
+   "blank": "तंत्र",
+   "src": "made"
+  },
+  {
+   "text": "शाम को कविता ने अख़बार में शिक्षा तंत्र पर एक लेख पढ़ा।",
+   "en": "In the evening Kavita read an article in the paper about the education system.",
+   "ko": "저녁에 카비타는 신문에서 교육 제도에 관한 기사를 읽었어요.",
+   "blank": "तंत्र",
+   "src": "made"
   }
  ],
  "w|तथा": [
@@ -20591,6 +20959,22 @@
    "blank": "नाम"
   }
  ],
+ "w|नामक": [
+  {
+   "text": "रमेश नामक एक दुकानदार अपनी साइकिल चोरी की शिकायत लेकर थाने आया।",
+   "en": "A shopkeeper named Ramesh came to the station to report his bicycle stolen.",
+   "ko": "라메시라는 가게 주인이 자전거 도난 신고를 하러 경찰서에 왔어요.",
+   "blank": "नामक",
+   "src": "made"
+  },
+  {
+   "text": "कविता के मोहल्ले में 'अपना बाज़ार' नामक एक नई दुकान खुली है।",
+   "en": "A new shop called 'Apna Bazaar' has opened in Kavita's neighbourhood.",
+   "ko": "카비타네 동네에 '압나 바자르'라는 새 가게가 문을 열었어요.",
+   "blank": "नामक",
+   "src": "made"
+  }
+ ],
  "w|नामुमकिन": [
   {
    "text": "इतनी तेज़ लहरों में तैरना अमित के लिए नामुमकिन था।",
@@ -24615,6 +24999,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिक्रिया": [
+  {
+   "text": "गिरफ़्तारी की ख़बर पर मोहल्ले से मिली-जुली प्रतिक्रिया आई।",
+   "en": "The news of the arrest drew a mixed reaction from the neighbourhood.",
+   "ko": "체포 소식에 동네 반응은 엇갈렸어요.",
+   "blank": "प्रतिक्रिया",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने दफ़्तर की नई योजना पर अपनी प्रतिक्रिया ईमेल से भेजी।",
+   "en": "Kavita sent her response to the office's new plan by email.",
+   "ko": "카비타는 회사의 새 계획에 대한 의견을 이메일로 보냈어요.",
+   "blank": "प्रतिक्रिया",
+   "src": "made"
+  }
+ ],
  "w|प्रतिनिधि": [
   {
    "text": "कक्षा का प्रतिनिधि चुना गया।",
@@ -24741,6 +25141,22 @@
    "en": "Mother was glad after watching the children's show.",
    "ko": "아이들 공연을 보고 엄마가 기뻐했어.",
    "blank": "प्रदर्शन"
+  }
+ ],
+ "w|प्रदान करना": [
+  {
+   "text": "पुलिस ने बुज़ुर्गों को मुफ़्त कानूनी सलाह प्रदान करने की योजना शुरू की।",
+   "en": "The police started a scheme to provide free legal advice to the elderly.",
+   "ko": "경찰은 어르신들에게 무료 법률 상담을 제공하는 제도를 시작했어요.",
+   "blank": "प्रदान करने",
+   "src": "made"
+  },
+  {
+   "text": "कविता की कंपनी कर्मचारियों को दोपहर का भोजन प्रदान करती है।",
+   "en": "Kavita's company provides lunch to its employees.",
+   "ko": "카비타의 회사는 직원들에게 점심을 제공해요.",
+   "blank": "प्रदान करती",
+   "src": "made"
   }
  ],
  "w|प्रदूषण": [
@@ -26669,6 +27085,22 @@
    "blank": "बंदरगाह"
   }
  ],
+ "w|बदल देना": [
+  {
+   "text": "नए थानेदार ने आते ही थाने का पूरा माहौल बदल दिया।",
+   "en": "The new station chief changed the whole atmosphere of the station as soon as he arrived.",
+   "ko": "새 서장은 오자마자 경찰서 분위기를 완전히 바꿔 놓았어요.",
+   "blank": "बदल दिया",
+   "src": "made"
+  },
+  {
+   "text": "अचानक हुई बारिश ने कविता का पूरा कार्यक्रम बदल दिया।",
+   "en": "The sudden rain changed Kavita's whole plan.",
+   "ko": "갑자기 내린 비 때문에 카비타의 하루 계획이 다 바뀌었어요.",
+   "blank": "बदल दिया",
+   "src": "made"
+  }
+ ],
  "w|बदलना": [
   {
    "text": "मौसम अचानक बदल गया।",
@@ -26709,6 +27141,22 @@
    "en": "Even small changes make a difference.",
    "ko": "작은 변화도 차이를 만들어.",
    "blank": "बदलाव"
+  }
+ ],
+ "w|बदले": [
+  {
+   "text": "सुनील ने साफ़ कहा कि शिकायत लिखने के बदले कोई पैसा नहीं लिया जाता।",
+   "en": "Sunil said clearly that no money is taken in exchange for writing up a complaint.",
+   "ko": "수닐은 신고를 접수해 주는 대가로 돈을 받지 않는다고 분명히 말했어요.",
+   "blank": "बदले",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने पुरानी किताबों के बदले दुकानदार से नई कॉपियाँ ले लीं।",
+   "en": "Kavita got new notebooks from the shopkeeper in exchange for her old books.",
+   "ko": "카비타는 헌책을 주고 가게에서 새 공책을 받았어요.",
+   "blank": "बदले",
+   "src": "made"
   }
  ],
  "w|बदसूरत": [
@@ -27889,6 +28337,22 @@
    "en": "The electricity bill has to be paid tomorrow.",
    "ko": "전기 요금은 내일 내야 해.",
    "blank": "बिल"
+  }
+ ],
+ "w|बिलकुल": [
+  {
+   "text": "थाने में सुनील बिलकुल शांत बैठकर रिपोर्ट लिख रहे थे।",
+   "en": "Sunil was sitting completely calm at the police station, writing a report.",
+   "ko": "경찰서에서 수닐은 아주 차분하게 앉아 보고서를 쓰고 있었어요.",
+   "blank": "बिलकुल",
+   "src": "made"
+  },
+  {
+   "text": "सुबह कविता बिलकुल समय पर उठी और चाय चढ़ा दी।",
+   "en": "In the morning Kavita got up exactly on time and put the tea on.",
+   "ko": "아침에 카비타는 딱 제시간에 일어나 차를 올렸어요.",
+   "blank": "बिलकुल",
+   "src": "made"
   }
  ],
  "w|बिल्कुल": [
@@ -34057,6 +34521,22 @@
    "blank": "रेलगाड़ी"
   }
  ],
+ "w|रैली": [
+  {
+   "text": "कल की रैली के लिए आसपास के थानों से भी सिपाही बुलाए गए हैं।",
+   "en": "Constables have been called in from nearby stations too for tomorrow's rally.",
+   "ko": "내일 집회 때문에 근처 경찰서에서도 경찰관들을 불렀어요.",
+   "blank": "रैली",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर से लौटते समय कविता की बस एक रैली की वजह से अटक गई।",
+   "en": "On the way back from work, Kavita's bus got stuck because of a rally.",
+   "ko": "퇴근길에 카비타가 탄 버스가 집회 때문에 멈춰 섰어요.",
+   "blank": "रैली",
+   "src": "made"
+  }
+ ],
  "w|रोक": [
   {
    "text": "गाड़ी पर रोक लगा दी गई।",
@@ -34627,6 +35107,22 @@
    "en": "He got a check for one lakh.",
    "ko": "그는 십만 루피짜리 수표를 받았어.",
    "blank": "लाख"
+  }
+ ],
+ "w|लाखों": [
+  {
+   "text": "ठगों के गिरोह ने भोले लोगों से लाखों रुपये ऐंठ लिए थे।",
+   "en": "A gang of swindlers had extorted lakhs of rupees from trusting people.",
+   "ko": "사기단이 순진한 사람들에게서 수십만 루피를 뜯어냈어요.",
+   "blank": "लाखों",
+   "src": "made"
+  },
+  {
+   "text": "कविता के शहर में लाखों लोग रोज़ बस से सफ़र करते हैं।",
+   "en": "In Kavita's city, millions of people travel by bus every day.",
+   "ko": "카비타가 사는 도시에서는 날마다 수십만 명이 버스를 타요.",
+   "blank": "लाखों",
+   "src": "made"
   }
  ],
  "w|लागत": [
@@ -35649,6 +36145,22 @@
    "blank": "विचार"
   }
  ],
+ "w|विचारधारा": [
+  {
+   "text": "थानेदार बोले कि पुलिस का काम किसी विचारधारा का पक्ष लेना नहीं, कानून लागू करना है।",
+   "en": "The station chief said the job of the police is not to take the side of any ideology but to enforce the law.",
+   "ko": "서장은 경찰의 일은 어떤 이념 편을 드는 게 아니라 법을 집행하는 것이라고 했어요.",
+   "blank": "विचारधारा",
+   "src": "made"
+  },
+  {
+   "text": "कविता और उसके भाई की राजनीतिक विचारधारा एकदम अलग है।",
+   "en": "Kavita and her brother have completely different political ideologies.",
+   "ko": "카비타와 오빠는 정치 성향이 완전히 달라요.",
+   "blank": "विचारधारा",
+   "src": "made"
+  }
+ ],
  "w|विजय": [
   {
    "text": "टीम ने बड़ी विजय हासिल की।",
@@ -35879,6 +36391,22 @@
    "en": "He always speaks in a humble tone.",
    "ko": "그는 항상 공손한 말투로 말해.",
    "blank": "विनम्र"
+  }
+ ],
+ "w|विपक्ष": [
+  {
+   "text": "विपक्ष के कुछ नेताओं ने थाने के बाहर धरना दिया।",
+   "en": "Some opposition leaders staged a sit-in outside the police station.",
+   "ko": "야당 지도자 몇 명이 경찰서 앞에서 연좌 농성을 했어요.",
+   "blank": "विपक्ष",
+   "src": "made"
+  },
+  {
+   "text": "टीवी पर सरकार और विपक्ष के नेताओं के बीच गरमागरम बहस चल रही थी।",
+   "en": "A heated debate between government and opposition leaders was on TV.",
+   "ko": "텔레비전에서는 여당과 야당 정치인들이 열띤 토론을 하고 있었어요.",
+   "blank": "विपक्ष",
+   "src": "made"
   }
  ],
  "w|विपरीत": [
@@ -36195,6 +36723,22 @@
    "en": "The children picked today's topic.",
    "ko": "오늘 주제는 아이들이 골랐어.",
    "blank": "विषय"
+  }
+ ],
+ "w|विषय में": [
+  {
+   "text": "सुनील ने गवाह से घटना के विषय में कुछ और सवाल पूछे।",
+   "en": "Sunil asked the witness a few more questions about the incident.",
+   "ko": "수닐은 목격자에게 사건에 대해 몇 가지를 더 물었어요.",
+   "blank": "विषय में",
+   "src": "made"
+  },
+  {
+   "text": "लंच में सहकर्मियों ने नई फ़िल्म के विषय में बातें कीं।",
+   "en": "At lunch her colleagues talked about the new film.",
+   "ko": "점심때 동료들은 새 영화 이야기를 했어요.",
+   "blank": "विषय में",
+   "src": "made"
   }
  ],
  "w|विस्तार": [
@@ -37675,6 +38219,22 @@
    "blank": "संक्रमण"
   }
  ],
+ "w|सक्षम": [
+  {
+   "text": "नई महिला कांस्टेबल हर तरह की स्थिति संभालने में सक्षम है।",
+   "en": "The new woman constable is capable of handling every kind of situation.",
+   "ko": "새로 온 여성 경관은 어떤 상황이든 감당할 수 있어요.",
+   "blank": "सक्षम",
+   "src": "made"
+  },
+  {
+   "text": "कविता की छोटी बहन अब अकेले स्कूल जाने में सक्षम है।",
+   "en": "Kavita's little sister is now able to go to school on her own.",
+   "ko": "카비타의 여동생은 이제 혼자 학교에 갈 수 있어요.",
+   "blank": "सक्षम",
+   "src": "made"
+  }
+ ],
  "w|सख़्त": [
   {
    "text": "शिक्षक नियमों में बहुत सख़्त हैं।",
@@ -38447,6 +39007,22 @@
    "en": "His patience held the family together.",
    "ko": "그의 인내가 가족을 지탱했어.",
    "blank": "सब्र"
+  }
+ ],
+ "w|सब्सिडी": [
+  {
+   "text": "खाद पर सब्सिडी न मिलने की शिकायत लेकर कुछ किसान थाने पहुँचे।",
+   "en": "A few farmers came to the station complaining that they had not received the fertiliser subsidy.",
+   "ko": "농부 몇 명이 비료 보조금을 못 받았다며 경찰서에 찾아왔어요.",
+   "blank": "सब्सिडी",
+   "src": "made"
+  },
+  {
+   "text": "रसोई गैस की सब्सिडी इस महीने कविता के खाते में आ गई।",
+   "en": "The cooking gas subsidy reached Kavita's account this month.",
+   "ko": "이번 달 취사용 가스 보조금이 카비타 계좌에 들어왔어요.",
+   "blank": "सब्सिडी",
+   "src": "made"
   }
  ],
  "w|संभव": [
@@ -39705,6 +40281,22 @@
    "blank": "साथी"
   }
  ],
+ "w|साधना": [
+  {
+   "text": "ड्यूटी से पहले सुनील रोज़ सुबह योग साधना करते हैं।",
+   "en": "Before duty, Sunil practises yoga every morning.",
+   "ko": "수닐은 근무 전에 매일 아침 요가 수련을 해요.",
+   "blank": "साधना",
+   "src": "made"
+  },
+  {
+   "text": "कविता की माँ बरसों से शास्त्रीय संगीत की साधना कर रही हैं।",
+   "en": "Kavita's mother has been devotedly practising classical music for years.",
+   "ko": "카비타의 엄마는 여러 해째 고전 음악 수련을 하고 있어요.",
+   "blank": "साधना",
+   "src": "made"
+  }
+ ],
  "w|साधारण": [
   {
    "text": "आज का खाना बिलकुल साधारण था।",
@@ -40173,6 +40765,22 @@
    "en": "Guests will come in the first week of September.",
    "ko": "손님은 구월 첫째 주에 올 거야.",
    "blank": "सितंबर"
+  }
+ ],
+ "w|सिद्ध": [
+  {
+   "text": "जाँच के बाद वह युवक निर्दोष सिद्ध हुआ और उसे घर भेज दिया गया।",
+   "en": "After the investigation the young man was proved innocent and sent home.",
+   "ko": "조사 끝에 그 청년은 무죄로 밝혀져 집으로 돌아갔어요.",
+   "blank": "सिद्ध",
+   "src": "made"
+  },
+  {
+   "text": "दादी के घरेलू नुस्ख़े कई बार सही सिद्ध हुए हैं।",
+   "en": "Grandma's home remedies have proved right many times.",
+   "ko": "할머니의 민간요법은 여러 번 옳은 것으로 드러났어요.",
+   "blank": "सिद्ध",
+   "src": "made"
   }
  ],
  "w|सिनेमा": [
@@ -41755,6 +42363,22 @@
    "blank": "हज़ार"
   }
  ],
+ "w|हज़ारों": [
+  {
+   "text": "पुराने मामलों की हज़ारों फ़ाइलें थाने के गोदाम में पड़ी हैं।",
+   "en": "Thousands of files from old cases are lying in the station's storeroom.",
+   "ko": "옛 사건 서류 수천 건이 경찰서 창고에 쌓여 있어요.",
+   "blank": "हज़ारों",
+   "src": "made"
+  },
+  {
+   "text": "स्टेशन पर रोज़ हज़ारों लोग लोकल ट्रेन पकड़ते हैं।",
+   "en": "Thousands of people catch the local train at the station every day.",
+   "ko": "역에서는 날마다 수천 명이 통근 열차를 타요.",
+   "blank": "हज़ारों",
+   "src": "made"
+  }
+ ],
  "w|हटना": [
   {
    "text": "रास्ते से थोड़ा हटना पड़ेगा।",
@@ -42408,6 +43032,22 @@
    "en": "He was hesitating to tell the truth.",
    "ko": "그는 진실을 말하길 망설이고 있었어요.",
    "blank": "हिचकिचा",
+   "src": "made"
+  }
+ ],
+ "w|हित": [
+  {
+   "text": "सुनील ने कहा कि जनता के हित में यह फ़ैसला ज़रूरी था।",
+   "en": "Sunil said this decision was necessary in the public interest.",
+   "ko": "수닐은 이 결정이 시민의 이익을 위해 꼭 필요했다고 말했어요.",
+   "blank": "हित",
+   "src": "made"
+  },
+  {
+   "text": "कविता की माँ कहती हैं कि बचत करना पूरे परिवार के हित में है।",
+   "en": "Kavita's mother says saving money is in the whole family's interest.",
+   "ko": "카비타의 엄마는 저축이 온 가족에게 이롭다고 해요.",
+   "blank": "हित",
    "src": "made"
   }
  ],

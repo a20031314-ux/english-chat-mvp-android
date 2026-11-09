@@ -431,6 +431,22 @@
    "blank": "上"
   }
  ],
+ "w|上升": [
+  {
+   "text": "飞机慢慢上升，赵磊看着窗外的城市越变越小。",
+   "en": "As the plane slowly climbed, Zhao Lei watched the city outside the window grow smaller and smaller.",
+   "ko": "비행기가 천천히 올라가자 자오레이는 창밖 도시가 점점 작아지는 걸 봤어요.",
+   "blank": "上升",
+   "src": "made"
+  },
+  {
+   "text": "最近菜价一直在上升，林静买菜时都要算一算。",
+   "en": "Vegetable prices have kept rising lately, so Lin Jing does the math whenever she shops.",
+   "ko": "요즘 채소값이 계속 올라서 린징은 장 볼 때마다 계산을 해 봐요.",
+   "blank": "上升",
+   "src": "made"
+  }
+ ],
  "w|上去": [
   {
    "text": "快上去。",
@@ -1129,6 +1145,22 @@
    "blank": "专家"
   }
  ],
+ "w|专门": [
+  {
+   "text": "赵磊的妈妈专门开车来机场接他。",
+   "en": "Zhao Lei's mom drove to the airport especially to pick him up.",
+   "ko": "자오레이 엄마가 일부러 차를 몰고 공항에 데리러 왔어요.",
+   "blank": "专门",
+   "src": "made"
+  },
+  {
+   "text": "林静专门早起了半个小时，给家里人做早饭。",
+   "en": "Lin Jing got up half an hour early specially to make breakfast for the family.",
+   "ko": "린징은 가족에게 아침을 해 주려고 일부러 삼십 분 일찍 일어났어요.",
+   "blank": "专门",
+   "src": "made"
+  }
+ ],
  "w|世界": [
   {
    "text": "这世界真小。",
@@ -1155,6 +1187,22 @@
    "en": "A new century has begun.",
    "ko": "새로운 세기가 시작됐어.",
    "blank": "世纪"
+  }
+ ],
+ "w|东": [
+  {
+   "text": "到达大厅在航站楼往东走的那一头，赵磊顺着指示牌走了过去。",
+   "en": "The arrivals hall is at the far end heading east in the terminal, and Zhao Lei followed the signs there.",
+   "ko": "도착 홀은 터미널에서 동쪽으로 간 끝에 있어서 자오레이는 안내판을 따라 걸어갔어요.",
+   "blank": "东",
+   "src": "made"
+  },
+  {
+   "text": "林静在路口往东拐了个弯，就到了菜市场。",
+   "en": "Lin Jing turned east at the intersection and reached the produce market.",
+   "ko": "린징은 사거리에서 동쪽으로 꺾어 바로 시장에 도착했어요.",
+   "blank": "东",
+   "src": "made"
   }
  ],
  "w|东西": [
@@ -1791,6 +1839,22 @@
    "en": "You need to be good and listen.",
    "ko": "얌전히 말을 잘 들어.",
    "blank": "乖乖"
+  }
+ ],
+ "w|乘客": [
+  {
+   "text": "广播里提醒所有乘客尽快登机。",
+   "en": "The announcement reminded all passengers to board as soon as possible.",
+   "ko": "안내 방송에서 모든 승객에게 서둘러 탑승하라고 알렸어요.",
+   "blank": "乘客",
+   "src": "made"
+  },
+  {
+   "text": "地铁上的乘客大多在低头看手机，林静也不例外。",
+   "en": "Most passengers on the subway were looking down at their phones, and Lin Jing was no exception.",
+   "ko": "지하철 승객 대부분이 고개를 숙이고 휴대폰을 보고 있었고 린징도 마찬가지였어요.",
+   "blank": "乘客",
+   "src": "made"
   }
  ],
  "w|九": [
@@ -5101,6 +5165,22 @@
    "src": "made"
   }
  ],
+ "w|公路": [
+  {
+   "text": "机场外面的公路堵得厉害，赵磊只好改坐地铁。",
+   "en": "The highway outside the airport was badly jammed, so Zhao Lei had to take the subway instead.",
+   "ko": "공항 밖 도로가 심하게 막혀서 자오레이는 할 수 없이 지하철로 바꿨어요.",
+   "blank": "公路",
+   "src": "made"
+  },
+  {
+   "text": "林静骑车上班要经过一条很宽的公路。",
+   "en": "Lin Jing rides her bike to work along a very wide road.",
+   "ko": "린징은 자전거로 출근할 때 아주 넓은 도로를 지나가요.",
+   "blank": "公路",
+   "src": "made"
+  }
+ ],
  "w|公里": [
   {
    "text": "学校离这里两公里。",
@@ -5899,6 +5979,22 @@
    "blank": "准备"
   }
  ],
+ "w|准确": [
+  {
+   "text": "屏幕上的登机时间很准确，赵磊一分钟也没多等。",
+   "en": "The boarding time on the screen was accurate, and Zhao Lei didn't wait a minute longer than needed.",
+   "ko": "화면의 탑승 시간이 정확해서 자오레이는 일 분도 더 기다리지 않았어요.",
+   "blank": "准确",
+   "src": "made"
+  },
+  {
+   "text": "林静的闹钟一直很准确，每天早上从来没晚响过。",
+   "en": "Lin Jing's alarm clock has always been accurate and has never gone off late.",
+   "ko": "린징의 알람 시계는 늘 정확해서 아침마다 한 번도 늦게 울린 적이 없어요.",
+   "blank": "准确",
+   "src": "made"
+  }
+ ],
  "w|几乎": [
   {
    "text": "几乎忘了。",
@@ -6069,6 +6165,22 @@
    "en": "The baby was born.",
    "ko": "아이가 태어났어.",
    "blank": "出生"
+  }
+ ],
+ "w|出租车": [
+  {
+   "text": "下了飞机，赵磊打了一辆出租车回家。",
+   "en": "After getting off the plane, Zhao Lei took a taxi home.",
+   "ko": "비행기에서 내린 뒤 자오레이는 택시를 타고 집에 갔어요.",
+   "blank": "出租车",
+   "src": "made"
+  },
+  {
+   "text": "下班时下起了大雨，林静在路边等了很久才打到出租车。",
+   "en": "It started pouring after work, and Lin Jing waited a long time by the road before getting a taxi.",
+   "ko": "퇴근할 때 큰비가 내려서 린징은 길가에서 한참 기다린 끝에 택시를 잡았어요.",
+   "blank": "出租车",
+   "src": "made"
   }
  ],
  "w|出色": [
@@ -7341,6 +7453,38 @@
    "blank": "卖"
   }
  ],
+ "w|南": [
+  {
+   "text": "这班飞机一路往南飞，赵磊坐的那一侧一直晒着太阳。",
+   "en": "The flight headed south the whole way, and the side Zhao Lei sat on was in the sun the entire time.",
+   "ko": "이 비행기는 계속 남쪽으로 날아서 자오레이가 앉은 쪽은 내내 햇볕이 들었어요.",
+   "blank": "南",
+   "src": "made"
+  },
+  {
+   "text": "从林静家往南走几分钟就是超市。",
+   "en": "A few minutes' walk south from Lin Jing's home is the supermarket.",
+   "ko": "린징네 집에서 남쪽으로 몇 분 걸어가면 바로 마트예요.",
+   "blank": "南",
+   "src": "made"
+  }
+ ],
+ "w|南方": [
+  {
+   "text": "赵磊这次是去南方出差，行李里只带了几件薄衣服。",
+   "en": "Zhao Lei is going south on a business trip this time and packed only a few light clothes.",
+   "ko": "자오레이는 이번에 남방으로 출장을 가서 짐에 얇은 옷 몇 벌만 챙겼어요.",
+   "blank": "南方",
+   "src": "made"
+  },
+  {
+   "text": "林静是南方人，到现在还不太习惯北方的冬天。",
+   "en": "Lin Jing is from the south and still isn't used to northern winters.",
+   "ko": "린징은 남방 사람이라 아직도 북방의 겨울에 잘 적응하지 못했어요.",
+   "blank": "南方",
+   "src": "made"
+  }
+ ],
  "w|博士": [
   {
    "text": "博士来了。",
@@ -7743,6 +7887,22 @@
    "en": "Attend the meeting.",
    "ko": "회의에 참석해.",
    "blank": "参加"
+  }
+ ],
+ "w|参观": [
+  {
+   "text": "赵磊趁转机的时间参观了机场里的小博物馆。",
+   "en": "Zhao Lei used his layover to visit the small museum in the airport.",
+   "ko": "자오레이는 환승 시간을 이용해 공항 안 작은 박물관을 구경했어요.",
+   "blank": "参观",
+   "src": "made"
+  },
+  {
+   "text": "下午林静带着孩子去参观了附近的科技馆。",
+   "en": "In the afternoon Lin Jing took her child to visit the nearby science museum.",
+   "ko": "오후에 린징은 아이를 데리고 근처 과학관을 견학했어요.",
+   "blank": "参观",
+   "src": "made"
   }
  ],
  "w|参议员": [
@@ -9151,6 +9311,22 @@
    "en": "Go and thank him.",
    "ko": "그 사람한테 고맙다고 해.",
    "blank": "向"
+  }
+ ],
+ "w|向前": [
+  {
+   "text": "安检队伍慢慢向前移动，赵磊终于排到了。",
+   "en": "The security line slowly moved forward, and Zhao Lei's turn finally came.",
+   "ko": "보안 검색 줄이 천천히 앞으로 움직여서 드디어 자오레이 차례가 됐어요.",
+   "blank": "向前",
+   "src": "made"
+  },
+  {
+   "text": "红灯一变绿，林静就跟着人群向前走。",
+   "en": "As soon as the light turned green, Lin Jing walked forward with the crowd.",
+   "ko": "빨간불이 초록불로 바뀌자 린징은 사람들을 따라 앞으로 걸어갔어요.",
+   "blank": "向前",
+   "src": "made"
   }
  ],
  "w|吓": [
@@ -10611,6 +10787,22 @@
    "en": "Join our team.",
    "ko": "우리 팀에 들어와.",
    "blank": "团队"
+  }
+ ],
+ "w|困扰": [
+  {
+   "text": "航班延误的问题已经困扰赵磊一整天了。",
+   "en": "The flight delay has been bothering Zhao Lei all day.",
+   "ko": "항공편 지연 문제로 자오레이는 하루 종일 골치를 앓았어요.",
+   "blank": "困扰",
+   "src": "made"
+  },
+  {
+   "text": "楼上的装修噪音已经困扰林静好几天了。",
+   "en": "The renovation noise from upstairs has been bothering Lin Jing for days.",
+   "ko": "위층 공사 소음 때문에 린징은 며칠째 괴로워요.",
+   "blank": "困扰",
+   "src": "made"
   }
  ],
  "w|困难": [
@@ -12279,6 +12471,22 @@
    "en": "He lost the chance.",
    "ko": "그는 기회를 잃었어.",
    "blank": "失去"
+  }
+ ],
+ "w|失控": [
+  {
+   "text": "一辆行李车突然失控，撞到了柱子上，幸好没有伤到人。",
+   "en": "A luggage cart suddenly went out of control and hit a pillar; luckily no one was hurt.",
+   "ko": "짐 카트 하나가 갑자기 통제를 잃고 기둥에 부딪혔는데 다행히 다친 사람은 없었어요.",
+   "blank": "失控",
+   "src": "made"
+  },
+  {
+   "text": "开会时两个同事吵得差点失控，林静赶紧出来打圆场。",
+   "en": "Two coworkers argued so hard in the meeting it nearly got out of hand, and Lin Jing quickly stepped in to smooth things over.",
+   "ko": "회의 중에 동료 둘이 다투다 거의 걷잡을 수 없게 되자 린징이 얼른 나서서 중재했어요.",
+   "blank": "失控",
+   "src": "made"
   }
  ],
  "w|失望": [
@@ -14287,6 +14495,22 @@
    "blank": "寻找"
   }
  ],
+ "w|寻求": [
+  {
+   "text": "赵磊的行李丢了，只好去服务台寻求帮助。",
+   "en": "Zhao Lei's luggage was lost, so he had to go to the service desk to seek help.",
+   "ko": "자오레이는 짐을 잃어버려서 안내 데스크에 도움을 청하러 갔어요.",
+   "blank": "寻求",
+   "src": "made"
+  },
+  {
+   "text": "工作上遇到难题，林静会向老同事寻求意见。",
+   "en": "When she hits a hard problem at work, Lin Jing seeks advice from experienced colleagues.",
+   "ko": "일하다 어려운 문제가 생기면 린징은 오래된 동료에게 의견을 구해요.",
+   "blank": "寻求",
+   "src": "made"
+  }
+ ],
  "w|导师": [
   {
    "text": "黄涛说，他的表演导师教会了他怎样用眼神说话。",
@@ -15963,6 +16187,22 @@
    "blank": "广告"
   }
  ],
+ "w|广场": [
+  {
+   "text": "机场门口有个小广场，很多人在那里等着接亲友。",
+   "en": "There's a small square at the airport entrance where many people wait to pick up friends and family.",
+   "ko": "공항 입구에 작은 광장이 있는데 많은 사람이 거기서 가족과 친구를 기다려요.",
+   "blank": "广场",
+   "src": "made"
+  },
+  {
+   "text": "傍晚林静下楼经过广场，看到一群阿姨在跳舞。",
+   "en": "In the evening Lin Jing went downstairs, passed the square, and saw a group of older women dancing.",
+   "ko": "저녁 무렵 린징은 아래층으로 내려가 광장을 지나다가 아주머니들이 춤추는 걸 봤어요.",
+   "blank": "广场",
+   "src": "made"
+  }
+ ],
  "w|庆祝": [
   {
    "text": "我们庆祝生日。",
@@ -16121,6 +16361,22 @@
    "en": "There's an empty seat in the front row.",
    "ko": "앞줄에 빈자리가 있어.",
    "blank": "座"
+  }
+ ],
+ "w|座位": [
+  {
+   "text": "赵磊的座位靠窗，可以看到外面的跑道。",
+   "en": "Zhao Lei's seat is by the window, so he can see the runway outside.",
+   "ko": "자오레이 자리는 창가라서 바깥 활주로가 보여요.",
+   "blank": "座位",
+   "src": "made"
+  },
+  {
+   "text": "早上的公交车很挤，林静没抢到座位。",
+   "en": "The morning bus was crowded, and Lin Jing didn't get a seat.",
+   "ko": "아침 버스가 붐벼서 린징은 자리를 못 잡았어요.",
+   "blank": "座位",
+   "src": "made"
   }
  ],
  "w|建立": [
@@ -18399,6 +18655,22 @@
    "src": "made"
   }
  ],
+ "w|成立": [
+  {
+   "text": "这家航空公司去年才成立，赵磊还是头一回坐。",
+   "en": "This airline was only founded last year, and it's Zhao Lei's first time flying with it.",
+   "ko": "이 항공사는 작년에야 세워져서 자오레이는 이번에 처음 타 봐요.",
+   "blank": "成立",
+   "src": "made"
+  },
+  {
+   "text": "林静住的小区刚成立了一个读书会。",
+   "en": "A book club was just set up in Lin Jing's housing complex.",
+   "ko": "린징이 사는 아파트 단지에 독서 모임이 막 생겼어요.",
+   "blank": "成立",
+   "src": "made"
+  }
+ ],
  "w|成绩": [
   {
    "text": "这个月饭店的营业成绩特别好，老板给大家发了奖金。",
@@ -19429,6 +19701,22 @@
    "en": "Please call a nurse.",
    "ko": "간호사를 불러 주세요.",
    "blank": "护士"
+  }
+ ],
+ "w|护照": [
+  {
+   "text": "赵磊翻遍了背包，才发现护照放在外套口袋里。",
+   "en": "Zhao Lei searched his whole backpack before finding his passport in his coat pocket.",
+   "ko": "자오레이는 가방을 다 뒤지고 나서야 여권이 외투 주머니에 있는 걸 알았어요.",
+   "blank": "护照",
+   "src": "made"
+  },
+  {
+   "text": "林静的护照快过期了，这个周末得去办新的。",
+   "en": "Lin Jing's passport is about to expire, so she has to get a new one this weekend.",
+   "ko": "린징의 여권이 곧 만료돼서 이번 주말에 새로 만들러 가야 해요.",
+   "blank": "护照",
+   "src": "made"
   }
  ],
  "w|报": [
@@ -21769,6 +22057,22 @@
    "blank": "旁边"
   }
  ],
+ "w|旅程": [
+  {
+   "text": "这次旅程很长，赵磊要先飞一段再转机。",
+   "en": "This journey is long; Zhao Lei has to fly one leg first and then change planes.",
+   "ko": "이번 여정은 길어서 자오레이는 먼저 한 구간을 날아간 뒤 갈아타야 해요.",
+   "blank": "旅程",
+   "src": "made"
+  },
+  {
+   "text": "晚饭后林静翻着旧照片，想起了去年夏天那段难忘的旅程。",
+   "en": "After dinner Lin Jing looked through old photos and recalled that unforgettable journey last summer.",
+   "ko": "저녁을 먹고 린징은 옛 사진을 넘기다가 작년 여름의 잊지 못할 여정을 떠올렸어요.",
+   "blank": "旅程",
+   "src": "made"
+  }
+ ],
  "w|旅行": [
   {
    "text": "我们去旅行吧。",
@@ -23221,6 +23525,22 @@
    "src": "made"
   }
  ],
+ "w|村子": [
+  {
+   "text": "赵磊在飞机上认识了一位老人，老人说这是自己头一回离开村子。",
+   "en": "On the plane Zhao Lei met an old man who said it was his first time leaving his village.",
+   "ko": "자오레이는 비행기에서 한 노인을 알게 됐는데, 노인은 마을을 떠난 게 처음이라고 했어요.",
+   "blank": "村子",
+   "src": "made"
+  },
+  {
+   "text": "林静午饭时给住在村子里的奶奶打了个电话。",
+   "en": "At lunch Lin Jing called her grandmother, who lives in the village.",
+   "ko": "린징은 점심때 마을에 사시는 할머니께 전화를 드렸어요.",
+   "blank": "村子",
+   "src": "made"
+  }
+ ],
  "w|条": [
   {
    "text": "一条路。",
@@ -23689,6 +24009,22 @@
    "en": "This file is very important.",
    "ko": "이 서류는 중요해.",
    "blank": "档案"
+  }
+ ],
+ "w|桥": [
+  {
+   "text": "飞机降落前，赵磊从窗口看到江上有一座桥。",
+   "en": "Before landing, Zhao Lei saw a bridge over the river from the window.",
+   "ko": "착륙하기 전에 자오레이는 창문으로 강 위에 놓인 다리를 봤어요.",
+   "blank": "桥",
+   "src": "made"
+  },
+  {
+   "text": "林静每天下班都要走过小区门口那座桥。",
+   "en": "Every day after work Lin Jing walks across the bridge at the entrance of her housing complex.",
+   "ko": "린징은 매일 퇴근길에 아파트 단지 입구의 그 다리를 건너요.",
+   "blank": "桥",
+   "src": "made"
   }
  ],
  "w|梦": [
@@ -24901,6 +25237,22 @@
    "src": "made"
   }
  ],
+ "w|注定": [
+  {
+   "text": "遇上这么大的雾，这趟航班注定要晚点了。",
+   "en": "With fog this thick, the flight was bound to be delayed.",
+   "ko": "이렇게 짙은 안개를 만났으니 이 항공편은 늦을 수밖에 없었어요.",
+   "blank": "注定",
+   "src": "made"
+  },
+  {
+   "text": "林静总说，有些人注定只是生活里的过客。",
+   "en": "Lin Jing always says some people are destined to be just passersby in your life.",
+   "ko": "린징은 어떤 사람들은 삶에서 그냥 스쳐 가는 사람일 운명이라고 늘 말해요.",
+   "blank": "注定",
+   "src": "made"
+  }
+ ],
  "w|注射": [
   {
    "text": "黄涛扭伤了脚，医生给他注射了一针止痛药才上台。",
@@ -25296,6 +25648,22 @@
    "en": "This piece has deep emotion, and Xiaoxue played it many times before she got the feel.",
    "ko": "이 곡은 감정이 깊어서 샤오쉐는 여러 번 쳐 보고 나서야 느낌을 잡았어요.",
    "blank": "深",
+   "src": "made"
+  }
+ ],
+ "w|深刻": [
+  {
+   "text": "头一次坐飞机时看到的云海，给赵磊留下了深刻的印象。",
+   "en": "The sea of clouds he saw on his first flight left a deep impression on Zhao Lei.",
+   "ko": "처음 비행기를 탔을 때 본 구름바다는 자오레이에게 깊은 인상을 남겼어요.",
+   "blank": "深刻",
+   "src": "made"
+  },
+  {
+   "text": "同事的那番话让林静印象深刻。",
+   "en": "What her coworker said left a deep impression on Lin Jing.",
+   "ko": "동료가 한 그 말이 린징에게 깊은 인상을 남겼어요.",
+   "blank": "深刻",
    "src": "made"
   }
  ],
@@ -25970,6 +26338,22 @@
    "en": "The sun was so strong that Xiaoxue's flip-flops looked ready to split.",
    "ko": "햇볕이 너무 세서 샤오쉐의 슬리퍼가 터질 것 같았어요.",
    "blank": "爆",
+   "src": "made"
+  }
+ ],
+ "w|爆发": [
+  {
+   "text": "听说航班取消了，候机厅里爆发出一片抱怨声。",
+   "en": "When the flight was announced as canceled, a wave of complaints broke out in the waiting hall.",
+   "ko": "항공편이 취소됐다는 말에 대합실에서 불만이 한꺼번에 터져 나왔어요.",
+   "blank": "爆发",
+   "src": "made"
+  },
+  {
+   "text": "晚上林静看新闻，说是有座火山又爆发了。",
+   "en": "In the evening Lin Jing watched the news, which said a volcano had erupted again.",
+   "ko": "저녁에 린징이 뉴스를 보니 어느 화산이 또 폭발했대요.",
+   "blank": "爆发",
    "src": "made"
   }
  ],
@@ -28439,6 +28823,22 @@
    "blank": "石头"
   }
  ],
+ "w|码头": [
+  {
+   "text": "赵磊下了飞机还要去码头坐船，才能到海岛上的酒店。",
+   "en": "After landing, Zhao Lei still has to go to the pier and take a boat to reach the hotel on the island.",
+   "ko": "자오레이는 비행기에서 내린 뒤에도 부두에 가서 배를 타야 섬에 있는 호텔에 갈 수 있어요.",
+   "blank": "码头",
+   "src": "made"
+  },
+  {
+   "text": "周末林静喜欢去江边的码头看看船。",
+   "en": "On weekends Lin Jing likes to go to the pier by the river to look at the boats.",
+   "ko": "주말이면 린징은 강가 부두에 가서 배 구경하는 걸 좋아해요.",
+   "blank": "码头",
+   "src": "made"
+  }
+ ],
  "w|砍": [
   {
    "text": "别乱砍树。",
@@ -29126,6 +29526,22 @@
    "en": "He is called a genius.",
    "ko": "그는 천재라고 불려요.",
    "blank": "称为",
+   "src": "made"
+  }
+ ],
+ "w|称呼": [
+  {
+   "text": "空姐礼貌地问赵磊该怎么称呼他。",
+   "en": "The flight attendant politely asked Zhao Lei how she should address him.",
+   "ko": "승무원이 자오레이에게 어떻게 불러 드리면 되는지 정중하게 물었어요.",
+   "blank": "称呼",
+   "src": "made"
+  },
+  {
+   "text": "新来的实习生不知道怎么称呼林静，就叫了一声林姐。",
+   "en": "The new intern didn't know how to address Lin Jing, so he called her \"Sister Lin.\"",
+   "ko": "새로 온 인턴은 린징을 어떻게 불러야 할지 몰라 린 언니라고 불렀어요.",
+   "blank": "称呼",
    "src": "made"
   }
  ],
@@ -32437,6 +32853,22 @@
    "blank": "蛋糕"
   }
  ],
+ "w|蛮": [
+  {
+   "text": "机场的咖啡蛮贵的，赵磊还是买了一杯。",
+   "en": "Coffee at the airport is pretty expensive, but Zhao Lei bought a cup anyway.",
+   "ko": "공항 커피가 꽤 비싼데도 자오레이는 한 잔 샀어요.",
+   "blank": "蛮",
+   "src": "made"
+  },
+  {
+   "text": "今天的天气蛮好的，林静中午出去走了一圈。",
+   "en": "The weather was pretty nice today, so Lin Jing went out for a walk at noon.",
+   "ko": "오늘 날씨가 꽤 좋아서 린징은 점심때 한 바퀴 걷고 왔어요.",
+   "blank": "蛮",
+   "src": "made"
+  }
+ ],
  "w|蠢": [
   {
    "text": "我真蠢，又忘了带钥匙。",
@@ -32565,6 +32997,22 @@
    "en": "There's nobody on the street.",
    "ko": "거리에 사람이 없어.",
    "blank": "街"
+  }
+ ],
+ "w|街道": [
+  {
+   "text": "从机场出来，赵磊发现城里的街道都挂上了彩灯。",
+   "en": "Coming out of the airport, Zhao Lei found the city streets all hung with colored lights.",
+   "ko": "공항을 나오자 자오레이는 시내 거리마다 색색의 등이 걸려 있는 걸 봤어요.",
+   "blank": "街道",
+   "src": "made"
+  },
+  {
+   "text": "清晨的街道很安静，林静一边走一边听着音乐。",
+   "en": "The streets were quiet in the early morning, and Lin Jing listened to music as she walked.",
+   "ko": "이른 아침 거리는 조용했고 린징은 걸으면서 음악을 들었어요.",
+   "blank": "街道",
+   "src": "made"
   }
  ],
  "w|衣服": [
@@ -33181,6 +33629,22 @@
    "en": "This needs no explanation.",
    "ko": "이건 설명이 필요 없어.",
    "blank": "解释"
+  }
+ ],
+ "w|解除": [
+  {
+   "text": "大雾预警解除以后，机场终于恢复了航班。",
+   "en": "After the fog warning was lifted, the airport finally resumed flights.",
+   "ko": "짙은 안개 경보가 해제된 뒤에야 공항은 항공편 운항을 재개했어요.",
+   "blank": "解除",
+   "src": "made"
+  },
+  {
+   "text": "林静把手机的静音模式解除了，生怕漏接孩子学校的电话。",
+   "en": "Lin Jing turned off her phone's silent mode, afraid of missing a call from her child's school.",
+   "ko": "린징은 아이 학교 전화를 놓칠까 봐 휴대폰 무음 모드를 해제했어요.",
+   "blank": "解除",
+   "src": "made"
   }
  ],
  "w|解雇": [
@@ -34629,6 +35093,22 @@
    "src": "made"
   }
  ],
+ "w|起飞": [
+  {
+   "text": "飞机推迟了半个小时才起飞，赵磊在登机口等得有点着急。",
+   "en": "The plane took off half an hour late, and Zhao Lei got a little anxious waiting at the gate.",
+   "ko": "비행기가 삼십 분 늦게 이륙해서 자오레이는 탑승구에서 기다리다 좀 초조해졌어요.",
+   "blank": "起飞",
+   "src": "made"
+  },
+  {
+   "text": "林静站在阳台上，看见一架飞机从远处起飞。",
+   "en": "Standing on the balcony, Lin Jing saw a plane take off in the distance.",
+   "ko": "린징은 베란다에 서서 멀리서 비행기 한 대가 이륙하는 걸 봤어요.",
+   "blank": "起飞",
+   "src": "made"
+  }
+ ],
  "w|趁": [
   {
    "text": "趁热吃吧。",
@@ -35059,6 +35539,22 @@
    "blank": "车子"
   }
  ],
+ "w|车站": [
+  {
+   "text": "机场大巴的车站就在到达大厅外面。",
+   "en": "The airport bus stop is right outside the arrivals hall.",
+   "ko": "공항버스 정류장은 도착 홀 바로 바깥에 있어요.",
+   "blank": "车站",
+   "src": "made"
+  },
+  {
+   "text": "林静每天早上都在这个车站等公交。",
+   "en": "Lin Jing waits for the bus at this stop every morning.",
+   "ko": "린징은 매일 아침 이 정류장에서 버스를 기다려요.",
+   "blank": "车站",
+   "src": "made"
+  }
+ ],
  "w|轨道": [
   {
    "text": "新的地铁轨道铺到了城东，周强去现场拍了照片。",
@@ -35102,6 +35598,22 @@
    "en": "The patient was moved to another hospital.",
    "ko": "환자는 다른 병원으로 옮겨졌어요.",
    "blank": "转移",
+   "src": "made"
+  }
+ ],
+ "w|转身": [
+  {
+   "text": "赵磊刚过完安检，一转身就发现钱包不见了。",
+   "en": "Zhao Lei had just cleared security when he turned around and found his wallet was gone.",
+   "ko": "자오레이는 보안 검색을 막 통과하고 돌아서자마자 지갑이 없어진 걸 알았어요.",
+   "blank": "转身",
+   "src": "made"
+  },
+  {
+   "text": "林静锁好门转身下楼，才想起忘带了伞。",
+   "en": "Lin Jing locked the door, turned to go downstairs, and only then remembered she'd forgotten her umbrella.",
+   "ko": "린징은 문을 잠그고 돌아서 내려가다가 그제야 우산을 깜빡한 게 생각났어요.",
+   "blank": "转身",
    "src": "made"
   }
  ],
@@ -35811,6 +36323,22 @@
    "src": "made"
   }
  ],
+ "w|迷路": [
+  {
+   "text": "机场太大了，赵磊找登机口的时候差点迷路。",
+   "en": "The airport was so big that Zhao Lei nearly got lost looking for his gate.",
+   "ko": "공항이 너무 커서 자오레이는 탑승구를 찾다가 길을 잃을 뻔했어요.",
+   "blank": "迷路",
+   "src": "made"
+  },
+  {
+   "text": "林静在小区门口遇到一位迷路的老奶奶，就把老人送回了家。",
+   "en": "Lin Jing met a lost old lady at the gate of her housing complex and walked her home.",
+   "ko": "린징은 아파트 단지 입구에서 길 잃은 할머니를 만나 집까지 모셔다 드렸어요.",
+   "blank": "迷路",
+   "src": "made"
+  }
+ ],
  "w|迹象": [
   {
    "text": "票卖得不好，但黄涛说已经有好转的迹象了。",
@@ -35999,6 +36527,22 @@
    "en": "Don't run; stay.",
    "ko": "도망가지 마, 남아.",
    "blank": "逃"
+  }
+ ],
+ "w|逃脱": [
+  {
+   "text": "赵磊在飞机上看了一部电影，讲的是一个人从荒岛上逃脱的故事。",
+   "en": "On the plane Zhao Lei watched a film about a man escaping from a desert island.",
+   "ko": "자오레이는 비행기에서 한 남자가 무인도에서 탈출하는 이야기의 영화를 봤어요.",
+   "blank": "逃脱",
+   "src": "made"
+  },
+  {
+   "text": "猫趁林静开门的时候想逃脱，结果被一把抱住了。",
+   "en": "The cat tried to escape when Lin Jing opened the door, but got scooped up.",
+   "ko": "고양이가 린징이 문을 열 때 도망치려다 결국 꽉 붙잡혔어요.",
+   "blank": "逃脱",
+   "src": "made"
   }
  ],
  "w|逃走": [
@@ -37033,6 +37577,22 @@
    "blank": "钻石"
   }
  ],
+ "w|铁路": [
+  {
+   "text": "机场和市中心之间修了一条铁路，赵磊坐火车进城很方便。",
+   "en": "A railway was built between the airport and the city center, so it's easy for Zhao Lei to take the train into town.",
+   "ko": "공항과 도심 사이에 철도가 놓여서 자오레이는 기차로 편하게 시내에 들어가요.",
+   "blank": "铁路",
+   "src": "made"
+  },
+  {
+   "text": "林静家后面就是铁路，晚上常能听到火车经过的声音。",
+   "en": "The railway runs right behind Lin Jing's home, and at night she can often hear trains passing.",
+   "ko": "린징네 집 바로 뒤가 철도라서 밤에는 기차 지나가는 소리가 자주 들려요.",
+   "blank": "铁路",
+   "src": "made"
+  }
+ ],
  "w|银行": [
   {
    "text": "去银行取钱。",
@@ -37115,6 +37675,22 @@
    "en": "We live outside town.",
    "ko": "우리는 마을 바깥에 살아.",
    "blank": "镇"
+  }
+ ],
+ "w|镇上": [
+  {
+   "text": "赵磊的老家在镇上，离机场还要开很久的车。",
+   "en": "Zhao Lei's hometown is in a small town, a long drive from the airport.",
+   "ko": "자오레이 고향은 읍내에 있어서 공항에서 차로 한참 가야 해요.",
+   "blank": "镇上",
+   "src": "made"
+  },
+  {
+   "text": "林静每个星期六都要回镇上看望父母。",
+   "en": "Every Saturday Lin Jing goes back to the town to visit her parents.",
+   "ko": "린징은 매주 토요일마다 읍내에 가서 부모님을 뵈어요.",
+   "blank": "镇上",
+   "src": "made"
   }
  ],
  "w|镜头": [
@@ -37685,6 +38261,22 @@
    "src": "made"
   }
  ],
+ "w|隧道": [
+  {
+   "text": "去机场的大巴要穿过一条长长的隧道。",
+   "en": "The bus to the airport goes through a long tunnel.",
+   "ko": "공항 가는 버스는 긴 터널을 지나가요.",
+   "blank": "隧道",
+   "src": "made"
+  },
+  {
+   "text": "地铁开进隧道以后，林静的手机就没了信号。",
+   "en": "Once the subway entered the tunnel, Lin Jing's phone lost signal.",
+   "ko": "지하철이 터널에 들어가자 린징의 휴대폰 신호가 끊겼어요.",
+   "blank": "隧道",
+   "src": "made"
+  }
+ ],
  "w|难": [
   {
    "text": "这题很难。",
@@ -37783,6 +38375,22 @@
    "en": "Focus your strength.",
    "ko": "힘을 모아야 해.",
    "blank": "集中"
+  }
+ ],
+ "w|集合": [
+  {
+   "text": "旅行团的人都在登机口旁边集合，赵磊也跟了过去。",
+   "en": "The tour group gathered next to the gate, and Zhao Lei went over too.",
+   "ko": "단체 여행객들이 탑승구 옆에 모였고 자오레이도 따라갔어요.",
+   "blank": "集合",
+   "src": "made"
+  },
+  {
+   "text": "公司通知全体员工下午在大会议室集合。",
+   "en": "The company told all staff to gather in the large meeting room in the afternoon.",
+   "ko": "회사에서 전 직원에게 오후에 대회의실로 모이라고 공지했어요.",
+   "blank": "集合",
+   "src": "made"
   }
  ],
  "w|集团": [
@@ -38301,6 +38909,22 @@
    "blank": "飞机"
   }
  ],
+ "w|飞船": [
+  {
+   "text": "候机厅的大屏幕上在放一部关于飞船的电影，赵磊看得入了神。",
+   "en": "A film about a spaceship was playing on the big screen in the waiting hall, and Zhao Lei was engrossed.",
+   "ko": "대합실 큰 화면에서 우주선 영화가 나오고 있었는데 자오레이는 넋을 놓고 봤어요.",
+   "blank": "飞船",
+   "src": "made"
+  },
+  {
+   "text": "林静的儿子晚上非要妈妈讲一个关于飞船的故事。",
+   "en": "At night Lin Jing's son insisted that his mom tell him a story about a spaceship.",
+   "ko": "린징의 아들은 밤에 꼭 엄마에게 우주선 이야기를 해 달라고 졸랐어요.",
+   "blank": "飞船",
+   "src": "made"
+  }
+ ],
  "w|飞行": [
   {
    "text": "飞行时间很长。",
@@ -38313,6 +38937,22 @@
    "en": "Birds are flying in the sky.",
    "ko": "새가 하늘에서 날고 있어.",
    "blank": "飞行"
+  }
+ ],
+ "w|飞行员": [
+  {
+   "text": "飞行员从赵磊身边走过，还冲他笑了笑。",
+   "en": "A pilot walked past Zhao Lei and gave him a smile.",
+   "ko": "조종사가 자오레이 옆을 지나가면서 웃어 줬어요.",
+   "blank": "飞行员",
+   "src": "made"
+  },
+  {
+   "text": "林静的邻居是飞行员，经常好几天不在家。",
+   "en": "Lin Jing's neighbor is a pilot and is often away for several days.",
+   "ko": "린징의 이웃은 조종사라서 며칠씩 집을 비울 때가 많아요.",
+   "blank": "飞行员",
+   "src": "made"
   }
  ],
  "w|食物": [
