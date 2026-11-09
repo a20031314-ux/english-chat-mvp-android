@@ -6,15 +6,12 @@ import { useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import { sendAppIntent } from "@/lib/appIntents";
 import { ledgerPlace } from "@/lib/learner/comprehensionClient";
-import { currentScene, snapScene } from "@/lib/notes/sceneShots";
-import { handOffLocate } from "@/lib/notes/locateHandoff";
+import { DictionarySheet } from "@/components/studyMap/Dictionary";
 
 /**
- * 문장분석 시트의 "🔎 My에서 찾기"(2026-10-24 사용자 "모르는 부분이 My 어디에 있는지 찾아 학습, 스크린샷과 함께"):
- * 누르는 순간 뒤 화면을 찍고(시트는 빼고, AI 대화·통화·영상만) → 서버가 틀의 칸을 고르고 → 시트를 닫고 My "단계"로.
- * 거기서 그 칸이 열리고 "이 장면 넣기"(화면 함께)를 고른다(NotebookSection).
+ * "🔎 My에서 찾기"(문장분석 시트·통화 정리): 서버가 그 말의 문법 칸을 고르면 그 소재 수업(openLesson), 표현이면 그 표현 수업,
+ * 둘 다 아니면 사전 시트(그 낱말). 통화 정리에서 열면 그 문장을 들고 간다(lessonScene).
  */
 export function FindInMy({
   ui,
@@ -31,41 +28,27 @@ export function FindInMy({
   language: string;
   locale: string;
   onDone: () => void;
-  /** 통화 정리에서: 찾은 칸이 Stagebank 소재(문법 칸)면 My로 가지 않고 그 문장을 들고 그 수업을 연다(2026-11-01). */
+  /** 통화 정리에서: 그 문장을 들고 수업으로(수업 맨 위 카드·시험 재료). */
   lessonScene?: LessonScene;
 }) {
   const [state, setState] = useState<"idle" | "busy" | "failed">("idle");
+  // 문법·표현 열쇠가 없는 말은 사전 시트(그 낱말)로.
+  const [word, setWord] = useState<string | null>(null);
   const find = async () => {
     setState("busy");
-    const scene = currentScene();
-    const shot = await snapScene();
     try {
       const response = await fetch(apiUrl("/api/notebook"), {
         method: "POST",
         headers: { "Content-Type": "application/json", ...entitlementHeaders() },
         body: JSON.stringify({ language, locate: { text, sentence, ui: locale, tab: ledgerPlace().tab } }),
       });
-      const found = (await response.json().catch(() => null)) as { node?: string | null; stage?: number; note?: string } | null;
+      const found = (await response.json().catch(() => null)) as { node?: string | null } | null;
       if (!response.ok || !found) return setState("failed");
-      const lessonKey = lessonScene ? (grammarKeyOfNode(language, found.node) ?? expressionKeyOf(language, text)) : null;
-      if (lessonKey && lessonScene) {
-        openLesson({ language, key: lessonKey, scene: lessonScene });
-        setState("idle");
-        return;
-      }
-      const social = scene === "dm" || scene === "room";
-      handOffLocate({
-        language,
-        text,
-        sentence: social ? "" : sentence,
-        node: found.node ?? null,
-        ...(found.stage ? { stage: found.stage } : {}),
-        note: found.note ?? "",
-        where: scene,
-        shot: social ? null : shot,
-      });
+      const lessonKey = grammarKeyOfNode(language, found.node) ?? expressionKeyOf(language, text);
+      setState("idle");
+      if (!lessonKey) return setWord(text);
+      openLesson({ language, key: lessonKey, above: true, ...(lessonScene ? { scene: lessonScene } : {}) });
       onDone();
-      sendAppIntent("openTab", { tab: "map" });
     } catch {
       setState("failed");
     }
@@ -81,6 +64,7 @@ export function FindInMy({
         🔎 {state === "busy" ? ui.findInMyBusy : ui.findInMy}
       </button>
       {state === "failed" ? <p className="mt-1 text-caption text-bad">{ui.markFailed}</p> : null}
+      {word ? <DictionarySheet ui={ui} language={language} locale={locale} word={word} above onClose={() => setWord(null)} /> : null}
     </div>
   );
 }

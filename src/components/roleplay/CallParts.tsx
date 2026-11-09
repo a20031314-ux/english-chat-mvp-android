@@ -341,7 +341,7 @@ export function TutorNote({ text, language, gender, compact = false }: { text: s
 
 /**
  * 통화 끝 숙제 한 줄(2026-11-06): 글자를 아직 모르는 학습자(0단계를 고른 채)에게 — 튜터 얼굴 · 📝 글자·소리 ›.
- * 누르면 My Stagebank 0단계 글자 묶음으로(handOffLetters). 안내 글 없이 이름만(숙제 판 튜터 얼굴, 설계 call-modes 5절).
+ * 누르면 My Languagebank 글자·소리 칸으로(openLettersBank). 안내 글 없이 이름만(숙제 판 튜터 얼굴, 설계 call-modes 5절).
  */
 export function LettersHomework({ ui, language, gender, onOpen }: { ui: UICopy; language: string; gender?: TutorGender; onOpen: () => void }) {
   const chosen = useTutorGender(language);

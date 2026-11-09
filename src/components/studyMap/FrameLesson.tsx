@@ -28,7 +28,6 @@ import type { GrammarLesson } from "@/lib/curriculum/fixedLessons/grammar";
 import { openLesson } from "@/lib/appIntents";
 import { ladderFor } from "@/lib/curriculum/stages/index";
 import { lessonQuiz, pieceOf, quizSources, type QuizQuestion } from "@/lib/curriculum/quiz";
-import { notePool } from "@/lib/curriculum/exam";
 import { pieceIn, type LessonScene } from "@/lib/curriculum/lessonKey";
 import { growBank } from "@/lib/curriculum/qbank";
 import { noteQuizLog } from "@/lib/curriculum/quizLogStore";
@@ -38,7 +37,7 @@ import { useAllStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import type { Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
-import { LineGrade } from "@/components/studyMap/StageScripts";
+import { LineGrade } from "@/components/studyMap/LineParts";
 
 /**
  * 문장구조 수업(curriculum/frameLesson.ts, 2026-10-30 사용자 "일반적인 설명(문법, 구문) > 문제풀이 > 대화" → 주고받기형):
@@ -236,8 +235,6 @@ export function FrameLesson({
     const good = passedNow;
     if (!logged.current) {
       logged.current = true;
-      // 대화에서 막힌 소재는 정기 시험 재료로(curriculum/exam.ts).
-      if (!good) notePool(language, key, "stuck");
       noteDayResult(language, {
         kind: "lesson",
         item: itemId,
@@ -490,10 +487,7 @@ export function FrameLesson({
                 <button
                   type="button"
                   data-lesson-known
-                  onClick={() => {
-                    notePool(language, key, "claimed");
-                    onClose();
-                  }}
+                  onClick={onClose}
                   className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10"
                 >
                   {ui.checkKnown}

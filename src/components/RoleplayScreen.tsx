@@ -21,7 +21,7 @@ import type { UICopy } from "@/lib/copy";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { saidPhrase } from "@/lib/learner/practice";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
-import { handOffFrame, handOffLetters } from "@/lib/notes/locateHandoff";
+import { openLettersBank } from "@/lib/curriculum/lettersOpen";
 import { captureSceneSoon, enterScene } from "@/lib/notes/sceneShots";
 import { turnDiagnosticsEnabled } from "@/lib/platform";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
@@ -44,7 +44,6 @@ import { correctionOf, offeredOf } from "@/lib/roleplay/director";
 import { fixesFromLines, fixesPrompt, mergeFixes, readFixes, settleFixes } from "@/lib/roleplay/fixMemory";
 import { lifeDay, lifeFactsPrompt, mergeLifeFacts, readLifeFacts } from "@/lib/roleplay/lifeFacts";
 import { CallGrowthPairs } from "@/components/studyMap/Growth";
-import { reformOn } from "@/lib/reform";
 import { saveCallNote, setCallExtra, setCallSummary } from "@/lib/roleplay/callNotes";
 import { talkStatsOf } from "@/lib/roleplay/talkStats";
 import { OPENING_LINES } from "@/lib/roleplay/talkTags";
@@ -1107,7 +1106,7 @@ export function RoleplayScreen({
     audioRef.current?.pause();
     setHungUp(true);
   };
-  const { recap, saved: recapSaved } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
+  const { recap } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
   /** 통화가 끝난 뒤 튜터가 남긴 메모(끝 화면 요약 아래, Logbank 카드에도). */
   const [tutorNote, setTutorNote] = useState("");
   // 끝나면 이번 통화에서 들은 삶을 이 폰에 남긴다. 짧은 통화는 접기가 안 돌아 여기서만 남는다.
@@ -1219,14 +1218,14 @@ export function RoleplayScreen({
             gender={tutorGender}
           />
         ) : null}
-        {reformOn() ? <div className="px-4"><CallGrowthPairs ui={ui} language={scenario.language} locale={nativeLanguage} since={Math.floor(openedAt.current / 1000)} /></div> : null}
+        <div className="px-4"><CallGrowthPairs ui={ui} language={scenario.language} locale={nativeLanguage} since={Math.floor(openedAt.current / 1000)} /></div>
         {lettersBeginner && scenario.openEnded ? (
           <LettersHomework
             ui={ui}
             language={scenario.language}
             gender={tutorGender}
             onOpen={() => {
-              handOffLetters(scenario.language);
+              openLettersBank(scenario.language);
               onClose();
               sendAppIntent("openTab", { tab: "map" });
             }}
@@ -1274,12 +1273,6 @@ export function RoleplayScreen({
               language={scenario.language}
               locale={nativeLanguage}
               items={recap}
-              saved={recapSaved}
-              onOpenFrame={(frame) => {
-                handOffFrame({ language: scenario.language, stage: frame.stage, id: frame.id });
-                onClose();
-                sendAppIntent("openTab", { tab: "map" });
-              }}
               onLeave={onClose}
             />
           </li>

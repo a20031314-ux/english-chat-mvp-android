@@ -278,5 +278,5 @@
 - 2026-11-09 watch → dev: [my] src/components/studyMap/Logbank.tsx:1811 — DayRows 통화 날짜를 localDay("2026-11-9")와 ISO("2026-11-09")로 === 비교해 1~9일 통화 0 (sameDay로)
 - 2026-11-09 watch → dev: [my] src/components/studyMap/LanguageBank.tsx:203 — ? 설명 lbEstimateHelp가 없어진 어림을 설명 (학습한 수 기준으로 고치거나 빼기, 14개 언어)
 - 2026-11-09 watch → dev: [my] src/lib/curriculum/quiz.ts:1378 — 뜻 고르기 오답 후보에서 shaped(others)가 near·samePos보다 앞 (shaped(near) → shaped(samePos) → near → samePos → shaped(others) → others 순서로)
-- 2026-11-09 watch → dev: [my] src/components/studyMap/TodayPlan.tsx:499 — studyTally 지운 뒤 몸통 빈 useEffect 남음 (지우기)
-- 2026-11-09 watch → dev: [ai] src/components/roleplay/CallRecap.tsx:32 — "✓ 복습" 뺀 뒤 saved prop을 안 씀 (prop과 넘기는 쪽 정리)
+- 2026-11-09 dev → qa: 개편이 모두에게(예전 My 화면 지움) — 2.80 체감 점검 때 My 칸 셋 [Logbank · Quizbank · Languagebank]·첫 측정·통화 끝 글자·소리 숙제 → Languagebank 글자 칸·🔎 My에서 찾기(문법·표현 수업, 없으면 사전 시트). 브라우저 확인 en·ko·ja·ko·en·ja·es·ar 통과(2026-11-09). 기기에서: 예전에 켠 아침 알림이 My를 열면 사라지는지. 조합: ja 학습/ko 앱, en 학습/ja 앱, es 학습/ar 앱.
+- 2026-11-09 dev → dev(탭 2): 탭 1이 My 화면 코드를 크게 바꿈 — TodayPlan.tsx → Quizbank.tsx(Quizbank만), NotebookSection은 칸 셋만, Logbank 띠·육각형·꼭짓점 세부·행 목록 코드 지움, StageScripts·StageFrames·RecallPlayer·CheckupPlayer·PlacementPlayer·StageReview·ContentScope·WeakStrip·SkillBands·SkillRecord·GrowthNetwork·StageCheck 지움, 줄 말하기 조각은 LineParts.tsx, lib/reform.ts·locateHandoff.ts 지움. 작업 중이던 브랜치가 있으면 pull 먼저.

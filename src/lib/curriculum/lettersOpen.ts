@@ -21,3 +21,8 @@ export function takeLettersOpen(language: string): boolean {
   pending = null;
   return true;
 }
+
+/** 맡긴 열기가 있는지만 본다(가져가지 않음) — My가 처음 그려질 때 Languagebank 칸으로 시작할지. */
+export function peekLettersOpen(language: string): boolean {
+  return Boolean(pending && pending.language === language && Date.now() - pending.at <= 60_000);
+}

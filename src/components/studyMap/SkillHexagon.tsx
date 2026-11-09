@@ -1,12 +1,11 @@
 "use client";
 
 import { bankTone } from "@/components/studyMap/bankTone";
-import { useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { AXES, type Axis, type AxisFill, type FillCell, type FillResult } from "@/lib/curriculum/fill";
-import { axisGain, axisShown, axisWeak, bandCells, bandPct } from "@/lib/curriculum/bandView";
+import { AXES, type Axis, type AxisFill, type FillResult } from "@/lib/curriculum/fill";
+import { axisGain, axisShown, axisWeak, bandPct } from "@/lib/curriculum/bandView";
 
-/** Logbank 칸 색(하늘) — 위 칸 이름 버튼과 같게(2026-11-03). */
+/** 하늘색(Logbank 칸과 같은 색) — 통화 끝 화면의 육각형. */
 const LOG = bankTone("log");
 
 /**
@@ -58,16 +57,11 @@ export function SkillHexagon({
   result,
   before,
   onAxis,
-  onRecord,
-  recordLabel,
 }: {
   ui: UICopy;
   result: FillResult;
   before: FillResult | null;
   onAxis: (axis: Axis) => void;
-  /** 육각형 한가운데 📈. 기록이 있을 때만(2026-11-03). */
-  onRecord?: () => void;
-  recordLabel?: string;
 }) {
   const now = AXES.map((axis, i) => point(i, drawn(result.axes[axis])));
   const then = before ? AXES.map((axis, i) => point(i, drawn(before.axes[axis]))) : null;
@@ -126,67 +120,12 @@ export function SkillHexagon({
             </g>
           );
         })}
-        {onRecord ? (
-          <g
-            role="button"
-            tabIndex={0}
-            data-skill-record-open
-            aria-label={recordLabel}
-            onClick={(event) => {
-              event.stopPropagation();
-              onRecord();
-            }}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                onRecord();
-              }
-            }}
-            className="cursor-pointer outline-none"
-          >
-            <circle cx={CX} cy={CY} r="18" className="fill-black/75 stroke-info" strokeWidth="1.4" />
-            <text x={CX} y={CY + 6} textAnchor="middle" className="text-body">
-              📈
-            </text>
-          </g>
-        ) : null}
       </svg>
     </figure>
   );
 }
 
-/* ───────── 2층: 꼭짓점 하나 ───────── */
-
-export type CellGroup = { id: string; title: string; match: (cell: FillCell) => boolean };
-
-export function cellGroups(ui: UICopy, axis: Axis): CellGroup[] {
-  const by = (prefix: string) => (cell: FillCell) => cell.id.startsWith(prefix);
-  if (axis === "vocabRead" || axis === "vocabUse") {
-    return [
-      { id: "stage", title: ui.vocabByStage, match: by("stage:") },
-      { id: "pos", title: ui.vocabByPos, match: by("pos:") },
-      { id: "topic", title: ui.vocabByTopic, match: by("topic:") },
-      ...(axis === "vocabUse" ? [{ id: "miss", title: ui.cellMiss, match: by("miss:") }] : []),
-    ];
-  }
-  if (axis === "sentRead" || axis === "sentUse") {
-    return [
-      { id: "stage", title: ui.vocabByStage, match: by("stage:") },
-      { id: "gram", title: ui.partGrammar, match: by("gram:") },
-      { id: "fn", title: ui.cellFn, match: by("fn:") },
-      ...(axis === "sentUse" ? [{ id: "miss", title: ui.cellMiss, match: by("miss:") }] : []),
-    ];
-  }
-  if (axis === "talk") {
-    return [
-      { id: "why", title: ui.cellWhy, match: by("why:") },
-      { id: "lead", title: ui.cellLead, match: by("lead:") },
-      { id: "fn", title: ui.cellFn, match: by("fn:") },
-    ];
-  }
-  return [{ id: "band", title: ui.vocabByStage, match: by("band:") }];
-}
-
+/** 세부 칸 이름(통화 첫 마디 "부족한 칸")에 쓰는 표. */
 const POS: Record<string, keyof UICopy> = { noun: "posNoun", verb: "posVerb", adj: "posAdj", adv: "posAdv", function: "posFunction" };
 const FN: Record<string, keyof UICopy> = { self: "fnSelf", ask: "fnAsk", request: "fnRequest", time: "fnTime", reason: "fnReason", compare: "fnCompare", mind: "fnMind", daily: "fnDaily" };
 const MISS: Record<string, keyof UICopy> = { spell: "missSpell", form: "missForm", word: "missWord", particle: "missParticle", order: "missOrder", missing: "missMissing" };
@@ -208,194 +147,4 @@ export function cellName(ui: UICopy, id: string, grammarName: (stage: number, in
   if (id === "part:flow") return ui.talkFlow;
   if (id === "part:lead") return ui.cellLead;
   return id;
-}
-
-/** 칸 id의 앞부분(stage·pos·band…) — 목록 탭과 같다. */
-export function tabOf(id: string): string {
-  const cut = id.indexOf(":");
-  return cut < 0 ? id : id.slice(0, cut);
-}
-
-/**
- * 섹터 목록에 보여줄 칸. 단계·듣기 띠는 1→5. 나머지는 부족한 것 전부, 아직 모름은 네 개까지.
- * 맞음·강함과 빈 분류 전체는 넣지 않는다.
- */
-export function planCells(cells: readonly FillCell[], tab: string): FillCell[] {
-  const list = cells.filter((cell) => tabOf(cell.id) === tab);
-  if (tab === "stage" || tab === "band") return [...list].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
-  return [...list.filter((cell) => cell.state === "weak"), ...list.filter((cell) => cell.state === "unknown").slice(0, 4)];
-}
-
-/** 그 칸이 부족한 이유 한 줄. 셈 칸(틀린 꼴·막힌 까닭)은 이름 자체가 이유라 예상 차이를 붙이지 않는다. */
-export function lackOf(ui: UICopy, cell: FillCell): string {
-  const counted = tabOf(cell.id) === "miss" || tabOf(cell.id) === "why" || tabOf(cell.id) === "lead" || tabOf(cell.id) === "part";
-  if (cell.state === "unknown") return ui.fillUnknown;
-  if (cell.state === "weak" && !counted && cell.gap > 0) return ui.fillGap.replace("{n}", String(Math.round(cell.gap * 100)));
-  if (cell.state === "weak") return ui.fillWeak;
-  return "";
-}
-
-export function AxisDetail({
-  ui,
-  axis,
-  fill,
-  grammarName,
-  records,
-  onCell,
-}: {
-  ui: UICopy;
-  axis: Axis;
-  fill: AxisFill;
-  grammarName: (stage: number, index: number) => string;
-  /** 📎 기록 — 지금 Logbank의 그 갈래 막대·목록(꼭짓점 몫). */
-  records: React.ReactNode;
-  onCell: (cell: FillCell) => void;
-}) {
-  const groups = cellGroups(ui, axis);
-  const [tab, setTab] = useState<string>(() => groups.find((group) => fill.cells.some((cell) => group.match(cell) && cell.state === "weak"))?.id ?? groups[0]!.id);
-  const cells = planCells(fill.cells, tab);
-  const parts = axis === "talk" ? fill.cells.filter((cell) => cell.id.startsWith("part:")) : [];
-  const bar = (value: number, weak: boolean) => (
-    <span className="relative h-1.5 w-16 shrink-0 overflow-hidden rounded-full bg-white/10">
-      <span className={`absolute inset-y-0 start-0 rounded-full ${weak ? "bg-warn" : LOG.bar}`} style={{ width: `${Math.round(Math.min(1, Math.max(0, value)) * 100)}%` }} />
-    </span>
-  );
-  return (
-    <div data-skill-detail={axis} className="flex flex-col gap-3">
-      <div className="flex items-baseline gap-2">
-        <span className="text-title font-semibold tabular-nums text-ink">{pct(fill)}</span>
-        {fill.converged || !axisShown(fill) ? null : <span className="text-meta tabular-nums text-slate-400">{`${Math.round(fill.low * 100)}–${Math.round(fill.high * 100)}%`}</span>}
-      </div>
-      {/* 게이지: 단계 칸 다섯(듣기는 단계 띠, 실전 대화는 그 단계 통화의 막힘없음) — 띠와 같은 칸(잰 것 없는 단계는 빈 테두리, 적으면 옅게). */}
-      <div data-skill-gauge className="grid grid-cols-5 gap-1">
-        {bandCells(fill).map((cell) => (
-          <div key={cell.stage} className="flex flex-col items-center gap-1">
-            <div data-gauge-cell={cell.state} className={`relative h-16 w-full overflow-hidden rounded-lg ${cell.state === "none" ? "border border-dashed border-line" : "bg-white/10"}`}>
-              {cell.state === "none" ? null : (
-                <div className={`absolute inset-x-0 bottom-0 bg-info/70 ${cell.state === "thin" ? "opacity-40" : ""}`} style={{ height: `${Math.round(cell.value * 100)}%` }} />
-              )}
-            </div>
-            <span className="text-meta tabular-nums text-slate-400">{cell.stage}</span>
-          </div>
-        ))}
-      </div>
-      {parts.map((cell) => (
-        <div key={cell.id} className="flex items-center gap-2 text-note">
-          <span className="min-w-0 flex-1 truncate text-ink">{cellName(ui, cell.id, grammarName)}</span>
-          {bar(cell.value, cell.state === "weak")}
-          <span className="w-10 shrink-0 text-end tabular-nums text-slate-300">{cell.state === "unknown" ? "?" : `${Math.round(cell.value * 100)}%`}</span>
-        </div>
-      ))}
-      <div role="tablist" className="flex flex-wrap gap-1">
-        {[...groups, { id: "records", title: `📎 ${ui.fillRecords}` }].map((one) => (
-          <button
-            key={one.id}
-            type="button"
-            role="tab"
-            aria-selected={tab === one.id}
-            data-skill-tab={one.id}
-            onClick={() => setTab(one.id)}
-            className={`rounded-full px-3 py-1 text-caption ${tab === one.id ? LOG.chip : "border border-line text-slate-300"}`}
-          >
-            {one.title}
-          </button>
-        ))}
-      </div>
-      {tab === "records" ? (
-        records
-      ) : cells.length ? (
-        <ol data-skill-cells className="flex flex-col gap-1">
-          {cells.map((cell, index) => {
-            const weak = cell.state === "weak";
-            const counted = cell.id.startsWith("miss:") || cell.id.startsWith("why:") || cell.id.startsWith("lead:") || (axis === "talk" && cell.id.startsWith("fn:"));
-            const staged = cell.id.startsWith("stage:") || cell.id.startsWith("band:");
-            const lack = lackOf(ui, cell);
-            return (
-              <li key={cell.id}>
-                <button
-                  type="button"
-                  data-skill-cell={cell.id}
-                  data-skill-state={cell.state}
-                  data-skill-order={index + 1}
-                  onClick={() => onCell(cell)}
-                  className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
-                >
-                  <span className={`w-4 shrink-0 text-center text-caption tabular-nums ${weak ? "text-warn" : "text-slate-400"}`}>{index + 1}</span>
-                  <span className="flex min-w-0 flex-1 flex-col">
-                    <span dir="auto" className="truncate text-note text-ink">{cellName(ui, cell.id, grammarName)}</span>
-                    {lack ? <span className="truncate text-meta text-slate-400">{lack}</span> : null}
-                  </span>
-                  {counted ? null : bar(staged && cell.n <= 0 ? 0 : cell.value, weak)}
-                  <span className="w-10 shrink-0 text-end text-meta tabular-nums text-slate-400">
-                    {/* 단계 칸도 게이지·띠처럼 잰 것이 없으면 ─(어림 % 안 보임, 2026-11-07). */}
-                    {counted ? cell.n : staged && cell.n <= 0 ? "─" : cell.state === "unknown" && !staged ? "?" : `${Math.round(cell.value * 100)}%`}
-                  </span>
-                </button>
-              </li>
-            );
-          })}
-        </ol>
-      ) : (
-        <p className="text-note text-slate-500">—</p>
-      )}
-    </div>
-  );
-}
-
-/* ───────── 3층: 세부 칸 하나 ───────── */
-
-export type CellStep = { key: string; label: string };
-export type CellPlan = {
-  /** 이 칸이 섹터 목록에서 몇 번째인지. */
-  order: number;
-  /** 부족한 점 한 줄. */
-  lack: string;
-  /** 추천 이유 한 줄. 틀린 기록이 없으면 비운다. */
-  why: string;
-  /** 틀린 것 순서. 안 푼 표현은 넣지 않는다. */
-  steps: CellStep[];
-  recommend: { icon: string; label: string; go: () => void } | null;
-};
-
-export function CellDetail({ ui, plan, onKey }: { ui: UICopy; plan: CellPlan; onKey: (key: string) => void }) {
-  return (
-    <div data-skill-cell-detail className="flex flex-col gap-4">
-      <section className="flex flex-col gap-1">
-        <h3 className="text-meta font-semibold text-slate-400">{ui.fillShort}</h3>
-        <p className="text-note text-ink">{plan.lack || "—"}</p>
-      </section>
-      {plan.steps.length ? (
-        <section className="flex flex-col gap-1">
-          <h3 className="text-meta font-semibold text-slate-400">{ui.fillOrder}</h3>
-          <ol className="flex flex-col gap-1">
-            {plan.steps.map((step, index) => (
-              <li key={step.key}>
-                <button
-                  type="button"
-                  data-skill-key={step.key}
-                  onClick={() => onKey(step.key)}
-                  className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
-                >
-                  <span className="w-4 shrink-0 text-center text-caption tabular-nums text-slate-400">{index + 1}</span>
-                  <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{step.label}</span>
-                </button>
-              </li>
-            ))}
-          </ol>
-        </section>
-      ) : null}
-      {plan.why ? (
-        <section className="flex flex-col gap-1">
-          <h3 className="text-meta font-semibold text-slate-400">{ui.fillWhy}</h3>
-          <p className="text-note text-ink">{plan.why}</p>
-        </section>
-      ) : null}
-      {plan.recommend ? (
-        <button type="button" data-skill-recommend onClick={plan.recommend.go} className="tb-btn flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-note font-semibold">
-          <span aria-hidden>{plan.recommend.icon}</span>
-          <span>{plan.recommend.label}</span>
-        </button>
-      ) : null}
-    </div>
-  );
 }

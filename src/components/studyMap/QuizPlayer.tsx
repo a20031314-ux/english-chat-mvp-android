@@ -11,7 +11,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/speech/Attempt";
 import { sayLine } from "@/lib/speech/sayLine";
 import { TTSButton } from "@/components/TTSButton";
-import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/StageScripts";
+import { HearingButtons, LineGrade, PauseChips, useHearing } from "@/components/studyMap/LineParts";
 import { usePremium } from "@/contexts/PremiumContext";
 import { isLocale, type UICopy } from "@/lib/copy";
 import { KO_PARTICLE_PAIRS, slipBadIndex, buildQuiz, fixedRight, joinWords, moreExamples, noteAsked, orderCorrect, quizPassed, typedRight, unitPassed, type QuizCard, type QuizMix, type QuizQuestion, type QuizStyle, type SpotQuestion } from "@/lib/curriculum/quiz";

@@ -9,7 +9,6 @@ import { allFramesFor } from "@/lib/curriculum/frames";
 import { isFrameExpression } from "@/lib/curriculum/expressionDeck";
 import { onAppIntent, takeAppIntent, type AppIntents } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
-import { notePool } from "@/lib/curriculum/exam";
 import { frameById } from "@/lib/curriculum/frames";
 import { streakOf } from "@/lib/curriculum/nextStudy";
 import { readQuizLog } from "@/lib/curriculum/quizLogStore";
@@ -32,9 +31,6 @@ export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   }, []);
   useEffect(() => {
     noteSpot({ lesson: open ? { language: open.language, key: open.key } : undefined });
-  }, [open]);
-  useEffect(() => {
-    if (open) notePool(open.language, open.key, "opened", Date.now(), open.scene);
   }, [open]);
   // 표현 카드가 아직 없으면 예전 수업으로(그 표현 열쇠만, 닫으면 다시 카드부터).
   const [noCard, setNoCard] = useState<string | null>(null);

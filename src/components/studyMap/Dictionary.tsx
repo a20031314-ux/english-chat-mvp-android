@@ -5,7 +5,6 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { knowTag, knowTagLabel, type KnowTag } from "@/lib/curriculum/studyTimeline";
-import { reformOn } from "@/lib/reform";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import { useBankTone } from "@/components/studyMap/bankTone";
@@ -37,9 +36,8 @@ function grownLines(language: string, word: string, locale: string, have: readon
  * word = 이 낱말 화면으로 바로 열기(Languagebank 묶음에서 누른 낱말). onIndex = 낱말 화면 ‹ 를 눌렀을 때 바깥(색인)으로.
  */
 /**
- * 개편(lib/reform.ts): 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 체크 셋 표시 하나
- * (2026-11-06 사용자 "사전에서 열어볼 때는 어떻게" → "만들어줘"): 앎 ✓ + 다음 확인 n일 뒤 · 적용이 힘듦 ◐ · 그 밖(고르기로만 맞힘·처음 봄·기록 없음)은 없음.
- * 어림값은 사전에 붙이지 않는다(2026-11-06 결정). 열어 본 것은 장부에 찾아봄으로만(상태는 그대로).
+ * 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 아는 정도 표시(학습 · n번 학습 · 자주 씀).
+ * 어림값은 사전에 붙이지 않는다. 열어 본 것은 장부에 찾아봄으로만.
  */
 function cardStatus(language: string, word: string): KnowTag | null {
   const key = wordKey(word);
@@ -71,9 +69,8 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
   const [entries, setEntries] = useState<DictEntry[] | null>(null);
   const [query, setQuery] = useState("");
   const [picked, setPicked] = useState<DictEntry | null>(null);
-  const [reform] = useState(reformOn);
-  // 연 낱말의 체크 셋 표시(개편) — 낱말이 바뀔 때만 장부를 읽는다.
-  const status = useMemo(() => (reform && picked ? cardStatus(language, picked.word) : null), [reform, picked, language]);
+  // 연 낱말의 아는 정도 표시 — 낱말이 바뀔 때만 장부를 읽는다.
+  const status = useMemo(() => (picked ? cardStatus(language, picked.word) : null), [picked, language]);
   const wantRef = useRef<string | null>(null);
   // 연 낱말의 예문이 둘이 안 되면: 이 폰에 받아 둔 문제은행 예문부터 보이고, 모자라면 서버에 키워 달라고(같은 열쇠는 10분에 한 번).
   const [making, setMaking] = useState<string | null>(null);
@@ -201,11 +198,11 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                     <span aria-hidden className="rtl:rotate-180">‹ </span>
                     {onIndex ? ui.languagebankTitle : ui.dictionaryTitle}
                   </button>}
-                  <div data-dictionary-card={reform ? "1" : undefined} className={reform ? "mt-2 rounded-xl border border-line p-3" : undefined}>
-                  <div className={`${reform ? "" : "mt-2 "}flex flex-wrap items-center gap-2`}>
+                  <div data-dictionary-card="1" className="mt-2 rounded-xl border border-line p-3">
+                  <div className="flex flex-wrap items-center gap-2">
                     <p dir="auto" data-card-word className="text-xl font-semibold text-ink">{veiled("word") ? <button type="button" data-flip-veil onClick={mask?.onShow} aria-label={ui.flipReveal} className="text-slate-500">＿＿＿</button> : picked.word}</p>
                     {veiled("word") ? null : <TTSButton text={picked.word} ariaLabel={ui.listen} />}
-                    {reform && status ? <StatusMark ui={ui} status={status} /> : null}
+                    {status ? <StatusMark ui={ui} status={status} /> : null}
                   </div>
                   {picked.reading && !veiled("word") ? <p dir="auto" className="mt-0.5 text-meta text-slate-400">{picked.reading}</p> : null}
                   <p className="mt-1 text-meta text-slate-400">
@@ -285,26 +282,6 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                   ))}
                 </ul>
               )}
-    </>
-  );
-}
-
-/** 📕 단어 사전 시트(Quizbank 어휘 탭 머리 — 개편 스위치가 켜지면 사전은 Languagebank 탭으로 옮겨 이 버튼은 안 보임). */
-export function DictionaryButton({ ui, language, locale }: { ui: UICopy; language: string; locale: string }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <>
-      <button
-        type="button"
-        data-dictionary-open
-        aria-label={ui.dictionaryTitle}
-        title={ui.dictionaryTitle}
-        onClick={() => setOpen(true)}
-        className="flex h-8 w-8 items-center justify-center rounded-full text-caption text-slate-400 hover:bg-white/10 hover:text-ink"
-      >
-        <span aria-hidden>📕</span>
-      </button>
-      {open ? <DictionarySheet ui={ui} language={language} locale={locale} onClose={() => setOpen(false)} /> : null}
     </>
   );
 }

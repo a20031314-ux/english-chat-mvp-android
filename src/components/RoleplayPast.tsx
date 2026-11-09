@@ -10,8 +10,6 @@ import { findScenario } from "@/lib/roleplay/catalog";
 import { CallPages, CallSummary, MeFace, TutorFace } from "@/components/roleplay/CallParts";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { buildRecap } from "@/lib/roleplay/recap";
-import { handOffFrame } from "@/lib/notes/locateHandoff";
-import { sendAppIntent } from "@/lib/appIntents";
 import { RoleplayLine } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
@@ -146,12 +144,6 @@ export function RoleplayPast({
               language={saved.language}
               locale={nativeLanguage}
               items={recap}
-              saved={false}
-              onOpenFrame={(frame) => {
-                handOffFrame({ language: saved.language, stage: frame.stage, id: frame.id });
-                (onLeave ?? onClose)();
-                sendAppIntent("openTab", { tab: "map" });
-              }}
               onLeave={onLeave ?? onClose}
             />
           </li>

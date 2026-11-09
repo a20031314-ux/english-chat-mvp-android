@@ -40,40 +40,6 @@ export function useScript(targetLanguage: string, locale: string, isPremium: boo
   return [data, setData] as const;
 }
 
-/** 지도·고르기 화면의 한 줄: 글자·소리 기초 n/m, 누르면 연습 창. */
-export function ScriptEntry({ ui, targetLanguage, locale, isPremium }: { ui: UICopy; targetLanguage: string; locale: string; isPremium: boolean }) {
-  const [data, setData] = useScript(targetLanguage, locale, isPremium);
-  const [open, setOpen] = useState(false);
-  if (!data?.course || !data.progress) return null;
-  return (
-    <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="flex w-full items-center justify-between gap-2 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5"
-      >
-        <span className="min-w-0">
-          <span className="block text-caption text-slate-400">{ui.scriptEntry}</span>
-          <span className="block truncate text-note text-slate-100">{data.course.title}</span>
-        </span>
-        <span className="shrink-0 text-meta text-slate-400" dir="ltr">
-          {data.progress.finished ? "✓" : null}
-        </span>
-      </button>
-      {open ? (
-        <ScriptSheet
-          ui={ui}
-          targetLanguage={targetLanguage}
-          isPremium={isPremium}
-          data={data}
-          onPassed={(next) => setData(next)}
-          onClose={() => setOpen(false)}
-        />
-      ) : null}
-    </>
-  );
-}
-
 function shuffle<T>(list: T[]): T[] {
   const out = [...list];
   for (let i = out.length - 1; i > 0; i -= 1) {
@@ -310,60 +276,6 @@ export function ScriptSheet({
         </div>
       </div>
     </BodyLayer>
-  );
-}
-
-/**
- * 0단계 일일 학습(2026-10-29, curriculum/lettersFirst.ts): 아직 안 한 글자 묶음 셋을 일일 학습 칸처럼, 누르면 그 묶음 카드 → 듣고 고르기·보고 고르기.
- * 다 하면 "1단계 ›"(onDone).
- */
-export function LettersPlan({ ui, targetLanguage, locale, isPremium, onDone }: { ui: UICopy; targetLanguage: string; locale: string; isPremium: boolean; onDone: () => void }) {
-  const [data, setData] = useScript(targetLanguage, locale, isPremium);
-  const [open, setOpen] = useState<string | null>(null);
-  if (!data?.course || !data.progress) return null;
-  const passed = new Set(data.passed);
-  const next = data.course.groups.filter((group) => !passed.has(group.id)).slice(0, 3);
-  return (
-    <section data-letters-plan className="mt-3 rounded-2xl border border-status-learned/40 bg-status-learned/[0.06] px-3 py-3">
-      <div className="flex items-center gap-2">
-        <h3 className="min-w-0 flex-1 truncate text-caption font-semibold text-status-learned">{ui.planTitle} · {data.course.title}</h3>
-      </div>
-      <ul className="mt-2 flex flex-col gap-1.5">
-        {next.map((group) => (
-          <li key={group.id}>
-            <button
-              type="button"
-              data-letters-group={group.id}
-              onClick={() => setOpen(group.id)}
-              className="flex w-full items-center gap-3 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5"
-            >
-              <span aria-hidden className="h-5 w-5 shrink-0 rounded-full border border-line" />
-              <span className="min-w-0 flex-1">
-                <span className="block truncate text-note text-ink">{group.title}</span>
-                <span dir="auto" className="block truncate text-caption text-slate-400">{group.items.map((item) => item.char).join(" ")}</span>
-              </span>
-              <span className="shrink-0 text-caption tabular-nums text-slate-500">{ui.planMinutes.replace("{n}", "3")}</span>
-            </button>
-          </li>
-        ))}
-      </ul>
-      {data.progress.finished ? (
-        <button type="button" onClick={onDone} className="mt-2 w-full rounded-xl bg-status-learned py-2.5 text-note font-semibold text-black">
-          {ui.stageNumber.replace("{n}", "1")} ›
-        </button>
-      ) : null}
-      {open ? (
-        <ScriptSheet
-          ui={ui}
-          targetLanguage={targetLanguage}
-          isPremium={isPremium}
-          data={data}
-          initialGroup={open}
-          onPassed={(next2) => setData(next2)}
-          onClose={() => setOpen(null)}
-        />
-      ) : null}
-    </section>
   );
 }
 

@@ -1,7 +1,6 @@
 "use client";
 
 import { TodayCards } from "@/components/studyMap/TodayCards";
-import { reformOn } from "@/lib/reform";
 import { bankTone } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -20,26 +19,12 @@ import { buildRecap } from "@/lib/roleplay/recap";
 import { tallyCall } from "@/lib/roleplay/transcriptMarks";
 import { CALL_DAYS_EVENT, callDayOf, readCallDays, type CallDay } from "@/lib/roleplay/callDays";
 import { inPeriod, periodLastDay, periodOf, shiftPeriod, summarize, type Period, type PeriodKind, type PeriodSummary } from "@/lib/curriculum/periodSummary";
-import { bars, ESTIMATE, partRows, resultMinutes, totals, type Bar, type Basis, type LogInputs, type PartRow } from "@/lib/curriculum/logbankData";
+import { bars, ESTIMATE, resultMinutes, totals, type Bar, type LogInputs } from "@/lib/curriculum/logbankData";
 import { callSeconds, type SavedConversation } from "@/lib/roleplay/saved";
 import type { LogItem, PartId } from "@/lib/notes/stageParts";
-import type { KnownMap } from "@/lib/curriculum/known";
-import type { CheckResult } from "@/lib/curriculum/checkup";
-import { computeFill, fillCatalog, keysInCell, studyPoint, type Axis, type BankAxis, type FillCell, type FillEvent } from "@/lib/curriculum/fill";
-import { COMPARE_MS, directionView, type DirectionView } from "@/lib/curriculum/directionView";
 import { LEDGER_EVENT, migrateLedger, readLedger } from "@/lib/curriculum/logLedger";
-import { callTurnsOf, fillEvents, ledgerFillEvents } from "@/lib/curriculum/fillInputs";
-import { FILL_CHECK_EVENT, readFillCheck } from "@/lib/curriculum/fillCheck";
-import { readFirstCheck } from "@/lib/curriculum/firstCheck";
-import { fillDirection, saveFillFocus } from "@/lib/curriculum/fillFocus";
-import { loadBank, peekBank } from "@/lib/curriculum/vocabBank";
-import { segmentWords } from "@/lib/wordSegments";
-import { AxisDetail, axisName, CellDetail, cellName, lackOf, planCells, SkillHexagon, tabOf, type CellPlan } from "@/components/studyMap/SkillHexagon";
-import { SkillBands } from "@/components/studyMap/SkillBands";
-import { SkillRecord } from "@/components/studyMap/SkillRecord";
 import { CardFace } from "@/components/studyMap/QuizPlayer";
 import { DictionarySheet } from "@/components/studyMap/Dictionary";
-import { fillAt, fillChain, judgeFill } from "@/lib/curriculum/fillJudge";
 import { progressIn, usedAt } from "@/lib/curriculum/growthView";
 import { forgetGrowthDay } from "@/lib/curriculum/growthLines";
 import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
@@ -206,15 +191,6 @@ function useCallDays(language: string): Record<string, CallDay> {
 }
 
 const PERIOD_KEY = "logbankPeriod.v1";
-const VIEW_KEY = "logbankView.v1";
-type LogView = "bands" | "hexagon";
-function readLogView(): LogView {
-  try {
-    return localStorage.getItem(VIEW_KEY) === "hexagon" ? "hexagon" : "bands";
-  } catch {
-    return "bands";
-  }
-}
 
 function readPeriodKind(): PeriodKind {
   try {
@@ -228,67 +204,11 @@ const PART_ORDER: PartId[] = ["grammar", "vocab", "expression", "pronunciation"]
 /** 어디서 했는지 → 아이콘(LogItem where · 수업 결과 종류 · 퀴즈). */
 const WHERE_ICON: Record<string, string> = { chat: "💬", call: "📞", video: "🎬", vocab: "📖", map: "🧩", mission: "🎭", review: "📝", lesson: "🧩", recall: "🎯", script: "🎭", quiz: "📝" };
 
-const pct = (n: number) => String(Math.round(n * 100));
-const put = (template: string, vars: Record<string, string>) => Object.entries(vars).reduce((text, [key, value]) => text.replaceAll(`{${key}}`, value), template);
-
-/**
- * 지난 2주 비교: 오른 눈금과 예상보다 아래인 칸만(2026-11-06 개편안 4절 ③ — 설명·"다음" 줄·권유 문장 없음).
- * 아래인 칸을 누르면 그 칸 세부(부족한 것·틀린 기록 순서).
- */
-function DirectionFlow({
-  ui,
-  view,
-  nameOf,
-  onLack,
-}: {
-  ui: UICopy;
-  view: DirectionView;
-  nameOf: (cell: FillCell) => string;
-  onLack: (cell: FillCell) => void;
-}) {
-  if (!view.gains.length && !view.lacks.length) return <p data-direction="empty" className="text-note text-slate-500">{ui.dirEmpty}</p>;
-  return (
-    <div data-direction className="flex flex-col gap-3">
-      {view.gains.length ? (
-        <section className="flex flex-col gap-1">
-          <h3 className="text-caption font-semibold text-slate-300">{ui.dirGain}</h3>
-          <ul className="flex flex-col gap-1">
-            {view.gains.slice(0, 2).map((row) => (
-              <li key={row.axis} data-dir-gain={row.axis} className="text-note text-ink">
-                {put(ui.dirUp, { name: axisName(ui, row.axis), before: pct(row.before), now: pct(row.now) })}
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-      {view.lacks.length ? (
-        <section className="flex flex-col gap-1">
-          <h3 className="text-caption font-semibold text-slate-300">{ui.dirLack}</h3>
-          <ul className="flex flex-col gap-1">
-            {view.lacks.slice(0, 1).map((row) => (
-              <li key={`${row.cell.axis}:${row.cell.id}`}>
-                <button
-                  type="button"
-                  data-dir-lack={row.cell.id}
-                  onClick={() => onLack(row.cell)}
-                  className="tb-btn w-full rounded-xl px-3 py-2 text-start text-note text-ink"
-                >
-                  {put(ui.dirUnder, { name: nameOf(row.cell), expected: pct(row.expected), actual: pct(row.actual) })}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-    </div>
-  );
-}
 
 /**
  * Logbank(2026-11-02 사용자 "층위가 모호해서 난잡 — 기준을 하나로, 각 탭에서 학습한 걸 모은 자료, 누르면 세부(스크린샷·학습 내용)"):
  * [주 | 월] ‹기간› → 기준 탭 [⏱ 학습 시간 | 📐 문법 | 🔤 어휘 | 💬 표현] → 그 기간 날마다 막대(누르면 그날 세부 — 결과 카드·배운 것·고친 줄)
  * → 그 기준으로 모은 목록은 꼭짓점·시간을 눌렀을 때만.
- * 육각형 아래는 목록 대신 지난 2주 비교(directionView): 오른 눈금, 예상보다 아래인 칸, 설명, 다음 하나.
  * 재료·자료 셈은 curriculum/logbankData.ts(순수).
  */
 export function Logbank({
@@ -298,9 +218,6 @@ export function Logbank({
   items,
   nodeName,
   grammarName = () => "",
-  known = {},
-  checkups = [],
-  stage = 1,
   head,
 }: {
   ui: UICopy;
@@ -308,17 +225,11 @@ export function Logbank({
   language: string;
   items: readonly LogItem[];
   nodeName: (id: string) => string;
-  /** 단계·문법 칸 번호 → 이름(육각형 세부 칸 "문법"). */
+  /** 단계·문법 칸 번호 → 이름(배운 것·타임라인의 문법 카드).*/
   grammarName?: (stage: number, index: number) => string;
-  /** 익힘 기록(맞힌 날) · 시험 결과 · 지금 단계 — 육각형 재료(curriculum/fillInputs.ts). */
-  known?: KnownMap;
-  checkups?: readonly CheckResult[];
-  stage?: number;
   head?: ReactNode;
 }) {
   const insight = useExpressionInsightOptional();
-  // 개편 3단계: 맨 위 오늘 카드(lib/reform.ts가 켜진 앱만).
-  const [reform] = useState(reformOn);
   const quiz = useQuizDays(language);
   const results = useDayResults(language);
   const allCalls = useSyncExternalStore(subscribeCalls, readCalls, () => [] as SavedConversation[]);
@@ -339,123 +250,39 @@ export function Logbank({
   // 오늘은 이 칸을 처음 그릴 때 한 번(그리는 동안 시계를 읽지 않게).
   const [today] = useState(() => localDay(Date.now()));
   const [kind, setKind] = useState<PeriodKind>(() => readPeriodKind());
-  // 띠 | 육각형(같은 데이터, 기본 띠 — 2026-11-06, RULES 4 "보는 방식 고르기").
-  const [view, setView] = useState<LogView>(() => readLogView());
-  const chooseView = (next: LogView) => {
-    setView(next);
-    try {
-      localStorage.setItem(VIEW_KEY, next);
-    } catch {
-      // 이번에만.
-    }
-  };
   // 사건 장부(curriculum/logLedger.ts): 예전 퀴즈 기록을 이 언어로 처음 열 때 한 번 옮김.
   useEffect(() => {
     migrateLedger(language, readQuizDays);
   }, [language]);
   // 육각형 아래 ⏱ 한 줄을 누르면 학습 시간 막대(예전 기준 탭 ⏱ 자리, 2026-11-02 기준 탭은 육각형 꼭짓점으로).
   const [showTime, setShowTime] = useState(false);
-  const [recordOpen, setRecordOpen] = useState(false);
-  const [openAxis, setOpenAxis] = useState<Axis | null>(null);
-  const [openCell, setOpenCell] = useState<FillCell | null>(null);
   const [back, setBack] = useState(0);
   const [openDay, setOpenDay] = useState<string | null>(null);
-  const [openRow, setOpenRow] = useState<string | null>(null);
   const period = useMemo(() => shiftPeriod(periodOf(kind, today), -back), [kind, today, back]);
   const input: LogInputs = useMemo(() => ({ language, items, results, quiz, calls: callRows, dayOf: localDay }), [language, items, results, quiz, callRows]);
   const summary = useMemo(() => summarize({ period, items, results, quiz, calls: callRows, dayOf: localDay }), [period, items, results, quiz, callRows]);
   const chart = useMemo(() => bars(period, "time", input), [period, input]);
   const sum = useMemo(() => totals(period, "time", input), [period, input]);
-  const partLists = useMemo(
-    () => ({ grammar: partRows(period, "grammar", input), vocab: partRows(period, "vocab", input), expression: partRows(period, "expression", input) }),
-    [period, input],
-  );
-  const rowsOf = (one: Exclude<Basis, "time">) => partLists[one];
-  // 언어능력 육각형(curriculum/fill.ts): 낱말 은행을 받으면 어휘 분모가 찬다.
-  const [words, setWords] = useState(() => peekBank(language));
-  useEffect(() => {
-    let live = true;
-    void loadBank(language).then((list) => {
-      if (live) setWords(list);
-    });
-    return () => {
-      live = false;
-    };
-  }, [language]);
-  const check = useSyncExternalStore(
-    (callback) => {
-      window.addEventListener(FILL_CHECK_EVENT, callback);
-      window.addEventListener("storage", callback);
-      return () => {
-        window.removeEventListener(FILL_CHECK_EVENT, callback);
-        window.removeEventListener("storage", callback);
-      };
-    },
-    () => readFillCheck(language),
-    () => null,
-  );
-  const catalog = useMemo(() => fillCatalog(language, words), [language, words]);
-  // 첫 측정(firstCheck.v1) — 안 푼 아래 단계의 근거(fill.ts placed, 2026-11-07).
-  const placed = useMemo(() => readFirstCheck(language), [language]);
-  // 개편: 띠·육각형 재료 = 사건 장부(오늘 카드·Quizbank와 같은 기록) + 수업 결과·AI 채팅 서버 기록(fillInputs.ts ledgerFillEvents).
+  // 사건 장부(curriculum/logLedger.ts) — 오늘 카드·Quizbank·배운 것·타임라인이 같은 기록.
   const [ledgerTick, setLedgerTick] = useState(0);
   useEffect(() => {
-    if (!reform) return;
     const on = () => setLedgerTick((n) => n + 1);
     window.addEventListener(LEDGER_EVENT, on);
     return () => window.removeEventListener(LEDGER_EVENT, on);
-  }, [reform]);
+  }, []);
   const ledger = useMemo(() => {
     void ledgerTick;
-    return reform ? readLedger(language) : [];
-  }, [reform, ledgerTick, language]);
-  const events = useMemo(() => {
-    const segment = (text: string) => segmentWords(text, language);
-    if (reform) return ledgerFillEvents({ ledger, results, items, language, segment });
-    return fillEvents({ language, known, quiz, results, items, checkups, segment });
-  }, [reform, ledger, language, known, quiz, results, items, checkups]);
-  const callTurns = useMemo(() => callTurnsOf(callRows), [callRows]);
+    return readLedger(language);
+  }, [ledgerTick, language]);
   const [nowAt] = useState(() => Date.now());
-  // 개편: 하루 한 번 판정(fillJudge.ts — 공부한 날 끝마다 꼭짓점당 ±2%p, 오늘 답은 미세 몫). 2주 비교·기간 시작·곡선도 같은 값.
-  const fillInput = useMemo(() => ({ catalog, check, stage, placed, events, calls: callTurns, now: nowAt }), [catalog, check, stage, placed, events, callTurns, nowAt]);
-  const chain = useMemo(() => (reform ? fillChain(fillInput) : null), [reform, fillInput]);
-  const fill = useMemo(() => (chain ? judgeFill(computeFill(fillInput), chain, fillInput) : computeFill(fillInput)), [chain, fillInput]);
-  const earlier = useMemo(() => {
-    const cut = nowAt - COMPARE_MS;
-    if (chain) return fillAt(chain, fillInput, cut);
-    return computeFill({
-      catalog,
-      check,
-      stage,
-      placed,
-      events: events.filter((one) => one.at < cut),
-      calls: callTurns.filter((one) => one.at < cut),
-      now: cut,
-    });
-  }, [chain, fillInput, catalog, check, stage, placed, events, callTurns, nowAt]);
-  const direction = useMemo(() => directionView(fill, earlier), [fill, earlier]);
-  // 학습 방향: 부족한 칸·아직 모름 칸 열쇠를 이 폰에 — 오늘 할 것이 읽는다(curriculum/fillFocus.ts).
-  useEffect(() => {
-    if (words) saveFillFocus(language, fillDirection(fill, catalog, events, stage));
-  }, [language, words, fill, catalog, events, stage]);
-  // 흐린 선 = 고른 기간이 시작할 때(그 전 기록만).
-  const before = useMemo(() => {
-    // 이 폰 지역의 그날 0시(예전엔 UTC+9로 고정 — 2026-11-02 변경 감시).
-    const [y, m, d] = period.start.split("-").map(Number);
-    const start = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
-    if (!events.some((one) => one.at >= start) && !callTurns.some((one) => one.at >= start)) return null;
-    if (chain) return fillAt(chain, fillInput, Math.min(start, nowAt));
-    return computeFill({ catalog, check, stage, placed, events: events.filter((one) => one.at < start), calls: callTurns.filter((one) => one.at < start), now: start });
-  }, [chain, fillInput, nowAt, catalog, check, stage, placed, events, callTurns, period.start]);
   // 학습 곡선 선 = 날마다 그날 끝까지 활용(대화에서 맞게 쓴 것) 누적(growthView.ts usedAt — 2026-11-07 밤 사용자 "학습곡선은 누적으로" → 표에서 익힘을 빼며 "1번으로").
   const knownDays = useMemo(() => {
-    if (!reform) return [] as (number | null)[];
     return periodDays(period, today).map((day) => {
       const end = dayEndMs(day);
       if (end - 86_400_000 > nowAt) return null;
       return usedAt(ledger, Math.floor(Math.min(end, nowAt) / 1000));
     });
-  }, [reform, ledger, period, today, nowAt]);
+  }, [ledger, period, today, nowAt]);
   const rangeFormat = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
@@ -481,134 +308,19 @@ export function Logbank({
       // 이번에만.
     }
   };
-  const rowLabel = (row: PartRow) => (row.node ? nodeName(row.node) || row.text : row.key ? reviewLabel(language, row.key) || row.text : row.text);
   const chip = (on: boolean) => `rounded-full px-3 py-1 text-caption ${on ? bankTone("log").chip : "border border-line text-slate-300"}`;
   const timeLegend: { cls: string; icon: string; title: string }[] = [
     { cls: "fill-info text-info", icon: "📞", title: ui.callRecordsTitle },
     { cls: "fill-info/55 text-info/70", icon: "🧩", title: ui.framesTitle },
     { cls: "fill-slate-400 text-slate-400", icon: "📝", title: ui.keepTitle },
   ];
-  const partLegend: { cls: string; icon: string; title: string }[] = [
-    { cls: "fill-info text-info", icon: "✓", title: ui.itemsMastered },
-    { cls: "fill-info/45 text-info/60", icon: "•", title: ui.itemsLearned },
-    { cls: "fill-bad text-bad", icon: "✗", title: ui.partFixed },
-  ];
   // 날 문자열이 둘(logDays localDay "2026-11-9" · 장부·기간 "2026-11-09") — 숫자로 맞춰 찾는다.
   const dayDetail = openDay ? allDays.find((one) => sameDay(one.day, openDay)) ?? null : null;
-  const rowDetail = openRow ? (["grammar", "vocab", "expression"] as const).flatMap((one) => rowsOf(one)).find((row) => row.id === openRow) ?? null : null;
   const dateLabel = (day: string) => (kind === "week" ? weekdayLabel(locale, day) : String(asDate(day).getDate()));
-  const rowList = (list: readonly PartRow[]) =>
-    list.length ? (
-      <ol data-log-rows className="flex flex-col gap-1">
-        {list.map((row) => (
-          <li key={row.id}>
-            <button
-              type="button"
-              data-log-row={row.status}
-              onClick={() => setOpenRow(row.id)}
-              className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5"
-            >
-              <span aria-hidden className={`w-4 shrink-0 text-center text-caption ${row.status === "mastered" ? "text-info" : row.status === "missed" ? "text-bad" : "text-info/60"}`}>
-                {row.status === "mastered" ? "✓" : row.status === "missed" ? "✗" : "•"}
-              </span>
-              <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">{rowLabel(row)}</span>
-              <span aria-hidden className="shrink-0 text-meta">{[...new Set(row.events.map((one) => WHERE_ICON[one.where] ?? ""))].filter(Boolean).slice(0, 4).join("")}</span>
-              <span className="shrink-0 text-meta tabular-nums text-slate-500">{row.events.length}</span>
-            </button>
-          </li>
-        ))}
-      </ol>
-    ) : (
-      <p className="text-note text-slate-500">—</p>
-    );
-  /** 📎 기록: 지금 Logbank의 그 갈래 막대·목록(꼭짓점 몫) — 어휘는 어휘, 문장은 문법 + 덩어리 표현, 듣기·실전 대화는 그 기간 통화. */
-  const recordsFor = (axis: Axis): ReactNode => {
-    if (axis === "talk" || axis === "listen") {
-      const callDaysIn = allDays.filter((one) => (one.calls.length || one.notes.length) && inPeriod(period, one.day));
-      return callDaysIn.length ? (
-        <ol data-log-calls className="flex flex-col gap-1">
-          {callDaysIn.map((one) => (
-            <li key={one.day}>
-              <button type="button" onClick={() => setOpenDay(one.day)} className="flex w-full items-center gap-2 rounded-lg border border-line px-3 py-2 text-start hover:bg-white/5">
-                <span className="min-w-0 flex-1 truncate text-note text-ink">{dayFormat(locale, one.day)}</span>
-                <span className="shrink-0 text-meta tabular-nums text-slate-400">{(() => {
-                  const gone = orphanNotes(one);
-                  const secs = one.calls.reduce((n, call) => n + callSeconds(call), 0) + gone.reduce((n, note) => n + note.secs, 0);
-                  return `📞 ${one.calls.length + gone.length} · ${Math.max(1, Math.round(secs / 60))}′`;
-                })()}</span>
-              </button>
-            </li>
-          ))}
-        </ol>
-      ) : (
-        <p className="text-note text-slate-500">—</p>
-      );
-    }
-    const basisOf: Exclude<Basis, "time"> = axis.startsWith("vocab") ? "vocab" : "grammar";
-    const list = basisOf === "vocab" ? rowsOf("vocab") : [...rowsOf("grammar"), ...rowsOf("expression")];
-    return (
-      <div className="flex flex-col gap-3">
-        <LogChart bars={bars(period, basisOf, input)} kind={kind} legend={partLegend} unit="" dateLabel={dateLabel} onDay={(day) => setOpenDay(day)} />
-        {rowList(list)}
-      </div>
-    );
-  };
   const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
-  const openKey = (key: string) => {
-    if (key.startsWith("w|")) insight?.open({ sentence: key.slice(2), selected: key.slice(2) });
-    else openLesson({ language, key });
-  };
-  /** 3층: 부족한 점 한 줄, 틀린 기록만 순서. 안 푼 표현은 "공부하세요"로 넣지 않는다. */
-  const planFor = (axis: Axis, cell: FillCell): CellPlan => {
-    const rows = planCells(fill.axes[axis].cells, tabOf(cell.id));
-    const order = Math.max(1, rows.findIndex((one) => one.id === cell.id) + 1);
-    const lack = lackOf(ui, cell);
-    if (axis === "talk" || axis === "listen") {
-      const thin = cell.state === "weak" || cell.state === "unknown";
-      return {
-        order,
-        lack,
-        why: thin ? (axis === "listen" ? ui.fillListenWhy : ui.fillTalkWhy) : "",
-        steps: [],
-        recommend: thin ? { icon: "📞", label: axisName(ui, axis), go: () => sendAppIntent("startCall", {}) } : null,
-      };
-    }
-    const bank = axis as BankAxis;
-    const use = bank.endsWith("Use");
-    const items = bank.startsWith("vocab") ? catalog.vocab : catalog.sent;
-    const mine = (one: FillEvent) => one.use === use && items.has(one.key);
-    const latest = new Map<string, FillEvent>();
-    for (const one of [...events].sort((a, b) => a.at - b.at)) {
-      if (!mine(one)) continue;
-      latest.set(one.key, one);
-    }
-    const inCell = cell.id.startsWith("miss:")
-      ? [...latest.values()].filter((one) => !one.correct && one.miss === cell.id.slice(5)).map((one) => one.key)
-      : keysInCell(catalog, bank, cell.id);
-    const missed = inCell.filter((key) => latest.get(key) && !latest.get(key)!.correct).sort((a, b) => latest.get(b)!.at - latest.get(a)!.at);
-    const steps: { key: string; label: string }[] = [];
-    const seen = new Set<string>();
-    for (const key of missed) {
-      const point = studyPoint(language, key, grammarName);
-      if (!point || seen.has(point.key)) continue;
-      seen.add(point.key);
-      steps.push(point);
-      if (steps.length === 4) break;
-    }
-    const first = steps[0];
-    return {
-      order,
-      lack,
-      why: first ? ui.fillMissedLast : "",
-      steps,
-      recommend: first
-        ? { icon: first.key.startsWith("w|") ? "📖" : "🧩", label: first.label, go: () => openKey(first.key) }
-        : null,
-    };
-  };
   return (
     <div data-logbank className="flex flex-col gap-3">
-      {reform ? <TodayCards ui={ui} language={language} locale={locale} /> : null}
+      <TodayCards ui={ui} language={language} locale={locale} />
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
         <div className="flex flex-wrap items-center justify-between gap-2">
@@ -622,8 +334,7 @@ export function Logbank({
             <button type="button" onClick={() => setBack((n) => Math.max(0, n - 1))} disabled={back === 0} aria-label="›" className="flex h-7 w-7 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 disabled:opacity-30 rtl:rotate-180">›</button>
           </div>
         </div>
-        {reform ? (
-          <Learned
+        <Learned
             ui={ui}
             language={language}
             locale={locale}
@@ -638,71 +349,6 @@ export function Logbank({
             dateLabel={dateLabel}
             onDay={(day) => setOpenDay(day)}
           />
-        ) : null}
-        {/* Reform: no bands/hexagon % or direction — the learned table and the study timeline only (user 2026-11-09). */}
-        {!reform ? (
-          <>
-        <div className="flex gap-1 self-end" role="group">
-          {(["bands", "hexagon"] as const).map((one) => (
-            <button
-              key={one}
-              type="button"
-              data-log-view={one}
-              aria-pressed={view === one}
-              aria-label={one === "bands" ? ui.logViewBands : ui.logViewHexagon}
-              title={one === "bands" ? ui.logViewBands : ui.logViewHexagon}
-              onClick={() => chooseView(one)}
-              className={chip(view === one)}
-            >
-              {one === "bands" ? "☰" : "⬡"}
-            </button>
-          ))}
-        </div>
-        {view === "bands" ? (
-          <SkillBands
-            ui={ui}
-            result={fill}
-            before={before}
-            onAxis={setOpenAxis}
-            onRecord={!reform && checkups?.length ? () => setRecordOpen(true) : undefined}
-            recordLabel={ui.skillRecord}
-          />
-        ) : (
-          <SkillHexagon
-            ui={ui}
-            result={fill}
-            before={before}
-            onAxis={setOpenAxis}
-            onRecord={!reform && checkups?.length ? () => setRecordOpen(true) : undefined}
-            recordLabel={ui.skillRecord}
-          />
-        )}
-        <DirectionFlow
-          ui={ui}
-          view={direction}
-          nameOf={(cell) => cellName(ui, cell.id, grammarName)}
-          onLack={(cell) => {
-            setOpenAxis(cell.axis);
-            setOpenCell(cell);
-          }}
-        />
-          </>
-        ) : null}
-        {recordOpen && checkups?.length ? (
-          <SkillRecord
-            ui={ui}
-            locale={locale}
-            checkups={checkups}
-            labelOf={(key) => {
-              if (key.startsWith("g|") && grammarName) {
-                const [stage, index] = key.slice(2).split(":").map(Number);
-                return grammarName(stage!, index!);
-              }
-              return keyLabel(key);
-            }}
-            onClose={() => setRecordOpen(false)}
-          />
-        ) : null}
         <button
           type="button"
           data-log-time
@@ -730,54 +376,31 @@ export function Logbank({
       {showTime ? <TimeSources ui={ui} summary={summary} input={input} period={period} /> : null}
       {/* Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. */}
       <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
-      {openAxis ? (
-        <LogSheet title={axisName(ui, openAxis)} ui={ui} onClose={() => setOpenAxis(null)}>
-          <AxisDetail ui={ui} axis={openAxis} fill={fill.axes[openAxis]} grammarName={grammarName} records={recordsFor(openAxis)} onCell={setOpenCell} />
-        </LogSheet>
-      ) : null}
-      {openAxis && openCell ? (
-        <LogSheet title={`${axisName(ui, openAxis)} · ${cellName(ui, openCell.id, grammarName)}`} ui={ui} onClose={() => setOpenCell(null)}>
-          <CellDetail ui={ui} plan={planFor(openAxis, openCell)} onKey={openKey} />
-        </LogSheet>
-      ) : null}
       {dayDetail ? (
         <LogSheet title={dayFormat(locale, dayDetail.day)} ui={ui} onClose={() => setOpenDay(null)}>
-          {reform ? (
-            <DayTimeline
-              ui={ui}
-              language={language}
-              locale={locale}
-              day={dayDetail}
-              ledger={ledger}
-              grammarName={grammarName}
-              keyLabel={keyLabel}
-              fallback={<DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />}
-            />
-          ) : (
-            <DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />
-          )}
+          <DayTimeline
+            ui={ui}
+            language={language}
+            locale={locale}
+            day={dayDetail}
+            ledger={ledger}
+            grammarName={grammarName}
+            keyLabel={keyLabel}
+            fallback={<DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />}
+          />
         </LogSheet>
       ) : openDay ? (
         <LogSheet title={dayFormat(locale, openDay)} ui={ui} onClose={() => setOpenDay(null)}>
-          {reform ? (
-            <DayTimeline
-              ui={ui}
-              language={language}
-              locale={locale}
-              day={{ day: openDay, items: [], quiz: null, results: [], calls: [], notes: [] }}
-              ledger={ledger}
-              grammarName={grammarName}
-              keyLabel={keyLabel}
-              fallback={<p className="text-note text-slate-500">—</p>}
-            />
-          ) : (
-            <p className="text-note text-slate-500">—</p>
-          )}
-        </LogSheet>
-      ) : null}
-      {rowDetail ? (
-        <LogSheet title={rowLabel(rowDetail)} ui={ui} onClose={() => setOpenRow(null)}>
-          <RowBody ui={ui} locale={locale} language={language} row={rowDetail} />
+          <DayTimeline
+            ui={ui}
+            language={language}
+            locale={locale}
+            day={{ day: openDay, items: [], quiz: null, results: [], calls: [], notes: [] }}
+            ledger={ledger}
+            grammarName={grammarName}
+            keyLabel={keyLabel}
+            fallback={<p className="text-note text-slate-500">—</p>}
+          />
         </LogSheet>
       ) : null}
     </div>
@@ -1301,54 +924,6 @@ function CardTimeline({
             </li>
           );
         })}
-      </ol>
-    </div>
-  );
-}
-
-/** 소재 세부: ▶ 그 수업 + 그 기간 나온 일(새것부터) — 수업 결과 카드·고친 줄·퀴즈 틀림·배움/익힘. */
-function RowBody({ ui, locale, language, row }: { ui: UICopy; locale: string; language: string; row: PartRow }) {
-  const key = row.key ?? (row.node ? grammarKeyOfNode(language, row.node) : expressionKeyOf(language, row.text));
-  return (
-    <div data-log-row-detail className="flex flex-col gap-2">
-      {key ? (
-        <button type="button" data-log-row-open onClick={() => openLesson({ language, key })} className="self-start rounded-full bg-info px-4 py-1.5 text-caption font-semibold text-slate-900">
-          ▶
-        </button>
-      ) : null}
-      <ol className="flex flex-col gap-2">
-        {row.events.map((event, i) => (
-          <li key={`${event.at}-${i}`} className="flex flex-col gap-1 rounded-lg border border-line bg-white/[0.02] px-2.5 py-2">
-            <span className="flex items-center gap-2 text-caption">
-              <span aria-hidden>{WHERE_ICON[event.where] ?? "·"}</span>
-              <span className="min-w-0 flex-1 tabular-nums text-slate-400">{dayFormat(locale, event.day)}</span>
-              {event.kind === "mastered" ? <span className="text-info">{`✓ ${ui.itemsMastered}`}</span> : null}
-              {event.kind === "learned" ? <span className="text-info">{ui.itemsLearned}</span> : null}
-              {event.kind === "quizWrong" ? <span className="text-bad">{`✗ ${ui.keepTitle}`}</span> : null}
-              {event.kind === "fixed" ? <span className="text-bad" title={ui.partFixed} aria-label={ui.partFixed}>✎</span> : null}
-              {event.result ? (
-                <span className={`tabular-nums ${event.result.passed ? "text-good" : "text-slate-400"}`}>{`${event.result.right}/${event.result.total}${event.result.passed ? " ✓" : ""}`}</span>
-              ) : null}
-            </span>
-            {event.kind === "fixed" ? (
-              <span className="text-meta">
-                <span dir="auto" className="text-slate-500 line-through">{event.text}</span>
-                {event.right ? (
-                  <>
-                    <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
-                    <span dir="auto" className="text-slate-200">{event.right}</span>
-                  </>
-                ) : null}
-              </span>
-            ) : null}
-            {event.result?.said.slice(0, 5).map((line, j) => (
-              <span key={j} className="flex items-baseline gap-1.5 text-meta">
-                <span aria-hidden className={line.good ? "text-good" : "text-bad"}>{line.good ? "✓" : "✗"}</span>
-                <span dir="auto" className="min-w-0 text-slate-300">{line.text}</span>
-              </span>
-            ))}
-          </li>
-        ))}
       </ol>
     </div>
   );

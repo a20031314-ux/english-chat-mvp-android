@@ -124,3 +124,19 @@ building a feature, writing store text or release notes, or making
 screenshots, and work from it rather than from memory. A commit that changes
 a screen, a feature, a limit or the tone updates `PRODUCT.md` in the same
 commit. When it and the code disagree, the code is right and the doc is fixed.
+
+# One feature, one name, nothing left behind
+
+`hub/FEATURES.md` (Korean, generated from `scripts/features.json` by
+`node scripts/features.mjs`) lists every feature once: its name, its copy key,
+what it does, its code, and what it replaced. Before adding a button, mode or
+tab, find the line that already does the job and extend it, reusing its name
+and copy key; add a line only when nothing fits. When a feature replaces
+another, the same commit deletes the old screen code, its strings in all
+fourteen languages, its guide entry, its ledger line and the doc lines about
+it — no switch that keeps both. Only server routes that published old app
+builds still call stay, listed under 옛 앱 전용 with the version that lets them
+go. Docs (`PRODUCT.md`, `hub/STRUCTURE.md`, `hub/QUIZ.md`, `hub/STATE.md`,
+role files) describe the code as it is now; history goes to `hub/log/`.
+`npm run check:features` (CI `languages`) fails on a stale ledger, a copy key
+no code reads any more, or a new string identical to another key's.
