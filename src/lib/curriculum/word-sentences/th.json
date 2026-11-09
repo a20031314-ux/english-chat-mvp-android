@@ -3389,6 +3389,22 @@
    "src": "made"
   }
  ],
+ "w|เกรงใจ": [
+  {
+   "text": "อนันต์เกรงใจไม่กล้าขอให้เพื่อนส่งรูปมาเพิ่ม",
+   "en": "Anan felt too considerate to ask his friend to send more photos.",
+   "ko": "아난은 미안해서 친구에게 사진을 더 보내 달라고 하지 못했어요.",
+   "blank": "เกรงใจ",
+   "src": "made"
+  },
+  {
+   "text": "คุณยายห้องริมสุดเกรงใจจึงไม่กล้าขอเช็กเอาต์ช้า",
+   "en": "The grandmother in the end room felt bad about imposing and didn't dare ask for a late checkout.",
+   "ko": "끝 방 할머니는 미안해서 체크아웃을 늦게 해 달라고 하지 못했어요.",
+   "blank": "เกรงใจ",
+   "src": "made"
+  }
+ ],
  "w|เกรด": [
   {
    "text": "เขาได้เกรดดีในวิชาคณิตศาสตร์",
@@ -11273,6 +11289,22 @@
    "src": "made"
   }
  ],
+ "w|คุ้น": [
+  {
+   "text": "ลายมือในซองนี้ดูคุ้นตาอนันต์ตั้งแต่แรกเห็น",
+   "en": "The handwriting on this envelope looked familiar to Anan at first sight.",
+   "ko": "이 봉투의 글씨는 아난에게 처음 볼 때부터 낯익었어요.",
+   "blank": "คุ้น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีรู้สึกคุ้นกับหน้าแขกคนนี้เหมือนเคยมาพักแล้ว",
+   "en": "Pranee felt this guest's face was familiar, as if he had stayed before.",
+   "ko": "프라니는 이 손님 얼굴이 전에 묵은 적이 있는 것처럼 낯익었어요.",
+   "blank": "คุ้น",
+   "src": "made"
+  }
+ ],
  "w|คุ้นเคย": [
   {
    "text": "สมชายยังไม่คุ้นเคยกับระบบลางานแบบใหม่",
@@ -11899,6 +11931,22 @@
    "blank": "เคาะ"
   }
  ],
+ "w|เคียง": [
+  {
+   "text": "อนันต์จำได้ว่าเคยยืนเคียงกันกับเพื่อนในวันรับปริญญา",
+   "en": "Anan remembers standing side by side with his friend on graduation day.",
+   "ko": "아난은 졸업식 날 친구와 나란히 서 있던 걸 기억해요.",
+   "blank": "เคียง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีวางแก้วน้ำไว้เคียงกับแจกันดอกไม้บนโต๊ะข้างเตียง",
+   "en": "Pranee placed the water glass next to the flower vase on the bedside table.",
+   "ko": "프라니는 침대 옆 탁자의 꽃병 곁에 물컵을 놓았어요.",
+   "blank": "เคียง",
+   "src": "made"
+  }
+ ],
  "w|เคี้ยว": [
   {
    "text": "เคี้ยวอาหารให้ละเอียด",
@@ -11939,6 +11987,22 @@
    "en": "The queue at the cashier is long in the evening.",
    "ko": "저녁에 계산원 앞 줄이 길어.",
    "blank": "แคชเชียร์"
+  }
+ ],
+ "w|แค้น": [
+  {
+   "text": "อนันต์ยอมรับว่าเคยแค้นเพื่อนอยู่พักหนึ่งเรื่องที่ทะเลาะกันตอนมัธยม",
+   "en": "Anan admitted he once held a grudge against his friend for a while over a fight in high school.",
+   "ko": "아난은 고등학교 때 다툰 일로 한동안 친구에게 앙심을 품었다고 인정했어요.",
+   "blank": "แค้น",
+   "src": "made"
+  },
+  {
+   "text": "ในนิยายที่ปราณีอ่านช่วงพัก ตัวเอกแค้นเจ้าของโรงแรมที่โกงมรดก",
+   "en": "In the novel Pranee reads on her break, the hero bears a grudge against the hotel owner who stole an inheritance.",
+   "ko": "프라니가 쉬는 시간에 읽는 소설에서 주인공은 유산을 가로챈 호텔 주인에게 원한을 품어요.",
+   "blank": "แค้น",
+   "src": "made"
   }
  ],
  "w|แคบ": [
@@ -14623,6 +14687,22 @@
    "blank": "แจ้งเตือน"
   }
  ],
+ "w|แจ่ม": [
+  {
+   "text": "อนันต์เขียนว่าอากาศที่บ้านเกิดวันนี้แจ่มจนมองเห็นภูเขาไกลๆ",
+   "en": "Anan wrote that the weather back home is so clear today you can see distant mountains.",
+   "ko": "아난은 오늘 고향 날씨가 맑아서 먼 산까지 보인다고 썼어요.",
+   "blank": "แจ่ม",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีชอบมองวิวจากดาดฟ้าตอนเช้าที่ฟ้าแจ่ม",
+   "en": "Pranee likes looking at the view from the rooftop on clear mornings.",
+   "ko": "프라니는 하늘이 맑은 아침에 옥상에서 경치 보는 걸 좋아해요.",
+   "blank": "แจ่ม",
+   "src": "made"
+  }
+ ],
  "w|แจ่มใส": [
   {
    "text": "ท้องฟ้าแจ่มใสวันนี้",
@@ -14755,6 +14835,22 @@
    "en": "You have to be firm and refuse a bad offer.",
    "ko": "나쁜 제안은 단호히 거절해야 해.",
    "blank": "ใจแข็ง"
+  }
+ ],
+ "w|ใจจริง": [
+  {
+   "text": "อนันต์เขียนจากใจจริงว่าขอบคุณที่เพื่อนไม่เคยทิ้งกัน",
+   "en": "Anan wrote from the bottom of his heart, thanking his friend for never abandoning him.",
+   "ko": "아난은 한 번도 자기를 저버리지 않은 친구에게 진심으로 고맙다고 썼어요.",
+   "blank": "ใจจริง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกแขกด้วยใจจริงว่ายินดีต้อนรับกลับมาอีก",
+   "en": "Pranee sincerely told the guest that they are welcome back anytime.",
+   "ko": "프라니는 손님에게 언제든 다시 오시라고 진심으로 말했어요.",
+   "blank": "ใจจริง",
+   "src": "made"
   }
  ],
  "w|ใจดี": [
@@ -16483,6 +16579,22 @@
    "en": "This cheese slice smells great.",
    "ko": "이 치즈 조각 향이 좋아.",
    "blank": "ชีส"
+  }
+ ],
+ "w|ชื่น": [
+  {
+   "text": "ได้อ่านจดหมายตอบจากเพื่อนแล้วอนันต์ใจชื่นขึ้นมาก",
+   "en": "After reading his friend's reply, Anan felt much more cheerful.",
+   "ko": "친구의 답장을 읽고 나서 아난은 마음이 한결 밝아졌어요.",
+   "blank": "ชื่น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเห็นแขกยิ้มกลับมาก็ใจชื่นทั้งวัน",
+   "en": "Seeing a guest smile back keeps Pranee cheerful all day.",
+   "ko": "손님이 웃어 주는 걸 보면 프라니는 하루 종일 마음이 밝아요.",
+   "blank": "ชื่น",
+   "src": "made"
   }
  ],
  "w|ชื้น": [
@@ -19473,6 +19585,22 @@
    "src": "made"
   }
  ],
+ "w|โดดเด่น": [
+  {
+   "text": "ในรูปหมู่ของห้องเรียน เพื่อนของอนันต์โดดเด่นที่สุดเพราะตัวสูง",
+   "en": "In the class photo, Anan's friend stands out the most because he is tall.",
+   "ko": "반 단체 사진에서 아난의 친구는 키가 커서 가장 눈에 띄어요.",
+   "blank": "โดดเด่น",
+   "src": "made"
+  },
+  {
+   "text": "ล็อบบี้ของโรงแรมนี้โดดเด่นด้วยโคมไฟระย้าขนาดใหญ่",
+   "en": "The lobby of this hotel stands out with its huge chandelier.",
+   "ko": "이 호텔 로비는 커다란 샹들리에로 눈에 띄어요.",
+   "blank": "โดดเด่น",
+   "src": "made"
+  }
+ ],
  "w|โดน": [
   {
    "text": "โดนฝนเปียกทั้งตัว",
@@ -21235,6 +21363,22 @@
    "src": "made"
   }
  ],
+ "w|ตั้งสติ": [
+  {
+   "text": "อนันต์ต้องตั้งสติก่อนเปิดจดหมายที่บอกข่าวร้ายจากบ้านเกิด",
+   "en": "Anan had to compose himself before opening the letter bearing bad news from home.",
+   "ko": "아난은 고향의 나쁜 소식이 담긴 편지를 열기 전에 마음을 가다듬어야 했어요.",
+   "blank": "ตั้งสติ",
+   "src": "made"
+  },
+  {
+   "text": "ตอนสัญญาณไฟไหม้ดัง ปราณีตั้งสติแล้วพาแขกลงบันไดหนีไฟ",
+   "en": "When the fire alarm went off, Pranee kept calm and led the guests down the fire stairs.",
+   "ko": "화재경보가 울리자 프라니는 침착하게 손님들을 비상계단으로 안내했어요.",
+   "blank": "ตั้งสติ",
+   "src": "made"
+  }
+ ],
  "w|ตัด": [
   {
    "text": "ตัดผมสั้นหน่อย",
@@ -22301,6 +22445,22 @@
    "en": "The parking lot is completely full.",
    "ko": "주차장이 꽉 찼어.",
    "blank": "เต็ม"
+  }
+ ],
+ "w|เต็มใจ": [
+  {
+   "text": "อนันต์เต็มใจช่วยออกค่าตั๋วรถถ้าเพื่อนจะมาเยี่ยม",
+   "en": "Anan is happy to help pay for the bus ticket if his friend comes to visit.",
+   "ko": "아난은 친구가 놀러 오면 차비를 기꺼이 보태 줄 거예요.",
+   "blank": "เต็มใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเต็มใจอยู่ทำงานต่ออีกกะเมื่อเพื่อนป่วย",
+   "en": "Pranee was willing to work another shift when her coworker was sick.",
+   "ko": "프라니는 동료가 아프자 기꺼이 한 교대를 더 일했어요.",
+   "blank": "เต็มใจ",
+   "src": "made"
   }
  ],
  "w|เต็มที่": [
@@ -23499,6 +23659,22 @@
    "src": "made"
   }
  ],
+ "w|ถูกใจ": [
+  {
+   "text": "อนันต์ถูกใจรูปถ่ายเก่าที่เพื่อนแนบมาในซองมาก",
+   "en": "Anan really liked the old photo his friend enclosed in the envelope.",
+   "ko": "아난은 친구가 봉투에 넣어 보낸 옛날 사진이 무척 마음에 들었어요.",
+   "blank": "ถูกใจ",
+   "src": "made"
+  },
+  {
+   "text": "แขกคู่นี้ถูกใจวิวสระว่ายน้ำจนขอต่อคืน",
+   "en": "This couple liked the pool view so much that they asked to stay another night.",
+   "ko": "이 부부는 수영장 전망이 마음에 들어서 하룻밤 더 묵겠다고 했어요.",
+   "blank": "ถูกใจ",
+   "src": "made"
+  }
+ ],
  "w|ถูกต้อง": [
   {
    "text": "คำตอบถูกต้อง",
@@ -23705,6 +23881,22 @@
    "en": "These shoes are very durable.",
    "ko": "이 신발은 아주 튼튼해.",
    "blank": "ทน"
+  }
+ ],
+ "w|ทนไม่ไหว": [
+  {
+   "text": "อนันต์ทนไม่ไหวจึงโทรหาเพื่อนทั้งที่ตั้งใจจะเขียนจดหมาย",
+   "en": "Anan couldn't stand it and called his friend even though he meant to write a letter.",
+   "ko": "아난은 편지를 쓰려다가 참지 못하고 친구에게 전화했어요.",
+   "blank": "ทนไม่ไหว",
+   "src": "made"
+  },
+  {
+   "text": "แขกห้องข้างๆ ทนไม่ไหวกับเสียงดังจึงโทรมาแจ้งตอนตีหนึ่ง",
+   "en": "The guest next door couldn't bear the noise and called to complain at one a.m.",
+   "ko": "옆방 손님은 소음을 참다못해 새벽 한 시에 전화로 알렸어요.",
+   "blank": "ทนไม่ไหว",
+   "src": "made"
   }
  ],
  "w|ทนาย": [
@@ -23916,6 +24108,22 @@
    "en": "Napha has only been working three days, yet she already knows everyone's name in the department.",
    "ko": "나파는 입사한 지 사흘밖에 안 됐지만 벌써 부서 사람들 이름을 다 외웠어요.",
    "blank": "ทว่า",
+   "src": "made"
+  }
+ ],
+ "w|ทวี": [
+  {
+   "text": "ยิ่งอ่านจดหมายนานเท่าไรความคิดถึงของอนันต์ก็ยิ่งทวีขึ้น",
+   "en": "The longer Anan reads the letters, the more his longing grows.",
+   "ko": "아난은 편지를 오래 읽을수록 그리움이 더 커져요.",
+   "blank": "ทวี",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงเทศกาลจำนวนแขกทวีขึ้นจนห้องเต็มทุกคืน",
+   "en": "During the festival the number of guests grows so much that the rooms are full every night.",
+   "ko": "축제 기간에는 손님이 늘어나서 매일 밤 방이 꽉 차요.",
+   "blank": "ทวี",
    "src": "made"
   }
  ],
@@ -26122,6 +26330,22 @@
    "en": "Chan devoted all her school holiday to music practice.",
    "ko": "짠은 방학 내내 음악 연습에 시간을 쏟았어요.",
    "blank": "ทุ่ม",
+   "src": "made"
+  }
+ ],
+ "w|ทุเรศ": [
+  {
+   "text": "อนันต์เขียนแซวว่าลายมือของตัวเองตอนนี้ทุเรศกว่าสมัยเรียนอีก",
+   "en": "Anan joked that his own handwriting is now even uglier than in his school days.",
+   "ko": "아난은 지금 자기 글씨가 학창 시절보다 더 엉망이라고 농담했어요.",
+   "blank": "ทุเรศ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบ่นว่าห้องที่แขกทิ้งไว้เมื่อคืนสภาพทุเรศมาก",
+   "en": "Pranee complained that the room the guest left last night was in a disgusting state.",
+   "ko": "프라니는 어젯밤 손님이 남기고 간 방이 엉망진창이라고 투덜댔어요.",
+   "blank": "ทุเรศ",
    "src": "made"
   }
  ],
@@ -28425,6 +28649,22 @@
    "blank": "น่ารำคาญ"
   }
  ],
+ "w|น่าละอาย": [
+  {
+   "text": "อนันต์เขียนว่าการผิดสัญญาครั้งนั้นเป็นเรื่องน่าละอายที่ยังจำได้",
+   "en": "Anan wrote that breaking that promise was a shameful thing he still remembers.",
+   "ko": "아난은 그때 약속을 어긴 게 아직도 기억나는 부끄러운 일이라고 썼어요.",
+   "blank": "น่าละอาย",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดการบอกว่าการพูดจาไม่สุภาพกับแขกเป็นเรื่องน่าละอาย",
+   "en": "The manager said speaking rudely to guests is shameful.",
+   "ko": "매니저는 손님에게 무례하게 말하는 건 부끄러운 일이라고 했어요.",
+   "blank": "น่าละอาย",
+   "src": "made"
+  }
+ ],
  "w|น่าเศร้า": [
   {
    "text": "ตอนจบเรื่องนี้น่าเศร้า",
@@ -29306,6 +29546,22 @@
    "en": "When she stands alone on stage, Pranee often thinks of her first acting teacher.",
    "ko": "혼자 무대에 설 때 쁘라니는 종종 첫 연기 선생님을 떠올려요.",
    "blank": "นึกถึง",
+   "src": "made"
+  }
+ ],
+ "w|นึกออก": [
+  {
+   "text": "อนันต์นึกออกแล้วว่าร้านก๋วยเตี๋ยวที่เพื่อนพูดถึงอยู่ตรงไหน",
+   "en": "Anan finally remembered where the noodle shop his friend mentioned is.",
+   "ko": "아난은 친구가 말한 국숫집이 어디였는지 이제 생각났어요.",
+   "blank": "นึกออก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีนึกออกว่าแขกห้องนี้แพ้ถั่วจึงรีบบอกครัว",
+   "en": "Pranee remembered that the guest in this room is allergic to nuts and quickly told the kitchen.",
+   "ko": "프라니는 이 방 손님이 견과류 알레르기가 있다는 게 생각나서 얼른 주방에 알렸어요.",
+   "blank": "นึกออก",
    "src": "made"
   }
  ],
@@ -33357,6 +33613,22 @@
    "blank": "ปลาหมึก"
   }
  ],
+ "w|ปลื้ม": [
+  {
+   "text": "อนันต์ปลื้มมากที่เพื่อนยังเก็บของขวัญชิ้นแรกไว้",
+   "en": "Anan was delighted that his friend still kept the first gift.",
+   "ko": "아난은 친구가 첫 선물을 아직 간직하고 있어서 무척 기뻤어요.",
+   "blank": "ปลื้ม",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีปลื้มมากเมื่อแขกเขียนการ์ดขอบคุณทิ้งไว้บนหมอน",
+   "en": "Pranee was thrilled when a guest left a thank-you card on the pillow.",
+   "ko": "손님이 베개 위에 감사 카드를 남겨 두자 프라니는 무척 기뻤어요.",
+   "blank": "ปลื้ม",
+   "src": "made"
+  }
+ ],
  "w|ปลุก": [
   {
    "text": "ประยุทธตั้งนาฬิกาปลุกไว้หกโมงเพราะต้องซ้อมแต่เช้า",
@@ -34091,6 +34363,22 @@
    "en": "I've got a cold.",
    "ko": "나 감기 걸렸어.",
    "blank": "เป็น"
+  }
+ ],
+ "w|เป็นกลาง": [
+  {
+   "text": "อนันต์พยายามเขียนเรื่องการเมืองแบบเป็นกลางเพื่อไม่ให้เพื่อนอึดอัด",
+   "en": "Anan tries to write about politics neutrally so his friend won't feel uncomfortable.",
+   "ko": "아난은 친구가 불편하지 않도록 정치 얘기를 중립적으로 쓰려고 해요.",
+   "blank": "เป็นกลาง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีพยายามวางตัวเป็นกลางเมื่อแขกสองคนทะเลาะกันที่ล็อบบี้",
+   "en": "Pranee tried to stay neutral when two guests argued in the lobby.",
+   "ko": "프라니는 로비에서 손님 둘이 다툴 때 중립을 지키려고 했어요.",
+   "blank": "เป็นกลาง",
+   "src": "made"
   }
  ],
  "w|เป็นกันเอง": [
@@ -37043,6 +37331,22 @@
    "blank": "พบ"
   }
  ],
+ "w|พบกัน": [
+  {
+   "text": "อนันต์ชวนเพื่อนว่าปลายปีนี้มาพบกันที่บ้านเกิดสักครั้ง",
+   "en": "Anan invited his friend to meet up in their hometown at the end of this year.",
+   "ko": "아난은 친구에게 올해 말에 고향에서 한번 만나자고 했어요.",
+   "blank": "พบกัน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีกับเพื่อนร่วมงานนัดพบกันที่ห้องพักพนักงานตอนเที่ยง",
+   "en": "Pranee and a coworker arranged to meet in the staff room at noon.",
+   "ko": "프라니와 동료는 점심때 직원 휴게실에서 만나기로 했어요.",
+   "blank": "พบกัน",
+   "src": "made"
+  }
+ ],
  "w|พยักหน้า": [
   {
    "text": "เขาพยักหน้าเห็นด้วยทันที",
@@ -38535,6 +38839,22 @@
    "src": "made"
   }
  ],
+ "w|พื้นเมือง": [
+  {
+   "text": "อนันต์ส่งขนมพื้นเมืองของจังหวัดไปพร้อมกับจดหมาย",
+   "en": "Anan sent local sweets from his province along with the letter.",
+   "ko": "아난은 편지와 함께 고향 지방의 전통 과자를 보냈어요.",
+   "blank": "พื้นเมือง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านอาหารของโรงแรมเสิร์ฟอาหารพื้นเมืองภาคเหนือทุกเย็น",
+   "en": "The hotel restaurant serves northern local food every evening.",
+   "ko": "호텔 식당은 매일 저녁 북부 향토 음식을 내놓아요.",
+   "blank": "พื้นเมือง",
+   "src": "made"
+  }
+ ],
  "w|พุ่ง": [
   {
    "text": "ทันทีที่ศาลอ่านคำตัดสิน นักข่าวก็พุ่งเข้าไปหาอนันต์หน้าห้องพิจารณาคดี",
@@ -38740,6 +39060,22 @@
    "en": "A store official explained the fire escape routes to new staff.",
    "ko": "백화점 직원은 신입 직원들에게 화재 대피로를 설명했어요.",
    "blank": "เพลิง",
+   "src": "made"
+  }
+ ],
+ "w|เพลิน": [
+  {
+   "text": "อนันต์อ่านจดหมายเก่าเพลินจนลืมดูเวลา",
+   "en": "Anan got so absorbed reading old letters that he forgot the time.",
+   "ko": "아난은 옛 편지를 읽느라 푹 빠져서 시간 가는 줄 몰랐어요.",
+   "blank": "เพลิน",
+   "src": "made"
+  },
+  {
+   "text": "แขกนั่งริมสระว่ายน้ำอ่านหนังสือเพลินจนตัวแดง",
+   "en": "The guest sat by the pool so absorbed in a book that he got sunburned.",
+   "ko": "손님은 수영장 옆에서 책에 푹 빠져 있다가 살갗이 빨갛게 탔어요.",
+   "blank": "เพลิน",
    "src": "made"
   }
  ],
@@ -39804,6 +40140,22 @@
    "en": "The sea in southern Thailand is clearer than any Phon has seen before.",
    "ko": "태국 남부 바다는 폰이 본 어떤 바다보다 맑아요.",
    "blank": "ภาคใต้",
+   "src": "made"
+  }
+ ],
+ "w|ภาคภูมิใจ": [
+  {
+   "text": "อนันต์ภาคภูมิใจที่เพื่อนได้เป็นครูใหญ่ของโรงเรียนในหมู่บ้าน",
+   "en": "Anan is proud that his friend became the principal of the village school.",
+   "ko": "아난은 친구가 마을 학교 교장이 된 것이 자랑스러워요.",
+   "blank": "ภาคภูมิใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีภาคภูมิใจที่ได้รางวัลพนักงานดีเด่นประจำเดือน",
+   "en": "Pranee is proud to have won employee of the month.",
+   "ko": "프라니는 이달의 우수 직원상을 받아서 자랑스러워요.",
+   "blank": "ภาคภูมิใจ",
    "src": "made"
   }
  ],
@@ -40953,6 +41305,22 @@
    "en": "This mangosteen has juicy white flesh.",
    "ko": "이 망고스틴 흰 살이 과즙이 많아.",
    "blank": "มังคุด"
+  }
+ ],
+ "w|มัด": [
+  {
+   "text": "อนันต์มัดจดหมายเก่าทั้งหมดไว้ด้วยเชือกฟาง",
+   "en": "Anan tied all the old letters together with plastic string.",
+   "ko": "아난은 옛 편지들을 비닐 끈으로 모두 묶어 두었어요.",
+   "blank": "มัด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีมัดผ้าม่านด้วยริบบิ้นสีทองให้ดูเรียบร้อย",
+   "en": "Pranee tied the curtains with gold ribbon to make them look neat.",
+   "ko": "프라니는 커튼을 금색 리본으로 묶어 단정해 보이게 했어요.",
+   "blank": "มัด",
+   "src": "made"
   }
  ],
  "w|มัธยม": [
@@ -42357,6 +42725,22 @@
    "en": "I bought fruit for my husbands mother.",
    "ko": "시어머니께 과일을 사 드렸어.",
    "blank": "แม่สามี"
+  }
+ ],
+ "w|โมโห": [
+  {
+   "text": "อนันต์เล่าว่าเมื่อก่อนเป็นคนขี้โมโหแต่ตอนนี้ใจเย็นลงมาก",
+   "en": "Anan said he used to be hot-tempered but has calmed down a lot now.",
+   "ko": "아난은 예전엔 화를 잘 냈는데 지금은 많이 차분해졌다고 했어요.",
+   "blank": "โมโห",
+   "src": "made"
+  },
+  {
+   "text": "แขกคนหนึ่งโมโหเพราะแอร์ในห้องเสีย",
+   "en": "One guest got angry because the air conditioner in his room was broken.",
+   "ko": "한 손님이 방 에어컨이 고장 나서 화를 냈어요.",
+   "blank": "โมโห",
+   "src": "made"
   }
  ],
  "w|ไม่": [
@@ -44019,6 +44403,22 @@
    "blank": "รก"
   }
  ],
+ "w|รณรงค์": [
+  {
+   "text": "เพื่อนของอนันต์เล่าว่ากำลังรณรงค์ให้คนในหมู่บ้านแยกขยะ",
+   "en": "Anan's friend wrote that he is campaigning for people in the village to sort their trash.",
+   "ko": "아난의 친구는 마을 사람들에게 쓰레기 분리를 하자는 캠페인을 하고 있다고 했어요.",
+   "blank": "รณรงค์",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมรณรงค์ให้แขกใช้ผ้าเช็ดตัวซ้ำเพื่อประหยัดน้ำ",
+   "en": "The hotel campaigns for guests to reuse towels to save water.",
+   "ko": "호텔은 물을 아끼려고 손님들에게 수건을 다시 쓰자는 캠페인을 해요.",
+   "blank": "รณรงค์",
+   "src": "made"
+  }
+ ],
  "w|รด": [
   {
    "text": "ทุกเช้าชัยรดน้ำต้นไม้หน้าศาลากลางก่อนเปิดสำนักงาน",
@@ -45114,6 +45514,22 @@
    "en": "There's a beehive under the roof.",
    "ko": "지붕 밑에 벌집이 있어.",
    "blank": "รัง",
+   "src": "made"
+  }
+ ],
+ "w|รังเกียจ": [
+  {
+   "text": "อนันต์เขียนว่าตอนเด็กเคยรังเกียจผักทุกชนิดแต่ตอนนี้กินได้หมด",
+   "en": "Anan wrote that as a child he hated every kind of vegetable but now he eats them all.",
+   "ko": "아난은 어릴 때 채소라면 다 싫어했는데 지금은 다 먹는다고 썼어요.",
+   "blank": "รังเกียจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีไม่เคยรังเกียจงานล้างห้องน้ำในโรงแรม",
+   "en": "Pranee never minds cleaning the bathrooms at the hotel.",
+   "ko": "프라니는 호텔 화장실 청소를 한 번도 싫어한 적이 없어요.",
+   "blank": "รังเกียจ",
    "src": "made"
   }
  ],
@@ -49287,6 +49703,22 @@
    "src": "made"
   }
  ],
+ "w|โล่งอก": [
+  {
+   "text": "อนันต์โล่งอกเมื่อรู้ว่าเพื่อนหายป่วยแล้ว",
+   "en": "Anan was relieved to learn his friend had recovered.",
+   "ko": "아난은 친구가 병이 나았다는 걸 알고 안도했어요.",
+   "blank": "โล่งอก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีโล่งอกที่หากระเป๋าสตางค์ของแขกเจอใต้เตียง",
+   "en": "Pranee was relieved to find the guest's wallet under the bed.",
+   "ko": "프라니는 손님 지갑을 침대 밑에서 찾아서 안도했어요.",
+   "blank": "โล่งอก",
+   "src": "made"
+  }
+ ],
  "w|โลมา": [
   {
    "text": "โลมาฉลาดและเป็นมิตร",
@@ -50409,6 +50841,22 @@
    "blank": "วิดีโอ"
   }
  ],
+ "w|วิตกกังวล": [
+  {
+   "text": "อนันต์วิตกกังวลเมื่อเพื่อนเงียบหายไปหลายเดือน",
+   "en": "Anan grew anxious when his friend went silent for several months.",
+   "ko": "아난은 친구가 몇 달째 소식이 없자 걱정이 됐어요.",
+   "blank": "วิตกกังวล",
+   "src": "made"
+  },
+  {
+   "text": "แขกคนนั้นวิตกกังวลเพราะทำพาสปอร์ตหายในห้อง",
+   "en": "That guest was anxious because he lost his passport in the room.",
+   "ko": "그 손님은 방에서 여권을 잃어버려서 걱정했어요.",
+   "blank": "วิตกกังวล",
+   "src": "made"
+  }
+ ],
  "w|วิตามิน": [
   {
    "text": "ธนาถามหมอว่าควรกินวิตามินซีเพื่อให้เหงือกแข็งแรงไหม",
@@ -50574,6 +51022,22 @@
    "en": "Malee took her mother to the doctor, who diagnosed a stomach ailment.",
    "ko": "말리는 어머니를 모시고 병원에 갔고 의사는 위염이라고 진단했어요.",
    "blank": "วินิจฉัย",
+   "src": "made"
+  }
+ ],
+ "w|วิพากษ์วิจารณ์": [
+  {
+   "text": "อนันต์ไม่อยากวิพากษ์วิจารณ์ทางเลือกในชีวิตของเพื่อน",
+   "en": "Anan doesn't want to criticize his friend's life choices.",
+   "ko": "아난은 친구의 인생 선택을 비판하고 싶지 않아요.",
+   "blank": "วิพากษ์วิจารณ์",
+   "src": "made"
+  },
+  {
+   "text": "แขกบางคนวิพากษ์วิจารณ์โรงแรมในเว็บรีวิวเรื่องอาหารเช้า",
+   "en": "Some guests criticized the hotel's breakfast on a review site.",
+   "ko": "몇몇 손님은 리뷰 사이트에서 호텔 조식을 비판했어요.",
+   "blank": "วิพากษ์วิจารณ์",
    "src": "made"
   }
  ],
@@ -51016,6 +51480,22 @@
    "en": "Health officials came up to check whether the village chickens had a virus.",
    "ko": "보건 직원들이 마을 닭이 바이러스에 걸렸는지 검사하러 올라왔어요.",
    "blank": "ไวรัส",
+   "src": "made"
+  }
+ ],
+ "w|ไว้วางใจ": [
+  {
+   "text": "อนันต์เขียนจดหมายถึงเพื่อนเก่าเพราะไว้วางใจคนนี้มากที่สุด",
+   "en": "Anan writes letters to his old friend because he trusts this person the most.",
+   "ko": "아난은 이 친구를 가장 믿기 때문에 옛 친구에게 편지를 써요.",
+   "blank": "ไว้วางใจ",
+   "src": "made"
+  },
+  {
+   "text": "แขกประจำไว้วางใจให้ปราณีดูแลห้องพักทุกครั้งที่มา",
+   "en": "The regular guest trusts Pranee to look after the room every time.",
+   "ko": "단골손님은 올 때마다 프라니에게 객실 관리를 믿고 맡겨요.",
+   "blank": "ไว้วางใจ",
    "src": "made"
   }
  ],
@@ -51475,6 +51955,22 @@
    "blank": "เศร้าหมอง"
   }
  ],
+ "w|โศก": [
+  {
+   "text": "เพื่อนส่งกลอนโศกมาให้อนันต์อ่านหลังเลิกกับแฟน",
+   "en": "His friend sent Anan a sorrowful poem to read after breaking up.",
+   "ko": "친구는 이별 후 아난에게 슬픈 시를 보내 주었어요.",
+   "blank": "โศก",
+   "src": "made"
+  },
+  {
+   "text": "นักเปียโนในล็อบบี้เล่นเพลงโศกจนแขกบางคนน้ำตาซึม",
+   "en": "The pianist in the lobby played a sorrowful tune that brought some guests to tears.",
+   "ko": "로비의 피아니스트가 슬픈 곡을 연주해서 몇몇 손님은 눈시울이 젖었어요.",
+   "blank": "โศก",
+   "src": "made"
+  }
+ ],
  "w|สกปรก": [
   {
    "text": "รองเท้าสกปรกหมดแล้ว",
@@ -51639,6 +52135,22 @@
    "blank": "ส่งมอบ"
   }
  ],
+ "w|สงวน": [
+  {
+   "text": "อนันต์สงวนพื้นที่ในลิ้นชักไว้เก็บจดหมายจากเพื่อนโดยเฉพาะ",
+   "en": "Anan reserves a space in his drawer just for keeping letters from his friend.",
+   "ko": "아난은 친구의 편지만 넣어 두려고 서랍 한 칸을 따로 비워 둬요.",
+   "blank": "สงวน",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมสงวนห้องชั้นบนสุดไว้ให้แขกคนสำคัญ",
+   "en": "The hotel reserves the top-floor room for important guests.",
+   "ko": "호텔은 맨 꼭대기 층 객실을 귀빈을 위해 남겨 둬요.",
+   "blank": "สงวน",
+   "src": "made"
+  }
+ ],
  "w|สงสัย": [
   {
    "text": "ฉันสงสัยเรื่องนี้",
@@ -51743,6 +52255,22 @@
    "en": "Is this fish fresh?",
    "ko": "이 생선 신선해요?",
    "blank": "สด"
+  }
+ ],
+ "w|สดชื่น": [
+  {
+   "text": "หลังส่งจดหมายเสร็จอนันต์รู้สึกสดชื่นเหมือนได้ระบายความในใจ",
+   "en": "After sending the letter Anan felt refreshed, as if he had let out his feelings.",
+   "ko": "편지를 보내고 나서 아난은 속마음을 털어놓은 듯 개운했어요.",
+   "blank": "สดชื่น",
+   "src": "made"
+  },
+  {
+   "text": "น้ำมะนาวเย็นๆ ที่ล็อบบี้ทำให้แขกรู้สึกสดชื่นหลังเดินทางไกล",
+   "en": "The cold lime juice in the lobby refreshes guests after a long journey.",
+   "ko": "로비의 시원한 라임 주스는 먼 길을 온 손님들을 상쾌하게 해 줘요.",
+   "blank": "สดชื่น",
+   "src": "made"
   }
  ],
  "w|สดใส": [
@@ -52154,6 +52682,22 @@
    "en": "Fon is close to the auntie next door who shares mangoes with her each hot season.",
    "ko": "폰은 더운 철마다 망고를 나눠 주는 옆집 아주머니와 친해요.",
    "blank": "สนิท",
+   "src": "made"
+  }
+ ],
+ "w|สนิทสนม": [
+  {
+   "text": "อนันต์กับเพื่อนสนิทสนมกันมาตั้งแต่อยู่ชั้นประถม",
+   "en": "Anan and his friend have been close since primary school.",
+   "ko": "아난과 친구는 초등학교 때부터 친하게 지냈어요.",
+   "blank": "สนิทสนม",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานต้อนรับกับแขกประจำคุยกันอย่างสนิทสนม",
+   "en": "The receptionist and the regular guest chat like close friends.",
+   "ko": "프런트 직원과 단골손님은 친하게 이야기를 나눠요.",
+   "blank": "สนิทสนม",
    "src": "made"
   }
  ],
@@ -55685,6 +56229,22 @@
    "blank": "เสี่ยง"
   }
  ],
+ "w|เสียงหัวเราะ": [
+  {
+   "text": "อนันต์คิดถึงเสียงหัวเราะของเพื่อนตอนนั่งกินข้าวด้วยกันหลังเลิกเรียน",
+   "en": "Anan misses his friend's laughter when they ate together after school.",
+   "ko": "아난은 방과 후 함께 밥 먹을 때 친구의 웃음소리가 그리워요.",
+   "blank": "เสียงหัวเราะ",
+   "src": "made"
+  },
+  {
+   "text": "เสียงหัวเราะของเด็กๆ ดังมาจากสระว่ายน้ำตลอดบ่าย",
+   "en": "Children's laughter rang out from the swimming pool all afternoon.",
+   "ko": "오후 내내 수영장에서 아이들 웃음소리가 들려왔어요.",
+   "blank": "เสียงหัวเราะ",
+   "src": "made"
+  }
+ ],
  "w|เสียเงิน": [
   {
    "text": "ซื้อของไม่จำเป็นแล้วเสียเงิน",
@@ -55961,6 +56521,22 @@
    "en": "Don't show it on your face.",
    "ko": "티 내지 마.",
    "blank": "แสดง"
+  }
+ ],
+ "w|แสดงว่า": [
+  {
+   "text": "เพื่อนตอบจดหมายเร็วมาก แสดงว่ายังคิดถึงอนันต์อยู่เสมอ",
+   "en": "His friend replied very quickly, which shows the friend still always thinks of Anan.",
+   "ko": "친구가 아주 빨리 답장한 걸 보면 여전히 아난을 늘 생각한다는 뜻이에요.",
+   "blank": "แสดงว่า",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายห้ามรบกวนแขวนอยู่หน้าประตู แสดงว่าแขกยังไม่ตื่น",
+   "en": "The do-not-disturb sign is on the door, which means the guest isn't up yet.",
+   "ko": "방해 금지 팻말이 문에 걸려 있는 걸 보면 손님이 아직 안 일어났다는 뜻이에요.",
+   "blank": "แสดงว่า",
+   "src": "made"
   }
  ],
  "w|แสดงออก": [
@@ -57896,6 +58472,22 @@
    "en": "The flour delivery truck got stuck in a pothole in front of the shop, so Wanna had to help carry the sacks.",
    "ko": "밀가루 배달 트럭이 가게 앞 구덩이에 빠져서 완나가 나가 포대를 날라야 했어요.",
    "blank": "หลุม",
+   "src": "made"
+  }
+ ],
+ "w|หวง": [
+  {
+   "text": "อนันต์หวงสมุดเล่มนี้มากเพราะมีลายมือของเพื่อนอยู่ข้างใน",
+   "en": "Anan is very protective of this notebook because it has his friend's handwriting inside.",
+   "ko": "아난은 안에 친구의 글씨가 있어서 이 공책을 무척 아껴요.",
+   "blank": "หวง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กหญิงในห้องนั้นหวงตุ๊กตาหมีจนไม่ยอมให้ใครจับ",
+   "en": "The girl in that room is so possessive of her teddy bear that she won't let anyone touch it.",
+   "ko": "그 방 여자아이는 곰 인형을 아껴서 아무도 못 만지게 해요.",
+   "blank": "หวง",
    "src": "made"
   }
  ],
@@ -60337,6 +60929,22 @@
    "blank": "อพาร์ตเมนต์"
   }
  ],
+ "w|อภัย": [
+  {
+   "text": "อนันต์ขออภัยที่หายไปนานโดยไม่ได้ส่งข่าว",
+   "en": "Anan apologized for disappearing so long without any news.",
+   "ko": "아난은 소식도 없이 오래 연락이 끊겼던 것을 사과했어요.",
+   "blank": "อภัย",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดการขออภัยแขกที่ต้องรอเช็กอินนาน",
+   "en": "The manager apologized to the guests who had to wait long to check in.",
+   "ko": "매니저는 체크인을 오래 기다린 손님들에게 사과했어요.",
+   "blank": "อภัย",
+   "src": "made"
+  }
+ ],
  "w|อภิปราย": [
   {
    "text": "หลังการแสดง ประยุทธขึ้นเวทีอภิปรายกับผู้ชมเรื่องตอนจบของละคร",
@@ -60621,6 +61229,22 @@
    "en": "I want to learn more about space.",
    "ko": "우주에 대해 더 알고 싶어.",
    "blank": "อวกาศ"
+  }
+ ],
+ "w|อวด": [
+  {
+   "text": "อนันต์อดไม่ได้ที่จะอวดรูปหลานสาวในจดหมายฉบับนี้",
+   "en": "Anan couldn't help showing off a photo of his niece in this letter.",
+   "ko": "아난은 이번 편지에서 조카딸 사진을 자랑하지 않을 수 없었어요.",
+   "blank": "อวด",
+   "src": "made"
+  },
+  {
+   "text": "เด็กชายในห้องสวีทวิ่งมาอวดปราณีว่าว่ายน้ำได้แล้ว",
+   "en": "The boy in the suite ran over to show off to Pranee that he can swim now.",
+   "ko": "스위트룸의 남자아이가 이제 수영할 수 있다고 프라니에게 달려와 자랑했어요.",
+   "blank": "อวด",
+   "src": "made"
   }
  ],
  "w|อ้วน": [
@@ -62493,6 +63117,22 @@
    "en": "I'm twenty-one years old.",
    "ko": "스물한 살이야.",
    "blank": "ยี่สิบเอ็ด"
+  }
+ ],
+ "w|เอ็นดู": [
+  {
+   "text": "แม่ของเพื่อนเอ็นดูอนันต์เหมือนลูกชายอีกคน",
+   "en": "His friend's mother is fond of Anan like another son.",
+   "ko": "친구의 어머니는 아난을 또 하나의 아들처럼 귀여워해요.",
+   "blank": "เอ็นดู",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานทุกคนเอ็นดูแมวที่มานอนหน้าโรงแรมทุกเช้า",
+   "en": "All the staff adore the cat that sleeps in front of the hotel every morning.",
+   "ko": "직원들은 모두 매일 아침 호텔 앞에 와서 자는 고양이를 귀여워해요.",
+   "blank": "เอ็นดู",
+   "src": "made"
   }
  ],
  "w|เอว": [

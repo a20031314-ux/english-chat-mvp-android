@@ -445,6 +445,22 @@
    "blank": "aburrido"
   }
  ],
+ "w|aburrimiento": [
+  {
+   "text": "Javier empezó a ir al gimnasio por puro aburrimiento y ahora no puede vivir sin él.",
+   "en": "Javier started going to the gym out of sheer boredom and now he can't live without it.",
+   "ko": "하비에르는 그냥 심심해서 헬스장에 다니기 시작했는데 이제는 헬스장 없이는 못 살아요.",
+   "blank": "aburrimiento",
+   "src": "made"
+  },
+  {
+   "text": "Un niño bostezaba de aburrimiento en el vestíbulo mientras sus padres hablaban con Marta.",
+   "en": "A boy was yawning with boredom in the lobby while his parents talked to Marta.",
+   "ko": "부모가 마르타와 이야기하는 동안 한 아이가 로비에서 심심해서 하품을 했어요.",
+   "blank": "aburrimiento",
+   "src": "made"
+  }
+ ],
  "w|aburrir": [
   {
    "text": "No quiero aburrir a los invitados con el discurso.",
@@ -945,6 +961,22 @@
    "en": "Can you clarify what you said yesterday?",
    "ko": "어제 한 말을 설명해 줄 수 있어?",
    "blank": "aclarar"
+  }
+ ],
+ "w|acogedor": [
+  {
+   "text": "El vestuario del gimnasio no es muy acogedor, pero Javier al menos tiene agua caliente.",
+   "en": "The gym changing room isn't very cosy, but at least Javier has hot water.",
+   "ko": "헬스장 탈의실이 아늑하진 않지만 하비에르는 적어도 따뜻한 물은 쓸 수 있어요.",
+   "blank": "acogedor",
+   "src": "made"
+  },
+  {
+   "text": "Las habitaciones del ático son pequeñas pero muy acogedoras, les dice Marta a los huéspedes.",
+   "en": "The attic rooms are small but very cosy, Marta tells the guests.",
+   "ko": "마르타는 손님들에게 다락방 객실이 작지만 아주 아늑하다고 말해요.",
+   "blank": "acogedoras",
+   "src": "made"
   }
  ],
  "w|acogida": [
@@ -4255,6 +4287,22 @@
    "src": "made"
   }
  ],
+ "w|alzhéimer": [
+  {
+   "text": "La madre de Javier tiene alzhéimer, y él la acompaña a caminar por el parque cada tarde.",
+   "en": "Javier's mother has Alzheimer's, and he walks with her in the park every afternoon.",
+   "ko": "하비에르의 어머니는 알츠하이머를 앓고 계셔서 하비에르가 매일 오후 공원 산책을 같이 해요.",
+   "blank": "alzhéimer",
+   "src": "made"
+  },
+  {
+   "text": "Una señora con alzhéimer se perdió por los pasillos y Marta la acompañó de vuelta a su habitación.",
+   "en": "A lady with Alzheimer's got lost in the corridors and Marta walked her back to her room.",
+   "ko": "알츠하이머를 앓는 할머니가 복도에서 길을 잃어 마르타가 방까지 모셔다드렸어요.",
+   "blank": "alzhéimer",
+   "src": "made"
+  }
+ ],
  "w|amabilidad": [
   {
    "text": "Raúl agradeció la amabilidad del conserje, que le prestó un paraguas.",
@@ -6609,6 +6657,22 @@
    "en": "She is afraid of any spider.",
    "ko": "어떤 거미든 무서워해.",
    "blank": "araña"
+  }
+ ],
+ "w|arañazo": [
+  {
+   "text": "Javier se hizo un arañazo en el brazo con la barra oxidada de las dominadas.",
+   "en": "Javier scratched his arm on the rusty pull-up bar.",
+   "ko": "하비에르는 녹슨 턱걸이 봉에 팔을 긁혔어요.",
+   "blank": "arañazo",
+   "src": "made"
+  },
+  {
+   "text": "El gato del hotel le hizo un arañazo a Marta cuando intentó sacarlo de la cocina.",
+   "en": "The hotel cat scratched Marta when she tried to get it out of the kitchen.",
+   "ko": "마르타가 호텔 고양이를 주방에서 내보내려다 고양이에게 할퀴었어요.",
+   "blank": "arañazo",
+   "src": "made"
   }
  ],
  "w|árbitro": [
@@ -11131,6 +11195,22 @@
    "blank": "biológico"
   }
  ],
+ "w|bisturí": [
+  {
+   "text": "En un documental, Javier vio cómo un cirujano usaba el bisturí para reparar un tendón.",
+   "en": "In a documentary, Javier saw how a surgeon used a scalpel to repair a tendon.",
+   "ko": "하비에르는 다큐멘터리에서 외과 의사가 메스로 힘줄을 고치는 걸 봤어요.",
+   "blank": "bisturí",
+   "src": "made"
+  },
+  {
+   "text": "En el congreso de cirujanos, Marta repartió folletos de un nuevo modelo de bisturí.",
+   "en": "At the surgeons' conference, Marta handed out leaflets for a new model of scalpel.",
+   "ko": "외과 의사 학회에서 마르타는 새 메스 모델 안내지를 나눠 줬어요.",
+   "blank": "bisturí",
+   "src": "made"
+  }
+ ],
  "w|bitácora": [
   {
    "text": "Diego escribe en una bitácora todo lo que se decide en cada reunión.",
@@ -11715,6 +11795,22 @@
    "en": "We got on board just in time.",
    "ko": "마침 제시간에 탑승했어.",
    "blank": "bordo"
+  }
+ ],
+ "w|borrachera": [
+  {
+   "text": "Tras la borrachera del sábado, Javier llegó al gimnasio el domingo sin fuerzas para nada.",
+   "en": "After Saturday's binge, Javier arrived at the gym on Sunday with no energy for anything.",
+   "ko": "토요일에 술을 잔뜩 마신 하비에르는 일요일에 헬스장에 와서 아무것도 할 힘이 없었어요.",
+   "blank": "borrachera",
+   "src": "made"
+  },
+  {
+   "text": "Los de una despedida de soltero volvieron de madrugada con una borrachera tremenda.",
+   "en": "The people from a stag party came back in the early hours terribly drunk.",
+   "ko": "총각 파티를 한 사람들이 새벽에 잔뜩 취해서 돌아왔어요.",
+   "blank": "borrachera",
+   "src": "made"
   }
  ],
  "w|borracho": [
@@ -13191,6 +13287,22 @@
    "en": "Check the calculation before sending the report.",
    "ko": "보고서를 보내기 전에 계산을 확인해.",
    "blank": "cálculo"
+  }
+ ],
+ "w|caldera": [
+  {
+   "text": "Este invierno se estropeó la caldera del gimnasio y Javier tuvo que ducharse con agua fría.",
+   "en": "This winter the gym's boiler broke down and Javier had to shower with cold water.",
+   "ko": "올겨울 헬스장 보일러가 고장 나서 하비에르는 찬물로 샤워해야 했어요.",
+   "blank": "caldera",
+   "src": "made"
+  },
+  {
+   "text": "A las seis de la mañana se rompió la caldera y Marta tuvo que llamar al técnico de urgencia.",
+   "en": "At six in the morning the boiler broke and Marta had to call the emergency technician.",
+   "ko": "새벽 여섯 시에 보일러가 고장 나서 마르타는 긴급 수리 기사를 불러야 했어요.",
+   "blank": "caldera",
+   "src": "made"
   }
  ],
  "w|calefacción": [
@@ -15579,6 +15691,22 @@
    "src": "made"
   }
  ],
+ "w|catedral": [
+  {
+   "text": "Los domingos Javier sube corriendo las escaleras de la torre de la catedral para entrenar.",
+   "en": "On Sundays Javier runs up the stairs of the cathedral tower to train.",
+   "ko": "일요일마다 하비에르는 운동 삼아 대성당 탑 계단을 뛰어 올라가요.",
+   "blank": "catedral",
+   "src": "made"
+  },
+  {
+   "text": "Desde la terraza del hotel se ve la catedral iluminada por la noche.",
+   "en": "From the hotel terrace you can see the cathedral lit up at night.",
+   "ko": "호텔 테라스에서는 밤에 불 밝힌 대성당이 보여요.",
+   "blank": "catedral",
+   "src": "made"
+  }
+ ],
  "w|categoría": [
   {
    "text": "La exposición tiene una categoría para jóvenes pintores.",
@@ -17861,6 +17989,22 @@
    "blank": "clínica"
   }
  ],
+ "w|clínico": [
+  {
+   "text": "Antes de empezar la dieta de proteínas, Javier se hizo unos análisis clínicos completos.",
+   "en": "Before starting the protein diet, Javier had a full set of clinical tests.",
+   "ko": "단백질 식단을 시작하기 전에 하비에르는 종합 임상 검사를 받았어요.",
+   "blank": "clínicos",
+   "src": "made"
+  },
+  {
+   "text": "Marta reservó una sala de reuniones para un laboratorio que presenta un ensayo clínico.",
+   "en": "Marta booked a meeting room for a lab presenting a clinical trial.",
+   "ko": "마르타는 임상 시험을 발표하는 연구소를 위해 회의실을 예약했어요.",
+   "blank": "clínico",
+   "src": "made"
+  }
+ ],
  "w|club": [
   {
    "text": "Entramos al club de noche.",
@@ -19047,6 +19191,22 @@
    "en": "Find a more comfortable chair, please.",
    "ko": "더 편한 의자 좀 찾아 줘.",
    "blank": "cómoda"
+  }
+ ],
+ "w|compadre": [
+  {
+   "text": "Los sábados Javier entrena con su compadre Luis, que es el padrino de su hija.",
+   "en": "On Saturdays Javier trains with his buddy Luis, who is his daughter's godfather.",
+   "ko": "토요일마다 하비에르는 딸의 대부인 단짝 루이스와 운동해요.",
+   "blank": "compadre",
+   "src": "made"
+  },
+  {
+   "text": "Un señor llegó con su compadre y le pidió a Marta dos habitaciones juntas.",
+   "en": "A man arrived with his buddy and asked Marta for two rooms next to each other.",
+   "ko": "한 아저씨가 단짝 친구와 와서 마르타에게 나란히 붙은 방 두 개를 달라고 했어요.",
+   "blank": "compadre",
+   "src": "made"
   }
  ],
  "w|compañero": [
@@ -20279,6 +20439,22 @@
    "en": "He was released on parole yesterday.",
    "ko": "어제 가석방으로 나왔어.",
    "blank": "condicional"
+  }
+ ],
+ "w|condolencia": [
+  {
+   "text": "Cuando murió el padre de su entrenadora, Javier le mandó un mensaje de condolencia.",
+   "en": "When his trainer's father died, Javier sent her a message of condolence.",
+   "ko": "트레이너의 아버지가 돌아가셨을 때 하비에르는 애도 메시지를 보냈어요.",
+   "blank": "condolencia",
+   "src": "made"
+  },
+  {
+   "text": "Cuando murió el antiguo director, Marta recibió muchas condolencias de clientes de toda la vida.",
+   "en": "When the former manager died, Marta received many condolences from long-time guests.",
+   "ko": "전 지배인이 돌아가셨을 때 마르타는 오랜 단골손님들에게서 많은 조의를 받았어요.",
+   "blank": "condolencias",
+   "src": "made"
   }
  ],
  "w|condón": [
@@ -21537,6 +21713,22 @@
    "src": "made"
   }
  ],
+ "w|contagiar": [
+  {
+   "text": "Cuando está resfriado, Javier se queda en casa para no contagiar a nadie en el gimnasio.",
+   "en": "When he has a cold, Javier stays home so as not to infect anyone at the gym.",
+   "ko": "하비에르는 감기에 걸리면 헬스장 사람들에게 옮기지 않으려고 집에 있어요.",
+   "blank": "contagiar",
+   "src": "made"
+  },
+  {
+   "text": "Marta se puso una mascarilla para no contagiar la gripe a los huéspedes.",
+   "en": "Marta put on a mask so as not to pass the flu on to the guests.",
+   "ko": "마르타는 손님들에게 독감을 옮기지 않으려고 마스크를 썼어요.",
+   "blank": "contagiar",
+   "src": "made"
+  }
+ ],
  "w|contagioso": [
   {
    "text": "Javier le preguntó a la madre si la erupción del niño era contagiosa.",
@@ -22526,6 +22718,22 @@
    "en": "Elena replaced the cord on the old hallway lamp.",
    "ko": "엘레나는 복도의 낡은 전등 줄을 갈았어요.",
    "blank": "cordón",
+   "src": "made"
+  }
+ ],
+ "w|cordura": [
+  {
+   "text": "Javier dice que correr cada mañana le ayuda a mantener la cordura en época de exámenes.",
+   "en": "Javier says running every morning helps him keep his sanity during exam season.",
+   "ko": "하비에르는 시험 기간에 매일 아침 달리기를 해야 제정신을 지킬 수 있다고 해요.",
+   "blank": "cordura",
+   "src": "made"
+  },
+  {
+   "text": "Con tres bodas el mismo fin de semana, Marta estuvo a punto de perder la cordura.",
+   "en": "With three weddings on the same weekend, Marta nearly lost her mind.",
+   "ko": "같은 주말에 결혼식이 세 건이나 있어서 마르타는 거의 정신이 나갈 뻔했어요.",
+   "blank": "cordura",
    "src": "made"
   }
  ],
@@ -24698,6 +24906,22 @@
    "en": "Elena pays a fairly high self-employed contribution every month.",
    "ko": "엘레나는 매달 꽤 높은 자영업자 보험료를 내요.",
    "blank": "cuota",
+   "src": "made"
+  }
+ ],
+ "w|cupón": [
+  {
+   "text": "Con un cupón de descuento, la primera cuota del gimnasio le salió a Javier a mitad de precio.",
+   "en": "With a discount coupon, Javier's first gym fee came out at half price.",
+   "ko": "할인 쿠폰 덕분에 하비에르는 헬스장 첫 달 회비를 반값에 냈어요.",
+   "blank": "cupón",
+   "src": "made"
+  },
+  {
+   "text": "Una pareja enseñó en recepción un cupón para cenar gratis en el restaurante del hotel.",
+   "en": "A couple showed a coupon at reception for a free dinner at the hotel restaurant.",
+   "ko": "한 커플이 호텔 식당 무료 저녁 쿠폰을 프런트에 보여 줬어요.",
+   "blank": "cupón",
    "src": "made"
   }
  ],
@@ -28450,6 +28674,22 @@
    "en": "Nuria wrote about the hurricane that devastated the whole island.",
    "ko": "누리아는 섬 전체를 휩쓴 허리케인에 대해 기사를 썼어요.",
    "blank": "devastar",
+   "src": "made"
+  }
+ ],
+ "w|devoción": [
+  {
+   "text": "Javier sigue su plan de entrenamiento con una devoción que sorprende a los monitores.",
+   "en": "Javier follows his training plan with a devotion that surprises the instructors.",
+   "ko": "하비에르가 운동 계획을 너무 열심히 지켜서 강사들도 놀라요.",
+   "blank": "devoción",
+   "src": "made"
+  },
+  {
+   "text": "Marta cuida las plantas del jardín del hotel con verdadera devoción.",
+   "en": "Marta looks after the plants in the hotel garden with real devotion.",
+   "ko": "마르타는 호텔 정원의 식물을 정성을 다해 돌봐요.",
+   "blank": "devoción",
    "src": "made"
   }
  ],
@@ -33743,6 +33983,22 @@
    "src": "made"
   }
  ],
+ "w|envenenamiento": [
+  {
+   "text": "En la tele del gimnasio daban una noticia sobre un envenenamiento por setas en un pueblo.",
+   "en": "The TV at the gym was showing a news story about mushroom poisoning in a village.",
+   "ko": "헬스장 TV에서 어느 마을의 버섯 중독 사건 뉴스가 나왔어요.",
+   "blank": "envenenamiento",
+   "src": "made"
+  },
+  {
+   "text": "En el turno de noche, Marta lee una novela sobre un envenenamiento en un hotel de lujo.",
+   "en": "On the night shift, Marta reads a novel about a poisoning in a luxury hotel.",
+   "ko": "야간 근무 때 마르타는 고급 호텔에서 벌어진 독살 사건 소설을 읽어요.",
+   "blank": "envenenamiento",
+   "src": "made"
+  }
+ ],
  "w|envenenar": [
   {
    "text": "Intentaron envenenar al rey en la leyenda.",
@@ -37277,6 +37533,22 @@
    "src": "made"
   }
  ],
+ "w|excremento": [
+  {
+   "text": "Alguien dejó el excremento de su perro en la puerta del gimnasio, y Javier lo limpió con cara de asco.",
+   "en": "Someone left their dog's poo at the gym door, and Javier cleaned it up with a disgusted face.",
+   "ko": "누가 헬스장 문 앞에 개똥을 두고 가서 하비에르가 인상을 쓰며 치웠어요.",
+   "blank": "excremento",
+   "src": "made"
+  },
+  {
+   "text": "Una paloma dejó excremento en el balcón de la suite y Marta mandó limpiarlo enseguida.",
+   "en": "A pigeon left droppings on the suite's balcony and Marta had it cleaned straight away.",
+   "ko": "비둘기가 스위트룸 발코니에 똥을 싸서 마르타가 바로 치우게 했어요.",
+   "blank": "excremento",
+   "src": "made"
+  }
+ ],
  "w|excursión": [
   {
    "text": "Pablo le recordó a Andrés la excursión al lago que hicieron con la clase.",
@@ -37793,6 +38065,22 @@
    "blank": "expresión"
   }
  ],
+ "w|expreso": [
+  {
+   "text": "Antes de la clase de spinning, Javier se toma un café expreso en la máquina de la entrada.",
+   "en": "Before spinning class, Javier has an espresso from the machine at the entrance.",
+   "ko": "스피닝 수업 전에 하비에르는 입구 자판기에서 에스프레소를 한 잔 마셔요.",
+   "blank": "expreso",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente le preguntó a Marta a qué hora sale el tren expreso hacia la capital.",
+   "en": "A guest asked Marta what time the express train to the capital leaves.",
+   "ko": "한 손님이 마르타에게 수도로 가는 급행열차가 몇 시에 출발하는지 물었어요.",
+   "blank": "expreso",
+   "src": "made"
+  }
+ ],
  "w|expulsar": [
   {
    "text": "Van a expulsar al jugador por la falta.",
@@ -38139,6 +38427,22 @@
    "en": "She is extremely happy with the result.",
    "ko": "결과에 극도로 만족해.",
    "blank": "extremadamente"
+  }
+ ],
+ "w|extremidad": [
+  {
+   "text": "El fisioterapeuta le explicó a Javier que hay que calentar cada extremidad antes de levantar pesas.",
+   "en": "The physiotherapist explained to Javier that you have to warm up each limb before lifting weights.",
+   "ko": "물리치료사는 하비에르에게 무게를 들기 전에 팔다리를 하나하나 풀어야 한다고 설명했어요.",
+   "blank": "extremidad",
+   "src": "made"
+  },
+  {
+   "text": "Un médico del congreso habló de cómo recuperar la fuerza en una extremidad después de un accidente.",
+   "en": "A doctor at the conference talked about how to regain strength in a limb after an accident.",
+   "ko": "학회에서 한 의사가 사고 뒤 팔다리의 힘을 되찾는 법에 대해 발표했어요.",
+   "blank": "extremidad",
+   "src": "made"
   }
  ],
  "w|extremo": [
@@ -41020,6 +41324,22 @@
    "en": "The nurse taught Lucía to rub her hands well with gel before going in.",
    "ko": "간호사는 루시아에게 들어가기 전에 젤로 손을 잘 문지르는 법을 알려 줬어요.",
    "blank": "frotar",
+   "src": "made"
+  }
+ ],
+ "w|frustrante": [
+  {
+   "text": "Para Javier es frustrante no poder levantar más peso después de un mes entrenando.",
+   "en": "For Javier it's frustrating not to be able to lift more weight after a month of training.",
+   "ko": "하비에르는 한 달을 운동했는데도 무게를 더 못 드는 게 답답해요.",
+   "blank": "frustrante",
+   "src": "made"
+  },
+  {
+   "text": "A Marta le resulta frustrante que el ordenador de recepción se bloquee cuando hay cola.",
+   "en": "Marta finds it frustrating when the reception computer freezes while there's a queue.",
+   "ko": "마르타는 줄이 길 때 프런트 컴퓨터가 멈추면 답답해요.",
+   "blank": "frustrante",
    "src": "made"
   }
  ],
@@ -46923,6 +47243,22 @@
    "blank": "incidente"
   }
  ],
+ "w|incisión": [
+  {
+   "text": "Tras la operación de rodilla, a Javier le quedó una pequeña cicatriz donde el cirujano hizo la incisión.",
+   "en": "After his knee operation, Javier was left with a small scar where the surgeon made the incision.",
+   "ko": "무릎 수술 뒤 하비에르에게는 의사가 절개한 자리에 작은 흉터가 남았어요.",
+   "blank": "incisión",
+   "src": "made"
+  },
+  {
+   "text": "En el congreso médico del hotel, un cirujano explicaba cómo hacer una incisión más pequeña.",
+   "en": "At the medical conference in the hotel, a surgeon was explaining how to make a smaller incision.",
+   "ko": "호텔에서 열린 의학 학회에서 한 외과 의사가 절개를 더 작게 하는 법을 설명했어요.",
+   "blank": "incisión",
+   "src": "made"
+  }
+ ],
  "w|inclinación": [
   {
    "text": "Raúl revisó la inclinación de la rampa para que pudieran subir las sillas de ruedas.",
@@ -48519,6 +48855,22 @@
    "src": "made"
   }
  ],
+ "w|inquieto": [
+  {
+   "text": "La noche antes de la competición, Javier estaba tan inquieto que apenas durmió.",
+   "en": "The night before the competition, Javier was so restless he barely slept.",
+   "ko": "대회 전날 밤 하비에르는 너무 초조해서 거의 못 잤어요.",
+   "blank": "inquieto",
+   "src": "made"
+  },
+  {
+   "text": "Marta notó que un cliente estaba inquieto y no paraba de mirar el reloj esperando el taxi.",
+   "en": "Marta noticed a guest was restless and kept checking his watch while waiting for the taxi.",
+   "ko": "마르타는 한 손님이 택시를 기다리며 초조하게 계속 시계를 보는 걸 알아챘어요.",
+   "blank": "inquieto",
+   "src": "made"
+  }
+ ],
  "w|inquilino": [
   {
    "text": "El inquilino del piso de arriba vino a felicitar las fiestas a la familia de Diego.",
@@ -49373,6 +49725,22 @@
    "src": "made"
   }
  ],
+ "w|internar": [
+  {
+   "text": "Al abuelo de Javier lo tuvieron que internar en el hospital, y Javier va a verlo después de entrenar.",
+   "en": "Javier's grandfather had to be admitted to hospital, and Javier visits him after training.",
+   "ko": "하비에르의 할아버지가 병원에 입원하셔서 하비에르는 운동이 끝나면 찾아가요.",
+   "blank": "internar",
+   "src": "made"
+  },
+  {
+   "text": "Hubo que internar a un huésped de urgencia, y Marta le guardó la maleta en consigna.",
+   "en": "A guest had to be admitted to hospital urgently, and Marta kept his suitcase in left luggage.",
+   "ko": "한 손님이 급히 입원해야 해서 마르타가 그 손님의 여행 가방을 짐 보관소에 맡아 뒀어요.",
+   "blank": "internar",
+   "src": "made"
+  }
+ ],
  "w|internet": [
   {
    "text": "Se cayó el internet otra vez.",
@@ -49630,6 +49998,22 @@
    "en": "Her close friend called to congratulate her.",
    "ko": "단짝 친구가 축하하려고 전화했어요.",
    "blank": "íntima",
+   "src": "made"
+  }
+ ],
+ "w|intravenoso": [
+  {
+   "text": "Un ciclista del gimnasio acabó en urgencias con suero intravenoso por deshidratación.",
+   "en": "A cyclist from the gym ended up in the ER on an IV drip for dehydration.",
+   "ko": "헬스장의 한 사이클 회원이 탈수로 응급실에 가서 정맥 수액을 맞았어요.",
+   "blank": "intravenoso",
+   "src": "made"
+  },
+  {
+   "text": "El médico de guardia mandó al cliente deshidratado a urgencias para ponerle suero intravenoso.",
+   "en": "The doctor on call sent the dehydrated guest to the ER to be put on an IV drip.",
+   "ko": "당직 의사는 탈수 증세가 있는 손님을 응급실로 보내 정맥 수액을 맞게 했어요.",
+   "blank": "intravenoso",
    "src": "made"
   }
  ],
@@ -56405,6 +56789,22 @@
    "src": "made"
   }
  ],
+ "w|meditar": [
+  {
+   "text": "Al terminar la clase de yoga, Javier se queda unos minutos para meditar en silencio.",
+   "en": "At the end of yoga class, Javier stays a few minutes to meditate in silence.",
+   "ko": "요가 수업이 끝나면 하비에르는 몇 분 남아 조용히 명상해요.",
+   "blank": "meditar",
+   "src": "made"
+  },
+  {
+   "text": "Al amanecer, los huéspedes pueden meditar en la terraza con una profesora de yoga.",
+   "en": "At dawn, guests can meditate on the terrace with a yoga teacher.",
+   "ko": "해 뜰 무렵 손님들은 테라스에서 요가 선생님과 명상할 수 있어요.",
+   "blank": "meditar",
+   "src": "made"
+  }
+ ],
  "w|médula": [
   {
    "text": "La dentista le explicó a Javier que el diente tiene una especie de médula llamada pulpa.",
@@ -60301,6 +60701,22 @@
    "blank": "neumático"
   }
  ],
+ "w|neumonía": [
+  {
+   "text": "Javier dejó de entrenar dos semanas porque tuvo neumonía y el médico le mandó reposo.",
+   "en": "Javier stopped training for two weeks because he had pneumonia and the doctor ordered rest.",
+   "ko": "하비에르는 폐렴에 걸려 의사가 쉬라고 해서 두 주 동안 운동을 쉬었어요.",
+   "blank": "neumonía",
+   "src": "made"
+  },
+  {
+   "text": "Una señora mayor se encontró mal en su habitación y el médico le diagnosticó una neumonía.",
+   "en": "An elderly lady felt ill in her room and the doctor diagnosed her with pneumonia.",
+   "ko": "한 할머니가 객실에서 몸이 안 좋았는데 의사가 폐렴이라고 진단했어요.",
+   "blank": "neumonía",
+   "src": "made"
+  }
+ ],
  "w|neutral": [
   {
    "text": "En la discusión entre sus dos amigos, Sergio intentó mantenerse neutral.",
@@ -60757,6 +61173,22 @@
    "en": "He doesn't usually arrive late.",
    "ko": "보통은 늦게 오지 않아.",
    "blank": "normalmente"
+  }
+ ],
+ "w|noroeste": [
+  {
+   "text": "El gimnasio de Javier está en el noroeste de la ciudad, cerca de la estación.",
+   "en": "Javier's gym is in the northwest of the city, near the station.",
+   "ko": "하비에르가 다니는 헬스장은 도시 북서쪽, 역 근처에 있어요.",
+   "blank": "noroeste",
+   "src": "made"
+  },
+  {
+   "text": "Marta avisa a los clientes de que el viento del noroeste suele traer lluvia por la tarde.",
+   "en": "Marta warns guests that the northwest wind usually brings rain in the afternoon.",
+   "ko": "마르타는 손님들에게 북서풍이 불면 오후에 비가 오곤 한다고 알려 줘요.",
+   "blank": "noroeste",
+   "src": "made"
   }
  ],
  "w|norte": [
@@ -63355,6 +63787,22 @@
    "src": "made"
   }
  ],
+ "w|padecer": [
+  {
+   "text": "Javier padece dolores de espalda desde joven, por eso hace pilates dos veces por semana.",
+   "en": "Javier has suffered from back pain since he was young, which is why he does pilates twice a week.",
+   "ko": "하비에르는 젊을 때부터 허리 통증을 앓아서 일주일에 두 번 필라테스를 해요.",
+   "blank": "padece",
+   "src": "made"
+  },
+  {
+   "text": "Muchos clientes del balneario del hotel padecen dolores de espalda o de rodillas.",
+   "en": "Many guests at the hotel spa suffer from back or knee pain.",
+   "ko": "호텔 스파를 찾는 손님 중에는 허리나 무릎 통증을 앓는 사람이 많아요.",
+   "blank": "padecen",
+   "src": "made"
+  }
+ ],
  "w|padrastro": [
   {
    "text": "El padrastro de Mateo le enseñó a encender fuego sin papel.",
@@ -64118,6 +64566,22 @@
    "en": "Paula and her best friend have had parallel lives: same degrees, same trips.",
    "ko": "파울라와 단짝 친구는 같은 전공, 같은 여행으로 나란한 인생을 살아왔어요.",
    "blank": "paralelas",
+   "src": "made"
+  }
+ ],
+ "w|parálisis": [
+  {
+   "text": "Un compañero de Javier sufrió una parálisis facial pasajera y tardó meses en volver a sonreír con normalidad.",
+   "en": "A friend of Javier's had a temporary facial paralysis and took months to smile normally again.",
+   "ko": "하비에르의 운동 친구는 일시적인 안면 마비를 겪어서 다시 제대로 웃기까지 몇 달이 걸렸어요.",
+   "blank": "parálisis",
+   "src": "made"
+  },
+  {
+   "text": "En la tele del vestíbulo hablaban de la parálisis del tráfico por la nevada.",
+   "en": "The TV in the lobby was talking about the traffic standstill caused by the snowfall.",
+   "ko": "로비 TV에서 폭설로 교통이 마비됐다는 소식이 나왔어요.",
+   "blank": "parálisis",
    "src": "made"
   }
  ],
@@ -71345,6 +71809,22 @@
    "blank": "psiquiatra"
   }
  ],
+ "w|psiquiatría": [
+  {
+   "text": "La hermana de Javier trabaja en psiquiatría y le recomienda el deporte contra la ansiedad.",
+   "en": "Javier's sister works in psychiatry and recommends exercise for anxiety.",
+   "ko": "하비에르의 누나는 정신과에서 일하는데 불안에는 운동이 좋다고 권해요.",
+   "blank": "psiquiatría",
+   "src": "made"
+  },
+  {
+   "text": "Este fin de semana el hotel acoge un congreso de psiquiatría y Marta no para de dar llaves.",
+   "en": "This weekend the hotel is hosting a psychiatry conference and Marta keeps handing out keys.",
+   "ko": "이번 주말 호텔에서 정신의학 학회가 열려서 마르타는 쉴 새 없이 열쇠를 내줘요.",
+   "blank": "psiquiatría",
+   "src": "made"
+  }
+ ],
  "w|psiquiátrico": [
   {
    "text": "Antes, Marina trabajó en un hospital psiquiátrico.",
@@ -71657,6 +72137,22 @@
    "blank": "pulmón"
   }
  ],
+ "w|pulmonar": [
+  {
+   "text": "Javier nada todos los días para mejorar su capacidad pulmonar.",
+   "en": "Javier swims every day to improve his lung capacity.",
+   "ko": "하비에르는 폐활량을 늘리려고 매일 수영해요.",
+   "blank": "pulmonar",
+   "src": "made"
+  },
+  {
+   "text": "A un huésped con una enfermedad pulmonar le dieron una habitación sin moqueta.",
+   "en": "A guest with a lung disease was given a room without carpet.",
+   "ko": "폐 질환이 있는 손님에게는 카펫이 없는 방을 내줬어요.",
+   "blank": "pulmonar",
+   "src": "made"
+  }
+ ],
  "w|pulsar": [
   {
    "text": "Sergio solo tiene que pulsar un botón para publicar la noticia en la web.",
@@ -71868,6 +72364,22 @@
    "en": "Carmen made it clear to the new guy that the Friday meeting is purely informative.",
    "ko": "카르멘은 새 동료에게 금요일 회의는 순전히 정보 공유용이라고 알려 줬어요.",
    "blank": "puramente",
+   "src": "made"
+  }
+ ],
+ "w|puré": [
+  {
+   "text": "Después de entrenar, Javier se come un puré de patatas con pollo y un yogur de vainilla.",
+   "en": "After training, Javier eats mashed potatoes with chicken and a vanilla yogurt.",
+   "ko": "하비에르는 운동이 끝나면 닭고기를 곁들인 감자 퓌레와 바닐라 요거트를 먹어요.",
+   "blank": "puré",
+   "src": "made"
+  },
+  {
+   "text": "La cocinera del hotel prepara un puré de calabaza que los huéspedes piden cada noche.",
+   "en": "The hotel cook makes a pumpkin purée that guests order every night.",
+   "ko": "호텔 요리사가 만드는 호박 퓌레는 손님들이 매일 저녁 찾아요.",
+   "blank": "puré",
    "src": "made"
   }
  ],
@@ -79187,6 +79699,22 @@
    "src": "made"
   }
  ],
+ "w|sedar": [
+  {
+   "text": "Para operarle el hombro, el anestesista decidió sedar a Javier por completo.",
+   "en": "To operate on his shoulder, the anaesthetist decided to sedate Javier completely.",
+   "ko": "어깨 수술을 위해 마취과 의사는 하비에르를 완전히 진정시키기로 했어요.",
+   "blank": "sedar",
+   "src": "made"
+  },
+  {
+   "text": "El veterinario tuvo que sedar al perro de un cliente para curarle una pata herida.",
+   "en": "The vet had to sedate a guest's dog to treat its injured paw.",
+   "ko": "수의사는 손님 개의 다친 발을 치료하려고 진정제를 놓아야 했어요.",
+   "blank": "sedar",
+   "src": "made"
+  }
+ ],
  "w|sede": [
   {
    "text": "La sede del periódico de Hugo está en un edificio antiguo del centro.",
@@ -85849,6 +86377,22 @@
    "blank": "tomate"
   }
  ],
+ "w|tomografía": [
+  {
+   "text": "Javier se hizo una tomografía de la rodilla para ver si tenía el menisco roto.",
+   "en": "Javier had a CT scan of his knee to see if his meniscus was torn.",
+   "ko": "하비에르는 반월판이 찢어졌는지 보려고 무릎 CT를 찍었어요.",
+   "blank": "tomografía",
+   "src": "made"
+  },
+  {
+   "text": "Un huésped volvió del hospital con su tomografía en un sobre grande y se la dejó en recepción.",
+   "en": "A guest came back from hospital with his CT scan in a big envelope and left it at reception.",
+   "ko": "한 손님이 병원에서 CT 사진을 큰 봉투에 넣어 돌아왔다가 프런트에 두고 갔어요.",
+   "blank": "tomografía",
+   "src": "made"
+  }
+ ],
  "w|tonelada": [
   {
    "text": "El camión transporta una tonelada de arena.",
@@ -87475,6 +88019,22 @@
    "src": "made"
   }
  ],
+ "w|trineo": [
+  {
+   "text": "Javier dice que subir la colina arrastrando el trineo de su sobrino es mejor ejercicio que la bici estática.",
+   "en": "Javier says pulling his nephew's sled up the hill is better exercise than the exercise bike.",
+   "ko": "하비에르는 조카 썰매를 끌고 언덕을 오르는 게 실내 자전거보다 운동이 더 된다고 해요.",
+   "blank": "trineo",
+   "src": "made"
+  },
+  {
+   "text": "El hotel donde trabaja Marta ofrece paseos en trineo tirado por perros.",
+   "en": "The hotel where Marta works offers dog-sled rides.",
+   "ko": "마르타가 일하는 호텔에서는 개썰매 타기를 해요.",
+   "blank": "trineo",
+   "src": "made"
+  }
+ ],
  "w|trío": [
   {
    "text": "Diego y dos compañeros forman un trío inseparable en el turno de mañana.",
@@ -87962,6 +88522,22 @@
    "en": "Marta couldn't find her starting group among so many people.",
    "ko": "마르타는 사람이 너무 많아서 자기 출발 그룹을 찾지 못했어요.",
    "blank": "ubicar",
+   "src": "made"
+  }
+ ],
+ "w|úlcera": [
+  {
+   "text": "El médico le dijo a Javier que la úlcera de estómago venía del estrés y de tomar tantos antiinflamatorios.",
+   "en": "The doctor told Javier his stomach ulcer came from stress and taking so many anti-inflammatories.",
+   "ko": "의사는 하비에르에게 위궤양이 스트레스와 소염제를 너무 많이 먹은 탓이라고 했어요.",
+   "blank": "úlcera",
+   "src": "made"
+  },
+  {
+   "text": "El director del hotel tiene una úlcera, y Marta le prepara una manzanilla cada tarde.",
+   "en": "The hotel manager has an ulcer, and Marta makes him a chamomile tea every afternoon.",
+   "ko": "호텔 지배인이 궤양이 있어서 마르타는 매일 오후 캐모마일 차를 타 드려요.",
+   "blank": "úlcera",
    "src": "made"
   }
  ],
@@ -88555,6 +89131,22 @@
    "src": "made"
   }
  ],
+ "w|vainilla": [
+  {
+   "text": "Después de entrenar, Javier se come un puré de patatas con pollo y un yogur de vainilla.",
+   "en": "After training, Javier eats mashed potatoes with chicken and a vanilla yogurt.",
+   "ko": "하비에르는 운동이 끝나면 닭고기를 곁들인 감자 퓌레와 바닐라 요거트를 먹어요.",
+   "blank": "vainilla",
+   "src": "made"
+  },
+  {
+   "text": "El hotel deja galletas de vainilla sobre la almohada de cada huésped.",
+   "en": "The hotel leaves vanilla biscuits on every guest's pillow.",
+   "ko": "호텔은 손님마다 베개 위에 바닐라 쿠키를 놓아 둬요.",
+   "blank": "vainilla",
+   "src": "made"
+  }
+ ],
  "w|vale": [
   {
    "text": "Vale, como quieras.",
@@ -89111,6 +89703,22 @@
    "src": "made"
   }
  ],
+ "w|vello": [
+  {
+   "text": "Antes de las competiciones de culturismo, Javier se depila el vello del pecho.",
+   "en": "Before bodybuilding competitions, Javier waxes the hair on his chest.",
+   "ko": "보디빌딩 대회 전에 하비에르는 가슴 털을 제모해요.",
+   "blank": "vello",
+   "src": "made"
+  },
+  {
+   "text": "La camarera de pisos se quejó a Marta del vello que un cliente deja siempre en el lavabo.",
+   "en": "The housekeeper complained to Marta about the hair a guest always leaves in the sink.",
+   "ko": "객실 청소 직원이 한 손님이 늘 세면대에 털을 남긴다고 마르타에게 불평했어요.",
+   "blank": "vello",
+   "src": "made"
+  }
+ ],
  "w|velo": [
   {
    "text": "Pablo le contó a Andrés que su hermana se casó con un velo de encaje de la abuela.",
@@ -89199,6 +89807,22 @@
    "en": "He defeated his rival in the final.",
    "ko": "결승에서 라이벌을 이겼어.",
    "blank": "Venció"
+  }
+ ],
+ "w|vendaje": [
+  {
+   "text": "Javier lleva un vendaje en la muñeca desde que se cayó en la cinta de correr.",
+   "en": "Javier has had a bandage on his wrist since he fell on the treadmill.",
+   "ko": "하비에르는 러닝머신에서 넘어진 뒤로 손목에 붕대를 감고 있어요.",
+   "blank": "vendaje",
+   "src": "made"
+  },
+  {
+   "text": "Marta le puso un vendaje en el tobillo a una niña que se cayó junto a la piscina.",
+   "en": "Marta put a bandage on the ankle of a girl who fell by the pool.",
+   "ko": "마르타는 수영장 옆에서 넘어진 여자아이의 발목에 붕대를 감아 줬어요.",
+   "blank": "vendaje",
+   "src": "made"
   }
  ],
  "w|vendar": [
@@ -90677,6 +91301,22 @@
    "en": "She lives alone since she was widowed.",
    "ko": "과부가 된 뒤로 혼자 살아.",
    "blank": "viuda"
+  }
+ ],
+ "w|viudo": [
+  {
+   "text": "Un señor viudo viene cada mañana al gimnasio de Javier porque así no se siente tan solo.",
+   "en": "A widowed man comes to Javier's gym every morning because that way he doesn't feel so lonely.",
+   "ko": "아내를 잃은 한 아저씨가 덜 외롭다며 매일 아침 하비에르의 헬스장에 와요.",
+   "blank": "viudo",
+   "src": "made"
+  },
+  {
+   "text": "Cada aniversario de boda, un viudo muy amable se aloja en la misma habitación del hotel.",
+   "en": "Every wedding anniversary, a very kind widower stays in the same hotel room.",
+   "ko": "다정한 홀아비 한 분이 결혼기념일마다 호텔의 같은 방에 묵어요.",
+   "blank": "viudo",
+   "src": "made"
   }
  ],
  "w|viva": [

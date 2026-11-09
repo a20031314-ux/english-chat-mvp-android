@@ -2715,6 +2715,22 @@
    "src": "tatoeba:564264/V_Zmoova en:564495/CM"
   }
  ],
+ "w|болото": [
+  {
+   "text": "За рекой начинается болото, куда Михаил ходит за клюквой.",
+   "en": "Beyond the river begins the bog where Mikhail goes for cranberries.",
+   "ko": "강 건너에는 미하일이 크랜베리를 따러 가는 늪이 있어요.",
+   "blank": "болото",
+   "src": "made"
+  },
+  {
+   "text": "Навигатор чуть не завёл машину Светланы в болото.",
+   "en": "The GPS nearly led Svetlana's car into a swamp.",
+   "ko": "내비게이션 때문에 스베틀라나의 차가 늪에 빠질 뻔했어요.",
+   "blank": "болото",
+   "src": "made"
+  }
+ ],
  "w|болтать": [
   {
    "text": "У меня нет времени сидеть и болтать.",
@@ -3238,6 +3254,22 @@
    "en": "Olga got her trousers dirty when she was changing the tyre.",
    "ko": "올가는 타이어를 갈다가 바지를 더럽혔어요.",
    "blank": "брюки",
+   "src": "made"
+  }
+ ],
+ "w|будить": [
+  {
+   "text": "Каждое утро Михаила будит стук дятла.",
+   "en": "Every morning Mikhail is woken by the tapping of a woodpecker.",
+   "ko": "미하일은 매일 아침 딱따구리 소리에 잠을 깨요.",
+   "blank": "будит",
+   "src": "made"
+  },
+  {
+   "text": "Светлана попросила подругу будить её, если она начнёт клевать носом за рулём.",
+   "en": "Svetlana asked her friend to wake her if she started nodding off at the wheel.",
+   "ko": "스베틀라나는 운전하다 졸면 깨워 달라고 친구에게 부탁했어요.",
+   "blank": "будить",
    "src": "made"
   }
  ],
@@ -10763,6 +10795,22 @@
    "src": "made"
   }
  ],
+ "w|гром": [
+  {
+   "text": "Над лесом прогремел гром, и Михаил поспешил к избушке.",
+   "en": "Thunder rolled over the forest, and Mikhail hurried to the cabin.",
+   "ko": "숲 위로 천둥이 울리자 미하일은 서둘러 오두막으로 갔어요.",
+   "blank": "гром",
+   "src": "made"
+  },
+  {
+   "text": "Посреди степи Светлану на пустой трассе застал гром.",
+   "en": "In the middle of the steppe thunder caught Svetlana on an empty highway.",
+   "ko": "스베틀라나는 초원 한가운데 텅 빈 도로에서 천둥을 만났어요.",
+   "blank": "гром",
+   "src": "made"
+  }
+ ],
  "w|громкий": [
   {
    "text": "Выходя из автобуса, я услышал громкий звук.",
@@ -12267,6 +12315,22 @@
    "src": "tatoeba:5500705/odexed en:10190045/ddnktr"
   }
  ],
+ "w|динозавр": [
+  {
+   "text": "Внук Михаила уверен, что следы на глине оставил динозавр.",
+   "en": "Mikhail's grandson is sure a dinosaur left the tracks in the clay.",
+   "ko": "미하일의 손자는 진흙 위 발자국을 공룡이 남긴 거라고 믿어요.",
+   "blank": "динозавр",
+   "src": "made"
+  },
+  {
+   "text": "У въезда в городок Светлану встретил огромный гипсовый динозавр.",
+   "en": "At the entrance to the town Svetlana was greeted by a huge plaster dinosaur.",
+   "ko": "마을 입구에서 커다란 석고 공룡이 스베틀라나를 맞았어요.",
+   "blank": "динозавр",
+   "src": "made"
+  }
+ ],
  "w|директор": [
   {
    "text": "Директор предложил показать мне завод.",
@@ -13455,6 +13519,22 @@
    "src": "made"
   }
  ],
+ "w|доставлять": [
+  {
+   "text": "Лодочник раз в неделю доставляет Михаилу продукты по реке.",
+   "en": "Once a week a boatman delivers groceries to Mikhail by river.",
+   "ko": "뱃사공이 일주일에 한 번 강을 따라 미하일에게 식료품을 날라 줘요.",
+   "blank": "доставляет",
+   "src": "made"
+  },
+  {
+   "text": "Светлана узнала, что в этом придорожном кафе кофе доставляют прямо к машине.",
+   "en": "Svetlana found out that at this roadside café they deliver coffee right to your car.",
+   "ko": "스베틀라나는 이 길가 카페에서 커피를 차까지 갖다준다는 걸 알게 됐어요.",
+   "blank": "доставляют",
+   "src": "made"
+  }
+ ],
  "w|достаточно": [
   {
    "text": "Достаточно, я всё понял.",
@@ -14619,6 +14699,22 @@
    "src": "made"
   }
  ],
+ "w|железо": [
+  {
+   "text": "В речной воде у Михаила много железа, поэтому чайник быстро рыжеет.",
+   "en": "The river water at Mikhail's place has a lot of iron, so the kettle quickly turns rusty.",
+   "ko": "미하일네 강물에는 철분이 많아서 주전자가 금방 붉게 변해요.",
+   "blank": "железа",
+   "src": "made"
+  },
+  {
+   "text": "В заброшенной деревне Светлана нашла старые ворота из кованого железа.",
+   "en": "In an abandoned village Svetlana found old gates made of wrought iron.",
+   "ko": "버려진 마을에서 스베틀라나는 단철로 된 오래된 대문을 찾았어요.",
+   "blank": "железа",
+   "src": "made"
+  }
+ ],
  "w|жёлтый": [
   {
    "text": "Тебе не нравится мой жёлтый шарф?",
@@ -14989,6 +15085,22 @@
    "en": "Grandma lives alone.",
    "ko": "할머니는 혼자 사셔.",
    "blank": "живёт"
+  }
+ ],
+ "w|жук": [
+  {
+   "text": "На листе лопуха Михаил заметил блестящего зелёного жука.",
+   "en": "On a burdock leaf Mikhail noticed a shiny green beetle.",
+   "ko": "미하일은 우엉 잎 위에서 반짝이는 초록 딱정벌레를 봤어요.",
+   "blank": "жука",
+   "src": "made"
+  },
+  {
+   "text": "На капот машины Светланы сел большой майский жук.",
+   "en": "A big cockchafer landed on the hood of Svetlana's car.",
+   "ko": "스베틀라나의 차 보닛에 커다란 풍뎅이가 내려앉았어요.",
+   "blank": "жук",
+   "src": "made"
   }
  ],
  "w|журнал": [
@@ -16410,6 +16522,22 @@
    "en": "The neighbours' cat managed to climb into Elena's bakery through the window.",
    "ko": "이웃집 고양이가 창문으로 엘레나의 빵집에 기어들어 왔어요.",
    "blank": "залезть",
+   "src": "made"
+  }
+ ],
+ "w|залив": [
+  {
+   "text": "Михаил доплыл на лодке до тихого залива, где хорошо ловится щука.",
+   "en": "Mikhail rowed to a quiet bay where pike bite well.",
+   "ko": "미하일은 배를 타고 강꼬치고기가 잘 잡히는 조용한 만으로 갔어요.",
+   "blank": "залива",
+   "src": "made"
+  },
+  {
+   "text": "Дорога вывела Светлану к живописному заливу.",
+   "en": "The road brought Svetlana to a picturesque bay.",
+   "ko": "길을 따라가니 스베틀라나 앞에 그림 같은 만이 나타났어요.",
+   "blank": "заливу",
    "src": "made"
   }
  ],
@@ -23783,6 +23911,22 @@
    "src": "tatoeba:2040539/marafon en:487626/minshirui"
   }
  ],
+ "w|крючок": [
+  {
+   "text": "Михаил насадил наживку на крючок и закинул удочку.",
+   "en": "Mikhail baited the hook and cast his line.",
+   "ko": "미하일은 낚싯바늘에 미끼를 끼우고 낚싯대를 던졌어요.",
+   "blank": "крючок",
+   "src": "made"
+  },
+  {
+   "text": "Светлана повесила куртку на крючок в придорожном кафе.",
+   "en": "Svetlana hung her jacket on a hook in the roadside café.",
+   "ko": "스베틀라나는 길가 카페의 옷걸이에 재킷을 걸었어요.",
+   "blank": "крючок",
+   "src": "made"
+  }
+ ],
  "w|кстати": [
   {
    "text": "Кстати, где ключи?",
@@ -24134,6 +24278,22 @@
    "en": "The attendant gave Tatiana a slice of lemon for her tea.",
    "ko": "차장이 타티아나에게 차에 넣을 레몬 한 조각을 줬어요.",
    "blank": "кусочек",
+   "src": "made"
+  }
+ ],
+ "w|куст": [
+  {
+   "text": "Михаил собрал малину с куста у самой воды.",
+   "en": "Mikhail picked raspberries from a bush right by the water.",
+   "ko": "미하일은 물가 바로 옆 덤불에서 산딸기를 땄어요.",
+   "blank": "куста",
+   "src": "made"
+  },
+  {
+   "text": "Светлана спряталась от ветра за кустом шиповника на обочине.",
+   "en": "Svetlana sheltered from the wind behind a wild-rose bush on the roadside.",
+   "ko": "스베틀라나는 길가 들장미 덤불 뒤에서 바람을 피했어요.",
+   "blank": "кустом",
    "src": "made"
   }
  ],
@@ -25437,6 +25597,22 @@
    "src": "made"
   }
  ],
+ "w|лягушка": [
+  {
+   "text": "Вечером у пруда Михаил слушал, как квакает лягушка.",
+   "en": "In the evening by the pond Mikhail listened to a frog croaking.",
+   "ko": "저녁에 미하일은 연못가에서 개구리 우는 소리를 들었어요.",
+   "blank": "лягушка",
+   "src": "made"
+  },
+  {
+   "text": "На лобовое стекло машины Светланы прыгнула лягушка.",
+   "en": "A frog jumped onto the windshield of Svetlana's car.",
+   "ko": "스베틀라나의 차 앞 유리에 개구리가 뛰어올랐어요.",
+   "blank": "лягушка",
+   "src": "made"
+  }
+ ],
  "w|магазин": [
   {
    "text": "Магазин уже закрыт.",
@@ -25693,6 +25869,22 @@
    "en": "Call Mom this evening.",
    "ko": "저녁에 엄마한테 전화해.",
    "blank": "маме"
+  }
+ ],
+ "w|мамин": [
+  {
+   "text": "Михаил до сих пор варит варенье по маминому рецепту.",
+   "en": "Mikhail still makes jam from his mom's recipe.",
+   "ko": "미하일은 아직도 어머니 레시피대로 잼을 만들어요.",
+   "blank": "маминому",
+   "src": "made"
+  },
+  {
+   "text": "Светлана везёт в дорогу мамины пирожки с капустой.",
+   "en": "Svetlana is taking her mom's cabbage pies on the road.",
+   "ko": "스베틀라나는 엄마가 만든 양배추 피로시키를 챙겨 가요.",
+   "blank": "мамины",
+   "src": "made"
   }
  ],
  "w|мамочка": [
@@ -27621,6 +27813,22 @@
    "ko": "초코우유 좋아해?",
    "blank": "молоко",
    "src": "tatoeba:5043736/odexed en:1989679/Spamster"
+  }
+ ],
+ "w|молоток": [
+  {
+   "text": "Михаил забил молотком гвоздь в старый причал.",
+   "en": "Mikhail hammered a nail into the old pier.",
+   "ko": "미하일은 낡은 선착장에 망치로 못을 박았어요.",
+   "blank": "молотком",
+   "src": "made"
+  },
+  {
+   "text": "В багажнике у Светланы всегда лежат молоток и запасное колесо.",
+   "en": "Svetlana always keeps a hammer and a spare wheel in the trunk.",
+   "ko": "스베틀라나의 트렁크에는 늘 망치와 예비 바퀴가 있어요.",
+   "blank": "молоток",
+   "src": "made"
   }
  ],
  "w|молчание": [
@@ -30646,6 +30854,22 @@
    "en": "Anna explained to the patient that getting up so soon after surgery is unsafe.",
    "ko": "안나는 환자에게 수술 후 이렇게 일찍 일어나는 건 위험하다고 설명했어요.",
    "blank": "небезопасно",
+   "src": "made"
+  }
+ ],
+ "w|небесный": [
+  {
+   "text": "Ночью у костра Михаил разглядывал небесный свод.",
+   "en": "At night by the campfire Mikhail gazed at the vault of the sky.",
+   "ko": "밤에 모닥불 옆에서 미하일은 하늘을 올려다봤어요.",
+   "blank": "небесный",
+   "src": "made"
+  },
+  {
+   "text": "Светлана остановилась у обрыва, чтобы сфотографировать небесную гладь над степью.",
+   "en": "Svetlana stopped at the cliff to photograph the smooth expanse of sky over the steppe.",
+   "ko": "스베틀라나는 초원 위로 펼쳐진 하늘을 찍으려고 절벽 앞에 차를 세웠어요.",
+   "blank": "небесную",
    "src": "made"
   }
  ],
@@ -35373,6 +35597,22 @@
    "src": "made"
   }
  ],
+ "w|орбита": [
+  {
+   "text": "Михаил показал внуку спутник, который двигался по орбите среди звёзд.",
+   "en": "Mikhail showed his grandson a satellite moving in orbit among the stars.",
+   "ko": "미하일은 손자에게 별들 사이로 궤도를 도는 인공위성을 보여 줬어요.",
+   "blank": "орбите",
+   "src": "made"
+  },
+  {
+   "text": "По радио Светлана слушала передачу о станции на орбите Земли.",
+   "en": "On the radio Svetlana listened to a program about a station in Earth orbit.",
+   "ko": "스베틀라나는 라디오에서 지구 궤도를 도는 우주 정거장 이야기를 들었어요.",
+   "blank": "орбите",
+   "src": "made"
+  }
+ ],
  "w|орган": [
   {
    "text": "Они целый день настраивали орган.",
@@ -38355,6 +38595,22 @@
    "src": "made"
   }
  ],
+ "w|паразит": [
+  {
+   "text": "Михаил осматривает собаку после леса, чтобы на ней не завёлся паразит.",
+   "en": "Mikhail checks his dog after the forest so that no parasite gets on it.",
+   "ko": "미하일은 숲에 다녀오면 개 몸에 기생충이 붙지 않았는지 살펴요.",
+   "blank": "паразит",
+   "src": "made"
+  },
+  {
+   "text": "В придорожном кафе Светлана прочитала, что клещ — опасный паразит для собак.",
+   "en": "In a roadside café Svetlana read that the tick is a dangerous parasite for dogs.",
+   "ko": "길가 카페에서 스베틀라나는 진드기가 개에게 위험한 기생충이라는 글을 읽었어요.",
+   "blank": "паразит",
+   "src": "made"
+  }
+ ],
  "w|паренёк": [
   {
    "text": "Какой-то паренёк с гитарой сыграл Михаилу и невесте серенаду.",
@@ -38430,6 +38686,22 @@
    "en": "A gravel parking area was planned in front of Irina's house.",
    "ko": "이리나의 집 앞에 자갈 주차 공간을 만들기로 했어요.",
    "blank": "парковку",
+   "src": "made"
+  }
+ ],
+ "w|парнишка": [
+  {
+   "text": "Тропу к озеру Михаилу показал деревенский парнишка.",
+   "en": "A village lad showed Mikhail the path to the lake.",
+   "ko": "마을 소년이 미하일에게 호숫가로 가는 오솔길을 알려 줬어요.",
+   "blank": "парнишка",
+   "src": "made"
+  },
+  {
+   "text": "На заправке молодой парнишка помог Светлане накачать колёса.",
+   "en": "At the gas station a young lad helped Svetlana pump up the tires.",
+   "ko": "주유소에서 젊은 청년이 스베틀라나의 타이어에 바람 넣는 걸 도와줬어요.",
+   "blank": "парнишка",
    "src": "made"
   }
  ],
@@ -38657,6 +38929,22 @@
    "src": "tatoeba:12511794/marafon en:12511780/rul"
   }
  ],
+ "w|пачка": [
+  {
+   "text": "Михаил всегда берёт в лес пачку соли и спички.",
+   "en": "Mikhail always takes a packet of salt and matches into the forest.",
+   "ko": "미하일은 숲에 갈 때 늘 소금 한 봉지와 성냥을 챙겨요.",
+   "blank": "пачку",
+   "src": "made"
+  },
+  {
+   "text": "На кассе заправки Светлана купила пачку печенья в дорогу.",
+   "en": "At the gas station till Svetlana bought a packet of cookies for the road.",
+   "ko": "스베틀라나는 주유소 계산대에서 길에서 먹을 과자 한 봉지를 샀어요.",
+   "blank": "пачку",
+   "src": "made"
+  }
+ ],
  "w|пение": [
   {
    "text": "Из соседнего зала доносилось пение хора, и Дмитрий не мог сосредоточиться.",
@@ -38686,6 +38974,22 @@
    "en": "How big is your pension?",
    "ko": "연금은 얼마나 받으세요?",
    "blank": "пенсия",
+   "src": "made"
+  }
+ ],
+ "w|пепел": [
+  {
+   "text": "Утром Михаил засыпал угли костра пеплом и песком.",
+   "en": "In the morning Mikhail covered the campfire coals with ash and sand.",
+   "ko": "아침에 미하일은 모닥불 숯을 재와 모래로 덮었어요.",
+   "blank": "пеплом",
+   "src": "made"
+  },
+  {
+   "text": "На смотровой площадке Светлана стряхнула с капота вулканический пепел.",
+   "en": "At the viewpoint Svetlana brushed volcanic ash off the hood.",
+   "ko": "전망대에서 스베틀라나는 보닛 위 화산재를 털어 냈어요.",
+   "blank": "пепел",
    "src": "made"
   }
  ],
@@ -44515,6 +44819,22 @@
    "src": "made"
   }
  ],
+ "w|порошок": [
+  {
+   "text": "Михаил насыпал в ведро стиральный порошок и замочил одежду.",
+   "en": "Mikhail poured washing powder into the bucket and soaked the clothes.",
+   "ko": "미하일은 양동이에 세제 가루를 붓고 옷을 담가 두었어요.",
+   "blank": "порошок",
+   "src": "made"
+  },
+  {
+   "text": "Светлана высыпала в термос порошок какао и залила кипятком.",
+   "en": "Svetlana poured cocoa powder into the thermos and topped it up with boiling water.",
+   "ko": "스베틀라나는 보온병에 코코아 가루를 붓고 끓는 물을 부었어요.",
+   "blank": "порошок",
+   "src": "made"
+  }
+ ],
  "w|порт": [
   {
    "text": "Отель Сергея находится в двух шагах от морского порта.",
@@ -45518,6 +45838,22 @@
    "en": "At the station Elena was swept along by a stream of passengers.",
    "ko": "기차역에서 옐레나는 승객 물결에 휩쓸렸어요.",
    "blank": "поток",
+   "src": "made"
+  }
+ ],
+ "w|потолок": [
+  {
+   "text": "В лесной избушке у Михаила такой низкий потолок, что приходится пригибаться.",
+   "en": "The ceiling in Mikhail's forest cabin is so low he has to duck.",
+   "ko": "미하일의 숲속 오두막은 천장이 너무 낮아서 몸을 숙여야 해요.",
+   "blank": "потолок",
+   "src": "made"
+  },
+  {
+   "text": "Светлана заночевала в мотеле, где на потолке висел огромный вентилятор.",
+   "en": "Svetlana stayed overnight in a motel with a huge fan hanging from the ceiling.",
+   "ko": "스베틀라나는 천장에 커다란 선풍기가 달린 모텔에서 묵었어요.",
+   "blank": "потолке",
    "src": "made"
   }
  ],
@@ -51985,6 +52321,22 @@
    "blank": "Ради"
   }
  ],
+ "w|радиация": [
+  {
+   "text": "Михаил читал, что радиация в этих местах давно в норме.",
+   "en": "Mikhail read that radiation in these parts has long been at normal levels.",
+   "ko": "미하일은 이 지역 방사능 수치가 오래전에 정상으로 돌아왔다는 글을 읽었어요.",
+   "blank": "радиация",
+   "src": "made"
+  },
+  {
+   "text": "Гид объяснил Светлане, что радиация у старой шахты не опасна.",
+   "en": "The guide explained to Svetlana that the radiation near the old mine isn't dangerous.",
+   "ko": "가이드는 스베틀라나에게 옛 광산 근처 방사능은 위험하지 않다고 설명했어요.",
+   "blank": "радиация",
+   "src": "made"
+  }
+ ],
  "w|радио": [
   {
    "text": "Ты слышал новость по радио этим утром?",
@@ -52900,6 +53252,22 @@
    "en": "In the attic Irina found a child's tin toy rocket.",
    "ko": "이리나는 다락방에서 양철로 만든 장난감 로켓을 찾았어요.",
    "blank": "ракету",
+   "src": "made"
+  }
+ ],
+ "w|раковина": [
+  {
+   "text": "На берегу реки Михаил нашёл большую речную раковину.",
+   "en": "On the riverbank Mikhail found a big river shell.",
+   "ko": "미하일은 강가에서 큰 민물 조개껍데기를 주웠어요.",
+   "blank": "раковину",
+   "src": "made"
+  },
+  {
+   "text": "На заправке Светлана долго мыла руки над грязной раковиной.",
+   "en": "At the gas station Svetlana washed her hands for a long time over a dirty sink.",
+   "ko": "주유소에서 스베틀라나는 더러운 세면대에서 한참 손을 씻었어요.",
+   "blank": "раковиной",
    "src": "made"
   }
  ],
@@ -54515,6 +54883,22 @@
    "src": "tatoeba:3676782/marafon en:2171092/Hybrid"
   }
  ],
+ "w|рог": [
+  {
+   "text": "Михаил нашёл в лесу оленьи рога и повесил их над дверью.",
+   "en": "Mikhail found deer antlers in the forest and hung them over the door.",
+   "ko": "미하일은 숲에서 사슴뿔을 주워 문 위에 걸었어요.",
+   "blank": "рога",
+   "src": "made"
+  },
+  {
+   "text": "На сувенирном рынке Светлана купила кружку в форме бараньего рога.",
+   "en": "At the souvenir market Svetlana bought a mug shaped like a ram's horn.",
+   "ko": "기념품 시장에서 스베틀라나는 숫양 뿔 모양 머그를 샀어요.",
+   "blank": "рога",
+   "src": "made"
+  }
+ ],
  "w|род": [
   {
    "text": "Ваш возраст и род занятий?",
@@ -54987,6 +55371,22 @@
    "blank": "Руки"
   }
  ],
+ "w|рукав": [
+  {
+   "text": "Михаил закатал рукав и опустил руку в ледяную реку.",
+   "en": "Mikhail rolled up his sleeve and put his hand into the icy river.",
+   "ko": "미하일은 소매를 걷고 얼음장 같은 강물에 손을 넣었어요.",
+   "blank": "рукав",
+   "src": "made"
+  },
+  {
+   "text": "Светлана вытерла запотевшее стекло рукавом свитера.",
+   "en": "Svetlana wiped the fogged-up window with the sleeve of her sweater.",
+   "ko": "스베틀라나는 김 서린 유리창을 스웨터 소매로 닦았어요.",
+   "blank": "рукавом",
+   "src": "made"
+  }
+ ],
  "w|руководитель": [
   {
    "text": "Наш руководитель обещал рассмотреть идею Ольги на следующей неделе.",
@@ -55113,6 +55513,22 @@
    "ko": "이건 분명히 민물고기예요.",
    "blank": "рыба",
    "src": "tatoeba:4450148/Selena777 en:1039719/tatomeimei"
+  }
+ ],
+ "w|рыбалка": [
+  {
+   "text": "Для Михаила утренняя рыбалка — лучший отдых.",
+   "en": "For Mikhail morning fishing is the best kind of rest.",
+   "ko": "미하일에게 아침 낚시는 최고의 휴식이에요.",
+   "blank": "рыбалка",
+   "src": "made"
+  },
+  {
+   "text": "Брат позвал Светлану на рыбалку, и она свернула к озеру.",
+   "en": "Svetlana's brother invited her fishing, and she turned off toward the lake.",
+   "ko": "오빠가 낚시하자고 불러서 스베틀라나는 호수 쪽으로 방향을 틀었어요.",
+   "blank": "рыбалку",
+   "src": "made"
   }
  ],
  "w|рыбка": [
@@ -56639,6 +57055,22 @@
    "en": "The family is waiting for us.",
    "ko": "식구들이 우리를 기다려.",
    "blank": "Семья"
+  }
+ ],
+ "w|семя": [
+  {
+   "text": "Весной Михаил сажает в огороде семена тыквы.",
+   "en": "In spring Mikhail plants pumpkin seeds in his garden.",
+   "ko": "봄이면 미하일은 텃밭에 호박씨를 심어요.",
+   "blank": "семена",
+   "src": "made"
+  },
+  {
+   "text": "На рынке Светлана купила кулёк семян подсолнечника.",
+   "en": "At the market Svetlana bought a bag of sunflower seeds.",
+   "ko": "시장에서 스베틀라나는 해바라기씨 한 봉지를 샀어요.",
+   "blank": "семян",
+   "src": "made"
   }
  ],
  "w|сенат": [
@@ -58825,6 +59257,22 @@
    "src": "made"
   }
  ],
+ "w|собачка": [
+  {
+   "text": "За Михаилом по тропе бежит маленькая рыжая собачка.",
+   "en": "A little ginger dog runs along the path after Mikhail.",
+   "ko": "작은 갈색 강아지가 오솔길을 따라 미하일 뒤를 쫓아가요.",
+   "blank": "собачка",
+   "src": "made"
+  },
+  {
+   "text": "В кафе у трассы к Светлане подбежала пушистая собачка.",
+   "en": "At the café by the highway a fluffy little dog ran up to Svetlana.",
+   "ko": "도로변 카페에서 복슬복슬한 강아지가 스베틀라나에게 달려왔어요.",
+   "blank": "собачка",
+   "src": "made"
+  }
+ ],
  "w|собеседование": [
   {
    "text": "На собеседовании Никиту попросили приготовить омлет.",
@@ -59973,6 +60421,22 @@
    "src": "made"
   }
  ],
+ "w|соседний": [
+  {
+   "text": "С соседнего берега Михаилу помахал рыбак.",
+   "en": "A fisherman waved to Mikhail from the opposite bank.",
+   "ko": "건너편 강가에서 낚시꾼이 미하일에게 손을 흔들었어요.",
+   "blank": "соседнего",
+   "src": "made"
+  },
+  {
+   "text": "Светлана остановилась на ночлег в соседнем городке.",
+   "en": "Svetlana stopped for the night in a neighboring town.",
+   "ko": "스베틀라나는 이웃 마을에서 하룻밤 묵었어요.",
+   "blank": "соседнем",
+   "src": "made"
+  }
+ ],
  "w|соседство": [
   {
    "text": "Павел ценит хорошее соседство и всегда угощает соседей пирогами.",
@@ -60586,6 +61050,22 @@
    "en": "Maria hurried to the market to buy fresh bread in time.",
    "ko": "마리야는 갓 구운 빵을 사려고 서둘러 시장에 갔어요.",
    "blank": "спешила",
+   "src": "made"
+  }
+ ],
+ "w|спешка": [
+  {
+   "text": "В лесу Михаил забывает о городской спешке.",
+   "en": "In the forest Mikhail forgets about the hurry of the city.",
+   "ko": "숲에 오면 미하일은 도시의 바쁨을 잊어요.",
+   "blank": "спешке",
+   "src": "made"
+  },
+  {
+   "text": "В спешке Светлана забыла зарядку для телефона в мотеле.",
+   "en": "In her hurry Svetlana left her phone charger at the motel.",
+   "ko": "스베틀라나는 서두르다가 모텔에 휴대폰 충전기를 두고 왔어요.",
+   "blank": "спешке",
    "src": "made"
   }
  ],
@@ -61622,6 +62102,22 @@
    "en": "A seagull snatched a croissant right off Natalya's plate on the terrace.",
    "ko": "갈매기가 테라스에서 나탈리야의 접시에 있던 크루아상을 낚아채 갔어요.",
    "blank": "стащила",
+   "src": "made"
+  }
+ ],
+ "w|стая": [
+  {
+   "text": "Над рекой пролетела стая диких гусей, и Михаил поднял голову.",
+   "en": "A flock of wild geese flew over the river, and Mikhail looked up.",
+   "ko": "강 위로 기러기 떼가 날아가자 미하일은 고개를 들었어요.",
+   "blank": "стая",
+   "src": "made"
+  },
+  {
+   "text": "Над трассой пролетела стая ворон, и Светлана сбросила скорость.",
+   "en": "A flock of crows flew over the highway, and Svetlana slowed down.",
+   "ko": "까마귀 떼가 도로 위를 날아가자 스베틀라나는 속도를 줄였어요.",
+   "blank": "стая",
    "src": "made"
   }
  ],
@@ -67707,6 +68203,22 @@
    "src": "made"
   }
  ],
+ "w|ураган": [
+  {
+   "text": "Прошлой осенью ураган повалил у Михаила старую сосну.",
+   "en": "Last autumn a hurricane knocked down Mikhail's old pine tree.",
+   "ko": "지난가을 태풍에 미하일네 오래된 소나무가 쓰러졌어요.",
+   "blank": "ураган",
+   "src": "made"
+  },
+  {
+   "text": "Из-за урагана на побережье Светлане пришлось изменить маршрут.",
+   "en": "Because of a hurricane on the coast Svetlana had to change her route.",
+   "ko": "해안에 태풍이 와서 스베틀라나는 경로를 바꿔야 했어요.",
+   "blank": "урагана",
+   "src": "made"
+  }
+ ],
  "w|уровень": [
   {
    "text": "Ты не думал проверить уровень масла?",
@@ -67736,6 +68248,22 @@
    "en": "Svetlana jokingly called her lopsided pie a little monster.",
    "ko": "스베틀라나는 삐뚤어진 파이를 장난으로 못난이라고 불렀어요.",
    "blank": "уродом",
+   "src": "made"
+  }
+ ],
+ "w|урожай": [
+  {
+   "text": "В этом году у Михаила неплохой урожай картошки.",
+   "en": "This year Mikhail has a decent potato harvest.",
+   "ko": "올해 미하일의 감자 농사는 꽤 잘됐어요.",
+   "blank": "урожай",
+   "src": "made"
+  },
+  {
+   "text": "У обочины фермеры продавали Светлане свежий урожай яблок.",
+   "en": "By the roadside farmers sold Svetlana their fresh apple harvest.",
+   "ko": "길가에서 농부들이 스베틀라나에게 갓 수확한 사과를 팔았어요.",
+   "blank": "урожай",
    "src": "made"
   }
  ],
@@ -69481,6 +70009,38 @@
    "src": "made"
   }
  ],
+ "w|хищник": [
+  {
+   "text": "Михаил знает, что в этих лесах водится лишь один крупный хищник — медведь.",
+   "en": "Mikhail knows that only one large predator lives in these forests: the bear.",
+   "ko": "미하일은 이 숲에 사는 큰 포식자는 곰 하나뿐이라는 걸 알아요.",
+   "blank": "хищник",
+   "src": "made"
+  },
+  {
+   "text": "В заповеднике Светлане объяснили, что рысь — осторожный хищник.",
+   "en": "At the nature reserve it was explained to Svetlana that the lynx is a cautious predator.",
+   "ko": "보호구역에서 스베틀라나는 스라소니가 조심성 많은 포식자라는 설명을 들었어요.",
+   "blank": "хищник",
+   "src": "made"
+  }
+ ],
+ "w|хлам": [
+  {
+   "text": "На чердаке избушки Михаил хранит всякий хлам для рыбалки.",
+   "en": "In the cabin attic Mikhail keeps all sorts of junk for fishing.",
+   "ko": "미하일은 오두막 다락에 낚시용 잡동사니를 잔뜩 쌓아 둬요.",
+   "blank": "хлам",
+   "src": "made"
+  },
+  {
+   "text": "Перед поездкой Светлана выкинула из машины весь хлам.",
+   "en": "Before the trip Svetlana threw all the junk out of the car.",
+   "ko": "여행 전에 스베틀라나는 차에서 잡동사니를 다 버렸어요.",
+   "blank": "хлам",
+   "src": "made"
+  }
+ ],
  "w|хлеб": [
   {
    "text": "Что вы предпочитаете, рис или хлеб?",
@@ -70717,6 +71277,22 @@
    "src": "made"
   }
  ],
+ "w|червь": [
+  {
+   "text": "Михаил копал червей для рыбалки под старой яблоней.",
+   "en": "Mikhail dug worms for fishing under the old apple tree.",
+   "ko": "미하일은 낡은 사과나무 밑에서 낚시용 지렁이를 팠어요.",
+   "blank": "червей",
+   "src": "made"
+  },
+  {
+   "text": "После дождя на асфальт выполз червь, и Светлана аккуратно его объехала.",
+   "en": "After the rain a worm crawled out onto the asphalt, and Svetlana carefully drove around it.",
+   "ko": "비가 그치자 아스팔트로 지렁이가 기어 나와서 스베틀라나는 조심스럽게 피해 갔어요.",
+   "blank": "червь",
+   "src": "made"
+  }
+ ],
  "w|через": [
   {
    "text": "Аптека через дорогу.",
@@ -71056,6 +71632,22 @@
    "en": "In the home economics class Irina learned to peel potatoes.",
    "ko": "실과 시간에 이리나는 감자 껍질 벗기는 법을 배웠어요.",
    "blank": "чистить",
+   "src": "made"
+  }
+ ],
+ "w|чистота": [
+  {
+   "text": "Михаил следит за чистотой воды в роднике у своего дома.",
+   "en": "Mikhail keeps an eye on the cleanliness of the water in the spring by his house.",
+   "ko": "미하일은 집 옆 샘물이 깨끗한지 늘 살펴요.",
+   "blank": "чистотой",
+   "src": "made"
+  },
+  {
+   "text": "Светлана любит, когда в салоне машины чистота и порядок.",
+   "en": "Svetlana likes it when the car interior is clean and tidy.",
+   "ko": "스베틀라나는 차 안이 깨끗하고 정돈된 걸 좋아해요.",
+   "blank": "чистота",
    "src": "made"
   }
  ],
@@ -71705,6 +72297,22 @@
    "ko": "제 방에는 큰 옷장이 있어요.",
    "blank": "шкаф",
    "src": "tatoeba:8551038/marafon en:3258056/CK"
+  }
+ ],
+ "w|шкафчик": [
+  {
+   "text": "Спички Михаил хранит в железном шкафчике у печки.",
+   "en": "Mikhail keeps his matches in a metal cabinet by the stove.",
+   "ko": "미하일은 성냥을 난로 옆 철제 수납장에 보관해요.",
+   "blank": "шкафчике",
+   "src": "made"
+  },
+  {
+   "text": "Документы Светлана держит в бардачке, а аптечку — в шкафчике под сиденьем.",
+   "en": "Svetlana keeps her documents in the glove box and the first-aid kit in a compartment under the seat.",
+   "ko": "스베틀라나는 서류는 글로브박스에, 구급상자는 좌석 밑 수납함에 둬요.",
+   "blank": "шкафчике",
+   "src": "made"
   }
  ],
  "w|школа": [
@@ -72777,6 +73385,22 @@
    "src": "made"
   }
  ],
+ "w|ядро": [
+  {
+   "text": "Михаил расколол орех, но ядро оказалось пустым.",
+   "en": "Mikhail cracked a nut, but the kernel turned out to be empty.",
+   "ko": "미하일이 호두를 깼는데 속이 비어 있었어요.",
+   "blank": "ядро",
+   "src": "made"
+  },
+  {
+   "text": "В музее у дороги Светлана увидела старинное пушечное ядро.",
+   "en": "At a roadside museum Svetlana saw an old cannonball.",
+   "ko": "길가 박물관에서 스베틀라나는 오래된 대포알을 봤어요.",
+   "blank": "ядро",
+   "src": "made"
+  }
+ ],
  "w|язык": [
   {
    "text": "Где ты так хорошо выучил чешский язык?",
@@ -72870,6 +73494,22 @@
    "en": "Through the window Anna saw the bright lights of a big city.",
    "ko": "안나는 창밖으로 큰 도시의 밝은 불빛을 봤어요.",
    "blank": "яркие",
+   "src": "made"
+  }
+ ],
+ "w|ярмарка": [
+  {
+   "text": "Осенью Михаил возит мёд на ярмарку в районный центр.",
+   "en": "In autumn Mikhail takes honey to the fair in the district town.",
+   "ko": "가을이면 미하일은 꿀을 군청 소재지 장터에 가져가요.",
+   "blank": "ярмарку",
+   "src": "made"
+  },
+  {
+   "text": "По пути Светлана заехала на ярмарку в маленьком городке.",
+   "en": "On the way Svetlana stopped at a fair in a small town.",
+   "ko": "가는 길에 스베틀라나는 작은 마을의 장터에 들렀어요.",
+   "blank": "ярмарку",
    "src": "made"
   }
  ],
