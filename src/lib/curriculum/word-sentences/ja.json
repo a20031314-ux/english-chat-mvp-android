@@ -971,6 +971,22 @@
    "src": "made"
   }
  ],
+ "w|イライラ": [
+  {
+   "text": "健太は、仕事のイライラを手紙にぶつけないよう気をつけた。",
+   "en": "Kenta was careful not to take his work frustrations out in the letter.",
+   "ko": "겐타는 일 때문에 쌓인 짜증을 편지에 쏟지 않도록 조심했어요.",
+   "blank": "イライラ",
+   "src": "made"
+  },
+  {
+   "text": "撮影が何度も止まって、主演の俳優はイライラしていた。",
+   "en": "Filming kept stopping, and the lead actor was getting irritated.",
+   "ko": "촬영이 여러 번 멈춰서 주연 배우는 짜증이 나 있었어요.",
+   "blank": "イライラ",
+   "src": "made"
+  }
+ ],
  "w|イラスト": [
   {
    "text": "可愛いイラストだね。",
@@ -2073,6 +2089,22 @@
    "src": "tatoeba:9257707/small_snow en:4141214/AlanF_US"
   }
  ],
+ "w|かなう": [
+  {
+   "text": "長年欲しかった万年筆を買って、悠斗の願いがやっとかなった。",
+   "en": "Yuto's wish finally came true when he bought the fountain pen he had wanted for years.",
+   "ko": "오랫동안 갖고 싶던 만년필을 사서 유토의 소원이 드디어 이뤄졌어요.",
+   "blank": "かなっ",
+   "src": "made"
+  },
+  {
+   "text": "千尋は「値段の安さでは、ここにかなう店はない」と思った。",
+   "en": "Chihiro thought that no store could beat this place for low prices.",
+   "ko": "지히로는 \"싼 가격으로는 여기를 따라올 가게가 없다\"고 생각했어요.",
+   "blank": "かなう",
+   "src": "made"
+  }
+ ],
  "w|かなり": [
   {
    "text": "かなり好きなんだ。",
@@ -2347,6 +2379,22 @@
    "blank": "きっと"
   }
  ],
+ "w|ギフト": [
+  {
+   "text": "悠斗は、ギフト用にきれいに包んでもらった。",
+   "en": "Yuto had it wrapped nicely as a gift.",
+   "ko": "유토는 선물용으로 예쁘게 포장해 달라고 했어요.",
+   "blank": "ギフト",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、お茶屋でギフトセットを注文した。",
+   "en": "Chihiro ordered a gift set at the tea shop.",
+   "ko": "지히로는 찻집에서 선물 세트를 주문했어요.",
+   "blank": "ギフト",
+   "src": "made"
+  }
+ ],
  "w|キャスト": [
   {
    "text": "映画のキャストが豪華だ。",
@@ -2445,6 +2493,22 @@
    "en": "The room is clean.",
    "ko": "방 깨끗해.",
    "blank": "きれい"
+  }
+ ],
+ "w|クーポン": [
+  {
+   "text": "悠斗はアプリのクーポンを見せて、少し安く買えた。",
+   "en": "Yuto showed a coupon in the app and got it a little cheaper.",
+   "ko": "유토는 앱 쿠폰을 보여 줘서 조금 싸게 샀어요.",
+   "blank": "クーポン",
+   "src": "made"
+  },
+  {
+   "text": "商店街のクーポンを使うと、野菜が少し安くなった。",
+   "en": "Using the shopping street coupon made the vegetables a bit cheaper.",
+   "ko": "상점가 쿠폰을 쓰니 채소가 조금 싸졌어요.",
+   "blank": "クーポン",
+   "src": "made"
   }
  ],
  "w|クール": [
@@ -3875,6 +3939,22 @@
    "blank": "じゃあ"
   }
  ],
+ "w|ジャケット": [
+  {
+   "text": "悠斗は、秋に着る薄手のジャケットを探しに行った。",
+   "en": "Yuto went looking for a light jacket to wear in autumn.",
+   "ko": "유토는 가을에 입을 얇은 재킷을 찾으러 갔어요.",
+   "blank": "ジャケット",
+   "src": "made"
+  },
+  {
+   "text": "市場の古着屋で、千尋は革のジャケットを見つけた。",
+   "en": "At a secondhand clothing stall in the market, Chihiro found a leather jacket.",
+   "ko": "시장 헌옷 가게에서 지히로는 가죽 재킷을 찾았어요.",
+   "blank": "ジャケット",
+   "src": "made"
+  }
+ ],
  "w|シャツ": [
   {
    "text": "白いシャツを着た。",
@@ -4379,6 +4459,22 @@
    "blank": "スポーツ"
   }
  ],
+ "w|ズボン": [
+  {
+   "text": "悠斗は、試着したズボンの裾を短くしてもらった。",
+   "en": "Yuto had the hem of the trousers he tried on taken up.",
+   "ko": "유토는 입어 본 바지의 밑단을 줄였어요.",
+   "blank": "ズボン",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、作業用の丈夫なズボンを古着屋で選んだ。",
+   "en": "Chihiro picked out sturdy work trousers at the secondhand shop.",
+   "ko": "지히로는 헌옷 가게에서 튼튼한 작업용 바지를 골랐어요.",
+   "blank": "ズボン",
+   "src": "made"
+  }
+ ],
  "w|スマート": [
   {
    "text": "スマートな解決策だね。",
@@ -4448,6 +4544,22 @@
    "en": "Yoko held down the power button. Then the dark screen lit up.",
    "ko": "요코가 전원 버튼을 길게 눌렀어요. 그러자 새카맣던 화면이 밝아졌어요.",
    "blank": "すると",
+   "src": "made"
+  }
+ ],
+ "w|セーター": [
+  {
+   "text": "店員は、悠斗に紺色のセーターを勧めた。",
+   "en": "The clerk recommended a navy sweater to Yuto.",
+   "ko": "점원은 유토에게 남색 스웨터를 권했어요.",
+   "blank": "セーター",
+   "src": "made"
+  },
+  {
+   "text": "手編みのセーターを売る店は、冬になると人が集まる。",
+   "en": "The stall selling hand-knitted sweaters draws crowds when winter comes.",
+   "ko": "손뜨개 스웨터를 파는 가게는 겨울이 되면 사람이 몰려요.",
+   "blank": "セーター",
    "src": "made"
   }
  ],
@@ -5833,6 +5945,38 @@
    "blank": "テスト"
   }
  ],
+ "w|テニス": [
+  {
+   "text": "翔太は、テニスのために足腰を鍛えようとジムに通い始めた。",
+   "en": "Shota started going to the gym to strengthen his legs for tennis.",
+   "ko": "쇼타는 테니스를 위해 하체를 단련하려고 헬스장에 다니기 시작했어요.",
+   "blank": "テニス",
+   "src": "made"
+  },
+  {
+   "text": "由美は、ネットで新しいテニスのラケットを注文した。",
+   "en": "Yumi ordered a new tennis racket online.",
+   "ko": "유미는 인터넷으로 새 테니스 라켓을 주문했어요.",
+   "blank": "テニス",
+   "src": "made"
+  }
+ ],
+ "w|デパート": [
+  {
+   "text": "悠斗は、母の誕生日プレゼントを買いにデパートへ行った。",
+   "en": "Yuto went to the department store to buy a birthday present for his mother.",
+   "ko": "유토는 엄마 생일 선물을 사러 백화점에 갔어요.",
+   "blank": "デパート",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、デパートより市場のほうが安くて新鮮だと思っている。",
+   "en": "Chihiro thinks the market is cheaper and fresher than a department store.",
+   "ko": "지히로는 백화점보다 시장이 더 싸고 신선하다고 생각해요.",
+   "blank": "デパート",
+   "src": "made"
+  }
+ ],
  "w|デビュー": [
   {
    "text": "来月デビューするよ。",
@@ -6519,6 +6663,22 @@
    "blank": "なりたい"
   }
  ],
+ "w|なるべく": [
+  {
+   "text": "健太は、なるべく早く返事を出そうと決めた。",
+   "en": "Kenta decided to send his reply as soon as possible.",
+   "ko": "겐타는 되도록 빨리 답장을 보내기로 했어요.",
+   "blank": "なるべく",
+   "src": "made"
+  },
+  {
+   "text": "監督は、なるべく自然な光で撮りたいと言った。",
+   "en": "The director said he wanted to shoot in natural light as much as possible.",
+   "ko": "감독은 되도록 자연광으로 찍고 싶다고 했어요.",
+   "blank": "なるべく",
+   "src": "made"
+  }
+ ],
  "w|なるほど": [
   {
    "text": "なるほど、分かった。",
@@ -6685,6 +6845,22 @@
    "en": "I bought a new notebook.",
    "ko": "새 노트를 샀어.",
    "blank": "ノート"
+  }
+ ],
+ "w|ノリ": [
+  {
+   "text": "昔の健太たちは、ノリで夜中に海まで自転車で行ったことがある。",
+   "en": "Back in the day, Kenta and his friends once biked to the sea in the middle of the night on a whim.",
+   "ko": "예전에 겐타네는 기분 내키는 대로 한밤중에 자전거로 바다까지 간 적이 있어요.",
+   "blank": "ノリ",
+   "src": "made"
+  },
+  {
+   "text": "この現場はノリのいいスタッフが多くて、いつもにぎやかだ。",
+   "en": "This set has lots of upbeat crew members, so it's always lively.",
+   "ko": "이 현장은 분위기를 잘 타는 스태프가 많아서 늘 시끌벅적해요.",
+   "blank": "ノリ",
+   "src": "made"
   }
  ],
  "w|のんびり": [
@@ -7063,6 +7239,38 @@
    "blank": "パック"
   }
  ],
+ "w|パッケージ": [
+  {
+   "text": "お菓子売り場では、季節限定のパッケージが目を引いた。",
+   "en": "In the sweets section, the limited-edition seasonal packaging caught his eye.",
+   "ko": "과자 매장에서는 계절 한정 패키지가 눈길을 끌었어요.",
+   "blank": "パッケージ",
+   "src": "made"
+  },
+  {
+   "text": "市場の手作りジャムは、パッケージは素朴だが味は抜群だ。",
+   "en": "The handmade jam at the market has plain packaging, but it tastes superb.",
+   "ko": "시장의 수제 잼은 포장은 소박하지만 맛은 최고예요.",
+   "blank": "パッケージ",
+   "src": "made"
+  }
+ ],
+ "w|ハッピー": [
+  {
+   "text": "健太は「結婚おめでとう。ハッピーな毎日を」と手紙の最後に書いた。",
+   "en": "At the end of the letter Kenta wrote, \"Congratulations on your marriage. Wishing you happy days.\"",
+   "ko": "겐타는 편지 끝에 \"결혼 축하해. 행복한 날들 보내\"라고 썼어요.",
+   "blank": "ハッピー",
+   "src": "made"
+  },
+  {
+   "text": "撮影の最終日は、スタッフ全員がハッピーな気分だった。",
+   "en": "On the last day of filming, the whole crew was in a happy mood.",
+   "ko": "촬영 마지막 날에는 스태프 모두가 행복한 기분이었어요.",
+   "blank": "ハッピー",
+   "src": "made"
+  }
+ ],
  "w|バトル": [
   {
    "text": "激しいバトルだった。",
@@ -7275,6 +7483,22 @@
    "en": "I'm starting a business.",
    "ko": "비즈니스를 시작할 거야.",
    "blank": "ビジネス"
+  }
+ ],
+ "w|ひたすら": [
+  {
+   "text": "健太は、ひたすら友達の返事を待ち続けた。",
+   "en": "Kenta just kept waiting for his friend's reply.",
+   "ko": "겐타는 그저 친구의 답장을 기다리고만 있었어요.",
+   "blank": "ひたすら",
+   "src": "made"
+  },
+  {
+   "text": "待ち時間の間、美咲はひたすらセリフを繰り返した。",
+   "en": "During the wait, Misaki did nothing but go over her lines.",
+   "ko": "대기 시간 동안 미사키는 오로지 대사만 되풀이했어요.",
+   "blank": "ひたすら",
+   "src": "made"
   }
  ],
  "w|ビッグ": [
@@ -7556,6 +7780,22 @@
    "en": "On the way home, Aoi suddenly felt like calling her mother.",
    "ko": "집에 가는 길에 아오이는 문득 엄마에게 전화하고 싶어졌어요.",
    "blank": "ふと",
+   "src": "made"
+  }
+ ],
+ "w|プライベート": [
+  {
+   "text": "翔太は、週に一度プライベートレッスンを受けている。",
+   "en": "Shota takes a private lesson once a week.",
+   "ko": "쇼타는 일주일에 한 번 개인 레슨을 받고 있어요.",
+   "blank": "プライベート",
+   "src": "made"
+  },
+  {
+   "text": "由美は、プライベートで使うスマホのケースを注文した。",
+   "en": "Yumi ordered a case for the phone she uses for personal stuff.",
+   "ko": "유미는 개인용으로 쓰는 스마트폰 케이스를 주문했어요.",
+   "blank": "プライベート",
    "src": "made"
   }
  ],
@@ -8095,6 +8335,22 @@
    "blank": "ボックス"
   }
  ],
+ "w|ボディ": [
+  {
+   "text": "ジムのポスターには、引き締まったボディのモデルが写っていた。",
+   "en": "The gym poster showed a model with a toned body.",
+   "ko": "헬스장 포스터에는 탄탄한 몸매의 모델이 찍혀 있었어요.",
+   "blank": "ボディ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、香りのいいボディソープを三本まとめて買った。",
+   "en": "Yumi bought three bottles of nice-smelling body wash at once.",
+   "ko": "유미는 향이 좋은 바디워시를 세 통 한꺼번에 샀어요.",
+   "blank": "ボディ",
+   "src": "made"
+  }
+ ],
  "w|ホテル": [
   {
    "text": "ホテル、もう取った？",
@@ -8283,6 +8539,22 @@
    "en": "This is a serious talk.",
    "ko": "진담이야.",
    "blank": "マジ"
+  }
+ ],
+ "w|まして": [
+  {
+   "text": "翔太は腕立て伏せが十回もできない。まして百回なんて無理だ。",
+   "en": "Shota can't even do ten push-ups, let alone a hundred.",
+   "ko": "쇼타는 팔굽혀펴기를 열 번도 못 해요. 하물며 백 번은 무리예요.",
+   "blank": "まして",
+   "src": "made"
+  },
+  {
+   "text": "由美は自分の服を選ぶのにも時間がかかる。まして人へのプレゼントとなると、なかなか決められない。",
+   "en": "It takes Yumi a long time even to choose her own clothes, let alone a present for someone else.",
+   "ko": "유미는 자기 옷 고르는 데도 시간이 걸려요. 하물며 남에게 줄 선물은 좀처럼 못 정해요.",
+   "blank": "まして",
+   "src": "made"
   }
  ],
  "w|マシン": [
@@ -8709,6 +8981,22 @@
    "en": "The main hall is over there.",
    "ko": "메인 회장은 저쪽이야.",
    "blank": "メイン"
+  }
+ ],
+ "w|メガネ": [
+  {
+   "text": "悠斗は、仕事用に軽いメガネを新しく作った。",
+   "en": "Yuto had a new pair of light glasses made for work.",
+   "ko": "유토는 일할 때 쓸 가벼운 안경을 새로 맞췄어요.",
+   "blank": "メガネ",
+   "src": "made"
+  },
+  {
+   "text": "千尋はメガネを忘れて、値札の字がよく読めなかった。",
+   "en": "Chihiro forgot her glasses and couldn't read the price tags well.",
+   "ko": "지히로는 안경을 깜빡해서 가격표 글씨를 잘 못 읽었어요.",
+   "blank": "メガネ",
+   "src": "made"
   }
  ],
  "w|めちゃくちゃ": [
@@ -9238,6 +9526,22 @@
    "en": "Courthouse security works in several units.",
    "ko": "법원 경비는 몇 개의 유닛으로 나뉘어 움직여요.",
    "blank": "ユニット",
+   "src": "made"
+  }
+ ],
+ "w|ゆるい": [
+  {
+   "text": "試着したパンツはウエストがゆるかったので、悠斗は一つ小さいサイズにした。",
+   "en": "The pants he tried on were loose at the waist, so Yuto went down a size.",
+   "ko": "입어 본 바지가 허리가 헐렁해서 유토는 한 치수 작은 걸로 했어요.",
+   "blank": "ゆるかっ",
+   "src": "made"
+  },
+  {
+   "text": "市場の坂はゆるいので、自転車でも楽に上れる。",
+   "en": "The slope by the market is gentle, so you can easily ride up it on a bike.",
+   "ko": "시장 언덕은 완만해서 자전거로도 쉽게 올라갈 수 있어요.",
+   "blank": "ゆるい",
    "src": "made"
   }
  ],
@@ -9927,6 +10231,22 @@
    "blank": "一方"
   }
  ],
+ "w|一旦": [
+  {
+   "text": "荷物が多くなったので、悠斗は一旦コインロッカーに預けた。",
+   "en": "His bags were getting heavy, so Yuto left them in a coin locker for the time being.",
+   "ko": "짐이 많아져서 유토는 일단 코인 로커에 맡겼어요.",
+   "blank": "一旦",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、重い荷物を一旦家に置いてから、もう一度市場に戻った。",
+   "en": "Chihiro dropped off her heavy bags at home first and then went back to the market.",
+   "ko": "지히로는 무거운 짐을 일단 집에 두고 다시 시장에 돌아갔어요.",
+   "blank": "一旦",
+   "src": "made"
+  }
+ ],
  "w|一昨日": [
   {
    "text": "一昨日は雨だった。",
@@ -10301,6 +10621,22 @@
    "blank": "下手"
   }
  ],
+ "w|下着": [
+  {
+   "text": "悠斗は、肌触りのいい下着をまとめて三枚買った。",
+   "en": "Yuto bought three pieces of soft underwear at once.",
+   "ko": "유토는 감촉 좋은 속옷을 한꺼번에 세 장 샀어요.",
+   "blank": "下着",
+   "src": "made"
+  },
+  {
+   "text": "市場の衣料品店で、千尋は下着と部屋着を買った。",
+   "en": "At a clothing stall in the market, Chihiro bought underwear and loungewear.",
+   "ko": "시장 옷 가게에서 지히로는 속옷과 실내복을 샀어요.",
+   "blank": "下着",
+   "src": "made"
+  }
+ ],
  "w|下記": [
   {
    "text": "工場内の安全ルールは下記のとおりです。",
@@ -10359,6 +10695,22 @@
    "blank": "不安"
   }
  ],
+ "w|不幸": [
+  {
+   "text": "友達の家族に不幸があったと聞き、健太はすぐにお悔やみの手紙を書いた。",
+   "en": "Hearing that there had been a death in his friend's family, Kenta immediately wrote a letter of condolence.",
+   "ko": "친구 집에 상을 당했다는 소식을 듣고 겐타는 바로 위로 편지를 썼어요.",
+   "blank": "不幸",
+   "src": "made"
+  },
+  {
+   "text": "美咲が演じるのは、不幸な子ども時代を送った女性だ。",
+   "en": "The role Misaki plays is a woman who had an unhappy childhood.",
+   "ko": "미사키가 연기하는 건 불행한 어린 시절을 보낸 여성이에요.",
+   "blank": "不幸",
+   "src": "made"
+  }
+ ],
  "w|不思議": [
   {
    "text": "不思議な話だね。",
@@ -10415,6 +10767,22 @@
    "en": "I expressed my dissatisfaction.",
    "ko": "불만을 전했어.",
    "blank": "不満"
+  }
+ ],
+ "w|不能": [
+  {
+   "text": "店員によると、その時計は部品がなくて修理不能だそうだ。",
+   "en": "According to the clerk, the watch can't be repaired because the parts are unavailable.",
+   "ko": "점원에 따르면 그 시계는 부품이 없어서 수리가 불가능하대요.",
+   "blank": "不能",
+   "src": "made"
+  },
+  {
+   "text": "市場の古いレジは故障して、計算不能になってしまった。",
+   "en": "The old register at the market broke down and could no longer calculate.",
+   "ko": "시장의 오래된 계산기는 고장 나서 계산이 불가능해졌어요.",
+   "blank": "不能",
+   "src": "made"
   }
  ],
  "w|不良": [
@@ -10994,6 +11362,22 @@
    "en": "Got it, I'll come right away.",
    "ko": "알겠어요, 바로 갈게요.",
    "blank": "了解",
+   "src": "made"
+  }
+ ],
+ "w|予備": [
+  {
+   "text": "悠斗は、予備の電池も一緒に買っておいた。",
+   "en": "Yuto also bought spare batteries just in case.",
+   "ko": "유토는 예비 건전지도 같이 사 두었어요.",
+   "blank": "予備",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、急な来客に備えて予備の食材を冷凍している。",
+   "en": "Chihiro keeps extra food in the freezer in case of unexpected guests.",
+   "ko": "지히로는 갑작스러운 손님에 대비해 예비 식재료를 얼려 둬요.",
+   "blank": "予備",
    "src": "made"
   }
  ],
@@ -12191,6 +12575,22 @@
    "blank": "任務"
   }
  ],
+ "w|任意": [
+  {
+   "text": "アンケートへの回答は任意だと、店員は説明した。",
+   "en": "The clerk explained that filling out the survey was optional.",
+   "ko": "점원은 설문 응답은 자유라고 설명했어요.",
+   "blank": "任意",
+   "src": "made"
+  },
+  {
+   "text": "市場の清掃活動への参加は任意だが、千尋は毎回顔を出している。",
+   "en": "Joining the market cleanup is voluntary, but Chihiro shows up every time.",
+   "ko": "시장 청소 활동 참가는 자유지만 지히로는 매번 참석해요.",
+   "blank": "任意",
+   "src": "made"
+  }
+ ],
  "w|企業": [
   {
    "text": "いい企業だね。",
@@ -12511,6 +12911,22 @@
    "src": "made"
   }
  ],
+ "w|伸ばす": [
+  {
+   "text": "運動の後は、ゆっくり筋肉を伸ばすことが大切だ。",
+   "en": "After exercising, it's important to stretch your muscles slowly.",
+   "ko": "운동 후에는 천천히 근육을 늘이는 게 중요해요.",
+   "blank": "伸ばす",
+   "src": "made"
+  },
+  {
+   "text": "由美は、首を伸ばすと楽になるという枕を買ってみた。",
+   "en": "Yumi tried a pillow that's supposed to ease your neck by stretching it.",
+   "ko": "유미는 목을 늘여 주면 편해진다는 베개를 사 봤어요.",
+   "blank": "伸ばす",
+   "src": "made"
+  }
+ ],
  "w|伸びる": [
   {
    "text": "髪が伸びるのが早い。",
@@ -12663,6 +13079,38 @@
    "en": "We set up a support structure.",
    "ko": "응원 체제를 갖췄어.",
    "blank": "体制"
+  }
+ ],
+ "w|体力": [
+  {
+   "text": "三か月通って、翔太はかなり体力がついた。",
+   "en": "After three months of going, Shota had built up quite a lot of stamina.",
+   "ko": "석 달 다니고 나서 쇼타는 체력이 꽤 붙었어요.",
+   "blank": "体力",
+   "src": "made"
+  },
+  {
+   "text": "由美は、買い物に出かける体力がなくて、食料品をネットで頼んだ。",
+   "en": "Yumi didn't have the energy to go shopping, so she ordered groceries online.",
+   "ko": "유미는 장 보러 갈 체력이 없어서 식료품을 인터넷으로 주문했어요.",
+   "blank": "体力",
+   "src": "made"
+  }
+ ],
+ "w|体操": [
+  {
+   "text": "トレーニングの前には、必ず軽い体操をする。",
+   "en": "Shota always does some light exercises before training.",
+   "ko": "운동 전에는 반드시 가벼운 체조를 해요.",
+   "blank": "体操",
+   "src": "made"
+  },
+  {
+   "text": "由美は、家でできる体操の本を注文した。",
+   "en": "Yumi ordered a book of exercises you can do at home.",
+   "ko": "유미는 집에서 할 수 있는 체조 책을 주문했어요.",
+   "blank": "体操",
+   "src": "made"
   }
  ],
  "w|体育": [
@@ -13027,6 +13475,22 @@
    "en": "What would you do, for example?",
    "ko": "예를 들면 어떻게 해?",
    "blank": "例えば"
+  }
+ ],
+ "w|例外": [
+  {
+   "text": "セール品は、例外なく返品できないそうだ。",
+   "en": "Apparently sale items cannot be returned, without exception.",
+   "ko": "세일 상품은 예외 없이 반품이 안 된대요.",
+   "blank": "例外",
+   "src": "made"
+  },
+  {
+   "text": "この市場は毎日開いているが、年末だけは例外で休みになる。",
+   "en": "The market is open every day, except at the end of the year when it closes.",
+   "ko": "이 시장은 매일 열지만 연말만은 예외로 쉬어요.",
+   "blank": "例外",
+   "src": "made"
   }
  ],
  "w|供給": [
@@ -13533,6 +13997,22 @@
    "blank": "借りた"
   }
  ],
+ "w|借金": [
+  {
+   "text": "悠斗は、借金をしてまでブランド品を買う気はない。",
+   "en": "Yuto has no intention of going into debt just to buy designer goods.",
+   "ko": "유토는 빚을 내면서까지 명품을 살 생각은 없어요.",
+   "blank": "借金",
+   "src": "made"
+  },
+  {
+   "text": "乾物屋の主人は、若いころ借金を返すために必死で働いたそうだ。",
+   "en": "The dried-goods shopkeeper says he worked desperately when he was young to pay off his debts.",
+   "ko": "건어물 가게 주인은 젊었을 때 빚을 갚으려고 필사적으로 일했대요.",
+   "blank": "借金",
+   "src": "made"
+  }
+ ],
  "w|値段": [
   {
    "text": "値段が高いね。",
@@ -13587,6 +14067,22 @@
    "en": "Look at the other side.",
    "ko": "반대쪽을 봐.",
    "blank": "側"
+  }
+ ],
+ "w|側面": [
+  {
+   "text": "トレーナーは、太ももの側面を鍛える運動を教えてくれた。",
+   "en": "The trainer taught Shota an exercise to work the sides of the thighs.",
+   "ko": "트레이너는 허벅지 옆면을 단련하는 운동을 가르쳐 줬어요.",
+   "blank": "側面",
+   "src": "made"
+  },
+  {
+   "text": "箱の側面に、大きなへこみがあった。",
+   "en": "There was a big dent in the side of the box.",
+   "ko": "상자 옆면에 크게 찌그러진 곳이 있었어요.",
+   "blank": "側面",
+   "src": "made"
   }
  ],
  "w|偶然": [
@@ -13877,6 +14373,22 @@
    "blank": "兄弟"
   }
  ],
+ "w|充分": [
+  {
+   "text": "このコートは、真冬でも充分暖かいと店員が言った。",
+   "en": "The clerk said this coat is plenty warm even in midwinter.",
+   "ko": "점원은 이 코트가 한겨울에도 충분히 따뜻하다고 했어요.",
+   "blank": "充分",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、一人暮らしには充分な量の野菜を買った。",
+   "en": "Chihiro bought plenty of vegetables for someone living alone.",
+   "ko": "지히로는 혼자 살기엔 충분한 양의 채소를 샀어요.",
+   "blank": "充分",
+   "src": "made"
+  }
+ ],
  "w|充実": [
   {
    "text": "知識そのものは目的ではなく、充実した人間らしい生活を送るという目的のための手段である。",
@@ -14151,6 +14663,22 @@
    "src": "made"
   }
  ],
+ "w|入院": [
+  {
+   "text": "トレーナーは、昔けがで入院したことがあると翔太に話した。",
+   "en": "The trainer told Shota that he had once been hospitalized for an injury.",
+   "ko": "트레이너는 예전에 부상으로 입원한 적이 있다고 쇼타에게 말했어요.",
+   "blank": "入院",
+   "src": "made"
+  },
+  {
+   "text": "祖母が入院したので、由美はパジャマをネットで注文して病院に届けてもらった。",
+   "en": "Her grandmother was hospitalized, so Yumi ordered pajamas online and had them sent to the hospital.",
+   "ko": "할머니가 입원해서 유미는 잠옷을 인터넷으로 주문해 병원으로 보냈어요.",
+   "blank": "入院",
+   "src": "made"
+  }
+ ],
  "w|全く": [
   {
    "text": "全くわかんない。",
@@ -14275,6 +14803,22 @@
    "en": "Is all of it okay?",
    "ko": "전부여도 돼?",
    "blank": "全部"
+  }
+ ],
+ "w|全面": [
+  {
+   "text": "来月から、一階の化粧品売り場が全面改装される。",
+   "en": "Starting next month, the ground-floor cosmetics section will be completely renovated.",
+   "ko": "다음 달부터 일 층 화장품 매장이 전면 개장돼요.",
+   "blank": "全面",
+   "src": "made"
+  },
+  {
+   "text": "古い市場は、来年から全面的に建て替えられる予定だ。",
+   "en": "The old market is scheduled to be completely rebuilt from next year.",
+   "ko": "오래된 시장은 내년부터 전면적으로 새로 지어질 예정이에요.",
+   "blank": "全面",
+   "src": "made"
   }
  ],
  "w|公共": [
@@ -14849,6 +15393,22 @@
    "en": "I cleaned the refrigerator.",
    "ko": "냉장고를 청소했어.",
    "blank": "冷蔵庫"
+  }
+ ],
+ "w|冷静": [
+  {
+   "text": "健太は、怒りがおさまって冷静になってから返事を書いた。",
+   "en": "Kenta waited until his anger had faded and he was calm before writing his reply.",
+   "ko": "겐타는 화가 가라앉아 냉정해진 뒤에 답장을 썼어요.",
+   "blank": "冷静",
+   "src": "made"
+  },
+  {
+   "text": "機材が壊れても、美咲は冷静に次の準備を進めた。",
+   "en": "Even when the equipment broke, Misaki calmly carried on preparing for the next shot.",
+   "ko": "장비가 고장 나도 미사키는 침착하게 다음 준비를 했어요.",
+   "blank": "冷静",
+   "src": "made"
   }
  ],
  "w|処分": [
@@ -15791,6 +16351,22 @@
    "src": "tatoeba:10175907/small_snow en:10172690/AlanF_US"
   }
  ],
+ "w|割引": [
+  {
+   "text": "会員カードがあれば、毎月最後の週末に割引が受けられる。",
+   "en": "With a membership card, you can get a discount on the last weekend of every month.",
+   "ko": "회원 카드가 있으면 매달 마지막 주말에 할인을 받을 수 있어요.",
+   "blank": "割引",
+   "src": "made"
+  },
+  {
+   "text": "閉店間際になると、お惣菜に割引のシールが貼られる。",
+   "en": "Near closing time, discount stickers get put on the ready-made dishes.",
+   "ko": "문 닫을 무렵이 되면 반찬에 할인 스티커가 붙어요.",
+   "blank": "割引",
+   "src": "made"
+  }
+ ],
  "w|創作": [
   {
    "text": "創作の時間が楽しい。",
@@ -16187,6 +16763,22 @@
    "blank": "勝った"
   }
  ],
+ "w|勝てる": [
+  {
+   "text": "体力がついたので、翔太は次の試合で兄に勝てる気がしている。",
+   "en": "Now that he has more stamina, Shota feels he could beat his older brother in the next match.",
+   "ko": "체력이 붙어서 쇼타는 다음 시합에서 형을 이길 수 있을 것 같아요.",
+   "blank": "勝てる",
+   "src": "made"
+  },
+  {
+   "text": "このポイントを使えば、ほかの店に価格で勝てると店は宣伝していた。",
+   "en": "The shop advertised that with its points, it could beat other stores on price.",
+   "ko": "가게는 이 포인트를 쓰면 다른 가게보다 가격에서 이길 수 있다고 광고했어요.",
+   "blank": "勝てる",
+   "src": "made"
+  }
+ ],
  "w|勝利": [
   {
    "text": "勝利、おめでとう。",
@@ -16372,6 +16964,22 @@
    "en": "Sakura still can't match the faces and names of the people in her department.",
    "ko": "아직 같은 부서 사람들의 얼굴과 이름이 구분이 안 돼요.",
    "blank": "区別",
+   "src": "made"
+  }
+ ],
+ "w|医学": [
+  {
+   "text": "ジムのトレーナーは、大学でスポーツ医学を学んだそうだ。",
+   "en": "The gym trainer apparently studied sports medicine at university.",
+   "ko": "헬스장 트레이너는 대학에서 스포츠 의학을 공부했대요.",
+   "blank": "医学",
+   "src": "made"
+  },
+  {
+   "text": "医学部に通う弟に、由美は分厚い教科書を買ってあげた。",
+   "en": "Yumi bought a thick textbook for her younger brother, who is in medical school.",
+   "ko": "유미는 의대에 다니는 남동생에게 두꺼운 교과서를 사 줬어요.",
+   "blank": "医学",
    "src": "made"
   }
  ],
@@ -17133,6 +17741,22 @@
    "blank": "取って"
   }
  ],
+ "w|取れる": [
+  {
+   "text": "悠斗が買ったシャツは、一度洗っただけでボタンが取れた。",
+   "en": "A button came off the shirt Yuto bought after just one wash.",
+   "ko": "유토가 산 셔츠는 한 번 빨았을 뿐인데 단추가 떨어졌어요.",
+   "blank": "取れ",
+   "src": "made"
+  },
+  {
+   "text": "この時期は、港でおいしいカニがたくさん取れる。",
+   "en": "At this time of year, lots of delicious crab are caught at the port.",
+   "ko": "이 시기에는 항구에서 맛있는 게가 많이 잡혀요.",
+   "blank": "取れる",
+   "src": "made"
+  }
+ ],
  "w|取引": [
   {
    "text": "取引が成立した。",
@@ -17353,6 +17977,22 @@
    "src": "made"
   }
  ],
+ "w|叫ぶ": [
+  {
+   "text": "最後の一回で、翔太は思わず叫んだ。",
+   "en": "On the last rep, Shota couldn't help shouting.",
+   "ko": "마지막 한 번에서 쇼타는 저도 모르게 소리를 질렀어요.",
+   "blank": "叫ん",
+   "src": "made"
+  },
+  {
+   "text": "注文と違う色が届いて、由美は思わず「えっ」と叫んだ。",
+   "en": "A different color from the one she ordered arrived, and Yumi cried out in surprise.",
+   "ko": "주문과 다른 색이 와서 유미는 저도 모르게 \"어?\" 하고 소리쳤어요.",
+   "blank": "叫ん",
+   "src": "made"
+  }
+ ],
  "w|可能": [
   {
    "text": "それ、可能？",
@@ -17513,6 +18153,22 @@
    "en": "Let's match our voices.",
    "ko": "목소리 맞추자.",
    "blank": "合わせよう"
+  }
+ ],
+ "w|合体": [
+  {
+   "text": "おもちゃ売り場では、ロボットが合体する様子を実演していた。",
+   "en": "In the toy section, they were demonstrating robots combining into one.",
+   "ko": "장난감 매장에서는 로봇이 합체하는 모습을 시연하고 있었어요.",
+   "blank": "合体",
+   "src": "made"
+  },
+  {
+   "text": "二つの商店街が合体して、大きな市場になったそうだ。",
+   "en": "Apparently two shopping streets merged to become one big market.",
+   "ko": "두 상점가가 합쳐져서 큰 시장이 됐대요.",
+   "blank": "合体",
+   "src": "made"
   }
  ],
  "w|合意": [
@@ -18039,6 +18695,22 @@
    "blank": "呼ぶ"
   }
  ],
+ "w|呼吸": [
+  {
+   "text": "ヨガのクラスでは、まずゆっくりした呼吸から始める。",
+   "en": "The yoga class starts with slow breathing.",
+   "ko": "요가 수업은 먼저 천천히 호흡하는 것부터 시작해요.",
+   "blank": "呼吸",
+   "src": "made"
+  },
+  {
+   "text": "由美は、呼吸がしやすいと評判のマスクを買ってみた。",
+   "en": "Yumi tried buying a mask that was said to make breathing easy.",
+   "ko": "유미는 숨쉬기 편하다고 평판이 좋은 마스크를 사 봤어요.",
+   "blank": "呼吸",
+   "src": "made"
+  }
+ ],
  "w|命": [
   {
    "text": "命、大事にして。",
@@ -18169,6 +18841,22 @@
    "en": "This is a big problem.",
    "ko": "큰일이야.",
    "blank": "問題"
+  }
+ ],
+ "w|喉": [
+  {
+   "text": "翔太は、水を飲んで乾いた喉をうるおした。",
+   "en": "Shota drank water to wet his dry throat.",
+   "ko": "쇼타는 물을 마셔 마른 목을 축였어요.",
+   "blank": "喉",
+   "src": "made"
+  },
+  {
+   "text": "由美は、喉にやさしいはちみつのあめを頼んだ。",
+   "en": "Yumi ordered honey candies that are gentle on the throat.",
+   "ko": "유미는 목에 좋은 꿀 사탕을 주문했어요.",
+   "blank": "喉",
+   "src": "made"
   }
  ],
  "w|喜び": [
@@ -18731,6 +19419,22 @@
    "blank": "地区"
   }
  ],
+ "w|地味": [
+  {
+   "text": "悠斗は、派手な色より地味な色の服を選ぶことが多い。",
+   "en": "Yuto tends to choose clothes in subdued colors rather than flashy ones.",
+   "ko": "유토는 화려한 색보다 수수한 색 옷을 고르는 일이 많아요.",
+   "blank": "地味",
+   "src": "made"
+  },
+  {
+   "text": "地味な店構えだが、その豆腐屋はいつも行列ができている。",
+   "en": "The tofu shop has a plain storefront, but there is always a line.",
+   "ko": "가게 모양은 수수하지만 그 두부 가게에는 늘 줄이 서 있어요.",
+   "blank": "地味",
+   "src": "made"
+  }
+ ],
  "w|地図": [
   {
    "text": "地図を見て歩く。",
@@ -18945,6 +19649,22 @@
    "en": "The foundation matters.",
    "ko": "기초가 중요해.",
    "blank": "基礎"
+  }
+ ],
+ "w|報ずる": [
+  {
+   "text": "テレビは、運動不足の大人が増えていると報じていた。",
+   "en": "The TV was reporting that more and more adults aren't getting enough exercise.",
+   "ko": "텔레비전은 운동 부족인 어른이 늘고 있다고 보도하고 있었어요.",
+   "blank": "報じ",
+   "src": "made"
+  },
+  {
+   "text": "新聞は、ネット通販の配達遅れが問題になっていると報じた。",
+   "en": "The newspaper reported that delivery delays from online shopping were becoming a problem.",
+   "ko": "신문은 온라인 쇼핑 배송 지연이 문제가 되고 있다고 보도했어요.",
+   "blank": "報じ",
+   "src": "made"
   }
  ],
  "w|報告": [
@@ -19467,6 +20187,22 @@
    "blank": "外国人"
   }
  ],
+ "w|外科": [
+  {
+   "text": "トレーナーは、肩を痛めたら外科で診てもらうよう勧めた。",
+   "en": "The trainer advised Shota to see an orthopedic surgeon if he hurt his shoulder.",
+   "ko": "트레이너는 어깨를 다치면 외과에서 진료를 받으라고 권했어요.",
+   "blank": "外科",
+   "src": "made"
+  },
+  {
+   "text": "由美の父は、外科の手術を受けたあと、ネットで杖を買った。",
+   "en": "After having surgery, Yumi's father bought a cane online.",
+   "ko": "유미의 아버지는 외과 수술을 받은 뒤 인터넷으로 지팡이를 샀어요.",
+   "blank": "外科",
+   "src": "made"
+  }
+ ],
  "w|外部": [
   {
    "text": "外部からの連絡だ。",
@@ -19725,6 +20461,22 @@
    "en": "This is important.",
    "ko": "중요한 이야기야.",
    "blank": "大切"
+  }
+ ],
+ "w|大勢": [
+  {
+   "text": "卒業式の日には、大勢の友達と校門で写真を撮った。",
+   "en": "On graduation day, Kenta took photos at the school gate with lots of friends.",
+   "ko": "졸업식 날에는 많은 친구들과 교문에서 사진을 찍었어요.",
+   "blank": "大勢",
+   "src": "made"
+  },
+  {
+   "text": "商店街のロケには、見物人が大勢集まった。",
+   "en": "A big crowd of onlookers gathered for the location shoot in the shopping street.",
+   "ko": "상점가 촬영에는 구경꾼이 많이 몰렸어요.",
+   "blank": "大勢",
+   "src": "made"
   }
  ],
  "w|大半": [
@@ -20615,6 +21367,22 @@
    "blank": "嫁"
   }
  ],
+ "w|嫉妬": [
+  {
+   "text": "若い頃、健太は友達の才能に嫉妬したこともあった。",
+   "en": "When he was young, Kenta was sometimes jealous of his friend's talent.",
+   "ko": "젊었을 때 겐타는 친구의 재능을 질투한 적도 있었어요.",
+   "blank": "嫉妬",
+   "src": "made"
+  },
+  {
+   "text": "映画の中で美咲の役は、姉への嫉妬に苦しんでいる。",
+   "en": "In the film, Misaki's character is tormented by jealousy toward her older sister.",
+   "ko": "영화 속 미사키의 역할은 언니에 대한 질투로 괴로워해요.",
+   "blank": "嫉妬",
+   "src": "made"
+  }
+ ],
  "w|嫌": [
   {
    "text": "嫌だよ、それは。",
@@ -21059,6 +21827,22 @@
    "blank": "定期"
   }
  ],
+ "w|定着": [
+  {
+   "text": "友達の町では、毎年手紙を書く習慣が定着しているそうだ。",
+   "en": "Apparently the habit of writing letters every year has taken root in his friend's town.",
+   "ko": "친구 동네에서는 해마다 편지를 쓰는 습관이 자리 잡았대요.",
+   "blank": "定着",
+   "src": "made"
+  },
+  {
+   "text": "撮影前に台本を読み合わせる習慣は、この現場ですっかり定着した。",
+   "en": "The habit of doing a script read-through before filming has really taken hold on this set.",
+   "ko": "촬영 전에 대본 리딩을 하는 습관은 이 현장에 완전히 자리 잡았어요.",
+   "blank": "定着",
+   "src": "made"
+  }
+ ],
  "w|定義": [
   {
    "text": "言葉の定義を調べた。",
@@ -21071,6 +21855,22 @@
    "en": "The definition isn't clear.",
    "ko": "정의가 분명하지 않아.",
    "blank": "定義"
+  }
+ ],
+ "w|宝": [
+  {
+   "text": "祖母にもらった古い指輪は、悠斗にとって一番の宝だ。",
+   "en": "The old ring his grandmother gave him is Yuto's greatest treasure.",
+   "ko": "할머니께 받은 오래된 반지는 유토에게 가장 큰 보물이에요.",
+   "blank": "宝",
+   "src": "made"
+  },
+  {
+   "text": "骨董品の店には、宝の山のように古い道具が積まれていた。",
+   "en": "The antique shop was piled with old tools like a mountain of treasure.",
+   "ko": "골동품 가게에는 보물 산처럼 오래된 도구들이 쌓여 있었어요.",
+   "blank": "宝",
+   "src": "made"
   }
  ],
  "w|実力": [
@@ -21101,6 +21901,38 @@
    "en": "I miss the food at my parents' house.",
    "ko": "본가 음식이 그리워.",
    "blank": "実家"
+  }
+ ],
+ "w|実感": [
+  {
+   "text": "友達が遠くへ引っ越したことを、健太は手紙を書きながら実感した。",
+   "en": "Writing the letter, Kenta truly felt that his friend had moved far away.",
+   "ko": "겐타는 편지를 쓰면서 친구가 멀리 이사 갔다는 걸 실감했어요.",
+   "blank": "実感",
+   "src": "made"
+  },
+  {
+   "text": "初めて撮影現場に立ち、美咲は女優になったことを実感した。",
+   "en": "Standing on a film set for the first time, Misaki truly felt that she had become an actress.",
+   "ko": "처음 촬영장에 서서 미사키는 배우가 됐다는 걸 실감했어요.",
+   "blank": "実感",
+   "src": "made"
+  }
+ ],
+ "w|実態": [
+  {
+   "text": "友達は手紙で、離島の医療の実態について書いていた。",
+   "en": "In his letter, his friend wrote about the reality of healthcare on remote islands.",
+   "ko": "친구는 편지에 외딴섬 의료의 실태에 대해 썼어요.",
+   "blank": "実態",
+   "src": "made"
+  },
+  {
+   "text": "この映画は、地方の工場で働く人々の実態を描いている。",
+   "en": "This film depicts the real conditions of people working in regional factories.",
+   "ko": "이 영화는 지방 공장에서 일하는 사람들의 실태를 그리고 있어요.",
+   "blank": "実態",
+   "src": "made"
   }
  ],
  "w|実施": [
@@ -21379,6 +22211,22 @@
    "blank": "宿題"
   }
  ],
+ "w|寂しい": [
+  {
+   "text": "健太は「君がいない教室は寂しい」と正直に書いた。",
+   "en": "Kenta honestly wrote that the classroom felt lonely without his friend.",
+   "ko": "겐타는 \"네가 없는 교실은 쓸쓸해\"라고 솔직하게 썼어요.",
+   "blank": "寂しい",
+   "src": "made"
+  },
+  {
+   "text": "撮影が終わると、美咲は仲間と別れるのが寂しかった。",
+   "en": "When filming ended, Misaki felt sad about parting from her castmates.",
+   "ko": "촬영이 끝나자 미사키는 동료들과 헤어지는 게 아쉬웠어요.",
+   "blank": "寂しかっ",
+   "src": "made"
+  }
+ ],
  "w|寄る": [
   {
    "text": "亮は帰りに八百屋に寄って、旬の柿を買った。",
@@ -21644,6 +22492,22 @@
    "en": "A period drama starring a shogun was playing on the waiting room TV.",
    "ko": "대기실 텔레비전에서는 쇼군이 주인공인 사극이 나오고 있었어요.",
    "blank": "将軍",
+   "src": "made"
+  }
+ ],
+ "w|尊敬": [
+  {
+   "text": "健太は、夢を諦めずに続けている友達に尊敬の気持ちを伝えた。",
+   "en": "Kenta told his friend how much he respected him for never giving up on his dream.",
+   "ko": "겐타는 꿈을 포기하지 않고 이어 가는 친구에게 존경하는 마음을 전했어요.",
+   "blank": "尊敬",
+   "src": "made"
+  },
+  {
+   "text": "スタッフはみんな、ベテランの照明係を尊敬している。",
+   "en": "The whole crew respects the veteran lighting technician.",
+   "ko": "스태프들은 모두 베테랑 조명 담당을 존경해요.",
+   "blank": "尊敬",
    "src": "made"
   }
  ],
@@ -22481,6 +23345,22 @@
    "blank": "年度"
   }
  ],
+ "w|年金": [
+  {
+   "text": "悠斗の祖父は、年金が入ると孫たちにおもちゃを買ってくれる。",
+   "en": "When his pension comes in, Yuto's grandfather buys toys for his grandchildren.",
+   "ko": "유토의 할아버지는 연금이 들어오면 손주들에게 장난감을 사 줘요.",
+   "blank": "年金",
+   "src": "made"
+  },
+  {
+   "text": "年金暮らしの老夫婦が、ゆっくり野菜を選んでいた。",
+   "en": "An elderly couple living on their pension were slowly choosing vegetables.",
+   "ko": "연금으로 사는 노부부가 천천히 채소를 고르고 있었어요.",
+   "blank": "年金",
+   "src": "made"
+  }
+ ],
  "w|年齢": [
   {
    "text": "年齢、聞いてもいい？",
@@ -22493,6 +23373,22 @@
    "en": "Age doesn't matter.",
    "ko": "나이는 상관없어.",
    "blank": "年齢"
+  }
+ ],
+ "w|幸い": [
+  {
+   "text": "幸い、友達の住所は昔と変わっていなかった。",
+   "en": "Fortunately, his friend's address hadn't changed.",
+   "ko": "다행히 친구 주소는 예전과 바뀌지 않았어요.",
+   "blank": "幸い",
+   "src": "made"
+  },
+  {
+   "text": "雨の予報だったが、幸い撮影の日は晴れた。",
+   "en": "Rain had been forecast, but fortunately it was sunny on the day of the shoot.",
+   "ko": "비 예보가 있었지만 다행히 촬영 날은 맑았어요.",
+   "blank": "幸い",
+   "src": "made"
   }
  ],
  "w|幸せ": [
@@ -22566,6 +23462,22 @@
    "en": "The lovely smell of dashi spread from the kitchen throughout the house.",
    "ko": "부엌에서 맛국물 냄새가 온 집 안에 퍼졌어요.",
    "blank": "広がっ",
+   "src": "made"
+  }
+ ],
+ "w|広げる": [
+  {
+   "text": "健太は、机に昔の写真を広げて、何を書くか考えた。",
+   "en": "Kenta spread old photos out on his desk and thought about what to write.",
+   "ko": "겐타는 책상에 옛날 사진을 펼쳐 놓고 뭘 쓸지 생각했어요.",
+   "blank": "広げ",
+   "src": "made"
+  },
+  {
+   "text": "スタッフは、雨よけの大きなシートを広げた。",
+   "en": "The crew spread out a large sheet to keep off the rain.",
+   "ko": "스태프는 비를 막을 큰 시트를 펼쳤어요.",
+   "blank": "広げ",
    "src": "made"
   }
  ],
@@ -22667,6 +23579,22 @@
    "en": "Let's walk over to the store.",
    "ko": "매장까지 걸어가자.",
    "blank": "店舗"
+  }
+ ],
+ "w|店長": [
+  {
+   "text": "返品の相談をすると、売り場の店長が丁寧に対応してくれた。",
+   "en": "When Yuto asked about a return, the floor manager handled it politely.",
+   "ko": "반품 문의를 하자 매장 점장이 친절하게 응대해 줬어요.",
+   "blank": "店長",
+   "src": "made"
+  },
+  {
+   "text": "パン屋の店長は、千尋の顔を見るとクロワッサンを一つおまけしてくれる。",
+   "en": "Whenever the bakery manager sees Chihiro, he throws in a free croissant.",
+   "ko": "빵집 점장은 지히로 얼굴을 보면 크루아상을 하나 덤으로 줘요.",
+   "blank": "店長",
+   "src": "made"
   }
  ],
  "w|度": [
@@ -23115,6 +24043,22 @@
    "en": "Of course you'd think that.",
    "ko": "당연히 그렇게 생각하겠지.",
    "blank": "当然"
+  }
+ ],
+ "w|当該": [
+  {
+   "text": "当該のマシンは故障中のため、使用できません。",
+   "en": "The machine in question is out of order and cannot be used.",
+   "ko": "해당 기구는 고장 중이라 사용할 수 없어요.",
+   "blank": "当該",
+   "src": "made"
+  },
+  {
+   "text": "お店から、当該の商品は売り切れたというメールが来た。",
+   "en": "The shop emailed to say the item in question was sold out.",
+   "ko": "가게에서 해당 상품이 품절됐다는 메일이 왔어요.",
+   "blank": "当該",
+   "src": "made"
   }
  ],
  "w|当選": [
@@ -23931,6 +24875,22 @@
    "blank": "思わない"
   }
  ],
+ "w|思える": [
+  {
+   "text": "健太は、昔の手紙を読み返すと、あの頃がつい昨日のことのように思える。",
+   "en": "When Kenta rereads old letters, those days feel like only yesterday.",
+   "ko": "겐타는 옛날 편지를 다시 읽으면 그 시절이 바로 어제 일처럼 느껴져요.",
+   "blank": "思える",
+   "src": "made"
+  },
+  {
+   "text": "監督には、美咲の演技が少し硬く思えたらしい。",
+   "en": "Apparently Misaki's acting seemed a little stiff to the director.",
+   "ko": "감독에게는 미사키의 연기가 조금 딱딱하게 느껴진 것 같아요.",
+   "blank": "思え",
+   "src": "made"
+  }
+ ],
  "w|思想": [
   {
    "text": "彼の思想に共感する。",
@@ -24091,6 +25051,22 @@
    "blank": "恋愛"
   }
  ],
+ "w|恐れ": [
+  {
+   "text": "健太は、失礼なことを書いた恐れがあると思い、手紙を読み直した。",
+   "en": "Worried that he might have written something rude, Kenta reread the letter.",
+   "ko": "겐타는 실례되는 말을 썼을 우려가 있다고 생각해 편지를 다시 읽었어요.",
+   "blank": "恐れ",
+   "src": "made"
+  },
+  {
+   "text": "撮影中、美咲は高い所への恐れを必死に隠した。",
+   "en": "During the shoot, Misaki desperately hid her fear of heights.",
+   "ko": "촬영 중에 미사키는 높은 곳에 대한 두려움을 필사적으로 숨겼어요.",
+   "blank": "恐れ",
+   "src": "made"
+  }
+ ],
  "w|恐ろしい": [
   {
    "text": "恐ろしい夢を見たよ。",
@@ -24117,6 +25093,22 @@
    "en": "I overcame the fear.",
    "ko": "공포를 이겨냈어.",
    "blank": "恐怖"
+  }
+ ],
+ "w|恥": [
+  {
+   "text": "健太は、恥を忍んで昔の失敗を手紙に打ち明けた。",
+   "en": "Swallowing his pride, Kenta confessed an old mistake in the letter.",
+   "ko": "겐타는 창피함을 무릅쓰고 옛날 실수를 편지에 털어놓았어요.",
+   "blank": "恥",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、本番でセリフを忘れてみんなの前で恥をかいた。",
+   "en": "Misaki forgot her lines during the take and embarrassed herself in front of everyone.",
+   "ko": "미사키는 본 촬영에서 대사를 잊어 사람들 앞에서 망신을 당했어요.",
+   "blank": "恥",
+   "src": "made"
   }
  ],
  "w|恥ずかしい": [
@@ -24557,6 +25549,22 @@
    "blank": "態度"
   }
  ],
+ "w|慎重": [
+  {
+   "text": "健太は、慎重に言葉を選んで謝罪の手紙を書いた。",
+   "en": "Kenta chose his words carefully when he wrote the letter of apology.",
+   "ko": "겐타는 신중하게 말을 골라 사과 편지를 썼어요.",
+   "blank": "慎重",
+   "src": "made"
+  },
+  {
+   "text": "危ないシーンなので、スタッフは慎重に準備を進めた。",
+   "en": "It was a dangerous scene, so the crew prepared carefully.",
+   "ko": "위험한 장면이라서 스태프는 신중하게 준비했어요.",
+   "blank": "慎重",
+   "src": "made"
+  }
+ ],
  "w|慣れ": [
   {
    "text": "取材の慣れから、思い込みで書いてしまうことがある。",
@@ -24585,6 +25593,22 @@
    "en": "Until I get used to the place.",
    "ko": "환경에 익숙해질 때까지.",
    "blank": "慣れる"
+  }
+ ],
+ "w|憧れ": [
+  {
+   "text": "健太にとって、海外で働く友達はずっと憧れの存在だった。",
+   "en": "For Kenta, his friend working overseas had always been someone to look up to.",
+   "ko": "겐타에게 해외에서 일하는 친구는 늘 동경의 대상이었어요.",
+   "blank": "憧れ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、子どもの頃から憧れていた監督の映画に出演した。",
+   "en": "Misaki appeared in a film by a director she had admired since childhood.",
+   "ko": "미사키는 어릴 때부터 동경하던 감독의 영화에 출연했어요.",
+   "blank": "憧れ",
+   "src": "made"
   }
  ],
  "w|憲法": [
@@ -26027,6 +27051,22 @@
    "src": "made"
   }
  ],
+ "w|推測": [
+  {
+   "text": "返事が来ないのは忙しいからだろう、というのは健太の推測にすぎない。",
+   "en": "That no reply has come because his friend is busy is only Kenta's guess.",
+   "ko": "답장이 안 오는 건 바빠서일 거라는 건 겐타의 추측일 뿐이에요.",
+   "blank": "推測",
+   "src": "made"
+  },
+  {
+   "text": "撮影が延びるという推測が当たり、帰りは深夜になった。",
+   "en": "The guess that filming would run long turned out right, and they got home after midnight.",
+   "ko": "촬영이 길어질 거라는 추측이 맞아서 돌아가는 건 한밤중이 됐어요.",
+   "blank": "推測",
+   "src": "made"
+  }
+ ],
  "w|推進": [
   {
    "text": "改革を推進している。",
@@ -26205,6 +27245,22 @@
    "src": "made"
   }
  ],
+ "w|損": [
+  {
+   "text": "セール初日に行かなかったのは損だったと、悠斗は後で気づいた。",
+   "en": "Yuto later realized it was a loss not to have gone on the first day of the sale.",
+   "ko": "세일 첫날에 안 간 게 손해였다는 걸 유토는 나중에 깨달았어요.",
+   "blank": "損",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、まとめ買いしないと損だと思って、卵を二パック買った。",
+   "en": "Thinking it would be a waste not to buy in bulk, Chihiro bought two packs of eggs.",
+   "ko": "지히로는 한꺼번에 안 사면 손해라고 생각해서 달걀을 두 팩 샀어요.",
+   "blank": "損",
+   "src": "made"
+  }
+ ],
  "w|損害": [
   {
    "text": "大雨で公演が中止になり、劇団は大きな損害を受けた。",
@@ -26291,6 +27347,22 @@
    "blank": "操作"
   }
  ],
+ "w|操縦": [
+  {
+   "text": "友達は今、小型飛行機の操縦を習っているそうだ。",
+   "en": "Apparently his friend is now learning to fly a small plane.",
+   "ko": "친구는 지금 소형 비행기 조종을 배우고 있대요.",
+   "blank": "操縦",
+   "src": "made"
+  },
+  {
+   "text": "空からの映像は、ドローンの操縦が上手なスタッフが撮った。",
+   "en": "The aerial footage was shot by a crew member skilled at piloting drones.",
+   "ko": "하늘에서 찍은 영상은 드론 조종을 잘하는 스태프가 촬영했어요.",
+   "blank": "操縦",
+   "src": "made"
+  }
+ ],
  "w|支え": [
   {
    "text": "家族の支えがあったから頑張れた。",
@@ -26304,6 +27376,22 @@
    "en": "You are my emotional support.",
    "ko": "당신은 제 마음의 버팀목이에요.",
    "blank": "支え",
+   "src": "made"
+  }
+ ],
+ "w|支払い": [
+  {
+   "text": "レジで、悠斗はカードで支払いを済ませた。",
+   "en": "At the register, Yuto paid by card.",
+   "ko": "계산대에서 유토는 카드로 결제를 마쳤어요.",
+   "blank": "支払い",
+   "src": "made"
+  },
+  {
+   "text": "市場の多くの店では、支払いは現金だけだ。",
+   "en": "At many of the market stalls, payment is cash only.",
+   "ko": "시장의 많은 가게에서는 현금으로만 계산할 수 있어요.",
+   "blank": "支払い",
    "src": "made"
   }
  ],
@@ -27055,6 +28143,38 @@
    "en": "I read his new work.",
    "ko": "그의 신작을 읽었어.",
    "blank": "新作"
+  }
+ ],
+ "w|新品": [
+  {
+   "text": "悠斗は、新品の革靴を履いて売り場を歩いてみた。",
+   "en": "Yuto tried walking around the shop floor in a pair of brand-new leather shoes.",
+   "ko": "유토는 새 가죽 구두를 신고 매장을 걸어 봤어요.",
+   "blank": "新品",
+   "src": "made"
+  },
+  {
+   "text": "その鍋はほとんど使われておらず、新品のようにきれいだった。",
+   "en": "The pot had hardly been used and was as clean as new.",
+   "ko": "그 냄비는 거의 안 써서 새것처럼 깨끗했어요.",
+   "blank": "新品",
+   "src": "made"
+  }
+ ],
+ "w|新型": [
+  {
+   "text": "友達は、新型の電車の運転士になったと手紙で知らせてきた。",
+   "en": "His friend wrote to tell him he had become a driver on a new model of train.",
+   "ko": "친구는 신형 전철 운전사가 됐다고 편지로 알려 왔어요.",
+   "blank": "新型",
+   "src": "made"
+  },
+  {
+   "text": "今回の撮影では、新型のカメラが使われた。",
+   "en": "A new model of camera was used for this shoot.",
+   "ko": "이번 촬영에는 신형 카메라가 쓰였어요.",
+   "blank": "新型",
+   "src": "made"
   }
  ],
  "w|新幹線": [
@@ -28401,6 +29521,22 @@
    "blank": "本体"
   }
  ],
+ "w|本屋": [
+  {
+   "text": "悠斗は、七階の本屋で旅行のガイドブックを買った。",
+   "en": "Yuto bought a travel guidebook at the bookstore on the seventh floor.",
+   "ko": "유토는 칠 층 서점에서 여행 가이드북을 샀어요.",
+   "blank": "本屋",
+   "src": "made"
+  },
+  {
+   "text": "市場の角にある小さな本屋では、古い料理本が安く売られている。",
+   "en": "A small bookstore on the corner of the market sells old cookbooks cheaply.",
+   "ko": "시장 모퉁이의 작은 서점에서는 오래된 요리책을 싸게 팔아요.",
+   "blank": "本屋",
+   "src": "made"
+  }
+ ],
  "w|本当": [
   {
    "text": "本当に助かった。",
@@ -28516,6 +29652,22 @@
    "en": "During her break, Keiko waited for the main part of the drama to start.",
    "ko": "쉬는 시간에 게이코는 드라마 본편이 시작되기를 기다렸어요.",
    "blank": "本編",
+   "src": "made"
+  }
+ ],
+ "w|本質": [
+  {
+   "text": "トレーナーは、健康の本質は毎日の習慣にあると言った。",
+   "en": "The trainer said the essence of good health lies in your daily habits.",
+   "ko": "트레이너는 건강의 본질은 매일의 습관에 있다고 했어요.",
+   "blank": "本質",
+   "src": "made"
+  },
+  {
+   "text": "由美は、安さよりも品質こそが買い物の本質だと思っている。",
+   "en": "Yumi thinks quality, not cheapness, is what shopping is really about.",
+   "ko": "유미는 싼 것보다 품질이야말로 쇼핑의 본질이라고 생각해요.",
+   "blank": "本質",
    "src": "made"
   }
  ],
@@ -28721,6 +29873,22 @@
    "blank": "柔らかい"
   }
  ],
+ "w|栄養": [
+  {
+   "text": "トレーナーは、筋肉をつけるには栄養も大事だと言った。",
+   "en": "The trainer said nutrition is also important for building muscle.",
+   "ko": "트레이너는 근육을 키우려면 영양도 중요하다고 했어요.",
+   "blank": "栄養",
+   "src": "made"
+  },
+  {
+   "text": "忙しい由美は、栄養のバランスがいい冷凍弁当を頼んでいる。",
+   "en": "Yumi is busy, so she orders frozen meals with well-balanced nutrition.",
+   "ko": "바쁜 유미는 영양 균형이 좋은 냉동 도시락을 주문하고 있어요.",
+   "blank": "栄養",
+   "src": "made"
+  }
+ ],
  "w|株": [
   {
    "text": "株を始めたんだ。",
@@ -28764,6 +29932,22 @@
    "en": "Aoi looked for clear grounds for why that product sells.",
    "ko": "아오이는 그 상품이 왜 팔리는지 분명한 근거를 찾았어요.",
    "blank": "根拠",
+   "src": "made"
+  }
+ ],
+ "w|根本": [
+  {
+   "text": "腰の痛みを根本から治すには、姿勢を直す必要がある。",
+   "en": "To cure back pain at its root, you need to fix your posture.",
+   "ko": "허리 통증을 근본부터 고치려면 자세를 바로잡아야 해요.",
+   "blank": "根本",
+   "src": "made"
+  },
+  {
+   "text": "何度も同じ失敗をするのは、確認の仕方が根本的に間違っているからだ。",
+   "en": "Making the same mistake again and again is because the way of checking is fundamentally wrong.",
+   "ko": "같은 실수를 여러 번 하는 건 확인 방법이 근본적으로 틀렸기 때문이에요.",
+   "blank": "根本",
    "src": "made"
   }
  ],
@@ -28885,6 +30069,22 @@
    "en": "I found a rare plant.",
    "ko": "희귀한 식물을 찾았어.",
    "blank": "植物"
+  }
+ ],
+ "w|検出": [
+  {
+   "text": "友達は研究所で、水に含まれる物質の検出をしているそうだ。",
+   "en": "Apparently his friend works at a research lab detecting substances in water.",
+   "ko": "친구는 연구소에서 물속 물질을 검출하는 일을 한대요.",
+   "blank": "検出",
+   "src": "made"
+  },
+  {
+   "text": "撮影所の火災報知器が煙を検出して、撮影が一時止まった。",
+   "en": "The studio's fire alarm detected smoke, and filming stopped for a while.",
+   "ko": "촬영소 화재 경보기가 연기를 검출해서 촬영이 잠시 멈췄어요.",
+   "blank": "検出",
+   "src": "made"
   }
  ],
  "w|検査": [
@@ -29865,6 +31065,22 @@
    "en": "I saw the news of the death.",
    "ko": "사망 뉴스를 봤어.",
    "blank": "死亡"
+  }
+ ],
+ "w|死体": [
+  {
+   "text": "ジムのテレビでは、川で死体が見つかったというニュースが流れていた。",
+   "en": "The TV at the gym was showing news that a body had been found in a river.",
+   "ko": "헬스장 텔레비전에서는 강에서 시신이 발견됐다는 뉴스가 나오고 있었어요.",
+   "blank": "死体",
+   "src": "made"
+  },
+  {
+   "text": "由美が注文したミステリー小説は、湖で死体が見つかる場面から始まる。",
+   "en": "The mystery novel Yumi ordered opens with a body being found in a lake.",
+   "ko": "유미가 주문한 미스터리 소설은 호수에서 시신이 발견되는 장면으로 시작해요.",
+   "blank": "死体",
+   "src": "made"
   }
  ],
  "w|死刑": [
@@ -30941,6 +32157,22 @@
    "src": "made"
   }
  ],
+ "w|浴びる": [
+  {
+   "text": "トレーニングの後、翔太は熱いシャワーを浴びた。",
+   "en": "After his workout, Shota took a hot shower.",
+   "ko": "운동 후에 쇼타는 뜨거운 샤워를 했어요.",
+   "blank": "浴び",
+   "src": "made"
+  },
+  {
+   "text": "新しいシャワーヘッドで、由美は気持ちよくお湯を浴びた。",
+   "en": "With the new shower head, Yumi enjoyed a nice hot shower.",
+   "ko": "새 샤워 헤드로 유미는 기분 좋게 따뜻한 물로 샤워했어요.",
+   "blank": "浴び",
+   "src": "made"
+  }
+ ],
  "w|海": [
   {
    "text": "海に行きたいな。",
@@ -31011,6 +32243,22 @@
    "en": "Are you going to delete the history?",
    "ko": "기록을 지울 생각이야?",
    "blank": "消す"
+  }
+ ],
+ "w|消化": [
+  {
+   "text": "食べてすぐに運動すると消化に悪いと、翔太は聞いた。",
+   "en": "Shota heard that exercising right after eating is bad for digestion.",
+   "ko": "쇼타는 먹고 바로 운동하면 소화에 나쁘다고 들었어요.",
+   "blank": "消化",
+   "src": "made"
+  },
+  {
+   "text": "由美は、消化にいいと書かれたヨーグルトを定期便で頼んでいる。",
+   "en": "Yumi has a regular delivery of yogurt that's labeled as good for digestion.",
+   "ko": "유미는 소화에 좋다고 적힌 요구르트를 정기 배송으로 받고 있어요.",
+   "blank": "消化",
+   "src": "made"
   }
  ],
  "w|消滅": [
@@ -31459,6 +32707,22 @@
    "src": "tatoeba:216447/mookeee en:53751/CP"
   }
  ],
+ "w|濃い": [
+  {
+   "text": "ジムの帰りに、翔太は濃いコーヒーを一杯飲んだ。",
+   "en": "On his way home from the gym, Shota had a cup of strong coffee.",
+   "ko": "헬스장에서 돌아오는 길에 쇼타는 진한 커피를 한 잔 마셨어요.",
+   "blank": "濃い",
+   "src": "made"
+  },
+  {
+   "text": "届いた緑茶は、思ったより味が濃かった。",
+   "en": "The green tea that arrived tasted stronger than she expected.",
+   "ko": "도착한 녹차는 생각보다 맛이 진했어요.",
+   "blank": "濃かっ",
+   "src": "made"
+  }
+ ],
  "w|濡れる": [
   {
    "text": "ニャンちゃん、魚は好きなんだけど、足が濡れるのは嫌なのよ。",
@@ -31775,6 +33039,22 @@
    "en": "Laughter exploded.",
    "ko": "웃음이 폭발했어.",
    "blank": "爆発"
+  }
+ ],
+ "w|爪": [
+  {
+   "text": "トレーナーは、ダンベルを持つ前に長い爪を切るよう翔太に言った。",
+   "en": "The trainer told Shota to trim his long nails before picking up the dumbbells.",
+   "ko": "트레이너는 덤벨을 들기 전에 긴 손톱을 깎으라고 쇼타에게 말했어요.",
+   "blank": "爪",
+   "src": "made"
+  },
+  {
+   "text": "由美は、爪をきれいに整えるためのやすりを注文した。",
+   "en": "Yumi ordered a file to keep her nails neatly shaped.",
+   "ko": "유미는 손톱을 예쁘게 다듬을 줄을 주문했어요.",
+   "blank": "爪",
+   "src": "made"
   }
  ],
  "w|父": [
@@ -32677,6 +33957,22 @@
    "blank": "生徒"
   }
  ],
+ "w|生成": [
+  {
+   "text": "ジムのアプリは、目標に合わせた練習メニューを自動で生成してくれる。",
+   "en": "The gym's app automatically generates a workout plan tailored to your goals.",
+   "ko": "헬스장 앱은 목표에 맞춘 운동 메뉴를 자동으로 생성해 줘요.",
+   "blank": "生成",
+   "src": "made"
+  },
+  {
+   "text": "由美は、AIが生成した商品説明だとすぐに気づいた。",
+   "en": "Yumi immediately noticed that the product description had been generated by AI.",
+   "ko": "유미는 AI가 생성한 상품 설명이라는 걸 바로 알아챘어요.",
+   "blank": "生成",
+   "src": "made"
+  }
+ ],
  "w|生放送": [
   {
    "text": "地元のラジオ局が、図書館の朗読会を生放送で伝えた。",
@@ -33083,6 +34379,22 @@
    "blank": "番組"
   }
  ],
+ "w|疑い": [
+  {
+   "text": "あの頃、健太は友達の言葉に疑いを持ってしまったことを後悔している。",
+   "en": "Kenta regrets having doubted his friend's words back then.",
+   "ko": "겐타는 그때 친구의 말을 의심했던 걸 후회하고 있어요.",
+   "blank": "疑い",
+   "src": "made"
+  },
+  {
+   "text": "セットから小道具がなくなり、新人のスタッフに疑いがかかった。",
+   "en": "A prop disappeared from the set, and suspicion fell on a new crew member.",
+   "ko": "세트에서 소품이 없어져서 신입 스태프가 의심을 받았어요.",
+   "blank": "疑い",
+   "src": "made"
+  }
+ ],
  "w|疑問": [
   {
    "text": "小さな疑問が残る。",
@@ -33240,6 +34552,22 @@
    "en": "Misaki posts about her move on her blog every day.",
    "ko": "미사키는 이사하는 모습을 매일 블로그로 올리고 있어요.",
    "blank": "発信",
+   "src": "made"
+  }
+ ],
+ "w|発動": [
+  {
+   "text": "火災報知器が鳴ると、自動で消火装置が発動する仕組みになっている。",
+   "en": "When the fire alarm goes off, the fire suppression system activates automatically.",
+   "ko": "화재 경보가 울리면 자동으로 소화 장치가 작동하는 구조예요.",
+   "blank": "発動",
+   "src": "made"
+  },
+  {
+   "text": "注文から一時間以内なら、キャンセル機能が発動できる。",
+   "en": "The cancellation function can be used within an hour of ordering.",
+   "ko": "주문 후 한 시간 이내라면 취소 기능을 쓸 수 있어요.",
+   "blank": "発動",
    "src": "made"
   }
  ],
@@ -34303,6 +35631,22 @@
    "en": "Make sure it's safe.",
    "ko": "안전을 확보해.",
    "blank": "確保"
+  }
+ ],
+ "w|確信": [
+  {
+   "text": "健太は、また会えば昔のように笑い合えると確信している。",
+   "en": "Kenta is convinced that if they meet again, they'll laugh together like old times.",
+   "ko": "겐타는 다시 만나면 옛날처럼 함께 웃을 수 있다고 확신해요.",
+   "blank": "確信",
+   "src": "made"
+  },
+  {
+   "text": "監督は、この映画は必ずヒットするという確信を持っていた。",
+   "en": "The director was convinced the film would definitely be a hit.",
+   "ko": "감독은 이 영화가 반드시 흥행할 거라는 확신이 있었어요.",
+   "blank": "確信",
+   "src": "made"
   }
  ],
  "w|確定": [
@@ -36275,6 +37619,22 @@
    "src": "made"
   }
  ],
+ "w|羨ましい": [
+  {
+   "text": "友達の楽しそうな近況を読んで、健太は少し羨ましくなった。",
+   "en": "Reading his friend's happy news, Kenta felt a little envious.",
+   "ko": "친구의 즐거워 보이는 근황을 읽고 겐타는 조금 부러워졌어요.",
+   "blank": "羨ましく",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、主役に選ばれた友人を少し羨ましく思った。",
+   "en": "Misaki felt a little envious of her friend who had been chosen for the lead role.",
+   "ko": "미사키는 주인공으로 뽑힌 친구가 조금 부러웠어요.",
+   "blank": "羨ましく",
+   "src": "made"
+  }
+ ],
  "w|義務": [
   {
    "text": "報告は義務だよ。",
@@ -36607,6 +37967,22 @@
    "blank": "肉"
   }
  ],
+ "w|肉体": [
+  {
+   "text": "翔太は、肉体だけでなく心も強くなった気がした。",
+   "en": "Shota felt that not only his body but also his mind had become stronger.",
+   "ko": "쇼타는 육체뿐 아니라 마음도 강해진 것 같았어요.",
+   "blank": "肉体",
+   "src": "made"
+  },
+  {
+   "text": "由美は、肉体労働の多い兄に、丈夫な作業靴を贈った。",
+   "en": "Yumi gave her brother, who does a lot of physical labor, a pair of sturdy work boots.",
+   "ko": "유미는 육체노동이 많은 오빠에게 튼튼한 작업화를 선물했어요.",
+   "blank": "肉体",
+   "src": "made"
+  }
+ ],
  "w|肌": [
   {
    "text": "肌が乾燥してる。",
@@ -36677,6 +38053,22 @@
    "en": "The training program starts.",
    "ko": "육성 프로그램이 시작돼.",
    "blank": "育成"
+  }
+ ],
+ "w|背": [
+  {
+   "text": "翔太は、背が高いのでベンチが少し短く感じる。",
+   "en": "Shota is tall, so the bench feels a little short to him.",
+   "ko": "쇼타는 키가 커서 벤치가 조금 짧게 느껴져요.",
+   "blank": "背",
+   "src": "made"
+  },
+  {
+   "text": "商品説明には、背の低い人向けのサイズもあると書いてあった。",
+   "en": "The product description said there were sizes for shorter people too.",
+   "ko": "상품 설명에는 키 작은 사람을 위한 사이즈도 있다고 쓰여 있었어요.",
+   "blank": "背",
+   "src": "made"
   }
  ],
  "w|背中": [
@@ -36781,6 +38173,22 @@
    "src": "tatoeba:229496 en:66856"
   }
  ],
+ "w|脱毛": [
+  {
+   "text": "更衣室には、脱毛サロンの広告が貼ってあった。",
+   "en": "There was an ad for a hair removal salon in the locker room.",
+   "ko": "탈의실에는 제모 숍 광고가 붙어 있었어요.",
+   "blank": "脱毛",
+   "src": "made"
+  },
+  {
+   "text": "由美は、家庭用の脱毛器を買うかどうか一週間迷った。",
+   "en": "Yumi spent a week deciding whether to buy an at-home hair removal device.",
+   "ko": "유미는 가정용 제모기를 살지 말지 일주일 동안 고민했어요.",
+   "blank": "脱毛",
+   "src": "made"
+  }
+ ],
  "w|脳": [
   {
    "text": "脳が休まらない。",
@@ -36835,6 +38243,22 @@
    "en": "I laughed holding my stomach.",
    "ko": "배를 잡고 웃었어.",
    "blank": "腹"
+  }
+ ],
+ "w|膝": [
+  {
+   "text": "スクワットのとき、膝がつま先より前に出ないよう注意された。",
+   "en": "During squats, Shota was told to keep his knees from going past his toes.",
+   "ko": "스쿼트할 때 무릎이 발끝보다 앞으로 나가지 않도록 주의를 받았어요.",
+   "blank": "膝",
+   "src": "made"
+  },
+  {
+   "text": "由美は、母のために膝を温めるサポーターを注文した。",
+   "en": "Yumi ordered a knee warmer for her mother.",
+   "ko": "유미는 엄마를 위해 무릎을 따뜻하게 해 주는 보호대를 주문했어요.",
+   "blank": "膝",
+   "src": "made"
   }
  ],
  "w|自ら": [
@@ -37153,6 +38577,22 @@
    "en": "The audience is excited.",
    "ko": "관객이 흥분하고 있어.",
    "blank": "興奮"
+  }
+ ],
+ "w|舌": [
+  {
+   "text": "走りすぎて、翔太は舌までからからに乾いてしまった。",
+   "en": "Shota ran so much that even his tongue was bone-dry.",
+   "ko": "너무 많이 달려서 쇼타는 혀까지 바싹 말라 버렸어요.",
+   "blank": "舌",
+   "src": "made"
+  },
+  {
+   "text": "届いた激辛ソースを少しなめただけで、由美は舌がしびれた。",
+   "en": "Yumi barely licked the extra-hot sauce that arrived and her tongue went numb.",
+   "ko": "도착한 아주 매운 소스를 조금 핥았을 뿐인데 유미는 혀가 얼얼했어요.",
+   "blank": "舌",
+   "src": "made"
   }
  ],
  "w|舐める": [
@@ -37745,6 +39185,22 @@
    "src": "made"
   }
  ],
+ "w|衛生": [
+  {
+   "text": "このジムは、マシンを使った後に消毒するなど衛生に気を配っている。",
+   "en": "This gym pays attention to hygiene, such as disinfecting the machines after use.",
+   "ko": "이 헬스장은 기구를 쓴 뒤 소독하는 등 위생에 신경 써요.",
+   "blank": "衛生",
+   "src": "made"
+  },
+  {
+   "text": "食品を扱う店なので、由美は衛生面の口コミもよく読んだ。",
+   "en": "Since it was a shop that handled food, Yumi read reviews about hygiene carefully too.",
+   "ko": "식품을 다루는 가게라서 유미는 위생 관련 후기도 꼼꼼히 읽었어요.",
+   "blank": "衛生",
+   "src": "made"
+  }
+ ],
  "w|衝撃": [
   {
    "text": "衝撃を受けたよ。",
@@ -37923,6 +39379,22 @@
    "blank": "袋"
   }
  ],
+ "w|被る": [
+  {
+   "text": "翔太は、外を走るときは帽子を被るようにしている。",
+   "en": "Shota makes a point of wearing a cap when he runs outside.",
+   "ko": "쇼타는 밖에서 달릴 때는 모자를 쓰려고 해요.",
+   "blank": "被る",
+   "src": "made"
+  },
+  {
+   "text": "由美は、日差しが強い日に被る帽子をネットで探した。",
+   "en": "Yumi searched online for a hat to wear on sunny days.",
+   "ko": "유미는 햇볕이 강한 날 쓸 모자를 인터넷으로 찾았어요.",
+   "blank": "被る",
+   "src": "made"
+  }
+ ],
  "w|被告": [
   {
    "text": "昔の裁判を再現した展示では、被告の席に座ってみることができる。",
@@ -38041,6 +39513,22 @@
    "src": "tatoeba:207097 en:44347"
   }
  ],
+ "w|裸": [
+  {
+   "text": "サウナでは、男たちが裸で汗を流していた。",
+   "en": "In the sauna, the men were sweating it out naked.",
+   "ko": "사우나에서는 남자들이 알몸으로 땀을 흘리고 있었어요.",
+   "blank": "裸",
+   "src": "made"
+  },
+  {
+   "text": "宅配便が来たとき、由美の弟は裸のまま玄関に出ようとした。",
+   "en": "When the delivery came, Yumi's brother tried to answer the door without any clothes on.",
+   "ko": "택배가 왔을 때 유미의 남동생은 알몸으로 현관에 나가려고 했어요.",
+   "blank": "裸",
+   "src": "made"
+  }
+ ],
  "w|製作": [
   {
    "text": "映画の製作が始まる。",
@@ -38109,6 +39597,38 @@
    "en": "I have complicated feelings.",
    "ko": "복잡한 기분이야.",
    "blank": "複雑"
+  }
+ ],
+ "w|褒める": [
+  {
+   "text": "友達の手紙には、健太の字がきれいになったと褒める一文があった。",
+   "en": "His friend's letter included a line praising how neat Kenta's handwriting had become.",
+   "ko": "친구 편지에는 겐타의 글씨가 예뻐졌다고 칭찬하는 한 줄이 있었어요.",
+   "blank": "褒める",
+   "src": "made"
+  },
+  {
+   "text": "監督に演技を褒められて、美咲は思わず笑顔になった。",
+   "en": "When the director praised her acting, Misaki couldn't help smiling.",
+   "ko": "감독에게 연기를 칭찬받고 미사키는 저도 모르게 웃었어요.",
+   "blank": "褒め",
+   "src": "made"
+  }
+ ],
+ "w|襲う": [
+  {
+   "text": "友達の町が台風に襲われたと聞いて、健太は心配になった。",
+   "en": "Kenta grew worried when he heard his friend's town had been hit by a typhoon.",
+   "ko": "친구가 사는 동네가 태풍에 휩쓸렸다는 소식에 겐타는 걱정이 됐어요.",
+   "blank": "襲わ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、村が大きな地震に襲われる場面を演じた。",
+   "en": "Misaki acted in a scene where a village is struck by a huge earthquake.",
+   "ko": "미사키는 마을이 큰 지진을 당하는 장면을 연기했어요.",
+   "blank": "襲わ",
+   "src": "made"
   }
  ],
  "w|襲撃": [
@@ -38613,6 +40133,22 @@
    "en": "I hit the corner of the desk.",
    "ko": "책상 모서리에 부딪혔어.",
    "blank": "角"
+  }
+ ],
+ "w|解体": [
+  {
+   "text": "古いジムの建物は、来年解体されるそうだ。",
+   "en": "The old gym building is apparently going to be torn down next year.",
+   "ko": "오래된 헬스장 건물은 내년에 철거된대요.",
+   "blank": "解体",
+   "src": "made"
+  },
+  {
+   "text": "大きな段ボールは、解体してから資源ごみに出した。",
+   "en": "Yumi broke down the large cardboard box before putting it out for recycling.",
+   "ko": "큰 박스는 해체한 뒤 재활용 쓰레기로 내놓았어요.",
+   "blank": "解体",
+   "src": "made"
   }
  ],
  "w|解放": [
@@ -39515,6 +41051,22 @@
    "blank": "誕生日"
   }
  ],
+ "w|誘う": [
+  {
+   "text": "悠斗は、同僚を誘って地下の食品売り場へ行った。",
+   "en": "Yuto invited a coworker along to the food hall in the basement.",
+   "ko": "유토는 동료를 불러 지하 식품 매장에 갔어요.",
+   "blank": "誘っ",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、隣に住む友達を誘って朝市へ出かけた。",
+   "en": "Chihiro asked the friend who lives next door to come with her to the morning market.",
+   "ko": "지히로는 옆집 친구를 불러 아침 시장에 나갔어요.",
+   "blank": "誘っ",
+   "src": "made"
+  }
+ ],
  "w|誘導": [
   {
    "text": "火災訓練で、直樹は社員を非常階段へ誘導する係になった。",
@@ -39543,6 +41095,22 @@
    "en": "I like time to talk about dreams.",
    "ko": "꿈을 이야기하는 시간이 좋아.",
    "blank": "語る"
+  }
+ ],
+ "w|誤解": [
+  {
+   "text": "健太は、何年も前の小さな誤解を手紙で謝った。",
+   "en": "Kenta apologized in a letter for a small misunderstanding from years ago.",
+   "ko": "겐타는 몇 년 전의 작은 오해를 편지로 사과했어요.",
+   "blank": "誤解",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、台本の意味を誤解したまま演じてしまった。",
+   "en": "Misaki ended up acting the scene having misunderstood what the script meant.",
+   "ko": "미사키는 대본 뜻을 오해한 채로 연기해 버렸어요.",
+   "blank": "誤解",
+   "src": "made"
   }
  ],
  "w|説得": [
@@ -39645,6 +41213,22 @@
    "en": "Somebody help me.",
    "ko": "누구 좀 도와줘.",
    "blank": "誰か"
+  }
+ ],
+ "w|課金": [
+  {
+   "text": "おもちゃ売り場の店員は、最近の子どもはゲームの課金が多いと話していた。",
+   "en": "A clerk in the toy section said kids these days spend a lot on in-game purchases.",
+   "ko": "장난감 매장 직원은 요즘 아이들이 게임 결제를 많이 한다고 했어요.",
+   "blank": "課金",
+   "src": "made"
+  },
+  {
+   "text": "千尋の弟は、市場で買い物をするより、スマホのゲームに課金するほうが好きだ。",
+   "en": "Chihiro's brother would rather spend money in phone games than shop at the market.",
+   "ko": "지히로의 남동생은 시장에서 장 보는 것보다 스마트폰 게임에 돈 쓰는 걸 더 좋아해요.",
+   "blank": "課金",
+   "src": "made"
   }
  ],
  "w|課題": [
@@ -40363,6 +41947,22 @@
    "blank": "資料"
   }
  ],
+ "w|資本": [
+  {
+   "text": "この店は、昔から地元の資本で経営されている。",
+   "en": "This store has long been run with local capital.",
+   "ko": "이 가게는 예전부터 지역 자본으로 운영되고 있어요.",
+   "blank": "資本",
+   "src": "made"
+  },
+  {
+   "text": "市場の店のほとんどは、大きな資本のない家族経営だ。",
+   "en": "Most of the market stalls are family-run businesses without much capital.",
+   "ko": "시장 가게 대부분은 큰 자본 없는 가족 경영이에요.",
+   "blank": "資本",
+   "src": "made"
+  }
+ ],
  "w|資格": [
   {
    "text": "資格を取ったよ。",
@@ -40403,6 +42003,22 @@
    "en": "We raised funds.",
    "ko": "자금을 모았어.",
    "blank": "資金"
+  }
+ ],
+ "w|賛成": [
+  {
+   "text": "同窓会を開くという案に、健太は大賛成だと書いた。",
+   "en": "Kenta wrote that he was all for the idea of holding a class reunion.",
+   "ko": "겐타는 동창회를 열자는 의견에 대찬성이라고 썼어요.",
+   "blank": "賛成",
+   "src": "made"
+  },
+  {
+   "text": "結末を変えるという監督の案に、スタッフの多くが賛成した。",
+   "en": "Most of the crew agreed with the director's idea of changing the ending.",
+   "ko": "결말을 바꾸자는 감독의 안에 스태프 대부분이 찬성했어요.",
+   "blank": "賛成",
+   "src": "made"
   }
  ],
  "w|賞": [
@@ -40761,6 +42377,22 @@
    "en": "Protect yourself.",
    "ko": "몸 잘 지켜.",
    "blank": "身"
+  }
+ ],
+ "w|身体": [
+  {
+   "text": "入会のとき、翔太は身体の状態についての質問に答えた。",
+   "en": "When he joined, Shota answered questions about his physical condition.",
+   "ko": "가입할 때 쇼타는 신체 상태에 관한 질문에 답했어요.",
+   "blank": "身体",
+   "src": "made"
+  },
+  {
+   "text": "注文フォームには、身体の不自由な人のための配送オプションがあった。",
+   "en": "The order form had a delivery option for people with physical disabilities.",
+   "ko": "주문서에는 몸이 불편한 사람을 위한 배송 옵션이 있었어요.",
+   "blank": "身体",
+   "src": "made"
   }
  ],
  "w|身長": [
@@ -41561,6 +43193,22 @@
    "src": "made"
   }
  ],
+ "w|通貨": [
+  {
+   "text": "免税カウンターでは、外国の通貨でも支払える。",
+   "en": "At the tax-free counter, you can pay even in foreign currency.",
+   "ko": "면세 카운터에서는 외국 통화로도 낼 수 있어요.",
+   "blank": "通貨",
+   "src": "made"
+  },
+  {
+   "text": "観光客が多い店では、外国の通貨も使えるそうだ。",
+   "en": "Apparently foreign currency is accepted at stalls with lots of tourists.",
+   "ko": "관광객이 많은 가게에서는 외국 통화도 쓸 수 있대요.",
+   "blank": "通貨",
+   "src": "made"
+  }
+ ],
  "w|通販": [
   {
    "text": "通販で理想的な枕が買えます。",
@@ -42063,6 +43711,22 @@
    "en": "A day spent calmly.",
    "ko": "평온하게 보내는 하루.",
    "blank": "過ごす"
+  }
+ ],
+ "w|過剰": [
+  {
+   "text": "悠斗は、店員の過剰なサービスに少し疲れてしまった。",
+   "en": "Yuto got a little tired of the clerk's excessive attention.",
+   "ko": "유토는 점원의 과잉 서비스에 조금 지쳐 버렸어요.",
+   "blank": "過剰",
+   "src": "made"
+  },
+  {
+   "text": "魚屋のおじさんは、過剰な包装はしない主義だ。",
+   "en": "The fishmonger makes a point of not using excessive wrapping.",
+   "ko": "생선 가게 아저씨는 과한 포장은 하지 않는 주의예요.",
+   "blank": "過剰",
+   "src": "made"
   }
  ],
  "w|過去": [
@@ -42629,6 +44293,22 @@
    "blank": "配布"
   }
  ],
+ "w|配慮": [
+  {
+   "text": "健太は、病気の友達に配慮して、明るい話題を選んで書いた。",
+   "en": "Out of consideration for his sick friend, Kenta chose cheerful topics to write about.",
+   "ko": "겐타는 아픈 친구를 배려해서 밝은 이야기를 골라 썼어요.",
+   "blank": "配慮",
+   "src": "made"
+  },
+  {
+   "text": "監督は、子役の体調に配慮して撮影を早めに終えた。",
+   "en": "Out of consideration for the child actor's health, the director wrapped up filming early.",
+   "ko": "감독은 아역 배우의 몸 상태를 배려해서 촬영을 일찍 끝냈어요.",
+   "blank": "配慮",
+   "src": "made"
+  }
+ ],
  "w|配置": [
   {
    "text": "机の配置を変える。",
@@ -42655,6 +44335,22 @@
    "en": "I'm not drinking today.",
    "ko": "오늘은 술 안 마실게.",
    "blank": "酒"
+  }
+ ],
+ "w|酔う": [
+  {
+   "text": "健太は、修学旅行のバスで友達が酔ったことを懐かしく思い出した。",
+   "en": "Kenta fondly remembered his friend getting carsick on the school trip bus.",
+   "ko": "겐타는 수학여행 버스에서 친구가 멀미했던 일을 그립게 떠올렸어요.",
+   "blank": "酔っ",
+   "src": "made"
+  },
+  {
+   "text": "船の上の撮影で、美咲はひどく酔ってしまった。",
+   "en": "During the shoot on the boat, Misaki got terribly seasick.",
+   "ko": "배 위 촬영에서 미사키는 심하게 멀미를 했어요.",
+   "blank": "酔っ",
+   "src": "made"
   }
  ],
  "w|醤油": [
@@ -42803,6 +44499,22 @@
    "blank": "金属"
   }
  ],
+ "w|金持ち": [
+  {
+   "text": "高級時計の売り場には、いかにも金持ちそうな客が多かった。",
+   "en": "The luxury watch section was full of customers who looked obviously rich.",
+   "ko": "고급 시계 매장에는 딱 봐도 부자 같은 손님이 많았어요.",
+   "blank": "金持ち",
+   "src": "made"
+  },
+  {
+   "text": "魚屋のおじさんは「金持ちじゃなくても、うまい魚は食べられる」と笑った。",
+   "en": "The fishmonger laughed and said you don't have to be rich to eat good fish.",
+   "ko": "생선 가게 아저씨는 \"부자가 아니어도 맛있는 생선은 먹을 수 있어\"라며 웃었어요.",
+   "blank": "金持ち",
+   "src": "made"
+  }
+ ],
  "w|金曜日": [
   {
    "text": "金曜日、飲みに行く？",
@@ -42829,6 +44541,22 @@
    "en": "I'm studying finance.",
    "ko": "금융을 공부하고 있어.",
    "blank": "金融"
+  }
+ ],
+ "w|金額": [
+  {
+   "text": "悠斗はレシートの金額を見て、使いすぎたと反省した。",
+   "en": "Looking at the total on the receipt, Yuto regretted spending too much.",
+   "ko": "유토는 영수증 금액을 보고 너무 많이 썼다고 반성했어요.",
+   "blank": "金額",
+   "src": "made"
+  },
+  {
+   "text": "八百屋のおばさんは、計算した金額をおまけしてくれた。",
+   "en": "The woman at the greengrocer gave Chihiro a little off the total.",
+   "ko": "채소 가게 아주머니는 계산한 금액에서 조금 깎아 줬어요.",
+   "blank": "金額",
+   "src": "made"
   }
  ],
  "w|釣り": [
@@ -42991,6 +44719,22 @@
    "blank": "鏡"
   }
  ],
+ "w|鑑賞": [
+  {
+   "text": "二人の共通の趣味は、昔から映画鑑賞だった。",
+   "en": "The two have always shared a love of watching movies.",
+   "ko": "두 사람의 공통 취미는 예전부터 영화 감상이었어요.",
+   "blank": "鑑賞",
+   "src": "made"
+  },
+  {
+   "text": "完成した映画の鑑賞会に、出演者全員が招かれた。",
+   "en": "The whole cast was invited to a screening of the finished film.",
+   "ko": "완성된 영화 감상회에 출연자 전원이 초대받았어요.",
+   "blank": "鑑賞",
+   "src": "made"
+  }
+ ],
  "w|長い": [
   {
    "text": "話が長いよ。",
@@ -43045,6 +44789,22 @@
    "en": "The gate is closed.",
    "ko": "문이 닫혀 있어.",
    "blank": "門"
+  }
+ ],
+ "w|閉じる": [
+  {
+   "text": "エレベーターの扉が閉じる直前に、悠斗は駆け込んだ。",
+   "en": "Yuto dashed in just before the elevator doors closed.",
+   "ko": "엘리베이터 문이 닫히기 직전에 유토는 뛰어 들어갔어요.",
+   "blank": "閉じる",
+   "src": "made"
+  },
+  {
+   "text": "雨が降り出すと、店の人たちは次々と大きな傘を閉じて店じまいを始めた。",
+   "en": "When it started raining, the stall owners began closing up one after another, folding their big umbrellas.",
+   "ko": "비가 오기 시작하자 가게 사람들이 하나둘 큰 파라솔을 접고 장사를 정리했어요.",
+   "blank": "閉じ",
+   "src": "made"
   }
  ],
  "w|閉まる": [
@@ -43709,6 +45469,22 @@
    "blank": "難しい"
   }
  ],
+ "w|難易": [
+  {
+   "text": "友達は手紙に、資格試験の難易について細かく書いてきた。",
+   "en": "His friend wrote in detail about how difficult the qualification exam was.",
+   "ko": "친구는 편지에 자격시험의 난이도에 대해 자세히 써 보냈어요.",
+   "blank": "難易",
+   "src": "made"
+  },
+  {
+   "text": "監督は、アクションシーンの難易を考えて、代役を立てることにした。",
+   "en": "Considering how difficult the action scene was, the director decided to use a stunt double.",
+   "ko": "감독은 액션 장면의 난이도를 고려해 대역을 세우기로 했어요.",
+   "blank": "難易",
+   "src": "made"
+  }
+ ],
  "w|雨": [
   {
    "text": "雨が降ってきた。",
@@ -43779,6 +45555,22 @@
    "en": "Let's save electricity.",
    "ko": "전력을 아끼자.",
    "blank": "電力"
+  }
+ ],
+ "w|電動": [
+  {
+   "text": "手紙によると、友達は電動自転車で坂の多い町を走り回っているらしい。",
+   "en": "According to the letter, his friend rides around his hilly town on an electric bike.",
+   "ko": "편지에 따르면 친구는 전동 자전거로 언덕 많은 동네를 누비고 있대요.",
+   "blank": "電動",
+   "src": "made"
+  },
+  {
+   "text": "カメラは、電動のレールの上を静かに動いた。",
+   "en": "The camera moved quietly along a motorized rail.",
+   "ko": "카메라는 전동 레일 위를 조용히 움직였어요.",
+   "blank": "電動",
+   "src": "made"
   }
  ],
  "w|電子": [
@@ -43881,6 +45673,22 @@
    "ko": "이 새 차는 인기가 많아서 수요를 맞추려고 새 공장을 지어야 했어요.",
    "blank": "需要",
    "src": "tatoeba:221034 en:58356"
+  }
+ ],
+ "w|震え": [
+  {
+   "text": "重いバーベルを持ち上げたあと、翔太は腕の震えが止まらなかった。",
+   "en": "After lifting the heavy barbell, Shota's arms wouldn't stop shaking.",
+   "ko": "무거운 바벨을 든 뒤 쇼타는 팔 떨림이 멈추지 않았어요.",
+   "blank": "震え",
+   "src": "made"
+  },
+  {
+   "text": "寒さで手に震えが出るので、由美は厚い手袋を注文した。",
+   "en": "Her hands shake from the cold, so Yumi ordered thick gloves.",
+   "ko": "추위로 손이 떨려서 유미는 두꺼운 장갑을 주문했어요.",
+   "blank": "震え",
+   "src": "made"
   }
  ],
  "w|震える": [
@@ -43989,6 +45797,22 @@
    "blank": "非常"
   }
  ],
+ "w|非難": [
+  {
+   "text": "高校の頃、健太はクラスの非難から友達をかばえなかった。",
+   "en": "Back in high school, Kenta couldn't protect his friend from the class's criticism.",
+   "ko": "고등학생 때 겐타는 반 아이들의 비난으로부터 친구를 감싸 주지 못했어요.",
+   "blank": "非難",
+   "src": "made"
+  },
+  {
+   "text": "撮影現場でのスタッフへの態度が、ネットで非難を浴びた俳優もいる。",
+   "en": "Some actors have come under fire online for how they treat crew on set.",
+   "ko": "촬영장에서 스태프를 대하는 태도로 인터넷에서 비난을 받은 배우도 있어요.",
+   "blank": "非難",
+   "src": "made"
+  }
+ ],
  "w|面倒": [
   {
    "text": "面倒な作業だね。",
@@ -44001,6 +45825,22 @@
    "en": "Thanks for looking after me.",
    "ko": "챙겨 줘서 고마워.",
    "blank": "面倒"
+  }
+ ],
+ "w|面倒くさい": [
+  {
+   "text": "メールのほうが楽だが、健太は面倒くさい手書きの手紙をあえて選んだ。",
+   "en": "Email would be easier, but Kenta chose to write a letter by hand even though it was a bother.",
+   "ko": "메일이 더 편하지만 겐타는 귀찮은 손 편지를 일부러 골랐어요.",
+   "blank": "面倒くさい",
+   "src": "made"
+  },
+  {
+   "text": "衣装を何度も着替えるのは、正直面倒くさい。",
+   "en": "Honestly, changing costumes over and over is a pain.",
+   "ko": "의상을 몇 번이나 갈아입는 건 솔직히 귀찮아요.",
+   "blank": "面倒くさい",
+   "src": "made"
   }
  ],
  "w|面接": [
@@ -44033,6 +45873,22 @@
    "blank": "面白かった"
   }
  ],
+ "w|面積": [
+  {
+   "text": "友達の新しい畑は、学校の運動場と同じくらいの面積があるそうだ。",
+   "en": "His friend's new field is apparently about the size of a school playground.",
+   "ko": "친구의 새 밭은 학교 운동장만 한 면적이래요.",
+   "blank": "面積",
+   "src": "made"
+  },
+  {
+   "text": "このスタジオは、体育館の二倍ほどの面積がある。",
+   "en": "This studio has about twice the floor area of a gymnasium.",
+   "ko": "이 스튜디오는 체육관의 두 배쯤 되는 면적이에요.",
+   "blank": "面積",
+   "src": "made"
+  }
+ ],
  "w|革命": [
   {
    "text": "技術の革命が起きている。",
@@ -44059,6 +45915,22 @@
    "en": "Did you buy new shoes?",
    "ko": "새 신발 샀어?",
    "blank": "靴"
+  }
+ ],
+ "w|靴下": [
+  {
+   "text": "悠斗は、厚手の靴下を冬用に買い足した。",
+   "en": "Yuto bought some more thick socks for winter.",
+   "ko": "유토는 겨울용으로 두꺼운 양말을 더 샀어요.",
+   "blank": "靴下",
+   "src": "made"
+  },
+  {
+   "text": "市場の入り口で、五足セットの靴下が安く売られていた。",
+   "en": "At the market entrance, five-pair packs of socks were on sale cheap.",
+   "ko": "시장 입구에서 다섯 켤레 묶음 양말을 싸게 팔고 있었어요.",
+   "blank": "靴下",
+   "src": "made"
   }
  ],
  "w|鞄": [
@@ -44259,6 +46131,22 @@
    "blank": "頭痛"
   }
  ],
+ "w|頻繁": [
+  {
+   "text": "悠斗は、このビルに頻繁に来ているので、どこに何があるか分かる。",
+   "en": "Yuto comes to this building so often that he knows where everything is.",
+   "ko": "유토는 이 건물에 자주 와서 어디에 뭐가 있는지 알아요.",
+   "blank": "頻繁",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、市場に頻繁に通ううちに店の人と仲良くなった。",
+   "en": "By going to the market often, Chihiro became friendly with the stall owners.",
+   "ko": "지히로는 시장에 자주 다니다 보니 가게 사람들과 친해졌어요.",
+   "blank": "頻繁",
+   "src": "made"
+  }
+ ],
  "w|頼む": [
   {
    "text": "これを頼むね。",
@@ -44327,6 +46215,22 @@
    "en": "The bath is ready.",
    "ko": "목욕물이 끓었어.",
    "blank": "風呂"
+  }
+ ],
+ "w|風邪": [
+  {
+   "text": "翔太は風邪気味だったので、その日はジムを休んだ。",
+   "en": "Shota felt like he was coming down with a cold, so he skipped the gym that day.",
+   "ko": "쇼타는 감기 기운이 있어서 그날은 헬스장을 쉬었어요.",
+   "blank": "風邪",
+   "src": "made"
+  },
+  {
+   "text": "風邪をひいた由美は、スポーツドリンクを箱で注文した。",
+   "en": "Yumi caught a cold and ordered a whole case of sports drinks.",
+   "ko": "감기에 걸린 유미는 스포츠 음료를 박스로 주문했어요.",
+   "blank": "風邪",
+   "src": "made"
   }
  ],
  "w|飛ぶ": [
@@ -44785,6 +46689,22 @@
    "en": "Your hair got longer.",
    "ko": "머리가 자랐네.",
    "blank": "髪"
+  }
+ ],
+ "w|髪の毛": [
+  {
+   "text": "シャワー室の排水口に髪の毛がたくさんたまっていた。",
+   "en": "Lots of hair had collected in the shower room drain.",
+   "ko": "샤워실 배수구에 머리카락이 잔뜩 모여 있었어요.",
+   "blank": "髪の毛",
+   "src": "made"
+  },
+  {
+   "text": "届いたブラシは、髪の毛がからまりにくくて気に入った。",
+   "en": "Yumi liked the brush that arrived because her hair didn't get tangled in it.",
+   "ko": "도착한 빗은 머리카락이 잘 엉키지 않아서 마음에 들었어요.",
+   "blank": "髪の毛",
+   "src": "made"
   }
  ],
  "w|鬼": [
