@@ -103,6 +103,22 @@
    "blank": "abeja"
   }
  ],
+ "w|abiertamente": [
+  {
+   "text": "Andrés habló abiertamente con su jefa sobre los problemas del almacén.",
+   "en": "Andrés spoke openly with his boss about the problems in the storeroom.",
+   "ko": "안드레스는 창고 문제를 상사에게 솔직하게 말했어요.",
+   "blank": "abiertamente",
+   "src": "made"
+  },
+  {
+   "text": "Carmen reconoció abiertamente que el fallo era suyo.",
+   "en": "Carmen openly admitted the error was hers.",
+   "ko": "카르멘은 실수가 자기 탓이라고 솔직하게 인정했어요.",
+   "blank": "abiertamente",
+   "src": "made"
+  }
+ ],
  "w|abierto": [
   {
    "text": "El museo está abierto hasta tarde.",
@@ -1069,6 +1085,22 @@
    "en": "That activity helps reduce stress.",
    "ko": "그 활동은 스트레스를 줄이는 데 도움이 돼.",
    "blank": "actividad"
+  }
+ ],
+ "w|activista": [
+  {
+   "text": "Una activista ecologista le pidió a Andrés información sobre la sala del clima.",
+   "en": "An environmental activist asked Andrés for information about the climate room.",
+   "ko": "한 환경 운동가가 안드레스에게 기후 전시실에 대해 물었어요.",
+   "blank": "activista",
+   "src": "made"
+  },
+  {
+   "text": "Una activista visitó el laboratorio de Carmen para hablar de los animales.",
+   "en": "An activist visited Carmen's lab to talk about the animals.",
+   "ko": "한 활동가가 동물 문제로 카르멘의 연구실을 찾아왔어요.",
+   "blank": "activista",
+   "src": "made"
   }
  ],
  "w|activo": [
@@ -7317,6 +7349,22 @@
    "src": "made"
   }
  ],
+ "w|atracar": [
+  {
+   "text": "Andrés vio en el periódico que alguien había intentado atracar la tienda del museo.",
+   "en": "Andrés saw in the paper that someone had tried to rob the museum shop.",
+   "ko": "안드레스는 누가 박물관 기념품점을 털려 했다는 기사를 신문에서 봤어요.",
+   "blank": "atracar",
+   "src": "made"
+  },
+  {
+   "text": "El barco de investigación en el que trabaja Carmen va a atracar en el puerto mañana.",
+   "en": "The research ship Carmen works on will dock in the port tomorrow.",
+   "ko": "카르멘이 일하는 조사선은 내일 항구에 정박할 거예요.",
+   "blank": "atracar",
+   "src": "made"
+  }
+ ],
  "w|atracción": [
   {
    "text": "La atracción principal es la montaña rusa.",
@@ -8281,6 +8329,22 @@
    "blank": "bala"
   }
  ],
+ "w|balazo": [
+  {
+   "text": "En la armadura expuesta se ve todavía la marca de un balazo, explicó Andrés.",
+   "en": "On the armour on display you can still see the mark of a bullet, Andrés explained.",
+   "ko": "전시된 갑옷에 아직 총알 자국이 보인다고 안드레스가 설명했어요.",
+   "blank": "balazo",
+   "src": "made"
+  },
+  {
+   "text": "Carmen ayudó a la policía a analizar el agujero de un balazo en una puerta.",
+   "en": "Carmen helped the police analyse a bullet hole in a door.",
+   "ko": "카르멘은 경찰을 도와 문에 난 총알 구멍을 분석했어요.",
+   "blank": "balazo",
+   "src": "made"
+  }
+ ],
  "w|balcón": [
   {
    "text": "Desde el balcón de la clínica, Nico ve las montañas.",
@@ -8691,6 +8755,22 @@
    "en": "She broke the barrier of fear with practice.",
    "ko": "연습으로 두려움의 장벽을 깼어.",
    "blank": "barrera"
+  }
+ ],
+ "w|barricada": [
+  {
+   "text": "La foto favorita de Andrés muestra una barricada de la revolución.",
+   "en": "Andrés's favourite photo shows a barricade from the revolution.",
+   "ko": "안드레스가 가장 좋아하는 사진에는 혁명 때의 바리케이드가 나와요.",
+   "blank": "barricada",
+   "src": "made"
+  },
+  {
+   "text": "Los estudiantes hicieron una barricada en la puerta y Carmen no pudo entrar al laboratorio.",
+   "en": "The students built a barricade at the door and Carmen couldn't get into the lab.",
+   "ko": "학생들이 문에 바리케이드를 쳐서 카르멘은 연구실에 들어가지 못했어요.",
+   "blank": "barricada",
+   "src": "made"
   }
  ],
  "w|barriga": [
@@ -9462,6 +9542,22 @@
    "en": "The bread on the set is made of soft plastic.",
    "ko": "무대 소품 빵은 말랑한 플라스틱으로 만들었어요.",
    "blank": "blando",
+   "src": "made"
+  }
+ ],
+ "w|blindado": [
+  {
+   "text": "Las joyas de la corona están en una vitrina con cristal blindado, le contó Andrés a su hija.",
+   "en": "The crown jewels are in a case with armoured glass, Andrés told his daughter.",
+   "ko": "왕관 보석은 방탄유리 진열장 안에 있다고 안드레스가 딸에게 말했어요.",
+   "blank": "blindado",
+   "src": "made"
+  },
+  {
+   "text": "Carmen trabaja con las bacterias detrás de una puerta blindada.",
+   "en": "Carmen works with the bacteria behind a reinforced door.",
+   "ko": "카르멘은 철문 너머에서 세균을 다뤄요.",
+   "blank": "blindada",
    "src": "made"
   }
  ],
@@ -16849,6 +16945,22 @@
    "src": "made"
   }
  ],
+ "w|concesión": [
+  {
+   "text": "Andrés explicó que el puerto fue una concesión del rey a los comerciantes.",
+   "en": "Andrés explained that the port was a concession from the king to the merchants.",
+   "ko": "안드레스는 그 항구가 왕이 상인들에게 내준 특권이었다고 설명했어요.",
+   "blank": "concesión",
+   "src": "made"
+  },
+  {
+   "text": "Carmen hizo una concesión y dejó que su compañero usara primero la centrífuga.",
+   "en": "Carmen made a concession and let her colleague use the centrifuge first.",
+   "ko": "카르멘은 한발 물러서서 동료가 원심분리기를 먼저 쓰게 했어요.",
+   "blank": "concesión",
+   "src": "made"
+  }
+ ],
  "w|concha": [
   {
    "text": "En la orilla, Javier encontró la concha vacía de un caracol de río.",
@@ -18397,6 +18509,22 @@
    "blank": "contra"
   }
  ],
+ "w|contrabandista": [
+  {
+   "text": "La sala del puerto cuenta la historia de un famoso contrabandista, explica Andrés.",
+   "en": "The port room tells the story of a famous smuggler, Andrés explains.",
+   "ko": "항구 전시실은 유명한 밀수꾼 이야기를 다룬다고 안드레스가 설명해요.",
+   "blank": "contrabandista",
+   "src": "made"
+  },
+  {
+   "text": "Carmen analizó unas semillas que la policía había quitado a un contrabandista.",
+   "en": "Carmen analysed some seeds the police had taken from a smuggler.",
+   "ko": "카르멘은 경찰이 밀수꾼에게서 압수한 씨앗을 분석했어요.",
+   "blank": "contrabandista",
+   "src": "made"
+  }
+ ],
  "w|contrabando": [
   {
    "text": "La policía encontró loros de contrabando y se los llevó a Nico.",
@@ -19617,6 +19745,22 @@
    "src": "made"
   }
  ],
+ "w|credibilidad": [
+  {
+   "text": "La firma falsa le quitó toda la credibilidad al documento, según Andrés.",
+   "en": "The fake signature took away all the document's credibility, according to Andrés.",
+   "ko": "안드레스 말로는 위조 서명 때문에 그 문서는 신빙성을 완전히 잃었어요.",
+   "blank": "credibilidad",
+   "src": "made"
+  },
+  {
+   "text": "Sin repetir el experimento, el estudio de Carmen no tendría credibilidad.",
+   "en": "Without repeating the experiment, Carmen's study would have no credibility.",
+   "ko": "실험을 반복하지 않으면 카르멘의 연구는 신뢰를 얻지 못할 거예요.",
+   "blank": "credibilidad",
+   "src": "made"
+  }
+ ],
  "w|crédito": [
   {
    "text": "Pagué a crédito la compra grande.",
@@ -19931,6 +20075,22 @@
    "en": "It was a critical moment for the team.",
    "ko": "팀에게 결정적인 순간이었어.",
    "blank": "crítico"
+  }
+ ],
+ "w|crónica": [
+  {
+   "text": "Andrés leyó en voz alta una crónica medieval sobre la fundación de la ciudad.",
+   "en": "Andrés read aloud a medieval chronicle about the founding of the city.",
+   "ko": "안드레스는 도시 건설에 관한 중세 연대기를 소리 내어 읽었어요.",
+   "blank": "crónica",
+   "src": "made"
+  },
+  {
+   "text": "Carmen escribe una crónica semanal sobre ciencia para la revista de la universidad.",
+   "en": "Carmen writes a weekly column about science for the university magazine.",
+   "ko": "카르멘은 대학 잡지에 과학 칼럼을 매주 써요.",
+   "blank": "crónica",
+   "src": "made"
   }
  ],
  "w|cruce": [
@@ -21329,6 +21489,38 @@
    "src": "made"
   }
  ],
+ "w|decena": [
+  {
+   "text": "Cada mañana, Andrés recibe a una decena de escolares en la entrada.",
+   "en": "Every morning, Andrés welcomes about ten schoolchildren at the entrance.",
+   "ko": "안드레스는 매일 아침 입구에서 학생 열 명쯤을 맞이해요.",
+   "blank": "decena",
+   "src": "made"
+  },
+  {
+   "text": "Carmen repitió la prueba una decena de veces antes de fiarse del resultado.",
+   "en": "Carmen repeated the test about ten times before trusting the result.",
+   "ko": "카르멘은 결과를 믿기 전에 실험을 열 번쯤 반복했어요.",
+   "blank": "decena",
+   "src": "made"
+  }
+ ],
+ "w|decencia": [
+  {
+   "text": "Andrés trató con decencia a la anciana que se había perdido entre las salas.",
+   "en": "Andrés treated the elderly woman who had got lost among the rooms with decency.",
+   "ko": "안드레스는 전시실 사이에서 길을 잃은 할머니를 정중하게 대했어요.",
+   "blank": "decencia",
+   "src": "made"
+  },
+  {
+   "text": "Carmen tuvo la decencia de admitir que se había equivocado en los cálculos.",
+   "en": "Carmen had the decency to admit she had made a mistake in the calculations.",
+   "ko": "카르멘은 계산을 틀렸다고 인정할 만큼 양심이 있었어요.",
+   "blank": "decencia",
+   "src": "made"
+  }
+ ],
  "w|decente": [
   {
    "text": "Buscamos un hotel decente y limpio.",
@@ -21413,6 +21605,22 @@
    "en": "I've already made my decision.",
    "ko": "이미 결정했어.",
    "blank": "decisión"
+  }
+ ],
+ "w|decisivo": [
+  {
+   "text": "El hallazgo de aquel mapa fue decisivo para la carrera de Andrés como historiador.",
+   "en": "The discovery of that map was decisive for Andrés's career as a historian.",
+   "ko": "그 지도를 찾아낸 일이 역사학자로서 안드레스의 경력에 결정적이었어요.",
+   "blank": "decisivo",
+   "src": "made"
+  },
+  {
+   "text": "Para Carmen, ese experimento será decisivo para su tesis.",
+   "en": "For Carmen, that experiment will be decisive for her thesis.",
+   "ko": "카르멘에게 그 실험은 논문에 결정적일 거예요.",
+   "blank": "decisivo",
+   "src": "made"
   }
  ],
  "w|declaración": [
@@ -21841,6 +22049,22 @@
    "en": "They filed a lawsuit against the company.",
    "ko": "그 회사에 소송을 제기했어.",
    "blank": "demanda"
+  }
+ ],
+ "w|demandante": [
+  {
+   "text": "Andrés encontró un documento antiguo donde aparecía el nombre del demandante.",
+   "en": "Andrés found an old document where the plaintiff's name appeared.",
+   "ko": "안드레스는 원고의 이름이 적힌 옛 문서를 찾았어요.",
+   "blank": "demandante",
+   "src": "made"
+  },
+  {
+   "text": "El abogado del demandante pidió a Carmen un informe sobre el agua del río.",
+   "en": "The plaintiff's lawyer asked Carmen for a report on the river water.",
+   "ko": "원고 측 변호사가 카르멘에게 강물에 관한 보고서를 요청했어요.",
+   "blank": "demandante",
+   "src": "made"
   }
  ],
  "w|demandar": [
@@ -24769,6 +24993,22 @@
    "blank": "Disparó"
   }
  ],
+ "w|disparate": [
+  {
+   "text": "Mover las estatuas sin grúa sería un disparate, le dijo Andrés al nuevo empleado.",
+   "en": "Moving the statues without a crane would be madness, Andrés told the new employee.",
+   "ko": "크레인 없이 조각상을 옮기는 건 말도 안 된다고 안드레스가 새 직원에게 말했어요.",
+   "blank": "disparate",
+   "src": "made"
+  },
+  {
+   "text": "Mezclar esos dos productos sin guantes es un disparate, le advirtió Carmen al becario.",
+   "en": "Mixing those two products without gloves is crazy, Carmen warned the intern.",
+   "ko": "장갑 없이 그 두 약품을 섞는 건 말도 안 된다고 카르멘이 인턴에게 경고했어요.",
+   "blank": "disparate",
+   "src": "made"
+  }
+ ],
  "w|disparo": [
   {
    "text": "Se oyó un disparo en la noche.",
@@ -26905,6 +27145,22 @@
    "src": "made"
   }
  ],
+ "w|emisora": [
+  {
+   "text": "Una emisora local entrevistó a Andrés sobre la nueva exposición.",
+   "en": "A local radio station interviewed Andrés about the new exhibition.",
+   "ko": "지역 라디오 방송국이 새 전시에 대해 안드레스를 인터뷰했어요.",
+   "blank": "emisora",
+   "src": "made"
+  },
+  {
+   "text": "Carmen siempre trabaja con la emisora de música clásica encendida.",
+   "en": "Carmen always works with the classical music station on.",
+   "ko": "카르멘은 늘 클래식 방송을 켜 놓고 일해요.",
+   "blank": "emisora",
+   "src": "made"
+  }
+ ],
  "w|emitir": [
   {
    "text": "Van a emitir un aviso importante.",
@@ -28507,6 +28763,22 @@
    "blank": "equipo"
   }
  ],
+ "w|equivocación": [
+  {
+   "text": "Por una equivocación, Andrés colgó la etiqueta debajo del cuadro equivocado.",
+   "en": "By mistake, Andrés hung the label under the wrong painting.",
+   "ko": "안드레스는 실수로 다른 그림 밑에 설명표를 붙였어요.",
+   "blank": "equivocación",
+   "src": "made"
+  },
+  {
+   "text": "Una pequeña equivocación en la etiqueta obligó a Carmen a empezar de nuevo.",
+   "en": "A small mistake on the label forced Carmen to start again.",
+   "ko": "라벨의 작은 실수 때문에 카르멘은 처음부터 다시 해야 했어요.",
+   "blank": "equivocación",
+   "src": "made"
+  }
+ ],
  "w|equivocarse": [
   {
    "text": "Es fácil equivocarse con estos nombres.",
@@ -29681,6 +29953,22 @@
    "en": "It was a splendid gesture on his part.",
    "ko": "그의 편에서 훌륭한 제스처였어.",
    "blank": "espléndido"
+  }
+ ],
+ "w|espontáneo": [
+  {
+   "text": "Hubo un aplauso espontáneo cuando Andrés terminó la visita guiada.",
+   "en": "There was spontaneous applause when Andrés finished the guided tour.",
+   "ko": "안드레스가 가이드 투어를 마치자 저절로 박수가 터졌어요.",
+   "blank": "espontáneo",
+   "src": "made"
+  },
+  {
+   "text": "Carmen observó una reacción espontánea entre los dos líquidos y lo anotó todo.",
+   "en": "Carmen observed a spontaneous reaction between the two liquids and noted everything down.",
+   "ko": "카르멘은 두 액체 사이에 저절로 일어난 반응을 보고 모두 적었어요.",
+   "blank": "espontánea",
+   "src": "made"
   }
  ],
  "w|esposa": [
@@ -31920,6 +32208,22 @@
    "en": "Elena finds faults with an ease that surprises her customers.",
    "ko": "엘레나가 고장 난 곳을 너무 쉽게 찾아내서 손님들이 놀라요.",
    "blank": "facilidad",
+   "src": "made"
+  }
+ ],
+ "w|facilitar": [
+  {
+   "text": "Las nuevas rampas del museo van a facilitar la visita a las personas en silla de ruedas, dice Andrés.",
+   "en": "The museum's new ramps will make visiting easier for wheelchair users, says Andrés.",
+   "ko": "안드레스 말로는 새 경사로 덕분에 휠체어 이용자도 박물관을 더 쉽게 둘러볼 거예요.",
+   "blank": "facilitar",
+   "src": "made"
+  },
+  {
+   "text": "El nuevo programa va a facilitar mucho el trabajo de Carmen con los datos.",
+   "en": "The new software will make Carmen's work with the data much easier.",
+   "ko": "새 프로그램 덕분에 카르멘의 데이터 작업이 훨씬 쉬워질 거예요.",
+   "blank": "facilitar",
    "src": "made"
   }
  ],
@@ -34817,6 +35121,22 @@
    "src": "made"
   }
  ],
+ "w|galón": [
+  {
+   "text": "Andrés enseñó a los niños el galón dorado de un antiguo uniforme militar.",
+   "en": "Andrés showed the children the gold braid on an old military uniform.",
+   "ko": "안드레스는 아이들에게 옛 군복의 금색 계급 줄을 보여 줬어요.",
+   "blank": "galón",
+   "src": "made"
+  },
+  {
+   "text": "Carmen pidió un galón de alcohol para limpiar el material.",
+   "en": "Carmen ordered a gallon of alcohol to clean the equipment.",
+   "ko": "카르멘은 기구 청소용 알코올 한 갤런을 주문했어요.",
+   "blank": "galón",
+   "src": "made"
+  }
+ ],
  "w|gana": [
   {
    "text": "No me gana nadie en esto.",
@@ -36437,6 +36757,22 @@
    "en": "How cool that you came to the party.",
    "ko": "파티에 와 줘서 정말 멋져.",
    "blank": "guay"
+  }
+ ],
+ "w|gubernamental": [
+  {
+   "text": "El museo donde trabaja Andrés recibe una ayuda gubernamental cada año.",
+   "en": "The museum where Andrés works gets a government grant every year.",
+   "ko": "안드레스가 일하는 박물관은 해마다 정부 지원금을 받아요.",
+   "blank": "gubernamental",
+   "src": "made"
+  },
+  {
+   "text": "El proyecto de Carmen depende de una beca gubernamental.",
+   "en": "Carmen's project depends on a government grant.",
+   "ko": "카르멘의 프로젝트는 정부 장학금에 달려 있어요.",
+   "blank": "gubernamental",
+   "src": "made"
   }
  ],
  "w|guerra": [
@@ -38919,6 +39255,22 @@
    "blank": "imperio"
   }
  ],
+ "w|implacable": [
+  {
+   "text": "Andrés describe al rey del retrato como un enemigo implacable.",
+   "en": "Andrés describes the king in the portrait as a relentless enemy.",
+   "ko": "안드레스는 초상화 속 왕을 무자비한 적으로 묘사해요.",
+   "blank": "implacable",
+   "src": "made"
+  },
+  {
+   "text": "La directora del laboratorio es implacable con los errores, y Carmen lo sabe.",
+   "en": "The lab director is relentless about mistakes, and Carmen knows it.",
+   "ko": "연구실 책임자는 실수에 가차 없고 카르멘도 그걸 알아요.",
+   "blank": "implacable",
+   "src": "made"
+  }
+ ],
  "w|implante": [
   {
    "text": "La dentista le recomendó a Javier un implante para sustituir el diente perdido.",
@@ -39623,6 +39975,22 @@
    "src": "made"
   }
  ],
+ "w|indigente": [
+  {
+   "text": "En invierno, Andrés deja que un indigente se resguarde del frío en el vestíbulo.",
+   "en": "In winter, Andrés lets a homeless man shelter from the cold in the lobby.",
+   "ko": "겨울이면 안드레스는 노숙인이 로비에서 추위를 피하게 해 줘요.",
+   "blank": "indigente",
+   "src": "made"
+  },
+  {
+   "text": "Carmen colabora con un comedor social que da comida a cualquier indigente del barrio.",
+   "en": "Carmen volunteers at a soup kitchen that feeds any homeless person in the neighbourhood.",
+   "ko": "카르멘은 동네 노숙인 누구에게나 밥을 주는 무료 급식소에서 봉사해요.",
+   "blank": "indigente",
+   "src": "made"
+  }
+ ],
  "w|indio": [
   {
    "text": "El restaurante indio está lleno.",
@@ -39961,6 +40329,22 @@
    "en": "Don't underestimate a mentor's influence.",
    "ko": "멘토의 영향력을 과소평가하지 마.",
    "blank": "influencia"
+  }
+ ],
+ "w|influir": [
+  {
+   "text": "Los grabados de aquel pintor llegaron a influir mucho en Andrés.",
+   "en": "That painter's engravings came to influence Andrés a lot.",
+   "ko": "그 화가의 판화는 안드레스에게 큰 영향을 주었어요.",
+   "blank": "influir",
+   "src": "made"
+  },
+  {
+   "text": "Carmen quiere saber cómo puede influir la luz en el crecimiento de las plantas.",
+   "en": "Carmen wants to know how light can influence plant growth.",
+   "ko": "카르멘은 빛이 식물 성장에 어떤 영향을 주는지 알고 싶어 해요.",
+   "blank": "influir",
+   "src": "made"
   }
  ],
  "w|información": [
@@ -40931,6 +41315,22 @@
    "src": "made"
   }
  ],
+ "w|intensivo": [
+  {
+   "text": "Andrés hizo un curso intensivo de restauración de cuadros antiguos.",
+   "en": "Andrés took an intensive course in restoring old paintings.",
+   "ko": "안드레스는 옛 그림 복원 집중 과정을 들었어요.",
+   "blank": "intensivo",
+   "src": "made"
+  },
+  {
+   "text": "El uso intensivo del microscopio dejó a Carmen con dolor de cuello.",
+   "en": "Heavy use of the microscope left Carmen with a sore neck.",
+   "ko": "현미경을 오래 쓴 탓에 카르멘은 목이 아팠어요.",
+   "blank": "intensivo",
+   "src": "made"
+  }
+ ],
  "w|intenso": [
   {
    "text": "El entrenamiento fue intenso y corto.",
@@ -41876,6 +42276,22 @@
    "en": "Lola made an ironic comment when the fishmonger told her the fish was \"from today.\"",
    "ko": "생선 장수가 생선이 \"오늘 것\"이라고 하자 롤라는 비꼬는 말을 했어요.",
    "blank": "irónico",
+   "src": "made"
+  }
+ ],
+ "w|irracional": [
+  {
+   "text": "Andrés tiene un miedo irracional a las momias de la sala egipcia.",
+   "en": "Andrés has an irrational fear of the mummies in the Egyptian room.",
+   "ko": "안드레스는 이집트 전시실의 미라를 괜히 무서워해요.",
+   "blank": "irracional",
+   "src": "made"
+  },
+  {
+   "text": "El comportamiento de las ratas parecía irracional hasta que Carmen revisó la temperatura.",
+   "en": "The rats' behaviour seemed irrational until Carmen checked the temperature.",
+   "ko": "쥐들의 행동은 이상해 보였지만 카르멘이 온도를 확인하고 나서 이해됐어요.",
+   "blank": "irracional",
    "src": "made"
   }
  ],
@@ -45633,6 +46049,22 @@
    "blank": "Mandó"
   }
  ],
+ "w|mandato": [
+  {
+   "text": "Según el cartel que escribió Andrés, el mandato de aquel alcalde duró dos décadas.",
+   "en": "According to the sign Andrés wrote, that mayor's term lasted two decades.",
+   "ko": "안드레스가 쓴 안내판에 따르면 그 시장의 임기는 이십 년이었어요.",
+   "blank": "mandato",
+   "src": "made"
+  },
+  {
+   "text": "Carmen cumplió el mandato del comité y destruyó las muestras viejas.",
+   "en": "Carmen carried out the committee's order and destroyed the old samples.",
+   "ko": "카르멘은 위원회의 지시대로 오래된 시료를 폐기했어요.",
+   "blank": "mandato",
+   "src": "made"
+  }
+ ],
  "w|mandíbula": [
   {
    "text": "Hugo aprieta la mandíbula cuando levanta mucho peso.",
@@ -46933,6 +47365,22 @@
    "src": "made"
   }
  ],
+ "w|mediar": [
+  {
+   "text": "Andrés tuvo que mediar entre dos visitantes que discutían por una foto.",
+   "en": "Andrés had to mediate between two visitors arguing over a photo.",
+   "ko": "안드레스는 사진 때문에 다투는 관람객 둘 사이를 중재해야 했어요.",
+   "blank": "mediar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen tuvo que mediar en la discusión sobre quién firmaría primero el artículo.",
+   "en": "Carmen had to mediate in the argument over who would sign the article first.",
+   "ko": "카르멘은 누가 논문 제1저자가 될지를 두고 벌어진 다툼을 중재해야 했어요.",
+   "blank": "mediar",
+   "src": "made"
+  }
+ ],
  "w|medicación": [
   {
    "text": "Olvidó tomar la medicación esta mañana.",
@@ -47015,6 +47463,22 @@
    "en": "Give me half a glass of water.",
    "ko": "물 반 잔만 줘.",
    "blank": "medio"
+  }
+ ],
+ "w|mediocre": [
+  {
+   "text": "Según Andrés, la nueva exposición es mediocre y no vale la entrada.",
+   "en": "According to Andrés, the new exhibition is mediocre and not worth the ticket.",
+   "ko": "안드레스 말로는 새 전시는 그저 그래서 입장료가 아까워요.",
+   "blank": "mediocre",
+   "src": "made"
+  },
+  {
+   "text": "El primer informe de Carmen fue mediocre, pero el segundo impresionó a todos.",
+   "en": "Carmen's first report was mediocre, but the second impressed everyone.",
+   "ko": "카르멘의 첫 보고서는 평범했지만 두 번째 보고서는 모두를 놀라게 했어요.",
+   "blank": "mediocre",
+   "src": "made"
   }
  ],
  "w|mediodía": [
@@ -50517,6 +50981,22 @@
    "blank": "noble"
   }
  ],
+ "w|nobleza": [
+  {
+   "text": "En la sala de retratos, Andrés habla de la vida de la nobleza del siglo pasado.",
+   "en": "In the portrait room, Andrés talks about the lives of the nobility of the last century.",
+   "ko": "안드레스는 초상화 전시실에서 지난 세기 귀족의 삶을 이야기해요.",
+   "blank": "nobleza",
+   "src": "made"
+  },
+  {
+   "text": "Carmen admira la nobleza de su mentor, que siempre comparte el mérito.",
+   "en": "Carmen admires the nobility of her mentor, who always shares the credit.",
+   "ko": "카르멘은 공을 늘 나누는 지도 교수의 고결함을 존경해요.",
+   "blank": "nobleza",
+   "src": "made"
+  }
+ ],
  "w|noche": [
   {
    "text": "Esta noche ceno afuera.",
@@ -51295,6 +51775,22 @@
    "en": "A worker repaired the broken pipe.",
    "ko": "노동자가 깨진 배관을 고쳤어.",
    "blank": "obrero"
+  }
+ ],
+ "w|obsceno": [
+  {
+   "text": "En su época, aquel cuadro se consideró obsceno, le explicó Andrés a un grupo de turistas.",
+   "en": "In its day, that painting was considered obscene, Andrés explained to a group of tourists.",
+   "ko": "그 그림은 당시에 외설적이라고 여겨졌다고 안드레스가 관광객들에게 설명했어요.",
+   "blank": "obsceno",
+   "src": "made"
+  },
+  {
+   "text": "Carmen borró de la pizarra un dibujo obsceno que alguien había hecho.",
+   "en": "Carmen rubbed out an obscene drawing someone had made on the whiteboard.",
+   "ko": "카르멘은 누가 칠판에 그려 놓은 음란한 낙서를 지웠어요.",
+   "blank": "obsceno",
+   "src": "made"
   }
  ],
  "w|observación": [
@@ -57245,6 +57741,22 @@
    "src": "made"
   }
  ],
+ "w|posar": [
+  {
+   "text": "Una turista pidió a Andrés posar junto a la estatua para una foto.",
+   "en": "A tourist asked Andrés to pose next to the statue for a photo.",
+   "ko": "한 관광객이 안드레스에게 조각상 옆에서 포즈를 취해 달라고 부탁했어요.",
+   "blank": "posar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen vio a una mariposa posar sobre el cristal del invernadero.",
+   "en": "Carmen saw a butterfly land on the greenhouse glass.",
+   "ko": "카르멘은 나비가 온실 유리에 내려앉는 걸 봤어요.",
+   "blank": "posar",
+   "src": "made"
+  }
+ ],
  "w|poseer": [
   {
    "text": "No quiero poseer más de lo necesario.",
@@ -58211,6 +58723,22 @@
    "en": "What do you intend to achieve with that attitude?",
    "ko": "그 태도로 뭘 얻으려고 하는 거야?",
    "blank": "pretendes"
+  }
+ ],
+ "w|pretexto": [
+  {
+   "text": "Andrés usó la lluvia como pretexto para quedarse más tiempo en la biblioteca del museo.",
+   "en": "Andrés used the rain as an excuse to stay longer in the museum library.",
+   "ko": "안드레스는 비를 핑계로 박물관 도서관에 더 오래 있었어요.",
+   "blank": "pretexto",
+   "src": "made"
+  },
+  {
+   "text": "Con el pretexto de buscar un reactivo, Carmen salió a tomar el aire.",
+   "en": "On the pretext of looking for a reagent, Carmen went out for some fresh air.",
+   "ko": "카르멘은 시약을 찾는다는 핑계로 바람을 쐬러 나갔어요.",
+   "blank": "pretexto",
+   "src": "made"
   }
  ],
  "w|prevenir": [
@@ -60031,6 +60559,22 @@
    "en": "We live near the tip of the cape.",
    "ko": "곶 끝 근처에 살아.",
    "blank": "punta"
+  }
+ ],
+ "w|puntería": [
+  {
+   "text": "En el juego de dardos de la sala infantil, Andrés demostró una puntería increíble.",
+   "en": "At the darts game in the children's room, Andrés showed incredible aim.",
+   "ko": "안드레스는 어린이 전시실 다트 놀이에서 놀라운 조준 실력을 보였어요.",
+   "blank": "puntería",
+   "src": "made"
+  },
+  {
+   "text": "Hace falta buena puntería para meter el líquido en un tubo tan fino, dice Carmen.",
+   "en": "You need good aim to get the liquid into such a thin tube, says Carmen.",
+   "ko": "그렇게 가는 관에 액체를 넣으려면 손끝이 정확해야 한다고 카르멘이 말해요.",
+   "blank": "puntería",
+   "src": "made"
   }
  ],
  "w|punto": [
@@ -62965,6 +63509,22 @@
    "blank": "reportero"
   }
  ],
+ "w|represalia": [
+  {
+   "text": "Andrés contó que el pueblo sufrió una dura represalia tras la rebelión.",
+   "en": "Andrés told how the town suffered harsh reprisals after the rebellion.",
+   "ko": "안드레스는 반란 뒤 그 마을이 혹독한 보복을 당했다고 이야기했어요.",
+   "blank": "represalia",
+   "src": "made"
+  },
+  {
+   "text": "Carmen no denunció el robo de datos por miedo a una represalia.",
+   "en": "Carmen didn't report the data theft for fear of reprisal.",
+   "ko": "카르멘은 보복이 두려워 데이터 도난을 신고하지 않았어요.",
+   "blank": "represalia",
+   "src": "made"
+  }
+ ],
  "w|representación": [
   {
    "text": "La representación de esta noche terminó con el público de pie.",
@@ -64247,6 +64807,22 @@
    "blank": "rifle"
   }
  ],
+ "w|rígido": [
+  {
+   "text": "El vigilante del museo tiene un horario muy rígido y Andrés siempre llega tarde.",
+   "en": "The museum guard has a very rigid schedule and Andrés always arrives late.",
+   "ko": "박물관 경비원 근무 시간은 아주 빡빡한데 안드레스는 늘 늦게 와요.",
+   "blank": "rígido",
+   "src": "made"
+  },
+  {
+   "text": "Carmen guarda las muestras en un recipiente de plástico rígido.",
+   "en": "Carmen keeps the samples in a rigid plastic container.",
+   "ko": "카르멘은 시료를 딱딱한 플라스틱 용기에 보관해요.",
+   "blank": "rígido",
+   "src": "made"
+  }
+ ],
  "w|rima": [
   {
    "text": "A Raúl le costó encontrar una rima para su poema sobre el otoño.",
@@ -64733,6 +65309,22 @@
    "en": "She prefers light pink.",
    "ko": "연분홍을 더 좋아해.",
    "blank": "rosa"
+  }
+ ],
+ "w|rosario": [
+  {
+   "text": "En la sala de arte religioso, Andrés enseñó un rosario de marfil.",
+   "en": "In the religious art room, Andrés showed an ivory rosary.",
+   "ko": "안드레스는 종교 미술 전시실에서 상아 묵주를 보여 줬어요.",
+   "blank": "rosario",
+   "src": "made"
+  },
+  {
+   "text": "La abuela de Carmen le regaló un rosario que ella guarda en la bata.",
+   "en": "Carmen's grandmother gave her a rosary that she keeps in her lab coat.",
+   "ko": "카르멘은 할머니가 준 묵주를 실험복 주머니에 넣고 다녀요.",
+   "blank": "rosario",
+   "src": "made"
   }
  ],
  "w|rostro": [
@@ -66767,6 +67359,22 @@
    "en": "I feel much better.",
    "ko": "훨씬 나아졌어.",
    "blank": "siento"
+  }
+ ],
+ "w|señuelo": [
+  {
+   "text": "En la vitrina de caza, Andrés señaló un señuelo de madera con forma de pato.",
+   "en": "In the hunting cabinet, Andrés pointed to a wooden duck decoy.",
+   "ko": "안드레스는 사냥 진열장에서 오리 모양 나무 미끼를 가리켰어요.",
+   "blank": "señuelo",
+   "src": "made"
+  },
+  {
+   "text": "Carmen usa una flor artificial como señuelo para atraer a las abejas.",
+   "en": "Carmen uses an artificial flower as a lure to attract the bees.",
+   "ko": "카르멘은 벌을 끌어들이려고 조화를 미끼로 써요.",
+   "blank": "señuelo",
+   "src": "made"
   }
  ],
  "w|separación": [
@@ -69451,6 +70059,22 @@
    "src": "made"
   }
  ],
+ "w|superstición": [
+  {
+   "text": "Andrés preparó una charla sobre una antigua superstición de los marineros.",
+   "en": "Andrés prepared a talk about an old sailors' superstition.",
+   "ko": "안드레스는 옛 뱃사람들의 미신에 관한 강연을 준비했어요.",
+   "blank": "superstición",
+   "src": "made"
+  },
+  {
+   "text": "Carmen se ríe de la superstición de su compañero, que nunca trabaja los martes trece.",
+   "en": "Carmen laughs at her colleague's superstition: he never works on Tuesday the thirteenth.",
+   "ko": "카르멘은 십삼일이 화요일이면 절대 일하지 않는 동료의 미신을 비웃어요.",
+   "blank": "superstición",
+   "src": "made"
+  }
+ ],
  "w|supervisor": [
   {
    "text": "El supervisor revisó nuestro informe.",
@@ -71997,6 +72621,22 @@
    "en": "The dish needs a touch of lemon.",
    "ko": "그 요리에는 레몬을 살짝 넣어야 해.",
    "blank": "toque"
+  }
+ ],
+ "w|torcer": [
+  {
+   "text": "Al bajar la escalera del museo, Andrés se torció el tobillo.",
+   "en": "Going down the museum stairs, Andrés twisted his ankle.",
+   "ko": "안드레스는 박물관 계단을 내려가다가 발목을 삐었어요.",
+   "blank": "torció",
+   "src": "made"
+  },
+  {
+   "text": "Carmen intentó torcer el tubo de cristal y casi lo rompe.",
+   "en": "Carmen tried to bend the glass tube and almost broke it.",
+   "ko": "카르멘은 유리관을 구부리려다 거의 깨뜨릴 뻔했어요.",
+   "blank": "torcer",
+   "src": "made"
   }
  ],
  "w|tormenta": [
