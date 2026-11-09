@@ -1347,6 +1347,22 @@
    "src": "made"
   }
  ],
+ "w|不足": [
+  {
+   "text": "老师说陈杰的作文思路清楚，但例子还有些不足。",
+   "en": "The teacher said Chen Jie's essay was clearly argued, but its examples were somewhat lacking.",
+   "ko": "선생님은 천제의 글이 논리는 분명하지만 예시가 좀 부족하다고 했어요.",
+   "blank": "不足",
+   "src": "made"
+  },
+  {
+   "text": "教练说小雪的腿部力量不足，所以总是游不快。",
+   "en": "The coach said Xiaoxue lacks leg strength, which is why she can never swim fast.",
+   "ko": "코치는 샤오쉐의 다리 힘이 부족해서 늘 빨리 못 헤엄친다고 했어요.",
+   "blank": "不足",
+   "src": "made"
+  }
+ ],
  "w|不过": [
   {
    "text": "不过如此。",
@@ -1825,6 +1841,22 @@
    "src": "made"
   }
  ],
+ "w|义务": [
+  {
+   "text": "老师说，好好学习是学生的义务，也是给自己的机会。",
+   "en": "The teacher said studying hard is a student's duty and also an opportunity for oneself.",
+   "ko": "선생님은 열심히 공부하는 건 학생의 의무이면서 자기 자신을 위한 기회라고 했어요.",
+   "blank": "义务",
+   "src": "made"
+  },
+  {
+   "text": "救生员有义务提醒每个下水的人戴好泳帽。",
+   "en": "Lifeguards have a duty to remind everyone entering the water to wear a swim cap.",
+   "ko": "안전요원은 물에 들어가는 사람마다 수모를 쓰라고 알려 줄 의무가 있어요.",
+   "blank": "义务",
+   "src": "made"
+  }
+ ],
  "w|为": [
   {
    "text": "为你好。",
@@ -1999,6 +2031,22 @@
    "en": "Got any ideas?",
    "ko": "무슨 아이디어 있어?",
    "blank": "主意"
+  }
+ ],
+ "w|主持": [
+  {
+   "text": "这次的校园晚会由陈杰和一个女生一起主持。",
+   "en": "This school evening show was hosted by Chen Jie together with a girl.",
+   "ko": "이번 학교 축제 무대는 천제와 여학생 한 명이 같이 진행했어요.",
+   "blank": "主持",
+   "src": "made"
+  },
+  {
+   "text": "游泳馆的比赛由一位退休的老运动员主持。",
+   "en": "The meet at the pool was presided over by a retired veteran athlete.",
+   "ko": "수영장 대회는 은퇴한 노장 선수가 진행했어요.",
+   "blank": "主持",
+   "src": "made"
   }
  ],
  "w|主管": [
@@ -2929,6 +2977,22 @@
    "en": "I'm enjoying the sunshine.",
    "ko": "햇빛을 즐기고 있어.",
    "blank": "享受"
+  }
+ ],
+ "w|亮": [
+  {
+   "text": "天还没亮，陈杰就背着书包出门去赶早自习。",
+   "en": "Before it was even light out, Chen Jie left with his backpack to make it to early study hall.",
+   "ko": "날이 밝기도 전에 천제는 가방을 메고 아침 자습에 가려고 집을 나섰어요.",
+   "blank": "亮",
+   "src": "made"
+  },
+  {
+   "text": "新装的灯很亮，小雪在水下都能看清池底的线。",
+   "en": "The newly installed lights are bright, and Xiaoxue can see the lines on the pool floor even underwater.",
+   "ko": "새로 단 조명이 밝아서 샤오쉐는 물속에서도 바닥의 선이 또렷이 보여요.",
+   "blank": "亮",
+   "src": "made"
   }
  ],
  "w|亲": [
@@ -4241,6 +4305,22 @@
    "src": "made"
   }
  ],
+ "w|传奇": [
+  {
+   "text": "学校里流传着一位老校长的传奇，据说他能叫出每个学生的名字。",
+   "en": "A legend about an old principal circulates at the school; supposedly he could name every student.",
+   "ko": "학교에는 옛 교장 선생님의 전설이 전해지는데, 그분은 학생 이름을 다 불렀대요.",
+   "blank": "传奇",
+   "src": "made"
+  },
+  {
+   "text": "教练年轻时是游泳界的传奇，小雪的妈妈说她小时候就听过他的名字。",
+   "en": "The coach was a legend in swimming when he was young, and Xiaoxue's mom says she heard his name as a child.",
+   "ko": "코치는 젊었을 때 수영계의 전설이었는데, 샤오쉐의 엄마는 어릴 때부터 그 이름을 들었대요.",
+   "blank": "传奇",
+   "src": "made"
+  }
+ ],
  "w|传播": [
   {
    "text": "老师说流感传播得很快，让小明他们勤洗手。",
@@ -4529,6 +4609,22 @@
    "en": "Stop, don't hit anymore.",
    "ko": "그만해, 더 치지 마.",
    "blank": "住手"
+  }
+ ],
+ "w|体系": [
+  {
+   "text": "学校今年换了一套新的评分体系，大家都还不太习惯。",
+   "en": "The school switched to a new grading system this year, and everyone isn't used to it yet.",
+   "ko": "학교가 올해 새 채점 체계로 바꿔서 다들 아직 익숙하지 않아요.",
+   "blank": "体系",
+   "src": "made"
+  },
+  {
+   "text": "俱乐部有一套完整的训练体系，从初级到比赛都有安排。",
+   "en": "The club has a complete training system, with a program from beginner level up to competition.",
+   "ko": "클럽에는 초급부터 대회까지 짜인 완전한 훈련 체계가 있어요.",
+   "blank": "体系",
+   "src": "made"
   }
  ],
  "w|体育": [
@@ -5411,6 +5507,22 @@
    "en": "Not worth getting angry.",
    "ko": "화낼 가치 없어.",
    "blank": "值得"
+  }
+ ],
+ "w|倾向": [
+  {
+   "text": "老师发现陈杰有偏科的倾向，建议他多花点时间学英语。",
+   "en": "The teacher noticed Chen Jie tends to favor certain subjects and suggested he spend more time on English.",
+   "ko": "선생님은 천제가 특정 과목만 하는 경향이 있다며 영어에 시간을 더 쓰라고 했어요.",
+   "blank": "倾向",
+   "src": "made"
+  },
+  {
+   "text": "教练说小雪换气时有抬头太高的倾向。",
+   "en": "The coach said Xiaoxue tends to lift her head too high when breathing.",
+   "ko": "코치는 샤오쉐가 숨 쉴 때 고개를 너무 높이 드는 경향이 있다고 했어요.",
+   "blank": "倾向",
+   "src": "made"
   }
  ],
  "w|假": [
@@ -6705,6 +6817,22 @@
    "blank": "其他人"
   }
  ],
+ "w|其余": [
+  {
+   "text": "班里只有陈杰和小王报名了作文比赛，其余同学都选了数学竞赛。",
+   "en": "Only Chen Jie and Xiao Wang signed up for the essay contest; the rest of the class chose the math competition.",
+   "ko": "반에서 천제와 샤오왕만 글짓기 대회에 신청했고, 나머지 학생들은 다 수학 경시대회를 골랐어요.",
+   "blank": "其余",
+   "src": "made"
+  },
+  {
+   "text": "教练先带小雪练蛙泳，让其余的人自己热身。",
+   "en": "The coach first took Xiaoxue through breaststroke and had the others warm up on their own.",
+   "ko": "코치는 먼저 샤오쉐에게 평영을 가르치고 나머지 사람들은 각자 몸을 풀게 했어요.",
+   "blank": "其余",
+   "src": "made"
+  }
+ ],
  "w|其它": [
   {
    "text": "还有其它吗？",
@@ -7347,6 +7475,22 @@
    "src": "made"
   }
  ],
+ "w|冲突": [
+  {
+   "text": "两个同学为了篮球场发生了冲突，最后被叫到了办公室。",
+   "en": "Two students got into a conflict over the basketball court and ended up being called to the office.",
+   "ko": "두 학생이 농구장 때문에 충돌이 생겨서 결국 교무실로 불려 갔어요.",
+   "blank": "冲突",
+   "src": "made"
+  },
+  {
+   "text": "两个家长为了抢泳道起了冲突，救生员赶紧过来劝开。",
+   "en": "Two parents got into a conflict over a lane, and the lifeguard hurried over to separate them.",
+   "ko": "학부모 두 명이 레인을 두고 충돌하자 안전요원이 서둘러 와서 말렸어요.",
+   "blank": "冲突",
+   "src": "made"
+  }
+ ],
  "w|决定": [
   {
    "text": "你决定吧。",
@@ -7359,6 +7503,22 @@
    "en": "I have decided to stay.",
    "ko": "나는 남기로 했어.",
    "blank": "决定"
+  }
+ ],
+ "w|决赛": [
+  {
+   "text": "陈杰的班进了篮球决赛，全班同学都去加油。",
+   "en": "Chen Jie's class made the basketball final, and the whole class went to cheer.",
+   "ko": "천제네 반이 농구 결승에 올라서 반 친구들이 모두 응원하러 갔어요.",
+   "blank": "决赛",
+   "src": "made"
+  },
+  {
+   "text": "决赛的争夺非常激烈，小雪只差零点几秒拿第一。",
+   "en": "The competition in the final was fierce, and Xiaoxue missed first place by a fraction of a second.",
+   "ko": "결승전 경쟁이 아주 치열해서 샤오쉐는 영 점 몇 초 차이로 일등을 놓쳤어요.",
+   "blank": "决赛",
+   "src": "made"
   }
  ],
  "w|冷": [
@@ -8790,6 +8950,22 @@
    "en": "The wind was so strong that Xiaoxue had to work hard to open the beach umbrella.",
    "ko": "바람이 너무 세서 샤오쉐는 한참 힘을 써서야 파라솔을 펼쳤어요.",
    "blank": "劲",
+   "src": "made"
+  }
+ ],
+ "w|势力": [
+  {
+   "text": "历史老师讲到古代各方势力互相争斗，陈杰听得入了迷。",
+   "en": "The history teacher talked about rival factions fighting in ancient times, and Chen Jie was captivated.",
+   "ko": "역사 선생님이 옛날 여러 세력이 서로 다툰 이야기를 하자 천제는 푹 빠져서 들었어요.",
+   "blank": "势力",
+   "src": "made"
+  },
+  {
+   "text": "小雪在看一部古装剧，讲的是两大势力争夺江山的故事。",
+   "en": "Xiaoxue is watching a period drama about two great powers fighting over the realm.",
+   "ko": "샤오쉐는 두 큰 세력이 천하를 두고 다투는 이야기의 사극을 보고 있어요.",
+   "blank": "势力",
    "src": "made"
   }
  ],
@@ -11361,6 +11537,22 @@
    "blank": "名"
   }
  ],
+ "w|名义": [
+  {
+   "text": "陈杰以班级的名义给生病的同学送了一束花。",
+   "en": "Chen Jie sent a bouquet of flowers to a sick classmate on behalf of the class.",
+   "ko": "천제는 반 이름으로 아픈 친구에게 꽃다발을 보냈어요.",
+   "blank": "名义",
+   "src": "made"
+  },
+  {
+   "text": "小雪以游泳俱乐部的名义报名参加了市里的比赛。",
+   "en": "Xiaoxue entered the city competition under the name of her swimming club.",
+   "ko": "샤오쉐는 수영 클럽 이름으로 시 대회에 신청했어요.",
+   "blank": "名义",
+   "src": "made"
+  }
+ ],
  "w|名单": [
   {
    "text": "把名字写在名单上。",
@@ -11403,6 +11595,22 @@
    "en": "I forgot the name.",
    "ko": "이름이 기억 안 나.",
    "blank": "名字"
+  }
+ ],
+ "w|名称": [
+  {
+   "text": "陈杰他们给新成立的社团想了好几个名称，最后还是投票决定。",
+   "en": "Chen Jie and his friends came up with several names for the new club and finally decided by vote.",
+   "ko": "천제네는 새로 만든 동아리 이름을 여러 개 생각했다가 결국 투표로 정했어요.",
+   "blank": "名称",
+   "src": "made"
+  },
+  {
+   "text": "这家游泳馆换了新名称，小雪找了半天才认出来。",
+   "en": "This swimming pool changed its name, and it took Xiaoxue a while to recognize it.",
+   "ko": "이 수영장이 이름을 바꿔서 샤오쉐는 한참 찾고 나서야 알아봤어요.",
+   "blank": "名称",
+   "src": "made"
   }
  ],
  "w|后": [
@@ -11639,6 +11847,22 @@
    "en": "You say it.",
    "ko": "네가 말해 봐.",
    "blank": "吧"
+  }
+ ],
+ "w|吩咐": [
+  {
+   "text": "班主任吩咐陈杰放学后把教室的窗户都关好。",
+   "en": "The homeroom teacher told Chen Jie to close all the classroom windows after school.",
+   "ko": "담임 선생님은 천제에게 방과 후에 교실 창문을 다 닫으라고 시켰어요.",
+   "blank": "吩咐",
+   "src": "made"
+  },
+  {
+   "text": "教练吩咐小雪每天游完记下自己的时间。",
+   "en": "The coach instructed Xiaoxue to write down her time after every swim.",
+   "ko": "코치는 샤오쉐에게 매일 수영이 끝나면 기록을 적어 두라고 일렀어요.",
+   "blank": "吩咐",
+   "src": "made"
   }
  ],
  "w|听": [
@@ -13885,6 +14109,22 @@
    "blank": "场"
   }
  ],
+ "w|场景": [
+  {
+   "text": "话剧社在排练毕业典礼的场景，陈杰负责灯光。",
+   "en": "The drama club was rehearsing the graduation ceremony scene, and Chen Jie handled the lighting.",
+   "ko": "연극부는 졸업식 장면을 연습하고 있었고, 천제는 조명을 맡았어요.",
+   "blank": "场景",
+   "src": "made"
+  },
+  {
+   "text": "电影里有一个在泳池拍的场景，小雪认出就是自己常去的那家。",
+   "en": "A scene in the movie was shot at a swimming pool, and Xiaoxue recognized it as the one she often goes to.",
+   "ko": "영화에 수영장에서 찍은 장면이 있었는데, 샤오쉐는 자기가 자주 가는 곳이라는 걸 알아봤어요.",
+   "blank": "场景",
+   "src": "made"
+  }
+ ],
  "w|坏": [
   {
    "text": "东西坏了。",
@@ -15529,6 +15769,22 @@
    "en": "We created a miracle.",
    "ko": "우리는 기적을 만들었어.",
    "blank": "奇迹"
+  }
+ ],
+ "w|奖": [
+  {
+   "text": "陈杰的科学作品得了市里的二等奖。",
+   "en": "Chen Jie's science project won second prize in the city.",
+   "ko": "천제의 과학 작품은 시에서 이등상을 받았어요.",
+   "blank": "奖",
+   "src": "made"
+  },
+  {
+   "text": "小雪在游泳馆的夏季比赛上拿了奖，高兴得在水里转圈。",
+   "en": "Xiaoxue won a prize at the pool's summer meet and spun around in the water with joy.",
+   "ko": "샤오쉐는 수영장 여름 대회에서 상을 타서 물속에서 빙글빙글 돌며 기뻐했어요.",
+   "blank": "奖",
+   "src": "made"
   }
  ],
  "w|套": [
@@ -17997,6 +18253,22 @@
    "blank": "小"
   }
  ],
+ "w|小事": [
+  {
+   "text": "陈杰觉得忘带作业本只是小事，没想到老师那么生气。",
+   "en": "Chen Jie thought forgetting his homework notebook was a small matter, but the teacher was surprisingly angry.",
+   "ko": "천제는 숙제 공책을 안 가져온 게 별일 아니라고 생각했는데 선생님이 그렇게 화낼 줄은 몰랐어요.",
+   "blank": "小事",
+   "src": "made"
+  },
+  {
+   "text": "救生员说，在泳池边跑看起来是小事，其实很危险。",
+   "en": "The lifeguard said running at the poolside looks like a small thing but is actually dangerous.",
+   "ko": "안전요원은 수영장 가에서 뛰는 게 사소해 보여도 사실 아주 위험하다고 했어요.",
+   "blank": "小事",
+   "src": "made"
+  }
+ ],
  "w|小伙子": [
   {
    "text": "那个小伙子很勤快。",
@@ -18604,6 +18876,22 @@
    "en": "The head of the sports bureau came to watch and shook Li Na's hand afterwards.",
    "ko": "체육국장이 경기를 보러 와서 끝나고 리나와 악수도 했어요.",
    "blank": "局长",
+   "src": "made"
+  }
+ ],
+ "w|局面": [
+  {
+   "text": "陈杰进了一个球，比赛终于打破了僵持的局面。",
+   "en": "Chen Jie scored a goal, and the match finally broke out of its deadlock.",
+   "ko": "천제가 한 골을 넣으면서 경기는 마침내 팽팽한 국면을 깼어요.",
+   "blank": "局面",
+   "src": "made"
+  },
+  {
+   "text": "最后一棒小雪追上了对手，整个局面一下子变了。",
+   "en": "On the last leg Xiaoxue caught up with her rival, and the whole situation changed in an instant.",
+   "ko": "마지막 주자로 샤오쉐가 상대를 따라잡자 판도가 한순간에 바뀌었어요.",
+   "blank": "局面",
    "src": "made"
   }
  ],
@@ -19883,6 +20171,22 @@
    "src": "made"
   }
  ],
+ "w|广播": [
+  {
+   "text": "每天中午学校都会广播一会儿新闻和音乐。",
+   "en": "Every day at noon the school broadcasts some news and music for a while.",
+   "ko": "학교는 매일 점심때 잠깐 뉴스와 음악을 방송해요.",
+   "blank": "广播",
+   "src": "made"
+  },
+  {
+   "text": "游泳馆在广播里提醒大家，深水区只对会游的人开放。",
+   "en": "The pool announced over the PA that the deep end is open only to those who can swim.",
+   "ko": "수영장은 방송으로 깊은 구역은 수영할 줄 아는 사람만 들어갈 수 있다고 알렸어요.",
+   "blank": "广播",
+   "src": "made"
+  }
+ ],
  "w|庆祝": [
   {
    "text": "我们庆祝生日。",
@@ -20750,6 +21054,22 @@
    "en": "To train new nurses, Sun Yue recorded a video of changing a dressing.",
    "ko": "쑨웨는 신입 간호사 교육을 위해 상처 소독하는 영상을 찍었어요.",
    "blank": "录像",
+   "src": "made"
+  }
+ ],
+ "w|形势": [
+  {
+   "text": "陈杰的同桌每天看新闻，对国际形势了解得很清楚。",
+   "en": "Chen Jie's deskmate reads the news every day and understands the international situation very well.",
+   "ko": "천제의 짝은 매일 뉴스를 봐서 국제 정세를 아주 잘 알아요.",
+   "blank": "形势",
+   "src": "made"
+  },
+  {
+   "text": "看了对手的成绩，小雪知道形势对自己不太有利。",
+   "en": "After seeing her rivals' times, Xiaoxue knew the situation wasn't very favorable for her.",
+   "ko": "상대 선수들 기록을 보고 샤오쉐는 상황이 자기에게 그리 유리하지 않다는 걸 알았어요.",
+   "blank": "形势",
    "src": "made"
   }
  ],
@@ -22099,6 +22419,22 @@
    "blank": "想"
   }
  ],
+ "w|想不到": [
+  {
+   "text": "想不到平时最安静的同学，演讲比赛得了第一。",
+   "en": "Who'd have thought the quietest student in class would win first place in the speech contest.",
+   "ko": "평소에 제일 조용하던 친구가 웅변대회에서 일등을 할 줄은 생각도 못 했어요.",
+   "blank": "想不到",
+   "src": "made"
+  },
+  {
+   "text": "想不到小雪学了一个月，就能一口气游完两个来回了。",
+   "en": "Who'd have thought that after just a month of lessons, Xiaoxue could swim two laps in one go.",
+   "ko": "샤오쉐가 한 달 배우고 단숨에 두 번 왕복할 수 있게 될 줄은 생각도 못 했어요.",
+   "blank": "想不到",
+   "src": "made"
+  }
+ ],
  "w|想到": [
   {
    "text": "我突然想到了。",
@@ -22687,6 +23023,22 @@
    "src": "made"
   }
  ],
+ "w|成果": [
+  {
+   "text": "期末的时候，每个小组都要上台展示一学期的成果。",
+   "en": "At the end of the term, each group has to go on stage and show what they achieved over the semester.",
+   "ko": "학기 말이면 조마다 무대에 올라가 한 학기 동안의 결과물을 발표해요.",
+   "blank": "成果",
+   "src": "made"
+  },
+  {
+   "text": "练了一个夏天，小雪的成果是自由泳快了整整五秒。",
+   "en": "After a summer of training, Xiaoxue's result was a full five seconds faster at freestyle.",
+   "ko": "여름 내내 연습한 결과 샤오쉐는 자유형이 무려 오 초나 빨라졌어요.",
+   "blank": "成果",
+   "src": "made"
+  }
+ ],
  "w|成熟": [
   {
    "text": "他比以前成熟多了。",
@@ -22920,6 +23272,22 @@
    "en": "When playing chess, Wang Fang's neighbor is very strategic and always thinks several moves ahead.",
    "ko": "장기를 둘 때 왕팡의 이웃은 전략을 중시해서 늘 몇 수를 앞서 생각하고 둬요.",
    "blank": "战略",
+   "src": "made"
+  }
+ ],
+ "w|战胜": [
+  {
+   "text": "陈杰的班在拔河比赛中战胜了高年级。",
+   "en": "Chen Jie's class beat an upper grade in the tug-of-war.",
+   "ko": "천제네 반은 줄다리기 대회에서 선배 학년을 이겼어요.",
+   "blank": "战胜",
+   "src": "made"
+  },
+  {
+   "text": "小雪终于战胜了对深水的恐惧，敢一个人游到对岸。",
+   "en": "Xiaoxue finally overcame her fear of deep water and dares to swim across alone.",
+   "ko": "샤오쉐는 마침내 깊은 물에 대한 두려움을 이겨 내고 혼자 건너편까지 헤엄쳐 가요.",
+   "blank": "战胜",
    "src": "made"
   }
  ],
@@ -23827,6 +24195,22 @@
    "en": "Let's decide by voting together.",
    "ko": "다 같이 투표해서 정하자.",
    "blank": "投票"
+  }
+ ],
+ "w|投诉": [
+  {
+   "text": "有家长投诉食堂的菜太咸，学校马上换了厨师。",
+   "en": "Some parents complained that the cafeteria food was too salty, and the school replaced the cook right away.",
+   "ko": "학부모 몇 명이 급식이 너무 짜다고 민원을 넣자 학교는 바로 조리사를 바꿨어요.",
+   "blank": "投诉",
+   "src": "made"
+  },
+  {
+   "text": "有人投诉更衣室的热水不够，游泳馆第二天就修好了。",
+   "en": "Someone complained there wasn't enough hot water in the locker room, and the pool fixed it the next day.",
+   "ko": "누군가 탈의실 온수가 부족하다고 항의하자 수영장은 다음 날 바로 고쳤어요.",
+   "blank": "投诉",
+   "src": "made"
   }
  ],
  "w|投资": [
@@ -24811,6 +25195,22 @@
    "en": "He grasped the truth.",
    "ko": "그는 진실을 파악했어.",
    "blank": "掌握"
+  }
+ ],
+ "w|排": [
+  {
+   "text": "打饭的时候，陈杰排在队伍最后面。",
+   "en": "At lunch, Chen Jie was at the very back of the line.",
+   "ko": "배식 받을 때 천제는 줄 맨 끝에 섰어요.",
+   "blank": "排",
+   "src": "made"
+  },
+  {
+   "text": "换衣服的人太多，小雪在门口排了好久。",
+   "en": "There were so many people changing that Xiaoxue waited in line at the door for ages.",
+   "ko": "옷 갈아입는 사람이 너무 많아서 샤오쉐는 입구에서 한참 줄을 섰어요.",
+   "blank": "排",
+   "src": "made"
   }
  ],
  "w|探员": [
@@ -25949,6 +26349,22 @@
    "en": "This is the government's job.",
    "ko": "이건 정부가 맡는 일이야.",
    "blank": "政府"
+  }
+ ],
+ "w|政权": [
+  {
+   "text": "历史考试有一道题问的是那个朝代的政权怎么建立起来的。",
+   "en": "One history exam question asked how that dynasty's regime was established.",
+   "ko": "역사 시험에 그 왕조의 정권이 어떻게 세워졌는지 묻는 문제가 나왔어요.",
+   "blank": "政权",
+   "src": "made"
+  },
+  {
+   "text": "小雪在休息时看了一本历史书，里面讲到一个政权的兴衰。",
+   "en": "During her break Xiaoxue read a history book about the rise and fall of a regime.",
+   "ko": "샤오쉐는 쉬는 시간에 역사책을 읽었는데, 한 정권의 흥망을 다룬 내용이었어요.",
+   "blank": "政权",
+   "src": "made"
   }
  ],
  "w|政治": [
@@ -28405,6 +28821,22 @@
    "blank": "机场"
   }
  ],
+ "w|机密": [
+  {
+   "text": "老师开玩笑说，考试题目是最高机密，谁问都不能说。",
+   "en": "The teacher joked that the exam questions are top secret and can't be revealed to anyone.",
+   "ko": "선생님은 시험 문제가 최고 기밀이라 누가 물어도 말할 수 없다고 농담했어요.",
+   "blank": "机密",
+   "src": "made"
+  },
+  {
+   "text": "教练笑着说，自己的训练方法是机密，不能随便告诉别人。",
+   "en": "The coach said with a laugh that his training method is a secret and can't just be told to anyone.",
+   "ko": "코치는 웃으며 자기 훈련 방법은 비밀이라 아무에게나 알려 줄 수 없다고 했어요.",
+   "blank": "机密",
+   "src": "made"
+  }
+ ],
  "w|机构": [
   {
    "text": "这起诈骗案涉及好几家金融机构。",
@@ -29263,6 +29695,22 @@
    "en": "We walked into the forest.",
    "ko": "우리는 숲으로 들어갔어.",
    "blank": "森林"
+  }
+ ],
+ "w|棺材": [
+  {
+   "text": "历史课本里有一张古墓的照片，里面的棺材保存得很完整。",
+   "en": "The history textbook has a photo of an ancient tomb whose coffin is very well preserved.",
+   "ko": "역사 교과서에 옛 무덤 사진이 있는데, 그 안의 관이 아주 온전하게 보존돼 있어요.",
+   "blank": "棺材",
+   "src": "made"
+  },
+  {
+   "text": "小雪的同伴讲了个鬼故事，说泳池底下以前埋过棺材，吓得大家直叫。",
+   "en": "Xiaoxue's friend told a ghost story claiming a coffin was once buried under the pool, and everyone screamed.",
+   "ko": "샤오쉐의 친구가 옛날에 수영장 밑에 관이 묻혀 있었다는 귀신 이야기를 해서 다들 비명을 질렀어요.",
+   "blank": "棺材",
+   "src": "made"
   }
  ],
  "w|椅子": [
@@ -31235,6 +31683,22 @@
    "src": "made"
   }
  ],
+ "w|涉及": [
+  {
+   "text": "期末考试的内容涉及整本书，陈杰一章也不敢漏。",
+   "en": "The final exam covers the whole book, so Chen Jie didn't dare skip a single chapter.",
+   "ko": "기말고사 범위가 책 전체에 걸쳐 있어서 천제는 한 장도 빼먹을 수 없었어요.",
+   "blank": "涉及",
+   "src": "made"
+  },
+  {
+   "text": "新的游泳馆规定涉及安全、卫生和开放时间。",
+   "en": "The pool's new regulations cover safety, hygiene and opening hours.",
+   "ko": "수영장의 새 규정은 안전, 위생, 운영 시간에 관한 내용을 다뤄요.",
+   "blank": "涉及",
+   "src": "made"
+  }
+ ],
  "w|淘汰": [
   {
    "text": "一批太旧的电脑被图书馆淘汰了，换成了新的。",
@@ -31264,6 +31728,22 @@
    "en": "This piece has deep emotion, and Xiaoxue played it many times before she got the feel.",
    "ko": "이 곡은 감정이 깊어서 샤오쉐는 여러 번 쳐 보고 나서야 느낌을 잡았어요.",
    "blank": "深",
+   "src": "made"
+  }
+ ],
+ "w|深入": [
+  {
+   "text": "这次研究课要深入社区调查，陈杰他们组选了垃圾分类的题目。",
+   "en": "This research class required going deep into the community, and Chen Jie's group chose waste sorting as their topic.",
+   "ko": "이번 연구 수업은 동네에 깊이 들어가 조사해야 해서 천제네 조는 쓰레기 분리배출을 주제로 골랐어요.",
+   "blank": "深入",
+   "src": "made"
+  },
+  {
+   "text": "教练让小雪深入研究自己的录像，找出转身时的问题。",
+   "en": "The coach had Xiaoxue study her own footage in depth to find problems with her turns.",
+   "ko": "코치는 샤오쉐에게 자기 영상을 깊이 분석해서 턴할 때의 문제를 찾아보라고 했어요.",
+   "blank": "深入",
    "src": "made"
   }
  ],
@@ -31666,6 +32146,22 @@
    "en": "Liu Fang hopes to hire young people who are passionate about technology.",
    "ko": "류팡은 기술에 열정이 있는 젊은이를 뽑고 싶어 해요.",
    "blank": "激情",
+   "src": "made"
+  }
+ ],
+ "w|激烈": [
+  {
+   "text": "辩论赛上两边争得很激烈，陈杰都忘了看时间。",
+   "en": "The two sides argued fiercely at the debate, and Chen Jie forgot to check the time.",
+   "ko": "토론 대회에서 양쪽이 치열하게 맞서서 천제는 시간 보는 것도 잊었어요.",
+   "blank": "激烈",
+   "src": "made"
+  },
+  {
+   "text": "决赛的争夺非常激烈，小雪只差零点几秒拿第一。",
+   "en": "The competition in the final was fierce, and Xiaoxue missed first place by a fraction of a second.",
+   "ko": "결승전 경쟁이 아주 치열해서 샤오쉐는 영 점 몇 초 차이로 일등을 놓쳤어요.",
+   "blank": "激烈",
    "src": "made"
   }
  ],
@@ -37001,6 +37497,22 @@
    "src": "made"
   }
  ],
+ "w|纪录": [
+  {
+   "text": "陈杰在运动会上打破了学校的跳远纪录。",
+   "en": "Chen Jie broke the school's long jump record at the sports meet.",
+   "ko": "천제는 운동회에서 학교 멀리뛰기 기록을 깼어요.",
+   "blank": "纪录",
+   "src": "made"
+  },
+  {
+   "text": "这个游泳馆的五十米纪录保持了十年，还没人打破。",
+   "en": "This pool's fifty-meter record has stood for ten years, and nobody has broken it yet.",
+   "ko": "이 수영장의 오십 미터 기록은 십 년 동안 깨지지 않았어요.",
+   "blank": "纪录",
+   "src": "made"
+  }
+ ],
  "w|纪念": [
   {
    "text": "为了纪念建校六十周年，学校种了一排银杏树。",
@@ -37177,6 +37689,22 @@
    "en": "Please divide into two groups.",
    "ko": "두 조로 나눠 주세요.",
    "blank": "组"
+  }
+ ],
+ "w|组合": [
+  {
+   "text": "老师让陈杰把几个实验步骤重新组合，看看能不能更省时间。",
+   "en": "The teacher had Chen Jie rearrange the experiment steps to see if it could save time.",
+   "ko": "선생님은 천제에게 실험 단계 몇 개를 다시 조합해서 시간을 더 줄일 수 있는지 보라고 했어요.",
+   "blank": "组合",
+   "src": "made"
+  },
+  {
+   "text": "小雪的接力队是临时组合起来的，练了几次就配合得不错。",
+   "en": "Xiaoxue's relay team was put together on the spot, but after a few practices they worked well together.",
+   "ko": "샤오쉐의 계주 팀은 급하게 꾸려졌지만 몇 번 연습하니 손발이 잘 맞았어요.",
+   "blank": "组合",
+   "src": "made"
   }
  ],
  "w|组成": [
@@ -39715,6 +40243,22 @@
    "blank": "若"
   }
  ],
+ "w|苦": [
+  {
+   "text": "陈杰说高三的日子很苦，可回头看也挺怀念的。",
+   "en": "Chen Jie said senior year was tough, but looking back he misses it.",
+   "ko": "천제는 고삼 시절이 힘들었지만 돌아보면 꽤 그립다고 했어요.",
+   "blank": "苦",
+   "src": "made"
+  },
+  {
+   "text": "小雪不小心喝了一口池水，又咸又苦。",
+   "en": "Xiaoxue accidentally swallowed a mouthful of pool water; it was salty and bitter.",
+   "ko": "샤오쉐는 실수로 수영장 물을 한 모금 마셨는데 짜고 썼어요.",
+   "blank": "苦",
+   "src": "made"
+  }
+ ],
  "w|英尺": [
   {
    "text": "墙高十英尺。",
@@ -41275,6 +41819,22 @@
    "blank": "训练"
   }
  ],
+ "w|议会": [
+  {
+   "text": "政治课上，老师给大家讲了议会是怎么通过法律的。",
+   "en": "In civics class, the teacher explained how a parliament passes laws.",
+   "ko": "정치 수업에서 선생님은 의회가 어떻게 법을 통과시키는지 설명했어요.",
+   "blank": "议会",
+   "src": "made"
+  },
+  {
+   "text": "游泳馆休息区的电视上在播议会开会的新闻。",
+   "en": "The TV in the pool's lounge was showing news of a parliament session.",
+   "ko": "수영장 휴게실 텔레비전에서 의회 회의 뉴스가 나오고 있었어요.",
+   "blank": "议会",
+   "src": "made"
+  }
+ ],
  "w|议员": [
   {
    "text": "这位议员很受欢迎。",
@@ -41734,6 +42294,22 @@
    "en": "This topic is very interesting.",
    "ko": "이 주제는 아주 흥미로워요.",
    "blank": "话题",
+   "src": "made"
+  }
+ ],
+ "w|诞生": [
+  {
+   "text": "历史老师讲到现代学校是怎么诞生的，陈杰听得特别认真。",
+   "en": "The history teacher explained how modern schools came into being, and Chen Jie listened very closely.",
+   "ko": "역사 선생님이 근대 학교가 어떻게 생겨났는지 설명하자 천제는 아주 열심히 들었어요.",
+   "blank": "诞生",
+   "src": "made"
+  },
+  {
+   "text": "小雪听教练说，这个游泳馆诞生过好几位全国冠军。",
+   "en": "Xiaoxue heard from the coach that this pool has produced several national champions.",
+   "ko": "샤오쉐는 코치에게서 이 수영장에서 전국 챔피언이 여러 명 나왔다고 들었어요.",
+   "blank": "诞生",
    "src": "made"
   }
  ],
@@ -45119,6 +45695,22 @@
    "blank": "道路"
   }
  ],
+ "w|遗产": [
+  {
+   "text": "这次春游去的是一处文化遗产，老师让大家写观后感。",
+   "en": "This spring outing was to a cultural heritage site, and the teacher had everyone write their impressions.",
+   "ko": "이번 봄 소풍은 문화유산에 갔고, 선생님은 다들 감상문을 쓰라고 했어요.",
+   "blank": "遗产",
+   "src": "made"
+  },
+  {
+   "text": "小雪的爷爷留下的遗产不多，只有一块老手表。",
+   "en": "Xiaoxue's grandfather didn't leave much of an inheritance, just an old wristwatch.",
+   "ko": "샤오쉐의 할아버지가 남긴 유산은 많지 않고 오래된 손목시계 하나뿐이에요.",
+   "blank": "遗产",
+   "src": "made"
+  }
+ ],
  "w|遗憾": [
   {
    "text": "很遗憾。",
@@ -46451,6 +47043,22 @@
    "src": "made"
   }
  ],
+ "w|防止": [
+  {
+   "text": "为了防止近视，班主任要求大家每节课后都看看窗外。",
+   "en": "To prevent nearsightedness, the homeroom teacher asks everyone to look out the window after every class.",
+   "ko": "근시를 막으려고 담임 선생님은 쉬는 시간마다 다들 창밖을 보라고 해요.",
+   "blank": "防止",
+   "src": "made"
+  },
+  {
+   "text": "为了防止抽筋，小雪下水前一定会拉伸十分钟。",
+   "en": "To prevent cramps, Xiaoxue always stretches for ten minutes before getting in the water.",
+   "ko": "쥐가 나지 않게 샤오쉐는 물에 들어가기 전에 꼭 십 분 동안 스트레칭을 해요.",
+   "blank": "防止",
+   "src": "made"
+  }
+ ],
  "w|阳光": [
   {
    "text": "早晨的阳光很温暖。",
@@ -47317,6 +47925,22 @@
    "blank": "面对"
   }
  ],
+ "w|面试": [
+  {
+   "text": "学生会招新要面试，陈杰紧张得一晚上没睡好。",
+   "en": "The student union required interviews for new members, and Chen Jie was so nervous he didn't sleep well all night.",
+   "ko": "학생회 신입 모집에 면접이 있어서 천제는 긴장해서 밤새 잠을 설쳤어요.",
+   "blank": "面试",
+   "src": "made"
+  },
+  {
+   "text": "小雪想去游泳馆当救生员，下周要去面试。",
+   "en": "Xiaoxue wants to be a lifeguard at the pool and has an interview next week.",
+   "ko": "샤오쉐는 수영장 안전요원을 하고 싶어서 다음 주에 면접을 보러 가요.",
+   "blank": "面试",
+   "src": "made"
+  }
+ ],
  "w|革命": [
   {
    "text": "这场革命改变了历史。",
@@ -47586,6 +48210,22 @@
    "en": "Wang Fang saw on the news that several national leaders use the same phone model.",
    "ko": "왕팡은 여러 나라 지도자가 모두 같은 기종의 휴대폰을 쓴다는 뉴스를 봤어요.",
    "blank": "领袖",
+   "src": "made"
+  }
+ ],
+ "w|频道": [
+  {
+   "text": "陈杰最近迷上了一个讲科学的视频频道，每期都看。",
+   "en": "Chen Jie recently got hooked on a science video channel and watches every episode.",
+   "ko": "천제는 요즘 과학 영상 채널에 빠져서 매회 챙겨 봐요.",
+   "blank": "频道",
+   "src": "made"
+  },
+  {
+   "text": "小雪在体育频道看到了游泳世锦赛的直播。",
+   "en": "Xiaoxue watched the live broadcast of the world swimming championships on the sports channel.",
+   "ko": "샤오쉐는 스포츠 채널에서 세계 수영 선수권 생중계를 봤어요.",
+   "blank": "频道",
    "src": "made"
   }
  ],
