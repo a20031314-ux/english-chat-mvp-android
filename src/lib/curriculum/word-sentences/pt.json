@@ -2191,6 +2191,22 @@
    "blank": "anel"
   }
  ],
+ "w|ângulo": [
+  {
+   "text": "O Rafael sugeriu olhar o problema por outro ângulo.",
+   "en": "Rafael suggested looking at the problem from another angle.",
+   "ko": "하파에우는 문제를 다른 각도에서 보자고 제안했어요.",
+   "blank": "ângulo",
+   "src": "made"
+  },
+  {
+   "text": "A Carla procurou o melhor ângulo para fotografar o pôr do sol.",
+   "en": "Carla looked for the best angle to photograph the sunset.",
+   "ko": "카를라는 노을을 찍기 좋은 각도를 찾았어요.",
+   "blank": "ângulo",
+   "src": "made"
+  }
+ ],
  "w|animado": [
   {
    "text": "Eu me sinto muito animado hoje.",
@@ -2593,6 +2609,22 @@
    "en": "The apartment faces the beach.",
    "ko": "그 아파트는 바다가 바로 보여.",
    "blank": "apartamento"
+  }
+ ],
+ "w|apelido": [
+  {
+   "text": "Em uma semana, o Rafael já ganhou um apelido da equipe: Rafa Planilha.",
+   "en": "In one week, Rafael already got a nickname from the team: Rafa Spreadsheet.",
+   "ko": "일주일 만에 하파에우는 팀에서 '엑셀 하파'라는 별명을 얻었어요.",
+   "blank": "apelido",
+   "src": "made"
+  },
+  {
+   "text": "O apelido da Carla na vila é Sereia, porque ela passa o dia na água.",
+   "en": "Carla's nickname in the village is Mermaid, because she spends all day in the water.",
+   "ko": "카를라는 하루 종일 물에 있어서 마을에서 별명이 인어예요.",
+   "blank": "apelido",
+   "src": "made"
   }
  ],
  "w|apenas": [
@@ -3049,6 +3081,22 @@
    "ko": "발가락 사이로 모래가 느껴졌어요.",
    "blank": "areia",
    "src": "tatoeba:4719318/anthrax26 en:3579650/Hybrid"
+  }
+ ],
+ "w|argumento": [
+  {
+   "text": "O Rafael apresentou um argumento tão bom que o chefe mudou de ideia.",
+   "en": "Rafael made such a good argument that the boss changed his mind.",
+   "ko": "하파에우가 근거를 아주 잘 대서 상사가 생각을 바꿨어요.",
+   "blank": "argumento",
+   "src": "made"
+  },
+  {
+   "text": "O instrutor usou um argumento simples: o mar sempre manda.",
+   "en": "The instructor used a simple argument: the sea is always in charge.",
+   "ko": "강사는 간단한 논리를 댔어요. 바다가 늘 주인이라는 거죠.",
+   "blank": "argumento",
+   "src": "made"
   }
  ],
  "w|arma": [
@@ -4303,6 +4351,22 @@
    "src": "tatoeba:4134687/mervert1 en:2241413/CK"
   }
  ],
+ "w|avaliação": [
+  {
+   "text": "A primeira avaliação do Rafael vai ser daqui a três meses.",
+   "en": "Rafael's first evaluation will be three months from now.",
+   "ko": "하파에우의 첫 평가는 석 달 뒤에 있어요.",
+   "blank": "avaliação",
+   "src": "made"
+  },
+  {
+   "text": "A pousada tem ótima avaliação, e a Carla entendeu o motivo.",
+   "en": "The inn has a great rating, and Carla understood why.",
+   "ko": "민박집 평점이 아주 좋은데 카를라는 그 이유를 알게 됐어요.",
+   "blank": "avaliação",
+   "src": "made"
+  }
+ ],
  "w|avançar": [
   {
    "text": "Sorte e trabalho duro são necessários se você quer avançar na vida.",
@@ -4485,6 +4549,22 @@
    "en": "She almost always wears blue.",
    "ko": "그 여자는 거의 항상 파랑을 입어.",
    "blank": "azul"
+  }
+ ],
+ "w|babaca": [
+  {
+   "text": "O Rafael se arrependeu de ter chamado o motorista de babaca no trânsito.",
+   "en": "Rafael regretted calling the driver a jerk in traffic.",
+   "ko": "하파에우는 길에서 운전자에게 멍청이라고 한 걸 후회했어요.",
+   "blank": "babaca",
+   "src": "made"
+  },
+  {
+   "text": "Um turista jogou lixo na areia, e a Carla murmurou que ele era um babaca.",
+   "en": "A tourist threw trash on the sand, and Carla muttered that he was a jerk.",
+   "ko": "관광객이 모래에 쓰레기를 버리자 카를라는 못난 사람이라고 중얼거렸어요.",
+   "blank": "babaca",
+   "src": "made"
   }
  ],
  "w|bacana": [
@@ -4929,6 +5009,22 @@
    "en": "He ate plenty and fell asleep.",
    "ko": "배부르게 먹고 잠들었어.",
    "blank": "bastante"
+  }
+ ],
+ "w|bastardo": [
+  {
+   "text": "No livro que o Rafael indicou, o bastardo do rei luta pelo trono.",
+   "en": "In the book Rafael recommended, the king's bastard fights for the throne.",
+   "ko": "하파에우가 추천한 책에서 왕의 서자가 왕좌를 차지하려고 싸워요.",
+   "blank": "bastardo",
+   "src": "made"
+  },
+  {
+   "text": "A Carla leu na rede uma novela antiga sobre um bastardo que herda uma fazenda.",
+   "en": "In the hammock, Carla read an old novel about a bastard son who inherits a farm.",
+   "ko": "카를라는 해먹에서 서자가 농장을 물려받는 옛날 소설을 읽었어요.",
+   "blank": "bastardo",
+   "src": "made"
   }
  ],
  "w|batalha": [
@@ -7019,6 +7115,22 @@
    "blank": "caramba"
   }
  ],
+ "w|caráter": [
+  {
+   "text": "O gerente disse que contratou o Rafael pelo caráter, não só pelo currículo.",
+   "en": "The manager said he hired Rafael for his character, not just his résumé.",
+   "ko": "매니저는 이력서만이 아니라 인품을 보고 하파에우를 뽑았다고 했어요.",
+   "blank": "caráter",
+   "src": "made"
+  },
+  {
+   "text": "O mar agitado testa o caráter de qualquer surfista, diz a Carla.",
+   "en": "The rough sea tests the character of any surfer, Carla says.",
+   "ko": "거친 바다는 어떤 서퍼든 그 됨됨이를 시험한다고 카를라는 말해요.",
+   "blank": "caráter",
+   "src": "made"
+  }
+ ],
  "w|cardápio": [
   {
    "text": "O Tiago mudou o cardápio e incluiu pratos vegetarianos.",
@@ -7791,6 +7903,22 @@
    "en": "He talked for about half an hour.",
    "ko": "그 사람이 반 시간쯤 말했어.",
    "blank": "cerca"
+  }
+ ],
+ "w|cerca de": [
+  {
+   "text": "O Rafael leva cerca de uma hora de ônibus até o escritório.",
+   "en": "Rafael takes about an hour by bus to get to the office.",
+   "ko": "하파에우는 버스로 사무실까지 한 시간쯤 걸려요.",
+   "blank": "cerca de",
+   "src": "made"
+  },
+  {
+   "text": "A casa de praia da Carla fica a cerca de duzentos metros do mar.",
+   "en": "Carla's beach house is about two hundred meters from the sea.",
+   "ko": "카를라의 바닷가 집은 바다에서 이백 미터쯤 떨어져 있어요.",
+   "blank": "cerca de",
+   "src": "made"
   }
  ],
  "w|cérebro": [
@@ -9529,6 +9657,22 @@
    "ko": "대회에서 누가 이겼어요?",
    "blank": "competição",
    "src": "tatoeba:9952942/bill en:3738759/CK"
+  }
+ ],
+ "w|competir": [
+  {
+   "text": "O Rafael não quer competir com ninguém, só quer aprender o trabalho.",
+   "en": "Rafael doesn't want to compete with anyone, he just wants to learn the job.",
+   "ko": "하파에우는 누구와도 경쟁하고 싶지 않고 일을 배우고 싶을 뿐이에요.",
+   "blank": "competir",
+   "src": "made"
+  },
+  {
+   "text": "As crianças da vila gostam de competir para ver quem nada mais longe.",
+   "en": "The village kids like to compete to see who can swim farthest.",
+   "ko": "마을 아이들은 누가 더 멀리 헤엄치는지 겨루는 걸 좋아해요.",
+   "blank": "competir",
+   "src": "made"
   }
  ],
  "w|completamente": [
@@ -11827,6 +11971,38 @@
    "src": "tatoeba:4761331/bill en:2331617/CK"
   }
  ],
+ "w|cunhada": [
+  {
+   "text": "O Rafael convidou a equipe para o aniversário da cunhada dele.",
+   "en": "Rafael invited the team to his sister-in-law's birthday.",
+   "ko": "하파에우는 팀원들을 처형 생일 파티에 초대했어요.",
+   "blank": "cunhada",
+   "src": "made"
+  },
+  {
+   "text": "A Carla e a cunhada passaram a tarde numa rede, conversando.",
+   "en": "Carla and her sister-in-law spent the afternoon in a hammock, chatting.",
+   "ko": "카를라와 올케는 오후 내내 해먹에 누워 수다를 떨었어요.",
+   "blank": "cunhada",
+   "src": "made"
+  }
+ ],
+ "w|cunhado": [
+  {
+   "text": "O cunhado do Rafael foi quem indicou a vaga para ele.",
+   "en": "It was Rafael's brother-in-law who recommended the job to him.",
+   "ko": "그 자리를 하파에우에게 소개해 준 건 매형이었어요.",
+   "blank": "cunhado",
+   "src": "made"
+  },
+  {
+   "text": "O cunhado da Carla alugou um barco para levar a família às ilhas.",
+   "en": "Carla's brother-in-law rented a boat to take the family to the islands.",
+   "ko": "카를라의 형부가 가족을 섬에 데려가려고 배를 빌렸어요.",
+   "blank": "cunhado",
+   "src": "made"
+  }
+ ],
  "w|cura": [
   {
    "text": "Vocês encontraram uma cura?",
@@ -12939,6 +13115,22 @@
    "ko": "여긴 낯선 곳이에요.",
    "blank": "desconhecido",
    "src": "tatoeba:11166772/Advanced en:5726638/CM"
+  }
+ ],
+ "w|descrever": [
+  {
+   "text": "A chefe pediu para o Rafael descrever o projeto anterior em poucas palavras.",
+   "en": "The boss asked Rafael to describe his previous project in a few words.",
+   "ko": "상사는 하파에우에게 이전 프로젝트를 몇 마디로 설명해 보라고 했어요.",
+   "blank": "descrever",
+   "src": "made"
+  },
+  {
+   "text": "A Carla tentou descrever a cor do mar numa mensagem para a mãe.",
+   "en": "Carla tried to describe the color of the sea in a message to her mother.",
+   "ko": "카를라는 엄마에게 보내는 메시지에 바다 색깔을 설명해 보려 했어요.",
+   "blank": "descrever",
+   "src": "made"
   }
  ],
  "w|descrição": [
@@ -14185,6 +14377,22 @@
    "src": "made"
   }
  ],
+ "w|divorciado": [
+  {
+   "text": "O colega novo comentou que é divorciado e tem dois filhos pequenos.",
+   "en": "The new coworker mentioned that he's divorced and has two young kids.",
+   "ko": "새 동료는 이혼했고 어린 자녀가 둘 있다고 말했어요.",
+   "blank": "divorciado",
+   "src": "made"
+  },
+  {
+   "text": "A Carla conheceu um professor divorciado que passa os verões na praia.",
+   "en": "Carla met a divorced teacher who spends his summers at the beach.",
+   "ko": "카를라는 여름마다 해변에서 지내는 이혼한 선생님을 알게 됐어요.",
+   "blank": "divorciado",
+   "src": "made"
+  }
+ ],
  "w|divórcio": [
   {
    "text": "Ela disse a ele que queria o divórcio.",
@@ -14611,6 +14819,22 @@
    "blank": "droga"
   }
  ],
+ "w|duelo": [
+  {
+   "text": "A reunião virou um duelo de ideias entre o Rafael e o colega mais antigo.",
+   "en": "The meeting turned into a duel of ideas between Rafael and the most senior coworker.",
+   "ko": "회의는 하파에우와 가장 오래된 동료 사이의 아이디어 대결이 됐어요.",
+   "blank": "duelo",
+   "src": "made"
+  },
+  {
+   "text": "O festival da praia terminou com um duelo de repentistas.",
+   "en": "The beach festival ended with a duel between improvising singers.",
+   "ko": "해변 축제는 즉흥 시인들의 노래 대결로 끝났어요.",
+   "blank": "duelo",
+   "src": "made"
+  }
+ ],
  "w|duplo": [
   {
    "text": "Nós quatro saímos em um encontro duplo.",
@@ -14639,6 +14863,22 @@
    "en": "He called during lunch.",
    "ko": "점심 때 그 사람이 전화했어.",
    "blank": "durante"
+  }
+ ],
+ "w|durão": [
+  {
+   "text": "O chefe do setor tem fama de durão, mas tratou o Rafael muito bem.",
+   "en": "The department head has a reputation for being tough, but he treated Rafael very well.",
+   "ko": "부서장은 깐깐하기로 유명하지만 하파에우에게는 아주 잘해 줬어요.",
+   "blank": "durão",
+   "src": "made"
+  },
+  {
+   "text": "O salva-vidas parece durão, mas ajudou a Carla a achar a sandália perdida.",
+   "en": "The lifeguard looks tough, but he helped Carla find her lost sandal.",
+   "ko": "안전요원은 무뚝뚝해 보이지만 카를라가 잃어버린 샌들을 찾도록 도와줬어요.",
+   "blank": "durão",
+   "src": "made"
   }
  ],
  "w|durar": [
@@ -14823,6 +15063,22 @@
    "ko": "교육에 평생을 바치고 싶어요.",
    "blank": "educação",
    "src": "tatoeba:1248880/Welton en:258883/CK"
+  }
+ ],
+ "w|educado": [
+  {
+   "text": "Todos acharam o Rafael muito educado com a equipe da limpeza.",
+   "en": "Everyone found Rafael very polite to the cleaning staff.",
+   "ko": "모두들 하파에우가 청소 직원들에게 아주 예의 바르다고 생각했어요.",
+   "blank": "educado",
+   "src": "made"
+  },
+  {
+   "text": "O menino educado pediu licença antes de passar pela toalha da Carla.",
+   "en": "The polite boy said excuse me before walking past Carla's towel.",
+   "ko": "예의 바른 남자아이는 카를라의 수건 옆을 지나기 전에 실례한다고 했어요.",
+   "blank": "educado",
+   "src": "made"
   }
  ],
  "w|efeito": [
@@ -17447,6 +17703,22 @@
    "blank": "exame"
   }
  ],
+ "w|examinar": [
+  {
+   "text": "O Rafael precisa examinar os contratos antes de enviar ao cliente.",
+   "en": "Rafael needs to examine the contracts before sending them to the client.",
+   "ko": "하파에우는 고객에게 보내기 전에 계약서를 검토해야 해요.",
+   "blank": "examinar",
+   "src": "made"
+  },
+  {
+   "text": "A bióloga deixou a Carla examinar uma estrela-do-mar de perto.",
+   "en": "The biologist let Carla examine a starfish up close.",
+   "ko": "생물학자는 카를라가 불가사리를 가까이서 살펴보게 해 줬어요.",
+   "blank": "examinar",
+   "src": "made"
+  }
+ ],
  "w|exatamente": [
   {
    "text": "Era exatamente isso.",
@@ -19123,6 +19395,22 @@
    "blank": "floresta"
   }
  ],
+ "w|focar": [
+  {
+   "text": "Com tanto barulho, o Rafael usa fone para focar no trabalho.",
+   "en": "With so much noise, Rafael wears headphones to focus on his work.",
+   "ko": "너무 시끄러워서 하파에우는 일에 집중하려고 헤드폰을 써요.",
+   "blank": "focar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla quer focar no descanso e deixou o computador em casa.",
+   "en": "Carla wants to focus on resting and left her computer at home.",
+   "ko": "카를라는 쉬는 데 집중하려고 컴퓨터를 집에 두고 왔어요.",
+   "blank": "focar",
+   "src": "made"
+  }
+ ],
  "w|foco": [
   {
    "text": "Ajusta o foco do microscópio.",
@@ -19953,6 +20241,22 @@
    "src": "tatoeba:1227825/alexmarcelo en:19486/CK"
   }
  ],
+ "w|galera": [
+  {
+   "text": "A galera do escritório levou o Rafael para um happy hour na sexta.",
+   "en": "The office crew took Rafael out for happy hour on Friday.",
+   "ko": "사무실 사람들이 금요일에 하파에우를 데리고 퇴근 후 한잔하러 갔어요.",
+   "blank": "galera",
+   "src": "made"
+  },
+  {
+   "text": "A galera da pousada fez um luau na areia com violão.",
+   "en": "The crowd from the inn held a beach party on the sand with a guitar.",
+   "ko": "민박집 사람들이 기타를 들고 모래사장에서 밤 파티를 열었어요.",
+   "blank": "galera",
+   "src": "made"
+  }
+ ],
  "w|galho": [
   {
    "text": "O vento derrubou um galho grande no telhado da casa do Bruno.",
@@ -20259,6 +20563,22 @@
    "blank": "gelo"
   }
  ],
+ "w|gêmeo": [
+  {
+   "text": "O Rafael tem um irmão gêmeo, e os colegas já confundiram os dois.",
+   "en": "Rafael has a twin brother, and his coworkers have already mixed them up.",
+   "ko": "하파에우는 쌍둥이 형제가 있어서 동료들이 벌써 둘을 헷갈렸어요.",
+   "blank": "gêmeo",
+   "src": "made"
+  },
+  {
+   "text": "Os filhos gêmeos da vizinha da Carla vestem sempre a mesma sunga.",
+   "en": "The twin sons of Carla's neighbor always wear the same swim trunks.",
+   "ko": "카를라의 이웃집 쌍둥이 아들들은 늘 똑같은 수영복을 입어요.",
+   "blank": "gêmeos",
+   "src": "made"
+  }
+ ],
  "w|general": [
   {
    "text": "O general cumprimentou o grupo.",
@@ -20319,6 +20639,22 @@
    "ko": "그는 천재라고 해도 과언이 아니에요.",
    "blank": "gênio",
    "src": "tatoeba:902634/alexmarcelo en:301763/sundown"
+  }
+ ],
+ "w|genro": [
+  {
+   "text": "A chefe do Rafael disse que o genro dela também é engenheiro.",
+   "en": "Rafael's boss said that her son-in-law is also an engineer.",
+   "ko": "하파에우의 상사는 자기 사위도 엔지니어라고 했어요.",
+   "blank": "genro",
+   "src": "made"
+  },
+  {
+   "text": "O genro do pescador levou a Carla para ver os golfinhos de barco.",
+   "en": "The fisherman's son-in-law took Carla by boat to see the dolphins.",
+   "ko": "어부의 사위가 카를라를 배에 태워 돌고래를 보러 갔어요.",
+   "blank": "genro",
+   "src": "made"
   }
  ],
  "w|gente": [
@@ -21641,6 +21977,22 @@
    "src": "made"
   }
  ],
+ "w|idoso": [
+  {
+   "text": "O Rafael ajudou um idoso a entender o aplicativo do banco no balcão.",
+   "en": "Rafael helped an elderly man understand the bank app at the counter.",
+   "ko": "하파에우는 창구에서 한 어르신이 은행 앱을 이해하도록 도와드렸어요.",
+   "blank": "idoso",
+   "src": "made"
+  },
+  {
+   "text": "Um idoso da vila conta para a Carla como a praia era antes do asfalto.",
+   "en": "An elderly man from the village tells Carla what the beach was like before the paving.",
+   "ko": "마을의 한 어르신은 길이 포장되기 전 해변이 어땠는지 카를라에게 들려줘요.",
+   "blank": "idoso",
+   "src": "made"
+  }
+ ],
  "w|ignorar": [
   {
    "text": "Eu não posso ignorar mais esta situação.",
@@ -22443,6 +22795,22 @@
    "en": "There's no spot left, unfortunately.",
    "ko": "자리가 없어, 안타깝게도.",
    "blank": "infelizmente"
+  }
+ ],
+ "w|inferior": [
+  {
+   "text": "O Rafael ficou no andar inferior, perto do pessoal da contabilidade.",
+   "en": "Rafael was put on the lower floor, near the accounting staff.",
+   "ko": "하파에우는 회계팀 근처 아래층에 자리를 받았어요.",
+   "blank": "inferior",
+   "src": "made"
+  },
+  {
+   "text": "A Carla ficou no beliche inferior do quarto da pousada.",
+   "en": "Carla took the lower bunk in the inn's room.",
+   "ko": "카를라는 민박집 방 이층 침대 아래 칸을 썼어요.",
+   "blank": "inferior",
+   "src": "made"
   }
  ],
  "w|inferno": [
@@ -25755,6 +26123,22 @@
    "blank": "mamãe"
   }
  ],
+ "w|mancha": [
+  {
+   "text": "O Rafael derrubou café e ficou uma mancha na camisa nova.",
+   "en": "Rafael spilled coffee and there was a stain on his new shirt.",
+   "ko": "하파에우가 커피를 쏟아서 새 셔츠에 얼룩이 남았어요.",
+   "blank": "mancha",
+   "src": "made"
+  },
+  {
+   "text": "A Carla ficou com uma mancha branca no ombro por esquecer o protetor solar.",
+   "en": "Carla ended up with a white mark on her shoulder from forgetting sunscreen.",
+   "ko": "카를라는 선크림을 깜빡해서 어깨에 하얀 자국이 생겼어요.",
+   "blank": "mancha",
+   "src": "made"
+  }
+ ],
  "w|mandar": [
   {
    "text": "Vou mandar mensagem.",
@@ -25795,6 +26179,22 @@
    "en": "The morning flew by.",
    "ko": "아침이 순식간에 갔어.",
    "blank": "manhã"
+  }
+ ],
+ "w|mano": [
+  {
+   "text": "O colega da mesa ao lado chama todo mundo de mano, até o Rafael.",
+   "en": "The coworker at the next desk calls everyone \"bro,\" even Rafael.",
+   "ko": "옆자리 동료는 하파에우를 포함해 모두를 '형'이라고 불러요.",
+   "blank": "mano",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Carla gritou da água: vem, mano, a onda tá perfeita!",
+   "en": "Carla's brother shouted from the water: come on, bro, the wave is perfect!",
+   "ko": "카를라의 남동생이 물에서 외쳤어요. 야, 와 봐, 파도 끝내줘!",
+   "blank": "mano",
+   "src": "made"
   }
  ],
  "w|mansão": [
@@ -28179,6 +28579,22 @@
    "blank": "nascer"
   }
  ],
+ "w|nascido": [
+  {
+   "text": "O Rafael é nascido em Belém, mas mora em São Paulo desde criança.",
+   "en": "Rafael was born in Belém, but has lived in São Paulo since he was a child.",
+   "ko": "하파에우는 벨렝 태생이지만 어릴 때부터 상파울루에 살아요.",
+   "blank": "nascido",
+   "src": "made"
+  },
+  {
+   "text": "A Carla conheceu um pescador nascido e criado naquela vila.",
+   "en": "Carla met a fisherman born and raised in that village.",
+   "ko": "카를라는 그 마을에서 나고 자란 어부를 만났어요.",
+   "blank": "nascido",
+   "src": "made"
+  }
+ ],
  "w|nascimento": [
   {
    "text": "Onde está a minha certidão de nascimento?",
@@ -28549,6 +28965,22 @@
    "blank": "nervoso"
   }
  ],
+ "w|neta": [
+  {
+   "text": "A secretária tem uma neta da mesma idade do filho do Rafael.",
+   "en": "The secretary has a granddaughter the same age as Rafael's son.",
+   "ko": "비서에게는 하파에우의 아들과 동갑인 손녀가 있어요.",
+   "blank": "neta",
+   "src": "made"
+  },
+  {
+   "text": "A avó da Carla adora ver a neta pegar onda.",
+   "en": "Carla's grandmother loves watching her granddaughter catch waves.",
+   "ko": "카를라의 할머니는 손녀가 파도 타는 걸 보는 걸 좋아해요.",
+   "blank": "neta",
+   "src": "made"
+  }
+ ],
  "w|neto": [
   {
    "text": "Meu neto fala de você o tempo todo.",
@@ -28701,6 +29133,22 @@
    "ko": "우리 언니가 약혼했어요.",
    "blank": "noiva",
    "src": "tatoeba:980308/helmfer en:250117/CK"
+  }
+ ],
+ "w|noivar": [
+  {
+   "text": "O Rafael contou que vai noivar no mês que vem.",
+   "en": "Rafael said he's getting engaged next month.",
+   "ko": "하파에우는 다음 달에 약혼한다고 말했어요.",
+   "blank": "noivar",
+   "src": "made"
+  },
+  {
+   "text": "Um casal resolveu noivar ao pôr do sol, e a Carla tirou a foto.",
+   "en": "A couple decided to get engaged at sunset, and Carla took the photo.",
+   "ko": "한 커플이 노을 아래서 약혼하기로 했고 카를라가 사진을 찍어 줬어요.",
+   "blank": "noivar",
+   "src": "made"
   }
  ],
  "w|noivo": [
@@ -28953,6 +29401,22 @@
    "en": "The mistake showed up again.",
    "ko": "실수가 또 나왔어.",
    "blank": "novamente"
+  }
+ ],
+ "w|novato": [
+  {
+   "text": "Como novato, o Rafael ainda pergunta onde fica cada pasta.",
+   "en": "As the new guy, Rafael still asks where every folder is.",
+   "ko": "신입이라 하파에우는 아직 폴더가 어디 있는지 하나하나 물어봐요.",
+   "blank": "novato",
+   "src": "made"
+  },
+  {
+   "text": "Na aula de surfe, a Carla era a única novata da turma.",
+   "en": "In surf class, Carla was the only beginner in the group.",
+   "ko": "서핑 수업에서 카를라만 유일한 초보였어요.",
+   "blank": "novata",
+   "src": "made"
   }
  ],
  "w|nove": [
@@ -29923,6 +30387,22 @@
    "src": "tatoeba:8098856/iT4LL en:8098858/iT4LL"
   }
  ],
+ "w|órfão": [
+  {
+   "text": "O Rafael cresceu como órfão e foi criado pela avó no interior.",
+   "en": "Rafael grew up as an orphan and was raised by his grandmother in the countryside.",
+   "ko": "하파에우는 고아로 자라 시골에서 할머니 손에 컸어요.",
+   "blank": "órfão",
+   "src": "made"
+  },
+  {
+   "text": "Um gatinho órfão apareceu na casa de praia, e a Carla adotou.",
+   "en": "An orphaned kitten showed up at the beach house, and Carla adopted it.",
+   "ko": "고아가 된 새끼 고양이가 바닷가 집에 나타나서 카를라가 입양했어요.",
+   "blank": "órfão",
+   "src": "made"
+  }
+ ],
  "w|organização": [
   {
    "text": "Que tipo de pesquisa faz a organização?",
@@ -30271,6 +30751,22 @@
    "en": "Call the next patient.",
    "ko": "다음 환자 불러.",
    "blank": "paciente"
+  }
+ ],
+ "w|pacífico": [
+  {
+   "text": "O Rafael tem um jeito pacífico e acalma as discussões da equipe.",
+   "en": "Rafael has a peaceful manner and calms the team's arguments.",
+   "ko": "하파에우는 성격이 온화해서 팀의 언쟁을 가라앉혀요.",
+   "blank": "pacífico",
+   "src": "made"
+  },
+  {
+   "text": "De manhã cedo, o mar estava tão pacífico que parecia um lago.",
+   "en": "Early in the morning, the sea was so calm it looked like a lake.",
+   "ko": "이른 아침 바다는 호수처럼 잔잔했어요.",
+   "blank": "pacífico",
+   "src": "made"
   }
  ],
  "w|pacote": [
@@ -31725,6 +32221,22 @@
    "src": "tatoeba:4590054/isaacandrade en:21865/Swift"
   }
  ],
+ "w|permanente": [
+  {
+   "text": "Depois da experiência, o Rafael espera conseguir um contrato permanente.",
+   "en": "After the trial period, Rafael hopes to get a permanent contract.",
+   "ko": "수습 기간이 끝나면 하파에우는 정규직 계약을 따내고 싶어 해요.",
+   "blank": "permanente",
+   "src": "made"
+  },
+  {
+   "text": "A Carla fez uma tatuagem permanente de uma onda no tornozelo.",
+   "en": "Carla got a permanent tattoo of a wave on her ankle.",
+   "ko": "카를라는 발목에 파도 모양 영구 문신을 새겼어요.",
+   "blank": "permanente",
+   "src": "made"
+  }
+ ],
  "w|permissão": [
   {
    "text": "Por que vocês não pediram permissão?",
@@ -32151,6 +32663,22 @@
    "ko": "제발 살려 주세요!",
    "blank": "piedade",
    "src": "tatoeba:1236740/alexmarcelo en:1640717/kerbear407"
+  }
+ ],
+ "w|pilha": [
+  {
+   "text": "Uma pilha de documentos esperava o Rafael na mesa nova.",
+   "en": "A pile of documents was waiting for Rafael on his new desk.",
+   "ko": "서류 더미가 하파에우의 새 책상 위에서 기다리고 있었어요.",
+   "blank": "pilha",
+   "src": "made"
+  },
+  {
+   "text": "A lanterna da Carla ficou sem pilha no meio da trilha da praia.",
+   "en": "Carla's flashlight ran out of battery in the middle of the beach trail.",
+   "ko": "해변 산책로 한가운데서 카를라의 손전등 건전지가 다 됐어요.",
+   "blank": "pilha",
+   "src": "made"
   }
  ],
  "w|piloto": [
@@ -34392,6 +34920,22 @@
    "en": "Can we go on with the meeting?",
    "ko": "회의 계속 진행해도 될까요?",
    "blank": "prosseguir",
+   "src": "made"
+  }
+ ],
+ "w|prostituta": [
+  {
+   "text": "O Rafael está lendo um romance histórico sobre uma prostituta do Rio antigo.",
+   "en": "Rafael is reading a historical novel about a prostitute in old Rio.",
+   "ko": "하파에우는 옛 리우의 한 매춘부를 다룬 역사 소설을 읽고 있어요.",
+   "blank": "prostituta",
+   "src": "made"
+  },
+  {
+   "text": "No museu da vila, a Carla leu sobre uma prostituta que virou heroína local no século passado.",
+   "en": "At the village museum, Carla read about a prostitute who became a local heroine in the last century.",
+   "ko": "마을 박물관에서 카를라는 지난 세기에 지역 영웅이 된 한 매춘부에 대해 읽었어요.",
+   "blank": "prostituta",
    "src": "made"
   }
  ],
@@ -39241,6 +39785,22 @@
    "src": "tatoeba:6359817/anthrax26 en:6264902/CK"
   }
  ],
+ "w|sobrenome": [
+  {
+   "text": "Ninguém consegue pronunciar o sobrenome do Rafael na primeira tentativa.",
+   "en": "Nobody can pronounce Rafael's last name on the first try.",
+   "ko": "하파에우의 성을 한 번에 제대로 발음하는 사람이 없어요.",
+   "blank": "sobrenome",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu o nome e o sobrenome na areia antes da onda chegar.",
+   "en": "Carla wrote her first and last name in the sand before the wave came.",
+   "ko": "카를라는 파도가 오기 전에 모래 위에 이름과 성을 썼어요.",
+   "blank": "sobrenome",
+   "src": "made"
+  }
+ ],
  "w|sobrevivência": [
   {
    "text": "O Rafael disse que a sobrevivência do filhote dependia das próximas horas.",
@@ -39285,6 +39845,22 @@
    "en": "The plant survived the heat.",
    "ko": "식물이 더위를 견뎠어.",
    "blank": "sobreviveu"
+  }
+ ],
+ "w|sobrinha": [
+  {
+   "text": "O Rafael mostrou aos colegas uma foto da sobrinha recém-nascida.",
+   "en": "Rafael showed his coworkers a photo of his newborn niece.",
+   "ko": "하파에우는 동료들에게 갓 태어난 조카딸 사진을 보여 줬어요.",
+   "blank": "sobrinha",
+   "src": "made"
+  },
+  {
+   "text": "A Carla ensinou a sobrinha a fazer castelos de areia.",
+   "en": "Carla taught her niece how to make sandcastles.",
+   "ko": "카를라는 조카딸에게 모래성 쌓는 법을 가르쳐 줬어요.",
+   "blank": "sobrinha",
+   "src": "made"
   }
  ],
  "w|sobrinho": [
@@ -39425,6 +40001,38 @@
    "ko": "인생은 왜 이렇게 괴로움으로 가득할까요?",
    "blank": "sofrimento",
    "src": "tatoeba:2508297/Matheus en:1748/Swift"
+  }
+ ],
+ "w|sogra": [
+  {
+   "text": "No primeiro dia, o Rafael ganhou uma marmita feita pela sogra.",
+   "en": "On his first day, Rafael got a packed lunch made by his mother-in-law.",
+   "ko": "첫날 하파에우는 장모님이 싸 주신 도시락을 받았어요.",
+   "blank": "sogra",
+   "src": "made"
+  },
+  {
+   "text": "A sogra da Carla prepara uma moqueca famosa na vila de pescadores.",
+   "en": "Carla's mother-in-law makes a famous moqueca in the fishing village.",
+   "ko": "카를라의 시어머니는 어촌 마을에서 유명한 모케카를 만들어요.",
+   "blank": "sogra",
+   "src": "made"
+  }
+ ],
+ "w|sogro": [
+  {
+   "text": "O Rafael contou aos colegas que o sogro dele também trabalhou nessa empresa.",
+   "en": "Rafael told his coworkers that his father-in-law also worked at this company.",
+   "ko": "하파에우는 장인어른도 이 회사에서 일했었다고 동료들에게 말했어요.",
+   "blank": "sogro",
+   "src": "made"
+  },
+  {
+   "text": "O sogro da Carla tem uma barraca de coco na beira da praia.",
+   "en": "Carla's father-in-law has a coconut stand by the beach.",
+   "ko": "카를라의 시아버지는 해변에서 코코넛 노점을 해요.",
+   "blank": "sogro",
+   "src": "made"
   }
  ],
  "w|sol": [
@@ -44261,6 +44869,22 @@
    "src": "tatoeba:4925514/ToinhoAlam en:4501144/CK"
   }
  ],
+ "w|viúvo": [
+  {
+   "text": "O senhor do almoxarifado é viúvo e adora conversar com o Rafael.",
+   "en": "The man in the stockroom is a widower and loves chatting with Rafael.",
+   "ko": "창고 담당 아저씨는 홀아비인데 하파에우와 이야기하는 걸 좋아해요.",
+   "blank": "viúvo",
+   "src": "made"
+  },
+  {
+   "text": "O dono da pousada é viúvo e cuida de tudo sozinho.",
+   "en": "The owner of the inn is a widower and takes care of everything alone.",
+   "ko": "민박집 주인은 홀아비라 모든 걸 혼자 꾸려요.",
+   "blank": "viúvo",
+   "src": "made"
+  }
+ ],
  "w|viver": [
   {
    "text": "Quero viver tranquilo.",
@@ -44287,6 +44911,22 @@
    "en": "He came out of the accident alive.",
    "ko": "그 사람은 사고에서 살아 나왔어.",
    "blank": "vivo"
+  }
+ ],
+ "w|vizinha": [
+  {
+   "text": "Por coincidência, a colega nova é vizinha do Rafael no mesmo prédio.",
+   "en": "By coincidence, the new coworker is Rafael's neighbor in the same building.",
+   "ko": "우연히도 새 동료는 같은 건물에 사는 하파에우의 이웃이에요.",
+   "blank": "vizinha",
+   "src": "made"
+  },
+  {
+   "text": "A vizinha da casa de praia sempre traz peixe fresco para a Carla.",
+   "en": "The neighbor at the beach house always brings Carla fresh fish.",
+   "ko": "바닷가 집 이웃 아주머니는 늘 카를라에게 싱싱한 생선을 가져다줘요.",
+   "blank": "vizinha",
+   "src": "made"
   }
  ],
  "w|vizinhança": [
