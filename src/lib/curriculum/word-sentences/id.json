@@ -955,6 +955,22 @@
    "blank": "aman"
   }
  ],
+ "w|amandemen": [
+  {
+   "text": "Penulis naskah membuat amandemen kecil pada dialog setelah latihan pertama.",
+   "en": "The scriptwriter made a small amendment to the dialogue after the first rehearsal.",
+   "ko": "극작가는 첫 연습 뒤 대사를 조금 고쳤어요.",
+   "blank": "amandemen",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membaca artikel tentang amandemen aturan bagasi di kereta jarak jauh.",
+   "en": "Ayu read an article about an amendment to the luggage rules on long-distance trains.",
+   "ko": "아유는 장거리 열차 짐 규정 개정에 관한 기사를 읽었어요.",
+   "blank": "amandemen",
+   "src": "made"
+  }
+ ],
  "w|amarah": [
   {
    "text": "Rudi mengakui amarah masa mudanya sering membuat Bayu kesal.",
@@ -1319,6 +1335,22 @@
    "en": "Don't approach stray dogs.",
    "ko": "들개한테 다가가지 마.",
    "blank": "anjing"
+  }
+ ],
+ "w|anomali": [
+  {
+   "text": "Kursi kosong di barisan depan pada malam pembukaan adalah anomali bagi teater sepopuler itu.",
+   "en": "Empty seats in the front row on opening night were an anomaly for such a popular theater.",
+   "ko": "개막일 밤 앞줄이 빈 것은 그렇게 인기 있는 극장으로선 이상한 일이었어요.",
+   "blank": "anomali",
+   "src": "made"
+  },
+  {
+   "text": "Kereta yang tiba tepat waktu hari itu terasa seperti anomali bagi Ayu.",
+   "en": "The train arriving on time that day felt like an anomaly to Ayu.",
+   "ko": "그날 열차가 제시간에 도착한 게 아유에겐 이상한 일처럼 느껴졌어요.",
+   "blank": "anomali",
+   "src": "made"
   }
  ],
  "w|antara": [
@@ -9903,6 +9935,22 @@
    "src": "made"
   }
  ],
+ "w|berwajah": [
+  {
+   "text": "Eko harus berwajah garang selama dua babak sebagai prajurit penjaga gerbang.",
+   "en": "Eko has to wear a fierce face for two acts as a soldier guarding the gate.",
+   "ko": "에코는 성문을 지키는 병사로 두 막 내내 사나운 얼굴을 해야 해요.",
+   "blank": "berwajah",
+   "src": "made"
+  },
+  {
+   "text": "Petugas restorasi yang berwajah ramah menawarkan teh hangat kepada Ayu.",
+   "en": "The dining-car attendant with a friendly face offered Ayu some warm tea.",
+   "ko": "다정한 얼굴의 식당칸 승무원이 아유에게 따뜻한 차를 권했어요.",
+   "blank": "berwajah",
+   "src": "made"
+  }
+ ],
  "w|berwarna": [
   {
    "text": "Bunga itu berwarna merah muda.",
@@ -10498,6 +10546,22 @@
    "en": "Rina has to sort out documents at the travel agency for next week's business trip.",
    "ko": "리나는 다음 주 출장 때문에 여행사에서 서류를 처리해야 해요.",
    "blank": "biro",
+   "src": "made"
+  }
+ ],
+ "w|birokrasi": [
+  {
+   "text": "Eko mengeluh karena izin pentas tertunda oleh birokrasi yang berbelit-belit.",
+   "en": "Eko complained because the performance permit was delayed by convoluted bureaucracy.",
+   "ko": "에코는 복잡한 관료 절차 때문에 공연 허가가 늦어져서 불평했어요.",
+   "blank": "birokrasi",
+   "src": "made"
+  },
+  {
+   "text": "Ayu kesal karena harus melewati birokrasi panjang hanya untuk mengembalikan tiket.",
+   "en": "Ayu was annoyed at having to go through long bureaucracy just to return a ticket.",
+   "ko": "아유는 표 하나 환불하는 데도 긴 관료 절차를 거쳐야 해서 짜증이 났어요.",
+   "blank": "birokrasi",
    "src": "made"
   }
  ],
@@ -13483,6 +13547,22 @@
    "src": "made"
   }
  ],
+ "w|desas-desus": [
+  {
+   "text": "Di belakang panggung beredar desas-desus bahwa pemeran utama akan pindah ke film.",
+   "en": "Rumors went around backstage that the lead actor would move to film.",
+   "ko": "무대 뒤에서는 주연 배우가 영화로 옮긴다는 소문이 돌았어요.",
+   "blank": "desas-desus",
+   "src": "made"
+  },
+  {
+   "text": "Para penumpang membicarakan desas-desus tentang kenaikan harga tiket kereta.",
+   "en": "The passengers talked about rumors of a train fare increase.",
+   "ko": "승객들은 기차표 값이 오른다는 소문을 이야기했어요.",
+   "blank": "desas-desus",
+   "src": "made"
+  }
+ ],
  "w|desember": [
   {
    "text": "Hujan paling deras biasanya terjadi pada bulan Desember.",
@@ -14271,6 +14351,22 @@
    "blank": "Dompet"
   }
  ],
+ "w|donasi": [
+  {
+   "text": "Teater kecil itu bertahan berkat donasi dari para penonton setia.",
+   "en": "The small theater survives thanks to donations from loyal audience members.",
+   "ko": "그 작은 극장은 충실한 관객들의 기부 덕분에 버티고 있어요.",
+   "blank": "donasi",
+   "src": "made"
+  },
+  {
+   "text": "Stasiun itu menyediakan kotak donasi untuk korban banjir.",
+   "en": "The station provides a donation box for flood victims.",
+   "ko": "그 역에는 홍수 피해자를 위한 기부함이 있어요.",
+   "blank": "donasi",
+   "src": "made"
+  }
+ ],
  "w|donat": [
   {
    "text": "Andi menaburkan gula halus di atas donat yang masih hangat.",
@@ -14582,6 +14678,22 @@
    "en": "The film tells the story of a young monk tempted by worldly pleasures.",
    "ko": "그 영화는 세속의 즐거움에 끌리는 젊은 승려 이야기예요.",
    "blank": "duniawi",
+   "src": "made"
+  }
+ ],
+ "w|dupa": [
+  {
+   "text": "Asap dupa memenuhi panggung dalam adegan upacara di candi.",
+   "en": "Incense smoke filled the stage in the temple ceremony scene.",
+   "ko": "사원 의식 장면에서 향 연기가 무대를 가득 채웠어요.",
+   "blank": "dupa",
+   "src": "made"
+  },
+  {
+   "text": "Dari jendela, Ayu mencium wangi dupa dari pura di dekat rel.",
+   "en": "From the window, Ayu smelled incense from a temple near the tracks.",
+   "ko": "아유는 창문으로 선로 근처 사원에서 나는 향 냄새를 맡았어요.",
+   "blank": "dupa",
    "src": "made"
   }
  ],
@@ -17561,6 +17673,22 @@
    "blank": "hai"
   }
  ],
+ "w|haji": [
+  {
+   "text": "Kakek Eko yang baru pulang haji datang menonton dengan mengenakan peci putih.",
+   "en": "Eko's grandfather, just back from the hajj, came to watch wearing a white cap.",
+   "ko": "막 성지 순례에서 돌아온 에코의 할아버지가 흰 모자를 쓰고 공연을 보러 왔어요.",
+   "blank": "haji",
+   "src": "made"
+  },
+  {
+   "text": "Ayu duduk di samping rombongan jemaah haji yang akan menuju bandara.",
+   "en": "Ayu sat next to a group of hajj pilgrims heading to the airport.",
+   "ko": "아유는 공항으로 가는 성지 순례단 옆에 앉았어요.",
+   "blank": "haji",
+   "src": "made"
+  }
+ ],
  "w|hak": [
   {
    "text": "Setiap orang punya hak.",
@@ -19062,6 +19190,22 @@
    "en": "That small museum is run by an independent foundation without government funding.",
    "ko": "그 작은 박물관은 정부 지원 없이 독립 재단이 운영해요.",
    "blank": "independen",
+   "src": "made"
+  }
+ ],
+ "w|indikasi": [
+  {
+   "text": "Tiket yang habis dalam sehari menjadi indikasi bahwa pentas itu akan sukses.",
+   "en": "Tickets selling out in a day were an indication that the show would be a success.",
+   "ko": "표가 하루 만에 매진된 것은 그 공연이 성공할 거라는 신호였어요.",
+   "blank": "indikasi",
+   "src": "made"
+  },
+  {
+   "text": "Getaran aneh di gerbong bisa menjadi indikasi ada masalah pada rel.",
+   "en": "Strange shaking in the carriage can be an indication of a problem with the tracks.",
+   "ko": "객차가 이상하게 흔들리는 건 선로에 문제가 있다는 신호일 수 있어요.",
+   "blank": "indikasi",
    "src": "made"
   }
  ],
@@ -22021,6 +22165,22 @@
    "src": "made"
   }
  ],
+ "w|kanvas": [
+  {
+   "text": "Latar belakang panggung dilukis di atas kanvas raksasa oleh siswa sekolah seni.",
+   "en": "The stage backdrop was painted on a giant canvas by art school students.",
+   "ko": "무대 배경은 미술학교 학생들이 거대한 캔버스에 그렸어요.",
+   "blank": "kanvas",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pelukis di gerbong sebelah menggambar pemandangan di atas kanvas kecil.",
+   "en": "A painter in the next carriage drew the scenery on a small canvas.",
+   "ko": "옆 칸의 한 화가가 작은 캔버스에 풍경을 그렸어요.",
+   "blank": "kanvas",
+   "src": "made"
+  }
+ ],
  "w|kaos": [
   {
    "text": "Toko itu memberi bonus kaos gratis untuk setiap pembelian di atas dua ratus ribu.",
@@ -24582,6 +24742,22 @@
    "en": "Siti's child says that one day she also wants to act in films like her mother.",
    "ko": "시티의 아이는 나중에 엄마처럼 영화에 나오고 싶다고 해요.",
    "blank": "kelak",
+   "src": "made"
+  }
+ ],
+ "w|kelam": [
+  {
+   "text": "Lampu panggung dibuat redup untuk menggambarkan masa kelam dalam sejarah desa itu.",
+   "en": "The stage lights were dimmed to portray a dark period in the village's history.",
+   "ko": "그 마을 역사의 어두운 시절을 나타내려고 무대 조명을 어둡게 했어요.",
+   "blank": "kelam",
+   "src": "made"
+  },
+  {
+   "text": "Langit tampak kelam ketika kereta memasuki daerah pegunungan.",
+   "en": "The sky looked gloomy when the train entered the mountain area.",
+   "ko": "열차가 산간 지역에 들어서자 하늘이 어두워 보였어요.",
+   "blank": "kelam",
    "src": "made"
   }
  ],
@@ -31917,6 +32093,22 @@
    "blank": "majalah"
   }
  ],
+ "w|majelis": [
+  {
+   "text": "Adegan rapat majelis kerajaan dibuat panjang agar penonton merasakan ketegangannya.",
+   "en": "The royal council meeting scene was made long so the audience would feel the tension.",
+   "ko": "왕실 회의 장면은 관객이 긴장감을 느끼도록 길게 만들었어요.",
+   "blank": "majelis",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membaca berita tentang sidang majelis yang membahas tarif angkutan umum.",
+   "en": "Ayu read news about an assembly session discussing public transport fares.",
+   "ko": "아유는 대중교통 요금을 논의하는 의회 회의 기사를 읽었어요.",
+   "blank": "majelis",
+   "src": "made"
+  }
+ ],
  "w|majikan": [
   {
    "text": "Ibu Bayu dulu bekerja sebagai pembantu, dan majikannya sangat baik.",
@@ -35821,6 +36013,22 @@
    "src": "made"
   }
  ],
+ "w|membina": [
+  {
+   "text": "Sutradara teater itu sudah lama membina aktor-aktor muda dari kampung sekitar.",
+   "en": "The theater director has long been nurturing young actors from the surrounding villages.",
+   "ko": "그 연극 연출가는 오래전부터 주변 마을의 젊은 배우들을 키워 왔어요.",
+   "blank": "membina",
+   "src": "made"
+  },
+  {
+   "text": "Kondektur kereta itu senang membina anak-anak magang yang baru bekerja.",
+   "en": "The train conductor enjoys mentoring the new trainees.",
+   "ko": "그 열차 차장은 새로 일하는 수습생들을 가르치는 걸 좋아해요.",
+   "blank": "membina",
+   "src": "made"
+  }
+ ],
  "w|membingungkan": [
   {
    "text": "Petunjuk itu membingungkan banyak peserta.",
@@ -37219,6 +37427,22 @@
    "src": "made"
   }
  ],
+ "w|memperbudak": [
+  {
+   "text": "Drama malam ini bercerita tentang tuan tanah yang memperbudak para petani.",
+   "en": "Tonight's play is about a landlord who enslaves the farmers.",
+   "ko": "오늘 밤 연극은 농민들을 노예처럼 부리는 지주 이야기예요.",
+   "blank": "memperbudak",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membaca novel sejarah tentang kerajaan yang memperbudak penduduk pulau.",
+   "en": "Ayu read a historical novel about a kingdom that enslaved the island's people.",
+   "ko": "아유는 섬 주민들을 노예로 삼은 왕국에 관한 역사 소설을 읽었어요.",
+   "blank": "memperbudak",
+   "src": "made"
+  }
+ ],
  "w|mempercayai": [
   {
    "text": "Aku mempercayai kata-katanya.",
@@ -38017,6 +38241,22 @@
    "en": "Please turn the radio volume a little.",
    "ko": "라디오 볼륨을 조금 돌려 줘.",
    "blank": "memutar"
+  }
+ ],
+ "w|memutilasi": [
+  {
+   "text": "Kritikus menulis bahwa sutradara baru itu memutilasi naskah klasik sampai kehilangan maknanya.",
+   "en": "The critic wrote that the new director butchered the classic script until it lost its meaning.",
+   "ko": "평론가는 새 연출가가 고전 대본을 마구 잘라 내서 뜻을 잃게 했다고 썼어요.",
+   "blank": "memutilasi",
+   "src": "made"
+  },
+  {
+   "text": "Penumpang di depan Ayu membaca berita tentang polisi yang menangkap pelaku yang memutilasi korbannya.",
+   "en": "The passenger in front of Ayu was reading news about police arresting a suspect who had dismembered his victim.",
+   "ko": "아유 앞자리 승객은 피해자를 토막 낸 범인을 경찰이 잡았다는 뉴스를 읽고 있었어요.",
+   "blank": "memutilasi",
+   "src": "made"
   }
  ],
  "w|memutus": [
@@ -39279,6 +39519,22 @@
    "en": "Kidnapping people is a serious crime.",
    "ko": "사람을 납치하는 것은 중대한 범죄야.",
    "blank": "Menculik"
+  }
+ ],
+ "w|mencumbu": [
+  {
+   "text": "Dalam adegan romantis itu, sang pangeran mencumbu putri dengan puisi dan bunga mawar.",
+   "en": "In that romantic scene, the prince wooed the princess with poems and roses.",
+   "ko": "그 낭만적인 장면에서 왕자는 시와 장미로 공주에게 사랑을 속삭였어요.",
+   "blank": "mencumbu",
+   "src": "made"
+  },
+  {
+   "text": "Di gerbong sebelah, seorang pemuda mencumbu kekasihnya dengan rayuan sampai penumpang lain tersenyum.",
+   "en": "In the next carriage, a young man sweet-talked his girlfriend until the other passengers smiled.",
+   "ko": "옆 칸에서 한 청년이 여자 친구에게 달콤한 말을 속삭여서 다른 승객들이 웃었어요.",
+   "blank": "mencumbu",
+   "src": "made"
   }
  ],
  "w|mencuri": [
@@ -41980,6 +42236,22 @@
    "en": "Putri found it hard to express her relief after her plane landed safely.",
    "ko": "비행기가 무사히 착륙하자 푸트리는 안도감을 말로 표현하기 어려웠어요.",
    "blank": "mengekspresikan",
+   "src": "made"
+  }
+ ],
+ "w|mengelabui": [
+  {
+   "text": "Dalam lakon itu, Eko berperan sebagai pedagang licik yang mengelabui raja.",
+   "en": "In the play, Eko plays a cunning merchant who tricks the king.",
+   "ko": "그 연극에서 에코는 왕을 속이는 교활한 상인 역을 맡았어요.",
+   "blank": "mengelabui",
+   "src": "made"
+  },
+  {
+   "text": "Seorang calo mencoba mengelabui Ayu dengan menjual tiket palsu di stasiun.",
+   "en": "A scalper tried to trick Ayu by selling her a fake ticket at the station.",
+   "ko": "한 암표상이 역에서 가짜 표를 팔아 아유를 속이려 했어요.",
+   "blank": "mengelabui",
    "src": "made"
   }
  ],
@@ -45759,6 +46031,22 @@
    "src": "made"
   }
  ],
+ "w|menjepit": [
+  {
+   "text": "Eko menjepit naskahnya dengan klip supaya halamannya tidak tercecer.",
+   "en": "Eko clipped his script together so the pages wouldn't scatter.",
+   "ko": "에코는 대본 쪽이 흩어지지 않게 클립으로 집었어요.",
+   "blank": "menjepit",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menjepit tiketnya di sela buku agar tidak hilang.",
+   "en": "Ayu tucked her ticket between the pages of her book so it wouldn't get lost.",
+   "ko": "아유는 표를 잃어버리지 않게 책 사이에 끼웠어요.",
+   "blank": "menjepit",
+   "src": "made"
+  }
+ ],
  "w|menjerit": [
   {
    "text": "Anak itu menjerit ketika melihat ular.",
@@ -48291,6 +48579,22 @@
    "src": "made"
   }
  ],
+ "w|menyusut": [
+  {
+   "text": "Jumlah penonton teater itu sempat menyusut ketika harga tiket naik.",
+   "en": "The theater's audience numbers shrank for a while when ticket prices went up.",
+   "ko": "표값이 오르자 그 극장 관객 수가 한동안 줄었어요.",
+   "blank": "menyusut",
+   "src": "made"
+  },
+  {
+   "text": "Air di sungai yang dilewati kereta sudah menyusut karena kemarau panjang.",
+   "en": "The water in the river the train passed had shrunk because of the long dry season.",
+   "ko": "긴 가뭄 때문에 열차가 지나는 강의 물이 줄어 있었어요.",
+   "blank": "menyusut",
+   "src": "made"
+  }
+ ],
  "w|meracuni": [
   {
    "text": "Menurut berita, pabrik di kota lain ditutup karena limbahnya meracuni sungai.",
@@ -48532,6 +48836,22 @@
    "en": "The idea of making her own app seems to have possessed Rina since university.",
    "ko": "자기만의 앱을 만들겠다는 생각이 대학 때부터 리나를 사로잡은 것 같아요.",
    "blank": "merasuki",
+   "src": "made"
+  }
+ ],
+ "w|meratakan": [
+  {
+   "text": "Petugas panggung meratakan pasir di lantai sebelum adegan gurun dimulai.",
+   "en": "The stagehand leveled the sand on the floor before the desert scene began.",
+   "ko": "무대 담당은 사막 장면이 시작되기 전에 바닥의 모래를 고르게 폈어요.",
+   "blank": "meratakan",
+   "src": "made"
+  },
+  {
+   "text": "Dari jendela, Ayu melihat alat berat yang sedang meratakan tanah untuk jalur baru.",
+   "en": "From the window, Ayu saw heavy machinery leveling the ground for a new line.",
+   "ko": "아유는 창밖으로 새 노선을 위해 땅을 고르는 중장비를 봤어요.",
+   "blank": "meratakan",
    "src": "made"
   }
  ],
@@ -48856,6 +49176,22 @@
    "en": "Wati wants to renovate the roof before the next rainy season.",
    "ko": "와티는 다음 우기 전에 지붕을 고치고 싶어 해요.",
    "blank": "merenovasi",
+   "src": "made"
+  }
+ ],
+ "w|merenungkan": [
+  {
+   "text": "Setelah pertunjukan, Eko duduk sendirian di panggung sambil merenungkan perannya.",
+   "en": "After the show, Eko sat alone on the stage reflecting on his role.",
+   "ko": "공연이 끝난 뒤 에코는 무대에 혼자 앉아 자기 배역을 곱씹었어요.",
+   "blank": "merenungkan",
+   "src": "made"
+  },
+  {
+   "text": "Sambil memandang sawah dari jendela, Ayu merenungkan keputusannya pindah kota.",
+   "en": "Looking at the rice fields from the window, Ayu reflected on her decision to move cities.",
+   "ko": "창밖 논을 바라보며 아유는 이사하기로 한 결정을 곰곰이 생각했어요.",
+   "blank": "merenungkan",
    "src": "made"
   }
  ],
@@ -51857,6 +52193,22 @@
    "src": "made"
   }
  ],
+ "w|oposisi": [
+  {
+   "text": "Dalam drama politik itu, Eko memerankan tokoh oposisi yang selalu membantah perdana menteri.",
+   "en": "In the political drama, Eko plays an opposition figure who always argues against the prime minister.",
+   "ko": "그 정치극에서 에코는 늘 총리에게 반박하는 야당 인물을 연기해요.",
+   "blank": "oposisi",
+   "src": "made"
+  },
+  {
+   "text": "Dua penumpang berdebat seru tentang partai oposisi yang baru menang pemilu.",
+   "en": "Two passengers argued heatedly about the opposition party that had just won the election.",
+   "ko": "두 승객이 막 선거에서 이긴 야당을 두고 열띤 논쟁을 벌였어요.",
+   "blank": "oposisi",
+   "src": "made"
+  }
+ ],
  "w|optimis": [
   {
    "text": "Ibu tetap optimis bahwa Rudi dan kakaknya akan berbaikan sebelum lebaran.",
@@ -52389,6 +52741,22 @@
    "en": "Forcing entry damaged the door.",
    "ko": "억지로 들어가다 문이 부서졌어.",
    "blank": "Paksa"
+  }
+ ],
+ "w|paksaan": [
+  {
+   "text": "Eko ikut drama ini atas kemauannya sendiri, bukan karena paksaan orang tua.",
+   "en": "Eko joined this play of his own free will, not because his parents forced him.",
+   "ko": "에코는 부모님의 강요가 아니라 스스로 원해서 이 연극에 참여했어요.",
+   "blank": "paksaan",
+   "src": "made"
+  },
+  {
+   "text": "Ayu memilih naik kereta tanpa paksaan siapa pun, karena ia memang suka perjalanan panjang.",
+   "en": "Ayu chose to take the train without anyone forcing her, because she really likes long journeys.",
+   "ko": "아유는 누가 시켜서가 아니라 긴 여행을 좋아해서 기차를 골랐어요.",
+   "blank": "paksaan",
+   "src": "made"
   }
  ],
  "w|paku": [
@@ -53463,6 +53831,22 @@
    "src": "made"
   }
  ],
+ "w|pedoman": [
+  {
+   "text": "Setiap aktor baru menerima buku pedoman tentang aturan di belakang panggung.",
+   "en": "Every new actor receives a guidebook on backstage rules.",
+   "ko": "새 배우는 모두 무대 뒤 규칙을 담은 지침서를 받아요.",
+   "blank": "pedoman",
+   "src": "made"
+  },
+  {
+   "text": "Ayu membaca pedoman keselamatan yang ditempel di dinding gerbong.",
+   "en": "Ayu read the safety guidelines posted on the carriage wall.",
+   "ko": "아유는 객차 벽에 붙은 안전 수칙을 읽었어요.",
+   "blank": "pedoman",
+   "src": "made"
+  }
+ ],
  "w|peduli": [
   {
    "text": "Dia tidak peduli sama sekali.",
@@ -53648,6 +54032,22 @@
    "en": "Dewi uses a tracking app to monitor packages sent to clients.",
    "ko": "디위는 고객에게 보낸 택배를 확인하려고 배송 추적 앱을 써요.",
    "blank": "pelacakan",
+   "src": "made"
+  }
+ ],
+ "w|pelacuran": [
+  {
+   "text": "Naskah lama itu mengkritik pelacuran anak di kota pelabuhan pada masa kolonial.",
+   "en": "That old script criticizes child prostitution in port cities during the colonial era.",
+   "ko": "그 옛 대본은 식민지 시대 항구 도시의 아동 성매매를 비판해요.",
+   "blank": "pelacuran",
+   "src": "made"
+  },
+  {
+   "text": "Ayu mendengar siaran radio tentang upaya pemerintah memberantas pelacuran di kota besar.",
+   "en": "Ayu heard a radio broadcast about the government's efforts to stamp out prostitution in big cities.",
+   "ko": "아유는 대도시 성매매를 뿌리 뽑으려는 정부 노력에 관한 라디오 방송을 들었어요.",
+   "blank": "pelacuran",
    "src": "made"
   }
  ],
@@ -55465,6 +55865,38 @@
    "src": "made"
   }
  ],
+ "w|pemusnah": [
+  {
+   "text": "Dalam drama fiksi ilmiah itu, para ilmuwan berlomba menghentikan senjata pemusnah dari luar angkasa.",
+   "en": "In that science-fiction play, the scientists race to stop a weapon of destruction from outer space.",
+   "ko": "그 공상 과학 연극에서 과학자들은 우주에서 온 파괴 무기를 막으려고 서둘러요.",
+   "blank": "pemusnah",
+   "src": "made"
+  },
+  {
+   "text": "Di stasiun, Ayu melihat poster film tentang senjata pemusnah massal.",
+   "en": "At the station, Ayu saw a poster for a film about weapons of mass destruction.",
+   "ko": "아유는 역에서 대량 살상 무기에 관한 영화 포스터를 봤어요.",
+   "blank": "pemusnah",
+   "src": "made"
+  }
+ ],
+ "w|pemusnahan": [
+  {
+   "text": "Babak kedua menggambarkan pemusnahan kampung oleh pasukan penjajah.",
+   "en": "The second act depicts the destruction of a village by colonial troops.",
+   "ko": "이막은 침략군이 마을을 없애 버리는 장면을 그려요.",
+   "blank": "pemusnahan",
+   "src": "made"
+  },
+  {
+   "text": "Kereta melewati pabrik tempat pemusnahan barang selundupan dilakukan setiap tahun.",
+   "en": "The train passed the factory where smuggled goods are destroyed every year.",
+   "ko": "열차는 해마다 밀수품을 폐기하는 공장 옆을 지나갔어요.",
+   "blank": "pemusnahan",
+   "src": "made"
+  }
+ ],
  "w|pena": [
   {
    "text": "Dia menulis catatan dengan pena biru.",
@@ -56295,6 +56727,22 @@
    "src": "made"
   }
  ],
+ "w|penegakan": [
+  {
+   "text": "Drama itu menunjukkan betapa sulitnya penegakan hukum di desa terpencil.",
+   "en": "The play shows how hard law enforcement is in a remote village.",
+   "ko": "그 연극은 외딴 마을에서 법을 집행하기가 얼마나 어려운지 보여 줘요.",
+   "blank": "penegakan",
+   "src": "made"
+  },
+  {
+   "text": "Petugas stasiun meningkatkan penegakan aturan dilarang merokok di peron.",
+   "en": "Station staff stepped up enforcement of the no-smoking rule on the platform.",
+   "ko": "역무원들은 승강장 금연 규칙 단속을 강화했어요.",
+   "blank": "penegakan",
+   "src": "made"
+  }
+ ],
  "w|peneliti": [
   {
    "text": "Beberapa peneliti dari kampus datang ke lokasi untuk menguji kekuatan beton.",
@@ -56675,6 +57123,22 @@
    "src": "made"
   }
  ],
+ "w|penganiayaan": [
+  {
+   "text": "Drama itu diangkat dari berita penganiayaan pekerja rumah tangga yang menghebohkan kota.",
+   "en": "The play was adapted from a news story about the abuse of a domestic worker that shocked the city.",
+   "ko": "그 연극은 도시를 떠들썩하게 한 가사 노동자 학대 기사를 바탕으로 했어요.",
+   "blank": "penganiayaan",
+   "src": "made"
+  },
+  {
+   "text": "Berita di layar kereta melaporkan kasus penganiayaan hewan yang sedang diselidiki polisi.",
+   "en": "The news on the train screen reported an animal abuse case being investigated by police.",
+   "ko": "열차 화면 뉴스에서 경찰이 조사 중인 동물 학대 사건을 보도했어요.",
+   "blank": "penganiayaan",
+   "src": "made"
+  }
+ ],
  "w|pengantar": [
   {
    "text": "Dimas membaca kata pengantar buku itu sebelum mulai bab pertama.",
@@ -56703,6 +57167,22 @@
    "en": "Guests surrounded the bride and groom after the ceremony.",
    "ko": "예식 뒤 손님들이 신랑신부를 둘러쌌어.",
    "blank": "pengantin"
+  }
+ ],
+ "w|penganut": [
+  {
+   "text": "Tokoh yang diperankan Eko adalah penganut ajaran lama yang menolak perubahan.",
+   "en": "The character Eko plays is a follower of old teachings who rejects change.",
+   "ko": "에코가 맡은 인물은 변화를 거부하는 옛 가르침의 신봉자예요.",
+   "blank": "penganut",
+   "src": "made"
+  },
+  {
+   "text": "Di kursi sebelah, seorang penganut agama Buddha membaca buku doa dengan tenang.",
+   "en": "In the next seat, a follower of Buddhism quietly read a prayer book.",
+   "ko": "옆자리에서 한 불교 신자가 조용히 기도서를 읽었어요.",
+   "blank": "penganut",
+   "src": "made"
   }
  ],
  "w|pengaruh": [
@@ -56779,6 +57259,22 @@
    "en": "A guard escorted the guest inside.",
    "ko": "경호원 한 명이 손님을 안으로 안내했어.",
    "blank": "pengawal"
+  }
+ ],
+ "w|pengawalan": [
+  {
+   "text": "Aktris terkenal itu datang ke teater dengan pengawalan ketat.",
+   "en": "The famous actress came to the theater under tight escort.",
+   "ko": "그 유명 여배우는 삼엄한 경호를 받으며 극장에 왔어요.",
+   "blank": "pengawalan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang menteri naik kereta yang sama dengan Ayu tanpa pengawalan berlebihan.",
+   "en": "A minister rode the same train as Ayu without an excessive escort.",
+   "ko": "한 장관이 요란한 경호 없이 아유와 같은 열차를 탔어요.",
+   "blank": "pengawalan",
+   "src": "made"
   }
  ],
  "w|pengawas": [
@@ -57044,6 +57540,22 @@
    "en": "Wati's restaurant was just filled by a tour group, like a small siege.",
    "ko": "와티네 식당은 방금 관광객 무리로 가득 차서 작은 포위전 같았어요.",
    "blank": "pengepungan",
+   "src": "made"
+  }
+ ],
+ "w|pengeras suara": [
+  {
+   "text": "Sebelum pertunjukan, pengeras suara meminta penonton mematikan ponsel.",
+   "en": "Before the show, the loudspeaker asked the audience to turn off their phones.",
+   "ko": "공연 전에 확성기로 관객에게 휴대폰을 꺼 달라고 안내했어요.",
+   "blank": "pengeras suara",
+   "src": "made"
+  },
+  {
+   "text": "Suara dari pengeras suara mengumumkan bahwa kereta akan tiba di stasiun berikutnya.",
+   "en": "The voice from the loudspeaker announced that the train would arrive at the next station.",
+   "ko": "확성기에서 다음 역에 곧 도착한다는 안내 방송이 나왔어요.",
+   "blank": "pengeras suara",
    "src": "made"
   }
  ],
@@ -62095,6 +62607,22 @@
    "src": "made"
   }
  ],
+ "w|popularitas": [
+  {
+   "text": "Sejak video latihannya tersebar di internet, popularitas Eko naik dengan cepat.",
+   "en": "Since his rehearsal video spread on the internet, Eko's popularity has risen quickly.",
+   "ko": "연습 영상이 인터넷에 퍼진 뒤로 에코의 인기가 빠르게 올랐어요.",
+   "blank": "popularitas",
+   "src": "made"
+  },
+  {
+   "text": "Kata kondektur, popularitas kereta malam meningkat sejak harga tiket pesawat naik.",
+   "en": "According to the conductor, the popularity of night trains has risen since airfares went up.",
+   "ko": "차장 말로는 비행기표 값이 오른 뒤로 야간열차의 인기가 높아졌대요.",
+   "blank": "popularitas",
+   "src": "made"
+  }
+ ],
  "w|populasi": [
   {
    "text": "Dalam tugas geografi, Andi menghitung populasi kecamatannya.",
@@ -64466,6 +64994,22 @@
    "en": "For Ayu, paying by phone is a revolutionary change for small shops.",
    "ko": "아유에게 휴대폰 결제는 작은 가게에 혁명적인 변화예요.",
    "blank": "revolusioner",
+   "src": "made"
+  }
+ ],
+ "w|rezim": [
+  {
+   "text": "Lakon itu menyindir rezim yang melarang rakyat bernyanyi di jalan.",
+   "en": "The play satirizes a regime that bans people from singing in the streets.",
+   "ko": "그 연극은 사람들이 거리에서 노래하는 것을 금지한 정권을 풍자해요.",
+   "blank": "rezim",
+   "src": "made"
+  },
+  {
+   "text": "Nenek di sebelah Ayu bercerita tentang hidupnya di bawah rezim lama.",
+   "en": "The grandmother next to Ayu talked about her life under the old regime.",
+   "ko": "아유 옆 할머니는 옛 정권 아래에서 살던 이야기를 해 줬어요.",
+   "blank": "rezim",
    "src": "made"
   }
  ],
@@ -67687,6 +68231,22 @@
    "src": "made"
   }
  ],
+ "w|selembar": [
+  {
+   "text": "Eko hanya membawa selembar kertas berisi catatan dialog ke ruang ganti.",
+   "en": "Eko brought only a single sheet of paper with notes on his lines to the dressing room.",
+   "ko": "에코는 대사 메모가 적힌 종이 한 장만 분장실에 가져갔어요.",
+   "blank": "selembar",
+   "src": "made"
+  },
+  {
+   "text": "Ayu menulis surat untuk ibunya di atas selembar kertas tisu.",
+   "en": "Ayu wrote a letter to her mother on a single sheet of tissue paper.",
+   "ko": "아유는 휴지 한 장에 엄마에게 보낼 편지를 썼어요.",
+   "blank": "selembar",
+   "src": "made"
+  }
+ ],
  "w|selepas": [
   {
    "text": "Dimas langsung menyiram tanaman selepas hujan reda.",
@@ -67792,6 +68352,22 @@
    "en": "From the train, Dewi sees children playing at the edge of a ditch.",
    "ko": "데위는 열차에서 도랑가에서 노는 아이들을 봐요.",
    "blank": "selokan",
+   "src": "made"
+  }
+ ],
+ "w|selongsong": [
+  {
+   "text": "Tim properti mengecat selongsong peluru palsu agar terlihat seperti kuningan.",
+   "en": "The props team painted fake bullet casings so they would look like brass.",
+   "ko": "소품 팀은 가짜 탄피를 놋쇠처럼 보이게 칠했어요.",
+   "blank": "selongsong",
+   "src": "made"
+  },
+  {
+   "text": "Di museum stasiun, Ayu melihat selongsong peluru dari masa perjuangan.",
+   "en": "In the station museum, Ayu saw bullet casings from the independence struggle.",
+   "ko": "아유는 역 박물관에서 독립 투쟁 시절의 탄피를 봤어요.",
+   "blank": "selongsong",
    "src": "made"
   }
  ],
@@ -70179,6 +70755,22 @@
    "en": "She closed her eyes from the lamp light.",
    "ko": "그녀는 전등 빛에 눈을 감았어.",
    "blank": "sinar"
+  }
+ ],
+ "w|sindikat": [
+  {
+   "text": "Lakon detektif itu mengikuti polisi yang membongkar sindikat pencuri lukisan.",
+   "en": "The detective play follows a police officer who breaks up a painting theft syndicate.",
+   "ko": "그 탐정 연극은 그림 도둑 조직을 소탕하는 경찰을 따라가요.",
+   "blank": "sindikat",
+   "src": "made"
+  },
+  {
+   "text": "Polisi kereta api berhasil menangkap anggota sindikat pencopet di gerbong ekonomi.",
+   "en": "The railway police managed to catch members of a pickpocket syndicate in the economy carriage.",
+   "ko": "철도 경찰이 일반실에서 소매치기 조직원들을 붙잡았어요.",
+   "blank": "sindikat",
+   "src": "made"
   }
  ],
  "w|singa": [
@@ -74227,6 +74819,22 @@
    "src": "made"
   }
  ],
+ "w|tercipta": [
+  {
+   "text": "Suasana haru tercipta ketika seluruh pemain menyanyi bersama di akhir pertunjukan.",
+   "en": "A moving atmosphere was created when all the actors sang together at the end of the show.",
+   "ko": "공연 마지막에 배우들이 다 함께 노래하자 뭉클한 분위기가 생겼어요.",
+   "blank": "tercipta",
+   "src": "made"
+  },
+  {
+   "text": "Persahabatan Ayu dengan nenek di kursi sebelah tercipta hanya dalam satu perjalanan.",
+   "en": "Ayu's friendship with the grandmother in the next seat was formed in just one trip.",
+   "ko": "아유와 옆자리 할머니의 우정은 단 한 번의 여행에서 생겼어요.",
+   "blank": "tercipta",
+   "src": "made"
+  }
+ ],
  "w|terdaftar": [
   {
    "text": "Nomor pelat motor Andi tidak terdaftar di sistem, jadi petugas memeriksanya lagi.",
@@ -75354,6 +75962,22 @@
    "en": "Wati often serves farmers who buy vitamins for their livestock.",
    "ko": "와티는 가축 비타민을 사러 오는 축산 농가를 자주 응대해요.",
    "blank": "ternak",
+   "src": "made"
+  }
+ ],
+ "w|ternilai": [
+  {
+   "text": "Bagi Eko, tepuk tangan penonton adalah hadiah yang tak ternilai.",
+   "en": "For Eko, the audience's applause is a priceless gift.",
+   "ko": "에코에게 관객의 박수는 값을 매길 수 없는 선물이에요.",
+   "blank": "ternilai",
+   "src": "made"
+  },
+  {
+   "text": "Pemandangan matahari terbit dari jendela kereta itu tak ternilai bagi Ayu.",
+   "en": "The view of the sunrise from the train window was priceless to Ayu.",
+   "ko": "열차 창밖으로 본 해돋이는 아유에게 무엇과도 바꿀 수 없었어요.",
+   "blank": "ternilai",
    "src": "made"
   }
  ],
@@ -78491,6 +79115,22 @@
    "en": "Every small effort brings real change.",
    "ko": "작은 노력 하나하나가 진짜 변화를 가져와.",
    "blank": "upaya"
+  }
+ ],
+ "w|upeti": [
+  {
+   "text": "Dalam lakon sejarah itu, raja kecil harus mengirim upeti berupa emas ke kerajaan besar.",
+   "en": "In the historical play, the minor king must send tribute in gold to the great kingdom.",
+   "ko": "그 사극에서 작은 왕은 큰 왕국에 금으로 조공을 바쳐야 해요.",
+   "blank": "upeti",
+   "src": "made"
+  },
+  {
+   "text": "Pemandu wisata di kereta bercerita tentang upeti yang dulu dibawa lewat jalur ini.",
+   "en": "The tour guide on the train told about the tribute that used to be carried along this route.",
+   "ko": "열차 안 관광 안내원이 옛날 이 길로 실어 나르던 조공 이야기를 해 줬어요.",
+   "blank": "upeti",
+   "src": "made"
   }
  ],
  "w|urusan": [

@@ -3941,6 +3941,22 @@
    "blank": "于是"
   }
  ],
+ "w|亏": [
+  {
+   "text": "赵磊去年开网店亏了一笔钱，是妹妹借钱帮他还的。",
+   "en": "Zhao Lei lost money running an online shop last year, and his sister lent him money to pay it back.",
+   "ko": "자오레이는 작년에 온라인 가게를 하다가 손해를 봤는데 여동생이 돈을 빌려줘서 갚았어요.",
+   "blank": "亏",
+   "src": "made"
+  },
+  {
+   "text": "投资方担心这部电影会亏，迟迟不肯追加预算。",
+   "en": "The investors worried the film would lose money and kept refusing to add to the budget.",
+   "ko": "투자사는 이 영화가 손해를 볼까 봐 예산 추가를 계속 미뤘어요.",
+   "blank": "亏",
+   "src": "made"
+  }
+ ],
  "w|互相": [
   {
    "text": "我们要互相帮助。",
@@ -4302,6 +4318,22 @@
    "en": "Liu Fang lives alone far from home, and the old neighbors in the building treat her like family.",
    "ko": "류팡은 타지에서 혼자 사는데, 건물의 오랜 이웃들이 그녀를 가족처럼 대해 줘요.",
    "blank": "亲人",
+   "src": "made"
+  }
+ ],
+ "w|亲切": [
+  {
+   "text": "赵磊的妹妹说话很亲切，邻居家的小孩都爱找她玩。",
+   "en": "Zhao Lei's sister speaks so warmly that the neighbors' kids all love to play with her.",
+   "ko": "자오레이의 여동생은 말투가 다정해서 이웃집 아이들이 다 같이 놀자고 찾아와요.",
+   "blank": "亲切",
+   "src": "made"
+  },
+  {
+   "text": "林静对新人演员一向很亲切，常给他们讲戏到深夜。",
+   "en": "Lin Jing has always been kind to new actors, often going over scenes with them late into the night.",
+   "ko": "린징은 신인 배우들에게 늘 다정해서 밤늦게까지 연기를 설명해 주곤 해요.",
+   "blank": "亲切",
    "src": "made"
   }
  ],
@@ -6418,6 +6450,22 @@
    "en": "Before surgery, the doctor needs the patient's partner to sign the consent form.",
    "ko": "수술 전에 의사는 환자 배우자의 동의서 서명이 필요해요.",
    "blank": "伴侣",
+   "src": "made"
+  }
+ ],
+ "w|伴随": [
+  {
+   "text": "兄妹俩的童年伴随着许多吵吵闹闹的回忆。",
+   "en": "The siblings' childhood came with many noisy, quarrelsome memories.",
+   "ko": "남매의 어린 시절에는 시끌벅적한 추억이 많이 함께했어요.",
+   "blank": "伴随",
+   "src": "made"
+  },
+  {
+   "text": "伴随着音乐响起，女主角慢慢走进雨里。",
+   "en": "As the music started, the lead actress slowly walked into the rain.",
+   "ko": "음악이 흐르면서 여자 주인공이 천천히 빗속으로 걸어 들어갔어요.",
+   "blank": "伴随",
    "src": "made"
   }
  ],
@@ -10101,6 +10149,22 @@
    "src": "made"
   }
  ],
+ "w|内疚": [
+  {
+   "text": "一股强烈的内疚涌上赵磊心头。",
+   "en": "A strong wave of guilt welled up in Zhao Lei's heart.",
+   "ko": "강한 죄책감이 자오레이의 마음속에 밀려왔어요.",
+   "blank": "内疚",
+   "src": "made"
+  },
+  {
+   "text": "因为自己的失误让全组白等了一天，林静很内疚。",
+   "en": "Lin Jing felt guilty because her own mistake made the whole crew wait for nothing for a day.",
+   "ko": "자기 실수로 팀 전체가 하루를 헛되이 기다리게 해서 린징은 몹시 미안했어요.",
+   "blank": "内疚",
+   "src": "made"
+  }
+ ],
  "w|内裤": [
   {
    "text": "有个摊位在卖新的内裤和袜子，三双只要十块钱。",
@@ -12329,6 +12393,22 @@
    "blank": "到来"
   }
  ],
+ "w|到此为止": [
+  {
+   "text": "赵磊对妹妹说：“这件事到此为止，谁也别再提了。”",
+   "en": "Zhao Lei said to his sister, \"Let's leave it at that; neither of us brings it up again.\"",
+   "ko": "자오레이는 여동생에게 \"이 일은 여기까지, 이제 아무도 다시 꺼내지 말자\"라고 했어요.",
+   "blank": "到此为止",
+   "src": "made"
+  },
+  {
+   "text": "拍到凌晨，林静宣布：“今天就到此为止，大家回去休息。”",
+   "en": "Filming until dawn, Lin Jing announced, \"That's it for today, everyone go home and rest.\"",
+   "ko": "새벽까지 찍다가 린징은 \"오늘은 여기까지, 다들 가서 쉬어요\"라고 했어요.",
+   "blank": "到此为止",
+   "src": "made"
+  }
+ ],
  "w|到达": [
   {
    "text": "已经到达。",
@@ -13027,6 +13107,22 @@
    "en": "He joined too.",
    "ko": "그 사람도 들어왔어.",
    "blank": "加入"
+  }
+ ],
+ "w|加大": [
+  {
+   "text": "赵磊把音乐的音量加大，故意不听妹妹解释。",
+   "en": "Zhao Lei turned up the music on purpose so he wouldn't hear his sister's explanation.",
+   "ko": "자오레이는 일부러 음악 소리를 키워 여동생의 설명을 듣지 않았어요.",
+   "blank": "加大",
+   "src": "made"
+  },
+  {
+   "text": "林静让灯光师加大亮度，好让演员的脸更清楚。",
+   "en": "Lin Jing had the lighting technician increase the brightness so the actors' faces would be clearer.",
+   "ko": "린징은 배우 얼굴이 더 잘 보이도록 조명 감독에게 밝기를 높이라고 했어요.",
+   "blank": "加大",
+   "src": "made"
   }
  ],
  "w|加工": [
@@ -14594,6 +14690,22 @@
    "en": "Liu Fang got tired of endless meetings at a big company, which is why she decided to start her own business.",
    "ko": "류팡은 대기업에서 끝없이 회의하는 데 질려서 직접 창업하기로 했어요.",
    "blank": "厌倦",
+   "src": "made"
+  }
+ ],
+ "w|厌恶": [
+  {
+   "text": "赵磊最厌恶别人不经同意就动他的东西。",
+   "en": "What Zhao Lei hates most is people touching his things without permission.",
+   "ko": "자오레이는 남이 허락 없이 자기 물건을 건드리는 걸 가장 싫어해요.",
+   "blank": "厌恶",
+   "src": "made"
+  },
+  {
+   "text": "林静厌恶在片场摆架子的人，对谁都一视同仁。",
+   "en": "Lin Jing detests people who put on airs on set and treats everyone equally.",
+   "ko": "린징은 촬영장에서 거드름 피우는 사람을 싫어하고 누구에게나 똑같이 대해요.",
+   "blank": "厌恶",
    "src": "made"
   }
  ],
@@ -19333,6 +19445,22 @@
    "src": "made"
   }
  ],
+ "w|喜悦": [
+  {
+   "text": "妈妈看着两个孩子，脸上露出了喜悦的神情。",
+   "en": "Watching her two children, Mom's face showed a joyful expression.",
+   "ko": "엄마는 두 아이를 보며 기쁜 표정을 지었어요.",
+   "blank": "喜悦",
+   "src": "made"
+  },
+  {
+   "text": "电影获奖的消息传来，剧组上下都沉浸在喜悦之中。",
+   "en": "When news came that the film won an award, the whole crew was immersed in joy.",
+   "ko": "영화가 상을 받았다는 소식이 들리자 촬영팀 모두 기쁨에 젖었어요.",
+   "blank": "喜悦",
+   "src": "made"
+  }
+ ],
  "w|喜欢": [
   {
    "text": "你喜欢吗？",
@@ -20081,6 +20209,22 @@
    "en": "This matter is difficult.",
    "ko": "이 일은 어려워.",
    "blank": "困难"
+  }
+ ],
+ "w|围": [
+  {
+   "text": "一家人围在桌边吃饭，气氛又热闹了起来。",
+   "en": "The family gathered around the table to eat, and the mood became lively again.",
+   "ko": "가족이 식탁에 둘러앉아 밥을 먹자 분위기가 다시 떠들썩해졌어요.",
+   "blank": "围",
+   "src": "made"
+  },
+  {
+   "text": "片场外围了很多看热闹的路人。",
+   "en": "Lots of curious passersby crowded around outside the set.",
+   "ko": "촬영장 밖에 구경하는 행인들이 많이 몰려 있었어요.",
+   "blank": "围",
+   "src": "made"
   }
  ],
  "w|围绕": [
@@ -21799,6 +21943,22 @@
    "en": "It's been taken care of.",
    "ko": "처리 끝났어.",
    "blank": "处理"
+  }
+ ],
+ "w|处罚": [
+  {
+   "text": "妈妈说，谁先动手就处罚谁，两个人都不许出门。",
+   "en": "Mom said whoever lays a hand first will be punished, and neither of them can go out.",
+   "ko": "엄마는 먼저 손대는 사람을 벌주겠다며 둘 다 못 나가게 했어요.",
+   "blank": "处罚",
+   "src": "made"
+  },
+  {
+   "text": "剧组规定，迟到的人要处罚，请全组喝咖啡。",
+   "en": "The crew has a rule that latecomers are penalized by buying coffee for the whole team.",
+   "ko": "촬영팀은 지각한 사람에게 벌로 팀 전체에 커피를 사게 해요.",
+   "blank": "处罚",
+   "src": "made"
   }
  ],
  "w|处置": [
@@ -26067,6 +26227,22 @@
    "src": "made"
   }
  ],
+ "w|宣告": [
+  {
+   "text": "妹妹红着眼睛宣告：“从今天起我不跟哥哥说话了。”",
+   "en": "His sister announced with red eyes, \"Starting today, I'm not talking to my brother.\"",
+   "ko": "여동생은 눈시울이 붉어진 채 \"오늘부터 오빠랑 말 안 해\"라고 선언했어요.",
+   "blank": "宣告",
+   "src": "made"
+  },
+  {
+   "text": "林静喊了一声“收工”，宣告这部电影正式杀青。",
+   "en": "Lin Jing called out \"That's a wrap,\" announcing the film had officially finished shooting.",
+   "ko": "린징이 \"촬영 끝\"을 외치며 이 영화의 촬영이 공식적으로 끝났음을 알렸어요.",
+   "blank": "宣告",
+   "src": "made"
+  }
+ ],
  "w|宣布": [
   {
    "text": "公司宣布了决定。",
@@ -29661,6 +29837,22 @@
    "src": "made"
   }
  ],
+ "w|幼稚": [
+  {
+   "text": "事后想想，赵磊觉得自己当时的举动太幼稚了。",
+   "en": "Thinking back afterward, Zhao Lei felt his behavior at the time was too childish.",
+   "ko": "나중에 생각해 보니 자오레이는 그때 자기 행동이 너무 유치했다고 느꼈어요.",
+   "blank": "幼稚",
+   "src": "made"
+  },
+  {
+   "text": "林静觉得这段台词写得太幼稚，让编剧重新改了一遍。",
+   "en": "Lin Jing thought these lines were too childish and had the screenwriter revise them.",
+   "ko": "린징은 이 대사가 너무 유치하다고 생각해서 작가에게 다시 고치게 했어요.",
+   "blank": "幼稚",
+   "src": "made"
+  }
+ ],
  "w|幽灵": [
   {
    "text": "同事们开玩笑说，周强半夜还在办公室，像个幽灵。",
@@ -31733,6 +31925,38 @@
    "src": "made"
   }
  ],
+ "w|心头": [
+  {
+   "text": "一股强烈的内疚涌上赵磊心头。",
+   "en": "A strong wave of guilt welled up in Zhao Lei's heart.",
+   "ko": "강한 죄책감이 자오레이의 마음속에 밀려왔어요.",
+   "blank": "心头",
+   "src": "made"
+  },
+  {
+   "text": "看到第一版样片时，一阵激动涌上林静心头。",
+   "en": "When she saw the first rough cut, a surge of excitement welled up in Lin Jing's heart.",
+   "ko": "첫 편집본을 봤을 때 린징의 마음속에 벅찬 감동이 밀려왔어요.",
+   "blank": "心头",
+   "src": "made"
+  }
+ ],
+ "w|心底": [
+  {
+   "text": "赵磊在心底一遍遍骂自己太冲动。",
+   "en": "Deep down, Zhao Lei scolded himself again and again for being so impulsive.",
+   "ko": "자오레이는 속으로 너무 충동적이었다고 몇 번이고 자신을 꾸짖었어요.",
+   "blank": "心底",
+   "src": "made"
+  },
+  {
+   "text": "林静从心底感谢那些陪她熬夜的工作人员。",
+   "en": "Lin Jing is grateful from the bottom of her heart to the crew who stayed up late with her.",
+   "ko": "린징은 밤샘을 함께해 준 스태프들에게 진심으로 고마워해요.",
+   "blank": "心底",
+   "src": "made"
+  }
+ ],
  "w|心思": [
   {
    "text": "张伟这才明白，姐姐的心思全花在照顾父母上了。",
@@ -32365,6 +32589,22 @@
    "en": "Don't be afraid, I'm here.",
    "ko": "무서워 마, 내가 있잖아.",
    "blank": "怕"
+  }
+ ],
+ "w|思念": [
+  {
+   "text": "赵磊的爸爸常年在外地工作，兄妹俩对他满是思念。",
+   "en": "Zhao Lei's father has worked away from home for years, and the siblings miss him dearly.",
+   "ko": "자오레이의 아빠는 오랫동안 타지에서 일해서 남매는 아빠를 많이 그리워해요.",
+   "blank": "思念",
+   "src": "made"
+  },
+  {
+   "text": "这部电影讲的是一个游子对故乡的思念。",
+   "en": "This film is about a wanderer's longing for his hometown.",
+   "ko": "이 영화는 떠도는 사람이 고향을 그리워하는 이야기예요.",
+   "blank": "思念",
+   "src": "made"
   }
  ],
  "w|思想": [
@@ -33057,6 +33297,22 @@
    "src": "made"
   }
  ],
+ "w|悲哀": [
+  {
+   "text": "妹妹说，哥哥为了一台相机就不信她，真让人悲哀。",
+   "en": "His sister said it was truly sad that her brother wouldn't trust her over a camera.",
+   "ko": "여동생은 오빠가 카메라 하나 때문에 자기를 안 믿는다니 정말 슬프다고 했어요.",
+   "blank": "悲哀",
+   "src": "made"
+  },
+  {
+   "text": "影片的结局很悲哀，试映时不少观众都哭了。",
+   "en": "The film's ending is so sad that many viewers cried at the preview.",
+   "ko": "영화의 결말이 너무 슬퍼서 시사회 때 많은 관객이 울었어요.",
+   "blank": "悲哀",
+   "src": "made"
+  }
+ ],
  "w|悲惨": [
   {
    "text": "张伟和哥哥一起看了一部讲战争年代悲惨生活的电影。",
@@ -33531,6 +33787,22 @@
    "blank": "意思"
   }
  ],
+ "w|意愿": [
+  {
+   "text": "这次搬家完全是爸妈的意愿，兄妹俩都不想离开老房子。",
+   "en": "This move was entirely their parents' wish; the siblings didn't want to leave the old house.",
+   "ko": "이번 이사는 전적으로 부모님 뜻이었고 남매는 옛집을 떠나고 싶지 않았어요.",
+   "blank": "意愿",
+   "src": "made"
+  },
+  {
+   "text": "林静尊重演员的意愿，没有强迫他们拍危险的镜头。",
+   "en": "Lin Jing respected the actors' wishes and didn't force them to shoot dangerous scenes.",
+   "ko": "린징은 배우들의 뜻을 존중해서 위험한 장면을 억지로 찍게 하지 않았어요.",
+   "blank": "意愿",
+   "src": "made"
+  }
+ ],
  "w|意见": [
   {
    "text": "有意见吗？",
@@ -33819,6 +34091,22 @@
    "blank": "慢慢"
   }
  ],
+ "w|慢慢来": [
+  {
+   "text": "赵磊对妹妹说，以后有误会要说出来，慢慢来，别憋着。",
+   "en": "Zhao Lei told his sister that from now on they should talk about misunderstandings, take it slow, and not bottle things up.",
+   "ko": "자오레이는 여동생에게 앞으로 오해가 있으면 말하고, 천천히 하되 참지 말자고 했어요.",
+   "blank": "慢慢来",
+   "src": "made"
+  },
+  {
+   "text": "小演员一紧张就忘词，林静笑着说：“别急，慢慢来。”",
+   "en": "Whenever the child actor got nervous and forgot his lines, Lin Jing smiled and said, \"Don't rush, take your time.\"",
+   "ko": "아역 배우가 긴장해서 대사를 잊을 때마다 린징은 웃으며 \"서두르지 말고 천천히 해\"라고 했어요.",
+   "blank": "慢慢来",
+   "src": "made"
+  }
+ ],
  "w|慢点": [
   {
    "text": "体育老师在操场上喊：“慢点跑，别摔着！”",
@@ -33848,6 +34136,22 @@
    "en": "The auntie at the next stall was generous and gave Liu Fang an old teapot.",
    "ko": "옆 노점 아주머니가 인심이 좋아서 류팡에게 낡은 찻주전자를 하나 줬어요.",
    "blank": "慷慨",
+   "src": "made"
+  }
+ ],
+ "w|憎恨": [
+  {
+   "text": "赵磊并不憎恨妹妹，他只是一时被怒气冲昏了头。",
+   "en": "Zhao Lei didn't hate his sister; he was just blinded by anger for a moment.",
+   "ko": "자오레이는 여동생을 미워한 게 아니라 잠깐 화에 눈이 멀었을 뿐이에요.",
+   "blank": "憎恨",
+   "src": "made"
+  },
+  {
+   "text": "剧中的女儿憎恨父亲抛下了家庭。",
+   "en": "The daughter in the film hates her father for abandoning the family.",
+   "ko": "극 중 딸은 가족을 버린 아버지를 증오해요.",
+   "blank": "憎恨",
    "src": "made"
   }
  ],
@@ -34986,6 +35290,22 @@
    "en": "A kid by the road threw a water balloon that hit Sun Yue right on the shoulder.",
    "ko": "길가의 아이가 물풍선을 던졌는데 쑨웨 어깨에 딱 맞았어요.",
    "blank": "打中",
+   "src": "made"
+  }
+ ],
+ "w|打交道": [
+  {
+   "text": "赵磊发现，跟妹妹打交道最重要的是先听她说完。",
+   "en": "Zhao Lei realized the most important thing in dealing with his sister is to hear her out first.",
+   "ko": "자오레이는 여동생을 대할 때 가장 중요한 건 먼저 끝까지 들어 주는 거라는 걸 알게 됐어요.",
+   "blank": "打交道",
+   "src": "made"
+  },
+  {
+   "text": "做导演每天都要跟各种各样的人打交道。",
+   "en": "As a director, you have to deal with all kinds of people every day.",
+   "ko": "감독은 매일 온갖 사람들을 상대해야 해요.",
+   "blank": "打交道",
    "src": "made"
   }
  ],
@@ -36289,6 +36609,22 @@
    "en": "I'm really worried.",
    "ko": "나 많이 걱정돼.",
    "blank": "担心"
+  }
+ ],
+ "w|担忧": [
+  {
+   "text": "两兄妹最近吵架越来越频繁，妈妈很担忧。",
+   "en": "The brother and sister have been arguing more and more often lately, and their mom is worried.",
+   "ko": "두 남매가 요즘 점점 자주 싸워서 엄마가 많이 걱정해요.",
+   "blank": "担忧",
+   "src": "made"
+  },
+  {
+   "text": "制片人很担忧天气，因为拍摄期只剩下一周。",
+   "en": "The producer is very worried about the weather because only a week of shooting remains.",
+   "ko": "제작자는 촬영 기간이 일주일밖에 안 남아서 날씨를 무척 걱정해요.",
+   "blank": "担忧",
+   "src": "made"
   }
  ],
  "w|拆": [
@@ -39227,6 +39563,22 @@
    "en": "Put the bag down first.",
    "ko": "가방 내려놓고 말해.",
    "blank": "放下"
+  }
+ ],
+ "w|放大": [
+  {
+   "text": "赵磊的毛病是爱把小事放大，越想越生气。",
+   "en": "Zhao Lei's flaw is that he blows small things out of proportion and gets angrier the more he thinks.",
+   "ko": "자오레이는 작은 일을 크게 부풀려서 생각할수록 화를 내는 게 단점이에요.",
+   "blank": "放大",
+   "src": "made"
+  },
+  {
+   "text": "林静把画面放大，仔细检查演员的表情。",
+   "en": "Lin Jing zoomed in on the frame to carefully check the actor's expression.",
+   "ko": "린징은 화면을 확대해서 배우의 표정을 꼼꼼히 확인했어요.",
+   "blank": "放大",
+   "src": "made"
   }
  ],
  "w|放开": [
@@ -42726,6 +43078,22 @@
    "en": "Gazing at the trees outside the window, the patient told Sun Yue he wanted to go home soon.",
    "ko": "환자는 창밖의 나무를 바라보며 쑨웨에게 빨리 집에 가고 싶다고 했어요.",
    "blank": "望",
+   "src": "made"
+  }
+ ],
+ "w|朝着": [
+  {
+   "text": "赵磊朝着妹妹伸出手，说：“咱们和好吧。”",
+   "en": "Zhao Lei held out his hand toward his sister and said, \"Let's make up.\"",
+   "ko": "자오레이는 여동생에게 손을 내밀며 \"우리 화해하자\"라고 말했어요.",
+   "blank": "朝着",
+   "src": "made"
+  },
+  {
+   "text": "林静让演员朝着镜头走过来，一句话也不说。",
+   "en": "Lin Jing had the actor walk toward the camera without saying a word.",
+   "ko": "린징은 배우에게 아무 말 없이 카메라 쪽으로 걸어오게 했어요.",
+   "blank": "朝着",
    "src": "made"
   }
  ],
@@ -47107,6 +47475,22 @@
    "src": "made"
   }
  ],
+ "w|泪水": [
+  {
+   "text": "妹妹的泪水一下子流了下来，又忍不住笑了。",
+   "en": "Tears streamed down his sister's face, and then she couldn't help laughing.",
+   "ko": "여동생은 눈물을 왈칵 쏟다가 결국 웃음을 참지 못했어요.",
+   "blank": "泪水",
+   "src": "made"
+  },
+  {
+   "text": "女主角的泪水是真的，那一刻她想起了自己的母亲。",
+   "en": "The lead actress's tears were real; in that moment she thought of her own mother.",
+   "ko": "여자 주인공의 눈물은 진짜였어요. 그 순간 자기 어머니를 떠올렸거든요.",
+   "blank": "泪水",
+   "src": "made"
+  }
+ ],
  "w|洗": [
   {
    "text": "去洗手。",
@@ -48293,6 +48677,22 @@
    "src": "made"
   }
  ],
+ "w|滑稽": [
+  {
+   "text": "赵磊鞠躬道歉的样子很滑稽，妹妹笑得停不下来。",
+   "en": "Zhao Lei bowing to apologize looked so comical that his sister couldn't stop laughing.",
+   "ko": "자오레이가 고개 숙여 사과하는 모습이 너무 우스워서 여동생은 웃음을 멈추지 못했어요.",
+   "blank": "滑稽",
+   "src": "made"
+  },
+  {
+   "text": "配角的妆化得太滑稽，林静只好让化妆师重来。",
+   "en": "The supporting actor's makeup looked too comical, so Lin Jing had the makeup artist redo it.",
+   "ko": "조연의 분장이 너무 우스꽝스러워서 린징은 분장사에게 다시 하게 했어요.",
+   "blank": "滑稽",
+   "src": "made"
+  }
+ ],
  "w|满": [
   {
    "text": "开学第一天，小明的书包装得太满，拉链都拉不上。",
@@ -49235,6 +49635,22 @@
    "src": "made"
   }
  ],
+ "w|焦虑": [
+  {
+   "text": "赵磊一直很焦虑，怕这次的事伤了兄妹感情。",
+   "en": "Zhao Lei had been anxious all along, afraid this would hurt the siblings' bond.",
+   "ko": "자오레이는 이번 일로 남매 사이가 상할까 봐 내내 불안했어요.",
+   "blank": "焦虑",
+   "src": "made"
+  },
+  {
+   "text": "开机前一晚，林静焦虑得整夜没睡着。",
+   "en": "The night before filming started, Lin Jing was so anxious she couldn't sleep all night.",
+   "ko": "촬영 시작 전날 밤 린징은 불안해서 밤새 잠을 못 잤어요.",
+   "blank": "焦虑",
+   "src": "made"
+  }
+ ],
  "w|然后": [
   {
    "text": "然后呢？",
@@ -49532,6 +49948,22 @@
    "en": "His wife is a doctor.",
    "ko": "그의 아내는 의사예요.",
    "blank": "爱人",
+   "src": "made"
+  }
+ ],
+ "w|爱好": [
+  {
+   "text": "赵磊的爱好是修旧自行车，周末总在院子里忙个不停。",
+   "en": "Zhao Lei's hobby is fixing old bicycles, and he's always busy in the yard on weekends.",
+   "ko": "자오레이의 취미는 낡은 자전거 고치기라서 주말마다 마당에서 쉴 새 없이 바빠요.",
+   "blank": "爱好",
+   "src": "made"
+  },
+  {
+   "text": "林静的爱好是看老电影，这也是她当导演的原因。",
+   "en": "Lin Jing's hobby is watching old movies, which is also why she became a director.",
+   "ko": "린징의 취미는 옛날 영화 보기인데, 그게 감독이 된 이유이기도 해요.",
+   "blank": "爱好",
    "src": "made"
   }
  ],
@@ -53235,6 +53667,22 @@
    "src": "made"
   }
  ],
+ "w|盼": [
+  {
+   "text": "赵磊的妹妹从小就盼着有个能保护她的哥哥。",
+   "en": "Ever since she was little, Zhao Lei's sister had longed for a big brother who could protect her.",
+   "ko": "자오레이의 여동생은 어릴 때부터 자기를 지켜 줄 오빠를 바랐어요.",
+   "blank": "盼",
+   "src": "made"
+  },
+  {
+   "text": "全剧组都盼着天快点晴，好拍海边那场戏。",
+   "en": "The whole crew is hoping the sky clears soon so they can shoot the beach scene.",
+   "ko": "촬영팀 모두 바닷가 장면을 찍으려고 날이 어서 개기를 바라고 있어요.",
+   "blank": "盼",
+   "src": "made"
+  }
+ ],
  "w|省": [
   {
    "text": "剧团下个月要去外省巡演，黄涛已经开始收拾行李。",
@@ -53511,6 +53959,22 @@
    "en": "The truth came out.",
    "ko": "진실이 밝혀졌어.",
    "blank": "真相"
+  }
+ ],
+ "w|真诚": [
+  {
+   "text": "赵磊敲开妹妹的门，真诚地说了声对不起。",
+   "en": "Zhao Lei knocked on his sister's door and sincerely said sorry.",
+   "ko": "자오레이는 여동생 방문을 두드리고 진심으로 미안하다고 말했어요.",
+   "blank": "真诚",
+   "src": "made"
+  },
+  {
+   "text": "林静喜欢真诚的演员，不喜欢只会摆架子的人。",
+   "en": "Lin Jing likes sincere actors and dislikes those who only put on airs.",
+   "ko": "린징은 진솔한 배우를 좋아하고 거들먹거리기만 하는 사람은 싫어해요.",
+   "blank": "真诚",
+   "src": "made"
   }
  ],
  "w|真话": [
@@ -54803,6 +55267,22 @@
    "en": "He has magical powers.",
    "ko": "그는 신비한 힘이 있어.",
    "blank": "神奇"
+  }
+ ],
+ "w|神情": [
+  {
+   "text": "妈妈看着两个孩子，脸上露出了喜悦的神情。",
+   "en": "Watching her two children, Mom's face showed a joyful expression.",
+   "ko": "엄마는 두 아이를 보며 기쁜 표정을 지었어요.",
+   "blank": "神情",
+   "src": "made"
+  },
+  {
+   "text": "监视器里，演员的神情和林静想要的一模一样。",
+   "en": "On the monitor, the actor's expression was exactly what Lin Jing wanted.",
+   "ko": "모니터 속 배우의 표정은 린징이 원하던 것과 똑같았어요.",
+   "blank": "神情",
+   "src": "made"
   }
  ],
  "w|神父": [
@@ -59357,6 +59837,22 @@
    "blank": "耳朵"
   }
  ],
+ "w|耻辱": [
+  {
+   "text": "赵磊觉得自己被最亲的人骗了，是一种耻辱。",
+   "en": "Zhao Lei felt that being deceived by the person closest to him was a humiliation.",
+   "ko": "자오레이는 가장 가까운 사람에게 속았다는 게 굴욕이라고 느꼈어요.",
+   "blank": "耻辱",
+   "src": "made"
+  },
+  {
+   "text": "剧中的老将军把战败看成一生的耻辱。",
+   "en": "The old general in the film sees his defeat as the humiliation of his life.",
+   "ko": "극 중 노장군은 패전을 평생의 치욕으로 여겨요.",
+   "blank": "耻辱",
+   "src": "made"
+  }
+ ],
  "w|耽误": [
   {
    "text": "为了不耽误下午上班，黄涛中午就收摊了。",
@@ -63489,6 +63985,22 @@
    "src": "made"
   }
  ],
+ "w|解脱": [
+  {
+   "text": "和好以后，赵磊终于从几天的冷战里解脱了。",
+   "en": "After making up, Zhao Lei was finally freed from days of cold war.",
+   "ko": "화해한 뒤 자오레이는 마침내 며칠간의 냉전에서 벗어났어요.",
+   "blank": "解脱",
+   "src": "made"
+  },
+  {
+   "text": "拍完最难的一场戏，林静觉得像是解脱了一样。",
+   "en": "After shooting the hardest scene, Lin Jing felt as though she'd been set free.",
+   "ko": "가장 어려운 장면을 찍고 나니 린징은 해방된 것 같은 기분이었어요.",
+   "blank": "解脱",
+   "src": "made"
+  }
+ ],
  "w|解释": [
   {
    "text": "你解释一下。",
@@ -65633,6 +66145,22 @@
    "src": "made"
   }
  ],
+ "w|贪婪": [
+  {
+   "text": "赵磊承认自己有时很贪婪，好吃的总想多拿一份。",
+   "en": "Zhao Lei admits he's sometimes greedy and always wants an extra share of anything tasty.",
+   "ko": "자오레이는 가끔 욕심이 많아서 맛있는 건 늘 하나 더 먹고 싶어 한다고 인정해요.",
+   "blank": "贪婪",
+   "src": "made"
+  },
+  {
+   "text": "反派角色是个贪婪的商人，为了钱什么都肯做。",
+   "en": "The villain is a greedy businessman willing to do anything for money.",
+   "ko": "악역은 돈을 위해서라면 뭐든 하는 탐욕스러운 상인이에요.",
+   "blank": "贪婪",
+   "src": "made"
+  }
+ ],
  "w|购买": [
   {
    "text": "餐厅每天早上从市场购买新鲜蔬菜。",
@@ -67145,6 +67673,22 @@
    "blank": "躲"
   }
  ],
+ "w|躲避": [
+  {
+   "text": "妹妹一回家就躲避赵磊的目光，这让他更加怀疑。",
+   "en": "As soon as she got home, his sister avoided Zhao Lei's gaze, which made him even more suspicious.",
+   "ko": "여동생이 집에 오자마자 자오레이의 눈길을 피해서 그는 더 의심했어요.",
+   "blank": "躲避",
+   "src": "made"
+  },
+  {
+   "text": "为了躲避影迷，男主角每天从后门进片场。",
+   "en": "To avoid fans, the lead actor enters the set through the back door every day.",
+   "ko": "팬들을 피하려고 남자 주인공은 매일 뒷문으로 촬영장에 들어가요.",
+   "blank": "躲避",
+   "src": "made"
+  }
+ ],
  "w|躺": [
   {
    "text": "躺下休息。",
@@ -67263,6 +67807,22 @@
    "en": "Things have turned around.",
    "ko": "상황이 호전됐어.",
    "blank": "转"
+  }
+ ],
+ "w|转动": [
+  {
+   "text": "妹妹转动着手里的笔，问赵磊还生不生气。",
+   "en": "Twirling the pen in her hand, his sister asked Zhao Lei if he was still angry.",
+   "ko": "여동생은 손에 든 펜을 돌리며 자오레이에게 아직 화났냐고 물었어요.",
+   "blank": "转动",
+   "src": "made"
+  },
+  {
+   "text": "摄影师慢慢转动镜头，把整条街拍了进去。",
+   "en": "The cameraman slowly turned the lens and captured the whole street.",
+   "ko": "촬영 기사는 렌즈를 천천히 돌려 거리 전체를 담았어요.",
+   "blank": "转动",
+   "src": "made"
   }
  ],
  "w|转化": [
@@ -69025,6 +69585,22 @@
    "blank": "逃"
   }
  ],
+ "w|逃出": [
+  {
+   "text": "赵磊小时候总想逃出家门去冒险，妹妹就在后面跟着。",
+   "en": "As a child, Zhao Lei always wanted to run away from home for adventure, with his sister following behind.",
+   "ko": "자오레이는 어릴 때 늘 모험하러 집을 빠져나가고 싶어 했고 여동생은 뒤를 따라다녔어요.",
+   "blank": "逃出",
+   "src": "made"
+  },
+  {
+   "text": "这场戏讲的是主角从着火的大楼里逃出来。",
+   "en": "This scene is about the protagonist escaping from a burning building.",
+   "ko": "이 장면은 주인공이 불타는 건물에서 탈출하는 이야기예요.",
+   "blank": "逃出",
+   "src": "made"
+  }
+ ],
  "w|逃离": [
   {
    "text": "张伟说，有时候真想逃离城市，回小镇住几天。",
@@ -70668,6 +71244,22 @@
    "en": "The low notes at the start of that symphony sound like a wild beast roaring in a valley.",
    "ko": "그 교향곡 첫머리의 저음은 골짜기에서 짐승이 울부짖는 것 같아요.",
    "blank": "野兽",
+   "src": "made"
+  }
+ ],
+ "w|野心": [
+  {
+   "text": "赵磊的妹妹没有什么野心，只想开一家小书店。",
+   "en": "Zhao Lei's sister doesn't have big ambitions; she just wants to open a small bookstore.",
+   "ko": "자오레이의 여동생은 큰 야망 없이 작은 서점 하나 여는 게 꿈이에요.",
+   "blank": "野心",
+   "src": "made"
+  },
+  {
+   "text": "林静毫不掩饰自己的野心，她想拍出能流传多年的作品。",
+   "en": "Lin Jing makes no secret of her ambition: she wants to make work that lasts for years.",
+   "ko": "린징은 오래 남을 작품을 찍고 싶다는 야망을 숨기지 않아요.",
+   "blank": "野心",
    "src": "made"
   }
  ],
@@ -73093,6 +73685,22 @@
    "src": "made"
   }
  ],
+ "w|顺着": [
+  {
+   "text": "赵磊顺着楼梯往下走，听见妹妹在房间里哭。",
+   "en": "Going down the stairs, Zhao Lei heard his sister crying in her room.",
+   "ko": "자오레이는 계단을 따라 내려가다가 여동생이 방에서 우는 소리를 들었어요.",
+   "blank": "顺着",
+   "src": "made"
+  },
+  {
+   "text": "摄影师顺着河边一路拍过去，画面特别美。",
+   "en": "The cameraman filmed all along the riverbank, and the footage is especially beautiful.",
+   "ko": "촬영 기사가 강가를 따라 쭉 찍었는데 화면이 정말 아름다워요.",
+   "blank": "顺着",
+   "src": "made"
+  }
+ ],
  "w|顾客": [
   {
    "text": "政府大楼一楼开了家咖啡馆，顾客大多是来办事的人。",
@@ -73394,6 +74002,22 @@
    "en": "Wang Fang tracks how often she waters every day and writes it in a notebook.",
    "ko": "왕팡은 매일 물 주는 빈도를 재서 공책에 적어요.",
    "blank": "频率",
+   "src": "made"
+  }
+ ],
+ "w|频繁": [
+  {
+   "text": "两兄妹最近吵架越来越频繁，妈妈很担忧。",
+   "en": "The brother and sister have been arguing more and more often lately, and their mom is worried.",
+   "ko": "두 남매가 요즘 점점 자주 싸워서 엄마가 많이 걱정해요.",
+   "blank": "频繁",
+   "src": "made"
+  },
+  {
+   "text": "最近下雨很频繁，户外的戏一拖再拖。",
+   "en": "It's been raining frequently lately, so the outdoor scenes keep getting postponed.",
+   "ko": "요즘 비가 자주 와서 야외 촬영이 계속 미뤄지고 있어요.",
+   "blank": "频繁",
    "src": "made"
   }
  ],
@@ -74220,6 +74844,22 @@
    "en": "A tall man at the market entrance was selling old bicycles.",
    "ko": "시장 입구에서 덩치 큰 남자가 낡은 자전거를 팔고 있었어요.",
    "blank": "高大",
+   "src": "made"
+  }
+ ],
+ "w|高尚": [
+  {
+   "text": "赵磊说，妹妹肯原谅他，是一种高尚的品格。",
+   "en": "Zhao Lei said his sister's willingness to forgive him shows a noble character.",
+   "ko": "자오레이는 여동생이 자기를 용서해 준 건 고상한 인품이라고 했어요.",
+   "blank": "高尚",
+   "src": "made"
+  },
+  {
+   "text": "剧本里的主角是个高尚的医生，为病人奉献了一生。",
+   "en": "The protagonist in the script is a noble doctor who devoted his life to his patients.",
+   "ko": "대본 속 주인공은 평생을 환자에게 바친 고결한 의사예요.",
+   "blank": "高尚",
    "src": "made"
   }
  ],

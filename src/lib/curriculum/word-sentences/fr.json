@@ -121,6 +121,22 @@
    "src": "made"
   }
  ],
+ "w|aboiement": [
+  {
+   "text": "Au loin, Julien entend l'aboiement du chien de berger.",
+   "en": "In the distance, Julien hears the barking of the sheepdog.",
+   "ko": "멀리서 쥘리앵에게 양치기 개 짖는 소리가 들려요.",
+   "blank": "aboiement",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit que chaque aboiement de son nouveau chiot réveille tout l'immeuble.",
+   "en": "Manon writes that every bark from her new puppy wakes the whole building.",
+   "ko": "마농은 새 강아지가 짖을 때마다 건물 전체가 깬다고 써요.",
+   "blank": "aboiement",
+   "src": "made"
+  }
+ ],
  "w|abominable": [
   {
    "text": "Lucas déteste ce goût abominable du produit que le dentiste applique sur ses dents.",
@@ -2509,6 +2525,22 @@
    "src": "made"
   }
  ],
+ "w|algue": [
+  {
+   "text": "L'eau du lac est verte à cause d'une algue que Julien n'a jamais vue.",
+   "en": "The lake water is green because of an alga Julien has never seen.",
+   "ko": "호숫물이 쥘리앵이 처음 보는 조류 때문에 초록빛이에요.",
+   "blank": "algue",
+   "src": "made"
+  },
+  {
+   "text": "Manon se souvient de la baignade où une algue s'était enroulée autour de la cheville d'Inès.",
+   "en": "Manon remembers the swim when a strand of seaweed wrapped around Inès's ankle.",
+   "ko": "마농은 수영하다 해초가 이네스 발목에 감겼던 일을 떠올려요.",
+   "blank": "algue",
+   "src": "made"
+  }
+ ],
  "w|alibi": [
   {
    "text": "Il a un alibi pour la nuit du vol.",
@@ -2914,6 +2946,22 @@
    "en": "Camille shelves an atlas that shows the altitude of every peak.",
    "ko": "카미유는 봉우리마다 고도가 적힌 지도책을 꽂아요.",
    "blank": "altitude",
+   "src": "made"
+  }
+ ],
+ "w|aluminium": [
+  {
+   "text": "Julien rapporte chaque canette en aluminium trouvée sur le sentier.",
+   "en": "Julien brings back every aluminum can he finds on the trail.",
+   "ko": "쥘리앵은 산길에서 주운 알루미늄 캔을 모두 챙겨 와요.",
+   "blank": "aluminium",
+   "src": "made"
+  },
+  {
+   "text": "Manon a trouvé chez sa mère la vieille boîte en aluminium où elles cachaient leurs secrets.",
+   "en": "Manon found at her mother's the old aluminum box where they hid their secrets.",
+   "ko": "마농은 어머니 집에서 둘이 비밀을 숨겨 두던 낡은 알루미늄 상자를 찾았어요.",
+   "blank": "aluminium",
    "src": "made"
   }
  ],
@@ -4439,6 +4487,22 @@
    "blank": "approcher"
   }
  ],
+ "w|approfondi": [
+  {
+   "text": "Julien a une connaissance approfondie des champignons de la région.",
+   "en": "Julien has an in-depth knowledge of the region's mushrooms.",
+   "ko": "쥘리앵은 이 지역 버섯을 깊이 알아요.",
+   "blank": "approfondie",
+   "src": "made"
+  },
+  {
+   "text": "Manon demande à Inès une réponse plus approfondie que sa dernière carte de deux lignes.",
+   "en": "Manon asks Inès for a fuller reply than her last two-line card.",
+   "ko": "마농은 이네스에게 지난번 두 줄짜리 카드보다 자세한 답장을 부탁해요.",
+   "blank": "approfondie",
+   "src": "made"
+  }
+ ],
  "w|approprié": [
   {
    "text": "Ce ton n'est pas approprié ici.",
@@ -4772,6 +4836,22 @@
    "en": "Claire gives every employee a silver mug for the first anniversary.",
    "ko": "클레르는 창립 일 주년 기념으로 직원마다 은빛 머그잔을 선물해요.",
    "blank": "argentée",
+   "src": "made"
+  }
+ ],
+ "w|argile": [
+  {
+   "text": "Julien façonne des pots en argile avec la potière du village.",
+   "en": "Julien shapes clay pots with the village potter.",
+   "ko": "쥘리앵은 마을 도예가와 함께 점토로 항아리를 빚어요.",
+   "blank": "argile",
+   "src": "made"
+  },
+  {
+   "text": "Manon a pris des cours de poterie et façonne maintenant l'argile tous les samedis.",
+   "en": "Manon has taken pottery classes and now shapes clay every Saturday.",
+   "ko": "마농은 도자기 수업을 들어서 이제 토요일마다 점토를 빚어요.",
+   "blank": "argile",
    "src": "made"
   }
  ],
@@ -19649,6 +19729,22 @@
    "src": "made"
   }
  ],
+ "w|contradictoire": [
+  {
+   "text": "Julien reçoit des prévisions météo contradictoires pour le week-end.",
+   "en": "Julien gets contradictory weather forecasts for the weekend.",
+   "ko": "쥘리앵은 주말 날씨 예보가 서로 엇갈려서 헷갈려요.",
+   "blank": "contradictoires",
+   "src": "made"
+  },
+  {
+   "text": "Manon avoue avoir des sentiments contradictoires à l'idée de revoir Inès.",
+   "en": "Manon admits to having mixed feelings about seeing Inès again.",
+   "ko": "마농은 이네스를 다시 만난다는 생각에 마음이 엇갈린다고 털어놔요.",
+   "blank": "contradictoires",
+   "src": "made"
+  }
+ ],
  "w|contraindre": [
   {
    "text": "La loi peut contraindre une entreprise à publier ses comptes, explique Paul.",
@@ -23501,6 +23597,22 @@
    "blank": "décoller"
   }
  ],
+ "w|décomposition": [
+  {
+   "text": "Julien montre aux élèves les feuilles en décomposition qui nourrissent le sol de la forêt.",
+   "en": "Julien shows the students the decaying leaves that feed the forest floor.",
+   "ko": "쥘리앵은 학생들에게 숲 바닥을 기름지게 하는 썩어 가는 낙엽을 보여 줘요.",
+   "blank": "décomposition",
+   "src": "made"
+  },
+  {
+   "text": "Manon explique à Inès que son compost est en pleine décomposition et sent la terre.",
+   "en": "Manon tells Inès that her compost is breaking down nicely and smells of earth.",
+   "ko": "마농은 이네스에게 퇴비가 한창 삭아서 흙냄새가 난다고 말해요.",
+   "blank": "décomposition",
+   "src": "made"
+  }
+ ],
  "w|déconnecter": [
   {
    "text": "Le soir, Hugo s'oblige à se déconnecter de sa messagerie professionnelle.",
@@ -24283,6 +24395,22 @@
    "blank": "déjeuner"
   }
  ],
+ "w|déjouer": [
+  {
+   "text": "Julien installe une clôture pour déjouer les ruses du renard.",
+   "en": "Julien puts up a fence to foil the fox's tricks.",
+   "ko": "쥘리앵은 여우의 꾀를 막으려고 울타리를 쳐요.",
+   "blank": "déjouer",
+   "src": "made"
+  },
+  {
+   "text": "Manon raconte comment sa banque a réussi à déjouer une tentative de fraude sur son compte.",
+   "en": "Manon tells how her bank managed to foil an attempted fraud on her account.",
+   "ko": "마농은 은행이 자기 계좌에 걸린 사기 시도를 막아 낸 이야기를 해요.",
+   "blank": "déjouer",
+   "src": "made"
+  }
+ ],
  "w|délai": [
   {
    "text": "Paul doit rendre son rapport sur la rivière dans un délai d'une semaine.",
@@ -24461,6 +24589,22 @@
    "blank": "demander"
   }
  ],
+ "w|démanteler": [
+  {
+   "text": "La commune va démanteler le vieux téléski, au grand regret de Julien.",
+   "en": "The town is going to dismantle the old ski lift, much to Julien's regret.",
+   "ko": "마을이 낡은 스키 리프트를 철거한다고 해서 쥘리앵은 무척 아쉬워해요.",
+   "blank": "démanteler",
+   "src": "made"
+  },
+  {
+   "text": "Manon raconte que l'usine de sa ville est en train de démanteler ses vieilles machines.",
+   "en": "Manon says the factory in her town is dismantling its old machines.",
+   "ko": "마농은 자기 동네 공장이 낡은 기계를 해체하고 있다고 이야기해요.",
+   "blank": "démanteler",
+   "src": "made"
+  }
+ ],
  "w|démarche": [
   {
    "text": "Lucas reconnaît son ami de loin, rien qu'à sa démarche.",
@@ -24565,6 +24709,22 @@
    "en": "Their house looks onto the park.",
    "ko": "그 저택 창으로 공원이 보여.",
    "blank": "demeure"
+  }
+ ],
+ "w|demeurer": [
+  {
+   "text": "Julien a choisi de demeurer au village plutôt que de partir en ville.",
+   "en": "Julien chose to remain in the village rather than move to the city.",
+   "ko": "쥘리앵은 도시로 가는 대신 마을에 남기로 했어요.",
+   "blank": "demeurer",
+   "src": "made"
+  },
+  {
+   "text": "Manon espère que leur amitié va demeurer malgré la distance.",
+   "en": "Manon hopes their friendship will last despite the distance.",
+   "ko": "마농은 멀리 떨어져 있어도 둘의 우정이 이어지길 바라요.",
+   "blank": "demeurer",
+   "src": "made"
   }
  ],
  "w|demi": [
@@ -25821,6 +25981,22 @@
    "en": "Put your bag on top of the bed.",
    "ko": "가방을 침대 위에 놓아.",
    "blank": "dessus"
+  }
+ ],
+ "w|déstabiliser": [
+  {
+   "text": "Le vent violent finit par déstabiliser la vieille cabane de Julien.",
+   "en": "The strong wind ends up unsettling Julien's old shed.",
+   "ko": "거센 바람에 쥘리앵의 낡은 오두막이 결국 흔들려요.",
+   "blank": "déstabiliser",
+   "src": "made"
+  },
+  {
+   "text": "Manon avoue que le silence d'Inès a fini par la déstabiliser.",
+   "en": "Manon admits that Inès's silence ended up unsettling her.",
+   "ko": "마농은 이네스가 답이 없어서 결국 마음이 흔들렸다고 털어놔요.",
+   "blank": "déstabiliser",
+   "src": "made"
   }
  ],
  "w|destin": [
@@ -29173,6 +29349,22 @@
    "blank": "eau"
   }
  ],
+ "w|éblouissant": [
+  {
+   "text": "Au réveil, Julien découvre un paysage éblouissant sous la neige fraîche.",
+   "en": "When he wakes up, Julien discovers a dazzling landscape under fresh snow.",
+   "ko": "아침에 일어난 쥘리앵은 갓 내린 눈에 덮인 눈부신 풍경을 봐요.",
+   "blank": "éblouissant",
+   "src": "made"
+  },
+  {
+   "text": "Manon parle du coucher de soleil éblouissant qu'elle a vu depuis la falaise.",
+   "en": "Manon talks about the dazzling sunset she saw from the cliff.",
+   "ko": "마농은 절벽에서 본 눈부신 노을 이야기를 해요.",
+   "blank": "éblouissant",
+   "src": "made"
+  }
+ ],
  "w|écart": [
   {
    "text": "L’écart entre eux est minime.",
@@ -29439,6 +29631,22 @@
    "en": "If you keep going, you will burst out laughing.",
    "ko": "계속하면 너는 웃음을 터뜨릴 거야.",
    "blank": "éclater"
+  }
+ ],
+ "w|éclipse": [
+  {
+   "text": "Tout le village monte au col avec Julien pour regarder l'éclipse de soleil.",
+   "en": "The whole village climbs to the pass with Julien to watch the solar eclipse.",
+   "ko": "온 마을 사람들이 쥘리앵과 함께 고개에 올라 일식을 봐요.",
+   "blank": "éclipse",
+   "src": "made"
+  },
+  {
+   "text": "Manon rappelle à Inès l'éclipse qu'elles avaient regardée ensemble à travers des lunettes en carton.",
+   "en": "Manon reminds Inès of the eclipse they watched together through cardboard glasses.",
+   "ko": "마농은 이네스에게 종이 안경으로 함께 봤던 일식을 떠올리게 해요.",
+   "blank": "éclipse",
+   "src": "made"
   }
  ],
  "w|école": [
@@ -30361,6 +30569,22 @@
    "en": "The doorbell is now electric.",
    "ko": "초인종이 이제 전기식이야.",
    "blank": "électrique"
+  }
+ ],
+ "w|électromagnétique": [
+  {
+   "text": "Près de l'antenne relais, Julien explique aux enfants ce qu'est une onde électromagnétique.",
+   "en": "Near the relay antenna, Julien explains to the children what an electromagnetic wave is.",
+   "ko": "쥘리앵은 중계탑 근처에서 아이들에게 전자기파가 무엇인지 설명해요.",
+   "blank": "électromagnétique",
+   "src": "made"
+  },
+  {
+   "text": "Manon raconte qu'au travail elle étudie le rayonnement électromagnétique des téléphones.",
+   "en": "Manon says that at work she studies the electromagnetic radiation of phones.",
+   "ko": "마농은 직장에서 휴대폰의 전자기 방사를 연구한다고 이야기해요.",
+   "blank": "électromagnétique",
+   "src": "made"
   }
  ],
  "w|électronique": [
@@ -31798,6 +32022,22 @@
    "en": "A small electric machine cleans the shop floor in front of Camille.",
    "ko": "카미유 앞에서 작은 전동 기계가 매장 바닥을 청소해요.",
    "blank": "engin",
+   "src": "made"
+  }
+ ],
+ "w|engloutir": [
+  {
+   "text": "Julien raconte comment une avalanche a failli engloutir la grange d'en bas.",
+   "en": "Julien tells how an avalanche nearly swallowed up the barn down below.",
+   "ko": "쥘리앵은 눈사태가 아래쪽 헛간을 삼킬 뻔한 이야기를 해요.",
+   "blank": "engloutir",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit qu'elle a vu son fils engloutir trois crêpes en quelques minutes.",
+   "en": "Manon writes that she saw her son wolf down three crêpes in a few minutes.",
+   "ko": "마농은 아들이 몇 분 만에 크레프 세 장을 먹어 치웠다고 써요.",
+   "blank": "engloutir",
    "src": "made"
   }
  ],
@@ -37927,6 +38167,22 @@
    "src": "made"
   }
  ],
+ "w|flocon": [
+  {
+   "text": "Julien tire la langue pour attraper un flocon devant le chalet.",
+   "en": "Julien sticks out his tongue to catch a snowflake in front of the chalet.",
+   "ko": "쥘리앵은 산장 앞에서 혀를 내밀어 눈송이를 받아요.",
+   "blank": "flocon",
+   "src": "made"
+  },
+  {
+   "text": "Manon a dessiné un flocon au coin de sa lettre de Noël.",
+   "en": "Manon drew a snowflake in the corner of her Christmas letter.",
+   "ko": "마농은 성탄절 편지 귀퉁이에 눈송이를 그렸어요.",
+   "blank": "flocon",
+   "src": "made"
+  }
+ ],
  "w|flot": [
   {
    "text": "Après l'orage, Thomas regarde le flot boueux emporter des branches.",
@@ -40855,6 +41111,22 @@
    "src": "made"
   }
  ],
+ "w|glacier": [
+  {
+   "text": "Julien emmène les randonneurs voir le glacier qui domine le village.",
+   "en": "Julien takes the hikers to see the glacier that towers over the village.",
+   "ko": "쥘리앵은 등산객들을 마을 위로 솟은 빙하로 데려가요.",
+   "blank": "glacier",
+   "src": "made"
+  },
+  {
+   "text": "Dans sa lettre, Manon décrit le glacier qu'elle a vu pendant ses vacances.",
+   "en": "In her letter, Manon describes the glacier she saw on vacation.",
+   "ko": "마농은 편지에 휴가 때 본 빙하를 묘사해요.",
+   "blank": "glacier",
+   "src": "made"
+  }
+ ],
  "w|glaçon": [
   {
    "text": "Antoine met trop de glaçons dans les verres, et son père le gronde.",
@@ -41099,6 +41371,22 @@
    "en": "When I was a kid, I dreamed of adventures.",
    "ko": "어렸을 때 나는 모험을 꿈꿨어.",
    "blank": "gosse"
+  }
+ ],
+ "w|gouffre": [
+  {
+   "text": "Une barrière protège les promeneurs du gouffre près duquel Julien fait paître ses chèvres.",
+   "en": "A fence protects walkers from the chasm near which Julien grazes his goats.",
+   "ko": "쥘리앵이 염소를 풀어 먹이는 곳 근처 깊은 구렁 앞에는 울타리가 있어요.",
+   "blank": "gouffre",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit qu'un gouffre s'est ouvert entre elles depuis le déménagement d'Inès.",
+   "en": "Manon writes that a gulf has opened between them since Inès moved away.",
+   "ko": "마농은 이네스가 이사한 뒤로 둘 사이에 큰 틈이 생겼다고 써요.",
+   "blank": "gouffre",
+   "src": "made"
   }
  ],
  "w|goût": [
@@ -43807,6 +44095,22 @@
    "src": "made"
   }
  ],
+ "w|hydrogène": [
+  {
+   "text": "Le bus du village roule désormais à l'hydrogène, et Julien en est fier.",
+   "en": "The village bus now runs on hydrogen, and Julien is proud of it.",
+   "ko": "마을 버스가 이제 수소로 달려서 쥘리앵은 뿌듯해요.",
+   "blank": "hydrogène",
+   "src": "made"
+  },
+  {
+   "text": "Manon explique que son frère travaille sur des voitures à hydrogène.",
+   "en": "Manon explains that her brother works on hydrogen cars.",
+   "ko": "마농은 남동생이 수소차를 연구한다고 설명해요.",
+   "blank": "hydrogène",
+   "src": "made"
+  }
+ ],
  "w|hygiène": [
   {
    "text": "Une affiche rappelle à Nicolas les règles d'hygiène à respecter à l'entrée de chaque chambre.",
@@ -44705,6 +45009,22 @@
    "src": "made"
   }
  ],
+ "w|impensable": [
+  {
+   "text": "Pour Julien, vendre la maison de ses grands-parents est impensable.",
+   "en": "For Julien, selling his grandparents' house is unthinkable.",
+   "ko": "쥘리앵에게 조부모님 집을 파는 건 생각도 할 수 없는 일이에요.",
+   "blank": "impensable",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit qu'il y a dix ans, perdre le contact avec Inès lui aurait semblé impensable.",
+   "en": "Manon writes that ten years ago, losing touch with Inès would have seemed unthinkable to her.",
+   "ko": "마농은 십 년 전이라면 이네스와 연락이 끊긴다는 건 상상도 못 했을 거라고 써요.",
+   "blank": "impensable",
+   "src": "made"
+  }
+ ],
  "w|impérial": [
   {
    "text": "Hugo fait un exposé sur l'histoire de la Chine impériale.",
@@ -45382,6 +45702,22 @@
    "en": "Léa finds the new market manager a bit incompetent, as he forgets the pitches.",
    "ko": "레아는 새 시장 관리인이 자리를 자꾸 잊어서 좀 무능하다고 생각해요.",
    "blank": "incompétent",
+   "src": "made"
+  }
+ ],
+ "w|incomplet": [
+  {
+   "text": "La carte des sentiers que Julien a trouvée en mairie est incomplète.",
+   "en": "The trail map Julien found at the town hall is incomplete.",
+   "ko": "쥘리앵이 면사무소에서 구한 산길 지도는 빠진 데가 있어요.",
+   "blank": "incomplète",
+   "src": "made"
+  },
+  {
+   "text": "Manon remarque que l'adresse d'Inès sur la dernière enveloppe était incomplète.",
+   "en": "Manon notices that Inès's address on the last envelope was incomplete.",
+   "ko": "마농은 지난번 봉투에 적힌 이네스의 주소가 덜 적혀 있었다는 걸 알아차려요.",
+   "blank": "incomplète",
    "src": "made"
   }
  ],
@@ -46200,6 +46536,22 @@
    "en": "Lighting a fire in the forest is an offence, Camille reminds the hikers.",
    "ko": "숲에서 불을 피우는 건 위법이라고 카미유가 등산객들에게 일러 줘요.",
    "blank": "infraction",
+   "src": "made"
+  }
+ ],
+ "w|infrarouge": [
+  {
+   "text": "Julien utilise une caméra infrarouge pour suivre les animaux la nuit.",
+   "en": "Julien uses an infrared camera to track animals at night.",
+   "ko": "쥘리앵은 밤에 동물을 따라가려고 적외선 카메라를 써요.",
+   "blank": "infrarouge",
+   "src": "made"
+  },
+  {
+   "text": "Manon décrit le sauna infrarouge qu'elle a essayé pendant ses vacances.",
+   "en": "Manon describes the infrared sauna she tried on vacation.",
+   "ko": "마농은 휴가 때 해 본 적외선 사우나 이야기를 써요.",
+   "blank": "infrarouge",
    "src": "made"
   }
  ],
@@ -48161,6 +48513,22 @@
    "src": "made"
   }
  ],
+ "w|irrégulier": [
+  {
+   "text": "Le chemin qui mène chez Julien est très irrégulier après les orages.",
+   "en": "The path to Julien's house is very uneven after the storms.",
+   "ko": "폭풍이 지나가면 쥘리앵의 집으로 가는 길이 몹시 울퉁불퉁해져요.",
+   "blank": "irrégulier",
+   "src": "made"
+  },
+  {
+   "text": "Manon s'excuse de son écriture irrégulière, due à un poignet douloureux.",
+   "en": "Manon apologizes for her uneven handwriting, caused by a sore wrist.",
+   "ko": "마농은 손목이 아파서 글씨가 삐뚤빼뚤하다고 사과해요.",
+   "blank": "irrégulière",
+   "src": "made"
+  }
+ ],
  "w|irrésistible": [
   {
    "text": "Le café de la machine est infect, mais l'odeur des croissants est irrésistible pour Louis.",
@@ -49837,6 +50205,22 @@
    "blank": "larme"
   }
  ],
+ "w|larve": [
+  {
+   "text": "Julien trouve une larve de libellule dans le ruisseau.",
+   "en": "Julien finds a dragonfly larva in the stream.",
+   "ko": "쥘리앵은 개울에서 잠자리 애벌레를 찾아요.",
+   "blank": "larve",
+   "src": "made"
+  },
+  {
+   "text": "Manon raconte que son fils élève une larve de papillon dans un bocal.",
+   "en": "Manon tells how her son is raising a butterfly larva in a jar.",
+   "ko": "마농은 아들이 유리병에 나비 애벌레를 키운다고 이야기해요.",
+   "blank": "larve",
+   "src": "made"
+  }
+ ],
  "w|laser": [
   {
    "text": "Le thermomètre laser de Thomas mesure la chaleur de la poêle en une seconde.",
@@ -51498,6 +51882,22 @@
    "en": "Sarah chose a bright room with large windows.",
    "ko": "사라는 큰 창문이 있는 밝은 방을 골랐어요.",
    "blank": "lumineuse",
+   "src": "made"
+  }
+ ],
+ "w|lunaire": [
+  {
+   "text": "Sous la pleine lune, le paysage que voit Julien depuis sa fenêtre paraît lunaire.",
+   "en": "Under the full moon, the landscape Julien sees from his window looks lunar.",
+   "ko": "보름달 아래 쥘리앵의 창밖 풍경은 달 표면처럼 보여요.",
+   "blank": "lunaire",
+   "src": "made"
+  },
+  {
+   "text": "Manon décrit la lumière lunaire qui éclaire son jardin la nuit.",
+   "en": "Manon describes the moonlight that lights up her garden at night.",
+   "ko": "마농은 밤마다 정원을 비추는 달빛을 묘사해요.",
+   "blank": "lunaire",
    "src": "made"
   }
  ],
@@ -56745,6 +57145,22 @@
    "src": "made"
   }
  ],
+ "w|mouette": [
+  {
+   "text": "Julien est surpris de voir une mouette si loin de la mer, au-dessus du lac du village.",
+   "en": "Julien is surprised to see a seagull so far from the sea, above the village lake.",
+   "ko": "쥘리앵은 바다에서 이렇게 먼 마을 호수 위에 갈매기가 있어서 놀라요.",
+   "blank": "mouette",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit qu'une mouette lui a volé son sandwich sur le port.",
+   "en": "Manon writes that a seagull stole her sandwich at the harbor.",
+   "ko": "마농은 항구에서 갈매기가 샌드위치를 채 갔다고 편지에 써요.",
+   "blank": "mouette",
+   "src": "made"
+  }
+ ],
  "w|mouillé": [
   {
    "text": "Mon pantalon est tout mouillé à cause de la pluie.",
@@ -59039,6 +59455,22 @@
    "src": "made"
   }
  ],
+ "w|obstiné": [
+  {
+   "text": "Le vieux voisin de Julien est obstiné et refuse de quitter sa ferme en hiver.",
+   "en": "Julien's old neighbor is stubborn and refuses to leave his farm in winter.",
+   "ko": "쥘리앵의 나이 든 이웃은 고집이 세서 겨울에도 농장을 떠나지 않아요.",
+   "blank": "obstiné",
+   "src": "made"
+  },
+  {
+   "text": "Manon reconnaît qu'elle était obstinée à l'époque où elles se sont disputées.",
+   "en": "Manon admits she was stubborn back when they fell out.",
+   "ko": "마농은 둘이 다퉜던 그때 자기가 고집을 부렸다고 인정해요.",
+   "blank": "obstinée",
+   "src": "made"
+  }
+ ],
  "w|obtenir": [
   {
    "text": "Je veux obtenir ce diplôme.",
@@ -60587,6 +61019,22 @@
    "blank": "ours"
   }
  ],
+ "w|ourson": [
+  {
+   "text": "Julien aperçoit un ourson qui suit sa mère à la lisière du bois.",
+   "en": "Julien spots a bear cub following its mother at the edge of the woods.",
+   "ko": "쥘리앵은 숲 가장자리에서 어미를 따라가는 새끼 곰을 봐요.",
+   "blank": "ourson",
+   "src": "made"
+  },
+  {
+   "text": "Manon garde encore l'ourson en peluche qu'Inès lui avait offert.",
+   "en": "Manon still keeps the teddy bear Inès gave her.",
+   "ko": "마농은 이네스가 준 곰 인형을 아직 간직하고 있어요.",
+   "blank": "ourson",
+   "src": "made"
+  }
+ ],
  "w|outil": [
   {
    "text": "Cet outil est pratique pour réparer les vélos.",
@@ -60961,6 +61409,22 @@
    "en": "A pale light was coming into the room.",
    "ko": "창백한 빛이 방 안으로 들어왔어.",
    "blank": "pâle"
+  }
+ ],
+ "w|panda": [
+  {
+   "text": "La fille de Julien dort avec un panda en peluche.",
+   "en": "Julien's daughter sleeps with a stuffed panda.",
+   "ko": "쥘리앵의 딸은 판다 인형을 안고 자요.",
+   "blank": "panda",
+   "src": "made"
+  },
+  {
+   "text": "Manon joint à sa lettre une carte postale avec un panda qui mange du bambou.",
+   "en": "Manon encloses a postcard of a panda eating bamboo with her letter.",
+   "ko": "마농은 대나무를 먹는 판다 엽서를 편지에 동봉해요.",
+   "blank": "panda",
+   "src": "made"
   }
  ],
  "w|panier": [
@@ -64078,6 +64542,22 @@
    "en": "The coach tells Manon that the team is at its peak form.",
    "ko": "코치는 마농에게 팀이 최고의 컨디션이라고 말해요.",
    "blank": "pic",
+   "src": "made"
+  }
+ ],
+ "w|pie": [
+  {
+   "text": "Une pie vole la petite cuillère que Julien a laissée sur la terrasse.",
+   "en": "A magpie steals the teaspoon Julien left on the terrace.",
+   "ko": "까치가 쥘리앵이 테라스에 둔 티스푼을 물어 가요.",
+   "blank": "pie",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit qu'une pie vient chaque matin sur son balcon.",
+   "en": "Manon writes that a magpie comes to her balcony every morning.",
+   "ko": "마농은 아침마다 까치가 발코니에 온다고 써요.",
+   "blank": "pie",
    "src": "made"
   }
  ],
@@ -70133,6 +70613,22 @@
    "blank": "Quant à"
   }
  ],
+ "w|quantique": [
+  {
+   "text": "Le soir, Julien lit un livre de physique quantique au coin du feu.",
+   "en": "In the evening, Julien reads a book on quantum physics by the fire.",
+   "ko": "저녁이면 쥘리앵은 난롯가에서 양자 물리학 책을 읽어요.",
+   "blank": "quantique",
+   "src": "made"
+  },
+  {
+   "text": "Manon avoue qu'elle n'a rien compris à la conférence sur l'informatique quantique.",
+   "en": "Manon admits she understood nothing of the lecture on quantum computing.",
+   "ko": "마농은 양자 컴퓨터 강연을 하나도 못 알아들었다고 털어놔요.",
+   "blank": "quantique",
+   "src": "made"
+  }
+ ],
  "w|quantité": [
   {
    "text": "Il y a une grande quantité de fruits.",
@@ -71872,6 +72368,22 @@
    "en": "Léa has to top up her transport card before going home with her baskets.",
    "ko": "레아는 장바구니를 들고 돌아가기 전에 교통카드를 충전해야 해요.",
    "blank": "recharger",
+   "src": "made"
+  }
+ ],
+ "w|réchauffement": [
+  {
+   "text": "Les anciens racontent à Julien comment le réchauffement a fait fondre la neige plus tôt chaque année.",
+   "en": "The old-timers tell Julien how warming has made the snow melt earlier every year.",
+   "ko": "마을 어르신들은 쥘리앵에게 기온이 오르면서 해마다 눈이 더 일찍 녹는다고 말해요.",
+   "blank": "réchauffement",
+   "src": "made"
+  },
+  {
+   "text": "Manon demande à Inès si le réchauffement inquiète aussi les gens de sa région.",
+   "en": "Manon asks Inès whether global warming worries people in her region too.",
+   "ko": "마농은 이네스에게 그쪽 사람들도 지구 온난화를 걱정하는지 물어요.",
+   "blank": "réchauffement",
    "src": "made"
   }
  ],
@@ -79247,6 +79759,22 @@
    "blank": "sembler"
   }
  ],
+ "w|semence": [
+  {
+   "text": "Au printemps, Julien échange de la semence de pommes de terre avec ses voisins.",
+   "en": "In spring, Julien swaps seed potatoes with his neighbors.",
+   "ko": "봄이면 쥘리앵은 이웃들과 씨감자를 나눠요.",
+   "blank": "semence",
+   "src": "made"
+  },
+  {
+   "text": "Manon envoie à Inès un sachet de semence de tomates anciennes.",
+   "en": "Manon sends Inès a packet of heirloom tomato seeds.",
+   "ko": "마농은 이네스에게 토종 토마토 씨앗 한 봉지를 보내요.",
+   "blank": "semence",
+   "src": "made"
+  }
+ ],
  "w|semer": [
   {
    "text": "Antoine aide le fermier à semer des radis dans le potager.",
@@ -79413,6 +79941,22 @@
    "en": "This topic is sensitive in our family.",
    "ko": "이 주제는 우리 가족에게 민감해.",
    "blank": "sensible"
+  }
+ ],
+ "w|sensuel": [
+  {
+   "text": "Julien trouve le parfum des pins après la pluie presque sensuel.",
+   "en": "Julien finds the scent of the pines after rain almost sensual.",
+   "ko": "쥘리앵은 비 온 뒤 소나무 향이 거의 관능적이라고 느껴요.",
+   "blank": "sensuel",
+   "src": "made"
+  },
+  {
+   "text": "Manon décrit la voix chaude et sensuelle de la chanteuse qu'elle a vue en concert.",
+   "en": "Manon describes the warm, sensual voice of the singer she saw in concert.",
+   "ko": "마농은 공연에서 본 가수의 따뜻하고 감미로운 목소리를 묘사해요.",
+   "blank": "sensuelle",
+   "src": "made"
   }
  ],
  "w|sentence": [
@@ -80401,6 +80945,22 @@
    "en": "I simply want to talk with you.",
    "ko": "나는 단순히 너와 이야기하고 싶어.",
    "blank": "simplement"
+  }
+ ],
+ "w|simplicité": [
+  {
+   "text": "Julien aime la simplicité de la vie en montagne.",
+   "en": "Julien loves the simplicity of mountain life.",
+   "ko": "쥘리앵은 산골 생활의 소박함을 좋아해요.",
+   "blank": "simplicité",
+   "src": "made"
+  },
+  {
+   "text": "Manon apprécie la simplicité des lettres écrites à la main.",
+   "en": "Manon appreciates the simplicity of handwritten letters.",
+   "ko": "마농은 손으로 쓴 편지의 소박함을 좋아해요.",
+   "blank": "simplicité",
+   "src": "made"
   }
  ],
  "w|simulation": [
@@ -85175,6 +85735,22 @@
    "src": "made"
   }
  ],
+ "w|télescope": [
+  {
+   "text": "Julien installe son télescope sur le toit pour observer les étoiles.",
+   "en": "Julien sets up his telescope on the roof to look at the stars.",
+   "ko": "쥘리앵은 별을 보려고 지붕에 망원경을 설치해요.",
+   "blank": "télescope",
+   "src": "made"
+  },
+  {
+   "text": "Manon raconte qu'elle a offert un télescope à son neveu pour son anniversaire.",
+   "en": "Manon says she gave her nephew a telescope for his birthday.",
+   "ko": "마농은 조카 생일에 망원경을 선물했다고 이야기해요.",
+   "blank": "télescope",
+   "src": "made"
+  }
+ ],
  "w|télévisé": [
   {
    "text": "Le procès est télévisé, et la mère de Julien le regarde depuis son salon.",
@@ -85361,6 +85937,22 @@
    "en": "Do you have time for me tonight?",
    "ko": "오늘 밤에 나를 위한 시간이 있니?",
    "blank": "temps"
+  }
+ ],
+ "w|tenace": [
+  {
+   "text": "Une odeur de fumée tenace reste dans les vêtements de Julien après la veillée.",
+   "en": "A lingering smell of smoke stays in Julien's clothes after the evening by the fire.",
+   "ko": "모닥불 모임이 끝난 뒤에도 쥘리앵의 옷에 연기 냄새가 끈질기게 남아요.",
+   "blank": "tenace",
+   "src": "made"
+  },
+  {
+   "text": "Manon raconte qu'un rhume tenace l'a gardée au lit pendant deux semaines.",
+   "en": "Manon says a stubborn cold kept her in bed for two weeks.",
+   "ko": "마농은 지독한 감기 때문에 이 주 동안 누워 있었다고 해요.",
+   "blank": "tenace",
+   "src": "made"
   }
  ],
  "w|tenant": [
@@ -86084,6 +86676,22 @@
    "en": "The market gardener gives Émilie a third of a melon to taste.",
    "ko": "채소 장수가 에밀리에게 맛보라고 멜론 3분의 1을 줘요.",
    "blank": "tiers",
+   "src": "made"
+  }
+ ],
+ "w|tige": [
+  {
+   "text": "Julien coupe la tige des edelweiss avec précaution pour l'herbier de l'école.",
+   "en": "Julien carefully cuts the stems of the edelweiss for the school's plant collection.",
+   "ko": "쥘리앵은 학교 식물 표본집에 넣을 에델바이스 줄기를 조심스럽게 잘라요.",
+   "blank": "tige",
+   "src": "made"
+  },
+  {
+   "text": "Manon glisse une tige de lavande séchée dans sa lettre à Inès.",
+   "en": "Manon slips a sprig of dried lavender into her letter to Inès.",
+   "ko": "마농은 이네스에게 보내는 편지에 말린 라벤더 줄기를 끼워 넣어요.",
+   "blank": "tige",
    "src": "made"
   }
  ],
@@ -88019,6 +88627,22 @@
    "src": "made"
   }
  ],
+ "w|trier": [
+  {
+   "text": "Julien aide à trier les déchets à la déchetterie du village.",
+   "en": "Julien helps sort the waste at the village recycling center.",
+   "ko": "쥘리앵은 마을 재활용장에서 쓰레기 분리를 도와요.",
+   "blank": "trier",
+   "src": "made"
+  },
+  {
+   "text": "Avant de déménager, Manon a dû trier toutes les lettres d'Inès.",
+   "en": "Before moving, Manon had to sort through all of Inès's letters.",
+   "ko": "이사하기 전에 마농은 이네스의 편지를 전부 정리해야 했어요.",
+   "blank": "trier",
+   "src": "made"
+  }
+ ],
  "w|trinquer": [
   {
    "text": "À la fermeture, toute la famille d'Antoine aime trinquer autour de la grande table.",
@@ -88845,6 +89469,22 @@
    "en": "The university is holding an open house.",
    "ko": "대학에서 오픈 캠퍼스 행사를 열고 있어.",
    "blank": "université"
+  }
+ ],
+ "w|uranium": [
+  {
+   "text": "Julien lit qu'une ancienne mine d'uranium se cachait autrefois dans la vallée voisine.",
+   "en": "Julien reads that an old uranium mine was once hidden in the neighboring valley.",
+   "ko": "쥘리앵은 옆 골짜기에 옛 우라늄 광산이 있었다는 글을 읽어요.",
+   "blank": "uranium",
+   "src": "made"
+  },
+  {
+   "text": "Manon a vu un documentaire sur l'extraction de l'uranium et en parle longuement.",
+   "en": "Manon saw a documentary on uranium mining and talks about it at length.",
+   "ko": "마농은 우라늄 채굴 다큐멘터리를 보고 그 이야기를 길게 써요.",
+   "blank": "uranium",
+   "src": "made"
   }
  ],
  "w|urbain": [
