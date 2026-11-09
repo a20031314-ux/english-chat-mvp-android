@@ -13,6 +13,22 @@
    "blank": "a"
   }
  ],
+ "w|abad": [
+  {
+   "text": "En el claustro del museo, Andrés vio la tumba de un abad del siglo doce.",
+   "en": "In the museum cloister, Andrés saw the tomb of a twelfth-century abbot.",
+   "ko": "안드레스는 박물관 회랑에서 12세기 수도원장의 무덤을 봤어요.",
+   "blank": "abad",
+   "src": "made"
+  },
+  {
+   "text": "Carmen visitó las ruinas del monasterio del bosque, donde un abad fundó la primera biblioteca del valle.",
+   "en": "Carmen visited the ruins of the forest monastery, where an abbot founded the valley's first library.",
+   "ko": "카르멘은 숲속 수도원 터를 찾았는데, 그곳에서 한 수도원장이 골짜기 최초의 도서관을 세웠대요.",
+   "blank": "abad",
+   "src": "made"
+  }
+ ],
  "w|abajo": [
   {
    "text": "Mira abajo, se te cayó algo.",
@@ -2402,6 +2418,22 @@
    "en": "Lola was waiting for a yes from the bank to pay the deposit.",
    "ko": "롤라는 계약금을 내려고 은행의 승인을 기다렸어요.",
    "blank": "afirmativa",
+   "src": "made"
+  }
+ ],
+ "w|afligir": [
+  {
+   "text": "La guía contó a Andrés que la muerte de su hija llegó a afligir tanto al pintor que dejó de pintar un año.",
+   "en": "The guide told Andrés that his daughter's death grieved the painter so much that he stopped painting for a year.",
+   "ko": "가이드는 안드레스에게 딸의 죽음이 화가를 너무 슬프게 해서 일 년 동안 그림을 그리지 않았다고 말했어요.",
+   "blank": "afligir",
+   "src": "made"
+  },
+  {
+   "text": "Ver el bosque quemado después del incendio llegó a afligir mucho a Carmen.",
+   "en": "Seeing the forest burnt after the fire grieved Carmen deeply.",
+   "ko": "불탄 숲을 보는 건 카르멘에게 큰 슬픔이었어요.",
+   "blank": "afligir",
    "src": "made"
   }
  ],
@@ -5535,6 +5567,22 @@
    "blank": "ánimo"
   }
  ],
+ "w|aniquilar": [
+  {
+   "text": "Según el panel que leyó Andrés, la peste llegó a aniquilar a media población de la ciudad en el siglo catorce.",
+   "en": "According to the panel Andrés read, the plague wiped out half the city's population in the fourteenth century.",
+   "ko": "안드레스가 읽은 안내판에 따르면 14세기에 흑사병이 도시 인구의 절반을 앗아 갔어요.",
+   "blank": "aniquilar",
+   "src": "made"
+  },
+  {
+   "text": "Una plaga de escarabajos amenaza con aniquilar los pinos del bosque, le explicó el guarda a Carmen.",
+   "en": "A beetle plague threatens to wipe out the forest's pines, the ranger explained to Carmen.",
+   "ko": "감시원은 카르멘에게 딱정벌레 떼가 숲의 소나무를 전멸시킬 수도 있다고 설명했어요.",
+   "blank": "aniquilar",
+   "src": "made"
+  }
+ ],
  "w|aniversario": [
   {
    "text": "Celebramos el aniversario de la boda en casa.",
@@ -7345,6 +7393,22 @@
    "en": "The movie has a confusing plot.",
    "ko": "그 영화는 줄거리가 헷갈려.",
    "blank": "argumento"
+  }
+ ],
+ "w|aristócrata": [
+  {
+   "text": "El palacio que hoy es museo perteneció a un aristócrata que coleccionaba relojes, le explicaron a Andrés.",
+   "en": "The palace that is now a museum belonged to an aristocrat who collected clocks, they explained to Andrés.",
+   "ko": "지금은 박물관인 그 궁전이 시계를 모으던 귀족의 것이었다고 안드레스에게 설명해 줬어요.",
+   "blank": "aristócrata",
+   "src": "made"
+  },
+  {
+   "text": "El bosque fue durante siglos el coto de caza de un aristócrata, según le contaron a Carmen.",
+   "en": "The forest was for centuries an aristocrat's hunting ground, Carmen was told.",
+   "ko": "카르멘이 들은 바로는 그 숲은 수백 년 동안 한 귀족의 사냥터였어요.",
+   "blank": "aristócrata",
+   "src": "made"
   }
  ],
  "w|arma": [
@@ -10896,6 +10960,22 @@
    "en": "Lola's hotel prepared a banquet for a wedding.",
    "ko": "롤라의 호텔은 결혼식 연회를 준비했어요.",
    "blank": "banquete",
+   "src": "made"
+  }
+ ],
+ "w|banquillo": [
+  {
+   "text": "Andrés se sentó en un banquillo de madera para descansar frente al cuadro más grande.",
+   "en": "Andrés sat on a wooden bench to rest in front of the largest painting.",
+   "ko": "안드레스는 가장 큰 그림 앞의 나무 벤치에 앉아 쉬었어요.",
+   "blank": "banquillo",
+   "src": "made"
+  },
+  {
+   "text": "Luis, el hermano de Carmen, pasó toda la temporada de fútbol en el banquillo.",
+   "en": "Luis, Carmen's brother, spent the whole football season on the bench.",
+   "ko": "카르멘의 동생 루이스는 축구 시즌 내내 벤치에 앉아 있었어요.",
+   "blank": "banquillo",
    "src": "made"
   }
  ],
@@ -16249,6 +16329,22 @@
    "blank": "carro"
   }
  ],
+ "w|carroza": [
+  {
+   "text": "La pieza estrella del museo es una carroza dorada que usaban los reyes, y Andrés la fotografió desde todos los ángulos.",
+   "en": "The museum's star piece is a golden carriage the kings used, and Andrés photographed it from every angle.",
+   "ko": "박물관의 대표 소장품은 왕들이 타던 황금 마차인데 안드레스는 그걸 온갖 각도에서 찍었어요.",
+   "blank": "carroza",
+   "src": "made"
+  },
+  {
+   "text": "En las fiestas del pueblo junto al río, Carmen ayudó a decorar una carroza con flores silvestres.",
+   "en": "At the village festival by the river, Carmen helped decorate a float with wildflowers.",
+   "ko": "강가 마을 축제에서 카르멘은 들꽃으로 행렬 수레를 꾸미는 걸 도왔어요.",
+   "blank": "carroza",
+   "src": "made"
+  }
+ ],
  "w|carruaje": [
   {
    "text": "La abuela de Diego trajo un rompecabezas enorme de un carruaje antiguo.",
@@ -20101,6 +20197,22 @@
    "blank": "Colocó"
   }
  ],
+ "w|colombiano": [
+  {
+   "text": "Andrés compró en la tienda del museo un libro sobre el arte colombiano del siglo veinte.",
+   "en": "Andrés bought a book on twentieth-century Colombian art in the museum shop.",
+   "ko": "안드레스는 박물관 기념품점에서 20세기 콜롬비아 미술에 관한 책을 샀어요.",
+   "blank": "colombiano",
+   "src": "made"
+  },
+  {
+   "text": "En el campamento, Carmen conoció a un biólogo colombiano que estudia las ranas del río.",
+   "en": "At the camp, Carmen met a Colombian biologist who studies the river frogs.",
+   "ko": "카르멘은 캠프에서 강 개구리를 연구하는 콜롬비아인 생물학자를 만났어요.",
+   "blank": "colombiano",
+   "src": "made"
+  }
+ ],
  "w|colonia": [
   {
    "text": "Se echó colonia antes de salir.",
@@ -20113,6 +20225,22 @@
    "en": "The old colony has stone streets.",
    "ko": "옛 식민지 거리는 돌길이 있어.",
    "blank": "colonia"
+  }
+ ],
+ "w|colonial": [
+  {
+   "text": "El museo ocupa una casona colonial con un patio lleno de plantas, y a Andrés le pareció preciosa.",
+   "en": "The museum occupies a colonial mansion with a courtyard full of plants, and Andrés found it beautiful.",
+   "ko": "박물관은 식물이 가득한 안뜰이 있는 식민지 시대 저택에 있는데 안드레스는 아주 아름답다고 느꼈어요.",
+   "blank": "colonial",
+   "src": "made"
+  },
+  {
+   "text": "Cerca del río hay un puente colonial de piedra por el que Carmen pasa cada mañana.",
+   "en": "Near the river there's a colonial stone bridge that Carmen crosses every morning.",
+   "ko": "강 근처에 식민지 시대 돌다리가 있는데 카르멘은 매일 아침 그 다리를 건너요.",
+   "blank": "colonial",
+   "src": "made"
   }
  ],
  "w|color": [
@@ -23111,6 +23239,22 @@
    "src": "made"
   }
  ],
+ "w|consumidor": [
+  {
+   "text": "Una sala del museo explica cómo cambió el papel del consumidor en el siglo pasado, y a Andrés le encantó.",
+   "en": "One room in the museum explains how the role of the consumer changed in the last century, and Andrés loved it.",
+   "ko": "박물관의 한 전시실은 지난 세기 소비자의 역할이 어떻게 바뀌었는지 보여 주는데 안드레스는 아주 좋아했어요.",
+   "blank": "consumidor",
+   "src": "made"
+  },
+  {
+   "text": "Carmen cree que el consumidor debería saber de qué bosque viene la madera de sus muebles.",
+   "en": "Carmen believes the consumer should know which forest the wood in their furniture comes from.",
+   "ko": "카르멘은 소비자가 가구 목재가 어느 숲에서 왔는지 알아야 한다고 생각해요.",
+   "blank": "consumidor",
+   "src": "made"
+  }
+ ],
  "w|consumir": [
   {
    "text": "El médico dijo que no era bueno consumir tanto azúcar.",
@@ -24395,6 +24539,22 @@
    "src": "made"
   }
  ],
+ "w|coronar": [
+  {
+   "text": "Andrés vio el cuadro en el que el obispo va a coronar al joven rey.",
+   "en": "Andrés saw the painting in which the bishop is about to crown the young king.",
+   "ko": "안드레스는 주교가 젊은 왕에게 왕관을 씌우려는 장면의 그림을 봤어요.",
+   "blank": "coronar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen tardó tres horas en coronar la cima, pero las vistas del río valieron la pena.",
+   "en": "It took Carmen three hours to reach the summit, but the views of the river were worth it.",
+   "ko": "카르멘은 정상에 오르는 데 세 시간이 걸렸지만 강 풍경은 그럴 만한 가치가 있었어요.",
+   "blank": "coronar",
+   "src": "made"
+  }
+ ],
  "w|coronel": [
   {
    "text": "El coronel dio la orden al instante.",
@@ -25461,6 +25621,22 @@
    "en": "Please clean the window glass.",
    "ko": "창문 유리를 닦아 줘.",
    "blank": "cristal"
+  }
+ ],
+ "w|cristianismo": [
+  {
+   "text": "Andrés leyó un panel sobre cómo llegó el cristianismo a la península en tiempos de los romanos.",
+   "en": "Andrés read a panel about how Christianity reached the peninsula in Roman times.",
+   "ko": "안드레스는 로마 시대에 기독교가 반도에 어떻게 들어왔는지 설명한 안내판을 읽었어요.",
+   "blank": "cristianismo",
+   "src": "made"
+  },
+  {
+   "text": "En la ermita del bosque, Carmen leyó que allí vivieron monjes en los primeros siglos del cristianismo.",
+   "en": "At the forest hermitage, Carmen read that monks lived there in the early centuries of Christianity.",
+   "ko": "카르멘은 숲속 작은 성당에서 기독교 초기 몇 세기 동안 수도사들이 그곳에 살았다는 글을 읽었어요.",
+   "blank": "cristianismo",
+   "src": "made"
   }
  ],
  "w|cristiano": [
@@ -27059,6 +27235,22 @@
    "src": "made"
   }
  ],
+ "w|debut": [
+  {
+   "text": "El museo guarda la guitarra del debut de un cantante muy querido en la ciudad, y Andrés la miró con emoción.",
+   "en": "The museum keeps the guitar from the debut of a singer much loved in the city, and Andrés looked at it with emotion.",
+   "ko": "박물관에는 그 도시에서 사랑받는 가수의 데뷔 때 기타가 있어서 안드레스는 감격하며 봤어요.",
+   "blank": "debut",
+   "src": "made"
+  },
+  {
+   "text": "El sobrino de Carmen hizo su debut como guía del parque natural este verano.",
+   "en": "Carmen's nephew made his debut as a nature park guide this summer.",
+   "ko": "카르멘의 조카는 올여름 자연공원 가이드로 데뷔했어요.",
+   "blank": "debut",
+   "src": "made"
+  }
+ ],
  "w|década": [
   {
    "text": "Pasó una década viviendo en el extranjero.",
@@ -27086,6 +27278,22 @@
    "en": "At the beach, Nuria ran into the dean of her old faculty.",
    "ko": "누리아는 해변에서 예전 학부 학장을 마주쳤어요.",
    "blank": "decano",
+   "src": "made"
+  }
+ ],
+ "w|decapitar": [
+  {
+   "text": "La guía le contó a Andrés que en aquella época solían decapitar a los traidores en la plaza mayor.",
+   "en": "The guide told Andrés that in that era they used to behead traitors in the main square.",
+   "ko": "가이드는 안드레스에게 그 시대에는 반역자를 광장에서 참수하곤 했다고 말했어요.",
+   "blank": "decapitar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen vio que alguien había usado una sierra para decapitar los arbustos del sendero.",
+   "en": "Carmen saw that someone had used a saw to cut the tops off the bushes along the path.",
+   "ko": "카르멘은 누가 톱으로 길가 덤불 윗부분을 싹둑 잘라 놓은 걸 봤어요.",
+   "blank": "decapitar",
    "src": "made"
   }
  ],
@@ -29315,6 +29523,22 @@
    "blank": "descuidar"
   }
  ],
+ "w|descuido": [
+  {
+   "text": "Por un descuido del vigilante, Andrés se quedó encerrado diez minutos en una sala.",
+   "en": "Through the guard's oversight, Andrés was locked in a room for ten minutes.",
+   "ko": "경비원의 실수로 안드레스는 한 전시실에 십 분 동안 갇혔어요.",
+   "blank": "descuido",
+   "src": "made"
+  },
+  {
+   "text": "Un descuido con una colilla puede quemar todo el bosque, repite Carmen a los excursionistas.",
+   "en": "A careless moment with a cigarette butt can burn the whole forest, Carmen repeats to hikers.",
+   "ko": "카르멘은 등산객들에게 담배꽁초 하나 잘못 버리면 숲 전체가 탈 수 있다고 거듭 말해요.",
+   "blank": "descuido",
+   "src": "made"
+  }
+ ],
  "w|desde": [
   {
    "text": "No te veo desde ayer.",
@@ -29568,6 +29792,22 @@
    "en": "Elena thought it was dishonest of the beach bar to charge double for water.",
    "ko": "엘레나는 해변 가게가 물값을 두 배로 받는 게 부당하다고 생각했어요.",
    "blank": "deshonesto",
+   "src": "made"
+  }
+ ],
+ "w|deshonra": [
+  {
+   "text": "La carta expuesta cuenta que perder la batalla fue una deshonra para toda la familia del general, y Andrés la leyó dos veces.",
+   "en": "The displayed letter says that losing the battle was a disgrace for the general's whole family, and Andrés read it twice.",
+   "ko": "전시된 편지에는 전투에서 진 것이 장군 집안 전체의 치욕이었다고 적혀 있어서 안드레스는 두 번 읽었어요.",
+   "blank": "deshonra",
+   "src": "made"
+  },
+  {
+   "text": "Para Carmen, ensuciar el río sería una deshonra para el pueblo.",
+   "en": "For Carmen, polluting the river would be a disgrace for the village.",
+   "ko": "카르멘에게 강을 더럽히는 건 마을의 수치예요.",
+   "blank": "deshonra",
    "src": "made"
   }
  ],
@@ -31875,6 +32115,22 @@
    "src": "made"
   }
  ],
+ "w|disgusto": [
+  {
+   "text": "Andrés se llevó un disgusto al saber que la sala de los mapas estaba cerrada por obras.",
+   "en": "Andrés was upset to find out the map room was closed for renovation.",
+   "ko": "안드레스는 지도 전시실이 공사로 닫혔다는 걸 알고 속상했어요.",
+   "blank": "disgusto",
+   "src": "made"
+  },
+  {
+   "text": "Carmen se llevó un disgusto al ver tanta basura en la orilla.",
+   "en": "Carmen was upset to see so much rubbish on the bank.",
+   "ko": "카르멘은 강가에 쓰레기가 그렇게 많은 걸 보고 속상했어요.",
+   "blank": "disgusto",
+   "src": "made"
+  }
+ ],
  "w|disminuir": [
   {
    "text": "Con el nuevo sistema, los errores van a disminuir.",
@@ -33207,6 +33463,22 @@
    "src": "made"
   }
  ],
+ "w|dúo": [
+  {
+   "text": "En la inauguración, un dúo de violín y piano tocó mientras Andrés recorría las salas.",
+   "en": "At the opening, a violin and piano duo played while Andrés walked through the rooms.",
+   "ko": "개관식에서 안드레스가 전시실을 둘러보는 동안 바이올린과 피아노 이중주가 연주됐어요.",
+   "blank": "dúo",
+   "src": "made"
+  },
+  {
+   "text": "Carmen y Luis forman un dúo perfecto para orientarse en el bosque.",
+   "en": "Carmen and Luis make a perfect duo for finding their way in the forest.",
+   "ko": "카르멘과 루이스는 숲에서 길을 찾는 데 완벽한 짝이에요.",
+   "blank": "dúo",
+   "src": "made"
+  }
+ ],
  "w|duplicar": [
   {
    "text": "Con la casa rural, Andrés consiguió duplicar sus ingresos en dos años.",
@@ -34061,6 +34333,22 @@
    "en": "A key element is missing from this plan.",
    "ko": "이 계획에 핵심 요소가 하나 빠져 있어.",
    "blank": "elemento"
+  }
+ ],
+ "w|elenco": [
+  {
+   "text": "El museo organizó una obra de teatro, y Andrés reconoció a dos actores del elenco.",
+   "en": "The museum put on a play, and Andrés recognised two actors in the cast.",
+   "ko": "박물관에서 연극을 올렸는데 안드레스는 출연진 중 배우 두 명을 알아봤어요.",
+   "blank": "elenco",
+   "src": "made"
+  },
+  {
+   "text": "El documental sobre el río tiene un elenco de narradores locales, y Carmen sale en él.",
+   "en": "The documentary about the river has a cast of local narrators, and Carmen appears in it.",
+   "ko": "강에 관한 다큐멘터리에는 지역 해설자들이 나오는데 카르멘도 그중 하나예요.",
+   "blank": "elenco",
+   "src": "made"
   }
  ],
  "w|elevador": [
@@ -35411,6 +35699,22 @@
    "src": "made"
   }
  ],
+ "w|engranaje": [
+  {
+   "text": "Andrés se pasó media hora mirando el engranaje del reloj de la torre.",
+   "en": "Andrés spent half an hour looking at the gears of the tower clock.",
+   "ko": "안드레스는 시계탑 시계의 톱니바퀴를 반 시간 동안 들여다봤어요.",
+   "blank": "engranaje",
+   "src": "made"
+  },
+  {
+   "text": "El viejo molino del río aún conserva su engranaje de madera, y Carmen lo mira cada vez que pasa.",
+   "en": "The old river mill still keeps its wooden gears, and Carmen looks at them every time she passes.",
+   "ko": "강가 옛 물레방아에는 아직 나무 톱니바퀴가 남아 있어서 카르멘은 지날 때마다 들여다봐요.",
+   "blank": "engranaje",
+   "src": "made"
+  }
+ ],
  "w|engreído": [
   {
    "text": "Tras ganar el concurso de ortografía, Sergio se volvió un poco engreído.",
@@ -36733,6 +37037,22 @@
    "en": "The dog got out of the yard.",
    "ko": "개가 마당에서 도망쳤어.",
    "blank": "escapó"
+  }
+ ],
+ "w|escapatoria": [
+  {
+   "text": "En la sala de la cárcel antigua, Andrés leyó sobre un preso que no encontró escapatoria en diez años.",
+   "en": "In the old prison room, Andrés read about a prisoner who found no way out in ten years.",
+   "ko": "옛 감옥 전시실에서 안드레스는 십 년 동안 빠져나갈 길을 찾지 못한 죄수 이야기를 읽었어요.",
+   "blank": "escapatoria",
+   "src": "made"
+  },
+  {
+   "text": "El río crecía y Carmen buscó una escapatoria por la ladera del bosque.",
+   "en": "The river was rising and Carmen looked for a way out up the forest slope.",
+   "ko": "강물이 불어나서 카르멘은 숲 비탈 쪽으로 빠져나갈 길을 찾았어요.",
+   "blank": "escapatoria",
+   "src": "made"
   }
  ],
  "w|escape": [
@@ -38909,6 +39229,22 @@
    "en": "They fear the plane might crash.",
    "ko": "비행기가 추락할까 봐 두려워해.",
    "blank": "estrellarse"
+  }
+ ],
+ "w|estrenar": [
+  {
+   "text": "El museo va a estrenar una sala de arte moderno, y Andrés ya tiene entrada.",
+   "en": "The museum is going to open a modern art room, and Andrés already has a ticket.",
+   "ko": "박물관이 현대 미술 전시실을 새로 열 예정인데 안드레스는 벌써 입장권이 있어요.",
+   "blank": "estrenar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen va a estrenar sus botas nuevas en la ruta del domingo.",
+   "en": "Carmen is going to wear her new boots for the first time on Sunday's hike.",
+   "ko": "카르멘은 일요일 산행에서 새 등산화를 처음 신을 거예요.",
+   "blank": "estrenar",
+   "src": "made"
   }
  ],
  "w|estreno": [
@@ -43951,6 +44287,22 @@
    "src": "made"
   }
  ],
+ "w|frustrar": [
+  {
+   "text": "Una tormenta llegó a frustrar los planes de Andrés de ver el jardín del museo.",
+   "en": "A storm ended up thwarting Andrés's plans to see the museum garden.",
+   "ko": "폭풍 때문에 박물관 정원을 보려던 안드레스의 계획이 틀어졌어요.",
+   "blank": "frustrar",
+   "src": "made"
+  },
+  {
+   "text": "La niebla llegó a frustrar la subida de Carmen al pico más alto del valle.",
+   "en": "The fog ended up thwarting Carmen's climb to the highest peak in the valley.",
+   "ko": "안개 때문에 카르멘은 골짜기에서 가장 높은 봉우리에 오르지 못했어요.",
+   "blank": "frustrar",
+   "src": "made"
+  }
+ ],
  "w|fruta": [
   {
    "text": "Compré fruta fresca en el mercado.",
@@ -46123,6 +46475,22 @@
    "blank": "grano"
   }
  ],
+ "w|granuja": [
+  {
+   "text": "En el cuadro favorito de Andrés, un granuja le roba el pañuelo a un señor distraído.",
+   "en": "In Andrés's favourite painting, a rascal steals a handkerchief from a distracted gentleman.",
+   "ko": "안드레스가 가장 좋아하는 그림에서는 한 악동이 딴생각하는 신사의 손수건을 훔쳐요.",
+   "blank": "granuja",
+   "src": "made"
+  },
+  {
+   "text": "Un mapache, ese granuja, se llevó el bocadillo de Carmen mientras ella se bañaba en el río.",
+   "en": "A raccoon, that rascal, took Carmen's sandwich while she was swimming in the river.",
+   "ko": "카르멘이 강에서 수영하는 사이 그 말썽꾸러기 너구리가 샌드위치를 가져갔어요.",
+   "blank": "granuja",
+   "src": "made"
+  }
+ ],
  "w|grasa": [
   {
    "text": "Quita la grasa de la sartén con cuidado.",
@@ -47261,6 +47629,22 @@
    "en": "The fact is that it's raining.",
    "ko": "비 온다는 게 사실이야.",
    "blank": "hecho"
+  }
+ ],
+ "w|hectárea": [
+  {
+   "text": "El jardín del museo tiene una hectárea, y Andrés lo recorrió entero antes de comer.",
+   "en": "The museum garden covers a hectare, and Andrés walked all of it before lunch.",
+   "ko": "박물관 정원은 1헥타르인데 안드레스는 점심 전에 그곳을 다 돌아봤어요.",
+   "blank": "hectárea",
+   "src": "made"
+  },
+  {
+   "text": "El incendio quemó casi cien hectáreas, y Carmen se apuntó para replantar.",
+   "en": "The fire burned almost a hundred hectares, and Carmen signed up to replant.",
+   "ko": "불이 거의 백 헥타르를 태워서 카르멘은 다시 나무 심기에 자원했어요.",
+   "blank": "hectáreas",
+   "src": "made"
   }
  ],
  "w|hedor": [
@@ -51725,6 +52109,22 @@
    "src": "made"
   }
  ],
+ "w|inmersión": [
+  {
+   "text": "Con las gafas de realidad virtual, Andrés vivió una inmersión total en la Roma antigua.",
+   "en": "With the virtual reality headset, Andrés had a total immersion in ancient Rome.",
+   "ko": "안드레스는 가상현실 안경을 쓰고 고대 로마 속으로 완전히 빠져들었어요.",
+   "blank": "inmersión",
+   "src": "made"
+  },
+  {
+   "text": "Carmen hizo un curso de inmersión en el lago para ver las truchas de cerca.",
+   "en": "Carmen took a diving course in the lake to see the trout up close.",
+   "ko": "카르멘은 송어를 가까이서 보려고 호수에서 잠수 강습을 받았어요.",
+   "blank": "inmersión",
+   "src": "made"
+  }
+ ],
  "w|inmigración": [
   {
    "text": "Javier atiende consultas sobre inmigración en una oficina del ayuntamiento.",
@@ -55193,6 +55593,22 @@
    "en": "The lab closes at six.",
    "ko": "연구실은 여섯 시에 닫아.",
    "blank": "laboratorio"
+  }
+ ],
+ "w|lácteo": [
+  {
+   "text": "En la cafetería del museo no había nada sin productos lácteos, y Andrés es alérgico.",
+   "en": "In the museum café there was nothing without dairy products, and Andrés is allergic.",
+   "ko": "박물관 카페에는 유제품이 안 들어간 게 하나도 없었는데 안드레스는 알레르기가 있어요.",
+   "blank": "lácteos",
+   "src": "made"
+  },
+  {
+   "text": "Carmen compró queso fresco en una granja de productos lácteos del valle.",
+   "en": "Carmen bought fresh cheese at a dairy farm in the valley.",
+   "ko": "카르멘은 골짜기에 있는 유제품 농장에서 생치즈를 샀어요.",
+   "blank": "lácteos",
+   "src": "made"
   }
  ],
  "w|lado": [
@@ -59389,6 +59805,22 @@
    "blank": "margen"
   }
  ],
+ "w|marginar": [
+  {
+   "text": "La exposición muestra cómo la sociedad llegó a marginar a las mujeres artistas, y Andrés salió con muchas preguntas.",
+   "en": "The exhibition shows how society came to sideline women artists, and Andrés left with many questions.",
+   "ko": "전시는 사회가 어떻게 여성 화가들을 소외시켰는지 보여 주고, 안드레스는 많은 질문을 안고 나왔어요.",
+   "blank": "marginar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen pidió a los niños del campamento no marginar al chico nuevo en los juegos.",
+   "en": "Carmen asked the kids at the camp not to leave the new boy out of the games.",
+   "ko": "카르멘은 캠프 아이들에게 새로 온 아이를 놀이에서 따돌리지 말라고 했어요.",
+   "blank": "marginar",
+   "src": "made"
+  }
+ ],
  "w|marido": [
   {
    "text": "Su marido cocina casi siempre.",
@@ -60625,6 +61057,22 @@
    "blank": "mensajero"
   }
  ],
+ "w|mensual": [
+  {
+   "text": "Andrés se hizo socio del museo con una cuota mensual muy barata.",
+   "en": "Andrés became a member of the museum with a very cheap monthly fee.",
+   "ko": "안드레스는 아주 싼 월 회비를 내고 박물관 회원이 됐어요.",
+   "blank": "mensual",
+   "src": "made"
+  },
+  {
+   "text": "Carmen participa en la limpieza mensual del río con un grupo de voluntarios.",
+   "en": "Carmen takes part in the monthly river clean-up with a group of volunteers.",
+   "ko": "카르멘은 자원봉사자들과 매달 강 청소에 참여해요.",
+   "blank": "mensual",
+   "src": "made"
+  }
+ ],
  "w|menta": [
   {
    "text": "Mateo añadió unas hojas de menta a la limonada.",
@@ -61418,6 +61866,22 @@
    "en": "That it didn't rain that day was almost miraculous, according to Lola.",
    "ko": "롤라 말로는 그날 비가 오지 않은 건 거의 기적이었어요.",
    "blank": "milagroso",
+   "src": "made"
+  }
+ ],
+ "w|milenio": [
+  {
+   "text": "Andrés se quedó mirando una vasija que tiene más de un milenio.",
+   "en": "Andrés stood looking at a vessel that is more than a thousand years old.",
+   "ko": "안드레스는 천 년도 넘은 항아리를 한참 바라봤어요.",
+   "blank": "milenio",
+   "src": "made"
+  },
+  {
+   "text": "Según el guarda, el río ha excavado este cañón durante más de un milenio, le contó Carmen a su hermano.",
+   "en": "According to the ranger, the river has carved this canyon over more than a millennium, Carmen told her brother.",
+   "ko": "카르멘은 동생에게 산림 감시원 말로는 강이 천 년 넘게 이 협곡을 깎아 왔다고 전했어요.",
+   "blank": "milenio",
    "src": "made"
   }
  ],
@@ -62767,6 +63231,22 @@
    "en": "He made a fatal mistake on the exam.",
    "ko": "시험에서 치명적인 실수를 했어.",
    "blank": "mortal"
+  }
+ ],
+ "w|mortero": [
+  {
+   "text": "En la sala de la cocina antigua, Andrés vio un mortero de piedra para machacar especias.",
+   "en": "In the old kitchen room, Andrés saw a stone mortar for crushing spices.",
+   "ko": "옛 부엌 전시실에서 안드레스는 향신료를 빻던 돌절구를 봤어요.",
+   "blank": "mortero",
+   "src": "made"
+  },
+  {
+   "text": "En el refugio, Carmen machacó ajo y perejil en un mortero de madera.",
+   "en": "At the hut, Carmen crushed garlic and parsley in a wooden mortar.",
+   "ko": "카르멘은 산장에서 나무 절구에 마늘과 파슬리를 빻았어요.",
+   "blank": "mortero",
+   "src": "made"
   }
  ],
  "w|mosca": [
@@ -69727,6 +70207,22 @@
    "src": "made"
   }
  ],
+ "w|pelar": [
+  {
+   "text": "En el taller para niños, la sobrina de Andrés aprendió a pelar castañas como en la Edad Media.",
+   "en": "In the children's workshop, Andrés's niece learned to peel chestnuts like in the Middle Ages.",
+   "ko": "어린이 체험 교실에서 안드레스의 조카는 중세 사람들처럼 밤 껍질 벗기는 법을 배웠어요.",
+   "blank": "pelar",
+   "src": "made"
+  },
+  {
+   "text": "Junto al fuego, Carmen se puso a pelar patatas para la cena del campamento.",
+   "en": "By the fire, Carmen started peeling potatoes for the camp dinner.",
+   "ko": "카르멘은 모닥불 옆에서 캠프 저녁거리로 감자 껍질을 벗기기 시작했어요.",
+   "blank": "pelar",
+   "src": "made"
+  }
+ ],
  "w|pelea": [
   {
    "text": "Hubo una pelea en el patio.",
@@ -74625,6 +75121,22 @@
    "blank": "privilegio"
   }
  ],
+ "w|proa": [
+  {
+   "text": "En la proa del barco vikingo hay una cabeza de dragón tallada que impresionó a Andrés.",
+   "en": "At the bow of the Viking ship there is a carved dragon's head that impressed Andrés.",
+   "ko": "바이킹 배 앞머리에 새겨진 용 머리가 안드레스를 감탄하게 했어요.",
+   "blank": "proa",
+   "src": "made"
+  },
+  {
+   "text": "Carmen iba sentada en la proa de la canoa, buscando piedras bajo el agua.",
+   "en": "Carmen was sitting at the bow of the canoe, looking out for rocks under the water.",
+   "ko": "카르멘은 카누 앞머리에 앉아 물속 바위를 살폈어요.",
+   "blank": "proa",
+   "src": "made"
+  }
+ ],
  "w|probabilidad": [
   {
    "text": "La probabilidad de lluvia es alta hoy.",
@@ -77793,6 +78305,22 @@
    "blank": "razonable"
   }
  ],
+ "w|razonamiento": [
+  {
+   "text": "El guía explicó a Andrés el razonamiento de los astrónomos antiguos con un modelo de bronce.",
+   "en": "The guide explained to Andrés the reasoning of the ancient astronomers with a bronze model.",
+   "ko": "가이드는 청동 모형으로 안드레스에게 고대 천문학자들의 추론을 설명했어요.",
+   "blank": "razonamiento",
+   "src": "made"
+  },
+  {
+   "text": "El razonamiento de Carmen era sencillo: si había huellas frescas, el ciervo estaba cerca.",
+   "en": "Carmen's reasoning was simple: if there were fresh tracks, the deer was close.",
+   "ko": "카르멘의 생각은 간단했어요. 발자국이 싱싱하면 사슴이 가까이 있다는 거였어요.",
+   "blank": "razonamiento",
+   "src": "made"
+  }
+ ],
  "w|razonar": [
   {
    "text": "Con la directora es inútil razonar cuando hay prisa por cerrar la edición, dice Sergio.",
@@ -78287,6 +78815,22 @@
    "en": "She has the right to demand an explanation.",
    "ko": "설명을 요구할 권리가 있어.",
    "blank": "reclamar"
+  }
+ ],
+ "w|reclamo": [
+  {
+   "text": "Andrés vio en la vitrina un pájaro de madera que los cazadores usaban como reclamo.",
+   "en": "Andrés saw in the display case a wooden bird that hunters used as a decoy.",
+   "ko": "안드레스는 진열장에서 사냥꾼들이 미끼로 쓰던 나무 새를 봤어요.",
+   "blank": "reclamo",
+   "src": "made"
+  },
+  {
+   "text": "Carmen oyó el reclamo de una perdiz entre los matorrales del río.",
+   "en": "Carmen heard the call of a partridge among the bushes by the river.",
+   "ko": "카르멘은 강가 덤불 사이에서 자고새 울음소리를 들었어요.",
+   "blank": "reclamo",
+   "src": "made"
   }
  ],
  "w|recluso": [
@@ -83195,6 +83739,22 @@
    "src": "made"
   }
  ],
+ "w|saga": [
+  {
+   "text": "La última sala cuenta la saga de una familia de impresores durante cuatro generaciones, y Andrés la leyó entera.",
+   "en": "The last room tells the saga of a family of printers over four generations, and Andrés read all of it.",
+   "ko": "마지막 전시실은 4대에 걸친 인쇄공 가문의 이야기를 들려주는데 안드레스는 끝까지 다 읽었어요.",
+   "blank": "saga",
+   "src": "made"
+  },
+  {
+   "text": "Por la noche, junto al fuego, Carmen les contó a los niños la saga de los gigantes del río.",
+   "en": "At night, by the fire, Carmen told the children the saga of the river giants.",
+   "ko": "밤에 모닥불 옆에서 카르멘은 아이들에게 강의 거인들 이야기를 들려줬어요.",
+   "blank": "saga",
+   "src": "made"
+  }
+ ],
  "w|sagrado": [
   {
    "text": "Este lugar es sagrado para la comunidad.",
@@ -86942,6 +87502,22 @@
    "en": "In the play, the king wants to subdue all the peoples.",
    "ko": "연극에서 왕은 모든 나라를 굴복시키려 해요.",
    "blank": "someter",
+   "src": "made"
+  }
+ ],
+ "w|soñador": [
+  {
+   "text": "La guía le dijo a Andrés que el pintor era un soñador que nunca vendió un cuadro en vida.",
+   "en": "The guide told Andrés that the painter was a dreamer who never sold a painting in his lifetime.",
+   "ko": "가이드는 안드레스에게 그 화가가 살아서는 그림 한 점도 못 판 몽상가였다고 말했어요.",
+   "blank": "soñador",
+   "src": "made"
+  },
+  {
+   "text": "Carmen se considera una soñadora, pero su compañero de ruta, Luis, es aún más soñador.",
+   "en": "Carmen considers herself a dreamer, but her hiking partner, Luis, is even more of a dreamer.",
+   "ko": "카르멘은 스스로 몽상가라고 여기지만 같이 걷는 루이스는 더한 몽상가예요.",
+   "blank": "soñador",
    "src": "made"
   }
  ],
@@ -90901,6 +91477,22 @@
    "blank": "tirador"
   }
  ],
+ "w|tiranía": [
+  {
+   "text": "Un panel explicaba cómo el pueblo se levantó contra la tiranía de un rey antiguo, y Andrés lo leyó con atención.",
+   "en": "A panel explained how the people rose up against the tyranny of an ancient king, and Andrés read it carefully.",
+   "ko": "안내판에는 백성이 옛 왕의 폭정에 맞서 일어난 이야기가 있어서 안드레스는 주의 깊게 읽었어요.",
+   "blank": "tiranía",
+   "src": "made"
+  },
+  {
+   "text": "En la novela que Carmen leía junto al río, un pueblo escapa de la tiranía de un señor feudal.",
+   "en": "In the novel Carmen was reading by the river, a village escapes the tyranny of a feudal lord.",
+   "ko": "카르멘이 강가에서 읽던 소설에서는 한 마을이 영주의 폭정에서 벗어나요.",
+   "blank": "tiranía",
+   "src": "made"
+  }
+ ],
  "w|tirano": [
   {
    "text": "Javier escribió una redacción sobre un tirano de la antigua Roma.",
@@ -91132,6 +91724,22 @@
    "en": "At the market, the manager thinks he's all-powerful, but Lola isn't afraid of him.",
    "ko": "시장 관리인은 자기가 뭐든 할 수 있는 줄 알지만 롤라는 그를 두려워하지 않아요.",
    "blank": "todopoderoso",
+   "src": "made"
+  }
+ ],
+ "w|tolerancia": [
+  {
+   "text": "La exposición sobre la tolerancia religiosa en la antigua ciudad hizo pensar mucho a Andrés.",
+   "en": "The exhibition on religious tolerance in the old city made Andrés think a lot.",
+   "ko": "옛 도시의 종교적 관용에 관한 전시는 안드레스에게 많은 생각을 하게 했어요.",
+   "blank": "tolerancia",
+   "src": "made"
+  },
+  {
+   "text": "La tolerancia de Carmen al frío es increíble: se baña en el río incluso en marzo.",
+   "en": "Carmen's tolerance for cold is incredible: she swims in the river even in March.",
+   "ko": "카르멘은 추위에 엄청 강해서 삼월에도 강에서 수영해요.",
+   "blank": "tolerancia",
    "src": "made"
   }
  ],
@@ -92415,6 +93023,22 @@
    "en": "We're looking for cheaper transport for the trip.",
    "ko": "여행용으로 더 싼 이동 수단을 찾아.",
    "blank": "transporte"
+  }
+ ],
+ "w|tranvía": [
+  {
+   "text": "Andrés va al museo en tranvía porque no hay sitio para aparcar.",
+   "en": "Andrés goes to the museum by tram because there's nowhere to park.",
+   "ko": "주차할 곳이 없어서 안드레스는 트램을 타고 박물관에 가요.",
+   "blank": "tranvía",
+   "src": "made"
+  },
+  {
+   "text": "Para llegar al bosque, Carmen coge el tranvía hasta la última parada y luego camina.",
+   "en": "To get to the forest, Carmen takes the tram to the last stop and then walks.",
+   "ko": "카르멘은 숲에 가려고 트램을 종점까지 타고 간 뒤 걸어가요.",
+   "blank": "tranvía",
+   "src": "made"
   }
  ],
  "w|trapo": [
@@ -94362,6 +94986,22 @@
    "en": "Elena ran at the front until kilometre twenty and then slowed down.",
    "ko": "엘레나는 이십 킬로미터까지 선두에서 달리다가 속도를 늦췄어요.",
    "blank": "vanguardia",
+   "src": "made"
+  }
+ ],
+ "w|vanidad": [
+  {
+   "text": "El retrato muestra a un conde vestido de seda, y Andrés pensó que el cuadro hablaba de la vanidad.",
+   "en": "The portrait shows a count dressed in silk, and Andrés thought the painting was about vanity.",
+   "ko": "초상화에는 비단옷을 입은 백작이 있었는데 안드레스는 그 그림이 허영을 말한다고 생각했어요.",
+   "blank": "vanidad",
+   "src": "made"
+  },
+  {
+   "text": "Carmen se ríe de la vanidad de su perro, que posa para cada foto junto al río.",
+   "en": "Carmen laughs at her dog's vanity: it poses for every photo by the river.",
+   "ko": "카르멘은 강가에서 사진마다 포즈를 잡는 자기 개의 허세에 웃어요.",
+   "blank": "vanidad",
    "src": "made"
   }
  ],

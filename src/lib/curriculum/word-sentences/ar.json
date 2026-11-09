@@ -1983,6 +1983,22 @@
    "blank": "أرز"
   }
  ],
+ "w|أرستقراطية": [
+  {
+   "text": "يكشف أثاث القصر حياة الأرستقراطية في المدينة القديمة.",
+   "en": "The palace furniture reveals the life of the aristocracy in the old city.",
+   "ko": "궁전 가구를 보면 옛 도시 귀족층의 생활을 알 수 있어요.",
+   "blank": "الأرستقراطية",
+   "src": "made"
+  },
+  {
+   "text": "تتكلم الجارة الجديدة بلهجة أرستقراطية تضحك منها نور.",
+   "en": "The new neighbor speaks with an aristocratic accent that makes Nour laugh.",
+   "ko": "새 이웃은 귀족 같은 말투로 말해서 누르가 웃어요.",
+   "blank": "أرستقراطية",
+   "src": "made"
+  }
+ ],
  "w|أرسل": [
   {
    "text": "أرسل المدير رسالة هامة للجميع.",
@@ -7217,6 +7233,22 @@
    "blank": "إصلاح"
   }
  ],
+ "w|إصلاحي": [
+  {
+   "text": "يعرض المتحف برنامج وزير إصلاحي غير نظام المدارس.",
+   "en": "The museum displays the program of a reformist minister who changed the school system.",
+   "ko": "박물관에는 학교 제도를 바꾼 개혁파 장관의 정책이 전시돼 있어요.",
+   "blank": "إصلاحي",
+   "src": "made"
+  },
+  {
+   "text": "انتخب الحي مرشحا إصلاحيا وعد بحديقة للأطفال.",
+   "en": "The neighborhood elected a reformist candidate who promised a playground for the children.",
+   "ko": "동네는 아이들 놀이터를 약속한 개혁파 후보를 뽑았어요.",
+   "blank": "إصلاحيا",
+   "src": "made"
+  }
+ ],
  "w|إضاءة": [
   {
    "text": "طالب السكان خالدا بتحسين إضاءة الشوارع في الأحياء القديمة.",
@@ -7603,6 +7635,22 @@
    "en": "Do you need a long stay here?",
    "ko": "여기 오래 머물 필요가 있니?",
    "blank": "إقامة"
+  }
+ ],
+ "w|إقطاع": [
+  {
+   "text": "يشرح علي كيف عاش الفلاحون في زمن الإقطاع.",
+   "en": "Ali explains how peasants lived in the era of feudalism.",
+   "ko": "알리는 봉건 시대에 농민들이 어떻게 살았는지 설명해요.",
+   "blank": "الإقطاع",
+   "src": "made"
+  },
+  {
+   "text": "قال جار نور مازحا إن صاحب العمارة يعيش في عصر الإقطاع.",
+   "en": "Nour's neighbor joked that the building owner lives in the age of feudalism.",
+   "ko": "누르의 이웃은 집주인이 봉건 시대에 산다고 농담했어요.",
+   "blank": "الإقطاع",
+   "src": "made"
   }
  ],
  "w|إقلاع": [
@@ -11320,6 +11368,22 @@
    "en": "Rana got a lot of benefit from her early-morning training.",
    "ko": "라나는 이른 아침 훈련으로 큰 효과를 봤어요.",
    "blank": "استفادة",
+   "src": "made"
+  }
+ ],
+ "w|استفتاء": [
+  {
+   "text": "يحتفظ المتحف بورقة اقتراع من أول استفتاء شعبي في البلاد.",
+   "en": "The museum keeps a ballot from the country's first popular referendum.",
+   "ko": "박물관은 이 나라 첫 국민 투표의 투표용지를 보관하고 있어요.",
+   "blank": "استفتاء",
+   "src": "made"
+  },
+  {
+   "text": "أجرى سكان العمارة استفتاء صغيرا على لون الباب الجديد.",
+   "en": "The building's residents held a small vote on the color of the new door.",
+   "ko": "아파트 주민들은 새 문 색깔을 두고 작은 투표를 했어요.",
+   "blank": "استفتاء",
    "src": "made"
   }
  ],
@@ -18729,6 +18793,22 @@
    "blank": "بنجاح"
   }
  ],
+ "w|بند": [
+  {
+   "text": "يشرح علي للزوار بندا مهما من أول دستور مكتوب في البلاد.",
+   "en": "Ali explains to visitors an important clause of the country's first written constitution.",
+   "ko": "알리는 방문객들에게 이 나라 첫 성문 헌법의 중요한 조항을 설명해요.",
+   "blank": "بندا",
+   "src": "made"
+  },
+  {
+   "text": "قرأت نور بندا في عقد الإيجار يمنع تربية الكلاب.",
+   "en": "Nour read a clause in the lease that forbids keeping dogs.",
+   "ko": "누르는 임대 계약서에서 개를 키우지 못하게 하는 조항을 읽었어요.",
+   "blank": "بندا",
+   "src": "made"
+  }
+ ],
  "w|بندق": [
   {
    "text": "البندق لذيذ في الشوكولاتة.",
@@ -21385,6 +21465,22 @@
    "src": "made"
   }
  ],
+ "w|تذمر": [
+  {
+   "text": "تذمر بعض الزوار من طول الطابور عند باب المتحف.",
+   "en": "Some visitors complained about the long line at the museum door.",
+   "ko": "몇몇 방문객은 박물관 입구의 긴 줄에 투덜거렸어요.",
+   "blank": "تذمر",
+   "src": "made"
+  },
+  {
+   "text": "تذمرت نور من صوت الحفر عند الجيران منذ الصباح.",
+   "en": "Nour grumbled about the drilling noise at the neighbors' since morning.",
+   "ko": "누르는 아침부터 이웃집에서 나는 드릴 소리에 투덜거렸어요.",
+   "blank": "تذمرت",
+   "src": "made"
+  }
+ ],
  "w|تذوق": [
   {
    "text": "تذوق أنواع الجبن المختلفة.",
@@ -22093,6 +22189,22 @@
    "blank": "تسلم"
   }
  ],
+ "w|تسلى": [
+  {
+   "text": "في انتظار صديقه، تسلى علي بقراءة بطاقات التعريف في المتحف.",
+   "en": "While waiting for his friend, Ali passed the time reading the labels in the museum.",
+   "ko": "친구를 기다리는 동안 알리는 박물관 설명판을 읽으며 시간을 보냈어요.",
+   "blank": "تسلى",
+   "src": "made"
+  },
+  {
+   "text": "تسلت نور مع ابنة الجيران بلعب الورق طوال المساء.",
+   "en": "Nour had fun playing cards with the neighbors' daughter all evening.",
+   "ko": "누르는 저녁 내내 이웃집 딸과 카드놀이를 하며 놀았어요.",
+   "blank": "تسلت",
+   "src": "made"
+  }
+ ],
  "w|تسلية": [
   {
    "text": "كانت ألعاب الورق أكبر تسلية لعلي وأصدقائه في السكن الجامعي.",
@@ -22767,6 +22879,22 @@
    "src": "made"
   }
  ],
+ "w|تضرر": [
+  {
+   "text": "أنقذ المرممون المخطوطات من الهلاك بعد أن تضررت في فيضان قديم.",
+   "en": "The restorers saved the manuscripts from ruin after they were damaged in an old flood.",
+   "ko": "복원가들은 옛 홍수로 손상된 필사본들을 소멸 직전에서 구해 냈어요.",
+   "blank": "تضررت",
+   "src": "made"
+  },
+  {
+   "text": "تضرر سقف جار نور بعد العاصفة، فجاء الجميع للمساعدة.",
+   "en": "Nour's neighbor's roof was damaged after the storm, so everyone came to help.",
+   "ko": "폭풍이 지나간 뒤 누르네 이웃집 지붕이 망가져서 모두 도우러 왔어요.",
+   "blank": "تضرر",
+   "src": "made"
+  }
+ ],
  "w|تضليل": [
   {
    "text": "قرأ أحمد كتابا عن تضليل الإعلانات للمستهلكين.",
@@ -22812,6 +22940,22 @@
    "en": "Maryam made sure the serial number matched the receipt.",
    "ko": "마리암은 일련번호가 영수증과 일치하는지 확인했어요.",
    "blank": "تطابق",
+   "src": "made"
+  }
+ ],
+ "w|تطاير": [
+  {
+   "text": "تطايرت الأوراق من مكتب علي عندما فتح أحد الزوار النافذة.",
+   "en": "Papers flew off Ali's desk when a visitor opened the window.",
+   "ko": "한 방문객이 창문을 열자 알리의 책상에서 종이들이 날아갔어요.",
+   "blank": "تطايرت",
+   "src": "made"
+  },
+  {
+   "text": "تطاير الغبار في الدرج حين بدأ الجار ينفض السجاد.",
+   "en": "Dust flew around the stairwell when the neighbor began beating the carpet.",
+   "ko": "이웃이 카펫을 털기 시작하자 계단에 먼지가 날렸어요.",
+   "blank": "تطاير",
    "src": "made"
   }
  ],
@@ -23244,6 +23388,22 @@
    "en": "Nour sweated under the hot studio lights.",
    "ko": "누르는 뜨거운 스튜디오 조명 아래에서 땀을 흘렸어요.",
    "blank": "تعرقت",
+   "src": "made"
+  }
+ ],
+ "w|تعرى": [
+  {
+   "text": "يعرض المتحف صورة لشجرة تعرت من أوراقها في الشتاء.",
+   "en": "The museum displays a picture of a tree stripped of its leaves in winter.",
+   "ko": "박물관에는 겨울에 잎이 다 떨어진 나무 사진이 전시돼 있어요.",
+   "blank": "تعرت",
+   "src": "made"
+  },
+  {
+   "text": "تعرت شجرة التين في حديقة نور بعد أول برد.",
+   "en": "The fig tree in Nour's garden went bare after the first cold.",
+   "ko": "첫 추위가 오자 누르네 마당의 무화과나무 잎이 다 떨어졌어요.",
+   "blank": "تعرت",
    "src": "made"
   }
  ],
@@ -23806,6 +23966,22 @@
    "en": "Mariam examined the test results before calling the doctor.",
    "ko": "마리암은 의사에게 전화하기 전에 검사 결과를 살펴봤어요.",
    "blank": "تفحصت",
+   "src": "made"
+  }
+ ],
+ "w|تفرج": [
+  {
+   "text": "تفرج علي على الأطفال وهم يرسمون التماثيل في القاعة الكبيرة.",
+   "en": "Ali watched the children drawing the statues in the big hall.",
+   "ko": "알리는 큰 전시실에서 아이들이 조각상을 그리는 모습을 구경했어요.",
+   "blank": "تفرج",
+   "src": "made"
+  },
+  {
+   "text": "يتفرج الجيران على نور وهي تزرع الورد أمام البيت.",
+   "en": "The neighbors watch Nour as she plants roses in front of the house.",
+   "ko": "이웃들은 누르가 집 앞에 장미를 심는 걸 구경해요.",
+   "blank": "يتفرج",
    "src": "made"
   }
  ],
@@ -24375,6 +24551,22 @@
    "src": "made"
   }
  ],
+ "w|تكبد": [
+  {
+   "text": "تكبد المتحف خسائر كبيرة حين أغلق أبوابه لأشهر.",
+   "en": "The museum suffered heavy losses when it closed its doors for months.",
+   "ko": "박물관은 몇 달 동안 문을 닫으면서 큰 손실을 봤어요.",
+   "blank": "تكبد",
+   "src": "made"
+  },
+  {
+   "text": "تكبد جار نور مصاريف كثيرة لإصلاح الأنابيب.",
+   "en": "Nour's neighbor incurred a lot of expenses fixing the pipes.",
+   "ko": "누르의 이웃은 배관을 고치느라 돈을 많이 썼어요.",
+   "blank": "تكبد",
+   "src": "made"
+  }
+ ],
  "w|تكبر": [
   {
    "text": "تكبر الطبيب الشاب على الممرضة، فنبهه خالد إلى أن الفريق واحد.",
@@ -24589,6 +24781,22 @@
    "src": "made"
   }
  ],
+ "w|تلعثم": [
+  {
+   "text": "تلعثم علي قليلا في أول جولة يقدمها للزوار.",
+   "en": "Ali stammered a little on the first tour he gave to visitors.",
+   "ko": "알리는 방문객에게 처음 안내를 할 때 조금 더듬었어요.",
+   "blank": "تلعثم",
+   "src": "made"
+  },
+  {
+   "text": "تلعثم ابن الجيران حين شكرته نور على الهدية.",
+   "en": "The neighbors' son stammered when Nour thanked him for the gift.",
+   "ko": "누르가 선물 고맙다고 하자 이웃집 아들이 말을 더듬었어요.",
+   "blank": "تلعثم",
+   "src": "made"
+  }
+ ],
  "w|تلفاز": [
   {
    "text": "شاهدت مباراة على التلفاز مساء أمس.",
@@ -24767,6 +24975,22 @@
    "blank": "تم"
   }
  ],
+ "w|تمادى": [
+  {
+   "text": "تمادى أحد الزوار في لمس التماثيل، فطلب منه علي أن يتوقف.",
+   "en": "A visitor went too far touching the statues, so Ali asked him to stop.",
+   "ko": "한 방문객이 조각상을 자꾸 만지자 알리가 그만해 달라고 했어요.",
+   "blank": "تمادى",
+   "src": "made"
+  },
+  {
+   "text": "تمادى الجار في رفع صوت الموسيقى حتى منتصف الليل.",
+   "en": "The neighbor went too far, playing loud music until midnight.",
+   "ko": "이웃은 도를 넘어 자정까지 음악을 크게 틀었어요.",
+   "blank": "تمادى",
+   "src": "made"
+  }
+ ],
  "w|تماسك": [
   {
    "text": "تماسك علي ولم يرد على الزبون الذي صرخ في وجهه.",
@@ -24811,6 +25035,22 @@
    "en": "The plate is completely clean.",
    "ko": "접시가 완전히 깨끗해.",
    "blank": "تماما"
+  }
+ ],
+ "w|تمايل": [
+  {
+   "text": "تمايلت الثريا القديمة حين مرت شاحنة ثقيلة قرب المتحف.",
+   "en": "The old chandelier swayed when a heavy truck passed near the museum.",
+   "ko": "무거운 트럭이 박물관 옆을 지나가자 오래된 샹들리에가 흔들렸어요.",
+   "blank": "تمايلت",
+   "src": "made"
+  },
+  {
+   "text": "تمايل الطفل الصغير وهو يتعلم المشي في ممر العمارة.",
+   "en": "The little child wobbled as he learned to walk in the building's hallway.",
+   "ko": "어린아이가 아파트 복도에서 걸음마를 배우며 비틀거렸어요.",
+   "blank": "تمايل",
+   "src": "made"
   }
  ],
  "w|تمتع": [
@@ -25665,6 +25905,22 @@
    "blank": "تواجد"
   }
  ],
+ "w|توارى": [
+  {
+   "text": "توارى طفل خلف تمثال كبير، فبحث عنه علي حتى وجده.",
+   "en": "A child hid behind a large statue, and Ali searched until he found him.",
+   "ko": "한 아이가 큰 조각상 뒤에 숨어서 알리가 찾을 때까지 찾아다녔어요.",
+   "blank": "توارى",
+   "src": "made"
+  },
+  {
+   "text": "توارى القط خلف السيارة حين خرجت نور لتطعمه.",
+   "en": "The cat hid behind the car when Nour came out to feed it.",
+   "ko": "누르가 밥을 주러 나오자 고양이는 차 뒤로 숨었어요.",
+   "blank": "توارى",
+   "src": "made"
+  }
+ ],
  "w|توازن": [
   {
    "text": "سألت سلمى أخاها: كيف توازن بين عملك ودراستك؟",
@@ -26155,6 +26411,22 @@
    "src": "made"
   }
  ],
+ "w|توهم": [
+  {
+   "text": "توهم الحارس أن التمثال تحرك في الليل، وضحك علي من القصة.",
+   "en": "The guard imagined the statue moved at night, and Ali laughed at the story.",
+   "ko": "경비원은 밤에 조각상이 움직였다고 착각했고, 알리는 그 이야기에 웃었어요.",
+   "blank": "توهم",
+   "src": "made"
+  },
+  {
+   "text": "توهمت الجارة أن أحدا يطرق بابها، لكنها كانت الريح.",
+   "en": "The neighbor imagined someone was knocking on her door, but it was the wind.",
+   "ko": "이웃은 누가 문을 두드린다고 착각했지만 바람이었어요.",
+   "blank": "توهمت",
+   "src": "made"
+  }
+ ],
  "w|تيار": [
   {
    "text": "انقطع التيار الكهربائي أثناء العشاء، فأشعل يوسف الشموع.",
@@ -26397,6 +26669,22 @@
    "en": "The mother sometimes feels pain in her breast.",
    "ko": "엄마는 가끔 가슴에 통증을 느껴.",
    "blank": "ثدي"
+  }
+ ],
+ "w|ثرثر": [
+  {
+   "text": "في قاعة المخطوطات ثرثر طالبان حتى طلب منهما علي خفض صوتهما.",
+   "en": "In the manuscript hall two students chattered until Ali asked them to lower their voices.",
+   "ko": "필사본 전시실에서 학생 둘이 수다를 떨다가 알리가 목소리를 낮춰 달라고 했어요.",
+   "blank": "ثرثر",
+   "src": "made"
+  },
+  {
+   "text": "ثرثرت نور مع جارتها على الشرفة حتى غابت الشمس.",
+   "en": "Nour chatted with her neighbor on the balcony until the sun set.",
+   "ko": "누르는 해가 질 때까지 발코니에서 이웃과 수다를 떨었어요.",
+   "blank": "ثرثرت",
+   "src": "made"
   }
  ],
  "w|ثرثرة": [
@@ -28577,6 +28865,22 @@
    "src": "made"
   }
  ],
+ "w|جمد": [
+  {
+   "text": "جمد علي في مكانه حين سقطت مزهرية من الرف، لكنها لم تنكسر.",
+   "en": "Ali froze in place when a vase fell from the shelf, but it didn't break.",
+   "ko": "선반에서 꽃병이 떨어지자 알리는 그 자리에 얼어붙었지만, 꽃병은 깨지지 않았어요.",
+   "blank": "جمد",
+   "src": "made"
+  },
+  {
+   "text": "جمد الماء في أنابيب العمارة في ليلة باردة جدا.",
+   "en": "The water froze in the building's pipes on a very cold night.",
+   "ko": "몹시 추운 밤에 아파트 배관 속 물이 얼었어요.",
+   "blank": "جمد",
+   "src": "made"
+  }
+ ],
  "w|جمرك": [
   {
    "text": "الجمرك طول كتير اليوم.",
@@ -28747,6 +29051,22 @@
    "en": "I attended my uncle's funeral with the family.",
    "ko": "나는 가족과 함께 삼촌의 장례식에 참석했다.",
    "blank": "جنازة"
+  }
+ ],
+ "w|جناية": [
+  {
+   "text": "تعرض خزانة أدلة من أشهر قضية جناية في تاريخ المدينة.",
+   "en": "A cabinet displays evidence from the most famous felony case in the city's history.",
+   "ko": "한 진열장에는 도시 역사상 가장 유명한 중범죄 사건의 증거물이 있어요.",
+   "blank": "جناية",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت نور مع جارتها فيلما عن محامية في قضية جناية.",
+   "en": "Nour watched a film with her neighbor about a lawyer in a felony case.",
+   "ko": "누르는 이웃과 함께 중범죄 사건을 맡은 변호사에 관한 영화를 봤어요.",
+   "blank": "جناية",
+   "src": "made"
   }
  ],
  "w|جنب": [
@@ -33375,6 +33695,22 @@
    "blank": "خبز"
   }
  ],
+ "w|خبط": [
+  {
+   "text": "خبط زائر على زجاج الخزانة بإصبعه، فأشار إليه علي بلطف.",
+   "en": "A visitor tapped the display glass with his finger, and Ali gently signaled to him.",
+   "ko": "한 방문객이 손가락으로 진열장 유리를 두드리자 알리가 부드럽게 손짓했어요.",
+   "blank": "خبط",
+   "src": "made"
+  },
+  {
+   "text": "خبط الجار على باب نور ليعيد لها الصحن.",
+   "en": "The neighbor knocked on Nour's door to return her plate.",
+   "ko": "이웃이 접시를 돌려주려고 누르네 문을 두드렸어요.",
+   "blank": "خبط",
+   "src": "made"
+  }
+ ],
  "w|خبيث": [
   {
    "text": "لم يكن قصد أخت عمر خبيثا كما ظن.",
@@ -35279,6 +35615,22 @@
    "en": "The cat playfully batted the ball.",
    "ko": "고양이가 공을 가볍게 장난쳤어.",
    "blank": "داعبت"
+  }
+ ],
+ "w|داعية": [
+  {
+   "text": "علق علي صورة داعية للسلام عاش في القرن الماضي.",
+   "en": "Ali hung a picture of a peace advocate who lived in the last century.",
+   "ko": "알리는 지난 세기에 살았던 평화 운동가의 사진을 걸었어요.",
+   "blank": "داعية",
+   "src": "made"
+  },
+  {
+   "text": "في الطابق الأول تسكن داعية لحقوق الحيوان تطعم قطط الحي.",
+   "en": "On the first floor lives an animal rights advocate who feeds the neighborhood cats.",
+   "ko": "일 층에는 동네 고양이들에게 밥을 주는 동물권 운동가가 살아요.",
+   "blank": "داعية",
+   "src": "made"
   }
  ],
  "w|دافئ": [
@@ -38073,6 +38425,22 @@
    "en": "When did you come back from your trip?",
    "ko": "여행에서 언제 돌아왔어?",
    "blank": "رجعت"
+  }
+ ],
+ "w|رجعي": [
+  {
+   "text": "انتقد كاتب في المعرض الأفكار الرجعية عن تعليم البنات.",
+   "en": "A writer in the exhibition criticized backward ideas about girls' education.",
+   "ko": "전시 속 한 작가는 여자아이 교육에 대한 퇴행적인 생각을 비판했어요.",
+   "blank": "الرجعية",
+   "src": "made"
+  },
+  {
+   "text": "ترى نور أن رأي جارها في عمل النساء رأي رجعي.",
+   "en": "Nour thinks her neighbor's view on women working is a backward one.",
+   "ko": "누르는 여성의 일에 대한 이웃의 생각이 시대에 뒤떨어졌다고 봐요.",
+   "blank": "رجعي",
+   "src": "made"
   }
  ],
  "w|رجل": [
@@ -46152,6 +46520,22 @@
    "en": "Maryam doesn't accept payment by cheque, only cash or card.",
    "ko": "마리암은 수표는 받지 않고 현금이나 카드만 받아요.",
    "blank": "بشيك",
+   "src": "made"
+  }
+ ],
+ "w|شيوعي": [
+  {
+   "text": "في الطابق الثاني ملصقات قديمة لحزب شيوعي صغير.",
+   "en": "On the second floor there are old posters of a small communist party.",
+   "ko": "이 층에는 작은 공산당의 오래된 포스터들이 있어요.",
+   "blank": "شيوعي",
+   "src": "made"
+  },
+  {
+   "text": "كان جد نور شيوعيا في شبابه، كما يحكي الجيران.",
+   "en": "Nour's grandfather was a communist in his youth, as the neighbors tell it.",
+   "ko": "이웃들 말로는 누르의 할아버지가 젊었을 때 공산주의자였대요.",
+   "blank": "شيوعيا",
    "src": "made"
   }
  ],
@@ -60073,6 +60457,22 @@
    "blank": "كاحل"
   }
  ],
+ "w|كادح": [
+  {
+   "text": "تصور اللوحة يوما في حياة عامل كادح في المصنع.",
+   "en": "The painting depicts a day in the life of a hardworking factory laborer.",
+   "ko": "그 그림은 공장에서 고되게 일하는 노동자의 하루를 그려요.",
+   "blank": "كادح",
+   "src": "made"
+  },
+  {
+   "text": "والد نور رجل كادح يخرج إلى العمل قبل طلوع الفجر.",
+   "en": "Nour's father is a hardworking man who leaves for work before dawn.",
+   "ko": "누르의 아버지는 새벽이 오기 전에 일하러 나가는 고된 노동자예요.",
+   "blank": "كادح",
+   "src": "made"
+  }
+ ],
  "w|كادر": [
   {
    "text": "انضم كريم إلى كادر المهندسين في المصنع قبل سنوات.",
@@ -60528,6 +60928,22 @@
    "en": "An army battalion took part in the marathon, its soldiers running in step.",
    "ko": "군 대대가 마라톤에 참가해 병사들이 발을 맞춰 달렸어요.",
    "blank": "كتيبة",
+   "src": "made"
+  }
+ ],
+ "w|كثافة": [
+  {
+   "text": "تبين خريطة على الجدار كثافة السكان في كل حي قبل مئة سنة.",
+   "en": "A map on the wall shows the population density of each neighborhood a hundred years ago.",
+   "ko": "벽에 걸린 지도는 백 년 전 동네마다의 인구 밀도를 보여 줘요.",
+   "blank": "كثافة",
+   "src": "made"
+  },
+  {
+   "text": "اشتكى الجيران من كثافة السيارات في الشارع الضيق.",
+   "en": "The neighbors complained about the density of cars on the narrow street.",
+   "ko": "이웃들은 좁은 길에 차가 너무 빽빽하다고 불평했어요.",
+   "blank": "كثافة",
    "src": "made"
   }
  ],
@@ -64093,6 +64509,22 @@
    "src": "made"
   }
  ],
+ "w|مأذون": [
+  {
+   "text": "يضم المعرض دفتر مأذون قديم سجل فيه زيجات الحي.",
+   "en": "The exhibition includes an old marriage registrar's book recording the neighborhood's marriages.",
+   "ko": "전시에는 동네 결혼을 기록한 옛 혼인 집례자의 장부가 있어요.",
+   "blank": "مأذون",
+   "src": "made"
+  },
+  {
+   "text": "جاء المأذون إلى بيت الجيران لعقد قران ابنتهم.",
+   "en": "The marriage registrar came to the neighbors' house to conclude their daughter's marriage contract.",
+   "ko": "혼인 집례자가 이웃집 딸의 혼인 계약을 맺으러 왔어요.",
+   "blank": "المأذون",
+   "src": "made"
+  }
+ ],
  "w|مأزق": [
   {
    "text": "وقع حسن في مأزق عندما دعاه جاران إلى العشاء في الليلة نفسها.",
@@ -65923,6 +66355,22 @@
    "src": "made"
   }
  ],
+ "w|متظاهر": [
+  {
+   "text": "تظهر صورة كبيرة آلاف المتظاهرين في ساحة المدينة.",
+   "en": "A large photo shows thousands of demonstrators in the city square.",
+   "ko": "커다란 사진에는 도시 광장에 모인 수천 명의 시위대가 보여요.",
+   "blank": "المتظاهرين",
+   "src": "made"
+  },
+  {
+   "text": "مر متظاهر من أمام العمارة وهو يحمل علما كبيرا.",
+   "en": "A demonstrator passed in front of the building carrying a big flag.",
+   "ko": "한 시위자가 큰 깃발을 들고 아파트 앞을 지나갔어요.",
+   "blank": "متظاهر",
+   "src": "made"
+  }
+ ],
  "w|متعارض": [
   {
    "text": "كانت مواعيد العبارة في الكتيب متعارضة مع ما في الموقع.",
@@ -67320,6 +67768,22 @@
    "en": "Fatima told how a con man tricked her with a call from a strange number.",
    "ko": "파티마는 사기꾼이 낯선 번호로 전화해 자기를 속인 이야기를 했어요.",
    "blank": "محتال",
+   "src": "made"
+  }
+ ],
+ "w|محتج": [
+  {
+   "text": "كتب محتج على لافتة قديمة: الخبز للجميع.",
+   "en": "A protester wrote on an old sign: bread for everyone.",
+   "ko": "한 항의자가 오래된 팻말에 '모두에게 빵을'이라고 썼어요.",
+   "blank": "محتج",
+   "src": "made"
+  },
+  {
+   "text": "وقف الجيران محتجين على قطع الأشجار في الشارع.",
+   "en": "The neighbors stood protesting the cutting of the trees on the street.",
+   "ko": "이웃들은 거리의 나무를 베는 것에 항의하며 서 있었어요.",
+   "blank": "محتجين",
    "src": "made"
   }
  ],
@@ -70139,6 +70603,22 @@
    "blank": "مستاء"
   }
  ],
+ "w|مستبد": [
+  {
+   "text": "يروي الدليل قصة حاكم مستبد سقط بعد ثورة شعبية.",
+   "en": "The guide tells the story of a tyrannical ruler who fell after a popular revolution.",
+   "ko": "안내원은 민중 혁명으로 무너진 독재 통치자의 이야기를 들려줘요.",
+   "blank": "مستبد",
+   "src": "made"
+  },
+  {
+   "text": "يشتكي الجيران من صاحب عمارة مستبد يرفع الإيجار كل سنة.",
+   "en": "The neighbors complain about a tyrannical landlord who raises the rent every year.",
+   "ko": "이웃들은 해마다 집세를 올리는 독단적인 집주인에게 불만이 많아요.",
+   "blank": "مستبد",
+   "src": "made"
+  }
+ ],
  "w|مستحيل": [
   {
    "text": "قال الطبيب إن الشفاء مستحيل الآن.",
@@ -72277,6 +72757,22 @@
    "en": "It's not my habit to be late.",
    "ko": "나는 늦는 것이 습관이 아니야.",
    "blank": "معتاد"
+  }
+ ],
+ "w|معتصم": [
+  {
+   "text": "ترك معتصم مجهول خيمته الصغيرة، وهي اليوم في المتحف.",
+   "en": "An unknown sit-in protester left his small tent, and today it is in the museum.",
+   "ko": "이름 모를 농성자가 남긴 작은 텐트가 지금은 박물관에 있어요.",
+   "blank": "معتصم",
+   "src": "made"
+  },
+  {
+   "text": "قدمت نور الشاي لجارها المعتصم أمام البلدية مع زملائه.",
+   "en": "Nour brought tea to her neighbor who was staging a sit-in at the town hall with his colleagues.",
+   "ko": "누르는 동료들과 시청 앞에서 농성 중인 이웃에게 차를 갖다줬어요.",
+   "blank": "المعتصم",
+   "src": "made"
   }
  ],
  "w|معجب": [
@@ -75445,6 +75941,22 @@
    "blank": "مناسبة"
   }
  ],
+ "w|مناضل": [
+  {
+   "text": "يعرض المتحف رسائل مناضل قديم كتبها من السجن.",
+   "en": "The museum displays letters an old freedom fighter wrote from prison.",
+   "ko": "박물관에는 한 옛 투사가 감옥에서 쓴 편지들이 전시돼 있어요.",
+   "blank": "مناضل",
+   "src": "made"
+  },
+  {
+   "text": "يحكي الجار العجوز لنور عن أيام كان مناضلا في شبابه.",
+   "en": "The old neighbor tells Nour about the days he was a fighter in his youth.",
+   "ko": "나이 든 이웃은 누르에게 젊은 시절 투사였던 때 이야기를 해 줘요.",
+   "blank": "مناضلا",
+   "src": "made"
+  }
+ ],
  "w|مناعة": [
   {
    "text": "قال صديق علي الطبيب إن النوم الجيد يقوي المناعة.",
@@ -76169,6 +76681,22 @@
    "src": "made"
   }
  ],
+ "w|منغلق": [
+  {
+   "text": "قال زائر لعلي إن المجتمع في تلك الأيام كان منغلقا.",
+   "en": "A visitor told Ali that society in those days was closed off.",
+   "ko": "한 방문객이 알리에게 그 시절 사회는 폐쇄적이었다고 말했어요.",
+   "blank": "منغلقا",
+   "src": "made"
+  },
+  {
+   "text": "كان الجار الجديد منغلقا في البداية، ثم صار صديق نور.",
+   "en": "The new neighbor was reserved at first, then became Nour's friend.",
+   "ko": "새 이웃은 처음엔 마음을 잘 안 열었지만, 나중에 누르의 친구가 됐어요.",
+   "blank": "منغلقا",
+   "src": "made"
+  }
+ ],
  "w|منفذ": [
   {
    "text": "كان الدرج المنفذ الوحيد للعمارة حين تعطل المصعد.",
@@ -76739,6 +77267,22 @@
    "en": "Death is a part of life.",
    "ko": "죽음은 삶의 일부야.",
    "blank": "موت"
+  }
+ ],
+ "w|موثق": [
+  {
+   "text": "تحمل وثيقة البيع المعروضة ختم موثق رسمي.",
+   "en": "The displayed deed of sale bears the stamp of an official notary.",
+   "ko": "전시된 매매 문서에는 공증인의 도장이 찍혀 있어요.",
+   "blank": "موثق",
+   "src": "made"
+  },
+  {
+   "text": "يعمل جار نور موثقا في المحكمة القريبة.",
+   "en": "Nour's neighbor works as a notary at the nearby court.",
+   "ko": "누르의 이웃은 가까운 법원에서 공증인으로 일해요.",
+   "blank": "موثقا",
+   "src": "made"
   }
  ],
  "w|موثوق": [
@@ -77802,6 +78346,22 @@
    "en": "Nour signed a contract with a publisher to turn books into audio versions.",
    "ko": "누르는 책을 오디오북으로 만드는 계약을 출판사와 맺었어요.",
    "blank": "ناشر",
+   "src": "made"
+  }
+ ],
+ "w|ناشط": [
+  {
+   "text": "تحكي قاعة جديدة قصة ناشط شاب دافع عن حق البنات في التعليم.",
+   "en": "A new hall tells the story of a young activist who defended girls' right to education.",
+   "ko": "새 전시실은 여자아이들의 교육받을 권리를 지킨 젊은 활동가의 이야기를 들려줘요.",
+   "blank": "ناشط",
+   "src": "made"
+  },
+  {
+   "text": "جار نور ناشط في حماية البيئة ويجمع البلاستيك كل أسبوع.",
+   "en": "Nour's neighbor is an environmental activist and collects plastic every week.",
+   "ko": "누르의 이웃은 환경 운동가라서 매주 플라스틱을 모아요.",
+   "blank": "ناشط",
    "src": "made"
   }
  ],
@@ -79927,6 +80487,22 @@
    "blank": "نقابة"
   }
  ],
+ "w|نقابي": [
+  {
+   "text": "قدم علي محاضرة عن نقابي قاد عمال الميناء قبل قرن.",
+   "en": "Ali gave a talk about a trade unionist who led the port workers a century ago.",
+   "ko": "알리는 백 년 전 항구 노동자들을 이끈 노조 운동가에 대해 강연했어요.",
+   "blank": "نقابي",
+   "src": "made"
+  },
+  {
+   "text": "زوج الجارة نقابي يدافع عن حقوق سائقي الحافلات.",
+   "en": "The neighbor's husband is a trade unionist who defends bus drivers' rights.",
+   "ko": "이웃집 남편은 버스 기사들의 권리를 지키는 노조 활동가예요.",
+   "blank": "نقابي",
+   "src": "made"
+  }
+ ],
  "w|نقاش": [
   {
    "text": "كان هناك نقاش طويل بين الطلاب.",
@@ -80027,6 +80603,22 @@
    "en": "Did the number of students decrease today?",
    "ko": "오늘 학생 수가 줄었니?",
    "blank": "نقص"
+  }
+ ],
+ "w|نقض": [
+  {
+   "text": "يعرض المتحف حكم النقض الذي برأ رجلا بعد سنوات طويلة.",
+   "en": "The museum displays the cassation ruling that acquitted a man after many years.",
+   "ko": "박물관에는 오랜 세월 끝에 한 남자를 무죄로 만든 파기 판결문이 전시돼 있어요.",
+   "blank": "النقض",
+   "src": "made"
+  },
+  {
+   "text": "تنتظر عائلة الجيران حكم محكمة النقض في قضية الأرض.",
+   "en": "The neighbors' family is awaiting the court of cassation's ruling in the land case.",
+   "ko": "이웃 가족은 땅 문제로 대법원 판결을 기다리고 있어요.",
+   "blank": "النقض",
+   "src": "made"
   }
  ],
  "w|نقطة": [
@@ -80405,6 +80997,22 @@
    "en": "The students stood up when the teacher entered.",
    "ko": "선생님이 들어오자 학생들이 일어났어.",
    "blank": "نهض"
+  }
+ ],
+ "w|نواب": [
+  {
+   "text": "زار وفد من النواب المتحف وسألوا علي عن المعرض الجديد.",
+   "en": "A delegation of members of parliament visited the museum and asked Ali about the new exhibition.",
+   "ko": "국회의원 대표단이 박물관을 방문해 알리에게 새 전시에 대해 물었어요.",
+   "blank": "النواب",
+   "src": "made"
+  },
+  {
+   "text": "اختار الجيران نوابا عنهم للحديث مع صاحب العمارة.",
+   "en": "The neighbors chose representatives to speak with the building owner.",
+   "ko": "이웃들은 집주인과 이야기할 대표들을 뽑았어요.",
+   "blank": "نوابا",
+   "src": "made"
   }
  ],
  "w|نوبة": [
@@ -81253,6 +81861,22 @@
    "en": "Could you help me with this?",
    "ko": "이것 좀 도와줄래?",
    "blank": "هلا"
+  }
+ ],
+ "w|هلاك": [
+  {
+   "text": "أنقذ المرممون المخطوطات من الهلاك بعد أن تضررت في فيضان قديم.",
+   "en": "The restorers saved the manuscripts from ruin after they were damaged in an old flood.",
+   "ko": "복원가들은 옛 홍수로 손상된 필사본들을 소멸 직전에서 구해 냈어요.",
+   "blank": "الهلاك",
+   "src": "made"
+  },
+  {
+   "text": "قالت الجارة العجوز إن نباتاتها كانت على وشك الهلاك لولا نور.",
+   "en": "The old neighbor said her plants were about to die if not for Nour.",
+   "ko": "나이 든 이웃은 누르가 아니었으면 화초들이 다 죽을 뻔했다고 했어요.",
+   "blank": "الهلاك",
+   "src": "made"
   }
  ],
  "w|هلال": [
@@ -83014,6 +83638,22 @@
    "en": "Fatima noticed a small anchor-shaped tattoo on the mover's hand.",
    "ko": "파티마는 이삿짐 직원 손에 있는 작은 닻 모양 문신을 봤어요.",
    "blank": "وشما",
+   "src": "made"
+  }
+ ],
+ "w|وصاية": [
+  {
+   "text": "يحكي جناح كامل عن سنوات الوصاية الأجنبية على البلاد.",
+   "en": "A whole wing tells of the years of foreign trusteeship over the country.",
+   "ko": "한 관 전체가 외국의 신탁 통치를 받던 시절을 다뤄요.",
+   "blank": "الوصاية",
+   "src": "made"
+  },
+  {
+   "text": "حصلت خالة الطفلة على الوصاية عليها، وهي جارة نور.",
+   "en": "The girl's aunt, who is Nour's neighbor, got guardianship of her.",
+   "ko": "그 아이의 이모가 양육권을 얻었는데, 이모는 누르의 이웃이에요.",
+   "blank": "الوصاية",
    "src": "made"
   }
  ],
