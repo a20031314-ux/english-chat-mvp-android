@@ -1255,6 +1255,22 @@
    "src": "made"
   }
  ],
+ "w|adepte": [
+  {
+   "text": "Antoine est un adepte de la récupération : il garde chaque planche.",
+   "en": "Antoine is a fan of salvaging: he keeps every plank.",
+   "ko": "앙투안은 재활용을 즐겨서 판자 하나도 버리지 않아요.",
+   "blank": "adepte",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de Sarah est un adepte des méthodes japonaises d'organisation.",
+   "en": "Sarah's boss is a follower of Japanese organizational methods.",
+   "ko": "사라의 상사는 일본식 정리 방법을 신봉해요.",
+   "blank": "adepte",
+   "src": "made"
+  }
+ ],
  "w|adéquat": [
   {
    "text": "Paul vérifie qu'il a un équipement adéquat avant de partir en montagne.",
@@ -1645,6 +1661,22 @@
    "en": "We need to analyze the opponent's game.",
    "ko": "상대의 경기를 분석해야 해.",
    "blank": "adversaire"
+  }
+ ],
+ "w|aération": [
+  {
+   "text": "Antoine perce une grille d'aération dans la salle de bains contre l'humidité.",
+   "en": "Antoine cuts a ventilation grille in the bathroom against the damp.",
+   "ko": "앙투안은 습기를 막으려고 욕실에 환기구를 뚫어요.",
+   "blank": "aération",
+   "src": "made"
+  },
+  {
+   "text": "Sarah demande au directeur de réparer le système d'aération de l'atelier.",
+   "en": "Sarah asks the director to fix the workshop's ventilation system.",
+   "ko": "사라는 공장장에게 작업장 환기 장치를 고쳐 달라고 해요.",
+   "blank": "aération",
+   "src": "made"
   }
  ],
  "w|aérien": [
@@ -3813,6 +3845,22 @@
    "src": "made"
   }
  ],
+ "w|anecdote": [
+  {
+   "text": "Le voisin raconte à Antoine une anecdote sur l'ancien propriétaire de la maison.",
+   "en": "The neighbor tells Antoine an anecdote about the house's former owner.",
+   "ko": "이웃이 앙투안에게 그 집의 옛 주인에 관한 일화를 들려줘요.",
+   "blank": "anecdote",
+   "src": "made"
+  },
+  {
+   "text": "À la pause, Sarah raconte une anecdote drôle sur son premier jour à l'usine.",
+   "en": "At break, Sarah tells a funny anecdote about her first day at the factory.",
+   "ko": "쉬는 시간에 사라가 공장 첫날에 있었던 웃긴 일화를 들려줘요.",
+   "blank": "anecdote",
+   "src": "made"
+  }
+ ],
  "w|anesthésie": [
   {
    "text": "Avant l'opération, Nicolas signe un formulaire sur les risques de l'anesthésie.",
@@ -5078,6 +5126,22 @@
    "en": "Émilie has a fervent admiration for Renaissance painters.",
    "ko": "에밀리는 르네상스 화가들을 열렬히 동경해요.",
    "blank": "ardente",
+   "src": "made"
+  }
+ ],
+ "w|ardoise": [
+  {
+   "text": "Le couvreur remplace plusieurs tuiles en ardoise sur le toit d'Antoine.",
+   "en": "The roofer replaces several slate tiles on Antoine's roof.",
+   "ko": "지붕 기술자가 앙투안네 지붕의 슬레이트 몇 장을 갈아요.",
+   "blank": "ardoise",
+   "src": "made"
+  },
+  {
+   "text": "Le chef note les commandes du jour sur une ardoise près du bureau de Sarah.",
+   "en": "The boss writes the day's orders on a slate board near Sarah's desk.",
+   "ko": "상사가 사라의 책상 옆 칠판에 그날 주문을 적어요.",
+   "blank": "ardoise",
    "src": "made"
   }
  ],
@@ -6907,6 +6971,22 @@
    "en": "He washed his car this weekend.",
    "ko": "그는 이번 주말에 자기 차를 세차했어.",
    "blank": "auto"
+  }
+ ],
+ "w|autocollant": [
+  {
+   "text": "Antoine gratte un vieil autocollant collé sur la porte du placard.",
+   "en": "Antoine scrapes off an old sticker stuck on the closet door.",
+   "ko": "앙투안은 벽장 문에 붙은 낡은 스티커를 긁어내요.",
+   "blank": "autocollant",
+   "src": "made"
+  },
+  {
+   "text": "Sarah colle un autocollant rouge sur chaque carton défectueux.",
+   "en": "Sarah sticks a red sticker on every faulty box.",
+   "ko": "사라는 불량 상자마다 빨간 스티커를 붙여요.",
+   "blank": "autocollant",
+   "src": "made"
   }
  ],
  "w|autodéfense": [
@@ -10435,6 +10515,22 @@
    "blank": "boucher"
   }
  ],
+ "w|boucherie": [
+  {
+   "text": "Le rez-de-chaussée de la maison d'Antoine abritait autrefois une boucherie.",
+   "en": "The ground floor of Antoine's house once housed a butcher's shop.",
+   "ko": "앙투안의 집 일층은 예전에 정육점이었어요.",
+   "blank": "boucherie",
+   "src": "made"
+  },
+  {
+   "text": "En rentrant, Sarah passe à la boucherie pour acheter un rôti.",
+   "en": "On her way home, Sarah stops at the butcher's to buy a roast.",
+   "ko": "집에 가는 길에 사라는 정육점에 들러 구이용 고기를 사요.",
+   "blank": "boucherie",
+   "src": "made"
+  }
+ ],
  "w|bouchon": [
   {
    "text": "Pour fêter la nouvelle boulangerie, Antoine fait sauter le bouchon d'une bouteille de cidre.",
@@ -12265,6 +12361,22 @@
    "blank": "caisse"
   }
  ],
+ "w|caissier": [
+  {
+   "text": "Au magasin de bricolage, le caissier reconnaît Antoine, qui vient tous les jours.",
+   "en": "At the DIY store, the cashier recognizes Antoine, who comes every day.",
+   "ko": "철물점 계산원은 매일 오는 앙투안을 알아봐요.",
+   "blank": "caissier",
+   "src": "made"
+  },
+  {
+   "text": "Avant l'usine, Sarah a travaillé deux ans comme caissière dans un supermarché.",
+   "en": "Before the factory, Sarah worked for two years as a cashier in a supermarket.",
+   "ko": "공장에 오기 전 사라는 슈퍼마켓에서 두 해 동안 계산원으로 일했어요.",
+   "blank": "caissière",
+   "src": "made"
+  }
+ ],
  "w|cake": [
   {
    "text": "Thomas propose une part de cake aux fruits confits avec le café.",
@@ -13065,6 +13177,22 @@
    "blank": "capturer"
   }
  ],
+ "w|capuche": [
+  {
+   "text": "Antoine rabat sa capuche pour se protéger de la poussière de plâtre.",
+   "en": "Antoine pulls up his hood to protect himself from the plaster dust.",
+   "ko": "앙투안은 석고 가루를 막으려고 모자를 뒤집어써요.",
+   "blank": "capuche",
+   "src": "made"
+  },
+  {
+   "text": "En sortant de l'usine sous la pluie, Sarah remonte sa capuche.",
+   "en": "Leaving the factory in the rain, Sarah pulls up her hood.",
+   "ko": "비 오는 날 공장을 나서며 사라는 모자를 뒤집어써요.",
+   "blank": "capuche",
+   "src": "made"
+  }
+ ],
  "w|car": [
   {
    "text": "Je pars, car il est tard.",
@@ -13712,6 +13840,22 @@
    "en": "Manon takes part in the race in the under-thirties category.",
    "ko": "마농은 서른 살 미만 부문 경주에 참가해요.",
    "blank": "catégorie",
+   "src": "made"
+  }
+ ],
+ "w|cathédrale": [
+  {
+   "text": "Depuis la fenêtre du grenier, Antoine aperçoit les tours de la cathédrale.",
+   "en": "From the attic window, Antoine can see the towers of the cathedral.",
+   "ko": "다락방 창문으로 앙투안은 대성당의 탑들을 볼 수 있어요.",
+   "blank": "cathédrale",
+   "src": "made"
+  },
+  {
+   "text": "La cheminée de l'usine est presque aussi haute que la cathédrale de la ville, plaisante Sarah.",
+   "en": "The factory chimney is almost as tall as the town's cathedral, Sarah jokes.",
+   "ko": "공장 굴뚝이 시내 대성당만큼 높다고 사라가 농담해요.",
+   "blank": "cathédrale",
    "src": "made"
   }
  ],
@@ -15622,6 +15766,22 @@
    "en": "Camille never lets orders pile up on top of each other at the pass.",
    "ko": "카미유는 패스에서 주문이 겹치게 두는 법이 없어요.",
    "blank": "chevaucher",
+   "src": "made"
+  }
+ ],
+ "w|chevet": [
+  {
+   "text": "Antoine a fabriqué une table de chevet avec du bois de récupération.",
+   "en": "Antoine built a bedside table out of salvaged wood.",
+   "ko": "앙투안은 재활용 나무로 침대 옆 협탁을 만들었어요.",
+   "blank": "chevet",
+   "src": "made"
+  },
+  {
+   "text": "Sur sa table de chevet, Sarah garde un réveil réglé très tôt.",
+   "en": "On her bedside table, Sarah keeps an alarm clock set very early.",
+   "ko": "사라는 침대 옆 탁자에 아주 이른 시간에 맞춘 자명종을 둬요.",
+   "blank": "chevet",
    "src": "made"
   }
  ],
@@ -17978,6 +18138,22 @@
    "en": "Inès's brother knows a trick for parking free in town.",
    "ko": "이네스의 오빠는 시내에 공짜로 주차하는 꼼수를 알아요.",
    "blank": "combine",
+   "src": "made"
+  }
+ ],
+ "w|combiné": [
+  {
+   "text": "Antoine garde le vieux téléphone à cadran, même si le combiné est fêlé.",
+   "en": "Antoine keeps the old rotary phone, even though the receiver is cracked.",
+   "ko": "앙투안은 수화기에 금이 갔는데도 옛 다이얼 전화기를 간직해요.",
+   "blank": "combiné",
+   "src": "made"
+  },
+  {
+   "text": "Sarah coince le combiné contre son épaule pour noter la commande.",
+   "en": "Sarah wedges the receiver against her shoulder to write down the order.",
+   "ko": "사라는 주문을 받아 적으려고 수화기를 어깨에 끼워요.",
+   "blank": "combiné",
    "src": "made"
   }
  ],
@@ -22845,6 +23021,22 @@
    "src": "made"
   }
  ],
+ "w|couvercle": [
+  {
+   "text": "Antoine referme bien le couvercle du pot de peinture avant de partir.",
+   "en": "Antoine firmly closes the lid of the paint can before leaving.",
+   "ko": "앙투안은 나가기 전에 페인트 통 뚜껑을 꽉 닫아요.",
+   "blank": "couvercle",
+   "src": "made"
+  },
+  {
+   "text": "Une machine visse un couvercle sur chaque bocal qui passe devant Sarah.",
+   "en": "A machine screws a lid onto every jar passing in front of Sarah.",
+   "ko": "사라 앞을 지나가는 병마다 기계가 뚜껑을 돌려 닫아요.",
+   "blank": "couvercle",
+   "src": "made"
+  }
+ ],
  "w|couvert": [
   {
    "text": "Le ciel est complètement couvert ce matin.",
@@ -23050,6 +23242,22 @@
    "en": "After the computer crash, Camille writes down the loans by hand.",
    "ko": "컴퓨터가 멈춘 뒤 카미유는 대출 기록을 손으로 적어요.",
    "blank": "crash",
+   "src": "made"
+  }
+ ],
+ "w|crasse": [
+  {
+   "text": "Il a fallu une journée entière à Antoine pour enlever la crasse des carreaux.",
+   "en": "It took Antoine a whole day to remove the grime from the tiles.",
+   "ko": "앙투안이 타일의 찌든 때를 벗기는 데 하루가 꼬박 걸렸어요.",
+   "blank": "crasse",
+   "src": "made"
+  },
+  {
+   "text": "À la fin de la journée, Sarah frotte la crasse noire sur ses mains.",
+   "en": "At the end of the day, Sarah scrubs the black grime off her hands.",
+   "ko": "하루가 끝나면 사라는 손에 묻은 시커먼 때를 박박 문질러요.",
+   "blank": "crasse",
    "src": "made"
   }
  ],
@@ -26692,6 +26900,22 @@
    "en": "Claire finds an old poster from a dental practice in the fifties.",
    "ko": "클레르는 오십 년대 치과의 옛 포스터를 찾아요.",
    "blank": "dentaire",
+   "src": "made"
+  }
+ ],
+ "w|dentifrice": [
+  {
+   "text": "Antoine bouche les petits trous du mur avec un peu de dentifrice, une astuce de son père.",
+   "en": "Antoine fills the small holes in the wall with a bit of toothpaste, a trick from his father.",
+   "ko": "앙투안은 아버지에게 배운 요령대로 벽의 작은 구멍을 치약으로 메워요.",
+   "blank": "dentifrice",
+   "src": "made"
+  },
+  {
+   "text": "Sur la chaîne de Sarah, des machines remplissent des milliers de tubes de dentifrice.",
+   "en": "On Sarah's line, machines fill thousands of tubes of toothpaste.",
+   "ko": "사라가 일하는 라인에서는 기계가 치약 튜브 수천 개를 채워요.",
+   "blank": "dentifrice",
    "src": "made"
   }
  ],
@@ -39909,6 +40133,22 @@
    "blank": "figure"
   }
  ],
+ "w|figurine": [
+  {
+   "text": "Sur la cheminée, Antoine pose une figurine de chat trouvée dans le jardin.",
+   "en": "On the mantelpiece, Antoine places a cat figurine found in the garden.",
+   "ko": "앙투안은 정원에서 찾은 고양이 피규어를 벽난로 위에 올려 둬요.",
+   "blank": "figurine",
+   "src": "made"
+  },
+  {
+   "text": "La chaîne de Sarah peint à la main des figurines en plâtre pour les crèches.",
+   "en": "Sarah's line hand-paints plaster figurines for nativity scenes.",
+   "ko": "사라의 라인은 성탄 구유에 쓸 석고 인형을 손으로 칠해요.",
+   "blank": "figurines",
+   "src": "made"
+  }
+ ],
  "w|fil": [
   {
    "text": "Le fil s'est cassé en cousant le bouton.",
@@ -40199,6 +40439,22 @@
    "en": "You need to finish your homework before going out.",
    "ko": "나가기 전에 숙제 끝내야 해.",
    "blank": "finir"
+  }
+ ],
+ "w|fiole": [
+  {
+   "text": "Derrière une plinthe, Antoine trouve une petite fiole en verre bleu.",
+   "en": "Behind a baseboard, Antoine finds a small blue glass vial.",
+   "ko": "걸레받이 뒤에서 앙투안은 파란 유리 작은 병을 찾아요.",
+   "blank": "fiole",
+   "src": "made"
+  },
+  {
+   "text": "Au laboratoire de l'usine, Sarah verse un échantillon de colorant dans une fiole.",
+   "en": "In the factory lab, Sarah pours a dye sample into a vial.",
+   "ko": "공장 실험실에서 사라는 염료 시료를 작은 병에 부어요.",
+   "blank": "fiole",
+   "src": "made"
   }
  ],
  "w|firme": [
@@ -41091,6 +41347,22 @@
    "blank": "forêt"
   }
  ],
+ "w|forfait": [
+  {
+   "text": "Antoine a négocié un forfait avec le plombier pour refaire toute la salle de bains.",
+   "en": "Antoine negotiated a flat rate with the plumber to redo the whole bathroom.",
+   "ko": "앙투안은 욕실 전체를 고치는 데 배관공과 일괄 가격으로 합의했어요.",
+   "blank": "forfait",
+   "src": "made"
+  },
+  {
+   "text": "Sarah a souscrit un forfait mobile moins cher pour appeler pendant ses pauses.",
+   "en": "Sarah signed up for a cheaper mobile plan to make calls during her breaks.",
+   "ko": "사라는 쉬는 시간에 전화하려고 더 싼 휴대폰 요금제에 가입했어요.",
+   "blank": "forfait",
+   "src": "made"
+  }
+ ],
  "w|forge": [
   {
    "text": "Au fond de l'usine, Antoine montre aux visiteurs l'ancienne forge où l'on chauffait le métal.",
@@ -41893,6 +42165,22 @@
    "blank": "fréquence"
   }
  ],
+ "w|fréquent": [
+  {
+   "text": "Les coupures de courant sont fréquentes dans la vieille maison d'Antoine.",
+   "en": "Power cuts are frequent in Antoine's old house.",
+   "ko": "앙투안의 낡은 집에서는 정전이 잦아요.",
+   "blank": "fréquentes",
+   "src": "made"
+  },
+  {
+   "text": "Les pannes de la vieille presse sont de plus en plus fréquentes, note Sarah.",
+   "en": "Breakdowns of the old press are more and more frequent, Sarah notes.",
+   "ko": "낡은 프레스의 고장이 점점 잦아진다고 사라가 적어 둬요.",
+   "blank": "fréquentes",
+   "src": "made"
+  }
+ ],
  "w|fréquenté": [
   {
    "text": "Le soir, le couloir des urgences est très fréquenté, et Nicolas attend longtemps.",
@@ -42431,6 +42719,22 @@
    "en": "We watched the rocket cross the sky.",
    "ko": "로켓이 하늘을 가르는 걸 봤어.",
    "blank": "fusée"
+  }
+ ],
+ "w|fusible": [
+  {
+   "text": "Quand Antoine branche la ponceuse, un fusible saute et tout s'éteint.",
+   "en": "When Antoine plugs in the sander, a fuse blows and everything goes dark.",
+   "ko": "앙투안이 샌더를 꽂자 퓨즈가 나가서 불이 다 꺼져요.",
+   "blank": "fusible",
+   "src": "made"
+  },
+  {
+   "text": "Toute la chaîne s'arrête parce qu'un fusible a grillé, soupire Sarah.",
+   "en": "The whole line stops because a fuse has blown, Sarah sighs.",
+   "ko": "퓨즈가 나가서 라인 전체가 멈췄다고 사라가 한숨 쉬어요.",
+   "blank": "fusible",
+   "src": "made"
   }
  ],
  "w|fusil": [
@@ -45675,6 +45979,22 @@
    "blank": "hauteur"
   }
  ],
+ "w|héberger": [
+  {
+   "text": "Antoine aimerait héberger ses amis dès que la chambre d'amis sera prête.",
+   "en": "Antoine would like to put his friends up as soon as the guest room is ready.",
+   "ko": "손님방이 준비되면 앙투안은 바로 친구들을 재워 주고 싶어 해요.",
+   "blank": "héberger",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'usine a brûlé, une collègue a accepté d'héberger Sarah quelques semaines.",
+   "en": "When the factory burned down, a colleague agreed to put Sarah up for a few weeks.",
+   "ko": "공장에 불이 났을 때 한 동료가 몇 주 동안 사라를 재워 주기로 했어요.",
+   "blank": "héberger",
+   "src": "made"
+  }
+ ],
  "w|hectare": [
   {
    "text": "Le festival de théâtre se tient dans un parc de dix hectares.",
@@ -47004,6 +47324,22 @@
    "en": "Émilie finds the stallholder hypocritical: he criticises his neighbours and then smiles at them.",
    "ko": "에밀리는 그 상인이 위선적이라고 생각해요. 이웃을 흉보고 나서 웃어 주거든요.",
    "blank": "hypocrite",
+   "src": "made"
+  }
+ ],
+ "w|hypothèque": [
+  {
+   "text": "Pour payer les travaux, Antoine a pris une hypothèque sur la maison.",
+   "en": "To pay for the work, Antoine took out a mortgage on the house.",
+   "ko": "공사비를 내려고 앙투안은 집을 담보로 대출을 받았어요.",
+   "blank": "hypothèque",
+   "src": "made"
+  },
+  {
+   "text": "Sarah fait des heures supplémentaires pour rembourser plus vite son hypothèque.",
+   "en": "Sarah works overtime to pay off her mortgage faster.",
+   "ko": "사라는 주택 담보 대출을 빨리 갚으려고 초과 근무를 해요.",
+   "blank": "hypothèque",
    "src": "made"
   }
  ],
@@ -53591,6 +53927,22 @@
    "en": "Don't forget to wash your hands before eating.",
    "ko": "밥 먹기 전에 손 씻는 거 잊지 마.",
    "blank": "laver"
+  }
+ ],
+ "w|laverie": [
+  {
+   "text": "En attendant de brancher la machine à laver, Antoine va à la laverie du village.",
+   "en": "Until the washing machine is connected, Antoine goes to the village laundromat.",
+   "ko": "세탁기를 연결할 때까지 앙투안은 마을 빨래방에 가요.",
+   "blank": "laverie",
+   "src": "made"
+  },
+  {
+   "text": "Depuis que sa machine est en panne, Sarah lave ses bleus de travail à la laverie du coin.",
+   "en": "Since her machine broke down, Sarah washes her work overalls at the local laundromat.",
+   "ko": "세탁기가 고장 난 뒤로 사라는 동네 빨래방에서 작업복을 빨아요.",
+   "blank": "laverie",
+   "src": "made"
   }
  ],
  "w|le": [
@@ -61505,6 +61857,22 @@
    "blank": "nana"
   }
  ],
+ "w|nappe": [
+  {
+   "text": "Pour fêter la fin du chantier, Antoine étend une nappe blanche sur la table du jardin.",
+   "en": "To celebrate the end of the work, Antoine spreads a white tablecloth on the garden table.",
+   "ko": "공사가 끝난 걸 축하하려고 앙투안은 정원 식탁에 하얀 식탁보를 펼쳐요.",
+   "blank": "nappe",
+   "src": "made"
+  },
+  {
+   "text": "L'usine de Sarah tisse des nappes brodées pour les restaurants.",
+   "en": "Sarah's factory weaves embroidered tablecloths for restaurants.",
+   "ko": "사라의 공장은 식당용 자수 식탁보를 짜요.",
+   "blank": "nappes",
+   "src": "made"
+  }
+ ],
  "w|narcissique": [
   {
    "text": "Un critique narcissique passe la soirée à se photographier devant les plats de Thomas.",
@@ -61636,6 +62004,22 @@
    "en": "The smell of frying from the next stall makes Claire nauseous.",
    "ko": "옆 가판대의 튀김 냄새 때문에 클레르는 속이 메스꺼워요.",
    "blank": "nausée",
+   "src": "made"
+  }
+ ],
+ "w|naval": [
+  {
+   "text": "Au mur, Antoine accroche une vieille carte de bataille navale trouvée à la cave.",
+   "en": "On the wall, Antoine hangs an old naval battle map found in the cellar.",
+   "ko": "앙투안은 지하실에서 찾은 옛 해전 지도를 벽에 걸어요.",
+   "blank": "navale",
+   "src": "made"
+  },
+  {
+   "text": "Le père de Sarah travaillait autrefois sur un chantier naval.",
+   "en": "Sarah's father used to work in a shipyard.",
+   "ko": "사라의 아버지는 예전에 조선소에서 일했어요.",
+   "blank": "naval",
    "src": "made"
   }
  ],
@@ -65069,6 +65453,22 @@
    "src": "made"
   }
  ],
+ "w|paillette": [
+  {
+   "text": "La nièce d'Antoine a collé des paillettes partout sur le mur de sa future chambre.",
+   "en": "Antoine's niece stuck glitter all over the wall of her future bedroom.",
+   "ko": "앙투안의 조카가 앞으로 쓸 방 벽에 반짝이를 온통 붙였어요.",
+   "blank": "paillettes",
+   "src": "made"
+  },
+  {
+   "text": "Pendant les fêtes, l'usine de Sarah emballe des cartes de vœux couvertes de paillettes.",
+   "en": "During the holidays, Sarah's factory packs greeting cards covered in glitter.",
+   "ko": "연말이면 사라의 공장은 반짝이로 덮인 연하장을 포장해요.",
+   "blank": "paillettes",
+   "src": "made"
+  }
+ ],
  "w|pain": [
   {
    "text": "Je mange du pain chaque matin.",
@@ -65348,6 +65748,38 @@
    "en": "On Manon's screensaver, a black panther crosses the jungle.",
    "ko": "마농의 화면 보호기에서는 검은 표범이 정글을 가로질러요.",
    "blank": "panthère",
+   "src": "made"
+  }
+ ],
+ "w|pantin": [
+  {
+   "text": "Dans le grenier, Antoine découvre un vieux pantin en bois aux fils emmêlés.",
+   "en": "In the attic, Antoine discovers an old wooden puppet with tangled strings.",
+   "ko": "다락방에서 앙투안은 줄이 엉킨 낡은 나무 꼭두각시를 찾아내요.",
+   "blank": "pantin",
+   "src": "made"
+  },
+  {
+   "text": "Sarah refuse d'être un pantin aux ordres du nouveau chef d'équipe.",
+   "en": "Sarah refuses to be a puppet taking orders from the new team leader.",
+   "ko": "사라는 새 조장의 꼭두각시가 되기를 거부해요.",
+   "blank": "pantin",
+   "src": "made"
+  }
+ ],
+ "w|pantoufle": [
+  {
+   "text": "Le soir, Antoine enfile ses pantoufles et contemple les murs encore nus.",
+   "en": "In the evening, Antoine slips on his slippers and gazes at the still-bare walls.",
+   "ko": "저녁이면 앙투안은 실내화를 신고 아직 휑한 벽을 바라봐요.",
+   "blank": "pantoufles",
+   "src": "made"
+  },
+  {
+   "text": "Cette usine fabrique des pantoufles en feutre, et Sarah contrôle chaque paire.",
+   "en": "This factory makes felt slippers, and Sarah checks every pair.",
+   "ko": "이 공장은 펠트 실내화를 만들고, 사라가 한 켤레씩 검사해요.",
+   "blank": "pantoufles",
    "src": "made"
   }
  ],
@@ -66129,6 +66561,22 @@
    "en": "The floor is yours now.",
    "ko": "이제 네가 말할 차례야.",
    "blank": "parole"
+  }
+ ],
+ "w|parquet": [
+  {
+   "text": "Sous la moquette, Antoine découvre un magnifique parquet en chêne.",
+   "en": "Under the carpet, Antoine discovers a magnificent oak floor.",
+   "ko": "카펫 밑에서 앙투안은 멋진 참나무 마룻바닥을 발견해요.",
+   "blank": "parquet",
+   "src": "made"
+  },
+  {
+   "text": "L'usine où travaille Sarah produit des lames de parquet pour toute la région.",
+   "en": "The factory where Sarah works produces floorboards for the whole region.",
+   "ko": "사라가 일하는 공장은 지역 전체에 마루 널을 대요.",
+   "blank": "parquet",
+   "src": "made"
   }
  ],
  "w|parrain": [
@@ -68577,6 +69025,22 @@
    "blank": "piano"
   }
  ],
+ "w|piaule": [
+  {
+   "text": "Pendant les travaux, Antoine dort dans une petite piaule au-dessus du garage.",
+   "en": "During the work, Antoine sleeps in a tiny room above the garage.",
+   "ko": "공사하는 동안 앙투안은 차고 위 작은 방에서 자요.",
+   "blank": "piaule",
+   "src": "made"
+  },
+  {
+   "text": "Jeune, Sarah louait une piaule sous les toits, à deux pas de l'usine.",
+   "en": "When she was young, Sarah rented a tiny room under the roof, a stone's throw from the factory.",
+   "ko": "젊었을 때 사라는 공장 바로 옆 지붕 밑 작은 방에 세 들어 살았어요.",
+   "blank": "piaule",
+   "src": "made"
+  }
+ ],
  "w|pic": [
   {
    "text": "Julien rêve de grimper au pic qui domine la vallée.",
@@ -70739,6 +71203,22 @@
    "en": "I don't like eating pork.",
    "ko": "나는 돼지고기를 먹는 걸 좋아하지 않아.",
    "blank": "porc"
+  }
+ ],
+ "w|porcelaine": [
+  {
+   "text": "Antoine retrouve dans le buffet un service en porcelaine presque intact.",
+   "en": "Antoine finds an almost intact porcelain dinner set in the sideboard.",
+   "ko": "앙투안은 찬장에서 거의 멀쩡한 도자기 식기 세트를 찾아요.",
+   "blank": "porcelaine",
+   "src": "made"
+  },
+  {
+   "text": "L'usine de Sarah fabrique des tasses en porcelaine depuis plus d'un siècle.",
+   "en": "Sarah's factory has made porcelain cups for over a century.",
+   "ko": "사라의 공장은 한 세기 넘게 도자기 잔을 만들어 왔어요.",
+   "blank": "porcelaine",
+   "src": "made"
   }
  ],
  "w|porche": [
@@ -76171,6 +76651,22 @@
    "src": "made"
   }
  ],
+ "w|randonnée": [
+  {
+   "text": "Après une longue randonnée dans la région, Antoine est tombé amoureux d'une vieille maison à vendre.",
+   "en": "After a long hike in the area, Antoine fell in love with an old house for sale.",
+   "ko": "그 지역에서 오래 하이킹을 한 뒤 앙투안은 팔려고 내놓은 낡은 집에 반했어요.",
+   "blank": "randonnée",
+   "src": "made"
+  },
+  {
+   "text": "Le dimanche, Sarah oublie l'usine et part en randonnée dans les collines.",
+   "en": "On Sundays, Sarah forgets the factory and goes hiking in the hills.",
+   "ko": "일요일이면 사라는 공장을 잊고 언덕으로 하이킹을 가요.",
+   "blank": "randonnée",
+   "src": "made"
+  }
+ ],
  "w|rang": [
   {
    "text": "Nous sommes assis au premier rang.",
@@ -79581,6 +80077,22 @@
    "src": "made"
   }
  ],
+ "w|repeindre": [
+  {
+   "text": "Ce week-end, Antoine veut repeindre les volets en bleu.",
+   "en": "This weekend, Antoine wants to repaint the shutters blue.",
+   "ko": "이번 주말에 앙투안은 덧창을 파란색으로 다시 칠하고 싶어 해요.",
+   "blank": "repeindre",
+   "src": "made"
+  },
+  {
+   "text": "L'été, l'équipe de Sarah doit repeindre les lignes jaunes au sol de l'atelier.",
+   "en": "In summer, Sarah's team has to repaint the yellow lines on the workshop floor.",
+   "ko": "여름이면 사라의 팀은 작업장 바닥의 노란 선을 다시 칠해야 해요.",
+   "blank": "repeindre",
+   "src": "made"
+  }
+ ],
  "w|repenser": [
   {
    "text": "Louis aimerait repenser complètement l'escalier.",
@@ -79653,6 +80165,22 @@
    "en": "Rehearsal ended very late.",
    "ko": "연습이 아주 늦게 끝났어.",
    "blank": "répétition"
+  }
+ ],
+ "w|répit": [
+  {
+   "text": "Après trois mois de chantier, Antoine s'accorde enfin un peu de répit.",
+   "en": "After three months of work, Antoine finally allows himself a bit of a break.",
+   "ko": "석 달간 공사를 한 뒤 앙투안은 마침내 잠시 숨을 돌려요.",
+   "blank": "répit",
+   "src": "made"
+  },
+  {
+   "text": "Les machines tournent sans répit, et Sarah ne s'assoit presque jamais.",
+   "en": "The machines run without respite, and Sarah almost never sits down.",
+   "ko": "기계가 쉴 새 없이 돌아가서 사라는 거의 앉지 못해요.",
+   "blank": "répit",
+   "src": "made"
   }
  ],
  "w|replier": [
@@ -80214,6 +80742,22 @@
    "en": "In winter, Léa's brother is the only resident of the estate to stay put.",
    "ko": "겨울에 그 주택 단지에 남아 있는 주민은 레아의 오빠뿐이에요.",
    "blank": "résident",
+   "src": "made"
+  }
+ ],
+ "w|résider": [
+  {
+   "text": "Antoine compte résider ici toute l'année une fois les travaux finis.",
+   "en": "Antoine plans to live here all year once the work is done.",
+   "ko": "공사가 끝나면 앙투안은 일 년 내내 여기서 살 생각이에요.",
+   "blank": "résider",
+   "src": "made"
+  },
+  {
+   "text": "La plupart des ouvriers de l'usine choisissent de résider dans le quartier, comme Sarah.",
+   "en": "Most of the factory workers choose to live in the neighborhood, like Sarah.",
+   "ko": "공장 직원 대부분은 사라처럼 그 동네에 살기로 해요.",
+   "blank": "résider",
    "src": "made"
   }
  ],
@@ -86523,6 +87067,22 @@
    "blank": "sœur"
   }
  ],
+ "w|sofa": [
+  {
+   "text": "Le soir, Antoine s'effondre sur un vieux sofa couvert d'une bâche.",
+   "en": "In the evening, Antoine collapses onto an old sofa covered with a tarp.",
+   "ko": "저녁이면 앙투안은 방수포를 덮은 낡은 소파에 쓰러지듯 누워요.",
+   "blank": "sofa",
+   "src": "made"
+  },
+  {
+   "text": "Dans la salle de repos, un vieux sofa accueille Sarah pendant sa pause.",
+   "en": "In the break room, an old sofa welcomes Sarah during her break.",
+   "ko": "휴게실의 낡은 소파가 쉬는 시간의 사라를 맞아 줘요.",
+   "blank": "sofa",
+   "src": "made"
+  }
+ ],
  "w|soi": [
   {
    "text": "Il faut toujours prendre soin de soi.",
@@ -87290,6 +87850,22 @@
    "en": "Sarah no longer worries about city noise since she has lived here.",
    "ko": "여기 살면서 사라는 더는 도시 소음을 신경 쓰지 않아요.",
    "blank": "soucie",
+   "src": "made"
+  }
+ ],
+ "w|soucoupe": [
+  {
+   "text": "Antoine utilise une vieille soucoupe pour mélanger un peu de colle.",
+   "en": "Antoine uses an old saucer to mix a bit of glue.",
+   "ko": "앙투안은 낡은 받침 접시에 풀을 조금 섞어요.",
+   "blank": "soucoupe",
+   "src": "made"
+  },
+  {
+   "text": "Sarah pose sa tasse de café sur une soucoupe ébréchée.",
+   "en": "Sarah sets her cup of coffee on a chipped saucer.",
+   "ko": "사라는 이 빠진 받침 접시에 커피잔을 내려놓아요.",
+   "blank": "soucoupe",
    "src": "made"
   }
  ],
@@ -88226,6 +88802,22 @@
    "en": "The ministry aired an ad to encourage blood donation.",
    "ko": "보건부가 헌혈을 권하는 광고를 내보냈어요.",
    "blank": "spot",
+   "src": "made"
+  }
+ ],
+ "w|spray": [
+  {
+   "text": "Antoine traite les poutres avec un spray contre les insectes.",
+   "en": "Antoine treats the beams with an insect spray.",
+   "ko": "앙투안은 들보에 살충 스프레이를 뿌려요.",
+   "blank": "spray",
+   "src": "made"
+  },
+  {
+   "text": "Sarah nettoie son poste de travail avec un spray désinfectant.",
+   "en": "Sarah cleans her workstation with a disinfectant spray.",
+   "ko": "사라는 소독 스프레이로 작업대를 닦아요.",
+   "blank": "spray",
    "src": "made"
   }
  ],
@@ -90280,6 +90872,22 @@
    "en": "Chloé films the encore on her tablet, much to her neighbors' annoyance.",
    "ko": "클로에가 태블릿으로 앙코르를 찍어서 옆 사람들이 꽤 짜증을 내요.",
    "blank": "tablette",
+   "src": "made"
+  }
+ ],
+ "w|tablier": [
+  {
+   "text": "Antoine porte un tablier de cuir plein de poches pour ranger ses outils.",
+   "en": "Antoine wears a leather apron full of pockets to hold his tools.",
+   "ko": "앙투안은 공구를 넣으려고 주머니가 많은 가죽 앞치마를 둘러요.",
+   "blank": "tablier",
+   "src": "made"
+  },
+  {
+   "text": "Sarah enfile son tablier bleu et ses lunettes de protection avant de commencer.",
+   "en": "Sarah puts on her blue apron and safety glasses before starting.",
+   "ko": "사라는 일을 시작하기 전에 파란 앞치마와 보안경을 착용해요.",
+   "blank": "tablier",
    "src": "made"
   }
  ],
@@ -92669,6 +93277,22 @@
    "en": "It's your turn to play.",
    "ko": "네가 놀 차례야.",
    "blank": "tour"
+  }
+ ],
+ "w|tourisme": [
+  {
+   "text": "Le village vit surtout du tourisme, alors Antoine pense louer une chambre l'été.",
+   "en": "The village lives mostly off tourism, so Antoine is thinking of renting out a room in summer.",
+   "ko": "마을이 주로 관광으로 먹고살아서 앙투안은 여름에 방 하나를 세놓을 생각이에요.",
+   "blank": "tourisme",
+   "src": "made"
+  },
+  {
+   "text": "L'usine de Sarah ouvre ses portes au public pendant les journées du tourisme industriel.",
+   "en": "Sarah's factory opens its doors to the public during industrial tourism days.",
+   "ko": "사라의 공장은 산업 관광 행사 기간에 일반인에게 문을 열어요.",
+   "blank": "tourisme",
+   "src": "made"
   }
  ],
  "w|touriste": [
@@ -96049,6 +96673,22 @@
    "en": "We organized a cake sale.",
    "ko": "우리는 케이크 판매를 조직했어.",
    "blank": "vente"
+  }
+ ],
+ "w|ventilateur": [
+  {
+   "text": "Antoine installe un ventilateur au plafond de la chambre pour l'été.",
+   "en": "Antoine installs a ceiling fan in the bedroom for the summer.",
+   "ko": "앙투안은 여름을 대비해 침실 천장에 선풍기를 달아요.",
+   "blank": "ventilateur",
+   "src": "made"
+  },
+  {
+   "text": "L'été, un énorme ventilateur souffle au-dessus du poste de Sarah.",
+   "en": "In summer, a huge fan blows above Sarah's workstation.",
+   "ko": "여름이면 사라의 작업대 위에서 커다란 선풍기가 돌아가요.",
+   "blank": "ventilateur",
+   "src": "made"
   }
  ],
  "w|ventilation": [
