@@ -1751,6 +1751,22 @@
    "src": "made"
   }
  ],
+ "w|antek": [
+  {
+   "text": "Novel sejarah yang diulas Bayu bercerita tentang antek penjajah yang berbalik membela rakyat.",
+   "en": "The historical novel Bayu reviewed is about a colonial lackey who turns to defend the people.",
+   "ko": "바유가 리뷰한 역사 소설은 식민 세력의 앞잡이가 돌아서서 백성을 지키는 이야기예요.",
+   "blank": "antek",
+   "src": "made"
+  },
+  {
+   "text": "Dalam cerita rakyat yang Intan baca, raja kegelapan mengirim antek untuk mencuri matahari.",
+   "en": "In the folk tale Intan read, the king of darkness sends his henchmen to steal the sun.",
+   "ko": "인탄이 읽은 민담에서 어둠의 왕은 해를 훔치려고 부하를 보내요.",
+   "blank": "antek",
+   "src": "made"
+  }
+ ],
  "w|anti": [
   {
    "text": "Obat anti nyeri itu cepat bekerja.",
@@ -6779,6 +6795,22 @@
    "src": "made"
   }
  ],
+ "w|berdalih": [
+  {
+   "text": "Pejabat itu berdalih tidak tahu soal anggaran yang hilang.",
+   "en": "The official claimed as an excuse that he knew nothing about the missing budget.",
+   "ko": "그 공무원은 사라진 예산에 대해 몰랐다고 둘러댔어요.",
+   "blank": "berdalih",
+   "src": "made"
+  },
+  {
+   "text": "Adik Intan berdalih hujan supaya tidak berangkat les.",
+   "en": "Intan's little brother used the rain as an excuse to skip his tutoring class.",
+   "ko": "인탄의 동생은 비를 핑계로 학원에 가지 않으려 했어요.",
+   "blank": "berdalih",
+   "src": "made"
+  }
+ ],
  "w|berdamai": [
   {
    "text": "Setelah bertengkar seminggu, Eko akhirnya berdamai dengan sahabatnya.",
@@ -11433,6 +11465,22 @@
    "src": "made"
   }
  ],
+ "w|bersepakat": [
+  {
+   "text": "Para redaktur bersepakat tidak memuat foto korban kecelakaan.",
+   "en": "The editors agreed not to run photos of the accident victims.",
+   "ko": "편집자들은 사고 피해자 사진을 싣지 않기로 합의했어요.",
+   "blank": "bersepakat",
+   "src": "made"
+  },
+  {
+   "text": "Warga bersepakat membersihkan selokan sebelum musim hujan.",
+   "en": "The residents agreed to clean the gutters before the rainy season.",
+   "ko": "주민들은 우기 전에 도랑을 치우기로 합의했어요.",
+   "blank": "bersepakat",
+   "src": "made"
+  }
+ ],
  "w|bersepeda": [
   {
    "text": "Bayu menyewa sepeda dan bersepeda keliling danau sore itu.",
@@ -13141,6 +13189,22 @@
    "blank": "bidang"
   }
  ],
+ "w|bidikan": [
+  {
+   "text": "Fotografer koran mendapat bidikan terbaik saat matahari terbenam.",
+   "en": "The newspaper photographer got the best shot at sunset.",
+   "ko": "신문사 사진기자는 해 질 녘에 최고의 장면을 찍었어요.",
+   "blank": "bidikan",
+   "src": "made"
+  },
+  {
+   "text": "Intan menunggu kabut pagi untuk mendapatkan bidikan yang indah.",
+   "en": "Intan waited for the morning mist to get a beautiful shot.",
+   "ko": "인탄은 멋진 장면을 찍으려고 아침 안개를 기다렸어요.",
+   "blank": "bidikan",
+   "src": "made"
+  }
+ ],
  "w|bijak": [
   {
    "text": "Bijak sekali keputusan yang kamu buat.",
@@ -13795,6 +13859,22 @@
    "en": "Lies get found out quickly.",
    "ko": "거짓말은 빨리 들통나.",
    "blank": "Bohong"
+  }
+ ],
+ "w|bohongan": [
+  {
+   "text": "Berita tentang hujan uang di alun-alun itu ternyata bohongan.",
+   "en": "The story about money raining down on the square turned out to be fake.",
+   "ko": "광장에 돈이 쏟아졌다는 소식은 알고 보니 거짓이었어요.",
+   "blank": "bohongan",
+   "src": "made"
+  },
+  {
+   "text": "Intan memasang ular bohongan untuk menakuti burung di kebun.",
+   "en": "Intan put up a fake snake to scare the birds in the garden.",
+   "ko": "인탄은 밭의 새를 쫓으려고 가짜 뱀을 놓았어요.",
+   "blank": "bohongan",
+   "src": "made"
   }
  ],
  "w|bola": [
@@ -17441,6 +17521,22 @@
    "src": "made"
   }
  ],
+ "w|dikremasi": [
+  {
+   "text": "Sesuai wasiat, tokoh pers senior itu dikremasi di kampung halaman.",
+   "en": "As he wished, the veteran press figure was cremated in his hometown.",
+   "ko": "유언에 따라 그 원로 언론인은 고향에서 화장됐어요.",
+   "blank": "dikremasi",
+   "src": "made"
+  },
+  {
+   "text": "Di Bali, upacara ketika jenazah dikremasi sering digelar pada musim kemarau.",
+   "en": "In Bali, the ceremony in which the deceased are cremated is often held in the dry season.",
+   "ko": "발리에서는 고인을 화장하는 의식을 건기에 자주 치러요.",
+   "blank": "dikremasi",
+   "src": "made"
+  }
+ ],
  "w|diktator": [
   {
    "text": "Ruang sejarah menampilkan surat kabar lama yang mengkritik seorang diktator.",
@@ -17606,6 +17702,22 @@
    "en": "Siti had to get made up from the early hours for the sunrise scene.",
    "ko": "해돋이 장면 때문에 시티는 새벽부터 분장을 해야 했어요.",
    "blank": "dini",
+   "src": "made"
+  }
+ ],
+ "w|dinobatkan": [
+  {
+   "text": "Penyanyi muda itu dinobatkan sebagai pendatang baru terbaik tahun ini.",
+   "en": "The young singer was crowned best newcomer of the year.",
+   "ko": "그 젊은 가수는 올해의 신인으로 선정됐어요.",
+   "blank": "dinobatkan",
+   "src": "made"
+  },
+  {
+   "text": "Kota Intan dinobatkan sebagai kota terbersih setelah musim hujan berlalu tanpa banjir.",
+   "en": "Intan's town was named the cleanest town after the rainy season passed without floods.",
+   "ko": "인탄네 도시는 홍수 없이 우기를 넘긴 뒤 가장 깨끗한 도시로 선정됐어요.",
+   "blank": "dinobatkan",
    "src": "made"
   }
  ],
@@ -18718,6 +18830,22 @@
    "en": "From her boss's expression, Intan knew the meeting hadn't gone well.",
    "ko": "인탄은 상사의 표정을 보고 회의가 잘 안 풀렸다는 걸 알았어요.",
    "blank": "ekspresi",
+   "src": "made"
+  }
+ ],
+ "w|eksternal": [
+  {
+   "text": "Koran itu memakai auditor eksternal untuk memeriksa keuangan.",
+   "en": "The newspaper uses an external auditor to check its finances.",
+   "ko": "그 신문사는 외부 감사인을 두어 재무를 점검해요.",
+   "blank": "eksternal",
+   "src": "made"
+  },
+  {
+   "text": "Para ahli menyebut faktor eksternal seperti suhu laut membuat kemarau lebih panjang.",
+   "en": "Experts say external factors such as sea temperature make the dry season longer.",
+   "ko": "전문가들은 해수 온도 같은 외부 요인 때문에 건기가 길어진다고 해요.",
+   "blank": "eksternal",
    "src": "made"
   }
  ],
@@ -24077,6 +24205,22 @@
    "src": "made"
   }
  ],
+ "w|impuls": [
+  {
+   "text": "Bayu membeli buku bekas karena impuls sesaat.",
+   "en": "Bayu bought a used book on a momentary impulse.",
+   "ko": "바유는 순간적인 충동으로 중고 책을 샀어요.",
+   "blank": "impuls",
+   "src": "made"
+  },
+  {
+   "text": "Intan membeli payung baru karena impuls saat hujan turun tiba-tiba.",
+   "en": "Intan bought a new umbrella on impulse when the rain came suddenly.",
+   "ko": "갑자기 비가 쏟아지자 인탄은 충동적으로 새 우산을 샀어요.",
+   "blank": "impuls",
+   "src": "made"
+  }
+ ],
  "w|imut": [
   {
    "text": "Anak kecil di barisan depan memakai topi kelinci yang imut.",
@@ -28344,6 +28488,22 @@
    "en": "Dewi paid for her museum ticket to a friendly cashier.",
    "ko": "데위는 친절한 계산원에게 박물관 입장권 값을 냈어요.",
    "blank": "kasir",
+   "src": "made"
+  }
+ ],
+ "w|kasta": [
+  {
+   "text": "Artikel sejarah itu menjelaskan sistem kasta di Bali pada masa lalu.",
+   "en": "The history article explains the caste system in Bali in the past.",
+   "ko": "그 역사 기사는 옛 발리의 카스트 제도를 설명해요.",
+   "blank": "kasta",
+   "src": "made"
+  },
+  {
+   "text": "Intan bercanda bahwa saat musim durian, buah lain seperti turun kasta.",
+   "en": "Intan joked that during durian season, other fruits seem to drop in rank.",
+   "ko": "인탄은 두리안 철에는 다른 과일이 격이 떨어지는 것 같다고 농담했어요.",
+   "blank": "kasta",
    "src": "made"
   }
  ],
@@ -33951,6 +34111,22 @@
    "src": "made"
   }
  ],
+ "w|ketepatan": [
+  {
+   "text": "Redaktur menuntut ketepatan data dalam setiap berita.",
+   "en": "The editor demands accuracy of data in every story.",
+   "ko": "편집자는 모든 기사에서 자료의 정확성을 요구해요.",
+   "blank": "ketepatan",
+   "src": "made"
+  },
+  {
+   "text": "Intan kagum pada ketepatan petani tua menebak datangnya hujan.",
+   "en": "Intan admires how precisely the old farmer predicts when the rain will come.",
+   "ko": "인탄은 비 올 때를 정확히 맞히는 늙은 농부에게 감탄해요.",
+   "blank": "ketepatan",
+   "src": "made"
+  }
+ ],
  "w|keterampilan": [
   {
    "text": "Rudi belajar keterampilan mengelas dari mandor senior.",
@@ -35655,6 +35831,22 @@
    "blank": "koneksi"
   }
  ],
+ "w|konfederasi": [
+  {
+   "text": "Bayu menulis tentang konfederasi serikat buruh yang menggelar unjuk rasa.",
+   "en": "Bayu wrote about a confederation of labor unions that held a rally.",
+   "ko": "바유는 집회를 연 노동조합 연맹에 대해 썼어요.",
+   "blank": "konfederasi",
+   "src": "made"
+  },
+  {
+   "text": "Menjelang musim tanam, konfederasi petani se-provinsi mengadakan rapat besar.",
+   "en": "Ahead of the planting season, the provincial farmers' confederation held a big meeting.",
+   "ko": "파종 철을 앞두고 도 농민 연맹이 큰 회의를 열었어요.",
+   "blank": "konfederasi",
+   "src": "made"
+  }
+ ],
  "w|konferensi": [
   {
    "text": "Konferensi internasional diadakan di hotel besar.",
@@ -36157,6 +36349,22 @@
    "blank": "Kontrol"
   }
  ],
+ "w|kontroversi": [
+  {
+   "text": "Penunjukan pelatih baru itu memicu kontroversi di halaman olahraga.",
+   "en": "The appointment of the new coach sparked controversy on the sports page.",
+   "ko": "새 감독 선임은 스포츠면에서 논란을 일으켰어요.",
+   "blank": "kontroversi",
+   "src": "made"
+  },
+  {
+   "text": "Rencana mengubah jadwal libur sekolah karena musim hujan menuai kontroversi.",
+   "en": "The plan to change the school holidays because of the rainy season drew controversy.",
+   "ko": "우기 때문에 방학 일정을 바꾸려는 계획은 논란을 불렀어요.",
+   "blank": "kontroversi",
+   "src": "made"
+  }
+ ],
  "w|kontroversial": [
   {
    "text": "Rencana memindahkan pasar tradisional menjadi isu kontroversial di meja Fajar.",
@@ -36653,6 +36861,22 @@
    "blank": "kristen"
   }
  ],
+ "w|kriteria": [
+  {
+   "text": "Redaktur menjelaskan kriteria berita yang layak terbit.",
+   "en": "The editor explained the criteria for stories worth publishing.",
+   "ko": "편집자는 실을 만한 기사의 기준을 설명했어요.",
+   "blank": "kriteria",
+   "src": "made"
+  },
+  {
+   "text": "Badan cuaca punya kriteria tertentu untuk menentukan awal musim hujan.",
+   "en": "The weather agency has specific criteria for deciding when the rainy season begins.",
+   "ko": "기상청은 우기 시작을 정하는 특정 기준이 있어요.",
+   "blank": "kriteria",
+   "src": "made"
+  }
+ ],
  "w|kritikus": [
   {
    "text": "Seorang kritikus film menulis kolom mingguan di koran tempat Andi bekerja.",
@@ -36996,6 +37220,22 @@
    "en": "Intan kept her packed food in the small fridge in the dining car.",
    "ko": "인탄은 싸 온 음식을 식당칸 작은 냉장고에 넣어 뒀어요.",
    "blank": "kulkas",
+   "src": "made"
+  }
+ ],
+ "w|kultus": [
+  {
+   "text": "Bayu menulis liputan tentang kultus individu terhadap seorang selebritas internet.",
+   "en": "Bayu wrote a report on the personality cult around an internet celebrity.",
+   "ko": "바유는 한 인터넷 유명인을 둘러싼 개인숭배에 관한 기사를 썼어요.",
+   "blank": "kultus",
+   "src": "made"
+  },
+  {
+   "text": "Intan membaca novel tentang kultus misterius yang menyembah matahari musim panas.",
+   "en": "Intan read a novel about a mysterious cult that worships the summer sun.",
+   "ko": "인탄은 여름 태양을 숭배하는 신비한 집단에 관한 소설을 읽었어요.",
+   "blank": "kultus",
    "src": "made"
   }
  ],
@@ -39381,6 +39621,22 @@
    "src": "made"
   }
  ],
+ "w|lisan": [
+  {
+   "text": "Bayu mengumpulkan sejarah lisan dari para veteran.",
+   "en": "Bayu collected oral history from the veterans.",
+   "ko": "바유는 참전 용사들에게서 구술 역사를 모았어요.",
+   "blank": "lisan",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Intan menyimpan pengetahuan lisan tentang tanda-tanda pergantian musim.",
+   "en": "Intan's grandmother holds oral knowledge about the signs of the changing seasons.",
+   "ko": "인탄의 할머니는 계절이 바뀌는 징조에 관한 구전 지식을 간직하고 있어요.",
+   "blank": "lisan",
+   "src": "made"
+  }
+ ],
  "w|lisensi": [
   {
    "text": "Pabrik itu baru mendapat lisensi untuk memproduksi suku cadang mobil.",
@@ -40308,6 +40564,22 @@
    "en": "Wati wrote that her fridge door is covered with magnetic souvenirs from many cities.",
    "ko": "와티는 냉장고 문이 여러 도시에서 산 자석 장식으로 가득하다고 썼어요.",
    "blank": "magnetik",
+   "src": "made"
+  }
+ ],
+ "w|mahakarya": [
+  {
+   "text": "Bayu menyebut film itu sebagai mahakarya sutradara muda.",
+   "en": "Bayu called the film a young director's masterpiece.",
+   "ko": "바유는 그 영화를 젊은 감독의 걸작이라고 불렀어요.",
+   "blank": "mahakarya",
+   "src": "made"
+  },
+  {
+   "text": "Intan menganggap lukisan sawah saat musim panen itu sebagai mahakarya kakek.",
+   "en": "Intan considers that painting of rice fields at harvest time her grandfather's masterpiece.",
+   "ko": "인탄은 수확철 논을 그린 그 그림을 할아버지의 걸작으로 여겨요.",
+   "blank": "mahakarya",
    "src": "made"
   }
  ],
@@ -42573,6 +42845,22 @@
    "src": "made"
   }
  ],
+ "w|melelehkan": [
+  {
+   "text": "Panas siang melelehkan cokelat di saku Bayu.",
+   "en": "The midday heat melted the chocolate in Bayu's pocket.",
+   "ko": "한낮 더위에 바유 주머니 속 초콜릿이 녹았어요.",
+   "blank": "melelehkan",
+   "src": "made"
+  },
+  {
+   "text": "Matahari kemarau melelehkan aspal di jalan desa.",
+   "en": "The dry-season sun melted the asphalt on the village road.",
+   "ko": "건기의 햇볕이 마을 길 아스팔트를 녹였어요.",
+   "blank": "melelehkan",
+   "src": "made"
+  }
+ ],
  "w|melemah": [
   {
    "text": "Menjelang tengah malam, suara musik mulai melemah karena pemainnya kelelahan.",
@@ -43170,6 +43458,22 @@
    "en": "A small fire at the end kiosk briefly spread to the fish section.",
    "ko": "끝 가게에서 난 작은 불이 생선 구역까지 번졌어요.",
    "blank": "meluas",
+   "src": "made"
+  }
+ ],
+ "w|melubangi": [
+  {
+   "text": "Bayu melubangi kertas laporan agar bisa disimpan di map.",
+   "en": "Bayu punched holes in the report pages so they could be filed in a folder.",
+   "ko": "바유는 보고서를 파일에 끼우려고 종이에 구멍을 뚫었어요.",
+   "blank": "melubangi",
+   "src": "made"
+  },
+  {
+   "text": "Karat melubangi atap seng gudang Intan.",
+   "en": "Rust has eaten holes in the zinc roof of Intan's shed.",
+   "ko": "녹이 슬어 인탄네 창고 함석지붕에 구멍이 났어요.",
+   "blank": "melubangi",
    "src": "made"
   }
  ],
@@ -43990,6 +44294,22 @@
    "en": "Ayu's grandmother likes to spoil her grandchildren with cassava cakes.",
    "ko": "아유의 할머니는 손주들에게 카사바 과자를 해 주며 귀여워해요.",
    "blank": "memanjakan",
+   "src": "made"
+  }
+ ],
+ "w|memanjang": [
+  {
+   "text": "Antrean pembeli koran edisi khusus memanjang sampai ke jalan.",
+   "en": "The queue for the special edition stretched out to the street.",
+   "ko": "특별판 신문을 사려는 줄이 길까지 늘어섰어요.",
+   "blank": "memanjang",
+   "src": "made"
+  },
+  {
+   "text": "Bayangan pohon memanjang saat matahari sore musim kemarau.",
+   "en": "The tree shadows grow long under the dry-season afternoon sun.",
+   "ko": "건기 오후 햇살에 나무 그림자가 길게 늘어져요.",
+   "blank": "memanjang",
    "src": "made"
   }
  ],
@@ -64611,6 +64931,22 @@
    "blank": "Nol"
   }
  ],
+ "w|nominasi": [
+  {
+   "text": "Foto karya Bayu masuk nominasi penghargaan jurnalistik.",
+   "en": "Bayu's photo was nominated for a journalism award.",
+   "ko": "바유의 사진이 언론상 후보에 올랐어요.",
+   "blank": "nominasi",
+   "src": "made"
+  },
+  {
+   "text": "Foto pelangi musim hujan karya Intan masuk nominasi lomba fotografi.",
+   "en": "Intan's photo of a rainy-season rainbow was nominated in a photography contest.",
+   "ko": "인탄이 찍은 우기의 무지개 사진이 사진 공모전 후보에 올랐어요.",
+   "blank": "nominasi",
+   "src": "made"
+  }
+ ],
  "w|nomor": [
   {
    "text": "Berapa nomor kamarnya?",
@@ -64714,6 +65050,22 @@
    "en": "Siti hopes the film can finish editing in November.",
    "ko": "시티는 영화 편집이 십일월에 끝나기를 바라요.",
    "blank": "November",
+   "src": "made"
+  }
+ ],
+ "w|nubuat": [
+  {
+   "text": "Kolom budaya membahas nubuat kuno yang sering dikaitkan dengan gerhana.",
+   "en": "The culture column discusses an ancient prophecy often linked to eclipses.",
+   "ko": "문화면은 일식과 자주 연결되는 옛 예언을 다뤘어요.",
+   "blank": "nubuat",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Intan bercerita tentang nubuat leluhur bahwa kemarau panjang akan diikuti panen besar.",
+   "en": "Intan's grandmother told of an ancestral prophecy that a long drought would be followed by a big harvest.",
+   "ko": "인탄의 할머니는 긴 가뭄 뒤에 큰 풍년이 온다는 조상의 예언을 들려줬어요.",
+   "blank": "nubuat",
    "src": "made"
   }
  ],
@@ -68685,6 +69037,22 @@
    "src": "made"
   }
  ],
+ "w|pembahasan": [
+  {
+   "text": "Rapat redaksi diisi pembahasan soal halaman depan besok.",
+   "en": "The editorial meeting was devoted to discussing tomorrow's front page.",
+   "ko": "편집 회의는 내일 일면에 대한 논의로 채워졌어요.",
+   "blank": "pembahasan",
+   "src": "made"
+  },
+  {
+   "text": "Rapat desa diisi pembahasan soal persiapan menghadapi banjir.",
+   "en": "The village meeting was spent discussing preparations for flooding.",
+   "ko": "마을 회의는 홍수 대비 논의로 채워졌어요.",
+   "blank": "pembahasan",
+   "src": "made"
+  }
+ ],
  "w|pembajak": [
   {
    "text": "Museum bahari itu menyimpan bendera kapal pembajak yang pernah menguasai selat.",
@@ -70228,6 +70596,22 @@
    "en": "Putri plays the lonely wife of a conqueror in the palace.",
    "ko": "푸트리는 궁전에서 외롭게 지내는 정복자의 아내 역을 맡았어요.",
    "blank": "penakluk",
+   "src": "made"
+  }
+ ],
+ "w|penaklukan": [
+  {
+   "text": "Bayu mengulas buku tentang penaklukan Malaka pada abad keenam belas.",
+   "en": "Bayu reviewed a book about the conquest of Malacca in the sixteenth century.",
+   "ko": "바유는 십육 세기 말라카 정복에 관한 책을 리뷰했어요.",
+   "blank": "penaklukan",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Intan, mendaki gunung saat kemarau adalah penaklukan atas rasa takut.",
+   "en": "For Intan, climbing a mountain in the dry season is a conquest of fear.",
+   "ko": "인탄에게 건기의 등산은 두려움을 이겨 내는 일이에요.",
+   "blank": "penaklukan",
    "src": "made"
   }
  ],
@@ -73235,6 +73619,22 @@
    "src": "made"
   }
  ],
+ "w|pengusir": [
+  {
+   "text": "Bayu menulis tentang alat pengusir tikus elektronik yang ternyata tidak efektif.",
+   "en": "Bayu wrote about an electronic rat repeller that turned out to be ineffective.",
+   "ko": "바유는 알고 보니 효과가 없던 전자식 쥐 퇴치기에 대해 썼어요.",
+   "blank": "pengusir",
+   "src": "made"
+  },
+  {
+   "text": "Saat musim hujan, Intan memasang lilin pengusir nyamuk.",
+   "en": "In the rainy season, Intan lights mosquito-repellent candles.",
+   "ko": "우기에는 인탄이 모기 퇴치 초를 켜 둬요.",
+   "blank": "pengusir",
+   "src": "made"
+  }
+ ],
  "w|pengusiran": [
   {
    "text": "Andi membaca bab tentang pengusiran petani dari tanahnya pada zaman kolonial.",
@@ -73556,6 +73956,22 @@
    "en": "Intan is annoyed by the bootlicking member who is only nice to the gym owner.",
    "ko": "인탄은 헬스장 주인에게만 잘하는 아첨꾼 회원이 못마땅해요.",
    "blank": "penjilat",
+   "src": "made"
+  }
+ ],
+ "w|penjinak": [
+  {
+   "text": "Tim penjinak bom memeriksa paket mencurigakan di depan kantor redaksi.",
+   "en": "The bomb disposal team examined a suspicious package in front of the newsroom.",
+   "ko": "폭발물 처리반이 편집국 앞의 수상한 소포를 살폈어요.",
+   "blank": "penjinak",
+   "src": "made"
+  },
+  {
+   "text": "Intan menonton pertunjukan penjinak ular di pasar musiman.",
+   "en": "Intan watched a snake charmer's show at the seasonal market.",
+   "ko": "인탄은 계절 장터에서 뱀 조련사의 공연을 봤어요.",
+   "blank": "penjinak",
    "src": "made"
   }
  ],
@@ -75439,6 +75855,22 @@
    "src": "made"
   }
  ],
+ "w|peredaran": [
+  {
+   "text": "Bayu menulis tentang peredaran uang palsu menjelang hari raya.",
+   "en": "Bayu wrote about the circulation of counterfeit money ahead of the holidays.",
+   "ko": "바유는 명절을 앞두고 위조지폐가 나도는 일에 대해 썼어요.",
+   "blank": "peredaran",
+   "src": "made"
+  },
+  {
+   "text": "Intan belajar bahwa musim terjadi karena kemiringan bumi dalam peredaran mengelilingi matahari.",
+   "en": "Intan learned that seasons happen because of the earth's tilt as it orbits the sun.",
+   "ko": "인탄은 지구가 기울어진 채 태양을 돌아서 계절이 생긴다는 걸 배웠어요.",
+   "blank": "peredaran",
+   "src": "made"
+  }
+ ],
  "w|peregangan": [
   {
    "text": "Budi mengajak pasien melakukan peregangan ringan di tempat tidur.",
@@ -76966,6 +77398,22 @@
    "en": "White paint changed the perception of how small Putri's cramped room is.",
    "ko": "흰 페인트를 칠하니 좁은 푸트리의 방이 더 넓어 보였어요.",
    "blank": "persepsi",
+   "src": "made"
+  }
+ ],
+ "w|perseteruan": [
+  {
+   "text": "Bayu meliput perseteruan dua klub sepak bola daerah.",
+   "en": "Bayu covered the feud between two local football clubs.",
+   "ko": "바유는 지역 축구 클럽 두 곳의 갈등을 취재했어요.",
+   "blank": "perseteruan",
+   "src": "made"
+  },
+  {
+   "text": "Ada perseteruan lama antara petani dan peternak soal air di musim kemarau.",
+   "en": "There's a long-running feud between farmers and herders over water in the dry season.",
+   "ko": "건기마다 농부와 목축업자 사이에 물을 두고 오랜 다툼이 있어요.",
+   "blank": "perseteruan",
    "src": "made"
   }
  ],
@@ -79569,6 +80017,22 @@
    "blank": "proses"
   }
  ],
+ "w|prosesi": [
+  {
+   "text": "Fotografer koran mengabadikan prosesi pernikahan adat di keraton.",
+   "en": "The newspaper photographer captured the traditional wedding procession at the palace.",
+   "ko": "신문사 사진기자가 왕궁의 전통 혼례 행렬을 사진에 담았어요.",
+   "blank": "prosesi",
+   "src": "made"
+  },
+  {
+   "text": "Desa Intan menggelar prosesi syukur panen saat musim kemarau tiba.",
+   "en": "Intan's village holds a harvest thanksgiving procession when the dry season arrives.",
+   "ko": "인탄네 마을은 건기가 오면 추수 감사 행렬을 벌여요.",
+   "blank": "prosesi",
+   "src": "made"
+  }
+ ],
  "w|prospek": [
   {
    "text": "Rudi melihat prospek bagus dalam bisnis katering makanan sehat.",
@@ -81028,6 +81492,22 @@
    "en": "Dewi's office fired an employee who sent a racist joke in the work group chat.",
    "ko": "디위의 회사는 업무 단톡방에 인종차별 농담을 보낸 직원을 해고했어요.",
    "blank": "rasis",
+   "src": "made"
+  }
+ ],
+ "w|rasul": [
+  {
+   "text": "Bayu menulis resensi buku sejarah tentang perjalanan para rasul.",
+   "en": "Bayu wrote a review of a history book about the journeys of the apostles.",
+   "ko": "바유는 사도들의 여정을 다룬 역사책 서평을 썼어요.",
+   "blank": "rasul",
+   "src": "made"
+  },
+  {
+   "text": "Saat musim hujan, Intan membacakan kisah para rasul untuk adiknya.",
+   "en": "During the rainy season, Intan reads stories of the apostles to her little brother.",
+   "ko": "우기에 인탄은 동생에게 사도들의 이야기를 읽어 줘요.",
+   "blank": "rasul",
    "src": "made"
   }
  ],
@@ -83935,6 +84415,22 @@
    "src": "made"
   }
  ],
+ "w|sarkasme": [
+  {
+   "text": "Kolom Bayu penuh sarkasme tentang jalan berlubang.",
+   "en": "Bayu's column is full of sarcasm about potholed roads.",
+   "ko": "바유의 칼럼은 움푹 팬 도로에 대한 빈정거림으로 가득해요.",
+   "blank": "sarkasme",
+   "src": "made"
+  },
+  {
+   "text": "Intan berkata dengan sarkasme bahwa cuaca ini sempurna untuk menjemur.",
+   "en": "Intan said with sarcasm that this weather was perfect for drying laundry.",
+   "ko": "인탄은 빨래 널기 딱 좋은 날씨라고 비꼬듯 말했어요.",
+   "blank": "sarkasme",
+   "src": "made"
+  }
+ ],
  "w|sarung": [
   {
    "text": "Sarung tangan itu terlalu besar untuknya.",
@@ -85170,6 +85666,22 @@
    "en": "In her letter, Putri says she is learning to live with a balance between work and rest.",
    "ko": "편지에서 푸트리는 일과 쉼 사이에 균형 있게 사는 법을 배우는 중이라고 해요.",
    "blank": "seimbang",
+   "src": "made"
+  }
+ ],
+ "w|seindah": [
+  {
+   "text": "Bayu menulis bahwa tidak ada kota seindah kota kelahirannya.",
+   "en": "Bayu wrote that no city is as beautiful as his hometown.",
+   "ko": "바유는 고향만큼 아름다운 도시는 없다고 썼어요.",
+   "blank": "seindah",
+   "src": "made"
+  },
+  {
+   "text": "Tidak ada pagi seindah pagi pertama setelah musim hujan, kata Intan.",
+   "en": "No morning is as lovely as the first one after the rainy season, says Intan.",
+   "ko": "인탄은 우기가 끝난 뒤 첫 아침만큼 아름다운 아침은 없다고 해요.",
+   "blank": "seindah",
    "src": "made"
   }
  ],
@@ -90071,6 +90583,22 @@
    "src": "made"
   }
  ],
+ "w|spionase": [
+  {
+   "text": "Bayu meliput kasus spionase industri di sebuah perusahaan teknologi.",
+   "en": "Bayu covered an industrial espionage case at a tech company.",
+   "ko": "바유는 한 기술 회사의 산업 스파이 사건을 취재했어요.",
+   "blank": "spionase",
+   "src": "made"
+  },
+  {
+   "text": "Saat hujan seharian, Intan menonton film spionase di rumah.",
+   "en": "When it rained all day, Intan watched spy films at home.",
+   "ko": "종일 비가 오자 인탄은 집에서 첩보 영화를 봤어요.",
+   "blank": "spionase",
+   "src": "made"
+  }
+ ],
  "w|spontan": [
   {
    "text": "Dimas spontan tertawa saat atasannya melucu di tengah rapat.",
@@ -93463,6 +93991,22 @@
    "blank": "tepuk"
   }
  ],
+ "w|tepukan": [
+  {
+   "text": "Pemimpin redaksi memberi tepukan di bahu Bayu.",
+   "en": "The editor-in-chief gave Bayu a pat on the shoulder.",
+   "ko": "편집장이 바유의 어깨를 토닥였어요.",
+   "blank": "tepukan",
+   "src": "made"
+  },
+  {
+   "text": "Intan mendengar tepukan hujan pertama di atap.",
+   "en": "Intan heard the patter of the first rain on the roof.",
+   "ko": "인탄은 지붕에 떨어지는 첫 빗소리를 들었어요.",
+   "blank": "tepukan",
+   "src": "made"
+  }
+ ],
  "w|tepung": [
   {
    "text": "Kantor baru Dimas ada di pabrik roti, jadi sore itu bajunya penuh tepung.",
@@ -96045,6 +96589,22 @@
    "src": "made"
   }
  ],
+ "w|ternoda": [
+  {
+   "text": "Reputasi koran itu ternoda oleh satu berita palsu.",
+   "en": "The newspaper's reputation was stained by a single fake story.",
+   "ko": "그 신문의 명성은 가짜 기사 하나로 얼룩졌어요.",
+   "blank": "ternoda",
+   "src": "made"
+  },
+  {
+   "text": "Sepatu putih Intan ternoda lumpur di awal musim hujan.",
+   "en": "Intan's white shoes got stained with mud at the start of the rainy season.",
+   "ko": "우기 초입에 인탄의 흰 운동화가 진흙으로 얼룩졌어요.",
+   "blank": "ternoda",
+   "src": "made"
+  }
+ ],
  "w|ternyata": [
   {
    "text": "Ternyata dia sudah tahu.",
@@ -96256,6 +96816,22 @@
    "en": "The morning news called yesterday the hottest day of the year.",
    "ko": "아침 뉴스에서 어제가 올해 가장 더운 날이었다고 했어요.",
    "blank": "terpanas",
+   "src": "made"
+  }
+ ],
+ "w|terpancing": [
+  {
+   "text": "Bayu tidak terpancing membalas komentar kasar pembaca.",
+   "en": "Bayu didn't take the bait and reply to a reader's rude comment.",
+   "ko": "바유는 독자의 무례한 댓글에 휘말려 답하지 않았어요.",
+   "blank": "terpancing",
+   "src": "made"
+  },
+  {
+   "text": "Intan terpancing ikut memborong mangga saat musim panen tiba.",
+   "en": "Intan got lured into buying up mangoes when the harvest season came.",
+   "ko": "수확철이 되자 인탄도 덩달아 망고를 잔뜩 샀어요.",
+   "blank": "terpancing",
    "src": "made"
   }
  ],
@@ -97173,6 +97749,22 @@
    "en": "She laughed hearing that joke.",
    "ko": "그 농담을 듣고 그녀가 웃었어.",
    "blank": "tertawa"
+  }
+ ],
+ "w|tertawaan": [
+  {
+   "text": "Kesalahan cetak di halaman depan menjadi bahan tertawaan pembaca.",
+   "en": "The misprint on the front page became a laughingstock among readers.",
+   "ko": "일면의 오타는 독자들의 웃음거리가 됐어요.",
+   "blank": "tertawaan",
+   "src": "made"
+  },
+  {
+   "text": "Payung Intan yang terbalik ditiup angin jadi bahan tertawaan teman-teman.",
+   "en": "Intan's umbrella flipping inside out in the wind made her friends laugh.",
+   "ko": "바람에 뒤집힌 인탄의 우산은 친구들의 웃음거리가 됐어요.",
+   "blank": "tertawaan",
+   "src": "made"
   }
  ],
  "w|tertekan": [
@@ -98166,6 +98758,22 @@
    "en": "Wati always tucks tissues in her pocket because she often sneezes when the seasons change.",
    "ko": "와티는 환절기에 재채기를 자주 해서 주머니에 늘 휴지를 넣어 다녀요.",
    "blank": "tisu",
+   "src": "made"
+  }
+ ],
+ "w|titah": [
+  {
+   "text": "Drama kerajaan yang diulas Bayu dimulai dengan titah raja.",
+   "en": "The royal drama Bayu reviewed opens with the king's decree.",
+   "ko": "바유가 리뷰한 왕실 드라마는 왕의 명령으로 시작해요.",
+   "blank": "titah",
+   "src": "made"
+  },
+  {
+   "text": "Menurut legenda, hujan pertama turun atas titah raja langit.",
+   "en": "According to legend, the first rain falls at the command of the sky king.",
+   "ko": "전설에 따르면 첫 비는 하늘 왕의 명령으로 내린대요.",
+   "blank": "titah",
    "src": "made"
   }
  ],
@@ -100517,6 +101125,22 @@
    "src": "made"
   }
  ],
+ "w|waduh": [
+  {
+   "text": "\"Wah, waduh, tenggatnya dimajukan,\" keluh Bayu.",
+   "en": "\"Oh no, the deadline's been moved up,\" Bayu groaned.",
+   "ko": "\"아이고, 마감이 당겨졌네.\" 바유가 투덜댔어요.",
+   "blank": "waduh",
+   "src": "made"
+  },
+  {
+   "text": "\"Lho, waduh, hujan lagi,\" gumam Intan sambil mengangkat jemuran.",
+   "en": "\"Oh no, it's raining again,\" Intan muttered as she took in the laundry.",
+   "ko": "\"어머, 또 비 오네.\" 인탄이 빨래를 걷으며 중얼거렸어요.",
+   "blank": "waduh",
+   "src": "made"
+  }
+ ],
  "w|wafat": [
   {
    "text": "Seluruh warga gang melayat ketika kakek Andi wafat bulan lalu.",
@@ -101059,6 +101683,22 @@
    "en": "She's not sure of the answer.",
    "ko": "그녀는 답이 확신이 안 서.",
    "blank": "yakin"
+  }
+ ],
+ "w|yakni": [
+  {
+   "text": "Bayu meliput dua isu utama, yakni harga beras dan banjir.",
+   "en": "Bayu covers two main issues, namely rice prices and flooding.",
+   "ko": "바유는 두 가지 주요 이슈, 즉 쌀값과 홍수를 취재해요.",
+   "blank": "yakni",
+   "src": "made"
+  },
+  {
+   "text": "Indonesia hanya punya dua musim, yakni kemarau dan hujan.",
+   "en": "Indonesia has only two seasons, namely dry and rainy.",
+   "ko": "인도네시아에는 계절이 두 개뿐인데, 바로 건기와 우기예요.",
+   "blank": "yakni",
+   "src": "made"
   }
  ],
  "w|yang": [
