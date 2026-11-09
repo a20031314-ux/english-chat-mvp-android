@@ -5413,6 +5413,22 @@
    "src": "tatoeba:8546013/marafon en:906811/CK"
   }
  ],
+ "w|воспринимать": [
+  {
+   "text": "Михаил спокойно воспринимает критику и сразу исправляет ошибки.",
+   "en": "Mikhail takes criticism calmly and corrects his mistakes right away.",
+   "ko": "미하일은 비판을 차분하게 받아들이고 바로 실수를 고쳐요.",
+   "blank": "воспринимает",
+   "src": "made"
+  },
+  {
+   "text": "Светлана воспринимает долгую дорогу как отдых от работы.",
+   "en": "Svetlana sees a long journey as a rest from work.",
+   "ko": "스베틀라나는 긴 여행을 일에서 벗어나는 휴식으로 여겨요.",
+   "blank": "воспринимает",
+   "src": "made"
+  }
+ ],
  "w|восстановить": [
   {
    "text": "Как мне восстановить пароль?",
@@ -6233,6 +6249,22 @@
    "en": "Go up to the second floor.",
    "ko": "이층으로 올라가.",
    "blank": "второй"
+  }
+ ],
+ "w|втянуть": [
+  {
+   "text": "Одноклассники пытались втянуть Михаила в спор о футболе прямо на уроке.",
+   "en": "His classmates tried to drag Mikhail into an argument about football right during the lesson.",
+   "ko": "반 친구들이 수업 중에 미하일을 축구 논쟁에 끌어들이려고 했어요.",
+   "blank": "втянуть",
+   "src": "made"
+  },
+  {
+   "text": "Пожилая попутчица быстро втянула Светлану в разговор о детях.",
+   "en": "An elderly fellow passenger quickly drew Svetlana into a conversation about children.",
+   "ko": "나이 든 동승객이 금세 스베틀라나를 아이들 이야기로 끌어들였어요.",
+   "blank": "втянула",
+   "src": "made"
   }
  ],
  "w|вход": [
@@ -10135,6 +10167,22 @@
    "src": "made"
   }
  ],
+ "w|доброволец": [
+  {
+   "text": "Михаил записался добровольцем на уборку школьного двора.",
+   "en": "Mikhail signed up as a volunteer to clean the school yard.",
+   "ko": "미하일은 학교 운동장 청소 자원봉사자로 신청했어요.",
+   "blank": "добровольцем",
+   "src": "made"
+  },
+  {
+   "text": "На вокзале Светлане помог донести чемодан молодой доброволец в жёлтом жилете.",
+   "en": "At the station a young volunteer in a yellow vest helped Svetlana carry her suitcase.",
+   "ko": "역에서 노란 조끼를 입은 젊은 자원봉사자가 스베틀라나의 가방을 들어 줬어요.",
+   "blank": "доброволец",
+   "src": "made"
+  }
+ ],
  "w|добровольно": [
   {
    "text": "Катя добровольно взяла на себя заботу о больной бабушке.",
@@ -10672,6 +10720,22 @@
    "en": "At the checkout Elena had to buy an extra bag.",
    "ko": "계산대에서 엘레나는 봉투를 하나 더 사야 했어요.",
    "blank": "дополнительный",
+   "src": "made"
+  }
+ ],
+ "w|допрашивать": [
+  {
+   "text": "В школьном спектакле Михаил играл следователя, который допрашивает свидетеля.",
+   "en": "In the school play Mikhail played an investigator questioning a witness.",
+   "ko": "학교 연극에서 미하일은 증인을 심문하는 수사관 역을 맡았어요.",
+   "blank": "допрашивает",
+   "src": "made"
+  },
+  {
+   "text": "В детективе, который читала Светлана, полиция допрашивала проводника ночного поезда.",
+   "en": "In the detective novel Svetlana was reading, the police were questioning the conductor of a night train.",
+   "ko": "스베틀라나가 읽던 추리 소설에서 경찰은 야간열차 차장을 심문하고 있었어요.",
+   "blank": "допрашивала",
    "src": "made"
   }
  ],
@@ -12516,6 +12580,22 @@
    "en": "The friends agreed to spend the next day together out of town.",
    "ko": "친구들은 내일 하루를 교외에서 함께 보내기로 했어요.",
    "blank": "завтрашний",
+   "src": "made"
+  }
+ ],
+ "w|завязать": [
+  {
+   "text": "На физкультуре учитель напомнил Михаилу завязать шнурки.",
+   "en": "In PE the teacher reminded Mikhail to tie his shoelaces.",
+   "ko": "체육 시간에 선생님은 미하일에게 신발 끈을 묶으라고 했어요.",
+   "blank": "завязать",
+   "src": "made"
+  },
+  {
+   "text": "В поезде Светлана завязала знакомство с художницей из Казани.",
+   "en": "On the train Svetlana struck up an acquaintance with an artist from Kazan.",
+   "ko": "기차에서 스베틀라나는 카잔에서 온 화가와 알게 됐어요.",
+   "blank": "завязала",
    "src": "made"
   }
  ],
@@ -15941,6 +16021,38 @@
    "src": "made"
   }
  ],
+ "w|исполнение": [
+  {
+   "text": "Учитель музыки похвалил Михаила за исполнение народной песни.",
+   "en": "The music teacher praised Mikhail for his performance of a folk song.",
+   "ko": "음악 선생님은 미하일의 민요 연주를 칭찬했어요.",
+   "blank": "исполнение",
+   "src": "made"
+  },
+  {
+   "text": "В вагоне-ресторане Светлана слушала скрипача, и его исполнение тронуло её до слёз.",
+   "en": "In the dining car Svetlana listened to a violinist, and his playing moved her to tears.",
+   "ko": "식당칸에서 스베틀라나는 바이올린 연주를 들었는데 그 연주에 눈물이 날 만큼 감동했어요.",
+   "blank": "исполнение",
+   "src": "made"
+  }
+ ],
+ "w|исполнить": [
+  {
+   "text": "На выпускном Михаил исполнил песню под гитару.",
+   "en": "At the graduation party Mikhail performed a song on the guitar.",
+   "ko": "졸업 파티에서 미하일은 기타를 치며 노래를 불렀어요.",
+   "blank": "исполнил",
+   "src": "made"
+  },
+  {
+   "text": "Светлана наконец исполнила давнюю мечту — проехать всю страну на поезде.",
+   "en": "Svetlana finally fulfilled her long-held dream of crossing the whole country by train.",
+   "ko": "스베틀라나는 기차로 나라를 가로지르겠다는 오랜 꿈을 드디어 이뤘어요.",
+   "blank": "исполнила",
+   "src": "made"
+  }
+ ],
  "w|исполниться": [
   {
    "text": "В день, когда Андрею исполнилось сорок, отель прислал в номер торт.",
@@ -16405,6 +16517,22 @@
    "ko": "너 카지노 갔었구나.",
    "blank": "казино",
    "src": "tatoeba:5207615/marafon en:4652103/bsc2015"
+  }
+ ],
+ "w|казнить": [
+  {
+   "text": "На истории Михаил узнал, что в семнадцатом веке парламент Англии решил казнить короля.",
+   "en": "In history Mikhail learned that in the seventeenth century the English parliament decided to execute the king.",
+   "ko": "역사 시간에 미하일은 십칠 세기에 영국 의회가 왕을 처형하기로 결정했다는 걸 배웠어요.",
+   "blank": "казнить",
+   "src": "made"
+  },
+  {
+   "text": "Экскурсовод показал Светлане площадь, где в старину могли казнить преступников.",
+   "en": "The guide showed Svetlana the square where criminals could be executed in the old days.",
+   "ko": "가이드는 스베틀라나에게 옛날에 죄인을 처형하던 광장을 보여 줬어요.",
+   "blank": "казнить",
+   "src": "made"
   }
  ],
  "w|казнь": [
@@ -17045,6 +17173,22 @@
    "src": "made"
   }
  ],
+ "w|клан": [
+  {
+   "text": "В книге, которую Михаил читал по программе, два клана враждовали много лет.",
+   "en": "In the book Mikhail read for the curriculum, two clans were feuding for many years.",
+   "ko": "미하일이 교과 과정으로 읽은 책에서 두 가문이 오랫동안 서로 원수로 지냈어요.",
+   "blank": "клана",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик рассказывал Светлане о шотландском клане, к которому принадлежали его предки.",
+   "en": "A fellow passenger told Svetlana about the Scottish clan his ancestors belonged to.",
+   "ko": "동승객은 스베틀라나에게 조상이 속했던 스코틀랜드 씨족 이야기를 해 줬어요.",
+   "blank": "клане",
+   "src": "made"
+  }
+ ],
  "w|класс": [
   {
    "text": "Класс, поехали!",
@@ -17646,6 +17790,22 @@
    "en": "Elena remembers her grandmother, who baked bread for the regiment's command during the war.",
    "ko": "엘레나는 전쟁 때 연대 지휘부에 빵을 구워 주던 할머니를 떠올려요.",
    "blank": "командования",
+   "src": "made"
+  }
+ ],
+ "w|комикс": [
+  {
+   "text": "Михаил рисует комикс о приключениях своего класса.",
+   "en": "Mikhail is drawing a comic about his class's adventures.",
+   "ko": "미하일은 자기 반의 모험을 담은 만화를 그리고 있어요.",
+   "blank": "комикс",
+   "src": "made"
+  },
+  {
+   "text": "Светлана купила на вокзале комикс для племянника.",
+   "en": "Svetlana bought a comic at the station for her nephew.",
+   "ko": "스베틀라나는 역에서 조카에게 줄 만화책을 샀어요.",
+   "blank": "комикс",
    "src": "made"
   }
  ],
@@ -19853,6 +20013,22 @@
    "src": "made"
   }
  ],
+ "w|литература": [
+  {
+   "text": "Михаил любит литературу больше, чем математику.",
+   "en": "Mikhail likes literature more than maths.",
+   "ko": "미하일은 수학보다 문학을 더 좋아해요.",
+   "blank": "литературу",
+   "src": "made"
+  },
+  {
+   "text": "Светлана преподаёт литературу и в поезде проверяет сочинения учеников.",
+   "en": "Svetlana teaches literature and marks her students' essays on the train.",
+   "ko": "스베틀라나는 문학 교사라서 기차에서 학생들 글을 채점해요.",
+   "blank": "литературу",
+   "src": "made"
+  }
+ ],
  "w|лифт": [
   {
    "text": "Я сел в лифт и нажал кнопку своего этажа.",
@@ -20813,6 +20989,22 @@
    "blank": "матери"
   }
  ],
+ "w|мафия": [
+  {
+   "text": "Михаил посмотрел фильм о мафии, а потом писал о нём рецензию для школьной газеты.",
+   "en": "Mikhail watched a film about the mafia and then wrote a review of it for the school paper.",
+   "ko": "미하일은 마피아 영화를 보고 학교 신문에 감상평을 썼어요.",
+   "blank": "мафии",
+   "src": "made"
+  },
+  {
+   "text": "Попутчики спорили, существует ли мафия на самом деле, и Светлана только смеялась.",
+   "en": "The fellow passengers argued about whether the mafia really exists, and Svetlana just laughed.",
+   "ko": "동승객들이 마피아가 진짜 있는지 다투는 동안 스베틀라나는 웃기만 했어요.",
+   "blank": "мафия",
+   "src": "made"
+  }
+ ],
  "w|машина": [
   {
    "text": "Машина не заводится.",
@@ -20825,6 +21017,22 @@
    "en": "I'll come by car.",
    "ko": "차로 갈게.",
    "blank": "машине"
+  }
+ ],
+ "w|машинка": [
+  {
+   "text": "Младшая сестра Михаила принесла в школу игрушечную машинку.",
+   "en": "Mikhail's little sister brought a toy car to school.",
+   "ko": "미하일의 여동생은 장난감 자동차를 학교에 가져왔어요.",
+   "blank": "машинку",
+   "src": "made"
+  },
+  {
+   "text": "Мальчик в соседнем купе всю дорогу катал по столу машинку.",
+   "en": "The boy in the next compartment rolled a toy car across the table the whole way.",
+   "ko": "옆 객실 남자아이는 가는 내내 탁자 위에서 장난감 자동차를 굴렸어요.",
+   "blank": "машинку",
+   "src": "made"
   }
  ],
  "w|мгновение": [
@@ -21015,6 +21223,22 @@
    "ko": "이 꼬마 거짓말쟁이야.",
    "blank": "мелкий",
    "src": "tatoeba:6480597/marafon en:1209949/Scott"
+  }
+ ],
+ "w|мелодия": [
+  {
+   "text": "На уроке музыки Михаил подобрал на пианино знакомую мелодию.",
+   "en": "In music class Mikhail picked out a familiar tune on the piano.",
+   "ko": "음악 시간에 미하일은 피아노로 익숙한 선율을 귀로 듣고 쳐 봤어요.",
+   "blank": "мелодию",
+   "src": "made"
+  },
+  {
+   "text": "У Светланы весь день в голове крутилась мелодия из рекламы.",
+   "en": "A tune from an advert was going round in Svetlana's head all day.",
+   "ko": "스베틀라나는 하루 종일 광고 음악이 머릿속에서 맴돌았어요.",
+   "blank": "мелодия",
+   "src": "made"
   }
  ],
  "w|мелочь": [
@@ -26857,6 +27081,22 @@
    "src": "made"
   }
  ],
+ "w|оборот": [
+  {
+   "text": "Учительница объяснила Михаилу, что этот оборот речи давно устарел.",
+   "en": "The teacher explained to Mikhail that this turn of phrase had long since gone out of use.",
+   "ko": "선생님은 미하일에게 그 말투가 오래전에 낡은 표현이 됐다고 설명했어요.",
+   "blank": "оборот",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик-бизнесмен хвастался Светлане, что оборот его фирмы вырос вдвое.",
+   "en": "A businessman travelling with Svetlana boasted to her that his firm's turnover had doubled.",
+   "ko": "사업가 동승객은 자기 회사 매출이 두 배로 늘었다고 스베틀라나에게 자랑했어요.",
+   "blank": "оборот",
+   "src": "made"
+  }
+ ],
  "w|оборотень": [
   {
    "text": "Младший брат Андрея боится оборотней и не выходит во двор в полнолуние.",
@@ -27170,6 +27410,22 @@
    "en": "On the long trip Elena missed talking to her family.",
    "ko": "긴 여행 중에 옐레나는 가족과 이야기 나누는 게 그리웠어요.",
    "blank": "общения",
+   "src": "made"
+  }
+ ],
+ "w|общественность": [
+  {
+   "text": "Проект Михаила о чистоте реки привлёк внимание городской общественности.",
+   "en": "Mikhail's project on cleaning the river drew the attention of the town's public.",
+   "ko": "강을 깨끗이 하자는 미하일의 프로젝트가 시민들의 관심을 끌었어요.",
+   "blank": "общественности",
+   "src": "made"
+  },
+  {
+   "text": "По радио в вагоне Светлана услышала, что новый закон обсуждает вся общественность.",
+   "en": "On the carriage radio Svetlana heard that the whole public was discussing the new law.",
+   "ko": "객차 라디오에서 스베틀라나는 온 국민이 새 법을 두고 이야기한다는 소식을 들었어요.",
+   "blank": "общественность",
    "src": "made"
   }
  ],
@@ -28054,6 +28310,22 @@
    "en": "The teacher teaches Irina to see the surrounding objects as shapes and shadows.",
    "ko": "선생님은 이리나에게 주변 사물을 형태와 그림자로 보라고 가르쳐요.",
    "blank": "окружающие",
+   "src": "made"
+  }
+ ],
+ "w|окружение": [
+  {
+   "text": "Учитель сказал, что ближайшее окружение сильно влияет на оценки Михаила.",
+   "en": "The teacher said that Mikhail's immediate circle strongly influences his marks.",
+   "ko": "선생님은 미하일의 가까운 친구들이 그의 성적에 큰 영향을 준다고 했어요.",
+   "blank": "окружение",
+   "src": "made"
+  },
+  {
+   "text": "Светлана любит поезда за то, что окружение за окном меняется каждый час.",
+   "en": "Svetlana loves trains because the surroundings outside the window change every hour.",
+   "ko": "스베틀라나는 창밖 풍경이 시간마다 바뀌어서 기차를 좋아해요.",
+   "blank": "окружение",
    "src": "made"
   }
  ],
@@ -29187,6 +29459,22 @@
    "en": "He isn't answering calls.",
    "ko": "그 사람은 전화를 안 받아.",
    "blank": "отвечает"
+  }
+ ],
+ "w|отвлекать": [
+  {
+   "text": "Телефон постоянно отвлекает Михаила от домашнего задания.",
+   "en": "His phone constantly distracts Mikhail from his homework.",
+   "ko": "휴대폰 때문에 미하일은 숙제에 집중을 못 해요.",
+   "blank": "отвлекает",
+   "src": "made"
+  },
+  {
+   "text": "Светлана надела наушники, чтобы разговоры соседей не отвлекали её от книги.",
+   "en": "Svetlana put on headphones so that her neighbours' chatter wouldn't distract her from her book.",
+   "ko": "스베틀라나는 옆 사람들 이야기에 책 읽기가 방해받지 않게 이어폰을 꼈어요.",
+   "blank": "отвлекали",
+   "src": "made"
   }
  ],
  "w|отвлечь": [
@@ -30771,6 +31059,22 @@
    "blank": "пара"
   }
  ],
+ "w|парад": [
+  {
+   "text": "Михаил нёс флаг школы на городском параде.",
+   "en": "Mikhail carried the school flag at the city parade.",
+   "ko": "미하일은 시 퍼레이드에서 학교 깃발을 들었어요.",
+   "blank": "параде",
+   "src": "made"
+  },
+  {
+   "text": "Светлана попала в город как раз в день парада, и улицы были перекрыты.",
+   "en": "Svetlana arrived in the city right on the day of the parade, and the streets were closed.",
+   "ko": "스베틀라나가 도착한 날이 마침 퍼레이드 날이라 거리가 통제돼 있었어요.",
+   "blank": "парада",
+   "src": "made"
+  }
+ ],
  "w|парень": [
   {
    "text": "Славный парень, правда?",
@@ -32004,6 +32308,22 @@
    "en": "In summer Irina's nephew works part-time at her workshop.",
    "ko": "여름에는 이리나의 조카가 수리점에서 아르바이트를 해요.",
    "blank": "племянник",
+   "src": "made"
+  }
+ ],
+ "w|плен": [
+  {
+   "text": "Михаил писал доклад о лётчике, который бежал из плена.",
+   "en": "Mikhail wrote a report about a pilot who escaped from captivity.",
+   "ko": "미하일은 포로로 잡혔다가 탈출한 조종사에 대한 보고서를 썼어요.",
+   "blank": "плена",
+   "src": "made"
+  },
+  {
+   "text": "Пожилой попутчик рассказал Светлане, что его отец провёл два года в плену.",
+   "en": "An elderly fellow passenger told Svetlana that his father spent two years as a prisoner of war.",
+   "ko": "나이 든 동승객은 아버지가 이 년 동안 포로로 잡혀 있었다고 스베틀라나에게 말했어요.",
+   "blank": "плену",
    "src": "made"
   }
  ],
@@ -33565,6 +33885,22 @@
    "src": "tatoeba:5136592/marafon en:2952599/CK"
   }
  ],
+ "w|подсказка": [
+  {
+   "text": "На контрольной Михаил обошёлся без подсказки соседа.",
+   "en": "On the test Mikhail managed without a hint from his neighbour.",
+   "ko": "시험에서 미하일은 옆 친구의 힌트 없이 해냈어요.",
+   "blank": "подсказки",
+   "src": "made"
+  },
+  {
+   "text": "Светлана разгадывала кроссворд и не удержалась подглядеть подсказку в конце журнала.",
+   "en": "Svetlana was doing a crossword and couldn't resist peeking at the hint at the back of the magazine.",
+   "ko": "스베틀라나는 십자말풀이를 하다가 잡지 뒤쪽 힌트를 참지 못하고 봤어요.",
+   "blank": "подсказку",
+   "src": "made"
+  }
+ ],
  "w|подсказывать": [
   {
    "text": "На контрольной Алексею нельзя подсказывать соседу по парте.",
@@ -33923,6 +34259,22 @@
    "ko": "언제 결혼할 거예요?",
    "blank": "пожениться",
    "src": "tatoeba:660704/shanghainese en:1421634/CK"
+  }
+ ],
+ "w|пожертвование": [
+  {
+   "text": "Школа Михаила собрала пожертвования на ремонт спортзала.",
+   "en": "Mikhail's school collected donations to repair the gym.",
+   "ko": "미하일의 학교는 체육관 수리를 위해 기부금을 모았어요.",
+   "blank": "пожертвования",
+   "src": "made"
+  },
+  {
+   "text": "На вокзале Светлана опустила монеты в ящик для пожертвований на приют для животных.",
+   "en": "At the station Svetlana dropped coins into a donation box for an animal shelter.",
+   "ko": "역에서 스베틀라나는 동물 보호소 기부함에 동전을 넣었어요.",
+   "blank": "пожертвований",
+   "src": "made"
   }
  ],
  "w|пожертвовать": [
@@ -35027,6 +35379,22 @@
    "src": "tatoeba:4537395/Ooneykcall en:4537394/Ooneykcall"
   }
  ],
+ "w|получение": [
+  {
+   "text": "После получения аттестата Михаил собирается поступать в технический вуз.",
+   "en": "After receiving his school certificate Mikhail plans to apply to a technical university.",
+   "ko": "졸업장을 받고 나면 미하일은 공대에 지원할 계획이에요.",
+   "blank": "получения",
+   "src": "made"
+  },
+  {
+   "text": "Светлана ехала в столицу за получением визы.",
+   "en": "Svetlana was travelling to the capital to collect her visa.",
+   "ko": "스베틀라나는 비자를 받으러 수도로 가는 길이었어요.",
+   "blank": "получением",
+   "src": "made"
+  }
+ ],
  "w|получить": [
   {
    "text": "Я получил посылку.",
@@ -36057,6 +36425,22 @@
    "blank": "посмотрю"
   }
  ],
+ "w|посоветовать": [
+  {
+   "text": "Классный руководитель посоветовал Михаилу записаться в шахматный кружок.",
+   "en": "The form teacher advised Mikhail to join the chess club.",
+   "ko": "담임 선생님은 미하일에게 체스 동아리에 들어가라고 권했어요.",
+   "blank": "посоветовал",
+   "src": "made"
+  },
+  {
+   "text": "Проводница посоветовала Светлане выйти погулять на длинной стоянке.",
+   "en": "The conductor advised Svetlana to go out for a walk at the long stop.",
+   "ko": "차장은 긴 정차 때 나가서 바람을 쐬라고 스베틀라나에게 권했어요.",
+   "blank": "посоветовала",
+   "src": "made"
+  }
+ ],
  "w|посол": [
   {
    "text": "Андрей с удивлением узнал, что его сосед когда-то был послом.",
@@ -36087,6 +36471,22 @@
    "ko": "좀 자 보는 게 어때?",
    "blank": "поспать",
    "src": "tatoeba:4429224/marafon en:2212227/CK"
+  }
+ ],
+ "w|поспешить": [
+  {
+   "text": "Михаил поспешил в класс, услышав звонок.",
+   "en": "Mikhail hurried to class when he heard the bell.",
+   "ko": "종소리를 듣고 미하일은 서둘러 교실로 갔어요.",
+   "blank": "поспешил",
+   "src": "made"
+  },
+  {
+   "text": "Светлана поспешила на перрон, потому что поезд уже подали.",
+   "en": "Svetlana hurried to the platform because the train had already pulled in.",
+   "ko": "기차가 이미 들어와 있어서 스베틀라나는 서둘러 승강장으로 갔어요.",
+   "blank": "поспешила",
+   "src": "made"
   }
  ],
  "w|поспорить": [
@@ -37635,6 +38035,22 @@
    "src": "made"
   }
  ],
+ "w|предъявить": [
+  {
+   "text": "На входе в школу охранник попросил Михаила предъявить пропуск.",
+   "en": "At the school entrance the guard asked Mikhail to show his pass.",
+   "ko": "학교 입구에서 경비원이 미하일에게 출입증을 보여 달라고 했어요.",
+   "blank": "предъявить",
+   "src": "made"
+  },
+  {
+   "text": "Проводник попросил Светлану предъявить билет и паспорт.",
+   "en": "The conductor asked Svetlana to show her ticket and passport.",
+   "ko": "차장이 스베틀라나에게 표와 여권을 보여 달라고 했어요.",
+   "blank": "предъявить",
+   "src": "made"
+  }
+ ],
  "w|предыдущий": [
   {
    "text": "Он показал мне камеру, которую купил в предыдущий день.",
@@ -37819,6 +38235,22 @@
    "src": "made"
   }
  ],
+ "w|пресс-конференция": [
+  {
+   "text": "После победы на олимпиаде Михаил впервые выступил на пресс-конференции.",
+   "en": "After winning the olympiad Mikhail spoke at a press conference for the first time.",
+   "ko": "올림피아드에서 우승한 뒤 미하일은 처음으로 기자 회견에 나섰어요.",
+   "blank": "пресс-конференции",
+   "src": "made"
+  },
+  {
+   "text": "В зале ожидания по телевизору показывали пресс-конференцию министра транспорта, и Светлана досмотрела её до конца.",
+   "en": "In the waiting room the TV showed the transport minister's press conference, and Svetlana watched it to the end.",
+   "ko": "대합실 텔레비전에 교통부 장관의 기자 회견이 나와서 스베틀라나는 끝까지 봤어요.",
+   "blank": "пресс-конференцию",
+   "src": "made"
+  }
+ ],
  "w|пресса": [
   {
    "text": "Пресса интересуется его личной жизнью.",
@@ -37879,6 +38311,22 @@
    "ko": "범인이 어느 방으로 들어갔는지 모르겠어요.",
    "blank": "преступник",
    "src": "tatoeba:11597758/marafon en:11211906/CK"
+  }
+ ],
+ "w|преступность": [
+  {
+   "text": "На обществознании Михаил готовил доклад о том, как снизить преступность среди подростков.",
+   "en": "In social studies Mikhail prepared a report on how to reduce crime among teenagers.",
+   "ko": "사회 시간에 미하일은 청소년 범죄를 줄이는 방법에 대해 발표를 준비했어요.",
+   "blank": "преступность",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик Светланы, полицейский, рассказывал, что преступность в их городе снизилась.",
+   "en": "Svetlana's fellow passenger, a police officer, said that crime in their city had fallen.",
+   "ko": "스베틀라나의 동승객인 경찰관은 자기 도시 범죄가 줄었다고 말했어요.",
+   "blank": "преступность",
+   "src": "made"
   }
  ],
  "w|при": [
@@ -39027,6 +39475,22 @@
    "src": "made"
   }
  ],
+ "w|притащить": [
+  {
+   "text": "Михаил притащил в класс огромный глобус из кабинета географии.",
+   "en": "Mikhail lugged a huge globe into the classroom from the geography room.",
+   "ko": "미하일은 지리실에서 커다란 지구본을 교실로 끌고 왔어요.",
+   "blank": "притащил",
+   "src": "made"
+  },
+  {
+   "text": "Сосед по купе притащил Светлане чай из вагона-ресторана.",
+   "en": "Svetlana's compartment neighbour brought her tea from the dining car.",
+   "ko": "객실 옆자리 사람이 식당칸에서 스베틀라나에게 차를 가져다줬어요.",
+   "blank": "притащил",
+   "src": "made"
+  }
+ ],
  "w|притворяться": [
   {
    "text": "Ты здорово умеешь притворяться.",
@@ -39711,6 +40175,22 @@
    "src": "made"
   }
  ],
+ "w|произведение": [
+  {
+   "text": "На литературе Михаилу задали выучить отрывок из любимого произведения.",
+   "en": "In literature class Mikhail was asked to learn a passage from his favourite work.",
+   "ko": "문학 시간에 미하일은 좋아하는 작품의 한 구절을 외우는 숙제를 받았어요.",
+   "blank": "произведения",
+   "src": "made"
+  },
+  {
+   "text": "Светлана взяла в поезд толстое произведение классика, которое давно хотела прочитать.",
+   "en": "Svetlana took on the train a thick classic novel she had long wanted to read.",
+   "ko": "스베틀라나는 오래 읽고 싶었던 고전 대작을 기차에 챙겨 왔어요.",
+   "blank": "произведение",
+   "src": "made"
+  }
+ ],
  "w|произвести": [
   {
    "text": "Новый проект парка произвёл на Алексея сильное впечатление.",
@@ -40157,6 +40637,22 @@
    "ko": "제 부탁이 이상하게 들릴 수도 있어요.",
    "blank": "просьба",
    "src": "tatoeba:11568890/marafon en:12317902/ddnktr"
+  }
+ ],
+ "w|протест": [
+  {
+   "text": "Михаил выразил протест, когда матч перенесли на время урока.",
+   "en": "Mikhail protested when the match was moved to lesson time.",
+   "ko": "경기가 수업 시간으로 옮겨지자 미하일은 항의했어요.",
+   "blank": "протест",
+   "src": "made"
+  },
+  {
+   "text": "У вокзала Светлана увидела небольшой протест против закрытия пригородных поездов.",
+   "en": "Outside the station Svetlana saw a small protest against cutting suburban trains.",
+   "ko": "역 앞에서 스베틀라나는 교외 열차 폐지에 반대하는 작은 시위를 봤어요.",
+   "blank": "протест",
+   "src": "made"
   }
  ],
  "w|протестовать": [
@@ -41019,6 +41515,22 @@
    "ko": "너 취했구나?",
    "blank": "пьяный",
    "src": "tatoeba:13788842/marafon en:6893337/CK"
+  }
+ ],
+ "w|пялиться": [
+  {
+   "text": "Учительница попросила Михаила не пялиться в окно во время диктанта.",
+   "en": "The teacher asked Mikhail not to stare out of the window during dictation.",
+   "ko": "선생님은 받아쓰기 시간에 창밖만 멍하니 보지 말라고 미하일에게 말했어요.",
+   "blank": "пялиться",
+   "src": "made"
+  },
+  {
+   "text": "Мужчина напротив весь вечер пялился в телефон и не сказал Светлане ни слова.",
+   "en": "The man opposite stared at his phone all evening and didn't say a word to Svetlana.",
+   "ko": "맞은편 남자는 저녁 내내 휴대폰만 들여다보며 스베틀라나에게 한마디도 안 했어요.",
+   "blank": "пялился",
+   "src": "made"
   }
  ],
  "w|пятнадцать": [
@@ -42761,6 +43273,22 @@
    "src": "tatoeba:4098942/Eldad en:4098945/Eldad"
   }
  ],
+ "w|республика": [
+  {
+   "text": "На истории Михаил рассказывал, как появилась первая республика в Европе.",
+   "en": "In history Mikhail talked about how the first republic in Europe came about.",
+   "ko": "역사 시간에 미하일은 유럽 최초의 공화국이 어떻게 생겼는지 이야기했어요.",
+   "blank": "республика",
+   "src": "made"
+  },
+  {
+   "text": "Поезд Светланы пересёк границу и въехал на территорию соседней республики.",
+   "en": "Svetlana's train crossed the border into the neighbouring republic.",
+   "ko": "스베틀라나가 탄 기차는 국경을 넘어 이웃 공화국 땅으로 들어갔어요.",
+   "blank": "республики",
+   "src": "made"
+  }
+ ],
  "w|ресторан": [
   {
    "text": "Вы когда-нибудь ходили в тот ресторан?",
@@ -43793,6 +44321,22 @@
    "src": "tatoeba:7455160/odexed en:6196914/sundown"
   }
  ],
+ "w|сбегать": [
+  {
+   "text": "На большой перемене Михаил успевает сбегать в магазин за булочкой.",
+   "en": "During the long break Mikhail manages to run to the shop for a bun.",
+   "ko": "긴 쉬는 시간에 미하일은 가게에 뛰어가 빵을 사 올 시간이 있어요.",
+   "blank": "сбегать",
+   "src": "made"
+  },
+  {
+   "text": "На станции Светлана успела сбегать за пирожками к бабушкам на перроне.",
+   "en": "At the station Svetlana managed to dash off for pies from the old ladies on the platform.",
+   "ko": "역에서 스베틀라나는 승강장 할머니들에게 뛰어가 피로시키를 사 왔어요.",
+   "blank": "сбегать",
+   "src": "made"
+  }
+ ],
  "w|сбежать": [
   {
    "text": "Он снова сбежал.",
@@ -44191,6 +44735,22 @@
    "ko": "왜 그녀한테 연락했어?",
    "blank": "связаться",
    "src": "tatoeba:4775016/odexed en:3918686/CH"
+  }
+ ],
+ "w|связываться": [
+  {
+   "text": "Родители просят Михаила не связываться с ребятами, которые прогуливают уроки.",
+   "en": "Mikhail's parents ask him not to get involved with the kids who skip classes.",
+   "ko": "부모님은 미하일에게 수업을 빼먹는 아이들과 어울리지 말라고 해요.",
+   "blank": "связываться",
+   "src": "made"
+  },
+  {
+   "text": "В дороге Светлана связывается с мамой только на станциях, где ловит сеть.",
+   "en": "On the journey Svetlana only gets in touch with her mum at stations where there's a signal.",
+   "ko": "가는 길에 스베틀라나는 신호가 잡히는 역에서만 엄마와 연락해요.",
+   "blank": "связывается",
+   "src": "made"
   }
  ],
  "w|связь": [
@@ -47301,6 +47861,22 @@
    "src": "made"
   }
  ],
+ "w|соперник": [
+  {
+   "text": "В финале олимпиады главным соперником Михаила был его лучший друг.",
+   "en": "In the olympiad final Mikhail's main rival was his best friend.",
+   "ko": "올림피아드 결승에서 미하일의 가장 큰 맞수는 단짝 친구였어요.",
+   "blank": "соперником",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик Светланы, шахматист, ехал на турнир и волновался из-за сильного соперника.",
+   "en": "Svetlana's fellow passenger, a chess player, was going to a tournament and worried about a strong rival.",
+   "ko": "스베틀라나의 동승객은 체스 선수였는데 대회에 가는 길에 강한 상대 때문에 긴장했어요.",
+   "blank": "соперника",
+   "src": "made"
+  }
+ ],
  "w|сопротивление": [
   {
    "text": "В зале истории города Сергей узнал о сопротивлении жителей во время осады.",
@@ -49474,6 +50050,22 @@
    "en": "After the injury Olga was afraid to step on her bad leg.",
    "ko": "부상 후 올가는 아픈 다리를 딛는 게 무서웠어요.",
    "blank": "ступать",
+   "src": "made"
+  }
+ ],
+ "w|стучать": [
+  {
+   "text": "Михаил тихо постучал в дверь кабинета директора.",
+   "en": "Mikhail knocked quietly on the head teacher's door.",
+   "ko": "미하일은 교장실 문을 조용히 두드렸어요.",
+   "blank": "постучал",
+   "src": "made"
+  },
+  {
+   "text": "Колёса мерно стучали, и Светлана быстро уснула.",
+   "en": "The wheels clattered rhythmically, and Svetlana quickly fell asleep.",
+   "ko": "바퀴 소리가 일정하게 덜컹거려서 스베틀라나는 금방 잠들었어요.",
+   "blank": "стучали",
    "src": "made"
   }
  ],
@@ -52653,6 +53245,22 @@
    "src": "tatoeba:6973611/nina99nv en:6683351/Eccles17"
   }
  ],
+ "w|уголовный": [
+  {
+   "text": "На уроке права Михаил узнал, чем уголовный кодекс отличается от гражданского.",
+   "en": "In law class Mikhail learned how the criminal code differs from the civil code.",
+   "ko": "법 시간에 미하일은 형법과 민법이 어떻게 다른지 배웠어요.",
+   "blank": "уголовный",
+   "src": "made"
+  },
+  {
+   "text": "Светлана читала в дороге детектив про уголовное дело о пропавших картинах.",
+   "en": "On the journey Svetlana read a detective novel about a criminal case of missing paintings.",
+   "ko": "스베틀라나는 가는 길에 사라진 그림을 둘러싼 형사 사건 추리 소설을 읽었어요.",
+   "blank": "уголовное",
+   "src": "made"
+  }
+ ],
  "w|угостить": [
   {
    "text": "Никита решил угостить соседей домашними мандариновыми пирогами.",
@@ -53907,6 +54515,22 @@
    "ko": "그건 확실하게 말할 수 있어요.",
    "blank": "утверждать",
    "src": "tatoeba:4682613/odexed en:7689038/AlanF_US"
+  }
+ ],
+ "w|утонуть": [
+  {
+   "text": "На литературе Михаил читал рассказ о собаке, которая чуть не утонула в реке.",
+   "en": "In literature class Mikhail read a story about a dog that almost drowned in a river.",
+   "ko": "문학 시간에 미하일은 강에 빠져 죽을 뻔한 개 이야기를 읽었어요.",
+   "blank": "утонула",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик рассказал Светлане, как в детстве чуть не утонул в озере.",
+   "en": "A fellow passenger told Svetlana how he almost drowned in a lake as a child.",
+   "ko": "동승객이 스베틀라나에게 어릴 때 호수에서 빠져 죽을 뻔한 이야기를 했어요.",
+   "blank": "утонул",
+   "src": "made"
   }
  ],
  "w|утро": [
@@ -57006,6 +57630,22 @@
    "en": "At the bus stop Olga read an advert on a billboard.",
    "ko": "정류장에서 올가는 광고판의 광고를 읽었어요.",
    "blank": "щите",
+   "src": "made"
+  }
+ ],
+ "w|эвакуация": [
+  {
+   "text": "Во время учебной эвакуации Михаил помог вывести первоклассников.",
+   "en": "During the evacuation drill Mikhail helped lead the first-graders out.",
+   "ko": "대피 훈련 때 미하일은 일 학년 아이들을 데리고 나가는 걸 도왔어요.",
+   "blank": "эвакуации",
+   "src": "made"
+  },
+  {
+   "text": "Из-за дыма в соседнем вагоне объявили эвакуацию, и Светлана вышла на перрон.",
+   "en": "Because of smoke in the next carriage an evacuation was announced, and Svetlana went out onto the platform.",
+   "ko": "옆 객차에서 연기가 나서 대피 안내가 나왔고 스베틀라나는 승강장으로 나갔어요.",
+   "blank": "эвакуацию",
    "src": "made"
   }
  ],
