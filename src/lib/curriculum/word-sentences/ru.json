@@ -2611,6 +2611,22 @@
    "blank": "Бизнес"
   }
  ],
+ "w|бизнесмен": [
+  {
+   "text": "Знакомый бизнесмен предложил Ивану открыть своё кафе.",
+   "en": "A businessman Ivan knows suggested he open his own café.",
+   "ko": "아는 사업가가 이반에게 자기 카페를 차려 보라고 제안했어요.",
+   "blank": "бизнесмен",
+   "src": "made"
+  },
+  {
+   "text": "Рядом с Анной на велотренажёре крутил педали пожилой бизнесмен.",
+   "en": "An elderly businessman was pedalling on the exercise bike next to Anna.",
+   "ko": "안나 옆 실내 자전거에서는 나이 든 사업가가 페달을 밟고 있었어요.",
+   "blank": "бизнесмен",
+   "src": "made"
+  }
+ ],
  "w|билет": [
   {
    "text": "Тебе купить входной билет на концерт?",
@@ -5839,6 +5855,22 @@
    "src": "made"
   }
  ],
+ "w|взнос": [
+  {
+   "text": "Иван платит ежемесячный взнос в профсоюз поваров.",
+   "en": "Ivan pays a monthly fee to the cooks' union.",
+   "ko": "이반은 요리사 노조에 매달 회비를 내요.",
+   "blank": "взнос",
+   "src": "made"
+  },
+  {
+   "text": "Анна заплатила вступительный взнос и получила браслет-ключ.",
+   "en": "Anna paid the joining fee and got a key wristband.",
+   "ko": "안나는 가입비를 내고 열쇠 팔찌를 받았어요.",
+   "blank": "взнос",
+   "src": "made"
+  }
+ ],
  "w|взорвать": [
   {
    "text": "Строители собирались взорвать старую заводскую трубу, и Алексей готовил разрешение в мэрии.",
@@ -7378,6 +7410,22 @@
    "en": "Irina asked the pupils to find all possible solutions to the problem.",
    "ko": "이리나는 학생들에게 문제의 가능한 풀이를 모두 찾으라고 했어요.",
    "blank": "возможные",
+   "src": "made"
+  }
+ ],
+ "w|вознаграждение": [
+  {
+   "text": "За новый рецепт Иван получил небольшое вознаграждение от владельца.",
+   "en": "Ivan received a small reward from the owner for the new recipe.",
+   "ko": "이반은 새 레시피를 만든 대가로 사장에게서 작은 보상을 받았어요.",
+   "blank": "вознаграждение",
+   "src": "made"
+  },
+  {
+   "text": "За год без пропусков Анна получила вознаграждение — бесплатный месяц.",
+   "en": "For a year without missing a session Anna received a reward: a free month.",
+   "ko": "안나는 일 년 동안 한 번도 안 빠져서 한 달 무료 이용권을 보상으로 받았어요.",
+   "blank": "вознаграждение",
    "src": "made"
   }
  ],
@@ -14491,6 +14539,22 @@
    "src": "tatoeba:5500705/odexed en:10190045/ddnktr"
   }
  ],
+ "w|диктор": [
+  {
+   "text": "По радио на кухне диктор читал новости, а Иван чистил картошку.",
+   "en": "An announcer was reading the news on the kitchen radio while Ivan peeled potatoes.",
+   "ko": "주방 라디오에서 아나운서가 뉴스를 읽는 동안 이반은 감자 껍질을 깠어요.",
+   "blank": "диктор",
+   "src": "made"
+  },
+  {
+   "text": "С Анной в одной группе занимается диктор местного радио.",
+   "en": "A local radio announcer trains in the same group as Anna.",
+   "ko": "지역 라디오 아나운서가 안나와 같은 반에서 운동해요.",
+   "blank": "диктор",
+   "src": "made"
+  }
+ ],
  "w|динозавр": [
   {
    "text": "Внук Михаила уверен, что следы на глине оставил динозавр.",
@@ -16667,6 +16731,22 @@
    "src": "tatoeba:8276907/soweli_Elepanto en:6665106/CK"
   }
  ],
+ "w|единица": [
+  {
+   "text": "Шеф научил Ивана считать продукты не в килограммах, а в единицах.",
+   "en": "The chef taught Ivan to count ingredients in units, not kilograms.",
+   "ko": "셰프는 이반에게 재료를 킬로그램이 아니라 개수 단위로 세라고 가르쳤어요.",
+   "blank": "единицах",
+   "src": "made"
+  },
+  {
+   "text": "Тренер объяснил Анне, что пульс измеряют в ударах, а не в других единицах.",
+   "en": "The trainer explained to Anna that the pulse is measured in beats, not in other units.",
+   "ko": "트레이너는 안나에게 맥박은 다른 단위가 아니라 박동 수로 잰다고 설명했어요.",
+   "blank": "единицах",
+   "src": "made"
+  }
+ ],
  "w|единственный": [
   {
    "text": "Это единственный ключ.",
@@ -17741,6 +17821,22 @@
    "src": "tatoeba:12435402/marafon en:13560973/araneo"
   }
  ],
+ "w|забастовка": [
+  {
+   "text": "Из-за забастовки водителей Ивану не привезли овощи.",
+   "en": "Because of the drivers' strike the vegetables weren't delivered to Ivan.",
+   "ko": "운전기사 파업 때문에 이반에게 채소가 배달되지 않았어요.",
+   "blank": "забастовки",
+   "src": "made"
+  },
+  {
+   "text": "Из-за забастовки метро Анна шла в зал пешком.",
+   "en": "Because of the metro strike Anna walked to the gym.",
+   "ko": "지하철 파업 때문에 안나는 헬스장까지 걸어갔어요.",
+   "blank": "забастовки",
+   "src": "made"
+  }
+ ],
  "w|забеременеть": [
   {
    "text": "Стоматолог Никиты рассказала, что лечить зубы лучше до того, как забеременеть.",
@@ -18519,6 +18615,22 @@
    "src": "made"
   }
  ],
+ "w|задерживать": [
+  {
+   "text": "Поставщик часто задерживает доставку мяса, жалуется Иван.",
+   "en": "The supplier often delays the meat delivery, Ivan complains.",
+   "ko": "납품업자가 고기 배달을 자주 늦춘다고 이반은 불평해요.",
+   "blank": "задерживает",
+   "src": "made"
+  },
+  {
+   "text": "Анна не любит задерживать группу и всегда приходит заранее.",
+   "en": "Anna doesn't like holding up the group and always arrives early.",
+   "ko": "안나는 반 사람들을 기다리게 하는 게 싫어서 늘 일찍 와요.",
+   "blank": "задерживать",
+   "src": "made"
+  }
+ ],
  "w|задерживаться": [
   {
    "text": "Андрей часто задерживается в доме до ночи, забывая про ужин.",
@@ -19052,6 +19164,22 @@
    "en": "Before the frosts Natalya buried carrots in a box of sand.",
    "ko": "서리가 내리기 전에 나탈리야는 당근을 모래 상자에 묻었어요.",
    "blank": "закопала",
+   "src": "made"
+  }
+ ],
+ "w|закричать": [
+  {
+   "text": "Когда загорелось масло, Иван закричал и схватил крышку.",
+   "en": "When the oil caught fire, Ivan shouted and grabbed a lid.",
+   "ko": "기름에 불이 붙자 이반은 소리치며 뚜껑을 잡았어요.",
+   "blank": "закричал",
+   "src": "made"
+  },
+  {
+   "text": "Тренер закричал Анне, чтобы она держала спину прямо.",
+   "en": "The trainer shouted to Anna to keep her back straight.",
+   "ko": "트레이너는 안나에게 허리를 똑바로 펴라고 소리쳤어요.",
+   "blank": "закричал",
    "src": "made"
   }
  ],
@@ -20787,6 +20915,22 @@
    "src": "made"
   }
  ],
+ "w|защитный": [
+  {
+   "text": "Перед работой с горячим маслом Иван надевает защитные перчатки.",
+   "en": "Before working with hot oil Ivan puts on protective gloves.",
+   "ko": "이반은 뜨거운 기름을 다루기 전에 보호 장갑을 껴요.",
+   "blank": "защитные",
+   "src": "made"
+  },
+  {
+   "text": "На скалодроме Анна всегда надевает защитный шлем.",
+   "en": "At the climbing wall Anna always wears a protective helmet.",
+   "ko": "안나는 실내 암벽장에서 늘 안전모를 써요.",
+   "blank": "защитный",
+   "src": "made"
+  }
+ ],
  "w|защищать": [
   {
    "text": "Как я теперь буду защищать своих детей?",
@@ -21833,6 +21977,22 @@
    "src": "tatoeba:4677103/Wezel en:2826687"
   }
  ],
+ "w|идеал": [
+  {
+   "text": "Для Ивана идеал — простая еда из свежих продуктов.",
+   "en": "For Ivan the ideal is simple food made from fresh ingredients.",
+   "ko": "이반에게 이상적인 음식은 신선한 재료로 만든 소박한 요리예요.",
+   "blank": "идеал",
+   "src": "made"
+  },
+  {
+   "text": "Анна не гонится за идеалом с обложки журнала.",
+   "en": "Anna isn't chasing the ideal from a magazine cover.",
+   "ko": "안나는 잡지 표지 속 이상형을 좇지 않아요.",
+   "blank": "идеалом",
+   "src": "made"
+  }
+ ],
  "w|идеальный": [
   {
    "text": "Что значит для тебя идеальный мужчина?",
@@ -22455,6 +22615,22 @@
    "src": "made"
   }
  ],
+ "w|изоляция": [
+  {
+   "text": "Холодильная камера требует хорошей изоляции, объяснил Иван новичку.",
+   "en": "A cold room needs good insulation, Ivan explained to the newcomer.",
+   "ko": "이반은 신입에게 냉장실은 단열이 잘돼야 한다고 설명했어요.",
+   "blank": "изоляции",
+   "src": "made"
+  },
+  {
+   "text": "После месяцев изоляции Анна с радостью вернулась в спортзал.",
+   "en": "After months of isolation Anna happily returned to the gym.",
+   "ko": "몇 달간 고립돼 지낸 뒤 안나는 기쁜 마음으로 헬스장에 돌아왔어요.",
+   "blank": "изоляции",
+   "src": "made"
+  }
+ ],
  "w|изумительно": [
   {
    "text": "Старинные гравюры в редком фонде, по словам Дмитрия, сохранились изумительно.",
@@ -22699,6 +22875,22 @@
    "en": "Do it a different way.",
    "ko": "다르게 해.",
    "blank": "иначе"
+  }
+ ],
+ "w|инвестиция": [
+  {
+   "text": "Новая печь — лучшая инвестиция, считает Иван.",
+   "en": "The new oven is the best investment, Ivan thinks.",
+   "ko": "새 오븐이 최고의 투자라고 이반은 생각해요.",
+   "blank": "инвестиция",
+   "src": "made"
+  },
+  {
+   "text": "Анна считает абонемент в спортзал инвестицией в здоровье.",
+   "en": "Anna considers a gym membership an investment in health.",
+   "ko": "안나는 헬스장 회원권을 건강에 대한 투자라고 생각해요.",
+   "blank": "инвестицией",
+   "src": "made"
   }
  ],
  "w|инвестор": [
@@ -24152,6 +24344,22 @@
    "en": "Tatiana ordered perfume and immediately put a drop on her wrist.",
    "ko": "타티야나는 향수를 주문하고 바로 손목에 한 방울 뿌렸어요.",
    "blank": "капельку",
+   "src": "made"
+  }
+ ],
+ "w|капитал": [
+  {
+   "text": "Иван копит стартовый капитал на собственный ресторан.",
+   "en": "Ivan is saving start-up capital for his own restaurant.",
+   "ko": "이반은 자기 식당을 열 창업 자금을 모으고 있어요.",
+   "blank": "капитал",
+   "src": "made"
+  },
+  {
+   "text": "Владелец спортзала вложил весь свой капитал в бассейн, рассказали Анне.",
+   "en": "The gym owner put all his capital into the pool, Anna was told.",
+   "ko": "안나는 헬스장 사장이 전 재산을 수영장에 쏟아부었다는 얘기를 들었어요.",
+   "blank": "капитал",
    "src": "made"
   }
  ],
@@ -25711,6 +25919,22 @@
    "ko": "나는 네 지휘관이 아니야.",
    "blank": "командир",
    "src": "tatoeba:6884560/odexed en:5162667/AlanF_US"
+  }
+ ],
+ "w|командный": [
+  {
+   "text": "Иван считает, что на кухне важен командный дух.",
+   "en": "Ivan believes team spirit matters in the kitchen.",
+   "ko": "이반은 주방에서 팀워크가 중요하다고 생각해요.",
+   "blank": "командный",
+   "src": "made"
+  },
+  {
+   "text": "Анне больше нравится командный вид спорта, чем бег в одиночку.",
+   "en": "Anna prefers team sports to running alone.",
+   "ko": "안나는 혼자 달리는 것보다 단체 운동을 더 좋아해요.",
+   "blank": "командный",
+   "src": "made"
   }
  ],
  "w|командование": [
@@ -30495,6 +30719,22 @@
    "src": "made"
   }
  ],
+ "w|мастерство": [
+  {
+   "text": "У Ивана мастерство особенно видно, когда он готовит рыбу.",
+   "en": "Ivan's skill is especially visible when he cooks fish.",
+   "ko": "이반의 솜씨는 생선 요리를 할 때 특히 잘 드러나요.",
+   "blank": "мастерство",
+   "src": "made"
+  },
+  {
+   "text": "Анна восхищается мастерством тренера по боксу.",
+   "en": "Anna admires the boxing coach's mastery.",
+   "ko": "안나는 복싱 코치의 기술에 감탄해요.",
+   "blank": "мастерством",
+   "src": "made"
+  }
+ ],
  "w|масштаб": [
   {
    "text": "Андрея поразил масштаб декораций во втором акте.",
@@ -34213,6 +34453,22 @@
    "src": "made"
   }
  ],
+ "w|налоговый": [
+  {
+   "text": "Владелец попросил Ивана сохранить все чеки для налоговой проверки.",
+   "en": "The owner asked Ivan to keep all the receipts for the tax inspection.",
+   "ko": "사장은 이반에게 세무 조사에 대비해 영수증을 모두 보관해 달라고 했어요.",
+   "blank": "налоговой",
+   "src": "made"
+  },
+  {
+   "text": "Анна узнала, что за спортзал можно получить налоговый вычет.",
+   "en": "Anna found out that she can get a tax deduction for the gym.",
+   "ko": "안나는 헬스장 비용으로 세금 공제를 받을 수 있다는 걸 알았어요.",
+   "blank": "налоговый",
+   "src": "made"
+  }
+ ],
  "w|наложить": [
   {
    "text": "За порванную книгу на Дмитрия могут наложить штраф.",
@@ -36697,6 +36953,22 @@
    "src": "tatoeba:1073944/afyodor en:259131/CK"
   }
  ],
+ "w|неожиданность": [
+  {
+   "text": "Для Ивана стало неожиданностью, что гости заказали сразу двадцать супов.",
+   "en": "It came as a surprise to Ivan that the guests ordered twenty soups at once.",
+   "ko": "손님들이 수프를 한꺼번에 스무 그릇 주문해서 이반은 깜짝 놀랐어요.",
+   "blank": "неожиданностью",
+   "src": "made"
+  },
+  {
+   "text": "Подарок от группы на день рождения стал для Анны приятной неожиданностью.",
+   "en": "The birthday present from the group was a pleasant surprise for Anna.",
+   "ko": "반 사람들이 준 생일 선물은 안나에게 반가운 깜짝 선물이었어요.",
+   "blank": "неожиданностью",
+   "src": "made"
+  }
+ ],
  "w|неожиданный": [
   {
    "text": "Директор устроил ученикам неожиданный сюрприз, и Иван первым узнал о поездке.",
@@ -37246,6 +37518,22 @@
    "en": "Anna looked out of the window and gasped: had the snow really fallen already?",
    "ko": "안나는 창밖을 보고 깜짝 놀랐어요. 벌써 눈이 왔다고?",
    "blank": "неужто",
+   "src": "made"
+  }
+ ],
+ "w|неуместно": [
+  {
+   "text": "Шеф сказал, что шутить с ножом в руке неуместно, и Иван извинился.",
+   "en": "The chef said joking with a knife in your hand is inappropriate, and Ivan apologized.",
+   "ko": "셰프가 칼을 든 채 장난치는 건 적절하지 않다고 하자 이반은 사과했어요.",
+   "blank": "неуместно",
+   "src": "made"
+  },
+  {
+   "text": "Громкий звонок телефона прозвучал на йоге неуместно, и Анна быстро его выключила.",
+   "en": "The loud ringtone sounded out of place in yoga class, and Anna quickly turned it off.",
+   "ko": "요가 시간에 큰 소리로 울린 전화벨이 민망해서 안나는 얼른 껐어요.",
+   "blank": "неуместно",
    "src": "made"
   }
  ],
@@ -40225,6 +40513,22 @@
    "src": "made"
   }
  ],
+ "w|одолеть": [
+  {
+   "text": "К концу смены Ивана одолела усталость, и он сел на ящик.",
+   "en": "By the end of the shift Ivan was overcome by tiredness and sat down on a crate.",
+   "ko": "근무가 끝날 무렵 이반은 피곤함에 지쳐 상자 위에 앉았어요.",
+   "blank": "одолела",
+   "src": "made"
+  },
+  {
+   "text": "Анна наконец одолела дистанцию в десять километров без остановок.",
+   "en": "Anna finally managed to run ten kilometres without stopping.",
+   "ko": "안나는 드디어 십 킬로미터를 쉬지 않고 달렸어요.",
+   "blank": "одолела",
+   "src": "made"
+  }
+ ],
  "w|одолжение": [
   {
    "text": "Не могли бы вы сделать мне одолжение?",
@@ -42354,6 +42658,22 @@
    "en": "Olga distracted the crying toddler with a sticker while his mom paid.",
    "ko": "엄마가 계산하는 동안 올가는 스티커로 우는 아기의 관심을 돌렸어요.",
    "blank": "отвлекла",
+   "src": "made"
+  }
+ ],
+ "w|отвлечься": [
+  {
+   "text": "Иван на секунду отвлёкся на телефон и сжёг лук.",
+   "en": "Ivan got distracted by his phone for a second and burned the onions.",
+   "ko": "이반은 잠깐 휴대폰을 보다가 양파를 태웠어요.",
+   "blank": "отвлёкся",
+   "src": "made"
+  },
+  {
+   "text": "На беговой дорожке Анна смотрит сериал, чтобы отвлечься от усталости.",
+   "en": "On the treadmill Anna watches a series to take her mind off the tiredness.",
+   "ko": "안나는 피곤함을 잊으려고 러닝머신 위에서 드라마를 봐요.",
+   "blank": "отвлечься",
    "src": "made"
   }
  ],
@@ -44961,6 +45281,22 @@
    "src": "made"
   }
  ],
+ "w|певица": [
+  {
+   "text": "Для певицы, которая выступала в зале, Иван приготовил тёплый чай с мёдом.",
+   "en": "Ivan made warm tea with honey for the singer who was performing in the hall.",
+   "ko": "이반은 홀에서 공연하는 가수를 위해 따뜻한 꿀차를 준비했어요.",
+   "blank": "певицы",
+   "src": "made"
+  },
+  {
+   "text": "Анна узнала в соседке по беговой дорожке известную певицу.",
+   "en": "Anna recognized a famous singer on the treadmill next to her.",
+   "ko": "안나는 옆 러닝머신에 있는 사람이 유명한 가수라는 걸 알아봤어요.",
+   "blank": "певицу",
+   "src": "made"
+  }
+ ],
  "w|пение": [
   {
    "text": "Из соседнего зала доносилось пение хора, и Дмитрий не мог сосредоточиться.",
@@ -46409,6 +46745,22 @@
    "ko": "제가 수영 못 한다고 누가 그래요?",
    "blank": "плавать",
    "src": "tatoeba:6779435/marafon en:6738132/CK"
+  }
+ ],
+ "w|плакат": [
+  {
+   "text": "На стене у Ивана висит плакат с правилами гигиены.",
+   "en": "A poster with hygiene rules hangs on the wall in Ivan's kitchen.",
+   "ko": "이반의 주방 벽에는 위생 수칙 포스터가 붙어 있어요.",
+   "blank": "плакат",
+   "src": "made"
+  },
+  {
+   "text": "Над шкафчиком Анны висит плакат с упражнениями для спины.",
+   "en": "A poster with back exercises hangs above Anna's locker.",
+   "ko": "안나의 사물함 위에는 허리 운동 포스터가 붙어 있어요.",
+   "blank": "плакат",
+   "src": "made"
   }
  ],
  "w|плакать": [
@@ -53165,6 +53517,22 @@
    "src": "made"
   }
  ],
+ "w|походить": [
+  {
+   "text": "В белом колпаке Иван стал походить на настоящего шефа.",
+   "en": "In the white hat Ivan began to look like a real chef.",
+   "ko": "흰 모자를 쓰자 이반은 진짜 셰프처럼 보였어요.",
+   "blank": "походить",
+   "src": "made"
+  },
+  {
+   "text": "Перед соревнованием Анна решила походить по залу, чтобы успокоиться.",
+   "en": "Before the competition Anna decided to walk around the hall to calm down.",
+   "ko": "대회 전에 안나는 마음을 가라앉히려고 체육관을 좀 걸어 다녔어요.",
+   "blank": "походить",
+   "src": "made"
+  }
+ ],
  "w|похожий": [
   {
    "text": "Он похож на отца.",
@@ -55663,6 +56031,22 @@
    "blank": "придумал"
   }
  ],
+ "w|придумывать": [
+  {
+   "text": "Иван любит придумывать новые соусы по выходным.",
+   "en": "Ivan likes to invent new sauces at the weekends.",
+   "ko": "이반은 주말마다 새 소스를 만들어 내는 걸 좋아해요.",
+   "blank": "придумывать",
+   "src": "made"
+  },
+  {
+   "text": "Тренер постоянно придумывает для Анны новые упражнения.",
+   "en": "The trainer constantly comes up with new exercises for Anna.",
+   "ko": "트레이너는 안나에게 새 운동을 계속 만들어 줘요.",
+   "blank": "придумывает",
+   "src": "made"
+  }
+ ],
  "w|придурок": [
   {
    "text": "Михаил в шутку назвал друга придурком, когда тот уронил кольцо.",
@@ -55818,6 +56202,22 @@
    "en": "The plane with the musicians couldn't land because of fog, and Maria waited two hours for the concert.",
    "ko": "음악가들이 탄 비행기가 안개 때문에 착륙하지 못해서 마리야는 콘서트를 두 시간 기다렸어요.",
    "blank": "приземлиться",
+   "src": "made"
+  }
+ ],
+ "w|признавать": [
+  {
+   "text": "Иван не любит признавать ошибки, но пересоленный суп переделал.",
+   "en": "Ivan doesn't like admitting mistakes, but he remade the oversalted soup.",
+   "ko": "이반은 실수를 인정하는 걸 싫어하지만 너무 짠 수프는 다시 만들었어요.",
+   "blank": "признавать",
+   "src": "made"
+  },
+  {
+   "text": "Анна признаёт, что без тренера бросила бы через неделю.",
+   "en": "Anna admits that without a trainer she would have quit within a week.",
+   "ko": "안나는 트레이너가 없었으면 일주일 만에 그만뒀을 거라고 인정해요.",
+   "blank": "признаёт",
    "src": "made"
   }
  ],
@@ -56608,6 +57008,22 @@
    "en": "The owner of the hotel where Svetlana stayed managed without servants and did everything herself.",
    "ko": "스베틀라나가 묵은 호텔 주인은 일꾼 없이 모든 걸 혼자 했어요.",
    "blank": "прислуги",
+   "src": "made"
+  }
+ ],
+ "w|прислушаться": [
+  {
+   "text": "Иван прислушался к совету шефа и убавил огонь.",
+   "en": "Ivan listened to the chef's advice and turned down the heat.",
+   "ko": "이반은 셰프의 조언을 듣고 불을 줄였어요.",
+   "blank": "прислушался",
+   "src": "made"
+  },
+  {
+   "text": "Анна прислушалась к своему телу и в тот день не стала бегать.",
+   "en": "Anna listened to her body and decided not to run that day.",
+   "ko": "안나는 몸 상태를 살피고 그날은 달리지 않았어요.",
+   "blank": "прислушалась",
    "src": "made"
   }
  ],
@@ -62585,6 +63001,22 @@
    "src": "tatoeba:6466988/odexed en:906921/CK"
   }
  ],
+ "w|рекламный": [
+  {
+   "text": "Иван приготовил блюда для рекламной съёмки ресторана.",
+   "en": "Ivan cooked the dishes for the restaurant's advertising shoot.",
+   "ko": "이반은 식당 광고 촬영에 쓸 요리를 만들었어요.",
+   "blank": "рекламной",
+   "src": "made"
+  },
+  {
+   "text": "Анну пригласили сняться в рекламном ролике спортзала.",
+   "en": "Anna was invited to appear in the gym's advertising video.",
+   "ko": "안나는 헬스장 광고 영상에 출연해 달라는 제안을 받았어요.",
+   "blank": "рекламном",
+   "src": "made"
+  }
+ ],
  "w|рекомендация": [
   {
    "text": "По рекомендации мастера Павла перевели в лучший цех.",
@@ -62710,6 +63142,22 @@
    "en": "Tatyana brought an X-ray of her hand to class to show the structure of the bones.",
    "ko": "타티야나는 뼈 구조를 보여 주려고 자기 손 엑스레이를 수업에 가져왔어요.",
    "blank": "рентген",
+   "src": "made"
+  }
+ ],
+ "w|репетировать": [
+  {
+   "text": "Перед банкетом Иван репетировал подачу десерта с официантами.",
+   "en": "Before the banquet Ivan rehearsed serving the dessert with the waiters.",
+   "ko": "연회 전에 이반은 종업원들과 디저트 내는 순서를 연습했어요.",
+   "blank": "репетировал",
+   "src": "made"
+  },
+  {
+   "text": "Анна с подругой репетируют танец для выступления на празднике клуба.",
+   "en": "Anna and her friend are rehearsing a dance for a performance at the club party.",
+   "ko": "안나와 친구는 클럽 행사 공연에 쓸 춤을 연습하고 있어요.",
+   "blank": "репетируют",
    "src": "made"
   }
  ],
@@ -63437,6 +63885,22 @@
    "ko": "분홍색을 주문했는데 파란색이 왔어요.",
    "blank": "розовый",
    "src": "tatoeba:2384887/marafon en:34441/CK"
+  }
+ ],
+ "w|розыгрыш": [
+  {
+   "text": "Повара устроили розыгрыш и спрятали нож Ивана в холодильнике.",
+   "en": "The cooks played a prank and hid Ivan's knife in the fridge.",
+   "ko": "요리사들이 장난으로 이반의 칼을 냉장고에 숨겼어요.",
+   "blank": "розыгрыш",
+   "src": "made"
+  },
+  {
+   "text": "Анна выиграла в розыгрыше спортзала новые кроссовки.",
+   "en": "Anna won new trainers in the gym's prize draw.",
+   "ko": "안나는 헬스장 경품 추첨에서 새 운동화를 받았어요.",
+   "blank": "розыгрыше",
+   "src": "made"
   }
  ],
  "w|розыск": [
@@ -65617,6 +66081,22 @@
    "src": "made"
   }
  ],
+ "w|сервер": [
+  {
+   "text": "Когда упал сервер с заказами, Иван принимал их на бумаге.",
+   "en": "When the order server went down, Ivan took orders on paper.",
+   "ko": "주문 서버가 멈추자 이반은 종이로 주문을 받았어요.",
+   "blank": "сервер",
+   "src": "made"
+  },
+  {
+   "text": "Приложение спортзала не работало, потому что упал сервер, и Анна записалась у администратора.",
+   "en": "The gym app wasn't working because the server was down, so Anna signed up at the front desk.",
+   "ko": "서버가 멈춰서 헬스장 앱이 안 되자 안나는 데스크에서 예약했어요.",
+   "blank": "сервер",
+   "src": "made"
+  }
+ ],
  "w|сердечный": [
   {
    "text": "У меня случился сердечный приступ.",
@@ -66544,6 +67024,22 @@
    "en": "Elena found that a serious problem can be hiding behind a simple mistake.",
    "ko": "옐레나는 단순한 실수 뒤에 심각한 문제가 숨어 있을 수 있다는 걸 알아냈어요.",
    "blank": "скрываться",
+   "src": "made"
+  }
+ ],
+ "w|скрытый": [
+  {
+   "text": "Иван нашёл в старой плите скрытый дефект и вызвал мастера.",
+   "en": "Ivan found a hidden defect in the old stove and called a repairman.",
+   "ko": "이반은 낡은 레인지에서 숨은 결함을 찾아 수리 기사를 불렀어요.",
+   "blank": "скрытый",
+   "src": "made"
+  },
+  {
+   "text": "Тренер заметил у Анны скрытую травму колена.",
+   "en": "The trainer noticed a hidden knee injury in Anna.",
+   "ko": "트레이너는 안나의 무릎에 숨은 부상이 있다는 걸 알아챘어요.",
+   "blank": "скрытую",
    "src": "made"
   }
  ],
@@ -70357,6 +70853,22 @@
    "blank": "справилась"
   }
  ],
+ "w|справка": [
+  {
+   "text": "Чтобы работать на кухне, Ивану нужна медицинская справка.",
+   "en": "To work in the kitchen Ivan needs a medical certificate.",
+   "ko": "이반은 주방에서 일하려면 건강 진단서가 필요해요.",
+   "blank": "справка",
+   "src": "made"
+  },
+  {
+   "text": "Для занятий в бассейне спортзала Анне понадобилась справка от врача.",
+   "en": "For classes in the gym's pool Anna needed a doctor's certificate.",
+   "ko": "안나는 헬스장 수영장 수업을 들으려고 의사 소견서가 필요했어요.",
+   "blank": "справка",
+   "src": "made"
+  }
+ ],
  "w|справляться": [
   {
    "text": "Как ты будешь справляться без работы?",
@@ -72149,6 +72661,22 @@
    "src": "tatoeba:564901/Maksimo en:1392422/CM"
   }
  ],
+ "w|студентка": [
+  {
+   "text": "На кухне у Ивана подрабатывает студентка из кулинарного колледжа.",
+   "en": "A student from a culinary college works part-time in Ivan's kitchen.",
+   "ko": "이반의 주방에는 조리학교 여학생이 아르바이트를 해요.",
+   "blank": "студентка",
+   "src": "made"
+  },
+  {
+   "text": "Как студентка, Анна платит за абонемент со скидкой.",
+   "en": "As a student, Anna pays for her membership at a discount.",
+   "ko": "안나는 대학생이라 회원권을 할인받아요.",
+   "blank": "студентка",
+   "src": "made"
+  }
+ ],
  "w|студия": [
   {
    "text": "Наша студия находится на третьем этаже.",
@@ -73640,6 +74168,22 @@
    "en": "Svetlana saw in horror that some creature had got into the bag of flour.",
    "ko": "스베틀라나는 밀가루 포대에 무슨 벌레가 들어간 걸 보고 기겁했어요.",
    "blank": "тварь",
+   "src": "made"
+  }
+ ],
+ "w|твёрдо": [
+  {
+   "text": "Иван твёрдо решил больше не брать ночные смены.",
+   "en": "Ivan firmly decided not to take night shifts any more.",
+   "ko": "이반은 더는 야간 근무를 하지 않겠다고 굳게 마음먹었어요.",
+   "blank": "твёрдо",
+   "src": "made"
+  },
+  {
+   "text": "Анна твёрдо стоит на ногах даже на неустойчивой платформе.",
+   "en": "Anna stands firmly on her feet even on an unstable platform.",
+   "ko": "안나는 흔들리는 발판 위에서도 단단히 서 있어요.",
+   "blank": "твёрдо",
    "src": "made"
   }
  ],
@@ -75565,6 +76109,22 @@
    "ko": "네가 애쓴 거 우리 다 알아.",
    "blank": "труд",
    "src": "tatoeba:3289700/marafon en:262637/CK"
+  }
+ ],
+ "w|трудиться": [
+  {
+   "text": "Иван трудится на кухне с шести утра до позднего вечера.",
+   "en": "Ivan works hard in the kitchen from six in the morning until late at night.",
+   "ko": "이반은 아침 여섯 시부터 밤늦게까지 주방에서 일해요.",
+   "blank": "трудится",
+   "src": "made"
+  },
+  {
+   "text": "Анна три месяца трудилась над техникой приседаний.",
+   "en": "Anna worked on her squat technique for three months.",
+   "ko": "안나는 석 달 동안 스쿼트 자세를 익히려고 애썼어요.",
+   "blank": "трудилась",
+   "src": "made"
   }
  ],
  "w|трудность": [
@@ -77731,6 +78291,22 @@
    "blank": "Ума"
   }
  ],
+ "w|умение": [
+  {
+   "text": "Шеф ценит в Иване умение быстро резать лук.",
+   "en": "The chef values Ivan's ability to chop onions quickly.",
+   "ko": "셰프는 양파를 빨리 써는 이반의 솜씨를 높이 사요.",
+   "blank": "умение",
+   "src": "made"
+  },
+  {
+   "text": "Анна гордится умением держать планку пять минут.",
+   "en": "Anna is proud of her ability to hold a plank for five minutes.",
+   "ko": "안나는 플랭크를 오 분 동안 버틸 수 있는 게 자랑스러워요.",
+   "blank": "умением",
+   "src": "made"
+  }
+ ],
  "w|умереть": [
   {
    "text": "Я чуть не умер со смеху.",
@@ -79089,6 +79665,22 @@
    "src": "made"
   }
  ],
+ "w|учёт": [
+  {
+   "text": "Иван ведёт учёт продуктов в толстой тетради.",
+   "en": "Ivan keeps a record of the ingredients in a thick notebook.",
+   "ko": "이반은 두꺼운 공책에 재료를 기록해요.",
+   "blank": "учёт",
+   "src": "made"
+  },
+  {
+   "text": "Анна ведёт учёт тренировок в приложении на телефоне.",
+   "en": "Anna keeps track of her workouts in an app on her phone.",
+   "ko": "안나는 휴대폰 앱에 운동 기록을 남겨요.",
+   "blank": "учёт",
+   "src": "made"
+  }
+ ],
  "w|учитель": [
   {
    "text": "Ты на самом деле не учитель, не так ли?",
@@ -79631,6 +80223,22 @@
    "src": "made"
   }
  ],
+ "w|финансирование": [
+  {
+   "text": "Ресторан получил финансирование, и Иван наконец купил новую плиту.",
+   "en": "The restaurant received funding, and Ivan finally bought a new stove.",
+   "ko": "식당이 자금을 지원받아서 이반은 드디어 새 레인지를 샀어요.",
+   "blank": "финансирование",
+   "src": "made"
+  },
+  {
+   "text": "Анна узнала, что спортзал получил финансирование от города на новые тренажёры.",
+   "en": "Anna learned that the gym had got funding from the city for new machines.",
+   "ko": "안나는 헬스장이 새 운동 기구를 위해 시에서 지원금을 받았다는 걸 알았어요.",
+   "blank": "финансирование",
+   "src": "made"
+  }
+ ],
  "w|финансовый": [
   {
    "text": "Каждый квартал Павел готовит финансовый отчёт.",
@@ -79852,6 +80460,22 @@
    "en": "Natalya knows that formally spring starts on the first of March, but the snow lies until April.",
    "ko": "나탈리야는 공식적으로는 3월 1일에 봄이 시작되지만 눈이 4월까지 남는다는 걸 알아요.",
    "blank": "формально",
+   "src": "made"
+  }
+ ],
+ "w|формальность": [
+  {
+   "text": "Подписать договор было простой формальностью, и Иван вышел на работу в тот же день.",
+   "en": "Signing the contract was a mere formality, and Ivan started work the same day.",
+   "ko": "계약서 서명은 형식적인 절차일 뿐이어서 이반은 그날 바로 일을 시작했어요.",
+   "blank": "формальностью",
+   "src": "made"
+  },
+  {
+   "text": "Анна быстро уладила все формальности и в тот же день пошла на йогу.",
+   "en": "Anna quickly sorted out all the formalities and went to yoga the same day.",
+   "ko": "안나는 절차를 금방 마치고 그날 바로 요가에 갔어요.",
+   "blank": "формальности",
    "src": "made"
   }
  ],
@@ -80138,6 +80762,22 @@
    "en": "Tatiana's groom invited his whole football team to the wedding.",
    "ko": "타티야나의 신랑은 축구팀 전원을 결혼식에 초대했어요.",
    "blank": "футбольную",
+   "src": "made"
+  }
+ ],
+ "w|хакер": [
+  {
+   "text": "Иван узнал, что хакер взломал систему заказов ресторана.",
+   "en": "Ivan learned that a hacker had broken into the restaurant's ordering system.",
+   "ko": "이반은 해커가 식당 주문 시스템을 해킹했다는 걸 알게 됐어요.",
+   "blank": "хакер",
+   "src": "made"
+  },
+  {
+   "text": "Анна посмеялась: её фитнес-браслет так тормозит, что даже хакер бы не разобрался.",
+   "en": "Anna laughed: her fitness band is so slow that even a hacker couldn't figure it out.",
+   "ko": "안나는 피트니스 밴드가 너무 느려서 해커도 못 알아낼 거라며 웃었어요.",
+   "blank": "хакер",
    "src": "made"
   }
  ],

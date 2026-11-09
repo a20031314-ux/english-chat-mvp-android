@@ -3965,6 +3965,22 @@
    "src": "made"
   }
  ],
+ "w|เกร็ง": [
+  {
+   "text": "ขาหลังของสุนัขเกร็งทุกครั้งที่วิชัยแตะตรงสะโพก",
+   "en": "The dog's hind leg tensed every time Wichai touched its hip.",
+   "ko": "위차이가 엉덩이를 만질 때마다 개 뒷다리가 굳었어요.",
+   "blank": "เกร็ง",
+   "src": "made"
+  },
+  {
+   "text": "นวดแป้งนานๆ ทำให้กล้ามเนื้อไหล่ของนภาเกร็งจนปวด",
+   "en": "Kneading dough for a long time makes Napha's shoulder muscles tense up until they ache.",
+   "ko": "오래 반죽을 치대다 보면 나파의 어깨 근육이 뭉쳐서 아파요.",
+   "blank": "เกร็ง",
+   "src": "made"
+  }
+ ],
  "w|เกรงใจ": [
   {
    "text": "อนันต์เกรงใจไม่กล้าขอให้เพื่อนส่งรูปมาเพิ่ม",
@@ -6023,6 +6039,22 @@
    "src": "made"
   }
  ],
+ "w|ขัดจังหวะ": [
+  {
+   "text": "เสียงโทรศัพท์ขัดจังหวะวิชัยระหว่างกำลังเย็บแผลให้แมว",
+   "en": "The phone interrupted Wichai while he was stitching up a cat's wound.",
+   "ko": "고양이 상처를 꿰매던 위차이를 전화벨이 방해했어요.",
+   "blank": "ขัดจังหวะ",
+   "src": "made"
+  },
+  {
+   "text": "นภาไม่ชอบให้ใครขัดจังหวะตอนกำลังนวดแป้ง",
+   "en": "Napha doesn't like anyone interrupting her while she's kneading dough.",
+   "ko": "나파는 반죽을 치대는 중에 누가 방해하는 걸 싫어해요.",
+   "blank": "ขัดจังหวะ",
+   "src": "made"
+  }
+ ],
  "w|ขัดแย้ง": [
   {
    "text": "ชาวบ้านสองกลุ่มขัดแย้งกันเรื่องที่จอดรถหน้าตลาด",
@@ -6217,6 +6249,22 @@
    "en": "The shop is next to the school.",
    "ko": "가게가 학교 옆에 있어.",
    "blank": "ข้าง"
+  }
+ ],
+ "w|ข้างๆ": [
+  {
+   "text": "เจ้าของนั่งข้างๆ กระต่ายตลอดเวลาที่รอผลตรวจ",
+   "en": "The owner sat next to the rabbit the whole time they waited for the test results.",
+   "ko": "주인은 검사 결과를 기다리는 내내 토끼 옆에 앉아 있었어요.",
+   "blank": "ข้างๆ",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของนภาอยู่ข้างๆ ร้านดอกไม้ตรงหัวมุมถนน",
+   "en": "Napha's shop is next to the florist on the street corner.",
+   "ko": "나파의 가게는 길모퉁이 꽃집 옆에 있어요.",
+   "blank": "ข้างๆ",
+   "src": "made"
   }
  ],
  "w|ข้างต้น": [
@@ -10981,6 +11029,22 @@
    "src": "made"
   }
  ],
+ "w|ความเหนื่อยล้า": [
+  {
+   "text": "หลังผ่าตัดติดกันสามเคส วิชัยรู้สึกถึงความเหนื่อยล้าจนมือสั่น",
+   "en": "After three surgeries in a row, Wichai felt such fatigue that his hands shook.",
+   "ko": "수술 세 건을 연달아 한 뒤 위차이는 피로로 손이 떨렸어요.",
+   "blank": "ความเหนื่อยล้า",
+   "src": "made"
+  },
+  {
+   "text": "ตื่นตีสามทุกวันทำให้ความเหนื่อยล้าสะสมจนนภาต้องปิดร้านพักหนึ่งวัน",
+   "en": "Getting up at three every day built up so much fatigue that Napha had to close for a day's rest.",
+   "ko": "매일 새벽 세 시에 일어나다 보니 피로가 쌓여 나파는 하루 가게를 닫고 쉬어야 했어요.",
+   "blank": "ความเหนื่อยล้า",
+   "src": "made"
+  }
+ ],
  "w|ความเหมือน": [
   {
    "text": "มีความเหมือนกันหลายอย่าง",
@@ -11710,6 +11774,22 @@
    "en": "Suda thinks the value placed on working hard without rest should change.",
    "ko": "수다는 쉬지 않고 일하는 걸 미덕으로 여기는 가치관이 이제 바뀌어야 한다고 생각해요.",
    "blank": "ค่านิยม",
+   "src": "made"
+  }
+ ],
+ "w|คาบ": [
+  {
+   "text": "วิชัยไปสอนนักศึกษาสัตวแพทย์สัปดาห์ละสองคาบ",
+   "en": "Wichai teaches veterinary students two periods a week.",
+   "ko": "위차이는 수의대생들에게 일주일에 두 교시 강의를 해요.",
+   "blank": "คาบ",
+   "src": "made"
+  },
+  {
+   "text": "นภาสอนทำขนมปังให้นักเรียนมัธยมสัปดาห์ละหนึ่งคาบ",
+   "en": "Napha teaches bread-making to high school students one period a week.",
+   "ko": "나파는 고등학생들에게 일주일에 한 교시 빵 만들기를 가르쳐요.",
+   "blank": "คาบ",
    "src": "made"
   }
  ],
@@ -13645,6 +13725,22 @@
    "en": "The arched bridge is very beautiful.",
    "ko": "아치형 다리가 아주 아름다워.",
    "blank": "โค้ง"
+  }
+ ],
+ "w|โคจร": [
+  {
+   "text": "ลูกชายวิชัยชอบดูภาพดาวเทียมที่โคจรรอบโลกในห้องพักหมอ",
+   "en": "Wichai's son likes looking at pictures of satellites orbiting the Earth in the doctor's lounge.",
+   "ko": "위차이의 아들은 의사 휴게실에서 지구를 도는 인공위성 사진 보기를 좋아해요.",
+   "blank": "โคจร",
+   "src": "made"
+  },
+  {
+   "text": "นภาทำคุกกี้รูปดาวเคราะห์ที่โคจรรอบดวงอาทิตย์ให้งานวันเด็ก",
+   "en": "Napha made cookies shaped like the planets orbiting the sun for Children's Day.",
+   "ko": "나파는 어린이날을 위해 태양 주위를 도는 행성 모양 쿠키를 만들었어요.",
+   "blank": "โคจร",
+   "src": "made"
   }
  ],
  "w|โค้ช": [
@@ -17295,6 +17391,22 @@
    "src": "made"
   }
  ],
+ "w|ชลประทาน": [
+  {
+   "text": "วัวของชาวนาเดินตกคลองชลประทานจนขาเจ็บ",
+   "en": "A farmer's cow walked into an irrigation canal and hurt its leg.",
+   "ko": "농부의 소가 관개 수로에 빠져 다리를 다쳤어요.",
+   "blank": "ชลประทาน",
+   "src": "made"
+  },
+  {
+   "text": "ข้าวสาลีที่นภาใช้ปลูกในไร่ที่มีระบบชลประทานดี",
+   "en": "The wheat Napha uses is grown on farms with good irrigation.",
+   "ko": "나파가 쓰는 밀은 관개 시설이 좋은 농장에서 자라요.",
+   "blank": "ชลประทาน",
+   "src": "made"
+  }
+ ],
  "w|ช่วง": [
   {
    "text": "ช่วงนี้เหนื่อยมาก",
@@ -20335,6 +20447,22 @@
    "src": "made"
   }
  ],
+ "w|ด้วง": [
+  {
+   "text": "ไก่ของชาวบ้านป่วยเพราะไปกินด้วงที่โดนยาฆ่าแมลง",
+   "en": "A villager's chickens got sick from eating beetles that had been sprayed with pesticide.",
+   "ko": "주민의 닭들이 살충제 묻은 딱정벌레를 먹고 병이 났어요.",
+   "blank": "ด้วง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กคนหนึ่งตกใจเพราะเจอด้วงตัวเล็กเกาะอยู่ที่กระถางหน้าร้าน",
+   "en": "A child got startled finding a little beetle on the flowerpot outside the shop.",
+   "ko": "한 아이가 가게 앞 화분에 붙은 작은 딱정벌레를 보고 깜짝 놀랐어요.",
+   "blank": "ด้วง",
+   "src": "made"
+  }
+ ],
  "w|ดวงจันทร์": [
   {
    "text": "ดวงจันทร์สวยจังคืนนี้",
@@ -20590,6 +20718,22 @@
    "en": "The hotel breakfast buffet had several kinds of pickled vegetables for Piya to choose from.",
    "ko": "호텔 조식 뷔페에는 피야가 고를 수 있는 절인 채소가 여러 가지 있었어요.",
    "blank": "ดอง",
+   "src": "made"
+  }
+ ],
+ "w|ดอย": [
+  {
+   "text": "เดือนหน้าวิชัยจะขึ้นดอยไปฉีดวัคซีนให้ช้างของหมู่บ้าน",
+   "en": "Next month Wichai will go up the mountain to vaccinate the village's elephants.",
+   "ko": "다음 달 위차이는 산에 올라 마을 코끼리들에게 예방 접종을 해요.",
+   "blank": "ดอย",
+   "src": "made"
+  },
+  {
+   "text": "นภาสั่งกาแฟจากดอยทางเหนือมาขายคู่กับขนมปัง",
+   "en": "Napha orders coffee from the northern hills to sell with her bread.",
+   "ko": "나파는 빵과 함께 팔 커피를 북부 산지에서 주문해요.",
+   "blank": "ดอย",
    "src": "made"
   }
  ],
@@ -23519,6 +23663,22 @@
    "src": "made"
   }
  ],
+ "w|ต่อม": [
+  {
+   "text": "วิชัยคลำพบต่อมน้ำเหลืองที่คอหมาบวมผิดปกติ",
+   "en": "Wichai felt that the lymph node in the dog's neck was abnormally swollen.",
+   "ko": "위차이는 개 목의 림프샘이 비정상적으로 부은 걸 손으로 찾아냈어요.",
+   "blank": "ต่อม",
+   "src": "made"
+  },
+  {
+   "text": "กลิ่นเนยหอมๆ ทำให้ต่อมน้ำลายของเด็กหน้าร้านทำงานทันที",
+   "en": "The smell of butter set the salivary glands of the kids outside the shop working at once.",
+   "ko": "고소한 버터 냄새에 가게 앞 아이들 침샘이 바로 반응했어요.",
+   "blank": "ต่อม",
+   "src": "made"
+  }
+ ],
  "w|ต่อมา": [
   {
    "text": "ต่อมาเธอได้งานที่ดี",
@@ -23921,6 +24081,22 @@
    "en": "We've known each other since we were kids.",
    "ko": "어릴 때부터 알았어.",
    "blank": "ตั้งแต่"
+  }
+ ],
+ "w|ตั้งแต่นั้นมา": [
+  {
+   "text": "วิชัยช่วยลูกหมาที่ถูกทิ้งไว้หน้าคลินิก และตั้งแต่นั้นมามันก็อยู่ที่นี่",
+   "en": "Wichai rescued a puppy abandoned outside the clinic, and it has lived here ever since.",
+   "ko": "위차이가 병원 앞에 버려진 강아지를 구했고 그 뒤로 그 강아지는 여기 살아요.",
+   "blank": "ตั้งแต่นั้นมา",
+   "src": "made"
+  },
+  {
+   "text": "นภาไปเรียนทำขนมที่ฝรั่งเศสหนึ่งปี และตั้งแต่นั้นมาก็ไม่เคยใช้เนยเทียมอีก",
+   "en": "Napha studied baking in France for a year, and since then she has never used margarine again.",
+   "ko": "나파는 프랑스에서 일 년 동안 제과를 배웠고 그 뒤로 마가린을 다시 쓴 적이 없어요.",
+   "blank": "ตั้งแต่นั้นมา",
+   "src": "made"
   }
  ],
  "w|ตั้งแต่นี้ไป": [
@@ -24676,6 +24852,22 @@
    "en": "Suda bought a new cookbook and plans to try making green curry herself.",
    "ko": "수다는 새 요리책을 사서 그린 커리를 직접 만들어 볼 생각이에요.",
    "blank": "ตำรา",
+   "src": "made"
+  }
+ ],
+ "w|ต่ำสุด": [
+  {
+   "text": "ไข้ของแมวลดลงถึงจุดต่ำสุดตอนเช้ามืด",
+   "en": "The cat's fever dropped to its lowest point before dawn.",
+   "ko": "고양이 열이 새벽에 가장 낮게 떨어졌어요.",
+   "blank": "ต่ำสุด",
+   "src": "made"
+  },
+  {
+   "text": "นภาตั้งเตาไว้ที่ไฟต่ำสุดเพื่ออบเมอแรงก์ทั้งคืน",
+   "en": "Napha set the oven to its lowest heat to bake meringues overnight.",
+   "ko": "나파는 머랭을 밤새 구우려고 오븐을 가장 낮은 온도로 맞췄어요.",
+   "blank": "ต่ำสุด",
    "src": "made"
   }
  ],
@@ -26885,6 +27077,22 @@
    "en": "Let's review what we learned.",
    "ko": "배운 것을 함께 복습하자.",
    "blank": "ทบทวน"
+  }
+ ],
+ "w|ทยอย": [
+  {
+   "text": "เช้าวันเสาร์เจ้าของสัตว์ทยอยมาฉีดวัคซีนตั้งแต่คลินิกเปิด",
+   "en": "On Saturday morning pet owners trickled in for vaccinations from the moment the clinic opened.",
+   "ko": "토요일 아침 문을 열자마자 반려동물 주인들이 차례로 예방 접종을 하러 왔어요.",
+   "blank": "ทยอย",
+   "src": "made"
+  },
+  {
+   "text": "ขนมปังที่อบเสร็จทยอยออกจากเตามาวางบนชั้น",
+   "en": "Freshly baked loaves came out of the oven one batch after another onto the racks.",
+   "ko": "다 구워진 빵이 차례로 오븐에서 나와 선반에 놓였어요.",
+   "blank": "ทยอย",
+   "src": "made"
   }
  ],
  "w|ทรมาน": [
@@ -32269,6 +32477,22 @@
    "src": "made"
   }
  ],
+ "w|นายแพทย์": [
+  {
+   "text": "ป้ายหน้าคลินิกเขียนว่านายแพทย์วิชัย แม้ชาวบ้านจะเรียกว่าหมอหมา",
+   "en": "The sign outside the clinic says Dr. Wichai, though the villagers call him the dog doctor.",
+   "ko": "병원 간판엔 의사 위차이라고 쓰여 있지만 주민들은 개 박사님이라고 불러요.",
+   "blank": "นายแพทย์",
+   "src": "made"
+  },
+  {
+   "text": "นายแพทย์ประจำคลินิกฝั่งตรงข้ามแวะซื้อขนมปังทุกเช้า",
+   "en": "The doctor at the clinic across the street stops by for bread every morning.",
+   "ko": "맞은편 병원 의사 선생님이 매일 아침 빵을 사러 들러요.",
+   "blank": "นายแพทย์",
+   "src": "made"
+  }
+ ],
  "w|นายหน้า": [
   {
    "text": "สมชายเช่าห้องใกล้ออฟฟิศผ่านนายหน้าที่เพื่อนแนะนำ",
@@ -33891,6 +34115,22 @@
    "src": "made"
   }
  ],
+ "w|โน้ม": [
+  {
+   "text": "วิชัยโน้มตัวลงฟังเสียงหัวใจของหมาแก่อย่างตั้งใจ",
+   "en": "Wichai leaned down to listen carefully to the old dog's heart.",
+   "ko": "위차이는 몸을 숙여 늙은 개의 심장 소리를 주의 깊게 들었어요.",
+   "blank": "โน้ม",
+   "src": "made"
+  },
+  {
+   "text": "ต้นมะม่วงหน้าร้านโน้มกิ่งลงมาเกือบแตะหลังคา",
+   "en": "The mango tree in front of the shop bends its branches down almost to the roof.",
+   "ko": "가게 앞 망고나무 가지가 지붕에 닿을 듯 휘어져 있어요.",
+   "blank": "โน้ม",
+   "src": "made"
+  }
+ ],
  "w|โน้มน้าว": [
   {
    "text": "เขาพยายามโน้มน้าวให้ฉันไป",
@@ -35409,6 +35649,22 @@
    "blank": "บีบ"
   }
  ],
+ "w|บึง": [
+  {
+   "text": "เด็กๆ อุ้มเต่าที่เจอริมบึงหลังวัดมาให้วิชัยดู",
+   "en": "The kids carried in a turtle they found by the swamp behind the temple for Wichai to look at.",
+   "ko": "아이들이 절 뒤 늪가에서 찾은 거북을 위차이에게 보여 주려고 안고 왔어요.",
+   "blank": "บึง",
+   "src": "made"
+  },
+  {
+   "text": "ทุกเย็นนภาเดินเล่นรอบบึงใกล้บ้านเพื่อคลายเครียด",
+   "en": "Every evening Napha walks around the lake near her house to unwind.",
+   "ko": "나파는 매일 저녁 스트레스를 풀려고 집 근처 늪지 호수를 걸어요.",
+   "blank": "บึง",
+   "src": "made"
+  }
+ ],
  "w|บุก": [
   {
    "text": "เจ้าหน้าที่บุกตรวจโรงงานข้างเคียงเพราะสงสัยว่าลักลอบทิ้งน้ำเสีย",
@@ -35607,6 +35863,22 @@
    "en": "Just throw away the spoiled food.",
    "ko": "상한 음식은 그냥 버려.",
    "blank": "บูด"
+  }
+ ],
+ "w|บูรณาการ": [
+  {
+   "text": "คลินิกของวิชัยบูรณาการการรักษาแผนปัจจุบันกับการฝังเข็มสำหรับสัตว์",
+   "en": "Wichai's clinic integrates modern medicine with acupuncture for animals.",
+   "ko": "위차이의 병원은 현대 치료와 동물 침술을 함께 엮어 써요.",
+   "blank": "บูรณาการ",
+   "src": "made"
+  },
+  {
+   "text": "นภาบูรณาการขนมไทยกับเทคนิคฝรั่งจนได้ครัวซองต์ไส้สังขยา",
+   "en": "Napha blended Thai sweets with Western techniques to make croissants filled with coconut custard.",
+   "ko": "나파는 태국 디저트에 서양 기술을 접목해 코코넛 커스터드 크루아상을 만들었어요.",
+   "blank": "บูรณาการ",
+   "src": "made"
   }
  ],
  "w|เบคอน": [
@@ -36651,6 +36923,22 @@
    "en": "She renews home insurance every year.",
    "ko": "그녀는 매년 주택 보험을 갱신해.",
    "blank": "ประกันภัย"
+  }
+ ],
+ "w|ประกันสุขภาพ": [
+  {
+   "text": "วิชัยแนะนำให้เจ้าของซื้อประกันสุขภาพสัตว์เลี้ยงไว้ตั้งแต่ยังเล็ก",
+   "en": "Wichai advised owners to buy pet health insurance while the animal is still young.",
+   "ko": "위차이는 주인들에게 어릴 때부터 반려동물 건강 보험을 들라고 권했어요.",
+   "blank": "ประกันสุขภาพ",
+   "src": "made"
+  },
+  {
+   "text": "นภาทำประกันสุขภาพให้ลูกจ้างทุกคนในร้าน",
+   "en": "Napha got health insurance for every employee at the shop.",
+   "ko": "나파는 가게 직원 모두에게 건강 보험을 들어 줬어요.",
+   "blank": "ประกันสุขภาพ",
+   "src": "made"
   }
  ],
  "w|ประกาย": [
@@ -39807,6 +40095,22 @@
    "src": "made"
   }
  ],
+ "w|แปลงร่าง": [
+  {
+   "text": "ลูกสาวเจ้าของแมวใส่ชุดเด็กแปลงร่างเป็นซูเปอร์ฮีโร่มาหาหมอ",
+   "en": "The cat owner's daughter came to the vet dressed as a transforming superhero.",
+   "ko": "고양이 주인의 딸이 변신 슈퍼히어로 옷을 입고 병원에 왔어요.",
+   "blank": "แปลงร่าง",
+   "src": "made"
+  },
+  {
+   "text": "ก้อนแป้งเหลวๆ แปลงร่างเป็นขนมปังกรอบหอมในเตาร้อน",
+   "en": "A sloppy lump of dough transformed into crusty, fragrant bread in the hot oven.",
+   "ko": "질척한 반죽 덩어리가 뜨거운 오븐 속에서 바삭하고 향긋한 빵으로 변신했어요.",
+   "blank": "แปลงร่าง",
+   "src": "made"
+  }
+ ],
  "w|แปลว่า": [
   {
    "text": "คำนี้แปลว่าอะไร",
@@ -40808,6 +41112,22 @@
    "en": "Suda walked through the grass in the field and got a red rash on her legs.",
    "ko": "수다는 밭의 풀숲을 걷다가 다리에 빨간 발진이 났어요.",
    "blank": "ผื่น",
+   "src": "made"
+  }
+ ],
+ "w|ผุด": [
+  {
+   "text": "ตุ่มแดงผุดขึ้นเต็มท้องหมาหลังเดินเล่นในทุ่งหญ้า",
+   "en": "Red bumps broke out all over the dog's belly after a walk in the grass.",
+   "ko": "풀밭을 산책한 뒤 개 배에 빨간 뾰루지가 잔뜩 돋았어요.",
+   "blank": "ผุด",
+   "src": "made"
+  },
+  {
+   "text": "ไอเดียขนมปังรสต้มยำผุดขึ้นในหัวนภาตอนกินข้าวเย็น",
+   "en": "The idea for tom yum bread popped into Napha's head over dinner.",
+   "ko": "똠얌 맛 빵 아이디어가 저녁을 먹다 나파 머리에 떠올랐어요.",
+   "blank": "ผุด",
    "src": "made"
   }
  ],
@@ -42243,6 +42563,22 @@
    "src": "made"
   }
  ],
+ "w|ฝ้า": [
+  {
+   "text": "ภรรยาวิชัยทาครีมกันแดดทุกวันเพราะกลัวเป็นฝ้า",
+   "en": "Wichai's wife wears sunscreen every day because she's afraid of getting melasma.",
+   "ko": "위차이의 아내는 기미가 생길까 봐 매일 선크림을 발라요.",
+   "blank": "ฝ้า",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าประจำคนหนึ่งเล่าว่าตั้งแต่ใช้ครีมของคุณหมอ ฝ้าบนแก้มก็จางลง",
+   "en": "A regular customer said that since she started using the doctor's cream, the melasma on her cheeks has faded.",
+   "ko": "한 단골손님은 의사 크림을 쓰고부터 볼의 기미가 옅어졌다고 했어요.",
+   "blank": "ฝ้า",
+   "src": "made"
+  }
+ ],
  "w|ฝาก": [
   {
    "text": "ฝากของไว้ที่นี่ได้ไหม",
@@ -42270,6 +42606,22 @@
    "en": "Anyone who breaks the rules by taking flash photos will be asked to leave.",
    "ko": "플래시를 터뜨려 사진을 찍어 규칙을 어기는 사람은 퇴장당해요.",
    "blank": "ฝ่าฝืน",
+   "src": "made"
+  }
+ ],
+ "w|ฝ่ามือ": [
+  {
+   "text": "วิชัยวางลูกนกไว้บนฝ่ามือแล้วป้อนน้ำทีละหยด",
+   "en": "Wichai placed the baby bird in his palm and fed it water drop by drop.",
+   "ko": "위차이는 아기 새를 손바닥에 올려놓고 물을 한 방울씩 먹였어요.",
+   "blank": "ฝ่ามือ",
+   "src": "made"
+  },
+  {
+   "text": "นภาใช้ฝ่ามือกดแป้งให้แบนก่อนม้วนเป็นขนมปังลูกเกด",
+   "en": "Napha flattens the dough with her palm before rolling it into raisin bread.",
+   "ko": "나파는 손바닥으로 반죽을 눌러 편 뒤 건포도 빵으로 말아요.",
+   "blank": "ฝ่ามือ",
    "src": "made"
   }
  ],
@@ -43181,6 +43533,22 @@
    "en": "Let's go out this Thursday.",
    "ko": "이번 목요일에 놀러 가자.",
    "blank": "พฤหัส"
+  }
+ ],
+ "w|พฤหัสบดี": [
+  {
+   "text": "คลินิกของวิชัยปิดทุกวันพฤหัสบดีตอนบ่าย",
+   "en": "Wichai's clinic closes every Thursday afternoon.",
+   "ko": "위차이의 병원은 매주 목요일 오후에 문을 닫아요.",
+   "blank": "พฤหัสบดี",
+   "src": "made"
+  },
+  {
+   "text": "ทุกวันพฤหัสบดีนภาทำขนมปังโฮลวีตเป็นพิเศษ",
+   "en": "Every Thursday Napha makes a special whole-wheat bread.",
+   "ko": "나파는 매주 목요일에 특별히 통밀빵을 만들어요.",
+   "blank": "พฤหัสบดี",
+   "src": "made"
   }
  ],
  "w|พลทหาร": [
@@ -46561,6 +46929,22 @@
    "blank": "มด"
   }
  ],
+ "w|มดลูก": [
+  {
+   "text": "วิชัยผ่าตัดเอามดลูกออกให้หมาตัวเมียที่ติดเชื้อ",
+   "en": "Wichai surgically removed the uterus of a female dog that had an infection.",
+   "ko": "위차이는 감염된 암캐의 자궁을 수술로 들어냈어요.",
+   "blank": "มดลูก",
+   "src": "made"
+  },
+  {
+   "text": "ลูกจ้างของนภาลางานไปผ่าตัดเนื้องอกในมดลูกที่ไม่ร้ายแรง",
+   "en": "Napha's employee took leave for surgery to remove a benign tumor in her uterus.",
+   "ko": "나파의 직원은 자궁의 양성 종양 수술을 받으러 휴가를 냈어요.",
+   "blank": "มดลูก",
+   "src": "made"
+  }
+ ],
  "w|มติ": [
   {
    "text": "คณะกรรมการพิพิธภัณฑ์มีมติให้เปิดฟรีทุกวันอาทิตย์",
@@ -47628,6 +48012,22 @@
    "en": "Seeing Somsak's new pair of shoes, his friend exclaimed no wonder he'd got faster.",
    "ko": "솜삭의 새 운동화를 보고 친구가 어쩐지 빨라졌더라고 외쳤어요.",
    "blank": "มิน่า",
+   "src": "made"
+  }
+ ],
+ "w|มิน่าล่ะ": [
+  {
+   "text": "พอเห็นผลเลือด วิชัยก็พูดว่ามิน่าล่ะหมาถึงไม่ยอมกินข้าว",
+   "en": "Seeing the blood results, Wichai said no wonder the dog wouldn't eat.",
+   "ko": "혈액 검사 결과를 보고 위차이는 어쩐지 개가 밥을 안 먹더라고 했어요.",
+   "blank": "มิน่าล่ะ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าชิมแล้วบอกว่ามิน่าล่ะคนถึงต่อแถวยาวทุกเช้า",
+   "en": "After tasting it, a customer said no wonder people queue up every morning.",
+   "ko": "손님이 맛을 보고 어쩐지 매일 아침 줄이 길더라고 했어요.",
+   "blank": "มิน่าล่ะ",
    "src": "made"
   }
  ],
@@ -53835,6 +54235,38 @@
    "src": "made"
   }
  ],
+ "w|เรื้อรัง": [
+  {
+   "text": "แมวตัวนี้เป็นโรคไตเรื้อรังจึงต้องมาให้น้ำเกลือทุกสัปดาห์",
+   "en": "This cat has chronic kidney disease, so it has to come for fluids every week.",
+   "ko": "이 고양이는 만성 신장병이라 매주 수액을 맞으러 와야 해요.",
+   "blank": "เรื้อรัง",
+   "src": "made"
+  },
+  {
+   "text": "นภามีอาการปวดหลังเรื้อรังจากการยกกระสอบแป้งหนักๆ",
+   "en": "Napha has chronic back pain from lifting heavy sacks of flour.",
+   "ko": "나파는 무거운 밀가루 포대를 들어서 만성 허리 통증이 있어요.",
+   "blank": "เรื้อรัง",
+   "src": "made"
+  }
+ ],
+ "w|แร่": [
+  {
+   "text": "วิชัยสงสัยว่าน้ำในบ่อเลี้ยงปลามีแร่เหล็กมากเกินไป",
+   "en": "Wichai suspects the water in the fish pond contains too much iron mineral.",
+   "ko": "위차이는 양어장 물에 철 성분 광물이 너무 많은 것 같다고 의심해요.",
+   "blank": "แร่",
+   "src": "made"
+  },
+  {
+   "text": "นภาใช้เกลือที่มีแร่ธาตุสูงจากนาเกลือริมทะเล",
+   "en": "Napha uses mineral-rich salt from the seaside salt pans.",
+   "ko": "나파는 바닷가 염전에서 난 미네랄이 많은 소금을 써요.",
+   "blank": "แร่",
+   "src": "made"
+  }
+ ],
  "w|แรก": [
   {
    "text": "วันแรกที่ทำงานตื่นเต้น",
@@ -55389,6 +55821,22 @@
    "blank": "ลำไย"
   }
  ],
+ "w|ลำไส้": [
+  {
+   "text": "วิชัยตรวจพบว่าหมากลืนกระดูกไก่ไปติดอยู่ในลำไส้",
+   "en": "Wichai found that the dog had swallowed a chicken bone that got stuck in its intestine.",
+   "ko": "위차이는 개가 삼킨 닭뼈가 장에 걸린 걸 찾아냈어요.",
+   "blank": "ลำไส้",
+   "src": "made"
+  },
+  {
+   "text": "หมอบอกนภาว่าอาหารที่มีกากใยช่วยให้ลำไส้ทำงานดีขึ้น",
+   "en": "The doctor told Napha that fiber-rich food helps the intestines work better.",
+   "ko": "의사는 나파에게 섬유질이 많은 음식이 장 기능을 좋게 한다고 했어요.",
+   "blank": "ลำไส้",
+   "src": "made"
+  }
+ ],
  "w|ลิขสิทธิ์": [
   {
    "text": "สถาปนิกบอกวิชัยว่าแบบบ้านหลังนี้มีลิขสิทธิ์ ห้ามเอาไปสร้างซ้ำที่อื่น",
@@ -56513,6 +56961,22 @@
    "en": "She's pale from losing blood.",
    "ko": "피를 많이 흘려서 창백해.",
    "blank": "เลือด"
+  }
+ ],
+ "w|เลือน": [
+  {
+   "text": "ชื่อบนปลอกคอของหมาจรเลือนจนอ่านไม่ออก",
+   "en": "The name on the stray dog's collar had faded so much it was illegible.",
+   "ko": "떠돌이 개 목줄의 이름이 흐려져서 읽을 수 없었어요.",
+   "blank": "เลือน",
+   "src": "made"
+  },
+  {
+   "text": "ตัวอักษรบนป้ายร้านเก่าเลือนไปตามกาลเวลา",
+   "en": "The lettering on the old shop sign has faded with time.",
+   "ko": "오래된 가게 간판 글씨가 세월에 흐려졌어요.",
+   "blank": "เลือน",
+   "src": "made"
   }
  ],
  "w|เลื่อน": [
@@ -58527,6 +58991,22 @@
    "en": "These glasses help a lot.",
    "ko": "이 안경이 정말 도움이 돼.",
    "blank": "แว่นตา"
+  }
+ ],
+ "w|แวบ": [
+  {
+   "text": "วิชัยเห็นหางหนูแวบเข้าไปใต้ตู้ยาในห้องเก็บของ",
+   "en": "Wichai glimpsed a rat's tail flash under the medicine cabinet in the storeroom.",
+   "ko": "위차이는 창고 약장 밑으로 쥐꼬리가 휙 들어가는 걸 봤어요.",
+   "blank": "แวบ",
+   "src": "made"
+  },
+  {
+   "text": "นภาแวบไปซื้อเนยที่ร้านค้าส่งช่วงที่แป้งกำลังพัก",
+   "en": "Napha nipped out to buy butter at the wholesaler while the dough was resting.",
+   "ko": "나파는 반죽을 쉬게 하는 사이 도매상에 잠깐 버터를 사러 다녀왔어요.",
+   "blank": "แวบ",
+   "src": "made"
   }
  ],
  "w|แวว": [
@@ -62391,6 +62871,22 @@
    "blank": "สายไฟ"
   }
  ],
+ "w|สายลม": [
+  {
+   "text": "วิชัยเปิดหน้าต่างให้สายลมเย็นพัดเข้าห้องพักฟื้นของสัตว์",
+   "en": "Wichai opened the window to let the cool breeze into the animals' recovery room.",
+   "ko": "위차이는 창문을 열어 동물 회복실에 시원한 바람이 들게 했어요.",
+   "blank": "สายลม",
+   "src": "made"
+  },
+  {
+   "text": "โต๊ะหน้าร้านเย็นสบายเพราะมีสายลมจากแม่น้ำพัดมาตลอด",
+   "en": "The tables outside the shop are pleasantly cool because a breeze blows in from the river all the time.",
+   "ko": "강에서 바람이 늘 불어와서 가게 앞 테이블은 시원해요.",
+   "blank": "สายลม",
+   "src": "made"
+  }
+ ],
  "w|สายลับ": [
   {
    "text": "เพื่อนร่วมงานล้อสมชายว่าเงียบเหมือนสายลับในหนัง",
@@ -65041,6 +65537,22 @@
    "blank": "หน้าบ้าน"
   }
  ],
+ "w|หน้าผาก": [
+  {
+   "text": "วิชัยเช็ดเหงื่อที่หน้าผากหลังทำคลอดลูกวัว",
+   "en": "Wichai wiped the sweat from his forehead after delivering a calf.",
+   "ko": "위차이는 송아지를 받아 낸 뒤 이마의 땀을 닦았어요.",
+   "blank": "หน้าผาก",
+   "src": "made"
+  },
+  {
+   "text": "หน้าผากนภาเปื้อนแป้งขาวตอนออกมาคุยกับลูกค้า",
+   "en": "Napha's forehead was smudged with white flour when she came out to talk to customers.",
+   "ko": "손님과 이야기하러 나왔을 때 나파 이마에 하얀 밀가루가 묻어 있었어요.",
+   "blank": "หน้าผาก",
+   "src": "made"
+  }
+ ],
  "w|หน้าฝน": [
   {
    "text": "หน้าฝนอย่าลืมร่ม",
@@ -65302,6 +65814,22 @@
    "en": "Many orchard farmers lost heart because this year's dry season was unusually long.",
    "ko": "올해 건기가 유난히 길어서 많은 과수 농민이 의욕을 잃었어요.",
    "blank": "หมดกำลังใจ",
+   "src": "made"
+  }
+ ],
+ "w|หมดสติ": [
+  {
+   "text": "หมาตัวนั้นหมดสติไปเพราะอากาศร้อนจัดก่อนถึงคลินิก",
+   "en": "That dog passed out from the intense heat before it reached the clinic.",
+   "ko": "그 개는 병원에 오기 전에 더위 때문에 의식을 잃었어요.",
+   "blank": "หมดสติ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกจ้างคนหนึ่งเกือบหมดสติเพราะยืนหน้าเตาร้อนนานเกินไป",
+   "en": "One employee nearly fainted from standing too long in front of the hot oven.",
+   "ko": "한 직원이 뜨거운 오븐 앞에 너무 오래 서 있다가 기절할 뻔했어요.",
+   "blank": "หมดสติ",
    "src": "made"
   }
  ],
@@ -66757,6 +67285,22 @@
    "src": "made"
   }
  ],
+ "w|ห้วย": [
+  {
+   "text": "ควายตัวนั้นลื่นล้มในห้วยหลังหมู่บ้านจนขาเคล็ด",
+   "en": "That buffalo slipped in the creek behind the village and sprained its leg.",
+   "ko": "그 물소는 마을 뒤 개울에서 미끄러져 다리를 삐었어요.",
+   "blank": "ห้วย",
+   "src": "made"
+  },
+  {
+   "text": "วันหยุดนภาชอบไปนั่งเล่นริมห้วยที่น้ำใสเย็น",
+   "en": "On days off Napha likes to sit by a creek with cool, clear water.",
+   "ko": "쉬는 날 나파는 맑고 시원한 개울가에 앉아 쉬기를 좋아해요.",
+   "blank": "ห้วย",
+   "src": "made"
+  }
+ ],
  "w|ห่วยแตก": [
   {
    "text": "ประยุทธบ่นว่าระบบเสียงในโรงละครคืนนี้ห่วยแตกมาก",
@@ -67499,6 +68043,22 @@
    "blank": "หาก"
   }
  ],
+ "w|หากิน": [
+  {
+   "text": "วิชัยอธิบายว่านกฮูกออกหากินตอนกลางคืนจึงไม่ควรปลุกตอนกลางวัน",
+   "en": "Wichai explained that owls go out to forage at night, so they shouldn't be woken in the daytime.",
+   "ko": "위차이는 부엉이가 밤에 먹이를 찾으러 나가니 낮에 깨우면 안 된다고 설명했어요.",
+   "blank": "หากิน",
+   "src": "made"
+  },
+  {
+   "text": "พ่อของนภาหากินด้วยการขายขนมปังมาตั้งแต่หนุ่ม",
+   "en": "Napha's father has made a living selling bread since he was young.",
+   "ko": "나파의 아버지는 젊을 때부터 빵을 팔아 생계를 꾸렸어요.",
+   "blank": "หากิน",
+   "src": "made"
+  }
+ ],
  "w|หาง": [
   {
    "text": "เด็กชายจับหมาที่หาง",
@@ -67946,6 +68506,22 @@
    "en": "Porn told herself to shut up and keep running instead of complaining about being tired.",
    "ko": "폰은 힘들다고 투덜대는 대신 입 다물고 계속 달리라고 스스로에게 말했어요.",
    "blank": "หุบปาก",
+   "src": "made"
+  }
+ ],
+ "w|หุ้ม": [
+  {
+   "text": "วิชัยใช้ผ้าขนหนูหุ้มตัวลูกแมวไว้ไม่ให้หนาว",
+   "en": "Wichai wrapped the kitten in a towel to keep it from getting cold.",
+   "ko": "위차이는 새끼 고양이가 춥지 않게 수건으로 감쌌어요.",
+   "blank": "หุ้ม",
+   "src": "made"
+  },
+  {
+   "text": "นภาหุ้มไส้กรอกด้วยแป้งพัฟก่อนเข้าเตา",
+   "en": "Napha wraps the sausages in puff pastry before they go in the oven.",
+   "ko": "나파는 오븐에 넣기 전에 소시지를 퍼프 반죽으로 감싸요.",
+   "blank": "หุ้ม",
    "src": "made"
   }
  ],
@@ -71435,6 +72011,22 @@
    "src": "made"
   }
  ],
+ "w|อีกหน่อย": [
+  {
+   "text": "วิชัยบอกเจ้าของว่ารออีกหน่อยยาสลบจะหมดฤทธิ์",
+   "en": "Wichai told the owner to wait a little longer for the anesthetic to wear off.",
+   "ko": "위차이는 주인에게 마취가 풀리려면 조금만 더 기다리라고 했어요.",
+   "blank": "อีกหน่อย",
+   "src": "made"
+  },
+  {
+   "text": "นภาบอกลูกค้าว่ารออีกหน่อยนะ ขนมปังรอบใหม่ใกล้เสร็จแล้ว",
+   "en": "Napha told the customer to wait a bit longer because the next batch was almost done.",
+   "ko": "나파는 손님에게 새 빵이 거의 다 됐으니 조금만 기다려 달라고 했어요.",
+   "blank": "อีกหน่อย",
+   "src": "made"
+  }
+ ],
  "w|อีกา": [
   {
    "text": "อีกาเกาะอยู่บนหลังคา",
@@ -71635,6 +72227,22 @@
    "src": "made"
   }
  ],
+ "w|อุดมสมบูรณ์": [
+  {
+   "text": "ฟาร์มโคนมที่วิชัยดูแลอยู่บนที่ราบที่หญ้าอุดมสมบูรณ์ตลอดปี",
+   "en": "The dairy farm Wichai looks after is on a plain where the grass is lush all year.",
+   "ko": "위차이가 돌보는 젖소 농장은 일 년 내내 풀이 풍성한 평야에 있어요.",
+   "blank": "อุดมสมบูรณ์",
+   "src": "made"
+  },
+  {
+   "text": "ผลไม้ที่นภาใช้มาจากสวนในหุบเขาที่ดินอุดมสมบูรณ์",
+   "en": "The fruit Napha uses comes from orchards in a valley with fertile soil.",
+   "ko": "나파가 쓰는 과일은 땅이 비옥한 골짜기의 과수원에서 와요.",
+   "blank": "อุดมสมบูรณ์",
+   "src": "made"
+  }
+ ],
  "w|อุดหนุน": [
   {
    "text": "ประยุทธชวนเพื่อนมาอุดหนุนละครเวทีของคณะนักศึกษา",
@@ -71710,6 +72318,22 @@
    "en": "Suda's team appealed the match result to the basketball association.",
    "ko": "수다의 팀은 경기 결과에 대해 농구 협회에 이의를 제기했어요.",
    "blank": "อุทธรณ์",
+   "src": "made"
+  }
+ ],
+ "w|อุทาน": [
+  {
+   "text": "เจ้าของอุทานเสียงดังเมื่อเห็นลูกหมาเกิดใหม่ห้าตัว",
+   "en": "The owner exclaimed loudly when she saw five newborn puppies.",
+   "ko": "주인은 갓 태어난 강아지 다섯 마리를 보고 크게 탄성을 질렀어요.",
+   "blank": "อุทาน",
+   "src": "made"
+  },
+  {
+   "text": "นภาอุทานว่าตายแล้วเมื่อเห็นเค้กแต่งงานล้มคว่ำ",
+   "en": "Napha cried out oh no when she saw the wedding cake topple over.",
+   "ko": "웨딩 케이크가 넘어진 걸 보고 나파는 맙소사 하고 외쳤어요.",
+   "blank": "อุทาน",
    "src": "made"
   }
  ],
@@ -72371,6 +72995,22 @@
    "en": "Which account should I transfer to?",
    "ko": "어느 계좌로 보내?",
    "blank": "โอน"
+  }
+ ],
+ "w|โอบ": [
+  {
+   "text": "เด็กผู้หญิงโอบหมาตัวโตไว้แน่นตอนวิชัยฉีดยา",
+   "en": "The little girl hugged the big dog tightly while Wichai gave the injection.",
+   "ko": "위차이가 주사를 놓는 동안 여자아이가 큰 개를 꼭 껴안았어요.",
+   "blank": "โอบ",
+   "src": "made"
+  },
+  {
+   "text": "นภาโอบกอดลูกค้าประจำที่มาลาก่อนย้ายไปต่างจังหวัด",
+   "en": "Napha hugged a regular customer who came to say goodbye before moving to another province.",
+   "ko": "나파는 지방으로 이사 가기 전에 인사하러 온 단골손님을 꼭 안아 줬어요.",
+   "blank": "โอบ",
+   "src": "made"
   }
  ],
  "w|โอ๊ย": [
