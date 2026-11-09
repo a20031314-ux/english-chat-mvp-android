@@ -1071,6 +1071,22 @@
    "blank": "administración"
   }
  ],
+ "w|administrador": [
+  {
+   "text": "El administrador del edificio llamó a Carlos por una gotera.",
+   "en": "The building manager called Carlos about a leak.",
+   "ko": "건물 관리인이 물이 샌다고 카를로스에게 전화했어요.",
+   "blank": "administrador",
+   "src": "made"
+  },
+  {
+   "text": "El administrador del centro revisa las cuentas con Elena cada mes.",
+   "en": "The home's administrator goes over the accounts with Elena every month.",
+   "ko": "보육원 관리자는 매달 엘레나와 장부를 점검해요.",
+   "blank": "administrador",
+   "src": "made"
+  }
+ ],
  "w|admirador": [
   {
    "text": "Un admirador le dejó flores en el camerino.",
@@ -1167,6 +1183,22 @@
    "en": "I don't know where they took the boxes.",
    "ko": "상자를 어디로 가져갔는지 모르겠어.",
    "blank": "adónde"
+  }
+ ],
+ "w|adopción": [
+  {
+   "text": "Los vecinos de Carlos están felices con la adopción de su hija.",
+   "en": "Carlos's neighbors are happy about adopting their daughter.",
+   "ko": "카를로스의 이웃들은 딸을 입양해서 행복해해요.",
+   "blank": "adopción",
+   "src": "made"
+  },
+  {
+   "text": "Elena firmó los papeles de la adopción de una niña del centro.",
+   "en": "Elena signed the adoption papers for a girl from the home.",
+   "ko": "엘레나는 보육원 여자아이의 입양 서류에 서명했어요.",
+   "blank": "adopción",
+   "src": "made"
   }
  ],
  "w|adoptar": [
@@ -2571,6 +2603,22 @@
    "blank": "alrededor"
   }
  ],
+ "w|altamente": [
+  {
+   "text": "En su ciudad, Carlos es un profesional altamente respetado.",
+   "en": "In his city, Carlos is a highly respected professional.",
+   "ko": "카를로스는 자기 도시에서 아주 존경받는 전문가예요.",
+   "blank": "altamente",
+   "src": "made"
+  },
+  {
+   "text": "El trabajo de Elena está altamente valorado en la ciudad.",
+   "en": "Elena's work is highly valued in the city.",
+   "ko": "엘레나의 일은 도시에서 높이 평가받아요.",
+   "blank": "altamente",
+   "src": "made"
+  }
+ ],
  "w|altar": [
   {
    "text": "La hermana de Marina se casó ante el altar de una iglesia pequeña.",
@@ -3581,6 +3629,22 @@
    "blank": "Apenas"
   }
  ],
+ "w|apertura": [
+  {
+   "text": "Carlos asistió a la apertura de un museo que él mismo diseñó.",
+   "en": "Carlos attended the opening of a museum he designed himself.",
+   "ko": "카를로스는 자기가 설계한 박물관 개관식에 갔어요.",
+   "blank": "apertura",
+   "src": "made"
+  },
+  {
+   "text": "Elena organizó una fiesta para la apertura de la nueva biblioteca.",
+   "en": "Elena organized a party for the opening of the new library.",
+   "ko": "엘레나는 새 도서관 개관 파티를 열었어요.",
+   "blank": "apertura",
+   "src": "made"
+  }
+ ],
  "w|apestar": [
   {
    "text": "Esta nevera empieza a apestar.",
@@ -4081,6 +4145,22 @@
    "blank": "árbol"
   }
  ],
+ "w|arbusto": [
+  {
+   "text": "Delante de la casa de Carlos crece un arbusto de rosas.",
+   "en": "A rose bush grows in front of Carlos's house.",
+   "ko": "카를로스네 집 앞에는 장미 덤불이 자라요.",
+   "blank": "arbusto",
+   "src": "made"
+  },
+  {
+   "text": "Cuando juegan, los niños se esconden detrás de un arbusto.",
+   "en": "When they play, the children hide behind a bush.",
+   "ko": "놀 때 아이들은 덤불 뒤에 숨어요.",
+   "blank": "arbusto",
+   "src": "made"
+  }
+ ],
  "w|archivo": [
   {
    "text": "Guarda el archivo en la carpeta.",
@@ -4279,6 +4359,22 @@
    "en": "The hallway closet is full.",
    "ko": "복도 옷장이 가득 찼어.",
    "blank": "armario"
+  }
+ ],
+ "w|arquitecto": [
+  {
+   "text": "Carlos es arquitecto y diseña casas con mucha luz.",
+   "en": "Carlos is an architect and designs houses with lots of light.",
+   "ko": "카를로스는 건축가라서 햇빛이 잘 드는 집을 설계해요.",
+   "blank": "arquitecto",
+   "src": "made"
+  },
+  {
+   "text": "El arquitecto del nuevo edificio vino a ver a Elena.",
+   "en": "The architect of the new building came to see Elena.",
+   "ko": "새 건물을 지은 건축가가 엘레나를 만나러 왔어요.",
+   "blank": "arquitecto",
+   "src": "made"
   }
  ],
  "w|arrancar": [
@@ -8773,6 +8869,22 @@
    "blank": "capítulo"
   }
  ],
+ "w|cápsula": [
+  {
+   "text": "La nieta de Carlos enterró una cápsula del tiempo en el jardín.",
+   "en": "Carlos's granddaughter buried a time capsule in the garden.",
+   "ko": "카를로스의 손녀가 정원에 타임캡슐을 묻었어요.",
+   "blank": "cápsula",
+   "src": "made"
+  },
+  {
+   "text": "Los niños de Elena guardaron sus cartas en una cápsula del tiempo.",
+   "en": "Elena's children put their letters in a time capsule.",
+   "ko": "엘레나네 아이들은 편지를 타임캡슐에 넣었어요.",
+   "blank": "cápsula",
+   "src": "made"
+  }
+ ],
  "w|captar": [
   {
    "text": "No logré captar el sentido del chiste.",
@@ -11235,6 +11347,22 @@
    "blank": "cola"
   }
  ],
+ "w|colchón": [
+  {
+   "text": "Carlos compró un colchón nuevo porque le dolía la espalda.",
+   "en": "Carlos bought a new mattress because his back hurt.",
+   "ko": "카를로스는 허리가 아파서 매트리스를 새로 샀어요.",
+   "blank": "colchón",
+   "src": "made"
+  },
+  {
+   "text": "Elena compró un colchón nuevo para cada cama del centro.",
+   "en": "Elena bought a new mattress for every bed in the home.",
+   "ko": "엘레나는 보육원 침대마다 새 매트리스를 샀어요.",
+   "blank": "colchón",
+   "src": "made"
+  }
+ ],
  "w|colección": [
   {
    "text": "Tiene una colección enorme de sellos.",
@@ -12009,6 +12137,22 @@
    "en": "They're looking for the accomplice who fled last night.",
    "ko": "어젯밤 도망친 공범을 찾고 있어.",
    "blank": "cómplice"
+  }
+ ],
+ "w|componer": [
+  {
+   "text": "Los fines de semana, Carlos compone canciones con la guitarra.",
+   "en": "On weekends, Carlos composes songs on the guitar.",
+   "ko": "주말이면 카를로스는 기타로 노래를 지어요.",
+   "blank": "compone",
+   "src": "made"
+  },
+  {
+   "text": "Elena compone pequeñas canciones para los niños.",
+   "en": "Elena composes little songs for the children.",
+   "ko": "엘레나는 아이들에게 불러 줄 짧은 노래를 지어요.",
+   "blank": "compone",
+   "src": "made"
   }
  ],
  "w|comportamiento": [
@@ -12939,6 +13083,22 @@
    "en": "He followed his mother's advice.",
    "ko": "엄마 조언을 따랐어.",
    "blank": "consejo"
+  }
+ ],
+ "w|consentimiento": [
+  {
+   "text": "Carlos no cambia nada sin el consentimiento del cliente.",
+   "en": "Carlos doesn't change anything without the client's consent.",
+   "ko": "카를로스는 손님의 동의 없이는 아무것도 바꾸지 않아요.",
+   "blank": "consentimiento",
+   "src": "made"
+  },
+  {
+   "text": "Para cualquier foto de los niños, Elena pide el consentimiento de un tutor.",
+   "en": "For any photo of the children, Elena asks for a guardian's consent.",
+   "ko": "엘레나는 아이 사진을 찍을 때마다 보호자 동의를 받아요.",
+   "blank": "consentimiento",
+   "src": "made"
   }
  ],
  "w|conservar": [
@@ -14841,6 +15001,22 @@
    "en": "She covered the child with a blanket.",
    "ko": "아이에게 담요를 덮어 줬어.",
    "blank": "Cubrió"
+  }
+ ],
+ "w|cuchara": [
+  {
+   "text": "En casa de Carlos, la niña toma la sopa con una cuchara de madera.",
+   "en": "At Carlos's house, the girl eats her soup with a wooden spoon.",
+   "ko": "카를로스네 집에서 아이는 나무 숟가락으로 수프를 먹어요.",
+   "blank": "cuchara",
+   "src": "made"
+  },
+  {
+   "text": "En el centro de Elena, cada niño tiene su propia cuchara con su nombre.",
+   "en": "At Elena's home, every child has their own spoon with their name on it.",
+   "ko": "엘레나의 보육원에서는 아이마다 이름이 적힌 숟가락이 있어요.",
+   "blank": "cuchara",
+   "src": "made"
   }
  ],
  "w|cuchillo": [
@@ -19487,6 +19663,22 @@
    "blank": "embarazo"
   }
  ],
+ "w|embarazoso": [
+  {
+   "text": "Para Carlos fue muy embarazoso olvidar el nombre de un cliente.",
+   "en": "It was very embarrassing for Carlos to forget a client's name.",
+   "ko": "카를로스는 손님 이름을 잊어버려서 몹시 민망했어요.",
+   "blank": "embarazoso",
+   "src": "made"
+  },
+  {
+   "text": "Fue embarazoso cuando Elena llamó a un niño con otro nombre.",
+   "en": "It was embarrassing when Elena called a boy by another name.",
+   "ko": "엘레나가 한 아이를 다른 이름으로 불렀을 때 민망했어요.",
+   "blank": "embarazoso",
+   "src": "made"
+  }
+ ],
  "w|embargo": [
   {
    "text": "Sin embargo, decidimos seguir adelante.",
@@ -20517,6 +20709,22 @@
    "src": "made"
   }
  ],
+ "w|entretenimiento": [
+  {
+   "text": "Para Carlos, el mejor entretenimiento es dibujar edificios.",
+   "en": "For Carlos, the best entertainment is drawing buildings.",
+   "ko": "카를로스에게 제일 좋은 즐길 거리는 건물 그리기예요.",
+   "blank": "entretenimiento",
+   "src": "made"
+  },
+  {
+   "text": "El entretenimiento favorito de los niños de Elena son las películas de dibujos.",
+   "en": "The favorite entertainment of Elena's children is cartoon movies.",
+   "ko": "엘레나네 아이들이 가장 좋아하는 즐길 거리는 만화 영화예요.",
+   "blank": "entretenimiento",
+   "src": "made"
+  }
+ ],
  "w|entrevista": [
   {
    "text": "Tengo una entrevista de trabajo mañana.",
@@ -21417,6 +21625,22 @@
    "en": "There's a kind of strange silence.",
    "ko": "묘한 침묵이 감돌아.",
    "blank": "especie"
+  }
+ ],
+ "w|específicamente": [
+  {
+   "text": "Carlos diseñó la cocina específicamente para su madre, que usa silla de ruedas.",
+   "en": "Carlos designed the kitchen specifically for his mother, who uses a wheelchair.",
+   "ko": "카를로스는 휠체어를 타는 어머니를 위해 특별히 주방을 설계했어요.",
+   "blank": "específicamente",
+   "src": "made"
+  },
+  {
+   "text": "Elena busca familias preparadas específicamente para adoptar hermanos.",
+   "en": "Elena looks for families prepared specifically to adopt siblings.",
+   "ko": "엘레나는 형제를 함께 입양할 준비가 된 가족을 따로 찾아요.",
+   "blank": "específicamente",
+   "src": "made"
   }
  ],
  "w|específico": [
@@ -24151,6 +24375,22 @@
    "en": "He is a brilliant physicist in his field.",
    "ko": "그는 자기 분야의 뛰어난 물리학자야.",
    "blank": "físico"
+  }
+ ],
+ "w|flaco": [
+  {
+   "text": "Carlos está muy flaco porque se olvida de comer cuando trabaja.",
+   "en": "Carlos is very thin because he forgets to eat when he works.",
+   "ko": "카를로스는 일할 때 밥 먹는 걸 잊어서 아주 말랐어요.",
+   "blank": "flaco",
+   "src": "made"
+  },
+  {
+   "text": "Un niño muy flaco llegó al centro de Elena el invierno pasado.",
+   "en": "A very thin boy arrived at Elena's home last winter.",
+   "ko": "지난겨울 엘레나의 보육원에 아주 마른 남자아이가 왔어요.",
+   "blank": "flaco",
+   "src": "made"
   }
  ],
  "w|flecha": [
@@ -27345,6 +27585,22 @@
    "blank": "hombro"
   }
  ],
+ "w|homicida": [
+  {
+   "text": "Carlos lee novelas policiacas en las que el homicida siempre es el mayordomo.",
+   "en": "Carlos reads detective novels in which the murderer is always the butler.",
+   "ko": "카를로스가 읽는 추리 소설에서는 늘 집사가 살인범이에요.",
+   "blank": "homicida",
+   "src": "made"
+  },
+  {
+   "text": "Un niño vio en la tele la detención de un homicida y tuvo pesadillas.",
+   "en": "A boy saw a murderer's arrest on TV and had nightmares.",
+   "ko": "한 아이가 텔레비전에서 살인범이 붙잡히는 장면을 보고 악몽을 꿨어요.",
+   "blank": "homicida",
+   "src": "made"
+  }
+ ],
  "w|homicidio": [
   {
    "text": "Investigaron el homicidio durante meses.",
@@ -28053,6 +28309,22 @@
    "en": "They were selling products of illegal origin.",
    "ko": "불법 출처의 제품을 팔고 있었어.",
    "blank": "ilegal"
+  }
+ ],
+ "w|iluminar": [
+  {
+   "text": "En la casa de Carlos, las ventanas grandes iluminan toda la sala.",
+   "en": "In Carlos's house, the big windows light up the whole living room.",
+   "ko": "카를로스네 집은 큰 창문이 거실 전체를 환하게 밝혀요.",
+   "blank": "iluminan",
+   "src": "made"
+  },
+  {
+   "text": "En Navidad, unas luces de colores iluminan el comedor del centro.",
+   "en": "At Christmas, colored lights light up the home's dining room.",
+   "ko": "크리스마스에는 알록달록한 전구가 보육원 식당을 밝혀요.",
+   "blank": "iluminan",
+   "src": "made"
   }
  ],
  "w|ilusión": [
@@ -29497,6 +29769,22 @@
    "blank": "intacto"
   }
  ],
+ "w|integridad": [
+  {
+   "text": "Para Carlos, la integridad es más importante que el dinero.",
+   "en": "For Carlos, integrity matters more than money.",
+   "ko": "카를로스에게는 돈보다 정직함이 더 중요해요.",
+   "blank": "integridad",
+   "src": "made"
+  },
+  {
+   "text": "Elena habla a los niños de la integridad y la honestidad.",
+   "en": "Elena talks to the children about integrity and honesty.",
+   "ko": "엘레나는 아이들에게 바른 마음과 정직을 이야기해요.",
+   "blank": "integridad",
+   "src": "made"
+  }
+ ],
  "w|intelectual": [
   {
    "text": "Andrés es un hombre intelectual que lee principalmente novelas.",
@@ -29838,6 +30126,22 @@
    "en": "The police had to step in to direct the traffic.",
    "ko": "경찰이 나서서 교통을 정리해야 했어요.",
    "blank": "intervenir",
+   "src": "made"
+  }
+ ],
+ "w|intimidar": [
+  {
+   "text": "Un cliente intentó intimidar a Carlos para bajar el precio.",
+   "en": "A client tried to intimidate Carlos into lowering the price.",
+   "ko": "한 손님이 값을 깎으려고 카를로스에게 겁을 주려 했어요.",
+   "blank": "intimidar",
+   "src": "made"
+  },
+  {
+   "text": "Un chico mayor intentaba intimidar a los pequeños, y Elena habló con él.",
+   "en": "An older boy was trying to intimidate the little ones, and Elena talked to him.",
+   "ko": "큰 아이 하나가 어린아이들을 겁주려 해서 엘레나가 타일렀어요.",
+   "blank": "intimidar",
    "src": "made"
   }
  ],
@@ -32979,6 +33283,22 @@
    "blank": "mancha"
   }
  ],
+ "w|manchar": [
+  {
+   "text": "La nieta de Carlos manchó el plano con chocolate.",
+   "en": "Carlos's granddaughter got chocolate on the blueprint.",
+   "ko": "카를로스의 손녀가 도면에 초콜릿을 묻혔어요.",
+   "blank": "manchó",
+   "src": "made"
+  },
+  {
+   "text": "Un niño manchó la pared del comedor con pintura azul.",
+   "en": "A boy got blue paint on the dining room wall.",
+   "ko": "한 아이가 식당 벽에 파란 물감을 묻혔어요.",
+   "blank": "manchó",
+   "src": "made"
+  }
+ ],
  "w|mandar": [
   {
    "text": "Te voy a mandar un mensaje luego.",
@@ -35949,6 +36269,22 @@
    "blank": "musulmana"
   }
  ],
+ "w|mutuamente": [
+  {
+   "text": "Carlos y su socio se respetan mutuamente.",
+   "en": "Carlos and his partner respect each other.",
+   "ko": "카를로스와 동업자는 서로를 존중해요.",
+   "blank": "mutuamente",
+   "src": "made"
+  },
+  {
+   "text": "Elena y la cocinera del centro se ayudan mutuamente.",
+   "en": "Elena and the home's cook help each other.",
+   "ko": "엘레나와 보육원 요리사는 서로 도와요.",
+   "blank": "mutuamente",
+   "src": "made"
+  }
+ ],
  "w|muy": [
   {
    "text": "Hace muy calor hoy.",
@@ -36501,6 +36837,22 @@
    "en": "With so much fog you could not see the road.",
    "ko": "안개가 너무 짙어서 도로가 안 보였어.",
    "blank": "niebla"
+  }
+ ],
+ "w|nieta": [
+  {
+   "text": "La nieta de Carlos lo visita cada domingo.",
+   "en": "Carlos's granddaughter visits him every Sunday.",
+   "ko": "카를로스의 손녀는 일요일마다 할아버지를 찾아와요.",
+   "blank": "nieta",
+   "src": "made"
+  },
+  {
+   "text": "Los sábados, la nieta de Elena ayuda en la cocina.",
+   "en": "On Saturdays, Elena's granddaughter helps in the kitchen.",
+   "ko": "토요일마다 엘레나의 손녀가 주방 일을 도와요.",
+   "blank": "nieta",
+   "src": "made"
   }
  ],
  "w|nieto": [
@@ -38073,6 +38425,22 @@
    "blank": "oreja"
   }
  ],
+ "w|orfanato": [
+  {
+   "text": "De niño, Carlos visitaba un orfanato donde trabajaba su madre.",
+   "en": "As a child, Carlos used to visit an orphanage where his mother worked.",
+   "ko": "어릴 적 카를로스는 어머니가 일하던 고아원에 자주 갔어요.",
+   "blank": "orfanato",
+   "src": "made"
+  },
+  {
+   "text": "Elena dirige un orfanato en las afueras de la ciudad.",
+   "en": "Elena runs an orphanage on the outskirts of the city.",
+   "ko": "엘레나는 도시 외곽에서 고아원을 운영해요.",
+   "blank": "orfanato",
+   "src": "made"
+  }
+ ],
  "w|organización": [
   {
    "text": "Trabajo en una organización sin fines de lucro.",
@@ -38257,6 +38625,22 @@
    "en": "He won a gold medal.",
    "ko": "그는 금메달을 땄어.",
    "blank": "oro"
+  }
+ ],
+ "w|orquesta": [
+  {
+   "text": "Carlos diseñó la sala de conciertos de la orquesta municipal.",
+   "en": "Carlos designed the concert hall for the city orchestra.",
+   "ko": "카를로스는 시립 오케스트라의 공연장을 설계했어요.",
+   "blank": "orquesta",
+   "src": "made"
+  },
+  {
+   "text": "Antes, Elena tocaba en la orquesta de la ciudad.",
+   "en": "Elena used to play in the city orchestra.",
+   "ko": "엘레나는 예전에 시립 오케스트라에서 연주했어요.",
+   "blank": "orquesta",
+   "src": "made"
   }
  ],
  "w|os": [
@@ -39291,6 +39675,22 @@
    "blank": "pasar"
   }
  ],
+ "w|pascua": [
+  {
+   "text": "En las pascuas, toda la familia de Carlos se reúne en su casa.",
+   "en": "At Easter, Carlos's whole family gets together at his house.",
+   "ko": "부활절이면 카를로스의 온 가족이 그의 집에 모여요.",
+   "blank": "pascuas",
+   "src": "made"
+  },
+  {
+   "text": "En las pascuas, los niños de Elena pintan huevos de colores.",
+   "en": "At Easter, Elena's children paint eggs in bright colors.",
+   "ko": "부활절이면 엘레나네 아이들은 달걀에 색을 칠해요.",
+   "blank": "pascuas",
+   "src": "made"
+  }
+ ],
  "w|pase": [
   {
    "text": "Dame un pase, por favor.",
@@ -40085,6 +40485,22 @@
    "en": "I forgive you, don't worry.",
    "ko": "용서할게, 걱정 마.",
    "blank": "perdono"
+  }
+ ],
+ "w|perfección": [
+  {
+   "text": "Carlos busca la perfección en cada plano.",
+   "en": "Carlos seeks perfection in every blueprint.",
+   "ko": "카를로스는 도면 하나하나에서 완벽을 추구해요.",
+   "blank": "perfección",
+   "src": "made"
+  },
+  {
+   "text": "Elena dice que no busca la perfección, solo el cariño.",
+   "en": "Elena says she isn't looking for perfection, just affection.",
+   "ko": "엘레나는 완벽이 아니라 다정함을 바란다고 말해요.",
+   "blank": "perfección",
+   "src": "made"
   }
  ],
  "w|perfectamente": [
@@ -41741,6 +42157,22 @@
    "blank": "postal"
   }
  ],
+ "w|posterior": [
+  {
+   "text": "En la parte posterior de la casa de Carlos hay un pequeño huerto.",
+   "en": "At the back of Carlos's house there is a small vegetable garden.",
+   "ko": "카를로스네 집 뒤쪽에는 작은 텃밭이 있어요.",
+   "blank": "posterior",
+   "src": "made"
+  },
+  {
+   "text": "En una carta posterior, la niña adoptada le dio las gracias a Elena.",
+   "en": "In a later letter, the adopted girl thanked Elena.",
+   "ko": "나중에 보낸 편지에서 입양된 그 아이는 엘레나에게 고맙다고 했어요.",
+   "blank": "posterior",
+   "src": "made"
+  }
+ ],
  "w|postre": [
   {
    "text": "De postre pedimos un pastel de chocolate.",
@@ -42943,6 +43375,22 @@
    "blank": "prometido"
   }
  ],
+ "w|promoción": [
+  {
+   "text": "Carlos recibió una promoción en su estudio de arquitectura.",
+   "en": "Carlos got a promotion at his architecture firm.",
+   "ko": "카를로스는 건축 사무소에서 승진했어요.",
+   "blank": "promoción",
+   "src": "made"
+  },
+  {
+   "text": "Gracias a una promoción de una tienda, el centro recibió juguetes nuevos.",
+   "en": "Thanks to a store promotion, the home received new toys.",
+   "ko": "한 가게의 판촉 행사 덕분에 보육원에 새 장난감이 들어왔어요.",
+   "blank": "promoción",
+   "src": "made"
+  }
+ ],
  "w|pronto": [
   {
    "text": "Vuelvo pronto.",
@@ -43266,6 +43714,22 @@
    "en": "A psychological study says laughing helps you live longer.",
    "ko": "한 심리학 연구에 따르면 웃으면 더 오래 산대요.",
    "blank": "psicológico",
+   "src": "made"
+  }
+ ],
+ "w|psicólogo": [
+  {
+   "text": "El hijo de Carlos estudia para ser psicólogo.",
+   "en": "Carlos's son is studying to become a psychologist.",
+   "ko": "카를로스의 아들은 심리학자가 되려고 공부해요.",
+   "blank": "psicólogo",
+   "src": "made"
+  },
+  {
+   "text": "Un psicólogo habla con los niños de Elena cada semana.",
+   "en": "A psychologist talks with Elena's children every week.",
+   "ko": "심리 상담사가 매주 엘레나네 아이들과 이야기해요.",
+   "blank": "psicólogo",
    "src": "made"
   }
  ],
@@ -44861,6 +45325,22 @@
    "blank": "refirió"
   }
  ],
+ "w|reflejar": [
+  {
+   "text": "El agua del estanque refleja la fachada de la casa de Carlos.",
+   "en": "The pond water reflects the front of Carlos's house.",
+   "ko": "연못물에 카를로스네 집 앞모습이 비쳐요.",
+   "blank": "refleja",
+   "src": "made"
+  },
+  {
+   "text": "El primer día, los ojos del niño reflejaban su miedo.",
+   "en": "On the first day, the boy's eyes reflected his fear.",
+   "ko": "첫날 그 아이의 눈에는 두려움이 비쳤어요.",
+   "blank": "reflejaban",
+   "src": "made"
+  }
+ ],
  "w|reflejo": [
   {
    "text": "Vio su reflejo en el cristal limpio.",
@@ -44919,6 +45399,22 @@
    "en": "The wall needs a steel reinforcement.",
    "ko": "그 벽에는 철제 보강이 필요해.",
    "blank": "refuerzo"
+  }
+ ],
+ "w|refugiado": [
+  {
+   "text": "Carlos diseñó un centro de acogida para refugiados.",
+   "en": "Carlos designed a shelter for refugees.",
+   "ko": "카를로스는 난민을 위한 보호 시설을 설계했어요.",
+   "blank": "refugiados",
+   "src": "made"
+  },
+  {
+   "text": "Algunos niños del centro de Elena son refugiados de la guerra.",
+   "en": "Some of the children at Elena's home are war refugees.",
+   "ko": "엘레나의 보육원 아이들 중 몇은 전쟁 난민이에요.",
+   "blank": "refugiados",
+   "src": "made"
   }
  ],
  "w|refugio": [
@@ -45163,6 +45659,22 @@
    "blank": "Ríe"
   }
  ],
+ "w|reja": [
+  {
+   "text": "Carlos pintó de verde la reja del jardín.",
+   "en": "Carlos painted the garden railing green.",
+   "ko": "카를로스는 정원 철책을 초록색으로 칠했어요.",
+   "blank": "reja",
+   "src": "made"
+  },
+  {
+   "text": "Los niños de Elena juegan detrás de una reja verde.",
+   "en": "Elena's children play behind a green fence.",
+   "ko": "엘레나네 아이들은 초록색 철책 안에서 놀아요.",
+   "blank": "reja",
+   "src": "made"
+  }
+ ],
  "w|relación": [
   {
    "text": "Su relación con el jefe es buena.",
@@ -45319,6 +45831,22 @@
    "en": "The team performed very well yesterday.",
    "ko": "팀이 어제 아주 잘 해냈어.",
    "blank": "rindió"
+  }
+ ],
+ "w|reno": [
+  {
+   "text": "En un viaje al norte, Carlos vio un reno en la nieve.",
+   "en": "On a trip up north, Carlos saw a reindeer in the snow.",
+   "ko": "북쪽으로 여행 갔을 때 카를로스는 눈밭에서 순록을 봤어요.",
+   "blank": "reno",
+   "src": "made"
+  },
+  {
+   "text": "En Navidad, un voluntario se disfrazó de reno para los niños.",
+   "en": "At Christmas, a volunteer dressed up as a reindeer for the children.",
+   "ko": "크리스마스에 한 자원봉사자가 아이들을 위해 순록 분장을 했어요.",
+   "blank": "reno",
+   "src": "made"
   }
  ],
  "w|renta": [
@@ -45975,6 +46503,22 @@
    "en": "It can turn out dangerous at night.",
    "ko": "밤에는 위험할 수 있어.",
    "blank": "resultar"
+  }
+ ],
+ "w|resumen": [
+  {
+   "text": "Carlos escribió un resumen del proyecto para el ayuntamiento.",
+   "en": "Carlos wrote a summary of the project for the city council.",
+   "ko": "카를로스는 시청에 낼 사업 요약서를 썼어요.",
+   "blank": "resumen",
+   "src": "made"
+  },
+  {
+   "text": "Elena les leyó a los más pequeños un resumen del cuento.",
+   "en": "Elena read the youngest ones a summary of the story.",
+   "ko": "엘레나는 제일 어린 아이들에게 동화 줄거리를 읽어 줬어요.",
+   "blank": "resumen",
+   "src": "made"
   }
  ],
  "w|retener": [
@@ -49333,6 +49877,22 @@
    "blank": "sofá"
   }
  ],
+ "w|soga": [
+  {
+   "text": "Para el columpio de la niña, Carlos usó una soga fuerte.",
+   "en": "For the girl's swing, Carlos used a strong rope.",
+   "ko": "카를로스는 아이 그네에 튼튼한 밧줄을 썼어요.",
+   "blank": "soga",
+   "src": "made"
+  },
+  {
+   "text": "En el patio, los niños de Elena saltan a la soga.",
+   "en": "In the yard, Elena's children jump rope.",
+   "ko": "마당에서 엘레나네 아이들은 줄넘기를 해요.",
+   "blank": "soga",
+   "src": "made"
+  }
+ ],
  "w|sol": [
   {
    "text": "El sol brilla fuerte hoy.",
@@ -52381,6 +52941,22 @@
    "blank": "torturar"
   }
  ],
+ "w|tostada": [
+  {
+   "text": "Por la mañana, Carlos desayuna una tostada con aceite.",
+   "en": "In the morning, Carlos has toast with olive oil for breakfast.",
+   "ko": "카를로스는 아침으로 올리브유 바른 토스트를 먹어요.",
+   "blank": "tostada",
+   "src": "made"
+  },
+  {
+   "text": "Cada mañana, los niños de Elena desayunan tostadas con mermelada.",
+   "en": "Every morning, Elena's children have toast with jam for breakfast.",
+   "ko": "엘레나네 아이들은 매일 아침 잼 바른 토스트를 먹어요.",
+   "blank": "tostadas",
+   "src": "made"
+  }
+ ],
  "w|total": [
   {
    "text": "El total de la cuenta es demasiado alto.",
@@ -52407,6 +52983,22 @@
    "en": "He was totally wrong.",
    "ko": "완전히 틀렸어.",
    "blank": "totalmente"
+  }
+ ],
+ "w|tóxico": [
+  {
+   "text": "Carlos nunca usa pinturas tóxicas en sus proyectos.",
+   "en": "Carlos never uses toxic paints in his projects.",
+   "ko": "카를로스는 자기 작업에 독성 페인트를 절대 쓰지 않아요.",
+   "blank": "tóxicas",
+   "src": "made"
+  },
+  {
+   "text": "En el centro de Elena están prohibidos los productos de limpieza tóxicos.",
+   "en": "Toxic cleaning products are banned at Elena's home.",
+   "ko": "엘레나의 보육원에서는 독한 세제를 쓰면 안 돼요.",
+   "blank": "tóxicos",
+   "src": "made"
   }
  ],
  "w|trabajador": [
@@ -53235,6 +53827,22 @@
    "blank": "truco"
   }
  ],
+ "w|trueno": [
+  {
+   "text": "Un trueno muy fuerte despertó a Carlos en plena noche.",
+   "en": "A very loud thunderclap woke Carlos in the middle of the night.",
+   "ko": "아주 큰 천둥소리에 카를로스는 한밤중에 깼어요.",
+   "blank": "trueno",
+   "src": "made"
+  },
+  {
+   "text": "Cuando sonó un trueno, los pequeños corrieron a la habitación de Elena.",
+   "en": "When thunder rumbled, the little ones ran to Elena's room.",
+   "ko": "천둥이 치자 어린아이들이 엘레나의 방으로 달려왔어요.",
+   "blank": "trueno",
+   "src": "made"
+  }
+ ],
  "w|tu": [
   {
    "text": "Me gusta tu idea.",
@@ -53701,6 +54309,22 @@
    "en": "They used a new method.",
    "ko": "새 방법을 썼어.",
    "blank": "Utilizaron"
+  }
+ ],
+ "w|uva": [
+  {
+   "text": "En el patio de Carlos hay una parra llena de uvas.",
+   "en": "In Carlos's patio there is a vine full of grapes.",
+   "ko": "카를로스네 마당에는 포도가 주렁주렁 열린 포도나무가 있어요.",
+   "blank": "uvas",
+   "src": "made"
+  },
+  {
+   "text": "De postre, los niños de Elena comieron uvas.",
+   "en": "For dessert, Elena's children ate grapes.",
+   "ko": "후식으로 엘레나네 아이들은 포도를 먹었어요.",
+   "blank": "uvas",
+   "src": "made"
   }
  ],
  "w|vaca": [
@@ -55615,6 +56239,22 @@
    "en": "I'll let you know later.",
    "ko": "나중에 내가 알려 줄게.",
    "blank": "Yo"
+  }
+ ],
+ "w|zanahoria": [
+  {
+   "text": "Carlos plantó zanahorias en su huerto.",
+   "en": "Carlos planted carrots in his vegetable garden.",
+   "ko": "카를로스는 텃밭에 당근을 심었어요.",
+   "blank": "zanahorias",
+   "src": "made"
+  },
+  {
+   "text": "Elena enseña a los niños a cultivar zanahorias en el huerto.",
+   "en": "Elena teaches the children to grow carrots in the garden.",
+   "ko": "엘레나는 아이들에게 텃밭에서 당근 키우는 법을 가르쳐요.",
+   "blank": "zanahorias",
+   "src": "made"
   }
  ],
  "w|zapatilla": [
