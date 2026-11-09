@@ -1701,6 +1701,22 @@
    "src": "made"
   }
  ],
+ "w|arkeolog": [
+  {
+   "text": "Andi menghentikan penggalian ketika seorang arkeolog datang memeriksa pecahan gerabah kuno.",
+   "en": "Andi stopped the digging when an archaeologist came to examine shards of ancient pottery.",
+   "ko": "고고학자가 옛 토기 조각을 살피러 오자 안디는 굴착을 멈췄어요.",
+   "blank": "arkeolog",
+   "src": "made"
+  },
+  {
+   "text": "Teman Dewi yang arkeolog bercerita tentang penggalian candi kuno.",
+   "en": "Dewi's archaeologist friend talked about excavating an ancient temple.",
+   "ko": "고고학자인 데위의 친구는 옛 사원 발굴 이야기를 했어요.",
+   "blank": "arkeolog",
+   "src": "made"
+  }
+ ],
  "w|arkeologi": [
   {
    "text": "Sejak kecil Dimas bermimpi kuliah di jurusan arkeologi.",
@@ -2157,6 +2173,22 @@
    "en": "Oh my, the rain is pouring.",
    "ko": "아이고, 비가 엄청 쏟아지네.",
    "blank": "Astaga"
+  }
+ ],
+ "w|astronom": [
+  {
+   "text": "Andi bercanda bahwa butuh seorang astronom untuk menebak kapan proyek ini selesai.",
+   "en": "Andi joked that it would take an astronomer to predict when this project will be finished.",
+   "ko": "안디는 이 공사가 언제 끝날지 맞히려면 천문학자가 필요하겠다고 농담했어요.",
+   "blank": "astronom",
+   "src": "made"
+  },
+  {
+   "text": "Di reuni itu, Dewi kaget mendengar teman sebangkunya kini jadi astronom.",
+   "en": "At the reunion, Dewi was surprised to hear that her old deskmate is now an astronomer.",
+   "ko": "동창회에서 데위는 옛 짝꿍이 지금 천문학자가 됐다는 말에 깜짝 놀랐어요.",
+   "blank": "astronom",
+   "src": "made"
   }
  ],
  "w|astronomi": [
@@ -3550,6 +3582,22 @@
    "en": "Siti thinks the habit of cutting in line is truly barbaric.",
    "ko": "시티는 새치기하는 버릇이 정말 야만적이라고 생각해요.",
    "blank": "barbar",
+   "src": "made"
+  }
+ ],
+ "w|barel": [
+  {
+   "text": "Andi mencatat ada beberapa barel solar di gudang proyek.",
+   "en": "Andi noted that there were several barrels of diesel in the site storeroom.",
+   "ko": "안디는 현장 창고에 경유 몇 통이 있다고 적어 뒀어요.",
+   "blank": "barel",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bercanda bahwa teman-temannya bisa menghabiskan satu barel teh manis.",
+   "en": "Dewi joked that her friends could finish a whole barrel of sweet tea.",
+   "ko": "데위는 친구들이 달콤한 차 한 통을 다 마셔 버릴 거라고 농담했어요.",
+   "blank": "barel",
    "src": "made"
   }
  ],
@@ -9577,6 +9625,22 @@
    "blank": "bertahan"
   }
  ],
+ "w|bertahap": [
+  {
+   "text": "Andi menjelaskan bahwa pembangunan gedung dilakukan secara bertahap.",
+   "en": "Andi explained that the building is being constructed in stages.",
+   "ko": "안디는 건물이 단계적으로 지어진다고 설명했어요.",
+   "blank": "bertahap",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bercerita kepada teman-teman bahwa dia mengurangi gula secara bertahap.",
+   "en": "Dewi told her friends that she has been cutting down on sugar gradually.",
+   "ko": "데위는 친구들에게 설탕을 조금씩 줄이고 있다고 말했어요.",
+   "blank": "bertahap",
+   "src": "made"
+  }
+ ],
  "w|bertahun-tahun": [
   {
    "text": "Pak satpam itu sudah bertahun-tahun menjaga gedung apartemen Bayu.",
@@ -9737,6 +9801,22 @@
    "en": "We'll meet at the station.",
    "ko": "우리 역에서 만나자.",
    "blank": "bertemu"
+  }
+ ],
+ "w|bertenaga": [
+  {
+   "text": "Andi memakai bor bertenaga baterai untuk memasang rangka.",
+   "en": "Andi uses a battery-powered drill to put up the frame.",
+   "ko": "안디는 배터리로 움직이는 드릴로 골조를 세워요.",
+   "blank": "bertenaga",
+   "src": "made"
+  },
+  {
+   "text": "Mobil Dewi bertenaga listrik, jadi dia mencari tempat mengisi daya dekat restoran.",
+   "en": "Dewi's car runs on electricity, so she looked for a charging spot near the restaurant.",
+   "ko": "데위의 차는 전기차라서 식당 근처 충전소를 찾았어요.",
+   "blank": "bertenaga",
+   "src": "made"
   }
  ],
  "w|bertengkar": [
@@ -10116,6 +10196,22 @@
    "en": "Siti's souvenirs for her family are coffee and woven cloth.",
    "ko": "시티가 가족에게 줄 선물은 커피와 직물이에요.",
    "blank": "berupa",
+   "src": "made"
+  }
+ ],
+ "w|berupaya": [
+  {
+   "text": "Andi berupaya menyelesaikan atap sebelum musim hujan tiba.",
+   "en": "Andi is trying to finish the roof before the rainy season arrives.",
+   "ko": "안디는 우기가 오기 전에 지붕을 끝내려고 애쓰고 있어요.",
+   "blank": "berupaya",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berupaya mengumpulkan semua teman sekelas lewat grup pesan.",
+   "en": "Dewi tried to gather all her classmates through a messaging group.",
+   "ko": "데위는 메신저 단톡방으로 반 친구들을 모두 모으려고 애썼어요.",
+   "blank": "berupaya",
    "src": "made"
   }
  ],
@@ -13929,6 +14025,22 @@
    "blank": "detektif"
   }
  ],
+ "w|detektor": [
+  {
+   "text": "Andi memakai detektor logam untuk mencari kabel di dalam tanah.",
+   "en": "Andi uses a metal detector to look for cables underground.",
+   "ko": "안디는 금속 탐지기로 땅속 전선을 찾아요.",
+   "blank": "detektor",
+   "src": "made"
+  },
+  {
+   "text": "Di pintu masuk gedung, Dewi harus melewati detektor logam.",
+   "en": "At the building entrance, Dewi had to go through a metal detector.",
+   "ko": "데위는 건물 입구에서 금속 탐지기를 통과해야 했어요.",
+   "blank": "detektor",
+   "src": "made"
+  }
+ ],
  "w|detik": [
   {
    "text": "Tunggu beberapa detik saja.",
@@ -14359,6 +14471,22 @@
    "src": "made"
   }
  ],
+ "w|direksi": [
+  {
+   "text": "Laporan kemajuan proyek dikirim Andi kepada direksi setiap akhir bulan.",
+   "en": "Andi sends the project progress report to the board of directors at the end of every month.",
+   "ko": "안디는 매달 말 공사 진행 보고서를 경영진에게 보내요.",
+   "blank": "direksi",
+   "src": "made"
+  },
+  {
+   "text": "Teman lama Dewi sekarang duduk di jajaran direksi sebuah bank.",
+   "en": "Dewi's old friend now sits on the board of directors of a bank.",
+   "ko": "데위의 옛 친구는 지금 한 은행의 이사진에 있어요.",
+   "blank": "direksi",
+   "src": "made"
+  }
+ ],
  "w|direktur": [
   {
    "text": "Direktur memanggil seluruh staf ke ruang rapat.",
@@ -14446,6 +14574,22 @@
    "en": "Intan got a big discount because she booked the catering well in advance.",
    "ko": "인탄은 케이터링을 일찍 예약해서 크게 할인받았어요.",
    "blank": "diskon",
+   "src": "made"
+  }
+ ],
+ "w|distribusi": [
+  {
+   "text": "Andi mengatur distribusi semen ke setiap blok bangunan.",
+   "en": "Andi organizes the distribution of cement to each building block.",
+   "ko": "안디는 동마다 시멘트를 나눠 보내는 일을 맡고 있어요.",
+   "blank": "distribusi",
+   "src": "made"
+  },
+  {
+   "text": "Teman Dewi yang bekerja di bagian distribusi sering pindah kota.",
+   "en": "Dewi's friend who works in distribution often moves from city to city.",
+   "ko": "유통 부서에서 일하는 데위의 친구는 자주 다른 도시로 옮겨 다녀요.",
+   "blank": "distribusi",
    "src": "made"
   }
  ],
@@ -18617,6 +18761,22 @@
    "src": "made"
   }
  ],
+ "w|hektare": [
+  {
+   "text": "Proyek perumahan yang diawasi Andi luasnya hampir sepuluh hektare.",
+   "en": "The housing project Andi supervises covers almost ten hectares.",
+   "ko": "안디가 감독하는 주택 단지는 면적이 거의 십 헥타르예요.",
+   "blank": "hektare",
+   "src": "made"
+  },
+  {
+   "text": "Teman Dewi yang petani kini punya kebun durian beberapa hektare.",
+   "en": "Dewi's farmer friend now owns a durian orchard of several hectares.",
+   "ko": "농부인 데위의 친구는 지금 몇 헥타르짜리 두리안 농장을 갖고 있어요.",
+   "blank": "hektare",
+   "src": "made"
+  }
+ ],
  "w|helikopter": [
   {
    "text": "Helikopter terbang rendah di atas kota.",
@@ -18821,6 +18981,22 @@
    "en": "Until now he still hasn't come.",
    "ko": "지금까지도 그는 안 왔어.",
    "blank": "Hingga"
+  }
+ ],
+ "w|hipotesis": [
+  {
+   "text": "Andi punya hipotesis bahwa retakan itu muncul karena tanah turun.",
+   "en": "Andi has a hypothesis that the crack appeared because the ground sank.",
+   "ko": "안디는 땅이 꺼져서 금이 생겼다는 가설을 세웠어요.",
+   "blank": "hipotesis",
+   "src": "made"
+  },
+  {
+   "text": "Dewi punya hipotesis lucu tentang kenapa Rudi selalu datang terlambat.",
+   "en": "Dewi has a funny theory about why Rudi always arrives late.",
+   "ko": "데위는 루디가 왜 늘 늦게 오는지에 대해 재밌는 가설이 있어요.",
+   "blank": "hipotesis",
+   "src": "made"
   }
  ],
  "w|hitam": [
@@ -24225,6 +24401,22 @@
    "blank": "kedamaian"
   }
  ],
+ "w|kedap": [
+  {
+   "text": "Andi memasang lapisan kedap air di atap gedung.",
+   "en": "Andi installed a waterproof layer on the building's roof.",
+   "ko": "안디는 건물 지붕에 방수층을 깔았어요.",
+   "blank": "kedap",
+   "src": "made"
+  },
+  {
+   "text": "Ruang karaoke itu kedap suara, jadi Dewi bisa bernyanyi sekeras-kerasnya.",
+   "en": "The karaoke room is soundproof, so Dewi could sing as loud as she liked.",
+   "ko": "그 노래방은 방음이 돼서 데위는 마음껏 크게 노래할 수 있었어요.",
+   "blank": "kedap",
+   "src": "made"
+  }
+ ],
  "w|kedatangan": [
   {
    "text": "Kedatangan tamu membuat rumah ramai.",
@@ -27725,6 +27917,22 @@
    "src": "made"
   }
  ],
+ "w|kewenangan": [
+  {
+   "text": "Andi tidak punya kewenangan untuk menghentikan pekerjaan tanpa izin manajer.",
+   "en": "Andi doesn't have the authority to stop the work without the manager's permission.",
+   "ko": "안디는 관리자 허락 없이 공사를 멈출 권한이 없어요.",
+   "blank": "kewenangan",
+   "src": "made"
+  },
+  {
+   "text": "Teman Dewi yang jadi kepala sekolah bercerita soal kewenangan yang dia punya sekarang.",
+   "en": "Dewi's friend who became a principal talked about the authority she has now.",
+   "ko": "교장이 된 데위의 친구는 지금 가진 권한에 대해 이야기했어요.",
+   "blank": "kewenangan",
+   "src": "made"
+  }
+ ],
  "w|keyakinan": [
   {
    "text": "Keyakinan membuatnya tetap kuat.",
@@ -28560,6 +28768,22 @@
    "en": "Because her package was a week late, Wati received compensation in the form of a shopping voucher.",
    "ko": "택배가 일주일 늦어서 와티는 쇼핑 쿠폰으로 보상을 받았어요.",
    "blank": "kompensasi",
+   "src": "made"
+  }
+ ],
+ "w|kompeten": [
+  {
+   "text": "Andi hanya mau bekerja dengan tukang las yang kompeten.",
+   "en": "Andi only wants to work with competent welders.",
+   "ko": "안디는 실력 있는 용접공하고만 일하려고 해요.",
+   "blank": "kompeten",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memuji Rudi sebagai dokter yang kompeten dan ramah.",
+   "en": "Dewi praised Rudi as a competent and friendly doctor.",
+   "ko": "데위는 루디를 실력 있고 친절한 의사라고 칭찬했어요.",
+   "blank": "kompeten",
    "src": "made"
   }
  ],
@@ -32323,6 +32547,22 @@
    "blank": "lupa"
   }
  ],
+ "w|luput": [
+  {
+   "text": "Retakan kecil di tiang itu tidak luput dari mata Andi.",
+   "en": "The small crack in the pillar did not escape Andi's eye.",
+   "ko": "기둥의 작은 금도 안디의 눈을 피하지 못했어요.",
+   "blank": "luput",
+   "src": "made"
+  },
+  {
+   "text": "Tidak ada satu nama pun yang luput dari ingatan Dewi malam itu.",
+   "en": "Not a single name slipped Dewi's memory that night.",
+   "ko": "그날 밤 데위는 이름 하나도 잊지 않고 다 기억했어요.",
+   "blank": "luput",
+   "src": "made"
+  }
+ ],
  "w|lurus": [
   {
    "text": "Lurus saja sampai lampu merah berikutnya.",
@@ -34537,6 +34777,22 @@
    "src": "made"
   }
  ],
+ "w|melengkung": [
+  {
+   "text": "Andi mengganti besi yang melengkung karena tertimpa batu.",
+   "en": "Andi replaced the iron bar that had bent after a rock fell on it.",
+   "ko": "안디는 돌에 깔려 휜 쇠막대를 바꿨어요.",
+   "blank": "melengkung",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menunjuk jembatan kayu melengkung di taman tempat mereka dulu berfoto.",
+   "en": "Dewi pointed to the curved wooden bridge in the park where they used to take photos.",
+   "ko": "데위는 예전에 사진을 찍던 공원의 굽은 나무다리를 가리켰어요.",
+   "blank": "melengkung",
+   "src": "made"
+  }
+ ],
  "w|melenyapkan": [
   {
    "text": "Penghapus papan tulis yang baru bisa melenyapkan coretan spidol dalam sekali usap.",
@@ -34756,6 +35012,22 @@
    "en": "Rina folded the corner of her race bib so it wouldn't flap in the wind.",
    "ko": "리나는 배번표 끝이 바람에 펄럭이지 않게 접었어요.",
    "blank": "melipat",
+   "src": "made"
+  }
+ ],
+ "w|meliput": [
+  {
+   "text": "Seorang wartawan datang meliput pembangunan jembatan yang diawasi Andi.",
+   "en": "A journalist came to cover the construction of the bridge Andi supervises.",
+   "ko": "기자 한 명이 안디가 감독하는 다리 공사를 취재하러 왔어요.",
+   "blank": "meliput",
+   "src": "made"
+  },
+  {
+   "text": "Dulu Dewi bercita-cita menjadi wartawan yang meliput olimpiade.",
+   "en": "Dewi used to dream of becoming a journalist covering the Olympics.",
+   "ko": "데위는 예전에 올림픽을 취재하는 기자가 되는 게 꿈이었어요.",
+   "blank": "meliput",
    "src": "made"
   }
  ],
@@ -35129,6 +35401,22 @@
    "en": "Playing that role demands hard practice.",
    "ko": "그 역할을 연기하려면 혹독한 연습이 필요해.",
    "blank": "Memainkan"
+  }
+ ],
+ "w|memajukan": [
+  {
+   "text": "Andi memajukan jadwal pengecoran karena cuaca sedang cerah.",
+   "en": "Andi moved the concrete pouring schedule forward because the weather was clear.",
+   "ko": "날씨가 맑아서 안디는 콘크리트 타설 일정을 앞당겼어요.",
+   "blank": "memajukan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia memajukan jam acara agar Dewi dan teman dari luar kota bisa pulang lebih awal.",
+   "en": "The committee moved the event earlier so Dewi and friends from out of town could go home sooner.",
+   "ko": "위원회는 데위와 다른 도시에서 온 친구들이 일찍 돌아갈 수 있게 행사 시간을 앞당겼어요.",
+   "blank": "memajukan",
+   "src": "made"
   }
  ],
  "w|memakai": [
@@ -42405,6 +42693,22 @@
    "blank": "menganggap"
   }
  ],
+ "w|menganggur": [
+  {
+   "text": "Banyak tukang di desa Andi menganggur sejak proyek jalan selesai.",
+   "en": "Many builders in Andi's village have been out of work since the road project ended.",
+   "ko": "도로 공사가 끝난 뒤로 안디네 마을의 많은 일꾼들이 놀고 있어요.",
+   "blank": "menganggur",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memberi semangat kepada teman yang sedang menganggur.",
+   "en": "Dewi encouraged a friend who is currently unemployed.",
+   "ko": "데위는 지금 일자리가 없는 친구에게 힘을 북돋아 줬어요.",
+   "blank": "menganggur",
+   "src": "made"
+  }
+ ],
  "w|mengangkat": [
   {
    "text": "Tolong mengangkat kotak itu.",
@@ -43039,6 +43343,22 @@
    "src": "made"
   }
  ],
+ "w|mengekstrak": [
+  {
+   "text": "Andi mengekstrak data ukuran dari gambar kerja ke lembar kerja.",
+   "en": "Andi extracted the measurements from the working drawings into a spreadsheet.",
+   "ko": "안디는 시공 도면에서 치수 자료를 뽑아 표로 옮겼어요.",
+   "blank": "mengekstrak",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengekstrak foto-foto dari video lama untuk dibuat album.",
+   "en": "Dewi extracted photos from old videos to make an album.",
+   "ko": "데위는 옛 영상에서 사진을 뽑아 앨범을 만들었어요.",
+   "blank": "mengekstrak",
+   "src": "made"
+  }
+ ],
  "w|mengelabui": [
   {
    "text": "Dalam lakon itu, Eko berperan sebagai pedagang licik yang mengelabui raja.",
@@ -43383,6 +43703,22 @@
    "en": "Dad drives the car carefully.",
    "ko": "아버지가 차를 조심히 운전하셔.",
    "blank": "mengendarai"
+  }
+ ],
+ "w|mengendus": [
+  {
+   "text": "Anjing penjaga proyek mengendus tas Andi di gerbang.",
+   "en": "The site's guard dog sniffed Andi's bag at the gate.",
+   "ko": "현장 경비견이 정문에서 안디의 가방 냄새를 맡았어요.",
+   "blank": "mengendus",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengendus aroma sate dari dapur restoran dan langsung lapar.",
+   "en": "Dewi caught the smell of satay from the restaurant kitchen and instantly got hungry.",
+   "ko": "데위는 식당 주방에서 나는 사테 냄새를 맡고 금세 배가 고파졌어요.",
+   "blank": "mengendus",
+   "src": "made"
   }
  ],
  "w|mengepung": [
@@ -45059,6 +45395,22 @@
    "blank": "menginginkan"
   }
  ],
+ "w|mengingkari": [
+  {
+   "text": "Pemasok itu mengingkari janji, jadi Andi kekurangan besi beton.",
+   "en": "The supplier broke his promise, so Andi ran short of rebar.",
+   "ko": "그 납품업자가 약속을 어겨서 안디는 철근이 모자랐어요.",
+   "blank": "mengingkari",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menagih traktiran dari Rudi yang dulu mengingkari janji.",
+   "en": "Dewi demanded the treat Rudi had promised long ago and never delivered.",
+   "ko": "데위는 예전에 약속을 어긴 루디에게 한턱내라고 졸랐어요.",
+   "blank": "mengingkari",
+   "src": "made"
+  }
+ ],
  "w|menginjak": [
   {
    "text": "Rudi tidak sengaja menginjak paku dan langsung dibawa ke klinik.",
@@ -45168,6 +45520,22 @@
    "en": "Siti peeked at the guest list to see whether the former class president was coming.",
    "ko": "시티는 전 반장이 오는지 보려고 방명록을 슬쩍 봤어요.",
    "blank": "mengintip",
+   "src": "made"
+  }
+ ],
+ "w|menginvestasikan": [
+  {
+   "text": "Perusahaan tempat Andi bekerja menginvestasikan banyak uang untuk alat berat baru.",
+   "en": "The company Andi works for invested a lot of money in new heavy machinery.",
+   "ko": "안디가 일하는 회사는 새 중장비에 많은 돈을 투자했어요.",
+   "blank": "menginvestasikan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mendengar seorang teman menginvestasikan tabungan di kebun kopi.",
+   "en": "Dewi heard that a friend had invested his savings in a coffee plantation.",
+   "ko": "데위는 한 친구가 저금을 커피 농장에 투자했다는 얘기를 들었어요.",
+   "blank": "menginvestasikan",
    "src": "made"
   }
  ],
@@ -45474,6 +45842,22 @@
    "en": "Dewi's job is to turn sales data into easy-to-read charts.",
    "ko": "디위의 일은 판매 자료를 보기 쉬운 그래프로 정리하는 거예요.",
    "blank": "mengolah",
+   "src": "made"
+  }
+ ],
+ "w|mengolok-olok": [
+  {
+   "text": "Andi menegur pekerja yang mengolok-olok rekan barunya.",
+   "en": "Andi reprimanded the worker who was making fun of his new coworker.",
+   "ko": "안디는 새 동료를 놀리던 인부를 꾸짖었어요.",
+   "blank": "mengolok-olok",
+   "src": "made"
+  },
+  {
+   "text": "Teman-teman dulu sering mengolok-olok kacamata tebal Dewi.",
+   "en": "Her friends used to make fun of Dewi's thick glasses.",
+   "ko": "친구들은 예전에 데위의 두꺼운 안경을 자주 놀렸어요.",
+   "blank": "mengolok-olok",
    "src": "made"
   }
  ],
@@ -46256,6 +46640,22 @@
    "en": "The dental clinic gives priority to patients in pain, so Ayu was called first.",
    "ko": "그 치과는 아픈 환자를 먼저 봐서 아유가 먼저 불렸어요.",
    "blank": "mengutamakan",
+   "src": "made"
+  }
+ ],
+ "w|mengutarakan": [
+  {
+   "text": "Andi mengutarakan kekhawatiran soal keselamatan kepada mandor.",
+   "en": "Andi voiced his safety concerns to the foreman.",
+   "ko": "안디는 십장에게 안전 문제에 대한 걱정을 털어놓았어요.",
+   "blank": "mengutarakan",
+   "src": "made"
+  },
+  {
+   "text": "Akhirnya Dewi berani mengutarakan rasa terima kasih kepada guru lama mereka.",
+   "en": "Finally Dewi found the courage to express her gratitude to their old teacher.",
+   "ko": "데위는 마침내 옛 선생님께 감사한 마음을 용기 내어 전했어요.",
+   "blank": "mengutarakan",
    "src": "made"
   }
  ],
@@ -51173,6 +51573,22 @@
    "blank": "modern"
   }
  ],
+ "w|modul": [
+  {
+   "text": "Andi mengikuti pelatihan keselamatan kerja dengan modul yang tebal.",
+   "en": "Andi took a work safety training course with a thick module.",
+   "ko": "안디는 두꺼운 교재로 산업 안전 교육을 받았어요.",
+   "blank": "modul",
+   "src": "made"
+  },
+  {
+   "text": "Dewi masih ingat modul bahasa Inggris yang dulu dia pinjam dari Rina.",
+   "en": "Dewi still remembers the English module she once borrowed from Rina.",
+   "ko": "데위는 예전에 리나에게 빌렸던 영어 교재를 아직 기억해요.",
+   "blank": "modul",
+   "src": "made"
+  }
+ ],
  "w|mogok": [
   {
    "text": "Pekerja di pabrik sebelah mogok selama tiga hari menuntut kenaikan upah.",
@@ -54695,6 +55111,22 @@
    "blank": "patah"
   }
  ],
+ "w|paten": [
+  {
+   "text": "Alat penyangga buatan Andi ternyata sudah punya paten dari perusahaan lain.",
+   "en": "It turned out the support tool Andi made was already patented by another company.",
+   "ko": "안디가 만든 지지대는 알고 보니 다른 회사가 이미 특허를 갖고 있었어요.",
+   "blank": "paten",
+   "src": "made"
+  },
+  {
+   "text": "Teman Dewi yang insinyur baru saja mendapat paten untuk alat penyaring air.",
+   "en": "Dewi's engineer friend just got a patent for a water filter.",
+   "ko": "엔지니어인 데위의 친구는 얼마 전 정수 장치로 특허를 받았어요.",
+   "blank": "paten",
+   "src": "made"
+  }
+ ],
  "w|patroli": [
   {
    "text": "Patroli malam menjaga keamanan kawasan.",
@@ -54814,6 +55246,22 @@
    "en": "Siti almost forgot to bring an umbrella when it rained on moving day.",
    "ko": "이삿날 비가 왔는데 시티는 하마터면 우산을 깜빡할 뻔했어요.",
    "blank": "payung",
+   "src": "made"
+  }
+ ],
+ "w|pebisnis": [
+  {
+   "text": "Pemilik gedung itu seorang pebisnis muda yang sering datang menengok Andi.",
+   "en": "The building's owner is a young businessman who often drops by to see Andi.",
+   "ko": "그 건물 주인은 안디를 자주 보러 오는 젊은 사업가예요.",
+   "blank": "pebisnis",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengobrol dengan seorang pebisnis yang dulu ketua kelas mereka.",
+   "en": "Dewi chatted with a businessman who used to be their class president.",
+   "ko": "데위는 예전에 반장이었던 사업가와 이야기를 나눴어요.",
+   "blank": "pebisnis",
    "src": "made"
   }
  ],
@@ -56617,6 +57065,22 @@
    "src": "made"
   }
  ],
+ "w|pemeriksa": [
+  {
+   "text": "Andi menemani pemeriksa bangunan berkeliling lantai atas.",
+   "en": "Andi accompanied the building inspector around the upper floor.",
+   "ko": "안디는 건물 검사관과 함께 위층을 둘러봤어요.",
+   "blank": "pemeriksa",
+   "src": "made"
+  },
+  {
+   "text": "Rina, sahabat Dewi, kini bekerja sebagai pemeriksa pajak.",
+   "en": "Rina, Dewi's best friend, now works as a tax auditor.",
+   "ko": "데위의 단짝 리나는 지금 세무 조사관으로 일해요.",
+   "blank": "pemeriksa",
+   "src": "made"
+  }
+ ],
  "w|pemeriksaan": [
   {
    "text": "Pemeriksaan kesehatan diadakan setiap tahun.",
@@ -56808,6 +57272,22 @@
    "en": "The toll gate officer checked Lestari's card with a new scanner.",
    "ko": "톨게이트 직원이 새 스캐너로 레스타리의 카드를 확인했어요.",
    "blank": "pemindai",
+   "src": "made"
+  }
+ ],
+ "w|pemindaian": [
+  {
+   "text": "Andi meminta pemindaian dinding untuk mencari pipa yang tersembunyi.",
+   "en": "Andi requested a scan of the wall to look for hidden pipes.",
+   "ko": "안디는 숨은 배관을 찾으려고 벽 스캔을 요청했어요.",
+   "blank": "pemindaian",
+   "src": "made"
+  },
+  {
+   "text": "Dewi membawa hasil pemindaian foto-foto lama dari zaman sekolah.",
+   "en": "Dewi brought scanned copies of old photos from their school days.",
+   "ko": "데위는 학창 시절 옛 사진을 스캔한 파일을 가져왔어요.",
+   "blank": "pemindaian",
    "src": "made"
   }
  ],
@@ -57260,6 +57740,22 @@
    "en": "Mr. Darto, the flea market committee's adviser, arranges where each stall goes.",
    "ko": "벼룩시장 위원회 고문인 다르토 씨가 노점 자리를 정해요.",
    "blank": "penasihat",
+   "src": "made"
+  }
+ ],
+ "w|penata": [
+  {
+   "text": "Andi bekerja sama dengan penata taman untuk halaman depan gedung.",
+   "en": "Andi works with a landscaper on the building's front yard.",
+   "ko": "안디는 건물 앞마당 일로 조경사와 함께 일해요.",
+   "blank": "penata",
+   "src": "made"
+  },
+  {
+   "text": "Rina sekarang bekerja sebagai penata rambut, dan Dewi langsung minta nomor teleponnya.",
+   "en": "Rina now works as a hairstylist, and Dewi immediately asked for her number.",
+   "ko": "리나가 지금 미용사로 일한다고 해서 데위는 바로 전화번호를 물었어요.",
+   "blank": "penata",
    "src": "made"
   }
  ],
@@ -58334,6 +58830,22 @@
    "en": "In the next seat, a follower of Buddhism quietly read a prayer book.",
    "ko": "옆자리에서 한 불교 신자가 조용히 기도서를 읽었어요.",
    "blank": "penganut",
+   "src": "made"
+  }
+ ],
+ "w|pengarahan": [
+  {
+   "text": "Setiap pagi Andi memberi pengarahan singkat kepada para pekerja.",
+   "en": "Every morning Andi gives the workers a short briefing.",
+   "ko": "안디는 매일 아침 인부들에게 짧게 작업 지시를 해요.",
+   "blank": "pengarahan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia reuni memberi pengarahan singkat sebelum acara dimulai, dan Dewi mencatat urutannya.",
+   "en": "The reunion committee gave a short briefing before the event started, and Dewi wrote down the order of events.",
+   "ko": "동창회 준비 위원들이 행사 전에 짧게 안내를 했고, 데위는 순서를 적어 뒀어요.",
+   "blank": "pengarahan",
    "src": "made"
   }
  ],
@@ -63041,6 +63553,22 @@
    "blank": "peti"
   }
  ],
+ "w|petinggi": [
+  {
+   "text": "Para petinggi perusahaan datang meninjau proyek, jadi Andi menyiapkan helm tambahan.",
+   "en": "The company's top executives came to inspect the project, so Andi prepared extra helmets.",
+   "ko": "회사 고위 간부들이 현장을 보러 와서 안디는 안전모를 더 준비했어요.",
+   "blank": "petinggi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi tidak menyangka si pendiam kini menjadi petinggi di perusahaan besar.",
+   "en": "Dewi never expected the quiet one to now be a top executive at a big company.",
+   "ko": "데위는 그 조용하던 친구가 지금 대기업 고위 간부가 됐을 줄 몰랐어요.",
+   "blank": "petinggi",
+   "src": "made"
+  }
+ ],
  "w|petinju": [
   {
    "text": "Paman Dimas dulu seorang petinju dan sekarang melatih anak-anak di sekolah.",
@@ -64314,6 +64842,22 @@
    "en": "Rina was taken to see the solar panel production room downstairs.",
    "ko": "리나는 아래층 태양광 패널 생산실을 둘러봤어요.",
    "blank": "produksi",
+   "src": "made"
+  }
+ ],
+ "w|produktif": [
+  {
+   "text": "Para tukang lebih produktif kalau Andi membagi tugas dengan jelas.",
+   "en": "The workers are more productive when Andi divides the tasks clearly.",
+   "ko": "안디가 일을 분명하게 나눠 주면 인부들이 더 능률적으로 일해요.",
+   "blank": "produktif",
+   "src": "made"
+  },
+  {
+   "text": "Teman-teman Dewi berbagi tips supaya tetap produktif setelah punya anak.",
+   "en": "Dewi's friends shared tips on staying productive after having kids.",
+   "ko": "데위의 친구들은 아이를 낳은 뒤에도 일을 잘 해내는 요령을 나눴어요.",
+   "blank": "produktif",
    "src": "made"
   }
  ],
@@ -66281,6 +66825,22 @@
    "src": "made"
   }
  ],
+ "w|resepsionis": [
+  {
+   "text": "Andi menitipkan helm cadangan kepada resepsionis di kantor proyek.",
+   "en": "Andi left the spare helmets with the receptionist at the site office.",
+   "ko": "안디는 여분 안전모를 현장 사무실 안내 직원에게 맡겼어요.",
+   "blank": "resepsionis",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menanyakan letak ruang pesta kepada resepsionis hotel.",
+   "en": "Dewi asked the hotel receptionist where the party room was.",
+   "ko": "데위는 호텔 안내 직원에게 연회장 위치를 물었어요.",
+   "blank": "resepsionis",
+   "src": "made"
+  }
+ ],
  "w|resimen": [
   {
    "text": "Andi meneliti sejarah sebuah resimen kavaleri dari arsip perpustakaan.",
@@ -66957,6 +67517,22 @@
    "en": "The children played on the green grass.",
    "ko": "아이들이 푸른 잔디 위에서 놀았어.",
    "blank": "rumput"
+  }
+ ],
+ "w|rumus": [
+  {
+   "text": "Andi memakai rumus sederhana untuk menghitung kebutuhan pasir.",
+   "en": "Andi uses a simple formula to calculate how much sand is needed.",
+   "ko": "안디는 간단한 공식으로 필요한 모래 양을 계산해요.",
+   "blank": "rumus",
+   "src": "made"
+  },
+  {
+   "text": "Dewi dan teman-teman tertawa mengingat rumus matematika yang dulu mereka hafalkan.",
+   "en": "Dewi and her friends laughed remembering the math formulas they used to memorize.",
+   "ko": "데위와 친구들은 예전에 외우던 수학 공식을 떠올리며 웃었어요.",
+   "blank": "rumus",
+   "src": "made"
   }
  ],
  "w|runtuh": [
@@ -67667,6 +68243,22 @@
    "en": "Beside the house there is a small garden.",
    "ko": "집 옆에 작은 정원이 있어.",
    "blank": "Samping"
+  }
+ ],
+ "w|sampingan": [
+  {
+   "text": "Selain mengawasi proyek, Andi punya kerja sampingan sebagai tukang servis AC.",
+   "en": "Besides supervising the project, Andi has a side job as an air conditioner repairman.",
+   "ko": "안디는 현장 감독 말고도 에어컨 수리 부업을 해요.",
+   "blank": "sampingan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bercerita tentang usaha sampingan menjual kue lewat internet.",
+   "en": "Dewi talked about her side business selling cakes online.",
+   "ko": "데위는 인터넷으로 케이크를 파는 부업 이야기를 했어요.",
+   "blank": "sampingan",
+   "src": "made"
   }
  ],
  "w|sampul": [
@@ -73213,6 +73805,22 @@
    "blank": "status"
   }
  ],
+ "w|stempel": [
+  {
+   "text": "Kata Andi, surat izin itu belum sah karena belum ada stempel dari kantor kecamatan.",
+   "en": "According to Andi, the permit isn't valid yet because it doesn't have the district office's stamp.",
+   "ko": "안디 말로는 그 허가서에 아직 구청 도장이 없어서 효력이 없대요.",
+   "blank": "stempel",
+   "src": "made"
+  },
+  {
+   "text": "Dewi masih menyimpan rapor lama dengan stempel sekolah yang sudah pudar.",
+   "en": "Dewi still keeps her old report card with the faded school stamp.",
+   "ko": "데위는 학교 도장이 바랜 옛 성적표를 아직 갖고 있어요.",
+   "blank": "stempel",
+   "src": "made"
+  }
+ ],
  "w|stik": [
   {
    "text": "Andi melihat stik hoki tua dipajang di ruang koleksi olahraga perpustakaan.",
@@ -75971,6 +76579,22 @@
    "blank": "terang"
   }
  ],
+ "w|terangkat": [
+  {
+   "text": "Andi memastikan beban sudah terangkat dengan aman sebelum derek berputar.",
+   "en": "Andi made sure the load had been lifted safely before the crane turned.",
+   "ko": "안디는 크레인이 돌기 전에 짐이 안전하게 들렸는지 확인했어요.",
+   "blank": "terangkat",
+   "src": "made"
+  },
+  {
+   "text": "Beban pikiran Dewi seperti terangkat setelah tertawa bersama teman lama.",
+   "en": "Dewi's worries felt lifted after laughing with old friends.",
+   "ko": "옛 친구들과 웃고 나니 데위의 마음의 짐이 덜어진 것 같았어요.",
+   "blank": "terangkat",
+   "src": "made"
+  }
+ ],
  "w|terangsang": [
   {
    "text": "Aroma bawang goreng membuat selera makan Andi langsung terangsang.",
@@ -78202,6 +78826,22 @@
    "en": "The water supply to Wati's house was cut off while the pipes were replaced.",
    "ko": "배관을 바꾸는 동안 와티네 집 물이 끊겼어요.",
    "blank": "terputus",
+   "src": "made"
+  }
+ ],
+ "w|tersadar": [
+  {
+   "text": "Andi tersadar bahwa kunci gudang tertinggal di mobil.",
+   "en": "Andi realized that the storeroom key had been left in the car.",
+   "ko": "안디는 창고 열쇠를 차에 두고 왔다는 걸 깨달았어요.",
+   "blank": "tersadar",
+   "src": "made"
+  },
+  {
+   "text": "Melihat teman-teman yang sudah beruban, Dewi tersadar betapa cepat waktu berlalu.",
+   "en": "Seeing her friends with gray hair, Dewi realized how fast time had gone by.",
+   "ko": "머리가 희끗해진 친구들을 보고 데위는 시간이 얼마나 빨리 지났는지 깨달았어요.",
+   "blank": "tersadar",
    "src": "made"
   }
  ],
