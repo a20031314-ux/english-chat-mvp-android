@@ -27,6 +27,22 @@
    "blank": "abadi"
   }
  ],
+ "w|abang": [
+  {
+   "text": "Rina bilang abang sulungnya juga bekerja di gedung yang sama.",
+   "en": "Rina said her eldest brother also works in the same building.",
+   "ko": "리나는 큰오빠도 같은 건물에서 일한다고 했어요.",
+   "blank": "abang",
+   "src": "made"
+  },
+  {
+   "text": "Di hotel itu, abang Dewi bekerja sebagai sopir yang mengantar tamu ke bandara.",
+   "en": "At that hotel, Dewi's older brother works as a driver taking guests to the airport.",
+   "ko": "그 호텔에서 데위의 오빠는 손님을 공항까지 태워 주는 운전사로 일해요.",
+   "blank": "abang",
+   "src": "made"
+  }
+ ],
  "w|abu": [
   {
    "text": "Abu rokok berjatuhan di lantai.",
@@ -3179,6 +3195,22 @@
    "blank": "berasal"
   }
  ],
+ "w|berasumsi": [
+  {
+   "text": "Budi berasumsi hujan akan turun minggu ini karena langit sudah mendung.",
+   "en": "Budi assumed it would rain this week because the sky was already cloudy.",
+   "ko": "하늘이 벌써 흐려서 부디는 이번 주에 비가 올 거라고 생각했어요.",
+   "blank": "berasumsi",
+   "src": "made"
+  },
+  {
+   "text": "Kru berasumsi lampu cadangan sudah dibawa, ternyata tertinggal di gudang.",
+   "en": "The crew assumed the spare lights had been brought, but they were left in the storeroom.",
+   "ko": "제작진은 예비 조명을 가져온 줄 알았는데 창고에 두고 왔어요.",
+   "blank": "berasumsi",
+   "src": "made"
+  }
+ ],
  "w|berat": [
   {
    "text": "Koper ini terlalu berat.",
@@ -3731,6 +3763,22 @@
    "blank": "beres"
   }
  ],
+ "w|berevolusi": [
+  {
+   "text": "Rina bercerita bahwa perusahaan lamanya terus berevolusi mengikuti teknologi.",
+   "en": "Rina said her old company kept evolving with technology.",
+   "ko": "리나는 예전 회사가 기술을 따라 계속 진화했다고 했어요.",
+   "blank": "berevolusi",
+   "src": "made"
+  },
+  {
+   "text": "Hotel kecil itu berevolusi menjadi resor besar dalam dua puluh tahun.",
+   "en": "That small hotel evolved into a big resort over twenty years.",
+   "ko": "그 작은 호텔은 이십 년 만에 큰 리조트로 발전했어요.",
+   "blank": "berevolusi",
+   "src": "made"
+  }
+ ],
  "w|berfungsi": [
   {
    "text": "Mesin ini masih berfungsi dengan baik.",
@@ -4245,6 +4293,22 @@
    "blank": "Berkembangnya"
   }
  ],
+ "w|berkenalan": [
+  {
+   "text": "Andi berkenalan dengan Rina pada hari pertama Rina masuk kerja.",
+   "en": "Andi got acquainted with Rina on her first day at work.",
+   "ko": "안디는 리나가 출근한 첫날 리나와 인사를 나눴어요.",
+   "blank": "berkenalan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berkenalan dengan banyak orang dari berbagai kota di meja resepsionis.",
+   "en": "Dewi gets to know lots of people from different cities at the reception desk.",
+   "ko": "데위는 프런트에서 여러 도시에서 온 많은 사람과 알게 돼요.",
+   "blank": "berkenalan",
+   "src": "made"
+  }
+ ],
  "w|berkencan": [
   {
    "text": "Mereka mulai berkencan musim panas lalu.",
@@ -4286,6 +4350,22 @@
    "en": "Wati sweated heavily ripping up the ceramic floor in the midday heat.",
    "ko": "와티는 한낮에 타일 바닥을 뜯어내느라 땀을 뻘뻘 흘렸어요.",
    "blank": "berkeringat",
+   "src": "made"
+  }
+ ],
+ "w|berkomitmen": [
+  {
+   "text": "Budi berkomitmen untuk tidak lagi membakar jerami setelah panen.",
+   "en": "Budi has committed to no longer burning straw after the harvest.",
+   "ko": "부디는 추수 뒤에 더 이상 볏짚을 태우지 않기로 다짐했어요.",
+   "blank": "berkomitmen",
+   "src": "made"
+  },
+  {
+   "text": "Siti berkomitmen untuk menyelesaikan film ini meskipun jadwalnya padat.",
+   "en": "Siti is committed to finishing this film even though her schedule is packed.",
+   "ko": "시티는 일정이 빡빡해도 이 영화를 끝까지 마치기로 했어요.",
+   "blank": "berkomitmen",
    "src": "made"
   }
  ],
@@ -4561,6 +4641,22 @@
    "blank": "bermain-main"
   }
  ],
+ "w|bermakna": [
+  {
+   "text": "Bagi Budi, hujan pertama setelah kemarau selalu terasa bermakna.",
+   "en": "For Budi, the first rain after the dry season always feels meaningful.",
+   "ko": "부디에게 건기 뒤 첫 비는 늘 의미 있게 느껴져요.",
+   "blank": "bermakna",
+   "src": "made"
+  },
+  {
+   "text": "Adegan perpisahan di stasiun itu paling bermakna bagi Siti.",
+   "en": "The farewell scene at the station was the most meaningful to Siti.",
+   "ko": "역에서의 이별 장면이 시티에게 가장 의미 있었어요.",
+   "blank": "bermakna",
+   "src": "made"
+  }
+ ],
  "w|bermaksud": [
   {
    "text": "Saya tidak bermaksud begitu.",
@@ -4573,6 +4669,22 @@
    "en": "He meant to help.",
    "ko": "걔는 도우려고 한 거야.",
    "blank": "bermaksud"
+  }
+ ],
+ "w|bermanfaat": [
+  {
+   "text": "Air hujan yang Budi tampung sangat bermanfaat saat kemarau.",
+   "en": "The rainwater Budi collects is very useful in the dry season.",
+   "ko": "부디가 받아 둔 빗물은 건기에 아주 쓸모가 있어요.",
+   "blank": "bermanfaat",
+   "src": "made"
+  },
+  {
+   "text": "Masukan dari pelatih akting sangat bermanfaat bagi Siti.",
+   "en": "The acting coach's feedback was very helpful to Siti.",
+   "ko": "연기 코치의 조언은 시티에게 큰 도움이 됐어요.",
+   "blank": "bermanfaat",
+   "src": "made"
   }
  ],
  "w|bermasalah": [
@@ -4857,6 +4969,22 @@
    "blank": "berpikir"
   }
  ],
+ "w|berpikiran": [
+  {
+   "text": "Andi senang punya rekan yang berpikiran terbuka seperti Rina.",
+   "en": "Andi is glad to have an open-minded coworker like Rina.",
+   "ko": "안디는 리나처럼 생각이 열린 동료가 있어서 좋아요.",
+   "blank": "berpikiran",
+   "src": "made"
+  },
+  {
+   "text": "Manajer Dewi berpikiran bahwa layanan cepat lebih penting dari lobi mewah.",
+   "en": "Dewi's manager thinks fast service matters more than a fancy lobby.",
+   "ko": "데위의 매니저는 화려한 로비보다 빠른 서비스가 더 중요하다고 생각해요.",
+   "blank": "berpikiran",
+   "src": "made"
+  }
+ ],
  "w|berpindah": [
   {
    "text": "Setiap minggu kambing-kambing Dimas berpindah ke padang rumput yang lain.",
@@ -5087,6 +5215,22 @@
    "en": "I'm willing to help you anytime.",
    "ko": "언제든 너를 도울 의향이 있어.",
    "blank": "Bersedia"
+  }
+ ],
+ "w|berselingkuh": [
+  {
+   "text": "Di kantin, Andi mendengar gosip bahwa manajer lama berselingkuh dengan sekretarisnya.",
+   "en": "In the canteen, Andi heard gossip that the old manager had an affair with his secretary.",
+   "ko": "구내식당에서 안디는 예전 관리자가 비서와 바람을 피웠다는 소문을 들었어요.",
+   "blank": "berselingkuh",
+   "src": "made"
+  },
+  {
+   "text": "Dalam novel yang Dewi baca di jam istirahat, seorang suami berselingkuh di hotel mewah.",
+   "en": "In the novel Dewi reads on her break, a husband has an affair at a luxury hotel.",
+   "ko": "데위가 쉬는 시간에 읽는 소설에서 한 남편이 호화 호텔에서 바람을 피워요.",
+   "blank": "berselingkuh",
+   "src": "made"
   }
  ],
  "w|bersemangat": [
@@ -5535,6 +5679,22 @@
    "src": "made"
   }
  ],
+ "w|bertunangan": [
+  {
+   "text": "Andi baru tahu Rina sudah bertunangan dengan teman kuliahnya.",
+   "en": "Andi just found out that Rina is engaged to her university friend.",
+   "ko": "안디는 리나가 대학 친구와 약혼했다는 걸 이제야 알았어요.",
+   "blank": "bertunangan",
+   "src": "made"
+  },
+  {
+   "text": "Pasangan yang baru bertunangan memesan kamar dengan pemandangan laut.",
+   "en": "A newly engaged couple booked a room with a sea view.",
+   "ko": "막 약혼한 커플이 바다 전망 방을 예약했어요.",
+   "blank": "bertunangan",
+   "src": "made"
+  }
+ ],
  "w|beruang": [
   {
    "text": "Beruang itu hidup di hutan dingin.",
@@ -5902,6 +6062,22 @@
    "en": "Today Ayu wants to make chocolate cake with her little sister.",
    "ko": "오늘 아유는 동생이랑 초콜릿 케이크를 만들고 싶어 해요.",
    "blank": "bikin",
+   "src": "made"
+  }
+ ],
+ "w|biksu": [
+  {
+   "text": "Waktu liburan ke Thailand, Rina bertemu biksu yang mengajarinya meditasi.",
+   "en": "On holiday in Thailand, Rina met a monk who taught her meditation.",
+   "ko": "태국에 휴가 갔을 때 리나는 명상을 가르쳐 준 승려를 만났어요.",
+   "blank": "biksu",
+   "src": "made"
+  },
+  {
+   "text": "Rombongan biksu dari Thailand menginap dua malam di hotel itu.",
+   "en": "A group of monks from Thailand stayed two nights at the hotel.",
+   "ko": "태국에서 온 승려 일행이 그 호텔에 이틀 밤 묵었어요.",
+   "blank": "biksu",
    "src": "made"
   }
  ],
@@ -7841,6 +8017,22 @@
    "blank": "deh"
   }
  ],
+ "w|dekade": [
+  {
+   "text": "Menurut kakek Budi, iklim di desa ini banyak berubah dalam satu dekade terakhir.",
+   "en": "According to Budi's grandfather, the climate in this village has changed a lot in the last decade.",
+   "ko": "부디 할아버지 말로는 지난 십 년 사이 이 마을 기후가 많이 변했대요.",
+   "blank": "dekade",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara film itu sudah berkarya lebih dari satu dekade.",
+   "en": "The film's director has been working for more than a decade.",
+   "ko": "그 영화감독은 십 년 넘게 작품 활동을 해 왔어요.",
+   "blank": "dekade",
+   "src": "made"
+  }
+ ],
  "w|dekat": [
   {
    "text": "Toko itu dekat sekali.",
@@ -8024,6 +8216,22 @@
    "en": "The new market building has an open design so the air can flow.",
    "ko": "새 시장 건물은 바람이 잘 통하게 트인 구조로 설계됐어요.",
    "blank": "desain",
+   "src": "made"
+  }
+ ],
+ "w|desember": [
+  {
+   "text": "Hujan paling deras biasanya terjadi pada bulan Desember.",
+   "en": "The heaviest rain usually comes in December.",
+   "ko": "가장 센 비는 보통 십이월에 내려요.",
+   "blank": "Desember",
+   "src": "made"
+  },
+  {
+   "text": "Syuting harus selesai sebelum bulan Desember karena aktor utama punya proyek lain.",
+   "en": "The shoot has to finish before December because the lead actor has another project.",
+   "ko": "주연 배우가 다른 작품이 있어서 촬영은 십이월 전에 끝나야 해요.",
+   "blank": "Desember",
    "src": "made"
   }
  ],
@@ -8311,6 +8519,22 @@
    "en": "It's so cold outside.",
    "ko": "밖이 너무 추워.",
    "blank": "Dingin"
+  }
+ ],
+ "w|dini": [
+  {
+   "text": "Pada dini hari, udara di desa Budi terasa sangat dingin.",
+   "en": "In the early hours, the air in Budi's village feels very cold.",
+   "ko": "새벽에는 부디네 마을 공기가 아주 차가워요.",
+   "blank": "dini",
+   "src": "made"
+  },
+  {
+   "text": "Siti sudah harus berdandan sejak dini hari untuk adegan matahari terbit.",
+   "en": "Siti had to get made up from the early hours for the sunrise scene.",
+   "ko": "해돋이 장면 때문에 시티는 새벽부터 분장을 해야 했어요.",
+   "blank": "dini",
+   "src": "made"
   }
  ],
  "w|diperbolehkan": [
@@ -9081,6 +9305,22 @@
    "blank": "episode"
   }
  ],
+ "w|era": [
+  {
+   "text": "Kakek Budi bilang di era mudanya musim hujan datang lebih tepat waktu.",
+   "en": "Budi's grandfather says that in his youth the rainy season came more on time.",
+   "ko": "부디의 할아버지는 젊었을 때는 우기가 더 제때 왔다고 해요.",
+   "blank": "era",
+   "src": "made"
+  },
+  {
+   "text": "Film itu bercerita tentang keluarga di era tahun tujuh puluhan.",
+   "en": "The film tells the story of a family in the seventies era.",
+   "ko": "그 영화는 칠십 년대 시대의 한 가족 이야기를 담고 있어요.",
+   "blank": "era",
+   "src": "made"
+  }
+ ],
  "w|erat": [
   {
    "text": "Dimas memegang erat buku langka itu supaya tidak jatuh.",
@@ -9123,6 +9363,22 @@
    "en": "The ice on the road has melted.",
    "ko": "길 위의 얼음이 녹았어.",
    "blank": "Es"
+  }
+ ],
+ "w|esok": [
+  {
+   "text": "Kata ramalan cuaca, esok pagi akan berkabut di daerah Budi.",
+   "en": "According to the forecast, tomorrow morning will be foggy in Budi's area.",
+   "ko": "일기 예보에 따르면 내일 아침 부디네 지역에 안개가 낀대요.",
+   "blank": "esok",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara bilang adegan di pasar akan diambil esok hari.",
+   "en": "The director said the market scene would be shot tomorrow.",
+   "ko": "감독은 시장 장면을 내일 찍을 거라고 했어요.",
+   "blank": "esok",
+   "src": "made"
   }
  ],
  "w|evakuasi": [
@@ -9720,6 +9976,22 @@
    "en": "Small cracks in the wall can be a sign that the foundation is starting to sink.",
    "ko": "벽의 작은 금은 기초가 내려앉기 시작했다는 징후일 수 있어요.",
    "blank": "gejala",
+   "src": "made"
+  }
+ ],
+ "w|gelandangan": [
+  {
+   "text": "Rina rutin membagikan nasi bungkus kepada gelandangan di dekat kantor.",
+   "en": "Rina regularly hands out packed rice to homeless people near the office.",
+   "ko": "리나는 회사 근처 노숙인들에게 정기적으로 도시락을 나눠 줘요.",
+   "blank": "gelandangan",
+   "src": "made"
+  },
+  {
+   "text": "Satpam hotel memberi selimut kepada gelandangan yang tidur di halte depan.",
+   "en": "The hotel security guard gave a blanket to a homeless man sleeping at the bus stop in front.",
+   "ko": "호텔 경비원이 앞 정류장에서 자는 노숙인에게 담요를 줬어요.",
+   "blank": "gelandangan",
    "src": "made"
   }
  ],
@@ -10631,6 +10903,22 @@
    "en": "They're late every day.",
    "ko": "그 사람은 매일 늦어.",
    "blank": "hari"
+  }
+ ],
+ "w|harian": [
+  {
+   "text": "Budi mencatat suhu harian di buku kecil yang dia gantung di dapur.",
+   "en": "Budi records the daily temperature in a little book he hangs in the kitchen.",
+   "ko": "부디는 부엌에 걸어 둔 작은 공책에 매일 기온을 적어요.",
+   "blank": "harian",
+   "src": "made"
+  },
+  {
+   "text": "Asisten sutradara membagikan jadwal harian kepada semua pemain.",
+   "en": "The assistant director handed out the daily schedule to all the actors.",
+   "ko": "조감독이 모든 배우에게 하루 일정표를 나눠 줬어요.",
+   "blank": "harian",
+   "src": "made"
   }
  ],
  "w|harimau": [
@@ -12085,6 +12373,22 @@
    "src": "made"
   }
  ],
+ "w|janda": [
+  {
+   "text": "Ibu Rina sudah lama menjadi janda dan membuka warung makan.",
+   "en": "Rina's mother has long been a widow and runs a small eatery.",
+   "ko": "리나의 어머니는 오래전에 남편을 여의고 작은 식당을 해요.",
+   "blank": "janda",
+   "src": "made"
+  },
+  {
+   "text": "Tamu di kamar paling atas adalah seorang janda kaya yang suka melukis.",
+   "en": "The guest in the top room is a wealthy widow who likes painting.",
+   "ko": "맨 위층 방 손님은 그림 그리기를 좋아하는 부유한 미망인이에요.",
+   "blank": "janda",
+   "src": "made"
+  }
+ ],
  "w|jangan": [
   {
    "text": "Jangan bohong.",
@@ -12097,6 +12401,38 @@
    "en": "Stay away.",
    "ko": "가까이 오지 마.",
    "blank": "Jangan"
+  }
+ ],
+ "w|jangka": [
+  {
+   "text": "Pemerintah desa membuat rencana jangka panjang untuk menghadapi kekeringan.",
+   "en": "The village government made a long-term plan to deal with drought.",
+   "ko": "마을 정부는 가뭄에 대비해 장기 계획을 세웠어요.",
+   "blank": "jangka",
+   "src": "made"
+  },
+  {
+   "text": "Siti menandatangani kontrak jangka pendek dengan rumah produksi itu.",
+   "en": "Siti signed a short-term contract with that production house.",
+   "ko": "시티는 그 제작사와 단기 계약을 맺었어요.",
+   "blank": "jangka",
+   "src": "made"
+  }
+ ],
+ "w|jangkauan": [
+  {
+   "text": "Kantor baru Rina masih dalam jangkauan bus kota dari rumahnya.",
+   "en": "Rina's new office is still within reach of the city bus from her house.",
+   "ko": "리나의 새 회사는 집에서 시내버스로 갈 수 있는 거리예요.",
+   "blank": "jangkauan",
+   "src": "made"
+  },
+  {
+   "text": "Wi-Fi hotel punya jangkauan sampai ke kolam renang.",
+   "en": "The hotel Wi-Fi has a range that reaches the swimming pool.",
+   "ko": "호텔 와이파이는 수영장까지 닿아요.",
+   "blank": "jangkauan",
+   "src": "made"
   }
  ],
  "w|janji": [
@@ -12559,6 +12895,22 @@
    "blank": "Jujur"
   }
  ],
+ "w|juli": [
+  {
+   "text": "Di desa Budi, puncak musim kemarau biasanya jatuh pada bulan Juli.",
+   "en": "In Budi's village, the peak of the dry season usually falls in July.",
+   "ko": "부디네 마을에서는 건기가 보통 칠월에 절정이에요.",
+   "blank": "Juli",
+   "src": "made"
+  },
+  {
+   "text": "Syuting film Siti dimulai pada awal Juli di sebuah pantai.",
+   "en": "Siti's film shoot started in early July on a beach.",
+   "ko": "시티의 영화 촬영은 칠월 초 한 해변에서 시작했어요.",
+   "blank": "Juli",
+   "src": "made"
+  }
+ ],
  "w|jumat": [
   {
    "text": "Jumat siang kantor tutup lebih awal.",
@@ -13003,6 +13355,22 @@
    "src": "made"
   }
  ],
+ "w|kala": [
+  {
+   "text": "Kakek Budi suka bercerita tentang kala desa ini masih dikelilingi hutan.",
+   "en": "Budi's grandfather likes talking about the time when this village was still surrounded by forest.",
+   "ko": "부디의 할아버지는 이 마을이 아직 숲에 둘러싸여 있던 시절 이야기를 즐겨 해요.",
+   "blank": "kala",
+   "src": "made"
+  },
+  {
+   "text": "Siti memerankan seorang guru pada kala perang kemerdekaan.",
+   "en": "Siti plays a teacher in the time of the war of independence.",
+   "ko": "시티는 독립 전쟁 시절의 교사 역할을 맡았어요.",
+   "blank": "kala",
+   "src": "made"
+  }
+ ],
  "w|kalah": [
   {
    "text": "Tim kita kalah lagi.",
@@ -13157,6 +13525,22 @@
    "en": "We're from Surabaya.",
    "ko": "우리는 수라바야에서 왔어.",
    "blank": "Kami"
+  }
+ ],
+ "w|kamis": [
+  {
+   "text": "Hujan pertama tahun ini turun pada hari Kamis sore.",
+   "en": "The first rain of the year fell on Thursday afternoon.",
+   "ko": "올해 첫 비는 목요일 오후에 내렸어요.",
+   "blank": "Kamis",
+   "src": "made"
+  },
+  {
+   "text": "Pada hari Kamis, Siti harus syuting adegan hujan buatan.",
+   "en": "On Thursday, Siti has to shoot a scene with artificial rain.",
+   "ko": "목요일에 시티는 인공 비 장면을 찍어야 해요.",
+   "blank": "Kamis",
+   "src": "made"
   }
  ],
  "w|kamp": [
@@ -13662,6 +14046,22 @@
    "en": "Lestari tied the pile of old boxes with wire.",
    "ko": "레스타리는 헌 상자 더미를 철사로 묶었어요.",
    "blank": "kawat",
+   "src": "made"
+  }
+ ],
+ "w|kawin": [
+  {
+   "text": "Rina berencana kawin tahun depan setelah kontraknya diperpanjang.",
+   "en": "Rina plans to get married next year after her contract is extended.",
+   "ko": "리나는 계약이 연장되면 내년에 결혼할 계획이에요.",
+   "blank": "kawin",
+   "src": "made"
+  },
+  {
+   "text": "Kakak Dewi akan kawin di aula hotel ini bulan depan.",
+   "en": "Dewi's older sister will get married in this hotel's hall next month.",
+   "ko": "데위의 언니는 다음 달 이 호텔 연회장에서 결혼해요.",
+   "blank": "kawin",
    "src": "made"
   }
  ],
@@ -14681,6 +15081,22 @@
    "blank": "Kelahiran"
   }
  ],
+ "w|kelak": [
+  {
+   "text": "Budi berharap kelak anaknya mau meneruskan sawah keluarga.",
+   "en": "Budi hopes that someday his child will want to carry on the family rice field.",
+   "ko": "부디는 나중에 자식이 집안 논을 이어 주기를 바라요.",
+   "blank": "kelak",
+   "src": "made"
+  },
+  {
+   "text": "Anak Siti bilang kelak dia juga ingin main film seperti ibunya.",
+   "en": "Siti's child says that one day she also wants to act in films like her mother.",
+   "ko": "시티의 아이는 나중에 엄마처럼 영화에 나오고 싶다고 해요.",
+   "blank": "kelak",
+   "src": "made"
+  }
+ ],
  "w|kelaparan": [
   {
    "text": "Kelaparan membuat penduduk desa sangat lemah.",
@@ -14785,6 +15201,22 @@
    "blank": "kelihatan"
   }
  ],
+ "w|kelima": [
+  {
+   "text": "Ini sudah tahun kelima Budi menanam padi di sawah warisan ayahnya.",
+   "en": "This is already Budi's fifth year growing rice in the field he inherited from his father.",
+   "ko": "부디가 아버지께 물려받은 논에 벼를 심은 지 벌써 다섯 해째예요.",
+   "blank": "kelima",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara meminta adegan itu diulang sampai kali kelima.",
+   "en": "The director had the scene repeated up to the fifth time.",
+   "ko": "감독은 그 장면을 다섯 번째까지 다시 찍게 했어요.",
+   "blank": "kelima",
+   "src": "made"
+  }
+ ],
  "w|kelinci": [
   {
    "text": "Kelinci kecil itu melompat di rumput.",
@@ -14839,6 +15271,22 @@
    "en": "Don't go out in the middle of the night.",
    "ko": "밤중에 나가지 마.",
    "blank": "keluar"
+  }
+ ],
+ "w|keluarga": [
+  {
+   "text": "Setiap akhir pekan Rina pulang kampung untuk menengok keluarga.",
+   "en": "Every weekend Rina goes back to her hometown to visit her family.",
+   "ko": "리나는 주말마다 가족을 보러 고향에 내려가요.",
+   "blank": "keluarga",
+   "src": "made"
+  },
+  {
+   "text": "Saat libur sekolah, banyak keluarga menginap di hotel tempat Dewi bekerja.",
+   "en": "During school holidays, many families stay at the hotel where Dewi works.",
+   "ko": "방학 때면 많은 가족이 데위가 일하는 호텔에 묵어요.",
+   "blank": "keluarga",
+   "src": "made"
   }
  ],
  "w|keluhan": [
@@ -15269,6 +15717,22 @@
    "en": "He brought a gift for his nephew.",
    "ko": "그는 조카에게 줄 선물을 가져왔어.",
    "blank": "keponakan"
+  }
+ ],
+ "w|kepribadian": [
+  {
+   "text": "Andi suka kepribadian Rina yang ramah dan tenang.",
+   "en": "Andi likes Rina's friendly and calm personality.",
+   "ko": "안디는 리나의 친절하고 차분한 성격이 좋아요.",
+   "blank": "kepribadian",
+   "src": "made"
+  },
+  {
+   "text": "Manajer hotel bilang kepribadian Dewi cocok untuk bagian resepsionis.",
+   "en": "The hotel manager said Dewi's personality suits the reception desk.",
+   "ko": "호텔 매니저는 데위의 성격이 프런트 업무에 잘 맞는다고 했어요.",
+   "blank": "kepribadian",
+   "src": "made"
   }
  ],
  "w|keputusan": [
@@ -18161,6 +18625,22 @@
    "blank": "lelucon"
   }
  ],
+ "w|leluhur": [
+  {
+   "text": "Keluarga besar Rina setiap tahun berziarah ke makam leluhur di Toraja.",
+   "en": "Rina's extended family visits their ancestors' graves in Toraja every year.",
+   "ko": "리나의 대가족은 해마다 토라자에 있는 조상 묘소를 찾아가요.",
+   "blank": "leluhur",
+   "src": "made"
+  },
+  {
+   "text": "Lukisan di lobi menggambarkan leluhur pemilik hotel yang dulu berdagang rempah.",
+   "en": "The painting in the lobby depicts the hotel owner's ancestors who once traded spices.",
+   "ko": "로비의 그림은 예전에 향신료를 거래하던 호텔 주인의 조상을 그린 거예요.",
+   "blank": "leluhur",
+   "src": "made"
+  }
+ ],
  "w|lemah": [
   {
    "text": "Badan saya masih lemah.",
@@ -19467,6 +19947,22 @@
    "blank": "marah"
   }
  ],
+ "w|maret": [
+  {
+   "text": "Budi biasanya memanen padi pada bulan Maret.",
+   "en": "Budi usually harvests his rice in March.",
+   "ko": "부디는 보통 삼월에 벼를 거둬요.",
+   "blank": "Maret",
+   "src": "made"
+  },
+  {
+   "text": "Kru film tiba di lokasi pada awal bulan Maret.",
+   "en": "The film crew arrived at the location at the beginning of March.",
+   "ko": "영화 제작진은 삼월 초에 촬영지에 도착했어요.",
+   "blank": "Maret",
+   "src": "made"
+  }
+ ],
  "w|mari": [
   {
    "text": "Mari kita mulai.",
@@ -20419,6 +20915,22 @@
    "src": "made"
   }
  ],
+ "w|melumpuhkan": [
+  {
+   "text": "Banjir besar tahun lalu sempat melumpuhkan jalan utama ke desa Budi.",
+   "en": "Last year's big flood paralyzed the main road to Budi's village for a while.",
+   "ko": "작년 큰 홍수 때문에 부디네 마을로 가는 큰길이 한동안 마비됐어요.",
+   "blank": "melumpuhkan",
+   "src": "made"
+  },
+  {
+   "text": "Pemadaman listrik sempat melumpuhkan syuting selama dua jam.",
+   "en": "A power outage halted the shoot for two hours.",
+   "ko": "정전 때문에 촬영이 두 시간 동안 멈췄어요.",
+   "blank": "melumpuhkan",
+   "src": "made"
+  }
+ ],
  "w|meluncur": [
   {
    "text": "Bola kertas Andi meluncur dari meja dan jatuh di dekat kaki guru.",
@@ -20463,6 +20975,22 @@
    "en": "Forgetting the past is hard.",
    "ko": "과거를 잊는 건 어려워.",
    "blank": "Melupakan"
+  }
+ ],
+ "w|meluruskan": [
+  {
+   "text": "Andi membantu meluruskan kesalahpahaman antara Rina dan bagian keuangan.",
+   "en": "Andi helped clear up a misunderstanding between Rina and the finance department.",
+   "ko": "안디는 리나와 재무팀 사이의 오해를 푸는 걸 도왔어요.",
+   "blank": "meluruskan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi meluruskan tirai kamar sebelum tamu VIP datang.",
+   "en": "Dewi straightened the room curtains before the VIP guest arrived.",
+   "ko": "데위는 VIP 손님이 오기 전에 방 커튼을 반듯하게 폈어요.",
+   "blank": "meluruskan",
+   "src": "made"
   }
  ],
  "w|memaafkan": [
@@ -20631,6 +21159,38 @@
    "en": "Who's calling?",
    "ko": "누가 부르는 거야?",
    "blank": "memanggil"
+  }
+ ],
+ "w|memangsa": [
+  {
+   "text": "Di ruang rapat, Rina menonton video tentang singa yang memangsa rusa.",
+   "en": "In the meeting room, Rina watched a video of a lion preying on a deer.",
+   "ko": "회의실에서 리나는 사자가 사슴을 사냥하는 영상을 봤어요.",
+   "blank": "memangsa",
+   "src": "made"
+  },
+  {
+   "text": "Di televisi lobi diputar film dokumenter tentang ular yang memangsa tikus.",
+   "en": "A documentary about snakes preying on mice was playing on the lobby TV.",
+   "ko": "로비 텔레비전에서는 뱀이 쥐를 잡아먹는 다큐멘터리가 나오고 있었어요.",
+   "blank": "memangsa",
+   "src": "made"
+  }
+ ],
+ "w|memanipulasi": [
+  {
+   "text": "Rina menolak memanipulasi angka penjualan meskipun diminta atasannya.",
+   "en": "Rina refused to manipulate the sales figures even though her boss asked her to.",
+   "ko": "리나는 상사가 시켜도 판매 수치를 조작하지 않았어요.",
+   "blank": "memanipulasi",
+   "src": "made"
+  },
+  {
+   "text": "Dewi curiga seorang tamu mencoba memanipulasi tagihan kamarnya.",
+   "en": "Dewi suspected a guest was trying to manipulate his room bill.",
+   "ko": "데위는 한 손님이 객실 요금을 조작하려 한다고 의심했어요.",
+   "blank": "memanipulasi",
+   "src": "made"
   }
  ],
  "w|memanjat": [
@@ -21291,6 +21851,22 @@
    "blank": "Membingungkan"
   }
  ],
+ "w|membodohi": [
+  {
+   "text": "Rina tidak mudah dibodohi oleh penjual yang menawarkan barang palsu.",
+   "en": "Rina isn't easily fooled by salespeople offering fake goods.",
+   "ko": "리나는 가짜 물건을 파는 사람에게 쉽게 속지 않아요.",
+   "blank": "dibodohi",
+   "src": "made"
+  },
+  {
+   "text": "Seorang penipu mencoba membodohi resepsionis dengan kartu kredit palsu.",
+   "en": "A con man tried to fool the receptionist with a fake credit card.",
+   "ko": "한 사기꾼이 가짜 신용카드로 프런트 직원을 속이려 했어요.",
+   "blank": "membodohi",
+   "src": "made"
+  }
+ ],
  "w|membohongi": [
   {
    "text": "Narasumber itu ketahuan membohongi wartawan soal angka penjualan.",
@@ -21611,6 +22187,22 @@
    "blank": "memenuhi"
   }
  ],
+ "w|memeras": [
+  {
+   "text": "Rina memeras jeruk nipis ke dalam teh hangatnya.",
+   "en": "Rina squeezed lime into her warm tea.",
+   "ko": "리나는 따뜻한 차에 라임을 짜 넣었어요.",
+   "blank": "memeras",
+   "src": "made"
+  },
+  {
+   "text": "Di film yang Dewi tonton, penjahat memeras pemilik hotel dengan foto rahasia.",
+   "en": "In the film Dewi watched, a criminal blackmailed the hotel owner with secret photos.",
+   "ko": "데위가 본 영화에서 악당이 비밀 사진으로 호텔 주인을 협박했어요.",
+   "blank": "memeras",
+   "src": "made"
+  }
+ ],
  "w|memeriksa": [
   {
    "text": "Dokter akan memeriksa kamu dulu.",
@@ -21779,6 +22371,22 @@
    "en": "She often borrows books from the library.",
    "ko": "그는 도서관에서 자주 책을 빌려.",
    "blank": "meminjam"
+  }
+ ],
+ "w|meminjamkan": [
+  {
+   "text": "Andi meminjamkan payung kepada Rina karena hujan turun saat pulang.",
+   "en": "Andi lent Rina his umbrella because it rained when they were going home.",
+   "ko": "퇴근할 때 비가 와서 안디가 리나에게 우산을 빌려줬어요.",
+   "blank": "meminjamkan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi meminjamkan pengisi daya ponsel kepada tamu yang lupa membawanya.",
+   "en": "Dewi lent a phone charger to a guest who forgot to bring one.",
+   "ko": "데위는 충전기를 깜빡한 손님에게 휴대폰 충전기를 빌려줬어요.",
+   "blank": "meminjamkan",
+   "src": "made"
   }
  ],
  "w|meminta": [
@@ -21953,6 +22561,22 @@
    "blank": "mempercayai"
   }
  ],
+ "w|mempercepat": [
+  {
+   "text": "Rina membuat tabel baru yang mempercepat pembuatan laporan bulanan.",
+   "en": "Rina made a new spreadsheet that speeds up the monthly reports.",
+   "ko": "리나는 월간 보고서 작성을 빠르게 해 주는 새 표를 만들었어요.",
+   "blank": "mempercepat",
+   "src": "made"
+  },
+  {
+   "text": "Hotel memasang mesin baru untuk mempercepat proses check-in.",
+   "en": "The hotel installed a new machine to speed up check-in.",
+   "ko": "호텔은 체크인을 빠르게 하려고 새 기계를 들여놓았어요.",
+   "blank": "mempercepat",
+   "src": "made"
+  }
+ ],
  "w|memperhatikan": [
   {
    "text": "Tolong memperhatikan jalan.",
@@ -22099,6 +22723,22 @@
    "en": "Our team obtained a narrow victory.",
    "ko": "우리 팀이 간신히 승리를 얻었어.",
    "blank": "memperoleh"
+  }
+ ],
+ "w|mempersembahkan": [
+  {
+   "text": "Saat pesta panen, para penari mempersembahkan tarian untuk Dewi Sri.",
+   "en": "At the harvest festival, the dancers performed a dance in honor of Dewi Sri.",
+   "ko": "추수 잔치 때 무용수들은 데위 스리에게 춤을 바쳤어요.",
+   "blank": "mempersembahkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mempersembahkan perannya di film ini untuk almarhum ayahnya.",
+   "en": "Siti dedicated her role in this film to her late father.",
+   "ko": "시티는 이 영화의 배역을 돌아가신 아버지께 바쳤어요.",
+   "blank": "mempersembahkan",
+   "src": "made"
   }
  ],
  "w|mempersiapkan": [
@@ -22323,6 +22963,22 @@
    "en": "Good weather makes a safe trip possible.",
    "ko": "좋은 날씨가 안전한 여행을 가능하게 해.",
    "blank": "memungkinkan"
+  }
+ ],
+ "w|memusnahkan": [
+  {
+   "text": "Petugas pertanian memusnahkan tanaman yang terserang hama wereng.",
+   "en": "Agricultural officers destroyed plants that were attacked by planthoppers.",
+   "ko": "농업 담당자들이 멸구 피해를 입은 작물을 없앴어요.",
+   "blank": "memusnahkan",
+   "src": "made"
+  },
+  {
+   "text": "Dalam cerita film itu, seorang raja jahat ingin memusnahkan seluruh desa.",
+   "en": "In the film's story, an evil king wants to wipe out the entire village.",
+   "ko": "그 영화 이야기에서 악한 왕은 마을 전체를 없애려고 해요.",
+   "blank": "memusnahkan",
+   "src": "made"
   }
  ],
  "w|memutar": [
@@ -22663,6 +23319,22 @@
    "blank": "menantang"
   }
  ],
+ "w|menantu": [
+  {
+   "text": "Ibu Rina berharap punya menantu yang sabar dan rajin.",
+   "en": "Rina's mother hopes to have a patient and hardworking son-in-law.",
+   "ko": "리나의 어머니는 참을성 있고 성실한 사위를 바라요.",
+   "blank": "menantu",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik hotel menyerahkan urusan restoran kepada menantu laki-lakinya.",
+   "en": "The hotel owner handed the restaurant business over to his son-in-law.",
+   "ko": "호텔 주인은 식당 운영을 사위에게 맡겼어요.",
+   "blank": "menantu",
+   "src": "made"
+  }
+ ],
  "w|menanyai": [
   {
    "text": "Petugas dinas kesehatan menanyai Fajar soal kebersihan dapurnya.",
@@ -22897,6 +23569,22 @@
    "blank": "Mencegah"
   }
  ],
+ "w|mencekik": [
+  {
+   "text": "Andi dan Rina membaca berita tentang pencuri yang mencekik penjaga toko, lalu tertangkap polisi.",
+   "en": "Andi and Rina read a news story about a thief who choked a shopkeeper and was then caught by the police.",
+   "ko": "안디와 리나는 가게 주인의 목을 조른 도둑이 경찰에 잡혔다는 기사를 읽었어요.",
+   "blank": "mencekik",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memperingatkan tamu bahwa dasi yang terlalu ketat bisa terasa mencekik.",
+   "en": "Dewi warned a guest that a tie that's too tight can feel choking.",
+   "ko": "데위는 손님에게 넥타이를 너무 꽉 매면 숨이 막힐 수 있다고 일러 줬어요.",
+   "blank": "mencekik",
+   "src": "made"
+  }
+ ],
  "w|menceritakan": [
   {
    "text": "Dia menceritakan kisah lama.",
@@ -22993,6 +23681,22 @@
    "en": "I wash clothes every weekend.",
    "ko": "나는 주말마다 빨래를 해.",
    "blank": "mencuci"
+  }
+ ],
+ "w|mencukur": [
+  {
+   "text": "Sebelum musim panas tiba, Budi mencukur bulu domba-dombanya.",
+   "en": "Before the hot season arrives, Budi shears his sheep.",
+   "ko": "더운 철이 오기 전에 부디는 양털을 깎아요.",
+   "blank": "mencukur",
+   "src": "made"
+  },
+  {
+   "text": "Untuk peran tentara, lawan main Siti harus mencukur rambutnya sampai pendek sekali.",
+   "en": "For the role of a soldier, Siti's co-star had to shave his hair very short.",
+   "ko": "군인 역할 때문에 시티의 상대 배우는 머리를 아주 짧게 밀어야 했어요.",
+   "blank": "mencukur",
+   "src": "made"
   }
  ],
  "w|menculik": [
@@ -23268,6 +23972,22 @@
    "en": "The foundation plans to set up a free clinic in a remote village.",
    "ko": "그 재단은 외딴 마을에 무료 진료소를 세울 계획이에요.",
    "blank": "mendirikan",
+   "src": "made"
+  }
+ ],
+ "w|mendiskusikan": [
+  {
+   "text": "Para petani mendiskusikan jadwal tanam di balai desa.",
+   "en": "The farmers discussed the planting schedule at the village hall.",
+   "ko": "농부들은 마을 회관에서 모내기 일정을 의논했어요.",
+   "blank": "mendiskusikan",
+   "src": "made"
+  },
+  {
+   "text": "Siti dan sutradara mendiskusikan cara memerankan tokoh ibu yang keras.",
+   "en": "Siti and the director discussed how to play the strict mother character.",
+   "ko": "시티와 감독은 엄격한 어머니 역을 어떻게 연기할지 의논했어요.",
+   "blank": "mendiskusikan",
    "src": "made"
   }
  ],
@@ -23547,6 +24267,22 @@
    "blank": "Menendang"
   }
  ],
+ "w|menengah": [
+  {
+   "text": "Perusahaan tempat Andi bekerja termasuk usaha menengah di kota itu.",
+   "en": "The company where Andi works is one of the mid-sized businesses in the city.",
+   "ko": "안디가 일하는 회사는 그 도시의 중견 기업에 속해요.",
+   "blank": "menengah",
+   "src": "made"
+  },
+  {
+   "text": "Kebanyakan tamu hotel itu berasal dari kalangan menengah.",
+   "en": "Most of that hotel's guests are from the middle class.",
+   "ko": "그 호텔 손님은 대부분 중산층이에요.",
+   "blank": "menengah",
+   "src": "made"
+  }
+ ],
  "w|menentang": [
   {
    "text": "Mereka menentang kebijakan yang tidak adil.",
@@ -23651,6 +24387,22 @@
    "blank": "Menerobos"
   }
  ],
+ "w|menertawakan": [
+  {
+   "text": "Tetangga menertawakan Budi yang memakai jas hujan padahal langit cerah.",
+   "en": "The neighbors laughed at Budi for wearing a raincoat even though the sky was clear.",
+   "ko": "하늘이 맑은데 비옷을 입은 부디를 이웃들이 놀렸어요.",
+   "blank": "menertawakan",
+   "src": "made"
+  },
+  {
+   "text": "Semua kru menertawakan Siti yang lupa dialog di adegan lucu itu.",
+   "en": "The whole crew laughed at Siti when she forgot her lines in that funny scene.",
+   "ko": "그 코믹 장면에서 시티가 대사를 잊자 제작진이 다 웃었어요.",
+   "blank": "menertawakan",
+   "src": "made"
+  }
+ ],
  "w|meneruskan": [
   {
    "text": "Dia memutuskan meneruskan studinya.",
@@ -23707,6 +24459,22 @@
    "en": "Ignoring a small problem can be dangerous.",
    "ko": "작은 문제를 무시하면 위험할 수 있어.",
    "blank": "Mengabaikan"
+  }
+ ],
+ "w|mengabari": [
+  {
+   "text": "Kepala desa mengabari warga lewat pengeras suara bahwa air sungai naik.",
+   "en": "The village head informed residents over the loudspeaker that the river was rising.",
+   "ko": "이장이 확성기로 주민들에게 강물이 불고 있다고 알렸어요.",
+   "blank": "mengabari",
+   "src": "made"
+  },
+  {
+   "text": "Manajer Siti mengabari bahwa jadwal wawancara diundur.",
+   "en": "Siti's manager let her know that the interview schedule was postponed.",
+   "ko": "시티의 매니저가 인터뷰 일정이 미뤄졌다고 알려 줬어요.",
+   "blank": "mengabari",
+   "src": "made"
   }
  ],
  "w|mengacaukan": [
@@ -24012,6 +24780,22 @@
    "en": "From the window, Putri watched the mountain slowly being covered in mist.",
    "ko": "푸트리는 창밖으로 산이 천천히 안개에 덮이는 걸 지켜봤어요.",
    "blank": "mengamati",
+   "src": "made"
+  }
+ ],
+ "w|mengambang": [
+  {
+   "text": "Rapat itu panjang, tapi keputusannya masih mengambang.",
+   "en": "The meeting was long, but the decision is still up in the air.",
+   "ko": "회의는 길었지만 결정은 아직 흐지부지해요.",
+   "blank": "mengambang",
+   "src": "made"
+  },
+  {
+   "text": "Daun-daun kering tampak mengambang di kolam renang hotel pagi itu.",
+   "en": "Dry leaves could be seen floating in the hotel pool that morning.",
+   "ko": "그날 아침 호텔 수영장에 마른 잎들이 떠 있었어요.",
+   "blank": "mengambang",
    "src": "made"
   }
  ],
@@ -24541,6 +25325,22 @@
    "blank": "Mengenali"
   }
  ],
+ "w|mengenalkan": [
+  {
+   "text": "Penyuluh pertanian mengenalkan bibit padi yang tahan kering kepada Budi.",
+   "en": "The agricultural extension officer introduced Budi to a drought-resistant rice seed.",
+   "ko": "농업 지도원이 부디에게 가뭄에 강한 볍씨를 소개했어요.",
+   "blank": "mengenalkan",
+   "src": "made"
+  },
+  {
+   "text": "Sutradara mengenalkan Siti kepada penata kostum yang baru.",
+   "en": "The director introduced Siti to the new costume designer.",
+   "ko": "감독이 시티에게 새 의상 담당자를 소개했어요.",
+   "blank": "mengenalkan",
+   "src": "made"
+  }
+ ],
  "w|mengendalikan": [
   {
    "text": "Dia berusaha mengendalikan emosinya.",
@@ -24939,6 +25739,22 @@
    "en": "That news crushed his heart.",
    "ko": "그 소식이 마음을 무너뜨렸어.",
    "blank": "menghancurkan"
+  }
+ ],
+ "w|menghantui": [
+  {
+   "text": "Kesalahan kecil di kantor lama masih menghantui pikiran Rina.",
+   "en": "A small mistake at her old office still haunts Rina's mind.",
+   "ko": "예전 회사에서 한 작은 실수가 아직도 리나의 머릿속을 맴돌아요.",
+   "blank": "menghantui",
+   "src": "made"
+  },
+  {
+   "text": "Para pegawai suka bercerita tentang hantu yang konon menghantui lantai tiga.",
+   "en": "The staff like telling stories about a ghost that supposedly haunts the third floor.",
+   "ko": "직원들은 삼 층에 귀신이 나온다는 이야기를 즐겨 해요.",
+   "blank": "menghantui",
+   "src": "made"
   }
  ],
  "w|menghapus": [
@@ -25553,6 +26369,22 @@
    "blank": "mengorbankan"
   }
  ],
+ "w|mengosongkan": [
+  {
+   "text": "Sebelum musim hujan, Budi mengosongkan selokan dari sampah dan daun.",
+   "en": "Before the rainy season, Budi clears rubbish and leaves out of the gutter.",
+   "ko": "우기가 오기 전에 부디는 도랑의 쓰레기와 낙엽을 치워요.",
+   "blank": "mengosongkan",
+   "src": "made"
+  },
+  {
+   "text": "Kru mengosongkan jalan selama satu jam untuk adegan kejar-kejaran.",
+   "en": "The crew cleared the street for an hour for the chase scene.",
+   "ko": "제작진은 추격 장면을 위해 한 시간 동안 거리를 비웠어요.",
+   "blank": "mengosongkan",
+   "src": "made"
+  }
+ ],
  "w|menguasai": [
   {
    "text": "Dia sudah menguasai bahasa asing itu.",
@@ -25927,6 +26759,22 @@
    "en": "That decision caused a long debate.",
    "ko": "그 결정이 긴 논쟁을 불러왔어.",
    "blank": "menimbulkan"
+  }
+ ],
+ "w|menimpa": [
+  {
+   "text": "Waktu badai datang, sebatang pohon kelapa menimpa atap kandang Budi.",
+   "en": "When the storm came, a coconut tree fell onto the roof of Budi's shed.",
+   "ko": "폭풍이 왔을 때 야자나무 한 그루가 부디네 외양간 지붕 위로 쓰러졌어요.",
+   "blank": "menimpa",
+   "src": "made"
+  },
+  {
+   "text": "Musibah yang menimpa tokoh Siti membuat penonton tes menangis.",
+   "en": "The misfortune that befell Siti's character made the test audience cry.",
+   "ko": "시티가 맡은 인물에게 닥친 불행에 시사회 관객들이 울었어요.",
+   "blank": "menimpa",
+   "src": "made"
   }
  ],
  "w|meninggal": [
@@ -26649,6 +27497,22 @@
    "en": "According to the doctor, just rest.",
    "ko": "의사 말로는 쉬기만 하래.",
    "blank": "Menurut"
+  }
+ ],
+ "w|menuruti": [
+  {
+   "text": "Rina selalu menuruti aturan kantor, termasuk soal jam masuk.",
+   "en": "Rina always follows the office rules, including about arrival times.",
+   "ko": "리나는 출근 시간을 포함해 회사 규칙을 늘 지켜요.",
+   "blank": "menuruti",
+   "src": "made"
+  },
+  {
+   "text": "Dewi berusaha menuruti permintaan tamu, asalkan masih masuk akal.",
+   "en": "Dewi tries to go along with guests' requests, as long as they're reasonable.",
+   "ko": "데위는 손님 요청이 합리적이기만 하면 들어주려고 해요.",
+   "blank": "menuruti",
+   "src": "made"
   }
  ],
  "w|menusuk": [
@@ -27463,6 +28327,22 @@
    "src": "made"
   }
  ],
+ "w|menyuap": [
+  {
+   "text": "Rina pernah menolak seorang pemasok yang mencoba menyuap timnya.",
+   "en": "Rina once turned down a supplier who tried to bribe her team.",
+   "ko": "리나는 자기 팀에 뇌물을 주려던 납품업자를 거절한 적이 있어요.",
+   "blank": "menyuap",
+   "src": "made"
+  },
+  {
+   "text": "Seorang tamu mencoba menyuap satpam supaya bisa parkir di depan lobi.",
+   "en": "A guest tried to bribe the security guard so he could park in front of the lobby.",
+   "ko": "한 손님이 로비 앞에 주차하려고 경비원에게 뒷돈을 주려 했어요.",
+   "blank": "menyuap",
+   "src": "made"
+  }
+ ],
  "w|menyukai": [
   {
    "text": "Aku menyukai warna biru.",
@@ -27819,6 +28699,22 @@
    "blank": "merencanakan"
   }
  ],
+ "w|meretas": [
+  {
+   "text": "Anak Budi membaca berita tentang orang yang meretas situs badan cuaca.",
+   "en": "Budi's son read a news story about someone who hacked the weather agency's website.",
+   "ko": "부디의 아들은 누군가 기상청 사이트를 해킹했다는 기사를 읽었어요.",
+   "blank": "meretas",
+   "src": "made"
+  },
+  {
+   "text": "Dalam film itu, tokoh adik Siti adalah remaja yang pandai meretas komputer.",
+   "en": "In the film, the character of Siti's younger brother is a teenager who is good at hacking computers.",
+   "ko": "그 영화에서 시티의 동생 역은 컴퓨터 해킹을 잘하는 십 대예요.",
+   "blank": "meretas",
+   "src": "made"
+  }
+ ],
  "w|meriam": [
   {
    "text": "Di halaman kantor polisi ada meriam tua peninggalan zaman penjajahan.",
@@ -27891,6 +28787,22 @@
    "en": "He quit smoking last year.",
    "ko": "그는 작년에 담배를 끊었어.",
    "blank": "merokok"
+  }
+ ],
+ "w|mertua": [
+  {
+   "text": "Rina sedang belajar memasak rendang supaya disukai calon mertua.",
+   "en": "Rina is learning to cook rendang so her future in-laws will like her.",
+   "ko": "리나는 예비 시부모님 마음에 들려고 른당 만드는 법을 배우고 있어요.",
+   "blank": "mertua",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memesan kamar untuk mertua kakaknya yang datang dari Makassar.",
+   "en": "Dewi booked a room for her sister's in-laws who came from Makassar.",
+   "ko": "데위는 마카사르에서 오는 언니의 시부모님 방을 예약했어요.",
+   "blank": "mertua",
+   "src": "made"
   }
  ],
  "w|merunduk": [
@@ -28076,6 +28988,22 @@
    "en": "Wati practices every day to make her dream of playing in an orchestra come true.",
    "ko": "와티는 오케스트라에서 연주하는 꿈을 이루려고 매일 연습해요.",
    "blank": "mewujudkan",
+   "src": "made"
+  }
+ ],
+ "w|meyakini": [
+  {
+   "text": "Orang tua di desa Budi meyakini suara katak adalah tanda hujan akan turun.",
+   "en": "Elders in Budi's village believe the sound of frogs is a sign that rain is coming.",
+   "ko": "부디네 마을 어르신들은 개구리 소리가 비 올 징조라고 믿어요.",
+   "blank": "meyakini",
+   "src": "made"
+  },
+  {
+   "text": "Siti meyakini film ini akan disukai penonton muda.",
+   "en": "Siti is convinced this film will be liked by young audiences.",
+   "ko": "시티는 이 영화가 젊은 관객에게 사랑받을 거라고 믿어요.",
+   "blank": "meyakini",
    "src": "made"
   }
  ],
@@ -29325,6 +30253,22 @@
    "src": "made"
   }
  ],
+ "w|november": [
+  {
+   "text": "Bulan November tahun lalu, angin kencang merobohkan pohon di depan rumah Budi.",
+   "en": "Last November, strong winds knocked down the tree in front of Budi's house.",
+   "ko": "작년 십일월에 강풍이 부디네 집 앞 나무를 쓰러뜨렸어요.",
+   "blank": "November",
+   "src": "made"
+  },
+  {
+   "text": "Siti berharap film itu bisa selesai disunting bulan November.",
+   "en": "Siti hopes the film can finish editing in November.",
+   "ko": "시티는 영화 편집이 십일월에 끝나기를 바라요.",
+   "blank": "November",
+   "src": "made"
+  }
+ ],
  "w|nuklir": [
   {
    "text": "Nuklir menjadi topik debat internasional.",
@@ -29511,6 +30455,22 @@
    "en": "The patient needs extra oxygen at the hospital.",
    "ko": "환자는 병원에서 추가 산소가 필요해.",
    "blank": "oksigen"
+  }
+ ],
+ "w|oktober": [
+  {
+   "text": "Biasanya hujan mulai sering turun di bulan Oktober.",
+   "en": "Usually the rain starts falling often in October.",
+   "ko": "보통 시월이 되면 비가 자주 내리기 시작해요.",
+   "blank": "Oktober",
+   "src": "made"
+  },
+  {
+   "text": "Siti mulai latihan dialog sejak bulan Oktober tahun lalu.",
+   "en": "Siti started rehearsing her lines in October last year.",
+   "ko": "시티는 작년 시월부터 대사 연습을 시작했어요.",
+   "blank": "Oktober",
+   "src": "made"
   }
  ],
  "w|olahraga": [
@@ -31651,6 +32611,22 @@
    "blank": "pencurian"
   }
  ],
+ "w|pendamping": [
+  {
+   "text": "Di hari pertama, Andi ditunjuk menjadi pendamping Rina selama masa percobaan.",
+   "en": "On the first day, Andi was appointed to be Rina's mentor during her probation period.",
+   "ko": "첫날 안디는 수습 기간 동안 리나를 돌보는 담당자로 지정됐어요.",
+   "blank": "pendamping",
+   "src": "made"
+  },
+  {
+   "text": "Pengantin wanita datang ke hotel bersama pendamping yang membawakan gaunnya.",
+   "en": "The bride came to the hotel with an attendant who carried her gown.",
+   "ko": "신부는 드레스를 들어 주는 들러리와 함께 호텔에 왔어요.",
+   "blank": "pendamping",
+   "src": "made"
+  }
+ ],
  "w|pendapat": [
   {
    "text": "Apa pendapatmu soal ini?",
@@ -31965,6 +32941,22 @@
    "en": "That film had a big influence on me.",
    "ko": "그 영화가 나에게 큰 영향을 줬어.",
    "blank": "pengaruh"
+  }
+ ],
+ "w|pengasuh": [
+  {
+   "text": "Sebelum bekerja di kantor, Rina pernah jadi pengasuh anak di Jakarta.",
+   "en": "Before working at the office, Rina was once a nanny in Jakarta.",
+   "ko": "리나는 회사에 오기 전에 자카르타에서 아이 돌보미로 일한 적이 있어요.",
+   "blank": "pengasuh",
+   "src": "made"
+  },
+  {
+   "text": "Seorang tamu datang bersama pengasuh yang menjaga bayinya.",
+   "en": "A guest came with a nanny who looked after her baby.",
+   "ko": "한 손님이 아기를 돌보는 보모와 함께 왔어요.",
+   "blank": "pengasuh",
+   "src": "made"
   }
  ],
  "w|pengaturan": [
@@ -33095,6 +34087,22 @@
    "blank": "percaya"
   }
  ],
+ "w|perceraian": [
+  {
+   "text": "Rina pernah menulis skripsi tentang dampak perceraian pada anak.",
+   "en": "Rina once wrote her thesis on the effects of divorce on children.",
+   "ko": "리나는 이혼이 아이에게 미치는 영향에 관한 졸업 논문을 쓴 적이 있어요.",
+   "blank": "perceraian",
+   "src": "made"
+  },
+  {
+   "text": "Pengacara yang menginap di hotel itu sedang mengurus kasus perceraian artis.",
+   "en": "The lawyer staying at the hotel is handling a celebrity's divorce case.",
+   "ko": "그 호텔에 묵는 변호사는 한 연예인의 이혼 사건을 맡고 있어요.",
+   "blank": "perceraian",
+   "src": "made"
+  }
+ ],
  "w|percobaan": [
   {
    "text": "Percobaan ilmiah itu berhasil dengan baik.",
@@ -33353,6 +34361,22 @@
    "en": "He gave a short order.",
    "ko": "짧은 명령을 내렸어.",
    "blank": "perintah"
+  }
+ ],
+ "w|periode": [
+  {
+   "text": "Selama periode kemarau, Budi menanam kacang karena tidak butuh banyak air.",
+   "en": "During the dry period, Budi grows beans because they don't need much water.",
+   "ko": "건기 동안 부디는 물이 많이 필요 없는 콩을 심어요.",
+   "blank": "periode",
+   "src": "made"
+  },
+  {
+   "text": "Selama periode syuting, Siti tinggal di losmen dekat lokasi.",
+   "en": "During the shooting period, Siti stays at a guesthouse near the location.",
+   "ko": "촬영 기간 동안 시티는 촬영지 근처 여관에 머물러요.",
+   "blank": "periode",
+   "src": "made"
   }
  ],
  "w|perisai": [
@@ -34111,6 +35135,22 @@
    "blank": "pertemuan"
   }
  ],
+ "w|pertengahan": [
+  {
+   "text": "Pada pertengahan musim hujan, sungai di dekat rumah Budi sering meluap.",
+   "en": "In the middle of the rainy season, the river near Budi's house often overflows.",
+   "ko": "우기 중반이 되면 부디네 집 근처 강이 자주 넘쳐요.",
+   "blank": "pertengahan",
+   "src": "made"
+  },
+  {
+   "text": "Pada pertengahan syuting, kamera utama rusak dan harus diganti.",
+   "en": "Midway through the shoot, the main camera broke and had to be replaced.",
+   "ko": "촬영 중반에 메인 카메라가 고장 나서 바꿔야 했어요.",
+   "blank": "pertengahan",
+   "src": "made"
+  }
+ ],
  "w|pertolongan": [
   {
    "text": "Pertolongan pertama diberikan di tempat kejadian.",
@@ -34137,6 +35177,22 @@
    "en": "The exchange of ideas made the project richer.",
    "ko": "아이디어 교환이 프로젝트를 더 풍성하게 했어.",
    "blank": "Pertukaran"
+  }
+ ],
+ "w|pertunangan": [
+  {
+   "text": "Rina mengundang Andi ke acara pertunangan di rumahnya.",
+   "en": "Rina invited Andi to the engagement ceremony at her house.",
+   "ko": "리나는 자기 집에서 열리는 약혼식에 안디를 초대했어요.",
+   "blank": "pertunangan",
+   "src": "made"
+  },
+  {
+   "text": "Restoran hotel penuh karena ada acara pertunangan sepasang dokter muda.",
+   "en": "The hotel restaurant was full because of an engagement party for a young doctor couple.",
+   "ko": "젊은 의사 커플의 약혼식이 있어서 호텔 식당이 꽉 찼어요.",
+   "blank": "pertunangan",
+   "src": "made"
   }
  ],
  "w|pertunjukan": [
@@ -34291,6 +35347,22 @@
    "en": "Many farmers sell their harvest at the market.",
    "ko": "많은 농부가 시장에서 수확물을 팔아.",
    "blank": "petani"
+  }
+ ],
+ "w|petarung": [
+  {
+   "text": "Andi kaget waktu tahu Rina dulu petarung silat tingkat provinsi.",
+   "en": "Andi was surprised to learn Rina used to be a provincial-level silat fighter.",
+   "ko": "안디는 리나가 예전에 주 대표 실랏 선수였다는 걸 알고 놀랐어요.",
+   "blank": "petarung",
+   "src": "made"
+  },
+  {
+   "text": "Seorang petarung tinju terkenal menginap di hotel sebelum pertandingan.",
+   "en": "A famous boxer stayed at the hotel before the match.",
+   "ko": "유명한 권투 선수가 경기 전에 호텔에 묵었어요.",
+   "blank": "petarung",
+   "src": "made"
   }
  ],
  "w|peternakan": [
@@ -35261,6 +36333,22 @@
    "src": "made"
   }
  ],
+ "w|psikopat": [
+  {
+   "text": "Rina suka menonton serial tentang detektif yang mengejar psikopat.",
+   "en": "Rina likes watching a series about a detective chasing a psychopath.",
+   "ko": "리나는 사이코패스를 쫓는 형사 드라마를 즐겨 봐요.",
+   "blank": "psikopat",
+   "src": "made"
+  },
+  {
+   "text": "Seorang penulis yang menginap di hotel sedang menyelesaikan novel tentang psikopat.",
+   "en": "A writer staying at the hotel is finishing a novel about a psychopath.",
+   "ko": "호텔에 묵는 한 작가가 사이코패스에 관한 소설을 마무리하고 있어요.",
+   "blank": "psikopat",
+   "src": "made"
+  }
+ ],
  "w|puas": [
   {
    "text": "Pelanggan tampak puas dengan layanan kami.",
@@ -35399,6 +36487,22 @@
    "en": "We waited thirty minutes.",
    "ko": "우리는 삼십 분을 기다렸어.",
    "blank": "puluh"
+  }
+ ],
+ "w|puluhan": [
+  {
+   "text": "Setiap musim hujan, puluhan burung bangau datang ke sawah Budi.",
+   "en": "Every rainy season, dozens of storks come to Budi's rice field.",
+   "ko": "우기마다 백로 수십 마리가 부디의 논에 찾아와요.",
+   "blank": "puluhan",
+   "src": "made"
+  },
+  {
+   "text": "Untuk adegan pesta, sutradara mengajak puluhan warga menjadi figuran.",
+   "en": "For the party scene, the director invited dozens of residents to be extras.",
+   "ko": "파티 장면을 위해 감독은 주민 수십 명을 엑스트라로 불렀어요.",
+   "blank": "puluhan",
+   "src": "made"
   }
  ],
  "w|pun": [
@@ -35569,6 +36673,22 @@
    "en": "That rope snapped.",
    "ko": "그 줄이 끊어졌어.",
    "blank": "putus"
+  }
+ ],
+ "w|rabu": [
+  {
+   "text": "Pasar sapi di desa Budi hanya buka setiap hari Rabu.",
+   "en": "The cattle market in Budi's village only opens on Wednesdays.",
+   "ko": "부디네 마을 소 시장은 수요일에만 열려요.",
+   "blank": "Rabu",
+   "src": "made"
+  },
+  {
+   "text": "Rapat dengan produser dipindah ke hari Rabu pagi.",
+   "en": "The meeting with the producer was moved to Wednesday morning.",
+   "ko": "프로듀서와의 회의는 수요일 오전으로 옮겨졌어요.",
+   "blank": "Rabu",
+   "src": "made"
   }
  ],
  "w|racun": [
@@ -38167,6 +39287,22 @@
    "blank": "sekedar"
   }
  ],
+ "w|sekejap": [
+  {
+   "text": "Hujan deras itu hanya turun sekejap, lalu matahari muncul lagi.",
+   "en": "The heavy rain only fell for a moment, then the sun came out again.",
+   "ko": "그 폭우는 잠깐 내리고 다시 해가 났어요.",
+   "blank": "sekejap",
+   "src": "made"
+  },
+  {
+   "text": "Matahari terbenam hanya sekejap, jadi kru harus bergerak cepat.",
+   "en": "The sunset only lasts a moment, so the crew has to move fast.",
+   "ko": "해 지는 순간은 잠깐이라서 제작진은 빨리 움직여야 했어요.",
+   "blank": "sekejap",
+   "src": "made"
+  }
+ ],
  "w|sekeliling": [
   {
    "text": "Saat meliput demo, Eko selalu memperhatikan keadaan di sekeliling.",
@@ -38483,6 +39619,22 @@
    "blank": "selesai"
   }
  ],
+ "w|selingkuh": [
+  {
+   "text": "Rina tertawa ketika teman-temannya bercanda bahwa pacarnya mungkin selingkuh.",
+   "en": "Rina laughed when her friends joked that her boyfriend might be cheating.",
+   "ko": "친구들이 남자 친구가 바람피우는 거 아니냐고 놀리자 리나는 웃었어요.",
+   "blank": "selingkuh",
+   "src": "made"
+  },
+  {
+   "text": "Di sinetron favorit Dewi, tokoh utamanya ketahuan selingkuh.",
+   "en": "In Dewi's favorite soap opera, the main character gets caught cheating.",
+   "ko": "데위가 좋아하는 드라마에서 주인공이 바람피우다 들켰어요.",
+   "blank": "selingkuh",
+   "src": "made"
+  }
+ ],
  "w|seluruh": [
   {
    "text": "Seluruh kota gelap gulita.",
@@ -38753,6 +39905,22 @@
    "en": "Everyone has gone home.",
    "ko": "다들 집에 갔어.",
    "blank": "Semua"
+  }
+ ],
+ "w|semula": [
+  {
+   "text": "Budi semula mengira musim hujan sudah datang, ternyata hanya hujan sebentar.",
+   "en": "Budi originally thought the rainy season had come, but it was just a brief shower.",
+   "ko": "부디는 처음에 우기가 온 줄 알았는데 잠깐 내린 비였어요.",
+   "blank": "semula",
+   "src": "made"
+  },
+  {
+   "text": "Jadwal syuting akhirnya kembali seperti semula setelah hujan berhenti.",
+   "en": "The shooting schedule finally went back to how it was originally after the rain stopped.",
+   "ko": "비가 그친 뒤 촬영 일정이 결국 원래대로 돌아왔어요.",
+   "blank": "semula",
+   "src": "made"
   }
  ],
  "w|sen": [
@@ -39199,6 +40367,22 @@
    "blank": "sepotong"
   }
  ],
+ "w|september": [
+  {
+   "text": "Petani di desa Budi mulai membajak sawah pada akhir September.",
+   "en": "Farmers in Budi's village start plowing their fields at the end of September.",
+   "ko": "부디네 마을 농부들은 구월 말에 논을 갈기 시작해요.",
+   "blank": "September",
+   "src": "made"
+  },
+  {
+   "text": "Film yang dibintangi Siti rencananya tayang di bioskop bulan September.",
+   "en": "The film Siti stars in is planned to show in cinemas in September.",
+   "ko": "시티가 주연한 영화는 구월에 극장에서 개봉할 예정이에요.",
+   "blank": "September",
+   "src": "made"
+  }
+ ],
  "w|sepuluh": [
   {
    "text": "Saya tunggu sepuluh menit.",
@@ -39439,6 +40623,22 @@
    "en": "Fellow coworkers supported his idea.",
    "ko": "동료 직장인들이 그의 아이디어를 지지했어.",
    "blank": "Sesama"
+  }
+ ],
+ "w|sesekali": [
+  {
+   "text": "Budi sesekali melihat pelangi di atas bukit setelah hujan.",
+   "en": "Budi occasionally sees a rainbow over the hill after the rain.",
+   "ko": "부디는 비가 그친 뒤 언덕 위로 가끔 무지개를 봐요.",
+   "blank": "sesekali",
+   "src": "made"
+  },
+  {
+   "text": "Di sela syuting, Siti sesekali menelepon anaknya di rumah.",
+   "en": "Between takes, Siti occasionally calls her child at home.",
+   "ko": "촬영 사이사이에 시티는 가끔 집에 있는 아이에게 전화해요.",
+   "blank": "sesekali",
+   "src": "made"
   }
  ],
  "w|seseorang": [
@@ -40273,6 +41473,22 @@
    "blank": "Solusi"
   }
  ],
+ "w|sombong": [
+  {
+   "text": "Meskipun pintar, Rina sama sekali tidak sombong.",
+   "en": "Even though she's smart, Rina isn't arrogant at all.",
+   "ko": "리나는 똑똑하지만 전혀 거만하지 않아요.",
+   "blank": "sombong",
+   "src": "made"
+  },
+  {
+   "text": "Seorang tamu yang sombong menolak antre di meja resepsionis.",
+   "en": "An arrogant guest refused to queue at the reception desk.",
+   "ko": "거만한 손님 한 명이 프런트에서 줄 서기를 거부했어요.",
+   "blank": "sombong",
+   "src": "made"
+  }
+ ],
  "w|sopan": [
   {
    "text": "Anak itu sangat sopan kepada tamu.",
@@ -41057,6 +42273,22 @@
    "en": "They're twenty.",
    "ko": "스무 살이야.",
    "blank": "tahun"
+  }
+ ],
+ "w|tahunan": [
+  {
+   "text": "Setiap habis panen, desa Budi mengadakan pesta tahunan.",
+   "en": "After every harvest, Budi's village holds an annual festival.",
+   "ko": "추수가 끝날 때마다 부디네 마을은 해마다 잔치를 열어요.",
+   "blank": "tahunan",
+   "src": "made"
+  },
+  {
+   "text": "Film itu akan diputar di festival film tahunan di Yogyakarta.",
+   "en": "The film will be screened at the annual film festival in Yogyakarta.",
+   "ko": "그 영화는 족자카르타에서 열리는 연례 영화제에서 상영돼요.",
+   "blank": "tahunan",
+   "src": "made"
   }
  ],
  "w|tajam": [
@@ -44009,6 +45241,22 @@
    "blank": "tipuan"
   }
  ],
+ "w|tiri": [
+  {
+   "text": "Rina tinggal bersama ayah tiri yang sangat menyayanginya.",
+   "en": "Rina lives with her stepfather, who loves her very much.",
+   "ko": "리나는 자기를 무척 아끼는 새아버지와 함께 살아요.",
+   "blank": "tiri",
+   "src": "made"
+  },
+  {
+   "text": "Seorang tamu datang bersama ibu tirinya untuk merayakan ulang tahun.",
+   "en": "A guest came with her stepmother to celebrate a birthday.",
+   "ko": "한 손님이 새어머니와 함께 생일을 축하하러 왔어요.",
+   "blank": "tirinya",
+   "src": "made"
+  }
+ ],
  "w|titik": [
   {
    "text": "Ini titik pertemuan.",
@@ -45275,6 +46523,22 @@
    "blank": "walau"
   }
  ],
+ "w|wali": [
+  {
+   "text": "Rina harus izin pulang cepat untuk menghadiri rapat wali murid di sekolah anaknya.",
+   "en": "Rina had to leave early to attend a parents' meeting at her child's school.",
+   "ko": "리나는 아이 학교의 학부모 회의에 가려고 일찍 퇴근해야 했어요.",
+   "blank": "wali",
+   "src": "made"
+  },
+  {
+   "text": "Seorang anak hilang di lobi, jadi Dewi segera mencari walinya.",
+   "en": "A child got lost in the lobby, so Dewi immediately looked for the child's guardian.",
+   "ko": "아이가 로비에서 길을 잃어서 데위는 바로 보호자를 찾았어요.",
+   "blank": "walinya",
+   "src": "made"
+  }
+ ],
  "w|walikota": [
   {
    "text": "Walikota mengunjungi pasar pagi hari.",
@@ -45489,6 +46753,22 @@
    "en": "Which one, though?",
    "ko": "어떤 걸 말하는 거야?",
    "blank": "Yang"
+  }
+ ],
+ "w|yatim": [
+  {
+   "text": "Rekan kerja baru Andi bercerita bahwa dia yatim sejak umur sepuluh tahun.",
+   "en": "Andi's new coworker said he has been an orphan since he was ten.",
+   "ko": "안디의 새 동료는 열 살 때부터 고아였다고 이야기했어요.",
+   "blank": "yatim",
+   "src": "made"
+  },
+  {
+   "text": "Hotel tempat Dewi bekerja rutin menyumbang ke panti anak yatim.",
+   "en": "The hotel where Dewi works regularly donates to an orphanage.",
+   "ko": "데위가 일하는 호텔은 정기적으로 고아원에 기부해요.",
+   "blank": "yatim",
+   "src": "made"
   }
  ],
  "w|zaman": [
