@@ -459,6 +459,22 @@
    "src": "made"
   }
  ],
+ "w|กรวด": [
+  {
+   "text": "เอกโรยกรวดบนทางเดินหน้าบ้านกันลื่นหน้าฝน",
+   "en": "Ek spread gravel on the path in front of his house to stop it being slippery in the rains.",
+   "ko": "에크는 우기에 미끄럽지 않게 집 앞 길에 자갈을 깔았어요.",
+   "blank": "กรวด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งกรวดสีขาวมาโรยในตู้ปลา",
+   "en": "Piya ordered white gravel to spread in his fish tank.",
+   "ko": "삐야는 어항에 깔 하얀 자갈을 주문했어요.",
+   "blank": "กรวด",
+   "src": "made"
+  }
+ ],
  "w|กรวย": [
   {
    "text": "เจ้าหน้าที่วางกรวยสีส้มกั้นทางเดินตรงที่พื้นเปียก",
@@ -1125,6 +1141,22 @@
    "src": "made"
   }
  ],
+ "w|กระบะ": [
+  {
+   "text": "ชาวบ้านใช้รถกระบะขนผักมาขายที่ชานชาลาทุกเช้า",
+   "en": "Villagers use pickup trucks to bring vegetables to sell on the platform every morning.",
+   "ko": "주민들은 매일 아침 픽업트럭으로 채소를 실어 와 승강장에서 팔아요.",
+   "blank": "กระบะ",
+   "src": "made"
+  },
+  {
+   "text": "พ่อของวรรณาขับรถกระบะตามไปเชียร์ตลอดเส้นทาง",
+   "en": "Wannaa's father followed in his pickup truck to cheer her along the course.",
+   "ko": "완나의 아버지는 픽업트럭을 몰고 코스를 따라오며 응원했어요.",
+   "blank": "กระบะ",
+   "src": "made"
+  }
+ ],
  "w|กระเบื้อง": [
   {
    "text": "วิชัยเปลี่ยนกระเบื้องห้องน้ำที่แตกเองโดยไม่จ้างช่าง",
@@ -1603,6 +1635,22 @@
    "blank": "กล้วย"
   }
  ],
+ "w|กล้วยไม้": [
+  {
+   "text": "เอกปลูกกล้วยไม้ป่าไว้บนต้นไม้หน้าบ้าน",
+   "en": "Ek grows wild orchids on the tree in front of his house.",
+   "ko": "에크는 집 앞 나무에 야생 난초를 키워요.",
+   "blank": "กล้วยไม้",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งกล้วยไม้กระถางเล็กออนไลน์ไปฝากแม่",
+   "en": "Piya ordered a small potted orchid online as a gift for his mother.",
+   "ko": "삐야는 어머니께 드리려고 작은 화분 난초를 온라인으로 주문했어요.",
+   "blank": "กล้วยไม้",
+   "src": "made"
+  }
+ ],
  "w|กลวิธี": [
   {
    "text": "สมชายมีกลวิธีจำสูตรคณิตศาสตร์แบบใช้เพลงที่เด็กชอบมาก",
@@ -1909,6 +1957,22 @@
    "en": "Don't go out alone at night.",
    "ko": "밤에는 혼자 나가지 마.",
    "blank": "กลางคืน"
+  }
+ ],
+ "w|กลางดึก": [
+  {
+   "text": "ลมหนาวพัดเข้ามากลางดึกจนชัยต้องลุกไปปิดหน้าต่าง",
+   "en": "The cold wind blew in in the middle of the night, so Chai had to get up and shut the window.",
+   "ko": "한밤중에 찬 바람이 들이쳐서 차이는 일어나 창문을 닫아야 했어요.",
+   "blank": "กลางดึก",
+   "src": "made"
+  },
+  {
+   "text": "คอนเสิร์ตเลิกกลางดึก สมศักดิ์ต้องเรียกแท็กซี่กลับบ้าน",
+   "en": "The concert ended in the middle of the night, so Somsak had to call a taxi home.",
+   "ko": "콘서트가 한밤중에 끝나서 솜삭은 택시를 불러 집에 가야 했어요.",
+   "blank": "กลางดึก",
+   "src": "made"
   }
  ],
  "w|กลางวัน": [
@@ -2781,6 +2845,22 @@
    "en": "She winked at me playfully.",
    "ko": "그녀가 장난스럽게 나한테 윙크했어.",
    "blank": "กะพริบ"
+  }
+ ],
+ "w|กะลาสี": [
+  {
+   "text": "ก่อนมาทำงานก่อสร้าง วีระมีเพื่อนเป็นกะลาสีเรือสินค้า",
+   "en": "Before working in construction, Weera had a friend who was a sailor on a cargo ship.",
+   "ko": "건설 일을 하기 전 위라에겐 화물선 선원 친구가 있었어요.",
+   "blank": "กะลาสี",
+   "src": "made"
+  },
+  {
+   "text": "ปู่ของจันทร์เคยเป็นกะลาสี เลยชอบเล่าเรื่องทะเลระหว่างทาง",
+   "en": "Jan's grandfather used to be a sailor, so he likes telling sea stories on the way.",
+   "ko": "짠의 할아버지는 선원이었어서 가는 길에 바다 이야기를 즐겨 해요.",
+   "blank": "กะลาสี",
+   "src": "made"
   }
  ],
  "w|กะหล่ำปลี": [
@@ -5275,6 +5355,22 @@
    "src": "made"
   }
  ],
+ "w|เกล็ด": [
+  {
+   "text": "เอกขอดเกล็ดปลาที่จับได้จากลำธารเพื่อทำปลาปิ้ง",
+   "en": "Ek scaled the fish he caught in the stream to grill it.",
+   "ko": "에크는 개울에서 잡은 물고기 비늘을 벗겨 구이를 만들었어요.",
+   "blank": "เกล็ด",
+   "src": "made"
+  },
+  {
+   "text": "ปลาที่ปิยะสั่งมาเกล็ดหลุดหลายแผ่นเพราะกล่องโดนกระแทก",
+   "en": "Several scales came off the fish Piya ordered because the box got knocked about.",
+   "ko": "상자가 부딪혀서 삐야가 주문한 물고기의 비늘이 여러 장 떨어졌어요.",
+   "blank": "เกล็ด",
+   "src": "made"
+  }
+ ],
  "w|เกลี้ยง": [
   {
    "text": "ขนมที่อนันต์นำมาแจกหมดเกลี้ยงภายในสิบนาที",
@@ -5427,6 +5523,38 @@
    "blank": "เกษียณ"
   }
  ],
+ "w|เกษียณอายุ": [
+  {
+   "text": "หัวหน้าช่างจะเกษียณอายุหลังสะพานนี้สร้างเสร็จ",
+   "en": "The chief technician will retire after this bridge is finished.",
+   "ko": "기술 반장은 이 다리가 완공되면 정년퇴직해요.",
+   "blank": "เกษียณอายุ",
+   "src": "made"
+  },
+  {
+   "text": "คุณลุงข้างๆ เพิ่งเกษียณอายุจากการรถไฟเลยชอบเล่าเรื่องรถไฟให้ฟัง",
+   "en": "The old man next to her just retired from the railway, so he loves telling train stories.",
+   "ko": "옆자리 아저씨는 철도청에서 막 은퇴해서 기차 이야기를 즐겨 해요.",
+   "blank": "เกษียณอายุ",
+   "src": "made"
+  }
+ ],
+ "w|เกสร": [
+  {
+   "text": "ผึ้งบินตอมเกสรดอกทานตะวันในแปลงของเอก",
+   "en": "Bees buzzed around the pollen of the sunflowers in Ek's plot.",
+   "ko": "벌들이 에크네 밭 해바라기 꽃가루 주위를 날아다녔어요.",
+   "blank": "เกสร",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเลือกซื้อดอกไม้ไร้เกสรเพราะแม่แพ้ละอองดอกไม้",
+   "en": "Piya chose pollen-free flowers because his mother is allergic to pollen.",
+   "ko": "삐야는 어머니가 꽃가루 알레르기가 있어서 수술 없는 꽃을 골랐어요.",
+   "blank": "เกสร",
+   "src": "made"
+  }
+ ],
  "w|เกา": [
   {
    "text": "สมชายเกาหัวเมื่อทำโจทย์ข้อสุดท้ายไม่ได้",
@@ -5513,6 +5641,22 @@
    "en": "This island has a beautiful beach.",
    "ko": "이 섬에는 예쁜 해변이 있어.",
    "blank": "เกาะ"
+  }
+ ],
+ "w|เกาะกลุ่ม": [
+  {
+   "text": "นักท่องเที่ยวกลุ่มหนึ่งเกาะกลุ่มร้องเพลงกันในตู้เสบียง",
+   "en": "A group of tourists huddled together singing in the dining car.",
+   "ko": "한 무리의 관광객이 식당칸에 모여 노래를 불렀어요.",
+   "blank": "เกาะกลุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งชุดแรกเกาะกลุ่มกันไปจนถึงกิโลที่ยี่สิบ",
+   "en": "The leading pack of runners stayed bunched together until the twentieth kilometre.",
+   "ko": "선두 그룹은 이십 킬로미터 지점까지 한데 뭉쳐 달렸어요.",
+   "blank": "เกาะกลุ่ม",
+   "src": "made"
   }
  ],
  "w|เกิด": [
@@ -6308,6 +6452,22 @@
    "en": "Distant thunder told Somsak that rain was on its way.",
    "ko": "멀리서 들리는 천둥소리가 솜삭에게 비가 온다고 알려 줬어요.",
    "blank": "ไกลๆ",
+   "src": "made"
+  }
+ ],
+ "w|ไกลโพ้น": [
+  {
+   "text": "จากยอดเครน วีระมองเห็นภูเขาไกลโพ้นอยู่ปลายขอบฟ้า",
+   "en": "From the top of the crane, Weera could see far-off mountains on the horizon.",
+   "ko": "크레인 꼭대기에서 위라는 지평선 끝 아득한 산을 볼 수 있었어요.",
+   "blank": "ไกลโพ้น",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์มองแสงไฟจากหมู่บ้านไกลโพ้นจนผล็อยหลับ",
+   "en": "Jan watched the lights of a distant village until she dozed off.",
+   "ko": "짠은 아득히 먼 마을 불빛을 바라보다 잠들었어요.",
+   "blank": "ไกลโพ้น",
    "src": "made"
   }
  ],
@@ -7107,6 +7267,22 @@
    "blank": "ข้อความ"
   }
  ],
+ "w|ขอความกรุณา": [
+  {
+   "text": "ป้ายหน้าน้ำตกเขียนว่าขอความกรุณาอย่าทิ้งขยะ",
+   "en": "The sign at the waterfall says please do not litter.",
+   "ko": "폭포 앞 안내판에는 쓰레기를 버리지 말아 달라고 적혀 있어요.",
+   "blank": "ขอความกรุณา",
+   "src": "made"
+  },
+  {
+   "text": "หน้าเว็บเขียนว่าขอความกรุณาตรวจสินค้าก่อนเซ็นรับ",
+   "en": "The website says please check the goods before signing for them.",
+   "ko": "웹사이트에는 수령 서명 전에 물건을 확인해 달라고 적혀 있어요.",
+   "blank": "ขอความกรุณา",
+   "src": "made"
+  }
+ ],
  "w|ขอความช่วยเหลือ": [
   {
    "text": "ตอนน้ำท่วม ประยุทธขอความช่วยเหลือจากเพื่อนบ้านให้ยกของขึ้นที่สูง",
@@ -7725,6 +7901,22 @@
    "src": "made"
   }
  ],
+ "w|ขอยืม": [
+  {
+   "text": "วีระขอยืมรถเครนจากไซต์ข้างๆ มาใช้หนึ่งวัน",
+   "en": "Weera borrowed a crane from the neighbouring site for a day.",
+   "ko": "위라는 옆 현장에서 크레인을 하루 빌렸어요.",
+   "blank": "ขอยืม",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ขอยืมปากกาจากคนข้างๆ มากรอกใบตรวจคนเข้าเมือง",
+   "en": "Jan borrowed a pen from the person next to her to fill in the immigration form.",
+   "ko": "짠은 옆 사람에게 펜을 빌려 출입국 신고서를 작성했어요.",
+   "blank": "ขอยืม",
+   "src": "made"
+  }
+ ],
  "w|ขอร้อง": [
   {
    "text": "ฉันขอร้องให้ช่วยเหลือ",
@@ -8225,6 +8417,22 @@
    "en": "I'm driving today.",
    "ko": "오늘은 내가 운전해.",
    "blank": "ขับ"
+  }
+ ],
+ "w|ขับขี่": [
+  {
+   "text": "ที่สถานีปลายทาง กิตติเช่ารถมอเตอร์ไซค์ไว้ขับขี่ในเมือง",
+   "en": "At the last station, Kitti rented a motorbike to ride around town.",
+   "ko": "종착역에서 끼띠는 시내를 다닐 오토바이를 빌렸어요.",
+   "blank": "ขับขี่",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจขอให้ผู้ขับขี่เลี่ยงถนนสายหลักช่วงเช้าวันแข่ง",
+   "en": "Police asked drivers to avoid the main roads on the morning of the race.",
+   "ko": "경찰은 경기 날 아침에는 운전자들에게 큰길을 피해 달라고 했어요.",
+   "blank": "ขับขี่",
+   "src": "made"
   }
  ],
  "w|ขับเคลื่อน": [
@@ -9235,6 +9443,22 @@
    "blank": "ขู่"
   }
  ],
+ "w|ขูด": [
+  {
+   "text": "เอกใช้มีดขูดเปลือกไม้ไผ่ก่อนเอามาสานกระบุง",
+   "en": "Ek scraped the bamboo bark with a knife before weaving it into a basket.",
+   "ko": "에크는 바구니를 엮기 전에 칼로 대나무 껍질을 긁어냈어요.",
+   "blank": "ขูด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะขูดสติกเกอร์ราคาออกจากกล่องก่อนห่อเป็นของขวัญ",
+   "en": "Piya scraped the price sticker off the box before wrapping it as a present.",
+   "ko": "삐야는 선물 포장 전에 상자의 가격표를 긁어냈어요.",
+   "blank": "ขูด",
+   "src": "made"
+  }
+ ],
  "w|ขูดรีด": [
   {
    "text": "ในอดีต พ่อค้าคนกลางเคยขูดรีดชาวบ้านด้วยการกดราคาใบชา",
@@ -9647,6 +9871,22 @@
    "en": "You're invited to join the party.",
    "ko": "파티에 참석하도록 초대할게.",
    "blank": "เข้าร่วม"
+  }
+ ],
+ "w|เข้ารอบ": [
+  {
+   "text": "มะม่วงพันธุ์ใหม่ของชัยเข้ารอบสุดท้ายในงานประกวดผลไม้ประจำจังหวัด",
+   "en": "Chai's new mango variety made the final round of the provincial fruit contest.",
+   "ko": "차이의 새 망고 품종이 도 과일 품평회 결선에 올랐어요.",
+   "blank": "เข้ารอบ",
+   "src": "made"
+  },
+  {
+   "text": "วงเปิดคอนเสิร์ตคือวงหน้าใหม่ที่เข้ารอบชิงในรายการประกวดร้องเพลง",
+   "en": "The opening act is a new band that made the final of a singing contest.",
+   "ko": "오프닝 무대는 노래 경연 프로그램 결승에 오른 신인 밴드예요.",
+   "blank": "เข้ารอบ",
+   "src": "made"
   }
  ],
  "w|เข้าสู่": [
@@ -11109,6 +11349,22 @@
    "blank": "ครั้ง"
   }
  ],
+ "w|ครั้งก่อน": [
+  {
+   "text": "ครั้งก่อนที่น้ำท่วมหนัก ชัยต้องย้ายไปนอนที่วัด",
+   "en": "The last time there was a big flood, Chai had to move to sleep at the temple.",
+   "ko": "지난번 큰물이 졌을 때 차이는 절로 옮겨 가 자야 했어요.",
+   "blank": "ครั้งก่อน",
+   "src": "made"
+  },
+  {
+   "text": "ครั้งก่อนวงนี้มาเล่นที่สนามกีฬา คนดูเบียดกันจนหายใจไม่ออก",
+   "en": "The last time this band played at the stadium, the crowd was so packed people could hardly breathe.",
+   "ko": "지난번 이 밴드가 경기장에서 공연했을 때는 관객이 너무 빽빽해 숨쉬기도 힘들었어요.",
+   "blank": "ครั้งก่อน",
+   "src": "made"
+  }
+ ],
  "w|ครั้งนั้น": [
   {
    "text": "ปีก่อนน้ำท่วมหนักมาก ครั้งนั้นธนาต้องย้ายของขึ้นชั้นบน",
@@ -11509,6 +11765,22 @@
    "en": "Let me think for a moment.",
    "ko": "잠깐만 생각해 볼게.",
    "blank": "ครู่"
+  }
+ ],
+ "w|ครู่หนึ่ง": [
+  {
+   "text": "ชัยยืนดูฝนแรกของปีอยู่ครู่หนึ่งก่อนรีบเก็บผ้า",
+   "en": "Chai stood watching the first rain of the year for a moment before rushing to take in the washing.",
+   "ko": "차이는 올해 첫비를 잠시 바라보다가 서둘러 빨래를 걷었어요.",
+   "blank": "ครู่หนึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "ไฟบนเวทีดับไปครู่หนึ่ง แล้วนักร้องก็โผล่ขึ้นมากลางแสงสปอตไลต์",
+   "en": "The stage lights went out for a moment, and then the singer appeared in the spotlight.",
+   "ko": "무대 조명이 잠깐 꺼졌다가 가수가 스포트라이트 속에 나타났어요.",
+   "blank": "ครู่หนึ่ง",
+   "src": "made"
   }
  ],
  "w|ครูใหญ่": [
@@ -14627,6 +14899,22 @@
    "blank": "คัน"
   }
  ],
+ "w|คั่น": [
+  {
+   "text": "วีระวางแผ่นยางคั่นระหว่างพื้นสองส่วนเพื่อกันพื้นร้าว",
+   "en": "Weera put rubber strips between the two floor sections to keep the floor from cracking.",
+   "ko": "위라는 바닥이 갈라지지 않도록 두 구획 사이에 고무판을 끼웠어요.",
+   "blank": "คั่น",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ใช้ตั๋วรถไฟใบเก่าคั่นหน้าหนังสือที่อ่านค้างไว้",
+   "en": "Jan used an old train ticket to mark the page in the book she was reading.",
+   "ko": "짠은 읽다 만 책에 옛 기차표를 끼워 표시했어요.",
+   "blank": "คั่น",
+   "src": "made"
+  }
+ ],
  "w|คับ": [
   {
    "text": "รองเท้าคู่นี้คับเท้า",
@@ -14839,6 +15127,22 @@
    "src": "made"
   }
  ],
+ "w|คาดเข็มขัด": [
+  {
+   "text": "นั่งรถตู้ไปดอยสุเทพ คนขับเตือนให้กิตติคาดเข็มขัด",
+   "en": "Riding the van up the mountain, the driver reminded Kitti to fasten his seat belt.",
+   "ko": "밴을 타고 산에 오를 때 기사는 끼띠에게 안전띠를 매라고 했어요.",
+   "blank": "คาดเข็มขัด",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนวิ่ง วรรณาคาดเข็มขัดใส่ขวดน้ำไว้รอบเอว",
+   "en": "Before the run, Wannaa strapped a water-bottle belt around her waist.",
+   "ko": "달리기 전에 완나는 물병 벨트를 허리에 찼어요.",
+   "blank": "คาดเข็มขัด",
+   "src": "made"
+  }
+ ],
  "w|คาดคะเน": [
   {
    "text": "บรรณารักษ์คาดคะเนว่าหนังสือเล่มนี้พิมพ์ก่อนสงครามโลก",
@@ -14868,6 +15172,22 @@
    "en": "The stream water was much colder than Wanna had expected.",
    "ko": "개울물은 완나가 생각한 것보다 훨씬 차가웠어요.",
    "blank": "คาดคิด",
+   "src": "made"
+  }
+ ],
+ "w|คาดไม่ถึง": [
+  {
+   "text": "ขุดลงไปไม่กี่เมตรก็เจอปัญหาที่คาดไม่ถึง คือน้ำใต้ดินพุ่งขึ้นมา",
+   "en": "A few metres down they hit an unexpected problem: groundwater gushing up.",
+   "ko": "몇 미터 파 내려가자 예상치 못한 문제가 생겼어요. 지하수가 솟구친 거예요.",
+   "blank": "คาดไม่ถึง",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟจอดกลางทุ่งนานสองชั่วโมง ซึ่งเป็นเรื่องที่จันทร์คาดไม่ถึง",
+   "en": "The train stopped in the middle of the fields for two hours, which Jan never expected.",
+   "ko": "기차가 들판 한가운데 두 시간이나 서 있었는데 짠은 전혀 예상하지 못했어요.",
+   "blank": "คาดไม่ถึง",
    "src": "made"
   }
  ],
@@ -14929,6 +15249,22 @@
    "en": "Small children ride free of fare.",
    "ko": "어린아이는 요금 없이 타.",
    "blank": "ค่าโดยสาร"
+  }
+ ],
+ "w|ค่าตัว": [
+  {
+   "text": "ช่างเชื่อมฝีมือดีคิดค่าตัวสูงกว่าช่างทั่วไปเกือบเท่าตัว",
+   "en": "A skilled welder charges almost double what an ordinary tradesman does.",
+   "ko": "솜씨 좋은 용접공은 일반 기술자보다 품삯을 거의 두 배 받아요.",
+   "blank": "ค่าตัว",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องลูกทุ่งที่นั่งตู้เดียวกันบอกว่าค่าตัวโชว์คืนละหลายหมื่น",
+   "en": "A country singer in the same carriage said her fee was tens of thousands a night.",
+   "ko": "같은 칸에 탄 룩퉁 가수는 공연 출연료가 하룻밤에 몇만 바트라고 했어요.",
+   "blank": "ค่าตัว",
+   "src": "made"
   }
  ],
  "w|คาถา": [
@@ -15135,6 +15471,22 @@
    "src": "made"
   }
  ],
+ "w|คาร์บอน": [
+  {
+   "text": "ครูเล่าว่าป่าบนดอยช่วยดูดซับคาร์บอนได้มหาศาล",
+   "en": "The teacher explained that the mountain forest absorbs a huge amount of carbon.",
+   "ko": "선생님은 산림이 탄소를 엄청나게 흡수한다고 설명했어요.",
+   "blank": "คาร์บอน",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของปิยะชดเชยคาร์บอนจากการขนส่งด้วยการปลูกต้นไม้",
+   "en": "Piya's shop offsets the carbon from shipping by planting trees.",
+   "ko": "삐야의 가게는 배송에서 나오는 탄소를 나무 심기로 상쇄해요.",
+   "blank": "คาร์บอน",
+   "src": "made"
+  }
+ ],
  "w|ค่าแรง": [
   {
    "text": "ค่าแรงขั้นต่ำปรับขึ้นปีนี้",
@@ -15300,6 +15652,22 @@
    "en": "In the evening Napa sent a thank-you message to everyone who helped train her.",
    "ko": "저녁에 나파는 일을 가르쳐 준 모두에게 감사 메시지를 보냈어요.",
    "blank": "คำขอบคุณ",
+   "src": "made"
+  }
+ ],
+ "w|ค่ำคืน": [
+  {
+   "text": "ค่ำคืนปลายหนาวเงียบจนชัยได้ยินเสียงใบไม้ร่วง",
+   "en": "The nights at the end of the cool season are so quiet Chai can hear leaves falling.",
+   "ko": "서늘한 철이 끝날 무렵 밤은 낙엽 지는 소리가 들릴 만큼 고요해요.",
+   "blank": "ค่ำคืน",
+   "src": "made"
+  },
+  {
+   "text": "ค่ำคืนนี้สนามเต็มไปด้วยแสงไฟจากโทรศัพท์ของคนดู",
+   "en": "Tonight the field is full of light from the audience's phones.",
+   "ko": "오늘 밤 공연장은 관객들의 휴대폰 불빛으로 가득해요.",
+   "blank": "ค่ำคืน",
    "src": "made"
   }
  ],
@@ -15755,6 +16123,22 @@
    "src": "made"
   }
  ],
+ "w|คิกคัก": [
+  {
+   "text": "เด็กนักเรียนสองคนนั่งคิกคักกันอยู่ตรงข้ามกิตติ",
+   "en": "Two schoolgirls sat giggling opposite Kitti.",
+   "ko": "여학생 둘이 끼띠 맞은편에 앉아 킥킥거렸어요.",
+   "blank": "คิกคัก",
+   "src": "made"
+  },
+  {
+   "text": "อาสาสมัครเด็กๆ ส่งน้ำให้นักวิ่งไปพลางหัวเราะคิกคัก",
+   "en": "The child volunteers handed water to the runners while giggling.",
+   "ko": "어린 자원봉사자들이 킥킥 웃으며 주자들에게 물을 건넸어요.",
+   "blank": "คิกคัก",
+   "src": "made"
+  }
+ ],
  "w|คิด": [
   {
    "text": "ฉันคิดว่าใช่",
@@ -15993,6 +16377,22 @@
    "en": "Are you free tonight?",
    "ko": "오늘 밤 시간 돼?",
    "blank": "คืนนี้"
+  }
+ ],
+ "w|คืนหนึ่ง": [
+  {
+   "text": "คืนหนึ่งปลายเดือนตุลา ชัยได้ยินเสียงนกอพยพบินผ่านหลังคา",
+   "en": "One night at the end of October, Chai heard migrating birds fly over the roof.",
+   "ko": "시월 말의 어느 밤 차이는 철새들이 지붕 위로 날아가는 소리를 들었어요.",
+   "blank": "คืนหนึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "คืนหนึ่งเมื่อหลายปีก่อน สมศักดิ์ได้เจอภรรยาครั้งแรกที่คอนเสิร์ตแบบนี้",
+   "en": "One night years ago, Somsak met his wife for the first time at a concert like this.",
+   "ko": "몇 해 전 어느 밤 솜삭은 이런 콘서트에서 아내를 처음 만났어요.",
+   "blank": "คืนหนึ่ง",
+   "src": "made"
   }
  ],
  "w|คืบ": [
@@ -17120,6 +17520,22 @@
    "en": "Chan marks the used parts boxes with a pen.",
    "ko": "짠은 다 쓴 부품 상자에 펜으로 표시를 해 둬요.",
    "blank": "เครื่องหมาย",
+   "src": "made"
+  }
+ ],
+ "w|เครื่องหมายการค้า": [
+  {
+   "text": "ถุงปูนทุกถุงที่ไซต์มีเครื่องหมายการค้าของโรงงานเดียวกัน",
+   "en": "Every bag of cement on site carries the same factory's trademark.",
+   "ko": "현장의 시멘트 포대에는 모두 같은 공장 상표가 찍혀 있어요.",
+   "blank": "เครื่องหมายการค้า",
+   "src": "made"
+  },
+  {
+   "text": "ขนมที่ขายบนรถไฟมีเครื่องหมายการค้าของร้านดังในอยุธยา",
+   "en": "The snacks sold on the train carry the trademark of a well-known shop in Ayutthaya.",
+   "ko": "기차에서 파는 과자에는 아유타야 유명 가게의 상표가 붙어 있어요.",
+   "blank": "เครื่องหมายการค้า",
    "src": "made"
   }
  ],
@@ -20513,6 +20929,22 @@
    "src": "made"
   }
  ],
+ "w|จุลินทรีย์": [
+  {
+   "text": "เจ้าหน้าที่เกษตรสอนชาวบ้านทำปุ๋ยหมักจากจุลินทรีย์ในป่า",
+   "en": "The agricultural officer taught villagers to make compost using microorganisms from the forest.",
+   "ko": "농업 담당 공무원은 숲의 미생물로 퇴비 만드는 법을 주민들에게 가르쳤어요.",
+   "blank": "จุลินทรีย์",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งผงจุลินทรีย์มาใส่บ่อปลาให้น้ำใส",
+   "en": "Piya ordered microbial powder to put in the fish pond to keep the water clear.",
+   "ko": "삐야는 연못 물을 맑게 하려고 미생물 가루를 주문했어요.",
+   "blank": "จุลินทรีย์",
+   "src": "made"
+  }
+ ],
  "w|จู่ๆ": [
   {
    "text": "จู่ๆ ไฟในห้องข่าวก็ดับตอนที่เอกกำลังจะส่งต้นฉบับ",
@@ -20941,6 +21373,22 @@
    "src": "made"
   }
  ],
+ "w|เจ้าเล่ห์": [
+  {
+   "text": "ผู้รับเหมาช่วงคนนั้นเจ้าเล่ห์ ชอบเบิกเงินก่อนทำงานเสร็จ",
+   "en": "That subcontractor is crafty and likes to draw money before finishing the work.",
+   "ko": "그 하도급 업자는 교활해서 일을 끝내기도 전에 돈을 받아 가요.",
+   "blank": "เจ้าเล่ห์",
+   "src": "made"
+  },
+  {
+   "text": "พ่อค้าเจ้าเล่ห์บนชานชาลาพยายามขายน้ำแพงกว่าปกติสามเท่า",
+   "en": "A crafty vendor on the platform tried to sell water at three times the usual price.",
+   "ko": "승강장의 약삭빠른 상인이 물을 평소보다 세 배 비싸게 팔려고 했어요.",
+   "blank": "เจ้าเล่ห์",
+   "src": "made"
+  }
+ ],
  "w|เจ้าสาว": [
   {
    "text": "เจ้าสาวเดินเข้ามาช้าๆ",
@@ -21351,6 +21799,22 @@
    "en": "I'm sorry to hear that.",
    "ko": "유감이야.",
    "blank": "ใจ"
+  }
+ ],
+ "w|ใจกลาง": [
+  {
+   "text": "โรงแรมที่กิตติจองอยู่ใจกลางเมืองเก่า",
+   "en": "The hotel Kitti booked is in the heart of the old town.",
+   "ko": "끼띠가 예약한 호텔은 구시가지 한복판에 있어요.",
+   "blank": "ใจกลาง",
+   "src": "made"
+  },
+  {
+   "text": "จุดปล่อยตัวอยู่ใจกลางเมืองหน้าศาลากลางจังหวัด",
+   "en": "The start is in the city centre, in front of the provincial hall.",
+   "ko": "출발점은 도청 앞 시내 한복판이에요.",
+   "blank": "ใจกลาง",
+   "src": "made"
   }
  ],
  "w|ใจกลางเมือง": [
@@ -21977,6 +22441,22 @@
    "src": "made"
   }
  ],
+ "w|เฉลิมฉลอง": [
+  {
+   "text": "ชาวบ้านเฉลิมฉลองปีใหม่ของชนเผ่าด้วยการเต้นรำรอบกองไฟ",
+   "en": "The villagers celebrated the tribal New Year by dancing around a fire.",
+   "ko": "주민들은 모닥불 주위에서 춤을 추며 부족의 새해를 기념했어요.",
+   "blank": "เฉลิมฉลอง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านออนไลน์ลดราคาทั้งเว็บเพื่อเฉลิมฉลองครบรอบห้าปี",
+   "en": "The online shop held a sitewide sale to celebrate its fifth anniversary.",
+   "ko": "온라인 쇼핑몰은 창립 오 주년을 기념해 전 품목 할인을 했어요.",
+   "blank": "เฉลิมฉลอง",
+   "src": "made"
+  }
+ ],
  "w|เฉลี่ย": [
   {
    "text": "เจ้าภาพคิดว่าแขกจะกินเฉลี่ยคนละสองจาน",
@@ -22305,6 +22785,22 @@
    "en": "The teacher praised me for studying hard.",
    "ko": "선생님이 열심히 한다고 칭찬했어.",
    "blank": "ชม"
+  }
+ ],
+ "w|ชมเชย": [
+  {
+   "text": "พนักงานรถไฟชมเชยกิตติที่ช่วยยกกระเป๋าให้คุณยาย",
+   "en": "The train attendant praised Kitti for helping an old lady with her bag.",
+   "ko": "승무원은 할머니 가방을 들어 준 끼띠를 칭찬했어요.",
+   "blank": "ชมเชย",
+   "src": "made"
+  },
+  {
+   "text": "โค้ชชมเชยวรรณาที่รักษาความเร็วได้คงที่ทั้งเส้นทาง",
+   "en": "The coach praised Wannaa for keeping a steady pace the whole way.",
+   "ko": "코치는 완나가 코스 내내 일정한 속도를 지켰다고 칭찬했어요.",
+   "blank": "ชมเชย",
+   "src": "made"
   }
  ],
  "w|ชมพู": [
@@ -23522,6 +24018,22 @@
    "en": "The seafood restaurant in the airport says it gets fish from fishermen every morning.",
    "ko": "공항의 해산물 식당은 매일 아침 어부들에게서 생선을 받아 온다고 해요.",
    "blank": "ชาวประมง",
+   "src": "made"
+  }
+ ],
+ "w|ชาวไร่": [
+  {
+   "text": "คนงานหลายคนเคยเป็นชาวไร่อ้อยก่อนมาทำงานก่อสร้าง",
+   "en": "Many of the workers were sugarcane farmers before coming to work in construction.",
+   "ko": "인부 여럿은 건설 일을 하기 전에 사탕수수 농사를 지었어요.",
+   "blank": "ชาวไร่",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟวิ่งผ่านไร่มันสำปะหลังที่ชาวไร่กำลังขุดหัวมันกันอยู่",
+   "en": "The train passed cassava fields where farmers were digging up the roots.",
+   "ko": "기차는 농부들이 카사바를 캐고 있는 밭을 지나갔어요.",
+   "blank": "ชาวไร่",
    "src": "made"
   }
  ],
@@ -25057,6 +25569,22 @@
    "src": "made"
   }
  ],
+ "w|ซบ": [
+  {
+   "text": "ตอนพักเที่ยง คนงานบางคนนอนซบกองกระสอบทรายหลับไป",
+   "en": "At the lunch break some workers dozed off slumped against the pile of sandbags.",
+   "ko": "점심시간에 몇몇 인부는 모래주머니 더미에 기대어 잠들었어요.",
+   "blank": "ซบ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาวจันทร์ซบไหล่แม่หลับไปตั้งแต่สถานีแรก",
+   "en": "Jan's daughter fell asleep on her mother's shoulder from the very first station.",
+   "ko": "짠의 딸은 첫 역부터 엄마 어깨에 기대 잠들었어요.",
+   "blank": "ซบ",
+   "src": "made"
+  }
+ ],
  "w|ซวย": [
   {
    "text": "ชัยบ่นว่าวันนี้ซวยจริงๆ ทั้งทำกุญแจหายแล้วยังทะเลาะกับน้อง",
@@ -25710,6 +26238,22 @@
    "en": "The carpenter told Wanna that old teak is bought and sold at high prices.",
    "ko": "목수는 완나에게 오래된 티크는 비싼 값에 거래된다고 했어요.",
    "blank": "ซื้อขาย",
+   "src": "made"
+  }
+ ],
+ "w|ซื่อบื้อ": [
+  {
+   "text": "เอกด่าตัวเองว่าซื่อบื้อที่ลืมเติมน้ำมันรถก่อนขึ้นดอย",
+   "en": "Ek called himself a dope for forgetting to fill the tank before driving up the mountain.",
+   "ko": "에크는 산에 오르기 전에 기름 넣는 걸 잊은 자신을 멍청이라고 했어요.",
+   "blank": "ซื่อบื้อ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะบ่นว่าตัวเองซื่อบื้อที่กดสั่งของซ้ำสองรอบ",
+   "en": "Piya grumbled that he was a dope for ordering the same thing twice.",
+   "ko": "삐야는 같은 걸 두 번 주문한 자신이 멍청하다고 투덜댔어요.",
+   "blank": "ซื่อบื้อ",
    "src": "made"
   }
  ],
@@ -26975,6 +27519,22 @@
    "blank": "ดาวเคราะห์"
   }
  ],
+ "w|ดาวตก": [
+  {
+   "text": "คืนฟ้าเปิดบนดอย เอกนอนนับดาวตกกับลูกชาย",
+   "en": "On a clear night on the mountain, Ek lay counting shooting stars with his son.",
+   "ko": "하늘이 맑은 산 위의 밤에 에크는 아들과 누워 별똥별을 셌어요.",
+   "blank": "ดาวตก",
+   "src": "made"
+  },
+  {
+   "text": "ร้านออนไลน์ขายโคมไฟรูปดาวตกที่หมุนได้",
+   "en": "The online shop sells a rotating shooting-star lamp.",
+   "ko": "온라인 쇼핑몰에서 회전하는 별똥별 모양 램프를 팔아요.",
+   "blank": "ดาวตก",
+   "src": "made"
+  }
+ ],
  "w|ดาวเทียม": [
   {
    "text": "ในคาบวิทยาศาสตร์ สมชายเปิดภาพถ่ายจากดาวเทียมให้นักเรียนดูพายุ",
@@ -27124,6 +27684,22 @@
    "en": "A small foundation has run this theatre for decades.",
    "ko": "작은 재단 하나가 이 극장을 수십 년째 운영해 왔어요.",
    "blank": "ดำเนินงาน",
+   "src": "made"
+  }
+ ],
+ "w|ดำเนินต่อไป": [
+  {
+   "text": "แม้ฝนจะตก งานเทคอนกรีตก็ต้องดำเนินต่อไปตามแผน",
+   "en": "Even though it's raining, the concrete pour has to carry on as planned.",
+   "ko": "비가 와도 콘크리트 타설은 계획대로 계속돼야 해요.",
+   "blank": "ดำเนินต่อไป",
+   "src": "made"
+  },
+  {
+   "text": "หลังเปลี่ยนหัวรถจักรเสร็จ การเดินทางก็ดำเนินต่อไป",
+   "en": "After the locomotive was changed, the journey carried on.",
+   "ko": "기관차를 바꾸고 나서 여행이 다시 이어졌어요.",
+   "blank": "ดำเนินต่อไป",
    "src": "made"
   }
  ],
@@ -28969,6 +29545,22 @@
    "src": "made"
   }
  ],
+ "w|ต้นทาง": [
+  {
+   "text": "กิตติลืมกระเป๋าเสื้อผ้าไว้ที่สถานีต้นทาง",
+   "en": "Kitti left his suitcase at the station where he started.",
+   "ko": "끼띠는 출발역에 옷 가방을 두고 왔어요.",
+   "blank": "ต้นทาง",
+   "src": "made"
+  },
+  {
+   "text": "รถรับส่งนักวิ่งออกจากต้นทางที่หน้าโรงเรียนตอนตีสอง",
+   "en": "The runners' shuttle leaves from its starting point in front of the school at two in the morning.",
+   "ko": "주자 셔틀은 새벽 두 시에 학교 앞 출발지에서 떠나요.",
+   "blank": "ต้นทาง",
+   "src": "made"
+  }
+ ],
  "w|ต้นทุน": [
   {
    "text": "ต้องลดต้นทุนโดยไม่เสียคุณภาพ",
@@ -29090,6 +29682,22 @@
    "en": "The boss patted Suda lightly on the shoulder and praised her for doing great work.",
    "ko": "상사는 수다의 어깨를 가볍게 두드리며 일을 아주 잘했다고 칭찬했어요.",
    "blank": "ตบ",
+   "src": "made"
+  }
+ ],
+ "w|ตบมือ": [
+  {
+   "text": "หลานๆ ตบมือดีใจตอนฝนห่าแรกตกลงมา",
+   "en": "The grandchildren clapped happily when the first downpour came.",
+   "ko": "첫 소나기가 쏟아지자 손주들이 기뻐서 손뼉을 쳤어요.",
+   "blank": "ตบมือ",
+   "src": "made"
+  },
+  {
+   "text": "คนดูตบมือเป็นจังหวะตามเสียงกลองจนจบเพลง",
+   "en": "The audience clapped in time with the drums until the song ended.",
+   "ko": "관객들은 곡이 끝날 때까지 북소리에 맞춰 손뼉을 쳤어요.",
+   "blank": "ตบมือ",
    "src": "made"
   }
  ],
@@ -29745,6 +30353,22 @@
    "src": "made"
   }
  ],
+ "w|ตลาดหลักทรัพย์": [
+  {
+   "text": "บริษัทรับเหมาของวีระเพิ่งเข้าจดทะเบียนในตลาดหลักทรัพย์",
+   "en": "Weera's contracting firm just listed on the stock exchange.",
+   "ko": "위라의 건설사는 막 증권거래소에 상장했어요.",
+   "blank": "ตลาดหลักทรัพย์",
+   "src": "made"
+  },
+  {
+   "text": "ผู้โดยสารคนหนึ่งเปิดดูหุ้นในตลาดหลักทรัพย์ผ่านมือถือตลอดทาง",
+   "en": "One passenger checked stocks on the stock exchange on his phone the whole way.",
+   "ko": "한 승객은 가는 내내 휴대폰으로 증권거래소 주식을 들여다봤어요.",
+   "blank": "ตลาดหลักทรัพย์",
+   "src": "made"
+  }
+ ],
  "w|ตลาดหุ้น": [
   {
    "text": "ตลาดหุ้นเปิดเช้าตรู่ทุกวันทำการ",
@@ -29894,6 +30518,22 @@
    "en": "The criminal who hacked into Pranee's company system was sentenced to three years in prison.",
    "ko": "프라니 회사 시스템을 해킹한 범인은 징역 삼 년을 선고받았어요.",
    "blank": "ต้องโทษ",
+   "src": "made"
+  }
+ ],
+ "w|ต่อจากนั้น": [
+  {
+   "text": "ลมหนาวพัดมาสามวัน ต่อจากนั้นอากาศก็อุ่นขึ้นอีกครั้ง",
+   "en": "The cold wind blew for three days, and after that the weather warmed up again.",
+   "ko": "찬 바람이 사흘 불고 나서 날씨가 다시 따뜻해졌어요.",
+   "blank": "ต่อจากนั้น",
+   "src": "made"
+  },
+  {
+   "text": "วงเปิดด้วยเพลงช้า ต่อจากนั้นก็เล่นเพลงเร็วรวดเดียวสิบเพลง",
+   "en": "The band opened with a slow song, and after that played ten fast ones in a row.",
+   "ko": "밴드는 느린 곡으로 시작하고 그다음 빠른 곡을 열 곡 연달아 했어요.",
+   "blank": "ต่อจากนั้น",
    "src": "made"
   }
  ],
@@ -31138,6 +31778,22 @@
    "en": "Piya slowed down because a mother cat was leading her kittens across the road.",
    "ko": "암고양이가 새끼들을 데리고 길을 건너서 피야는 속도를 늦췄어요.",
    "blank": "ตัวเมีย",
+   "src": "made"
+  }
+ ],
+ "w|ตัวเมือง": [
+  {
+   "text": "จากสถานีไปตัวเมืองต้องนั่งสองแถวอีกสิบนาที",
+   "en": "From the station to town you have to take a songthaew for another ten minutes.",
+   "ko": "역에서 시내까지는 송태우를 타고 십 분 더 가야 해요.",
+   "blank": "ตัวเมือง",
+   "src": "made"
+  },
+  {
+   "text": "งานวิ่งครั้งนี้ทำให้ร้านค้าในตัวเมืองขายดีทั้งสัปดาห์",
+   "en": "The race made shops in town sell well all week.",
+   "ko": "이번 대회 덕에 시내 가게들이 일주일 내내 장사가 잘됐어요.",
+   "blank": "ตัวเมือง",
    "src": "made"
   }
  ],
@@ -32589,6 +33245,22 @@
    "blank": "เติม"
   }
  ],
+ "w|เติมเต็ม": [
+  {
+   "text": "การเดินทางครั้งนี้เติมเต็มความฝันของแม่ที่อยากเห็นทะเลหมอก",
+   "en": "This trip fulfilled his mother's dream of seeing a sea of mist.",
+   "ko": "이번 여행으로 운해를 보고 싶다던 어머니의 꿈이 이뤄졌어요.",
+   "blank": "เติมเต็ม",
+   "src": "made"
+  },
+  {
+   "text": "การวิ่งครบมาราธอนแรกเติมเต็มเป้าหมายที่วรรณาตั้งไว้ตั้งแต่สามปีก่อน",
+   "en": "Finishing her first marathon fulfilled a goal Wannaa had set three years ago.",
+   "ko": "첫 마라톤 완주로 완나는 삼 년 전에 세운 목표를 이뤘어요.",
+   "blank": "เติมเต็ม",
+   "src": "made"
+  }
+ ],
  "w|เตี้ย": [
   {
    "text": "โต๊ะตัวนี้เตี้ยไปหน่อย",
@@ -33048,6 +33720,22 @@
    "en": "The director listened when Wanna argued that this scene was too long.",
    "ko": "완나가 이 장면이 너무 길다고 반박하자 감독은 귀를 기울였어요.",
    "blank": "โต้แย้ง",
+   "src": "made"
+  }
+ ],
+ "w|โต้วาที": [
+  {
+   "text": "หลานของชัยโต้วาทีในห้องเรียนเรื่องภาวะโลกร้อน",
+   "en": "Chai's grandchild debated global warming in class.",
+   "ko": "차이의 손주는 수업 시간에 지구 온난화를 주제로 토론했어요.",
+   "blank": "โต้วาที",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนคอนเสิร์ต สมศักดิ์กับเพื่อนโต้วาทีกันว่าเพลงไหนเพราะที่สุด",
+   "en": "Before the concert, Somsak and his friend argued over which song was the best.",
+   "ko": "콘서트 전에 솜삭과 친구는 어느 곡이 가장 좋은지 논쟁했어요.",
+   "blank": "โต้วาที",
    "src": "made"
   }
  ],
@@ -34343,6 +35031,22 @@
    "blank": "เถอะ"
   }
  ],
+ "w|เถา": [
+  {
+   "text": "เถาฟักทองพาดยาวขึ้นไปบนหลังคาเล้าไก่",
+   "en": "The pumpkin vine stretched up onto the roof of the chicken coop.",
+   "ko": "호박 덩굴이 닭장 지붕 위로 타고 올라갔어요.",
+   "blank": "เถา",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งเถาองุ่นมาปลูกให้พันซุ้มหน้าบ้าน",
+   "en": "Piya ordered a grapevine to grow up the arbour in front of the house.",
+   "ko": "삐야는 집 앞 아치에 올릴 포도 덩굴을 주문했어요.",
+   "blank": "เถา",
+   "src": "made"
+  }
+ ],
  "w|เถ้า": [
   {
    "text": "ในที่เกิดเหตุไฟไหม้ ตำรวจเก็บเถ้าไปตรวจหาสารเร่งไฟ",
@@ -35141,6 +35845,22 @@
    "src": "made"
   }
  ],
+ "w|ทองแดง": [
+  {
+   "text": "เอกขุดเจอหินสีเขียวที่ครูบอกว่ามีแร่ทองแดงปนอยู่",
+   "en": "Ek dug up a green rock that the teacher said contained copper ore.",
+   "ko": "에크는 선생님이 구리 광석이 섞여 있다고 한 초록 돌을 캐냈어요.",
+   "blank": "ทองแดง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งสายไฟทองแดงมาเดินไฟใหม่ในห้องทำงาน",
+   "en": "Piya ordered copper wire to rewire his study.",
+   "ko": "삐야는 작업실 배선을 새로 하려고 구리 전선을 주문했어요.",
+   "blank": "ทองแดง",
+   "src": "made"
+  }
+ ],
  "w|ท้องถิ่น": [
   {
    "text": "ฉันชอบอาหารท้องถิ่น",
@@ -35335,6 +36055,22 @@
    "en": "The office updates the house registration.",
    "ko": "사무실이 새 세대 등록을 갱신해.",
    "blank": "ทะเบียน"
+  }
+ ],
+ "w|ทะยาน": [
+  {
+   "text": "ฝูงนกเงือกทะยานขึ้นจากต้นไทรเมื่อได้ยินเสียงปืน",
+   "en": "A flock of hornbills soared up from the banyan tree when they heard a gunshot.",
+   "ko": "코뿔새 떼가 총소리를 듣고 반얀나무에서 날아올랐어요.",
+   "blank": "ทะยาน",
+   "src": "made"
+  },
+  {
+   "text": "ยอดขายของร้านทะยานขึ้นหลังมีคนดังรีวิว",
+   "en": "The shop's sales soared after a celebrity reviewed it.",
+   "ko": "유명인이 리뷰한 뒤 가게 매출이 치솟았어요.",
+   "blank": "ทะยาน",
+   "src": "made"
   }
  ],
  "w|ทะลุ": [
@@ -35669,6 +36405,22 @@
    "src": "made"
   }
  ],
+ "w|ทันควัน": [
+  {
+   "text": "พอแม่บอกว่าหิว กิตติก็ลุกไปซื้อข้าวกล่องทันควัน",
+   "en": "As soon as his mother said she was hungry, Kitti got up at once to buy a boxed meal.",
+   "ko": "어머니가 배고프다고 하자 끼띠는 곧바로 도시락을 사러 일어났어요.",
+   "blank": "ทันควัน",
+   "src": "made"
+  },
+  {
+   "text": "พอมีคนล้มตรงหน้า วรรณาก็หยุดช่วยทันควัน",
+   "en": "When someone fell right in front of her, Wannaa stopped to help immediately.",
+   "ko": "바로 앞에서 누가 넘어지자 완나는 즉시 멈춰 도왔어요.",
+   "blank": "ทันควัน",
+   "src": "made"
+  }
+ ],
  "w|ทันใด": [
   {
    "text": "ทันใดนั้นไฟก็ดับ",
@@ -35848,6 +36600,22 @@
    "en": "Tap water doesn't yet reach the whole village.",
    "ko": "수돗물이 아직 마을 곳곳에 닿지 않아.",
    "blank": "ทั่วถึง",
+   "src": "made"
+  }
+ ],
+ "w|ทั่วประเทศ": [
+  {
+   "text": "ช่วงปีใหม่การรถไฟเพิ่มขบวนพิเศษทั่วประเทศ",
+   "en": "Over New Year the railway adds special trains nationwide.",
+   "ko": "새해 무렵 철도청은 전국에 임시 열차를 늘려요.",
+   "blank": "ทั่วประเทศ",
+   "src": "made"
+  },
+  {
+   "text": "มาราธอนนี้ดังจนมีนักวิ่งจากทั่วประเทศมาสมัคร",
+   "en": "This marathon is so famous that runners from all over the country sign up.",
+   "ko": "이 마라톤은 유명해서 전국에서 주자들이 신청해요.",
+   "blank": "ทั่วประเทศ",
    "src": "made"
   }
  ],
@@ -36153,6 +36921,22 @@
    "src": "made"
   }
  ],
+ "w|ทางเหนือ": [
+  {
+   "text": "รถไฟขบวนนี้วิ่งขึ้นทางเหนือผ่านทุ่งนาและภูเขา",
+   "en": "This train runs north through rice fields and mountains.",
+   "ko": "이 기차는 논과 산을 지나 북쪽으로 달려요.",
+   "blank": "ทางเหนือ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเคยไปวิ่งมาราธอนที่ทางเหนือตอนหน้าหนาว",
+   "en": "Wannaa once ran a marathon up north in the cool season.",
+   "ko": "완나는 서늘한 철에 북부에서 마라톤을 뛴 적이 있어요.",
+   "blank": "ทางเหนือ",
+   "src": "made"
+  }
+ ],
  "w|ทางออก": [
   {
    "text": "ทางออกฉุกเฉินอยู่ทางซ้าย",
@@ -36423,6 +37207,22 @@
    "en": "He painted the door blue.",
    "ko": "그는 문을 파란색으로 칠했어.",
    "blank": "ทาสี"
+  }
+ ],
+ "w|ท่าอากาศยาน": [
+  {
+   "text": "ขากลับกิตติจะบินจากท่าอากาศยานเชียงใหม่",
+   "en": "On the way back Kitti will fly from Chiang Mai airport.",
+   "ko": "돌아올 때 끼띠는 치앙마이 공항에서 비행기를 탈 거예요.",
+   "blank": "ท่าอากาศยาน",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งจากต่างประเทศหลายร้อยคนบินมาลงท่าอากาศยานจังหวัดเมื่อคืน",
+   "en": "Hundreds of runners from abroad flew into the provincial airport last night.",
+   "ko": "외국에서 온 주자 수백 명이 어젯밤 지방 공항에 도착했어요.",
+   "blank": "ท่าอากาศยาน",
+   "src": "made"
   }
  ],
  "w|ทำ": [
@@ -37353,6 +38153,22 @@
    "src": "made"
   }
  ],
+ "w|ทีแรก": [
+  {
+   "text": "ทีแรกชัยคิดว่าเป็นแค่หมอก แต่ที่แท้เป็นควันจากการเผาไร่",
+   "en": "At first Chai thought it was just mist, but it was actually smoke from field burning.",
+   "ko": "차이는 처음엔 그냥 안개인 줄 알았는데 알고 보니 밭 태우는 연기였어요.",
+   "blank": "ทีแรก",
+   "src": "made"
+  },
+  {
+   "text": "ทีแรกสมศักดิ์ไม่อยากมาคอนเสิร์ต แต่สุดท้ายก็ร้องตามทุกเพลง",
+   "en": "At first Somsak didn't want to come to the concert, but in the end he sang along to every song.",
+   "ko": "솜삭은 처음엔 콘서트에 오기 싫었지만 결국 모든 노래를 따라 불렀어요.",
+   "blank": "ทีแรก",
+   "src": "made"
+  }
+ ],
  "w|ทีละ": [
   {
    "text": "เอกตรวจรูปข่าวทีละรูปก่อนเลือกขึ้นหน้าหนึ่ง",
@@ -37717,6 +38533,38 @@
    "blank": "ทุกที่"
   }
  ],
+ "w|ทุกปี": [
+  {
+   "text": "ต้นมะยมหน้าบ้านชัยผลัดใบตอนปลายหนาวทุกปีไม่เคยพลาด",
+   "en": "The star gooseberry tree in front of Chai's house sheds its leaves at the end of the cool season without fail.",
+   "ko": "차이네 집 앞 마얌나무는 서늘한 철 끝마다 어김없이 잎을 떨궈요.",
+   "blank": "ทุกปี",
+   "src": "made"
+  },
+  {
+   "text": "วงนี้จัดคอนเสิร์ตใหญ่ที่บ้านเกิดในวันสิ้นปีทุกปี",
+   "en": "This band holds a big concert in their hometown on New Year's Eve every year.",
+   "ko": "이 밴드는 해마다 섣달그믐에 고향에서 큰 콘서트를 열어요.",
+   "blank": "ทุกปี",
+   "src": "made"
+  }
+ ],
+ "w|ทุกเมื่อ": [
+  {
+   "text": "หน้ามรสุมพายุมาได้ทุกเมื่อ ชัยจึงเตรียมเทียนไว้เสมอ",
+   "en": "In monsoon season a storm can come at any time, so Chai always keeps candles ready.",
+   "ko": "장마철엔 언제든 폭풍이 올 수 있어서 차이는 늘 초를 준비해 둬요.",
+   "blank": "ทุกเมื่อ",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องบอกแฟนเพลงว่าพร้อมกลับมาเล่นที่นี่ได้ทุกเมื่อ",
+   "en": "The singer told fans he was ready to come back and play here any time.",
+   "ko": "가수는 팬들에게 언제든 여기 다시 와서 공연할 준비가 돼 있다고 했어요.",
+   "blank": "ทุกเมื่อ",
+   "src": "made"
+  }
+ ],
  "w|ทุกวันนี้": [
   {
    "text": "ทุกวันนี้คนใช้โทรศัพท์มากขึ้น",
@@ -37805,6 +38653,22 @@
    "en": "Run and play on the grassy field.",
    "ko": "풀밭에서 뛰어놀아.",
    "blank": "ทุ่ง"
+  }
+ ],
+ "w|ทุ่งหญ้า": [
+  {
+   "text": "เอกปล่อยวัวกินหญ้าบนทุ่งหญ้าบนสันเขา",
+   "en": "Ek lets his cows graze on the grassland on the ridge.",
+   "ko": "에크는 능선 위 풀밭에 소를 풀어 풀을 뜯게 해요.",
+   "blank": "ทุ่งหญ้า",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งภาพวาดทุ่งหญ้าสีทองมาแขวนในห้องนั่งเล่น",
+   "en": "Piya ordered a painting of a golden meadow to hang in the living room.",
+   "ko": "삐야는 거실에 걸 황금빛 초원 그림을 주문했어요.",
+   "blank": "ทุ่งหญ้า",
+   "src": "made"
   }
  ],
  "w|ทุจริต": [
@@ -38667,6 +39531,22 @@
    "src": "made"
   }
  ],
+ "w|แท้ที่จริง": [
+  {
+   "text": "แท้ที่จริงกิตติกลัวเครื่องบิน เลยอ้างว่าอยากชมวิว",
+   "en": "In truth Kitti is afraid of flying, so he claims he wants to enjoy the view.",
+   "ko": "사실 끼띠는 비행기를 무서워해서 경치를 보고 싶다고 둘러대요.",
+   "blank": "แท้ที่จริง",
+   "src": "made"
+  },
+  {
+   "text": "ใครๆ คิดว่าวรรณาวิ่งเพื่อเหรียญ แท้ที่จริงเธอวิ่งหาเงินบริจาคให้โรงพยาบาล",
+   "en": "Everyone thinks Wannaa runs for medals; in truth she runs to raise donations for a hospital.",
+   "ko": "다들 완나가 메달 때문에 뛴다고 생각하지만 사실은 병원 기부금을 모으려고 뛰어요.",
+   "blank": "แท้ที่จริง",
+   "src": "made"
+  }
+ ],
  "w|แทน": [
   {
    "text": "ไปแทนฉันได้ไหม",
@@ -39203,6 +40083,22 @@
    "src": "made"
   }
  ],
+ "w|ธำรง": [
+  {
+   "text": "ชาวบ้านช่วยกันธำรงประเพณีลอยกระทงเมื่อน้ำหลากทุกปลายฝน",
+   "en": "The villagers keep up the Loy Krathong tradition together when the water rises at the end of each rainy season.",
+   "ko": "주민들은 우기 끝 물이 불어날 때마다 러이끄라통 전통을 함께 이어 가요.",
+   "blank": "ธำรง",
+   "src": "made"
+  },
+  {
+   "text": "วงดนตรีพื้นบ้านวงนี้ธำรงเสียงพิณแบบดั้งเดิมไว้ในทุกเพลง",
+   "en": "This folk band preserves the traditional phin sound in every song.",
+   "ko": "이 민속 밴드는 모든 곡에서 전통 핀 소리를 지켜 가요.",
+   "blank": "ธำรง",
+   "src": "made"
+  }
+ ],
  "w|ธิดา": [
   {
    "text": "สมชายเพิ่งรู้ว่าครูภาษาไทยเป็นธิดาของเจ้าเมืองเก่า",
@@ -39216,6 +40112,22 @@
    "en": "The new investor is the youngest daughter of a rice-trading family.",
    "ko": "새 투자자는 쌀 무역 가문의 막내딸이에요.",
    "blank": "ธิดา",
+   "src": "made"
+  }
+ ],
+ "w|ธุรกรรม": [
+  {
+   "text": "ฝ่ายบัญชีตรวจทุกธุรกรรมที่จ่ายให้ผู้รับเหมาช่วง",
+   "en": "The accounts department checks every transaction paid to subcontractors.",
+   "ko": "회계팀은 하도급 업체에 지급한 거래를 하나하나 확인해요.",
+   "blank": "ธุรกรรม",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ทำธุรกรรมโอนเงินค่าเทอมให้ลูกผ่านแอปธนาคารบนรถไฟ",
+   "en": "On the train Jan made a bank transfer for her child's school fees through the banking app.",
+   "ko": "짠은 기차에서 은행 앱으로 아이 등록금을 송금했어요.",
+   "blank": "ธุรกรรม",
    "src": "made"
   }
  ],
@@ -40681,6 +41593,22 @@
    "blank": "นาง"
   }
  ],
+ "w|นางแบบ": [
+  {
+   "text": "เจ้าของคอนโดจ้างนางแบบมาถ่ายโฆษณาหน้าตึกที่ยังสร้างไม่เสร็จ",
+   "en": "The condo owner hired models to shoot an ad in front of the unfinished tower.",
+   "ko": "콘도 주인은 짓고 있는 건물 앞에서 광고를 찍으려고 모델을 고용했어요.",
+   "blank": "นางแบบ",
+   "src": "made"
+  },
+  {
+   "text": "สาวสวยตู้ข้างๆ บอกว่าเป็นนางแบบไปถ่ายแฟชั่นที่หัวหิน",
+   "en": "The pretty woman in the next carriage said she was a model going to a fashion shoot in Hua Hin.",
+   "ko": "옆 칸의 예쁜 여자는 후아힌으로 화보를 찍으러 가는 모델이라고 했어요.",
+   "blank": "นางแบบ",
+   "src": "made"
+  }
+ ],
  "w|นางฟ้า": [
   {
    "text": "นางฟ้าในเรื่องช่วยเด็กน้อย",
@@ -40841,6 +41769,22 @@
    "en": "The line stood for a very long time.",
    "ko": "줄이 아주 오래 서 있었어.",
    "blank": "นาน"
+  }
+ ],
+ "w|นานๆ": [
+  {
+   "text": "นานๆ ครั้งชัยจะเห็นหิมะในข่าวต่างประเทศแล้วอยากไปดูเอง",
+   "en": "Once in a while Chai sees snow in foreign news and wishes he could go see it himself.",
+   "ko": "차이는 가끔 외국 뉴스에서 눈을 보면 직접 가 보고 싶어져요.",
+   "blank": "นานๆ",
+   "src": "made"
+  },
+  {
+   "text": "นานๆ ทีวงโปรดของสมศักดิ์จะมาเล่นต่างจังหวัด",
+   "en": "Only once in a while does Somsak's favourite band play in the provinces.",
+   "ko": "솜삭이 좋아하는 밴드는 아주 가끔 지방 공연을 와요.",
+   "blank": "นานๆ",
+   "src": "made"
   }
  ],
  "w|นานมาแล้ว": [
@@ -41209,6 +42153,22 @@
    "src": "made"
   }
  ],
+ "w|น่าเวทนา": [
+  {
+   "text": "หมาจรตัวผอมที่มาอยู่ในไซต์ดูน่าเวทนาจนคนงานแบ่งข้าวให้",
+   "en": "The skinny stray dog that turned up on site looked so pitiful the workers shared their food.",
+   "ko": "현장에 들어온 깡마른 떠돌이 개가 너무 딱해 보여서 인부들이 밥을 나눠 줬어요.",
+   "blank": "น่าเวทนา",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เห็นแมวผอมโซน่าเวทนาที่ชานชาลา เลยแบ่งปลาทูให้",
+   "en": "Jan saw a pitifully skinny cat on the platform and shared her mackerel with it.",
+   "ko": "짠은 승강장에서 깡마른 불쌍한 고양이를 보고 고등어를 나눠 줬어요.",
+   "blank": "น่าเวทนา",
+   "src": "made"
+  }
+ ],
  "w|น่าเศร้า": [
   {
    "text": "ตอนจบเรื่องนี้น่าเศร้า",
@@ -41545,6 +42505,22 @@
    "blank": "น้ำเงิน"
   }
  ],
+ "w|น้ำจืด": [
+  {
+   "text": "ลำธารหลังหมู่บ้านเป็นแหล่งน้ำจืดเดียวที่ไม่เคยแห้ง",
+   "en": "The stream behind the village is the only source of fresh water that never runs dry.",
+   "ko": "마을 뒤 개울은 한 번도 마른 적 없는 유일한 민물 수원이에요.",
+   "blank": "น้ำจืด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งปลาน้ำจืดสวยงามมาเลี้ยง แต่ปลาตายระหว่างทาง",
+   "en": "Piya ordered ornamental freshwater fish, but they died on the way.",
+   "ko": "삐야는 관상용 민물고기를 주문했는데 오는 길에 죽어 버렸어요.",
+   "blank": "น้ำจืด",
+   "src": "made"
+  }
+ ],
  "w|น้ำใจ": [
   {
    "text": "ขอบคุณสำหรับน้ำใจ",
@@ -41631,6 +42607,22 @@
    "en": "This village used to flood often.",
    "ko": "이 마을은 예전에 자주 침수됐어.",
    "blank": "น้ำท่วม"
+  }
+ ],
+ "w|นำทาง": [
+  {
+   "text": "คนท้องถิ่นใจดีนำทางกิตติไปร้านข้าวซอยที่อร่อยที่สุด",
+   "en": "A kind local guided Kitti to the best khao soi shop.",
+   "ko": "친절한 현지인이 끼띠를 가장 맛있는 카오소이 가게로 안내했어요.",
+   "blank": "นำทาง",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งรุ่นพี่วิ่งนำทางวรรณาในช่วงที่ป้ายบอกทางหายไป",
+   "en": "An experienced runner led the way for Wannaa where the signs had gone missing.",
+   "ko": "선배 주자가 표지판이 사라진 구간에서 완나를 이끌어 줬어요.",
+   "blank": "นำทาง",
+   "src": "made"
   }
  ],
  "w|น้ำปลา": [
@@ -42017,6 +43009,22 @@
    "src": "made"
   }
  ],
+ "w|นิคมอุตสาหกรรม": [
+  {
+   "text": "บริษัทของวีระกำลังสร้างโกดังในนิคมอุตสาหกรรมชานเมือง",
+   "en": "Weera's company is building a warehouse in an industrial estate on the outskirts.",
+   "ko": "위라의 회사는 교외 산업단지에 창고를 짓고 있어요.",
+   "blank": "นิคมอุตสาหกรรม",
+   "src": "made"
+  },
+  {
+   "text": "จากหน้าต่างรถไฟ จันทร์เห็นปล่องควันของนิคมอุตสาหกรรมเรียงกันยาว",
+   "en": "From the train window, Jan saw the long row of chimneys of the industrial estate.",
+   "ko": "짠은 기차 창밖으로 산업단지 굴뚝들이 길게 늘어선 걸 봤어요.",
+   "blank": "นิคมอุตสาหกรรม",
+   "src": "made"
+  }
+ ],
  "w|นิ่ง": [
   {
    "text": "น้ำในทะเลสาบนิ่งมาก",
@@ -42030,6 +43038,22 @@
    "en": "He sat still and said nothing.",
    "ko": "그는 아무 말 없이 가만히 앉아 있었어.",
    "blank": "นิ่ง",
+   "src": "made"
+  }
+ ],
+ "w|นิ่งเงียบ": [
+  {
+   "text": "ผู้โดยสารทั้งตู้นิ่งเงียบตอนรถไฟลอดอุโมงค์มืด",
+   "en": "The whole carriage fell silent as the train went through the dark tunnel.",
+   "ko": "기차가 어두운 터널을 지날 때 칸 안의 승객 모두 조용해졌어요.",
+   "blank": "นิ่งเงียบ",
+   "src": "made"
+  },
+  {
+   "text": "ทุกคนนิ่งเงียบไว้อาลัยนักวิ่งรุ่นพี่ก่อนปล่อยตัว",
+   "en": "Everyone stood in silence in memory of a veteran runner before the start.",
+   "ko": "출발 전 모두 선배 주자를 추모하며 묵념했어요.",
+   "blank": "นิ่งเงียบ",
    "src": "made"
   }
  ],
@@ -43183,6 +44207,22 @@
    "blank": "ใน"
   }
  ],
+ "w|ในกรณีที่": [
+  {
+   "text": "ในกรณีที่รถไฟล่าช้า กิตติจะโทรบอกโรงแรมไว้ก่อน",
+   "en": "In case the train is delayed, Kitti will call the hotel ahead.",
+   "ko": "기차가 늦어질 경우 끼띠는 호텔에 미리 전화할 거예요.",
+   "blank": "ในกรณีที่",
+   "src": "made"
+  },
+  {
+   "text": "ในกรณีที่ฝนตกหนัก ผู้จัดอาจเลื่อนเวลาปล่อยตัวออกไป",
+   "en": "In case of heavy rain, the organisers may push back the start time.",
+   "ko": "폭우가 올 경우 주최 측은 출발 시간을 늦출 수도 있어요.",
+   "blank": "ในกรณีที่",
+   "src": "made"
+  }
+ ],
  "w|ในขณะเดียวกัน": [
   {
    "text": "ธนาจัดหนังสือคืนชั้น ในขณะเดียวกันก็ตอบคำถามผู้ใช้บริการไปด้วย",
@@ -43228,6 +44268,22 @@
    "en": "In reality, Suda hasn't talked with some of her friends for almost ten years.",
    "ko": "사실 수다는 몇몇 친구와 거의 십 년 동안 연락하지 않았어요.",
    "blank": "ในความเป็นจริง",
+   "src": "made"
+  }
+ ],
+ "w|ในทันที": [
+  {
+   "text": "พอเมฆดำก่อตัว ชัยก็สั่งให้ลูกเก็บของเข้าบ้านในทันที",
+   "en": "As soon as dark clouds gathered, Chai told his children to bring things inside at once.",
+   "ko": "먹구름이 끼자 차이는 아이들에게 바로 물건을 집 안에 들이라고 했어요.",
+   "blank": "ในทันที",
+   "src": "made"
+  },
+  {
+   "text": "บัตรคอนเสิร์ตขายหมดในทันทีที่เปิดจอง",
+   "en": "The concert tickets sold out the instant booking opened.",
+   "ko": "콘서트 표는 예매가 열리자마자 바로 매진됐어요.",
+   "blank": "ในทันที",
    "src": "made"
   }
  ],
@@ -44089,6 +45145,22 @@
    "src": "made"
   }
  ],
+ "w|บอดี้การ์ด": [
+  {
+   "text": "วันวางศิลาฤกษ์ รัฐมนตรีมาพร้อมบอดี้การ์ดหลายคน",
+   "en": "On the day of the foundation-stone ceremony, the minister came with several bodyguards.",
+   "ko": "정초식 날 장관은 경호원 여럿을 데리고 왔어요.",
+   "blank": "บอดี้การ์ด",
+   "src": "made"
+  },
+  {
+   "text": "ดาราที่นั่งตู้ชั้นหนึ่งมีบอดี้การ์ดยืนเฝ้าหน้าประตู",
+   "en": "The celebrity in first class had a bodyguard standing watch at the door.",
+   "ko": "일등칸의 연예인은 문 앞에 경호원을 세워 뒀어요.",
+   "blank": "บอดี้การ์ด",
+   "src": "made"
+  }
+ ],
  "w|บ่อน": [
   {
    "text": "ตำรวจบุกจับบ่อนการพนันเถื่อน และเจ้าของถูกฟ้องต่อศาลนี้",
@@ -44164,6 +45236,22 @@
    "en": "Napha often catches colds at the change of season.",
    "ko": "환절기에 나파는 감기에 자주 걸려요.",
    "blank": "บ่อยๆ",
+   "src": "made"
+  }
+ ],
+ "w|บ่อยครั้ง": [
+  {
+   "text": "รถขนดินเข้าออกบ่อยครั้งจนถนนหน้าไซต์เต็มไปด้วยโคลน",
+   "en": "Dirt trucks come and go so often that the road outside the site is covered in mud.",
+   "ko": "흙 트럭이 자주 드나들어서 현장 앞 도로가 진흙투성이예요.",
+   "blank": "บ่อยครั้ง",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์นั่งรถไฟสายนี้บ่อยครั้งจนจำชื่อสถานีได้ทุกสถานี",
+   "en": "Jan takes this line so often she knows every station name by heart.",
+   "ko": "짠은 이 노선을 자주 타서 역 이름을 다 외워요.",
+   "blank": "บ่อยครั้ง",
    "src": "made"
   }
  ],
@@ -44585,6 +45673,22 @@
    "blank": "บางที"
   }
  ],
+ "w|บางเวลา": [
+  {
+   "text": "หน้าแล้งน้ำประปาไหลแค่บางเวลา ชัยจึงรองน้ำใส่ถังไว้",
+   "en": "In the dry season the tap water only runs at certain times, so Chai fills buckets.",
+   "ko": "건기엔 수돗물이 특정 시간에만 나와서 차이는 통에 물을 받아 둬요.",
+   "blank": "บางเวลา",
+   "src": "made"
+  },
+  {
+   "text": "ร้านขายเสื้อวงเปิดแค่บางเวลา สมศักดิ์จึงต้องรีบไปต่อคิว",
+   "en": "The band merch stall only opens at certain times, so Somsak had to hurry to queue.",
+   "ko": "밴드 티셔츠 매장은 정해진 시간에만 열어서 솜삭은 서둘러 줄을 섰어요.",
+   "blank": "บางเวลา",
+   "src": "made"
+  }
+ ],
  "w|บางส่วน": [
   {
    "text": "ตั๋วบางส่วนยังเหลือสำหรับรอบบ่าย",
@@ -44828,6 +45932,22 @@
    "en": "The course passes old riverside houses where locals came out to cheer.",
    "ko": "코스는 마을 사람들이 나와서 응원하는 강변의 옛 집들을 지나가요.",
    "blank": "บ้านเรือน",
+   "src": "made"
+  }
+ ],
+ "w|บ้าบอ": [
+  {
+   "text": "คนงานหนุ่มเล่นมุกบ้าบอจนทุกคนหายเหนื่อย",
+   "en": "A young worker cracked silly jokes until everyone forgot how tired they were.",
+   "ko": "젊은 인부가 엉뚱한 농담을 해서 모두 피로를 잊었어요.",
+   "blank": "บ้าบอ",
+   "src": "made"
+  },
+  {
+   "text": "เด็กหนุ่มกลุ่มหนึ่งร้องเพลงบ้าบอเสียงดังจนพนักงานต้องมาเตือน",
+   "en": "A group of young men sang daft songs so loudly that the attendant had to warn them.",
+   "ko": "한 무리의 청년들이 엉뚱한 노래를 크게 불러서 승무원이 주의를 줬어요.",
+   "blank": "บ้าบอ",
    "src": "made"
   }
  ],
@@ -45433,6 +46553,22 @@
    "src": "made"
   }
  ],
+ "w|เบ้": [
+  {
+   "text": "ลูกของเอกเบ้ปากเมื่อต้องกินผักกูดต้ม",
+   "en": "Ek's child pulled a face when he had to eat boiled fern shoots.",
+   "ko": "에크의 아이는 삶은 고사리를 먹어야 해서 입을 삐죽였어요.",
+   "blank": "เบ้",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเบ้หน้าเมื่อเห็นว่าเสื้อที่สั่งมาเล็กกว่าในรูป",
+   "en": "Piya grimaced when he saw the shirt he ordered was smaller than in the picture.",
+   "ko": "삐야는 주문한 셔츠가 사진보다 작은 걸 보고 얼굴을 찡그렸어요.",
+   "blank": "เบ้",
+   "src": "made"
+  }
+ ],
  "w|เบคอน": [
   {
    "text": "ทอดเบคอนให้กรอบดี",
@@ -45492,6 +46628,22 @@
    "en": "Phon barely braked in time when a dog ran in front of her bike.",
    "ko": "개가 앞을 가로질러서 폰은 간신히 자전거 브레이크를 잡았어요.",
    "blank": "เบรก",
+   "src": "made"
+  }
+ ],
+ "w|เบรค": [
+  {
+   "text": "รถไฟเหยียบเบรคกะทันหันเพราะมีวัวเดินขวางราง",
+   "en": "The train braked suddenly because a cow was standing across the track.",
+   "ko": "소가 선로를 막고 있어서 기차가 급브레이크를 밟았어요.",
+   "blank": "เบรค",
+   "src": "made"
+  },
+  {
+   "text": "จักรยานของเจ้าหน้าที่ที่ขี่นำหน้าเบรคแตกตอนลงเนิน",
+   "en": "The bike of the official riding ahead lost its brakes going downhill.",
+   "ko": "앞장서 달리던 진행 요원 자전거가 내리막에서 브레이크가 고장 났어요.",
+   "blank": "เบรค",
    "src": "made"
   }
  ],
@@ -45569,6 +46721,22 @@
    "en": "People with diabetes should cut sugar.",
    "ko": "당뇨 환자는 단 걸 줄여야 해.",
    "blank": "เบาหวาน"
+  }
+ ],
+ "w|เบาะ": [
+  {
+   "text": "เบาะตู้นอนชั้นสองนุ่มกว่าที่กิตติคิดไว้",
+   "en": "The second-class sleeper berth was softer than Kitti expected.",
+   "ko": "이등 침대칸 좌석은 끼띠 생각보다 푹신했어요.",
+   "blank": "เบาะ",
+   "src": "made"
+  },
+  {
+   "text": "หลังเข้าเส้นชัย วรรณานอนพักบนเบาะในเต็นท์พยาบาล",
+   "en": "After crossing the finish line, Wannaa lay down to rest on a cushion in the medical tent.",
+   "ko": "결승선을 통과한 뒤 완나는 의료 텐트의 쿠션 위에 누워 쉬었어요.",
+   "blank": "เบาะ",
+   "src": "made"
   }
  ],
  "w|เบิก": [
@@ -45679,6 +46847,22 @@
    "en": "We're out of beer — order more.",
    "ko": "맥주 떨어졌어, 더 시켜.",
    "blank": "เบียร์"
+  }
+ ],
+ "w|เบี้ยว": [
+  {
+   "text": "ปีนี้ฝนเบี้ยวนัด ชาวนาที่ปลูกข้าวรอไว้ต้องสูบน้ำเอง",
+   "en": "This year the rain stood everyone up, so farmers who had planted rice had to pump water themselves.",
+   "ko": "올해는 비가 약속을 어겨서 벼를 심어 둔 농부들이 직접 물을 퍼 올려야 했어요.",
+   "blank": "เบี้ยว",
+   "src": "made"
+  },
+  {
+   "text": "มือกลองเบี้ยวงานซ้อมสองครั้งจนหัวหน้าวงโกรธ",
+   "en": "The drummer skipped rehearsal twice and made the bandleader angry.",
+   "ko": "드러머가 리허설을 두 번이나 빼먹어서 밴드 리더가 화가 났어요.",
+   "blank": "เบี้ยว",
+   "src": "made"
   }
  ],
  "w|เบื่อ": [
@@ -46484,6 +47668,22 @@
    "en": "Fire officers are on duty backstage for every performance.",
    "ko": "소방관이 공연 때마다 무대 뒤에서 근무해요.",
    "blank": "ปฏิบัติงาน",
+   "src": "made"
+  }
+ ],
+ "w|ปฏิบัติตาม": [
+  {
+   "text": "ชัยปฏิบัติตามคำเตือนของกรมอุตุฯ และย้ายวัวขึ้นที่สูง",
+   "en": "Chai followed the weather department's warning and moved his cows to higher ground.",
+   "ko": "차이는 기상청 경고를 따라 소들을 높은 곳으로 옮겼어요.",
+   "blank": "ปฏิบัติตาม",
+   "src": "made"
+  },
+  {
+   "text": "คนดูต้องปฏิบัติตามกฎห้ามนำขวดแก้วเข้างาน",
+   "en": "The audience has to follow the rule against bringing glass bottles in.",
+   "ko": "관객은 유리병 반입 금지 규칙을 지켜야 해요.",
+   "blank": "ปฏิบัติตาม",
    "src": "made"
   }
  ],
@@ -47515,6 +48715,22 @@
    "en": "The price is about that much.",
    "ko": "가격이 그쯤이야.",
    "blank": "ประมาณ"
+  }
+ ],
+ "w|ประมาณการ": [
+  {
+   "text": "วีระประมาณการว่าต้องใช้เหล็กเส้นอีกสองร้อยตัน",
+   "en": "Weera estimated they'd need another two hundred tonnes of rebar.",
+   "ko": "위라는 철근이 이백 톤 더 필요하다고 어림잡았어요.",
+   "blank": "ประมาณการ",
+   "src": "made"
+  },
+  {
+   "text": "การรถไฟประมาณการว่าผู้โดยสารช่วงสงกรานต์จะเพิ่มเป็นเท่าตัว",
+   "en": "The railway estimated that passengers over Songkran would double.",
+   "ko": "철도청은 송끄란 기간 승객이 두 배로 늘 거라고 추산했어요.",
+   "blank": "ประมาณการ",
+   "src": "made"
   }
  ],
  "w|ประมาท": [
@@ -49277,6 +50493,22 @@
    "src": "made"
   }
  ],
+ "w|ป่าชายเลน": [
+  {
+   "text": "เอกไม่เคยเห็นทะเล จึงอยากไปดูป่าชายเลนสักครั้ง",
+   "en": "Ek has never seen the sea, so he wants to go see a mangrove forest at least once.",
+   "ko": "에크는 바다를 본 적이 없어서 맹그로브 숲을 한번 보고 싶어 해요.",
+   "blank": "ป่าชายเลน",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งน้ำผึ้งจากชาวบ้านที่ดูแลป่าชายเลนเพื่อช่วยชุมชน",
+   "en": "Piya ordered honey from villagers who look after the mangrove forest to support the community.",
+   "ko": "삐야는 공동체를 돕고 싶어서 맹그로브 숲을 가꾸는 주민들에게 꿀을 주문했어요.",
+   "blank": "ป่าชายเลน",
+   "src": "made"
+  }
+ ],
  "w|ปาฏิหาริย์": [
   {
    "text": "ทีมฟุตบอลของโรงเรียนสมชายพลิกชนะได้อย่างปาฏิหาริย์ในนาทีสุดท้าย",
@@ -50225,6 +51457,22 @@
    "src": "made"
   }
  ],
+ "w|เป็นหนึ่งเดียว": [
+  {
+   "text": "ตอนพระอาทิตย์ขึ้น หมอกกับยอดเขาดูเป็นหนึ่งเดียวกัน",
+   "en": "At sunrise the mist and the peaks look as one.",
+   "ko": "해 뜰 무렵 안개와 산봉우리가 하나로 보여요.",
+   "blank": "เป็นหนึ่งเดียว",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะชอบที่โซฟาสีครีมกับผ้าม่านดูเป็นหนึ่งเดียวกัน",
+   "en": "Piya likes how the cream sofa and the curtains look as one.",
+   "ko": "삐야는 크림색 소파와 커튼이 하나처럼 어울려 마음에 들어요.",
+   "blank": "เป็นหนึ่งเดียว",
+   "src": "made"
+  }
+ ],
  "w|เป็นห่วง": [
   {
    "text": "แม่เป็นห่วงมาก",
@@ -50237,6 +51485,22 @@
    "en": "Don't worry about me.",
    "ko": "걱정하지 마.",
    "blank": "เป็นห่วง"
+  }
+ ],
+ "w|เป็นอย่างมาก": [
+  {
+   "text": "เจ้าของโครงการพอใจผลงานของทีมวีระเป็นอย่างมาก",
+   "en": "The project owner was extremely pleased with the work of Weera's team.",
+   "ko": "건축주는 위라 팀의 성과에 매우 만족했어요.",
+   "blank": "เป็นอย่างมาก",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ชอบวิวทุ่งทานตะวันข้างทางรถไฟเป็นอย่างมาก",
+   "en": "Jan loves the view of the sunflower fields beside the railway very much.",
+   "ko": "짠은 철길 옆 해바라기밭 풍경을 무척 좋아해요.",
+   "blank": "เป็นอย่างมาก",
+   "src": "made"
   }
  ],
  "w|เป็นอันขาด": [
@@ -51127,6 +52391,22 @@
    "blank": "ไป"
   }
  ],
+ "w|ไปเที่ยว": [
+  {
+   "text": "กิตติลางานหนึ่งสัปดาห์เพื่อไปเที่ยวกับแม่",
+   "en": "Kitti took a week off work to go on a trip with his mother.",
+   "ko": "끼띠는 어머니와 여행하려고 일주일 휴가를 냈어요.",
+   "blank": "ไปเที่ยว",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาชอบสมัครวิ่งต่างจังหวัดเพราะได้ไปเที่ยวด้วย",
+   "en": "Wannaa likes signing up for races in other provinces because she gets to travel too.",
+   "ko": "완나는 여행도 할 수 있어서 지방 대회에 신청하는 걸 좋아해요.",
+   "blank": "ไปเที่ยว",
+   "src": "made"
+  }
+ ],
  "w|ไปมา": [
   {
    "text": "ฝูงปลาว่ายไปมาอยู่ในน้ำใส",
@@ -51579,6 +52859,22 @@
    "src": "made"
   }
  ],
+ "w|ผลาญ": [
+  {
+   "text": "การรื้อแบบหล่อผิดตำแหน่งผลาญงบไปหลายแสนบาท",
+   "en": "Removing the formwork from the wrong spot burned through several hundred thousand baht.",
+   "ko": "잘못된 위치의 거푸집을 뜯어내느라 예산 수십만 바트가 날아갔어요.",
+   "blank": "ผลาญ",
+   "src": "made"
+  },
+  {
+   "text": "หนุ่มนักเดินทางบอกว่านั่งเครื่องบินบ่อยๆ ผลาญเงินเก็บไปหมด",
+   "en": "A young traveller said flying all the time burned through all his savings.",
+   "ko": "젊은 여행자는 비행기를 자주 탔더니 저축이 바닥났다고 했어요.",
+   "blank": "ผลาญ",
+   "src": "made"
+  }
+ ],
  "w|ผลิต": [
   {
    "text": "โรงงานผลิตสินค้าคุณภาพดี",
@@ -51666,6 +52962,22 @@
    "en": "Piya combines chemistry and biology knowledge in this research.",
    "ko": "삐야는 이번 연구에서 화학과 생물학 지식을 아울러요.",
    "blank": "ผสมผสาน",
+   "src": "made"
+  }
+ ],
+ "w|ผสมพันธุ์": [
+  {
+   "text": "เอกแยกคอกไก่ไว้ช่วงที่ไก่กำลังผสมพันธุ์",
+   "en": "Ek keeps the hens in a separate coop during the breeding period.",
+   "ko": "에크는 닭들이 짝짓기하는 시기에 닭장을 따로 나눠요.",
+   "blank": "ผสมพันธุ์",
+   "src": "made"
+  },
+  {
+   "text": "ฟาร์มที่ขายลูกสุนัขออนไลน์บอกว่าไม่ให้แม่สุนัขผสมพันธุ์บ่อยเกินไป",
+   "en": "The farm that sells puppies online says it doesn't let the mother dogs breed too often.",
+   "ko": "온라인으로 강아지를 파는 농장은 어미 개를 너무 자주 교배시키지 않는다고 했어요.",
+   "blank": "ผสมพันธุ์",
    "src": "made"
   }
  ],
@@ -52299,6 +53611,22 @@
    "src": "made"
   }
  ],
+ "w|ผุ": [
+  {
+   "text": "สะพานไม้เก่าใกล้สถานีผุจนต้องปิดซ่อม",
+   "en": "The old wooden bridge near the station has rotted and had to be closed for repair.",
+   "ko": "역 근처 낡은 나무다리는 썩어서 보수를 위해 막아 두었어요.",
+   "blank": "ผุ",
+   "src": "made"
+  },
+  {
+   "text": "อัฒจันทร์ไม้ข้างเส้นชัยผุจนผู้จัดต้องกั้นไม่ให้คนขึ้น",
+   "en": "The wooden stands by the finish had rotted, so the organisers fenced them off.",
+   "ko": "결승선 옆 나무 관람석이 썩어서 주최 측이 사람이 못 올라가게 막았어요.",
+   "blank": "ผุ",
+   "src": "made"
+  }
+ ],
  "w|ผุด": [
   {
    "text": "ตุ่มแดงผุดขึ้นเต็มท้องหมาหลังเดินเล่นในทุ่งหญ้า",
@@ -52360,6 +53688,22 @@
    "en": "Fon feels attached to the tamarind tree in front of the house that her grandmother planted.",
    "ko": "폰은 할머니가 심은 집 앞 타마린드 나무에 정이 들었어요.",
    "blank": "ผูกพัน",
+   "src": "made"
+  }
+ ],
+ "w|ผูกมัด": [
+  {
+   "text": "กิตติจองตั๋วแบบคืนเงินได้เพราะไม่อยากผูกมัดตัวเองกับวันเดินทาง",
+   "en": "Kitti booked a refundable ticket because he didn't want to tie himself to a travel date.",
+   "ko": "끼띠는 날짜에 얽매이기 싫어서 환불 가능한 표를 끊었어요.",
+   "blank": "ผูกมัด",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาไม่อยากผูกมัดตัวเองกับทีมวิ่งไหน เลยซ้อมคนเดียว",
+   "en": "Wannaa doesn't want to commit herself to any running club, so she trains alone.",
+   "ko": "완나는 어느 달리기 팀에도 얽매이기 싫어서 혼자 연습해요.",
+   "blank": "ผูกมัด",
    "src": "made"
   }
  ],
@@ -53189,6 +54533,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้สอน": [
+  {
+   "text": "ผู้สอนจากศูนย์ความปลอดภัยมาอบรมการใช้นั่งร้าน",
+   "en": "An instructor from the safety centre came to train the crew on using scaffolding.",
+   "ko": "안전 센터 강사가 와서 비계 사용법을 교육했어요.",
+   "blank": "ผู้สอน",
+   "src": "made"
+  },
+  {
+   "text": "ครูที่นั่งข้างจันทร์บอกว่าเป็นผู้สอนภาษาจีนในโรงเรียนประจำจังหวัด",
+   "en": "The teacher beside Jan said she teaches Chinese at the provincial school.",
+   "ko": "짠 옆자리 선생님은 도립 학교 중국어 강사라고 했어요.",
+   "blank": "ผู้สอน",
+   "src": "made"
+  }
+ ],
  "w|ผู้สื่อข่าว": [
   {
    "text": "ผู้สื่อข่าวท้องถิ่นมาถ่ายภาพตอนโรงงานเปิดรับคนเพิ่ม",
@@ -53573,6 +54933,22 @@
    "en": "I bought snacks for friends too, just in case.",
    "ko": "친구 몫으로도 과자를 사 뒀어.",
    "blank": "เผื่อ"
+  }
+ ],
+ "w|เผื่อว่า": [
+  {
+   "text": "ชัยตุนข้าวสารไว้หลายกระสอบ เผื่อว่าน้ำจะท่วมถนน",
+   "en": "Chai stocked up several sacks of rice in case the water floods the road.",
+   "ko": "차이는 길이 물에 잠길 경우를 대비해 쌀을 몇 포대 쟁여 뒀어요.",
+   "blank": "เผื่อว่า",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์พกเสื้อกันฝนมาด้วยเผื่อว่าฝนจะตกกลางคอนเสิร์ต",
+   "en": "Somsak brought a raincoat just in case it rained during the concert.",
+   "ko": "솜삭은 콘서트 중에 비가 올까 봐 우비를 챙겨 왔어요.",
+   "blank": "เผื่อว่า",
+   "src": "made"
   }
  ],
  "w|แผ่": [
@@ -54363,6 +55739,22 @@
    "src": "made"
   }
  ],
+ "w|ฝุ่นละออง": [
+  {
+   "text": "ช่วงเผาไร่ ฝุ่นละอองปกคลุมหุบเขาจนมองไม่เห็นยอดดอย",
+   "en": "During the field-burning season, fine dust blankets the valley so you can't see the peaks.",
+   "ko": "밭 태우는 철이면 미세먼지가 골짜기를 덮어 산봉우리가 보이지 않아요.",
+   "blank": "ฝุ่นละออง",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงฝุ่นละอองหนา ปิยะสั่งเครื่องฟอกอากาศมาไว้ในห้องนอน",
+   "en": "When the fine dust was bad, Piya ordered an air purifier for the bedroom.",
+   "ko": "미세먼지가 심할 때 삐야는 침실에 둘 공기청정기를 주문했어요.",
+   "blank": "ฝุ่นละออง",
+   "src": "made"
+  }
+ ],
  "w|ฝูง": [
   {
    "text": "ตอนเช้าสมชายเห็นนกฝูงใหญ่บินผ่านหุบเขา",
@@ -54809,6 +56201,22 @@
    "blank": "พรม"
   }
  ],
+ "w|พรมแดน": [
+  {
+   "text": "ปลายทางของกิตติคือเมืองเล็กๆ ใกล้พรมแดน",
+   "en": "Kitti's destination is a small town near the border.",
+   "ko": "끼띠의 종착지는 국경 근처 작은 도시예요.",
+   "blank": "พรมแดน",
+   "src": "made"
+  },
+  {
+   "text": "มาราธอนรายการนี้วิ่งผ่านเมืองชายแดนไปจนถึงพรมแดน",
+   "en": "This marathon runs through a frontier town all the way to the border.",
+   "ko": "이 마라톤은 국경 도시를 지나 국경선까지 달려요.",
+   "blank": "พรมแดน",
+   "src": "made"
+  }
+ ],
  "w|พรรค": [
   {
    "text": "พรรคไหนที่เธอสนับสนุน",
@@ -55008,6 +56416,22 @@
    "en": "That night Malee closed the shop so late that she saw the moon floating above the roof.",
    "ko": "그날 밤 말리는 가게를 늦게 닫아서 지붕 위에 뜬 달을 봤어요.",
    "blank": "พระจันทร์",
+   "src": "made"
+  }
+ ],
+ "w|พระจันทร์เต็มดวง": [
+  {
+   "text": "ชาวบ้านทำพิธีขอบคุณผีป่าในคืนพระจันทร์เต็มดวง",
+   "en": "The villagers hold a ceremony to thank the forest spirits on the night of the full moon.",
+   "ko": "주민들은 보름달 뜨는 밤에 숲의 정령에게 감사하는 의식을 열어요.",
+   "blank": "พระจันทร์เต็มดวง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านขนมออนไลน์ส่งขนมไหว้พระจันทร์ทันคืนพระจันทร์เต็มดวง",
+   "en": "The online bakery delivered the mooncakes in time for the full-moon night.",
+   "ko": "온라인 과자점은 보름달 밤에 맞춰 월병을 배달했어요.",
+   "blank": "พระจันทร์เต็มดวง",
    "src": "made"
   }
  ],
@@ -55451,6 +56875,22 @@
    "blank": "พลังงาน"
   }
  ],
+ "w|พลัด": [
+  {
+   "text": "ลูกวัวของเอกพลัดหลงเข้าไปในป่าตอนหมอกลงจัด",
+   "en": "Ek's calf got separated and strayed into the forest when the fog came down thick.",
+   "ko": "짙은 안개가 내리자 에크의 송아지가 길을 잃고 숲으로 들어갔어요.",
+   "blank": "พลัด",
+   "src": "made"
+  },
+  {
+   "text": "กล่องพัสดุของปิยะพลัดตกจากรถส่งของกลางถนน",
+   "en": "Piya's parcel fell off the delivery van in the middle of the road.",
+   "ko": "삐야의 택배 상자가 배송 차량에서 길 한가운데로 떨어졌어요.",
+   "blank": "พลัด",
+   "src": "made"
+  }
+ ],
  "w|พลัน": [
   {
    "text": "พอเพลงเก่าดังขึ้น กิตติก็พลันนึกถึงวันรับปริญญา",
@@ -55479,6 +56919,22 @@
    "en": "She sadly missed a great opportunity.",
    "ko": "그녀는 안타깝게도 좋은 기회를 놓쳤어.",
    "blank": "พลาด"
+  }
+ ],
+ "w|พล่าม": [
+  {
+   "text": "นักท่องเที่ยวคนหนึ่งพล่ามเรื่องกล้องราคาแพงจนเอกเบื่อ",
+   "en": "One tourist rambled on about his expensive camera until Ek got bored.",
+   "ko": "한 관광객이 비싼 카메라 이야기를 늘어놓아서 에크는 지루해졌어요.",
+   "blank": "พล่าม",
+   "src": "made"
+  },
+  {
+   "text": "แชตบอตของร้านพล่ามโปรโมชันยาวเหยียดแต่ไม่ตอบคำถาม",
+   "en": "The shop's chatbot rambled on about promotions but didn't answer the question.",
+   "ko": "쇼핑몰 챗봇은 프로모션 이야기만 늘어놓고 질문에는 답하지 않았어요.",
+   "blank": "พล่าม",
+   "src": "made"
   }
  ],
  "w|พลาสติก": [
@@ -56265,6 +57721,38 @@
    "en": "Don't go out during a storm.",
    "ko": "폭풍이 올 때 나가지 마.",
    "blank": "พายุ"
+  }
+ ],
+ "w|พาสปอร์ต": [
+  {
+   "text": "กิตติพกพาสปอร์ตไปด้วยเผื่อจะข้ามไปเดินตลาดฝั่งตรงข้าม",
+   "en": "Kitti brought his passport in case he crossed over to the market on the other side.",
+   "ko": "끼띠는 건너편 시장에 가 볼까 해서 여권을 챙겼어요.",
+   "blank": "พาสปอร์ต",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งต่างชาติต้องแสดงพาสปอร์ตตอนรับเบอร์วิ่ง",
+   "en": "Foreign runners had to show their passports when collecting their bibs.",
+   "ko": "외국인 주자는 배번을 받을 때 여권을 보여 줘야 했어요.",
+   "blank": "พาสปอร์ต",
+   "src": "made"
+  }
+ ],
+ "w|พาหนะ": [
+  {
+   "text": "กิตติชอบรถไฟมากกว่าพาหนะอื่นเพราะได้นอนยาวๆ",
+   "en": "Kitti prefers the train to other vehicles because he can sleep stretched out.",
+   "ko": "끼띠는 길게 누워 잘 수 있어서 다른 교통수단보다 기차를 좋아해요.",
+   "blank": "พาหนะ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดงานห้ามยานพาหนะทุกชนิดเข้าเส้นทางวิ่งตั้งแต่ตีสาม",
+   "en": "The organisers banned all vehicles from the course from three in the morning.",
+   "ko": "주최 측은 새벽 세 시부터 모든 차량의 코스 진입을 막았어요.",
+   "blank": "พาหนะ",
+   "src": "made"
   }
  ],
  "w|พำนัก": [
@@ -57613,6 +59101,22 @@
    "en": "There is enough food for everyone.",
    "ko": "음식은 모두에게 충분해.",
    "blank": "เพียงพอ"
+  }
+ ],
+ "w|เพียงลำพัง": [
+  {
+   "text": "เช้าวันสุดท้าย กิตติเดินเล่นริมคูเมืองเพียงลำพัง",
+   "en": "On the last morning, Kitti strolled along the city moat on his own.",
+   "ko": "마지막 날 아침 끼띠는 혼자서 해자를 따라 산책했어요.",
+   "blank": "เพียงลำพัง",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงสิบกิโลสุดท้าย วรรณาวิ่งอยู่เพียงลำพังบนถนนยาว",
+   "en": "For the last ten kilometres, Wannaa ran all alone on the long road.",
+   "ko": "마지막 십 킬로미터를 완나는 긴 도로 위에서 홀로 달렸어요.",
+   "blank": "เพียงลำพัง",
+   "src": "made"
   }
  ],
  "w|เพี้ยน": [
@@ -60367,6 +61871,22 @@
    "blank": "มะละกอ"
   }
  ],
+ "w|มะลิ": [
+  {
+   "text": "ภรรยาของเอกร้อยพวงมาลัยมะลิไปไหว้พระที่วัด",
+   "en": "Ek's wife strung a jasmine garland to offer to the Buddha at the temple.",
+   "ko": "에크의 아내는 절에 바칠 재스민 꽃목걸이를 엮었어요.",
+   "blank": "มะลิ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งเทียนหอมกลิ่นมะลิมาจุดในห้องน้ำ",
+   "en": "Piya ordered jasmine-scented candles to light in the bathroom.",
+   "ko": "삐야는 욕실에 켤 재스민 향초를 주문했어요.",
+   "blank": "มะลิ",
+   "src": "made"
+  }
+ ],
  "w|มัก": [
   {
    "text": "ครูสังเกตว่านักเรียนใหม่มักลืมชิมก่อนเสิร์ฟ",
@@ -60725,6 +62245,22 @@
    "en": "She received a lot of praise.",
    "ko": "그녀는 칭찬을 많이 받았어.",
    "blank": "มากมาย"
+  }
+ ],
+ "w|มาโดยตลอด": [
+  {
+   "text": "ชัยรักฤดูฝนมาโดยตลอด เพราะได้กลิ่นดินหลังฝนตก",
+   "en": "Chai has always loved the rainy season because of the smell of the earth after rain.",
+   "ko": "차이는 비 온 뒤 흙냄새 때문에 늘 우기를 좋아해 왔어요.",
+   "blank": "มาโดยตลอด",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ติดตามวงนี้มาโดยตลอดตั้งแต่อัลบั้มแรก",
+   "en": "Somsak has followed this band the whole way since their first album.",
+   "ko": "솜삭은 첫 앨범부터 이 밴드를 줄곧 따라왔어요.",
+   "blank": "มาโดยตลอด",
+   "src": "made"
   }
  ],
  "w|มาตรการ": [
@@ -61165,6 +62701,22 @@
    "src": "made"
   }
  ],
+ "w|มีความสำคัญ": [
+  {
+   "text": "ทางรถไฟสายเหนือมีความสำคัญต่อการค้าขายของภาคนี้มาร้อยกว่าปี",
+   "en": "The northern railway line has been important to this region's trade for over a hundred years.",
+   "ko": "북부선 철도는 백 년 넘게 이 지역 교역에 중요한 역할을 해 왔어요.",
+   "blank": "มีความสำคัญ",
+   "src": "made"
+  },
+  {
+   "text": "การดื่มน้ำทุกจุดมีความสำคัญมากในวันที่อากาศร้อน",
+   "en": "Drinking water at every station is very important on a hot day.",
+   "ko": "더운 날에는 급수대마다 물을 마시는 게 아주 중요해요.",
+   "blank": "มีความสำคัญ",
+   "src": "made"
+  }
+ ],
  "w|มีความสุข": [
   {
    "text": "ฉันมีความสุขมาก",
@@ -61423,6 +62975,22 @@
    "src": "made"
   }
  ],
+ "w|มีอำนาจ": [
+  {
+   "text": "ในนิทานของชัย เทพแห่งฝนเป็นผู้มีอำนาจเหนือฤดูทั้งหมด",
+   "en": "In Chai's folk tale, the rain god holds power over all the seasons.",
+   "ko": "차이의 옛이야기에서 비의 신은 모든 계절을 다스리는 힘을 가졌어요.",
+   "blank": "มีอำนาจ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดคอนเสิร์ตเป็นนักธุรกิจที่มีอำนาจในวงการบันเทิง",
+   "en": "The concert promoter is a businessman with power in the entertainment industry.",
+   "ko": "콘서트 기획자는 연예계에서 힘 있는 사업가예요.",
+   "blank": "มีอำนาจ",
+   "src": "made"
+  }
+ ],
  "w|มีโอกาส": [
   {
    "text": "อนันต์ดีใจที่มีโอกาสได้ทำงานกับบริษัทที่ฝันไว้",
@@ -61607,6 +63175,22 @@
    "src": "made"
   }
  ],
+ "w|มืออาชีพ": [
+  {
+   "text": "หัวหน้าคนงานทำงานแบบมืออาชีพ ไม่เคยให้งานล่าช้า",
+   "en": "The foreman works like a true professional and never lets the job fall behind.",
+   "ko": "작업반장은 프로답게 일해서 공사가 늦어진 적이 없어요.",
+   "blank": "มืออาชีพ",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานรถไฟปูเตียงนอนให้อย่างรวดเร็วแบบมืออาชีพ",
+   "en": "The train attendant made up the berth quickly, like a professional.",
+   "ko": "승무원은 능숙하게 침대를 순식간에 깔아 줬어요.",
+   "blank": "มืออาชีพ",
+   "src": "made"
+  }
+ ],
  "w|มุก": [
   {
    "text": "ธนาอยากหัวเราะกับมุกของหมอแต่อ้าปากค้างอยู่",
@@ -61700,6 +63284,22 @@
    "en": "Jan is determined to save up before ordering a new laptop.",
    "ko": "짠은 새 노트북을 주문하기 전에 꼭 돈을 모으겠다고 마음먹었어요.",
    "blank": "มุ่งมั่น",
+   "src": "made"
+  }
+ ],
+ "w|มุ่งหน้า": [
+  {
+   "text": "รถไฟออกจากกรุงเทพฯ ตอนหัวค่ำแล้วมุ่งหน้าสู่เชียงใหม่",
+   "en": "The train left Bangkok in the early evening and headed for Chiang Mai.",
+   "ko": "기차는 초저녁에 방콕을 떠나 치앙마이로 향했어요.",
+   "blank": "มุ่งหน้า",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งหลายพันคนมุ่งหน้าไปยังจุดปล่อยตัวตั้งแต่ฟ้ายังมืด",
+   "en": "Thousands of runners headed for the start line while it was still dark.",
+   "ko": "수천 명의 주자가 아직 어두울 때 출발선으로 향했어요.",
+   "blank": "มุ่งหน้า",
    "src": "made"
   }
  ],
@@ -62117,6 +63717,22 @@
    "src": "made"
   }
  ],
+ "w|เมื่อเดือนที่แล้ว": [
+  {
+   "text": "เมื่อเดือนที่แล้วยังร้อนจัด แต่ตอนนี้ชัยต้องห่มผ้าห่มแล้ว",
+   "en": "Last month it was still scorching, but now Chai needs a blanket.",
+   "ko": "지난달만 해도 무척 더웠는데 이제 차이는 이불을 덮어야 해요.",
+   "blank": "เมื่อเดือนที่แล้ว",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ซื้อบัตรไว้ตั้งแต่เมื่อเดือนที่แล้วเพราะกลัวไม่ทัน",
+   "en": "Somsak bought his ticket last month for fear of missing out.",
+   "ko": "솜삭은 놓칠까 봐 지난달에 미리 표를 샀어요.",
+   "blank": "เมื่อเดือนที่แล้ว",
+   "src": "made"
+  }
+ ],
  "w|เมื่อใด": [
   {
    "text": "วิชัยไม่แน่ใจว่าพัสดุจะมาส่งเมื่อใด",
@@ -62130,6 +63746,22 @@
    "en": "Napa doesn't know when the band will come back to play here again.",
    "ko": "나파는 밴드가 언제 다시 여기서 공연할지 몰라요.",
    "blank": "เมื่อใด",
+   "src": "made"
+  }
+ ],
+ "w|เมื่อนั้น": [
+  {
+   "text": "พ่อของชัยเคยสอนว่า ถ้ามดขนไข่ขึ้นที่สูง เมื่อนั้นฝนจะมา",
+   "en": "Chai's father used to teach him that when ants carry their eggs up high, then the rain will come.",
+   "ko": "차이의 아버지는 개미가 알을 높은 곳으로 옮기면 그때 비가 온다고 가르쳤어요.",
+   "blank": "เมื่อนั้น",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องบอกว่าถ้าทุกคนร้องพร้อมกัน เมื่อนั้นเขาจะเล่นเพลงพิเศษให้",
+   "en": "The singer said that if everyone sang together, then he would play a special song.",
+   "ko": "가수는 모두 함께 부르면 그때 특별한 곡을 들려주겠다고 했어요.",
+   "blank": "เมื่อนั้น",
    "src": "made"
   }
  ],
@@ -63275,6 +64907,22 @@
    "src": "made"
   }
  ],
+ "w|ย้อนหลัง": [
+  {
+   "text": "ชัยเปิดดูสมุดย้อนหลังแล้วพบว่าฝนแรกมาช้าลงเรื่อยๆ",
+   "en": "Chai looked back through his notebooks and found the first rain keeps coming later.",
+   "ko": "차이는 예전 공책을 되짚어 보다가 첫비가 점점 늦어진다는 걸 알았어요.",
+   "blank": "ย้อนหลัง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ดูคลิปคอนเสิร์ตย้อนหลังในอินเทอร์เน็ตหลายรอบ",
+   "en": "Somsak watched the concert replay online over and over.",
+   "ko": "솜삭은 콘서트 다시 보기 영상을 인터넷에서 여러 번 봤어요.",
+   "blank": "ย้อนหลัง",
+   "src": "made"
+  }
+ ],
  "w|ยอม": [
   {
    "text": "ฉันยอมแล้ว",
@@ -63731,6 +65379,22 @@
    "en": "I like eating grilled meat with friends.",
    "ko": "친구들이랑 고기 구워 먹는 걸 좋아해.",
    "blank": "ย่าง"
+  }
+ ],
+ "w|ยางพารา": [
+  {
+   "text": "พี่ชายของเอกลงไปกรีดยางพาราที่ภาคใต้ทุกหน้าแล้ง",
+   "en": "Ek's older brother goes down south to tap rubber trees every dry season.",
+   "ko": "에크의 형은 건기마다 남부로 내려가 고무나무 수액을 채취해요.",
+   "blank": "ยางพารา",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งหมอนยางพาราจากสวนในภาคใต้",
+   "en": "Piya ordered a natural latex pillow from a plantation in the south.",
+   "ko": "삐야는 남부 농장에서 천연 라텍스 베개를 주문했어요.",
+   "blank": "ยางพารา",
+   "src": "made"
   }
  ],
  "w|ยางรถ": [
@@ -64751,6 +66415,22 @@
    "src": "made"
   }
  ],
+ "w|เย้า": [
+  {
+   "text": "คนงานชอบเย้าวีระว่าใส่หมวกนิรภัยแล้วเหมือนเห็ด",
+   "en": "The workers like to tease Weera that he looks like a mushroom in his hard hat.",
+   "ko": "인부들은 안전모를 쓴 위라가 버섯 같다며 놀리길 좋아해요.",
+   "blank": "เย้า",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมทางชอบเย้าจันทร์ว่ากรนดังกว่าเสียงรถไฟ",
+   "en": "Her travelling companion likes to tease Jan that her snoring is louder than the train.",
+   "ko": "동행은 짠의 코골이가 기차 소리보다 크다며 놀리곤 해요.",
+   "blank": "เย้า",
+   "src": "made"
+  }
+ ],
  "w|เยาว์": [
   {
    "text": "ผู้ต้องหาคดีนี้ยังอยู่ในวัยเยาว์ ตำรวจจึงส่งตัวไปสถานพินิจ",
@@ -65047,6 +66727,22 @@
    "src": "made"
   }
  ],
+ "w|โยก": [
+  {
+   "text": "ลมแรงจนต้นมะพร้าวโยกไปมาทั้งคืน",
+   "en": "The wind was so strong the coconut palms swayed back and forth all night.",
+   "ko": "바람이 세서 야자나무가 밤새 이리저리 흔들렸어요.",
+   "blank": "โยก",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์โยกหัวตามจังหวะเพลงจนคอเคล็ด",
+   "en": "Somsak bobbed his head to the beat until he cricked his neck.",
+   "ko": "솜삭은 박자에 맞춰 머리를 흔들다가 목을 삐끗했어요.",
+   "blank": "โยก",
+   "src": "made"
+  }
+ ],
  "w|โยกย้าย": [
   {
    "text": "ชัยถูกโยกย้ายไปประจำโต๊ะข่าวเศรษฐกิจตั้งแต่ต้นปี",
@@ -65259,6 +66955,22 @@
    "blank": "รถบรรทุก"
   }
  ],
+ "w|รถบัส": [
+  {
+   "text": "ถ้าพลาดรถไฟ กิตติต้องนั่งรถบัสข้ามคืนแทน",
+   "en": "If he misses the train, Kitti will have to take an overnight bus instead.",
+   "ko": "기차를 놓치면 끼띠는 밤 버스를 대신 타야 해요.",
+   "blank": "รถบัส",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งที่วิ่งไม่ไหวจะถูกพาขึ้นรถบัสกลับเส้นชัย",
+   "en": "Runners who can't continue are taken back to the finish line on a bus.",
+   "ko": "더 못 뛰는 주자는 버스를 타고 결승점으로 돌아가요.",
+   "blank": "รถบัส",
+   "src": "made"
+  }
+ ],
  "w|รถพยาบาล": [
   {
    "text": "เรียกรถพยาบาลเร็วเข้า",
@@ -65409,6 +67121,22 @@
    "blank": "ร่ม"
   }
  ],
+ "w|ร่มรื่น": [
+  {
+   "text": "ลานวัดบนดอยมีต้นไม้ใหญ่ร่มรื่นเหมาะแก่การนั่งพัก",
+   "en": "The temple yard on the mountain has big shady trees, perfect for sitting and resting.",
+   "ko": "산 위 절 마당엔 그늘이 시원한 큰 나무가 있어 쉬기 좋아요.",
+   "blank": "ร่มรื่น",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งต้นไม้ใหญ่มาปลูกให้หน้าบ้านร่มรื่น",
+   "en": "Piya ordered a big tree to plant so the front of the house would be shady.",
+   "ko": "삐야는 집 앞에 그늘이 지도록 큰 나무를 주문해 심었어요.",
+   "blank": "ร่มรื่น",
+   "src": "made"
+  }
+ ],
  "w|ร่วง": [
   {
    "text": "ใบไม้ร่วงเต็มสนามจนภารโรงต้องกวาดทุกเช้า",
@@ -65528,6 +67256,22 @@
    "en": "All the actors sang together to close the show.",
    "ko": "배우 모두가 함께 노래를 부르며 공연을 마무리했어요.",
    "blank": "ร่วมกัน",
+   "src": "made"
+  }
+ ],
+ "w|ร่วมใจ": [
+  {
+   "text": "ก่อนหน้าน้ำหลาก คนทั้งตำบลร่วมใจกันขุดลอกคูคลอง",
+   "en": "Before the floods, the whole subdistrict joined forces to dredge the canals.",
+   "ko": "물이 불어나기 전에 온 면 사람들이 힘을 모아 수로를 준설했어요.",
+   "blank": "ร่วมใจ",
+   "src": "made"
+  },
+  {
+   "text": "ศิลปินหลายวงร่วมใจกันเล่นคอนเสิร์ตการกุศลช่วยผู้ประสบภัย",
+   "en": "Several bands came together to play a charity concert for disaster victims.",
+   "ko": "여러 밴드가 뜻을 모아 이재민 돕기 자선 콘서트를 열었어요.",
+   "blank": "ร่วมใจ",
    "src": "made"
   }
  ],
@@ -67763,6 +69507,22 @@
    "src": "made"
   }
  ],
+ "w|รายรับ": [
+  {
+   "text": "ฝนตกทั้งเดือนทำให้รายรับของบริษัทรับเหมาลดลง",
+   "en": "A whole month of rain cut the contractor's revenue.",
+   "ko": "한 달 내내 비가 와서 건설사의 수입이 줄었어요.",
+   "blank": "รายรับ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ทำตารางรายรับรายจ่ายของบ้านระหว่างนั่งรถไฟ",
+   "en": "Jan worked out the household income and expenses sheet on the train.",
+   "ko": "짠은 기차에서 집안 수입과 지출 표를 정리했어요.",
+   "blank": "รายรับ",
+   "src": "made"
+  }
+ ],
  "w|ร้ายแรง": [
   {
    "text": "นักแสดงสะดุดล้มบนเวที แต่โชคดีที่อาการบาดเจ็บไม่ร้ายแรง",
@@ -67791,6 +69551,22 @@
    "en": "The details are in the email.",
    "ko": "자세한 내용은 이메일에 있어.",
    "blank": "รายละเอียด"
+  }
+ ],
+ "w|รายวัน": [
+  {
+   "text": "ชัยจดอุณหภูมิรายวันลงสมุดมาตั้งแต่เกษียณ",
+   "en": "Chai has been writing down the daily temperature in a notebook since he retired.",
+   "ko": "차이는 은퇴한 뒤로 매일 기온을 공책에 적어 왔어요.",
+   "blank": "รายวัน",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานเวทีได้ค่าจ้างเป็นรายวันตลอดสามวันของเทศกาลดนตรี",
+   "en": "The stage crew is paid by the day for all three days of the music festival.",
+   "ko": "무대 스태프는 음악 축제 사흘 내내 일당을 받아요.",
+   "blank": "รายวัน",
+   "src": "made"
   }
  ],
  "w|ร่าเริง": [
@@ -68133,6 +69909,22 @@
    "src": "made"
   }
  ],
+ "w|รีสอร์ท": [
+  {
+   "text": "แม่ของกิตติอยากพักรีสอร์ทริมแม่น้ำมากกว่าโรงแรมในเมือง",
+   "en": "Kitti's mother would rather stay at a riverside resort than a hotel in town.",
+   "ko": "끼띠의 어머니는 시내 호텔보다 강변 리조트에 묵고 싶어 했어요.",
+   "blank": "รีสอร์ท",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดงานให้ส่วนลดที่พักรีสอร์ทใกล้สนามสำหรับนักวิ่ง",
+   "en": "The organisers gave runners a discount at a resort near the venue.",
+   "ko": "주최 측은 주자들에게 경기장 근처 리조트 숙박 할인을 해 줬어요.",
+   "blank": "รีสอร์ท",
+   "src": "made"
+  }
+ ],
  "w|รื่นรมย์": [
   {
    "text": "เพื่อนบรรยายบ่ายวันอาทิตย์ริมแม่น้ำไว้อย่างรื่นรมย์",
@@ -68349,6 +70141,22 @@
    "en": "I know now.",
    "ko": "이제 알겠어.",
    "blank": "รู้"
+  }
+ ],
+ "w|รู้ความ": [
+  {
+   "text": "ตั้งแต่รู้ความ ชัยก็เห็นพ่อดูท้องฟ้าก่อนลงนาทุกเช้า",
+   "en": "For as long as he can remember, Chai saw his father study the sky every morning before going to the fields.",
+   "ko": "철들 무렵부터 차이는 아버지가 매일 아침 논에 나가기 전 하늘을 살피는 걸 봤어요.",
+   "blank": "รู้ความ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาวสมศักดิ์ฟังเพลงวงนี้มาตั้งแต่ยังไม่รู้ความ",
+   "en": "Somsak's daughter has listened to this band since before she could understand anything.",
+   "ko": "솜삭의 딸은 철들기 전부터 이 밴드의 노래를 들어 왔어요.",
+   "blank": "รู้ความ",
+   "src": "made"
   }
  ],
  "w|รู้จัก": [
@@ -68799,6 +70607,22 @@
    "blank": "เริ่มต้น"
   }
  ],
+ "w|เริ่มแรก": [
+  {
+   "text": "เริ่มแรกชัยปลูกแค่มะเขือ ต่อมาก็ลองปลูกผักตามฤดู",
+   "en": "At first Chai grew only eggplants; later he tried seasonal vegetables.",
+   "ko": "차이는 처음엔 가지만 키우다가 나중엔 제철 채소도 심어 봤어요.",
+   "blank": "เริ่มแรก",
+   "src": "made"
+  },
+  {
+   "text": "เริ่มแรกวงนี้เล่นแค่ในผับเล็กๆ ก่อนจะดังทั่วประเทศ",
+   "en": "In the beginning this band played only in small pubs before becoming famous nationwide.",
+   "ko": "이 밴드는 처음엔 작은 펍에서만 공연하다가 전국적으로 유명해졌어요.",
+   "blank": "เริ่มแรก",
+   "src": "made"
+  }
+ ],
  "w|เรียก": [
   {
    "text": "เรียกฉันด้วย",
@@ -68811,6 +70635,22 @@
    "en": "Who called out just now?",
    "ko": "방금 누가 불렀어?",
    "blank": "เรียก"
+  }
+ ],
+ "w|เรียกกันว่า": [
+  {
+   "text": "ชาวบ้านเรียกกันว่าดอยหัวช้างเพราะยอดเขาโค้งคล้ายงวง",
+   "en": "The villagers call it Elephant Head Mountain because the peak curves like a trunk.",
+   "ko": "주민들은 봉우리가 코끼리 코처럼 휘어서 코끼리머리산이라고 불러요.",
+   "blank": "เรียกกันว่า",
+   "src": "made"
+  },
+  {
+   "text": "ส่วนลดตอนเที่ยงคืนวันเงินเดือนออก คนในเน็ตเรียกกันว่าโปรเที่ยงคืน",
+   "en": "The discounts at midnight on payday are what people online call the midnight deal.",
+   "ko": "월급날 자정 할인을 인터넷에서는 자정 특가라고 불러요.",
+   "blank": "เรียกกันว่า",
+   "src": "made"
   }
  ],
  "w|เรียกเก็บ": [
@@ -69385,6 +71225,22 @@
    "src": "made"
   }
  ],
+ "w|แรงโน้มถ่วง": [
+  {
+   "text": "ลูกของเอกถามว่าทำไมน้ำตกตกลงมา เอกตอบว่าเพราะแรงโน้มถ่วง",
+   "en": "Ek's child asked why the waterfall falls down, and Ek answered that it's because of gravity.",
+   "ko": "에크의 아이가 폭포가 왜 아래로 떨어지냐고 묻자 에크는 중력 때문이라고 답했어요.",
+   "blank": "แรงโน้มถ่วง",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาวปิยะสั่งชุดทดลองแรงโน้มถ่วงสำหรับเด็กมาทำการบ้าน",
+   "en": "Piya's daughter ordered a children's gravity experiment kit for her homework.",
+   "ko": "삐야의 딸은 숙제용으로 어린이 중력 실험 세트를 주문했어요.",
+   "blank": "แรงโน้มถ่วง",
+   "src": "made"
+  }
+ ],
  "w|แรงบันดาลใจ": [
   {
    "text": "เรื่องราวของผู้ก่อตั้งบริษัทให้แรงบันดาลใจกับธนามาก",
@@ -69779,6 +71635,54 @@
    "en": "Fruit from each season has a different taste.",
    "ko": "계절마다 과일 맛이 달라.",
    "blank": "ฤดูกาล"
+  }
+ ],
+ "w|ฤดูใบไม้ผลิ": [
+  {
+   "text": "ลูกสาวชัยที่ไปเรียนต่างประเทศส่งรูปดอกซากุระช่วงฤดูใบไม้ผลิมาให้ดู",
+   "en": "Chai's daughter studying abroad sent photos of cherry blossoms in spring.",
+   "ko": "외국에서 공부하는 차이의 딸은 봄에 핀 벚꽃 사진을 보내왔어요.",
+   "blank": "ฤดูใบไม้ผลิ",
+   "src": "made"
+  },
+  {
+   "text": "ทัวร์คอนเสิร์ตรอบต่อไปจะเริ่มที่ญี่ปุ่นในฤดูใบไม้ผลิ",
+   "en": "The next concert tour will start in Japan in spring.",
+   "ko": "다음 콘서트 투어는 봄에 일본에서 시작해요.",
+   "blank": "ฤดูใบไม้ผลิ",
+   "src": "made"
+  }
+ ],
+ "w|ฤดูร้อน": [
+  {
+   "text": "ปีนี้ฤดูร้อนมาเร็ว มะม่วงของชัยจึงสุกก่อนเวลา",
+   "en": "The hot season came early this year, so Chai's mangoes ripened ahead of time.",
+   "ko": "올해는 더위가 일찍 와서 차이의 망고가 일찍 익었어요.",
+   "blank": "ฤดูร้อน",
+   "src": "made"
+  },
+  {
+   "text": "เทศกาลดนตรีฤดูร้อนที่ชายหาดเป็นงานที่สมศักดิ์รอคอยที่สุด",
+   "en": "The summer music festival on the beach is the event Somsak looks forward to most.",
+   "ko": "해변 여름 음악 축제는 솜삭이 가장 기다리는 행사예요.",
+   "blank": "ฤดูร้อน",
+   "src": "made"
+  }
+ ],
+ "w|ฤดูหนาว": [
+  {
+   "text": "ฤดูหนาวปีนี้สั้นมาก ชัยแทบไม่ได้ใส่เสื้อกันหนาว",
+   "en": "This year's cool season was very short; Chai hardly wore his jacket.",
+   "ko": "올해 겨울은 아주 짧아서 차이는 외투를 거의 안 입었어요.",
+   "blank": "ฤดูหนาว",
+   "src": "made"
+  },
+  {
+   "text": "คอนเสิร์ตกลางแจ้งในฤดูหนาวทำให้คนดูต้องพกผ้าพันคอ",
+   "en": "The open-air concert in the cool season meant the audience had to bring scarves.",
+   "ko": "서늘한 철 야외 콘서트라 관객들은 목도리를 챙겨야 했어요.",
+   "blank": "ฤดูหนาว",
+   "src": "made"
   }
  ],
  "w|ฤทธิ์": [
@@ -70531,6 +72435,22 @@
    "blank": "ลอยกระทง"
   }
  ],
+ "w|ลอยตัว": [
+  {
+   "text": "ราคาเหล็กลอยตัวขึ้นลงทุกสัปดาห์ วีระจึงต้องสั่งของล่วงหน้า",
+   "en": "Steel prices float up and down every week, so Weera has to order in advance.",
+   "ko": "철강 가격이 매주 오르내려서 위라는 미리 주문해야 해요.",
+   "blank": "ลอยตัว",
+   "src": "made"
+  },
+  {
+   "text": "ตอนรถไฟข้ามสะพานสูง จันทร์รู้สึกเหมือนตัวเองลอยตัวอยู่กลางอากาศ",
+   "en": "As the train crossed the high bridge, Jan felt as if she were floating in mid-air.",
+   "ko": "기차가 높은 다리를 건널 때 짠은 공중에 떠 있는 기분이었어요.",
+   "blank": "ลอยตัว",
+   "src": "made"
+  }
+ ],
  "w|ล้อเล่น": [
   {
    "text": "ชัยบอกลูกว่าบ้านข้างๆ จะขายแล้ว แต่ที่จริงแค่ล้อเล่น",
@@ -71113,6 +73033,22 @@
    "blank": "ล้าน"
   }
  ],
+ "w|ลานจอดรถ": [
+  {
+   "text": "พี่ชายกิตติขับรถมาส่งแล้วจอดรอที่ลานจอดรถหน้าสถานี",
+   "en": "Kitti's brother drove him there and waited in the car park in front of the station.",
+   "ko": "끼띠의 형은 차로 데려다주고 역 앞 주차장에서 기다렸어요.",
+   "blank": "ลานจอดรถ",
+   "src": "made"
+  },
+  {
+   "text": "ลานจอดรถของห้างกลายเป็นจุดรับของที่ระลึกหลังวิ่งเสร็จ",
+   "en": "The mall car park became the place to pick up souvenirs after the race.",
+   "ko": "쇼핑몰 주차장이 완주 후 기념품을 받는 곳이 됐어요.",
+   "blank": "ลานจอดรถ",
+   "src": "made"
+  }
+ ],
  "w|ลาบ": [
   {
    "text": "กิตติคั่วข้าวสารจนหอมเพื่อเอาไปใส่ลาบหมู",
@@ -71156,6 +73092,22 @@
    "en": "Somsak wished his friend good luck and fortune in the new year.",
    "ko": "솜싹은 친구에게 새해 행운과 재물이 함께하길 빌었어요.",
    "blank": "ลาภ",
+   "src": "made"
+  }
+ ],
+ "w|ลาม": [
+  {
+   "text": "ไฟป่าลามมาจนเกือบถึงไร่กาแฟของเอก",
+   "en": "The forest fire spread until it nearly reached Ek's coffee farm.",
+   "ko": "산불이 번져서 에크의 커피 농장 코앞까지 왔어요.",
+   "blank": "ลาม",
+   "src": "made"
+  },
+  {
+   "text": "น้ำหอมในขวดรั่ว กลิ่นลามไปทั่วกล่องพัสดุ",
+   "en": "The perfume bottle leaked and the smell spread through the whole parcel.",
+   "ko": "향수병이 새서 냄새가 택배 상자 전체로 번졌어요.",
+   "blank": "ลาม",
    "src": "made"
   }
  ],
@@ -72719,6 +74671,22 @@
    "blank": "เลิกกัน"
   }
  ],
+ "w|เลิกงาน": [
+  {
+   "text": "คนงานเลิกงานห้าโมงเย็นแล้วไปกินส้มตำหน้าไซต์",
+   "en": "The workers knock off at five and go eat papaya salad outside the site.",
+   "ko": "인부들은 오후 다섯 시에 일을 마치고 현장 앞에서 쏨땀을 먹어요.",
+   "blank": "เลิกงาน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ขึ้นรถไฟเที่ยวสุดท้ายทันทีหลังเลิกงาน",
+   "en": "Jan boarded the last train right after finishing work.",
+   "ko": "짠은 퇴근하자마자 막차에 올랐어요.",
+   "blank": "เลิกงาน",
+   "src": "made"
+  }
+ ],
  "w|เลิกเรียน": [
   {
    "text": "ธนาสอนการบ้านเด็กที่มาห้องสมุดหลังเลิกเรียน",
@@ -72779,6 +74747,22 @@
    "en": "We keep a dog at home.",
    "ko": "집에서 개를 키워.",
    "blank": "เลี้ยง"
+  }
+ ],
+ "w|เลี้ยงชีพ": [
+  {
+   "text": "ลุงช่างปูนเลี้ยงชีพด้วยงานก่อสร้างมาตลอดสามสิบปี",
+   "en": "The old bricklayer has made his living in construction for thirty years.",
+   "ko": "미장이 아저씨는 삼십 년 동안 건설 일로 생계를 꾸려 왔어요.",
+   "blank": "เลี้ยงชีพ",
+   "src": "made"
+  },
+  {
+   "text": "หญิงชราที่นั่งตรงข้ามเลี้ยงชีพด้วยการขายพวงมาลัยบนรถไฟ",
+   "en": "The old woman sitting opposite makes her living selling garlands on the train.",
+   "ko": "맞은편 할머니는 기차에서 꽃목걸이를 팔아 생계를 꾸려요.",
+   "blank": "เลี้ยงชีพ",
+   "src": "made"
   }
  ],
  "w|เลี้ยงดู": [
@@ -72872,6 +74856,22 @@
    "en": "The stall across the way copies Malee's price signs in every detail.",
    "ko": "맞은편 좌판은 말리의 가격표를 하나부터 열까지 따라 해요.",
    "blank": "เลียนแบบ",
+   "src": "made"
+  }
+ ],
+ "w|เลียบ": [
+  {
+   "text": "ทางรถไฟช่วงนี้วิ่งเลียบแม่น้ำปิงไปหลายกิโล",
+   "en": "This stretch of railway runs along the Ping River for several kilometres.",
+   "ko": "이 구간 철로는 핑강을 따라 몇 킬로미터 이어져요.",
+   "blank": "เลียบ",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงกิโลที่สามสิบ เส้นทางวิ่งเลียบชายหาดที่ลมแรง",
+   "en": "Around the thirtieth kilometre, the course runs along a windy beach.",
+   "ko": "삼십 킬로미터 지점에서 코스는 바람 센 해변을 따라 이어져요.",
+   "blank": "เลียบ",
    "src": "made"
   }
  ],
@@ -73070,6 +75070,22 @@
    "en": "Fon's father used a saw to cut the mango branch hanging over the power line.",
    "ko": "폰의 아버지는 톱으로 전깃줄 위로 뻗은 망고 가지를 잘랐어요.",
    "blank": "เลื่อย",
+   "src": "made"
+  }
+ ],
+ "w|เลื้อย": [
+  {
+   "text": "งูเขียวเลื้อยผ่านทางเดินหน้ายุ้งข้าวของเอก",
+   "en": "A green snake slithered across the path in front of Ek's rice barn.",
+   "ko": "초록 뱀이 에크네 곳간 앞 길을 스르르 기어갔어요.",
+   "blank": "เลื้อย",
+   "src": "made"
+  },
+  {
+   "text": "ในคลิปรีวิวเห็นต้นพลูด่างเลื้อยไปตามชั้นวางสวยมาก",
+   "en": "In the review clip, the pothos trailing along the shelf looked lovely.",
+   "ko": "리뷰 영상에서 선반을 따라 늘어진 스킨답서스가 아주 예뻐 보였어요.",
+   "blank": "เลื้อย",
    "src": "made"
   }
  ],
@@ -73925,6 +75941,22 @@
    "blank": "วันเกิด"
   }
  ],
+ "w|วันข้างหน้า": [
+  {
+   "text": "ชัยห่วงว่าวันข้างหน้าหลานอาจไม่ได้เห็นฤดูกาลแบบเดิม",
+   "en": "Chai worries that in days to come his grandchildren may not see the seasons as they were.",
+   "ko": "차이는 앞으로 손주들이 예전 같은 계절을 못 볼까 걱정해요.",
+   "blank": "วันข้างหน้า",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องสัญญาว่าวันข้างหน้าจะกลับมาพร้อมอัลบั้มใหม่",
+   "en": "The singer promised to come back one day with a new album.",
+   "ko": "가수는 언젠가 새 앨범을 들고 돌아오겠다고 약속했어요.",
+   "blank": "วันข้างหน้า",
+   "src": "made"
+  }
+ ],
  "w|วันครบรอบ": [
   {
    "text": "วันนี้เป็นวันครบรอบแต่งงานของพ่อแม่",
@@ -74291,6 +76323,22 @@
    "blank": "ว่าง"
   }
  ],
+ "w|วางไข่": [
+  {
+   "text": "ปลาในลำธารว่ายทวนน้ำขึ้นมาวางไข่ทุกต้นฝน",
+   "en": "The fish in the stream swim upstream to spawn at the start of every rainy season.",
+   "ko": "개울 물고기들은 우기 초마다 물살을 거슬러 올라와 알을 낳아요.",
+   "blank": "วางไข่",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะอ่านรีวิวว่าเต่าที่ขายในเว็บนี้วางไข่ในตู้ได้",
+   "en": "Piya read in a review that the turtles sold on this site can lay eggs in a tank.",
+   "ko": "삐야는 이 사이트에서 파는 거북이가 수조에서 알을 낳을 수 있다는 리뷰를 읽었어요.",
+   "blank": "วางไข่",
+   "src": "made"
+  }
+ ],
  "w|ว่างงาน": [
   {
    "text": "พี่ชายว่างงานมาหลายเดือน",
@@ -74365,6 +76413,22 @@
    "en": "Don't forget to plan before you act.",
    "ko": "하기 전에 계획하는 걸 잊지 마.",
    "blank": "วางแผน"
+  }
+ ],
+ "w|วางมือ": [
+  {
+   "text": "ชัยอายุมากแล้วเลยวางมือจากการทำนาให้ลูกชายดูแลแทน",
+   "en": "Chai is getting old, so he has stepped back from farming and let his son take over.",
+   "ko": "차이는 나이가 들어 농사에서 손을 떼고 아들에게 맡겼어요.",
+   "blank": "วางมือ",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องประกาศว่าคืนนี้เป็นคอนเสิร์ตสุดท้ายก่อนวางมือจากวงการ",
+   "en": "The singer announced that tonight was his last concert before leaving the business.",
+   "ko": "가수는 오늘 밤이 은퇴 전 마지막 콘서트라고 발표했어요.",
+   "blank": "วางมือ",
+   "src": "made"
   }
  ],
  "w|วางสาย": [
@@ -75167,6 +77231,22 @@
    "blank": "วิศวกร"
   }
  ],
+ "w|วิศวกรรม": [
+  {
+   "text": "วีระเรียนจบวิศวกรรมโยธาแล้วมาคุมงานสร้างสะพานที่นี่",
+   "en": "Weera graduated in civil engineering and came here to supervise building the bridge.",
+   "ko": "위라는 토목공학을 졸업하고 여기 와서 다리 공사를 감독하고 있어요.",
+   "blank": "วิศวกรรม",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เล่าให้คนข้างๆ ฟังว่าลูกสาวกำลังเรียนวิศวกรรมไฟฟ้า",
+   "en": "Jan told the person next to her that her daughter is studying electrical engineering.",
+   "ko": "짠은 옆 사람에게 딸이 전기공학을 공부하고 있다고 했어요.",
+   "blank": "วิศวกรรม",
+   "src": "made"
+  }
+ ],
  "w|วิเศษ": [
   {
    "text": "บ้านของคุณวิเศษมาก",
@@ -75228,6 +77308,22 @@
    "en": "The owner praised Malee for her vision for healthy menus.",
    "ko": "가게 주인은 말리가 건강 메뉴에 대한 안목이 있다고 칭찬했어요.",
    "blank": "วิสัยทัศน์",
+   "src": "made"
+  }
+ ],
+ "w|วิสาหกิจ": [
+  {
+   "text": "โครงการนี้เป็นของวิสาหกิจของรัฐที่ดูแลการไฟฟ้า",
+   "en": "This project belongs to a state enterprise that runs the power supply.",
+   "ko": "이 공사는 전력을 담당하는 공기업의 사업이에요.",
+   "blank": "วิสาหกิจ",
+   "src": "made"
+  },
+  {
+   "text": "การรถไฟเป็นวิสาหกิจที่เก่าแก่ที่สุดแห่งหนึ่งของประเทศ",
+   "en": "The railway is one of the country's oldest enterprises.",
+   "ko": "철도청은 나라에서 가장 오래된 기업 중 하나예요.",
+   "blank": "วิสาหกิจ",
    "src": "made"
   }
  ],
@@ -75522,6 +77618,22 @@
    "en": "I don't have much free time these days.",
    "ko": "요즘은 여유 시간이 별로 없어.",
    "blank": "เวลาว่าง",
+   "src": "made"
+  }
+ ],
+ "w|เวิ้งว้าง": [
+  {
+   "text": "ที่ดินที่จะสร้างห้างยังเป็นทุ่งเวิ้งว้างไม่มีต้นไม้สักต้น",
+   "en": "The land for the mall is still a vast empty field without a single tree.",
+   "ko": "쇼핑몰을 지을 땅은 아직 나무 한 그루 없는 휑한 들판이에요.",
+   "blank": "เวิ้งว้าง",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟวิ่งผ่านทุ่งเกลือเวิ้งว้างสีขาวสุดลูกหูลูกตา",
+   "en": "The train ran past a vast, empty white salt flat stretching as far as the eye could see.",
+   "ko": "기차는 끝없이 펼쳐진 하얀 소금밭을 지나갔어요.",
+   "blank": "เวิ้งว้าง",
    "src": "made"
   }
  ],
@@ -77005,6 +79117,22 @@
    "src": "made"
   }
  ],
+ "w|สตูดิโอ": [
+  {
+   "text": "ไซต์งานของวีระคือสตูดิโอถ่ายหนังขนาดใหญ่ที่จะเสร็จปลายปี",
+   "en": "Weera's site is a big film studio that will be finished at the end of the year.",
+   "ko": "위라의 현장은 연말에 완공될 대형 영화 스튜디오예요.",
+   "blank": "สตูดิโอ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกชายจันทร์ทำงานในสตูดิโอเพลงที่เชียงใหม่ เธอจึงนั่งรถไฟไปเยี่ยม",
+   "en": "Jan's son works at a music studio in Chiang Mai, so she took the train to visit him.",
+   "ko": "짠의 아들이 치앙마이 음악 스튜디오에서 일해서 짠은 기차를 타고 보러 갔어요.",
+   "blank": "สตูดิโอ",
+   "src": "made"
+  }
+ ],
  "w|สเต็ก": [
   {
    "text": "ร้านอาหารของชัยเพิ่งเพิ่มเมนูสเต็กหมูพริกไทยดำ",
@@ -77135,6 +79263,22 @@
    "en": "The police station is open all day.",
    "ko": "경찰서는 하루 종일 열려 있어.",
    "blank": "สถานีตำรวจ"
+  }
+ ],
+ "w|สถานีรถไฟ": [
+  {
+   "text": "กิตติไปถึงสถานีรถไฟก่อนเวลาเกือบชั่วโมง",
+   "en": "Kitti got to the railway station almost an hour early.",
+   "ko": "끼띠는 기차역에 거의 한 시간 일찍 도착했어요.",
+   "blank": "สถานีรถไฟ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณานั่งรถไฟมาลงที่สถานีรถไฟใกล้สนามตั้งแต่เมื่อวาน",
+   "en": "Wannaa came by train yesterday, getting off at the railway station near the venue.",
+   "ko": "완나는 어제 기차를 타고 와서 경기장 근처 기차역에서 내렸어요.",
+   "blank": "สถานีรถไฟ",
+   "src": "made"
   }
  ],
  "w|สถาบัน": [
@@ -78519,6 +80663,22 @@
    "src": "made"
   }
  ],
+ "w|สลัว": [
+  {
+   "text": "ในอุโมงค์มีแค่แสงไฟสลัว คนงานต้องสวมไฟฉายคาดหัว",
+   "en": "There's only dim light in the tunnel, so the workers have to wear headlamps.",
+   "ko": "터널 안은 불빛이 어두침침해서 인부들은 헤드램프를 써야 해요.",
+   "blank": "สลัว",
+   "src": "made"
+  },
+  {
+   "text": "ตอนกลางคืนไฟในตู้นอนเปิดไว้สลัวๆ ให้คนเดินไปห้องน้ำได้",
+   "en": "At night the lights in the sleeper are left dim so people can find their way to the toilet.",
+   "ko": "밤이면 침대칸 불을 은은하게 켜 둬서 화장실에 갈 수 있어요.",
+   "blank": "สลัว",
+   "src": "made"
+  }
+ ],
  "w|สลาก": [
   {
    "text": "ชายคนหนึ่งมาแจ้งความว่าสลากกินแบ่งที่ถูกรางวัลโดนขโมย",
@@ -78548,6 +80708,22 @@
    "en": "Chan lets the leaves decompose in a pit before putting them on the vegetable beds.",
    "ko": "짠은 나뭇잎을 구덩이에서 썩힌 뒤 채소밭에 넣어요.",
    "blank": "สลาย",
+   "src": "made"
+  }
+ ],
+ "w|สไลด์": [
+  {
+   "text": "วีระเปิดสไลด์แบบอาคารให้คนงานดูก่อนเริ่มเทพื้น",
+   "en": "Weera put the building plans up on slides for the workers before they started pouring the floor.",
+   "ko": "위라는 바닥 타설 전에 인부들에게 건물 도면 슬라이드를 보여 줬어요.",
+   "blank": "สไลด์",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์แก้สไลด์สำหรับนำเสนอพรุ่งนี้บนโต๊ะพับในตู้นอน",
+   "en": "Jan revised her slides for tomorrow's presentation on the fold-down table in the sleeper.",
+   "ko": "짠은 침대칸 접이식 테이블에서 내일 발표 슬라이드를 고쳤어요.",
+   "blank": "สไลด์",
    "src": "made"
   }
  ],
@@ -79025,6 +81201,22 @@
    "blank": "สหภาพ"
   }
  ],
+ "w|สหภาพแรงงาน": [
+  {
+   "text": "สหภาพแรงงานเรียกร้องให้ไซต์งานติดตาข่ายกันตกทุกชั้น",
+   "en": "The labour union demanded safety netting on every floor of the site.",
+   "ko": "노동조합은 현장 모든 층에 추락 방지망을 달라고 요구했어요.",
+   "blank": "สหภาพแรงงาน",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานรถไฟที่คุยกับจันทร์เป็นสมาชิกสหภาพแรงงานรถไฟ",
+   "en": "The railway worker chatting with Jan is a member of the railway labour union.",
+   "ko": "짠과 이야기한 철도 직원은 철도 노동조합원이에요.",
+   "blank": "สหภาพแรงงาน",
+   "src": "made"
+  }
+ ],
  "w|สหาย": [
   {
    "text": "ชายชราข้างบ้านเรียกธนาว่าสหายทุกครั้งที่ทักกัน",
@@ -79206,6 +81398,22 @@
    "en": "A woman came to ask how to report a lost card.",
    "ko": "한 여성이 잃어버린 카드 신고 방법을 물으러 왔어요.",
    "blank": "สอบถาม",
+   "src": "made"
+  }
+ ],
+ "w|สอบปากคำ": [
+  {
+   "text": "ตำรวจขึ้นมาสอบปากคำชาวบ้านเรื่องคนลักลอบตัดไม้",
+   "en": "The police came up to question villagers about illegal logging.",
+   "ko": "경찰이 불법 벌목에 대해 주민들을 조사하러 올라왔어요.",
+   "blank": "สอบปากคำ",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจเรียกปิยะไปสอบปากคำเรื่องร้านปลอมที่หลอกขายโทรศัพท์",
+   "en": "The police called Piya in for questioning about a fake shop that scammed people with phones.",
+   "ko": "경찰은 휴대폰을 미끼로 사기를 친 가짜 쇼핑몰 건으로 삐야를 불러 진술을 받았어요.",
+   "blank": "สอบปากคำ",
    "src": "made"
   }
  ],
@@ -79585,6 +81793,22 @@
    "en": "Wait and see for a while first.",
    "ko": "잠깐 두고 보자.",
    "blank": "สัก"
+  }
+ ],
+ "w|สักการะ": [
+  {
+   "text": "ต้นปีชัยพาครอบครัวไปสักการะพระธาตุบนดอย",
+   "en": "At the start of the year, Chai took the family to pay homage at the stupa on the mountain.",
+   "ko": "연초에 차이는 가족을 데리고 산 위 탑에 참배하러 갔어요.",
+   "blank": "สักการะ",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนขึ้นเวที วงดนตรีไหว้สักการะครูเพลงตามธรรมเนียม",
+   "en": "Before going on stage, the band paid respects to their music teachers as is the custom.",
+   "ko": "무대에 오르기 전 밴드는 관례대로 음악 스승께 경배를 올렸어요.",
+   "blank": "สักการะ",
+   "src": "made"
   }
  ],
  "w|สักครั้ง": [
@@ -80080,6 +82304,22 @@
    "en": "Malee's child wore a green monster costume and stood cheering by the road.",
    "ko": "말리의 아이는 초록 괴물 옷을 입고 길가에서 응원했어요.",
    "blank": "สัตว์ประหลาด",
+   "src": "made"
+  }
+ ],
+ "w|สัตว์ร้าย": [
+  {
+   "text": "ยายของเอกขู่หลานว่ากลางคืนในป่ามีสัตว์ร้าย",
+   "en": "Ek's grandmother warns the children that there are wild beasts in the forest at night.",
+   "ko": "에크의 할머니는 밤 숲에 맹수가 있다며 손주들을 겁줘요.",
+   "blank": "สัตว์ร้าย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกชายปิยะสั่งตุ๊กตาสัตว์ร้ายในการ์ตูนเรื่องโปรด",
+   "en": "Piya's son ordered a plush of the monster from his favourite cartoon.",
+   "ko": "삐야의 아들은 좋아하는 만화 속 괴수 인형을 주문했어요.",
+   "blank": "สัตว์ร้าย",
    "src": "made"
   }
  ],
@@ -80617,6 +82857,22 @@
    "src": "made"
   }
  ],
+ "w|สายการบิน": [
+  {
+   "text": "กิตติเลือกนั่งรถไฟแทนบินเพราะสายการบินขึ้นราคาตั๋วช่วงปีใหม่",
+   "en": "Kitti chose the train over flying because the airlines raised fares over New Year.",
+   "ko": "끼띠는 항공사들이 새해 무렵 항공권 값을 올려서 비행기 대신 기차를 탔어요.",
+   "blank": "สายการบิน",
+   "src": "made"
+  },
+  {
+   "text": "สายการบินแห่งหนึ่งเป็นผู้สนับสนุนหลักของงานวิ่งมาราธอนปีนี้",
+   "en": "An airline is the main sponsor of this year's marathon.",
+   "ko": "한 항공사가 올해 마라톤의 주요 후원사예요.",
+   "blank": "สายการบิน",
+   "src": "made"
+  }
+ ],
  "w|สายชาร์จ": [
   {
    "text": "ธนาลืมสายชาร์จไว้ที่ห้องซักผ้าชั้นล่าง",
@@ -81035,6 +83291,22 @@
    "en": "She works at an office downtown.",
    "ko": "그녀는 시내 사무실에서 일해.",
    "blank": "สำนักงาน"
+  }
+ ],
+ "w|สำนักงานใหญ่": [
+  {
+   "text": "วิศวกรจากสำนักงานใหญ่มาตรวจไซต์งานทุกวันจันทร์",
+   "en": "Engineers from head office come to inspect the site every Monday.",
+   "ko": "본사 엔지니어들이 월요일마다 현장을 점검하러 와요.",
+   "blank": "สำนักงานใหญ่",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์นั่งรถไฟไปประชุมที่สำนักงานใหญ่ในเมืองหลวง",
+   "en": "Jan took the train to a meeting at head office in the capital.",
+   "ko": "짠은 수도의 본사 회의에 가려고 기차를 탔어요.",
+   "blank": "สำนักงานใหญ่",
+   "src": "made"
   }
  ],
  "w|สำนึก": [
@@ -82527,6 +84799,22 @@
    "src": "made"
   }
  ],
+ "w|เสถียร": [
+  {
+   "text": "ช่วงเปลี่ยนฤดูอากาศไม่เสถียร เช้าหนาวแต่บ่ายร้อน",
+   "en": "At the change of seasons the weather is unstable: cold in the morning but hot in the afternoon.",
+   "ko": "환절기에는 날씨가 변덕스러워서 아침엔 춥고 오후엔 더워요.",
+   "blank": "เสถียร",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานตรวจระบบเสียงหลายรอบเพื่อให้สัญญาณเสถียรตลอดการแสดง",
+   "en": "The crew checked the sound system several times to keep the signal stable throughout the show.",
+   "ko": "스태프는 공연 내내 신호가 안정적이도록 음향 장비를 여러 번 점검했어요.",
+   "blank": "เสถียร",
+   "src": "made"
+  }
+ ],
  "w|เสถียรภาพ": [
   {
    "text": "นักข่าวถามนายกเทศมนตรีเรื่องเสถียรภาพของสภาเมืองหลังสมาชิกลาออก",
@@ -83117,6 +85405,22 @@
    "en": "Doctors tried to keep the patient from dying.",
    "ko": "의사들은 환자가 숨지지 않도록 애썼어.",
    "blank": "เสียชีวิต"
+  }
+ ],
+ "w|เสียดสี": [
+  {
+   "text": "ลมแรงพัดกิ่งไผ่เสียดสีกันจนเกิดเสียงเอี๊ยดอ๊าด",
+   "en": "The strong wind made the bamboo stems rub against each other with a creaking sound.",
+   "ko": "거센 바람에 대나무 줄기가 서로 비벼지며 삐걱거렸어요.",
+   "blank": "เสียดสี",
+   "src": "made"
+  },
+  {
+   "text": "รีวิวบางอันเขียนเสียดสีว่าสินค้ามาถึงช้ากว่าเต่าเดิน",
+   "en": "Some reviews sarcastically said the goods arrived slower than a walking turtle.",
+   "ko": "어떤 리뷰는 물건이 거북이 걸음보다 늦게 왔다고 비꼬았어요.",
+   "blank": "เสียดสี",
+   "src": "made"
   }
  ],
  "w|เสียดาย": [
@@ -83990,6 +86294,22 @@
    "en": "Pranee has to report her change of address to the district office.",
    "ko": "쁘라니는 군청 기관에 주소 이전 신고를 해야 해요.",
    "blank": "หน่วยงาน",
+   "src": "made"
+  }
+ ],
+ "w|หน่อ": [
+  {
+   "text": "หลังฝนแรก หน่อไม้ก็โผล่ขึ้นมาเต็มป่า",
+   "en": "After the first rain, bamboo shoots popped up all over the forest.",
+   "ko": "첫비가 온 뒤 숲 곳곳에서 죽순이 올라왔어요.",
+   "blank": "หน่อ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งหน่อกล้วยหอมมาปลูกที่สวนหลังบ้าน",
+   "en": "Piya ordered banana suckers to plant in his back garden.",
+   "ko": "삐야는 뒤뜰에 심으려고 바나나 새끼 포기를 주문했어요.",
+   "blank": "หน่อ",
    "src": "made"
   }
  ],
@@ -85369,6 +87689,22 @@
    "blank": "หย่อน"
   }
  ],
+ "w|หยั่ง": [
+  {
+   "text": "กิตติหยั่งความลึกของลำธารด้วยไม้ก่อนเดินข้าม",
+   "en": "Kitti sounded the depth of the stream with a stick before wading across.",
+   "ko": "끼띠는 개울을 건너기 전에 막대기로 깊이를 재 봤어요.",
+   "blank": "หยั่ง",
+   "src": "made"
+  },
+  {
+   "text": "โค้ชบอกว่าไม่มีใครหยั่งรู้ได้ว่าร่างกายจะไหวถึงกิโลไหน",
+   "en": "The coach says no one can fathom how many kilometres the body will hold out for.",
+   "ko": "코치는 몸이 몇 킬로미터까지 버틸지는 누구도 헤아릴 수 없다고 했어요.",
+   "blank": "หยั่ง",
+   "src": "made"
+  }
+ ],
  "w|หย่า": [
   {
    "text": "พ่อแม่ของชัยหย่ากันตั้งแต่ชัยยังเด็กแต่ทั้งคู่มางานนี้ด้วยกัน",
@@ -86269,6 +88605,22 @@
    "en": "The meeting room was packed with many people.",
    "ko": "회의실이 많은 사람으로 가득했어.",
    "blank": "หลายคน"
+  }
+ ],
+ "w|หลายครั้ง": [
+  {
+   "text": "ชัยเตือนเพื่อนบ้านหลายครั้งให้ตัดกิ่งไม้ก่อนหน้าพายุ",
+   "en": "Chai warned his neighbours several times to trim their branches before storm season.",
+   "ko": "차이는 태풍철 전에 나뭇가지를 치라고 이웃들에게 여러 번 경고했어요.",
+   "blank": "หลายครั้ง",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์ดูวงนี้มาหลายครั้งแต่ยังตื่นเต้นเหมือนเดิม",
+   "en": "Somsak has seen this band many times but still gets as excited as ever.",
+   "ko": "솜삭은 이 밴드 공연을 여러 번 봤지만 여전히 설레요.",
+   "blank": "หลายครั้ง",
+   "src": "made"
   }
  ],
  "w|หลายอย่าง": [
@@ -87901,6 +90253,22 @@
    "src": "made"
   }
  ],
+ "w|หิ่งห้อย": [
+  {
+   "text": "คืนเดือนมืด หิ่งห้อยกะพริบแสงอยู่ริมลำธาร",
+   "en": "On a moonless night, fireflies blink along the stream.",
+   "ko": "달 없는 밤이면 개울가에서 반딧불이가 반짝여요.",
+   "blank": "หิ่งห้อย",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งไฟประดับรูปหิ่งห้อยมาแขวนในสวน",
+   "en": "Piya ordered firefly fairy lights to hang in the garden.",
+   "ko": "삐야는 정원에 걸 반딧불이 모양 장식 조명을 주문했어요.",
+   "blank": "หิ่งห้อย",
+   "src": "made"
+  }
+ ],
  "w|หิน": [
   {
    "text": "ระวังอย่าเหยียบหินลื่น",
@@ -87913,6 +90281,22 @@
    "en": "Keep this rock for your collection.",
    "ko": "이 돌을 수집용으로 남겨 둬.",
    "blank": "หิน"
+  }
+ ],
+ "w|หินปูน": [
+  {
+   "text": "ถ้ำหลังหมู่บ้านเป็นถ้ำหินปูนที่มีหินงอกสวยงาม",
+   "en": "The cave behind the village is a limestone cave with beautiful stalagmites.",
+   "ko": "마을 뒤 동굴은 석순이 아름다운 석회암 동굴이에요.",
+   "blank": "หินปูน",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งน้ำยาขจัดคราบหินปูนในกาต้มน้ำ",
+   "en": "Piya ordered a descaler for the limescale in the kettle.",
+   "ko": "삐야는 주전자 물때 제거제를 주문했어요.",
+   "blank": "หินปูน",
+   "src": "made"
   }
  ],
  "w|หินอ่อน": [
@@ -88472,6 +90856,22 @@
    "en": "It was obvious the groom was so nervous his hands shook when he put on the ring.",
    "ko": "신랑이 반지를 끼울 때 너무 긴장해서 손이 떨리는 게 훤히 보였어요.",
    "blank": "เห็นได้ชัดว่า",
+   "src": "made"
+  }
+ ],
+ "w|เหน็บ": [
+  {
+   "text": "ชัยเหน็บดอกพิกุลไว้ที่หูหลานสาวในเช้าแรกของหน้าหนาว",
+   "en": "Chai tucked a bullet-wood flower behind his granddaughter's ear on the first morning of the cool season.",
+   "ko": "서늘한 철 첫날 아침 차이는 손녀의 귀에 삐꿀 꽃을 꽂아 줬어요.",
+   "blank": "เหน็บ",
+   "src": "made"
+  },
+  {
+   "text": "สมศักดิ์เหน็บบัตรคอนเสิร์ตไว้ในกระเป๋าเสื้อเพื่อไม่ให้หาย",
+   "en": "Somsak tucked his concert ticket into his shirt pocket so he wouldn't lose it.",
+   "ko": "솜삭은 잃어버리지 않게 콘서트 표를 셔츠 주머니에 끼워 넣었어요.",
+   "blank": "เหน็บ",
    "src": "made"
   }
  ],
@@ -89063,6 +91463,38 @@
    "src": "made"
   }
  ],
+ "w|เห่า": [
+  {
+   "text": "หมาของเอกเห่าเสียงดังเมื่อได้กลิ่นเก้งในป่า",
+   "en": "Ek's dog barked loudly when it caught the scent of a barking deer in the forest.",
+   "ko": "에크의 개는 숲에서 문착 냄새를 맡고 크게 짖었어요.",
+   "blank": "เห่า",
+   "src": "made"
+  },
+  {
+   "text": "หมาของปิยะเห่าคนส่งพัสดุทุกครั้งที่มากดกริ่ง",
+   "en": "Piya's dog barks at the delivery man every time he rings the bell.",
+   "ko": "삐야의 개는 택배 기사가 초인종을 누를 때마다 짖어요.",
+   "blank": "เห่า",
+   "src": "made"
+  }
+ ],
+ "w|เหาะ": [
+  {
+   "text": "หลานของกิตติดูการ์ตูนยักษ์เหาะในโทรศัพท์ตลอดทาง",
+   "en": "Kitti's nephew watched a cartoon about a flying giant on the phone the whole way.",
+   "ko": "끼띠의 조카는 가는 내내 휴대폰으로 하늘을 나는 거인 만화를 봤어요.",
+   "blank": "เหาะ",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งคนหนึ่งแต่งชุดหนุมานทำท่าเหาะตอนเข้าเส้นชัย",
+   "en": "One runner dressed as Hanuman pretended to fly as he crossed the finish line.",
+   "ko": "한 주자는 하누만 분장을 하고 결승선에서 날아가는 시늉을 했어요.",
+   "blank": "เหาะ",
+   "src": "made"
+  }
+ ],
  "w|เหี่ยว": [
   {
    "text": "ดอกไม้ที่แฟนคลับให้ประยุทธเมื่อวานเริ่มเหี่ยวแล้ว",
@@ -89446,6 +91878,22 @@
    "en": "Piya's restaurant isn't big, but there's a long line every lunchtime.",
    "ko": "삐야의 식당은 크지 않지만 점심마다 줄이 길어요.",
    "blank": "ใหญ่โต",
+   "src": "made"
+  }
+ ],
+ "w|ใหญ่หลวง": [
+  {
+   "text": "ดินถล่มปีก่อนสร้างความเสียหายใหญ่หลวงให้หมู่บ้าน",
+   "en": "Last year's landslide caused enormous damage to the village.",
+   "ko": "작년 산사태는 마을에 엄청난 피해를 줬어요.",
+   "blank": "ใหญ่หลวง",
+   "src": "made"
+  },
+  {
+   "text": "การส่งของผิดบ้านสร้างปัญหาใหญ่หลวงให้ร้านเล็กๆ ของปิยะ",
+   "en": "Delivering to the wrong house caused a huge problem for Piya's little shop.",
+   "ko": "엉뚱한 집으로 배송된 일이 삐야의 작은 가게에 큰 문제를 일으켰어요.",
+   "blank": "ใหญ่หลวง",
    "src": "made"
   }
  ],
@@ -90739,6 +93187,22 @@
    "en": "Want to work out together?",
    "ko": "같이 운동할래?",
    "blank": "ออกกำลังกาย"
+  }
+ ],
+ "w|ออกงาน": [
+  {
+   "text": "ชัยไม่ค่อยออกงานสังคม แต่งานบุญเดือนสิบสองไม่เคยพลาด",
+   "en": "Chai rarely goes to social events, but he never misses the merit fair of the twelfth month.",
+   "ko": "차이는 사교 모임에 잘 안 나가지만 열두 번째 달 공덕 축제는 빠지지 않아요.",
+   "blank": "ออกงาน",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องนำแทบไม่ออกงานสาธารณะนอกจากคอนเสิร์ต",
+   "en": "The lead singer hardly makes public appearances except at concerts.",
+   "ko": "리드 보컬은 콘서트 말고는 공식 행사에 거의 나오지 않아요.",
+   "blank": "ออกงาน",
+   "src": "made"
   }
  ],
  "w|ออกจาก": [
@@ -92317,6 +94781,22 @@
    "src": "made"
   }
  ],
+ "w|อำนวยการ": [
+  {
+   "text": "วีระได้รับมอบหมายให้อำนวยการก่อสร้างอาคารเรียนหลังใหม่",
+   "en": "Weera was put in charge of directing construction of the new school building.",
+   "ko": "위라는 새 교사 건물 공사를 총괄하라는 임무를 받았어요.",
+   "blank": "อำนวยการ",
+   "src": "made"
+  },
+  {
+   "text": "ชายในชุดสูทเล่าว่าเขาเพิ่งได้เป็นผู้อำนวยการโรงพยาบาลจังหวัด",
+   "en": "A man in a suit said he had just become director of the provincial hospital.",
+   "ko": "정장 차림의 남자는 막 도립 병원 원장이 됐다고 했어요.",
+   "blank": "อำนวยการ",
+   "src": "made"
+  }
+ ],
  "w|อำนาจ": [
   {
    "text": "เขาต้องการอำนาจมากเกินไป",
@@ -92697,6 +95177,22 @@
    "blank": "อีเมล"
   }
  ],
+ "w|อีเมล์": [
+  {
+   "text": "วีระส่งอีเมล์รายงานความคืบหน้าให้เจ้าของโครงการทุกเย็น",
+   "en": "Weera emails a progress report to the project owner every evening.",
+   "ko": "위라는 매일 저녁 공사 진척 보고를 이메일로 건축주에게 보내요.",
+   "blank": "อีเมล์",
+   "src": "made"
+  },
+  {
+   "text": "สัญญาณโทรศัพท์หายตลอดทาง จันทร์เลยส่งอีเมล์งานไม่ได้",
+   "en": "The phone signal kept dropping all the way, so Jan couldn't send her work email.",
+   "ko": "가는 내내 휴대폰 신호가 끊겨서 짠은 업무 이메일을 못 보냈어요.",
+   "blank": "อีเมล์",
+   "src": "made"
+  }
+ ],
  "w|อึ้ง": [
   {
    "text": "ชัยอึ้งไปเลยเมื่อแม่บอกว่าเป็นคนเก็บนาฬิกาไว้ให้เอง",
@@ -92710,6 +95206,22 @@
    "en": "Somsak was stunned to see the water rise to his front door in a single night.",
    "ko": "솜삭은 하룻밤 사이에 물이 집 앞까지 찬 걸 보고 말을 잃었어요.",
    "blank": "อึ้ง",
+   "src": "made"
+  }
+ ],
+ "w|อึดใจ": [
+  {
+   "text": "ฟ้าแลบแล้วอีกอึดใจเดียวก็มีเสียงฟ้าร้องตามมา",
+   "en": "Lightning flashed, and just a moment later thunder followed.",
+   "ko": "번개가 치고 숨 한 번 쉴 새에 천둥이 따라왔어요.",
+   "blank": "อึดใจ",
+   "src": "made"
+  },
+  {
+   "text": "ทั้งสนามเงียบไปอึดใจหนึ่งก่อนเสียงกลองจะดังขึ้น",
+   "en": "The whole stadium fell silent for a breath before the drums kicked in.",
+   "ko": "드럼이 울리기 전 공연장 전체가 숨 한 번 쉴 동안 조용해졌어요.",
+   "blank": "อึดใจ",
    "src": "made"
   }
  ],
@@ -92974,6 +95486,22 @@
    "en": "Suda's team appealed the match result to the basketball association.",
    "ko": "수다의 팀은 경기 결과에 대해 농구 협회에 이의를 제기했어요.",
    "blank": "อุทธรณ์",
+   "src": "made"
+  }
+ ],
+ "w|อุทยาน": [
+  {
+   "text": "ระหว่างทางกิตติเห็นป้ายบอกทางไปอุทยานประวัติศาสตร์",
+   "en": "On the way Kitti saw a sign pointing to the historical park.",
+   "ko": "가는 길에 끼띠는 역사 공원으로 가는 표지판을 봤어요.",
+   "blank": "อุทยาน",
+   "src": "made"
+  },
+  {
+   "text": "เส้นทางวิ่งช่วงสุดท้ายผ่านอุทยานที่มีต้นไม้ร่มรื่น",
+   "en": "The last stretch of the course passes through a park full of shady trees.",
+   "ko": "코스 마지막 구간은 나무 그늘이 우거진 공원을 지나요.",
+   "blank": "อุทยาน",
    "src": "made"
   }
  ],
@@ -93591,6 +96119,22 @@
    "src": "made"
   }
  ],
+ "w|เอารัดเอาเปรียบ": [
+  {
+   "text": "คนขับสามล้อบางคนเอารัดเอาเปรียบนักท่องเที่ยวด้วยการโก่งราคา",
+   "en": "Some tuk-tuk drivers take advantage of tourists by jacking up prices.",
+   "ko": "몇몇 툭툭 기사는 바가지를 씌워 관광객을 이용해요.",
+   "blank": "เอารัดเอาเปรียบ",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งบ่นว่าผู้จัดเอารัดเอาเปรียบด้วยการเก็บค่าสมัครแพงแต่น้ำไม่พอ",
+   "en": "Runners complained the organisers took advantage by charging high fees yet not providing enough water.",
+   "ko": "주자들은 주최 측이 참가비는 비싸게 받고 물은 모자라게 줬다며 불평했어요.",
+   "blank": "เอารัดเอาเปรียบ",
+   "src": "made"
+  }
+ ],
  "w|เอาอย่าง": [
   {
    "text": "พนักงานคนอื่นเริ่มเอาอย่างพรที่จดทุกอย่างลงสมุด",
@@ -94119,6 +96663,22 @@
    "en": "Hey, listen to me for a bit.",
    "ko": "야, 내 말 좀 들어 봐.",
    "blank": "เฮ้"
+  }
+ ],
+ "w|เฮลิคอปเตอร์": [
+  {
+   "text": "กิตติมองเห็นเฮลิคอปเตอร์บินต่ำเหนือป่าจากหน้าต่างรถไฟ",
+   "en": "From the train window Kitti saw a helicopter flying low over the forest.",
+   "ko": "끼띠는 기차 창밖으로 숲 위를 낮게 나는 헬리콥터를 봤어요.",
+   "blank": "เฮลิคอปเตอร์",
+   "src": "made"
+  },
+  {
+   "text": "ช่างภาพใช้เฮลิคอปเตอร์ถ่ายขบวนนักวิ่งจากมุมสูง",
+   "en": "Photographers used a helicopter to film the stream of runners from above.",
+   "ko": "사진가들은 헬리콥터로 주자 행렬을 높은 곳에서 찍었어요.",
+   "blank": "เฮลิคอปเตอร์",
+   "src": "made"
   }
  ],
  "w|เฮ้อ": [
