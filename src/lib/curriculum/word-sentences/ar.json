@@ -3709,6 +3709,22 @@
    "blank": "أصيب"
   }
  ],
+ "w|أصيل": [
+  {
+   "text": "أحضر صديق علي قهوة عربية أصيلة للقاء.",
+   "en": "Ali's friend brought authentic Arabic coffee to the reunion.",
+   "ko": "알리의 친구는 모임에 정통 아랍 커피를 가져왔어요.",
+   "blank": "أصيلة",
+   "src": "made"
+  },
+  {
+   "text": "يعرف الجميع أن لدى نور روحا رياضية أصيلة.",
+   "en": "Everyone knows Nour has a genuine sporting spirit.",
+   "ko": "누르에게 진정한 스포츠 정신이 있다는 건 다들 알아요.",
+   "blank": "أصيلة",
+   "src": "made"
+  }
+ ],
  "w|أضاء": [
   {
    "text": "أضاء القمر الطريق ليلاً.",
@@ -4620,6 +4636,22 @@
    "en": "The old neighbor revealed to Fatima the secret of the hidden room under the stairs.",
    "ko": "나이 든 이웃이 파티마에게 계단 밑 숨은 방의 비밀을 알려 줬어요.",
    "blank": "أفشى",
+   "src": "made"
+  }
+ ],
+ "w|أفصح": [
+  {
+   "text": "أفصح نادر لخالد عن رغبته في تعلم البرمجة.",
+   "en": "Nader revealed to Khalid his wish to learn programming.",
+   "ko": "나데르는 칼리드에게 프로그래밍을 배우고 싶다고 털어놨어요.",
+   "blank": "أفصح",
+   "src": "made"
+  },
+  {
+   "text": "أفصحت ليلى لزوجها عن تعبها من العمل.",
+   "en": "Layla opened up to her husband about how tired she was of work.",
+   "ko": "레일라는 남편에게 일 때문에 지쳤다고 털어놨어요.",
+   "blank": "أفصحت",
    "src": "made"
   }
  ],
@@ -6415,6 +6447,22 @@
    "blank": "أنفق"
   }
  ],
+ "w|أنقاض": [
+  {
+   "text": "حكى نادر لخالد أنه عمل مهندسا في رفع الأنقاض بعد الزلازل.",
+   "en": "Nader told Khalid he had worked as an engineer clearing rubble after earthquakes.",
+   "ko": "나데르는 칼리드에게 지진 뒤 잔해 치우는 일을 하는 기술자였다고 말했어요.",
+   "blank": "الأنقاض",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت عائلة ليلى في الإجازة فيلما عن طفل نجا من تحت الأنقاض.",
+   "en": "During the holiday Layla's family watched a film about a child who survived under the rubble.",
+   "ko": "레일라 가족은 휴가 때 잔해 속에서 살아남은 아이에 관한 영화를 봤어요.",
+   "blank": "الأنقاض",
+   "src": "made"
+  }
+ ],
  "w|أنقذ": [
   {
    "text": "أنقذ رجل الإطفاء الطفل من الحريق.",
@@ -6531,6 +6579,22 @@
    "en": "I don't like anyone to insult me.",
    "ko": "누군가 나를 모욕하는 게 싫어요.",
    "blank": "يهينني"
+  }
+ ],
+ "w|أهدر": [
+  {
+   "text": "لاحظ خالد أن نادر لم يهدر دقيقة في يومه الأول.",
+   "en": "Khalid noticed that Nader didn't waste a minute on his first day.",
+   "ko": "칼리드는 나데르가 첫날 일 분도 허투루 쓰지 않는 걸 봤어요.",
+   "blank": "يهدر",
+   "src": "made"
+  },
+  {
+   "text": "أهدرت ليلى نصف الإجازة في النوم، ولم تندم.",
+   "en": "Layla wasted half the holiday sleeping, and she had no regrets.",
+   "ko": "레일라는 휴가 절반을 잠으로 보냈지만 후회하지 않았어요.",
+   "blank": "أهدرت",
+   "src": "made"
   }
  ],
  "w|أهدى": [
@@ -9541,6 +9605,22 @@
    "blank": "إياها"
   }
  ],
+ "w|إياهم": [
+  {
+   "text": "وصل المتدربون الجدد، فسلم المدير خالدا إياهم ليدربهم مع نادر.",
+   "en": "The new trainees arrived, and the manager handed them over to Khalid to train with Nader.",
+   "ko": "새 수습사원들이 오자 상사가 칼리드에게 맡기며 나데르와 함께 가르치라고 했어요.",
+   "blank": "إياهم",
+   "src": "made"
+  },
+  {
+   "text": "أرادت الجدة رؤية الأحفاد، فأرتها ليلى إياهم في مكالمة فيديو.",
+   "en": "Grandma wanted to see the grandchildren, so Layla showed them to her on a video call.",
+   "ko": "할머니가 손주들을 보고 싶어 하자 레일라는 영상 통화로 보여 드렸어요.",
+   "blank": "إياهم",
+   "src": "made"
+  }
+ ],
  "w|إياي": [
   {
    "text": "قال سامي: لم يخبر المدير أحدا بالسر إلا إياي.",
@@ -11317,6 +11397,22 @@
    "src": "made"
   }
  ],
+ "w|اختلط": [
+  {
+   "text": "اختلط نادر بالزملاء بسرعة.",
+   "en": "Nader mixed with his colleagues quickly.",
+   "ko": "나데르는 동료들과 금방 어울렸어요.",
+   "blank": "اختلط",
+   "src": "made"
+  },
+  {
+   "text": "اختلطت ضحكات الأطفال بصوت المطر في بيت ليلى.",
+   "en": "The children's laughter mingled with the sound of rain in Layla's house.",
+   "ko": "레일라네 집에서 아이들 웃음소리가 빗소리와 섞였어요.",
+   "blank": "اختلطت",
+   "src": "made"
+  }
+ ],
  "w|اختلف": [
   {
    "text": "اختلف رأي الطلاب حول الموضوع.",
@@ -11329,6 +11425,22 @@
    "en": "The weather today is different from yesterday.",
    "ko": "오늘 날씨가 어제와 달라.",
    "blank": "اختلف"
+  }
+ ],
+ "w|اختناق": [
+  {
+   "text": "سبب دخان الشواء اختناقا خفيفا لعلي، فابتعد عن النار.",
+   "en": "The barbecue smoke made Ali choke a little, so he moved away from the fire.",
+   "ko": "바비큐 연기에 알리는 숨이 살짝 막혀서 불에서 떨어졌어요.",
+   "blank": "اختناقا",
+   "src": "made"
+  },
+  {
+   "text": "تأخرت نور عن البداية بسبب اختناق مروري في المدينة.",
+   "en": "Nour was late for the start because of a traffic jam in the city.",
+   "ko": "누르는 시내 교통 체증 때문에 출발에 늦었어요.",
+   "blank": "اختناق",
+   "src": "made"
   }
  ],
  "w|اختنق": [
@@ -15963,6 +16075,22 @@
    "blank": "البارحة"
   }
  ],
+ "w|التحاق": [
+  {
+   "text": "كان التحاق نادر بالفريق خبرا سعيدا لخالد.",
+   "en": "Nader joining the team was happy news for Khalid.",
+   "ko": "나데르가 팀에 합류한 건 칼리드에게 반가운 소식이었어요.",
+   "blank": "التحاق",
+   "src": "made"
+  },
+  {
+   "text": "قررت ليلى تأجيل التحاق ابنها بالنادي إلى ما بعد الإجازة.",
+   "en": "Layla decided to postpone her son joining the club until after the holiday.",
+   "ko": "레일라는 아들의 동아리 가입을 휴가 뒤로 미뤘어요.",
+   "blank": "التحاق",
+   "src": "made"
+  }
+ ],
  "w|التحق": [
   {
    "text": "أريد أن ألتحق بالجامعة قريباً.",
@@ -20555,6 +20683,22 @@
    "blank": "بريد"
   }
  ],
+ "w|بريق": [
+  {
+   "text": "رأى علي بريق الفرح في عيون أصدقائه.",
+   "en": "Ali saw the sparkle of joy in his friends' eyes.",
+   "ko": "알리는 친구들 눈에서 기쁨이 반짝이는 걸 봤어요.",
+   "blank": "بريق",
+   "src": "made"
+  },
+  {
+   "text": "لمع بريق الميدالية في يد نور.",
+   "en": "The gleam of the medal shone in Nour's hand.",
+   "ko": "누르의 손에서 메달이 반짝였어요.",
+   "blank": "بريق",
+   "src": "made"
+  }
+ ],
  "w|بساطة": [
   {
    "text": "شرح المعلم الدرس ببساطة حتى فهمه الجميع.",
@@ -22709,6 +22853,22 @@
    "blank": "بيئة"
   }
  ],
+ "w|بيئي": [
+  {
+   "text": "تحدث صديق علي عن عمله في مشروع بيئي لحماية الشواطئ.",
+   "en": "Ali's friend talked about his work on an environmental project to protect the beaches.",
+   "ko": "알리의 친구는 해변을 지키는 환경 사업에서 일한다고 이야기했어요.",
+   "blank": "بيئي",
+   "src": "made"
+  },
+  {
+   "text": "نظم ماراثون نور حملة بيئية لجمع القوارير من المسار.",
+   "en": "Nour's marathon organized an environmental campaign to collect bottles from the route.",
+   "ko": "누르가 뛰는 마라톤은 코스에서 병을 줍는 환경 캠페인을 열었어요.",
+   "blank": "بيئية",
+   "src": "made"
+  }
+ ],
  "w|بيان": [
   {
    "text": "أصدر المركز بيانا يطمئن السكان بعد الحادث.",
@@ -23865,6 +24025,22 @@
    "src": "made"
   }
  ],
+ "w|تبنى": [
+  {
+   "text": "تبنى خالد فكرة نادر وعرضها على المدير.",
+   "en": "Khalid adopted Nader's idea and presented it to the manager.",
+   "ko": "칼리드는 나데르의 아이디어를 받아들여 상사에게 제안했어요.",
+   "blank": "تبنى",
+   "src": "made"
+  },
+  {
+   "text": "تبنت عائلة ليلى قطة صغيرة في الإجازة.",
+   "en": "Layla's family adopted a kitten during the holiday.",
+   "ko": "레일라 가족은 휴가 때 새끼 고양이를 입양했어요.",
+   "blank": "تبنت",
+   "src": "made"
+  }
+ ],
  "w|تبولة": [
   {
    "text": "تقاسم خالد علبة تبولة مع العامل الجديد.",
@@ -23987,6 +24163,22 @@
    "src": "made"
   }
  ],
+ "w|تجادل": [
+  {
+   "text": "تجادل علي وصديقه في أفضل لاعب كرة، ثم ضحكا.",
+   "en": "Ali and his friend argued about the best football player, then laughed.",
+   "ko": "알리와 친구는 최고의 축구 선수를 두고 말다툼하다가 웃음을 터뜨렸어요.",
+   "blank": "تجادل",
+   "src": "made"
+  },
+  {
+   "text": "تجادلت نور مع مدربها حول سرعة البداية.",
+   "en": "Nour argued with her coach about the starting pace.",
+   "ko": "누르는 출발 속도를 두고 코치와 말다툼했어요.",
+   "blank": "تجادلت",
+   "src": "made"
+  }
+ ],
  "w|تجارة": [
   {
    "text": "تجارة الملابس مزدهرة في هذه المنطقة.",
@@ -24086,6 +24278,22 @@
    "en": "Mona heard that the company plans to renovate the third floor.",
    "ko": "모나는 회사가 삼층을 리모델링할 계획이라고 들었어요.",
    "blank": "لتجديد",
+   "src": "made"
+  }
+ ],
+ "w|تجديف": [
+  {
+   "text": "اقترح علي على أصدقائه رحلة تجديف في البحيرة.",
+   "en": "Ali suggested a rowing trip on the lake to his friends.",
+   "ko": "알리는 친구들에게 호수에서 노 젓기를 하러 가자고 했어요.",
+   "blank": "تجديف",
+   "src": "made"
+  },
+  {
+   "text": "تتمرن نور على التجديف لتقوي ذراعيها قبل الماراثون.",
+   "en": "Nour practices rowing to strengthen her arms before the marathon.",
+   "ko": "누르는 마라톤 전에 팔 힘을 기르려고 조정 연습을 해요.",
+   "blank": "التجديف",
    "src": "made"
   }
  ],
@@ -24805,6 +25013,22 @@
    "en": "Controlling the car is a bit difficult.",
    "ko": "차를 조종하는 게 좀 어려워.",
    "blank": "تحكم"
+  }
+ ],
+ "w|تحكيم": [
+  {
+   "text": "تولى نادر تحكيم مباراة الشطرنج بين الزملاء، وفاز خالد.",
+   "en": "Nader refereed the chess match between colleagues, and Khalid won.",
+   "ko": "나데르가 동료들 체스 시합 심판을 봤고 칼리드가 이겼어요.",
+   "blank": "تحكيم",
+   "src": "made"
+  },
+  {
+   "text": "اختلف الأطفال على نتيجة اللعبة فطلبوا تحكيم ليلى.",
+   "en": "The children disagreed over the game's result, so they asked Layla to judge.",
+   "ko": "아이들이 게임 결과로 다투다가 레일라에게 판정을 부탁했어요.",
+   "blank": "تحكيم",
+   "src": "made"
   }
  ],
  "w|تحلية": [
@@ -26007,6 +26231,22 @@
    "src": "made"
   }
  ],
+ "w|ترشيح": [
+  {
+   "text": "جاء نادر إلى الشركة بعد ترشيح من خالد.",
+   "en": "Nader came to the company on Khalid's recommendation.",
+   "ko": "나데르는 칼리드의 추천으로 회사에 들어왔어요.",
+   "blank": "ترشيح",
+   "src": "made"
+  },
+  {
+   "text": "تناقشت عائلة ليلى في ترشيح فيلم لسهرة الجمعة.",
+   "en": "Layla's family discussed nominating a film for Friday night.",
+   "ko": "레일라 가족은 금요일 밤에 볼 영화를 추천하며 의논했어요.",
+   "blank": "ترشيح",
+   "src": "made"
+  }
+ ],
  "w|ترشيد": [
   {
    "text": "دعا رئيس التحرير إلى ترشيد استهلاك الورق في المكتب.",
@@ -27102,6 +27342,22 @@
    "en": "Layla complains in her letter about her hands cracking in the cold.",
    "ko": "라일라는 편지에서 추위에 손이 튼다고 하소연해요.",
    "blank": "تشقق",
+   "src": "made"
+  }
+ ],
+ "w|تشكيك": [
+  {
+   "text": "قابل نادر تشكيك المدير في خطته بهدوء، فأعجب خالد.",
+   "en": "Nader met the manager's doubts about his plan calmly, which impressed Khalid.",
+   "ko": "나데르가 계획을 의심하는 상사에게 침착하게 대응해서 칼리드는 감탄했어요.",
+   "blank": "تشكيك",
+   "src": "made"
+  },
+  {
+   "text": "ردت ليلى على تشكيك ابنها في قصة الجدة بضحكة.",
+   "en": "Layla answered her son's doubts about grandma's story with a laugh.",
+   "ko": "아들이 할머니 이야기를 의심하자 레일라는 웃음으로 받아넘겼어요.",
+   "blank": "تشكيك",
    "src": "made"
   }
  ],
@@ -30141,6 +30397,22 @@
    "src": "made"
   }
  ],
+ "w|تلاشى": [
+  {
+   "text": "تلاشى الحرج بين علي وأصدقائه بعد دقائق.",
+   "en": "The awkwardness between Ali and his friends faded after a few minutes.",
+   "ko": "알리와 친구들 사이의 어색함은 몇 분 만에 사라졌어요.",
+   "blank": "تلاشى",
+   "src": "made"
+  },
+  {
+   "text": "تلاشى تعب نور حين سمعت تشجيع أمها.",
+   "en": "Nour's fatigue faded when she heard her mother cheering.",
+   "ko": "엄마의 응원 소리를 듣자 누르의 피로가 사라졌어요.",
+   "blank": "تلاشى",
+   "src": "made"
+  }
+ ],
  "w|تلاعب": [
   {
    "text": "اكتشف علي تلاعبا في تاريخ انتهاء بعض العلب فأعادها إلى المورد.",
@@ -30951,6 +31223,22 @@
    "en": "The two teams discussed before the match.",
    "ko": "두 팀이 경기 전에 논의했어.",
    "blank": "تناقش"
+  }
+ ],
+ "w|تناقض": [
+  {
+   "text": "تناقض كلام نادر في الصباح مع ما قاله في الاجتماع، فسأله خالد.",
+   "en": "What Nader said in the morning contradicted what he said in the meeting, so Khalid asked him.",
+   "ko": "나데르가 아침에 한 말이 회의 때 말과 달라서 칼리드가 물어봤어요.",
+   "blank": "تناقض",
+   "src": "made"
+  },
+  {
+   "text": "يتناقض حب ليلى للهدوء مع ضجيج الأطفال في الإجازة.",
+   "en": "Layla's love of quiet clashes with the children's noise during the holiday.",
+   "ko": "조용한 걸 좋아하는 레일라에게 휴가 중 아이들 소음은 정반대였어요.",
+   "blank": "يتناقض",
+   "src": "made"
   }
  ],
  "w|تناول": [
@@ -32561,6 +32849,22 @@
    "en": "Every second counts now.",
    "ko": "지금은 모든 순간이 중요해.",
    "blank": "ثانية"
+  }
+ ],
+ "w|ثبات": [
+  {
+   "text": "حافظ نادر على ثبات أدائه طوال الشهر.",
+   "en": "Nader kept his performance steady all month.",
+   "ko": "나데르는 한 달 내내 꾸준한 실력을 보였어요.",
+   "blank": "ثبات",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت ليلى ثبات الطقس الجميل طوال الإجازة.",
+   "en": "Layla noticed the nice weather stayed steady throughout the holiday.",
+   "ko": "레일라는 휴가 내내 좋은 날씨가 이어지는 걸 느꼈어요.",
+   "blank": "ثبات",
+   "src": "made"
   }
  ],
  "w|ثبت": [
@@ -35267,6 +35571,22 @@
    "src": "made"
   }
  ],
+ "w|جمباز": [
+  {
+   "text": "تذكر علي حصص الجمباز في المدرسة مع أصدقائه.",
+   "en": "Ali reminisced with his friends about gymnastics classes at school.",
+   "ko": "알리는 친구들과 학교 체조 시간을 추억했어요.",
+   "blank": "الجمباز",
+   "src": "made"
+  },
+  {
+   "text": "مارست نور الجمباز في طفولتها قبل أن تحب الجري.",
+   "en": "Nour did gymnastics in her childhood before she came to love running.",
+   "ko": "누르는 달리기를 좋아하기 전 어린 시절에 체조를 했어요.",
+   "blank": "الجمباز",
+   "src": "made"
+  }
+ ],
  "w|جمبري": [
   {
    "text": "يوجد جمبري في السلطة.",
@@ -35807,6 +36127,22 @@
    "en": "I wrote the answer in the notebook.",
    "ko": "나는 노트에 답을 썼어.",
    "blank": "جواب"
+  }
+ ],
+ "w|جواد": [
+  {
+   "text": "يملك صديق علي جوادا عربيا، ودعا الجميع لرؤيته.",
+   "en": "Ali's friend owns an Arabian steed and invited everyone to see it.",
+   "ko": "알리의 친구는 아라비아 말을 키우는데 모두를 보러 오라고 초대했어요.",
+   "blank": "جوادا",
+   "src": "made"
+  },
+  {
+   "text": "رسمت ابنة نور جوادا على لافتة التشجيع.",
+   "en": "Nour's daughter drew a horse on the cheering sign.",
+   "ko": "누르의 딸은 응원 피켓에 말을 그렸어요.",
+   "blank": "جوادا",
+   "src": "made"
   }
  ],
  "w|جوار": [
@@ -41705,6 +42041,22 @@
    "blank": "خطاب"
   }
  ],
+ "w|خطاف": [
+  {
+   "text": "علق علي معاطف أصدقائه على خطاف خلف الباب.",
+   "en": "Ali hung his friends' coats on a hook behind the door.",
+   "ko": "알리는 친구들 외투를 문 뒤 고리에 걸었어요.",
+   "blank": "خطاف",
+   "src": "made"
+  },
+  {
+   "text": "علقت نور ميداليتها على خطاف فوق سريرها.",
+   "en": "Nour hung her medal on a hook above her bed.",
+   "ko": "누르는 침대 위 고리에 메달을 걸었어요.",
+   "blank": "خطاف",
+   "src": "made"
+  }
+ ],
  "w|خطب": [
   {
    "text": "خطب أحمد فتاة أحلامه أخيراً.",
@@ -41938,6 +42290,22 @@
    "en": "Mona made a bat out of black paper for the autumn exhibition.",
    "ko": "모나는 가을 전시회에 낼 박쥐를 검은 종이로 만들었어요.",
    "blank": "خفاشا",
+   "src": "made"
+  }
+ ],
+ "w|خفة": [
+  {
+   "text": "لم تتغير خفة دم علي منذ أيام المدرسة.",
+   "en": "Ali's sense of humor hasn't changed since school days.",
+   "ko": "알리의 재치는 학창 시절 그대로였어요.",
+   "blank": "خفة",
+   "src": "made"
+  },
+  {
+   "text": "أدهشت خفة نور في الكيلومتر الأخير الجمهور.",
+   "en": "Nour's lightness on her feet in the last kilometer amazed the crowd.",
+   "ko": "마지막 킬로미터에서 누르의 가벼운 발놀림에 관중이 놀랐어요.",
+   "blank": "خفة",
    "src": "made"
   }
  ],
@@ -42877,6 +43245,22 @@
    "blank": "دائرة"
   }
  ],
+ "w|دائري": [
+  {
+   "text": "جلس خالد ونادر حول طاولة دائرية في غرفة الاجتماعات.",
+   "en": "Khalid and Nader sat around a round table in the meeting room.",
+   "ko": "칼리드와 나데르는 회의실 원탁에 둘러앉았어요.",
+   "blank": "دائرية",
+   "src": "made"
+  },
+  {
+   "text": "صنعت ليلى مع أطفالها سجادة دائرية من الصوف.",
+   "en": "Layla made a round wool rug with her children.",
+   "ko": "레일라는 아이들과 동그란 털실 깔개를 만들었어요.",
+   "blank": "دائرية",
+   "src": "made"
+  }
+ ],
  "w|دائم": [
   {
    "text": "أبحث عن عمل دائم ومستقر.",
@@ -42931,6 +43315,22 @@
    "en": "This door leads to the inner corridor.",
    "ko": "이 문은 내부 복도로 이어져요.",
    "blank": "الداخلي"
+  }
+ ],
+ "w|داخليا": [
+  {
+   "text": "شعر خالد داخليا بأن نادر سيكون صديقا جيدا.",
+   "en": "Khalid felt inwardly that Nader would be a good friend.",
+   "ko": "칼리드는 속으로 나데르와 좋은 친구가 될 것 같다고 느꼈어요.",
+   "blank": "داخليا",
+   "src": "made"
+  },
+  {
+   "text": "طلت ليلى البيت داخليا بلون أبيض في الإجازة.",
+   "en": "Layla painted the inside of the house white during the holiday.",
+   "ko": "레일라는 휴가 동안 집 안을 하얗게 칠했어요.",
+   "blank": "داخليا",
+   "src": "made"
   }
  ],
  "w|دار": [
@@ -43788,6 +44188,22 @@
    "en": "Layla apologized to her friend for her defensive reply in her previous letter.",
    "ko": "레일라는 지난 편지에서 방어적으로 답한 것을 친구에게 사과했어요.",
    "blank": "الدفاعي",
+   "src": "made"
+  }
+ ],
+ "w|دفة": [
+  {
+   "text": "تذكر علي يوم أمسك دفة القارب في رحلة المدرسة.",
+   "en": "Ali remembered the day he held the boat's rudder on the school trip.",
+   "ko": "알리는 수학여행 때 배의 키를 잡았던 날을 떠올렸어요.",
+   "blank": "دفة",
+   "src": "made"
+  },
+  {
+   "text": "تولت نور دفة فريق الجري في الحي.",
+   "en": "Nour took the helm of the neighborhood running team.",
+   "ko": "누르는 동네 달리기 모임을 이끌게 됐어요.",
+   "blank": "دفة",
    "src": "made"
   }
  ],
@@ -52445,6 +52861,22 @@
    "blank": "السماء"
   }
  ],
+ "w|سماد": [
+  {
+   "text": "حكى صديق علي المزارع عن سماد طبيعي يصنعه بنفسه.",
+   "en": "Ali's farmer friend told about a natural fertilizer he makes himself.",
+   "ko": "농부인 알리의 친구는 직접 만드는 천연 비료 이야기를 했어요.",
+   "blank": "سماد",
+   "src": "made"
+  },
+  {
+   "text": "مر الماراثون بجانب حقول تفوح منها رائحة السماد، فضحكت نور.",
+   "en": "The marathon passed fields smelling of fertilizer, and Nour laughed.",
+   "ko": "마라톤 코스가 거름 냄새 나는 밭 옆을 지나서 누르가 웃었어요.",
+   "blank": "السماد",
+   "src": "made"
+  }
+ ],
  "w|سماعة": [
   {
    "text": "وضع خالد السماعة على صدر الكلب ليسمع دقات قلبه.",
@@ -52909,6 +53341,22 @@
    "blank": "سواء"
   }
  ],
+ "w|سواد": [
+  {
+   "text": "لاحظ علي أن سواد شعر صديقه لم يتغير بعد كل هذه السنين.",
+   "en": "Ali noticed that the blackness of his friend's hair hadn't changed after all these years.",
+   "ko": "알리는 친구 머리가 그 세월이 지나도 여전히 새까맣다는 걸 알아챘어요.",
+   "blank": "سواد",
+   "src": "made"
+  },
+  {
+   "text": "انطلقت نور في سواد الفجر قبل أن تشرق الشمس.",
+   "en": "Nour set off in the darkness of dawn before the sun rose.",
+   "ko": "누르는 해가 뜨기 전 새벽 어둠 속에서 출발했어요.",
+   "blank": "سواد",
+   "src": "made"
+  }
+ ],
  "w|سوار": [
   {
    "text": "أرتدي سوار في يدي اليمنى.",
@@ -52966,6 +53414,22 @@
    "en": "Maryam heard her colleague quietly reciting Al-Fatiha before the meeting.",
    "ko": "마리암은 동료가 회의 전에 알파티하 장을 조용히 읊는 것을 들었어요.",
    "blank": "سورة",
+   "src": "made"
+  }
+ ],
+ "w|سوط": [
+  {
+   "text": "علق نادر على مكتبه صورة فارس يحمل سوطا.",
+   "en": "Nader hung a picture of a horseman holding a whip on his desk.",
+   "ko": "나데르는 책상에 채찍을 든 기수 그림을 걸었어요.",
+   "blank": "سوطا",
+   "src": "made"
+  },
+  {
+   "text": "حمل ابن ليلى سوطا من الحبل وهو يلعب دور الفارس في البيت.",
+   "en": "Layla's son carried a rope whip while playing a horseman at home.",
+   "ko": "레일라의 아들은 집에서 기사 놀이를 하며 밧줄 채찍을 들었어요.",
+   "blank": "سوطا",
    "src": "made"
   }
  ],
@@ -53171,6 +53635,22 @@
    "en": "The politician promised to improve conditions.",
    "ko": "정치인은 상황을 개선하겠다고 약속했어.",
    "blank": "السياسي"
+  }
+ ],
+ "w|سياسيا": [
+  {
+   "text": "يتجنب نادر النقاشات المشحونة سياسيا في المكتب.",
+   "en": "Nader avoids politically charged discussions at the office.",
+   "ko": "나데르는 사무실에서 정치색 짙은 이야기를 피해요.",
+   "blank": "سياسيا",
+   "src": "made"
+  },
+  {
+   "text": "تعتبر ليلى نفسها محايدة سياسيا، فلا تناقش الأخبار مع العائلة.",
+   "en": "Layla considers herself politically neutral, so she doesn't discuss the news with the family.",
+   "ko": "레일라는 정치적으로 중립이라 가족과 뉴스 이야기를 하지 않아요.",
+   "blank": "سياسيا",
+   "src": "made"
   }
  ],
  "w|سياق": [
@@ -55043,6 +55523,22 @@
    "blank": "شطيرة"
   }
  ],
+ "w|شظية": [
+  {
+   "text": "دخلت شظية زجاج في إصبع نادر حين انكسر كوبه.",
+   "en": "A shard of glass got into Nader's finger when his cup broke.",
+   "ko": "나데르의 컵이 깨지면서 유리 조각이 손가락에 박혔어요.",
+   "blank": "شظية",
+   "src": "made"
+  },
+  {
+   "text": "انكسر صحن في المطبخ، فجمعت ليلى كل شظية بحذر.",
+   "en": "A plate broke in the kitchen, and Layla carefully collected every shard.",
+   "ko": "부엌에서 접시가 깨지자 레일라는 조각을 하나하나 조심스럽게 주웠어요.",
+   "blank": "شظية",
+   "src": "made"
+  }
+ ],
  "w|شعار": [
   {
    "text": "يحمل قميص كريم شعار الشرطة على الكتف.",
@@ -56296,6 +56792,22 @@
    "en": "Fatima used a code in her letter that only her friend understands.",
    "ko": "파티마는 친구만 알아볼 수 있는 암호를 편지에 썼어요.",
    "blank": "شيفرة",
+   "src": "made"
+  }
+ ],
+ "w|شيق": [
+  {
+   "text": "حكى نادر لخالد قصة شيقة عن عمله السابق.",
+   "en": "Nader told Khalid an interesting story about his previous job.",
+   "ko": "나데르는 칼리드에게 예전 직장의 재미있는 이야기를 들려줬어요.",
+   "blank": "شيقة",
+   "src": "made"
+  },
+  {
+   "text": "قرأت ليلى لأطفالها كتابا شيقا كل مساء.",
+   "en": "Layla read an exciting book to her children every evening.",
+   "ko": "레일라는 저녁마다 아이들에게 재미있는 책을 읽어 줬어요.",
+   "blank": "شيقا",
    "src": "made"
   }
  ],
@@ -58337,6 +58849,22 @@
    "blank": "صيانة"
   }
  ],
+ "w|صيحة": [
+  {
+   "text": "أطلق نادر صيحة فرح حين نجح العرض، فضحك خالد.",
+   "en": "Nader let out a cry of joy when the presentation succeeded, and Khalid laughed.",
+   "ko": "발표가 성공하자 나데르가 환호성을 질러서 칼리드가 웃었어요.",
+   "blank": "صيحة",
+   "src": "made"
+  },
+  {
+   "text": "علت صيحة الأطفال حين رأوا الكعكة التي أعدتها ليلى.",
+   "en": "The children's shout rose when they saw the cake Layla had made.",
+   "ko": "레일라가 만든 케이크를 보자 아이들이 환호성을 질렀어요.",
+   "blank": "صيحة",
+   "src": "made"
+  }
+ ],
  "w|صيد": [
   {
    "text": "ذهب أبي في رحلة صيد أمس.",
@@ -59083,6 +59611,22 @@
    "src": "made"
   }
  ],
+ "w|ضفة": [
+  {
+   "text": "يسكن نادر على الضفة الأخرى من النهر، بعيدا عن بيت خالد.",
+   "en": "Nader lives on the other bank of the river, far from Khalid's house.",
+   "ko": "나데르는 칼리드네 집에서 먼 강 건너편에 살아요.",
+   "blank": "الضفة",
+   "src": "made"
+  },
+  {
+   "text": "قضت عائلة ليلى نزهة على ضفة النهر القريب.",
+   "en": "Layla's family spent an outing on the bank of the nearby river.",
+   "ko": "레일라 가족은 가까운 강가로 나들이를 갔어요.",
+   "blank": "ضفة",
+   "src": "made"
+  }
+ ],
  "w|ضفدع": [
   {
    "text": "سمعت صوت ضفدع بجانب البركة.",
@@ -59575,6 +60119,22 @@
    "en": "This bread is fresh and very delicious.",
    "ko": "이 빵은 신선하고 정말 맛있어.",
    "blank": "طازج"
+  }
+ ],
+ "w|طاعة": [
+  {
+   "text": "قال نادر لخالد إن الطاعة العمياء للمدير لا تفيد أحدا.",
+   "en": "Nader told Khalid that blind obedience to the manager helps no one.",
+   "ko": "나데르는 칼리드에게 상사에게 무조건 복종하는 건 아무에게도 도움이 안 된다고 했어요.",
+   "blank": "الطاعة",
+   "src": "made"
+  },
+  {
+   "text": "علمت ليلى أطفالها أن الطاعة لا تعني الخوف.",
+   "en": "Layla taught her children that obedience does not mean fear.",
+   "ko": "레일라는 아이들에게 순종이 두려움을 뜻하지 않는다고 가르쳤어요.",
+   "blank": "الطاعة",
+   "src": "made"
   }
  ],
  "w|طاغ": [
@@ -60352,6 +60912,22 @@
    "en": "A mild rash appeared on Mona's hand after she tried a perfume in the duty-free shop.",
    "ko": "면세점에서 향수를 뿌려 본 뒤 모나 손에 가벼운 발진이 났어요.",
    "blank": "طفح",
+   "src": "made"
+  }
+ ],
+ "w|طفرة": [
+  {
+   "text": "حكى صديق علي عن طفرة في عمله بعد التطبيق الجديد.",
+   "en": "Ali's friend talked about a leap forward in his business after the new app.",
+   "ko": "알리의 친구는 새 앱 덕분에 사업이 크게 뛰었다고 이야기했어요.",
+   "blank": "طفرة",
+   "src": "made"
+  },
+  {
+   "text": "حققت نور طفرة في سرعتها هذا العام.",
+   "en": "Nour made a leap in her speed this year.",
+   "ko": "누르는 올해 속도가 확 늘었어요.",
+   "blank": "طفرة",
    "src": "made"
   }
  ],
@@ -62599,6 +63175,22 @@
    "src": "made"
   }
  ],
+ "w|عذب": [
+  {
+   "text": "عذب الصداع نادرا في يومه الأول، فأعطاه خالد دواء.",
+   "en": "A headache tormented Nader on his first day, so Khalid gave him medicine.",
+   "ko": "나데르가 첫날 두통에 시달리자 칼리드가 약을 줬어요.",
+   "blank": "عذب",
+   "src": "made"
+  },
+  {
+   "text": "عذب ابن ليلى أخته بأسئلة لا تنتهي.",
+   "en": "Layla's son pestered his sister with endless questions.",
+   "ko": "레일라의 아들은 끝없는 질문으로 누나를 괴롭혔어요.",
+   "blank": "عذب",
+   "src": "made"
+  }
+ ],
  "w|عذرا": [
   {
    "text": "عذرا، فيني أسأل سؤال؟",
@@ -64599,6 +65191,22 @@
    "blank": "عم"
   }
  ],
+ "w|عماد": [
+  {
+   "text": "قال علي في اللقاء إن الصداقة عماد حياته.",
+   "en": "At the reunion Ali said friendship is the pillar of his life.",
+   "ko": "알리는 모임에서 우정이 자기 삶의 기둥이라고 말했어요.",
+   "blank": "عماد",
+   "src": "made"
+  },
+  {
+   "text": "تؤمن نور أن الصبر عماد الجري الطويل.",
+   "en": "Nour believes patience is the backbone of long-distance running.",
+   "ko": "누르는 인내가 장거리 달리기의 기둥이라고 믿어요.",
+   "blank": "عماد",
+   "src": "made"
+  }
+ ],
  "w|عمارة": [
   {
    "text": "أسكن في عمارة كبيرة في وسط المدينة.",
@@ -65045,6 +65653,22 @@
    "en": "Have you tried green grapes before?",
    "ko": "초록 포도를 먹어본 적 있어?",
    "blank": "عنب"
+  }
+ ],
+ "w|عنبر": [
+  {
+   "text": "يضع نادر عطرا برائحة العنبر، فيعرف خالد أنه وصل.",
+   "en": "Nader wears an amber-scented perfume, so Khalid knows when he has arrived.",
+   "ko": "나데르가 호박 향 향수를 뿌려서 칼리드는 그가 온 걸 바로 알아요.",
+   "blank": "العنبر",
+   "src": "made"
+  },
+  {
+   "text": "فاحت رائحة العنبر من بخور ليلى في السهرة.",
+   "en": "The scent of amber wafted from Layla's incense in the evening.",
+   "ko": "저녁 모임 때 레일라가 피운 향에서 호박 향이 퍼졌어요.",
+   "blank": "العنبر",
+   "src": "made"
   }
  ],
  "w|عند": [
@@ -68107,6 +68731,22 @@
    "src": "made"
   }
  ],
+ "w|فرضية": [
+  {
+   "text": "طرح نادر فرضية جديدة لتفسير انخفاض المبيعات، فاهتم خالد.",
+   "en": "Nader put forward a new hypothesis to explain the drop in sales, and Khalid was interested.",
+   "ko": "나데르가 매출 하락을 설명하는 새 가설을 내놓자 칼리드가 관심을 보였어요.",
+   "blank": "فرضية",
+   "src": "made"
+  },
+  {
+   "text": "اختبرت ليلى مع ابنها فرضية بسيطة عن ذوبان الثلج في الملح.",
+   "en": "Layla tested a simple hypothesis with her son about snow melting in salt.",
+   "ko": "레일라는 아들과 소금에 눈이 녹는지 간단한 가설을 실험했어요.",
+   "blank": "فرضية",
+   "src": "made"
+  }
+ ],
  "w|فرع": [
   {
    "text": "تبني شركة حسن الآن فرعا جديدا لبنك في وسط المدينة.",
@@ -71124,6 +71764,22 @@
    "en": "The nip of the cold didn't stop Nour from running in a short-sleeved shirt.",
    "ko": "누르는 쌀쌀한 추위에도 반소매 셔츠를 입고 달렸어요.",
    "blank": "قرصة",
+   "src": "made"
+  }
+ ],
+ "w|قرصنة": [
+  {
+   "text": "تعرض حاسوب خالد لمحاولة قرصنة، فأصلحه نادر بسرعة.",
+   "en": "Khalid's computer suffered a hacking attempt, and Nader fixed it quickly.",
+   "ko": "칼리드의 컴퓨터가 해킹당할 뻔했는데 나데르가 금방 고쳤어요.",
+   "blank": "قرصنة",
+   "src": "made"
+  },
+  {
+   "text": "ترفض ليلى مشاهدة الأفلام عبر مواقع القرصنة.",
+   "en": "Layla refuses to watch films through pirate sites.",
+   "ko": "레일라는 불법 사이트로 영화를 보지 않아요.",
+   "blank": "القرصنة",
    "src": "made"
   }
  ],
@@ -81159,6 +81815,22 @@
    "src": "made"
   }
  ],
+ "w|متواصل": [
+  {
+   "text": "ضحك علي وأصدقاؤه ساعتين بشكل متواصل.",
+   "en": "Ali and his friends laughed nonstop for two hours.",
+   "ko": "알리와 친구들은 두 시간 내내 쉬지 않고 웃었어요.",
+   "blank": "متواصل",
+   "src": "made"
+  },
+  {
+   "text": "تحتاج نور إلى جهد متواصل لإنهاء السباق.",
+   "en": "Nour needs sustained effort to finish the race.",
+   "ko": "누르가 경기를 끝까지 뛰려면 쉬지 않고 힘을 내야 해요.",
+   "blank": "متواصل",
+   "src": "made"
+  }
+ ],
  "w|متواضع": [
   {
    "text": "اللاعب مشهور لكنه متواضع جداً.",
@@ -81546,6 +82218,22 @@
    "en": "Nour left her stable job, and that was a big risk.",
    "ko": "누르는 안정된 직장을 그만뒀는데, 그건 큰 모험이었어요.",
    "blank": "مجازفة",
+   "src": "made"
+  }
+ ],
+ "w|مجازي": [
+  {
+   "text": "شرح خالد لنادر أن عبارة المدير عن الباب المفتوح لها معنى مجازي.",
+   "en": "Khalid explained to Nader that the manager's phrase about the open door has a figurative meaning.",
+   "ko": "칼리드는 나데르에게 상사가 말한 열린 문이라는 표현은 비유라고 설명했어요.",
+   "blank": "مجازي",
+   "src": "made"
+  },
+  {
+   "text": "شرحت ليلى لابنها المعنى المجازي لعبارة «قلبه من ذهب».",
+   "en": "Layla explained to her son the figurative meaning of the expression \"a heart of gold\".",
+   "ko": "레일라는 아들에게 '금 같은 마음'이라는 말의 비유적인 뜻을 설명했어요.",
+   "blank": "المجازي",
    "src": "made"
   }
  ],
@@ -84853,6 +85541,22 @@
    "src": "made"
   }
  ],
+ "w|مرساة": [
+  {
+   "text": "رأى خالد على ذراع نادر وشما صغيرا على شكل مرساة.",
+   "en": "Khalid saw a small anchor-shaped tattoo on Nader's arm.",
+   "ko": "칼리드는 나데르의 팔에 있는 작은 닻 모양 문신을 봤어요.",
+   "blank": "مرساة",
+   "src": "made"
+  },
+  {
+   "text": "رسم ابن ليلى مرساة كبيرة على ورقة وعلقها في غرفته.",
+   "en": "Layla's son drew a big anchor on paper and hung it in his room.",
+   "ko": "레일라의 아들은 종이에 큰 닻을 그려 방에 붙였어요.",
+   "blank": "مرساة",
+   "src": "made"
+  }
+ ],
  "w|مرسل": [
   {
    "text": "تمايلت العروس بشعرها المرسل على كتفيها، فصفق سامي.",
@@ -85611,6 +86315,22 @@
    "src": "made"
   }
  ],
+ "w|مزور": [
+  {
+   "text": "اكتشف نادر توقيعا مزورا على فاتورة قديمة وأخبر خالدا.",
+   "en": "Nader found a forged signature on an old invoice and told Khalid.",
+   "ko": "나데르는 오래된 청구서에서 위조된 서명을 찾아 칼리드에게 알렸어요.",
+   "blank": "مزورا",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت ليلى حين قدم لها ابنها شيكا مزورا من ورق اللعب.",
+   "en": "Layla laughed when her son handed her a fake check made of play paper.",
+   "ko": "아들이 장난감 종이로 만든 가짜 수표를 내밀자 레일라가 웃었어요.",
+   "blank": "مزورا",
+   "src": "made"
+  }
+ ],
  "w|مزيج": [
   {
    "text": "يحضر كريم مزيجا من الأعشاب للسعال يحبه كبار السن.",
@@ -85839,6 +86559,22 @@
    "en": "I am traveling to a new city tomorrow.",
    "ko": "나는 내일 새로운 도시로 여행한다.",
    "blank": "مسافر"
+  }
+ ],
+ "w|مسالم": [
+  {
+   "text": "وجد خالد زميله الجديد شخصا مسالما يتجنب الخلافات.",
+   "en": "Khalid found his new colleague a peaceable person who avoids disputes.",
+   "ko": "칼리드가 보기에 새 동료는 다툼을 피하는 온순한 사람이었어요.",
+   "blank": "مسالما",
+   "src": "made"
+  },
+  {
+   "text": "تملك عائلة ليلى كلبا مسالما يلعب مع الأطفال.",
+   "en": "Layla's family has a gentle dog that plays with the children.",
+   "ko": "레일라네 가족에게는 아이들과 노는 순한 개가 있어요.",
+   "blank": "مسالما",
+   "src": "made"
   }
  ],
  "w|مساندة": [
@@ -86611,6 +87347,22 @@
    "en": "Please wipe the table before eating.",
    "ko": "식사 전에 테이블을 닦아주세요.",
    "blank": "تمسح"
+  }
+ ],
+ "w|مسحة": [
+  {
+   "text": "لاحظ خالد في صوت زميله الجديد مسحة حزن.",
+   "en": "Khalid noticed a trace of sadness in his new colleague's voice.",
+   "ko": "칼리드는 새 동료의 목소리에서 슬픔이 살짝 묻어나는 걸 느꼈어요.",
+   "blank": "مسحة",
+   "src": "made"
+  },
+  {
+   "text": "أضافت ليلى مسحة من القرفة على الحلوى.",
+   "en": "Layla added a touch of cinnamon to the dessert.",
+   "ko": "레일라는 디저트에 계피를 살짝 뿌렸어요.",
+   "blank": "مسحة",
+   "src": "made"
   }
  ],
  "w|مسحوق": [
@@ -89437,6 +90189,22 @@
    "blank": "معلمة"
   }
  ],
+ "w|معلوم": [
+  {
+   "text": "كان موعد اللقاء معلوما للجميع إلا علي.",
+   "en": "The time of the reunion was known to everyone except Ali.",
+   "ko": "모임 시간을 알리만 빼고 다 알고 있었어요.",
+   "blank": "معلوما",
+   "src": "made"
+  },
+  {
+   "text": "من المعلوم أن نور تنام مبكرا قبل كل سباق.",
+   "en": "It's well known that Nour goes to bed early before every race.",
+   "ko": "누르가 경기 전날마다 일찍 잔다는 건 다 아는 사실이에요.",
+   "blank": "المعلوم",
+   "src": "made"
+  }
+ ],
  "w|معلومات": [
   {
    "text": "هل لديك معلومات عن هذا الموضوع؟",
@@ -90345,6 +91113,22 @@
    "en": "I have a favorite book that I always read.",
    "ko": "항상 읽는 좋아하는 책이 있어.",
    "blank": "مفضل"
+  }
+ ],
+ "w|مفعم": [
+  {
+   "text": "جاء نادر إلى المكتب في يومه الأول مفعما بالحماس.",
+   "en": "Nader came to the office on his first day full of enthusiasm.",
+   "ko": "나데르는 첫날 열정이 넘치는 모습으로 출근했어요.",
+   "blank": "مفعما",
+   "src": "made"
+  },
+  {
+   "text": "قالت ليلى إن البيت كان مفعما بالضحك طوال الإجازة.",
+   "en": "Layla said the house was full of laughter throughout the holiday.",
+   "ko": "레일라는 휴가 내내 집에 웃음이 가득했다고 말했어요.",
+   "blank": "مفعما",
+   "src": "made"
   }
  ],
  "w|مفقود": [
@@ -91513,6 +92297,22 @@
    "blank": "مكث"
   }
  ],
+ "w|مكثف": [
+  {
+   "text": "تبادل علي وأصدقاؤه أخبارا كثيرة في لقاء قصير مكثف.",
+   "en": "Ali and his friends exchanged lots of news in a short, packed get-together.",
+   "ko": "알리와 친구들은 짧지만 알찬 모임에서 많은 소식을 나눴어요.",
+   "blank": "مكثف",
+   "src": "made"
+  },
+  {
+   "text": "خضعت نور لتدريب مكثف قبل الماراثون.",
+   "en": "Nour underwent intensive training before the marathon.",
+   "ko": "누르는 마라톤 전에 강도 높은 훈련을 받았어요.",
+   "blank": "مكثف",
+   "src": "made"
+  }
+ ],
  "w|مكر": [
   {
    "text": "ضحك حسن من مكر القط الذي يسرق السمك من مطبخ الجيران.",
@@ -92093,6 +92893,22 @@
    "src": "made"
   }
  ],
+ "w|ملحق": [
+  {
+   "text": "أرسل نادر لخالد ملحقا بالعقد الجديد.",
+   "en": "Nader sent Khalid an annex to the new contract.",
+   "ko": "나데르는 칼리드에게 새 계약서 부속 문서를 보냈어요.",
+   "blank": "ملحقا",
+   "src": "made"
+  },
+  {
+   "text": "قرأت ليلى ملحق الجريدة الأسبوعي في الصباح.",
+   "en": "Layla read the newspaper's weekly supplement in the morning.",
+   "ko": "레일라는 아침에 신문 주말 부록을 읽었어요.",
+   "blank": "ملحق",
+   "src": "made"
+  }
+ ],
  "w|ملحمة": [
   {
    "text": "ذهبت إلى ملحمة لأشتري اللحم.",
@@ -92359,6 +93175,38 @@
    "src": "made"
   }
  ],
+ "w|ملموس": [
+  {
+   "text": "حقق نادر تقدما ملموسا في أسبوعه الأول، كما قال خالد للمدير.",
+   "en": "Nader made tangible progress in his first week, as Khalid told the manager.",
+   "ko": "칼리드는 상사에게 나데르가 첫 주에 눈에 띄게 성과를 냈다고 말했어요.",
+   "blank": "ملموسا",
+   "src": "made"
+  },
+  {
+   "text": "شعرت ليلى بتحسن ملموس في مزاجها بعد أيام الراحة.",
+   "en": "Layla felt a noticeable improvement in her mood after the days of rest.",
+   "ko": "레일라는 며칠 쉬고 나니 기분이 확실히 좋아졌어요.",
+   "blank": "ملموس",
+   "src": "made"
+  }
+ ],
+ "w|ملهم": [
+  {
+   "text": "وجد خالد أسلوب نادر في العمل ملهما.",
+   "en": "Khalid found Nader's way of working inspiring.",
+   "ko": "칼리드는 나데르의 일하는 방식에서 영감을 받았어요.",
+   "blank": "ملهما",
+   "src": "made"
+  },
+  {
+   "text": "كان حديث الجدة ملهما لأطفال ليلى.",
+   "en": "Grandma's talk was inspiring for Layla's children.",
+   "ko": "할머니 이야기는 레일라의 아이들에게 큰 자극이 됐어요.",
+   "blank": "ملهما",
+   "src": "made"
+  }
+ ],
  "w|ملهى": [
   {
    "text": "أغلق كريم ملهى ليليا خالف قوانين السلامة.",
@@ -92493,6 +93341,22 @@
    "en": "I found a similar solution to your problem.",
    "ko": "네 문제와 비슷한 해결책을 찾았어.",
    "blank": "مماثل"
+  }
+ ],
+ "w|مماطلة": [
+  {
+   "text": "لا يحب نادر المماطلة، فأنهى التقرير في ساعة، كما لاحظ خالد.",
+   "en": "Nader doesn't like procrastinating, so he finished the report in an hour, as Khalid noticed.",
+   "ko": "칼리드가 보니 나데르는 미루는 걸 싫어해서 보고서를 한 시간 만에 끝냈어요.",
+   "blank": "المماطلة",
+   "src": "made"
+  },
+  {
+   "text": "أنهت ليلى مماطلة أبنائها وأرسلتهم إلى ترتيب غرفهم.",
+   "en": "Layla put an end to her children's stalling and sent them to tidy their rooms.",
+   "ko": "레일라는 꾸물대는 아이들을 방 정리하러 보냈어요.",
+   "blank": "مماطلة",
+   "src": "made"
   }
  ],
  "w|ممتاز": [
@@ -93177,6 +94041,22 @@
    "blank": "المنتجع"
   }
  ],
+ "w|منتخب": [
+  {
+   "text": "يشجع نادر وخالد المنتخب الوطني معا في الاستراحة.",
+   "en": "Nader and Khalid cheer for the national team together during breaks.",
+   "ko": "나데르와 칼리드는 쉬는 시간에 함께 국가 대표팀을 응원해요.",
+   "blank": "المنتخب",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت عائلة ليلى مباراة المنتخب في الإجازة.",
+   "en": "Layla's family watched the national team's match during the holiday.",
+   "ko": "레일라 가족은 휴가 때 국가 대표팀 경기를 봤어요.",
+   "blank": "المنتخب",
+   "src": "made"
+  }
+ ],
  "w|منتدى": [
   {
    "text": "شارك عمر في منتدى الأعمال السنوي.",
@@ -93206,6 +94086,22 @@
    "en": "Fatima walked in the park with her friends after dinner.",
    "ko": "파티마는 저녁을 먹고 친구들과 공원을 걸었어요.",
    "blank": "المنتزه",
+   "src": "made"
+  }
+ ],
+ "w|منتصر": [
+  {
+   "text": "خرج علي من لعبة الورق منتصرا.",
+   "en": "Ali came out of the card game victorious.",
+   "ko": "알리는 카드 게임에서 이겼어요.",
+   "blank": "منتصرا",
+   "src": "made"
+  },
+  {
+   "text": "عادت نور إلى البيت منتصرة بعد الماراثون.",
+   "en": "Nour came home victorious after the marathon.",
+   "ko": "누르는 마라톤에서 우승하고 집에 돌아왔어요.",
+   "blank": "منتصرة",
    "src": "made"
   }
  ],
@@ -96873,6 +97769,22 @@
    "blank": "نحت"
   }
  ],
+ "w|نحس": [
+  {
+   "text": "قال علي مازحا إن المطر نحس يلاحق لقاءاتهم.",
+   "en": "Ali joked that rain is a curse that follows their reunions.",
+   "ko": "알리는 비가 자기들 모임마다 따라다니는 징크스라고 농담했어요.",
+   "blank": "نحس",
+   "src": "made"
+  },
+  {
+   "text": "رفضت نور فكرة النحس حين تعثرت في البداية.",
+   "en": "Nour rejected the idea of bad luck when she stumbled at the start.",
+   "ko": "누르는 출발 때 휘청했지만 재수 없다는 생각은 떨쳐 냈어요.",
+   "blank": "النحس",
+   "src": "made"
+  }
+ ],
  "w|نحف": [
   {
    "text": "نحف الحمار كثيرا هذا الشهر، ففحص كريم أسنانه.",
@@ -97388,6 +98300,22 @@
    "en": "Fatima was the only guest at the airport hotel that night.",
    "ko": "그날 밤 공항 호텔 투숙객은 파티마 혼자였어요.",
    "blank": "النزيل",
+   "src": "made"
+  }
+ ],
+ "w|نزيه": [
+  {
+   "text": "يعرف خالد أن نادر موظف نزيه لا يقبل الهدايا.",
+   "en": "Khalid knows that Nader is an honest employee who doesn't accept gifts.",
+   "ko": "칼리드는 나데르가 선물을 받지 않는 청렴한 직원이라는 걸 알아요.",
+   "blank": "نزيه",
+   "src": "made"
+  },
+  {
+   "text": "قالت ليلى إن الحكم في لعبة الأطفال يجب أن يكون نزيها.",
+   "en": "Layla said the referee in the children's game has to be fair.",
+   "ko": "레일라는 아이들 게임 심판은 공정해야 한다고 했어요.",
+   "blank": "نزيها",
    "src": "made"
   }
  ],
@@ -97960,6 +98888,22 @@
    "en": "Fatima thinks the writer's style matured a lot in his latest novel.",
    "ko": "파티마는 그 작가의 문체가 마지막 소설에서 많이 성숙해졌다고 봐요.",
    "blank": "نضج",
+   "src": "made"
+  }
+ ],
+ "w|نضوج": [
+  {
+   "text": "لاحظ علي نضوج أصدقائه بعد سنوات الفراق.",
+   "en": "Ali noticed how his friends had matured after years apart.",
+   "ko": "알리는 몇 년 떨어져 지내는 동안 친구들이 성숙해진 걸 느꼈어요.",
+   "blank": "نضوج",
+   "src": "made"
+  },
+  {
+   "text": "يدل هدوء نور قبل السباق على نضوج كبير.",
+   "en": "Nour's calm before the race shows great maturity.",
+   "ko": "경기 전 누르가 차분한 걸 보면 꽤 성숙했어요.",
+   "blank": "نضوج",
    "src": "made"
   }
  ],
@@ -101913,6 +102857,22 @@
    "blank": "وحيد"
   }
  ],
+ "w|وخز": [
+  {
+   "text": "وخز نادر خالدا بالقلم مازحا ليوقظه في الاجتماع.",
+   "en": "Nader jokingly poked Khalid with a pen to wake him up in the meeting.",
+   "ko": "나데르는 회의 중 졸던 칼리드를 장난스럽게 펜으로 찔렀어요.",
+   "blank": "وخز",
+   "src": "made"
+  },
+  {
+   "text": "وخزت ليلى إصبعها بالإبرة وهي تخيط ثوب ابنتها.",
+   "en": "Layla pricked her finger with the needle while sewing her daughter's dress.",
+   "ko": "레일라는 딸의 옷을 꿰매다가 바늘에 손가락을 찔렸어요.",
+   "blank": "وخزت",
+   "src": "made"
+  }
+ ],
  "w|وخزة": [
   {
    "text": "أصابت عليا وخزة في ظهره وهو يرفع الكنبة.",
@@ -102237,6 +103197,22 @@
    "en": "I wrote my name on a small paper.",
    "ko": "나는 작은 종이에 내 이름을 썼다.",
    "blank": "ورقة"
+  }
+ ],
+ "w|ورقي": [
+  {
+   "text": "يفضل نادر الدفتر الورقي على الحاسوب.",
+   "en": "Nader prefers a paper notebook to the computer.",
+   "ko": "나데르는 컴퓨터보다 종이 공책을 더 좋아해요.",
+   "blank": "الورقي",
+   "src": "made"
+  },
+  {
+   "text": "صنعت ليلى مع أطفالها زينة ورقية للبيت.",
+   "en": "Layla made paper decorations for the house with her children.",
+   "ko": "레일라는 아이들과 집에 걸 종이 장식을 만들었어요.",
+   "blank": "ورقية",
+   "src": "made"
   }
  ],
  "w|ورك": [
@@ -102957,6 +103933,22 @@
    "blank": "أوفر"
   }
  ],
+ "w|وفرة": [
+  {
+   "text": "أفرحت وفرة القهوة في المكتب نادرا، فضحك خالد.",
+   "en": "Khalid laughed when Nader was delighted by the abundance of coffee in the office.",
+   "ko": "사무실에 커피가 넉넉한 걸 보고 나데르가 좋아하자 칼리드가 웃었어요.",
+   "blank": "وفرة",
+   "src": "made"
+  },
+  {
+   "text": "سمحت وفرة الوقت في الإجازة لليلى بالقراءة.",
+   "en": "The abundance of time during the holiday let Layla read.",
+   "ko": "휴가 때 시간이 넉넉해서 레일라는 책을 읽었어요.",
+   "blank": "وفرة",
+   "src": "made"
+  }
+ ],
  "w|وفق": [
   {
    "text": "وفق حسن بين طلبات المالك وحدود الميزانية.",
@@ -103014,6 +104006,22 @@
    "en": "The rain was abundant this winter, and Sara was happy.",
    "ko": "올겨울 비가 넉넉히 와서 사라는 기뻤어요.",
    "blank": "وفيرا",
+   "src": "made"
+  }
+ ],
+ "w|وقائي": [
+  {
+   "text": "أخذ علي دواء وقائيا قبل رحلة البحر مع أصدقائه.",
+   "en": "Ali took a preventive medicine before the sea trip with his friends.",
+   "ko": "알리는 친구들과 바다 여행을 가기 전에 예방약을 먹었어요.",
+   "blank": "وقائيا",
+   "src": "made"
+  },
+  {
+   "text": "لبست نور نظارة وقائية من الشمس.",
+   "en": "Nour wore protective sunglasses.",
+   "ko": "누르는 햇빛을 막는 보호 안경을 썼어요.",
+   "blank": "وقائية",
    "src": "made"
   }
  ],

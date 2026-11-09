@@ -1317,6 +1317,22 @@
    "src": "made"
   }
  ],
+ "w|acquazzone": [
+  {
+   "text": "Un acquazzone improvviso costringe Matteo a correre sotto la tettoia.",
+   "en": "A sudden downpour forces Matteo to run under the shelter.",
+   "ko": "갑작스러운 소나기에 마테오는 차양 밑으로 뛰어가요.",
+   "blank": "acquazzone",
+   "src": "made"
+  },
+  {
+   "text": "Sara arriva in ufficio fradicia per colpa di un acquazzone.",
+   "en": "Sara arrives at the office soaked because of a downpour.",
+   "ko": "사라는 소나기를 맞아 흠뻑 젖은 채로 출근해요.",
+   "blank": "acquazzone",
+   "src": "made"
+  }
+ ],
  "w|acquirente": [
   {
    "text": "Il proprietario vende il ristorante, e Luca spera che l'acquirente tenga tutto il personale.",
@@ -1362,6 +1378,22 @@
    "en": "Before leaving Giulia went to buy a warmer sleeping bag.",
    "ko": "떠나기 전에 줄리아는 더 따뜻한 침낭을 사러 갔어요.",
    "blank": "acquistare",
+   "src": "made"
+  }
+ ],
+ "w|acquisti": [
+  {
+   "text": "Matteo fa gli acquisti per tre giorni nel piccolo alimentari del paese.",
+   "en": "Matteo does the shopping for three days at the little village grocery.",
+   "ko": "마테오는 마을의 작은 식료품점에서 사흘 치 장을 봐요.",
+   "blank": "acquisti",
+   "src": "made"
+  },
+  {
+   "text": "In ufficio Sara si occupa degli acquisti di cancelleria.",
+   "en": "In the office Sara is in charge of purchasing stationery.",
+   "ko": "사라는 사무실에서 사무용품 구매를 맡고 있어요.",
+   "blank": "acquisti",
    "src": "made"
   }
  ],
@@ -1917,6 +1949,22 @@
    "blank": "aeroporto"
   }
  ],
+ "w|afa": [
+  {
+   "text": "Per sfuggire all'afa della città Matteo pianta la tenda in alta quota.",
+   "en": "To escape the city's sultry heat Matteo pitches his tent high up.",
+   "ko": "도시의 무더위를 피하려고 마테오는 높은 곳에 텐트를 쳐요.",
+   "blank": "afa",
+   "src": "made"
+  },
+  {
+   "text": "Quando il condizionatore si rompe, Sara lavora nell'afa con il ventaglio in mano.",
+   "en": "When the air conditioner breaks, Sara works in the sultry heat with a fan in her hand.",
+   "ko": "에어컨이 고장 나자 사라는 부채를 든 채 찜통더위 속에서 일해요.",
+   "blank": "afa",
+   "src": "made"
+  }
+ ],
  "w|affamato": [
   {
    "text": "I muratori del cantiere vicino entrano da Stefano affamati a mezzogiorno in punto.",
@@ -2224,6 +2272,22 @@
    "en": "Anna says laughing that the cook wants to drown the pasta in sauce.",
    "ko": "요리사가 파스타를 소스에 빠뜨리려 한다고 안나가 웃으며 말해요.",
    "blank": "affogare",
+   "src": "made"
+  }
+ ],
+ "w|affollato": [
+  {
+   "text": "Ad agosto il campeggio è troppo affollato e Matteo si sposta nel bosco.",
+   "en": "In August the campsite is too crowded so Matteo moves into the woods.",
+   "ko": "팔월에는 캠핑장이 너무 붐벼서 마테오는 숲속으로 옮겨 가요.",
+   "blank": "affollato",
+   "src": "made"
+  },
+  {
+   "text": "Il treno delle otto è sempre affollato e Sara arriva in ufficio stanca.",
+   "en": "The eight o'clock train is always crowded and Sara arrives at the office tired.",
+   "ko": "여덟 시 기차가 늘 붐벼서 사라는 지친 채로 출근해요.",
+   "blank": "affollato",
    "src": "made"
   }
  ],
@@ -3566,6 +3630,22 @@
    "en": "The speaker Giulia bought connects to her phone in a moment.",
    "ko": "줄리아가 산 스피커는 휴대폰과 금방 연결돼요.",
    "blank": "altoparlante",
+   "src": "made"
+  }
+ ],
+ "w|altopiano": [
+  {
+   "text": "Matteo cammina per ore sull'altopiano senza incontrare nessuno.",
+   "en": "Matteo walks for hours on the plateau without meeting anyone.",
+   "ko": "마테오는 몇 시간 동안 고원을 걸어도 아무도 만나지 않아요.",
+   "blank": "altopiano",
+   "src": "made"
+  },
+  {
+   "text": "La sede principale dell'azienda di Sara si trova su un altopiano vicino a Trento.",
+   "en": "The main office of Sara's company is on a plateau near Trento.",
+   "ko": "사라 회사의 본사는 트렌토 근처 고원에 있어요.",
+   "blank": "altopiano",
    "src": "made"
   }
  ],
@@ -5913,6 +5993,22 @@
    "src": "made"
   }
  ],
+ "w|arbusto": [
+  {
+   "text": "La corda della tenda di Matteo si impiglia in un arbusto spinoso.",
+   "en": "Matteo's tent rope gets caught in a thorny shrub.",
+   "ko": "마테오의 텐트 줄이 가시덤불에 걸려요.",
+   "blank": "arbusto",
+   "src": "made"
+  },
+  {
+   "text": "Sara innaffia un piccolo arbusto in vaso accanto alla stampante.",
+   "en": "Sara waters a small potted shrub next to the printer.",
+   "ko": "사라는 프린터 옆 화분에 심은 작은 관목에 물을 줘요.",
+   "blank": "arbusto",
+   "src": "made"
+  }
+ ],
  "w|architettare": [
   {
    "text": "Andrea ha dovuto architettare un sistema di carrucole per portare su il divano.",
@@ -6004,6 +6100,22 @@
    "en": "Laura does archery and says a good archer needs patience.",
    "ko": "라우라는 양궁을 하는데, 좋은 궁수는 인내심이 있어야 한대요.",
    "blank": "arciere",
+   "src": "made"
+  }
+ ],
+ "w|arcipelago": [
+  {
+   "text": "Il prossimo anno Matteo vuole fare campeggio in kayak in un arcipelago del nord.",
+   "en": "Next year Matteo wants to go kayak camping in a northern archipelago.",
+   "ko": "내년에 마테오는 북쪽 군도에서 카약을 타며 캠핑하고 싶어 해요.",
+   "blank": "arcipelago",
+   "src": "made"
+  },
+  {
+   "text": "Il collega di Sara torna da una vacanza in un arcipelago greco tutto abbronzato.",
+   "en": "Sara's colleague comes back all tanned from a holiday in a Greek archipelago.",
+   "ko": "사라의 동료가 그리스 군도로 휴가를 다녀와서 까맣게 탔어요.",
+   "blank": "arcipelago",
    "src": "made"
   }
  ],
@@ -6692,6 +6804,22 @@
    "en": "Francesca jokes that her new haircut is just a trick to look younger.",
    "ko": "프란체스카는 새 머리 모양이 더 젊어 보이려는 꼼수일 뿐이라고 농담해요.",
    "blank": "artificio",
+   "src": "made"
+  }
+ ],
+ "w|artigianale": [
+  {
+   "text": "Luca impara a fare la pasta artigianale con farina e uova.",
+   "en": "Luca learns to make handmade pasta with flour and eggs.",
+   "ko": "루카는 밀가루와 달걀로 수제 파스타 만드는 법을 배워요.",
+   "blank": "artigianale",
+   "src": "made"
+  },
+  {
+   "text": "Nel negozio del museo Chiara vende ceramiche di produzione artigianale.",
+   "en": "In the museum shop Chiara sells handmade ceramics.",
+   "ko": "키아라는 박물관 기념품점에서 수공예 도자기를 팔아요.",
+   "blank": "artigianale",
    "src": "made"
   }
  ],
@@ -9211,6 +9339,22 @@
    "src": "made"
   }
  ],
+ "w|baccalà": [
+  {
+   "text": "Luca lascia il baccalà in ammollo per due giorni prima di cucinarlo.",
+   "en": "Luca soaks the salt cod for two days before cooking it.",
+   "ko": "루카는 바칼라를 요리하기 전에 이틀 동안 물에 담가 둬요.",
+   "blank": "baccalà",
+   "src": "made"
+  },
+  {
+   "text": "Chiara mostra le antiche barche usate per trasportare il baccalà dal nord.",
+   "en": "Chiara shows the old boats used to carry salt cod from the north.",
+   "ko": "키아라는 북쪽에서 바칼라를 실어 나르던 옛 배들을 보여 줘요.",
+   "blank": "baccalà",
+   "src": "made"
+  }
+ ],
  "w|bacheca": [
   {
    "text": "Stefano appende l'avviso del nuovo orario sulla bacheca all'ingresso del municipio.",
@@ -10949,6 +11093,22 @@
    "blank": "binario"
   }
  ],
+ "w|biodiversità": [
+  {
+   "text": "La guardia forestale spiega a Matteo che il parco protegge la biodiversità della zona.",
+   "en": "The forest ranger explains to Matteo that the park protects the area's biodiversity.",
+   "ko": "산림 감시원은 마테오에게 공원이 그 지역의 생물 다양성을 지킨다고 설명해요.",
+   "blank": "biodiversità",
+   "src": "made"
+  },
+  {
+   "text": "L'azienda di Sara finanzia un progetto per la biodiversità nei parchi cittadini.",
+   "en": "Sara's company funds a biodiversity project in the city parks.",
+   "ko": "사라의 회사는 시립 공원 생물 다양성 사업을 후원해요.",
+   "blank": "biodiversità",
+   "src": "made"
+  }
+ ],
  "w|biografia": [
   {
    "text": "Nella biblioteca comunale Stefano trova una biografia del primo sindaco della città.",
@@ -11363,6 +11523,22 @@
    "src": "made"
   }
  ],
+ "w|bollito": [
+  {
+   "text": "Lo chef serve a Luca il manzo bollito con la salsa verde.",
+   "en": "The chef serves Luca boiled beef with green sauce.",
+   "ko": "셰프는 루카에게 삶은 소고기와 초록 소스를 내 줘요.",
+   "blank": "bollito",
+   "src": "made"
+  },
+  {
+   "text": "Il cuoco della mensa del museo serve un bollito misto ogni giovedì, dice Chiara.",
+   "en": "The museum canteen cook serves mixed boiled meats every Thursday, Chiara says.",
+   "ko": "키아라는 박물관 식당 요리사가 목요일마다 모듬 삶은 고기를 낸다고 말해요.",
+   "blank": "bollito",
+   "src": "made"
+  }
+ ],
  "w|bomba": [
   {
    "text": "Hanno trovato una bomba inesplosa.",
@@ -11406,6 +11582,22 @@
    "en": "An aviation museum asks Laura for an app about the bomber on display in the hangar.",
    "ko": "항공 박물관이 격납고에 전시된 폭격기에 관한 앱을 라우라에게 의뢰해요.",
    "blank": "bombardiere",
+   "src": "made"
+  }
+ ],
+ "w|bonifico": [
+  {
+   "text": "Luca paga l'iscrizione al corso con un bonifico.",
+   "en": "Luca pays the course fee by bank transfer.",
+   "ko": "루카는 수강료를 계좌 이체로 내요.",
+   "blank": "bonifico",
+   "src": "made"
+  },
+  {
+   "text": "La scuola paga la visita guidata con un bonifico e Chiara controlla l'arrivo.",
+   "en": "The school pays for the guided tour by bank transfer and Chiara checks it has arrived.",
+   "ko": "학교가 단체 관람료를 계좌 이체로 보내자 키아라가 입금을 확인해요.",
+   "blank": "bonifico",
    "src": "made"
   }
  ],
@@ -11588,6 +11780,22 @@
    "en": "Martina helps a child do up the last button of his smock.",
    "ko": "마르티나는 한 아이가 덧옷 마지막 단추를 채우는 걸 도와줘요.",
    "blank": "bottone",
+   "src": "made"
+  }
+ ],
+ "w|boutique": [
+  {
+   "text": "Nel paese vicino al campeggio c'è una boutique di abbigliamento sportivo dove Matteo compra un pile.",
+   "en": "In the village near the campsite there's a sportswear boutique where Matteo buys a fleece.",
+   "ko": "캠핑장 근처 마을의 스포츠 의류 부티크에서 마테오는 플리스를 사요.",
+   "blank": "boutique",
+   "src": "made"
+  },
+  {
+   "text": "A pranzo Sara guarda le vetrine di una boutique vicino all'ufficio.",
+   "en": "At lunchtime Sara looks at the windows of a boutique near the office.",
+   "ko": "점심시간에 사라는 사무실 근처 부티크 진열장을 구경해요.",
+   "blank": "boutique",
    "src": "made"
   }
  ],
@@ -11802,6 +12010,22 @@
    "en": "Laura's eyes start to shine when the scoop arrives.",
    "ko": "특종이 들어오자 라우라의 눈이 반짝이기 시작해요.",
    "blank": "brillare",
+   "src": "made"
+  }
+ ],
+ "w|brina": [
+  {
+   "text": "La mattina l'erba intorno alla tenda di Matteo è coperta di brina.",
+   "en": "In the morning the grass around Matteo's tent is covered with frost.",
+   "ko": "아침이면 마테오의 텐트 주위 풀밭에 서리가 덮여 있어요.",
+   "blank": "brina",
+   "src": "made"
+  },
+  {
+   "text": "Sara deve grattare la brina dal parabrezza prima di andare al lavoro.",
+   "en": "Sara has to scrape the frost off the windscreen before going to work.",
+   "ko": "사라는 출근 전에 앞유리의 서리를 긁어내야 해요.",
+   "blank": "brina",
    "src": "made"
   }
  ],
@@ -16757,6 +16981,22 @@
    "src": "made"
   }
  ],
+ "w|ciottolo": [
+  {
+   "text": "Matteo regala alla figlia un ciottolo liscio trovato nel torrente.",
+   "en": "Matteo gives his daughter a smooth pebble he found in the stream.",
+   "ko": "마테오는 개울에서 주운 매끈한 조약돌을 딸에게 줘요.",
+   "blank": "ciottolo",
+   "src": "made"
+  },
+  {
+   "text": "Sulla scrivania di Sara c'è un ciottolo dipinto dal figlio.",
+   "en": "On Sara's desk there's a pebble painted by her son.",
+   "ko": "사라의 책상에는 아들이 그림을 그린 조약돌이 있어요.",
+   "blank": "ciottolo",
+   "src": "made"
+  }
+ ],
  "w|cipolla": [
   {
    "text": "Taglio la cipolla e mi vengono le lacrime.",
@@ -19643,6 +19883,22 @@
    "src": "made"
   }
  ],
+ "w|concittadino": [
+  {
+   "text": "Al corso Luca conosce un concittadino che non aveva mai visto in paese.",
+   "en": "At the class Luca meets a fellow townsman he had never seen in town.",
+   "ko": "수업에서 루카는 같은 동네에 살지만 한 번도 본 적 없는 사람을 만나요.",
+   "blank": "concittadino",
+   "src": "made"
+  },
+  {
+   "text": "Chiara accoglie un concittadino famoso che ha donato la sua collezione al museo.",
+   "en": "Chiara welcomes a famous fellow citizen who donated his collection to the museum.",
+   "ko": "키아라는 자기 소장품을 박물관에 기증한 유명한 동네 주민을 맞이해요.",
+   "blank": "concittadino",
+   "src": "made"
+  }
+ ],
  "w|concludere": [
   {
    "text": "Dobbiamo concludere l'accordo oggi.",
@@ -19969,6 +20225,22 @@
    "en": "He wrote a sincere confession in the diary.",
    "ko": "일기장에 진심 어린 고백을 썼어.",
    "blank": "confessione"
+  }
+ ],
+ "w|confettura": [
+  {
+   "text": "Luca porta a casa un vasetto di confettura di albicocche fatta a lezione.",
+   "en": "Luca takes home a jar of apricot jam made in class.",
+   "ko": "루카는 수업에서 만든 살구 잼 한 병을 집에 가져가요.",
+   "blank": "confettura",
+   "src": "made"
+  },
+  {
+   "text": "Nel negozio del museo Chiara vende una confettura di fichi fatta dalle suore del paese.",
+   "en": "In the museum shop Chiara sells a fig jam made by the village nuns.",
+   "ko": "박물관 기념품점에서 키아라는 마을 수녀님들이 만든 무화과 잼을 팔아요.",
+   "blank": "confettura",
+   "src": "made"
   }
  ],
  "w|confezione": [
@@ -21989,6 +22261,22 @@
    "src": "made"
   }
  ],
+ "w|cornetto": [
+  {
+   "text": "Prima della lezione Luca prende un cappuccino e un cornetto al bar.",
+   "en": "Before the class Luca has a cappuccino and a croissant at the café.",
+   "ko": "수업 전에 루카는 카페에서 카푸치노와 코르네토를 먹어요.",
+   "blank": "cornetto",
+   "src": "made"
+  },
+  {
+   "text": "Chiara arriva al museo ogni mattina con un cornetto alla crema.",
+   "en": "Chiara arrives at the museum every morning with a cream-filled croissant.",
+   "ko": "키아라는 아침마다 크림 코르네토를 들고 박물관에 와요.",
+   "blank": "cornetto",
+   "src": "made"
+  }
+ ],
  "w|cornice": [
   {
    "text": "Dietro una cornice impolverata Andrea trova una lettera del vecchio proprietario.",
@@ -22341,6 +22629,22 @@
    "src": "made"
   }
  ],
+ "w|corteggiamento": [
+  {
+   "text": "Luca prepara una cena speciale come parte del corteggiamento della sua compagna di corso.",
+   "en": "Luca prepares a special dinner as part of courting his classmate.",
+   "ko": "루카는 같은 반 수강생에게 마음을 얻으려고 특별한 저녁을 준비해요.",
+   "blank": "corteggiamento",
+   "src": "made"
+  },
+  {
+   "text": "Il quadro racconta il corteggiamento tra due giovani nobili, spiega Chiara.",
+   "en": "The painting depicts the courtship between two young nobles, Chiara explains.",
+   "ko": "키아라는 그 그림이 두 젊은 귀족의 구애를 담았다고 설명해요.",
+   "blank": "corteggiamento",
+   "src": "made"
+  }
+ ],
  "w|corteo": [
   {
    "text": "Dalla finestra del municipio Stefano guarda passare il corteo di Carnevale.",
@@ -22518,6 +22822,22 @@
    "en": "Laura waits in the so-called relaxation area, which is actually packed.",
    "ko": "라우라는 이른바 휴식 공간에서 기다리는데, 사실 사람이 가득해요.",
    "blank": "cosiddetta",
+   "src": "made"
+  }
+ ],
+ "w|cosmetico": [
+  {
+   "text": "Nello zaino di Matteo c'è un solo cosmetico: la crema solare.",
+   "en": "There's only one cosmetic in Matteo's backpack: sunscreen.",
+   "ko": "마테오의 배낭에 든 화장품은 선크림 하나뿐이에요.",
+   "blank": "cosmetico",
+   "src": "made"
+  },
+  {
+   "text": "Sara tiene in ufficio un cosmetico per ritoccare il trucco prima delle riunioni.",
+   "en": "Sara keeps a cosmetic in the office to touch up her makeup before meetings.",
+   "ko": "사라는 회의 전에 화장을 고치려고 사무실에 화장품을 하나 둬요.",
+   "blank": "cosmetico",
    "src": "made"
   }
  ],
@@ -22777,6 +23097,22 @@
    "en": "At Carnival I wear a nice costume.",
    "ko": "카니발 때 멋진 의상을 입어.",
    "blank": "costume"
+  }
+ ],
+ "w|cotoletta": [
+  {
+   "text": "Luca impana la cotoletta con uovo e pangrattato.",
+   "en": "Luca breads the cutlet with egg and breadcrumbs.",
+   "ko": "루카는 커틀릿에 달걀과 빵가루를 입혀요.",
+   "blank": "cotoletta",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta ai turisti che la cotoletta alla milanese ha una storia antica.",
+   "en": "Chiara tells tourists that the Milanese cutlet has an ancient history.",
+   "ko": "키아라는 관광객들에게 밀라노식 커틀릿의 역사가 오래됐다고 이야기해요.",
+   "blank": "cotoletta",
+   "src": "made"
   }
  ],
  "w|cotone": [
@@ -32357,6 +32693,22 @@
    "blank": "età"
   }
  ],
+ "w|eternamente": [
+  {
+   "text": "Luca sarà eternamente grato alla nonna per la sua ricetta del ragù.",
+   "en": "Luca will be eternally grateful to his grandmother for her ragù recipe.",
+   "ko": "루카는 라구 소스 비법을 알려 준 할머니께 영원히 감사할 거예요.",
+   "blank": "eternamente",
+   "src": "made"
+  },
+  {
+   "text": "Secondo Chiara la statua sembra sorridere eternamente ai visitatori.",
+   "en": "According to Chiara the statue seems to smile at visitors forever.",
+   "ko": "키아라는 그 조각상이 관람객들에게 영원히 미소 짓는 것 같다고 해요.",
+   "blank": "eternamente",
+   "src": "made"
+  }
+ ],
  "w|eterno": [
   {
    "text": "Promisero un amore eterno sotto le stelle.",
@@ -33799,6 +34151,22 @@
    "blank": "fegato"
   }
  ],
+ "w|felce": [
+  {
+   "text": "Matteo raccoglie una felce per mostrarla ai figli.",
+   "en": "Matteo picks a fern to show his children.",
+   "ko": "마테오는 아이들에게 보여 주려고 고사리 잎 하나를 꺾어요.",
+   "blank": "felce",
+   "src": "made"
+  },
+  {
+   "text": "Nella sala riunioni c'è una felce enorme che Sara cura con amore.",
+   "en": "In the meeting room there's a huge fern that Sara looks after lovingly.",
+   "ko": "회의실에는 사라가 정성껏 돌보는 커다란 고사리 화분이 있어요.",
+   "blank": "felce",
+   "src": "made"
+  }
+ ],
  "w|felice": [
   {
    "text": "Sono felice per te.",
@@ -34965,6 +35333,22 @@
    "src": "made"
   }
  ],
+ "w|fioraio": [
+  {
+   "text": "Per decorare la tavola, Luca passa dal fioraio e compra qualche margherita.",
+   "en": "To decorate the table, Luca stops by the florist and buys a few daisies.",
+   "ko": "식탁을 꾸미려고 루카는 꽃집에 들러 데이지 몇 송이를 사요.",
+   "blank": "fioraio",
+   "src": "made"
+  },
+  {
+   "text": "Ogni lunedì il fioraio porta a Chiara i fiori freschi per l'atrio del museo.",
+   "en": "Every Monday the florist brings Chiara fresh flowers for the museum lobby.",
+   "ko": "월요일마다 꽃집 주인이 박물관 로비에 둘 생화를 키아라에게 가져와요.",
+   "blank": "fioraio",
+   "src": "made"
+  }
+ ],
  "w|fiore": [
   {
    "text": "Ti ho portato un fiore rosso.",
@@ -35332,6 +35716,22 @@
    "en": "For the car journey Chiara buys a rosemary focaccia.",
    "ko": "키아라는 차로 가는 길에 먹을 로즈메리 포카치아를 사요.",
    "blank": "focaccia",
+   "src": "made"
+  }
+ ],
+ "w|foce": [
+  {
+   "text": "Matteo segue il fiume fino alla foce e lì si ferma per la notte.",
+   "en": "Matteo follows the river to its mouth and stops there for the night.",
+   "ko": "마테오는 강을 따라 하구까지 가서 거기서 밤을 보내요.",
+   "blank": "foce",
+   "src": "made"
+  },
+  {
+   "text": "L'ufficio di Sara si trova vicino alla foce del fiume, dove soffia sempre vento.",
+   "en": "Sara's office is near the river mouth, where the wind always blows.",
+   "ko": "사라의 사무실은 늘 바람이 부는 강 하구 근처에 있어요.",
+   "blank": "foce",
    "src": "made"
   }
  ],
@@ -35749,6 +36149,22 @@
    "src": "made"
   }
  ],
+ "w|fornaio": [
+  {
+   "text": "Ogni mattina Matteo scende al paese a prendere il pane fresco dal fornaio.",
+   "en": "Every morning Matteo goes down to the village to get fresh bread from the baker.",
+   "ko": "마테오는 아침마다 마을로 내려가 빵집에서 갓 구운 빵을 사 와요.",
+   "blank": "fornaio",
+   "src": "made"
+  },
+  {
+   "text": "Il fornaio accanto all'ufficio regala a Sara un pezzo di focaccia ogni venerdì.",
+   "en": "The baker next to the office gives Sara a piece of focaccia every Friday.",
+   "ko": "사무실 옆 빵집 주인은 금요일마다 사라에게 포카치아 한 조각을 줘요.",
+   "blank": "fornaio",
+   "src": "made"
+  }
+ ],
  "w|fornello": [
   {
    "text": "Nella cucina nuova Andrea ha messo un fornello a gas con quattro fuochi.",
@@ -35961,6 +36377,22 @@
    "src": "made"
   }
  ],
+ "w|foschia": [
+  {
+   "text": "Nella foschia del mattino Matteo distingue appena il profilo del lago.",
+   "en": "In the morning haze Matteo can barely make out the outline of the lake.",
+   "ko": "아침 안개 속에서 마테오는 호수의 윤곽을 겨우 알아봐요.",
+   "blank": "foschia",
+   "src": "made"
+  },
+  {
+   "text": "Dalla finestra dell'ufficio Sara vede la città immersa nella foschia.",
+   "en": "From the office window Sara sees the city wrapped in haze.",
+   "ko": "사라는 사무실 창문으로 뿌연 안개에 잠긴 도시를 봐요.",
+   "blank": "foschia",
+   "src": "made"
+  }
+ ],
  "w|fossa": [
   {
    "text": "I bambini hanno scavato una fossa nella sabbia, e Davide ci è caduto dentro.",
@@ -35989,6 +36421,38 @@
    "en": "Will you send me the photo?",
    "ko": "그 사진 보내 줄래?",
    "blank": "foto"
+  }
+ ],
+ "w|fotocopia": [
+  {
+   "text": "Matteo porta con sé una fotocopia della cartina, nel caso perda quella originale.",
+   "en": "Matteo carries a photocopy of the map in case he loses the original.",
+   "ko": "마테오는 원본을 잃어버릴 경우를 대비해 지도 복사본을 챙겨 가요.",
+   "blank": "fotocopia",
+   "src": "made"
+  },
+  {
+   "text": "Sara fa una fotocopia del contratto prima di spedire l'originale.",
+   "en": "Sara makes a photocopy of the contract before sending the original.",
+   "ko": "사라는 원본을 보내기 전에 계약서를 복사해 둬요.",
+   "blank": "fotocopia",
+   "src": "made"
+  }
+ ],
+ "w|fotocopiatrice": [
+  {
+   "text": "Lo chef chiede a Luca di fare le copie delle ricette con la fotocopiatrice della scuola.",
+   "en": "The chef asks Luca to copy the recipes on the school's photocopier.",
+   "ko": "셰프는 루카에게 학원 복사기로 레시피를 복사해 달라고 해요.",
+   "blank": "fotocopiatrice",
+   "src": "made"
+  },
+  {
+   "text": "Nell'ufficio del museo la fotocopiatrice si inceppa e Chiara chiama il tecnico.",
+   "en": "In the museum office the photocopier jams and Chiara calls the technician.",
+   "ko": "박물관 사무실 복사기에 종이가 걸려서 키아라는 수리 기사를 불러요.",
+   "blank": "fotocopiatrice",
+   "src": "made"
   }
  ],
  "w|fotografare": [
@@ -39157,6 +39621,22 @@
    "src": "made"
   }
  ],
+ "w|gnocchi": [
+  {
+   "text": "Luca prepara gli gnocchi con le patate vecchie, come consiglia lo chef.",
+   "en": "Luca makes the gnocchi with old potatoes, as the chef recommends.",
+   "ko": "루카는 셰프 말대로 오래된 감자로 뇨키를 만들어요.",
+   "blank": "gnocchi",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il turno Chiara va a cena e ordina gli gnocchi al pomodoro.",
+   "en": "After her shift Chiara goes to dinner and orders gnocchi with tomato.",
+   "ko": "근무가 끝나고 키아라는 저녁을 먹으러 가서 토마토 뇨키를 시켜요.",
+   "blank": "gnocchi",
+   "src": "made"
+  }
+ ],
  "w|goccia": [
   {
    "text": "Una goccia di pioggia è caduta sul naso.",
@@ -39637,6 +40117,22 @@
    "src": "made"
   }
  ],
+ "w|grandine": [
+  {
+   "text": "La grandine ammacca la padella che Matteo aveva lasciato fuori.",
+   "en": "The hail dents the frying pan Matteo had left outside.",
+   "ko": "우박이 쏟아져 마테오가 밖에 둔 프라이팬이 찌그러져요.",
+   "blank": "grandine",
+   "src": "made"
+  },
+  {
+   "text": "Durante la riunione si sente la grandine battere sui vetri, e Sara perde il filo.",
+   "en": "During the meeting you can hear hail beating on the windows, and Sara loses her train of thought.",
+   "ko": "회의 중에 우박이 창문을 두드리는 소리에 사라는 하던 말을 잊어버려요.",
+   "blank": "grandine",
+   "src": "made"
+  }
+ ],
  "w|grandioso": [
   {
    "text": "Lo spettacolo è stato davvero grandioso.",
@@ -40032,6 +40528,22 @@
    "en": "Sara buys an emerald-green brooch shaped like a cricket.",
    "ko": "사라는 에메랄드빛 귀뚜라미 모양 브로치를 사요.",
    "blank": "grillo",
+   "src": "made"
+  }
+ ],
+ "w|grissino": [
+  {
+   "text": "Luca arrotola ogni grissino a mano e lo spolvera di sesamo.",
+   "en": "Luca rolls each breadstick by hand and sprinkles it with sesame.",
+   "ko": "루카는 그리시니를 하나하나 손으로 말아 참깨를 뿌려요.",
+   "blank": "grissino",
+   "src": "made"
+  },
+  {
+   "text": "Un bambino lascia cadere un grissino nella sala delle sculture e Chiara lo raccoglie.",
+   "en": "A child drops a breadstick in the sculpture room and Chiara picks it up.",
+   "ko": "아이가 조각 전시실에 그리시니를 떨어뜨리자 키아라가 주워요.",
+   "blank": "grissino",
    "src": "made"
   }
  ],
@@ -41187,6 +41699,22 @@
    "src": "made"
   }
  ],
+ "w|immigrare": [
+  {
+   "text": "Al campeggio Matteo conosce una famiglia che ha deciso di immigrare in Canada.",
+   "en": "At the campsite Matteo meets a family that has decided to emigrate to Canada.",
+   "ko": "캠핑장에서 마테오는 캐나다로 이주하기로 한 가족을 만나요.",
+   "blank": "immigrare",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo collega di Sara ha dovuto immigrare da solo a vent'anni.",
+   "en": "Sara's new colleague had to immigrate on his own at twenty.",
+   "ko": "사라의 새 동료는 스무 살에 혼자 이민을 와야 했어요.",
+   "blank": "immigrare",
+   "src": "made"
+  }
+ ],
  "w|immigrato": [
   {
    "text": "Il nonno di Marco racconta in classe la sua vita da immigrato.",
@@ -41484,6 +42012,22 @@
    "en": "In the queue at the cheese stall, an impatient man huffs behind Chiara.",
    "ko": "치즈 가게 줄에서 성미 급한 아저씨가 키아라 뒤에서 한숨을 쉬어요.",
    "blank": "impaziente",
+   "src": "made"
+  }
+ ],
+ "w|impazienza": [
+  {
+   "text": "Luca apre il forno troppe volte per l'impazienza e la torta si sgonfia.",
+   "en": "Luca opens the oven too many times out of impatience and the cake collapses.",
+   "ko": "루카는 조바심에 오븐을 너무 자주 여는 바람에 케이크가 꺼져요.",
+   "blank": "impazienza",
+   "src": "made"
+  },
+  {
+   "text": "Chiara aspetta con impazienza l'apertura della mostra sugli impressionisti.",
+   "en": "Chiara is waiting impatiently for the opening of the Impressionist exhibition.",
+   "ko": "키아라는 인상파 전시회가 열리기를 손꼽아 기다려요.",
+   "blank": "impazienza",
    "src": "made"
   }
  ],
@@ -43353,6 +43897,22 @@
    "blank": "indizio"
   }
  ],
+ "w|indole": [
+  {
+   "text": "Lo chef dice che Luca ha un'indole curiosa e prova sempre ingredienti nuovi.",
+   "en": "The chef says Luca has a curious nature and always tries new ingredients.",
+   "ko": "셰프는 루카가 호기심 많은 성격이라 늘 새 재료를 써 본다고 해요.",
+   "blank": "indole",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che il pittore aveva un'indole malinconica.",
+   "en": "Chiara says the painter had a melancholy temperament.",
+   "ko": "키아라는 그 화가가 우울한 기질이었다고 이야기해요.",
+   "blank": "indole",
+   "src": "made"
+  }
+ ],
  "w|indolore": [
   {
    "text": "Il dentista promette a Paolo che l'otturazione sarà del tutto indolore.",
@@ -43395,6 +43955,22 @@
    "en": "I can't guess the answer.",
    "ko": "답을 맞힐 수가 없어.",
    "blank": "indovinare"
+  }
+ ],
+ "w|indulgente": [
+  {
+   "text": "Lo chef è indulgente con Luca quando la salsa gli si attacca alla pentola.",
+   "en": "The chef is lenient with Luca when the sauce sticks to his pan.",
+   "ko": "루카의 소스가 냄비에 눌어붙어도 셰프는 너그럽게 넘어가요.",
+   "blank": "indulgente",
+   "src": "made"
+  },
+  {
+   "text": "Chiara è indulgente con i bambini che toccano le statue per sbaglio.",
+   "en": "Chiara is lenient with children who touch the statues by mistake.",
+   "ko": "키아라는 실수로 조각상을 만지는 아이들에게 너그러워요.",
+   "blank": "indulgente",
+   "src": "made"
   }
  ],
  "w|indurre": [
@@ -48249,6 +48825,22 @@
    "blank": "legno"
   }
  ],
+ "w|legume": [
+  {
+   "text": "Lo chef spiega a Luca che ogni legume va cotto per un tempo diverso.",
+   "en": "The chef explains to Luca that each legume has to be cooked for a different time.",
+   "ko": "셰프는 루카에게 콩 종류마다 익히는 시간이 다르다고 설명해요.",
+   "blank": "legume",
+   "src": "made"
+  },
+  {
+   "text": "Nella sala dell'agricoltura ogni legume è esposto in un barattolo di vetro, mostra Chiara.",
+   "en": "In the agriculture room every legume is displayed in a glass jar, Chiara shows.",
+   "ko": "키아라는 농업 전시실에 콩 종류마다 유리병에 담겨 전시된 걸 보여 줘요.",
+   "blank": "legume",
+   "src": "made"
+  }
+ ],
  "w|lei": [
   {
    "text": "Chiedilo a lei.",
@@ -48275,6 +48867,22 @@
    "en": "The car moved slowly through traffic.",
    "ko": "차가 교통 체증 속에서 천천히 나아갔어.",
    "blank": "lentamente"
+  }
+ ],
+ "w|lenticchia": [
+  {
+   "text": "Luca assaggia la zuppa per controllare che non sia rimasta nemmeno una lenticchia dura.",
+   "en": "Luca tastes the soup to check that not a single lentil is still hard.",
+   "ko": "루카는 수프를 맛보며 덜 익은 렌틸콩이 하나도 없는지 확인해요.",
+   "blank": "lenticchia",
+   "src": "made"
+  },
+  {
+   "text": "Nella teca Chiara indica una lenticchia carbonizzata trovata in uno scavo romano.",
+   "en": "In the display case Chiara points to a charred lentil found at a Roman dig.",
+   "ko": "키아라는 진열장 안에서 로마 유적 발굴지에서 나온 탄 렌틸콩을 가리켜요.",
+   "blank": "lenticchia",
+   "src": "made"
   }
  ],
  "w|lento": [
@@ -48772,6 +49380,22 @@
    "en": "Elena adds slightly more sugar to the lemonade because the kids find it sour.",
    "ko": "아이들이 시다고 해서 엘레나는 레모네이드에 설탕을 조금 더 넣어요.",
    "blank": "lievemente",
+   "src": "made"
+  }
+ ],
+ "w|lievito": [
+  {
+   "text": "Luca scioglie il lievito nell'acqua tiepida per l'impasto della pizza.",
+   "en": "Luca dissolves the yeast in warm water for the pizza dough.",
+   "ko": "루카는 피자 반죽을 위해 미지근한 물에 효모를 녹여요.",
+   "blank": "lievito",
+   "src": "made"
+  },
+  {
+   "text": "Nel laboratorio per bambini Chiara mostra come il lievito fa crescere il pane.",
+   "en": "In the children's workshop Chiara shows how yeast makes bread rise.",
+   "ko": "어린이 체험실에서 키아라는 효모가 빵을 어떻게 부풀게 하는지 보여 줘요.",
+   "blank": "lievito",
    "src": "made"
   }
  ],
@@ -51327,6 +51951,22 @@
    "src": "made"
   }
  ],
+ "w|margarina": [
+  {
+   "text": "Luca sostituisce il burro con la margarina in una ricetta per un amico allergico.",
+   "en": "Luca replaces butter with margarine in a recipe for an allergic friend.",
+   "ko": "루카는 알레르기가 있는 친구를 위해 레시피의 버터를 마가린으로 바꿔요.",
+   "blank": "margarina",
+   "src": "made"
+  },
+  {
+   "text": "Una vecchia pubblicità della margarina è appesa nella sala del design, nota Chiara.",
+   "en": "An old margarine ad hangs in the design room, Chiara notices.",
+   "ko": "키아라는 디자인 전시실에 걸린 옛 마가린 광고를 발견해요.",
+   "blank": "margarina",
+   "src": "made"
+  }
+ ],
  "w|margherita": [
   {
    "text": "Sulla scrivania di Davide c'è un vasetto con una margherita.",
@@ -52879,6 +53519,22 @@
    "blank": "merito"
   }
  ],
+ "w|merlo": [
+  {
+   "text": "All'alba un merlo canta sopra la tenda di Matteo.",
+   "en": "At dawn a blackbird sings above Matteo's tent.",
+   "ko": "새벽에 지빠귀 한 마리가 마테오의 텐트 위에서 노래해요.",
+   "blank": "merlo",
+   "src": "made"
+  },
+  {
+   "text": "Un merlo si posa sul davanzale dell'ufficio e Sara smette di scrivere per guardarlo.",
+   "en": "A blackbird lands on the office windowsill and Sara stops typing to watch it.",
+   "ko": "지빠귀 한 마리가 사무실 창턱에 앉자 사라는 타자를 멈추고 쳐다봐요.",
+   "blank": "merlo",
+   "src": "made"
+  }
+ ],
  "w|merluzzo": [
   {
    "text": "Luca cucina il merluzzo con olive e pomodorini.",
@@ -53627,6 +54283,22 @@
    "src": "made"
   }
  ],
+ "w|minestrone": [
+  {
+   "text": "Lo chef mostra a Luca come rendere il minestrone più denso con un po' di riso.",
+   "en": "The chef shows Luca how to make the minestrone thicker with a little rice.",
+   "ko": "셰프는 루카에게 쌀을 조금 넣어 미네스트로네를 더 걸쭉하게 만드는 법을 보여 줘요.",
+   "blank": "minestrone",
+   "src": "made"
+  },
+  {
+   "text": "D'inverno Chiara si porta al museo un termos di minestrone.",
+   "en": "In winter Chiara brings a thermos of minestrone to the museum.",
+   "ko": "겨울이면 키아라는 박물관에 미네스트로네를 보온병에 담아 와요.",
+   "blank": "minestrone",
+   "src": "made"
+  }
+ ],
  "w|miniera": [
   {
    "text": "Paolo è andato in Sardegna a raccontare la chiusura di una vecchia miniera.",
@@ -54261,6 +54933,22 @@
    "en": "Modern design is very simple.",
    "ko": "모던 디자인은 아주 단순해.",
    "blank": "moderno"
+  }
+ ],
+ "w|modestia": [
+  {
+   "text": "Lo chef riceve i complimenti con modestia e dice a Luca che il segreto è la pazienza.",
+   "en": "The chef accepts the compliments modestly and tells Luca the secret is patience.",
+   "ko": "셰프는 칭찬을 겸손하게 받으며 루카에게 비결은 인내라고 말해요.",
+   "blank": "modestia",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ammira la modestia del restauratore, che non vuole il suo nome sulla targa.",
+   "en": "Chiara admires the modesty of the restorer, who doesn't want his name on the plaque.",
+   "ko": "키아라는 명판에 이름을 넣지 말라는 복원가의 겸손함에 감탄해요.",
+   "blank": "modestia",
+   "src": "made"
   }
  ],
  "w|modesto": [
@@ -56359,6 +57047,22 @@
    "src": "made"
   }
  ],
+ "w|nevicata": [
+  {
+   "text": "Matteo si sveglia dopo una nevicata inattesa e trova la tenda tutta bianca.",
+   "en": "Matteo wakes up after an unexpected snowfall and finds the tent all white.",
+   "ko": "뜻밖의 눈이 내린 뒤 깨어난 마테오는 텐트가 온통 하얀 걸 봐요.",
+   "blank": "nevicata",
+   "src": "made"
+  },
+  {
+   "text": "Dopo la nevicata della notte solo Sara e due colleghi arrivano in ufficio.",
+   "en": "After the night's snowfall only Sara and two colleagues make it to the office.",
+   "ko": "밤새 눈이 내려서 사라와 동료 두 명만 출근해요.",
+   "blank": "nevicata",
+   "src": "made"
+  }
+ ],
  "w|nido": [
   {
    "text": "Sotto il tetto della casa di Davide le rondini hanno fatto il nido.",
@@ -56584,6 +57288,22 @@
    "en": "Chiara tells her friend that she has decided to rent a boat for the summer.",
    "ko": "키아라는 친구에게 여름 동안 배를 빌리기로 했다고 이야기해요.",
    "blank": "noleggiare",
+   "src": "made"
+  }
+ ],
+ "w|noleggio": [
+  {
+   "text": "La scuola di cucina offre a Luca il noleggio dei coltelli professionali.",
+   "en": "The cooking school offers Luca rental of professional knives.",
+   "ko": "요리 학원은 루카에게 전문가용 칼을 빌려줘요.",
+   "blank": "noleggio",
+   "src": "made"
+  },
+  {
+   "text": "All'ingresso Chiara gestisce il noleggio delle audioguide.",
+   "en": "At the entrance Chiara handles the audio guide rental.",
+   "ko": "입구에서 키아라는 오디오 가이드 대여를 맡고 있어요.",
+   "blank": "noleggio",
    "src": "made"
   }
  ],
@@ -57445,6 +58165,22 @@
    "src": "made"
   }
  ],
+ "w|obbligazione": [
+  {
+   "text": "Tra un impasto e l'altro, Luca racconta che lavora in banca e vende ogni tipo di obbligazione.",
+   "en": "Between one dough and the next, Luca says he works at a bank selling every kind of bond.",
+   "ko": "반죽하는 틈틈이 루카는 은행에서 온갖 채권을 판다고 이야기해요.",
+   "blank": "obbligazione",
+   "src": "made"
+  },
+  {
+   "text": "Nella sala della finanza Chiara mostra la prima obbligazione emessa dalla città.",
+   "en": "In the finance room Chiara shows the first bond issued by the city.",
+   "ko": "금융 전시실에서 키아라는 도시가 처음 발행한 채권을 보여 줘요.",
+   "blank": "obbligazione",
+   "src": "made"
+  }
+ ],
  "w|obbligo": [
   {
    "text": "Per i lavori in casa Davide ha l'obbligo di chiedere un permesso al comune.",
@@ -58084,6 +58820,22 @@
    "en": "For lunch Giulia brought bread, cheese and a tub of olives.",
    "ko": "점심으로 줄리아는 빵, 치즈, 올리브 한 통을 챙겨 왔어요.",
    "blank": "olive",
+   "src": "made"
+  }
+ ],
+ "w|olivo": [
+  {
+   "text": "Matteo stende il telo all'ombra di un vecchio olivo.",
+   "en": "Matteo spreads the tarp in the shade of an old olive tree.",
+   "ko": "마테오는 오래된 올리브나무 그늘에 돗자리를 펴요.",
+   "blank": "olivo",
+   "src": "made"
+  },
+  {
+   "text": "Il logo dell'azienda di Sara è un ramo di olivo stilizzato.",
+   "en": "The logo of Sara's company is a stylized olive branch.",
+   "ko": "사라 회사의 로고는 올리브 가지를 단순하게 그린 거예요.",
+   "blank": "olivo",
    "src": "made"
   }
  ],
@@ -59557,6 +60309,22 @@
    "blank": "ostaggio"
   }
  ],
+ "w|ostello": [
+  {
+   "text": "Quando piove troppo, Matteo lascia la tenda e dorme in un ostello del paese.",
+   "en": "When it rains too much, Matteo leaves the tent and sleeps in a hostel in the village.",
+   "ko": "비가 너무 많이 오면 마테오는 텐트를 두고 마을 호스텔에서 자요.",
+   "blank": "ostello",
+   "src": "made"
+  },
+  {
+   "text": "Per il convegno Sara prenota un ostello economico vicino alla stazione.",
+   "en": "For the conference Sara books a cheap hostel near the station.",
+   "ko": "사라는 학회 때문에 역 근처의 싼 호스텔을 예약해요.",
+   "blank": "ostello",
+   "src": "made"
+  }
+ ],
  "w|osteria": [
   {
    "text": "Lo chef racconta a Luca di aver lavorato vent'anni in un'osteria di campagna.",
@@ -59647,6 +60415,22 @@
    "en": "She got the position she wanted.",
    "ko": "원하던 자리를 얻었어.",
    "blank": "ottenuto"
+  }
+ ],
+ "w|ottico": [
+  {
+   "text": "Prima di partire Matteo passa dall'ottico a comprare occhiali da sole nuovi.",
+   "en": "Before leaving Matteo stops by the optician's to buy new sunglasses.",
+   "ko": "떠나기 전에 마테오는 안경점에 들러 새 선글라스를 사요.",
+   "blank": "ottico",
+   "src": "made"
+  },
+  {
+   "text": "Dopo ore al computer Sara va dall'ottico per un controllo della vista.",
+   "en": "After hours at the computer Sara goes to the optician for an eye test.",
+   "ko": "몇 시간씩 컴퓨터를 본 사라는 시력 검사를 받으러 안경점에 가요.",
+   "blank": "ottico",
+   "src": "made"
   }
  ],
  "w|ottimismo": [
@@ -60053,6 +60837,22 @@
    "en": "Have you already paid the bill?",
    "ko": "계산은 이미 했어?",
    "blank": "pagato"
+  }
+ ],
+ "w|pagella": [
+  {
+   "text": "Il figlio di Matteo ha avuto una bella pagella e il campeggio è il suo premio.",
+   "en": "Matteo's son got a good school report and the camping trip is his reward.",
+   "ko": "마테오의 아들이 성적표를 잘 받아 와서 캠핑이 상이에요.",
+   "blank": "pagella",
+   "src": "made"
+  },
+  {
+   "text": "Durante la pausa Sara firma online la pagella del figlio.",
+   "en": "During her break Sara signs her son's school report online.",
+   "ko": "쉬는 시간에 사라는 온라인으로 아들 성적표에 서명해요.",
+   "blank": "pagella",
+   "src": "made"
   }
  ],
  "w|pagina": [
@@ -61083,6 +61883,22 @@
    "blank": "parlare"
   }
  ],
+ "w|parmigiano": [
+  {
+   "text": "Luca grattugia il parmigiano direttamente sul piatto.",
+   "en": "Luca grates the parmesan directly onto the plate.",
+   "ko": "루카는 접시 위에 바로 파르미지아노 치즈를 갈아 올려요.",
+   "blank": "parmigiano",
+   "src": "made"
+  },
+  {
+   "text": "Chiara spiega come si stagionava il parmigiano nell'Ottocento.",
+   "en": "Chiara explains how parmesan was aged in the nineteenth century.",
+   "ko": "키아라는 십구 세기에 파르미지아노 치즈를 어떻게 숙성시켰는지 설명해요.",
+   "blank": "parmigiano",
+   "src": "made"
+  }
+ ],
  "w|parola": [
   {
    "text": "Ti do la mia parola.",
@@ -62055,6 +62871,22 @@
    "src": "made"
   }
  ],
+ "w|pecorino": [
+  {
+   "text": "Sulla pasta cacio e pepe Luca usa solo pecorino romano.",
+   "en": "On the cacio e pepe pasta Luca uses only pecorino romano.",
+   "ko": "루카는 카초 에 페페 파스타에 페코리노 로마노만 써요.",
+   "blank": "pecorino",
+   "src": "made"
+  },
+  {
+   "text": "La mostra sulla pastorizia spiega come i pastori producevano il pecorino.",
+   "en": "The exhibition on sheep farming explains how shepherds made pecorino.",
+   "ko": "목축 전시는 양치기들이 페코리노 치즈를 어떻게 만들었는지 설명해요.",
+   "blank": "pecorino",
+   "src": "made"
+  }
+ ],
  "w|peculiare": [
   {
    "text": "Il dialetto del paese ha un accento peculiare che Matteo riconosce subito.",
@@ -62328,6 +63160,22 @@
    "en": "The bass is so loud it goes right through Sara's chest.",
    "ko": "베이스 소리가 너무 커서 사라의 가슴까지 파고들어요.",
    "blank": "penetrare",
+   "src": "made"
+  }
+ ],
+ "w|penisola": [
+  {
+   "text": "Matteo vuole attraversare la penisola in bicicletta campeggiando ogni notte in un posto diverso.",
+   "en": "Matteo wants to cross the peninsula by bike, camping in a different place each night.",
+   "ko": "마테오는 매일 밤 다른 곳에서 캠핑하며 자전거로 반도를 가로지르고 싶어 해요.",
+   "blank": "penisola",
+   "src": "made"
+  },
+  {
+   "text": "L'azienda di Sara ha clienti in tutta la penisola.",
+   "en": "Sara's company has clients all over the peninsula.",
+   "ko": "사라의 회사는 반도 전역에 고객이 있어요.",
+   "blank": "penisola",
    "src": "made"
   }
  ],
@@ -64067,6 +64915,22 @@
    "blank": "pietà"
   }
  ],
+ "w|pietanza": [
+  {
+   "text": "Lo chef chiede a Luca di descrivere la pietanza prima di servirla.",
+   "en": "The chef asks Luca to describe the dish before serving it.",
+   "ko": "셰프는 루카에게 음식을 내기 전에 설명해 보라고 해요.",
+   "blank": "pietanza",
+   "src": "made"
+  },
+  {
+   "text": "Nella mostra sul Rinascimento Chiara indica una pietanza servita ai banchetti dei duchi.",
+   "en": "In the Renaissance exhibition Chiara points to a dish served at the dukes' banquets.",
+   "ko": "르네상스 전시에서 키아라는 공작들의 연회에 나오던 요리를 가리켜요.",
+   "blank": "pietanza",
+   "src": "made"
+  }
+ ],
  "w|pietra": [
   {
    "text": "Ha inciampato in una pietra sul sentiero.",
@@ -64250,6 +65114,22 @@
    "en": "The pliers are missing from Giulia's tool kit.",
    "ko": "줄리아의 공구 세트에 펜치가 빠져 있어요.",
    "blank": "pinza",
+   "src": "made"
+  }
+ ],
+ "w|pioggerella": [
+  {
+   "text": "Comincia una pioggerella leggera e Matteo copre la legna con un telo.",
+   "en": "A light drizzle starts and Matteo covers the firewood with a tarp.",
+   "ko": "보슬비가 내리기 시작하자 마테오는 장작을 방수포로 덮어요.",
+   "blank": "pioggerella",
+   "src": "made"
+  },
+  {
+   "text": "Fuori cade una pioggerella fine e Sara decide di pranzare alla scrivania.",
+   "en": "A fine drizzle is falling outside, so Sara decides to have lunch at her desk.",
+   "ko": "밖에 보슬비가 내려서 사라는 책상에서 점심을 먹기로 해요.",
+   "blank": "pioggerella",
    "src": "made"
   }
  ],
@@ -64798,6 +65678,22 @@
    "en": "In January a wave of polar cold arrives, and Elena lights the fireplace.",
    "ko": "1월에 극지방 한파가 닥치자 엘레나는 벽난로에 불을 피워요.",
    "blank": "polare",
+   "src": "made"
+  }
+ ],
+ "w|polenta": [
+  {
+   "text": "Oggi Luca impara a girare la polenta senza farla attaccare al paiolo.",
+   "en": "Today Luca learns to stir the polenta without letting it stick to the pot.",
+   "ko": "오늘 루카는 냄비에 눌어붙지 않게 폴렌타를 젓는 법을 배워요.",
+   "blank": "polenta",
+   "src": "made"
+  },
+  {
+   "text": "Nella sala della cucina contadina Chiara mostra il paiolo per la polenta.",
+   "en": "In the peasant cooking room Chiara shows the pot used for polenta.",
+   "ko": "농가 부엌 전시실에서 키아라는 폴렌타를 끓이던 냄비를 보여 줘요.",
+   "blank": "polenta",
    "src": "made"
   }
  ],
@@ -68161,6 +69057,22 @@
    "blank": "promesso"
   }
  ],
+ "w|promontorio": [
+  {
+   "text": "Matteo campeggia su un promontorio da cui si vede il tramonto sul mare.",
+   "en": "Matteo camps on a headland from which you can see the sunset over the sea.",
+   "ko": "마테오는 바다 위 노을이 보이는 곶에서 캠핑해요.",
+   "blank": "promontorio",
+   "src": "made"
+  },
+  {
+   "text": "Sara sogna una casa sul promontorio, lontano dalle riunioni.",
+   "en": "Sara dreams of a house on the headland, far from meetings.",
+   "ko": "사라는 회의에서 멀리 떨어진 곶 위의 집을 꿈꿔요.",
+   "blank": "promontorio",
+   "src": "made"
+  }
+ ],
  "w|promozione": [
   {
    "text": "Ha ricevuto una promozione al lavoro.",
@@ -70953,6 +71865,22 @@
    "src": "made"
   }
  ],
+ "w|ravioli": [
+  {
+   "text": "Luca chiude i ravioli premendo bene i bordi con una forchetta.",
+   "en": "Luca seals the ravioli by pressing the edges firmly with a fork.",
+   "ko": "루카는 포크로 가장자리를 꾹꾹 눌러 라비올리를 봉해요.",
+   "blank": "ravioli",
+   "src": "made"
+  },
+  {
+   "text": "Alla mensa del museo Chiara pranza con un piatto di ravioli al burro.",
+   "en": "At the museum canteen Chiara has a plate of butter ravioli for lunch.",
+   "ko": "박물관 구내식당에서 키아라는 버터 라비올리로 점심을 먹어요.",
+   "blank": "ravioli",
+   "src": "made"
+  }
+ ],
  "w|raviolo": [
   {
    "text": "Luca chiude ogni raviolo premendo i bordi con la forchetta.",
@@ -71266,6 +72194,22 @@
    "en": "Chiara is developing a program for hotel receptions.",
    "ko": "키아라는 호텔 프런트용 프로그램을 개발해요.",
    "blank": "reception",
+   "src": "made"
+  }
+ ],
+ "w|recessione": [
+  {
+   "text": "Il gestore del campeggio racconta a Matteo che con la recessione vengono meno turisti stranieri.",
+   "en": "The campsite owner tells Matteo that with the recession fewer foreign tourists come.",
+   "ko": "캠핑장 주인은 마테오에게 경기 침체로 외국인 관광객이 줄었다고 이야기해요.",
+   "blank": "recessione",
+   "src": "made"
+  },
+  {
+   "text": "Durante la recessione l'ufficio di Sara ha congelato le assunzioni.",
+   "en": "During the recession Sara's office froze hiring.",
+   "ko": "경기 침체 동안 사라의 회사는 채용을 멈췄어요.",
+   "blank": "recessione",
    "src": "made"
   }
  ],
@@ -73252,6 +74196,22 @@
    "en": "To put the wardrobe up Sara has to rebuild it all following photos taken before dismantling it.",
    "ko": "옷장을 조립하려면 사라는 분해하기 전에 찍어 둔 사진을 보며 전부 다시 맞춰야 해요.",
    "blank": "ricostruire",
+   "src": "made"
+  }
+ ],
+ "w|ricotta": [
+  {
+   "text": "Luca riempie i cannelloni con ricotta e spinaci.",
+   "en": "Luca fills the cannelloni with ricotta and spinach.",
+   "ko": "루카는 카넬로니에 리코타 치즈와 시금치를 채워요.",
+   "blank": "ricotta",
+   "src": "made"
+  },
+  {
+   "text": "Chiara mostra un quadro dove una contadina porta una cesta di ricotta fresca.",
+   "en": "Chiara shows a painting in which a peasant woman carries a basket of fresh ricotta.",
+   "ko": "키아라는 농부 아낙이 신선한 리코타 바구니를 든 그림을 보여 줘요.",
+   "blank": "ricotta",
    "src": "made"
   }
  ],
@@ -77045,6 +78005,22 @@
    "blank": "sapore"
   }
  ],
+ "w|saporito": [
+  {
+   "text": "Il sugo di Luca è saporito, ma lo chef dice che ha troppo sale.",
+   "en": "Luca's sauce is tasty, but the chef says it has too much salt.",
+   "ko": "루카의 소스는 맛있지만 셰프는 소금이 너무 많다고 해요.",
+   "blank": "saporito",
+   "src": "made"
+  },
+  {
+   "text": "Al bar del museo Chiara trova il panino saporito ma troppo caro.",
+   "en": "At the museum café Chiara finds the sandwich tasty but too expensive.",
+   "ko": "박물관 카페에서 키아라는 샌드위치가 맛있지만 너무 비싸다고 생각해요.",
+   "blank": "saporito",
+   "src": "made"
+  }
+ ],
  "w|sarcasmo": [
   {
    "text": "La sorella ha preso la battuta di Simone per sarcasmo, e si è offesa.",
@@ -77154,6 +78130,22 @@
    "en": "Elena installed a dish to get satellite TV.",
    "ko": "엘레나는 위성 TV를 보려고 접시 안테나를 달았어요.",
    "blank": "satellite",
+   "src": "made"
+  }
+ ],
+ "w|savana": [
+  {
+   "text": "Intorno al fuoco Matteo racconta del suo viaggio nella savana africana.",
+   "en": "Around the fire Matteo talks about his trip to the African savanna.",
+   "ko": "모닥불 가에서 마테오는 아프리카 사바나 여행 이야기를 해요.",
+   "blank": "savana",
+   "src": "made"
+  },
+  {
+   "text": "Sara guarda un documentario sulla savana durante la pausa pranzo.",
+   "en": "Sara watches a documentary on the savanna during her lunch break.",
+   "ko": "사라는 점심시간에 사바나 다큐멘터리를 봐요.",
+   "blank": "savana",
    "src": "made"
   }
  ],
@@ -78417,6 +79409,22 @@
    "src": "made"
   }
  ],
+ "w|sciogliersi": [
+  {
+   "text": "Matteo mette il burro all'ombra perché non cominci a sciogliersi.",
+   "en": "Matteo puts the butter in the shade so it doesn't start to melt.",
+   "ko": "마테오는 버터가 녹지 않도록 그늘에 둬요.",
+   "blank": "sciogliersi",
+   "src": "made"
+  },
+  {
+   "text": "Il caffè di Sara è freddo e lo zucchero non riesce a sciogliersi.",
+   "en": "Sara's coffee is cold and the sugar won't dissolve.",
+   "ko": "사라의 커피가 식어서 설탕이 녹지 않아요.",
+   "blank": "sciogliersi",
+   "src": "made"
+  }
+ ],
  "w|sciopero": [
   {
    "text": "Per lo sciopero dei trasporti metà della squadra di Andrea è arrivata tardi.",
@@ -78661,6 +79669,22 @@
    "en": "The document disappeared from the desk.",
    "ko": "서류가 책상에서 사라졌어.",
    "blank": "scomparso"
+  }
+ ],
+ "w|scompartimento": [
+  {
+   "text": "Luca tiene le spezie in un barattolo con uno scompartimento per ogni tipo.",
+   "en": "Luca keeps his spices in a jar with a compartment for each kind.",
+   "ko": "루카는 종류마다 칸이 나뉜 통에 향신료를 담아 둬요.",
+   "blank": "scompartimento",
+   "src": "made"
+  },
+  {
+   "text": "Chiara mostra il vecchio scompartimento di un treno a vapore ricostruito nel museo.",
+   "en": "Chiara shows the old compartment of a steam train rebuilt in the museum.",
+   "ko": "키아라는 박물관에 복원해 놓은 증기 기차의 옛 객실을 보여 줘요.",
+   "blank": "scompartimento",
+   "src": "made"
   }
  ],
  "w|sconfiggere": [
@@ -79511,6 +80535,22 @@
    "en": "It's raining today, according to the forecast.",
    "ko": "오늘은 비가 온대, 예보대로면.",
    "blank": "secondo"
+  }
+ ],
+ "w|sedano": [
+  {
+   "text": "Per il soffritto Luca taglia cipolla, carota e sedano a cubetti.",
+   "en": "For the soffritto Luca dices onion, carrot and celery.",
+   "ko": "소프리토를 만들려고 루카는 양파와 당근, 셀러리를 깍둑썰기해요.",
+   "blank": "sedano",
+   "src": "made"
+  },
+  {
+   "text": "In una natura morta Chiara fa notare un gambo di sedano dipinto con grande cura.",
+   "en": "In a still life Chiara points out a celery stalk painted with great care.",
+   "ko": "정물화 앞에서 키아라는 정성껏 그린 셀러리 줄기를 짚어 줘요.",
+   "blank": "sedano",
+   "src": "made"
   }
  ],
  "w|sedativo": [
@@ -83235,6 +84275,22 @@
    "blank": "sopravvissuti"
   }
  ],
+ "w|sorbetto": [
+  {
+   "text": "Per pulire il palato tra le portate, Luca prepara un sorbetto al limone.",
+   "en": "To cleanse the palate between courses, Luca makes a lemon sorbet.",
+   "ko": "코스 사이에 입가심하라고 루카는 레몬 소르베를 만들어요.",
+   "blank": "sorbetto",
+   "src": "made"
+  },
+  {
+   "text": "Chiara spiega che il sorbetto si faceva una volta con la neve delle montagne.",
+   "en": "Chiara explains that sorbet was once made with snow from the mountains.",
+   "ko": "키아라는 옛날에는 산에서 가져온 눈으로 소르베를 만들었다고 설명해요.",
+   "blank": "sorbetto",
+   "src": "made"
+  }
+ ],
  "w|sordo": [
   {
    "text": "Il dentista parla forte perché il paziente prima di Paolo è un po' sordo.",
@@ -84594,6 +85650,22 @@
    "en": "Chiara doesn't want to spend too much in the dining car, so she brought sandwiches.",
    "ko": "키아라는 식당칸에서 돈을 많이 쓰기 싫어서 샌드위치를 싸 왔어요.",
    "blank": "spendere",
+   "src": "made"
+  }
+ ],
+ "w|spensierato": [
+  {
+   "text": "Dopo una settimana di lavoro, Luca arriva al corso di cucina spensierato e affamato.",
+   "en": "After a week of work, Luca arrives at the cooking class carefree and hungry.",
+   "ko": "일주일 동안 일한 루카는 홀가분하고 배고픈 채로 요리 수업에 와요.",
+   "blank": "spensierato",
+   "src": "made"
+  },
+  {
+   "text": "Il ritratto mostra un ragazzo spensierato che gioca in un giardino, spiega Chiara.",
+   "en": "The portrait shows a carefree boy playing in a garden, Chiara explains.",
+   "ko": "키아라는 그 초상화가 정원에서 노는 근심 없는 소년을 그렸다고 설명해요.",
+   "blank": "spensierato",
    "src": "made"
   }
  ],
@@ -86181,6 +87253,38 @@
    "src": "made"
   }
  ],
+ "w|stellato": [
+  {
+   "text": "Di notte Matteo esce dalla tenda per guardare il cielo stellato.",
+   "en": "At night Matteo comes out of the tent to look at the starry sky.",
+   "ko": "밤에 마테오는 별이 가득한 하늘을 보려고 텐트 밖으로 나와요.",
+   "blank": "stellato",
+   "src": "made"
+  },
+  {
+   "text": "Sara appende in ufficio un poster con un cielo stellato sopra il deserto.",
+   "en": "Sara hangs a poster in the office of a starry sky over the desert.",
+   "ko": "사라는 사무실에 사막 위 별이 빛나는 하늘 포스터를 걸어요.",
+   "blank": "stellato",
+   "src": "made"
+  }
+ ],
+ "w|stelo": [
+  {
+   "text": "La figlia di Matteo tiene un fiorellino per lo stelo e lo annusa.",
+   "en": "Matteo's daughter holds a little flower by the stem and smells it.",
+   "ko": "마테오의 딸은 작은 꽃의 줄기를 잡고 냄새를 맡아요.",
+   "blank": "stelo",
+   "src": "made"
+  },
+  {
+   "text": "Sara taglia lo stelo delle rose e le mette nel vaso sulla scrivania.",
+   "en": "Sara cuts the stem of the roses and puts them in the vase on her desk.",
+   "ko": "사라는 장미 줄기를 잘라 책상 위 꽃병에 꽂아요.",
+   "blank": "stelo",
+   "src": "made"
+  }
+ ],
  "w|stendere": [
   {
    "text": "C'è il sole, così Matteo va a stendere il bucato in terrazzo.",
@@ -86991,6 +88095,22 @@
    "en": "I'm missing the right tool for the job.",
    "ko": "일할 알맞은 도구가 없어.",
    "blank": "strumento"
+  }
+ ],
+ "w|strutto": [
+  {
+   "text": "Lo chef spiega a Luca che una volta si friggeva con lo strutto.",
+   "en": "The chef explains to Luca that people used to fry with lard.",
+   "ko": "셰프는 루카에게 옛날에는 라드로 튀겼다고 설명해요.",
+   "blank": "strutto",
+   "src": "made"
+  },
+  {
+   "text": "Chiara racconta che i contadini conservavano la carne nello strutto.",
+   "en": "Chiara says that farmers used to preserve meat in lard.",
+   "ko": "키아라는 농부들이 고기를 라드에 재워 보관했다고 이야기해요.",
+   "blank": "strutto",
+   "src": "made"
   }
  ],
  "w|struttura": [
@@ -87854,6 +88974,22 @@
    "en": "Anna always wears the same socks out of superstition.",
    "ko": "안나는 미신 때문에 늘 같은 양말을 신어요.",
    "blank": "superstizione",
+   "src": "made"
+  }
+ ],
+ "w|superstrada": [
+  {
+   "text": "Matteo esce dalla superstrada e prende la strada bianca che porta al lago.",
+   "en": "Matteo leaves the expressway and takes the dirt road leading to the lake.",
+   "ko": "마테오는 자동차 전용 도로에서 빠져나와 호수로 가는 비포장길로 들어서요.",
+   "blank": "superstrada",
+   "src": "made"
+  },
+  {
+   "text": "Un incidente sulla superstrada fa arrivare Sara in ritardo alla riunione.",
+   "en": "An accident on the expressway makes Sara late for the meeting.",
+   "ko": "자동차 전용 도로에서 사고가 나서 사라는 회의에 늦어요.",
+   "blank": "superstrada",
    "src": "made"
   }
  ],
@@ -90463,6 +91599,22 @@
    "src": "made"
   }
  ],
+ "w|tintoria": [
+  {
+   "text": "Al ritorno Matteo porta il sacco a pelo in tintoria per lavarlo.",
+   "en": "On his return Matteo takes his sleeping bag to the dry cleaner's to have it washed.",
+   "ko": "돌아와서 마테오는 침낭을 세탁소에 맡겨요.",
+   "blank": "tintoria",
+   "src": "made"
+  },
+  {
+   "text": "Sara ritira la giacca dalla tintoria prima della presentazione.",
+   "en": "Sara picks up her jacket from the dry cleaner's before the presentation.",
+   "ko": "사라는 발표 전에 세탁소에서 재킷을 찾아와요.",
+   "blank": "tintoria",
+   "src": "made"
+  }
+ ],
  "w|tipicamente": [
   {
    "text": "La sensibilità al freddo, spiega il dentista a Paolo, compare tipicamente dopo uno sbiancamento.",
@@ -91027,6 +92179,22 @@
    "src": "made"
   }
  ],
+ "w|tortellini": [
+  {
+   "text": "Luca piega i tortellini attorno al dito, come faceva la nonna.",
+   "en": "Luca folds the tortellini around his finger, as his grandmother used to.",
+   "ko": "루카는 할머니가 하시던 대로 손가락에 감아 토르텔리니를 접어요.",
+   "blank": "tortellini",
+   "src": "made"
+  },
+  {
+   "text": "Per la notte dei musei Chiara assaggia i tortellini preparati da un'osteria vicina.",
+   "en": "For museum night Chiara tastes the tortellini made by a nearby tavern.",
+   "ko": "박물관의 밤 행사에서 키아라는 근처 선술집이 만든 토르텔리니를 맛봐요.",
+   "blank": "tortellini",
+   "src": "made"
+  }
+ ],
  "w|torto": [
   {
    "text": "Hai torto su questo punto.",
@@ -91585,6 +92753,22 @@
    "src": "made"
   }
  ],
+ "w|tramezzino": [
+  {
+   "text": "A metà lezione Luca mangia di corsa un tramezzino al tonno.",
+   "en": "Halfway through the class Luca quickly eats a tuna sandwich.",
+   "ko": "수업 중간에 루카는 참치 샌드위치를 허겁지겁 먹어요.",
+   "blank": "tramezzino",
+   "src": "made"
+  },
+  {
+   "text": "Nella pausa Chiara mangia un tramezzino seduta sulle scale del museo.",
+   "en": "On her break Chiara eats a sandwich sitting on the museum steps.",
+   "ko": "쉬는 시간에 키아라는 박물관 계단에 앉아 샌드위치를 먹어요.",
+   "blank": "tramezzino",
+   "src": "made"
+  }
+ ],
  "w|tramite": [
   {
    "text": "Ti contatterò tramite email domani.",
@@ -91688,6 +92872,22 @@
    "en": "The bank blocked a strange transaction on Francesca's account.",
    "ko": "은행이 프란체스카 계좌의 이상한 거래를 막았어요.",
    "blank": "transazione",
+   "src": "made"
+  }
+ ],
+ "w|transito": [
+  {
+   "text": "Il cartello all'ingresso del parco vieta il transito delle auto oltre il rifugio.",
+   "en": "The sign at the park entrance forbids cars from going past the mountain hut.",
+   "ko": "공원 입구 표지판에는 산장 너머로는 차량 통행 금지라고 적혀 있어요.",
+   "blank": "transito",
+   "src": "made"
+  },
+  {
+   "text": "Sara controlla il transito delle merci nel porto sul suo computer.",
+   "en": "Sara monitors the transit of goods through the port on her computer.",
+   "ko": "사라는 컴퓨터로 항구를 거쳐 가는 화물 흐름을 확인해요.",
+   "blank": "transito",
    "src": "made"
   }
  ],
@@ -93151,6 +94351,22 @@
    "src": "made"
   }
  ],
+ "w|ulivo": [
+  {
+   "text": "Il campeggio di Matteo si trova tra le colline, accanto a un ulivo secolare.",
+   "en": "Matteo's campsite is in the hills, next to a centuries-old olive tree.",
+   "ko": "마테오의 캠핑 자리는 언덕 사이 수백 년 된 올리브나무 옆이에요.",
+   "blank": "ulivo",
+   "src": "made"
+  },
+  {
+   "text": "Davanti all'ufficio di Sara hanno piantato un ulivo nel cortile.",
+   "en": "In front of Sara's office they've planted an olive tree in the courtyard.",
+   "ko": "사라의 사무실 앞마당에 올리브나무를 한 그루 심었어요.",
+   "blank": "ulivo",
+   "src": "made"
+  }
+ ],
  "w|ulteriore": [
   {
    "text": "Il padrone di casa non vuole sentire ulteriori lamentele, ma Marco ha ragione.",
@@ -93332,6 +94548,22 @@
    "en": "Elena still remembers the humiliation of falling on the ice in front of the whole class.",
    "ko": "엘레나는 반 아이들 앞에서 빙판에 넘어졌던 창피함을 아직도 기억해요.",
    "blank": "umiliazione",
+   "src": "made"
+  }
+ ],
+ "w|umiltà": [
+  {
+   "text": "La guida insegna a Matteo che in montagna serve umiltà davanti al tempo che cambia.",
+   "en": "The guide teaches Matteo that in the mountains you need humility in the face of changing weather.",
+   "ko": "안내인은 마테오에게 산에서는 변하는 날씨 앞에서 겸손해야 한다고 가르쳐요.",
+   "blank": "umiltà",
+   "src": "made"
+  },
+  {
+   "text": "Sara apprezza l'umiltà della direttrice, che ascolta anche gli stagisti.",
+   "en": "Sara appreciates the humility of the director, who listens even to the interns.",
+   "ko": "사라는 인턴 말도 귀담아듣는 부장의 겸손함을 높이 사요.",
+   "blank": "umiltà",
    "src": "made"
   }
  ],
@@ -94097,6 +95329,22 @@
    "blank": "valigia"
   }
  ],
+ "w|vallata": [
+  {
+   "text": "Dalla cima Matteo vede tutta la vallata coperta di nebbia.",
+   "en": "From the summit Matteo sees the whole valley covered in fog.",
+   "ko": "정상에서 마테오는 안개에 덮인 골짜기 전체를 내려다봐요.",
+   "blank": "vallata",
+   "src": "made"
+  },
+  {
+   "text": "Sara mette come sfondo del computer la foto di una vallata verde.",
+   "en": "Sara sets a photo of a green valley as her computer background.",
+   "ko": "사라는 컴퓨터 바탕 화면을 푸른 골짜기 사진으로 바꿔요.",
+   "blank": "vallata",
+   "src": "made"
+  }
+ ],
  "w|valle": [
   {
    "text": "La valle è coperta di fiori in primavera.",
@@ -94281,6 +95529,22 @@
    "en": "The house's advantage is the garden.",
    "ko": "그 집의 장점은 정원이야.",
    "blank": "vantaggio"
+  }
+ ],
+ "w|vantaggioso": [
+  {
+   "text": "Per Luca comprare le verdure al mercato è più vantaggioso che al supermercato.",
+   "en": "For Luca buying vegetables at the market is more economical than at the supermarket.",
+   "ko": "루카에게는 채소를 슈퍼보다 시장에서 사는 게 더 이득이에요.",
+   "blank": "vantaggioso",
+   "src": "made"
+  },
+  {
+   "text": "Con la tessera annuale l'ingresso al museo è più vantaggioso, spiega Chiara ai visitatori.",
+   "en": "With the annual pass, entry to the museum is better value, Chiara explains to visitors.",
+   "ko": "키아라는 관람객들에게 연간 회원권이 있으면 입장이 더 이득이라고 설명해요.",
+   "blank": "vantaggioso",
+   "src": "made"
   }
  ],
  "w|vantare": [
@@ -95124,6 +96388,22 @@
    "en": "Elena's son comes up with a hardly believable excuse not to wash the dishes.",
    "ko": "엘레나의 아들은 설거지를 안 하려고 믿기 힘든 핑계를 대요.",
    "blank": "verosimile",
+   "src": "made"
+  }
+ ],
+ "w|versante": [
+  {
+   "text": "Matteo monta la tenda sul versante più riparato dal vento.",
+   "en": "Matteo pitches the tent on the slope most sheltered from the wind.",
+   "ko": "마테오는 바람이 가장 덜 부는 산비탈에 텐트를 쳐요.",
+   "blank": "versante",
+   "src": "made"
+  },
+  {
+   "text": "Dalla finestra dell'ufficio Sara vede il versante innevato della montagna.",
+   "en": "From the office window Sara sees the snowy side of the mountain.",
+   "ko": "사라는 사무실 창문으로 눈 덮인 산비탈을 봐요.",
+   "blank": "versante",
    "src": "made"
   }
  ],
