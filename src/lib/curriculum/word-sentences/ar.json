@@ -4477,6 +4477,22 @@
    "blank": "أنقذت"
   }
  ],
+ "w|أنقص": [
+  {
+   "text": "أنقص المعلم درجة من أحمد لأنه سلم الواجب متأخرا.",
+   "en": "The teacher took a point off Ahmad because he handed in the homework late.",
+   "ko": "아흐마드가 숙제를 늦게 내서 선생님이 점수를 깎았어요.",
+   "blank": "أنقص",
+   "src": "made"
+  },
+  {
+   "text": "أنقصت مريم ساعات التدفئة حين بدأ الربيع.",
+   "en": "Maryam cut down the heating hours when spring began.",
+   "ko": "봄이 시작되자 마리암은 난방 시간을 줄였어요.",
+   "blank": "أنقصت",
+   "src": "made"
+  }
+ ],
  "w|أنكر": [
   {
    "text": "أنكر الطفل ما فعله.",
@@ -4961,6 +4977,22 @@
    "blank": "أيضا"
   }
  ],
+ "w|أيقظ": [
+  {
+   "text": "أيقظ المنبه أحمد مبكرا في أول يوم من الامتحانات.",
+   "en": "The alarm woke Ahmad early on the first day of exams.",
+   "ko": "첫 시험 날 알람이 아흐마드를 일찍 깨웠어요.",
+   "blank": "أيقظ",
+   "src": "made"
+  },
+  {
+   "text": "أيقظت زقزقة العصافير مريم في أول صباح من الربيع.",
+   "en": "The birds' chirping woke Maryam on the first morning of spring.",
+   "ko": "봄 첫날 아침 새소리에 마리암이 잠에서 깼어요.",
+   "blank": "أيقظت",
+   "src": "made"
+  }
+ ],
  "w|أيمن": [
   {
    "text": "يجلس الجد دائما في الركن الأيمن قرب النافذة.",
@@ -5147,6 +5179,22 @@
    "blank": "إجراء"
   }
  ],
+ "w|إجرام": [
+  {
+   "text": "قرأ أحمد تقريرا عن انخفاض الإجرام في المدن التي فيها مكتبات عامة كثيرة.",
+   "en": "Ahmad read a report about crime falling in cities with many public libraries.",
+   "ko": "아흐마드는 공공도서관이 많은 도시에서 범죄가 줄었다는 보고서를 읽었어요.",
+   "blank": "الإجرام",
+   "src": "made"
+  },
+  {
+   "text": "يقول تقرير قرأته مريم إن معدلات الإجرام ترتفع قليلا في الصيف.",
+   "en": "A report Maryam read says crime rates go up a little in summer.",
+   "ko": "마리암이 읽은 보고서에 따르면 여름에는 범죄율이 조금 올라가요.",
+   "blank": "الإجرام",
+   "src": "made"
+  }
+ ],
  "w|إحباط": [
   {
    "text": "تسبب الفشل في إحباط كبير له.",
@@ -5187,6 +5235,22 @@
    "en": "Every person has a feeling that distinguishes them from others.",
    "ko": "모든 사람은 자신만의 독특한 감정을 가지고 있다.",
    "blank": "إحساس"
+  }
+ ],
+ "w|إحصاء": [
+  {
+   "text": "جمع أحمد إحصاء بعدد الكتب المستعارة من المكتبة كل شهر.",
+   "en": "Ahmad put together statistics on how many library books are borrowed each month.",
+   "ko": "아흐마드는 매달 도서관에서 빌려 가는 책 수를 통계로 정리했어요.",
+   "blank": "إحصاء",
+   "src": "made"
+  },
+  {
+   "text": "قرأت مريم إحصاء يقول إن الشتاء هذا العام كان الأدفأ منذ سنوات.",
+   "en": "Maryam read statistics saying this year's winter was the warmest in years.",
+   "ko": "마리암은 올겨울이 몇 년 만에 가장 따뜻했다는 통계를 읽었어요.",
+   "blank": "إحصاء",
+   "src": "made"
   }
  ],
  "w|إحضار": [
@@ -6685,6 +6749,22 @@
    "src": "made"
   }
  ],
+ "w|اتسع": [
+  {
+   "text": "اتسع الملعب بعد أن هدموا السور القديم، ففرح أحمد.",
+   "en": "The playground got bigger after they tore down the old wall, and Ahmad was glad.",
+   "ko": "낡은 담을 허물고 나서 운동장이 넓어져서 아흐마드는 기뻤어요.",
+   "blank": "اتسع",
+   "src": "made"
+  },
+  {
+   "text": "يتسع النهار في الصيف، فتخرج مريم للمشي بعد العشاء.",
+   "en": "The days get longer in summer, so Maryam goes for a walk after dinner.",
+   "ko": "여름엔 낮이 길어져서 마리암은 저녁을 먹고 산책을 나가요.",
+   "blank": "يتسع",
+   "src": "made"
+  }
+ ],
  "w|اتصال": [
   {
    "text": "هل لديك اتصال بالإنترنت؟",
@@ -6797,6 +6877,22 @@
    "blank": "اثنان"
   }
  ],
+ "w|اجتاز": [
+  {
+   "text": "اجتاز أحمد امتحان الرياضيات بعد أسابيع من المراجعة.",
+   "en": "Ahmad passed the math exam after weeks of review.",
+   "ko": "아흐마드는 몇 주 동안 복습한 끝에 수학 시험을 통과했어요.",
+   "blank": "اجتاز",
+   "src": "made"
+  },
+  {
+   "text": "اجتازت مريم الشتاء الطويل وهي تحلم بأيام الربيع.",
+   "en": "Maryam got through the long winter dreaming of spring days.",
+   "ko": "마리암은 봄날을 꿈꾸며 긴 겨울을 견뎌 냈어요.",
+   "blank": "اجتازت",
+   "src": "made"
+  }
+ ],
  "w|اجتماع": [
   {
    "text": "لدينا اجتماع مهم في الصباح.",
@@ -6869,6 +6965,22 @@
    "en": "I need help now.",
    "ko": "지금 도움이 필요해.",
    "blank": "احتاج"
+  }
+ ],
+ "w|احتج": [
+  {
+   "text": "احتج أحمد على الدرجة، فراجع المعلم ورقته مرة ثانية.",
+   "en": "Ahmad objected to the grade, so the teacher went over his paper a second time.",
+   "ko": "아흐마드가 점수에 이의를 제기해서 선생님이 시험지를 다시 봤어요.",
+   "blank": "احتج",
+   "src": "made"
+  },
+  {
+   "text": "احتجت مريم على قرار إغلاق الحديقة العامة في الخريف، ووقعت على عريضة.",
+   "en": "Maryam protested the decision to close the public park in autumn and signed a petition.",
+   "ko": "마리암은 가을에 공원을 닫는다는 결정에 반대해 청원서에 서명했어요.",
+   "blank": "احتجت",
+   "src": "made"
   }
  ],
  "w|احتجاج": [
@@ -7017,6 +7129,22 @@
    "src": "made"
   }
  ],
+ "w|احتكر": [
+  {
+   "text": "احتكر طالب واحد الكلام في النقاش، فطلب أحمد دوره بلطف.",
+   "en": "One student hogged the discussion, so Ahmad politely asked for his turn.",
+   "ko": "한 학생이 토론에서 혼자 말을 독차지해서 아흐마드가 정중하게 발언 차례를 청했어요.",
+   "blank": "احتكر",
+   "src": "made"
+  },
+  {
+   "text": "يحتكر بائع واحد بيع الكستناء في السوق، فتشتري منه مريم كل شتاء.",
+   "en": "A single seller has a monopoly on chestnuts in the market, so Maryam buys from him every winter.",
+   "ko": "시장에서 밤은 한 상인만 팔아서 마리암은 겨울마다 그 사람한테 사요.",
+   "blank": "يحتكر",
+   "src": "made"
+  }
+ ],
  "w|احتل": [
   {
    "text": "احتل الجيش المدينة في الصباح.",
@@ -7059,6 +7187,22 @@
    "en": "The chance of success is high with effort.",
    "ko": "노력하면 성공 확률이 높아요.",
    "blank": "احتمال"
+  }
+ ],
+ "w|احتوى": [
+  {
+   "text": "احتوى كتاب التاريخ الذي قرأه أحمد على خرائط كثيرة.",
+   "en": "The history book Ahmad read contained many maps.",
+   "ko": "아흐마드가 읽은 역사책에는 지도가 많이 실려 있었어요.",
+   "blank": "احتوى",
+   "src": "made"
+  },
+  {
+   "text": "تحتوي سلة مريم في الخريف على تفاح ورمان وتين.",
+   "en": "In autumn Maryam's basket holds apples, pomegranates and figs.",
+   "ko": "가을이면 마리암의 바구니에는 사과와 석류, 무화과가 담겨요.",
+   "blank": "تحتوي",
+   "src": "made"
   }
  ],
  "w|اختار": [
@@ -7131,6 +7275,22 @@
    "en": "Did you test the new program?",
    "ko": "새 프로그램을 시험해 봤니?",
    "blank": "اختبرت"
+  }
+ ],
+ "w|اختتم": [
+  {
+   "text": "اختتم المدير الحفل المدرسي بكلمة قصيرة، وصفق أحمد مع زملائه.",
+   "en": "The principal closed the school ceremony with a short speech, and Ahmad clapped with his classmates.",
+   "ko": "교장 선생님이 짧은 연설로 학교 행사를 마무리했고, 아흐마드는 친구들과 박수를 쳤어요.",
+   "blank": "اختتم",
+   "src": "made"
+  },
+  {
+   "text": "اختتمت مريم الصيف برحلة قصيرة إلى الجبل.",
+   "en": "Maryam wrapped up the summer with a short trip to the mountains.",
+   "ko": "마리암은 짧은 산 여행으로 여름을 마무리했어요.",
+   "blank": "اختتمت",
+   "src": "made"
   }
  ],
  "w|اختراع": [
@@ -7237,6 +7397,22 @@
    "blank": "اختفى"
   }
  ],
+ "w|اختلاس": [
+  {
+   "text": "ناقش أحمد في المحكمة المدرسية التجريبية قضية اختلاس من صندوق النادي.",
+   "en": "In the mock school trial, Ahmad argued a case of embezzlement from the club fund.",
+   "ko": "아흐마드는 학교 모의재판에서 동아리 기금 횡령 사건을 다뤘어요.",
+   "blank": "اختلاس",
+   "src": "made"
+  },
+  {
+   "text": "تابعت مريم في الخريف قضية اختلاس في شركة كبيرة.",
+   "en": "In autumn Maryam followed an embezzlement case at a big company.",
+   "ko": "가을에 마리암은 한 대기업의 횡령 사건을 관심 있게 지켜봤어요.",
+   "blank": "اختلاس",
+   "src": "made"
+  }
+ ],
  "w|اختلاف": [
   {
    "text": "لاحظ حسن اختلاف طريقة العمل هنا عن شركته السابقة.",
@@ -7265,6 +7441,22 @@
    "en": "The weather today is different from yesterday.",
    "ko": "오늘 날씨가 어제와 달라.",
    "blank": "اختلف"
+  }
+ ],
+ "w|اختنق": [
+  {
+   "text": "كاد أحمد يختنق من الضحك في الحصة.",
+   "en": "Ahmad almost choked with laughter in class.",
+   "ko": "아흐마드는 수업 시간에 웃다가 숨이 넘어갈 뻔했어요.",
+   "blank": "يختنق",
+   "src": "made"
+  },
+  {
+   "text": "اختنقت مريم من الغبار في يوم عاصف من أيام الربيع.",
+   "en": "Maryam choked on the dust on a windy spring day.",
+   "ko": "바람 부는 봄날 마리암은 먼지 때문에 숨이 막혔어요.",
+   "blank": "اختنقت",
+   "src": "made"
   }
  ],
  "w|اختيار": [
@@ -7505,6 +7697,22 @@
    "blank": "ازداد"
   }
  ],
+ "w|ازدهر": [
+  {
+   "text": "ازدهر نادي القراءة بعد أن انضم إليه أحمد وأصدقاؤه.",
+   "en": "The reading club flourished after Ahmad and his friends joined it.",
+   "ko": "아흐마드와 친구들이 들어간 뒤로 독서 동아리가 활기를 띠었어요.",
+   "blank": "ازدهر",
+   "src": "made"
+  },
+  {
+   "text": "ازدهرت أشجار اللوز في حديقة مريم بعد أسبوع دافئ.",
+   "en": "The almond trees in Maryam's garden blossomed after a warm week.",
+   "ko": "따뜻한 한 주가 지나자 마리암네 정원의 아몬드 나무에 꽃이 활짝 폈어요.",
+   "blank": "ازدهرت",
+   "src": "made"
+  }
+ ],
  "w|استأجر": [
   {
    "text": "استأجرنا شقة جديدة هذا الشهر.",
@@ -7533,6 +7741,38 @@
    "blank": "استأذنت"
   }
  ],
+ "w|استأنف": [
+  {
+   "text": "استأنف أحمد الدراسة بعد عطلة الربيع.",
+   "en": "Ahmad went back to studying after the spring break.",
+   "ko": "아흐마드는 봄방학이 끝나고 다시 공부를 시작했어요.",
+   "blank": "استأنف",
+   "src": "made"
+  },
+  {
+   "text": "استأنفت مريم الركض في الحديقة بعد أن ذاب الثلج.",
+   "en": "Maryam started jogging in the park again after the snow melted.",
+   "ko": "눈이 녹자 마리암은 공원에서 다시 달리기를 시작했어요.",
+   "blank": "استأنفت",
+   "src": "made"
+  }
+ ],
+ "w|استئناف": [
+  {
+   "text": "قدم أحمد استئنافا على قرار حرمانه من الرحلة، فقبلته الإدارة.",
+   "en": "Ahmad appealed the decision to keep him off the trip, and the administration accepted it.",
+   "ko": "아흐마드가 소풍 제외 결정에 이의를 신청했고, 학교가 받아들였어요.",
+   "blank": "استئنافا",
+   "src": "made"
+  },
+  {
+   "text": "أعلنت المحكمة استئناف القضية بعد عطلة الصيف، كما قرأت مريم في الجريدة.",
+   "en": "The court announced the case would resume after the summer break, as Maryam read in the paper.",
+   "ko": "마리암이 신문에서 읽기로는 법원이 여름 휴정 뒤 재판을 다시 열겠다고 했어요.",
+   "blank": "استئناف",
+   "src": "made"
+  }
+ ],
  "w|استاء": [
   {
    "text": "استاء علي لأن أخته لم تدعه إلى حفلتها.",
@@ -7546,6 +7786,22 @@
    "en": "Nour was annoyed that the bus was late again.",
    "ko": "버스가 또 늦어서 누르는 짜증이 났어요.",
    "blank": "استاءت",
+   "src": "made"
+  }
+ ],
+ "w|استبداد": [
+  {
+   "text": "كتب أحمد بحثا قصيرا عن مقاومة الشعوب للاستبداد عبر التاريخ.",
+   "en": "Ahmad wrote a short paper on how peoples have resisted tyranny throughout history.",
+   "ko": "아흐마드는 역사 속 민중이 폭정에 맞선 이야기로 짧은 보고서를 썼어요.",
+   "blank": "للاستبداد",
+   "src": "made"
+  },
+  {
+   "text": "تصف الرواية التي قرأتها مريم في الشتاء شعبا تخلص من الاستبداد.",
+   "en": "The novel Maryam read in winter describes a people who freed themselves from tyranny.",
+   "ko": "마리암이 겨울에 읽은 소설은 폭정에서 벗어난 민중을 그려요.",
+   "blank": "الاستبداد",
    "src": "made"
   }
  ],
@@ -7651,6 +7907,22 @@
    "en": "I want to invest my money wisely.",
    "ko": "나는 내 돈을 현명하게 투자하고 싶어.",
    "blank": "استثمر"
+  }
+ ],
+ "w|استجاب": [
+  {
+   "text": "استجاب أحمد لطلب المعلم وأعاد كتابة الفقرة.",
+   "en": "Ahmad responded to the teacher's request and rewrote the paragraph.",
+   "ko": "아흐마드는 선생님의 요청대로 문단을 다시 썼어요.",
+   "blank": "استجاب",
+   "src": "made"
+  },
+  {
+   "text": "استجابت الأزهار للدفء المفاجئ، وصورتها مريم بهاتفها.",
+   "en": "The flowers responded to the sudden warmth, and Maryam took pictures with her phone.",
+   "ko": "갑자기 따뜻해지자 꽃들이 피어났고, 마리암은 휴대폰으로 사진을 찍었어요.",
+   "blank": "استجابت",
+   "src": "made"
   }
  ],
  "w|استجواب": [
@@ -7783,6 +8055,22 @@
    "en": "I obtained the birth certificate from the office.",
    "ko": "나는 사무소에서 출생증명서를 발급받았어.",
    "blank": "استخرجت"
+  }
+ ],
+ "w|استخلص": [
+  {
+   "text": "استخلص أحمد الأفكار الرئيسية من النص وكتبها في دفتره.",
+   "en": "Ahmad picked out the main ideas from the text and wrote them in his notebook.",
+   "ko": "아흐마드는 글에서 핵심 내용을 뽑아 공책에 적었어요.",
+   "blank": "استخلص",
+   "src": "made"
+  },
+  {
+   "text": "استخلصت مريم عصير البرتقال من ثمار الشتاء الأخيرة.",
+   "en": "Maryam squeezed orange juice from the last winter fruit.",
+   "ko": "마리암은 겨울 끝물 오렌지로 주스를 짰어요.",
+   "blank": "استخلصت",
+   "src": "made"
   }
  ],
  "w|استدار": [
@@ -8005,6 +8293,22 @@
    "src": "made"
   }
  ],
+ "w|استشهد": [
+  {
+   "text": "استشهد أحمد ببيت من الشعر في موضوع التعبير.",
+   "en": "Ahmad quoted a line of poetry in his essay.",
+   "ko": "아흐마드는 작문에 시 한 구절을 인용했어요.",
+   "blank": "استشهد",
+   "src": "made"
+  },
+  {
+   "text": "استشهدت مريم بمثل شعبي عن المطر وهي تحدث جارتها.",
+   "en": "Maryam quoted a folk saying about rain while talking to her neighbor.",
+   "ko": "마리암은 이웃과 이야기하며 비에 관한 옛 속담을 인용했어요.",
+   "blank": "استشهدت",
+   "src": "made"
+  }
+ ],
  "w|استضاف": [
   {
    "text": "استضاف أحمد أصدقاءه في المنزل.",
@@ -8031,6 +8335,22 @@
    "en": "I couldn't find the book, but he was able to.",
    "ko": "나는 책을 찾지 못했지만, 그는 찾을 수 있었어.",
    "blank": "استطاع"
+  }
+ ],
+ "w|استطلاع": [
+  {
+   "text": "أجرى أحمد استطلاعا بين زملائه عن الطعام في المقصف.",
+   "en": "Ahmad ran a survey among his classmates about the cafeteria food.",
+   "ko": "아흐마드는 친구들에게 매점 음식에 대한 설문 조사를 했어요.",
+   "blank": "استطلاعا",
+   "src": "made"
+  },
+  {
+   "text": "شاركت مريم في استطلاع عن الفصل المفضل عند الناس.",
+   "en": "Maryam took part in a survey about people's favorite season.",
+   "ko": "마리암은 사람들이 좋아하는 계절에 관한 설문에 참여했어요.",
+   "blank": "استطلاع",
+   "src": "made"
   }
  ],
  "w|استعاد": [
@@ -8101,6 +8421,22 @@
    "en": "Exam preparation started early.",
    "ko": "시험 준비는 일찍 시작됐어.",
    "blank": "الاستعداد"
+  }
+ ],
+ "w|استعرض": [
+  {
+   "text": "استعرض أحمد مشروعه العلمي أمام لجنة من المعلمين.",
+   "en": "Ahmad presented his science project to a panel of teachers.",
+   "ko": "아흐마드는 선생님들 앞에서 과학 프로젝트를 발표했어요.",
+   "blank": "استعرض",
+   "src": "made"
+  },
+  {
+   "text": "استعرضت مريم ملابس الشتاء في الخزانة لترى ما تحتاجه.",
+   "en": "Maryam went through the winter clothes in the wardrobe to see what she needed.",
+   "ko": "마리암은 필요한 게 뭔지 보려고 옷장 속 겨울옷을 하나하나 살펴봤어요.",
+   "blank": "استعرضت",
+   "src": "made"
   }
  ],
  "w|استعمار": [
@@ -9101,6 +9437,22 @@
    "src": "made"
   }
  ],
+ "w|افتتاحية": [
+  {
+   "text": "كتب أحمد افتتاحية العدد الأول من صحيفة الصف.",
+   "en": "Ahmad wrote the editorial for the first issue of the class newspaper.",
+   "ko": "아흐마드는 학급 신문 창간호의 사설을 썼어요.",
+   "blank": "افتتاحية",
+   "src": "made"
+  },
+  {
+   "text": "كانت افتتاحية الجريدة صباح الخميس عن موجة الحر، فقرأتها مريم كلها.",
+   "en": "Thursday morning's newspaper editorial was about the heat wave, and Maryam read all of it.",
+   "ko": "목요일 아침 신문 사설이 폭염에 관한 거라 마리암은 끝까지 다 읽었어요.",
+   "blank": "افتتاحية",
+   "src": "made"
+  }
+ ],
  "w|افتخر": [
   {
    "text": "افتخر علي بأخته حين سمع أنها ساعدت صديقه.",
@@ -10043,6 +10395,22 @@
    "en": "The student transferred to another school.",
    "ko": "학생이 다른 학교로 전학 갔어요.",
    "blank": "انتقل"
+  }
+ ],
+ "w|انتماء": [
+  {
+   "text": "يشعر أحمد بالانتماء إلى فريق كرة السلة في المدرسة.",
+   "en": "Ahmad feels a sense of belonging to the school basketball team.",
+   "ko": "아흐마드는 학교 농구팀에 소속감을 느껴요.",
+   "blank": "بالانتماء",
+   "src": "made"
+  },
+  {
+   "text": "تشعر مريم في الصيف بانتماء قوي إلى قريتها.",
+   "en": "In summer Maryam feels a strong sense of belonging to her village.",
+   "ko": "여름이면 마리암은 고향 마을에 강한 소속감을 느껴요.",
+   "blank": "بانتماء",
+   "src": "made"
   }
  ],
  "w|انتهاء": [
@@ -16447,6 +16815,22 @@
    "src": "made"
   }
  ],
+ "w|تغريدة": [
+  {
+   "text": "نشر أحمد تغريدة يهنئ فيها فريق المدرسة بالفوز.",
+   "en": "Ahmad posted a tweet congratulating the school team on its win.",
+   "ko": "아흐마드는 학교 팀의 우승을 축하하는 트윗을 올렸어요.",
+   "blank": "تغريدة",
+   "src": "made"
+  },
+  {
+   "text": "نشرت مريم تغريدة فيها صورة لأوراق الخريف.",
+   "en": "Maryam posted a tweet with a picture of autumn leaves.",
+   "ko": "마리암은 가을 낙엽 사진을 넣어 트윗을 올렸어요.",
+   "blank": "تغريدة",
+   "src": "made"
+  }
+ ],
  "w|تغطية": [
   {
    "text": "حضر صحفي إلى المطعم لكتابة تغطية عن الأكلات الشعبية.",
@@ -17803,6 +18187,22 @@
    "en": "I bought a new blue skirt.",
    "ko": "파란색 새 치마를 샀어.",
    "blank": "تنورة"
+  }
+ ],
+ "w|تنوع": [
+  {
+   "text": "يحب أحمد مدرسته لأن فيها تنوعا كبيرا في الأنشطة.",
+   "en": "Ahmad loves his school because it has a wide variety of activities.",
+   "ko": "아흐마드는 활동이 아주 다양해서 학교를 좋아해요.",
+   "blank": "تنوعا",
+   "src": "made"
+  },
+  {
+   "text": "تحب مريم الخريف بسبب تنوع ألوان الأوراق.",
+   "en": "Maryam loves autumn for the variety of leaf colors.",
+   "ko": "마리암은 단풍 색이 다양해서 가을을 좋아해요.",
+   "blank": "تنوع",
+   "src": "made"
   }
  ],
  "w|تهانينا": [
@@ -20537,6 +20937,22 @@
    "en": "Paradise is a place of beauty and eternal peace.",
    "ko": "천국은 아름다움과 영원한 평화의 장소예요.",
    "blank": "جنة"
+  }
+ ],
+ "w|جنحة": [
+  {
+   "text": "شرح المعلم أن الجنحة أخف من الجناية، وكتب أحمد الفرق في دفتره.",
+   "en": "The teacher explained that a misdemeanor is lighter than a felony, and Ahmad wrote down the difference.",
+   "ko": "선생님이 경범죄는 중범죄보다 가볍다고 설명했고, 아흐마드는 그 차이를 공책에 적었어요.",
+   "blank": "الجنحة",
+   "src": "made"
+  },
+  {
+   "text": "قرأت مريم أن جنحة بسيطة في الحي انتهت بغرامة صغيرة.",
+   "en": "Maryam read that a minor offense in the neighborhood ended with a small fine.",
+   "ko": "마리암은 동네의 가벼운 위반 사건이 적은 벌금으로 끝났다는 기사를 읽었어요.",
+   "blank": "جنحة",
+   "src": "made"
   }
  ],
  "w|جندي": [
@@ -26777,6 +27193,22 @@
    "src": "made"
   }
  ],
+ "w|ديكتاتورية": [
+  {
+   "text": "تعلم أحمد في درس التاريخ كيف تنتهي الديكتاتورية في بعض البلدان.",
+   "en": "In history class Ahmad learned how dictatorship ends in some countries.",
+   "ko": "아흐마드는 역사 시간에 어떤 나라들에서 독재가 어떻게 끝나는지 배웠어요.",
+   "blank": "الديكتاتورية",
+   "src": "made"
+  },
+  {
+   "text": "قرأت مريم في الخريف رواية عن مدينة تعيش تحت ديكتاتورية قاسية.",
+   "en": "In autumn Maryam read a novel about a city living under a harsh dictatorship.",
+   "ko": "마리암은 가을에 혹독한 독재 아래 사는 도시를 다룬 소설을 읽었어요.",
+   "blank": "ديكتاتورية",
+   "src": "made"
+  }
+ ],
  "w|دين": [
   {
    "text": "لكل شخص الحق في اختيار دين يناسبه.",
@@ -28713,6 +29145,22 @@
    "src": "made"
   }
  ],
+ "w|ركود": [
+  {
+   "text": "شرح المعلم لأحمد كيف يؤدي الركود الاقتصادي إلى البطالة.",
+   "en": "The teacher explained to Ahmad how economic stagnation leads to unemployment.",
+   "ko": "선생님은 아흐마드에게 경기 침체가 어떻게 실업으로 이어지는지 설명했어요.",
+   "blank": "الركود",
+   "src": "made"
+  },
+  {
+   "text": "يأتي الركود إلى الفندق الذي تعمل فيه مريم كل شتاء.",
+   "en": "The slow season comes to the hotel where Maryam works every winter.",
+   "ko": "마리암이 일하는 호텔은 겨울마다 비수기가 찾아와요.",
+   "blank": "الركود",
+   "src": "made"
+  }
+ ],
  "w|رماد": [
   {
    "text": "أشعل عمر نارا على الرمال، ثم غطى الرماد بالرمل قبل أن يغادر.",
@@ -30508,6 +30956,22 @@
    "en": "A little girl told Maryam her hands had a magic power because she fixed her toy.",
    "ko": "한 여자아이는 마리암이 장난감을 고쳐 주자 손에 마법의 힘이 있다고 말했어요.",
    "blank": "سحرية",
+   "src": "made"
+  }
+ ],
+ "w|سخافة": [
+  {
+   "text": "ضحك أحمد من سخافة النكتة التي قالها زميله.",
+   "en": "Ahmad laughed at how silly his classmate's joke was.",
+   "ko": "아흐마드는 친구가 한 농담이 너무 유치해서 웃었어요.",
+   "blank": "سخافة",
+   "src": "made"
+  },
+  {
+   "text": "ابتسمت مريم من سخافة الحجة التي قالها أخوها ليبقى في السرير يوم الثلج.",
+   "en": "Maryam smiled at the silly excuse her brother gave to stay in bed on the snow day.",
+   "ko": "눈 오는 날 침대에 있으려고 남동생이 댄 핑계가 하도 어설퍼서 마리암은 웃었어요.",
+   "blank": "سخافة",
    "src": "made"
   }
  ],
@@ -33253,6 +33717,22 @@
    "en": "She wore a blouse with transparent fabric.",
    "ko": "그녀는 천이 투명한 블라우스를 입었어요.",
    "blank": "شفاف"
+  }
+ ],
+ "w|شفافية": [
+  {
+   "text": "طالب أحمد مجلس الطلاب بمزيد من الشفافية في صرف الميزانية.",
+   "en": "Ahmad asked the student council for more transparency in how the budget is spent.",
+   "ko": "아흐마드는 학생회에 예산 쓰임을 더 투명하게 해 달라고 요구했어요.",
+   "blank": "الشفافية",
+   "src": "made"
+  },
+  {
+   "text": "تحب مريم شفافية الماء في الجدول في أوائل الربيع.",
+   "en": "Maryam loves how clear the stream water is in early spring.",
+   "ko": "마리암은 초봄 시냇물이 맑게 비치는 걸 좋아해요.",
+   "blank": "شفافية",
+   "src": "made"
   }
  ],
  "w|شفة": [
@@ -36531,6 +37011,22 @@
    "src": "made"
   }
  ],
+ "w|طغيان": [
+  {
+   "text": "قرأ أحمد في الكتاب أن الطغيان لا يدوم طويلا.",
+   "en": "Ahmad read in the book that tyranny doesn't last long.",
+   "ko": "아흐마드는 책에서 폭정은 오래가지 못한다는 구절을 읽었어요.",
+   "blank": "الطغيان",
+   "src": "made"
+  },
+  {
+   "text": "قالت مريم إن طغيان الحر في آب يجعلها تبقى في البيت.",
+   "en": "Maryam said the overwhelming heat in August keeps her indoors.",
+   "ko": "마리암은 팔월의 지독한 더위 때문에 집에만 있게 된다고 했어요.",
+   "blank": "طغيان",
+   "src": "made"
+  }
+ ],
  "w|طفح": [
   {
    "text": "جاءت أم بطفلها إلى كريم بسبب طفح أحمر على ذراعه.",
@@ -38244,6 +38740,22 @@
    "en": "Rana ran with runners from different ethnic backgrounds.",
    "ko": "라나는 다양한 민족 배경을 가진 선수들과 함께 달렸어요.",
    "blank": "عرقية",
+   "src": "made"
+  }
+ ],
+ "w|عروبة": [
+  {
+   "text": "ناقش الصف قصيدة عن العروبة، وقرأ أحمد مقطعا منها بصوت عال.",
+   "en": "The class discussed a poem about Arab identity, and Ahmad read a part of it aloud.",
+   "ko": "반 학생들이 아랍 정체성에 관한 시를 이야기했고, 아흐마드가 한 부분을 소리 내어 읽었어요.",
+   "blank": "العروبة",
+   "src": "made"
+  },
+  {
+   "text": "سمعت مريم في الراديو برنامجا عن العروبة والشعر في ليالي الشتاء.",
+   "en": "On winter nights Maryam heard a radio program about Arab identity and poetry.",
+   "ko": "겨울밤 마리암은 라디오에서 아랍 정체성과 시에 관한 프로그램을 들었어요.",
+   "blank": "العروبة",
    "src": "made"
   }
  ],
@@ -43559,6 +44071,22 @@
    "blank": "قرية"
   }
  ],
+ "w|قرينة": [
+  {
+   "text": "طلبت المعلمة من أحمد أن يقدم قرينة تدعم رأيه.",
+   "en": "The teacher asked Ahmad to give evidence supporting his opinion.",
+   "ko": "선생님은 아흐마드에게 자기 의견을 뒷받침할 근거를 대 보라고 했어요.",
+   "blank": "قرينة",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم الطيور تهاجر جنوبا، فعدت ذلك قرينة على قرب الشتاء.",
+   "en": "Maryam saw the birds migrating south and took it as a sign that winter was near.",
+   "ko": "마리암은 새들이 남쪽으로 날아가는 걸 보고 겨울이 가까워졌다는 징조로 여겼어요.",
+   "blank": "قرينة",
+   "src": "made"
+  }
+ ],
  "w|قزم": [
   {
    "text": "قابلت قزم صغير في الحديقة.",
@@ -48401,6 +48929,22 @@
    "src": "made"
   }
  ],
+ "w|متابع": [
+  {
+   "text": "صار لحساب أحمد عن العلوم متابع جديد من مدرسة أخرى.",
+   "en": "Ahmad's science account got a new follower from another school.",
+   "ko": "아흐마드의 과학 계정에 다른 학교 팔로워가 새로 생겼어요.",
+   "blank": "متابع",
+   "src": "made"
+  },
+  {
+   "text": "كتب متابع لمريم أن صور الربيع عندها هي الأجمل.",
+   "en": "One of Maryam's followers wrote that her spring photos are the most beautiful.",
+   "ko": "마리암의 팔로워 한 명이 마리암의 봄 사진이 제일 예쁘다고 썼어요.",
+   "blank": "متابع",
+   "src": "made"
+  }
+ ],
  "w|متابعة": [
   {
    "text": "تحتاج متابعة الطالب لتحسين مستواه.",
@@ -51455,6 +51999,22 @@
    "blank": "مساء"
   }
  ],
+ "w|مساءلة": [
+  {
+   "text": "كتب أحمد مقالة لمجلة المدرسة عن أهمية مساءلة المسؤولين.",
+   "en": "Ahmad wrote an article for the school magazine on the importance of holding officials accountable.",
+   "ko": "아흐마드는 학교 잡지에 공직자 책임을 묻는 일이 왜 중요한지 글을 썼어요.",
+   "blank": "مساءلة",
+   "src": "made"
+  },
+  {
+   "text": "تابعت مريم في الأخبار جلسة مساءلة الوزير عن خطة مواجهة الفيضانات.",
+   "en": "Maryam followed the news of the minister being questioned about the flood plan.",
+   "ko": "마리암은 뉴스에서 장관이 홍수 대책을 두고 추궁받는 청문회를 지켜봤어요.",
+   "blank": "مساءلة",
+   "src": "made"
+  }
+ ],
  "w|مسابقة": [
   {
    "text": "شاركت في مسابقة الرسم في المدرسة.",
@@ -54459,6 +55019,22 @@
    "src": "made"
   }
  ],
+ "w|مكابح": [
+  {
+   "text": "أصلح أحمد مكابح دراجته قبل أن يذهب بها إلى المدرسة.",
+   "en": "Ahmad fixed his bike brakes before riding to school.",
+   "ko": "아흐마드는 자전거를 타고 학교에 가기 전에 브레이크를 고쳤어요.",
+   "blank": "مكابح",
+   "src": "made"
+  },
+  {
+   "text": "ضغطت مريم على المكابح بحذر لأن الطريق كان مغطى بالجليد.",
+   "en": "Maryam pressed the brakes carefully because the road was covered in ice.",
+   "ko": "길이 얼음으로 덮여 있어서 마리암은 조심스럽게 브레이크를 밟았어요.",
+   "blank": "المكابح",
+   "src": "made"
+  }
+ ],
  "w|مكافأة": [
   {
    "text": "تلقى مكافأة مالية بسبب اجتهاده.",
@@ -54724,6 +55300,22 @@
    "en": "Mona didn't know the circumstances behind her manager's sudden resignation.",
    "ko": "모나는 상사가 갑자기 사표를 낸 경위를 몰랐어요.",
    "blank": "ملابسات",
+   "src": "made"
+  }
+ ],
+ "w|ملاحة": [
+  {
+   "text": "تعلم أحمد أن الملاحة القديمة كانت تعتمد على النجوم.",
+   "en": "Ahmad learned that ancient navigation relied on the stars.",
+   "ko": "아흐마드는 옛날 항해가 별에 의지했다는 걸 배웠어요.",
+   "blank": "الملاحة",
+   "src": "made"
+  },
+  {
+   "text": "تتوقف الملاحة في النهر حين يتجمد في الشتاء، كما يقول جد مريم.",
+   "en": "Navigation on the river stops when it freezes in winter, as Maryam's grandfather says.",
+   "ko": "마리암의 할아버지 말로는 겨울에 강이 얼면 배가 다니지 않아요.",
+   "blank": "الملاحة",
    "src": "made"
   }
  ],
@@ -55685,6 +56277,22 @@
    "blank": "منشفة"
   }
  ],
+ "w|منشور": [
+  {
+   "text": "علق أحمد منشورا عن رحلة المدرسة على لوحة الإعلانات.",
+   "en": "Ahmad pinned a flyer about the school trip on the notice board.",
+   "ko": "아흐마드는 학교 소풍 안내문을 게시판에 붙였어요.",
+   "blank": "منشورا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت مريم منشورا عن أول ثلج على صفحتها.",
+   "en": "Maryam wrote a post about the first snow on her page.",
+   "ko": "마리암은 자기 페이지에 첫눈에 관한 글을 올렸어요.",
+   "blank": "منشورا",
+   "src": "made"
+  }
+ ],
  "w|منصب": [
   {
    "text": "ترقى أحمد إلى منصب مشرف الوردية بعد خمس سنوات من العمل.",
@@ -56447,6 +57055,22 @@
    "blank": "موقف"
   }
  ],
+ "w|موكب": [
+  {
+   "text": "سار أحمد في موكب التخرج وهو يحمل علم المدرسة.",
+   "en": "Ahmad walked in the graduation procession carrying the school flag.",
+   "ko": "아흐마드는 학교 깃발을 들고 졸업 행진에 함께했어요.",
+   "blank": "موكب",
+   "src": "made"
+  },
+  {
+   "text": "مر موكب مهرجان الربيع أمام بيت مريم بالطبول والأعلام.",
+   "en": "The spring festival parade passed Maryam's house with drums and flags.",
+   "ko": "봄 축제 행렬이 북과 깃발을 들고 마리암네 집 앞을 지나갔어요.",
+   "blank": "موكب",
+   "src": "made"
+  }
+ ],
  "w|مولد": [
   {
    "text": "انقطعت الكهرباء في المحكمة، فشغل الحارس المولد وأكمل أحمد مرافعته.",
@@ -56731,6 +57355,22 @@
    "en": "Every side of the city has a unique character.",
    "ko": "도시의 모든 지역에는 특별한 분위기가 있어.",
    "blank": "ناحية"
+  }
+ ],
+ "w|ناخب": [
+  {
+   "text": "علم المعلم أحمد أن الناخب يجب أن يعرف برامج المرشحين.",
+   "en": "The teacher taught Ahmad that a voter should know the candidates' platforms.",
+   "ko": "선생님은 아흐마드에게 유권자는 후보들의 공약을 알아야 한다고 가르쳤어요.",
+   "blank": "الناخب",
+   "src": "made"
+  },
+  {
+   "text": "وقفت مريم في الطابور مع كل ناخب جاء يوم الانتخابات رغم المطر.",
+   "en": "Maryam stood in line with every voter who came on election day despite the rain.",
+   "ko": "마리암은 비가 오는데도 선거 날 나온 유권자들과 함께 줄을 섰어요.",
+   "blank": "ناخب",
+   "src": "made"
   }
  ],
  "w|نادر": [
