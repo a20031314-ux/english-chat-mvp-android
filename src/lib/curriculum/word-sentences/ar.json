@@ -1387,6 +1387,22 @@
    "blank": "أخت"
   }
  ],
+ "w|أخجل": [
+  {
+   "text": "أخجل كرم الجيران حسنا حين أحضروا له الطعام وهو مريض.",
+   "en": "The neighbors' generosity embarrassed Hassan when they brought him food while he was sick.",
+   "ko": "하산이 아플 때 이웃들이 음식을 가져오자 그 친절에 하산은 몸 둘 바를 몰랐어요.",
+   "blank": "أخجل",
+   "src": "made"
+  },
+  {
+   "text": "أخجل مديح المعلمة هدى حين رسمت لوحة الشتاء.",
+   "en": "The teacher's praise embarrassed Huda when she painted the winter picture.",
+   "ko": "후다가 겨울 그림을 그리자 선생님이 칭찬해서 후다는 쑥스러웠어요.",
+   "blank": "أخجل",
+   "src": "made"
+  }
+ ],
  "w|أخذ": [
   {
    "text": "أخذت القلم من الطاولة.",
@@ -3805,6 +3821,22 @@
    "blank": "تعينني"
   }
  ],
+ "w|أعتق": [
+  {
+   "text": "أعتق حسن العصفور الذي دخل بيت جاره، فطار إلى الشجرة.",
+   "en": "Hassan set free the sparrow that had flown into his neighbor's house, and it flew to the tree.",
+   "ko": "하산이 이웃집에 들어온 참새를 놓아주자 참새는 나무로 날아갔어요.",
+   "blank": "أعتق",
+   "src": "made"
+  },
+  {
+   "text": "كتبت هدى في دفترها أن الربيع أعتق النهر من جليده.",
+   "en": "Huda wrote in her notebook that spring had freed the river from its ice.",
+   "ko": "후다는 봄이 강을 얼음에서 풀어 주었다고 공책에 적었어요.",
+   "blank": "أعتق",
+   "src": "made"
+  }
+ ],
  "w|أعجب": [
   {
    "text": "أعجب باللوحة الجميلة.",
@@ -4225,6 +4257,22 @@
    "en": "The doctor reported that the condition is improving.",
    "ko": "의사는 상태가 좋아지고 있다고 알렸어요.",
    "blank": "أفاد"
+  }
+ ],
+ "w|أفرج": [
+  {
+   "text": "أفرج الشتاء أخيرا عن أيام دافئة، فخرجت هدى إلى الحديقة.",
+   "en": "Winter finally let go of some warm days, so Huda went out to the garden.",
+   "ko": "겨울이 마침내 따뜻한 날을 내주자 후다는 정원으로 나갔어요.",
+   "blank": "أفرج",
+   "src": "made"
+  },
+  {
+   "text": "أفرج مالك العمارة أخيرا عن مفاتيح المخزن المشترك، ففرح حسن والجيران.",
+   "en": "The building owner finally released the keys to the shared storeroom, and Hassan and the neighbors were happy.",
+   "ko": "건물주가 마침내 공용 창고 열쇠를 내주자 하산과 이웃들이 기뻐했어요.",
+   "blank": "أفرج",
+   "src": "made"
   }
  ],
  "w|أفرح": [
@@ -7712,6 +7760,22 @@
    "en": "Fatima dreams of releasing her first album before graduating.",
    "ko": "파티마는 졸업 전에 첫 앨범을 내는 게 꿈이에요.",
    "blank": "بإصدار",
+   "src": "made"
+  }
+ ],
+ "w|إصرار": [
+  {
+   "text": "بإصرار حسن نظف الجيران حديقة الحي كلها في يوم واحد.",
+   "en": "Thanks to Hassan's insistence, the neighbors cleaned the whole neighborhood garden in one day.",
+   "ko": "하산이 끈질기게 권한 덕에 이웃들은 하루 만에 동네 정원을 다 치웠어요.",
+   "blank": "بإصرار",
+   "src": "made"
+  },
+  {
+   "text": "لم يضعف إصرار هدى على المشي اليومي رغم برد الشتاء.",
+   "en": "Huda's determination to walk every day didn't weaken despite the winter cold.",
+   "ko": "겨울 추위에도 매일 걷겠다는 후다의 의지는 꺾이지 않았어요.",
+   "blank": "إصرار",
    "src": "made"
   }
  ],
@@ -16397,6 +16461,22 @@
    "src": "made"
   }
  ],
+ "w|انضباط": [
+  {
+   "text": "يعجب الجيران بانضباط حسن في مواعيد رمي القمامة.",
+   "en": "The neighbors admire Hassan's discipline about trash collection times.",
+   "ko": "이웃들은 하산이 쓰레기 버리는 시간을 칼같이 지키는 걸 감탄해요.",
+   "blank": "بانضباط",
+   "src": "made"
+  },
+  {
+   "text": "تحافظ هدى على انضباط نومها حتى حين يطول النهار في الصيف.",
+   "en": "Huda keeps her sleep disciplined even when the days get long in summer.",
+   "ko": "후다는 여름에 낮이 길어져도 잠자는 시간을 규칙적으로 지켜요.",
+   "blank": "انضباط",
+   "src": "made"
+  }
+ ],
  "w|انضبط": [
   {
    "text": "انضبط خالد بمواعيد الدوام منذ اليوم الأول.",
@@ -25007,6 +25087,22 @@
    "src": "made"
   }
  ],
+ "w|تصدى": [
+  {
+   "text": "تصدى حسن لشاب حاول سرقة دراجة جاره من المدخل.",
+   "en": "Hassan stood up to a young man who tried to steal his neighbor's bike from the entrance.",
+   "ko": "하산은 입구에서 이웃의 자전거를 훔치려던 청년을 막아섰어요.",
+   "blank": "تصدى",
+   "src": "made"
+  },
+  {
+   "text": "تصدى رجال الإطفاء لحريق الغابة في آخر الصيف، كما رأت هدى في الأخبار.",
+   "en": "Firefighters battled the forest fire at the end of summer, as Huda saw on the news.",
+   "ko": "후다가 뉴스에서 봤듯이 여름 끝 무렵 소방관들이 산불과 맞섰어요.",
+   "blank": "تصدى",
+   "src": "made"
+  }
+ ],
  "w|تصدير": [
   {
    "text": "يشرف كريم على تجهيز الطلبيات قبل التصدير.",
@@ -26931,6 +27027,22 @@
    "src": "made"
   }
  ],
+ "w|تقصى": [
+  {
+   "text": "تقصى حسن سبب الضجيج في الليل، فوجد قطا على السطح.",
+   "en": "Hassan looked into the cause of the noise at night and found a cat on the roof.",
+   "ko": "하산은 밤에 나는 소리의 원인을 찾아보다가 지붕 위의 고양이를 발견했어요.",
+   "blank": "تقصى",
+   "src": "made"
+  },
+  {
+   "text": "تقصت هدى مواعيد هجرة الطيور في الخريف.",
+   "en": "Huda looked into the times when birds migrate in autumn.",
+   "ko": "후다는 가을에 새들이 언제 떠나는지 알아봤어요.",
+   "blank": "تقصت",
+   "src": "made"
+  }
+ ],
  "w|تقطيع": [
   {
    "text": "يعلم سامي ابنه تقطيع البصل دون أن يبكي.",
@@ -27921,6 +28033,22 @@
    "src": "made"
   }
  ],
+ "w|تمعن": [
+  {
+   "text": "تمعن حسن في وجه الجار الجديد، فعرف أنه زميله في المدرسة.",
+   "en": "Hassan looked closely at the new neighbor's face and recognized him as his schoolmate.",
+   "ko": "하산은 새 이웃의 얼굴을 자세히 보고 학교 동창이라는 걸 알아봤어요.",
+   "blank": "تمعن",
+   "src": "made"
+  },
+  {
+   "text": "تمعنت هدى في ألوان الأوراق الصفراء والحمراء على الرصيف.",
+   "en": "Huda gazed at the colors of the yellow and red leaves on the sidewalk.",
+   "ko": "후다는 길에 떨어진 노랗고 빨간 잎들의 색을 찬찬히 봤어요.",
+   "blank": "تمعنت",
+   "src": "made"
+  }
+ ],
  "w|تمنى": [
   {
    "text": "دائما تمنى الأفضل للجميع.",
@@ -28100,6 +28228,22 @@
    "en": "Fatima's prediction was right: a new family moved into the empty apartment.",
    "ko": "파티마의 짐작대로 빈집에 새 가족이 이사 왔어요.",
    "blank": "تنبؤ",
+   "src": "made"
+  }
+ ],
+ "w|تنبه": [
+  {
+   "text": "تنبه حسن إلى أن جاره لم يأخذ الجريدة منذ أيام، فطرق بابه.",
+   "en": "Hassan noticed that his neighbor hadn't taken in the newspaper for days, so he knocked on his door.",
+   "ko": "하산은 이웃이 며칠째 신문을 안 가져간 걸 알아채고 문을 두드렸어요.",
+   "blank": "تنبه",
+   "src": "made"
+  },
+  {
+   "text": "تنبهت هدى إلى أن النهار صار أقصر من قبل.",
+   "en": "Huda noticed that the days had become shorter than before.",
+   "ko": "후다는 낮이 전보다 짧아졌다는 걸 알아챘어요.",
+   "blank": "تنبهت",
    "src": "made"
   }
  ],
@@ -29093,6 +29237,22 @@
    "src": "made"
   }
  ],
+ "w|توغل": [
+  {
+   "text": "توغلت جذور شجرة الجار في حديقة حسن حتى رفعت البلاط.",
+   "en": "The roots of the neighbor's tree pushed deep into Hassan's garden until they lifted the tiles.",
+   "ko": "이웃집 나무뿌리가 하산네 마당 깊숙이 뻗어 바닥 타일이 들렸어요.",
+   "blank": "توغلت",
+   "src": "made"
+  },
+  {
+   "text": "توغل البرد في عظام هدى في أول صباح شتوي.",
+   "en": "The cold seeped deep into Huda's bones on the first winter morning.",
+   "ko": "겨울 첫 아침, 추위가 후다의 뼛속까지 스며들었어요.",
+   "blank": "توغل",
+   "src": "made"
+  }
+ ],
  "w|توفي": [
   {
    "text": "توفي جدي العام الماضي.",
@@ -29272,6 +29432,22 @@
    "en": "Rana printed the company logo on a T-shirt for every employee.",
    "ko": "라나는 직원마다 회사 로고를 찍은 티셔츠를 줬어요.",
    "blank": "تيشرت",
+   "src": "made"
+  }
+ ],
+ "w|تيقن": [
+  {
+   "text": "تيقن حسن أن صوت الماء يأتي من شقة الجار فوقه.",
+   "en": "Hassan made sure the sound of water was coming from the neighbor's apartment above him.",
+   "ko": "하산은 물소리가 윗집에서 난다는 걸 확인했어요.",
+   "blank": "تيقن",
+   "src": "made"
+  },
+  {
+   "text": "تيقنت هدى أن الربيع وصل حين رأت أول زهرة في الحديقة.",
+   "en": "Huda was sure spring had arrived when she saw the first flower in the garden.",
+   "ko": "후다는 정원에 핀 첫 꽃을 보고 봄이 왔다고 확신했어요.",
+   "blank": "تيقنت",
    "src": "made"
   }
  ],
@@ -29501,6 +29677,22 @@
    "en": "The mother sometimes feels pain in her breast.",
    "ko": "엄마는 가끔 가슴에 통증을 느껴.",
    "blank": "ثدي"
+  }
+ ],
+ "w|ثرثار": [
+  {
+   "text": "يحب حسن جاره الثرثار رغم أنه يأخذ كثيرا من وقته.",
+   "en": "Hassan likes his chatty neighbor even though he takes up a lot of his time.",
+   "ko": "하산은 수다스러운 이웃이 시간을 많이 뺏어도 그를 좋아해요.",
+   "blank": "الثرثار",
+   "src": "made"
+  },
+  {
+   "text": "يزور هدى عصفور ثرثار كل صباح ربيعي.",
+   "en": "A chatty sparrow visits Huda every spring morning.",
+   "ko": "봄 아침마다 수다스러운 참새 한 마리가 후다를 찾아와요.",
+   "blank": "ثرثار",
+   "src": "made"
   }
  ],
  "w|ثرثر": [
@@ -31289,6 +31481,22 @@
    "blank": "جري"
   }
  ],
+ "w|جريء": [
+  {
+   "text": "كان حسن جريئا حين طلب من الجيران أن ينظفوا الدرج معا.",
+   "en": "Hassan was bold when he asked the neighbors to clean the stairs together.",
+   "ko": "하산은 이웃들에게 계단을 같이 청소하자고 용감하게 말했어요.",
+   "blank": "جريئا",
+   "src": "made"
+  },
+  {
+   "text": "خرج طائر جريء من عشه في أول أيام الربيع، فرأته هدى من النافذة.",
+   "en": "A bold bird came out of its nest in the first days of spring, and Huda saw it from the window.",
+   "ko": "봄이 시작될 무렵 겁 없는 새 한 마리가 둥지 밖으로 나왔고 후다가 창문으로 그걸 봤어요.",
+   "blank": "جريء",
+   "src": "made"
+  }
+ ],
  "w|جريح": [
   {
    "text": "الرجل جريح بعد الحادث.",
@@ -32607,6 +32815,22 @@
    "en": "I feel hunger now and I want to eat.",
    "ko": "지금 배고픔을 느끼고 뭔가 먹고 싶어.",
    "blank": "جوع"
+  }
+ ],
+ "w|جوقة": [
+  {
+   "text": "يغني حسن مع جوقة الحي في حفل الربيع.",
+   "en": "Hassan sings with the neighborhood choir at the spring concert.",
+   "ko": "하산은 봄 공연에서 동네 합창단과 함께 노래해요.",
+   "blank": "جوقة",
+   "src": "made"
+  },
+  {
+   "text": "تشبه هدى العصافير في الربيع بجوقة صغيرة تغني عند الفجر.",
+   "en": "Huda compares the sparrows in spring to a small choir singing at dawn.",
+   "ko": "후다는 봄 참새들을 새벽에 노래하는 작은 합창단에 빗대요.",
+   "blank": "بجوقة",
+   "src": "made"
   }
  ],
  "w|جولة": [
@@ -42201,6 +42425,22 @@
    "src": "made"
   }
  ],
+ "w|راود": [
+  {
+   "text": "راود حسن حلم بأن يزرع حديقة مشتركة مع الجيران.",
+   "en": "Hassan was visited by a dream of planting a shared garden with the neighbors.",
+   "ko": "하산은 이웃들과 함께 공동 정원을 가꾸는 꿈을 품었어요.",
+   "blank": "راود",
+   "src": "made"
+  },
+  {
+   "text": "راود هدى شعور بالحنين مع أول مطر في الخريف.",
+   "en": "A feeling of nostalgia came over Huda with the first rain of autumn.",
+   "ko": "가을 첫비가 내리자 후다는 그리움에 젖었어요.",
+   "blank": "راود",
+   "src": "made"
+  }
+ ],
  "w|رب": [
   {
    "text": "كان رب الأسرة رجلاً قوياً.",
@@ -42566,6 +42806,22 @@
    "en": "Sara doesn't believe in harsh dieting before a race.",
    "ko": "사라는 대회 전에 혹독하게 다이어트하는 걸 믿지 않아요.",
    "blank": "بالرجيم",
+   "src": "made"
+  }
+ ],
+ "w|رحابة": [
+  {
+   "text": "استقبل حسن جيرانه الجدد برحابة صدر وطبق من الحلوى.",
+   "en": "Hassan welcomed his new neighbors warmly with a plate of sweets.",
+   "ko": "하산은 새 이웃들을 너그러운 마음과 과자 한 접시로 맞이했어요.",
+   "blank": "برحابة",
+   "src": "made"
+  },
+  {
+   "text": "تحب هدى رحابة السماء الصافية في الخريف.",
+   "en": "Huda loves the wide expanse of the clear autumn sky.",
+   "ko": "후다는 맑은 가을 하늘의 탁 트인 느낌을 좋아해요.",
+   "blank": "رحابة",
    "src": "made"
   }
  ],
@@ -47223,6 +47479,22 @@
    "blank": "سطح"
   }
  ],
+ "w|سطحي": [
+  {
+   "text": "كانت معرفة حسن بجاره الجديد سطحية في البداية.",
+   "en": "Hassan's acquaintance with his new neighbor was superficial at first.",
+   "ko": "하산은 처음에 새 이웃을 겉으로만 알았어요.",
+   "blank": "سطحية",
+   "src": "made"
+  },
+  {
+   "text": "قالت هدى إن الصقيع كان سطحيا ولم يضر جذور النباتات.",
+   "en": "Huda said the frost was only on the surface and didn't harm the plant roots.",
+   "ko": "후다는 서리가 겉에만 내려서 식물 뿌리는 괜찮다고 말했어요.",
+   "blank": "سطحيا",
+   "src": "made"
+  }
+ ],
  "w|سطر": [
   {
    "text": "اقرأ هذا سطر بصوت عالٍ.",
@@ -49503,6 +49775,22 @@
    "blank": "الشباب"
   }
  ],
+ "w|شبابي": [
+  {
+   "text": "نظم حسن لقاء شبابيا في ساحة الحي يوم الجمعة.",
+   "en": "Hassan organized a youth gathering in the neighborhood square on Friday.",
+   "ko": "하산은 금요일에 동네 광장에서 청년 모임을 열었어요.",
+   "blank": "شبابيا",
+   "src": "made"
+  },
+  {
+   "text": "ارتدت هدى في أول يوم ربيعي قميصا بألوان شبابية.",
+   "en": "On the first spring day, Huda wore a shirt in youthful colors.",
+   "ko": "봄의 첫날 후다는 젊어 보이는 색깔의 셔츠를 입었어요.",
+   "blank": "شبابية",
+   "src": "made"
+  }
+ ],
  "w|شباك": [
   {
    "text": "سكر الشباك، الهواء بارد.",
@@ -51565,6 +51853,22 @@
    "en": "The sheikh visited the mosque today.",
    "ko": "셰이크가 오늘 모스크를 방문했어.",
    "blank": "الشيخ"
+  }
+ ],
+ "w|شيخوخة": [
+  {
+   "text": "يساعد حسن جاره الذي أتعبته الشيخوخة في حمل المشتريات.",
+   "en": "Hassan helps his neighbor, worn out by old age, carry the groceries.",
+   "ko": "하산은 나이 들어 기력이 약해진 이웃의 장 본 짐을 들어 줘요.",
+   "blank": "الشيخوخة",
+   "src": "made"
+  },
+  {
+   "text": "تقول هدى إن الخريف يذكرها بالشيخوخة الهادئة.",
+   "en": "Huda says autumn reminds her of a calm old age.",
+   "ko": "후다는 가을을 보면 고요한 노년이 떠오른다고 말해요.",
+   "blank": "بالشيخوخة",
+   "src": "made"
   }
  ],
  "w|شيد": [
@@ -53757,6 +54061,22 @@
    "blank": "أضاعف"
   }
  ],
+ "w|ضاق": [
+  {
+   "text": "ضاق حسن ذرعا بنباح كلب الجيران كل ليلة.",
+   "en": "Hassan grew fed up with the neighbors' dog barking every night.",
+   "ko": "하산은 밤마다 짖는 이웃집 개 때문에 참을 수가 없었어요.",
+   "blank": "ضاق",
+   "src": "made"
+  },
+  {
+   "text": "ضاق صدر هدى بالحر الشديد في آخر أيام الصيف.",
+   "en": "Huda felt stifled by the intense heat in the last days of summer.",
+   "ko": "여름 막바지의 무더위에 후다는 숨이 막혔어요.",
+   "blank": "ضاق",
+   "src": "made"
+  }
+ ],
  "w|ضاهى": [
   {
    "text": "لا تضاهي الآلات القديمة سرعة الآلات الجديدة التي وصلت المصنع.",
@@ -55359,6 +55679,22 @@
    "src": "made"
   }
  ],
+ "w|طفولي": [
+  {
+   "text": "ضحك حسن ضحكة طفولية حين رأى الثلج يغطي سيارة جاره.",
+   "en": "Hassan laughed a childlike laugh when he saw snow covering his neighbor's car.",
+   "ko": "하산은 이웃 차가 눈에 덮인 걸 보고 아이처럼 웃었어요.",
+   "blank": "طفولية",
+   "src": "made"
+  },
+  {
+   "text": "ركضت هدى في المطر بفرح طفولي.",
+   "en": "Huda ran in the rain with childlike joy.",
+   "ko": "후다는 아이처럼 신나서 빗속을 뛰어다녔어요.",
+   "blank": "طفولي",
+   "src": "made"
+  }
+ ],
  "w|طفيف": [
   {
    "text": "وصل علي متأخرا بسبب حادث طفيف في الطريق.",
@@ -55578,6 +55914,22 @@
    "en": "The company allows female employees short leave if menstrual pain becomes severe.",
    "ko": "회사는 생리통이 심하면 여직원들에게 짧은 휴가를 허락해요.",
    "blank": "الطمث",
+   "src": "made"
+  }
+ ],
+ "w|طمح": [
+  {
+   "text": "طمح حسن إلى أن يصبح رئيس لجنة السكان في الحي.",
+   "en": "Hassan aspired to become head of the neighborhood residents' committee.",
+   "ko": "하산은 동네 주민 위원회 대표가 되고 싶었어요.",
+   "blank": "طمح",
+   "src": "made"
+  },
+  {
+   "text": "طمحت هدى إلى أن تزرع حديقة كاملة قبل أن يأتي الربيع.",
+   "en": "Huda aspired to plant a whole garden before spring came.",
+   "ko": "후다는 봄이 오기 전에 정원 하나를 다 가꾸고 싶었어요.",
+   "blank": "طمحت",
    "src": "made"
   }
  ],
@@ -63395,6 +63747,22 @@
    "blank": "فك"
   }
  ],
+ "w|فكاهة": [
+  {
+   "text": "يملك حسن روح فكاهة تجعل الجيران يضحكون في كل اجتماع.",
+   "en": "Hassan has a sense of humor that makes the neighbors laugh at every meeting.",
+   "ko": "하산은 유머 감각이 있어서 모임마다 이웃들을 웃게 해요.",
+   "blank": "فكاهة",
+   "src": "made"
+  },
+  {
+   "text": "تكتب هدى عن الطقس المتقلب بشيء من الفكاهة.",
+   "en": "Huda writes about the changeable weather with a touch of humor.",
+   "ko": "후다는 변덕스러운 날씨에 대해 유머를 섞어 글을 써요.",
+   "blank": "الفكاهة",
+   "src": "made"
+  }
+ ],
  "w|فكر": [
   {
    "text": "فكر جيداً قبل أن تتكلم.",
@@ -64237,6 +64605,22 @@
    "blank": "القادم"
   }
  ],
+ "w|قارئ": [
+  {
+   "text": "حسن قارئ نهم، ويتبادل الكتب مع جيرانه كل شهر.",
+   "en": "Hassan is an avid reader and swaps books with his neighbors every month.",
+   "ko": "하산은 책을 무척 좋아해서 매달 이웃들과 책을 바꿔 읽어요.",
+   "blank": "قارئ",
+   "src": "made"
+  },
+  {
+   "text": "كتبت هدى مقالة عن الخريف، فرد عليها قارئ من مدينة بعيدة.",
+   "en": "Huda wrote an article about autumn, and a reader from a faraway city replied to her.",
+   "ko": "후다가 가을에 관한 글을 쓰자 먼 도시의 한 독자가 답장을 보냈어요.",
+   "blank": "قارئ",
+   "src": "made"
+  }
+ ],
  "w|قارب": [
   {
    "text": "ركبنا قارب صغير في البحيرة.",
@@ -64927,6 +65311,22 @@
    "en": "I washed my foot after walking.",
    "ko": "걷고 나서 발을 씻었어요.",
    "blank": "قدم"
+  }
+ ],
+ "w|قدوة": [
+  {
+   "text": "صار حسن قدوة لشباب الحي في العمل التطوعي.",
+   "en": "Hassan became a role model for the neighborhood youth in volunteer work.",
+   "ko": "하산은 동네 청년들에게 봉사 활동의 본보기가 됐어요.",
+   "blank": "قدوة",
+   "src": "made"
+  },
+  {
+   "text": "تعد هدى جدتها قدوة في استقبال كل فصل بفرح.",
+   "en": "Huda considers her grandmother a role model in welcoming every season with joy.",
+   "ko": "후다는 계절마다 기쁘게 맞이하는 할머니를 본보기로 삼아요.",
+   "blank": "قدوة",
+   "src": "made"
   }
  ],
  "w|قدوم": [
@@ -67135,6 +67535,22 @@
    "src": "made"
   }
  ],
+ "w|كابر": [
+  {
+   "text": "كابر حسن ورفض أن يعترف بأن سيارته سدت الطريق على الجيران.",
+   "en": "Hassan stubbornly refused to admit that his car had blocked the road for the neighbors.",
+   "ko": "하산은 고집을 부리며 자기 차가 이웃들 길을 막았다는 걸 인정하지 않았어요.",
+   "blank": "كابر",
+   "src": "made"
+  },
+  {
+   "text": "كابر أبو هدى ولم يلبس معطفه رغم البرد، ثم أصابه الزكام.",
+   "en": "Huda's father stubbornly refused to wear his coat despite the cold, and then he caught a cold.",
+   "ko": "후다의 아버지는 춥다는데도 고집을 부리며 외투를 안 입다가 감기에 걸렸어요.",
+   "blank": "كابر",
+   "src": "made"
+  }
+ ],
  "w|كابل": [
   {
    "text": "انقطع الإنترنت لأن عاملا قطع الكابل بالخطأ.",
@@ -68740,6 +69156,22 @@
    "en": "A blind young man who can tell spices apart by smell joined Sara's course.",
    "ko": "냄새로 향신료를 구별하는 시각장애 청년이 사라의 강좌에 들어왔어요.",
    "blank": "كفيف",
+   "src": "made"
+  }
+ ],
+ "w|كفيل": [
+  {
+   "text": "كلمة طيبة من حسن كفيلة بإنهاء أي خلاف بين الجيران.",
+   "en": "A kind word from Hassan is enough to end any quarrel between the neighbors.",
+   "ko": "하산의 따뜻한 말 한마디면 이웃 간 다툼이 다 풀려요.",
+   "blank": "كفيلة",
+   "src": "made"
+  },
+  {
+   "text": "تقول هدى إن يوما دافئا واحدا كفيل بأن يزهر اللوز.",
+   "en": "Huda says a single warm day is enough for the almond trees to blossom.",
+   "ko": "후다는 따뜻한 날 하루면 아몬드 꽃이 핀다고 말해요.",
+   "blank": "كفيل",
    "src": "made"
   }
  ],
@@ -71999,6 +72431,22 @@
    "src": "made"
   }
  ],
+ "w|مؤسس": [
+  {
+   "text": "حسن هو مؤسس جمعية سكان الحي منذ عشر سنوات.",
+   "en": "Hassan has been the founder of the neighborhood residents' association for ten years.",
+   "ko": "하산은 십 년 전 동네 주민회를 세운 사람이에요.",
+   "blank": "مؤسس",
+   "src": "made"
+  },
+  {
+   "text": "حكى مؤسس المهرجان لهدى كيف بدأ احتفال الربيع في القرية.",
+   "en": "The festival's founder told Huda how the spring celebration started in the village.",
+   "ko": "축제를 처음 만든 사람이 후다에게 마을 봄 축제가 어떻게 시작됐는지 들려줬어요.",
+   "blank": "مؤسس",
+   "src": "made"
+  }
+ ],
  "w|مؤسسة": [
   {
    "text": "عملت في مؤسسة كبيرة لسنوات.",
@@ -72801,6 +73249,22 @@
    "src": "made"
   }
  ],
+ "w|مبدع": [
+  {
+   "text": "زين جار حسن المبدع جدار المدخل برسومات ملونة.",
+   "en": "Hassan's creative neighbor decorated the entrance wall with colorful drawings.",
+   "ko": "하산의 솜씨 좋은 이웃이 입구 벽을 알록달록한 그림으로 꾸몄어요.",
+   "blank": "المبدع",
+   "src": "made"
+  },
+  {
+   "text": "صنعت هدى إكليلا مبدعا من أوراق الخريف.",
+   "en": "Huda made a creative wreath out of autumn leaves.",
+   "ko": "후다는 가을 낙엽으로 기발한 화환을 만들었어요.",
+   "blank": "مبدعا",
+   "src": "made"
+  }
+ ],
  "w|مبذر": [
   {
    "text": "مازح كريم زميلا مبذرا يشتري هاتفا جديدا كل سنة.",
@@ -73523,6 +73987,22 @@
    "src": "made"
   }
  ],
+ "w|متدين": [
+  {
+   "text": "جار حسن رجل متدين يوزع الخبز على الجيران في الأعياد.",
+   "en": "Hassan's neighbor is a religious man who gives out bread to the neighbors on holidays.",
+   "ko": "하산의 이웃은 신앙심이 깊은 사람이라 명절마다 이웃들에게 빵을 나눠 줘요.",
+   "blank": "متدين",
+   "src": "made"
+  },
+  {
+   "text": "تستقبل جدة هدى المتدينة أول المطر بالدعاء.",
+   "en": "Huda's religious grandmother welcomes the first rain with a prayer.",
+   "ko": "신앙심 깊은 후다의 할머니는 첫비가 오면 기도로 맞이해요.",
+   "blank": "المتدينة",
+   "src": "made"
+  }
+ ],
  "w|متر": [
   {
    "text": "الطاولة طولها متر واحد.",
@@ -74003,6 +74483,22 @@
    "src": "made"
   }
  ],
+ "w|متعاون": [
+  {
+   "text": "الجيران في عمارة حسن متعاونون في كل شيء.",
+   "en": "The neighbors in Hassan's building cooperate on everything.",
+   "ko": "하산네 건물 이웃들은 무슨 일이든 서로 잘 도와요.",
+   "blank": "متعاونون",
+   "src": "made"
+  },
+  {
+   "text": "كان صاحب المزرعة متعاونا مع هدى حين جاءت تقطف التفاح.",
+   "en": "The farm owner was cooperative with Huda when she came to pick apples.",
+   "ko": "후다가 사과를 따러 갔을 때 농장 주인이 잘 도와줬어요.",
+   "blank": "متعاونا",
+   "src": "made"
+  }
+ ],
  "w|متعب": [
   {
    "text": "أنا متعب جداً بعد الركض.",
@@ -74244,6 +74740,22 @@
    "en": "Nour said their contact had been on and off after university.",
    "ko": "누르는 대학 이후 둘의 연락이 끊겼다 이어졌다 했다고 말했어요.",
    "blank": "متقطعا",
+   "src": "made"
+  }
+ ],
+ "w|متقن": [
+  {
+   "text": "أصلح حسن باب جاره بعمل متقن لم يترك فيه أي صرير.",
+   "en": "Hassan fixed his neighbor's door with careful work that left no creak.",
+   "ko": "하산은 삐걱거리는 소리 하나 없이 이웃집 문을 꼼꼼하게 고쳐 줬어요.",
+   "blank": "متقن",
+   "src": "made"
+  },
+  {
+   "text": "حاكت هدى وشاحا صوفيا متقنا لأيام البرد.",
+   "en": "Huda knitted a finely made wool scarf for the cold days.",
+   "ko": "후다는 추운 날을 위해 털목도리를 정성껏 떴어요.",
+   "blank": "متقنا",
    "src": "made"
   }
  ],
@@ -86339,6 +86851,22 @@
    "blank": "مهمة"
   }
  ],
+ "w|مهمل": [
+  {
+   "text": "كان الجار مهملا في رمي القمامة، فكلمه حسن بلطف.",
+   "en": "The neighbor was careless about throwing out the trash, so Hassan spoke to him gently.",
+   "ko": "이웃이 쓰레기를 아무렇게나 버려서 하산이 부드럽게 말을 건넸어요.",
+   "blank": "مهملا",
+   "src": "made"
+  },
+  {
+   "text": "ترك أخو هدى المهمل الدراجة تحت المطر طوال الخريف.",
+   "en": "Huda's careless brother left the bike out in the rain all autumn.",
+   "ko": "후다의 덜렁대는 남동생은 가을 내내 자전거를 비 맞게 내버려 뒀어요.",
+   "blank": "المهمل",
+   "src": "made"
+  }
+ ],
  "w|مهملات": [
   {
    "text": "ملأ أحمد عشرة أكياس بالمهملات من القبو وحده.",
@@ -88169,6 +88697,22 @@
    "src": "made"
   }
  ],
+ "w|ناي": [
+  {
+   "text": "يعزف جار حسن العجوز على الناي في المساء.",
+   "en": "Hassan's old neighbor plays the flute in the evening.",
+   "ko": "하산의 늙은 이웃은 저녁이면 피리를 불어요.",
+   "blank": "الناي",
+   "src": "made"
+  },
+  {
+   "text": "سمعت هدى صوت ناي من بعيد في ليلة خريفية هادئة.",
+   "en": "Huda heard the sound of a flute from afar on a quiet autumn night.",
+   "ko": "후다는 고요한 가을밤 멀리서 들려오는 피리 소리를 들었어요.",
+   "blank": "ناي",
+   "src": "made"
+  }
+ ],
  "w|نبأ": [
   {
    "text": "وصل نبأ زواج ابن الحارس إلى كل سكان البناية في يوم واحد.",
@@ -88703,6 +89247,22 @@
    "en": "This boy is very thin.",
    "ko": "이 소년은 매우 말랐어.",
    "blank": "نحيف"
+  }
+ ],
+ "w|نحيل": [
+  {
+   "text": "يسكن في الطابق العلوي شاب نحيل يساعد حسن في حمل الأثاث.",
+   "en": "A thin young man who helps Hassan carry furniture lives on the top floor.",
+   "ko": "꼭대기 층에는 하산의 가구 옮기는 걸 돕는 마른 청년이 살아요.",
+   "blank": "نحيل",
+   "src": "made"
+  },
+  {
+   "text": "بدت الشجرة نحيلة بعد أن تساقطت أوراقها، كما قالت هدى.",
+   "en": "The tree looked thin after its leaves fell, as Huda said.",
+   "ko": "후다 말처럼 나무는 잎이 다 떨어지자 앙상해 보였어요.",
+   "blank": "نحيلة",
+   "src": "made"
   }
  ],
  "w|نخاع": [
@@ -91001,6 +91561,22 @@
    "blank": "نوم"
   }
  ],
+ "w|نوه": [
+  {
+   "text": "نوه حسن في اجتماع السكان بمساعدة جاره العجوز للجميع.",
+   "en": "At the residents' meeting, Hassan praised his old neighbor's help to everyone.",
+   "ko": "하산은 주민 회의에서 늙은 이웃이 모두를 도와준 일을 칭찬했어요.",
+   "blank": "نوه",
+   "src": "made"
+  },
+  {
+   "text": "نوه خبير الطقس بقدوم موجة برد، فأخرجت هدى ثياب الشتاء.",
+   "en": "The weather expert flagged an incoming cold wave, so Huda took out her winter clothes.",
+   "ko": "기상 전문가가 한파가 온다고 알리자 후다는 겨울옷을 꺼냈어요.",
+   "blank": "نوه",
+   "src": "made"
+  }
+ ],
  "w|نووي": [
   {
    "text": "هذا مفاعل نووي كبير جداً.",
@@ -92325,6 +92901,22 @@
    "en": "The smell of cardamom is coming from the kitchen.",
    "ko": "주방에서 카다멈 냄새가 나.",
    "blank": "الهيل"
+  }
+ ],
+ "w|هيمن": [
+  {
+   "text": "هيمن صوت المطرقة على صباح الحي حين رمم الجار بيته.",
+   "en": "The sound of the hammer dominated the neighborhood morning when the neighbor renovated his house.",
+   "ko": "이웃이 집을 고치는 동안 아침마다 동네에 망치 소리가 가득했어요.",
+   "blank": "هيمن",
+   "src": "made"
+  },
+  {
+   "text": "هيمن اللون الأبيض على المشهد بعد أول ثلج، كما لاحظت هدى.",
+   "en": "White dominated the scenery after the first snow, as Huda noticed.",
+   "ko": "후다가 보니 첫눈이 온 뒤 온 세상이 하얗게 뒤덮였어요.",
+   "blank": "هيمن",
+   "src": "made"
   }
  ],
  "w|و": [
@@ -93889,6 +94481,22 @@
    "blank": "وصول"
   }
  ],
+ "w|وصي": [
+  {
+   "text": "صار حسن وصيا على ابن جاره بعد وفاة الأب، كما قرر القاضي.",
+   "en": "Hassan became the guardian of his neighbor's son after the father died, as the judge decided.",
+   "ko": "판사의 결정에 따라 하산은 이웃 아버지가 세상을 떠난 뒤 그 아들의 후견인이 됐어요.",
+   "blank": "وصيا",
+   "src": "made"
+  },
+  {
+   "text": "كان عم هدى الوصي على أرض العائلة، فكان يأخذها إلى الحقل كل ربيع.",
+   "en": "Huda's uncle was the guardian of the family land, so he took her to the field every spring.",
+   "ko": "후다의 삼촌은 집안 땅을 맡아 관리해서 봄마다 후다를 밭에 데려갔어요.",
+   "blank": "الوصي",
+   "src": "made"
+  }
+ ],
  "w|وصية": [
   {
    "text": "أهدى رجل مسن مجموعته إلى المتحف في وصية تركها لأولاده، واستقبلها يوسف.",
@@ -94367,6 +94975,22 @@
    "blank": "وقفت"
   }
  ],
+ "w|وقفة": [
+  {
+   "text": "وقف الجيران وقفة واحدة مع حسن حين احترق مطبخه.",
+   "en": "The neighbors stood together with Hassan when his kitchen burned.",
+   "ko": "하산네 부엌에 불이 났을 때 이웃들이 한마음으로 하산을 도왔어요.",
+   "blank": "وقفة",
+   "src": "made"
+  },
+  {
+   "text": "وقفت هدى وقفة طويلة أمام الشجرة العارية في الحديقة.",
+   "en": "Huda stood for a long while in front of the bare tree in the garden.",
+   "ko": "후다는 정원의 앙상한 나무 앞에 한참 서 있었어요.",
+   "blank": "وقفة",
+   "src": "made"
+  }
+ ],
  "w|وقود": [
   {
    "text": "السيارة تحتاج وقود.",
@@ -94721,6 +95345,22 @@
    "en": "The scent of jasmine reminds me of summer.",
    "ko": "자스민 향기가 여름을 떠올리게 해요.",
    "blank": "ياسمين"
+  }
+ ],
+ "w|يافع": [
+  {
+   "text": "ساعد شاب يافع من الجيران حسنا في إصلاح السور.",
+   "en": "A youthful neighbor helped Hassan fix the fence.",
+   "ko": "이웃집 젊은 청년이 하산의 담장 고치는 일을 도왔어요.",
+   "blank": "يافع",
+   "src": "made"
+  },
+  {
+   "text": "زرعت هدى شجرة يافعة في الحديقة مع مطلع الربيع.",
+   "en": "Huda planted a young tree in the garden at the start of spring.",
+   "ko": "후다는 봄이 시작될 때 정원에 어린 나무를 심었어요.",
+   "blank": "يافعة",
+   "src": "made"
   }
  ],
  "w|يانسون": [

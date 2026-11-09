@@ -73,6 +73,22 @@
    "src": "made"
   }
  ],
+ "w|abdominal": [
+  {
+   "text": "Nicolas a si peur qu'il ressent une douleur abdominale avant le rendez-vous.",
+   "en": "Nicolas is so scared that he feels abdominal pain before the appointment.",
+   "ko": "니콜라는 너무 무서워서 진료 전에 배가 아파요.",
+   "blank": "abdominale",
+   "src": "made"
+  },
+  {
+   "text": "Pour la scène de danse, Inès travaille sa sangle abdominale tous les matins.",
+   "en": "For the dance scene, Inès works on her abdominal muscles every morning.",
+   "ko": "춤 장면을 위해 이네스는 매일 아침 복근 운동을 해요.",
+   "blank": "abdominale",
+   "src": "made"
+  }
+ ],
  "w|abeille": [
   {
    "text": "Paul reste immobile pendant qu'une abeille tourne autour de son sandwich.",
@@ -8143,6 +8159,22 @@
    "blank": "bande"
   }
  ],
+ "w|bandeau": [
+  {
+   "text": "L'assistante porte un bandeau pour retenir ses cheveux pendant les soins.",
+   "en": "The assistant wears a headband to hold her hair back during treatment.",
+   "ko": "치위생사는 치료하는 동안 머리를 묶으려고 머리띠를 해요.",
+   "blank": "bandeau",
+   "src": "made"
+  },
+  {
+   "text": "Inès porte un bandeau de velours pour jouer une danseuse des années folles.",
+   "en": "Inès wears a velvet headband to play a Roaring Twenties dancer.",
+   "ko": "이네스는 1920년대 무용수를 연기하려고 벨벳 머리띠를 해요.",
+   "blank": "bandeau",
+   "src": "made"
+  }
+ ],
  "w|bandit": [
   {
    "text": "Ce bandit a volé mon sac dans le métro.",
@@ -9103,6 +9135,22 @@
    "src": "made"
   }
  ],
+ "w|béquille": [
+  {
+   "text": "Un patient arrive au cabinet avec une béquille, juste avant Nicolas.",
+   "en": "A patient arrives at the practice on a crutch, just before Nicolas.",
+   "ko": "니콜라 바로 앞에 한 환자가 목발을 짚고 치과에 와요.",
+   "blank": "béquille",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux soldat de la pièce marche avec une béquille, et Inès lui donne la réplique.",
+   "en": "The old soldier in the play walks with a crutch, and Inès plays opposite him.",
+   "ko": "연극 속 늙은 병사가 목발을 짚고 걷고, 이네스가 그 상대역을 해요.",
+   "blank": "béquille",
+   "src": "made"
+  }
+ ],
  "w|berceau": [
   {
    "text": "Le chef pâtissier dort mal depuis que son bébé a quitté le berceau pour un vrai lit.",
@@ -9446,6 +9494,22 @@
    "en": "After a week on the road, Inès takes stock of her spending.",
    "ko": "일주일 동안 달린 뒤 이네스는 쓴 돈을 정리해 봐요.",
    "blank": "bilan",
+   "src": "made"
+  }
+ ],
+ "w|bile": [
+  {
+   "text": "En lisant la brochure, Nicolas apprend que la bile aide à digérer les graisses.",
+   "en": "Reading the brochure, Nicolas learns that bile helps digest fats.",
+   "ko": "안내 책자를 읽다가 니콜라는 담즙이 지방 소화를 돕는다는 걸 알게 돼요.",
+   "blank": "bile",
+   "src": "made"
+  },
+  {
+   "text": "Le personnage colérique joué par Inès se plaint de « se faire de la bile » sans arrêt.",
+   "en": "The irritable character played by Inès keeps complaining about \"fretting.\"",
+   "ko": "이네스가 연기하는 성미 급한 인물은 늘 \"속이 탄다\"고 투덜대요.",
+   "blank": "bile",
    "src": "made"
   }
  ],
@@ -10790,6 +10854,22 @@
    "en": "Claire is afraid she'll wreck her knee if she pushes too hard.",
    "ko": "클레르는 너무 무리하면 무릎을 망칠까 봐 걱정해요.",
    "blank": "bousiller",
+   "src": "made"
+  }
+ ],
+ "w|boussole": [
+  {
+   "text": "Dans la salle d'attente du dentiste, Nicolas remarque une vieille boussole posée sur l'étagère.",
+   "en": "In the dentist's waiting room, Nicolas notices an old compass on the shelf.",
+   "ko": "치과 대기실에서 니콜라는 선반 위에 놓인 낡은 나침반을 발견해요.",
+   "blank": "boussole",
+   "src": "made"
+  },
+  {
+   "text": "Dans la pièce, le capitaine perdu cherche sa boussole pendant tout le premier acte, et Inès adore cette scène.",
+   "en": "In the play, the lost captain searches for his compass for the whole first act, and Inès loves that scene.",
+   "ko": "연극에서 길 잃은 선장이 1막 내내 나침반을 찾는데, 이네스는 그 장면을 좋아해요.",
+   "blank": "boussole",
    "src": "made"
   }
  ],
@@ -15865,6 +15945,22 @@
    "blank": "choix"
   }
  ],
+ "w|cholestérol": [
+  {
+   "text": "Dans la salle d'attente, Nicolas lit un magazine sur le cholestérol et le sucre.",
+   "en": "In the waiting room, Nicolas reads a magazine about cholesterol and sugar.",
+   "ko": "대기실에서 니콜라는 콜레스테롤과 설탕에 관한 잡지를 읽어요.",
+   "blank": "cholestérol",
+   "src": "made"
+  },
+  {
+   "text": "Dans la satire, un médecin ridicule ne parle que de cholestérol, et la salle rit avec Inès.",
+   "en": "In the satire, a ridiculous doctor talks only about cholesterol, and the audience laughs with Inès.",
+   "ko": "풍자극에서 우스꽝스러운 의사가 콜레스테롤 얘기만 해서 관객이 이네스와 함께 웃어요.",
+   "blank": "cholestérol",
+   "src": "made"
+  }
+ ],
  "w|chômage": [
   {
    "text": "Avant de trouver ce poste en cuisine, Thomas a connu six mois de chômage.",
@@ -19015,6 +19111,22 @@
    "blank": "comprendre"
   }
  ],
+ "w|compresse": [
+  {
+   "text": "Le dentiste pose une compresse sur la gencive de Nicolas pour arrêter le saignement.",
+   "en": "The dentist places a gauze pad on Nicolas's gum to stop the bleeding.",
+   "ko": "치과 의사가 피를 멈추려고 니콜라의 잇몸에 거즈를 대요.",
+   "blank": "compresse",
+   "src": "made"
+  },
+  {
+   "text": "Après sa chute en coulisses, Inès garde une compresse froide sur le genou.",
+   "en": "After her fall backstage, Inès keeps a cold compress on her knee.",
+   "ko": "무대 뒤에서 넘어진 뒤 이네스는 무릎에 찬 찜질 패드를 대고 있어요.",
+   "blank": "compresse",
+   "src": "made"
+  }
+ ],
  "w|compression": [
   {
    "text": "Hugo regrette la compression du budget des achats de livres cette année.",
@@ -19657,6 +19769,22 @@
    "en": "You must keep self-confidence.",
    "ko": "자신감을 유지해야 해.",
    "blank": "confiance"
+  }
+ ],
+ "w|confidence": [
+  {
+   "text": "Allongé sur le fauteuil, Nicolas fait une confidence au dentiste : il a peur de la roulette.",
+   "en": "Lying in the chair, Nicolas confides in the dentist: he's afraid of the drill.",
+   "ko": "의자에 누운 니콜라는 치과 의사에게 드릴이 무섭다고 털어놓아요.",
+   "blank": "confidence",
+   "src": "made"
+  },
+  {
+   "text": "Dans les coulisses, la costumière fait une confidence à Inès sur le metteur en scène.",
+   "en": "Backstage, the costume designer confides something to Inès about the director.",
+   "ko": "무대 뒤에서 의상 담당이 이네스에게 연출가에 관한 비밀을 털어놓아요.",
+   "blank": "confidence",
+   "src": "made"
   }
  ],
  "w|confidentialité": [
@@ -25973,6 +26101,22 @@
    "blank": "délire"
   }
  ],
+ "w|délirer": [
+  {
+   "text": "Encore sous anesthésie, Nicolas commence à délirer sur des vacances au bord de la mer.",
+   "en": "Still under anesthesia, Nicolas starts rambling about a seaside holiday.",
+   "ko": "아직 마취가 덜 깬 니콜라가 바닷가 휴가 얘기를 횡설수설하기 시작해요.",
+   "blank": "délirer",
+   "src": "made"
+  },
+  {
+   "text": "Dans la scène de fièvre, Inès doit délirer de façon crédible.",
+   "en": "In the fever scene, Inès has to rave convincingly.",
+   "ko": "열병 장면에서 이네스는 그럴듯하게 헛소리를 해야 해요.",
+   "blank": "délirer",
+   "src": "made"
+  }
+ ],
  "w|délit": [
   {
    "text": "Ce n’est pas un crime, juste un petit délit.",
@@ -28368,6 +28512,22 @@
    "en": "Inès does the shopping for her elderly neighbor, who has to avoid sugar because of his diabetes.",
    "ko": "이네스는 당뇨 때문에 설탕을 피해야 하는 나이 든 이웃의 장을 봐 줘요.",
    "blank": "diabète",
+   "src": "made"
+  }
+ ],
+ "w|diabétique": [
+  {
+   "text": "Le dentiste surveille de près les gencives de son patient diabétique, qui passe avant Nicolas.",
+   "en": "The dentist closely monitors the gums of his diabetic patient, who goes before Nicolas.",
+   "ko": "치과 의사는 니콜라 앞 순서인 당뇨 환자의 잇몸을 꼼꼼히 살펴요.",
+   "blank": "diabétique",
+   "src": "made"
+  },
+  {
+   "text": "Au buffet de la première, Inès choisit des gâteaux sans sucre pour son ami diabétique.",
+   "en": "At the opening-night buffet, Inès picks sugar-free cakes for her diabetic friend.",
+   "ko": "첫 공연 뷔페에서 이네스는 당뇨가 있는 친구를 위해 무설탕 케이크를 골라요.",
+   "blank": "diabétique",
    "src": "made"
   }
  ],
@@ -30895,6 +31055,22 @@
    "src": "made"
   }
  ],
+ "w|dupe": [
+  {
+   "text": "Nicolas n'est pas dupe : le dentiste dit toujours que « ça ne fera pas mal ».",
+   "en": "Nicolas isn't fooled: the dentist always says \"it won't hurt.\"",
+   "ko": "니콜라는 속지 않아요. 치과 의사는 늘 \"안 아플 거예요\"라고 하거든요.",
+   "blank": "dupe",
+   "src": "made"
+  },
+  {
+   "text": "Le public n'est pas dupe et devine la fin de la pièce dès le deuxième acte, avoue Inès.",
+   "en": "The audience isn't fooled and guesses the ending from the second act, Inès admits.",
+   "ko": "관객이 속지 않고 2막부터 결말을 알아챈다고 이네스가 인정해요.",
+   "blank": "dupe",
+   "src": "made"
+  }
+ ],
  "w|duper": [
   {
    "text": "Le médecin sourit à Nicolas : impossible de le duper, il sait que les médicaments n'ont pas été pris.",
@@ -31498,6 +31674,22 @@
    "en": "Before midnight, Claire looks back on the past year with her friends.",
    "ko": "자정이 되기 전에 클레르는 친구들과 지난 한 해를 돌아봐요.",
    "blank": "écoulée",
+   "src": "made"
+  }
+ ],
+ "w|écouler": [
+  {
+   "text": "Nicolas regarde les minutes s'écouler lentement sur l'horloge de la salle d'attente.",
+   "en": "Nicolas watches the minutes slowly pass on the waiting room clock.",
+   "ko": "니콜라는 대기실 시계에서 시간이 느리게 흘러가는 걸 바라봐요.",
+   "blank": "écouler",
+   "src": "made"
+  },
+  {
+   "text": "Avant d'entrer en scène, Inès sent chaque seconde s'écouler beaucoup trop vite.",
+   "en": "Before going on stage, Inès feels every second pass far too quickly.",
+   "ko": "무대에 오르기 전 이네스는 매초가 너무 빨리 흘러간다고 느껴요.",
+   "blank": "écouler",
    "src": "made"
   }
  ],
@@ -35204,6 +35396,22 @@
    "en": "Inès asks residents what they might feel after the factory closure.",
    "ko": "이네스는 공장이 문을 닫은 뒤 주민들이 어떤 감정을 느끼는지 물어요.",
    "blank": "éprouver",
+   "src": "made"
+  }
+ ],
+ "w|épuisant": [
+  {
+   "text": "Après une heure de soins, Nicolas trouve la séance vraiment épuisante.",
+   "en": "After an hour of treatment, Nicolas finds the session really exhausting.",
+   "ko": "한 시간 치료를 받고 나니 니콜라는 정말 진이 빠졌어요.",
+   "blank": "épuisante",
+   "src": "made"
+  },
+  {
+   "text": "Jouer deux représentations le même jour, c'est épuisant pour Inès.",
+   "en": "Doing two performances in one day is exhausting for Inès.",
+   "ko": "하루에 두 번 공연하는 건 이네스에게 진 빠지는 일이에요.",
+   "blank": "épuisant",
    "src": "made"
   }
  ],
@@ -39285,6 +39493,22 @@
    "src": "made"
   }
  ],
+ "w|fertilité": [
+  {
+   "text": "Une affiche du cabinet parle des liens entre santé des gencives et fertilité.",
+   "en": "A poster in the practice talks about the links between gum health and fertility.",
+   "ko": "치과의 포스터는 잇몸 건강과 생식 능력의 관계를 다뤄요.",
+   "blank": "fertilité",
+   "src": "made"
+  },
+  {
+   "text": "Dans la tragédie antique, la reine prie la déesse de la fertilité, et Inès tient ce rôle.",
+   "en": "In the ancient tragedy, the queen prays to the goddess of fertility, and Inès plays that role.",
+   "ko": "고대 비극에서 왕비가 다산의 여신에게 기도하는데, 이네스가 그 역을 맡아요.",
+   "blank": "fertilité",
+   "src": "made"
+  }
+ ],
  "w|fesse": [
   {
    "text": "Il s'est assis et s'est frotté la fesse.",
@@ -41369,6 +41593,22 @@
    "src": "made"
   }
  ],
+ "w|fourrière": [
+  {
+   "text": "Garé devant une sortie, le scooter de Nicolas a fini à la fourrière pendant son rendez-vous.",
+   "en": "Parked in front of an exit, Nicolas's scooter ended up at the pound during his appointment.",
+   "ko": "출구 앞에 세워 둔 니콜라의 스쿠터가 진료받는 동안 견인됐어요.",
+   "blank": "fourrière",
+   "src": "made"
+  },
+  {
+   "text": "Le soir de la première, la voiture du régisseur était à la fourrière, et Inès l'a ramené chez lui.",
+   "en": "On opening night, the stage manager's car was at the pound, and Inès drove him home.",
+   "ko": "첫 공연 날 무대 감독의 차가 견인돼서 이네스가 그를 집에 데려다줬어요.",
+   "blank": "fourrière",
+   "src": "made"
+  }
+ ],
  "w|fourrure": [
   {
    "text": "L'usine où travaille Nicolas fabriquait autrefois des manteaux en fausse fourrure.",
@@ -41411,6 +41651,22 @@
    "en": "The break takes time to heal.",
    "ko": "골절은 낫는 데 시간이 걸려.",
    "blank": "fracture"
+  }
+ ],
+ "w|fracturé": [
+  {
+   "text": "La radio montre une molaire fracturée au fond de la bouche de Nicolas.",
+   "en": "The X-ray shows a fractured molar at the back of Nicolas's mouth.",
+   "ko": "엑스레이에 니콜라의 입 안쪽 어금니가 깨진 게 보여요.",
+   "blank": "fracturée",
+   "src": "made"
+  },
+  {
+   "text": "Un accessoiriste joue malgré un poignet fracturé, ce qui impressionne Inès.",
+   "en": "A props man performs despite a fractured wrist, which impresses Inès.",
+   "ko": "소품 담당이 손목이 부러진 채로 무대에 서서 이네스가 감탄해요.",
+   "blank": "fracturé",
+   "src": "made"
   }
  ],
  "w|fragile": [
@@ -42739,6 +42995,22 @@
    "blank": "gâteau"
   }
  ],
+ "w|gâter": [
+  {
+   "text": "Selon le dentiste, les grands-parents qui gâtent trop les enfants en bonbons font des dégâts.",
+   "en": "According to the dentist, grandparents who spoil children with too many sweets cause damage.",
+   "ko": "치과 의사 말로는 사탕을 너무 많이 주며 아이를 버릇없게 만드는 조부모가 문제를 일으킨대요.",
+   "blank": "gâtent",
+   "src": "made"
+  },
+  {
+   "text": "Les parents d'Inès l'ont toujours gâtée avec des places de théâtre pour son anniversaire.",
+   "en": "Inès's parents always spoiled her with theater tickets for her birthday.",
+   "ko": "이네스의 부모님은 생일마다 연극표를 주며 이네스를 아껴 줬어요.",
+   "blank": "gâtée",
+   "src": "made"
+  }
+ ],
  "w|gauche": [
   {
    "text": "Tourne à gauche au prochain feu.",
@@ -43275,6 +43547,22 @@
    "en": "He knows how to handle difficult situations well.",
    "ko": "그는 어려운 상황을 잘 처리해.",
    "blank": "gérer"
+  }
+ ],
+ "w|germe": [
+  {
+   "text": "Le dentiste explique à Nicolas que les germes se cachent entre les dents.",
+   "en": "The dentist explains to Nicolas that germs hide between the teeth.",
+   "ko": "치과 의사는 니콜라에게 세균이 이 사이에 숨는다고 설명해요.",
+   "blank": "germes",
+   "src": "made"
+  },
+  {
+   "text": "Pour Inès, cette réplique contient le germe de toute la pièce.",
+   "en": "For Inès, this line contains the seed of the whole play.",
+   "ko": "이네스에게 이 대사는 연극 전체의 싹을 품고 있어요.",
+   "blank": "germe",
+   "src": "made"
   }
  ],
  "w|geste": [
@@ -44501,6 +44789,22 @@
    "src": "made"
   }
  ],
+ "w|gronder": [
+  {
+   "text": "La mère de Nicolas le grondait quand il oubliait de se brosser les dents.",
+   "en": "Nicolas's mother used to scold him when he forgot to brush his teeth.",
+   "ko": "니콜라의 어머니는 니콜라가 양치를 잊으면 꾸중하곤 했어요.",
+   "blank": "grondait",
+   "src": "made"
+  },
+  {
+   "text": "Le metteur en scène a grondé toute la troupe après la répétition ratée.",
+   "en": "The director scolded the whole troupe after the failed rehearsal.",
+   "ko": "연출가는 엉망이 된 리허설 뒤에 단원 모두를 꾸짖었어요.",
+   "blank": "grondé",
+   "src": "made"
+  }
+ ],
  "w|gros": [
   {
    "text": "Il a un gros chien noir.",
@@ -45045,6 +45349,22 @@
    "en": "I can't hate someone without a reason.",
    "ko": "나는 이유 없이 누군가를 미워할 수 없어.",
    "blank": "haïr"
+  }
+ ],
+ "w|haletant": [
+  {
+   "text": "Nicolas arrive haletant au cabinet après avoir couru depuis l'arrêt de bus.",
+   "en": "Nicolas arrives at the practice out of breath after running from the bus stop.",
+   "ko": "니콜라는 버스 정류장에서부터 뛰어와 숨을 헐떡이며 치과에 도착해요.",
+   "blank": "haletant",
+   "src": "made"
+  },
+  {
+   "text": "À la fin de la course-poursuite sur scène, Inès doit jouer haletante sans perdre sa voix.",
+   "en": "At the end of the chase on stage, Inès has to act out of breath without losing her voice.",
+   "ko": "무대 위 추격 장면 끝에서 이네스는 목소리를 잃지 않고 숨찬 연기를 해야 해요.",
+   "blank": "haletante",
+   "src": "made"
   }
  ],
  "w|hall": [
@@ -47380,6 +47700,22 @@
    "en": "Inès applies a product to protect the wood against termites.",
    "ko": "이네스는 흰개미를 막으려고 나무에 방충제를 발라요.",
    "blank": "immuniser",
+   "src": "made"
+  }
+ ],
+ "w|immunitaire": [
+  {
+   "text": "Une infection dentaire peut affaiblir le système immunitaire, prévient le dentiste.",
+   "en": "A dental infection can weaken the immune system, the dentist warns.",
+   "ko": "치아 감염은 면역 체계를 약하게 할 수 있다고 치과 의사가 경고해요.",
+   "blank": "immunitaire",
+   "src": "made"
+  },
+  {
+   "text": "En pleine tournée d'hiver, Inès prend des vitamines pour ses défenses immunitaires.",
+   "en": "In the middle of the winter tour, Inès takes vitamins for her immune defenses.",
+   "ko": "겨울 순회공연 한창일 때 이네스는 면역력을 위해 비타민을 먹어요.",
+   "blank": "immunitaires",
    "src": "made"
   }
  ],
@@ -50037,6 +50373,22 @@
    "blank": "instrument"
   }
  ],
+ "w|insuffisance": [
+  {
+   "text": "Le dentiste demande à Nicolas s'il a des antécédents d'insuffisance cardiaque.",
+   "en": "The dentist asks Nicolas whether he has a history of heart failure.",
+   "ko": "치과 의사가 니콜라에게 심부전 병력이 있는지 물어요.",
+   "blank": "insuffisance",
+   "src": "made"
+  },
+  {
+   "text": "Le théâtre a fermé un mois par insuffisance de moyens, raconte Inès.",
+   "en": "The theater closed for a month due to a lack of funds, Inès says.",
+   "ko": "극장이 자금 부족으로 한 달 문을 닫았다고 이네스가 말해요.",
+   "blank": "insuffisance",
+   "src": "made"
+  }
+ ],
  "w|insuffisant": [
   {
    "text": "Le temps prévu pour la formation paraît insuffisant à Lucas.",
@@ -50822,6 +51174,22 @@
    "en": "For Émilie's children, grandma's last slice of tart is sacred.",
    "ko": "에밀리의 아이들에게 할머니 파이 마지막 조각은 아무도 못 건드려요.",
    "blank": "intouchable",
+   "src": "made"
+  }
+ ],
+ "w|intoxication": [
+  {
+   "text": "Le dentiste rappelle à Nicolas qu'avaler trop de dentifrice peut causer une légère intoxication chez l'enfant.",
+   "en": "The dentist reminds Nicolas that swallowing too much toothpaste can cause mild poisoning in children.",
+   "ko": "치과 의사는 아이가 치약을 너무 많이 삼키면 가벼운 중독이 올 수 있다고 니콜라에게 일러 줘요.",
+   "blank": "intoxication",
+   "src": "made"
+  },
+  {
+   "text": "Dans le drame, une famille entière est victime d'une intoxication au monoxyde de carbone, et Inès joue la fille.",
+   "en": "In the drama, a whole family suffers carbon monoxide poisoning, and Inès plays the daughter.",
+   "ko": "그 드라마에서 한 가족이 일산화탄소 중독을 겪고, 이네스는 딸을 연기해요.",
+   "blank": "intoxication",
    "src": "made"
   }
  ],
@@ -52131,6 +52499,22 @@
    "blank": "journée"
   }
  ],
+ "w|joyau": [
+  {
+   "text": "Pour Nicolas, une dent sans carie est un vrai joyau.",
+   "en": "For Nicolas, a tooth without a cavity is a real jewel.",
+   "ko": "니콜라에게 충치 없는 이는 진짜 보석이에요.",
+   "blank": "joyau",
+   "src": "made"
+  },
+  {
+   "text": "Le faux joyau de la couronne brille sous les projecteurs du théâtre.",
+   "en": "The fake jewel in the crown glitters under the theater spotlights.",
+   "ko": "왕관의 가짜 보석이 극장 조명 아래서 반짝여요.",
+   "blank": "joyau",
+   "src": "made"
+  }
+ ],
  "w|joyeux": [
   {
    "text": "Il semble très joyeux aujourd'hui.",
@@ -52757,6 +53141,22 @@
    "en": "The lake is calm this morning.",
    "ko": "오늘 아침에 호수가 잔잔해요.",
    "blank": "lac"
+  }
+ ],
+ "w|lacération": [
+  {
+   "text": "Le dentiste soigne une petite lacération sur la gencive de Nicolas.",
+   "en": "The dentist treats a small laceration on Nicolas's gum.",
+   "ko": "치과 의사가 니콜라의 잇몸에 난 작은 찢어진 상처를 치료해요.",
+   "blank": "lacération",
+   "src": "made"
+  },
+  {
+   "text": "Le maquilleur dessine une fausse lacération sur la joue d'Inès pour la scène de combat.",
+   "en": "The makeup artist draws a fake laceration on Inès's cheek for the fight scene.",
+   "ko": "분장사가 싸움 장면을 위해 이네스의 뺨에 가짜 찢어진 상처를 그려요.",
+   "blank": "lacération",
+   "src": "made"
   }
  ],
  "w|lacet": [
@@ -53559,6 +53959,22 @@
    "en": "Can you mail this letter for me?",
    "ko": "이 편지 좀 부쳐줄 수 있어?",
    "blank": "lettre"
+  }
+ ],
+ "w|leucémie": [
+  {
+   "text": "L'assistante raconte à Nicolas que son neveu a guéri d'une leucémie l'an dernier.",
+   "en": "The assistant tells Nicolas that her nephew recovered from leukemia last year.",
+   "ko": "치위생사는 니콜라에게 조카가 작년에 백혈병을 이겨 냈다고 얘기해요.",
+   "blank": "leucémie",
+   "src": "made"
+  },
+  {
+   "text": "La pièce raconte l'histoire d'une jeune violoniste atteinte de leucémie, et Inès pleure à chaque fois.",
+   "en": "The play tells the story of a young violinist with leukemia, and Inès cries every time.",
+   "ko": "이 연극은 백혈병에 걸린 젊은 바이올리니스트 이야기라서 이네스는 매번 울어요.",
+   "blank": "leucémie",
+   "src": "made"
   }
  ],
  "w|leur": [
@@ -62187,6 +62603,22 @@
    "blank": "nounou"
   }
  ],
+ "w|nourrice": [
+  {
+   "text": "Petit, Nicolas allait chez le dentiste avec sa nourrice, une femme très patiente.",
+   "en": "As a child, Nicolas went to the dentist with his nanny, a very patient woman.",
+   "ko": "어릴 때 니콜라는 아주 참을성 있는 보모와 함께 치과에 다녔어요.",
+   "blank": "nourrice",
+   "src": "made"
+  },
+  {
+   "text": "Dans la comédie, Inès joue une nourrice qui cache un secret de famille.",
+   "en": "In the comedy, Inès plays a nanny who hides a family secret.",
+   "ko": "그 희극에서 이네스는 집안의 비밀을 숨긴 유모를 연기해요.",
+   "blank": "nourrice",
+   "src": "made"
+  }
+ ],
  "w|nourrir": [
   {
    "text": "Je dois nourrir le chat tous les matins.",
@@ -65431,6 +65863,22 @@
    "blank": "parent"
   }
  ],
+ "w|parental": [
+  {
+   "text": "Pour les mineurs, le cabinet demande une autorisation parentale avant toute extraction.",
+   "en": "For minors, the practice asks for parental consent before any extraction.",
+   "ko": "미성년자는 이를 뽑기 전에 치과에서 부모 동의서를 요구해요.",
+   "blank": "parentale",
+   "src": "made"
+  },
+  {
+   "text": "Le théâtre affiche que le spectacle demande un accord parental pour les moins de douze ans.",
+   "en": "The theater posts that the show requires parental guidance for under-twelves.",
+   "ko": "극장에는 열두 살 미만은 부모 동의가 필요한 공연이라고 붙어 있어요.",
+   "blank": "parental",
+   "src": "made"
+  }
+ ],
  "w|parer": [
   {
    "text": "Thomas prépare toujours plus de sauce pour parer aux imprévus.",
@@ -66189,6 +66637,22 @@
    "src": "made"
   }
  ],
+ "w|paternel": [
+  {
+   "text": "Nicolas a hérité de son grand-père paternel des dents très solides.",
+   "en": "Nicolas inherited very strong teeth from his paternal grandfather.",
+   "ko": "니콜라는 친할아버지에게서 아주 튼튼한 이를 물려받았어요.",
+   "blank": "paternel",
+   "src": "made"
+  },
+  {
+   "text": "Le personnage d'Inès cherche désespérément l'amour paternel qu'elle n'a jamais reçu.",
+   "en": "Inès's character desperately seeks the fatherly love she never received.",
+   "ko": "이네스가 맡은 인물은 한 번도 받지 못한 아버지의 사랑을 간절히 찾아요.",
+   "blank": "paternel",
+   "src": "made"
+  }
+ ],
  "w|pâtes": [
   {
    "text": "Sans cuisine, Louis fait cuire des pâtes sur un petit réchaud.",
@@ -66396,6 +66860,22 @@
    "en": "The little girl next door places a ladybug she found in the courtyard in Inès's palm.",
    "ko": "옆집 꼬마가 마당에서 찾은 무당벌레를 이네스의 손바닥에 올려놓아요.",
    "blank": "paume",
+   "src": "made"
+  }
+ ],
+ "w|paupière": [
+  {
+   "text": "Sous la lumière vive, Nicolas ferme les paupières.",
+   "en": "Under the bright light, Nicolas closes his eyelids.",
+   "ko": "밝은 조명 아래서 니콜라는 눈을 감아요.",
+   "blank": "paupières",
+   "src": "made"
+  },
+  {
+   "text": "Le maquilleur applique un fard doré sur la paupière d'Inès.",
+   "en": "The makeup artist applies golden shadow to Inès's eyelid.",
+   "ko": "분장사가 이네스의 눈꺼풀에 금빛 섀도를 발라요.",
+   "blank": "paupière",
    "src": "made"
   }
  ],
@@ -66725,6 +67205,22 @@
    "en": "I love impressionist painting.",
    "ko": "인상파 그림을 정말 좋아해.",
    "blank": "peinture"
+  }
+ ],
+ "w|pèlerin": [
+  {
+   "text": "Un pèlerin en route vers le sud s'est arrêté au cabinet pour une rage de dents, raconte Nicolas.",
+   "en": "A pilgrim heading south stopped at the practice for a toothache, Nicolas says.",
+   "ko": "남쪽으로 가던 순례자가 치통 때문에 치과에 들렀다고 니콜라가 말해요.",
+   "blank": "pèlerin",
+   "src": "made"
+  },
+  {
+   "text": "Inès joue une pèlerine qui traverse les montagnes à pied.",
+   "en": "Inès plays a pilgrim crossing the mountains on foot.",
+   "ko": "이네스는 걸어서 산을 넘는 순례자를 연기해요.",
+   "blank": "pèlerine",
+   "src": "made"
   }
  ],
  "w|pelle": [
@@ -68462,6 +68958,22 @@
    "en": "In the evening, Camille plays chess with the mayor and always loses a pawn right at the start.",
    "ko": "저녁이면 카미유는 이장님과 체스를 두는데 늘 처음부터 폰을 하나 잃어요.",
    "blank": "pion",
+   "src": "made"
+  }
+ ],
+ "w|pionnier": [
+  {
+   "text": "Le dentiste de Nicolas se voit comme un pionnier des soins sans douleur.",
+   "en": "Nicolas's dentist sees himself as a pioneer of painless care.",
+   "ko": "니콜라의 치과 의사는 자신을 무통 치료의 개척자로 여겨요.",
+   "blank": "pionnier",
+   "src": "made"
+  },
+  {
+   "text": "Inès joue une aviatrice, une vraie pionnière du siècle dernier.",
+   "en": "Inès plays an aviator, a real pioneer from the last century.",
+   "ko": "이네스는 지난 세기의 진짜 개척자인 여성 비행사를 연기해요.",
+   "blank": "pionnière",
    "src": "made"
   }
  ],
@@ -72705,6 +73217,22 @@
    "blank": "procureur"
   }
  ],
+ "w|prodige": [
+  {
+   "text": "La fille du dentiste est un petit prodige du piano, raconte l'assistante à Nicolas.",
+   "en": "The dentist's daughter is a little piano prodigy, the assistant tells Nicolas.",
+   "ko": "치위생사가 니콜라에게 치과 의사의 딸이 피아노 신동이라고 얘기해요.",
+   "blank": "prodige",
+   "src": "made"
+  },
+  {
+   "text": "Le jeune acteur qui joue avec Inès est un prodige de seize ans.",
+   "en": "The young actor playing with Inès is a sixteen-year-old prodigy.",
+   "ko": "이네스와 함께 연기하는 젊은 배우는 열여섯 살 천재예요.",
+   "blank": "prodige",
+   "src": "made"
+  }
+ ],
  "w|producteur": [
   {
    "text": "Le producteur a financé le nouveau film.",
@@ -75443,6 +75971,22 @@
    "src": "made"
   }
  ],
+ "w|rajeunir": [
+  {
+   "text": "Avec ses dents blanchies, Nicolas a l'impression de rajeunir de dix ans.",
+   "en": "With his whitened teeth, Nicolas feels ten years younger.",
+   "ko": "미백한 이를 보니 니콜라는 열 살은 젊어진 기분이에요.",
+   "blank": "rajeunir",
+   "src": "made"
+  },
+  {
+   "text": "Grâce au maquillage, la vieille actrice semble rajeunir de vingt ans, s'étonne Inès.",
+   "en": "Thanks to the makeup, the old actress seems twenty years younger, Inès marvels.",
+   "ko": "분장 덕분에 늙은 배우가 스무 살은 젊어 보여서 이네스가 놀라요.",
+   "blank": "rajeunir",
+   "src": "made"
+  }
+ ],
  "w|rajouter": [
   {
    "text": "Léa a dû rajouter une couverture sur le lit du vieux monsieur.",
@@ -77336,6 +77880,22 @@
    "en": "Léa has to rewrite the labels on her honey jars because the price has changed.",
    "ko": "레아는 가격이 바뀌어서 꿀단지 라벨을 다시 써야 해요.",
    "blank": "réécrire",
+   "src": "made"
+  }
+ ],
+ "w|rééducation": [
+  {
+   "text": "Après son accident de mâchoire, Nicolas suit une rééducation chez un kiné.",
+   "en": "After his jaw accident, Nicolas goes through rehabilitation with a physiotherapist.",
+   "ko": "턱을 다친 뒤 니콜라는 물리치료사에게 재활 치료를 받아요.",
+   "blank": "rééducation",
+   "src": "made"
+  },
+  {
+   "text": "Après sa blessure à la cheville, Inès a repris la scène grâce à la rééducation.",
+   "en": "After her ankle injury, Inès returned to the stage thanks to rehabilitation.",
+   "ko": "발목을 다친 뒤 이네스는 재활 치료 덕분에 무대로 돌아왔어요.",
+   "blank": "rééducation",
    "src": "made"
   }
  ],
@@ -81417,6 +81977,22 @@
    "en": "What is your role in the team?",
    "ko": "팀에서 네 역할이 뭐야?",
    "blank": "rôle"
+  }
+ ],
+ "w|roller": [
+  {
+   "text": "Nicolas s'est cassé une incisive en tombant de ses rollers.",
+   "en": "Nicolas broke an incisor falling off his rollerblades.",
+   "ko": "니콜라는 인라인스케이트를 타다 넘어져서 앞니가 부러졌어요.",
+   "blank": "rollers",
+   "src": "made"
+  },
+  {
+   "text": "Dans la comédie musicale, Inès traverse la scène en roller.",
+   "en": "In the musical, Inès crosses the stage on roller skates.",
+   "ko": "뮤지컬에서 이네스는 롤러스케이트를 타고 무대를 가로질러요.",
+   "blank": "roller",
+   "src": "made"
   }
  ],
  "w|romain": [
@@ -91797,6 +92373,22 @@
    "blank": "ton"
   }
  ],
+ "w|tong": [
+  {
+   "text": "Nicolas est venu au cabinet en tongs, car il faisait très chaud.",
+   "en": "Nicolas came to the practice in flip-flops because it was very hot.",
+   "ko": "날이 너무 더워서 니콜라는 쪼리를 신고 치과에 왔어요.",
+   "blank": "tongs",
+   "src": "made"
+  },
+  {
+   "text": "Pour la scène de plage, la costumière a trouvé des tongs à fleurs pour Inès.",
+   "en": "For the beach scene, the costume designer found flowery flip-flops for Inès.",
+   "ko": "해변 장면을 위해 의상 담당이 이네스에게 꽃무늬 쪼리를 구해 줬어요.",
+   "blank": "tongs",
+   "src": "made"
+  }
+ ],
  "w|tonne": [
   {
    "text": "Ce camion transporte une tonne de marchandises.",
@@ -94475,6 +95067,22 @@
    "src": "made"
   }
  ],
+ "w|uriner": [
+  {
+   "text": "Avant l'anesthésie, Nicolas demande s'il peut aller uriner.",
+   "en": "Before the anesthesia, Nicolas asks if he can go to urinate.",
+   "ko": "마취 전에 니콜라는 소변을 보러 가도 되는지 물어요.",
+   "blank": "uriner",
+   "src": "made"
+  },
+  {
+   "text": "Inès rit en lisant la scène où un chien doit uriner sur le décor.",
+   "en": "Inès laughs reading the scene where a dog has to urinate on the set.",
+   "ko": "개가 무대 세트에 오줌을 누는 장면을 읽으며 이네스가 웃어요.",
+   "blank": "uriner",
+   "src": "made"
+  }
+ ],
  "w|urne": [
   {
    "text": "La salle grecque expose une urne décorée de scènes de chasse.",
@@ -95713,6 +96321,22 @@
    "src": "made"
   }
  ],
+ "w|vertèbre": [
+  {
+   "text": "Nicolas se tient mal sur le fauteuil, et une vertèbre lui fait mal après la séance.",
+   "en": "Nicolas sits badly in the chair, and a vertebra hurts after the session.",
+   "ko": "니콜라가 의자에 바르지 않게 앉아 있어서 치료 뒤에 척추뼈 하나가 아파요.",
+   "blank": "vertèbre",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux régisseur s'est déplacé une vertèbre en portant un décor, raconte Inès.",
+   "en": "The old stage manager slipped a vertebra carrying scenery, Inès says.",
+   "ko": "늙은 무대 감독이 무대 장치를 들다가 척추뼈가 어긋났다고 이네스가 말해요.",
+   "blank": "vertèbre",
+   "src": "made"
+  }
+ ],
  "w|vertige": [
   {
    "text": "Une vieille dame dit à Louis qu'elle a des vertiges quand elle se lève trop vite.",
@@ -96502,6 +97126,22 @@
    "en": "Claire's car skids a little on the snowy bend.",
    "ko": "클레르의 차가 눈 덮인 커브에서 조금 미끄러져요.",
    "blank": "virage",
+   "src": "made"
+  }
+ ],
+ "w|viral": [
+  {
+   "text": "Le dentiste reporte le rendez-vous de Nicolas à cause d'une infection virale.",
+   "en": "The dentist postpones Nicolas's appointment because of a viral infection.",
+   "ko": "바이러스 감염 때문에 치과 의사가 니콜라의 진료를 미뤄요.",
+   "blank": "virale",
+   "src": "made"
+  },
+  {
+   "text": "La bande-annonce de la pièce est devenue virale en deux jours, et Inès n'en revient pas.",
+   "en": "The trailer for the play went viral in two days, and Inès can't believe it.",
+   "ko": "연극 예고편이 이틀 만에 화제가 돼서 이네스는 믿기지 않아요.",
+   "blank": "virale",
    "src": "made"
   }
  ],

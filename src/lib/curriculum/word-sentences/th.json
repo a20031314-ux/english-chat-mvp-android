@@ -117,6 +117,22 @@
    "src": "made"
   }
  ],
+ "w|กตัญญู": [
+  {
+   "text": "ธนายืมหนังสือนิทานเรื่องลูกกตัญญูไปอ่านให้หลานฟัง",
+   "en": "Thana borrowed a storybook about a dutiful child to read to his niece.",
+   "ko": "타나는 효성스러운 아이 이야기책을 빌려 조카에게 읽어 줬어요.",
+   "blank": "กตัญญู",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเป็นลูกกตัญญู ย้ายบ้านมาอยู่ใกล้พ่อแม่ที่แก่แล้ว",
+   "en": "Suda is a devoted daughter and moved to live near her aging parents.",
+   "ko": "효녀인 수다는 연로하신 부모님 곁으로 이사 왔어요.",
+   "blank": "กตัญญู",
+   "src": "made"
+  }
+ ],
  "w|ก็ตาม": [
   {
    "text": "ไม่ว่าเพื่อนบ้านจะรวยหรือจนก็ตาม ชัยก็ทักทายทุกคนเหมือนกัน",
@@ -5667,6 +5683,22 @@
    "src": "made"
   }
  ],
+ "w|ข้อคิด": [
+  {
+   "text": "ธนาชอบหนังสือที่ให้ข้อคิดดีๆ เกี่ยวกับชีวิต",
+   "en": "Thana likes books that offer good insights about life.",
+   "ko": "타나는 삶에 대한 좋은 교훈을 주는 책을 좋아해요.",
+   "blank": "ข้อคิด",
+   "src": "made"
+  },
+  {
+   "text": "การย้ายบ้านครั้งนี้ให้ข้อคิดกับสุดาว่าของส่วนใหญ่ไม่จำเป็น",
+   "en": "This move taught Suda that most of her things aren't necessary.",
+   "ko": "이번 이사로 수다는 물건 대부분이 필요 없다는 교훈을 얻었어요.",
+   "blank": "ข้อคิด",
+   "src": "made"
+  }
+ ],
  "w|ของ": [
   {
    "text": "นี่ของใคร",
@@ -6739,6 +6771,22 @@
    "en": "Look at the stars up in the sky.",
    "ko": "하늘 위 별 봐.",
    "blank": "ข้างบน"
+  }
+ ],
+ "w|ข้างมาก": [
+  {
+   "text": "ชมรมรักการอ่านใช้เสียงข้างมากเลือกหนังสือประจำเดือน",
+   "en": "The reading club picks the book of the month by majority vote.",
+   "ko": "독서 동아리는 다수결로 이달의 책을 정해요.",
+   "blank": "ข้างมาก",
+   "src": "made"
+  },
+  {
+   "text": "คนในครอบครัวเสียงข้างมากอยากได้บ้านที่มีสวน สุดาจึงยอมตาม",
+   "en": "The majority of the family wanted a house with a garden, so Suda went along.",
+   "ko": "가족 다수가 정원 있는 집을 원해서 수다는 따르기로 했어요.",
+   "blank": "ข้างมาก",
+   "src": "made"
   }
  ],
  "w|ข้างล่าง": [
@@ -12509,6 +12557,22 @@
    "blank": "ค่าแรง"
   }
  ],
+ "w|คาสิโน": [
+  {
+   "text": "ธนายืมนิยายสืบสวนที่เกิดขึ้นในคาสิโนกลางทะเลทราย",
+   "en": "Thana borrowed a detective novel set in a casino in the middle of the desert.",
+   "ko": "타나는 사막 한가운데 카지노가 배경인 추리 소설을 빌렸어요.",
+   "blank": "คาสิโน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาไม่อยากเช่าคอนโดใกล้คาสิโนเพราะเสียงดังทั้งคืน",
+   "en": "Suda didn't want to rent a condo near the casino because it's noisy all night.",
+   "ko": "수다는 밤새 시끄러워서 카지노 근처 콘도는 빌리고 싶지 않았어요.",
+   "blank": "คาสิโน",
+   "src": "made"
+  }
+ ],
  "w|ค่าเสียหาย": [
   {
    "text": "ผู้ปกครองยอมจ่ายค่าเสียหายเมื่อลูกเตะบอลโดนกระจกห้องสมุดแตก",
@@ -13708,6 +13772,22 @@
    "en": "Wanna multiplied the room's width by its length to calculate the number of tiles.",
    "ko": "완나는 타일 개수를 계산하려고 방의 너비에 길이를 곱했어요.",
    "blank": "คูณ",
+   "src": "made"
+  }
+ ],
+ "w|คู่มือ": [
+  {
+   "text": "ธนาเขียนคู่มือการใช้ห้องสมุดสำหรับนักศึกษาใหม่",
+   "en": "Thana wrote a library guide for new students.",
+   "ko": "타나는 신입생을 위한 도서관 이용 안내서를 썼어요.",
+   "blank": "คู่มือ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเปิดคู่มือประกอบตู้เสื้อผ้าแต่อ่านไม่เข้าใจ",
+   "en": "Suda opened the wardrobe assembly manual but couldn't understand it.",
+   "ko": "수다는 옷장 조립 설명서를 펼쳤지만 이해가 안 됐어요.",
+   "blank": "คู่มือ",
    "src": "made"
   }
  ],
@@ -15968,6 +16048,22 @@
    "en": "Every morning Malee arranges the mangoes on her stall in neat layers.",
    "ko": "말리는 매일 아침 좌판 위에 망고를 예쁘게 층층이 진열해요.",
    "blank": "จัดเรียง",
+   "src": "made"
+  }
+ ],
+ "w|จัดวาง": [
+  {
+   "text": "ธนาช่วยจัดวางหนังสือใหม่บนชั้นตามหมวด",
+   "en": "Thana helped arrange the new books on the shelves by category.",
+   "ko": "타나는 새 책을 분류별로 서가에 배치하는 걸 도왔어요.",
+   "blank": "จัดวาง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาจัดวางเฟอร์นิเจอร์ในห้องนั่งเล่นใหม่สามรอบ",
+   "en": "Suda rearranged the living room furniture three times.",
+   "ko": "수다는 거실 가구 배치를 세 번이나 바꿨어요.",
+   "blank": "จัดวาง",
    "src": "made"
   }
  ],
@@ -19607,6 +19703,22 @@
    "blank": "ชีวิต"
   }
  ],
+ "w|ชีวิตชีวา": [
+  {
+   "text": "มุมเด็กในห้องสมุดมีชีวิตชีวาขึ้นหลังทาสีใหม่",
+   "en": "The children's corner of the library became livelier after being repainted.",
+   "ko": "도서관 어린이 코너는 새로 칠한 뒤 한결 생기가 돌았어요.",
+   "blank": "ชีวิตชีวา",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อเพื่อนมาช่วยขนของ บ้านใหม่ของสุดาก็มีชีวิตชีวาขึ้นทันที",
+   "en": "When friends came to help move, Suda's new house instantly came alive.",
+   "ko": "친구들이 짐 옮기는 걸 도우러 오자 수다의 새집은 금세 활기가 넘쳤어요.",
+   "blank": "ชีวิตชีวา",
+   "src": "made"
+  }
+ ],
  "w|ชีส": [
   {
    "text": "ใส่ชีสบนพิซซ่าอีกหน่อย",
@@ -19769,6 +19881,22 @@
    "en": "Soft pajamas are comfortable to sleep in.",
    "ko": "부드러운 잠옷은 자기 편해.",
    "blank": "ชุดนอน"
+  }
+ ],
+ "w|ชุ่ม": [
+  {
+   "text": "ธนาวิ่งฝ่าฝนมาห้องสมุดจนเสื้อชุ่ม",
+   "en": "Thana ran through the rain to the library and his shirt got soaked.",
+   "ko": "타나는 비를 뚫고 도서관까지 뛰어와서 옷이 흠뻑 젖었어요.",
+   "blank": "ชุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "กล่องหนังสือของสุดาเปียกชุ่มเพราะฝนตกตอนขนของ",
+   "en": "Suda's book boxes got soaked because it rained during the move.",
+   "ko": "이삿짐을 옮길 때 비가 와서 수다의 책 상자가 흠뻑 젖었어요.",
+   "blank": "ชุ่ม",
+   "src": "made"
   }
  ],
  "w|ชุมชน": [
@@ -20984,6 +21112,22 @@
    "en": "The coach had Suda practice free throws over and over until she made ten in a row.",
    "ko": "코치는 수다가 자유투를 열 개 연속으로 넣을 때까지 반복해서 연습하게 했어요.",
    "blank": "ซ้ำ",
+   "src": "made"
+  }
+ ],
+ "w|ซ้ำแล้วซ้ำเล่า": [
+  {
+   "text": "ธนาอ่านนิยายเล่มโปรดซ้ำแล้วซ้ำเล่าจนปกขาด",
+   "en": "Thana read his favorite novel over and over until the cover tore.",
+   "ko": "타나는 좋아하는 소설을 읽고 또 읽어서 표지가 찢어졌어요.",
+   "blank": "ซ้ำแล้วซ้ำเล่า",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเช็กรายการของซ้ำแล้วซ้ำเล่าเพราะกลัวลืม",
+   "en": "Suda checked her list again and again for fear of forgetting something.",
+   "ko": "수다는 뭔가 빠뜨릴까 봐 목록을 확인하고 또 확인했어요.",
+   "blank": "ซ้ำแล้วซ้ำเล่า",
    "src": "made"
   }
  ],
@@ -24225,6 +24369,22 @@
    "src": "made"
   }
  ],
+ "w|ตรึง": [
+  {
+   "text": "ธนาใช้หมุดตรึงประกาศไว้บนบอร์ดหน้าห้องสมุด",
+   "en": "Thana pinned the notice to the board outside the library.",
+   "ko": "타나는 도서관 앞 게시판에 압정으로 공지를 고정했어요.",
+   "blank": "ตรึง",
+   "src": "made"
+  },
+  {
+   "text": "ช่างตรึงฝาลังไม้ของสุดาด้วยตะปูก่อนขนขึ้นรถ",
+   "en": "The worker nailed down the lid of Suda's wooden crate before loading it onto the truck.",
+   "ko": "인부는 수다의 나무 상자 뚜껑을 못으로 고정한 뒤 트럭에 실었어요.",
+   "blank": "ตรึง",
+   "src": "made"
+  }
+ ],
  "w|ตรุษจีน": [
   {
    "text": "ครอบครัวฉลองตรุษจีนด้วยอาหารจีน",
@@ -25298,6 +25458,22 @@
    "en": "Malee named her vegetable stall Grandma's Garden.",
    "ko": "말리는 채소 좌판 이름을 '할머니 텃밭'이라고 지었어요.",
    "blank": "ตั้งชื่อ",
+   "src": "made"
+  }
+ ],
+ "w|ตั้งตัว": [
+  {
+   "text": "ธนาอ่านหนังสือการเงินเพื่อหาทางตั้งตัวหลังเรียนจบ",
+   "en": "Thana reads finance books to find a way to get established after graduating.",
+   "ko": "타나는 졸업 후 자리 잡을 방법을 찾으려고 재테크 책을 읽어요.",
+   "blank": "ตั้งตัว",
+   "src": "made"
+  },
+  {
+   "text": "สุดาย้ายมาเช่าห้องเล็กก่อนจนกว่าจะตั้งตัวได้",
+   "en": "Suda moved into a small rented room for now until she gets on her feet.",
+   "ko": "수다는 자리를 잡을 때까지 우선 작은 방을 빌려 이사했어요.",
+   "blank": "ตั้งตัว",
    "src": "made"
   }
  ],
@@ -31007,6 +31183,22 @@
    "src": "made"
   }
  ],
+ "w|ที่อื่น": [
+  {
+   "text": "ถ้าหาหนังสือเล่มนี้ไม่เจอ ธนาแนะให้ลองไปห้องสมุดที่อื่น",
+   "en": "If you can't find this book, Thana suggests trying a library somewhere else.",
+   "ko": "이 책을 못 찾으면 타나는 다른 곳 도서관에 가 보라고 권해요.",
+   "blank": "ที่อื่น",
+   "src": "made"
+  },
+  {
+   "text": "สุดาบอกว่าไม่มีที่อื่นที่อยากอยู่มากไปกว่าบ้านริมแม่น้ำหลังนี้",
+   "en": "Suda says there's nowhere else she'd rather live than this riverside house.",
+   "ko": "수다는 이 강변 집보다 더 살고 싶은 곳은 없다고 해요.",
+   "blank": "ที่อื่น",
+   "src": "made"
+  }
+ ],
  "w|ทึบ": [
   {
    "text": "กระจกบานนี้ทึบมองไม่ผ่าน",
@@ -34953,6 +35145,22 @@
    "blank": "นิทาน"
   }
  ],
+ "w|นิพพาน": [
+  {
+   "text": "ธนาค้นหนังสือธรรมะที่อธิบายเรื่องนิพพานให้เข้าใจง่าย",
+   "en": "Thana searched for a dharma book that explains nirvana in simple terms.",
+   "ko": "타나는 열반을 쉽게 설명한 불교 책을 찾았어요.",
+   "blank": "นิพพาน",
+   "src": "made"
+  },
+  {
+   "text": "พระที่มาทำบุญขึ้นบ้านใหม่ให้สุดาเทศน์เรื่องหนทางสู่นิพพาน",
+   "en": "The monk who came to bless Suda's new house preached about the path to nirvana.",
+   "ko": "수다의 집들이 공덕 의식에 온 스님은 열반에 이르는 길에 대해 설법했어요.",
+   "blank": "นิพพาน",
+   "src": "made"
+  }
+ ],
  "w|นิ่ม": [
   {
    "text": "หมอนใบนี้นิ่มมาก",
@@ -35407,6 +35615,22 @@
    "src": "made"
   }
  ],
+ "w|เนื้อเรื่อง": [
+  {
+   "text": "ธนาเล่าเนื้อเรื่องย่อของนิยายให้ผู้ใช้ฟังก่อนยืม",
+   "en": "Thana tells patrons a short summary of a novel's plot before they borrow it.",
+   "ko": "타나는 이용자가 빌리기 전에 소설 줄거리를 간단히 들려줘요.",
+   "blank": "เนื้อเรื่อง",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างรอรถขนของ สุดาอ่านนิยายที่เนื้อเรื่องเกี่ยวกับการย้ายบ้าน",
+   "en": "While waiting for the moving truck, Suda read a novel whose plot is about moving house.",
+   "ko": "이삿짐 트럭을 기다리는 동안 수다는 이사에 관한 줄거리의 소설을 읽었어요.",
+   "blank": "เนื้อเรื่อง",
+   "src": "made"
+  }
+ ],
  "w|เนื้อวัว": [
   {
    "text": "ย่างเนื้อวัวให้สุกพอดี",
@@ -35853,6 +36077,22 @@
    "src": "made"
   }
  ],
+ "w|ในประเทศ": [
+  {
+   "text": "ห้องสมุดมีมุมนิตยสารท่องเที่ยวในประเทศที่ธนาชอบอ่าน",
+   "en": "The library has a corner of domestic travel magazines that Thana likes to read.",
+   "ko": "도서관에는 타나가 즐겨 읽는 국내 여행 잡지 코너가 있어요.",
+   "blank": "ในประเทศ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาใช้บริษัทขนส่งในประเทศขนของไปเชียงใหม่",
+   "en": "Suda used a domestic shipping company to move her things to Chiang Mai.",
+   "ko": "수다는 국내 운송 회사를 이용해 짐을 치앙마이로 옮겼어요.",
+   "blank": "ในประเทศ",
+   "src": "made"
+  }
+ ],
  "w|ในไม่ช้า": [
   {
    "text": "ท้องฟ้ามืดครึ้มแบบนี้ ในไม่ช้าฝนคงตกลงมา",
@@ -36114,6 +36354,22 @@
    "en": "The boss asked Napha to write a work summary of no more than five lines.",
    "ko": "상사는 나파에게 업무 요약을 다섯 줄 이내로 써 달라고 했어요.",
    "blank": "บรรทัด",
+   "src": "made"
+  }
+ ],
+ "w|บรรทัดฐาน": [
+  {
+   "text": "การคืนหนังสือตรงเวลาเป็นบรรทัดฐานที่ธนาอยากให้ทุกคนทำตาม",
+   "en": "Returning books on time is a norm Thana wants everyone to follow.",
+   "ko": "책을 제때 반납하는 건 타나가 모두 지켜 주길 바라는 기본 원칙이에요.",
+   "blank": "บรรทัดฐาน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาตั้งบรรทัดฐานในบ้านใหม่ว่าต้องถอดรองเท้าก่อนเข้าบ้าน",
+   "en": "Suda set a rule in the new house that shoes must come off before entering.",
+   "ko": "수다는 새집에서 들어오기 전에 신발을 벗는 걸 기본 규칙으로 정했어요.",
+   "blank": "บรรทัดฐาน",
    "src": "made"
   }
  ],
@@ -37027,6 +37283,22 @@
    "blank": "บาดแผล"
   }
  ],
+ "w|บาตร": [
+  {
+   "text": "ก่อนห้องสมุดเปิด ธนาใส่บาตรพระที่เดินผ่านหน้าตึกทุกเช้า",
+   "en": "Before the library opens, Thana gives alms to the monks walking past the building every morning.",
+   "ko": "도서관이 문을 열기 전 타나는 매일 아침 건물 앞을 지나는 스님께 탁발 공양을 해요.",
+   "blank": "บาตร",
+   "src": "made"
+  },
+  {
+   "text": "เช้าวันแรกในบ้านใหม่ สุดาตื่นมาใส่บาตรหน้าบ้าน",
+   "en": "On her first morning in the new house, Suda got up to give alms in front of the house.",
+   "ko": "새집에서의 첫 아침, 수다는 일어나서 집 앞에서 탁발 공양을 했어요.",
+   "blank": "บาตร",
+   "src": "made"
+  }
+ ],
  "w|บาท": [
   {
    "text": "น้องสาวบอกว่ายังติดเงินเอกอยู่ห้าร้อยบาท",
@@ -37623,6 +37895,22 @@
    "src": "made"
   }
  ],
+ "w|เบ็ด": [
+  {
+   "text": "ธนายืมหนังสือสอนผูกเบ็ดตกปลาไปให้พ่อ",
+   "en": "Thana borrowed a book on tying fishing hooks for his father.",
+   "ko": "타나는 아버지께 드리려고 낚싯바늘 매는 법 책을 빌렸어요.",
+   "blank": "เบ็ด",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเจอคันเบ็ดของพ่อในห้องเก็บของตอนย้ายบ้าน",
+   "en": "Suda found her father's fishing rod in the storeroom while moving.",
+   "ko": "수다는 이사하다가 창고에서 아버지의 낚싯대를 찾았어요.",
+   "blank": "เบ็ด",
+   "src": "made"
+  }
+ ],
  "w|เบรก": [
   {
    "text": "รถไฟเบรกแรงจนกาแฟของชัยหกเลอะโต๊ะ",
@@ -38017,6 +38305,22 @@
    "en": "I do not always stick to expensive brands.",
    "ko": "나는 항상 비싼 브랜드만 고집하지는 않아.",
    "blank": "แบรนด์"
+  }
+ ],
+ "w|โบก": [
+  {
+   "text": "บรรณารักษ์โบกมือทักธนาจากเคาน์เตอร์",
+   "en": "The librarian waved hello to Thana from the counter.",
+   "ko": "사서가 카운터에서 타나에게 손을 흔들어 인사했어요.",
+   "blank": "โบก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาโบกมือลาเพื่อนบ้านตอนรถขนของออกจากซอย",
+   "en": "Suda waved goodbye to her neighbors as the moving truck left the lane.",
+   "ko": "이삿짐 트럭이 골목을 떠날 때 수다는 이웃들에게 손을 흔들어 작별했어요.",
+   "blank": "โบก",
+   "src": "made"
   }
  ],
  "w|โบกมือ": [
@@ -39338,6 +39642,22 @@
    "en": "The boss warned Suda not to be careless with the figures in the financial report.",
    "ko": "상사는 재무 보고서 숫자를 소홀히 하지 말라고 수다에게 경고했어요.",
    "blank": "ประมาท",
+   "src": "made"
+  }
+ ],
+ "w|ประมุข": [
+  {
+   "text": "ธนาค้นหนังสือเรื่องบทบาทของประมุขแห่งรัฐทั่วโลก",
+   "en": "Thana looked up books on the role of heads of state around the world.",
+   "ko": "타나는 세계 각국 국가원수의 역할에 관한 책을 찾았어요.",
+   "blank": "ประมุข",
+   "src": "made"
+  },
+  {
+   "text": "ตอนเก็บของ สุดาเจอหนังสือเรียนเก่าที่มีบทเรียนเรื่องประมุขของรัฐ",
+   "en": "While packing, Suda found an old textbook with a lesson on heads of state.",
+   "ko": "짐을 싸다가 수다는 국가원수에 관한 단원이 있는 옛 교과서를 발견했어요.",
+   "blank": "ประมุข",
    "src": "made"
   }
  ],
@@ -41551,6 +41871,22 @@
    "blank": "เป็นห่วง"
   }
  ],
+ "w|เป็นอันขาด": [
+  {
+   "text": "ห้องสมุดห้ามนำอาหารเข้ามาเป็นอันขาด",
+   "en": "Bringing food into the library is strictly forbidden.",
+   "ko": "도서관에 음식을 가지고 들어오는 건 절대 금지예요.",
+   "blank": "เป็นอันขาด",
+   "src": "made"
+  },
+  {
+   "text": "แม่กำชับสุดาว่าห้ามย้ายเข้าบ้านใหม่ก่อนทำบุญเป็นอันขาด",
+   "en": "Suda's mother insisted she must never move into the new house before the blessing ceremony.",
+   "ko": "어머니는 수다에게 공덕 의식 전에는 절대 새집에 들어가지 말라고 당부했어요.",
+   "blank": "เป็นอันขาด",
+   "src": "made"
+  }
+ ],
  "w|เป็นอันตราย": [
   {
    "text": "ป้ายเตือนว่าทางโค้งข้างหน้าเป็นอันตรายเวลาฝนตก",
@@ -41865,6 +42201,22 @@
    "en": "The floor is wet and slippery — be careful.",
    "ko": "바닥이 젖어서 미끄러워, 조심해.",
    "blank": "เปียก"
+  }
+ ],
+ "w|เปียโน": [
+  {
+   "text": "ห้องสมุดมีเปียโนเก่าให้เด็กๆ ฝึกเล่นวันเสาร์",
+   "en": "The library has an old piano for kids to practice on Saturdays.",
+   "ko": "도서관에는 토요일마다 아이들이 연습할 수 있는 낡은 피아노가 있어요.",
+   "blank": "เปียโน",
+   "src": "made"
+  },
+  {
+   "text": "ต้องใช้คนถึงหกคนยกเปียโนของสุดาขึ้นบันได",
+   "en": "It took six people to carry Suda's piano up the stairs.",
+   "ko": "수다의 피아노를 계단 위로 옮기는 데 여섯 명이나 필요했어요.",
+   "blank": "เปียโน",
+   "src": "made"
   }
  ],
  "w|เปี่ยม": [
@@ -43799,6 +44151,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้พิทักษ์": [
+  {
+   "text": "บรรณารักษ์เรียกตัวเองว่าผู้พิทักษ์หนังสือหายาก",
+   "en": "The librarian calls herself the guardian of rare books.",
+   "ko": "사서는 자신을 희귀서의 수호자라고 불러요.",
+   "blank": "ผู้พิทักษ์",
+   "src": "made"
+  },
+  {
+   "text": "หมาตัวใหญ่ของสุดาทำหน้าที่ผู้พิทักษ์บ้านใหม่ตั้งแต่คืนแรก",
+   "en": "Suda's big dog has acted as the guardian of the new house since the first night.",
+   "ko": "수다의 큰 개는 첫날 밤부터 새집의 수호자 역할을 해요.",
+   "blank": "ผู้พิทักษ์",
+   "src": "made"
+  }
+ ],
  "w|ผู้พิพากษา": [
   {
    "text": "ผู้พิพากษาจะตัดสินพรุ่งนี้",
@@ -43938,6 +44306,22 @@
    "en": "Wanna said there were more applicants for the teacher exam this year than ever.",
    "ko": "완나는 올해 교사 시험 지원자가 예년보다 많다고 했어요.",
    "blank": "ผู้สมัคร",
+   "src": "made"
+  }
+ ],
+ "w|ผู้สร้าง": [
+  {
+   "text": "ห้องสมุดจัดนิทรรศการเกี่ยวกับผู้สร้างตึกหลังนี้เมื่อร้อยปีก่อน",
+   "en": "The library held an exhibition about the man who built this building a hundred years ago.",
+   "ko": "도서관은 백 년 전 이 건물을 지은 사람에 관한 전시회를 열었어요.",
+   "blank": "ผู้สร้าง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาขอบคุณผู้สร้างบ้านที่ทำห้องเก็บของไว้กว้าง",
+   "en": "Suda is grateful to whoever built the house for making the storeroom so large.",
+   "ko": "수다는 창고를 넓게 만들어 준 집 지은 사람에게 고마워요.",
+   "blank": "ผู้สร้าง",
    "src": "made"
   }
  ],
@@ -46615,6 +46999,22 @@
    "src": "made"
   }
  ],
+ "w|พินัยกรรม": [
+  {
+   "text": "ธนาอ่านเจอในนิยายว่าตัวละครซ่อนพินัยกรรมไว้ในหนังสือ",
+   "en": "Thana read in a novel that a character hid a will inside a book.",
+   "ko": "타나는 소설에서 등장인물이 책 속에 유언장을 숨긴 대목을 읽었어요.",
+   "blank": "พินัยกรรม",
+   "src": "made"
+  },
+  {
+   "text": "บ้านหลังนี้ตกเป็นของสุดาตามพินัยกรรมของยาย",
+   "en": "This house passed to Suda according to her grandmother's will.",
+   "ko": "이 집은 할머니의 유언장에 따라 수다에게 넘어왔어요.",
+   "blank": "พินัยกรรม",
+   "src": "made"
+  }
+ ],
  "w|พินิจ": [
   {
    "text": "กิตติพินิจตราประทับใต้ถ้วยชามอยู่นานก่อนจะยอมจ่ายเงิน",
@@ -48541,6 +48941,22 @@
    "blank": "ภาคเรียน"
   }
  ],
+ "w|ภาควิชา": [
+  {
+   "text": "ธนาทำงานพิเศษในห้องสมุดของภาควิชาภาษาไทย",
+   "en": "Thana works part-time in the Thai department's library.",
+   "ko": "타나는 태국어학과 도서실에서 아르바이트를 해요.",
+   "blank": "ภาควิชา",
+   "src": "made"
+  },
+  {
+   "text": "สุดาย้ายบ้านมาใกล้มหาวิทยาลัยเพราะได้งานที่ภาควิชาเคมี",
+   "en": "Suda moved near the university because she got a job in the chemistry department.",
+   "ko": "수다는 화학과에 일자리를 얻어 대학교 근처로 이사했어요.",
+   "blank": "ภาควิชา",
+   "src": "made"
+  }
+ ],
  "w|ภาคเหนือ": [
   {
    "text": "วิชัยเลือกพักโรงแรมเล็กๆ ที่ตกแต่งแบบบ้านไม้ภาคเหนือ",
@@ -49325,6 +49741,22 @@
    "en": "Humans learn from mistakes.",
    "ko": "인간은 실수에서 배워.",
    "blank": "มนุษย์"
+  }
+ ],
+ "w|มนุษยชาติ": [
+  {
+   "text": "ธนาอ่านหนังสือเรื่องประวัติศาสตร์มนุษยชาติจบในสามวัน",
+   "en": "Thana finished a book on the history of humankind in three days.",
+   "ko": "타나는 인류의 역사에 관한 책을 사흘 만에 다 읽었어요.",
+   "blank": "มนุษยชาติ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาบ่นว่าการย้ายบ้านคงเป็นงานที่เหนื่อยที่สุดในประวัติศาสตร์มนุษยชาติ",
+   "en": "Suda grumbled that moving must be the most exhausting job in the history of humankind.",
+   "ko": "수다는 이사가 인류 역사상 가장 힘든 일일 거라고 투덜댔어요.",
+   "blank": "มนุษยชาติ",
+   "src": "made"
   }
  ],
  "w|มรดก": [
@@ -50383,6 +50815,22 @@
    "src": "made"
   }
  ],
+ "w|มิลลิเมตร": [
+  {
+   "text": "ห้องสมุดเก็บฟิล์มขนาดสามสิบห้ามิลลิเมตรไว้ในตู้ควบคุมความชื้น",
+   "en": "The library keeps thirty-five millimeter film in a humidity-controlled cabinet.",
+   "ko": "도서관은 삼십오 밀리미터 필름을 습도 조절 캐비닛에 보관해요.",
+   "blank": "มิลลิเมตร",
+   "src": "made"
+  },
+  {
+   "text": "ช่างบอกสุดาว่าตู้เย็นกว้างเกินประตูไปแค่ห้ามิลลิเมตร",
+   "en": "The worker told Suda the fridge is just five millimeters wider than the door.",
+   "ko": "인부는 수다에게 냉장고가 문보다 딱 오 밀리미터 넓다고 했어요.",
+   "blank": "มิลลิเมตร",
+   "src": "made"
+  }
+ ],
  "w|มี": [
   {
    "text": "มีคนมา",
@@ -50804,6 +51252,22 @@
    "en": "Jan is determined to save up before ordering a new laptop.",
    "ko": "짠은 새 노트북을 주문하기 전에 꼭 돈을 모으겠다고 마음먹었어요.",
    "blank": "มุ่งมั่น",
+   "src": "made"
+  }
+ ],
+ "w|มุ่งหมาย": [
+  {
+   "text": "ห้องสมุดนี้มุ่งหมายให้ทุกคนเข้าถึงหนังสือได้ฟรี",
+   "en": "This library aims to give everyone free access to books.",
+   "ko": "이 도서관은 누구나 무료로 책을 볼 수 있게 하는 걸 목표로 해요.",
+   "blank": "มุ่งหมาย",
+   "src": "made"
+  },
+  {
+   "text": "สุดาย้ายบ้านโดยมุ่งหมายจะอยู่ใกล้ที่ทำงานมากขึ้น",
+   "en": "Suda moved with the aim of living closer to work.",
+   "ko": "수다는 직장에 더 가까이 살려는 목적으로 이사했어요.",
+   "blank": "มุ่งหมาย",
    "src": "made"
   }
  ],
@@ -55541,6 +56005,22 @@
    "src": "made"
   }
  ],
+ "w|ราชธานี": [
+  {
+   "text": "ธนาค้นแผนที่โบราณของกรุงศรีอยุธยาสมัยที่ยังเป็นราชธานี",
+   "en": "Thana looked up old maps of Ayutthaya from when it was still the capital.",
+   "ko": "타나는 아유타야가 아직 왕도였던 시절의 옛 지도를 찾아봤어요.",
+   "blank": "ราชธานี",
+   "src": "made"
+  },
+  {
+   "text": "สุดาย้ายมาอยู่ใกล้กำแพงเมืองเก่าที่เคยเป็นราชธานีมาก่อน",
+   "en": "Suda moved near the walls of an old city that was once the royal capital.",
+   "ko": "수다는 예전에 왕도였던 옛 도시 성벽 근처로 이사 왔어요.",
+   "blank": "ราชธานี",
+   "src": "made"
+  }
+ ],
  "w|ราชวงศ์": [
   {
    "text": "กิตติชี้ให้ดูเครื่องถ้วยที่ราชวงศ์จีนส่งมาเป็นของขวัญ",
@@ -59711,6 +60191,22 @@
    "blank": "เลิกกัน"
   }
  ],
+ "w|เลิกเรียน": [
+  {
+   "text": "ธนาสอนการบ้านเด็กที่มาห้องสมุดหลังเลิกเรียน",
+   "en": "Thana helps with homework for kids who come to the library after school.",
+   "ko": "타나는 방과 후 도서관에 오는 아이들의 숙제를 봐 줘요.",
+   "blank": "เลิกเรียน",
+   "src": "made"
+  },
+  {
+   "text": "ลูกของสุดาต้องนั่งรถไกลขึ้นกว่าเดิมหลังเลิกเรียน",
+   "en": "Suda's child now has a longer ride home after school.",
+   "ko": "수다의 아이는 방과 후 예전보다 더 오래 차를 타야 해요.",
+   "blank": "เลิกเรียน",
+   "src": "made"
+  }
+ ],
  "w|เลิศ": [
   {
    "text": "อาหารร้านนี้รสชาติเลิศ",
@@ -62313,6 +62809,22 @@
    "src": "made"
   }
  ],
+ "w|ศักดินา": [
+  {
+   "text": "ธนากำลังเขียนรายงานเรื่องระบบศักดินาในสมัยอยุธยา",
+   "en": "Thana is writing a report on the sakdina system in the Ayutthaya period.",
+   "ko": "타나는 아유타야 시대 삭디나 제도에 관한 보고서를 쓰고 있어요.",
+   "blank": "ศักดินา",
+   "src": "made"
+  },
+  {
+   "text": "ในกล่องหนังสือของสุดามีตำราประวัติศาสตร์เรื่องระบบศักดินา",
+   "en": "Among Suda's boxes of books is a history text on the sakdina system.",
+   "ko": "수다의 책 상자에는 삭디나 제도에 관한 역사책이 있어요.",
+   "blank": "ศักดินา",
+   "src": "made"
+  }
+ ],
  "w|ศักดิ์ศรี": [
   {
    "text": "ธนาเชื่อว่าทุกคนควรเข้าถึงหนังสือได้อย่างมีศักดิ์ศรี",
@@ -62825,6 +63337,22 @@
    "en": "The war has ended.",
    "ko": "전쟁이 끝났어.",
    "blank": "สงคราม"
+  }
+ ],
+ "w|สงครามเย็น": [
+  {
+   "text": "ธนาแนะนำหนังสือเรื่องสงครามเย็นให้นักศึกษาประวัติศาสตร์",
+   "en": "Thana recommended books about the Cold War to history students.",
+   "ko": "타나는 사학과 학생들에게 냉전에 관한 책을 추천했어요.",
+   "blank": "สงครามเย็น",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเจอนิตยสารเก่าสมัยสงครามเย็นในห้องใต้หลังคาบ้านใหม่",
+   "en": "Suda found old Cold War-era magazines in the attic of her new house.",
+   "ko": "수다는 새집 다락방에서 냉전 시대의 옛 잡지를 발견했어요.",
+   "blank": "สงครามเย็น",
+   "src": "made"
   }
  ],
  "w|สงครามโลก": [
@@ -64390,6 +64918,22 @@
    "en": "Pranee thanked every guest for taking the time to come on a working day.",
    "ko": "쁘라니는 평일인데도 시간을 내어 와 준 손님 모두에게 감사했어요.",
    "blank": "สละเวลา",
+   "src": "made"
+  }
+ ],
+ "w|สลัก": [
+  {
+   "text": "ธนาเห็นชื่อผู้บริจาคสลักไว้บนแผ่นทองเหลืองหน้าห้องสมุด",
+   "en": "Thana saw the donors' names engraved on a brass plate in front of the library.",
+   "ko": "타나는 도서관 앞 놋쇠 판에 새겨진 기부자 이름을 봤어요.",
+   "blank": "สลัก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเสียดายบานประตูไม้ที่ปู่สลักลายดอกไม้ไว้เอง",
+   "en": "Suda is sad to leave the wooden door her grandfather carved with flowers himself.",
+   "ko": "수다는 할아버지가 손수 꽃무늬를 새긴 나무 문이 아까워요.",
+   "blank": "สลัก",
    "src": "made"
   }
  ],
@@ -66551,6 +67095,22 @@
    "blank": "สิ"
   }
  ],
+ "w|สิง": [
+  {
+   "text": "เด็กๆ ลือกันว่ามีผีสิงอยู่ในห้องเก็บหนังสือเก่าชั้นใต้ดิน",
+   "en": "The kids whisper that a ghost haunts the old book storeroom in the basement.",
+   "ko": "아이들은 지하 고서 보관실에 귀신이 산다고 소문내요.",
+   "blank": "สิง",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนแซวสุดาว่าบ้านใหม่ราคาถูกเพราะมีผีสิง",
+   "en": "Suda's friends teased her that the new house was cheap because it's haunted.",
+   "ko": "친구들은 수다의 새집이 귀신 들린 집이라 싼 거라고 놀렸어요.",
+   "blank": "สิง",
+   "src": "made"
+  }
+ ],
  "w|สิ่ง": [
   {
    "text": "สิ่งนี้ของใคร",
@@ -67368,6 +67928,22 @@
    "en": "Pranee's grandmother quoted the proverb about choosing a house by its neighbors.",
    "ko": "쁘라니의 할머니는 집을 고를 땐 이웃을 보라는 속담을 들려줬어요.",
    "blank": "สุภาษิต",
+   "src": "made"
+  }
+ ],
+ "w|สุ่ม": [
+  {
+   "text": "ธนาสุ่มหยิบหนังสือจากชั้นมาหนึ่งเล่มทุกสัปดาห์",
+   "en": "Every week, Thana picks a random book off the shelf.",
+   "ko": "타나는 매주 서가에서 책 한 권을 무작위로 골라요.",
+   "blank": "สุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "สุดาสุ่มเปิดกล่องดูเพราะลืมเขียนป้ายไว้",
+   "en": "Suda opened boxes at random because she forgot to label them.",
+   "ko": "수다는 상자에 이름표를 안 붙여서 아무거나 열어 봤어요.",
+   "blank": "สุ่ม",
    "src": "made"
   }
  ],
@@ -72979,6 +73555,22 @@
    "src": "made"
   }
  ],
+ "w|แหล่งข่าว": [
+  {
+   "text": "นักข่าวมาค้นหนังสือพิมพ์เก่าในห้องสมุดเพื่อยืนยันข้อมูลจากแหล่งข่าว",
+   "en": "A reporter came to search old newspapers in the library to confirm information from a source.",
+   "ko": "한 기자가 취재원의 정보를 확인하려고 도서관에서 옛 신문을 뒤졌어요.",
+   "blank": "แหล่งข่าว",
+   "src": "made"
+  },
+  {
+   "text": "สุดารู้จากแหล่งข่าวในหมู่บ้านว่าเจ้าของเดิมย้ายไปต่างประเทศ",
+   "en": "Suda learned from a source in the village that the previous owner moved abroad.",
+   "ko": "수다는 동네 소식통에게서 전 주인이 외국으로 이사 갔다는 걸 들었어요.",
+   "blank": "แหล่งข่าว",
+   "src": "made"
+  }
+ ],
  "w|แหลม": [
   {
    "text": "ธนาใช้ดินสอปลายแหลมจดเลขหมวดหนังสือลงสมุด",
@@ -73515,6 +74107,22 @@
    "en": "How should I explain this?",
    "ko": "어떻게 설명하지?",
    "blank": "อธิบาย"
+  }
+ ],
+ "w|อธิปไตย": [
+  {
+   "text": "ธนาช่วยนักศึกษาหาบทความเรื่องอำนาจอธิปไตย",
+   "en": "Thana helped a student find articles on sovereign power.",
+   "ko": "타나는 학생이 주권에 관한 논문을 찾는 걸 도왔어요.",
+   "blank": "อธิปไตย",
+   "src": "made"
+  },
+  {
+   "text": "สุดาตั้งชื่อแมวว่าอธิปไตย เพราะมันทำตัวเป็นเจ้าของบ้าน",
+   "en": "Suda named her cat Sovereignty because it acts like it owns the house.",
+   "ko": "수다는 고양이가 집주인처럼 굴어서 이름을 주권이라고 지었어요.",
+   "blank": "อธิปไตย",
+   "src": "made"
   }
  ],
  "w|อธิษฐาน": [
@@ -76565,6 +77173,22 @@
    "en": "He tries to overcome his own fear.",
    "ko": "그는 자신의 두려움을 이겨 내려고 해.",
    "blank": "เอาชนะ"
+  }
+ ],
+ "w|เอาเปรียบ": [
+  {
+   "text": "ธนาไม่ชอบคนที่เอาเปรียบคนอื่นด้วยการจองโต๊ะไว้ทั้งวัน",
+   "en": "Thana dislikes people who take advantage of others by reserving tables all day.",
+   "ko": "타나는 하루 종일 자리를 맡아 두며 남을 이용하는 사람을 싫어해요.",
+   "blank": "เอาเปรียบ",
+   "src": "made"
+  },
+  {
+   "text": "สุดากลัวโดนบริษัทขนย้ายเอาเปรียบเรื่องค่าบริการ",
+   "en": "Suda is afraid the moving company will take advantage of her on the fees.",
+   "ko": "수다는 이삿짐 업체가 요금으로 바가지를 씌울까 봐 걱정해요.",
+   "blank": "เอาเปรียบ",
+   "src": "made"
   }
  ],
  "w|เอียง": [

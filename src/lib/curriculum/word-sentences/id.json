@@ -1477,6 +1477,22 @@
    "blank": "Anti"
   }
  ],
+ "w|antibiotik": [
+  {
+   "text": "Dimas mengingatkan pasien untuk menghabiskan antibiotik sesuai resep.",
+   "en": "Dimas reminded the patient to finish the antibiotics as prescribed.",
+   "ko": "디마스는 환자에게 항생제를 처방대로 끝까지 먹으라고 일렀어요.",
+   "blank": "antibiotik",
+   "src": "made"
+  },
+  {
+   "text": "Putri harus minum antibiotik setelah tangannya tertusuk paku berkarat.",
+   "en": "Putri had to take antibiotics after her hand was pierced by a rusty nail.",
+   "ko": "푸트리는 녹슨 못에 손이 찔려서 항생제를 먹어야 했어요.",
+   "blank": "antibiotik",
+   "src": "made"
+  }
+ ],
  "w|antik": [
   {
    "text": "Di ruang kepala sekolah ada jam dinding antik peninggalan zaman Belanda.",
@@ -1874,6 +1890,22 @@
    "en": "The wooden cupboard in Ayu's shop is so old it's almost like an artifact.",
    "ko": "아유 가게의 나무 찬장은 너무 오래돼서 거의 유물 같아요.",
    "blank": "artefak",
+   "src": "made"
+  }
+ ],
+ "w|arteri": [
+  {
+   "text": "Dimas menjelaskan bahwa kolesterol tinggi bisa menyumbat arteri.",
+   "en": "Dimas explained that high cholesterol can clog the arteries.",
+   "ko": "디마스는 콜레스테롤이 높으면 동맥이 막힐 수 있다고 설명했어요.",
+   "blank": "arteri",
+   "src": "made"
+  },
+  {
+   "text": "Putri menyebut jalan besar di depan rumah sebagai arteri utama kota.",
+   "en": "Putri calls the big road in front of the house the city's main artery.",
+   "ko": "푸트리는 집 앞 큰길을 도시의 대동맥이라고 불러요.",
+   "blank": "arteri",
    "src": "made"
   }
  ],
@@ -5161,6 +5193,22 @@
    "src": "made"
   }
  ],
+ "w|berayun": [
+  {
+   "text": "Lampu gantung di apotek Dimas berayun saat terjadi gempa kecil.",
+   "en": "The hanging lamp in Dimas's pharmacy swung during a small earthquake.",
+   "ko": "작은 지진이 났을 때 디마스네 약국의 매달린 등이 흔들렸어요.",
+   "blank": "berayun",
+   "src": "made"
+  },
+  {
+   "text": "Pintu pagar tua itu berayun sambil berderit, jadi Putri meminyaki engsel.",
+   "en": "The old gate swung and creaked, so Putri oiled the hinges.",
+   "ko": "낡은 대문이 삐걱거리며 흔들려서 푸트리는 경첩에 기름을 쳤어요.",
+   "blank": "berayun",
+   "src": "made"
+  }
+ ],
  "w|berbagai": [
   {
    "text": "Berbagai pilihan tersedia di menu.",
@@ -7043,6 +7091,22 @@
    "src": "made"
   }
  ],
+ "w|berjatuhan": [
+  {
+   "text": "Kotak-kotak obat berjatuhan dari rak ketika Dimas tersenggol.",
+   "en": "Boxes of medicine fell off the shelf when Dimas bumped into it.",
+   "ko": "디마스가 부딪히자 약 상자들이 선반에서 우수수 떨어졌어요.",
+   "blank": "berjatuhan",
+   "src": "made"
+  },
+  {
+   "text": "Genteng berjatuhan ketika Putri membongkar atap yang bocor.",
+   "en": "Roof tiles came tumbling down when Putri took apart the leaky roof.",
+   "ko": "푸트리가 새는 지붕을 뜯자 기와가 우르르 떨어졌어요.",
+   "blank": "berjatuhan",
+   "src": "made"
+  }
+ ],
  "w|berjaya": [
   {
    "text": "Tim futsal penghuni gedung Bayu berjaya dalam turnamen antarapartemen.",
@@ -8513,6 +8577,22 @@
    "blank": "Bernyanyi"
   }
  ],
+ "w|berolahraga": [
+  {
+   "text": "Dimas menyarankan pelanggan yang sering pegal untuk rajin berolahraga.",
+   "en": "Dimas advised the customer who often feels stiff to exercise regularly.",
+   "ko": "디마스는 자주 결린다는 손님에게 꾸준히 운동하라고 권했어요.",
+   "blank": "berolahraga",
+   "src": "made"
+  },
+  {
+   "text": "Menurut Putri, memperbaiki rumah sama capeknya dengan berolahraga.",
+   "en": "According to Putri, fixing up a house is as tiring as working out.",
+   "ko": "푸트리는 집 고치는 게 운동하는 것만큼 힘들다고 해요.",
+   "blank": "berolahraga",
+   "src": "made"
+  }
+ ],
  "w|beroperasi": [
   {
    "text": "Mesin cetak koran itu beroperasi sepanjang malam.",
@@ -9725,6 +9805,22 @@
    "src": "made"
   }
  ],
+ "w|bersusah payah": [
+  {
+   "text": "Dimas bersusah payah membaca tulisan dokter di resep itu.",
+   "en": "Dimas struggled to read the doctor's handwriting on the prescription.",
+   "ko": "디마스는 처방전에 적힌 의사 글씨를 읽느라 진땀을 뺐어요.",
+   "blank": "bersusah payah",
+   "src": "made"
+  },
+  {
+   "text": "Putri bersusah payah mengangkat lemari jati ke lantai atas.",
+   "en": "Putri struggled to carry the teak wardrobe upstairs.",
+   "ko": "푸트리는 티크 옷장을 위층으로 옮기느라 무척 애썼어요.",
+   "blank": "bersusah payah",
+   "src": "made"
+  }
+ ],
  "w|bersyarat": [
   {
    "text": "Bank memberi Andi pinjaman bersyarat untuk merenovasi rumah.",
@@ -9903,6 +9999,22 @@
    "en": "I don't want to fight.",
    "ko": "싸우고 싶지 않아.",
    "blank": "bertarung"
+  }
+ ],
+ "w|berteduh": [
+  {
+   "text": "Saat hujan, beberapa pengemudi ojek berteduh di depan apotek Dimas.",
+   "en": "When it rains, some motorbike taxi drivers take shelter in front of Dimas's pharmacy.",
+   "ko": "비가 오면 오토바이 택시 기사 몇 명이 디마스네 약국 앞에서 비를 피해요.",
+   "blank": "berteduh",
+   "src": "made"
+  },
+  {
+   "text": "Para tukang berteduh di teras Putri saat hujan turun.",
+   "en": "The workers took shelter on Putri's porch when it rained.",
+   "ko": "비가 오자 일꾼들은 푸트리네 테라스에서 비를 피했어요.",
+   "blank": "berteduh",
+   "src": "made"
   }
  ],
  "w|bertekad": [
@@ -10983,6 +11095,22 @@
    "blank": "bintang"
   }
  ],
+ "w|bintik": [
+  {
+   "text": "Seorang remaja bertanya kepada Dimas tentang bintik merah di wajah.",
+   "en": "A teenager asked Dimas about the red spots on his face.",
+   "ko": "한 십 대가 디마스에게 얼굴에 난 빨간 반점에 대해 물었어요.",
+   "blank": "bintik",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan bintik jamur hitam di dinding kamar mandi.",
+   "en": "Putri found black mold spots on the bathroom wall.",
+   "ko": "푸트리는 욕실 벽에서 검은 곰팡이 얼룩을 발견했어요.",
+   "blank": "bintik",
+   "src": "made"
+  }
+ ],
  "w|biola": [
   {
    "text": "Setiap Sabtu sore ada pertunjukan biola kecil di aula perpustakaan.",
@@ -11725,6 +11853,22 @@
    "src": "made"
   }
  ],
+ "w|bugil": [
+  {
+   "text": "Dimas tersenyum melihat bayi yang hampir bugil di gendongan ibunya karena kepanasan.",
+   "en": "Dimas smiled at the baby who was nearly naked in his mother's sling because of the heat.",
+   "ko": "디마스는 더워서 거의 벌거벗은 채 엄마 품에 안긴 아기를 보고 웃었어요.",
+   "blank": "bugil",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan foto lama saat dia masih bayi dan bugil di bak mandi.",
+   "en": "Putri found an old photo of herself as a naked baby in the bathtub.",
+   "ko": "푸트리는 아기 때 욕조에서 발가벗고 찍은 옛 사진을 찾았어요.",
+   "blank": "bugil",
+   "src": "made"
+  }
+ ],
  "w|bujangan": [
   {
    "text": "Pak Joko, bujangan di rumah sebelah, sering memasak terlalu banyak dan membaginya kepada Andi.",
@@ -12152,6 +12296,22 @@
    "en": "Rina's favorite cake shop already has branches in three markets.",
    "ko": "리나가 단골인 과자 가게는 벌써 시장 세 곳에 지점이 있어요.",
    "blank": "cabang",
+   "src": "made"
+  }
+ ],
+ "w|cacar": [
+  {
+   "text": "Dimas menjual bedak khusus untuk anak yang terkena cacar air.",
+   "en": "Dimas sells a special powder for children with chickenpox.",
+   "ko": "디마스는 수두에 걸린 아이에게 쓰는 전용 파우더를 팔아요.",
+   "blank": "cacar",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan surat lama yang menyebut nenek pernah terkena cacar.",
+   "en": "Putri found an old letter mentioning that her grandmother once had smallpox.",
+   "ko": "푸트리는 할머니가 천연두를 앓았다는 내용의 옛 편지를 찾았어요.",
+   "blank": "cacar",
    "src": "made"
   }
  ],
@@ -13167,6 +13327,22 @@
    "en": "He placed his hand on his chest.",
    "ko": "그는 가슴에 손을 얹었어.",
    "blank": "dada"
+  }
+ ],
+ "w|dadah": [
+  {
+   "text": "Dimas membantu penyuluhan bahaya dadah di sekolah dekat apotek.",
+   "en": "Dimas helps with talks on the dangers of drugs at the school near the pharmacy.",
+   "ko": "디마스는 약국 근처 학교에서 마약의 위험을 알리는 교육을 도와요.",
+   "blank": "dadah",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan koran lama dengan berita tentang penangkapan pengedar dadah.",
+   "en": "Putri found an old newspaper with a story about the arrest of drug dealers.",
+   "ko": "푸트리는 마약 밀매범 체포 기사가 실린 옛 신문을 찾았어요.",
+   "blank": "dadah",
+   "src": "made"
   }
  ],
  "w|dadu": [
@@ -16683,6 +16859,22 @@
    "blank": "gagal"
   }
  ],
+ "w|gagap": [
+  {
+   "text": "Seorang anak yang gagap menanyakan obat batuk, dan Dimas menunggu dengan sabar.",
+   "en": "A child with a stutter asked about cough medicine, and Dimas waited patiently.",
+   "ko": "말을 더듬는 아이가 기침약을 묻자 디마스는 참을성 있게 기다려 줬어요.",
+   "blank": "gagap",
+   "src": "made"
+  },
+  {
+   "text": "Tukang kayu yang gagap itu ternyata paling teliti di antara pekerja Putri.",
+   "en": "The carpenter with a stutter turned out to be the most careful of Putri's workers.",
+   "ko": "말을 더듬는 그 목수가 알고 보니 푸트리의 일꾼 중 가장 꼼꼼했어요.",
+   "blank": "gagap",
+   "src": "made"
+  }
+ ],
  "w|gagasan": [
   {
    "text": "Kapolsek meminta gagasan warga untuk mengurangi pencurian di kompleks.",
@@ -17195,6 +17387,22 @@
    "src": "made"
   }
  ],
+ "w|gegar": [
+  {
+   "text": "Dimas menyuruh pemuda yang jatuh dari motor ke rumah sakit karena bisa saja kena gegar otak.",
+   "en": "Dimas told the young man who fell off his motorbike to go to the hospital since he might have a concussion.",
+   "ko": "디마스는 오토바이에서 떨어진 청년에게 뇌진탕일 수도 있으니 병원에 가라고 했어요.",
+   "blank": "gegar",
+   "src": "made"
+  },
+  {
+   "text": "Putri hampir kena gegar otak karena papan jatuh dari loteng.",
+   "en": "Putri nearly got a concussion when a board fell from the attic.",
+   "ko": "푸트리는 다락에서 떨어진 판자에 맞아 뇌진탕을 입을 뻔했어요.",
+   "blank": "gegar",
+   "src": "made"
+  }
+ ],
  "w|gejala": [
   {
    "text": "Dokter bertanya kapan gejala ngilu pertama kali muncul.",
@@ -17476,6 +17684,22 @@
    "en": "Putri's team is mapping the genetic factors behind that rare disease.",
    "ko": "푸트리 팀은 그 희귀병을 일으키는 유전 요인을 찾고 있어요.",
    "blank": "genetik",
+   "src": "made"
+  }
+ ],
+ "w|genetika": [
+  {
+   "text": "Dimas pernah belajar genetika sebelum menjadi apoteker.",
+   "en": "Dimas studied genetics before becoming a pharmacist.",
+   "ko": "디마스는 약사가 되기 전에 유전학을 공부했어요.",
+   "blank": "genetika",
+   "src": "made"
+  },
+  {
+   "text": "Putri bercanda bahwa bakat bertukang ada dalam genetika keluarga.",
+   "en": "Putri joked that a knack for building runs in the family genetics.",
+   "ko": "푸트리는 손재주가 집안 유전이라고 농담했어요.",
+   "blank": "genetika",
    "src": "made"
   }
  ],
@@ -25357,6 +25581,22 @@
    "src": "made"
   }
  ],
+ "w|kejiwaan": [
+  {
+   "text": "Dimas tidak boleh menjual obat kejiwaan tanpa resep dokter.",
+   "en": "Dimas isn't allowed to sell psychiatric medication without a doctor's prescription.",
+   "ko": "디마스는 의사 처방 없이 정신과 약을 팔 수 없어요.",
+   "blank": "kejiwaan",
+   "src": "made"
+  },
+  {
+   "text": "Putri menemukan buku tua tentang kejiwaan di loteng.",
+   "en": "Putri found an old book about the human psyche in the attic.",
+   "ko": "푸트리는 다락에서 정신에 관한 오래된 책을 찾았어요.",
+   "blank": "kejiwaan",
+   "src": "made"
+  }
+ ],
  "w|keju": [
   {
    "text": "Keju di atas pizza sudah meleleh.",
@@ -28173,6 +28413,22 @@
    "src": "made"
   }
  ],
+ "w|ketiduran": [
+  {
+   "text": "Dimas ketiduran di kursi apotek saat jaga malam.",
+   "en": "Dimas fell asleep in the pharmacy chair during the night shift.",
+   "ko": "디마스는 야간 근무 중에 약국 의자에서 깜빡 잠들었어요.",
+   "blank": "ketiduran",
+   "src": "made"
+  },
+  {
+   "text": "Putri ketiduran di lantai ruang tamu yang belum selesai dicat.",
+   "en": "Putri fell asleep on the floor of the half-painted living room.",
+   "ko": "푸트리는 칠이 덜 끝난 거실 바닥에서 깜빡 잠들었어요.",
+   "blank": "ketiduran",
+   "src": "made"
+  }
+ ],
  "w|ketiga": [
   {
    "text": "Ini kesempatan ketiga.",
@@ -28754,6 +29010,22 @@
    "en": "Wati doesn't want to put up a clichéd slogan like \"five-star taste\" in front of her restaurant.",
    "ko": "와티는 식당 앞에 \"오성급 맛\" 같은 뻔한 문구를 걸고 싶지 않아요.",
    "blank": "klise",
+   "src": "made"
+  }
+ ],
+ "w|kloning": [
+  {
+   "text": "Dimas berdebat dengan temannya soal etika kloning hewan.",
+   "en": "Dimas argued with his friend about the ethics of animal cloning.",
+   "ko": "디마스는 친구와 동물 복제의 윤리를 두고 논쟁했어요.",
+   "blank": "kloning",
+   "src": "made"
+  },
+  {
+   "text": "Putri bercanda ingin memakai teknologi kloning agar punya tiga pasang tangan.",
+   "en": "Putri joked that she wanted to use cloning technology to have three pairs of hands.",
+   "ko": "푸트리는 복제 기술로 손이 세 쌍이었으면 좋겠다고 농담했어요.",
+   "blank": "kloning",
    "src": "made"
   }
  ],
@@ -31917,6 +32189,22 @@
    "blank": "lemari"
   }
  ],
+ "w|lemas": [
+  {
+   "text": "Seorang ibu datang dalam keadaan lemas, jadi Dimas memberinya kursi dan air.",
+   "en": "A woman came in feeling weak, so Dimas gave her a chair and some water.",
+   "ko": "한 아주머니가 기운 없이 들어와서 디마스는 의자와 물을 내드렸어요.",
+   "blank": "lemas",
+   "src": "made"
+  },
+  {
+   "text": "Setelah mengecat seharian, Putri merasa lemas.",
+   "en": "After painting all day, Putri felt exhausted.",
+   "ko": "하루 종일 페인트칠을 하고 나니 푸트리는 기운이 쭉 빠졌어요.",
+   "blank": "lemas",
+   "src": "made"
+  }
+ ],
  "w|lembaga": [
   {
    "text": "Perpustakaan kota bekerja sama dengan lembaga penelitian untuk membuka arsip digital.",
@@ -34445,6 +34733,22 @@
    "blank": "mati"
   }
  ],
+ "w|mati-matian": [
+  {
+   "text": "Dulu Dimas belajar mati-matian untuk ujian apoteker.",
+   "en": "Dimas studied like crazy for the pharmacist exam.",
+   "ko": "디마스는 예전에 약사 시험을 위해 죽어라 공부했어요.",
+   "blank": "mati-matian",
+   "src": "made"
+  },
+  {
+   "text": "Putri mati-matian mempertahankan jendela kayu asli rumah itu.",
+   "en": "Putri fought hard to keep the house's original wooden windows.",
+   "ko": "푸트리는 그 집의 원래 나무 창문을 지키려고 기를 썼어요.",
+   "blank": "mati-matian",
+   "src": "made"
+  }
+ ],
  "w|mau": [
   {
    "text": "Mau ikut?",
@@ -36083,6 +36387,22 @@
    "src": "made"
   }
  ],
+ "w|memanas": [
+  {
+   "text": "Suasana di apotek memanas ketika pelanggan menuntut obat tanpa resep, tetapi Dimas tetap sabar.",
+   "en": "Things heated up at the pharmacy when a customer demanded medicine without a prescription, but Dimas stayed patient.",
+   "ko": "손님이 처방전 없이 약을 달라고 우기면서 약국 분위기가 험악해졌지만 디마스는 침착했어요.",
+   "blank": "memanas",
+   "src": "made"
+  },
+  {
+   "text": "Udara di loteng memanas pada siang hari, jadi Putri bekerja di sana pagi-pagi.",
+   "en": "The air in the attic heats up at midday, so Putri works up there early in the morning.",
+   "ko": "낮에는 다락이 뜨거워져서 푸트리는 아침 일찍 거기서 일해요.",
+   "blank": "memanas",
+   "src": "made"
+  }
+ ],
  "w|memanaskan": [
   {
    "text": "Sebelum menggoreng, Andi memanaskan minyak sampai benar-benar panas.",
@@ -37033,6 +37353,22 @@
    "en": "Exercise can free the mind.",
    "ko": "운동이 마음을 자유롭게 해 줄 수 있어.",
    "blank": "membebaskan"
+  }
+ ],
+ "w|membedah": [
+  {
+   "text": "Waktu kuliah, Dimas belajar membedah katak di laboratorium.",
+   "en": "At university, Dimas learned to dissect frogs in the lab.",
+   "ko": "디마스는 대학 시절 실험실에서 개구리 해부를 배웠어요.",
+   "blank": "membedah",
+   "src": "made"
+  },
+  {
+   "text": "Putri dan tukang listrik membedah denah lama rumah sebelum mulai bekerja.",
+   "en": "Putri and the electrician pored over the old floor plan before starting work.",
+   "ko": "푸트리와 전기 기사는 일을 시작하기 전에 옛 평면도를 꼼꼼히 뜯어봤어요.",
+   "blank": "membedah",
+   "src": "made"
   }
  ],
  "w|membedakan": [
@@ -41703,6 +42039,22 @@
    "blank": "mendesak"
   }
  ],
+ "w|mendesis": [
+  {
+   "text": "Tablet vitamin itu mendesis ketika Dimas memasukkannya ke dalam air.",
+   "en": "The vitamin tablet fizzed when Dimas dropped it into water.",
+   "ko": "디마스가 비타민 알약을 물에 넣자 쉬익 하고 거품이 일었어요.",
+   "blank": "mendesis",
+   "src": "made"
+  },
+  {
+   "text": "Pipa air mendesis saat Putri membuka keran untuk pertama kali.",
+   "en": "The water pipe hissed when Putri turned on the tap for the first time.",
+   "ko": "푸트리가 처음 수도꼭지를 틀자 수도관이 쉭쉭 소리를 냈어요.",
+   "blank": "mendesis",
+   "src": "made"
+  }
+ ],
  "w|mendeteksi": [
   {
    "text": "Rudi ingat ibu Bayu bisa mendeteksi kebohongan anaknya hanya dari nada suara.",
@@ -45051,6 +45403,22 @@
    "src": "made"
   }
  ],
+ "w|menggores": [
+  {
+   "text": "Dimas memasang plester setelah pecahan botol menggores jari.",
+   "en": "Dimas put on a plaster after a shard of glass scratched his finger.",
+   "ko": "디마스는 병 조각에 손가락이 긁힌 뒤 반창고를 붙였어요.",
+   "blank": "menggores",
+   "src": "made"
+  },
+  {
+   "text": "Putri berhati-hati agar tangga tidak menggores lantai kayu yang baru dipoles.",
+   "en": "Putri was careful not to let the ladder scratch the freshly polished wooden floor.",
+   "ko": "푸트리는 새로 광낸 나무 바닥이 사다리에 긁히지 않게 조심했어요.",
+   "blank": "menggores",
+   "src": "made"
+  }
+ ],
  "w|menggosok": [
   {
    "text": "Rudi teringat Bayu yang dulu suka menggosok sepatu sekolah sampai mengilap.",
@@ -45249,6 +45617,22 @@
    "en": "Many people attended the concert that night.",
    "ko": "그날 밤 많은 사람이 콘서트에 갔어.",
    "blank": "menghadiri"
+  }
+ ],
+ "w|menghadirkan": [
+  {
+   "text": "Apotek tempat Dimas bekerja menghadirkan layanan antar obat untuk lansia.",
+   "en": "The pharmacy where Dimas works now offers medicine delivery for the elderly.",
+   "ko": "디마스가 일하는 약국은 어르신을 위한 약 배달 서비스를 시작했어요.",
+   "blank": "menghadirkan",
+   "src": "made"
+  },
+  {
+   "text": "Putri ingin menghadirkan suasana hangat dengan lampu kuning di ruang tamu.",
+   "en": "Putri wants to create a warm atmosphere with yellow lights in the living room.",
+   "ko": "푸트리는 거실에 노란 조명을 달아 따뜻한 분위기를 내고 싶어 해요.",
+   "blank": "menghadirkan",
+   "src": "made"
   }
  ],
  "w|menghafal": [
@@ -45958,6 +46342,22 @@
    "en": "Pickpockets usually target passengers who fall asleep on night trains.",
    "ko": "소매치기는 보통 밤 기차에서 잠든 승객을 노려요.",
    "blank": "mengincar",
+   "src": "made"
+  }
+ ],
+ "w|menginfeksi": [
+  {
+   "text": "Dimas menjelaskan bahwa jamur bisa menginfeksi kuku kaki.",
+   "en": "Dimas explained that fungus can infect the toenails.",
+   "ko": "디마스는 곰팡이가 발톱을 감염시킬 수 있다고 설명했어요.",
+   "blank": "menginfeksi",
+   "src": "made"
+  },
+  {
+   "text": "Putri membersihkan luka di jari agar bakteri tidak menginfeksi luka itu.",
+   "en": "Putri cleaned the cut on her finger so bacteria wouldn't infect it.",
+   "ko": "푸트리는 세균이 감염되지 않게 손가락 상처를 닦았어요.",
+   "blank": "menginfeksi",
    "src": "made"
   }
  ],
@@ -47534,6 +47934,22 @@
    "en": "After crossing the finish line, Rina punched the air and laughed freely.",
    "ko": "결승선을 지나자 리나는 허공에 주먹을 날리며 활짝 웃었어요.",
    "blank": "meninju",
+   "src": "made"
+  }
+ ],
+ "w|menipis": [
+  {
+   "text": "Stok masker di apotek Dimas mulai menipis.",
+   "en": "The stock of masks at Dimas's pharmacy is starting to run low.",
+   "ko": "디마스네 약국의 마스크 재고가 바닥나기 시작했어요.",
+   "blank": "menipis",
+   "src": "made"
+  },
+  {
+   "text": "Tabungan Putri menipis karena biaya renovasi.",
+   "en": "Putri's savings are dwindling because of the renovation costs.",
+   "ko": "수리비 때문에 푸트리의 저축이 줄어들고 있어요.",
+   "blank": "menipis",
    "src": "made"
   }
  ],
@@ -50099,6 +50515,22 @@
    "en": "She is learning to drive in an empty lot.",
    "ko": "그녀는 빈 터에서 운전을 배워.",
    "blank": "menyetir"
+  }
+ ],
+ "w|menyetrum": [
+  {
+   "text": "Dimas memperbaiki lemari pendingin obat dengan hati-hati karena kabelnya bisa menyetrum.",
+   "en": "Dimas repaired the medicine fridge carefully because its wiring could give a shock.",
+   "ko": "디마스는 전선에 감전될 수 있어서 약 냉장고를 조심스럽게 고쳤어요.",
+   "blank": "menyetrum",
+   "src": "made"
+  },
+  {
+   "text": "Kabel tua di dapur sempat menyetrum Putri saat dia memasang lampu.",
+   "en": "The old wiring in the kitchen gave Putri a shock while she was installing a light.",
+   "ko": "푸트리는 부엌에 등을 달다가 낡은 전선에 감전될 뻔했어요.",
+   "blank": "menyetrum",
+   "src": "made"
   }
  ],
  "w|menyetujui": [
@@ -56637,6 +57069,22 @@
    "src": "made"
   }
  ],
+ "w|pelik": [
+  {
+   "text": "Dimas menghadapi masalah pelik ketika dua resep dokter saling bertentangan.",
+   "en": "Dimas faced a tricky problem when two doctors' prescriptions contradicted each other.",
+   "ko": "디마스는 두 의사의 처방이 서로 어긋나서 골치 아픈 문제를 맞았어요.",
+   "blank": "pelik",
+   "src": "made"
+  },
+  {
+   "text": "Masalah paling pelik bagi Putri adalah pipa air yang bocor di dalam tembok.",
+   "en": "The trickiest problem for Putri is a water pipe leaking inside the wall.",
+   "ko": "푸트리에게 가장 골치 아픈 문제는 벽 속에서 새는 수도관이에요.",
+   "blank": "pelik",
+   "src": "made"
+  }
+ ],
  "w|pelindung": [
   {
    "text": "Pelindung lutut menjaga pemain cedera.",
@@ -57721,6 +58169,22 @@
    "en": "A deer ran from the hunter in the forest.",
    "ko": "사슴 한 마리가 숲속 사냥꾼에게서 달아났어.",
    "blank": "pemburu"
+  }
+ ],
+ "w|pemecah": [
+  {
+   "text": "Dimas memakai alat pemecah tablet untuk membagi obat anak.",
+   "en": "Dimas uses a pill splitter to divide children's medicine.",
+   "ko": "디마스는 알약 분할기로 어린이 약을 나눠요.",
+   "blank": "pemecah",
+   "src": "made"
+  },
+  {
+   "text": "Putri menyewa mesin pemecah beton untuk membongkar lantai lama.",
+   "en": "Putri rented a concrete breaker to tear up the old floor.",
+   "ko": "푸트리는 옛 바닥을 뜯으려고 콘크리트 파쇄기를 빌렸어요.",
+   "blank": "pemecah",
+   "src": "made"
   }
  ],
  "w|pemegang": [
@@ -58892,6 +59356,22 @@
    "en": "Siti's grandfather is hard of hearing, so Siti has to speak loudly.",
    "ko": "시티의 할아버지는 귀가 어두워서 시티가 크게 말해야 해요.",
    "blank": "pendengaran",
+   "src": "made"
+  }
+ ],
+ "w|penderita": [
+  {
+   "text": "Dimas menyiapkan alat cek gula darah untuk penderita diabetes.",
+   "en": "Dimas prepares blood sugar meters for people with diabetes.",
+   "ko": "디마스는 당뇨 환자를 위한 혈당 측정기를 준비해 둬요.",
+   "blank": "penderita",
+   "src": "made"
+  },
+  {
+   "text": "Putri, penderita alergi debu, selalu bersin saat membongkar lemari.",
+   "en": "Putri, who has a dust allergy, always sneezes when she clears out the cupboards.",
+   "ko": "먼지 알레르기가 있는 푸트리는 장롱을 정리할 때마다 재채기를 해요.",
+   "blank": "penderita",
    "src": "made"
   }
  ],
@@ -60238,6 +60718,22 @@
    "en": "Siti supplements her income by teaching the neighbors' children to read.",
    "ko": "시티는 이웃 아이들에게 읽기를 가르치며 수입을 보태요.",
    "blank": "penghasilan",
+   "src": "made"
+  }
+ ],
+ "w|penghilang": [
+  {
+   "text": "Dimas memberikan penghilang rasa nyeri untuk sakit gigi.",
+   "en": "Dimas gave out a painkiller for a toothache.",
+   "ko": "디마스는 치통에 먹을 진통제를 내줬어요.",
+   "blank": "penghilang",
+   "src": "made"
+  },
+  {
+   "text": "Putri membeli cairan penghilang cat untuk membersihkan kusen jendela.",
+   "en": "Putri bought paint remover to clean the window frames.",
+   "ko": "푸트리는 창틀을 닦으려고 페인트 제거제를 샀어요.",
+   "blank": "penghilang",
    "src": "made"
   }
  ],
@@ -63255,6 +63751,22 @@
    "blank": "pernah"
   }
  ],
+ "w|pernapasan": [
+  {
+   "text": "Dimas menyimpan obat saluran pernapasan di rak dekat kasir.",
+   "en": "Dimas keeps the respiratory medicines on the shelf near the cashier.",
+   "ko": "디마스는 호흡기 약을 계산대 옆 선반에 둬요.",
+   "blank": "pernapasan",
+   "src": "made"
+  },
+  {
+   "text": "Putri memakai masker agar debu tidak masuk ke saluran pernapasan.",
+   "en": "Putri wears a mask so the dust doesn't get into her airways.",
+   "ko": "푸트리는 먼지가 호흡기로 들어가지 않게 마스크를 써요.",
+   "blank": "pernapasan",
+   "src": "made"
+  }
+ ],
  "w|pernikahan": [
   {
    "text": "Pernikahan mereka sederhana.",
@@ -63558,6 +64070,22 @@
    "en": "In Intan's strategy game, players can buy weaponry for their fortress.",
    "ko": "인탄이 만든 전략 게임에서 플레이어는 성에 쓸 무기를 살 수 있어요.",
    "blank": "persenjataan",
+   "src": "made"
+  }
+ ],
+ "w|persepsi": [
+  {
+   "text": "Dimas ingin mengubah persepsi warga bahwa obat mahal selalu lebih manjur.",
+   "en": "Dimas wants to change people's perception that expensive medicine always works better.",
+   "ko": "디마스는 비싼 약이 늘 더 잘 듣는다는 사람들의 생각을 바꾸고 싶어 해요.",
+   "blank": "persepsi",
+   "src": "made"
+  },
+  {
+   "text": "Cat putih mengubah persepsi tentang ukuran kamar Putri yang sempit.",
+   "en": "White paint changed the perception of how small Putri's cramped room is.",
+   "ko": "흰 페인트를 칠하니 좁은 푸트리의 방이 더 넓어 보였어요.",
+   "blank": "persepsi",
    "src": "made"
   }
  ],
@@ -65265,6 +65793,22 @@
    "src": "made"
   }
  ],
+ "w|poni": [
+  {
+   "text": "Dimas menyarankan gadis yang berjerawat di dahi agar tidak menutupi dahi dengan poni.",
+   "en": "Dimas suggested that the girl with acne on her forehead not cover it with bangs.",
+   "ko": "디마스는 이마에 여드름이 난 소녀에게 앞머리로 이마를 덮지 말라고 권했어요.",
+   "blank": "poni",
+   "src": "made"
+  },
+  {
+   "text": "Putri menyibak poni yang penuh debu sambil tertawa.",
+   "en": "Putri brushed back her dusty bangs, laughing.",
+   "ko": "푸트리는 웃으면서 먼지투성이 앞머리를 쓸어 넘겼어요.",
+   "blank": "poni",
+   "src": "made"
+  }
+ ],
  "w|ponsel": [
   {
    "text": "Ponselku kehabisan baterai.",
@@ -65962,6 +66506,38 @@
    "en": "Wati found a psychiatrist's business card tucked in an old desk drawer.",
    "ko": "와티는 낡은 책상 서랍에 끼워진 정신과 의사 명함을 발견했어요.",
    "blank": "psikiater",
+   "src": "made"
+  }
+ ],
+ "w|psikis": [
+  {
+   "text": "Dimas menjelaskan bahwa stres bisa memengaruhi kondisi psikis dan fisik.",
+   "en": "Dimas explained that stress can affect both mental and physical health.",
+   "ko": "디마스는 스트레스가 정신 상태와 몸 상태 모두에 영향을 줄 수 있다고 설명했어요.",
+   "blank": "psikis",
+   "src": "made"
+  },
+  {
+   "text": "Tinggal di rumah yang berantakan berbulan-bulan cukup membebani kondisi psikis Putri.",
+   "en": "Living in a messy house for months weighed on Putri's mental state.",
+   "ko": "몇 달씩 어수선한 집에서 지내다 보니 푸트리의 마음이 꽤 지쳤어요.",
+   "blank": "psikis",
+   "src": "made"
+  }
+ ],
+ "w|psikolog": [
+  {
+   "text": "Dimas menyarankan pelanggan yang susah tidur untuk berbicara dengan psikolog.",
+   "en": "Dimas suggested that the customer who couldn't sleep talk to a psychologist.",
+   "ko": "디마스는 잠을 못 이루는 손님에게 심리 상담사와 이야기해 보라고 권했어요.",
+   "blank": "psikolog",
+   "src": "made"
+  },
+  {
+   "text": "Adik Putri, seorang psikolog, bilang menata rumah bisa menenangkan pikiran.",
+   "en": "Putri's younger sibling, a psychologist, says arranging a home can calm the mind.",
+   "ko": "심리학자인 푸트리의 동생은 집을 정리하면 마음이 차분해진다고 해요.",
+   "blank": "psikolog",
    "src": "made"
   }
  ],
@@ -73839,6 +74415,22 @@
    "src": "made"
   }
  ],
+ "w|siku": [
+  {
+   "text": "Dimas memberikan salep untuk siku yang memar.",
+   "en": "Dimas gave out an ointment for a bruised elbow.",
+   "ko": "디마스는 멍든 팔꿈치에 바를 연고를 줬어요.",
+   "blank": "siku",
+   "src": "made"
+  },
+  {
+   "text": "Putri menggosok lantai kayu sampai siku lecet.",
+   "en": "Putri scrubbed the wooden floor until her elbow got scraped.",
+   "ko": "푸트리는 팔꿈치가 까질 때까지 나무 바닥을 문질렀어요.",
+   "blank": "siku",
+   "src": "made"
+  }
+ ],
  "w|silahkan": [
   {
    "text": "Silahkan dicoba dulu.",
@@ -74002,6 +74594,22 @@
    "en": "Intan's review contained a jab at product photos that were edited too much.",
    "ko": "인탄의 후기에는 너무 보정한 상품 사진을 꼬집는 말이 들어 있었어요.",
    "blank": "sindiran",
+   "src": "made"
+  }
+ ],
+ "w|sindrom": [
+  {
+   "text": "Dimas membaca jurnal tentang sindrom kelelahan kronis.",
+   "en": "Dimas read a journal article about chronic fatigue syndrome.",
+   "ko": "디마스는 만성 피로 증후군에 관한 학술지를 읽었어요.",
+   "blank": "sindrom",
+   "src": "made"
+  },
+  {
+   "text": "Putri bilang dia terkena sindrom \"sekalian saja\" setiap kali memperbaiki sesuatu.",
+   "en": "Putri says she gets \"might as well\" syndrome every time she fixes something.",
+   "ko": "푸트리는 뭘 고칠 때마다 '하는 김에' 증후군이 생긴다고 해요.",
+   "blank": "sindrom",
    "src": "made"
   }
  ],
@@ -80637,6 +81245,22 @@
    "src": "made"
   }
  ],
+ "w|tertular": [
+  {
+   "text": "Dimas memakai masker supaya tidak tertular flu dari pelanggan.",
+   "en": "Dimas wears a mask so he doesn't catch the flu from customers.",
+   "ko": "디마스는 손님에게서 독감이 옮지 않도록 마스크를 써요.",
+   "blank": "tertular",
+   "src": "made"
+  },
+  {
+   "text": "Putri tertular semangat tetangga yang juga sedang merenovasi rumah.",
+   "en": "Putri caught the enthusiasm of a neighbor who was also renovating.",
+   "ko": "푸트리는 같이 집을 고치는 이웃의 열정에 덩달아 신이 났어요.",
+   "blank": "tertular",
+   "src": "made"
+  }
+ ],
  "w|tertulis": [
   {
    "text": "Tertulis jelas di papan pengumuman itu.",
@@ -81349,6 +81973,22 @@
    "en": "That point is important.",
    "ko": "그 포인트가 중요해.",
    "blank": "Titik"
+  }
+ ],
+ "w|titip": [
+  {
+   "text": "Tetangga Dimas titip obat flu untuk ibunya yang sedang sakit.",
+   "en": "Dimas's neighbor asked him to set aside flu medicine for her sick mother.",
+   "ko": "디마스의 이웃은 아픈 어머니께 드릴 감기약을 맡아 달라고 부탁했어요.",
+   "blank": "titip",
+   "src": "made"
+  },
+  {
+   "text": "Putri titip kunci rumah kepada tetangga selama tukang bekerja.",
+   "en": "Putri left the house key with a neighbor while the workers were on the job.",
+   "ko": "푸트리는 일꾼들이 일하는 동안 이웃에게 집 열쇠를 맡겼어요.",
+   "blank": "titip",
+   "src": "made"
   }
  ],
  "w|toh": [

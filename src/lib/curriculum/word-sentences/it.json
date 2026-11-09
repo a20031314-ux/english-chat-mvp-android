@@ -5553,6 +5553,22 @@
    "src": "made"
   }
  ],
+ "w|arricchire": [
+  {
+   "text": "Matteo usa il letame per arricchire il terreno dell'orto.",
+   "en": "Matteo uses manure to enrich the soil in the vegetable garden.",
+   "ko": "마테오는 거름으로 텃밭 흙을 기름지게 해요.",
+   "blank": "arricchire",
+   "src": "made"
+  },
+  {
+   "text": "Sara vuole arricchire la sua collezione di dischi in vinile.",
+   "en": "Sara wants to add to her collection of vinyl records.",
+   "ko": "사라는 LP 음반 수집품을 늘리고 싶어 해요.",
+   "blank": "arricchire",
+   "src": "made"
+  }
+ ],
  "w|arrivare": [
   {
    "text": "A che ora devi arrivare?",
@@ -5718,6 +5734,22 @@
    "en": "For the big dinner Laura avoids fried food, thinking of her dad's arteries.",
    "ko": "송년 만찬에 라우라는 아빠 혈관을 생각해서 튀김을 피해요.",
    "blank": "arterie",
+   "src": "made"
+  }
+ ],
+ "w|artico": [
+  {
+   "text": "Un vento artico gela gli abbeveratoi della fattoria di Matteo.",
+   "en": "An Arctic wind freezes the water troughs on Matteo's farm.",
+   "ko": "북극에서 불어온 바람에 마테오 농장의 물통이 얼어붙어요.",
+   "blank": "artico",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra un libro di viaggi con le foto del paesaggio artico.",
+   "en": "Sara buys a travel book with photos of the Arctic landscape.",
+   "ko": "사라는 북극 풍경 사진이 실린 여행책을 사요.",
+   "blank": "artico",
    "src": "made"
   }
  ],
@@ -10569,6 +10601,22 @@
    "blank": "bruciare"
   }
  ],
+ "w|brusco": [
+  {
+   "text": "Un brusco calo delle temperature preoccupa Matteo per le viti.",
+   "en": "A sudden drop in temperature makes Matteo worry about his vines.",
+   "ko": "기온이 갑자기 떨어져서 마테오는 포도나무가 걱정돼요.",
+   "blank": "brusco",
+   "src": "made"
+  },
+  {
+   "text": "Un venditore brusco risponde male a Sara quando chiede uno sconto.",
+   "en": "A brusque seller snaps at Sara when she asks for a discount.",
+   "ko": "퉁명스러운 상인이 할인해 달라는 사라에게 쌀쌀맞게 대답해요.",
+   "blank": "brusco",
+   "src": "made"
+  }
+ ],
  "w|brutale": [
   {
    "text": "A storia Andrea legge della brutale repressione di una rivolta nell'Ottocento.",
@@ -10704,6 +10752,22 @@
    "en": "Today Francesca learns to cook slow-braised beef.",
    "ko": "오늘 프란체스카는 소고기 찜 요리를 배워요.",
    "blank": "bue",
+   "src": "made"
+  }
+ ],
+ "w|bufera": [
+  {
+   "text": "Durante la bufera di neve Matteo resta nella stalla con le mucche.",
+   "en": "During the snowstorm Matteo stays in the barn with the cows.",
+   "ko": "눈보라가 치는 동안 마테오는 외양간에서 소들과 함께 있어요.",
+   "blank": "bufera",
+   "src": "made"
+  },
+  {
+   "text": "Una bufera improvvisa costringe Sara e i venditori a coprire le bancarelle.",
+   "en": "A sudden storm forces Sara and the sellers to cover the stalls.",
+   "ko": "갑자기 폭풍이 몰아쳐서 사라와 상인들이 가판대를 덮어요.",
+   "blank": "bufera",
    "src": "made"
   }
  ],
@@ -11899,6 +11963,22 @@
    "blank": "cane"
   }
  ],
+ "w|canguro": [
+  {
+   "text": "Il figlio di Matteo vorrebbe un canguro, ma deve accontentarsi delle capre.",
+   "en": "Matteo's son would like a kangaroo, but he has to make do with the goats.",
+   "ko": "마테오의 아들은 캥거루를 갖고 싶어 하지만 염소로 만족해야 해요.",
+   "blank": "canguro",
+   "src": "made"
+  },
+  {
+   "text": "Per il nipote Sara trova un portachiavi a forma di canguro.",
+   "en": "For her nephew Sara finds a kangaroo-shaped keyring.",
+   "ko": "사라는 조카에게 줄 캥거루 모양 열쇠고리를 찾아요.",
+   "blank": "canguro",
+   "src": "made"
+  }
+ ],
  "w|canna": [
   {
    "text": "Davide ha portato la canna da pesca e ha aspettato per ore sul molo.",
@@ -12731,6 +12811,22 @@
    "text": "La borsa di Chiara è cascata dalla rete portabagagli in curva.",
    "en": "Chiara's bag fell from the luggage rack on a bend.",
    "ko": "커브를 돌 때 키아라의 가방이 짐칸에서 떨어졌어요.",
+   "blank": "cascata",
+   "src": "made"
+  }
+ ],
+ "w|cascata": [
+  {
+   "text": "Dietro la fattoria di Matteo c'è una piccola cascata.",
+   "en": "Behind Matteo's farm there is a small waterfall.",
+   "ko": "마테오의 농장 뒤에는 작은 폭포가 있어요.",
+   "blank": "cascata",
+   "src": "made"
+  },
+  {
+   "text": "Una cascata di perline colorate pende dalla bancarella preferita di Sara.",
+   "en": "A cascade of coloured beads hangs from Sara's favourite stall.",
+   "ko": "사라가 좋아하는 가판대에는 알록달록한 구슬이 폭포처럼 늘어져 있어요.",
    "blank": "cascata",
    "src": "made"
   }
@@ -14461,6 +14557,22 @@
    "src": "made"
   }
  ],
+ "w|ciclone": [
+  {
+   "text": "Il telegiornale annuncia un ciclone, e Matteo mette al riparo gli animali.",
+   "en": "The news announces a cyclone, and Matteo puts the animals under shelter.",
+   "ko": "뉴스에서 사이클론이 온다고 하자 마테오는 동물들을 안전한 곳으로 옮겨요.",
+   "blank": "ciclone",
+   "src": "made"
+  },
+  {
+   "text": "A caccia di affari, Sara attraversa le bancarelle come un ciclone.",
+   "en": "Hunting for bargains, Sara sweeps through the stalls like a cyclone.",
+   "ko": "사라는 싼 물건을 찾아 회오리바람처럼 가판대 사이를 휩쓸고 다녀요.",
+   "blank": "ciclone",
+   "src": "made"
+  }
+ ],
  "w|cieco": [
   {
    "text": "Il cane guida aiuta un uomo cieco.",
@@ -15035,6 +15147,22 @@
    "blank": "cittadino"
   }
  ],
+ "w|civetta": [
+  {
+   "text": "Di notte Matteo sente una civetta cantare sul tetto del fienile.",
+   "en": "At night Matteo hears a little owl calling on the roof of the hayloft.",
+   "ko": "마테오는 밤에 건초 창고 지붕에서 올빼미가 우는 소리를 들어요.",
+   "blank": "civetta",
+   "src": "made"
+  },
+  {
+   "text": "Sara colleziona statuine, e oggi trova una civetta di porcellana.",
+   "en": "Sara collects figurines, and today she finds a porcelain owl.",
+   "ko": "사라는 작은 조각상을 모으는데 오늘은 도자기 올빼미를 찾아요.",
+   "blank": "civetta",
+   "src": "made"
+  }
+ ],
  "w|civile": [
   {
    "text": "È una questione di diritto civile.",
@@ -15122,6 +15250,22 @@
    "en": "Francesca's five-a-side team is last in the league table, but she has fun anyway.",
    "ko": "프란체스카의 풋살 팀은 순위 꼴찌지만 그래도 즐겁게 해요.",
    "blank": "classifica",
+   "src": "made"
+  }
+ ],
+ "w|classificare": [
+  {
+   "text": "Prima di venderle, Matteo deve classificare le uova per grandezza.",
+   "en": "Before selling them, Matteo has to grade the eggs by size.",
+   "ko": "마테오는 달걀을 팔기 전에 크기별로 분류해야 해요.",
+   "blank": "classificare",
+   "src": "made"
+  },
+  {
+   "text": "Sara aiuta un'amica a classificare le vecchie cartoline per città.",
+   "en": "Sara helps a friend sort the old postcards by city.",
+   "ko": "사라는 친구를 도와 옛 엽서를 도시별로 분류해요.",
+   "blank": "classificare",
    "src": "made"
   }
  ],
@@ -15260,6 +15404,22 @@
    "en": "On the refresher course Chiara studied the effects of cocaine on the heart.",
    "ko": "보수 교육에서 키아라는 코카인이 심장에 미치는 영향을 공부했어요.",
    "blank": "cocaina",
+   "src": "made"
+  }
+ ],
+ "w|coccinella": [
+  {
+   "text": "Contro gli afidi Matteo libera le coccinelle nell'orto.",
+   "en": "To fight aphids Matteo releases ladybirds in the vegetable garden.",
+   "ko": "마테오는 진딧물을 없애려고 텃밭에 무당벌레를 풀어 놓아요.",
+   "blank": "coccinelle",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra un ombrello per bambini decorato con una coccinella.",
+   "en": "Sara buys a children's umbrella decorated with a ladybird.",
+   "ko": "사라는 무당벌레 그림이 있는 어린이 우산을 사요.",
+   "blank": "coccinella",
    "src": "made"
   }
  ],
@@ -18297,6 +18457,22 @@
    "src": "made"
   }
  ],
+ "w|conservazione": [
+  {
+   "text": "Matteo partecipa a un progetto per la conservazione delle razze antiche di galline.",
+   "en": "Matteo takes part in a project for the conservation of old breeds of hen.",
+   "ko": "마테오는 토종닭 품종을 보존하는 프로젝트에 참여해요.",
+   "blank": "conservazione",
+   "src": "made"
+  },
+  {
+   "text": "Il venditore spiega a Sara che lo stato di conservazione del mobile è ottimo.",
+   "en": "The seller explains to Sara that the piece of furniture is in excellent condition.",
+   "ko": "상인은 사라에게 그 가구의 보존 상태가 아주 좋다고 설명해요.",
+   "blank": "conservazione",
+   "src": "made"
+  }
+ ],
  "w|considerare": [
   {
    "text": "Dobbiamo considerare tutte le opzioni.",
@@ -18871,6 +19047,22 @@
    "blank": "contrario"
   }
  ],
+ "w|contrastare": [
+  {
+   "text": "Matteo pianta siepi lungo i campi per contrastare l'erosione del terreno.",
+   "en": "Matteo plants hedges along the fields to counter soil erosion.",
+   "ko": "마테오는 흙이 깎여 나가지 않게 밭가에 생울타리를 심어요.",
+   "blank": "contrastare",
+   "src": "made"
+  },
+  {
+   "text": "Per contrastare il caldo tra le bancarelle, Sara si porta un ventaglio.",
+   "en": "To fight the heat among the stalls, Sara brings a fan.",
+   "ko": "사라는 가판대 사이의 더위를 견디려고 부채를 챙겨 가요.",
+   "blank": "contrastare",
+   "src": "made"
+  }
+ ],
  "w|contrasto": [
   {
    "text": "Marco disegna un ritratto giocando sul contrasto tra luce e ombra.",
@@ -19442,6 +19634,22 @@
    "en": "Guests praise Elena's friendly tone on the phone.",
    "ko": "손님들은 전화 속 엘레나의 다정한 말투를 칭찬해요.",
    "blank": "cordiale",
+   "src": "made"
+  }
+ ],
+ "w|corna": [
+  {
+   "text": "Il vecchio montone di Matteo ha le corna lunghe e ricurve.",
+   "en": "Matteo's old ram has long, curved horns.",
+   "ko": "마테오의 늙은 숫양은 뿔이 길고 휘어 있어요.",
+   "blank": "corna",
+   "src": "made"
+  },
+  {
+   "text": "Su una bancarella Sara vede un elmo da vichingo con le corna di plastica.",
+   "en": "On a stall Sara sees a Viking helmet with plastic horns.",
+   "ko": "사라는 한 가판대에서 플라스틱 뿔이 달린 바이킹 투구를 봐요.",
+   "blank": "corna",
    "src": "made"
   }
  ],
@@ -22829,6 +23037,22 @@
    "src": "made"
   }
  ],
+ "w|dettagliato": [
+  {
+   "text": "Matteo tiene un registro dettagliato delle nascite dei vitelli.",
+   "en": "Matteo keeps a detailed record of the calves' births.",
+   "ko": "마테오는 송아지가 태어날 때마다 자세히 기록해 둬요.",
+   "blank": "dettagliato",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra una mappa antica molto dettagliata della sua città.",
+   "en": "Sara buys a very detailed antique map of her city.",
+   "ko": "사라는 자기 도시가 아주 자세히 그려진 옛 지도를 사요.",
+   "blank": "dettagliata",
+   "src": "made"
+  }
+ ],
  "w|dettaglio": [
   {
    "text": "Controlla ogni dettaglio con cura.",
@@ -26085,6 +26309,22 @@
    "src": "made"
   }
  ],
+ "w|duna": [
+  {
+   "text": "Il cugino di Matteo ha una fattoria vicino al mare, tra una duna e una pineta.",
+   "en": "Matteo's cousin has a farm near the sea, between a dune and a pine wood.",
+   "ko": "마테오의 사촌은 바닷가 모래 언덕과 소나무 숲 사이에 농장을 갖고 있어요.",
+   "blank": "duna",
+   "src": "made"
+  },
+  {
+   "text": "In una scatola di cartoline Sara trova una duna del deserto al tramonto.",
+   "en": "In a box of postcards Sara finds one of a desert dune at sunset.",
+   "ko": "사라는 엽서 상자에서 해 질 녘 사막 모래 언덕이 찍힌 엽서를 찾아요.",
+   "blank": "duna",
+   "src": "made"
+  }
+ ],
  "w|dunque": [
   {
    "text": "Dunque, cosa hai deciso di fare?",
@@ -26141,6 +26381,22 @@
    "en": "This battery should last all day.",
    "ko": "이 배터리는 하루 종일 갈 거야.",
    "blank": "durare"
+  }
+ ],
+ "w|duraturo": [
+  {
+   "text": "Matteo vuole costruire un recinto duraturo, non uno che si rompe dopo un inverno.",
+   "en": "Matteo wants to build a lasting fence, not one that breaks after one winter.",
+   "ko": "마테오는 겨울 한 번 나면 망가지는 울타리 말고 오래가는 울타리를 짓고 싶어 해요.",
+   "blank": "duraturo",
+   "src": "made"
+  },
+  {
+   "text": "Tra Sara e il venditore di libri usati nasce un'amicizia duratura.",
+   "en": "A lasting friendship grows between Sara and the second-hand book seller.",
+   "ko": "사라와 헌책 상인 사이에 오래가는 우정이 싹터요.",
+   "blank": "duratura",
+   "src": "made"
   }
  ],
  "w|duro": [
@@ -27309,6 +27565,22 @@
    "en": "He made an enormous mistake.",
    "ko": "그가 엄청난 실수를 했어.",
    "blank": "enorme"
+  }
+ ],
+ "w|enormemente": [
+  {
+   "text": "La pioggia di maggio ha aiutato enormemente il raccolto di Matteo.",
+   "en": "The May rain helped Matteo's harvest enormously.",
+   "ko": "오월 비가 마테오의 수확에 큰 도움이 됐어요.",
+   "blank": "enormemente",
+   "src": "made"
+  },
+  {
+   "text": "Da quando Sara ci va, il mercato delle pulci è cresciuto enormemente.",
+   "en": "Since Sara started going, the flea market has grown enormously.",
+   "ko": "사라가 다니기 시작한 뒤로 벼룩시장이 엄청나게 커졌어요.",
+   "blank": "enormemente",
+   "src": "made"
   }
  ],
  "w|ente": [
@@ -28682,6 +28954,22 @@
    "en": "Anna spent two years abroad before opening her bakery.",
    "ko": "안나는 빵집을 열기 전에 이 년 동안 외국에서 지냈어요.",
    "blank": "estero",
+   "src": "made"
+  }
+ ],
+ "w|esteso": [
+  {
+   "text": "Il terreno di Matteo è molto esteso e arriva fino al fiume.",
+   "en": "Matteo's land is very large and stretches all the way to the river.",
+   "ko": "마테오의 땅은 아주 넓어서 강까지 이어져요.",
+   "blank": "esteso",
+   "src": "made"
+  },
+  {
+   "text": "Il mercato della domenica è così esteso che Sara non riesce mai a vederlo tutto.",
+   "en": "The Sunday market is so large that Sara never manages to see all of it.",
+   "ko": "일요 시장이 너무 넓어서 사라는 한 번도 다 둘러보지 못해요.",
+   "blank": "esteso",
    "src": "made"
   }
  ],
@@ -35719,6 +36007,22 @@
    "src": "made"
   }
  ],
+ "w|grezzo": [
+  {
+   "text": "Matteo vende la lana grezza delle sue pecore a una sarta del paese.",
+   "en": "Matteo sells the raw wool from his sheep to a seamstress in the village.",
+   "ko": "마테오는 자기 양들에게서 얻은 생양털을 마을 재봉사에게 팔아요.",
+   "blank": "grezza",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra un tavolino di legno grezzo da dipingere.",
+   "en": "Sara buys an unfinished wooden side table to paint.",
+   "ko": "사라는 칠할 생각으로 마감 안 된 나무 탁자를 사요.",
+   "blank": "grezzo",
+   "src": "made"
+  }
+ ],
  "w|gridare": [
   {
    "text": "Il caporedattore ha cominciato a gridare quando ha visto l'errore nel titolo di Paolo.",
@@ -35793,6 +36097,22 @@
    "en": "The trigger was stuck from rust.",
    "ko": "방아쇠가 녹슬어서 막혀 있었어.",
    "blank": "grilletto"
+  }
+ ],
+ "w|grillo": [
+  {
+   "text": "D'estate Matteo si addormenta con il canto di un grillo sotto la finestra.",
+   "en": "In summer Matteo falls asleep to the chirping of a cricket under the window.",
+   "ko": "여름이면 마테오는 창 아래 귀뚜라미 소리를 들으며 잠들어요.",
+   "blank": "grillo",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra una spilla a forma di grillo verde smeraldo.",
+   "en": "Sara buys an emerald-green brooch shaped like a cricket.",
+   "ko": "사라는 에메랄드빛 귀뚜라미 모양 브로치를 사요.",
+   "blank": "grillo",
+   "src": "made"
   }
  ],
  "w|grosso": [
@@ -36043,6 +36363,22 @@
    "en": "In the legend a mysterious warrior appears.",
    "ko": "전설에는 신비한 전사가 등장해.",
    "blank": "guerriero"
+  }
+ ],
+ "w|gufo": [
+  {
+   "text": "Nel fienile vive un gufo che caccia i topi per Matteo.",
+   "en": "An owl lives in the hayloft and hunts mice for Matteo.",
+   "ko": "건초 창고에 사는 부엉이가 마테오 대신 쥐를 잡아요.",
+   "blank": "gufo",
+   "src": "made"
+  },
+  {
+   "text": "Sara regala alla sorella un gufo di legno intagliato a mano.",
+   "en": "Sara gives her sister a hand-carved wooden owl.",
+   "ko": "사라는 언니에게 손으로 깎은 나무 부엉이를 선물해요.",
+   "blank": "gufo",
+   "src": "made"
   }
  ],
  "w|guida": [
@@ -36511,6 +36847,22 @@
    "en": "Downloading those files is illegal.",
    "ko": "그 파일들을 받는 건 불법이야.",
    "blank": "illegale"
+  }
+ ],
+ "w|illimitato": [
+  {
+   "text": "Le galline di Matteo hanno accesso illimitato al prato dietro la stalla.",
+   "en": "Matteo's hens have unlimited access to the meadow behind the barn.",
+   "ko": "마테오네 닭들은 외양간 뒤 풀밭을 마음껏 드나들어요.",
+   "blank": "illimitato",
+   "src": "made"
+  },
+  {
+   "text": "Sara ha un budget tutt'altro che illimitato, quindi tratta su ogni prezzo.",
+   "en": "Sara's budget is far from unlimited, so she haggles over every price.",
+   "ko": "사라는 예산이 넉넉하지 않아서 가격마다 흥정해요.",
+   "blank": "illimitato",
+   "src": "made"
   }
  ],
  "w|illuminare": [
@@ -38805,6 +39157,22 @@
    "src": "made"
   }
  ],
+ "w|inevitabilmente": [
+  {
+   "text": "Con la siccità, si lamenta Matteo, il prezzo del fieno sale inevitabilmente.",
+   "en": "With the drought, Matteo complains, the price of hay inevitably goes up.",
+   "ko": "가뭄이 들면 건초 값이 오를 수밖에 없다고 마테오가 투덜거려요.",
+   "blank": "inevitabilmente",
+   "src": "made"
+  },
+  {
+   "text": "Sara torna a casa inevitabilmente con qualcosa di inutile.",
+   "en": "Sara inevitably comes home with something useless.",
+   "ko": "사라는 어김없이 쓸모없는 물건을 하나 들고 집에 와요.",
+   "blank": "inevitabilmente",
+   "src": "made"
+  }
+ ],
  "w|infallibile": [
   {
    "text": "Simone chiede a Paolo la ricetta del suo infallibile tiramisù.",
@@ -39821,6 +40189,22 @@
    "blank": "inoltre"
   }
  ],
+ "w|inondazione": [
+  {
+   "text": "L'inondazione dell'anno scorso ha distrutto il raccolto di Matteo.",
+   "en": "Last year's flood destroyed Matteo's harvest.",
+   "ko": "작년 홍수로 마테오의 농작물이 다 망가졌어요.",
+   "blank": "inondazione",
+   "src": "made"
+  },
+  {
+   "text": "Il libraio racconta a Sara che ha perso molti libri in un'inondazione.",
+   "en": "The bookseller tells Sara that he lost many books in a flood.",
+   "ko": "책 상인은 사라에게 홍수로 책을 많이 잃었다고 이야기해요.",
+   "blank": "inondazione",
+   "src": "made"
+  }
+ ],
  "w|inopportuno": [
   {
    "text": "Un cliente fa una domanda inopportuna sul prezzo del pane, e Davide sorride senza rispondere.",
@@ -40437,6 +40821,22 @@
    "en": "I didn't take it that way.",
    "ko": "나는 그렇게 이해하지 않았어.",
    "blank": "inteso"
+  }
+ ],
+ "w|intensità": [
+  {
+   "text": "Con un vecchio pluviometro Matteo misura l'intensità della pioggia.",
+   "en": "With an old rain gauge Matteo measures the intensity of the rain.",
+   "ko": "마테오는 낡은 우량계로 비가 얼마나 세게 오는지 재요.",
+   "blank": "intensità",
+   "src": "made"
+  },
+  {
+   "text": "Sara ammira l'intensità dei colori di un vecchio tappeto.",
+   "en": "Sara admires the intensity of the colours of an old rug.",
+   "ko": "사라는 오래된 양탄자의 짙은 색감에 감탄해요.",
+   "blank": "intensità",
+   "src": "made"
   }
  ],
  "w|intensivo": [
@@ -41554,6 +41954,22 @@
    "en": "Martina imagines a hypothetical winter without snow and feels sad.",
    "ko": "마르티나는 눈 없는 겨울을 상상해 보다가 슬퍼져요.",
    "blank": "ipotetico",
+   "src": "made"
+  }
+ ],
+ "w|ippopotamo": [
+  {
+   "text": "I vicini scherzano che il maiale di Matteo è grasso come un ippopotamo.",
+   "en": "The neighbours joke that Matteo's pig is as fat as a hippo.",
+   "ko": "이웃들은 마테오네 돼지가 하마만큼 뚱뚱하다고 농담해요.",
+   "blank": "ippopotamo",
+   "src": "made"
+  },
+  {
+   "text": "Per il bagno Sara non resiste a un ippopotamo di ceramica.",
+   "en": "For the bathroom Sara can't resist a ceramic hippo.",
+   "ko": "사라는 욕실에 둘 도자기 하마를 보고 그냥 지나치지 못해요.",
+   "blank": "ippopotamo",
    "src": "made"
   }
  ],
@@ -43166,6 +43582,22 @@
    "en": "The Bengal cat has spotted fur like a leopard, Sara notes.",
    "ko": "벵골 고양이는 표범처럼 얼룩무늬 털이 있다고 사라가 말해요.",
    "blank": "leopardo",
+   "src": "made"
+  }
+ ],
+ "w|lepre": [
+  {
+   "text": "Una lepre attraversa di corsa il campo davanti a Matteo.",
+   "en": "A hare races across the field in front of Matteo.",
+   "ko": "산토끼 한 마리가 마테오 앞 들판을 쏜살같이 가로질러요.",
+   "blank": "lepre",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra un piatto dipinto con una lepre tra i cespugli.",
+   "en": "Sara buys a plate painted with a hare among the bushes.",
+   "ko": "사라는 덤불 속 산토끼가 그려진 접시를 사요.",
+   "blank": "lepre",
    "src": "made"
   }
  ],
@@ -49541,6 +49973,22 @@
    "blank": "muro"
   }
  ],
+ "w|muschio": [
+  {
+   "text": "Sul tetto di pietra del fienile di Matteo cresce il muschio.",
+   "en": "Moss grows on the stone roof of Matteo's hayloft.",
+   "ko": "마테오네 건초 창고의 돌 지붕에는 이끼가 자라요.",
+   "blank": "muschio",
+   "src": "made"
+  },
+  {
+   "text": "Sara annusa una saponetta fatta a mano al profumo di muschio.",
+   "en": "Sara sniffs a handmade bar of soap scented with musk.",
+   "ko": "사라는 사향 냄새가 나는 수제 비누 냄새를 맡아요.",
+   "blank": "muschio",
+   "src": "made"
+  }
+ ],
  "w|muscolo": [
   {
    "text": "Il cavallo si è stirato un muscolo della schiena, e Matteo consiglia riposo.",
@@ -51349,6 +51797,22 @@
    "blank": "o"
   }
  ],
+ "w|oasi": [
+  {
+   "text": "Per gli uccelli migratori lo stagno di Matteo è una piccola oasi.",
+   "en": "For migrating birds Matteo's pond is a little oasis.",
+   "ko": "철새들에게 마테오네 연못은 작은 오아시스예요.",
+   "blank": "oasi",
+   "src": "made"
+  },
+  {
+   "text": "Per Sara il banco dei libri usati è un'oasi di silenzio nel caos del mercato.",
+   "en": "For Sara the second-hand book stall is an oasis of quiet in the chaos of the market.",
+   "ko": "사라에게 헌책 가판대는 시끌벅적한 시장 속 조용한 오아시스예요.",
+   "blank": "oasi",
+   "src": "made"
+  }
+ ],
  "w|obbedire": [
   {
    "text": "Nella commedia, il servo deve obbedire al padrone ma lo prende sempre in giro.",
@@ -52530,6 +52994,22 @@
    "en": "At Elena's synchronised swimming show a live orchestra was playing.",
    "ko": "엘레나의 싱크로나이즈드 스위밍 발표회에서는 오케스트라가 라이브로 연주했어요.",
    "blank": "orchestra",
+   "src": "made"
+  }
+ ],
+ "w|orchidea": [
+  {
+   "text": "Nel prato di Matteo cresce un'orchidea selvatica molto rara.",
+   "en": "A very rare wild orchid grows in Matteo's meadow.",
+   "ko": "마테오네 풀밭에는 아주 귀한 야생 난초가 자라요.",
+   "blank": "orchidea",
+   "src": "made"
+  },
+  {
+   "text": "Una signora vende a Sara un'orchidea in un vaso di vetro.",
+   "en": "A woman sells Sara an orchid in a glass pot.",
+   "ko": "한 아주머니가 사라에게 유리 화분에 담긴 난초를 팔아요.",
+   "blank": "orchidea",
    "src": "made"
   }
  ],
@@ -55030,6 +55510,38 @@
    "en": "The building's garage is partly flooded, and Laura moves her car onto the street.",
    "ko": "아파트 주차장이 일부 물에 잠겨서 라우라는 차를 길가로 옮겨요.",
    "blank": "parzialmente",
+   "src": "made"
+  }
+ ],
+ "w|pascolare": [
+  {
+   "text": "Dopo la mietitura Matteo lascia pascolare le pecore nel campo.",
+   "en": "After the harvest Matteo lets the sheep graze in the field.",
+   "ko": "추수가 끝나면 마테오는 양들을 밭에 풀어 풀을 뜯게 해요.",
+   "blank": "pascolare",
+   "src": "made"
+  },
+  {
+   "text": "Su un vecchio arazzo Sara vede delle capre pascolare vicino a un mulino.",
+   "en": "On an old tapestry Sara sees goats grazing near a mill.",
+   "ko": "사라는 오래된 태피스트리에서 방앗간 옆에서 풀을 뜯는 염소들을 봐요.",
+   "blank": "pascolare",
+   "src": "made"
+  }
+ ],
+ "w|pascolo": [
+  {
+   "text": "All'alba Matteo porta le mucche al pascolo.",
+   "en": "At dawn Matteo takes the cows out to pasture.",
+   "ko": "마테오는 새벽에 소들을 풀밭으로 데리고 나가요.",
+   "blank": "pascolo",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra un quadretto con delle mucche al pascolo.",
+   "en": "Sara buys a small painting of cows at pasture.",
+   "ko": "사라는 풀을 뜯는 소들이 그려진 작은 그림을 사요.",
+   "blank": "pascolo",
    "src": "made"
   }
  ],
@@ -58233,6 +58745,22 @@
    "src": "made"
   }
  ],
+ "w|pollaio": [
+  {
+   "text": "Ogni mattina Matteo raccoglie le uova nel pollaio.",
+   "en": "Every morning Matteo collects the eggs in the henhouse.",
+   "ko": "마테오는 아침마다 닭장에서 달걀을 거둬요.",
+   "blank": "pollaio",
+   "src": "made"
+  },
+  {
+   "text": "Sara compra un vecchio pollaio di legno per le galline della nonna.",
+   "en": "Sara buys an old wooden henhouse for her grandmother's hens.",
+   "ko": "사라는 할머니네 닭들을 위해 낡은 나무 닭장을 사요.",
+   "blank": "pollaio",
+   "src": "made"
+  }
+ ],
  "w|pollice": [
   {
    "text": "Mentre aspetta, Paolo scorre le notizie sul telefono con il pollice.",
@@ -58835,6 +59363,22 @@
    "blank": "possibilità"
   }
  ],
+ "w|possibilmente": [
+  {
+   "text": "Per l'estate Matteo cerca un aiutante, possibilmente capace di guidare il trattore.",
+   "en": "For the summer Matteo is looking for a helper, ideally one who can drive the tractor.",
+   "ko": "마테오는 여름 동안 일할 일손을 찾는데, 되도록 트랙터를 몰 줄 아는 사람이면 좋겠대요.",
+   "blank": "possibilmente",
+   "src": "made"
+  },
+  {
+   "text": "Sara cerca una lampada da comodino, possibilmente in ottone.",
+   "en": "Sara is looking for a bedside lamp, preferably in brass.",
+   "ko": "사라는 침대 옆에 둘 스탠드를 찾는데, 되도록 놋쇠로 된 걸 원해요.",
+   "blank": "possibilmente",
+   "src": "made"
+  }
+ ],
  "w|postale": [
   {
    "text": "Davide ha ricevuto il certificato per raccomandata, perché l'ufficio postale era chiuso.",
@@ -59196,6 +59740,22 @@
    "en": "After the hailstorm, fruit prices plummeted and Francesca takes advantage.",
    "ko": "우박이 내린 뒤 과일값이 폭락해서 프란체스카는 그 기회를 잡아요.",
    "blank": "precipitati",
+   "src": "made"
+  }
+ ],
+ "w|precipizio": [
+  {
+   "text": "Una pecora di Matteo si è fermata proprio sull'orlo di un precipizio.",
+   "en": "One of Matteo's sheep has stopped right on the edge of a precipice.",
+   "ko": "마테오의 양 한 마리가 낭떠러지 끝에 딱 멈춰 섰어요.",
+   "blank": "precipizio",
+   "src": "made"
+  },
+  {
+   "text": "Sara trova un quadro con un castello sull'orlo di un precipizio.",
+   "en": "Sara finds a painting of a castle on the edge of a precipice.",
+   "ko": "사라는 절벽 끝에 성이 서 있는 그림을 찾아요.",
+   "blank": "precipizio",
    "src": "made"
   }
  ],
@@ -61312,6 +61872,22 @@
    "en": "After the office tour, Sara carried on with the software training.",
    "ko": "사무실을 한 바퀴 둘러본 뒤 사라는 프로그램 교육을 이어서 받았어요.",
    "blank": "proseguito",
+   "src": "made"
+  }
+ ],
+ "w|prospero": [
+  {
+   "text": "Dopo anni difficili, la fattoria di Matteo è diventata prospera.",
+   "en": "After difficult years, Matteo's farm has become prosperous.",
+   "ko": "힘든 몇 해를 보낸 뒤 마테오의 농장은 번창하게 됐어요.",
+   "blank": "prospera",
+   "src": "made"
+  },
+  {
+   "text": "Il venditore di dischi ha un commercio prospero, nota Sara.",
+   "en": "The record seller has a thriving business, Sara notices.",
+   "ko": "음반 상인의 장사가 잘된다는 걸 사라는 알아채요.",
+   "blank": "prospero",
    "src": "made"
   }
  ],
@@ -68475,6 +69051,22 @@
    "src": "made"
   }
  ],
+ "w|ruggire": [
+  {
+   "text": "La mattina il vecchio trattore di Matteo sembra ruggire quando parte.",
+   "en": "In the morning Matteo's old tractor seems to roar when it starts.",
+   "ko": "아침에 시동을 걸면 마테오의 낡은 트랙터는 으르렁거리는 것 같아요.",
+   "blank": "ruggire",
+   "src": "made"
+  },
+  {
+   "text": "Per il nipote Sara compra un leone di peluche che sa ruggire.",
+   "en": "For her nephew Sara buys a stuffed lion that can roar.",
+   "ko": "사라는 조카에게 으르렁 소리를 내는 사자 인형을 사 줘요.",
+   "blank": "ruggire",
+   "src": "made"
+  }
+ ],
  "w|rumore": [
   {
    "text": "C'è troppo rumore in questa stanza.",
@@ -69073,6 +69665,22 @@
    "en": "Send a greeting to the whole family.",
    "ko": "가족 모두에게 안부를 전해.",
    "blank": "saluto"
+  }
+ ],
+ "w|salvaguardare": [
+  {
+   "text": "Matteo vuole salvaguardare il bosco di querce intorno ai campi.",
+   "en": "Matteo wants to protect the oak wood around the fields.",
+   "ko": "마테오는 밭을 둘러싼 참나무 숲을 지키고 싶어 해요.",
+   "blank": "salvaguardare",
+   "src": "made"
+  },
+  {
+   "text": "Invece di buttarli, Sara vuole salvaguardare i vecchi mobili della nonna.",
+   "en": "Instead of throwing them away, Sara wants to preserve her grandmother's old furniture.",
+   "ko": "사라는 할머니의 옛 가구를 버리지 않고 지키고 싶어 해요.",
+   "blank": "salvaguardare",
+   "src": "made"
   }
  ],
  "w|salvare": [
@@ -78751,6 +79359,22 @@
    "blank": "subito"
   }
  ],
+ "w|sublime": [
+  {
+   "text": "All'alba la vista dalla collina di Matteo è sublime.",
+   "en": "At dawn the view from Matteo's hill is sublime.",
+   "ko": "새벽에 마테오네 언덕에서 보는 경치는 숭고할 만큼 아름다워요.",
+   "blank": "sublime",
+   "src": "made"
+  },
+  {
+   "text": "Su una bancarella Sara trova un vaso di ceramica dal colore sublime.",
+   "en": "On a stall Sara finds a ceramic vase in a sublime colour.",
+   "ko": "사라는 한 가판대에서 빛깔이 기막힌 도자기 꽃병을 찾아요.",
+   "blank": "sublime",
+   "src": "made"
+  }
+ ],
  "w|succedere": [
   {
    "text": "Cos'è successo?",
@@ -80897,6 +81521,22 @@
    "en": "In theory it should work.",
    "ko": "이론상으론 작동해야 해.",
    "blank": "teoria"
+  }
+ ],
+ "w|teorico": [
+  {
+   "text": "Prima di comprare la fattoria, Matteo aveva studiato agraria, ma il suo sapere era solo teorico.",
+   "en": "Before buying the farm, Matteo had studied agriculture, but his knowledge was only theoretical.",
+   "ko": "마테오는 농장을 사기 전에 농학을 공부했지만 아는 건 이론뿐이었어요.",
+   "blank": "teorico",
+   "src": "made"
+  },
+  {
+   "text": "Il venditore dice a Sara che il prezzo sul cartellino è solo teorico e si può trattare.",
+   "en": "The seller tells Sara that the price on the tag is only theoretical and can be haggled over.",
+   "ko": "상인은 사라에게 가격표는 그냥 이론상 값이라 흥정할 수 있다고 말해요.",
+   "blank": "teorico",
+   "src": "made"
   }
  ],
  "w|teppista": [

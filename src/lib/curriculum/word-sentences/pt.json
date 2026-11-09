@@ -4291,6 +4291,22 @@
    "src": "tatoeba:5513112/bill en:3295408/Hybrid"
   }
  ],
+ "w|ampliar": [
+  {
+   "text": "A diretoria quer ampliar a área de produção no ano que vem.",
+   "en": "The management wants to expand the production area next year.",
+   "ko": "경영진은 내년에 생산 구역을 넓히고 싶어 해요.",
+   "blank": "ampliar",
+   "src": "made"
+  },
+  {
+   "text": "A escola pretende ampliar o número de turmas de canto.",
+   "en": "The school intends to increase the number of singing classes.",
+   "ko": "학교는 성악 반을 늘릴 계획이에요.",
+   "blank": "ampliar",
+   "src": "made"
+  }
+ ],
  "w|amplo": [
   {
    "text": "O Miguel construiu um curral amplo para os cavalos poderem correr.",
@@ -5661,6 +5677,22 @@
    "ko": "도와줘서 정말 고마워요.",
    "blank": "apoio",
    "src": "tatoeba:2613736/alexmarcelo en:2941444/CK"
+  }
+ ],
+ "w|apólice": [
+  {
+   "text": "A apólice de seguro da fábrica não cobria danos causados por enchente.",
+   "en": "The factory's insurance policy didn't cover flood damage.",
+   "ko": "공장의 보험 증권은 홍수 피해를 보상하지 않았어요.",
+   "blank": "apólice",
+   "src": "made"
+  },
+  {
+   "text": "A escola contratou uma apólice para proteger os instrumentos mais caros.",
+   "en": "The school took out a policy to protect its most expensive instruments.",
+   "ko": "학교는 가장 비싼 악기들을 지키려고 보험에 들었어요.",
+   "blank": "apólice",
+   "src": "made"
   }
  ],
  "w|apontar": [
@@ -8077,6 +8109,22 @@
    "src": "made"
   }
  ],
+ "w|atentamente": [
+  {
+   "text": "O Pedro leu atentamente o manual da máquina antes de ligá-la.",
+   "en": "Pedro read the machine's manual carefully before turning it on.",
+   "ko": "페드루는 기계를 켜기 전에 설명서를 꼼꼼히 읽었어요.",
+   "blank": "atentamente",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz escuta atentamente as gravações das próprias aulas.",
+   "en": "Beatriz listens carefully to the recordings of her own lessons.",
+   "ko": "베아트리스는 자기 수업 녹음을 주의 깊게 들어요.",
+   "blank": "atentamente",
+   "src": "made"
+  }
+ ],
  "w|atento": [
   {
    "text": "A professora pediu para o Bruno ficar mais atento às explicações.",
@@ -10246,6 +10294,22 @@
    "en": "The cake was a huge hit and sold out before noon.",
    "ko": "케이크는 대박이 나서 정오 전에 다 팔렸어요.",
    "blank": "bárbaro",
+   "src": "made"
+  }
+ ],
+ "w|barbeiro": [
+  {
+   "text": "Na hora do almoço, o Pedro corta o cabelo com um barbeiro perto da fábrica.",
+   "en": "At lunchtime, Pedro gets his hair cut at a barber near the factory.",
+   "ko": "페드루는 점심시간에 공장 근처 이발사에게 머리를 잘라요.",
+   "blank": "barbeiro",
+   "src": "made"
+  },
+  {
+   "text": "O professor de violão é um barbeiro no trânsito, mas toca como ninguém.",
+   "en": "The guitar teacher is a terrible driver, but he plays like no one else.",
+   "ko": "기타 선생님은 운전은 엉망이지만 연주는 누구보다 잘해요.",
+   "blank": "barbeiro",
    "src": "made"
   }
  ],
@@ -17743,6 +17807,22 @@
    "src": "made"
   }
  ],
+ "w|clipe": [
+  {
+   "text": "O Pedro prende as notas fiscais com um clipe antes de entregar.",
+   "en": "Pedro fastens the invoices with a paper clip before handing them in.",
+   "ko": "페드루는 영수증을 클립으로 묶어서 제출해요.",
+   "blank": "clipe",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz gravou um clipe tocando violino no pátio da escola.",
+   "en": "Beatriz recorded a music video playing violin in the school courtyard.",
+   "ko": "베아트리스는 학교 마당에서 바이올린을 켜는 영상을 찍었어요.",
+   "blank": "clipe",
+   "src": "made"
+  }
+ ],
  "w|clone": [
   {
    "text": "A bióloga explicou ao Miguel que certas plantas formam um clone de si mesmas pelas raízes.",
@@ -18052,6 +18132,22 @@
    "en": "Mariana felt sorry for the poor security guard, who spent the concert with his back to the stage.",
    "ko": "마리아나는 공연 내내 무대를 등지고 있던 가엾은 경호원이 안쓰러웠어요.",
    "blank": "coitado",
+   "src": "made"
+  }
+ ],
+ "w|colaboração": [
+  {
+   "text": "O projeto da linha nova foi feito em colaboração com uma universidade.",
+   "en": "The new line's design was made in collaboration with a university.",
+   "ko": "새 라인 설계는 대학과 협력해서 만들었어요.",
+   "blank": "colaboração",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz compôs a música em colaboração com um colega de turma.",
+   "en": "Beatriz composed the song in collaboration with a classmate.",
+   "ko": "베아트리스는 반 친구와 함께 그 곡을 작곡했어요.",
+   "blank": "colaboração",
    "src": "made"
   }
  ],
@@ -21037,6 +21133,22 @@
    "src": "made"
   }
  ],
+ "w|conspirar": [
+  {
+   "text": "Os colegas pareciam conspirar em voz baixa, e no fim era uma festa surpresa para o Pedro.",
+   "en": "The coworkers seemed to be conspiring in whispers, and in the end it was a surprise party for Pedro.",
+   "ko": "동료들이 소곤소곤 작당하는 것 같더니 알고 보니 페드루를 위한 깜짝 파티였어요.",
+   "blank": "conspirar",
+   "src": "made"
+  },
+  {
+   "text": "No dia do recital, tudo parecia conspirar contra a Beatriz, até a chuva.",
+   "en": "On the day of the recital, everything seemed to conspire against Beatriz, even the rain.",
+   "ko": "발표회 날엔 비까지 와서 모든 게 베아트리스에게 불리하게 돌아가는 것 같았어요.",
+   "blank": "conspirar",
+   "src": "made"
+  }
+ ],
  "w|constante": [
   {
    "text": "O barulho constante da obra ao lado atrapalhou o ensaio do Pedro.",
@@ -22562,6 +22674,22 @@
    "en": "Mail gets to Carla's farm only once a week.",
    "ko": "카를라의 농장에는 우편물이 일주일에 한 번만 와요.",
    "blank": "correspondência",
+   "src": "made"
+  }
+ ],
+ "w|correspondente": [
+  {
+   "text": "O correspondente de um jornal veio fazer uma matéria sobre a fábrica.",
+   "en": "A newspaper correspondent came to do a story on the factory.",
+   "ko": "한 신문사 특파원이 공장 기사를 쓰러 왔어요.",
+   "blank": "correspondente",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz troca cartas com uma correspondente que também estuda piano.",
+   "en": "Beatriz exchanges letters with a pen pal who also studies piano.",
+   "ko": "베아트리스는 피아노를 배우는 펜팔 친구와 편지를 주고받아요.",
+   "blank": "correspondente",
    "src": "made"
   }
  ],
@@ -24843,6 +24971,22 @@
    "src": "made"
   }
  ],
+ "w|deduzir": [
+  {
+   "text": "Pelo barulho do motor, o Pedro conseguiu deduzir qual peça estava solta.",
+   "en": "From the engine noise, Pedro managed to figure out which part was loose.",
+   "ko": "페드루는 모터 소리를 듣고 어느 부품이 헐거운지 알아냈어요.",
+   "blank": "deduzir",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz tocou só o começo da melodia e o colega teve que deduzir o nome da música.",
+   "en": "Beatriz played only the start of the melody and her classmate had to work out the song's name.",
+   "ko": "베아트리스가 멜로디 첫 부분만 치자 친구가 곡 제목을 맞혀야 했어요.",
+   "blank": "deduzir",
+   "src": "made"
+  }
+ ],
  "w|defeito": [
   {
    "text": "O vestido da noiva tinha um pequeno defeito na barra, mas ninguém notou.",
@@ -25614,6 +25758,22 @@
    "en": "Mariana thought about reporting the real estate agency that charged a hidden fee.",
    "ko": "마리아나는 숨은 수수료를 받은 부동산을 신고할까 생각했어요.",
    "blank": "denunciar",
+   "src": "made"
+  }
+ ],
+ "w|deparar": [
+  {
+   "text": "Ao chegar cedo, o Pedro se deparou com o portão do galpão aberto.",
+   "en": "Arriving early, Pedro came across the warehouse gate wide open.",
+   "ko": "일찍 도착한 페드루는 창고 문이 열려 있는 걸 발견했어요.",
+   "blank": "deparou",
+   "src": "made"
+  },
+  {
+   "text": "Na prova prática, a Beatriz se deparou com uma partitura bem mais difícil do que esperava.",
+   "en": "In the practical exam, Beatriz came up against a score much harder than she expected.",
+   "ko": "실기 시험에서 베아트리스는 생각보다 훨씬 어려운 악보를 받았어요.",
+   "blank": "deparou",
    "src": "made"
   }
  ],
@@ -26801,6 +26961,22 @@
    "src": "made"
   }
  ],
+ "w|designer": [
+  {
+   "text": "Um designer novo redesenhou a embalagem dos produtos da fábrica.",
+   "en": "A new designer redid the packaging of the factory's products.",
+   "ko": "새로 온 디자이너가 공장 제품 포장을 다시 디자인했어요.",
+   "blank": "designer",
+   "src": "made"
+  },
+  {
+   "text": "Um designer amigo da escola fez o cartaz do recital da Beatriz.",
+   "en": "A designer friend of the school made the poster for Beatriz's recital.",
+   "ko": "학교와 친한 디자이너가 베아트리스 발표회 포스터를 만들었어요.",
+   "blank": "designer",
+   "src": "made"
+  }
+ ],
  "w|desistir": [
   {
    "text": "Desistir agora não dá.",
@@ -27178,6 +27354,22 @@
    "en": "Ana's moqueca became the star of the menu.",
    "ko": "아나의 모케카가 메뉴에서 단연 돋보이는 요리가 됐어요.",
    "blank": "destaque",
+   "src": "made"
+  }
+ ],
+ "w|destemido": [
+  {
+   "text": "O Pedro, destemido, subiu na escada alta para trocar a lâmpada do teto.",
+   "en": "Pedro, fearless, climbed the tall ladder to change the ceiling light.",
+   "ko": "페드루는 겁도 없이 높은 사다리에 올라가 천장 전구를 갈았어요.",
+   "blank": "destemido",
+   "src": "made"
+  },
+  {
+   "text": "No palco, o aluno mais novo da escola parecia destemido diante do público.",
+   "en": "On stage, the school's youngest student looked fearless in front of the audience.",
+   "ko": "무대 위의 학교 막내는 관객 앞에서도 전혀 겁먹지 않은 것 같았어요.",
+   "blank": "destemido",
    "src": "made"
   }
  ],
@@ -28301,6 +28493,22 @@
    "src": "made"
   }
  ],
+ "w|diplomata": [
+  {
+   "text": "Um diplomata estrangeiro visitou a fábrica para conhecer a produção.",
+   "en": "A foreign diplomat visited the factory to see the production.",
+   "ko": "외국 외교관이 생산 과정을 보러 공장을 방문했어요.",
+   "blank": "diplomata",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz dá aula particular de flauta para a filha de um diplomata.",
+   "en": "Beatriz gives private flute lessons to a diplomat's daughter.",
+   "ko": "베아트리스는 한 외교관의 딸에게 플루트 개인 레슨을 해요.",
+   "blank": "diplomata",
+   "src": "made"
+  }
+ ],
  "w|diplomático": [
   {
    "text": "O ministro deu uma resposta diplomática quando o Gabriel perguntou sobre a crise.",
@@ -28431,6 +28639,22 @@
    "en": "Do you know how to drive?",
    "ko": "운전할 줄 알아?",
    "blank": "dirigir"
+  }
+ ],
+ "w|discar": [
+  {
+   "text": "O Pedro teve que discar o ramal da manutenção várias vezes até alguém atender.",
+   "en": "Pedro had to dial the maintenance extension several times before someone picked up.",
+   "ko": "페드루는 누가 받을 때까지 정비팀 내선 번호를 여러 번 눌러야 했어요.",
+   "blank": "discar",
+   "src": "made"
+  },
+  {
+   "text": "A avó da Beatriz ainda guarda um telefone antigo de discar.",
+   "en": "Beatriz's grandmother still keeps an old rotary phone.",
+   "ko": "베아트리스의 할머니는 아직도 옛날 다이얼 전화기를 갖고 있어요.",
+   "blank": "discar",
+   "src": "made"
   }
  ],
  "w|disciplina": [
@@ -29845,6 +30069,22 @@
    "src": "made"
   }
  ],
+ "w|drenar": [
+  {
+   "text": "Depois do temporal, foi preciso drenar a água acumulada no pátio da fábrica.",
+   "en": "After the storm, they had to drain the water pooled in the factory yard.",
+   "ko": "폭우가 지나간 뒤 공장 마당에 고인 물을 빼야 했어요.",
+   "blank": "drenar",
+   "src": "made"
+  },
+  {
+   "text": "Ensaiar tantas horas seguidas pode drenar a energia de qualquer aluno.",
+   "en": "Rehearsing so many hours in a row can drain any student's energy.",
+   "ko": "몇 시간씩 쉬지 않고 연습하면 어떤 학생이든 진이 빠져요.",
+   "blank": "drenar",
+   "src": "made"
+  }
+ ],
  "w|drinque": [
   {
    "text": "Você não vai me oferecer um drinque?",
@@ -31061,6 +31301,22 @@
    "blank": "emergência"
   }
  ],
+ "w|emergir": [
+  {
+   "text": "O Pedro viu fumaça emergir do duto de ventilação e chamou a manutenção.",
+   "en": "Pedro saw smoke rise from the ventilation duct and called maintenance.",
+   "ko": "페드루는 환기구에서 연기가 올라오는 걸 보고 정비팀을 불렀어요.",
+   "blank": "emergir",
+   "src": "made"
+  },
+  {
+   "text": "Depois de meses de estudo, um estilo próprio começou a emergir nas composições da Beatriz.",
+   "en": "After months of study, a style of her own began to emerge in Beatriz's compositions.",
+   "ko": "몇 달 공부하고 나니 베아트리스의 곡에서 자기만의 색깔이 드러나기 시작했어요.",
+   "blank": "emergir",
+   "src": "made"
+  }
+ ],
  "w|eminência": [
   {
    "text": "O vice-prefeito é visto como a eminência por trás de quase todas as decisões.",
@@ -31090,6 +31346,22 @@
    "en": "Sofia read that gas emissions rise in winter because of home heating.",
    "ko": "소피아는 겨울에 집 난방 때문에 가스 배출이 늘어난다는 글을 읽었어요.",
    "blank": "emissão",
+   "src": "made"
+  }
+ ],
+ "w|emissor": [
+  {
+   "text": "O Pedro trocou o emissor do alarme, que estava falhando havia dias.",
+   "en": "Pedro replaced the alarm's transmitter, which had been failing for days.",
+   "ko": "페드루는 며칠째 말썽이던 경보기 송신기를 갈았어요.",
+   "blank": "emissor",
+   "src": "made"
+  },
+  {
+   "text": "O emissor do microfone sem fio da Beatriz ficou sem pilha no meio do recital.",
+   "en": "The transmitter of Beatriz's wireless mic ran out of battery mid-recital.",
+   "ko": "발표회 도중에 베아트리스의 무선 마이크 송신기 배터리가 나갔어요.",
+   "blank": "emissor",
    "src": "made"
   }
  ],
@@ -32453,6 +32725,22 @@
    "blank": "entre"
   }
  ],
+ "w|entregador": [
+  {
+   "text": "O entregador trouxe as peças com dois dias de atraso.",
+   "en": "The delivery man brought the parts two days late.",
+   "ko": "배달원이 부품을 이틀 늦게 가져왔어요.",
+   "blank": "entregador",
+   "src": "made"
+  },
+  {
+   "text": "Um entregador ouviu a Beatriz tocar e parou na janela para escutar.",
+   "en": "A delivery guy heard Beatriz playing and stopped at the window to listen.",
+   "ko": "배달원이 베아트리스의 연주를 듣고 창가에 멈춰 귀를 기울였어요.",
+   "blank": "entregador",
+   "src": "made"
+  }
+ ],
  "w|entregar": [
   {
    "text": "Entrega na portaria, por favor.",
@@ -33119,6 +33407,22 @@
    "en": "We just barely escaped the rain.",
    "ko": "비를 아슬아슬하게 피했어.",
    "blank": "Escapamos"
+  }
+ ],
+ "w|escavação": [
+  {
+   "text": "A expansão da fábrica começou com a escavação do terreno ao lado.",
+   "en": "The factory expansion began with excavating the lot next door.",
+   "ko": "공장 확장은 옆 땅을 파내는 일부터 시작됐어요.",
+   "blank": "escavação",
+   "src": "made"
+  },
+  {
+   "text": "Na aula de história da música, a Beatriz viu fotos de uma escavação onde acharam flautas antigas.",
+   "en": "In music history class, Beatriz saw photos of a dig where ancient flutes were found.",
+   "ko": "음악사 수업에서 베아트리스는 옛 피리가 나온 발굴 현장 사진을 봤어요.",
+   "blank": "escavação",
+   "src": "made"
   }
  ],
  "w|esclarecer": [
@@ -38105,6 +38409,22 @@
    "blank": "favor"
   }
  ],
+ "w|favorável": [
+  {
+   "text": "O sindicato recebeu uma resposta favorável sobre o aumento de salário.",
+   "en": "The union got a favorable answer about the pay raise.",
+   "ko": "노조는 임금 인상에 대해 긍정적인 답을 받았어요.",
+   "blank": "favorável",
+   "src": "made"
+  },
+  {
+   "text": "A banca deu um parecer favorável à bolsa da Beatriz.",
+   "en": "The panel gave a favorable opinion on Beatriz's scholarship.",
+   "ko": "심사위원단은 베아트리스의 장학금에 찬성 의견을 냈어요.",
+   "blank": "favorável",
+   "src": "made"
+  }
+ ],
  "w|favorito": [
   {
    "text": "Qual é o seu favorito?",
@@ -39254,6 +39574,22 @@
    "en": "At the end of the month, Inês reviews the household's financial planning.",
    "ko": "월말이면 이네스는 집안 재정 계획을 다시 살펴봐요.",
    "blank": "financeiro",
+   "src": "made"
+  }
+ ],
+ "w|financiamento": [
+  {
+   "text": "A fábrica conseguiu financiamento para comprar uma máquina nova.",
+   "en": "The factory got financing to buy a new machine.",
+   "ko": "공장은 새 기계를 살 자금을 대출받았어요.",
+   "blank": "financiamento",
+   "src": "made"
+  },
+  {
+   "text": "A escola busca financiamento para dar bolsas a alunos sem condições de pagar.",
+   "en": "The school is seeking funding to give scholarships to students who can't afford it.",
+   "ko": "학교는 학비를 낼 형편이 안 되는 학생들에게 장학금을 주려고 후원금을 찾고 있어요.",
+   "blank": "financiamento",
    "src": "made"
   }
  ],
@@ -40433,6 +40769,22 @@
    "src": "made"
   }
  ],
+ "w|fracassado": [
+  {
+   "text": "O Pedro participou de um projeto fracassado de robôs na linha de produção.",
+   "en": "Pedro took part in a failed robotics project on the production line.",
+   "ko": "페드루는 생산 라인에 로봇을 들이려다 실패한 프로젝트에 참여했어요.",
+   "blank": "fracassado",
+   "src": "made"
+  },
+  {
+   "text": "Depois de um teste fracassado, a Beatriz tentou de novo e passou para a orquestra.",
+   "en": "After a failed audition, Beatriz tried again and got into the orchestra.",
+   "ko": "오디션에 한 번 떨어진 뒤 베아트리스는 다시 도전해서 오케스트라에 들어갔어요.",
+   "blank": "fracassado",
+   "src": "made"
+  }
+ ],
  "w|fracassar": [
   {
    "text": "O experimento do Lucas fracassou, mas a professora elogiou o esforço.",
@@ -41566,6 +41918,22 @@
    "en": "In the small town on the route, a rooster crowed as Rita went by.",
    "ko": "코스에 있는 작은 마을에서 리타가 지나가자 수탉이 울었어요.",
    "blank": "galo",
+   "src": "made"
+  }
+ ],
+ "w|galpão": [
+  {
+   "text": "O Pedro trabalha no galpão onde ficam as máquinas de corte.",
+   "en": "Pedro works in the warehouse where the cutting machines are.",
+   "ko": "페드루는 절단기가 있는 창고 건물에서 일해요.",
+   "blank": "galpão",
+   "src": "made"
+  },
+  {
+   "text": "A escola de música ensaia num galpão reformado perto da estação.",
+   "en": "The music school rehearses in a renovated warehouse near the station.",
+   "ko": "음악 학교는 역 근처의 리모델링한 창고에서 연습해요.",
+   "blank": "galpão",
    "src": "made"
   }
  ],
@@ -42838,6 +43206,22 @@
    "en": "A government seal guarantees the origin of the cheese Ana uses.",
    "ko": "정부 인증 마크가 아나가 쓰는 치즈의 원산지를 보증해요.",
    "blank": "governamental",
+   "src": "made"
+  }
+ ],
+ "w|governanta": [
+  {
+   "text": "A governanta do dono da fábrica levava o almoço dele todos os dias.",
+   "en": "The factory owner's housekeeper brought him lunch every day.",
+   "ko": "공장 사장 집 가정부가 매일 사장에게 점심을 가져다줬어요.",
+   "blank": "governanta",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz cresceu ouvindo a governanta da casa cantar modinhas na cozinha.",
+   "en": "Beatriz grew up hearing the housekeeper sing old songs in the kitchen.",
+   "ko": "베아트리스는 가정부 아주머니가 부엌에서 옛 노래 부르는 걸 들으며 자랐어요.",
+   "blank": "governanta",
    "src": "made"
   }
  ],
@@ -45139,6 +45523,22 @@
    "src": "made"
   }
  ],
+ "w|ilustre": [
+  {
+   "text": "Um visitante ilustre veio inaugurar a linha nova da fábrica.",
+   "en": "A distinguished visitor came to open the factory's new line.",
+   "ko": "저명한 손님이 공장의 새 라인 개통식에 왔어요.",
+   "blank": "ilustre",
+   "src": "made"
+  },
+  {
+   "text": "Um pianista ilustre deu uma aula aberta na escola da Beatriz.",
+   "en": "A renowned pianist gave an open class at Beatriz's school.",
+   "ko": "유명한 피아니스트가 베아트리스네 학교에서 공개 수업을 했어요.",
+   "blank": "ilustre",
+   "src": "made"
+  }
+ ],
  "w|imagem": [
   {
    "text": "A imagem ficou boa.",
@@ -45196,6 +45596,22 @@
    "en": "Luísa's nephew spent the party talking to an imaginary friend.",
    "ko": "루이자의 조카는 잔치 내내 상상 속 친구와 이야기했어요.",
    "blank": "imaginário",
+   "src": "made"
+  }
+ ],
+ "w|imaturo": [
+  {
+   "text": "O estagiário ainda é imaturo e vive se distraindo com o celular.",
+   "en": "The intern is still immature and is always getting distracted by his phone.",
+   "ko": "인턴은 아직 철이 없어서 늘 휴대폰에 정신이 팔려요.",
+   "blank": "imaturo",
+   "src": "made"
+  },
+  {
+   "text": "O professor achou o arranjo da Beatriz um pouco imaturo, mas promissor.",
+   "en": "The teacher found Beatriz's arrangement a bit immature, but promising.",
+   "ko": "선생님은 베아트리스의 편곡이 좀 미숙하지만 가능성이 있다고 봤어요.",
+   "blank": "imaturo",
    "src": "made"
   }
  ],
@@ -48647,6 +49063,22 @@
    "src": "tatoeba:8277819/XY en:7494482/CH"
   }
  ],
+ "w|inventário": [
+  {
+   "text": "O Pedro passou a sexta-feira fazendo o inventário das peças do estoque.",
+   "en": "Pedro spent Friday doing the inventory of the parts in stock.",
+   "ko": "페드루는 금요일 내내 창고 부품 재고 조사를 했어요.",
+   "blank": "inventário",
+   "src": "made"
+  },
+  {
+   "text": "A secretária fez o inventário de todos os instrumentos da escola.",
+   "en": "The secretary took an inventory of all the school's instruments.",
+   "ko": "비서는 학교 악기 전부의 목록을 만들었어요.",
+   "blank": "inventário",
+   "src": "made"
+  }
+ ],
  "w|inverno": [
   {
    "text": "Vocês já foram à praia no inverno?",
@@ -48972,6 +49404,22 @@
    "en": "For Ana, the final position was irrelevant; what mattered was finishing.",
    "ko": "아나에게 최종 순위는 상관없었고 끝까지 달리는 게 중요했어요.",
    "blank": "irrelevante",
+   "src": "made"
+  }
+ ],
+ "w|irresistível": [
+  {
+   "text": "No meio da tarde, o cheiro do café da copa é irresistível.",
+   "en": "In the middle of the afternoon, the smell of coffee from the break room is irresistible.",
+   "ko": "오후 중간쯤이면 탕비실 커피 냄새를 참을 수가 없어요.",
+   "blank": "irresistível",
+   "src": "made"
+  },
+  {
+   "text": "A melodia da aula de jazz era irresistível, e a Beatriz cantarolou o dia inteiro.",
+   "en": "The melody from jazz class was irresistible, and Beatriz hummed it all day.",
+   "ko": "재즈 수업 멜로디가 너무 좋아서 베아트리스는 하루 종일 흥얼거렸어요.",
+   "blank": "irresistível",
    "src": "made"
   }
  ],
@@ -53215,6 +53663,22 @@
    "src": "made"
   }
  ],
+ "w|maldoso": [
+  {
+   "text": "Um colega maldoso escondeu as luvas do Pedro no armário errado.",
+   "en": "A spiteful coworker hid Pedro's gloves in the wrong locker.",
+   "ko": "심술궂은 동료가 페드루의 장갑을 다른 사물함에 숨겼어요.",
+   "blank": "maldoso",
+   "src": "made"
+  },
+  {
+   "text": "Um comentário maldoso sobre a voz da Beatriz circulou no grupo da turma.",
+   "en": "A nasty comment about Beatriz's voice went around the class group chat.",
+   "ko": "베아트리스의 목소리를 헐뜯는 말이 반 단톡방에 돌았어요.",
+   "blank": "maldoso",
+   "src": "made"
+  }
+ ],
  "w|maleta": [
   {
    "text": "O Bruno carrega o texto numa maleta de couro que ganhou do pai.",
@@ -56817,6 +57281,22 @@
    "en": "The line is insanely long.",
    "ko": "줄이 엄청나게 길어.",
    "blank": "monstro"
+  }
+ ],
+ "w|montagem": [
+  {
+   "text": "O Pedro trabalha na montagem de motores elétricos.",
+   "en": "Pedro works on the assembly of electric motors.",
+   "ko": "페드루는 전기 모터 조립 일을 해요.",
+   "blank": "montagem",
+   "src": "made"
+  },
+  {
+   "text": "A escola preparou a montagem de uma ópera infantil para o fim do ano.",
+   "en": "The school prepared a production of a children's opera for the end of the year.",
+   "ko": "학교는 연말에 올릴 어린이 오페라를 준비했어요.",
+   "blank": "montagem",
+   "src": "made"
   }
  ],
  "w|montanha": [
@@ -63973,6 +64453,22 @@
    "src": "made"
   }
  ],
+ "w|pergaminho": [
+  {
+   "text": "Na sala da diretoria, há um pergaminho emoldurado que conta a fundação da fábrica.",
+   "en": "In the board room, there's a framed parchment telling the story of the factory's founding.",
+   "ko": "임원실에는 공장 설립 이야기를 담은 양피지가 액자에 걸려 있어요.",
+   "blank": "pergaminho",
+   "src": "made"
+  },
+  {
+   "text": "A professora mostrou uma partitura medieval escrita em pergaminho.",
+   "en": "The teacher showed a medieval score written on parchment.",
+   "ko": "선생님은 양피지에 쓴 중세 악보를 보여 줬어요.",
+   "blank": "pergaminho",
+   "src": "made"
+  }
+ ],
  "w|pergunta": [
   {
    "text": "Boa pergunta.",
@@ -66779,6 +67275,22 @@
    "src": "tatoeba:6405943/bill en:2254998/CK"
   }
  ],
+ "w|potencialmente": [
+  {
+   "text": "O vazamento de óleo era potencialmente perigoso para os operários.",
+   "en": "The oil leak was potentially dangerous for the workers.",
+   "ko": "기름 유출은 작업자들에게 위험할 수 있었어요.",
+   "blank": "potencialmente",
+   "src": "made"
+  },
+  {
+   "text": "A professora avisou que ouvir música no volume máximo é potencialmente prejudicial à audição.",
+   "en": "The teacher warned that listening to music at full volume is potentially harmful to hearing.",
+   "ko": "선생님은 최대 음량으로 음악을 들으면 청력이 상할 수 있다고 경고했어요.",
+   "blank": "potencialmente",
+   "src": "made"
+  }
+ ],
  "w|potente": [
   {
    "text": "O gerador novo da prefeitura é potente o bastante para manter o prédio inteiro ligado.",
@@ -67462,6 +67974,22 @@
    "en": "Camera flash can damage old paintings.",
    "ko": "카메라 플래시는 오래된 그림을 상하게 할 수 있어요.",
    "blank": "prejudicar",
+   "src": "made"
+  }
+ ],
+ "w|prejuízo": [
+  {
+   "text": "A greve dos caminhoneiros deu muito prejuízo à fábrica do Pedro.",
+   "en": "The truckers' strike caused big losses for Pedro's factory.",
+   "ko": "화물차 기사 파업으로 페드루네 공장은 큰 손해를 봤어요.",
+   "blank": "prejuízo",
+   "src": "made"
+  },
+  {
+   "text": "A goteira no auditório causou prejuízo ao piano de cauda.",
+   "en": "The leak in the auditorium damaged the grand piano.",
+   "ko": "강당 천장에서 샌 물 때문에 그랜드 피아노가 망가졌어요.",
+   "blank": "prejuízo",
    "src": "made"
   }
  ],
@@ -69793,6 +70321,22 @@
    "src": "made"
   }
  ],
+ "w|publicação": [
+  {
+   "text": "A fábrica apareceu numa publicação sobre indústrias sustentáveis.",
+   "en": "The factory appeared in a publication about sustainable industries.",
+   "ko": "공장이 친환경 산업을 다룬 간행물에 실렸어요.",
+   "blank": "publicação",
+   "src": "made"
+  },
+  {
+   "text": "A professora da Beatriz comemorou a publicação do livro de exercícios dela.",
+   "en": "Beatriz's teacher celebrated the publication of her exercise book.",
+   "ko": "베아트리스의 선생님은 자기 연습곡집 출간을 축하했어요.",
+   "blank": "publicação",
+   "src": "made"
+  }
+ ],
  "w|publicar": [
   {
    "text": "O jornal vai publicar a reportagem do Gabriel na primeira página.",
@@ -70181,6 +70725,22 @@
    "ko": "더 좋은 품질로 다른 것도 있어요?",
    "blank": "qualidade",
    "src": "tatoeba:713596/marcusps en:30372/CK"
+  }
+ ],
+ "w|qualificado": [
+  {
+   "text": "A fábrica precisa de um eletricista qualificado para o turno da noite.",
+   "en": "The factory needs a qualified electrician for the night shift.",
+   "ko": "공장은 야간 근무를 할 숙련된 전기 기사가 필요해요.",
+   "blank": "qualificado",
+   "src": "made"
+  },
+  {
+   "text": "O novo professor de piano da Beatriz é muito qualificado.",
+   "en": "Beatriz's new piano teacher is very well qualified.",
+   "ko": "베아트리스의 새 피아노 선생님은 실력이 아주 뛰어나요.",
+   "blank": "qualificado",
+   "src": "made"
   }
  ],
  "w|qualificar": [
@@ -72301,6 +72861,22 @@
    "src": "tatoeba:7363567/lucasmg123 en:2235207/Hybrid"
   }
  ],
+ "w|redação": [
+  {
+   "text": "O Pedro pediu ajuda à chefe na redação do relatório de acidentes.",
+   "en": "Pedro asked his boss for help writing the accident report.",
+   "ko": "페드루는 사고 보고서 작성을 상사에게 도와 달라고 했어요.",
+   "blank": "redação",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz tirou nota alta na redação sobre o compositor favorito dela.",
+   "en": "Beatriz got a high grade on her essay about her favorite composer.",
+   "ko": "베아트리스는 좋아하는 작곡가에 대한 글쓰기 과제에서 높은 점수를 받았어요.",
+   "blank": "redação",
+   "src": "made"
+  }
+ ],
  "w|rede": [
   {
    "text": "Eu peguei borboletas com uma rede.",
@@ -73606,6 +74182,22 @@
    "en": "She's going to represent the class at the meeting.",
    "ko": "그녀가 회의에서 반 대표로 나갈 거예요.",
    "blank": "representar",
+   "src": "made"
+  }
+ ],
+ "w|reproduzir": [
+  {
+   "text": "A máquina nova consegue reproduzir o mesmo molde sem nenhum defeito.",
+   "en": "The new machine can reproduce the same mold without any defect.",
+   "ko": "새 기계는 같은 틀을 흠 하나 없이 그대로 찍어 낼 수 있어요.",
+   "blank": "reproduzir",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz tenta reproduzir de ouvido as músicas que escuta no rádio.",
+   "en": "Beatriz tries to play by ear the songs she hears on the radio.",
+   "ko": "베아트리스는 라디오에서 들은 노래를 귀로 듣고 따라 쳐 보려고 해요.",
+   "blank": "reproduzir",
    "src": "made"
   }
  ],
@@ -78643,6 +79235,22 @@
    "src": "made"
   }
  ],
+ "w|sincronização": [
+  {
+   "text": "A sincronização das esteiras falhou e a linha parou por uma hora.",
+   "en": "The conveyor belt synchronization failed and the line stopped for an hour.",
+   "ko": "컨베이어 벨트 동기화가 어긋나서 라인이 한 시간 멈췄어요.",
+   "blank": "sincronização",
+   "src": "made"
+  },
+  {
+   "text": "O maestro passou o ensaio inteiro trabalhando a sincronização entre o coro e a orquestra.",
+   "en": "The conductor spent the whole rehearsal working on the timing between the choir and the orchestra.",
+   "ko": "지휘자는 연습 내내 합창단과 오케스트라 박자를 맞추는 데 매달렸어요.",
+   "blank": "sincronização",
+   "src": "made"
+  }
+ ],
  "w|sindicato": [
   {
    "text": "O sindicato marcou uma assembleia, e o Rafael foi votar.",
@@ -80661,6 +81269,22 @@
    "src": "tatoeba:5952301/sjaelsamlaren en:3060810/sharptoothed"
   }
  ],
+ "w|superintendente": [
+  {
+   "text": "O superintendente da fábrica visitou a linha de produção sem avisar ninguém.",
+   "en": "The factory superintendent visited the production line without telling anyone.",
+   "ko": "공장 총책임자가 아무에게도 알리지 않고 생산 라인을 둘러봤어요.",
+   "blank": "superintendente",
+   "src": "made"
+  },
+  {
+   "text": "O superintendente da escola de música aprovou a compra de pianos novos.",
+   "en": "The music school's superintendent approved the purchase of new pianos.",
+   "ko": "음악 학교 운영 책임자가 새 피아노 구입을 승인했어요.",
+   "blank": "superintendente",
+   "src": "made"
+  }
+ ],
  "w|superior": [
   {
    "text": "Você está em nível muito superior ao meu.",
@@ -82008,6 +82632,22 @@
    "en": "With no signal in the tunnel, Luísa's phone support call dropped.",
    "ko": "터널에서 신호가 끊겨 루이자의 상담 전화가 끊어졌어요.",
    "blank": "telefônico",
+   "src": "made"
+  }
+ ],
+ "w|telefonista": [
+  {
+   "text": "A telefonista da fábrica reconhece a voz de todos os fornecedores.",
+   "en": "The factory's switchboard operator recognizes the voice of every supplier.",
+   "ko": "공장 전화 교환원은 모든 납품업자 목소리를 알아들어요.",
+   "blank": "telefonista",
+   "src": "made"
+  },
+  {
+   "text": "Antes de estudar música, a Beatriz trabalhava como telefonista num hotel.",
+   "en": "Before studying music, Beatriz worked as a telephone operator at a hotel.",
+   "ko": "베아트리스는 음악을 공부하기 전에 호텔 전화 교환원으로 일했어요.",
+   "blank": "telefonista",
    "src": "made"
   }
  ],
