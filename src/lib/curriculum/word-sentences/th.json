@@ -973,6 +973,22 @@
    "blank": "กลับ"
   }
  ],
+ "w|กลับกัน": [
+  {
+   "text": "บ้านธนาเงียบตอนกลางวันแต่กลับกันกับบ้านข้างๆ ที่มีเด็กเล็กสามคน",
+   "en": "Thana's house is quiet during the day, the opposite of the house next door with three small kids.",
+   "ko": "타나네 집은 낮에 조용하지만 어린아이가 셋인 옆집은 정반대예요.",
+   "blank": "กลับกัน",
+   "src": "made"
+  },
+  {
+   "text": "ตลาดเช้าคนแน่นแต่ตลาดบ่ายกลับกันเพราะคนส่วนใหญ่ไปทำงาน",
+   "en": "The morning market is packed, but the afternoon market is the opposite because most people are at work.",
+   "ko": "아침 시장은 붐비지만 오후 시장은 사람들이 일하러 가서 정반대예요.",
+   "blank": "กลับกัน",
+   "src": "made"
+  }
+ ],
  "w|กลัว": [
   {
    "text": "กลัวผี",
@@ -1327,6 +1343,22 @@
    "en": "Please sweep the leaves on the balcony.",
    "ko": "베란다의 낙엽을 쓸어 주세요.",
    "blank": "กวาด"
+  }
+ ],
+ "w|กวี": [
+  {
+   "text": "ลุงข้างบ้านธนาเคยเป็นกวีที่มีผลงานลงนิตยสารหลายเล่ม",
+   "en": "Thana's next-door uncle used to be a poet published in many magazines.",
+   "ko": "타나의 옆집 아저씨는 여러 잡지에 작품이 실린 시인이었어요.",
+   "blank": "กวี",
+   "src": "made"
+  },
+  {
+   "text": "ชายแก่ที่ขายหนังสือเก่าในตลาดเคยเป็นกวีมีชื่อเสียง",
+   "en": "The old man selling secondhand books at the market was once a famous poet.",
+   "ko": "시장에서 헌책을 파는 노인은 예전에 유명한 시인이었어요.",
+   "blank": "กวี",
+   "src": "made"
   }
  ],
  "w|กษัตริย์": [
@@ -2723,6 +2755,22 @@
    "src": "made"
   }
  ],
+ "w|กำ": [
+  {
+   "text": "ลูกสาวของธนากำเหรียญไว้แน่นตอนวิ่งไปซื้อไอศกรีมหน้าบ้าน",
+   "en": "Thana's daughter clutched the coins tightly as she ran to buy ice cream out front.",
+   "ko": "타나의 딸은 집 앞에 아이스크림을 사러 뛰어가며 동전을 꼭 쥐었어요.",
+   "blank": "กำ",
+   "src": "made"
+  },
+  {
+   "text": "เด็กชายกำธนบัตรใบละยี่สิบไว้แน่นตอนยืนรอซื้อขนม",
+   "en": "The little boy clutched a twenty-baht note tightly while waiting to buy a snack.",
+   "ko": "남자아이는 과자를 사려고 기다리며 이십 바트 지폐를 꼭 쥐었어요.",
+   "blank": "กำ",
+   "src": "made"
+  }
+ ],
  "w|กำกับ": [
   {
    "text": "กิตติได้รับมอบหมายให้กำกับงานติดตั้งเครื่องจักรชุดใหม่",
@@ -3082,6 +3130,22 @@
    "en": "Napha heated yesterday's leftover Chinese sausage fried rice in the office microwave.",
    "ko": "나파는 어제 남은 꾼치앙 볶음밥을 사무실 전자레인지에 데웠어요.",
    "blank": "กุนเชียง",
+   "src": "made"
+  }
+ ],
+ "w|กุม": [
+  {
+   "text": "ยายแววกุมมือธนาแล้วขอบคุณที่ช่วยพาไปโรงพยาบาล",
+   "en": "Grandma Waew held Thana's hand and thanked him for taking her to the hospital.",
+   "ko": "왜우 할머니는 병원에 데려다줘서 고맙다며 타나의 손을 꼭 잡았어요.",
+   "blank": "กุม",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของสุดากุมมือลูกสาวเดินฝ่าฝูงชนในวันตรุษจีน",
+   "en": "Suda's mother held her daughter's hand as they made their way through the crowd on Chinese New Year.",
+   "ko": "수다의 어머니는 설날 인파를 헤치며 딸의 손을 꼭 잡고 걸었어요.",
+   "blank": "กุม",
    "src": "made"
   }
  ],
@@ -4221,6 +4285,22 @@
    "blank": "ขนาด"
   }
  ],
+ "w|ขนาน": [
+  {
+   "text": "ซอยบ้านธนาวิ่งขนานไปกับคลองเล็กๆ สายหนึ่ง",
+   "en": "Thana's lane runs parallel to a small canal.",
+   "ko": "타나네 골목은 작은 운하와 나란히 나 있어요.",
+   "blank": "ขนาน",
+   "src": "made"
+  },
+  {
+   "text": "แผงในตลาดตั้งเป็นสองแถวขนานกันยาวไปจนถึงท่าน้ำ",
+   "en": "The stalls are set up in two parallel rows stretching all the way to the pier.",
+   "ko": "시장 가판들은 두 줄로 나란히 늘어서 선착장까지 이어져요.",
+   "blank": "ขนาน",
+   "src": "made"
+  }
+ ],
  "w|ขบวน": [
   {
    "text": "ขบวนรถตู้ที่พาผู้ต้องขังมาถึงศาลตอนแปดโมงเช้า",
@@ -5172,6 +5252,22 @@
    "en": "The map on the phone contradicted the road signs, leaving Somsak totally confused.",
    "ko": "휴대폰 지도와 도로 표지판이 서로 달라서 솜싹은 완전히 헷갈렸어요.",
    "blank": "ขัดแย้ง",
+   "src": "made"
+  }
+ ],
+ "w|ขัน": [
+  {
+   "text": "ไก่ของบ้านข้างๆ ขันเสียงดังจนธนาตื่นก่อนนาฬิกาปลุก",
+   "en": "The neighbor's rooster crows so loudly that Thana wakes before his alarm.",
+   "ko": "옆집 닭이 크게 울어서 타나는 알람보다 먼저 깨요.",
+   "blank": "ขัน",
+   "src": "made"
+  },
+  {
+   "text": "แม่ค้าขายไก่ชนบอกว่าไก่ตัวนี้ขันเพราะที่สุดในตลาด",
+   "en": "The fighting-cock seller says this rooster crows the most beautifully in the market.",
+   "ko": "싸움닭 장수는 이 닭이 시장에서 가장 듣기 좋게 운다고 해요.",
+   "blank": "ขัน",
    "src": "made"
   }
  ],
@@ -6243,6 +6339,22 @@
    "src": "made"
   }
  ],
+ "w|เข้าท่า": [
+  {
+   "text": "ข้อเสนอให้ทุกบ้านจ่ายค่าไฟส่องทางร่วมกันฟังดูเข้าท่า",
+   "en": "The proposal for every house to share the cost of the street lights sounds sensible.",
+   "ko": "모든 집이 가로등 전기료를 함께 내자는 제안은 그럴듯하게 들려요.",
+   "blank": "เข้าท่า",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนบอกสุดาว่าไอเดียขายผลไม้ตัดใส่แก้วฟังดูเข้าท่า",
+   "en": "A friend told Suda that her idea of selling cut fruit in cups sounds like a good one.",
+   "ko": "친구는 과일을 잘라 컵에 담아 파는 수다의 아이디어가 괜찮다고 했어요.",
+   "blank": "เข้าท่า",
+   "src": "made"
+  }
+ ],
  "w|เข้าไป": [
   {
    "text": "ก่อนเดินเข้าไปในโซนผลิต ชัยต้องสวมหมวกนิรภัย",
@@ -6965,6 +7077,22 @@
    "en": "He took his beloved to the sea.",
    "ko": "그는 연인을 바다로 데려갔어.",
    "blank": "คนรัก"
+  }
+ ],
+ "w|คนร้าย": [
+  {
+   "text": "กล้องวงจรปิดของธนาจับภาพคนร้ายที่ขโมยรองเท้าหน้าบ้านได้",
+   "en": "Thana's CCTV camera caught the culprit who stole shoes from in front of the house.",
+   "ko": "타나의 CCTV가 집 앞 신발을 훔친 범인을 찍었어요.",
+   "blank": "คนร้าย",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจจับคนร้ายที่ล้วงกระเป๋าลูกค้าในตลาดได้เมื่อวาน",
+   "en": "Police caught the culprit who picked customers' pockets in the market yesterday.",
+   "ko": "경찰이 어제 시장에서 손님 지갑을 턴 범인을 잡았어요.",
+   "blank": "คนร้าย",
+   "src": "made"
   }
  ],
  "w|คนรู้จัก": [
@@ -10817,6 +10945,22 @@
    "blank": "คุณ"
   }
  ],
+ "w|คุณครู": [
+  {
+   "text": "ภรรยาของธนาเป็นคุณครูสอนภาษาอังกฤษให้เด็กๆ ในซอยฟรี",
+   "en": "Thana's wife is a teacher who gives free English lessons to the kids on the lane.",
+   "ko": "타나의 아내는 골목 아이들에게 무료로 영어를 가르치는 선생님이에요.",
+   "blank": "คุณครู",
+   "src": "made"
+  },
+  {
+   "text": "คุณครูจากโรงเรียนใกล้ตลาดพานักเรียนมาเรียนเรื่องการค้าขาย",
+   "en": "A teacher from the school near the market brought students to learn about trading.",
+   "ko": "시장 근처 학교 선생님이 학생들을 데리고 장사를 배우러 왔어요.",
+   "blank": "คุณครู",
+   "src": "made"
+  }
+ ],
  "w|คุณค่า": [
   {
    "text": "กิตติเห็นคุณค่าของมิตรภาพมากขึ้นหลังจากไม่ได้เจอเพื่อนมานาน",
@@ -10830,6 +10974,22 @@
    "en": "Wanna appreciates the value of traveling alone more every time she goes abroad.",
    "ko": "완나는 해외에 갈 때마다 혼자 하는 여행의 가치를 더 느껴요.",
    "blank": "คุณค่า",
+   "src": "made"
+  }
+ ],
+ "w|คุณตา": [
+  {
+   "text": "คุณตาบ้านติดกันรดน้ำต้นไม้หน้าบ้านทุกเช้าตอนหกโมง",
+   "en": "The grandpa next door waters the plants in front of his house at six every morning.",
+   "ko": "옆집 할아버지는 매일 아침 여섯 시에 집 앞 나무에 물을 줘요.",
+   "blank": "คุณตา",
+   "src": "made"
+  },
+  {
+   "text": "คุณตาคนหนึ่งมาซื้อกล้วยจากสุดาทุกเช้าวันพุธ",
+   "en": "A grandpa comes to buy bananas from Suda every Wednesday morning.",
+   "ko": "한 할아버지가 매주 수요일 아침 수다에게 바나나를 사러 와요.",
+   "blank": "คุณตา",
    "src": "made"
   }
  ],
@@ -10861,6 +11021,22 @@
    "en": "The madam walked slowly into the shop.",
    "ko": "사모님이 천천히 가게로 들어오셨어.",
    "blank": "คุณนาย"
+  }
+ ],
+ "w|คุณป้า": [
+  {
+   "text": "คุณป้าบ้านตรงข้ามชอบเอาแกงมาแบ่งให้ธนาทุกวันอาทิตย์",
+   "en": "The auntie across the street likes to bring Thana some curry every Sunday.",
+   "ko": "맞은편 집 아주머니는 일요일마다 타나에게 카레를 나눠 주는 걸 좋아해요.",
+   "blank": "คุณป้า",
+   "src": "made"
+  },
+  {
+   "text": "คุณป้าแผงข้างๆ ชอบแถมพริกให้ลูกค้าทุกคน",
+   "en": "The auntie at the next stall likes to throw in extra chilies for every customer.",
+   "ko": "옆 가판 아주머니는 손님마다 고추를 덤으로 줘요.",
+   "blank": "คุณป้า",
+   "src": "made"
   }
  ],
  "w|คุณพ่อ": [
@@ -11085,6 +11261,22 @@
    "blank": "คู่รัก"
   }
  ],
+ "w|คู่สมรส": [
+  {
+   "text": "นิติบุคคลขอให้ผู้อยู่อาศัยและคู่สมรสมาลงชื่อในที่ประชุมประจำปี",
+   "en": "The housing management asked residents and their spouses to sign in at the annual meeting.",
+   "ko": "관리 사무소는 거주자와 배우자에게 연례 회의에 서명하러 오라고 했어요.",
+   "blank": "คู่สมรส",
+   "src": "made"
+  },
+  {
+   "text": "ร้านขายเสื้อผ้าในตลาดเป็นของคู่สมรสที่เปิดร้านด้วยกันตั้งแต่แต่งงาน",
+   "en": "The clothing shop in the market belongs to a married couple who opened it together right after their wedding.",
+   "ko": "시장의 옷가게는 결혼하자마자 함께 가게를 연 부부의 것이에요.",
+   "blank": "คู่สมรส",
+   "src": "made"
+  }
+ ],
  "w|คู่สัญญา": [
   {
    "text": "สัญญาโฆษณาฉบับนี้ระบุว่าคู่สัญญาห้ามเปิดเผยตัวเลขกัน",
@@ -11113,6 +11305,22 @@
    "en": "Her fiancé is really lovely.",
    "ko": "그녀의 약혼자는 정말 멋져.",
    "blank": "คู่หมั้น"
+  }
+ ],
+ "w|คู่หู": [
+  {
+   "text": "ธนากับเพื่อนบ้านฝั่งตรงข้ามเป็นคู่หูตีแบดมินตันทุกเย็น",
+   "en": "Thana and the neighbor across the street are badminton partners every evening.",
+   "ko": "타나와 길 건너 이웃은 매일 저녁 배드민턴 짝꿍이에요.",
+   "blank": "คู่หู",
+   "src": "made"
+  },
+  {
+   "text": "สุดากับเพื่อนสนิทเป็นคู่หูขายส้มตำที่ตลาดเช้ามาสิบปีแล้ว",
+   "en": "Suda and her close friend have been partners selling papaya salad at the morning market for ten years.",
+   "ko": "수다와 친한 친구는 아침 시장에서 십 년째 쏨땀을 함께 파는 짝꿍이에요.",
+   "blank": "คู่หู",
+   "src": "made"
   }
  ],
  "w|เค้ก": [
@@ -11735,6 +11943,22 @@
    "en": "Who's home?",
    "ko": "집에 누구 있어?",
    "blank": "ใคร"
+  }
+ ],
+ "w|ใคร่": [
+  {
+   "text": "ผู้ใหญ่บ้านใคร่ขอความร่วมมือทุกบ้านช่วยกันเก็บขยะในวันอาทิตย์นี้",
+   "en": "The village head would like to ask every household to help collect trash this Sunday.",
+   "ko": "마을 이장은 이번 일요일에 모든 집이 함께 쓰레기를 줍도록 협조를 부탁드리고 싶어 해요.",
+   "blank": "ใคร่",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายหน้าตลาดเขียนว่าใคร่ขอให้ลูกค้านำถุงผ้ามาเอง",
+   "en": "The sign at the market entrance says customers are kindly asked to bring their own cloth bags.",
+   "ko": "시장 입구 표지판에는 장바구니를 가져와 달라는 부탁이 적혀 있어요.",
+   "blank": "ใคร่",
+   "src": "made"
   }
  ],
  "w|ใครๆ": [
@@ -14003,6 +14227,22 @@
    "blank": "เจ้าชาย"
   }
  ],
+ "w|เจ้าตัว": [
+  {
+   "text": "เพื่อนบ้านลือกันว่าเจ้าของบ้านจะขายที่ แต่เจ้าตัวบอกว่าไม่จริง",
+   "en": "Neighbors rumored the homeowner would sell the land, but he himself said it wasn't true.",
+   "ko": "이웃들은 집주인이 땅을 판다고 수군댔지만 본인은 사실이 아니라고 했어요.",
+   "blank": "เจ้าตัว",
+   "src": "made"
+  },
+  {
+   "text": "ทุกคนชมขนมของสุดา แต่เจ้าตัวบอกว่าเป็นสูตรของแม่",
+   "en": "Everyone praises Suda's sweets, but she herself says it's her mother's recipe.",
+   "ko": "모두 수다의 과자를 칭찬하지만 본인은 어머니 요리법이라고 해요.",
+   "blank": "เจ้าตัว",
+   "src": "made"
+  }
+ ],
  "w|เจ้านาย": [
   {
    "text": "เจ้านายเรียกหา",
@@ -14879,6 +15119,22 @@
    "blank": "ชมรม"
   }
  ],
+ "w|ชรา": [
+  {
+   "text": "ชายชราข้างบ้านเรียกธนาว่าสหายทุกครั้งที่ทักกัน",
+   "en": "The old man next door calls Thana comrade every time they greet each other.",
+   "ko": "옆집 노인은 인사할 때마다 타나를 동지라고 불러요.",
+   "blank": "ชรา",
+   "src": "made"
+  },
+  {
+   "text": "หญิงชราคนหนึ่งขายดอกมะลิร้อยมือหน้าตลาดทุกเช้า",
+   "en": "An old woman sells hand-strung jasmine garlands in front of the market every morning.",
+   "ko": "한 할머니가 매일 아침 시장 앞에서 손으로 꿴 재스민 꽃목걸이를 팔아요.",
+   "blank": "ชรา",
+   "src": "made"
+  }
+ ],
  "w|ช่วง": [
   {
    "text": "ช่วงนี้เหนื่อยมาก",
@@ -15146,6 +15402,22 @@
    "en": "Chan says a farmer's fate depends on the weather.",
    "ko": "짠은 농부의 운명은 날씨에 달려 있다고 말해요.",
    "blank": "ชะตา",
+   "src": "made"
+  }
+ ],
+ "w|ชะลอ": [
+  {
+   "text": "ธนาขอให้รถส่งของชะลอความเร็วเพราะเด็กๆ ชอบวิ่งเล่นในซอย",
+   "en": "Thana asked delivery vans to slow down because kids like to run around in the lane.",
+   "ko": "타나는 아이들이 골목에서 뛰어논다며 배달 차량에 속도를 줄여 달라고 했어요.",
+   "blank": "ชะลอ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาขอให้คนขับรถกระบะชะลอตอนถอยเข้าซอยแคบของตลาด",
+   "en": "Suda asked the pickup driver to slow down when reversing into the market's narrow alley.",
+   "ko": "수다는 픽업 운전사에게 시장 좁은 골목으로 후진할 때 속도를 줄여 달라고 했어요.",
+   "blank": "ชะลอ",
    "src": "made"
   }
  ],
@@ -19713,6 +19985,22 @@
    "src": "made"
   }
  ],
+ "w|ตระกูล": [
+  {
+   "text": "บ้านหลังใหญ่ท้ายซอยเป็นของตระกูลเก่าแก่ที่อยู่มาตั้งแต่สมัยปู่ทวด",
+   "en": "The big house at the end of the lane belongs to an old family that has lived there since great-grandfather's time.",
+   "ko": "골목 끝 큰 집은 증조할아버지 때부터 살아온 오래된 집안의 집이에요.",
+   "blank": "ตระกูล",
+   "src": "made"
+  },
+  {
+   "text": "ร้านทองในตลาดเป็นของตระกูลจีนที่ค้าขายมาสามรุ่น",
+   "en": "The gold shop in the market belongs to a Chinese family that has traded for three generations.",
+   "ko": "시장의 금은방은 삼대째 장사해 온 중국계 집안의 가게예요.",
+   "blank": "ตระกูล",
+   "src": "made"
+  }
+ ],
  "w|ตระหนัก": [
   {
    "text": "ประยุทธเพิ่งตระหนักว่างานแต่งงานต้องใช้เงินมากแค่ไหน",
@@ -22293,6 +22581,22 @@
    "blank": "ไต"
   }
  ],
+ "w|ไต่สวน": [
+  {
+   "text": "ตำรวจมาไต่สวนเพื่อนบ้านทีละคนหลังมีรถหายในซอย",
+   "en": "Police came to question the neighbors one by one after a car went missing on the lane.",
+   "ko": "골목에서 차가 없어진 뒤 경찰이 이웃들을 한 명씩 조사했어요.",
+   "blank": "ไต่สวน",
+   "src": "made"
+  },
+  {
+   "text": "เทศบาลไต่สวนเรื่องแม่ค้าถูกเก็บค่าแผงแพงเกินกว่าที่ประกาศ",
+   "en": "The municipality is investigating vendors being charged stall fees higher than announced.",
+   "ko": "시는 상인들이 공고보다 비싼 자릿세를 낸 일을 조사하고 있어요.",
+   "blank": "ไต่สวน",
+   "src": "made"
+  }
+ ],
  "w|ถนน": [
   {
    "text": "ถนนนี้รถติดมาก",
@@ -22919,6 +23223,22 @@
    "en": "I checked — every item is correct.",
    "ko": "확인해 보니 전부 맞아.",
    "blank": "ถูกต้อง"
+  }
+ ],
+ "w|ถูกเผง": [
+  {
+   "text": "ยายแววทายถูกเผงว่าคนที่ย้ายมาใหม่เป็นหมอ",
+   "en": "Grandma Waew guessed exactly right that the newcomer was a doctor.",
+   "ko": "왜우 할머니는 새로 이사 온 사람이 의사라는 걸 정확히 맞혔어요.",
+   "blank": "ถูกเผง",
+   "src": "made"
+  },
+  {
+   "text": "สุดากะน้ำหนักมะนาวด้วยมือแล้วถูกเผงพอดีหนึ่งกิโล",
+   "en": "Suda guessed the weight of the limes by hand and was spot on at exactly one kilo.",
+   "ko": "수다가 손으로 라임 무게를 어림했는데 딱 일 킬로로 정확했어요.",
+   "blank": "ถูกเผง",
+   "src": "made"
   }
  ],
  "w|เถอะ": [
@@ -30633,6 +30953,22 @@
    "blank": "แบ่งปัน"
   }
  ],
+ "w|แบ่งแยก": [
+  {
+   "text": "กำแพงเตี้ยๆ แบ่งแยกสวนของสองบ้านออกจากกัน",
+   "en": "A low wall divides the two houses' gardens from each other.",
+   "ko": "낮은 담이 두 집의 정원을 갈라놓고 있어요.",
+   "blank": "แบ่งแยก",
+   "src": "made"
+  },
+  {
+   "text": "ตลาดแบ่งแยกโซนอาหารสดกับโซนเสื้อผ้าไว้คนละฝั่ง",
+   "en": "The market separates the fresh food zone and the clothing zone on opposite sides.",
+   "ko": "시장은 신선 식품 구역과 옷 구역을 양쪽으로 나눠 놨어요.",
+   "blank": "แบ่งแยก",
+   "src": "made"
+  }
+ ],
  "w|แบตเตอรี่": [
   {
    "text": "แบตเตอรี่โทรศัพท์ใกล้หมด",
@@ -32064,6 +32400,22 @@
    "en": "Pranee bought a new air conditioner that saves power and is more efficient.",
    "ko": "쁘라니는 전기를 아끼고 효율이 더 좋은 새 에어컨을 샀어요.",
    "blank": "ประสิทธิภาพ",
+   "src": "made"
+  }
+ ],
+ "w|ประเสริฐ": [
+  {
+   "text": "ธนาว่าการมีเพื่อนบ้านใจดีเป็นสิ่งประเสริฐที่สุดอย่างหนึ่งในชีวิต",
+   "en": "Thana says having kind neighbors is one of the finest things in life.",
+   "ko": "타나는 친절한 이웃이 있다는 게 인생에서 가장 귀한 일 중 하나라고 해요.",
+   "blank": "ประเสริฐ",
+   "src": "made"
+  },
+  {
+   "text": "คุณตาบอกสุดาว่าความซื่อสัตย์ของแม่ค้าเป็นสิ่งประเสริฐกว่าเงินทอง",
+   "en": "The grandpa told Suda that a vendor's honesty is worth more than money.",
+   "ko": "할아버지는 수다에게 상인의 정직이 돈보다 귀하다고 말했어요.",
+   "blank": "ประเสริฐ",
    "src": "made"
   }
  ],
@@ -34515,6 +34867,22 @@
    "blank": "ผับ"
   }
  ],
+ "w|ผัว": [
+  {
+   "text": "ป้าข้างบ้านบ่นว่าผัวชอบเปิดทีวีเสียงดังจนดึก",
+   "en": "The auntie next door complains that her husband plays the TV loud until late.",
+   "ko": "옆집 아주머니는 남편이 밤늦게까지 TV를 크게 튼다고 투덜대요.",
+   "blank": "ผัว",
+   "src": "made"
+  },
+  {
+   "text": "แม่ค้าข้างแผงสุดาบ่นว่าผัวไม่ยอมตื่นมาช่วยขนของ",
+   "en": "The vendor next to Suda complains that her husband won't get up to help carry stock.",
+   "ko": "수다 옆 가판 상인은 남편이 짐 나르는 걸 도우러 일어나지 않는다고 투덜대요.",
+   "blank": "ผัว",
+   "src": "made"
+  }
+ ],
  "w|ผ้า": [
   {
    "text": "ผ้าผืนนี้เนียนนุ่ม",
@@ -35641,6 +36009,22 @@
    "src": "made"
   }
  ],
+ "w|เผ่า": [
+  {
+   "text": "เพื่อนบ้านคนใหม่ของธนามาจากเผ่าม้งบนดอยทางเหนือ",
+   "en": "Thana's new neighbor is from a Hmong tribe in the northern mountains.",
+   "ko": "타나의 새 이웃은 북부 산악 지대 몽족 출신이에요.",
+   "blank": "เผ่า",
+   "src": "made"
+  },
+  {
+   "text": "ผ้าทอที่แผงนี้ทำโดยผู้หญิงเผ่ากะเหรี่ยงจากแม่ฮ่องสอน",
+   "en": "The woven cloth at this stall is made by Karen tribe women from Mae Hong Son.",
+   "ko": "이 가판의 직물은 매홍손의 까렌족 여성들이 짠 거예요.",
+   "blank": "เผ่า",
+   "src": "made"
+  }
+ ],
  "w|เผื่อ": [
   {
    "text": "พกร่มเผื่อฝนตก",
@@ -36615,6 +36999,22 @@
    "en": "The sunset behind the mountain is beautiful.",
    "ko": "산 너머 석양이 정말 아름다워.",
    "blank": "พระอาทิตย์ตก"
+  }
+ ],
+ "w|พระเอก": [
+  {
+   "text": "ลูกชายบ้านข้างๆ ได้เล่นเป็นพระเอกละครโรงเรียน ทั้งซอยเลยไปดู",
+   "en": "The boy next door got the lead role in the school play, so the whole lane went to watch.",
+   "ko": "옆집 아들이 학교 연극 주인공을 맡아서 골목 사람들이 다 보러 갔어요.",
+   "blank": "พระเอก",
+   "src": "made"
+  },
+  {
+   "text": "พระเอกละครหลังข่าวแวะมาซื้อมะม่วงที่แผงของสุดา",
+   "en": "The leading man of the prime-time drama stopped by Suda's stall to buy mangoes.",
+   "ko": "저녁 드라마 남자 주인공이 수다의 가판에 들러 망고를 샀어요.",
+   "blank": "พระเอก",
+   "src": "made"
   }
  ],
  "w|พริก": [
@@ -38229,6 +38629,22 @@
    "src": "made"
   }
  ],
+ "w|เพื่อนรัก": [
+  {
+   "text": "ธนากับเพื่อนรักสมัยเด็กบังเอิญได้ซื้อบ้านซอยเดียวกัน",
+   "en": "Thana and his childhood best friend happened to buy houses on the same lane.",
+   "ko": "타나와 어릴 적 단짝은 우연히 같은 골목에 집을 샀어요.",
+   "blank": "เพื่อนรัก",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนรักของสุดาช่วยเฝ้าแผงให้ตอนสุดาไปโรงพยาบาล",
+   "en": "Suda's best friend watched the stall for her while she went to the hospital.",
+   "ko": "수다가 병원에 간 동안 단짝 친구가 가판을 봐 줬어요.",
+   "blank": "เพื่อนรัก",
+   "src": "made"
+  }
+ ],
  "w|เพื่อนสนิท": [
   {
    "text": "เพื่อนสนิทรู้ใจฉันดีที่สุด",
@@ -38913,6 +39329,22 @@
    "en": "My wife's exhausted.",
    "ko": "아내가 너무 피곤해.",
    "blank": "ภรรยา"
+  }
+ ],
+ "w|ภริยา": [
+  {
+   "text": "หนังสือเชิญงานบวชเขียนชื่อผู้ใหญ่บ้านและภริยาไว้ด้านบน",
+   "en": "The ordination invitation lists the village head and his wife at the top.",
+   "ko": "출가식 초대장 맨 위에 마을 이장과 부인의 이름이 적혀 있어요.",
+   "blank": "ภริยา",
+   "src": "made"
+  },
+  {
+   "text": "นายอำเภอและภริยามาเปิดตลาดนัดสินค้าชุมชนเมื่อเช้า",
+   "en": "The district chief and his wife opened the community products fair this morning.",
+   "ko": "군수와 부인이 오늘 아침 지역 상품 장터를 개장했어요.",
+   "blank": "ภริยา",
+   "src": "made"
   }
  ],
  "w|ภัย": [
@@ -40529,6 +40961,22 @@
    "src": "made"
   }
  ],
+ "w|มิตร": [
+  {
+   "text": "ธนาเชื่อว่าเพื่อนบ้านที่ดีก็เหมือนมิตรที่อยู่ใกล้ที่สุด",
+   "en": "Thana believes a good neighbor is like the closest friend you have.",
+   "ko": "타나는 좋은 이웃이 가장 가까이 있는 벗과 같다고 믿어요.",
+   "blank": "มิตร",
+   "src": "made"
+  },
+  {
+   "text": "แม่ค้าในตลาดนี้ถือว่าลูกค้าประจำเป็นมิตรมากกว่าคนซื้อ",
+   "en": "The vendors in this market treat regular customers as friends rather than buyers.",
+   "ko": "이 시장 상인들은 단골을 손님이라기보다 벗으로 여겨요.",
+   "blank": "มิตร",
+   "src": "made"
+  }
+ ],
  "w|มิติ": [
   {
    "text": "ในคาบคณิตศาสตร์ ธนาเพิ่งเรียนเรื่องรูปทรงสามมิติ",
@@ -42122,6 +42570,22 @@
    "en": "Napha hopes her friendships with her new coworkers will last.",
    "ko": "나파는 새 동료들과의 우정이 오래가기를 바라요.",
    "blank": "ยั่งยืน",
+   "src": "made"
+  }
+ ],
+ "w|ยัน": [
+  {
+   "text": "ธนาเอาไม้มายันรั้วของเพื่อนบ้านที่เอียงเพราะลมพายุ",
+   "en": "Thana propped up his neighbor's fence, which had tilted in the storm, with a piece of wood.",
+   "ko": "타나는 폭풍에 기운 이웃 울타리를 나무로 받쳐 줬어요.",
+   "blank": "ยัน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาใช้อิฐยันล้อรถเข็นไว้ไม่ให้ไหลลงทางลาด",
+   "en": "Suda wedged a brick against the cart's wheel to stop it rolling down the ramp.",
+   "ko": "수다는 벽돌로 수레 바퀴를 받쳐 경사로에서 굴러가지 않게 했어요.",
+   "blank": "ยัน",
    "src": "made"
   }
  ],
@@ -45171,6 +45635,22 @@
    "blank": "รุ่งเช้า"
   }
  ],
+ "w|รุ่งเรือง": [
+  {
+   "text": "ตอนตระกูลนั้นรุ่งเรือง บ้านท้ายซอยมีงานเลี้ยงทุกเดือน",
+   "en": "When that family was prospering, the house at the end of the lane held a party every month.",
+   "ko": "그 집안이 번성하던 시절엔 골목 끝 집에서 매달 잔치가 열렸어요.",
+   "blank": "รุ่งเรือง",
+   "src": "made"
+  },
+  {
+   "text": "ตลาดนี้เคยรุ่งเรืองมากตอนที่ยังมีเรือมาส่งของทางคลอง",
+   "en": "This market was very prosperous back when boats still delivered goods by canal.",
+   "ko": "이 시장은 운하로 배가 물건을 실어 오던 시절에 아주 번성했어요.",
+   "blank": "รุ่งเรือง",
+   "src": "made"
+  }
+ ],
  "w|รุ่น": [
   {
    "text": "ธนาบังเอิญเจอรุ่นพี่ที่เคยเรียนด้วยกันในห้องสมุด",
@@ -47565,6 +48045,22 @@
    "src": "made"
   }
  ],
+ "w|ลูกพี่": [
+  {
+   "text": "ช่างซ่อมรถหัวซอยเรียกเจ้าของอู่ว่าลูกพี่",
+   "en": "The mechanic at the head of the lane calls the garage owner boss.",
+   "ko": "골목 어귀 정비공은 정비소 주인을 형님이라고 불러요.",
+   "blank": "ลูกพี่",
+   "src": "made"
+  },
+  {
+   "text": "เด็กยกของในตลาดเรียกเถ้าแก่ร้านขายส่งว่าลูกพี่",
+   "en": "The porter boys at the market call the wholesale shop owner boss.",
+   "ko": "시장 짐꾼 아이들은 도매상 사장을 형님이라고 불러요.",
+   "blank": "ลูกพี่",
+   "src": "made"
+  }
+ ],
  "w|ลูกพี่ลูกน้อง": [
   {
    "text": "ลูกพี่ลูกน้องมาเล่นที่บ้าน",
@@ -47684,6 +48180,22 @@
    "en": "The puppy is sleeping next to its mother.",
    "ko": "강아지가 어미 옆에서 자고 있어.",
    "blank": "ลูกหมา",
+   "src": "made"
+  }
+ ],
+ "w|ลูกหลาน": [
+  {
+   "text": "ลูกหลานของยายแววกลับมาเยี่ยมบ้านพร้อมกันช่วงสงกรานต์",
+   "en": "Grandma Waew's children and grandchildren all came home together for Songkran.",
+   "ko": "왜우 할머니의 자손들이 송끄란에 다 같이 집에 왔어요.",
+   "blank": "ลูกหลาน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาหวังว่าลูกหลานจะรับช่วงแผงผักต่อเมื่อตัวเองแก่ตัวลง",
+   "en": "Suda hopes her descendants will take over the vegetable stall when she gets old.",
+   "ko": "수다는 자기가 늙으면 자손들이 채소 가판을 이어받기를 바라요.",
+   "blank": "ลูกหลาน",
    "src": "made"
   }
  ],
@@ -48011,6 +48523,22 @@
    "en": "We keep a dog at home.",
    "ko": "집에서 개를 키워.",
    "blank": "เลี้ยง"
+  }
+ ],
+ "w|เลี้ยงดู": [
+  {
+   "text": "สองตายายข้างบ้านเลี้ยงดูหลานแทนพ่อแม่ที่ทำงานในกรุงเทพฯ",
+   "en": "The old couple next door raise their grandchild for the parents who work in Bangkok.",
+   "ko": "옆집 노부부는 방콕에서 일하는 부모 대신 손주를 키워요.",
+   "blank": "เลี้ยงดู",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเลี้ยงดูลูกสองคนด้วยรายได้จากแผงผักเพียงแผงเดียว",
+   "en": "Suda raises her two children on the income from just one vegetable stall.",
+   "ko": "수다는 채소 가판 하나로 번 돈으로 두 아이를 키워요.",
+   "blank": "เลี้ยงดู",
+   "src": "made"
   }
  ],
  "w|เลี้ยงสัตว์": [
@@ -50401,6 +50929,22 @@
    "blank": "สกปรก"
   }
  ],
+ "w|สกุล": [
+  {
+   "text": "พัสดุถูกส่งผิดบ้านเพราะธนากับเพื่อนบ้านใช้นามสกุลเดียวกัน",
+   "en": "A parcel went to the wrong house because Thana and his neighbor share the same surname.",
+   "ko": "타나와 이웃의 성이 같아서 택배가 엉뚱한 집으로 갔어요.",
+   "blank": "สกุล",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าถามสุดาว่าแม่ค้าแผงหมูเป็นญาติกันเพราะใช้สกุลเดียวกัน",
+   "en": "A customer asked Suda if the pork seller was her relative since they share a family name.",
+   "ko": "손님이 수다에게 돼지고기 가게 주인과 성이 같으니 친척이냐고 물었어요.",
+   "blank": "สกุล",
+   "src": "made"
+  }
+ ],
  "w|ส่ง": [
   {
    "text": "ส่งมาให้หน่อย",
@@ -52143,6 +52687,22 @@
    "en": "Union members gather peacefully.",
    "ko": "조합원들이 평화롭게 모여.",
    "blank": "สหภาพ"
+  }
+ ],
+ "w|สหาย": [
+  {
+   "text": "ชายชราข้างบ้านเรียกธนาว่าสหายทุกครั้งที่ทักกัน",
+   "en": "The old man next door calls Thana comrade every time they greet each other.",
+   "ko": "옆집 노인은 인사할 때마다 타나를 동지라고 불러요.",
+   "blank": "สหาย",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเจอสหายเก่าสมัยเรียนมหาวิทยาลัยที่แผงผลไม้",
+   "en": "Suda ran into an old comrade from university at the fruit stall.",
+   "ko": "수다는 과일 가판에서 대학 시절 옛 동지를 만났어요.",
+   "blank": "สหาย",
+   "src": "made"
   }
  ],
  "w|สอง": [
@@ -54133,6 +54693,22 @@
    "src": "made"
   }
  ],
+ "w|สูงอายุ": [
+  {
+   "text": "ธนาช่วยเพื่อนบ้านที่สูงอายุถือถุงผักขึ้นบันได",
+   "en": "Thana helped an elderly neighbor carry her vegetable bags up the stairs.",
+   "ko": "타나는 나이 든 이웃의 채소 봉지를 계단 위까지 들어 줬어요.",
+   "blank": "สูงอายุ",
+   "src": "made"
+  },
+  {
+   "text": "ตลาดจัดที่นั่งพักไว้ให้ลูกค้าสูงอายุตรงทางเข้า",
+   "en": "The market set up a rest bench at the entrance for elderly customers.",
+   "ko": "시장은 입구에 나이 든 손님을 위한 쉼터 의자를 놓았어요.",
+   "blank": "สูงอายุ",
+   "src": "made"
+  }
+ ],
  "w|สูญเสีย": [
   {
    "text": "บริษัทสูญเสียลูกค้าจำนวนมาก",
@@ -55739,6 +56315,22 @@
    "src": "made"
   }
  ],
+ "w|หมั้น": [
+  {
+   "text": "ลูกสาวบ้านหัวมุมเพิ่งหมั้นกับแฟนที่คบกันมาเจ็ดปี",
+   "en": "The daughter of the corner house just got engaged to the boyfriend she's dated for seven years.",
+   "ko": "모퉁이 집 딸이 칠 년 사귄 남자 친구와 막 약혼했어요.",
+   "blank": "หมั้น",
+   "src": "made"
+  },
+  {
+   "text": "ลูกชายแม่ค้าปลาเพิ่งหมั้นกับลูกสาวคนขายผลไม้ฝั่งตรงข้าม",
+   "en": "The fish seller's son just got engaged to the daughter of the fruit seller across the aisle.",
+   "ko": "생선 장수의 아들이 맞은편 과일 장수의 딸과 막 약혼했어요.",
+   "blank": "หมั้น",
+   "src": "made"
+  }
+ ],
  "w|หมา": [
   {
    "text": "หมาตัวนี้ดุไหม",
@@ -56279,6 +56871,22 @@
    "en": "Don't run away from problems.",
    "ko": "문제에서 도망치지 마.",
    "blank": "หลบหนี"
+  }
+ ],
+ "w|หลวงพ่อ": [
+  {
+   "text": "หลวงพ่อวัดใกล้บ้านเดินบิณฑบาตผ่านหน้าบ้านธนาทุกเช้า",
+   "en": "The abbot of the nearby temple walks past Thana's house on his alms round every morning.",
+   "ko": "근처 절 주지 스님이 매일 아침 탁발하며 타나네 집 앞을 지나가요.",
+   "blank": "หลวงพ่อ",
+   "src": "made"
+  },
+  {
+   "text": "แม่ค้าหลายคนแขวนรูปหลวงพ่อไว้ที่แผงเพื่อความเป็นสิริมงคล",
+   "en": "Many vendors hang a picture of a revered monk at their stalls for good luck.",
+   "ko": "많은 상인이 복을 빌며 가판에 큰스님 사진을 걸어 둬요.",
+   "blank": "หลวงพ่อ",
+   "src": "made"
   }
  ],
  "w|หลวม": [
@@ -60391,6 +60999,22 @@
    "blank": "อาศัย"
   }
  ],
+ "w|อาสา": [
+  {
+   "text": "ธนาอาสาไปรับลูกเพื่อนบ้านที่โรงเรียนในวันที่ฝนตกหนัก",
+   "en": "Thana volunteered to pick up the neighbor's child from school on a day of heavy rain.",
+   "ko": "타나는 비가 많이 오는 날 이웃집 아이를 학교에서 데려오겠다고 나섰어요.",
+   "blank": "อาสา",
+   "src": "made"
+  },
+  {
+   "text": "สุดาอาสาเก็บเงินค่าไฟส่วนกลางจากทุกแผงในตลาด",
+   "en": "Suda volunteered to collect the shared electricity fee from every stall in the market.",
+   "ko": "수다는 시장 모든 가판에서 공동 전기료를 걷겠다고 나섰어요.",
+   "blank": "อาสา",
+   "src": "made"
+  }
+ ],
  "w|อาสาสมัคร": [
   {
    "text": "อาสาสมัครช่วยแจกอาหารเช้า",
@@ -61302,6 +61926,22 @@
    "en": "This year Fon is serious about planting a vegetable garden before the rains come.",
    "ko": "올해 폰은 우기 전에 텃밭 가꾸기를 제대로 해 보려 해요.",
    "blank": "เอาจริง",
+   "src": "made"
+  }
+ ],
+ "w|เอาใจใส่": [
+  {
+   "text": "ธนาเอาใจใส่หมาของเพื่อนบ้านตอนที่เจ้าของไปต่างจังหวัด",
+   "en": "Thana looked after the neighbor's dog carefully while its owner was out of town.",
+   "ko": "타나는 이웃이 지방에 간 동안 그 집 개를 정성껏 돌봤어요.",
+   "blank": "เอาใจใส่",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเอาใจใส่คัดผักทุกกำก่อนวางขายเพื่อไม่ให้มีใบเหลือง",
+   "en": "Suda carefully sorts every bunch of greens before selling so there are no yellow leaves.",
+   "ko": "수다는 누런 잎이 없도록 팔기 전에 채소 단마다 정성껏 골라요.",
+   "blank": "เอาใจใส่",
    "src": "made"
   }
  ],

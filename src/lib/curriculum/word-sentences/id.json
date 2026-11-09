@@ -1699,6 +1699,22 @@
    "src": "made"
   }
  ],
+ "w|aspek": [
+  {
+   "text": "Bagi Budi, kebersihan kandang adalah aspek yang paling penting di klinik.",
+   "en": "For Budi, cage cleanliness is the most important aspect of the clinic.",
+   "ko": "부디에게는 우리 청결이 병원에서 가장 중요한 부분이에요.",
+   "blank": "aspek",
+   "src": "made"
+  },
+  {
+   "text": "Siti memikirkan setiap aspek sebelum membuka penginapan kecil di desanya.",
+   "en": "Siti thought through every aspect before opening a small guesthouse in her village.",
+   "ko": "시티는 마을에 작은 민박을 열기 전에 모든 면을 꼼꼼히 따져 봤어요.",
+   "blank": "aspek",
+   "src": "made"
+  }
+ ],
  "w|asrama": [
   {
    "text": "Mahasiswa baru tinggal di asrama kampus.",
@@ -2437,6 +2453,22 @@
    "en": "He has an extraordinary talent for drawing.",
    "ko": "그는 그림에 대한 뛰어난 재능이 있어.",
    "blank": "bakat"
+  }
+ ],
+ "w|bakteri": [
+  {
+   "text": "Luka yang tidak dibersihkan bisa terinfeksi bakteri, kata Budi.",
+   "en": "A wound that isn't cleaned can get infected by bacteria, Budi said.",
+   "ko": "닦지 않은 상처는 세균에 감염될 수 있다고 부디가 말했어요.",
+   "blank": "bakteri",
+   "src": "made"
+  },
+  {
+   "text": "Siti selalu merebus air sungai dulu supaya bakteri di dalamnya mati.",
+   "en": "Siti always boils river water first so the bacteria in it die.",
+   "ko": "시티는 강물 속 세균이 죽도록 늘 먼저 끓여요.",
+   "blank": "bakteri",
+   "src": "made"
   }
  ],
  "w|baku": [
@@ -3227,6 +3259,22 @@
    "src": "made"
   }
  ],
+ "w|bayang": [
+  {
+   "text": "Budi melihat bayang seekor kucing melintas di balik tirai ruang periksa.",
+   "en": "Budi saw the shadow of a cat passing behind the exam room curtain.",
+   "ko": "부디는 진료실 커튼 뒤로 고양이 그림자가 지나가는 걸 봤어요.",
+   "blank": "bayang",
+   "src": "made"
+  },
+  {
+   "text": "Siti memandangi bayang gunung yang terpantul di permukaan danau.",
+   "en": "Siti gazed at the mountain's reflection on the surface of the lake.",
+   "ko": "시티는 호수 위에 비친 산 그림자를 바라봤어요.",
+   "blank": "bayang",
+   "src": "made"
+  }
+ ],
  "w|bayangan": [
   {
    "text": "Bayangan pohon memanjang di sore hari.",
@@ -3956,6 +4004,22 @@
    "en": "Lestari's friend who used to act in theater is now the race's emcee.",
    "ko": "예전에 연극을 했던 레스타리의 친구는 지금 대회 사회자예요.",
    "blank": "berakting",
+   "src": "made"
+  }
+ ],
+ "w|beralasan": [
+  {
+   "text": "Pemilik anjing itu beralasan tidak sempat datang karena macet.",
+   "en": "The dog's owner gave traffic as the reason for not making it.",
+   "ko": "그 개 주인은 차가 막혀서 못 왔다고 핑계를 댔어요.",
+   "blank": "beralasan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menolak pindah ke kota, beralasan udara gunung lebih sehat untuk anaknya.",
+   "en": "Siti refused to move to the city, reasoning that the mountain air is healthier for her child.",
+   "ko": "시티는 산 공기가 아이에게 더 좋다며 도시로 이사하기를 거절했어요.",
+   "blank": "beralasan",
    "src": "made"
   }
  ],
@@ -8813,6 +8877,22 @@
    "blank": "bisnis"
   }
  ],
+ "w|bisu": [
+  {
+   "text": "Burung beo milik Pak Hasan mendadak bisu sejak pindah kandang.",
+   "en": "Mr. Hasan's parrot suddenly went silent after moving to a new cage.",
+   "ko": "하산 씨의 앵무새는 새장을 옮긴 뒤 갑자기 말을 안 해요.",
+   "blank": "bisu",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengajari anak tetangga yang bisu bahasa isyarat sederhana.",
+   "en": "Siti teaches the neighbor's mute child simple sign language.",
+   "ko": "시티는 말을 못 하는 이웃 아이에게 간단한 수어를 가르쳐요.",
+   "blank": "bisu",
+   "src": "made"
+  }
+ ],
  "w|bius": [
   {
    "text": "Kucing liar itu harus diberi bius sebelum lukanya dijahit.",
@@ -10553,6 +10633,38 @@
    "en": "This beef is tender.",
    "ko": "이 소고기는 부드러워.",
    "blank": "Daging"
+  }
+ ],
+ "w|dagu": [
+  {
+   "text": "Kucing oranye itu paling suka digaruk di bawah dagu.",
+   "en": "That orange cat loves being scratched under the chin.",
+   "ko": "그 주황색 고양이는 턱 밑을 긁어 주는 걸 제일 좋아해요.",
+   "blank": "dagu",
+   "src": "made"
+  },
+  {
+   "text": "Siti menopang dagu sambil menatap puncak gunung dari jendela.",
+   "en": "Siti rested her chin on her hand while gazing at the mountain peak from the window.",
+   "ko": "시티는 턱을 괴고 창밖으로 산꼭대기를 바라봤어요.",
+   "blank": "dagu",
+   "src": "made"
+  }
+ ],
+ "w|dahi": [
+  {
+   "text": "Budi mengusap dahi yang berkeringat setelah menenangkan anjing besar yang panik.",
+   "en": "Budi wiped his sweaty forehead after calming a big panicking dog.",
+   "ko": "부디는 겁에 질린 큰 개를 진정시킨 뒤 땀 난 이마를 닦았어요.",
+   "blank": "dahi",
+   "src": "made"
+  },
+  {
+   "text": "Siti menempelkan tangan ke dahi anaknya untuk memeriksa demam.",
+   "en": "Siti put her hand on her child's forehead to check for a fever.",
+   "ko": "시티는 열이 있는지 보려고 아이 이마에 손을 댔어요.",
+   "blank": "dahi",
+   "src": "made"
   }
  ],
  "w|dahulu": [
@@ -15263,6 +15375,22 @@
    "blank": "hormat"
   }
  ],
+ "w|hormon": [
+  {
+   "text": "Menurut Budi, perubahan hormon membuat kucing betina gelisah saat musim kawin.",
+   "en": "According to Budi, hormonal changes make female cats restless during mating season.",
+   "ko": "부디에 따르면 호르몬 변화 때문에 암고양이는 발정기에 안절부절못해요.",
+   "blank": "hormon",
+   "src": "made"
+  },
+  {
+   "text": "Dokter puskesmas bilang suasana hati Siti yang naik turun mungkin karena hormon selama hamil.",
+   "en": "The health center doctor said Siti's mood swings might be due to hormones during pregnancy.",
+   "ko": "보건소 의사는 시티의 기분 변화가 임신 중 호르몬 때문일 수 있다고 했어요.",
+   "blank": "hormon",
+   "src": "made"
+  }
+ ],
  "w|horor": [
   {
    "text": "Bayu menulis ulasan film horor lokal yang laris di bioskop.",
@@ -15798,6 +15926,22 @@
    "en": "Rina wrote that every individual has the right to know where their tax money goes.",
    "ko": "리나는 모든 개인이 세금이 어디에 쓰이는지 알 권리가 있다고 썼어요.",
    "blank": "individu",
+   "src": "made"
+  }
+ ],
+ "w|indra": [
+  {
+   "text": "Menurut Budi, indra penciuman anjing jauh lebih tajam daripada manusia.",
+   "en": "According to Budi, a dog's sense of smell is far sharper than a human's.",
+   "ko": "부디에 따르면 개의 후각은 사람보다 훨씬 예민해요.",
+   "blank": "indra",
+   "src": "made"
+  },
+  {
+   "text": "Udara gunung yang bersih membuat indra penciuman Siti lebih peka.",
+   "en": "The clean mountain air makes Siti's sense of smell sharper.",
+   "ko": "깨끗한 산 공기 덕분에 시티의 후각이 더 예민해요.",
+   "blank": "indra",
    "src": "made"
   }
  ],
@@ -16501,6 +16645,22 @@
    "blank": "Jahat"
   }
  ],
+ "w|jahitan": [
+  {
+   "text": "Budi memeriksa jahitan di perut kucing setelah operasi steril.",
+   "en": "Budi checked the stitches on the cat's belly after the spay surgery.",
+   "ko": "부디는 중성화 수술 뒤 고양이 배의 꿰맨 자리를 살펴봤어요.",
+   "blank": "jahitan",
+   "src": "made"
+  },
+  {
+   "text": "Siti merapikan jahitan selimut wol yang sobek di bagian ujung.",
+   "en": "Siti mended the stitching of the wool blanket that had torn at the edge.",
+   "ko": "시티는 끝이 찢어진 양모 담요의 바느질을 다시 했어요.",
+   "blank": "jahitan",
+   "src": "made"
+  }
+ ],
  "w|jaket": [
   {
    "text": "Jaket tebal itu menjaga tubuhnya tetap hangat.",
@@ -16993,6 +17153,22 @@
    "en": "We walked on the old wooden bridge.",
    "ko": "우리는 낡은 나무 다리 위를 걸었어.",
    "blank": "jembatan"
+  }
+ ],
+ "w|jempol": [
+  {
+   "text": "Budi mengacungkan jempol kepada pemilik kucing yang datang tepat waktu.",
+   "en": "Budi gave a thumbs-up to the cat owner who arrived on time.",
+   "ko": "부디는 제시간에 온 고양이 주인에게 엄지를 들어 보였어요.",
+   "blank": "jempol",
+   "src": "made"
+  },
+  {
+   "text": "Siti meringis karena jempol kakinya terantuk batu di jalan setapak.",
+   "en": "Siti winced because she stubbed her big toe on a rock on the path.",
+   "ko": "시티는 오솔길에서 엄지발가락을 돌에 찧어서 얼굴을 찡그렸어요.",
+   "blank": "jempol",
+   "src": "made"
   }
  ],
  "w|jenazah": [
@@ -18235,6 +18411,22 @@
    "src": "made"
   }
  ],
+ "w|kandungan": [
+  {
+   "text": "Budi selalu membaca kandungan makanan kucing sebelum merekomendasikannya.",
+   "en": "Budi always reads the contents of cat food before recommending it.",
+   "ko": "부디는 고양이 사료를 추천하기 전에 늘 성분을 읽어요.",
+   "blank": "kandungan",
+   "src": "made"
+  },
+  {
+   "text": "Saat kandungan Siti berumur tujuh bulan, keluarga mengadakan selamatan kecil.",
+   "en": "When Siti was seven months pregnant, the family held a small thanksgiving gathering.",
+   "ko": "시티가 임신 일곱 달이 됐을 때 가족이 작은 감사 잔치를 열었어요.",
+   "blank": "kandungan",
+   "src": "made"
+  }
+ ],
  "w|kangen": [
   {
    "text": "Di akhir surat, Budi menulis bahwa ia kangen main bola bersama Andi.",
@@ -18401,6 +18593,22 @@
    "src": "made"
   }
  ],
+ "w|kapsul": [
+  {
+   "text": "Budi menyembunyikan kapsul obat di dalam sepotong sosis supaya anjingnya mau menelan.",
+   "en": "Budi hid the medicine capsule inside a piece of sausage so the dog would swallow it.",
+   "ko": "부디는 개가 삼키도록 약 캡슐을 소시지 조각 안에 숨겼어요.",
+   "blank": "kapsul",
+   "src": "made"
+  },
+  {
+   "text": "Puskesmas desa memberi Siti kapsul vitamin untuk anak-anaknya.",
+   "en": "The village health center gave Siti vitamin capsules for her children.",
+   "ko": "마을 보건소는 시티에게 아이들 먹일 비타민 캡슐을 줬어요.",
+   "blank": "kapsul",
+   "src": "made"
+  }
+ ],
  "w|kapten": [
   {
    "text": "Kapten sudah siap.",
@@ -18442,6 +18650,22 @@
    "en": "Wati ordered a collection of essays by her favorite writer from an online bookstore.",
    "ko": "와티는 온라인 서점에서 좋아하는 작가의 수필집을 주문했어요.",
    "blank": "karangan",
+   "src": "made"
+  }
+ ],
+ "w|karantina": [
+  {
+   "text": "Kucing yang baru datang dari penampungan harus masuk karantina selama dua minggu.",
+   "en": "Cats newly arrived from the shelter must go into quarantine for two weeks.",
+   "ko": "보호소에서 막 온 고양이는 두 주 동안 격리에 들어가야 해요.",
+   "blank": "karantina",
+   "src": "made"
+  },
+  {
+   "text": "Sapi baru yang dibeli Pak Lurah harus menjalani karantina sebelum digabung dengan sapi lain.",
+   "en": "The new cow the village head bought has to go through quarantine before joining the other cows.",
+   "ko": "이장님이 산 새 소는 다른 소들과 합치기 전에 격리를 거쳐야 해요.",
+   "blank": "karantina",
    "src": "made"
   }
  ],
@@ -19111,6 +19335,22 @@
    "en": "Residents fear another fire will break out.",
    "ko": "주민들은 또 불이 날까 봐 두려워해.",
    "blank": "kebakaran"
+  }
+ ],
+ "w|kebal": [
+  {
+   "text": "Budi menjelaskan bahwa anak kucing yang sudah divaksin lebih kebal terhadap virus.",
+   "en": "Budi explained that kittens that have been vaccinated are more immune to viruses.",
+   "ko": "부디는 백신을 맞은 새끼 고양이가 바이러스에 더 강하다고 설명했어요.",
+   "blank": "kebal",
+   "src": "made"
+  },
+  {
+   "text": "Warga desa bercanda bahwa Siti sudah kebal terhadap udara dingin pegunungan.",
+   "en": "The villagers joke that Siti is already immune to the cold mountain air.",
+   "ko": "마을 사람들은 시티가 이제 산의 찬 공기에 끄떡없다고 농담해요.",
+   "blank": "kebal",
+   "src": "made"
   }
  ],
  "w|kebanggaan": [
@@ -20307,6 +20547,22 @@
    "blank": "kekayaan"
   }
  ],
+ "w|kekebalan": [
+  {
+   "text": "Vaksin rutin membantu menjaga kekebalan tubuh anak anjing.",
+   "en": "Regular vaccines help maintain a puppy's immunity.",
+   "ko": "정기 백신은 강아지의 면역력을 지키는 데 도움이 돼요.",
+   "blank": "kekebalan",
+   "src": "made"
+  },
+  {
+   "text": "Siti percaya jahe dan madu bisa menambah kekebalan tubuh di musim hujan.",
+   "en": "Siti believes ginger and honey can boost immunity in the rainy season.",
+   "ko": "시티는 생강과 꿀이 우기에 면역력을 높여 준다고 믿어요.",
+   "blank": "kekebalan",
+   "src": "made"
+  }
+ ],
  "w|kekejaman": [
   {
    "text": "Agus membaca buku sejarah tentang kekejaman penjajahan di masa lalu.",
@@ -21330,6 +21586,22 @@
    "en": "Putri's little sister talked about the monkey she saw at the zoo.",
    "ko": "푸트리의 동생은 동물원에서 본 원숭이 이야기를 했어요.",
    "blank": "kera",
+   "src": "made"
+  }
+ ],
+ "w|keracunan": [
+  {
+   "text": "Anjing Bu Sari dibawa ke klinik karena keracunan cokelat.",
+   "en": "Mrs. Sari's dog was brought to the clinic because of chocolate poisoning.",
+   "ko": "사리 씨의 개는 초콜릿 중독으로 병원에 실려 왔어요.",
+   "blank": "keracunan",
+   "src": "made"
+  },
+  {
+   "text": "Beberapa warga keracunan jamur liar, jadi Siti melarang anaknya memetik jamur sembarangan.",
+   "en": "Several villagers were poisoned by wild mushrooms, so Siti forbade her child from picking mushrooms carelessly.",
+   "ko": "주민 몇 명이 야생 버섯에 중독돼서 시티는 아이에게 아무 버섯이나 따지 말라고 했어요.",
+   "blank": "keracunan",
    "src": "made"
   }
  ],
@@ -26637,6 +26909,22 @@
    "src": "made"
   }
  ],
+ "w|maksimum": [
+  {
+   "text": "Ruang rawat inap klinik itu punya kapasitas maksimum sepuluh ekor.",
+   "en": "The clinic's inpatient ward has a maximum capacity of ten animals.",
+   "ko": "그 병원 입원실은 최대 열 마리까지 받을 수 있어요.",
+   "blank": "maksimum",
+   "src": "made"
+  },
+  {
+   "text": "Jembatan gantung di desa itu punya beban maksimum lima orang sekaligus.",
+   "en": "The village's suspension bridge has a maximum load of five people at once.",
+   "ko": "그 마을 출렁다리는 한 번에 최대 다섯 명까지 건널 수 있어요.",
+   "blank": "maksimum",
+   "src": "made"
+  }
+ ],
  "w|maksud": [
   {
    "text": "Apa maksud kamu?",
@@ -26663,6 +26951,22 @@
    "en": "I asked for help and got scolded instead.",
    "ko": "도와달라고 했더니 오히려 혼났어.",
    "blank": "malah"
+  }
+ ],
+ "w|malahan": [
+  {
+   "text": "Kucing itu tidak takut disuntik, malahan mendengkur di meja periksa.",
+   "en": "The cat wasn't afraid of the injection; in fact, it purred on the exam table.",
+   "ko": "그 고양이는 주사를 무서워하기는커녕 진료대 위에서 골골거렸어요.",
+   "blank": "malahan",
+   "src": "made"
+  },
+  {
+   "text": "Hujan tidak membuat Siti berhenti memetik teh, malahan Siti bekerja lebih cepat.",
+   "en": "The rain didn't stop Siti picking tea; if anything, she worked faster.",
+   "ko": "비가 와도 시티는 찻잎 따기를 멈추지 않았고, 오히려 더 빨리 일했어요.",
+   "blank": "malahan",
+   "src": "made"
   }
  ],
  "w|malaikat": [
@@ -31469,6 +31773,22 @@
    "src": "made"
   }
  ],
+ "w|mempublikasikan": [
+  {
+   "text": "Klinik itu mempublikasikan jadwal vaksin gratis di media sosialnya.",
+   "en": "The clinic published the free vaccination schedule on its social media.",
+   "ko": "그 병원은 무료 예방접종 일정을 소셜 미디어에 올렸어요.",
+   "blank": "mempublikasikan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang fotografer mempublikasikan foto kebun sayur Siti di majalah perjalanan.",
+   "en": "A photographer published a photo of Siti's vegetable garden in a travel magazine.",
+   "ko": "한 사진작가가 시티의 채소밭 사진을 여행 잡지에 실었어요.",
+   "blank": "mempublikasikan",
+   "src": "made"
+  }
+ ],
  "w|mempunyai": [
   {
    "text": "Dia mempunyai dua anak.",
@@ -33079,6 +33399,22 @@
    "src": "made"
   }
  ],
+ "w|mendinginkan": [
+  {
+   "text": "Budi membasahi handuk untuk mendinginkan tubuh anjing yang kepanasan.",
+   "en": "Budi wet a towel to cool down the overheated dog's body.",
+   "ko": "부디는 더위 먹은 개의 몸을 식히려고 수건을 적셨어요.",
+   "blank": "mendinginkan",
+   "src": "made"
+  },
+  {
+   "text": "Angin sore yang sejuk cepat mendinginkan roti yang baru dipanggang Siti.",
+   "en": "The cool evening breeze quickly cooled the bread Siti had just baked.",
+   "ko": "시원한 저녁 바람이 시티가 막 구운 빵을 금세 식혔어요.",
+   "blank": "mendinginkan",
+   "src": "made"
+  }
+ ],
  "w|mendirikan": [
   {
    "text": "Para siswa sepakat mendirikan klub robotik di sekolah.",
@@ -34618,6 +34954,22 @@
    "en": "That afternoon, Ayu tried composing a song on her father's guitar.",
    "ko": "그날 오후 아유는 아버지 기타로 노래를 지어 보았어요.",
    "blank": "mengarang",
+   "src": "made"
+  }
+ ],
+ "w|mengartikan": [
+  {
+   "text": "Budi belajar mengartikan gerakan ekor kucing yang sedang kesal.",
+   "en": "Budi is learning to interpret the tail movements of an annoyed cat.",
+   "ko": "부디는 짜증 난 고양이의 꼬리 움직임을 해석하는 법을 배우고 있어요.",
+   "blank": "mengartikan",
+   "src": "made"
+  },
+  {
+   "text": "Siti masih kesulitan mengartikan bahasa daerah yang dipakai kakek dari kampung sebelah.",
+   "en": "Siti still struggles to understand the local language used by the old man from the next village.",
+   "ko": "시티는 이웃 마을 할아버지가 쓰는 사투리를 아직도 알아듣기 힘들어요.",
+   "blank": "mengartikan",
    "src": "made"
   }
  ],
@@ -36303,6 +36655,22 @@
    "blank": "Menghukum"
   }
  ],
+ "w|mengidap": [
+  {
+   "text": "Anjing tua milik Pak Joko ternyata mengidap penyakit ginjal.",
+   "en": "Mr. Joko's old dog turned out to have kidney disease.",
+   "ko": "조코 씨의 늙은 개는 알고 보니 신장병을 앓고 있었어요.",
+   "blank": "mengidap",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Siti mengidap asma, jadi kabut pagi sering membuatnya sesak.",
+   "en": "Siti's grandmother has asthma, so the morning fog often makes her short of breath.",
+   "ko": "시티의 할머니는 천식이 있어서 아침 안개에 자주 숨이 차요.",
+   "blank": "mengidap",
+   "src": "made"
+  }
+ ],
  "w|mengidentifikasi": [
   {
    "text": "Para ahli masih berusaha mengidentifikasi asal patung batu tanpa kepala itu.",
@@ -37729,6 +38097,22 @@
    "en": "We're carrying out that plan.",
    "ko": "우리는 그 계획을 실행해.",
    "blank": "menjalankan"
+  }
+ ],
+ "w|menjalin": [
+  {
+   "text": "Budi berusaha menjalin hubungan baik dengan para pemilik hewan di sekitar klinik.",
+   "en": "Budi tries to build good relationships with pet owners around the clinic.",
+   "ko": "부디는 병원 근처 반려동물 주인들과 좋은 관계를 맺으려고 애써요.",
+   "blank": "menjalin",
+   "src": "made"
+  },
+  {
+   "text": "Siti menjalin persahabatan dengan para pendaki yang sering mampir ke warungnya.",
+   "en": "Siti has built friendships with the hikers who often stop by her stall.",
+   "ko": "시티는 가게에 자주 들르는 등산객들과 우정을 쌓았어요.",
+   "blank": "menjalin",
+   "src": "made"
   }
  ],
  "w|menjamin": [
@@ -39483,6 +39867,22 @@
    "src": "made"
   }
  ],
+ "w|menyergap": [
+  {
+   "text": "Rasa kantuk menyergap Budi setelah jaga malam di klinik.",
+   "en": "Drowsiness overcame Budi after the night shift at the clinic.",
+   "ko": "병원에서 밤샘 근무를 한 뒤 부디에게 졸음이 덮쳐 왔어요.",
+   "blank": "menyergap",
+   "src": "made"
+  },
+  {
+   "text": "Hawa dingin langsung menyergap Siti begitu pintu rumah dibuka.",
+   "en": "The cold air hit Siti as soon as the front door was opened.",
+   "ko": "문을 열자마자 찬 공기가 시티를 덮쳤어요.",
+   "blank": "menyergap",
+   "src": "made"
+  }
+ ],
  "w|menyertai": [
   {
    "text": "Kabut tipis selalu menyertai pagi di lembah tempat Agus tinggal.",
@@ -39811,6 +40211,22 @@
    "en": "She likes old movies.",
    "ko": "걔는 옛날 영화를 좋아해.",
    "blank": "menyukai"
+  }
+ ],
+ "w|menyulitkan": [
+  {
+   "text": "Bulu kucing yang terlalu tebal menyulitkan Budi menemukan kutu.",
+   "en": "The cat's very thick fur made it hard for Budi to find the fleas.",
+   "ko": "너무 두꺼운 고양이 털 때문에 부디는 벼룩을 찾기 힘들었어요.",
+   "blank": "menyulitkan",
+   "src": "made"
+  },
+  {
+   "text": "Jalan berlumpur menyulitkan Siti membawa sayur ke pasar.",
+   "en": "The muddy road made it hard for Siti to carry vegetables to the market.",
+   "ko": "진흙길 때문에 시티는 채소를 시장에 가져가기가 힘들었어요.",
+   "blank": "menyulitkan",
+   "src": "made"
   }
  ],
  "w|menyumbangkan": [
@@ -40211,6 +40627,22 @@
    "blank": "merayakan"
   }
  ],
+ "w|merayap": [
+  {
+   "text": "Seekor cicak merayap di dinding ruang tunggu klinik.",
+   "en": "A gecko crept along the wall of the clinic's waiting room.",
+   "ko": "도마뱀 한 마리가 병원 대기실 벽을 기어갔어요.",
+   "blank": "merayap",
+   "src": "made"
+  },
+  {
+   "text": "Kabut pagi pelan-pelan merayap turun dari puncak menuju rumah Siti.",
+   "en": "The morning fog slowly crept down from the peak toward Siti's house.",
+   "ko": "아침 안개가 산꼭대기에서 시티네 집 쪽으로 천천히 기어 내려왔어요.",
+   "blank": "merayap",
+   "src": "made"
+  }
+ ],
  "w|merayu": [
   {
    "text": "Penjual mesin itu terus merayu Bayu supaya membeli model paling mahal.",
@@ -40519,6 +40951,22 @@
    "en": "She misses her family.",
    "ko": "그녀는 가족이 보고 싶어.",
    "blank": "merindukan"
+  }
+ ],
+ "w|meringankan": [
+  {
+   "text": "Kompres hangat bisa meringankan nyeri sendi pada anjing tua.",
+   "en": "A warm compress can ease joint pain in old dogs.",
+   "ko": "따뜻한 찜질은 늙은 개의 관절 통증을 덜어 줄 수 있어요.",
+   "blank": "meringankan",
+   "src": "made"
+  },
+  {
+   "text": "Kerja bakti warga sangat meringankan beban Siti setelah atap rumahnya bocor.",
+   "en": "The villagers' communal work greatly eased Siti's burden after her roof leaked.",
+   "ko": "주민들의 공동 작업 덕분에 지붕이 샌 뒤 시티의 짐이 크게 덜어졌어요.",
+   "blank": "meringankan",
+   "src": "made"
   }
  ],
  "w|merobek": [
@@ -41487,6 +41935,22 @@
    "blank": "mulia"
   }
  ],
+ "w|mulus": [
+  {
+   "text": "Operasi pengangkatan tumor kecil pada anjing itu berjalan mulus.",
+   "en": "The operation to remove a small tumor from the dog went smoothly.",
+   "ko": "그 개의 작은 종양 제거 수술은 순조롭게 끝났어요.",
+   "blank": "mulus",
+   "src": "made"
+  },
+  {
+   "text": "Jalan menuju desa Siti sekarang sudah mulus setelah diaspal.",
+   "en": "The road to Siti's village is now smooth after being paved.",
+   "ko": "시티네 마을로 가는 길은 포장된 뒤로 이제 매끈해요.",
+   "blank": "mulus",
+   "src": "made"
+  }
+ ],
  "w|mulut": [
   {
    "text": "Tutup mulut sebentar.",
@@ -42043,6 +42507,22 @@
    "en": "The police seized a large amount of drugs.",
    "ko": "경찰이 대량의 마약을 압수했어.",
    "blank": "narkoba"
+  }
+ ],
+ "w|narkotika": [
+  {
+   "text": "Beberapa obat bius di klinik termasuk golongan narkotika dan disimpan di lemari terkunci.",
+   "en": "Some anesthetics at the clinic are classed as narcotics and kept in a locked cabinet.",
+   "ko": "병원의 일부 마취제는 마약류로 분류돼 잠긴 장에 보관돼요.",
+   "blank": "narkotika",
+   "src": "made"
+  },
+  {
+   "text": "Siti membaca berita bahwa polisi menemukan ladang tanaman narkotika di hutan dekat perbatasan.",
+   "en": "Siti read a news story that police had found a field of narcotic plants in a forest near the border.",
+   "ko": "시티는 경찰이 국경 근처 숲에서 마약 식물 밭을 찾아냈다는 기사를 읽었어요.",
+   "blank": "narkotika",
+   "src": "made"
   }
  ],
  "w|nasi": [
@@ -46367,6 +46847,22 @@
    "src": "made"
   }
  ],
+ "w|pendengaran": [
+  {
+   "text": "Kucing putih bermata biru kadang punya masalah pendengaran sejak lahir.",
+   "en": "White cats with blue eyes sometimes have hearing problems from birth.",
+   "ko": "파란 눈의 흰 고양이는 가끔 태어날 때부터 청각 문제가 있어요.",
+   "blank": "pendengaran",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Siti sudah kurang pendengaran, jadi Siti harus bicara keras.",
+   "en": "Siti's grandfather is hard of hearing, so Siti has to speak loudly.",
+   "ko": "시티의 할아버지는 귀가 어두워서 시티가 크게 말해야 해요.",
+   "blank": "pendengaran",
+   "src": "made"
+  }
+ ],
  "w|penderitaan": [
   {
    "text": "Dia menceritakan penderitaan masa kecil.",
@@ -48782,6 +49278,22 @@
    "en": "After the drainage repairs, the meat section is no longer muddy.",
    "ko": "배수로를 고친 뒤로 정육 구역이 더 이상 질척거리지 않아요.",
    "blank": "perbaikan",
+   "src": "made"
+  }
+ ],
+ "w|perban": [
+  {
+   "text": "Budi mengganti perban di kaki anjing itu dua kali sehari.",
+   "en": "Budi changes the bandage on that dog's leg twice a day.",
+   "ko": "부디는 그 개 다리의 붕대를 하루에 두 번 갈아요.",
+   "blank": "perban",
+   "src": "made"
+  },
+  {
+   "text": "Siti selalu membawa perban di tasnya saat naik ke kebun teh.",
+   "en": "Siti always carries a bandage in her bag when she climbs up to the tea garden.",
+   "ko": "시티는 차밭에 올라갈 때 늘 가방에 붕대를 넣고 다녀요.",
+   "blank": "perban",
    "src": "made"
   }
  ],
@@ -52013,6 +52525,22 @@
    "src": "made"
   }
  ],
+ "w|psikologis": [
+  {
+   "text": "Budi bilang anjing yang sering ditinggal sendirian bisa mengalami tekanan psikologis.",
+   "en": "Budi said dogs that are often left alone can suffer psychological stress.",
+   "ko": "부디는 자주 혼자 남겨지는 개가 심리적 스트레스를 받을 수 있다고 했어요.",
+   "blank": "psikologis",
+   "src": "made"
+  },
+  {
+   "text": "Longsor tahun lalu meninggalkan trauma psikologis bagi banyak warga desa.",
+   "en": "Last year's landslide left psychological trauma for many villagers.",
+   "ko": "작년 산사태는 많은 마을 주민에게 심리적 트라우마를 남겼어요.",
+   "blank": "psikologis",
+   "src": "made"
+  }
+ ],
  "w|psikopat": [
   {
    "text": "Rina suka menonton serial tentang detektif yang mengejar psikopat.",
@@ -52537,6 +53065,22 @@
    "en": "Keep this secret, okay?",
    "ko": "이 비밀 지켜 줘.",
    "blank": "rahasia"
+  }
+ ],
+ "w|rahim": [
+  {
+   "text": "Dokter hewan menemukan kista kecil di rahim kucing betina milik Bu Rina.",
+   "en": "The vet found a small cyst in the uterus of Mrs. Rina's female cat.",
+   "ko": "수의사는 리나 씨의 암고양이 자궁에서 작은 낭종을 발견했어요.",
+   "blank": "rahim",
+   "src": "made"
+  },
+  {
+   "text": "Bidan desa menjelaskan kepada Siti cara menjaga kesehatan rahim setelah melahirkan.",
+   "en": "The village midwife explained to Siti how to keep the uterus healthy after giving birth.",
+   "ko": "마을 조산사는 시티에게 출산 뒤 자궁 건강을 지키는 법을 설명했어요.",
+   "blank": "rahim",
+   "src": "made"
   }
  ],
  "w|rahmat": [
@@ -56521,6 +57065,22 @@
    "blank": "Semalaman"
   }
  ],
+ "w|semampu": [
+  {
+   "text": "Kami akan merawat anjing ini semampu kami, kata Budi kepada pemiliknya.",
+   "en": "We'll care for this dog as best we can, Budi told the owner.",
+   "ko": "저희가 할 수 있는 만큼 이 개를 돌볼게요, 하고 부디가 주인에게 말했어요.",
+   "blank": "semampu",
+   "src": "made"
+  },
+  {
+   "text": "Kepala desa meminta warga menyumbang semampu mereka, dan Siti memberi sekarung beras.",
+   "en": "The village head asked residents to donate what they could, and Siti gave a sack of rice.",
+   "ko": "이장님이 주민들에게 형편껏 기부해 달라고 하자 시티는 쌀 한 자루를 냈어요.",
+   "blank": "semampu",
+   "src": "made"
+  }
+ ],
  "w|semangat": [
   {
    "text": "Jaga semangatmu sampai akhir.",
@@ -58969,6 +59529,22 @@
    "src": "made"
   }
  ],
+ "w|sperma": [
+  {
+   "text": "Seorang peternak membawa sampel sperma sapi ke klinik untuk diperiksa kualitasnya.",
+   "en": "A farmer brought a sample of bull sperm to the clinic to have its quality checked.",
+   "ko": "한 목장 주인이 품질 검사를 받으려고 소 정액 샘플을 병원에 가져왔어요.",
+   "blank": "sperma",
+   "src": "made"
+  },
+  {
+   "text": "Anak Siti bertanya tentang sel sperma setelah pelajaran biologi di sekolah.",
+   "en": "Siti's child asked about sperm cells after biology class at school.",
+   "ko": "시티의 아이는 학교 생물 시간이 끝나고 정자 세포에 대해 물었어요.",
+   "blank": "sperma",
+   "src": "made"
+  }
+ ],
  "w|spesial": [
   {
    "text": "Hari ini ada menu spesial di restoran.",
@@ -60897,6 +61473,22 @@
    "blank": "telanjang"
   }
  ],
+ "w|telapak": [
+  {
+   "text": "Ada duri kecil yang menancap di telapak kaki anjing itu.",
+   "en": "There was a small thorn stuck in the sole of that dog's paw.",
+   "ko": "그 개의 발바닥에 작은 가시가 박혀 있었어요.",
+   "blank": "telapak",
+   "src": "made"
+  },
+  {
+   "text": "Siti menghangatkan telapak tangan di dekat tungku kayu.",
+   "en": "Siti warmed her palms near the wood stove.",
+   "ko": "시티는 나무 화덕 옆에서 손바닥을 녹였어요.",
+   "blank": "telapak",
+   "src": "made"
+  }
+ ],
  "w|telat": [
   {
    "text": "Dia datang telat ke rapat pagi.",
@@ -61375,6 +61967,22 @@
    "en": "She undergoes speech therapy every week.",
    "ko": "그는 매주 언어 치료를 받아.",
    "blank": "terapi"
+  }
+ ],
+ "w|terapis": [
+  {
+   "text": "Klinik itu bekerja sama dengan seorang terapis hewan untuk anjing yang baru selesai operasi tulang.",
+   "en": "The clinic works with an animal therapist for dogs that have just had bone surgery.",
+   "ko": "그 병원은 뼈 수술을 막 마친 개들을 위해 동물 치료사와 함께 일해요.",
+   "blank": "terapis",
+   "src": "made"
+  },
+  {
+   "text": "Seorang terapis datang ke desa setiap bulan untuk membantu warga yang sakit punggung.",
+   "en": "A therapist comes to the village every month to help residents with back pain.",
+   "ko": "치료사 한 명이 매달 마을에 와서 허리 아픈 주민들을 도와요.",
+   "blank": "terapis",
+   "src": "made"
   }
  ],
  "w|terasa": [
@@ -63449,6 +64057,22 @@
    "blank": "tertutup"
   }
  ],
+ "w|terulang": [
+  {
+   "text": "Budi tidak ingin kejadian kucing kabur dari kandang terulang lagi.",
+   "en": "Budi doesn't want the incident of a cat escaping from its cage to happen again.",
+   "ko": "부디는 고양이가 우리에서 탈출하는 일이 다시 일어나지 않기를 바라요.",
+   "blank": "terulang",
+   "src": "made"
+  },
+  {
+   "text": "Warga desa menanam pohon di lereng supaya longsor tidak terulang.",
+   "en": "The villagers planted trees on the slope so the landslide wouldn't happen again.",
+   "ko": "주민들은 산사태가 되풀이되지 않도록 비탈에 나무를 심었어요.",
+   "blank": "terulang",
+   "src": "made"
+  }
+ ],
  "w|terungkap": [
   {
    "text": "Akhirnya terungkap bahwa pencuri paket itu adalah kurir palsu.",
@@ -64787,6 +65411,22 @@
    "en": "He took part in that event.",
    "ko": "그는 그 행사에 함께 참석했어.",
    "blank": "turut"
+  }
+ ],
+ "w|tusukan": [
+  {
+   "text": "Anjing itu bahkan tidak merasakan tusukan jarum suntik dari Budi.",
+   "en": "The dog didn't even feel the prick of Budi's needle.",
+   "ko": "그 개는 부디가 놓은 주삿바늘에 찔린 것도 느끼지 못했어요.",
+   "blank": "tusukan",
+   "src": "made"
+  },
+  {
+   "text": "Bekas tusukan duri di jari Siti masih terasa perih.",
+   "en": "The spot where a thorn pricked Siti's finger still stings.",
+   "ko": "가시에 찔린 시티의 손가락 자리가 아직도 따끔해요.",
+   "blank": "tusukan",
+   "src": "made"
   }
  ],
  "w|uang": [
