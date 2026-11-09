@@ -5377,6 +5377,22 @@
    "blank": "シャツ"
   }
  ],
+ "w|しゃべる": [
+  {
+   "text": "取材相手がよくしゃべる人だったので、悠斗は助かった。",
+   "en": "The person Yuto interviewed was very talkative, which made it easy for him.",
+   "ko": "취재 상대가 말이 많은 사람이라 유토는 일이 수월했어요.",
+   "blank": "しゃべる",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、牛の世話をしながら牛に向かってよくしゃべる。",
+   "en": "Chihiro often talks to the cows while taking care of them.",
+   "ko": "지히로는 소를 돌보면서 소에게 자주 말을 걸어요.",
+   "blank": "しゃべる",
+   "src": "made"
+  }
+ ],
  "w|シャワー": [
   {
    "text": "悠斗が出品した中には、ほとんど使っていないシャワーの部品もあった。",
@@ -14885,6 +14901,22 @@
    "src": "made"
   }
  ],
+ "w|上着": [
+  {
+   "text": "悠斗は、急いで上着をつかんで事件の現場へ走った。",
+   "en": "Yuto quickly grabbed his jacket and ran to the scene of the incident.",
+   "ko": "유토는 서둘러 겉옷을 집어 들고 사건 현장으로 달려갔어요.",
+   "blank": "上着",
+   "src": "made"
+  },
+  {
+   "text": "朝の畑は寒いので、千尋は厚い上着を着て出かける。",
+   "en": "The field is cold in the morning, so Chihiro goes out in a thick jacket.",
+   "ko": "아침 밭은 추워서 지히로는 두꺼운 겉옷을 입고 나가요.",
+   "blank": "上着",
+   "src": "made"
+  }
+ ],
  "w|上空": [
   {
    "text": "キャンプ場の上空を、一機のヘリコプターがゆっくり横切っていった。",
@@ -15084,6 +15116,22 @@
    "en": "Sakura's building is two stops from the station on the outbound train.",
    "ko": "사쿠라의 맨션은 역에서 하행 전철로 두 번째 역에 있어요.",
    "blank": "下り",
+   "src": "made"
+  }
+ ],
+ "w|下位": [
+  {
+   "text": "悠斗が応援するチームは、今年もリーグの下位に沈んでいる。",
+   "en": "The team Yuto supports is stuck near the bottom of the league again this year.",
+   "ko": "유토가 응원하는 팀은 올해도 리그 하위권에 머물러 있어요.",
+   "blank": "下位",
+   "src": "made"
+  },
+  {
+   "text": "千尋のメロンは品評会で下位に終わったが、来年こそと燃えている。",
+   "en": "Chihiro's melon finished near the bottom at the fair, but she's fired up for next year.",
+   "ko": "지히로의 멜론은 품평회에서 하위에 그쳤지만 내년에는 꼭 하겠다고 불타고 있어요.",
+   "blank": "下位",
    "src": "made"
   }
  ],
@@ -17464,6 +17512,22 @@
    "en": "It is said that a scholar who had fled into exile once lived in the cabin deep in the forest.",
    "ko": "숲속 오두막에는 예전에 망명해 온 학자가 살았다고 해요.",
    "blank": "亡命",
+   "src": "made"
+  }
+ ],
+ "w|交える": [
+  {
+   "text": "悠斗は、専門家の意見を交えて記事をまとめた。",
+   "en": "Yuto put together the article, mixing in experts' opinions.",
+   "ko": "유토는 전문가 의견을 섞어서 기사를 정리했어요.",
+   "blank": "交えて",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ベテランの農家と意見を交えながら新しい作物を選んだ。",
+   "en": "Chihiro chose new crops while exchanging views with veteran farmers.",
+   "ko": "지히로는 베테랑 농부와 의견을 나누며 새 작물을 골랐어요.",
+   "blank": "交え",
    "src": "made"
   }
  ],
@@ -20539,6 +20603,22 @@
    "src": "made"
   }
  ],
+ "w|便所": [
+  {
+   "text": "昔ながらの公衆便所が新しくなったと、悠斗は地域面に書いた。",
+   "en": "Yuto wrote in the local section that an old-fashioned public toilet had been renovated.",
+   "ko": "옛날식 공중 화장실이 새로워졌다고 유토는 지역면에 썼어요.",
+   "blank": "便所",
+   "src": "made"
+  },
+  {
+   "text": "千尋の農園の便所は、外にある古い小屋だ。",
+   "en": "The toilet at Chihiro's farm is in an old shed outside.",
+   "ko": "지히로 농원의 화장실은 밖에 있는 낡은 오두막이에요.",
+   "blank": "便所",
+   "src": "made"
+  }
+ ],
  "w|便秘": [
   {
    "text": "待合室には、便秘に効くお茶の広告が貼ってあった。",
@@ -21699,6 +21779,22 @@
    "src": "made"
   }
  ],
+ "w|傲慢": [
+  {
+   "text": "悠斗は、取材先の社長の傲慢な態度に腹を立てた。",
+   "en": "Yuto was annoyed by the arrogant attitude of the company president he interviewed.",
+   "ko": "유토는 취재처 사장의 오만한 태도에 화가 났어요.",
+   "blank": "傲慢",
+   "src": "made"
+  },
+  {
+   "text": "自然を思い通りにできると思うのは傲慢だ、と千尋の祖父は言った。",
+   "en": "Chihiro's grandfather said that thinking you can control nature is arrogant.",
+   "ko": "자연을 마음대로 할 수 있다고 생각하는 건 오만하다고 지히로의 할아버지가 말했어요.",
+   "blank": "傲慢",
+   "src": "made"
+  }
+ ],
  "w|債務": [
   {
    "text": "市の債務が増え続けていることを、翔太は数字をもとに報じた。",
@@ -22513,6 +22609,22 @@
    "blank": "党"
   }
  ],
+ "w|党首": [
+  {
+   "text": "悠斗は、選挙の前に各党の党首の演説を聞いて回った。",
+   "en": "Before the election, Yuto went around listening to the speeches of each party leader.",
+   "ko": "유토는 선거 전에 각 당 대표의 연설을 들으러 다녔어요.",
+   "blank": "党首",
+   "src": "made"
+  },
+  {
+   "text": "農業政策を訴える政党の党首が、千尋の農園を視察に来た。",
+   "en": "The leader of a party campaigning on farm policy came to inspect Chihiro's farm.",
+   "ko": "농업 정책을 내세우는 정당의 대표가 지히로의 농원을 시찰하러 왔어요.",
+   "blank": "党首",
+   "src": "made"
+  }
+ ],
  "w|入り口": [
   {
    "text": "誠は、搭乗口の入り口で係員に搭乗券を見せた。",
@@ -22788,6 +22900,22 @@
    "en": "Her grandmother was hospitalized, so Yumi ordered pajamas online and had them sent to the hospital.",
    "ko": "할머니가 입원해서 유미는 잠옷을 인터넷으로 주문해 병원으로 보냈어요.",
    "blank": "入院",
+   "src": "made"
+  }
+ ],
+ "w|入隊": [
+  {
+   "text": "悠斗は、自衛隊に入隊したばかりの若者たちを取材した。",
+   "en": "Yuto interviewed young people who had just joined the Self-Defense Forces.",
+   "ko": "유토는 자위대에 막 입대한 젊은이들을 취재했어요.",
+   "blank": "入隊",
+   "src": "made"
+  },
+  {
+   "text": "千尋の兄は自衛隊に入隊し、今は遠くの基地にいる。",
+   "en": "Chihiro's brother joined the Self-Defense Forces and is now at a distant base.",
+   "ko": "지히로의 오빠는 자위대에 입대해서 지금은 먼 기지에 있어요.",
+   "blank": "入隊",
    "src": "made"
   }
  ],
@@ -23165,6 +23293,22 @@
    "src": "made"
   }
  ],
+ "w|公益": [
+  {
+   "text": "悠斗は、その記事が公益にかなうかどうかをデスクと話し合った。",
+   "en": "Yuto discussed with the editor whether the article served the public interest.",
+   "ko": "유토는 그 기사가 공익에 맞는지 데스크와 이야기했어요.",
+   "blank": "公益",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、地域の公益のために農地の一部を学校に開放している。",
+   "en": "For the public good of the area, Chihiro opens part of her farmland to a school.",
+   "ko": "지히로는 지역 공익을 위해 농지 일부를 학교에 개방하고 있어요.",
+   "blank": "公益",
+   "src": "made"
+  }
+ ],
  "w|公立": [
   {
    "text": "この博物館は県が運営する公立の施設だ。",
@@ -23331,6 +23475,22 @@
    "en": "I found something in common.",
    "ko": "공통점을 찾았어.",
    "blank": "共通"
+  }
+ ],
+ "w|共闘": [
+  {
+   "text": "悠斗は、二つの野党が選挙で共闘するというニュースを書いた。",
+   "en": "Yuto wrote a news story about two opposition parties joining forces in the election.",
+   "ko": "유토는 두 야당이 선거에서 공동 투쟁한다는 뉴스를 썼어요.",
+   "blank": "共闘",
+   "src": "made"
+  },
+  {
+   "text": "獣の被害に対して、千尋たちは村全体で共闘することにした。",
+   "en": "Chihiro and the others decided to fight the damage from wild animals together as a whole village.",
+   "ko": "짐승 피해에 맞서 지히로네는 마을 전체가 함께 싸우기로 했어요.",
+   "blank": "共闘",
+   "src": "made"
   }
  ],
  "w|兵器": [
@@ -24027,6 +24187,22 @@
    "en": "The view is incredible.",
    "ko": "경치가 최고네.",
    "blank": "最高"
+  }
+ ],
+ "w|最高裁": [
+  {
+   "text": "最高裁の判決が出ると、悠斗はすぐに速報を書いた。",
+   "en": "As soon as the Supreme Court ruling came out, Yuto wrote a news flash.",
+   "ko": "대법원 판결이 나오자 유토는 바로 속보를 썼어요.",
+   "blank": "最高裁",
+   "src": "made"
+  },
+  {
+   "text": "千尋の地域の水をめぐる裁判は、最高裁まで争われた。",
+   "en": "The lawsuit over water in Chihiro's area was fought all the way to the Supreme Court.",
+   "ko": "지히로네 지역의 물을 둘러싼 재판은 대법원까지 갔어요.",
+   "blank": "最高裁",
+   "src": "made"
   }
  ],
  "w|冗談": [
@@ -29183,6 +29359,22 @@
    "src": "made"
   }
  ],
+ "w|取り消し": [
+  {
+   "text": "悠斗は、誤った見出しの取り消しを紙面で読者に知らせた。",
+   "en": "Yuto informed readers in the paper that an incorrect headline had been retracted.",
+   "ko": "유토는 잘못된 제목의 취소를 지면으로 독자에게 알렸어요.",
+   "blank": "取り消し",
+   "src": "made"
+  },
+  {
+   "text": "大雨の予報が出て、千尋は収穫体験の予約の取り消しを受け付けた。",
+   "en": "With heavy rain in the forecast, Chihiro accepted cancellations for the harvest experience.",
+   "ko": "큰비 예보가 나와서 지히로는 수확 체험 예약 취소를 받았어요.",
+   "blank": "取り消し",
+   "src": "made"
+  }
+ ],
  "w|取り組み": [
   {
    "text": "誠の会社の環境への取り組みが、新聞で紹介された。",
@@ -32060,6 +32252,22 @@
    "en": "As a child, Aoi often cooked with her mother in a small kitchen in a housing complex.",
    "ko": "아오이는 어릴 때 단지의 작은 부엌에서 엄마와 자주 요리를 했어요.",
    "blank": "団地",
+   "src": "made"
+  }
+ ],
+ "w|団子": [
+  {
+   "text": "悠斗は、地方の祭りで売られる名物の団子を記事で紹介した。",
+   "en": "Yuto featured the famous dumplings sold at a local festival in his article.",
+   "ko": "유토는 지방 축제에서 파는 명물 경단을 기사로 소개했어요.",
+   "blank": "団子",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、畑で摘んだよもぎで団子を作った。",
+   "en": "Chihiro made dumplings with mugwort she picked in the field.",
+   "ko": "지히로는 밭에서 뜯은 쑥으로 경단을 만들었어요.",
+   "blank": "団子",
    "src": "made"
   }
  ],
@@ -45771,6 +45979,22 @@
    "blank": "慣れる"
   }
  ],
+ "w|憎しみ": [
+  {
+   "text": "悠斗は、戦争が残した憎しみの連鎖について社説を書いた。",
+   "en": "Yuto wrote an editorial about the chain of hatred left by war.",
+   "ko": "유토는 전쟁이 남긴 증오의 연쇄에 대해 사설을 썼어요.",
+   "blank": "憎しみ",
+   "src": "made"
+  },
+  {
+   "text": "畑を荒らすイノシシに、千尋は憎しみさえ覚えた。",
+   "en": "Chihiro even felt hatred toward the wild boars that wrecked her field.",
+   "ko": "밭을 망치는 멧돼지에게 지히로는 증오마저 느꼈어요.",
+   "blank": "憎しみ",
+   "src": "made"
+  }
+ ],
  "w|憧れ": [
   {
    "text": "健太にとって、海外で働く友達はずっと憧れの存在だった。",
@@ -50471,6 +50695,22 @@
    "src": "made"
   }
  ],
+ "w|救援": [
+  {
+   "text": "地震の被災地に救援物資が届いたと、悠斗が報じた。",
+   "en": "Yuto reported that relief supplies had reached the earthquake zone.",
+   "ko": "지진 피해 지역에 구호물자가 도착했다고 유토가 보도했어요.",
+   "blank": "救援",
+   "src": "made"
+  },
+  {
+   "text": "台風が去った後、千尋は近くの農家へ救援に駆けつけた。",
+   "en": "After the typhoon passed, Chihiro rushed to help a nearby farm.",
+   "ko": "태풍이 지나간 뒤 지히로는 근처 농가에 구조하러 달려갔어요.",
+   "blank": "救援",
+   "src": "made"
+  }
+ ],
  "w|救済": [
   {
    "text": "詐欺の被害者の救済のために、警察は専用の窓口を作った。",
@@ -51015,6 +51255,22 @@
    "blank": "文化"
   }
  ],
+ "w|文化財": [
+  {
+   "text": "悠斗は、修復が終わった文化財の公開を取材した。",
+   "en": "Yuto covered the public unveiling of a restored cultural property.",
+   "ko": "유토는 복원이 끝난 문화재 공개를 취재했어요.",
+   "blank": "文化財",
+   "src": "made"
+  },
+  {
+   "text": "千尋の農園にある古い蔵は、町の文化財に指定されている。",
+   "en": "The old storehouse on Chihiro's farm is designated as a town cultural property.",
+   "ko": "지히로의 농원에 있는 오래된 창고는 마을 문화재로 지정돼 있어요.",
+   "blank": "文化財",
+   "src": "made"
+  }
+ ],
  "w|文句": [
   {
    "text": "文句ばかり言わないで。",
@@ -51420,6 +51676,22 @@
    "en": "A popular singer's new song was playing on the radio in the waiting room.",
    "ko": "대기실 라디오에서 인기 가수의 신곡이 흘러나오고 있었어요.",
    "blank": "新曲",
+   "src": "made"
+  }
+ ],
+ "w|新書": [
+  {
+   "text": "悠斗は、休みの日に新書を読んで経済の勉強をしている。",
+   "en": "On his days off, Yuto studies economics by reading pocket paperbacks.",
+   "ko": "유토는 쉬는 날에 신서를 읽으며 경제 공부를 해요.",
+   "blank": "新書",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、農業の未来について書かれた新書を読んだ。",
+   "en": "Chihiro read a paperback about the future of farming.",
+   "ko": "지히로는 농업의 미래에 관해 쓴 신서를 읽었어요.",
+   "blank": "新書",
    "src": "made"
   }
  ],
@@ -52321,6 +52593,22 @@
    "blank": "明確"
   }
  ],
+ "w|明示": [
+  {
+   "text": "悠斗は、記事の出典を明示するよう後輩に注意した。",
+   "en": "Yuto reminded his junior to clearly state the sources in the article.",
+   "ko": "유토는 기사 출처를 명시하라고 후배에게 주의를 줬어요.",
+   "blank": "明示",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、直売所の野菜に農薬を使ったかどうかを明示している。",
+   "en": "Chihiro clearly labels whether pesticides were used on the vegetables at her farm stand.",
+   "ko": "지히로는 직판장 채소에 농약을 썼는지 아닌지를 명시해요.",
+   "blank": "明示",
+   "src": "made"
+  }
+ ],
  "w|明記": [
   {
    "text": "看板には、工事の期間と連絡先が明記されている。",
@@ -53119,6 +53407,22 @@
    "src": "made"
   }
  ],
+ "w|暴言": [
+  {
+   "text": "試合中の選手の暴言が問題になり、悠斗が取材した。",
+   "en": "A player's verbal abuse during a game became an issue, and Yuto covered it.",
+   "ko": "경기 중 선수의 폭언이 문제가 되어 유토가 취재했어요.",
+   "blank": "暴言",
+   "src": "made"
+  },
+  {
+   "text": "収穫体験に来た客が暴言を吐き、千尋は困ってしまった。",
+   "en": "A visitor at the harvest experience was verbally abusive, and Chihiro didn't know what to do.",
+   "ko": "수확 체험에 온 손님이 폭언을 해서 지히로는 난처해졌어요.",
+   "blank": "暴言",
+   "src": "made"
+  }
+ ],
  "w|暴走": [
   {
    "text": "展示では、昔の機関車の暴走事故についても紹介している。",
@@ -53358,6 +53662,22 @@
    "en": "Keiko picked her dress by looking through a monthly bridal magazine.",
    "ko": "게이코는 월간 웨딩 잡지를 보고 드레스를 골랐어요.",
    "blank": "月刊",
+   "src": "made"
+  }
+ ],
+ "w|月収": [
+  {
+   "text": "若い記者の月収は多くないと、悠斗は苦笑いした。",
+   "en": "Yuto smiled wryly that young reporters don't earn much per month.",
+   "ko": "젊은 기자의 월수입은 많지 않다며 유토는 쓴웃음을 지었어요.",
+   "blank": "月収",
+   "src": "made"
+  },
+  {
+   "text": "農業を始めてから、千尋の月収は会社員の頃より減った。",
+   "en": "Since she started farming, Chihiro's monthly income has dropped from her office days.",
+   "ko": "농사를 시작하고 나서 지히로의 월수입은 회사원 시절보다 줄었어요.",
+   "blank": "月収",
    "src": "made"
   }
  ],
@@ -57481,6 +57801,22 @@
    "src": "made"
   }
  ],
+ "w|母国": [
+  {
+   "text": "悠斗は、母国を離れて働く人々の連載を担当している。",
+   "en": "Yuto is in charge of a series about people working far from their home countries.",
+   "ko": "유토는 모국을 떠나 일하는 사람들에 관한 연재를 맡고 있어요.",
+   "blank": "母国",
+   "src": "made"
+  },
+  {
+   "text": "千尋の農園では、母国の野菜を育てたいという留学生が手伝っている。",
+   "en": "An international student who wants to grow vegetables from her home country helps out on Chihiro's farm.",
+   "ko": "지히로의 농원에서는 모국 채소를 키우고 싶다는 유학생이 돕고 있어요.",
+   "blank": "母国",
+   "src": "made"
+  }
+ ],
  "w|母親": [
   {
    "text": "母親に電話したよ。",
@@ -60870,6 +61206,22 @@
    "en": "Yoko's grandfather was a fisherman and apparently often sang on his boat.",
    "ko": "요코의 할아버지는 어부였고 배 위에서 자주 노래를 불렀대요.",
    "blank": "漁師",
+   "src": "made"
+  }
+ ],
+ "w|漁業": [
+  {
+   "text": "悠斗は、海水温の上昇が漁業に与える影響を取材した。",
+   "en": "Yuto reported on how rising sea temperatures affect the fishing industry.",
+   "ko": "유토는 해수 온도 상승이 어업에 미치는 영향을 취재했어요.",
+   "blank": "漁業",
+   "src": "made"
+  },
+  {
+   "text": "千尋の村は、昔から農業と漁業で暮らしてきた。",
+   "en": "Chihiro's village has long made its living from farming and fishing.",
+   "ko": "지히로의 마을은 옛날부터 농업과 어업으로 살아왔어요.",
+   "blank": "漁業",
    "src": "made"
   }
  ],
@@ -64789,6 +65141,22 @@
    "src": "made"
   }
  ],
+ "w|略奪": [
+  {
+   "text": "悠斗は、遠い国の暴動で商店の略奪が起きたというニュースを訳した。",
+   "en": "Yuto translated a news story about stores being looted in a riot in a faraway country.",
+   "ko": "유토는 먼 나라 폭동으로 상점 약탈이 일어났다는 뉴스를 번역했어요.",
+   "blank": "略奪",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、戦国時代にこの村が略奪にあった歴史を本で読んだ。",
+   "en": "Chihiro read in a book about the history of this village being plundered in the Warring States period.",
+   "ko": "지히로는 전국 시대에 이 마을이 약탈당한 역사를 책에서 읽었어요.",
+   "blank": "略奪",
+   "src": "made"
+  }
+ ],
  "w|異なる": [
   {
    "text": "意見が異なるね。",
@@ -65194,6 +65562,22 @@
    "en": "Yumi tried a heat therapy said to work for stiff shoulders.",
    "ko": "유미는 어깨 결림에 좋다는 온열 요법을 시도해 봤어요.",
    "blank": "療法",
+   "src": "made"
+  }
+ ],
+ "w|療養": [
+  {
+   "text": "悠斗の先輩は長く療養していたが、来月から職場に戻る。",
+   "en": "Yuto's senior colleague had been recuperating for a long time, but returns to work next month.",
+   "ko": "유토의 선배는 오래 요양했지만 다음 달부터 직장에 돌아와요.",
+   "blank": "療養",
+   "src": "made"
+  },
+  {
+   "text": "千尋の祖母は、療養のために空気のきれいな農園へやって来た。",
+   "en": "Chihiro's grandmother came to the farm, where the air is clean, to recuperate.",
+   "ko": "지히로의 할머니는 요양을 위해 공기가 맑은 농원으로 왔어요.",
+   "blank": "療養",
    "src": "made"
   }
  ],
@@ -75913,6 +76297,22 @@
    "src": "made"
   }
  ],
+ "w|補足": [
+  {
+   "text": "悠斗は、記事の最後に読者向けの補足を書き加えた。",
+   "en": "Yuto added a supplementary note for readers at the end of the article.",
+   "ko": "유토는 기사 끝에 독자를 위한 보충 설명을 덧붙였어요.",
+   "blank": "補足",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、野菜の育て方の説明に写真で補足を加えた。",
+   "en": "Chihiro added photos as a supplement to her explanation of how to grow vegetables.",
+   "ko": "지히로는 채소 키우는 법 설명에 사진으로 보충했어요.",
+   "blank": "補足",
+   "src": "made"
+  }
+ ],
  "w|裸": [
   {
    "text": "サウナでは、男たちが裸で汗を流していた。",
@@ -78273,6 +78673,22 @@
    "blank": "試合"
   }
  ],
+ "w|試練": [
+  {
+   "text": "悠斗にとって、初めての大きな取材は試練の連続だった。",
+   "en": "For Yuto, his first big assignment was one trial after another.",
+   "ko": "유토에게 첫 큰 취재는 시련의 연속이었어요.",
+   "blank": "試練",
+   "src": "made"
+  },
+  {
+   "text": "長雨は、新米農家の千尋にとって大きな試練だった。",
+   "en": "The long rains were a big trial for Chihiro, a novice farmer.",
+   "ko": "긴 장마는 초보 농부 지히로에게 큰 시련이었어요.",
+   "blank": "試練",
+   "src": "made"
+  }
+ ],
  "w|試験": [
   {
    "text": "試験、がんばってね。",
@@ -78837,6 +79253,22 @@
    "en": "That's not enough of an explanation.",
    "ko": "설명이 모자라.",
    "blank": "説明"
+  }
+ ],
+ "w|読み方": [
+  {
+   "text": "悠斗は、難しい地名の読み方を地元の人に確かめた。",
+   "en": "Yuto checked with locals how to read a difficult place name.",
+   "ko": "유토는 어려운 지명의 읽는 법을 현지 사람에게 확인했어요.",
+   "blank": "読み方",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、雲の読み方を祖父から教わった。",
+   "en": "Chihiro learned how to read the clouds from her grandfather.",
+   "ko": "지히로는 구름 읽는 법을 할아버지에게 배웠어요.",
+   "blank": "読み方",
+   "src": "made"
   }
  ],
  "w|読む": [
@@ -79884,6 +80316,22 @@
    "en": "Yoko's older sister is studying finance at university.",
    "ko": "요코의 언니는 대학에서 재무 공부를 하고 있어요.",
    "blank": "財務",
+   "src": "made"
+  }
+ ],
+ "w|財務省": [
+  {
+   "text": "悠斗は、財務省が発表した予算案について解説記事を書いた。",
+   "en": "Yuto wrote an explanatory article on the budget plan announced by the Ministry of Finance.",
+   "ko": "유토는 재무성이 발표한 예산안에 대해 해설 기사를 썼어요.",
+   "blank": "財務省",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、財務省を辞めて農業を始めたという珍しい経歴の持ち主だ。",
+   "en": "Chihiro has an unusual background: she quit the Ministry of Finance to take up farming.",
+   "ko": "지히로는 재무성을 그만두고 농사를 시작한 특이한 경력의 소유자예요.",
+   "blank": "財務省",
    "src": "made"
   }
  ],
@@ -81875,6 +82323,22 @@
    "src": "made"
   }
  ],
+ "w|農民": [
+  {
+   "text": "悠斗は、百年前の農民の暮らしを伝える古い日記を記事にした。",
+   "en": "Yuto wrote about an old diary describing the lives of farmers a century ago.",
+   "ko": "유토는 백 년 전 농민의 생활을 전하는 오래된 일기를 기사로 썼어요.",
+   "blank": "農民",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、昔の農民が使っていた道具を納屋で見つけた。",
+   "en": "Chihiro found tools that farmers used long ago in the barn.",
+   "ko": "지히로는 옛 농민이 쓰던 도구를 헛간에서 찾았어요.",
+   "blank": "農民",
+   "src": "made"
+  }
+ ],
  "w|辺り": [
   {
    "text": "あの、私、残念ですが小用が御座いますので、この辺りで失礼致しますね。",
@@ -82538,6 +83002,22 @@
    "en": "The company reconsidered its approach of pursuing profit alone.",
    "ko": "회사는 이익만을 추구하는 방식을 재검토했어요.",
    "blank": "追求",
+   "src": "made"
+  }
+ ],
+ "w|追記": [
+  {
+   "text": "内容に変更があったので、悠斗は記事の末尾に追記を入れた。",
+   "en": "Because there was a change in the details, Yuto put an addendum at the end of the article.",
+   "ko": "내용이 바뀌어서 유토는 기사 끝에 추가 글을 넣었어요.",
+   "blank": "追記",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、農園のブログに今日の収穫の様子を追記した。",
+   "en": "Chihiro added today's harvest to her farm blog.",
+   "ko": "지히로는 농원 블로그에 오늘 수확 모습을 추가로 적었어요.",
+   "blank": "追記",
    "src": "made"
   }
  ],
@@ -83361,6 +83841,22 @@
    "src": "made"
   }
  ],
+ "w|連帯": [
+  {
+   "text": "悠斗は、被災地の住民どうしの連帯を感じさせる話を集めた。",
+   "en": "Yuto collected stories that showed solidarity among residents of the disaster area.",
+   "ko": "유토는 피해 지역 주민들끼리의 연대가 느껴지는 이야기를 모았어요.",
+   "blank": "連帯",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、近くの若い農家たちと連帯して直売所を始めた。",
+   "en": "Chihiro joined together with young farmers nearby to start a farm stand.",
+   "ko": "지히로는 근처 젊은 농부들과 연대해서 직판장을 시작했어요.",
+   "blank": "連帯",
+   "src": "made"
+  }
+ ],
  "w|連想": [
   {
    "text": "「市役所」と聞くと、長い待ち時間を連想する人が多い。",
@@ -83483,6 +83979,22 @@
    "en": "Watching the serial drama?",
    "ko": "연속 드라마 봐?",
    "blank": "連続"
+  }
+ ],
+ "w|連行": [
+  {
+   "text": "悠斗は、詐欺の疑いで男が警察に連行されたと伝えた。",
+   "en": "Yuto reported that a man had been taken in by police on suspicion of fraud.",
+   "ko": "유토는 사기 혐의로 남자가 경찰에 연행됐다고 전했어요.",
+   "blank": "連行",
+   "src": "made"
+  },
+  {
+   "text": "畑から野菜を盗んだ男が警察に連行されたと、千尋は聞いた。",
+   "en": "Chihiro heard that the man who stole vegetables from the field had been taken away by the police.",
+   "ko": "밭에서 채소를 훔친 남자가 경찰에 연행됐다고 지히로는 들었어요.",
+   "blank": "連行",
+   "src": "made"
   }
  ],
  "w|連載": [
@@ -83975,6 +84487,22 @@
    "en": "Ask the people running it.",
    "ko": "운영 쪽에 물어봐.",
    "blank": "運営"
+  }
+ ],
+ "w|運搬": [
+  {
+   "text": "悠斗は、重い機材の運搬を手伝ってからカメラマンと現場に向かった。",
+   "en": "Yuto helped carry the heavy equipment and then headed to the scene with the photographer.",
+   "ko": "유토는 무거운 장비 운반을 돕고 나서 카메라맨과 현장으로 향했어요.",
+   "blank": "運搬",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、収穫した野菜の運搬に軽トラックを使っている。",
+   "en": "Chihiro uses a small truck to transport the vegetables she harvests.",
+   "ko": "지히로는 수확한 채소를 운반할 때 경트럭을 써요.",
+   "blank": "運搬",
+   "src": "made"
   }
  ],
  "w|運用": [
@@ -85351,6 +85879,38 @@
    "src": "made"
   }
  ],
+ "w|配分": [
+  {
+   "text": "悠斗は、限られた紙面の配分をデスクと相談した。",
+   "en": "Yuto discussed with the editor how to allocate the limited page space.",
+   "ko": "유토는 한정된 지면 배분을 데스크와 상의했어요.",
+   "blank": "配分",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、畑の広さをどの野菜にどう配分するか考えた。",
+   "en": "Chihiro thought about how to divide the field among the different vegetables.",
+   "ko": "지히로는 밭 넓이를 어떤 채소에 어떻게 배분할지 고민했어요.",
+   "blank": "配分",
+   "src": "made"
+  }
+ ],
+ "w|配合": [
+  {
+   "text": "悠斗は、地元の店が独自の配合で作るカレーを紹介した。",
+   "en": "Yuto introduced a curry that a local shop makes with its own blend of spices.",
+   "ko": "유토는 지역 가게가 독자적인 배합으로 만드는 카레를 소개했어요.",
+   "blank": "配合",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、肥料の配合を変えてトマトを甘くした。",
+   "en": "Chihiro changed the fertilizer mix to make her tomatoes sweeter.",
+   "ko": "지히로는 비료 배합을 바꿔서 토마토를 달게 만들었어요.",
+   "blank": "配合",
+   "src": "made"
+  }
+ ],
  "w|配布": [
   {
    "text": "チラシの配布を手伝う。",
@@ -85457,6 +86017,22 @@
    "blank": "酒"
   }
  ],
+ "w|酒場": [
+  {
+   "text": "取材が終わると、悠斗は先輩と古い酒場で一杯やった。",
+   "en": "After the interview, Yuto had a drink with a senior colleague at an old tavern.",
+   "ko": "취재가 끝나자 유토는 선배와 오래된 술집에서 한잔했어요.",
+   "blank": "酒場",
+   "src": "made"
+  },
+  {
+   "text": "千尋の野菜は、町の小さな酒場でも使われている。",
+   "en": "Chihiro's vegetables are used even at a small tavern in town.",
+   "ko": "지히로의 채소는 마을의 작은 술집에서도 쓰여요.",
+   "blank": "酒場",
+   "src": "made"
+  }
+ ],
  "w|酔う": [
   {
    "text": "健太は、修学旅行のバスで友達が酔ったことを懐かしく思い出した。",
@@ -85518,6 +86094,22 @@
    "en": "Sakura aired out her room and let plenty of fresh oxygen in.",
    "ko": "사쿠라는 방 공기를 환기해서 산소를 듬뿍 들였어요.",
    "blank": "酸素",
+   "src": "made"
+  }
+ ],
+ "w|醜い": [
+  {
+   "text": "悠斗は、ネット上の醜い言い争いについてコラムを書いた。",
+   "en": "Yuto wrote a column about ugly online quarrels.",
+   "ko": "유토는 인터넷의 추한 말다툼에 대해 칼럼을 썼어요.",
+   "blank": "醜い",
+   "src": "made"
+  },
+  {
+   "text": "見た目が醜いと捨てられる野菜を、千尋は加工して売っている。",
+   "en": "Chihiro processes and sells vegetables that would be thrown away for looking ugly.",
+   "ko": "겉모습이 못생겼다고 버려지는 채소를 지히로는 가공해서 팔아요.",
+   "blank": "醜い",
    "src": "made"
   }
  ],
@@ -88535,6 +89127,22 @@
    "blank": "静か"
   }
  ],
+ "w|非公式": [
+  {
+   "text": "悠斗は、大臣の非公式な発言をいち早くつかんだ。",
+   "en": "Yuto was the first to get hold of the minister's unofficial remarks.",
+   "ko": "유토는 장관의 비공식 발언을 누구보다 빨리 입수했어요.",
+   "blank": "非公式",
+   "src": "made"
+  },
+  {
+   "text": "千尋の農園には、地元の子どもたちが作った非公式のキャラクターがいる。",
+   "en": "Chihiro's farm has an unofficial mascot made by local kids.",
+   "ko": "지히로의 농원에는 동네 아이들이 만든 비공식 캐릭터가 있어요.",
+   "blank": "非公式",
+   "src": "made"
+  }
+ ],
  "w|非公開": [
   {
    "text": "地下の収蔵庫は非公開で、直樹のような職員しか入れない。",
@@ -88578,6 +89186,22 @@
    "en": "Some actors have come under fire online for how they treat crew on set.",
    "ko": "촬영장에서 스태프를 대하는 태도로 인터넷에서 비난을 받은 배우도 있어요.",
    "blank": "非難",
+   "src": "made"
+  }
+ ],
+ "w|面する": [
+  {
+   "text": "悠斗の新聞社のビルは、大通りに面して建っている。",
+   "en": "Yuto's newspaper building stands facing the main street.",
+   "ko": "유토네 신문사 건물은 큰길에 면해 있어요.",
+   "blank": "面して",
+   "src": "made"
+  },
+  {
+   "text": "千尋の畑は、南に面した日当たりのいい斜面にある。",
+   "en": "Chihiro's field is on a sunny slope facing south.",
+   "ko": "지히로의 밭은 남쪽을 향한 볕 잘 드는 비탈에 있어요.",
+   "blank": "面した",
    "src": "made"
   }
  ],
@@ -90601,6 +91225,22 @@
    "en": "I remember my high school days.",
    "ko": "고등학생 때를 떠올려.",
    "blank": "高校生"
+  }
+ ],
+ "w|高温": [
+  {
+   "text": "高温の日が続いて熱中症が増えていると、悠斗が報じた。",
+   "en": "Yuto reported that heatstroke cases were rising with the run of hot days.",
+   "ko": "고온인 날이 이어져 열사병이 늘고 있다고 유토가 보도했어요.",
+   "blank": "高温",
+   "src": "made"
+  },
+  {
+   "text": "高温が続くと、千尋のレタスはすぐに傷んでしまう。",
+   "en": "When high temperatures continue, Chihiro's lettuce spoils quickly.",
+   "ko": "고온이 계속되면 지히로의 상추는 금방 상해 버려요.",
+   "blank": "高温",
+   "src": "made"
   }
  ],
  "w|高等": [
