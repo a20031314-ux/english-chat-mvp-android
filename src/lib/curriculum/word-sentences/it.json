@@ -2237,6 +2237,22 @@
    "blank": "analisi"
   }
  ],
+ "w|analista": [
+  {
+   "text": "La zia di Andrea, un'analista di dati, è venuta a spiegare il suo lavoro in classe.",
+   "en": "Andrea's aunt, a data analyst, came to explain her job in class.",
+   "ko": "데이터 분석가인 안드레아의 이모가 반에 와서 자기 일을 설명했어요.",
+   "blank": "analista",
+   "src": "made"
+  },
+  {
+   "text": "Al corso con Martina c'è anche un analista finanziario che dipinge per rilassarsi.",
+   "en": "In Martina's class there's also a financial analyst who paints to relax.",
+   "ko": "마르티나의 수업에는 긴장을 풀려고 그림을 그리는 금융 분석가도 있어요.",
+   "blank": "analista",
+   "src": "made"
+  }
+ ],
  "w|analizzare": [
   {
    "text": "Dobbiamo analizzare i risultati con calma.",
@@ -3320,6 +3336,22 @@
    "en": "An arrogant client treated Anna badly on the phone.",
    "ko": "거만한 고객이 전화로 안나에게 함부로 대했어요.",
    "blank": "arrogante",
+   "src": "made"
+  }
+ ],
+ "w|arruolare": [
+  {
+   "text": "A storia Andrea legge che Napoleone fece arruolare migliaia di giovani italiani.",
+   "en": "In history Andrea reads that Napoleon had thousands of young Italians enlisted.",
+   "ko": "역사 시간에 안드레아는 나폴레옹이 수천 명의 이탈리아 젊은이를 징집했다는 걸 읽어요.",
+   "blank": "arruolare",
+   "src": "made"
+  },
+  {
+   "text": "In un quadro storico Martina rappresenta i soldati che il re fece arruolare a forza.",
+   "en": "In a historical painting Martina depicts the soldiers the king had forcibly enlisted.",
+   "ko": "역사화에서 마르티나는 왕이 강제로 징집한 병사들을 그려요.",
+   "blank": "arruolare",
    "src": "made"
   }
  ],
@@ -4943,6 +4975,22 @@
    "src": "made"
   }
  ],
+ "w|ballerino": [
+  {
+   "text": "Un ballerino professionista è venuto a scuola a fare una lezione alla classe di Andrea.",
+   "en": "A professional dancer came to school to give Andrea's class a lesson.",
+   "ko": "전문 무용수가 학교에 와서 안드레아네 반에 수업을 해 줬어요.",
+   "blank": "ballerino",
+   "src": "made"
+  },
+  {
+   "text": "Oggi Martina disegna un ballerino in posa sulle punte.",
+   "en": "Today Martina is drawing a dancer posing on his toes.",
+   "ko": "오늘 마르티나는 발끝으로 선 무용수를 그려요.",
+   "blank": "ballerino",
+   "src": "made"
+  }
+ ],
  "w|ballo": [
   {
    "text": "Il ballo di fine anno è sabato.",
@@ -6265,6 +6313,22 @@
    "blank": "bruciare"
   }
  ],
+ "w|brutale": [
+  {
+   "text": "A storia Andrea legge della brutale repressione di una rivolta nell'Ottocento.",
+   "en": "In history Andrea reads about the brutal suppression of a nineteenth-century revolt.",
+   "ko": "역사 시간에 안드레아는 십구 세기 반란이 잔혹하게 진압된 이야기를 읽어요.",
+   "blank": "brutale",
+   "src": "made"
+  },
+  {
+   "text": "L'insegnante dice a Martina che il contrasto tra rosso e nero è un po' brutale.",
+   "en": "The teacher tells Martina that the contrast between red and black is a bit harsh.",
+   "ko": "선생님은 마르티나에게 빨강과 검정의 대비가 좀 거칠다고 말해요.",
+   "blank": "brutale",
+   "src": "made"
+  }
+ ],
  "w|brutto": [
   {
    "text": "Che brutto tempo.",
@@ -7383,6 +7447,22 @@
    "en": "This typeface is elegant.",
    "ko": "이 글꼴은 우아해.",
    "blank": "carattere"
+  }
+ ],
+ "w|caratteristica": [
+  {
+   "text": "Per la verifica Andrea deve elencare ogni caratteristica dei mammiferi.",
+   "en": "For the test Andrea has to list every characteristic of mammals.",
+   "ko": "시험을 위해 안드레아는 포유류의 특징을 하나하나 적어야 해요.",
+   "blank": "caratteristica",
+   "src": "made"
+  },
+  {
+   "text": "La luce soffusa è la caratteristica principale dei paesaggi di Martina.",
+   "en": "Soft light is the main feature of Martina's landscapes.",
+   "ko": "은은한 빛은 마르티나 풍경화의 가장 큰 특징이에요.",
+   "blank": "caratteristica",
+   "src": "made"
   }
  ],
  "w|carbone": [
@@ -10995,6 +11075,22 @@
    "blank": "confessione"
   }
  ],
+ "w|confidare": [
+  {
+   "text": "Andrea ha deciso di confidare alla maestra che non dorme bene da settimane.",
+   "en": "Andrea decided to confide in the teacher that he hasn't slept well for weeks.",
+   "ko": "안드레아는 몇 주째 잠을 잘 못 잔다고 선생님께 털어놓기로 했어요.",
+   "blank": "confidare",
+   "src": "made"
+  },
+  {
+   "text": "Martina si confida con l'insegnante: vorrebbe iscriversi all'accademia di belle arti.",
+   "en": "Martina confides in the teacher: she would like to enrol at the fine arts academy.",
+   "ko": "마르티나는 선생님께 미술 아카데미에 가고 싶다고 털어놓아요.",
+   "blank": "confida",
+   "src": "made"
+  }
+ ],
  "w|confine": [
   {
    "text": "Il confine tra i due paesi è chiuso.",
@@ -12214,6 +12310,22 @@
    "en": "Chiara says no prize could ever corrupt her love for the game.",
    "ko": "키아라는 어떤 상도 경기에 대한 자기 사랑을 더럽힐 수 없다고 말해요.",
    "blank": "corrompere",
+   "src": "made"
+  }
+ ],
+ "w|corrotto": [
+  {
+   "text": "Nel romanzo che Andrea studia, un giudice onesto smaschera un corrotto potente.",
+   "en": "In the novel Andrea is studying, an honest judge unmasks a powerful corrupt official.",
+   "ko": "안드레아가 공부하는 소설에서 정직한 판사가 권력 있는 부패 관리를 폭로해요.",
+   "blank": "corrotto",
+   "src": "made"
+  },
+  {
+   "text": "La caricatura di Martina mostra un corrotto con le tasche piene di banconote.",
+   "en": "Martina's caricature shows a corrupt official with pockets full of banknotes.",
+   "ko": "마르티나의 풍자화에는 주머니에 지폐가 가득한 부패 관리가 그려져 있어요.",
+   "blank": "corrotto",
    "src": "made"
   }
  ],
@@ -15999,6 +16111,22 @@
    "src": "made"
   }
  ],
+ "w|drammatico": [
+  {
+   "text": "Nella recita scolastica Andrea ha un ruolo drammatico: deve piangere sul palco.",
+   "en": "In the school play Andrea has a dramatic role: he has to cry on stage.",
+   "ko": "학교 연극에서 안드레아는 무대에서 울어야 하는 극적인 역을 맡았어요.",
+   "blank": "drammatico",
+   "src": "made"
+  },
+  {
+   "text": "Nel ritratto di Martina, il cielo scuro dà un effetto molto drammatico.",
+   "en": "In Martina's portrait, the dark sky gives a very dramatic effect.",
+   "ko": "마르티나의 초상화에서 어두운 하늘이 아주 극적인 효과를 내요.",
+   "blank": "drammatico",
+   "src": "made"
+  }
+ ],
  "w|dritto": [
   {
    "text": "Vai dritto e poi gira a sinistra.",
@@ -16241,6 +16369,22 @@
    "en": "They aim for excellence in every detail.",
    "ko": "그들은 모든 디테일에서 최고를 목표로 해.",
    "blank": "eccellenza"
+  }
+ ],
+ "w|eccessivo": [
+  {
+   "text": "La professoressa trova eccessivo il numero di compiti che Andrea porta a casa.",
+   "en": "The teacher finds the amount of homework Andrea takes home excessive.",
+   "ko": "선생님은 안드레아가 집에 가져가는 숙제 양이 지나치다고 생각해요.",
+   "blank": "eccessivo",
+   "src": "made"
+  },
+  {
+   "text": "L'insegnante consiglia a Martina di non usare una quantità eccessiva di bianco.",
+   "en": "The teacher advises Martina not to use an excessive amount of white.",
+   "ko": "선생님은 마르티나에게 흰색을 지나치게 많이 쓰지 말라고 조언해요.",
+   "blank": "eccessiva",
+   "src": "made"
   }
  ],
  "w|eccetera": [
@@ -17320,6 +17464,22 @@
    "en": "Sara's boss knows how to exercise authority without raising his voice.",
    "ko": "사라의 상사는 목소리를 높이지 않고도 권위를 발휘할 줄 알아요.",
    "blank": "esercitare",
+   "src": "made"
+  }
+ ],
+ "w|esercitazione": [
+  {
+   "text": "Ogni settimana Andrea fa un'esercitazione di laboratorio con il professore di chimica.",
+   "en": "Every week Andrea does a lab practical with the chemistry teacher.",
+   "ko": "매주 안드레아는 화학 선생님과 실험 실습을 해요.",
+   "blank": "esercitazione",
+   "src": "made"
+  },
+  {
+   "text": "L'esercitazione di oggi chiede a Martina di disegnare la mano sinistra con la destra.",
+   "en": "Today's exercise asks Martina to draw her left hand with her right.",
+   "ko": "오늘 실습 과제는 마르티나가 오른손으로 왼손을 그리는 거예요.",
+   "blank": "esercitazione",
    "src": "made"
   }
  ],
@@ -18853,6 +19013,22 @@
    "en": "Hold your breath and count to ten.",
    "ko": "숨을 참고 열까지 세어.",
    "blank": "fiato"
+  }
+ ],
+ "w|fibra": [
+  {
+   "text": "A scienze Andrea scopre che la frutta è ricca di fibra.",
+   "en": "In science Andrea discovers that fruit is rich in fibre.",
+   "ko": "과학 시간에 안드레아는 과일에 섬유질이 많다는 걸 알게 돼요.",
+   "blank": "fibra",
+   "src": "made"
+  },
+  {
+   "text": "Martina usa una tela di fibra naturale per il suo dipinto a olio.",
+   "en": "Martina uses a natural-fibre canvas for her oil painting.",
+   "ko": "마르티나는 유화를 그리려고 천연 섬유 캔버스를 써요.",
+   "blank": "fibra",
+   "src": "made"
   }
  ],
  "w|ficcare": [
@@ -21629,6 +21805,22 @@
    "blank": "giurare"
   }
  ],
+ "w|giurato": [
+  {
+   "text": "Nel concorso di poesia, Andrea ha avuto il voto più alto da ogni giurato.",
+   "en": "In the poetry competition, Andrea got the highest mark from every judge.",
+   "ko": "시 대회에서 안드레아는 모든 심사위원에게 가장 높은 점수를 받았어요.",
+   "blank": "giurato",
+   "src": "made"
+  },
+  {
+   "text": "Alla mostra del corso, un giurato si è fermato a lungo davanti all'acquerello di Martina.",
+   "en": "At the class exhibition, a judge stopped for a long time in front of Martina's watercolour.",
+   "ko": "수업 전시회에서 심사위원 한 명이 마르티나의 수채화 앞에 오래 머물렀어요.",
+   "blank": "giurato",
+   "src": "made"
+  }
+ ],
  "w|giuria": [
   {
    "text": "La giuria ha dichiarato l'imputato innocente.",
@@ -22447,6 +22639,22 @@
    "blank": "ideale"
   }
  ],
+ "w|identico": [
+  {
+   "text": "Andrea e suo fratello gemello hanno uno zaino identico e se lo scambiano sempre.",
+   "en": "Andrea and his twin brother have an identical backpack and always mix them up.",
+   "ko": "안드레아와 쌍둥이 형은 똑같은 가방을 가지고 있어서 늘 바꿔 들어요.",
+   "blank": "identico",
+   "src": "made"
+  },
+  {
+   "text": "Martina ha copiato il vaso in modo così preciso che sembra identico all'originale.",
+   "en": "Martina copied the vase so precisely that it looks identical to the original.",
+   "ko": "마르티나가 꽃병을 너무 정확히 따라 그려서 원본과 똑같아 보여요.",
+   "blank": "identico",
+   "src": "made"
+  }
+ ],
  "w|identificare": [
   {
    "text": "Devi identificare il problema subito.",
@@ -22704,6 +22912,22 @@
    "en": "In case of fire, Anna knows the evacuation has to be immediate.",
    "ko": "불이 나면 즉시 대피해야 한다는 걸 안나는 알아요.",
    "blank": "immediata",
+   "src": "made"
+  }
+ ],
+ "w|immigrazione": [
+  {
+   "text": "In classe Andrea fa una ricerca sulla storia dell'immigrazione italiana in America.",
+   "en": "In class Andrea is doing a project on the history of Italian immigration to America.",
+   "ko": "수업 시간에 안드레아는 미국으로 간 이탈리아 이민의 역사를 조사해요.",
+   "blank": "immigrazione",
+   "src": "made"
+  },
+  {
+   "text": "Il quadro di Martina racconta l'immigrazione attraverso le valigie di una famiglia.",
+   "en": "Martina's painting tells the story of immigration through a family's suitcases.",
+   "ko": "마르티나의 그림은 한 가족의 여행 가방으로 이민 이야기를 들려줘요.",
+   "blank": "immigrazione",
    "src": "made"
   }
  ],
@@ -23062,6 +23286,22 @@
    "en": "On Saturdays the queue at the fish counter is impressive, so Sara gets there early.",
    "ko": "토요일이면 생선 가게 줄이 엄청나서 사라는 일찍 가요.",
    "blank": "impressionante",
+   "src": "made"
+  }
+ ],
+ "w|impressionare": [
+  {
+   "text": "Andrea voleva impressionare la professoressa con un tema lunghissimo.",
+   "en": "Andrea wanted to impress the teacher with a very long essay.",
+   "ko": "안드레아는 아주 긴 작문으로 선생님께 깊은 인상을 남기고 싶었어요.",
+   "blank": "impressionare",
+   "src": "made"
+  },
+  {
+   "text": "Le opere di Martina hanno impressionato l'insegnante alla prima lezione.",
+   "en": "Martina's work impressed the teacher at the first lesson.",
+   "ko": "첫 수업에서 마르티나의 작품은 선생님께 깊은 인상을 남겼어요.",
+   "blank": "impressionato",
    "src": "made"
   }
  ],
@@ -26093,6 +26333,22 @@
    "blank": "letteralmente"
   }
  ],
+ "w|letteratura": [
+  {
+   "text": "Andrea ha scelto la letteratura come materia per la tesina d'esame.",
+   "en": "Andrea chose literature as the subject for his exam paper.",
+   "ko": "안드레아는 졸업 시험 논문 과목으로 문학을 골랐어요.",
+   "blank": "letteratura",
+   "src": "made"
+  },
+  {
+   "text": "Martina prende spesso spunto dalla letteratura per i suoi disegni.",
+   "en": "Martina often draws inspiration from literature for her drawings.",
+   "ko": "마르티나는 그림의 영감을 자주 문학에서 얻어요.",
+   "blank": "letteratura",
+   "src": "made"
+  }
+ ],
  "w|letto": [
   {
    "text": "La mattina il figlio di Matteo salta sul letto dei genitori.",
@@ -26783,6 +27039,22 @@
    "blank": "lupo"
   }
  ],
+ "w|lurido": [
+  {
+   "text": "Dopo la partita nel fango, le scarpe di Andrea erano luride.",
+   "en": "After the match in the mud, Andrea's shoes were filthy.",
+   "ko": "진흙탕 경기가 끝나자 안드레아의 신발은 더러워졌어요.",
+   "blank": "luride",
+   "src": "made"
+  },
+  {
+   "text": "Alla fine della lezione il grembiule di Martina è lurido di tempera.",
+   "en": "At the end of the lesson Martina's apron is filthy with paint.",
+   "ko": "수업이 끝나면 마르티나의 앞치마는 물감 범벅이에요.",
+   "blank": "lurido",
+   "src": "made"
+  }
+ ],
  "w|lusso": [
   {
    "text": "Al mercatino delle pulci Luca non cerca il lusso, ma oggetti con una storia.",
@@ -26986,6 +27258,22 @@
    "en": "The factory where Francesca works hired twenty workers in May.",
    "ko": "프란체스카가 일하는 공장은 오월에 노동자 스무 명을 뽑았어요.",
    "blank": "maggio",
+   "src": "made"
+  }
+ ],
+ "w|maggioranza": [
+  {
+   "text": "La maggioranza della classe ha votato per Andrea come rappresentante.",
+   "en": "The majority of the class voted for Andrea as representative.",
+   "ko": "반 아이들 대다수가 안드레아를 반 대표로 뽑았어요.",
+   "blank": "maggioranza",
+   "src": "made"
+  },
+  {
+   "text": "La maggioranza degli studenti preferisce l'acquerello, ma Martina sceglie l'olio.",
+   "en": "Most of the students prefer watercolour, but Martina chooses oils.",
+   "ko": "학생 대다수는 수채화를 좋아하지만 마르티나는 유화를 골라요.",
+   "blank": "maggioranza",
    "src": "made"
   }
  ],
@@ -27676,6 +27964,22 @@
    "en": "Martina explains to the class that the Moon causes the tide.",
    "ko": "마르티나는 반 아이들에게 달이 밀물과 썰물을 일으킨다고 설명해요.",
    "blank": "marea",
+   "src": "made"
+  }
+ ],
+ "w|maresciallo": [
+  {
+   "text": "Un maresciallo dei carabinieri è venuto a parlare alla classe di Andrea di sicurezza online.",
+   "en": "A police warrant officer came to talk to Andrea's class about online safety.",
+   "ko": "경찰 준위가 안드레아네 반에 와서 온라인 안전에 대해 이야기했어요.",
+   "blank": "maresciallo",
+   "src": "made"
+  },
+  {
+   "text": "Martina ha fatto il ritratto di un vecchio maresciallo in pensione del suo paese.",
+   "en": "Martina painted the portrait of an old retired warrant officer from her village.",
+   "ko": "마르티나는 고향 마을의 은퇴한 늙은 준위의 초상화를 그렸어요.",
+   "blank": "maresciallo",
    "src": "made"
   }
  ],
@@ -29049,6 +29353,22 @@
    "en": "They believe a miracle happened.",
    "ko": "그들은 기적이 일어났다고 믿어.",
    "blank": "miracolo"
+  }
+ ],
+ "w|mirare": [
+  {
+   "text": "Con il nuovo metodo di studio, Andrea mira a migliorare il voto di matematica.",
+   "en": "With his new study method, Andrea is aiming to improve his maths mark.",
+   "ko": "새 공부법으로 안드레아는 수학 성적을 올리는 걸 목표로 해요.",
+   "blank": "mira",
+   "src": "made"
+  },
+  {
+   "text": "Al corso di tiro con l'arco Martina impara a mirare, e lo stesso occhio la aiuta a disegnare.",
+   "en": "At archery class Martina learns to aim, and the same eye helps her draw.",
+   "ko": "양궁 수업에서 마르티나는 조준하는 법을 배우는데, 그 눈썰미가 그림에도 도움이 돼요.",
+   "blank": "mirare",
+   "src": "made"
   }
  ],
  "w|miserabile": [
@@ -30987,6 +31307,22 @@
    "blank": "nuotare"
   }
  ],
+ "w|nuoto": [
+  {
+   "text": "Il martedì Andrea ha lezione di nuoto nella piscina vicino alla scuola.",
+   "en": "On Tuesdays Andrea has a swimming lesson at the pool near the school.",
+   "ko": "화요일마다 안드레아는 학교 근처 수영장에서 수영 수업을 해요.",
+   "blank": "nuoto",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il nuoto del mattino, Martina arriva a lezione d'arte con i capelli ancora bagnati.",
+   "en": "After her morning swim, Martina arrives at art class with her hair still wet.",
+   "ko": "아침 수영을 마치고 마르티나는 머리가 젖은 채로 미술 수업에 와요.",
+   "blank": "nuoto",
+   "src": "made"
+  }
+ ],
  "w|nuovamente": [
   {
    "text": "Il trattore di Andrea si è rotto nuovamente, proprio durante la vendemmia.",
@@ -31061,6 +31397,22 @@
    "en": "It will be a cloudy and cool afternoon.",
    "ko": "흐리고 선선한 오후가 될 거야.",
    "blank": "nuvoloso"
+  }
+ ],
+ "w|nuziale": [
+  {
+   "text": "La maestra di Andrea si sposa e mostra alla classe la foto dell'abito nuziale.",
+   "en": "Andrea's teacher is getting married and shows the class a photo of her wedding dress.",
+   "ko": "안드레아의 선생님이 결혼하게 되어 반 아이들에게 웨딩드레스 사진을 보여 줘요.",
+   "blank": "nuziale",
+   "src": "made"
+  },
+  {
+   "text": "Una coppia ha chiesto a Martina di dipingere il ritratto nuziale per l'anniversario.",
+   "en": "A couple asked Martina to paint a wedding portrait for their anniversary.",
+   "ko": "한 부부가 결혼기념일에 맞춰 마르티나에게 결혼 초상화를 부탁했어요.",
+   "blank": "nuziale",
+   "src": "made"
   }
  ],
  "w|o": [
@@ -31541,6 +31893,22 @@
    "blank": "oltre"
   }
  ],
+ "w|oltrepassare": [
+  {
+   "text": "Il pallone di Andrea ha oltrepassato la recinzione ed è finito nel giardino del vicino.",
+   "en": "Andrea's ball went over the fence and ended up in the neighbour's garden.",
+   "ko": "안드레아의 공이 울타리를 넘어 이웃집 정원에 떨어졌어요.",
+   "blank": "oltrepassato",
+   "src": "made"
+  },
+  {
+   "text": "Nel suo disegno, Martina lascia che i colori oltrepassino i contorni apposta.",
+   "en": "In her drawing, Martina deliberately lets the colours go beyond the outlines.",
+   "ko": "그림에서 마르티나는 일부러 색이 윤곽선을 넘어가게 해요.",
+   "blank": "oltrepassino",
+   "src": "made"
+  }
+ ],
  "w|omaggio": [
   {
    "text": "Con la lampada il venditore ha dato a Luca una cartolina in omaggio.",
@@ -31997,6 +32365,22 @@
    "src": "made"
   }
  ],
+ "w|organismo": [
+  {
+   "text": "A biologia Andrea studia come un organismo si adatta all'ambiente.",
+   "en": "In biology Andrea studies how an organism adapts to its environment.",
+   "ko": "생물 시간에 안드레아는 생물이 환경에 어떻게 적응하는지 공부해요.",
+   "blank": "organismo",
+   "src": "made"
+  },
+  {
+   "text": "L'insegnante di Martina dice che un quadro è come un organismo vivo: ogni parte conta.",
+   "en": "Martina's teacher says a painting is like a living organism: every part matters.",
+   "ko": "마르티나의 선생님은 그림은 살아 있는 생명체 같아서 모든 부분이 중요하다고 해요.",
+   "blank": "organismo",
+   "src": "made"
+  }
+ ],
  "w|organizzare": [
   {
    "text": "Dobbiamo organizzare la festa insieme.",
@@ -32403,6 +32787,22 @@
    "en": "No hostage was injured.",
    "ko": "다친 인질은 없었어.",
    "blank": "ostaggio"
+  }
+ ],
+ "w|ostile": [
+  {
+   "text": "Il primo giorno, Andrea temeva di trovare una classe ostile, invece tutti l'hanno accolto bene.",
+   "en": "On the first day, Andrea feared he'd find a hostile class, but everyone welcomed him.",
+   "ko": "첫날 안드레아는 반 아이들이 적대적일까 봐 걱정했지만 모두 반겨 줬어요.",
+   "blank": "ostile",
+   "src": "made"
+  },
+  {
+   "text": "Martina ha imparato a ignorare i commenti ostili sui suoi quadri.",
+   "en": "Martina has learned to ignore hostile comments about her paintings.",
+   "ko": "마르티나는 자기 그림에 대한 적대적인 말은 무시하는 법을 배웠어요.",
+   "blank": "ostili",
+   "src": "made"
   }
  ],
  "w|ottanta": [
@@ -33003,6 +33403,38 @@
    "src": "made"
   }
  ],
+ "w|parare": [
+  {
+   "text": "Durante la partita in palestra, Andrea ha parato un rigore all'ultimo minuto.",
+   "en": "During the match in the gym, Andrea saved a penalty in the last minute.",
+   "ko": "체육관 경기에서 안드레아는 마지막 순간에 페널티킥을 막아 냈어요.",
+   "blank": "parato",
+   "src": "made"
+  },
+  {
+   "text": "Martina usa il nastro adesivo per parare i bordi del foglio dal colore.",
+   "en": "Martina uses tape to shield the edges of the sheet from the paint.",
+   "ko": "마르티나는 종이 가장자리에 물감이 묻지 않도록 테이프로 막아요.",
+   "blank": "parare",
+   "src": "made"
+  }
+ ],
+ "w|parata": [
+  {
+   "text": "Per la festa del paese, la banda della scuola di Andrea suona alla parata.",
+   "en": "For the town festival, Andrea's school band plays in the parade.",
+   "ko": "마을 축제 때 안드레아 학교의 밴드가 퍼레이드에서 연주해요.",
+   "blank": "parata",
+   "src": "made"
+  },
+  {
+   "text": "Per la parata di Carnevale, Martina dipinge le maschere del carro della scuola d'arte.",
+   "en": "For the Carnival parade, Martina paints the masks for the art school's float.",
+   "ko": "카니발 퍼레이드를 위해 마르티나는 미술 학교 꽃차의 가면에 색을 칠해요.",
+   "blank": "parata",
+   "src": "made"
+  }
+ ],
  "w|parcheggiare": [
   {
    "text": "Il sabato è difficile parcheggiare vicino al mercato, così Simone arriva all'alba.",
@@ -33185,6 +33617,22 @@
    "en": "Before departure check the documents.",
    "ko": "출발 전에 서류를 확인해.",
    "blank": "partenza"
+  }
+ ],
+ "w|particella": [
+  {
+   "text": "A fisica Andrea impara che l'elettrone è una particella con carica negativa.",
+   "en": "In physics Andrea learns that the electron is a particle with a negative charge.",
+   "ko": "물리 시간에 안드레아는 전자가 음전하를 띤 입자라는 걸 배워요.",
+   "blank": "particella",
+   "src": "made"
+  },
+  {
+   "text": "Sotto la lampada Martina vede ogni particella di polvere che si posa sulla vernice fresca.",
+   "en": "Under the lamp Martina sees every particle of dust settling on the wet varnish.",
+   "ko": "마르티나는 전등 아래에서 마르지 않은 니스 위에 내려앉는 먼지 알갱이 하나하나를 봐요.",
+   "blank": "particella",
+   "src": "made"
   }
  ],
  "w|particolare": [
@@ -34235,6 +34683,22 @@
    "src": "made"
   }
  ],
+ "w|perquisizione": [
+  {
+   "text": "Nel giallo letto in classe, la perquisizione della villa rivela una lettera nascosta, e Andrea indovina il colpevole.",
+   "en": "In the mystery read in class, the search of the villa uncovers a hidden letter, and Andrea guesses the culprit.",
+   "ko": "수업 시간에 읽은 추리 소설에서 별장 수색으로 숨겨진 편지가 나오고 안드레아는 범인을 맞혀요.",
+   "blank": "perquisizione",
+   "src": "made"
+  },
+  {
+   "text": "Martina ha disegnato una scena da film: la perquisizione di una soffitta piena di quadri rubati.",
+   "en": "Martina drew a film scene: the search of an attic full of stolen paintings.",
+   "ko": "마르티나는 영화 같은 장면을 그렸어요. 도난당한 그림으로 가득한 다락방을 수색하는 장면이에요.",
+   "blank": "perquisizione",
+   "src": "made"
+  }
+ ],
  "w|persino": [
   {
    "text": "Persino lui ha detto di sì.",
@@ -34947,6 +35411,22 @@
    "blank": "pistola"
   }
  ],
+ "w|pittore": [
+  {
+   "text": "In gita Andrea ha visto la casa natale di un famoso pittore del Rinascimento.",
+   "en": "On the school trip Andrea saw the birthplace of a famous Renaissance painter.",
+   "ko": "견학에서 안드레아는 유명한 르네상스 화가의 생가를 봤어요.",
+   "blank": "pittore",
+   "src": "made"
+  },
+  {
+   "text": "Il pittore preferito di Martina è Caravaggio, per i suoi giochi di luce.",
+   "en": "Martina's favourite painter is Caravaggio, for his play of light.",
+   "ko": "마르티나가 가장 좋아하는 화가는 빛을 다루는 솜씨 때문에 카라바조예요.",
+   "blank": "pittore",
+   "src": "made"
+  }
+ ],
  "w|più": [
   {
    "text": "Non ne posso più.",
@@ -35290,6 +35770,22 @@
    "en": "Sara pumps up her bike tire with the pump she keeps under her desk.",
    "ko": "사라는 책상 밑에 둔 펌프로 자전거 바퀴에 바람을 넣어요.",
    "blank": "pompa",
+   "src": "made"
+  }
+ ],
+ "w|pompare": [
+  {
+   "text": "Prima della gita in bici, Andrea deve pompare le gomme nel cortile della scuola.",
+   "en": "Before the bike trip, Andrea has to pump up his tyres in the school yard.",
+   "ko": "자전거 견학 전에 안드레아는 학교 마당에서 바퀴에 바람을 넣어야 해요.",
+   "blank": "pompare",
+   "src": "made"
+  },
+  {
+   "text": "Per la scultura in carta, Martina deve pompare aria in un palloncino.",
+   "en": "For the paper sculpture, Martina has to pump air into a balloon.",
+   "ko": "종이 조각을 만들려고 마르티나는 풍선에 바람을 넣어야 해요.",
+   "blank": "pompare",
    "src": "made"
   }
  ],
@@ -40201,6 +40697,22 @@
    "blank": "rilassare"
   }
  ],
+ "w|rilevante": [
+  {
+   "text": "Il professore dice ad Andrea che quel dettaglio non è rilevante per la risposta.",
+   "en": "The teacher tells Andrea that the detail isn't relevant to the answer.",
+   "ko": "선생님은 안드레아에게 그 내용은 답과 관련이 없다고 말해요.",
+   "blank": "rilevante",
+   "src": "made"
+  },
+  {
+   "text": "Per l'insegnante, la scelta dei colori di Martina è più rilevante del disegno.",
+   "en": "For the teacher, Martina's choice of colours is more relevant than the drawing.",
+   "ko": "선생님에게는 마르티나의 그림 실력보다 색 선택이 더 중요해요.",
+   "blank": "rilevante",
+   "src": "made"
+  }
+ ],
  "w|rilevare": [
   {
    "text": "L'ispettore sanitario non ha rilevato nessun problema nella cucina di Stefano.",
@@ -41579,6 +42091,22 @@
    "en": "The sack is too heavy.",
    "ko": "이 자루는 너무 무거워.",
    "blank": "sacco"
+  }
+ ],
+ "w|sacerdote": [
+  {
+   "text": "Nella scuola cattolica di Andrea, un sacerdote insegna religione.",
+   "en": "At Andrea's Catholic school, a priest teaches religion.",
+   "ko": "안드레아가 다니는 가톨릭 학교에서는 신부님이 종교를 가르쳐요.",
+   "blank": "sacerdote",
+   "src": "made"
+  },
+  {
+   "text": "Martina ha dipinto un sacerdote che benedice i campi in primavera.",
+   "en": "Martina painted a priest blessing the fields in spring.",
+   "ko": "마르티나는 봄에 들판을 축복하는 사제를 그렸어요.",
+   "blank": "sacerdote",
+   "src": "made"
   }
  ],
  "w|sacrificare": [
@@ -43159,6 +43687,22 @@
    "blank": "scorso"
   }
  ],
+ "w|scorta": [
+  {
+   "text": "Andrea tiene sempre una scorta di matite nello zaino per i compagni distratti.",
+   "en": "Andrea always keeps a supply of pencils in his backpack for forgetful classmates.",
+   "ko": "안드레아는 깜빡하는 친구들을 위해 가방에 연필을 늘 넉넉히 넣어 다녀요.",
+   "blank": "scorta",
+   "src": "made"
+  },
+  {
+   "text": "Martina tiene una scorta di colori nell'armadietto per non restare mai senza.",
+   "en": "Martina keeps a stock of paints in her locker so she's never without.",
+   "ko": "마르티나는 물감이 떨어지지 않도록 사물함에 넉넉히 쟁여 둬요.",
+   "blank": "scorta",
+   "src": "made"
+  }
+ ],
  "w|scortare": [
   {
    "text": "La polizia deve scortare l'ospite importante.",
@@ -43202,6 +43746,22 @@
    "en": "During the evacuation drill, Martina explains what to do in case of an earthquake tremor.",
    "ko": "대피 훈련 때 마르티나는 지진이 나면 어떻게 해야 하는지 설명해요.",
    "blank": "scossa",
+   "src": "made"
+  }
+ ],
+ "w|scozzese": [
+  {
+   "text": "Per Carnevale Andrea si è vestito con un kilt scozzese prestato dallo zio.",
+   "en": "For Carnival Andrea dressed up in a Scottish kilt borrowed from his uncle.",
+   "ko": "카니발에 안드레아는 삼촌에게 빌린 스코틀랜드 킬트를 입었어요.",
+   "blank": "scozzese",
+   "src": "made"
+  },
+  {
+   "text": "Per la natura morta, Martina mette sul tavolo una coperta scozzese a quadri.",
+   "en": "For the still life, Martina puts a Scottish tartan blanket on the table.",
+   "ko": "정물화를 위해 마르티나는 탁자에 스코틀랜드 체크무늬 담요를 깔아요.",
+   "blank": "scozzese",
    "src": "made"
   }
  ],
@@ -44203,6 +44763,22 @@
    "blank": "serve"
   }
  ],
+ "w|servitore": [
+  {
+   "text": "Nella commedia di Goldoni, Andrea interpreta un servitore furbo.",
+   "en": "In the Goldoni comedy, Andrea plays a cunning servant.",
+   "ko": "골도니 희극에서 안드레아는 꾀 많은 하인 역을 맡아요.",
+   "blank": "servitore",
+   "src": "made"
+  },
+  {
+   "text": "Nel quadro di Martina, un servitore porta un vassoio di frutta a una dama.",
+   "en": "In Martina's painting, a servant brings a tray of fruit to a lady.",
+   "ko": "마르티나의 그림에서 하인이 귀부인에게 과일 쟁반을 가져다줘요.",
+   "blank": "servitore",
+   "src": "made"
+  }
+ ],
  "w|servizio": [
   {
    "text": "Ottimo servizio, torniamo.",
@@ -44315,6 +44891,22 @@
    "en": "Drink water if you are thirsty.",
    "ko": "목마르면 물을 마셔.",
    "blank": "sete"
+  }
+ ],
+ "w|setta": [
+  {
+   "text": "A storia Andrea studia una setta medievale che viveva in povertà sulle montagne.",
+   "en": "In history Andrea studies a medieval sect that lived in poverty in the mountains.",
+   "ko": "역사 시간에 안드레아는 산속에서 가난하게 살던 중세 종파를 공부해요.",
+   "blank": "setta",
+   "src": "made"
+  },
+  {
+   "text": "L'insegnante scherza che gli studenti come Martina formano una setta di amanti del blu.",
+   "en": "The teacher jokes that students like Martina form a sect of blue lovers.",
+   "ko": "선생님은 마르티나 같은 학생들이 파란색 숭배 종파를 이루고 있다고 농담해요.",
+   "blank": "setta",
+   "src": "made"
   }
  ],
  "w|settanta": [
@@ -44637,6 +45229,22 @@
    "en": "I'd say yes.",
    "ko": "나는 그렇다고 봐.",
    "blank": "sì"
+  }
+ ],
+ "w|sicario": [
+  {
+   "text": "Nel film visto a scuola, un sicario cambia idea all'ultimo momento, e Andrea ne discute con i compagni.",
+   "en": "In the film watched at school, a hitman changes his mind at the last moment, and Andrea discusses it with his classmates.",
+   "ko": "학교에서 본 영화에서 청부 살인업자가 마지막 순간에 마음을 바꾸고, 안드레아는 친구들과 그 이야기를 해요.",
+   "blank": "sicario",
+   "src": "made"
+  },
+  {
+   "text": "Per il fumetto di fine corso, Martina ha inventato un sicario che si innamora della sua vittima.",
+   "en": "For her end-of-course comic, Martina invented a hitman who falls in love with his target.",
+   "ko": "수업 마지막 만화 과제로 마르티나는 표적과 사랑에 빠지는 청부 살인업자를 만들어 냈어요.",
+   "blank": "sicario",
+   "src": "made"
   }
  ],
  "w|siccome": [
@@ -49331,6 +49939,22 @@
    "blank": "teoria"
   }
  ],
+ "w|teppista": [
+  {
+   "text": "Il preside ha scoperto chi era il teppista che aveva rotto i vetri della palestra, e non era Andrea.",
+   "en": "The head found out who the hooligan who broke the gym windows was, and it wasn't Andrea.",
+   "ko": "교장 선생님은 체육관 유리를 깬 불량배를 찾아냈는데 안드레아는 아니었어요.",
+   "blank": "teppista",
+   "src": "made"
+  },
+  {
+   "text": "Martina ha dipinto un murale nel sottopasso dove prima un teppista scriveva parolacce.",
+   "en": "Martina painted a mural in the underpass where a hooligan used to write swear words.",
+   "ko": "마르티나는 예전에 불량배가 욕을 써 놓던 지하도에 벽화를 그렸어요.",
+   "blank": "teppista",
+   "src": "made"
+  }
+ ],
  "w|terapia": [
   {
    "text": "Inizia una nuova terapia la settimana prossima.",
@@ -49917,6 +50541,22 @@
    "en": "I took my jacket off.",
    "ko": "재킷을 벗었어.",
    "blank": "tolto"
+  }
+ ],
+ "w|tollerare": [
+  {
+   "text": "Il professore di Andrea non tollera i ritardi e chiude la porta alle otto in punto.",
+   "en": "Andrea's teacher won't tolerate lateness and shuts the door at eight on the dot.",
+   "ko": "안드레아의 선생님은 지각을 참지 않아서 여덟 시 정각에 문을 닫아요.",
+   "blank": "tollera",
+   "src": "made"
+  },
+  {
+   "text": "Martina non tollera chi tocca i suoi pennelli senza chiedere.",
+   "en": "Martina won't tolerate people touching her brushes without asking.",
+   "ko": "마르티나는 허락 없이 자기 붓을 만지는 사람을 참지 못해요.",
+   "blank": "tollera",
+   "src": "made"
   }
  ],
  "w|tomba": [
