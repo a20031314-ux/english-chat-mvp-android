@@ -1,10 +1,10 @@
 {
  "_": "변경 감시(scripts/watch/watch.mjs)의 기준값 — 손으로 고치지 않는다. last = 마지막으로 본 main 커밋, metrics = 그때 잰 값.",
- "last": "2e6b75cd27a1fd0a3c7ca6f6fda76fcc252deba7",
- "at": "2026-11-09T10:23:08.536Z",
+ "last": "40abdf586cb918bef66e476780d861f99a8aaa10",
+ "at": "2026-11-09T16:24:12.987Z",
  "screensFiredAt": "2026-11-09T04:25:40.547Z",
  "metrics": {
-  "commit": "2e6b75c",
+  "commit": "40abdf5",
   "tables": {
    "costs": {
     "요금별 한 달 비용 (30일) · 무료(2.75 이하 앱) · 하루 한도": "대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번",
@@ -744,8 +744,8 @@
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `quizBreak` · 부르는 곳": "My 탭 `my` · `studyMap/InlineQuiz.tsx`",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `roomLeave` · 언제": "공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `roomLeave` · 부르는 곳": "Room 탭 `room` · `rooms/RoomsScreen.tsx`",
-    "전면 광고 (건너뛰기는 AdMob이 붙임) · `skillCheckEnd` · 언제": "Logbank 📏 실력 확인(14일마다)의 결과(지난번 → 이번)를 보고 닫기를 누를 때 — 시험 도중·▶를 누를 때·처음 측정은 없음(2026-11-09)",
-    "전면 광고 (건너뛰기는 AdMob이 붙임) · `skillCheckEnd` · 부르는 곳": "My 탭 `my` · `studyMap/Logbank.tsx`",
+    "전면 광고 (건너뛰기는 AdMob이 붙임) · `skillCheckEnd` · 언제": "오늘의 학습 📏 실력 확인 줄(14일마다)의 결과(지난번 → 이번)를 보고 닫기를 누를 때 — 시험 도중·줄을 누를 때·처음 측정은 없음(2026-11-10)",
+    "전면 광고 (건너뛰기는 AdMob이 붙임) · `skillCheckEnd` · 부르는 곳": "My 탭 `my` · `studyMap/TodayCards.tsx`",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `videoLeave` · 언제": "영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때",
     "전면 광고 (건너뛰기는 AdMob이 붙임) · `videoLeave` · 부르는 곳": "영상 학습 탭 `video` · `videoLearning/VideoLearningTab.tsx`",
     "네이티브 광고 (목록 사이·빈 공간, 앱 카드 모양) · `call` · 자리": "`call-live`",
