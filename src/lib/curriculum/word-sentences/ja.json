@@ -337,6 +337,22 @@
    "src": "made"
   }
  ],
+ "w|アドレス": [
+  {
+   "text": "拓也は、メールのアドレスを一文字間違えて送ってしまった。",
+   "en": "Takuya sent an email with one character of the address wrong.",
+   "ko": "다쿠야는 메일 주소를 한 글자 틀리게 보내 버렸어요.",
+   "blank": "アドレス",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、プールのお知らせを受け取るためにメールのアドレスを登録した。",
+   "en": "Keiko registered her email address to receive notices from the pool.",
+   "ko": "게이코는 수영장 공지를 받으려고 메일 주소를 등록했어요.",
+   "blank": "アドレス",
+   "src": "made"
+  }
+ ],
  "w|あなた": [
   {
    "text": "あなた、来るの？",
@@ -1434,6 +1450,22 @@
    "en": "Sakura often meets the child from upstairs in the elevator.",
    "ko": "사쿠라는 엘리베이터에서 위층 아이와 자주 마주쳐요.",
    "blank": "エレベーター",
+   "src": "made"
+  }
+ ],
+ "w|エンジニア": [
+  {
+   "text": "拓也の隣の席には、無口なエンジニアが座っている。",
+   "en": "A quiet engineer sits at the desk next to Takuya.",
+   "ko": "다쿠야 옆자리에는 말수 적은 엔지니어가 앉아 있어요.",
+   "blank": "エンジニア",
+   "src": "made"
+  },
+  {
+   "text": "プールのろ過装置は、専門のエンジニアが毎月点検している。",
+   "en": "A specialist engineer inspects the pool's filtration system every month.",
+   "ko": "수영장 여과 장치는 전문 엔지니어가 매달 점검해요.",
+   "blank": "エンジニア",
    "src": "made"
   }
  ],
@@ -2809,6 +2841,22 @@
    "blank": "クラス"
   }
  ],
+ "w|グラス": [
+  {
+   "text": "接待の席で、拓也は取引先のグラスにビールを注いだ。",
+   "en": "At the business dinner, Takuya poured beer into the client's glass.",
+   "ko": "접대 자리에서 다쿠야는 거래처 사람 잔에 맥주를 따랐어요.",
+   "blank": "グラス",
+   "src": "made"
+  },
+  {
+   "text": "プールサイドでは、割れると危ないのでグラスは使えない。",
+   "en": "Glasses aren't allowed at the poolside because they're dangerous if they break.",
+   "ko": "수영장 가장자리에서는 깨지면 위험해서 유리잔을 쓸 수 없어요.",
+   "blank": "グラス",
+   "src": "made"
+  }
+ ],
  "w|クラブ": [
   {
    "text": "テニスクラブに入った。",
@@ -4020,6 +4068,22 @@
    "en": "Keiko said \"Goodbye\" in her heart to the broken old shelf.",
    "ko": "게이코는 망가진 낡은 선반에 마음속으로 \"안녕\" 하고 말했어요.",
    "blank": "さよなら",
+   "src": "made"
+  }
+ ],
+ "w|サラダ": [
+  {
+   "text": "忙しい日の拓也の昼ごはんは、デスクで食べるサラダだけだ。",
+   "en": "On busy days, Takuya's lunch is just a salad eaten at his desk.",
+   "ko": "바쁜 날 다쿠야의 점심은 책상에서 먹는 샐러드뿐이에요.",
+   "blank": "サラダ",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、レッスンの後に家でたっぷりのサラダを作った。",
+   "en": "After her lesson, Keiko made a big salad at home.",
+   "ko": "게이코는 레슨 후 집에서 샐러드를 듬뿍 만들었어요.",
+   "blank": "サラダ",
    "src": "made"
   }
  ],
@@ -6163,6 +6227,22 @@
    "blank": "チェック"
   }
  ],
+ "w|チキン": [
+  {
+   "text": "拓也は昼休みに、コンビニのチキンを急いで食べた。",
+   "en": "At lunch break, Takuya hurriedly ate chicken from the convenience store.",
+   "ko": "다쿠야는 점심시간에 편의점 치킨을 허겁지겁 먹었어요.",
+   "blank": "チキン",
+   "src": "made"
+  },
+  {
+   "text": "泳いだ後、恵子はおなかがすいてチキンのサンドイッチを買った。",
+   "en": "After swimming, Keiko was hungry and bought a chicken sandwich.",
+   "ko": "수영하고 나서 게이코는 배가 고파 치킨 샌드위치를 샀어요.",
+   "blank": "チキン",
+   "src": "made"
+  }
+ ],
  "w|チケット": [
   {
    "text": "チケットを買ったよ。",
@@ -6619,6 +6699,22 @@
    "blank": "デジタル"
   }
  ],
+ "w|デスク": [
+  {
+   "text": "拓也のデスクの上は、いつも書類が山になっている。",
+   "en": "Takuya's desk always has a mountain of papers on it.",
+   "ko": "다쿠야의 책상 위는 늘 서류가 산더미예요.",
+   "blank": "デスク",
+   "src": "made"
+  },
+  {
+   "text": "プールの受付のデスクで、恵子は会員カードを見せた。",
+   "en": "At the pool's front desk, Keiko showed her membership card.",
+   "ko": "수영장 접수 데스크에서 게이코는 회원 카드를 보여 줬어요.",
+   "blank": "デスク",
+   "src": "made"
+  }
+ ],
  "w|テスト": [
   {
    "text": "テスト、どうだった？",
@@ -7066,6 +7162,22 @@
    "en": "\"How many of these eggs do you sell a day?\" asked an elderly regular.",
    "ko": "\"이 달걀 하루에 얼마나 팔려?\" 하고 단골 할머니가 물었어요.",
    "blank": "どのくらい",
+   "src": "made"
+  }
+ ],
+ "w|トマト": [
+  {
+   "text": "拓也の会社は、トマトを使った新しいソースを開発している。",
+   "en": "Takuya's company is developing a new sauce made with tomatoes.",
+   "ko": "다쿠야의 회사는 토마토를 쓴 새 소스를 개발하고 있어요.",
+   "blank": "トマト",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、プールの売店で冷たいトマトジュースを飲んだ。",
+   "en": "Keiko drank cold tomato juice at the pool's snack stand.",
+   "ko": "게이코는 수영장 매점에서 차가운 토마토 주스를 마셨어요.",
+   "blank": "トマト",
    "src": "made"
   }
  ],
@@ -7893,6 +8005,22 @@
    "en": "Don't make fun of me.",
    "ko": "바보 취급하지 마.",
    "blank": "バカ"
+  }
+ ],
+ "w|バグ": [
+  {
+   "text": "新しいアプリにバグが見つかり、拓也の部署は大騒ぎになった。",
+   "en": "A bug was found in the new app, and Takuya's department was in an uproar.",
+   "ko": "새 앱에서 버그가 발견돼 다쿠야의 부서는 난리가 났어요.",
+   "blank": "バグ",
+   "src": "made"
+  },
+  {
+   "text": "プールの予約サイトにバグがあって、恵子は予約できなかった。",
+   "en": "There was a bug on the pool's booking site, so Keiko couldn't make a reservation.",
+   "ko": "수영장 예약 사이트에 버그가 있어서 게이코는 예약을 못 했어요.",
+   "blank": "バグ",
+   "src": "made"
   }
  ],
  "w|はず": [
@@ -8897,6 +9025,22 @@
    "blank": "プロジェクト"
   }
  ],
+ "w|プロセス": [
+  {
+   "text": "拓也の会社では、注文から発送までのプロセスを見直している。",
+   "en": "Takuya's company is reviewing its process from order to shipping.",
+   "ko": "다쿠야의 회사는 주문부터 발송까지의 과정을 재검토하고 있어요.",
+   "blank": "プロセス",
+   "src": "made"
+  },
+  {
+   "text": "クロールを覚えるプロセスは、恵子が思ったより長かった。",
+   "en": "The process of learning the crawl took longer than Keiko expected.",
+   "ko": "자유형을 익히는 과정은 게이코가 생각했던 것보다 길었어요.",
+   "blank": "プロセス",
+   "src": "made"
+  }
+ ],
  "w|ブロック": [
   {
    "text": "道をブロックしてる。",
@@ -9740,6 +9884,22 @@
    "en": "Yoko told her son off about his table manners.",
    "ko": "요코는 식사 중 예절에 대해 아들에게 주의를 줬어요.",
    "blank": "マナー",
+   "src": "made"
+  }
+ ],
+ "w|マネージャー": [
+  {
+   "text": "拓也は、新しいマネージャーに仕事の進み具合を報告した。",
+   "en": "Takuya reported his progress to the new manager.",
+   "ko": "다쿠야는 새 매니저에게 일 진행 상황을 보고했어요.",
+   "blank": "マネージャー",
+   "src": "made"
+  },
+  {
+   "text": "恵子の娘は、高校の水泳部のマネージャーをしている。",
+   "en": "Keiko's daughter is the manager of her high school swim team.",
+   "ko": "게이코의 딸은 고등학교 수영부 매니저를 해요.",
+   "blank": "マネージャー",
    "src": "made"
   }
  ],
@@ -10968,6 +11128,22 @@
    "en": "The medicine inventory can be seen in real time on the head office system.",
    "ko": "약 재고는 본부 시스템에서 실시간으로 알 수 있어요.",
    "blank": "リアルタイム",
+   "src": "made"
+  }
+ ],
+ "w|リクエスト": [
+  {
+   "text": "お客さんからのリクエストに応えて、拓也は資料を作り直した。",
+   "en": "In response to the customer's request, Takuya redid the materials.",
+   "ko": "고객의 요청에 맞춰 다쿠야는 자료를 다시 만들었어요.",
+   "blank": "リクエスト",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、夜のクラスを増やしてほしいとリクエストを出した。",
+   "en": "Keiko submitted a request for more evening classes.",
+   "ko": "게이코는 저녁반을 늘려 달라고 요청을 냈어요.",
+   "blank": "リクエスト",
    "src": "made"
   }
  ],
@@ -16659,6 +16835,22 @@
    "blank": "公共"
   }
  ],
+ "w|公務員": [
+  {
+   "text": "拓也の兄は、市役所で働く公務員だ。",
+   "en": "Takuya's older brother is a civil servant working at city hall.",
+   "ko": "다쿠야의 형은 시청에서 일하는 공무원이에요.",
+   "blank": "公務員",
+   "src": "made"
+  },
+  {
+   "text": "恵子のクラスには、引退した公務員のおじいさんもいる。",
+   "en": "Keiko's class includes an elderly man who is a retired civil servant.",
+   "ko": "게이코의 반에는 은퇴한 공무원 할아버지도 있어요.",
+   "blank": "公務員",
+   "src": "made"
+  }
+ ],
  "w|公園": [
   {
    "text": "公園で遊ぼう。",
@@ -16951,6 +17143,22 @@
    "blank": "再び"
   }
  ],
+ "w|再度": [
+  {
+   "text": "拓也は、間違いを直した見積書を再度お客さんに送った。",
+   "en": "Takuya sent the corrected estimate to the customer once again.",
+   "ko": "다쿠야는 틀린 곳을 고친 견적서를 다시 한번 고객에게 보냈어요.",
+   "blank": "再度",
+   "src": "made"
+  },
+  {
+   "text": "恵子はターンに失敗して、コーチに再度やり直すように言われた。",
+   "en": "Keiko messed up her turn, and the coach told her to do it again.",
+   "ko": "게이코는 턴을 실패해서 코치에게 다시 해 보라는 말을 들었어요.",
+   "blank": "再度",
+   "src": "made"
+  }
+ ],
  "w|再現": [
   {
    "text": "実験を再現できた。",
@@ -17023,6 +17231,22 @@
    "en": "This spot is the most dangerous.",
    "ko": "여기가 가장 위험해.",
    "blank": "最も"
+  }
+ ],
+ "w|最中": [
+  {
+   "text": "会議の最中に、拓也のスマホが鳴ってしまった。",
+   "en": "Takuya's phone went off in the middle of the meeting.",
+   "ko": "회의 도중에 다쿠야의 스마트폰이 울려 버렸어요.",
+   "blank": "最中",
+   "src": "made"
+  },
+  {
+   "text": "恵子が泳いでいる最中に、急に雨が降り出した。",
+   "en": "It suddenly started raining while Keiko was in the middle of swimming.",
+   "ko": "게이코가 수영하는 도중에 갑자기 비가 내리기 시작했어요.",
+   "blank": "最中",
+   "src": "made"
   }
  ],
  "w|最低": [
@@ -17699,6 +17923,22 @@
    "blank": "分野"
   }
  ],
+ "w|分間": [
+  {
+   "text": "朝礼は、毎朝たった五分間で終わる。",
+   "en": "The morning meeting ends in just five minutes every day.",
+   "ko": "조례는 매일 아침 딱 오 분 만에 끝나요.",
+   "blank": "分間",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、休まずに三十分間泳ぎ続けた。",
+   "en": "Keiko kept swimming for thirty minutes without stopping.",
+   "ko": "게이코는 쉬지 않고 삼십 분 동안 계속 헤엄쳤어요.",
+   "blank": "分間",
+   "src": "made"
+  }
+ ],
  "w|分離": [
   {
    "text": "事実と意見の分離は、記事を書くときの基本だ。",
@@ -18303,6 +18543,22 @@
    "src": "made"
   }
  ],
+ "w|副業": [
+  {
+   "text": "拓也の会社では、副業が認められている。",
+   "en": "At Takuya's company, side jobs are permitted.",
+   "ko": "다쿠야의 회사에서는 부업이 허용돼요.",
+   "blank": "副業",
+   "src": "made"
+  },
+  {
+   "text": "コーチは、週末だけ副業で子どもに水泳を教えている。",
+   "en": "The coach teaches children swimming on weekends as a side job.",
+   "ko": "코치는 주말에만 부업으로 아이들에게 수영을 가르쳐요.",
+   "blank": "副業",
+   "src": "made"
+  }
+ ],
  "w|割れる": [
   {
    "text": "議長は意見が割れるかも知れないという可能性を除外しはしなかった。",
@@ -18561,6 +18817,22 @@
    "en": "I'll help if you're stuck.",
    "ko": "힘들면 도와줄게.",
    "blank": "助ける"
+  }
+ ],
+ "w|助手": [
+  {
+   "text": "拓也は、研究所の助手として働いた経験がある。",
+   "en": "Takuya has experience working as an assistant at a research institute.",
+   "ko": "다쿠야는 연구소 조수로 일한 경험이 있어요.",
+   "blank": "助手",
+   "src": "made"
+  },
+  {
+   "text": "コーチの助手が、恵子にビート板を渡してくれた。",
+   "en": "The coach's assistant handed Keiko a kickboard.",
+   "ko": "코치의 조수가 게이코에게 킥판을 건네줬어요.",
+   "blank": "助手",
+   "src": "made"
   }
  ],
  "w|努力": [
@@ -18897,6 +19169,22 @@
    "src": "made"
   }
  ],
+ "w|勤め": [
+  {
+   "text": "会社勤めを始めて、拓也は朝早く起きるのに慣れた。",
+   "en": "Since starting office work, Takuya has gotten used to getting up early.",
+   "ko": "회사 생활을 시작하고 다쿠야는 아침 일찍 일어나는 데 익숙해졌어요.",
+   "blank": "勤め",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、勤めの帰りに週に二回プールに寄る。",
+   "en": "Keiko stops by the pool twice a week on her way home from work.",
+   "ko": "게이코는 퇴근길에 일주일에 두 번 수영장에 들러요.",
+   "blank": "勤め",
+   "src": "made"
+  }
+ ],
  "w|勤務": [
   {
    "text": "今日は勤務が長い。",
@@ -19203,6 +19491,22 @@
    "en": "I'm counting on your help.",
    "ko": "협력 좀 부탁해.",
    "blank": "協力"
+  }
+ ],
+ "w|協定": [
+  {
+   "text": "拓也の会社は、海外の会社と新しい協定を結んだ。",
+   "en": "Takuya's company signed a new agreement with an overseas firm.",
+   "ko": "다쿠야의 회사는 해외 회사와 새로운 협정을 맺었어요.",
+   "blank": "協定",
+   "src": "made"
+  },
+  {
+   "text": "市と学校の協定で、小学生もこのプールを使える。",
+   "en": "Under an agreement between the city and the school, elementary students can also use this pool.",
+   "ko": "시와 학교의 협정으로 초등학생도 이 수영장을 쓸 수 있어요.",
+   "blank": "協定",
+   "src": "made"
   }
  ],
  "w|協議": [
@@ -19546,6 +19850,22 @@
    "en": "Aoi's company also publishes specialized books on nuclear energy.",
    "ko": "아오이의 회사는 원자력에 관한 전문 서적도 출판하고 있어요.",
    "blank": "原子力",
+   "src": "made"
+  }
+ ],
+ "w|原理": [
+  {
+   "text": "新人研修で、拓也は機械が動く原理を一から学んだ。",
+   "en": "In new-hire training, Takuya learned from scratch the principle of how the machine works.",
+   "ko": "신입 연수에서 다쿠야는 기계가 움직이는 원리를 처음부터 배웠어요.",
+   "blank": "原理",
+   "src": "made"
+  },
+  {
+   "text": "コーチは、水に浮く原理をわかりやすく説明してくれた。",
+   "en": "The coach clearly explained the principle of how you float in water.",
+   "ko": "코치는 물에 뜨는 원리를 알기 쉽게 설명해 줬어요.",
+   "blank": "原理",
    "src": "made"
   }
  ],
@@ -20211,6 +20531,22 @@
    "en": "I cleaned the kitchen.",
    "ko": "부엌을 깨끗이 했어.",
    "blank": "台所"
+  }
+ ],
+ "w|台詞": [
+  {
+   "text": "拓也は、プレゼンの台詞を鏡の前で何度も練習した。",
+   "en": "Takuya practiced the lines of his presentation over and over in front of the mirror.",
+   "ko": "다쿠야는 발표 대사를 거울 앞에서 몇 번이고 연습했어요.",
+   "blank": "台詞",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、泳ぎながら劇の台詞を頭の中で繰り返した。",
+   "en": "While swimming, Keiko went over the lines of her play in her head.",
+   "ko": "게이코는 헤엄치면서 연극 대사를 머릿속으로 되뇌었어요.",
+   "blank": "台詞",
+   "src": "made"
   }
  ],
  "w|台風": [
@@ -21071,6 +21407,22 @@
    "blank": "商品"
   }
  ],
+ "w|商売": [
+  {
+   "text": "拓也の祖父は、駅前で小さな商売をしていた。",
+   "en": "Takuya's grandfather ran a small business in front of the station.",
+   "ko": "다쿠야의 할아버지는 역 앞에서 작은 장사를 했어요.",
+   "blank": "商売",
+   "src": "made"
+  },
+  {
+   "text": "プールの前のかき氷屋は、夏だけの商売だ。",
+   "en": "The shaved-ice stand in front of the pool is a summer-only business.",
+   "ko": "수영장 앞 빙수 가게는 여름 한철 장사예요.",
+   "blank": "商売",
+   "src": "made"
+  }
+ ],
  "w|商店": [
   {
    "text": "会場の周りには、昔ながらの商店が並んでいる。",
@@ -21891,6 +22243,22 @@
    "en": "I like regional flavors.",
    "ko": "지방 맛이 좋아.",
    "blank": "地方"
+  }
+ ],
+ "w|地点": [
+  {
+   "text": "拓也は、新しい店を出す地点を地図で何か所か比べた。",
+   "en": "Takuya compared several spots on the map for opening a new store.",
+   "ko": "다쿠야는 새 가게를 낼 지점을 지도에서 몇 군데 비교했어요.",
+   "blank": "地点",
+   "src": "made"
+  },
+  {
+   "text": "コースの真ん中の地点で、恵子は少し足をついて休んだ。",
+   "en": "At the midpoint of the lane, Keiko put her feet down and rested a little.",
+   "ko": "레인 중간 지점에서 게이코는 잠깐 발을 딛고 쉬었어요.",
+   "blank": "地点",
+   "src": "made"
   }
  ],
  "w|地獄": [
@@ -24043,6 +24411,22 @@
    "blank": "字"
   }
  ],
+ "w|字幕": [
+  {
+   "text": "拓也の会社では、海外向けの動画に字幕をつけている。",
+   "en": "Takuya's company adds subtitles to videos for overseas viewers.",
+   "ko": "다쿠야의 회사에서는 해외용 영상에 자막을 달아요.",
+   "blank": "字幕",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、水泳の大会の映像を字幕つきで見た。",
+   "en": "Keiko watched footage of a swimming competition with subtitles.",
+   "ko": "게이코는 수영 대회 영상을 자막을 켜고 봤어요.",
+   "blank": "字幕",
+   "src": "made"
+  }
+ ],
  "w|存在": [
   {
    "text": "存在感あるね。",
@@ -24677,6 +25061,22 @@
    "en": "They're someone with solid results.",
    "ko": "확실한 실적이 있는 사람이야.",
    "blank": "実績"
+  }
+ ],
+ "w|実習": [
+  {
+   "text": "この夏、拓也の部署に大学生が実習に来た。",
+   "en": "This summer, a university student came to Takuya's department for an internship.",
+   "ko": "이번 여름 다쿠야의 부서에 대학생이 실습하러 왔어요.",
+   "blank": "実習",
+   "src": "made"
+  },
+  {
+   "text": "プールでは、看護学校の学生が救助の実習をしていた。",
+   "en": "At the pool, nursing school students were doing rescue practice.",
+   "ko": "수영장에서는 간호학교 학생들이 구조 실습을 하고 있었어요.",
+   "blank": "実習",
+   "src": "made"
   }
  ],
  "w|実行": [
@@ -25462,6 +25862,22 @@
    "en": "When they surveyed club preferences, only a few students chose the tea ceremony club.",
    "ko": "동아리 희망을 받아 보니 다도부를 고른 학생은 소수였어요.",
    "blank": "少数",
+   "src": "made"
+  }
+ ],
+ "w|就任": [
+  {
+   "text": "新しい部長の就任を祝って、拓也たちは食事会を開いた。",
+   "en": "Takuya and his coworkers held a dinner to celebrate the new department head taking office.",
+   "ko": "새 부장님의 취임을 축하하며 다쿠야네는 식사 모임을 열었어요.",
+   "blank": "就任",
+   "src": "made"
+  },
+  {
+   "text": "新しいコーチの就任で、クラスの雰囲気が明るくなった。",
+   "en": "With the new coach taking over, the class atmosphere brightened.",
+   "ko": "새 코치가 부임하면서 반 분위기가 밝아졌어요.",
+   "blank": "就任",
    "src": "made"
   }
  ],
@@ -30899,6 +31315,22 @@
    "src": "made"
   }
  ],
+ "w|放射線": [
+  {
+   "text": "拓也は、病院向けの放射線の検査機械を売る営業をしている。",
+   "en": "Takuya works in sales, selling radiation testing machines to hospitals.",
+   "ko": "다쿠야는 병원용 방사선 검사 기계를 파는 영업을 해요.",
+   "blank": "放射線",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、プールの帰りに病院で放射線を使った検査を受けた。",
+   "en": "On her way back from the pool, Keiko had a test using radiation at the hospital.",
+   "ko": "게이코는 수영장에서 돌아오는 길에 병원에서 방사선을 이용한 검사를 받았어요.",
+   "blank": "放射線",
+   "src": "made"
+  }
+ ],
  "w|放棄": [
   {
    "text": "相続を放棄する場合の書類について、市民から質問があった。",
@@ -31105,6 +31537,22 @@
    "en": "The church bells are ringing.",
    "ko": "교회 종이 울리고 있어.",
    "blank": "教会"
+  }
+ ],
+ "w|教員": [
+  {
+   "text": "拓也の会社は、教員向けの研修資料も作っている。",
+   "en": "Takuya's company also makes training materials for teachers.",
+   "ko": "다쿠야의 회사는 교원용 연수 자료도 만들어요.",
+   "blank": "教員",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、小学校の教員として水泳の授業も受け持っている。",
+   "en": "As an elementary school teacher, Keiko also teaches swimming classes.",
+   "ko": "게이코는 초등학교 교원으로서 수영 수업도 맡고 있어요.",
+   "blank": "教員",
+   "src": "made"
   }
  ],
  "w|教室": [
@@ -32311,6 +32759,22 @@
    "blank": "時点"
   }
  ],
+ "w|時給": [
+  {
+   "text": "学生のアルバイトの時給を上げることが、会議で決まった。",
+   "en": "The meeting decided to raise the hourly wage for student part-timers.",
+   "ko": "회의에서 학생 아르바이트 시급을 올리기로 결정했어요.",
+   "blank": "時給",
+   "src": "made"
+  },
+  {
+   "text": "恵子の娘は、プールの監視員のアルバイトの時給を調べた。",
+   "en": "Keiko's daughter looked up the hourly wage for a part-time lifeguard job at the pool.",
+   "ko": "게이코의 딸은 수영장 안전요원 아르바이트 시급을 알아봤어요.",
+   "blank": "時給",
+   "src": "made"
+  }
+ ],
  "w|時計": [
   {
    "text": "時計が止まっている。",
@@ -32781,6 +33245,22 @@
    "en": "Starting Monday is fine.",
    "ko": "월요일부터면 돼.",
    "blank": "月曜日"
+  }
+ ],
+ "w|月末": [
+  {
+   "text": "月末になると、拓也の部署は請求書の処理で忙しくなる。",
+   "en": "At the end of the month, Takuya's department gets busy processing invoices.",
+   "ko": "월말이 되면 다쿠야의 부서는 청구서 처리로 바빠져요.",
+   "blank": "月末",
+   "src": "made"
+  },
+  {
+   "text": "恵子のプールの回数券は、今月の月末で切れる。",
+   "en": "Keiko's pool ticket book expires at the end of this month.",
+   "ko": "게이코의 수영장 회수권은 이번 달 말에 끝나요.",
+   "blank": "月末",
+   "src": "made"
   }
  ],
  "w|有利": [
@@ -35357,6 +35837,22 @@
    "blank": "水着"
   }
  ],
+ "w|水道": [
+  {
+   "text": "給湯室の水道から、変な音がしている。",
+   "en": "A strange noise is coming from the tap in the office kitchenette.",
+   "ko": "탕비실 수도에서 이상한 소리가 나요.",
+   "blank": "水道",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、更衣室の水道で水着を軽くすすいだ。",
+   "en": "Keiko lightly rinsed her swimsuit at the tap in the changing room.",
+   "ko": "게이코는 탈의실 수도에서 수영복을 가볍게 헹궜어요.",
+   "blank": "水道",
+   "src": "made"
+  }
+ ],
  "w|氷": [
   {
    "text": "飲み物に氷を入れる。",
@@ -36089,6 +36585,22 @@
    "blank": "海外"
   }
  ],
+ "w|海岸": [
+  {
+   "text": "拓也の会社は、海岸沿いの古いビルの五階にある。",
+   "en": "Takuya's company is on the fifth floor of an old building along the coast.",
+   "ko": "다쿠야의 회사는 해안가 낡은 빌딩 5층에 있어요.",
+   "blank": "海岸",
+   "src": "made"
+  },
+  {
+   "text": "恵子の通うプールは、海岸のすぐそばに建っている。",
+   "en": "The pool Keiko goes to stands right by the coast.",
+   "ko": "게이코가 다니는 수영장은 해안 바로 옆에 있어요.",
+   "blank": "海岸",
+   "src": "made"
+  }
+ ],
  "w|海賊": [
   {
    "text": "翔太は子どもの頃、海賊ごっこばかりして遊んでいた。",
@@ -36751,6 +37263,22 @@
    "blank": "火曜日"
   }
  ],
+ "w|火災": [
+  {
+   "text": "ビルでは年に一度、火災を想定した避難訓練がある。",
+   "en": "Once a year, the building holds an evacuation drill that assumes a fire.",
+   "ko": "빌딩에서는 1년에 한 번 화재를 가정한 대피 훈련이 있어요.",
+   "blank": "火災",
+   "src": "made"
+  },
+  {
+   "text": "プールの隣の建物で火災があり、恵子たちは外に避難した。",
+   "en": "There was a fire in the building next to the pool, and Keiko and the others evacuated outside.",
+   "ko": "수영장 옆 건물에서 화재가 나서 게이코네는 밖으로 대피했어요.",
+   "blank": "火災",
+   "src": "made"
+  }
+ ],
  "w|災害": [
   {
    "text": "災害に備える。",
@@ -36953,6 +37481,22 @@
    "en": "I'll grill the fish.",
    "ko": "생선을 구울 거야.",
    "blank": "焼く"
+  }
+ ],
+ "w|照明": [
+  {
+   "text": "会議室の照明が暗くて、拓也は資料が読みにくかった。",
+   "en": "The meeting room lighting was dim, so Takuya found the documents hard to read.",
+   "ko": "회의실 조명이 어두워서 다쿠야는 자료를 읽기 힘들었어요.",
+   "blank": "照明",
+   "src": "made"
+  },
+  {
+   "text": "夜のプールは、水の中の照明がとてもきれいだ。",
+   "en": "At night, the underwater lighting in the pool is very beautiful.",
+   "ko": "밤의 수영장은 물속 조명이 정말 예뻐요.",
+   "blank": "照明",
+   "src": "made"
   }
  ],
  "w|熱": [
@@ -40439,6 +40983,22 @@
    "blank": "秘密"
   }
  ],
+ "w|秘書": [
+  {
+   "text": "社長の秘書が、拓也に会議の時間の変更を伝えた。",
+   "en": "The president's secretary told Takuya the meeting time had changed.",
+   "ko": "사장님 비서가 다쿠야에게 회의 시간 변경을 알렸어요.",
+   "blank": "秘書",
+   "src": "made"
+  },
+  {
+   "text": "恵子と同じコースで泳ぐ女性は、社長の秘書をしているらしい。",
+   "en": "The woman swimming in the same lane as Keiko is apparently a company president's secretary.",
+   "ko": "게이코와 같은 레인에서 수영하는 여성은 사장 비서를 한대요.",
+   "blank": "秘書",
+   "src": "made"
+  }
+ ],
  "w|移住": [
   {
    "text": "大輔の姉は、海外に移住してもう五年になる。",
@@ -42796,6 +43356,22 @@
    "en": "The new virus poses a threat to older people's health.",
    "ko": "새 바이러스는 고령자 건강에 위협이 돼요.",
    "blank": "脅威",
+   "src": "made"
+  }
+ ],
+ "w|脚本": [
+  {
+   "text": "拓也の同僚は、会社の宣伝動画の脚本を書いた。",
+   "en": "Takuya's coworker wrote the script for the company's promotional video.",
+   "ko": "다쿠야의 동료는 회사 홍보 영상 각본을 썼어요.",
+   "blank": "脚本",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、水泳選手が主人公の映画の脚本に感動した。",
+   "en": "Keiko was moved by the screenplay of a film whose hero is a swimmer.",
+   "ko": "게이코는 수영 선수가 주인공인 영화 각본에 감동했어요.",
+   "blank": "脚本",
    "src": "made"
   }
  ],
@@ -46293,6 +46869,22 @@
    "src": "made"
   }
  ],
+ "w|調達": [
+  {
+   "text": "拓也の仕事は、工場で使う部品の調達だ。",
+   "en": "Takuya's job is procuring parts used in the factory.",
+   "ko": "다쿠야의 일은 공장에서 쓰는 부품 조달이에요.",
+   "blank": "調達",
+   "src": "made"
+  },
+  {
+   "text": "プールの運営会社は、新しいビート板の調達に困っている。",
+   "en": "The company running the pool is having trouble getting new kickboards.",
+   "ko": "수영장 운영 회사는 새 킥판 조달에 애를 먹고 있어요.",
+   "blank": "調達",
+   "src": "made"
+  }
+ ],
  "w|請求": [
   {
    "text": "請求が届いて驚いた。",
@@ -48326,6 +48918,22 @@
    "en": "I turned off my phone's notifications.",
    "ko": "휴대폰 알림을 껐어요.",
    "blank": "通知",
+   "src": "made"
+  }
+ ],
+ "w|通話": [
+  {
+   "text": "拓也は、お客さんとの通話の内容をメモに残した。",
+   "en": "Takuya kept notes on what he discussed in his call with the customer.",
+   "ko": "다쿠야는 고객과의 통화 내용을 메모로 남겼어요.",
+   "blank": "通話",
+   "src": "made"
+  },
+  {
+   "text": "更衣室では、スマホでの通話は禁止されている。",
+   "en": "Phone calls are prohibited in the changing room.",
+   "ko": "탈의실에서는 스마트폰 통화가 금지돼 있어요.",
+   "blank": "通話",
    "src": "made"
   }
  ],
@@ -52039,6 +52647,22 @@
    "blank": "飯"
   }
  ],
+ "w|飲み物": [
+  {
+   "text": "会議の前に、拓也はお客さんの分の飲み物を用意した。",
+   "en": "Before the meeting, Takuya prepared drinks for the visitors.",
+   "ko": "회의 전에 다쿠야는 손님 몫의 음료를 준비했어요.",
+   "blank": "飲み物",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、泳ぐ前に必ず飲み物で水分をとる。",
+   "en": "Keiko always has a drink to hydrate before swimming.",
+   "ko": "게이코는 수영하기 전에 꼭 음료로 수분을 보충해요.",
+   "blank": "飲み物",
+   "src": "made"
+  }
+ ],
  "w|飲む": [
   {
    "text": "コーヒー飲む？",
@@ -52051,6 +52675,22 @@
    "en": "I already drank it.",
    "ko": "이미 마셨어.",
    "blank": "飲んだ"
+  }
+ ],
+ "w|飲食": [
+  {
+   "text": "拓也の会社は、駅ビルの飲食店の内装を手がけている。",
+   "en": "Takuya's company does the interiors of restaurants in station buildings.",
+   "ko": "다쿠야의 회사는 역 빌딩 음식점의 인테리어를 맡고 있어요.",
+   "blank": "飲食",
+   "src": "made"
+  },
+  {
+   "text": "プールサイドでの飲食は、決められた場所だけでできる。",
+   "en": "Eating and drinking at the poolside is only allowed in designated areas.",
+   "ko": "수영장 가장자리에서의 음식물 섭취는 정해진 곳에서만 할 수 있어요.",
+   "blank": "飲食",
+   "src": "made"
   }
  ],
  "w|飽きる": [

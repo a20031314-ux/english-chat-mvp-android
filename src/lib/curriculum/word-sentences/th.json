@@ -5589,6 +5589,22 @@
    "blank": "คนรู้จัก"
   }
  ],
+ "w|คนเรา": [
+  {
+   "text": "ยายบอกประยุทธว่าคนเราแต่งงานแล้วต้องรู้จักให้อภัยกัน",
+   "en": "Grandma told Prayut that once people marry, they must learn to forgive each other.",
+   "ko": "할머니는 쁘라윳에게 사람은 결혼하면 서로 용서할 줄 알아야 한다고 했어요.",
+   "blank": "คนเรา",
+   "src": "made"
+  },
+  {
+   "text": "ครูสอนว่าคนเราเก่งไม่เท่ากัน แต่ทุกคนฝึกได้",
+   "en": "The teacher taught that people aren't equally talented, but everyone can practise.",
+   "ko": "선생님은 사람은 재능이 다 다르지만 누구나 연습할 수 있다고 가르쳤어요.",
+   "blank": "คนเรา",
+   "src": "made"
+  }
+ ],
  "w|คนไร้บ้าน": [
   {
    "text": "ชาวบ้านช่วยกันทำอาหารไปแจกคนไร้บ้านที่สถานีรถไฟ",
@@ -6168,6 +6184,22 @@
    "en": "The stationmaster controls the railway crossing gates from a small room.",
    "ko": "역장은 작은 방에서 철도 건널목 차단기를 조종해요.",
    "blank": "ควบคุม",
+   "src": "made"
+  }
+ ],
+ "w|ควบคุมอาหาร": [
+  {
+   "text": "เจ้าสาวของประยุทธควบคุมอาหารเพื่อให้ใส่ชุดแต่งงานได้พอดี",
+   "en": "Prayut's bride is watching her diet so the wedding dress fits just right.",
+   "ko": "쁘라윳의 신부는 웨딩드레스가 꼭 맞도록 식단을 조절하고 있어요.",
+   "blank": "ควบคุมอาหาร",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ต้องควบคุมอาหารก่อนแข่งยิมนาสติกระดับจังหวัด",
+   "en": "Chan has to control her diet before the provincial gymnastics competition.",
+   "ko": "짠은 도 체조 대회를 앞두고 식단을 조절해야 해요.",
+   "blank": "ควบคุมอาหาร",
    "src": "made"
   }
  ],
@@ -9721,6 +9753,22 @@
    "blank": "ง่าย"
   }
  ],
+ "w|งี่เง่า": [
+  {
+   "text": "ประยุทธหัวเราะว่าเคยงี่เง่าทะเลาะกับแฟนเรื่องสีผ้าปูโต๊ะ",
+   "en": "Prayut laughed that he'd once had a silly argument with his fiancée about tablecloth colours.",
+   "ko": "쁘라윳은 식탁보 색깔로 약혼녀와 바보같이 다툰 적이 있다며 웃었어요.",
+   "blank": "งี่เง่า",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์รู้สึกงี่เง่าที่ลืมเอาสมุดการบ้านมาทั้งที่ทำเสร็จแล้ว",
+   "en": "Chan felt stupid for forgetting her homework book even though she'd finished it.",
+   "ko": "짠은 숙제를 다 해 놓고도 공책을 깜빡해서 바보 같다고 느꼈어요.",
+   "blank": "งี่เง่า",
+   "src": "made"
+  }
+ ],
  "w|งู": [
   {
    "text": "งูเลื้อยผ่านหญ้า",
@@ -11047,6 +11095,22 @@
    "blank": "เจอ"
   }
  ],
+ "w|เจ้า": [
+  {
+   "text": "หมาของประยุทธชื่อเจ้าด่าง ได้ผูกโบว์สีชมพูมาร่วมงานด้วย",
+   "en": "Prayut's dog, named Daang, came to the wedding wearing a pink bow.",
+   "ko": "쁘라윳의 개 '단'도 분홍 리본을 매고 결혼식에 왔어요.",
+   "blank": "เจ้า",
+   "src": "made"
+  },
+  {
+   "text": "แมวที่โรงเรียนเลี้ยงไว้ชื่อเจ้าส้ม ชอบนอนบนโต๊ะครู",
+   "en": "The school cat, called Som, likes to sleep on the teacher's desk.",
+   "ko": "학교에서 키우는 고양이 '쏨'은 선생님 책상 위에서 자는 걸 좋아해요.",
+   "blank": "เจ้า",
+   "src": "made"
+  }
+ ],
  "w|เจ้าของ": [
   {
    "text": "เจ้าของร้านไม่อยู่",
@@ -11705,6 +11769,22 @@
    "src": "made"
   }
  ],
+ "w|เฉลี่ย": [
+  {
+   "text": "เจ้าภาพคิดว่าแขกจะกินเฉลี่ยคนละสองจาน",
+   "en": "The hosts reckoned guests would eat about two plates each on average.",
+   "ko": "주최 측은 손님이 평균 한 사람당 두 접시씩 먹을 거라고 계산했어요.",
+   "blank": "เฉลี่ย",
+   "src": "made"
+  },
+  {
+   "text": "ห้องของจันทร์ได้คะแนนสอบเฉลี่ยสูงที่สุดในชั้นปี",
+   "en": "Chan's class got the highest average test score in the year group.",
+   "ko": "짠네 반은 학년에서 시험 평균 점수가 가장 높았어요.",
+   "blank": "เฉลี่ย",
+   "src": "made"
+  }
+ ],
  "w|ชดเชย": [
   {
    "text": "โรงงานจ่ายเงินชดเชยให้คนงานที่บาดเจ็บระหว่างทำงาน",
@@ -12231,6 +12311,22 @@
    "blank": "ช้า"
   }
  ],
+ "w|ช่าง": [
+  {
+   "text": "ช่างแต่งหน้ามาถึงบ้านเจ้าสาวตั้งแต่ตีสี่",
+   "en": "The makeup artist arrived at the bride's house at four in the morning.",
+   "ko": "메이크업 담당자는 새벽 네 시에 신부 집에 도착했어요.",
+   "blank": "ช่าง",
+   "src": "made"
+  },
+  {
+   "text": "ช่างมาซ่อมพัดลมในห้องของจันทร์ตอนพักกลางวัน",
+   "en": "A repairman came to fix the fan in Chan's classroom at lunchtime.",
+   "ko": "점심시간에 수리공이 짠네 교실 선풍기를 고치러 왔어요.",
+   "blank": "ช่าง",
+   "src": "made"
+  }
+ ],
  "w|ช้าง": [
   {
    "text": "ช้างตัวใหญ่เดินช้าๆ",
@@ -12385,6 +12481,22 @@
    "blank": "ชาม"
   }
  ],
+ "w|ชาย": [
+  {
+   "text": "ชายคนหนึ่งยืนถือร่มรอรับแขกอยู่หน้าประตูงาน",
+   "en": "A man stood holding an umbrella, waiting to greet guests at the entrance.",
+   "ko": "한 남자가 우산을 들고 입구에서 손님을 맞이하고 있었어요.",
+   "blank": "ชาย",
+   "src": "made"
+  },
+  {
+   "text": "ภารโรงเป็นชายใจดีที่ทำงานที่โรงเรียนมานานกว่ายี่สิบปี",
+   "en": "The janitor is a kind man who has worked at the school for over twenty years.",
+   "ko": "관리인 아저씨는 이십 년 넘게 학교에서 일한 친절한 남자예요.",
+   "blank": "ชาย",
+   "src": "made"
+  }
+ ],
  "w|ชายแดน": [
   {
    "text": "ด่านตรวจอยู่ใกล้ชายแดน",
@@ -12412,6 +12524,22 @@
    "en": "A storm is hitting the east coast.",
    "ko": "폭풍이 동쪽 해안에 들이닥치고 있어.",
    "blank": "ชายฝั่ง",
+   "src": "made"
+  }
+ ],
+ "w|ชายหนุ่ม": [
+  {
+   "text": "ชายหนุ่มที่ถือขันหมากเดินนำขบวนคือน้องชายของประยุทธ",
+   "en": "The young man carrying the betrothal tray at the front of the procession is Prayut's younger brother.",
+   "ko": "예물 쟁반을 들고 행렬 앞에서 걷는 청년은 쁘라윳의 남동생이에요.",
+   "blank": "ชายหนุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "ครูฝึกสอนคนใหม่เป็นชายหนุ่มที่เพิ่งจบมหาวิทยาลัย",
+   "en": "The new student teacher is a young man fresh out of university.",
+   "ko": "새 교생 선생님은 대학을 막 졸업한 청년이에요.",
+   "blank": "ชายหนุ่ม",
    "src": "made"
   }
  ],
@@ -12515,6 +12643,22 @@
    "en": "Grandpa used to be a farmer.",
    "ko": "할아버지는 예전에 농부셨어.",
    "blank": "ชาวนา"
+  }
+ ],
+ "w|ชาวบ้าน": [
+  {
+   "text": "ชาวบ้านในซอยมาช่วยกันจัดโต๊ะจีนตั้งแต่เช้ามืด",
+   "en": "Neighbours from the lane came to help set up the banquet tables before dawn.",
+   "ko": "골목 동네 사람들이 새벽부터 와서 연회 테이블 차리는 걸 도왔어요.",
+   "blank": "ชาวบ้าน",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านแถวโรงเรียนนำผลไม้มาบริจาคให้โรงอาหาร",
+   "en": "Locals around the school donated fruit to the canteen.",
+   "ko": "학교 근처 주민들이 식당에 과일을 기부했어요.",
+   "blank": "ชาวบ้าน",
+   "src": "made"
   }
  ],
  "w|ชาวประมง": [
@@ -14013,6 +14157,22 @@
    "src": "made"
   }
  ],
+ "w|ดับ": [
+  {
+   "text": "ตอนตัดเค้ก ไฟในห้องจัดเลี้ยงดับไปเกือบนาที",
+   "en": "When the cake was cut, the lights in the banquet hall went out for almost a minute.",
+   "ko": "케이크를 자를 때 연회장 불이 거의 일 분 동안 꺼졌어요.",
+   "blank": "ดับ",
+   "src": "made"
+  },
+  {
+   "text": "ครูวิทยาศาสตร์ให้นักเรียนครอบแก้วลงบนเทียนแล้วดูว่าไฟดับเมื่อไร",
+   "en": "The science teacher had students cover a candle with a glass and see when the flame went out.",
+   "ko": "과학 선생님은 학생들에게 촛불에 컵을 씌우고 불이 언제 꺼지는지 보게 했어요.",
+   "blank": "ดับ",
+   "src": "made"
+  }
+ ],
  "w|ด่า": [
   {
    "text": "อย่าด่ากันแรงๆ",
@@ -15505,6 +15665,22 @@
    "src": "made"
   }
  ],
+ "w|ตระหนัก": [
+  {
+   "text": "ประยุทธเพิ่งตระหนักว่างานแต่งงานต้องใช้เงินมากแค่ไหน",
+   "en": "Prayut only just realised how much money a wedding takes.",
+   "ko": "쁘라윳은 결혼식에 돈이 얼마나 드는지 이제야 깨달았어요.",
+   "blank": "ตระหนัก",
+   "src": "made"
+  },
+  {
+   "text": "หลังดูสารคดีเรื่องขยะ จันทร์ตระหนักว่าต้องแยกขยะทุกวัน",
+   "en": "After watching a documentary on waste, Chan realised she has to sort her rubbish every day.",
+   "ko": "쓰레기 다큐멘터리를 본 뒤 짠은 매일 분리수거를 해야 한다는 걸 깨달았어요.",
+   "blank": "ตระหนัก",
+   "src": "made"
+  }
+ ],
  "w|ตรา": [
   {
    "text": "เสื้อยืดที่ประยุทธซื้อมีตราของอุทยานแห่งชาติอยู่ตรงหน้าอก",
@@ -15967,6 +16143,22 @@
    "en": "He still hasn't replied to my message.",
    "ko": "그는 아직 내 메시지에 답하지 않았어.",
    "blank": "ตอบกลับ"
+  }
+ ],
+ "w|ตอบแทน": [
+  {
+   "text": "ประยุทธอยากตอบแทนเพื่อนที่ช่วยงานด้วยการเลี้ยงข้าวมื้อใหญ่",
+   "en": "Prayut wants to repay the friends who helped with a big dinner.",
+   "ko": "쁘라윳은 도와준 친구들에게 거하게 한턱내서 보답하고 싶어 해요.",
+   "blank": "ตอบแทน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อยากตั้งใจเรียนเพื่อตอบแทนพ่อแม่ที่ทำงานหนัก",
+   "en": "Chan wants to study hard to repay her hard-working parents.",
+   "ko": "짠은 열심히 일하는 부모님께 보답하려고 공부를 열심히 하고 싶어 해요.",
+   "blank": "ตอบแทน",
+   "src": "made"
   }
  ],
  "w|ต่อไป": [
@@ -17981,6 +18173,22 @@
    "blank": "ถ่าย"
   }
  ],
+ "w|ถ่ายทอด": [
+  {
+   "text": "เพื่อนของประยุทธถ่ายทอดสดพิธีให้ญาติที่อยู่ต่างประเทศดู",
+   "en": "Prayut's friend livestreamed the ceremony for relatives living abroad.",
+   "ko": "쁘라윳의 친구는 외국에 사는 친척들을 위해 예식을 생중계했어요.",
+   "blank": "ถ่ายทอด",
+   "src": "made"
+  },
+  {
+   "text": "ครูภาษาไทยถ่ายทอดความรู้เรื่องกลอนให้นักเรียนอย่างสนุก",
+   "en": "The Thai teacher passes on her knowledge of poetry to students in a fun way.",
+   "ko": "태국어 선생님은 학생들에게 시에 관한 지식을 재미있게 전해 줘요.",
+   "blank": "ถ่ายทอด",
+   "src": "made"
+  }
+ ],
  "w|ถ่ายรูป": [
   {
    "text": "มาถ่ายรูปด้วยกันที่ชายหาด",
@@ -19303,6 +19511,22 @@
    "blank": "ทางออก"
   }
  ],
+ "w|ท่าทาง": [
+  {
+   "text": "ประยุทธมีท่าทางตื่นเต้นจนมือสั่นตอนสวมแหวน",
+   "en": "Prayut looked so nervous that his hands shook while putting on the ring.",
+   "ko": "쁘라윳은 반지를 끼울 때 손이 떨릴 정도로 긴장한 모습이었어요.",
+   "blank": "ท่าทาง",
+   "src": "made"
+  },
+  {
+   "text": "ดูจากท่าทาง จันทร์คงยังไม่ได้ทำการบ้านมา",
+   "en": "Judging by her manner, Chan probably hasn't done her homework.",
+   "ko": "행동을 보아하니 짠은 아직 숙제를 안 해 온 것 같아요.",
+   "blank": "ท่าทาง",
+   "src": "made"
+  }
+ ],
  "w|ท้าทาย": [
   {
    "text": "งานนี้ท้าทายความสามารถของฉัน",
@@ -20251,6 +20475,22 @@
    "en": "She applies for a scholarship every year.",
    "ko": "그녀는 해마다 장학금을 신청해.",
    "blank": "ทุนการศึกษา"
+  }
+ ],
+ "w|ทุ่ม": [
+  {
+   "text": "พ่อแม่ทุ่มเงินเก็บก้อนใหญ่ให้งานแต่งของประยุทธ",
+   "en": "Prayut's parents poured a big chunk of their savings into his wedding.",
+   "ko": "쁘라윳의 부모님은 결혼식에 저축한 큰돈을 쏟아부었어요.",
+   "blank": "ทุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ทุ่มเวลาช่วงปิดเทอมทั้งหมดให้กับการซ้อมดนตรี",
+   "en": "Chan devoted all her school holiday to music practice.",
+   "ko": "짠은 방학 내내 음악 연습에 시간을 쏟았어요.",
+   "blank": "ทุ่ม",
+   "src": "made"
   }
  ],
  "w|ทุเรียน": [
@@ -22487,6 +22727,22 @@
    "blank": "น้ำส้ม"
   }
  ],
+ "w|น้ำเสียง": [
+  {
+   "text": "เจ้าสาวกล่าวขอบคุณแขกด้วยน้ำเสียงสั่นเครือ",
+   "en": "The bride thanked the guests in a trembling voice.",
+   "ko": "신부는 떨리는 목소리로 손님들에게 감사 인사를 했어요.",
+   "blank": "น้ำเสียง",
+   "src": "made"
+  },
+  {
+   "text": "ครูพูดกับจันทร์ด้วยน้ำเสียงอ่อนโยนตอนที่เธอสอบตก",
+   "en": "The teacher spoke to Chan in a gentle voice when she failed the exam.",
+   "ko": "짠이 시험에 떨어졌을 때 선생님은 부드러운 목소리로 말해 줬어요.",
+   "blank": "น้ำเสียง",
+   "src": "made"
+  }
+ ],
  "w|น้ำหนัก": [
   {
    "text": "ชั่งน้ำหนักทุกเช้า",
@@ -23943,6 +24199,22 @@
    "blank": "บาร์"
   }
  ],
+ "w|บิดา": [
+  {
+   "text": "พิธีกรเชิญบิดาของเจ้าสาวขึ้นกล่าวอวยพรบนเวที",
+   "en": "The MC invited the bride's father onto the stage to give his blessing.",
+   "ko": "사회자는 신부 아버지를 무대로 모셔 축사를 부탁했어요.",
+   "blank": "บิดา",
+   "src": "made"
+  },
+  {
+   "text": "แบบฟอร์มสมัครเรียนให้กรอกชื่อบิดาและอาชีพ",
+   "en": "The enrolment form asks for the father's name and occupation.",
+   "ko": "입학 신청서에는 아버지 이름과 직업을 적게 되어 있어요.",
+   "blank": "บิดา",
+   "src": "made"
+  }
+ ],
  "w|บิน": [
   {
    "text": "นกบินไปแล้ว",
@@ -24025,6 +24297,22 @@
    "en": "Helping others is making merit.",
    "ko": "남을 돕는 것은 공덕이야.",
    "blank": "บุญ"
+  }
+ ],
+ "w|บุตร": [
+  {
+   "text": "การ์ดแต่งงานพิมพ์ชื่อประยุทธในฐานะบุตรคนโตของครอบครัว",
+   "en": "The wedding card prints Prayut's name as the eldest child of the family.",
+   "ko": "청첩장에는 쁘라윳의 이름이 집안 맏아들로 적혀 있어요.",
+   "blank": "บุตร",
+   "src": "made"
+  },
+  {
+   "text": "โรงเรียนลดค่าเทอมให้ครอบครัวที่ส่งบุตรมาเรียนสองคน",
+   "en": "The school reduces fees for families sending two children there.",
+   "ko": "학교는 자녀 두 명을 보내는 가정에 학비를 깎아 줘요.",
+   "blank": "บุตร",
+   "src": "made"
   }
  ],
  "w|บุรุษไปรษณีย์": [
@@ -24157,6 +24445,22 @@
    "en": "Just sitting around is so boring.",
    "ko": "가만히 앉아 있으니 심심해.",
    "blank": "เบื่อ"
+  }
+ ],
+ "w|เบื้องต้น": [
+  {
+   "text": "ทีมงานเตรียมชุดปฐมพยาบาลเบื้องต้นไว้ข้างเวที",
+   "en": "The staff kept a basic first-aid kit beside the stage.",
+   "ko": "스태프들은 무대 옆에 기본 응급처치 상자를 준비해 뒀어요.",
+   "blank": "เบื้องต้น",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เรียนวิชาคอมพิวเตอร์เบื้องต้นในเทอมแรก",
+   "en": "Chan took introductory computing in the first term.",
+   "ko": "짠은 첫 학기에 컴퓨터 기초를 배웠어요.",
+   "blank": "เบื้องต้น",
+   "src": "made"
   }
  ],
  "w|เบื่อหน่าย": [
@@ -27849,6 +28153,22 @@
    "src": "made"
   }
  ],
+ "w|ผู้ปกครอง": [
+  {
+   "text": "ผู้ปกครองของแพรนั่งโต๊ะหน้าสุดข้างเวที",
+   "en": "Prae's parents sat at the front table beside the stage.",
+   "ko": "프래의 부모님은 무대 옆 맨 앞 테이블에 앉았어요.",
+   "blank": "ผู้ปกครอง",
+   "src": "made"
+  },
+  {
+   "text": "โรงเรียนเชิญผู้ปกครองมาฟังผลการเรียนในวันเสาร์",
+   "en": "The school invited parents to hear about academic results on Saturday.",
+   "ko": "학교는 토요일에 학부모들을 불러 성적을 알려 줬어요.",
+   "blank": "ผู้ปกครอง",
+   "src": "made"
+  }
+ ],
  "w|ผู้ป่วย": [
   {
    "text": "ผู้ป่วยต้องพักผ่อนมากๆ",
@@ -28070,6 +28390,22 @@
    "en": "Malee accidentally gave a customer fifty baht too much in change.",
    "ko": "말리는 실수로 손님에게 거스름돈을 오십 바트 더 줬어요.",
    "blank": "เผลอ",
+   "src": "made"
+  }
+ ],
+ "w|เผา": [
+  {
+   "text": "ญาติผู้ใหญ่เผากำยานไหว้บรรพบุรุษก่อนเริ่มพิธี",
+   "en": "The elder relatives burned incense to honour the ancestors before the ceremony.",
+   "ko": "어른 친척들은 의식 전에 향을 피워 조상께 예를 올렸어요.",
+   "blank": "เผา",
+   "src": "made"
+  },
+  {
+   "text": "ครูบอกว่าโรงเรียนไม่ควรเผาใบไม้แห้งเพราะควันเยอะ",
+   "en": "The teacher said the school shouldn't burn dry leaves because of the smoke.",
+   "ko": "선생님은 연기가 많이 나니 학교에서 마른 잎을 태우면 안 된다고 했어요.",
+   "blank": "เผา",
    "src": "made"
   }
  ],
@@ -29643,6 +29979,22 @@
    "blank": "พี่ชาย"
   }
  ],
+ "w|พี่น้อง": [
+  {
+   "text": "พี่น้องของประยุทธบินกลับมาจากต่างจังหวัดเพื่องานนี้",
+   "en": "Prayut's siblings flew back from other provinces for the wedding.",
+   "ko": "쁘라윳의 형제자매들이 결혼식을 위해 지방에서 비행기를 타고 돌아왔어요.",
+   "blank": "พี่น้อง",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์กับพี่น้องเรียนโรงเรียนเดียวกันทั้งสามคน",
+   "en": "Chan and her siblings all three go to the same school.",
+   "ko": "짠과 형제자매 셋은 모두 같은 학교에 다녀요.",
+   "blank": "พี่น้อง",
+   "src": "made"
+  }
+ ],
  "w|พี่เลี้ยง": [
   {
    "text": "เพื่อนสาวคนหนึ่งเปิดศูนย์ฝึกพี่เลี้ยงเด็กในเมือง",
@@ -29877,6 +30229,22 @@
    "en": "Put on some music.",
    "ko": "음악 틀어 줘.",
    "blank": "เพลง"
+  }
+ ],
+ "w|เพศ": [
+  {
+   "text": "ห้องน้ำในงานแยกตามเพศ มีป้ายติดไว้ชัดเจน",
+   "en": "The restrooms at the venue are separated by sex, with clear signs.",
+   "ko": "예식장 화장실은 성별로 나뉘어 있고 표지판이 분명히 붙어 있어요.",
+   "blank": "เพศ",
+   "src": "made"
+  },
+  {
+   "text": "ครูสุขศึกษาสอนนักเรียนเรื่องความเท่าเทียมทางเพศ",
+   "en": "The health teacher teaches students about gender equality.",
+   "ko": "보건 선생님은 학생들에게 성평등에 대해 가르쳐요.",
+   "blank": "เพศ",
+   "src": "made"
   }
  ],
  "w|เพิ่ง": [
@@ -30373,6 +30741,22 @@
    "en": "The economy is gradually recovering.",
    "ko": "경제가 서서히 회복되고 있어.",
    "blank": "ฟื้น"
+  }
+ ],
+ "w|ฟื้นฟู": [
+  {
+   "text": "หลังงานเลี้ยง ประยุทธนอนทั้งวันเพื่อฟื้นฟูร่างกาย",
+   "en": "After the reception, Prayut slept all day to recover.",
+   "ko": "피로연이 끝나고 쁘라윳은 몸을 회복하려고 하루 종일 잤어요.",
+   "blank": "ฟื้นฟู",
+   "src": "made"
+  },
+  {
+   "text": "โรงเรียนมีโครงการฟื้นฟูสวนหลังอาคารให้กลับมาเขียวอีกครั้ง",
+   "en": "The school has a project to restore the garden behind the building to green again.",
+   "ko": "학교에는 건물 뒤 정원을 다시 푸르게 되살리는 사업이 있어요.",
+   "blank": "ฟื้นฟู",
+   "src": "made"
   }
  ],
  "w|ฟุตบอล": [
@@ -31827,6 +32211,22 @@
    "blank": "ม่าน"
   }
  ],
+ "w|มารดา": [
+  {
+   "text": "มารดาของประยุทธร้องไห้ด้วยความดีใจตอนรดน้ำสังข์",
+   "en": "Prayut's mother cried with joy during the water-pouring ceremony.",
+   "ko": "쁘라윳의 어머니는 물 붓는 의식 때 기뻐서 울었어요.",
+   "blank": "มารดา",
+   "src": "made"
+  },
+  {
+   "text": "ในวันแม่ จันทร์อ่านกลอนที่เขียนถึงมารดาหน้าเสาธง",
+   "en": "On Mother's Day, Chan read a poem she wrote for her mother in front of the flagpole.",
+   "ko": "어머니날에 짠은 국기 게양대 앞에서 어머니께 쓴 시를 낭독했어요.",
+   "blank": "มารดา",
+   "src": "made"
+  }
+ ],
  "w|ม้าลาย": [
   {
    "text": "ม้าลายมีลายขาวดำ",
@@ -32029,6 +32429,22 @@
    "en": "This skill is useful at work.",
    "ko": "이 기술은 일할 때 도움이 돼.",
    "blank": "มีประโยชน์"
+  }
+ ],
+ "w|มีเหตุผล": [
+  {
+   "text": "แพรชอบประยุทธเพราะเป็นคนใจเย็นและมีเหตุผล",
+   "en": "Prae likes Prayut because he's calm and reasonable.",
+   "ko": "프래는 쁘라윳이 차분하고 합리적인 사람이라서 좋아해요.",
+   "blank": "มีเหตุผล",
+   "src": "made"
+  },
+  {
+   "text": "ครูชมว่าจันทร์โต้วาทีได้มีเหตุผลและสุภาพ",
+   "en": "The teacher praised Chan for debating reasonably and politely.",
+   "ko": "선생님은 짠이 논리적이고 예의 바르게 토론했다고 칭찬했어요.",
+   "blank": "มีเหตุผล",
+   "src": "made"
   }
  ],
  "w|มืด": [
@@ -32297,6 +32713,22 @@
    "ko": "너 많이 취했어.",
    "blank": "เมา",
    "src": "tatoeba:8675908/pastelite en:3331087/CK"
+  }
+ ],
+ "w|เมีย": [
+  {
+   "text": "ลุงของประยุทธพูดติดตลกว่าต่อไปต้องฟังเมียให้มากๆ",
+   "en": "Prayut's uncle joked that from now on he'll have to listen to his wife a lot.",
+   "ko": "쁘라윳의 삼촌은 앞으로 아내 말을 잘 들어야 한다고 농담했어요.",
+   "blank": "เมีย",
+   "src": "made"
+  },
+  {
+   "text": "ในละครของโรงเรียน จันทร์ต้องเล่นเป็นเมียชาวนา",
+   "en": "In the school play, Chan has to play a farmer's wife.",
+   "ko": "학교 연극에서 짠은 농부의 아내 역을 맡아야 해요.",
+   "blank": "เมีย",
+   "src": "made"
   }
  ],
  "w|เมื่อ": [
@@ -33569,6 +34001,22 @@
    "blank": "ยิงปืน"
   }
  ],
+ "w|ยิ่งใหญ่": [
+  {
+   "text": "สำหรับประยุทธ วันนี้เป็นวันที่ยิ่งใหญ่ที่สุดในชีวิต",
+   "en": "For Prayut, today is the greatest day of his life.",
+   "ko": "쁘라윳에게 오늘은 인생에서 가장 큰 날이에요.",
+   "blank": "ยิ่งใหญ่",
+   "src": "made"
+  },
+  {
+   "text": "งานวันเด็กปีนี้ที่โรงเรียนจัดยิ่งใหญ่กว่าทุกปี",
+   "en": "This year's Children's Day event at the school was bigger than ever.",
+   "ko": "올해 학교 어린이날 행사는 어느 해보다 성대했어요.",
+   "blank": "ยิ่งใหญ่",
+   "src": "made"
+  }
+ ],
  "w|ยินดี": [
   {
    "text": "ยินดีที่ได้รู้จัก",
@@ -33595,6 +34043,22 @@
    "en": "The sign says welcome.",
    "ko": "표지판에 환영이라고 적혀 있어.",
    "blank": "ยินดีต้อนรับ"
+  }
+ ],
+ "w|ยินยอม": [
+  {
+   "text": "พ่อของแพรยินยอมให้ลูกสาวแต่งงานหลังได้คุยกับประยุทธหลายครั้ง",
+   "en": "Prae's father consented to his daughter's marriage after talking with Prayut many times.",
+   "ko": "프래의 아버지는 쁘라윳과 여러 번 이야기한 뒤 딸의 결혼을 허락했어요.",
+   "blank": "ยินยอม",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ปกครองต้องเซ็นใบยินยอมก่อนให้นักเรียนไปค่ายลูกเสือ",
+   "en": "Parents must sign a consent form before students go to scout camp.",
+   "ko": "학부모는 학생이 스카우트 캠프에 가기 전에 동의서에 서명해야 해요.",
+   "blank": "ยินยอม",
+   "src": "made"
   }
  ],
  "w|ยิ้ม": [
@@ -33868,6 +34332,22 @@
    "en": "During Songkran, lots of people take the train home.",
    "ko": "송끄란 기간에는 기차로 고향에 가는 사람이 아주 많아요.",
    "blank": "เยอะ",
+   "src": "made"
+  }
+ ],
+ "w|เยาวชน": [
+  {
+   "text": "กลุ่มเยาวชนในหมู่บ้านมาช่วยเสิร์ฟน้ำให้แขกในงาน",
+   "en": "A village youth group came to help serve drinks to the guests.",
+   "ko": "마을 청소년 모임이 와서 손님들에게 음료를 나르는 걸 도왔어요.",
+   "blank": "เยาวชน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ได้รางวัลเยาวชนดีเด่นของจังหวัดปีนี้",
+   "en": "Chan won the province's outstanding youth award this year.",
+   "ko": "짠은 올해 도의 모범 청소년상을 받았어요.",
+   "blank": "เยาวชน",
    "src": "made"
   }
  ],
@@ -36443,6 +36923,22 @@
    "src": "made"
   }
  ],
+ "w|ลดน้ำหนัก": [
+  {
+   "text": "ก่อนงานแต่งสามเดือน ประยุทธเริ่มวิ่งทุกเช้าเพื่อลดน้ำหนัก",
+   "en": "Three months before the wedding, Prayut started running every morning to lose weight.",
+   "ko": "결혼식 석 달 전부터 쁘라윳은 살을 빼려고 매일 아침 달리기를 시작했어요.",
+   "blank": "ลดน้ำหนัก",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ชวนเพื่อนในห้องเต้นแอโรบิกตอนพักเที่ยงเพื่อลดน้ำหนัก",
+   "en": "Chan invited classmates to do aerobics at lunch break to lose weight.",
+   "ko": "짠은 살을 빼려고 반 친구들과 점심시간에 에어로빅을 했어요.",
+   "blank": "ลดน้ำหนัก",
+   "src": "made"
+  }
+ ],
  "w|ลดราคา": [
   {
    "text": "เสื้อตัวนี้ลดราคาแล้ว",
@@ -38669,6 +39165,22 @@
    "blank": "วันอาทิตย์"
   }
  ],
+ "w|วัย": [
+  {
+   "text": "เพื่อนเจ้าบ่าวที่มาช่วยงานเป็นคนวัยเดียวกับประยุทธทั้งหมด",
+   "en": "The groomsmen helping out are all the same age as Prayut.",
+   "ko": "도와주러 온 신랑 친구들은 모두 쁘라윳과 같은 또래예요.",
+   "blank": "วัย",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อยู่ในวัยที่อยากลองทำทุกอย่างด้วยตัวเอง",
+   "en": "Chan is at an age where she wants to try doing everything herself.",
+   "ko": "짠은 뭐든 혼자 해 보고 싶은 나이예요.",
+   "blank": "วัย",
+   "src": "made"
+  }
+ ],
  "w|วัยรุ่น": [
   {
    "text": "วัยรุ่นชอบฟังเพลงดัง",
@@ -39869,6 +40381,22 @@
    "blank": "สตรอว์เบอร์รี"
   }
  ],
+ "w|สตรี": [
+  {
+   "text": "ป้ายหน้างานเขียนว่าห้องแต่งตัวสตรีอยู่ชั้นสอง",
+   "en": "The sign at the venue says the women's dressing room is on the second floor.",
+   "ko": "예식장 앞 안내판에는 여성 탈의실이 이 층에 있다고 쓰여 있어요.",
+   "blank": "สตรี",
+   "src": "made"
+  },
+  {
+   "text": "ห้องสมุดจัดมุมหนังสือเรื่องสตรีที่สร้างประวัติศาสตร์",
+   "en": "The library set up a corner of books about women who made history.",
+   "ko": "도서관은 역사를 만든 여성들에 관한 책 코너를 꾸몄어요.",
+   "blank": "สตรี",
+   "src": "made"
+  }
+ ],
  "w|สตรีม": [
   {
    "text": "ตอนพักเที่ยง คนงานบางคนดูสตรีมมวยไทยในมือถือ",
@@ -40249,6 +40777,22 @@
    "en": "The answer is still incomplete.",
    "ko": "답이 아직 완전하지 않아.",
    "blank": "สมบูรณ์"
+  }
+ ],
+ "w|สมรส": [
+  {
+   "text": "ประยุทธกับแพรสมรสกันหลังคบกันมาเจ็ดปี",
+   "en": "Prayut and Prae married after seven years together.",
+   "ko": "쁘라윳과 프래는 칠 년을 사귄 뒤 혼인했어요.",
+   "blank": "สมรส",
+   "src": "made"
+  },
+  {
+   "text": "ครูประจำชั้นของจันทร์เพิ่งสมรสเมื่อเดือนที่แล้ว",
+   "en": "Chan's homeroom teacher just got married last month.",
+   "ko": "짠의 담임 선생님은 지난달에 혼인했어요.",
+   "blank": "สมรส",
+   "src": "made"
   }
  ],
  "w|สมอง": [
@@ -42261,6 +42805,22 @@
    "src": "made"
   }
  ],
+ "w|สุขสันต์วันเกิด": [
+  {
+   "text": "งานแต่งตรงกับวันเกิดแม่ แขกทั้งงานเลยร้องเพลงสุขสันต์วันเกิดให้",
+   "en": "The wedding fell on Mum's birthday, so all the guests sang Happy Birthday to her.",
+   "ko": "결혼식이 어머니 생신과 겹쳐서 하객 모두가 생일 축하 노래를 불러 드렸어요.",
+   "blank": "สุขสันต์วันเกิด",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนทั้งห้องเขียนการ์ดสุขสันต์วันเกิดให้ครูประจำชั้น",
+   "en": "The whole class wrote a happy birthday card for the homeroom teacher.",
+   "ko": "반 전체가 담임 선생님께 생일 축하 카드를 썼어요.",
+   "blank": "สุขสันต์วันเกิด",
+   "src": "made"
+  }
+ ],
  "w|สุด": [
   {
    "text": "ช่วงปลายเดือน คิวที่ศาลากลางยาวสุดๆ",
@@ -43001,6 +43561,22 @@
    "src": "made"
   }
  ],
+ "w|แสวงหา": [
+  {
+   "text": "ประยุทธใช้เวลาหลายเดือนแสวงหาสถานที่จัดงานริมทะเล",
+   "en": "Prayut spent months searching for a seaside wedding venue.",
+   "ko": "쁘라윳은 바닷가 결혼식장을 찾느라 몇 달을 보냈어요.",
+   "blank": "แสวงหา",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ชอบอ่านหนังสือเพราะอยากแสวงหาความรู้ใหม่ๆ",
+   "en": "Chan loves reading because she wants to seek out new knowledge.",
+   "ko": "짠은 새로운 지식을 찾고 싶어서 책 읽기를 좋아해요.",
+   "blank": "แสวงหา",
+   "src": "made"
+  }
+ ],
  "w|โสด": [
   {
    "text": "ตอนนี้ฉันยังโสดอยู่",
@@ -43317,6 +43893,22 @@
    "en": "The screen went completely dark.",
    "ko": "화면이 완전히 어두워졌어.",
    "blank": "หน้าจอ"
+  }
+ ],
+ "w|หน้าตา": [
+  {
+   "text": "แขกหลายคนบอกว่าลูกของประยุทธคงหน้าตาน่ารักเหมือนแม่",
+   "en": "Many guests said Prayut's kids will surely be as good-looking as their mother.",
+   "ko": "많은 손님이 쁘라윳의 아이들은 엄마를 닮아 귀여운 얼굴일 거라고 했어요.",
+   "blank": "หน้าตา",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์จำหน้าตาของครูคนแรกได้ไม่ลืม",
+   "en": "Chan has never forgotten what her first teacher looked like.",
+   "ko": "짠은 첫 선생님의 얼굴을 잊지 않고 기억해요.",
+   "blank": "หน้าตา",
+   "src": "made"
   }
  ],
  "w|หน้าต่าง": [
@@ -46577,6 +47169,22 @@
    "blank": "อดทน"
   }
  ],
+ "w|อดอาหาร": [
+  {
+   "text": "หมอเตือนประยุทธว่าอย่าอดอาหารจนเป็นลมในวันงาน",
+   "en": "The doctor warned Prayut not to starve himself and faint on the big day.",
+   "ko": "의사는 쁘라윳에게 굶다가 결혼식 날 쓰러지지 말라고 경고했어요.",
+   "blank": "อดอาหาร",
+   "src": "made"
+  },
+  {
+   "text": "ครูพยาบาลบอกนักเรียนว่าการอดอาหารเช้าทำให้เรียนไม่รู้เรื่อง",
+   "en": "The school nurse told students that skipping breakfast makes it hard to follow lessons.",
+   "ko": "보건 선생님은 학생들에게 아침을 굶으면 수업이 머리에 안 들어온다고 했어요.",
+   "blank": "อดอาหาร",
+   "src": "made"
+  }
+ ],
  "w|อดีต": [
   {
    "text": "อย่าคิดถึงอดีตมาก",
@@ -47719,6 +48327,22 @@
    "src": "made"
   }
  ],
+ "w|อาทิ": [
+  {
+   "text": "โต๊ะจีนมีอาหารหลายอย่าง อาทิ หูฉลามเจ ปลานึ่ง และข้าวผัด",
+   "en": "The banquet had many dishes, such as vegetarian shark fin soup, steamed fish and fried rice.",
+   "ko": "연회에는 채식 샥스핀, 생선찜, 볶음밥 등 여러 요리가 나왔어요.",
+   "blank": "อาทิ",
+   "src": "made"
+  },
+  {
+   "text": "ชมรมของโรงเรียนมีให้เลือกหลายอย่าง อาทิ ดนตรีไทย หมากรุก และวาดภาพ",
+   "en": "The school offers many clubs to choose from, such as Thai music, chess and drawing.",
+   "ko": "학교에는 태국 음악, 체스, 그림 등 고를 수 있는 동아리가 많아요.",
+   "blank": "อาทิ",
+   "src": "made"
+  }
+ ],
  "w|อาทิตย์": [
   {
    "text": "อาทิตย์หน้าว่างไหม",
@@ -47773,6 +48397,22 @@
    "en": "Don't be shy — just say it.",
    "ko": "부끄러워 말고 말해 봐.",
    "blank": "อาย"
+  }
+ ],
+ "w|อายุ": [
+  {
+   "text": "ประยุทธแต่งงานตอนอายุสามสิบสองปี",
+   "en": "Prayut got married at thirty-two.",
+   "ko": "쁘라윳은 서른두 살에 결혼했어요.",
+   "blank": "อายุ",
+   "src": "made"
+  },
+  {
+   "text": "ครูถามจันทร์ว่าน้องสาวอายุเท่าไรแล้ว",
+   "en": "The teacher asked Chan how old her younger sister is now.",
+   "ko": "선생님은 짠에게 여동생이 몇 살이냐고 물었어요.",
+   "blank": "อายุ",
+   "src": "made"
   }
  ],
  "w|อารมณ์": [

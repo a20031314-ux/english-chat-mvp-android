@@ -2547,6 +2547,22 @@
    "blank": "Batas"
   }
  ],
+ "w|batasan": [
+  {
+   "text": "Ibu meminta Budi dan Rina membuat batasan soal barang pribadi.",
+   "en": "Mom asked Budi and Rina to set boundaries about personal belongings.",
+   "ko": "엄마는 부디와 리나에게 개인 물건에 대한 선을 정하라고 했어요.",
+   "blank": "batasan",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik rumah memberi batasan soal memaku dinding.",
+   "en": "The landlord set limits on nailing things to the walls.",
+   "ko": "집주인은 벽에 못 박는 것에 제한을 뒀어요.",
+   "blank": "batasan",
+   "src": "made"
+  }
+ ],
  "w|baterai": [
   {
    "text": "Baterai ponselnya hampir habis.",
@@ -4135,6 +4151,22 @@
    "src": "made"
   }
  ],
+ "w|bergetar": [
+  {
+   "text": "Suara Rina bergetar waktu dia menuduh Budi mengambil uangnya.",
+   "en": "Rina's voice trembled when she accused Budi of taking her money.",
+   "ko": "리나는 부디가 돈을 가져갔다고 따질 때 목소리가 떨렸어요.",
+   "blank": "bergetar",
+   "src": "made"
+  },
+  {
+   "text": "Lantai rumah lama Siti bergetar setiap kali truk lewat.",
+   "en": "The floor of Siti's old house shook every time a truck passed.",
+   "ko": "시티의 예전 집은 트럭이 지나갈 때마다 바닥이 흔들렸어요.",
+   "blank": "bergetar",
+   "src": "made"
+  }
+ ],
  "w|bergoyang": [
   {
    "text": "Rudi ingat mereka bergoyang mengikuti lagu dangdut di pesta pernikahan kakak Bayu.",
@@ -5359,6 +5391,22 @@
    "src": "made"
   }
  ],
+ "w|berpegangan": [
+  {
+   "text": "Waktu kecil, Budi dan Rina selalu berpegangan tangan saat menyeberang jalan.",
+   "en": "As children, Budi and Rina always held hands when crossing the street.",
+   "ko": "어렸을 때 부디와 리나는 길을 건널 때 늘 손을 잡았어요.",
+   "blank": "berpegangan",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak Siti berpegangan pada pagar tangga yang belum dicat.",
+   "en": "Siti's children held onto the unpainted stair railing.",
+   "ko": "시티의 아이들은 아직 칠하지 않은 계단 난간을 붙잡았어요.",
+   "blank": "berpegangan",
+   "src": "made"
+  }
+ ],
  "w|berpencar": [
   {
    "text": "Setelah apel pagi, para tukang berpencar ke bagian masing-masing.",
@@ -6111,6 +6159,22 @@
    "en": "I don't want to fight.",
    "ko": "싸우고 싶지 않아.",
    "blank": "bertarung"
+  }
+ ],
+ "w|bertekad": [
+  {
+   "text": "Budi bertekad membereskan salah paham itu sebelum makan malam.",
+   "en": "Budi was determined to clear up the misunderstanding before dinner.",
+   "ko": "부디는 저녁 먹기 전에 그 오해를 풀겠다고 마음먹었어요.",
+   "blank": "bertekad",
+   "src": "made"
+  },
+  {
+   "text": "Siti bertekad selesai membongkar kardus dalam seminggu.",
+   "en": "Siti is determined to finish unpacking the boxes within a week.",
+   "ko": "시티는 일주일 안에 상자를 다 풀겠다고 마음먹었어요.",
+   "blank": "bertekad",
+   "src": "made"
   }
  ],
  "w|berteman": [
@@ -8041,6 +8105,22 @@
    "en": "The solution you proposed is so clever.",
    "ko": "네가 제안한 해결책이 정말 똑똑해.",
    "blank": "Cerdas"
+  }
+ ],
+ "w|ceria": [
+  {
+   "text": "Rina yang biasanya ceria jadi diam seharian.",
+   "en": "Rina, who is usually cheerful, was quiet all day.",
+   "ko": "평소에 명랑한 리나가 하루 종일 말이 없었어요.",
+   "blank": "ceria",
+   "src": "made"
+  },
+  {
+   "text": "Cat kuning membuat dapur Siti terlihat lebih ceria.",
+   "en": "Yellow paint makes Siti's kitchen look more cheerful.",
+   "ko": "노란 페인트 덕분에 시티의 부엌이 더 화사해 보여요.",
+   "blank": "ceria",
+   "src": "made"
   }
  ],
  "w|cerita": [
@@ -15811,6 +15891,22 @@
    "src": "made"
   }
  ],
+ "w|kedalaman": [
+  {
+   "text": "Malam itu Budi baru sadar kedalaman rasa kecewa adiknya.",
+   "en": "That night Budi finally realized how deep his sister's disappointment was.",
+   "ko": "그날 밤에야 부디는 동생이 얼마나 깊이 실망했는지 깨달았어요.",
+   "blank": "kedalaman",
+   "src": "made"
+  },
+  {
+   "text": "Siti bertanya kepada tukang tentang kedalaman sumur di belakang rumah.",
+   "en": "Siti asked the handyman about the depth of the well behind the house.",
+   "ko": "시티는 일꾼에게 집 뒤 우물의 깊이를 물어봤어요.",
+   "blank": "kedalaman",
+   "src": "made"
+  }
+ ],
  "w|kedamaian": [
   {
    "text": "Kedamaian di desa itu sangat menenangkan.",
@@ -15881,6 +15977,22 @@
    "en": "The cold made his hands tremble.",
    "ko": "추위 때문에 손이 떨렸어.",
    "blank": "Kedinginan"
+  }
+ ],
+ "w|kedokteran": [
+  {
+   "text": "Rina sedang kuliah kedokteran, jadi uang itu untuk membeli buku.",
+   "en": "Rina is studying medicine, so that money was for buying books.",
+   "ko": "리나는 의대에 다니고 있어서 그 돈은 책을 사려던 거였어요.",
+   "blank": "kedokteran",
+   "src": "made"
+  },
+  {
+   "text": "Tetangga sebelah Siti ternyata dosen fakultas kedokteran.",
+   "en": "Siti's next-door neighbor turns out to be a lecturer at the medical school.",
+   "ko": "시티의 옆집 이웃은 알고 보니 의대 교수예요.",
+   "blank": "kedokteran",
+   "src": "made"
   }
  ],
  "w|kedua": [
@@ -16184,6 +16296,22 @@
    "en": "Dewi's basketball team is getting ready for the intercollegiate championship next month.",
    "ko": "데위네 농구팀은 다음 달 대학 대항 선수권 대회를 준비하고 있어요.",
    "blank": "kejuaraan",
+   "src": "made"
+  }
+ ],
+ "w|kejujuran": [
+  {
+   "text": "Ibu selalu bilang kepada Budi dan Rina bahwa kejujuran lebih penting daripada menang debat.",
+   "en": "Mom always tells Budi and Rina that honesty matters more than winning an argument.",
+   "ko": "엄마는 늘 부디와 리나에게 말다툼에서 이기는 것보다 정직이 더 중요하다고 해요.",
+   "blank": "kejujuran",
+   "src": "made"
+  },
+  {
+   "text": "Siti memilih jasa angkut itu karena terkenal dengan kejujuran para pekerjanya.",
+   "en": "Siti chose that moving company because it's known for the honesty of its workers.",
+   "ko": "시티는 직원들이 정직하기로 유명해서 그 이삿짐 업체를 골랐어요.",
+   "blank": "kejujuran",
    "src": "made"
   }
  ],
@@ -16729,6 +16857,22 @@
    "en": "He's afraid of death.",
    "ko": "걔는 죽음을 두려워해.",
    "blank": "kematian"
+  }
+ ],
+ "w|kemauan": [
+  {
+   "text": "Rina sebenarnya punya kemauan untuk minta maaf, tapi gengsinya terlalu besar.",
+   "en": "Rina actually had the will to apologize, but her pride was too big.",
+   "ko": "리나는 사실 사과할 마음이 있었지만 자존심이 너무 셌어요.",
+   "blank": "kemauan",
+   "src": "made"
+  },
+  {
+   "text": "Pindah rumah butuh tenaga dan kemauan yang kuat, kata Siti sambil tertawa.",
+   "en": "Moving house takes energy and strong will, Siti said with a laugh.",
+   "ko": "이사는 체력과 강한 의지가 필요하다고 시티가 웃으며 말했어요.",
+   "blank": "kemauan",
+   "src": "made"
   }
  ],
  "w|kembali": [
@@ -17963,6 +18107,22 @@
    "blank": "keyakinan"
   }
  ],
+ "w|khas": [
+  {
+   "text": "Malam itu Ibu memasak sayur lodeh khas resep Nenek supaya kedua anaknya mau duduk bersama.",
+   "en": "That night Mom cooked vegetable lodeh, Grandma's signature recipe, so both kids would sit together.",
+   "ko": "그날 밤 엄마는 두 아이가 같이 앉도록 할머니 특유의 레시피로 채소 로데를 끓였어요.",
+   "blank": "khas",
+   "src": "made"
+  },
+  {
+   "text": "Rumah baru Siti punya aroma khas kayu jati.",
+   "en": "Siti's new house has the distinctive smell of teak wood.",
+   "ko": "시티의 새집에서는 티크 나무 특유의 냄새가 나요.",
+   "blank": "khas",
+   "src": "made"
+  }
+ ],
  "w|khawatir": [
   {
    "text": "Jangan khawatir tentang aku.",
@@ -18624,6 +18784,22 @@
    "en": "While tidying a drawer, Siti found an old concert ticket from her college days.",
    "ko": "서랍을 정리하다가 시티는 대학 시절 콘서트 표를 찾았어요.",
    "blank": "konser",
+   "src": "made"
+  }
+ ],
+ "w|konspirasi": [
+  {
+   "text": "Rina menuduh Budi dan Ibu membuat konspirasi untuk menyalahkannya.",
+   "en": "Rina accused Budi and Mom of a conspiracy to blame her.",
+   "ko": "리나는 부디와 엄마가 자기를 탓하려고 짜고 있다고 몰아붙였어요.",
+   "blank": "konspirasi",
+   "src": "made"
+  },
+  {
+   "text": "Siti bercanda ada konspirasi kardus yang selalu hilang saat dicari.",
+   "en": "Siti joked that there was a conspiracy of boxes that always vanish when you look for them.",
+   "ko": "시티는 찾을 때마다 사라지는 상자들의 음모가 있다고 농담했어요.",
+   "blank": "konspirasi",
    "src": "made"
   }
  ],
@@ -20789,6 +20965,22 @@
    "src": "made"
   }
  ],
+ "w|lunak": [
+  {
+   "text": "Hati Rina mulai lunak setelah Budi menunjukkan bukti.",
+   "en": "Rina's heart began to soften after Budi showed the evidence.",
+   "ko": "부디가 증거를 보여 주자 리나의 마음이 누그러지기 시작했어요.",
+   "blank": "lunak",
+   "src": "made"
+  },
+  {
+   "text": "Kasur lama Siti sudah terlalu lunak, jadi dia tinggalkan saja.",
+   "en": "Siti's old mattress had gotten too soft, so she just left it behind.",
+   "ko": "시티의 옛 매트리스는 너무 물렁해져서 그냥 두고 왔어요.",
+   "blank": "lunak",
+   "src": "made"
+  }
+ ],
  "w|lupa": [
   {
    "text": "Aku lupa namanya.",
@@ -22471,6 +22663,22 @@
    "blank": "melintasi"
   }
  ],
+ "w|melirik": [
+  {
+   "text": "Rina melirik Budi dengan malu waktu uangnya ditemukan.",
+   "en": "Rina glanced at Budi sheepishly when her money was found.",
+   "ko": "돈을 찾았을 때 리나는 부끄러운 듯 부디를 힐끗 봤어요.",
+   "blank": "melirik",
+   "src": "made"
+  },
+  {
+   "text": "Siti melirik jam dan sadar truknya sudah terlambat.",
+   "en": "Siti glanced at the clock and realized the truck was already late.",
+   "ko": "시티는 시계를 힐끗 보고 트럭이 이미 늦었다는 걸 알았어요.",
+   "blank": "melirik",
+   "src": "made"
+  }
+ ],
  "w|melompat": [
   {
    "text": "Kucing itu melompat ke atas meja.",
@@ -23723,6 +23931,22 @@
    "src": "made"
   }
  ],
+ "w|membocorkan": [
+  {
+   "text": "Rina marah karena mengira Budi membocorkan rahasianya kepada Ayah.",
+   "en": "Rina was angry because she thought Budi had leaked her secret to Dad.",
+   "ko": "리나는 부디가 아빠에게 자기 비밀을 흘렸다고 생각해서 화가 났어요.",
+   "blank": "membocorkan",
+   "src": "made"
+  },
+  {
+   "text": "Adik Siti tidak sengaja membocorkan rencana pesta syukuran rumah baru.",
+   "en": "Siti's younger brother accidentally let slip the plan for the housewarming party.",
+   "ko": "시티의 동생이 실수로 집들이 잔치 계획을 흘려 버렸어요.",
+   "blank": "membocorkan",
+   "src": "made"
+  }
+ ],
  "w|membodohi": [
   {
    "text": "Rina tidak mudah dibodohi oleh penjual yang menawarkan barang palsu.",
@@ -24107,6 +24331,22 @@
    "en": "She wants to win the grand prize.",
    "ko": "그녀는 대상 상품을 타고 싶어해.",
    "blank": "memenangkan"
+  }
+ ],
+ "w|memenjarakan": [
+  {
+   "text": "Budi merasa seperti tersangka, padahal polisi pun tidak bisa memenjarakan orang tanpa bukti.",
+   "en": "Budi felt like a suspect, even though even the police can't jail someone without evidence.",
+   "ko": "부디는 용의자가 된 기분이었어요. 경찰도 증거 없이는 사람을 가둘 수 없는데 말이에요.",
+   "blank": "memenjarakan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menemukan novel lama tentang raja yang memenjarakan saudaranya sendiri.",
+   "en": "Siti found an old novel about a king who imprisoned his own brother.",
+   "ko": "시티는 자기 형제를 감옥에 가둔 왕 이야기가 담긴 옛 소설을 찾았어요.",
+   "blank": "memenjarakan",
+   "src": "made"
   }
  ],
  "w|memenuhi": [
@@ -24955,6 +25195,22 @@
    "src": "made"
   }
  ],
+ "w|memudar": [
+  {
+   "text": "Pelan-pelan rasa kesal Rina memudar.",
+   "en": "Little by little, Rina's annoyance faded.",
+   "ko": "리나의 짜증이 천천히 사그라들었어요.",
+   "blank": "memudar",
+   "src": "made"
+  },
+  {
+   "text": "Cat dinding kamar mulai memudar, jadi Siti berencana mengecat ulang.",
+   "en": "The bedroom wall paint is starting to fade, so Siti plans to repaint.",
+   "ko": "방 벽 페인트가 바래기 시작해서 시티는 다시 칠할 계획이에요.",
+   "blank": "memudar",
+   "src": "made"
+  }
+ ],
  "w|memuja": [
   {
    "text": "Remaja di lantai empat sangat memuja penyanyi pop dari Korea.",
@@ -25221,6 +25477,22 @@
    "en": "The sounds at night are scary.",
    "ko": "밤의 소리가 무서워.",
    "blank": "menakutkan"
+  }
+ ],
+ "w|menamai": [
+  {
+   "text": "Waktu kecil, Budi yang menamai kucing mereka Si Belang.",
+   "en": "When he was little, it was Budi who named their cat Si Belang.",
+   "ko": "어렸을 때 고양이에게 시블랑이라는 이름을 붙인 건 부디였어요.",
+   "blank": "menamai",
+   "src": "made"
+  },
+  {
+   "text": "Anak Siti menamai rumah baru mereka Istana Kecil.",
+   "en": "Siti's child named their new house the Little Palace.",
+   "ko": "시티의 아이는 새집에 '작은 궁전'이라는 이름을 붙였어요.",
+   "blank": "menamai",
+   "src": "made"
   }
  ],
  "w|menamakan": [
@@ -26115,6 +26387,22 @@
    "blank": "mendatangi"
   }
  ],
+ "w|mendayung": [
+  {
+   "text": "Budi teringat liburan ketika mereka mendayung perahu berdua di danau.",
+   "en": "Budi remembered the holiday when the two of them rowed a boat on the lake.",
+   "ko": "부디는 둘이 호수에서 배를 저었던 휴가가 떠올랐어요.",
+   "blank": "mendayung",
+   "src": "made"
+  },
+  {
+   "text": "Di dekat rumah baru ada danau, dan Siti ingin belajar mendayung di sana.",
+   "en": "There's a lake near the new house, and Siti wants to learn to row there.",
+   "ko": "새집 근처에 호수가 있어서 시티는 거기서 노 젓기를 배우고 싶어 해요.",
+   "blank": "mendayung",
+   "src": "made"
+  }
+ ],
  "w|mendekat": [
   {
    "text": "Dia perlahan mendekat ke pintu.",
@@ -26260,6 +26548,22 @@
    "en": "Siti and the director discussed how to play the strict mother character.",
    "ko": "시티와 감독은 엄격한 어머니 역을 어떻게 연기할지 의논했어요.",
    "blank": "mendiskusikan",
+   "src": "made"
+  }
+ ],
+ "w|mendoakan": [
+  {
+   "text": "Nenek menelepon dan bilang dia selalu mendoakan Budi dan Rina supaya akur.",
+   "en": "Grandma called and said she always prays for Budi and Rina to get along.",
+   "ko": "할머니가 전화해서 부디와 리나가 사이좋게 지내길 늘 기도한다고 하셨어요.",
+   "blank": "mendoakan",
+   "src": "made"
+  },
+  {
+   "text": "Tetangga lama memeluk Siti dan mendoakan semoga betah di rumah baru.",
+   "en": "Her old neighbor hugged Siti and wished her happiness in the new house.",
+   "ko": "예전 이웃은 시티를 안아 주며 새집에서 잘 지내길 빌어 줬어요.",
+   "blank": "mendoakan",
    "src": "made"
   }
  ],
@@ -26631,6 +26935,22 @@
    "src": "made"
   }
  ],
+ "w|menerbitkan": [
+  {
+   "text": "Rina bercita-cita menerbitkan novel tentang kakak-beradik.",
+   "en": "Rina dreams of publishing a novel about siblings.",
+   "ko": "리나의 꿈은 형제자매 이야기를 담은 소설을 내는 거예요.",
+   "blank": "menerbitkan",
+   "src": "made"
+  },
+  {
+   "text": "Kelurahan baru menerbitkan surat domisili Siti dalam dua hari.",
+   "en": "The new village office issued Siti's residence letter in two days.",
+   "ko": "새 동사무소는 이틀 만에 시티의 거주 증명서를 발급했어요.",
+   "blank": "menerbitkan",
+   "src": "made"
+  }
+ ],
  "w|menerima": [
   {
    "text": "Aku menerima tawaran itu.",
@@ -26778,6 +27098,22 @@
    "en": "Siti's manager let her know that the interview schedule was postponed.",
    "ko": "시티의 매니저가 인터뷰 일정이 미뤄졌다고 알려 줬어요.",
    "blank": "mengabari",
+   "src": "made"
+  }
+ ],
+ "w|mengabulkan": [
+  {
+   "text": "Ayah akhirnya mengabulkan permintaan Rina untuk punya kamar sendiri.",
+   "en": "Dad finally granted Rina's request to have her own room.",
+   "ko": "아빠는 결국 방을 따로 쓰고 싶다는 리나의 부탁을 들어줬어요.",
+   "blank": "mengabulkan",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik rumah mengabulkan permintaan Siti untuk pindah lebih awal.",
+   "en": "The landlord granted Siti's request to move in early.",
+   "ko": "집주인은 일찍 이사 들어오겠다는 시티의 부탁을 들어줬어요.",
+   "blank": "mengabulkan",
    "src": "made"
   }
  ],
@@ -27593,6 +27929,22 @@
    "en": "Don't always complain without trying.",
    "ko": "해보지도 않고 늘 불평하지 마.",
    "blank": "mengeluh"
+  }
+ ],
+ "w|mengemas": [
+  {
+   "text": "Budi membantu Rina mengemas barang-barang untuk pindah ke kamar baru.",
+   "en": "Budi helped Rina pack her things to move into the new room.",
+   "ko": "부디는 리나가 새 방으로 옮길 짐을 싸는 걸 도와줬어요.",
+   "blank": "mengemas",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengemas piring-piring dengan koran bekas.",
+   "en": "Siti packed the plates with old newspapers.",
+   "ko": "시티는 헌 신문지로 접시들을 쌌어요.",
+   "blank": "mengemas",
+   "src": "made"
   }
  ],
  "w|mengembalikan": [
@@ -28517,6 +28869,22 @@
    "en": "He tries to avoid conflict.",
    "ko": "그는 갈등을 피하려고 해.",
    "blank": "menghindari"
+  }
+ ],
+ "w|menghipnotis": [
+  {
+   "text": "Rina bercanda bahwa Budi pasti sudah menghipnotis Ibu supaya selalu dibela.",
+   "en": "Rina joked that Budi must have hypnotized Mom so she would always take his side.",
+   "ko": "리나는 부디가 엄마를 최면에 걸어서 늘 편을 들게 만든 게 분명하다고 농담했어요.",
+   "blank": "menghipnotis",
+   "src": "made"
+  },
+  {
+   "text": "Pemandangan sawah dari jendela baru seolah menghipnotis Siti.",
+   "en": "The view of the rice fields from the new window seemed to hypnotize Siti.",
+   "ko": "새 창문으로 보이는 논 풍경에 시티는 넋을 잃은 듯했어요.",
+   "blank": "menghipnotis",
+   "src": "made"
   }
  ],
  "w|menghirup": [
@@ -30471,6 +30839,22 @@
    "blank": "Menyalakan"
   }
  ],
+ "w|menyalin": [
+  {
+   "text": "Budi menyalin pesan-pesan lama dari ponselnya sebagai bukti.",
+   "en": "Budi copied old messages from his phone as evidence.",
+   "ko": "부디는 증거로 휴대폰에서 예전 메시지들을 옮겨 적었어요.",
+   "blank": "menyalin",
+   "src": "made"
+  },
+  {
+   "text": "Siti menyalin alamat baru di buku kecil supaya tidak lupa.",
+   "en": "Siti copied the new address into a small notebook so she wouldn't forget.",
+   "ko": "시티는 잊지 않으려고 새 주소를 작은 수첩에 옮겨 적었어요.",
+   "blank": "menyalin",
+   "src": "made"
+  }
+ ],
  "w|menyamar": [
   {
    "text": "Agen itu menyamar sebagai pedagang.",
@@ -30539,6 +30923,22 @@
    "en": "Don't deny facts that are already clear.",
    "ko": "이미 분명한 사실을 부인하지 마.",
    "blank": "menyangkal"
+  }
+ ],
+ "w|menyangkut": [
+  {
+   "text": "Pertengkaran Budi dan Rina menyangkut uang tabungan yang hilang dari laci.",
+   "en": "Budi and Rina's quarrel concerned savings that went missing from a drawer.",
+   "ko": "부디와 리나의 싸움은 서랍에서 사라진 저금과 관련된 거였어요.",
+   "blank": "menyangkut",
+   "src": "made"
+  },
+  {
+   "text": "Urusan surat pindah menyangkut kantor kelurahan lama dan yang baru.",
+   "en": "The moving paperwork involves both the old and the new village office.",
+   "ko": "전입 서류 일은 예전 동사무소와 새 동사무소 둘 다 관련돼 있어요.",
+   "blank": "menyangkut",
+   "src": "made"
   }
  ],
  "w|menyanyi": [
@@ -31001,6 +31401,22 @@
    "en": "Attacking without reason is cruel.",
    "ko": "이유 없이 공격하는 건 잔인해.",
    "blank": "Menyerang"
+  }
+ ],
+ "w|menyerbu": [
+  {
+   "text": "Begitu mendengar teriakan, Ibu langsung menyerbu masuk ke kamar Rina.",
+   "en": "As soon as she heard the shouting, Mom stormed into Rina's room.",
+   "ko": "고함 소리를 듣자마자 엄마가 리나 방으로 뛰어 들어왔어요.",
+   "blank": "menyerbu",
+   "src": "made"
+  },
+  {
+   "text": "Semut menyerbu kardus berisi gula yang lupa ditutup Siti.",
+   "en": "Ants swarmed the box of sugar that Siti forgot to close.",
+   "ko": "시티가 깜빡 안 닫은 설탕 상자에 개미가 몰려들었어요.",
+   "blank": "menyerbu",
+   "src": "made"
   }
  ],
  "w|menyeret": [
@@ -32871,6 +33287,22 @@
    "blank": "Nakal"
   }
  ],
+ "w|naluri": [
+  {
+   "text": "Sebagai kakak, Budi punya naluri untuk melindungi adiknya, Rina.",
+   "en": "As the older brother, Budi has an instinct to protect his younger sister, Rina.",
+   "ko": "오빠로서 부디는 동생 리나를 지키려는 본능이 있어요.",
+   "blank": "naluri",
+   "src": "made"
+  },
+  {
+   "text": "Kucing Siti punya naluri untuk bersembunyi setiap kali ada kardus baru.",
+   "en": "Siti's cat has an instinct to hide every time there's a new cardboard box.",
+   "ko": "시티의 고양이는 새 상자가 생길 때마다 숨는 본능이 있어요.",
+   "blank": "naluri",
+   "src": "made"
+  }
+ ],
  "w|nama": [
   {
    "text": "Nama kamu siapa?",
@@ -34577,6 +35009,22 @@
    "src": "made"
   }
  ],
+ "w|payung": [
+  {
+   "text": "Budi pernah meminjam payung Rina tanpa izin, dan itu juga jadi masalah.",
+   "en": "Budi once borrowed Rina's umbrella without asking, and that became a problem too.",
+   "ko": "부디는 리나의 우산을 허락 없이 빌린 적이 있는데, 그것도 문제가 됐어요.",
+   "blank": "payung",
+   "src": "made"
+  },
+  {
+   "text": "Siti hampir lupa membawa payung waktu hujan turun di hari pindahan.",
+   "en": "Siti almost forgot to bring an umbrella when it rained on moving day.",
+   "ko": "이삿날 비가 왔는데 시티는 하마터면 우산을 깜빡할 뻔했어요.",
+   "blank": "payung",
+   "src": "made"
+  }
+ ],
  "w|pecah": [
   {
    "text": "Gelas itu pecah di lantai dapur.",
@@ -34589,6 +35037,22 @@
    "en": "The window broke because of strong wind.",
    "ko": "강한 바람 때문에 창문이 깨졌어.",
    "blank": "pecah"
+  }
+ ],
+ "w|pecahan": [
+  {
+   "text": "Di lantai kamar Rina ada pecahan celengan tanah liat.",
+   "en": "On the floor of Rina's room were pieces of a clay piggy bank.",
+   "ko": "리나 방바닥에 흙 저금통 조각이 있었어요.",
+   "blank": "pecahan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menyapu pecahan gelas yang jatuh dari kardus.",
+   "en": "Siti swept up the shards of a glass that fell out of a box.",
+   "ko": "시티는 상자에서 떨어진 유리잔 조각을 쓸어 담았어요.",
+   "blank": "pecahan",
+   "src": "made"
   }
  ],
  "w|pecandu": [
@@ -35229,6 +35693,22 @@
    "src": "made"
   }
  ],
+ "w|pembangunan": [
+  {
+   "text": "Ayah Budi dulu bekerja di proyek pembangunan jalan tol.",
+   "en": "Budi's dad used to work on a toll road construction project.",
+   "ko": "부디의 아빠는 예전에 고속도로 건설 현장에서 일했어요.",
+   "blank": "pembangunan",
+   "src": "made"
+  },
+  {
+   "text": "Di dekat rumah baru Siti sedang ada pembangunan pasar.",
+   "en": "A market is being built near Siti's new house.",
+   "ko": "시티의 새집 근처에서는 시장을 짓고 있어요.",
+   "blank": "pembangunan",
+   "src": "made"
+  }
+ ],
  "w|pembantaian": [
   {
    "text": "Guru sejarah menjelaskan pembantaian itu dengan tenang dan hati-hati.",
@@ -35769,6 +36249,22 @@
    "en": "They rejected the offer from the foreign company.",
    "ko": "그들은 외국 회사의 제안을 거절했어.",
    "blank": "penawaran"
+  }
+ ],
+ "w|pencari": [
+  {
+   "text": "Saat itu Budi masih pencari kerja dan sering di rumah seharian.",
+   "en": "At the time Budi was still a job seeker and was often home all day.",
+   "ko": "그때 부디는 아직 구직자라서 하루 종일 집에 있을 때가 많았어요.",
+   "blank": "pencari",
+   "src": "made"
+  },
+  {
+   "text": "Rumah lama Siti kini diincar banyak pencari kos karena dekat kampus.",
+   "en": "Siti's old house is now sought after by many room hunters because it's near campus.",
+   "ko": "시티의 예전 집은 캠퍼스와 가까워서 지금 하숙방을 찾는 사람들이 많이 노려요.",
+   "blank": "pencari",
+   "src": "made"
   }
  ],
  "w|pencarian": [
@@ -38187,6 +38683,22 @@
    "en": "We keep our friendship even from afar.",
    "ko": "멀리 있어도 우리는 우정을 지켜.",
    "blank": "persahabatan"
+  }
+ ],
+ "w|persamaan": [
+  {
+   "text": "Kata Ayah, Budi dan Rina punya banyak persamaan, terutama sama-sama keras kepala.",
+   "en": "Dad says Budi and Rina have a lot in common, especially both being stubborn.",
+   "ko": "아빠 말로는 부디와 리나는 닮은 점이 많은데, 특히 둘 다 고집이 세대요.",
+   "blank": "persamaan",
+   "src": "made"
+  },
+  {
+   "text": "Siti melihat banyak persamaan antara rumah ini dan rumah masa kecilnya.",
+   "en": "Siti sees many similarities between this house and her childhood home.",
+   "ko": "시티는 이 집과 어릴 적 살던 집이 닮은 점이 많다고 느껴요.",
+   "blank": "persamaan",
+   "src": "made"
   }
  ],
  "w|persediaan": [
@@ -40931,6 +41443,22 @@
    "blank": "Roh"
   }
  ],
+ "w|rok": [
+  {
+   "text": "Ternyata uang itu terselip di saku rok sekolah Rina.",
+   "en": "It turned out the money was tucked in the pocket of Rina's school skirt.",
+   "ko": "알고 보니 그 돈은 리나의 교복 치마 주머니에 끼어 있었어요.",
+   "blank": "rok",
+   "src": "made"
+  },
+  {
+   "text": "Saat membongkar lemari, Siti menemukan rok lama yang sudah tidak muat.",
+   "en": "While clearing out the wardrobe, Siti found an old skirt that no longer fits.",
+   "ko": "옷장을 정리하다가 시티는 이제 안 맞는 옛날 치마를 찾았어요.",
+   "blank": "rok",
+   "src": "made"
+  }
+ ],
  "w|roket": [
   {
    "text": "Warga melaporkan anak-anak yang menyalakan petasan roket di dekat pom bensin.",
@@ -41719,6 +42247,22 @@
    "en": "Relax first before the meeting.",
    "ko": "회의 전에 일단 좀 쉬어.",
    "blank": "Santai"
+  }
+ ],
+ "w|santun": [
+  {
+   "text": "Meski sedang marah, Budi tetap bicara dengan santun kepada adiknya.",
+   "en": "Even though he was angry, Budi still spoke politely to his sister.",
+   "ko": "화가 났는데도 부디는 동생에게 공손하게 말했어요.",
+   "blank": "santun",
+   "src": "made"
+  },
+  {
+   "text": "Tetangga baru Siti sangat santun dan langsung menawarkan bantuan.",
+   "en": "Siti's new neighbor is very polite and immediately offered to help.",
+   "ko": "시티의 새 이웃은 아주 예의 바르고 바로 도와주겠다고 했어요.",
+   "blank": "santun",
+   "src": "made"
   }
  ],
  "w|sapi": [
@@ -44235,6 +44779,22 @@
    "blank": "sesuatu"
   }
  ],
+ "w|sesudah": [
+  {
+   "text": "Budi dan Rina baru bicara lagi sesudah makan malam.",
+   "en": "Budi and Rina only spoke to each other again after dinner.",
+   "ko": "부디와 리나는 저녁을 먹고 나서야 다시 말을 했어요.",
+   "blank": "sesudah",
+   "src": "made"
+  },
+  {
+   "text": "Siti baru bisa istirahat sesudah semua barang masuk.",
+   "en": "Siti could only rest after all the things were brought in.",
+   "ko": "짐이 다 들어온 뒤에야 시티는 쉴 수 있었어요.",
+   "blank": "sesudah",
+   "src": "made"
+  }
+ ],
  "w|sesungguhnya": [
   {
    "text": "Sesungguhnya dia sudah tahu jawabannya.",
@@ -45531,6 +46091,22 @@
    "blank": "Sumpah"
   }
  ],
+ "w|sumur": [
+  {
+   "text": "Rumah Nenek di desa masih punya sumur tempat Budi dan Rina dulu bermain.",
+   "en": "Grandma's house in the village still has the well where Budi and Rina used to play.",
+   "ko": "시골 할머니 댁에는 부디와 리나가 어릴 때 놀던 우물이 아직 있어요.",
+   "blank": "sumur",
+   "src": "made"
+  },
+  {
+   "text": "Siti bertanya kepada tukang tentang kedalaman sumur di belakang rumah.",
+   "en": "Siti asked the handyman about the depth of the well behind the house.",
+   "ko": "시티는 일꾼에게 집 뒤 우물의 깊이를 물어봤어요.",
+   "blank": "sumur",
+   "src": "made"
+  }
+ ],
  "w|sungai": [
   {
    "text": "Sungai itu dalam.",
@@ -46105,6 +46681,22 @@
    "en": "That actor is very handsome.",
    "ko": "저 배우는 정말 잘생겼어.",
    "blank": "tampan"
+  }
+ ],
+ "w|tampang": [
+  {
+   "text": "Melihat tampang Budi yang lesu, Rina mulai ragu.",
+   "en": "Seeing Budi's weary face, Rina began to have doubts.",
+   "ko": "부디의 축 처진 얼굴을 보고 리나는 의심이 들기 시작했어요.",
+   "blank": "tampang",
+   "src": "made"
+  },
+  {
+   "text": "Meski tampang sopir truk itu galak, ternyata dia ramah sekali.",
+   "en": "Although the truck driver looked fierce, he turned out to be very friendly.",
+   "ko": "트럭 기사님은 인상이 험했지만 알고 보니 아주 친절했어요.",
+   "blank": "tampang",
+   "src": "made"
   }
  ],
  "w|tampil": [
@@ -47010,6 +47602,22 @@
    "en": "Wati found a small bird skull in the attic of the old house.",
    "ko": "와티는 그 낡은 집 다락방에서 작은 새의 두개골을 발견했어요.",
    "blank": "tengkorak",
+   "src": "made"
+  }
+ ],
+ "w|tengok": [
+  {
+   "text": "“Coba tengok dulu di bawah kasurmu,” kata Budi kepada Rina.",
+   "en": "\"Take a look under your mattress first,\" Budi said to Rina.",
+   "ko": "\"먼저 네 매트리스 밑을 좀 봐 봐.\" 부디가 리나에게 말했어요.",
+   "blank": "tengok",
+   "src": "made"
+  },
+  {
+   "text": "“Coba tengok pemandangan dari jendela ini,” kata Siti kepada suaminya.",
+   "en": "\"Take a look at the view from this window,\" Siti said to her husband.",
+   "ko": "\"이 창문 밖 풍경 좀 봐요.\" 시티가 남편에게 말했어요.",
+   "blank": "tengok",
    "src": "made"
   }
  ],
@@ -49047,6 +49655,22 @@
    "blank": "Titik"
   }
  ],
+ "w|toh": [
+  {
+   "text": "Budi bilang, toh uang itu akhirnya ketemu juga.",
+   "en": "Budi said that, after all, the money turned up in the end.",
+   "ko": "부디는 어쨌든 그 돈은 결국 찾았잖아 하고 말했어요.",
+   "blank": "toh",
+   "src": "made"
+  },
+  {
+   "text": "Rumahnya memang kecil, tapi toh cukup untuk Siti sekeluarga.",
+   "en": "The house is small, but it's enough for Siti's family anyway.",
+   "ko": "집이 작긴 하지만 어쨌든 시티네 식구한테는 충분해요.",
+   "blank": "toh",
+   "src": "made"
+  }
+ ],
  "w|toilet": [
   {
    "text": "Toilet umum di stasiun sedang dibersihkan.",
@@ -50115,6 +50739,22 @@
    "en": "At that age, he was already great.",
    "ko": "그 나이에 벌써 대단했어.",
    "blank": "usia"
+  }
+ ],
+ "w|usus": [
+  {
+   "text": "Dokter bilang usus Budi meradang karena dia sering telat makan.",
+   "en": "The doctor said Budi's intestines were inflamed because he often ate late.",
+   "ko": "의사는 부디가 자주 끼니를 늦게 먹어서 장에 염증이 생겼다고 했어요.",
+   "blank": "usus",
+   "src": "made"
+  },
+  {
+   "text": "Malam pertama di rumah baru, Siti membeli sate usus dari warung dekat rumah.",
+   "en": "On the first night in the new house, Siti bought chicken intestine satay from a nearby stall.",
+   "ko": "새집에서의 첫날 밤, 시티는 근처 가게에서 닭 내장 꼬치를 사 왔어요.",
+   "blank": "usus",
+   "src": "made"
   }
  ],
  "w|utama": [

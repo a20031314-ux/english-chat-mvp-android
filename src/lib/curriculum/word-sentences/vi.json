@@ -3103,6 +3103,22 @@
    "blank": "bờ"
   }
  ],
+ "w|bọ": [
+  {
+   "text": "Quang soi đèn pin vào thân cây và thấy một con bọ cánh cứng màu xanh.",
+   "en": "Quang shines his flashlight on a tree trunk and sees a green beetle.",
+   "ko": "꽝은 나무줄기에 손전등을 비추다가 초록색 딱정벌레를 봐요.",
+   "blank": "bọ",
+   "src": "made"
+  },
+  {
+   "text": "Hà hét lên khi thấy một con bọ bay vào ly nước của mình.",
+   "en": "Hà shrieks when she sees a bug fly into her glass of water.",
+   "ko": "하는 벌레 한 마리가 자기 물컵에 날아들자 소리를 질러요.",
+   "blank": "bọ",
+   "src": "made"
+  }
+ ],
  "w|bộ": [
   {
    "text": "Bộ đồ này mặc vừa lắm.",
@@ -3129,6 +3145,22 @@
    "en": "The long coastline captivates tourists.",
    "ko": "긴 해안선이 관광객을 사로잡아.",
    "blank": "Bờ biển"
+  }
+ ],
+ "w|bò cạp": [
+  {
+   "text": "Người dẫn đường nhắc Quang giũ giày trước khi đi vì có thể có bò cạp bên trong.",
+   "en": "The guide reminds Quang to shake out his shoes before putting them on, since a scorpion might be inside.",
+   "ko": "길잡이는 신발 안에 전갈이 있을 수 있으니 신기 전에 털라고 꽝에게 일러요.",
+   "blank": "bò cạp",
+   "src": "made"
+  },
+  {
+   "text": "Một bạn của Hà làm nghiên cứu về nọc độc của bò cạp.",
+   "en": "One of Hà's friends does research on scorpion venom.",
+   "ko": "하의 친구 하나는 전갈 독을 연구해요.",
+   "blank": "bò cạp",
+   "src": "made"
   }
  ],
  "w|bỏ chạy": [
@@ -6369,6 +6401,22 @@
    "src": "made"
   }
  ],
+ "w|châu chấu": [
+  {
+   "text": "Trên đồng cỏ ven sông, châu chấu nhảy tán loạn quanh chân Quang.",
+   "en": "In the riverside meadow, grasshoppers leap in all directions around Quang's feet.",
+   "ko": "강가 풀밭에서 메뚜기들이 꽝의 발 주변으로 사방에 뛰어요.",
+   "blank": "châu chấu",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhắc lại lần cả lớp đi bắt châu chấu ngoài đồng sau giờ học.",
+   "en": "Hà recalls the time the whole class went catching grasshoppers in the fields after school.",
+   "ko": "하는 방과 후 반 친구들이 다 같이 들판에서 메뚜기를 잡던 때를 떠올려요.",
+   "blank": "châu chấu",
+   "src": "made"
+  }
+ ],
  "w|cháu gái": [
   {
    "text": "Cháu gái bà mới vào lớp một.",
@@ -7027,6 +7075,22 @@
    "src": "made"
   }
  ],
+ "w|chim chóc": [
+  {
+   "text": "Quang thức dậy vì tiếng chim chóc ríu rít trên cành.",
+   "en": "Quang wakes up to the chirping of birds on the branches.",
+   "ko": "꽝은 나뭇가지 위 새들이 지저귀는 소리에 잠이 깨요.",
+   "blank": "chim chóc",
+   "src": "made"
+  },
+  {
+   "text": "Nhà bạn của Hà ở ven đồi, sáng nào cũng rộn tiếng chim chóc.",
+   "en": "Hà's friend's house is on a hillside, lively with birdsong every morning.",
+   "ko": "하 친구네 집은 언덕 기슭에 있어서 아침마다 새소리로 떠들썩해요.",
+   "blank": "chim chóc",
+   "src": "made"
+  }
+ ],
  "w|chín": [
   {
    "text": "Quả xoài đã chín rồi, ăn được.",
@@ -7409,6 +7473,22 @@
    "blank": "cho nên"
   }
  ],
+ "w|chợ nổi": [
+  {
+   "text": "Quang đi xuồng ra chợ nổi trên sông lúc trời còn tối.",
+   "en": "Quang takes a small boat out to the floating market on the river while it's still dark.",
+   "ko": "꽝은 날이 아직 어두울 때 작은 배를 타고 강 위 수상 시장에 가요.",
+   "blank": "chợ nổi",
+   "src": "made"
+  },
+  {
+   "text": "Một bạn ở miền Tây mời Hà về chơi chợ nổi vào dịp Tết.",
+   "en": "A friend from the Mekong Delta invites Hà to visit the floating market at Tết.",
+   "ko": "메콩 델타에 사는 친구가 설에 수상 시장에 놀러 오라고 하를 초대해요.",
+   "blank": "chợ nổi",
+   "src": "made"
+  }
+ ],
  "w|chỗ ở": [
   {
    "text": "Nhiều người buôn ở xa đến chợ thuê chỗ ở ngay gần nhà Nam.",
@@ -7451,6 +7531,22 @@
    "en": "They work until late at night.",
    "ko": "그들은 밤늦게까지 일해.",
    "blank": "cho tới"
+  }
+ ],
+ "w|chợ truyền thống": [
+  {
+   "text": "Trên đường ra sông, Quang đi qua một phiên chợ truyền thống họp dưới gốc đa.",
+   "en": "On the way to the river, Quang passes a traditional market held under a banyan tree.",
+   "ko": "강으로 가는 길에 꽝은 반얀나무 밑에서 열린 전통 시장을 지나요.",
+   "blank": "chợ truyền thống",
+   "src": "made"
+  },
+  {
+   "text": "Sau bữa tiệc, Hà rủ các bạn đi dạo chợ truyền thống gần trường.",
+   "en": "After the party, Hà invites her friends to walk around the traditional market near the school.",
+   "ko": "잔치가 끝나고 하는 친구들에게 학교 근처 전통 시장에 가 보자고 해요.",
+   "blank": "chợ truyền thống",
+   "src": "made"
   }
  ],
  "w|cho vay": [
@@ -8221,6 +8317,22 @@
    "ko": "바나나는 하나도 먹고 싶지 않아요.",
    "blank": "chuối",
    "src": "tatoeba:13173390/leucammieuvu en:879860/CC"
+  }
+ ],
+ "w|chuồn chuồn": [
+  {
+   "text": "Một con chuồn chuồn đỏ đậu lên mũi cần câu của Quang.",
+   "en": "A red dragonfly lands on the tip of Quang's fishing rod.",
+   "ko": "빨간 잠자리 한 마리가 꽝의 낚싯대 끝에 앉아요.",
+   "blank": "chuồn chuồn",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhớ hồi bé các bạn hay đuổi bắt chuồn chuồn ở bờ ao.",
+   "en": "Hà remembers how, as kids, her friends used to chase dragonflies by the pond.",
+   "ko": "하는 어릴 때 친구들이 연못가에서 잠자리를 쫓아다니던 걸 기억해요.",
+   "blank": "chuồn chuồn",
+   "src": "made"
   }
  ],
  "w|chuông": [
@@ -9487,6 +9599,22 @@
    "blank": "công ty"
   }
  ],
+ "w|công ty du lịch": [
+  {
+   "text": "Quang đi theo đoàn của một công ty du lịch sinh thái.",
+   "en": "Quang joins a group run by an eco-tourism company.",
+   "ko": "꽝은 생태 관광 회사의 단체에 끼어 가요.",
+   "blank": "công ty du lịch",
+   "src": "made"
+  },
+  {
+   "text": "Một bạn cũ của Hà giờ làm chủ một công ty du lịch nhỏ.",
+   "en": "One of Hà's old friends now owns a small travel company.",
+   "ko": "하의 옛 친구 하나는 지금 작은 여행사를 운영해요.",
+   "blank": "công ty du lịch",
+   "src": "made"
+  }
+ ],
  "w|công việc": [
   {
    "text": "Công việc hôm nay hơi nặng.",
@@ -10259,6 +10387,22 @@
    "en": "Have you finished reading that book yet?",
    "ko": "그 책 다 읽었어?",
    "blank": "cuốn sách"
+  }
+ ],
+ "w|cường tráng": [
+  {
+   "text": "Người kiểm lâm đi cùng Quang có thân hình cường tráng, leo dốc không hề thở dốc.",
+   "en": "The ranger walking with Quang is sturdily built and climbs slopes without getting out of breath.",
+   "ko": "꽝과 함께 걷는 산림 감시원은 몸이 건장해서 비탈을 올라도 숨이 하나도 안 차요.",
+   "blank": "cường tráng",
+   "src": "made"
+  },
+  {
+   "text": "Hai mươi năm không gặp, Hà vẫn thấy Tùng cường tráng như hồi đá bóng ở trường.",
+   "en": "After twenty years apart, Hà still finds Tùng as sturdy as when he played soccer at school.",
+   "ko": "이십 년 만에 만났는데 하는 퉁이 학교에서 축구하던 때처럼 여전히 건장하다고 느껴요.",
+   "blank": "cường tráng",
+   "src": "made"
   }
  ],
  "w|cướp": [
@@ -11321,6 +11465,22 @@
    "blank": "Dao"
   }
  ],
+ "w|dạo": [
+  {
+   "text": "Chiều xuống, Quang dạo dọc bờ sông để ngắm hoàng hôn.",
+   "en": "As afternoon fades, Quang strolls along the riverbank to watch the sunset.",
+   "ko": "해가 기울면 꽝은 강둑을 따라 거닐며 노을을 봐요.",
+   "blank": "dạo",
+   "src": "made"
+  },
+  {
+   "text": "Trước buổi họp lớp, Hà dạo một vòng quanh ngôi trường cũ.",
+   "en": "Before the reunion, Hà takes a stroll around her old school.",
+   "ko": "동창회 전에 하는 옛 학교를 한 바퀴 거닐어요.",
+   "blank": "dạo",
+   "src": "made"
+  }
+ ],
  "w|đào": [
   {
    "text": "Anh ấy đã đào một cái hố.",
@@ -12224,6 +12384,22 @@
    "en": "Goat's milk is very nourishing.",
    "ko": "염소젖은 몸에 좋아요.",
    "blank": "dê",
+   "src": "made"
+  }
+ ],
+ "w|dế": [
+  {
+   "text": "Đêm trong rừng, Quang nằm nghe tiếng dế kêu không dứt.",
+   "en": "At night in the forest, Quang lies listening to the endless chirping of crickets.",
+   "ko": "숲속의 밤, 꽝은 누워서 끊임없는 귀뚜라미 소리를 들어요.",
+   "blank": "dế",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể hồi nhỏ cô hay cùng bạn đi chọi dế ở góc sân.",
+   "en": "Hà says that as a child she often went cricket fighting with friends in the corner of the yard.",
+   "ko": "하는 어릴 때 친구들과 마당 구석에서 귀뚜라미 싸움을 자주 했다고 해요.",
+   "blank": "dế",
    "src": "made"
   }
  ],
@@ -13433,6 +13609,22 @@
    "src": "made"
   }
  ],
+ "w|định cư": [
+  {
+   "text": "Ông lão chèo đò kể với Quang rằng gia đình ông đến định cư bên sông từ đời ông nội.",
+   "en": "The old ferryman tells Quang that his family settled by the river in his grandfather's time.",
+   "ko": "나룻배 사공 할아버지는 할아버지 대부터 가족이 강가에 정착했다고 꽝에게 말해요.",
+   "blank": "định cư",
+   "src": "made"
+  },
+  {
+   "text": "Hà nghe tin cô bạn thân giờ đã định cư ở một thành phố ven biển.",
+   "en": "Hà hears that her close friend has now settled in a coastal city.",
+   "ko": "하는 친한 친구가 이제 바닷가 도시에 정착했다는 소식을 들어요.",
+   "blank": "định cư",
+   "src": "made"
+  }
+ ],
  "w|dinh dưỡng": [
   {
    "text": "Vợ Tuấn rất chú ý đến dinh dưỡng trong suất cơm trẻ em.",
@@ -14346,6 +14538,22 @@
    "en": "Trang thinks that for beginners, finishing the race is already a success.",
    "ko": "짱은 초보에게는 완주만 해도 성공이라고 생각해요.",
    "blank": "đối với",
+   "src": "made"
+  }
+ ],
+ "w|đom đóm": [
+  {
+   "text": "Quang tắt đèn để ngắm đàn đom đóm lập lòe dọc bờ suối.",
+   "en": "Quang turns off his light to watch the fireflies flickering along the stream.",
+   "ko": "꽝은 불을 끄고 시냇가를 따라 깜빡이는 반딧불이 떼를 바라봐요.",
+   "blank": "đom đóm",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể có lần cả nhóm bắt đom đóm bỏ vào lọ để làm đèn.",
+   "en": "Hà tells how the group once caught fireflies in a jar to make a lantern.",
+   "ko": "하는 친구들이 반딧불이를 병에 담아 등불을 만들었던 일을 이야기해요.",
+   "blank": "đom đóm",
    "src": "made"
   }
  ],
@@ -16455,6 +16663,22 @@
    "src": "tatoeba:2507772/trieuho en:789770/CK"
   }
  ],
+ "w|gia cầm": [
+  {
+   "text": "Dân bản nuôi gia cầm thả rông ngay dưới tán rừng, Quang thấy gà vịt chạy khắp nơi.",
+   "en": "Villagers raise free-range poultry right under the forest canopy, and Quang sees chickens and ducks running everywhere.",
+   "ko": "마을 사람들은 숲 그늘 아래 가금을 풀어 키워서 꽝은 닭과 오리가 사방에 뛰어다니는 걸 봐요.",
+   "blank": "gia cầm",
+   "src": "made"
+  },
+  {
+   "text": "Bạn của Hà ở quê nuôi gia cầm, mang lên cả rổ trứng gà làm quà.",
+   "en": "Hà's friend who raises poultry in the countryside brings a whole basket of eggs as a gift.",
+   "ko": "시골에서 가금을 키우는 하의 친구가 달걀 한 바구니를 선물로 가져와요.",
+   "blank": "gia cầm",
+   "src": "made"
+  }
+ ],
  "w|gia chủ": [
   {
    "text": "Gia chủ mời khách vào ngồi trong phòng khách.",
@@ -16751,6 +16975,22 @@
    "en": "I bought this shirt because it's heavily discounted.",
    "ko": "크게 할인 중이라 이 옷을 샀어.",
    "blank": "giảm giá"
+  }
+ ],
+ "w|gián": [
+  {
+   "text": "Quang giật mình khi một con gián rừng bò ra từ ba lô.",
+   "en": "Quang jumps when a forest cockroach crawls out of his backpack.",
+   "ko": "꽝은 배낭에서 숲 바퀴벌레 한 마리가 기어 나오자 깜짝 놀라요.",
+   "blank": "gián",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể chuyện cả phòng ký túc xá hồi đó phải chung sống với gián.",
+   "en": "Hà tells how the whole dorm room back then had to live with cockroaches.",
+   "ko": "하는 그 시절 기숙사 방 전체가 바퀴벌레와 같이 살아야 했던 이야기를 해요.",
+   "blank": "gián",
+   "src": "made"
   }
  ],
  "w|giãn": [
@@ -17482,6 +17722,22 @@
    "en": "The postman asks Linh to take in letters when the neighbour's mailbox is full.",
    "ko": "이웃집 우편함이 꽉 차면 집배원은 린에게 대신 편지를 받아 달라고 해요.",
    "blank": "giùm",
+   "src": "made"
+  }
+ ],
+ "w|giun": [
+  {
+   "text": "Quang đào đất ven sông để bắt giun làm mồi câu.",
+   "en": "Quang digs the soil by the river to catch worms for bait.",
+   "ko": "꽝은 미끼로 쓸 지렁이를 잡으려고 강가 흙을 파요.",
+   "blank": "giun",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể có lần cô hét toáng lên vì thấy con giun trong vườn trường.",
+   "en": "Hà says she once screamed when she saw a worm in the school garden.",
+   "ko": "하는 학교 텃밭에서 지렁이를 보고 비명을 질렀던 적이 있다고 말해요.",
+   "blank": "giun",
    "src": "made"
   }
  ],
@@ -18723,6 +18979,22 @@
    "en": "The pig runs around the yard.",
    "ko": "돼지가 마당을 이리저리 뛰어다녀.",
    "blank": "Heo"
+  }
+ ],
+ "w|héo": [
+  {
+   "text": "Bó hoa rừng Quang hái hôm qua đã héo vì để ngoài nắng.",
+   "en": "The bunch of wildflowers Quang picked yesterday has wilted from being left in the sun.",
+   "ko": "꽝이 어제 꺾은 들꽃 다발이 햇볕에 두어서 시들었어요.",
+   "blank": "héo",
+   "src": "made"
+  },
+  {
+   "text": "Bó hoa Hà mang tặng cô giáo đã hơi héo vì đường xa.",
+   "en": "The bouquet Hà brought for the teacher has wilted a little from the long trip.",
+   "ko": "하가 선생님께 드리려고 가져온 꽃다발이 먼 길에 조금 시들었어요.",
+   "blank": "héo",
+   "src": "made"
   }
  ],
  "w|hẹp": [
@@ -20215,6 +20487,22 @@
    "src": "made"
   }
  ],
+ "w|hướng dẫn viên du lịch": [
+  {
+   "text": "Một hướng dẫn viên du lịch người địa phương dẫn Quang vào sâu trong rừng.",
+   "en": "A local tour guide leads Quang deep into the forest.",
+   "ko": "현지 관광 가이드가 꽝을 숲 깊숙이 데려가요.",
+   "blank": "hướng dẫn viên du lịch",
+   "src": "made"
+  },
+  {
+   "text": "Hà ngạc nhiên khi biết cậu lớp trưởng ngày xưa giờ làm hướng dẫn viên du lịch.",
+   "en": "Hà is surprised to learn that the old class president now works as a tour guide.",
+   "ko": "하는 옛날 반장이 지금 관광 가이드로 일한다는 걸 알고 놀라요.",
+   "blank": "hướng dẫn viên du lịch",
+   "src": "made"
+  }
+ ],
  "w|hươu": [
   {
    "text": "Đức chụp ảnh đàn hươu đang gặm cỏ trên đồi gần biển.",
@@ -20515,6 +20803,22 @@
    "src": "tatoeba:11296819/chaule3 en:11296816/chaule3"
   }
  ],
+ "w|kê đơn": [
+  {
+   "text": "Quang bị sốt nhẹ, y sĩ trạm xá kê đơn cho anh ít thuốc hạ sốt.",
+   "en": "Quang has a slight fever, and the clinic medic prescribes him some fever medicine.",
+   "ko": "꽝이 미열이 나서 보건소 의사가 해열제를 조금 처방해 줘요.",
+   "blank": "kê đơn",
+   "src": "made"
+  },
+  {
+   "text": "Bạn của Hà giờ là bác sĩ, ai đau đầu cũng nhờ kê đơn giúp.",
+   "en": "Hà's friend is now a doctor, and anyone with a headache asks for a prescription.",
+   "ko": "하의 친구는 이제 의사라서 머리 아픈 사람마다 처방해 달라고 해요.",
+   "blank": "kê đơn",
+   "src": "made"
+  }
+ ],
  "w|kẻ giết người": [
   {
    "text": "Cảnh sát đang truy tìm kẻ giết người.",
@@ -20723,6 +21027,22 @@
    "en": "Grandma always keeps candy in her pocket.",
    "ko": "할머니는 항상 주머니에 사탕을 넣어 두셔.",
    "blank": "kẹo"
+  }
+ ],
+ "w|kéo dài": [
+  {
+   "text": "Cơn mưa kéo dài suốt đêm khiến Quang phải ở lại lều thêm một ngày.",
+   "en": "The rain lasts all night, so Quang has to stay in the tent one more day.",
+   "ko": "밤새 이어진 비 때문에 꽝은 텐트에서 하루 더 머물러야 해요.",
+   "blank": "kéo dài",
+   "src": "made"
+  },
+  {
+   "text": "Buổi họp lớp của Hà kéo dài đến tận nửa đêm.",
+   "en": "Hà's class reunion goes on until midnight.",
+   "ko": "하의 동창회는 자정까지 이어져요.",
+   "blank": "kéo dài",
+   "src": "made"
   }
  ],
  "w|keo kiệt": [
@@ -21542,6 +21862,22 @@
    "en": "This noise really annoys me.",
    "ko": "이 소음 때문에 아주 짜증 나요.",
    "blank": "khó chịu",
+   "src": "made"
+  }
+ ],
+ "w|khô héo": [
+  {
+   "text": "Quang thấy cả một vạt tre khô héo vì hạn hán kéo dài.",
+   "en": "Quang sees a whole patch of bamboo withered by the long drought.",
+   "ko": "꽝은 오랜 가뭄에 바싹 말라 버린 대나무 숲 한 자락을 봐요.",
+   "blank": "khô héo",
+   "src": "made"
+  },
+  {
+   "text": "Cây cau trước cổng trường giờ đã khô héo, Hà thấy tiếc.",
+   "en": "The areca palm in front of the school gate has now withered, and Hà feels sad about it.",
+   "ko": "학교 정문 앞 빈랑나무가 이제 말라 버려서 하는 아쉬워요.",
+   "blank": "khô héo",
    "src": "made"
   }
  ],
@@ -23657,6 +23993,22 @@
    "blank": "lấy"
   }
  ],
+ "w|lấy chồng": [
+  {
+   "text": "Cô gái chèo thuyền đưa Quang qua sông nói tháng sau cô sẽ lấy chồng ở làng bên.",
+   "en": "The young woman who rows Quang across the river says she'll marry into the next village next month.",
+   "ko": "꽝을 태워 강을 건네준 아가씨는 다음 달 옆 마을로 시집간다고 해요.",
+   "blank": "lấy chồng",
+   "src": "made"
+  },
+  {
+   "text": "Các bạn trêu Hà vì cô là người lấy chồng sớm nhất lớp.",
+   "en": "Her friends tease Hà because she was the first in the class to get married.",
+   "ko": "친구들은 하가 반에서 제일 먼저 시집갔다고 놀려요.",
+   "blank": "lấy chồng",
+   "src": "made"
+  }
+ ],
  "w|lây lan": [
   {
    "text": "Dụng cụ phải được hấp kỹ để vi trùng không lây lan giữa các bệnh nhân.",
@@ -24863,6 +25215,22 @@
    "en": "The fire got too big.",
    "ko": "불이 너무 세졌어.",
    "blank": "Lửa"
+  }
+ ],
+ "w|lựa": [
+  {
+   "text": "Quang cẩn thận lựa những hòn đá phẳng để kê bếp nấu ăn.",
+   "en": "Quang carefully picks out flat stones to set up a cooking fire.",
+   "ko": "꽝은 밥 지을 화덕을 만들려고 납작한 돌을 조심스럽게 골라요.",
+   "blank": "lựa",
+   "src": "made"
+  },
+  {
+   "text": "Hà mất cả buổi sáng để lựa một chiếc váy mặc đi họp lớp.",
+   "en": "Hà spends the whole morning choosing a dress to wear to the reunion.",
+   "ko": "하는 동창회에 입고 갈 원피스를 고르느라 오전을 다 보내요.",
+   "blank": "lựa",
+   "src": "made"
   }
  ],
  "w|lụa": [
@@ -30307,6 +30675,22 @@
    "src": "made"
   }
  ],
+ "w|người khác": [
+  {
+   "text": "Quang luôn mang rác về, không để lại cho người khác phải dọn.",
+   "en": "Quang always carries his trash out and never leaves it for others to clean up.",
+   "ko": "꽝은 늘 쓰레기를 가지고 내려와서 다른 사람이 치우게 남기지 않아요.",
+   "blank": "người khác",
+   "src": "made"
+  },
+  {
+   "text": "Hà thích lắng nghe hơn là kể chuyện mình cho người khác.",
+   "en": "Hà prefers listening to telling others about herself.",
+   "ko": "하는 남에게 자기 이야기를 하는 것보다 듣는 걸 좋아해요.",
+   "blank": "người khác",
+   "src": "made"
+  }
+ ],
  "w|người lạ": [
   {
    "text": "Người lạ đứng trước cửa làm mình hơi lo.",
@@ -30377,6 +30761,22 @@
    "en": "A lot of foreigners come to this place.",
    "ko": "이 가게에 외국인이 많이 와.",
    "blank": "người nước ngoài"
+  }
+ ],
+ "w|người quen": [
+  {
+   "text": "Ở bìa rừng, Quang tình cờ gặp lại một người quen cũ đang câu cá.",
+   "en": "At the edge of the forest, Quang happens to run into an old acquaintance who is fishing.",
+   "ko": "숲 가장자리에서 꽝은 낚시하던 옛 지인을 우연히 다시 만나요.",
+   "blank": "người quen",
+   "src": "made"
+  },
+  {
+   "text": "Trong buổi họp lớp, Hà gặp cả người quen của bố mẹ mình.",
+   "en": "At the reunion, Hà even meets an acquaintance of her parents.",
+   "ko": "동창회에서 하는 부모님의 지인까지 만나요.",
+   "blank": "người quen",
+   "src": "made"
   }
  ],
  "w|người sử dụng lao động": [
@@ -33289,6 +33689,22 @@
    "blank": "ô tô"
   }
  ],
+ "w|ốc sên": [
+  {
+   "text": "Sau cơn mưa, Quang thấy mấy con ốc sên bò chậm rãi trên tảng đá.",
+   "en": "After the rain, Quang sees a few snails crawling slowly over a rock.",
+   "ko": "비가 그친 뒤 꽝은 바위 위를 느릿느릿 기어가는 달팽이 몇 마리를 봐요.",
+   "blank": "ốc sên",
+   "src": "made"
+  },
+  {
+   "text": "Bạn của Hà kể con trai cậu ấy nuôi một con ốc sên trong hộp nhựa.",
+   "en": "Hà's friend says his son keeps a snail in a plastic box.",
+   "ko": "하의 친구는 아들이 플라스틱 상자에 달팽이를 키운다고 말해요.",
+   "blank": "ốc sên",
+   "src": "made"
+  }
+ ],
  "w|ói": [
   {
    "text": "Tom đã ói.",
@@ -34590,6 +35006,22 @@
    "en": "My school has a reading movement.",
    "ko": "우리 학교에는 독서 운동이 있어요.",
    "blank": "phong trào",
+   "src": "made"
+  }
+ ],
+ "w|phòng trọ": [
+  {
+   "text": "Quang thuê một phòng trọ nhỏ ở thị trấn gần cửa rừng.",
+   "en": "Quang rents a small room in the town near the forest entrance.",
+   "ko": "꽝은 숲 입구 근처 마을에 작은 방을 하나 빌려요.",
+   "blank": "phòng trọ",
+   "src": "made"
+  },
+  {
+   "text": "Hà và các bạn cười mãi khi nhớ lại căn phòng trọ chung hồi sinh viên.",
+   "en": "Hà and her friends can't stop laughing as they remember the room they shared as students.",
+   "ko": "하와 친구들은 대학 시절 같이 살던 자취방을 떠올리며 한참 웃어요.",
+   "blank": "phòng trọ",
    "src": "made"
   }
  ],
@@ -35921,6 +36353,22 @@
    "src": "made"
   }
  ],
+ "w|rậm rạp": [
+  {
+   "text": "Lối vào khu rừng nguyên sinh rậm rạp đến mức Quang không thấy ánh mặt trời.",
+   "en": "The way into the old-growth forest is so dense that Quang can't see the sunlight.",
+   "ko": "원시림으로 들어가는 길은 너무 빽빽해서 꽝은 햇빛을 볼 수 없어요.",
+   "blank": "rậm rạp",
+   "src": "made"
+  },
+  {
+   "text": "Hà khen ria mép rậm rạp của Tùng làm cậu trông già hẳn.",
+   "en": "Hà says Tùng's bushy mustache makes him look much older.",
+   "ko": "하는 퉁의 덥수룩한 콧수염 때문에 훨씬 나이 들어 보인다고 해요.",
+   "blank": "rậm rạp",
+   "src": "made"
+  }
+ ],
  "w|rắn": [
   {
    "text": "Rắn bò ngang đường khiến mọi người giật mình.",
@@ -36242,6 +36690,22 @@
    "en": "On cold, damp mornings, Hà turns the oven on early to warm up the shop.",
    "ko": "춥고 으슬으슬한 아침이면 하 씨는 가게가 따뜻해지게 오븐을 일찍 켜요.",
    "blank": "rét",
+   "src": "made"
+  }
+ ],
+ "w|rết": [
+  {
+   "text": "Quang lật một khúc gỗ mục và thấy một con rết dài bò ra.",
+   "en": "Quang turns over a rotten log and sees a long centipede crawl out.",
+   "ko": "꽝이 썩은 통나무를 뒤집자 긴 지네 한 마리가 기어 나와요.",
+   "blank": "rết",
+   "src": "made"
+  },
+  {
+   "text": "Hà rùng mình nhớ lại lần thấy con rết trong giày thể dục.",
+   "en": "Hà shudders remembering the time she found a centipede in her gym shoe.",
+   "ko": "하는 운동화 안에서 지네를 발견했던 때를 떠올리며 몸서리쳐요.",
+   "blank": "rết",
    "src": "made"
   }
  ],
@@ -37270,6 +37734,22 @@
    "en": "In summer there are many bugs in the garden.",
    "ko": "여름엔 정원에 벌레가 많아요.",
    "blank": "sâu bọ",
+   "src": "made"
+  }
+ ],
+ "w|sâu bướm": [
+  {
+   "text": "Quang chụp được ảnh một con sâu bướm sọc vàng đen đang gặm lá.",
+   "en": "Quang manages to photograph a yellow-and-black striped caterpillar munching a leaf.",
+   "ko": "꽝은 잎을 갉아 먹는 노랑 검정 줄무늬 애벌레를 사진에 담아요.",
+   "blank": "sâu bướm",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể cho các bạn chuyện con gái cô nuôi sâu bướm chờ nó hóa bướm.",
+   "en": "Hà tells her friends about her daughter raising a caterpillar until it turns into a butterfly.",
+   "ko": "하는 딸이 나비가 될 때까지 애벌레를 키운 이야기를 친구들에게 해요.",
+   "blank": "sâu bướm",
    "src": "made"
   }
  ],
@@ -38988,6 +39468,22 @@
    "en": "I'm in a very good mood today.",
    "ko": "오늘 기분이 아주 좋아요.",
    "blank": "tâm trạng",
+   "src": "made"
+  }
+ ],
+ "w|tàn": [
+  {
+   "text": "Đống lửa của Quang tàn dần khi trời gần sáng.",
+   "en": "Quang's campfire slowly dies down as dawn approaches.",
+   "ko": "날이 밝아 올 무렵 꽝의 모닥불이 점점 사그라들어요.",
+   "blank": "tàn",
+   "src": "made"
+  },
+  {
+   "text": "Khi tiệc đã tàn, Hà vẫn ngồi lại trò chuyện với cô bạn thân.",
+   "en": "When the party has wound down, Hà stays behind chatting with her close friend.",
+   "ko": "잔치가 파한 뒤에도 하는 친한 친구와 남아서 이야기해요.",
+   "blank": "tàn",
    "src": "made"
   }
  ],
@@ -41265,6 +41761,38 @@
    "en": "Time really flies.",
    "ko": "시간이 정말 빨리 가.",
    "blank": "Thời gian"
+  }
+ ],
+ "w|thời gian biểu": [
+  {
+   "text": "Trước chuyến đi, Quang lập thời gian biểu cho từng chặng đường rừng.",
+   "en": "Before the trip, Quang makes a schedule for each stretch of the forest trail.",
+   "ko": "여행 전에 꽝은 숲길 구간마다 일정표를 짜요.",
+   "blank": "thời gian biểu",
+   "src": "made"
+  },
+  {
+   "text": "Hà soạn sẵn thời gian biểu cho buổi họp lớp, từ giờ đón khách đến giờ chụp ảnh.",
+   "en": "Hà prepares a schedule for the class reunion, from welcoming guests to photo time.",
+   "ko": "하는 손님 맞는 시간부터 사진 찍는 시간까지 동창회 일정표를 미리 짜요.",
+   "blank": "thời gian biểu",
+   "src": "made"
+  }
+ ],
+ "w|thời khóa biểu": [
+  {
+   "text": "Quang ghé thăm ngôi trường nhỏ trong rừng và xem thời khóa biểu dán trên tường.",
+   "en": "Quang visits the little school in the forest and looks at the class timetable on the wall.",
+   "ko": "꽝은 숲속 작은 학교에 들러 벽에 붙은 시간표를 봐요.",
+   "blank": "thời khóa biểu",
+   "src": "made"
+  },
+  {
+   "text": "Hà mang theo tờ thời khóa biểu năm lớp mười hai mà cô vẫn giữ.",
+   "en": "Hà brings along the twelfth-grade class timetable she has kept.",
+   "ko": "하는 아직 간직하고 있던 고3 시간표를 가져와요.",
+   "blank": "thời khóa biểu",
+   "src": "made"
   }
  ],
  "w|thời kỳ": [
@@ -45985,6 +46513,38 @@
    "src": "made"
   }
  ],
+ "w|tưới": [
+  {
+   "text": "Quang giúp ông lão tưới rau trong mảnh vườn nhỏ bên sông.",
+   "en": "Quang helps the old man water the vegetables in his little garden by the river.",
+   "ko": "꽝은 할아버지를 도와 강가 작은 텃밭 채소에 물을 줘요.",
+   "blank": "tưới",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhờ hàng xóm tưới giúp mấy chậu lan trong mấy ngày cô đi họp lớp.",
+   "en": "Hà asks a neighbor to water her orchid pots for her while she's away at the reunion.",
+   "ko": "하는 동창회에 다녀오는 며칠 동안 난초 화분에 물을 좀 달라고 이웃에게 부탁해요.",
+   "blank": "tưới",
+   "src": "made"
+  }
+ ],
+ "w|tưới cây": [
+  {
+   "text": "Mỗi sáng, cậu bé trong bản xách nước tưới cây cho Quang xem.",
+   "en": "Every morning, the boy in the village carries water to water the plants while Quang watches.",
+   "ko": "아침마다 마을 소년이 물을 길어 나무에 물을 주는 걸 꽝이 지켜봐요.",
+   "blank": "tưới cây",
+   "src": "made"
+  },
+  {
+   "text": "Hà kể bây giờ mỗi sáng cô đều dậy sớm tưới cây trên sân thượng.",
+   "en": "Hà says that these days she gets up early every morning to water the plants on her rooftop.",
+   "ko": "하는 요즘 매일 아침 일찍 일어나 옥상 화분에 물을 준다고 해요.",
+   "blank": "tưới cây",
+   "src": "made"
+  }
+ ],
  "w|tuổi già": [
   {
    "text": "Tuổi già ông bà sống rất vui vẻ.",
@@ -46045,6 +46605,22 @@
    "ko": "톰은 건강한 어린 시절을 보냈어요.",
    "blank": "tuổi thơ",
    "src": "tatoeba:9712839/dotheduyet1999 en:5739384/CM"
+  }
+ ],
+ "w|tươi tốt": [
+  {
+   "text": "Sau mùa mưa, cánh rừng mà Quang đi qua trông tươi tốt hẳn lên.",
+   "en": "After the rainy season, the forest Quang walks through looks much more lush.",
+   "ko": "우기가 지나자 꽝이 지나는 숲이 훨씬 무성해 보여요.",
+   "blank": "tươi tốt",
+   "src": "made"
+  },
+  {
+   "text": "Hà khen khu vườn nhà bạn chủ tiệc trồng toàn cây tươi tốt.",
+   "en": "Hà compliments the host's garden full of thriving plants.",
+   "ko": "하는 잔치를 연 친구네 정원이 싱싱한 나무로 가득하다고 칭찬해요.",
+   "blank": "tươi tốt",
+   "src": "made"
   }
  ],
  "w|tuổi trẻ": [
@@ -46423,6 +46999,22 @@
    "blank": "ừ"
   }
  ],
+ "w|úa": [
+  {
+   "text": "Gần cuối thu, lá rừng bắt đầu úa vàng dưới chân Quang.",
+   "en": "Toward late autumn, the forest leaves under Quang's feet begin to yellow.",
+   "ko": "늦가을이 되자 꽝의 발밑 숲 잎들이 누렇게 시들기 시작해요.",
+   "blank": "úa",
+   "src": "made"
+  },
+  {
+   "text": "Hà thấy cây hoa giấy trước nhà bạn đã úa vì thiếu nước.",
+   "en": "Hà notices the bougainvillea in front of her friend's house has faded for lack of water.",
+   "ko": "하는 친구네 집 앞 부겐빌레아가 물이 모자라 시든 걸 봐요.",
+   "blank": "úa",
+   "src": "made"
+  }
+ ],
  "w|ưa": [
   {
    "text": "Từ bé, Minh đã không ưa cách em gái lục đồ của mình.",
@@ -46467,6 +47059,22 @@
    "en": "Hmm… let me think first.",
    "ko": "음… 일단 좀 생각해 볼게.",
    "blank": "Ừm"
+  }
+ ],
+ "w|um tùm": [
+  {
+   "text": "Con đường mòn cũ đã bị cỏ dại mọc um tùm, Quang phải dùng dao phát lối.",
+   "en": "The old trail is overgrown with weeds, and Quang has to clear a path with a machete.",
+   "ko": "옛 오솔길이 잡초로 우거져서 꽝은 칼로 길을 내야 해요.",
+   "blank": "um tùm",
+   "src": "made"
+  },
+  {
+   "text": "Hà ngạc nhiên vì góc vườn sau lớp học giờ cỏ mọc um tùm.",
+   "en": "Hà is surprised that the garden corner behind the classroom is now overgrown with grass.",
+   "ko": "하는 교실 뒤 정원 구석에 풀이 무성하게 자란 걸 보고 놀라요.",
+   "blank": "um tùm",
+   "src": "made"
   }
  ],
  "w|ứng cử": [
@@ -47329,6 +47937,22 @@
    "en": "Oh, so that's it.",
    "ko": "아, 그런 거였구나.",
    "blank": "vậy"
+  }
+ ],
+ "w|ve": [
+  {
+   "text": "Giữa trưa hè, tiếng ve trong rừng làm Quang thấy buồn ngủ.",
+   "en": "At midsummer noon, the cicadas in the forest make Quang sleepy.",
+   "ko": "한여름 낮 숲속 매미 소리에 꽝은 졸음이 와요.",
+   "blank": "ve",
+   "src": "made"
+  },
+  {
+   "text": "Hà nhớ những buổi trưa hè nghe ve kêu dưới tán phượng ở trường.",
+   "en": "Hà remembers summer noons listening to the cicadas under the flame trees at school.",
+   "ko": "하는 학교 봉황나무 그늘에서 매미 소리를 듣던 여름 낮을 기억해요.",
+   "blank": "ve",
+   "src": "made"
   }
  ],
  "w|vé": [
@@ -48619,6 +49243,22 @@
    "en": "The green of the forest after rain is so fresh.",
    "ko": "비 온 뒤 숲의 초록이 정말 싱그러워.",
    "blank": "Xanh lá"
+  }
+ ],
+ "w|xanh tươi": [
+  {
+   "text": "Quang thích ngồi bên bãi cỏ xanh tươi cạnh dòng suối.",
+   "en": "Quang likes sitting on the fresh green grass beside the stream.",
+   "ko": "꽝은 시냇가 푸릇푸릇한 풀밭에 앉아 있는 걸 좋아해요.",
+   "blank": "xanh tươi",
+   "src": "made"
+  },
+  {
+   "text": "Sân trường cũ của Hà vẫn còn hàng phượng xanh tươi như xưa.",
+   "en": "Hà's old schoolyard still has its row of flame trees, as green as ever.",
+   "ko": "하의 옛 학교 운동장에는 봉황나무 줄이 예전처럼 푸르러요.",
+   "blank": "xanh tươi",
+   "src": "made"
   }
  ],
  "w|xào": [
