@@ -177,6 +177,22 @@
    "src": "made"
   }
  ],
+ "w|ấm đun nước": [
+  {
+   "text": "Long cắm ấm đun nước để pha mì cho mấy người bạn đến phụ dọn nhà.",
+   "en": "Long plugged in the kettle to make noodles for the friends who came to help him move.",
+   "ko": "롱은 이사를 도와주러 온 친구들에게 라면을 끓여 주려고 전기 주전자를 꽂았어요.",
+   "blank": "ấm đun nước",
+   "src": "made"
+  },
+  {
+   "text": "Linh tranh thủ giờ nghỉ cắm ấm đun nước pha trà gừng cho cả đoàn.",
+   "en": "Linh used the break to plug in the kettle and make ginger tea for the whole troupe.",
+   "ko": "린은 쉬는 시간에 전기 주전자를 꽂아 극단 모두에게 생강차를 타 줬어요.",
+   "blank": "ấm đun nước",
+   "src": "made"
+  }
+ ],
  "w|ầm ĩ": [
   {
    "text": "Hùng kể nhà hàng xóm mới hát karaoke ầm ĩ đến nửa đêm.",
@@ -206,6 +222,22 @@
    "en": "Ngọc's mother reckons the farming seasons by the lunar calendar rather than the weather forecast.",
    "ko": "응옥의 어머니는 일기 예보 대신 음력으로 농사철을 셈해요.",
    "blank": "âm lịch",
+   "src": "made"
+  }
+ ],
+ "w|ẩm mốc": [
+  {
+   "text": "Góc tường nhà bếp bị ẩm mốc nên Long phải sơn lại.",
+   "en": "The corner of the kitchen wall was damp and moldy, so Long had to repaint it.",
+   "ko": "부엌 벽 모서리에 곰팡이가 피어서 롱은 다시 칠해야 했어요.",
+   "blank": "ẩm mốc",
+   "src": "made"
+  },
+  {
+   "text": "Phòng tập cũ ẩm mốc khiến Linh ho suốt buổi.",
+   "en": "The damp, musty old rehearsal room made Linh cough the whole session.",
+   "ko": "곰팡내 나는 낡은 연습실 때문에 린은 연습 내내 기침을 했어요.",
+   "blank": "ẩm mốc",
    "src": "made"
   }
  ],
@@ -2308,6 +2340,22 @@
    "en": "Thảo realized the guest in room five-oh-two was an old high school classmate.",
    "ko": "타오는 오백이 호 손님이 고등학교 때 동창이라는 걸 알아봤어요.",
    "blank": "bạn học",
+   "src": "made"
+  }
+ ],
+ "w|bàn là": [
+  {
+   "text": "Long lỡ để bàn là ở nhà cũ nên áo sơ mi nhăn nhúm cả tuần.",
+   "en": "Long accidentally left the iron at the old place, so his shirts were wrinkled all week.",
+   "ko": "롱은 다리미를 옛집에 두고 와서 일주일 내내 셔츠가 구겨져 있었어요.",
+   "blank": "bàn là",
+   "src": "made"
+  },
+  {
+   "text": "Linh tự tay dùng bàn là cho phẳng chiếc áo dài diễn.",
+   "en": "Linh ironed her stage áo dài herself.",
+   "ko": "린은 무대에서 입을 아오자이를 직접 다리미로 폈어요.",
+   "blank": "bàn là",
    "src": "made"
   }
  ],
@@ -4713,6 +4761,22 @@
    "blank": "Bếp"
   }
  ],
+ "w|bếp điện": [
+  {
+   "text": "Long dùng tạm bếp điện vì chưa lắp đường ống ga.",
+   "en": "Long is making do with an electric stove because the gas line isn't installed yet.",
+   "ko": "가스관을 아직 안 깔아서 롱은 당분간 전기레인지를 써요.",
+   "blank": "bếp điện",
+   "src": "made"
+  },
+  {
+   "text": "Nhân vật của Linh nấu cháo cho mẹ trên một chiếc bếp điện cũ.",
+   "en": "Linh's character cooks rice porridge for her mother on an old electric stove.",
+   "ko": "린이 맡은 인물은 낡은 전기레인지로 엄마에게 죽을 끓여 줘요.",
+   "blank": "bếp điện",
+   "src": "made"
+  }
+ ],
  "w|bếp ga": [
   {
    "text": "Nhớ tắt bếp ga trước khi ra ngoài.",
@@ -4726,6 +4790,22 @@
    "en": "Our gas stove is broken.",
    "ko": "우리 집 가스레인지가 고장 났어요.",
    "blank": "Bếp ga",
+   "src": "made"
+  }
+ ],
+ "w|bếp từ": [
+  {
+   "text": "Long chọn bếp từ vì an toàn và dễ lau chùi.",
+   "en": "Long chose an induction cooktop because it's safe and easy to clean.",
+   "ko": "롱은 안전하고 닦기 쉬워서 인덕션을 골랐어요.",
+   "blank": "bếp từ",
+   "src": "made"
+  },
+  {
+   "text": "Trong cảnh nhà bếp hiện đại, đạo cụ là một chiếc bếp từ thật nhưng không cắm điện.",
+   "en": "In the modern kitchen scene, the prop is a real induction cooktop, just not plugged in.",
+   "ko": "현대식 부엌 장면의 소품은 진짜 인덕션이지만 전원은 꽂혀 있지 않아요.",
+   "blank": "bếp từ",
    "src": "made"
   }
  ],
@@ -6397,6 +6477,22 @@
    "blank": "Bóng đá"
   }
  ],
+ "w|bóng đèn": [
+  {
+   "text": "Long thay hết bóng đèn vàng bằng loại tiết kiệm điện.",
+   "en": "Long replaced all the yellow light bulbs with energy-saving ones.",
+   "ko": "롱은 노란 전구를 모두 절전형으로 바꿨어요.",
+   "blank": "bóng đèn",
+   "src": "made"
+  },
+  {
+   "text": "Một bóng đèn trên sân khấu vụt tắt ngay giữa lời thoại của Linh.",
+   "en": "A light bulb on stage suddenly went out right in the middle of Linh's line.",
+   "ko": "린이 대사를 하는 도중에 무대 전구 하나가 갑자기 꺼졌어요.",
+   "blank": "bóng đèn",
+   "src": "made"
+  }
+ ],
  "w|bỗng dưng": [
   {
    "text": "Đang nướng cá, Phong bỗng dưng nhớ ra là quên mang muối.",
@@ -6937,6 +7033,22 @@
    "en": "Drinking cold water can easily upset your stomach.",
    "ko": "찬물 마시면 배 아프기 쉬워.",
    "blank": "bụng"
+  }
+ ],
+ "w|buộc": [
+  {
+   "text": "Long dùng dây thừng buộc chặt tấm nệm lên nóc xe.",
+   "en": "Long used rope to tie the mattress tightly onto the car roof.",
+   "ko": "롱은 밧줄로 매트리스를 차 지붕에 단단히 묶었어요.",
+   "blank": "buộc",
+   "src": "made"
+  },
+  {
+   "text": "Linh buộc tóc thật gọn trước khi đội tóc giả.",
+   "en": "Linh ties her hair up neatly before putting on the wig.",
+   "ko": "린은 가발을 쓰기 전에 머리를 단정하게 묶어요.",
+   "blank": "buộc",
+   "src": "made"
   }
  ],
  "w|bước": [
@@ -11616,6 +11728,38 @@
    "en": "Thảo's scarf is embroidered with a red diagonal pattern.",
    "ko": "타오의 스카프에는 빨간 사선 무늬가 수놓아져 있어요.",
    "blank": "chéo",
+   "src": "made"
+  }
+ ],
+ "w|chép": [
+  {
+   "text": "Long chép địa chỉ mới ra giấy để gửi cho bà ngoại.",
+   "en": "Long copied the new address onto paper to send to his grandmother.",
+   "ko": "롱은 외할머니께 보내려고 새 주소를 종이에 옮겨 적었어요.",
+   "blank": "chép",
+   "src": "made"
+  },
+  {
+   "text": "Linh chép lời thoại vào sổ tay để học thuộc trên xe buýt.",
+   "en": "Linh copies her lines into a notebook to memorize them on the bus.",
+   "ko": "린은 버스에서 외우려고 대사를 수첩에 옮겨 적어요.",
+   "blank": "chép",
+   "src": "made"
+  }
+ ],
+ "w|chép lại": [
+  {
+   "text": "Long chép lại nội quy chung cư vào điện thoại cho khỏi quên.",
+   "en": "Long copied the building rules into his phone so he wouldn't forget.",
+   "ko": "롱은 잊지 않으려고 아파트 관리 규정을 휴대폰에 옮겨 적었어요.",
+   "blank": "chép lại",
+   "src": "made"
+  },
+  {
+   "text": "Đạo diễn yêu cầu Linh chép lại kịch bản đã sửa vào bản của mình.",
+   "en": "The director asked Linh to copy the revised script into her own copy.",
+   "ko": "연출가는 린에게 수정된 대본을 자기 대본에 옮겨 적으라고 했어요.",
+   "blank": "chép lại",
    "src": "made"
   }
  ],
@@ -16497,6 +16641,22 @@
    "src": "made"
   }
  ],
+ "w|công tắc": [
+  {
+   "text": "Long mò mẫm mãi trong bóng tối mới tìm thấy công tắc ở hành lang.",
+   "en": "Long fumbled in the dark for ages before finding the switch in the hallway.",
+   "ko": "롱은 어둠 속에서 한참을 더듬은 끝에 복도 스위치를 찾았어요.",
+   "blank": "công tắc",
+   "src": "made"
+  },
+  {
+   "text": "Linh bấm công tắc trên sân khấu theo đúng tín hiệu của đạo diễn.",
+   "en": "Linh flips the switch on stage exactly on the director's cue.",
+   "ko": "린은 연출가의 신호에 딱 맞춰 무대 위 스위치를 눌러요.",
+   "blank": "công tắc",
+   "src": "made"
+  }
+ ],
  "w|cộng tác": [
   {
    "text": "Long từng cộng tác với nhiều kiến trúc sư trước khi về đội này.",
@@ -17007,6 +17167,22 @@
    "en": "Mom's friend just stopped by.",
    "ko": "엄마 친구가 방금 들렀어.",
    "blank": "của"
+  }
+ ],
+ "w|cưa": [
+  {
+   "text": "Tủ quá cao nên Long phải cưa bớt chân tủ cho vừa trần nhà.",
+   "en": "The wardrobe was too tall, so Long had to saw off part of its legs to fit under the ceiling.",
+   "ko": "옷장이 너무 높아서 롱은 천장에 맞게 다리를 톱으로 잘라야 했어요.",
+   "blank": "cưa",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn kịch cưa đôi tấm ván để làm cánh cửa cho cảnh của Linh.",
+   "en": "The troupe sawed the board in half to make a door for Linh's scene.",
+   "ko": "극단은 린의 장면에 쓸 문을 만들려고 판자를 반으로 톱질했어요.",
+   "blank": "cưa",
+   "src": "made"
   }
  ],
  "w|cửa": [
@@ -18815,6 +18991,22 @@
    "en": "They wore dark clothes to the funeral.",
    "ko": "그들은 어두운 옷을 입고 장례식에 갔어.",
    "blank": "đám tang"
+  }
+ ],
+ "w|dán": [
+  {
+   "text": "Long dán nhãn lên từng thùng đồ để dễ tìm khi dỡ ra.",
+   "en": "Long stuck labels on every box to make unpacking easier.",
+   "ko": "롱은 짐을 풀 때 찾기 쉽도록 상자마다 라벨을 붙였어요.",
+   "blank": "dán",
+   "src": "made"
+  },
+  {
+   "text": "Linh dán ảnh gia đình lên gương trong phòng hóa trang.",
+   "en": "Linh sticks family photos on the mirror in the dressing room.",
+   "ko": "린은 분장실 거울에 가족사진을 붙여 놓았어요.",
+   "blank": "dán",
+   "src": "made"
   }
  ],
  "w|dân": [
@@ -21239,6 +21431,22 @@
    "src": "made"
   }
  ],
+ "w|dây điện": [
+  {
+   "text": "Long gom hết dây điện lại cho gọn trước khi kê bàn làm việc.",
+   "en": "Long gathered up all the electrical cords neatly before setting up his desk.",
+   "ko": "롱은 책상을 놓기 전에 전선을 모두 깔끔하게 정리했어요.",
+   "blank": "dây điện",
+   "src": "made"
+  },
+  {
+   "text": "Linh suýt vấp phải dây điện chạy ngang hậu trường.",
+   "en": "Linh nearly tripped over a cable running across the backstage area.",
+   "ko": "린은 무대 뒤를 가로지르는 전선에 걸려 넘어질 뻔했어요.",
+   "blank": "dây điện",
+   "src": "made"
+  }
+ ],
  "w|dạy dỗ": [
   {
    "text": "Nam cảm ơn thầy chủ nhiệm cũ đã dạy dỗ anh nên người.",
@@ -21937,6 +22145,22 @@
    "ko": "다시는 늦지 않을 거예요.",
    "blank": "đến muộn",
    "src": "tatoeba:11449318/chaule3 en:5162274/CK"
+  }
+ ],
+ "w|đèn ngủ": [
+  {
+   "text": "Long đặt chiếc đèn ngủ cũ cạnh giường để căn phòng mới bớt lạ.",
+   "en": "Long put his old night light by the bed so the new room would feel less strange.",
+   "ko": "롱은 새 방이 덜 낯설도록 오래된 수면등을 침대 옆에 뒀어요.",
+   "blank": "đèn ngủ",
+   "src": "made"
+  },
+  {
+   "text": "Trong cảnh cuối, Linh tắt chiếc đèn ngủ trên bàn rồi nằm xuống.",
+   "en": "In the final scene, Linh switches off the night light on the table and lies down.",
+   "ko": "마지막 장면에서 린은 탁자 위 수면등을 끄고 누워요.",
+   "blank": "đèn ngủ",
+   "src": "made"
   }
  ],
  "w|đến nơi": [
@@ -24473,6 +24697,22 @@
    "src": "made"
   }
  ],
+ "w|đọc thầm": [
+  {
+   "text": "Long đọc thầm hợp đồng thuê nhà thêm một lần trước khi ký.",
+   "en": "Long silently read the lease once more before signing.",
+   "ko": "롱은 서명하기 전에 임대 계약서를 속으로 한 번 더 읽었어요.",
+   "blank": "đọc thầm",
+   "src": "made"
+  },
+  {
+   "text": "Trước khi ra sân khấu, Linh nhắm mắt đọc thầm lời thoại.",
+   "en": "Before going on stage, Linh closes her eyes and silently runs through her lines.",
+   "ko": "무대에 나가기 전에 린은 눈을 감고 대사를 속으로 읽어요.",
+   "blank": "đọc thầm",
+   "src": "made"
+  }
+ ],
  "w|dọc theo": [
   {
    "text": "Những thùng hàng được xếp dọc theo bức tường phía bắc của kho.",
@@ -24486,6 +24726,22 @@
    "en": "Every morning the team jogs along the riverbank.",
    "ko": "매일 아침 팀 전체가 강변을 따라 달려요.",
    "blank": "dọc theo",
+   "src": "made"
+  }
+ ],
+ "w|đọc to": [
+  {
+   "text": "Long đọc to danh sách đồ đạc để bạn kiểm tra từng món.",
+   "en": "Long read the list of belongings aloud so his friend could check each item.",
+   "ko": "롱은 친구가 하나하나 확인할 수 있게 짐 목록을 소리 내어 읽었어요.",
+   "blank": "đọc to",
+   "src": "made"
+  },
+  {
+   "text": "Buổi tập đầu, Linh và các diễn viên ngồi quanh bàn đọc to kịch bản.",
+   "en": "At the first rehearsal, Linh and the actors sat around the table reading the script aloud.",
+   "ko": "첫 연습 때 린과 배우들은 탁자에 둘러앉아 대본을 소리 내어 읽었어요.",
+   "blank": "đọc to",
    "src": "made"
   }
  ],
@@ -25679,6 +25935,22 @@
    "blank": "Đồng minh"
   }
  ],
+ "w|đóng nắp": [
+  {
+   "text": "Long đóng nắp thùng sơn thật chặt trước khi chất lên xe.",
+   "en": "Long closed the paint can tightly before loading it onto the truck.",
+   "ko": "롱은 차에 싣기 전에 페인트 통 뚜껑을 꽉 닫았어요.",
+   "blank": "đóng nắp",
+   "src": "made"
+  },
+  {
+   "text": "Linh đóng nắp hộp phấn và bước ra sân khấu.",
+   "en": "Linh closed her powder compact and stepped onto the stage.",
+   "ko": "린은 파우더 케이스를 닫고 무대로 나갔어요.",
+   "blank": "đóng nắp",
+   "src": "made"
+  }
+ ],
  "w|đồng nghiệp": [
   {
    "text": "Đồng nghiệp mới rất dễ gần.",
@@ -26498,6 +26770,22 @@
    "en": "Mai's vegetable baskets lean against the electric pole at the corner of the market.",
    "ko": "마이의 채소 바구니는 시장 모퉁이 전봇대에 기대어 있어요.",
    "blank": "dựa vào",
+   "src": "made"
+  }
+ ],
+ "w|đục": [
+  {
+   "text": "Thợ phải đục tường để đi lại đường ống nước cho nhà mới của Long.",
+   "en": "The workers had to chisel into the wall to reroute the water pipes in Long's new home.",
+   "ko": "인부들은 롱의 새집 수도관을 다시 깔려고 벽을 쪼아야 했어요.",
+   "blank": "đục",
+   "src": "made"
+  },
+  {
+   "text": "Người làm đạo cụ đục một lỗ nhỏ trên chiếc hộp để Linh giấu lá thư.",
+   "en": "The prop maker chiseled a small hole in the box so Linh could hide the letter.",
+   "ko": "소품 담당자는 린이 편지를 숨길 수 있게 상자에 작은 구멍을 팠어요.",
+   "blank": "đục",
    "src": "made"
   }
  ],
@@ -28723,6 +29011,22 @@
    "src": "made"
   }
  ],
+ "w|ghi": [
+  {
+   "text": "Long ghi số điện thoại của bác bảo vệ vào sổ tay.",
+   "en": "Long wrote down the security guard's phone number in his notebook.",
+   "ko": "롱은 경비 아저씨의 전화번호를 수첩에 적었어요.",
+   "blank": "ghi",
+   "src": "made"
+  },
+  {
+   "text": "Linh ghi tên mình vào danh sách thử vai.",
+   "en": "Linh wrote her name on the audition list.",
+   "ko": "린은 오디션 명단에 자기 이름을 적었어요.",
+   "blank": "ghi",
+   "src": "made"
+  }
+ ],
  "w|ghi bàn": [
   {
    "text": "Anh ấy ghi bàn ở phút cuối.",
@@ -28736,6 +29040,22 @@
    "en": "Our team didn't score any goals.",
    "ko": "우리 팀은 한 골도 못 넣었어요.",
    "blank": "ghi bàn",
+   "src": "made"
+  }
+ ],
+ "w|ghi lại": [
+  {
+   "text": "Long ghi lại chỉ số đồng hồ điện ngay ngày đầu chuyển đến.",
+   "en": "Long recorded the electricity meter reading on the very first day he moved in.",
+   "ko": "롱은 이사 온 첫날 바로 전기 계량기 수치를 기록해 뒀어요.",
+   "blank": "ghi lại",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhờ bạn ghi lại buổi tổng duyệt để xem chỗ nào còn chưa ổn.",
+   "en": "Linh asked a friend to record the dress rehearsal so she could see what still needed work.",
+   "ko": "린은 아직 부족한 부분을 보려고 친구에게 리허설을 녹화해 달라고 부탁했어요.",
+   "blank": "ghi lại",
    "src": "made"
   }
  ],
@@ -30532,6 +30852,22 @@
    "en": "Everyone praises Linh for being so capable, running a pharmacy while raising two small kids.",
    "ko": "다들 린이 약국을 하면서 어린 두 아이를 키운다며 야무지다고 칭찬해요.",
    "blank": "giỏi giang",
+   "src": "made"
+  }
+ ],
+ "w|giới hạn": [
+  {
+   "text": "Thang máy có trọng tải giới hạn nên Long phải chở đồ nhiều lượt.",
+   "en": "The elevator has a limited load capacity, so Long had to carry things up in many trips.",
+   "ko": "엘리베이터 적재량이 제한돼 있어서 롱은 짐을 여러 번 나눠 날라야 했어요.",
+   "blank": "giới hạn",
+   "src": "made"
+  },
+  {
+   "text": "Rạp chỉ có số ghế giới hạn nên bạn bè của Linh phải đặt chỗ sớm.",
+   "en": "The theater has a limited number of seats, so Linh's friends had to book early.",
+   "ko": "극장 좌석이 한정돼 있어서 린의 친구들은 일찍 예약해야 했어요.",
+   "blank": "giới hạn",
    "src": "made"
   }
  ],
@@ -35831,6 +36167,22 @@
    "src": "tatoeba:13173282/leucammieuvu en:12206834/CK"
   }
  ],
+ "w|hữu hạn": [
+  {
+   "text": "Tiền thuê xe tính theo giờ nên thời gian dọn đồ của Long rất hữu hạn.",
+   "en": "The truck rental is charged by the hour, so Long's time for moving is very limited.",
+   "ko": "트럭 대여료가 시간당이라 롱이 짐을 옮길 시간은 아주 한정돼 있어요.",
+   "blank": "hữu hạn",
+   "src": "made"
+  },
+  {
+   "text": "Số vé cho đêm diễn đầu tiên của Linh khá hữu hạn nên bán hết rất nhanh.",
+   "en": "Tickets for Linh's opening night were limited, so they sold out very quickly.",
+   "ko": "린의 첫 공연 표는 한정돼 있어서 아주 빨리 매진됐어요.",
+   "blank": "hữu hạn",
+   "src": "made"
+  }
+ ],
  "w|hữu hình": [
   {
    "text": "Ngoài tiền bạc, Minh coi kinh nghiệm là tài sản quý nhất, dù không hữu hình.",
@@ -36353,6 +36705,22 @@
    "en": "Can I tell a ghost story tonight?",
    "ko": "오늘 밤 귀신 이야기 해도 돼?",
    "blank": "kể chuyện"
+  }
+ ],
+ "w|kế đến": [
+  {
+   "text": "Long dọn phòng khách xong, kế đến là phòng bếp.",
+   "en": "Long finished the living room, and next came the kitchen.",
+   "ko": "롱은 거실 정리를 끝냈고, 다음은 부엌이에요.",
+   "blank": "kế đến",
+   "src": "made"
+  },
+  {
+   "text": "Linh ra chào khán giả đầu tiên, kế đến là các vai phụ.",
+   "en": "Linh came out first to bow to the audience, followed by the supporting cast.",
+   "ko": "린이 먼저 나와 관객에게 인사했고, 그다음은 조연들이었어요.",
+   "blank": "kế đến",
+   "src": "made"
   }
  ],
  "w|kẻ địch": [
@@ -38595,6 +38963,22 @@
    "ko": "톰이 감자를 요리하고 있어요.",
    "blank": "khoai tây",
    "src": "tatoeba:13550890/leucammieuvu en:13550270/rul"
+  }
+ ],
+ "w|khoan": [
+  {
+   "text": "Long phải khoan mấy lỗ trên tường để treo kệ sách trong căn hộ mới.",
+   "en": "Long had to drill a few holes in the wall to hang the bookshelf in the new apartment.",
+   "ko": "롱은 새 아파트에 책꽂이를 달려고 벽에 구멍을 몇 개 뚫어야 했어요.",
+   "blank": "khoan",
+   "src": "made"
+  },
+  {
+   "text": "Thợ sân khấu đang khoan sàn gỗ để dựng cột cho cảnh mới của Linh.",
+   "en": "The stagehands are drilling into the wooden floor to put up pillars for Linh's new scene.",
+   "ko": "무대 담당자들이 린의 새 장면에 쓸 기둥을 세우려고 나무 바닥을 뚫고 있어요.",
+   "blank": "khoan",
+   "src": "made"
   }
  ],
  "w|khoan đã": [
@@ -43341,6 +43725,22 @@
    "blank": "lo ngại"
   }
  ],
+ "w|lò nướng": [
+  {
+   "text": "Chủ nhà cũ để lại cho Long một chiếc lò nướng còn rất mới.",
+   "en": "The previous owner left Long an oven that was still almost new.",
+   "ko": "전 집주인이 거의 새것인 오븐을 롱에게 남겨 줬어요.",
+   "blank": "lò nướng",
+   "src": "made"
+  },
+  {
+   "text": "Linh đóng vai một thợ làm bánh, đạo cụ có cả lò nướng giả.",
+   "en": "Linh plays a baker, and the props even include a fake oven.",
+   "ko": "린은 제빵사 역을 맡았는데 소품에 가짜 오븐까지 있어요.",
+   "blank": "lò nướng",
+   "src": "made"
+  }
+ ],
  "w|lo sợ": [
   {
    "text": "Đừng lo sợ, mọi thứ sẽ ổn thôi.",
@@ -44997,6 +45397,22 @@
    "en": "Always bring water with you.",
    "ko": "늘 물 챙겨 다녀.",
    "blank": "Luôn luôn"
+  }
+ ],
+ "w|luôn tiện": [
+  {
+   "text": "Ra cửa hàng mua ổ cắm, Long luôn tiện mua thêm vài cái móc treo.",
+   "en": "Going to the shop for a power strip, Long picked up a few hooks while he was at it.",
+   "ko": "멀티탭을 사러 가게에 간 김에 롱은 걸이도 몇 개 샀어요.",
+   "blank": "luôn tiện",
+   "src": "made"
+  },
+  {
+   "text": "Ra chợ mua hoa cho cảnh cưới, Linh luôn tiện mua bánh cho cả đoàn.",
+   "en": "Going to the market for flowers for the wedding scene, Linh bought cakes for the troupe while she was at it.",
+   "ko": "결혼식 장면에 쓸 꽃을 사러 시장에 간 김에 린은 극단 사람들 간식도 샀어요.",
+   "blank": "luôn tiện",
+   "src": "made"
   }
  ],
  "w|lương": [
@@ -46817,6 +47233,38 @@
    "src": "tatoeba:11377434/chaule3 en:11377433/chaule3"
   }
  ],
+ "w|máy pha cà phê": [
+  {
+   "text": "Long đặt máy pha cà phê ở góc bếp, ngay cạnh cửa sổ.",
+   "en": "Long put the coffee machine in the corner of the kitchen, right by the window.",
+   "ko": "롱은 커피 머신을 부엌 구석 창문 바로 옆에 뒀어요.",
+   "blank": "máy pha cà phê",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn kịch mua một chiếc máy pha cà phê để Linh và mọi người tỉnh táo khi tập khuya.",
+   "en": "The troupe bought a coffee machine so Linh and everyone stay alert during late rehearsals.",
+   "ko": "극단은 린과 단원들이 밤늦게 연습할 때 깨어 있도록 커피 머신을 샀어요.",
+   "blank": "máy pha cà phê",
+   "src": "made"
+  }
+ ],
+ "w|máy rửa bát": [
+  {
+   "text": "Bếp nhà mới đủ rộng để Long lắp thêm một chiếc máy rửa bát.",
+   "en": "The new kitchen is big enough for Long to add a dishwasher.",
+   "ko": "새집 부엌이 넓어서 롱은 식기세척기를 하나 더 들일 수 있어요.",
+   "blank": "máy rửa bát",
+   "src": "made"
+  },
+  {
+   "text": "Vở kịch của Linh kể về một bà mẹ cãi nhau với chiếc máy rửa bát biết nói.",
+   "en": "Linh's play is about a mother who argues with a talking dishwasher.",
+   "ko": "린의 연극은 말하는 식기세척기와 다투는 엄마 이야기예요.",
+   "blank": "máy rửa bát",
+   "src": "made"
+  }
+ ],
  "w|máy sấy": [
   {
    "text": "Hôm nay Nam mua một cái máy sấy tóc cũ ở dãy hàng đồ điện.",
@@ -46830,6 +47278,22 @@
    "en": "The second-floor restroom at the city hall has just had a new hand dryer installed.",
    "ko": "시청 이층 화장실에 새 핸드드라이어가 막 설치됐어요.",
    "blank": "máy sấy",
+   "src": "made"
+  }
+ ],
+ "w|máy sưởi": [
+  {
+   "text": "Long mang theo máy sưởi vì nhà mới ở tầng cao, mùa đông rất lạnh.",
+   "en": "Long brought a heater because the new place is on a high floor and very cold in winter.",
+   "ko": "새집이 고층이라 겨울에 아주 추워서 롱은 히터를 챙겨 왔어요.",
+   "blank": "máy sưởi",
+   "src": "made"
+  },
+  {
+   "text": "Hậu trường lạnh nên đoàn đặt một chiếc máy sưởi nhỏ cạnh chỗ Linh ngồi.",
+   "en": "It's cold backstage, so the troupe put a small heater next to Linh's seat.",
+   "ko": "무대 뒤가 추워서 극단은 린이 앉는 자리 옆에 작은 히터를 놓았어요.",
+   "blank": "máy sưởi",
    "src": "made"
   }
  ],
@@ -46876,6 +47340,22 @@
    "en": "The department store has a tailoring and alteration service, and Lan brought her dress to be hemmed.",
    "ko": "백화점에 옷 수선 서비스가 있어서 란은 원피스 단을 줄이러 가져갔어요.",
    "blank": "may vá",
+   "src": "made"
+  }
+ ],
+ "w|máy xay sinh tố": [
+  {
+   "text": "Long tìm mãi không thấy cối của máy xay sinh tố trong đống thùng.",
+   "en": "Long searched forever but couldn't find the blender jug among the boxes.",
+   "ko": "롱은 상자 더미 속에서 믹서기 통을 한참 찾았지만 못 찾았어요.",
+   "blank": "máy xay sinh tố",
+   "src": "made"
+  },
+  {
+   "text": "Tiếng máy xay sinh tố trong cảnh bếp to đến mức át cả giọng Linh.",
+   "en": "The blender in the kitchen scene was so loud it drowned out Linh's voice.",
+   "ko": "부엌 장면의 믹서기 소리가 너무 커서 린의 목소리가 묻혀 버렸어요.",
+   "blank": "máy xay sinh tố",
    "src": "made"
   }
  ],
@@ -47633,6 +48113,22 @@
    "en": "Sweat runs down the forehead when it's hot.",
    "ko": "더울 때 이마에 땀이 줄줄 흘러.",
    "blank": "Mồ hôi"
+  }
+ ],
+ "w|mở nắp": [
+  {
+   "text": "Long mở nắp thùng sơn và thấy màu không giống mẫu đã chọn.",
+   "en": "Long opened the paint can and saw the color didn't match the sample he'd chosen.",
+   "ko": "롱은 페인트 통 뚜껑을 열었는데 고른 색상과 달랐어요.",
+   "blank": "mở nắp",
+   "src": "made"
+  },
+  {
+   "text": "Linh mở nắp chiếc hộp nhạc và tiếng nhạc vang lên khắp khán phòng.",
+   "en": "Linh opened the music box, and the melody filled the auditorium.",
+   "ko": "린이 오르골 뚜껑을 열자 음악 소리가 객석 가득 울려 퍼졌어요.",
+   "blank": "mở nắp",
+   "src": "made"
   }
  ],
  "w|mờ nhạt": [
@@ -55679,6 +56175,22 @@
    "src": "made"
   }
  ],
+ "w|nhân thể": [
+  {
+   "text": "Sơn lại phòng ngủ, Long nhân thể sơn luôn cánh cửa ra ban công.",
+   "en": "While repainting the bedroom, Long painted the balcony door too.",
+   "ko": "침실을 다시 칠하는 김에 롱은 발코니 문까지 칠했어요.",
+   "blank": "nhân thể",
+   "src": "made"
+  },
+  {
+   "text": "Đến rạp lấy vé mời cho mẹ, Linh nhân thể xem lại sân khấu một lượt.",
+   "en": "Going to the theater to pick up a complimentary ticket for her mom, Linh took a look around the stage while there.",
+   "ko": "엄마 초대권을 받으러 극장에 간 김에 린은 무대를 한 번 둘러봤어요.",
+   "blank": "nhân thể",
+   "src": "made"
+  }
+ ],
  "w|nhân tiện": [
   {
    "text": "Nam gọi điện nhắc lịch tiêm, nhân tiện hỏi thăm chú chó đã khỏe chưa.",
@@ -57884,6 +58396,22 @@
    "en": "On long winter evenings, Ngọc reads to forget her loneliness.",
    "ko": "긴 겨울밤이면 응옥은 외로움을 잊으려고 책을 읽어요.",
    "blank": "nỗi cô đơn",
+   "src": "made"
+  }
+ ],
+ "w|nồi cơm điện": [
+  {
+   "text": "Thứ đầu tiên Long dỡ ra là chiếc nồi cơm điện mẹ tặng.",
+   "en": "The first thing Long unpacked was the rice cooker his mother gave him.",
+   "ko": "롱이 가장 먼저 꺼낸 짐은 엄마가 준 전기밥솥이었어요.",
+   "blank": "nồi cơm điện",
+   "src": "made"
+  },
+  {
+   "text": "Trong cảnh gia đình, Linh vừa xới cơm từ nồi cơm điện vừa nói lời thoại.",
+   "en": "In the family scene, Linh scoops rice from the rice cooker while delivering her lines.",
+   "ko": "가족 장면에서 린은 전기밥솥에서 밥을 푸면서 대사를 해요.",
+   "blank": "nồi cơm điện",
    "src": "made"
   }
  ],
@@ -63343,6 +63871,22 @@
    "src": "made"
   }
  ],
+ "w|quạt trần": [
+  {
+   "text": "Căn hộ mới có quạt trần nên Long chưa cần lắp điều hòa.",
+   "en": "The new apartment has a ceiling fan, so Long doesn't need air conditioning yet.",
+   "ko": "새 아파트에 천장 선풍기가 있어서 롱은 아직 에어컨을 달 필요가 없어요.",
+   "blank": "quạt trần",
+   "src": "made"
+  },
+  {
+   "text": "Căn phòng trong vở kịch có chiếc quạt trần quay chầm chậm trên đầu Linh.",
+   "en": "The room in the play has a ceiling fan turning slowly above Linh's head.",
+   "ko": "연극 속 방에는 린의 머리 위에서 천장 선풍기가 천천히 돌아가요.",
+   "blank": "quạt trần",
+   "src": "made"
+  }
+ ],
  "w|quay": [
   {
    "text": "Trong bài ẩm thực, Minh tả cách ông chủ quán quay heo trên than hồng suốt đêm.",
@@ -67953,6 +68497,22 @@
    "blank": "số tiền"
   }
  ],
+ "w|so với": [
+  {
+   "text": "Căn hộ mới rộng gấp đôi so với chỗ cũ của Long.",
+   "en": "The new apartment is twice as big as Long's old place.",
+   "ko": "새 아파트는 롱의 예전 집보다 두 배나 넓어요.",
+   "blank": "so với",
+   "src": "made"
+  },
+  {
+   "text": "Vai diễn lần này khó hơn nhiều so với những vai Linh từng đóng.",
+   "en": "This role is much harder than the ones Linh has played before.",
+   "ko": "이번 배역은 린이 전에 맡았던 역할들보다 훨씬 어려워요.",
+   "blank": "so với",
+   "src": "made"
+  }
+ ],
  "w|sơ yếu lý lịch": [
   {
    "text": "Long gửi sơ yếu lý lịch cho công ty xây dựng ngay sau khi tốt nghiệp.",
@@ -72492,6 +73052,22 @@
    "en": "The saleswoman frankly told Mai the pot had a small hole in it.",
    "ko": "물건 파는 할머니는 냄비에 작은 구멍이 났다고 마이에게 솔직하게 말했어요.",
    "blank": "thẳng thắn",
+   "src": "made"
+  }
+ ],
+ "w|thẳng thừng": [
+  {
+   "text": "Chủ nhà thẳng thừng từ chối cho Long nuôi chó.",
+   "en": "The landlord flatly refused to let Long keep a dog.",
+   "ko": "집주인은 롱이 개를 키우는 걸 딱 잘라 거절했어요.",
+   "blank": "thẳng thừng",
+   "src": "made"
+  },
+  {
+   "text": "Linh thẳng thừng từ chối vai diễn vì kịch bản quá nhạt.",
+   "en": "Linh flatly turned down the role because the script was too bland.",
+   "ko": "린은 대본이 너무 밋밋해서 그 배역을 딱 잘라 거절했어요.",
+   "blank": "thẳng thừng",
    "src": "made"
   }
  ],
@@ -77623,6 +78199,22 @@
    "src": "made"
   }
  ],
+ "w|tiện tay": [
+  {
+   "text": "Đi đổ rác, Long tiện tay mang luôn mấy thùng giấy xuống.",
+   "en": "Taking out the trash, Long brought down a few cardboard boxes while he was at it.",
+   "ko": "쓰레기를 버리러 가면서 롱은 종이 상자 몇 개도 내친김에 들고 내려갔어요.",
+   "blank": "tiện tay",
+   "src": "made"
+  },
+  {
+   "text": "Đi ngang bàn đạo cụ, Linh tiện tay sắp lại mấy cái ly cho ngay ngắn.",
+   "en": "Passing the props table, Linh straightened a few glasses while she was at it.",
+   "ko": "소품 탁자를 지나가다가 린은 내친김에 컵 몇 개를 가지런히 놓았어요.",
+   "blank": "tiện tay",
+   "src": "made"
+  }
+ ],
  "w|tiền tệ": [
   {
    "text": "Phong viết bài phân tích chính sách tiền tệ cho số báo cuối tuần.",
@@ -77818,6 +78410,22 @@
    "en": "The forest rain went on for several days in a row, so Hà had to postpone her canoe trip.",
    "ko": "숲에 비가 며칠째 계속돼서 하는 카누 여행을 미뤄야 했어요.",
    "blank": "tiếp diễn",
+   "src": "made"
+  }
+ ],
+ "w|tiếp đó": [
+  {
+   "text": "Long lau sàn trước, tiếp đó mới kê giường và tủ.",
+   "en": "Long mopped the floor first, and after that set up the bed and wardrobe.",
+   "ko": "롱은 먼저 바닥을 닦고, 그다음에 침대와 옷장을 놓았어요.",
+   "blank": "tiếp đó",
+   "src": "made"
+  },
+  {
+   "text": "Linh khởi động giọng, tiếp đó mới vào phòng hóa trang.",
+   "en": "Linh warms up her voice and then goes into the dressing room.",
+   "ko": "린은 목을 풀고 나서야 분장실에 들어가요.",
+   "blank": "tiếp đó",
    "src": "made"
   }
  ],
@@ -82697,6 +83305,22 @@
    "src": "made"
   }
  ],
+ "w|tủ đông": [
+  {
+   "text": "Long cắm điện cho tủ đông và đợi qua đêm mới cho thịt vào.",
+   "en": "Long plugged in the freezer and waited overnight before putting the meat in.",
+   "ko": "롱은 냉동고 전원을 꽂고 하룻밤 기다린 뒤에 고기를 넣었어요.",
+   "blank": "tủ đông",
+   "src": "made"
+  },
+  {
+   "text": "Trong vở hài, Linh trốn vào một chiếc tủ đông làm bằng bìa các-tông.",
+   "en": "In the comedy, Linh hides inside a freezer made of cardboard.",
+   "ko": "코미디 연극에서 린은 골판지로 만든 냉동고 안에 숨어요.",
+   "blank": "tủ đông",
+   "src": "made"
+  }
+ ],
  "w|tự động": [
   {
    "text": "Cửa này mở tự động.",
@@ -86970,6 +87594,22 @@
    "en": "Lan picked a cream silk pillowcase set at the homeware counter.",
    "ko": "란은 생활용품 코너에서 크림색 실크 베갯잇 세트를 골랐어요.",
    "blank": "vỏ gối",
+   "src": "made"
+  }
+ ],
+ "w|vô hạn": [
+  {
+   "text": "Với Long, việc dọn nhà như vô hạn, càng dọn càng thấy thêm đồ.",
+   "en": "To Long, the moving work felt endless: the more he cleared, the more stuff he found.",
+   "ko": "롱에게 이사 정리는 끝이 없는 것 같았어요. 치울수록 짐이 더 나왔거든요.",
+   "blank": "vô hạn",
+   "src": "made"
+  },
+  {
+   "text": "Linh nói sân khấu cho cô một cảm giác tự do vô hạn.",
+   "en": "Linh says the stage gives her a feeling of boundless freedom.",
+   "ko": "린은 무대가 끝없는 자유를 느끼게 해 준다고 말해요.",
+   "blank": "vô hạn",
    "src": "made"
   }
  ],

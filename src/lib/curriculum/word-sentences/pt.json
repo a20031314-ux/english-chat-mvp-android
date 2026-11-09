@@ -3373,6 +3373,22 @@
    "src": "made"
   }
  ],
+ "w|alcoólico": [
+  {
+   "text": "O Bruno prefere água de coco a qualquer bebida alcoólica na praia.",
+   "en": "Bruno prefers coconut water to any alcoholic drink at the beach.",
+   "ko": "브루누는 해변에서 술보다 코코넛 워터를 더 좋아해요.",
+   "blank": "alcoólica",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que parou de tomar qualquer bebida alcoólica há um ano.",
+   "en": "Sofia said she stopped drinking any alcoholic beverage a year ago.",
+   "ko": "소피아는 일 년 전부터 술을 전혀 안 마신다고 했어요.",
+   "blank": "alcoólica",
+   "src": "made"
+  }
+ ],
  "w|aldeia": [
   {
    "text": "Venta muito em sua aldeia no outono?",
@@ -7093,6 +7109,22 @@
    "src": "made"
   }
  ],
+ "w|aquático": [
+  {
+   "text": "O Bruno passa as tardes estudando as plantas aquáticas do mangue.",
+   "en": "Bruno spends his afternoons studying the aquatic plants of the mangrove.",
+   "ko": "브루누는 오후마다 맹그로브의 수생 식물을 연구해요.",
+   "blank": "aquáticas",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que começou a fazer ginástica aquática com a mãe.",
+   "en": "Sofia said she started doing water aerobics with her mother.",
+   "ko": "소피아는 엄마와 아쿠아로빅을 시작했다고 했어요.",
+   "blank": "aquática",
+   "src": "made"
+  }
+ ],
  "w|aquecedor": [
   {
    "text": "Nas férias de julho, o Gabriel tirou o aquecedor do armário.",
@@ -7274,6 +7306,22 @@
    "en": "At the water station, Rita screamed when she saw a spider in the cup.",
    "ko": "급수대에서 리타는 컵 안의 거미를 보고 소리를 질렀어요.",
    "blank": "aranha",
+   "src": "made"
+  }
+ ],
+ "w|arar": [
+  {
+   "text": "Atrás das dunas, o vizinho do Bruno ainda usa boi para arar a terra.",
+   "en": "Behind the dunes, Bruno's neighbor still uses an ox to plow the land.",
+   "ko": "모래 언덕 뒤에서 브루누의 이웃은 아직도 소로 밭을 갈아요.",
+   "blank": "arar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que o pai voltou a arar a terra do sítio depois de aposentado.",
+   "en": "Sofia said her father went back to plowing the farmland after retiring.",
+   "ko": "소피아는 아버지가 은퇴한 뒤 다시 농장 밭을 갈기 시작했다고 했어요.",
+   "blank": "arar",
    "src": "made"
   }
  ],
@@ -13237,6 +13285,22 @@
    "blank": "bola"
   }
  ],
+ "w|bolacha": [
+  {
+   "text": "O Bruno dividiu um pacote de bolacha com as crianças na areia.",
+   "en": "Bruno shared a pack of cookies with the kids on the sand.",
+   "ko": "브루누는 모래사장에서 아이들과 과자 한 봉지를 나눠 먹었어요.",
+   "blank": "bolacha",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que ainda come bolacha de água e sal molhada no café.",
+   "en": "Sofia said she still dips crackers in her coffee.",
+   "ko": "소피아는 지금도 크래커를 커피에 적셔 먹는다고 했어요.",
+   "blank": "bolacha",
+   "src": "made"
+  }
+ ],
  "w|bolar": [
   {
    "text": "O João e os colegas vão bolar uma peça de teatro para a feira de ciências.",
@@ -13779,6 +13843,22 @@
    "en": "I want the white one, not the black one.",
    "ko": "하얀 걸로 할게, 검은 건 싫어.",
    "blank": "branco"
+  }
+ ],
+ "w|brasa": [
+  {
+   "text": "O Bruno assou peixe na brasa ao lado da barraca.",
+   "en": "Bruno grilled fish over the embers next to the tent.",
+   "ko": "브루누는 텐트 옆에서 숯불에 생선을 구웠어요.",
+   "blank": "brasa",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia descreveu as noites de inverno em volta da brasa do fogão a lenha.",
+   "en": "Sofia described winter nights around the embers of the wood stove.",
+   "ko": "소피아는 겨울밤 장작 난로의 숯불 곁에 모여 앉던 풍경을 적었어요.",
+   "blank": "brasa",
+   "src": "made"
   }
  ],
  "w|brasileiro": [
@@ -15567,6 +15647,22 @@
    "src": "made"
   }
  ],
+ "w|camisola": [
+  {
+   "text": "A filha do Bruno foi à praia de camisola de manhã cedo para ver o sol nascer.",
+   "en": "Bruno's daughter went to the beach in her nightgown early in the morning to watch the sunrise.",
+   "ko": "브루누의 딸은 해돋이를 보려고 이른 아침 잠옷 차림으로 해변에 나갔어요.",
+   "blank": "camisola",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia lembrou da camisola cor-de-rosa que a amiga usava nas festas do pijama.",
+   "en": "Sofia remembered the pink nightgown her friend wore at sleepovers.",
+   "ko": "소피아는 친구가 파자마 파티 때 입던 분홍 잠옷을 떠올렸어요.",
+   "blank": "camisola",
+   "src": "made"
+  }
+ ],
  "w|campainha": [
   {
    "text": "O Pedro ouviu a campainha e achou que era a entrega do jantar.",
@@ -15851,6 +15947,22 @@
    "src": "made"
   }
  ],
+ "w|canela": [
+  {
+   "text": "O Bruno bateu a canela numa pedra escondida debaixo da água.",
+   "en": "Bruno banged his shin on a rock hidden under the water.",
+   "ko": "브루누는 물속에 숨은 바위에 정강이를 부딪혔어요.",
+   "blank": "canela",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia mandou junto com a carta a receita de bolo de canela da avó.",
+   "en": "Sofia sent her grandmother's cinnamon cake recipe along with the letter.",
+   "ko": "소피아는 편지와 함께 할머니의 계피 케이크 요리법을 보냈어요.",
+   "blank": "canela",
+   "src": "made"
+  }
+ ],
  "w|caneta": [
   {
    "text": "O que você fez com a minha caneta?",
@@ -15867,6 +15979,22 @@
    "src": "tatoeba:1912139/alexmarcelo en:1912228/CM"
   }
  ],
+ "w|canguru": [
+  {
+   "text": "O Bruno viu um canguru de pelúcia gigante na barraca de prêmios da feira da praia.",
+   "en": "Bruno saw a giant stuffed kangaroo at the prize stall of the beach fair.",
+   "ko": "브루누는 해변 장터 경품 가판대에서 커다란 캥거루 인형을 봤어요.",
+   "blank": "canguru",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia mandou um cartão-postal da Austrália com um canguru na frente.",
+   "en": "Sofia sent a postcard from Australia with a kangaroo on the front.",
+   "ko": "소피아는 앞면에 캥거루가 있는 호주 엽서를 보냈어요.",
+   "blank": "canguru",
+   "src": "made"
+  }
+ ],
  "w|canhão": [
   {
    "text": "Aquele canhão parece um pouco frágil.",
@@ -15880,6 +16008,22 @@
    "en": "The castle still has an old cannon.",
    "ko": "그 성에는 아직 오래된 대포가 있어요.",
    "blank": "canhão",
+   "src": "made"
+  }
+ ],
+ "w|canino": [
+  {
+   "text": "O cachorro do Bruno tem um faro canino impressionante para achar caranguejo.",
+   "en": "Bruno's dog has an impressive canine nose for finding crabs.",
+   "ko": "브루누의 개는 게를 찾는 냄새 맡는 솜씨가 대단해요.",
+   "blank": "canino",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que abriu um hotel canino no bairro.",
+   "en": "Sofia said she opened a dog hotel in the neighborhood.",
+   "ko": "소피아는 동네에 반려견 호텔을 열었다고 했어요.",
+   "blank": "canino",
    "src": "made"
   }
  ],
@@ -17264,6 +17408,22 @@
    "en": "Carla bought a casual dress to wear to work.",
    "ko": "카를라는 출근할 때 입을 편한 원피스를 샀어요.",
    "blank": "casual",
+   "src": "made"
+  }
+ ],
+ "w|casulo": [
+  {
+   "text": "O Bruno achou um casulo pendurado na varanda da casa de praia.",
+   "en": "Bruno found a cocoon hanging on the porch of the beach house.",
+   "ko": "브루누는 바닷가 집 베란다에 매달린 고치를 발견했어요.",
+   "blank": "casulo",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que a filha saiu do casulo e agora fala com todo mundo.",
+   "en": "Sofia wrote that her daughter came out of her shell and now talks to everyone.",
+   "ko": "소피아는 딸이 껍데기를 깨고 나와 이제 아무하고나 이야기한다고 썼어요.",
+   "blank": "casulo",
    "src": "made"
   }
  ],
@@ -26311,6 +26471,22 @@
    "src": "made"
   }
  ],
+ "w|creche": [
+  {
+   "text": "A creche da vila fica de frente para o mar, e o Bruno leva a filha a pé.",
+   "en": "The village daycare faces the sea, and Bruno walks his daughter there.",
+   "ko": "마을 어린이집이 바다를 마주 보고 있어서 브루누는 딸을 걸어서 데려다줘요.",
+   "blank": "creche",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que hoje trabalha como professora numa creche.",
+   "en": "Sofia said she now works as a teacher at a daycare.",
+   "ko": "소피아는 지금 어린이집 교사로 일한다고 했어요.",
+   "blank": "creche",
+   "src": "made"
+  }
+ ],
  "w|credencial": [
   {
    "text": "Sem a credencial, o Bruno não conseguiu passar pela catraca do prédio.",
@@ -28189,6 +28365,22 @@
    "src": "made"
   }
  ],
+ "w|decomposição": [
+  {
+   "text": "O Bruno explicou que as algas em decomposição causam o cheiro forte da praia.",
+   "en": "Bruno explained that decomposing seaweed causes the beach's strong smell.",
+   "ko": "브루누는 해변의 고약한 냄새가 썩어 가는 해초 때문이라고 설명했어요.",
+   "blank": "decomposição",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que faz adubo com folhas em decomposição no quintal.",
+   "en": "Sofia said she makes compost from decomposing leaves in her backyard.",
+   "ko": "소피아는 마당에서 썩은 잎으로 퇴비를 만든다고 했어요.",
+   "blank": "decomposição",
+   "src": "made"
+  }
+ ],
  "w|decoração": [
   {
    "text": "A equipe do Gabriel ficou responsável pela decoração da sala de reuniões no Natal.",
@@ -29965,6 +30157,22 @@
    "en": "Let's walk down from here.",
    "ko": "여기서부터 걸어서 내려가자.",
    "blank": "descer"
+  }
+ ],
+ "w|descida": [
+  {
+   "text": "A descida até a praia escondida é íngreme, e o Bruno foi devagar.",
+   "en": "The descent to the hidden beach is steep, and Bruno went slowly.",
+   "ko": "숨은 해변으로 내려가는 길이 가팔라서 브루누는 천천히 내려갔어요.",
+   "blank": "descida",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu sobre a descida de bicicleta que fazia com a amiga na infância.",
+   "en": "Sofia wrote about the bike ride downhill she used to take with her friend as a child.",
+   "ko": "소피아는 어릴 적 친구와 자전거로 내리막을 달리던 이야기를 썼어요.",
+   "blank": "descida",
+   "src": "made"
   }
  ],
  "w|descoberta": [
@@ -34935,6 +35143,22 @@
    "src": "tatoeba:6940464/Ricardo14 en:4999743/CK"
   }
  ],
+ "w|égua": [
+  {
+   "text": "O Bruno cavalgou pela beira do mar numa égua mansa.",
+   "en": "Bruno rode along the shore on a gentle mare.",
+   "ko": "브루누는 순한 암말을 타고 바닷가를 달렸어요.",
+   "blank": "égua",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que a égua do sítio teve um potrinho.",
+   "en": "Sofia said the mare on the farm had a little foal.",
+   "ko": "소피아는 농장 암말이 망아지를 낳았다고 전했어요.",
+   "blank": "égua",
+   "src": "made"
+  }
+ ],
  "w|ei": [
   {
    "text": "Ei, espera aí.",
@@ -35620,6 +35844,22 @@
    "en": "Ana joked that the sale was an ambush for her wallet.",
    "ko": "아나는 그 세일이 자기 지갑을 노린 기습이었다고 농담했어요.",
    "blank": "emboscada",
+   "src": "made"
+  }
+ ],
+ "w|embrulhar": [
+  {
+   "text": "O Bruno pediu para embrulhar o peixe em jornal para levar para casa.",
+   "en": "Bruno asked them to wrap the fish in newspaper to take home.",
+   "ko": "브루누는 생선을 집에 가져가려고 신문지에 싸 달라고 했어요.",
+   "blank": "embrulhar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia comprou um lenço para a amiga e pediu para embrulhar para presente.",
+   "en": "Sofia bought a scarf for her friend and asked to have it gift-wrapped.",
+   "ko": "소피아는 친구에게 줄 스카프를 사서 선물 포장을 부탁했어요.",
+   "blank": "embrulhar",
    "src": "made"
   }
  ],
@@ -44869,6 +45109,22 @@
    "src": "made"
   }
  ],
+ "w|fidelidade": [
+  {
+   "text": "O cachorro do Bruno mostra uma fidelidade comovente e espera o barco no cais.",
+   "en": "Bruno's dog shows touching loyalty and waits for the boat at the pier.",
+   "ko": "브루누의 개는 감동적일 만큼 충직해서 부두에서 배를 기다려요.",
+   "blank": "fidelidade",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia agradeceu à amiga pela fidelidade de tantos anos de cartas.",
+   "en": "Sofia thanked her friend for the loyalty of so many years of letters.",
+   "ko": "소피아는 오랜 세월 편지를 이어 준 친구의 의리에 고마워했어요.",
+   "blank": "fidelidade",
+   "src": "made"
+  }
+ ],
  "w|fiel": [
   {
    "text": "O cachorro do Bruno é tão fiel que o segue em toda trilha.",
@@ -45651,6 +45907,22 @@
    "blank": "floresta"
   }
  ],
+ "w|florestal": [
+  {
+   "text": "O Bruno trabalha como guarda florestal na reserva perto da praia.",
+   "en": "Bruno works as a forest ranger in the reserve near the beach.",
+   "ko": "브루누는 해변 근처 보호 구역에서 산림 감시원으로 일해요.",
+   "blank": "florestal",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que a casa nova fica ao lado de uma reserva florestal.",
+   "en": "Sofia wrote that the new house is next to a forest reserve.",
+   "ko": "소피아는 새집이 산림 보호 구역 옆에 있다고 썼어요.",
+   "blank": "florestal",
+   "src": "made"
+  }
+ ],
  "w|florido": [
   {
    "text": "A trilha até a casa do Lucas fica toda florida em setembro.",
@@ -46023,6 +46295,22 @@
    "en": "He's out of shape.",
    "ko": "그 사람은 몸이 예전 같지 않아.",
    "blank": "fora de"
+  }
+ ],
+ "w|forasteiro": [
+  {
+   "text": "Os pescadores da vila trataram o Bruno como forasteiro no primeiro verão.",
+   "en": "The village fishermen treated Bruno as an outsider his first summer.",
+   "ko": "첫 여름에 마을 어부들은 브루누를 외지인 취급했어요.",
+   "blank": "forasteiro",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que ainda se sente forasteira na cidade nova.",
+   "en": "Sofia wrote that she still feels like an outsider in the new city.",
+   "ko": "소피아는 새 도시에서 아직 이방인 같은 기분이라고 썼어요.",
+   "blank": "forasteira",
+   "src": "made"
   }
  ],
  "w|força": [
@@ -47745,6 +48033,22 @@
    "src": "tatoeba:1227825/alexmarcelo en:19486/CK"
   }
  ],
+ "w|gafanhoto": [
+  {
+   "text": "Um gafanhoto pousou no chapéu do Bruno enquanto ele lia na areia.",
+   "en": "A grasshopper landed on Bruno's hat while he was reading on the sand.",
+   "ko": "브루누가 모래사장에서 책을 읽는데 메뚜기가 모자에 내려앉았어요.",
+   "blank": "gafanhoto",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia lembrou do gafanhoto que a amiga escondeu no estojo da professora.",
+   "en": "Sofia remembered the grasshopper her friend hid in the teacher's pencil case.",
+   "ko": "소피아는 친구가 선생님 필통에 숨겨 놨던 메뚜기를 떠올렸어요.",
+   "blank": "gafanhoto",
+   "src": "made"
+  }
+ ],
  "w|gaiola": [
   {
    "text": "O João guardou a comida numa gaiola de metal para os macacos não pegarem.",
@@ -47758,6 +48062,22 @@
    "en": "Ana said that, stuck in traffic before the start, she felt like she was in a cage.",
    "ko": "아나는 출발 전에 차가 막혀서 새장에 갇힌 기분이었다고 했어요.",
    "blank": "gaiola",
+   "src": "made"
+  }
+ ],
+ "w|gaivota": [
+  {
+   "text": "Uma gaivota roubou o sanduíche do Bruno na beira do mar.",
+   "en": "A seagull stole Bruno's sandwich at the water's edge.",
+   "ko": "바닷가에서 갈매기가 브루누의 샌드위치를 채 갔어요.",
+   "blank": "gaivota",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que uma gaivota pousa todo dia na janela do apartamento dela.",
+   "en": "Sofia wrote that a seagull lands on her apartment window every day.",
+   "ko": "소피아는 갈매기가 매일 자기 아파트 창문에 내려앉는다고 썼어요.",
+   "blank": "gaivota",
    "src": "made"
   }
  ],
@@ -48370,6 +48690,38 @@
    "en": "Inês arrived with freezing hands and went straight to make tea.",
    "ko": "이네스는 손이 꽁꽁 언 채 와서 바로 차를 끓였어요.",
    "blank": "geladas",
+   "src": "made"
+  }
+ ],
+ "w|geleia": [
+  {
+   "text": "A pousada do Bruno serve geleia de goiaba no café da manhã.",
+   "en": "Bruno's guesthouse serves guava jam at breakfast.",
+   "ko": "브루누의 민박은 아침 식사에 구아바 잼을 내요.",
+   "blank": "geleia",
+   "src": "made"
+  },
+  {
+   "text": "A amiga respondeu à Sofia e mandou um pote de geleia caseira pelo correio.",
+   "en": "Sofia's friend replied and sent a jar of homemade jam by mail.",
+   "ko": "친구는 소피아에게 답장하며 집에서 만든 잼 한 병을 우편으로 보냈어요.",
+   "blank": "geleia",
+   "src": "made"
+  }
+ ],
+ "w|geleira": [
+  {
+   "text": "O Bruno explicou ao filho que o nível do mar sobe quando cada geleira derrete.",
+   "en": "Bruno explained to his son that the sea level rises when each glacier melts.",
+   "ko": "브루누는 아들에게 빙하가 녹을 때마다 해수면이 올라간다고 설명해 줬어요.",
+   "blank": "geleira",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia mandou uma foto de uma geleira que visitou na Patagônia.",
+   "en": "Sofia sent a photo of a glacier she visited in Patagonia.",
+   "ko": "소피아는 파타고니아에서 본 빙하 사진을 보냈어요.",
+   "blank": "geleira",
    "src": "made"
   }
  ],
@@ -49969,6 +50321,22 @@
    "src": "made"
   }
  ],
+ "w|grilo": [
+  {
+   "text": "Na casa de praia, o barulho de um grilo não deixou o Bruno dormir.",
+   "en": "At the beach house, the noise of a cricket kept Bruno from sleeping.",
+   "ko": "바닷가 집에서 귀뚜라미 소리 때문에 브루누는 잠을 못 잤어요.",
+   "blank": "grilo",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que ainda ouve um grilo cantar no jardim toda noite.",
+   "en": "Sofia wrote that she still hears a cricket chirping in the garden every night.",
+   "ko": "소피아는 지금도 밤마다 정원에서 귀뚜라미 우는 소리가 들린다고 썼어요.",
+   "blank": "grilo",
+   "src": "made"
+  }
+ ],
  "w|gripado": [
   {
    "text": "Mesmo gripado, o Rafael foi trabalhar porque tinha uma cirurgia marcada.",
@@ -50182,6 +50550,22 @@
    "en": "Luísa sees herself as a guardian of her customers' data.",
    "ko": "루이자는 자신을 고객 데이터의 수호자라고 생각해요.",
    "blank": "guardiã",
+   "src": "made"
+  }
+ ],
+ "w|guaxinim": [
+  {
+   "text": "O Bruno viu num documentário um guaxinim lavando comida na beira de um rio.",
+   "en": "Bruno saw in a documentary a raccoon washing food at a riverbank.",
+   "ko": "브루누는 다큐멘터리에서 강가에서 먹이를 씻는 너구리를 봤어요.",
+   "blank": "guaxinim",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que viu um guaxinim de verdade numa viagem ao Canadá.",
+   "en": "Sofia said she saw a real raccoon on a trip to Canada.",
+   "ko": "소피아는 캐나다 여행에서 진짜 너구리를 봤다고 했어요.",
+   "blank": "guaxinim",
    "src": "made"
   }
  ],
@@ -62407,6 +62791,22 @@
    "src": "made"
   }
  ],
+ "w|mármore": [
+  {
+   "text": "O Bruno ficou num hotel de mármore branco no alto da falésia.",
+   "en": "Bruno stayed at a white marble hotel on top of the cliff.",
+   "ko": "브루누는 절벽 위 흰 대리석 호텔에 묵었어요.",
+   "blank": "mármore",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que a escada de mármore da escola antiga foi demolida.",
+   "en": "Sofia said the marble staircase of their old school was demolished.",
+   "ko": "소피아는 옛 학교의 대리석 계단이 헐렸다고 알렸어요.",
+   "blank": "mármore",
+   "src": "made"
+  }
+ ],
  "w|marquês": [
   {
    "text": "O Gabriel escreveu sobre o palácio onde morava um marquês no século dezenove.",
@@ -63251,6 +63651,22 @@
    "src": "made"
   }
  ],
+ "w|melão": [
+  {
+   "text": "O Bruno levou um melão gelado para dividir com os amigos na praia.",
+   "en": "Bruno brought a chilled melon to share with his friends at the beach.",
+   "ko": "브루누는 해변에서 친구들과 나눠 먹으려고 차가운 멜론을 가져갔어요.",
+   "blank": "melão",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia lembrou na carta do melão que as duas roubavam da horta da vizinha.",
+   "en": "Sofia recalled in the letter the melon the two of them used to steal from the neighbor's garden.",
+   "ko": "소피아는 둘이 이웃집 텃밭에서 몰래 따 먹던 멜론 이야기를 편지에 적었어요.",
+   "blank": "melão",
+   "src": "made"
+  }
+ ],
  "w|melhor": [
   {
    "text": "Me sinto melhor.",
@@ -63997,6 +64413,22 @@
    "ko": "금속은 차가워지면 줄어들어요.",
    "blank": "metal",
    "src": "tatoeba:5461259/carlosalberto en:18498/Zifre"
+  }
+ ],
+ "w|meteorito": [
+  {
+   "text": "Numa noite clara na praia, o Bruno viu um meteorito riscar o céu.",
+   "en": "On a clear night at the beach, Bruno saw a meteorite streak across the sky.",
+   "ko": "맑은 밤 해변에서 브루누는 운석이 하늘을 가르는 걸 봤어요.",
+   "blank": "meteorito",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia lembrou do dia em que as duas viram um meteorito no museu de ciências.",
+   "en": "Sofia recalled the day the two of them saw a meteorite at the science museum.",
+   "ko": "소피아는 둘이 과학관에서 운석을 봤던 날을 떠올렸어요.",
+   "blank": "meteorito",
+   "src": "made"
   }
  ],
  "w|meteoro": [
@@ -67755,6 +68187,22 @@
    "ko": "우리 며느리가 정말 좋아요.",
    "blank": "nora",
    "src": "tatoeba:7312993/iart61 en:7985453/trochal"
+  }
+ ],
+ "w|nordeste": [
+  {
+   "text": "Quando sopra o vento nordeste, o Bruno sai para velejar.",
+   "en": "When the northeast wind blows, Bruno goes out sailing.",
+   "ko": "북동풍이 불면 브루누는 요트를 타러 나가요.",
+   "blank": "nordeste",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou na carta que se mudou para o nordeste do estado.",
+   "en": "Sofia said in the letter that she moved to the northeast of the state.",
+   "ko": "소피아는 편지에 주 북동부로 이사했다고 썼어요.",
+   "blank": "nordeste",
+   "src": "made"
   }
  ],
  "w|norma": [
@@ -73213,6 +73661,22 @@
    "src": "made"
   }
  ],
+ "w|percurso": [
+  {
+   "text": "O percurso de barco até a ilha leva uma hora, segundo o Bruno.",
+   "en": "The boat route to the island takes an hour, according to Bruno.",
+   "ko": "브루누 말로는 섬까지 배로 한 시간 걸린대요.",
+   "blank": "percurso",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia desenhou na carta o percurso que fazia todo dia até a escola.",
+   "en": "Sofia drew in the letter the route she took to school every day.",
+   "ko": "소피아는 매일 학교 가던 길을 편지에 그려 넣었어요.",
+   "blank": "percurso",
+   "src": "made"
+  }
+ ],
  "w|perda": [
   {
    "text": "Aquela reunião foi uma perda de tempo.",
@@ -73594,6 +74058,22 @@
    "en": "Carla got a permanent tattoo of a wave on her ankle.",
    "ko": "카를라는 발목에 파도 모양 영구 문신을 새겼어요.",
    "blank": "permanente",
+   "src": "made"
+  }
+ ],
+ "w|permanentemente": [
+  {
+   "text": "O Bruno decidiu morar permanentemente na casa de praia do avô.",
+   "en": "Bruno decided to live permanently in his grandfather's beach house.",
+   "ko": "브루누는 할아버지의 바닷가 집에 아예 눌러살기로 했어요.",
+   "blank": "permanentemente",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que a amiga ficou marcada permanentemente na memória dela.",
+   "en": "Sofia wrote that her friend was permanently etched in her memory.",
+   "ko": "소피아는 친구가 자기 기억에 영원히 새겨졌다고 썼어요.",
+   "blank": "permanentemente",
    "src": "made"
   }
  ],
@@ -74630,6 +75110,22 @@
    "en": "Carla's son asked for a stuffed penguin for his birthday.",
    "ko": "카를라의 아들은 생일 선물로 펭귄 인형을 달라고 했어요.",
    "blank": "pinguim",
+   "src": "made"
+  }
+ ],
+ "w|pinheiro": [
+  {
+   "text": "O Bruno armou a rede entre um coqueiro e um pinheiro perto da areia.",
+   "en": "Bruno hung the hammock between a coconut tree and a pine near the sand.",
+   "ko": "브루누는 모래사장 근처 야자수와 소나무 사이에 해먹을 걸었어요.",
+   "blank": "pinheiro",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia guardou na carta uma pinha do pinheiro do quintal da infância.",
+   "en": "Sofia tucked into the letter a pinecone from the pine tree in her childhood backyard.",
+   "ko": "소피아는 어릴 적 마당 소나무에서 딴 솔방울을 편지에 넣었어요.",
+   "blank": "pinheiro",
    "src": "made"
   }
  ],
@@ -76820,6 +77316,22 @@
    "en": "Ana shot the fight scene in a square in the historic center.",
    "ko": "아나는 싸움 장면을 구시가지 광장에서 찍었어요.",
    "blank": "praça",
+   "src": "made"
+  }
+ ],
+ "w|prado": [
+  {
+   "text": "Atrás da praia há um prado onde o Bruno solta a pipa com o filho.",
+   "en": "Behind the beach there's a meadow where Bruno flies a kite with his son.",
+   "ko": "해변 뒤에는 브루누가 아들과 연을 날리는 풀밭이 있어요.",
+   "blank": "prado",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia descreveu um prado cheio de flores perto da nova casa.",
+   "en": "Sofia described a meadow full of flowers near the new house.",
+   "ko": "소피아는 새집 근처 꽃이 가득한 풀밭을 묘사했어요.",
+   "blank": "prado",
    "src": "made"
   }
  ],
@@ -80093,6 +80605,22 @@
    "blank": "pulou"
   }
  ],
+ "w|pulga": [
+  {
+   "text": "O cachorro do Bruno pegou pulga na praia e precisou de remédio.",
+   "en": "Bruno's dog caught fleas at the beach and needed medicine.",
+   "ko": "브루누의 개가 해변에서 벼룩이 옮아 약을 먹어야 했어요.",
+   "blank": "pulga",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que o gato pegou pulga e a casa virou um caos.",
+   "en": "Sofia said the cat caught fleas and the house turned into chaos.",
+   "ko": "소피아는 고양이에게 벼룩이 옮아 집이 난리가 났다고 했어요.",
+   "blank": "pulga",
+   "src": "made"
+  }
+ ],
  "w|pulmão": [
   {
    "text": "Meu pai morreu de câncer de pulmão.",
@@ -81487,6 +82015,22 @@
    "en": "I heard that on the radio.",
    "ko": "라디오에서 그 소식 들었어.",
    "blank": "rádio"
+  }
+ ],
+ "w|radioativo": [
+  {
+   "text": "O Bruno leu que um navio afundado perto da costa não carregava lixo radioativo.",
+   "en": "Bruno read that a ship sunk near the coast was not carrying radioactive waste.",
+   "ko": "브루누는 해안 근처에 가라앉은 배에 방사성 폐기물은 없었다는 기사를 읽었어요.",
+   "blank": "radioativo",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia lembrou que as duas tinham medo de tudo que fosse radioativo depois de um filme.",
+   "en": "Sofia recalled that after a movie the two of them were afraid of anything radioactive.",
+   "ko": "소피아는 둘이 영화 한 편을 보고 방사능이라면 다 무서워했던 걸 떠올렸어요.",
+   "blank": "radioativo",
+   "src": "made"
   }
  ],
  "w|rainha": [
@@ -84425,6 +84969,22 @@
    "src": "made"
   }
  ],
+ "w|reprodução": [
+  {
+   "text": "O Bruno ajuda o projeto que protege a reprodução das tartarugas marinhas.",
+   "en": "Bruno helps the project that protects sea turtle breeding.",
+   "ko": "브루누는 바다거북 번식을 보호하는 사업을 도와요.",
+   "blank": "reprodução",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia mandou de presente uma reprodução de um quadro que as duas viram no museu.",
+   "en": "Sofia sent as a gift a reproduction of a painting the two of them saw at the museum.",
+   "ko": "소피아는 둘이 미술관에서 봤던 그림의 복제화를 선물로 보냈어요.",
+   "blank": "reprodução",
+   "src": "made"
+  }
+ ],
  "w|reproduzir": [
   {
    "text": "A máquina nova consegue reproduzir o mesmo molde sem nenhum defeito.",
@@ -86593,6 +87153,22 @@
    "src": "tatoeba:2056834/MarlonX19 en:2056794/JonLDS"
   }
  ],
+ "w|rugir": [
+  {
+   "text": "Nas noites de ressaca, o Bruno ouve o mar rugir contra as pedras.",
+   "en": "On stormy-surf nights, Bruno hears the sea roar against the rocks.",
+   "ko": "파도가 거친 밤이면 브루누는 바다가 바위에 부딪혀 울부짖는 소리를 들어요.",
+   "blank": "rugir",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia escreveu que o filho imita o leão e tenta rugir no zoológico.",
+   "en": "Sofia wrote that her son imitates the lion and tries to roar at the zoo.",
+   "ko": "소피아는 아들이 동물원에서 사자를 흉내 내며 으르렁거린다고 썼어요.",
+   "blank": "rugir",
+   "src": "made"
+  }
+ ],
  "w|ruído": [
   {
    "text": "Com o ruído das obras lá fora, o Gabriel mal conseguia escrever.",
@@ -86873,6 +87449,22 @@
    "ko": "수박 맛을 좋아해요.",
    "blank": "sabor",
    "src": "tatoeba:5101930/bill en:712124/Ronaldonl"
+  }
+ ],
+ "w|saboroso": [
+  {
+   "text": "O Bruno comeu um peixe grelhado muito saboroso na barraca da praia.",
+   "en": "Bruno ate a very tasty grilled fish at the beach stall.",
+   "ko": "브루누는 해변 노점에서 아주 맛있는 생선구이를 먹었어요.",
+   "blank": "saboroso",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia descreveu um prato de bacalhau tão saboroso que a amiga ficou com fome.",
+   "en": "Sofia described a cod dish so tasty that her friend got hungry.",
+   "ko": "소피아가 대구 요리를 너무 맛있게 묘사해서 친구가 배고파졌어요.",
+   "blank": "saboroso",
+   "src": "made"
   }
  ],
  "w|sabotagem": [
@@ -90399,6 +90991,22 @@
    "src": "made"
   }
  ],
+ "w|smoking": [
+  {
+   "text": "O Bruno foi a um casamento na areia e suou muito de smoking.",
+   "en": "Bruno went to a wedding on the sand and sweated a lot in his tuxedo.",
+   "ko": "브루누는 모래사장 결혼식에 갔다가 턱시도 때문에 땀을 뻘뻘 흘렸어요.",
+   "blank": "smoking",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia mandou uma foto do marido de smoking no dia do casamento.",
+   "en": "Sofia sent a photo of her husband in a tuxedo on their wedding day.",
+   "ko": "소피아는 결혼식 날 턱시도를 입은 남편 사진을 보냈어요.",
+   "blank": "smoking",
+   "src": "made"
+  }
+ ],
  "w|só": [
   {
    "text": "Só quero água.",
@@ -90787,6 +91395,22 @@
    "en": "I called for help on the street.",
    "ko": "길에서 도움을 청했어.",
    "blank": "socorro"
+  }
+ ],
+ "w|sódio": [
+  {
+   "text": "O médico mandou o Bruno cortar o sódio, e ele reduziu o peixe salgado.",
+   "en": "The doctor told Bruno to cut sodium, and he cut back on salted fish.",
+   "ko": "의사가 나트륨을 줄이라고 해서 브루누는 소금에 절인 생선을 덜 먹어요.",
+   "blank": "sódio",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia brincou que, depois dos cinquenta, até o sódio do pão virou preocupação.",
+   "en": "Sofia joked that, after fifty, even the sodium in bread became a worry.",
+   "ko": "소피아는 쉰이 넘으니 빵 속 나트륨까지 신경 쓰인다고 농담했어요.",
+   "blank": "sódio",
+   "src": "made"
   }
  ],
  "w|sofá": [
@@ -94520,6 +95144,22 @@
    "en": "Almost a third of Luísa's team budget goes to travel.",
    "ko": "루이자네 팀 예산의 거의 삼분의 일이 출장비로 나가요.",
    "blank": "terço",
+   "src": "made"
+  }
+ ],
+ "w|térmico": [
+  {
+   "text": "O Bruno levou café numa garrafa térmica para ver o nascer do sol.",
+   "en": "Bruno brought coffee in a thermos to watch the sunrise.",
+   "ko": "브루누는 해돋이를 보러 보온병에 커피를 담아 갔어요.",
+   "blank": "térmica",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contou que comprou uma blusa térmica para o inverno do sul.",
+   "en": "Sofia said she bought a thermal top for the southern winter.",
+   "ko": "소피아는 남부의 겨울을 나려고 발열 내의를 샀다고 했어요.",
+   "blank": "térmica",
    "src": "made"
   }
  ],
