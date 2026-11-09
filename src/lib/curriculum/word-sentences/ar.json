@@ -5275,6 +5275,22 @@
    "src": "made"
   }
  ],
+ "w|أممي": [
+  {
+   "text": "يستضيف المتحف هذا الشهر معرضا أمميا عن تراث المدن القديمة.",
+   "en": "This month the museum is hosting an international exhibition about the heritage of ancient cities.",
+   "ko": "박물관은 이번 달 옛 도시 유산에 관한 국제 전시회를 열어요.",
+   "blank": "أمميا",
+   "src": "made"
+  },
+  {
+   "text": "شارك في الحفلة عازفون من بلدان كثيرة ضمن مشروع أممي للسلام.",
+   "en": "Musicians from many countries took part in the concert as part of an international peace project.",
+   "ko": "여러 나라 연주자들이 국제 평화 프로젝트의 하나로 공연에 참여했어요.",
+   "blank": "أممي",
+   "src": "made"
+  }
+ ],
  "w|أمن": [
   {
    "text": "الأمن في هذا المكان ممتاز.",
@@ -8895,6 +8911,22 @@
    "src": "made"
   }
  ],
+ "w|اتجار": [
+  {
+   "text": "حدث علي الزوار عن قضية اتجار بالآثار كشفتها الشرطة قبل سنوات.",
+   "en": "Ali told the visitors about a case of antiquities trafficking the police uncovered years ago.",
+   "ko": "알리는 방문객들에게 몇 년 전 경찰이 밝혀낸 유물 밀거래 사건을 이야기했어요.",
+   "blank": "اتجار",
+   "src": "made"
+  },
+  {
+   "text": "خصصت الفرقة حفلتها لدعم حملة ضد الاتجار بالبشر.",
+   "en": "The band dedicated its concert to supporting a campaign against human trafficking.",
+   "ko": "밴드는 인신매매 반대 캠페인을 돕는 데 공연을 바쳤어요.",
+   "blank": "الاتجار",
+   "src": "made"
+  }
+ ],
  "w|اتجاه": [
   {
    "text": "سألته عن اتجاه السوق.",
@@ -10217,6 +10249,22 @@
    "en": "He relaxed in the comfortable seat.",
    "ko": "편안한 좌석에서 그는 휴식을 취했다.",
    "blank": "ارتاح"
+  }
+ ],
+ "w|ارتباط": [
+  {
+   "text": "لخالد ارتباط عاطفي بالفرن الحجري الذي بناه أبوه.",
+   "en": "Khaled has an emotional attachment to the stone oven his father built.",
+   "ko": "할리드는 아버지가 지은 돌 오븐에 정이 깊어요.",
+   "blank": "ارتباط",
+   "src": "made"
+  },
+  {
+   "text": "ألغت ليلى حجز العشاء بسبب ارتباط مفاجئ في العمل.",
+   "en": "Laila canceled the dinner reservation because of a sudden work commitment.",
+   "ko": "라일라는 갑자기 생긴 업무 약속 때문에 저녁 예약을 취소했어요.",
+   "blank": "ارتباط",
+   "src": "made"
   }
  ],
  "w|ارتباك": [
@@ -16671,6 +16719,22 @@
    "src": "made"
   }
  ],
+ "w|بامية": [
+  {
+   "text": "أحضرت جارة خالد قدرا من البامية لتتذوقه العائلة.",
+   "en": "Khaled's neighbor brought a pot of okra for the family to taste.",
+   "ko": "할리드의 이웃이 가족이 맛보라고 오크라 요리 한 냄비를 가져왔어요.",
+   "blank": "البامية",
+   "src": "made"
+  },
+  {
+   "text": "قالت ليلى للنادل إن البامية في الفندق تذكرها بطبخ أمها.",
+   "en": "Laila told the waiter that the hotel's okra reminds her of her mother's cooking.",
+   "ko": "라일라는 웨이터에게 호텔의 오크라 요리가 엄마 요리를 생각나게 한다고 말했어요.",
+   "blank": "البامية",
+   "src": "made"
+  }
+ ],
  "w|بان": [
   {
    "text": "بان الحزن في عينيه بوضوح.",
@@ -19397,6 +19461,22 @@
    "blank": "بندقية"
   }
  ],
+ "w|بندورة": [
+  {
+   "text": "يضع خالد شرائح البندورة والجبن على فطائر الصباح.",
+   "en": "Khaled puts tomato slices and cheese on the morning pies.",
+   "ko": "할리드는 아침 파이에 토마토 조각과 치즈를 올려요.",
+   "blank": "البندورة",
+   "src": "made"
+  },
+  {
+   "text": "طلبت ليلى من مطعم الفندق سلطة بندورة وخيار.",
+   "en": "Laila ordered a tomato and cucumber salad from the hotel restaurant.",
+   "ko": "라일라는 호텔 식당에서 토마토 오이 샐러드를 주문했어요.",
+   "blank": "بندورة",
+   "src": "made"
+  }
+ ],
  "w|بنزين": [
   {
    "text": "نفد البنزين من سيارة علي قرب قرية صغيرة.",
@@ -21447,6 +21527,22 @@
    "blank": "تحكم"
   }
  ],
+ "w|تحلية": [
+  {
+   "text": "يقدم خالد قطعة صغيرة من الهريسة تحلية مجانية لكل زبون.",
+   "en": "Khaled offers a small piece of harissa cake as a free dessert to every customer.",
+   "ko": "할리드는 손님마다 작은 하리사 케이크 한 조각을 무료 디저트로 줘요.",
+   "blank": "تحلية",
+   "src": "made"
+  },
+  {
+   "text": "اختارت ليلى سلطة الفواكه تحلية بعد العشاء.",
+   "en": "Laila chose fruit salad as dessert after dinner.",
+   "ko": "라일라는 저녁 후 디저트로 과일 샐러드를 골랐어요.",
+   "blank": "تحلية",
+   "src": "made"
+  }
+ ],
  "w|تحليق": [
   {
    "text": "علق حسن الممثلة بحبال رفيعة لتبدو في حالة تحليق فوق الجمهور.",
@@ -23139,6 +23235,22 @@
    "src": "made"
   }
  ],
+ "w|تشرد": [
+  {
+   "text": "يتحدث قسم في المتحف عن تشرد الأطفال بعد الحرب الأولى.",
+   "en": "A section of the museum talks about the homelessness of children after the first war.",
+   "ko": "박물관의 한 구역은 첫 전쟁 뒤 아이들이 떠돌게 된 일을 다뤄요.",
+   "blank": "تشرد",
+   "src": "made"
+  },
+  {
+   "text": "غنت الفرقة أغنية عن التشرد، فساد الصمت في القاعة.",
+   "en": "The band sang a song about homelessness, and silence fell over the hall.",
+   "ko": "밴드가 노숙에 관한 노래를 부르자 공연장에 정적이 흘렀어요.",
+   "blank": "التشرد",
+   "src": "made"
+  }
+ ],
  "w|تشريح": [
   {
    "text": "قرأ أحمد تقرير التشريح بعناية قبل الجلسة.",
@@ -23659,6 +23771,22 @@
    "en": "I downloaded an app on my phone yesterday.",
    "ko": "어제 내 휴대폰에 앱을 설치했다.",
    "blank": "تطبيق"
+  }
+ ],
+ "w|تطريز": [
+  {
+   "text": "في القاعة الثالثة ثوب عرس قديم عليه تطريز بخيوط ذهبية.",
+   "en": "In the third hall there is an old wedding dress with embroidery in golden threads.",
+   "ko": "세 번째 전시실에는 금실 자수가 놓인 옛 혼례복이 있어요.",
+   "blank": "تطريز",
+   "src": "made"
+  },
+  {
+   "text": "لبست المغنية فستانا أسود عليه تطريز فضي.",
+   "en": "The singer wore a black dress with silver embroidery.",
+   "ko": "가수는 은색 자수가 놓인 검은 드레스를 입었어요.",
+   "blank": "تطريز",
+   "src": "made"
   }
  ],
  "w|تطعيم": [
@@ -27953,6 +28081,22 @@
    "blank": "ثورة"
   }
  ],
+ "w|ثوري": [
+  {
+   "text": "يعرض المتحف ملصقات من فترة ثورية في تاريخ البلد.",
+   "en": "The museum displays posters from a revolutionary period in the country's history.",
+   "ko": "박물관은 나라 역사 속 혁명기의 포스터를 전시해요.",
+   "blank": "ثورية",
+   "src": "made"
+  },
+  {
+   "text": "غنت الفرقة نشيدا ثوريا قديما فصفق الجمهور طويلا.",
+   "en": "The band sang an old revolutionary anthem, and the audience applauded for a long time.",
+   "ko": "밴드가 옛 혁명가를 부르자 관객이 오래 박수를 쳤어요.",
+   "blank": "ثوريا",
+   "src": "made"
+  }
+ ],
  "w|ثوم": [
   {
    "text": "أضفت ثوم مهروس إلى الصلصة.",
@@ -28935,6 +29079,22 @@
    "blank": "جربت"
   }
  ],
+ "w|جرة": [
+  {
+   "text": "يحفظ خالد العسل في جرة فخارية قديمة.",
+   "en": "Khaled keeps the honey in an old clay jar.",
+   "ko": "할리드는 꿀을 오래된 질항아리에 보관해요.",
+   "blank": "جرة",
+   "src": "made"
+  },
+  {
+   "text": "في بهو الفندق جرة كبيرة مليئة بالورد.",
+   "en": "In the hotel lobby there is a big jar full of roses.",
+   "ko": "호텔 로비에는 장미가 가득 꽂힌 큰 항아리가 있어요.",
+   "blank": "جرة",
+   "src": "made"
+  }
+ ],
  "w|جرثومة": [
   {
    "text": "الجرثومة لا ترى بالعين المجردة.",
@@ -28947,6 +29107,22 @@
    "en": "The germ should be killed by sterilization.",
    "ko": "세균은 소독해서 죽여야 해.",
    "blank": "الجرثومة"
+  }
+ ],
+ "w|جرجير": [
+  {
+   "text": "تطلب الزبونة من خالد كل صباح فطيرة بالجبن وأوراق الجرجير.",
+   "en": "Every morning a customer asks Khaled for a cheese pie with arugula leaves.",
+   "ko": "한 손님은 매일 아침 할리드에게 치즈와 루콜라 잎을 넣은 파이를 주문해요.",
+   "blank": "الجرجير",
+   "src": "made"
+  },
+  {
+   "text": "طلبت ليلى أن يضعوا جرجيرا أكثر في شطيرتها.",
+   "en": "Laila asked them to put more arugula in her sandwich.",
+   "ko": "라일라는 샌드위치에 루콜라를 더 넣어 달라고 했어요.",
+   "blank": "جرجيرا",
+   "src": "made"
   }
  ],
  "w|جرح": [
@@ -31943,6 +32119,22 @@
    "blank": "حرف"
   }
  ],
+ "w|حرفة": [
+  {
+   "text": "ينظم علي ورشة يتعلم فيها الأطفال حرفة الحياكة.",
+   "en": "Ali organizes a workshop where children learn the craft of weaving.",
+   "ko": "알리는 아이들이 베 짜는 기술을 배우는 공방을 열어요.",
+   "blank": "حرفة",
+   "src": "made"
+  },
+  {
+   "text": "صناعة العود حرفة قديمة، وقد زارت نور ورشة صانعه بعد الحفلة.",
+   "en": "Making ouds is an old craft, and Nour visited the maker's workshop after the concert.",
+   "ko": "우드 만들기는 오래된 공예라 누르는 공연 뒤 장인의 공방을 찾아갔어요.",
+   "blank": "حرفة",
+   "src": "made"
+  }
+ ],
  "w|حرفيا": [
   {
    "text": "كان المحل مزدحما حرفيا، فلم يجد علي مكانا يقف فيه.",
@@ -32688,6 +32880,22 @@
    "en": "Fatima attended an in-person medical conference for the first time in years.",
    "ko": "파티마는 몇 년 만에 처음으로 대면 의학 학회에 참석했어요.",
    "blank": "حضوريا",
+   "src": "made"
+  }
+ ],
+ "w|حضيض": [
+  {
+   "text": "وصلت مبيعات خالد إلى الحضيض في الشهر الذي أغلقوا فيه الشارع.",
+   "en": "Khaled's sales hit rock bottom in the month they closed the street.",
+   "ko": "길을 막았던 달에 할리드의 매출은 바닥을 쳤어요.",
+   "blank": "الحضيض",
+   "src": "made"
+  },
+  {
+   "text": "قال موظف عجوز لليلى إن الفندق مر بالحضيض قبل أن يتجدد.",
+   "en": "An old employee told Laila that the hotel went through hard times before it was renovated.",
+   "ko": "나이 든 직원은 라일라에게 호텔이 새로 단장하기 전 밑바닥까지 갔었다고 말했어요.",
+   "blank": "بالحضيض",
    "src": "made"
   }
  ],
@@ -34059,6 +34267,22 @@
    "src": "made"
   }
  ],
+ "w|حيز": [
+  {
+   "text": "لا يجد علي حيزا كافيا لعرض كل القطع الجديدة.",
+   "en": "Ali can't find enough space to display all the new pieces.",
+   "ko": "알리는 새 유물을 다 전시할 공간을 찾지 못해요.",
+   "blank": "حيزا",
+   "src": "made"
+  },
+  {
+   "text": "لم يترك الجمهور حيزا للرقص أمام المسرح.",
+   "en": "The audience left no space for dancing in front of the stage.",
+   "ko": "관객이 무대 앞을 꽉 채워 춤출 공간이 없었어요.",
+   "blank": "حيزا",
+   "src": "made"
+  }
+ ],
  "w|حيلة": [
   {
    "text": "استخدم حيلة ذكية ليحل المشكلة بسرعة.",
@@ -34909,6 +35133,22 @@
    "src": "made"
   }
  ],
+ "w|خردل": [
+  {
+   "text": "يدهن خالد خبز السجق بقليل من الخردل.",
+   "en": "Khaled spreads a little mustard on the sausage bread.",
+   "ko": "할리드는 소시지 빵에 머스터드를 조금 발라요.",
+   "blank": "الخردل",
+   "src": "made"
+  },
+  {
+   "text": "طلبت ليلى شطيرة دجاج بلا خردل.",
+   "en": "Laila ordered a chicken sandwich without mustard.",
+   "ko": "라일라는 머스터드를 빼고 치킨 샌드위치를 주문했어요.",
+   "blank": "خردل",
+   "src": "made"
+  }
+ ],
  "w|خرس": [
   {
    "text": "أصاب يوسف خرس مؤقت من شدة الصدمة حين سمع الخبر.",
@@ -34938,6 +35178,22 @@
    "en": "Mariam says the new market is a block of concrete without soul.",
    "ko": "마리암은 새 시장이 영혼 없는 콘크리트 덩어리라고 해요.",
    "blank": "الخرسانة",
+   "src": "made"
+  }
+ ],
+ "w|خرشوف": [
+  {
+   "text": "حاول خالد أن يصنع فطيرة بالخرشوف، لكن الزبائن لم يحبوها.",
+   "en": "Khaled tried to make an artichoke pie, but the customers didn't like it.",
+   "ko": "할리드는 아티초크 파이를 만들어 봤지만 손님들이 좋아하지 않았어요.",
+   "blank": "بالخرشوف",
+   "src": "made"
+  },
+  {
+   "text": "قدم مطعم الفندق قلوب الخرشوف مع زيت الزيتون.",
+   "en": "The hotel restaurant served artichoke hearts with olive oil.",
+   "ko": "호텔 식당은 아티초크 속을 올리브유와 함께 내놓았어요.",
+   "blank": "الخرشوف",
    "src": "made"
   }
  ],
@@ -35057,6 +35313,22 @@
    "en": "The wardrobe is big and has many shelves.",
    "ko": "옷장이 크고 선반이 많아요.",
    "blank": "الخزانة"
+  }
+ ],
+ "w|خزف": [
+  {
+   "text": "يمسح علي الغبار عن صحون الخزف الزرقاء بحذر.",
+   "en": "Ali carefully wipes the dust off the blue porcelain plates.",
+   "ko": "알리는 파란 도자기 접시의 먼지를 조심스럽게 닦아요.",
+   "blank": "الخزف",
+   "src": "made"
+  },
+  {
+   "text": "اشترت نور من كشك الحفلة كوبا من الخزف عليه اسم الفرقة.",
+   "en": "Nour bought a ceramic mug with the band's name on it from the concert stand.",
+   "ko": "누르는 공연장 매대에서 밴드 이름이 새겨진 도자기 컵을 샀어요.",
+   "blank": "الخزف",
+   "src": "made"
   }
  ],
  "w|خزن": [
@@ -36791,6 +37063,22 @@
    "blank": "دب"
   }
  ],
+ "w|دبابة": [
+  {
+   "text": "تقف في ساحة المتحف دبابة قديمة من زمن الحرب.",
+   "en": "An old tank from wartime stands in the museum courtyard.",
+   "ko": "박물관 마당에는 전쟁 때의 낡은 탱크가 서 있어요.",
+   "blank": "دبابة",
+   "src": "made"
+  },
+  {
+   "text": "كان طفل صغير بجانب نور يلعب بدبابة بلاستيكية طوال الحفلة.",
+   "en": "A small child next to Nour played with a plastic tank throughout the concert.",
+   "ko": "누르 옆의 어린아이는 공연 내내 플라스틱 탱크를 가지고 놀았어요.",
+   "blank": "بدبابة",
+   "src": "made"
+  }
+ ],
  "w|دبر": [
   {
    "text": "دبر سامي مفاجأة للعروسين بأغنية سجلها أصدقاؤهما.",
@@ -36852,6 +37140,22 @@
    "en": "At the finish line Rana talked with a diplomat who works at one of the embassies.",
    "ko": "라나는 결승선에서 한 대사관에서 일하는 외교관과 이야기를 나눴어요.",
    "blank": "دبلوماسي",
+   "src": "made"
+  }
+ ],
+ "w|دبلوماسية": [
+  {
+   "text": "عادت القطعة إلى المتحف بفضل الدبلوماسية بين البلدين.",
+   "en": "The piece returned to the museum thanks to diplomacy between the two countries.",
+   "ko": "그 유물은 두 나라 사이의 외교 덕분에 박물관으로 돌아왔어요.",
+   "blank": "الدبلوماسية",
+   "src": "made"
+  },
+  {
+   "text": "حضر الحفلة سفراء كثيرون، وقالت نور إنها موسيقى في خدمة الدبلوماسية.",
+   "en": "Many ambassadors attended the concert, and Nour said it was music in the service of diplomacy.",
+   "ko": "대사들이 많이 와서 누르는 외교를 돕는 음악이라고 말했어요.",
+   "blank": "الدبلوماسية",
    "src": "made"
   }
  ],
@@ -39126,6 +39430,22 @@
    "en": "Mariam said her eye is like a radar that never misses a patient who needs help.",
    "ko": "마리암은 자기 눈이 레이더 같아서 도움이 필요한 환자를 놓치지 않는다고 했어요.",
    "blank": "رادار",
+   "src": "made"
+  }
+ ],
+ "w|راديكالي": [
+  {
+   "text": "قال علي إن الرسام كان صاحب أفكار راديكالية في زمنه.",
+   "en": "Ali said the painter held radical ideas in his time.",
+   "ko": "알리는 그 화가가 당대에 급진적인 생각을 가졌다고 말했어요.",
+   "blank": "راديكالية",
+   "src": "made"
+  },
+  {
+   "text": "قدم الملحن تجربة راديكالية مزجت الموسيقى الكلاسيكية بأصوات الشارع.",
+   "en": "The composer presented a radical experiment that mixed classical music with street sounds.",
+   "ko": "작곡가는 클래식 음악과 거리 소리를 섞은 급진적인 실험을 선보였어요.",
+   "blank": "راديكالية",
    "src": "made"
   }
  ],
@@ -41961,6 +42281,22 @@
    "src": "made"
   }
  ],
+ "w|زخرفة": [
+  {
+   "text": "يشير علي إلى الزخرفة النباتية على الباب الخشبي.",
+   "en": "Ali points to the floral ornamentation on the wooden door.",
+   "ko": "알리는 나무 문의 식물 무늬 장식을 가리켜요.",
+   "blank": "الزخرفة",
+   "src": "made"
+  },
+  {
+   "text": "كانت على جدران المسرح زخرفة أندلسية أعجبت نور.",
+   "en": "On the theater walls was Andalusian ornamentation that Nour liked.",
+   "ko": "극장 벽에는 누르가 좋아한 안달루시아풍 장식이 있었어요.",
+   "blank": "زخرفة",
+   "src": "made"
+  }
+ ],
  "w|زر": [
   {
    "text": "وقع زر من قميصي اليوم.",
@@ -43528,6 +43864,22 @@
    "en": "In his book, the traveler described a man who prostrated on a rock at sunrise.",
    "ko": "여행가는 책에서 해 뜰 무렵 바위 위에 엎드려 절하던 남자를 묘사했어요.",
    "blank": "سجد",
+   "src": "made"
+  }
+ ],
+ "w|سجق": [
+  {
+   "text": "يلف خالد قطع السجق بالعجين ويخبزها للأطفال.",
+   "en": "Khaled wraps pieces of sausage in dough and bakes them for the children.",
+   "ko": "할리드는 소시지 조각을 반죽으로 말아 아이들을 위해 구워요.",
+   "blank": "السجق",
+   "src": "made"
+  },
+  {
+   "text": "لم تجد ليلى في فطور الفندق سجقا بلا لحم خنزير، فسألت النادل.",
+   "en": "Laila couldn't find pork-free sausage at the hotel breakfast, so she asked the waiter.",
+   "ko": "라일라는 호텔 아침 식사에서 돼지고기 없는 소시지를 찾지 못해 웨이터에게 물었어요.",
+   "blank": "سجقا",
    "src": "made"
   }
  ],
@@ -46397,6 +46749,22 @@
    "blank": "شباك"
   }
  ],
+ "w|شبت": [
+  {
+   "text": "أضاف خالد قليلا من الشبت إلى عجينة الخبز المالح.",
+   "en": "Khaled added a little dill to the savory bread dough.",
+   "ko": "할리드는 짭짤한 빵 반죽에 딜을 조금 넣었어요.",
+   "blank": "الشبت",
+   "src": "made"
+  },
+  {
+   "text": "كان على سمك العشاء في الفندق صلصة بالليمون والشبت.",
+   "en": "The dinner fish at the hotel had a lemon and dill sauce.",
+   "ko": "호텔 저녁 생선 요리에는 레몬과 딜 소스가 얹혀 있었어요.",
+   "blank": "والشبت",
+   "src": "made"
+  }
+ ],
  "w|شبح": [
   {
    "text": "يخاف الأطفال من شبح في الليل.",
@@ -47313,6 +47681,22 @@
    "blank": "الشعب"
   }
  ],
+ "w|شعبوي": [
+  {
+   "text": "شرح علي للطلاب كيف استعمل الخطاب الشعبوي في الصحف القديمة.",
+   "en": "Ali explained to the students how populist rhetoric was used in old newspapers.",
+   "ko": "알리는 학생들에게 옛 신문에서 포퓰리즘 언설이 어떻게 쓰였는지 설명했어요.",
+   "blank": "الشعبوي",
+   "src": "made"
+  },
+  {
+   "text": "قالت نور إن كلمات الأغنية شعبوية ولكن لحنها جميل.",
+   "en": "Nour said the song's lyrics are populist but its melody is beautiful.",
+   "ko": "누르는 그 노래 가사는 대중 영합적이지만 선율은 아름답다고 말했어요.",
+   "blank": "شعبوية",
+   "src": "made"
+  }
+ ],
  "w|شعبي": [
   {
    "text": "اعتاد علي وأخته أن يأكلا الفول في مقهى شعبي قرب البيت.",
@@ -47928,6 +48312,22 @@
    "en": "The room price includes breakfast and gym access, as Mariam explained.",
    "ko": "마리암의 설명대로 객실 요금에는 조식과 헬스장 이용이 포함돼요.",
    "blank": "يشمل",
+   "src": "made"
+  }
+ ],
+ "w|شمندر": [
+  {
+   "text": "صنع خالد خبزا ورديا بعصير الشمندر فأعجب الأطفال.",
+   "en": "Khaled made pink bread with beet juice, and the children loved it.",
+   "ko": "할리드가 비트 즙으로 분홍색 빵을 만들자 아이들이 좋아했어요.",
+   "blank": "الشمندر",
+   "src": "made"
+  },
+  {
+   "text": "كانت سلطة الشمندر في بوفيه الفندق باردة ولذيذة.",
+   "en": "The beet salad at the hotel buffet was cold and delicious.",
+   "ko": "호텔 뷔페의 비트 샐러드는 차갑고 맛있었어요.",
+   "blank": "الشمندر",
    "src": "made"
   }
  ],
@@ -52185,6 +52585,22 @@
    "src": "made"
   }
  ],
+ "w|طهي": [
+  {
+   "text": "تعلم خالد فن طهي الخبز من جده في القرية.",
+   "en": "Khaled learned the art of baking bread from his grandfather in the village.",
+   "ko": "할리드는 시골에서 할아버지에게 빵 굽는 기술을 배웠어요.",
+   "blank": "طهي",
+   "src": "made"
+  },
+  {
+   "text": "اشتركت ليلى في درس طهي يقدمه طاهي الفندق.",
+   "en": "Laila joined a cooking class given by the hotel chef.",
+   "ko": "라일라는 호텔 요리사가 여는 요리 수업에 참가했어요.",
+   "blank": "طهي",
+   "src": "made"
+  }
+ ],
  "w|طوارئ": [
   {
    "text": "غرفة طوارئ ممتلئة بالمرضى الليلة.",
@@ -55621,6 +56037,22 @@
    "blank": "عمارة"
   }
  ],
+ "w|عمالة": [
+  {
+   "text": "تعرض صورة قديمة عمالة الأطفال في مصانع النسيج.",
+   "en": "An old photo shows child labor in the textile factories.",
+   "ko": "오래된 사진 한 장이 직물 공장의 아동 노동을 보여 줘요.",
+   "blank": "عمالة",
+   "src": "made"
+  },
+  {
+   "text": "تعمل في تنظيم الحفلة عمالة مؤقتة من طلاب الجامعة.",
+   "en": "Temporary workers from among university students help organize the concert.",
+   "ko": "공연 운영에는 대학생 임시 인력이 일해요.",
+   "blank": "عمالة",
+   "src": "made"
+  }
+ ],
  "w|عمة": [
   {
    "text": "عمة سارة تسكن في الخارج.",
@@ -56237,6 +56669,22 @@
    "en": "The students' return to school is soon.",
    "ko": "학생들이 곧 학교로 돌아올 거야.",
    "blank": "عودة"
+  }
+ ],
+ "w|عوز": [
+  {
+   "text": "تظهر صور المعرض العوز الذي عاشته الأسر بعد الفيضان الكبير.",
+   "en": "The exhibition's photos show the poverty families lived through after the great flood.",
+   "ko": "전시 사진들은 큰 홍수 뒤 가정들이 겪은 궁핍을 보여 줘요.",
+   "blank": "العوز",
+   "src": "made"
+  },
+  {
+   "text": "ذهب ريع الحفلة إلى عائلات تعيش في عوز.",
+   "en": "The concert's proceeds went to families living in need.",
+   "ko": "공연 수익금은 어렵게 사는 가정들에 돌아갔어요.",
+   "blank": "عوز",
+   "src": "made"
   }
  ],
  "w|عوض": [
@@ -58057,6 +58505,22 @@
    "src": "made"
   }
  ],
+ "w|فاقة": [
+  {
+   "text": "كتب علي تحت إحدى اللوحات أن الرسام مات في فاقة شديدة.",
+   "en": "Ali wrote under one of the paintings that the painter died in severe destitution.",
+   "ko": "알리는 그림 한 점 아래에 화가가 극심한 가난 속에 죽었다고 적었어요.",
+   "blank": "فاقة",
+   "src": "made"
+  },
+  {
+   "text": "قال المغني إنه عاش طفولة في فاقة قبل أن يشتهر.",
+   "en": "The singer said he lived a childhood in poverty before becoming famous.",
+   "ko": "가수는 유명해지기 전에 가난 속에서 어린 시절을 보냈다고 말했어요.",
+   "blank": "فاقة",
+   "src": "made"
+  }
+ ],
  "w|فاكهة": [
   {
    "text": "أكلت فاكهة بعد الغداء.",
@@ -58295,6 +58759,22 @@
    "blank": "الفجر"
   }
  ],
+ "w|فجل": [
+  {
+   "text": "يقدم خالد مع المناقيش صحنا صغيرا من الفجل والزيتون.",
+   "en": "Khaled serves a small plate of radishes and olives with the manakish.",
+   "ko": "할리드는 마나키시에 무와 올리브를 담은 작은 접시를 곁들여 내요.",
+   "blank": "الفجل",
+   "src": "made"
+  },
+  {
+   "text": "وجدت ليلى في صحن الفطور فجلا أحمر مقطعا على شكل وردة.",
+   "en": "Laila found red radish cut in the shape of a rose on the breakfast plate.",
+   "ko": "라일라는 아침 접시에서 장미 모양으로 자른 빨간 무를 발견했어요.",
+   "blank": "فجلا",
+   "src": "made"
+  }
+ ],
  "w|فجوة": [
   {
    "text": "سد كريم الفجوة بين الباب والأرض حتى لا يدخل البرد.",
@@ -58352,6 +58832,22 @@
    "en": "Maryam warned her customer about a fake message that was really a trap to steal her password.",
    "ko": "마리암은 손님에게 비밀번호를 훔치려는 함정인 가짜 메시지를 조심하라고 했어요.",
    "blank": "فخ",
+   "src": "made"
+  }
+ ],
+ "w|فخار": [
+  {
+   "text": "يعرض المتحف أواني من الفخار وجدت في قرية قريبة.",
+   "en": "The museum displays pottery vessels found in a nearby village.",
+   "ko": "박물관은 가까운 마을에서 발견된 토기 그릇을 전시해요.",
+   "blank": "الفخار",
+   "src": "made"
+  },
+  {
+   "text": "استعمل العازف طبلة من الفخار في الأغنية الأخيرة.",
+   "en": "The musician used a pottery drum in the last song.",
+   "ko": "연주자는 마지막 곡에서 토기 북을 썼어요.",
+   "blank": "الفخار",
    "src": "made"
   }
  ],
@@ -58980,6 +59476,22 @@
    "en": "Sara stood with thousands of runners in a wide square before the start.",
    "ko": "사라는 출발 전 넓은 광장에서 수천 명의 주자들과 함께 서 있었어요.",
    "blank": "فسيح",
+   "src": "made"
+  }
+ ],
+ "w|فسيفساء": [
+  {
+   "text": "أرضية القاعة الكبرى فسيفساء رومانية تصور صيادين وأسماكا.",
+   "en": "The floor of the great hall is a Roman mosaic depicting fishermen and fish.",
+   "ko": "큰 전시실 바닥은 어부와 물고기를 그린 로마 모자이크예요.",
+   "blank": "فسيفساء",
+   "src": "made"
+  },
+  {
+   "text": "خلف المسرح جدار من الفسيفساء يلمع تحت الأضواء.",
+   "en": "Behind the stage is a mosaic wall that shines under the lights.",
+   "ko": "무대 뒤에는 조명 아래 반짝이는 모자이크 벽이 있어요.",
+   "blank": "الفسيفساء",
    "src": "made"
   }
  ],
@@ -59879,6 +60391,22 @@
    "en": "Please reply immediately to this email.",
    "ko": "이 이메일에 즉시 답장해 주세요.",
    "blank": "فورا"
+  }
+ ],
+ "w|فوري": [
+  {
+   "text": "طلب علي ردا فوريا من الإدارة حين رأى تسربا في سقف القاعة.",
+   "en": "Ali asked the administration for an immediate response when he saw a leak in the hall ceiling.",
+   "ko": "알리는 전시실 천장에서 물이 새는 걸 보고 관리 부서에 즉각 대응을 요청했어요.",
+   "blank": "فوريا",
+   "src": "made"
+  },
+  {
+   "text": "لاقت الفرقة نجاحا فوريا بعد أول أغنية.",
+   "en": "The band met with instant success after the first song.",
+   "ko": "밴드는 첫 곡이 끝나자마자 바로 큰 호응을 얻었어요.",
+   "blank": "فوريا",
+   "src": "made"
   }
  ],
  "w|فوز": [
@@ -62051,6 +62579,22 @@
    "blank": "قطة"
   }
  ],
+ "w|قطر": [
+  {
+   "text": "يسكب خالد القطر البارد على الكنافة وهي ساخنة.",
+   "en": "Khaled pours cold syrup over the kunafa while it is hot.",
+   "ko": "할리드는 뜨거운 쿠나파 위에 차가운 시럽을 부어요.",
+   "blank": "القطر",
+   "src": "made"
+  },
+  {
+   "text": "سكبت ليلى قليلا من القطر على الفطائر في الفطور.",
+   "en": "Laila poured a little syrup over the pancakes at breakfast.",
+   "ko": "라일라는 아침에 팬케이크에 시럽을 조금 부었어요.",
+   "blank": "القطر",
+   "src": "made"
+  }
+ ],
  "w|قطرة": [
   {
    "text": "أعطى كريم الرجل قطرة للعين بسبب الغبار في الشارع.",
@@ -62635,6 +63179,22 @@
    "src": "made"
   }
  ],
+ "w|قنطرة": [
+  {
+   "text": "يعلق علي صورة قنطرة حجرية بنيت على النهر قبل قرون.",
+   "en": "Ali hangs a picture of a stone arch bridge built over the river centuries ago.",
+   "ko": "알리는 수백 년 전 강 위에 세워진 돌다리 사진을 걸어요.",
+   "blank": "قنطرة",
+   "src": "made"
+  },
+  {
+   "text": "أقيمت الحفلة في الهواء الطلق قرب قنطرة قديمة على النهر.",
+   "en": "The concert was held outdoors near an old arched bridge over the river.",
+   "ko": "공연은 강 위 오래된 아치 다리 근처 야외에서 열렸어요.",
+   "blank": "قنطرة",
+   "src": "made"
+  }
+ ],
  "w|قنفذ": [
   {
    "text": "قنفذ يختبئ تحت الأوراق الجافة.",
@@ -62727,6 +63287,22 @@
    "blank": "قهوة"
   }
  ],
+ "w|قوام": [
+  {
+   "text": "يلمس خالد العجين بأصابعه ليعرف إن كان قوامه مناسبا.",
+   "en": "Khaled touches the dough with his fingers to know if its consistency is right.",
+   "ko": "할리드는 반죽 질감이 알맞은지 손가락으로 만져 봐요.",
+   "blank": "قوامه",
+   "src": "made"
+  },
+  {
+   "text": "أعجب ليلى قوام الحساء الكريمي في مطعم الفندق.",
+   "en": "Laila liked the creamy texture of the soup at the hotel restaurant.",
+   "ko": "라일라는 호텔 식당 수프의 부드러운 질감이 마음에 들었어요.",
+   "blank": "قوام",
+   "src": "made"
+  }
+ ],
  "w|قوة": [
   {
    "text": "أحتاج إلى قوة أكبر لدفع هذا الباب.",
@@ -62739,6 +63315,22 @@
    "en": "The power of friendship is priceless.",
    "ko": "우정의 힘은 값을 매길 수 없어.",
    "blank": "قوة"
+  }
+ ],
+ "w|قوت": [
+  {
+   "text": "يقول خالد إن الخبز هو قوت الفقراء والأغنياء معا.",
+   "en": "Khaled says bread is the staple food of the poor and the rich alike.",
+   "ko": "할리드는 빵이 가난한 사람과 부자 모두의 양식이라고 말해요.",
+   "blank": "قوت",
+   "src": "made"
+  },
+  {
+   "text": "قالت عاملة التنظيف لليلى إنها تعمل في الفندق لتكسب قوت أولادها.",
+   "en": "The cleaner told Laila she works at the hotel to earn a living for her children.",
+   "ko": "청소 직원은 라일라에게 아이들 먹여 살리려고 호텔에서 일한다고 말했어요.",
+   "blank": "قوت",
+   "src": "made"
   }
  ],
  "w|قوس": [
@@ -63909,6 +64501,22 @@
    "blank": "كذلك"
   }
  ],
+ "w|كراث": [
+  {
+   "text": "نفد الكراث من المخبز، فأرسل خالد ابنه إلى السوق.",
+   "en": "The bakery ran out of leeks, so Khaled sent his son to the market.",
+   "ko": "빵집에 대파가 떨어져서 할리드는 아들을 시장에 보냈어요.",
+   "blank": "الكراث",
+   "src": "made"
+  },
+  {
+   "text": "كان حساء الكراث في الفندق دافئا في تلك الليلة الباردة.",
+   "en": "The leek soup at the hotel was warming on that cold night.",
+   "ko": "그 추운 밤에 호텔의 대파 수프는 몸을 데워 줬어요.",
+   "blank": "الكراث",
+   "src": "made"
+  }
+ ],
  "w|كراسة": [
   {
    "text": "يدون أحمد أسماء مصادره في كراسة صغيرة لا تفارق جيبه.",
@@ -64073,6 +64681,22 @@
    "en": "The chair is broken and needs repair.",
    "ko": "의자가 고장 나서 수리가 필요해요.",
    "blank": "الكرسي"
+  }
+ ],
+ "w|كرفس": [
+  {
+   "text": "يقطع خالد الكرفس ناعما ليضعه في فطائر الخضار.",
+   "en": "Khaled chops the celery finely to put it in the vegetable pies.",
+   "ko": "할리드는 채소 파이에 넣으려고 셀러리를 잘게 썰어요.",
+   "blank": "الكرفس",
+   "src": "made"
+  },
+  {
+   "text": "شربت ليلى عصير الكرفس والتفاح في نادي الفندق الرياضي.",
+   "en": "Laila drank celery and apple juice at the hotel gym.",
+   "ko": "라일라는 호텔 헬스장에서 셀러리 사과 주스를 마셨어요.",
+   "blank": "الكرفس",
+   "src": "made"
   }
  ],
  "w|كركدن": [
@@ -65187,6 +65811,22 @@
    "blank": "الكوسا"
   }
  ],
+ "w|كوسة": [
+  {
+   "text": "جرب خالد هذا الأسبوع فطيرة محشوة بالكوسة المبشورة.",
+   "en": "This week Khaled tried a pie stuffed with grated zucchini.",
+   "ko": "할리드는 이번 주에 간 애호박을 넣은 파이를 시험해 봤어요.",
+   "blank": "بالكوسة",
+   "src": "made"
+  },
+  {
+   "text": "قدم الطاهي لليلى كوسة محشوة بالأرز واللحم.",
+   "en": "The chef served Laila zucchini stuffed with rice and meat.",
+   "ko": "요리사가 라일라에게 쌀과 고기로 속을 채운 애호박을 내왔어요.",
+   "blank": "كوسة",
+   "src": "made"
+  }
+ ],
  "w|كوع": [
   {
    "text": "شعرت بألم في كوع يدي اليمنى.",
@@ -65894,6 +66534,22 @@
    "en": "Mariam shops early in the morning before the heat gets scorching.",
    "ko": "마리암은 더위가 이글거리기 전 이른 아침에 장을 봐요.",
    "blank": "لاهبا",
+   "src": "made"
+  }
+ ],
+ "w|لب": [
+  {
+   "text": "يرش خالد اللب المحمص على خبز السمسم قبل أن يدخله الفرن.",
+   "en": "Khaled sprinkles roasted seeds on the sesame bread before putting it in the oven.",
+   "ko": "할리드는 참깨 빵을 오븐에 넣기 전에 볶은 씨를 뿌려요.",
+   "blank": "اللب",
+   "src": "made"
+  },
+  {
+   "text": "وضعت عاملة الفندق صحنا من اللب على طاولة ليلى في الشرفة.",
+   "en": "The hotel worker put a plate of seeds on Laila's table on the balcony.",
+   "ko": "호텔 직원이 발코니에 있는 라일라의 테이블에 해바라기씨 한 접시를 놓았어요.",
+   "blank": "اللب",
    "src": "made"
   }
  ],
@@ -67081,6 +67737,22 @@
    "src": "made"
   }
  ],
+ "w|لوبيا": [
+  {
+   "text": "يطبخ خالد اللوبيا بالزيت ويقدمها مع الخبز الساخن يوم الجمعة.",
+   "en": "Khaled cooks green beans in oil and serves them with hot bread on Friday.",
+   "ko": "할리드는 금요일마다 껍질콩을 기름에 익혀 따뜻한 빵과 함께 내요.",
+   "blank": "اللوبيا",
+   "src": "made"
+  },
+  {
+   "text": "لم تأكل ليلى اللوبيا لأنها كانت مطبوخة باللحم.",
+   "en": "Laila didn't eat the green beans because they were cooked with meat.",
+   "ko": "라일라는 껍질콩이 고기와 함께 요리돼서 먹지 않았어요.",
+   "blank": "اللوبيا",
+   "src": "made"
+  }
+ ],
  "w|لوث": [
   {
    "text": "لوث مصنع قديم مياه النهر قبل أن يغلق.",
@@ -67805,6 +68477,22 @@
    "en": "A hundred days have passed since the start of the year.",
    "ko": "올해 시작한 지 백 일이 지났어.",
    "blank": "مئة"
+  }
+ ],
+ "w|مئذنة": [
+  {
+   "text": "يعرض المتحف نموذجا خشبيا لمئذنة عمرها خمسة قرون.",
+   "en": "The museum displays a wooden model of a minaret five centuries old.",
+   "ko": "박물관은 오백 년 된 첨탑의 나무 모형을 전시해요.",
+   "blank": "لمئذنة",
+   "src": "made"
+  },
+  {
+   "text": "ظهرت مئذنة الجامع الكبير خلف المسرح المفتوح.",
+   "en": "The minaret of the great mosque appeared behind the open-air stage.",
+   "ko": "야외 무대 뒤로 대모스크의 첨탑이 보였어요.",
+   "blank": "مئذنة",
+   "src": "made"
   }
  ],
  "w|ما": [
@@ -69197,6 +69885,22 @@
    "blank": "مترو"
   }
  ],
+ "w|متزايد": [
+  {
+   "text": "يلاحظ خالد إقبالا متزايدا على الخبز الأسمر هذه السنة.",
+   "en": "Khaled notices growing demand for brown bread this year.",
+   "ko": "할리드는 올해 통밀빵을 찾는 손님이 늘어나는 걸 느껴요.",
+   "blank": "متزايدا",
+   "src": "made"
+  },
+  {
+   "text": "قال مدير الفندق لليلى إن عدد السياح متزايد هذا الصيف.",
+   "en": "The hotel manager told Laila that the number of tourists is increasing this summer.",
+   "ko": "호텔 지배인은 라일라에게 이번 여름 관광객 수가 늘고 있다고 말했어요.",
+   "blank": "متزايد",
+   "src": "made"
+  }
+ ],
  "w|متزن": [
   {
    "text": "حاول حسن أن يبدو متزنا رغم توتره.",
@@ -69225,6 +69929,22 @@
    "en": "Are you married or single?",
    "ko": "결혼했어요 아니면 미혼이에요?",
    "blank": "متزوج"
+  }
+ ],
+ "w|متسارع": [
+  {
+   "text": "مع الارتفاع المتسارع في سعر الطحين، رفع خالد ثمن الكعك قليلا.",
+   "en": "With the rapid rise in the price of flour, Khaled raised the price of the cakes a little.",
+   "ko": "밀가루 값이 빠르게 오르자 할리드는 과자 값을 조금 올렸어요.",
+   "blank": "المتسارع",
+   "src": "made"
+  },
+  {
+   "text": "سمعت ليلى من غرفتها خطوات متسارعة في الممر.",
+   "en": "From her room Laila heard quickening footsteps in the corridor.",
+   "ko": "라일라는 방에서 복도를 점점 빠르게 지나가는 발소리를 들었어요.",
+   "blank": "متسارعة",
+   "src": "made"
   }
  ],
  "w|متسامح": [
@@ -69335,6 +70055,38 @@
    "blank": "متشابه"
   }
  ],
+ "w|متشدد": [
+  {
+   "text": "مفتش الصحة متشدد جدا، لكن خالد لا يخاف منه لأن مخبزه نظيف.",
+   "en": "The health inspector is very strict, but Khaled isn't afraid of him because his bakery is clean.",
+   "ko": "위생 검사관은 아주 깐깐하지만 할리드는 빵집이 깨끗해서 두렵지 않아요.",
+   "blank": "متشدد",
+   "src": "made"
+  },
+  {
+   "text": "للفندق قانون متشدد يمنع التدخين في الغرف.",
+   "en": "The hotel has a strict rule that bans smoking in the rooms.",
+   "ko": "호텔에는 객실 흡연을 금지하는 엄격한 규정이 있어요.",
+   "blank": "متشدد",
+   "src": "made"
+  }
+ ],
+ "w|متصاعد": [
+  {
+   "text": "رأى خالد دخانا متصاعدا من الفرن فأسرع إليه.",
+   "en": "Khaled saw smoke rising from the oven and hurried to it.",
+   "ko": "할리드는 오븐에서 연기가 피어오르는 걸 보고 달려갔어요.",
+   "blank": "متصاعدا",
+   "src": "made"
+  },
+  {
+   "text": "رأت ليلى من نافذة الفندق بخارا متصاعدا من الينابيع الحارة.",
+   "en": "From the hotel window Laila saw steam rising from the hot springs.",
+   "ko": "라일라는 호텔 창문으로 온천에서 피어오르는 김을 봤어요.",
+   "blank": "متصاعدا",
+   "src": "made"
+  }
+ ],
  "w|متصفح": [
   {
    "text": "فتح سامي المتصفح وبحث عن آخر الأخبار العاجلة.",
@@ -69424,6 +70176,22 @@
    "en": "Sara rejected her colleague's extreme view about firing all lazy employees.",
    "ko": "사라는 게으른 직원을 다 내보내자는 동료의 극단적인 의견에 반대했어요.",
    "blank": "المتطرف",
+   "src": "made"
+  }
+ ],
+ "w|متطلب": [
+  {
+   "text": "بعض الزبائن متطلبون، ويريدون الخبز ساخنا في كل ساعة.",
+   "en": "Some customers are demanding and want hot bread every hour.",
+   "ko": "어떤 손님들은 까다로워서 매시간 따끈한 빵을 원해요.",
+   "blank": "متطلبون",
+   "src": "made"
+  },
+  {
+   "text": "عمل الاستقبال في الفندق متطلب، لكن ليلى تحبه.",
+   "en": "Reception work at the hotel is demanding, but Laila loves it.",
+   "ko": "호텔 프런트 일은 힘들지만 라일라는 그 일을 좋아해요.",
+   "blank": "متطلب",
    "src": "made"
   }
  ],
@@ -69517,6 +70285,22 @@
    "en": "The pleasure of travel cannot be described in words.",
    "ko": "여행의 즐거움은 말로 표현할 수 없다.",
    "blank": "متعة"
+  }
+ ],
+ "w|متعثر": [
+  {
+   "text": "ساعد خالد مخبزا متعثرا في الحي المجاور بإرسال الطحين إليه.",
+   "en": "Khaled helped a struggling bakery in the next neighborhood by sending it flour.",
+   "ko": "할리드는 옆 동네의 어려움을 겪는 빵집에 밀가루를 보내 도왔어요.",
+   "blank": "متعثرا",
+   "src": "made"
+  },
+  {
+   "text": "سمعت ليلى ضيفا يتكلم الفرنسية بشكل متعثر مع موظف الاستقبال.",
+   "en": "Laila heard a guest speaking halting French with the receptionist.",
+   "ko": "라일라는 한 손님이 프런트 직원과 더듬더듬 프랑스어로 말하는 걸 들었어요.",
+   "blank": "متعثر",
+   "src": "made"
   }
  ],
  "w|متعدد": [
@@ -69639,6 +70423,22 @@
    "blank": "متفرغ"
   }
  ],
+ "w|متفرق": [
+  {
+   "text": "يأتي الزبائن إلى مخبز خالد في أوقات متفرقة من النهار.",
+   "en": "Customers come to Khaled's bakery at scattered times of the day.",
+   "ko": "손님들은 하루 중 여러 때에 흩어져 할리드의 빵집에 와요.",
+   "blank": "متفرقة",
+   "src": "made"
+  },
+  {
+   "text": "تناثرت مظلات متفرقة على شاطئ الفندق.",
+   "en": "Scattered umbrellas were spread across the hotel beach.",
+   "ko": "호텔 해변에 파라솔이 여기저기 흩어져 있었어요.",
+   "blank": "متفرقة",
+   "src": "made"
+  }
+ ],
  "w|متفهم": [
   {
    "text": "كان والد العروس متفهما حين طلب يوسف تأجيل الموعد.",
@@ -69687,6 +70487,22 @@
    "src": "made"
   }
  ],
+ "w|متكافئ": [
+  {
+   "text": "يوزع خالد العمل بين العمال بشكل متكافئ.",
+   "en": "Khaled distributes the work among the workers evenly.",
+   "ko": "할리드는 일꾼들에게 일을 고르게 나눠 줘요.",
+   "blank": "متكافئ",
+   "src": "made"
+  },
+  {
+   "text": "أقام الفندق مباراة تنس بين فريقين متكافئين من الضيوف.",
+   "en": "The hotel held a tennis match between two evenly matched teams of guests.",
+   "ko": "호텔은 실력이 비슷한 두 손님 팀의 테니스 경기를 열었어요.",
+   "blank": "متكافئين",
+   "src": "made"
+  }
+ ],
  "w|متكامل": [
   {
    "text": "وجد علي استراحة متكاملة فيها مطعم ومحطة وقود ومصلى.",
@@ -69732,6 +70548,22 @@
    "en": "Nour said her family had stayed close-knit despite the distance.",
    "ko": "누르는 멀리 떨어져 있어도 가족이 똘똘 뭉쳐 있다고 했어요.",
    "blank": "متماسكة",
+   "src": "made"
+  }
+ ],
+ "w|متمرد": [
+  {
+   "text": "ابن خالد متمرد قليلا ولا يحب الاستيقاظ باكرا للعمل في المخبز.",
+   "en": "Khaled's son is a bit rebellious and doesn't like waking up early to work at the bakery.",
+   "ko": "할리드의 아들은 조금 반항적이라 빵집 일 때문에 일찍 일어나는 걸 싫어해요.",
+   "blank": "متمرد",
+   "src": "made"
+  },
+  {
+   "text": "كان في الفندق مراهق متمرد يرفض النزول إلى العشاء مع أهله.",
+   "en": "There was a rebellious teenager at the hotel who refused to come down to dinner with his family.",
+   "ko": "호텔에는 가족과 저녁 먹으러 내려가기를 거부하는 반항적인 십 대가 있었어요.",
+   "blank": "متمرد",
    "src": "made"
   }
  ],
@@ -70967,6 +71799,22 @@
    "blank": "محترم"
   }
  ],
+ "w|محتشم": [
+  {
+   "text": "تعمل زوجة خالد على الصندوق بلباس محتشم ومريلة بيضاء.",
+   "en": "Khaled's wife works at the register in modest clothing and a white apron.",
+   "ko": "할리드의 아내는 단정한 옷에 흰 앞치마를 두르고 계산대에서 일해요.",
+   "blank": "محتشم",
+   "src": "made"
+  },
+  {
+   "text": "يطلب الفندق من الزوار لباسا محتشما عند زيارة المسجد القريب.",
+   "en": "The hotel asks visitors to wear modest clothing when visiting the nearby mosque.",
+   "ko": "호텔은 근처 모스크를 방문할 때 단정한 옷을 입어 달라고 손님들에게 부탁해요.",
+   "blank": "محتشما",
+   "src": "made"
+  }
+ ],
  "w|محتمل": [
   {
    "text": "هذا السيناريو محتمل جداً.",
@@ -71008,6 +71856,22 @@
    "en": "Time on the microscope is limited, so Sara books it early.",
    "ko": "현미경 사용 시간이 한정돼 있어서 사라는 일찍 예약해요.",
    "blank": "محدود",
+   "src": "made"
+  }
+ ],
+ "w|محراب": [
+  {
+   "text": "شرح علي أن المحراب يدل على اتجاه القبلة في المسجد.",
+   "en": "Ali explained that the mihrab indicates the direction of prayer in the mosque.",
+   "ko": "알리는 미흐라브가 모스크에서 기도 방향을 가리킨다고 설명했어요.",
+   "blank": "المحراب",
+   "src": "made"
+  },
+  {
+   "text": "بني مدخل المسرح على شكل محراب كبير مزين بالنقوش.",
+   "en": "The theater entrance was built in the shape of a large decorated niche.",
+   "ko": "극장 입구는 무늬로 꾸민 커다란 벽감 모양으로 지어졌어요.",
+   "blank": "محراب",
    "src": "made"
   }
  ],
@@ -71569,6 +72433,22 @@
    "src": "made"
   }
  ],
+ "w|مختلط": [
+  {
+   "text": "يبيع خالد خبزا مختلطا من القمح والشعير.",
+   "en": "Khaled sells mixed bread made from wheat and barley.",
+   "ko": "할리드는 밀과 보리를 섞은 빵을 팔아요.",
+   "blank": "مختلطا",
+   "src": "made"
+  },
+  {
+   "text": "في الفندق مسبح مختلط ومسبح آخر للنساء فقط.",
+   "en": "The hotel has a mixed pool and another pool for women only.",
+   "ko": "호텔에는 남녀 공용 수영장과 여성 전용 수영장이 따로 있어요.",
+   "blank": "مختلط",
+   "src": "made"
+  }
+ ],
  "w|مختلف": [
   {
    "text": "كل شخص له رأي مختلف.",
@@ -72003,6 +72883,22 @@
    "src": "made"
   }
  ],
+ "w|مدروس": [
+  {
+   "text": "كان قرار خالد بفتح فرع ثان قرارا مدروسا.",
+   "en": "Khaled's decision to open a second branch was a well-considered decision.",
+   "ko": "두 번째 지점을 내기로 한 할리드의 결정은 잘 따져 본 결정이었어요.",
+   "blank": "مدروسا",
+   "src": "made"
+  },
+  {
+   "text": "اختارت ليلى الفندق بشكل مدروس بعد أن قرأت التقييمات كلها.",
+   "en": "Laila chose the hotel carefully after reading all the reviews.",
+   "ko": "라일라는 후기를 다 읽고 꼼꼼히 따져서 호텔을 골랐어요.",
+   "blank": "مدروس",
+   "src": "made"
+  }
+ ],
  "w|مدع": [
   {
    "text": "كان بين رفاق أحمد في الرحلة مدع عام يحب الصيد.",
@@ -72302,6 +73198,22 @@
    "en": "Rana asked the witness about the date mentioned in the letter.",
    "ko": "라나는 증인에게 편지에 적힌 날짜에 대해 물었어요.",
    "blank": "المذكور",
+   "src": "made"
+  }
+ ],
+ "w|مذل": [
+  {
+   "text": "قال خالد إن رمي الخبز في القمامة أمر مذل للنعمة.",
+   "en": "Khaled said that throwing bread in the trash is disgraceful to God's bounty.",
+   "ko": "할리드는 빵을 쓰레기통에 버리는 건 귀한 양식을 욕되게 하는 일이라고 말했어요.",
+   "blank": "مذل",
+   "src": "made"
+  },
+  {
+   "text": "شعرت ليلى بموقف مذل حين رفضت بطاقتها عند الاستقبال.",
+   "en": "Laila felt humiliated when her card was declined at reception.",
+   "ko": "라일라는 프런트에서 카드가 거절됐을 때 창피한 기분이 들었어요.",
+   "blank": "مذل",
    "src": "made"
   }
  ],
@@ -73091,6 +74003,22 @@
    "src": "made"
   }
  ],
+ "w|مرهف": [
+  {
+   "text": "علي دليل ذو حس مرهف، يلاحظ أصغر التفاصيل في كل لوحة.",
+   "en": "Ali is a guide with a delicate sensibility; he notices the smallest details in every painting.",
+   "ko": "알리는 섬세한 감각을 지닌 안내원이라 그림마다 아주 작은 부분까지 알아봐요.",
+   "blank": "مرهف",
+   "src": "made"
+  },
+  {
+   "text": "نور مستمعة ذات أذن مرهفة، تسمع أي خطأ في العزف.",
+   "en": "Nour is a listener with a sensitive ear; she hears any mistake in the playing.",
+   "ko": "누르는 귀가 예민한 청중이라 연주의 어떤 실수도 알아들어요.",
+   "blank": "مرهفة",
+   "src": "made"
+  }
+ ],
  "w|مرهق": [
   {
    "text": "دخلت ممرضة الصيدلية بوجه مرهق بعد مناوبة ليلية، فقدم لها كريم كوب ماء.",
@@ -73211,6 +74139,22 @@
    "en": "I like sitting in a comfortable place after work.",
    "ko": "일 끝나고 편안한 곳에 앉는 걸 좋아해.",
    "blank": "مريح"
+  }
+ ],
+ "w|مرير": [
+  {
+   "text": "شرح علي للزوار كيف عاش الفلاحون واقعا مريرا في القرن الماضي.",
+   "en": "Ali explained to the visitors how farmers lived a bitter reality in the last century.",
+   "ko": "알리는 방문객들에게 지난 세기 농민들이 얼마나 쓰라린 현실을 살았는지 설명했어요.",
+   "blank": "مريرا",
+   "src": "made"
+  },
+  {
+   "text": "غنت المطربة أغنية عن الفراق المرير، فبكت نور بصمت.",
+   "en": "The singer sang a song about bitter separation, and Nour cried silently.",
+   "ko": "가수가 쓰라린 이별 노래를 부르자 누르는 조용히 울었어요.",
+   "blank": "المرير",
+   "src": "made"
   }
  ],
  "w|مريض": [
@@ -73373,6 +74317,22 @@
    "en": "The restaurant was crowded at lunch.",
    "ko": "점심시간에 식당이 붐볐어.",
    "blank": "مزدحم"
+  }
+ ],
+ "w|مزدهر": [
+  {
+   "text": "تحكي القاعة الثانية في المتحف عن عصر مزدهر للتجارة في المدينة.",
+   "en": "The second hall of the museum tells of a flourishing era of trade in the city.",
+   "ko": "박물관 두 번째 전시실은 도시의 무역이 번성하던 시대를 이야기해요.",
+   "blank": "مزدهر",
+   "src": "made"
+  },
+  {
+   "text": "قالت نور إن المشهد الموسيقي في المدينة مزدهر هذه الأيام.",
+   "en": "Nour said the music scene in the city is thriving these days.",
+   "ko": "누르는 요즘 도시의 음악계가 활기를 띤다고 말했어요.",
+   "blank": "مزدهر",
+   "src": "made"
   }
  ],
  "w|مزدوج": [
@@ -73847,6 +74807,22 @@
    "blank": "مستخدم"
   }
  ],
+ "w|مستدام": [
+  {
+   "text": "يستعمل المتحف إضاءة موفرة للطاقة ضمن خطة مستدامة يشرف عليها علي.",
+   "en": "The museum uses energy-saving lighting as part of a sustainable plan Ali oversees.",
+   "ko": "박물관은 알리가 맡은 지속 가능한 계획에 따라 에너지 절약 조명을 써요.",
+   "blank": "مستدامة",
+   "src": "made"
+  },
+  {
+   "text": "تستعمل الحفلة أكوابا قابلة لإعادة الاستعمال ضمن مبادرة مستدامة.",
+   "en": "The concert uses reusable cups as part of a sustainable initiative.",
+   "ko": "공연은 지속 가능한 계획의 하나로 다회용 컵을 써요.",
+   "blank": "مستدامة",
+   "src": "made"
+  }
+ ],
  "w|مستدير": [
   {
    "text": "هذا الطاولة شكلها مستدير.",
@@ -73989,6 +74965,22 @@
    "en": "He was surprised by what happened.",
    "ko": "그는 일어난 일에 놀랐어.",
    "blank": "مستغرب"
+  }
+ ],
+ "w|مستفز": [
+  {
+   "text": "كتب زائر تعليقا مستفزا في دفتر الزوار، فابتسم علي ولم يرد.",
+   "en": "A visitor wrote a provocative comment in the guestbook; Ali smiled and didn't reply.",
+   "ko": "한 방문객이 방명록에 도발적인 글을 남겼지만 알리는 웃고 대꾸하지 않았어요.",
+   "blank": "مستفزا",
+   "src": "made"
+  },
+  {
+   "text": "كان سلوك الرجل الواقف أمام نور مستفزا، فقد كان يصور طوال الوقت.",
+   "en": "The behavior of the man standing in front of Nour was annoying; he was filming the whole time.",
+   "ko": "누르 앞에 선 남자는 내내 촬영을 해서 행동이 거슬렸어요.",
+   "blank": "مستفزا",
+   "src": "made"
   }
  ],
  "w|مستقبل": [
@@ -74513,6 +75505,22 @@
    "src": "made"
   }
  ],
+ "w|مسيء": [
+  {
+   "text": "أزال علي ملصقا مسيئا علقه أحدهم على باب المتحف.",
+   "en": "Ali removed an offensive poster someone had stuck on the museum door.",
+   "ko": "알리는 누군가 박물관 문에 붙인 모욕적인 포스터를 떼어 냈어요.",
+   "blank": "مسيئا",
+   "src": "made"
+  },
+  {
+   "text": "اعتذر المغني عن كلام مسيء قاله في حفلة سابقة.",
+   "en": "The singer apologized for an offensive remark he made at a previous concert.",
+   "ko": "가수는 지난 공연에서 한 모욕적인 말에 대해 사과했어요.",
+   "blank": "مسيء",
+   "src": "made"
+  }
+ ],
  "w|مسيحي": [
   {
    "text": "جاري مسيحي يحتفل بعيد الميلاد.",
@@ -74953,6 +75961,22 @@
    "src": "made"
   }
  ],
+ "w|مشوه": [
+  {
+   "text": "وصل إلى المتحف تمثال مشوه فقد أنفه وإحدى يديه.",
+   "en": "A damaged statue arrived at the museum that had lost its nose and one of its hands.",
+   "ko": "코와 한쪽 손이 떨어져 나간 훼손된 조각상이 박물관에 들어왔어요.",
+   "blank": "مشوه",
+   "src": "made"
+  },
+  {
+   "text": "خرج صوت مشوه من السماعات في بداية الحفلة، فأصلحه الفني بسرعة.",
+   "en": "A distorted sound came out of the speakers at the start of the concert, and the technician fixed it quickly.",
+   "ko": "공연 초반 스피커에서 찌그러진 소리가 나자 기술자가 금방 고쳤어요.",
+   "blank": "مشوه",
+   "src": "made"
+  }
+ ],
  "w|مشوي": [
   {
    "text": "الدجاج مشوي على الفحم ممتاز.",
@@ -75221,6 +76245,22 @@
    "src": "made"
   }
  ],
+ "w|مصطنع": [
+  {
+   "text": "يعرف علي أن هذا الحجر مصطنع وليس من العصر الروماني.",
+   "en": "Ali knows that this stone is artificial and not from the Roman era.",
+   "ko": "알리는 이 돌이 인공물이고 로마 시대 것이 아니라는 걸 알아요.",
+   "blank": "مصطنع",
+   "src": "made"
+  },
+  {
+   "text": "لم تحب نور الدخان المصطنع على المسرح لأنه جعلها تسعل.",
+   "en": "Nour didn't like the artificial smoke on stage because it made her cough.",
+   "ko": "누르는 무대의 인공 연기 때문에 기침이 나서 싫었어요.",
+   "blank": "المصطنع",
+   "src": "made"
+  }
+ ],
  "w|مصعد": [
   {
    "text": "هل يمكننا استخدام مصعد للوصول إلى الطابق العاشر؟",
@@ -75431,6 +76471,22 @@
    "blank": "مضغ"
   }
  ],
+ "w|مضلل": [
+  {
+   "text": "صحح علي عنوانا مضللا كان مكتوبا تحت إحدى الصور.",
+   "en": "Ali corrected a misleading caption that was written under one of the pictures.",
+   "ko": "알리는 사진 한 장 아래에 적힌 오해를 부르는 설명을 고쳤어요.",
+   "blank": "مضللا",
+   "src": "made"
+  },
+  {
+   "text": "كان إعلان الحفلة مضللا، فالمغني الرئيسي لم يحضر.",
+   "en": "The concert advertisement was misleading; the main singer didn't come.",
+   "ko": "공연 광고는 오해를 불렀어요. 메인 가수가 오지 않았거든요.",
+   "blank": "مضللا",
+   "src": "made"
+  }
+ ],
  "w|مضمون": [
   {
    "text": "اشترى عمر مدفأة مضمونة لمدة سنتين.",
@@ -75444,6 +76500,22 @@
    "en": "Fatima says helping neighbors brings a guaranteed reward.",
    "ko": "파티마는 이웃을 돕는 일에는 반드시 보답이 있다고 말해요.",
    "blank": "مضمون",
+   "src": "made"
+  }
+ ],
+ "w|مضن": [
+  {
+   "text": "استغرق ترميم المخطوطة عملا مضنيا دام سنتين.",
+   "en": "Restoring the manuscript took exhausting work that lasted two years.",
+   "ko": "필사본 복원에는 이 년 동안 이어진 고된 작업이 들었어요.",
+   "blank": "مضنيا",
+   "src": "made"
+  },
+  {
+   "text": "بعد يوم عمل مضن، ذهبت نور إلى الحفلة لترتاح.",
+   "en": "After an exhausting workday, Nour went to the concert to relax.",
+   "ko": "고된 하루 일을 마치고 누르는 쉬려고 공연에 갔어요.",
+   "blank": "مضن",
    "src": "made"
   }
  ],
@@ -76039,6 +77111,22 @@
    "src": "made"
   }
  ],
+ "w|معتم": [
+  {
+   "text": "يحفظ علي المخطوطات في غرفة معتمة حتى لا يتلفها الضوء.",
+   "en": "Ali keeps the manuscripts in a dark room so the light doesn't damage them.",
+   "ko": "알리는 빛에 상하지 않게 필사본을 어두운 방에 보관해요.",
+   "blank": "معتمة",
+   "src": "made"
+  },
+  {
+   "text": "صارت القاعة معتمة تماما قبل دخول العازفين.",
+   "en": "The hall became completely dark before the musicians came in.",
+   "ko": "연주자들이 들어오기 전에 공연장이 완전히 어두워졌어요.",
+   "blank": "معتمة",
+   "src": "made"
+  }
+ ],
  "w|معجب": [
   {
    "text": "أنا معجب بعملك كثيراً.",
@@ -76301,6 +77389,22 @@
    "blank": "معصم"
   }
  ],
+ "w|معطاء": [
+  {
+   "text": "تبرعت سيدة معطاء بمجموعة جدها كلها للمتحف.",
+   "en": "A generous lady donated her grandfather's entire collection to the museum.",
+   "ko": "마음씨 넉넉한 한 여성이 할아버지의 소장품 전부를 박물관에 기증했어요.",
+   "blank": "معطاء",
+   "src": "made"
+  },
+  {
+   "text": "شكرت الفرقة جمهورها المعطاء الذي جمع تبرعات للمستشفى.",
+   "en": "The band thanked its generous audience, who collected donations for the hospital.",
+   "ko": "밴드는 병원 기부금을 모아 준 너그러운 관객들에게 감사했어요.",
+   "blank": "المعطاء",
+   "src": "made"
+  }
+ ],
  "w|معطر": [
   {
    "text": "رش أحمد معطرا في الغرف لأن رائحة الرطوبة كانت قوية.",
@@ -76504,6 +77608,38 @@
    "en": "Rana's husband is an IT engineer, so he fixed the navigation device quickly.",
    "ko": "라나의 남편은 IT 엔지니어라서 내비게이션을 금방 고쳤어요.",
    "blank": "المعلوماتية",
+   "src": "made"
+  }
+ ],
+ "w|معمار": [
+  {
+   "text": "يدرس علي معمار المباني القديمة في وسط المدينة.",
+   "en": "Ali studies the architecture of the old buildings in the city center.",
+   "ko": "알리는 도심 옛 건물들의 건축 양식을 연구해요.",
+   "blank": "معمار",
+   "src": "made"
+  },
+  {
+   "text": "أعجبت نور بمعمار دار الأوبرا الجديدة.",
+   "en": "Nour admired the architecture of the new opera house.",
+   "ko": "누르는 새 오페라 극장의 건축에 감탄했어요.",
+   "blank": "بمعمار",
+   "src": "made"
+  }
+ ],
+ "w|معمر": [
+  {
+   "text": "في حديقة المتحف شجرة زيتون معمرة يقال إن عمرها ألف سنة.",
+   "en": "In the museum garden there is an ancient olive tree said to be a thousand years old.",
+   "ko": "박물관 정원에는 천 년 되었다는 오래된 올리브 나무가 있어요.",
+   "blank": "معمرة",
+   "src": "made"
+  },
+  {
+   "text": "جلس بجانب نور عازف عود معمر حضر الحفلة مع حفيده.",
+   "en": "Next to Nour sat an aged oud player who came to the concert with his grandson.",
+   "ko": "누르 옆에는 손자와 함께 공연에 온 나이 지긋한 우드 연주자가 앉았어요.",
+   "blank": "معمر",
    "src": "made"
   }
  ],
@@ -78231,6 +79367,22 @@
    "blank": "مكسور"
   }
  ],
+ "w|مكعب": [
+  {
+   "text": "يقطع خالد الجبن مكعبات صغيرة لفطائر الأطفال.",
+   "en": "Khaled cuts the cheese into small cubes for the children's pies.",
+   "ko": "할리드는 아이들 파이에 넣을 치즈를 작은 깍둑 모양으로 썰어요.",
+   "blank": "مكعبات",
+   "src": "made"
+  },
+  {
+   "text": "وضعت ليلى مكعب سكر واحدا في قهوتها.",
+   "en": "Laila put one sugar cube in her coffee.",
+   "ko": "라일라는 커피에 각설탕 하나를 넣었어요.",
+   "blank": "مكعب",
+   "src": "made"
+  }
+ ],
  "w|مكلف": [
   {
    "text": "أصبح أحمد مكلفا بتغطية أخبار البرلمان هذا الشهر.",
@@ -78309,6 +79461,22 @@
    "src": "made"
   }
  ],
+ "w|مكون": [
+  {
+   "text": "يكتب خالد على كل علبة كعك قائمة المكونات.",
+   "en": "Khaled writes the list of ingredients on every box of cookies.",
+   "ko": "할리드는 과자 상자마다 재료 목록을 적어요.",
+   "blank": "المكونات",
+   "src": "made"
+  },
+  {
+   "text": "سألت ليلى الطاهي عن مكونات الصلصة لأنها تتحسس من المكسرات.",
+   "en": "Laila asked the chef about the sauce's ingredients because she's allergic to nuts.",
+   "ko": "라일라는 견과류 알레르기가 있어서 요리사에게 소스 재료를 물었어요.",
+   "blank": "مكونات",
+   "src": "made"
+  }
+ ],
  "w|مكونات": [
   {
    "text": "جمعت المكونات في وعاء واحد.",
@@ -78335,6 +79503,22 @@
    "en": "I need a new makeup bag.",
    "ko": "새 화장품 파우치가 필요해.",
    "blank": "مكياج"
+  }
+ ],
+ "w|مكيدة": [
+  {
+   "text": "اكتشف خالد مكيدة منافسه الذي نشر إشاعة كاذبة عن المخبز.",
+   "en": "Khaled discovered the scheme of his rival, who spread a false rumor about the bakery.",
+   "ko": "할리드는 빵집에 대한 거짓 소문을 퍼뜨린 경쟁자의 음모를 알아냈어요.",
+   "blank": "مكيدة",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت ليلى في غرفة الفندق فيلما عن مكيدة في قصر قديم.",
+   "en": "In the hotel room Laila watched a film about a plot in an old palace.",
+   "ko": "라일라는 호텔 방에서 옛 궁전의 음모를 다룬 영화를 봤어요.",
+   "blank": "مكيدة",
+   "src": "made"
   }
  ],
  "w|مكيف": [
@@ -78957,6 +80141,22 @@
    "blank": "ممتاز"
   }
  ],
+ "w|ممتد": [
+  {
+   "text": "يمشي علي مع الزوار في ممر ممتد بين القاعات القديمة.",
+   "en": "Ali walks with the visitors along a long corridor between the old halls.",
+   "ko": "알리는 옛 전시실들 사이로 길게 뻗은 복도를 방문객들과 함께 걸어요.",
+   "blank": "ممتد",
+   "src": "made"
+  },
+  {
+   "text": "وقفت نور في طابور ممتد حتى نهاية الشارع لتدخل الحفلة.",
+   "en": "Nour stood in a line stretching to the end of the street to get into the concert.",
+   "ko": "누르는 공연장에 들어가려고 길 끝까지 늘어선 줄에 섰어요.",
+   "blank": "ممتد",
+   "src": "made"
+  }
+ ],
  "w|ممتع": [
   {
    "text": "اللعب مع الأصدقاء ممتع للغاية.",
@@ -79455,6 +80655,22 @@
    "src": "made"
   }
  ],
+ "w|منبر": [
+  {
+   "text": "في وسط القاعة منبر خشبي منقوش نقل من مسجد قديم.",
+   "en": "In the middle of the hall is a carved wooden minbar moved from an old mosque.",
+   "ko": "전시실 한가운데에는 옛 모스크에서 옮겨 온 조각된 나무 설교단이 있어요.",
+   "blank": "منبر",
+   "src": "made"
+  },
+  {
+   "text": "صعد مدير المهرجان إلى المنبر وشكر الجمهور.",
+   "en": "The festival director went up to the podium and thanked the audience.",
+   "ko": "축제 감독이 연단에 올라 관객에게 감사 인사를 했어요.",
+   "blank": "المنبر",
+   "src": "made"
+  }
+ ],
  "w|منبع": [
   {
    "text": "قاد يوسف الزوار إلى منبع النهر في أعلى الجبل.",
@@ -79765,6 +80981,22 @@
    "en": "Working from home suits me more.",
    "ko": "집에서 하는 일이 나한테 더 편해.",
    "blank": "المنزلي"
+  }
+ ],
+ "w|منسجم": [
+  {
+   "text": "يحب علي القاعة الجديدة لأن ألوانها منسجمة مع القطع المعروضة.",
+   "en": "Ali likes the new hall because its colors are in harmony with the displayed pieces.",
+   "ko": "알리는 새 전시실이 전시품과 색이 잘 어울려서 좋아해요.",
+   "blank": "منسجمة",
+   "src": "made"
+  },
+  {
+   "text": "كان عزف الكمان والبيانو منسجما بشكل رائع.",
+   "en": "The violin and piano playing was wonderfully harmonious.",
+   "ko": "바이올린과 피아노 연주가 멋지게 어우러졌어요.",
+   "blank": "منسجما",
+   "src": "made"
   }
  ],
  "w|منسف": [
@@ -80244,6 +81476,22 @@
    "en": "Sara worked with unmatched energy in her first week.",
    "ko": "사라는 첫 주에 누구보다도 열심히 일했어요.",
    "blank": "منقطع",
+   "src": "made"
+  }
+ ],
+ "w|منمنمة": [
+  {
+   "text": "يحتاج الزائر إلى عدسة ليرى تفاصيل المنمنمة الصغيرة.",
+   "en": "A visitor needs a magnifying glass to see the details of the small miniature.",
+   "ko": "작은 세밀화의 세부를 보려면 방문객은 돋보기가 필요해요.",
+   "blank": "المنمنمة",
+   "src": "made"
+  },
+  {
+   "text": "طبعت الفرقة على التذاكر منمنمة لعازف ناي.",
+   "en": "The band printed a miniature of a ney player on the tickets.",
+   "ko": "밴드는 표에 나이 피리 연주자의 세밀화를 찍었어요.",
+   "blank": "منمنمة",
    "src": "made"
   }
  ],
@@ -84727,6 +85975,22 @@
    "src": "made"
   }
  ],
+ "w|نواة": [
+  {
+   "text": "ينزع خالد النواة من التمر قبل أن يحشو به الكعك.",
+   "en": "Khaled removes the pit from the dates before stuffing the cookies with them.",
+   "ko": "할리드는 과자 속에 넣기 전에 대추야자 씨를 빼요.",
+   "blank": "النواة",
+   "src": "made"
+  },
+  {
+   "text": "ابتلعت ليلى نواة زيتونة بالخطأ فضحكت صديقتها.",
+   "en": "Laila swallowed an olive pit by mistake, and her friend laughed.",
+   "ko": "라일라가 실수로 올리브 씨를 삼키자 친구가 웃었어요.",
+   "blank": "نواة",
+   "src": "made"
+  }
+ ],
  "w|نوايا": [
   {
    "text": "قال المدير إن نوايا الشركة واضحة: لا تسريح هذا العام.",
@@ -85714,6 +86978,22 @@
    "en": "The nurse told Rana: come along, it's your turn.",
    "ko": "간호사가 라나에게 \"자, 이제 차례예요\"라고 했어요.",
    "blank": "هلمي",
+   "src": "made"
+  }
+ ],
+ "w|هليون": [
+  {
+   "text": "الهليون غال في الشتاء، لذلك لا يستعمله خالد إلا في الربيع.",
+   "en": "Asparagus is expensive in winter, so Khaled only uses it in spring.",
+   "ko": "아스파라거스는 겨울에 비싸서 할리드는 봄에만 써요.",
+   "blank": "الهليون",
+   "src": "made"
+  },
+  {
+   "text": "أكلت ليلى هليونا مشويا مع السمك في عشاء الفندق.",
+   "en": "Laila ate grilled asparagus with fish at the hotel dinner.",
+   "ko": "라일라는 호텔 저녁에 생선과 함께 구운 아스파라거스를 먹었어요.",
+   "blank": "هليونا",
    "src": "made"
   }
  ],

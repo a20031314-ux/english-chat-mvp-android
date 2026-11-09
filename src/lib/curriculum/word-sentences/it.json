@@ -475,6 +475,22 @@
    "blank": "accanto"
   }
  ],
+ "w|accecare": [
+  {
+   "text": "Il flash del fotografo ha rischiato di accecare Marco mentre impiattava.",
+   "en": "The photographer's flash nearly blinded Marco while he was plating.",
+   "ko": "사진사의 플래시에 마르코는 음식을 담다가 눈이 멀 뻔했어요.",
+   "blank": "accecare",
+   "src": "made"
+  },
+  {
+   "text": "Le luci della sala sono così forti da accecare Giulia durante gli addominali.",
+   "en": "The lights in the room are so bright they blind Giulia during sit-ups.",
+   "ko": "운동실 조명이 너무 밝아서 줄리아는 복근 운동할 때 눈이 부셔요.",
+   "blank": "accecare",
+   "src": "made"
+  }
+ ],
  "w|accedere": [
   {
    "text": "Con la nuova app Davide può accedere ai documenti del comune da casa.",
@@ -2111,6 +2127,22 @@
    "src": "made"
   }
  ],
+ "w|agricoltore": [
+  {
+   "text": "Le verdure arrivano direttamente da un agricoltore della zona, spiega Marco.",
+   "en": "The vegetables come straight from a local farmer, Marco explains.",
+   "ko": "채소는 이 지역 농부에게서 바로 온다고 마르코가 설명해요.",
+   "blank": "agricoltore",
+   "src": "made"
+  },
+  {
+   "text": "Tra gli iscritti di Giulia c'è un agricoltore che si allena dopo il raccolto.",
+   "en": "Among Giulia's members there's a farmer who works out after the harvest.",
+   "ko": "줄리아의 회원 중에는 수확이 끝나면 운동하러 오는 농부가 있어요.",
+   "blank": "agricoltore",
+   "src": "made"
+  }
+ ],
  "w|ah": [
   {
    "text": "Ah, ora capisco.",
@@ -3635,6 +3667,22 @@
    "src": "made"
   }
  ],
+ "w|angelico": [
+  {
+   "text": "Il nuovo aiuto cuoco ha un viso angelico, ma Marco lo trova un po' pigro.",
+   "en": "The new assistant cook has an angelic face, but Marco finds him a bit lazy.",
+   "ko": "새 보조 요리사는 천사 같은 얼굴이지만 마르코는 그가 좀 게으르다고 생각해요.",
+   "blank": "angelico",
+   "src": "made"
+  },
+  {
+   "text": "Con i principianti Giulia ha una pazienza quasi angelica.",
+   "en": "With beginners Giulia has almost angelic patience.",
+   "ko": "줄리아는 초보자들에게 거의 천사 같은 인내심을 보여요.",
+   "blank": "angelica",
+   "src": "made"
+  }
+ ],
  "w|angelo": [
   {
    "text": "Mia nonna mi chiama sempre angelo.",
@@ -4838,6 +4886,22 @@
    "en": "In the autumn light Giulia photographs the architecture of the old town.",
    "ko": "가을 햇살 아래 줄리아는 구시가지의 건축물을 사진으로 찍어요.",
    "blank": "architettura",
+   "src": "made"
+  }
+ ],
+ "w|archiviare": [
+  {
+   "text": "A fine serata Marco deve archiviare tutte le ricevute.",
+   "en": "At the end of the evening Marco has to file all the receipts.",
+   "ko": "저녁 영업이 끝나면 마르코는 영수증을 전부 정리해 보관해야 해요.",
+   "blank": "archiviare",
+   "src": "made"
+  },
+  {
+   "text": "A fine anno Giulia deve archiviare le schede degli iscritti.",
+   "en": "At the end of the year Giulia has to file away the members' forms.",
+   "ko": "연말에 줄리아는 회원 카드를 정리해 보관해야 해요.",
+   "blank": "archiviare",
    "src": "made"
   }
  ],
@@ -6063,6 +6127,22 @@
    "en": "They hired a new chef.",
    "ko": "새 셰프를 고용했어.",
    "blank": "assunto"
+  }
+ ],
+ "w|assunzione": [
+  {
+   "text": "Con l'assunzione di due camerieri, Marco può finalmente prendersi un giorno libero.",
+   "en": "With the hiring of two waiters, Marco can finally take a day off.",
+   "ko": "웨이터 두 명을 채용해서 마르코는 드디어 하루 쉴 수 있어요.",
+   "blank": "assunzione",
+   "src": "made"
+  },
+  {
+   "text": "Giulia festeggia l'assunzione a tempo indeterminato in palestra.",
+   "en": "Giulia is celebrating being hired on a permanent contract at the gym.",
+   "ko": "줄리아는 체육관에 정규직으로 채용된 걸 축하해요.",
+   "blank": "assunzione",
+   "src": "made"
   }
  ],
  "w|assurdo": [
@@ -11085,6 +11165,22 @@
    "src": "made"
   }
  ],
+ "w|candidatura": [
+  {
+   "text": "Marco ha ricevuto la candidatura di un giovane pasticciere.",
+   "en": "Marco received an application from a young pastry chef.",
+   "ko": "마르코는 젊은 제과사의 지원서를 받았어요.",
+   "blank": "candidatura",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha inviato la sua candidatura come istruttrice di yoga.",
+   "en": "Giulia sent in her application as a yoga instructor.",
+   "ko": "줄리아는 요가 강사 자리에 지원서를 냈어요.",
+   "blank": "candidatura",
+   "src": "made"
+  }
+ ],
  "w|cane": [
   {
    "text": "Il cane vuole uscire.",
@@ -11775,6 +11871,22 @@
    "en": "They put a sign on the closed gate.",
    "ko": "닫힌 대문에 표지판을 붙였어.",
    "blank": "cartello"
+  }
+ ],
+ "w|cartellone": [
+  {
+   "text": "Fuori dal ristorante c'è un cartellone con il piatto del giorno scelto da Marco.",
+   "en": "Outside the restaurant there's a board with the dish of the day chosen by Marco.",
+   "ko": "식당 밖에는 마르코가 고른 오늘의 요리를 적은 큰 판이 있어요.",
+   "blank": "cartellone",
+   "src": "made"
+  },
+  {
+   "text": "Sul cartellone all'ingresso Giulia ha scritto gli orari dei corsi.",
+   "en": "On the board at the entrance Giulia wrote the class times.",
+   "ko": "줄리아는 입구에 있는 큰 판에 수업 시간을 적었어요.",
+   "blank": "cartellone",
+   "src": "made"
   }
  ],
  "w|cartina": [
@@ -12493,6 +12605,22 @@
    "blank": "ceduto"
   }
  ],
+ "w|celare": [
+  {
+   "text": "Davanti ai clienti Marco cerca di celare la stanchezza.",
+   "en": "In front of the customers Marco tries to hide his tiredness.",
+   "ko": "손님들 앞에서 마르코는 피곤함을 감추려고 해요.",
+   "blank": "celare",
+   "src": "made"
+  },
+  {
+   "text": "Quando un allievo migliora, Giulia non riesce a celare la soddisfazione.",
+   "en": "When a student improves, Giulia can't hide her satisfaction.",
+   "ko": "수강생이 나아지면 줄리아는 뿌듯함을 감추지 못해요.",
+   "blank": "celare",
+   "src": "made"
+  }
+ ],
  "w|celebrare": [
   {
    "text": "Dopo la centesima replica, la compagnia di Davide va a celebrare in trattoria.",
@@ -12715,6 +12843,22 @@
    "en": "The central problem remains unsolved.",
    "ko": "핵심 문제는 여전히 해결되지 않았어.",
    "blank": "centrale"
+  }
+ ],
+ "w|centralino": [
+  {
+   "text": "Il centralino del ristorante squilla di continuo e Marco non riesce a rispondere.",
+   "en": "The restaurant's switchboard keeps ringing and Marco can't answer.",
+   "ko": "식당 대표 전화가 계속 울리는데 마르코는 받을 수가 없어요.",
+   "blank": "centralino",
+   "src": "made"
+  },
+  {
+   "text": "Giulia chiama il centralino del comune per avere notizie della piscina.",
+   "en": "Giulia calls the town hall switchboard to get news about the pool.",
+   "ko": "줄리아는 수영장 소식을 알아보려고 시청 대표 전화로 전화해요.",
+   "blank": "centralino",
+   "src": "made"
   }
  ],
  "w|centrare": [
@@ -20083,6 +20227,38 @@
    "blank": "dare"
   }
  ],
+ "w|dati": [
+  {
+   "text": "Marco inserisce nel computer i dati delle ordinazioni della settimana.",
+   "en": "Marco enters the week's order data into the computer.",
+   "ko": "마르코는 이번 주 주문 데이터를 컴퓨터에 입력해요.",
+   "blank": "dati",
+   "src": "made"
+  },
+  {
+   "text": "L'orologio di Giulia raccoglie i dati di ogni allenamento.",
+   "en": "Giulia's watch collects the data from every workout.",
+   "ko": "줄리아의 시계는 운동할 때마다 데이터를 모아요.",
+   "blank": "dati",
+   "src": "made"
+  }
+ ],
+ "w|dato": [
+  {
+   "text": "Il dato che preoccupa Marco è il prezzo dell'olio, salito di nuovo.",
+   "en": "The figure that worries Marco is the price of oil, which has gone up again.",
+   "ko": "마르코가 걱정하는 수치는 또 오른 기름값이에요.",
+   "blank": "dato",
+   "src": "made"
+  },
+  {
+   "text": "Per Giulia il dato più importante non è il peso ma la forza.",
+   "en": "For Giulia the most important figure isn't weight but strength.",
+   "ko": "줄리아에게 가장 중요한 수치는 몸무게가 아니라 근력이에요.",
+   "blank": "dato",
+   "src": "made"
+  }
+ ],
  "w|datore": [
   {
    "text": "Il datore di lavoro di Luca gli concede un giorno libero in più.",
@@ -22289,6 +22465,22 @@
    "blank": "direttamente"
   }
  ],
+ "w|direttiva": [
+  {
+   "text": "Una nuova direttiva obbliga Marco a indicare gli allergeni nel menù.",
+   "en": "A new directive requires Marco to list the allergens on the menu.",
+   "ko": "새 지침 때문에 마르코는 메뉴에 알레르기 유발 성분을 표시해야 해요.",
+   "blank": "direttiva",
+   "src": "made"
+  },
+  {
+   "text": "Secondo una direttiva del comune, la palestra di Giulia deve avere un defibrillatore.",
+   "en": "Under a town hall directive, Giulia's gym must have a defibrillator.",
+   "ko": "시 지침에 따라 줄리아네 체육관에는 제세동기가 있어야 해요.",
+   "blank": "direttiva",
+   "src": "made"
+  }
+ ],
  "w|diretto": [
   {
    "text": "Prendi il treno diretto per Firenze.",
@@ -22755,6 +22947,22 @@
    "en": "The smell of spoiled food is disgusting.",
    "ko": "상한 음식 냄새는 역겨워.",
    "blank": "disgustoso"
+  }
+ ],
+ "w|disoccupato": [
+  {
+   "text": "Marco ha assunto un cuoco che era disoccupato da un anno.",
+   "en": "Marco hired a cook who had been unemployed for a year.",
+   "ko": "마르코는 일 년 동안 실직 상태였던 요리사를 채용했어요.",
+   "blank": "disoccupato",
+   "src": "made"
+  },
+  {
+   "text": "Un iscritto disoccupato ha chiesto a Giulia uno sconto sull'abbonamento.",
+   "en": "An unemployed member asked Giulia for a discount on the membership.",
+   "ko": "실직한 회원 한 명이 줄리아에게 회원권 할인을 부탁했어요.",
+   "blank": "disoccupato",
+   "src": "made"
   }
  ],
  "w|disonesto": [
@@ -25531,6 +25739,22 @@
    "blank": "entrare"
   }
  ],
+ "w|entrata": [
+  {
+   "text": "All'entrata della cucina di Marco c'è un lavandino per lavarsi le mani.",
+   "en": "At the entrance to Marco's kitchen there's a sink for washing your hands.",
+   "ko": "마르코네 주방 입구에는 손 씻는 세면대가 있어요.",
+   "blank": "entrata",
+   "src": "made"
+  },
+  {
+   "text": "Giulia aspetta gli allievi all'entrata della palestra.",
+   "en": "Giulia waits for her students at the gym entrance.",
+   "ko": "줄리아는 체육관 입구에서 수강생들을 기다려요.",
+   "blank": "entrata",
+   "src": "made"
+  }
+ ],
  "w|entro": [
   {
    "text": "Consegna il documento entro venerdì.",
@@ -26629,6 +26853,22 @@
    "src": "made"
   }
  ],
+ "w|essenzialmente": [
+  {
+   "text": "Il lavoro di Marco consiste essenzialmente nell'assaggiare e correggere.",
+   "en": "Marco's job essentially consists of tasting and adjusting.",
+   "ko": "마르코의 일은 본질적으로 맛보고 고치는 거예요.",
+   "blank": "essenzialmente",
+   "src": "made"
+  },
+  {
+   "text": "Giulia dice che dimagrire è essenzialmente una questione di costanza.",
+   "en": "Giulia says losing weight is essentially a matter of consistency.",
+   "ko": "줄리아는 살 빼기는 본질적으로 꾸준함의 문제라고 말해요.",
+   "blank": "essenzialmente",
+   "src": "made"
+  }
+ ],
  "w|essere": [
   {
    "text": "Voglio essere chiaro.",
@@ -27151,6 +27391,22 @@
    "en": "The factory closes for the summer holidays.",
    "ko": "공장은 여름 휴가로 문을 닫아.",
    "blank": "fabbrica"
+  }
+ ],
+ "w|fabbro": [
+  {
+   "text": "Il fabbro del quartiere ha riparato la griglia della cucina di Marco.",
+   "en": "The neighbourhood blacksmith repaired the grill in Marco's kitchen.",
+   "ko": "동네 대장장이가 마르코네 주방 그릴을 고쳐 줬어요.",
+   "blank": "fabbro",
+   "src": "made"
+  },
+  {
+   "text": "Il fabbro è venuto ad aggiustare la serratura degli armadietti di Giulia.",
+   "en": "The locksmith came to fix the lock on Giulia's lockers.",
+   "ko": "열쇠 수리공이 줄리아네 사물함 자물쇠를 고치러 왔어요.",
+   "blank": "fabbro",
+   "src": "made"
   }
  ],
  "w|faccenda": [
@@ -29795,6 +30051,22 @@
    "src": "made"
   }
  ],
+ "w|fornitura": [
+  {
+   "text": "Marco controlla la fornitura di pesce arrivata stamattina.",
+   "en": "Marco checks the fish delivery that arrived this morning.",
+   "ko": "마르코는 오늘 아침에 들어온 생선 납품을 확인해요.",
+   "blank": "fornitura",
+   "src": "made"
+  },
+  {
+   "text": "Giulia aspetta una nuova fornitura di pesi per la palestra.",
+   "en": "Giulia is waiting for a new supply of weights for the gym.",
+   "ko": "줄리아는 체육관에 들어올 새 운동 기구 물량을 기다려요.",
+   "blank": "fornitura",
+   "src": "made"
+  }
+ ],
  "w|forno": [
   {
    "text": "Il profumo della torta nel forno della vicina arriva fino al pianerottolo di Marco.",
@@ -31449,6 +31721,22 @@
    "en": "The general gave the order.",
    "ko": "장군이 명령을 내렸어.",
    "blank": "generale"
+  }
+ ],
+ "w|generalmente": [
+  {
+   "text": "Marco generalmente arriva in cucina prima di tutti.",
+   "en": "Marco generally gets to the kitchen before everyone else.",
+   "ko": "마르코는 보통 누구보다 먼저 주방에 와요.",
+   "blank": "generalmente",
+   "src": "made"
+  },
+  {
+   "text": "Giulia generalmente si allena prima che arrivino i clienti.",
+   "en": "Giulia generally works out before the clients arrive.",
+   "ko": "줄리아는 보통 손님들이 오기 전에 운동해요.",
+   "blank": "generalmente",
+   "src": "made"
   }
  ],
  "w|generare": [
@@ -35883,6 +36171,22 @@
    "src": "made"
   }
  ],
+ "w|individuale": [
+  {
+   "text": "Marco prepara porzioni individuali di tiramisù in piccoli bicchieri.",
+   "en": "Marco makes individual portions of tiramisu in small glasses.",
+   "ko": "마르코는 작은 잔에 티라미수를 1인분씩 담아요.",
+   "blank": "individuali",
+   "src": "made"
+  },
+  {
+   "text": "A chi lo chiede, Giulia offre un allenamento individuale.",
+   "en": "To anyone who asks, Giulia offers individual training.",
+   "ko": "원하는 사람에게 줄리아는 개인 훈련을 해 줘요.",
+   "blank": "individuale",
+   "src": "made"
+  }
+ ],
  "w|individuare": [
   {
    "text": "Sulla cartina muta, Luca deve individuare i fiumi principali d'Italia.",
@@ -36368,6 +36672,22 @@
    "en": "A philosophy essay greatly influenced the way Giulia thinks.",
    "ko": "철학 책 한 권이 줄리아의 사고방식에 큰 영향을 줬어요.",
    "blank": "influenzato",
+   "src": "made"
+  }
+ ],
+ "w|informale": [
+  {
+   "text": "Il pranzo dello staff è un momento informale in cui Marco ascolta tutti.",
+   "en": "Staff lunch is an informal moment when Marco listens to everyone.",
+   "ko": "직원 점심은 마르코가 모두의 이야기를 듣는 편한 시간이에요.",
+   "blank": "informale",
+   "src": "made"
+  },
+  {
+   "text": "Lo stile di Giulia è informale: tutti le danno del tu.",
+   "en": "Giulia's style is informal: everyone calls her by the informal \"you\".",
+   "ko": "줄리아의 스타일은 격식이 없어서 다들 그녀에게 반말을 해요.",
+   "blank": "informale",
    "src": "made"
   }
  ],
@@ -43463,6 +43783,22 @@
    "blank": "memoria"
   }
  ],
+ "w|memorizzare": [
+  {
+   "text": "Marco cerca di memorizzare le ordinazioni senza scriverle.",
+   "en": "Marco tries to memorize the orders without writing them down.",
+   "ko": "마르코는 주문을 적지 않고 외우려고 해요.",
+   "blank": "memorizzare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia fatica a memorizzare i nomi di tutti i nuovi iscritti.",
+   "en": "Giulia struggles to memorize the names of all the new members.",
+   "ko": "줄리아는 새 회원들 이름을 다 외우기가 힘들어요.",
+   "blank": "memorizzare",
+   "src": "made"
+  }
+ ],
  "w|meno": [
   {
    "text": "Questo costa meno.",
@@ -44377,6 +44713,22 @@
    "en": "The storm threatens to arrive soon.",
    "ko": "폭풍이 곧 올 듯 위협해.",
    "blank": "minaccia"
+  }
+ ],
+ "w|minaccioso": [
+  {
+   "text": "Il cielo minaccioso fa temere a Marco che la terrazza resti vuota.",
+   "en": "The threatening sky makes Marco fear the terrace will stay empty.",
+   "ko": "하늘이 험상궂어서 마르코는 테라스가 텅 빌까 봐 걱정해요.",
+   "blank": "minaccioso",
+   "src": "made"
+  },
+  {
+   "text": "Mentre corre al parco, Giulia sente il ringhio minaccioso di un cane e cambia strada.",
+   "en": "While running in the park, Giulia hears a dog's threatening growl and changes route.",
+   "ko": "공원에서 달리다가 줄리아는 개가 위협적으로 으르렁대는 소리를 듣고 길을 바꿔요.",
+   "blank": "minaccioso",
+   "src": "made"
   }
  ],
  "w|minatore": [
@@ -47123,6 +47475,22 @@
    "en": "She plays a high note on the piano.",
    "ko": "그녀는 피아노로 높은 음을 쳐.",
    "blank": "nota"
+  }
+ ],
+ "w|notaio": [
+  {
+   "text": "Marco è andato dal notaio per firmare l'acquisto del ristorante.",
+   "en": "Marco went to the notary to sign the purchase of the restaurant.",
+   "ko": "마르코는 식당 매매 계약에 서명하러 공증인에게 갔어요.",
+   "blank": "notaio",
+   "src": "made"
+  },
+  {
+   "text": "Anche il notaio del paese frequenta il corso di Giulia.",
+   "en": "Even the town notary attends Giulia's class.",
+   "ko": "동네 공증인도 줄리아의 수업에 나와요.",
+   "blank": "notaio",
+   "src": "made"
   }
  ],
  "w|notare": [
@@ -53345,6 +53713,22 @@
    "src": "made"
   }
  ],
+ "w|pilastro": [
+  {
+   "text": "La vecchia cuoca è il pilastro della brigata di Marco.",
+   "en": "The old cook is the pillar of Marco's kitchen team.",
+   "ko": "나이 많은 요리사는 마르코네 주방 팀의 기둥이에요.",
+   "blank": "pilastro",
+   "src": "made"
+  },
+  {
+   "text": "Per fare stretching Giulia si appoggia a un pilastro della sala.",
+   "en": "To stretch, Giulia leans against a pillar in the room.",
+   "ko": "줄리아는 스트레칭할 때 운동실 기둥에 기대요.",
+   "blank": "pilastro",
+   "src": "made"
+  }
+ ],
  "w|pillola": [
   {
    "text": "Devo prendere questa pillola dopo pranzo.",
@@ -54861,6 +55245,22 @@
    "en": "There is no similar precedent.",
    "ko": "비슷한 선례가 없어.",
    "blank": "precedente"
+  }
+ ],
+ "w|precedere": [
+  {
+   "text": "Ricorda che l'antipasto deve precedere il primo, dice Marco al nuovo cameriere.",
+   "en": "Remember that the starter has to come before the first course, Marco tells the new waiter.",
+   "ko": "전채가 첫 코스보다 먼저 나가야 한다는 걸 기억하라고 마르코가 새 웨이터에게 말해요.",
+   "blank": "precedere",
+   "src": "made"
+  },
+  {
+   "text": "Un buon riscaldamento deve precedere ogni allenamento, insiste Giulia.",
+   "en": "A good warm-up must come before every workout, Giulia insists.",
+   "ko": "제대로 된 준비 운동이 모든 운동보다 먼저라고 줄리아는 강조해요.",
+   "blank": "precedere",
+   "src": "made"
   }
  ],
  "w|precipitare": [
@@ -56631,6 +57031,22 @@
    "src": "made"
   }
  ],
+ "w|proibito": [
+  {
+   "text": "In cucina è proibito usare il telefono durante il servizio, dice Marco.",
+   "en": "Using your phone in the kitchen during service is forbidden, says Marco.",
+   "ko": "영업 중 주방에서 휴대폰 사용은 금지라고 마르코가 말해요.",
+   "blank": "proibito",
+   "src": "made"
+  },
+  {
+   "text": "Nella palestra di Giulia è proibito lasciare i pesi per terra.",
+   "en": "In Giulia's gym it's forbidden to leave weights on the floor.",
+   "ko": "줄리아네 체육관에서는 운동 기구를 바닥에 두는 게 금지예요.",
+   "blank": "proibito",
+   "src": "made"
+  }
+ ],
  "w|proiettile": [
   {
    "text": "Il proiettile ha sfiorato il muro.",
@@ -57678,6 +58094,22 @@
    "en": "Francesca is the chef's favorite student, and he trusts her with the hardest dishes.",
    "ko": "프란체스카는 셰프가 아끼는 제자라서 셰프가 가장 어려운 요리를 맡겨요.",
    "blank": "pupilla",
+   "src": "made"
+  }
+ ],
+ "w|purché": [
+  {
+   "text": "Marco accetta di cucinare senza glutine, purché lo avvisino prima.",
+   "en": "Marco agrees to cook gluten-free, as long as they let him know in advance.",
+   "ko": "마르코는 미리 알려 주기만 하면 글루텐 없는 요리를 해 줘요.",
+   "blank": "purché",
+   "src": "made"
+  },
+  {
+   "text": "Giulia lascia usare il sacco da boxe, purché tutti mettano i guanti.",
+   "en": "Giulia lets people use the punching bag, as long as everyone wears gloves.",
+   "ko": "줄리아는 다들 장갑을 끼기만 하면 샌드백을 쓰게 해 줘요.",
+   "blank": "purché",
    "src": "made"
   }
  ],
@@ -58763,6 +59195,22 @@
    "blank": "ragionevole"
   }
  ],
+ "w|ragioniere": [
+  {
+   "text": "Il ragioniere controlla i conti del ristorante con Marco ogni fine mese.",
+   "en": "The accountant checks the restaurant's books with Marco at the end of every month.",
+   "ko": "회계사는 매달 말에 마르코와 함께 식당 장부를 확인해요.",
+   "blank": "ragioniere",
+   "src": "made"
+  },
+  {
+   "text": "Un ragioniere stressato chiede a Giulia esercizi per il mal di schiena.",
+   "en": "A stressed accountant asks Giulia for exercises for his back pain.",
+   "ko": "스트레스에 지친 회계사가 줄리아에게 허리 통증에 좋은 운동을 물어요.",
+   "blank": "ragioniere",
+   "src": "made"
+  }
+ ],
  "w|ragno": [
   {
    "text": "Nel fienile di Andrea un ragno enorme ha fatto la tela sopra la porta.",
@@ -59603,6 +60051,22 @@
    "src": "made"
   }
  ],
+ "w|referenza": [
+  {
+   "text": "Prima di assumere un nuovo cuoco, Marco chiede sempre una referenza.",
+   "en": "Before hiring a new cook, Marco always asks for a reference.",
+   "ko": "마르코는 새 요리사를 뽑기 전에 늘 추천서를 달라고 해요.",
+   "blank": "referenza",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha scritto una referenza per un ex collega che cerca lavoro.",
+   "en": "Giulia wrote a reference for a former colleague who is looking for work.",
+   "ko": "줄리아는 일자리를 찾는 예전 동료에게 추천서를 써 줬어요.",
+   "blank": "referenza",
+   "src": "made"
+  }
+ ],
  "w|referto": [
   {
    "text": "Paolo legge il referto delle analisi insieme al medico.",
@@ -60421,6 +60885,22 @@
    "src": "made"
   }
  ],
+ "w|resuscitare": [
+  {
+   "text": "Con un po' d'acqua fredda Marco riesce a resuscitare l'insalata appassita.",
+   "en": "With a little cold water Marco manages to revive the wilted lettuce.",
+   "ko": "마르코는 찬물 조금으로 시든 상추를 되살려요.",
+   "blank": "resuscitare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha provato a resuscitare la vecchia cyclette rotta, senza successo.",
+   "en": "Giulia tried to bring the broken old exercise bike back to life, without success.",
+   "ko": "줄리아는 고장 난 낡은 실내 자전거를 되살려 보려 했지만 실패했어요.",
+   "blank": "resuscitare",
+   "src": "made"
+  }
+ ],
  "w|rete": [
   {
    "text": "La rete internet non funziona oggi.",
@@ -60464,6 +60944,22 @@
    "en": "For the dinosaur film, Francesca has a giant papier-mâché reptile built.",
    "ko": "프란체스카는 공룡 영화를 위해 종이 반죽으로 거대한 파충류를 만들게 해요.",
    "blank": "rettile",
+   "src": "made"
+  }
+ ],
+ "w|rettore": [
+  {
+   "text": "Il rettore ha prenotato una cena da Marco per tutti i professori.",
+   "en": "The rector booked a dinner at Marco's for all the professors.",
+   "ko": "총장이 교수들 모두를 위해 마르코네 식당에 저녁을 예약했어요.",
+   "blank": "rettore",
+   "src": "made"
+  },
+  {
+   "text": "Il rettore dell'università si allena con Giulia il sabato mattina.",
+   "en": "The university rector works out with Giulia on Saturday mornings.",
+   "ko": "대학 총장은 토요일 아침마다 줄리아와 운동해요.",
+   "blank": "rettore",
    "src": "made"
   }
  ],
@@ -60742,6 +61238,22 @@
    "en": "Elena has to track down the model a customer saw in a magazine.",
    "ko": "엘레나는 한 손님이 잡지에서 본 제품을 찾아내야 해요.",
    "blank": "ricercare",
+   "src": "made"
+  }
+ ],
+ "w|ricercatore": [
+  {
+   "text": "Un ricercatore dell'università è venuto a studiare le ricette di Marco.",
+   "en": "A university researcher came to study Marco's recipes.",
+   "ko": "대학 연구원이 마르코의 요리법을 연구하러 왔어요.",
+   "blank": "ricercatore",
+   "src": "made"
+  },
+  {
+   "text": "In palestra Giulia allena un ricercatore che passa le giornate in laboratorio.",
+   "en": "At the gym Giulia trains a researcher who spends his days in the lab.",
+   "ko": "줄리아는 체육관에서 하루 종일 실험실에 있는 연구원을 가르쳐요.",
+   "blank": "ricercatore",
    "src": "made"
   }
  ],
@@ -64277,6 +64789,22 @@
    "src": "made"
   }
  ],
+ "w|sarto": [
+  {
+   "text": "Marco porta le giacche da cuoco da un sarto per accorciare le maniche.",
+   "en": "Marco takes his chef's jackets to a tailor to have the sleeves shortened.",
+   "ko": "마르코는 소매를 줄이려고 조리복을 재단사에게 가져가요.",
+   "blank": "sarto",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha portato i pantaloni della tuta dal sarto per farli stringere.",
+   "en": "Giulia took her tracksuit trousers to the tailor to have them taken in.",
+   "ko": "줄리아는 트레이닝 바지를 줄이려고 재단사에게 가져갔어요.",
+   "blank": "sarto",
+   "src": "made"
+  }
+ ],
  "w|sasso": [
   {
    "text": "Prima di arare, Andrea toglie ogni sasso grosso dal campo.",
@@ -66611,6 +67139,22 @@
    "en": "I bought six apples at the market.",
    "ko": "시장에서 사과 여섯 개를 샀어.",
    "blank": "sei"
+  }
+ ],
+ "w|selezionare": [
+  {
+   "text": "Per la salsa Marco vuole selezionare solo i pomodori più maturi.",
+   "en": "For the sauce Marco wants to pick only the ripest tomatoes.",
+   "ko": "마르코는 소스에 가장 잘 익은 토마토만 골라 쓰고 싶어해요.",
+   "blank": "selezionare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia sa selezionare gli esercizi giusti per ogni persona.",
+   "en": "Giulia knows how to choose the right exercises for each person.",
+   "ko": "줄리아는 사람마다 맞는 운동을 잘 골라요.",
+   "blank": "selezionare",
+   "src": "made"
   }
  ],
  "w|selvaggio": [
@@ -70635,6 +71179,22 @@
    "src": "made"
   }
  ],
+ "w|specializzazione": [
+  {
+   "text": "La specializzazione di Marco è la cucina di pesce.",
+   "en": "Marco's specialty is seafood cooking.",
+   "ko": "마르코의 전문 분야는 생선 요리예요.",
+   "blank": "specializzazione",
+   "src": "made"
+  },
+  {
+   "text": "Giulia sta facendo una specializzazione in ginnastica per anziani.",
+   "en": "Giulia is doing a specialization in exercise for older people.",
+   "ko": "줄리아는 노인 운동 전문 과정을 밟고 있어요.",
+   "blank": "specializzazione",
+   "src": "made"
+  }
+ ],
  "w|specialmente": [
   {
    "text": "Mi piace l'estate, specialmente la sera.",
@@ -70767,6 +71327,22 @@
    "en": "Let's hope for the best.",
    "ko": "잘되기를 바라자.",
    "blank": "Speriamo"
+  }
+ ],
+ "w|sperduto": [
+  {
+   "text": "Un turista sperduto entra nella cucina di Marco cercando il bagno.",
+   "en": "A lost tourist walks into Marco's kitchen looking for the toilet.",
+   "ko": "길 잃은 관광객이 화장실을 찾다가 마르코네 주방으로 들어와요.",
+   "blank": "sperduto",
+   "src": "made"
+  },
+  {
+   "text": "Il primo giorno Giulia si sentiva sperduta tra tutte quelle macchine.",
+   "en": "On the first day Giulia felt lost among all those machines.",
+   "ko": "첫날 줄리아는 그 많은 기구들 사이에서 어리둥절했어요.",
+   "blank": "sperduta",
+   "src": "made"
   }
  ],
  "w|sperimentale": [
@@ -72761,6 +73337,22 @@
    "blank": "studio"
   }
  ],
+ "w|studioso": [
+  {
+   "text": "Uno studioso di storia della cucina ha intervistato Marco sui piatti antichi.",
+   "en": "A scholar of culinary history interviewed Marco about old dishes.",
+   "ko": "요리 역사 연구자가 옛 요리에 대해 마르코를 인터뷰했어요.",
+   "blank": "studioso",
+   "src": "made"
+  },
+  {
+   "text": "Lo studioso del gruppo di Giulia legge sempre un libro sulla cyclette.",
+   "en": "The scholar in Giulia's group always reads a book on the exercise bike.",
+   "ko": "줄리아네 반의 학자는 실내 자전거를 타면서 늘 책을 읽어요.",
+   "blank": "studioso",
+   "src": "made"
+  }
+ ],
  "w|stufa": [
   {
    "text": "D'inverno Marco accende una piccola stufa elettrica perché il riscaldamento non basta.",
@@ -73760,6 +74352,22 @@
    "en": "In the hills Laura's road runs past some tobacco fields.",
    "ko": "언덕에서 라우라가 가는 길은 담배밭 옆을 지나요.",
    "blank": "tabacco",
+   "src": "made"
+  }
+ ],
+ "w|tabella": [
+  {
+   "text": "Sulla parete c'è una tabella con i turni dei cuochi, preparata da Marco.",
+   "en": "On the wall there's a table with the cooks' shifts, made by Marco.",
+   "ko": "벽에는 마르코가 만든 요리사 근무표가 붙어 있어요.",
+   "blank": "tabella",
+   "src": "made"
+  },
+  {
+   "text": "Giulia segna su una tabella i progressi di ogni allievo.",
+   "en": "Giulia records each student's progress on a chart.",
+   "ko": "줄리아는 수강생마다 나아진 점을 표에 적어요.",
+   "blank": "tabella",
    "src": "made"
   }
  ],
@@ -75623,6 +76231,22 @@
    "en": "He has a powerful shot with his right foot.",
    "ko": "오른발 슈팅이 강력해.",
    "blank": "tiro"
+  }
+ ],
+ "w|tirocinio": [
+  {
+   "text": "Una ragazza fa il tirocinio nella cucina di Marco per tre mesi.",
+   "en": "A young woman is doing her internship in Marco's kitchen for three months.",
+   "ko": "한 아가씨가 석 달 동안 마르코네 주방에서 실습을 해요.",
+   "blank": "tirocinio",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ha fatto il tirocinio in una palestra del centro.",
+   "en": "Giulia did her internship at a gym in the city centre.",
+   "ko": "줄리아는 시내 체육관에서 실습을 했어요.",
+   "blank": "tirocinio",
+   "src": "made"
   }
  ],
  "w|titolo": [
@@ -78365,6 +78989,22 @@
    "en": "Shall we go for a short walk?",
    "ko": "잠깐 산책할까?",
    "blank": "Usciamo"
+  }
+ ],
+ "w|uscita": [
+  {
+   "text": "Marco tiene sempre libera l'uscita di sicurezza dietro i fornelli.",
+   "en": "Marco always keeps the emergency exit behind the stoves clear.",
+   "ko": "마르코는 화구 뒤의 비상구를 늘 비워 둬요.",
+   "blank": "uscita",
+   "src": "made"
+  },
+  {
+   "text": "All'uscita dalla lezione Giulia si ferma a bere un caffè.",
+   "en": "On her way out of the class Giulia stops for a coffee.",
+   "ko": "수업을 마치고 나오는 길에 줄리아는 커피를 마시러 들러요.",
+   "blank": "uscita",
+   "src": "made"
   }
  ],
  "w|uso": [
