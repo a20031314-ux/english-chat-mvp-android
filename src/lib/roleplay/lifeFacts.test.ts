@@ -7,6 +7,7 @@ import {
   lifeFactsPrompt,
   mergeLifeFacts,
   readLifeFacts,
+  removeLifeFact,
   type LifeFact,
 } from "./lifeFacts.ts";
 
@@ -58,4 +59,15 @@ test("상한을 넘으면 한 번만 들은 오래된 일부터 빠진다", () =
   assert.ok(kept.some((fact) => fact.text === "Fact 0"));
   assert.ok(kept.some((fact) => fact.text === "The newest fact."));
   assert.equal(kept.some((fact) => fact.text === "Fact 1"), false);
+});
+
+test("지운 사실은 그 언어에서만 빠지고 다음 통화 지시에도 없다", () => {
+  const box = store();
+  const now = Date.now();
+  mergeLifeFacts("es", ["They work at a design company.", "They have two cats."], now, "call-1", box);
+  mergeLifeFacts("th", ["They have two cats."], now, "call-2", box);
+  removeLifeFact("es", "they have two cats", box);
+  assert.deepEqual(readLifeFacts("es", box).map((fact) => fact.text), ["They work at a design company."]);
+  assert.equal(readLifeFacts("th", box).length, 1);
+  assert.doesNotMatch(lifeFactsPrompt(readLifeFacts("es", box), now), /cats/);
 });

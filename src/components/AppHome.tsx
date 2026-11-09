@@ -37,6 +37,7 @@ import { InviteNewsSheet } from "@/components/invite/InviteRewards";
 import { requestGroup } from "@/lib/rooms/openDm";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
 import { AiTutorRows } from "@/components/AiTutorRow";
+import { callTutor } from "@/components/AiTutorProfile";
 import { writeTutorGender } from "@/lib/tutorGender";
 import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
@@ -530,10 +531,7 @@ function AppHomeInner({
                           writeTutorGender(targetLanguage, gender);
                           openTab("chat");
                         }}
-                        onCall={(gender) => {
-                          writeTutorGender(targetLanguage, gender);
-                          openTab("roleplay");
-                        }}
+                        onCall={(gender, kind) => callTutor(targetLanguage, gender, kind)}
                         targetLanguage={targetLanguage}
                       />
                     </>

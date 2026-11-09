@@ -106,6 +106,16 @@ export function mergeLifeFacts(
   return kept;
 }
 
+/** 튜터 프로필 "기억하는 나"에서 사용자가 지운 사실(2026-11-09). 다음 통화 지시에서도 빠진다. */
+export function removeLifeFact(language: string, text: string, store: Store | null = browserStore()): LifeFact[] {
+  if (!store) return [];
+  const all = readAll(store);
+  const kept = (all[language] ?? []).filter((fact) => !sameFact(fact.text, text));
+  all[language] = kept;
+  store.setItem(KEY, JSON.stringify(all));
+  return kept;
+}
+
 function trimFacts(list: LifeFact[]): LifeFact[] {
   const next = [...list];
   const oldestOnce = (fact: LifeFact) => (fact.n < 2 ? fact.at : fact.at + LIFE_KEEP_DAYS * DAY);

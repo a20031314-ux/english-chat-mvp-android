@@ -6,7 +6,7 @@ import { CONVERSATION_SESSIONS_KEY, lastLineFor, normalizeConversationSession, t
 import { getLearningLanguage } from "@/lib/learningLanguages";
 import { useTutorGender } from "@/lib/tutorGender";
 import { tutorChatRows, useFollowedTutors } from "@/lib/tutorFollows";
-import { AiAvatar } from "@/components/AiTutorProfile";
+import { AiAvatar, HomeworkDot, TutorHomework, useTutorDesk, type CallKind } from "@/components/AiTutorProfile";
 
 function savedSessions(): ConversationSession[] {
   try {
@@ -32,7 +32,7 @@ export function AiTutorRows({
   targetLanguage: string;
   canCall: boolean;
   onChat: (gender: TutorGender) => void;
-  onCall: (gender: TutorGender) => void;
+  onCall: (gender: TutorGender, kind: CallKind) => void;
 }) {
   const chosen = useTutorGender(targetLanguage);
   const followed = useFollowedTutors(targetLanguage);
@@ -48,8 +48,9 @@ export function AiTutorRows({
           gender={gender}
           last={lastLineFor(sessions, code, gender, chosen)}
           canCall={canCall}
+          main={gender === chosen}
           onChat={() => onChat(gender)}
-          onCall={() => onCall(gender)}
+          onCall={(kind) => onCall(gender, kind)}
         />
       ))}
     </div>
@@ -59,7 +60,9 @@ export function AiTutorRows({
 /**
  * 대화 목록의 AI 튜터 한 줄(2026-10-20, `hub/drafts/one-list-tabs.md`).
  * 2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합": 사람 탭에 프로필(AiTutorProfile)이 있고, 대화 목록에는 다른 대화처럼
- * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅, 📞는 바로 통화. 통화 기록 목록은 사람 탭 프로필 시트(CallList). 사람 탭이 없을 때만 채팅 ⋮.
+ * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅. 통화 기록 목록은 사람 탭 프로필 시트(CallList). 사람 탭이 없을 때만 채팅 ⋮.
+ * 2026-11-09(시안 "튜터 화면"): 문 둘 📞 자유대화 · 🎓 수업 — 지금 고른 튜터(main)는 이름 붙은 넓은 버튼 + 그 튜터 숙제 줄, 다른 튜터는 아이콘 둘.
+ * 숙제가 남았으면 얼굴 모서리에 점. 숫자(통화 수·고친 말)는 Logbank 몫이라 없다.
  */
 export function AiTutorRow({
   ui,
@@ -67,6 +70,7 @@ export function AiTutorRow({
   gender,
   last,
   canCall,
+  main,
   onChat,
   onCall,
 }: {
@@ -75,44 +79,64 @@ export function AiTutorRow({
   gender: TutorGender;
   /** 그 튜터와의 마지막 말(없으면 "AI 튜터" 칩 글). */
   last: string;
-  /** 이 학습 언어에 통화가 있는지. 없으면 📞를 두지 않는다. */
+  /** 이 학습 언어에 통화가 있는지. 없으면 통화 문을 두지 않는다. */
   canCall: boolean;
+  /** 지금 고른 튜터 — 넓은 문 + 숙제 줄. */
+  main: boolean;
   onChat: () => void;
-  onCall: () => void;
+  onCall: (kind: CallKind) => void;
 }) {
   const partner = chatPartnerForLanguage(targetLanguage, gender);
+  const { homework } = useTutorDesk(targetLanguage, gender);
+  const open = Boolean(homework && !homework.done);
+  const icon = "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10";
   return (
-    <div className="flex items-center gap-2 rounded-xl border border-line bg-surface p-2">
-      <button type="button" onClick={onChat} className="flex min-w-0 flex-1 items-center gap-3 rounded-lg p-1 text-start hover:bg-white/5">
-        <AiAvatar size={44} language={targetLanguage} gender={gender} />
-        <span className="min-w-0">
-          <span className="flex items-center gap-1.5 text-body font-semibold text-ink">
-            <bdi className="truncate">{partner.givenName}</bdi>
-            {partner.flagCountry ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
-            ) : null}
+    <div data-tutor-row={main ? "main" : "other"} className="rounded-xl border border-line bg-surface p-2">
+      <div className="flex items-center gap-2">
+        <button type="button" onClick={onChat} className="flex min-w-0 flex-1 items-center gap-3 rounded-lg p-1 text-start hover:bg-white/5">
+          <span className="relative shrink-0">
+            <AiAvatar size={main ? 48 : 44} language={targetLanguage} gender={gender} />
+            {open ? <HomeworkDot /> : null}
           </span>
-          {last ? (
-            <span className="block truncate text-meta text-slate-400" dir="auto">
-              {last}
+          <span className="min-w-0">
+            <span className="flex items-center gap-1.5 text-body font-semibold text-ink">
+              <bdi className="truncate">{partner.givenName}</bdi>
+              {partner.flagCountry ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-3.5 w-5 shrink-0 object-cover" />
+              ) : null}
             </span>
-          ) : (
-            <span className="block truncate text-meta text-info">{ui.talkAiTutor}</span>
-          )}
-        </span>
-      </button>
-      {canCall ? (
-        <button
-          type="button"
-          onClick={onCall}
-          aria-label={ui.talkAiCall}
-          title={ui.talkAiCall}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10"
-        >
-          <span aria-hidden>📞</span>
+            {last ? (
+              <span className="block truncate text-meta text-slate-400" dir="auto">
+                {last}
+              </span>
+            ) : (
+              <span className="block truncate text-meta text-info">{ui.talkAiTutor}</span>
+            )}
+          </span>
         </button>
+        {canCall && !main ? (
+          <>
+            <button type="button" data-call-choice="talk" onClick={() => onCall("talk")} aria-label={ui.callModeTalk} title={ui.callModeTalk} className={icon}>
+              <span aria-hidden>📞</span>
+            </button>
+            <button type="button" data-call-choice="lesson" onClick={() => onCall("lesson")} aria-label={ui.callModeStudy} title={ui.callModeStudy} className={icon}>
+              <span aria-hidden>🎓</span>
+            </button>
+          </>
+        ) : null}
+      </div>
+      {canCall && main ? (
+        <div className="mt-2 grid grid-cols-2 gap-2 px-1">
+          <button type="button" data-call-choice="talk" onClick={() => onCall("talk")} className="min-h-11 rounded-xl border border-white/20 px-3 text-note font-medium text-ink hover:bg-white/10">
+            📞 {ui.callModeTalk}
+          </button>
+          <button type="button" data-call-choice="lesson" onClick={() => onCall("lesson")} className="min-h-11 rounded-xl bg-platinum px-3 text-note font-semibold text-black hover:bg-platinum-hover">
+            🎓 {ui.callModeStudy}
+          </button>
+        </div>
       ) : null}
+      {main && homework ? <TutorHomework ui={ui} homework={homework} className="mt-2" /> : null}
     </div>
   );
 }

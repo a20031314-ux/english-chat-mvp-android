@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { PROFILE_WIDE_BUTTON, ProfileFrame } from "@/components/ProfileFrame";
+import { useEffect, useState } from "react";
+import { ProfileFrame } from "@/components/ProfileFrame";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { chatPartnerForLanguage, type TutorGender } from "@/lib/chatPartner";
@@ -11,6 +11,12 @@ import { APP_LOCALE_STORAGE_KEY } from "@/lib/copy";
 import { tutorAbout } from "@/lib/tutorAbout";
 import { setTutorFollow, useFollowedTutors } from "@/lib/tutorFollows";
 import { roomCopy } from "@/lib/rooms/copy";
+import { CALL_NOTES_EVENT, readCallNotes, type CallNote } from "@/lib/roleplay/callNotes";
+import { readCalls } from "@/lib/roleplay/callStore";
+import { readHomework, type Homework } from "@/lib/roleplay/replay";
+import { readLifeFacts, removeLifeFact, type LifeFact } from "@/lib/roleplay/lifeFacts";
+import { factAsMine, homeworkOf, lastMemoOf } from "@/lib/roleplay/tutorDesk";
+import { translateUtterance } from "@/lib/translateUtterance";
 
 /** 지금 앱 언어(AppHome이 저장) — 바뀌면 ui가 바뀌어 이 화면도 다시 그려져 새 값을 읽는다. */
 function appLocale(): string {
@@ -100,10 +106,10 @@ export function chatWithTutor(targetLanguage: string, gender: TutorGender | unde
   sendAppIntent("openTab", { tab: "chat" });
 }
 
-type CallKind = "talk" | "lesson" | "twenty" | "teach";
+export type CallKind = "talk" | "lesson" | "twenty" | "teach";
 
 /** 그 튜터와 통화: 튜터 목소리를 그 사람으로 정하고(채팅·통화가 같이 따라감, lib/tutorGender.ts) 그 종류의 통화를 연다. */
-function callTutor(targetLanguage: string, gender: TutorGender | undefined, kind: CallKind = "talk") {
+export function callTutor(targetLanguage: string, gender: TutorGender | undefined, kind: CallKind = "talk") {
   if (gender) writeTutorGender(targetLanguage, gender);
   sendAppIntent("startCall", kind === "lesson" ? { lesson: true } : kind === "talk" ? {} : { game: kind });
 }
@@ -215,7 +221,169 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
   );
 }
 
-/** AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일"). */
+/**
+ * 튜터 화면이 보는 "이 튜터 몫"(사용자 2026-11-09 "logbank와 겹치는 값은 표시하지 말고 저대로 만들어줘", 시안 https://claude.ai/artifact/MUsRq7Fg5e878sd8E9gMte):
+ * 그 튜터가 낸 숙제 · 그 튜터의 마지막 메모 · 기억하는 나(언어마다 하나). 숫자는 Logbank 몫이라 없다. 이 폰 저장만 읽음(lib/roleplay/tutorDesk.ts).
+ */
+export function useTutorDesk(language: string, gender: TutorGender) {
+  const chosen = useTutorGender(language);
+  const [desk, setDesk] = useState<{ homework: Homework | null; memo: CallNote | null; facts: LifeFact[] }>({ homework: null, memo: null, facts: [] });
+  useEffect(() => {
+    const load = () => {
+      try {
+        const notes = readCallNotes(language);
+        const ids = readCalls().map((call) => call.id);
+        setDesk({
+          homework: homeworkOf(readHomework(globalThis.localStorage, language), notes, ids, gender, chosen),
+          memo: lastMemoOf(notes, gender, chosen),
+          facts: [...readLifeFacts(language)].sort((a, b) => b.at - a.at),
+        });
+      } catch {
+        setDesk({ homework: null, memo: null, facts: [] });
+      }
+    };
+    load();
+    window.addEventListener("focus", load);
+    window.addEventListener("storage", load);
+    window.addEventListener(CALL_NOTES_EVENT, load);
+    return () => {
+      window.removeEventListener("focus", load);
+      window.removeEventListener("storage", load);
+      window.removeEventListener(CALL_NOTES_EVENT, load);
+    };
+  }, [language, gender, chosen]);
+  const forget = (text: string) => setDesk((now) => ({ ...now, facts: removeLifeFact(language, text).sort((a, b) => b.at - a.at) }));
+  return { ...desk, forget };
+}
+
+/** 숙제 한 줄(TodayCards HomeworkRow와 같은 이름·같은 문 — openCall replay → 숙제 화면). */
+export function TutorHomework({ ui, homework, className = "" }: { ui: UICopy; homework: Homework; className?: string }) {
+  return (
+    <button
+      type="button"
+      data-tutor-homework={homework.done ? "done" : "open"}
+      onClick={() => sendAppIntent("openCall", { id: homework.callId, replay: true })}
+      className={`flex min-h-11 w-full items-center gap-2 rounded-xl border px-3 py-2 text-start ${
+        homework.done ? "border-good/30 bg-good/10" : "border-warn/30 bg-warn/10 hover:bg-warn/15"
+      } ${className}`}
+    >
+      <span className={`text-body font-semibold ${homework.done ? "text-good" : "text-warn"}`}>{ui.homeworkTag}</span>
+      <span className="min-w-0 flex-1 truncate text-note text-slate-300">
+        {ui.quizTag} · {ui.homeworkTalk}
+      </span>
+      <span aria-hidden className={`text-note ${homework.done ? "text-good" : "text-warn"} ${homework.done ? "" : "rtl:rotate-180"}`}>
+        {homework.done ? "✓" : "›"}
+      </span>
+    </button>
+  );
+}
+
+/** 숙제가 남은 튜터 얼굴 모서리 점. */
+export function HomeworkDot({ size = 12 }: { size?: number }) {
+  return <span aria-hidden style={{ width: size, height: size }} className="absolute -end-0.5 -top-0.5 rounded-full border-2 border-surface bg-warn" />;
+}
+
+/** 기억하는 나는 영어 한 문장씩 저장된다(lifeFacts) — 앱 언어로 옮겨 이 폰에 둔다(tutorLifeShown.v1, 앱 언어를 바꾸면 그 언어로 다시). */
+const SHOWN_KEY = "tutorLifeShown.v1";
+function readShown(locale: string): Record<string, string> {
+  try {
+    const all = JSON.parse(globalThis.localStorage?.getItem(SHOWN_KEY) ?? "{}") as Record<string, Record<string, string>>;
+    return all[locale] ?? {};
+  } catch {
+    return {};
+  }
+}
+function keepShown(locale: string, text: string, shown: string) {
+  try {
+    const all = JSON.parse(globalThis.localStorage?.getItem(SHOWN_KEY) ?? "{}") as Record<string, Record<string, string>>;
+    const mine = { ...(all[locale] ?? {}), [text]: shown };
+    const keys = Object.keys(mine);
+    for (const key of keys.slice(0, Math.max(0, keys.length - 60))) delete mine[key];
+    globalThis.localStorage?.setItem(SHOWN_KEY, JSON.stringify({ [locale]: mine }));
+  } catch {
+    /* 이번 화면만 */
+  }
+}
+function useShownFacts(facts: readonly LifeFact[], locale: string): Record<string, string> {
+  // 새로 받은 것만 상태에, 받아 둔 것은 그릴 때 이 폰에서 읽는다.
+  const [fresh, setFresh] = useState<Record<string, string>>({});
+  useEffect(() => {
+    if (locale === "en") return;
+    const have = readShown(locale);
+    let live = true;
+    for (const fact of facts) {
+      if (have[fact.text]) continue;
+      translateUtterance({ text: factAsMine(fact.text), locale, targetLanguage: "en" })
+        .then((out) => {
+          if (!out || !live) return;
+          keepShown(locale, fact.text, out);
+          setFresh((now) => ({ ...now, [`${locale}\u0000${fact.text}`]: out }));
+        })
+        .catch(() => undefined);
+    }
+    return () => {
+      live = false;
+    };
+  }, [facts, locale]);
+  if (locale === "en") return {};
+  const shown = { ...readShown(locale) };
+  for (const [key, value] of Object.entries(fresh)) {
+    const [from, text] = key.split("\u0000");
+    if (from === locale && text) shown[text] = value;
+  }
+  return shown;
+}
+
+function shortDay(at: number, locale: string): string {
+  try {
+    return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" }).format(at);
+  } catch {
+    return new Date(at).toLocaleDateString();
+  }
+}
+
+/** 자유대화 · 수업 문(넓게) + 게임 ›(누르면 스무고개 · 가르치기) — 시안 "문 둘", 게임은 2026-11-08 결정대로 펼침. */
+function CallDoors({ ui, onPick }: { ui: UICopy; onPick: (kind: CallKind) => void }) {
+  const [games, setGames] = useState(false);
+  return (
+    <div data-call-doors className="mt-3 flex flex-col gap-2">
+      <div className="grid grid-cols-2 gap-2">
+        <button type="button" data-call-choice="talk" onClick={() => onPick("talk")} className="min-h-12 rounded-xl border border-white/20 px-3 text-body font-medium text-ink hover:bg-white/10">
+          📞 {ui.callModeTalk}
+        </button>
+        <button type="button" data-call-choice="lesson" onClick={() => onPick("lesson")} className="min-h-12 rounded-xl bg-platinum px-3 text-body font-semibold text-black hover:bg-platinum-hover">
+          🎓 {ui.callModeStudy}
+        </button>
+      </div>
+      <div className="flex flex-wrap justify-end gap-2">
+        <button
+          type="button"
+          data-call-choice="game"
+          aria-expanded={games}
+          onClick={() => setGames((open) => !open)}
+          className={`rounded-full border px-3 py-1 text-meta text-slate-100 ${games ? "border-white/60 bg-white/15" : "border-white/20"}`}
+        >
+          {ui.callModeGame} {games ? "▾" : "›"}
+        </button>
+        {games ? (
+          <>
+            <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100 hover:bg-white/10">
+              {ui.gameTwenty}
+            </button>
+            <button type="button" data-call-choice="teach" onClick={() => onPick("teach")} className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100 hover:bg-white/10">
+              {ui.gameTeach} <span className="ms-1 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span>
+            </button>
+          </>
+        ) : null}
+      </div>
+    </div>
+  );
+}
+
+/**
+ * AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일").
+ * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업(+ 게임 ›) → 숙제 → 튜터 메모 → 기억하는 나(× 지우기) → 아래 팔로우 · 메시지 · 통화 기록.
+ */
 export function AiTutorSheet({
   ui,
   targetLanguage,
@@ -233,14 +401,17 @@ export function AiTutorSheet({
   const chosen = useTutorGender(targetLanguage);
   const who = gender ?? chosen;
   const name = chatPartnerForLanguage(targetLanguage, who).givenName;
+  const locale = appLocale();
   // 사람 프로필과 같은 버튼 이름(rooms/copy — 14개 언어 이미 있음).
-  const t = roomCopy(appLocale());
+  const t = roomCopy(locale);
   const following = useFollowedTutors(targetLanguage).includes(who);
-  const [choosing, setChoosing] = useState(false);
+  const desk = useTutorDesk(targetLanguage, who);
+  const shown = useShownFacts(desk.facts, locale);
   const go = (action: () => void) => () => {
     onClose();
     action();
   };
+  const small = "min-h-11 rounded-xl border border-white/20 px-2 text-note text-slate-100 hover:bg-white/5";
   return (
     <ProfileFrame
       label={name}
@@ -255,31 +426,62 @@ export function AiTutorSheet({
         </p>
       }
     >
-      {/* 사람 프로필처럼: 팔로우(대화 탭에 그 튜터 줄) · 💬 메시지(그 튜터와의 AI 대화) — 차단·신고는 기본 튜터라 없음. */}
-      <div className="mt-3 flex gap-2">
+      {canCall ? <CallDoors ui={ui} onPick={(kind) => go(() => callTutor(targetLanguage, who, kind))()} /> : null}
+      {desk.homework ? (
+        <div className="mt-3" onClickCapture={() => onClose()}>
+          <TutorHomework ui={ui} homework={desk.homework} />
+        </div>
+      ) : null}
+      {desk.memo?.summary ? (
+        <div data-tutor-memo className="mt-3 rounded-xl bg-surface-sunk p-3">
+          <p className="text-caption text-slate-400">{shortDay(desk.memo.at, locale)}</p>
+          <p dir="auto" className="mt-1 whitespace-pre-line text-body leading-relaxed text-slate-200">
+            {desk.memo.summary}
+          </p>
+        </div>
+      ) : null}
+      {desk.facts.length ? (
+        <div data-tutor-remembers className="mt-3">
+          <p className="text-caption text-slate-400">{ui.tutorRemembers}</p>
+          <ul className="mt-2 flex flex-wrap gap-1.5">
+            {desk.facts.map((fact) => (
+              <li key={fact.text} className="inline-flex max-w-full items-center gap-0.5 rounded-full border border-line py-0.5 ps-3 pe-0.5 text-caption text-slate-200">
+                <span dir="auto" className="min-w-0 truncate">
+                  {shown[fact.text] ?? factAsMine(fact.text)}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => desk.forget(fact.text)}
+                  aria-label={ui.notebookDelete}
+                  title={ui.notebookDelete}
+                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-white/10 hover:text-slate-200"
+                >
+                  ×
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      {/* 사람 프로필처럼: 팔로우(대화 탭에 그 튜터 줄) · 메시지(그 튜터와의 AI 대화) · 통화 기록 — 차단·신고는 기본 튜터라 없음. */}
+      <div className="mt-4 grid grid-cols-3 gap-2 border-t border-white/10 pt-3">
         <button
           type="button"
           aria-pressed={following}
           onClick={() => setTutorFollow(targetLanguage, who, !following)}
-          className={`flex-1 rounded-xl px-3 py-2 text-sm font-medium ${following ? "border border-white/25 text-slate-100" : "bg-violet-500 text-white"}`}
+          className={following ? small : "min-h-11 rounded-xl bg-violet-500 px-2 text-note font-medium text-white"}
         >
           {following ? `✓ ${t.following}` : `+ ${t.follow}`}
         </button>
-      </div>
-      <button type="button" onClick={go(() => chatWithTutor(targetLanguage, who))} className={PROFILE_WIDE_BUTTON}>
-        💬 {t.message}
-      </button>
-      {canCall ? (
-        <>
-          <button type="button" aria-expanded={choosing} onClick={() => setChoosing((now) => !now)} className={PROFILE_WIDE_BUTTON}>
-            📞 {ui.homeTabCall} {choosing ? "▾" : ""}
-          </button>
-          {choosing ? <CallChoices ui={ui} wide onPick={(kind) => go(() => callTutor(targetLanguage, gender, kind))()} /> : null}
-          <button type="button" onClick={go(() => sendAppIntent("openCall", {}))} className={PROFILE_WIDE_BUTTON}>
+        <button type="button" onClick={go(() => chatWithTutor(targetLanguage, who))} className={small}>
+          💬 {t.message}
+        </button>
+        {canCall ? (
+          <button type="button" onClick={go(() => sendAppIntent("openCall", {}))} className={small}>
             {ui.callRecordsTitle}
           </button>
-        </>
-      ) : null}
+        ) : null}
+      </div>
     </ProfileFrame>
   );
 }
