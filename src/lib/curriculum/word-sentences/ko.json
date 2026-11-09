@@ -307,6 +307,22 @@
    "blank": "가만히"
   }
  ],
+ "w|가망": [
+  {
+   "text": "변호인은 항소해도 이길 가망이 거의 없다고 솔직하게 말했어요.",
+   "en": "The defense lawyer said honestly that there was almost no hope of winning even on appeal.",
+   "ko": "변호인은 항소해도 이길 가망이 거의 없다고 솔직하게 말했어요.",
+   "blank": "가망이",
+   "src": "made"
+  },
+  {
+   "text": "잃어버린 고양이를 찾을 가망이 없어 보였는데 어느 날 가게 앞에 나타났어요.",
+   "en": "There seemed to be no hope of finding the lost cat, but one day it showed up in front of the shop.",
+   "ko": "잃어버린 고양이를 찾을 가망이 없어 보였는데 어느 날 가게 앞에 나타났어요.",
+   "blank": "가망이",
+   "src": "made"
+  }
+ ],
  "w|가뭄": [
   {
    "text": "긴 가뭄에 논이 갈라졌어.",
@@ -3531,6 +3547,22 @@
    "blank": "고용할"
   }
  ],
+ "w|고의": [
+  {
+   "text": "검사는 피고인이 고의로 불을 냈다고 주장했어요.",
+   "en": "The prosecutor claimed that the defendant started the fire on purpose.",
+   "ko": "검사는 피고인이 고의로 불을 냈다고 주장했어요.",
+   "blank": "고의로",
+   "src": "made"
+  },
+  {
+   "text": "음료수 병을 깨뜨린 손님은 고의가 아니었다며 값을 물어 줬어요.",
+   "en": "The customer who broke the drink bottle said it wasn't on purpose and paid for it.",
+   "ko": "음료수 병을 깨뜨린 손님은 고의가 아니었다며 값을 물어 줬어요.",
+   "blank": "고의가",
+   "src": "made"
+  }
+ ],
  "w|고작": [
   {
    "text": "고작 이것뿐이야?",
@@ -3889,6 +3921,22 @@
    "en": "The dog attacked a stranger.",
    "ko": "개가 낯선 사람을 물어뜯었어.",
    "blank": "공격했어"
+  }
+ ],
+ "w|공공": [
+  {
+   "text": "피고인은 공공 기관에서 오래 일한 직원이었어요.",
+   "en": "The defendant was an employee who had worked at a public institution for a long time.",
+   "ko": "피고인은 공공 기관에서 오래 일한 직원이었어요.",
+   "blank": "공공",
+   "src": "made"
+  },
+  {
+   "text": "가게 앞 벤치는 공공 시설이라서 누구나 앉을 수 있어요.",
+   "en": "The bench in front of the shop is a public facility, so anyone can sit there.",
+   "ko": "가게 앞 벤치는 공공 시설이라서 누구나 앉을 수 있어요.",
+   "blank": "공공",
+   "src": "made"
   }
  ],
  "w|공급": [
@@ -5217,6 +5265,22 @@
    "blank": "군대"
   }
  ],
+ "w|군사": [
+  {
+   "text": "오늘 재판은 군사 기밀 유출 사건이라 비공개로 진행됐어요.",
+   "en": "Today's trial was about a leak of military secrets, so it was held behind closed doors.",
+   "ko": "오늘 재판은 군사 기밀 유출 사건이라 비공개로 진행됐어요.",
+   "blank": "군사",
+   "src": "made"
+  },
+  {
+   "text": "군사 훈련을 마친 군인들이 가게에 들러 음료수를 잔뜩 샀어요.",
+   "en": "Soldiers who had finished military training stopped by the shop and bought a lot of drinks.",
+   "ko": "군사 훈련을 마친 군인들이 가게에 들러 음료수를 잔뜩 샀어요.",
+   "blank": "군사",
+   "src": "made"
+  }
+ ],
  "w|군인": [
   {
    "text": "휴가 나온 군인이 가족을 만났어.",
@@ -5313,6 +5377,22 @@
    "en": "I asked right away about what I was curious about.",
    "ko": "궁금한 걸 바로 물어봤어.",
    "blank": "궁금한"
+  }
+ ],
+ "w|궁전": [
+  {
+   "text": "재원은 처음 그 법원 건물을 보고 궁전처럼 웅장하다고 생각했어요.",
+   "en": "When Jaewon first saw the courthouse, he thought it was as grand as a palace.",
+   "ko": "재원은 처음 그 법원 건물을 보고 궁전처럼 웅장하다고 생각했어요.",
+   "blank": "궁전처럼",
+   "src": "made"
+  },
+  {
+   "text": "꼬마 손님 눈에는 과자로 가득한 가게가 궁전 같아 보였대요.",
+   "en": "To the little customer, the shop full of snacks looked like a palace.",
+   "ko": "꼬마 손님 눈에는 과자로 가득한 가게가 궁전 같아 보였대요.",
+   "blank": "궁전",
+   "src": "made"
   }
  ],
  "w|권": [
@@ -6349,6 +6429,22 @@
    "en": "Tell me how things are on your end.",
    "ko": "그쪽 상황 알려 줘.",
    "blank": "그쪽"
+  }
+ ],
+ "w|극도": [
+  {
+   "text": "판결을 기다리는 동안 재원은 극도로 긴장해서 손이 떨렸어요.",
+   "en": "While waiting for the verdict, Jaewon was so extremely nervous that his hands shook.",
+   "ko": "판결을 기다리는 동안 재원은 극도로 긴장해서 손이 떨렸어요.",
+   "blank": "극도로",
+   "src": "made"
+  },
+  {
+   "text": "정전이 되자 소희는 극도의 불안감에 냉장고만 바라봤어요.",
+   "en": "When the power went out, Sohee stared at the fridge in extreme anxiety.",
+   "ko": "정전이 되자 소희는 극도의 불안감에 냉장고만 바라봤어요.",
+   "blank": "극도의",
+   "src": "made"
   }
  ],
  "w|극장": [
@@ -8424,6 +8520,22 @@
    "en": "I tried to catch the butterfly and missed.",
    "ko": "나비를 잡으려다 놓쳤어.",
    "blank": "나비를"
+  }
+ ],
+ "w|나빠지다": [
+  {
+   "text": "재판이 길어지면서 증인의 건강이 점점 나빠졌어요.",
+   "en": "As the trial dragged on, the witness's health gradually got worse.",
+   "ko": "재판이 길어지면서 증인의 건강이 점점 나빠졌어요.",
+   "blank": "나빠졌어요",
+   "src": "made"
+  },
+  {
+   "text": "근처에 큰 편의점이 생기고 나서 장사가 조금씩 나빠지고 있어요.",
+   "en": "Since a big convenience store opened nearby, business has been getting a little worse.",
+   "ko": "근처에 큰 편의점이 생기고 나서 장사가 조금씩 나빠지고 있어요.",
+   "blank": "나빠지고",
+   "src": "made"
   }
  ],
  "w|나쁘다": [
@@ -10620,6 +10732,22 @@
    "en": "Please change it to another color.",
    "ko": "다른 색으로 바꿔 줘.",
    "blank": "다른"
+  }
+ ],
+ "w|다름없다": [
+  {
+   "text": "재원에게 그 증언은 사실상 자백이나 다름없었어요.",
+   "en": "To Jaewon, that testimony was practically a confession.",
+   "ko": "재원에게 그 증언은 사실상 자백이나 다름없었어요.",
+   "blank": "다름없었어요",
+   "src": "made"
+  },
+  {
+   "text": "십 년 넘게 온 단골손님은 소희에게 가족이나 다름없어요.",
+   "en": "A regular who has come for over ten years is like family to Sohee.",
+   "ko": "십 년 넘게 온 단골손님은 소희에게 가족이나 다름없어요.",
+   "blank": "다름없어요",
+   "src": "made"
   }
  ],
  "w|다리": [
@@ -13441,6 +13569,22 @@
    "en": "Where did you put the keys?",
    "ko": "열쇠 어디 뒀어?",
    "blank": "뒀어"
+  }
+ ],
+ "w|두들기다": [
+  {
+   "text": "판사가 의사봉을 두들기자 웅성거리던 법정이 조용해졌어요.",
+   "en": "When the judge banged the gavel, the murmuring courtroom fell silent.",
+   "ko": "판사가 의사봉을 두들기자 웅성거리던 법정이 조용해졌어요.",
+   "blank": "두들기자",
+   "src": "made"
+  },
+  {
+   "text": "문 닫을 시간에 누군가 가게 셔터를 쾅쾅 두들겼어요.",
+   "en": "At closing time, someone pounded on the shop's shutter.",
+   "ko": "문 닫을 시간에 누군가 가게 셔터를 쾅쾅 두들겼어요.",
+   "blank": "두들겼어요",
+   "src": "made"
   }
  ],
  "w|두려움": [
@@ -17477,6 +17621,22 @@
    "src": "made"
   }
  ],
+ "w|묘지": [
+  {
+   "text": "사건은 시 외곽에 있는 오래된 묘지 근처에서 일어났어요.",
+   "en": "The incident happened near an old cemetery on the edge of the city.",
+   "ko": "사건은 시 외곽에 있는 오래된 묘지 근처에서 일어났어요.",
+   "blank": "묘지",
+   "src": "made"
+  },
+  {
+   "text": "가게 뒷길로 쭉 올라가면 조용한 묘지가 하나 나와요.",
+   "en": "If you go straight up the back road behind the shop, you'll come to a quiet cemetery.",
+   "ko": "가게 뒷길로 쭉 올라가면 조용한 묘지가 하나 나와요.",
+   "blank": "묘지가",
+   "src": "made"
+  }
+ ],
  "w|무": [
   {
    "text": "무를 국에 넣으면 시원해.",
@@ -18023,6 +18183,22 @@
    "blank": "문제"
   }
  ],
+ "w|문제없다": [
+  {
+   "text": "재원은 서류를 다시 확인하고 이 정도면 문제없다고 말했어요.",
+   "en": "Jaewon checked the documents again and said this would be fine.",
+   "ko": "재원은 서류를 다시 확인하고 이 정도면 문제없다고 말했어요.",
+   "blank": "문제없다고",
+   "src": "made"
+  },
+  {
+   "text": "카드 단말기가 잠깐 멈췄지만 다시 켜니까 문제없었어요.",
+   "en": "The card reader froze for a moment, but it was fine after turning it back on.",
+   "ko": "카드 단말기가 잠깐 멈췄지만 다시 켜니까 문제없었어요.",
+   "blank": "문제없었어요",
+   "src": "made"
+  }
+ ],
  "w|문학": [
   {
    "text": "한국 문학을 좋아해.",
@@ -18193,6 +18369,22 @@
    "en": "Of course you can bring them.",
    "ko": "물론 데려가도 돼.",
    "blank": "물론"
+  }
+ ],
+ "w|물리": [
+  {
+   "text": "재원은 사고 원인을 이해하려고 고등학교 물리 교과서를 다시 펼쳤어요.",
+   "en": "Jaewon opened his high school physics textbook again to understand the cause of the accident.",
+   "ko": "재원은 사고 원인을 이해하려고 고등학교 물리 교과서를 다시 펼쳤어요.",
+   "blank": "물리",
+   "src": "made"
+  },
+  {
+   "text": "중학생 손님이 물리 숙제를 하다가 소희에게 질문을 했어요.",
+   "en": "A middle-school customer asked Sohee a question while doing physics homework.",
+   "ko": "중학생 손님이 물리 숙제를 하다가 소희에게 질문을 했어요.",
+   "blank": "물리",
+   "src": "made"
   }
  ],
  "w|물리다": [
@@ -19941,6 +20133,22 @@
    "ko": "승규는 우리를 배신하고 상대편의 스파이 노릇을 하고 있었다.",
    "blank": "배신하고",
    "src": "krdict"
+  }
+ ],
+ "w|배심원": [
+  {
+   "text": "변호인은 배심원들에게 사건의 다른 측면도 봐 달라고 호소했어요.",
+   "en": "The defense lawyer appealed to the jurors to look at the other side of the case too.",
+   "ko": "변호인은 배심원들에게 사건의 다른 측면도 봐 달라고 호소했어요.",
+   "blank": "배심원들에게",
+   "src": "made"
+  },
+  {
+   "text": "소희는 배심원으로 뽑혔다는 편지를 받고 하루 가게 문을 닫았어요.",
+   "en": "Sohee got a letter saying she'd been chosen as a juror and closed the shop for a day.",
+   "ko": "소희는 배심원으로 뽑혔다는 편지를 받고 하루 가게 문을 닫았어요.",
+   "blank": "배심원으로",
+   "src": "made"
   }
  ],
  "w|배우": [
@@ -22814,6 +23022,22 @@
    "blank": "비워"
   }
  ],
+ "w|비웃다": [
+  {
+   "text": "피고인은 검사의 질문을 비웃듯 고개를 저었어요.",
+   "en": "The defendant shook his head as if mocking the prosecutor's question.",
+   "ko": "피고인은 검사의 질문을 비웃듯 고개를 저었어요.",
+   "blank": "비웃듯",
+   "src": "made"
+  },
+  {
+   "text": "처음 가게를 차린다고 했을 때 친구들은 소희를 비웃었어요.",
+   "en": "When Sohee first said she'd open a shop, her friends laughed at her.",
+   "ko": "처음 가게를 차린다고 했을 때 친구들은 소희를 비웃었어요.",
+   "blank": "비웃었어요",
+   "src": "made"
+  }
+ ],
  "w|비율": [
   {
    "text": "설탕 비율을 줄였어.",
@@ -24514,6 +24738,22 @@
    "blank": "상관없는"
   }
  ],
+ "w|상관없이": [
+  {
+   "text": "재원은 결과와 상관없이 끝까지 최선을 다하겠다고 했어요.",
+   "en": "Jaewon said he would do his best to the end regardless of the outcome.",
+   "ko": "재원은 결과와 상관없이 끝까지 최선을 다하겠다고 했어요.",
+   "blank": "상관없이",
+   "src": "made"
+  },
+  {
+   "text": "소희네 가게는 날씨와 상관없이 아침 일찍 문을 열어요.",
+   "en": "Sohee's shop opens early in the morning regardless of the weather.",
+   "ko": "소희네 가게는 날씨와 상관없이 아침 일찍 문을 열어요.",
+   "blank": "상관없이",
+   "src": "made"
+  }
+ ],
  "w|상관하다": [
   {
    "text": "그건 네가 상관할 일이 아니야.",
@@ -25136,6 +25376,22 @@
    "en": "It is work that saves lives.",
    "ko": "생명을 구하는 일이야.",
    "blank": "생명을"
+  }
+ ],
+ "w|생물학": [
+  {
+   "text": "법정에 나온 감정인은 생물학을 전공한 대학 교수였어요.",
+   "en": "The expert witness who appeared in court was a university professor who had majored in biology.",
+   "ko": "법정에 나온 감정인은 생물학을 전공한 대학 교수였어요.",
+   "blank": "생물학을",
+   "src": "made"
+  },
+  {
+   "text": "생물학을 공부하는 단골 대학생은 늘 바나나 우유를 사 가요.",
+   "en": "The regular college student who studies biology always buys banana milk.",
+   "ko": "생물학을 공부하는 단골 대학생은 늘 바나나 우유를 사 가요.",
+   "blank": "생물학을",
+   "src": "made"
   }
  ],
  "w|생산": [
@@ -26718,6 +26974,22 @@
    "src": "krdict"
   }
  ],
+ "w|소유하다": [
+  {
+   "text": "그 건물을 실제로 소유한 사람이 누구인지가 이번 재판의 쟁점이었어요.",
+   "en": "Who actually owned the building was the key issue in this trial.",
+   "ko": "그 건물을 실제로 소유한 사람이 누구인지가 이번 재판의 쟁점이었어요.",
+   "blank": "소유한",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이 건물을 소유하고 있는 집주인과 월세 문제로 이야기했어요.",
+   "en": "Sohee talked about the rent with the landlord who owns this building.",
+   "ko": "소희는 이 건물을 소유하고 있는 집주인과 월세 문제로 이야기했어요.",
+   "blank": "소유하고",
+   "src": "made"
+  }
+ ],
  "w|소주": [
   {
    "text": "소주는 천천히 마셔.",
@@ -26984,6 +27256,22 @@
    "en": "A lot of customers just came in.",
    "ko": "손님이 많이 들어오셨네.",
    "blank": "손님이"
+  }
+ ],
+ "w|손대다": [
+  {
+   "text": "증거물에는 아무도 손대지 말라는 지시가 내려왔어요.",
+   "en": "An order came down that no one was to touch the evidence.",
+   "ko": "증거물에는 아무도 손대지 말라는 지시가 내려왔어요.",
+   "blank": "손대지",
+   "src": "made"
+  },
+  {
+   "text": "소희는 아이들이 손대지 못하게 비싼 초콜릿을 높이 올려 두었어요.",
+   "en": "Sohee put the expensive chocolate up high so the kids couldn't touch it.",
+   "ko": "소희는 아이들이 손대지 못하게 비싼 초콜릿을 높이 올려 두었어요.",
+   "blank": "손대지",
+   "src": "made"
   }
  ],
  "w|손들다": [
@@ -32432,6 +32720,22 @@
    "en": "I'm wondering what I should do.",
    "ko": "어찌 해야 할지 고민 중이야.",
    "blank": "어찌"
+  }
+ ],
+ "w|어찌나": [
+  {
+   "text": "법정이 어찌나 조용한지 펜 떨어지는 소리까지 들렸어요.",
+   "en": "The courtroom was so quiet you could even hear a pen drop.",
+   "ko": "법정이 어찌나 조용한지 펜 떨어지는 소리까지 들렸어요.",
+   "blank": "어찌나",
+   "src": "made"
+  },
+  {
+   "text": "오늘은 어찌나 바빴는지 소희는 물 한 잔 마실 틈도 없었어요.",
+   "en": "Today was so busy that Sohee didn't even have time to drink a glass of water.",
+   "ko": "오늘은 어찌나 바빴는지 소희는 물 한 잔 마실 틈도 없었어요.",
+   "blank": "어찌나",
+   "src": "made"
   }
  ],
  "w|어차피": [
@@ -40104,6 +40408,22 @@
    "blank": "잠자다"
   }
  ],
+ "w|잠재": [
+  {
+   "text": "판사는 그 제품의 잠재 위험을 가볍게 볼 수 없다고 했어요.",
+   "en": "The judge said the product's potential risks could not be taken lightly.",
+   "ko": "판사는 그 제품의 잠재 위험을 가볍게 볼 수 없다고 했어요.",
+   "blank": "잠재",
+   "src": "made"
+  },
+  {
+   "text": "소희는 근처 새 아파트 주민들을 잠재 고객으로 보고 있어요.",
+   "en": "Sohee sees the residents of the new apartments nearby as potential customers.",
+   "ko": "소희는 근처 새 아파트 주민들을 잠재 고객으로 보고 있어요.",
+   "blank": "잠재",
+   "src": "made"
+  }
+ ],
  "w|잡다": [
   {
    "text": "손 꼭 잡아요.",
@@ -41376,6 +41696,22 @@
    "blank": "전세"
   }
  ],
+ "w|전술": [
+  {
+   "text": "상대 변호사는 일부러 시간을 끄는 전술을 썼어요.",
+   "en": "The opposing lawyer used a tactic of deliberately dragging things out.",
+   "ko": "상대 변호사는 일부러 시간을 끄는 전술을 썼어요.",
+   "blank": "전술을",
+   "src": "made"
+  },
+  {
+   "text": "소희의 판매 전술은 계산대 옆에 작은 간식을 두는 거예요.",
+   "en": "Sohee's sales tactic is to put small snacks next to the register.",
+   "ko": "소희의 판매 전술은 계산대 옆에 작은 간식을 두는 거예요.",
+   "blank": "전술은",
+   "src": "made"
+  }
+ ],
  "w|전자": [
   {
    "text": "요즘은 종이책보다 전자 도서를 찾는 사람이 많아요.",
@@ -42044,6 +42380,22 @@
    "en": "You really didn't go there?",
    "ko": "정말로 거기 안 갔어?",
    "blank": "정말로"
+  }
+ ],
+ "w|정면": [
+  {
+   "text": "재원은 증인을 정면으로 바라보며 질문을 던졌어요.",
+   "en": "Jaewon looked the witness straight in the face as he asked his question.",
+   "ko": "재원은 증인을 정면으로 바라보며 질문을 던졌어요.",
+   "blank": "정면으로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 가게 정면에 새 간판을 달았어요.",
+   "en": "Sohee put up a new sign on the front of the shop.",
+   "ko": "소희는 가게 정면에 새 간판을 달았어요.",
+   "blank": "정면에",
+   "src": "made"
   }
  ],
  "w|정보": [
@@ -44322,6 +44674,22 @@
    "blank": "지방이"
   }
  ],
+ "w|지배하다": [
+  {
+   "text": "선고를 앞둔 법정 안은 무거운 긴장감이 지배하고 있었어요.",
+   "en": "Heavy tension filled the courtroom before the sentencing.",
+   "ko": "선고를 앞둔 법정 안은 무거운 긴장감이 지배하고 있었어요.",
+   "blank": "지배하고",
+   "src": "made"
+  },
+  {
+   "text": "대형 마트가 동네 상권을 지배하면서 작은 가게들이 힘들어졌어요.",
+   "en": "As big supermarkets came to dominate the neighborhood market, small shops started struggling.",
+   "ko": "대형 마트가 동네 상권을 지배하면서 작은 가게들이 힘들어졌어요.",
+   "blank": "지배하면서",
+   "src": "made"
+  }
+ ],
  "w|지불하다": [
   {
    "text": "카드로 지불해도 되나요?",
@@ -44642,6 +45010,22 @@
    "en": "When the accident happened, the engineer took charge of evacuating the passengers.",
    "ko": "사고가 나자 기관사는 승객 대피 지휘를 맡았어요.",
    "blank": "지휘를",
+   "src": "made"
+  }
+ ],
+ "w|직감": [
+  {
+   "text": "재원은 증인이 뭔가 숨기고 있다는 직감이 들었어요.",
+   "en": "Jaewon had a gut feeling that the witness was hiding something.",
+   "ko": "재원은 증인이 뭔가 숨기고 있다는 직감이 들었어요.",
+   "blank": "직감이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 직감으로 그 손님이 계산을 안 하고 나갈 거라는 걸 알았어요.",
+   "en": "Sohee knew by instinct that the customer would leave without paying.",
+   "ko": "소희는 직감으로 그 손님이 계산을 안 하고 나갈 거라는 걸 알았어요.",
+   "blank": "직감으로",
    "src": "made"
   }
  ],
@@ -45219,6 +45603,22 @@
    "blank": "집중하다"
   }
  ],
+ "w|집착하다": [
+  {
+   "text": "상대 변호사는 사소한 날짜 하나에 계속 집착했어요.",
+   "en": "The opposing lawyer kept fixating on one small date.",
+   "ko": "상대 변호사는 사소한 날짜 하나에 계속 집착했어요.",
+   "blank": "집착했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희네 가게 단골 할아버지는 늘 같은 자리의 신문에만 집착하세요.",
+   "en": "The old man who's a regular at Sohee's shop always insists on the newspaper from the same spot.",
+   "ko": "소희네 가게 단골 할아버지는 늘 같은 자리의 신문에만 집착하세요.",
+   "blank": "집착하세요",
+   "src": "made"
+  }
+ ],
  "w|짓다": [
   {
    "text": "우리 가족이 집을 지었어.",
@@ -45715,6 +46115,22 @@
    "en": "The difference is bigger than I thought.",
    "ko": "차이가 생각보다 커.",
    "blank": "차이가"
+  }
+ ],
+ "w|차이점": [
+  {
+   "text": "재원은 두 증인의 진술에서 미묘한 차이점을 찾아냈어요.",
+   "en": "Jaewon found a subtle difference between the two witnesses' statements.",
+   "ko": "재원은 두 증인의 진술에서 미묘한 차이점을 찾아냈어요.",
+   "blank": "차이점을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 두 라면의 차이점을 손님에게 친절하게 설명해 줬어요.",
+   "en": "Sohee kindly explained the difference between the two kinds of ramen to a customer.",
+   "ko": "소희는 두 라면의 차이점을 손님에게 친절하게 설명해 줬어요.",
+   "blank": "차이점을",
+   "src": "made"
   }
  ],
  "w|차츰": [
@@ -46411,6 +46827,22 @@
    "blank": "철을"
   }
  ],
+ "w|철저히": [
+  {
+   "text": "재원은 밤새 증인의 진술을 철저히 검토했어요.",
+   "en": "Jaewon went through the witness's statement thoroughly all night.",
+   "ko": "재원은 밤새 증인의 진술을 철저히 검토했어요.",
+   "blank": "철저히",
+   "src": "made"
+  },
+  {
+   "text": "소희는 아침마다 우유의 유통기한을 철저히 확인해요.",
+   "en": "Every morning Sohee carefully checks the expiration dates on the milk.",
+   "ko": "소희는 아침마다 우유의 유통기한을 철저히 확인해요.",
+   "blank": "철저히",
+   "src": "made"
+  }
+ ],
  "w|철학": [
   {
    "text": "삶의 철학을 나누고 싶어.",
@@ -46619,6 +47051,22 @@
    "en": "They acted like they didn't know.",
    "ko": "모르는 체하더라.",
    "blank": "체하더라"
+  }
+ ],
+ "w|체계": [
+  {
+   "text": "법원의 사건 기록 체계가 바뀌어서 직원들이 한동안 헷갈려 했어요.",
+   "en": "The court's case record system changed, so the staff were confused for a while.",
+   "ko": "법원의 사건 기록 체계가 바뀌어서 직원들이 한동안 헷갈려 했어요.",
+   "blank": "체계가",
+   "src": "made"
+  },
+  {
+   "text": "소희는 공책 대신 컴퓨터로 재고 관리 체계를 새로 만들었어요.",
+   "en": "Sohee set up a new inventory system on the computer instead of a notebook.",
+   "ko": "소희는 공책 대신 컴퓨터로 재고 관리 체계를 새로 만들었어요.",
+   "blank": "체계를",
+   "src": "made"
   }
  ],
  "w|체력": [
@@ -47671,6 +48119,22 @@
    "blank": "측에서"
   }
  ],
+ "w|측면": [
+  {
+   "text": "변호인은 배심원들에게 사건의 다른 측면도 봐 달라고 호소했어요.",
+   "en": "The defense lawyer appealed to the jurors to look at the other side of the case too.",
+   "ko": "변호인은 배심원들에게 사건의 다른 측면도 봐 달라고 호소했어요.",
+   "blank": "측면도",
+   "src": "made"
+  },
+  {
+   "text": "소희는 가격 측면에서는 대형 마트를 이길 수 없다는 걸 알아요.",
+   "en": "Sohee knows she can't beat the big supermarkets in terms of price.",
+   "ko": "소희는 가격 측면에서는 대형 마트를 이길 수 없다는 걸 알아요.",
+   "blank": "측면에서는",
+   "src": "made"
+  }
+ ],
  "w|층": [
   {
    "text": "삼 층에 살아.",
@@ -47827,6 +48291,22 @@
    "en": "I cleared the snow from the entrance.",
    "ko": "눈을 현관에서 치웠어.",
    "blank": "치웠어"
+  }
+ ],
+ "w|치유": [
+  {
+   "text": "재원은 이 판결이 피해자의 상처 치유에 도움이 되길 바랐어요.",
+   "en": "Jaewon hoped this ruling would help the victim's wounds heal.",
+   "ko": "재원은 이 판결이 피해자의 상처 치유에 도움이 되길 바랐어요.",
+   "blank": "치유에",
+   "src": "made"
+  },
+  {
+   "text": "소희는 손님들과 수다 떠는 시간이 마음의 치유가 된대요.",
+   "en": "Sohee says chatting with customers is healing for her heart.",
+   "ko": "소희는 손님들과 수다 떠는 시간이 마음의 치유가 된대요.",
+   "blank": "치유가",
+   "src": "made"
   }
  ],
  "w|치즈": [
@@ -48009,6 +48489,22 @@
    "en": "This bed is too hard.",
    "ko": "이 침대 너무 딱딱해.",
    "blank": "침대"
+  }
+ ],
+ "w|침묵": [
+  {
+   "text": "피고인은 모든 질문에 침묵으로 일관했어요.",
+   "en": "The defendant kept silent through every question.",
+   "ko": "피고인은 모든 질문에 침묵으로 일관했어요.",
+   "blank": "침묵으로",
+   "src": "made"
+  },
+  {
+   "text": "손님이 없는 오후에는 가게에 긴 침묵이 이어져요.",
+   "en": "In the afternoons with no customers, a long silence settles over the shop.",
+   "ko": "손님이 없는 오후에는 가게에 긴 침묵이 이어져요.",
+   "blank": "침묵이",
+   "src": "made"
   }
  ],
  "w|침실": [
@@ -48517,6 +49013,22 @@
    "en": "This coupon is only good for today.",
    "ko": "오늘만 쓸 수 있는 쿠폰이야.",
    "blank": "쿠폰이야"
+  }
+ ],
+ "w|쿨하다": [
+  {
+   "text": "재원은 판결에 실망했지만 겉으로는 쿨하게 웃어 보였어요.",
+   "en": "Jaewon was disappointed by the ruling, but on the outside he smiled it off coolly.",
+   "ko": "재원은 판결에 실망했지만 겉으로는 쿨하게 웃어 보였어요.",
+   "blank": "쿨하게",
+   "src": "made"
+  },
+  {
+   "text": "손님이 지갑을 두고 와도 소희는 쿨하게 다음에 달라고 해요.",
+   "en": "Even when a customer forgets their wallet, Sohee coolly tells them to pay next time.",
+   "ko": "손님이 지갑을 두고 와도 소희는 쿨하게 다음에 달라고 해요.",
+   "blank": "쿨하게",
+   "src": "made"
   }
  ],
  "w|크게": [
@@ -49431,6 +49943,22 @@
    "blank": "튀다"
   }
  ],
+ "w|트다": [
+  {
+   "text": "재판이 길어져서 재원이 법원을 나설 때쯤 동이 트고 있었어요.",
+   "en": "The trial ran so long that dawn was breaking by the time Jaewon left the courthouse.",
+   "ko": "재판이 길어져서 재원이 법원을 나설 때쯤 동이 트고 있었어요.",
+   "blank": "트고",
+   "src": "made"
+  },
+  {
+   "text": "소희는 매일 오는 대학생 손님과 어느새 말을 텄어요.",
+   "en": "Sohee ended up getting on casual terms with the college student who comes every day.",
+   "ko": "소희는 매일 오는 대학생 손님과 어느새 말을 텄어요.",
+   "blank": "텄어요",
+   "src": "made"
+  }
+ ],
  "w|트럭": [
   {
    "text": "트럭이 길을 막고 있어.",
@@ -49561,6 +50089,22 @@
    "blank": "튼튼한"
   }
  ],
+ "w|틀다": [
+  {
+   "text": "판사는 증거로 제출된 녹음 파일을 틀어 보라고 했어요.",
+   "en": "The judge said to play the recording submitted as evidence.",
+   "ko": "판사는 증거로 제출된 녹음 파일을 틀어 보라고 했어요.",
+   "blank": "틀어",
+   "src": "made"
+  },
+  {
+   "text": "소희는 가게 문을 열자마자 라디오를 틀었어요.",
+   "en": "Sohee turned on the radio as soon as she opened the shop.",
+   "ko": "소희는 가게 문을 열자마자 라디오를 틀었어요.",
+   "blank": "틀었어요",
+   "src": "made"
+  }
+ ],
  "w|틀리다": [
   {
    "text": "답이 완전히 틀렸어.",
@@ -49687,6 +50231,22 @@
    "en": "The green onion aroma lifts the dish.",
    "ko": "파 향이 요리를 살려.",
    "blank": "파"
+  }
+ ],
+ "w|파괴": [
+  {
+   "text": "이번 사건은 공원 조형물 파괴에 관한 재판이었어요.",
+   "en": "This case was a trial about the destruction of a sculpture in a park.",
+   "ko": "이번 사건은 공원 조형물 파괴에 관한 재판이었어요.",
+   "blank": "파괴에",
+   "src": "made"
+  },
+  {
+   "text": "소희는 재개발이 오래된 골목의 파괴로 이어질까 봐 걱정해요.",
+   "en": "Sohee worries that redevelopment will lead to the destruction of the old alleys.",
+   "ko": "소희는 재개발이 오래된 골목의 파괴로 이어질까 봐 걱정해요.",
+   "blank": "파괴로",
+   "src": "made"
   }
  ],
  "w|파괴하다": [
@@ -50639,6 +51199,22 @@
    "en": "Try changing it to a softer expression.",
    "ko": "더 부드러운 말로 바꿔 봐.",
    "blank": "표현으로"
+  }
+ ],
+ "w|표현하다": [
+  {
+   "text": "피해자는 그날 느낀 두려움을 차분하게 표현했어요.",
+   "en": "The victim calmly described the fear she felt that day.",
+   "ko": "피해자는 그날 느낀 두려움을 차분하게 표현했어요.",
+   "blank": "표현했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 고마운 마음을 사탕 하나로 표현했어요.",
+   "en": "Sohee expressed her thanks with a single piece of candy.",
+   "ko": "소희는 고마운 마음을 사탕 하나로 표현했어요.",
+   "blank": "표현했어요",
+   "src": "made"
   }
  ],
  "w|푸다": [
@@ -51947,6 +52523,38 @@
    "blank": "해외"
   }
  ],
+ "w|해적": [
+  {
+   "text": "재원은 해적 행위로 기소된 선원들의 재판을 방청했어요.",
+   "en": "Jaewon sat in on the trial of sailors charged with piracy.",
+   "ko": "재원은 해적 행위로 기소된 선원들의 재판을 방청했어요.",
+   "blank": "해적",
+   "src": "made"
+  },
+  {
+   "text": "장난감 해적 모자를 쓴 꼬마가 사탕을 사러 들어왔어요.",
+   "en": "A little kid wearing a toy pirate hat came in to buy candy.",
+   "ko": "장난감 해적 모자를 쓴 꼬마가 사탕을 사러 들어왔어요.",
+   "blank": "해적",
+   "src": "made"
+  }
+ ],
+ "w|해제": [
+  {
+   "text": "재판이 끝나자 피고인의 출국 금지 해제가 결정됐어요.",
+   "en": "When the trial ended, it was decided to lift the defendant's travel ban.",
+   "ko": "재판이 끝나자 피고인의 출국 금지 해제가 결정됐어요.",
+   "blank": "해제가",
+   "src": "made"
+  },
+  {
+   "text": "소희가 보안 경보 해제를 깜빡해서 아침부터 경보가 울렸어요.",
+   "en": "Sohee forgot to turn off the security alarm, so it went off first thing in the morning.",
+   "ko": "소희가 보안 경보 해제를 깜빡해서 아침부터 경보가 울렸어요.",
+   "blank": "해제를",
+   "src": "made"
+  }
+ ],
  "w|해질녘": [
   {
    "text": "해질녘 하늘이 예뻐.",
@@ -52721,6 +53329,22 @@
    "en": "I'm trying a new form of service.",
    "ko": "새 형태의 서비스를 시험해.",
    "blank": "형태의"
+  }
+ ],
+ "w|형편": [
+  {
+   "text": "피고인은 형편이 어려워서 국선 변호인의 도움을 받았어요.",
+   "en": "The defendant was in a tight financial situation, so he got help from a public defender.",
+   "ko": "피고인은 형편이 어려워서 국선 변호인의 도움을 받았어요.",
+   "blank": "형편이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 형편이 어려운 이웃에게 가끔 외상을 해 줘요.",
+   "en": "Sohee sometimes lets neighbors who are struggling buy on credit.",
+   "ko": "소희는 형편이 어려운 이웃에게 가끔 외상을 해 줘요.",
+   "blank": "형편이",
+   "src": "made"
   }
  ],
  "w|형편없다": [
@@ -54005,6 +54629,22 @@
    "en": "Time is flowing too fast.",
    "ko": "시간이 너무 빨리 흘러.",
    "blank": "흘러"
+  }
+ ],
+ "w|흐름": [
+  {
+   "text": "결정적인 증거 하나가 재판의 흐름을 완전히 바꿔 놓았어요.",
+   "en": "One decisive piece of evidence completely changed the course of the trial.",
+   "ko": "결정적인 증거 하나가 재판의 흐름을 완전히 바꿔 놓았어요.",
+   "blank": "흐름을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 손님들의 흐름을 보고 진열 위치를 바꿨어요.",
+   "en": "Sohee watched the flow of customers and changed where things were displayed.",
+   "ko": "소희는 손님들의 흐름을 보고 진열 위치를 바꿨어요.",
+   "blank": "흐름을",
+   "src": "made"
   }
  ],
  "w|흐리다": [

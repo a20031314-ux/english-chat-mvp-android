@@ -4939,6 +4939,22 @@
    "blank": "вышли"
   }
  ],
+ "w|выкинуть": [
+  {
+   "text": "Михаил не выкинул старые протоколы, а сдал их в архив.",
+   "en": "Mikhail didn't throw away the old records but handed them over to the archive.",
+   "ko": "미하일은 오래된 조서를 버리지 않고 기록 보관소에 넘겼어요.",
+   "blank": "выкинул",
+   "src": "made"
+  },
+  {
+   "text": "Светлана выкинула просроченный йогурт и протёрла полку.",
+   "en": "Svetlana threw out the expired yogurt and wiped the shelf.",
+   "ko": "스베틀라나는 유통기한 지난 요구르트를 버리고 선반을 닦았어요.",
+   "blank": "выкинула",
+   "src": "made"
+  }
+ ],
  "w|выключить": [
   {
    "text": "Не были бы вы так добры выключить радио?",
@@ -5379,6 +5395,22 @@
    "en": "Did you find out who called?",
    "ko": "누가 전화했는지 알아냈어?",
    "blank": "выяснил"
+  }
+ ],
+ "w|выясниться": [
+  {
+   "text": "На допросе выяснилось, что свидетель в тот день был в другом городе.",
+   "en": "During questioning it turned out that the witness was in another city that day.",
+   "ko": "심문 중에 증인이 그날 다른 도시에 있었다는 게 밝혀졌어요.",
+   "blank": "выяснилось",
+   "src": "made"
+  },
+  {
+   "text": "Утром выяснилось, что холодильник с мороженым ночью сломался.",
+   "en": "In the morning it turned out the ice cream freezer had broken down overnight.",
+   "ko": "아침에 아이스크림 냉장고가 밤사이 고장 난 걸 알게 됐어요.",
+   "blank": "выяснилось",
+   "src": "made"
   }
  ],
  "w|гадость": [
@@ -6265,6 +6297,22 @@
    "ko": "죄를 씻으려고 깊이 뉘우치며 찾아왔어요.",
    "blank": "грех",
    "src": "tatoeba:2825224/AqQoyriq en:10649925/AlanF_US"
+  }
+ ],
+ "w|грозить": [
+  {
+   "text": "По этой статье обвиняемому грозит крупный штраф.",
+   "en": "Under this article the accused faces a large fine.",
+   "ko": "이 조항에 따르면 피고는 큰 벌금을 물 수 있어요.",
+   "blank": "грозит",
+   "src": "made"
+  },
+  {
+   "text": "Хозяин здания грозит поднять аренду уже с весны.",
+   "en": "The building owner is threatening to raise the rent as early as spring.",
+   "ko": "건물 주인은 봄부터 임대료를 올리겠다고 해요.",
+   "blank": "грозит",
+   "src": "made"
   }
  ],
  "w|громкий": [
@@ -9161,6 +9209,22 @@
    "blank": "забудь"
   }
  ],
+ "w|заведение": [
+  {
+   "text": "Владелец ночного заведения пришёл в суд вместе с адвокатом.",
+   "en": "The owner of a nightclub came to court with his lawyer.",
+   "ko": "밤 업소 주인이 변호사와 함께 법원에 왔어요.",
+   "blank": "заведения",
+   "src": "made"
+  },
+  {
+   "text": "Светлана гордится, что её маленькое заведение знает весь район.",
+   "en": "Svetlana is proud that the whole neighborhood knows her little shop.",
+   "ko": "스베틀라나는 동네 사람 모두가 자기 작은 가게를 안다는 게 자랑스러워요.",
+   "blank": "заведение",
+   "src": "made"
+  }
+ ],
  "w|завести": [
   {
    "text": "Ты хочешь жениться и завести детей?",
@@ -10013,6 +10077,22 @@
    "en": "Pay for the taxi.",
    "ko": "택시비를 내.",
    "blank": "Заплати"
+  }
+ ],
+ "w|заполнить": [
+  {
+   "text": "Михаил помог пожилой свидетельнице заполнить анкету перед заседанием.",
+   "en": "Mikhail helped an elderly witness fill out a form before the hearing.",
+   "ko": "미하일은 재판 전에 나이 든 증인이 서류를 작성하는 걸 도와줬어요.",
+   "blank": "заполнить",
+   "src": "made"
+  },
+  {
+   "text": "Светлана попросила покупателя заполнить карточку постоянного клиента.",
+   "en": "Svetlana asked the customer to fill out a loyalty card.",
+   "ko": "스베틀라나는 손님에게 단골 카드를 작성해 달라고 했어요.",
+   "blank": "заполнить",
+   "src": "made"
   }
  ],
  "w|заполучить": [
@@ -11889,6 +11969,22 @@
    "src": "tatoeba:6036010/odexed en:1954799/CK"
   }
  ],
+ "w|исчезновение": [
+  {
+   "text": "Дело об исчезновении картины из музея рассматривали целый месяц.",
+   "en": "The case of the painting's disappearance from the museum was heard for a whole month.",
+   "ko": "박물관 그림 실종 사건은 한 달 내내 심리됐어요.",
+   "blank": "исчезновении",
+   "src": "made"
+  },
+  {
+   "text": "Светлана заметила исчезновение коробки с жвачкой только вечером.",
+   "en": "Svetlana noticed that the box of chewing gum had disappeared only in the evening.",
+   "ko": "스베틀라나는 껌 상자가 없어진 걸 저녁에야 알아챘어요.",
+   "blank": "исчезновение",
+   "src": "made"
+  }
+ ],
  "w|исчезнуть": [
   {
    "text": "Ключ исчез со стола.",
@@ -12277,6 +12373,22 @@
    "ko": "제일 좋아하는 그림이 뭐야?",
    "blank": "картина",
    "src": "tatoeba:8950261/marafon en:6381141/Hybrid"
+  }
+ ],
+ "w|карточка": [
+  {
+   "text": "Михаил записал номер дела на карточке и убрал её в папку.",
+   "en": "Mikhail wrote the case number on a card and put it in the folder.",
+   "ko": "미하일은 사건 번호를 카드에 적어 폴더에 넣었어요.",
+   "blank": "карточке",
+   "src": "made"
+  },
+  {
+   "text": "Светлана попросила покупателя заполнить карточку постоянного клиента.",
+   "en": "Svetlana asked the customer to fill out a loyalty card.",
+   "ko": "스베틀라나는 손님에게 단골 카드를 작성해 달라고 했어요.",
+   "blank": "карточку",
+   "src": "made"
   }
  ],
  "w|картошка": [
@@ -13209,6 +13321,22 @@
    "src": "made"
   }
  ],
+ "w|кончать": [
+  {
+   "text": "Михаил обычно кончает работу поздно, когда в здании суда уже темно.",
+   "en": "Mikhail usually finishes work late, when the courthouse is already dark.",
+   "ko": "미하일은 보통 법원 건물이 이미 어두워질 때쯤 늦게 일을 마쳐요.",
+   "blank": "кончает",
+   "src": "made"
+  },
+  {
+   "text": "Светлана кончает смену поздно вечером и сама закрывает ставни.",
+   "en": "Svetlana finishes her shift late in the evening and closes the shutters herself.",
+   "ko": "스베틀라나는 저녁 늦게 근무를 마치고 직접 셔터를 내려요.",
+   "blank": "кончает",
+   "src": "made"
+  }
+ ],
  "w|кончиться": [
   {
    "text": "Это могло очень плохо кончиться.",
@@ -13367,6 +13495,22 @@
    "src": "tatoeba:11744252/marafon en:42322/CM"
   }
  ],
+ "w|королевство": [
+  {
+   "text": "Адвокат шутил, что архив суда — настоящее королевство бумаги.",
+   "en": "The lawyer joked that the court archive is a real kingdom of paper.",
+   "ko": "변호사는 법원 기록 보관소가 진짜 종이 왕국이라고 농담했어요.",
+   "blank": "королевство",
+   "src": "made"
+  },
+  {
+   "text": "Для детей магазин Светланы — целое королевство сладостей.",
+   "en": "For children, Svetlana's shop is a whole kingdom of sweets.",
+   "ko": "아이들에게 스베틀라나의 가게는 사탕 왕국이에요.",
+   "blank": "королевство",
+   "src": "made"
+  }
+ ],
  "w|король": [
   {
    "text": "Король вышел на балкон.",
@@ -13395,6 +13539,22 @@
    "ko": "지름길 알아?",
    "blank": "короткий",
    "src": "tatoeba:12845287/marafon en:12506846/sundown"
+  }
+ ],
+ "w|корпус": [
+  {
+   "text": "Зал заседаний находится во втором корпусе здания.",
+   "en": "The courtroom is in the second wing of the building.",
+   "ko": "법정은 건물 제이동에 있어요.",
+   "blank": "корпусе",
+   "src": "made"
+  },
+  {
+   "text": "Магазин Светланы стоит между первым и вторым корпусом общежития.",
+   "en": "Svetlana's shop stands between the first and second buildings of the dormitory.",
+   "ko": "스베틀라나의 가게는 기숙사 일동과 이동 사이에 있어요.",
+   "blank": "корпусом",
+   "src": "made"
   }
  ],
  "w|космос": [
@@ -15555,6 +15715,22 @@
    "src": "made"
   }
  ],
+ "w|местоположение": [
+  {
+   "text": "Судья попросил прояснить точное местоположение машины в ту ночь.",
+   "en": "The judge asked to clarify the exact location of the car that night.",
+   "ko": "판사는 그날 밤 차의 정확한 위치를 밝혀 달라고 했어요.",
+   "blank": "местоположение",
+   "src": "made"
+  },
+  {
+   "text": "Удачное местоположение магазина помогает Светлане даже в трудные времена.",
+   "en": "The shop's good location helps Svetlana even in hard times.",
+   "ko": "가게 위치가 좋아서 스베틀라나는 어려운 때에도 버텨요.",
+   "blank": "местоположение",
+   "src": "made"
+  }
+ ],
  "w|месть": [
   {
    "text": "Я должен осуществить свою месть!",
@@ -16923,6 +17099,22 @@
    "blank": "назвали"
   }
  ],
+ "w|назначение": [
+  {
+   "text": "Михаил уже год ждёт назначения на должность судьи.",
+   "en": "Mikhail has been waiting a year for his appointment as a judge.",
+   "ko": "미하일은 판사 임명을 일 년째 기다리고 있어요.",
+   "blank": "назначения",
+   "src": "made"
+  },
+  {
+   "text": "Светлана не сразу поняла назначение новой кнопки на кассе.",
+   "en": "Svetlana didn't immediately understand what the new button on the till was for.",
+   "ko": "스베틀라나는 계산대의 새 버튼이 무슨 용도인지 바로 알지 못했어요.",
+   "blank": "назначение",
+   "src": "made"
+  }
+ ],
  "w|назначить": [
   {
    "text": "Можете назначить мне цену на этот дом?",
@@ -17061,6 +17253,22 @@
    "src": "tatoeba:4805257/odexed en:243553/al_ex_an_der"
   }
  ],
+ "w|наличие": [
+  {
+   "text": "Секретарь проверила наличие всех документов в деле.",
+   "en": "The clerk checked that all documents were present in the file.",
+   "ko": "서기는 사건 서류에 문서가 모두 있는지 확인했어요.",
+   "blank": "наличие",
+   "src": "made"
+  },
+  {
+   "text": "Светлана каждое утро проверяет наличие молока и хлеба.",
+   "en": "Every morning Svetlana checks that there's milk and bread in stock.",
+   "ko": "스베틀라나는 매일 아침 우유와 빵이 있는지 확인해요.",
+   "blank": "наличие",
+   "src": "made"
+  }
+ ],
  "w|наличные": [
   {
    "text": "У тебя есть с собой наличные?",
@@ -17123,6 +17331,22 @@
    "ko": "마음이 훨씬 편해졌어요.",
    "blank": "намного",
    "src": "tatoeba:2456796/shanghainese en:321687/CK"
+  }
+ ],
+ "w|нанести": [
+  {
+   "text": "Подсудимый признал, что нанёс ущерб чужой машине.",
+   "en": "The defendant admitted that he had caused damage to someone else's car.",
+   "ko": "피고인은 남의 차에 손해를 입혔다고 인정했어요.",
+   "blank": "нанёс",
+   "src": "made"
+  },
+  {
+   "text": "Утром Светлана нанесла на витрину новую надпись.",
+   "en": "In the morning Svetlana painted a new sign on the shop window.",
+   "ko": "아침에 스베틀라나는 진열창에 새 글씨를 썼어요.",
+   "blank": "нанесла",
+   "src": "made"
   }
  ],
  "w|нанять": [
@@ -17564,6 +17788,22 @@
    "en": "A noisy group in the carriage disturbed Elena's sleep.",
    "ko": "객차 안의 시끄러운 무리 때문에 옐레나는 잠을 설쳤어요.",
    "blank": "нарушила",
+   "src": "made"
+  }
+ ],
+ "w|население": [
+  {
+   "text": "Решение суда касалось всего населения посёлка.",
+   "en": "The court's decision concerned the entire population of the village.",
+   "ko": "법원 판결은 마을 주민 전체와 관련이 있었어요.",
+   "blank": "населения",
+   "src": "made"
+  },
+  {
+   "text": "За последние годы население района выросло, и у Светланы стало больше покупателей.",
+   "en": "In recent years the neighborhood's population has grown, and Svetlana has more customers.",
+   "ko": "동네 인구가 늘어 스베틀라나의 손님도 많아졌어요.",
+   "blank": "население",
    "src": "made"
   }
  ],
@@ -22521,6 +22761,22 @@
    "src": "tatoeba:2749609/afyodor en:263358/CK"
   }
  ],
+ "w|палата": [
+  {
+   "text": "Адвокат решил обжаловать приговор, и дело передали в апелляционную палату.",
+   "en": "The lawyer decided to appeal, and the case was sent to the appeals chamber.",
+   "ko": "변호사가 항소하기로 해서 사건은 항소부로 넘어갔어요.",
+   "blank": "палату",
+   "src": "made"
+  },
+  {
+   "text": "Торгово-промышленная палата пригласила Светлану на встречу предпринимателей.",
+   "en": "The chamber of commerce invited Svetlana to a meeting of entrepreneurs.",
+   "ko": "상공회의소가 스베틀라나를 기업인 모임에 초대했어요.",
+   "blank": "палата",
+   "src": "made"
+  }
+ ],
  "w|палец": [
   {
    "text": "Я порезал палец.",
@@ -22703,6 +22959,22 @@
    "ko": "여권 좀 보여 주시겠어요?",
    "blank": "паспорт",
    "src": "tatoeba:7189136/odexed en:35266/mamat"
+  }
+ ],
+ "w|патруль": [
+  {
+   "text": "Задержание провёл ночной патруль недалеко от вокзала.",
+   "en": "The arrest was made by a night patrol not far from the station.",
+   "ko": "체포는 역 근처에서 야간 순찰대가 했어요.",
+   "blank": "патруль",
+   "src": "made"
+  },
+  {
+   "text": "Полицейский патруль часто останавливается у магазина Светланы.",
+   "en": "A police patrol often stops by Svetlana's shop.",
+   "ko": "경찰 순찰대가 스베틀라나의 가게 앞에 자주 서요.",
+   "blank": "патруль",
+   "src": "made"
   }
  ],
  "w|пахнуть": [
@@ -23731,6 +24003,22 @@
    "src": "tatoeba:6836584/marafon en:6346720/CK"
   }
  ],
+ "w|по-своему": [
+  {
+   "text": "Стороны заключили устный уговор, но каждый понял его по-своему.",
+   "en": "The parties made a verbal agreement, but each understood it in their own way.",
+   "ko": "양측은 구두 약속을 했지만 저마다 다르게 이해했어요.",
+   "blank": "по-своему",
+   "src": "made"
+  },
+  {
+   "text": "Светлана по-своему расставила товары, и покупателям стало удобнее.",
+   "en": "Svetlana arranged the goods her own way, and it became easier for customers.",
+   "ko": "스베틀라나가 자기 방식대로 물건을 놓자 손님들이 더 편해졌어요.",
+   "blank": "по-своему",
+   "src": "made"
+  }
+ ],
  "w|по-твоему": [
   {
    "text": "По-твоему, я не стараюсь изо всех сил?",
@@ -23809,6 +24097,22 @@
    "ko": "정말 이길 수 있을 거라고 생각해?",
    "blank": "победить",
    "src": "tatoeba:6815744/soweli_Elepanto en:6815655/CK"
+  }
+ ],
+ "w|побежать": [
+  {
+   "text": "После приговора подсудимый вдруг побежал к выходу, но конвой успел его остановить.",
+   "en": "After the verdict the defendant suddenly ran for the exit, but the guards managed to stop him.",
+   "ko": "판결 뒤 피고인이 갑자기 출구로 달려갔지만 호송대가 막았어요.",
+   "blank": "побежал",
+   "src": "made"
+  },
+  {
+   "text": "Мальчик схватил шоколадку и побежал к кассе.",
+   "en": "The boy grabbed a chocolate bar and ran to the checkout.",
+   "ko": "남자아이가 초콜릿을 집어 들고 계산대로 달려갔어요.",
+   "blank": "побежал",
+   "src": "made"
   }
  ],
  "w|поблагодарить": [
@@ -24621,6 +24925,22 @@
    "src": "made"
   }
  ],
+ "w|подстрелить": [
+  {
+   "text": "По версии обвинения, браконьер подстрелил лося из старого ружья.",
+   "en": "According to the prosecution, the poacher shot a moose with an old rifle.",
+   "ko": "검찰 측 주장에 따르면 밀렵꾼이 낡은 총으로 엘크를 쐈어요.",
+   "blank": "подстрелил",
+   "src": "made"
+  },
+  {
+   "text": "Старый охотник рассказывал Светлане, как однажды подстрелил утку из отцовского ружья.",
+   "en": "An old hunter told Svetlana how he once shot a duck with his father's gun.",
+   "ko": "늙은 사냥꾼은 아버지 총으로 오리를 맞힌 이야기를 스베틀라나에게 들려줬어요.",
+   "blank": "подстрелил",
+   "src": "made"
+  }
+ ],
  "w|подтвердить": [
   {
    "text": "Ты можешь это подтвердить?",
@@ -24775,6 +25095,22 @@
    "en": "I'll go to the doctor tomorrow.",
    "ko": "내일 병원에 갈 거야.",
    "blank": "поеду"
+  }
+ ],
+ "w|пожалеть": [
+  {
+   "text": "Подсудимый сказал судье, что очень пожалел о своём поступке.",
+   "en": "The defendant told the judge that he deeply regretted what he had done.",
+   "ko": "피고인은 판사에게 자기 행동을 몹시 후회했다고 말했어요.",
+   "blank": "пожалел",
+   "src": "made"
+  },
+  {
+   "text": "Светлана ни разу не пожалела, что открыла магазин рядом со школой.",
+   "en": "Svetlana has never regretted opening the shop next to the school.",
+   "ko": "스베틀라나는 학교 옆에 가게를 연 걸 한 번도 후회하지 않았어요.",
+   "blank": "пожалела",
+   "src": "made"
   }
  ],
  "w|пожаловать": [
@@ -27211,6 +27547,22 @@
    "src": "tatoeba:3384835/Selena777 en:3383956/petersmr"
   }
  ],
+ "w|превратиться": [
+  {
+   "text": "Обычный спор соседей превратился в долгий судебный процесс.",
+   "en": "An ordinary dispute between neighbors turned into a long court case.",
+   "ko": "평범한 이웃 간 다툼이 긴 재판으로 번졌어요.",
+   "blank": "превратился",
+   "src": "made"
+  },
+  {
+   "text": "Маленький ларёк за годы превратился в уютный магазин у дома.",
+   "en": "Over the years the little kiosk turned into a cozy corner shop.",
+   "ko": "작은 가판대가 몇 해 사이 아늑한 동네 가게가 됐어요.",
+   "blank": "превратился",
+   "src": "made"
+  }
+ ],
  "w|предатель": [
   {
    "text": "Ты знаешь, кто предатель?",
@@ -27937,6 +28289,22 @@
    "ko": "아직도 이게 적응이 안 돼요.",
    "blank": "привыкнуть",
    "src": "tatoeba:7877301/marafon en:8365959/Ergulis"
+  }
+ ],
+ "w|привычка": [
+  {
+   "text": "У Михаила есть привычка приходить в суд за час до заседания.",
+   "en": "Mikhail has a habit of arriving at court an hour before the hearing.",
+   "ko": "미하일은 재판 한 시간 전에 법원에 오는 습관이 있어요.",
+   "blank": "привычка",
+   "src": "made"
+  },
+  {
+   "text": "У Светланы появилась привычка пить чай прямо за кассой.",
+   "en": "Svetlana has picked up a habit of drinking tea right at the till.",
+   "ko": "스베틀라나는 계산대에서 차를 마시는 습관이 생겼어요.",
+   "blank": "привычка",
+   "src": "made"
   }
  ],
  "w|пригласить": [
@@ -28975,6 +29343,22 @@
    "src": "tatoeba:11461357/marafon en:11461351/camouat"
   }
  ],
+ "w|продолжение": [
+  {
+   "text": "Судья объявил перерыв, а продолжение слушания перенёс на завтра.",
+   "en": "The judge called a recess and moved the continuation of the hearing to tomorrow.",
+   "ko": "판사는 휴정을 선언하고 심리 속행을 내일로 미뤘어요.",
+   "blank": "продолжение",
+   "src": "made"
+  },
+  {
+   "text": "Светлана читала за прилавком продолжение любимого детектива.",
+   "en": "Svetlana was reading the sequel to her favorite detective novel behind the counter.",
+   "ko": "스베틀라나는 계산대 뒤에서 좋아하는 추리 소설의 후속편을 읽었어요.",
+   "blank": "продолжение",
+   "src": "made"
+  }
+ ],
  "w|продолжить": [
   {
    "text": "Вы уверены, что хотите продолжить?",
@@ -29219,6 +29603,22 @@
    "en": "He asked us not to wait.",
    "ko": "기다리지 말라고 했어.",
    "blank": "просил"
+  }
+ ],
+ "w|прослушивание": [
+  {
+   "text": "Судья разрешил прослушивание записи телефонного разговора.",
+   "en": "The judge allowed the recording of the phone call to be played.",
+   "ko": "판사는 전화 통화 녹음을 듣는 것을 허락했어요.",
+   "blank": "прослушивание",
+   "src": "made"
+  },
+  {
+   "text": "Дочь Светланы готовилась к прослушиванию в музыкальную школу прямо в подсобке.",
+   "en": "Svetlana's daughter prepared for her music school audition right in the back room.",
+   "ko": "스베틀라나의 딸은 창고에서 음악 학교 오디션을 준비했어요.",
+   "blank": "прослушиванию",
+   "src": "made"
   }
  ],
  "w|проснуться": [
@@ -29539,6 +29939,22 @@
    "en": "Forgiveness won't come right away.",
    "ko": "용서는 당장 되지 않아.",
    "blank": "Прощение"
+  }
+ ],
+ "w|прояснить": [
+  {
+   "text": "Судья попросил прояснить точное местоположение машины в ту ночь.",
+   "en": "The judge asked to clarify the exact location of the car that night.",
+   "ko": "판사는 그날 밤 차의 정확한 위치를 밝혀 달라고 했어요.",
+   "blank": "прояснить",
+   "src": "made"
+  },
+  {
+   "text": "Светлана позвонила поставщику, чтобы прояснить, почему опоздал хлеб.",
+   "en": "Svetlana called the supplier to find out why the bread was late.",
+   "ko": "스베틀라나는 빵이 왜 늦었는지 알아보려고 납품업체에 전화했어요.",
+   "blank": "прояснить",
+   "src": "made"
   }
  ],
  "w|прыгать": [
@@ -29897,6 +30313,22 @@
    "ko": "오십이라고 했어, 십오라고 했어?",
    "blank": "пятьдесят",
    "src": "tatoeba:8923453/carlosalberto en:8923435/carlosalberto"
+  }
+ ],
+ "w|пятьсот": [
+  {
+   "text": "Суд обязал ответчика выплатить пятьсот тысяч рублей.",
+   "en": "The court ordered the defendant to pay five hundred thousand rubles.",
+   "ko": "법원은 피고에게 오십만 루블을 지급하라고 명령했어요.",
+   "blank": "пятьсот",
+   "src": "made"
+  },
+  {
+   "text": "Покупатель расплатился купюрой в пятьсот рублей.",
+   "en": "The customer paid with a five-hundred-ruble note.",
+   "ko": "손님이 오백 루블짜리 지폐로 계산했어요.",
+   "blank": "пятьсот",
+   "src": "made"
   }
  ],
  "w|работа": [
@@ -30767,6 +31199,22 @@
    "src": "tatoeba:10708273/Yokhor en:2948325/Hybrid"
   }
  ],
+ "w|раунд": [
+  {
+   "text": "После обеда начался новый раунд переговоров между сторонами.",
+   "en": "After lunch a new round of negotiations between the parties began.",
+   "ko": "점심 뒤 양측의 새 협상이 시작됐어요.",
+   "blank": "раунд",
+   "src": "made"
+  },
+  {
+   "text": "Светлана выдержала ещё один раунд проверок от санитарной службы.",
+   "en": "Svetlana got through another round of inspections from the health service.",
+   "ko": "스베틀라나는 위생 당국의 점검을 또 한 차례 견뎠어요.",
+   "blank": "раунд",
+   "src": "made"
+  }
+ ],
  "w|реакция": [
   {
    "text": "Это именно та реакция, на которую я надеялся.",
@@ -31047,6 +31495,22 @@
    "ko": "괜찮은 프랑스 식당 알아요?",
    "blank": "ресторан",
    "src": "tatoeba:2738980/sharptoothed en:2738979/sharptoothed"
+  }
+ ],
+ "w|ресурс": [
+  {
+   "text": "Суд не стал тратить ресурсы на повторную экспертизу.",
+   "en": "The court decided not to spend resources on a second expert review.",
+   "ko": "법원은 재감정에 자원을 쓰지 않기로 했어요.",
+   "blank": "ресурсы",
+   "src": "made"
+  },
+  {
+   "text": "Светлане не хватает ресурсов, чтобы нанять ещё одного продавца.",
+   "en": "Svetlana doesn't have the resources to hire another sales assistant.",
+   "ko": "스베틀라나는 직원을 한 명 더 뽑을 여유가 없어요.",
+   "blank": "ресурсов",
+   "src": "made"
   }
  ],
  "w|рецепт": [
@@ -31485,6 +31949,22 @@
    "blank": "рублями"
   }
  ],
+ "w|ружье": [
+  {
+   "text": "По версии обвинения, браконьер подстрелил лося из старого ружья.",
+   "en": "According to the prosecution, the poacher shot a moose with an old rifle.",
+   "ko": "검찰 측 주장에 따르면 밀렵꾼이 낡은 총으로 엘크를 쐈어요.",
+   "blank": "ружья",
+   "src": "made"
+  },
+  {
+   "text": "Старый охотник рассказывал Светлане, как однажды подстрелил утку из отцовского ружья.",
+   "en": "An old hunter told Svetlana how he once shot a duck with his father's gun.",
+   "ko": "늙은 사냥꾼은 아버지 총으로 오리를 맞힌 이야기를 스베틀라나에게 들려줬어요.",
+   "blank": "ружья",
+   "src": "made"
+  }
+ ],
  "w|рука": [
   {
    "text": "Дай руку.",
@@ -31851,6 +32331,22 @@
    "blank": "Свет"
   }
  ],
+ "w|светить": [
+  {
+   "text": "Солнце ярко светило в окна зала, и Михаил задёрнул шторы.",
+   "en": "The sun was shining brightly through the courtroom windows, and Mikhail drew the curtains.",
+   "ko": "햇빛이 법정 창으로 환하게 비쳐서 미하일은 커튼을 쳤어요.",
+   "blank": "светило",
+   "src": "made"
+  },
+  {
+   "text": "Над входом в магазин всю ночь светит старый фонарь.",
+   "en": "An old lamp shines over the shop entrance all night.",
+   "ko": "가게 입구 위에는 낡은 등이 밤새 켜져 있어요.",
+   "blank": "светит",
+   "src": "made"
+  }
+ ],
  "w|свидание": [
   {
    "text": "У меня свидание.",
@@ -32107,6 +32603,22 @@
    "ko": "거래는 없던 일이 됐대요.",
    "blank": "сделка",
    "src": "tatoeba:2509472/sharptoothed en:2509471/sharptoothed"
+  }
+ ],
+ "w|сеанс": [
+  {
+   "text": "Свидетель утверждал, что в тот вечер был на сеансе в кинотеатре.",
+   "en": "The witness claimed he was at a showing in the cinema that evening.",
+   "ko": "증인은 그날 저녁 영화관에서 영화를 보고 있었다고 주장했어요.",
+   "blank": "сеансе",
+   "src": "made"
+  },
+  {
+   "text": "Перед вечерним сеансом в кино подростки забегают к Светлане за чипсами.",
+   "en": "Before the evening showing at the cinema, teenagers drop by Svetlana's for chips.",
+   "ko": "저녁 영화 상영 전에 십대들이 칩을 사러 스베틀라나 가게에 들러요.",
+   "blank": "сеансом",
+   "src": "made"
   }
  ],
  "w|себя": [
@@ -33465,6 +33977,22 @@
    "blank": "смерть"
   }
  ],
+ "w|смесь": [
+  {
+   "text": "В голосе Михаила слышалась смесь усталости и облегчения.",
+   "en": "Mikhail's voice held a mix of tiredness and relief.",
+   "ko": "미하일의 목소리에는 피로와 안도가 섞여 있었어요.",
+   "blank": "смесь",
+   "src": "made"
+  },
+  {
+   "text": "Светлана продаёт ореховую смесь на развес.",
+   "en": "Svetlana sells a nut mix by weight.",
+   "ko": "스베틀라나는 견과류 믹스를 무게로 달아 팔아요.",
+   "blank": "смесь",
+   "src": "made"
+  }
+ ],
  "w|сметь": [
   {
    "text": "Не смей так со мной разговаривать!",
@@ -34795,6 +35323,22 @@
    "ko": "먼저 파이부터 좀 먹고 싶어요.",
    "blank": "Сперва",
    "src": "tatoeba:1644014/Hayabusa en:32812/CK"
+  }
+ ],
+ "w|спеть": [
+  {
+   "text": "На празднике суда Михаил спел старую песню, и коллеги долго хлопали.",
+   "en": "At the court's party Mikhail sang an old song, and his colleagues clapped for a long time.",
+   "ko": "법원 행사에서 미하일이 옛 노래를 부르자 동료들이 오래 박수를 쳤어요.",
+   "blank": "спел",
+   "src": "made"
+  },
+  {
+   "text": "Старушка у кассы тихо спела песню, пока Светлана считала сдачу.",
+   "en": "An old lady at the counter quietly sang a song while Svetlana counted the change.",
+   "ko": "스베틀라나가 거스름돈을 세는 동안 계산대의 할머니가 조용히 노래를 불렀어요.",
+   "blank": "спела",
+   "src": "made"
   }
  ],
  "w|специалист": [
@@ -36731,6 +37275,22 @@
    "src": "tatoeba:2468241/paul_lingvo en:1951449/CK"
   }
  ],
+ "w|тащить": [
+  {
+   "text": "Михаил тащил по коридору тяжёлую коробку с делами.",
+   "en": "Mikhail was dragging a heavy box of case files down the corridor.",
+   "ko": "미하일은 사건 서류가 든 무거운 상자를 복도로 끌고 갔어요.",
+   "blank": "тащил",
+   "src": "made"
+  },
+  {
+   "text": "Грузчик тащил ящики с водой прямо через торговый зал.",
+   "en": "The loader was dragging crates of water right through the sales floor.",
+   "ko": "짐꾼이 물 상자를 매장 한가운데로 끌고 갔어요.",
+   "blank": "тащил",
+   "src": "made"
+  }
+ ],
  "w|твой": [
   {
    "text": "Где твой брат?",
@@ -38447,6 +39007,22 @@
    "src": "tatoeba:5297180/odexed en:4755353/garborg"
   }
  ],
+ "w|уговор": [
+  {
+   "text": "Стороны заключили устный уговор, но каждый понял его по-своему.",
+   "en": "The parties made a verbal agreement, but each understood it in their own way.",
+   "ko": "양측은 구두 약속을 했지만 저마다 다르게 이해했어요.",
+   "blank": "уговор",
+   "src": "made"
+  },
+  {
+   "text": "У Светланы с соседом-пекарем уговор: свежие булочки каждое утро.",
+   "en": "Svetlana has a deal with the baker next door: fresh buns every morning.",
+   "ko": "스베틀라나는 옆집 제빵사와 매일 아침 신선한 빵을 받기로 약속했어요.",
+   "blank": "уговор",
+   "src": "made"
+  }
+ ],
  "w|угодно": [
   {
    "text": "Делай как угодно.",
@@ -39113,6 +39689,22 @@
    "ko": "그 얘기를 꺼낼 생각은 없었어요.",
    "blank": "упоминать",
    "src": "tatoeba:4698030/sharptoothed en:2543173/CK"
+  }
+ ],
+ "w|упомянуть": [
+  {
+   "text": "Свидетель упомянул в показаниях красную машину без номеров.",
+   "en": "The witness mentioned a red car without plates in his testimony.",
+   "ko": "증인은 진술에서 번호판 없는 빨간 차를 언급했어요.",
+   "blank": "упомянул",
+   "src": "made"
+  },
+  {
+   "text": "Покупатель упомянул, что рядом открылся большой супермаркет.",
+   "en": "A customer mentioned that a big supermarket had opened nearby.",
+   "ko": "손님이 근처에 큰 슈퍼마켓이 생겼다고 말했어요.",
+   "blank": "упомянул",
+   "src": "made"
   }
  ],
  "w|управление": [
@@ -39807,6 +40399,22 @@
    "ko": "우리 부모님도 농장을 하세요.",
    "blank": "ферма",
    "src": "tatoeba:3507536/odexed en:252094/CK"
+  }
+ ],
+ "w|фестиваль": [
+  {
+   "text": "Дело касалось шума на летнем фестивале у реки.",
+   "en": "The case concerned noise at a summer festival by the river.",
+   "ko": "그 사건은 강가 여름 축제의 소음에 관한 것이었어요.",
+   "blank": "фестивале",
+   "src": "made"
+  },
+  {
+   "text": "В дни городского фестиваля в магазине заканчивается вся вода.",
+   "en": "During the city festival the shop runs out of all its water.",
+   "ko": "도시 축제 기간에는 가게 물이 다 떨어져요.",
+   "blank": "фестиваля",
+   "src": "made"
   }
  ],
  "w|физически": [
@@ -40969,6 +41577,22 @@
    "blank": "Чёрная"
   }
  ],
+ "w|честность": [
+  {
+   "text": "Михаил ценит честность свидетелей больше, чем красивые речи.",
+   "en": "Mikhail values witnesses' honesty more than fine speeches.",
+   "ko": "미하일은 멋진 말보다 증인의 정직함을 더 중요하게 여겨요.",
+   "blank": "честность",
+   "src": "made"
+  },
+  {
+   "text": "Соседи уважают Светлану за честность и всегда точную сдачу.",
+   "en": "The neighbors respect Svetlana for her honesty and always exact change.",
+   "ko": "이웃들은 정직하고 거스름돈이 늘 정확한 스베틀라나를 존중해요.",
+   "blank": "честность",
+   "src": "made"
+  }
+ ],
  "w|честный": [
   {
    "text": "Будь честным со мной.",
@@ -41853,6 +42477,22 @@
    "ko": "이 시험 붙은 사람 알아?",
    "blank": "экзамен",
    "src": "tatoeba:4244691/Selena777 en:4243633/Lebad"
+  }
+ ],
+ "w|экипаж": [
+  {
+   "text": "В суде дали показания все члены экипажа самолёта.",
+   "en": "All members of the plane's crew testified in court.",
+   "ko": "비행기 승무원 모두가 법정에서 증언했어요.",
+   "blank": "экипажа",
+   "src": "made"
+  },
+  {
+   "text": "Ночью в магазин зашёл экипаж скорой помощи купить кофе.",
+   "en": "At night an ambulance crew came into the shop to buy coffee.",
+   "ko": "밤에 구급대원들이 커피를 사러 가게에 들어왔어요.",
+   "blank": "экипаж",
+   "src": "made"
   }
  ],
  "w|экран": [
