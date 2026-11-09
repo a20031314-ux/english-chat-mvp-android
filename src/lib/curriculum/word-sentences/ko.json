@@ -1381,6 +1381,22 @@
    "blank": "감정을"
   }
  ],
+ "w|감정적": [
+  {
+   "text": "텐트가 무너지자 태윤의 친구는 너무 감정적으로 화를 냈어요.",
+   "en": "When the tent collapsed, Taeyun's friend got way too emotional and angry.",
+   "ko": "텐트가 무너지자 태윤의 친구는 너무 감정적으로 화를 냈어요.",
+   "blank": "감정적으로",
+   "src": "made"
+  },
+  {
+   "text": "예약이 사라져서 유나는 감정적으로 반응하지 않으려고 숨을 골랐어요.",
+   "en": "Her reservation had vanished, so Yuna took a breath to avoid reacting emotionally.",
+   "ko": "예약이 사라져서 유나는 감정적으로 반응하지 않으려고 숨을 골랐어요.",
+   "blank": "감정적으로",
+   "src": "made"
+  }
+ ],
  "w|감지": [
   {
    "text": "과학실의 화재 감지 장치가 갑자기 울려서 모두 밖으로 나갔어요.",
@@ -1976,6 +1992,22 @@
    "en": "Jiyoung argues that the produce distribution system needs reform.",
    "ko": "지영은 농산물 유통 구조의 개혁이 필요하다고 주장해요.",
    "blank": "개혁이",
+   "src": "made"
+  }
+ ],
+ "w|객관적": [
+  {
+   "text": "태윤은 캠핑장 후기를 볼 때 객관적인 정보를 먼저 확인해요.",
+   "en": "When reading campsite reviews, Taeyun checks the objective information first.",
+   "ko": "태윤은 캠핑장 후기를 볼 때 객관적인 정보를 먼저 확인해요.",
+   "blank": "객관적인",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔을 고를 때 별점보다 객관적인 시설 정보를 봐요.",
+   "en": "When choosing a hotel, Yuna looks at objective facility details rather than star ratings.",
+   "ko": "유나는 호텔을 고를 때 별점보다 객관적인 시설 정보를 봐요.",
+   "blank": "객관적인",
    "src": "made"
   }
  ],
@@ -5070,6 +5102,22 @@
    "en": "Haeun likes sharing tips on good restaurants with the moms in her neighborhood.",
    "ko": "하은은 맛집 정보를 동네 엄마들과 공유하는 걸 좋아해요.",
    "blank": "공유하는",
+   "src": "made"
+  }
+ ],
+ "w|공작": [
+  {
+   "text": "캠핑장 옆 농장에서 공작이 꼬리 깃털을 활짝 펼쳤어요.",
+   "en": "At the farm next to the campsite, a peacock fanned out its tail feathers.",
+   "ko": "캠핑장 옆 농장에서 공작이 꼬리 깃털을 활짝 펼쳤어요.",
+   "blank": "공작이",
+   "src": "made"
+  },
+  {
+   "text": "호텔 정원에서 공작 두 마리가 천천히 걸어 다녔어요.",
+   "en": "Two peacocks strolled slowly around the hotel garden.",
+   "ko": "호텔 정원에서 공작 두 마리가 천천히 걸어 다녔어요.",
+   "blank": "공작",
    "src": "made"
   }
  ],
@@ -8917,6 +8965,22 @@
    "blank": "기사가"
   }
  ],
+ "w|기상": [
+  {
+   "text": "태윤은 캠핑 가기 전에 산의 기상 정보를 꼼꼼히 봤어요.",
+   "en": "Before going camping, Taeyun carefully checked the mountain weather information.",
+   "ko": "태윤은 캠핑 가기 전에 산의 기상 정보를 꼼꼼히 봤어요.",
+   "blank": "기상",
+   "src": "made"
+  },
+  {
+   "text": "기상 악화로 비행기가 취소돼서 유나는 호텔에서 하루 더 묵었어요.",
+   "en": "Her flight was canceled due to bad weather, so Yuna stayed at the hotel one more night.",
+   "ko": "기상 악화로 비행기가 취소돼서 유나는 호텔에서 하루 더 묵었어요.",
+   "blank": "기상",
+   "src": "made"
+  }
+ ],
  "w|기소": [
   {
    "text": "사회 시간에 태윤은 검사가 피의자를 기소하는 절차를 배웠어요.",
@@ -9245,6 +9309,22 @@
    "en": "I missed the chance.",
    "ko": "기회를 놓쳤어.",
    "blank": "기회를"
+  }
+ ],
+ "w|기후": [
+  {
+   "text": "태윤은 기후가 따뜻해져서 캠핑 시즌이 길어졌다고 느껴요.",
+   "en": "Taeyun feels the camping season has gotten longer because the climate has warmed.",
+   "ko": "태윤은 기후가 따뜻해져서 캠핑 시즌이 길어졌다고 느껴요.",
+   "blank": "기후가",
+   "src": "made"
+  },
+  {
+   "text": "유나는 기후가 온화한 곳의 호텔을 골랐어요.",
+   "en": "Yuna chose a hotel in a place with a mild climate.",
+   "ko": "유나는 기후가 온화한 곳의 호텔을 골랐어요.",
+   "blank": "기후가",
+   "src": "made"
   }
  ],
  "w|긴급하다": [
@@ -12431,6 +12511,22 @@
    "src": "made"
   }
  ],
+ "w|논리적": [
+  {
+   "text": "태윤은 길을 잃었을 때 침착하고 논리적으로 지도를 다시 봤어요.",
+   "en": "When he got lost, Taeyun calmly and logically looked at the map again.",
+   "ko": "태윤은 길을 잃었을 때 침착하고 논리적으로 지도를 다시 봤어요.",
+   "blank": "논리적으로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 환불 규정에 대해 프런트 직원에게 논리적으로 설명했어요.",
+   "en": "Yuna logically explained her case about the refund policy to the front desk clerk.",
+   "ko": "유나는 환불 규정에 대해 프런트 직원에게 논리적으로 설명했어요.",
+   "blank": "논리적으로",
+   "src": "made"
+  }
+ ],
  "w|논문": [
   {
    "text": "동민은 기사를 쓰려고 기후 변화에 관한 논문을 여러 편 읽었어요.",
@@ -13289,6 +13385,22 @@
    "en": "I've been going to the gym lately.",
    "ko": "요즘 헬스장에 다녀.",
    "blank": "다녀"
+  }
+ ],
+ "w|다람쥐": [
+  {
+   "text": "다람쥐 한 마리가 태윤의 간식 봉지를 노리고 있었어요.",
+   "en": "A squirrel was eyeing Taeyun's snack bag.",
+   "ko": "다람쥐 한 마리가 태윤의 간식 봉지를 노리고 있었어요.",
+   "blank": "다람쥐",
+   "src": "made"
+  },
+  {
+   "text": "호텔 산책로에서 다람쥐가 유나 앞을 쏜살같이 지나갔어요.",
+   "en": "On the hotel trail, a squirrel darted past in front of Yuna.",
+   "ko": "호텔 산책로에서 다람쥐가 유나 앞을 쏜살같이 지나갔어요.",
+   "blank": "다람쥐가",
+   "src": "made"
   }
  ],
  "w|다루다": [
@@ -15027,6 +15139,22 @@
    "src": "made"
   }
  ],
+ "w|대지": [
+  {
+   "text": "비가 그치자 촉촉한 대지에서 흙냄새가 올라왔어요.",
+   "en": "When the rain stopped, the smell of earth rose from the damp ground.",
+   "ko": "비가 그치자 촉촉한 대지에서 흙냄새가 올라왔어요.",
+   "blank": "대지에서",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 창밖으로 끝없이 펼쳐진 대지를 바라봤어요.",
+   "en": "Yuna gazed out the hotel window at the land stretching endlessly.",
+   "ko": "유나는 호텔 창밖으로 끝없이 펼쳐진 대지를 바라봤어요.",
+   "blank": "대지를",
+   "src": "made"
+  }
+ ],
  "w|대체": [
   {
    "text": "대체 어디 있는 거야?",
@@ -16273,6 +16401,22 @@
    "en": "You really helped me yesterday.",
    "ko": "어제 정말 도와줬어.",
    "blank": "도와줬어"
+  }
+ ],
+ "w|동": [
+  {
+   "text": "태윤은 동이 트기 전에 일어나서 커피를 끓였어요.",
+   "en": "Taeyun got up before dawn broke and made coffee.",
+   "ko": "태윤은 동이 트기 전에 일어나서 커피를 끓였어요.",
+   "blank": "동이",
+   "src": "made"
+  },
+  {
+   "text": "유나는 일출을 보려고 동이 틀 무렵 호텔 해변으로 나갔어요.",
+   "en": "Yuna went out to the hotel beach around daybreak to see the sunrise.",
+   "ko": "유나는 일출을 보려고 동이 틀 무렵 호텔 해변으로 나갔어요.",
+   "blank": "동이",
+   "src": "made"
   }
  ],
  "w|동감": [
@@ -19607,6 +19751,22 @@
    "blank": "말다툼했어"
   }
  ],
+ "w|말랑하다": [
+  {
+   "text": "태윤은 모닥불에 구운 말랑한 마시멜로를 친구에게 건넸어요.",
+   "en": "Taeyun handed his friend a soft marshmallow toasted over the campfire.",
+   "ko": "태윤은 모닥불에 구운 말랑한 마시멜로를 친구에게 건넸어요.",
+   "blank": "말랑한",
+   "src": "made"
+  },
+  {
+   "text": "호텔 조식에 나온 말랑한 빵이 유나의 입맛에 딱 맞았어요.",
+   "en": "The soft bread at the hotel breakfast was just to Yuna's taste.",
+   "ko": "호텔 조식에 나온 말랑한 빵이 유나의 입맛에 딱 맞았어요.",
+   "blank": "말랑한",
+   "src": "made"
+  }
+ ],
  "w|말리다": [
   {
    "text": "머리를 빨리 말릴게.",
@@ -20773,6 +20933,22 @@
    "en": "I practiced interview questions in advance.",
    "ko": "면접 질문을 미리 연습했어.",
    "blank": "면접"
+  }
+ ],
+ "w|멸종": [
+  {
+   "text": "캠핑장 안내판에는 멸종 위기 동물을 보호하자는 글이 있었어요.",
+   "en": "The campsite sign had a message urging people to protect endangered animals.",
+   "ko": "캠핑장 안내판에는 멸종 위기 동물을 보호하자는 글이 있었어요.",
+   "blank": "멸종",
+   "src": "made"
+  },
+  {
+   "text": "호텔 강연에서 공룡이 멸종한 이유에 대한 이야기를 들었어요.",
+   "en": "At a talk held at the hotel, Yuna heard about why dinosaurs went extinct.",
+   "ko": "호텔 강연에서 공룡이 멸종한 이유에 대한 이야기를 들었어요.",
+   "blank": "멸종한",
+   "src": "made"
   }
  ],
  "w|명": [
@@ -23615,6 +23791,22 @@
    "src": "krdict"
   }
  ],
+ "w|박쥐": [
+  {
+   "text": "해가 지자 동굴 쪽에서 박쥐들이 날아 나왔어요.",
+   "en": "When the sun set, bats flew out from the direction of the cave.",
+   "ko": "해가 지자 동굴 쪽에서 박쥐들이 날아 나왔어요.",
+   "blank": "박쥐들이",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 기념품 가게에서 박쥐 모양 열쇠고리를 샀어요.",
+   "en": "Yuna bought a bat-shaped keychain at the hotel gift shop.",
+   "ko": "유나는 호텔 기념품 가게에서 박쥐 모양 열쇠고리를 샀어요.",
+   "blank": "박쥐",
+   "src": "made"
+  }
+ ],
  "w|박히다": [
   {
    "text": "사고 차량 바퀴에 커다란 못이 박혀 있었어요.",
@@ -25979,6 +26171,22 @@
    "src": "made"
   }
  ],
+ "w|보름달": [
+  {
+   "text": "캠핑 둘째 날 밤에는 보름달이 떠서 랜턴이 필요 없었어요.",
+   "en": "On the second night of camping, the full moon rose, so they didn't need a lantern.",
+   "ko": "캠핑 둘째 날 밤에는 보름달이 떠서 랜턴이 필요 없었어요.",
+   "blank": "보름달이",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 옥상에서 보름달을 보며 소원을 빌었어요.",
+   "en": "Yuna made a wish while looking at the full moon from the hotel rooftop.",
+   "ko": "유나는 호텔 옥상에서 보름달을 보며 소원을 빌었어요.",
+   "blank": "보름달을",
+   "src": "made"
+  }
+ ],
  "w|보리": [
   {
    "text": "이 식당은 물 대신 구수한 보리 차를 내줘요.",
@@ -26649,6 +26857,22 @@
    "src": "krdict"
   }
  ],
+ "w|부당하다": [
+  {
+   "text": "태윤은 캠핑장이 예고 없이 요금을 올린 건 부당하다고 항의했어요.",
+   "en": "Taeyun protested that the campsite raising fees without notice was unjust.",
+   "ko": "태윤은 캠핑장이 예고 없이 요금을 올린 건 부당하다고 항의했어요.",
+   "blank": "부당하다고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 쓰지도 않은 미니바 요금이 청구돼서 부당하다고 말했어요.",
+   "en": "Yuna said it was unfair to be charged for a minibar she hadn't used.",
+   "ko": "유나는 쓰지도 않은 미니바 요금이 청구돼서 부당하다고 말했어요.",
+   "blank": "부당하다고",
+   "src": "made"
+  }
+ ],
  "w|부동산": [
   {
    "text": "삼촌은 부동산에 투자하여 큰돈을 벌었다.",
@@ -26786,6 +27010,22 @@
    "en": "I collapsed while crying out in pain.",
    "ko": "아픔을 부르짖으며 쓰러졌어.",
    "blank": "부르짖으며"
+  }
+ ],
+ "w|부리": [
+  {
+   "text": "딱따구리가 부리로 나무를 두드리는 소리가 캠핑장에 울렸어요.",
+   "en": "The sound of a woodpecker tapping a tree with its beak echoed through the campsite.",
+   "ko": "딱따구리가 부리로 나무를 두드리는 소리가 캠핑장에 울렸어요.",
+   "blank": "부리로",
+   "src": "made"
+  },
+  {
+   "text": "호텔 연못의 백조가 부리로 깃털을 다듬었어요.",
+   "en": "A swan in the hotel pond preened its feathers with its beak.",
+   "ko": "호텔 연못의 백조가 부리로 깃털을 다듬었어요.",
+   "blank": "부리로",
+   "src": "made"
   }
  ],
  "w|부리다": [
@@ -27492,6 +27732,22 @@
    "blank": "불고기를"
   }
  ],
+ "w|불공정하다": [
+  {
+   "text": "태윤은 늦게 온 팀만 좋은 자리를 받은 건 불공정하다고 느꼈어요.",
+   "en": "Taeyun felt it was unfair that only the team that arrived late got a good spot.",
+   "ko": "태윤은 늦게 온 팀만 좋은 자리를 받은 건 불공정하다고 느꼈어요.",
+   "blank": "불공정하다고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 같은 방인데 가격이 두 배인 건 불공정하다고 생각했어요.",
+   "en": "Yuna thought it was unfair that the same room cost twice as much.",
+   "ko": "유나는 같은 방인데 가격이 두 배인 건 불공정하다고 생각했어요.",
+   "blank": "불공정하다고",
+   "src": "made"
+  }
+ ],
  "w|불공평하다": [
   {
    "text": "배분이 불공평하다 보니 싸움이 났어.",
@@ -27648,6 +27904,22 @@
    "src": "krdict"
   }
  ],
+ "w|불법적": [
+  {
+   "text": "국립공원에서 몰래 야영하는 건 불법적인 행동이에요.",
+   "en": "Secretly camping in a national park is illegal.",
+   "ko": "국립공원에서 몰래 야영하는 건 불법적인 행동이에요.",
+   "blank": "불법적인",
+   "src": "made"
+  },
+  {
+   "text": "호텔은 불법적인 촬영을 막으려고 객실을 매일 점검한대요.",
+   "en": "The hotel reportedly inspects its rooms daily to prevent illegal filming.",
+   "ko": "호텔은 불법적인 촬영을 막으려고 객실을 매일 점검한대요.",
+   "blank": "불법적인",
+   "src": "made"
+  }
+ ],
  "w|불쌍하다": [
   {
    "text": "비 맞는 고양이 불쌍해.",
@@ -27688,6 +27960,22 @@
    "en": "I put on music to soothe my anxiety.",
    "ko": "불안을 달래려고 음악을 틀어.",
    "blank": "불안을"
+  }
+ ],
+ "w|불안정하다": [
+  {
+   "text": "산속이라 휴대폰 신호가 불안정해서 태윤은 지도를 미리 받아 뒀어요.",
+   "en": "The phone signal was unstable in the mountains, so Taeyun downloaded the map in advance.",
+   "ko": "산속이라 휴대폰 신호가 불안정해서 태윤은 지도를 미리 받아 뒀어요.",
+   "blank": "불안정해서",
+   "src": "made"
+  },
+  {
+   "text": "호텔 엘리베이터가 불안정하게 흔들려서 유나는 계단을 썼어요.",
+   "en": "The hotel elevator shook unsteadily, so Yuna used the stairs.",
+   "ko": "호텔 엘리베이터가 불안정하게 흔들려서 유나는 계단을 썼어요.",
+   "blank": "불안정하게",
+   "src": "made"
   }
  ],
  "w|불안하다": [
@@ -28560,6 +28848,22 @@
    "ko": "어제에 비하면 오늘 날씨는 좋은 편이다.",
    "blank": "비하면",
    "src": "krdict"
+  }
+ ],
+ "w|비합리적": [
+  {
+   "text": "태윤은 짐이 무거운데도 의자를 세 개나 챙긴 건 비합리적이었다고 웃었어요.",
+   "en": "Taeyun laughed that bringing three chairs despite the heavy load had been irrational.",
+   "ko": "태윤은 짐이 무거운데도 의자를 세 개나 챙긴 건 비합리적이었다고 웃었어요.",
+   "blank": "비합리적이었다고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 하룻밤에 한 달 월급을 쓰는 건 비합리적이라고 생각했어요.",
+   "en": "Yuna thought spending a month's salary on one night was irrational.",
+   "ko": "유나는 하룻밤에 한 달 월급을 쓰는 건 비합리적이라고 생각했어요.",
+   "blank": "비합리적이라고",
+   "src": "made"
   }
  ],
  "w|비행기": [
@@ -31328,6 +31632,22 @@
    "blank": "생명을"
   }
  ],
+ "w|생물": [
+  {
+   "text": "태윤은 계곡 돌 밑에 사는 작은 생물을 관찰했어요.",
+   "en": "Taeyun observed the small creatures living under the rocks in the stream.",
+   "ko": "태윤은 계곡 돌 밑에 사는 작은 생물을 관찰했어요.",
+   "blank": "생물을",
+   "src": "made"
+  },
+  {
+   "text": "유나가 묵은 호텔에는 바다 생물을 볼 수 있는 수족관이 있었어요.",
+   "en": "The hotel Yuna stayed at had an aquarium where you could see sea creatures.",
+   "ko": "유나가 묵은 호텔에는 바다 생물을 볼 수 있는 수족관이 있었어요.",
+   "blank": "생물을",
+   "src": "made"
+  }
+ ],
  "w|생물학": [
   {
    "text": "법정에 나온 감정인은 생물학을 전공한 대학 교수였어요.",
@@ -31493,6 +31813,22 @@
    "en": "Haeun registered her facial biometric data to get an access card.",
    "ko": "하은은 출입증을 만들려고 얼굴 생체 정보를 등록했어요.",
    "blank": "생체",
+   "src": "made"
+  }
+ ],
+ "w|생태계": [
+  {
+   "text": "태윤은 쓰레기가 산의 생태계를 망친다며 모두 챙겨 왔어요.",
+   "en": "Taeyun took all his trash with him, saying it ruins the mountain ecosystem.",
+   "ko": "태윤은 쓰레기가 산의 생태계를 망친다며 모두 챙겨 왔어요.",
+   "blank": "생태계를",
+   "src": "made"
+  },
+  {
+   "text": "이 호텔은 섬의 생태계를 지키려고 일회용품을 쓰지 않아요.",
+   "en": "This hotel doesn't use disposables in order to protect the island's ecosystem.",
+   "ko": "이 호텔은 섬의 생태계를 지키려고 일회용품을 쓰지 않아요.",
+   "blank": "생태계를",
    "src": "made"
   }
  ],
@@ -35980,6 +36316,38 @@
    "blank": "식당에서"
   }
  ],
+ "w|식물": [
+  {
+   "text": "태윤은 캠핑장 주변에서 처음 보는 식물을 사진으로 찍었어요.",
+   "en": "Taeyun took photos of plants he'd never seen around the campsite.",
+   "ko": "태윤은 캠핑장 주변에서 처음 보는 식물을 사진으로 찍었어요.",
+   "blank": "식물을",
+   "src": "made"
+  },
+  {
+   "text": "호텔 로비는 커다란 식물로 꾸며져 있었어요.",
+   "en": "The hotel lobby was decorated with large plants.",
+   "ko": "호텔 로비는 커다란 식물로 꾸며져 있었어요.",
+   "blank": "식물로",
+   "src": "made"
+  }
+ ],
+ "w|식물원": [
+  {
+   "text": "캠핑을 마치고 태윤은 근처 식물원에 들렀어요.",
+   "en": "After the camping trip, Taeyun stopped by a nearby botanical garden.",
+   "ko": "캠핑을 마치고 태윤은 근처 식물원에 들렀어요.",
+   "blank": "식물원에",
+   "src": "made"
+  },
+  {
+   "text": "유나가 묵은 호텔 바로 옆에 커다란 식물원이 있었어요.",
+   "en": "There was a big botanical garden right next to Yuna's hotel.",
+   "ko": "유나가 묵은 호텔 바로 옆에 커다란 식물원이 있었어요.",
+   "blank": "식물원이",
+   "src": "made"
+  }
+ ],
  "w|식사": [
   {
    "text": "식사는 같이 할까?",
@@ -38550,6 +38918,22 @@
    "src": "made"
   }
  ],
+ "w|악어": [
+  {
+   "text": "태윤은 모닥불 앞에서 아이들에게 악어가 나오는 동화를 읽어 줬어요.",
+   "en": "By the campfire, Taeyun read the kids a fairy tale featuring a crocodile.",
+   "ko": "태윤은 모닥불 앞에서 아이들에게 악어가 나오는 동화를 읽어 줬어요.",
+   "blank": "악어가",
+   "src": "made"
+  },
+  {
+   "text": "호텔 투어 프로그램에 악어 농장 방문이 들어 있었어요.",
+   "en": "The hotel's tour program included a visit to a crocodile farm.",
+   "ko": "호텔 투어 프로그램에 악어 농장 방문이 들어 있었어요.",
+   "blank": "악어",
+   "src": "made"
+  }
+ ],
  "w|악의": [
   {
    "text": "친구가 내 말을 악의로 오해해서 싸움이 났다.",
@@ -38767,6 +39151,22 @@
    "en": "After drinking a cup of warm tea, Yuna felt calm.",
    "ko": "따뜻한 차를 한 잔 마시고 나니 유나는 마음이 안정됐어요.",
    "blank": "안정됐어요",
+   "src": "made"
+  }
+ ],
+ "w|안정적": [
+  {
+   "text": "태윤은 바람에도 흔들리지 않게 텐트를 안정적으로 고정했어요.",
+   "en": "Taeyun secured the tent firmly so it wouldn't shake in the wind.",
+   "ko": "태윤은 바람에도 흔들리지 않게 텐트를 안정적으로 고정했어요.",
+   "blank": "안정적으로",
+   "src": "made"
+  },
+  {
+   "text": "이 호텔은 와이파이가 안정적이어서 유나가 일하기 좋았어요.",
+   "en": "This hotel's Wi-Fi was stable, so it was good for Yuna to work.",
+   "ko": "이 호텔은 와이파이가 안정적이어서 유나가 일하기 좋았어요.",
+   "blank": "안정적이어서",
    "src": "made"
   }
  ],
@@ -45636,6 +46036,22 @@
    "src": "made"
   }
  ],
+ "w|위태롭다": [
+  {
+   "text": "강물이 불어나서 강가에 친 텐트들이 위태로워 보였어요.",
+   "en": "The river rose, and the tents pitched on the bank looked precarious.",
+   "ko": "강물이 불어나서 강가에 친 텐트들이 위태로워 보였어요.",
+   "blank": "위태로워",
+   "src": "made"
+  },
+  {
+   "text": "호텔 발코니 난간이 낡아서 유나는 위태롭다고 느꼈어요.",
+   "en": "The hotel balcony railing was old, and Yuna felt it was unsafe.",
+   "ko": "호텔 발코니 난간이 낡아서 유나는 위태롭다고 느꼈어요.",
+   "blank": "위태롭다고",
+   "src": "made"
+  }
+ ],
  "w|위하다": [
   {
    "text": "널 위해 아껴 둔 거야.",
@@ -46126,6 +46542,22 @@
    "en": "The athlete retired early.",
    "ko": "선수가 일찍 은퇴했어.",
    "blank": "은퇴했어"
+  }
+ ],
+ "w|은하": [
+  {
+   "text": "산속 밤하늘이 맑아서 태윤은 은하가 흐르는 모습을 맨눈으로 봤어요.",
+   "en": "The night sky in the mountains was so clear that Taeyun saw the galaxy stretch across it with his bare eyes.",
+   "ko": "산속 밤하늘이 맑아서 태윤은 은하가 흐르는 모습을 맨눈으로 봤어요.",
+   "blank": "은하가",
+   "src": "made"
+  },
+  {
+   "text": "호텔 천장에는 은하를 그린 커다란 그림이 걸려 있었어요.",
+   "en": "A huge painting of a galaxy hung on the hotel ceiling.",
+   "ko": "호텔 천장에는 은하를 그린 커다란 그림이 걸려 있었어요.",
+   "blank": "은하를",
+   "src": "made"
   }
  ],
  "w|은행": [
@@ -47422,6 +47854,22 @@
    "blank": "이상이야"
   }
  ],
+ "w|이상적": [
+  {
+   "text": "계곡 옆 평평한 자리는 텐트를 치기에 이상적이었어요.",
+   "en": "The flat spot beside the stream was ideal for pitching a tent.",
+   "ko": "계곡 옆 평평한 자리는 텐트를 치기에 이상적이었어요.",
+   "blank": "이상적이었어요",
+   "src": "made"
+  },
+  {
+   "text": "유나에게 바다가 보이는 조용한 호텔은 이상적인 휴가지였어요.",
+   "en": "For Yuna, a quiet hotel with a sea view was the ideal vacation spot.",
+   "ko": "유나에게 바다가 보이는 조용한 호텔은 이상적인 휴가지였어요.",
+   "blank": "이상적인",
+   "src": "made"
+  }
+ ],
  "w|이상하다": [
   {
    "text": "오늘 날씨 이상해.",
@@ -47434,6 +47882,22 @@
    "en": "The attitude was a bit odd.",
    "ko": "태도가 좀 이상했어.",
    "blank": "이상했어"
+  }
+ ],
+ "w|이성적": [
+  {
+   "text": "태윤은 폭우 예보를 듣고 이성적으로 캠핑을 하루 미뤘어요.",
+   "en": "Hearing the heavy-rain forecast, Taeyun sensibly put off camping by a day.",
+   "ko": "태윤은 폭우 예보를 듣고 이성적으로 캠핑을 하루 미뤘어요.",
+   "blank": "이성적으로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 화가 났지만 이성적인 태도로 매니저와 이야기했어요.",
+   "en": "Yuna was angry but talked with the manager in a rational manner.",
+   "ko": "유나는 화가 났지만 이성적인 태도로 매니저와 이야기했어요.",
+   "blank": "이성적인",
+   "src": "made"
   }
  ],
  "w|이야기": [
@@ -50038,6 +50502,22 @@
    "blank": "잠자다"
   }
  ],
+ "w|잠자리": [
+  {
+   "text": "태윤은 캠핑장 텐트 위에 잠자리가 앉아 있는 걸 봤어요.",
+   "en": "Taeyun saw a dragonfly sitting on top of the tent at the campsite.",
+   "ko": "태윤은 캠핑장 텐트 위에 잠자리가 앉아 있는 걸 봤어요.",
+   "blank": "잠자리가",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 침대가 낯설어서 잠자리가 불편했어요.",
+   "en": "Yuna found the hotel bed unfamiliar and slept uncomfortably.",
+   "ko": "유나는 호텔 침대가 낯설어서 잠자리가 불편했어요.",
+   "blank": "잠자리가",
+   "src": "made"
+  }
+ ],
  "w|잠자코": [
   {
    "text": "경민은 선생님이 꾸중하시는 동안 잠자코 듣기만 했어요.",
@@ -50848,6 +51328,22 @@
    "en": "Did the court ruling come out?",
    "ko": "재판 결과 나왔어?",
    "blank": "재판"
+  }
+ ],
+ "w|재해": [
+  {
+   "text": "태윤은 산사태 같은 재해에 대비해서 계곡 바로 옆에는 텐트를 치지 않아요.",
+   "en": "Taeyun never pitches a tent right beside a stream, to be safe from disasters like landslides.",
+   "ko": "태윤은 산사태 같은 재해에 대비해서 계곡 바로 옆에는 텐트를 치지 않아요.",
+   "blank": "재해에",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 객실에 붙은 재해 대피 안내도를 확인했어요.",
+   "en": "Yuna checked the disaster evacuation map posted in the hotel room.",
+   "ko": "유나는 호텔 객실에 붙은 재해 대피 안내도를 확인했어요.",
+   "blank": "재해",
+   "src": "made"
   }
  ],
  "w|잼": [
@@ -53504,6 +54000,22 @@
    "blank": "조상의"
   }
  ],
+ "w|조수": [
+  {
+   "text": "바닷가 캠핑장에서 태윤은 조수 시간표를 확인하고 갯벌에 나갔어요.",
+   "en": "At the seaside campsite, Taeyun checked the tide table before heading out onto the mudflat.",
+   "ko": "바닷가 캠핑장에서 태윤은 조수 시간표를 확인하고 갯벌에 나갔어요.",
+   "blank": "조수",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 직원에게 조수 간만의 차가 큰 해변이 어디냐고 물었어요.",
+   "en": "Yuna asked the hotel staff where the beach with the big tidal range was.",
+   "ko": "유나는 호텔 직원에게 조수 간만의 차가 큰 해변이 어디냐고 물었어요.",
+   "blank": "조수",
+   "src": "made"
+  }
+ ],
  "w|조심스럽다": [
   {
    "text": "발걸음이 조심스러워.",
@@ -54100,6 +54612,22 @@
    "en": "There are too many meetings this week.",
    "ko": "이번 주는 회의가 너무 많아.",
    "blank": "주는"
+  }
+ ],
+ "w|주관적": [
+  {
+   "text": "경치가 좋다는 건 주관적이지만 태윤에게는 최고의 캠핑장이었어요.",
+   "en": "Whether the view is good is subjective, but for Taeyun it was the best campsite.",
+   "ko": "경치가 좋다는 건 주관적이지만 태윤에게는 최고의 캠핑장이었어요.",
+   "blank": "주관적이지만",
+   "src": "made"
+  },
+  {
+   "text": "호텔 후기는 주관적인 의견이 많아서 유나는 참고만 해요.",
+   "en": "Hotel reviews are full of subjective opinions, so Yuna uses them only as reference.",
+   "ko": "호텔 후기는 주관적인 의견이 많아서 유나는 참고만 해요.",
+   "blank": "주관적인",
+   "src": "made"
   }
  ],
  "w|주다": [
@@ -54711,6 +55239,22 @@
    "en": "Jiyoung laughed the whole evening, so much that her face hurt.",
    "ko": "지영은 저녁 내내 줄곧 웃느라 얼굴이 아플 정도였어요.",
    "blank": "줄곧",
+   "src": "made"
+  }
+ ],
+ "w|줄기": [
+  {
+   "text": "태윤은 덩굴 줄기를 걷어 내고 텐트 자리를 만들었어요.",
+   "en": "Taeyun cleared away the vine stems and made a spot for the tent.",
+   "ko": "태윤은 덩굴 줄기를 걷어 내고 텐트 자리를 만들었어요.",
+   "blank": "줄기를",
+   "src": "made"
+  },
+  {
+   "text": "호텔 꽃병의 장미는 줄기가 길고 곧았어요.",
+   "en": "The roses in the hotel vase had long, straight stems.",
+   "ko": "호텔 꽃병의 장미는 줄기가 길고 곧았어요.",
+   "blank": "줄기가",
    "src": "made"
   }
  ],
@@ -62734,6 +63278,22 @@
    "blank": "파일은"
   }
  ],
+ "w|파충류": [
+  {
+   "text": "태윤은 바위 위에서 햇볕을 쬐는 작은 파충류를 발견했어요.",
+   "en": "Taeyun spotted a small reptile basking in the sun on a rock.",
+   "ko": "태윤은 바위 위에서 햇볕을 쬐는 작은 파충류를 발견했어요.",
+   "blank": "파충류를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 근처 파충류 전시관에서 거북이를 봤어요.",
+   "en": "Yuna saw turtles at the reptile exhibit near the hotel.",
+   "ko": "유나는 호텔 근처 파충류 전시관에서 거북이를 봤어요.",
+   "blank": "파충류",
+   "src": "made"
+  }
+ ],
  "w|파트너": [
   {
    "text": "사업 파트너와 계약을 맺었어.",
@@ -63499,6 +64059,22 @@
    "en": "On the day of discharge, the patient thanked Sujin with a warm hug.",
    "ko": "퇴원하는 날 환자는 수진에게 따뜻한 포옹으로 고마움을 전했어요.",
    "blank": "포옹으로",
+   "src": "made"
+  }
+ ],
+ "w|포유류": [
+  {
+   "text": "태윤은 아이들에게 다람쥐도 포유류라고 알려 줬어요.",
+   "en": "Taeyun told the kids that squirrels are mammals too.",
+   "ko": "태윤은 아이들에게 다람쥐도 포유류라고 알려 줬어요.",
+   "blank": "포유류라고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 수족관 안내문에서 돌고래가 포유류라는 걸 다시 읽었어요.",
+   "en": "At the hotel aquarium, Yuna read again on the sign that dolphins are mammals.",
+   "ko": "유나는 호텔 수족관 안내문에서 돌고래가 포유류라는 걸 다시 읽었어요.",
+   "blank": "포유류라는",
    "src": "made"
   }
  ],
@@ -64380,6 +64956,22 @@
    "blank": "하룻밤에"
   }
  ],
+ "w|하마": [
+  {
+   "text": "태윤의 조카는 하마 인형을 안고 텐트에서 잠들었어요.",
+   "en": "Taeyun's nephew fell asleep in the tent hugging a hippo doll.",
+   "ko": "태윤의 조카는 하마 인형을 안고 텐트에서 잠들었어요.",
+   "blank": "하마",
+   "src": "made"
+  },
+  {
+   "text": "유나는 호텔 근처 동물원에서 하마가 하품하는 걸 봤어요.",
+   "en": "Yuna saw a hippo yawning at the zoo near the hotel.",
+   "ko": "유나는 호텔 근처 동물원에서 하마가 하품하는 걸 봤어요.",
+   "blank": "하마가",
+   "src": "made"
+  }
+ ],
  "w|하얗다": [
   {
    "text": "눈이 하얘.",
@@ -65038,6 +65630,22 @@
    "src": "made"
   }
  ],
+ "w|합리적": [
+  {
+   "text": "태윤은 장비를 사는 대신 빌리는 게 더 합리적이라고 생각했어요.",
+   "en": "Taeyun thought renting gear was more sensible than buying it.",
+   "ko": "태윤은 장비를 사는 대신 빌리는 게 더 합리적이라고 생각했어요.",
+   "blank": "합리적이라고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 위치와 가격을 비교해서 합리적인 호텔을 예약했어요.",
+   "en": "Yuna compared location and price and booked a reasonably priced hotel.",
+   "ko": "유나는 위치와 가격을 비교해서 합리적인 호텔을 예약했어요.",
+   "blank": "합리적인",
+   "src": "made"
+  }
+ ],
  "w|합법": [
   {
    "text": "전자책을 합법적으로 빌려 볼 수 있는 서비스가 생겼어요.",
@@ -65051,6 +65659,22 @@
    "en": "Pets on the train are only allowed legally if they're in a carrier.",
    "ko": "열차 안에서 반려동물은 이동장에 넣어야 합법이에요.",
    "blank": "합법이에요",
+   "src": "made"
+  }
+ ],
+ "w|합법적": [
+  {
+   "text": "태윤은 합법적으로 허가받은 캠핑장에서만 불을 피워요.",
+   "en": "Taeyun only builds fires at legally licensed campsites.",
+   "ko": "태윤은 합법적으로 허가받은 캠핑장에서만 불을 피워요.",
+   "blank": "합법적으로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 합법적으로 등록된 숙소인지 먼저 확인해요.",
+   "en": "Yuna first checks whether the lodging is legally registered.",
+   "ko": "유나는 합법적으로 등록된 숙소인지 먼저 확인해요.",
+   "blank": "합법적으로",
    "src": "made"
   }
  ],
@@ -65614,6 +66238,22 @@
    "en": "The sunlight is dazzling.",
    "ko": "햇빛이 눈을 부시게 해.",
    "blank": "햇빛이"
+  }
+ ],
+ "w|햇살": [
+  {
+   "text": "아침 햇살이 텐트 안으로 들어와서 태윤은 눈을 떴어요.",
+   "en": "Taeyun opened his eyes as the morning sunlight came into the tent.",
+   "ko": "아침 햇살이 텐트 안으로 들어와서 태윤은 눈을 떴어요.",
+   "blank": "햇살이",
+   "src": "made"
+  },
+  {
+   "text": "유나는 햇살이 잘 드는 창가 자리에서 아침을 먹었어요.",
+   "en": "Yuna ate breakfast at a sunny window seat.",
+   "ko": "유나는 햇살이 잘 드는 창가 자리에서 아침을 먹었어요.",
+   "blank": "햇살이",
+   "src": "made"
   }
  ],
  "w|행동": [

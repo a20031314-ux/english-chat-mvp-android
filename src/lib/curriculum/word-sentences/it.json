@@ -403,6 +403,22 @@
    "src": "made"
   }
  ],
+ "w|accoltellare": [
+  {
+   "text": "Nella tragedia studiata in classe, Davide legge la scena in cui i congiurati accoltellano il re.",
+   "en": "In the tragedy they are studying in class, Davide reads the scene where the conspirators stab the king.",
+   "ko": "수업 시간에 배우는 비극에서 다비데는 음모자들이 왕을 칼로 찌르는 장면을 읽어요.",
+   "blank": "accoltellano",
+   "src": "made"
+  },
+  {
+   "text": "Nel giallo che Elena legge a bordo vasca, la vittima viene accoltellata in uno spogliatoio.",
+   "en": "In the thriller Elena reads by the pool, the victim is stabbed in a changing room.",
+   "ko": "엘레나가 수영장 가에서 읽는 추리 소설에서 피해자는 탈의실에서 칼에 찔려요.",
+   "blank": "accoltellata",
+   "src": "made"
+  }
+ ],
  "w|accomodare": [
   {
    "text": "Si accomodi pure, la sedia è libera.",
@@ -1748,6 +1764,22 @@
    "en": "Inter-library loan is rather slow, Laura admits.",
    "ko": "도서관 간 대출은 꽤 느리다고 라우라도 인정해요.",
    "blank": "alquanto",
+   "src": "made"
+  }
+ ],
+ "w|altare": [
+  {
+   "text": "In gita la classe di Davide ha visto un altare romano dedicato a Giove.",
+   "en": "On the school trip Davide's class saw a Roman altar dedicated to Jupiter.",
+   "ko": "견학에서 다비데네 반은 유피테르에게 바친 로마 제단을 봤어요.",
+   "blank": "altare",
+   "src": "made"
+  },
+  {
+   "text": "Prima delle gare, la mamma di Elena accende una candela sull'altare della chiesa.",
+   "en": "Before races, Elena's mother lights a candle at the church altar.",
+   "ko": "대회 전에 엘레나의 엄마는 성당 제단에 초를 켜요.",
+   "blank": "altare",
    "src": "made"
   }
  ],
@@ -7713,6 +7745,22 @@
    "blank": "castello"
   }
  ],
+ "w|casuale": [
+  {
+   "text": "Il professore sceglie un ordine casuale per le interrogazioni, e oggi tocca a Davide.",
+   "en": "The teacher picks a random order for oral tests, and today it's Davide's turn.",
+   "ko": "선생님은 구술시험 순서를 무작위로 정하는데 오늘은 다비데 차례예요.",
+   "blank": "casuale",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha conosciuto la sua migliore amica in un incontro casuale negli spogliatoi.",
+   "en": "Elena met her best friend in a chance encounter in the changing rooms.",
+   "ko": "엘레나는 탈의실에서 우연히 만난 친구와 단짝이 됐어요.",
+   "blank": "casuale",
+   "src": "made"
+  }
+ ],
  "w|categoria": [
   {
    "text": "Alla festa di condominio Paolo ha vinto il premio nella categoria dolci.",
@@ -10295,6 +10343,22 @@
    "blank": "complimento"
   }
  ],
+ "w|comporre": [
+  {
+   "text": "Per l'ora di musica Davide deve comporre una breve melodia per flauto.",
+   "en": "For music class Davide has to compose a short tune for the recorder.",
+   "ko": "음악 시간에 다비데는 리코더로 부를 짧은 멜로디를 작곡해야 해요.",
+   "blank": "comporre",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha composto il numero della piscina per prenotare una lezione di prova.",
+   "en": "Elena dialled the pool's number to book a trial lesson.",
+   "ko": "엘레나는 체험 수업을 예약하려고 수영장 번호를 눌렀어요.",
+   "blank": "composto",
+   "src": "made"
+  }
+ ],
  "w|comportamento": [
   {
    "text": "Il suo comportamento è stato inappropriato.",
@@ -11161,6 +11225,22 @@
    "src": "made"
   }
  ],
+ "w|consentire": [
+  {
+   "text": "Il regolamento della scuola non consente a Davide di usare il telefono in classe.",
+   "en": "The school rules don't allow Davide to use his phone in class.",
+   "ko": "학교 규칙상 다비데는 교실에서 휴대폰을 쓸 수 없어요.",
+   "blank": "consente",
+   "src": "made"
+  },
+  {
+   "text": "L'abbonamento di Elena le consente di entrare in piscina anche la domenica.",
+   "en": "Elena's membership lets her into the pool on Sundays too.",
+   "ko": "엘레나의 회원권으로는 일요일에도 수영장에 들어갈 수 있어요.",
+   "blank": "consente",
+   "src": "made"
+  }
+ ],
  "w|conservare": [
   {
    "text": "Stefano sa come conservare i funghi sott'olio per tutto l'inverno.",
@@ -11407,6 +11487,22 @@
    "en": "The jug contains fresh water.",
    "ko": "주전자에 신선한 물이 들어 있어.",
    "blank": "contiene"
+  }
+ ],
+ "w|contenitore": [
+  {
+   "text": "In mensa Davide butta la plastica nel contenitore giallo.",
+   "en": "In the canteen Davide throws plastic into the yellow bin.",
+   "ko": "급식실에서 다비데는 플라스틱을 노란 통에 버려요.",
+   "blank": "contenitore",
+   "src": "made"
+  },
+  {
+   "text": "Elena mette la cuffia e gli occhialini bagnati in un contenitore di plastica.",
+   "en": "Elena puts her wet cap and goggles in a plastic container.",
+   "ko": "엘레나는 젖은 수영모와 물안경을 플라스틱 통에 넣어요.",
+   "blank": "contenitore",
+   "src": "made"
   }
  ],
  "w|contento": [
@@ -11913,6 +12009,22 @@
    "en": "He runs in the park every morning.",
    "ko": "그는 매일 아침 공원에서 뛰어.",
    "blank": "Corre"
+  }
+ ],
+ "w|corretto": [
+  {
+   "text": "La professoressa ha detto a Davide che il suo calcolo è corretto, ma il disegno no.",
+   "en": "The teacher told Davide his calculation is correct, but the drawing isn't.",
+   "ko": "선생님은 다비데의 계산은 맞지만 그림은 틀렸다고 했어요.",
+   "blank": "corretto",
+   "src": "made"
+  },
+  {
+   "text": "L'allenatore dice a Elena che il movimento delle gambe ora è corretto.",
+   "en": "The coach tells Elena that her leg movement is now correct.",
+   "ko": "코치는 엘레나에게 이제 다리 동작이 정확하다고 말해요.",
+   "blank": "corretto",
+   "src": "made"
   }
  ],
  "w|corridoio": [
@@ -13577,6 +13689,22 @@
    "src": "made"
   }
  ],
+ "w|deputato": [
+  {
+   "text": "La classe di Davide ha visitato il Parlamento e ha parlato con un deputato.",
+   "en": "Davide's class visited Parliament and talked with an MP.",
+   "ko": "다비데네 반은 국회를 견학하고 국회의원과 이야기를 나눴어요.",
+   "blank": "deputato",
+   "src": "made"
+  },
+  {
+   "text": "Alla piscina comunale Elena ha incontrato un deputato che nuotava nella corsia lenta.",
+   "en": "At the public pool Elena met an MP who was swimming in the slow lane.",
+   "ko": "시립 수영장에서 엘레나는 느린 레인에서 수영하던 국회의원을 만났어요.",
+   "blank": "deputato",
+   "src": "made"
+  }
+ ],
  "w|derubare": [
   {
    "text": "Due turisti sono stati derubati alla stazione, e Luca ha raccolto la loro testimonianza.",
@@ -14837,6 +14965,22 @@
    "blank": "distanza"
   }
  ],
+ "w|distinguere": [
+  {
+   "text": "Al microscopio Davide impara a distinguere una cellula vegetale da una animale.",
+   "en": "Under the microscope Davide learns to tell a plant cell from an animal one.",
+   "ko": "현미경으로 다비데는 식물 세포와 동물 세포를 구별하는 법을 배워요.",
+   "blank": "distinguere",
+   "src": "made"
+  },
+  {
+   "text": "Da lontano Elena non riesce a distinguere la sua amica tra tutte le cuffie colorate.",
+   "en": "From a distance Elena can't make out her friend among all the coloured caps.",
+   "ko": "멀리서 엘레나는 알록달록한 수영모들 사이에서 친구를 알아보지 못해요.",
+   "blank": "distinguere",
+   "src": "made"
+  }
+ ],
  "w|distintivo": [
   {
    "text": "Il poliziotto mostra il distintivo all'ingresso.",
@@ -15165,6 +15309,22 @@
    "en": "A hot shower always relaxes me.",
    "ko": "따뜻한 샤워는 항상 나를 편하게 해 줘.",
    "blank": "doccia"
+  }
+ ],
+ "w|documentario": [
+  {
+   "text": "A scienze la classe di Davide ha visto un documentario sulle balene.",
+   "en": "In science Davide's class watched a documentary about whales.",
+   "ko": "과학 시간에 다비데네 반은 고래 다큐멘터리를 봤어요.",
+   "blank": "documentario",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha visto un documentario sulle nuotatrici in mare aperto e ha deciso di provarci.",
+   "en": "Elena watched a documentary about open-water swimmers and decided to give it a go.",
+   "ko": "엘레나는 바다 수영 선수들에 관한 다큐멘터리를 보고 도전해 보기로 했어요.",
+   "blank": "documentario",
+   "src": "made"
   }
  ],
  "w|documento": [
@@ -15529,6 +15689,22 @@
    "en": "I slept like a log.",
    "ko": "죽도록 잘 잤어.",
    "blank": "dormito"
+  }
+ ],
+ "w|dormitorio": [
+  {
+   "text": "Durante la gita di tre giorni, Davide ha dormito in un dormitorio con altri dieci ragazzi.",
+   "en": "On the three-day trip, Davide slept in a dormitory with ten other boys.",
+   "ko": "삼 일짜리 수학여행에서 다비데는 다른 남자아이 열 명과 기숙사 방에서 잤어요.",
+   "blank": "dormitorio",
+   "src": "made"
+  },
+  {
+   "text": "Al campus di nuoto Elena dormiva in un dormitorio vicino alla piscina.",
+   "en": "At swimming camp Elena slept in a dormitory near the pool.",
+   "ko": "수영 캠프에서 엘레나는 수영장 근처 기숙사에서 잤어요.",
+   "blank": "dormitorio",
+   "src": "made"
   }
  ],
  "w|dose": [
@@ -17143,6 +17319,22 @@
    "src": "made"
   }
  ],
+ "w|esposizione": [
+  {
+   "text": "La scuola di Davide organizza un'esposizione dei lavori di arte degli studenti.",
+   "en": "Davide's school is organising an exhibition of the students' artwork.",
+   "ko": "다비데의 학교는 학생들의 미술 작품 전시회를 열어요.",
+   "blank": "esposizione",
+   "src": "made"
+  },
+  {
+   "text": "Elena usa molta crema perché l'esposizione al sole sul bordo vasca è forte.",
+   "en": "Elena uses lots of sun cream because the sun exposure by the pool is strong.",
+   "ko": "수영장 가장자리는 햇볕이 강해서 엘레나는 선크림을 많이 발라요.",
+   "blank": "esposizione",
+   "src": "made"
+  }
+ ],
  "w|espressione": [
   {
    "text": "La sua espressione era piena di sorpresa.",
@@ -17186,6 +17378,22 @@
    "en": "Francesca can't quite express how much she'll miss her customers when she closes.",
    "ko": "가게를 닫으면 손님들이 얼마나 그리울지 프란체스카는 말로 다 못 해요.",
    "blank": "esprimere",
+   "src": "made"
+  }
+ ],
+ "w|essenziale": [
+  {
+   "text": "Per la maestra di Davide, leggere ogni giorno è essenziale per scrivere bene.",
+   "en": "For Davide's teacher, reading every day is essential to writing well.",
+   "ko": "다비데의 선생님은 잘 쓰려면 매일 읽는 게 꼭 필요하다고 해요.",
+   "blank": "essenziale",
+   "src": "made"
+  },
+  {
+   "text": "Per Elena la cuffia è essenziale: senza, il cloro le rovina i capelli.",
+   "en": "For Elena a swimming cap is essential: without one, the chlorine ruins her hair.",
+   "ko": "엘레나에게 수영모는 꼭 필요해요. 안 쓰면 염소 때문에 머리카락이 상해요.",
+   "blank": "essenziale",
    "src": "made"
   }
  ],
@@ -19150,6 +19358,22 @@
    "en": "For Sara, customers' trust is fundamental.",
    "ko": "사라에게는 손님들의 신뢰가 가장 중요해요.",
    "blank": "fondamentale",
+   "src": "made"
+  }
+ ],
+ "w|fondatore": [
+  {
+   "text": "Nell'atrio c'è una statua del fondatore della scuola, e Davide gli passa davanti ogni mattina.",
+   "en": "In the entrance hall there's a statue of the school's founder, and Davide walks past it every morning.",
+   "ko": "현관에는 학교 설립자의 동상이 있어서 다비데는 매일 아침 그 앞을 지나요.",
+   "blank": "fondatore",
+   "src": "made"
+  },
+  {
+   "text": "Il fondatore della società di nuoto ha consegnato una medaglia a Elena.",
+   "en": "The founder of the swimming club gave Elena a medal.",
+   "ko": "수영 클럽 설립자가 엘레나에게 메달을 걸어 줬어요.",
+   "blank": "fondatore",
    "src": "made"
   }
  ],
@@ -21357,6 +21581,22 @@
    "src": "made"
   }
  ],
+ "w|governare": [
+  {
+   "text": "A storia Davide studia come i Romani riuscivano a governare territori così vasti.",
+   "en": "In history Davide studies how the Romans managed to govern such vast territories.",
+   "ko": "역사 시간에 다비데는 로마인들이 그렇게 넓은 땅을 어떻게 다스렸는지 배워요.",
+   "blank": "governare",
+   "src": "made"
+  },
+  {
+   "text": "Elena scherza che per governare quaranta bambini in acqua ci vuole un generale.",
+   "en": "Elena jokes that you need a general to manage forty children in the water.",
+   "ko": "엘레나는 물속에서 아이 마흔 명을 다스리려면 장군이 필요하다고 농담해요.",
+   "blank": "governare",
+   "src": "made"
+  }
+ ],
  "w|governativo": [
   {
    "text": "La scuola di Matteo ha ricevuto un finanziamento governativo per rifare il tetto.",
@@ -21429,6 +21669,22 @@
    "en": "It's one degree warmer than usual today.",
    "ko": "오늘은 평소보다 기온이 조금 높아.",
    "blank": "grado"
+  }
+ ],
+ "w|graffiare": [
+  {
+   "text": "Il gatto della bidella ha graffiato Davide quando lui ha provato ad accarezzarlo.",
+   "en": "The caretaker's cat scratched Davide when he tried to stroke it.",
+   "ko": "다비데가 쓰다듬으려 하자 관리인 아줌마의 고양이가 다비데를 할퀴었어요.",
+   "blank": "graffiato",
+   "src": "made"
+  },
+  {
+   "text": "Elena si è graffiata il ginocchio sul bordo ruvido della vasca.",
+   "en": "Elena scratched her knee on the rough edge of the pool.",
+   "ko": "엘레나는 수영장 가장자리의 거친 벽에 무릎이 긁혔어요.",
+   "blank": "graffiata",
+   "src": "made"
   }
  ],
  "w|grande": [
@@ -23947,6 +24203,22 @@
    "blank": "Intanto"
   }
  ],
+ "w|intatto": [
+  {
+   "text": "Dopo il terremoto, la vecchia aula magna della scuola di Davide è rimasta intatta.",
+   "en": "After the earthquake, the old assembly hall at Davide's school remained intact.",
+   "ko": "지진이 난 뒤에도 다비데 학교의 오래된 강당은 멀쩡했어요.",
+   "blank": "intatta",
+   "src": "made"
+  },
+  {
+   "text": "Dopo un'ora in acqua, il trucco di Elena era ancora intatto.",
+   "en": "After an hour in the water, Elena's make-up was still intact.",
+   "ko": "물속에서 한 시간을 보냈는데도 엘레나의 화장은 그대로였어요.",
+   "blank": "intatto",
+   "src": "made"
+  }
+ ],
  "w|intelligente": [
   {
    "text": "È una ragazza davvero intelligente.",
@@ -24278,6 +24550,22 @@
    "en": "Traffic trapped Francesca on the ring road for half an hour.",
    "ko": "프란체스카는 순환도로에서 삼십 분 동안 차에 갇혀 있었어요.",
    "blank": "intrappolato",
+   "src": "made"
+  }
+ ],
+ "w|intruso": [
+  {
+   "text": "Durante la recita, un cane è entrato sul palco come un intruso e Davide è scoppiato a ridere.",
+   "en": "During the play, a dog came on stage like an intruder and Davide burst out laughing.",
+   "ko": "연극 도중 개 한 마리가 불청객처럼 무대에 올라와서 다비데는 웃음을 터뜨렸어요.",
+   "blank": "intruso",
+   "src": "made"
+  },
+  {
+   "text": "In vasca Elena si sente un'intrusa tra i nuotatori della squadra agonistica.",
+   "en": "In the pool Elena feels like an intruder among the competitive team swimmers.",
+   "ko": "수영장에서 엘레나는 경기팀 선수들 사이에서 낯선 침입자 같은 기분이 들어요.",
+   "blank": "intrusa",
    "src": "made"
   }
  ],
@@ -25663,6 +25951,22 @@
    "en": "After work she values her freedom.",
    "ko": "퇴근 후에 그녀는 자신의 자유를 소중히 여겨.",
    "blank": "libertà"
+  }
+ ],
+ "w|libreria": [
+  {
+   "text": "Dopo scuola Davide passa in libreria a comprare il libro per le vacanze.",
+   "en": "After school Davide stops at the bookshop to buy the holiday reading book.",
+   "ko": "방과 후에 다비데는 서점에 들러 방학 때 읽을 책을 사요.",
+   "blank": "libreria",
+   "src": "made"
+  },
+  {
+   "text": "Accanto alla piscina c'è una piccola libreria dove Elena compra le riviste.",
+   "en": "Next to the pool there's a little bookshop where Elena buys her magazines.",
+   "ko": "수영장 옆에는 작은 서점이 있어서 엘레나는 거기서 잡지를 사요.",
+   "blank": "libreria",
+   "src": "made"
   }
  ],
  "w|libro": [
@@ -27741,6 +28045,22 @@
    "src": "made"
   }
  ],
+ "w|menzionare": [
+  {
+   "text": "Nel tema Davide ha dimenticato di menzionare la fonte delle sue informazioni.",
+   "en": "In his essay Davide forgot to mention the source of his information.",
+   "ko": "작문에서 다비데는 정보 출처를 밝히는 걸 잊었어요.",
+   "blank": "menzionare",
+   "src": "made"
+  },
+  {
+   "text": "L'istruttore ha menzionato Elena come esempio di costanza davanti a tutto il gruppo.",
+   "en": "The instructor mentioned Elena as an example of perseverance in front of the whole group.",
+   "ko": "강사는 모두 앞에서 꾸준함의 본보기로 엘레나를 언급했어요.",
+   "blank": "menzionato",
+   "src": "made"
+  }
+ ],
  "w|menzogna": [
   {
    "text": "Quella storia era solo una menzogna.",
@@ -27951,6 +28271,22 @@
    "en": "We're halfway along the route.",
    "ko": "길의 중간에 있어.",
    "blank": "metà"
+  }
+ ],
+ "w|metafora": [
+  {
+   "text": "Nella poesia Davide trova una metafora che paragona la vita a un viaggio.",
+   "en": "In the poem Davide finds a metaphor that compares life to a journey.",
+   "ko": "시에서 다비데는 인생을 여행에 빗댄 은유를 찾아요.",
+   "blank": "metafora",
+   "src": "made"
+  },
+  {
+   "text": "Elena usa una metafora per spiegare la bracciata: devi spingere l'acqua come se fosse una porta.",
+   "en": "Elena uses a metaphor to explain the stroke: you have to push the water as if it were a door.",
+   "ko": "엘레나는 팔 젓기를 설명하려고 비유를 써요. 물을 문처럼 밀어야 한대요.",
+   "blank": "metafora",
+   "src": "made"
   }
  ],
  "w|metallo": [
@@ -29198,6 +29534,22 @@
    "en": "On Saturday a street musician plays at the department store entrance.",
    "ko": "토요일이면 백화점 입구에서 거리 음악가가 연주해요.",
    "blank": "musicista",
+   "src": "made"
+  }
+ ],
+ "w|musulmano": [
+  {
+   "text": "Durante il Ramadan, il compagno di Davide, un musulmano praticante, non pranza in mensa.",
+   "en": "During Ramadan, Davide's classmate, a practising Muslim, doesn't have lunch in the canteen.",
+   "ko": "라마단 동안 독실한 무슬림인 다비데의 친구는 급식실에서 점심을 먹지 않아요.",
+   "blank": "musulmano",
+   "src": "made"
+  },
+  {
+   "text": "La piscina riserva un orario alle donne, e la vicina di Elena, una musulmana, ci va volentieri.",
+   "en": "The pool keeps a women-only slot, and Elena's neighbour, a Muslim woman, is happy to go.",
+   "ko": "수영장에 여성 전용 시간이 있어서 무슬림인 엘레나의 이웃은 즐겨 그 시간에 가요.",
+   "blank": "musulmana",
    "src": "made"
   }
  ],
@@ -30865,6 +31217,22 @@
    "blank": "ombrello"
   }
  ],
+ "w|omettere": [
+  {
+   "text": "Nel riassunto Davide ha deciso di omettere i dettagli meno importanti.",
+   "en": "In his summary Davide decided to leave out the less important details.",
+   "ko": "요약문에서 다비데는 덜 중요한 내용은 빼기로 했어요.",
+   "blank": "omettere",
+   "src": "made"
+  },
+  {
+   "text": "Nel modulo d'iscrizione Elena ha omesso il numero di telefono, e la segreteria l'ha richiamata.",
+   "en": "On the registration form Elena left out her phone number, and the office called her back.",
+   "ko": "등록 서류에 엘레나가 전화번호를 빠뜨려서 사무실에서 다시 연락했어요.",
+   "blank": "omesso",
+   "src": "made"
+  }
+ ],
  "w|omicidio": [
   {
    "text": "Al telegiornale parlano di un omicidio.",
@@ -31170,6 +31538,22 @@
    "en": "With a ball and a torch, Martina explains the Moon's orbit.",
    "ko": "마르티나는 공과 손전등으로 달의 궤도를 설명해요.",
    "blank": "orbita",
+   "src": "made"
+  }
+ ],
+ "w|orchestra": [
+  {
+   "text": "Davide suona il violino nell'orchestra della scuola da tre anni.",
+   "en": "Davide has played the violin in the school orchestra for three years.",
+   "ko": "다비데는 삼 년째 학교 오케스트라에서 바이올린을 켜요.",
+   "blank": "orchestra",
+   "src": "made"
+  },
+  {
+   "text": "Al saggio di nuoto sincronizzato di Elena suonava un'orchestra dal vivo.",
+   "en": "At Elena's synchronised swimming show a live orchestra was playing.",
+   "ko": "엘레나의 싱크로나이즈드 스위밍 발표회에서는 오케스트라가 라이브로 연주했어요.",
+   "blank": "orchestra",
    "src": "made"
   }
  ],
@@ -35599,6 +35983,22 @@
    "blank": "prima"
   }
  ],
+ "w|primario": [
+  {
+   "text": "Il fratellino di Davide frequenta ancora la scuola primaria, proprio accanto alla sua.",
+   "en": "Davide's little brother is still at primary school, right next to his.",
+   "ko": "다비데의 남동생은 아직 바로 옆 초등학교에 다녀요.",
+   "blank": "primaria",
+   "src": "made"
+  },
+  {
+   "text": "Per l'allenatore di Elena, l'obiettivo primario è respirare bene, non andare veloce.",
+   "en": "For Elena's coach, the main goal is breathing well, not going fast.",
+   "ko": "엘레나의 코치에게 가장 중요한 목표는 빨리 가는 게 아니라 숨을 잘 쉬는 거예요.",
+   "blank": "primario",
+   "src": "made"
+  }
+ ],
  "w|primavera": [
   {
    "text": "In primavera i fiori riempiono il parco.",
@@ -35859,6 +36259,22 @@
    "en": "This process takes a lot of patience.",
    "ko": "이 과정은 인내가 많이 필요해.",
    "blank": "processo"
+  }
+ ],
+ "w|procura": [
+  {
+   "text": "La classe di Davide ha visitato il tribunale e ha scoperto cosa fa la procura.",
+   "en": "Davide's class visited the courthouse and found out what the prosecutor's office does.",
+   "ko": "다비데네 반은 법원을 견학하고 검찰청이 하는 일을 알게 됐어요.",
+   "blank": "procura",
+   "src": "made"
+  },
+  {
+   "text": "Il cugino di Elena lavora in procura e nuota con lei ogni giovedì sera.",
+   "en": "Elena's cousin works at the prosecutor's office and swims with her every Thursday evening.",
+   "ko": "엘레나의 사촌은 검찰청에서 일하고 목요일 저녁마다 엘레나와 함께 수영해요.",
+   "blank": "procura",
+   "src": "made"
   }
  ],
  "w|procurare": [
@@ -36689,6 +37105,22 @@
    "en": "They put an ad in the local newspaper.",
    "ko": "지역 신문에 광고를 냈어.",
    "blank": "pubblicità"
+  }
+ ],
+ "w|pubblicitario": [
+  {
+   "text": "In classe Davide analizza un cartellone pubblicitario e ne studia i colori.",
+   "en": "In class Davide analyses an advertising poster and studies its colours.",
+   "ko": "수업 시간에 다비데는 광고 포스터를 분석하고 색을 살펴봐요.",
+   "blank": "pubblicitario",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha visto il cartellone pubblicitario dei nuovi corsi di acquagym all'ingresso.",
+   "en": "Elena saw the advertising board for the new aqua aerobics classes at the entrance.",
+   "ko": "엘레나는 입구에서 새 아쿠아로빅 강좌 광고판을 봤어요.",
+   "blank": "pubblicitario",
+   "src": "made"
   }
  ],
  "w|pubblico": [
@@ -40117,6 +40549,22 @@
    "blank": "ritmo"
   }
  ],
+ "w|rito": [
+  {
+   "text": "A storia Davide studia un antico rito etrusco per chiedere la pioggia.",
+   "en": "In history Davide is studying an ancient Etruscan rite to ask for rain.",
+   "ko": "역사 시간에 다비데는 비를 비는 옛 에트루리아 의식을 공부해요.",
+   "blank": "rito",
+   "src": "made"
+  },
+  {
+   "text": "Fare la doccia prima di entrare in acqua è per Elena un piccolo rito.",
+   "en": "Showering before getting in the water is a little ritual for Elena.",
+   "ko": "물에 들어가기 전에 샤워하는 건 엘레나에게 작은 의식이에요.",
+   "blank": "rito",
+   "src": "made"
+  }
+ ],
  "w|ritornare": [
   {
    "text": "Voglio ritornare a casa presto.",
@@ -40887,6 +41335,22 @@
    "en": "The cat jumps on the table.",
    "ko": "고양이가 식탁 위로 뛰어올라.",
    "blank": "salta"
+  }
+ ],
+ "w|salto": [
+  {
+   "text": "Nella gara di salto in lungo, Davide è arrivato secondo.",
+   "en": "In the long jump competition, Davide came second.",
+   "ko": "멀리뛰기 대회에서 다비데는 이등을 했어요.",
+   "blank": "salto",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha fatto un salto dal trampolino di tre metri per la prima volta.",
+   "en": "Elena jumped from the three-metre board for the first time.",
+   "ko": "엘레나는 처음으로 삼 미터 다이빙대에서 뛰어내렸어요.",
+   "blank": "salto",
+   "src": "made"
   }
  ],
  "w|salutare": [
@@ -42795,6 +43259,22 @@
    "en": "Every seed hides a future plant.",
    "ko": "씨앗마다 미래의 식물이 숨어 있어.",
    "blank": "seme"
+  }
+ ],
+ "w|semestre": [
+  {
+   "text": "Il voto di matematica di Davide è migliorato molto in questo semestre.",
+   "en": "Davide's maths mark has improved a lot this semester.",
+   "ko": "이번 학기에 다비데의 수학 성적이 많이 올랐어요.",
+   "blank": "semestre",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha pagato l'abbonamento per un semestre intero, da settembre a febbraio.",
+   "en": "Elena paid for a whole semester's membership, from September to February.",
+   "ko": "엘레나는 구월부터 이월까지 한 학기 치 회원권을 끊었어요.",
+   "blank": "semestre",
+   "src": "made"
   }
  ],
  "w|seminterrato": [
@@ -45581,6 +46061,22 @@
    "blank": "spesso"
   }
  ],
+ "w|spettacolare": [
+  {
+   "text": "Lo spettacolo di fine anno è stato spettacolare, e Davide ha suonato la batteria.",
+   "en": "The end-of-year show was spectacular, and Davide played the drums.",
+   "ko": "학년말 공연은 정말 멋졌고 다비데는 드럼을 쳤어요.",
+   "blank": "spettacolare",
+   "src": "made"
+  },
+  {
+   "text": "Dal bordo vasca Elena ha visto un tuffo spettacolare di una ragazza della squadra.",
+   "en": "From the poolside Elena saw a spectacular dive by a girl from the team.",
+   "ko": "엘레나는 수영장 가장자리에서 팀 소속 여자아이의 멋진 다이빙을 봤어요.",
+   "blank": "spettacolare",
+   "src": "made"
+  }
+ ],
  "w|spettacolo": [
   {
    "text": "Lo spettacolo inizia alle otto.",
@@ -45607,6 +46103,22 @@
    "en": "This choice cannot fall to me alone.",
    "ko": "이 선택이 나 혼자만의 몫일 수는 없어.",
    "blank": "spettare"
+  }
+ ],
+ "w|spettatore": [
+  {
+   "text": "Alla partita di basket della scuola, Davide era solo uno spettatore, perché aveva la caviglia gonfia.",
+   "en": "At the school basketball game, Davide was only a spectator, as his ankle was swollen.",
+   "ko": "학교 농구 경기에서 다비데는 발목이 부어서 관중으로만 있었어요.",
+   "blank": "spettatore",
+   "src": "made"
+  },
+  {
+   "text": "Alla gara regionale Elena era tra gli spettatori e tifava per la sorella.",
+   "en": "At the regional race Elena was among the spectators, cheering for her sister.",
+   "ko": "지역 대회에서 엘레나는 관중석에서 언니를 응원했어요.",
+   "blank": "spettatori",
+   "src": "made"
   }
  ],
  "w|spezzare": [
@@ -46583,6 +47095,22 @@
    "blank": "strega"
   }
  ],
+ "w|stregone": [
+  {
+   "text": "Nel libro di fiabe che Davide legge al fratellino c'è un vecchio stregone nel bosco.",
+   "en": "In the fairy-tale book Davide reads to his little brother there's an old sorcerer in the woods.",
+   "ko": "다비데가 동생에게 읽어 주는 동화책에는 숲속에 늙은 마법사가 나와요.",
+   "blank": "stregone",
+   "src": "made"
+  },
+  {
+   "text": "Alla festa in piscina, un animatore vestito da stregone fa giocare i bambini di Elena.",
+   "en": "At the pool party, an entertainer dressed as a wizard plays games with Elena's children.",
+   "ko": "수영장 파티에서 마법사 복장을 한 진행자가 엘레나의 아이들과 놀아 줘요.",
+   "blank": "stregone",
+   "src": "made"
+  }
+ ],
  "w|stress": [
   {
    "text": "Il lavoro mi causa troppo stress.",
@@ -47123,6 +47651,22 @@
    "en": "He overcame all the difficulties.",
    "ko": "그는 모든 어려움을 극복했어.",
    "blank": "superato"
+  }
+ ],
+ "w|supereroe": [
+  {
+   "text": "Per Carnevale Davide è andato a scuola vestito da supereroe.",
+   "en": "For Carnival Davide went to school dressed as a superhero.",
+   "ko": "카니발에 다비데는 슈퍼히어로 복장을 하고 학교에 갔어요.",
+   "blank": "supereroe",
+   "src": "made"
+  },
+  {
+   "text": "Il figlio di Elena nuota con un costume da supereroe e si sente invincibile.",
+   "en": "Elena's son swims in a superhero costume and feels invincible.",
+   "ko": "엘레나의 아들은 슈퍼히어로 수영복을 입고 수영하며 무적이 된 기분이에요.",
+   "blank": "supereroe",
+   "src": "made"
   }
  ],
  "w|superficie": [
@@ -47953,6 +48497,22 @@
    "src": "made"
   }
  ],
+ "w|telegramma": [
+  {
+   "text": "Il professore di storia ha mostrato alla classe di Davide un vero telegramma del secolo scorso.",
+   "en": "The history teacher showed Davide's class a real telegram from the last century.",
+   "ko": "역사 선생님이 다비데네 반에 지난 세기의 진짜 전보를 보여 줬어요.",
+   "blank": "telegramma",
+   "src": "made"
+  },
+  {
+   "text": "Per la sua prima gara, la nonna ha mandato a Elena un telegramma di auguri.",
+   "en": "For her first race, Elena's grandmother sent her a good-luck telegram.",
+   "ko": "첫 대회를 앞둔 엘레나에게 할머니가 응원 전보를 보냈어요.",
+   "blank": "telegramma",
+   "src": "made"
+  }
+ ],
  "w|televisione": [
   {
    "text": "La televisione è spenta da ore.",
@@ -48125,6 +48685,22 @@
    "en": "Please close the window curtain.",
    "ko": "창문 커튼을 닫아 줘.",
    "blank": "tenda"
+  }
+ ],
+ "w|tendere": [
+  {
+   "text": "Il professore chiede a Davide di tendere bene la corda prima dell'esperimento.",
+   "en": "The teacher asks Davide to pull the string tight before the experiment.",
+   "ko": "선생님은 실험 전에 끈을 팽팽하게 당기라고 다비데에게 말해요.",
+   "blank": "tendere",
+   "src": "made"
+  },
+  {
+   "text": "Quando nuota a dorso, Elena tende a spostarsi verso la corsia accanto.",
+   "en": "When she swims backstroke, Elena tends to drift towards the next lane.",
+   "ko": "배영을 할 때 엘레나는 옆 레인 쪽으로 치우치는 경향이 있어요.",
+   "blank": "tende",
+   "src": "made"
   }
  ],
  "w|tenente": [
@@ -48387,6 +48963,22 @@
    "en": "They foiled a terrorist attack.",
    "ko": "테러 공격을 막았어.",
    "blank": "terrorista"
+  }
+ ],
+ "w|terroristico": [
+  {
+   "text": "A educazione civica Davide discute con i compagni di un attacco terroristico raccontato dai giornali.",
+   "en": "In civics Davide discusses with his classmates a terrorist attack reported in the papers.",
+   "ko": "시민 교육 시간에 다비데는 신문에 난 테러 공격에 대해 친구들과 토론해요.",
+   "blank": "terroristico",
+   "src": "made"
+  },
+  {
+   "text": "Alla radio della piscina Elena sente che la polizia ha sventato un piano terroristico.",
+   "en": "On the pool radio Elena hears that police have foiled a terrorist plot.",
+   "ko": "수영장 라디오에서 엘레나는 경찰이 테러 계획을 막았다는 소식을 들어요.",
+   "blank": "terroristico",
+   "src": "made"
   }
  ],
  "w|terrorizzare": [
@@ -50779,6 +51371,22 @@
    "blank": "vantaggio"
   }
  ],
+ "w|vantare": [
+  {
+   "text": "La scuola di Davide può vantare un laboratorio di robotica tra i migliori della regione.",
+   "en": "Davide's school can boast one of the best robotics labs in the region.",
+   "ko": "다비데의 학교는 지역에서 손꼽히는 로봇 실습실을 자랑해요.",
+   "blank": "vantare",
+   "src": "made"
+  },
+  {
+   "text": "La piscina dove nuota Elena vanta una vasca olimpionica all'aperto.",
+   "en": "The pool where Elena swims boasts an outdoor Olympic-size tank.",
+   "ko": "엘레나가 다니는 수영장에는 자랑거리인 야외 올림픽 규격 수영장이 있어요.",
+   "blank": "vanta",
+   "src": "made"
+  }
+ ],
  "w|vario": [
   {
    "text": "Abbiamo un menu vario oggi.",
@@ -51299,6 +51907,22 @@
    "blank": "verso"
   }
  ],
+ "w|vescovo": [
+  {
+   "text": "Per l'inaugurazione della nuova scuola di Davide è venuto anche il vescovo.",
+   "en": "The bishop also came to the opening of Davide's new school.",
+   "ko": "다비데의 새 학교 개교식에는 주교님도 오셨어요.",
+   "blank": "vescovo",
+   "src": "made"
+  },
+  {
+   "text": "La piscina nuova di Elena è stata benedetta dal vescovo il giorno dell'apertura.",
+   "en": "Elena's new pool was blessed by the bishop on opening day.",
+   "ko": "엘레나가 다니는 새 수영장은 개장하는 날 주교님의 축복을 받았어요.",
+   "blank": "vescovo",
+   "src": "made"
+  }
+ ],
  "w|vestire": [
   {
    "text": "Devo vestire i bambini prima di uscire.",
@@ -51512,6 +52136,22 @@
    "en": "A friend brought the old camcorder from the school trip, and Giulia laughed until she cried.",
    "ko": "친구가 수학여행 때 쓰던 캠코더를 가져와서 줄리아는 눈물이 나도록 웃었어요.",
    "blank": "videocamera",
+   "src": "made"
+  }
+ ],
+ "w|videogioco": [
+  {
+   "text": "Il professore di informatica ha mostrato a Davide come si programma un semplice videogioco.",
+   "en": "The computer teacher showed Davide how to program a simple video game.",
+   "ko": "정보 선생님이 다비데에게 간단한 비디오 게임을 만드는 법을 보여 줬어요.",
+   "blank": "videogioco",
+   "src": "made"
+  },
+  {
+   "text": "Mentre aspetta il figlio, Elena gioca a un videogioco sul telefono nel bar della piscina.",
+   "en": "While she waits for her son, Elena plays a video game on her phone in the pool café.",
+   "ko": "아들을 기다리는 동안 엘레나는 수영장 카페에서 휴대폰 게임을 해요.",
+   "blank": "videogioco",
    "src": "made"
   }
  ],

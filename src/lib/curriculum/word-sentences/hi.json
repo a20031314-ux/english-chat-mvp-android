@@ -671,6 +671,22 @@
    "blank": "अत्यंत"
   }
  ],
+ "w|अत्यधिक": [
+  {
+   "text": "गर्मी की छुट्टियों में संग्रहालय में अत्यधिक भीड़ हो जाती है।",
+   "en": "During the summer holidays the museum gets extremely crowded.",
+   "ko": "여름방학이면 박물관이 무척 붐벼요.",
+   "blank": "अत्यधिक",
+   "src": "made"
+  },
+  {
+   "text": "सीढ़ियों से अलमारी उतारना अत्यधिक कठिन काम निकला।",
+   "en": "Getting the wardrobe down the stairs turned out to be extremely hard work.",
+   "ko": "계단으로 옷장을 내리는 건 무척 힘든 일이었어요.",
+   "blank": "अत्यधिक",
+   "src": "made"
+  }
+ ],
  "w|अथवा": [
   {
    "text": "चाय अथवा कॉफ़ी ले लोगे?",
@@ -785,6 +801,22 @@
    "en": "Don't sit in the sun for too long.",
    "ko": "햇볕에 너무 오래 앉아 있지 마.",
    "blank": "अधिक"
+  }
+ ],
+ "w|अधिकतम": [
+  {
+   "text": "एक कमरे में अधिकतम बीस लोग एक साथ जा सकते हैं।",
+   "en": "At most twenty people can go into one room at a time.",
+   "ko": "한 방에는 한 번에 최대 스무 명까지 들어갈 수 있어요.",
+   "blank": "अधिकतम",
+   "src": "made"
+  },
+  {
+   "text": "ट्रक वाले ने कहा कि वह अधिकतम दो चक्कर लगाएगा।",
+   "en": "The truck driver said he would make two trips at most.",
+   "ko": "트럭 기사는 최대 두 번만 오가겠다고 했어요.",
+   "blank": "अधिकतम",
+   "src": "made"
   }
  ],
  "w|अधिकतर": [
@@ -1050,6 +1082,22 @@
    "en": "Submitting a medical certificate was mandatory for runners.",
    "ko": "참가자는 진단서를 꼭 내야 했어요.",
    "blank": "अनिवार्य",
+   "src": "made"
+  }
+ ],
+ "w|अनुकूल": [
+  {
+   "text": "पुरानी पांडुलिपियों के लिए कमरे का तापमान और नमी अनुकूल रखनी पड़ती है।",
+   "en": "For the old manuscripts, the room's temperature and humidity have to be kept suitable.",
+   "ko": "옛 필사본을 위해 방의 온도와 습도를 알맞게 유지해야 해요.",
+   "blank": "अनुकूल",
+   "src": "made"
+  },
+  {
+   "text": "पूजा ने सामान ढोने के लिए मौसम अनुकूल होने का इंतज़ार किया।",
+   "en": "Puja waited for the weather to be favourable before moving her things.",
+   "ko": "푸자는 짐을 옮기려고 날씨가 좋아지기를 기다렸어요.",
+   "blank": "अनुकूल",
    "src": "made"
   }
  ],
@@ -2602,6 +2650,22 @@
    "en": "The radio reported that a terrorist had been caught near the border.",
    "ko": "라디오에서 국경 근처에서 테러범이 붙잡혔다는 소식이 나왔어요.",
    "blank": "आतंकी",
+   "src": "made"
+  }
+ ],
+ "w|आंतरिक": [
+  {
+   "text": "संग्रहालय की आंतरिक सजावट एक प्रसिद्ध वास्तुकार ने तैयार की थी।",
+   "en": "The museum's interior decoration was designed by a well-known architect.",
+   "ko": "박물관 실내 장식은 이름난 건축가가 꾸몄어요.",
+   "blank": "आंतरिक",
+   "src": "made"
+  },
+  {
+   "text": "नए फ़्लैट की आंतरिक दीवारों पर पूजा ने हल्का पीला रंग करवाया।",
+   "en": "Puja had the inner walls of the new flat painted a light yellow.",
+   "ko": "푸자는 새 아파트 안쪽 벽을 연한 노란색으로 칠했어요.",
+   "blank": "आंतरिक",
    "src": "made"
   }
  ],
@@ -5277,6 +5341,22 @@
    "src": "made"
   }
  ],
+ "w|उल्लेखनीय": [
+  {
+   "text": "इस साल संग्रहालय आने वालों की संख्या में उल्लेखनीय बढ़ोतरी हुई है।",
+   "en": "This year there has been a notable rise in the number of museum visitors.",
+   "ko": "올해 박물관 방문객 수가 눈에 띄게 늘었어요.",
+   "blank": "उल्लेखनीय",
+   "src": "made"
+  },
+  {
+   "text": "सिर्फ़ एक दिन में सारा सामान खोल लेना पूजा की उल्लेखनीय उपलब्धि थी।",
+   "en": "Unpacking everything in just one day was a remarkable achievement for Puja.",
+   "ko": "단 하루 만에 짐을 다 푼 건 푸자에게 대단한 성과였어요.",
+   "blank": "उल्लेखनीय",
+   "src": "made"
+  }
+ ],
  "w|उसका": [
   {
    "text": "उसका घर नदी के पास है।",
@@ -5935,6 +6015,22 @@
    "en": "Oh no, the bus got away.",
    "ko": "아 안 돼, 버스를 놓쳤어.",
    "blank": "ओह"
+  }
+ ],
+ "w|औक़ात": [
+  {
+   "text": "पुराने ज़माने में कपड़ों और गहनों से किसी की औक़ात का पता चल जाता था।",
+   "en": "In olden days, clothes and jewellery revealed a person's social standing.",
+   "ko": "옛날에는 옷과 장신구로 그 사람의 신분을 알 수 있었어요.",
+   "blank": "औक़ात",
+   "src": "made"
+  },
+  {
+   "text": "एक पुराने किराएदार ने बताया कि बड़ी सोसाइटी में कुछ लोग दूसरों की औक़ात उनकी गाड़ी से आँकते हैं।",
+   "en": "A long-time tenant said that in big societies some people judge others' standing by their car.",
+   "ko": "오래 산 세입자는 큰 아파트에선 차로 남의 형편을 재는 사람도 있다고 했어요.",
+   "blank": "औक़ात",
+   "src": "made"
   }
  ],
  "w|औज़ार": [
@@ -17437,6 +17533,22 @@
    "src": "made"
   }
  ],
+ "w|ज्ञात": [
+  {
+   "text": "इस सिक्के के बनाने वाले का नाम आज तक ज्ञात नहीं है।",
+   "en": "The name of whoever made this coin is still not known.",
+   "ko": "이 동전을 만든 사람의 이름은 지금까지 알려지지 않았어요.",
+   "blank": "ज्ञात",
+   "src": "made"
+  },
+  {
+   "text": "मकान मालिक ने कहा कि इस इलाक़े में कोई बड़ी समस्या ज्ञात नहीं है।",
+   "en": "The landlord said no major problem is known in this area.",
+   "ko": "집주인은 이 동네에 알려진 큰 문제는 없다고 했어요.",
+   "blank": "ज्ञात",
+   "src": "made"
+  }
+ ],
  "w|ज्ञान": [
   {
    "text": "बातचीत से ज्ञान बढ़ता है।",
@@ -20057,6 +20169,22 @@
    "blank": "तारीख़"
   }
  ],
+ "w|ताल": [
+  {
+   "text": "संगीत वाले कमरे में तबले की रिकॉर्डिंग चलती है, और बच्चे उसकी ताल पर ताली बजाते हैं।",
+   "en": "A tabla recording plays in the music room, and children clap along to its beat.",
+   "ko": "음악 전시실에서는 타블라 녹음이 흘러나오고 아이들은 그 박자에 맞춰 손뼉을 쳐요.",
+   "blank": "ताल",
+   "src": "made"
+  },
+  {
+   "text": "मज़दूर गाना गाते हुए एक ही ताल में भारी डिब्बे उठा रहे थे।",
+   "en": "The labourers were lifting the heavy boxes in a single rhythm while singing.",
+   "ko": "일꾼들은 노래를 부르며 한 박자에 맞춰 무거운 상자를 들었어요.",
+   "blank": "ताल",
+   "src": "made"
+  }
+ ],
  "w|ताला": [
   {
    "text": "दरवाज़े पर मज़बूत ताला लगाओ।",
@@ -21157,6 +21285,22 @@
    "src": "made"
   }
  ],
+ "w|दरबार": [
+  {
+   "text": "एक दीवार पर पुराने राजा के दरबार का बड़ा-सा चित्र लगा है।",
+   "en": "A large painting of the old king's court hangs on one wall.",
+   "ko": "한쪽 벽에는 옛 왕의 궁정을 그린 큰 그림이 걸려 있어요.",
+   "blank": "दरबार",
+   "src": "made"
+  },
+  {
+   "text": "पूजा के बच्चों ने ख़ाली कमरे में दरबार का खेल खेला, जिसमें छोटा भाई राजा बना।",
+   "en": "Puja's children played at royal court in the empty room, with the little brother as king.",
+   "ko": "푸자의 아이들은 빈방에서 궁정 놀이를 했는데 막내가 왕이 됐어요.",
+   "blank": "दरबार",
+   "src": "made"
+  }
+ ],
  "w|दरवाज़ा": [
   {
    "text": "कृपया दरवाज़ा बंद कर दो।",
@@ -21905,6 +22049,22 @@
    "blank": "दिवाली"
   }
  ],
+ "w|दिव्य": [
+  {
+   "text": "सुबह की धूप में देवी की कांसे की मूर्ति दिव्य लगती है।",
+   "en": "In the morning sunlight, the bronze statue of the goddess looks divine.",
+   "ko": "아침 햇살 속에서 여신 청동상은 신성해 보여요.",
+   "blank": "दिव्य",
+   "src": "made"
+  },
+  {
+   "text": "गृह प्रवेश के समय पूजा के घर में दीयों की दिव्य रोशनी फैल गई।",
+   "en": "During the housewarming ceremony, a heavenly glow of oil lamps filled the house.",
+   "ko": "입주 의식 때 집 안에 등잔불의 신성한 빛이 가득했어요.",
+   "blank": "दिव्य",
+   "src": "made"
+  }
+ ],
  "w|दिशा": [
   {
    "text": "सही दिशा में चलो।",
@@ -22365,6 +22525,22 @@
    "en": "Make plans with a long view.",
    "ko": "긴 안목으로 계획을 세워.",
    "blank": "दृष्टि"
+  }
+ ],
+ "w|दृष्टिकोण": [
+  {
+   "text": "विकास चाहता है कि लोग इतिहास को एक नए दृष्टिकोण से देखें।",
+   "en": "Vikas wants people to see history from a new perspective.",
+   "ko": "비카스는 사람들이 역사를 새로운 시각으로 보길 바라요.",
+   "blank": "दृष्टिकोण",
+   "src": "made"
+  },
+  {
+   "text": "घर बदलने से पूजा का ज़िंदगी को देखने का दृष्टिकोण ही बदल गया।",
+   "en": "Moving house changed Puja's whole outlook on life.",
+   "ko": "이사하고 나서 푸자는 삶을 보는 관점 자체가 바뀌었어요.",
+   "blank": "दृष्टिकोण",
+   "src": "made"
   }
  ],
  "w|देखना": [
@@ -23441,6 +23617,22 @@
    "en": "Our town sits by the river.",
    "ko": "우리 도시는 강가에 있어.",
    "blank": "नगर"
+  }
+ ],
+ "w|नगर निगम": [
+  {
+   "text": "संग्रहालय की नई छत का ख़र्च नगर निगम उठा रहा है।",
+   "en": "The municipal corporation is bearing the cost of the museum's new roof.",
+   "ko": "박물관 새 지붕 비용은 시청이 대고 있어요.",
+   "blank": "नगर निगम",
+   "src": "made"
+  },
+  {
+   "text": "नए मोहल्ले में कूड़ा उठाने की गाड़ी नगर निगम रोज़ सुबह भेजता है।",
+   "en": "In the new neighbourhood the municipal corporation sends the rubbish truck every morning.",
+   "ko": "새 동네에는 시청이 매일 아침 쓰레기차를 보내요.",
+   "blank": "नगर निगम",
+   "src": "made"
   }
  ],
  "w|नगरपालिका": [
@@ -24553,6 +24745,22 @@
    "src": "made"
   }
  ],
+ "w|निकाय": [
+  {
+   "text": "संग्रहालय का बजट एक सरकारी निकाय तय करता है।",
+   "en": "The museum's budget is set by a government body.",
+   "ko": "박물관 예산은 정부 기관이 정해요.",
+   "blank": "निकाय",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी का प्रबंधन एक चुना हुआ निकाय करता है जिसकी बैठक हर महीने होती है।",
+   "en": "The society is run by an elected body that meets every month.",
+   "ko": "아파트는 매달 모이는 선출 기구가 관리해요.",
+   "blank": "निकाय",
+   "src": "made"
+  }
+ ],
  "w|निकालना": [
   {
    "text": "जेब से चाबी निकालो।",
@@ -24596,6 +24804,22 @@
    "en": "The municipal corporation has declared a holiday at the market on Sunday.",
    "ko": "시청은 일요일을 시장 휴일로 정했어요.",
    "blank": "निगम",
+   "src": "made"
+  }
+ ],
+ "w|निगरानी": [
+  {
+   "text": "सबसे क़ीमती गहनों वाले कमरे की कैमरों से चौबीस घंटे निगरानी होती है।",
+   "en": "The room with the most valuable jewellery is under camera surveillance round the clock.",
+   "ko": "가장 귀한 보석이 있는 방은 카메라로 하루 종일 감시해요.",
+   "blank": "निगरानी",
+   "src": "made"
+  },
+  {
+   "text": "पूजा ने भाई को ट्रक में सामान लदवाने की निगरानी का काम सौंपा।",
+   "en": "Puja put her brother in charge of supervising the loading of the truck.",
+   "ko": "푸자는 남동생에게 트럭에 짐 싣는 걸 지켜보는 일을 맡겼어요.",
+   "blank": "निगरानी",
    "src": "made"
   }
  ],
@@ -24731,6 +24955,22 @@
    "en": "He fulfilled his responsibility.",
    "ko": "그는 자기 책임을 다했어.",
    "blank": "निभाई"
+  }
+ ],
+ "w|निम्न": [
+  {
+   "text": "तहख़ाने में निम्न तापमान पर पुराने कपड़े सँभालकर रखे जाते हैं।",
+   "en": "Old textiles are carefully kept in the basement at a low temperature.",
+   "ko": "지하실에는 옛 옷감을 낮은 온도에서 조심스럽게 보관해요.",
+   "blank": "निम्न",
+   "src": "made"
+  },
+  {
+   "text": "नए घर में पानी का दबाव निम्न है, इसलिए पूजा ने मोटर लगवाई।",
+   "en": "The water pressure in the new house is low, so Puja had a pump installed.",
+   "ko": "새집은 수압이 낮아서 푸자는 모터를 달았어요.",
+   "blank": "निम्न",
+   "src": "made"
   }
  ],
  "w|नियंत्रण": [
@@ -25103,6 +25343,22 @@
    "en": "Arrive at the fixed time.",
    "ko": "정해진 시간에 도착해.",
    "blank": "निश्चित"
+  }
+ ],
+ "w|निश्चित रूप से": [
+  {
+   "text": "विकास को लगा कि यह मूर्ति निश्चित रूप से हज़ार साल से ज़्यादा पुरानी है।",
+   "en": "Vikas felt that this statue is definitely more than a thousand years old.",
+   "ko": "비카스는 이 조각상이 분명히 천 년도 더 됐다고 생각했어요.",
+   "blank": "निश्चित रूप से",
+   "src": "made"
+  },
+  {
+   "text": "नए घर में पूजा को निश्चित रूप से पहले से ज़्यादा जगह मिलेगी।",
+   "en": "In the new house Puja will definitely get more space than before.",
+   "ko": "새집에서 푸자는 분명히 전보다 넓게 지낼 거예요.",
+   "blank": "निश्चित रूप से",
+   "src": "made"
   }
  ],
  "w|निहारना": [
@@ -27023,6 +27279,22 @@
    "blank": "पशु"
   }
  ],
+ "w|पश्चात": [
+  {
+   "text": "मरम्मत के पश्चात यह पुरानी पालकी फिर से लोगों के सामने रखी गई।",
+   "en": "After restoration, this old palanquin was put on display again.",
+   "ko": "복원을 마친 뒤 이 옛 가마는 다시 전시됐어요.",
+   "blank": "पश्चात",
+   "src": "made"
+  },
+  {
+   "text": "सामान उतारने के पश्चात सबने ज़मीन पर बैठकर खाना खाया।",
+   "en": "After unloading the things, everyone sat on the floor and ate.",
+   "ko": "짐을 내린 뒤 모두 바닥에 앉아 밥을 먹었어요.",
+   "blank": "पश्चात",
+   "src": "made"
+  }
+ ],
  "w|पश्चिम": [
   {
    "text": "सूरज पश्चिम में डूब रहा है।",
@@ -27613,6 +27885,22 @@
    "en": "Traditional remedies still work today.",
    "ko": "전통 민간요법은 지금도 통해.",
    "blank": "पारंपरिक"
+  }
+ ],
+ "w|पारित": [
+  {
+   "text": "विधानसभा में पारित एक प्रस्ताव से संग्रहालय को नई इमारत मिली।",
+   "en": "A resolution passed in the state assembly gave the museum a new building.",
+   "ko": "주 의회에서 통과된 결의 덕분에 박물관은 새 건물을 얻었어요.",
+   "blank": "पारित",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी की बैठक में पारित नियम के अनुसार सामान सिर्फ़ दिन में चढ़ाया जा सकता है।",
+   "en": "According to a rule passed at the society meeting, things can only be moved in during the day.",
+   "ko": "아파트 회의에서 통과된 규칙에 따라 짐은 낮에만 올릴 수 있어요.",
+   "blank": "पारित",
+   "src": "made"
   }
  ],
  "w|पारिवारिक": [
@@ -29879,6 +30167,22 @@
    "blank": "प्रशासन"
   }
  ],
+ "w|प्रशासनिक": [
+  {
+   "text": "विकास का आधा दिन प्रशासनिक काग़ज़ों पर दस्तख़त करने में निकल जाता है।",
+   "en": "Half of Vikas's day goes in signing administrative papers.",
+   "ko": "비카스는 하루의 절반을 행정 서류에 서명하는 데 써요.",
+   "blank": "प्रशासनिक",
+   "src": "made"
+  },
+  {
+   "text": "पता बदलवाने के लिए पूजा को कई प्रशासनिक दफ़्तरों के चक्कर लगाने पड़े।",
+   "en": "To change her address Puja had to go round several administrative offices.",
+   "ko": "주소를 바꾸려고 푸자는 여러 행정 기관을 돌아다녀야 했어요.",
+   "blank": "प्रशासनिक",
+   "src": "made"
+  }
+ ],
  "w|प्रशिक्षण": [
   {
    "text": "नए कर्मचारियों का प्रशिक्षण शुरू हो गया।",
@@ -29947,6 +30251,22 @@
    "en": "The offering was shared among the children.",
    "ko": "아이들에게 공물을 나눠 줬어.",
    "blank": "प्रसाद"
+  }
+ ],
+ "w|प्रसार": [
+  {
+   "text": "प्रदर्शनी में दिखाया गया है कि छपाई से ज्ञान का प्रसार कितनी तेज़ी से हुआ।",
+   "en": "The exhibition shows how quickly printing spread knowledge.",
+   "ko": "전시는 인쇄술로 지식이 얼마나 빨리 퍼졌는지 보여 줘요.",
+   "blank": "प्रसार",
+   "src": "made"
+  },
+  {
+   "text": "पुराने घर में सीलन का प्रसार इतना बढ़ गया था कि पूजा ने घर बदलने का फ़ैसला किया।",
+   "en": "The damp had spread so much in the old house that Puja decided to move.",
+   "ko": "옛집에 곰팡이가 너무 번져서 푸자는 이사하기로 했어요.",
+   "blank": "प्रसार",
+   "src": "made"
   }
  ],
  "w|प्रसारण": [
@@ -33675,6 +33995,22 @@
    "src": "made"
   }
  ],
+ "w|बुनियादी": [
+  {
+   "text": "विकास ने नए कर्मचारियों को पुरानी चीज़ें छूने के बुनियादी नियम समझाए।",
+   "en": "Vikas explained to the new staff the basic rules for handling old objects.",
+   "ko": "비카스는 새 직원들에게 유물을 만지는 기본 규칙을 설명했어요.",
+   "blank": "बुनियादी",
+   "src": "made"
+  },
+  {
+   "text": "पहले दिन पूजा ने सिर्फ़ बुनियादी चीज़ें खोलीं, जैसे बिस्तर, बर्तन और चार्जर।",
+   "en": "On the first day Puja unpacked only the basics, like bedding, utensils and chargers.",
+   "ko": "첫날 푸자는 이불, 그릇, 충전기 같은 기본적인 것만 풀었어요.",
+   "blank": "बुनियादी",
+   "src": "made"
+  }
+ ],
  "w|बुरा": [
   {
    "text": "बुरा मत मानो, मैं मज़ाक कर रहा था।",
@@ -34585,6 +34921,22 @@
    "blank": "भर"
   }
  ],
+ "w|भरपूर": [
+  {
+   "text": "बच्चों के सवालों का विकास ने भरपूर धैर्य से जवाब दिया।",
+   "en": "Vikas answered the children's questions with plenty of patience.",
+   "ko": "비카스는 아이들의 질문에 넉넉한 인내심으로 답했어요.",
+   "blank": "भरपूर",
+   "src": "made"
+  },
+  {
+   "text": "नए घर की खिड़कियों से भरपूर रोशनी आती है।",
+   "en": "Plenty of light comes in through the windows of the new house.",
+   "ko": "새집 창문으로 햇빛이 가득 들어와요.",
+   "blank": "भरपूर",
+   "src": "made"
+  }
+ ],
  "w|भरा": [
   {
    "text": "गिलास दूध से भरा है।",
@@ -35223,6 +35575,22 @@
    "blank": "भूगोल"
   }
  ],
+ "w|भूत": [
+  {
+   "text": "चौकीदार मज़ाक में कहता है कि रात को पुराने महल वाले कमरे में भूत घूमता है।",
+   "en": "The watchman jokes that a ghost wanders the old palace room at night.",
+   "ko": "경비원은 밤이면 옛 궁전 전시실에 유령이 돌아다닌다고 농담해요.",
+   "blank": "भूत",
+   "src": "made"
+  },
+  {
+   "text": "पूजा की बेटी को डर था कि ख़ाली पुराने घर में कोई भूत रह जाएगा।",
+   "en": "Puja's daughter was afraid a ghost would be left behind in the empty old house.",
+   "ko": "푸자의 딸은 텅 빈 옛집에 유령이 남을까 봐 무서워했어요.",
+   "blank": "भूत",
+   "src": "made"
+  }
+ ],
  "w|भूनना": [
   {
    "text": "मसाले हल्के से भूनना स्वाद बढ़ाता है।",
@@ -35311,6 +35679,22 @@
    "blank": "भेजा"
   }
  ],
+ "w|भेंट": [
+  {
+   "text": "एक बुज़ुर्ग ने अपने दादा की डायरी संग्रहालय को भेंट में दे दी।",
+   "en": "An elderly man donated his grandfather's diary to the museum as a gift.",
+   "ko": "한 노인이 할아버지의 일기를 박물관에 기증했어요.",
+   "blank": "भेंट",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन ने नए घर की भेंट के तौर पर पूजा को तुलसी का पौधा दिया।",
+   "en": "The neighbour gave Puja a tulsi plant as a housewarming gift.",
+   "ko": "이웃은 집들이 선물로 푸자에게 툴시 화분을 줬어요.",
+   "blank": "भेंट",
+   "src": "made"
+  }
+ ],
  "w|भेंटना": [
   {
    "text": "कल दोपहर दोस्त से भेंटना तय है।",
@@ -35370,6 +35754,22 @@
    "en": "In this marathon there was no distinction between rich and poor; everyone ran together.",
    "ko": "이 마라톤에서는 부자와 가난한 사람의 구별 없이 모두 함께 달렸어요.",
    "blank": "भेद",
+   "src": "made"
+  }
+ ],
+ "w|भेदभाव": [
+  {
+   "text": "एक हिस्से में दिखाया गया है कि पुराने समय में जाति के नाम पर कैसा भेदभाव होता था।",
+   "en": "One section shows what kind of discrimination took place in olden times in the name of caste.",
+   "ko": "한 구역에서는 옛날 카스트를 이유로 어떤 차별이 있었는지 보여 줘요.",
+   "blank": "भेदभाव",
+   "src": "made"
+  },
+  {
+   "text": "पूजा ने देखा कि इस सोसाइटी में किराएदारों के साथ कोई भेदभाव नहीं होता।",
+   "en": "Puja noticed that tenants face no discrimination in this housing society.",
+   "ko": "푸자는 이 아파트에서 세입자를 차별하지 않는다는 걸 알았어요.",
+   "blank": "भेदभाव",
    "src": "made"
   }
  ],
@@ -36825,6 +37225,22 @@
    "blank": "महीना"
   }
  ],
+ "w|महोत्सव": [
+  {
+   "text": "हर सर्दी में संग्रहालय एक लोक कला महोत्सव करवाता है।",
+   "en": "Every winter the museum holds a folk art festival.",
+   "ko": "박물관은 겨울마다 민속 예술 축제를 열어요.",
+   "blank": "महोत्सव",
+   "src": "made"
+  },
+  {
+   "text": "नए शहर में पहुँचते ही पूजा को पता चला कि अगले हफ़्ते फूलों का महोत्सव है।",
+   "en": "As soon as she reached the new town, Puja learned there's a flower festival next week.",
+   "ko": "새 도시에 오자마자 푸자는 다음 주에 꽃 축제가 있다는 걸 알았어요.",
+   "blank": "महोत्सव",
+   "src": "made"
+  }
+ ],
  "w|महोदय": [
   {
    "text": "पंचायत के पत्र में लिखा था, आदरणीय महोदय, सड़क की मरम्मत जल्द करवाएँ।",
@@ -37041,6 +37457,22 @@
    "en": "He admitted his own mistake.",
    "ko": "그는 자기 실수를 인정했어.",
    "blank": "मान"
+  }
+ ],
+ "w|माननीय": [
+  {
+   "text": "नई गैलरी का उद्घाटन एक माननीय मंत्री ने किया।",
+   "en": "The new gallery was opened by an honourable minister.",
+   "ko": "새 전시실 개관은 한 장관이 했어요.",
+   "blank": "माननीय",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी की बैठक में सचिव ने पूजा का \"माननीय नई सदस्य\" कहकर स्वागत किया।",
+   "en": "At the society meeting, the secretary welcomed Puja as an \"honoured new member\".",
+   "ko": "아파트 모임에서 총무는 푸자를 \"귀한 새 회원\"이라며 반겼어요.",
+   "blank": "माननीय",
+   "src": "made"
   }
  ],
  "w|मानव": [
@@ -37651,6 +38083,22 @@
    "en": "The lawyer fought the case well.",
    "ko": "변호사가 소송을 잘 싸웠어.",
    "blank": "मुकदमा"
+  }
+ ],
+ "w|मुक़ाबला": [
+  {
+   "text": "संग्रहालय में स्कूलों के बीच इतिहास प्रश्नोत्तरी का मुक़ाबला हुआ।",
+   "en": "A history quiz contest between schools was held at the museum.",
+   "ko": "박물관에서 학교 대항 역사 퀴즈 대회가 열렸어요.",
+   "blank": "मुक़ाबला",
+   "src": "made"
+  },
+  {
+   "text": "सबसे भारी डिब्बा कौन उठाएगा, इस पर दोनों भाइयों में मुक़ाबला हो गया।",
+   "en": "The two brothers had a contest over who would lift the heaviest box.",
+   "ko": "누가 가장 무거운 상자를 드는지를 두고 두 형제가 겨뤘어요.",
+   "blank": "मुक़ाबला",
+   "src": "made"
   }
  ],
  "w|मुक़ाबले": [
@@ -38817,6 +39265,22 @@
    "blank": "मोर"
   }
  ],
+ "w|मोर्चा": [
+  {
+   "text": "एक तस्वीर में आज़ादी के आंदोलन का वह मोर्चा है जिसमें हज़ारों महिलाएँ शामिल हुईं।",
+   "en": "One photo shows the protest march of the independence movement that thousands of women joined.",
+   "ko": "한 사진에는 수천 명의 여성이 함께한 독립운동 행진이 담겨 있어요.",
+   "blank": "मोर्चा",
+   "src": "made"
+  },
+  {
+   "text": "पूजा ने रसोई का मोर्चा ख़ुद सँभाला और पति को बच्चों के कमरे में भेजा।",
+   "en": "Puja took charge of the kitchen front herself and sent her husband to the children's room.",
+   "ko": "푸자는 부엌 쪽은 자기가 맡고 남편은 아이들 방으로 보냈어요.",
+   "blank": "मोर्चा",
+   "src": "made"
+  }
+ ],
  "w|मोलभाव": [
   {
    "text": "अमित हँसा कि दफ़्तर की कैंटीन में मोलभाव नहीं चलता।",
@@ -39203,6 +39667,22 @@
    "en": "Buddy, come over here a bit.",
    "ko": "야, 이리 좀 와.",
    "blank": "यार"
+  }
+ ],
+ "w|युक्त": [
+  {
+   "text": "विकास ने बच्चों को सोने की नक़्क़ाशी से युक्त एक पुरानी तलवार दिखाई।",
+   "en": "Vikas showed the children an old sword decorated with gold engraving.",
+   "ko": "비카스는 아이들에게 금 조각이 새겨진 옛 칼을 보여 줬어요.",
+   "blank": "युक्त",
+   "src": "made"
+  },
+  {
+   "text": "पूजा का नया घर एक बड़ी बालकनी से युक्त है जहाँ से पहाड़ दिखते हैं।",
+   "en": "Puja's new home comes with a big balcony from which the hills can be seen.",
+   "ko": "푸자의 새집에는 산이 보이는 큰 발코니가 딸려 있어요.",
+   "blank": "युक्त",
+   "src": "made"
   }
  ],
  "w|युग": [
@@ -39971,6 +40451,22 @@
    "en": "The political party called a meeting.",
    "ko": "정당이 회의를 소집했어.",
    "blank": "राजनीतिक"
+  }
+ ],
+ "w|राजनेता": [
+  {
+   "text": "संग्रहालय में आज़ादी के समय के एक राजनेता का चश्मा और कलम रखी है।",
+   "en": "The museum has the glasses and pen of a politician from the independence era.",
+   "ko": "박물관에는 독립 시기 한 정치인의 안경과 펜이 있어요.",
+   "blank": "राजनेता",
+   "src": "made"
+  },
+  {
+   "text": "पूजा के नए पड़ोसी एक जाने-माने राजनेता के ड्राइवर हैं।",
+   "en": "Puja's new neighbour is the driver of a well-known politician.",
+   "ko": "푸자의 새 이웃은 이름난 정치인의 운전기사예요.",
+   "blank": "राजनेता",
+   "src": "made"
   }
  ],
  "w|राजमा": [
@@ -40889,6 +41385,22 @@
    "blank": "लगाव"
   }
  ],
+ "w|लघु": [
+  {
+   "text": "विकास को पत्तों पर बने लघु चित्र सबसे ज़्यादा पसंद हैं।",
+   "en": "Vikas likes the miniature paintings made on leaves the most.",
+   "ko": "비카스는 나뭇잎에 그린 세밀화를 가장 좋아해요.",
+   "blank": "लघु",
+   "src": "made"
+  },
+  {
+   "text": "पूजा ने बेटी के लिए एक लघु पुस्तकालय बनाया, बस एक शेल्फ़ और कुछ कहानियाँ।",
+   "en": "Puja made a tiny library for her daughter, just one shelf and a few storybooks.",
+   "ko": "푸자는 딸을 위해 선반 하나에 동화책 몇 권으로 작은 도서관을 만들었어요.",
+   "blank": "लघु",
+   "src": "made"
+  }
+ ],
  "w|लजाना": [
   {
    "text": "तारीफ़ सुनकर वह लजा गई।",
@@ -41262,6 +41774,22 @@
    "en": "Deepa has never overstepped the limits of her position.",
    "ko": "디파는 한 번도 자기 직책의 선을 넘은 적이 없어요.",
    "blank": "लाँघी",
+   "src": "made"
+  }
+ ],
+ "w|लाठी": [
+  {
+   "text": "काँच के बक्से में एक संत की बाँस की लाठी रखी है।",
+   "en": "A saint's bamboo walking stick is kept in a glass case.",
+   "ko": "유리 상자 안에 한 성자의 대나무 지팡이가 놓여 있어요.",
+   "blank": "लाठी",
+   "src": "made"
+  },
+  {
+   "text": "सामान में दादाजी की पुरानी लाठी भी थी, जिसे पूजा फेंक नहीं सकी।",
+   "en": "Among the things was Grandfather's old walking stick, which Puja couldn't throw away.",
+   "ko": "짐 속에는 할아버지의 낡은 지팡이도 있었는데 푸자는 버릴 수 없었어요.",
+   "blank": "लाठी",
    "src": "made"
   }
  ],
@@ -42018,6 +42546,22 @@
    "en": "On a rainy evening Seema made dahi vada for the neighbors.",
    "ko": "비 오는 저녁 시마는 이웃들을 위해 다히 바다를 만들었어요.",
    "blank": "वड़ा",
+   "src": "made"
+  }
+ ],
+ "w|वतन": [
+  {
+   "text": "विदेश से आई एक बुज़ुर्ग महिला ने कहा कि ये चीज़ें उन्हें अपने वतन की याद दिलाती हैं।",
+   "en": "An elderly woman visiting from abroad said these things remind her of her homeland.",
+   "ko": "외국에서 온 한 할머니는 이 물건들이 고향 땅을 떠올리게 한다고 했어요.",
+   "blank": "वतन",
+   "src": "made"
+  },
+  {
+   "text": "पूजा की पड़ोसन बीस साल से विदेश में रहती है, पर हर दिवाली वतन लौट आती है।",
+   "en": "Puja's neighbour has lived abroad for twenty years, but she comes back home to her country every Diwali.",
+   "ko": "푸자의 이웃은 이십 년째 외국에 살지만 디왈리마다 고국에 돌아와요.",
+   "blank": "वतन",
    "src": "made"
   }
  ],
@@ -42899,6 +43443,22 @@
    "en": "This department is on another floor.",
    "ko": "이 부서는 다른 층에 있어.",
    "blank": "विभाग"
+  }
+ ],
+ "w|विभाजन": [
+  {
+   "text": "विभाजन वाली गैलरी में लोगों की लिखी चिट्ठियाँ देखकर कई दर्शक रो पड़ते हैं।",
+   "en": "In the Partition gallery, many visitors break down in tears at the letters people wrote.",
+   "ko": "분할 전시실에서 사람들이 쓴 편지를 보고 많은 관람객이 눈물을 흘려요.",
+   "blank": "विभाजन",
+   "src": "made"
+  },
+  {
+   "text": "बड़े कमरे के विभाजन के लिए पूजा ने लकड़ी की एक जाली लगवाई।",
+   "en": "Puja had a wooden screen put up to divide the big room.",
+   "ko": "푸자는 큰 방을 나누려고 나무 칸막이를 세웠어요.",
+   "blank": "विभाजन",
+   "src": "made"
   }
  ],
  "w|विभिन्न": [
@@ -44015,6 +44575,22 @@
    "blank": "शर्ट"
   }
  ],
+ "w|शर्त": [
+  {
+   "text": "दान देने वाले परिवार की एक ही शर्त थी कि डायरी पर उनके दादा का नाम लिखा जाए।",
+   "en": "The donor family had only one condition: that their grandfather's name be written on the diary.",
+   "ko": "기증한 가족의 조건은 하나, 일기에 할아버지 이름을 적어 달라는 것이었어요.",
+   "blank": "शर्त",
+   "src": "made"
+  },
+  {
+   "text": "मकान मालिक की शर्त थी कि दीवारों में कील न ठोकी जाए।",
+   "en": "The landlord's condition was that no nails be hammered into the walls.",
+   "ko": "집주인의 조건은 벽에 못을 박지 말라는 것이었어요.",
+   "blank": "शर्त",
+   "src": "made"
+  }
+ ],
  "w|शर्म": [
   {
    "text": "गलती पर उसे बहुत शर्म महसूस हुई।",
@@ -44930,6 +45506,22 @@
    "en": "The Marathi neighbor gave Seema homemade shrikhand on Gudi Padwa.",
    "ko": "마라티 이웃은 구디 파드와 날 시마에게 집에서 만든 슈리칸드를 줬어요.",
    "blank": "श्रीखंड",
+   "src": "made"
+  }
+ ],
+ "w|श्रृंखला": [
+  {
+   "text": "विकास पुराने मंदिरों पर व्याख्यानों की एक श्रृंखला शुरू करना चाहता है।",
+   "en": "Vikas wants to start a series of lectures on old temples.",
+   "ko": "비카스는 옛 사원에 관한 강연 시리즈를 시작하고 싶어 해요.",
+   "blank": "श्रृंखला",
+   "src": "made"
+  },
+  {
+   "text": "ट्रक ख़राब होना परेशानियों की श्रृंखला की बस शुरुआत थी।",
+   "en": "The truck breaking down was just the start of a chain of troubles.",
+   "ko": "트럭이 고장 난 건 줄줄이 이어진 골칫거리의 시작일 뿐이었어요.",
+   "blank": "श्रृंखला",
    "src": "made"
   }
  ],
@@ -45939,6 +46531,22 @@
    "en": "I have to meet the editor tomorrow.",
    "ko": "내일 편집자를 만나야 해.",
    "blank": "संपादक"
+  }
+ ],
+ "w|संपूर्ण": [
+  {
+   "text": "संपूर्ण संग्रहालय घूमने में कम से कम तीन घंटे लगते हैं।",
+   "en": "It takes at least three hours to go round the entire museum.",
+   "ko": "박물관 전체를 둘러보려면 적어도 세 시간은 걸려요.",
+   "blank": "संपूर्ण",
+   "src": "made"
+  },
+  {
+   "text": "पूजा ने संपूर्ण रसोई का सामान एक ही बड़े डिब्बे में भर दिया।",
+   "en": "Puja packed the entire kitchen into one big box.",
+   "ko": "푸자는 부엌 살림 전부를 큰 상자 하나에 담았어요.",
+   "blank": "संपूर्ण",
+   "src": "made"
   }
  ],
  "w|सप्ताह": [
@@ -47717,6 +48325,22 @@
    "blank": "सागर"
   }
  ],
+ "w|साज़िश": [
+  {
+   "text": "एक पुराने नाटक में दिखाया गया है कि दरबारी राजा के ख़िलाफ़ साज़िश कैसे रचते थे।",
+   "en": "An old play shows how courtiers would hatch plots against the king.",
+   "ko": "옛 연극에는 신하들이 왕에게 맞서 음모를 꾸미는 모습이 나와요.",
+   "blank": "साज़िश",
+   "src": "made"
+  },
+  {
+   "text": "बच्चे मज़ाक में कहते रहे कि सबसे छोटा कमरा उन्हें देना मम्मी की साज़िश है।",
+   "en": "The kids kept joking that giving them the smallest room was Mum's conspiracy.",
+   "ko": "아이들은 제일 작은 방을 준 건 엄마의 음모라고 농담했어요.",
+   "blank": "साज़िश",
+   "src": "made"
+  }
+ ],
  "w|साझा": [
   {
    "text": "दोनों दोस्तों ने हॉस्टल में चार साल तक एक ही कमरा साझा किया था।",
@@ -48428,6 +49052,22 @@
    "en": "Grandma's home remedies have proved right many times.",
    "ko": "할머니의 민간요법은 여러 번 옳은 것으로 드러났어요.",
    "blank": "सिद्ध",
+   "src": "made"
+  }
+ ],
+ "w|सिद्धांत": [
+  {
+   "text": "गाइड ने बताया कि ये यंत्र खगोल के किस सिद्धांत पर काम करते थे।",
+   "en": "The guide explained on what principle of astronomy these instruments worked.",
+   "ko": "가이드는 이 기구들이 어떤 천문 원리로 작동했는지 설명했어요.",
+   "blank": "सिद्धांत",
+   "src": "made"
+  },
+  {
+   "text": "पूजा का सिद्धांत है कि जो चीज़ एक साल से इस्तेमाल न हुई हो, उसे दान कर दो।",
+   "en": "Puja's principle is that anything unused for a year should be given away.",
+   "ko": "푸자의 원칙은 일 년 동안 안 쓴 물건은 기부하는 거예요.",
+   "blank": "सिद्धांत",
    "src": "made"
   }
  ],
