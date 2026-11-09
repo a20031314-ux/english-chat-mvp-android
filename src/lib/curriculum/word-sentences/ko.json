@@ -1693,6 +1693,22 @@
    "src": "made"
   }
  ],
+ "w|강물": [
+  {
+   "text": "동민은 차가운 강물에 발을 담그고 땀을 식혔어요.",
+   "en": "Dongmin dipped his feet in the cold river water to cool off.",
+   "ko": "동민은 차가운 강물에 발을 담그고 땀을 식혔어요.",
+   "blank": "강물에",
+   "src": "made"
+  },
+  {
+   "text": "강물에 빠졌던 아이의 엄마가 서연에게 해열제를 물었어요.",
+   "en": "The mother of a child who had fallen into the river asked Seoyeon about fever reducers.",
+   "ko": "강물에 빠졌던 아이의 엄마가 서연에게 해열제를 물었어요.",
+   "blank": "강물에",
+   "src": "made"
+  }
+ ],
  "w|강아지": [
   {
    "text": "강아지 너무 귀엽다.",
@@ -2031,6 +2047,22 @@
    "src": "made"
   }
  ],
+ "w|개울": [
+  {
+   "text": "숲속 개울에서 가재를 찾던 동민은 어린 시절이 떠올랐어요.",
+   "en": "Looking for crayfish in the forest stream, Dongmin remembered his childhood.",
+   "ko": "숲속 개울에서 가재를 찾던 동민은 어린 시절이 떠올랐어요.",
+   "blank": "개울에서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 개울에서 놀다가 발목을 삔 아이에게 압박 붕대를 감아 줬어요.",
+   "en": "Seoyeon wrapped a compression bandage on a child who sprained an ankle playing in the stream.",
+   "ko": "서연은 개울에서 놀다가 발목을 삔 아이에게 압박 붕대를 감아 줬어요.",
+   "blank": "개울에서",
+   "src": "made"
+  }
+ ],
  "w|개월": [
   {
    "text": "프로젝트가 몇 개월 걸렸어.",
@@ -2120,6 +2152,22 @@
    "en": "When choosing a hotel, Yuna looks at objective facility details rather than star ratings.",
    "ko": "유나는 호텔을 고를 때 별점보다 객관적인 시설 정보를 봐요.",
    "blank": "객관적인",
+   "src": "made"
+  }
+ ],
+ "w|갯벌": [
+  {
+   "text": "강이 바다와 만나는 곳에는 넓은 갯벌이 있어요.",
+   "en": "Where the river meets the sea, there is a wide tidal flat.",
+   "ko": "강이 바다와 만나는 곳에는 넓은 갯벌이 있어요.",
+   "blank": "갯벌이",
+   "src": "made"
+  },
+  {
+   "text": "갯벌에서 조개를 캐다 손을 벤 손님이 서연의 약국에 들어왔어요.",
+   "en": "A customer who cut her hand digging clams on the tidal flat came into Seoyeon's pharmacy.",
+   "ko": "갯벌에서 조개를 캐다 손을 벤 손님이 서연의 약국에 들어왔어요.",
+   "blank": "갯벌에서",
    "src": "made"
   }
  ],
@@ -4843,6 +4891,22 @@
    "blank": "고용할"
   }
  ],
+ "w|고원": [
+  {
+   "text": "동민은 여름이면 시원한 고원에서 야영을 해요.",
+   "en": "In summer, Dongmin camps on a cool highland.",
+   "ko": "동민은 여름이면 시원한 고원에서 야영을 해요.",
+   "blank": "고원에서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 고원 지대로 등산 가는 손님에게 고산병 약을 설명했어요.",
+   "en": "Seoyeon explained altitude sickness medicine to a customer going hiking in the highlands.",
+   "ko": "서연은 고원 지대로 등산 가는 손님에게 고산병 약을 설명했어요.",
+   "blank": "고원",
+   "src": "made"
+  }
+ ],
  "w|고의": [
   {
    "text": "검사는 피고인이 고의로 불을 냈다고 주장했어요.",
@@ -5213,6 +5277,22 @@
    "en": "I wore a cast while treating the fracture.",
    "ko": "골절을 치료하느라 깁스를 했어.",
    "blank": "골절을"
+  }
+ ],
+ "w|골짜기": [
+  {
+   "text": "깊은 골짜기에 들어서자 동민은 물소리만 들었어요.",
+   "en": "Entering the deep valley, Dongmin heard only the sound of water.",
+   "ko": "깊은 골짜기에 들어서자 동민은 물소리만 들었어요.",
+   "blank": "골짜기에",
+   "src": "made"
+  },
+  {
+   "text": "서연은 골짜기 마을에 사는 할머니께 약을 직접 갖다드렸어요.",
+   "en": "Seoyeon personally delivered medicine to a grandmother living in a valley village.",
+   "ko": "서연은 골짜기 마을에 사는 할머니께 약을 직접 갖다드렸어요.",
+   "blank": "골짜기",
+   "src": "made"
   }
  ],
  "w|곰": [
@@ -7785,6 +7865,22 @@
    "en": "You've got to follow the rules.",
    "ko": "규칙은 지켜야지.",
    "blank": "규칙은"
+  }
+ ],
+ "w|규칙적": [
+  {
+   "text": "동민은 숲에서 지낸 뒤로 생활이 훨씬 규칙적이 됐어요.",
+   "en": "Since living in the forest, Dongmin's life has become much more regular.",
+   "ko": "동민은 숲에서 지낸 뒤로 생활이 훨씬 규칙적이 됐어요.",
+   "blank": "규칙적이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 약을 규칙적인 시간에 먹어야 효과가 좋다고 강조했어요.",
+   "en": "Seoyeon emphasized that medicine works best when taken at regular times.",
+   "ko": "서연은 약을 규칙적인 시간에 먹어야 효과가 좋다고 강조했어요.",
+   "blank": "규칙적인",
+   "src": "made"
   }
  ],
  "w|균형": [
@@ -10815,6 +10911,22 @@
    "blank": "꾸며"
   }
  ],
+ "w|꾸준하다": [
+  {
+   "text": "동민은 꾸준하게 나무를 심어서 민둥산을 숲으로 바꿨어요.",
+   "en": "By steadily planting trees, Dongmin turned a bare mountain into a forest.",
+   "ko": "동민은 꾸준하게 나무를 심어서 민둥산을 숲으로 바꿨어요.",
+   "blank": "꾸준하게",
+   "src": "made"
+  },
+  {
+   "text": "약국에 꾸준히 오는 할머니는 서연의 이름을 기억해요.",
+   "en": "The grandmother who steadily comes to the pharmacy remembers Seoyeon's name.",
+   "ko": "약국에 꾸준히 오는 할머니는 서연의 이름을 기억해요.",
+   "blank": "꾸준히",
+   "src": "made"
+  }
+ ],
  "w|꾸준히": [
   {
    "text": "민수는 매일 아침 꾸준히 영어 단어를 외워요.",
@@ -12241,6 +12353,22 @@
    "blank": "낯선"
   }
  ],
+ "w|낯익다": [
+  {
+   "text": "오랜만에 찾은 고향 숲길이 동민에게는 여전히 낯익었어요.",
+   "en": "The hometown forest path Dongmin visited after a long time still looked familiar.",
+   "ko": "오랜만에 찾은 고향 숲길이 동민에게는 여전히 낯익었어요.",
+   "blank": "낯익었어요",
+   "src": "made"
+  },
+  {
+   "text": "서연은 낯익은 얼굴의 손님에게 반갑게 인사했어요.",
+   "en": "Seoyeon warmly greeted a customer with a familiar face.",
+   "ko": "서연은 낯익은 얼굴의 손님에게 반갑게 인사했어요.",
+   "blank": "낯익은",
+   "src": "made"
+  }
+ ],
  "w|낳다": [
   {
    "text": "고양이가 새끼를 낳다 보니 바빠졌어.",
@@ -12571,6 +12699,22 @@
    "en": "I dried the shoes, not wanting them to smell.",
    "ko": "신발에서 냄새나다 싶어 말렸어.",
    "blank": "냄새나다"
+  }
+ ],
+ "w|냇가": [
+  {
+   "text": "동민은 냇가에 텐트를 치고 별을 봤어요.",
+   "en": "Dongmin pitched a tent by the creek and looked at the stars.",
+   "ko": "동민은 냇가에 텐트를 치고 별을 봤어요.",
+   "blank": "냇가에",
+   "src": "made"
+  },
+  {
+   "text": "냇가에서 고기를 구워 먹던 가족이 서연에게 소화제를 사 갔어요.",
+   "en": "A family who had been grilling meat by the creek bought digestive medicine from Seoyeon.",
+   "ko": "냇가에서 고기를 구워 먹던 가족이 서연에게 소화제를 사 갔어요.",
+   "blank": "냇가에서",
+   "src": "made"
   }
  ],
  "w|냉면": [
@@ -14163,6 +14307,22 @@
    "en": "Please push the deadline back just one day.",
    "ko": "마감을 하루만 늦춰 줘.",
    "blank": "늦춰"
+  }
+ ],
+ "w|늪": [
+  {
+   "text": "숲 깊은 곳의 늪에는 개구리가 많이 살아요.",
+   "en": "Many frogs live in the swamp deep in the forest.",
+   "ko": "숲 깊은 곳의 늪에는 개구리가 많이 살아요.",
+   "blank": "늪에는",
+   "src": "made"
+  },
+  {
+   "text": "서연은 늪 근처 캠핑장에 간다는 손님에게 모기 기피제를 권했어요.",
+   "en": "Seoyeon recommended mosquito repellent to a customer going to a campsite near a swamp.",
+   "ko": "서연은 늪 근처 캠핑장에 간다는 손님에게 모기 기피제를 권했어요.",
+   "blank": "늪",
+   "src": "made"
   }
  ],
  "w|다": [
@@ -15783,6 +15943,22 @@
    "blank": "마음대로"
   }
  ],
+ "w|대륙": [
+  {
+   "text": "동민은 이 강의 물고기가 다른 대륙에서 들어온 종이라는 걸 알았어요.",
+   "en": "Dongmin learned that the fish in this river is a species that came from another continent.",
+   "ko": "동민은 이 강의 물고기가 다른 대륙에서 들어온 종이라는 걸 알았어요.",
+   "blank": "대륙에서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 다른 대륙으로 여행 가는 손님에게 말라리아 예방약을 안내했어요.",
+   "en": "Seoyeon advised a customer traveling to another continent about malaria prevention medicine.",
+   "ko": "서연은 다른 대륙으로 여행 가는 손님에게 말라리아 예방약을 안내했어요.",
+   "blank": "대륙으로",
+   "src": "made"
+  }
+ ],
  "w|대리": [
   {
    "text": "대리가 프로젝트를 맡아.",
@@ -16783,6 +16959,22 @@
    "en": "I don't want to do anything against morals.",
    "ko": "도덕에 어긋나는 일은 하기 싫어.",
    "blank": "도덕에"
+  }
+ ],
+ "w|도덕적": [
+  {
+   "text": "동민은 강에 쓰레기를 버리지 않는 게 도덕적인 의무라고 생각해요.",
+   "en": "Dongmin thinks not throwing trash in the river is a moral duty.",
+   "ko": "동민은 강에 쓰레기를 버리지 않는 게 도덕적인 의무라고 생각해요.",
+   "blank": "도덕적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 약을 파는 일에도 도덕적 책임이 따른다고 생각해요.",
+   "en": "Seoyeon thinks selling medicine also comes with moral responsibility.",
+   "ko": "서연은 약을 파는 일에도 도덕적 책임이 따른다고 생각해요.",
+   "blank": "도덕적",
+   "src": "made"
   }
  ],
  "w|도둑": [
@@ -23979,6 +24171,22 @@
    "blank": "물질을"
   }
  ],
+ "w|물질적": [
+  {
+   "text": "동민은 숲에서 지내며 물질적인 것보다 소중한 게 많다는 걸 느꼈어요.",
+   "en": "Living in the forest, Dongmin felt that many things are more precious than material ones.",
+   "ko": "동민은 숲에서 지내며 물질적인 것보다 소중한 게 많다는 걸 느꼈어요.",
+   "blank": "물질적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 아픈 손님에게 물질적인 도움보다 따뜻한 말 한마디가 필요하다고 느꼈어요.",
+   "en": "Seoyeon felt that a sick customer needed a warm word more than material help.",
+   "ko": "서연은 아픈 손님에게 물질적인 도움보다 따뜻한 말 한마디가 필요하다고 느꼈어요.",
+   "blank": "물질적인",
+   "src": "made"
+  }
+ ],
  "w|물품": [
   {
    "text": "민수는 분실 물품 상자에서 잃어버린 필통을 찾았어요.",
@@ -24453,6 +24661,22 @@
    "src": "made"
   }
  ],
+ "w|민물": [
+  {
+   "text": "동민은 민물에 사는 물고기를 관찰하려고 강가에 앉았어요.",
+   "en": "Dongmin sat by the river to observe fish that live in fresh water.",
+   "ko": "동민은 민물에 사는 물고기를 관찰하려고 강가에 앉았어요.",
+   "blank": "민물에",
+   "src": "made"
+  },
+  {
+   "text": "서연은 민물 생선을 날로 먹지 말라고 손님에게 당부했어요.",
+   "en": "Seoyeon urged the customer not to eat freshwater fish raw.",
+   "ko": "서연은 민물 생선을 날로 먹지 말라고 손님에게 당부했어요.",
+   "blank": "민물",
+   "src": "made"
+  }
+ ],
  "w|민족": [
   {
    "text": "다양한 민족이 함께 살아.",
@@ -24551,6 +24775,22 @@
    "en": "Someone pushed my back.",
    "ko": "누가 등을 밀었어.",
    "blank": "밀었어"
+  }
+ ],
+ "w|밀물": [
+  {
+   "text": "밀물이 들어오자 동민은 강 하구에서 서둘러 나왔어요.",
+   "en": "When the tide came in, Dongmin hurried out of the river mouth.",
+   "ko": "밀물이 들어오자 동민은 강 하구에서 서둘러 나왔어요.",
+   "blank": "밀물이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 밀물 때를 놓쳐 갯바위에 갇혔던 낚시꾼에게 감기약을 줬어요.",
+   "en": "Seoyeon gave cold medicine to a fisherman who had been stranded on a sea rock after missing the incoming tide.",
+   "ko": "서연은 밀물 때를 놓쳐 갯바위에 갇혔던 낚시꾼에게 감기약을 줬어요.",
+   "blank": "밀물",
+   "src": "made"
   }
  ],
  "w|밉다": [
@@ -25171,6 +25411,22 @@
    "blank": "반대해서"
   }
  ],
+ "w|반도": [
+  {
+   "text": "동민은 반도 끝에 있는 숲까지 자전거를 타고 갔어요.",
+   "en": "Dongmin rode his bike to the forest at the tip of the peninsula.",
+   "ko": "동민은 반도 끝에 있는 숲까지 자전거를 타고 갔어요.",
+   "blank": "반도",
+   "src": "made"
+  },
+  {
+   "text": "서연의 약국은 반도 끝 바닷가 마을에 하나뿐인 약국이에요.",
+   "en": "Seoyeon's pharmacy is the only one in the seaside village at the tip of the peninsula.",
+   "ko": "서연의 약국은 반도 끝 바닷가 마을에 하나뿐인 약국이에요.",
+   "blank": "반도",
+   "src": "made"
+  }
+ ],
  "w|반드시": [
   {
    "text": "반드시 와야 해.",
@@ -25260,6 +25516,22 @@
    "en": "Yuna was a little tired of the same routine every day.",
    "ko": "유나는 매일 똑같은 일의 반복에 조금 지쳤어요.",
    "blank": "반복에",
+   "src": "made"
+  }
+ ],
+ "w|반복적": [
+  {
+   "text": "동민은 새소리를 녹음해서 반복적인 울음 패턴을 연구해요.",
+   "en": "Dongmin records birdsong to study its repetitive call patterns.",
+   "ko": "동민은 새소리를 녹음해서 반복적인 울음 패턴을 연구해요.",
+   "blank": "반복적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 같은 질문에 반복적으로 대답해도 짜증 내지 않아요.",
+   "en": "Seoyeon doesn't get annoyed even when she answers the same question repeatedly.",
+   "ko": "서연은 같은 질문에 반복적으로 대답해도 짜증 내지 않아요.",
+   "blank": "반복적으로",
    "src": "made"
   }
  ],
@@ -29266,6 +29538,22 @@
    "src": "krdict"
   }
  ],
+ "w|불규칙하다": [
+  {
+   "text": "산속 날씨는 불규칙해서 동민은 늘 우비를 챙겨요.",
+   "en": "The mountain weather is unpredictable, so Dongmin always takes a raincoat.",
+   "ko": "산속 날씨는 불규칙해서 동민은 늘 우비를 챙겨요.",
+   "blank": "불규칙해서",
+   "src": "made"
+  },
+  {
+   "text": "서연은 식사가 불규칙한 직장인 손님에게 위장약을 권했어요.",
+   "en": "Seoyeon recommended stomach medicine to an office worker with irregular meals.",
+   "ko": "서연은 식사가 불규칙한 직장인 손님에게 위장약을 권했어요.",
+   "blank": "불규칙한",
+   "src": "made"
+  }
+ ],
  "w|불길하다": [
   {
    "text": "밤새 개가 짖어서 준호는 왠지 불길한 느낌이 들었어요.",
@@ -32080,6 +32368,22 @@
    "blank": "산"
   }
  ],
+ "w|산림": [
+  {
+   "text": "동민은 산림 보호 구역에서 숲 해설가로 일해요.",
+   "en": "Dongmin works as a forest guide in a forest protection area.",
+   "ko": "동민은 산림 보호 구역에서 숲 해설가로 일해요.",
+   "blank": "산림",
+   "src": "made"
+  },
+  {
+   "text": "서연은 산림 공무원에게 벌레 물린 데 바르는 약을 챙겨 줬어요.",
+   "en": "Seoyeon gave a forestry official ointment for insect bites.",
+   "ko": "서연은 산림 공무원에게 벌레 물린 데 바르는 약을 챙겨 줬어요.",
+   "blank": "산림",
+   "src": "made"
+  }
+ ],
  "w|산부인과": [
   {
    "text": "정기 검진으로 산부인과에 갔어.",
@@ -32688,6 +32992,22 @@
    "en": "The other party offered an apology first.",
    "ko": "상대방이 먼저 사과를 건넸어.",
    "blank": "상대방이"
+  }
+ ],
+ "w|상대적": [
+  {
+   "text": "동민은 도시에 비하면 숲이 상대적으로 시원하다고 말했어요.",
+   "en": "Dongmin said the forest is relatively cool compared to the city.",
+   "ko": "동민은 도시에 비하면 숲이 상대적으로 시원하다고 말했어요.",
+   "blank": "상대적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 이 약이 다른 약보다 부작용이 상대적으로 적다고 설명했어요.",
+   "en": "Seoyeon explained this medicine has relatively fewer side effects than others.",
+   "ko": "서연은 이 약이 다른 약보다 부작용이 상대적으로 적다고 설명했어요.",
+   "blank": "상대적으로",
+   "src": "made"
   }
  ],
  "w|상대하다": [
@@ -35212,6 +35532,22 @@
    "en": "Add just a little salt to the soup.",
    "ko": "국에 소금 조금만 쳐.",
    "blank": "소금"
+  }
+ ],
+ "w|소나기": [
+  {
+   "text": "산을 내려오다가 소나기를 만난 동민은 큰 나무 밑에서 비를 피했어요.",
+   "en": "Caught in a sudden shower coming down the mountain, Dongmin took shelter under a big tree.",
+   "ko": "산을 내려오다가 소나기를 만난 동민은 큰 나무 밑에서 비를 피했어요.",
+   "blank": "소나기를",
+   "src": "made"
+  },
+  {
+   "text": "갑자기 내린 소나기에 손님들이 서연의 약국으로 비를 피해 들어왔어요.",
+   "en": "A sudden shower made customers duck into Seoyeon's pharmacy to escape the rain.",
+   "ko": "갑자기 내린 소나기에 손님들이 서연의 약국으로 비를 피해 들어왔어요.",
+   "blank": "소나기에",
+   "src": "made"
   }
  ],
  "w|소녀": [
@@ -39884,6 +40220,22 @@
    "en": "Slice the meat thinly, please.",
    "ko": "고기를 얇게 썰어 줘.",
    "blank": "썰어"
+  }
+ ],
+ "w|썰물": [
+  {
+   "text": "동민은 썰물 때 드러난 모래톱을 걸어 작은 섬까지 갔어요.",
+   "en": "At low tide, Dongmin walked along the exposed sandbar to a small island.",
+   "ko": "동민은 썰물 때 드러난 모래톱을 걸어 작은 섬까지 갔어요.",
+   "blank": "썰물",
+   "src": "made"
+  },
+  {
+   "text": "썰물 때 해산물을 따러 갔던 손님이 해파리에 쏘여서 서연을 찾아왔어요.",
+   "en": "A customer who went to gather seafood at low tide got stung by a jellyfish and came to Seoyeon.",
+   "ko": "썰물 때 해산물을 따러 갔던 손님이 해파리에 쏘여서 서연을 찾아왔어요.",
+   "blank": "썰물",
+   "src": "made"
   }
  ],
  "w|쏘다": [
@@ -45246,6 +45598,22 @@
    "src": "krdict"
   }
  ],
+ "w|영구적": [
+  {
+   "text": "산불은 숲에 영구적인 상처를 남길 수 있다고 동민은 걱정했어요.",
+   "en": "Dongmin worried that a wildfire could leave permanent scars on the forest.",
+   "ko": "산불은 숲에 영구적인 상처를 남길 수 있다고 동민은 걱정했어요.",
+   "blank": "영구적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 그 흉터 연고가 영구적으로 흉을 없애 주지는 않는다고 말했어요.",
+   "en": "Seoyeon said the scar ointment doesn't remove scars permanently.",
+   "ko": "서연은 그 흉터 연고가 영구적으로 흉을 없애 주지는 않는다고 말했어요.",
+   "blank": "영구적으로",
+   "src": "made"
+  }
+ ],
  "w|영리하다": [
   {
    "text": "민준이는 아주 영리한 학생이라 무엇이든 한 번 설명해 주면 바로 이해한다.",
@@ -49158,6 +49526,22 @@
    "src": "made"
   }
  ],
+ "w|윤리적": [
+  {
+   "text": "동민은 야생 동물을 가까이에서 찍을 때도 윤리적인 거리를 지켜요.",
+   "en": "Dongmin keeps an ethical distance even when photographing wild animals up close.",
+   "ko": "동민은 야생 동물을 가까이에서 찍을 때도 윤리적인 거리를 지켜요.",
+   "blank": "윤리적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 손님에게 필요 없는 약을 권하는 건 윤리적으로 옳지 않다고 말했어요.",
+   "en": "Seoyeon said recommending unnecessary medicine to customers is ethically wrong.",
+   "ko": "서연은 손님에게 필요 없는 약을 권하는 건 윤리적으로 옳지 않다고 말했어요.",
+   "blank": "윤리적으로",
+   "src": "made"
+  }
+ ],
  "w|은": [
   {
    "text": "은으로 만든 수저를 물려받았어.",
@@ -50620,6 +51004,22 @@
    "src": "made"
   }
  ],
+ "w|이슬": [
+  {
+   "text": "이른 아침 풀잎에 맺힌 이슬이 동민의 바지를 적셨어요.",
+   "en": "Dew on the blades of grass early in the morning wet Dongmin's pants.",
+   "ko": "이른 아침 풀잎에 맺힌 이슬이 동민의 바지를 적셨어요.",
+   "blank": "이슬이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 이슬 맺힌 화분에 물을 주고 약국 문을 열어요.",
+   "en": "Seoyeon waters the dewy flowerpots and opens the pharmacy.",
+   "ko": "서연은 이슬 맺힌 화분에 물을 주고 약국 문을 열어요.",
+   "blank": "이슬",
+   "src": "made"
+  }
+ ],
  "w|이야기": [
   {
    "text": "우리 이야기 좀 하자.",
@@ -51602,6 +52002,22 @@
    "src": "krdict"
   }
  ],
+ "w|일시적": [
+  {
+   "text": "동민은 강물이 탁해진 게 일시적인 현상이길 바랐어요.",
+   "en": "Dongmin hoped the river water turning murky was only temporary.",
+   "ko": "동민은 강물이 탁해진 게 일시적인 현상이길 바랐어요.",
+   "blank": "일시적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 두통이 일시적으로 심해질 수 있다고 손님에게 미리 알려 줬어요.",
+   "en": "Seoyeon told the customer in advance that the headache might get temporarily worse.",
+   "ko": "서연은 두통이 일시적으로 심해질 수 있다고 손님에게 미리 알려 줬어요.",
+   "blank": "일시적으로",
+   "src": "made"
+  }
+ ],
  "w|일식": [
   {
    "text": "준호의 누나는 초밥이 나오는 일식 코스를 주문했어요.",
@@ -51907,6 +52323,22 @@
    "en": "When it started to rain, the vendors put up tents as a temporary fix.",
    "ko": "비가 오자 상인들은 임시로 천막을 쳤어요.",
    "blank": "임시로",
+   "src": "made"
+  }
+ ],
+ "w|임시적": [
+  {
+   "text": "홍수로 다리가 무너져서 동민은 임시적인 나무다리를 건넜어요.",
+   "en": "The flood destroyed the bridge, so Dongmin crossed a temporary wooden one.",
+   "ko": "홍수로 다리가 무너져서 동민은 임시적인 나무다리를 건넜어요.",
+   "blank": "임시적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 공사 기간 동안 임시적인 장소에서 약국을 운영했어요.",
+   "en": "During construction, Seoyeon ran the pharmacy at a temporary location.",
+   "ko": "서연은 공사 기간 동안 임시적인 장소에서 약국을 운영했어요.",
+   "blank": "임시적인",
    "src": "made"
   }
  ],
@@ -52290,6 +52722,22 @@
    "en": "Here, sit down.",
    "ko": "자, 여기 앉아.",
    "blank": "자"
+  }
+ ],
+ "w|자갈": [
+  {
+   "text": "동민은 강바닥의 자갈을 밟으며 얕은 곳을 건넜어요.",
+   "en": "Dongmin crossed the shallow part, stepping on the gravel of the riverbed.",
+   "ko": "동민은 강바닥의 자갈을 밟으며 얕은 곳을 건넜어요.",
+   "blank": "자갈을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 자갈 위에서 넘어져 무릎을 다친 아이에게 소독약을 발라 줬어요.",
+   "en": "Seoyeon applied disinfectant to a child who fell on gravel and hurt their knee.",
+   "ko": "서연은 자갈 위에서 넘어져 무릎을 다친 아이에게 소독약을 발라 줬어요.",
+   "blank": "자갈",
+   "src": "made"
   }
  ],
  "w|자격": [
@@ -53708,6 +54156,22 @@
    "en": "The funeral was quiet.",
    "ko": "장례식은 조용했어.",
    "blank": "장례식은"
+  }
+ ],
+ "w|장마": [
+  {
+   "text": "장마가 길어져 강물이 불자 동민은 낚시를 미뤘어요.",
+   "en": "The rainy season dragged on and the river swelled, so Dongmin put off fishing.",
+   "ko": "장마가 길어져 강물이 불자 동민은 낚시를 미뤘어요.",
+   "blank": "장마가",
+   "src": "made"
+  },
+  {
+   "text": "장마가 길어지면 무좀약을 찾는 손님이 많아서 서연이 바빠요.",
+   "en": "When the rainy season drags on, many customers look for athlete's foot medicine, so Seoyeon is busy.",
+   "ko": "장마가 길어지면 무좀약을 찾는 손님이 많아서 서연이 바빠요.",
+   "blank": "장마가",
+   "src": "made"
   }
  ],
  "w|장모": [
@@ -55600,6 +56064,22 @@
    "blank": "절대로"
   }
  ],
+ "w|절대적": [
+  {
+   "text": "동민에게 강가 산책은 절대적인 휴식 시간이에요.",
+   "en": "For Dongmin, a walk by the river is an absolute time of rest.",
+   "ko": "동민에게 강가 산책은 절대적인 휴식 시간이에요.",
+   "blank": "절대적인",
+   "src": "made"
+  },
+  {
+   "text": "서연은 의사의 처방이 절대적으로 필요한 약은 함부로 팔지 않아요.",
+   "en": "Seoyeon never casually sells medicine that absolutely requires a doctor's prescription.",
+   "ko": "서연은 의사의 처방이 절대적으로 필요한 약은 함부로 팔지 않아요.",
+   "blank": "절대적으로",
+   "src": "made"
+  }
+ ],
  "w|절도": [
   {
    "text": "학교에서 자전거 절도 사건이 생겨서 자물쇠를 꼭 채우라는 공지가 나왔어요.",
@@ -55628,6 +56108,22 @@
    "en": "I hang on to overcome despair.",
    "ko": "절망을 이겨 내려고 버텨.",
    "blank": "절망을"
+  }
+ ],
+ "w|절벽": [
+  {
+   "text": "동민은 강가 절벽 위에 둥지를 튼 독수리를 발견했어요.",
+   "en": "Dongmin spotted an eagle nesting on a cliff by the river.",
+   "ko": "동민은 강가 절벽 위에 둥지를 튼 독수리를 발견했어요.",
+   "blank": "절벽",
+   "src": "made"
+  },
+  {
+   "text": "절벽 근처에서 넘어진 등산객이 서연의 약국에 붕대를 사러 왔어요.",
+   "en": "A hiker who fell near a cliff came to Seoyeon's pharmacy to buy bandages.",
+   "ko": "절벽 근처에서 넘어진 등산객이 서연의 약국에 붕대를 사러 왔어요.",
+   "blank": "절벽",
+   "src": "made"
   }
  ],
  "w|절실하다": [
@@ -56010,6 +56506,22 @@
    "en": "I pushed through a rainy jungle.",
    "ko": "비가 쏟아지는 정글을 헤쳤어.",
    "blank": "정글을"
+  }
+ ],
+ "w|정기적": [
+  {
+   "text": "동민은 정기적으로 강가의 쓰레기를 줍는 모임에 나가요.",
+   "en": "Dongmin regularly goes to a group that picks up trash along the river.",
+   "ko": "동민은 정기적으로 강가의 쓰레기를 줍는 모임에 나가요.",
+   "blank": "정기적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연의 약국은 정기적인 소독을 한 달에 한 번 해요.",
+   "en": "Seoyeon's pharmacy gets regular disinfection once a month.",
+   "ko": "서연의 약국은 정기적인 소독을 한 달에 한 번 해요.",
+   "blank": "정기적인",
+   "src": "made"
   }
  ],
  "w|정답": [
@@ -57542,6 +58054,22 @@
    "en": "Different religions mean different cultures.",
    "ko": "종교가 다르면 문화도 달라.",
    "blank": "종교가"
+  }
+ ],
+ "w|종교적": [
+  {
+   "text": "마을 사람들은 그 오래된 나무를 종교적인 의미로 소중히 여겨요.",
+   "en": "The villagers treasure that old tree for its religious meaning.",
+   "ko": "마을 사람들은 그 오래된 나무를 종교적인 의미로 소중히 여겨요.",
+   "blank": "종교적인",
+   "src": "made"
+  },
+  {
+   "text": "그 손님은 종교적 이유로 특정 성분이 든 약을 먹지 않아요.",
+   "en": "That customer doesn't take medicine with certain ingredients for religious reasons.",
+   "ko": "그 손님은 종교적 이유로 특정 성분이 든 약을 먹지 않아요.",
+   "blank": "종교적",
+   "src": "made"
   }
  ],
  "w|종류": [
@@ -59298,6 +59826,22 @@
    "blank": "지루했어"
   }
  ],
+ "w|지면": [
+  {
+   "text": "비가 그친 뒤 숲의 지면이 질척거려서 동민은 천천히 걸었어요.",
+   "en": "After the rain stopped, the forest ground was muddy, so Dongmin walked slowly.",
+   "ko": "비가 그친 뒤 숲의 지면이 질척거려서 동민은 천천히 걸었어요.",
+   "blank": "지면이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 비에 젖은 지면에 미끄러진 손님에게 파스를 줬어요.",
+   "en": "Seoyeon gave a pain relief patch to a customer who slipped on the wet ground.",
+   "ko": "서연은 비에 젖은 지면에 미끄러진 손님에게 파스를 줬어요.",
+   "blank": "지면에",
+   "src": "made"
+  }
+ ],
  "w|지방": [
   {
    "text": "지방으로 출장 가.",
@@ -59401,6 +59945,22 @@
    "en": "When the shaking went on for a long while, Yuna took out her motion sickness pills.",
    "ko": "흔들림이 한참 지속되자 유나는 멀미약을 꺼냈어요.",
    "blank": "지속되자",
+   "src": "made"
+  }
+ ],
+ "w|지속적": [
+  {
+   "text": "동민은 강의 수질을 지속적으로 기록하는 자원봉사를 해요.",
+   "en": "Dongmin volunteers to continuously record the river's water quality.",
+   "ko": "동민은 강의 수질을 지속적으로 기록하는 자원봉사를 해요.",
+   "blank": "지속적으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 혈압약을 지속적으로 먹어야 한다고 할아버지께 다시 설명했어요.",
+   "en": "Seoyeon explained again to the elderly man that he must take his blood pressure medicine continuously.",
+   "ko": "서연은 혈압약을 지속적으로 먹어야 한다고 할아버지께 다시 설명했어요.",
+   "blank": "지속적으로",
    "src": "made"
   }
  ],
@@ -59770,6 +60330,22 @@
    "en": "I exchanged a worn bill for a new one.",
    "ko": "낡은 지폐를 새것으로 바꿨어.",
    "blank": "지폐를"
+  }
+ ],
+ "w|지표": [
+  {
+   "text": "동민은 지표 가까이 드러난 나무뿌리에 걸려 넘어질 뻔했어요.",
+   "en": "Dongmin almost tripped over tree roots exposed near the surface.",
+   "ko": "동민은 지표 가까이 드러난 나무뿌리에 걸려 넘어질 뻔했어요.",
+   "blank": "지표",
+   "src": "made"
+  },
+  {
+   "text": "서연은 지표 근처의 오염 물질이 건강에 미치는 영향을 기사에서 읽었어요.",
+   "en": "Seoyeon read in an article about how pollutants near the earth's surface affect health.",
+   "ko": "서연은 지표 근처의 오염 물질이 건강에 미치는 영향을 기사에서 읽었어요.",
+   "blank": "지표",
+   "src": "made"
   }
  ],
  "w|지하실": [
@@ -62920,6 +63496,22 @@
    "blank": "초록색이"
   }
  ],
+ "w|초원": [
+  {
+   "text": "강을 건너자 넓은 초원이 동민의 눈앞에 펼쳐졌어요.",
+   "en": "After crossing the river, a wide grassland spread out before Dongmin's eyes.",
+   "ko": "강을 건너자 넓은 초원이 동민의 눈앞에 펼쳐졌어요.",
+   "blank": "초원이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 몽골 초원으로 여행 가는 손님에게 상비약을 추천했어요.",
+   "en": "Seoyeon recommended basic medicines to a customer traveling to the Mongolian grasslands.",
+   "ko": "서연은 몽골 초원으로 여행 가는 손님에게 상비약을 추천했어요.",
+   "blank": "초원으로",
+   "src": "made"
+  }
+ ],
  "w|초월하다": [
   {
    "text": "현우는 이웃 할머니의 나이를 초월한 열정에 감탄했어요.",
@@ -65894,6 +66486,22 @@
    "blank": "토스트에"
   }
  ],
+ "w|토양": [
+  {
+   "text": "동민은 숲의 토양이 기름져서 버섯이 잘 자란다고 설명했어요.",
+   "en": "Dongmin explained that mushrooms grow well because the forest soil is rich.",
+   "ko": "동민은 숲의 토양이 기름져서 버섯이 잘 자란다고 설명했어요.",
+   "blank": "토양이",
+   "src": "made"
+  },
+  {
+   "text": "서연은 토양에서 추출한 성분으로 만든 항생제에 대해 공부했어요.",
+   "en": "Seoyeon studied antibiotics made from compounds extracted from soil.",
+   "ko": "서연은 토양에서 추출한 성분으로 만든 항생제에 대해 공부했어요.",
+   "blank": "토양에서",
+   "src": "made"
+  }
+ ],
  "w|토요일": [
   {
    "text": "토요일에 장을 보러 갈게.",
@@ -67484,6 +68092,22 @@
    "en": "It's hard to change everyday habits.",
    "ko": "평소 습관을 바꾸기 힘들어.",
    "blank": "평소"
+  }
+ ],
+ "w|평야": [
+  {
+   "text": "동민은 언덕 위에서 황금빛으로 물든 평야를 내려다봤어요.",
+   "en": "From the hill, Dongmin looked down on the plain turned golden.",
+   "ko": "동민은 언덕 위에서 황금빛으로 물든 평야를 내려다봤어요.",
+   "blank": "평야를",
+   "src": "made"
+  },
+  {
+   "text": "서연의 약국은 넓은 평야 한가운데 있는 작은 마을에 있어요.",
+   "en": "Seoyeon's pharmacy is in a small village in the middle of a wide plain.",
+   "ko": "서연의 약국은 넓은 평야 한가운데 있는 작은 마을에 있어요.",
+   "blank": "평야",
+   "src": "made"
   }
  ],
  "w|평일": [
@@ -69625,6 +70249,22 @@
    "en": "The county office decided to send two more buses a day to the village in question.",
    "ko": "군청은 해당 마을에 버스를 하루 두 번 더 보내기로 했어요.",
    "blank": "해당",
+   "src": "made"
+  }
+ ],
+ "w|해류": [
+  {
+   "text": "동민은 연어가 해류를 타고 먼 바다를 돌아온다고 아이들에게 설명했어요.",
+   "en": "Dongmin explained to the children that salmon ride ocean currents and return from the far sea.",
+   "ko": "동민은 연어가 해류를 타고 먼 바다를 돌아온다고 아이들에게 설명했어요.",
+   "blank": "해류를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 해류가 바뀌면서 해파리가 늘었다는 뉴스를 손님과 이야기했어요.",
+   "en": "Seoyeon talked with a customer about the news that jellyfish increased as ocean currents changed.",
+   "ko": "서연은 해류가 바뀌면서 해파리가 늘었다는 뉴스를 손님과 이야기했어요.",
+   "blank": "해류가",
    "src": "made"
   }
  ],
