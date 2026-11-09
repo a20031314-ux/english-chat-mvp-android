@@ -1661,6 +1661,22 @@
    "src": "made"
   }
  ],
+ "w|与此同时": [
+  {
+   "text": "张伟在道歉，与此同时，妹妹也在给他写信。",
+   "en": "Zhang Wei was apologizing, and at the same time his sister was writing him a letter.",
+   "ko": "장웨이가 사과하는 사이, 여동생도 그에게 편지를 쓰고 있었어요.",
+   "blank": "与此同时",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在拍照，与此同时，一个大浪打湿了她的鞋。",
+   "en": "Liu Fang was taking photos, and at that very moment a big wave soaked her shoes.",
+   "ko": "류팡이 사진을 찍는 바로 그때 큰 파도가 신발을 적셨어요.",
+   "blank": "与此同时",
+   "src": "made"
+  }
+ ],
  "w|丑": [
   {
    "text": "美编把报头改了，黄涛觉得新字体有点丑。",
@@ -4197,6 +4213,22 @@
    "src": "made"
   }
  ],
+ "w|仇恨": [
+  {
+   "text": "张伟不希望一点误会变成兄弟之间的仇恨。",
+   "en": "Zhang Wei didn't want a small misunderstanding to turn into hatred between brothers.",
+   "ko": "장웨이는 작은 오해가 형제 사이의 원한이 되는 걸 원하지 않았어요.",
+   "blank": "仇恨",
+   "src": "made"
+  },
+  {
+   "text": "老渔民说，两个渔村以前有过仇恨，现在早就和好了。",
+   "en": "The old fisherman said the two fishing villages once had bad blood, but they made peace long ago.",
+   "ko": "늙은 어부는 두 어촌이 예전엔 원한이 있었지만 지금은 오래전에 화해했다고 했어요.",
+   "blank": "仇恨",
+   "src": "made"
+  }
+ ],
  "w|今后": [
   {
    "text": "王刚对教练说，今后每天都会早起来锻炼。",
@@ -6641,6 +6673,22 @@
    "en": "First regain your confidence.",
    "ko": "먼저 자신감을 되찾아.",
    "blank": "信心"
+  }
+ ],
+ "w|信念": [
+  {
+   "text": "张伟一直抱着一个信念：家人之间没有说不开的事。",
+   "en": "Zhang Wei has always held one belief: there's nothing family can't talk through.",
+   "ko": "장웨이는 가족 사이에 풀지 못할 일은 없다는 신념을 늘 품고 있어요.",
+   "blank": "信念",
+   "src": "made"
+  },
+  {
+   "text": "刘芳带着一个信念来到海边：一定要学会冲浪。",
+   "en": "Liu Fang came to the seaside with one conviction: she would learn to surf.",
+   "ko": "류팡은 꼭 서핑을 배우겠다는 신념을 안고 바닷가에 왔어요.",
+   "blank": "信念",
+   "src": "made"
   }
  ],
  "w|信息": [
@@ -10317,6 +10365,22 @@
    "src": "made"
   }
  ],
+ "w|初步": [
+  {
+   "text": "两兄妹初步说好了，周末再坐下来好好谈谈。",
+   "en": "The siblings tentatively agreed to sit down and talk properly at the weekend.",
+   "ko": "두 남매는 주말에 다시 앉아서 제대로 이야기하자고 일단 약속했어요.",
+   "blank": "初步",
+   "src": "made"
+  },
+  {
+   "text": "刘芳和教练初步定了每天两小时的冲浪课。",
+   "en": "Liu Fang and the instructor tentatively set up two hours of surfing lessons a day.",
+   "ko": "류팡과 강사는 하루 두 시간 서핑 수업을 일단 정했어요.",
+   "blank": "初步",
+   "src": "made"
+  }
+ ],
  "w|删除": [
   {
    "text": "一篇网上的报道有错，编辑马上把它删除了。",
@@ -12481,6 +12545,22 @@
    "en": "I'm going to the bathroom.",
    "ko": "나 화장실 좀 다녀올게.",
    "blank": "厕所"
+  }
+ ],
+ "w|厘米": [
+  {
+   "text": "张伟发现，门框上还留着小时候量身高的刻痕，他比姐姐高了几厘米。",
+   "en": "Zhang Wei found the height marks from childhood still on the door frame; he had been a few centimeters taller than his sister.",
+   "ko": "장웨이는 문틀에 어릴 때 키를 재던 자국이 아직 남아 있는 걸 봤는데 그가 누나보다 몇 센티미터 컸어요.",
+   "blank": "厘米",
+   "src": "made"
+  },
+  {
+   "text": "刘芳量了一下，捡到的海螺足足有二十厘米长。",
+   "en": "Liu Fang measured it: the conch she found was a full twenty centimeters long.",
+   "ko": "류팡이 재 보니 주운 소라가 이십 센티미터나 됐어요.",
+   "blank": "厘米",
+   "src": "made"
   }
  ],
  "w|厚": [
@@ -16053,6 +16133,22 @@
    "src": "made"
   }
  ],
+ "w|哪位": [
+  {
+   "text": "张伟问妈妈：“你说的那位亲戚到底是哪位？”",
+   "en": "Zhang Wei asked his mom, “Which relative exactly do you mean?”",
+   "ko": "장웨이는 엄마에게 \"말한 그 친척이 대체 누구예요?\"라고 물었어요.",
+   "blank": "哪位",
+   "src": "made"
+  },
+  {
+   "text": "刘芳问前台：“请问哪位可以带我们去看日出？”",
+   "en": "Liu Fang asked the front desk: “Excuse me, who can take us to see the sunrise?”",
+   "ko": "류팡은 프런트에 \"누가 일출 보는 데 데려가 줄 수 있어요?\"라고 물었어요.",
+   "blank": "哪位",
+   "src": "made"
+  }
+ ],
  "w|哪儿": [
   {
    "text": "你去哪儿？",
@@ -16499,6 +16595,22 @@
    "blank": "喜欢"
   }
  ],
+ "w|喜爱": [
+  {
+   "text": "妹妹从小就特别喜爱小动物，张伟送了她一只猫。",
+   "en": "His sister has adored small animals since childhood, so Zhang Wei gave her a cat.",
+   "ko": "여동생은 어릴 때부터 작은 동물을 무척 좋아해서 장웨이가 고양이를 한 마리 선물했어요.",
+   "blank": "喜爱",
+   "src": "made"
+  },
+  {
+   "text": "这种小螃蟹很受孩子们喜爱，沙滩上到处是抓螃蟹的小朋友。",
+   "en": "These little crabs are a big hit with children, and the beach is full of kids catching them.",
+   "ko": "이 작은 게는 아이들에게 인기가 많아서 해변 곳곳에 게 잡는 아이들이 있어요.",
+   "blank": "喜爱",
+   "src": "made"
+  }
+ ],
  "w|喝": [
   {
    "text": "喝点水吧。",
@@ -16555,6 +16667,22 @@
    "en": "Don't get drunk.",
    "ko": "취하지 마.",
    "blank": "喝醉"
+  }
+ ],
+ "w|喷": [
+  {
+   "text": "妹妹生气时，张伟偷偷往她房间喷了点她最爱的香水。",
+   "en": "When his sister was upset, Zhang Wei secretly sprayed a little of her favorite perfume in her room.",
+   "ko": "여동생이 화났을 때 장웨이는 몰래 그녀가 제일 좋아하는 향수를 방에 조금 뿌렸어요.",
+   "blank": "喷",
+   "src": "made"
+  },
+  {
+   "text": "出门前，刘芳在胳膊上喷了很多防晒霜。",
+   "en": "Before going out, Liu Fang sprayed plenty of sunscreen on her arms.",
+   "ko": "나가기 전에 류팡은 팔에 선크림을 잔뜩 뿌렸어요.",
+   "blank": "喷",
+   "src": "made"
   }
  ],
  "w|喽": [
@@ -17090,6 +17218,22 @@
    "en": "After a supermarket opened across the street, many small stalls fell on hard times.",
    "ko": "맞은편에 마트가 생긴 뒤 작은 가게들이 많이 어려움에 빠졌어요.",
    "blank": "困境",
+   "src": "made"
+  }
+ ],
+ "w|困惑": [
+  {
+   "text": "姐姐突然不理张伟了，他感到十分困惑。",
+   "en": "His sister suddenly stopped talking to him, and Zhang Wei felt very confused.",
+   "ko": "누나가 갑자기 자기를 모른 척하자 장웨이는 무척 어리둥절했어요.",
+   "blank": "困惑",
+   "src": "made"
+  },
+  {
+   "text": "刘芳看着退潮后露出来的石头，困惑地问那是什么。",
+   "en": "Looking at the rocks exposed by the low tide, Liu Fang asked in confusion what they were.",
+   "ko": "류팡은 물이 빠진 뒤 드러난 돌들을 보며 어리둥절해서 그게 뭐냐고 물었어요.",
+   "blank": "困惑",
    "src": "made"
   }
  ],
@@ -18017,6 +18161,22 @@
    "en": "This rock is heavy.",
    "ko": "이 돌이 무거워.",
    "blank": "块"
+  }
+ ],
+ "w|坚决": [
+  {
+   "text": "姐姐态度坚决，说这次一定要把话讲清楚。",
+   "en": "His sister was resolute, saying this time they had to make everything clear.",
+   "ko": "누나는 이번엔 꼭 말을 분명히 해야 한다며 단호했어요.",
+   "blank": "坚决",
+   "src": "made"
+  },
+  {
+   "text": "刘芳坚决不肯坐快艇，说太颠了。",
+   "en": "Liu Fang flatly refused to ride the speedboat, saying it was too bumpy.",
+   "ko": "류팡은 너무 흔들린다며 쾌속정은 한사코 안 타겠다고 했어요.",
+   "blank": "坚决",
+   "src": "made"
   }
  ],
  "w|坚强": [
@@ -21613,6 +21773,22 @@
    "blank": "安全"
   }
  ],
+ "w|安心": [
+  {
+   "text": "妈妈说只要两兄妹和好了，她就安心了。",
+   "en": "Mom said that as long as the brother and sister made up, she could rest easy.",
+   "ko": "엄마는 두 남매가 화해만 하면 마음이 놓인다고 했어요.",
+   "blank": "安心",
+   "src": "made"
+  },
+  {
+   "text": "看到救生员就在旁边，刘芳才安心下水。",
+   "en": "Only after seeing the lifeguard nearby did Liu Fang feel safe enough to go into the water.",
+   "ko": "구조 요원이 바로 옆에 있는 걸 보고서야 류팡은 마음 놓고 물에 들어갔어요.",
+   "blank": "安心",
+   "src": "made"
+  }
+ ],
  "w|安慰": [
   {
    "text": "赵磊考研没考上，图书馆的老管理员一直安慰他。",
@@ -22979,6 +23155,22 @@
    "blank": "射击"
   }
  ],
+ "w|尊严": [
+  {
+   "text": "张伟说，就算是兄弟，也要尊重对方的尊严。",
+   "en": "Zhang Wei said that even between brothers, you have to respect each other's dignity.",
+   "ko": "장웨이는 형제 사이라도 서로의 존엄은 지켜야 한다고 했어요.",
+   "blank": "尊严",
+   "src": "made"
+  },
+  {
+   "text": "老渔民说，靠自己的双手吃饭最有尊严。",
+   "en": "The old fisherman said earning a living with your own hands gives you the most dignity.",
+   "ko": "늙은 어부는 제 손으로 먹고사는 게 가장 떳떳하다고 했어요.",
+   "blank": "尊严",
+   "src": "made"
+  }
+ ],
  "w|尊敬": [
   {
    "text": "我很尊敬老师。",
@@ -23064,6 +23256,22 @@
    "en": "On her first day, a colleague warned Liu Fang that there are thieves around here and to watch her bag.",
    "ko": "출근 첫날 동료가 류팡에게 이 근처에 도둑이 있으니 가방을 잘 챙기라고 했어요.",
    "blank": "小偷",
+   "src": "made"
+  }
+ ],
+ "w|小型": [
+  {
+   "text": "为了和好，张伟在家办了一个小型的生日聚会。",
+   "en": "To make up, Zhang Wei threw a small birthday party at home.",
+   "ko": "화해하려고 장웨이는 집에서 작은 생일 파티를 열었어요.",
+   "blank": "小型",
+   "src": "made"
+  },
+  {
+   "text": "海边新开了一家小型的海洋馆，刘芳带着侄子去了。",
+   "en": "A small aquarium opened by the sea, and Liu Fang took her nephew there.",
+   "ko": "바닷가에 작은 수족관이 새로 생겨서 류팡은 조카를 데리고 갔어요.",
+   "blank": "小型",
    "src": "made"
   }
  ],
@@ -25325,6 +25533,22 @@
    "blank": "幻想"
   }
  ],
+ "w|幻觉": [
+  {
+   "text": "张伟一度以为听见了姐姐的声音，后来发现只是幻觉。",
+   "en": "For a moment Zhang Wei thought he heard his sister's voice, but it turned out to be an illusion.",
+   "ko": "장웨이는 한때 누나 목소리를 들은 줄 알았는데 나중에 보니 착각이었어요.",
+   "blank": "幻觉",
+   "src": "made"
+  },
+  {
+   "text": "在烈日下走了很久，刘芳觉得远处的小岛像是幻觉。",
+   "en": "After walking a long time under the scorching sun, Liu Fang felt the distant islet looked like a mirage.",
+   "ko": "뙤약볕 아래 오래 걸었더니 류팡은 멀리 있는 작은 섬이 환영처럼 느껴졌어요.",
+   "blank": "幻觉",
+   "src": "made"
+  }
+ ],
  "w|幽灵": [
   {
    "text": "同事们开玩笑说，周强半夜还在办公室，像个幽灵。",
@@ -25338,6 +25562,22 @@
    "en": "One phone kept showing a ghostly shadow on screen, which Wang Fang said was burn-in.",
    "ko": "어떤 휴대폰 화면에 유령 같은 그림자가 자꾸 보였는데 왕팡은 번인이라고 했어요.",
    "blank": "幽灵",
+   "src": "made"
+  }
+ ],
+ "w|幽默": [
+  {
+   "text": "张伟的哥哥很幽默，一句玩笑就让气氛轻松了。",
+   "en": "Zhang Wei's brother is very funny; one joke was enough to lighten the mood.",
+   "ko": "장웨이의 형은 무척 유머러스해서 농담 한마디로 분위기를 풀었어요.",
+   "blank": "幽默",
+   "src": "made"
+  },
+  {
+   "text": "冲浪教练说话很幽默，大家一路都在笑。",
+   "en": "The surf instructor was really funny, and everyone laughed the whole way.",
+   "ko": "서핑 강사가 말을 재밌게 해서 다들 내내 웃었어요.",
+   "blank": "幽默",
    "src": "made"
   }
  ],
@@ -25858,6 +26098,22 @@
    "en": "Lili wanted to ask the neighbour to move the shoe cabinet by the door but didn't know how to bring it up.",
    "ko": "리리는 이웃에게 문 앞 신발장을 좀 옮겨 달라고 하고 싶었지만 어떻게 말을 꺼낼지 몰랐어요.",
    "blank": "开口",
+   "src": "made"
+  }
+ ],
+ "w|开启": [
+  {
+   "text": "那次长谈开启了张伟和哥哥之间新的关系。",
+   "en": "That long talk opened a new chapter in the relationship between Zhang Wei and his brother.",
+   "ko": "그 긴 대화로 장웨이와 형 사이에 새로운 관계가 열렸어요.",
+   "blank": "开启",
+   "src": "made"
+  },
+  {
+   "text": "这次海边旅行开启了刘芳对潜水的兴趣。",
+   "en": "This seaside trip sparked Liu Fang's interest in diving.",
+   "ko": "이번 바닷가 여행으로 류팡은 다이빙에 관심이 생겼어요.",
+   "blank": "开启",
    "src": "made"
   }
  ],
@@ -27093,6 +27349,22 @@
    "src": "made"
   }
  ],
+ "w|心思": [
+  {
+   "text": "张伟这才明白，姐姐的心思全花在照顾父母上了。",
+   "en": "Only then did Zhang Wei realize his sister's mind had been entirely on caring for their parents.",
+   "ko": "장웨이는 그제야 누나가 온 신경을 부모님 돌보는 데 쏟고 있었다는 걸 알았어요.",
+   "blank": "心思",
+   "src": "made"
+  },
+  {
+   "text": "刘芳整天想着冲浪，根本没心思看书。",
+   "en": "Liu Fang thinks about surfing all day and has no mind for reading at all.",
+   "ko": "류팡은 하루 종일 서핑 생각뿐이라 책 읽을 마음이 전혀 없어요.",
+   "blank": "心思",
+   "src": "made"
+  }
+ ],
  "w|心情": [
   {
    "text": "心情不好。",
@@ -27497,6 +27769,22 @@
    "en": "You need to rest during pregnancy.",
    "ko": "임신 중에는 쉬어야 해.",
    "blank": "怀孕"
+  }
+ ],
+ "w|怀念": [
+  {
+   "text": "张伟很怀念小时候和姐姐一起放风筝的日子。",
+   "en": "Zhang Wei misses the days when he flew kites with his sister as a child.",
+   "ko": "장웨이는 어릴 때 누나와 연을 날리던 시절이 많이 그리워요.",
+   "blank": "怀念",
+   "src": "made"
+  },
+  {
+   "text": "回到城里以后，刘芳常常怀念海边的日落。",
+   "en": "After returning to the city, Liu Fang often missed the seaside sunsets.",
+   "ko": "도시로 돌아온 뒤 류팡은 바닷가의 노을을 자주 그리워했어요.",
+   "blank": "怀念",
+   "src": "made"
   }
  ],
  "w|怀疑": [
@@ -28158,6 +28446,22 @@
    "en": "The TV on the train was showing an old film with a tragic ending.",
    "ko": "기차 안 텔레비전에서 옛날 영화를 틀어 줬는데 결말이 비극이었어요.",
    "blank": "悲剧",
+   "src": "made"
+  }
+ ],
+ "w|悲惨": [
+  {
+   "text": "张伟和哥哥一起看了一部讲战争年代悲惨生活的电影。",
+   "en": "Zhang Wei and his brother watched a film about the miserable life during wartime.",
+   "ko": "장웨이와 형은 전쟁 시절의 비참한 삶을 그린 영화를 함께 봤어요.",
+   "blank": "悲惨",
+   "src": "made"
+  },
+  {
+   "text": "博物馆里讲述了当年渔民遇到台风的悲惨故事。",
+   "en": "The museum told the tragic story of the fishermen caught in a typhoon years ago.",
+   "ko": "박물관에는 예전 어부들이 태풍을 만난 비참한 이야기가 전시돼 있었어요.",
+   "blank": "悲惨",
    "src": "made"
   }
  ],
@@ -28843,6 +29147,22 @@
    "en": "My wish came true.",
    "ko": "내 소원이 이뤄졌어.",
    "blank": "愿望"
+  }
+ ],
+ "w|慌": [
+  {
+   "text": "听说妹妹离家出走了，张伟一下子慌了。",
+   "en": "Hearing that his sister had run away from home, Zhang Wei panicked at once.",
+   "ko": "여동생이 집을 나갔다는 말을 듣고 장웨이는 순간 당황했어요.",
+   "blank": "慌",
+   "src": "made"
+  },
+  {
+   "text": "潮水突然涨上来，刘芳心里有点慌。",
+   "en": "The tide suddenly came in, and Liu Fang felt a bit flustered.",
+   "ko": "갑자기 물이 차오르자 류팡은 마음이 좀 급해졌어요.",
+   "blank": "慌",
+   "src": "made"
   }
  ],
  "w|慢": [
@@ -31681,6 +32001,22 @@
    "en": "He's pretty busy.",
    "ko": "그는 꽤 바빠.",
    "blank": "挺"
+  }
+ ],
+ "w|挽救": [
+  {
+   "text": "张伟主动打电话道歉，挽救了快要破裂的兄弟关系。",
+   "en": "Zhang Wei called to apologize first and saved his relationship with his brother, which was about to fall apart.",
+   "ko": "장웨이가 먼저 전화해서 사과한 덕에 깨질 뻔한 형제 관계를 되살렸어요.",
+   "blank": "挽救",
+   "src": "made"
+  },
+  {
+   "text": "救生员及时游过去，挽救了一个溺水的孩子。",
+   "en": "The lifeguard swam over in time and saved a drowning child.",
+   "ko": "구조 요원이 제때 헤엄쳐 가서 물에 빠진 아이를 구했어요.",
+   "blank": "挽救",
+   "src": "made"
   }
  ],
  "w|捉": [
@@ -35106,6 +35442,22 @@
    "en": "The coach gave Sun Yue a clear pace: no slower than six minutes per kilometer.",
    "ko": "코치는 쑨웨에게 킬로미터당 육 분보다 늦으면 안 된다는 분명한 페이스를 정해 줬어요.",
    "blank": "明确",
+   "src": "made"
+  }
+ ],
+ "w|易": [
+  {
+   "text": "妈妈说，兄妹之间的感情易伤难补。",
+   "en": "Mom said that the bond between siblings is easily hurt and hard to mend.",
+   "ko": "엄마는 남매 사이의 정은 다치기 쉽고 되돌리기 어렵다고 했어요.",
+   "blank": "易",
+   "src": "made"
+  },
+  {
+   "text": "导游提醒刘芳，礁石上长满青苔，脚下易滑。",
+   "en": "The guide warned Liu Fang that the rocks were covered in moss and slippery underfoot.",
+   "ko": "가이드는 류팡에게 바위에 이끼가 잔뜩 끼어서 발밑이 미끄럽기 쉽다고 일렀어요.",
+   "blank": "易",
    "src": "made"
   }
  ],
@@ -40099,6 +40451,22 @@
    "src": "made"
   }
  ],
+ "w|流动": [
+  {
+   "text": "张伟打开窗户，让屋里的空气流动起来。",
+   "en": "Zhang Wei opened the window to get the air in the room moving.",
+   "ko": "장웨이는 창문을 열어 방 안 공기가 통하게 했어요.",
+   "blank": "流动",
+   "src": "made"
+  },
+  {
+   "text": "夏天一到，海边小镇的流动人口一下子多了起来。",
+   "en": "As soon as summer arrives, the seaside town's transient population suddenly grows.",
+   "ko": "여름이 되면 바닷가 마을의 유동 인구가 갑자기 늘어나요.",
+   "blank": "流动",
+   "src": "made"
+  }
+ ],
  "w|流氓": [
   {
    "text": "赵磊想起中学时，有几个小流氓常在校门口拦人要钱。",
@@ -41571,6 +41939,22 @@
    "src": "made"
   }
  ],
+ "w|热爱": [
+  {
+   "text": "张伟和姐姐都热爱音乐，却很少一起去听音乐会。",
+   "en": "Zhang Wei and his sister both love music, yet they rarely go to concerts together.",
+   "ko": "장웨이와 누나는 둘 다 음악을 사랑하지만 함께 공연에 가는 일은 드물어요.",
+   "blank": "热爱",
+   "src": "made"
+  },
+  {
+   "text": "民宿老板热爱大海，每天早上都去游泳。",
+   "en": "The guesthouse owner loves the sea and goes swimming every morning.",
+   "ko": "민박 주인은 바다를 무척 사랑해서 매일 아침 수영을 해요.",
+   "blank": "热爱",
+   "src": "made"
+  }
+ ],
  "w|热闹": [
   {
    "text": "这个案子很受关注，法院门口比菜市场还热闹。",
@@ -42453,6 +42837,22 @@
    "blank": "状态"
   }
  ],
+ "w|犹豫": [
+  {
+   "text": "张伟拿起电话犹豫了很久，还是没打给哥哥。",
+   "en": "Zhang Wei picked up the phone and hesitated a long time, but still didn't call his brother.",
+   "ko": "장웨이는 전화기를 들고 한참 망설였지만 결국 형에게 전화하지 않았어요.",
+   "blank": "犹豫",
+   "src": "made"
+  },
+  {
+   "text": "站在高高的礁石上，刘芳犹豫着要不要跳进海里。",
+   "en": "Standing on a high rock, Liu Fang hesitated about whether to jump into the sea.",
+   "ko": "높은 바위 위에서 류팡은 바다에 뛰어들지 말지 망설였어요.",
+   "blank": "犹豫",
+   "src": "made"
+  }
+ ],
  "w|狗": [
   {
    "text": "狗在叫。",
@@ -42962,6 +43362,38 @@
    "en": "This table is made of glass.",
    "ko": "이 탁자는 유리로 만들었어요.",
    "blank": "玻璃",
+   "src": "made"
+  }
+ ],
+ "w|珍惜": [
+  {
+   "text": "张伟说，等长大了才知道要珍惜兄妹的感情。",
+   "en": "Zhang Wei said it's only when you grow up that you learn to cherish the bond between siblings.",
+   "ko": "장웨이는 커서야 남매의 정을 소중히 여겨야 한다는 걸 알았다고 했어요.",
+   "blank": "珍惜",
+   "src": "made"
+  },
+  {
+   "text": "刘芳很珍惜这次假期，每天都早起看日出。",
+   "en": "Liu Fang treasured this vacation and got up early every day to watch the sunrise.",
+   "ko": "류팡은 이번 휴가를 소중히 여겨 매일 일찍 일어나 일출을 봤어요.",
+   "blank": "珍惜",
+   "src": "made"
+  }
+ ],
+ "w|珍贵": [
+  {
+   "text": "那块旧手表是爷爷留下的，对张伟来说特别珍贵。",
+   "en": "That old watch was left by his grandfather and is especially precious to Zhang Wei.",
+   "ko": "그 낡은 손목시계는 할아버지가 남긴 것이라 장웨이에게 무척 소중해요.",
+   "blank": "珍贵",
+   "src": "made"
+  },
+  {
+   "text": "刘芳把在沙滩上捡到的贝壳当成珍贵的纪念品。",
+   "en": "Liu Fang treats the shells she picked up on the beach as precious souvenirs.",
+   "ko": "류팡은 해변에서 주운 조개껍데기를 소중한 기념품으로 여겨요.",
+   "blank": "珍贵",
    "src": "made"
   }
  ],
@@ -44599,6 +45031,22 @@
    "src": "made"
   }
  ],
+ "w|目光": [
+  {
+   "text": "吵完架后，张伟一直躲着妹妹的目光。",
+   "en": "After the argument, Zhang Wei kept avoiding his younger sister's gaze.",
+   "ko": "다툰 뒤 장웨이는 계속 여동생의 눈길을 피했어요.",
+   "blank": "目光",
+   "src": "made"
+  },
+  {
+   "text": "一只海鸥落在栏杆上，引来了游客们的目光。",
+   "en": "A seagull landed on the railing and drew the tourists' attention.",
+   "ko": "갈매기 한 마리가 난간에 내려앉자 관광객들의 시선이 쏠렸어요.",
+   "blank": "目光",
+   "src": "made"
+  }
+ ],
  "w|目前": [
   {
    "text": "目前还早。",
@@ -45273,6 +45721,22 @@
    "src": "made"
   }
  ],
+ "w|眼光": [
+  {
+   "text": "张伟的姐姐总说他挑衣服的眼光不行。",
+   "en": "Zhang Wei's older sister always says he has bad taste in clothes.",
+   "ko": "장웨이의 누나는 늘 그가 옷 고르는 안목이 없다고 해요.",
+   "blank": "眼光",
+   "src": "made"
+  },
+  {
+   "text": "刘芳很有眼光，选的民宿正对着大海。",
+   "en": "Liu Fang has a good eye; the guesthouse she chose faces right onto the sea.",
+   "ko": "류팡은 보는 눈이 있어서 바다를 정면으로 마주한 민박을 골랐어요.",
+   "blank": "眼光",
+   "src": "made"
+  }
+ ],
  "w|眼前": [
   {
    "text": "王刚看着眼前一大桌子菜，不知道先吃哪个好。",
@@ -45363,6 +45827,22 @@
    "en": "The door is open.",
    "ko": "문이 열려 있어.",
    "blank": "着"
+  }
+ ],
+ "w|着急": [
+  {
+   "text": "妹妹一直不接电话，张伟着急得在屋里走来走去。",
+   "en": "His sister kept not answering, and Zhang Wei paced around the room anxiously.",
+   "ko": "여동생이 계속 전화를 안 받자 장웨이는 초조해서 방 안을 왔다 갔다 했어요.",
+   "blank": "着急",
+   "src": "made"
+  },
+  {
+   "text": "回去的船快开了，刘芳还在沙滩上找手机，着急得满头大汗。",
+   "en": "The boat back was about to leave, and Liu Fang was still searching the beach for her phone, sweating with worry.",
+   "ko": "돌아가는 배가 곧 떠나는데 류팡은 아직 해변에서 휴대폰을 찾느라 진땀을 흘렸어요.",
+   "blank": "着急",
+   "src": "made"
   }
  ],
  "w|睡": [
@@ -47237,6 +47717,22 @@
    "blank": "笑"
   }
  ],
+ "w|笑声": [
+  {
+   "text": "误会解开以后，客厅里又传出了张伟一家的笑声。",
+   "en": "After the misunderstanding was cleared up, the Zhang family's laughter rang out from the living room again.",
+   "ko": "오해가 풀린 뒤 거실에서 다시 장웨이네 가족의 웃음소리가 들렸어요.",
+   "blank": "笑声",
+   "src": "made"
+  },
+  {
+   "text": "沙滩上满是孩子们的笑声。",
+   "en": "The beach was full of children's laughter.",
+   "ko": "해변은 아이들 웃음소리로 가득했어요.",
+   "blank": "笑声",
+   "src": "made"
+  }
+ ],
  "w|笑容": [
   {
    "text": "看到妹妹脸上又有了笑容，周强终于松了一口气。",
@@ -47883,6 +48379,22 @@
    "src": "made"
   }
  ],
+ "w|粗": [
+  {
+   "text": "哥哥说话声音粗，张伟以前总以为他在生气。",
+   "en": "His brother has a gruff voice, so Zhang Wei always used to think he was angry.",
+   "ko": "형은 목소리가 굵어서 장웨이는 예전엔 늘 형이 화난 줄 알았어요.",
+   "blank": "粗",
+   "src": "made"
+  },
+  {
+   "text": "渔船上的缆绳又粗又结实。",
+   "en": "The ropes on the fishing boat are thick and sturdy.",
+   "ko": "고기잡이배의 밧줄은 굵고 튼튼해요.",
+   "blank": "粗",
+   "src": "made"
+  }
+ ],
  "w|粮食": [
   {
    "text": "张伟的奶奶在婚礼上说，小时候家里连粮食都不够吃。",
@@ -48454,6 +48966,22 @@
    "en": "Everyone says the manager is a gentleman who never loses his temper with his staff.",
    "ko": "다들 매니저는 신사라서 부하 직원에게 화를 내는 법이 없다고 해요.",
    "blank": "绅士",
+   "src": "made"
+  }
+ ],
+ "w|细": [
+  {
+   "text": "姐姐心很细，早就看出张伟有心事。",
+   "en": "His sister is very perceptive and had long noticed Zhang Wei had something on his mind.",
+   "ko": "누나는 섬세해서 장웨이에게 고민이 있다는 걸 진작 알아챘어요.",
+   "blank": "细",
+   "src": "made"
+  },
+  {
+   "text": "这里的沙子又白又细，刘芳光着脚走了很久。",
+   "en": "The sand here is white and fine, and Liu Fang walked barefoot for a long time.",
+   "ko": "이곳 모래는 하얗고 고와서 류팡은 맨발로 한참 걸었어요.",
+   "blank": "细",
    "src": "made"
   }
  ],
@@ -49314,6 +49842,22 @@
    "en": "That dodgy shop sold refurbished phones as new, and the owner was charged with fraud.",
    "ko": "그 악덕 가게는 리퍼폰을 새 폰으로 속여 팔다가 사장이 사기죄로 기소됐어요.",
    "blank": "罪名",
+   "src": "made"
+  }
+ ],
+ "w|罪恶": [
+  {
+   "text": "张伟读的那本小说讲的是一个家族的罪恶和救赎。",
+   "en": "The novel Zhang Wei was reading is about a family's sins and redemption.",
+   "ko": "장웨이가 읽던 소설은 한 가문의 죄악과 속죄 이야기예요.",
+   "blank": "罪恶",
+   "src": "made"
+  },
+  {
+   "text": "导游告诉刘芳，这座灯塔见证过海盗的罪恶。",
+   "en": "The guide told Liu Fang that this lighthouse had witnessed the pirates' crimes.",
+   "ko": "가이드는 류팡에게 이 등대가 해적들의 죄악을 지켜봤다고 했어요.",
+   "blank": "罪恶",
    "src": "made"
   }
  ],
@@ -51464,6 +52008,22 @@
    "en": "Developing good habits is important.",
    "ko": "좋은 습관을 들이는 게 중요해요.",
    "blank": "良好",
+   "src": "made"
+  }
+ ],
+ "w|良心": [
+  {
+   "text": "张伟凭良心说，这件事他自己也有错。",
+   "en": "In all honesty, Zhang Wei admitted he was partly to blame too.",
+   "ko": "장웨이는 양심적으로 말해 이 일에 자기 잘못도 있다고 했어요.",
+   "blank": "良心",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，往海里扔垃圾的人真是没良心。",
+   "en": "Liu Fang said people who throw trash into the sea really have no conscience.",
+   "ko": "류팡은 바다에 쓰레기를 버리는 사람들은 정말 양심이 없다고 했어요.",
+   "blank": "良心",
    "src": "made"
   }
  ],
@@ -54887,6 +55447,22 @@
    "blank": "谢"
   }
  ],
+ "w|谢天谢地": [
+  {
+   "text": "“谢天谢地，你终于回家了！”张伟一把抱住了妹妹。",
+   "en": "“Thank goodness, you're finally home!” Zhang Wei pulled his sister into a hug.",
+   "ko": "\"다행이다, 드디어 집에 왔구나!\" 장웨이는 여동생을 꽉 안았어요.",
+   "blank": "谢天谢地",
+   "src": "made"
+  },
+  {
+   "text": "谢天谢地，风浪在出海前停了下来。",
+   "en": "Thank heavens, the wind and waves died down before they set out to sea.",
+   "ko": "다행히 배가 나가기 전에 풍랑이 잦아들었어요.",
+   "blank": "谢天谢地",
+   "src": "made"
+  }
+ ],
  "w|谢谢": [
   {
    "text": "谢谢你。",
@@ -55294,6 +55870,22 @@
    "en": "Lili once saw ancient currency from thousands of years ago in a museum.",
    "ko": "리리는 박물관에서 수천 년 전의 옛날 화폐를 본 적이 있어요.",
    "blank": "货币",
+   "src": "made"
+  }
+ ],
+ "w|质疑": [
+  {
+   "text": "哥哥质疑张伟拿了家里的钱，张伟气得说不出话。",
+   "en": "His brother questioned whether Zhang Wei had taken money from home, and Zhang Wei was too angry to speak.",
+   "ko": "형이 집 돈을 가져간 게 아니냐고 의심하자 장웨이는 화가 나서 말이 안 나왔어요.",
+   "blank": "质疑",
+   "src": "made"
+  },
+  {
+   "text": "有人质疑这片海滩的水质，刘芳特地看了检测报告。",
+   "en": "Some people questioned the water quality at this beach, so Liu Fang made a point of reading the test report.",
+   "ko": "이 해변의 수질을 의심하는 사람이 있어서 류팡은 일부러 검사 보고서를 봤어요.",
+   "blank": "质疑",
    "src": "made"
   }
  ],
@@ -56049,6 +56641,22 @@
    "en": "This car is super fast.",
    "ko": "이 차는 엄청 빨라.",
    "blank": "超"
+  }
+ ],
+ "w|超出": [
+  {
+   "text": "这次的花费超出了预算，张伟只好向姐姐借钱。",
+   "en": "The expenses went over budget this time, so Zhang Wei had to borrow money from his sister.",
+   "ko": "이번 지출이 예산을 넘어서 장웨이는 누나에게 돈을 빌릴 수밖에 없었어요.",
+   "blank": "超出",
+   "src": "made"
+  },
+  {
+   "text": "救生员提醒游客，游泳时不要超出浮标划定的范围。",
+   "en": "The lifeguard reminded swimmers not to go beyond the buoys.",
+   "ko": "구조 요원은 관광객들에게 부표 범위를 넘어가지 말라고 일렀어요.",
+   "blank": "超出",
+   "src": "made"
   }
  ],
  "w|超市": [
@@ -61623,6 +62231,22 @@
    "blank": "面包"
   }
  ],
+ "w|面子": [
+  {
+   "text": "张伟觉得姐姐当着亲戚的面批评他，让他很没面子。",
+   "en": "Zhang Wei felt his sister criticizing him in front of relatives made him lose face.",
+   "ko": "장웨이는 누나가 친척들 앞에서 자기를 나무라서 체면이 무척 상했다고 느꼈어요.",
+   "blank": "面子",
+   "src": "made"
+  },
+  {
+   "text": "刘芳不会游泳，为了面子还是跟着朋友下了水。",
+   "en": "Liu Fang can't swim, but to save face she still followed her friends into the water.",
+   "ko": "류팡은 수영을 못 하지만 체면 때문에 친구들을 따라 물에 들어갔어요.",
+   "blank": "面子",
+   "src": "made"
+  }
+ ],
  "w|面对": [
   {
    "text": "面对现实。",
@@ -62404,6 +63028,22 @@
    "en": "There are lots of drinks in the fridge.",
    "ko": "냉장고에 음료가 많아요.",
    "blank": "饮料",
+   "src": "made"
+  }
+ ],
+ "w|饱": [
+  {
+   "text": "张伟刚吃饱，姐姐又端来一碗汤，非让他喝。",
+   "en": "Zhang Wei had just eaten his fill when his sister brought another bowl of soup and insisted he drink it.",
+   "ko": "장웨이가 막 배불리 먹었는데 누나가 또 국 한 그릇을 가져와 꼭 마시라고 했어요.",
+   "blank": "饱",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在海鲜大排档吃得很饱，晚上散步都走不动了。",
+   "en": "Liu Fang ate so much at the seafood stall that she could barely walk on her evening stroll.",
+   "ko": "류팡은 해산물 포장마차에서 배가 터지게 먹어서 저녁 산책도 힘들었어요.",
+   "blank": "饱",
    "src": "made"
   }
  ],

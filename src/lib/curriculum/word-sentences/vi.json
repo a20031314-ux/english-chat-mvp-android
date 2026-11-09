@@ -1987,6 +1987,70 @@
    "src": "made"
   }
  ],
+ "w|bánh chưng": [
+  {
+   "text": "Gần Tết, Long bán thêm lá dong cho các nhà gói bánh chưng.",
+   "en": "Near Tết, Long also sells dong leaves to families wrapping bánh chưng.",
+   "ko": "설이 가까워지면 롱은 반쯩을 싸는 집들에 동잎도 팔아요.",
+   "blank": "bánh chưng",
+   "src": "made"
+  },
+  {
+   "text": "Tết năm nay, công ty của Linh gửi mỗi nhân viên một cặp bánh chưng.",
+   "en": "This Tết, Linh's company gave each employee a pair of bánh chưng.",
+   "ko": "올해 설에 린의 회사는 직원마다 반쯩 한 쌍을 선물했어요.",
+   "blank": "bánh chưng",
+   "src": "made"
+  }
+ ],
+ "w|bánh cuốn": [
+  {
+   "text": "Sáng nào Long cũng ăn một đĩa bánh cuốn nóng ở góc chợ.",
+   "en": "Every morning, Long eats a plate of hot steamed rice rolls in a corner of the market.",
+   "ko": "롱은 매일 아침 시장 한쪽에서 따끈한 반꾸온 한 접시를 먹어요.",
+   "blank": "bánh cuốn",
+   "src": "made"
+  },
+  {
+   "text": "Sáng thứ hai, Linh mua bánh cuốn về văn phòng cho cả nhóm ăn trước giờ họp.",
+   "en": "On Monday morning, Linh brought steamed rice rolls to the office for the whole team before the meeting.",
+   "ko": "월요일 아침 린은 회의 전에 팀원들이 먹을 반꾸온을 사무실로 사 왔어요.",
+   "blank": "bánh cuốn",
+   "src": "made"
+  }
+ ],
+ "w|bánh flan": [
+  {
+   "text": "Bà cụ bán chè trong chợ còn làm bánh flan mềm mịn, Long mua cho con mấy hũ.",
+   "en": "The old lady selling sweet soup in the market also makes smooth flan, and Long bought a few cups for his kids.",
+   "ko": "시장에서 째를 파는 할머니는 부드러운 푸딩도 만들어서 롱이 아이들에게 몇 개 사 줬어요.",
+   "blank": "bánh flan",
+   "src": "made"
+  },
+  {
+   "text": "Trong tủ lạnh văn phòng của Linh lúc nào cũng có vài hũ bánh flan.",
+   "en": "There are always a few cups of flan in the fridge at Linh's office.",
+   "ko": "린의 사무실 냉장고에는 늘 푸딩 몇 개가 들어 있어요.",
+   "blank": "bánh flan",
+   "src": "made"
+  }
+ ],
+ "w|bánh kem": [
+  {
+   "text": "Tiệm bánh trong chợ làm bánh kem rất đẹp, Long đặt một cái tặng vợ.",
+   "en": "The bakery in the market makes very pretty cream cakes, and Long ordered one for his wife.",
+   "ko": "시장 안 빵집은 생크림 케이크를 아주 예쁘게 만들어서 롱이 아내에게 줄 걸 하나 주문했어요.",
+   "blank": "bánh kem",
+   "src": "made"
+  },
+  {
+   "text": "Ngày ứng dụng đạt mười nghìn người dùng, nhóm của Linh cắt một chiếc bánh kem thật to.",
+   "en": "The day the app reached ten thousand users, Linh's team cut a huge cream cake.",
+   "ko": "앱 사용자가 만 명을 넘은 날 린의 팀은 커다란 생크림 케이크를 잘랐어요.",
+   "blank": "bánh kem",
+   "src": "made"
+  }
+ ],
  "w|bánh mì": [
   {
    "text": "Bánh mì sáng nay còn nóng hổi.",
@@ -2015,6 +2079,86 @@
    "ko": "디저트로 케이크 먹고 싶어요.",
    "blank": "bánh ngọt",
    "src": "tatoeba:3484769/tucm en:39476/CK"
+  }
+ ],
+ "w|bánh quy": [
+  {
+   "text": "Con gái Long ngồi ở góc sạp, vừa ăn bánh quy vừa làm bài tập.",
+   "en": "Long's daughter sits in a corner of the stall, eating cookies while doing her homework.",
+   "ko": "롱의 딸은 가게 한쪽에 앉아 쿠키를 먹으며 숙제를 해요.",
+   "blank": "bánh quy",
+   "src": "made"
+  },
+  {
+   "text": "Trên bàn của Linh lúc nào cũng có một hộp bánh quy để ăn khi làm khuya.",
+   "en": "There's always a box of cookies on Linh's desk for late nights.",
+   "ko": "린의 책상 위에는 야근할 때 먹을 쿠키 상자가 늘 있어요.",
+   "blank": "bánh quy",
+   "src": "made"
+  }
+ ],
+ "w|bánh sinh nhật": [
+  {
+   "text": "Hôm nay con trai tròn mười tuổi, Long ghé tiệm lấy chiếc bánh sinh nhật đã đặt.",
+   "en": "His son turns ten today, so Long stopped by the shop to pick up the birthday cake he had ordered.",
+   "ko": "오늘 아들이 열 살이 돼서 롱은 주문해 둔 생일 케이크를 찾으러 가게에 들렀어요.",
+   "blank": "bánh sinh nhật",
+   "src": "made"
+  },
+  {
+   "text": "Cả nhóm lén chuẩn bị bánh sinh nhật để bất ngờ cho Linh lúc tan họp.",
+   "en": "The whole team secretly prepared a birthday cake to surprise Linh when the meeting ended.",
+   "ko": "팀원들은 회의가 끝날 때 린을 놀라게 하려고 몰래 생일 케이크를 준비했어요.",
+   "blank": "bánh sinh nhật",
+   "src": "made"
+  }
+ ],
+ "w|bánh tét": [
+  {
+   "text": "Người dì ở miền Nam gửi ra cho Long mấy đòn bánh tét nhân chuối.",
+   "en": "Long's aunt in the south sent him a few rolls of bánh tét with banana filling.",
+   "ko": "남부에 사는 이모가 롱에게 바나나 소를 넣은 반뗏 몇 줄을 보내 줬어요.",
+   "blank": "bánh tét",
+   "src": "made"
+  },
+  {
+   "text": "Một bạn lập trình viên mang bánh tét từ quê lên chia cho cả văn phòng của Linh.",
+   "en": "One of the programmers brought bánh tét from his hometown to share with Linh's whole office.",
+   "ko": "프로그래머 한 명이 고향에서 반뗏을 가져와 린의 사무실 사람들과 나눠 먹었어요.",
+   "blank": "bánh tét",
+   "src": "made"
+  }
+ ],
+ "w|bánh tráng": [
+  {
+   "text": "Vợ Long mua một xấp bánh tráng để tối cuốn gỏi ăn cả nhà.",
+   "en": "Long's wife bought a stack of rice paper to make fresh rolls for the whole family tonight.",
+   "ko": "롱의 아내는 저녁에 온 가족이 월남쌈을 싸 먹으려고 라이스페이퍼 한 묶음을 샀어요.",
+   "blank": "bánh tráng",
+   "src": "made"
+  },
+  {
+   "text": "Chiều thứ sáu, nhóm của Linh hay mua bánh tráng trộn về vừa ăn vừa họp.",
+   "en": "On Friday afternoons, Linh's team often buys rice paper salad to eat during the meeting.",
+   "ko": "금요일 오후면 린의 팀은 라이스페이퍼 무침을 사 와서 먹으면서 회의하곤 해요.",
+   "blank": "bánh tráng",
+   "src": "made"
+  }
+ ],
+ "w|bánh trung thu": [
+  {
+   "text": "Gần rằm tháng tám, chợ của Long bày đầy bánh trung thu và đèn ông sao.",
+   "en": "Near the mid-autumn full moon, Long's market is full of mooncakes and star lanterns.",
+   "ko": "음력 팔월 보름이 다가오면 롱네 시장에는 월병과 별 모양 등이 가득해요.",
+   "blank": "bánh trung thu",
+   "src": "made"
+  },
+  {
+   "text": "Dịp Trung thu, Linh đặt bánh trung thu in logo công ty để tặng khách hàng.",
+   "en": "For the Mid-Autumn Festival, Linh ordered mooncakes printed with the company logo to give to clients.",
+   "ko": "중추절에 린은 고객에게 줄 회사 로고가 찍힌 월병을 주문했어요.",
+   "blank": "bánh trung thu",
+   "src": "made"
   }
  ],
  "w|bánh xèo": [
@@ -7249,6 +7393,22 @@
    "src": "made"
   }
  ],
+ "w|cay xè": [
+  {
+   "text": "Long cắn thử một trái ớt hiểm mà mắt cay xè, nước mắt chảy ròng ròng.",
+   "en": "Long bit into a bird's eye chili and his eyes stung so much that tears streamed down.",
+   "ko": "롱은 쥐똥고추를 한 입 깨물었다가 눈이 따가워 눈물이 줄줄 흘렀어요.",
+   "blank": "cay xè",
+   "src": "made"
+  },
+  {
+   "text": "Linh gọi nhầm món lẩu siêu cay, ăn một miếng mà mắt cay xè.",
+   "en": "Linh ordered an extra-spicy hotpot by mistake, and one bite made her eyes sting.",
+   "ko": "린은 엄청 매운 전골을 잘못 시켜서 한 입 먹자마자 눈이 따가웠어요.",
+   "blank": "cay xè",
+   "src": "made"
+  }
+ ],
  "w|cha": [
   {
    "text": "Cha đi vắng cả ngày.",
@@ -7879,6 +8039,22 @@
    "en": "Accepting reality is sometimes very hard.",
    "ko": "현실을 받아들이는 게 가끔 정말 어려워.",
    "blank": "Chấp nhận"
+  }
+ ],
+ "w|chát": [
+  {
+   "text": "Long bóc thử một quả hồng chưa chín, ăn vào thấy chát cả lưỡi.",
+   "en": "Long peeled an unripe persimmon to try, and it made his whole tongue feel astringent.",
+   "ko": "롱은 덜 익은 감을 까서 먹어 보았다가 혀가 온통 떫었어요.",
+   "blank": "chát",
+   "src": "made"
+  },
+  {
+   "text": "Đối tác mời Linh ly rượu vang đỏ hơi chát nhưng cô vẫn uống hết cho lịch sự.",
+   "en": "A partner offered Linh a glass of red wine that was a bit tannic, but she drank it all to be polite.",
+   "ko": "파트너가 권한 레드 와인이 조금 떫었지만 린은 예의상 다 마셨어요.",
+   "blank": "chát",
+   "src": "made"
   }
  ],
  "w|chắt": [
@@ -11629,6 +11805,22 @@
    "blank": "Cơm"
   }
  ],
+ "w|cơm bình dân": [
+  {
+   "text": "Quán cơm bình dân trong chợ rẻ mà ngon, Long ăn ở đó gần như mỗi ngày.",
+   "en": "The cheap rice eatery in the market is inexpensive but tasty, and Long eats there almost every day.",
+   "ko": "시장 안 서민 밥집은 싸고 맛있어서 롱은 거의 매일 거기서 먹어요.",
+   "blank": "cơm bình dân",
+   "src": "made"
+  },
+  {
+   "text": "Lúc mới khởi nghiệp, Linh chỉ dám ăn cơm bình dân để tiết kiệm từng đồng.",
+   "en": "When she first started the company, Linh only ate at cheap rice eateries to save every đồng.",
+   "ko": "창업 초기에 린은 한 푼이라도 아끼려고 서민 밥집에서만 먹었어요.",
+   "blank": "cơm bình dân",
+   "src": "made"
+  }
+ ],
  "w|cơm chiên": [
   {
    "text": "Cơm thừa hôm qua, Tuấn làm thành cơm chiên trứng cho cả nhà.",
@@ -11645,6 +11837,22 @@
    "src": "made"
   }
  ],
+ "w|cơm hộp": [
+  {
+   "text": "Hôm nào không về kịp, vợ Long mang cơm hộp ra chợ cho chồng.",
+   "en": "On days he can't make it home, Long's wife brings a lunch box to the market for him.",
+   "ko": "롱이 집에 못 오는 날이면 아내가 도시락을 시장으로 가져다줘요.",
+   "blank": "cơm hộp",
+   "src": "made"
+  },
+  {
+   "text": "Trưa nào Linh cũng mang cơm hộp mẹ nấu đi làm.",
+   "en": "Every day, Linh brings a lunch box her mother cooked to work.",
+   "ko": "린은 매일 엄마가 싸 준 도시락을 회사에 가져가요.",
+   "blank": "cơm hộp",
+   "src": "made"
+  }
+ ],
  "w|cơm rang": [
   {
    "text": "Trưa đó Tuấn ăn vội đĩa cơm rang rồi quay lại xem tiếp.",
@@ -11658,6 +11866,22 @@
    "en": "Every night they work late, Mai's team orders fried rice.",
    "ko": "늦게까지 일하는 날이면 마이의 팀은 늘 볶음밥을 시켜 먹어요.",
    "blank": "cơm rang",
+   "src": "made"
+  }
+ ],
+ "w|cơm tấm": [
+  {
+   "text": "Trưa nào Long cũng gọi một dĩa cơm tấm sườn ở quán đối diện.",
+   "en": "Every noon, Long orders a plate of broken rice with grilled pork chop from the place across the way.",
+   "ko": "롱은 점심마다 맞은편 식당에서 갈비 껌땀 한 접시를 시켜요.",
+   "blank": "cơm tấm",
+   "src": "made"
+  },
+  {
+   "text": "Linh rủ đồng nghiệp mới đi ăn cơm tấm ở quán quen sau giờ làm.",
+   "en": "Linh invited the new colleague to eat broken rice at her usual place after work.",
+   "ko": "린은 퇴근 후 새 동료에게 단골집에서 껌땀을 먹자고 했어요.",
+   "blank": "cơm tấm",
    "src": "made"
   }
  ],
@@ -12762,6 +12986,22 @@
    "en": "Besides the market stall, Ngọc's family also has a small shop selling dried goods.",
    "ko": "응옥네는 시장 좌판 말고도 건어물을 파는 작은 가게가 있어요.",
    "blank": "cửa hiệu",
+   "src": "made"
+  }
+ ],
+ "w|cửa kính": [
+  {
+   "text": "Cửa hàng bánh đầu chợ mới lắp cửa kính, Long đi ngang qua là thấy ngay mấy khay bánh.",
+   "en": "The bakery at the market entrance just put in glass doors, so Long can see the trays of cakes as he walks by.",
+   "ko": "시장 입구 빵집이 유리문을 새로 달아서 롱은 지나가다 빵 쟁반들이 바로 보여요.",
+   "blank": "cửa kính",
+   "src": "made"
+  },
+  {
+   "text": "Phòng họp của công ty Linh ngăn bằng cửa kính nên ai cũng nhìn thấy bên trong.",
+   "en": "The meeting room at Linh's company is separated by glass doors, so everyone can see inside.",
+   "ko": "린 회사의 회의실은 유리문으로 나뉘어 있어서 누구나 안을 볼 수 있어요.",
+   "blank": "cửa kính",
    "src": "made"
   }
  ],
@@ -14333,6 +14573,22 @@
    "src": "made"
   }
  ],
+ "w|đắng ngắt": [
+  {
+   "text": "Long mua nhầm quả mướp đắng già, nấu canh lên đắng ngắt.",
+   "en": "Long accidentally bought an overripe bitter melon, and the soup came out terribly bitter.",
+   "ko": "롱은 너무 익은 여주를 잘못 사서 국이 엄청 쓰게 됐어요.",
+   "blank": "đắng ngắt",
+   "src": "made"
+  },
+  {
+   "text": "Cà phê máy ở văn phòng Linh pha quá đậm, uống vào đắng ngắt.",
+   "en": "The machine coffee in Linh's office is brewed too strong and tastes terribly bitter.",
+   "ko": "린의 사무실 커피 머신은 너무 진하게 내려서 마시면 엄청 써요.",
+   "blank": "đắng ngắt",
+   "src": "made"
+  }
+ ],
  "w|đăng nhập": [
   {
    "text": "Đăng nhập.",
@@ -14603,6 +14859,22 @@
    "blank": "Đánh răng"
   }
  ],
+ "w|đánh trứng": [
+  {
+   "text": "Thấy cô bán bánh đánh trứng bằng tay, Long tặng cô một cái máy đánh cũ.",
+   "en": "Seeing the cake seller whisk eggs by hand, Long gave her an old mixer.",
+   "ko": "빵 파는 아주머니가 손으로 달걀을 거품 내는 걸 보고 롱은 쓰던 거품기를 드렸어요.",
+   "blank": "đánh trứng",
+   "src": "made"
+  },
+  {
+   "text": "Cuối tuần, Linh tập làm bánh, đánh trứng đến mỏi cả tay.",
+   "en": "On weekends, Linh practices baking and whisks eggs until her arms ache.",
+   "ko": "주말이면 린은 빵 만들기를 연습하는데 달걀 거품을 내느라 팔이 다 아파요.",
+   "blank": "đánh trứng",
+   "src": "made"
+  }
+ ],
  "w|dao": [
   {
    "text": "Cẩn thận khi dùng dao cắt thịt.",
@@ -14770,6 +15042,22 @@
    "en": "Mai's grandmother is Buddhist, so the small room upstairs still has a statue of Guanyin.",
    "ko": "마이의 외할머니가 불교 신자라 위층 작은 방에는 아직 관음상이 있어요.",
    "blank": "đạo Phật",
+   "src": "made"
+  }
+ ],
+ "w|dạo phố": [
+  {
+   "text": "Chiều chủ nhật, Long đóng sạp sớm rồi đi dạo phố với vợ con.",
+   "en": "On Sunday afternoon, Long closes his stall early and goes for a stroll downtown with his family.",
+   "ko": "일요일 오후면 롱은 가게를 일찍 닫고 아내와 아이들과 시내 구경을 가요.",
+   "blank": "dạo phố",
+   "src": "made"
+  },
+  {
+   "text": "Mỗi khi bí ý tưởng, Linh rủ cả nhóm đi dạo phố một vòng.",
+   "en": "Whenever she runs out of ideas, Linh takes the whole team for a walk around town.",
+   "ko": "아이디어가 막힐 때마다 린은 팀원 모두와 시내를 한 바퀴 걸어요.",
+   "blank": "dạo phố",
    "src": "made"
   }
  ],
@@ -24031,6 +24319,22 @@
    "blank": "hết"
   }
  ],
+ "w|hết hạn": [
+  {
+   "text": "Long kiểm tra kỹ hộp sữa chua, thấy đã hết hạn liền cất đi.",
+   "en": "Long checked the yogurt carefully and put it away when he saw it had expired.",
+   "ko": "롱은 요구르트를 꼼꼼히 보다가 유통기한이 지난 걸 알고 바로 치웠어요.",
+   "blank": "hết hạn",
+   "src": "made"
+  },
+  {
+   "text": "Giấy phép phần mềm của công ty Linh sắp hết hạn nên cô phải gia hạn gấp.",
+   "en": "The software license at Linh's company is about to expire, so she has to renew it urgently.",
+   "ko": "린 회사의 소프트웨어 라이선스가 곧 만료돼서 급히 갱신해야 해요.",
+   "blank": "hết hạn",
+   "src": "made"
+  }
+ ],
  "w|hết pin": [
   {
    "text": "Giữa buổi tham quan, điện thoại của Tuấn hết pin nên anh không chụp ảnh được nữa.",
@@ -25706,6 +26010,22 @@
    "en": "My phone is broken.",
    "ko": "제 휴대폰이 고장 났어요.",
    "blank": "hư",
+   "src": "made"
+  }
+ ],
+ "w|hủ tiếu": [
+  {
+   "text": "Hàng hủ tiếu cuối chợ đông khách nhất vào lúc trời vừa sáng.",
+   "en": "The hủ tiếu stall at the end of the market is busiest right at daybreak.",
+   "ko": "시장 끝 후띠에우 가게는 날이 막 밝을 때 손님이 제일 많아요.",
+   "blank": "hủ tiếu",
+   "src": "made"
+  },
+  {
+   "text": "Gần văn phòng của Linh có một xe hủ tiếu gõ bán tới nửa đêm.",
+   "en": "Near Linh's office there's a hủ tiếu cart that sells until midnight.",
+   "ko": "린의 사무실 근처에는 자정까지 장사하는 후띠에우 수레가 있어요.",
+   "blank": "hủ tiếu",
    "src": "made"
   }
  ],
@@ -30041,6 +30361,22 @@
    "src": "made"
   }
  ],
+ "w|lang thang": [
+  {
+   "text": "Trưa vắng khách, Long để vợ trông sạp rồi lang thang khắp chợ tìm món ngon.",
+   "en": "At quiet noontime, Long leaves his wife to watch the stall and wanders around the market looking for good food.",
+   "ko": "손님 없는 한낮이면 롱은 아내에게 가게를 맡기고 맛있는 걸 찾아 시장을 어슬렁거려요.",
+   "blank": "lang thang",
+   "src": "made"
+  },
+  {
+   "text": "Hồi mới ra trường, Linh lang thang khắp các buổi gặp mặt khởi nghiệp để tìm người cùng chí hướng.",
+   "en": "After graduating, Linh wandered from one startup meetup to another looking for like-minded people.",
+   "ko": "졸업하고 나서 린은 뜻이 맞는 사람을 찾으려고 창업 모임을 이곳저곳 돌아다녔어요.",
+   "blank": "lang thang",
+   "src": "made"
+  }
+ ],
  "w|lành": [
   {
    "text": "Vết thương đã lành sau vài ngày.",
@@ -33105,6 +33441,22 @@
    "src": "made"
   }
  ],
+ "w|mành": [
+  {
+   "text": "Long treo một tấm mành tre trước sạp để che nắng buổi chiều.",
+   "en": "Long hangs a bamboo blind in front of his stall to block the afternoon sun.",
+   "ko": "롱은 오후 햇볕을 가리려고 가게 앞에 대나무 발을 걸어 둬요.",
+   "blank": "mành",
+   "src": "made"
+  },
+  {
+   "text": "Văn phòng của Linh dùng mành gỗ thay rèm để trông ấm cúng hơn.",
+   "en": "Linh's office uses wooden blinds instead of curtains to look cozier.",
+   "ko": "린의 사무실은 더 아늑해 보이게 커튼 대신 나무 블라인드를 써요.",
+   "blank": "mành",
+   "src": "made"
+  }
+ ],
  "w|mảnh": [
   {
    "text": "Tôi đã xé tờ giấy đó ra thành từng mảnh.",
@@ -34115,6 +34467,22 @@
    "blank": "Mì"
   }
  ],
+ "w|mì ăn liền": [
+  {
+   "text": "Cạnh sạp Long có một tiệm tạp hóa bán mì ăn liền theo thùng.",
+   "en": "Next to Long's stall is a grocery shop that sells instant noodles by the case.",
+   "ko": "롱 가게 옆에는 라면을 박스째 파는 잡화점이 있어요.",
+   "blank": "mì ăn liền",
+   "src": "made"
+  },
+  {
+   "text": "Ngăn tủ trong bếp văn phòng Linh chất đầy mì ăn liền cho những ai làm khuya.",
+   "en": "The cupboard in Linh's office kitchen is stocked with instant noodles for anyone working late.",
+   "ko": "린 사무실 탕비실 찬장에는 야근하는 사람을 위한 라면이 가득해요.",
+   "blank": "mì ăn liền",
+   "src": "made"
+  }
+ ],
  "w|mì gói": [
   {
    "text": "Hồi mới mở quán, vợ chồng Tuấn ăn mì gói thay cơm suốt mấy tháng.",
@@ -34144,6 +34512,38 @@
    "en": "Her eyelids are swollen.",
    "ko": "그녀의 눈꺼풀이 부었어요.",
    "blank": "Mí mắt",
+   "src": "made"
+  }
+ ],
+ "w|mì tôm": [
+  {
+   "text": "Hôm nào bận quá, Long chỉ kịp ăn gói mì tôm ngay tại sạp.",
+   "en": "On really busy days, Long only has time for a pack of instant noodles at his stall.",
+   "ko": "너무 바쁜 날이면 롱은 가게에서 라면 한 봉지로 겨우 때워요.",
+   "blank": "mì tôm",
+   "src": "made"
+  },
+  {
+   "text": "Mấy đêm chạy dự án, Linh và cả nhóm chỉ ăn mì tôm cầm hơi.",
+   "en": "On the nights they rushed the project, Linh and the team survived on instant noodles alone.",
+   "ko": "프로젝트 마감 밤이면 린과 팀원들은 라면으로만 버텼어요.",
+   "blank": "mì tôm",
+   "src": "made"
+  }
+ ],
+ "w|miến": [
+  {
+   "text": "Long hay mua miến ở sạp đồ khô để về nấu với gà.",
+   "en": "Long often buys glass noodles at the dry-goods stall to cook with chicken at home.",
+   "ko": "롱은 건어물 가게에서 당면을 사다가 집에서 닭이랑 자주 끓여요.",
+   "blank": "miến",
+   "src": "made"
+  },
+  {
+   "text": "Hôm đó trời lạnh, Linh đặt mấy bát miến lươn về cho cả văn phòng.",
+   "en": "It was cold that day, so Linh ordered bowls of eel glass noodle soup for the whole office.",
+   "ko": "그날 날씨가 추워서 린은 사무실 사람들 먹으라고 장어 당면국을 몇 그릇 주문했어요.",
+   "blank": "miến",
    "src": "made"
   }
  ],
@@ -36488,6 +36888,22 @@
    "en": "I want to buy a new mattress.",
    "ko": "새 매트리스를 사고 싶어요.",
    "blank": "nệm",
+   "src": "made"
+  }
+ ],
+ "w|nêm nếm": [
+  {
+   "text": "Chị bán phở cạnh sạp Long nêm nếm nồi nước dùng rất khéo.",
+   "en": "The phở seller next to Long's stall seasons her broth very skillfully.",
+   "ko": "롱 가게 옆 쌀국수집 아주머니는 육수 간을 아주 잘 맞춰요.",
+   "blank": "nêm nếm",
+   "src": "made"
+  },
+  {
+   "text": "Anh Quân, đồng sáng lập với Linh, thích tự nấu ăn và nêm nếm rất kỹ.",
+   "en": "Quân, Linh's co-founder, likes cooking for himself and seasons very carefully.",
+   "ko": "린의 공동 창업자 꾸언은 직접 요리하는 걸 좋아하고 간을 아주 꼼꼼히 맞춰요.",
+   "blank": "nêm nếm",
    "src": "made"
   }
  ],
@@ -39777,6 +40193,22 @@
    "src": "made"
   }
  ],
+ "w|nhận phòng": [
+  {
+   "text": "Nhà khách cạnh chợ có giờ nhận phòng sớm nên các bà buôn ở xa thường nghỉ ở đó.",
+   "en": "The guesthouse next to the market has early check-in, so traders from far away often stay there.",
+   "ko": "시장 옆 게스트하우스는 체크인이 일러서 멀리서 온 상인 아주머니들이 자주 묵어요.",
+   "blank": "nhận phòng",
+   "src": "made"
+  },
+  {
+   "text": "Ứng dụng đầu tiên của Linh giúp khách sạn nhỏ làm thủ tục nhận phòng trên điện thoại.",
+   "en": "Linh's first app helps small hotels handle check-in on a phone.",
+   "ko": "린의 첫 앱은 작은 호텔이 휴대폰으로 체크인을 처리하게 도와줘요.",
+   "blank": "nhận phòng",
+   "src": "made"
+  }
+ ],
  "w|nhân quyền": [
   {
    "text": "Tuấn đứng lặng trước góc trưng bày về lịch sử nhân quyền.",
@@ -39956,6 +40388,22 @@
    "en": "The girl running next to Lan was very nimble, slipping through the crowd easily.",
    "ko": "란 옆에서 뛰던 소녀는 아주 날렵해서 사람들 사이를 쉽게 빠져나갔어요.",
    "blank": "nhanh nhẹn",
+   "src": "made"
+  }
+ ],
+ "w|nhào": [
+  {
+   "text": "Ông bán bánh bao bên cạnh Long nhào bột ngay trước mặt khách.",
+   "en": "The bun seller next to Long kneads the dough right in front of customers.",
+   "ko": "롱 옆의 만두 장수 할아버지는 손님 바로 앞에서 반죽을 주물러요.",
+   "blank": "nhào",
+   "src": "made"
+  },
+  {
+   "text": "Linh vừa nhào bột làm bánh mì vừa nghĩ cách sửa lỗi trong ứng dụng.",
+   "en": "Linh kneaded bread dough while thinking about how to fix the bug in the app.",
+   "ko": "린은 빵 반죽을 주무르면서 앱의 오류를 어떻게 고칠지 생각했어요.",
+   "blank": "nhào",
    "src": "made"
   }
  ],
@@ -40745,6 +41193,22 @@
    "en": "The little kid runs after the red ball.",
    "ko": "어린아이가 빨간 공을 따라 뛰어가.",
    "blank": "Nhóc con"
+  }
+ ],
+ "w|nhồi bột": [
+  {
+   "text": "Anh bán bánh mì trong chợ dậy từ ba giờ sáng để nhồi bột.",
+   "en": "The bread seller in the market gets up at three in the morning to knead dough.",
+   "ko": "시장 안 빵 장수는 새벽 세 시에 일어나 반죽을 치대요.",
+   "blank": "nhồi bột",
+   "src": "made"
+  },
+  {
+   "text": "Trong buổi team building, nhóm của Linh thi nhau nhồi bột làm bánh bao.",
+   "en": "At the team-building event, Linh's team competed at kneading dough for steamed buns.",
+   "ko": "팀 빌딩 행사에서 린의 팀은 찐빵을 만들려고 서로 반죽 치대기 시합을 했어요.",
+   "blank": "nhồi bột",
+   "src": "made"
   }
  ],
  "w|nhóm": [
@@ -42969,6 +43433,22 @@
    "blank": "phá"
   }
  ],
+ "w|pha chế": [
+  {
+   "text": "Cậu thanh niên ở quán nước đầu chợ pha chế nước mía với tắc rất ngon.",
+   "en": "The young man at the drinks stall at the market entrance makes a great sugarcane juice with kumquat.",
+   "ko": "시장 입구 음료 가게 청년은 금귤을 넣은 사탕수수 주스를 아주 맛있게 만들어요.",
+   "blank": "pha chế",
+   "src": "made"
+  },
+  {
+   "text": "Anh Quân tự pha chế một loại trà sữa riêng cho buổi liên hoan của Linh.",
+   "en": "Quân made his own milk tea blend for Linh's team party.",
+   "ko": "꾸언은 린의 회식을 위해 밀크티를 직접 만들었어요.",
+   "blank": "pha chế",
+   "src": "made"
+  }
+ ],
  "w|phá hoại": [
   {
    "text": "Ai phá hoại cây trong vườn trường sẽ bị ghi tên vào sổ.",
@@ -44289,6 +44769,22 @@
    "src": "made"
   }
  ],
+ "w|phòng trống": [
+  {
+   "text": "Bạn của Long hỏi nhà khách cạnh chợ còn phòng trống không để ngủ lại một đêm.",
+   "en": "Long's friend asked whether the guesthouse by the market had a vacant room so he could stay a night.",
+   "ko": "롱의 친구는 하룻밤 묵으려고 시장 옆 게스트하우스에 빈방이 있는지 물었어요.",
+   "blank": "phòng trống",
+   "src": "made"
+  },
+  {
+   "text": "Ứng dụng của Linh hiển thị số phòng trống của từng khách sạn theo thời gian thực.",
+   "en": "Linh's app shows each hotel's vacant rooms in real time.",
+   "ko": "린의 앱은 호텔마다 빈방 수를 실시간으로 보여 줘요.",
+   "blank": "phòng trống",
+   "src": "made"
+  }
+ ],
  "w|phong tục": [
   {
    "text": "Chuyên mục của Minh giới thiệu phong tục gói bánh chưng của từng vùng.",
@@ -45321,6 +45817,22 @@
    "en": "Let's go back to the usual spot tomorrow.",
    "ko": "내일 그 자리로 다시 가자.",
    "blank": "quay lại"
+  }
+ ],
+ "w|quầy lễ tân": [
+  {
+   "text": "Chợ của Long có một khu nhà khách nhỏ, cô Hương ngồi ở quầy lễ tân và kiêm luôn bán vé xe.",
+   "en": "Long's market has a small guesthouse, where Hương sits at the reception desk and also sells bus tickets.",
+   "ko": "롱네 시장에는 작은 게스트하우스가 있는데, 흐엉 아주머니가 프런트에 앉아 버스표도 같이 팔아요.",
+   "blank": "quầy lễ tân",
+   "src": "made"
+  },
+  {
+   "text": "Văn phòng startup của Linh không có quầy lễ tân, khách đến tự bấm chuông.",
+   "en": "Linh's startup office has no reception desk, so visitors ring the bell themselves.",
+   "ko": "린의 스타트업 사무실에는 프런트가 없어서 손님이 직접 벨을 눌러요.",
+   "blank": "quầy lễ tân",
+   "src": "made"
   }
  ],
  "w|quầy thu ngân": [
@@ -46402,6 +46914,22 @@
    "en": "The window curtains are green.",
    "ko": "창문 커튼은 초록색이에요.",
    "blank": "Rèm",
+   "src": "made"
+  }
+ ],
+ "w|rèm cửa": [
+  {
+   "text": "Sạp vải bên cạnh Long bán đủ loại rèm cửa, màu nào cũng có.",
+   "en": "The fabric stall next to Long sells all kinds of curtains in every color.",
+   "ko": "롱 옆의 천 가게는 온갖 색의 커튼을 팔아요.",
+   "blank": "rèm cửa",
+   "src": "made"
+  },
+  {
+   "text": "Linh kéo rèm cửa xuống để màn hình không bị chói nắng chiều.",
+   "en": "Linh pulled down the curtains so the screens wouldn't be glared by the afternoon sun.",
+   "ko": "린은 오후 햇살에 화면이 눈부시지 않게 커튼을 내렸어요.",
+   "blank": "rèm cửa",
    "src": "made"
   }
  ],
@@ -47798,6 +48326,22 @@
    "en": "Hà tells her friends about her daughter raising a caterpillar until it turns into a butterfly.",
    "ko": "하는 딸이 나비가 될 때까지 애벌레를 키운 이야기를 친구들에게 해요.",
    "blank": "sâu bướm",
+   "src": "made"
+  }
+ ],
+ "w|sau đó": [
+  {
+   "text": "Long chất xong hàng lên xe, sau đó mới ngồi ăn sáng.",
+   "en": "Long finished loading the goods onto the truck, and only then sat down to eat breakfast.",
+   "ko": "롱은 물건을 차에 다 싣고 나서야 앉아서 아침을 먹었어요.",
+   "blank": "sau đó",
+   "src": "made"
+  },
+  {
+   "text": "Linh sửa xong lỗi đăng nhập, sau đó mới dám đi ngủ.",
+   "en": "Linh fixed the login bug, and only after that did she dare go to sleep.",
+   "ko": "린은 로그인 오류를 다 고치고 나서야 잠자리에 들 수 있었어요.",
+   "blank": "sau đó",
    "src": "made"
   }
  ],
@@ -51799,6 +52343,22 @@
    "blank": "Thành viên"
   }
  ],
+ "w|thanh xuân": [
+  {
+   "text": "Bà Tư bán xôi ở chợ đã dành cả thanh xuân cho cái gánh hàng nhỏ ấy.",
+   "en": "Mrs. Tư, who sells sticky rice at the market, spent her whole youth on that small food stall.",
+   "ko": "시장에서 찹쌀밥을 파는 뜨 할머니는 그 작은 가게에 청춘을 다 바쳤어요.",
+   "blank": "thanh xuân",
+   "src": "made"
+  },
+  {
+   "text": "Linh nói đùa rằng cô đã đổi cả thanh xuân lấy những dòng code.",
+   "en": "Linh joked that she had traded her whole youth for lines of code.",
+   "ko": "린은 청춘을 다 코드 몇 줄과 바꿨다고 농담했어요.",
+   "blank": "thanh xuân",
+   "src": "made"
+  }
+ ],
  "w|tháo": [
   {
    "text": "Tôi không thể tháo được nút thắt này.",
@@ -53880,6 +54440,22 @@
    "en": "Hương put up a curtain to make a fitting corner for customers.",
    "ko": "흐엉은 커튼을 하나 달아 손님이 옷을 입어 볼 구석을 만들었어요.",
    "blank": "thử đồ",
+   "src": "made"
+  }
+ ],
+ "w|thu dọn": [
+  {
+   "text": "Chợ tan, Long thu dọn lá rau vương vãi quanh sạp.",
+   "en": "When the market closes, Long cleans up the vegetable leaves scattered around his stall.",
+   "ko": "장이 파하면 롱은 가게 주변에 흩어진 채소 잎을 치워요.",
+   "blank": "thu dọn",
+   "src": "made"
+  },
+  {
+   "text": "Tối thứ sáu, Linh thu dọn bàn làm việc cho gọn trước khi về.",
+   "en": "On Friday evening, Linh tidies up her desk before going home.",
+   "ko": "금요일 저녁이면 린은 퇴근 전에 책상을 깔끔하게 정리해요.",
+   "blank": "thu dọn",
    "src": "made"
   }
  ],
@@ -56947,6 +57523,22 @@
    "blank": "trả lời lại"
   }
  ],
+ "w|trả phòng": [
+  {
+   "text": "Mấy bà buôn hối hả làm thủ tục trả phòng để kịp ra chợ lấy hàng của Long.",
+   "en": "The traders hurried through check-out to get to the market in time to pick up goods from Long.",
+   "ko": "상인 아주머니들은 롱에게서 물건을 받으러 시장에 늦지 않으려고 서둘러 체크아웃했어요.",
+   "blank": "trả phòng",
+   "src": "made"
+  },
+  {
+   "text": "Nhóm của Linh đang thêm tính năng trả phòng tự động cho ứng dụng.",
+   "en": "Linh's team is adding an automatic check-out feature to the app.",
+   "ko": "린의 팀은 앱에 자동 체크아웃 기능을 넣고 있어요.",
+   "blank": "trả phòng",
+   "src": "made"
+  }
+ ],
  "w|trà sữa": [
   {
    "text": "Cuối khóa, lớp tự làm trà sữa trân châu để ăn mừng.",
@@ -58631,6 +59223,22 @@
    "blank": "trước đây"
   }
  ],
+ "w|trước đó": [
+  {
+   "text": "Long mới bán rau được ba năm, trước đó anh làm thợ xây ở thành phố.",
+   "en": "Long has only been selling vegetables for three years; before that he was a builder in the city.",
+   "ko": "롱은 채소를 판 지 삼 년밖에 안 됐고, 그 전에는 도시에서 건설 일을 했어요.",
+   "blank": "trước đó",
+   "src": "made"
+  },
+  {
+   "text": "Linh mở công ty năm ngoái, trước đó cô làm lập trình viên cho một ngân hàng.",
+   "en": "Linh started the company last year; before that she was a programmer at a bank.",
+   "ko": "린은 작년에 회사를 차렸고, 그 전에는 은행에서 프로그래머로 일했어요.",
+   "blank": "trước đó",
+   "src": "made"
+  }
+ ],
  "w|trước khi": [
   {
    "text": "Rửa tay trước khi ăn nhé.",
@@ -59739,6 +60347,22 @@
    "en": "He still keeps the spirit of youth.",
    "ko": "그는 여전히 젊은 시절의 기운을 간직하고 있어.",
    "blank": "tuổi trẻ"
+  }
+ ],
+ "w|tuổi trung niên": [
+  {
+   "text": "Đến tuổi trung niên, Long mới mở được sạp hàng riêng ở chợ.",
+   "en": "Only in middle age did Long manage to open his own stall at the market.",
+   "ko": "롱은 중년이 돼서야 시장에 자기 가게를 열 수 있었어요.",
+   "blank": "tuổi trung niên",
+   "src": "made"
+  },
+  {
+   "text": "Nhà đầu tư đầu tiên của Linh là một ông chú ở tuổi trung niên, mê công nghệ.",
+   "en": "Linh's first investor was a middle-aged man who loves technology.",
+   "ko": "린의 첫 투자자는 기술을 아주 좋아하는 중년 아저씨였어요.",
+   "blank": "tuổi trung niên",
+   "src": "made"
   }
  ],
  "w|tướng": [
@@ -63389,6 +64013,22 @@
    "ko": "그건 다시 생각해 봐야 할 것 같아요.",
    "blank": "xem xét",
    "src": "tatoeba:10669069/quoctrong018 en:6253195/CK"
+  }
+ ],
+ "w|xếp": [
+  {
+   "text": "Mỗi sáng, Long xếp rau củ thành từng hàng ngay ngắn trên sạp.",
+   "en": "Every morning, Long arranges the vegetables in neat rows on his stall.",
+   "ko": "매일 아침 롱은 채소를 가판대 위에 가지런히 줄지어 놓아요.",
+   "blank": "xếp",
+   "src": "made"
+  },
+  {
+   "text": "Ngày đầu chuyển văn phòng, Linh tự xếp sách và hồ sơ lên kệ.",
+   "en": "On the first day in the new office, Linh put the books and files on the shelves herself.",
+   "ko": "사무실을 옮긴 첫날 린은 책과 서류를 직접 선반에 정리했어요.",
+   "blank": "xếp",
+   "src": "made"
   }
  ],
  "w|xét duyệt": [
