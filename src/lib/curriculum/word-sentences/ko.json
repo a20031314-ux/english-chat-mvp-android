@@ -1087,6 +1087,22 @@
    "blank": "감사해"
   }
  ],
+ "w|감수": [
+  {
+   "text": "재원은 친구를 돕다가 생긴 불이익을 기꺼이 감수했어요.",
+   "en": "Jaewon willingly put up with the disadvantage that came from helping a friend.",
+   "ko": "재원은 친구를 돕다가 생긴 불이익을 기꺼이 감수했어요.",
+   "blank": "감수했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 무릎 통증을 감수하고 끝까지 달렸어요.",
+   "en": "Sohee endured the knee pain and ran to the end.",
+   "ko": "소희는 무릎 통증을 감수하고 끝까지 달렸어요.",
+   "blank": "감수하고",
+   "src": "made"
+  }
+ ],
  "w|감수하다": [
   {
    "text": "성호는 밤샘 근무를 감수하고라도 이 특종을 끝까지 쫓기로 했어요.",
@@ -4185,6 +4201,22 @@
    "blank": "곳이"
   }
  ],
+ "w|곳곳": [
+  {
+   "text": "축제 날 학교 곳곳에 풍선과 포스터가 붙어 있었어요.",
+   "en": "On festival day, balloons and posters were put up all over the school.",
+   "ko": "축제 날 학교 곳곳에 풍선과 포스터가 붙어 있었어요.",
+   "blank": "곳곳에",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 코스 곳곳에서 시민들이 박수를 쳐 줬어요.",
+   "en": "Citizens applauded all along the marathon course.",
+   "ko": "마라톤 코스 곳곳에서 시민들이 박수를 쳐 줬어요.",
+   "blank": "곳곳에서",
+   "src": "made"
+  }
+ ],
  "w|공간": [
   {
    "text": "책상 아래 공간이 좀 비좁아.",
@@ -5209,6 +5241,22 @@
    "blank": "교환했어"
   }
  ],
+ "w|교활하다": [
+  {
+   "text": "국어 시간에 읽은 우화에는 교활한 여우가 나왔어요.",
+   "en": "A cunning fox appeared in the fable read in Korean class.",
+   "ko": "국어 시간에 읽은 우화에는 교활한 여우가 나왔어요.",
+   "blank": "교활한",
+   "src": "made"
+  },
+  {
+   "text": "다은이 고른 동화 요리책에는 교활한 늑대가 빵을 훔치는 그림이 있었어요.",
+   "en": "The children's cookbook Daeun picked had a picture of a sly wolf stealing bread.",
+   "ko": "다은이 고른 동화 요리책에는 교활한 늑대가 빵을 훔치는 그림이 있었어요.",
+   "blank": "교활한",
+   "src": "made"
+  }
+ ],
  "w|교회": [
   {
    "text": "일요일에 교회 가.",
@@ -5379,6 +5427,22 @@
    "blank": "구별해"
   }
  ],
+ "w|구식": [
+  {
+   "text": "과학실의 현미경은 너무 구식이라서 잘 안 보였어요.",
+   "en": "The microscopes in the science lab were so old-fashioned that you couldn't see well.",
+   "ko": "과학실의 현미경은 너무 구식이라서 잘 안 보였어요.",
+   "blank": "구식이라서",
+   "src": "made"
+  },
+  {
+   "text": "요리 학원에 있는 오븐은 구식이지만 빵은 잘 구워져요.",
+   "en": "The oven at the cooking school is old-fashioned, but it bakes bread well.",
+   "ko": "요리 학원에 있는 오븐은 구식이지만 빵은 잘 구워져요.",
+   "blank": "구식이지만",
+   "src": "made"
+  }
+ ],
  "w|구실": [
   {
    "text": "동민은 화장실에 간다는 구실로 교실을 잠깐 빠져나왔어요.",
@@ -5465,6 +5529,22 @@
    "en": "Try fixing the sentence structure again.",
    "ko": "문장 구조를 다시 고쳐 봐.",
    "blank": "구조를"
+  }
+ ],
+ "w|구조대": [
+  {
+   "text": "안전 교육 시간에 산악 구조대 대원이 학교에 와서 강의를 했어요.",
+   "en": "During safety education, a member of a mountain rescue team came to the school to give a talk.",
+   "ko": "안전 교육 시간에 산악 구조대 대원이 학교에 와서 강의를 했어요.",
+   "blank": "구조대",
+   "src": "made"
+  },
+  {
+   "text": "더위에 쓰러진 참가자를 구조대가 재빨리 옮겼어요.",
+   "en": "The rescue team quickly carried off a participant who collapsed from the heat.",
+   "ko": "더위에 쓰러진 참가자를 구조대가 재빨리 옮겼어요.",
+   "blank": "구조대가",
+   "src": "made"
   }
  ],
  "w|구조하다": [
@@ -5869,6 +5949,22 @@
    "en": "Don't give up your rights.",
    "ko": "권리를 포기하지 마.",
    "blank": "권리를"
+  }
+ ],
+ "w|권투": [
+  {
+   "text": "성호는 체력을 기르려고 방과 후에 권투를 배워요.",
+   "en": "Seongho learns boxing after school to build up his stamina.",
+   "ko": "성호는 체력을 기르려고 방과 후에 권투를 배워요.",
+   "blank": "권투를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 망치질을 하다가 권투 선수처럼 팔이 아프다고 웃었어요.",
+   "en": "While hammering, Migyeong laughed that her arms ached like a boxer's.",
+   "ko": "미경은 망치질을 하다가 권투 선수처럼 팔이 아프다고 웃었어요.",
+   "blank": "권투",
+   "src": "made"
   }
  ],
  "w|권한": [
@@ -6895,6 +6991,22 @@
    "blank": "그쪽"
   }
  ],
+ "w|그토록": [
+  {
+   "text": "성호는 그토록 바라던 학생회장에 드디어 뽑혔어요.",
+   "en": "Seongho was finally elected student council president, which he had wanted so badly.",
+   "ko": "성호는 그토록 바라던 학생회장에 드디어 뽑혔어요.",
+   "blank": "그토록",
+   "src": "made"
+  },
+  {
+   "text": "미경은 그토록 갖고 싶던 마당 있는 집을 드디어 샀어요.",
+   "en": "Migyeong finally bought a house with a yard, which she had wanted so much.",
+   "ko": "미경은 그토록 갖고 싶던 마당 있는 집을 드디어 샀어요.",
+   "blank": "그토록",
+   "src": "made"
+  }
+ ],
  "w|극도": [
   {
    "text": "판결을 기다리는 동안 재원은 극도로 긴장해서 손이 떨렸어요.",
@@ -6908,6 +7020,22 @@
    "en": "When the power went out, Sohee stared at the fridge in extreme anxiety.",
    "ko": "정전이 되자 소희는 극도의 불안감에 냉장고만 바라봤어요.",
    "blank": "극도의",
+   "src": "made"
+  }
+ ],
+ "w|극심하다": [
+  {
+   "text": "시험 전날 경민은 극심한 긴장 때문에 잠을 설쳤어요.",
+   "en": "The night before the test, Kyungmin slept badly because of extreme nervousness.",
+   "ko": "시험 전날 경민은 극심한 긴장 때문에 잠을 설쳤어요.",
+   "blank": "극심한",
+   "src": "made"
+  },
+  {
+   "text": "매운 고추를 맛본 다은은 극심한 매운맛에 눈물을 흘렸어요.",
+   "en": "After tasting the hot pepper, Daeun shed tears from the intense spiciness.",
+   "ko": "매운 고추를 맛본 다은은 극심한 매운맛에 눈물을 흘렸어요.",
+   "blank": "극심한",
    "src": "made"
   }
  ],
@@ -7166,6 +7294,22 @@
    "blank": "금요일까지"
   }
  ],
+ "w|금융": [
+  {
+   "text": "경제 동아리에서 성호는 은행과 금융의 기초를 배웠어요.",
+   "en": "In the economics club, Seongho learned the basics of banking and finance.",
+   "ko": "경제 동아리에서 성호는 은행과 금융의 기초를 배웠어요.",
+   "blank": "금융의",
+   "src": "made"
+  },
+  {
+   "text": "미경은 수리비 대출을 받으려고 금융 상담을 받았어요.",
+   "en": "Migyeong got financial counseling to take out a loan for the repairs.",
+   "ko": "미경은 수리비 대출을 받으려고 금융 상담을 받았어요.",
+   "blank": "금융",
+   "src": "made"
+  }
+ ],
  "w|금지": [
   {
    "text": "실내 흡연은 금지야.",
@@ -7178,6 +7322,22 @@
    "en": "It was a no-entry zone, so I turned back.",
    "ko": "출입이 금지된 구역이라 돌아갔어.",
    "blank": "금지된"
+  }
+ ],
+ "w|금지되다": [
+  {
+   "text": "수업 시간에 휴대폰 사용은 금지돼 있어요.",
+   "en": "Using phones during class is prohibited.",
+   "ko": "수업 시간에 휴대폰 사용은 금지돼 있어요.",
+   "blank": "금지돼",
+   "src": "made"
+  },
+  {
+   "text": "이번 대회에서는 이어폰을 끼고 달리는 게 금지됐어요.",
+   "en": "Running with earphones was banned at this race.",
+   "ko": "이번 대회에서는 이어폰을 끼고 달리는 게 금지됐어요.",
+   "blank": "금지됐어요",
+   "src": "made"
   }
  ],
  "w|금지하다": [
@@ -7280,6 +7440,22 @@
    "en": "That institution's role is important.",
    "ko": "그 기관의 역할이 중요해.",
    "blank": "기관의"
+  }
+ ],
+ "w|기금": [
+  {
+   "text": "학생회는 바자회를 열어 이웃 돕기 기금을 모았어요.",
+   "en": "The student council held a bazaar and raised funds to help neighbors.",
+   "ko": "학생회는 바자회를 열어 이웃 돕기 기금을 모았어요.",
+   "blank": "기금을",
+   "src": "made"
+  },
+  {
+   "text": "수강생들이 만든 쿠키를 팔아서 결식아동 기금에 보탰어요.",
+   "en": "The students sold the cookies they made and added the money to a fund for children who skip meals.",
+   "ko": "수강생들이 만든 쿠키를 팔아서 결식아동 기금에 보탰어요.",
+   "blank": "기금에",
+   "src": "made"
   }
  ],
  "w|기꺼이": [
@@ -8724,6 +8900,22 @@
    "blank": "끌었어"
   }
  ],
+ "w|끌리다": [
+  {
+   "text": "경민은 동아리 홍보 영상을 보고 사진부에 마음이 끌렸어요.",
+   "en": "After watching the club promo videos, Kyungmin found himself drawn to the photography club.",
+   "ko": "경민은 동아리 홍보 영상을 보고 사진부에 마음이 끌렸어요.",
+   "blank": "끌렸어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 달콤한 빵 냄새에 끌려서 제빵 수업도 신청했어요.",
+   "en": "Drawn by the smell of sweet bread, Daeun signed up for the baking class too.",
+   "ko": "다은은 달콤한 빵 냄새에 끌려서 제빵 수업도 신청했어요.",
+   "blank": "끌려서",
+   "src": "made"
+  }
+ ],
  "w|끌어내다": [
   {
    "text": "선생님은 조용한 학생들의 생각도 끌어내려고 모둠 토론을 시키셨어요.",
@@ -8852,6 +9044,22 @@
    "en": "Today's game was totally killer.",
    "ko": "오늘 경기는 완전 끝내줬네.",
    "blank": "끝내줬네"
+  }
+ ],
+ "w|끝없다": [
+  {
+   "text": "성호는 끝없는 수학 문제집을 보고 한숨을 쉬었어요.",
+   "en": "Seongho sighed at the endless math workbook.",
+   "ko": "성호는 끝없는 수학 문제집을 보고 한숨을 쉬었어요.",
+   "blank": "끝없는",
+   "src": "made"
+  },
+  {
+   "text": "오래된 집을 고치는 일은 끝없이 이어졌어요.",
+   "en": "The work of fixing up the old house went on endlessly.",
+   "ko": "오래된 집을 고치는 일은 끝없이 이어졌어요.",
+   "blank": "끝없이",
+   "src": "made"
   }
  ],
  "w|끝장": [
@@ -9212,6 +9420,22 @@
    "blank": "나타났어요"
   }
  ],
+ "w|낙하": [
+  {
+   "text": "과학 시간에 재원은 달걀 낙하 실험을 했어요.",
+   "en": "In science class, Jaewon did an egg drop experiment.",
+   "ko": "과학 시간에 재원은 달걀 낙하 실험을 했어요.",
+   "blank": "낙하",
+   "src": "made"
+  },
+  {
+   "text": "대회 개막식에서 낙하산 부대의 낙하 공연이 있었어요.",
+   "en": "At the opening ceremony, a paratrooper unit put on a parachute drop show.",
+   "ko": "대회 개막식에서 낙하산 부대의 낙하 공연이 있었어요.",
+   "blank": "낙하",
+   "src": "made"
+  }
+ ],
  "w|난방": [
   {
    "text": "밤에 난방을 약하게 틀어.",
@@ -9224,6 +9448,22 @@
    "en": "The heating bill will probably be high.",
    "ko": "난방비가 많이 나올 것 같아.",
    "blank": "난방비가"
+  }
+ ],
+ "w|난장판": [
+  {
+   "text": "선생님이 잠깐 나가신 사이에 교실이 난장판이 됐어요.",
+   "en": "While the teacher stepped out for a moment, the classroom became a mess.",
+   "ko": "선생님이 잠깐 나가신 사이에 교실이 난장판이 됐어요.",
+   "blank": "난장판이",
+   "src": "made"
+  },
+  {
+   "text": "출발 직전 보관소는 짐을 맡기려는 사람들로 난장판이었어요.",
+   "en": "Right before the start, the bag drop was chaos with people trying to leave their things.",
+   "ko": "출발 직전 보관소는 짐을 맡기려는 사람들로 난장판이었어요.",
+   "blank": "난장판이었어요",
+   "src": "made"
   }
  ],
  "w|날": [
@@ -9536,6 +9776,22 @@
    "en": "I feel a bit better after the medicine.",
    "ko": "약 먹고 좀 나았어요.",
    "blank": "나았어요"
+  }
+ ],
+ "w|낭만": [
+  {
+   "text": "수학여행 밤에 바닷가에서 친구들과 노래를 부른 건 성호에게 낭만 그 자체였어요.",
+   "en": "Singing with friends on the beach at night on the school trip was pure romance for Seongho.",
+   "ko": "수학여행 밤에 바닷가에서 친구들과 노래를 부른 건 성호에게 낭만 그 자체였어요.",
+   "blank": "낭만",
+   "src": "made"
+  },
+  {
+   "text": "미경은 비 오는 날 툇마루에 앉아 낭만을 즐겼어요.",
+   "en": "On a rainy day, Migyeong sat on the wooden porch and enjoyed the romantic mood.",
+   "ko": "미경은 비 오는 날 툇마루에 앉아 낭만을 즐겼어요.",
+   "blank": "낭만을",
+   "src": "made"
   }
  ],
  "w|낭비": [
@@ -10584,6 +10840,22 @@
    "blank": "논이"
   }
  ],
+ "w|논리": [
+  {
+   "text": "토론 대회에서 재원은 논리가 정확해서 높은 점수를 받았어요.",
+   "en": "At the debate contest, Jaewon got a high score because his logic was precise.",
+   "ko": "토론 대회에서 재원은 논리가 정확해서 높은 점수를 받았어요.",
+   "blank": "논리가",
+   "src": "made"
+  },
+  {
+   "text": "코치는 페이스 조절에도 논리가 있다며 소희에게 그래프를 보여 줬어요.",
+   "en": "The coach showed Sohee a graph, saying there's logic to pacing yourself.",
+   "ko": "코치는 페이스 조절에도 논리가 있다며 소희에게 그래프를 보여 줬어요.",
+   "blank": "논리가",
+   "src": "made"
+  }
+ ],
  "w|논의하다": [
   {
    "text": "회의에서 그 안을 논의했어.",
@@ -10652,6 +10924,22 @@
    "en": "They showed surprising talent.",
    "ko": "놀라운 재능을 보여 줬어.",
    "blank": "놀라운"
+  }
+ ],
+ "w|놀래다": [
+  {
+   "text": "경민은 친구들을 놀래 주려고 교실 문 뒤에 숨었어요.",
+   "en": "Kyungmin hid behind the classroom door to surprise his friends.",
+   "ko": "경민은 친구들을 놀래 주려고 교실 문 뒤에 숨었어요.",
+   "blank": "놀래",
+   "src": "made"
+  },
+  {
+   "text": "다은이 뚜껑을 갑자기 열어서 옆 사람을 놀랬어요.",
+   "en": "Daeun opened the lid suddenly and startled the person next to her.",
+   "ko": "다은이 뚜껑을 갑자기 열어서 옆 사람을 놀랬어요.",
+   "blank": "놀랬어요",
+   "src": "made"
   }
  ],
  "w|놀리다": [
@@ -10822,6 +11110,22 @@
    "en": "I want to let my heart go now.",
    "ko": "이제는 마음을 놓아주고 싶어.",
    "blank": "놓아주고"
+  }
+ ],
+ "w|놓이다": [
+  {
+   "text": "재원의 책상 위에 누가 두고 간 쪽지가 놓여 있었어요.",
+   "en": "There was a note someone had left on Jaewon's desk.",
+   "ko": "재원의 책상 위에 누가 두고 간 쪽지가 놓여 있었어요.",
+   "blank": "놓여",
+   "src": "made"
+  },
+  {
+   "text": "급수대 위에는 물컵이 줄지어 놓여 있었어요.",
+   "en": "Cups of water were lined up on the water station table.",
+   "ko": "급수대 위에는 물컵이 줄지어 놓여 있었어요.",
+   "blank": "놓여",
+   "src": "made"
   }
  ],
  "w|놓치다": [
@@ -12544,6 +12848,22 @@
    "blank": "대꾸하다"
   }
  ],
+ "w|대놓고": [
+  {
+   "text": "재원의 짝은 수업이 지루하다고 대놓고 하품을 했어요.",
+   "en": "Jaewon's deskmate yawned openly, saying class was boring.",
+   "ko": "재원의 짝은 수업이 지루하다고 대놓고 하품을 했어요.",
+   "blank": "대놓고",
+   "src": "made"
+  },
+  {
+   "text": "옆 선수가 소희를 대놓고 밀치는 바람에 소희는 넘어질 뻔했어요.",
+   "en": "The runner next to her openly shoved Sohee, and she almost fell.",
+   "ko": "옆 선수가 소희를 대놓고 밀치는 바람에 소희는 넘어질 뻔했어요.",
+   "blank": "대놓고",
+   "src": "made"
+  }
+ ],
  "w|대다": [
   {
    "text": "손을 대다 보니 차가웠어.",
@@ -13008,6 +13328,22 @@
    "en": "The company representative greeted the guest in person.",
    "ko": "회사 대표가 손님을 직접 맞았어.",
    "blank": "대표가"
+  }
+ ],
+ "w|대표하다": [
+  {
+   "text": "경민은 학교를 대표해서 전국 과학 대회에 나갔어요.",
+   "en": "Kyungmin represented his school at the national science competition.",
+   "ko": "경민은 학교를 대표해서 전국 과학 대회에 나갔어요.",
+   "blank": "대표해서",
+   "src": "made"
+  },
+  {
+   "text": "이번 수업에서는 지역을 대표하는 향토 음식을 만들었어요.",
+   "en": "In this class, they made local dishes that represent the region.",
+   "ko": "이번 수업에서는 지역을 대표하는 향토 음식을 만들었어요.",
+   "blank": "대표하는",
+   "src": "made"
   }
  ],
  "w|대하다": [
@@ -13534,6 +13870,22 @@
    "en": "If it's dangerous, run away quickly.",
    "ko": "위험하면 빨리 도망가.",
    "blank": "도망쳐"
+  }
+ ],
+ "w|도무지": [
+  {
+   "text": "성호는 선생님의 설명을 들어도 도무지 이해가 안 됐어요.",
+   "en": "Even after the teacher's explanation, Seongho just couldn't understand at all.",
+   "ko": "성호는 선생님의 설명을 들어도 도무지 이해가 안 됐어요.",
+   "blank": "도무지",
+   "src": "made"
+  },
+  {
+   "text": "물이 어디서 새는지 미경은 도무지 알 수가 없었어요.",
+   "en": "Migyeong had no idea at all where the water was leaking from.",
+   "ko": "물이 어디서 새는지 미경은 도무지 알 수가 없었어요.",
+   "blank": "도무지",
+   "src": "made"
   }
  ],
  "w|도박": [
@@ -14863,6 +15215,22 @@
    "blank": "들어왔어"
   }
  ],
+ "w|들어주다": [
+  {
+   "text": "담임 선생님은 자리를 바꿔 달라는 경민의 부탁을 들어주셨어요.",
+   "en": "The homeroom teacher granted Kyungmin's request to change seats.",
+   "ko": "담임 선생님은 자리를 바꿔 달라는 경민의 부탁을 들어주셨어요.",
+   "blank": "들어주셨어요",
+   "src": "made"
+  },
+  {
+   "text": "요리 선생님은 레시피를 다시 알려 달라는 다은의 부탁을 흔쾌히 들어줬어요.",
+   "en": "The cooking teacher gladly granted Daeun's request to go over the recipe again.",
+   "ko": "요리 선생님은 레시피를 다시 알려 달라는 다은의 부탁을 흔쾌히 들어줬어요.",
+   "blank": "들어줬어요",
+   "src": "made"
+  }
+ ],
  "w|들여다보다": [
   {
    "text": "상자 안을 가만히 들여다봤어.",
@@ -15021,6 +15389,22 @@
    "blank": "등급을"
   }
  ],
+ "w|등록": [
+  {
+   "text": "성호는 방과 후 로봇 수업에 등록했어요.",
+   "en": "Seongho signed up for the after-school robotics class.",
+   "ko": "성호는 방과 후 로봇 수업에 등록했어요.",
+   "blank": "등록했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 집을 산 뒤 구청에 가서 주소 등록을 마쳤어요.",
+   "en": "After buying the house, Migyeong went to the district office and finished registering her address.",
+   "ko": "미경은 집을 산 뒤 구청에 가서 주소 등록을 마쳤어요.",
+   "blank": "등록을",
+   "src": "made"
+  }
+ ],
  "w|등록하다": [
   {
    "text": "수강 신청 전에 먼저 등록했어.",
@@ -15149,6 +15533,22 @@
    "en": "I slowly followed behind my friend.",
    "ko": "친구 뒤를 천천히 따라갔어.",
    "blank": "따라갔어"
+  }
+ ],
+ "w|따라다니다": [
+  {
+   "text": "신입생들이 재원을 졸졸 따라다니며 학교 안내를 받았어요.",
+   "en": "The new students followed Jaewon around everywhere as he showed them the school.",
+   "ko": "신입생들이 재원을 졸졸 따라다니며 학교 안내를 받았어요.",
+   "blank": "따라다니며",
+   "src": "made"
+  },
+  {
+   "text": "취재 기자가 소희를 따라다니며 사진을 찍었어요.",
+   "en": "A reporter followed Sohee around taking pictures.",
+   "ko": "취재 기자가 소희를 따라다니며 사진을 찍었어요.",
+   "blank": "따라다니며",
+   "src": "made"
   }
  ],
  "w|따라서": [
@@ -16081,6 +16481,22 @@
    "src": "krdict"
   }
  ],
+ "w|리듬": [
+  {
+   "text": "음악 시간에 재원은 친구들과 손뼉으로 리듬을 맞췄어요.",
+   "en": "In music class, Jaewon kept the rhythm with his friends by clapping.",
+   "ko": "음악 시간에 재원은 친구들과 손뼉으로 리듬을 맞췄어요.",
+   "blank": "리듬을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 숨 쉬는 리듬에 맞춰 일정하게 발을 내디뎠어요.",
+   "en": "Sohee stepped steadily in time with the rhythm of her breathing.",
+   "ko": "소희는 숨 쉬는 리듬에 맞춰 일정하게 발을 내디뎠어요.",
+   "blank": "리듬에",
+   "src": "made"
+  }
+ ],
  "w|마감": [
   {
    "text": "보고서 마감이 다가와.",
@@ -16555,6 +16971,22 @@
    "en": "Don't cover your ears, listen.",
    "ko": "귀를 막지 마, 들어.",
    "blank": "막지"
+  }
+ ],
+ "w|막대하다": [
+  {
+   "text": "새 체육관을 짓는 데 막대한 예산이 들었어요.",
+   "en": "An enormous budget went into building the new gym.",
+   "ko": "새 체육관을 짓는 데 막대한 예산이 들었어요.",
+   "blank": "막대한",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 대회를 여는 데 막대한 인력이 필요해요.",
+   "en": "Holding a marathon takes a huge number of staff.",
+   "ko": "마라톤 대회를 여는 데 막대한 인력이 필요해요.",
+   "blank": "막대한",
+   "src": "made"
   }
  ],
  "w|막히다": [
@@ -17277,6 +17709,22 @@
    "en": "Don't cling too hard to the outcome.",
    "ko": "결과에 너무 매달리지 마.",
    "blank": "매달리지"
+  }
+ ],
+ "w|매듭": [
+  {
+   "text": "재원은 미술 시간에 실로 매듭을 지어 팔찌를 만들었어요.",
+   "en": "In art class, Jaewon tied knots in thread to make a bracelet.",
+   "ko": "재원은 미술 시간에 실로 매듭을 지어 팔찌를 만들었어요.",
+   "blank": "매듭을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 출발 전에 운동화 끈 매듭을 두 번 묶었어요.",
+   "en": "Before the start, Sohee double-knotted her shoelaces.",
+   "ko": "소희는 출발 전에 운동화 끈 매듭을 두 번 묶었어요.",
+   "blank": "매듭을",
+   "src": "made"
   }
  ],
  "w|매력": [
@@ -18629,6 +19077,22 @@
    "src": "made"
   }
  ],
+ "w|묘하다": [
+  {
+   "text": "텅 빈 저녁 교실은 낮과 달리 묘한 느낌이 들었어요.",
+   "en": "The empty classroom in the evening felt strange, unlike during the day.",
+   "ko": "텅 빈 저녁 교실은 낮과 달리 묘한 느낌이 들었어요.",
+   "blank": "묘한",
+   "src": "made"
+  },
+  {
+   "text": "고수를 넣었더니 국물에서 묘한 향이 났어요.",
+   "en": "When Daeun added cilantro, the soup gave off a peculiar aroma.",
+   "ko": "고수를 넣었더니 국물에서 묘한 향이 났어요.",
+   "blank": "묘한",
+   "src": "made"
+  }
+ ],
  "w|무": [
   {
    "text": "무를 국에 넣으면 시원해.",
@@ -18773,6 +19237,22 @@
    "en": "They answered curtly.",
    "ko": "무뚝뚝하게 대답했어.",
    "blank": "무뚝뚝하게"
+  }
+ ],
+ "w|무려": [
+  {
+   "text": "이번 독서 대회에 무려 삼백 명이 넘는 학생이 참가했어요.",
+   "en": "As many as over three hundred students took part in this reading contest.",
+   "ko": "이번 독서 대회에 무려 삼백 명이 넘는 학생이 참가했어요.",
+   "blank": "무려",
+   "src": "made"
+  },
+  {
+   "text": "이 사골 국물은 무려 열두 시간을 끓인 거래요.",
+   "en": "They say this beef bone broth was simmered for a whopping twelve hours.",
+   "ko": "이 사골 국물은 무려 열두 시간을 끓인 거래요.",
+   "blank": "무려",
+   "src": "made"
   }
  ],
  "w|무례하다": [
@@ -19717,6 +20197,22 @@
    "blank": "미소를"
   }
  ],
+ "w|미술": [
+  {
+   "text": "성호는 미술 시간이 일주일 중에 제일 기다려져요.",
+   "en": "Seongho looks forward to art class most out of the whole week.",
+   "ko": "성호는 미술 시간이 일주일 중에 제일 기다려져요.",
+   "blank": "미술",
+   "src": "made"
+  },
+  {
+   "text": "미경은 대학에서 미술을 전공해서 벽에 직접 그림을 그렸어요.",
+   "en": "Migyeong majored in art in college, so she painted on the walls herself.",
+   "ko": "미경은 대학에서 미술을 전공해서 벽에 직접 그림을 그렸어요.",
+   "blank": "미술을",
+   "src": "made"
+  }
+ ],
  "w|미술관": [
   {
    "text": "미술관에 들렀어.",
@@ -19799,6 +20295,22 @@
    "en": "We used to hate each other.",
    "ko": "예전엔 서로를 미워했어.",
    "blank": "미워했어"
+  }
+ ],
+ "w|미처": [
+  {
+   "text": "성호는 시험 시간이 모자라서 마지막 문제를 미처 풀지 못했어요.",
+   "en": "Seongho ran out of time on the test and didn't get to solve the last question.",
+   "ko": "성호는 시험 시간이 모자라서 마지막 문제를 미처 풀지 못했어요.",
+   "blank": "미처",
+   "src": "made"
+  },
+  {
+   "text": "미경은 낡은 집을 살 때 지붕이 새는 줄은 미처 몰랐어요.",
+   "en": "When Migyeong bought the old house, she hadn't realized the roof leaked.",
+   "ko": "미경은 낡은 집을 살 때 지붕이 새는 줄은 미처 몰랐어요.",
+   "blank": "미처",
+   "src": "made"
   }
  ],
  "w|미치다": [
@@ -21207,6 +21719,22 @@
    "blank": "배고파서"
   }
  ],
+ "w|배급": [
+  {
+   "text": "역사 시간에 재원은 전쟁 때 식량 배급을 받던 사람들의 사진을 봤어요.",
+   "en": "In history class, Jaewon saw photos of people receiving food rations during the war.",
+   "ko": "역사 시간에 재원은 전쟁 때 식량 배급을 받던 사람들의 사진을 봤어요.",
+   "blank": "배급을",
+   "src": "made"
+  },
+  {
+   "text": "완주한 사람들에게는 바나나와 메달 배급이 시작됐어요.",
+   "en": "Bananas and medals began to be handed out to those who finished.",
+   "ko": "완주한 사람들에게는 바나나와 메달 배급이 시작됐어요.",
+   "blank": "배급이",
+   "src": "made"
+  }
+ ],
  "w|배꼽": [
   {
    "text": "웃기다 배꼽이 빠질 뻔했어.",
@@ -21753,6 +22281,22 @@
    "blank": "벌"
   }
  ],
+ "w|벌거벗다": [
+  {
+   "text": "미술 시간에 성호는 벌거벗은 임금님 동화를 그림으로 그렸어요.",
+   "en": "In art class, Seongho drew a picture of the fairy tale about the emperor with no clothes.",
+   "ko": "미술 시간에 성호는 벌거벗은 임금님 동화를 그림으로 그렸어요.",
+   "blank": "벌거벗은",
+   "src": "made"
+  },
+  {
+   "text": "가을이 되자 마당의 나무들이 잎을 다 떨구고 벌거벗었어요.",
+   "en": "When autumn came, the trees in the yard dropped all their leaves and stood bare.",
+   "ko": "가을이 되자 마당의 나무들이 잎을 다 떨구고 벌거벗었어요.",
+   "blank": "벌거벗었어요",
+   "src": "made"
+  }
+ ],
  "w|벌금": [
   {
    "text": "주차 위반으로 벌금을 냈어.",
@@ -22117,6 +22661,22 @@
    "blank": "벽"
   }
  ],
+ "w|변경": [
+  {
+   "text": "비 때문에 소풍 날짜가 다음 주로 변경됐어요.",
+   "en": "Because of rain, the picnic date was changed to next week.",
+   "ko": "비 때문에 소풍 날짜가 다음 주로 변경됐어요.",
+   "blank": "변경됐어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 거실 창문 위치를 변경하려다 비용 때문에 포기했어요.",
+   "en": "Migyeong tried to change the position of the living room window but gave up because of the cost.",
+   "ko": "미경은 거실 창문 위치를 변경하려다 비용 때문에 포기했어요.",
+   "blank": "변경하려다",
+   "src": "made"
+  }
+ ],
  "w|변명": [
   {
    "text": "그는 이번 일에 대해 구차한 변명을 늘어놓았다.",
@@ -22163,6 +22723,22 @@
    "src": "made"
   }
  ],
+ "w|변신하다": [
+  {
+   "text": "학예회에서 성호는 개구리에서 왕자로 변신하는 역할을 맡았어요.",
+   "en": "At the school play, Seongho took the role of a frog who transforms into a prince.",
+   "ko": "학예회에서 성호는 개구리에서 왕자로 변신하는 역할을 맡았어요.",
+   "blank": "변신하는",
+   "src": "made"
+  },
+  {
+   "text": "공사가 끝나자 낡은 창고가 아늑한 작업실로 변신했어요.",
+   "en": "When the work was done, the old shed was transformed into a cozy studio.",
+   "ko": "공사가 끝나자 낡은 창고가 아늑한 작업실로 변신했어요.",
+   "blank": "변신했어요",
+   "src": "made"
+  }
+ ],
  "w|변하다": [
   {
    "text": "성격이 많이 변했어.",
@@ -22175,6 +22751,22 @@
    "en": "The weather's changing all of a sudden.",
    "ko": "날씨가 갑자기 변하네.",
    "blank": "변하네"
+  }
+ ],
+ "w|변형": [
+  {
+   "text": "과학 시간에 경민은 열을 받으면 금속이 변형되는 실험을 했어요.",
+   "en": "In science class, Kyungmin did an experiment where metal deforms when heated.",
+   "ko": "과학 시간에 경민은 열을 받으면 금속이 변형되는 실험을 했어요.",
+   "blank": "변형되는",
+   "src": "made"
+  },
+  {
+   "text": "다은은 전통 비빔밥을 조금 변형해서 자기만의 요리를 만들었어요.",
+   "en": "Daeun modified the traditional bibimbap a little to make her own dish.",
+   "ko": "다은은 전통 비빔밥을 조금 변형해서 자기만의 요리를 만들었어요.",
+   "blank": "변형해서",
+   "src": "made"
   }
  ],
  "w|변호": [
@@ -22521,6 +23113,22 @@
    "blank": "보석을"
   }
  ],
+ "w|보수": [
+  {
+   "text": "여름 방학 동안 학교 체육관은 지붕 보수 공사를 했어요.",
+   "en": "During summer vacation, the school gym had its roof repaired.",
+   "ko": "여름 방학 동안 학교 체육관은 지붕 보수 공사를 했어요.",
+   "blank": "보수",
+   "src": "made"
+  },
+  {
+   "text": "미경은 지붕 보수를 맡길 기술자를 겨우 찾았어요.",
+   "en": "Migyeong finally found a technician to take on the roof repair.",
+   "ko": "미경은 지붕 보수를 맡길 기술자를 겨우 찾았어요.",
+   "blank": "보수를",
+   "src": "made"
+  }
+ ],
  "w|보아하니": [
   {
    "text": "보아하니 오늘 숙제를 안 해 온 사람이 꽤 많네요.",
@@ -22713,6 +23321,22 @@
    "blank": "복수를"
   }
  ],
+ "w|복수하다": [
+  {
+   "text": "경민은 축구 시합에서 진 상대 반에 다음 경기에서 복수하겠다고 다짐했어요.",
+   "en": "Kyungmin vowed to get revenge in the next game on the class that beat them in soccer.",
+   "ko": "경민은 축구 시합에서 진 상대 반에 다음 경기에서 복수하겠다고 다짐했어요.",
+   "blank": "복수하겠다고",
+   "src": "made"
+  },
+  {
+   "text": "요리 수업에서 본 영화는 실패한 요리사가 경쟁자에게 요리로 복수하는 이야기였어요.",
+   "en": "The movie shown in cooking class was about a failed chef who gets revenge on a rival through cooking.",
+   "ko": "요리 수업에서 본 영화는 실패한 요리사가 경쟁자에게 요리로 복수하는 이야기였어요.",
+   "blank": "복수하는",
+   "src": "made"
+  }
+ ],
  "w|복숭아": [
   {
    "text": "잘 익은 복숭아가 달다.",
@@ -22839,6 +23463,22 @@
    "en": "The original plan was different.",
    "ko": "본래 계획은 달랐어.",
    "blank": "본래"
+  }
+ ],
+ "w|본보기": [
+  {
+   "text": "선생님은 경민의 성실한 태도를 반 친구들의 본보기로 삼으셨어요.",
+   "en": "The teacher held up Kyungmin's diligent attitude as an example for his classmates.",
+   "ko": "선생님은 경민의 성실한 태도를 반 친구들의 본보기로 삼으셨어요.",
+   "blank": "본보기로",
+   "src": "made"
+  },
+  {
+   "text": "선생님이 만든 시범 접시가 학생들의 본보기가 됐어요.",
+   "en": "The demonstration plate the teacher made became the model for the students.",
+   "ko": "선생님이 만든 시범 접시가 학생들의 본보기가 됐어요.",
+   "blank": "본보기가",
+   "src": "made"
   }
  ],
  "w|본인": [
@@ -23642,6 +24282,22 @@
    "en": "I put on music to change the mood.",
    "ko": "분위기를 바꾸려고 음악을 틀어.",
    "blank": "분위기를"
+  }
+ ],
+ "w|분장": [
+  {
+   "text": "연극부 선배가 재원의 얼굴에 할아버지 분장을 해 줬어요.",
+   "en": "A senior in the drama club made Jaewon up as an old man.",
+   "ko": "연극부 선배가 재원의 얼굴에 할아버지 분장을 해 줬어요.",
+   "blank": "분장을",
+   "src": "made"
+  },
+  {
+   "text": "슈퍼히어로 분장을 하고 달리는 참가자도 있었어요.",
+   "en": "There was even a participant running dressed up as a superhero.",
+   "ko": "슈퍼히어로 분장을 하고 달리는 참가자도 있었어요.",
+   "blank": "분장을",
+   "src": "made"
   }
  ],
  "w|불": [
@@ -24732,6 +25388,22 @@
    "blank": "빠져서"
   }
  ],
+ "w|빠짐없이": [
+  {
+   "text": "재원은 한 학기 동안 수업에 빠짐없이 출석했어요.",
+   "en": "Jaewon attended every class without missing one for the whole semester.",
+   "ko": "재원은 한 학기 동안 수업에 빠짐없이 출석했어요.",
+   "blank": "빠짐없이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 대회 전날 준비물을 빠짐없이 챙겼어요.",
+   "en": "The day before the race, Sohee packed everything she needed without leaving anything out.",
+   "ko": "소희는 대회 전날 준비물을 빠짐없이 챙겼어요.",
+   "blank": "빠짐없이",
+   "src": "made"
+  }
+ ],
  "w|빨간색": [
   {
    "text": "빨간색 골라 줘.",
@@ -24928,6 +25600,22 @@
    "en": "The excuse was so obvious I laughed.",
    "ko": "변명이 뻔하다 못해 웃었어.",
    "blank": "뻔하다"
+  }
+ ],
+ "w|뻗다": [
+  {
+   "text": "체육 시간에 성호는 바닥에 앉아 두 팔을 앞으로 쭉 뻗었어요.",
+   "en": "In PE, Seongho sat on the floor and stretched both arms straight out in front.",
+   "ko": "체육 시간에 성호는 바닥에 앉아 두 팔을 앞으로 쭉 뻗었어요.",
+   "blank": "뻗었어요",
+   "src": "made"
+  },
+  {
+   "text": "마당의 감나무 가지가 이웃집 담장 너머까지 뻗었어요.",
+   "en": "The branches of the persimmon tree in the yard stretched over the neighbor's wall.",
+   "ko": "마당의 감나무 가지가 이웃집 담장 너머까지 뻗었어요.",
+   "blank": "뻗었어요",
+   "src": "made"
   }
  ],
  "w|뼈": [
@@ -25250,6 +25938,22 @@
    "en": "Mom, I love you.",
    "ko": "엄마, 사랑해요.",
    "blank": "사랑해요"
+  }
+ ],
+ "w|사례": [
+  {
+   "text": "선생님은 학교 폭력 사례를 들어 친구를 존중하라고 하셨어요.",
+   "en": "The teacher gave examples of school violence and told us to respect our friends.",
+   "ko": "선생님은 학교 폭력 사례를 들어 친구를 존중하라고 하셨어요.",
+   "blank": "사례를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 인터넷에서 한옥 수리 사례를 찾아보며 공부했어요.",
+   "en": "Migyeong studied by looking up examples of hanok repairs online.",
+   "ko": "미경은 인터넷에서 한옥 수리 사례를 찾아보며 공부했어요.",
+   "blank": "사례를",
+   "src": "made"
   }
  ],
  "w|사막": [
@@ -26100,6 +26804,22 @@
    "src": "made"
   }
  ],
+ "w|살해당하다": [
+  {
+   "text": "국어 시간에 읽은 소설에서는 주인공의 아버지가 살해당해요.",
+   "en": "In the novel read in Korean class, the main character's father is murdered.",
+   "ko": "국어 시간에 읽은 소설에서는 주인공의 아버지가 살해당해요.",
+   "blank": "살해당해요",
+   "src": "made"
+  },
+  {
+   "text": "이 집의 옛 주인이 살해당했다는 소문은 사실이 아니었어요.",
+   "en": "The rumor that the house's former owner was murdered wasn't true.",
+   "ko": "이 집의 옛 주인이 살해당했다는 소문은 사실이 아니었어요.",
+   "blank": "살해당했다는",
+   "src": "made"
+  }
+ ],
  "w|살해되다": [
   {
    "text": "이 연극에서 왕은 이막 끝에 동생에게 살해돼요.",
@@ -26113,6 +26833,22 @@
    "en": "On the morning news, Daeun saw an ad for a drama where a famous fictional detective gets murdered.",
    "ko": "다은은 아침 뉴스에서 유명 소설 속 탐정이 살해되는 드라마 광고를 봤어요.",
    "blank": "살해되는",
+   "src": "made"
+  }
+ ],
+ "w|살해하다": [
+  {
+   "text": "역사 시간에 성호는 왕을 살해한 신하에 관한 기록을 읽었어요.",
+   "en": "In history class, Seongho read records about a courtier who murdered a king.",
+   "ko": "역사 시간에 성호는 왕을 살해한 신하에 관한 기록을 읽었어요.",
+   "blank": "살해한",
+   "src": "made"
+  },
+  {
+   "text": "다락방에서 나온 옛날 신문에는 부자를 살해한 범인이 잡혔다는 기사가 있었어요.",
+   "en": "An old newspaper found in the attic had an article saying the man who murdered a rich man was caught.",
+   "ko": "다락방에서 나온 옛날 신문에는 부자를 살해한 범인이 잡혔다는 기사가 있었어요.",
+   "blank": "살해한",
    "src": "made"
   }
  ],
@@ -27398,6 +28134,22 @@
    "blank": "섞었어"
   }
  ],
+ "w|섞이다": [
+  {
+   "text": "경민은 신입생들 사이에 섞여서 입학식 사진을 찍었어요.",
+   "en": "Kyungmin mingled among the new students and took entrance ceremony photos.",
+   "ko": "경민은 신입생들 사이에 섞여서 입학식 사진을 찍었어요.",
+   "blank": "섞여서",
+   "src": "made"
+  },
+  {
+   "text": "반죽에 밀가루가 덜 섞여서 다은은 다시 저었어요.",
+   "en": "The flour wasn't fully mixed into the dough, so Daeun stirred again.",
+   "ko": "반죽에 밀가루가 덜 섞여서 다은은 다시 저었어요.",
+   "blank": "섞여서",
+   "src": "made"
+  }
+ ],
  "w|선": [
   {
    "text": "바닥에 선을 그어 줘.",
@@ -27624,6 +28376,22 @@
    "blank": "설거지"
   }
  ],
+ "w|설계도": [
+  {
+   "text": "경민은 기술 시간에 직접 그린 설계도로 새집을 만들었어요.",
+   "en": "In technology class, Kyungmin built a birdhouse from a blueprint he drew himself.",
+   "ko": "경민은 기술 시간에 직접 그린 설계도로 새집을 만들었어요.",
+   "blank": "설계도로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 케이크를 쌓기 전에 종이에 설계도처럼 모양을 그렸어요.",
+   "en": "Before stacking the cake, Daeun drew the shape on paper like a blueprint.",
+   "ko": "다은은 케이크를 쌓기 전에 종이에 설계도처럼 모양을 그렸어요.",
+   "blank": "설계도처럼",
+   "src": "made"
+  }
+ ],
  "w|설날": [
   {
    "text": "설날에 세배를 드렸어.",
@@ -27767,6 +28535,22 @@
    "en": "Sujin set the machine so an alarm would go off when the IV ran out.",
    "ko": "수진은 수액이 끝나면 알람이 울리도록 기계를 설정했어요.",
    "blank": "설정했어요",
+   "src": "made"
+  }
+ ],
+ "w|설치": [
+  {
+   "text": "교실마다 공기 청정기 설치가 끝났어요.",
+   "en": "Air purifiers have been installed in every classroom.",
+   "ko": "교실마다 공기 청정기 설치가 끝났어요.",
+   "blank": "설치가",
+   "src": "made"
+  },
+  {
+   "text": "결승선 근처에 대형 전광판 설치를 마쳤어요.",
+   "en": "They finished installing a large electronic scoreboard near the finish line.",
+   "ko": "결승선 근처에 대형 전광판 설치를 마쳤어요.",
+   "blank": "설치를",
    "src": "made"
   }
  ],
@@ -27957,6 +28741,22 @@
    "en": "From the company rooftop, you could look down on the old city walls.",
    "ko": "회사 옥상에서는 옛 도성의 성벽이 내려다보였어요.",
    "blank": "성벽이",
+   "src": "made"
+  }
+ ],
+ "w|성분": [
+  {
+   "text": "재원은 과학 시간에 과자 봉지 뒤의 성분 표시를 읽어 봤어요.",
+   "en": "In science class, Jaewon read the ingredient list on the back of a snack bag.",
+   "ko": "재원은 과학 시간에 과자 봉지 뒤의 성분 표시를 읽어 봤어요.",
+   "blank": "성분",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이온 음료의 성분을 확인하고 나서 마셨어요.",
+   "en": "Sohee checked the ingredients of the sports drink before drinking it.",
+   "ko": "소희는 이온 음료의 성분을 확인하고 나서 마셨어요.",
+   "blank": "성분을",
    "src": "made"
   }
  ],
@@ -28202,6 +29002,22 @@
    "en": "Try fitting the triangle piece.",
    "ko": "세모 조각을 맞춰 봐.",
    "blank": "세모"
+  }
+ ],
+ "w|세부": [
+  {
+   "text": "경민은 수학여행 세부 일정을 반 단체 대화방에 올렸어요.",
+   "en": "Kyungmin posted the detailed school trip schedule in the class group chat.",
+   "ko": "경민은 수학여행 세부 일정을 반 단체 대화방에 올렸어요.",
+   "blank": "세부",
+   "src": "made"
+  },
+  {
+   "text": "다은은 레시피의 세부 사항까지 꼼꼼하게 메모했어요.",
+   "en": "Daeun carefully noted down even the details of the recipe.",
+   "ko": "다은은 레시피의 세부 사항까지 꼼꼼하게 메모했어요.",
+   "blank": "세부",
+   "src": "made"
   }
  ],
  "w|세상": [
@@ -28865,6 +29681,22 @@
    "en": "All the work software was already installed on Haeun's laptop.",
    "ko": "하은의 노트북에는 업무용 소프트웨어가 이미 다 깔려 있었어요.",
    "blank": "소프트웨어가",
+   "src": "made"
+  }
+ ],
+ "w|소형": [
+  {
+   "text": "성호는 과학 발표 때 소형 드론을 직접 날려 보였어요.",
+   "en": "For his science presentation, Seongho flew a small drone himself.",
+   "ko": "성호는 과학 발표 때 소형 드론을 직접 날려 보였어요.",
+   "blank": "소형",
+   "src": "made"
+  },
+  {
+   "text": "부엌이 좁아서 미경은 소형 냉장고를 들여놓았어요.",
+   "en": "The kitchen was small, so Migyeong brought in a compact refrigerator.",
+   "ko": "부엌이 좁아서 미경은 소형 냉장고를 들여놓았어요.",
+   "blank": "소형",
    "src": "made"
   }
  ],
@@ -29772,6 +30604,38 @@
    "blank": "수학을"
   }
  ],
+ "w|수행": [
+  {
+   "text": "재원은 이번 학기 과학 수행 평가에서 만점을 받았어요.",
+   "en": "Jaewon got a perfect score on this semester's science performance assessment.",
+   "ko": "재원은 이번 학기 과학 수행 평가에서 만점을 받았어요.",
+   "blank": "수행",
+   "src": "made"
+  },
+  {
+   "text": "소희에게 새벽마다 혼자 달리는 시간은 일종의 수행이에요.",
+   "en": "For Sohee, running alone every dawn is a kind of spiritual practice.",
+   "ko": "소희에게 새벽마다 혼자 달리는 시간은 일종의 수행이에요.",
+   "blank": "수행이에요",
+   "src": "made"
+  }
+ ],
+ "w|수행하다": [
+  {
+   "text": "재원은 반장으로서 맡은 일을 성실하게 수행했어요.",
+   "en": "As class president, Jaewon carried out his duties faithfully.",
+   "ko": "재원은 반장으로서 맡은 일을 성실하게 수행했어요.",
+   "blank": "수행했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 코치가 짜 준 훈련 계획을 하루도 빼먹지 않고 수행했어요.",
+   "en": "Sohee carried out the training plan her coach made without skipping a single day.",
+   "ko": "소희는 코치가 짜 준 훈련 계획을 하루도 빼먹지 않고 수행했어요.",
+   "blank": "수행했어요",
+   "src": "made"
+  }
+ ],
  "w|숙녀": [
   {
    "text": "우산을 든 숙녀가 비를 피하고 있어.",
@@ -29944,6 +30808,22 @@
    "en": "I quietly obeyed the order.",
    "ko": "명령에 조용히 따랐어.",
    "blank": "순종했어"
+  }
+ ],
+ "w|순진하다": [
+  {
+   "text": "재원은 친구의 거짓말을 그대로 믿을 만큼 순진했어요.",
+   "en": "Jaewon was naive enough to believe his friend's lie as it was.",
+   "ko": "재원은 친구의 거짓말을 그대로 믿을 만큼 순진했어요.",
+   "blank": "순진했어요",
+   "src": "made"
+  },
+  {
+   "text": "처음 마라톤에 나간 소희는 순진하게도 처음부터 전력으로 뛰었어요.",
+   "en": "Running her first marathon, Sohee naively ran at full speed from the start.",
+   "ko": "처음 마라톤에 나간 소희는 순진하게도 처음부터 전력으로 뛰었어요.",
+   "blank": "순진하게도",
+   "src": "made"
   }
  ],
  "w|순찰": [
@@ -30454,6 +31334,22 @@
    "blank": "승리가"
   }
  ],
+ "w|승산": [
+  {
+   "text": "상대 반이 너무 강해서 경민네 반은 승산이 별로 없었어요.",
+   "en": "The other class was so strong that Kyungmin's class had little chance of winning.",
+   "ko": "상대 반이 너무 강해서 경민네 반은 승산이 별로 없었어요.",
+   "blank": "승산이",
+   "src": "made"
+  },
+  {
+   "text": "요리 대회에 나가 보라는 말에 다은은 승산이 있을지 고민했어요.",
+   "en": "When told to enter a cooking contest, Daeun wondered whether she stood a chance.",
+   "ko": "요리 대회에 나가 보라는 말에 다은은 승산이 있을지 고민했어요.",
+   "blank": "승산이",
+   "src": "made"
+  }
+ ],
  "w|승인": [
   {
    "text": "예산 승인이 드디어 났어.",
@@ -30724,6 +31620,22 @@
    "blank": "시민이"
   }
  ],
+ "w|시비": [
+  {
+   "text": "복도에서 어깨가 부딪혀 두 학생 사이에 시비가 붙었어요.",
+   "en": "Two students bumped shoulders in the hallway and got into an argument.",
+   "ko": "복도에서 어깨가 부딪혀 두 학생 사이에 시비가 붙었어요.",
+   "blank": "시비가",
+   "src": "made"
+  },
+  {
+   "text": "맛을 두고 수강생 둘이 시비를 벌이자 선생님이 웃으며 말렸어요.",
+   "en": "When two students started bickering over the taste, the teacher laughed and stopped them.",
+   "ko": "맛을 두고 수강생 둘이 시비를 벌이자 선생님이 웃으며 말렸어요.",
+   "blank": "시비를",
+   "src": "made"
+  }
+ ],
  "w|시선": [
   {
    "text": "그녀는 놀라서 나의 시선을 피했다.",
@@ -30752,6 +31664,22 @@
    "en": "The payment system got more convenient.",
    "ko": "결제 시스템이 더 편해졌어.",
    "blank": "시스템이"
+  }
+ ],
+ "w|시시하다": [
+  {
+   "text": "재원은 기대했던 학교 연극이 생각보다 시시해서 실망했어요.",
+   "en": "Jaewon was disappointed because the school play he'd looked forward to was duller than expected.",
+   "ko": "재원은 기대했던 학교 연극이 생각보다 시시해서 실망했어요.",
+   "blank": "시시해서",
+   "src": "made"
+  },
+  {
+   "text": "소희는 오래 준비한 대회가 비 때문에 시시하게 끝나서 아쉬웠어요.",
+   "en": "Sohee was disappointed that the race she'd prepared for so long ended so tamely because of rain.",
+   "ko": "소희는 오래 준비한 대회가 비 때문에 시시하게 끝나서 아쉬웠어요.",
+   "blank": "시시하게",
+   "src": "made"
   }
  ],
  "w|시아버지": [
@@ -31164,6 +32092,22 @@
    "blank": "신어"
   }
  ],
+ "w|신도": [
+  {
+   "text": "역사 시간에 경민은 옛날 절에 모인 신도들의 모습을 그린 그림을 봤어요.",
+   "en": "In history class, Kyungmin saw a painting of believers gathered at an old temple.",
+   "ko": "역사 시간에 경민은 옛날 절에 모인 신도들의 모습을 그린 그림을 봤어요.",
+   "blank": "신도들의",
+   "src": "made"
+  },
+  {
+   "text": "같은 반 할머니는 절에서 신도들에게 나눠 줄 떡을 배우러 오셨어요.",
+   "en": "An older woman in the class came to learn how to make rice cakes to share with believers at the temple.",
+   "ko": "같은 반 할머니는 절에서 신도들에게 나눠 줄 떡을 배우러 오셨어요.",
+   "blank": "신도들에게",
+   "src": "made"
+  }
+ ],
  "w|신랑": [
   {
    "text": "신랑이 늦게 입장했어.",
@@ -31264,6 +32208,22 @@
    "ko": "신입 사원이 된 나는 제일 먼저 직원 신분증을 발급받았다.",
    "blank": "신분증을",
    "src": "krdict"
+  }
+ ],
+ "w|신비하다": [
+  {
+   "text": "재원은 과학 시간에 본 오로라 영상이 너무 신비했어요.",
+   "en": "Jaewon found the aurora video he saw in science class really mysterious.",
+   "ko": "재원은 과학 시간에 본 오로라 영상이 너무 신비했어요.",
+   "blank": "신비했어요",
+   "src": "made"
+  },
+  {
+   "text": "새벽 안개 속 출발선은 어딘가 신비한 분위기였어요.",
+   "en": "The starting line in the dawn fog had a somewhat mysterious atmosphere.",
+   "ko": "새벽 안개 속 출발선은 어딘가 신비한 분위기였어요.",
+   "blank": "신비한",
+   "src": "made"
   }
  ],
  "w|신사": [
@@ -31602,6 +32562,22 @@
    "ko": "아무리 훌륭한 사람이라도 가끔은 실수할 때가 있다.",
    "blank": "실수할",
    "src": "krdict"
+  }
+ ],
+ "w|실시": [
+  {
+   "text": "학교는 다음 주에 지진 대피 훈련을 실시해요.",
+   "en": "The school is holding an earthquake evacuation drill next week.",
+   "ko": "학교는 다음 주에 지진 대피 훈련을 실시해요.",
+   "blank": "실시해요",
+   "src": "made"
+  },
+  {
+   "text": "주최 측은 출발 전에 참가자 전원에게 체온 검사를 실시했어요.",
+   "en": "Before the start, the organizers checked the temperature of every participant.",
+   "ko": "주최 측은 출발 전에 참가자 전원에게 체온 검사를 실시했어요.",
+   "blank": "실시했어요",
+   "src": "made"
   }
  ],
  "w|실업": [
@@ -32486,6 +33462,22 @@
    "en": "That young woman sings really well.",
    "ko": "그 아가씨 노래 잘하더라.",
    "blank": "아가씨"
+  }
+ ],
+ "w|아군": [
+  {
+   "text": "피구 시합에서 성호는 실수로 아군에게 공을 맞혔어요.",
+   "en": "In the dodgeball game, Seongho accidentally hit his own teammate with the ball.",
+   "ko": "피구 시합에서 성호는 실수로 아군에게 공을 맞혔어요.",
+   "blank": "아군에게",
+   "src": "made"
+  },
+  {
+   "text": "미경의 남동생은 주말마다 와서 일을 돕는 든든한 아군이었어요.",
+   "en": "Migyeong's younger brother was a reliable ally who came every weekend to help.",
+   "ko": "미경의 남동생은 주말마다 와서 일을 돕는 든든한 아군이었어요.",
+   "blank": "아군이었어요",
+   "src": "made"
   }
  ],
  "w|아기": [
@@ -33510,6 +34502,22 @@
    "blank": "알려줬어"
   }
  ],
+ "w|알려지다": [
+  {
+   "text": "성호네 학교는 합창단이 잘하기로 꽤 알려졌어요.",
+   "en": "Seongho's school has become quite well known for its good choir.",
+   "ko": "성호네 학교는 합창단이 잘하기로 꽤 알려졌어요.",
+   "blank": "알려졌어요",
+   "src": "made"
+  },
+  {
+   "text": "미경이 고친 한옥은 동네에 금방 알려져서 구경 오는 사람이 많았어요.",
+   "en": "The hanok Migyeong renovated quickly became known in the neighborhood, and many people came to look.",
+   "ko": "미경이 고친 한옥은 동네에 금방 알려져서 구경 오는 사람이 많았어요.",
+   "blank": "알려져서",
+   "src": "made"
+  }
+ ],
  "w|알리다": [
   {
    "text": "소식을 알리다 보니 마음이 놓여.",
@@ -33976,6 +34984,22 @@
    "blank": "야채"
   }
  ],
+ "w|야하다": [
+  {
+   "text": "학교 축제 의상이 너무 야하다는 의견이 나와서 디자인을 바꿨어요.",
+   "en": "Some said the school festival costumes were too revealing, so the design was changed.",
+   "ko": "학교 축제 의상이 너무 야하다는 의견이 나와서 디자인을 바꿨어요.",
+   "blank": "야하다는",
+   "src": "made"
+  },
+  {
+   "text": "소희의 동생은 육상복이 너무 야하다고 놀렸지만 소희는 신경 쓰지 않았어요.",
+   "en": "Sohee's younger sibling teased that her running outfit was too revealing, but Sohee didn't care.",
+   "ko": "소희의 동생은 육상복이 너무 야하다고 놀렸지만 소희는 신경 쓰지 않았어요.",
+   "blank": "야하다고",
+   "src": "made"
+  }
+ ],
  "w|약": [
   {
    "text": "약 챙겼어?",
@@ -34200,6 +35224,22 @@
    "en": "I left Dad's suit at the tailor.",
    "ko": "아버지 양복을 수선점에 맡겼어.",
    "blank": "양복을"
+  }
+ ],
+ "w|양식": [
+  {
+   "text": "경민은 정해진 양식에 맞춰 봉사 활동 보고서를 냈어요.",
+   "en": "Kyungmin submitted his volunteer work report in the required format.",
+   "ko": "경민은 정해진 양식에 맞춰 봉사 활동 보고서를 냈어요.",
+   "blank": "양식에",
+   "src": "made"
+  },
+  {
+   "text": "오늘 수업 주제는 프랑스 양식 디저트였어요.",
+   "en": "Today's class topic was French-style desserts.",
+   "ko": "오늘 수업 주제는 프랑스 양식 디저트였어요.",
+   "blank": "양식",
+   "src": "made"
   }
  ],
  "w|양심": [
@@ -34968,6 +36008,38 @@
    "blank": "억지스럽다"
   }
  ],
+ "w|언급": [
+  {
+   "text": "선생님은 수업 중에 다음 주 소풍에 대한 언급은 하지 않으셨어요.",
+   "en": "The teacher didn't make any mention of next week's picnic during class.",
+   "ko": "선생님은 수업 중에 다음 주 소풍에 대한 언급은 하지 않으셨어요.",
+   "blank": "언급은",
+   "src": "made"
+  },
+  {
+   "text": "요리 선생님은 다은의 김치전에 대해 특별한 언급을 하셨어요.",
+   "en": "The cooking teacher made a special mention of Daeun's kimchi pancake.",
+   "ko": "요리 선생님은 다은의 김치전에 대해 특별한 언급을 하셨어요.",
+   "blank": "언급을",
+   "src": "made"
+  }
+ ],
+ "w|언급하다": [
+  {
+   "text": "선생님은 조회 시간에 다음 주 시험 범위를 언급하셨어요.",
+   "en": "The teacher mentioned next week's test range during morning assembly.",
+   "ko": "선생님은 조회 시간에 다음 주 시험 범위를 언급하셨어요.",
+   "blank": "언급하셨어요",
+   "src": "made"
+  },
+  {
+   "text": "해설자는 소희가 작년에 부상을 이겨 낸 일을 언급했어요.",
+   "en": "The commentator mentioned how Sohee overcame an injury last year.",
+   "ko": "해설자는 소희가 작년에 부상을 이겨 낸 일을 언급했어요.",
+   "blank": "언급했어요",
+   "src": "made"
+  }
+ ],
  "w|언니": [
   {
    "text": "언니, 이 옷 어때?",
@@ -35640,6 +36712,22 @@
    "blank": "여보세요"
   }
  ],
+ "w|여분": [
+  {
+   "text": "성호는 시험 날 여분의 연필을 친구에게 빌려줬어요.",
+   "en": "On test day, Seongho lent his spare pencil to a friend.",
+   "ko": "성호는 시험 날 여분의 연필을 친구에게 빌려줬어요.",
+   "blank": "여분의",
+   "src": "made"
+  },
+  {
+   "text": "미경은 혹시 몰라서 벽지를 여분으로 한 롤 더 샀어요.",
+   "en": "Just in case, Migyeong bought one extra roll of wallpaper.",
+   "ko": "미경은 혹시 몰라서 벽지를 여분으로 한 롤 더 샀어요.",
+   "blank": "여분으로",
+   "src": "made"
+  }
+ ],
  "w|여섯": [
   {
    "text": "여섯 시에 깨워 줘.",
@@ -35899,6 +36987,22 @@
    "en": "When she opened the old fridge, a disgusting smell hit her.",
    "ko": "오래된 냉장고를 열자 역겨운 냄새가 확 올라왔어요.",
    "blank": "역겨운",
+   "src": "made"
+  }
+ ],
+ "w|역대": [
+  {
+   "text": "재원은 학교 역대 최고 점수로 수학 경시대회에서 상을 받았어요.",
+   "en": "Jaewon won the math competition with the highest score in the school's history.",
+   "ko": "재원은 학교 역대 최고 점수로 수학 경시대회에서 상을 받았어요.",
+   "blank": "역대",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이번 대회에서 자기의 역대 최고 기록을 세웠어요.",
+   "en": "Sohee set her all-time personal best at this race.",
+   "ko": "소희는 이번 대회에서 자기의 역대 최고 기록을 세웠어요.",
+   "blank": "역대",
    "src": "made"
   }
  ],
@@ -36336,6 +37440,22 @@
    "blank": "연애가"
   }
  ],
+ "w|연약하다": [
+  {
+   "text": "성호는 교실 화분의 연약한 새싹에 매일 물을 줬어요.",
+   "en": "Seongho watered the delicate sprouts in the classroom flowerpot every day.",
+   "ko": "성호는 교실 화분의 연약한 새싹에 매일 물을 줬어요.",
+   "blank": "연약한",
+   "src": "made"
+  },
+  {
+   "text": "오래된 마룻바닥은 생각보다 연약해서 미경은 조심조심 걸었어요.",
+   "en": "The old wooden floor was more fragile than expected, so Migyeong walked very carefully.",
+   "ko": "오래된 마룻바닥은 생각보다 연약해서 미경은 조심조심 걸었어요.",
+   "blank": "연약해서",
+   "src": "made"
+  }
+ ],
  "w|연어": [
   {
    "text": "연어 회를 초밥에 올렸어.",
@@ -36738,6 +37858,22 @@
    "src": "krdict"
   }
  ],
+ "w|영토": [
+  {
+   "text": "사회 시간에 경민은 섬 영토를 두고 생긴 나라 사이의 다툼을 조사했어요.",
+   "en": "In social studies, Kyungmin researched a dispute between countries over island territory.",
+   "ko": "사회 시간에 경민은 섬 영토를 두고 생긴 나라 사이의 다툼을 조사했어요.",
+   "blank": "영토를",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 고추가 이 나라 영토에 처음 들어온 시기를 설명해 주셨어요.",
+   "en": "The teacher explained when chili peppers first came into this country's territory.",
+   "ko": "선생님은 고추가 이 나라 영토에 처음 들어온 시기를 설명해 주셨어요.",
+   "blank": "영토에",
+   "src": "made"
+  }
+ ],
  "w|영향": [
   {
    "text": "날씨가 기분에 영향을 줘.",
@@ -37000,6 +38136,22 @@
    "blank": "예약해"
   }
  ],
+ "w|예언": [
+  {
+   "text": "성호는 교실에서 다음 시험에 무슨 문제가 나올지 예언하다가 다 틀렸어요.",
+   "en": "Seongho predicted in class what would be on the next test and got it all wrong.",
+   "ko": "성호는 교실에서 다음 시험에 무슨 문제가 나올지 예언하다가 다 틀렸어요.",
+   "blank": "예언하다가",
+   "src": "made"
+  },
+  {
+   "text": "동네 할머니는 이 집이 언젠가 다시 사람들로 북적일 거라고 예언처럼 말씀하셨어요.",
+   "en": "An old woman in the neighborhood said, like a prophecy, that the house would someday be bustling with people again.",
+   "ko": "동네 할머니는 이 집이 언젠가 다시 사람들로 북적일 거라고 예언처럼 말씀하셨어요.",
+   "blank": "예언처럼",
+   "src": "made"
+  }
+ ],
  "w|예외": [
   {
    "text": "교복 규정에는 예외가 없다고 학생부장 선생님이 말씀하셨어요.",
@@ -37056,6 +38208,22 @@
    "en": "I like people with good manners.",
    "ko": "예절이 바른 사람이 좋아.",
    "blank": "예절이"
+  }
+ ],
+ "w|예측": [
+  {
+   "text": "과학 실험에서 성호의 예측은 정확히 맞았어요.",
+   "en": "Seongho's prediction in the science experiment was exactly right.",
+   "ko": "과학 실험에서 성호의 예측은 정확히 맞았어요.",
+   "blank": "예측은",
+   "src": "made"
+  },
+  {
+   "text": "공사 기간은 예측보다 두 달이나 더 걸렸어요.",
+   "en": "The construction took two whole months longer than predicted.",
+   "ko": "공사 기간은 예측보다 두 달이나 더 걸렸어요.",
+   "blank": "예측보다",
+   "src": "made"
   }
  ],
  "w|옛날": [
@@ -37856,6 +39024,22 @@
    "blank": "왕"
   }
  ],
+ "w|왕실": [
+  {
+   "text": "재원은 체험 학습으로 옛 왕실 사람들이 살던 궁궐에 갔어요.",
+   "en": "On a field trip, Jaewon went to the palace where the old royal family lived.",
+   "ko": "재원은 체험 학습으로 옛 왕실 사람들이 살던 궁궐에 갔어요.",
+   "blank": "왕실",
+   "src": "made"
+  },
+  {
+   "text": "소희는 다큐멘터리에서 어느 나라 왕실 사람이 마라톤을 완주했다는 이야기를 들었어요.",
+   "en": "Sohee heard in a documentary that a member of some country's royal family had finished a marathon.",
+   "ko": "소희는 다큐멘터리에서 어느 나라 왕실 사람이 마라톤을 완주했다는 이야기를 들었어요.",
+   "blank": "왕실",
+   "src": "made"
+  }
+ ],
  "w|왕자": [
   {
    "text": "어린 왕자가 말을 타고 숲을 달렸어.",
@@ -38356,6 +39540,22 @@
    "blank": "용기를"
   }
  ],
+ "w|용납": [
+  {
+   "text": "교장 선생님은 친구를 괴롭히는 행동은 절대 용납하지 않는다고 하셨어요.",
+   "en": "The principal said bullying friends would never be tolerated.",
+   "ko": "교장 선생님은 친구를 괴롭히는 행동은 절대 용납하지 않는다고 하셨어요.",
+   "blank": "용납하지",
+   "src": "made"
+  },
+  {
+   "text": "주최 측은 코스를 줄여서 달리는 반칙을 용납하지 않았어요.",
+   "en": "The organizers did not tolerate cheating by cutting the course.",
+   "ko": "주최 측은 코스를 줄여서 달리는 반칙을 용납하지 않았어요.",
+   "blank": "용납하지",
+   "src": "made"
+  }
+ ],
  "w|용납하다": [
   {
    "text": "연출가는 공연 중 휴대폰 소리만큼은 용납할 수 없다고 했어요.",
@@ -38696,6 +39896,22 @@
    "en": "Do you believe in fate?",
    "ko": "운명을 믿어?",
    "blank": "운명을"
+  }
+ ],
+ "w|운영": [
+  {
+   "text": "성호네 학교 매점은 학부모회가 운영해요.",
+   "en": "The school store at Seongho's school is run by the parents' association.",
+   "ko": "성호네 학교 매점은 학부모회가 운영해요.",
+   "blank": "운영해요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 고친 집 한쪽에서 작은 책방을 운영할 계획이에요.",
+   "en": "Migyeong plans to run a small bookstore in one part of the renovated house.",
+   "ko": "미경은 고친 집 한쪽에서 작은 책방을 운영할 계획이에요.",
+   "blank": "운영할",
+   "src": "made"
   }
  ],
  "w|운영하다": [
@@ -39358,6 +40574,22 @@
    "blank": "위협을"
   }
  ],
+ "w|위협하다": [
+  {
+   "text": "선배가 경민을 위협하며 돈을 달라고 해서 경민은 선생님께 알렸어요.",
+   "en": "An older student threatened Kyungmin and demanded money, so Kyungmin told a teacher.",
+   "ko": "선배가 경민을 위협하며 돈을 달라고 해서 경민은 선생님께 알렸어요.",
+   "blank": "위협하며",
+   "src": "made"
+  },
+  {
+   "text": "갑자기 기름이 튀어 오르며 다은을 위협하듯 지글거렸어요.",
+   "en": "Suddenly the oil spattered and sizzled as if threatening Daeun.",
+   "ko": "갑자기 기름이 튀어 오르며 다은을 위협하듯 지글거렸어요.",
+   "blank": "위협하듯",
+   "src": "made"
+  }
+ ],
  "w|유능하다": [
   {
    "text": "새로 온 교감 선생님은 학교 일을 척척 해내는 유능한 분이에요.",
@@ -39562,6 +40794,22 @@
    "blank": "유행을"
   }
  ],
+ "w|유혹": [
+  {
+   "text": "시험 기간에 재원은 게임을 하고 싶은 유혹을 꾹 참았어요.",
+   "en": "During exam period, Jaewon firmly resisted the temptation to play games.",
+   "ko": "시험 기간에 재원은 게임을 하고 싶은 유혹을 꾹 참았어요.",
+   "blank": "유혹을",
+   "src": "made"
+  },
+  {
+   "text": "반환점을 돌자 소희는 멈추고 싶은 유혹에 시달렸어요.",
+   "en": "After rounding the turnaround point, Sohee was tormented by the temptation to stop.",
+   "ko": "반환점을 돌자 소희는 멈추고 싶은 유혹에 시달렸어요.",
+   "blank": "유혹에",
+   "src": "made"
+  }
+ ],
  "w|육": [
   {
    "text": "육 교시라 배고파.",
@@ -39678,6 +40926,22 @@
    "en": "I'll stop by the bank at lunch.",
    "ko": "점심때 은행에 갈게.",
    "blank": "은행에"
+  }
+ ],
+ "w|은혜": [
+  {
+   "text": "성호는 졸업식에서 선생님의 은혜에 감사하는 노래를 불렀어요.",
+   "en": "At graduation, Seongho sang a song of thanks for his teachers' kindness.",
+   "ko": "성호는 졸업식에서 선생님의 은혜에 감사하는 노래를 불렀어요.",
+   "blank": "은혜에",
+   "src": "made"
+  },
+  {
+   "text": "미경은 집수리를 도와준 이웃의 은혜를 잊지 않겠다고 했어요.",
+   "en": "Migyeong said she would never forget the kindness of the neighbors who helped repair the house.",
+   "ko": "미경은 집수리를 도와준 이웃의 은혜를 잊지 않겠다고 했어요.",
+   "blank": "은혜를",
+   "src": "made"
   }
  ],
  "w|음료": [
@@ -41426,6 +42690,22 @@
    "blank": "인생이"
   }
  ],
+ "w|인식": [
+  {
+   "text": "재원은 환경 동아리에서 쓰레기에 대한 인식을 바꾸는 캠페인을 했어요.",
+   "en": "In the environmental club, Jaewon ran a campaign to change attitudes toward trash.",
+   "ko": "재원은 환경 동아리에서 쓰레기에 대한 인식을 바꾸는 캠페인을 했어요.",
+   "blank": "인식을",
+   "src": "made"
+  },
+  {
+   "text": "소희의 발목에 찬 칩이 기록을 자동으로 인식해요.",
+   "en": "The chip on Sohee's ankle automatically records her time.",
+   "ko": "소희의 발목에 찬 칩이 기록을 자동으로 인식해요.",
+   "blank": "인식해요",
+   "src": "made"
+  }
+ ],
  "w|인원": [
   {
    "text": "지금 사무실에는 최소한의 인원만 남아서 일하고 있다.",
@@ -41770,6 +43050,22 @@
    "blank": "일으키지"
   }
  ],
+ "w|일일이": [
+  {
+   "text": "담임 선생님은 학생들의 일기장에 일일이 답장을 써 주셨어요.",
+   "en": "The homeroom teacher wrote a reply in each student's diary one by one.",
+   "ko": "담임 선생님은 학생들의 일기장에 일일이 답장을 써 주셨어요.",
+   "blank": "일일이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 벽지를 바르기 전에 벽의 못을 일일이 뽑았어요.",
+   "en": "Before putting up wallpaper, Migyeong pulled out the nails in the wall one by one.",
+   "ko": "미경은 벽지를 바르기 전에 벽의 못을 일일이 뽑았어요.",
+   "blank": "일일이",
+   "src": "made"
+  }
+ ],
  "w|일자리": [
   {
    "text": "일자리 구했어?",
@@ -41810,6 +43106,22 @@
    "en": "A week feels too short.",
    "ko": "일주일이 너무 짧게 느껴져.",
    "blank": "일주일이"
+  }
+ ],
+ "w|일지": [
+  {
+   "text": "경민은 과학 동아리에서 식물 관찰 일지를 매일 써요.",
+   "en": "In the science club, Kyungmin writes a plant observation log every day.",
+   "ko": "경민은 과학 동아리에서 식물 관찰 일지를 매일 써요.",
+   "blank": "일지를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 수업에서 배운 요리를 요리 일지에 사진과 함께 적어요.",
+   "en": "Daeun records the dishes she learns in class in her cooking journal along with photos.",
+   "ko": "다은은 수업에서 배운 요리를 요리 일지에 사진과 함께 적어요.",
+   "blank": "일지에",
+   "src": "made"
   }
  ],
  "w|일찍": [
@@ -41910,6 +43222,22 @@
    "en": "Don't lose your confidence.",
    "ko": "자신감을 잃어버리지 마.",
    "blank": "잃어버리지"
+  }
+ ],
+ "w|임대": [
+  {
+   "text": "학교는 주말에 운동장을 동네 축구팀에 임대해 줘요.",
+   "en": "The school rents out the playground to a neighborhood soccer team on weekends.",
+   "ko": "학교는 주말에 운동장을 동네 축구팀에 임대해 줘요.",
+   "blank": "임대해",
+   "src": "made"
+  },
+  {
+   "text": "이 요리 학원은 건물 이층을 임대해서 쓰고 있어요.",
+   "en": "This cooking school rents the second floor of the building.",
+   "ko": "이 요리 학원은 건물 이층을 임대해서 쓰고 있어요.",
+   "blank": "임대해서",
+   "src": "made"
   }
  ],
  "w|임시": [
@@ -42202,6 +43530,22 @@
    "blank": "잊어버리지"
   }
  ],
+ "w|잊히다": [
+  {
+   "text": "졸업하고 시간이 지나면 친구들 이름도 하나둘 잊혀요.",
+   "en": "As time passes after graduation, even friends' names get forgotten one by one.",
+   "ko": "졸업하고 시간이 지나면 친구들 이름도 하나둘 잊혀요.",
+   "blank": "잊혀요",
+   "src": "made"
+  },
+  {
+   "text": "할머니가 해 주시던 된장찌개 맛은 오래돼도 잊히지 않아요.",
+   "en": "The taste of the soybean stew Daeun's grandmother used to make isn't forgotten even after a long time.",
+   "ko": "할머니가 해 주시던 된장찌개 맛은 오래돼도 잊히지 않아요.",
+   "blank": "잊히지",
+   "src": "made"
+  }
+ ],
  "w|잎": [
   {
    "text": "새 잎이 돋아나기 시작했어.",
@@ -42486,6 +43830,22 @@
    "en": "Where did I put the padlock key?",
    "ko": "자물쇠 열쇠를 어디에 뒀지?",
    "blank": "자물쇠"
+  }
+ ],
+ "w|자백": [
+  {
+   "text": "유리창을 깬 학생은 결국 선생님께 자백했어요.",
+   "en": "The student who broke the window eventually confessed to the teacher.",
+   "ko": "유리창을 깬 학생은 결국 선생님께 자백했어요.",
+   "blank": "자백했어요",
+   "src": "made"
+  },
+  {
+   "text": "약물을 쓴 선수는 조사 끝에 결국 자백을 했어요.",
+   "en": "After an investigation, the runner who used drugs finally confessed.",
+   "ko": "약물을 쓴 선수는 조사 끝에 결국 자백을 했어요.",
+   "blank": "자백을",
+   "src": "made"
   }
  ],
  "w|자산": [
@@ -42802,6 +44162,22 @@
    "blank": "작은아버지와"
   }
  ],
+ "w|작정": [
+  {
+   "text": "경민은 이번 방학에는 영어 단어를 천 개 외울 작정이에요.",
+   "en": "Kyungmin intends to memorize a thousand English words this vacation.",
+   "ko": "경민은 이번 방학에는 영어 단어를 천 개 외울 작정이에요.",
+   "blank": "작정이에요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 이번 달에는 수업을 하나도 빠지지 않을 작정이에요.",
+   "en": "Daeun is determined not to miss a single class this month.",
+   "ko": "다은은 이번 달에는 수업을 하나도 빠지지 않을 작정이에요.",
+   "blank": "작정이에요",
+   "src": "made"
+  }
+ ],
  "w|잔": [
   {
    "text": "커피 한 잔 마실래?",
@@ -43032,6 +44408,22 @@
    "blank": "잠자다"
   }
  ],
+ "w|잠자코": [
+  {
+   "text": "경민은 선생님이 꾸중하시는 동안 잠자코 듣기만 했어요.",
+   "en": "Kyungmin just listened quietly while the teacher scolded him.",
+   "ko": "경민은 선생님이 꾸중하시는 동안 잠자코 듣기만 했어요.",
+   "blank": "잠자코",
+   "src": "made"
+  },
+  {
+   "text": "다은은 선생님이 칼 쓰는 법을 보여 주시는 동안 잠자코 지켜봤어요.",
+   "en": "Daeun watched quietly while the teacher demonstrated how to use the knife.",
+   "ko": "다은은 선생님이 칼 쓰는 법을 보여 주시는 동안 잠자코 지켜봤어요.",
+   "blank": "잠자코",
+   "src": "made"
+  }
+ ],
  "w|잠재": [
   {
    "text": "판사는 그 제품의 잠재 위험을 가볍게 볼 수 없다고 했어요.",
@@ -43045,6 +44437,22 @@
    "en": "Sohee sees the residents of the new apartments nearby as potential customers.",
    "ko": "소희는 근처 새 아파트 주민들을 잠재 고객으로 보고 있어요.",
    "blank": "잠재",
+   "src": "made"
+  }
+ ],
+ "w|잠재력": [
+  {
+   "text": "미술 선생님은 경민의 그림에서 큰 잠재력을 보셨어요.",
+   "en": "The art teacher saw great potential in Kyungmin's drawings.",
+   "ko": "미술 선생님은 경민의 그림에서 큰 잠재력을 보셨어요.",
+   "blank": "잠재력을",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 다은이 칼질하는 걸 보고 요리사로서 잠재력이 있다고 하셨어요.",
+   "en": "Watching Daeun use a knife, the teacher said she had potential as a chef.",
+   "ko": "선생님은 다은이 칼질하는 걸 보고 요리사로서 잠재력이 있다고 하셨어요.",
+   "blank": "잠재력이",
    "src": "made"
   }
  ],
@@ -43292,6 +44700,22 @@
    "blank": "장미가"
   }
  ],
+ "w|장부": [
+  {
+   "text": "재원은 학급 회비 장부를 꼼꼼하게 정리했어요.",
+   "en": "Jaewon carefully organized the class fund ledger.",
+   "ko": "재원은 학급 회비 장부를 꼼꼼하게 정리했어요.",
+   "blank": "장부를",
+   "src": "made"
+  },
+  {
+   "text": "소희는 훈련 기록을 장부처럼 공책에 날마다 적어요.",
+   "en": "Sohee writes down her training records in a notebook every day, like a ledger.",
+   "ko": "소희는 훈련 기록을 장부처럼 공책에 날마다 적어요.",
+   "blank": "장부처럼",
+   "src": "made"
+  }
+ ],
  "w|장비": [
   {
    "text": "촬영 장비를 빌려 왔어.",
@@ -43304,6 +44728,22 @@
    "en": "Move the heavy equipment carefully.",
    "ko": "무거운 장비를 조심히 옮겨.",
    "blank": "장비는"
+  }
+ ],
+ "w|장사": [
+  {
+   "text": "학교 앞 분식집은 학생들 덕분에 장사가 잘돼요.",
+   "en": "The snack shop in front of the school does good business thanks to the students.",
+   "ko": "학교 앞 분식집은 학생들 덕분에 장사가 잘돼요.",
+   "blank": "장사가",
+   "src": "made"
+  },
+  {
+   "text": "이 집은 원래 할머니가 국수 장사를 하던 가게였어요.",
+   "en": "This house was originally a shop where an old woman sold noodles.",
+   "ko": "이 집은 원래 할머니가 국수 장사를 하던 가게였어요.",
+   "blank": "장사를",
+   "src": "made"
   }
  ],
  "w|장소": [
@@ -43548,6 +44988,22 @@
    "ko": "그는 자기 재산을 다 털어 학교를 세웠다.",
    "blank": "재산을",
    "src": "krdict"
+  }
+ ],
+ "w|재생": [
+  {
+   "text": "학교에서는 환경의 날에 재생 종이로 만든 공책을 나눠 줬어요.",
+   "en": "On Environment Day, the school handed out notebooks made of recycled paper.",
+   "ko": "학교에서는 환경의 날에 재생 종이로 만든 공책을 나눠 줬어요.",
+   "blank": "재생",
+   "src": "made"
+  },
+  {
+   "text": "다은은 요리 영상을 몇 번이나 재생하면서 순서를 외웠어요.",
+   "en": "Daeun memorized the steps by playing the cooking video several times.",
+   "ko": "다은은 요리 영상을 몇 번이나 재생하면서 순서를 외웠어요.",
+   "blank": "재생하면서",
+   "src": "made"
   }
  ],
  "w|재앙": [
@@ -44448,6 +45904,22 @@
    "src": "made"
   }
  ],
+ "w|전역": [
+  {
+   "text": "재원은 지리 시간에 장마가 전국 전역에 걸쳐 온다는 걸 배웠어요.",
+   "en": "In geography class, Jaewon learned that the rainy season covers the entire country.",
+   "ko": "재원은 지리 시간에 장마가 전국 전역에 걸쳐 온다는 걸 배웠어요.",
+   "blank": "전역에",
+   "src": "made"
+  },
+  {
+   "text": "대회 날 도시 전역의 도로가 오전 동안 통제됐어요.",
+   "en": "On race day, roads throughout the city were closed for the morning.",
+   "ko": "대회 날 도시 전역의 도로가 오전 동안 통제됐어요.",
+   "blank": "전역의",
+   "src": "made"
+  }
+ ],
  "w|전자": [
   {
    "text": "요즘은 종이책보다 전자 도서를 찾는 사람이 많아요.",
@@ -44710,6 +46182,22 @@
    "blank": "절에서"
   }
  ],
+ "w|절단": [
+  {
+   "text": "기술 시간에 선생님은 나무 절단 기계를 쓸 때 장갑을 끼라고 하셨어요.",
+   "en": "In technology class, the teacher told us to wear gloves when using the wood-cutting machine.",
+   "ko": "기술 시간에 선생님은 나무 절단 기계를 쓸 때 장갑을 끼라고 하셨어요.",
+   "blank": "절단",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 생선 머리 절단은 무거운 칼로 한 번에 하라고 하셨어요.",
+   "en": "The teacher said to cut off the fish head in one go with a heavy knife.",
+   "ko": "선생님은 생선 머리 절단은 무거운 칼로 한 번에 하라고 하셨어요.",
+   "blank": "절단은",
+   "src": "made"
+  }
+ ],
  "w|절대": [
   {
    "text": "절대 안 해.",
@@ -44736,6 +46224,22 @@
    "en": "I'll never give up.",
    "ko": "절대로 포기 안 해.",
    "blank": "절대로"
+  }
+ ],
+ "w|절도": [
+  {
+   "text": "학교에서 자전거 절도 사건이 생겨서 자물쇠를 꼭 채우라는 공지가 나왔어요.",
+   "en": "After a bicycle theft at school, a notice told everyone to always lock their bikes.",
+   "ko": "학교에서 자전거 절도 사건이 생겨서 자물쇠를 꼭 채우라는 공지가 나왔어요.",
+   "blank": "절도",
+   "src": "made"
+  },
+  {
+   "text": "공사 중에 공구를 도둑맞아서 미경은 경찰에 절도 신고를 했어요.",
+   "en": "Tools were stolen during the work, so Migyeong reported the theft to the police.",
+   "ko": "공사 중에 공구를 도둑맞아서 미경은 경찰에 절도 신고를 했어요.",
+   "blank": "절도",
+   "src": "made"
   }
  ],
  "w|절망": [
@@ -45590,6 +47094,22 @@
    "blank": "제도를"
   }
  ],
+ "w|제멋대로": [
+  {
+   "text": "성호의 짝은 머리가 제멋대로 뻗쳐서 늘 모자를 써요.",
+   "en": "Seongho's deskmate's hair sticks out every which way, so he always wears a hat.",
+   "ko": "성호의 짝은 머리가 제멋대로 뻗쳐서 늘 모자를 써요.",
+   "blank": "제멋대로",
+   "src": "made"
+  },
+  {
+   "text": "빈집이었던 동안 마당에 잡초가 제멋대로 자랐어요.",
+   "en": "While the house was empty, weeds grew wild all over the yard.",
+   "ko": "빈집이었던 동안 마당에 잡초가 제멋대로 자랐어요.",
+   "blank": "제멋대로",
+   "src": "made"
+  }
+ ],
  "w|제목": [
   {
    "text": "책 제목이 뭐야?",
@@ -45676,6 +47196,22 @@
    "blank": "제안할게"
   }
  ],
+ "w|제어": [
+  {
+   "text": "로봇 동아리에서 경민은 스마트폰으로 로봇을 제어하는 법을 배웠어요.",
+   "en": "In the robotics club, Kyungmin learned how to control a robot with a smartphone.",
+   "ko": "로봇 동아리에서 경민은 스마트폰으로 로봇을 제어하는 법을 배웠어요.",
+   "blank": "제어하는",
+   "src": "made"
+  },
+  {
+   "text": "다은은 불 세기를 제어하지 못해서 소스를 태웠어요.",
+   "en": "Daeun couldn't control the heat and burned the sauce.",
+   "ko": "다은은 불 세기를 제어하지 못해서 소스를 태웠어요.",
+   "blank": "제어하지",
+   "src": "made"
+  }
+ ],
  "w|제외하다": [
   {
    "text": "알레르기 재료는 제외하고 만들었어.",
@@ -45702,6 +47238,22 @@
    "en": "What's most urgent right now?",
    "ko": "지금 제일 급한 게 뭐야?",
    "blank": "제일"
+  }
+ ],
+ "w|제자리": [
+  {
+   "text": "재원은 빌린 실험 도구를 쓰고 나서 제자리에 갖다 놓았어요.",
+   "en": "Jaewon put the lab equipment he'd borrowed back in its place after using it.",
+   "ko": "재원은 빌린 실험 도구를 쓰고 나서 제자리에 갖다 놓았어요.",
+   "blank": "제자리에",
+   "src": "made"
+  },
+  {
+   "text": "소희는 몇 년째 기록이 제자리라서 훈련 방법을 바꿨어요.",
+   "en": "Sohee's time had been stuck in the same place for years, so she changed her training method.",
+   "ko": "소희는 몇 년째 기록이 제자리라서 훈련 방법을 바꿨어요.",
+   "blank": "제자리라서",
+   "src": "made"
   }
  ],
  "w|제품": [
@@ -48171,6 +49723,22 @@
    "blank": "직접"
   }
  ],
+ "w|진동": [
+  {
+   "text": "수업 중에 성호의 휴대폰 진동 소리가 울려서 다들 쳐다봤어요.",
+   "en": "Seongho's phone vibrated during class, and everyone turned to look.",
+   "ko": "수업 중에 성호의 휴대폰 진동 소리가 울려서 다들 쳐다봤어요.",
+   "blank": "진동",
+   "src": "made"
+  },
+  {
+   "text": "옆집 공사 때문에 미경네 창문이 하루 종일 진동했어요.",
+   "en": "Because of construction next door, Migyeong's windows vibrated all day.",
+   "ko": "옆집 공사 때문에 미경네 창문이 하루 종일 진동했어요.",
+   "blank": "진동했어요",
+   "src": "made"
+  }
+ ],
  "w|진술": [
   {
    "text": "목격자의 진술 덕분에 사고 원인이 밝혀졌어요.",
@@ -48199,6 +49767,22 @@
    "en": "The truth comes out eventually.",
    "ko": "진실은 언젠가 밝혀져.",
    "blank": "진실은"
+  }
+ ],
+ "w|진실되다": [
+  {
+   "text": "경민은 진실된 마음을 담아 선생님께 감사 편지를 썼어요.",
+   "en": "Kyungmin wrote a thank-you letter to his teacher with a sincere heart.",
+   "ko": "경민은 진실된 마음을 담아 선생님께 감사 편지를 썼어요.",
+   "blank": "진실된",
+   "src": "made"
+  },
+  {
+   "text": "요리 선생님은 음식에는 만드는 사람의 진실된 정성이 담긴다고 하셨어요.",
+   "en": "The cooking teacher said food carries the sincere devotion of the person who makes it.",
+   "ko": "요리 선생님은 음식에는 만드는 사람의 진실된 정성이 담긴다고 하셨어요.",
+   "blank": "진실된",
+   "src": "made"
   }
  ],
  "w|진심으로": [
@@ -48937,6 +50521,22 @@
    "blank": "쫄깃하다"
   }
  ],
+ "w|쫓기다": [
+  {
+   "text": "재원은 숙제에 쫓겨서 아침도 못 먹고 학교에 갔어요.",
+   "en": "Pressed by homework, Jaewon went to school without even eating breakfast.",
+   "ko": "재원은 숙제에 쫓겨서 아침도 못 먹고 학교에 갔어요.",
+   "blank": "쫓겨서",
+   "src": "made"
+  },
+  {
+   "text": "소희는 마라톤 후반에 뒤에서 오는 선수들에게 쫓기며 달렸어요.",
+   "en": "In the second half of the marathon, Sohee ran chased by the runners behind her.",
+   "ko": "소희는 마라톤 후반에 뒤에서 오는 선수들에게 쫓기며 달렸어요.",
+   "blank": "쫓기며",
+   "src": "made"
+  }
+ ],
  "w|쫓다": [
   {
    "text": "도둑을 급히 쫓았어.",
@@ -49153,6 +50753,22 @@
    "en": "Don't kick the door.",
    "ko": "발로 문을 차지 마.",
    "blank": "차지"
+  }
+ ],
+ "w|차단": [
+  {
+   "text": "학교 와이파이는 게임 사이트 접속을 차단해요.",
+   "en": "The school Wi-Fi blocks access to gaming sites.",
+   "ko": "학교 와이파이는 게임 사이트 접속을 차단해요.",
+   "blank": "차단해요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 공사 전에 안전을 위해 전기를 차단했어요.",
+   "en": "For safety, Migyeong cut off the electricity before the work.",
+   "ko": "미경은 공사 전에 안전을 위해 전기를 차단했어요.",
+   "blank": "차단했어요",
+   "src": "made"
   }
  ],
  "w|차라리": [
@@ -50057,6 +51673,22 @@
    "blank": "철학"
   }
  ],
+ "w|첨단": [
+  {
+   "text": "성호네 학교에 첨단 장비를 갖춘 과학실이 새로 생겼어요.",
+   "en": "A science lab equipped with cutting-edge equipment was newly built at Seongho's school.",
+   "ko": "성호네 학교에 첨단 장비를 갖춘 과학실이 새로 생겼어요.",
+   "blank": "첨단",
+   "src": "made"
+  },
+  {
+   "text": "오래된 한옥에 첨단 보일러를 놓으니 겨울에도 따뜻했어요.",
+   "en": "After installing a state-of-the-art boiler in the old hanok, it was warm even in winter.",
+   "ko": "오래된 한옥에 첨단 보일러를 놓으니 겨울에도 따뜻했어요.",
+   "blank": "첨단",
+   "src": "made"
+  }
+ ],
  "w|첫": [
   {
    "text": "첫 출근이라 떨려.",
@@ -50733,6 +52365,22 @@
    "src": "krdict"
   }
  ],
+ "w|추락": [
+  {
+   "text": "선생님은 계단 난간에 기대면 추락할 위험이 있다고 하셨어요.",
+   "en": "The teacher said leaning on the stair railing could cause you to fall.",
+   "ko": "선생님은 계단 난간에 기대면 추락할 위험이 있다고 하셨어요.",
+   "blank": "추락할",
+   "src": "made"
+  },
+  {
+   "text": "뉴스에서는 대회 촬영용 드론이 강에 추락했다고 전했어요.",
+   "en": "The news reported that a drone filming the race had crashed into the river.",
+   "ko": "뉴스에서는 대회 촬영용 드론이 강에 추락했다고 전했어요.",
+   "blank": "추락했다고",
+   "src": "made"
+  }
+ ],
  "w|추석": [
   {
    "text": "추석에 성묘를 다녀왔어.",
@@ -50805,6 +52453,22 @@
    "en": "My friend recommended that book.",
    "ko": "친구가 그 책을 추천했어.",
    "blank": "추천했어"
+  }
+ ],
+ "w|추측": [
+  {
+   "text": "새 담임 선생님이 누굴지 반 아이들은 온갖 추측을 했어요.",
+   "en": "The kids in the class made all sorts of guesses about who the new homeroom teacher would be.",
+   "ko": "새 담임 선생님이 누굴지 반 아이들은 온갖 추측을 했어요.",
+   "blank": "추측을",
+   "src": "made"
+  },
+  {
+   "text": "맛만 보고 어떤 양념을 넣었는지 추측하는 게임을 했어요.",
+   "en": "They played a game of guessing which seasonings were used just by tasting.",
+   "ko": "맛만 보고 어떤 양념을 넣었는지 추측하는 게임을 했어요.",
+   "blank": "추측하는",
+   "src": "made"
   }
  ],
  "w|축구": [
@@ -52483,6 +54147,22 @@
    "blank": "탔어"
   }
  ],
+ "w|타락하다": [
+  {
+   "text": "윤리 시간에 경민은 권력을 얻고 타락한 왕의 이야기를 배웠어요.",
+   "en": "In ethics class, Kyungmin learned about a king who became corrupt after gaining power.",
+   "ko": "윤리 시간에 경민은 권력을 얻고 타락한 왕의 이야기를 배웠어요.",
+   "blank": "타락한",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 돈만 좇다가 타락한 유명 요리사 이야기를 들려줬어요.",
+   "en": "The teacher told the story of a famous chef who became corrupt chasing only money.",
+   "ko": "선생님은 돈만 좇다가 타락한 유명 요리사 이야기를 들려줬어요.",
+   "blank": "타락한",
+   "src": "made"
+  }
+ ],
  "w|타오르다": [
   {
    "text": "모닥불이 세차게 타올라.",
@@ -53119,6 +54799,22 @@
    "blank": "통증"
   }
  ],
+ "w|통째로": [
+  {
+   "text": "재원은 시험 전날 교과서 한 단원을 통째로 외웠어요.",
+   "en": "The day before the test, Jaewon memorized a whole chapter of the textbook.",
+   "ko": "재원은 시험 전날 교과서 한 단원을 통째로 외웠어요.",
+   "blank": "통째로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 결승선을 지나 물 한 병을 통째로 들이켰어요.",
+   "en": "After crossing the finish line, Sohee gulped down an entire bottle of water.",
+   "ko": "소희는 결승선을 지나 물 한 병을 통째로 들이켰어요.",
+   "blank": "통째로",
+   "src": "made"
+  }
+ ],
  "w|통통하다": [
   {
    "text": "볼이 통통해서 귀여워.",
@@ -53437,6 +55133,22 @@
    "blank": "특징이"
   }
  ],
+ "w|특허": [
+  {
+   "text": "발명 대회에서 상을 받은 성호의 아이디어는 특허까지 받았어요.",
+   "en": "Seongho's idea, which won a prize at the invention contest, even got a patent.",
+   "ko": "발명 대회에서 상을 받은 성호의 아이디어는 특허까지 받았어요.",
+   "blank": "특허까지",
+   "src": "made"
+  },
+  {
+   "text": "미경이 쓰는 접이식 사다리는 어느 작은 회사의 특허 제품이에요.",
+   "en": "The folding ladder Migyeong uses is a patented product from a small company.",
+   "ko": "미경이 쓰는 접이식 사다리는 어느 작은 회사의 특허 제품이에요.",
+   "blank": "특허",
+   "src": "made"
+  }
+ ],
  "w|특히": [
   {
    "text": "특히 이게 좋아.",
@@ -53723,6 +55435,22 @@
    "text": "수진은 근무를 시작하자마자 환자들의 상태부터 파악했어요.",
    "en": "As soon as her shift started, Sujin first checked on the patients' conditions.",
    "ko": "수진은 근무를 시작하자마자 환자들의 상태부터 파악했어요.",
+   "blank": "파악했어요",
+   "src": "made"
+  }
+ ],
+ "w|파악하다": [
+  {
+   "text": "성호는 문제를 풀기 전에 먼저 질문의 핵심을 파악했어요.",
+   "en": "Before solving the problem, Seongho first figured out the core of the question.",
+   "ko": "성호는 문제를 풀기 전에 먼저 질문의 핵심을 파악했어요.",
+   "blank": "파악했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 공사를 시작하기 전에 집의 상태를 꼼꼼히 파악했어요.",
+   "en": "Before starting work, Migyeong carefully assessed the condition of the house.",
+   "ko": "미경은 공사를 시작하기 전에 집의 상태를 꼼꼼히 파악했어요.",
    "blank": "파악했어요",
    "src": "made"
   }
@@ -54097,6 +55825,22 @@
    "blank": "편이"
   }
  ],
+ "w|편견": [
+  {
+   "text": "선생님은 전학생에 대한 편견을 버리라고 하셨어요.",
+   "en": "The teacher told us to drop our prejudices about the transfer student.",
+   "ko": "선생님은 전학생에 대한 편견을 버리라고 하셨어요.",
+   "blank": "편견을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 남자는 요리를 못한다는 편견이 틀렸다는 걸 수업에서 알았어요.",
+   "en": "In class, Daeun realized the prejudice that men can't cook was wrong.",
+   "ko": "다은은 남자는 요리를 못한다는 편견이 틀렸다는 걸 수업에서 알았어요.",
+   "blank": "편견이",
+   "src": "made"
+  }
+ ],
  "w|편리하다": [
   {
    "text": "이 기능이 정말 편리해.",
@@ -54125,6 +55869,22 @@
    "blank": "편안해졌어"
   }
  ],
+ "w|편안히": [
+  {
+   "text": "보건실 선생님은 경민에게 침대에 편안히 누워 쉬라고 하셨어요.",
+   "en": "The school nurse told Kyungmin to lie down comfortably on the bed and rest.",
+   "ko": "보건실 선생님은 경민에게 침대에 편안히 누워 쉬라고 하셨어요.",
+   "blank": "편안히",
+   "src": "made"
+  },
+  {
+   "text": "다은은 요리 수업이 끝나고 의자에 편안히 앉아 차를 마셨어요.",
+   "en": "After cooking class, Daeun sat comfortably in a chair and drank tea.",
+   "ko": "다은은 요리 수업이 끝나고 의자에 편안히 앉아 차를 마셨어요.",
+   "blank": "편안히",
+   "src": "made"
+  }
+ ],
  "w|편의점": [
   {
    "text": "편의점에서 물 사 왔어.",
@@ -54151,6 +55911,22 @@
    "en": "I reread a letter I got a long time ago.",
    "ko": "예전에 받은 편지를 다시 읽었어.",
    "blank": "편지를"
+  }
+ ],
+ "w|편집": [
+  {
+   "text": "경민은 학교 신문 편집을 맡아서 밤늦게까지 일했어요.",
+   "en": "Kyungmin was in charge of editing the school newspaper and worked late into the night.",
+   "ko": "경민은 학교 신문 편집을 맡아서 밤늦게까지 일했어요.",
+   "blank": "편집을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 요리하는 모습을 찍어 짧게 편집해서 친구들에게 보냈어요.",
+   "en": "Daeun filmed herself cooking, edited it short, and sent it to her friends.",
+   "ko": "다은은 요리하는 모습을 찍어 짧게 편집해서 친구들에게 보냈어요.",
+   "blank": "편집해서",
+   "src": "made"
   }
  ],
  "w|편하다": [
@@ -54353,6 +56129,22 @@
    "blank": "폐"
   }
  ],
+ "w|폐쇄": [
+  {
+   "text": "공사 때문에 학교 뒷문이 한 달 동안 폐쇄됐어요.",
+   "en": "Because of construction, the school's back gate was closed for a month.",
+   "ko": "공사 때문에 학교 뒷문이 한 달 동안 폐쇄됐어요.",
+   "blank": "폐쇄됐어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 쓰지 않는 굴뚝을 벽돌로 막아 폐쇄했어요.",
+   "en": "Migyeong sealed off the unused chimney with bricks.",
+   "ko": "미경은 쓰지 않는 굴뚝을 벽돌로 막아 폐쇄했어요.",
+   "blank": "폐쇄했어요",
+   "src": "made"
+  }
+ ],
  "w|포근하다": [
   {
    "text": "이불이 몸을 포근하게 감싸.",
@@ -54495,6 +56287,22 @@
    "blank": "포함해"
   }
  ],
+ "w|폭격": [
+  {
+   "text": "역사 시간에 경민은 전쟁 때 폭격을 맞은 도시의 사진을 봤어요.",
+   "en": "In history class, Kyungmin saw photos of a city that was bombed during the war.",
+   "ko": "역사 시간에 경민은 전쟁 때 폭격을 맞은 도시의 사진을 봤어요.",
+   "blank": "폭격을",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 할아버지가 폭격 속에서 피란 가며 먹던 음식 이야기를 해 주셨어요.",
+   "en": "The teacher told of the food her grandfather ate while fleeing amid the bombing.",
+   "ko": "선생님은 할아버지가 폭격 속에서 피란 가며 먹던 음식 이야기를 해 주셨어요.",
+   "blank": "폭격",
+   "src": "made"
+  }
+ ],
  "w|폭동": [
   {
    "text": "태윤은 옛날 농민 폭동에 관한 자료를 찾느라 하루를 보냈어요.",
@@ -54567,6 +56375,22 @@
    "en": "The boat couldn't leave because of the storm.",
    "ko": "폭풍 때문에 배가 못 떴어.",
    "blank": "폭풍"
+  }
+ ],
+ "w|폭행": [
+  {
+   "text": "뉴스에서 학생 폭행 사건을 다루자 학교는 상담 시간을 늘렸어요.",
+   "en": "When the news covered a student assault case, the school increased counseling hours.",
+   "ko": "뉴스에서 학생 폭행 사건을 다루자 학교는 상담 시간을 늘렸어요.",
+   "blank": "폭행",
+   "src": "made"
+  },
+  {
+   "text": "신문에는 대회 도중 생긴 관중 폭행 사건 기사가 실렸어요.",
+   "en": "The newspaper ran an article about a spectator assault that happened during the race.",
+   "ko": "신문에는 대회 도중 생긴 관중 폭행 사건 기사가 실렸어요.",
+   "blank": "폭행",
+   "src": "made"
   }
  ],
  "w|표": [
@@ -56183,6 +58007,22 @@
    "src": "made"
   }
  ],
+ "w|해킹하다": [
+  {
+   "text": "정보 시간에 선생님은 남의 계정을 해킹하는 건 범죄라고 하셨어요.",
+   "en": "In computer class, the teacher said hacking someone else's account is a crime.",
+   "ko": "정보 시간에 선생님은 남의 계정을 해킹하는 건 범죄라고 하셨어요.",
+   "blank": "해킹하는",
+   "src": "made"
+  },
+  {
+   "text": "대회 직전에 누군가 참가 신청 사이트를 해킹해서 기록이 잠깐 사라졌어요.",
+   "en": "Right before the race, someone hacked the registration site and the records briefly disappeared.",
+   "ko": "대회 직전에 누군가 참가 신청 사이트를 해킹해서 기록이 잠깐 사라졌어요.",
+   "blank": "해킹해서",
+   "src": "made"
+  }
+ ],
  "w|핵": [
   {
    "text": "과학관 한쪽에는 핵 발전의 원리를 설명하는 모형이 있어요.",
@@ -56927,6 +58767,22 @@
    "blank": "협상에서"
   }
  ],
+ "w|협정": [
+  {
+   "text": "사회 시간에 성호는 두 나라가 맺은 무역 협정에 대해 발표했어요.",
+   "en": "In social studies, Seongho gave a presentation on a trade agreement between two countries.",
+   "ko": "사회 시간에 성호는 두 나라가 맺은 무역 협정에 대해 발표했어요.",
+   "blank": "협정에",
+   "src": "made"
+  },
+  {
+   "text": "미경과 이웃은 담장 수리비를 반씩 내자는 협정 같은 약속을 했어요.",
+   "en": "Migyeong and her neighbor made an agreement, almost like a treaty, to split the cost of fixing the wall.",
+   "ko": "미경과 이웃은 담장 수리비를 반씩 내자는 협정 같은 약속을 했어요.",
+   "blank": "협정",
+   "src": "made"
+  }
+ ],
  "w|협조": [
   {
    "text": "동민은 조사에 적극 협조를 하겠다고 약속했어요.",
@@ -57663,6 +59519,22 @@
    "src": "krdict"
   }
  ],
+ "w|확보": [
+  {
+   "text": "축제 준비 때문에 학생회는 연습할 강당을 먼저 확보했어요.",
+   "en": "For festival preparations, the student council first secured the auditorium for practice.",
+   "ko": "축제 준비 때문에 학생회는 연습할 강당을 먼저 확보했어요.",
+   "blank": "확보했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 수납공간을 확보하려고 계단 밑에 선반을 짰어요.",
+   "en": "Migyeong built shelves under the stairs to secure storage space.",
+   "ko": "미경은 수납공간을 확보하려고 계단 밑에 선반을 짰어요.",
+   "blank": "확보하려고",
+   "src": "made"
+  }
+ ],
  "w|확보하다": [
   {
    "text": "우리 팀은 연승을 하며 우승에 유리한 위치를 확보했다.",
@@ -58079,6 +59951,22 @@
    "en": "You need to keep at it to see results.",
    "ko": "효과를 보려면 꾸준히 해야 해.",
    "blank": "효과를"
+  }
+ ],
+ "w|효율": [
+  {
+   "text": "경민은 공부 효율을 높이려고 시간표를 새로 짰어요.",
+   "en": "Kyungmin made a new schedule to improve the efficiency of his studying.",
+   "ko": "경민은 공부 효율을 높이려고 시간표를 새로 짰어요.",
+   "blank": "효율을",
+   "src": "made"
+  },
+  {
+   "text": "재료를 미리 다 손질해 두면 요리 효율이 훨씬 좋아져요.",
+   "en": "If you prep all the ingredients in advance, cooking becomes much more efficient.",
+   "ko": "재료를 미리 다 손질해 두면 요리 효율이 훨씬 좋아져요.",
+   "blank": "효율이",
+   "src": "made"
   }
  ],
  "w|후": [
@@ -58669,6 +60557,22 @@
    "blank": "흩어졌어"
   }
  ],
+ "w|희귀하다": [
+  {
+   "text": "과학 선생님은 희귀한 나비 표본을 교실에 가져오셨어요.",
+   "en": "The science teacher brought a rare butterfly specimen to class.",
+   "ko": "과학 선생님은 희귀한 나비 표본을 교실에 가져오셨어요.",
+   "blank": "희귀한",
+   "src": "made"
+  },
+  {
+   "text": "미경은 벽장 안에서 요즘 보기 희귀한 옛날 타일을 발견했어요.",
+   "en": "Inside the closet, Migyeong found old tiles that are rare to see these days.",
+   "ko": "미경은 벽장 안에서 요즘 보기 희귀한 옛날 타일을 발견했어요.",
+   "blank": "희귀한",
+   "src": "made"
+  }
+ ],
  "w|희망": [
   {
    "text": "아직 희망은 있어.",
@@ -58767,6 +60671,22 @@
    "en": "We gathered strength and pushed the door.",
    "ko": "힘을 모아 문을 밀었어.",
    "blank": "힘을"
+  }
+ ],
+ "w|힘껏": [
+  {
+   "text": "체육 대회 줄다리기에서 성호는 밧줄을 힘껏 잡아당겼어요.",
+   "en": "In the sports day tug-of-war, Seongho pulled the rope with all his might.",
+   "ko": "체육 대회 줄다리기에서 성호는 밧줄을 힘껏 잡아당겼어요.",
+   "blank": "힘껏",
+   "src": "made"
+  },
+  {
+   "text": "미경은 녹슨 대문을 힘껏 밀어서 겨우 열었어요.",
+   "en": "Migyeong pushed the rusty gate with all her strength and barely got it open.",
+   "ko": "미경은 녹슨 대문을 힘껏 밀어서 겨우 열었어요.",
+   "blank": "힘껏",
+   "src": "made"
   }
  ],
  "w|힘내다": [

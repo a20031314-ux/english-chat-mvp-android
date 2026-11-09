@@ -83,6 +83,22 @@
    "blank": "一半"
   }
  ],
+ "w|一台": [
+  {
+   "text": "为了过冬，马林买了一台小小的电暖器。",
+   "en": "To get through the winter, Ma Lin bought a small electric heater.",
+   "ko": "겨울을 나려고 마린은 작은 전기난로를 한 대 샀어요.",
+   "blank": "一台",
+   "src": "made"
+  },
+  {
+   "text": "终点旁边放着一台大风扇，孙悦站在前面吹了好一会儿。",
+   "en": "A big fan stood beside the finish line, and Sun Yue stood in front of it for a good while.",
+   "ko": "결승선 옆에 큰 선풍기 한 대가 있어서 쑨웨는 그 앞에 서서 한참 바람을 쐬었어요.",
+   "blank": "一台",
+   "src": "made"
+  }
+ ],
  "w|一号": [
   {
    "text": "小明的教室在一号楼三层，从窗口能看到操场。",
@@ -447,6 +463,22 @@
    "src": "made"
   }
  ],
+ "w|上午": [
+  {
+   "text": "秋天的上午阳光最舒服，马林喜欢在阳台上晒太阳。",
+   "en": "The sunlight on autumn mornings is the nicest, and Ma Lin likes to sun herself on the balcony.",
+   "ko": "가을 오전 햇살이 제일 기분 좋아서 마린은 베란다에서 햇볕 쬐는 걸 좋아해요.",
+   "blank": "上午",
+   "src": "made"
+  },
+  {
+   "text": "比赛结束后，孙悦整个上午都在按摩腿。",
+   "en": "After the race Sun Yue spent the whole morning massaging her legs.",
+   "ko": "대회가 끝난 뒤 쑨웨는 오전 내내 다리를 주물렀어요.",
+   "blank": "上午",
+   "src": "made"
+  }
+ ],
  "w|上去": [
   {
    "text": "快上去。",
@@ -459,6 +491,38 @@
    "en": "Sounds good.",
    "ko": "듣기엔 괜찮아.",
    "blank": "上去"
+  }
+ ],
+ "w|上司": [
+  {
+   "text": "周强的上司是个急性子，图纸一出错就发火。",
+   "en": "Zhou Qiang's boss is impatient and gets angry whenever there's a mistake in the drawings.",
+   "ko": "저우창의 상사는 성격이 급해서 도면에 실수가 있으면 바로 화를 내요.",
+   "blank": "上司",
+   "src": "made"
+  },
+  {
+   "text": "王芳打算下个月请上司来家里尝尝她的手艺。",
+   "en": "Wang Fang plans to invite her boss over next month to taste her cooking.",
+   "ko": "왕팡은 다음 달에 상사를 집에 초대해 솜씨를 보여 줄 생각이에요.",
+   "blank": "上司",
+   "src": "made"
+  }
+ ],
+ "w|上周": [
+  {
+   "text": "上周还很暖和，这几天突然就冷了下来，马林赶紧换上了厚被子。",
+   "en": "Last week it was still warm, but it suddenly turned cold these past few days, so Ma Lin quickly switched to a thick quilt.",
+   "ko": "지난주까지 따뜻하더니 요 며칠 갑자기 추워져서 마린은 얼른 두꺼운 이불로 바꿨어요.",
+   "blank": "上周",
+   "src": "made"
+  },
+  {
+   "text": "上周孙悦扭了一下脚，幸亏不太严重。",
+   "en": "Sun Yue twisted her ankle last week, but fortunately it wasn't serious.",
+   "ko": "쑨웨는 지난주에 발목을 살짝 삐었는데 다행히 심하지 않았어요.",
+   "blank": "上周",
+   "src": "made"
   }
  ],
  "w|上学": [
@@ -629,6 +693,22 @@
    "en": "Carry on from here.",
    "ko": "이어서 해.",
    "blank": "下去"
+  }
+ ],
+ "w|下周": [
+  {
+   "text": "天气预报说下周要降温，马林把毛衣都翻了出来。",
+   "en": "The forecast says it'll get colder next week, so Ma Lin dug out all her sweaters.",
+   "ko": "일기 예보에서 다음 주에 기온이 내려간다고 해서 마린은 스웨터를 다 꺼냈어요.",
+   "blank": "下周",
+   "src": "made"
+  },
+  {
+   "text": "下周就要比赛了，孙悦这几天只做轻松的慢跑。",
+   "en": "The race is next week, so Sun Yue is only doing easy jogs these days.",
+   "ko": "다음 주가 대회라서 쑨웨는 요 며칠 가벼운 조깅만 해요.",
+   "blank": "下周",
+   "src": "made"
   }
  ],
  "w|下来": [
@@ -1161,6 +1241,22 @@
    "src": "made"
   }
  ],
+ "w|且": [
+  {
+   "text": "这件外套又轻且暖，马林整个冬季都靠它了。",
+   "en": "This coat is both light and warm, and Ma Lin relies on it the whole winter season.",
+   "ko": "이 외투는 가볍고도 따뜻해서 마린은 겨울 내내 이것만 입어요.",
+   "blank": "且",
+   "src": "made"
+  },
+  {
+   "text": "这条赛道风景好，且大部分是平路，很适合新手。",
+   "en": "This course has great scenery and is mostly flat, so it suits beginners well.",
+   "ko": "이 코스는 경치가 좋고 대부분 평지라서 초보자에게 잘 맞아요.",
+   "blank": "且",
+   "src": "made"
+  }
+ ],
  "w|世界": [
   {
    "text": "这世界真小。",
@@ -1187,6 +1283,22 @@
    "en": "A new century has begun.",
    "ko": "새로운 세기가 시작됐어.",
    "blank": "世纪"
+  }
+ ],
+ "w|业务": [
+  {
+   "text": "周强的公司主要做桥梁业务，也接一些房子的活。",
+   "en": "Zhou Qiang's company mainly does bridge work, but also takes on some housing jobs.",
+   "ko": "저우창네 회사는 주로 교량 사업을 하고 주택 일도 조금 받아요.",
+   "blank": "业务",
+   "src": "made"
+  },
+  {
+   "text": "王芳最近业务很忙，好几次差点赶不上烹饪课。",
+   "en": "Wang Fang has been busy with work lately and nearly missed cooking class several times.",
+   "ko": "왕팡은 요즘 업무가 바빠서 요리 수업에 늦을 뻔한 적이 여러 번이에요.",
+   "blank": "业务",
+   "src": "made"
   }
  ],
  "w|东": [
@@ -1303,6 +1415,22 @@
    "blank": "中"
   }
  ],
+ "w|中午": [
+  {
+   "text": "秋天中午还是有点热，马林出门只穿一件衬衫。",
+   "en": "At noon in autumn it's still a bit warm, so Ma Lin goes out in just a shirt.",
+   "ko": "가을 한낮에는 아직 좀 더워서 마린은 셔츠 한 장만 입고 나가요.",
+   "blank": "中午",
+   "src": "made"
+  },
+  {
+   "text": "孙悦中午才跑到终点，太阳晒得她满脸通红。",
+   "en": "Sun Yue didn't reach the finish until noon, and the sun had turned her face bright red.",
+   "ko": "쑨웨는 정오가 돼서야 결승선에 들어왔고 햇볕에 얼굴이 새빨갛게 탔어요.",
+   "blank": "中午",
+   "src": "made"
+  }
+ ],
  "w|中央": [
   {
    "text": "小明的座位在教室正中央，想偷懒都难。",
@@ -1316,6 +1444,22 @@
    "en": "A big round table stands in the middle of the new living room.",
    "ko": "새집 거실 한가운데에 큰 원탁이 놓여 있어요.",
    "blank": "中央",
+   "src": "made"
+  }
+ ],
+ "w|中学": [
+  {
+   "text": "周强这次盖的是一所新中学的教学楼。",
+   "en": "This time Zhou Qiang is building the classroom building for a new middle school.",
+   "ko": "저우창이 이번에 짓는 건 새 중학교 교사 건물이에요.",
+   "blank": "中学",
+   "src": "made"
+  },
+  {
+   "text": "王芳上中学时就喜欢在厨房帮妈妈打下手。",
+   "en": "When Wang Fang was in middle school, she already liked helping her mom in the kitchen.",
+   "ko": "왕팡은 중학생 때부터 부엌에서 엄마를 거드는 걸 좋아했어요.",
+   "blank": "中学",
    "src": "made"
   }
  ],
@@ -2657,6 +2801,22 @@
    "blank": "今年"
   }
  ],
+ "w|今日": [
+  {
+   "text": "马林在日历上写着：今日立冬，记得吃饺子。",
+   "en": "Ma Lin wrote on the calendar: today is the start of winter, remember to eat dumplings.",
+   "ko": "마린은 달력에 \"오늘 입동, 만두 먹기 잊지 말 것\"이라고 적었어요.",
+   "blank": "今日",
+   "src": "made"
+  },
+  {
+   "text": "赛道边的大屏幕上写着：今日全程马拉松，祝大家好运。",
+   "en": "The big screen beside the course read: full marathon today, good luck everyone.",
+   "ko": "코스 옆 큰 화면에 \"오늘 풀코스 마라톤, 모두 행운을 빕니다\"라고 쓰여 있었어요.",
+   "blank": "今日",
+   "src": "made"
+  }
+ ],
  "w|今晚": [
   {
    "text": "今晚有空吗？",
@@ -2753,6 +2913,22 @@
    "en": "I never lie.",
    "ko": "난 절대 거짓말 안 해.",
    "blank": "从不"
+  }
+ ],
+ "w|从前": [
+  {
+   "text": "马林的奶奶常说，从前的冬天比现在冷多了。",
+   "en": "Ma Lin's grandmother often says winters used to be much colder than now.",
+   "ko": "마린의 할머니는 예전 겨울이 지금보다 훨씬 추웠다고 자주 말씀하세요.",
+   "blank": "从前",
+   "src": "made"
+  },
+  {
+   "text": "孙悦从前跑三公里就喘不过气来。",
+   "en": "Sun Yue used to run out of breath after three kilometers.",
+   "ko": "쑨웨는 예전엔 삼 킬로미터만 뛰어도 숨이 찼어요.",
+   "blank": "从前",
+   "src": "made"
   }
  ],
  "w|从未": [
@@ -3709,6 +3885,22 @@
    "en": "He composed a poem.",
    "ko": "그는 시를 한 편 지었어.",
    "blank": "作"
+  }
+ ],
+ "w|作业": [
+  {
+   "text": "晚上周强回到家，还得陪女儿写作业。",
+   "en": "When Zhou Qiang gets home at night, he still has to sit with his daughter while she does homework.",
+   "ko": "저우창은 밤에 집에 돌아와서도 딸 숙제를 봐 줘야 해요.",
+   "blank": "作业",
+   "src": "made"
+  },
+  {
+   "text": "这周的作业是回家做一道凉菜，王芳选了拍黄瓜。",
+   "en": "This week's homework is to make a cold dish at home, and Wang Fang chose smashed cucumber.",
+   "ko": "이번 주 숙제는 집에서 찬 요리 하나 만들기라서 왕팡은 오이무침을 골랐어요.",
+   "blank": "作业",
+   "src": "made"
   }
  ],
  "w|作为": [
@@ -5893,6 +6085,22 @@
    "blank": "冠军"
   }
  ],
+ "w|冬天": [
+  {
+   "text": "马林的老家冬天很少下雪，所以马林第一次见到大雪时特别兴奋。",
+   "en": "It rarely snows in Ma Lin's hometown in winter, so she was really excited the first time she saw heavy snow.",
+   "ko": "마린의 고향은 겨울에 눈이 거의 안 와서 처음 큰눈을 봤을 때 무척 신났어요.",
+   "blank": "冬天",
+   "src": "made"
+  },
+  {
+   "text": "冬天太冷，孙悦只好在健身房的跑步机上练习。",
+   "en": "Winter is too cold, so Sun Yue has to practice on the treadmill at the gym.",
+   "ko": "겨울이 너무 추워서 쑨웨는 헬스장 러닝머신에서 연습할 수밖에 없어요.",
+   "blank": "冬天",
+   "src": "made"
+  }
+ ],
  "w|冲": [
   {
    "text": "他冲出了大门。",
@@ -5992,6 +6200,22 @@
    "en": "Lin Jing's alarm clock has always been accurate and has never gone off late.",
    "ko": "린징의 알람 시계는 늘 정확해서 아침마다 한 번도 늦게 울린 적이 없어요.",
    "blank": "准确",
+   "src": "made"
+  }
+ ],
+ "w|凌晨": [
+  {
+   "text": "夏天凌晨四点多天就亮了，马林常常被鸟叫醒。",
+   "en": "In summer it's already light a little after four in the morning, and Ma Lin is often woken by birds.",
+   "ko": "여름에는 새벽 네 시만 넘어도 날이 밝아서 마린은 새소리에 자주 깨요.",
+   "blank": "凌晨",
+   "src": "made"
+  },
+  {
+   "text": "比赛当天凌晨，孙悦就起来吃了早饭。",
+   "en": "On race day Sun Yue got up before dawn and had breakfast.",
+   "ko": "대회 날 쑨웨는 새벽에 일어나 아침을 먹었어요.",
+   "blank": "凌晨",
    "src": "made"
   }
  ],
@@ -6210,6 +6434,22 @@
    "en": "Remember to take your keys when you go out.",
    "ko": "나갈 때 열쇠 챙기는 거 잊지 마요.",
    "blank": "出门",
+   "src": "made"
+  }
+ ],
+ "w|击中": [
+  {
+   "text": "一块小石头从上面掉下来，正好击中了周强的安全帽。",
+   "en": "A small stone fell from above and hit Zhou Qiang's hard hat squarely.",
+   "ko": "작은 돌멩이가 위에서 떨어져 저우창의 안전모를 정통으로 맞혔어요.",
+   "blank": "击中",
+   "src": "made"
+  },
+  {
+   "text": "王芳把面团往篮子里一扔，正好击中了中间。",
+   "en": "Wang Fang tossed the dough toward the basket and hit right in the middle.",
+   "ko": "왕팡이 반죽을 바구니로 던졌더니 딱 한가운데 맞았어요.",
+   "blank": "击中",
    "src": "made"
   }
  ],
@@ -7319,6 +7559,22 @@
    "src": "made"
   }
  ],
+ "w|午夜": [
+  {
+   "text": "过了午夜，窗外开始飘雪，马林披着毯子看了好一会儿。",
+   "en": "After midnight snow began to fall outside, and Ma Lin watched for a good while wrapped in a blanket.",
+   "ko": "자정이 지나자 창밖에 눈이 날리기 시작했고 마린은 담요를 두르고 한참 바라봤어요.",
+   "blank": "午夜",
+   "src": "made"
+  },
+  {
+   "text": "孙悦拿到号码布太激动，过了午夜还在看路线图。",
+   "en": "Sun Yue was so excited to get her race bib that she was still looking at the route map past midnight.",
+   "ko": "쑨웨는 배번을 받고 너무 들떠서 자정이 넘도록 코스 지도를 봤어요.",
+   "blank": "午夜",
+   "src": "made"
+  }
+ ],
  "w|午餐": [
   {
    "text": "一起吃午餐吧。",
@@ -7393,6 +7649,22 @@
    "blank": "协议"
   }
  ],
+ "w|卑鄙": [
+  {
+   "text": "有人偷偷把周强的工具藏起来，这种做法真卑鄙。",
+   "en": "Someone secretly hid Zhou Qiang's tools; that kind of thing is really low.",
+   "ko": "누가 몰래 저우창의 공구를 숨겼는데, 그런 짓은 정말 비열해요.",
+   "blank": "卑鄙",
+   "src": "made"
+  },
+  {
+   "text": "王芳看的那部电视剧里，坏人用了一个很卑鄙的办法偷走了菜谱。",
+   "en": "In the TV drama Wang Fang watched, the villain used a very dirty trick to steal the recipe.",
+   "ko": "왕팡이 본 드라마에서 악당은 아주 비열한 수법으로 요리법을 훔쳐 갔어요.",
+   "blank": "卑鄙",
+   "src": "made"
+  }
+ ],
  "w|单位": [
   {
    "text": "附近好几个单位都在这家饭店订工作餐。",
@@ -7421,6 +7693,22 @@
    "en": "Don't let him go out alone.",
    "ko": "그를 혼자 내보내지 마.",
    "blank": "单独"
+  }
+ ],
+ "w|单词": [
+  {
+   "text": "外国工程师来工地时，周强用学过的几个英语单词跟他打招呼。",
+   "en": "When a foreign engineer came to the site, Zhou Qiang greeted him with a few English words he had learned.",
+   "ko": "외국인 기술자가 공사장에 오자 저우창은 배운 영어 단어 몇 개로 인사했어요.",
+   "blank": "单词",
+   "src": "made"
+  },
+  {
+   "text": "王芳把法语菜谱里的单词一个个查出来，抄在卡片上。",
+   "en": "Wang Fang looked up the words in a French recipe one by one and copied them onto cards.",
+   "ko": "왕팡은 프랑스어 요리책의 단어를 하나하나 찾아서 카드에 옮겨 적었어요.",
+   "blank": "单词",
+   "src": "made"
   }
  ],
  "w|单身": [
@@ -7629,6 +7917,22 @@
    "en": "Even if I fail, it's fine.",
    "ko": "실패해도 괜찮아.",
    "blank": "即使"
+  }
+ ],
+ "w|即便": [
+  {
+   "text": "即便是夏天，马林睡觉时也要盖一条薄被子。",
+   "en": "Even in summer, Ma Lin covers herself with a thin blanket when she sleeps.",
+   "ko": "여름이라도 마린은 잘 때 얇은 이불을 덮어요.",
+   "blank": "即便",
+   "src": "made"
+  },
+  {
+   "text": "即便最后是走到终点的，孙悦也为自己感到骄傲。",
+   "en": "Even though she walked the last stretch to the finish, Sun Yue still felt proud of herself.",
+   "ko": "마지막엔 걸어서 결승선에 들어왔지만 쑨웨는 그래도 자신이 자랑스러웠어요.",
+   "blank": "即便",
+   "src": "made"
   }
  ],
  "w|即将": [
@@ -8005,6 +8309,22 @@
    "en": "It's the same either way.",
    "ko": "어차피 똑같아.",
    "blank": "反正"
+  }
+ ],
+ "w|反而": [
+  {
+   "text": "已经到了十一月，马林发现天气反而比上个月暖和。",
+   "en": "It was already November, yet Ma Lin found the weather was actually warmer than the previous month.",
+   "ko": "벌써 십일월인데 마린이 보니 날씨가 오히려 지난달보다 따뜻했어요.",
+   "blank": "反而",
+   "src": "made"
+  },
+  {
+   "text": "下雨的时候孙悦反而跑得更快，因为不觉得热。",
+   "en": "Sun Yue actually runs faster when it rains, because she doesn't feel hot.",
+   "ko": "쑨웨는 비가 오면 덥지 않아서 오히려 더 빨리 달려요.",
+   "blank": "反而",
+   "src": "made"
   }
  ],
  "w|发": [
@@ -8463,6 +8783,38 @@
    "src": "made"
   }
  ],
+ "w|句": [
+  {
+   "text": "工头只说了一句“小心点”，周强就明白是什么意思了。",
+   "en": "The foreman said just one line, \"Be careful,\" and Zhou Qiang understood what he meant.",
+   "ko": "반장이 \"조심해\" 한마디만 했는데 저우창은 무슨 뜻인지 바로 알았어요.",
+   "blank": "句",
+   "src": "made"
+  },
+  {
+   "text": "老师每句话王芳都记在本子上。",
+   "en": "Wang Fang writes down every line the teacher says in her notebook.",
+   "ko": "왕팡은 선생님 말씀을 한 마디도 빼지 않고 공책에 적어요.",
+   "blank": "句",
+   "src": "made"
+  }
+ ],
+ "w|句子": [
+  {
+   "text": "安全手册上的每个句子，周强都认真读过。",
+   "en": "Zhou Qiang has carefully read every sentence in the safety manual.",
+   "ko": "저우창은 안전 수칙서의 문장 하나하나를 꼼꼼히 읽었어요.",
+   "blank": "句子",
+   "src": "made"
+  },
+  {
+   "text": "菜谱上有个句子王芳怎么也看不懂，只好去问老师。",
+   "en": "There was a sentence in the recipe Wang Fang just couldn't understand, so she had to ask the teacher.",
+   "ko": "요리책에 왕팡이 아무리 봐도 이해가 안 되는 문장이 있어서 선생님께 물어봤어요.",
+   "blank": "句子",
+   "src": "made"
+  }
+ ],
  "w|另": [
   {
    "text": "另找一家吧。",
@@ -8758,6 +9110,22 @@
    "en": "The landlord said selling is unlikely, so Lili can rent long-term without worry.",
    "ko": "집주인이 나중에 집을 팔 가능성은 작다고 해서 리리는 마음 놓고 오래 살 수 있어요.",
    "blank": "可能性",
+   "src": "made"
+  }
+ ],
+ "w|可靠": [
+  {
+   "text": "马林觉得手机上的天气预报不太可靠，出门前总要看看天。",
+   "en": "Ma Lin finds the weather forecast on her phone not very reliable and always checks the sky before going out.",
+   "ko": "마린은 휴대폰 일기 예보를 별로 믿지 못해서 나가기 전에 꼭 하늘을 봐요.",
+   "blank": "可靠",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的运动手表很可靠，从来没有记错过距离。",
+   "en": "Sun Yue's sports watch is very reliable and has never gotten the distance wrong.",
+   "ko": "쑨웨의 운동 시계는 믿을 만해서 거리를 잘못 잰 적이 한 번도 없어요.",
+   "blank": "可靠",
    "src": "made"
   }
  ],
@@ -10445,6 +10813,22 @@
    "blank": "喝醉"
   }
  ],
+ "w|喽": [
+  {
+   "text": "周强拍拍手说：“今天就干到这儿，收工喽！”",
+   "en": "Zhou Qiang clapped his hands and said, \"That's it for today, time to knock off!\"",
+   "ko": "저우창이 손뼉을 치며 \"오늘은 여기까지, 퇴근이다!\" 하고 말했어요.",
+   "blank": "喽",
+   "src": "made"
+  },
+  {
+   "text": "王芳把菜端上桌，笑着说：“开饭喽！”",
+   "en": "Wang Fang brought the dishes to the table and said with a smile, \"Time to eat!\"",
+   "ko": "왕팡이 음식을 식탁에 차리며 웃으면서 \"밥 먹자!\" 하고 말했어요.",
+   "blank": "喽",
+   "src": "made"
+  }
+ ],
  "w|嗨": [
   {
    "text": "嗨。",
@@ -11893,6 +12277,22 @@
    "blank": "多谢"
   }
  ],
+ "w|夜": [
+  {
+   "text": "下了一夜的雨，马林早上推开窗，满院子都是落叶。",
+   "en": "It rained all night, and when Ma Lin opened the window in the morning, the yard was covered in fallen leaves.",
+   "ko": "밤새 비가 내려서 마린이 아침에 창문을 열자 마당에 낙엽이 가득했어요.",
+   "blank": "夜",
+   "src": "made"
+  },
+  {
+   "text": "比赛前一夜，孙悦紧张得翻来覆去睡不着。",
+   "en": "The night before the race, Sun Yue was so nervous she tossed and turned and couldn't sleep.",
+   "ko": "대회 전날 밤 쑨웨는 너무 긴장해서 뒤척이며 잠을 못 잤어요.",
+   "blank": "夜",
+   "src": "made"
+  }
+ ],
  "w|夜晚": [
   {
    "text": "夜晚很安静。",
@@ -12269,6 +12669,22 @@
    "en": "He went to heaven.",
    "ko": "그는 천국에 갔어.",
    "blank": "天堂"
+  }
+ ],
+ "w|天天": [
+  {
+   "text": "一到秋天，马林天天去公园看银杏叶变黄。",
+   "en": "Once autumn comes, Ma Lin goes to the park every day to watch the ginkgo leaves turn yellow.",
+   "ko": "가을만 되면 마린은 날마다 공원에 가서 은행잎이 노랗게 물드는 걸 봐요.",
+   "blank": "天天",
+   "src": "made"
+  },
+  {
+   "text": "为了准备这场比赛，孙悦天天早起练跑。",
+   "en": "To prepare for this race, Sun Yue gets up early every day to train.",
+   "ko": "이번 대회를 준비하려고 쑨웨는 날마다 일찍 일어나 달리기 연습을 해요.",
+   "blank": "天天",
+   "src": "made"
   }
  ],
  "w|天才": [
@@ -12859,6 +13275,22 @@
    "en": "All right, we'll leave it like this.",
    "ko": "좋아, 이대로 하자.",
    "blank": "好"
+  }
+ ],
+ "w|好久": [
+  {
+   "text": "好久没下这么大的雨了，马林站在窗前听了很久。",
+   "en": "It hadn't rained this hard in a long time, and Ma Lin stood by the window listening for ages.",
+   "ko": "이렇게 큰비가 온 건 오랜만이라 마린은 창가에 서서 한참 들었어요.",
+   "blank": "好久",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在终点遇到了好久不见的大学同学。",
+   "en": "At the finish line Sun Yue ran into a college classmate she hadn't seen in ages.",
+   "ko": "쑨웨는 결승선에서 오랜만에 대학 동기를 만났어요.",
+   "blank": "好久",
+   "src": "made"
   }
  ],
  "w|好事": [
@@ -14319,6 +14751,22 @@
    "blank": "密码"
   }
  ],
+ "w|富有": [
+  {
+   "text": "马林觉得每个季节都富有自己的味道。",
+   "en": "Ma Lin feels every season is rich in its own character.",
+   "ko": "마린은 계절마다 저마다의 멋이 풍부하다고 느껴요.",
+   "blank": "富有",
+   "src": "made"
+  },
+  {
+   "text": "沿路的观众热情又富有活力，孙悦跑得越来越有劲。",
+   "en": "The spectators along the route were warm and full of energy, and Sun Yue ran with more and more strength.",
+   "ko": "길가 관중들이 열정적이고 활기가 넘쳐서 쑨웨는 갈수록 힘이 났어요.",
+   "blank": "富有",
+   "src": "made"
+  }
+ ],
  "w|对": [
   {
    "text": "你说得对。",
@@ -14787,6 +15235,22 @@
    "en": "Kid, come here!",
    "ko": "얘야, 이리 와!",
    "blank": "小子"
+  }
+ ],
+ "w|小学": [
+  {
+   "text": "工地对面是一所小学，所以周强他们中午不敢开大机器。",
+   "en": "There's an elementary school across from the site, so Zhou Qiang's crew doesn't dare run big machines at noon.",
+   "ko": "공사장 맞은편이 초등학교라서 저우창네는 점심때 큰 기계를 못 돌려요.",
+   "blank": "小学",
+   "src": "made"
+  },
+  {
+   "text": "班上还有一位退休的小学老师，做的包子特别好吃。",
+   "en": "There's also a retired elementary school teacher in the class whose steamed buns are especially good.",
+   "ko": "반에는 은퇴한 초등학교 선생님도 한 분 계신데 그분이 만든 찐빵이 정말 맛있어요.",
+   "blank": "小学",
+   "src": "made"
   }
  ],
  "w|小孩": [
@@ -15359,6 +15823,22 @@
    "src": "made"
   }
  ],
+ "w|工业": [
+  {
+   "text": "这座城市以前是靠工业发展起来的，到处都是老厂房。",
+   "en": "This city grew up on industry, and there are old factory buildings everywhere.",
+   "ko": "이 도시는 예전에 공업으로 성장해서 곳곳에 낡은 공장 건물이 있어요.",
+   "blank": "工业",
+   "src": "made"
+  },
+  {
+   "text": "王芳在课上听说，很多调料现在都是工业化生产的。",
+   "en": "Wang Fang heard in class that many seasonings are now produced industrially.",
+   "ko": "왕팡은 수업에서 요즘 양념 대부분이 공업적으로 생산된다고 들었어요.",
+   "blank": "工业",
+   "src": "made"
+  }
+ ],
  "w|工人": [
   {
    "text": "工人们很辛苦。",
@@ -15415,6 +15895,38 @@
    "en": "He works at a nearby factory.",
    "ko": "그는 근처 공장에서 일해.",
    "blank": "工厂"
+  }
+ ],
+ "w|工程": [
+  {
+   "text": "这个工程要到明年春天才能完成。",
+   "en": "This project won't be finished until next spring.",
+   "ko": "이 공사는 내년 봄에야 끝날 수 있어요.",
+   "blank": "工程",
+   "src": "made"
+  },
+  {
+   "text": "王芳的丈夫是学工程的，对做饭一窍不通。",
+   "en": "Wang Fang's husband studied engineering and knows nothing at all about cooking.",
+   "ko": "왕팡의 남편은 공학을 전공해서 요리는 하나도 몰라요.",
+   "blank": "工程",
+   "src": "made"
+  }
+ ],
+ "w|工资": [
+  {
+   "text": "每个月十号，周强都会把工资寄一部分回家。",
+   "en": "On the tenth of each month, Zhou Qiang sends part of his wages home.",
+   "ko": "매달 십일이면 저우창은 월급 일부를 집에 부쳐요.",
+   "blank": "工资",
+   "src": "made"
+  },
+  {
+   "text": "王芳说，这门课的学费差不多是她半个月的工资。",
+   "en": "Wang Fang says the fee for this course is about half a month of her wages.",
+   "ko": "왕팡은 이 수업 수강료가 거의 자기 반 달 치 월급이라고 해요.",
+   "blank": "工资",
+   "src": "made"
   }
  ],
  "w|左": [
@@ -15923,6 +16435,22 @@
    "blank": "干活"
   }
  ],
+ "w|干脆": [
+  {
+   "text": "外面下着大雪，马林干脆一整天都待在家里看书。",
+   "en": "It was snowing heavily outside, so Ma Lin simply stayed home all day reading.",
+   "ko": "밖에 눈이 펑펑 와서 마린은 아예 하루 종일 집에서 책을 읽었어요.",
+   "blank": "干脆",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的鞋带老是松，她干脆停下来系了个死结。",
+   "en": "Sun Yue's shoelace kept coming loose, so she just stopped and tied a tight knot.",
+   "ko": "쑨웨는 신발 끈이 자꾸 풀려서 아예 멈춰서 꽉 묶었어요.",
+   "blank": "干脆",
+   "src": "made"
+  }
+ ],
  "w|平常": [
   {
    "text": "我平常七点起床。",
@@ -15936,6 +16464,22 @@
    "en": "Today is different from usual.",
    "ko": "오늘은 평소와 달라요.",
    "blank": "平常",
+   "src": "made"
+  }
+ ],
+ "w|平时": [
+  {
+   "text": "马林平时不爱喝汤，可是一到冬天就天天煮。",
+   "en": "Ma Lin doesn't usually like soup, but as soon as winter comes, she makes it all the time.",
+   "ko": "마린은 평소에는 국을 잘 안 먹는데 겨울만 되면 자주 끓여요.",
+   "blank": "平时",
+   "src": "made"
+  },
+  {
+   "text": "孙悦平时一周跑四次，比赛前会多跑一次长距离。",
+   "en": "Sun Yue usually runs four times a week, adding one more long run before a race.",
+   "ko": "쑨웨는 평소 일주일에 네 번 뛰고 대회 전에는 장거리를 한 번 더 뛰어요.",
+   "blank": "平时",
    "src": "made"
   }
  ],
@@ -16112,6 +16656,22 @@
    "en": "The client director came over and shook Liu Fang's hand: \"A pleasure, I look forward to working together.\"",
    "ko": "고객사 이사가 다가와 류팡과 악수하며 \"반갑습니다, 앞으로 잘 부탁해요\"라고 했어요.",
    "blank": "幸会",
+   "src": "made"
+  }
+ ],
+ "w|幸好": [
+  {
+   "text": "突然下起了雨，幸好马林包里带了伞。",
+   "en": "It suddenly started raining; luckily Ma Lin had an umbrella in her bag.",
+   "ko": "갑자기 비가 내렸는데 다행히 마린 가방에 우산이 있었어요.",
+   "blank": "幸好",
+   "src": "made"
+  },
+  {
+   "text": "孙悦在路上差点摔倒，幸好旁边的人扶了她一把。",
+   "en": "Sun Yue nearly fell on the road; luckily the person next to her caught her.",
+   "ko": "쑨웨는 달리다가 넘어질 뻔했는데 다행히 옆 사람이 잡아 줬어요.",
+   "blank": "幸好",
    "src": "made"
   }
  ],
@@ -16335,6 +16895,22 @@
    "blank": "度"
   }
  ],
+ "w|度假": [
+  {
+   "text": "夏天太热，马林打算去海边度假几天。",
+   "en": "Summer is too hot, so Ma Lin plans to go on vacation by the sea for a few days.",
+   "ko": "여름이 너무 더워서 마린은 며칠 바닷가로 휴가를 갈 생각이에요.",
+   "blank": "度假",
+   "src": "made"
+  },
+  {
+   "text": "跑完这场马拉松，孙悦打算去山里度假，好好休息几天。",
+   "en": "After this marathon, Sun Yue plans to vacation in the mountains and rest properly for a few days.",
+   "ko": "이번 마라톤을 마치면 쑨웨는 산으로 휴가를 가서 며칠 푹 쉴 생각이에요.",
+   "blank": "度假",
+   "src": "made"
+  }
+ ],
  "w|度过": [
   {
    "text": "我们度过了快乐的一天。",
@@ -16466,6 +17042,22 @@
    "en": "The village committee is meeting tonight to discuss whether to build a car park.",
    "ko": "마을 위원회가 오늘 밤 회의를 열어 주차장을 만들지 의논해요.",
    "blank": "开会",
+   "src": "made"
+  }
+ ],
+ "w|开发": [
+  {
+   "text": "这片空地以后要开发成一个大公园。",
+   "en": "This empty land will be developed into a big park later on.",
+   "ko": "이 빈터는 나중에 큰 공원으로 개발될 거예요.",
+   "blank": "开发",
+   "src": "made"
+  },
+  {
+   "text": "烹饪学校最近开发了一套网上课程，王芳也报了名。",
+   "en": "The cooking school recently developed an online course, and Wang Fang signed up too.",
+   "ko": "요리 학교가 최근에 온라인 강좌를 개발해서 왕팡도 등록했어요.",
+   "blank": "开发",
    "src": "made"
   }
  ],
@@ -16823,6 +17415,22 @@
    "src": "made"
   }
  ],
+ "w|当初": [
+  {
+   "text": "马林当初搬到北方，就是想看看真正的雪。",
+   "en": "Ma Lin originally moved north precisely because she wanted to see real snow.",
+   "ko": "마린이 처음에 북쪽으로 이사 온 건 진짜 눈을 보고 싶어서였어요.",
+   "blank": "当初",
+   "src": "made"
+  },
+  {
+   "text": "孙悦当初开始跑步，只是为了减肥。",
+   "en": "Sun Yue originally started running just to lose weight.",
+   "ko": "쑨웨가 처음 달리기를 시작한 건 그냥 살을 빼려고였어요.",
+   "blank": "当初",
+   "src": "made"
+  }
+ ],
  "w|当地": [
   {
    "text": "美术老师请来一位当地的艺术家给大家上课。",
@@ -16836,6 +17444,22 @@
    "en": "Lili hired a local moving company, and the price was fair.",
    "ko": "리리는 그 지역 이삿짐센터를 불렀는데 가격이 적당했어요.",
    "blank": "当地",
+   "src": "made"
+  }
+ ],
+ "w|当年": [
+  {
+   "text": "马林当年第一次来这座城市，正好赶上桂花开。",
+   "en": "When Ma Lin first came to this city back then, it was just when the osmanthus was in bloom.",
+   "ko": "마린이 그해 이 도시에 처음 왔을 때 마침 계수나무 꽃이 피어 있었어요.",
+   "blank": "当年",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的爸爸当年也跑过马拉松，还留着那块奖牌。",
+   "en": "Sun Yue's dad ran a marathon back in his day too and still keeps the medal.",
+   "ko": "쑨웨의 아빠도 왕년에 마라톤을 뛰었고 그 메달을 아직 간직하고 있어요.",
+   "blank": "当年",
    "src": "made"
   }
  ],
@@ -19135,6 +19759,22 @@
    "blank": "才"
   }
  ],
+ "w|才能": [
+  {
+   "text": "大家都说周强有画图的才能，劝他去考个证。",
+   "en": "Everyone says Zhou Qiang has a talent for drawing plans and urges him to get a certificate.",
+   "ko": "다들 저우창에게 도면 그리는 재능이 있다며 자격증을 따 보라고 권해요.",
+   "blank": "才能",
+   "src": "made"
+  },
+  {
+   "text": "老师说王芳在摆盘上很有才能。",
+   "en": "The teacher says Wang Fang has real talent for plating.",
+   "ko": "선생님은 왕팡이 플레이팅에 재능이 많다고 해요.",
+   "blank": "才能",
+   "src": "made"
+  }
+ ],
  "w|打": [
   {
    "text": "别打了。",
@@ -19147,6 +19787,22 @@
    "en": "What are you hitting him for?",
    "ko": "왜 그 사람을 때려?",
    "blank": "打"
+  }
+ ],
+ "w|打中": [
+  {
+   "text": "马林和孩子们打雪仗，一个雪球正好打中了她的帽子。",
+   "en": "Ma Lin had a snowball fight with the kids, and one snowball hit her hat right on.",
+   "ko": "마린이 아이들과 눈싸움을 하다가 눈뭉치 하나에 모자를 정통으로 맞았어요.",
+   "blank": "打中",
+   "src": "made"
+  },
+  {
+   "text": "路边的小孩扔了个水球，正好打中了孙悦的肩膀。",
+   "en": "A kid by the road threw a water balloon that hit Sun Yue right on the shoulder.",
+   "ko": "길가의 아이가 물풍선을 던졌는데 쑨웨 어깨에 딱 맞았어요.",
+   "blank": "打中",
+   "src": "made"
   }
  ],
  "w|打仗": [
@@ -19881,6 +20537,22 @@
    "blank": "抱歉"
   }
  ],
+ "w|抵抗": [
+  {
+   "text": "新墙用了特殊材料，能抵抗很强的地震。",
+   "en": "The new walls use special materials that can withstand strong earthquakes.",
+   "ko": "새 벽에는 특수 자재를 써서 강한 지진도 견딜 수 있어요.",
+   "blank": "抵抗",
+   "src": "made"
+  },
+  {
+   "text": "刚出炉的面包香得让人无法抵抗，王芳一下子吃了两个。",
+   "en": "The freshly baked bread smelled irresistible, and Wang Fang ate two at once.",
+   "ko": "갓 구운 빵 냄새를 도저히 참을 수 없어서 왕팡은 단숨에 두 개를 먹었어요.",
+   "blank": "抵抗",
+   "src": "made"
+  }
+ ],
  "w|抵达": [
   {
    "text": "春游的大巴中午抵达公园，小明第一个跳下了车。",
@@ -20415,6 +21087,22 @@
    "en": "Try to reduce the losses.",
    "ko": "손실을 최대한 줄여.",
    "blank": "损失"
+  }
+ ],
+ "w|捡": [
+  {
+   "text": "马林在公园里捡了几片红叶，夹在书里当书签。",
+   "en": "Ma Lin picked up a few red leaves in the park and pressed them in a book as bookmarks.",
+   "ko": "마린은 공원에서 붉은 잎 몇 장을 주워 책갈피로 책에 끼웠어요.",
+   "blank": "捡",
+   "src": "made"
+  },
+  {
+   "text": "孙悦边跑边捡起路上的空瓶子，扔进垃圾桶。",
+   "en": "As she ran, Sun Yue picked up empty bottles from the road and tossed them into the bin.",
+   "ko": "쑨웨는 달리면서 길에 버려진 빈 병을 주워 쓰레기통에 넣었어요.",
+   "blank": "捡",
+   "src": "made"
   }
  ],
  "w|据": [
@@ -21211,6 +21899,22 @@
    "blank": "收"
   }
  ],
+ "w|收入": [
+  {
+   "text": "周强的收入比去年多了不少，打算给女儿买台电脑。",
+   "en": "Zhou Qiang's income is quite a bit higher than last year, and he plans to buy his daughter a computer.",
+   "ko": "저우창은 수입이 작년보다 꽤 늘어서 딸에게 컴퓨터를 사 줄 생각이에요.",
+   "blank": "收入",
+   "src": "made"
+  },
+  {
+   "text": "班上有个同学打算开小饭馆，想多一份收入。",
+   "en": "A classmate of Wang Fang's plans to open a small restaurant for some extra income.",
+   "ko": "왕팡 반의 한 수강생은 작은 식당을 열어 수입을 늘릴 생각이에요.",
+   "blank": "收入",
+   "src": "made"
+  }
+ ],
  "w|收到": [
   {
    "text": "我收到邮件了。",
@@ -21837,6 +22541,22 @@
    "blank": "整天"
   }
  ],
+ "w|整晚": [
+  {
+   "text": "暖气还没来，马林冻得整晚都没睡好。",
+   "en": "The heating hadn't come on yet, and Ma Lin was so cold she didn't sleep well all night.",
+   "ko": "난방이 아직 안 들어와서 마린은 추워서 밤새 잠을 설쳤어요.",
+   "blank": "整晚",
+   "src": "made"
+  },
+  {
+   "text": "跑完全程以后，孙悦的腿整晚都在疼。",
+   "en": "After finishing the whole course, Sun Yue's legs hurt all night.",
+   "ko": "풀코스를 뛰고 나서 쑨웨는 밤새 다리가 아팠어요.",
+   "blank": "整晚",
+   "src": "made"
+  }
+ ],
  "w|整理": [
   {
    "text": "我得整理一下房间。",
@@ -22285,6 +23005,22 @@
    "blank": "日子"
   }
  ],
+ "w|日期": [
+  {
+   "text": "马林在本子上记下了每年第一场雪的日期。",
+   "en": "Ma Lin writes down the date of each year's first snow in her notebook.",
+   "ko": "마린은 해마다 첫눈이 온 날짜를 공책에 적어 둬요.",
+   "blank": "日期",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把比赛的日期写在冰箱上的便条里。",
+   "en": "Sun Yue wrote the race date on a note on the fridge.",
+   "ko": "쑨웨는 대회 날짜를 냉장고에 붙인 메모에 적어 놓았어요.",
+   "blank": "日期",
+   "src": "made"
+  }
+ ],
  "w|旧": [
   {
    "text": "这件衣服太旧了。",
@@ -22497,6 +23233,22 @@
    "src": "made"
   }
  ],
+ "w|时机": [
+  {
+   "text": "马林觉得秋天是去爬山的最好时机，不冷也不热。",
+   "en": "Ma Lin thinks autumn is the best time to go hiking, neither cold nor hot.",
+   "ko": "마린은 가을이 덥지도 춥지도 않아서 등산하기 가장 좋은 때라고 생각해요.",
+   "blank": "时机",
+   "src": "made"
+  },
+  {
+   "text": "跑到第三十公里，孙悦觉得是加速的好时机。",
+   "en": "At the thirtieth kilometer, Sun Yue felt it was a good moment to speed up.",
+   "ko": "삼십 킬로미터 지점에서 쑨웨는 속도를 올릴 좋은 때라고 생각했어요.",
+   "blank": "时机",
+   "src": "made"
+  }
+ ],
  "w|时间": [
   {
    "text": "时间不够。",
@@ -22523,6 +23275,22 @@
    "en": "We'll talk about it tomorrow.",
    "ko": "내일 얘기하자.",
    "blank": "明天"
+  }
+ ],
+ "w|明早": [
+  {
+   "text": "听说明早会下霜，马林把阳台上的花搬进了屋。",
+   "en": "Hearing there'd be frost tomorrow morning, Ma Lin moved the flowers on the balcony indoors.",
+   "ko": "내일 아침에 서리가 내린다고 해서 마린은 베란다 화분을 집 안으로 들였어요.",
+   "blank": "明早",
+   "src": "made"
+  },
+  {
+   "text": "教练让孙悦明早六点到起点集合。",
+   "en": "The coach told Sun Yue to meet at the starting line at six tomorrow morning.",
+   "ko": "코치는 쑨웨에게 내일 아침 여섯 시에 출발선으로 모이라고 했어요.",
+   "blank": "明早",
+   "src": "made"
   }
  ],
  "w|明明": [
@@ -22581,6 +23349,22 @@
    "blank": "明白"
   }
  ],
+ "w|明确": [
+  {
+   "text": "马林给自己定了一个明确的目标：今年秋天要去看一次红叶。",
+   "en": "Ma Lin set herself a clear goal: to go see the autumn leaves once this fall.",
+   "ko": "마린은 올가을에 단풍 구경을 한 번 가겠다는 분명한 목표를 세웠어요.",
+   "blank": "明确",
+   "src": "made"
+  },
+  {
+   "text": "教练给孙悦定了明确的配速，每公里不能慢于六分钟。",
+   "en": "The coach gave Sun Yue a clear pace: no slower than six minutes per kilometer.",
+   "ko": "코치는 쑨웨에게 킬로미터당 육 분보다 늦으면 안 된다는 분명한 페이스를 정해 줬어요.",
+   "blank": "明确",
+   "src": "made"
+  }
+ ],
  "w|星星": [
   {
    "text": "今晚天上有很多星星。",
@@ -22623,6 +23407,22 @@
    "en": "Kids like looking at planets.",
    "ko": "아이들은 행성을 보는 걸 좋아해.",
    "blank": "星球"
+  }
+ ],
+ "w|春天": [
+  {
+   "text": "马林最喜欢春天，因为楼下的樱花会全部开放。",
+   "en": "Ma Lin loves spring most, because the cherry blossoms downstairs all come into bloom.",
+   "ko": "마린은 아래층 벚꽃이 다 피어서 봄을 제일 좋아해요.",
+   "blank": "春天",
+   "src": "made"
+  },
+  {
+   "text": "这场马拉松每年春天举行，路两边都是盛开的花。",
+   "en": "This marathon is held every spring, with flowers in full bloom along both sides of the road.",
+   "ko": "이 마라톤은 해마다 봄에 열려서 길 양쪽에 꽃이 활짝 피어 있어요.",
+   "blank": "春天",
+   "src": "made"
   }
  ],
  "w|昨天": [
@@ -23009,6 +23809,22 @@
    "blank": "有关"
   }
  ],
+ "w|有意": [
+  {
+   "text": "马林有意把阳台布置成一个小花园，春天好在那儿喝茶。",
+   "en": "Ma Lin intends to turn the balcony into a little garden so she can have tea there in spring.",
+   "ko": "마린은 베란다를 작은 정원으로 꾸며서 봄에 거기서 차를 마실 생각이에요.",
+   "blank": "有意",
+   "src": "made"
+  },
+  {
+   "text": "孙悦有意放慢速度，陪第一次参赛的朋友跑了一段。",
+   "en": "Sun Yue deliberately slowed down to run part of the way with a friend in her first race.",
+   "ko": "쑨웨는 일부러 속도를 늦춰 처음 대회에 나온 친구와 한동안 같이 달렸어요.",
+   "blank": "有意",
+   "src": "made"
+  }
+ ],
  "w|有意思": [
   {
    "text": "这话有意思。",
@@ -23337,6 +24153,22 @@
    "en": "There are not many chances left.",
    "ko": "기회가 별로 안 남았어.",
    "blank": "机会"
+  }
+ ],
+ "w|机关": [
+  {
+   "text": "周强他们正在给一个政府机关盖新的办公楼。",
+   "en": "Zhou Qiang's crew is building a new office building for a government agency.",
+   "ko": "저우창네 팀은 한 정부 기관의 새 청사를 짓고 있어요.",
+   "blank": "机关",
+   "src": "made"
+  },
+  {
+   "text": "王芳在机关上班，每天准时下班，所以有时间来上课。",
+   "en": "Wang Fang works at a government office and leaves on time every day, so she has time for class.",
+   "ko": "왕팡은 관공서에 다녀서 매일 제때 퇴근하니까 수업에 올 시간이 있어요.",
+   "blank": "机关",
+   "src": "made"
   }
  ],
  "w|机器": [
@@ -23715,6 +24547,22 @@
    "en": "The gun isn't loaded.",
    "ko": "총에 총알이 없어.",
    "blank": "枪"
+  }
+ ],
+ "w|架": [
+  {
+   "text": "马林把一架旧梯子靠在树上，去摘熟透的柿子。",
+   "en": "Ma Lin leaned an old ladder against the tree to pick the ripe persimmons.",
+   "ko": "마린은 낡은 사다리를 나무에 기대 놓고 잘 익은 감을 따러 올라갔어요.",
+   "blank": "架",
+   "src": "made"
+  },
+  {
+   "text": "一架无人机在赛道上空飞，拍下了孙悦冲线的瞬间。",
+   "en": "A drone flew over the course and captured the moment Sun Yue crossed the line.",
+   "ko": "드론 한 대가 코스 위를 날며 쑨웨가 결승선을 통과하는 순간을 찍었어요.",
+   "blank": "架",
+   "src": "made"
   }
  ],
  "w|某": [
@@ -24799,6 +25647,22 @@
    "blank": "比赛"
   }
  ],
+ "w|比起": [
+  {
+   "text": "比起坐办公室，周强更喜欢在工地上跑来跑去。",
+   "en": "Compared with sitting in an office, Zhou Qiang prefers running around the construction site.",
+   "ko": "사무실에 앉아 있는 것보다 저우창은 공사장을 뛰어다니는 걸 더 좋아해요.",
+   "blank": "比起",
+   "src": "made"
+  },
+  {
+   "text": "比起炒菜，王芳觉得做点心难多了。",
+   "en": "Compared with stir-frying, Wang Fang finds making pastries much harder.",
+   "ko": "볶음 요리에 비하면 왕팡은 디저트 만들기가 훨씬 어렵다고 느껴요.",
+   "blank": "比起",
+   "src": "made"
+  }
+ ],
  "w|比较": [
   {
    "text": "这个比较好。",
@@ -24933,6 +25797,22 @@
    "src": "made"
   }
  ],
+ "w|永不": [
+  {
+   "text": "周强常说，在工地上安全永不过时。",
+   "en": "Zhou Qiang often says that on a construction site, safety never goes out of date.",
+   "ko": "저우창은 공사장에서 안전은 절대 낡은 얘기가 되지 않는다고 자주 말해요.",
+   "blank": "永不",
+   "src": "made"
+  },
+  {
+   "text": "王芳下定决心，永不再把饺子煮破。",
+   "en": "Wang Fang made up her mind never to let her dumplings burst while boiling again.",
+   "ko": "왕팡은 다시는 만두를 삶다가 터뜨리지 않겠다고 굳게 다짐했어요.",
+   "blank": "永不",
+   "src": "made"
+  }
+ ],
  "w|永远": [
   {
    "text": "我永远记得你。",
@@ -24974,6 +25854,22 @@
    "en": "At lunch colleagues chatted about who had been proposed to lately, and Liu Fang listened closely.",
    "ko": "점심때 동료들이 최근 누가 청혼을 받았는지 얘기하자 류팡은 열심히 들었어요.",
    "blank": "求婚",
+   "src": "made"
+  }
+ ],
+ "w|汉字": [
+  {
+   "text": "图纸上的汉字太小，周强得戴上眼镜才看得清。",
+   "en": "The characters on the blueprints are so small that Zhou Qiang has to put on glasses to read them.",
+   "ko": "도면의 한자가 너무 작아서 저우창은 안경을 써야 똑똑히 보여요.",
+   "blank": "汉字",
+   "src": "made"
+  },
+  {
+   "text": "王芳在蛋糕上用奶油写了几个汉字，送给妈妈过生日。",
+   "en": "Wang Fang wrote a few Chinese characters in cream on a cake for her mom's birthday.",
+   "ko": "왕팡은 엄마 생신 선물로 케이크 위에 크림으로 한자 몇 자를 썼어요.",
+   "blank": "汉字",
    "src": "made"
   }
  ],
@@ -26323,6 +27219,22 @@
    "en": "Get familiar with the surroundings first.",
    "ko": "먼저 환경을 익혀 봐.",
    "blank": "熟悉"
+  }
+ ],
+ "w|燃烧": [
+  {
+   "text": "工地角落里有一堆木头在燃烧，周强赶紧拿灭火器冲了过去。",
+   "en": "A pile of wood was burning in a corner of the site, and Zhou Qiang rushed over with a fire extinguisher.",
+   "ko": "공사장 구석에서 나무 더미가 타고 있어서 저우창이 얼른 소화기를 들고 달려갔어요.",
+   "blank": "燃烧",
+   "src": "made"
+  },
+  {
+   "text": "老师提醒王芳，油锅一旦燃烧起来，千万不能用水浇。",
+   "en": "The teacher reminded Wang Fang that once a pan of oil catches fire, she must never pour water on it.",
+   "ko": "선생님은 왕팡에게 기름 냄비에 불이 붙으면 절대 물을 부으면 안 된다고 일러 줬어요.",
+   "blank": "燃烧",
+   "src": "made"
   }
  ],
  "w|爆": [
@@ -27901,6 +28813,22 @@
    "blank": "痛苦"
   }
  ],
+ "w|登": [
+  {
+   "text": "周强每天都要登上楼顶检查一遍。",
+   "en": "Zhou Qiang climbs up to the roof every day to check things over.",
+   "ko": "저우창은 매일 옥상에 올라가 한 번씩 점검해요.",
+   "blank": "登",
+   "src": "made"
+  },
+  {
+   "text": "王芳的照片登在了烹饪学校的宣传册上。",
+   "en": "Wang Fang's photo appeared in the cooking school's brochure.",
+   "ko": "왕팡의 사진이 요리 학교 홍보 책자에 실렸어요.",
+   "blank": "登",
+   "src": "made"
+  }
+ ],
  "w|白": [
   {
    "text": "墙上是白的。",
@@ -27927,6 +28855,22 @@
    "en": "There are many white tourists.",
    "ko": "백인 관광객이 많아.",
    "blank": "白人"
+  }
+ ],
+ "w|白天": [
+  {
+   "text": "入秋以后白天越来越短，马林下班时路灯已经亮了。",
+   "en": "After autumn sets in, the days grow shorter, and the streetlights are already on when Ma Lin gets off work.",
+   "ko": "가을에 접어들자 낮이 점점 짧아져서 마린이 퇴근할 때면 가로등이 벌써 켜져 있어요.",
+   "blank": "白天",
+   "src": "made"
+  },
+  {
+   "text": "马拉松从早上开始，孙悦要在白天最热之前跑完。",
+   "en": "The marathon starts in the morning, and Sun Yue wants to finish before the hottest part of the day.",
+   "ko": "마라톤은 아침에 시작해서 쑨웨는 낮에 가장 더워지기 전에 다 달리려고 해요.",
+   "blank": "白天",
+   "src": "made"
   }
  ],
  "w|白色": [
@@ -29717,6 +30661,22 @@
    "blank": "穿"
   }
  ],
+ "w|穿越": [
+  {
+   "text": "新修的公路要穿越一片山区，周强每天都在山里忙。",
+   "en": "The new road has to cross a mountain area, so Zhou Qiang is busy in the mountains every day.",
+   "ko": "새로 놓는 도로가 산악 지대를 가로질러야 해서 저우창은 매일 산에서 바빠요.",
+   "blank": "穿越",
+   "src": "made"
+  },
+  {
+   "text": "王芳下课后要穿越整个城区才能回到家。",
+   "en": "After class Wang Fang has to cross the whole city to get home.",
+   "ko": "왕팡은 수업이 끝나면 시내를 가로질러야 집에 갈 수 있어요.",
+   "blank": "穿越",
+   "src": "made"
+  }
+ ],
  "w|穿过": [
   {
    "text": "我们穿过了树林。",
@@ -29829,6 +30789,22 @@
    "en": "He stopped.",
    "ko": "그는 멈춰 섰어.",
    "blank": "站住"
+  }
+ ],
+ "w|竞争": [
+  {
+   "text": "好几家公司都想竞争这个项目，最后周强的公司赢了。",
+   "en": "Several companies wanted to compete for this project, and in the end Zhou Qiang's company won.",
+   "ko": "여러 회사가 이 사업을 따내려고 경쟁했는데 결국 저우창네 회사가 이겼어요.",
+   "blank": "竞争",
+   "src": "made"
+  },
+  {
+   "text": "下个月学校要办比赛，王芳想和同学们一起竞争一下。",
+   "en": "Next month the school is holding a contest, and Wang Fang wants to compete with her classmates.",
+   "ko": "다음 달 학교에서 대회를 여는데 왕팡은 친구들과 한번 겨뤄 보고 싶어요.",
+   "blank": "竞争",
+   "src": "made"
   }
  ],
  "w|竞选": [
@@ -30799,6 +31775,22 @@
    "blank": "给"
   }
  ],
+ "w|给予": [
+  {
+   "text": "公司给予周强这个小组一笔奖金，表扬他们提前完工。",
+   "en": "The company gave Zhou Qiang's team a bonus, praising them for finishing early.",
+   "ko": "회사는 공사를 일찍 끝낸 저우창 팀에게 보너스를 주며 칭찬했어요.",
+   "blank": "给予",
+   "src": "made"
+  },
+  {
+   "text": "老师对王芳的红烧肉给予了很高的评价。",
+   "en": "The teacher gave Wang Fang's braised pork very high praise.",
+   "ko": "선생님은 왕팡의 홍소육을 아주 높이 평가했어요.",
+   "blank": "给予",
+   "src": "made"
+  }
+ ],
  "w|绝不": [
   {
    "text": "我绝不放弃。",
@@ -30934,6 +31926,22 @@
    "en": "Lin Jing bought a ticket for the green carriage, which had good air conditioning and few people.",
    "ko": "린징은 초록색 칸 표를 샀는데 냉방도 잘되고 사람도 적었어요.",
    "blank": "绿色",
+   "src": "made"
+  }
+ ],
+ "w|编辑": [
+  {
+   "text": "一位杂志编辑来工地采访，想写写周强他们的故事。",
+   "en": "A magazine editor came to the site for an interview, wanting to write about Zhou Qiang's crew.",
+   "ko": "잡지 편집자가 공사장에 취재를 와서 저우창네 이야기를 쓰고 싶어 했어요.",
+   "blank": "编辑",
+   "src": "made"
+  },
+  {
+   "text": "王芳的同学是出版社的编辑，正在帮老师整理一本菜谱。",
+   "en": "Wang Fang's classmate is an editor at a publisher and is helping the teacher put together a cookbook.",
+   "ko": "왕팡의 수강생 친구는 출판사 편집자인데 선생님의 요리책 정리를 돕고 있어요.",
+   "blank": "编辑",
    "src": "made"
   }
  ],
@@ -31591,6 +32599,22 @@
    "blank": "职业"
   }
  ],
+ "w|职位": [
+  {
+   "text": "周强在工地干了十多年，终于升到了队长的职位。",
+   "en": "After more than ten years on site, Zhou Qiang finally rose to the position of team leader.",
+   "ko": "저우창은 공사장에서 십여 년 일한 끝에 드디어 반장 자리에 올랐어요.",
+   "blank": "职位",
+   "src": "made"
+  },
+  {
+   "text": "王芳在公司的职位不低，可是在厨房里还是个新手。",
+   "en": "Wang Fang holds a fairly high position at her company, but in the kitchen she's still a beginner.",
+   "ko": "왕팡은 회사에서 직위가 낮지 않지만 부엌에서는 아직 초보예요.",
+   "blank": "职位",
+   "src": "made"
+  }
+ ],
  "w|职责": [
   {
    "text": "王刚的职责是每天早上检查食材是否新鲜。",
@@ -31838,6 +32862,22 @@
    "en": "While Xiaoxue was singing, the backing music suddenly stopped, so she sang unaccompanied.",
    "ko": "샤오쉐가 노래하는데 배경 음악이 갑자기 끊겨서 무반주로 불렀어요.",
    "blank": "背景",
+   "src": "made"
+  }
+ ],
+ "w|胖": [
+  {
+   "text": "周强在工地干了一个夏天，比以前瘦多了，再也没人说他胖。",
+   "en": "After a summer on the site, Zhou Qiang is much thinner than before, and nobody calls him fat anymore.",
+   "ko": "저우창은 공사장에서 여름 한 철 일하고 전보다 훨씬 날씬해져서 이제 아무도 뚱뚱하다고 안 해요.",
+   "blank": "胖",
+   "src": "made"
+  },
+  {
+   "text": "王芳总担心吃多了会变胖，可是做的菜又舍不得浪费。",
+   "en": "Wang Fang always worries that eating too much will make her fat, but she can't bear to waste what she cooks.",
+   "ko": "왕팡은 많이 먹으면 살찔까 늘 걱정이지만 만든 음식을 버리기는 아까워해요.",
+   "blank": "胖",
    "src": "made"
   }
  ],
@@ -32245,6 +33285,22 @@
    "src": "made"
   }
  ],
+ "w|至今": [
+  {
+   "text": "马林小时候种的那棵树至今还在老家院子里。",
+   "en": "The tree Ma Lin planted as a child is still in the yard of her family home to this day.",
+   "ko": "마린이 어릴 때 심은 그 나무는 지금까지도 고향 집 마당에 있어요.",
+   "blank": "至今",
+   "src": "made"
+  },
+  {
+   "text": "孙悦第一次跑完全程的那张照片，至今还挂在墙上。",
+   "en": "The photo of Sun Yue finishing her first full marathon still hangs on the wall to this day.",
+   "ko": "쑨웨가 처음 풀코스를 완주한 사진은 지금까지도 벽에 걸려 있어요.",
+   "blank": "至今",
+   "src": "made"
+  }
+ ],
  "w|至少": [
   {
    "text": "至少试一次。",
@@ -32287,6 +33343,22 @@
    "en": "Lying down feels better.",
    "ko": "누우면 좀 나아.",
    "blank": "舒服"
+  }
+ ],
+ "w|舔": [
+  {
+   "text": "夏天太热，马林的小狗一直在舔水盆里的冰块。",
+   "en": "It was so hot in summer that Ma Lin's puppy kept licking the ice cubes in its water bowl.",
+   "ko": "여름이 너무 더워서 마린의 강아지는 물그릇 속 얼음을 계속 핥았어요.",
+   "blank": "舔",
+   "src": "made"
+  },
+  {
+   "text": "孙悦用舌头舔一下干裂的嘴唇，从志愿者手里接过一杯水。",
+   "en": "Sun Yue licked her cracked lips and took a cup of water from a volunteer.",
+   "ko": "쑨웨는 갈라진 입술을 핥고 자원봉사자에게서 물 한 컵을 받았어요.",
+   "blank": "舔",
+   "src": "made"
   }
  ],
  "w|舞": [
@@ -32767,6 +33839,22 @@
    "blank": "著名"
   }
  ],
+ "w|落": [
+  {
+   "text": "一阵风吹过，脚手架上的灰尘落了周强一身。",
+   "en": "A gust of wind blew past, and dust from the scaffolding fell all over Zhou Qiang.",
+   "ko": "바람이 한 번 불자 비계 위 먼지가 저우창 온몸에 떨어졌어요.",
+   "blank": "落",
+   "src": "made"
+  },
+  {
+   "text": "王芳一不小心，面粉落了一地。",
+   "en": "Wang Fang slipped up, and flour fell all over the floor.",
+   "ko": "왕팡이 실수하는 바람에 밀가루가 바닥에 온통 떨어졌어요.",
+   "blank": "落",
+   "src": "made"
+  }
+ ],
  "w|葬礼": [
   {
    "text": "很多人参加了葬礼。",
@@ -32793,6 +33881,22 @@
    "en": "She likes blue.",
    "ko": "그녀는 파란색을 좋아해.",
    "blank": "蓝色"
+  }
+ ],
+ "w|薪水": [
+  {
+   "text": "工地的薪水不算低，可是周强干得很辛苦。",
+   "en": "The pay on the site isn't low, but Zhou Qiang works very hard for it.",
+   "ko": "공사장 급여가 낮은 편은 아니지만 저우창은 아주 고생하며 일해요.",
+   "blank": "薪水",
+   "src": "made"
+  },
+  {
+   "text": "王芳用第一个月的薪水报了这个烹饪班。",
+   "en": "Wang Fang used her first month's salary to sign up for this cooking class.",
+   "ko": "왕팡은 첫 달 월급으로 이 요리 강좌에 등록했어요.",
+   "blank": "薪水",
+   "src": "made"
   }
  ],
  "w|虽然": [
@@ -33158,6 +34262,22 @@
    "en": "The news says the coach who fixed games is now a defendant awaiting the verdict.",
    "ko": "뉴스에 따르면 승부 조작을 한 그 코치는 피고가 돼서 판결을 기다리고 있대요.",
    "blank": "被告",
+   "src": "made"
+  }
+ ],
+ "w|被困": [
+  {
+   "text": "电梯突然停了，周强和两个工人被困在半空中。",
+   "en": "The lift suddenly stopped, and Zhou Qiang and two workers were stuck in midair.",
+   "ko": "승강기가 갑자기 멈춰서 저우창과 인부 둘이 공중에 갇혔어요.",
+   "blank": "被困",
+   "src": "made"
+  },
+  {
+   "text": "大雪下了一整夜，王芳被困在家里，烹饪课只好请假。",
+   "en": "It snowed all night, Wang Fang was stuck at home, and she had to skip cooking class.",
+   "ko": "밤새 큰눈이 내려 왕팡은 집에 갇혀서 요리 수업을 빠질 수밖에 없었어요.",
+   "blank": "被困",
    "src": "made"
   }
  ],
@@ -33689,6 +34809,22 @@
    "blank": "认为"
   }
  ],
+ "w|认出": [
+  {
+   "text": "周强戴着安全帽和口罩，老朋友差点没认出他来。",
+   "en": "Zhou Qiang was wearing a hard hat and a mask, and his old friend almost didn't recognize him.",
+   "ko": "저우창이 안전모와 마스크를 쓰고 있어서 옛 친구가 하마터면 못 알아볼 뻔했어요.",
+   "blank": "认出",
+   "src": "made"
+  },
+  {
+   "text": "王芳一尝就认出了汤里放的是什么香料。",
+   "en": "Wang Fang recognized which spice was in the soup with one taste.",
+   "ko": "왕팡은 한 입 먹자마자 국에 무슨 향신료를 넣었는지 알아챘어요.",
+   "blank": "认出",
+   "src": "made"
+  }
+ ],
  "w|认得": [
   {
    "text": "周强在街上采访时，一位老人认得他，说常看他的文章。",
@@ -34079,6 +35215,22 @@
    "blank": "词"
   }
  ],
+ "w|词典": [
+  {
+   "text": "周强的包里总放着一本小词典，遇到不认识的字就查。",
+   "en": "Zhou Qiang always keeps a small dictionary in his bag and looks up characters he doesn't know.",
+   "ko": "저우창은 가방에 늘 작은 사전을 넣어 두고 모르는 글자가 나오면 찾아봐요.",
+   "blank": "词典",
+   "src": "made"
+  },
+  {
+   "text": "王芳看到不懂的菜名，就拿出手机里的词典查一查。",
+   "en": "When Wang Fang sees a dish name she doesn't understand, she looks it up in the dictionary on her phone.",
+   "ko": "왕팡은 모르는 요리 이름이 나오면 휴대폰 사전을 꺼내 찾아봐요.",
+   "blank": "词典",
+   "src": "made"
+  }
+ ],
  "w|试": [
   {
    "text": "试一下。",
@@ -34391,6 +35543,22 @@
    "en": "Please read aloud.",
    "ko": "크게 읽어 주세요.",
    "blank": "读"
+  }
+ ],
+ "w|读书": [
+  {
+   "text": "周强年轻时没机会读书，现在晚上去夜校补课。",
+   "en": "Zhou Qiang had no chance to study when he was young, so now he takes night classes.",
+   "ko": "저우창은 젊을 때 공부할 기회가 없어서 요즘 밤에 야간 학교에 다녀요.",
+   "blank": "读书",
+   "src": "made"
+  },
+  {
+   "text": "王芳在国外读书的时候，常常想念妈妈做的菜。",
+   "en": "When Wang Fang studied abroad, she often missed her mom's cooking.",
+   "ko": "왕팡은 외국에서 공부할 때 엄마가 해 준 음식이 자주 그리웠어요.",
+   "blank": "读书",
+   "src": "made"
   }
  ],
  "w|课": [
@@ -34831,6 +35999,22 @@
    "src": "made"
   }
  ],
+ "w|资源": [
+  {
+   "text": "工地上的水和电都是重要资源，周强从不让人浪费。",
+   "en": "Water and electricity are important resources on the site, and Zhou Qiang never lets anyone waste them.",
+   "ko": "공사장에서 물과 전기는 중요한 자원이라 저우창은 아무도 낭비하지 못하게 해요.",
+   "blank": "资源",
+   "src": "made"
+  },
+  {
+   "text": "老师教大家怎么用剩菜，不浪费资源。",
+   "en": "The teacher showed everyone how to use leftovers so as not to waste resources.",
+   "ko": "선생님은 남은 음식을 활용해 자원을 낭비하지 않는 법을 가르쳐 줬어요.",
+   "blank": "资源",
+   "src": "made"
+  }
+ ],
  "w|资金": [
   {
    "text": "图书馆因为资金不够，今年没能买多少新书。",
@@ -35005,6 +36189,22 @@
    "en": "Don't rush me out.",
    "ko": "나를 쫓아내지 마.",
    "blank": "赶"
+  }
+ ],
+ "w|赶到": [
+  {
+   "text": "马林赶到山顶时，太阳正好从云里出来。",
+   "en": "When Ma Lin reached the summit, the sun was just coming out from the clouds.",
+   "ko": "마린이 산꼭대기에 도착했을 때 마침 해가 구름 사이로 나왔어요.",
+   "blank": "赶到",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的家人提前赶到终点，举着牌子给她加油。",
+   "en": "Sun Yue's family got to the finish early and held up signs to cheer her on.",
+   "ko": "쑨웨 가족이 미리 결승선에 와서 팻말을 들고 응원했어요.",
+   "blank": "赶到",
+   "src": "made"
   }
  ],
  "w|赶快": [
@@ -36290,6 +37490,22 @@
    "en": "The new footbridge connects the food market with the subway station.",
    "ko": "새로 놓은 육교가 시장과 지하철역을 이어 줘요.",
    "blank": "连接",
+   "src": "made"
+  }
+ ],
+ "w|迟": [
+  {
+   "text": "今年的春天来得迟，马林三月还穿着厚外套。",
+   "en": "Spring came late this year, and Ma Lin was still wearing a thick coat in March.",
+   "ko": "올해는 봄이 늦게 와서 마린은 삼월에도 두꺼운 외투를 입고 있었어요.",
+   "blank": "迟",
+   "src": "made"
+  },
+  {
+   "text": "孙悦报名报得太迟，差一点就没有名额了。",
+   "en": "Sun Yue signed up too late and almost didn't get a spot.",
+   "ko": "쑨웨는 너무 늦게 신청해서 하마터면 자리가 없을 뻔했어요.",
+   "blank": "迟",
    "src": "made"
   }
  ],
@@ -38039,6 +39255,22 @@
    "blank": "降落"
   }
  ],
+ "w|限制": [
+  {
+   "text": "为了安全，工地限制外人随便进出。",
+   "en": "For safety, the site restricts outsiders from coming and going freely.",
+   "ko": "안전을 위해 공사장은 외부인이 마음대로 드나드는 걸 제한해요.",
+   "blank": "限制",
+   "src": "made"
+  },
+  {
+   "text": "医生让王芳限制吃糖，所以她做蛋糕时少放了一半糖。",
+   "en": "The doctor told Wang Fang to limit sugar, so she put in half the sugar when baking the cake.",
+   "ko": "의사가 왕팡에게 설탕을 줄이라고 해서 케이크를 만들 때 설탕을 반만 넣었어요.",
+   "blank": "限制",
+   "src": "made"
+  }
+ ],
  "w|陛下": [
   {
    "text": "陛下请下令。",
@@ -38587,6 +39819,22 @@
    "blank": "靠近"
   }
  ],
+ "w|面临": [
+  {
+   "text": "换季的时候，马林常常面临不知道穿什么的问题。",
+   "en": "When the seasons change, Ma Lin often faces the problem of not knowing what to wear.",
+   "ko": "계절이 바뀔 때면 마린은 뭘 입어야 할지 모르는 문제에 자주 부딪혀요.",
+   "blank": "面临",
+   "src": "made"
+  },
+  {
+   "text": "跑到一半，孙悦面临着放弃还是坚持的选择。",
+   "en": "Halfway through, Sun Yue faced the choice of giving up or keeping going.",
+   "ko": "절반쯤 달렸을 때 쑨웨는 포기할지 버틸지 선택의 갈림길에 섰어요.",
+   "blank": "面临",
+   "src": "made"
+  }
+ ],
  "w|面具": [
   {
    "text": "图书馆的展柜里摆着几副非洲部落的木头面具。",
@@ -38773,6 +40021,22 @@
    "src": "made"
   }
  ],
+ "w|顾问": [
+  {
+   "text": "公司请来一位安全顾问，给周强他们上了一堂课。",
+   "en": "The company brought in a safety consultant to give Zhou Qiang and the others a lesson.",
+   "ko": "회사가 안전 고문을 모셔 와 저우창네 팀에게 강의를 해 줬어요.",
+   "blank": "顾问",
+   "src": "made"
+  },
+  {
+   "text": "王芳白天在一家公司当财务顾问，晚上来学做菜。",
+   "en": "Wang Fang works as a financial consultant at a company by day and learns to cook in the evenings.",
+   "ko": "왕팡은 낮에는 회사에서 재무 고문으로 일하고 저녁엔 요리를 배우러 와요.",
+   "blank": "顾问",
+   "src": "made"
+  }
+ ],
  "w|顿": [
   {
    "text": "小明今天上课迟到，被班主任狠狠批评了一顿。",
@@ -38786,6 +40050,22 @@
    "en": "Moving day was exhausting, so that evening Lili treated the workers to a proper meal.",
    "ko": "이사하는 날 너무 힘들어서 리리는 저녁에 일꾼들에게 한 끼 푸짐하게 대접했어요.",
    "blank": "顿",
+   "src": "made"
+  }
+ ],
+ "w|领域": [
+  {
+   "text": "周强在建筑这个领域干了大半辈子。",
+   "en": "Zhou Qiang has spent most of his life working in the field of construction.",
+   "ko": "저우창은 건축 분야에서 반평생을 일했어요.",
+   "blank": "领域",
+   "src": "made"
+  },
+  {
+   "text": "王芳原来是做金融的，现在对餐饮领域也产生了兴趣。",
+   "en": "Wang Fang originally worked in finance, but now she's also become interested in the food business.",
+   "ko": "왕팡은 원래 금융 일을 했는데 이제는 외식 분야에도 관심이 생겼어요.",
+   "blank": "领域",
    "src": "made"
   }
  ],
