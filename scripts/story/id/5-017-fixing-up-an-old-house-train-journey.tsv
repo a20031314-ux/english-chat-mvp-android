@@ -8,7 +8,7 @@ A	Saat hujan, Andi menaruh ember di bawah atap yang bocor.	When it rains, Andi p
 A	Andi memakai sikat kawat untuk mengikis cat lama di pagar.	Andi uses a wire brush to scrape the old paint off the fence.	안디는 철사 솔로 울타리의 오래된 페인트를 긁어내요.	sikat=sikat
 A	Andi mencari pembuka kaleng untuk membuka cat yang baru dibeli.	Andi looks for a can opener to open the newly bought paint.	안디는 새로 산 페인트를 따려고 깡통 따개를 찾아요.	pembuka=pembuka
 A	Andi menambah ventilasi di kamar mandi supaya dindingnya tidak berjamur.	Andi added ventilation to the bathroom so the walls wouldn't get moldy.	안디는 벽에 곰팡이가 피지 않게 욕실에 환기구를 더 냈어요.	ventilasi=ventilasi
-A	Koridor sempit di rumah itu dicat putih agar terlihat lebih luas.	The narrow corridor in the house was painted white to look more spacious.	그 집의 좁은 복도는 더 넓어 보이도록 하얗게 칠했어요.	koridor=koridor
+A	Andi mengecat koridor sempit di rumah itu dengan warna putih agar terlihat lebih luas.	Andi painted the narrow corridor in the house white to make it look more spacious.	안디는 집의 좁은 복도를 더 넓어 보이도록 하얗게 칠했어요.	koridor=koridor
 A	Andi memasang pendingin ruangan di kamar tidur utama.	Andi installed an air conditioner in the main bedroom.	안디는 안방에 에어컨을 달았어요.	pendingin=pendingin
 A	Andi membeli cairan pembersih khusus untuk menghilangkan jamur di keramik.	Andi bought a special cleaning liquid to remove mold from the tiles.	안디는 타일의 곰팡이를 없애려고 전용 세정제를 샀어요.	pembersih=pembersih
 A	Andi membawa senter untuk memeriksa kabel di bawah lantai kayu.	Andi brought a flashlight to check the wiring under the wooden floor.	안디는 나무 바닥 밑 전선을 살피려고 손전등을 가져갔어요.	senter=senter
@@ -49,7 +49,7 @@ B	Dewi lupa membawa sikat gigi untuk perjalanan semalam.	Dewi forgot to bring a 
 B	Pramugari kereta meminjamkan pembuka botol kepada Dewi.	The train attendant lent Dewi a bottle opener.	열차 승무원이 데위에게 병따개를 빌려줬어요.	pembuka=pembuka
 B	Gerbong tua itu tidak punya ventilasi yang baik, jadi udaranya pengap.	The old carriage has poor ventilation, so the air is stuffy.	그 낡은 객차는 환기가 잘 안 돼서 공기가 답답해요.	ventilasi=ventilasi
 B	Dewi berjalan di koridor kereta menuju gerbong makan.	Dewi walks along the train corridor to the dining car.	데위는 식당칸으로 가려고 열차 복도를 걸어요.	koridor=koridor
-B	Pendingin di gerbong ekonomi terlalu dingin, jadi Dewi memakai jaket.	The air conditioning in the economy carriage is too cold, so Dewi wears a jacket.	일반칸 냉방이 너무 세서 데위는 재킷을 입어요.	pendingin=pendingin
+B	Udara dari pendingin di gerbong ekonomi terlalu dingin, jadi Dewi memakai jaket.	The air from the air conditioner in the economy carriage is too cold, so Dewi wears a jacket.	일반칸 냉방이 너무 세서 데위는 재킷을 입어요.	pendingin=pendingin
 B	Petugas pembersih menyapu lantai gerbong setiap kali kereta berhenti lama.	A cleaner sweeps the carriage floor every time the train stops for a long time.	열차가 오래 설 때마다 청소원이 객차 바닥을 쓸어요.	pembersih=pembersih
 B	Saat kereta masuk terowongan, anak kecil di depan Dewi menyalakan senter.	When the train entered a tunnel, the little child in front of Dewi switched on a flashlight.	열차가 터널에 들어가자 데위 앞의 아이가 손전등을 켰어요.	senter=senter
 B	Dari jendela, Dewi melihat rumah-rumah kayu dengan loteng tinggi.	From the window, Dewi sees wooden houses with high lofts.	데위는 창밖으로 다락이 높은 나무집들을 봐요.	loteng=loteng
