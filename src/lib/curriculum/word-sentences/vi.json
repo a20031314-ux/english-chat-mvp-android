@@ -2471,6 +2471,22 @@
    "src": "made"
   }
  ],
+ "w|bàng hoàng": [
+  {
+   "text": "Minh viết rằng anh bàng hoàng khi nghe tin thầy giáo cũ qua đời.",
+   "en": "Minh wrote that he was stunned to hear their old teacher had passed away.",
+   "ko": "민은 옛 선생님이 돌아가셨다는 소식을 듣고 망연자실했다고 썼어요.",
+   "blank": "bàng hoàng",
+   "src": "made"
+  },
+  {
+   "text": "Lan bàng hoàng khi thấy cây phượng già trước ngõ bị bão quật đổ.",
+   "en": "Lan was shocked to see the old flame tree by the alley knocked down by the storm.",
+   "ko": "란은 골목 앞 오래된 봉황목이 태풍에 쓰러진 걸 보고 충격을 받았어요.",
+   "blank": "bàng hoàng",
+   "src": "made"
+  }
+ ],
  "w|bằng mọi giá": [
   {
    "text": "Chủ thầu muốn bằng mọi giá phải cất nóc trước Tết, nên Hùng tăng ca liên tục.",
@@ -3331,6 +3347,22 @@
    "src": "made"
   }
  ],
+ "w|bất chợt": [
+  {
+   "text": "Đọc lại thư cũ, Minh bất chợt nhớ mùi hoa sữa trước cổng trường.",
+   "en": "Rereading old letters, Minh suddenly remembered the scent of milkwood flowers by the school gate.",
+   "ko": "옛 편지를 다시 읽다가 민은 문득 학교 정문 앞 꽃 냄새가 떠올랐어요.",
+   "blank": "bất chợt",
+   "src": "made"
+  },
+  {
+   "text": "Đang đi dạo, Lan bất chợt ngửi thấy mùi hoa sữa báo hiệu thu về.",
+   "en": "While walking, Lan suddenly caught the scent of milkwood blossoms announcing autumn.",
+   "ko": "산책하다가 란은 가을을 알리는 꽃향기를 문득 맡았어요.",
+   "blank": "bất chợt",
+   "src": "made"
+  }
+ ],
  "w|bắt cóc": [
   {
    "text": "Bắt cóc là tội rất nghiêm trọng.",
@@ -3558,6 +3590,22 @@
    "en": "Back home, Ngọc gets straight to cleaning the fish while it's fresh.",
    "ko": "집에 오자마자 응옥은 싱싱할 때 생선 손질에 들어가요.",
    "blank": "bắt tay vào",
+   "src": "made"
+  }
+ ],
+ "w|bất thình lình": [
+  {
+   "text": "Minh kể rằng hôm ấy trời bất thình lình đổ mưa, lá thư anh định gửi ướt sũng.",
+   "en": "Minh said that day it suddenly poured, and the letter he meant to send got soaked.",
+   "ko": "민은 그날 갑자기 비가 쏟아져서 부치려던 편지가 흠뻑 젖었다고 했어요.",
+   "blank": "bất thình lình",
+   "src": "made"
+  },
+  {
+   "text": "Trời đang nắng, gió bấc bất thình lình thổi về khiến Lan phải quay về lấy áo khoác.",
+   "en": "It was sunny when the north wind suddenly blew in, and Lan had to go back for her jacket.",
+   "ko": "햇볕이 나다가 북풍이 갑자기 불어서 란은 외투를 가지러 돌아가야 했어요.",
+   "blank": "bất thình lình",
    "src": "made"
   }
  ],
@@ -4865,6 +4913,22 @@
    "en": "Dad's coming home late tonight.",
    "ko": "아빠가 오늘 늦게 들어와.",
    "blank": "bố"
+  }
+ ],
+ "w|bổ": [
+  {
+   "text": "Minh kể với bạn rằng con trai anh đã biết tự bổ dưa hấu cho cả nhà.",
+   "en": "Minh told his friend that his son can now cut open a watermelon for the whole family by himself.",
+   "ko": "민은 아들이 이제 혼자 수박을 쪼개 온 가족에게 나눠 준다고 친구에게 말했어요.",
+   "blank": "bổ",
+   "src": "made"
+  },
+  {
+   "text": "Mùa thu, Lan bổ quả bưởi đầu tiên trong vườn mời cả nhà.",
+   "en": "In autumn, Lan cut open the first pomelo from the garden for the whole family.",
+   "ko": "가을에 란은 마당에서 딴 첫 포멜로를 갈라 온 가족에게 나눠 줬어요.",
+   "blank": "bổ",
+   "src": "made"
   }
  ],
  "w|bỏ": [
@@ -6205,6 +6269,22 @@
    "src": "made"
   }
  ],
+ "w|bủn xỉn": [
+  {
+   "text": "Minh vẫn cười khi nhớ ông chủ quán bủn xỉn không bao giờ cho thêm nước mắm.",
+   "en": "Minh still laughs remembering the stingy shop owner who never gave extra fish sauce.",
+   "ko": "민은 생선 소스 한 방울 더 주지 않던 인색한 가게 주인을 떠올리면 아직도 웃음이 나요.",
+   "blank": "bủn xỉn",
+   "src": "made"
+  },
+  {
+   "text": "Ông hàng xóm bủn xỉn không cho Lan hái một quả hồng nào dù cây trĩu quả.",
+   "en": "The stingy old neighbor wouldn't let Lan pick a single persimmon even though the tree was heavy with fruit.",
+   "ko": "인색한 이웃 할아버지는 감이 주렁주렁 열렸는데도 란에게 하나도 못 따게 했어요.",
+   "blank": "bủn xỉn",
+   "src": "made"
+  }
+ ],
  "w|bụng": [
   {
    "text": "Bụng mình đói quá rồi.",
@@ -7331,6 +7411,22 @@
    "src": "made"
   }
  ],
+ "w|cái tôi": [
+  {
+   "text": "Minh thú nhận rằng hồi trẻ cái tôi quá lớn đã làm anh mất nhiều bạn.",
+   "en": "Minh confessed that when he was young his big ego cost him many friends.",
+   "ko": "민은 젊을 때 자존심이 너무 세서 친구를 많이 잃었다고 고백했어요.",
+   "blank": "cái tôi",
+   "src": "made"
+  },
+  {
+   "text": "Lan học cách đặt cái tôi xuống để làm lành với chị gái trước Tết.",
+   "en": "Lan learned to set her ego aside to make up with her older sister before Tet.",
+   "ko": "란은 설 전에 언니와 화해하려고 자존심을 내려놓는 법을 배웠어요.",
+   "blank": "cái tôi",
+   "src": "made"
+  }
+ ],
  "w|cam": [
   {
    "text": "Cam này ngọt và nhiều nước.",
@@ -7846,6 +7942,22 @@
    "en": "That hardworking housekeeper cleans twenty rooms every morning, and Linh really respects her.",
    "ko": "그 부지런한 청소 직원은 매일 아침 방 스무 개를 치워서 린은 무척 감탄해요.",
    "blank": "cần cù",
+   "src": "made"
+  }
+ ],
+ "w|can đảm": [
+  {
+   "text": "Minh khen bạn đã can đảm bỏ việc ổn định để theo nghề vẽ.",
+   "en": "Minh praised his friend for being brave enough to quit a stable job to become a painter.",
+   "ko": "민은 안정된 직장을 그만두고 그림을 택한 친구의 용기를 칭찬했어요.",
+   "blank": "can đảm",
+   "src": "made"
+  },
+  {
+   "text": "Lan rất can đảm khi dầm mưa đưa bà cụ hàng xóm đi viện giữa mùa lũ.",
+   "en": "Lan was very brave, braving the rain to take the old neighbor to the hospital during flood season.",
+   "ko": "란은 홍수철에 비를 맞으며 이웃 할머니를 병원에 모셔 갈 만큼 용감했어요.",
+   "blank": "can đảm",
    "src": "made"
   }
  ],
@@ -10165,6 +10277,22 @@
    "src": "made"
   }
  ],
+ "w|chẻ": [
+  {
+   "text": "Minh nhớ những buổi chiều hai đứa giúp ông nội chẻ củi sau nhà.",
+   "en": "Minh misses the afternoons when the two of them helped Grandpa split firewood behind the house.",
+   "ko": "민은 둘이서 할아버지를 도와 집 뒤에서 장작을 패던 오후가 그리워요.",
+   "blank": "chẻ",
+   "src": "made"
+  },
+  {
+   "text": "Trước mùa đông, Lan nhờ hàng xóm chẻ củi để sưởi.",
+   "en": "Before winter, Lan asks a neighbor to split firewood for heating.",
+   "ko": "겨울이 오기 전에 란은 이웃에게 땔감을 쪼개 달라고 부탁해요.",
+   "blank": "chẻ",
+   "src": "made"
+  }
+ ],
  "w|chế độ": [
   {
    "text": "Tổng thống đã bỏ chế độ sở hữu nô lệ.",
@@ -10299,6 +10427,22 @@
    "en": "I'll wait for you at the gate.",
    "ko": "문 앞에서 기다릴게.",
    "blank": "chị"
+  }
+ ],
+ "w|chỉ cần": [
+  {
+   "text": "Minh viết: chỉ cần cậu trả lời một dòng thôi, mình cũng vui rồi.",
+   "en": "Minh wrote: even a single line in reply from you would make me happy.",
+   "ko": "민은 네가 한 줄만 답장해 줘도 기쁘겠다고 썼어요.",
+   "blank": "chỉ cần",
+   "src": "made"
+  },
+  {
+   "text": "Lan bảo con: chỉ cần mặc ấm và ăn no, mùa đông sẽ qua nhanh thôi.",
+   "en": "Lan told her child: just dress warmly and eat well, and winter will pass quickly.",
+   "ko": "란은 아이에게 따뜻하게 입고 배불리 먹기만 하면 겨울은 금방 지나간다고 했어요.",
+   "blank": "chỉ cần",
+   "src": "made"
   }
  ],
  "w|chỉ có": [
@@ -11594,6 +11738,22 @@
    "en": "At thirty kilometers, Trang felt dizzy, so she walked for a bit.",
    "ko": "삼십 킬로미터쯤 달렸을 때 짱은 어지러워서 잠깐 걸었어요.",
    "blank": "choáng",
+   "src": "made"
+  }
+ ],
+ "w|choáng váng": [
+  {
+   "text": "Minh kể rằng lần đầu đi máy bay, anh choáng váng suốt cả chuyến.",
+   "en": "Minh said that on his first flight he felt dizzy the whole trip.",
+   "ko": "민은 처음 비행기를 탔을 때 내내 어지러웠다고 했어요.",
+   "blank": "choáng váng",
+   "src": "made"
+  },
+  {
+   "text": "Nắng hè gay gắt khiến Lan choáng váng khi đi chợ về.",
+   "en": "The harsh summer sun made Lan dizzy on her way back from the market.",
+   "ko": "뜨거운 여름 햇볕에 란은 시장에서 돌아오다가 어지러웠어요.",
+   "blank": "choáng váng",
    "src": "made"
   }
  ],
@@ -17587,6 +17747,22 @@
    "src": "made"
   }
  ],
+ "w|đập phá": [
+  {
+   "text": "Minh kể rằng căn nhà hoang đầu làng đã bị ai đó đập phá tan hoang.",
+   "en": "Minh said the abandoned house at the edge of the village had been wrecked by someone.",
+   "ko": "민은 마을 어귀 빈집을 누군가 마구 부숴 놓았다고 전했어요.",
+   "blank": "đập phá",
+   "src": "made"
+  },
+  {
+   "text": "Cơn bão cuối thu đập phá cả dãy hàng quán ven biển nơi Lan hay ghé.",
+   "en": "The late autumn storm wrecked the row of seaside stalls where Lan often stops by.",
+   "ko": "늦가을 태풍이 란이 자주 들르던 바닷가 가게들을 다 망가뜨렸어요.",
+   "blank": "đập phá",
+   "src": "made"
+  }
+ ],
  "w|đáp ứng": [
   {
    "text": "Trưởng phòng hỏi Hùng liệu anh có đáp ứng được hạn chót cuối tuần không.",
@@ -17600,6 +17776,22 @@
    "en": "A small feast tray can hardly satisfy the tastes of Hương's whole extended family.",
    "ko": "작은 상차림으로는 흐엉네 대가족 입맛을 다 맞추기 어려워요.",
    "blank": "đáp ứng",
+   "src": "made"
+  }
+ ],
+ "w|đập vỡ": [
+  {
+   "text": "Minh xin lỗi bạn vì hồi nhỏ đã đá bóng đập vỡ cửa kính nhà bạn.",
+   "en": "Minh apologized to his friend for breaking his window with a football when they were kids.",
+   "ko": "민은 어릴 때 공을 차서 친구 집 유리창을 깬 일을 사과했어요.",
+   "blank": "đập vỡ",
+   "src": "made"
+  },
+  {
+   "text": "Mưa đá đêm qua đập vỡ mấy chậu cây ngoài ban công nhà Lan.",
+   "en": "Last night's hail smashed several flower pots on Lan's balcony.",
+   "ko": "어젯밤 우박이 란네 발코니 화분 몇 개를 깨뜨렸어요.",
+   "blank": "đập vỡ",
    "src": "made"
   }
  ],
@@ -24165,6 +24357,22 @@
    "src": "made"
   }
  ],
+ "w|gan dạ": [
+  {
+   "text": "Minh vẫn nhớ cậu bạn gan dạ đã nhảy xuống ao cứu một đứa bé.",
+   "en": "Minh still remembers the fearless friend who jumped into the pond to save a little kid.",
+   "ko": "민은 연못에 뛰어들어 아이를 구한 대담한 친구를 아직 기억해요.",
+   "blank": "gan dạ",
+   "src": "made"
+  },
+  {
+   "text": "Ông nội kể cho Lan nghe về những người đánh cá gan dạ ra khơi giữa mùa gió chướng.",
+   "en": "Grandpa told Lan about fearless fishermen who set out to sea in the season of contrary winds.",
+   "ko": "할아버지는 란에게 역풍 부는 철에 바다로 나가던 대담한 어부들 이야기를 해 줬어요.",
+   "blank": "gan dạ",
+   "src": "made"
+  }
+ ],
  "w|gần đây": [
   {
    "text": "Gần đây mình ít ngủ đủ giấc.",
@@ -25802,6 +26010,22 @@
    "en": "The road up to the village was quite rough, but Trang refused to turn back.",
    "ko": "마을로 올라가는 길은 꽤 험난했지만 짱은 절대 돌아가지 않았어요.",
    "blank": "gian nan",
+   "src": "made"
+  }
+ ],
+ "w|gian xảo": [
+  {
+   "text": "Trong thư gửi bạn cũ, Minh kể về một ông chủ gian xảo từng quỵt lương anh.",
+   "en": "In a letter to an old friend, Minh told about a deceitful boss who once cheated him out of his wages.",
+   "ko": "옛 친구에게 보낸 편지에서 민은 예전에 월급을 떼먹은 간사한 사장 이야기를 했어요.",
+   "blank": "gian xảo",
+   "src": "made"
+  },
+  {
+   "text": "Lan kể về người bán hàng gian xảo bán áo len cũ bằng giá áo mới đầu mùa đông.",
+   "en": "Lan told about a deceitful seller who sold old sweaters at new prices at the start of winter.",
+   "ko": "란은 초겨울에 헌 스웨터를 새것 값에 판 간사한 장사꾼 이야기를 했어요.",
+   "blank": "gian xảo",
    "src": "made"
   }
  ],
@@ -28791,6 +29015,22 @@
    "src": "tatoeba:13657098/leucammieuvu en:13656886/mervert1"
   }
  ],
+ "w|hèn nhát": [
+  {
+   "text": "Minh tự nhận mình đã quá hèn nhát khi không dám xin lỗi bạn sớm hơn.",
+   "en": "Minh admitted he had been too cowardly to apologize to his friend sooner.",
+   "ko": "민은 친구에게 더 일찍 사과하지 못한 자기가 너무 비겁했다고 인정했어요.",
+   "blank": "hèn nhát",
+   "src": "made"
+  },
+  {
+   "text": "Lan bảo con đừng hèn nhát trốn tránh, sai thì nhận lỗi.",
+   "en": "Lan told her child not to hide like a coward; if you're wrong, admit it.",
+   "ko": "란은 아이에게 비겁하게 숨지 말고 잘못했으면 인정하라고 했어요.",
+   "blank": "hèn nhát",
+   "src": "made"
+  }
+ ],
  "w|heo": [
   {
    "text": "Trong chuồng có con heo rất to.",
@@ -30877,6 +31117,22 @@
    "src": "made"
   }
  ],
+ "w|hốt hoảng": [
+  {
+   "text": "Minh viết rằng anh từng hốt hoảng khi đánh rơi lá thư đầu tiên của bạn xuống sông.",
+   "en": "Minh wrote that he once panicked when he dropped his friend's first letter into the river.",
+   "ko": "민은 친구의 첫 편지를 강물에 떨어뜨렸을 때 기겁했었다고 썼어요.",
+   "blank": "hốt hoảng",
+   "src": "made"
+  },
+  {
+   "text": "Gió mùa về đêm, Lan hốt hoảng chạy ra đóng cửa sổ.",
+   "en": "The monsoon wind arrived at night, and Lan rushed in a panic to shut the windows.",
+   "ko": "밤에 계절풍이 불어닥치자 란은 허둥지둥 창문을 닫으러 달려갔어요.",
+   "blank": "hốt hoảng",
+   "src": "made"
+  }
+ ],
  "w|hư": [
   {
    "text": "Sữa bị hư làm bụng tôi khó chịu.",
@@ -31076,6 +31332,22 @@
    "en": "Even adults are afraid of needles, let alone the five-year-old boy Hương is caring for.",
    "ko": "어른도 주삿바늘을 무서워하는데 하물며 흐엉이 돌보는 다섯 살 꼬마는 어떻겠어요.",
    "blank": "huống hồ",
+   "src": "made"
+  }
+ ],
+ "w|hướng về": [
+  {
+   "text": "Minh viết rằng dù sống xa, lòng anh vẫn luôn hướng về quê nhà.",
+   "en": "Minh wrote that though he lives far away, his heart always turns toward home.",
+   "ko": "민은 멀리 살아도 마음은 늘 고향을 향한다고 썼어요.",
+   "blank": "hướng về",
+   "src": "made"
+  },
+  {
+   "text": "Lan đặt chậu hoa hướng về phía nắng sớm khi xuân sang.",
+   "en": "When spring arrives, Lan turns the flower pot toward the morning sun.",
+   "ko": "봄이 오면 란은 화분을 아침 햇살 쪽으로 돌려놓아요.",
+   "blank": "hướng về",
    "src": "made"
   }
  ],
@@ -32101,6 +32373,22 @@
    "en": "She studies fairly hard.",
    "ko": "그 애 공부를 꽤 열심히 해.",
    "blank": "khá"
+  }
+ ],
+ "w|khá giả": [
+  {
+   "text": "Minh vui mừng báo tin gia đình bạn giờ đã khá giả hơn nhiều.",
+   "en": "Minh happily reported that his friend's family is now much better off.",
+   "ko": "민은 친구네 집이 이제 훨씬 넉넉해졌다는 소식을 반갑게 전했어요.",
+   "blank": "khá giả",
+   "src": "made"
+  },
+  {
+   "text": "Nhà Lan ngày trước không khá giả, mùa đông chỉ có một chiếc chăn cho ba chị em.",
+   "en": "Lan's family wasn't well-off back then, with just one blanket for three sisters in winter.",
+   "ko": "란네 집은 예전에 넉넉하지 않아서 겨울에 세 자매가 이불 하나를 같이 덮었어요.",
+   "blank": "khá giả",
+   "src": "made"
   }
  ],
  "w|khá là": [
@@ -34769,6 +35057,22 @@
    "en": "Awful — traffic was jammed for a whole hour.",
    "ko": "끔찍해, 한 시간이나 길이 막혔어.",
    "blank": "Kinh khủng"
+  }
+ ],
+ "w|kinh ngạc": [
+  {
+   "text": "Minh kinh ngạc khi đọc tin bạn đã leo lên tận đỉnh núi cao nhất nước.",
+   "en": "Minh was amazed to read that his friend had climbed all the way to the country's highest peak.",
+   "ko": "민은 친구가 나라에서 제일 높은 산꼭대기까지 올랐다는 소식에 놀랐어요.",
+   "blank": "kinh ngạc",
+   "src": "made"
+  },
+  {
+   "text": "Lan kinh ngạc vì đàn chim di cư năm nay về sớm cả tháng.",
+   "en": "Lan was amazed that the migrating birds came back a whole month early this year.",
+   "ko": "란은 올해 철새 떼가 한 달이나 일찍 돌아와서 놀랐어요.",
+   "blank": "kinh ngạc",
+   "src": "made"
   }
  ],
  "w|kinh nghiệm": [
@@ -37785,6 +38089,22 @@
    "blank": "Lời khuyên"
   }
  ],
+ "w|lời mời": [
+  {
+   "text": "Minh gửi kèm lời mời dự đám cưới của em gái trong thư.",
+   "en": "Minh enclosed an invitation to his younger sister's wedding with the letter.",
+   "ko": "민은 편지에 여동생 결혼식 초대장을 같이 넣었어요.",
+   "blank": "lời mời",
+   "src": "made"
+  },
+  {
+   "text": "Lan nhận được lời mời đi hái dâu ở Đà Lạt vào cuối xuân.",
+   "en": "Lan received an invitation to go strawberry picking in Da Lat at the end of spring.",
+   "ko": "란은 늦봄에 달랏으로 딸기 따러 가자는 초대를 받았어요.",
+   "blank": "lời mời",
+   "src": "made"
+  }
+ ],
  "w|lỗi mốt": [
   {
    "text": "Đồng nghiệp hay trêu chiếc áo khoác của Phong đã lỗi mốt từ lâu.",
@@ -39211,6 +39531,22 @@
    "en": "She doesn't like bargaining when shopping.",
    "ko": "그녀는 쇼핑할 때 흥정하는 걸 안 좋아해.",
    "blank": "mặc cả"
+  }
+ ],
+ "w|mặc cảm": [
+  {
+   "text": "Minh viết cho bạn rằng anh đã bỏ được mặc cảm về giọng nói quê mình.",
+   "en": "Minh wrote to his friend that he had gotten over his complex about his hometown accent.",
+   "ko": "민은 고향 말투에 대한 열등감을 떨쳐 냈다고 친구에게 썼어요.",
+   "blank": "mặc cảm",
+   "src": "made"
+  },
+  {
+   "text": "Lan từng mặc cảm vì da sạm sau mỗi mùa hè.",
+   "en": "Lan used to be self-conscious about her skin tanning after every summer.",
+   "ko": "란은 여름마다 피부가 까매져서 콤플렉스가 있었어요.",
+   "blank": "mặc cảm",
+   "src": "made"
   }
  ],
  "w|mặc dầu": [
@@ -40832,6 +41168,22 @@
    "en": "The neighbor who just had a baby tells Mai breast milk gives babies natural immunity.",
    "ko": "막 아기를 낳은 이웃 언니는 모유가 아기에게 자연 면역을 준다고 마이에게 말해요.",
    "blank": "miễn dịch",
+   "src": "made"
+  }
+ ],
+ "w|miễn là": [
+  {
+   "text": "Minh viết rằng anh sẵn sàng đi xa thăm bạn, miễn là bạn còn nhớ đến anh.",
+   "en": "Minh wrote that he's ready to travel far to visit, as long as his friend still remembers him.",
+   "ko": "민은 친구가 자기를 기억해 주기만 하면 먼 길도 찾아가겠다고 썼어요.",
+   "blank": "miễn là",
+   "src": "made"
+  },
+  {
+   "text": "Lan thích mùa nào cũng được, miễn là không phải nồm ẩm.",
+   "en": "Lan is fine with any season, as long as it isn't the damp, muggy kind.",
+   "ko": "란은 눅눅한 철만 아니면 어느 계절이든 좋아요.",
+   "blank": "miễn là",
    "src": "made"
   }
  ],
@@ -42578,6 +42930,22 @@
    "en": "Mai's mother packed her a box of candied coconut to share with coworkers.",
    "ko": "엄마는 마이가 동료들에게 나눠 주라고 코코넛 정과 한 통을 싸 줬어요.",
    "blank": "mứt",
+   "src": "made"
+  }
+ ],
+ "w|mưu mô": [
+  {
+   "text": "Minh nhắc lại chuyện cậu bạn cùng lớp mưu mô hay đổ lỗi cho người khác.",
+   "en": "Minh brought up the scheming classmate who always blamed others.",
+   "ko": "민은 늘 남 탓을 하던 꾀 많은 반 친구 이야기를 다시 꺼냈어요.",
+   "blank": "mưu mô",
+   "src": "made"
+  },
+  {
+   "text": "Trong truyện cổ Lan đọc cho con, con cáo mưu mô lừa đàn gà khi thu sang.",
+   "en": "In the folktale Lan read to her child, the scheming fox tricks the hens when autumn comes.",
+   "ko": "란이 아이에게 읽어 준 옛이야기에서 꾀 많은 여우가 가을에 닭들을 속여요.",
+   "blank": "mưu mô",
    "src": "made"
   }
  ],
@@ -45034,6 +45402,22 @@
    "en": "The ducklings ran bewildered after Hà all around the yard.",
    "ko": "새끼 오리들이 어리둥절하게 마당 여기저기 하를 따라다녔어요.",
    "blank": "ngơ ngác",
+   "src": "made"
+  }
+ ],
+ "w|ngỡ ngàng": [
+  {
+   "text": "Minh viết rằng anh ngỡ ngàng khi nhận được thư bạn sau bao năm im lặng.",
+   "en": "Minh wrote that he was taken aback to receive his friend's letter after so many years of silence.",
+   "ko": "민은 오랜 침묵 끝에 친구 편지를 받고 어리둥절했다고 썼어요.",
+   "blank": "ngỡ ngàng",
+   "src": "made"
+  },
+  {
+   "text": "Lan ngỡ ngàng thấy hồ sen trước nhà đã nở kín chỉ sau một đêm đầu hạ.",
+   "en": "Lan was amazed to see the lotus pond in front of her house fully bloomed after a single early-summer night.",
+   "ko": "란은 초여름 하룻밤 새 집 앞 연못에 연꽃이 가득 핀 걸 보고 어리둥절했어요.",
+   "blank": "ngỡ ngàng",
    "src": "made"
   }
  ],
@@ -47984,6 +48368,22 @@
    "en": "Next time Lan will definitely check the goods before paying.",
    "ko": "다음엔 란이 꼭 물건을 확인하고 돈을 낼 거예요.",
    "blank": "nhất định",
+   "src": "made"
+  }
+ ],
+ "w|nhát gan": [
+  {
+   "text": "Minh trêu bạn hồi nhỏ nhát gan, đến con gián cũng sợ.",
+   "en": "Minh teased his friend for being timid as a child, scared even of cockroaches.",
+   "ko": "민은 어릴 때 바퀴벌레도 무서워하던 겁쟁이였다고 친구를 놀렸어요.",
+   "blank": "nhát gan",
+   "src": "made"
+  },
+  {
+   "text": "Cô con gái nhát gan của Lan không dám ngủ một mình những đêm giông.",
+   "en": "Lan's timid daughter doesn't dare sleep alone on stormy nights.",
+   "ko": "겁 많은 란의 딸은 천둥 치는 밤엔 혼자 못 자요.",
+   "blank": "nhát gan",
    "src": "made"
   }
  ],
@@ -56033,6 +56433,22 @@
    "src": "made"
   }
  ],
+ "w|rộng lượng": [
+  {
+   "text": "Minh viết rằng thầy chủ nhiệm cũ vẫn rộng lượng như xưa, lần nào gặp cũng mời cơm.",
+   "en": "Minh wrote that their old homeroom teacher is as generous as ever, inviting him to a meal every time they meet.",
+   "ko": "민은 옛 담임 선생님이 여전히 너그러워서 만날 때마다 밥을 사 주신다고 썼어요.",
+   "blank": "rộng lượng",
+   "src": "made"
+  },
+  {
+   "text": "Bà chủ nhà rộng lượng cho Lan nợ tiền điện qua mùa lạnh.",
+   "en": "The generous landlady let Lan owe the electricity bill through the cold season.",
+   "ko": "너그러운 집주인 할머니가 추운 철 동안 란에게 전기세를 미뤄 줬어요.",
+   "blank": "rộng lượng",
+   "src": "made"
+  }
+ ],
  "w|rộng rãi": [
   {
    "text": "Lán nghỉ của công nhân khá rộng rãi và thoáng mát.",
@@ -56246,6 +56662,22 @@
    "en": "Presenting to investors for the first time, Hương's hand trembled as she held the microphone.",
    "ko": "처음으로 투자자 앞에서 발표할 때 흐엉의 손이 마이크를 쥔 채 떨렸어요.",
    "blank": "run rẩy",
+   "src": "made"
+  }
+ ],
+ "w|run sợ": [
+  {
+   "text": "Minh kể rằng lần đầu đứng trên sân khấu, anh run sợ đến mức quên hết lời.",
+   "en": "Minh said the first time he stood on stage, he was so frightened he forgot all his lines.",
+   "ko": "민은 처음 무대에 섰을 때 너무 떨려서 대사를 다 잊어버렸다고 했어요.",
+   "blank": "run sợ",
+   "src": "made"
+  },
+  {
+   "text": "Tiếng sấm đầu mùa làm con mèo của Lan run sợ trốn dưới gầm giường.",
+   "en": "The first thunder of the season made Lan's cat tremble and hide under the bed.",
+   "ko": "첫 천둥소리에 란의 고양이가 겁에 질려 침대 밑에 숨었어요.",
+   "blank": "run sợ",
    "src": "made"
   }
  ],
@@ -58705,6 +59137,22 @@
    "src": "made"
   }
  ],
+ "w|sự chân thành": [
+  {
+   "text": "Lá thư của Minh ngắn nhưng đầy sự chân thành.",
+   "en": "Minh's letter was short but full of sincerity.",
+   "ko": "민의 편지는 짧았지만 진심이 가득했어요.",
+   "blank": "sự chân thành",
+   "src": "made"
+  },
+  {
+   "text": "Tấm thiệp mừng xuân Lan tự tay làm chứa đựng sự chân thành của cô.",
+   "en": "The spring greeting card Lan made by hand carries her sincerity.",
+   "ko": "란이 손수 만든 새봄 카드에는 그녀의 진심이 담겨 있어요.",
+   "blank": "sự chân thành",
+   "src": "made"
+  }
+ ],
  "w|sự chú ý": [
   {
    "text": "Tiếng còi báo động thu hút sự chú ý của cả phân xưởng.",
@@ -58831,6 +59279,22 @@
    "src": "made"
   }
  ],
+ "w|sự giả dối": [
+  {
+   "text": "Minh viết rằng anh ghét nhất sự giả dối, nên thư nào cũng nói thật lòng.",
+   "en": "Minh wrote that what he hates most is dishonesty, so every letter speaks from the heart.",
+   "ko": "민은 거짓을 가장 싫어해서 편지마다 속마음을 그대로 쓴다고 했어요.",
+   "blank": "sự giả dối",
+   "src": "made"
+  },
+  {
+   "text": "Lan chán sự giả dối của những lời quảng cáo về mùa hè mát mẻ ở khu nghỉ dưỡng.",
+   "en": "Lan is tired of the falseness of resort ads promising a cool summer.",
+   "ko": "란은 시원한 여름을 약속하는 리조트 광고의 거짓에 질렸어요.",
+   "blank": "sự giả dối",
+   "src": "made"
+  }
+ ],
  "w|sự giúp đỡ": [
   {
    "text": "Chúng tôi biết ơn sự giúp đỡ của bạn.",
@@ -58911,6 +59375,22 @@
    "src": "made"
   }
  ],
+ "w|sự khiêm tốn": [
+  {
+   "text": "Minh khâm phục sự khiêm tốn của bạn dù bạn đã thành bác sĩ giỏi.",
+   "en": "Minh admires his friend's modesty even though he has become an excellent doctor.",
+   "ko": "민은 친구가 훌륭한 의사가 됐는데도 겸손한 게 존경스러워요.",
+   "blank": "sự khiêm tốn",
+   "src": "made"
+  },
+  {
+   "text": "Lan học được sự khiêm tốn từ cây lúa chín cúi đầu mỗi mùa gặt.",
+   "en": "Lan learned modesty from the ripe rice that bows its head each harvest season.",
+   "ko": "란은 추수 때마다 고개 숙이는 익은 벼에서 겸손함을 배웠어요.",
+   "blank": "sự khiêm tốn",
+   "src": "made"
+  }
+ ],
  "w|sự khinh bỉ": [
   {
    "text": "Quang vẫn nhớ ánh mắt đầy sự khinh bỉ của gã bán hàng khi cậu hỏi giá.",
@@ -58956,6 +59436,22 @@
    "en": "Through perseverance, Mai found a complete set of dishes identical to her grandmother's.",
    "ko": "마이는 끈기 있게 찾아다닌 끝에 외할머니 것과 똑같은 그릇 세트를 다 모았어요.",
    "blank": "sự kiên trì",
+   "src": "made"
+  }
+ ],
+ "w|sự kiêu ngạo": [
+  {
+   "text": "Minh nhận ra sự kiêu ngạo của mình đã khiến hai người xa nhau suốt mười năm.",
+   "en": "Minh realized his own arrogance had kept the two of them apart for ten years.",
+   "ko": "민은 자기 오만함 때문에 둘이 십 년 동안 멀어졌다는 걸 깨달았어요.",
+   "blank": "sự kiêu ngạo",
+   "src": "made"
+  },
+  {
+   "text": "Lan kể với con về sự kiêu ngạo của chú ve chỉ biết hát suốt mùa hè.",
+   "en": "Lan told her child about the arrogance of the cicada who only sang all summer.",
+   "ko": "란은 여름 내내 노래만 부르던 매미의 오만함을 아이에게 들려줬어요.",
+   "blank": "sự kiêu ngạo",
    "src": "made"
   }
  ],
@@ -59221,6 +59717,22 @@
    "en": "There's a big lion at the zoo.",
    "ko": "동물원에 큰 사자가 한 마리 있어.",
    "blank": "sư tử"
+  }
+ ],
+ "w|sự tự ti": [
+  {
+   "text": "Minh thừa nhận trong thư rằng sự tự ti từng khiến anh không dám phát biểu trong lớp.",
+   "en": "Minh admitted in the letter that his low self-esteem once kept him from speaking up in class.",
+   "ko": "민은 열등감 때문에 수업 시간에 발표를 못 했었다고 편지에서 털어놓았어요.",
+   "blank": "sự tự ti",
+   "src": "made"
+  },
+  {
+   "text": "Mùa xuân đến, Lan quyết định bỏ lại sự tự ti và đăng ký lớp hát.",
+   "en": "When spring came, Lan decided to leave her low self-esteem behind and signed up for singing class.",
+   "ko": "봄이 오자 란은 열등감을 떨치고 노래 수업에 등록하기로 했어요.",
+   "blank": "sự tự ti",
+   "src": "made"
   }
  ],
  "w|sự tự tin": [
@@ -59540,6 +60052,22 @@
    "en": "Trang wrote about rhino poaching for their horns in Africa.",
    "ko": "짱은 아프리카에서 뿔을 얻으려고 코뿔소를 밀렵하는 문제에 대해 썼어요.",
    "blank": "sừng",
+   "src": "made"
+  }
+ ],
+ "w|sửng sốt": [
+  {
+   "text": "Minh viết rằng anh sửng sốt khi thấy quê nhà giờ có cả đường cao tốc.",
+   "en": "Minh wrote that he was astonished to see his hometown now even has a highway.",
+   "ko": "민은 고향에 고속도로까지 생긴 걸 보고 깜짝 놀랐다고 썼어요.",
+   "blank": "sửng sốt",
+   "src": "made"
+  },
+  {
+   "text": "Lan sửng sốt khi thấy tuyết rơi trên đỉnh núi gần nhà lần đầu tiên.",
+   "en": "Lan was astonished to see snow fall on the mountaintop near her home for the first time.",
+   "ko": "란은 집 근처 산꼭대기에 처음으로 눈이 내린 걸 보고 깜짝 놀랐어요.",
+   "blank": "sửng sốt",
    "src": "made"
   }
  ],
@@ -61255,6 +61783,22 @@
    "src": "made"
   }
  ],
+ "w|tệ hại": [
+  {
+   "text": "Minh viết rằng mùa mưa năm nay ở thành phố thật tệ hại, đường nào cũng ngập.",
+   "en": "Minh wrote that this year's rainy season in the city was terrible, with every street flooded.",
+   "ko": "민은 올해 도시의 우기가 정말 끔찍해서 길마다 물에 잠겼다고 썼어요.",
+   "blank": "tệ hại",
+   "src": "made"
+  },
+  {
+   "text": "Thời tiết giao mùa thật tệ hại, Lan bị ho suốt hai tuần.",
+   "en": "The weather at the turn of the season was awful, and Lan coughed for two weeks.",
+   "ko": "환절기 날씨가 너무 고약해서 란은 이 주 내내 기침을 했어요.",
+   "blank": "tệ hại",
+   "src": "made"
+  }
+ ],
  "w|té ngã": [
   {
    "text": "Minh đá bóng trong giờ ra chơi rồi té ngã, trầy cả đầu gối.",
@@ -61648,6 +62192,22 @@
    "en": "When Hương was in the hospital, the whole team came to visit her.",
    "ko": "흐엉이 입원했을 때 팀원들이 우르르 병문안을 왔어요.",
    "blank": "thăm hỏi",
+   "src": "made"
+  }
+ ],
+ "w|tham lam": [
+  {
+   "text": "Minh kể về người họ hàng tham lam đã tranh giành mảnh đất của bà ngoại.",
+   "en": "Minh told about a greedy relative who fought over Grandma's plot of land.",
+   "ko": "민은 외할머니 땅을 두고 다툰 욕심 많은 친척 이야기를 했어요.",
+   "blank": "tham lam",
+   "src": "made"
+  },
+  {
+   "text": "Lan kể chuyện cổ tích về người anh tham lam đòi cây khế trĩu quả.",
+   "en": "Lan told the fairy tale about the greedy older brother who demanded the fruit-laden starfruit tree.",
+   "ko": "란은 열매 가득한 스타프루트 나무를 탐낸 욕심 많은 형 이야기를 들려줬어요.",
+   "blank": "tham lam",
    "src": "made"
   }
  ],
@@ -67211,6 +67771,22 @@
    "blank": "Tình cảm"
   }
  ],
+ "w|tình cờ": [
+  {
+   "text": "Minh viết rằng tuần trước anh tình cờ gặp cô giáo dạy văn ở chợ.",
+   "en": "Minh wrote that last week he ran into their literature teacher at the market by chance.",
+   "ko": "민은 지난주 시장에서 국어 선생님을 우연히 만났다고 썼어요.",
+   "blank": "tình cờ",
+   "src": "made"
+  },
+  {
+   "text": "Lan tình cờ thấy cành đào đầu tiên nở trên đường đi làm.",
+   "en": "On the way to work, Lan happened to see the first peach branch in bloom.",
+   "ko": "란은 출근길에 처음 핀 복숭아꽃 가지를 우연히 봤어요.",
+   "blank": "tình cờ",
+   "src": "made"
+  }
+ ],
  "w|tình hình": [
   {
    "text": "Tình hình giao thông hôm nay khá tắc.",
@@ -67767,6 +68343,22 @@
    "en": "I went to bed early last night.",
    "ko": "어제 저녁에 일찍 잤어.",
    "blank": "Tối"
+  }
+ ],
+ "w|tồi": [
+  {
+   "text": "Minh viết rằng anh không giận bạn chuyện cũ, chỉ trách mình đã cư xử quá tồi.",
+   "en": "Minh wrote that he isn't angry with his friend about the past, only blames himself for behaving so badly.",
+   "ko": "민은 지난 일로 친구에게 화나지 않았고 자기가 너무 못되게 굴었던 것만 탓한다고 썼어요.",
+   "blank": "tồi",
+   "src": "made"
+  },
+  {
+   "text": "Chiếc ô rẻ tiền Lan mua đầu mùa mưa chất lượng tồi, gãy ngay hôm thứ hai.",
+   "en": "The cheap umbrella Lan bought at the start of the rainy season was poor quality and broke on the second day.",
+   "ko": "란이 우기 초에 산 싸구려 우산은 질이 나빠서 이튿날 바로 부러졌어요.",
+   "blank": "tồi",
+   "src": "made"
   }
  ],
  "w|tỏi": [
@@ -69988,6 +70580,22 @@
    "en": "Subtract the rent from the total.",
    "ko": "총액에서 집세를 빼.",
    "blank": "trừ đi",
+   "src": "made"
+  }
+ ],
+ "w|trừ khi": [
+  {
+   "text": "Minh hẹn bạn sẽ về quê dịp Tết, trừ khi công ty bắt anh trực.",
+   "en": "Minh promised his friend he'd go home for Tet, unless the company makes him work.",
+   "ko": "민은 회사에서 당직을 시키지 않는 한 설에 고향에 가겠다고 친구와 약속했어요.",
+   "blank": "trừ khi",
+   "src": "made"
+  },
+  {
+   "text": "Lan nói sẽ đi ngắm lá vàng cuối tuần, trừ khi trời trở lạnh đột ngột.",
+   "en": "Lan said she'll go see the yellow leaves this weekend, unless it turns cold suddenly.",
+   "ko": "란은 갑자기 추워지지 않는 한 주말에 단풍을 보러 가겠다고 했어요.",
+   "blank": "trừ khi",
    "src": "made"
   }
  ],
@@ -73935,6 +74543,22 @@
    "blank": "vì sao"
   }
  ],
+ "w|vị tha": [
+  {
+   "text": "Minh cảm ơn bạn vì tấm lòng vị tha, đã tha thứ cho anh sau lần cãi nhau năm ấy.",
+   "en": "Minh thanked his friend for his selfless heart in forgiving him after that fight years ago.",
+   "ko": "민은 그해 다툰 뒤 자기를 용서해 준 너그러운 마음에 친구에게 고마워했어요.",
+   "blank": "vị tha",
+   "src": "made"
+  },
+  {
+   "text": "Mùa đông nào Lan cũng đi phát chăn cho người vô gia cư, ai cũng khen cô vị tha.",
+   "en": "Every winter Lan hands out blankets to the homeless, and everyone praises her selflessness.",
+   "ko": "란은 겨울마다 노숙인에게 담요를 나눠 줘서 다들 이타적이라고 칭찬해요.",
+   "blank": "vị tha",
+   "src": "made"
+  }
+ ],
  "w|vì thế": [
   {
    "text": "Hôm nay mưa to, chợ vắng khách, vì thế Long được mua rẻ hơn.",
@@ -76045,6 +76669,22 @@
    "ko": "그건 다시 생각해 봐야 할 것 같아요.",
    "blank": "xem xét",
    "src": "tatoeba:10669069/quoctrong018 en:6253195/CK"
+  }
+ ],
+ "w|xén": [
+  {
+   "text": "Minh kể rằng mỗi sáng chủ nhật anh lại ra vườn xén hàng rào cây như bố ngày xưa.",
+   "en": "Minh said every Sunday morning he goes out to trim the hedge like his father used to.",
+   "ko": "민은 일요일 아침마다 옛날 아버지처럼 마당에 나가 생울타리를 다듬는다고 했어요.",
+   "blank": "xén",
+   "src": "made"
+  },
+  {
+   "text": "Đầu xuân, Lan xén bớt cành hoa giấy cho cây ra nụ mới.",
+   "en": "In early spring, Lan trims the bougainvillea branches so the plant puts out new buds.",
+   "ko": "초봄에 란은 부겐빌레아 가지를 쳐서 새 꽃봉오리가 나게 해요.",
+   "blank": "xén",
+   "src": "made"
   }
  ],
  "w|xếp": [
