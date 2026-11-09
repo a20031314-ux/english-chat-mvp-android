@@ -209,6 +209,22 @@
    "blank": "一周"
   }
  ],
+ "w|一团糟": [
+  {
+   "text": "楼上漏水，周强家的厨房被弄得一团糟。",
+   "en": "A leak upstairs left Zhou Qiang's kitchen in a total mess.",
+   "ko": "위층에서 물이 새서 저우창네 부엌이 엉망진창이 됐어요.",
+   "blank": "一团糟",
+   "src": "made"
+  },
+  {
+   "text": "梅雨季节一来，衣服晾不干，王芳的屋里一团糟。",
+   "en": "Once the rainy season comes, clothes won't dry and Wang Fang's room becomes a mess.",
+   "ko": "장마철이 오면 빨래가 안 말라서 왕팡의 방이 엉망이 돼요.",
+   "blank": "一团糟",
+   "src": "made"
+  }
+ ],
  "w|一块儿": [
   {
    "text": "赵磊和隔壁卖鱼的常常一块儿吃午饭。",
@@ -6267,6 +6283,22 @@
    "blank": "优秀"
   }
  ],
+ "w|优良": [
+  {
+   "text": "周强说，这栋老楼当年的建筑质量很优良。",
+   "en": "Zhou Qiang says this old building was built to excellent quality back in the day.",
+   "ko": "저우창은 이 오래된 건물이 그때 아주 튼튼하게 지어졌다고 말해요.",
+   "blank": "优良",
+   "src": "made"
+  },
+  {
+   "text": "王芳买了品种优良的种子，准备开春播种。",
+   "en": "Wang Fang bought high-quality seeds to sow when spring comes.",
+   "ko": "왕팡은 품종이 좋은 씨앗을 사서 봄이 오면 뿌릴 준비를 해요.",
+   "blank": "优良",
+   "src": "made"
+  }
+ ],
  "w|优雅": [
   {
    "text": "张伟的婚礼上，新娘一身白纱，显得格外优雅。",
@@ -7027,6 +7059,22 @@
    "en": "Where do you live?",
    "ko": "어디 살아?",
    "blank": "住"
+  }
+ ],
+ "w|住口": [
+  {
+   "text": "两家吵得正凶，周强大喊一声：“都住口！”",
+   "en": "The two families were in a heated argument when Zhou Qiang shouted, \"Both of you, shut up!\"",
+   "ko": "두 집이 한창 심하게 싸우는데 저우창이 \"다들 그만해요!\" 하고 소리쳤어요.",
+   "blank": "住口",
+   "src": "made"
+  },
+  {
+   "text": "弟弟一直抱怨天冷，王芳终于忍不住让弟弟住口。",
+   "en": "Her younger brother kept complaining about the cold until Wang Fang finally told him to be quiet.",
+   "ko": "남동생이 계속 춥다고 투덜대자 왕팡은 결국 참지 못하고 그만하라고 했어요.",
+   "blank": "住口",
+   "src": "made"
   }
  ],
  "w|住处": [
@@ -12473,6 +12521,22 @@
    "src": "made"
   }
  ],
+ "w|分辨": [
+  {
+   "text": "周强能从脚步声分辨出是哪个邻居回来了。",
+   "en": "Zhou Qiang can tell which neighbor has come home from the sound of the footsteps.",
+   "ko": "저우창은 발소리만 듣고도 어느 이웃이 돌아왔는지 구별할 수 있어요.",
+   "blank": "分辨",
+   "src": "made"
+  },
+  {
+   "text": "春天的花开得太多，王芳分辨不出哪些是桃花。",
+   "en": "So many flowers bloom in spring that Wang Fang can't tell which ones are peach blossoms.",
+   "ko": "봄꽃이 너무 많이 피어서 왕팡은 어느 게 복숭아꽃인지 구별을 못 해요.",
+   "blank": "分辨",
+   "src": "made"
+  }
+ ],
  "w|分配": [
   {
    "text": "物业按面积分配每家的停车位。",
@@ -14743,6 +14807,22 @@
    "src": "made"
   }
  ],
+ "w|升高": [
+  {
+   "text": "夏天一到，顶楼的室温就升高得特别快。",
+   "en": "As soon as summer comes, the temperature on the top floor rises especially fast.",
+   "ko": "여름이 오면 꼭대기 층 실내 온도가 유난히 빨리 올라가요.",
+   "blank": "升高",
+   "src": "made"
+  },
+  {
+   "text": "进入五月，气温一天天升高。",
+   "en": "Once May arrives, the temperature rises day by day.",
+   "ko": "오월에 들어서면 기온이 하루하루 올라가요.",
+   "blank": "升高",
+   "src": "made"
+  }
+ ],
  "w|午夜": [
   {
    "text": "过了午夜，窗外开始飘雪，马林披着毯子看了好一会儿。",
@@ -16165,6 +16245,22 @@
    "src": "made"
   }
  ],
+ "w|发光": [
+  {
+   "text": "楼道里新装的感应灯，一有人走过就会发光。",
+   "en": "The new motion-sensor lights in the stairwell light up whenever someone walks by.",
+   "ko": "계단에 새로 단 센서등은 누가 지나가기만 하면 불이 켜져요.",
+   "blank": "发光",
+   "src": "made"
+  },
+  {
+   "text": "夏夜里，萤火虫在草丛中一闪一闪地发光。",
+   "en": "On summer nights, fireflies glow and flicker in the grass.",
+   "ko": "여름밤이면 반딧불이가 풀숲에서 반짝반짝 빛나요.",
+   "blank": "发光",
+   "src": "made"
+  }
+ ],
  "w|发出": [
   {
    "text": "他发出一声喊叫。",
@@ -16757,6 +16853,22 @@
    "en": "I sensed the change.",
    "ko": "변화를 느꼈어.",
    "blank": "变化"
+  }
+ ],
+ "w|变形": [
+  {
+   "text": "被大雪压过之后，车棚的顶有点变形了。",
+   "en": "After being weighed down by heavy snow, the bike shed roof was a little bent out of shape.",
+   "ko": "폭설에 눌린 뒤로 자전거 보관소 지붕이 조금 휘었어요.",
+   "blank": "变形",
+   "src": "made"
+  },
+  {
+   "text": "天太热，王芳放在车里的塑料瓶都变形了。",
+   "en": "It was so hot that the plastic bottles Wang Fang left in the car got warped.",
+   "ko": "날이 너무 더워서 왕팡이 차에 둔 플라스틱 병이 다 찌그러졌어요.",
+   "blank": "变形",
+   "src": "made"
   }
  ],
  "w|变得": [
@@ -26427,6 +26539,22 @@
    "src": "made"
   }
  ],
+ "w|嫩": [
+  {
+   "text": "邻居送来一把刚摘的豆角，特别嫩。",
+   "en": "A neighbor brought over a bunch of freshly picked green beans that were very tender.",
+   "ko": "이웃이 갓 딴 줄콩 한 묶음을 가져왔는데 아주 연했어요.",
+   "blank": "嫩",
+   "src": "made"
+  },
+  {
+   "text": "春天刚长出来的柳叶很嫩。",
+   "en": "The willow leaves that have just come out in spring are very tender.",
+   "ko": "봄에 막 돋은 버들잎은 아주 여려요.",
+   "blank": "嫩",
+   "src": "made"
+  }
+ ],
  "w|子女": [
   {
    "text": "聊到子女教育，大家的话一下子多了起来。",
@@ -27238,6 +27366,22 @@
    "en": "This clinic positions itself as a dental practice suited to children.",
    "ko": "이 치과는 스스로를 아이들에게 맞는 치과로 자리매김했어요.",
    "blank": "定位",
+   "src": "made"
+  }
+ ],
+ "w|定期": [
+  {
+   "text": "小区物业定期来检查消防设备。",
+   "en": "The building management comes regularly to inspect the fire equipment.",
+   "ko": "단지 관리사무소는 정기적으로 소방 설비를 점검하러 와요.",
+   "blank": "定期",
+   "src": "made"
+  },
+  {
+   "text": "换季时，王芳会定期给阳台上的花施肥。",
+   "en": "When the seasons change, Wang Fang regularly fertilizes the flowers on her balcony.",
+   "ko": "계절이 바뀔 때 왕팡은 베란다 꽃에 정기적으로 거름을 줘요.",
+   "blank": "定期",
    "src": "made"
   }
  ],
@@ -28140,6 +28284,22 @@
    "en": "The north is especially cold this winter, and Sun Yue wrote a report on heating.",
    "ko": "올겨울 북쪽이 유난히 추워서 쑨웨는 난방에 관한 기사를 썼어요.",
    "blank": "寒冷",
+   "src": "made"
+  }
+ ],
+ "w|察觉": [
+  {
+   "text": "周强察觉到对门的老太太好几天没出门，赶紧去敲门。",
+   "en": "Zhou Qiang noticed the old lady across the hall hadn't gone out in days and hurried to knock on her door.",
+   "ko": "저우창은 맞은편 할머니가 며칠째 밖에 안 나오신 걸 알아차리고 서둘러 문을 두드렸어요.",
+   "blank": "察觉",
+   "src": "made"
+  },
+  {
+   "text": "王芳察觉到早晚的风已经有了凉意。",
+   "en": "Wang Fang noticed the morning and evening breeze had already turned cool.",
+   "ko": "왕팡은 아침저녁 바람에 벌써 서늘한 기운이 도는 걸 느꼈어요.",
+   "blank": "察觉",
    "src": "made"
   }
  ],
@@ -31576,6 +31736,22 @@
    "en": "This kind of corn is very adaptable and is widely grown in the north.",
    "ko": "이 옥수수는 적응력이 강해서 북쪽에서 널리 재배돼요.",
    "blank": "广泛",
+   "src": "made"
+  }
+ ],
+ "w|广阔": [
+  {
+   "text": "小区后面有一片广阔的草地，孩子们常去放风筝。",
+   "en": "Behind the complex is a wide lawn where the kids often fly kites.",
+   "ko": "단지 뒤에는 넓은 잔디밭이 있어서 아이들이 자주 연을 날려요.",
+   "blank": "广阔",
+   "src": "made"
+  },
+  {
+   "text": "秋天，广阔的稻田一片金黄。",
+   "en": "In autumn, the vast rice paddies turn golden.",
+   "ko": "가을이면 넓은 논이 온통 황금빛이에요.",
+   "blank": "广阔",
    "src": "made"
   }
  ],
@@ -36849,6 +37025,22 @@
    "src": "made"
   }
  ],
+ "w|所属": [
+  {
+   "text": "周强去所属的社区居委会登记了新车位。",
+   "en": "Zhou Qiang went to his local residents' committee to register a new parking space.",
+   "ko": "저우창은 소속 주민위원회에 가서 새 주차 자리를 등록했어요.",
+   "blank": "所属",
+   "src": "made"
+  },
+  {
+   "text": "王芳所属的登山队每年秋天都去爬山。",
+   "en": "The hiking club Wang Fang belongs to goes climbing every autumn.",
+   "ko": "왕팡이 속한 등산 모임은 매년 가을 산에 올라요.",
+   "blank": "所属",
+   "src": "made"
+  }
+ ],
  "w|所有": [
   {
    "text": "所有人都到了。",
@@ -37277,6 +37469,22 @@
    "src": "made"
   }
  ],
+ "w|打发": [
+  {
+   "text": "退休后，周强靠和邻居下棋打发时间。",
+   "en": "Since retiring, Zhou Qiang passes the time playing chess with his neighbors.",
+   "ko": "은퇴한 뒤 저우창은 이웃과 장기를 두며 시간을 보내요.",
+   "blank": "打发",
+   "src": "made"
+  },
+  {
+   "text": "漫长的冬夜里，王芳靠看书打发时光。",
+   "en": "During the long winter nights, Wang Fang passes the hours reading.",
+   "ko": "긴 겨울밤에 왕팡은 책을 읽으며 시간을 보내요.",
+   "blank": "打发",
+   "src": "made"
+  }
+ ],
  "w|打听": [
   {
    "text": "马林向老渔民打听哪里的鱼最多。",
@@ -37563,6 +37771,22 @@
    "src": "made"
   }
  ],
+ "w|执法": [
+  {
+   "text": "城管来小区执法，拆掉了违建的棚子。",
+   "en": "City inspectors came to enforce the rules and tore down an illegally built shed.",
+   "ko": "도시 관리 요원들이 단지에 단속을 나와 불법으로 지은 창고를 철거했어요.",
+   "blank": "执法",
+   "src": "made"
+  },
+  {
+   "text": "大雪过后，交警冒着寒风在路口执法。",
+   "en": "After the heavy snow, traffic police braved the cold wind to enforce the rules at the intersection.",
+   "ko": "폭설이 그친 뒤 교통경찰이 찬바람을 맞으며 교차로에서 단속했어요.",
+   "blank": "执法",
+   "src": "made"
+  }
+ ],
  "w|执行": [
   {
    "text": "请执行命令。",
@@ -37622,6 +37846,22 @@
    "en": "The news says this airport will expand further, adding another terminal next year.",
    "ko": "뉴스에 따르면 이 공항이 더 커져서 내년에 터미널이 하나 늘어난대요.",
    "blank": "扩张",
+   "src": "made"
+  }
+ ],
+ "w|扩散": [
+  {
+   "text": "楼下炒辣椒的味道一下子扩散到了整栋楼。",
+   "en": "The smell of chilies frying downstairs spread through the whole building in no time.",
+   "ko": "아래층에서 고추 볶는 냄새가 금세 건물 전체로 퍼졌어요.",
+   "blank": "扩散",
+   "src": "made"
+  },
+  {
+   "text": "秋冬季节流感容易扩散，王芳出门都戴着口罩。",
+   "en": "Flu spreads easily in autumn and winter, so Wang Fang wears a mask whenever she goes out.",
+   "ko": "가을 겨울에는 독감이 잘 퍼져서 왕팡은 외출할 때 늘 마스크를 써요.",
+   "blank": "扩散",
    "src": "made"
   }
  ],
@@ -38292,6 +38532,22 @@
    "en": "Lin Jing's passport is about to expire, so she has to get a new one this weekend.",
    "ko": "린징의 여권이 곧 만료돼서 이번 주말에 새로 만들러 가야 해요.",
    "blank": "护照",
+   "src": "made"
+  }
+ ],
+ "w|护送": [
+  {
+   "text": "周强护送喝醉的邻居回到家门口。",
+   "en": "Zhou Qiang walked his drunk neighbor safely back to his door.",
+   "ko": "저우창은 술에 취한 이웃을 집 앞까지 바래다줬어요.",
+   "blank": "护送",
+   "src": "made"
+  },
+  {
+   "text": "下大雪那天，王芳护送邻居家的孩子去学校。",
+   "en": "On the day of the heavy snow, Wang Fang escorted the neighbor's child to school.",
+   "ko": "눈이 많이 온 날 왕팡은 이웃집 아이를 학교까지 데려다줬어요.",
+   "blank": "护送",
    "src": "made"
   }
  ],
@@ -41301,6 +41557,22 @@
    "blank": "撒谎"
   }
  ],
+ "w|撕": [
+  {
+   "text": "有人把楼道里的通知撕了，周强又贴了一张。",
+   "en": "Someone tore down the notice in the stairwell, so Zhou Qiang put up another one.",
+   "ko": "누가 계단의 공지문을 찢어 버려서 저우창이 한 장 다시 붙였어요.",
+   "blank": "撕",
+   "src": "made"
+  },
+  {
+   "text": "王芳撕了日历的最后一页，一年又过去了。",
+   "en": "Wang Fang tore off the last page of the calendar; another year had passed.",
+   "ko": "왕팡이 달력의 마지막 장을 뜯었고 또 한 해가 지나갔어요.",
+   "blank": "撕",
+   "src": "made"
+  }
+ ],
  "w|撞": [
   {
    "text": "车子撞了。",
@@ -41808,6 +42080,22 @@
    "en": "After the new ventilation system was installed, the lab environment improved quite a bit.",
    "ko": "새 환기 장치로 바꾼 뒤 실험실 환경이 꽤 좋아졌어요.",
    "blank": "改善",
+   "src": "made"
+  }
+ ],
+ "w|改编": [
+  {
+   "text": "小区的业余剧团把一个民间故事改编成了小戏。",
+   "en": "The neighborhood's amateur troupe adapted a folk tale into a short play.",
+   "ko": "단지의 아마추어 극단은 민담 하나를 짧은 연극으로 각색했어요.",
+   "blank": "改编",
+   "src": "made"
+  },
+  {
+   "text": "王芳听到一首由古诗改编的四季歌。",
+   "en": "Wang Fang heard a song about the four seasons adapted from a classical poem.",
+   "ko": "왕팡은 옛 시를 각색한 사계절 노래를 들었어요.",
+   "blank": "改编",
    "src": "made"
   }
  ],
@@ -43514,6 +43802,38 @@
    "en": "Finishing the full course is undoubtedly a huge breakthrough for Wang Fang.",
    "ko": "완주한 건 왕팡에게 틀림없이 큰 돌파구예요.",
    "blank": "无疑",
+   "src": "made"
+  }
+ ],
+ "w|无知": [
+  {
+   "text": "有些住户出于无知，把电池扔进了厨余垃圾桶。",
+   "en": "Out of ignorance, some residents threw batteries into the food waste bin.",
+   "ko": "어떤 주민들은 잘 몰라서 건전지를 음식물 쓰레기통에 버렸어요.",
+   "blank": "无知",
+   "src": "made"
+  },
+  {
+   "text": "王芳笑自己小时候无知，以为秋天的叶子是被人涂黄的。",
+   "en": "Wang Fang laughs at how naive she was as a kid, thinking someone painted the autumn leaves yellow.",
+   "ko": "왕팡은 어릴 때 가을 잎을 누가 노랗게 칠한 줄 알았던 철없던 자신을 보며 웃어요.",
+   "blank": "无知",
+   "src": "made"
+  }
+ ],
+ "w|无礼": [
+  {
+   "text": "新搬来的年轻人对保安很无礼，周强看不下去了。",
+   "en": "The young man who just moved in was rude to the security guard, and Zhou Qiang couldn't stand watching it.",
+   "ko": "새로 이사 온 젊은이가 경비원에게 무례하게 굴어서 저우창은 보다 못했어요.",
+   "blank": "无礼",
+   "src": "made"
+  },
+  {
+   "text": "王芳去买冬衣时，碰到一位对店员很无礼的顾客。",
+   "en": "When Wang Fang went to buy winter clothes, she ran into a customer who was very rude to the clerk.",
+   "ko": "왕팡은 겨울옷을 사러 갔다가 점원에게 아주 무례한 손님을 봤어요.",
+   "blank": "无礼",
    "src": "made"
   }
  ],
@@ -45262,6 +45582,22 @@
    "en": "Getting more sun is good for a rabbit's bone growth.",
    "ko": "햇볕을 많이 쬐는 건 토끼 뼈 성장에 아주 유리해요.",
    "blank": "有利",
+   "src": "made"
+  }
+ ],
+ "w|有利于": [
+  {
+   "text": "周强觉得，常一起聚聚有利于邻里和睦。",
+   "en": "Zhou Qiang thinks getting together often helps neighbors get along.",
+   "ko": "저우창은 자주 모이는 게 이웃 간 화목에 도움이 된다고 생각해요.",
+   "blank": "有利于",
+   "src": "made"
+  },
+  {
+   "text": "医生说，春天多晒太阳有利于身体健康。",
+   "en": "The doctor says getting more sun in spring is good for your health.",
+   "ko": "의사는 봄에 햇볕을 많이 쬐면 건강에 좋다고 해요.",
+   "blank": "有利于",
    "src": "made"
   }
  ],
@@ -52117,6 +52453,22 @@
    "src": "made"
   }
  ],
+ "w|激发": [
+  {
+   "text": "社区的中秋活动激发了大家参与的热情。",
+   "en": "The community's Mid-Autumn event sparked everyone's enthusiasm to join in.",
+   "ko": "동네 추석 행사는 모두의 참여 열기를 끌어올렸어요.",
+   "blank": "激发",
+   "src": "made"
+  },
+  {
+   "text": "秋天的景色激发了王芳画画的兴趣。",
+   "en": "The autumn scenery sparked Wang Fang's interest in painting.",
+   "ko": "가을 풍경이 왕팡의 그림 그리기에 대한 흥미를 불러일으켰어요.",
+   "blank": "激发",
+   "src": "made"
+  }
+ ],
  "w|激情": [
   {
    "text": "老朋友在回信里说，自己对画画还是充满激情。",
@@ -52691,6 +53043,22 @@
    "en": "The stove is still burning.",
    "ko": "난로가 아직 타고 있어.",
    "blank": "烧"
+  }
+ ],
+ "w|烧死": [
+  {
+   "text": "周强在报纸上看到，邻省一场山火烧死了大片松树。",
+   "en": "Zhou Qiang read in the paper that a wildfire in a neighboring province killed a large stretch of pine trees.",
+   "ko": "저우창은 이웃 성의 산불로 소나무 숲이 넓게 타 죽었다는 기사를 신문에서 봤어요.",
+   "blank": "烧死",
+   "src": "made"
+  },
+  {
+   "text": "王芳的爷爷说，以前秋收后烧秸秆，也能烧死地里的害虫。",
+   "en": "Wang Fang's grandfather says that in the past, burning straw after the autumn harvest also killed pests in the fields.",
+   "ko": "왕팡의 할아버지는 예전에 가을걷이 뒤 짚을 태우면 밭의 해충도 타 죽었다고 하세요.",
+   "blank": "烧死",
+   "src": "made"
   }
  ],
  "w|烧烤": [
@@ -54140,6 +54508,22 @@
    "en": "A tricycle cart came barreling toward her, and Li Na quickly jumped aside.",
    "ko": "삼륜차 한 대가 확 달려들어서 리나는 얼른 옆으로 비켜섰어요.",
    "blank": "猛",
+   "src": "made"
+  }
+ ],
+ "w|猛烈": [
+  {
+   "text": "昨夜风雨猛烈，周强一早就去帮邻居加固阳台的花架。",
+   "en": "The wind and rain were fierce last night, so Zhou Qiang went first thing to help his neighbor secure the balcony flower stand.",
+   "ko": "어젯밤 비바람이 거세서 저우창은 아침 일찍 이웃의 베란다 화분대를 고정해 주러 갔어요.",
+   "blank": "猛烈",
+   "src": "made"
+  },
+  {
+   "text": "入冬后的第一场寒风来得很猛烈。",
+   "en": "The first cold wind after the start of winter came in fiercely.",
+   "ko": "겨울 들어 첫 찬바람이 아주 거세게 불었어요.",
+   "blank": "猛烈",
    "src": "made"
   }
  ],
@@ -57229,6 +57613,22 @@
    "en": "Looks pretty good.",
    "ko": "보기엔 괜찮아.",
    "blank": "看上去"
+  }
+ ],
+ "w|看作": [
+  {
+   "text": "周强把对门的小男孩看作自己的孙子。",
+   "en": "Zhou Qiang regards the little boy across the hall as his own grandson.",
+   "ko": "저우창은 맞은편 집 꼬마를 친손자처럼 여겨요.",
+   "blank": "看作",
+   "src": "made"
+  },
+  {
+   "text": "王芳把第一场雪看作冬天送来的礼物。",
+   "en": "Wang Fang sees the first snow as a gift from winter.",
+   "ko": "왕팡은 첫눈을 겨울이 보낸 선물로 여겨요.",
+   "blank": "看作",
+   "src": "made"
   }
  ],
  "w|看出": [
@@ -61845,6 +62245,22 @@
    "src": "made"
   }
  ],
+ "w|终究": [
+  {
+   "text": "两家闹了几天别扭，终究还是和好了。",
+   "en": "The two families were at odds for a few days but made up in the end.",
+   "ko": "두 집은 며칠 동안 서먹했지만 결국 화해했어요.",
+   "blank": "终究",
+   "src": "made"
+  },
+  {
+   "text": "冬天再冷，终究也会过去。",
+   "en": "However cold the winter, it will pass in the end.",
+   "ko": "겨울이 아무리 추워도 결국은 지나가요.",
+   "blank": "终究",
+   "src": "made"
+  }
+ ],
  "w|终结": [
   {
    "text": "高铁通车以后，这家酒店独占客源的日子就终结了。",
@@ -64903,6 +65319,22 @@
    "src": "made"
   }
  ],
+ "w|膨胀": [
+  {
+   "text": "夏天木门受潮膨胀，周强家的门关不上了。",
+   "en": "In summer the wooden door swelled with moisture, and Zhou Qiang couldn't close it.",
+   "ko": "여름에 나무 문이 습기를 먹고 부풀어서 저우창네 문이 안 닫혀요.",
+   "blank": "膨胀",
+   "src": "made"
+  },
+  {
+   "text": "水结成冰会膨胀，所以冬天水管容易冻裂。",
+   "en": "Water expands when it freezes, so pipes crack easily in winter.",
+   "ko": "물이 얼면 부피가 늘어나서 겨울엔 수도관이 잘 터져요.",
+   "blank": "膨胀",
+   "src": "made"
+  }
+ ],
  "w|自": [
   {
    "text": "自那天起。",
@@ -66303,6 +66735,22 @@
    "src": "made"
   }
  ],
+ "w|落入": [
+  {
+   "text": "邻居的钥匙不小心落入井盖缝里，周强帮着捞了半天。",
+   "en": "The neighbor's keys accidentally fell into the gap of a manhole cover, and Zhou Qiang helped fish them out for ages.",
+   "ko": "이웃의 열쇠가 실수로 맨홀 뚜껑 틈에 빠져서 저우창이 한참 동안 같이 건져 냈어요.",
+   "blank": "落入",
+   "src": "made"
+  },
+  {
+   "text": "枯黄的叶子一片片落入池塘。",
+   "en": "Withered yellow leaves fell into the pond one by one.",
+   "ko": "누렇게 마른 잎이 한 장씩 연못에 떨어졌어요.",
+   "blank": "落入",
+   "src": "made"
+  }
+ ],
  "w|落后": [
   {
    "text": "赵磊觉得馆里的照明设备太落后，很多细节都看不出来。",
@@ -66722,6 +67170,22 @@
    "en": "Spring arrived, and Xiaoxue chased a yellow butterfly among the flowers.",
    "ko": "봄이 오자 샤오쉐는 꽃밭에서 노란 나비 한 마리를 쫓아다녔어요.",
    "blank": "蝴蝶",
+   "src": "made"
+  }
+ ],
+ "w|融入": [
+  {
+   "text": "新搬来的那家人很快就融入了邻居们的圈子。",
+   "en": "The family who just moved in quickly fit in with the neighbors.",
+   "ko": "새로 이사 온 가족은 금세 이웃들 사이에 어울렸어요.",
+   "blank": "融入",
+   "src": "made"
+  },
+  {
+   "text": "王芳刚搬到北方，花了一整个冬天才融入当地的生活。",
+   "en": "Wang Fang had just moved north and took a whole winter to settle into local life.",
+   "ko": "북쪽으로 막 이사한 왕팡은 겨울 한 철을 다 보내고서야 그곳 생활에 녹아들었어요.",
+   "blank": "融入",
    "src": "made"
   }
  ],
@@ -69843,6 +70307,22 @@
    "blank": "调查"
   }
  ],
+ "w|调节": [
+  {
+   "text": "周强教对门的奶奶怎么调节空调的温度。",
+   "en": "Zhou Qiang showed the grandma across the hall how to adjust the air conditioner's temperature.",
+   "ko": "저우창은 맞은편 할머니께 에어컨 온도 조절하는 법을 알려 드렸어요.",
+   "blank": "调节",
+   "src": "made"
+  },
+  {
+   "text": "换季的时候，身体需要慢慢调节，才能适应温差。",
+   "en": "When the seasons change, the body needs to adjust slowly to cope with the temperature swings.",
+   "ko": "환절기에는 몸이 천천히 적응해야 일교차를 견딜 수 있어요.",
+   "blank": "调节",
+   "src": "made"
+  }
+ ],
  "w|谈": [
   {
    "text": "我们谈一下。",
@@ -70574,6 +71054,22 @@
    "en": "Lin Jing mentioned in her letter that she is teaching as a volunteer in a poor mountain area.",
    "ko": "린징은 편지에서 가난한 산간 지역에서 봉사로 아이들을 가르치고 있다고 했어요.",
    "blank": "贫困",
+   "src": "made"
+  }
+ ],
+ "w|贫穷": [
+  {
+   "text": "楼下的老李年轻时很贫穷，靠修鞋养活一家人。",
+   "en": "Old Li downstairs was very poor when he was young and supported his family by repairing shoes.",
+   "ko": "아래층 리 씨 할아버지는 젊을 때 무척 가난해서 구두 수선으로 가족을 먹여 살렸어요.",
+   "blank": "贫穷",
+   "src": "made"
+  },
+  {
+   "text": "王芳的奶奶说，在贫穷的年代，冬天最难熬。",
+   "en": "Wang Fang's grandmother says that in the years of poverty, winter was the hardest to get through.",
+   "ko": "왕팡의 할머니는 가난하던 시절엔 겨울이 가장 견디기 힘들었다고 해요.",
+   "blank": "贫穷",
    "src": "made"
   }
  ],
@@ -71943,6 +72439,22 @@
    "blank": "跳舞"
   }
  ],
+ "w|踏": [
+  {
+   "text": "周强一脚踏在结冰的台阶上，差点滑倒。",
+   "en": "Zhou Qiang stepped on an icy step and nearly slipped.",
+   "ko": "저우창은 얼어붙은 계단을 밟았다가 하마터면 미끄러질 뻔했어요.",
+   "blank": "踏",
+   "src": "made"
+  },
+  {
+   "text": "王芳踏着厚厚的落叶，走在公园的小路上。",
+   "en": "Wang Fang walked along the park path, treading on a thick layer of fallen leaves.",
+   "ko": "왕팡은 두툼하게 쌓인 낙엽을 밟으며 공원 오솔길을 걸었어요.",
+   "blank": "踏",
+   "src": "made"
+  }
+ ],
  "w|踢": [
   {
    "text": "别踢我。",
@@ -72074,6 +72586,22 @@
    "en": "Yang Yang turned around and found Grandpa standing behind him, smiling.",
    "ko": "양양이 고개를 돌리니 할아버지가 뒤에 서서 웃고 계셨어요.",
    "blank": "身后",
+   "src": "made"
+  }
+ ],
+ "w|身处": [
+  {
+   "text": "周强常说，身处大城市，邻里之间更要互相照应。",
+   "en": "Zhou Qiang often says that living in a big city, neighbors need to look out for each other even more.",
+   "ko": "저우창은 대도시에 살수록 이웃끼리 더 서로 챙겨야 한다고 자주 말해요.",
+   "blank": "身处",
+   "src": "made"
+  },
+  {
+   "text": "身处南方的王芳，很少见到真正的大雪。",
+   "en": "Living in the south, Wang Fang rarely sees real heavy snow.",
+   "ko": "남쪽에 사는 왕팡은 진짜 함박눈을 볼 일이 드물어요.",
+   "blank": "身处",
    "src": "made"
   }
  ],
@@ -72462,6 +72990,22 @@
    "en": "The software newly installed in the lab can draw charts automatically.",
    "ko": "실험실에 새로 깐 소프트웨어는 그래프를 자동으로 그려 줘요.",
    "blank": "软件",
+   "src": "made"
+  }
+ ],
+ "w|软弱": [
+  {
+   "text": "邻居小刘性格软弱，被人插队也不敢吭声。",
+   "en": "Neighbor Xiao Liu is timid and doesn't dare speak up even when people cut in line.",
+   "ko": "이웃 샤오류는 성격이 여려서 누가 새치기를 해도 말 한마디 못 해요.",
+   "blank": "软弱",
+   "src": "made"
+  },
+  {
+   "text": "冬天一到，王芳的意志就变得软弱，早上怎么也起不来。",
+   "en": "As soon as winter comes, Wang Fang's willpower weakens, and she just can't get up in the morning.",
+   "ko": "겨울만 되면 왕팡은 의지가 약해져서 아침에 도무지 못 일어나요.",
+   "blank": "软弱",
    "src": "made"
   }
  ],
@@ -75023,6 +75567,22 @@
    "src": "made"
   }
  ],
+ "w|遗忘": [
+  {
+   "text": "王奶奶年纪大了，常常遗忘自己有没有关煤气。",
+   "en": "Grandma Wang is getting old and often forgets whether she turned off the gas.",
+   "ko": "왕 할머니는 연세가 드셔서 가스를 껐는지 자주 잊어버리세요.",
+   "blank": "遗忘",
+   "src": "made"
+  },
+  {
+   "text": "王芳把一件旧毛衣遗忘在柜子深处，到降温才翻出来。",
+   "en": "Wang Fang had forgotten an old sweater deep in the closet and only dug it out when it got cold.",
+   "ko": "왕팡은 낡은 스웨터를 옷장 깊숙이 잊고 있다가 기온이 떨어져서야 꺼냈어요.",
+   "blank": "遗忘",
+   "src": "made"
+  }
+ ],
  "w|遗憾": [
   {
    "text": "很遗憾。",
@@ -76253,6 +76813,22 @@
    "src": "made"
   }
  ],
+ "w|鉴定": [
+  {
+   "text": "对门的老张请专家鉴定了家里的一只旧花瓶。",
+   "en": "Old Zhang across the hall had an expert appraise an old vase from his home.",
+   "ko": "맞은편 장 씨 할아버지는 집에 있던 옛 꽃병을 전문가에게 감정받았어요.",
+   "blank": "鉴定",
+   "src": "made"
+  },
+  {
+   "text": "专家鉴定说，公园里这棵银杏树已经有几百年了。",
+   "en": "Experts determined that this ginkgo tree in the park is several hundred years old.",
+   "ko": "전문가 감정 결과 공원의 이 은행나무는 수백 년이 됐대요.",
+   "blank": "鉴定",
+   "src": "made"
+  }
+ ],
  "w|钱": [
   {
    "text": "钱够吗？",
@@ -77121,6 +77697,22 @@
    "src": "made"
   }
  ],
+ "w|阻挡": [
+  {
+   "text": "楼道里堆的杂物阻挡了通道，周强去找物业反映。",
+   "en": "The junk piled in the stairwell blocked the way, so Zhou Qiang went to report it to building management.",
+   "ko": "계단에 쌓인 잡동사니가 통로를 막아서 저우창은 관리사무소에 알리러 갔어요.",
+   "blank": "阻挡",
+   "src": "made"
+  },
+  {
+   "text": "厚厚的窗帘阻挡了屋外的寒气。",
+   "en": "Thick curtains kept out the cold air from outside.",
+   "ko": "두꺼운 커튼이 바깥 찬 기운을 막아 줬어요.",
+   "blank": "阻挡",
+   "src": "made"
+  }
+ ],
  "w|阻止": [
   {
    "text": "别阻止我。",
@@ -77471,6 +78063,22 @@
    "src": "made"
   }
  ],
+ "w|隐形": [
+  {
+   "text": "小区装了隐形防护网，从外面几乎看不见。",
+   "en": "The complex installed invisible safety netting that can hardly be seen from outside.",
+   "ko": "단지에 보이지 않는 안전망을 설치해서 밖에서는 거의 안 보여요.",
+   "blank": "隐形",
+   "src": "made"
+  },
+  {
+   "text": "春天的花粉像隐形的敌人，让王芳一直打喷嚏。",
+   "en": "Spring pollen is like an invisible enemy that keeps Wang Fang sneezing.",
+   "ko": "봄 꽃가루는 보이지 않는 적처럼 왕팡을 계속 재채기하게 해요.",
+   "blank": "隐形",
+   "src": "made"
+  }
+ ],
  "w|隐瞒": [
   {
    "text": "那家工厂隐瞒了污染数据，被周强的报道揭了出来。",
@@ -77726,6 +78334,22 @@
    "en": "Having to let two employees go made Liu Fang feel terrible.",
    "ko": "직원 두 명을 내보내야 해서 류팡은 마음이 몹시 괴로웠어요.",
    "blank": "难受",
+   "src": "made"
+  }
+ ],
+ "w|难堪": [
+  {
+   "text": "周强当众说出邻居的错，让邻居很难堪。",
+   "en": "Zhou Qiang pointed out his neighbor's mistake in front of everyone, which embarrassed the neighbor.",
+   "ko": "저우창이 사람들 앞에서 이웃의 잘못을 말해서 그 이웃은 몹시 민망했어요.",
+   "blank": "难堪",
+   "src": "made"
+  },
+  {
+   "text": "降温那天王芳还穿着短裙去开会，冻得发抖，十分难堪。",
+   "en": "On the day the temperature dropped, Wang Fang wore a short skirt to a meeting and shivered, which was very embarrassing.",
+   "ko": "기온이 뚝 떨어진 날 왕팡은 짧은 치마를 입고 회의에 갔다가 덜덜 떨어서 몹시 민망했어요.",
+   "blank": "难堪",
    "src": "made"
   }
  ],
@@ -78373,6 +78997,22 @@
    "en": "The bread just came out of the oven.",
    "ko": "빵이 막 구워졌어.",
    "blank": "面包"
+  }
+ ],
+ "w|面向": [
+  {
+   "text": "周强家的阳台面向小区的花园。",
+   "en": "Zhou Qiang's balcony faces the residential garden.",
+   "ko": "저우창네 베란다는 단지 정원을 향해 있어요.",
+   "blank": "面向",
+   "src": "made"
+  },
+  {
+   "text": "王芳家的卧室面向南边，冬天阳光充足。",
+   "en": "Wang Fang's bedroom faces south and gets plenty of sun in winter.",
+   "ko": "왕팡네 침실은 남쪽을 향해 있어서 겨울에 햇볕이 잘 들어요.",
+   "blank": "面向",
+   "src": "made"
   }
  ],
  "w|面子": [

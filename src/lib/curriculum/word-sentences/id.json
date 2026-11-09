@@ -591,6 +591,22 @@
    "blank": "aktif"
   }
  ],
+ "w|aktivis": [
+  {
+   "text": "Sekelompok aktivis lingkungan datang menemui Fajar untuk membahas taman kota.",
+   "en": "A group of environmental activists came to meet Fajar to discuss the city park.",
+   "ko": "환경 운동가들이 시립 공원 문제를 논의하려고 파자르를 찾아왔어요.",
+   "blank": "aktivis",
+   "src": "made"
+  },
+  {
+   "text": "Adik Lestari seorang aktivis lingkungan yang mengajak penghuni mengurangi plastik.",
+   "en": "Lestari's younger sibling is an environmental activist who urges residents to use less plastic.",
+   "ko": "레스타리의 동생은 입주민들에게 플라스틱을 줄이자고 권하는 환경 운동가예요.",
+   "blank": "aktivis",
+   "src": "made"
+  }
+ ],
  "w|aktivitas": [
   {
    "text": "Eko mencatat aktivitas warga sejak subuh untuk artikel tentang pasar pagi.",
@@ -1629,6 +1645,22 @@
    "en": "The weather is bad, especially in the mountains.",
    "ko": "날씨가 나빠, 특히 산에서는.",
    "blank": "apalagi"
+  }
+ ],
+ "w|aparat": [
+  {
+   "text": "Fajar meminta aparat keamanan berjaga di depan balai kota saat unjuk rasa.",
+   "en": "Fajar asked security officers to stand guard in front of city hall during the protest.",
+   "ko": "파자르는 시위 동안 시청 앞에 경비 인력을 배치해 달라고 요청했어요.",
+   "blank": "aparat",
+   "src": "made"
+  },
+  {
+   "text": "Lestari melapor kepada aparat kelurahan soal parkir liar di depan gedung.",
+   "en": "Lestari reported the illegal parking in front of the building to the village officials.",
+   "ko": "레스타리는 건물 앞 불법 주차를 동사무소 직원에게 신고했어요.",
+   "blank": "aparat",
+   "src": "made"
   }
  ],
  "w|apartemen": [
@@ -5299,6 +5331,22 @@
    "blank": "Berbahaya"
   }
  ],
+ "w|berbaju": [
+  {
+   "text": "Pada upacara hari Senin, semua pegawai berbaju putih, termasuk Fajar.",
+   "en": "At the Monday ceremony, all the staff wore white shirts, including Fajar.",
+   "ko": "월요일 조회 때 파자르를 포함한 모든 직원이 흰 옷을 입었어요.",
+   "blank": "berbaju",
+   "src": "made"
+  },
+  {
+   "text": "Seorang kurir berbaju oranye menunggu Lestari di depan lift.",
+   "en": "A courier in an orange shirt was waiting for Lestari in front of the elevator.",
+   "ko": "주황색 옷을 입은 택배 기사가 엘리베이터 앞에서 레스타리를 기다렸어요.",
+   "blank": "berbaju",
+   "src": "made"
+  }
+ ],
  "w|berbakat": [
   {
    "text": "Anak itu berbakat dalam musik.",
@@ -6214,6 +6262,38 @@
    "en": "A rumor that the restaurant would close went around, but it was only a renovation.",
    "ko": "그 식당이 문을 닫는다는 소문이 돌았지만 알고 보니 수리만 하는 거였어요.",
    "blank": "beredar",
+   "src": "made"
+  }
+ ],
+ "w|bereksperimen": [
+  {
+   "text": "Selama sebulan Fajar bereksperimen dengan layanan malam untuk warga yang bekerja siang.",
+   "en": "For a month Fajar experimented with an evening service for residents who work during the day.",
+   "ko": "파자르는 한 달 동안 낮에 일하는 주민을 위한 야간 민원 서비스를 시험해 봤어요.",
+   "blank": "bereksperimen",
+   "src": "made"
+  },
+  {
+   "text": "Lestari suka bereksperimen dengan resep kue di dapur apartemen yang sempit.",
+   "en": "Lestari likes to experiment with cake recipes in the apartment's cramped kitchen.",
+   "ko": "레스타리는 좁은 아파트 부엌에서 케이크 레시피를 이것저것 시험해 보는 걸 좋아해요.",
+   "blank": "bereksperimen",
+   "src": "made"
+  }
+ ],
+ "w|berembus": [
+  {
+   "text": "Angin sore berembus masuk lewat jendela ruang rapat tempat Fajar bekerja.",
+   "en": "The afternoon breeze blew in through the window of the meeting room where Fajar works.",
+   "ko": "파자르가 일하는 회의실 창문으로 오후 바람이 불어 들어왔어요.",
+   "blank": "berembus",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membuka pintu balkon agar angin laut berembus ke dalam kamar.",
+   "en": "Lestari opened the balcony door so the sea breeze would blow into the room.",
+   "ko": "레스타리는 바닷바람이 방 안으로 불어 들어오게 발코니 문을 열었어요.",
+   "blank": "berembus",
    "src": "made"
   }
  ],
@@ -9547,6 +9627,22 @@
    "blank": "bersenang-senang"
   }
  ],
+ "w|bersendawa": [
+  {
+   "text": "Fajar pura-pura tidak mendengar ketika rekan kerjanya bersendawa setelah makan siang.",
+   "en": "Fajar pretended not to hear when his coworker burped after lunch.",
+   "ko": "파자르는 동료가 점심 먹고 트림했을 때 못 들은 척했어요.",
+   "blank": "bersendawa",
+   "src": "made"
+  },
+  {
+   "text": "Bayi tetangga Lestari baru bisa tidur setelah bersendawa.",
+   "en": "Lestari's neighbor's baby can only fall asleep after burping.",
+   "ko": "레스타리 이웃집 아기는 트림을 하고 나서야 잠들어요.",
+   "blank": "bersendawa",
+   "src": "made"
+  }
+ ],
  "w|bersenjata": [
   {
    "text": "Bersenjata lengkap, mereka memasuki hutan.",
@@ -10635,6 +10731,22 @@
    "en": "The sky is orange at dusk.",
    "ko": "해 질 녘 하늘이 주황빛이야.",
    "blank": "berwarna"
+  }
+ ],
+ "w|berwawasan": [
+  {
+   "text": "Wali kota ingin lebih banyak pegawai berwawasan luas seperti Fajar.",
+   "en": "The mayor wants more broad-minded staff like Fajar.",
+   "ko": "시장은 파자르처럼 시야가 넓은 직원이 더 많기를 바라요.",
+   "blank": "berwawasan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bilang ketua penghuni yang baru itu berwawasan dan sabar.",
+   "en": "Lestari says the new residents' chairman is knowledgeable and patient.",
+   "ko": "레스타리는 새 입주자 대표가 식견이 넓고 참을성이 있다고 해요.",
+   "blank": "berwawasan",
+   "src": "made"
   }
  ],
  "w|berwenang": [
@@ -18015,6 +18127,22 @@
    "src": "made"
   }
  ],
+ "w|gertakan": [
+  {
+   "text": "Fajar tahu ancaman pengusaha itu hanya gertakan belaka.",
+   "en": "Fajar knew the businessman's threat was nothing but a bluff.",
+   "ko": "파자르는 그 사업가의 협박이 그저 엄포일 뿐이라는 걸 알았어요.",
+   "blank": "gertakan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari tidak takut pada gertakan pemilik unit yang menolak membayar iuran.",
+   "en": "Lestari isn't scared of the bluster of the unit owner who refuses to pay dues.",
+   "ko": "레스타리는 관리비를 안 내겠다는 집주인의 엄포가 무섭지 않아요.",
+   "blank": "gertakan",
+   "src": "made"
+  }
+ ],
  "w|getaran": [
   {
    "text": "Agus merasakan getaran tanah ketika pohon besar tumbang di seberang sungai.",
@@ -20075,6 +20203,22 @@
    "src": "made"
   }
  ],
+ "w|ikon": [
+  {
+   "text": "Menurut Fajar, menara jam di depan balai kota sudah lama menjadi ikon kota.",
+   "en": "According to Fajar, the clock tower in front of city hall has long been the city's icon.",
+   "ko": "파자르 말로는 시청 앞 시계탑이 오래전부터 도시의 상징이었어요.",
+   "blank": "ikon",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mengetuk ikon kamera di ponsel untuk memotret retakan di dinding.",
+   "en": "Lestari tapped the camera icon on her phone to photograph the crack in the wall.",
+   "ko": "레스타리는 벽의 금을 찍으려고 휴대폰의 카메라 아이콘을 눌렀어요.",
+   "blank": "ikon",
+   "src": "made"
+  }
+ ],
  "w|ikut": [
   {
    "text": "Boleh aku ikut?",
@@ -20407,6 +20551,22 @@
    "blank": "industri"
   }
  ],
+ "w|infanteri": [
+  {
+   "text": "Kakek Fajar dulu bertugas di pasukan infanteri, jadi Fajar selalu hadir pada hari veteran.",
+   "en": "Fajar's grandfather served in the infantry, so Fajar always attends Veterans' Day.",
+   "ko": "파자르의 할아버지가 보병 부대에서 복무하셔서 파자르는 재향군인의 날에 꼭 참석해요.",
+   "blank": "infanteri",
+   "src": "made"
+  },
+  {
+   "text": "Ayah Lestari, mantan prajurit infanteri, masih bangun pukul lima setiap pagi.",
+   "en": "Lestari's father, a former infantry soldier, still gets up at five every morning.",
+   "ko": "보병 출신인 레스타리의 아버지는 지금도 매일 아침 다섯 시에 일어나요.",
+   "blank": "infanteri",
+   "src": "made"
+  }
+ ],
  "w|infeksi": [
   {
    "text": "Dokter gigi bilang infeksi gusi bisa memengaruhi organ lain seperti jantung.",
@@ -20467,6 +20627,22 @@
    "blank": "Informasi"
   }
  ],
+ "w|infrastruktur": [
+  {
+   "text": "Fajar memimpin tim yang mengawasi pembangunan infrastruktur jalan dan jembatan.",
+   "en": "Fajar leads the team that supervises the building of road and bridge infrastructure.",
+   "ko": "파자르는 도로와 다리 기반 시설 공사를 감독하는 팀을 이끌어요.",
+   "blank": "infrastruktur",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mengeluh infrastruktur gedung tua itu sering rusak, terutama lift.",
+   "en": "Lestari complains that the old building's infrastructure often breaks down, especially the elevator.",
+   "ko": "레스타리는 그 오래된 건물의 설비가 자주 고장 난다고, 특히 엘리베이터가 그렇다고 불평해요.",
+   "blank": "infrastruktur",
+   "src": "made"
+  }
+ ],
  "w|ingat": [
   {
    "text": "Aku ingat janji kita.",
@@ -20521,6 +20697,22 @@
    "en": "Try this first.",
    "ko": "이거 먼저 해 봐.",
    "blank": "ini"
+  }
+ ],
+ "w|inisial": [
+  {
+   "text": "Fajar membubuhkan inisial di pojok setiap halaman dokumen kontrak.",
+   "en": "Fajar put his initials in the corner of every page of the contract.",
+   "ko": "파자르는 계약서 모든 페이지 구석에 이니셜을 적었어요.",
+   "blank": "inisial",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menulis inisial di setiap paket agar tidak tertukar di lobi.",
+   "en": "Lestari writes her initials on every package so they don't get mixed up in the lobby.",
+   "ko": "레스타리는 로비에서 바뀌지 않도록 택배마다 이니셜을 써요.",
+   "blank": "inisial",
+   "src": "made"
   }
  ],
  "w|inisiatif": [
@@ -24357,6 +24549,22 @@
    "blank": "keadilan"
   }
  ],
+ "w|keagamaan": [
+  {
+   "text": "Fajar mengurus izin acara keagamaan yang akan digelar di alun-alun kota.",
+   "en": "Fajar handles the permit for a religious event to be held in the town square.",
+   "ko": "파자르는 시내 광장에서 열릴 종교 행사 허가를 처리해요.",
+   "blank": "keagamaan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bilang ruang serbaguna di lantai dasar sering dipakai untuk kegiatan keagamaan.",
+   "en": "Lestari says the multipurpose room on the ground floor is often used for religious activities.",
+   "ko": "레스타리는 일 층 다목적실이 종교 행사에 자주 쓰인다고 해요.",
+   "blank": "keagamaan",
+   "src": "made"
+  }
+ ],
  "w|keahlian": [
   {
    "text": "Keahliannya di bidang memasak sangat terkenal.",
@@ -24412,6 +24620,22 @@
    "en": "Wati sensed something odd because the price of the shoes was too cheap for genuine ones.",
    "ko": "와티는 그 신발 값이 정품치고 너무 싸서 이상하다고 느꼈어요.",
    "blank": "keanehan",
+   "src": "made"
+  }
+ ],
+ "w|keanggotaan": [
+  {
+   "text": "Fajar baru saja memperpanjang keanggotaan perpustakaan kota di lantai bawah.",
+   "en": "Fajar just renewed his membership at the city library downstairs.",
+   "ko": "파자르는 막 아래층 시립 도서관 회원 자격을 연장했어요.",
+   "blank": "keanggotaan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membayar keanggotaan pusat kebugaran di lantai dasar setiap bulan.",
+   "en": "Lestari pays for a gym membership on the ground floor every month.",
+   "ko": "레스타리는 일 층 헬스장 회원비를 매달 내요.",
+   "blank": "keanggotaan",
    "src": "made"
   }
  ],
@@ -27089,6 +27313,22 @@
    "blank": "kepada"
   }
  ],
+ "w|kepahlawanan": [
+  {
+   "text": "Fajar menyiapkan pameran tentang kisah kepahlawanan warga kota pada masa lalu.",
+   "en": "Fajar is preparing an exhibition about stories of heroism by the city's residents in the past.",
+   "ko": "파자르는 옛 시민들의 영웅적인 이야기를 다룬 전시를 준비하고 있어요.",
+   "blank": "kepahlawanan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memuji kepahlawanan satpam yang menolong anak terjebak di lift.",
+   "en": "Lestari praised the heroism of the guard who helped a child trapped in the elevator.",
+   "ko": "레스타리는 엘리베이터에 갇힌 아이를 구한 경비원의 용기를 칭찬했어요.",
+   "blank": "kepahlawanan",
+   "src": "made"
+  }
+ ],
  "w|kepala": [
   {
    "text": "Kepala saya pusing sekali.",
@@ -28387,6 +28627,22 @@
    "en": "They are facing financial difficulties.",
    "ko": "그들은 재정적인 어려움에 처했어.",
    "blank": "kesulitan"
+  }
+ ],
+ "w|kesunyian": [
+  {
+   "text": "Setelah semua pegawai pulang, Fajar menikmati kesunyian kantor balai kota.",
+   "en": "After all the staff went home, Fajar enjoyed the silence of the city hall office.",
+   "ko": "직원들이 모두 퇴근한 뒤 파자르는 시청 사무실의 고요함을 즐겼어요.",
+   "blank": "kesunyian",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menyukai kesunyian lantai paling atas pada pagi hari.",
+   "en": "Lestari loves the quiet of the top floor in the morning.",
+   "ko": "레스타리는 아침의 꼭대기 층 고요함을 좋아해요.",
+   "blank": "kesunyian",
+   "src": "made"
   }
  ],
  "w|ketahuan": [
@@ -30267,6 +30523,22 @@
    "en": "Quality control is done every day.",
    "ko": "품질 검사는 매일 이뤄져.",
    "blank": "Kontrol"
+  }
+ ],
+ "w|kontroversial": [
+  {
+   "text": "Rencana memindahkan pasar tradisional menjadi isu kontroversial di meja Fajar.",
+   "en": "The plan to move the traditional market became a controversial issue on Fajar's desk.",
+   "ko": "전통 시장 이전 계획은 파자르의 책상 위에서 논란거리가 됐어요.",
+   "blank": "kontroversial",
+   "src": "made"
+  },
+  {
+   "text": "Kenaikan biaya pengelolaan jadi topik kontroversial di grup penghuni yang diikuti Lestari.",
+   "en": "The rise in maintenance fees became a controversial topic in the residents' group Lestari is in.",
+   "ko": "관리비 인상은 레스타리가 있는 입주자 단톡방에서 논란이 됐어요.",
+   "blank": "kontroversial",
+   "src": "made"
   }
  ],
  "w|konvensi": [
@@ -34693,6 +34965,22 @@
    "blank": "markas"
   }
  ],
+ "w|marsekal": [
+  {
+   "text": "Fajar menyambut seorang marsekal purnawirawan yang datang ke peresmian monumen.",
+   "en": "Fajar welcomed a retired marshal who came to the monument's inauguration.",
+   "ko": "파자르는 기념비 제막식에 온 퇴역 원수를 맞이했어요.",
+   "blank": "marsekal",
+   "src": "made"
+  },
+  {
+   "text": "Unit di sebelah Lestari dulu milik seorang marsekal yang sudah pensiun.",
+   "en": "The unit next to Lestari's used to belong to a retired marshal.",
+   "ko": "레스타리 옆집은 예전에 퇴역한 원수의 집이었어요.",
+   "blank": "marsekal",
+   "src": "made"
+  }
+ ],
  "w|martir": [
   {
    "text": "Andi membaca biografi seorang martir yang dihormati dalam sejarah gereja.",
@@ -35517,6 +35805,22 @@
    "en": "She wants to continue her studies.",
    "ko": "그녀는 공부를 이어가고 싶어해.",
    "blank": "melanjutkan"
+  }
+ ],
+ "w|melapisi": [
+  {
+   "text": "Atas permintaan Fajar, petugas melapisi lantai aula dengan karpet baru.",
+   "en": "At Fajar's request, the workers covered the hall floor with new carpet.",
+   "ko": "파자르의 요청으로 직원들이 강당 바닥에 새 카펫을 깔았어요.",
+   "blank": "melapisi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari melapisi rak dapur dengan kertas kontak bermotif bunga.",
+   "en": "Lestari lined the kitchen shelves with flowered contact paper.",
+   "ko": "레스타리는 부엌 선반에 꽃무늬 시트지를 붙였어요.",
+   "blank": "melapisi",
+   "src": "made"
   }
  ],
  "w|melapor": [
@@ -42701,6 +43005,22 @@
    "blank": "Menekan"
   }
  ],
+ "w|menekankan": [
+  {
+   "text": "Dalam rapat anggaran, Fajar menekankan pentingnya keterbukaan kepada warga.",
+   "en": "In the budget meeting, Fajar stressed the importance of openness to residents.",
+   "ko": "예산 회의에서 파자르는 주민에게 투명하게 공개하는 것이 중요하다고 강조했어요.",
+   "blank": "menekankan",
+   "src": "made"
+  },
+  {
+   "text": "Rapat penghuni menekankan pentingnya memilah sampah, jadi Lestari menyiapkan dua tempat sampah.",
+   "en": "The residents' meeting stressed sorting trash, so Lestari set out two bins.",
+   "ko": "입주자 회의에서 분리수거를 강조해서 레스타리는 쓰레기통을 두 개 놓았어요.",
+   "blank": "menekankan",
+   "src": "made"
+  }
+ ],
  "w|menelan": [
   {
    "text": "Proyek jalan layang itu menelan biaya jauh lebih besar dari rencana.",
@@ -43386,6 +43706,22 @@
    "en": "Siti has devoted herself to that library since she was young.",
    "ko": "시티는 젊을 때부터 그 도서관에서 헌신해 왔어요.",
    "blank": "mengabdi",
+   "src": "made"
+  }
+ ],
+ "w|mengabdikan": [
+  {
+   "text": "Fajar sudah mengabdikan hidupnya untuk pelayanan publik di balai kota.",
+   "en": "Fajar has devoted his life to public service at city hall.",
+   "ko": "파자르는 시청에서 공공 서비스에 평생을 바쳐 왔어요.",
+   "blank": "mengabdikan",
+   "src": "made"
+  },
+  {
+   "text": "Pak Joko telah mengabdikan diri sebagai satpam di gedung Lestari selama dua puluh tahun.",
+   "en": "Pak Joko has devoted himself to being a security guard at Lestari's building for twenty years.",
+   "ko": "조코 씨는 레스타리의 건물에서 이십 년 동안 경비원으로 헌신해 왔어요.",
+   "blank": "mengabdikan",
    "src": "made"
   }
  ],
@@ -44732,6 +45068,22 @@
    "en": "Her colleagues gathered around Intan's desk to celebrate her birthday.",
    "ko": "동료들이 인탄의 생일을 축하하려고 책상 주위에 모였어요.",
    "blank": "mengelilingi",
+   "src": "made"
+  }
+ ],
+ "w|mengeliminasi": [
+  {
+   "text": "Fajar merancang antrean daring untuk mengeliminasi calo di loket pelayanan.",
+   "en": "Fajar designed an online queue to eliminate scalpers at the service counter.",
+   "ko": "파자르는 민원 창구의 브로커를 없애려고 온라인 대기 시스템을 만들었어요.",
+   "blank": "mengeliminasi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memasang penyaring air untuk mengeliminasi bau kaporit dari keran.",
+   "en": "Lestari installed a water filter to eliminate the chlorine smell from the tap.",
+   "ko": "레스타리는 수돗물의 소독약 냄새를 없애려고 정수 필터를 달았어요.",
+   "blank": "mengeliminasi",
    "src": "made"
   }
  ],
@@ -47819,6 +48171,22 @@
    "src": "made"
   }
  ],
+ "w|mengungsi": [
+  {
+   "text": "Saat banjir besar datang, ratusan warga mengungsi ke aula balai kota yang diurus Fajar.",
+   "en": "When the big flood came, hundreds of residents took refuge in the city hall auditorium Fajar runs.",
+   "ko": "큰 홍수가 났을 때 주민 수백 명이 파자르가 관리하는 시청 강당으로 대피했어요.",
+   "blank": "mengungsi",
+   "src": "made"
+  },
+  {
+   "text": "Waktu listrik gedung padam berhari-hari, Lestari mengungsi ke rumah ibunya.",
+   "en": "When the building's power was out for days, Lestari took refuge at her mother's house.",
+   "ko": "건물 전기가 며칠씩 나갔을 때 레스타리는 어머니 댁으로 피신했어요.",
+   "blank": "mengungsi",
+   "src": "made"
+  }
+ ],
  "w|mengunjungi": [
   {
    "text": "Kami akan mengunjungi nenek minggu ini.",
@@ -49946,6 +50314,22 @@
    "en": "The moving paperwork involves both the old and the new village office.",
    "ko": "전입 서류 일은 예전 동사무소와 새 동사무소 둘 다 관련돼 있어요.",
    "blank": "menyangkut",
+   "src": "made"
+  }
+ ],
+ "w|menyanjung": [
+  {
+   "text": "Para tamu terus menyanjung pidato wali kota, tetapi Fajar tetap mencatat keluhan warga.",
+   "en": "The guests kept praising the mayor's speech, but Fajar kept noting down residents' complaints.",
+   "ko": "손님들은 시장의 연설을 계속 치켜세웠지만 파자르는 주민들의 불만을 꼼꼼히 적었어요.",
+   "blank": "menyanjung",
+   "src": "made"
+  },
+  {
+   "text": "Bu Rina sering menyanjung masakan Lestari di depan tetangga lain.",
+   "en": "Bu Rina often praises Lestari's cooking in front of the other neighbors.",
+   "ko": "리나 씨는 다른 이웃들 앞에서 레스타리의 요리를 자주 칭찬해요.",
+   "blank": "menyanjung",
    "src": "made"
   }
  ],
@@ -56199,6 +56583,22 @@
    "blank": "Pantai"
   }
  ],
+ "w|pantang": [
+  {
+   "text": "Bagi Fajar, menerima uang pelicin adalah hal yang pantang.",
+   "en": "For Fajar, accepting a bribe is strictly off-limits.",
+   "ko": "파자르에게 뒷돈을 받는 것은 절대 안 되는 일이에요.",
+   "blank": "pantang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari pantang tidur sebelum semua piring kotor dicuci.",
+   "en": "Lestari never goes to bed before all the dirty dishes are washed.",
+   "ko": "레스타리는 설거지를 다 끝내기 전에는 절대 자지 않아요.",
+   "blank": "pantang",
+   "src": "made"
+  }
+ ],
  "w|pantas": [
   {
    "text": "Itu tidak pantas dikatakan.",
@@ -57225,6 +57625,22 @@
    "blank": "pelanggan"
   }
  ],
+ "w|pelanggar": [
+  {
+   "text": "Fajar mencatat nama setiap pelanggar aturan parkir di halaman balai kota.",
+   "en": "Fajar writes down the name of every parking violator in the city hall yard.",
+   "ko": "파자르는 시청 마당에서 주차 규칙을 어긴 사람의 이름을 모두 적어요.",
+   "blank": "pelanggar",
+   "src": "made"
+  },
+  {
+   "text": "Satpam mencatat setiap pelanggar jam tenang di buku khusus, cerita Lestari.",
+   "en": "The guard records every quiet-hours violator in a special book, Lestari says.",
+   "ko": "레스타리 말로는 경비원이 조용한 시간을 어긴 사람을 모두 따로 장부에 적어요.",
+   "blank": "pelanggar",
+   "src": "made"
+  }
+ ],
  "w|pelanggaran": [
   {
    "text": "Pelanggaran lalu lintas didenda dengan tegas.",
@@ -57997,6 +58413,22 @@
    "src": "made"
   }
  ],
+ "w|pembakar": [
+  {
+   "text": "Polisi masih mencari pembakar gudang arsip yang terbakar bulan lalu, kata Fajar.",
+   "en": "Police are still looking for the arsonist behind last month's archive warehouse fire, Fajar said.",
+   "ko": "파자르 말로는 경찰이 지난달 불탄 기록 창고의 방화범을 아직 찾고 있어요.",
+   "blank": "pembakar",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membersihkan pembakar kompor gas yang tersumbat minyak.",
+   "en": "Lestari cleaned the gas stove burner that was clogged with grease.",
+   "ko": "레스타리는 기름때로 막힌 가스레인지 버너를 청소했어요.",
+   "blank": "pembakar",
+   "src": "made"
+  }
+ ],
  "w|pembakaran": [
   {
    "text": "Pak Guru melarang pembakaran sampah di halaman belakang sekolah Agus.",
@@ -58248,6 +58680,22 @@
    "en": "Wati put off buying a new umbrella until the rainy season really arrived.",
    "ko": "와티는 우기가 정말 올 때까지 새 우산 사는 걸 미뤘어요.",
    "blank": "pembelian",
+   "src": "made"
+  }
+ ],
+ "w|pembelot": [
+  {
+   "text": "Fajar sedang membaca novel sejarah tentang seorang pembelot pada masa perang.",
+   "en": "Fajar is reading a historical novel about a defector during the war.",
+   "ko": "파자르는 전쟁 시기의 한 망명자에 관한 역사 소설을 읽고 있어요.",
+   "blank": "pembelot",
+   "src": "made"
+  },
+  {
+   "text": "Novel yang dibaca Lestari berkisah tentang seorang pembelot yang menyeberangi perbatasan.",
+   "en": "The novel Lestari is reading tells of a defector who crosses the border.",
+   "ko": "레스타리가 읽는 소설은 국경을 넘는 한 망명자의 이야기예요.",
+   "blank": "pembelot",
    "src": "made"
   }
  ],
@@ -62259,6 +62707,22 @@
    "src": "made"
   }
  ],
+ "w|penyangkalan": [
+  {
+   "text": "Fajar menerima surat penyangkalan dari kontraktor yang dituduh memperlambat proyek.",
+   "en": "Fajar received a letter of denial from the contractor accused of delaying the project.",
+   "ko": "파자르는 공사를 지연시켰다는 의혹을 받은 시공사로부터 부인하는 편지를 받았어요.",
+   "blank": "penyangkalan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari tertawa mendengar penyangkalan anaknya yang mulutnya masih belepotan cokelat.",
+   "en": "Lestari laughed at her child's denial, with chocolate still smeared around the child's mouth.",
+   "ko": "레스타리는 입에 초콜릿을 잔뜩 묻힌 채 아니라고 우기는 아이를 보고 웃었어요.",
+   "blank": "penyangkalan",
+   "src": "made"
+  }
+ ],
  "w|penyanyi": [
   {
    "text": "Penyanyi itu membawakan lagu favoritku.",
@@ -62521,6 +62985,22 @@
    "blank": "penyerangan"
   }
  ],
+ "w|penyerbuan": [
+  {
+   "text": "Fajar membaca arsip lama tentang penyerbuan benteng kota pada zaman kolonial.",
+   "en": "Fajar read old archives about the storming of the city fort in colonial times.",
+   "ko": "파자르는 식민지 시대 도시 요새 습격에 관한 옛 기록을 읽었어요.",
+   "blank": "penyerbuan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menonton film dokumenter tentang penyerbuan pasukan sekutu di sebuah pantai.",
+   "en": "Lestari watched a documentary about an Allied assault on a beach.",
+   "ko": "레스타리는 연합군의 해변 상륙 공격에 관한 다큐멘터리를 봤어요.",
+   "blank": "penyerbuan",
+   "src": "made"
+  }
+ ],
  "w|penyergapan": [
   {
    "text": "Novel perang yang dipinjam Andi dibuka dengan penyergapan di hutan.",
@@ -62658,6 +63138,22 @@
    "en": "Lestari wrote that their teacher never tolerated any deviation from the class rules.",
    "ko": "레스타리는 옛 선생님이 학급 규칙에서 벗어나는 걸 절대 봐주지 않으셨다고 썼어요.",
    "blank": "penyimpangan",
+   "src": "made"
+  }
+ ],
+ "w|penyitaan": [
+  {
+   "text": "Fajar ikut menyaksikan penyitaan barang dagangan liar di trotoar alun-alun.",
+   "en": "Fajar was present for the seizure of unlicensed goods on the square's sidewalk.",
+   "ko": "파자르는 광장 인도에서 무허가 물건을 압수하는 현장에 함께 있었어요.",
+   "blank": "penyitaan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membaca surat edaran tentang penyitaan unit yang cicilannya menunggak.",
+   "en": "Lestari read a notice about the seizure of units with overdue installments.",
+   "ko": "레스타리는 할부금이 밀린 집을 압류한다는 공지문을 읽었어요.",
+   "blank": "penyitaan",
    "src": "made"
   }
  ],
@@ -69937,6 +70433,22 @@
    "blank": "sakit"
   }
  ],
+ "w|sakral": [
+  {
+   "text": "Fajar memastikan upacara adat yang sakral itu tidak terganggu pengeras suara.",
+   "en": "Fajar made sure the sacred traditional ceremony wasn't disturbed by loudspeakers.",
+   "ko": "파자르는 그 신성한 전통 의식이 확성기 소리에 방해받지 않게 했어요.",
+   "blank": "sakral",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Lestari, makan malam bersama keluarga setiap Jumat itu sakral.",
+   "en": "For Lestari, Friday family dinner is sacred.",
+   "ko": "레스타리에게 금요일마다 가족과 함께하는 저녁 식사는 신성한 일이에요.",
+   "blank": "sakral",
+   "src": "made"
+  }
+ ],
  "w|saksama": [
   {
    "text": "Eko memeriksa peta secara saksama sebelum memilih jalur pulang.",
@@ -70440,6 +70952,22 @@
    "en": "Wati wrote that she still remembers the canary in the yellow cage they used to have.",
    "ko": "와티는 예전에 노란 새장에서 키우던 카나리아를 아직 기억한다고 썼어요.",
    "blank": "sangkar",
+   "src": "made"
+  }
+ ],
+ "w|sanksi": [
+  {
+   "text": "Fajar mengingatkan bahwa pegawai yang sering bolos akan mendapat sanksi.",
+   "en": "Fajar reminded everyone that staff who often skip work will face sanctions.",
+   "ko": "파자르는 자주 무단결근하는 직원은 징계를 받는다고 상기시켰어요.",
+   "blank": "sanksi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari pernah kena sanksi denda karena memarkir motor di jalur darurat.",
+   "en": "Lestari was once fined for parking her motorbike in the emergency lane.",
+   "ko": "레스타리는 비상 통로에 오토바이를 세워서 벌금 처분을 받은 적이 있어요.",
+   "blank": "sanksi",
    "src": "made"
   }
  ],
@@ -71017,6 +71545,22 @@
    "src": "made"
   }
  ],
+ "w|sebegitu": [
+  {
+   "text": "Fajar tidak menyangka antrean pembuatan KTP bisa sebegitu panjang.",
+   "en": "Fajar didn't expect the line for ID cards to be that long.",
+   "ko": "파자르는 신분증 발급 줄이 그렇게까지 길 줄은 몰랐어요.",
+   "blank": "sebegitu",
+   "src": "made"
+  },
+  {
+   "text": "Lestari heran kenapa tetangga sebelah bisa sebegitu berisik tengah malam.",
+   "en": "Lestari wonders how the neighbor next door can be so noisy in the middle of the night.",
+   "ko": "레스타리는 옆집이 어떻게 한밤중에 그렇게까지 시끄러울 수 있는지 의아해요.",
+   "blank": "sebegitu",
+   "src": "made"
+  }
+ ],
  "w|sebelah": [
   {
    "text": "Toko itu di sebelah bank.",
@@ -71369,6 +71913,22 @@
    "blank": "sedikit"
   }
  ],
+ "w|sedunia": [
+  {
+   "text": "Fajar bangga karena kopi dari daerah ini sudah terkenal sedunia.",
+   "en": "Fajar is proud that coffee from this region is now famous around the world.",
+   "ko": "파자르는 이 지역 커피가 이제 세계적으로 유명해져서 자랑스러워요.",
+   "blank": "sedunia",
+   "src": "made"
+  },
+  {
+   "text": "Lestari yakin kucingnya adalah kucing paling malas sedunia.",
+   "en": "Lestari is sure her cat is the laziest cat in the world.",
+   "ko": "레스타리는 자기 고양이가 세상에서 제일 게으른 고양이라고 확신해요.",
+   "blank": "sedunia",
+   "src": "made"
+  }
+ ],
  "w|seekor": [
   {
    "text": "Ada seekor anjing di sana.",
@@ -71619,6 +72179,22 @@
    "en": "So we had to wait a long time.",
    "ko": "그래서 우리는 오래 기다려야 했어.",
    "blank": "Sehingga"
+  }
+ ],
+ "w|sehubungan": [
+  {
+   "text": "Fajar mengirim surat edaran sehubungan dengan perubahan jam layanan.",
+   "en": "Fajar sent out a circular in connection with the change in service hours.",
+   "ko": "파자르는 업무 시간 변경과 관련해 공문을 보냈어요.",
+   "blank": "sehubungan",
+   "src": "made"
+  },
+  {
+   "text": "Pengelola menempel pengumuman sehubungan dengan pemadaman air besok, jadi Lestari mengisi ember.",
+   "en": "The management posted a notice about tomorrow's water outage, so Lestari filled buckets.",
+   "ko": "관리실이 내일 단수와 관련해 공지를 붙여서 레스타리는 양동이에 물을 받아 뒀어요.",
+   "blank": "sehubungan",
+   "src": "made"
   }
  ],
  "w|seimbang": [
@@ -75957,6 +76533,22 @@
    "blank": "stabil"
   }
  ],
+ "w|stabilitas": [
+  {
+   "text": "Fajar percaya stabilitas harga pangan penting bagi ketenangan warga.",
+   "en": "Fajar believes stable food prices are important for residents' peace of mind.",
+   "ko": "파자르는 식료품 가격 안정이 주민들의 안심에 중요하다고 믿어요.",
+   "blank": "stabilitas",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memilih apartemen ini karena stabilitas sinyal internet di sini bagus.",
+   "en": "Lestari chose this apartment because the internet signal here is stable.",
+   "ko": "레스타리는 여기 인터넷 신호가 안정적이라서 이 아파트를 골랐어요.",
+   "blank": "stabilitas",
+   "src": "made"
+  }
+ ],
  "w|stadion": [
   {
    "text": "Eko dan teman sekelasnya menonton final sepak bola pelajar di stadion kota.",
@@ -77569,6 +78161,22 @@
    "src": "made"
   }
  ],
+ "w|tandingan": [
+  {
+   "text": "Dalam urusan tata kota, Fajar belum punya tandingan di kantor itu.",
+   "en": "When it comes to urban planning, Fajar has no match in that office yet.",
+   "ko": "도시 계획에서는 그 사무실에 아직 파자르를 따라올 사람이 없어요.",
+   "blank": "tandingan",
+   "src": "made"
+  },
+  {
+   "text": "Menurut Lestari, rendang buatan Bu Rina tidak ada tandingan di seluruh gedung.",
+   "en": "According to Lestari, Bu Rina's rendang is unrivaled in the whole building.",
+   "ko": "레스타리 말로는 리나 씨가 만든 른당은 건물 전체에서 따라올 게 없어요.",
+   "blank": "tandingan",
+   "src": "made"
+  }
+ ],
  "w|tanduk": [
   {
    "text": "Penjual cendera mata menawari Eko hiasan dari tanduk kerbau.",
@@ -77967,6 +78575,22 @@
    "en": "The special offer is only valid today.",
    "ko": "특별 제안은 오늘만 유효해.",
    "blank": "Tawaran"
+  }
+ ],
+ "w|tayang": [
+  {
+   "text": "Wawancara Fajar tentang anggaran kota akan tayang di televisi lokal malam ini.",
+   "en": "Fajar's interview about the city budget will air on local television tonight.",
+   "ko": "시 예산에 관한 파자르의 인터뷰가 오늘 밤 지역 방송에 나가요.",
+   "blank": "tayang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari tidak pernah melewatkan sinetron yang tayang setiap pukul delapan malam.",
+   "en": "Lestari never misses the soap opera that airs every night at eight.",
+   "ko": "레스타리는 매일 밤 여덟 시에 하는 드라마를 한 번도 놓치지 않아요.",
+   "blank": "tayang",
+   "src": "made"
   }
  ],
  "w|tayangan": [
@@ -84580,6 +85204,22 @@
    "en": "Intan bought a small microphone for vocal practice in her room.",
    "ko": "인탄은 방에서 발성 연습을 하려고 작은 마이크를 샀어요.",
    "blank": "vokal",
+   "src": "made"
+  }
+ ],
+ "w|vonis": [
+  {
+   "text": "Fajar mengikuti berita tentang vonis hakim terhadap mantan pejabat kota.",
+   "en": "Fajar followed the news about the judge's verdict on a former city official.",
+   "ko": "파자르는 전 시 공무원에 대한 판사의 판결 뉴스를 지켜봤어요.",
+   "blank": "vonis",
+   "src": "made"
+  },
+  {
+   "text": "Lestari lega setelah dokter memberi vonis bahwa ibunya hanya kelelahan.",
+   "en": "Lestari was relieved when the doctor's verdict was that her mother was just exhausted.",
+   "ko": "의사가 어머니는 그냥 과로라고 진단하자 레스타리는 안심했어요.",
+   "blank": "vonis",
    "src": "made"
   }
  ],
