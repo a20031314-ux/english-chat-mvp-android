@@ -1645,6 +1645,22 @@
    "blank": "asuransi"
   }
  ],
+ "w|asyik": [
+  {
+   "text": "Budi begitu asyik membaca surat itu sampai lupa makan malam.",
+   "en": "Budi was so absorbed in reading the letter that he forgot dinner.",
+   "ko": "부디는 편지 읽기에 푹 빠져서 저녁 먹는 것도 잊었어요.",
+   "blank": "asyik",
+   "src": "made"
+  },
+  {
+   "text": "Siti asyik mendengarkan musik sampai tidak sadar sudah melewati sepuluh kilometer.",
+   "en": "Siti was so into her music that she didn't notice she had passed ten kilometers.",
+   "ko": "시티는 음악에 빠져서 십 킬로미터를 지난 줄도 몰랐어요.",
+   "blank": "asyik",
+   "src": "made"
+  }
+ ],
  "w|atap": [
   {
    "text": "Atap rumah bocor saat hujan deras.",
@@ -3925,6 +3941,22 @@
    "blank": "Berbagi"
   }
  ],
+ "w|berbahagia": [
+  {
+   "text": "Budi ikut berbahagia atas kelahiran anak pertama Andi.",
+   "en": "Budi shares in the happiness over the birth of Andi's first child.",
+   "ko": "부디는 안디의 첫아이 출생을 함께 기뻐해요.",
+   "blank": "berbahagia",
+   "src": "made"
+  },
+  {
+   "text": "Keluarga Siti berbahagia melihat medali pertamanya.",
+   "en": "Siti's family was happy to see her first medal.",
+   "ko": "시티 가족은 그녀의 첫 메달을 보고 행복해했어요.",
+   "blank": "berbahagia",
+   "src": "made"
+  }
+ ],
  "w|berbahasa": [
   {
    "text": "Sekolah Andi mewajibkan siswa berbahasa Inggris setiap hari Jumat.",
@@ -4671,6 +4703,22 @@
    "blank": "Bergabung"
   }
  ],
+ "w|bergairah": [
+  {
+   "text": "Andi menulis bahwa ia masih bergairah mengajar anak-anak di desa.",
+   "en": "Andi writes that he is still passionate about teaching children in the village.",
+   "ko": "안디는 아직도 마을 아이들을 가르치는 데 열정이 넘친다고 써요.",
+   "blank": "bergairah",
+   "src": "made"
+  },
+  {
+   "text": "Siti merasa bergairah setiap kali musim lomba lari dimulai.",
+   "en": "Siti feels excited every time the running season begins.",
+   "ko": "시티는 마라톤 시즌이 시작될 때마다 의욕이 넘쳐요.",
+   "blank": "bergairah",
+   "src": "made"
+  }
+ ],
  "w|berganti": [
   {
    "text": "Setelah pelajaran olahraga, Eko berganti baju di ruang ganti.",
@@ -4727,6 +4775,22 @@
    "en": "Just hurry before the shop closes.",
    "ko": "가게 닫기 전에 서둘러.",
    "blank": "Bergegas"
+  }
+ ],
+ "w|bergembira": [
+  {
+   "text": "Budi bergembira mendengar Andi akan pindah ke kota yang sama.",
+   "en": "Budi rejoiced to hear that Andi will move to the same city.",
+   "ko": "안디가 같은 도시로 이사 온다는 소식에 부디는 기뻐했어요.",
+   "blank": "bergembira",
+   "src": "made"
+  },
+  {
+   "text": "Siti dan teman-temannya bergembira setelah semua berhasil finis.",
+   "en": "Siti and her friends rejoiced after they all managed to finish.",
+   "ko": "모두 완주하자 시티와 친구들은 기뻐했어요.",
+   "blank": "bergembira",
+   "src": "made"
   }
  ],
  "w|bergerak": [
@@ -5550,6 +5614,22 @@
    "en": "Siti is committed to finishing this film even though her schedule is packed.",
    "ko": "시티는 일정이 빡빡해도 이 영화를 끝까지 마치기로 했어요.",
    "blank": "berkomitmen",
+   "src": "made"
+  }
+ ],
+ "w|berkompromi": [
+  {
+   "text": "Kata Budi, persahabatan bertahan lama karena kita mau berkompromi.",
+   "en": "Budi says a friendship lasts because we are willing to compromise.",
+   "ko": "부디는 서로 타협할 줄 알아야 우정이 오래간다고 해요.",
+   "blank": "berkompromi",
+   "src": "made"
+  },
+  {
+   "text": "Siti dan pelatihnya akhirnya berkompromi soal jadwal latihan.",
+   "en": "Siti and her coach finally compromised on the training schedule.",
+   "ko": "시티와 코치는 결국 훈련 일정을 두고 타협했어요.",
+   "blank": "berkompromi",
    "src": "made"
   }
  ],
@@ -7273,6 +7353,22 @@
    "src": "made"
   }
  ],
+ "w|bertepuk": [
+  {
+   "text": "Budi ingat mereka bertepuk tangan paling keras saat Andi menang lomba pidato.",
+   "en": "Budi remembers they clapped the loudest when Andi won the speech contest.",
+   "ko": "부디는 안디가 웅변 대회에서 이겼을 때 자기들이 가장 크게 박수 쳤던 걸 기억해요.",
+   "blank": "bertepuk",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak di pinggir jalan bertepuk tangan setiap kali pelari lewat.",
+   "en": "Children by the roadside clapped every time a runner passed.",
+   "ko": "길가의 아이들은 주자가 지나갈 때마다 박수를 쳤어요.",
+   "blank": "bertepuk",
+   "src": "made"
+  }
+ ],
  "w|berteriak": [
   {
    "text": "Jangan berteriak di sini.",
@@ -7327,6 +7423,22 @@
    "en": "Acting arrogant makes friends pull away.",
    "ko": "잘난 척하면 친구들이 멀어져.",
    "blank": "Bertingkah"
+  }
+ ],
+ "w|bertopeng": [
+  {
+   "text": "Andi melampirkan foto mereka berdua bertopeng di pesta sekolah dulu.",
+   "en": "Andi encloses a photo of the two of them in masks at an old school party.",
+   "ko": "안디는 예전 학교 파티에서 둘이 가면을 쓴 사진을 동봉해요.",
+   "blank": "bertopeng",
+   "src": "made"
+  },
+  {
+   "text": "Beberapa peserta berlari bertopeng pahlawan super untuk menghibur anak-anak.",
+   "en": "Some participants ran wearing superhero masks to entertain the children.",
+   "ko": "몇몇 참가자는 아이들을 즐겁게 하려고 슈퍼히어로 가면을 쓰고 달렸어요.",
+   "blank": "bertopeng",
+   "src": "made"
   }
  ],
  "w|bertugas": [
@@ -11438,6 +11550,22 @@
    "en": "The leather bag Lestari bought seems to have once belonged to an executive.",
    "ko": "레스타리가 산 가죽 가방은 예전에 어느 임원의 것이었던 것 같아요.",
    "blank": "eksekutif",
+   "src": "made"
+  }
+ ],
+ "w|eksklusif": [
+  {
+   "text": "Budi mengirim undangan eksklusif ke pameran lukisannya untuk Andi.",
+   "en": "Budi sends Andi an exclusive invitation to his painting exhibition.",
+   "ko": "부디는 안디에게 자기 그림 전시회 특별 초대장을 보내요.",
+   "blank": "eksklusif",
+   "src": "made"
+  },
+  {
+   "text": "Pelari elite mendapat ruang istirahat eksklusif di dekat garis akhir.",
+   "en": "Elite runners get an exclusive rest area near the finish line.",
+   "ko": "엘리트 주자들은 결승선 근처에 전용 휴게 공간을 받아요.",
+   "blank": "eksklusif",
    "src": "made"
   }
  ],
@@ -16009,6 +16137,22 @@
    "blank": "jet"
   }
  ],
+ "w|jijik": [
+  {
+   "text": "Andi menulis bahwa ia dulu jijik makan durian, tapi sekarang malah suka.",
+   "en": "Andi writes that he used to be disgusted by durian, but now he actually likes it.",
+   "ko": "안디는 예전엔 두리안이 역겨웠는데 지금은 오히려 좋아한다고 써요.",
+   "blank": "jijik",
+   "src": "made"
+  },
+  {
+   "text": "Siti merasa jijik melihat tumpukan gelas plastik di pinggir jalan.",
+   "en": "Siti felt disgusted at the piles of plastic cups by the roadside.",
+   "ko": "시티는 길가에 쌓인 플라스틱 컵 더미를 보고 역겨웠어요.",
+   "blank": "jijik",
+   "src": "made"
+  }
+ ],
  "w|jika": [
   {
    "text": "Jika hujan, kita batal.",
@@ -16067,6 +16211,22 @@
    "en": "A young spirit is full of energy.",
    "ko": "젊은 영혼은 열정이 가득해.",
    "blank": "Jiwa"
+  }
+ ],
+ "w|jorok": [
+  {
+   "text": "Budi menggoda Andi karena kamar kosnya dulu sangat jorok.",
+   "en": "Budi teases Andi because his boarding room used to be very messy.",
+   "ko": "부디는 안디의 하숙방이 예전에 엄청 지저분했다고 놀려요.",
+   "blank": "jorok",
+   "src": "made"
+  },
+  {
+   "text": "Toilet portabel di dekat garis start sangat jorok, jadi Siti menahan diri.",
+   "en": "The portable toilets near the start line were very dirty, so Siti held it in.",
+   "ko": "출발선 근처 이동식 화장실이 너무 더러워서 시티는 참았어요.",
+   "blank": "jorok",
+   "src": "made"
   }
  ],
  "w|juara": [
@@ -17032,6 +17192,22 @@
    "en": "Today Intan interviewed three candidates for the designer position.",
    "ko": "인탄은 오늘 디자이너 자리에 지원한 후보 세 명을 면접했어요.",
    "blank": "kandidat",
+   "src": "made"
+  }
+ ],
+ "w|kangen": [
+  {
+   "text": "Di akhir surat, Budi menulis bahwa ia kangen main bola bersama Andi.",
+   "en": "At the end of the letter, Budi writes that he misses playing football with Andi.",
+   "ko": "편지 끝에 부디는 안디와 공 차던 게 그립다고 써요.",
+   "blank": "kangen",
+   "src": "made"
+  },
+  {
+   "text": "Siti kangen suasana lomba yang ramai setelah lama tidak ikut.",
+   "en": "Siti misses the lively race atmosphere after not taking part for a long time.",
+   "ko": "오랫동안 대회에 안 나간 시티는 북적이는 대회 분위기가 그리워요.",
+   "blank": "kangen",
    "src": "made"
   }
  ],
@@ -18227,6 +18403,22 @@
    "blank": "kecuali"
   }
  ],
+ "w|kecurigaan": [
+  {
+   "text": "Budi mengakui kecurigaan lamanya terhadap Andi ternyata salah.",
+   "en": "Budi admits his old suspicion of Andi turned out to be wrong.",
+   "ko": "부디는 안디에 대한 예전의 의심이 틀렸다고 인정해요.",
+   "blank": "kecurigaan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia menyelidiki kecurigaan bahwa seorang peserta naik ojek di tengah rute.",
+   "en": "The organizers investigated the suspicion that a participant took a motorbike taxi midway through the course.",
+   "ko": "주최 측은 한 참가자가 코스 중간에 오토바이 택시를 탔다는 의혹을 조사했어요.",
+   "blank": "kecurigaan",
+   "src": "made"
+  }
+ ],
  "w|kedai": [
   {
    "text": "Sebelum punya toko sendiri, Fajar bekerja di kedai kopi di pinggir jalan.",
@@ -18433,6 +18625,22 @@
    "en": "She is afraid of the dark.",
    "ko": "그녀는 어둠을 두려워해.",
    "blank": "kegelapan"
+  }
+ ],
+ "w|kegembiraan": [
+  {
+   "text": "Budi tidak bisa menyembunyikan kegembiraan saat surat dari Andi akhirnya tiba.",
+   "en": "Budi couldn't hide his joy when the letter from Andi finally arrived.",
+   "ko": "안디의 편지가 마침내 왔을 때 부디는 기쁨을 감출 수 없었어요.",
+   "blank": "kegembiraan",
+   "src": "made"
+  },
+  {
+   "text": "Pagi itu, kegembiraan para pelari terasa di sepanjang jalan kota.",
+   "en": "That morning, the runners' joy could be felt all along the city streets.",
+   "ko": "그날 아침 도시 거리 곳곳에서 주자들의 기쁨이 느껴졌어요.",
+   "blank": "kegembiraan",
+   "src": "made"
   }
  ],
  "w|kegiatan": [
@@ -19137,6 +19345,22 @@
    "en": "The opposing team exploited a defensive weakness.",
    "ko": "상대 팀이 수비 약점을 이용했어.",
    "blank": "kelemahan"
+  }
+ ],
+ "w|kelewatan": [
+  {
+   "text": "Budi mengakui leluconnya waktu SMA memang kelewatan.",
+   "en": "Budi admits his joke back in high school really went too far.",
+   "ko": "부디는 고등학교 때 자기 농담이 정말 지나쳤다고 인정해요.",
+   "blank": "kelewatan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menganggap harga pendaftaran tahun ini sudah kelewatan mahal.",
+   "en": "Siti thinks this year's registration fee is way too expensive.",
+   "ko": "시티는 올해 참가비가 너무 지나치게 비싸다고 생각해요.",
+   "blank": "kelewatan",
+   "src": "made"
   }
  ],
  "w|kelihatan": [
@@ -20589,6 +20813,22 @@
    "en": "Their training schedule is very tight.",
    "ko": "그들의 훈련 일정은 아주 빡빡해.",
    "blank": "ketat"
+  }
+ ],
+ "w|ketegangan": [
+  {
+   "text": "Budi menulis bahwa ketegangan di kantornya mulai mereda.",
+   "en": "Budi writes that the tension at his office is starting to ease.",
+   "ko": "부디는 회사의 긴장감이 조금씩 풀리고 있다고 써요.",
+   "blank": "ketegangan",
+   "src": "made"
+  },
+  {
+   "text": "Siti merasakan ketegangan di garis start sebelum pistol dibunyikan.",
+   "en": "Siti felt the tension at the starting line before the gun went off.",
+   "ko": "시티는 출발 총소리가 울리기 전 출발선에서 긴장감을 느꼈어요.",
+   "blank": "ketegangan",
+   "src": "made"
   }
  ],
  "w|ketemu": [
@@ -27907,6 +28147,22 @@
    "blank": "membuatkan"
   }
  ],
+ "w|membubarkan": [
+  {
+   "text": "Budi mengenang saat guru membubarkan klub teater mereka di sekolah.",
+   "en": "Budi recalls when the teacher disbanded their theater club at school.",
+   "ko": "부디는 선생님이 학교 연극부를 해체했던 때를 떠올려요.",
+   "blank": "membubarkan",
+   "src": "made"
+  },
+  {
+   "text": "Polisi membubarkan kerumunan penonton yang menghalangi jalur lari.",
+   "en": "The police dispersed the crowd of spectators blocking the running route.",
+   "ko": "경찰은 달리기 코스를 막은 구경꾼 무리를 해산시켰어요.",
+   "blank": "membubarkan",
+   "src": "made"
+  }
+ ],
  "w|membujuk": [
   {
    "text": "Bayu berhasil membujuk atasannya untuk menambah kipas di ruang jahit.",
@@ -30695,6 +30951,22 @@
    "src": "made"
   }
  ],
+ "w|mendidik": [
+  {
+   "text": "Andi bilang mendidik anak ternyata lebih sulit dari mengajar di kelas.",
+   "en": "Andi says raising a child turns out to be harder than teaching in a classroom.",
+   "ko": "안디는 아이를 키우는 게 교실에서 가르치는 것보다 어렵다고 해요.",
+   "blank": "mendidik",
+   "src": "made"
+  },
+  {
+   "text": "Siti ingin mendidik murid-muridnya agar suka berolahraga sejak kecil.",
+   "en": "Siti wants to teach her students to love exercise from a young age.",
+   "ko": "시티는 학생들이 어릴 때부터 운동을 좋아하도록 가르치고 싶어 해요.",
+   "blank": "mendidik",
+   "src": "made"
+  }
+ ],
  "w|mendirikan": [
   {
    "text": "Para siswa sepakat mendirikan klub robotik di sekolah.",
@@ -32157,6 +32429,22 @@
    "src": "made"
   }
  ],
+ "w|mengasihi": [
+  {
+   "text": "Budi tahu ibu Andi mengasihi semua teman anaknya seperti anak sendiri.",
+   "en": "Budi knows Andi's mother loves all her son's friends like her own children.",
+   "ko": "부디는 안디의 어머니가 아들 친구들을 모두 친자식처럼 아낀다는 걸 알아요.",
+   "blank": "mengasihi",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengasihi ibunya yang selalu menunggu di garis akhir.",
+   "en": "Siti loves her mother, who always waits at the finish line.",
+   "ko": "시티는 늘 결승선에서 기다려 주는 어머니를 사랑해요.",
+   "blank": "mengasihi",
+   "src": "made"
+  }
+ ],
  "w|mengasuh": [
   {
    "text": "Fajar membelikan mainan untuk keponakan yang dia bantu mengasuh setiap Sabtu.",
@@ -33004,6 +33292,22 @@
    "en": "The police searched the empty house at the end of the alley after a theft report.",
    "ko": "도난 신고가 들어온 뒤 경찰이 골목 끝 빈집을 수색했어요.",
    "blank": "menggeledah",
+   "src": "made"
+  }
+ ],
+ "w|menggelikan": [
+  {
+   "text": "Budi menulis kisah menggelikan tentang kucingnya yang tidur di dalam kardus surat.",
+   "en": "Budi writes a funny story about his cat sleeping in the letter box.",
+   "ko": "부디는 편지 상자 안에서 자는 고양이에 관한 우스운 이야기를 써요.",
+   "blank": "menggelikan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pelari memakai kostum pisang yang menggelikan.",
+   "en": "One runner wore a ridiculous banana costume.",
+   "ko": "한 주자가 우스꽝스러운 바나나 옷을 입었어요.",
+   "blank": "menggelikan",
    "src": "made"
   }
  ],
@@ -34585,6 +34889,22 @@
    "src": "made"
   }
  ],
+ "w|menguping": [
+  {
+   "text": "Budi tertawa mengingat mereka pernah menguping rapat guru dari balik jendela.",
+   "en": "Budi laughs remembering they once eavesdropped on a teachers' meeting from behind a window.",
+   "ko": "부디는 창문 뒤에서 교사 회의를 엿들었던 일을 떠올리며 웃어요.",
+   "blank": "menguping",
+   "src": "made"
+  },
+  {
+   "text": "Di bus menuju lokasi, Siti tidak sengaja menguping strategi pelari lain.",
+   "en": "On the bus to the venue, Siti accidentally overheard another runner's strategy.",
+   "ko": "대회장 가는 버스에서 시티는 다른 주자의 작전을 우연히 엿들었어요.",
+   "blank": "menguping",
+   "src": "made"
+  }
+ ],
  "w|mengurangi": [
   {
    "text": "Dia mencoba mengurangi gula dalam kopi.",
@@ -34895,6 +35215,22 @@
    "en": "Improving product quality is our focus.",
    "ko": "제품 품질을 높이는 게 우리 초점이야.",
    "blank": "Meningkatkan"
+  }
+ ],
+ "w|meninjau": [
+  {
+   "text": "Andi bekerja di kantor dinas yang sering meninjau sekolah-sekolah desa.",
+   "en": "Andi works at a government office that often inspects village schools.",
+   "ko": "안디는 마을 학교들을 자주 시찰하는 관청에서 일해요.",
+   "blank": "meninjau",
+   "src": "made"
+  },
+  {
+   "text": "Panitia meninjau rute lomba seminggu sebelum hari H.",
+   "en": "The organizers surveyed the race route a week before the big day.",
+   "ko": "주최 측은 대회 일주일 전에 코스를 점검했어요.",
+   "blank": "meninjau",
+   "src": "made"
   }
  ],
  "w|menipu": [
@@ -36443,6 +36779,22 @@
    "blank": "menyelinap"
   }
  ],
+ "w|menyelundupkan": [
+  {
+   "text": "Budi ingat Andi pernah menyelundupkan kucing ke asrama sekolah.",
+   "en": "Budi remembers Andi once smuggled a cat into the school dormitory.",
+   "ko": "부디는 안디가 학교 기숙사에 고양이를 몰래 들여왔던 걸 기억해요.",
+   "blank": "menyelundupkan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang peserta ketahuan menyelundupkan sepeda ke dalam rute lomba.",
+   "en": "A participant was caught sneaking a bicycle onto the race route.",
+   "ko": "한 참가자가 대회 코스에 자전거를 몰래 들여온 게 들통났어요.",
+   "blank": "menyelundupkan",
+   "src": "made"
+  }
+ ],
  "w|menyeluruh": [
   {
    "text": "Sebelum operasi, Dimas melakukan pemeriksaan menyeluruh pada anjing itu.",
@@ -37421,6 +37773,22 @@
    "src": "made"
   }
  ],
+ "w|merelakan": [
+  {
+   "text": "Budi belajar merelakan masa lalu dan memaafkan sahabatnya.",
+   "en": "Budi is learning to let go of the past and forgive his friend.",
+   "ko": "부디는 지난 일을 내려놓고 친구를 용서하는 법을 배우고 있어요.",
+   "blank": "merelakan",
+   "src": "made"
+  },
+  {
+   "text": "Karena cedera, Siti harus merelakan kesempatan ikut lomba di luar kota.",
+   "en": "Because of an injury, Siti had to give up the chance to race out of town.",
+   "ko": "부상 때문에 시티는 다른 도시 대회에 나갈 기회를 포기해야 했어요.",
+   "blank": "merelakan",
+   "src": "made"
+  }
+ ],
  "w|meremehkan": [
   {
    "text": "Pak Agus mengingatkan Andi agar tidak meremehkan pesan penipuan di ponsel.",
@@ -37528,6 +37896,22 @@
    "en": "In the film, the character of Siti's younger brother is a teenager who is good at hacking computers.",
    "ko": "그 영화에서 시티의 동생 역은 컴퓨터 해킹을 잘하는 십 대예요.",
    "blank": "meretas",
+   "src": "made"
+  }
+ ],
+ "w|meriah": [
+  {
+   "text": "Andi menggambarkan pesta panen di desanya yang meriah.",
+   "en": "Andi describes the lively harvest festival in his village.",
+   "ko": "안디는 마을의 떠들썩한 추수 잔치를 묘사해요.",
+   "blank": "meriah",
+   "src": "made"
+  },
+  {
+   "text": "Suasana di garis akhir sangat meriah dengan musik dan sorakan.",
+   "en": "The atmosphere at the finish line was very festive with music and cheering.",
+   "ko": "결승선 분위기는 음악과 환호로 아주 떠들썩했어요.",
+   "blank": "meriah",
    "src": "made"
   }
  ],
@@ -39578,6 +39962,22 @@
    "en": "A light chat with the nurse made the patient less anxious.",
    "ko": "간호사와 가볍게 나눈 이야기 덕분에 환자가 덜 불안해했어요.",
    "blank": "obrolan",
+   "src": "made"
+  }
+ ],
+ "w|obsesi": [
+  {
+   "text": "Andi bercerita bahwa memancing kini menjadi obsesi barunya.",
+   "en": "Andi says fishing has become his new obsession.",
+   "ko": "안디는 낚시가 새 집착 대상이 됐다고 해요.",
+   "blank": "obsesi",
+   "src": "made"
+  },
+  {
+   "text": "Pelatih mengingatkan Siti agar target waktu tidak menjadi obsesi.",
+   "en": "The coach reminds Siti not to let her time goal become an obsession.",
+   "ko": "코치는 시티에게 기록 목표에 집착하지 말라고 일러요.",
+   "blank": "obsesi",
    "src": "made"
   }
  ],
@@ -46559,6 +46959,22 @@
    "src": "made"
   }
  ],
+ "w|pertengkaran": [
+  {
+   "text": "Budi menyesal atas pertengkaran kecil yang membuat mereka tidak bicara bertahun-tahun.",
+   "en": "Budi regrets the small quarrel that kept them from speaking for years.",
+   "ko": "부디는 몇 년 동안 말도 안 하게 만든 작은 다툼을 후회해요.",
+   "blank": "pertengkaran",
+   "src": "made"
+  },
+  {
+   "text": "Ada pertengkaran kecil antara dua pelari yang saling dorong di tikungan.",
+   "en": "There was a small quarrel between two runners who pushed each other at the bend.",
+   "ko": "모퉁이에서 서로 민 두 주자 사이에 작은 말다툼이 있었어요.",
+   "blank": "pertengkaran",
+   "src": "made"
+  }
+ ],
  "w|pertolongan": [
   {
    "text": "Pertolongan pertama diberikan di tempat kejadian.",
@@ -48917,6 +49333,22 @@
    "en": "I like sweet flavors.",
    "ko": "나 단맛을 좋아해.",
    "blank": "rasa"
+  }
+ ],
+ "w|rasional": [
+  {
+   "text": "Budi mencoba memberi saran yang rasional soal masalah keuangan Andi.",
+   "en": "Budi tries to give rational advice on Andi's money problems.",
+   "ko": "부디는 안디의 돈 문제에 대해 합리적인 조언을 하려고 해요.",
+   "blank": "rasional",
+   "src": "made"
+  },
+  {
+   "text": "Siti membuat rencana latihan yang rasional supaya tidak cedera.",
+   "en": "Siti made a rational training plan so as not to get injured.",
+   "ko": "시티는 다치지 않도록 합리적인 훈련 계획을 세웠어요.",
+   "blank": "rasional",
+   "src": "made"
   }
  ],
  "w|rasis": [
@@ -52661,6 +53093,22 @@
    "blank": "Sengaja"
   }
  ],
+ "w|sengsara": [
+  {
+   "text": "Andi bercerita bahwa hidupnya sempat sengsara setelah usahanya bangkrut.",
+   "en": "Andi tells how his life was miserable for a while after his business went bankrupt.",
+   "ko": "안디는 사업이 망한 뒤 한동안 비참하게 살았다고 털어놓아요.",
+   "blank": "sengsara",
+   "src": "made"
+  },
+  {
+   "text": "Siti merasa sengsara di kilometer terakhir karena kakinya kram.",
+   "en": "Siti felt miserable in the last kilometer because her leg cramped.",
+   "ko": "시티는 마지막 일 킬로미터에서 다리에 쥐가 나서 괴로웠어요.",
+   "blank": "sengsara",
+   "src": "made"
+  }
+ ],
  "w|seni": [
   {
    "text": "Seni lukis adalah hobinya sejak kecil.",
@@ -52731,6 +53179,22 @@
    "blank": "Senjata"
   }
  ],
+ "w|sensasi": [
+  {
+   "text": "Membuka amplop dari sahabat lama memberi sensasi yang tidak bisa diganti pesan singkat.",
+   "en": "Opening an envelope from an old friend gives a feeling no text message can replace.",
+   "ko": "오랜 친구의 봉투를 여는 건 문자로는 대신할 수 없는 느낌을 줘요.",
+   "blank": "sensasi",
+   "src": "made"
+  },
+  {
+   "text": "Siti menyukai sensasi angin pagi di wajahnya saat berlari.",
+   "en": "Siti loves the feeling of the morning wind on her face as she runs.",
+   "ko": "시티는 달릴 때 얼굴에 닿는 아침 바람의 감촉을 좋아해요.",
+   "blank": "sensasi",
+   "src": "made"
+  }
+ ],
  "w|sensitif": [
   {
    "text": "Kulitnya sangat sensitif terhadap sabun baru.",
@@ -52789,6 +53253,22 @@
    "en": "He gave a warm smile to the guests.",
    "ko": "그는 손님에게 따뜻한 미소를 건넸어.",
    "blank": "senyum"
+  }
+ ],
+ "w|senyuman": [
+  {
+   "text": "Foto lama itu memperlihatkan senyuman Andi yang belum berubah.",
+   "en": "The old photo shows Andi's smile, which hasn't changed.",
+   "ko": "그 옛 사진에는 변함없는 안디의 미소가 담겨 있어요.",
+   "blank": "senyuman",
+   "src": "made"
+  },
+  {
+   "text": "Relawan di pos minum menyambut Siti dengan senyuman lebar.",
+   "en": "The volunteers at the water station greeted Siti with a wide smile.",
+   "ko": "급수대 자원봉사자들이 함박웃음으로 시티를 맞았어요.",
+   "blank": "senyuman",
+   "src": "made"
   }
  ],
  "w|seolah": [
@@ -53813,6 +54293,22 @@
    "blank": "sifat"
   }
  ],
+ "w|signifikan": [
+  {
+   "text": "Budi melihat perubahan signifikan pada tulisan tangan Andi.",
+   "en": "Budi sees a significant change in Andi's handwriting.",
+   "ko": "부디는 안디의 손글씨에서 큰 변화를 봐요.",
+   "blank": "signifikan",
+   "src": "made"
+  },
+  {
+   "text": "Catatan waktu Siti membaik secara signifikan setelah latihan rutin.",
+   "en": "Siti's time improved significantly after regular training.",
+   "ko": "꾸준히 훈련한 뒤 시티의 기록이 크게 좋아졌어요.",
+   "blank": "signifikan",
+   "src": "made"
+  }
+ ],
  "w|sih": [
   {
    "text": "Emang kenapa sih?",
@@ -54787,6 +55283,22 @@
    "en": "He likes loud music.",
    "ko": "그는 시끄러운 음악을 좋아해.",
    "blank": "suka"
+  }
+ ],
+ "w|sukacita": [
+  {
+   "text": "Surat Andi penuh sukacita tentang pernikahannya.",
+   "en": "Andi's letter is full of joy about his marriage.",
+   "ko": "안디의 편지는 결혼 이야기로 기쁨이 가득해요.",
+   "blank": "sukacita",
+   "src": "made"
+  },
+  {
+   "text": "Wajah para pelari yang baru menyelesaikan maraton pertama memancarkan sukacita.",
+   "en": "The faces of runners who had just finished their first marathon radiated joy.",
+   "ko": "첫 마라톤을 막 마친 주자들 얼굴에서 기쁨이 빛났어요.",
+   "blank": "sukacita",
+   "src": "made"
   }
  ],
  "w|sukarela": [
@@ -55937,6 +56449,22 @@
    "en": "She wants to remove that old tattoo.",
    "ko": "그녀는 그 오래된 타투를 지우고 싶어 해.",
    "blank": "tato"
+  }
+ ],
+ "w|tawa": [
+  {
+   "text": "Budi masih ingat tawa Andi yang keras di kantin sekolah.",
+   "en": "Budi still remembers Andi's loud laugh in the school canteen.",
+   "ko": "부디는 학교 매점에서 울리던 안디의 큰 웃음소리를 아직 기억해요.",
+   "blank": "tawa",
+   "src": "made"
+  },
+  {
+   "text": "Suara tawa penonton membuat Siti lupa rasa lelahnya.",
+   "en": "The sound of the spectators' laughter made Siti forget her tiredness.",
+   "ko": "구경꾼들의 웃음소리에 시티는 피곤함을 잊었어요.",
+   "blank": "tawa",
+   "src": "made"
   }
  ],
  "w|tawanan": [
@@ -57107,6 +57635,22 @@
    "src": "made"
   }
  ],
+ "w|terdampar": [
+  {
+   "text": "Andi pernah terdampar di pulau kecil karena kapal mogok, dan ia menceritakannya dengan lucu.",
+   "en": "Andi was once stranded on a small island when his boat broke down, and he tells it humorously.",
+   "ko": "안디는 배가 고장 나서 작은 섬에 발이 묶인 적이 있는데 그 얘기를 재밌게 들려줘요.",
+   "blank": "terdampar",
+   "src": "made"
+  },
+  {
+   "text": "Saat hujan deras, beberapa pelari terdampar di halte menunggu hujan reda.",
+   "en": "When it poured, some runners got stuck at a bus shelter waiting for the rain to ease.",
+   "ko": "비가 쏟아지자 몇몇 주자는 버스 정류장에 발이 묶여 비가 그치길 기다렸어요.",
+   "blank": "terdampar",
+   "src": "made"
+  }
+ ],
  "w|terdapat": [
   {
    "text": "Terdapat banyak toko di sepanjang jalan.",
@@ -57222,6 +57766,22 @@
    "en": "When it rained, a courier slipped in the lobby of Dewi's office.",
    "ko": "비가 올 때 택배 기사 한 명이 디위네 사무실 로비에서 미끄러졌어요.",
    "blank": "tergelincir",
+   "src": "made"
+  }
+ ],
+ "w|tergila-gila": [
+  {
+   "text": "Dalam suratnya, Budi mengaku dulu tergila-gila pada kakak kelas mereka.",
+   "en": "In his letter, Budi admits he was once crazy about their senior at school.",
+   "ko": "부디는 편지에서 예전에 학교 선배에게 푹 빠졌었다고 털어놓아요.",
+   "blank": "tergila-gila",
+   "src": "made"
+  },
+  {
+   "text": "Sejak tahun lalu Siti tergila-gila pada lari jarak jauh.",
+   "en": "Since last year, Siti has been crazy about long-distance running.",
+   "ko": "작년부터 시티는 장거리 달리기에 푹 빠졌어요.",
+   "blank": "tergila-gila",
    "src": "made"
   }
  ],
@@ -57445,6 +58005,22 @@
    "blank": "terjatuh"
   }
  ],
+ "w|terjawab": [
+  {
+   "text": "Pertanyaan Budi tentang kabar keluarga Andi akhirnya terjawab di surat ini.",
+   "en": "Budi's question about Andi's family was finally answered in this letter.",
+   "ko": "안디 가족 소식에 대한 부디의 질문은 이 편지에서 마침내 답을 얻었어요.",
+   "blank": "terjawab",
+   "src": "made"
+  },
+  {
+   "text": "Rasa penasaran Siti tentang batas kemampuannya akhirnya terjawab hari itu.",
+   "en": "Siti's curiosity about the limits of her ability was finally answered that day.",
+   "ko": "자기 능력의 한계가 궁금했던 시티는 그날 마침내 답을 얻었어요.",
+   "blank": "terjawab",
+   "src": "made"
+  }
+ ],
  "w|terjebak": [
   {
    "text": "Kami terjebak di lift.",
@@ -57631,6 +58207,22 @@
    "en": "My phone is locked and I forgot the code.",
    "ko": "폰이 잠겼는데 암호를 잊었어.",
    "blank": "terkunci"
+  }
+ ],
+ "w|terkurung": [
+  {
+   "text": "Andi menulis bahwa ia merasa terkurung di rumah selama musim hujan.",
+   "en": "Andi writes that he felt cooped up at home during the rainy season.",
+   "ko": "안디는 우기 동안 집에 갇힌 기분이었다고 써요.",
+   "blank": "terkurung",
+   "src": "made"
+  },
+  {
+   "text": "Saat pandemi, Siti merasa terkurung karena tidak bisa berlari di luar.",
+   "en": "During the pandemic, Siti felt trapped because she couldn't run outside.",
+   "ko": "팬데믹 때 시티는 밖에서 달릴 수 없어 갇힌 기분이었어요.",
+   "blank": "terkurung",
+   "src": "made"
   }
  ],
  "w|terkutuk": [
@@ -58033,6 +58625,22 @@
    "src": "made"
   }
  ],
+ "w|terpesona": [
+  {
+   "text": "Budi dulu terpesona oleh cara Andi bercerita tentang laut.",
+   "en": "Budi used to be captivated by the way Andi talked about the sea.",
+   "ko": "부디는 예전에 안디가 바다 이야기를 하는 방식에 매료됐었어요.",
+   "blank": "terpesona",
+   "src": "made"
+  },
+  {
+   "text": "Siti terpesona oleh pemandangan matahari terbit di atas jembatan.",
+   "en": "Siti was mesmerized by the sunrise over the bridge.",
+   "ko": "시티는 다리 위로 떠오르는 해에 넋을 잃었어요.",
+   "blank": "terpesona",
+   "src": "made"
+  }
+ ],
  "w|terpikir": [
   {
    "text": "Tidak pernah terpikir oleh Andi bahwa dia akan jadi ketua kelas.",
@@ -58139,6 +58747,22 @@
    "src": "made"
   }
  ],
+ "w|tersanjung": [
+  {
+   "text": "Budi merasa tersanjung karena Andi masih menyimpan semua suratnya.",
+   "en": "Budi felt flattered that Andi still keeps all his letters.",
+   "ko": "안디가 자기 편지를 다 간직하고 있어서 부디는 우쭐한 기분이 들었어요.",
+   "blank": "tersanjung",
+   "src": "made"
+  },
+  {
+   "text": "Siti merasa tersanjung ketika wartawan meminta wawancara singkat.",
+   "en": "Siti felt flattered when a reporter asked for a short interview.",
+   "ko": "기자가 짧은 인터뷰를 청하자 시티는 으쓱했어요.",
+   "blank": "tersanjung",
+   "src": "made"
+  }
+ ],
  "w|tersayang": [
   {
    "text": "Rudi menitipkan salam untuk istri Bayu dan anak-anak tersayang.",
@@ -58227,6 +58851,22 @@
    "en": "There is a hidden door in that wall.",
    "ko": "그 벽에 숨겨진 문이 있어.",
    "blank": "tersembunyi"
+  }
+ ],
+ "w|tersentuh": [
+  {
+   "text": "Budi tersentuh membaca surat Andi yang ditulis dengan tangan gemetar.",
+   "en": "Budi was moved reading Andi's letter, written with a trembling hand.",
+   "ko": "부디는 떨리는 손으로 쓴 안디의 편지를 읽고 뭉클했어요.",
+   "blank": "tersentuh",
+   "src": "made"
+  },
+  {
+   "text": "Siti tersentuh melihat seorang kakek yang tetap berlari sampai garis akhir.",
+   "en": "Siti was moved to see an old man who kept running to the finish line.",
+   "ko": "시티는 결승선까지 계속 달리는 할아버지를 보고 뭉클했어요.",
+   "blank": "tersentuh",
+   "src": "made"
   }
  ],
  "w|tersenyum": [

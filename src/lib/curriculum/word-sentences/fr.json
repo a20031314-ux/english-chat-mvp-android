@@ -1621,6 +1621,22 @@
    "blank": "aiguille"
   }
  ],
+ "w|ail": [
+  {
+   "text": "Le pain à l'ail de Julien part en quelques minutes le vendredi.",
+   "en": "Julien's garlic bread sells out in a few minutes on Fridays.",
+   "ko": "쥘리앵의 마늘빵은 금요일이면 몇 분 만에 팔려요.",
+   "blank": "ail",
+   "src": "made"
+  },
+  {
+   "text": "Un client allergique à l'ail demande à Manon de prévenir la cuisine.",
+   "en": "A guest allergic to garlic asks Manon to warn the kitchen.",
+   "ko": "마늘 알레르기가 있는 손님이 마농에게 주방에 알려 달라고 해요.",
+   "blank": "ail",
+   "src": "made"
+  }
+ ],
  "w|aile": [
   {
    "text": "Il y a une tache sur l'aile de l'avion.",
@@ -1849,6 +1865,22 @@
    "en": "His alibi was solid according to the police.",
    "ko": "경찰에 따르면 그의 alibi 는 확실했어.",
    "blank": "alibi"
+  }
+ ],
+ "w|aliment": [
+  {
+   "text": "Julien jette tout aliment qui a dépassé sa date limite.",
+   "en": "Julien throws out any food that's past its expiration date.",
+   "ko": "쥘리앵은 유통기한이 지난 식품은 모두 버려요.",
+   "blank": "aliment",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de l'hôtel choisit chaque aliment chez des producteurs de la région.",
+   "en": "The hotel chef picks every food item from local producers.",
+   "ko": "호텔 셰프는 식재료 하나하나를 지역 생산자에게서 골라요.",
+   "blank": "aliment",
+   "src": "made"
   }
  ],
  "w|alimentaire": [
@@ -5487,6 +5519,22 @@
    "blank": "bacon"
   }
  ],
+ "w|bactérie": [
+  {
+   "text": "Julien explique à son apprenti que la levure est un champignon et non une bactérie.",
+   "en": "Julien explains to his apprentice that yeast is a fungus, not a bacterium.",
+   "ko": "쥘리앵은 견습생에게 효모는 세균이 아니라 균류라고 설명해요.",
+   "blank": "bactérie",
+   "src": "made"
+  },
+  {
+   "text": "Les femmes de chambre désinfectent les salles de bain pour éliminer toute bactérie.",
+   "en": "The housekeepers disinfect the bathrooms to get rid of any bacteria.",
+   "ko": "객실 청소원들은 세균을 없애려고 욕실을 소독해요.",
+   "blank": "bactérie",
+   "src": "made"
+  }
+ ],
  "w|badge": [
   {
    "text": "Je dois porter mon badge au boulot.",
@@ -8765,6 +8813,22 @@
    "blank": "café"
   }
  ],
+ "w|cafétéria": [
+  {
+   "text": "Julien livre ses viennoiseries à la cafétéria de l'hôpital chaque matin.",
+   "en": "Julien delivers his pastries to the hospital cafeteria every morning.",
+   "ko": "쥘리앵은 매일 아침 병원 구내식당에 빵을 배달해요.",
+   "blank": "cafétéria",
+   "src": "made"
+  },
+  {
+   "text": "Le personnel de l'hôtel déjeune à la cafétéria du sous-sol.",
+   "en": "The hotel staff have lunch in the basement cafeteria.",
+   "ko": "호텔 직원들은 지하 구내식당에서 점심을 먹어요.",
+   "blank": "cafétéria",
+   "src": "made"
+  }
+ ],
  "w|cage": [
   {
    "text": "L'oiseau chante dans sa cage chaque matin.",
@@ -8989,6 +9053,22 @@
    "src": "made"
   }
  ],
+ "w|cambrioleur": [
+  {
+   "text": "La police a arrêté le cambrioleur qui avait forcé la caisse de Julien.",
+   "en": "The police arrested the burglar who had broken into Julien's till.",
+   "ko": "경찰이 쥘리앵의 금고를 턴 도둑을 잡았어요.",
+   "blank": "cambrioleur",
+   "src": "made"
+  },
+  {
+   "text": "Le gardien de nuit a surpris un cambrioleur dans le parking de l'hôtel.",
+   "en": "The night watchman caught a burglar in the hotel parking lot.",
+   "ko": "야간 경비원이 호텔 주차장에서 도둑을 붙잡았어요.",
+   "blank": "cambrioleur",
+   "src": "made"
+  }
+ ],
  "w|caméra": [
   {
    "text": "La caméra filme tout ce qui se passe.",
@@ -9057,6 +9137,22 @@
    "en": "The countryside is very quiet at night.",
    "ko": "시골은 밤에 매우 조용해.",
    "blank": "campagne"
+  }
+ ],
+ "w|camper": [
+  {
+   "text": "Cet été, Julien veut camper au bord de la mer pendant sa semaine de congé.",
+   "en": "This summer, Julien wants to camp by the sea during his week off.",
+   "ko": "이번 여름 쥘리앵은 쉬는 주에 바닷가에서 캠핑하고 싶어 해요.",
+   "blank": "camper",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'hôtel est complet, Manon indique aux randonneurs où camper près de la rivière.",
+   "en": "When the hotel is full, Manon tells hikers where to camp near the river.",
+   "ko": "호텔이 꽉 차면 마농은 등산객들에게 강가 캠핑할 곳을 알려 줘요.",
+   "blank": "camper",
+   "src": "made"
   }
  ],
  "w|camping": [
@@ -9219,6 +9315,22 @@
    "en": "She finds that guy hot.",
    "ko": "그녀는 그 남자가 잘생겼다고 생각해.",
    "blank": "canon"
+  }
+ ],
+ "w|canot": [
+  {
+   "text": "Pendant ses vacances au lac, Julien a loué un canot avec ses enfants.",
+   "en": "During his holiday at the lake, Julien rented a canoe with his kids.",
+   "ko": "쥘리앵은 호수로 휴가 갔을 때 아이들과 카누를 빌렸어요.",
+   "blank": "canot",
+   "src": "made"
+  },
+  {
+   "text": "L'hôtel de Manon prête un canot aux clients qui veulent faire le tour du lac.",
+   "en": "Manon's hotel lends a canoe to guests who want to go around the lake.",
+   "ko": "마농의 호텔은 호수를 한 바퀴 돌고 싶은 손님에게 카누를 빌려줘요.",
+   "blank": "canot",
+   "src": "made"
   }
  ],
  "w|canyon": [
@@ -9395,6 +9507,22 @@
    "en": "The character of the text needs to be changed.",
    "ko": "텍스트의 글자를 바꿔야 해.",
    "blank": "caractère"
+  }
+ ],
+ "w|caramel": [
+  {
+   "text": "Julien verse un caramel au beurre salé sur ses choux.",
+   "en": "Julien pours salted butter caramel over his cream puffs.",
+   "ko": "쥘리앵은 슈 위에 솔티드 버터 캐러멜을 부어요.",
+   "blank": "caramel",
+   "src": "made"
+  },
+  {
+   "text": "Sur chaque oreiller, Manon pose un bonbon au caramel.",
+   "en": "Manon places a caramel candy on every pillow.",
+   "ko": "마농은 베개마다 캐러멜 사탕을 하나씩 놓아요.",
+   "blank": "caramel",
+   "src": "made"
   }
  ],
  "w|caravane": [
@@ -12237,6 +12365,22 @@
    "blank": "citron"
   }
  ],
+ "w|citrouille": [
+  {
+   "text": "En octobre, Julien fait une tarte à la citrouille pour Halloween.",
+   "en": "In October, Julien makes a pumpkin pie for Halloween.",
+   "ko": "시월에 쥘리앵은 핼러윈용 호박 파이를 만들어요.",
+   "blank": "citrouille",
+   "src": "made"
+  },
+  {
+   "text": "Pour Halloween, Manon a posé une grosse citrouille sculptée sur le comptoir.",
+   "en": "For Halloween, Manon put a big carved pumpkin on the front desk.",
+   "ko": "핼러윈을 맞아 마농은 데스크 위에 조각한 큰 호박을 올려 뒀어요.",
+   "blank": "citrouille",
+   "src": "made"
+  }
+ ],
  "w|civil": [
   {
    "text": "Il porte un costume civil.",
@@ -14535,6 +14679,22 @@
    "blank": "confirmer"
   }
  ],
+ "w|confiture": [
+  {
+   "text": "Les enfants adorent les tartines de confiture que Julien prépare le mercredi.",
+   "en": "Kids love the jam toasts Julien makes on Wednesdays.",
+   "ko": "아이들은 쥘리앵이 수요일마다 만드는 잼 바른 빵을 아주 좋아해요.",
+   "blank": "confiture",
+   "src": "made"
+  },
+  {
+   "text": "Le petit-déjeuner de l'hôtel propose une confiture d'abricots faite maison.",
+   "en": "The hotel breakfast offers homemade apricot jam.",
+   "ko": "호텔 아침 식사에는 직접 만든 살구잼이 나와요.",
+   "blank": "confiture",
+   "src": "made"
+  }
+ ],
  "w|conflit": [
   {
    "text": "Ce conflit dure depuis des années.",
@@ -15875,6 +16035,22 @@
    "src": "made"
   }
  ],
+ "w|coquille": [
+  {
+   "text": "Julien vend des madeleines en forme de coquille le dimanche matin.",
+   "en": "Julien sells shell-shaped madeleines on Sunday mornings.",
+   "ko": "쥘리앵은 일요일 아침마다 조개 모양 마들렌을 팔아요.",
+   "blank": "coquille",
+   "src": "made"
+  },
+  {
+   "text": "Au petit-déjeuner, un enfant cherche un morceau de coquille dans son œuf à la coque.",
+   "en": "At breakfast, a child looks for a bit of shell in his soft-boiled egg.",
+   "ko": "아침 식사 때 한 아이가 반숙 달걀에서 껍데기 조각을 찾아요.",
+   "blank": "coquille",
+   "src": "made"
+  }
+ ],
  "w|coquin": [
   {
    "text": "Avec son sourire coquin, Hugo cache mal qu'il a pris la craie du professeur.",
@@ -15982,6 +16158,22 @@
    "en": "The fans of Manon's team blow a horn at every basket.",
    "ko": "마농네 팀 응원단은 골이 들어갈 때마다 뿔피리를 불어요.",
    "blank": "corne",
+   "src": "made"
+  }
+ ],
+ "w|cornichon": [
+  {
+   "text": "Julien met un cornichon croquant dans chaque sandwich jambon-beurre.",
+   "en": "Julien puts a crunchy gherkin in every ham and butter sandwich.",
+   "ko": "쥘리앵은 햄 버터 샌드위치마다 아삭한 피클을 넣어요.",
+   "blank": "cornichon",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de l'hôtel sert le pâté avec un cornichon et du pain grillé.",
+   "en": "The hotel chef serves the pâté with a gherkin and toast.",
+   "ko": "호텔 셰프는 파테를 피클과 구운 빵과 함께 내요.",
+   "blank": "cornichon",
    "src": "made"
   }
  ],
@@ -16625,6 +16817,22 @@
    "en": "These pants are a bit short for me.",
    "ko": "이 바지는 나에게 좀 짧아.",
    "blank": "court"
+  }
+ ],
+ "w|courtoisie": [
+  {
+   "text": "Julien accueille chaque client avec une courtoisie qui fait plaisir.",
+   "en": "Julien welcomes each customer with a courtesy that's a pleasure to see.",
+   "ko": "쥘리앵은 손님마다 보기 좋을 만큼 정중하게 맞아요.",
+   "blank": "courtoisie",
+   "src": "made"
+  },
+  {
+   "text": "Manon répond toujours avec courtoisie, même aux clients les plus pénibles.",
+   "en": "Manon always answers courteously, even to the most difficult guests.",
+   "ko": "마농은 아무리 까다로운 손님에게도 늘 정중하게 대답해요.",
+   "blank": "courtoisie",
+   "src": "made"
   }
  ],
  "w|cousin": [
@@ -18426,6 +18634,22 @@
    "en": "For the director's leaving do, Léa and her colleagues are going to decorate the meeting room.",
    "ko": "부장의 송별회를 위해 레아와 동료들이 회의실을 꾸밀 거예요.",
    "blank": "décorer",
+   "src": "made"
+  }
+ ],
+ "w|découper": [
+  {
+   "text": "Julien prend un grand couteau pour découper la tarte en huit parts.",
+   "en": "Julien takes a big knife to cut the tart into eight pieces.",
+   "ko": "쥘리앵은 큰 칼로 타르트를 여덟 조각으로 잘라요.",
+   "blank": "découper",
+   "src": "made"
+  },
+  {
+   "text": "Manon aide un enfant à découper des étoiles en papier pour décorer le hall.",
+   "en": "Manon helps a child cut out paper stars to decorate the lobby.",
+   "ko": "마농은 한 아이가 로비를 꾸밀 종이 별을 오리는 걸 도와줘요.",
+   "blank": "découper",
    "src": "made"
   }
  ],
@@ -22683,6 +22907,22 @@
    "blank": "échapper"
   }
  ],
+ "w|écharpe": [
+  {
+   "text": "Une cliente a oublié son écharpe rouge sur le comptoir de Julien.",
+   "en": "A customer left her red scarf on Julien's counter.",
+   "ko": "한 손님이 빨간 목도리를 쥘리앵의 계산대에 두고 갔어요.",
+   "blank": "écharpe",
+   "src": "made"
+  },
+  {
+   "text": "Manon trouve une écharpe en laine oubliée dans la chambre trois cent dix.",
+   "en": "Manon finds a wool scarf left behind in room three hundred ten.",
+   "ko": "마농은 삼백십 호에서 놓고 간 털목도리를 발견해요.",
+   "blank": "écharpe",
+   "src": "made"
+  }
+ ],
  "w|échec": [
   {
    "text": "L'échec fait partie de l'apprentissage.",
@@ -25445,6 +25685,22 @@
    "src": "made"
   }
  ],
+ "w|épice": [
+  {
+   "text": "Pour les biscuits de Noël, Julien mélange chaque épice à la main.",
+   "en": "For the Christmas cookies, Julien mixes each spice by hand.",
+   "ko": "크리스마스 쿠키를 위해 쥘리앵은 향신료를 하나하나 손으로 섞어요.",
+   "blank": "épice",
+   "src": "made"
+  },
+  {
+   "text": "Une cliente demande quelle épice donne ce goût si particulier à la soupe.",
+   "en": "A guest asks which spice gives the soup such a distinctive taste.",
+   "ko": "한 손님이 어떤 향신료가 수프에 그렇게 독특한 맛을 내는지 물어요.",
+   "blank": "épice",
+   "src": "made"
+  }
+ ],
  "w|épicerie": [
   {
    "text": "L'épicerie du coin ferme tard.",
@@ -26721,6 +26977,22 @@
    "en": "It's not obvious how to solve this problem.",
    "ko": "이 문제를 해결하는 것은 명확하지 않아.",
    "blank": "évident"
+  }
+ ],
+ "w|évier": [
+  {
+   "text": "Julien lave les plaques de cuisson dans le grand évier en inox.",
+   "en": "Julien washes the baking trays in the big stainless steel sink.",
+   "ko": "쥘리앵은 커다란 스테인리스 개수대에서 베이킹 판을 씻어요.",
+   "blank": "évier",
+   "src": "made"
+  },
+  {
+   "text": "Un client se plaint que l'évier de sa kitchenette est bouché.",
+   "en": "A guest complains that his kitchenette sink is clogged.",
+   "ko": "한 손님이 간이 주방 개수대가 막혔다고 불평해요.",
+   "blank": "évier",
+   "src": "made"
   }
  ],
  "w|éviter": [
@@ -28104,6 +28376,22 @@
    "en": "For Inès, the city's debt is a burden for the next generations.",
    "ko": "이네스는 시의 부채가 다음 세대에게 짐이라고 봐요.",
    "blank": "fardeau",
+   "src": "made"
+  }
+ ],
+ "w|farine": [
+  {
+   "text": "Julien a testé un pain à la farine de lentille pour les clients sans gluten.",
+   "en": "Julien tested a lentil flour bread for gluten-free customers.",
+   "ko": "쥘리앵은 글루텐을 못 먹는 손님들을 위해 렌틸콩 가루 빵을 시험해 봤어요.",
+   "blank": "farine",
+   "src": "made"
+  },
+  {
+   "text": "Le livreur dépose des sacs de farine à la cuisine de l'hôtel.",
+   "en": "The delivery man drops off sacks of flour at the hotel kitchen.",
+   "ko": "배달원이 호텔 주방에 밀가루 포대를 내려놔요.",
+   "blank": "farine",
    "src": "made"
   }
  ],
@@ -31837,6 +32125,22 @@
    "en": "He swallowed water the wrong way and irritated his throat.",
    "ko": "물이 잘못 넘어가서 목이 따가워졌어.",
    "blank": "gorge"
+  }
+ ],
+ "w|gorgée": [
+  {
+   "text": "Entre deux fournées, Julien avale une gorgée de café brûlant.",
+   "en": "Between two batches, Julien gulps down a sip of scalding coffee.",
+   "ko": "빵을 두 번 굽는 사이 쥘리앵은 뜨거운 커피를 한 모금 마셔요.",
+   "blank": "gorgée",
+   "src": "made"
+  },
+  {
+   "text": "Manon prend une gorgée d'eau avant de répondre au téléphone.",
+   "en": "Manon takes a sip of water before answering the phone.",
+   "ko": "마농은 전화를 받기 전에 물을 한 모금 마셔요.",
+   "blank": "gorgée",
+   "src": "made"
   }
  ],
  "w|gorille": [
@@ -38041,6 +38345,22 @@
    "blank": "kit"
   }
  ],
+ "w|klaxon": [
+  {
+   "text": "Le coup de klaxon du livreur réveille Julien qui somnolait près du four.",
+   "en": "The delivery man's honk wakes Julien, who was dozing by the oven.",
+   "ko": "배달원의 경적 소리에 오븐 옆에서 졸던 쥘리앵이 깨요.",
+   "blank": "klaxon",
+   "src": "made"
+  },
+  {
+   "text": "Le klaxon d'un taxi impatient résonne devant l'entrée de l'hôtel où travaille Manon.",
+   "en": "An impatient taxi's horn echoes in front of the entrance of the hotel where Manon works.",
+   "ko": "마농이 일하는 호텔 입구 앞에서 성급한 택시의 경적이 울려요.",
+   "blank": "klaxon",
+   "src": "made"
+  }
+ ],
  "w|la": [
   {
    "text": "La voiture est rouge.",
@@ -38351,6 +38671,22 @@
    "en": "The rabbit runs very fast in the garden.",
    "ko": "토끼가 정원에서 아주 빨리 달려.",
    "blank": "lapin"
+  }
+ ],
+ "w|lard": [
+  {
+   "text": "Julien glisse des petits morceaux de lard dans sa fougasse salée.",
+   "en": "Julien slips small pieces of bacon into his savory fougasse.",
+   "ko": "쥘리앵은 짭짤한 푸가스에 작은 베이컨 조각을 넣어요.",
+   "blank": "lard",
+   "src": "made"
+  },
+  {
+   "text": "Le cuisinier de l'hôtel sert des lentilles au lard le jeudi soir.",
+   "en": "The hotel cook serves lentils with bacon on Thursday evenings.",
+   "ko": "호텔 요리사는 목요일 저녁마다 베이컨을 넣은 렌틸콩 요리를 내요.",
+   "blank": "lard",
+   "src": "made"
   }
  ],
  "w|large": [
@@ -38735,6 +39071,22 @@
    "blank": "lentement"
   }
  ],
+ "w|lentille": [
+  {
+   "text": "Julien a testé un pain à la farine de lentille pour les clients sans gluten.",
+   "en": "Julien tested a lentil flour bread for gluten-free customers.",
+   "ko": "쥘리앵은 글루텐을 못 먹는 손님들을 위해 렌틸콩 가루 빵을 시험해 봤어요.",
+   "blank": "lentille",
+   "src": "made"
+  },
+  {
+   "text": "Manon a perdu une lentille de contact et la cherche sous le comptoir.",
+   "en": "Manon lost a contact lens and is looking for it under the desk.",
+   "ko": "마농은 콘택트렌즈 한쪽을 잃어버려서 데스크 밑을 찾고 있어요.",
+   "blank": "lentille",
+   "src": "made"
+  }
+ ],
  "w|lequel": [
   {
    "text": "Je ne sais pas lequel choisir.",
@@ -38927,6 +39279,22 @@
    "blank": "liberté"
   }
  ],
+ "w|librairie": [
+  {
+   "text": "La boulangerie de Julien se trouve juste à côté d'une petite librairie.",
+   "en": "Julien's bakery is right next to a small bookshop.",
+   "ko": "쥘리앵의 빵집은 작은 서점 바로 옆에 있어요.",
+   "blank": "librairie",
+   "src": "made"
+  },
+  {
+   "text": "Manon conseille aux clients une librairie ancienne dans la vieille ville.",
+   "en": "Manon recommends an antique bookshop in the old town to the guests.",
+   "ko": "마농은 손님들에게 구시가지의 오래된 서점을 추천해요.",
+   "blank": "librairie",
+   "src": "made"
+  }
+ ],
  "w|libre": [
   {
    "text": "Ce soir, je suis libre.",
@@ -39082,6 +39450,22 @@
    "en": "Access to the glacier is restricted in summer, Sarah explains to the tourists.",
    "ko": "여름에는 빙하 출입이 제한된다고 사라가 관광객들에게 설명해요.",
    "blank": "limité",
+   "src": "made"
+  }
+ ],
+ "w|limonade": [
+  {
+   "text": "En été, Julien vend aussi de la limonade maison au citron.",
+   "en": "In summer, Julien also sells homemade lemonade.",
+   "ko": "여름이면 쥘리앵은 직접 만든 레몬 레모네이드도 팔아요.",
+   "blank": "limonade",
+   "src": "made"
+  },
+  {
+   "text": "Manon offre une limonade fraîche aux clients qui arrivent sous la chaleur.",
+   "en": "Manon offers a cool lemonade to guests arriving in the heat.",
+   "ko": "마농은 더위 속에 도착한 손님들에게 시원한 레모네이드를 건네요.",
+   "blank": "limonade",
    "src": "made"
   }
  ],
@@ -41913,6 +42297,22 @@
    "blank": "ménage"
   }
  ],
+ "w|ménager": [
+  {
+   "text": "Le soir, la femme de ménage vient faire les gros travaux ménagers dans la boutique.",
+   "en": "In the evening, the cleaning lady comes to do the heavy household chores in the shop.",
+   "ko": "저녁이면 청소하시는 분이 와서 가게 큰 청소를 해요.",
+   "blank": "ménagers",
+   "src": "made"
+  },
+  {
+   "text": "Chaque studio de l'hôtel dispose d'un petit appareil ménager pour faire du café.",
+   "en": "Each studio in the hotel has a small household appliance for making coffee.",
+   "ko": "호텔 스튜디오 객실마다 커피를 내리는 작은 가전제품이 있어요.",
+   "blank": "ménager",
+   "src": "made"
+  }
+ ],
  "w|mener": [
   {
    "text": "Elle va mener le projet jusqu'au bout.",
@@ -42627,6 +43027,22 @@
    "src": "made"
   }
  ],
+ "w|mijoter": [
+  {
+   "text": "Julien laisse mijoter des pommes avec du sucre pour garnir ses chaussons.",
+   "en": "Julien lets apples simmer with sugar to fill his turnovers.",
+   "ko": "쥘리앵은 쇼송 속을 채우려고 사과를 설탕과 함께 뭉근히 졸여요.",
+   "blank": "mijoter",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de l'hôtel fait mijoter un bœuf bourguignon depuis ce matin.",
+   "en": "The hotel chef has been simmering a beef bourguignon since this morning.",
+   "ko": "호텔 셰프는 아침부터 뵈프 부르기뇽을 뭉근히 끓이고 있어요.",
+   "blank": "mijoter",
+   "src": "made"
+  }
+ ],
  "w|mile": [
   {
    "text": "Il a couru un mile sans s'arrêter.",
@@ -43112,6 +43528,22 @@
    "en": "At university, Inès is taking an art history module that reminds her of their museum visits.",
    "ko": "이네스는 대학에서 미술사 과목을 듣는데, 둘이 다니던 박물관이 떠올라요.",
    "blank": "module",
+   "src": "made"
+  }
+ ],
+ "w|moelle": [
+  {
+   "text": "Le cousin de Julien a fait un don de moelle osseuse le mois dernier.",
+   "en": "Julien's cousin donated bone marrow last month.",
+   "ko": "쥘리앵의 사촌은 지난달 골수를 기증했어요.",
+   "blank": "moelle",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de l'hôtel prépare un os à moelle grillé pour le menu d'hiver.",
+   "en": "The hotel chef prepares a roasted marrow bone for the winter menu.",
+   "ko": "호텔 셰프는 겨울 메뉴로 구운 골수 뼈 요리를 준비해요.",
+   "blank": "moelle",
    "src": "made"
   }
  ],
@@ -43887,6 +44319,22 @@
    "en": "Your mustache is full of foam!",
    "ko": "네 콧수염에 거품이 가득해!",
    "blank": "moustache"
+  }
+ ],
+ "w|moutarde": [
+  {
+   "text": "Julien ajoute une pointe de moutarde dans ses sandwichs au jambon.",
+   "en": "Julien adds a touch of mustard to his ham sandwiches.",
+   "ko": "쥘리앵은 햄 샌드위치에 머스터드를 살짝 넣어요.",
+   "blank": "moutarde",
+   "src": "made"
+  },
+  {
+   "text": "Le serveur de l'hôtel apporte un petit pot de moutarde avec les saucisses.",
+   "en": "The hotel waiter brings a small pot of mustard with the sausages.",
+   "ko": "호텔 웨이터가 소시지와 함께 머스터드 작은 단지를 가져와요.",
+   "blank": "moutarde",
+   "src": "made"
   }
  ],
  "w|mouton": [
@@ -45959,6 +46407,22 @@
    "en": "A shadow passed in front of the window.",
    "ko": "창문 앞에 그림자가 지나갔어.",
    "blank": "ombre"
+  }
+ ],
+ "w|omelette": [
+  {
+   "text": "À midi, Julien se fait une omelette aux herbes dans l'arrière-boutique.",
+   "en": "At noon, Julien makes himself an herb omelette in the back room.",
+   "ko": "정오에 쥘리앵은 가게 안쪽에서 허브 오믈렛을 만들어 먹어요.",
+   "blank": "omelette",
+   "src": "made"
+  },
+  {
+   "text": "Un client réclame une omelette sans fromage au service d'étage.",
+   "en": "A guest asks room service for an omelette without cheese.",
+   "ko": "한 손님이 룸서비스에 치즈를 뺀 오믈렛을 주문해요.",
+   "blank": "omelette",
+   "src": "made"
   }
  ],
  "w|on": [
@@ -48195,6 +48659,22 @@
    "en": "You have to wait before the next step.",
    "ko": "다음 단계 전에는 기다려야 해.",
    "blank": "patienter"
+  }
+ ],
+ "w|pâtisserie": [
+  {
+   "text": "Le fils de Julien veut apprendre la pâtisserie comme son père.",
+   "en": "Julien's son wants to learn pastry making like his father.",
+   "ko": "쥘리앵의 아들은 아버지처럼 제과를 배우고 싶어 해요.",
+   "blank": "pâtisserie",
+   "src": "made"
+  },
+  {
+   "text": "La vitrine du hall présente une pâtisserie différente chaque jour.",
+   "en": "The lobby display case features a different pastry every day.",
+   "ko": "로비 진열장에는 날마다 다른 디저트가 놓여요.",
+   "blank": "pâtisserie",
+   "src": "made"
   }
  ],
  "w|patrie": [
@@ -52177,6 +52657,22 @@
    "blank": "près"
   }
  ],
+ "w|prescrire": [
+  {
+   "text": "Le médecin a voulu prescrire du repos à Julien, mais la boulangerie ne ferme jamais.",
+   "en": "The doctor wanted to prescribe rest for Julien, but the bakery never closes.",
+   "ko": "의사는 쥘리앵에게 휴식을 처방하고 싶었지만 빵집은 절대 문을 닫지 않아요.",
+   "blank": "prescrire",
+   "src": "made"
+  },
+  {
+   "text": "Manon appelle le médecin de garde, qui peut prescrire quelque chose contre la fièvre.",
+   "en": "Manon calls the on-call doctor, who can prescribe something for the fever.",
+   "ko": "마농은 열을 내리는 약을 처방해 줄 수 있는 당직 의사를 불러요.",
+   "blank": "prescrire",
+   "src": "made"
+  }
+ ],
  "w|présence": [
   {
    "text": "Ta présence me rassure beaucoup.",
@@ -53623,6 +54119,22 @@
    "en": "I want to protect my family no matter what.",
    "ko": "무슨 일이 있어도 가족을 지키고 싶어.",
    "blank": "protéger"
+  }
+ ],
+ "w|protéine": [
+  {
+   "text": "Un sportif demande à Julien s'il fait du pain riche en protéine.",
+   "en": "An athlete asks Julien if he makes protein-rich bread.",
+   "ko": "한 운동선수가 쥘리앵에게 단백질이 많은 빵이 있냐고 물어요.",
+   "blank": "protéine",
+   "src": "made"
+  },
+  {
+   "text": "Le buffet propose des œufs et du fromage pour les clients qui veulent des protéines.",
+   "en": "The buffet offers eggs and cheese for guests who want protein.",
+   "ko": "뷔페에는 단백질을 원하는 손님을 위해 달걀과 치즈가 있어요.",
+   "blank": "protéines",
+   "src": "made"
   }
  ],
  "w|protester": [
@@ -55936,6 +56448,22 @@
    "en": "Camille's store is going to recruit sales staff for the holidays.",
    "ko": "카미유의 매장은 연말에 판매 직원을 뽑을 거예요.",
    "blank": "recruter",
+   "src": "made"
+  }
+ ],
+ "w|reçu": [
+  {
+   "text": "Le client demande un reçu pour la grosse commande de croissants de son bureau.",
+   "en": "The customer asks for a receipt for his office's big croissant order.",
+   "ko": "손님이 사무실용 크루아상 대량 주문에 대한 영수증을 달라고 해요.",
+   "blank": "reçu",
+   "src": "made"
+  },
+  {
+   "text": "Manon imprime le reçu et le tend au client qui part.",
+   "en": "Manon prints the receipt and hands it to the departing guest.",
+   "ko": "마농은 영수증을 뽑아 떠나는 손님에게 건네요.",
+   "blank": "reçu",
    "src": "made"
   }
  ],
@@ -60267,6 +60795,22 @@
    "blank": "sauf"
   }
  ],
+ "w|saumon": [
+  {
+   "text": "Julien propose un sandwich au saumon fumé et à l'aneth.",
+   "en": "Julien offers a smoked salmon and dill sandwich.",
+   "ko": "쥘리앵은 훈제 연어와 딜을 넣은 샌드위치를 내놓아요.",
+   "blank": "saumon",
+   "src": "made"
+  },
+  {
+   "text": "Ce soir, le restaurant de l'hôtel sert du saumon grillé avec du riz.",
+   "en": "Tonight, the hotel restaurant is serving grilled salmon with rice.",
+   "ko": "오늘 저녁 호텔 식당은 구운 연어와 밥을 내요.",
+   "blank": "saumon",
+   "src": "made"
+  }
+ ],
  "w|saut": [
   {
    "text": "Le saut de ce pont est dangereux.",
@@ -60514,6 +61058,22 @@
    "en": "Claire follows the crop rotation plan her father left her.",
    "ko": "클레르는 아버지가 남겨 준 돌려짓기 계획을 따라요.",
    "blank": "schéma",
+   "src": "made"
+  }
+ ],
+ "w|scie": [
+  {
+   "text": "Julien a pris une scie pour réparer l'étagère à baguettes.",
+   "en": "Julien took a saw to repair the baguette shelf.",
+   "ko": "쥘리앵은 바게트 선반을 고치려고 톱을 들었어요.",
+   "blank": "scie",
+   "src": "made"
+  },
+  {
+   "text": "Le bruit d'une scie électrique dans le couloir dérange les clients du deuxième étage.",
+   "en": "The noise of an electric saw in the hallway bothers the second-floor guests.",
+   "ko": "복도의 전기톱 소리가 이 층 손님들을 방해해요.",
+   "blank": "scie",
    "src": "made"
   }
  ],
@@ -62947,6 +63507,22 @@
    "en": "An international summit will take place tomorrow.",
    "ko": "국제 sommet 이 내일 열릴 거야.",
    "blank": "sommet"
+  }
+ ],
+ "w|somnifère": [
+  {
+   "text": "À force de se lever à trois heures, Julien n'a jamais besoin de somnifère.",
+   "en": "Getting up at three in the morning, Julien never needs a sleeping pill.",
+   "ko": "새벽 세 시에 일어나다 보니 쥘리앵은 수면제가 필요 없어요.",
+   "blank": "somnifère",
+   "src": "made"
+  },
+  {
+   "text": "Un client qui n'arrive pas à dormir demande à Manon si elle a un somnifère.",
+   "en": "A guest who can't sleep asks Manon if she has a sleeping pill.",
+   "ko": "잠을 못 자는 손님이 마농에게 수면제가 있냐고 물어요.",
+   "blank": "somnifère",
+   "src": "made"
   }
  ],
  "w|son": [
@@ -66211,6 +66787,22 @@
    "blank": "temps"
   }
  ],
+ "w|tenant": [
+  {
+   "text": "Julien est le tenant du titre du meilleur croissant de la région.",
+   "en": "Julien is the reigning champion for the best croissant in the region.",
+   "ko": "쥘리앵은 지역 최고 크루아상 대회의 현 우승자예요.",
+   "blank": "tenant",
+   "src": "made"
+  },
+  {
+   "text": "Le tenant du titre de champion de tennis séjourne à l'hôtel cette semaine.",
+   "en": "The reigning tennis champion is staying at the hotel this week.",
+   "ko": "테니스 현 챔피언이 이번 주에 호텔에 묵어요.",
+   "blank": "tenant",
+   "src": "made"
+  }
+ ],
  "w|tendance": [
   {
    "text": "La tendance change chaque année.",
@@ -67795,6 +68387,22 @@
    "en": "We made the trip in the rain.",
    "ko": "비를 맞으며 그 길을 갔어.",
    "blank": "trajet"
+  }
+ ],
+ "w|tranche": [
+  {
+   "text": "Une vieille dame demande à Julien une seule tranche de pain de campagne.",
+   "en": "An old lady asks Julien for just one slice of country bread.",
+   "ko": "한 할머니가 쥘리앵에게 시골빵 한 조각만 달라고 해요.",
+   "blank": "tranche",
+   "src": "made"
+  },
+  {
+   "text": "Manon commande une tranche de citron pour le thé d'une cliente anglaise.",
+   "en": "Manon orders a slice of lemon for a British guest's tea.",
+   "ko": "마농은 영국 손님의 차에 넣을 레몬 한 조각을 주문해요.",
+   "blank": "tranche",
+   "src": "made"
   }
  ],
  "w|tranchée": [
@@ -69557,6 +70165,22 @@
    "en": "We need to watch over the kids tonight.",
    "ko": "오늘 밤 아이들을 돌봐야 해.",
    "blank": "veiller"
+  }
+ ],
+ "w|veinard": [
+  {
+   "text": "Quel veinard, ce client qui a eu la fève dans la galette de Julien !",
+   "en": "What a lucky guy, that customer who got the charm in Julien's galette!",
+   "ko": "쥘리앵의 갈레트에서 페브를 찾은 그 손님, 운도 좋아요!",
+   "blank": "veinard",
+   "src": "made"
+  },
+  {
+   "text": "Le veinard de la chambre douze a gagné une nuit gratuite à la tombola de l'hôtel.",
+   "en": "The lucky guy in room twelve won a free night in the hotel raffle.",
+   "ko": "십이 호 운 좋은 손님이 호텔 경품 추첨에서 무료 숙박을 받았어요.",
+   "blank": "veinard",
+   "src": "made"
   }
  ],
  "w|veine": [
@@ -71430,6 +72054,22 @@
    "en": "Émilie's son is building a cardboard yacht in the living room.",
    "ko": "에밀리의 아들은 거실에서 종이 상자로 요트를 만들어요.",
    "blank": "yacht",
+   "src": "made"
+  }
+ ],
+ "w|yaourt": [
+  {
+   "text": "Julien met un peu de yaourt dans sa pâte pour la rendre plus moelleuse.",
+   "en": "Julien puts a little yogurt in his dough to make it softer.",
+   "ko": "쥘리앵은 반죽을 더 촉촉하게 하려고 요거트를 조금 넣어요.",
+   "blank": "yaourt",
+   "src": "made"
+  },
+  {
+   "text": "Une cliente demande un yaourt nature sans sucre au petit-déjeuner.",
+   "en": "A guest asks for a plain unsweetened yogurt at breakfast.",
+   "ko": "한 손님이 아침 식사로 설탕 없는 플레인 요거트를 달라고 해요.",
+   "blank": "yaourt",
    "src": "made"
   }
  ],

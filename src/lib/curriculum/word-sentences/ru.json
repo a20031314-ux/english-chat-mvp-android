@@ -4569,6 +4569,22 @@
    "src": "made"
   }
  ],
+ "w|видный": [
+  {
+   "text": "С балкона Сергея хорошо видны маяк и бухта, а самое видное место занимает старый собор.",
+   "en": "From Sergey's balcony the lighthouse and the bay are clearly visible, and the most prominent spot is taken by the old cathedral.",
+   "ko": "세르게이의 발코니에서는 등대와 만이 잘 보이고, 가장 눈에 띄는 자리에는 옛 성당이 있어요.",
+   "blank": "видное",
+   "src": "made"
+  },
+  {
+   "text": "Рядом с Марией сидел видный критик из музыкального журнала.",
+   "en": "A prominent critic from a music magazine was sitting next to Maria.",
+   "ko": "마리야 옆에는 음악 잡지의 유명한 평론가가 앉아 있었어요.",
+   "blank": "видный",
+   "src": "made"
+  }
+ ],
  "w|визит": [
   {
    "text": "Почему бы мне не нанести ему визит?",
@@ -5039,6 +5055,22 @@
    "en": "Let's do tomorrow instead of today.",
    "ko": "오늘 말고 내일 하자.",
    "blank": "вместо"
+  }
+ ],
+ "w|вмешательство": [
+  {
+   "text": "Кондиционер в номере Сергея починили без вмешательства техника, просто перезагрузив его.",
+   "en": "The air conditioner in Sergey's room was fixed without a technician's intervention, just by restarting it.",
+   "ko": "세르게이 방 에어컨은 기사가 손대지 않고 그냥 껐다 켜서 고쳤어요.",
+   "blank": "вмешательства",
+   "src": "made"
+  },
+  {
+   "text": "Концерт, на который пришла Мария, прошёл спокойно, без вмешательства полиции.",
+   "en": "The concert Maria went to passed peacefully, without police intervention.",
+   "ko": "마리야가 간 콘서트는 경찰이 나설 일 없이 조용히 끝났어요.",
+   "blank": "вмешательства",
+   "src": "made"
   }
  ],
  "w|вмешаться": [
@@ -5575,6 +5607,22 @@
    "ko": "맑은 산 공기를 마시는 게 좋아요.",
    "blank": "воздух",
    "src": "tatoeba:2802323/odexed en:13801069/rul"
+  }
+ ],
+ "w|воздушный": [
+  {
+   "text": "Сергей устал после долгого воздушного перелёта и сразу лёг спать.",
+   "en": "Sergey was tired after a long flight and went straight to bed.",
+   "ko": "세르게이는 긴 비행 끝에 지쳐서 바로 잠자리에 들었어요.",
+   "blank": "воздушного",
+   "src": "made"
+  },
+  {
+   "text": "Перед концертом Мария купила сыну воздушный шарик в форме гитары.",
+   "en": "Before the concert Maria bought her son a guitar-shaped balloon.",
+   "ko": "콘서트 전에 마리야는 아들에게 기타 모양 풍선을 사 줬어요.",
+   "blank": "воздушный",
+   "src": "made"
   }
  ],
  "w|возле": [
@@ -7659,6 +7707,22 @@
    "src": "made"
   }
  ],
+ "w|вылететь": [
+  {
+   "text": "Сергей заказал такси на пять утра, чтобы вовремя вылететь домой.",
+   "en": "Sergey ordered a taxi for five in the morning so he could fly home on time.",
+   "ko": "세르게이는 제때 집에 가는 비행기를 타려고 새벽 다섯 시로 택시를 불렀어요.",
+   "blank": "вылететь",
+   "src": "made"
+  },
+  {
+   "text": "Мария могла вылететь на концерт только утренним рейсом.",
+   "en": "Maria could only fly out to the concert on the morning flight.",
+   "ko": "마리야는 아침 비행기로만 콘서트에 갈 수 있었어요.",
+   "blank": "вылететь",
+   "src": "made"
+  }
+ ],
  "w|вылечить": [
   {
    "text": "Массажист помог Никите вылечить старую травму плеча.",
@@ -9329,6 +9393,22 @@
    "blank": "городом"
   }
  ],
+ "w|городок": [
+  {
+   "text": "Отель, где остановился Сергей, стоит в тихом приморском городке.",
+   "en": "The hotel where Sergey is staying is in a quiet seaside town.",
+   "ko": "세르게이가 묵는 호텔은 조용한 바닷가 소도시에 있어요.",
+   "blank": "городке",
+   "src": "made"
+  },
+  {
+   "text": "Ради концерта Мария поехала в соседний городок на электричке.",
+   "en": "For the concert Maria took the suburban train to the neighbouring town.",
+   "ko": "마리야는 콘서트를 보려고 교외 열차를 타고 옆 소도시에 갔어요.",
+   "blank": "городок",
+   "src": "made"
+  }
+ ],
  "w|городской": [
   {
    "text": "У тебя есть городской телефон?",
@@ -10052,6 +10132,22 @@
    "en": "Her neighbour asked if the light bothered Tatiana, and she nodded: “Oh, yes, yes, turn it off.”",
    "ko": "옆 사람이 불빛이 거슬리냐고 묻자 타티아나는 고개를 끄덕였어요. “아, 네네, 꺼 주세요.”",
    "blank": "да-да",
+   "src": "made"
+  }
+ ],
+ "w|дабы": [
+  {
+   "text": "Сергей встал пораньше, дабы успеть искупаться до завтрака.",
+   "en": "Sergey got up early in order to have time for a swim before breakfast.",
+   "ko": "세르게이는 아침 식사 전에 수영하려고 일찍 일어났어요.",
+   "blank": "дабы",
+   "src": "made"
+  },
+  {
+   "text": "Мария пришла за час до начала, дабы занять место у сцены.",
+   "en": "Maria came an hour before the start in order to get a spot by the stage.",
+   "ko": "마리야는 무대 앞자리를 잡으려고 공연 한 시간 전에 왔어요.",
+   "blank": "дабы",
    "src": "made"
   }
  ],
@@ -12239,6 +12335,22 @@
    "blank": "Дорогая"
   }
  ],
+ "w|дорожка": [
+  {
+   "text": "От отеля к пляжу ведёт узкая дорожка, и Сергей ходит по ней каждое утро.",
+   "en": "A narrow path leads from the hotel to the beach, and Sergey walks along it every morning.",
+   "ko": "호텔에서 해변까지 좁은 오솔길이 나 있는데, 세르게이는 매일 아침 그 길을 걸어요.",
+   "blank": "дорожка",
+   "src": "made"
+  },
+  {
+   "text": "Мария нашла свои места, пройдя по красной дорожке между рядами.",
+   "en": "Maria found her seats by walking along the red carpet runner between the rows.",
+   "ko": "마리야는 좌석 줄 사이 빨간 통로를 따라가서 자리를 찾았어요.",
+   "blank": "дорожке",
+   "src": "made"
+  }
+ ],
  "w|доска": [
   {
    "text": "Андрей вспоминает, как друг рисовал карикатуры на школьной доске.",
@@ -13837,6 +13949,22 @@
    "src": "made"
   }
  ],
+ "w|заблудиться": [
+  {
+   "text": "Сергей умудрился заблудиться в длинных коридорах отеля.",
+   "en": "Sergey managed to get lost in the hotel's long corridors.",
+   "ko": "세르게이는 호텔의 긴 복도에서 길을 잃고 말았어요.",
+   "blank": "заблудиться",
+   "src": "made"
+  },
+  {
+   "text": "В огромном зале Мария боялась заблудиться и держалась за подругу.",
+   "en": "In the huge hall Maria was afraid of getting lost and held on to her friend.",
+   "ko": "넓은 공연장에서 마리야는 길을 잃을까 봐 친구 손을 꼭 잡았어요.",
+   "blank": "заблудиться",
+   "src": "made"
+  }
+ ],
  "w|заболевание": [
   {
    "text": "Стоматолог предупредил Никиту, что заболевание дёсен часто протекает без боли.",
@@ -14938,6 +15066,22 @@
    "en": "In the new play Anna plays the hostage's wife.",
    "ko": "새 연극에서 안나는 인질의 아내를 연기해요.",
    "blank": "заложника",
+   "src": "made"
+  }
+ ],
+ "w|заманить": [
+  {
+   "text": "Отель пытался заманить Сергея скидкой на следующий визит.",
+   "en": "The hotel tried to lure Sergey with a discount on his next visit.",
+   "ko": "호텔은 다음 방문 할인으로 세르게이를 다시 끌어들이려 했어요.",
+   "blank": "заманить",
+   "src": "made"
+  },
+  {
+   "text": "Подруга сумела заманить Марию на концерт металла, хотя та любит джаз.",
+   "en": "Maria's friend managed to lure her to a metal concert, even though Maria loves jazz.",
+   "ko": "마리야는 재즈를 좋아하는데도 친구가 메탈 공연에 데려가는 데 성공했어요.",
+   "blank": "заманить",
    "src": "made"
   }
  ],
@@ -21481,6 +21625,22 @@
    "src": "made"
   }
  ],
+ "w|крутиться": [
+  {
+   "text": "Всю ночь у Сергея над кроватью крутился вентилятор.",
+   "en": "All night the fan was spinning above Sergey's bed.",
+   "ko": "밤새 세르게이의 침대 위에서 선풍기가 돌았어요.",
+   "blank": "крутился",
+   "src": "made"
+  },
+  {
+   "text": "Песня крутилась у Марии в голове ещё неделю после концерта.",
+   "en": "The song was going round in Maria's head for another week after the concert.",
+   "ko": "그 노래는 콘서트가 끝나고도 일주일 동안 마리야의 머릿속을 맴돌았어요.",
+   "blank": "крутилась",
+   "src": "made"
+  }
+ ],
  "w|крутой": [
   {
    "text": "Ну ты крутой!",
@@ -25285,6 +25445,22 @@
    "src": "tatoeba:2753604/odexed en:18983/spockofvulcan"
   }
  ],
+ "w|мотель": [
+  {
+   "text": "Все отели были заняты, и Сергею пришлось ночевать в придорожном мотеле.",
+   "en": "All the hotels were full, and Sergey had to spend the night in a roadside motel.",
+   "ko": "호텔이 다 차서 세르게이는 길가 모텔에서 밤을 보내야 했어요.",
+   "blank": "мотеле",
+   "src": "made"
+  },
+  {
+   "text": "После концерта Мария ночевала в мотеле у трассы.",
+   "en": "After the concert Maria spent the night in a motel by the highway.",
+   "ko": "콘서트가 끝나고 마리야는 고속도로 옆 모텔에서 묵었어요.",
+   "blank": "мотеле",
+   "src": "made"
+  }
+ ],
  "w|мотив": [
   {
    "text": "Я не могу вспомнить мотив той песни.",
@@ -26017,6 +26193,22 @@
    "ko": "마지막 희망이 하나 남아 있었어요.",
    "blank": "надежда",
    "src": "tatoeba:4342628/odexed en:3723078/CM"
+  }
+ ],
+ "w|надёжный": [
+  {
+   "text": "Сергей оставил ноутбук в надёжном сейфе в номере.",
+   "en": "Sergey left his laptop in the secure safe in the room.",
+   "ko": "세르게이는 노트북을 객실의 튼튼한 금고에 넣어 뒀어요.",
+   "blank": "надёжном",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила билеты только через надёжный сайт, чтобы не нарваться на мошенников.",
+   "en": "Maria bought tickets only through a reliable website so as not to run into scammers.",
+   "ko": "마리야는 사기를 당하지 않으려고 믿을 만한 사이트에서만 표를 샀어요.",
+   "blank": "надёжный",
+   "src": "made"
   }
  ],
  "w|наделать": [
@@ -32393,6 +32585,22 @@
    "blank": "особенно"
   }
  ],
+ "w|особенность": [
+  {
+   "text": "Главная особенность этого отеля, по мнению Сергея, — тишина.",
+   "en": "In Sergey's opinion, the main feature of this hotel is the quiet.",
+   "ko": "세르게이가 보기에 이 호텔의 가장 큰 특징은 조용함이에요.",
+   "blank": "особенность",
+   "src": "made"
+  },
+  {
+   "text": "Мария объяснила подруге особенность акустики в этом зале.",
+   "en": "Maria explained to her friend the special feature of the acoustics in this hall.",
+   "ko": "마리야는 이 공연장 음향의 특징을 친구에게 설명해 줬어요.",
+   "blank": "особенность",
+   "src": "made"
+  }
+ ],
  "w|особенный": [
   {
    "text": "Я приготовлю особенный ужин для нас двоих.",
@@ -33169,6 +33377,22 @@
    "src": "made"
   }
  ],
+ "w|отключиться": [
+  {
+   "text": "Сергей так устал, что успел отключиться ещё до ужина.",
+   "en": "Sergey was so tired that he passed out even before dinner.",
+   "ko": "세르게이는 너무 피곤해서 저녁 먹기도 전에 곯아떨어졌어요.",
+   "blank": "отключиться",
+   "src": "made"
+  },
+  {
+   "text": "Во время песни у Марии решил отключиться телефон, и видео не сохранилось.",
+   "en": "During the song Maria's phone decided to switch off, and the video wasn't saved.",
+   "ko": "노래하는 도중에 마리야의 휴대폰이 꺼져서 영상이 저장되지 않았어요.",
+   "blank": "отключиться",
+   "src": "made"
+  }
+ ],
  "w|откровенный": [
   {
    "text": "У Алексея состоялся откровенный разговор с мэром о нехватке денег.",
@@ -33231,6 +33455,22 @@
    "ko": "정말 놀라운 걸 발견했어요.",
    "blank": "открытие",
    "src": "tatoeba:4153188/Ooneykcall en:4153189/Ooneykcall"
+  }
+ ],
+ "w|открытка": [
+  {
+   "text": "На стойке регистрации Сергей купил открытку с видом на отель.",
+   "en": "At the reception desk Sergey bought a postcard with a view of the hotel.",
+   "ko": "세르게이는 프런트에서 호텔 풍경이 담긴 엽서를 샀어요.",
+   "blank": "открытку",
+   "src": "made"
+  },
+  {
+   "text": "Мария попросила гитариста подписать открытку с афишей концерта.",
+   "en": "Maria asked the guitarist to sign a postcard with the concert poster.",
+   "ko": "마리야는 기타리스트에게 공연 포스터가 그려진 엽서에 사인해 달라고 했어요.",
+   "blank": "открытку",
+   "src": "made"
   }
  ],
  "w|открытый": [
@@ -33985,6 +34225,22 @@
    "ko": "보고서는 언제까지 내야 해?",
    "blank": "отчёт",
    "src": "tatoeba:10619515/Wezel en:10619372/CK"
+  }
+ ],
+ "w|отъезд": [
+  {
+   "text": "В день отъезда Сергей попросил оставить чемодан у администратора.",
+   "en": "On the day of departure Sergey asked to leave his suitcase with the receptionist.",
+   "ko": "떠나는 날 세르게이는 프런트에 여행 가방을 맡겨 달라고 했어요.",
+   "blank": "отъезда",
+   "src": "made"
+  },
+  {
+   "text": "Группа дала прощальный концерт перед отъездом на гастроли, и Мария плакала в первом ряду.",
+   "en": "The band gave a farewell concert before leaving on tour, and Maria cried in the front row.",
+   "ko": "밴드가 순회공연을 떠나기 전 고별 공연을 열었고, 마리야는 맨 앞줄에서 울었어요.",
+   "blank": "отъездом",
+   "src": "made"
   }
  ],
  "w|отыскать": [
@@ -36547,6 +36803,22 @@
    "src": "made"
   }
  ],
+ "w|побывать": [
+  {
+   "text": "Сергей мечтает побывать во всех отелях этой старой сети.",
+   "en": "Sergey dreams of visiting all the hotels of this old chain.",
+   "ko": "세르게이는 이 오래된 호텔 체인의 모든 지점에 가 보는 게 꿈이에요.",
+   "blank": "побывать",
+   "src": "made"
+  },
+  {
+   "text": "Мария давно хотела побывать на концерте в консерватории.",
+   "en": "Maria had long wanted to go to a concert at the conservatory.",
+   "ko": "마리야는 오래전부터 음악원 연주회에 가 보고 싶었어요.",
+   "blank": "побывать",
+   "src": "made"
+  }
+ ],
  "w|побыть": [
   {
    "text": "Могу ли я несколько минут побыть один?",
@@ -37883,6 +38155,22 @@
    "blank": "подумаю"
   }
  ],
+ "w|подумывать": [
+  {
+   "text": "Сергей подумывает продлить номер ещё на пару дней.",
+   "en": "Sergey is thinking of extending his room for another couple of days.",
+   "ko": "세르게이는 객실을 이틀쯤 더 연장할까 생각 중이에요.",
+   "blank": "подумывает",
+   "src": "made"
+  },
+  {
+   "text": "Мария давно подумывает научиться играть на скрипке.",
+   "en": "Maria has long been thinking about learning to play the violin.",
+   "ko": "마리야는 바이올린을 배워 볼까 오래전부터 생각하고 있어요.",
+   "blank": "подумывает",
+   "src": "made"
+  }
+ ],
  "w|подушка": [
   {
    "text": "Павел устроил себе на полу гнездо из подушек и пледов.",
@@ -37945,6 +38233,22 @@
    "ko": "당신이 이 일에 딱 맞는 사람이에요.",
    "blank": "подходящий",
    "src": "tatoeba:8018186/marafon en:6252252/CK"
+  }
+ ],
+ "w|подцепить": [
+  {
+   "text": "В бассейне отеля Сергей, кажется, подцепил простуду.",
+   "en": "Sergey seems to have caught a cold in the hotel pool.",
+   "ko": "세르게이는 호텔 수영장에서 감기에 걸린 것 같아요.",
+   "blank": "подцепил",
+   "src": "made"
+  },
+  {
+   "text": "Мария подцепила на сумку значок с логотипом тура.",
+   "en": "Maria clipped a badge with the tour logo onto her bag.",
+   "ko": "마리야는 투어 로고가 새겨진 배지를 가방에 달았어요.",
+   "blank": "подцепила",
+   "src": "made"
   }
  ],
  "w|подчиняться": [
@@ -39269,6 +39573,22 @@
    "src": "made"
   }
  ],
+ "w|полоса": [
+  {
+   "text": "Сергей заметил тёмную полосу на ковре и позвонил горничной.",
+   "en": "Sergey noticed a dark stripe on the carpet and called the housekeeper.",
+   "ko": "세르게이는 카펫에 생긴 검은 줄을 보고 객실 청소 직원을 불렀어요.",
+   "blank": "полосу",
+   "src": "made"
+  },
+  {
+   "text": "У Марии на щеке нарисована синяя полоса — цвет любимой команды певца.",
+   "en": "Maria has a blue stripe painted on her cheek, the colour of the singer's favourite team.",
+   "ko": "마리야의 볼에는 가수가 좋아하는 팀 색깔인 파란 줄이 그려져 있어요.",
+   "blank": "полоса",
+   "src": "made"
+  }
+ ],
  "w|полотенце": [
   {
    "text": "После физкультуры Алексей понял, что забыл дома полотенце.",
@@ -40163,6 +40483,22 @@
    "src": "made"
   }
  ],
+ "w|порт": [
+  {
+   "text": "Отель Сергея находится в двух шагах от морского порта.",
+   "en": "Sergey's hotel is a stone's throw from the seaport.",
+   "ko": "세르게이의 호텔은 항구에서 엎어지면 코 닿을 데 있어요.",
+   "blank": "порта",
+   "src": "made"
+  },
+  {
+   "text": "Мария была на концерте под открытым небом в старом порту.",
+   "en": "Maria went to an open-air concert in the old port.",
+   "ko": "마리야는 옛 항구에서 열린 야외 콘서트에 갔어요.",
+   "blank": "порту",
+   "src": "made"
+  }
+ ],
  "w|портить": [
   {
    "text": "Никита старается не портить результат вечерними бутербродами.",
@@ -40241,6 +40577,22 @@
    "src": "tatoeba:11684146/marafon en:11669705/tieguy"
   }
  ],
+ "w|посадка": [
+  {
+   "text": "Сергей проверил онлайн-регистрацию и узнал, что посадка начнётся через час.",
+   "en": "Sergey checked the online check-in and found out that boarding would start in an hour.",
+   "ko": "세르게이는 온라인 체크인을 확인하고 한 시간 뒤에 탑승이 시작된다는 걸 알았어요.",
+   "blank": "посадка",
+   "src": "made"
+  },
+  {
+   "text": "Мария летела на концерт, но посадка самолёта задержалась из-за грозы.",
+   "en": "Maria flew in for the concert, but the plane's landing was delayed because of a thunderstorm.",
+   "ko": "마리야는 콘서트를 보러 비행기를 탔는데, 뇌우 때문에 착륙이 늦어졌어요.",
+   "blank": "посадка",
+   "src": "made"
+  }
+ ],
  "w|посвятить": [
   {
    "text": "Никита решил посвятить колонку бездомным животным.",
@@ -40286,6 +40638,22 @@
    "en": "On Saturday Elena is going to visit a modern art exhibition.",
    "ko": "토요일에 엘레나는 현대 미술 전시회에 갈 거예요.",
    "blank": "посетить",
+   "src": "made"
+  }
+ ],
+ "w|посещать": [
+  {
+   "text": "Сергей часто посещает этот отель, когда ездит в командировки.",
+   "en": "Sergey often stays at this hotel when he goes on business trips.",
+   "ko": "세르게이는 출장 갈 때 이 호텔을 자주 찾아요.",
+   "blank": "посещает",
+   "src": "made"
+  },
+  {
+   "text": "Мария посещает все концерты любимой группы в своём городе.",
+   "en": "Maria attends all of her favourite band's concerts in her city.",
+   "ko": "마리야는 자기 도시에서 열리는 좋아하는 밴드 공연은 다 가요.",
+   "blank": "посещает",
    "src": "made"
   }
  ],
@@ -40518,6 +40886,22 @@
    "en": "An ambassador's assistant brought Irina an official phone.",
    "ko": "대사의 비서가 업무용 휴대폰을 이리나에게 가져왔어요.",
    "blank": "посла",
+   "src": "made"
+  }
+ ],
+ "w|посольство": [
+  {
+   "text": "Отель Сергея стоит на одной улице с посольством, поэтому там всегда охрана.",
+   "en": "Sergey's hotel is on the same street as the embassy, so there is always security there.",
+   "ko": "세르게이의 호텔은 대사관과 같은 거리에 있어서 늘 경비가 서 있어요.",
+   "blank": "посольством",
+   "src": "made"
+  },
+  {
+   "text": "Мария попала на концерт, который устроило посольство в честь национального праздника.",
+   "en": "Maria got into a concert organised by the embassy in honour of a national holiday.",
+   "ko": "마리야는 대사관이 국경일을 맞아 연 음악회에 가게 됐어요.",
+   "blank": "посольство",
    "src": "made"
   }
  ],
@@ -43185,6 +43569,22 @@
    "src": "tatoeba:3384266/odexed en:1096331/CK"
   }
  ],
+ "w|придержать": [
+  {
+   "text": "Сергей попросил администратора придержать номер с видом на море до вечера.",
+   "en": "Sergey asked the receptionist to hold the sea-view room until evening.",
+   "ko": "세르게이는 바다가 보이는 방을 저녁까지 잡아 두라고 프런트에 부탁했어요.",
+   "blank": "придержать",
+   "src": "made"
+  },
+  {
+   "text": "Охранник попросил Марию придержать дверь, пока выносили аппаратуру.",
+   "en": "The security guard asked Maria to hold the door while the equipment was being carried out.",
+   "ko": "경비원은 장비를 내가는 동안 문을 잡아 달라고 마리야에게 부탁했어요.",
+   "blank": "придержать",
+   "src": "made"
+  }
+ ],
  "w|придерживаться": [
   {
    "text": "Алексей старается придерживаться расписания, которое составил сам.",
@@ -43228,6 +43628,22 @@
    "en": "At the turn some idiot shoved Svetlana and didn't even apologise.",
    "ko": "모퉁이에서 어떤 멍청이가 스베틀라나를 밀치고는 사과도 안 했어요.",
    "blank": "придурок",
+   "src": "made"
+  }
+ ],
+ "w|приезд": [
+  {
+   "text": "К приезду Сергея в номере уже стояли цветы и фрукты.",
+   "en": "By the time Sergey arrived, flowers and fruit were already in the room.",
+   "ko": "세르게이가 도착할 무렵 객실에는 벌써 꽃과 과일이 놓여 있었어요.",
+   "blank": "приезду",
+   "src": "made"
+  },
+  {
+   "text": "Мария целый год ждала приезд знаменитого дирижёра.",
+   "en": "Maria waited a whole year for the famous conductor's arrival.",
+   "ko": "마리야는 그 유명한 지휘자가 오기를 일 년 내내 기다렸어요.",
+   "blank": "приезд",
    "src": "made"
   }
  ],
@@ -43323,6 +43739,22 @@
    "ko": "상을 탄 건 이번이 처음이에요.",
    "blank": "приз",
    "src": "tatoeba:2998930/odexed en:1680327/Amastan"
+  }
+ ],
+ "w|приземлиться": [
+  {
+   "text": "Самолёт Сергея должен был приземлиться в полночь, но опоздал на два часа.",
+   "en": "Sergey's plane was supposed to land at midnight, but it was two hours late.",
+   "ko": "세르게이의 비행기는 자정에 착륙할 예정이었는데 두 시간 늦었어요.",
+   "blank": "приземлиться",
+   "src": "made"
+  },
+  {
+   "text": "Самолёт с музыкантами не мог приземлиться из-за тумана, и Мария ждала концерт два часа.",
+   "en": "The plane with the musicians couldn't land because of fog, and Maria waited two hours for the concert.",
+   "ko": "음악가들이 탄 비행기가 안개 때문에 착륙하지 못해서 마리야는 콘서트를 두 시간 기다렸어요.",
+   "blank": "приземлиться",
+   "src": "made"
   }
  ],
  "w|признак": [
@@ -43606,6 +44038,22 @@
    "en": "Anna covered her face with a fan so as not to laugh on stage.",
    "ko": "안나는 무대에서 웃음이 터지지 않게 부채로 얼굴을 가렸어요.",
    "blank": "прикрыла",
+   "src": "made"
+  }
+ ],
+ "w|прилететь": [
+  {
+   "text": "Сергей должен прилететь в Сочи поздно ночью, поэтому заранее предупредил отель.",
+   "en": "Sergey is supposed to fly into Sochi late at night, so he warned the hotel in advance.",
+   "ko": "세르게이는 밤늦게 소치에 도착하는 비행기라 호텔에 미리 알려 뒀어요.",
+   "blank": "прилететь",
+   "src": "made"
+  },
+  {
+   "text": "Мария успела прилететь в Москву за три часа до концерта.",
+   "en": "Maria managed to fly into Moscow three hours before the concert.",
+   "ko": "마리야는 콘서트 세 시간 전에 겨우 모스크바에 도착했어요.",
+   "blank": "прилететь",
    "src": "made"
   }
  ],
@@ -44390,6 +44838,22 @@
    "en": "Maria asked for another hole to be punched in the strap of her pass.",
    "ko": "마리야는 출입증 끈에 구멍을 하나 더 뚫어 달라고 했어요.",
    "blank": "пробить",
+   "src": "made"
+  }
+ ],
+ "w|пробка": [
+  {
+   "text": "Сергей опоздал к ужину в отеле, потому что попал в пробку.",
+   "en": "Sergey was late for dinner at the hotel because he got stuck in a traffic jam.",
+   "ko": "세르게이는 차가 막혀서 호텔 저녁 식사에 늦었어요.",
+   "blank": "пробку",
+   "src": "made"
+  },
+  {
+   "text": "Из-за пробки на мосту Мария чуть не опоздала к первой песне.",
+   "en": "The traffic jam on the bridge nearly made Maria late for the first song.",
+   "ko": "다리 위 정체 때문에 마리야는 첫 곡에 늦을 뻔했어요.",
+   "blank": "пробки",
    "src": "made"
   }
  ],
@@ -52623,6 +53087,22 @@
    "src": "tatoeba:4855754/venticello en:1717357/Amastan"
   }
  ],
+ "w|снести": [
+  {
+   "text": "Сергей прочитал, что старое крыло отеля скоро собираются снести.",
+   "en": "Sergey read that they are soon going to tear down the old wing of the hotel.",
+   "ko": "세르게이는 호텔의 옛 별관을 곧 철거한다는 소식을 읽었어요.",
+   "blank": "снести",
+   "src": "made"
+  },
+  {
+   "text": "Фанаты чуть не снесли ограждение, и Мария отошла подальше от сцены.",
+   "en": "The fans nearly knocked down the barrier, and Maria moved further away from the stage.",
+   "ko": "팬들이 펜스를 거의 무너뜨릴 뻔해서 마리야는 무대에서 멀찍이 물러났어요.",
+   "blank": "снесли",
+   "src": "made"
+  }
+ ],
  "w|снизу": [
   {
    "text": "С балкона ресторана Михаил помахал гостям, стоявшим снизу.",
@@ -52977,6 +53457,22 @@
    "en": "You're absolutely right.",
    "ko": "너 완전히 맞아.",
    "blank": "совершенно"
+  }
+ ],
+ "w|совершенство": [
+  {
+   "text": "Сергей считает, что завтрак в этом отеле близок к совершенству.",
+   "en": "Sergey thinks breakfast at this hotel is close to perfection.",
+   "ko": "세르게이는 이 호텔 아침 식사가 거의 완벽하다고 생각해요.",
+   "blank": "совершенству",
+   "src": "made"
+  },
+  {
+   "text": "Мария говорит, что голос этой певицы — само совершенство.",
+   "en": "Maria says that this singer's voice is perfection itself.",
+   "ko": "마리야는 이 가수의 목소리가 그야말로 완벽하다고 말해요.",
+   "blank": "совершенство",
+   "src": "made"
   }
  ],
  "w|совершить": [
@@ -53968,6 +54464,22 @@
    "en": "Irina's meeting with the supplier never took place because of the traffic.",
    "ko": "교통 체증 때문에 이리나와 공급업체의 만남은 끝내 이뤄지지 않았어요.",
    "blank": "состоялась",
+   "src": "made"
+  }
+ ],
+ "w|сотворить": [
+  {
+   "text": "Повар отеля сумел сотворить для Сергея торт за один час.",
+   "en": "The hotel chef managed to whip up a cake for Sergey in one hour.",
+   "ko": "호텔 요리사는 한 시간 만에 세르게이를 위한 케이크를 뚝딱 만들어 냈어요.",
+   "blank": "сотворить",
+   "src": "made"
+  },
+  {
+   "text": "Мария считает, что в тот вечер оркестр сумел сотворить настоящее чудо.",
+   "en": "Maria believes that on that evening the orchestra managed to work a real miracle.",
+   "ko": "마리야는 그날 저녁 오케스트라가 진짜 기적을 만들어 냈다고 생각해요.",
+   "blank": "сотворить",
    "src": "made"
   }
  ],
@@ -55555,6 +56067,22 @@
    "src": "tatoeba:5685814/Balamax en:5685810/CK"
   }
  ],
+ "w|столица": [
+  {
+   "text": "В столице Сергей всегда выбирает отель рядом с вокзалом.",
+   "en": "In the capital Sergey always chooses a hotel near the station.",
+   "ko": "수도에 가면 세르게이는 늘 역 근처 호텔을 골라요.",
+   "blank": "столице",
+   "src": "made"
+  },
+  {
+   "text": "Ради концерта Мария впервые поехала в столицу одна.",
+   "en": "For the concert Maria went to the capital alone for the first time.",
+   "ko": "마리야는 콘서트 때문에 처음으로 혼자 수도에 갔어요.",
+   "blank": "столицу",
+   "src": "made"
+  }
+ ],
  "w|столкнуться": [
   {
    "text": "На перемене Алексей столкнулся в коридоре с директором.",
@@ -56979,6 +57507,22 @@
    "src": "made"
   }
  ],
+ "w|таинственный": [
+  {
+   "text": "В коридоре отеля Сергей слышал таинственный шорох по ночам.",
+   "en": "In the hotel corridor Sergey heard a mysterious rustling at night.",
+   "ko": "세르게이는 밤마다 호텔 복도에서 이상한 바스락 소리를 들었어요.",
+   "blank": "таинственный",
+   "src": "made"
+  },
+  {
+   "text": "Мария обожает таинственный свет, который заливает сцену перед началом.",
+   "en": "Maria adores the mysterious light that floods the stage before the start.",
+   "ko": "마리야는 공연 시작 전에 무대를 가득 채우는 신비로운 조명을 정말 좋아해요.",
+   "blank": "таинственный",
+   "src": "made"
+  }
+ ],
  "w|тайна": [
   {
    "text": "Так что у тебя за тайна?",
@@ -58071,6 +58615,22 @@
    "src": "made"
   }
  ],
+ "w|топливо": [
+  {
+   "text": "По дороге в отель у Сергея закончилось топливо, и он вызвал эвакуатор.",
+   "en": "On the way to the hotel Sergey ran out of fuel and called a tow truck.",
+   "ko": "호텔로 가는 길에 세르게이의 차에 연료가 떨어져서 견인차를 불렀어요.",
+   "blank": "топливо",
+   "src": "made"
+  },
+  {
+   "text": "Мария прочитала, что генераторы на фестивале работают на растительном топливе.",
+   "en": "Maria read that the generators at the festival run on biofuel.",
+   "ko": "마리야는 축제 발전기가 바이오 연료로 돌아간다는 글을 읽었어요.",
+   "blank": "топливе",
+   "src": "made"
+  }
+ ],
  "w|торговать": [
   {
    "text": "Брат Дмитрия торгует запчастями, которые делает их завод.",
@@ -58843,6 +59403,22 @@
    "src": "made"
   }
  ],
+ "w|туннель": [
+  {
+   "text": "Дорога к отелю, где остановился Сергей, идёт через длинный туннель в скале.",
+   "en": "The road to Sergey's hotel goes through a long tunnel in the rock.",
+   "ko": "세르게이가 묵는 호텔로 가는 길은 바위를 뚫은 긴 터널을 지나요.",
+   "blank": "туннель",
+   "src": "made"
+  },
+  {
+   "text": "По дороге на концерт Мария потеряла связь в туннеле метро.",
+   "en": "On the way to the concert Maria lost her signal in a metro tunnel.",
+   "ko": "콘서트 가는 길에 마리야는 지하철 터널에서 통신이 끊겼어요.",
+   "blank": "туннеле",
+   "src": "made"
+  }
+ ],
  "w|тупик": [
   {
    "text": "Свернув не туда, Сергей упёрся в тупик за египетским залом.",
@@ -59331,6 +59907,22 @@
    "ko": "너에 대한 존경심이 다 사라졌어.",
    "blank": "уважение",
    "src": "tatoeba:3556380/Lenin_1917 en:1454263/raghebaraby"
+  }
+ ],
+ "w|увезти": [
+  {
+   "text": "Сергей попросил портье увезти лишний багаж в камеру хранения.",
+   "en": "Sergey asked the porter to take the extra luggage away to the storage room.",
+   "ko": "세르게이는 짐꾼에게 남는 짐을 보관실로 옮겨 달라고 했어요.",
+   "blank": "увезти",
+   "src": "made"
+  },
+  {
+   "text": "После концерта Мария попросила брата увезти её домой на машине.",
+   "en": "After the concert Maria asked her brother to drive her home.",
+   "ko": "콘서트가 끝나고 마리야는 오빠에게 차로 집에 데려다 달라고 했어요.",
+   "blank": "увезти",
+   "src": "made"
   }
  ],
  "w|увеличить": [
@@ -60632,6 +61224,22 @@
    "en": "The shopping center manager allowed Irina to put in a second desk.",
    "ko": "쇼핑센터 관리자가 이리나에게 책상을 하나 더 놓게 해 줬어요.",
    "blank": "управляющий",
+   "src": "made"
+  }
+ ],
+ "w|упускать": [
+  {
+   "text": "Сергей не любит упускать бесплатный завтрак и встаёт ровно к семи.",
+   "en": "Sergey doesn't like missing the free breakfast and gets up right at seven.",
+   "ko": "세르게이는 무료 아침 식사를 놓치기 싫어서 딱 일곱 시에 일어나요.",
+   "blank": "упускать",
+   "src": "made"
+  },
+  {
+   "text": "Мария старается не упускать ни одного концерта своего брата-пианиста.",
+   "en": "Maria tries not to miss a single concert of her pianist brother.",
+   "ko": "마리야는 피아니스트인 오빠의 공연을 하나도 놓치지 않으려고 해요.",
+   "blank": "упускать",
    "src": "made"
   }
  ],
@@ -64687,6 +65295,22 @@
    "src": "tatoeba:8635101/marafon en:9841371/AlanF_US"
   }
  ],
+ "w|экскурсия": [
+  {
+   "text": "Администратор отеля предложила Сергею вечернюю экскурсию по старому городу.",
+   "en": "The hotel receptionist offered Sergey an evening tour of the old town.",
+   "ko": "호텔 직원이 세르게이에게 구시가지 저녁 투어를 권했어요.",
+   "blank": "экскурсию",
+   "src": "made"
+  },
+  {
+   "text": "Перед концертом Мария успела сходить на экскурсию по театру.",
+   "en": "Before the concert Maria had time to go on a tour of the theatre.",
+   "ko": "공연 전에 마리야는 극장 투어를 다녀왔어요.",
+   "blank": "экскурсию",
+   "src": "made"
+  }
+ ],
  "w|эксперимент": [
   {
    "text": "Мы должны остановить этот эксперимент.",
@@ -65268,6 +65892,22 @@
    "en": "The morning turned out clear, and Maria hung the laundry out on the balcony.",
    "ko": "아침 날씨가 맑아서 마리아는 발코니에 빨래를 널었어요.",
    "blank": "ясное",
+   "src": "made"
+  }
+ ],
+ "w|яхта": [
+  {
+   "text": "Из окна номера Сергей видит белую яхту у причала.",
+   "en": "From his room's window Sergey can see a white yacht at the pier.",
+   "ko": "세르게이는 객실 창으로 부두에 선 하얀 요트를 봐요.",
+   "blank": "яхту",
+   "src": "made"
+  },
+  {
+   "text": "Мария слушала джаз на открытой палубе, пока яхта плыла по реке.",
+   "en": "Maria listened to jazz on the open deck while the yacht sailed along the river.",
+   "ko": "요트가 강을 따라 가는 동안 마리야는 갑판에서 재즈를 들었어요.",
+   "blank": "яхта",
    "src": "made"
   }
  ],

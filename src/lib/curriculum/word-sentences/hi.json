@@ -843,6 +843,22 @@
    "src": "made"
   }
  ],
+ "w|अदा करना": [
+  {
+   "text": "करण ने बुज़ुर्ग पत्रकार का धन्यवाद अदा किया जिन्होंने उसे लिखना सिखाया।",
+   "en": "Karan thanked the senior journalist who had taught him to write.",
+   "ko": "카란은 자기에게 글쓰기를 가르쳐 준 선배 기자에게 감사를 전했어요.",
+   "blank": "अदा किया",
+   "src": "made"
+  },
+  {
+   "text": "दादी ने पूजा के बाद भगवान का शुक्रिया अदा किया।",
+   "en": "After the prayers, Grandmother gave thanks to God.",
+   "ko": "할머니는 기도를 마치고 신께 감사를 드렸어요.",
+   "blank": "अदा किया",
+   "src": "made"
+  }
+ ],
  "w|अंदाज़": [
   {
    "text": "सुनील सर का कहानी सुनाने का अंदाज़ बच्चों को बहुत पसंद है।",
@@ -1069,6 +1085,22 @@
    "src": "made"
   }
  ],
+ "w|अधिवेशन": [
+  {
+   "text": "पार्टी के वार्षिक अधिवेशन की कवरेज के लिए करण दिल्ली गया।",
+   "en": "Karan went to Delhi to cover the party's annual convention.",
+   "ko": "카란은 당의 연례 대회를 취재하러 델리에 갔어요.",
+   "blank": "अधिवेशन",
+   "src": "made"
+  },
+  {
+   "text": "टीवी पर शिक्षकों के अधिवेशन की ख़बर देखकर दीपा के पति ने चैनल बदल दिया।",
+   "en": "Seeing news of the teachers' convention on TV, Deepa's husband changed the channel.",
+   "ko": "텔레비전에 교사 대회 뉴스가 나오자 디파의 남편은 채널을 돌렸어요.",
+   "blank": "अधिवेशन",
+   "src": "made"
+  }
+ ],
  "w|अधीन": [
   {
    "text": "गाँव का स्कूल अब ज़िला शिक्षा विभाग के अधीन आ गया है।",
@@ -1156,6 +1188,22 @@
    "en": "A university team came to the village to study mountain plants.",
    "ko": "대학 연구팀이 산지 식물을 연구하려고 마을에 왔어요.",
    "blank": "अध्ययन",
+   "src": "made"
+  }
+ ],
+ "w|अध्यात्म": [
+  {
+   "text": "शनिवार के अंक में अध्यात्म पर एक कॉलम छपता है।",
+   "en": "A column on spirituality appears in the Saturday edition.",
+   "ko": "토요판에는 영성에 관한 칼럼이 실려요.",
+   "blank": "अध्यात्म",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के ससुर सुबह की चाय के साथ अध्यात्म की बातें करते हैं।",
+   "en": "Deepa's father-in-law talks about spirituality over morning tea.",
+   "ko": "디파의 시아버지는 아침 차를 마시며 영성 이야기를 해요.",
+   "blank": "अध्यात्म",
    "src": "made"
   }
  ],
@@ -2325,6 +2373,22 @@
    "src": "made"
   }
  ],
+ "w|अराजकता": [
+  {
+   "text": "बिजली गुल होने से शहर में अराजकता फैलने की ख़बर रात में आई।",
+   "en": "News came at night that chaos had spread in the city after the power cut.",
+   "ko": "정전으로 도시가 혼란에 빠졌다는 소식이 밤에 들어왔어요.",
+   "blank": "अराजकता",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों ने बैठक में ऐसी अराजकता मचाई कि सोफ़े के गद्दे फ़र्श पर थे।",
+   "en": "The children caused such chaos in the living room that the sofa cushions were on the floor.",
+   "ko": "아이들이 거실을 난장판으로 만들어 소파 쿠션이 바닥에 나뒹굴었어요.",
+   "blank": "अराजकता",
+   "src": "made"
+  }
+ ],
  "w|अरे": [
   {
    "text": "अरे, तुम कब आए?",
@@ -2661,6 +2725,22 @@
    "en": "Finishing the work by tomorrow is impossible.",
    "ko": "내일까지 일을 끝내는 건 불가능해.",
    "blank": "असंभव"
+  }
+ ],
+ "w|असमर्थ": [
+  {
+   "text": "ट्रैफ़िक में फँसा करण समय पर प्रेस कॉन्फ़्रेंस पहुँचने में असमर्थ रहा।",
+   "en": "Stuck in traffic, Karan was unable to reach the press conference on time.",
+   "ko": "차가 막혀서 카란은 기자회견에 제때 갈 수 없었어요.",
+   "blank": "असमर्थ",
+   "src": "made"
+  },
+  {
+   "text": "टिकट महँगे थे, इसलिए दीपा का परिवार इस बार बाहर जाने में असमर्थ था।",
+   "en": "Tickets were expensive, so Deepa's family was unable to go away this time.",
+   "ko": "표가 비싸서 디파네 가족은 이번엔 여행을 갈 수 없었어요.",
+   "blank": "असमर्थ",
+   "src": "made"
   }
  ],
  "w|असर": [
@@ -4839,6 +4919,22 @@
    "blank": "इनकी"
   }
  ],
+ "w|इनकार करना": [
+  {
+   "text": "मंत्री के दफ़्तर ने करण के सवालों का जवाब देने से इनकार किया।",
+   "en": "The minister's office refused to answer Karan's questions.",
+   "ko": "장관실은 카란의 질문에 답하길 거부했어요.",
+   "blank": "इनकार किया",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के पति ने छुट्टी में दफ़्तर का कोई भी काम करने से इनकार किया।",
+   "en": "Deepa's husband refused to do any office work during the holiday.",
+   "ko": "디파의 남편은 휴가 중엔 회사 일을 하지 않겠다고 했어요.",
+   "blank": "इनकार किया",
+   "src": "made"
+  }
+ ],
  "w|इनाम": [
   {
    "text": "जीतने वाले को बड़ा इनाम मिला।",
@@ -5041,6 +5137,22 @@
    "en": "He is a very good person.",
    "ko": "그는 아주 좋은 사람이야.",
    "blank": "इंसान"
+  }
+ ],
+ "w|इंसाफ़": [
+  {
+   "text": "बीस साल बाद एक बूढ़ी महिला को इंसाफ़ मिला, यह ख़बर करण ने लिखी।",
+   "en": "Karan wrote the story of an old woman who got justice after twenty years.",
+   "ko": "카란은 이십 년 만에 정의를 찾은 할머니 이야기를 썼어요.",
+   "blank": "इंसाफ़",
+   "src": "made"
+  },
+  {
+   "text": "भाई-बहन के झगड़े में दादी ने ही सही इंसाफ़ किया।",
+   "en": "It was Grandmother who gave a fair judgment in the siblings' quarrel.",
+   "ko": "남매 싸움에서 공정하게 판정한 건 할머니였어요.",
+   "blank": "इंसाफ़",
+   "src": "made"
   }
  ],
  "w|इसीलिए": [
@@ -6137,6 +6249,22 @@
    "en": "Always remember useful advice.",
    "ko": "유용한 조언은 항상 기억해.",
    "blank": "उपयोगी"
+  }
+ ],
+ "w|उपराष्ट्रपति": [
+  {
+   "text": "उपराष्ट्रपति के भाषण की रिपोर्ट करण को सौंपी गई।",
+   "en": "Karan was given the job of reporting on the vice president's speech.",
+   "ko": "부통령 연설 취재는 카란에게 맡겨졌어요.",
+   "blank": "उपराष्ट्रपति",
+   "src": "made"
+  },
+  {
+   "text": "बेटे ने सामान्य ज्ञान की किताब से पूछा कि उपराष्ट्रपति कौन होता है।",
+   "en": "From his general knowledge book, Deepa's son asked who the vice president is.",
+   "ko": "아들은 상식책을 보다가 부통령이 누구냐고 물었어요.",
+   "blank": "उपराष्ट्रपति",
+   "src": "made"
   }
  ],
  "w|उपरोक्त": [
@@ -7827,6 +7955,22 @@
    "src": "made"
   }
  ],
+ "w|क़द": [
+  {
+   "text": "इस खोजी रिपोर्ट के बाद अख़बार में करण का क़द बढ़ गया।",
+   "en": "After this investigative report, Karan's standing at the paper rose.",
+   "ko": "이 탐사 보도 뒤 신문사에서 카란의 위상이 높아졌어요.",
+   "blank": "क़द",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने दीवार पर निशान लगाकर बेटे का क़द नापा।",
+   "en": "Deepa measured her son's height by making a mark on the wall.",
+   "ko": "디파는 벽에 표시를 해서 아들 키를 쟀어요.",
+   "blank": "क़द",
+   "src": "made"
+  }
+ ],
  "w|कदम": [
   {
    "text": "सड़ी हुई सीढ़ी पर हर कदम संभलकर रखना पड़ता था।",
@@ -8080,6 +8224,22 @@
    "en": "Anjali read a novel in which a great swimmer's grave was built by the sea.",
    "ko": "안잘리는 위대한 수영 선수의 무덤이 바닷가에 세워진 소설을 읽었어요.",
    "blank": "क़ब्र",
+   "src": "made"
+  }
+ ],
+ "w|क़ब्रिस्तान": [
+  {
+   "text": "करण ने एक पुराने क़ब्रिस्तान के ऐतिहासिक पत्थरों पर फ़ीचर लिखा।",
+   "en": "Karan wrote a feature on the historic stones of an old cemetery.",
+   "ko": "카란은 오래된 묘지의 역사적인 비석에 관한 특집을 썼어요.",
+   "blank": "क़ब्रिस्तान",
+   "src": "made"
+  },
+  {
+   "text": "शाम की सैर में दीपा का परिवार पुराने क़ब्रिस्तान के पास वाले बाग़ तक जाता है।",
+   "en": "On evening walks, Deepa's family goes as far as the garden next to the old cemetery.",
+   "ko": "저녁 산책 때 디파네 가족은 옛 묘지 옆 정원까지 걸어가요.",
+   "blank": "क़ब्रिस्तान",
    "src": "made"
   }
  ],
@@ -9535,6 +9695,22 @@
    "en": "Don't walk on the carpet with shoes on.",
    "ko": "카펫 위에서 신발을 신고 걷지 마.",
    "blank": "कालीन"
+  }
+ ],
+ "w|काल्पनिक": [
+  {
+   "text": "रविवार के अंक में एक काल्पनिक शहर पर व्यंग्य छपा।",
+   "en": "The Sunday edition carried a satire about an imaginary city.",
+   "ko": "일요판에 가상의 도시를 풍자한 글이 실렸어요.",
+   "blank": "काल्पनिक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की छोटी बेटी अपने काल्पनिक दोस्त के लिए भी थाली लगाती है।",
+   "en": "Deepa's younger daughter even sets a plate for her imaginary friend.",
+   "ko": "디파의 작은딸은 상상 속 친구 몫의 접시까지 차려요.",
+   "blank": "काल्पनिक",
+   "src": "made"
   }
  ],
  "w|काव्य": [
@@ -13793,6 +13969,22 @@
    "blank": "गाँव"
   }
  ],
+ "w|गिटार": [
+  {
+   "text": "दफ़्तर में देर रात करण का साथी गिटार बजाकर थकान मिटाता है।",
+   "en": "Late at night in the office, Karan's colleague plays the guitar to unwind.",
+   "ko": "밤늦게 사무실에서 카란의 동료는 기타를 치며 피로를 풀어요.",
+   "blank": "गिटार",
+   "src": "made"
+  },
+  {
+   "text": "छुट्टियों में दीपा का बेटा यूट्यूब से गिटार सीख रहा है।",
+   "en": "During the holidays, Deepa's son is learning guitar from videos.",
+   "ko": "방학 동안 디파의 아들은 영상을 보며 기타를 배우고 있어요.",
+   "blank": "गिटार",
+   "src": "made"
+  }
+ ],
  "w|गिद्ध": [
   {
    "text": "गाइड ने बताया कि इस इलाके में गिद्ध अब बहुत कम दिखते हैं।",
@@ -14553,6 +14745,22 @@
    "en": "The warehouse key is with the guard.",
    "ko": "창고 열쇠는 경비원에게 있어.",
    "blank": "गोदाम"
+  }
+ ],
+ "w|गोपनीयता": [
+  {
+   "text": "अख़बार अपने सूत्रों की गोपनीयता का पूरा ध्यान रखता है।",
+   "en": "The paper takes great care to protect the confidentiality of its sources.",
+   "ko": "신문사는 제보자의 비밀 보장에 각별히 신경 써요.",
+   "blank": "गोपनीयता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की किशोर बेटी अपनी डायरी की गोपनीयता को लेकर बहुत सख़्त है।",
+   "en": "Deepa's teenage daughter is very strict about the privacy of her diary.",
+   "ko": "디파의 십 대 딸은 일기장 비밀에 아주 엄격해요.",
+   "blank": "गोपनीयता",
+   "src": "made"
   }
  ],
  "w|गोभी": [
@@ -16513,6 +16721,22 @@
    "blank": "चित्र"
   }
  ],
+ "w|चित्रण": [
+  {
+   "text": "कार्टूनिस्ट ने नेताओं का मज़ेदार चित्रण किया।",
+   "en": "The cartoonist drew a funny portrayal of the politicians.",
+   "ko": "만화가는 정치인들을 재미있게 그렸어요.",
+   "blank": "चित्रण",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की बेटी ने अपनी ड्रॉइंग में पूरे परिवार का प्यारा चित्रण किया।",
+   "en": "Deepa's daughter made a lovely portrayal of the whole family in her drawing.",
+   "ko": "디파의 딸은 그림에 온 가족을 사랑스럽게 그렸어요.",
+   "blank": "चित्रण",
+   "src": "made"
+  }
+ ],
  "w|चिपकना": [
   {
    "text": "गर्मी में पसीने से अजय की कमीज़ पीठ पर चिपक गई।",
@@ -17811,6 +18035,38 @@
    "blank": "छुट्टी"
   }
  ],
+ "w|छुपना": [
+  {
+   "text": "फ़ोटोग्राफ़र भीड़ में छुपकर नेता की तस्वीरें ले रहा था।",
+   "en": "The photographer was hiding in the crowd, taking pictures of the politician.",
+   "ko": "사진기자는 군중 속에 숨어 정치인 사진을 찍고 있었어요.",
+   "blank": "छुपकर",
+   "src": "made"
+  },
+  {
+   "text": "लुका-छिपी में दीपा का बेटा पर्दे के पीछे छुपा था।",
+   "en": "In hide-and-seek, Deepa's son was hiding behind the curtain.",
+   "ko": "숨바꼭질에서 디파의 아들은 커튼 뒤에 숨어 있었어요.",
+   "blank": "छुपा",
+   "src": "made"
+  }
+ ],
+ "w|छुपाना": [
+  {
+   "text": "करण ने अपने सूत्र का नाम सबसे छुपाकर रखा।",
+   "en": "Karan kept his source's name hidden from everyone.",
+   "ko": "카란은 제보자 이름을 모두에게 숨겼어요.",
+   "blank": "छुपाकर",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बच्चों से मिठाई का डिब्बा अलमारी में छुपा दिया।",
+   "en": "Deepa hid the box of sweets from the children in the cupboard.",
+   "ko": "디파는 과자 상자를 아이들 몰래 찬장에 숨겼어요.",
+   "blank": "छुपा",
+   "src": "made"
+  }
+ ],
  "w|छूट": [
   {
    "text": "स्टोर में आज बड़ी छूट चल रही है।",
@@ -17911,6 +18167,22 @@
    "en": "He stopped drinking tea.",
    "ko": "그는 차 마시는 걸 끊었어.",
    "blank": "छोड़"
+  }
+ ],
+ "w|छोर": [
+  {
+   "text": "ख़बर की तलाश में करण शहर के आख़िरी छोर तक पहुँच गया।",
+   "en": "Looking for the story, Karan went all the way to the far edge of the city.",
+   "ko": "카란은 기삿거리를 찾아 도시 맨 끝까지 갔어요.",
+   "blank": "छोर",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों ने आँगन के एक छोर पर तंबू गाड़ दिया।",
+   "en": "The children pitched a tent at one end of the courtyard.",
+   "ko": "아이들은 마당 한쪽 끝에 텐트를 쳤어요.",
+   "blank": "छोर",
+   "src": "made"
   }
  ],
  "w|छोले": [
@@ -18311,6 +18583,22 @@
    "en": "Cake was cut on the birthday.",
    "ko": "생일에 케이크를 잘랐어.",
    "blank": "जन्मदिन"
+  }
+ ],
+ "w|जन्माष्टमी": [
+  {
+   "text": "जन्माष्टमी पर मंदिरों की सजावट की तस्वीरें करण ने खींचीं।",
+   "en": "Karan took pictures of the temple decorations on Janmashtami.",
+   "ko": "잔마슈타미에 카란이 사원 장식 사진을 찍었어요.",
+   "blank": "जन्माष्टमी",
+   "src": "made"
+  },
+  {
+   "text": "जन्माष्टमी पर दीपा ने बेटे को छोटा कान्हा बनाया।",
+   "en": "On Janmashtami, Deepa dressed her son up as little Kanha.",
+   "ko": "잔마슈타미에 디파는 아들을 아기 칸하로 꾸며 줬어요.",
+   "blank": "जन्माष्टमी",
+   "src": "made"
   }
  ],
  "w|जपना": [
@@ -22507,6 +22795,22 @@
    "src": "made"
   }
  ],
+ "w|तरल": [
+  {
+   "text": "पुरानी मशीन में तरल स्याही भरनी पड़ती है।",
+   "en": "Liquid ink has to be poured into the old machine.",
+   "ko": "옛날 기계에는 액체 잉크를 부어야 해요.",
+   "blank": "तरल",
+   "src": "made"
+  },
+  {
+   "text": "बच्चे को बुख़ार था, तो डॉक्टर ने तरल चीज़ें ज़्यादा देने को कहा।",
+   "en": "The child had a fever, so the doctor said to give more liquids.",
+   "ko": "아이가 열이 나서 의사가 물 같은 걸 많이 먹이라고 했어요.",
+   "blank": "तरल",
+   "src": "made"
+  }
+ ],
  "w|तरसना": [
   {
    "text": "बचपन की मिठाई के लिए तरसना होता है।",
@@ -22609,6 +22913,22 @@
    "en": "Don't speak without reason.",
    "ko": "근거 없이 말하지 마.",
    "blank": "तर्क"
+  }
+ ],
+ "w|तल": [
+  {
+   "text": "प्रेस की मशीनें इमारत के निचले तल पर लगी हैं।",
+   "en": "The printing presses are on the ground floor of the building.",
+   "ko": "인쇄기는 건물 아래층에 있어요.",
+   "blank": "तल",
+   "src": "made"
+  },
+  {
+   "text": "बाल्टी के तल में एक सिक्का पड़ा था।",
+   "en": "A coin was lying at the bottom of the bucket.",
+   "ko": "양동이 바닥에 동전 하나가 있었어요.",
+   "blank": "तल",
+   "src": "made"
   }
  ],
  "w|तलना": [
@@ -23171,6 +23491,22 @@
    "src": "made"
   }
  ],
+ "w|तीज": [
+  {
+   "text": "तीज के मेले पर करण ने रंगीन फ़ीचर लिखा।",
+   "en": "Karan wrote a colourful feature on the Teej fair.",
+   "ko": "카란은 티즈 축제 장터에 관한 화사한 특집 기사를 썼어요.",
+   "blank": "तीज",
+   "src": "made"
+  },
+  {
+   "text": "तीज पर दीपा ने आँगन के पेड़ पर झूला डाला।",
+   "en": "For Teej, Deepa hung a swing from the tree in the courtyard.",
+   "ko": "티즈에 디파는 마당 나무에 그네를 매달았어요.",
+   "blank": "तीज",
+   "src": "made"
+  }
+ ],
  "w|तीतर": [
   {
    "text": "खेत की मेड़ पर अक्सर तीतर और बटेर दाने चुगते दिखते हैं।",
@@ -23520,6 +23856,22 @@
    "en": "Neha posted her sister in the kitchen to make the sweets.",
    "ko": "네하는 언니를 부엌에 배치해 과자를 만들게 했어요.",
    "blank": "तैनात",
+   "src": "made"
+  }
+ ],
+ "w|तैनात करना": [
+  {
+   "text": "चुनाव के दिन अख़बार ने हर बूथ पर एक रिपोर्टर तैनात किया।",
+   "en": "On election day the paper posted a reporter at every booth.",
+   "ko": "선거 날 신문사는 투표소마다 기자를 배치했어요.",
+   "blank": "तैनात किया",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने रसोई में बेटे को गाजर छीलने के काम पर तैनात कर दिया।",
+   "en": "Deepa put her son on carrot-peeling duty in the kitchen.",
+   "ko": "디파는 아들을 부엌에서 당근 껍질 벗기기 담당으로 세웠어요.",
+   "blank": "तैनात कर",
    "src": "made"
   }
  ],
@@ -25533,6 +25885,22 @@
    "blank": "दुश्मनी"
   }
  ],
+ "w|दुष्ट": [
+  {
+   "text": "बच्चों के पन्ने की कहानी में एक दुष्ट जादूगर गाँव का पानी चुरा लेता है।",
+   "en": "In the story on the children's page, a wicked magician steals the village's water.",
+   "ko": "어린이 면 이야기에서 사악한 마법사가 마을 물을 훔쳐 가요.",
+   "blank": "दुष्ट",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों के नाटक में दीपा की बेटी दुष्ट रानी बनी।",
+   "en": "In the children's play, Deepa's daughter played the wicked queen.",
+   "ko": "아이들 연극에서 디파의 딸은 못된 왕비 역을 했어요.",
+   "blank": "दुष्ट",
+   "src": "made"
+  }
+ ],
  "w|दुहराना": [
   {
    "text": "कृपया अपना सवाल दुहराइए।",
@@ -25607,6 +25975,22 @@
    "en": "Snow shows on the far mountain.",
    "ko": "멀리 산 위에 눈이 보여.",
    "blank": "दूर"
+  }
+ ],
+ "w|दूरदर्शन": [
+  {
+   "text": "करण बचपन में दूरदर्शन पर समाचार देखकर पत्रकार बनना चाहता था।",
+   "en": "As a child, Karan wanted to be a journalist after watching the news on Doordarshan.",
+   "ko": "카란은 어릴 때 두르다르샨 뉴스를 보며 기자가 되고 싶었어요.",
+   "blank": "दूरदर्शन",
+   "src": "made"
+  },
+  {
+   "text": "दादाजी ने बच्चों को बताया कि उनके ज़माने में बस दूरदर्शन ही था।",
+   "en": "Grandfather told the children that in his day there was only Doordarshan.",
+   "ko": "할아버지는 자기 때는 두르다르샨뿐이었다고 아이들에게 말했어요.",
+   "blank": "दूरदर्शन",
+   "src": "made"
   }
  ],
  "w|दूरी": [
@@ -26379,6 +26763,22 @@
    "blank": "धर्म"
   }
  ],
+ "w|धर्मनिरपेक्ष": [
+  {
+   "text": "संपादक का मानना है कि अख़बार की नीति पूरी तरह धर्मनिरपेक्ष होनी चाहिए।",
+   "en": "The editor believes the paper's policy should be fully secular.",
+   "ko": "편집장은 신문의 방침이 완전히 세속적이어야 한다고 봐요.",
+   "blank": "धर्मनिरपेक्ष",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के मोहल्ले में सब त्योहार मिलकर मनाते हैं, माहौल पूरी तरह धर्मनिरपेक्ष है।",
+   "en": "In Deepa's neighbourhood, everyone celebrates all festivals together; the mood is fully secular.",
+   "ko": "디파네 동네는 모든 명절을 다 같이 쇠어서 분위기가 완전히 세속적이에요.",
+   "blank": "धर्मनिरपेक्ष",
+   "src": "made"
+  }
+ ],
  "w|धर्मशाला": [
   {
    "text": "तीर्थयात्री रात धर्मशाला में रुके।",
@@ -26691,6 +27091,22 @@
    "en": "He took the money and wanted to cheat everyone.",
    "ko": "그는 돈을 받고 모두를 속이려 했어.",
    "blank": "धोखा देना"
+  }
+ ],
+ "w|धोखाधड़ी": [
+  {
+   "text": "बैंक में धोखाधड़ी की ख़बर पहले पन्ने पर छपी।",
+   "en": "The news of fraud at the bank was printed on the front page.",
+   "ko": "은행 사기 소식이 일면에 실렸어요.",
+   "blank": "धोखाधड़ी",
+   "src": "made"
+  },
+  {
+   "text": "ऑनलाइन धोखाधड़ी से बचने के लिए दीपा ने माँ को फ़ोन के नियम समझाए।",
+   "en": "Deepa explained phone rules to her mother so she would avoid online fraud.",
+   "ko": "디파는 엄마가 온라인 사기를 피하도록 휴대폰 쓰는 요령을 알려 줬어요.",
+   "blank": "धोखाधड़ी",
+   "src": "made"
   }
  ],
  "w|धोती": [
@@ -28295,6 +28711,22 @@
    "src": "made"
   }
  ],
+ "w|निगाह": [
+  {
+   "text": "करण की निगाह एक छोटी-सी ख़बर पर पड़ी जो बाद में बड़ी निकली।",
+   "en": "Karan's eye fell on a tiny item that later turned out to be big.",
+   "ko": "카란의 눈에 작은 기사 하나가 들어왔는데 나중에 큰 사건이 됐어요.",
+   "blank": "निगाह",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की निगाह बच्चों पर लगी थी जो छत पर पतंग उड़ा रहे थे।",
+   "en": "Deepa was keeping an eye on the children flying kites on the roof.",
+   "ko": "디파는 옥상에서 연을 날리는 아이들을 지켜보고 있었어요.",
+   "blank": "निगाह",
+   "src": "made"
+  }
+ ],
  "w|निचोड़ना": [
   {
    "text": "कपड़े को अच्छी तरह निचोड़ो।",
@@ -28581,6 +29013,22 @@
    "blank": "निरंतर"
   }
  ],
+ "w|निराला": [
+  {
+   "text": "करण का लिखने का अंदाज़ बिल्कुल निराला है।",
+   "en": "Karan's writing style is quite unique.",
+   "ko": "카란의 글솜씨는 아주 독특해요.",
+   "blank": "निराला",
+   "src": "made"
+  },
+  {
+   "text": "घर पर बिताई ये छुट्टियाँ सचमुच निराली रहीं।",
+   "en": "These holidays spent at home were truly one of a kind.",
+   "ko": "집에서 보낸 이번 휴가는 정말 특별했어요.",
+   "blank": "निराली",
+   "src": "made"
+  }
+ ],
  "w|निराश": [
   {
    "text": "परीक्षा के नतीजे से वह निराश हो गया।",
@@ -28854,6 +29302,22 @@
    "en": "A new government hospital is being built in Anjali's constituency.",
    "ko": "안잘리가 사는 선거구에 새 공립 병원이 지어지고 있어요.",
    "blank": "निर्वाचन क्षेत्र",
+   "src": "made"
+  }
+ ],
+ "w|निर्वाचित": [
+  {
+   "text": "करण ने नए निर्वाचित मेयर का पहला इंटरव्यू लिया।",
+   "en": "Karan did the first interview with the newly elected mayor.",
+   "ko": "카란이 새로 뽑힌 시장의 첫 인터뷰를 했어요.",
+   "blank": "निर्वाचित",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों ने वोट डालकर दीपा को घर की निर्वाचित रसोइया बना दिया।",
+   "en": "The children voted and made Deepa the elected cook of the house.",
+   "ko": "아이들은 투표로 디파를 집의 선출된 요리사로 뽑았어요.",
+   "blank": "निर्वाचित",
    "src": "made"
   }
  ],
@@ -42121,6 +42585,22 @@
    "src": "made"
   }
  ],
+ "w|मसलन": [
+  {
+   "text": "अख़बार हर तरह की ख़बर छापता है, मसलन खेल, राजनीति और मौसम।",
+   "en": "The paper prints all kinds of news, for example sports, politics and weather.",
+   "ko": "신문은 예컨대 스포츠, 정치, 날씨처럼 온갖 소식을 실어요.",
+   "blank": "मसलन",
+   "src": "made"
+  },
+  {
+   "text": "घर पर भी मज़ा कम नहीं है, मसलन छत पर पतंग उड़ाना या रात में कहानियाँ।",
+   "en": "There's no less fun at home, for example flying kites on the roof or stories at night.",
+   "ko": "집에서도 재미가 적지 않아요, 예컨대 옥상에서 연날리기나 밤 이야기 시간이요.",
+   "blank": "मसलन",
+   "src": "made"
+  }
+ ],
  "w|मसलना": [
   {
    "text": "लहसुन को अच्छे से मसलना चाहिए।",
@@ -45273,6 +45753,22 @@
    "blank": "याद करती"
   }
  ],
+ "w|याद दिलाना": [
+  {
+   "text": "संपादक ने करण को याद दिलाया कि रिपोर्ट शाम छह बजे तक चाहिए।",
+   "en": "The editor reminded Karan that the report was needed by six in the evening.",
+   "ko": "편집장은 카란에게 기사가 저녁 여섯 시까지 필요하다고 다시 일러 줬어요.",
+   "blank": "याद दिलाया",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बच्चों को याद दिलाया कि छुट्टियों में भी होमवर्क करना है।",
+   "en": "Deepa reminded the children that they had to do homework even during the holidays.",
+   "ko": "디파는 방학에도 숙제를 해야 한다고 아이들에게 일러 줬어요.",
+   "blank": "याद दिलाया",
+   "src": "made"
+  }
+ ],
  "w|यानी": [
   {
    "text": "वह बीमार है, यानी आज नहीं आएगा।",
@@ -46153,6 +46649,22 @@
    "en": "The little girl was dancing dressed as a princess.",
    "ko": "어린 소녀가 공주 분장을 하고 춤추고 있었어.",
    "blank": "राजकुमारी"
+  }
+ ],
+ "w|राजदूत": [
+  {
+   "text": "विदेश पन्ने के लिए करण ने एक राजदूत से बातचीत की।",
+   "en": "Karan talked with an ambassador for the foreign news page.",
+   "ko": "카란은 국제면 기사를 위해 대사와 대화를 나눴어요.",
+   "blank": "राजदूत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की बेटी बड़ी होकर राजदूत बनना चाहती है।",
+   "en": "Deepa's daughter wants to become an ambassador when she grows up.",
+   "ko": "디파의 딸은 커서 대사가 되고 싶어 해요.",
+   "blank": "राजदूत",
+   "src": "made"
   }
  ],
  "w|राजधानी": [
@@ -49223,6 +49735,22 @@
    "src": "made"
   }
  ],
+ "w|विदाई": [
+  {
+   "text": "पुराने संपादक की विदाई पर पूरे दफ़्तर ने मिठाई बाँटी।",
+   "en": "At the old editor's farewell, the whole office handed out sweets.",
+   "ko": "옛 편집장 송별 때 사무실 전체가 단것을 나눴어요.",
+   "blank": "विदाई",
+   "src": "made"
+  },
+  {
+   "text": "छुट्टियाँ ख़त्म होने पर नानी की विदाई के समय बच्चे रो पड़े।",
+   "en": "When the holidays ended, the children cried as they said goodbye to Grandma.",
+   "ko": "방학이 끝나 외할머니를 배웅할 때 아이들이 울음을 터뜨렸어요.",
+   "blank": "विदाई",
+   "src": "made"
+  }
+ ],
  "w|विदेश": [
   {
    "text": "वह विदेश में पढ़ रहा है।",
@@ -50164,6 +50692,22 @@
    "en": "When water is short, Seema sows millet as an alternative crop instead of wheat.",
    "ko": "물이 부족하면 시마는 밀 대신 대체 작물로 기장을 심어요.",
    "blank": "वैकल्पिक",
+   "src": "made"
+  }
+ ],
+ "w|वैचारिक": [
+  {
+   "text": "संपादकीय बैठक में दोनों लेखकों के बीच वैचारिक बहस छिड़ गई।",
+   "en": "An ideological debate broke out between the two writers at the editorial meeting.",
+   "ko": "편집 회의에서 두 필자 사이에 이념 논쟁이 벌어졌어요.",
+   "blank": "वैचारिक",
+   "src": "made"
+  },
+  {
+   "text": "खाने की मेज़ पर दीपा के भाई और पति के बीच वैचारिक मतभेद फिर उभर आए।",
+   "en": "At the dinner table, the ideological differences between Deepa's brother and husband surfaced again.",
+   "ko": "식탁에서 디파의 오빠와 남편 사이의 생각 차이가 또 드러났어요.",
+   "blank": "वैचारिक",
    "src": "made"
   }
  ],
@@ -52021,6 +52565,22 @@
    "blank": "शौचालय"
   }
  ],
+ "w|श्मशान": [
+  {
+   "text": "करण ने नदी किनारे के पुराने श्मशान के नवीनीकरण पर रिपोर्ट लिखी।",
+   "en": "Karan wrote a report on the renovation of the old riverside cremation ground.",
+   "ko": "카란은 강가 옛 화장터 정비에 관한 기사를 썼어요.",
+   "blank": "श्मशान",
+   "src": "made"
+  },
+  {
+   "text": "दादी ने बच्चों को बताया कि गाँव का श्मशान नदी के उस पार है।",
+   "en": "Grandmother told the children that the village cremation ground is across the river.",
+   "ko": "할머니는 마을 화장터가 강 건너에 있다고 아이들에게 말했어요.",
+   "blank": "श्मशान",
+   "src": "made"
+  }
+ ],
  "w|श्रद्धांजलि": [
   {
    "text": "पुराने प्रधानाचार्य को श्रद्धांजलि देने के लिए सभा में दो मिनट का मौन रखा गया।",
@@ -52144,6 +52704,22 @@
    "en": "On the last evening in the old house, Priya sang and the whole family was her audience.",
    "ko": "옛집에서의 마지막 저녁, 프리야가 노래하고 온 가족이 청중이 되었어요.",
    "blank": "श्रोता",
+   "src": "made"
+  }
+ ],
+ "w|षड्यंत्र": [
+  {
+   "text": "करण की रिपोर्ट ने ज़मीन हड़पने के एक षड्यंत्र का पर्दाफ़ाश किया।",
+   "en": "Karan's report exposed a conspiracy to grab land.",
+   "ko": "카란의 기사는 땅을 빼앗으려는 음모를 폭로했어요.",
+   "blank": "षड्यंत्र",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों ने मिलकर पापा को डराने का एक मज़ेदार षड्यंत्र रचा।",
+   "en": "The children together hatched a funny plot to scare Dad.",
+   "ko": "아이들은 함께 아빠를 놀라게 할 재미있는 음모를 꾸몄어요.",
+   "blank": "षड्यंत्र",
    "src": "made"
   }
  ],
@@ -53115,6 +53691,22 @@
    "en": "A deep silence hangs in the library.",
    "ko": "도서관에는 깊은 고요가 감돌아.",
    "blank": "सन्नाटा"
+  }
+ ],
+ "w|संन्यास": [
+  {
+   "text": "मशहूर क्रिकेटर के संन्यास की ख़बर खेल पन्ने पर सबसे ऊपर थी।",
+   "en": "The famous cricketer's retirement was the top story on the sports page.",
+   "ko": "유명 크리켓 선수의 은퇴 소식이 스포츠면 맨 위에 실렸어요.",
+   "blank": "संन्यास",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के चाचा ने साठ साल की उम्र में नौकरी से संन्यास ले लिया।",
+   "en": "Deepa's uncle retired from his job at sixty.",
+   "ko": "디파의 삼촌은 예순에 일을 그만두고 은퇴했어요.",
+   "blank": "संन्यास",
+   "src": "made"
   }
  ],
  "w|संन्यासी": [
@@ -54818,6 +55410,22 @@
    "en": "According to Seema, bold lines make a picture powerful.",
    "ko": "시마는 진한 선이 그림을 힘 있게 만든다고 해요.",
    "blank": "सशक्त",
+   "src": "made"
+  }
+ ],
+ "w|सशक्तिकरण": [
+  {
+   "text": "करण ने गाँव की महिलाओं के आर्थिक सशक्तिकरण पर एक लेख लिखा।",
+   "en": "Karan wrote an article on the economic empowerment of village women.",
+   "ko": "카란은 마을 여성들의 경제적 자립에 관한 기사를 썼어요.",
+   "blank": "सशक्तिकरण",
+   "src": "made"
+  },
+  {
+   "text": "दीपा मानती है कि बेटियों का सशक्तिकरण घर से ही शुरू होता है।",
+   "en": "Deepa believes that empowering daughters starts at home.",
+   "ko": "디파는 딸들의 힘 기르기가 집에서부터 시작된다고 믿어요.",
+   "blank": "सशक्तिकरण",
    "src": "made"
   }
  ],
@@ -58159,6 +58767,22 @@
    "src": "made"
   }
  ],
+ "w|स्थिरता": [
+  {
+   "text": "अर्थशास्त्री ने कहा कि बाज़ार को अब स्थिरता की ज़रूरत है।",
+   "en": "The economist said the market now needs stability.",
+   "ko": "경제학자는 시장에 이제 안정이 필요하다고 말했어요.",
+   "blank": "स्थिरता",
+   "src": "made"
+  },
+  {
+   "text": "नई नौकरी से घर में आर्थिक स्थिरता आई, तो दीपा ने चैन की साँस ली।",
+   "en": "The new job brought financial stability to the home, and Deepa breathed a sigh of relief.",
+   "ko": "새 직장 덕에 집안 살림이 안정되자 디파는 한숨 돌렸어요.",
+   "blank": "स्थिरता",
+   "src": "made"
+  }
+ ],
  "w|स्नातक": [
   {
    "text": "रसोई में नया सहायक होटल प्रबंधन का स्नातक है।",
@@ -58499,6 +59123,22 @@
    "en": "This sweet turned out very delicious.",
    "ko": "이 과자가 아주 맛있게 됐어.",
    "blank": "स्वादिष्ट"
+  }
+ ],
+ "w|स्वाधीनता": [
+  {
+   "text": "स्वाधीनता दिवस पर अख़बार ने पुराने स्वतंत्रता सेनानियों की तस्वीरें छापीं।",
+   "en": "On Independence Day, the paper printed pictures of old freedom fighters.",
+   "ko": "독립기념일에 신문은 옛 독립운동가들 사진을 실었어요.",
+   "blank": "स्वाधीनता",
+   "src": "made"
+  },
+  {
+   "text": "दादाजी ने स्वाधीनता संग्राम की कहानियाँ सुनाईं।",
+   "en": "Grandfather told stories of the freedom struggle.",
+   "ko": "할아버지는 독립 투쟁 이야기를 들려줬어요.",
+   "blank": "स्वाधीनता",
+   "src": "made"
   }
  ],
  "w|स्वाभाविक": [
