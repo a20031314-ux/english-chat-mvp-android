@@ -2273,6 +2273,22 @@
    "src": "made"
   }
  ],
+ "w|бланк": [
+  {
+   "text": "Для отпуска Алексею пришлось заполнить бланк в отделе кадров.",
+   "en": "To take leave Alexey had to fill in a form at the HR department.",
+   "ko": "휴가를 내려고 알렉세이는 인사과에서 서류 양식을 작성해야 했어요.",
+   "blank": "бланк",
+   "src": "made"
+  },
+  {
+   "text": "Чтобы получить новую пару зимних шин, Наталья заполнила бланк в автосервисе.",
+   "en": "To get a new set of winter tires, Natalya filled in a form at the car service.",
+   "ko": "겨울 타이어를 새로 받으려고 나탈리야는 정비소에서 신청서를 작성했어요.",
+   "blank": "бланк",
+   "src": "made"
+  }
+ ],
  "w|блеск": [
   {
    "text": "Михаил не мог оторвать глаз от блеска свадебного платья.",
@@ -3065,6 +3081,22 @@
    "ko": "어떻게 그런 터무니없는 걸 믿는지 모르겠어요.",
    "blank": "бред",
    "src": "tatoeba:5124274/marafon en:4563416/mailohilohi"
+  }
+ ],
+ "w|бригада": [
+  {
+   "text": "Алексей руководит бригадой из восьми сварщиков.",
+   "en": "Alexey leads a team of eight welders.",
+   "ko": "알렉세이는 용접공 여덟 명으로 된 작업반을 이끌어요.",
+   "blank": "бригадой",
+   "src": "made"
+  },
+  {
+   "text": "После метели во двор Натальи приехала бригада расчищать снег.",
+   "en": "After the blizzard a crew came to Natalya's yard to clear the snow.",
+   "ko": "눈보라가 지나가자 작업반이 나탈리야네 마당에 눈을 치우러 왔어요.",
+   "blank": "бригада",
+   "src": "made"
   }
  ],
  "w|бриллиант": [
@@ -4870,6 +4902,22 @@
    "en": "Thanks for the visit, come again!",
    "ko": "와 주셔서 고마워요, 또 오세요!",
    "blank": "визит",
+   "src": "made"
+  }
+ ],
+ "w|визитка": [
+  {
+   "text": "Представитель заказчика оставил Алексею свою визитку.",
+   "en": "The client's representative left Alexey his business card.",
+   "ko": "고객사 담당자가 알렉세이에게 명함을 남기고 갔어요.",
+   "blank": "визитку",
+   "src": "made"
+  },
+  {
+   "text": "Весной, разбирая зимнее пальто, Наталья нашла в кармане старую визитку.",
+   "en": "In spring, sorting through her winter coat, Natalya found an old business card in the pocket.",
+   "ko": "봄에 겨울 코트를 정리하던 나탈리야는 주머니에서 오래된 명함을 찾았어요.",
+   "blank": "визитку",
    "src": "made"
   }
  ],
@@ -7969,6 +8017,22 @@
    "src": "made"
   }
  ],
+ "w|выдающийся": [
+  {
+   "text": "Завод наградил Алексея за выдающийся вклад в модернизацию цеха.",
+   "en": "The plant rewarded Alexey for his outstanding contribution to modernizing the shop.",
+   "ko": "공장은 작업장 현대화에 크게 기여한 알렉세이에게 상을 줬어요.",
+   "blank": "выдающийся",
+   "src": "made"
+  },
+  {
+   "text": "В этом году у Натальи выдался выдающийся урожай яблок.",
+   "en": "This year Natalya had an outstanding apple harvest.",
+   "ko": "올해 나탈리야네 사과 농사는 아주 대풍이었어요.",
+   "blank": "выдающийся",
+   "src": "made"
+  }
+ ],
  "w|выдержать": [
   {
    "text": "Никита не смог выдержать полный час кардио и сошёл с дорожки.",
@@ -8617,6 +8681,22 @@
    "src": "made"
   }
  ],
+ "w|высказать": [
+  {
+   "text": "На собрании Алексей решил высказать всё, что думает о новых сменах.",
+   "en": "At the meeting Alexey decided to say everything he thinks about the new shifts.",
+   "ko": "회의에서 알렉세이는 새 교대 근무에 대해 생각하는 걸 다 말하기로 했어요.",
+   "blank": "высказать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья решила высказать соседу недовольство тем, что он жжёт листья.",
+   "en": "Natalya decided to tell her neighbor she was unhappy about him burning leaves.",
+   "ko": "나탈리야는 낙엽을 태우는 이웃에게 불만을 말하기로 했어요.",
+   "blank": "высказать",
+   "src": "made"
+  }
+ ],
  "w|выследить": [
   {
    "text": "Андрей всё-таки сумел выследить лису, которая таскала кур.",
@@ -9230,6 +9310,22 @@
    "en": "Olga was surprised to learn that her fellow passenger was the CEO of a large firm.",
    "ko": "올가는 같은 칸 승객이 큰 회사 사장이라는 걸 알고 놀랐어요.",
    "blank": "генеральный",
+   "src": "made"
+  }
+ ],
+ "w|генератор": [
+  {
+   "text": "Когда на заводе отключили свет, Алексей запустил резервный генератор.",
+   "en": "When the power went out at the plant, Alexey started the backup generator.",
+   "ko": "공장에 전기가 나가자 알렉세이는 예비 발전기를 돌렸어요.",
+   "blank": "генератор",
+   "src": "made"
+  },
+  {
+   "text": "Зимой у Натальи на даче постоянно гудит генератор.",
+   "en": "In winter the generator is always humming at Natalya's dacha.",
+   "ko": "겨울이면 나탈리야의 별장에서는 발전기가 늘 웅웅거려요.",
+   "blank": "генератор",
    "src": "made"
   }
  ],
@@ -12639,6 +12735,22 @@
    "src": "tatoeba:5989091/marafon en:5848617/CK"
   }
  ],
+ "w|доклад": [
+  {
+   "text": "Алексей сделал доклад о безопасности на общем собрании цеха.",
+   "en": "Alexey gave a talk on safety at the shop's general meeting.",
+   "ko": "알렉세이는 작업장 전체 회의에서 안전에 관한 발표를 했어요.",
+   "blank": "доклад",
+   "src": "made"
+  },
+  {
+   "text": "Наталья готовит доклад о том, как меняется весна в средней полосе.",
+   "en": "Natalya is preparing a talk on how spring is changing in central Russia.",
+   "ko": "나탈리야는 중부 지방의 봄이 어떻게 달라지고 있는지 발표를 준비해요.",
+   "blank": "доклад",
+   "src": "made"
+  }
+ ],
  "w|докладывать": [
   {
    "text": "Каждое утро Дмитрий докладывает мастеру о состоянии линии.",
@@ -15543,6 +15655,22 @@
    "src": "made"
   }
  ],
+ "w|заживо": [
+  {
+   "text": "В июле у печей Алексей чувствует, что жарится заживо.",
+   "en": "In July by the furnaces Alexey feels like he's being roasted alive.",
+   "ko": "7월 용광로 옆에서 알렉세이는 산 채로 구워지는 기분이에요.",
+   "blank": "заживо",
+   "src": "made"
+  },
+  {
+   "text": "В июльскую жару в автобусе Наталья чувствовала, что варится заживо.",
+   "en": "In the July heat on the bus Natalya felt like she was being boiled alive.",
+   "ko": "7월 무더위에 버스 안에서 나탈리야는 푹푹 쪄 죽을 것 같았어요.",
+   "blank": "заживо",
+   "src": "made"
+  }
+ ],
  "w|заинтересованный": [
   {
    "text": "Катя слушала брата с заинтересованным видом, но ничего не говорила.",
@@ -15823,6 +15951,22 @@
    "blank": "закончится"
   }
  ],
+ "w|закопать": [
+  {
+   "text": "На стройке нового цеха рабочие нашли капсулу времени, которую Алексей закопал много лет назад.",
+   "en": "On the site of the new workshop the workers found a time capsule that Alexey had buried many years ago.",
+   "ko": "새 작업장 공사 중에 일꾼들이 알렉세이가 오래전에 묻어 둔 타임캡슐을 찾아냈어요.",
+   "blank": "закопал",
+   "src": "made"
+  },
+  {
+   "text": "Перед заморозками Наталья закопала морковь в ящик с песком.",
+   "en": "Before the frosts Natalya buried carrots in a box of sand.",
+   "ko": "서리가 내리기 전에 나탈리야는 당근을 모래 상자에 묻었어요.",
+   "blank": "закопала",
+   "src": "made"
+  }
+ ],
  "w|закрывать": [
   {
    "text": "Тридцать первого числа магазин у дома Никиты будет закрываться раньше.",
@@ -16073,6 +16217,22 @@
    "en": "Note that I did warn you.",
    "ko": "내가 미리 말했잖아.",
    "blank": "Заметь"
+  }
+ ],
+ "w|заметка": [
+  {
+   "text": "Алексей прикрепил к станку заметку о том, что его нельзя включать.",
+   "en": "Alexey stuck a note on the machine saying it must not be switched on.",
+   "ko": "알렉세이는 기계에 켜지 말라는 메모를 붙여 놓았어요.",
+   "blank": "заметку",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет для местной газеты заметки о смене времён года.",
+   "en": "Natalya writes short pieces about the changing seasons for the local paper.",
+   "ko": "나탈리야는 지역 신문에 계절의 변화에 관한 짧은 글을 써요.",
+   "blank": "заметки",
+   "src": "made"
   }
  ],
  "w|заметный": [
@@ -20059,6 +20219,22 @@
    "src": "tatoeba:1215531/Hidari_v en:23545/auxitt"
   }
  ],
+ "w|кампус": [
+  {
+   "text": "Завод построил для рабочих целый кампус с общежитием, и Алексей переехал туда.",
+   "en": "The plant built a whole campus with a dormitory for its workers, and Alexey moved there.",
+   "ko": "공장이 직원들을 위해 기숙사가 딸린 단지를 지어서 알렉세이는 그리로 이사했어요.",
+   "blank": "кампус",
+   "src": "made"
+  },
+  {
+   "text": "Осенью университетский кампус, где работает Наталья, становится золотым.",
+   "en": "In autumn the university campus where Natalya works turns golden.",
+   "ko": "가을이면 나탈리야가 일하는 대학 캠퍼스가 황금빛으로 물들어요.",
+   "blank": "кампус",
+   "src": "made"
+  }
+ ],
  "w|канал": [
   {
    "text": "Какой канал ты смотришь?",
@@ -21578,6 +21754,22 @@
    "en": "The train was five hours late, and Olga was paid compensation for the ticket.",
    "ko": "기차가 다섯 시간 늦어서 올가는 표값을 보상받았어요.",
    "blank": "компенсацию",
+   "src": "made"
+  }
+ ],
+ "w|комплекс": [
+  {
+   "text": "Завод Алексея входит в большой промышленный комплекс на окраине города.",
+   "en": "Alexey's plant is part of a large industrial complex on the outskirts of the city.",
+   "ko": "알렉세이의 공장은 도시 외곽의 큰 산업 단지에 속해 있어요.",
+   "blank": "комплекс",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро весной Наталья делает комплекс упражнений на балконе.",
+   "en": "Every spring morning Natalya does a set of exercises on the balcony.",
+   "ko": "봄이면 나탈리야는 매일 아침 발코니에서 체조를 해요.",
+   "blank": "комплекс",
    "src": "made"
   }
  ],
@@ -23510,6 +23702,22 @@
    "en": "On the mountain pass Olga needed a waterproof jacket.",
    "ko": "고개에서 올가는 방수 재킷이 필요했어요.",
    "blank": "куртка",
+   "src": "made"
+  }
+ ],
+ "w|курьер": [
+  {
+   "text": "К проходной приехал курьер и привёз Алексею срочные запчасти.",
+   "en": "A courier came to the gate and brought Alexey urgent spare parts.",
+   "ko": "택배 기사가 정문으로 와서 알렉세이에게 급한 부품을 갖다 줬어요.",
+   "blank": "курьер",
+   "src": "made"
+  },
+  {
+   "text": "В снегопад курьер еле добрался до двери Натальи.",
+   "en": "In the snowfall the courier barely made it to Natalya's door.",
+   "ko": "눈이 펑펑 오는 날 택배 기사는 나탈리야의 집 문 앞까지 겨우 왔어요.",
+   "blank": "курьер",
    "src": "made"
   }
  ],
@@ -28021,6 +28229,22 @@
    "src": "made"
   }
  ],
+ "w|наготове": [
+  {
+   "text": "Огнетушитель у Алексея всегда наготове возле печи.",
+   "en": "Alexey always keeps a fire extinguisher at the ready by the furnace.",
+   "ko": "알렉세이는 늘 용광로 옆에 소화기를 준비해 둬요.",
+   "blank": "наготове",
+   "src": "made"
+  },
+  {
+   "text": "Осенью у Натальи в прихожей всегда наготове зонт.",
+   "en": "In autumn Natalya always has an umbrella ready in the hallway.",
+   "ko": "가을이면 나탈리야의 현관에는 늘 우산이 준비돼 있어요.",
+   "blank": "наготове",
+   "src": "made"
+  }
+ ],
  "w|награда": [
   {
    "text": "Их улыбки - величайшая награда для меня.",
@@ -29481,6 +29705,22 @@
    "en": "He was so tired he fell asleep in the taxi.",
    "ko": "그는 너무 피곤해서 택시에서 잠들었어.",
    "blank": "настолько"
+  }
+ ],
+ "w|настоять": [
+  {
+   "text": "Алексей настоял, чтобы конвейер остановили для проверки.",
+   "en": "Alexey insisted that the conveyor be stopped for an inspection.",
+   "ko": "알렉세이는 점검을 위해 컨베이어를 멈춰야 한다고 고집했어요.",
+   "blank": "настоял",
+   "src": "made"
+  },
+  {
+   "text": "Наталья настояла, чтобы дети надели шапки, хотя был уже март.",
+   "en": "Natalya insisted the children wear hats even though it was already March.",
+   "ko": "벌써 3월이었지만 나탈리야는 아이들에게 모자를 꼭 쓰라고 했어요.",
+   "blank": "настояла",
+   "src": "made"
   }
  ],
  "w|настоящее": [
@@ -32152,6 +32392,22 @@
    "en": "Irina turned around and saw the whole group looking at her drawing.",
    "ko": "이리나가 뒤돌아보니 반 사람들이 모두 그녀의 그림을 보고 있었어요.",
    "blank": "обернулась",
+   "src": "made"
+  }
+ ],
+ "w|обеспечение": [
+  {
+   "text": "Алексей отвечает за обеспечение цеха инструментами.",
+   "en": "Alexey is responsible for supplying the shop with tools.",
+   "ko": "알렉세이는 작업장에 공구를 대 주는 일을 맡고 있어요.",
+   "blank": "обеспечение",
+   "src": "made"
+  },
+  {
+   "text": "Осенью город проверяет обеспечение домов теплом, и Наталья ждёт комиссию.",
+   "en": "In autumn the city checks that houses are supplied with heat, and Natalya is waiting for the inspectors.",
+   "ko": "가을이면 시에서 집집마다 난방 공급을 점검해서 나탈리야는 점검반을 기다려요.",
+   "blank": "обеспечение",
    "src": "made"
   }
  ],
@@ -37415,6 +37671,22 @@
    "src": "tatoeba:12670527/marafon en:6381618/OsoHombre"
   }
  ],
+ "w|панель": [
+  {
+   "text": "На панели управления у Алексея замигала красная лампочка.",
+   "en": "A red light started blinking on Alexey's control panel.",
+   "ko": "알렉세이의 제어판에 빨간 불이 깜빡이기 시작했어요.",
+   "blank": "панели",
+   "src": "made"
+  },
+  {
+   "text": "Весной Наталья протёрла солнечные панели на крыше от пыли.",
+   "en": "In spring Natalya wiped the dust off the solar panels on the roof.",
+   "ko": "봄에 나탈리야는 지붕 위 태양광 패널의 먼지를 닦았어요.",
+   "blank": "панели",
+   "src": "made"
+  }
+ ],
  "w|паника": [
   {
    "text": "Ложное сообщение о пожаре вызвало в городе панику.",
@@ -40783,6 +41055,22 @@
    "src": "tatoeba:3212419/odexed en:2064729/CK"
   }
  ],
+ "w|подписывать": [
+  {
+   "text": "Начальник попросил Алексея подписывать каждый акт приёмки.",
+   "en": "The boss asked Alexey to sign every acceptance report.",
+   "ko": "상사는 알렉세이에게 검수 확인서마다 서명하라고 했어요.",
+   "blank": "подписывать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья любит подписывать открытки к первому снегу.",
+   "en": "Natalya loves signing cards for the first snow.",
+   "ko": "나탈리야는 첫눈에 맞춰 카드를 쓰는 걸 좋아해요.",
+   "blank": "подписывать",
+   "src": "made"
+  }
+ ],
  "w|подпись": [
   {
    "text": "Ты поставил свою подпись?",
@@ -41002,6 +41290,22 @@
    "en": "An old hunter told Svetlana how he once shot a duck with his father's gun.",
    "ko": "늙은 사냥꾼은 아버지 총으로 오리를 맞힌 이야기를 스베틀라나에게 들려줬어요.",
    "blank": "подстрелил",
+   "src": "made"
+  }
+ ],
+ "w|подстроить": [
+  {
+   "text": "Коллеги подстроили Алексею сюрприз к юбилею прямо в цеху.",
+   "en": "Alexey's colleagues set up an anniversary surprise for him right in the shop.",
+   "ko": "동료들이 작업장에서 알렉세이의 생일 깜짝 파티를 꾸몄어요.",
+   "blank": "подстроили",
+   "src": "made"
+  },
+  {
+   "text": "Наталья подстроила отпуск так, чтобы застать цветение сакуры.",
+   "en": "Natalya arranged her vacation so as to catch the cherry blossoms.",
+   "ko": "나탈리야는 벚꽃 필 때에 맞춰 휴가를 조정했어요.",
+   "blank": "подстроила",
    "src": "made"
   }
  ],
@@ -43945,6 +44249,22 @@
    "blank": "посмотрю"
   }
  ],
+ "w|пособие": [
+  {
+   "text": "Алексей выдал новичкам пособие по технике безопасности.",
+   "en": "Alexey handed the newcomers a safety manual.",
+   "ko": "알렉세이는 신입들에게 안전 수칙 안내서를 나눠 줬어요.",
+   "blank": "пособие",
+   "src": "made"
+  },
+  {
+   "text": "Наталья купила пособие по весенней обрезке деревьев.",
+   "en": "Natalya bought a guide to pruning trees in spring.",
+   "ko": "나탈리야는 봄철 가지치기 안내서를 샀어요.",
+   "blank": "пособие",
+   "src": "made"
+  }
+ ],
  "w|посоветовать": [
   {
    "text": "Классный руководитель посоветовал Михаилу записаться в шахматный кружок.",
@@ -44101,6 +44421,38 @@
    "en": "Where should I put the flowers?",
    "ko": "꽃은 어디에 둘까?",
    "blank": "поставить"
+  }
+ ],
+ "w|поставка": [
+  {
+   "text": "Алексей ждёт поставку стали уже третий день.",
+   "en": "Alexey has been waiting for the steel delivery for three days already.",
+   "ko": "알렉세이는 벌써 사흘째 철강 납품을 기다리고 있어요.",
+   "blank": "поставку",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Наталья заказала поставку дров на всю зиму.",
+   "en": "In autumn Natalya ordered a delivery of firewood for the whole winter.",
+   "ko": "가을에 나탈리야는 겨울 내내 땔 장작 배달을 주문했어요.",
+   "blank": "поставку",
+   "src": "made"
+  }
+ ],
+ "w|поставщик": [
+  {
+   "text": "Алексей позвонил поставщику, чтобы выяснить, где застрял груз.",
+   "en": "Alexey called the supplier to find out where the shipment was stuck.",
+   "ko": "알렉세이는 짐이 어디서 막혔는지 알아보려고 공급업체에 전화했어요.",
+   "blank": "поставщику",
+   "src": "made"
+  },
+  {
+   "text": "Каждую весну Наталья берёт рассаду у одного и того же поставщика.",
+   "en": "Every spring Natalya gets her seedlings from the same supplier.",
+   "ko": "나탈리야는 봄마다 같은 공급업체에서 모종을 사요.",
+   "blank": "поставщика",
+   "src": "made"
   }
  ],
  "w|постановка": [
@@ -47385,6 +47737,22 @@
    "src": "made"
   }
  ],
+ "w|приложение": [
+  {
+   "text": "Смены Алексей теперь отмечает в приложении на телефоне.",
+   "en": "Alexey now logs his shifts in an app on his phone.",
+   "ko": "알렉세이는 이제 근무 교대를 휴대폰 앱에 기록해요.",
+   "blank": "приложении",
+   "src": "made"
+  },
+  {
+   "text": "Наталья скачала приложение, которое предсказывает первые заморозки.",
+   "en": "Natalya downloaded an app that predicts the first frosts.",
+   "ko": "나탈리야는 첫서리를 예보해 주는 앱을 받았어요.",
+   "blank": "приложение",
+   "src": "made"
+  }
+ ],
  "w|приложить": [
   {
    "text": "Иван не забыл приложить к отчёту фотографии фундамента.",
@@ -49177,6 +49545,22 @@
    "src": "made"
   }
  ],
+ "w|пролить": [
+  {
+   "text": "Алексей нечаянно пролил машинное масло на чистый пол.",
+   "en": "Alexey accidentally spilled machine oil on the clean floor.",
+   "ko": "알렉세이가 실수로 깨끗한 바닥에 기계유를 쏟았어요.",
+   "blank": "пролил",
+   "src": "made"
+  },
+  {
+   "text": "Порыв осеннего ветра опрокинул чашку, и Наталья пролила чай на книгу.",
+   "en": "A gust of autumn wind knocked over the cup, and Natalya spilled tea on her book.",
+   "ko": "가을바람에 컵이 넘어져 나탈리야는 책에 차를 쏟았어요.",
+   "blank": "пролила",
+   "src": "made"
+  }
+ ],
  "w|проникновение": [
   {
    "text": "В письме Алексей рассказал о попытке проникновения в его гараж.",
@@ -50805,6 +51189,22 @@
    "blank": "равно"
   }
  ],
+ "w|равновесие": [
+  {
+   "text": "Работая на высоте, Алексей держит равновесие без особых усилий.",
+   "en": "When working at height, Alexey keeps his balance without much effort.",
+   "ko": "알렉세이는 높은 곳에서 일할 때도 별 힘 들이지 않고 균형을 잡아요.",
+   "blank": "равновесие",
+   "src": "made"
+  },
+  {
+   "text": "На первом льду Наталья с трудом удержала равновесие.",
+   "en": "On the first ice Natalya barely kept her balance.",
+   "ko": "첫 얼음 위에서 나탈리야는 겨우 균형을 잡았어요.",
+   "blank": "равновесие",
+   "src": "made"
+  }
+ ],
  "w|рад": [
   {
    "text": "Я так рад тебя видеть.",
@@ -51085,6 +51485,22 @@
    "src": "tatoeba:2550019/sharptoothed en:2550018/sharptoothed"
   }
  ],
+ "w|развязать": [
+  {
+   "text": "Алексей долго не мог развязать тугой узел на ящике с деталями.",
+   "en": "Alexey couldn't untie the tight knot on the box of parts for a long time.",
+   "ko": "알렉세이는 부품 상자의 꽉 묶인 매듭을 한참 못 풀었어요.",
+   "blank": "развязать",
+   "src": "made"
+  },
+  {
+   "text": "С наступлением тепла Наталья развязала мешки с сохранёнными луковицами тюльпанов.",
+   "en": "With the warm weather Natalya untied the sacks of stored tulip bulbs.",
+   "ko": "날이 따뜻해지자 나탈리야는 보관해 둔 튤립 알뿌리 자루를 풀었어요.",
+   "blank": "развязала",
+   "src": "made"
+  }
+ ],
  "w|разглядеть": [
   {
    "text": "Алексей с трудом разглядел дату на выцветшем конверте.",
@@ -51209,6 +51625,22 @@
    "src": "made"
   }
  ],
+ "w|различие": [
+  {
+   "text": "Алексей объяснил практиканту различие между двумя сортами стали.",
+   "en": "Alexey explained to the intern the difference between two grades of steel.",
+   "ko": "알렉세이는 실습생에게 강철 두 종류의 차이를 설명했어요.",
+   "blank": "различие",
+   "src": "made"
+  },
+  {
+   "text": "Наталья всегда замечает различие между запахом ранней и поздней осени.",
+   "en": "Natalya always notices the difference between the smell of early and late autumn.",
+   "ko": "나탈리야는 초가을과 늦가을 냄새의 차이를 늘 알아차려요.",
+   "blank": "различие",
+   "src": "made"
+  }
+ ],
  "w|различный": [
   {
    "text": "Сергей взял с собой различные крючки для рыбалки.",
@@ -51222,6 +51654,22 @@
    "en": "Maria tested the app on various phones.",
    "ko": "마리아는 여러 휴대폰에서 앱을 테스트했어요.",
    "blank": "различных",
+   "src": "made"
+  }
+ ],
+ "w|разлучить": [
+  {
+   "text": "Перевод в другой цех разлучил Алексея с лучшим другом.",
+   "en": "The transfer to another shop separated Alexey from his best friend.",
+   "ko": "다른 작업장으로 옮기면서 알렉세이는 가장 친한 친구와 떨어지게 됐어요.",
+   "blank": "разлучил",
+   "src": "made"
+  },
+  {
+   "text": "Долгая зима разлучила Наталью с подругой из соседней деревни.",
+   "en": "The long winter kept Natalya apart from her friend in the next village.",
+   "ko": "긴 겨울 때문에 나탈리야는 이웃 마을 친구와 만나지 못했어요.",
+   "blank": "разлучила",
    "src": "made"
   }
  ],
@@ -51841,6 +52289,22 @@
    "en": "Come earlier next time.",
    "ko": "다음엔 더 일찍 와.",
    "blank": "раньше"
+  }
+ ],
+ "w|рапорт": [
+  {
+   "text": "После аварии на линии Алексей написал рапорт начальнику цеха.",
+   "en": "After the breakdown on the line Alexey wrote a report to the shop manager.",
+   "ko": "라인 고장 후 알렉세이는 작업장 책임자에게 보고서를 썼어요.",
+   "blank": "рапорт",
+   "src": "made"
+  },
+  {
+   "text": "Наталья, работая в метеослужбе, каждый день подаёт рапорт о погоде.",
+   "en": "Natalya works at the weather service and files a weather report every day.",
+   "ko": "기상청에서 일하는 나탈리야는 매일 날씨 보고서를 올려요.",
+   "blank": "рапорт",
+   "src": "made"
   }
  ],
  "w|раса": [
@@ -55187,6 +55651,22 @@
    "src": "made"
   }
  ],
+ "w|секция": [
+  {
+   "text": "Алексея перевели в секцию контроля качества.",
+   "en": "Alexey was transferred to the quality control section.",
+   "ko": "알렉세이는 품질 관리 부서로 옮겼어요.",
+   "blank": "секцию",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Наталья записала дочь в лыжную секцию.",
+   "en": "In winter Natalya enrolled her daughter in a ski club.",
+   "ko": "겨울에 나탈리야는 딸을 스키 교실에 등록시켰어요.",
+   "blank": "секцию",
+   "src": "made"
+  }
+ ],
  "w|село": [
   {
    "text": "Из окна отеля Андрей видел соседнее село с белой церковью.",
@@ -56723,6 +57203,22 @@
    "src": "made"
   }
  ],
+ "w|служанка": [
+  {
+   "text": "В заводском музее Алексей показал гостям фотографию служанки первого владельца фабрики.",
+   "en": "In the factory museum Alexey showed the guests a photo of the first factory owner's maid.",
+   "ko": "공장 박물관에서 알렉세이는 손님들에게 첫 공장 주인 집 하녀의 사진을 보여 줬어요.",
+   "blank": "служанки",
+   "src": "made"
+  },
+  {
+   "text": "Наталья перечитывала роман, где служанка каждую осень варила варенье.",
+   "en": "Natalya was rereading a novel in which a maid made jam every autumn.",
+   "ko": "나탈리야는 하녀가 가을마다 잼을 만드는 소설을 다시 읽었어요.",
+   "blank": "служанка",
+   "src": "made"
+  }
+ ],
  "w|служба": [
   {
    "text": "Служба спасения. Что у вас случилось?",
@@ -58105,6 +58601,22 @@
    "ko": "다음 정류장에서 내리고 싶어요.",
    "blank": "сойти",
    "src": "tatoeba:446716/Hellerick en:437039/lukaszpp"
+  }
+ ],
+ "w|сойтись": [
+  {
+   "text": "После долгого спора Алексей и мастер сошлись на компромиссе.",
+   "en": "After a long argument Alexey and the foreman settled on a compromise.",
+   "ko": "오랜 말다툼 끝에 알렉세이와 반장은 타협점을 찾았어요.",
+   "blank": "сошлись",
+   "src": "made"
+  },
+  {
+   "text": "Весной соседи Натальи сошлись во дворе, чтобы вместе посадить деревья.",
+   "en": "In spring Natalya's neighbors gathered in the yard to plant trees together.",
+   "ko": "봄에 나탈리야의 이웃들은 함께 나무를 심으려고 마당에 모였어요.",
+   "blank": "сошлись",
+   "src": "made"
   }
  ],
  "w|сок": [
@@ -62529,6 +63041,22 @@
    "src": "made"
   }
  ],
+ "w|термин": [
+  {
+   "text": "Инженер употребил термин, которого Алексей раньше не слышал.",
+   "en": "The engineer used a term Alexey had never heard before.",
+   "ko": "엔지니어가 알렉세이가 처음 듣는 용어를 썼어요.",
+   "blank": "термин",
+   "src": "made"
+  },
+  {
+   "text": "Наталья объяснила сыну термин «бабье лето».",
+   "en": "Natalya explained the term \"Indian summer\" to her son.",
+   "ko": "나탈리야는 아들에게 \"인디언 서머\"라는 용어를 설명해 줬어요.",
+   "blank": "термин",
+   "src": "made"
+  }
+ ],
  "w|терпение": [
   {
    "text": "Ты хочешь, чтобы моё терпение лопнуло!",
@@ -63881,6 +64409,22 @@
    "en": "Put the key there.",
    "ko": "열쇠는 거기 둬.",
    "blank": "туда"
+  }
+ ],
+ "w|туда-сюда": [
+  {
+   "text": "Весь день Алексей бегал туда-сюда между складом и цехом.",
+   "en": "All day Alexey ran back and forth between the warehouse and the shop.",
+   "ko": "알렉세이는 하루 종일 창고와 작업장 사이를 왔다 갔다 했어요.",
+   "blank": "туда-сюда",
+   "src": "made"
+  },
+  {
+   "text": "Ветер гонял сухие листья туда-сюда по двору Натальи.",
+   "en": "The wind blew dry leaves back and forth across Natalya's yard.",
+   "ko": "바람이 나탈리야네 마당에서 마른 잎을 이리저리 몰고 다녔어요.",
+   "blank": "туда-сюда",
+   "src": "made"
   }
  ],
  "w|туман": [
@@ -66311,6 +66855,22 @@
    "src": "made"
   }
  ],
+ "w|установка": [
+  {
+   "text": "Алексей неделю занимался установкой новой покрасочной камеры.",
+   "en": "Alexey spent a week installing the new paint booth.",
+   "ko": "알렉세이는 일주일 동안 새 도장 부스 설치를 맡았어요.",
+   "blank": "установкой",
+   "src": "made"
+  },
+  {
+   "text": "К зиме Наталье заменили установку отопления в доме.",
+   "en": "Before winter Natalya had the heating system in her house replaced.",
+   "ko": "겨울이 오기 전에 나탈리야네 집 난방 장치를 바꿨어요.",
+   "blank": "установку",
+   "src": "made"
+  }
+ ],
  "w|устать": [
   {
    "text": "Можно устать даже от отдыха.",
@@ -67327,6 +67887,22 @@
    "src": "tatoeba:2970535/al_ex_an_der en:10727351/ddnktr"
   }
  ],
+ "w|формально": [
+  {
+   "text": "Алексей формально числится мастером, но работает наравне со всеми.",
+   "en": "Alexey is formally listed as foreman but works alongside everyone else.",
+   "ko": "알렉세이는 서류상으로는 반장이지만 다른 사람들과 똑같이 일해요.",
+   "blank": "формально",
+   "src": "made"
+  },
+  {
+   "text": "Наталья знает, что формально весна начинается первого марта, но снег лежит до апреля.",
+   "en": "Natalya knows that formally spring starts on the first of March, but the snow lies until April.",
+   "ko": "나탈리야는 공식적으로는 3월 1일에 봄이 시작되지만 눈이 4월까지 남는다는 걸 알아요.",
+   "blank": "формально",
+   "src": "made"
+  }
+ ],
  "w|формула": [
   {
    "text": "Дмитрий вывел простую формулу для расчёта расхода металла.",
@@ -67482,6 +68058,22 @@
    "en": "Ew, it stinks in here!",
    "ko": "으, 여기 냄새 지독해!",
    "blank": "Фу",
+   "src": "made"
+  }
+ ],
+ "w|функция": [
+  {
+   "text": "Алексей выяснил, что у нового станка есть функция автоматической остановки.",
+   "en": "Alexey found out that the new machine has an automatic stop function.",
+   "ko": "알렉세이는 새 기계에 자동 정지 기능이 있다는 걸 알아냈어요.",
+   "blank": "функция",
+   "src": "made"
+  },
+  {
+   "text": "Наталья узнала, что у её нового обогревателя есть функция таймера.",
+   "en": "Natalya learned that her new heater has a timer function.",
+   "ko": "나탈리야는 새 난로에 타이머 기능이 있다는 걸 알게 됐어요.",
+   "blank": "функция",
    "src": "made"
   }
  ],
@@ -68437,6 +69029,22 @@
    "src": "made"
   }
  ],
+ "w|цепочка": [
+  {
+   "text": "Алексей объяснил новичку, как устроена цепочка сборки двигателя.",
+   "en": "Alexey explained to the newcomer how the engine assembly chain works.",
+   "ko": "알렉세이는 신입에게 엔진 조립 공정이 어떻게 이어지는지 설명했어요.",
+   "blank": "цепочка",
+   "src": "made"
+  },
+  {
+   "text": "Наталья заметила на снегу цепочку заячьих следов.",
+   "en": "Natalya noticed a trail of hare tracks in the snow.",
+   "ko": "나탈리야는 눈 위에 이어진 토끼 발자국을 봤어요.",
+   "blank": "цепочку",
+   "src": "made"
+  }
+ ],
  "w|цепь": [
   {
    "text": "Мэр надел парадную цепь, а Алексей поправил ему галстук.",
@@ -69139,6 +69747,22 @@
    "src": "made"
   }
  ],
+ "w|чин": [
+  {
+   "text": "Отец Алексея ушёл с завода в чине мастера.",
+   "en": "Alexey's father left the plant with the rank of foreman.",
+   "ko": "알렉세이의 아버지는 반장 직급으로 공장을 떠났어요.",
+   "blank": "чине",
+   "src": "made"
+  },
+  {
+   "text": "Наталья читала, как в старину чиновник каждого чина носил свой мундир даже летом.",
+   "en": "Natalya read how in the old days an official of every rank wore his uniform even in summer.",
+   "ko": "나탈리야는 옛날에 관리들이 직급마다 정해진 제복을 여름에도 입었다는 글을 읽었어요.",
+   "blank": "чина",
+   "src": "made"
+  }
+ ],
  "w|чип": [
   {
    "text": "У каждого сотрудника кухни есть чип для входа через служебную дверь.",
@@ -69471,6 +70095,22 @@
    "ko": "낯선 침대에서는 잠을 잘 못 자요.",
    "blank": "чужой",
    "src": "tatoeba:10165503/marafon en:5228913/AlanF_US"
+  }
+ ],
+ "w|чуточку": [
+  {
+   "text": "Алексей попросил оператора сбавить скорость конвейера чуточку.",
+   "en": "Alexey asked the operator to slow the conveyor down just a tiny bit.",
+   "ko": "알렉세이는 작업자에게 컨베이어 속도를 아주 조금만 줄여 달라고 했어요.",
+   "blank": "чуточку",
+   "src": "made"
+  },
+  {
+   "text": "В марте Наталья радуется, что день стал хоть чуточку длиннее.",
+   "en": "In March Natalya is glad the day has become at least a tiny bit longer.",
+   "ko": "3월이면 나탈리야는 해가 조금이라도 길어진 게 반가워요.",
+   "blank": "чуточку",
+   "src": "made"
   }
  ],
  "w|чуть": [
