@@ -2467,6 +2467,22 @@
    "blank": "거대하다"
   }
  ],
+ "w|거듭": [
+  {
+   "text": "항공사 직원은 비행기 지연에 대해 거듭 사과했어요.",
+   "en": "The airline staff apologized repeatedly for the flight delay.",
+   "ko": "항공사 직원은 비행기 지연에 대해 거듭 사과했어요.",
+   "blank": "거듭",
+   "src": "made"
+  },
+  {
+   "text": "미경은 떠드는 학생들에게 조용히 하라고 거듭 말했어요.",
+   "en": "Mikyung told the noisy students again and again to be quiet.",
+   "ko": "미경은 떠드는 학생들에게 조용히 하라고 거듭 말했어요.",
+   "blank": "거듭",
+   "src": "made"
+  }
+ ],
  "w|거래": [
   {
    "text": "이번 거래가 잘 끝났어.",
@@ -5041,6 +5057,22 @@
    "src": "made"
   }
  ],
+ "w|고루": [
+  {
+   "text": "성호는 무게가 한쪽으로 쏠리지 않게 짐을 두 가방에 고루 나눠 담았어요.",
+   "en": "Sungho divided his things evenly between two bags so the weight wouldn't lean to one side.",
+   "ko": "성호는 무게가 한쪽으로 쏠리지 않게 짐을 두 가방에 고루 나눠 담았어요.",
+   "blank": "고루",
+   "src": "made"
+  },
+  {
+   "text": "미경은 발표 기회를 모든 학생에게 고루 주려고 순서표를 만들었어요.",
+   "en": "Mikyung made a turn chart to give every student an equal chance to present.",
+   "ko": "미경은 발표 기회를 모든 학생에게 고루 주려고 순서표를 만들었어요.",
+   "blank": "고루",
+   "src": "made"
+  }
+ ],
  "w|고르다": [
   {
    "text": "마음에 드는 걸로 골라.",
@@ -5435,6 +5467,22 @@
    "src": "made"
   }
  ],
+ "w|고의로": [
+  {
+   "text": "뉴스에 따르면 그 승객은 고의로 보안 검색을 피하려다 붙잡혔어요.",
+   "en": "According to the news, that passenger was caught trying to deliberately avoid the security check.",
+   "ko": "뉴스에 따르면 그 승객은 고의로 보안 검색을 피하려다 붙잡혔어요.",
+   "blank": "고의로",
+   "src": "made"
+  },
+  {
+   "text": "미경은 친구의 공책을 고의로 찢은 학생과 따로 이야기를 나눴어요.",
+   "en": "Mikyung talked separately with the student who deliberately tore a friend's notebook.",
+   "ko": "미경은 친구의 공책을 고의로 찢은 학생과 따로 이야기를 나눴어요.",
+   "blank": "고의로",
+   "src": "made"
+  }
+ ],
  "w|고작": [
   {
    "text": "고작 이것뿐이야?",
@@ -5761,6 +5809,22 @@
    "en": "I ran over straightaway when I heard the news.",
    "ko": "소식을 듣고 곧장 달려왔어.",
    "blank": "곧장"
+  }
+ ],
+ "w|골고루": [
+  {
+   "text": "기내식에는 고기와 채소가 골고루 들어 있었어요.",
+   "en": "The in-flight meal had a good mix of meat and vegetables.",
+   "ko": "기내식에는 고기와 채소가 골고루 들어 있었어요.",
+   "blank": "골고루",
+   "src": "made"
+  },
+  {
+   "text": "급식 시간에 미경은 학생들에게 반찬을 골고루 먹으라고 했어요.",
+   "en": "At lunchtime, Mikyung told the students to eat a bit of every side dish.",
+   "ko": "급식 시간에 미경은 학생들에게 반찬을 골고루 먹으라고 했어요.",
+   "blank": "골고루",
+   "src": "made"
   }
  ],
  "w|골목": [
@@ -6721,6 +6785,22 @@
    "en": "I guided the tourists.",
    "ko": "관광객을 안내했어.",
    "blank": "관광객을"
+  }
+ ],
+ "w|관광지": [
+  {
+   "text": "입국장 안내판에는 근처 관광지 사진이 크게 붙어 있었어요.",
+   "en": "Big photos of nearby tourist spots were posted on the arrivals hall sign.",
+   "ko": "입국장 안내판에는 근처 관광지 사진이 크게 붙어 있었어요.",
+   "blank": "관광지",
+   "src": "made"
+  },
+  {
+   "text": "수학여행으로 간 관광지에서 미경은 학생들 사진을 잔뜩 찍었어요.",
+   "en": "At the tourist site on the school trip, Mikyung took lots of photos of the students.",
+   "ko": "수학여행으로 간 관광지에서 미경은 학생들 사진을 잔뜩 찍었어요.",
+   "blank": "관광지에서",
+   "src": "made"
   }
  ],
  "w|관광하다": [
@@ -10231,6 +10311,22 @@
    "src": "made"
   }
  ],
+ "w|기내": [
+  {
+   "text": "성호는 기내 식사로 비빔밥을 골랐어요.",
+   "en": "Sungho chose bibimbap for his in-flight meal.",
+   "ko": "성호는 기내 식사로 비빔밥을 골랐어요.",
+   "blank": "기내",
+   "src": "made"
+  },
+  {
+   "text": "방학 숙제로 한 학생은 비행기 기내 방송을 영어로 따라 해 왔어요.",
+   "en": "For vacation homework, one student practiced copying in-flight announcements in English.",
+   "ko": "방학 숙제로 한 학생은 비행기 기내 방송을 영어로 따라 해 왔어요.",
+   "blank": "기내",
+   "src": "made"
+  }
+ ],
  "w|기념": [
   {
    "text": "개관 기념으로 도서관에서 책갈피를 나눠 줬어요.",
@@ -12693,6 +12789,22 @@
    "blank": "나중으로"
   }
  ],
+ "w|나중에": [
+  {
+   "text": "성호는 면세점 구경은 나중에 하고 먼저 짐부터 부쳤어요.",
+   "en": "Sungho decided to look around the duty-free shops later and checked his bags first.",
+   "ko": "성호는 면세점 구경은 나중에 하고 먼저 짐부터 부쳤어요.",
+   "blank": "나중에",
+   "src": "made"
+  },
+  {
+   "text": "미경은 그 질문에는 나중에 다시 답해 주겠다고 했어요.",
+   "en": "Mikyung said she would answer that question later.",
+   "ko": "미경은 그 질문에는 나중에 다시 답해 주겠다고 했어요.",
+   "blank": "나중에",
+   "src": "made"
+  }
+ ],
  "w|나타나다": [
   {
    "text": "그가 갑자기 나타났어.",
@@ -14345,6 +14457,22 @@
    "ko": "민준이는 평소 원수처럼 여기는 지수를 노리면서 지나쳤다.",
    "blank": "노리면서",
    "src": "krdict"
+  }
+ ],
+ "w|노선": [
+  {
+   "text": "이 항공사는 올해 동남아 노선을 두 개나 새로 열었어요.",
+   "en": "This airline opened two new Southeast Asia routes this year.",
+   "ko": "이 항공사는 올해 동남아 노선을 두 개나 새로 열었어요.",
+   "blank": "노선을",
+   "src": "made"
+  },
+  {
+   "text": "학교 앞을 지나는 버스 노선이 바뀌어서 학생들이 많이 헷갈려했어요.",
+   "en": "The bus route passing the school changed, so many students got confused.",
+   "ko": "학교 앞을 지나는 버스 노선이 바뀌어서 학생들이 많이 헷갈려했어요.",
+   "blank": "노선이",
+   "src": "made"
   }
  ],
  "w|노숙자": [
@@ -19853,6 +19981,22 @@
    "blank": "두려운"
   }
  ],
+ "w|두루": [
+  {
+   "text": "성호는 출장으로 유럽 여러 도시를 두루 다녀왔어요.",
+   "en": "Sungho traveled widely to many cities in Europe on business.",
+   "ko": "성호는 출장으로 유럽 여러 도시를 두루 다녀왔어요.",
+   "blank": "두루",
+   "src": "made"
+  },
+  {
+   "text": "미경은 국어뿐 아니라 역사와 미술도 두루 가르칠 줄 알아요.",
+   "en": "Mikyung can teach not only Korean but also history and art.",
+   "ko": "미경은 국어뿐 아니라 역사와 미술도 두루 가르칠 줄 알아요.",
+   "blank": "두루",
+   "src": "made"
+  }
+ ],
  "w|두부": [
   {
    "text": "두부를 찌개에 넣었어.",
@@ -24209,6 +24353,22 @@
    "src": "krdict"
   }
  ],
+ "w|명소": [
+  {
+   "text": "이 공항의 전망대는 비행기를 가까이 볼 수 있는 명소로 유명해요.",
+   "en": "This airport's observation deck is famous as a spot where you can see planes up close.",
+   "ko": "이 공항의 전망대는 비행기를 가까이 볼 수 있는 명소로 유명해요.",
+   "blank": "명소로",
+   "src": "made"
+  },
+  {
+   "text": "학생들은 지역 명소를 소개하는 발표를 조별로 준비했어요.",
+   "en": "The students prepared presentations in groups introducing local landmarks.",
+   "ko": "학생들은 지역 명소를 소개하는 발표를 조별로 준비했어요.",
+   "blank": "명소를",
+   "src": "made"
+  }
+ ],
  "w|명심하다": [
   {
    "text": "경영자는 기업의 가장 중요한 자산은 직원들이라는 사실을 명심해야 한다.",
@@ -24923,6 +25083,22 @@
    "en": "I manage by logging my weight.",
    "ko": "몸무게를 기록하며 관리해.",
    "blank": "몸무게를"
+  }
+ ],
+ "w|몸소": [
+  {
+   "text": "성호의 할머니가 몸소 공항까지 배웅을 나오셨어요.",
+   "en": "Sungho's grandmother came all the way to the airport herself to see him off.",
+   "ko": "성호의 할머니가 몸소 공항까지 배웅을 나오셨어요.",
+   "blank": "몸소",
+   "src": "made"
+  },
+  {
+   "text": "교장 선생님이 몸소 교문 앞에 나와 신입생들을 맞이하셨어요.",
+   "en": "The principal personally came out to the school gate to welcome the new students.",
+   "ko": "교장 선생님이 몸소 교문 앞에 나와 신입생들을 맞이하셨어요.",
+   "blank": "몸소",
+   "src": "made"
   }
  ],
  "w|몹시": [
@@ -32640,6 +32816,22 @@
    "src": "made"
   }
  ],
+ "w|비교적": [
+  {
+   "text": "평일 아침이라 보안 검색 줄이 비교적 짧았어요.",
+   "en": "It was a weekday morning, so the security line was relatively short.",
+   "ko": "평일 아침이라 보안 검색 줄이 비교적 짧았어요.",
+   "blank": "비교적",
+   "src": "made"
+  },
+  {
+   "text": "이번 기말고사는 지난번보다 비교적 쉽게 나왔어요.",
+   "en": "This final exam was relatively easier than last time.",
+   "ko": "이번 기말고사는 지난번보다 비교적 쉽게 나왔어요.",
+   "blank": "비교적",
+   "src": "made"
+  }
+ ],
  "w|비교하다": [
   {
    "text": "두 가격을 비교해 봐.",
@@ -35666,6 +35858,22 @@
    "src": "made"
   }
  ],
+ "w|상대적으로": [
+  {
+   "text": "성호는 공항 안 식당이 상대적으로 비싸서 편의점에서 김밥을 샀어요.",
+   "en": "The restaurants inside the airport were comparatively expensive, so Sungho bought gimbap at a convenience store.",
+   "ko": "성호는 공항 안 식당이 상대적으로 비싸서 편의점에서 김밥을 샀어요.",
+   "blank": "상대적으로",
+   "src": "made"
+  },
+  {
+   "text": "미경의 학교는 학생 수가 상대적으로 적어서 반마다 분위기가 가족 같아요.",
+   "en": "Mikyung's school has comparatively few students, so every class feels like a family.",
+   "ko": "미경의 학교는 학생 수가 상대적으로 적어서 반마다 분위기가 가족 같아요.",
+   "blank": "상대적으로",
+   "src": "made"
+  }
+ ],
  "w|상대하다": [
   {
    "text": "그는 하루에도 수십 명이 넘는 환자를 상대한다.",
@@ -36668,6 +36876,22 @@
    "en": "Don't rush too much.",
    "ko": "너무 서두르지 마.",
    "blank": "서두르지"
+  }
+ ],
+ "w|서둘러": [
+  {
+   "text": "게이트가 바뀌었다는 방송을 듣고 성호는 서둘러 반대편으로 갔어요.",
+   "en": "Hearing that the gate had changed, Sungho hurried to the other side.",
+   "ko": "게이트가 바뀌었다는 방송을 듣고 성호는 서둘러 반대편으로 갔어요.",
+   "blank": "서둘러",
+   "src": "made"
+  },
+  {
+   "text": "종이 울리자 학생들은 서둘러 교실로 들어갔어요.",
+   "en": "When the bell rang, the students hurried into the classroom.",
+   "ko": "종이 울리자 학생들은 서둘러 교실로 들어갔어요.",
+   "blank": "서둘러",
+   "src": "made"
   }
  ],
  "w|서랍": [
@@ -37955,6 +38179,22 @@
    "en": "Haeun did an interview with a world-renowned conductor.",
    "ko": "하은은 세계적으로 유명한 지휘자와 인터뷰를 했어요.",
    "blank": "세계적으로",
+   "src": "made"
+  }
+ ],
+ "w|세관": [
+  {
+   "text": "성호는 친구가 부탁한 술 때문에 세관에서 가방을 열어야 했어요.",
+   "en": "Sungho had to open his bag at customs because of the alcohol his friend asked him to bring.",
+   "ko": "성호는 친구가 부탁한 술 때문에 세관에서 가방을 열어야 했어요.",
+   "blank": "세관에서",
+   "src": "made"
+  },
+  {
+   "text": "사회 시간에 미경은 세관이 무슨 일을 하는 곳인지 설명했어요.",
+   "en": "In social studies, Mikyung explained what customs does.",
+   "ko": "사회 시간에 미경은 세관이 무슨 일을 하는 곳인지 설명했어요.",
+   "blank": "세관이",
    "src": "made"
   }
  ],
@@ -48016,6 +48256,38 @@
    "blank": "여행이"
   }
  ],
+ "w|여행사": [
+  {
+   "text": "여행사 직원이 공항 카운터 앞에서 단체 손님들을 기다리고 있었어요.",
+   "en": "A travel agency employee was waiting for the tour group in front of the airport counter.",
+   "ko": "여행사 직원이 공항 카운터 앞에서 단체 손님들을 기다리고 있었어요.",
+   "blank": "여행사",
+   "src": "made"
+  },
+  {
+   "text": "수학여행 일정은 학교가 여행사와 몇 번이나 회의해서 정했어요.",
+   "en": "The school decided the school trip schedule after meeting with a travel agency several times.",
+   "ko": "수학여행 일정은 학교가 여행사와 몇 번이나 회의해서 정했어요.",
+   "blank": "여행사와",
+   "src": "made"
+  }
+ ],
+ "w|여행지": [
+  {
+   "text": "성호는 출발 게이트 앞에서 여행지 날씨를 다시 확인했어요.",
+   "en": "In front of the departure gate, Sungho checked the weather at his destination again.",
+   "ko": "성호는 출발 게이트 앞에서 여행지 날씨를 다시 확인했어요.",
+   "blank": "여행지",
+   "src": "made"
+  },
+  {
+   "text": "미경은 학생들에게 가장 가 보고 싶은 여행지를 영어로 써 보라고 했어요.",
+   "en": "Mikyung had the students write in English about the travel destination they most wanted to visit.",
+   "ko": "미경은 학생들에게 가장 가 보고 싶은 여행지를 영어로 써 보라고 했어요.",
+   "blank": "여행지를",
+   "src": "made"
+  }
+ ],
  "w|여행하다": [
   {
    "text": "작년 여름에 유럽을 여행했어.",
@@ -50510,6 +50782,22 @@
    "blank": "왕"
   }
  ],
+ "w|왕복": [
+  {
+   "text": "성호는 돌아오는 날짜가 정해지지 않아서 왕복 대신 가는 표만 샀어요.",
+   "en": "Sungho's return date wasn't set, so he bought only an outbound ticket instead of a round trip.",
+   "ko": "성호는 돌아오는 날짜가 정해지지 않아서 왕복 대신 가는 표만 샀어요.",
+   "blank": "왕복",
+   "src": "made"
+  },
+  {
+   "text": "미경은 매일 왕복 두 시간을 걸려서 학교에 출퇴근해요.",
+   "en": "Mikyung spends two hours round trip commuting to school every day.",
+   "ko": "미경은 매일 왕복 두 시간을 걸려서 학교에 출퇴근해요.",
+   "blank": "왕복",
+   "src": "made"
+  }
+ ],
  "w|왕비": [
   {
    "text": "신부는 드레스를 입고 동화 속 왕비처럼 걸어 들어왔어요.",
@@ -52732,6 +53020,22 @@
    "src": "made"
   }
  ],
+ "w|유난히": [
+  {
+   "text": "그날은 연휴 첫날이라 공항이 유난히 붐볐어요.",
+   "en": "It was the first day of the holiday, so the airport was especially crowded.",
+   "ko": "그날은 연휴 첫날이라 공항이 유난히 붐볐어요.",
+   "blank": "유난히",
+   "src": "made"
+  },
+  {
+   "text": "시험 기간이라 교실 분위기가 유난히 조용했어요.",
+   "en": "It was exam period, so the classroom was especially quiet.",
+   "ko": "시험 기간이라 교실 분위기가 유난히 조용했어요.",
+   "blank": "유난히",
+   "src": "made"
+  }
+ ],
  "w|유능하다": [
   {
    "text": "새로 온 교감 선생님은 학교 일을 척척 해내는 유능한 분이에요.",
@@ -53124,6 +53428,22 @@
    "en": "Get off on the sixth floor.",
    "ko": "육 층에서 내려.",
    "blank": "육"
+  }
+ ],
+ "w|육교": [
+  {
+   "text": "성호는 공항 근처 호텔에서 나와 육교를 건너 버스 정류장으로 갔어요.",
+   "en": "Sungho left the hotel near the airport and crossed the pedestrian overpass to the bus stop.",
+   "ko": "성호는 공항 근처 호텔에서 나와 육교를 건너 버스 정류장으로 갔어요.",
+   "blank": "육교를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 아침마다 학교 앞 육교 위에서 등교 지도를 해요.",
+   "en": "Every morning, Mikyung supervises students on their way to school from the overpass in front of the school.",
+   "ko": "미경은 아침마다 학교 앞 육교 위에서 등교 지도를 해요.",
+   "blank": "육교",
+   "src": "made"
   }
  ],
  "w|육군": [
@@ -56368,6 +56688,22 @@
    "blank": "입구가"
   }
  ],
+ "w|입국": [
+  {
+   "text": "성호는 비행기에서 입국 신고서를 미리 써 두었어요.",
+   "en": "Sungho filled out his arrival card in advance on the plane.",
+   "ko": "성호는 비행기에서 입국 신고서를 미리 써 두었어요.",
+   "blank": "입국",
+   "src": "made"
+  },
+  {
+   "text": "외국에서 온 전학생은 입국 절차가 늦어져서 개학 다음 주에 왔어요.",
+   "en": "The transfer student from abroad came the week after school started because entry procedures were delayed.",
+   "ko": "외국에서 온 전학생은 입국 절차가 늦어져서 개학 다음 주에 왔어요.",
+   "blank": "입국",
+   "src": "made"
+  }
+ ],
  "w|입국하다": [
   {
    "text": "공항에서 입국 심사를 받았어.",
@@ -59020,6 +59356,38 @@
    "blank": "저렸어"
   }
  ],
+ "w|저마다": [
+  {
+   "text": "출국장 앞에서 사람들이 저마다 가족과 작별 인사를 나눴어요.",
+   "en": "In front of the departures area, people each said goodbye to their families.",
+   "ko": "출국장 앞에서 사람들이 저마다 가족과 작별 인사를 나눴어요.",
+   "blank": "저마다",
+   "src": "made"
+  },
+  {
+   "text": "학생들은 저마다 다른 색 크레파스로 꿈을 그렸어요.",
+   "en": "The students each drew their dreams with different-colored crayons.",
+   "ko": "학생들은 저마다 다른 색 크레파스로 꿈을 그렸어요.",
+   "blank": "저마다",
+   "src": "made"
+  }
+ ],
+ "w|저만큼": [
+  {
+   "text": "성호의 여행 가방이 저만큼 떨어진 곳에서 혼자 돌고 있었어요.",
+   "en": "Sungho's suitcase was going around by itself some distance away.",
+   "ko": "성호의 여행 가방이 저만큼 떨어진 곳에서 혼자 돌고 있었어요.",
+   "blank": "저만큼",
+   "src": "made"
+  },
+  {
+   "text": "운동장 저만큼에서 한 학생이 미경에게 손을 흔들었어요.",
+   "en": "Some distance away on the playground, a student waved to Mikyung.",
+   "ko": "운동장 저만큼에서 한 학생이 미경에게 손을 흔들었어요.",
+   "blank": "저만큼에서",
+   "src": "made"
+  }
+ ],
  "w|저번": [
   {
    "text": "저번에 만났을 때 기분이 좋았어.",
@@ -59896,6 +60264,22 @@
    "en": "I hope the war ends.",
    "ko": "전쟁이 끝나길 바라.",
    "blank": "전쟁이"
+  }
+ ],
+ "w|전적으로": [
+  {
+   "text": "성호는 비행기를 놓친 건 전적으로 자기 잘못이라고 인정했어요.",
+   "en": "Sungho admitted that missing the plane was entirely his own fault.",
+   "ko": "성호는 비행기를 놓친 건 전적으로 자기 잘못이라고 인정했어요.",
+   "blank": "전적으로",
+   "src": "made"
+  },
+  {
+   "text": "미경은 이번 대회 준비를 전적으로 학생들에게 맡겼어요.",
+   "en": "Mikyung left the preparation for this contest entirely to the students.",
+   "ko": "미경은 이번 대회 준비를 전적으로 학생들에게 맡겼어요.",
+   "blank": "전적으로",
+   "src": "made"
   }
  ],
  "w|전직": [
@@ -64796,6 +65180,22 @@
    "src": "made"
   }
  ],
+ "w|지하도": [
+  {
+   "text": "성호는 공항 철도역에서 지하도를 따라 터미널까지 걸어갔어요.",
+   "en": "Sungho walked from the airport railway station through the underground passage to the terminal.",
+   "ko": "성호는 공항 철도역에서 지하도를 따라 터미널까지 걸어갔어요.",
+   "blank": "지하도를",
+   "src": "made"
+  },
+  {
+   "text": "학교 앞 지하도가 공사 중이라서 학생들이 먼 길로 돌아왔어요.",
+   "en": "The underpass in front of the school was under construction, so the students had to take the long way.",
+   "ko": "학교 앞 지하도가 공사 중이라서 학생들이 먼 길로 돌아왔어요.",
+   "blank": "지하도가",
+   "src": "made"
+  }
+ ],
  "w|지하실": [
   {
    "text": "그녀는 나를 지하실로 안내하며 이곳을 창고로 쓰고 있으니 여기서 물건을 찾아보라고 말했다.",
@@ -65021,6 +65421,22 @@
    "en": "At the pool, everyone calls each other by name instead of by title.",
    "ko": "수영장에서는 직함 대신 다들 이름으로 서로를 불러요.",
    "blank": "직함",
+   "src": "made"
+  }
+ ],
+ "w|직항": [
+  {
+   "text": "직항이 없어서 성호는 중간에 다른 공항을 거쳐야 했어요.",
+   "en": "There was no direct flight, so Sungho had to go through another airport on the way.",
+   "ko": "직항이 없어서 성호는 중간에 다른 공항을 거쳐야 했어요.",
+   "blank": "직항이",
+   "src": "made"
+  },
+  {
+   "text": "수학여행은 제주도 직항 비행기로 가서 금방 도착했어요.",
+   "en": "The school trip was on a direct flight to Jeju, so they arrived quickly.",
+   "ko": "수학여행은 제주도 직항 비행기로 가서 금방 도착했어요.",
+   "blank": "직항",
    "src": "made"
   }
  ],
@@ -66830,6 +67246,22 @@
    "src": "krdict"
   }
  ],
+ "w|창가": [
+  {
+   "text": "성호는 구름을 보고 싶어서 창가 자리를 달라고 했어요.",
+   "en": "Sungho wanted to see the clouds, so he asked for a window seat.",
+   "ko": "성호는 구름을 보고 싶어서 창가 자리를 달라고 했어요.",
+   "blank": "창가",
+   "src": "made"
+  },
+  {
+   "text": "미경의 교실 창가에는 학생들이 키우는 화분이 줄지어 있어요.",
+   "en": "Pots that the students are growing are lined up on the windowsill of Mikyung's classroom.",
+   "ko": "미경의 교실 창가에는 학생들이 키우는 화분이 줄지어 있어요.",
+   "blank": "창가에는",
+   "src": "made"
+  }
+ ],
  "w|창고": [
   {
    "text": "창고에 오래된 상자가 쌓여 있어.",
@@ -67502,6 +67934,22 @@
    "en": "I replaced the rusty iron with new pieces.",
    "ko": "녹슨 철을 새것으로 바꿨어.",
    "blank": "철을"
+  }
+ ],
+ "w|철도": [
+  {
+   "text": "공항까지 철도가 생겨서 성호는 이제 차를 두고 다녀요.",
+   "en": "Now that there's a railway to the airport, Sungho leaves his car at home.",
+   "ko": "공항까지 철도가 생겨서 성호는 이제 차를 두고 다녀요.",
+   "blank": "철도가",
+   "src": "made"
+  },
+  {
+   "text": "미경은 사회 시간에 우리나라에 처음 철도가 놓인 이야기를 해 줬어요.",
+   "en": "In social studies, Mikyung told the story of when the first railroad was laid in the country.",
+   "ko": "미경은 사회 시간에 우리나라에 처음 철도가 놓인 이야기를 해 줬어요.",
+   "blank": "철도가",
+   "src": "made"
   }
  ],
  "w|철저하다": [
@@ -68832,6 +69280,22 @@
    "blank": "출구를"
   }
  ],
+ "w|출국": [
+  {
+   "text": "성호는 출국 전날 밤 잠을 거의 못 잤어요.",
+   "en": "Sungho barely slept the night before leaving the country.",
+   "ko": "성호는 출국 전날 밤 잠을 거의 못 잤어요.",
+   "blank": "출국",
+   "src": "made"
+  },
+  {
+   "text": "유학을 가는 학생의 출국 날짜에 맞춰 반 친구들이 송별회를 열었어요.",
+   "en": "The classmates held a farewell party timed to the departure date of a student going to study abroad.",
+   "ko": "유학을 가는 학생의 출국 날짜에 맞춰 반 친구들이 송별회를 열었어요.",
+   "blank": "출국",
+   "src": "made"
+  }
+ ],
  "w|출국하다": [
   {
    "text": "내일 새벽에 출국할 예정이야.",
@@ -69005,6 +69469,22 @@
    "en": "She went to the management office and got a new apartment access card.",
    "ko": "관리실에 가서 아파트 출입 카드를 새로 받았어요.",
    "blank": "출입",
+   "src": "made"
+  }
+ ],
+ "w|출입국": [
+  {
+   "text": "성호는 자동 출입국 심사를 신청해서 줄을 서지 않고 지나갔어요.",
+   "en": "Sungho signed up for automated immigration checks and got through without standing in line.",
+   "ko": "성호는 자동 출입국 심사를 신청해서 줄을 서지 않고 지나갔어요.",
+   "blank": "출입국",
+   "src": "made"
+  },
+  {
+   "text": "미경은 교환 학생들의 출입국 서류를 교무실에서 한꺼번에 챙겼어요.",
+   "en": "Mikyung took care of all the exchange students' immigration papers at once in the staff room.",
+   "ko": "미경은 교환 학생들의 출입국 서류를 교무실에서 한꺼번에 챙겼어요.",
+   "blank": "출입국",
    "src": "made"
   }
  ],
@@ -70124,6 +70604,22 @@
    "blank": "캠퍼스를"
   }
  ],
+ "w|캠핑": [
+  {
+   "text": "성호는 이번 휴가 때 친구들과 해외에서 캠핑을 하기로 했어요.",
+   "en": "Sungho decided to go camping abroad with his friends this vacation.",
+   "ko": "성호는 이번 휴가 때 친구들과 해외에서 캠핑을 하기로 했어요.",
+   "blank": "캠핑을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 이번 학기 체험 학습으로 학생들과 캠핑을 떠나요.",
+   "en": "Mikyung is going camping with her students as this semester's field activity.",
+   "ko": "미경은 이번 학기 체험 학습으로 학생들과 캠핑을 떠나요.",
+   "blank": "캠핑을",
+   "src": "made"
+  }
+ ],
  "w|커다랗다": [
   {
    "text": "가방이 커다랗다 보니 짐이 다 들어갔어.",
@@ -70988,6 +71484,38 @@
    "en": "The detective in the novel solved the puzzle.",
    "ko": "소설 속 탐정이 수수께끼를 풀었어.",
    "blank": "탐정이"
+  }
+ ],
+ "w|탑승": [
+  {
+   "text": "안내 방송에서 탑승이 시작됐다고 하자 성호는 커피를 급히 마셨어요.",
+   "en": "When the announcement said boarding had started, Sungho hurriedly drank his coffee.",
+   "ko": "안내 방송에서 탑승이 시작됐다고 하자 성호는 커피를 급히 마셨어요.",
+   "blank": "탑승이",
+   "src": "made"
+  },
+  {
+   "text": "미경의 반 아이들은 수학여행 버스 탑승 전에 이름을 한 명씩 불렀어요.",
+   "en": "Before boarding the field trip bus, Mikyung's class called out their names one by one.",
+   "ko": "미경의 반 아이들은 수학여행 버스 탑승 전에 이름을 한 명씩 불렀어요.",
+   "blank": "탑승",
+   "src": "made"
+  }
+ ],
+ "w|탑승권": [
+  {
+   "text": "성호는 휴대폰에 탑승권을 저장해 두어서 종이로 뽑을 필요가 없었어요.",
+   "en": "Sungho had saved his boarding pass on his phone, so he didn't need to print it.",
+   "ko": "성호는 휴대폰에 탑승권을 저장해 두어서 종이로 뽑을 필요가 없었어요.",
+   "blank": "탑승권을",
+   "src": "made"
+  },
+  {
+   "text": "학생들은 미술 시간에 종이로 비행기 탑승권을 만들어 놀았어요.",
+   "en": "The students made paper airplane boarding passes in art class and played with them.",
+   "ko": "학생들은 미술 시간에 종이로 비행기 탑승권을 만들어 놀았어요.",
+   "blank": "탑승권을",
+   "src": "made"
   }
  ],
  "w|탓": [
@@ -72918,6 +73446,22 @@
    "src": "made"
   }
  ],
+ "w|편도": [
+  {
+   "text": "성호는 편도 표만 끊고 떠나는 여행이 처음이라 조금 설렜어요.",
+   "en": "It was Sungho's first trip leaving on a one-way ticket, so he was a little excited.",
+   "ko": "성호는 편도 표만 끊고 떠나는 여행이 처음이라 조금 설렜어요.",
+   "blank": "편도",
+   "src": "made"
+  },
+  {
+   "text": "미경은 시골 학교로 발령이 나서 편도 차표를 끊고 내려갔어요.",
+   "en": "Mikyung was assigned to a rural school, so she bought a one-way ticket and went down.",
+   "ko": "미경은 시골 학교로 발령이 나서 편도 차표를 끊고 내려갔어요.",
+   "blank": "편도",
+   "src": "made"
+  }
+ ],
  "w|편리하다": [
   {
    "text": "이 기능이 정말 편리해.",
@@ -74066,6 +74610,22 @@
    "src": "made"
   }
  ],
+ "w|플랫폼": [
+  {
+   "text": "성호는 공항 열차 플랫폼에서 무거운 가방을 끌고 내렸어요.",
+   "en": "Sungho got off onto the airport train platform dragging his heavy bag.",
+   "ko": "성호는 공항 열차 플랫폼에서 무거운 가방을 끌고 내렸어요.",
+   "blank": "플랫폼에서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 학교 온라인 학습 플랫폼에 숙제를 올렸어요.",
+   "en": "Mikyung posted the homework on the school's online learning platform.",
+   "ko": "미경은 학교 온라인 학습 플랫폼에 숙제를 올렸어요.",
+   "blank": "플랫폼에",
+   "src": "made"
+  }
+ ],
  "w|플러그": [
   {
    "text": "전기 공사를 하기 전에 현우는 모든 플러그를 뽑았어요.",
@@ -75054,6 +75614,22 @@
    "src": "made"
   }
  ],
+ "w|한층": [
+  {
+   "text": "새로 문을 연 터미널은 예전보다 한층 넓고 밝아졌어요.",
+   "en": "The newly opened terminal became much wider and brighter than before.",
+   "ko": "새로 문을 연 터미널은 예전보다 한층 넓고 밝아졌어요.",
+   "blank": "한층",
+   "src": "made"
+  },
+  {
+   "text": "새 교과서는 그림이 많아져서 한층 읽기 쉬워졌어요.",
+   "en": "The new textbook has more pictures, so it's become much easier to read.",
+   "ko": "새 교과서는 그림이 많아져서 한층 읽기 쉬워졌어요.",
+   "blank": "한층",
+   "src": "made"
+  }
+ ],
  "w|한편": [
   {
    "text": "신문 판매는 줄었지만, 한편으로 온라인 구독자는 꾸준히 늘고 있어요.",
@@ -75340,6 +75916,38 @@
    "src": "made"
   }
  ],
+ "w|항공권": [
+  {
+   "text": "성호는 항공권을 석 달 전에 사서 꽤 싸게 샀어요.",
+   "en": "Sungho bought his plane ticket three months ahead, so he got it quite cheaply.",
+   "ko": "성호는 항공권을 석 달 전에 사서 꽤 싸게 샀어요.",
+   "blank": "항공권을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 방학에 쓸 항공권을 학기 중에 미리 사 두었어요.",
+   "en": "Mikyung bought her plane tickets for the vacation in advance during the semester.",
+   "ko": "미경은 방학에 쓸 항공권을 학기 중에 미리 사 두었어요.",
+   "blank": "항공권을",
+   "src": "made"
+  }
+ ],
+ "w|항공사": [
+  {
+   "text": "비행기가 늦게 출발해서 항공사에서 식사 쿠폰을 나눠 줬어요.",
+   "en": "The plane departed late, so the airline handed out meal vouchers.",
+   "ko": "비행기가 늦게 출발해서 항공사에서 식사 쿠폰을 나눠 줬어요.",
+   "blank": "항공사에서",
+   "src": "made"
+  },
+  {
+   "text": "진로 시간에 항공사 승무원이 학교에 와서 강연을 했어요.",
+   "en": "During career class, a flight attendant from an airline came to the school to give a talk.",
+   "ko": "진로 시간에 항공사 승무원이 학교에 와서 강연을 했어요.",
+   "blank": "항공사",
+   "src": "made"
+  }
+ ],
  "w|항구": [
   {
    "text": "항구에서 배를 탔어.",
@@ -75609,6 +76217,22 @@
    "en": "Seoyeon talked with a customer about the news that jellyfish increased as ocean currents changed.",
    "ko": "서연은 해류가 바뀌면서 해파리가 늘었다는 뉴스를 손님과 이야기했어요.",
    "blank": "해류가",
+   "src": "made"
+  }
+ ],
+ "w|해마다": [
+  {
+   "text": "성호는 해마다 여름이면 같은 공항에서 휴가를 시작해요.",
+   "en": "Every year in summer, Sungho starts his vacation at the same airport.",
+   "ko": "성호는 해마다 여름이면 같은 공항에서 휴가를 시작해요.",
+   "blank": "해마다",
+   "src": "made"
+  },
+  {
+   "text": "해마다 봄이 오면 미경의 학교에서 체육 대회가 열려요.",
+   "en": "Every year when spring comes, Mikyung's school holds a sports day.",
+   "ko": "해마다 봄이 오면 미경의 학교에서 체육 대회가 열려요.",
+   "blank": "해마다",
    "src": "made"
   }
  ],
@@ -77858,6 +78482,22 @@
    "en": "I canceled the ticket and got a refund.",
    "ko": "표를 취소하고 돈을 돌려받았어.",
    "blank": "환불했어"
+  }
+ ],
+ "w|환승": [
+  {
+   "text": "성호는 환승 시간이 한 시간밖에 없어서 공항 안을 뛰어다녔어요.",
+   "en": "Sungho had only an hour to transfer, so he ran all over the airport.",
+   "ko": "성호는 환승 시간이 한 시간밖에 없어서 공항 안을 뛰어다녔어요.",
+   "blank": "환승",
+   "src": "made"
+  },
+  {
+   "text": "미경은 지하철 환승을 두 번이나 해야 학교에 도착해요.",
+   "en": "Mikyung has to transfer subway lines twice to get to school.",
+   "ko": "미경은 지하철 환승을 두 번이나 해야 학교에 도착해요.",
+   "blank": "환승을",
+   "src": "made"
   }
  ],
  "w|환영하다": [
