@@ -1051,6 +1051,22 @@
    "blank": "angkatan"
   }
  ],
+ "w|angsa": [
+  {
+   "text": "Sepasang angsa putih berenang pelan di bagian sungai yang tenang.",
+   "en": "A pair of white swans swim slowly in the calm part of the river.",
+   "ko": "흰 백조 한 쌍이 강의 잔잔한 곳에서 천천히 헤엄쳐요.",
+   "blank": "angsa",
+   "src": "made"
+  },
+  {
+   "text": "Di dinding apotek tergantung lukisan angsa yang berenang di danau.",
+   "en": "A painting of a swan swimming on a lake hangs on the pharmacy wall.",
+   "ko": "약국 벽에는 호수에서 헤엄치는 백조 그림이 걸려 있어요.",
+   "blank": "angsa",
+   "src": "made"
+  }
+ ],
  "w|anjing": [
   {
    "text": "Anjing itu lucu.",
@@ -2657,6 +2673,22 @@
    "blank": "barat"
   }
  ],
+ "w|bareng": [
+  {
+   "text": "Sore itu Agus dan teman-temannya mandi bareng di sungai.",
+   "en": "That afternoon Agus and his friends bathed together in the river.",
+   "ko": "그날 오후 아구스는 친구들과 함께 강에서 멱을 감았어요.",
+   "blank": "bareng",
+   "src": "made"
+  },
+  {
+   "text": "Wati dan rekan kerjanya makan siang bareng di belakang apotek.",
+   "en": "Wati and her coworker eat lunch together at the back of the pharmacy.",
+   "ko": "와티는 동료와 약국 뒤에서 함께 점심을 먹어요.",
+   "blank": "bareng",
+   "src": "made"
+  }
+ ],
  "w|baris": [
   {
    "text": "Silakan antre di baris kanan.",
@@ -3471,6 +3503,22 @@
    "blank": "bentuk"
   }
  ],
+ "w|benua": [
+  {
+   "text": "Agus membaca bahwa burung itu terbang dari benua lain setiap musim dingin.",
+   "en": "Agus read that the bird flies in from another continent every winter.",
+   "ko": "아구스는 그 새가 겨울마다 다른 대륙에서 날아온다는 걸 읽었어요.",
+   "blank": "benua",
+   "src": "made"
+  },
+  {
+   "text": "Wati pernah membaca bahwa obat kina dulu dibawa ke benua Eropa dari Amerika Selatan.",
+   "en": "Wati once read that quinine was brought to Europe from South America long ago.",
+   "ko": "와티는 예전에 키니네가 남미에서 유럽 대륙으로 전해졌다는 걸 읽었어요.",
+   "blank": "benua",
+   "src": "made"
+  }
+ ],
  "w|bepergian": [
   {
    "text": "Mereka sering bepergian ke luar kota.",
@@ -4050,6 +4098,22 @@
    "en": "Intan had planned that trip months in advance.",
    "ko": "인탄은 그 여행을 몇 달 전부터 계획했어요.",
    "blank": "berbulan-bulan",
+   "src": "made"
+  }
+ ],
+ "w|berbulu": [
+  {
+   "text": "Agus menemukan anak burung berbulu abu-abu yang jatuh dari sarangnya.",
+   "en": "Agus found a grey-feathered chick that had fallen from its nest.",
+   "ko": "아구스는 둥지에서 떨어진 회색 깃털의 새끼 새를 찾았어요.",
+   "blank": "berbulu",
+   "src": "made"
+  },
+  {
+   "text": "Wati alergi hewan berbulu, jadi dia selalu menyimpan obat antihistamin.",
+   "en": "Wati is allergic to furry animals, so she always keeps antihistamines.",
+   "ko": "와티는 털 있는 동물에 알레르기가 있어서 항히스타민제를 늘 챙겨 둬요.",
+   "blank": "berbulu",
    "src": "made"
   }
  ],
@@ -6375,6 +6439,22 @@
    "en": "Two alarms rang at the same time this morning.",
    "ko": "오늘 아침 알람 두 개가 동시에 울렸어.",
    "blank": "bersamaan"
+  }
+ ],
+ "w|bersandiwara": [
+  {
+   "text": "Adik Agus bersandiwara pura-pura sakit supaya tidak disuruh mencari kayu bakar.",
+   "en": "Agus's little brother put on an act of being sick so he wouldn't be sent to gather firewood.",
+   "ko": "아구스의 동생은 땔감 구하러 가기 싫어서 아픈 척 연기를 했어요.",
+   "blank": "bersandiwara",
+   "src": "made"
+  },
+  {
+   "text": "Wati curiga pelanggan itu bersandiwara supaya bisa membeli obat tanpa resep.",
+   "en": "Wati suspected the customer was putting on an act to buy medicine without a prescription.",
+   "ko": "와티는 그 손님이 처방전 없이 약을 사려고 연기한다고 의심했어요.",
+   "blank": "bersandiwara",
+   "src": "made"
   }
  ],
  "w|bersantai": [
@@ -11661,6 +11741,22 @@
    "src": "made"
   }
  ],
+ "w|gagak": [
+  {
+   "text": "Seekor gagak hinggap di dahan kering dan berkoak keras di atas kepala Agus.",
+   "en": "A crow landed on a dry branch and cawed loudly above Agus's head.",
+   "ko": "까마귀 한 마리가 마른 가지에 앉아 아구스 머리 위에서 시끄럽게 울었어요.",
+   "blank": "gagak",
+   "src": "made"
+  },
+  {
+   "text": "Seekor gagak sering bertengger di atap apotek tempat Wati bekerja.",
+   "en": "A crow often perches on the roof of the pharmacy where Wati works.",
+   "ko": "와티가 일하는 약국 지붕에 까마귀 한 마리가 자주 앉아 있어요.",
+   "blank": "gagak",
+   "src": "made"
+  }
+ ],
  "w|gagal": [
   {
    "text": "Percobaan itu gagal total.",
@@ -12348,6 +12444,22 @@
    "en": "Ayu painted a flock of sparrows over the rice fields.",
    "ko": "아유는 논 위를 나는 참새 떼를 그렸어요.",
    "blank": "gerombolan",
+   "src": "made"
+  }
+ ],
+ "w|getaran": [
+  {
+   "text": "Agus merasakan getaran tanah ketika pohon besar tumbang di seberang sungai.",
+   "en": "Agus felt the ground shake when a big tree fell across the river.",
+   "ko": "강 건너편에서 큰 나무가 쓰러질 때 아구스는 땅의 진동을 느꼈어요.",
+   "blank": "getaran",
+   "src": "made"
+  },
+  {
+   "text": "Saat truk besar lewat, getaran jalan membuat botol-botol di rak bergoyang.",
+   "en": "When big trucks pass, the road vibration makes the bottles on the shelves rattle.",
+   "ko": "큰 트럭이 지나가면 길의 진동 때문에 선반 위 병들이 흔들려요.",
+   "blank": "getaran",
    "src": "made"
   }
  ],
@@ -15017,6 +15129,22 @@
    "blank": "jari"
   }
  ],
+ "w|jaring": [
+  {
+   "text": "Agus menebar jaring dari perahu kecil sebelum matahari terbit.",
+   "en": "Agus casts a net from a small boat before sunrise.",
+   "ko": "아구스는 해 뜨기 전에 작은 배에서 그물을 던져요.",
+   "blank": "jaring",
+   "src": "made"
+  },
+  {
+   "text": "Wati memakai jaring rambut setiap kali meracik obat di belakang apotek.",
+   "en": "Wati wears a hairnet every time she prepares medicine at the back of the pharmacy.",
+   "ko": "와티는 약국 뒤에서 약을 조제할 때마다 머리망을 써요.",
+   "blank": "jaring",
+   "src": "made"
+  }
+ ],
  "w|jaringan": [
   {
    "text": "Jaringan internet di sini sangat lambat.",
@@ -15089,6 +15217,22 @@
    "en": "That body has already been identified by the family.",
    "ko": "그 시신은 이미 가족이 확인했어.",
    "blank": "Jasad"
+  }
+ ],
+ "w|jati": [
+  {
+   "text": "Kayu jati dari hutan rakyat itu dijual mahal ke kota.",
+   "en": "The teak wood from the community forest sells for a high price in the city.",
+   "ko": "그 마을 숲에서 나온 티크 나무는 도시에 비싸게 팔려요.",
+   "blank": "jati",
+   "src": "made"
+  },
+  {
+   "text": "Meja kasir di apotek itu terbuat dari kayu jati tua.",
+   "en": "The cashier counter at that pharmacy is made of old teak.",
+   "ko": "그 약국 계산대는 오래된 티크 나무로 만들어졌어요.",
+   "blank": "jati",
+   "src": "made"
   }
  ],
  "w|jatuh": [
@@ -15273,6 +15417,22 @@
    "en": "His idea sounds like the work of a genius.",
    "ko": "그의 아이디어는 천재의 작품처럼 들려.",
    "blank": "jenius"
+  }
+ ],
+ "w|jerami": [
+  {
+   "text": "Agus mengangkut jerami dari sawah untuk alas kandang kambing.",
+   "en": "Agus carries straw from the rice field to bed the goat pen.",
+   "ko": "아구스는 염소 우리에 깔려고 논에서 볏짚을 날라요.",
+   "blank": "jerami",
+   "src": "made"
+  },
+  {
+   "text": "Wati membeli tas anyaman jerami dari pedagang di depan apotek.",
+   "en": "Wati bought a woven straw bag from the vendor in front of the pharmacy.",
+   "ko": "와티는 약국 앞 상인에게서 짚으로 엮은 가방을 샀어요.",
+   "blank": "jerami",
+   "src": "made"
   }
  ],
  "w|jeritan": [
@@ -15851,6 +16011,22 @@
    "en": "The situation got chaotic.",
    "ko": "상황이 꼬여버렸어.",
    "blank": "kacau"
+  }
+ ],
+ "w|kadal": [
+  {
+   "text": "Seekor kadal berjemur di atas batu dekat tempat Agus memancing.",
+   "en": "A lizard is sunbathing on a rock near where Agus fishes.",
+   "ko": "도마뱀 한 마리가 아구스가 낚시하는 곳 근처 바위에서 햇볕을 쬐고 있어요.",
+   "blank": "kadal",
+   "src": "made"
+  },
+  {
+   "text": "Wati kaget melihat seekor kadal masuk ke apotek dan bersembunyi di bawah rak.",
+   "en": "Wati was startled to see a lizard come into the pharmacy and hide under a shelf.",
+   "ko": "와티는 도마뱀 한 마리가 약국에 들어와 선반 밑에 숨는 걸 보고 놀랐어요.",
+   "blank": "kadal",
+   "src": "made"
   }
  ],
  "w|kadang": [
@@ -16459,6 +16635,22 @@
    "en": "He has an honest character.",
    "ko": "그는 정직한 성격을 가졌어.",
    "blank": "karakter"
+  }
+ ],
+ "w|karbon": [
+  {
+   "text": "Guru Agus bilang hutan menyimpan banyak karbon dan membantu mendinginkan bumi.",
+   "en": "Agus's teacher says forests store a lot of carbon and help cool the earth.",
+   "ko": "아구스의 선생님은 숲이 탄소를 많이 저장해서 지구를 식히는 데 도움이 된다고 해요.",
+   "blank": "karbon",
+   "src": "made"
+  },
+  {
+   "text": "Wati menjual masker berlapis karbon aktif untuk pengendara motor.",
+   "en": "Wati sells activated carbon masks for motorbike riders.",
+   "ko": "와티는 오토바이 운전자용 활성탄 마스크를 팔아요.",
+   "blank": "karbon",
+   "src": "made"
   }
  ],
  "w|kardinal": [
@@ -17282,6 +17474,22 @@
    "en": "Lestari saw the confusion on the face of a tourist looking for mineral water.",
    "ko": "레스타리는 생수를 찾는 관광객 얼굴에 떠오른 당황한 기색을 봤어요.",
    "blank": "kebingungan",
+   "src": "made"
+  }
+ ],
+ "w|kebisingan": [
+  {
+   "text": "Di hutan, Agus merasa lega jauh dari kebisingan jalan raya.",
+   "en": "In the forest, Agus feels relieved to be far from the noise of the highway.",
+   "ko": "숲에 있으면 아구스는 큰길의 소음에서 벗어나 마음이 편해요.",
+   "blank": "kebisingan",
+   "src": "made"
+  },
+  {
+   "text": "Wati sulit mendengar pelanggan karena kebisingan proyek jalan di depan apotek.",
+   "en": "Wati finds it hard to hear customers because of the noise from the roadworks in front of the pharmacy.",
+   "ko": "약국 앞 도로 공사 소음 때문에 와티는 손님 말을 듣기 힘들어요.",
+   "blank": "kebisingan",
    "src": "made"
   }
  ],
@@ -20055,6 +20263,22 @@
    "src": "made"
   }
  ],
+ "w|kilat": [
+  {
+   "text": "Saat badai, Agus melihat kilat menyambar pohon kelapa di seberang sungai.",
+   "en": "During the storm, Agus saw lightning strike a coconut tree across the river.",
+   "ko": "폭풍이 칠 때 아구스는 번개가 강 건너 야자나무에 내리치는 걸 봤어요.",
+   "blank": "kilat",
+   "src": "made"
+  },
+  {
+   "text": "Begitu kilat menyambar, listrik apotek padam dan Wati menyalakan senter.",
+   "en": "As soon as lightning struck, the pharmacy's power went out and Wati turned on a flashlight.",
+   "ko": "번개가 치자마자 약국 전기가 나가서 와티는 손전등을 켰어요.",
+   "blank": "kilat",
+   "src": "made"
+  }
+ ],
  "w|kilometer": [
   {
    "text": "Masih ada sekitar dua ratus kilometer lagi sebelum Agus sampai di Yogyakarta.",
@@ -22797,6 +23021,22 @@
    "blank": "lima"
   }
  ],
+ "w|limbah": [
+  {
+   "text": "Warga desa Agus protes karena limbah pabrik membuat ikan sungai mati.",
+   "en": "Agus's villagers protested because factory waste was killing the river fish.",
+   "ko": "공장 폐수 때문에 강의 물고기가 죽자 아구스네 마을 사람들이 항의했어요.",
+   "blank": "limbah",
+   "src": "made"
+  },
+  {
+   "text": "Apotek itu membuang limbah obat kedaluwarsa lewat petugas khusus.",
+   "en": "The pharmacy disposes of expired medicine waste through special collectors.",
+   "ko": "그 약국은 유통기한 지난 약 폐기물을 전문 수거업체에 맡겨 버려요.",
+   "blank": "limbah",
+   "src": "made"
+  }
+ ],
  "w|lingkaran": [
   {
    "text": "Anak-anak membentuk lingkaran di lapangan.",
@@ -22895,6 +23135,22 @@
    "en": "That fence is made of strong metal.",
    "ko": "그 울타리는 튼튼한 금속으로 됐어.",
    "blank": "logam"
+  }
+ ],
+ "w|logis": [
+  {
+   "text": "Kata ayah Agus, sangat logis kalau ikan berkurang setelah hutan ditebang.",
+   "en": "Agus's father says it makes perfect sense that fish declined after the forest was cut.",
+   "ko": "아구스의 아버지는 숲을 베고 나서 물고기가 줄어든 건 당연하다고 해요.",
+   "blank": "logis",
+   "src": "made"
+  },
+  {
+   "text": "Wati memberi penjelasan yang logis tentang kenapa antibiotik harus dihabiskan.",
+   "en": "Wati gave a logical explanation of why antibiotics must be finished.",
+   "ko": "와티는 항생제를 끝까지 먹어야 하는 이유를 논리적으로 설명했어요.",
+   "blank": "logis",
+   "src": "made"
   }
  ],
  "w|lokal": [
@@ -24394,6 +24650,22 @@
    "en": "Motorbike engine manuals are borrowed most often by young mechanics.",
    "ko": "오토바이 엔진 안내서는 젊은 정비사들이 가장 자주 빌려 가요.",
    "blank": "mekanik",
+   "src": "made"
+  }
+ ],
+ "w|mekar": [
+  {
+   "text": "Bunga teratai di rawa dekat sungai mekar setiap pagi.",
+   "en": "The lotus flowers in the swamp near the river bloom every morning.",
+   "ko": "강 근처 늪의 연꽃이 아침마다 피어나요.",
+   "blank": "mekar",
+   "src": "made"
+  },
+  {
+   "text": "Anggrek di jendela apotek mekar tepat saat Wati berulang tahun.",
+   "en": "The orchid on the pharmacy window bloomed right on Wati's birthday.",
+   "ko": "약국 창가의 난초가 마침 와티 생일에 꽃을 피웠어요.",
+   "blank": "mekar",
    "src": "made"
   }
  ],
@@ -26459,6 +26731,22 @@
    "src": "made"
   }
  ],
+ "w|membolos": [
+  {
+   "text": "Waktu kecil, Agus pernah membolos sekolah untuk memancing di sungai.",
+   "en": "As a child, Agus once skipped school to go fishing in the river.",
+   "ko": "아구스는 어릴 때 학교를 빼먹고 강에 낚시하러 간 적이 있어요.",
+   "blank": "membolos",
+   "src": "made"
+  },
+  {
+   "text": "Seorang siswa membolos dan duduk lama di apotek sambil main ponsel.",
+   "en": "A student skipped school and sat in the pharmacy for a long time playing on his phone.",
+   "ko": "한 학생이 학교를 빼먹고 약국에 오래 앉아 휴대폰을 했어요.",
+   "blank": "membolos",
+   "src": "made"
+  }
+ ],
  "w|membongkar": [
   {
    "text": "Fajar berhasil membongkar kebohongan saksi lewat satu pertanyaan sederhana.",
@@ -27209,6 +27497,22 @@
    "en": "The computer needs extra memory for the app.",
    "ko": "컴퓨터는 그 앱에 추가 메모리가 필요해.",
    "blank": "memori"
+  }
+ ],
+ "w|memotivasi": [
+  {
+   "text": "Cerita kakek tentang hutan yang dulu lebat memotivasi Agus menanam pohon.",
+   "en": "Grandpa's stories about the once-dense forest motivated Agus to plant trees.",
+   "ko": "예전에 울창했던 숲 이야기를 해 준 할아버지 덕분에 아구스는 나무를 심기로 했어요.",
+   "blank": "memotivasi",
+   "src": "made"
+  },
+  {
+   "text": "Wati ingin memotivasi pasien diabetes supaya rajin memeriksa gula darah.",
+   "en": "Wati wants to motivate diabetes patients to check their blood sugar regularly.",
+   "ko": "와티는 당뇨 환자들이 혈당을 꾸준히 재도록 북돋우고 싶어요.",
+   "blank": "memotivasi",
+   "src": "made"
   }
  ],
  "w|memotong": [
@@ -28952,6 +29256,22 @@
    "en": "After moving, Siti had to register with the neighborhood head as a new resident.",
    "ko": "이사한 뒤 시티는 새 주민으로 동네 반장에게 등록해야 했어요.",
    "blank": "mendaftar",
+   "src": "made"
+  }
+ ],
+ "w|mendaftarkan": [
+  {
+   "text": "Agus mendaftarkan diri sebagai relawan penanaman bakau di muara.",
+   "en": "Agus signed himself up as a volunteer for mangrove planting at the estuary.",
+   "ko": "아구스는 강어귀 맹그로브 심기 자원봉사자로 신청했어요.",
+   "blank": "mendaftarkan",
+   "src": "made"
+  },
+  {
+   "text": "Wati mendaftarkan apoteknya ke program obat murah pemerintah.",
+   "en": "Wati registered her pharmacy in the government's affordable medicine program.",
+   "ko": "와티는 약국을 정부 저가 약 사업에 등록했어요.",
+   "blank": "mendaftarkan",
    "src": "made"
   }
  ],
@@ -31813,6 +32133,22 @@
    "blank": "menghasilkan"
   }
  ],
+ "w|menghela": [
+  {
+   "text": "Agus menghela napas panjang ketika melihat sampah plastik tersangkut di batu.",
+   "en": "Agus sighed deeply when he saw plastic trash caught on the rocks.",
+   "ko": "아구스는 바위에 걸린 플라스틱 쓰레기를 보고 긴 한숨을 쉬었어요.",
+   "blank": "menghela",
+   "src": "made"
+  },
+  {
+   "text": "Wati menghela napas lega setelah stok obat demam akhirnya datang.",
+   "en": "Wati breathed a sigh of relief when the fever medicine stock finally arrived.",
+   "ko": "해열제 재고가 드디어 도착하자 와티는 안도의 한숨을 쉬었어요.",
+   "blank": "menghela",
+   "src": "made"
+  }
+ ],
  "w|menghemat": [
   {
    "text": "Fajar sering belanja saat ada gratis ongkir supaya bisa menghemat uang.",
@@ -33621,6 +33957,22 @@
    "blank": "menolong"
   }
  ],
+ "w|menonaktifkan": [
+  {
+   "text": "Agus menonaktifkan ponselnya supaya bisa menikmati suara hutan.",
+   "en": "Agus switched off his phone so he could enjoy the sounds of the forest.",
+   "ko": "아구스는 숲 소리를 즐기려고 휴대폰을 꺼 두었어요.",
+   "blank": "menonaktifkan",
+   "src": "made"
+  },
+  {
+   "text": "Setiap malam, Wati menonaktifkan alarm pintu sebelum mengunci apotek.",
+   "en": "Every night, Wati deactivates the door alarm before locking the pharmacy.",
+   "ko": "와티는 매일 밤 약국 문을 잠그기 전에 출입문 경보를 꺼요.",
+   "blank": "menonaktifkan",
+   "src": "made"
+  }
+ ],
  "w|menonton": [
   {
    "text": "Kami menonton film bersama.",
@@ -34531,6 +34883,38 @@
    "blank": "menyedihkan"
   }
  ],
+ "w|menyegarkan": [
+  {
+   "text": "Air sungai yang dingin menyegarkan badan Agus setelah seharian di ladang.",
+   "en": "The cold river water refreshed Agus's body after a whole day in the field.",
+   "ko": "하루 종일 밭일을 한 뒤 차가운 강물이 아구스의 몸을 시원하게 했어요.",
+   "blank": "menyegarkan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyemprotkan pengharum ruangan yang menyegarkan udara apotek.",
+   "en": "Wati sprays an air freshener that freshens the pharmacy air.",
+   "ko": "와티는 약국 공기를 상쾌하게 하는 방향제를 뿌려요.",
+   "blank": "menyegarkan",
+   "src": "made"
+  }
+ ],
+ "w|menyegel": [
+  {
+   "text": "Petugas menyegel pabrik yang membuang limbah ke sungai.",
+   "en": "Officials sealed off the factory that dumped waste into the river.",
+   "ko": "당국이 강에 폐수를 버린 공장을 봉쇄했어요.",
+   "blank": "menyegel",
+   "src": "made"
+  },
+  {
+   "text": "Petugas dinas kesehatan menyegel lemari berisi obat palsu di apotek seberang.",
+   "en": "Health officials sealed a cabinet of fake medicine at the pharmacy across the street.",
+   "ko": "보건 당국이 맞은편 약국의 가짜 약 진열장을 봉인했어요.",
+   "blank": "menyegel",
+   "src": "made"
+  }
+ ],
  "w|menyelam": [
   {
    "text": "Untuk liputan terumbu karang, Eko ikut menyelam bersama para peneliti.",
@@ -34808,6 +35192,22 @@
    "en": "A man dragged a sack of rice to the front of the shop.",
    "ko": "한 아저씨가 쌀 포대를 가게 앞까지 끌고 왔어요.",
    "blank": "menyeret",
+   "src": "made"
+  }
+ ],
+ "w|menyertai": [
+  {
+   "text": "Kabut tipis selalu menyertai pagi di lembah tempat Agus tinggal.",
+   "en": "A thin mist always accompanies the mornings in the valley where Agus lives.",
+   "ko": "아구스가 사는 골짜기의 아침엔 늘 옅은 안개가 끼어요.",
+   "blank": "menyertai",
+   "src": "made"
+  },
+  {
+   "text": "Wati selalu menyertai setiap obat dengan catatan aturan pakai yang jelas.",
+   "en": "Wati always includes clear dosage notes with every medicine.",
+   "ko": "와티는 약마다 늘 알기 쉬운 복용법 메모를 함께 붙여 줘요.",
+   "blank": "menyertai",
    "src": "made"
   }
  ],
@@ -35683,6 +36083,22 @@
    "en": "He quit smoking last year.",
    "ko": "그는 작년에 담배를 끊었어.",
    "blank": "merokok"
+  }
+ ],
+ "w|merpati": [
+  {
+   "text": "Kakek Agus memelihara burung merpati di pondok dekat hutan.",
+   "en": "Agus's grandfather keeps pigeons in a hut near the forest.",
+   "ko": "아구스의 할아버지는 숲 근처 오두막에서 비둘기를 길러요.",
+   "blank": "merpati",
+   "src": "made"
+  },
+  {
+   "text": "Di alun-alun depan apotek, anak-anak memberi makan burung merpati.",
+   "en": "In the square in front of the pharmacy, children feed the pigeons.",
+   "ko": "약국 앞 광장에서 아이들이 비둘기에게 모이를 줘요.",
+   "blank": "merpati",
+   "src": "made"
   }
  ],
  "w|mertua": [
@@ -37669,6 +38085,22 @@
    "src": "made"
   }
  ],
+ "w|ombak": [
+  {
+   "text": "Sungai itu bermuara di pantai yang ombak besarnya terdengar dari desa Agus.",
+   "en": "The river flows out to a beach whose big waves can be heard from Agus's village.",
+   "ko": "그 강은 큰 파도 소리가 아구스네 마을까지 들리는 해변으로 흘러가요.",
+   "blank": "ombak",
+   "src": "made"
+  },
+  {
+   "text": "Pelanggan yang mabuk laut karena ombak tinggi datang membeli obat jahe.",
+   "en": "A customer seasick from the high waves came to buy ginger medicine.",
+   "ko": "높은 파도에 뱃멀미를 한 손님이 생강 약을 사러 왔어요.",
+   "blank": "ombak",
+   "src": "made"
+  }
+ ],
  "w|omongan": [
   {
    "text": "Agus tidak terlalu peduli dengan omongan teman-teman soal potongan rambutnya.",
@@ -38161,6 +38593,22 @@
    "blank": "paman"
   }
  ],
+ "w|pamer": [
+  {
+   "text": "Sepupu Agus suka pamer ikan besar hasil pancingannya di media sosial.",
+   "en": "Agus's cousin likes to show off the big fish he catches on social media.",
+   "ko": "아구스의 사촌은 낚은 큰 물고기를 SNS에 자랑하는 걸 좋아해요.",
+   "blank": "pamer",
+   "src": "made"
+  },
+  {
+   "text": "Wati tidak suka pelanggan yang pamer tahu semua obat dari internet.",
+   "en": "Wati doesn't like customers who show off knowing every medicine from the internet.",
+   "ko": "와티는 인터넷에서 본 걸로 약을 다 아는 척 뽐내는 손님이 싫어요.",
+   "blank": "pamer",
+   "src": "made"
+  }
+ ],
  "w|pameran": [
   {
    "text": "Sekolah mengadakan pameran karya siswa di aula.",
@@ -38260,6 +38708,22 @@
    "en": "Rina read the wardrobe assembly guide from the furniture store.",
    "ko": "리나는 가구점에서 받은 옷장 조립 설명서를 읽었어요.",
    "blank": "panduan",
+   "src": "made"
+  }
+ ],
+ "w|panen": [
+  {
+   "text": "Setelah panen, keluarga Agus mengadakan syukuran di tepi hutan.",
+   "en": "After the harvest, Agus's family held a thanksgiving meal at the edge of the forest.",
+   "ko": "추수가 끝나고 아구스네 가족은 숲 가장자리에서 감사 잔치를 열었어요.",
+   "blank": "panen",
+   "src": "made"
+  },
+  {
+   "text": "Saat musim panen, banyak petani datang membeli salep untuk tangan yang lecet.",
+   "en": "During harvest season, many farmers come to buy ointment for chafed hands.",
+   "ko": "추수철이면 손이 까진 농부들이 연고를 사러 많이 와요.",
+   "blank": "panen",
    "src": "made"
   }
  ],
@@ -38491,6 +38955,22 @@
    "blank": "Parah"
   }
  ],
+ "w|parasit": [
+  {
+   "text": "Agus melihat tanaman parasit menempel di batang pohon tua.",
+   "en": "Agus saw a parasitic plant clinging to the trunk of an old tree.",
+   "ko": "아구스는 고목 줄기에 붙어 있는 기생 식물을 봤어요.",
+   "blank": "parasit",
+   "src": "made"
+  },
+  {
+   "text": "Wati memberikan obat cacing untuk anak yang terkena parasit usus.",
+   "en": "Wati gave deworming medicine for a child with an intestinal parasite.",
+   "ko": "와티는 장 기생충에 걸린 아이에게 구충제를 줬어요.",
+   "blank": "parasit",
+   "src": "made"
+  }
+ ],
  "w|parkir": [
   {
    "text": "Parkir di sini hanya untuk pelanggan.",
@@ -38533,6 +39013,22 @@
    "en": "He joined a new party.",
    "ko": "그는 새 정당에 가입했어.",
    "blank": "partai"
+  }
+ ],
+ "w|partikel": [
+  {
+   "text": "Sinar matahari pagi membuat partikel debu di hutan terlihat berkilau.",
+   "en": "The morning sunlight makes the dust particles in the forest glitter.",
+   "ko": "아침 햇살에 숲속 먼지 알갱이가 반짝여 보여요.",
+   "blank": "partikel",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyarankan masker untuk melindungi diri dari partikel asap kebakaran hutan.",
+   "en": "Wati recommends masks to protect against smoke particles from forest fires.",
+   "ko": "와티는 산불 연기 입자를 막으려면 마스크를 쓰라고 권해요.",
+   "blank": "partikel",
+   "src": "made"
   }
  ],
  "w|partner": [
@@ -39221,6 +39717,22 @@
    "en": "The referee noted a foul in the final minute.",
    "ko": "심판이 막판에 파울을 기록했어.",
    "blank": "pelanggaran"
+  }
+ ],
+ "w|pelangi": [
+  {
+   "text": "Setelah hujan reda, Agus melihat pelangi melengkung di atas sungai.",
+   "en": "After the rain stopped, Agus saw a rainbow arching over the river.",
+   "ko": "비가 그친 뒤 아구스는 강 위에 걸린 무지개를 봤어요.",
+   "blank": "pelangi",
+   "src": "made"
+  },
+  {
+   "text": "Wati memasang stiker pelangi di pintu ruang tunggu anak.",
+   "en": "Wati put a rainbow sticker on the door of the children's waiting room.",
+   "ko": "와티는 어린이 대기실 문에 무지개 스티커를 붙였어요.",
+   "blank": "pelangi",
+   "src": "made"
   }
  ],
  "w|pelari": [
@@ -42259,6 +42771,22 @@
    "blank": "peperangan"
   }
  ],
+ "w|pepohonan": [
+  {
+   "text": "Agus suka berjalan di bawah pepohonan rindang saat siang terik.",
+   "en": "Agus likes walking under the shady trees in the blazing midday heat.",
+   "ko": "아구스는 땡볕이 드는 한낮에 우거진 나무 아래를 걷는 걸 좋아해요.",
+   "blank": "pepohonan",
+   "src": "made"
+  },
+  {
+   "text": "Apotek tempat Wati bekerja dikelilingi pepohonan, jadi udaranya sejuk.",
+   "en": "The pharmacy where Wati works is surrounded by trees, so the air is cool.",
+   "ko": "와티가 일하는 약국은 나무로 둘러싸여 있어서 공기가 시원해요.",
+   "blank": "pepohonan",
+   "src": "made"
+  }
+ ],
  "w|per": [
   {
    "text": "Harga tiket murah per orang.",
@@ -42299,6 +42827,22 @@
    "en": "The fisherman repairs the boat before sailing.",
    "ko": "어부가 출항 전에 배를 고쳐.",
    "blank": "perahu"
+  }
+ ],
+ "w|perairan": [
+  {
+   "text": "Agus dilarang memancing di perairan dekat bendungan karena arusnya deras.",
+   "en": "Agus isn't allowed to fish in the waters near the dam because the current is strong.",
+   "ko": "아구스는 물살이 세서 댐 근처 물에서 낚시하면 안 돼요.",
+   "blank": "perairan",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyarankan obat antimabuk kepada pelanggan yang akan menyeberangi perairan berombak.",
+   "en": "Wati recommends seasickness pills to a customer about to cross choppy waters.",
+   "ko": "와티는 파도 높은 바다를 건널 손님에게 멀미약을 권했어요.",
+   "blank": "perairan",
+   "src": "made"
   }
  ],
  "w|perak": [
@@ -54797,6 +55341,22 @@
    "blank": "termasuk"
   }
  ],
+ "w|ternak": [
+  {
+   "text": "Di tepi sungai, Agus menggiring ternak keluarganya ke padang rumput.",
+   "en": "At the riverbank, Agus herds his family's livestock to the meadow.",
+   "ko": "강가에서 아구스는 집안 가축을 풀밭으로 몰고 가요.",
+   "blank": "ternak",
+   "src": "made"
+  },
+  {
+   "text": "Wati sering melayani peternak yang membeli vitamin untuk ternak mereka.",
+   "en": "Wati often serves farmers who buy vitamins for their livestock.",
+   "ko": "와티는 가축 비타민을 사러 오는 축산 농가를 자주 응대해요.",
+   "blank": "ternak",
+   "src": "made"
+  }
+ ],
  "w|ternyata": [
   {
    "text": "Ternyata dia sudah tahu.",
@@ -55018,6 +55578,22 @@
    "en": "The water supply to Wati's house was cut off while the pipes were replaced.",
    "ko": "배관을 바꾸는 동안 와티네 집 물이 끊겼어요.",
    "blank": "terputus",
+   "src": "made"
+  }
+ ],
+ "w|tersandung": [
+  {
+   "text": "Agus tersandung akar pohon saat berlari mengejar layangan.",
+   "en": "Agus tripped on a tree root while running after a kite.",
+   "ko": "아구스는 연을 쫓아 달리다가 나무뿌리에 걸려 넘어졌어요.",
+   "blank": "tersandung",
+   "src": "made"
+  },
+  {
+   "text": "Seorang kakek tersandung di tangga apotek, dan Wati membantunya berdiri.",
+   "en": "An elderly man tripped on the pharmacy steps, and Wati helped him up.",
+   "ko": "한 할아버지가 약국 계단에서 넘어지자 와티가 일으켜 드렸어요.",
+   "blank": "tersandung",
    "src": "made"
   }
  ],
@@ -56555,6 +57131,22 @@
    "blank": "tuntutan"
   }
  ],
+ "w|tupai": [
+  {
+   "text": "Seekor tupai melompat dari pohon kelapa dan membawa lari pisang Agus.",
+   "en": "A squirrel jumped from a coconut tree and ran off with Agus's banana.",
+   "ko": "다람쥐 한 마리가 야자나무에서 뛰어내려 아구스의 바나나를 물고 달아났어요.",
+   "blank": "tupai",
+   "src": "made"
+  },
+  {
+   "text": "Seorang anak datang ke apotek dengan tangan tergigit tupai peliharaannya.",
+   "en": "A child came to the pharmacy with a hand bitten by his pet squirrel.",
+   "ko": "한 아이가 기르던 다람쥐에게 손을 물려서 약국에 왔어요.",
+   "blank": "tupai",
+   "src": "made"
+  }
+ ],
  "w|tur": [
   {
    "text": "Tur kota dimulai dari alun-alun utama.",
@@ -56809,6 +57401,22 @@
    "en": "She received an invitation to an official meeting.",
    "ko": "그는 공식 회의 초대를 받았어.",
    "blank": "undangan"
+  }
+ ],
+ "w|unggul": [
+  {
+   "text": "Bibit padi unggul dari dinas pertanian tumbuh subur di sawah keluarga Agus.",
+   "en": "The high-quality rice seedlings from the agriculture office grow well in Agus's family's paddy.",
+   "ko": "농업 사무소에서 받은 우량 볍씨가 아구스네 논에서 잘 자라요.",
+   "blank": "unggul",
+   "src": "made"
+  },
+  {
+   "text": "Apotek Wati unggul dalam pelayanan karena buka dua puluh empat jam.",
+   "en": "Wati's pharmacy excels in service because it's open twenty-four hours.",
+   "ko": "와티의 약국은 이십사 시간 문을 열어서 서비스가 뛰어나요.",
+   "blank": "unggul",
+   "src": "made"
   }
  ],
  "w|ungkapan": [
@@ -57369,6 +57977,22 @@
    "blank": "walikota"
   }
  ],
+ "w|wangi": [
+  {
+   "text": "Bunga kemuning di pinggir hutan sangat wangi di malam hari.",
+   "en": "The orange jasmine flowers at the forest's edge are very fragrant at night.",
+   "ko": "숲 가장자리의 꾸무닝 꽃은 밤에 향기가 아주 좋아요.",
+   "blank": "wangi",
+   "src": "made"
+  },
+  {
+   "text": "Minyak kayu putih di apotek itu wangi dan laris.",
+   "en": "The eucalyptus oil at that pharmacy smells nice and sells well.",
+   "ko": "그 약국의 까유뿌띠 오일은 향이 좋아서 잘 팔려요.",
+   "blank": "wangi",
+   "src": "made"
+  }
+ ],
  "w|wanita": [
   {
    "text": "Wanita itu ramah.",
@@ -57663,6 +58287,22 @@
    "en": "That story comes from an earlier era.",
    "ko": "그 이야기는 예전 시대에서 왔어.",
    "blank": "zaman"
+  }
+ ],
+ "w|zat": [
+  {
+   "text": "Petugas lingkungan mengambil air sungai untuk memeriksa zat berbahaya dari pabrik.",
+   "en": "Environmental officers took river water to check for hazardous substances from the factory.",
+   "ko": "환경 담당자들이 공장에서 나온 유해 물질을 검사하려고 강물을 떠 갔어요.",
+   "blank": "zat",
+   "src": "made"
+  },
+  {
+   "text": "Wati menjelaskan bahwa obat itu mengandung zat yang membuat mengantuk.",
+   "en": "Wati explained that the medicine contains a substance that causes drowsiness.",
+   "ko": "와티는 그 약에 졸음을 일으키는 성분이 들어 있다고 설명했어요.",
+   "blank": "zat",
+   "src": "made"
   }
  ],
  "w|zona": [

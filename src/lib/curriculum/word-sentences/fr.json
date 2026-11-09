@@ -323,6 +323,22 @@
    "blank": "accès"
   }
  ],
+ "w|accessoire": [
+  {
+   "text": "Louis vend aussi des colliers et quelques accessoires pour chats à l'accueil.",
+   "en": "Louis also sells collars and a few cat accessories at the front desk.",
+   "ko": "루이는 접수대에서 목줄과 고양이 용품 몇 가지도 팔아요.",
+   "blank": "accessoires",
+   "src": "made"
+  },
+  {
+   "text": "Claire cherche un accessoire doré pour aller avec sa robe noire.",
+   "en": "Claire is looking for a gold accessory to go with her black dress.",
+   "ko": "클레르는 검은 드레스에 어울릴 금색 액세서리를 찾아요.",
+   "blank": "accessoire",
+   "src": "made"
+  }
+ ],
  "w|accident": [
   {
    "text": "Il a eu un accident hier.",
@@ -391,6 +407,22 @@
    "en": "Can you grant this privilege?",
    "ko": "이 특권을 부여할 수 있어?",
    "blank": "accorder"
+  }
+ ],
+ "w|accouchement": [
+  {
+   "text": "Louis surveille l'accouchement d'une chienne qui attend six chiots.",
+   "en": "Louis is watching over the delivery of a dog expecting six puppies.",
+   "ko": "루이는 강아지 여섯 마리를 밴 개의 출산을 지켜봐요.",
+   "blank": "accouchement",
+   "src": "made"
+  },
+  {
+   "text": "Claire espère que l'accouchement de sa sœur n'aura pas lieu le soir du réveillon.",
+   "en": "Claire hopes her sister's delivery won't happen on New Year's Eve.",
+   "ko": "클레르는 언니의 출산이 섣달그믐 밤에 일어나지 않기를 바라요.",
+   "blank": "accouchement",
+   "src": "made"
   }
  ],
  "w|accoucher": [
@@ -963,6 +995,22 @@
    "en": "I love chocolate.",
    "ko": "나는 초콜릿을 정말 좋아해.",
    "blank": "adore"
+  }
+ ],
+ "w|adrénaline": [
+  {
+   "text": "Pendant les urgences, Louis sent l'adrénaline monter, puis il se concentre.",
+   "en": "During emergencies, Louis feels the adrenaline rise, then he focuses.",
+   "ko": "응급 상황이면 루이는 아드레날린이 솟는 걸 느끼고 곧 집중해요.",
+   "blank": "adrénaline",
+   "src": "made"
+  },
+  {
+   "text": "À minuit, Claire sent l'adrénaline du compte à rebours avec toute la foule.",
+   "en": "At midnight, Claire feels the countdown adrenaline with the whole crowd.",
+   "ko": "자정에 클레르는 군중과 함께 카운트다운의 짜릿함을 느껴요.",
+   "blank": "adrénaline",
+   "src": "made"
   }
  ],
  "w|adresse": [
@@ -1861,6 +1909,22 @@
    "blank": "aller"
   }
  ],
+ "w|allergie": [
+  {
+   "text": "Louis pense que le chien se gratte à cause d'une allergie au poulet.",
+   "en": "Louis thinks the dog is scratching because of a chicken allergy.",
+   "ko": "루이는 그 개가 닭고기 알레르기 때문에 몸을 긁는다고 생각해요.",
+   "blank": "allergie",
+   "src": "made"
+  },
+  {
+   "text": "Claire évite les noix dans les desserts, car son cousin a une allergie.",
+   "en": "Claire avoids nuts in the desserts because her cousin has an allergy.",
+   "ko": "사촌이 알레르기가 있어서 클레르는 디저트에 견과류를 넣지 않아요.",
+   "blank": "allergie",
+   "src": "made"
+  }
+ ],
  "w|allergique": [
   {
    "text": "Je suis allergique au pollen.",
@@ -2691,6 +2755,22 @@
    "blank": "annoncer"
   }
  ],
+ "w|annuel": [
+  {
+   "text": "Louis rappelle aux propriétaires le vaccin annuel de leurs chats.",
+   "en": "Louis reminds owners about their cats' yearly vaccine.",
+   "ko": "루이는 주인들에게 고양이의 연례 예방접종을 알려 줘요.",
+   "blank": "annuel",
+   "src": "made"
+  },
+  {
+   "text": "Claire prépare le grand repas annuel qui réunit toute sa famille.",
+   "en": "Claire is preparing the big annual dinner that brings her whole family together.",
+   "ko": "클레르는 온 가족이 모이는 연례 만찬을 준비해요.",
+   "blank": "annuel",
+   "src": "made"
+  }
+ ],
  "w|annuler": [
   {
    "text": "Je dois annuler notre rendez-vous.",
@@ -2779,6 +2859,22 @@
    "en": "Move the antenna a little, please.",
    "ko": "안테나 조금만 움직여 줘.",
    "blank": "antenne"
+  }
+ ],
+ "w|antidote": [
+  {
+   "text": "Louis garde toujours un antidote contre le venin de vipère dans le frigo.",
+   "en": "Louis always keeps an antidote for viper venom in the fridge.",
+   "ko": "루이는 늘 냉장고에 독사 해독제를 넣어 둬요.",
+   "blank": "antidote",
+   "src": "made"
+  },
+  {
+   "text": "Pour Claire, une soirée entre amis est le meilleur antidote à la fatigue de l'année.",
+   "en": "For Claire, an evening with friends is the best antidote to the year's fatigue.",
+   "ko": "클레르에게 친구들과의 저녁은 한 해의 피로를 푸는 최고의 해독제예요.",
+   "blank": "antidote",
+   "src": "made"
   }
  ],
  "w|antique": [
@@ -6159,6 +6255,22 @@
    "src": "made"
   }
  ],
+ "w|bavarder": [
+  {
+   "text": "Les propriétaires aiment bavarder avec Louis dans la salle d'attente.",
+   "en": "The owners like to chat with Louis in the waiting room.",
+   "ko": "주인들은 대기실에서 루이와 수다 떠는 걸 좋아해요.",
+   "blank": "bavarder",
+   "src": "made"
+  },
+  {
+   "text": "Claire aime bavarder avec la fromagère pendant qu'elle attend sa commande.",
+   "en": "Claire likes to chat with the cheese seller while she waits for her order.",
+   "ko": "클레르는 주문한 걸 기다리며 치즈 가게 주인과 수다 떠는 걸 좋아해요.",
+   "blank": "bavarder",
+   "src": "made"
+  }
+ ],
  "w|baver": [
   {
    "text": "Le chien de Julien commence à baver dès qu'il sent l'odeur du fromage.",
@@ -8401,6 +8513,22 @@
    "blank": "cadeau"
   }
  ],
+ "w|cadet": [
+  {
+   "text": "Le cadet de la famille Martin tient son hamster pendant que Louis l'examine.",
+   "en": "The youngest of the Martin family holds his hamster while Louis examines it.",
+   "ko": "마르탱 가족의 막내가 햄스터를 안고 있는 동안 루이가 진찰해요.",
+   "blank": "cadet",
+   "src": "made"
+  },
+  {
+   "text": "Le cadet de Claire veut rester éveillé jusqu'à minuit pour la première fois.",
+   "en": "Claire's youngest wants to stay up until midnight for the first time.",
+   "ko": "클레르의 막내는 처음으로 자정까지 깨어 있고 싶어 해요.",
+   "blank": "cadet",
+   "src": "made"
+  }
+ ],
  "w|cadre": [
   {
    "text": "J’ai accroché un nouveau cadre dans le salon.",
@@ -8532,6 +8660,22 @@
    "en": "Camille helps the director of photography calculate the distance between camera and actor.",
    "ko": "카미유는 촬영 감독을 도와 카메라와 배우 사이 거리를 계산해요.",
    "blank": "calculer",
+   "src": "made"
+  }
+ ],
+ "w|caleçon": [
+  {
+   "text": "Le chien d'un client a avalé un caleçon, et Louis doit l'opérer.",
+   "en": "A client's dog swallowed a pair of underpants, and Louis has to operate.",
+   "ko": "손님의 개가 팬티를 삼켜서 루이가 수술해야 해요.",
+   "blank": "caleçon",
+   "src": "made"
+  },
+  {
+   "text": "Claire offre à son mari un caleçon rouge, une tradition italienne pour le nouvel an.",
+   "en": "Claire gives her husband red underwear, an Italian New Year tradition.",
+   "ko": "클레르는 남편에게 새해 이탈리아 풍습대로 빨간 속옷을 선물해요.",
+   "blank": "caleçon",
    "src": "made"
   }
  ],
@@ -13123,6 +13267,22 @@
    "blank": "complexe"
   }
  ],
+ "w|complication": [
+  {
+   "text": "L'opération s'est passée sans complication, annonce Louis au propriétaire.",
+   "en": "The operation went without complications, Louis tells the owner.",
+   "ko": "수술이 합병증 없이 잘 끝났다고 루이가 주인에게 알려요.",
+   "blank": "complication",
+   "src": "made"
+  },
+  {
+   "text": "Le traiteur annule au dernier moment, une complication de plus pour Claire.",
+   "en": "The caterer cancels at the last minute, one more complication for Claire.",
+   "ko": "출장 요리사가 마지막 순간에 취소해서 클레르에게 골칫거리가 하나 더 생겨요.",
+   "blank": "complication",
+   "src": "made"
+  }
+ ],
  "w|complice": [
   {
    "text": "Il était le complice du voleur.",
@@ -14449,6 +14609,22 @@
    "blank": "construire"
   }
  ],
+ "w|consultation": [
+  {
+   "text": "La consultation de Louis coûte moins cher le samedi matin.",
+   "en": "Louis's consultation costs less on Saturday mornings.",
+   "ko": "루이의 진료는 토요일 오전에 더 싸요.",
+   "blank": "consultation",
+   "src": "made"
+  },
+  {
+   "text": "Claire a pris une consultation chez le médecin pour sa toux juste avant les fêtes.",
+   "en": "Claire saw the doctor about her cough just before the holidays.",
+   "ko": "클레르는 연휴 바로 전에 기침 때문에 진료를 받았어요.",
+   "blank": "consultation",
+   "src": "made"
+  }
+ ],
  "w|consulter": [
   {
    "text": "Tu devrais consulter un médecin.",
@@ -15647,6 +15823,22 @@
    "blank": "courant"
   }
  ],
+ "w|coureur": [
+  {
+   "text": "Un coureur amène à Louis son chien qui boite depuis leur dernier marathon.",
+   "en": "A runner brings Louis his dog, which has been limping since their last marathon.",
+   "ko": "한 달리기 선수가 지난 마라톤 이후 절뚝거리는 개를 루이에게 데려와요.",
+   "blank": "coureur",
+   "src": "made"
+  },
+  {
+   "text": "Le mari de Claire, grand coureur, s'inscrit à la course du premier janvier.",
+   "en": "Claire's husband, a keen runner, signs up for the New Year's Day race.",
+   "ko": "달리기를 좋아하는 클레르의 남편은 새해 첫날 달리기 대회에 신청해요.",
+   "blank": "coureur",
+   "src": "made"
+  }
+ ],
  "w|courir": [
   {
    "text": "J'aime courir dans le parc le matin.",
@@ -16696,6 +16888,22 @@
    "en": "Manon gives her mother a cultural gift box with theatre tickets.",
    "ko": "마농은 엄마에게 연극표가 든 문화 선물 세트를 드려요.",
    "blank": "culturel",
+   "src": "made"
+  }
+ ],
+ "w|cure": [
+  {
+   "text": "Louis conseille une cure de vitamines au vieux cheval.",
+   "en": "Louis recommends a course of vitamins for the old horse.",
+   "ko": "루이는 늙은 말에게 비타민 요법을 권해요.",
+   "blank": "cure",
+   "src": "made"
+  },
+  {
+   "text": "Après les fêtes, Claire prévoit une cure de soupe et de légumes.",
+   "en": "After the holidays, Claire plans a soup-and-vegetable detox.",
+   "ko": "연휴가 끝나면 클레르는 수프와 채소로 식단 조절을 할 계획이에요.",
+   "blank": "cure",
    "src": "made"
   }
  ],
@@ -17870,6 +18078,22 @@
    "en": "For the beach party, Manon is dressed up as a mermaid.",
    "ko": "해변 축제에서 마농은 인어로 분장했어요.",
    "blank": "déguisée",
+   "src": "made"
+  }
+ ],
+ "w|déguisement": [
+  {
+   "text": "Pour la fête du quartier, l'assistante de Louis a mis un déguisement de chat.",
+   "en": "For the neighborhood party, Louis's assistant put on a cat costume.",
+   "ko": "동네 축제에서 루이의 조수는 고양이 분장을 했어요.",
+   "blank": "déguisement",
+   "src": "made"
+  },
+  {
+   "text": "Les invités de Claire doivent venir avec un déguisement des années soixante.",
+   "en": "Claire's guests have to come in a sixties costume.",
+   "ko": "클레르의 손님들은 육십 년대 분장을 하고 와야 해요.",
+   "blank": "déguisement",
    "src": "made"
   }
  ],
@@ -21677,6 +21901,22 @@
    "src": "made"
   }
  ],
+ "w|écoulé": [
+  {
+   "text": "Le dossier indique le temps écoulé depuis la dernière visite du perroquet chez Louis.",
+   "en": "The file shows the time elapsed since the parrot's last visit to Louis.",
+   "ko": "기록에는 앵무새가 루이를 마지막으로 찾은 뒤 지난 시간이 나와 있어요.",
+   "blank": "écoulé",
+   "src": "made"
+  },
+  {
+   "text": "Avant minuit, Claire fait le bilan de l'année écoulée avec ses amis.",
+   "en": "Before midnight, Claire looks back on the past year with her friends.",
+   "ko": "자정이 되기 전에 클레르는 친구들과 지난 한 해를 돌아봐요.",
+   "blank": "écoulée",
+   "src": "made"
+  }
+ ],
  "w|écouter": [
   {
    "text": "Je vais écouter la radio ce soir.",
@@ -24053,6 +24293,22 @@
    "blank": "épaule"
   }
  ],
+ "w|épave": [
+  {
+   "text": "Un pêcheur apporte à Louis une tortue trouvée près d'une épave au large.",
+   "en": "A fisherman brings Louis a turtle found near a shipwreck offshore.",
+   "ko": "어부가 먼바다 난파선 근처에서 찾은 거북을 루이에게 데려와요.",
+   "blank": "épave",
+   "src": "made"
+  },
+  {
+   "text": "La vieille voiture de Claire ressemble à une épave, mais elle démarre encore.",
+   "en": "Claire's old car looks like a wreck, but it still starts.",
+   "ko": "클레르의 낡은 차는 고물 같지만 아직 시동은 걸려요.",
+   "blank": "épave",
+   "src": "made"
+  }
+ ],
  "w|épée": [
   {
    "text": "Au musée, Lucas a admiré une épée de chevalier avec sa classe.",
@@ -24741,6 +24997,22 @@
    "en": "I go up to the second floor to see the view.",
    "ko": "나는 전망을 보기 위해 2층으로 올라간다.",
    "blank": "étage"
+  }
+ ],
+ "w|étagère": [
+  {
+   "text": "Les boîtes de croquettes s'empilent sur une étagère derrière le comptoir de Louis.",
+   "en": "Boxes of kibble pile up on a shelf behind Louis's counter.",
+   "ko": "사료 상자가 루이의 카운터 뒤 선반에 쌓여 있어요.",
+   "blank": "étagère",
+   "src": "made"
+  },
+  {
+   "text": "Claire range les bougies sur l'étagère du salon.",
+   "en": "Claire puts the candles on the living room shelf.",
+   "ko": "클레르는 거실 선반에 초를 정리해요.",
+   "blank": "étagère",
+   "src": "made"
   }
  ],
  "w|étape": [
@@ -28387,6 +28659,22 @@
    "src": "made"
   }
  ],
+ "w|fouet": [
+  {
+   "text": "Le chiot de la clinique a volé le fouet de la cuisine, et Louis court après lui.",
+   "en": "The clinic puppy stole the kitchen whisk, and Louis runs after him.",
+   "ko": "동물병원 강아지가 부엌 거품기를 물고 가서 루이가 쫓아가요.",
+   "blank": "fouet",
+   "src": "made"
+  },
+  {
+   "text": "Claire monte les blancs en neige avec un fouet pour la mousse au chocolat.",
+   "en": "Claire whips the egg whites with a whisk for the chocolate mousse.",
+   "ko": "클레르는 초콜릿 무스를 만들려고 거품기로 흰자를 휘저어요.",
+   "blank": "fouet",
+   "src": "made"
+  }
+ ],
  "w|fouiller": [
   {
    "text": "La police va fouiller la maison.",
@@ -31333,6 +31621,22 @@
    "src": "made"
   }
  ],
+ "w|hangar": [
+  {
+   "text": "La clinique de Louis soigne aussi les chevaux dans un grand hangar derrière le bâtiment.",
+   "en": "Louis's clinic also treats horses in a big shed behind the building.",
+   "ko": "루이의 동물병원은 건물 뒤 큰 창고에서 말도 치료해요.",
+   "blank": "hangar",
+   "src": "made"
+  },
+  {
+   "text": "Claire et ses amis organisent la fête du nouvel an dans un hangar décoré.",
+   "en": "Claire and her friends are holding the New Year's party in a decorated hangar.",
+   "ko": "클레르와 친구들은 장식한 창고에서 새해 파티를 열어요.",
+   "blank": "hangar",
+   "src": "made"
+  }
+ ],
  "w|hanté": [
   {
    "text": "Au bureau, on plaisante en disant que le sous-sol est hanté, et Thomas n'y va jamais seul.",
@@ -31989,6 +32293,22 @@
    "en": "Look, the clock already says noon.",
    "ko": "봐, 시계가 벌써 정오를 가리키고 있어.",
    "blank": "horloge"
+  }
+ ],
+ "w|hormone": [
+  {
+   "text": "Le vétérinaire explique à Louis qu'une hormone fait grossir son vieux chien.",
+   "en": "The vet explains to Louis that a hormone is making his old dog gain weight.",
+   "ko": "수의사는 루이에게 호르몬 때문에 늙은 개가 살이 찐다고 설명해요.",
+   "blank": "hormone",
+   "src": "made"
+  },
+  {
+   "text": "La sœur de Claire, enceinte, dit en riant que ses hormones la rendent gourmande.",
+   "en": "Claire's pregnant sister laughs that her hormones make her greedy for food.",
+   "ko": "임신한 클레르의 언니는 호르몬 때문에 먹을 게 당긴다며 웃어요.",
+   "blank": "hormones",
+   "src": "made"
   }
  ],
  "w|horreur": [
@@ -32878,6 +33198,22 @@
    "en": "The art fair jury was ruthless with Sarah's class.",
    "ko": "미술전 심사위원들은 사라네 반에게 냉정했어요.",
    "blank": "impitoyable",
+   "src": "made"
+  }
+ ],
+ "w|implant": [
+  {
+   "text": "Louis pose un implant électronique sous la peau du chiot pour l'identifier.",
+   "en": "Louis places an electronic chip under the puppy's skin to identify it.",
+   "ko": "루이는 강아지를 식별하려고 피부 밑에 전자 칩을 심어요.",
+   "blank": "implant",
+   "src": "made"
+  },
+  {
+   "text": "Le grand-père de Claire porte un implant auditif et entend enfin les blagues à table.",
+   "en": "Claire's grandfather has a hearing implant and can finally hear the jokes at the table.",
+   "ko": "클레르의 할아버지는 인공 와우를 달아서 이제 식탁의 농담을 들을 수 있어요.",
+   "blank": "implant",
    "src": "made"
   }
  ],
@@ -34795,6 +35131,22 @@
    "en": "The radio interview lasted twenty minutes.",
    "ko": "라디오 인터뷰는 이십 분 동안 진행됐어요.",
    "blank": "interview"
+  }
+ ],
+ "w|intestin": [
+  {
+   "text": "Louis vérifie à la radio que rien ne bloque l'intestin du chien.",
+   "en": "Louis checks on the X-ray that nothing is blocking the dog's intestine.",
+   "ko": "루이는 엑스레이로 개의 장이 막히지 않았는지 확인해요.",
+   "blank": "intestin",
+   "src": "made"
+  },
+  {
+   "text": "Après trop de foie gras, Claire a l'intestin un peu fragile.",
+   "en": "After too much foie gras, Claire's gut is a little upset.",
+   "ko": "푸아그라를 너무 먹어서 클레르는 배 속이 좀 안 좋아요.",
+   "blank": "intestin",
+   "src": "made"
   }
  ],
  "w|intime": [
@@ -39931,6 +40283,22 @@
    "blank": "mentir"
   }
  ],
+ "w|menton": [
+  {
+   "text": "Louis gratte le chat sous le menton pour le calmer avant l'examen.",
+   "en": "Louis scratches the cat under the chin to calm it before the exam.",
+   "ko": "루이는 진찰 전에 고양이를 진정시키려고 턱 밑을 긁어 줘요.",
+   "blank": "menton",
+   "src": "made"
+  },
+  {
+   "text": "Claire essuie le chocolat sur le menton de son fils avant la photo de famille.",
+   "en": "Claire wipes the chocolate off her son's chin before the family photo.",
+   "ko": "클레르는 가족사진을 찍기 전에 아들 턱에 묻은 초콜릿을 닦아 줘요.",
+   "blank": "menton",
+   "src": "made"
+  }
+ ],
  "w|mentor": [
   {
    "text": "Nicolas est devenu le mentor des deux nouveaux apprentis.",
@@ -42213,6 +42581,22 @@
    "blank": "navette"
   }
  ],
+ "w|naviguer": [
+  {
+   "text": "Avant chaque visite, Louis doit naviguer entre trois logiciels pour retrouver le dossier de l'animal.",
+   "en": "Before every visit, Louis has to navigate between three programs to find the animal's file.",
+   "ko": "진료마다 루이는 동물 기록을 찾으려고 프로그램 세 개를 오가야 해요.",
+   "blank": "naviguer",
+   "src": "made"
+  },
+  {
+   "text": "Claire aime naviguer sur les sites de recettes pour trouver de nouvelles idées.",
+   "en": "Claire likes browsing recipe websites to find new ideas.",
+   "ko": "클레르는 새 아이디어를 찾으려고 요리 사이트를 둘러보는 걸 좋아해요.",
+   "blank": "naviguer",
+   "src": "made"
+  }
+ ],
  "w|navire": [
   {
    "text": "Le navire quitte le port ce soir.",
@@ -43119,6 +43503,22 @@
    "en": "Write down my number please.",
    "ko": "내 번호 적어줘.",
    "blank": "numéro"
+  }
+ ],
+ "w|nuque": [
+  {
+   "text": "Louis attrape le chat par la peau de la nuque pour lui donner son médicament.",
+   "en": "Louis grabs the cat by the scruff of the neck to give it its medicine.",
+   "ko": "루이는 약을 먹이려고 고양이 목덜미를 잡아요.",
+   "blank": "nuque",
+   "src": "made"
+  },
+  {
+   "text": "Claire relève ses cheveux et laisse voir sa nuque.",
+   "en": "Claire puts her hair up, showing the nape of her neck.",
+   "ko": "클레르는 머리를 올려 목덜미를 드러내요.",
+   "blank": "nuque",
+   "src": "made"
   }
  ],
  "w|obéir": [
@@ -44887,6 +45287,22 @@
    "en": "A new sign was installed in front of the school.",
    "ko": "학교 앞에 새 표지판이 설치됐어.",
    "blank": "panneau"
+  }
+ ],
+ "w|pansement": [
+  {
+   "text": "Louis change le pansement du chien tous les deux jours.",
+   "en": "Louis changes the dog's bandage every other day.",
+   "ko": "루이는 이틀마다 개의 붕대를 갈아요.",
+   "blank": "pansement",
+   "src": "made"
+  },
+  {
+   "text": "Claire met un pansement sur son doigt et continue de cuisiner.",
+   "en": "Claire puts a plaster on her finger and keeps cooking.",
+   "ko": "클레르는 손가락에 반창고를 붙이고 계속 요리해요.",
+   "blank": "pansement",
+   "src": "made"
   }
  ],
  "w|pantalon": [
@@ -51419,6 +51835,22 @@
    "src": "made"
   }
  ],
+ "w|psychologie": [
+  {
+   "text": "Louis lit beaucoup de livres sur la psychologie des chats.",
+   "en": "Louis reads a lot of books on cat psychology.",
+   "ko": "루이는 고양이 심리학 책을 많이 읽어요.",
+   "blank": "psychologie",
+   "src": "made"
+  },
+  {
+   "text": "Claire a étudié la psychologie, alors ses amis lui confient leurs résolutions.",
+   "en": "Claire studied psychology, so her friends confide their resolutions to her.",
+   "ko": "클레르가 심리학을 공부해서 친구들은 새해 결심을 털어놓아요.",
+   "blank": "psychologie",
+   "src": "made"
+  }
+ ],
  "w|psychologique": [
   {
    "text": "Selon Paul, le chien abandonné garde un blocage psychologique face aux hommes.",
@@ -51432,6 +51864,22 @@
    "en": "The psychological stress of the first day tires Émilie more than the work itself.",
    "ko": "첫날의 심리적 긴장이 일 자체보다 에밀리를 더 지치게 해요.",
    "blank": "psychologique",
+   "src": "made"
+  }
+ ],
+ "w|psychologue": [
+  {
+   "text": "Louis travaille avec une psychologue pour animaux qui aide les chiens anxieux.",
+   "en": "Louis works with an animal psychologist who helps anxious dogs.",
+   "ko": "루이는 불안한 개들을 돕는 동물 심리 전문가와 함께 일해요.",
+   "blank": "psychologue",
+   "src": "made"
+  },
+  {
+   "text": "Claire a invité une amie psychologue qui raconte des histoires passionnantes.",
+   "en": "Claire invited a friend who's a psychologist and tells fascinating stories.",
+   "ko": "클레르는 재미있는 이야기를 잘하는 심리학자 친구를 초대했어요.",
+   "blank": "psychologue",
    "src": "made"
   }
  ],
@@ -52179,6 +52627,22 @@
    "en": "Can you take me back to the station?",
    "ko": "역까지 데려다줄 수 있어?",
    "blank": "raccompagner"
+  }
+ ],
+ "w|raccourci": [
+  {
+   "text": "Pour arriver vite à la ferme, Louis prend un raccourci par la forêt.",
+   "en": "To get to the farm quickly, Louis takes a shortcut through the forest.",
+   "ko": "농장에 빨리 가려고 루이는 숲을 지나는 지름길로 가요.",
+   "blank": "raccourci",
+   "src": "made"
+  },
+  {
+   "text": "Claire prend un raccourci par le parc pour arriver à la boulangerie avant la fermeture.",
+   "en": "Claire takes a shortcut through the park to reach the bakery before closing.",
+   "ko": "클레르는 빵집이 문 닫기 전에 가려고 공원을 가로지르는 지름길로 가요.",
+   "blank": "raccourci",
+   "src": "made"
   }
  ],
  "w|raccrocher": [
@@ -53760,6 +54224,22 @@
    "en": "Chloé sees her neighbour's reflection in the lift window.",
    "ko": "클로에는 엘리베이터 유리에 비친 이웃의 모습을 봐요.",
    "blank": "reflet",
+   "src": "made"
+  }
+ ],
+ "w|réflexe": [
+  {
+   "text": "Louis teste les réflexes du chat en tapant doucement sur sa patte.",
+   "en": "Louis tests the cat's reflexes by gently tapping its paw.",
+   "ko": "루이는 고양이 발을 살짝 두드려 반사 반응을 확인해요.",
+   "blank": "réflexes",
+   "src": "made"
+  },
+  {
+   "text": "Claire a eu le bon réflexe de rattraper le plateau avant qu'il tombe.",
+   "en": "Claire had the quick reflex to catch the tray before it fell.",
+   "ko": "클레르는 쟁반이 떨어지기 전에 재빨리 잡았어요.",
+   "blank": "réflexe",
    "src": "made"
   }
  ],
@@ -55763,6 +56243,22 @@
    "blank": "retard"
   }
  ],
+ "w|retarder": [
+  {
+   "text": "Une urgence oblige Louis à retarder tous ses rendez-vous de l'après-midi.",
+   "en": "An emergency forces Louis to push back all his afternoon appointments.",
+   "ko": "응급 환자 때문에 루이는 오후 예약을 모두 미뤄야 해요.",
+   "blank": "retarder",
+   "src": "made"
+  },
+  {
+   "text": "La neige risque de retarder l'arrivée des parents de Claire.",
+   "en": "The snow may delay the arrival of Claire's parents.",
+   "ko": "눈 때문에 클레르의 부모님이 늦게 도착할 수도 있어요.",
+   "blank": "retarder",
+   "src": "made"
+  }
+ ],
  "w|retenir": [
   {
    "text": "Je vais retenir ta place au cinéma.",
@@ -57113,6 +57609,22 @@
    "blank": "sagesse"
   }
  ],
+ "w|saignement": [
+  {
+   "text": "Louis arrête le saignement de la patte du chat avec une compresse.",
+   "en": "Louis stops the bleeding from the cat's paw with a compress.",
+   "ko": "루이는 거즈로 고양이 발의 출혈을 멈춰요.",
+   "blank": "saignement",
+   "src": "made"
+  },
+  {
+   "text": "Claire s'est coupée en épluchant les huîtres, mais le saignement s'est vite arrêté.",
+   "en": "Claire cut herself shucking oysters, but the bleeding soon stopped.",
+   "ko": "클레르는 굴을 까다 손을 베었지만 피는 금방 멈췄어요.",
+   "blank": "saignement",
+   "src": "made"
+  }
+ ],
  "w|saigner": [
   {
    "text": "Je me suis coupé et ça commence à saigner.",
@@ -58355,6 +58867,22 @@
    "blank": "sécurité"
   }
  ],
+ "w|sédatif": [
+  {
+   "text": "Avant de soigner le cheval nerveux, Louis lui donne un sédatif léger.",
+   "en": "Before treating the nervous horse, Louis gives it a mild sedative.",
+   "ko": "루이는 예민한 말을 치료하기 전에 약한 진정제를 줘요.",
+   "blank": "sédatif",
+   "src": "made"
+  },
+  {
+   "text": "Le chien de Claire a peur des feux d'artifice, alors le vétérinaire lui a prescrit un sédatif.",
+   "en": "Claire's dog is scared of fireworks, so the vet prescribed him a sedative.",
+   "ko": "클레르의 개가 불꽃놀이를 무서워해서 수의사가 진정제를 처방했어요.",
+   "blank": "sédatif",
+   "src": "made"
+  }
+ ],
  "w|séduire": [
   {
    "text": "Le nouveau a vite séduit toute l'équipe de Julien avec ses croissants du lundi.",
@@ -58865,6 +59393,22 @@
    "blank": "sérieux"
   }
  ],
+ "w|seringue": [
+  {
+   "text": "Louis prépare la seringue pendant que l'assistante tient le lapin.",
+   "en": "Louis prepares the syringe while the assistant holds the rabbit.",
+   "ko": "조수가 토끼를 잡고 있는 동안 루이는 주사기를 준비해요.",
+   "blank": "seringue",
+   "src": "made"
+  },
+  {
+   "text": "Claire décore les gâteaux avec une seringue à pâtisserie.",
+   "en": "Claire decorates the cakes with a piping syringe.",
+   "ko": "클레르는 짤주머니로 케이크를 장식해요.",
+   "blank": "seringue",
+   "src": "made"
+  }
+ ],
  "w|serment": [
   {
    "text": "Le juge a demandé au témoin de faire un serment.",
@@ -59199,6 +59743,22 @@
    "en": "Online shopping wears me out.",
    "ko": "온라인 쇼핑은 피곤해.",
    "blank": "shopping"
+  }
+ ],
+ "w|short": [
+  {
+   "text": "En été, Louis travaille en short sous sa blouse blanche.",
+   "en": "In summer, Louis works in shorts under his white coat.",
+   "ko": "여름이면 루이는 흰 가운 아래 반바지를 입고 일해요.",
+   "blank": "short",
+   "src": "made"
+  },
+  {
+   "text": "Pour le réveillon à la plage, la cousine de Claire viendra en short.",
+   "en": "For the beach New Year's Eve, Claire's cousin will come in shorts.",
+   "ko": "바닷가 송년 파티라 클레르의 사촌은 반바지를 입고 올 거예요.",
+   "blank": "short",
+   "src": "made"
   }
  ],
  "w|show": [
@@ -60883,6 +61443,22 @@
    "src": "made"
   }
  ],
+ "w|spa": [
+  {
+   "text": "La cliente de Louis emmène son caniche au spa pour chiens chaque mois.",
+   "en": "Louis's client takes her poodle to a dog spa every month.",
+   "ko": "루이의 손님은 매달 푸들을 개 전용 스파에 데려가요.",
+   "blank": "spa",
+   "src": "made"
+  },
+  {
+   "text": "Pour se détendre après les préparatifs, Claire s'offre une journée au spa.",
+   "en": "To relax after the preparations, Claire treats herself to a spa day.",
+   "ko": "준비를 마치고 쉬려고 클레르는 스파에서 하루를 보내요.",
+   "blank": "spa",
+   "src": "made"
+  }
+ ],
  "w|spaghetti": [
   {
    "text": "Le petit frère d'Antoine mange ses spaghettis avec les doigts.",
@@ -61106,6 +61682,22 @@
    "en": "The sports drinks section is Inès's best seller in summer.",
    "ko": "여름이면 이네스 가게에서 스포츠음료 칸이 제일 잘 팔려요.",
    "blank": "sportives",
+   "src": "made"
+  }
+ ],
+ "w|squelette": [
+  {
+   "text": "Louis montre aux enfants le squelette d'un chien accroché dans la salle d'attente.",
+   "en": "Louis shows the children the dog skeleton hanging in the waiting room.",
+   "ko": "루이는 아이들에게 대기실에 걸린 개 골격을 보여 줘요.",
+   "blank": "squelette",
+   "src": "made"
+  },
+  {
+   "text": "Le neveu de Claire veut un costume de squelette pour la soirée.",
+   "en": "Claire's nephew wants a skeleton costume for the party.",
+   "ko": "클레르의 조카는 파티에 해골 의상을 입고 싶어 해요.",
+   "blank": "squelette",
    "src": "made"
   }
  ],
@@ -63023,6 +63615,22 @@
    "blank": "technologie"
   }
  ],
+ "w|teint": [
+  {
+   "text": "Après une nuit de garde, Louis a le teint pâle et les yeux fatigués.",
+   "en": "After a night on call, Louis looks pale and has tired eyes.",
+   "ko": "야간 당직을 마친 루이는 안색이 창백하고 눈이 피곤해 보여요.",
+   "blank": "teint",
+   "src": "made"
+  },
+  {
+   "text": "Grâce à une bonne nuit de sommeil, Claire a le teint frais pour la soirée.",
+   "en": "Thanks to a good night's sleep, Claire looks fresh for the party.",
+   "ko": "푹 잔 덕분에 클레르는 파티에서 안색이 생기 있어요.",
+   "blank": "teint",
+   "src": "made"
+  }
+ ],
  "w|tel": [
   {
    "text": "Un tel problème n'est pas facile à résoudre.",
@@ -64934,6 +65542,22 @@
    "en": "Camille's car has a transmission problem.",
    "ko": "카미유의 차는 변속기에 문제가 있어요.",
    "blank": "transmission",
+   "src": "made"
+  }
+ ],
+ "w|transpirer": [
+  {
+   "text": "Les chiens ne peuvent pas transpirer comme nous, rappelle Louis à une cliente inquiète.",
+   "en": "Dogs can't sweat like we do, Louis reminds a worried client.",
+   "ko": "개는 우리처럼 땀을 흘리지 못한다고 루이가 걱정하는 손님에게 알려 줘요.",
+   "blank": "transpirer",
+   "src": "made"
+  },
+  {
+   "text": "Claire commence à transpirer en portant les caisses de champagne jusqu'au troisième étage.",
+   "en": "Claire starts to sweat carrying the cases of champagne up to the third floor.",
+   "ko": "클레르는 샴페인 상자를 삼 층까지 나르다가 땀이 나기 시작해요.",
+   "blank": "transpirer",
    "src": "made"
   }
  ],
@@ -67334,6 +67958,22 @@
    "en": "Chloé's colleague plays the violin in an amateur orchestra at weekends.",
    "ko": "클로에의 동료는 주말에 아마추어 오케스트라에서 바이올린을 켜요.",
    "blank": "violon",
+   "src": "made"
+  }
+ ],
+ "w|virage": [
+  {
+   "text": "Dans le dernier virage avant la clinique, Louis voit un chien perdu.",
+   "en": "At the last bend before the clinic, Louis sees a lost dog.",
+   "ko": "동물병원 앞 마지막 커브에서 루이는 길 잃은 개를 봐요.",
+   "blank": "virage",
+   "src": "made"
+  },
+  {
+   "text": "La voiture de Claire glisse un peu dans le virage enneigé.",
+   "en": "Claire's car skids a little on the snowy bend.",
+   "ko": "클레르의 차가 눈 덮인 커브에서 조금 미끄러져요.",
+   "blank": "virage",
    "src": "made"
   }
  ],

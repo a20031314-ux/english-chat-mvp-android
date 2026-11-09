@@ -3557,6 +3557,22 @@
    "blank": "仅仅"
   }
  ],
+ "w|今后": [
+  {
+   "text": "王刚对教练说，今后每天都会早起来锻炼。",
+   "en": "Wang Gang told the trainer that from now on he'd get up early to work out every day.",
+   "ko": "왕강은 트레이너에게 앞으로 매일 일찍 일어나 운동하겠다고 했어요.",
+   "blank": "今后",
+   "src": "made"
+  },
+  {
+   "text": "李娜想，今后出远门还是坐火车舒服。",
+   "en": "Li Na thought that from now on, the train is the more comfortable way to travel far.",
+   "ko": "리나는 앞으로 먼 길은 기차가 편하겠다고 생각했어요.",
+   "blank": "今后",
+   "src": "made"
+  }
+ ],
  "w|今天": [
   {
    "text": "今天休息。",
@@ -4915,6 +4931,22 @@
    "src": "made"
   }
  ],
+ "w|何必": [
+  {
+   "text": "教练笑着说，偶尔吃块蛋糕没关系，何必那么紧张。",
+   "en": "The trainer laughed and said an occasional piece of cake is fine—why be so uptight?",
+   "ko": "트레이너는 웃으며 가끔 케이크 한 조각쯤은 괜찮은데 뭘 그렇게 긴장하냐고 했어요.",
+   "blank": "何必",
+   "src": "made"
+  },
+  {
+   "text": "李娜的姐姐说，坐飞机两个小时就到，何必坐一整天火车。",
+   "en": "Li Na's sister said a plane would take two hours, so why spend a whole day on the train?",
+   "ko": "리나의 언니는 비행기로 두 시간이면 가는데 왜 하루 종일 기차를 타냐고 했어요.",
+   "blank": "何必",
+   "src": "made"
+  }
+ ],
  "w|何时": [
   {
    "text": "你何时回来？",
@@ -6040,6 +6072,22 @@
    "en": "Xiaoxue majors in piano but occasionally sits in on composition classes.",
    "ko": "샤오쉐는 피아노 전공이지만 가끔 작곡 수업도 청강해요.",
    "blank": "偶尔",
+   "src": "made"
+  }
+ ],
+ "w|偶然": [
+  {
+   "text": "王刚偶然在健身房碰到了大学时的室友。",
+   "en": "Wang Gang ran into his old college roommate at the gym by chance.",
+   "ko": "왕강은 헬스장에서 우연히 대학 시절 룸메이트를 만났어요.",
+   "blank": "偶然",
+   "src": "made"
+  },
+  {
+   "text": "李娜在餐车偶然认识了一位同乡。",
+   "en": "Li Na happened to meet someone from her hometown in the dining car.",
+   "ko": "리나는 식당칸에서 우연히 고향 사람을 알게 됐어요.",
+   "blank": "偶然",
    "src": "made"
   }
  ],
@@ -9493,6 +9541,22 @@
    "blank": "勇气"
   }
  ],
+ "w|勉强": [
+  {
+   "text": "最后一组王刚只能勉强举起来，手臂一直在抖。",
+   "en": "On the last set Wang Gang could barely lift it, and his arms kept shaking.",
+   "ko": "마지막 세트에서 왕강은 겨우 들어 올렸고 팔이 계속 떨렸어요.",
+   "blank": "勉强",
+   "src": "made"
+  },
+  {
+   "text": "过道太窄，两个人勉强才能侧身通过。",
+   "en": "The aisle is so narrow that two people can barely squeeze past sideways.",
+   "ko": "통로가 너무 좁아서 두 사람이 몸을 옆으로 돌려야 겨우 지나갈 수 있어요.",
+   "blank": "勉强",
+   "src": "made"
+  }
+ ],
  "w|勒": [
   {
    "text": "陈杰把围裙的带子勒得太紧，干了一上午腰都疼了。",
@@ -9659,6 +9723,22 @@
    "en": "Please leave the danger zone.",
    "ko": "위험 구역을 벗어나 주세요.",
    "blank": "区域"
+  }
+ ],
+ "w|医学": [
+  {
+   "text": "王刚的教练大学学的是运动医学。",
+   "en": "Wang Gang's trainer studied sports medicine in college.",
+   "ko": "왕강의 트레이너는 대학에서 스포츠 의학을 전공했어요.",
+   "blank": "医学",
+   "src": "made"
+  },
+  {
+   "text": "李娜这次是去北京参加一个医学会议。",
+   "en": "Li Na is going to Beijing for a medical conference this time.",
+   "ko": "리나는 이번에 베이징에서 열리는 의학 학회에 가는 길이에요.",
+   "blank": "医学",
+   "src": "made"
   }
  ],
  "w|医生": [
@@ -9933,6 +10013,22 @@
    "en": "Don't let him go out alone.",
    "ko": "그를 혼자 내보내지 마.",
    "blank": "单独"
+  }
+ ],
+ "w|单纯": [
+  {
+   "text": "王刚健身的理由很单纯，就是想爬楼梯不喘。",
+   "en": "Wang Gang's reason for working out is simple: he just wants to climb stairs without getting winded.",
+   "ko": "왕강이 운동하는 이유는 단순해요. 계단을 오를 때 숨이 안 차고 싶을 뿐이에요.",
+   "blank": "单纯",
+   "src": "made"
+  },
+  {
+   "text": "邻座的小姑娘很单纯，问李娜火车会不会飞。",
+   "en": "The little girl in the next seat was very innocent and asked Li Na if trains can fly.",
+   "ko": "옆자리 꼬마는 아주 순진해서 리나에게 기차가 날 수 있냐고 물었어요.",
+   "blank": "单纯",
+   "src": "made"
   }
  ],
  "w|单词": [
@@ -10371,6 +10467,22 @@
    "blank": "厕所"
   }
  ],
+ "w|厚": [
+  {
+   "text": "瑜伽教室的垫子很厚，躺上去特别舒服。",
+   "en": "The yoga room mats are thick and very comfortable to lie on.",
+   "ko": "요가실 매트가 두꺼워서 누우면 아주 편해요.",
+   "blank": "厚",
+   "src": "made"
+  },
+  {
+   "text": "卧铺的被子很厚，李娜睡得一点也不冷。",
+   "en": "The blanket on the sleeper berth was thick, and Li Na wasn't cold at all.",
+   "ko": "침대칸 이불이 두꺼워서 리나는 하나도 춥지 않게 잤어요.",
+   "blank": "厚",
+   "src": "made"
+  }
+ ],
  "w|原则": [
   {
    "text": "小明的原则是，作业再多也要当天写完。",
@@ -10621,6 +10733,22 @@
    "blank": "及"
   }
  ],
+ "w|及时": [
+  {
+   "text": "王刚扭了腰，幸好教练及时让他停下来。",
+   "en": "Wang Gang tweaked his back, but luckily the trainer stopped him in time.",
+   "ko": "왕강이 허리를 삐끗했는데 다행히 트레이너가 제때 멈추게 했어요.",
+   "blank": "及时",
+   "src": "made"
+  },
+  {
+   "text": "李娜及时赶上了火车，车门在她身后关上了。",
+   "en": "Li Na caught the train just in time, and the doors closed behind her.",
+   "ko": "리나가 제때 기차에 올라타자 문이 뒤에서 닫혔어요.",
+   "blank": "及时",
+   "src": "made"
+  }
+ ],
  "w|友好": [
   {
    "text": "王刚在山上遇到一群很友好的登山客，大家一起吃了午饭。",
@@ -10650,6 +10778,22 @@
    "en": "Lili put a pair of slippers by the door just for friends who come to help.",
    "ko": "리리는 도와주러 오는 친구들이 신으라고 현관에 슬리퍼 한 켤레를 놓아 뒀어요.",
    "blank": "双",
+   "src": "made"
+  }
+ ],
+ "w|双手": [
+  {
+   "text": "教练让王刚用双手握紧杠铃，背要挺直。",
+   "en": "The trainer told Wang Gang to grip the barbell tightly with both hands and keep his back straight.",
+   "ko": "트레이너는 왕강에게 두 손으로 바벨을 꽉 잡고 허리를 곧게 펴라고 했어요.",
+   "blank": "双手",
+   "src": "made"
+  },
+  {
+   "text": "李娜双手捧着热茶，看着窗外的雪。",
+   "en": "Li Na held hot tea in both hands and watched the snow outside the window.",
+   "ko": "리나는 두 손으로 뜨거운 차를 감싸 쥐고 창밖의 눈을 바라봤어요.",
+   "blank": "双手",
    "src": "made"
   }
  ],
@@ -10771,6 +10915,22 @@
    "en": "The salary was paid.",
    "ko": "월급이 나왔어.",
    "blank": "发"
+  }
+ ],
+ "w|发作": [
+  {
+   "text": "王刚的老胃病又发作了，只好请假一周不去健身。",
+   "en": "Wang Gang's old stomach trouble flared up again, so he had to skip the gym for a week.",
+   "ko": "왕강은 고질적인 위장병이 또 도져서 일주일 동안 헬스장을 쉬었어요.",
+   "blank": "发作",
+   "src": "made"
+  },
+  {
+   "text": "一位老人的心脏病在车上发作，列车员赶紧广播找医生。",
+   "en": "An old man's heart condition flared up on the train, and the attendant quickly announced a call for a doctor.",
+   "ko": "한 노인이 기차에서 심장병이 발작해서 승무원이 급히 의사를 찾는 방송을 했어요.",
+   "blank": "发作",
+   "src": "made"
   }
  ],
  "w|发出": [
@@ -11245,6 +11405,22 @@
    "en": "Put your hands in your pockets.",
    "ko": "손을 주머니에 넣어.",
    "blank": "口袋"
+  }
+ ],
+ "w|古代": [
+  {
+   "text": "教练说古代的士兵也要靠举石头练力气。",
+   "en": "The trainer said soldiers in ancient times also built strength by lifting stones.",
+   "ko": "트레이너는 옛날 병사들도 돌을 들어서 힘을 길렀다고 했어요.",
+   "blank": "古代",
+   "src": "made"
+  },
+  {
+   "text": "火车经过一座古代的城墙，乘客们纷纷拍照。",
+   "en": "The train passed an ancient city wall, and passengers took photos one after another.",
+   "ko": "기차가 고대 성벽을 지나가자 승객들이 앞다투어 사진을 찍었어요.",
+   "blank": "古代",
+   "src": "made"
   }
  ],
  "w|古怪": [
@@ -11731,6 +11907,22 @@
    "en": "Sit on the right.",
    "ko": "오른쪽에 앉아.",
    "blank": "右"
+  }
+ ],
+ "w|右手": [
+  {
+   "text": "王刚的右手腕有旧伤，做俯卧撑要特别小心。",
+   "en": "Wang Gang has an old injury in his right wrist, so he has to be extra careful with push-ups.",
+   "ko": "왕강은 오른손 손목에 옛 부상이 있어서 팔굽혀펴기를 할 때 특히 조심해야 해요.",
+   "blank": "右手",
+   "src": "made"
+  },
+  {
+   "text": "李娜右手拿着车票，左手拖着行李箱。",
+   "en": "Li Na held her ticket in her right hand and pulled her suitcase with her left.",
+   "ko": "리나는 오른손에 기차표를 들고 왼손으로 캐리어를 끌었어요.",
+   "blank": "右手",
+   "src": "made"
   }
  ],
  "w|右边": [
@@ -12649,6 +12841,22 @@
    "en": "He attracted everyone's gaze.",
    "ko": "그는 모든 시선을 끌었어.",
    "blank": "吸引"
+  }
+ ],
+ "w|吸收": [
+  {
+   "text": "教练说，运动后半小时内身体吸收蛋白质最快。",
+   "en": "The trainer says the body absorbs protein fastest within half an hour after exercise.",
+   "ko": "트레이너는 운동 후 삼십 분 안에 몸이 단백질을 가장 빨리 흡수한다고 해요.",
+   "blank": "吸收",
+   "src": "made"
+  },
+  {
+   "text": "李娜靠着窗户发呆，脑子慢慢吸收着这几天的事。",
+   "en": "Li Na leaned against the window, letting her mind slowly take in the past few days.",
+   "ko": "리나는 창가에 기대 멍하니 앉아 요 며칠 일을 천천히 받아들였어요.",
+   "blank": "吸收",
+   "src": "made"
   }
  ],
  "w|吸血鬼": [
@@ -13873,6 +14081,22 @@
    "en": "He's a smooth talker.",
    "ko": "그는 입이 달콤해.",
    "blank": "嘴"
+  }
+ ],
+ "w|嘴唇": [
+  {
+   "text": "冬天空气干，王刚跑完步嘴唇都裂了。",
+   "en": "The air is dry in winter, and Wang Gang's lips cracked after running.",
+   "ko": "겨울엔 공기가 건조해서 왕강은 달리고 나면 입술이 다 터요.",
+   "blank": "嘴唇",
+   "src": "made"
+  },
+  {
+   "text": "车厢里暖气太足，李娜的嘴唇干得起皮。",
+   "en": "The heating in the carriage was so strong that Li Na's lips got dry and flaky.",
+   "ko": "기차 안 난방이 너무 세서 리나의 입술이 말라서 껍질이 일어났어요.",
+   "blank": "嘴唇",
+   "src": "made"
   }
  ],
  "w|嘴巴": [
@@ -15995,6 +16219,22 @@
    "blank": "大约"
   }
  ],
+ "w|大胆": [
+  {
+   "text": "王刚大胆报名参加了今年的健美比赛。",
+   "en": "Wang Gang boldly signed up for this year's bodybuilding competition.",
+   "ko": "왕강은 과감하게 올해 보디빌딩 대회에 신청했어요.",
+   "blank": "大胆",
+   "src": "made"
+  },
+  {
+   "text": "李娜大胆地跟对面的外国游客聊了起来。",
+   "en": "Li Na boldly struck up a conversation with the foreign tourist across from her.",
+   "ko": "리나는 용기를 내서 맞은편 외국인 관광객과 이야기를 나눴어요.",
+   "blank": "大胆",
+   "src": "made"
+  }
+ ],
  "w|大脑": [
   {
    "text": "大脑需要休息。",
@@ -17701,6 +17941,22 @@
    "src": "made"
   }
  ],
+ "w|季节": [
+  {
+   "text": "换季节的时候，健身房总会推出新的会员优惠。",
+   "en": "When the seasons change, the gym always launches new membership deals.",
+   "ko": "계절이 바뀔 때마다 헬스장은 새 회원 할인을 내놓아요.",
+   "blank": "季节",
+   "src": "made"
+  },
+  {
+   "text": "这个季节坐火车，沿路都是金黄的稻田。",
+   "en": "Taking the train this season, you see golden rice fields all along the way.",
+   "ko": "이 계절에 기차를 타면 길가가 온통 황금빛 논이에요.",
+   "blank": "季节",
+   "src": "made"
+  }
+ ],
  "w|孤单": [
   {
    "text": "庭审结束后，空荡荡的法庭里只剩马林一个人，显得有点孤单。",
@@ -18894,6 +19150,22 @@
    "en": "Liu Fang's desk faces the window, and she can see the river just by looking up.",
    "ko": "류팡의 자리는 창문 맞은편이라 고개만 들면 강이 보여요.",
    "blank": "对面",
+   "src": "made"
+  }
+ ],
+ "w|寻常": [
+  {
+   "text": "王刚今天举的重量很不寻常，连教练都吃了一惊。",
+   "en": "The weight Wang Gang lifted today was unusual, and even the trainer was surprised.",
+   "ko": "왕강이 오늘 든 무게가 예사롭지 않아서 트레이너도 깜짝 놀랐어요.",
+   "blank": "寻常",
+   "src": "made"
+  },
+  {
+   "text": "火车晚点了三个小时，这在这条线上很不寻常。",
+   "en": "The train was three hours late, which is unusual on this line.",
+   "ko": "기차가 세 시간이나 늦었는데 이 노선에서는 아주 드문 일이에요.",
+   "blank": "寻常",
    "src": "made"
   }
  ],
@@ -22279,6 +22551,22 @@
    "en": "Look to the left.",
    "ko": "왼쪽을 봐.",
    "blank": "往"
+  }
+ ],
+ "w|往往": [
+  {
+   "text": "刚开始健身的人往往练得太猛，第二天就起不来了。",
+   "en": "People who have just started working out often push too hard and can't get up the next day.",
+   "ko": "운동을 막 시작한 사람은 흔히 너무 무리해서 다음 날 일어나지 못해요.",
+   "blank": "往往",
+   "src": "made"
+  },
+  {
+   "text": "长途火车上，陌生人往往会聊得很投机。",
+   "en": "On long-distance trains, strangers often hit it off in conversation.",
+   "ko": "장거리 기차에서는 낯선 사람끼리 흔히 말이 잘 통해요.",
+   "blank": "往往",
+   "src": "made"
   }
  ],
  "w|征服": [
@@ -28943,6 +29231,22 @@
    "blank": "早晨"
   }
  ],
+ "w|早期": [
+  {
+   "text": "医生说，很多病在早期发现就容易治好。",
+   "en": "The doctor says many illnesses are easy to treat if caught early.",
+   "ko": "의사는 많은 병이 초기에 발견하면 쉽게 낫는다고 해요.",
+   "blank": "早期",
+   "src": "made"
+  },
+  {
+   "text": "早期的火车跑得很慢，现在快多了。",
+   "en": "Early trains were very slow; now they're much faster.",
+   "ko": "초기 기차는 아주 느렸는데 지금은 훨씬 빨라요.",
+   "blank": "早期",
+   "src": "made"
+  }
+ ],
  "w|早点": [
   {
    "text": "请早点到。",
@@ -32041,6 +32345,22 @@
    "blank": "每"
   }
  ],
+ "w|每周": [
+  {
+   "text": "王刚每周去健身房四次，从不偷懒。",
+   "en": "Wang Gang goes to the gym four times a week and never slacks off.",
+   "ko": "왕강은 일주일에 네 번 헬스장에 가고 한 번도 게으름을 안 피워요.",
+   "blank": "每周",
+   "src": "made"
+  },
+  {
+   "text": "李娜每周五都坐这趟车回老家。",
+   "en": "Li Na takes this train home every Friday.",
+   "ko": "리나는 매주 금요일마다 이 기차를 타고 고향에 가요.",
+   "blank": "每周",
+   "src": "made"
+  }
+ ],
  "w|每天": [
   {
    "text": "我每天跑步。",
@@ -33701,6 +34021,22 @@
    "src": "made"
   }
  ],
+ "w|滑": [
+  {
+   "text": "淋浴间地板很湿，王刚差点滑倒。",
+   "en": "The shower room floor was wet, and Wang Gang nearly slipped.",
+   "ko": "샤워실 바닥이 젖어서 왕강은 하마터면 미끄러질 뻔했어요.",
+   "blank": "滑",
+   "src": "made"
+  },
+  {
+   "text": "车厢晃了一下，李娜的手机从桌上滑了下去。",
+   "en": "The carriage jolted, and Li Na's phone slid off the table.",
+   "ko": "기차가 한 번 흔들리자 리나의 휴대폰이 탁자에서 미끄러져 떨어졌어요.",
+   "blank": "滑",
+   "src": "made"
+  }
+ ],
  "w|满": [
   {
    "text": "开学第一天，小明的书包装得太满，拉链都拉不上。",
@@ -33860,6 +34196,22 @@
    "en": "Li Na was invited to give a speech in the county about young people starting businesses back home.",
    "ko": "리나는 현에 초청받아 젊은이들이 고향에 돌아와 창업한 이야기로 강연했어요.",
    "blank": "演讲",
+   "src": "made"
+  }
+ ],
+ "w|漫长": [
+  {
+   "text": "减肥是个漫长的过程，王刚已经做好了准备。",
+   "en": "Losing weight is a long process, and Wang Gang is ready for it.",
+   "ko": "다이어트는 긴 과정이지만 왕강은 이미 마음의 준비가 됐어요.",
+   "blank": "漫长",
+   "src": "made"
+  },
+  {
+   "text": "漫长的旅途中，李娜读完了两本小说。",
+   "en": "During the long journey, Li Na finished two novels.",
+   "ko": "긴 여행 동안 리나는 소설 두 권을 다 읽었어요.",
+   "blank": "漫长",
    "src": "made"
   }
  ],
@@ -34179,6 +34531,22 @@
    "en": "The stove is still burning.",
    "ko": "난로가 아직 타고 있어.",
    "blank": "烧"
+  }
+ ],
+ "w|烫": [
+  {
+   "text": "蒸桑拿时王刚不小心碰到石头，被烫了一下。",
+   "en": "In the sauna, Wang Gang accidentally touched the stones and got burned.",
+   "ko": "사우나에서 왕강은 실수로 돌에 닿아 데었어요.",
+   "blank": "烫",
+   "src": "made"
+  },
+  {
+   "text": "泡面的水太热，李娜的舌头被烫了一下。",
+   "en": "The water for the instant noodles was too hot, and Li Na burned her tongue.",
+   "ko": "컵라면 물이 너무 뜨거워서 리나는 혀를 데었어요.",
+   "blank": "烫",
+   "src": "made"
   }
  ],
  "w|热": [
@@ -34669,6 +35037,22 @@
    "src": "made"
   }
  ],
+ "w|牙": [
+  {
+   "text": "王刚练拳击时被打掉了一颗牙，从此都戴护齿。",
+   "en": "Wang Gang had a tooth knocked out while boxing, and has worn a mouthguard ever since.",
+   "ko": "왕강은 복싱을 하다가 이가 하나 빠져서 그 뒤로 늘 마우스피스를 껴요.",
+   "blank": "牙",
+   "src": "made"
+  },
+  {
+   "text": "李娜在车厢的洗手间里刷了牙，准备睡觉。",
+   "en": "Li Na brushed her teeth in the train's restroom and got ready for bed.",
+   "ko": "리나는 기차 화장실에서 이를 닦고 잘 준비를 했어요.",
+   "blank": "牙",
+   "src": "made"
+  }
+ ],
  "w|牙齿": [
   {
    "text": "一位老奶奶牙齿疼了好几天，小明劝她赶快去看牙医。",
@@ -34801,6 +35185,22 @@
    "en": "The agent completed the mission.",
    "ko": "특수요원이 임무를 끝냈어.",
    "blank": "特工"
+  }
+ ],
+ "w|特征": [
+  {
+   "text": "教练说每个人的身体特征不同，训练计划也该不一样。",
+   "en": "The trainer says everyone's physical traits differ, so training plans should too.",
+   "ko": "트레이너는 사람마다 신체 특징이 달라서 운동 계획도 달라야 한다고 해요.",
+   "blank": "特征",
+   "src": "made"
+  },
+  {
+   "text": "李娜一眼就认出了家乡的车站，它的特征是一座钟楼。",
+   "en": "Li Na recognized her hometown station at once; its distinguishing feature is a clock tower.",
+   "ko": "리나는 고향 역을 한눈에 알아봤어요. 시계탑이 그 역의 특징이에요.",
+   "blank": "特征",
+   "src": "made"
   }
  ],
  "w|特殊": [
@@ -35495,6 +35895,22 @@
    "en": "Even he doesn't believe it.",
    "ko": "심지어 그 사람도 안 믿어.",
    "blank": "甚至"
+  }
+ ],
+ "w|甜": [
+  {
+   "text": "王刚最怕喝太甜的饮料，觉得练了等于白练。",
+   "en": "Wang Gang hates drinking very sweet drinks; he feels it undoes his training.",
+   "ko": "왕강은 너무 단 음료를 제일 꺼려요. 운동한 게 헛수고가 된다고 생각하거든요.",
+   "blank": "甜",
+   "src": "made"
+  },
+  {
+   "text": "站台上卖的桂花糕又软又甜，李娜买了两盒。",
+   "en": "The osmanthus cakes sold on the platform were soft and sweet, so Li Na bought two boxes.",
+   "ko": "승강장에서 파는 계화떡이 부드럽고 달아서 리나는 두 상자를 샀어요.",
+   "blank": "甜",
+   "src": "made"
   }
  ],
  "w|甜心": [
@@ -36215,6 +36631,22 @@
    "blank": "疼"
   }
  ],
+ "w|疼痛": [
+  {
+   "text": "做完深蹲，王刚膝盖有点疼痛，就去找教练问问。",
+   "en": "After doing squats, Wang Gang had some pain in his knee, so he went to ask the trainer.",
+   "ko": "스쿼트를 하고 나서 왕강은 무릎이 좀 아파서 트레이너에게 물어보러 갔어요.",
+   "blank": "疼痛",
+   "src": "made"
+  },
+  {
+   "text": "坐了十个小时，李娜感到腰部一阵疼痛。",
+   "en": "After sitting for ten hours, Li Na felt a twinge of pain in her lower back.",
+   "ko": "열 시간을 앉아 있으니 리나는 허리에 통증이 느껴졌어요.",
+   "blank": "疼痛",
+   "src": "made"
+  }
+ ],
  "w|疾病": [
   {
    "text": "药房墙上贴着海报，提醒大家很多疾病都能早发现早治疗。",
@@ -36273,6 +36705,22 @@
    "blank": "病毒"
   }
  ],
+ "w|症状": [
+  {
+   "text": "王刚头晕、出冷汗，教练说这些症状可能是低血糖。",
+   "en": "Wang Gang felt dizzy and broke into a cold sweat; the trainer said these symptoms might be low blood sugar.",
+   "ko": "왕강이 어지럽고 식은땀이 나자 트레이너는 그 증상이 저혈당일 수 있다고 했어요.",
+   "blank": "症状",
+   "src": "made"
+  },
+  {
+   "text": "一位乘客晕车，列车员问他有什么症状。",
+   "en": "A passenger got motion sick, and the attendant asked about his symptoms.",
+   "ko": "한 승객이 멀미를 하자 승무원이 어떤 증상이 있는지 물었어요.",
+   "blank": "症状",
+   "src": "made"
+  }
+ ],
  "w|痕迹": [
   {
    "text": "老城墙上还留着当年炮火的痕迹。",
@@ -36315,6 +36763,22 @@
    "en": "Forget that pain.",
    "ko": "그 고통은 잊어.",
    "blank": "痛苦"
+  }
+ ],
+ "w|瘦": [
+  {
+   "text": "练了半年，王刚瘦了一大圈，朋友都快认不出他了。",
+   "en": "After six months of training, Wang Gang had slimmed down so much his friends could hardly recognize him.",
+   "ko": "반년을 운동하니 왕강은 살이 쭉 빠져서 친구들이 몰라볼 정도였어요.",
+   "blank": "瘦",
+   "src": "made"
+  },
+  {
+   "text": "对面坐着一个又高又瘦的老人，一直在看报纸。",
+   "en": "Across from her sat a tall, thin old man who kept reading the newspaper.",
+   "ko": "맞은편에는 키 크고 마른 노인이 앉아서 계속 신문을 읽었어요.",
+   "blank": "瘦",
+   "src": "made"
   }
  ],
  "w|癌症": [
@@ -36556,6 +37020,22 @@
    "en": "You should protect your skin in summer.",
    "ko": "여름에는 피부를 잘 보호해야 해요.",
    "blank": "皮肤",
+   "src": "made"
+  }
+ ],
+ "w|盐": [
+  {
+   "text": "为了减肥，王刚做菜时少放了很多盐。",
+   "en": "To lose weight, Wang Gang uses much less salt when he cooks.",
+   "ko": "왕강은 살을 빼려고 요리할 때 소금을 훨씬 적게 넣어요.",
+   "blank": "盐",
+   "src": "made"
+  },
+  {
+   "text": "李娜觉得餐车的汤太淡了，问服务员要了一点盐。",
+   "en": "Li Na found the dining car soup too bland and asked the attendant for some salt.",
+   "ko": "리나는 식당칸 국이 너무 싱거워서 직원에게 소금을 좀 달라고 했어요.",
+   "blank": "盐",
    "src": "made"
   }
  ],
@@ -37465,6 +37945,22 @@
    "en": "Let me see your hand.",
    "ko": "손 좀 보여 줘.",
    "blank": "瞧瞧"
+  }
+ ],
+ "w|瞬间": [
+  {
+   "text": "杠铃举过头顶的那一瞬间，王刚觉得自己特别有力量。",
+   "en": "The moment he lifted the barbell over his head, Wang Gang felt especially strong.",
+   "ko": "바벨을 머리 위로 들어 올린 순간 왕강은 자기가 정말 힘이 세다고 느꼈어요.",
+   "blank": "瞬间",
+   "src": "made"
+  },
+  {
+   "text": "火车钻出隧道的瞬间，眼前是一片大海。",
+   "en": "The moment the train came out of the tunnel, the sea spread out before them.",
+   "ko": "기차가 터널을 빠져나오는 순간 눈앞에 바다가 펼쳐졌어요.",
+   "blank": "瞬间",
+   "src": "made"
   }
  ],
  "w|矛盾": [
@@ -39233,6 +39729,22 @@
    "src": "made"
   }
  ],
+ "w|筷子": [
+  {
+   "text": "王刚在健身房旁边的面馆吃饭，用筷子把肥肉都挑了出来。",
+   "en": "Eating at the noodle shop next to the gym, Wang Gang picked out all the fatty meat with his chopsticks.",
+   "ko": "왕강은 헬스장 옆 국숫집에서 밥을 먹으며 젓가락으로 비계를 전부 골라냈어요.",
+   "blank": "筷子",
+   "src": "made"
+  },
+  {
+   "text": "火车上的盒饭没配筷子，李娜只好用勺子吃。",
+   "en": "The boxed meal on the train came without chopsticks, so Li Na had to use a spoon.",
+   "ko": "기차 도시락에 젓가락이 없어서 리나는 숟가락으로 먹을 수밖에 없었어요.",
+   "blank": "筷子",
+   "src": "made"
+  }
+ ],
  "w|签": [
   {
    "text": "请在这里签个名。",
@@ -39958,6 +40470,22 @@
    "en": "Everyone says the manager is a gentleman who never loses his temper with his staff.",
    "ko": "다들 매니저는 신사라서 부하 직원에게 화를 내는 법이 없다고 해요.",
    "blank": "绅士",
+   "src": "made"
+  }
+ ],
+ "w|细胞": [
+  {
+   "text": "教练解释说，运动后肌肉细胞需要时间恢复。",
+   "en": "The trainer explained that muscle cells need time to recover after exercise.",
+   "ko": "트레이너는 운동 후 근육 세포가 회복할 시간이 필요하다고 설명했어요.",
+   "blank": "细胞",
+   "src": "made"
+  },
+  {
+   "text": "邻座的大学生在读一本讲细胞的生物书。",
+   "en": "The college student in the next seat was reading a biology book about cells.",
+   "ko": "옆자리 대학생은 세포에 관한 생물 책을 읽고 있었어요.",
+   "blank": "细胞",
    "src": "made"
   }
  ],
@@ -43901,6 +44429,22 @@
    "src": "made"
   }
  ],
+ "w|观看": [
+  {
+   "text": "健身房的电视上正在播足球赛，几个会员边跑边观看。",
+   "en": "A football match was on the gym's TV, and a few members watched while running.",
+   "ko": "헬스장 TV에 축구 경기가 나오자 회원 몇 명이 달리면서 봤어요.",
+   "blank": "观看",
+   "src": "made"
+  },
+  {
+   "text": "李娜用平板观看了一部电影，时间过得很快。",
+   "en": "Li Na watched a movie on her tablet, and the time flew by.",
+   "ko": "리나는 태블릿으로 영화를 한 편 보니 시간이 금방 갔어요.",
+   "blank": "观看",
+   "src": "made"
+  }
+ ],
  "w|规则": [
   {
    "text": "请遵守规则。",
@@ -46181,6 +46725,22 @@
    "blank": "起来"
   }
  ],
+ "w|起码": [
+  {
+   "text": "教练要求王刚起码坚持三个月再看效果。",
+   "en": "The trainer asked Wang Gang to stick with it for at least three months before judging the results.",
+   "ko": "트레이너는 왕강에게 적어도 석 달은 꾸준히 하고 나서 효과를 보라고 했어요.",
+   "blank": "起码",
+   "src": "made"
+  },
+  {
+   "text": "从这里到终点站，起码还要五个小时。",
+   "en": "From here to the last stop, it'll take at least another five hours.",
+   "ko": "여기서 종점까지 적어도 다섯 시간은 더 걸려요.",
+   "blank": "起码",
+   "src": "made"
+  }
+ ],
  "w|起诉": [
   {
    "text": "公司决定起诉他。",
@@ -46475,6 +47035,22 @@
    "en": "The police tracked the suspect.",
    "ko": "경찰이 용의자를 추적했어.",
    "blank": "跟踪"
+  }
+ ],
+ "w|跪": [
+  {
+   "text": "教练让王刚单膝跪在垫子上，练习核心力量。",
+   "en": "The trainer had Wang Gang kneel on one knee on the mat to work his core.",
+   "ko": "트레이너는 왕강에게 매트 위에 한쪽 무릎을 꿇고 코어 운동을 하게 했어요.",
+   "blank": "跪",
+   "src": "made"
+  },
+  {
+   "text": "一个小孩跪在座位上，趴着窗户看外面的风景。",
+   "en": "A little kid knelt on the seat, pressed against the window looking at the scenery.",
+   "ko": "한 아이가 좌석 위에 무릎을 꿇고 창문에 붙어 바깥 경치를 봤어요.",
+   "blank": "跪",
+   "src": "made"
   }
  ],
  "w|跪下": [
@@ -47488,6 +48064,22 @@
    "en": "Li Na was looking for the meeting room when a colleague came over and offered to show her the way.",
    "ko": "리나가 회의실을 찾고 있는데 그때 한 동료가 먼저 다가와 길을 안내해 줬어요.",
    "blank": "这时",
+   "src": "made"
+  }
+ ],
+ "w|这时候": [
+  {
+   "text": "每天晚上七点，健身房这时候人最多。",
+   "en": "Every evening at seven, the gym is at its most crowded.",
+   "ko": "매일 저녁 일곱 시, 헬스장은 이때 사람이 제일 많아요.",
+   "blank": "这时候",
+   "src": "made"
+  },
+  {
+   "text": "天快亮了，这时候李娜才终于睡着。",
+   "en": "It was almost dawn, and only then did Li Na finally fall asleep.",
+   "ko": "날이 밝아 올 무렵에야 리나는 겨우 잠들었어요.",
+   "blank": "这时候",
    "src": "made"
   }
  ],
@@ -49077,6 +49669,22 @@
    "blank": "酒店"
   }
  ],
+ "w|酱": [
+  {
+   "text": "王刚吃鸡胸肉从来不蘸酱，说热量太高。",
+   "en": "Wang Gang never dips his chicken breast in sauce, saying it has too many calories.",
+   "ko": "왕강은 닭가슴살을 먹을 때 칼로리가 높다며 소스를 절대 안 찍어요.",
+   "blank": "酱",
+   "src": "made"
+  },
+  {
+   "text": "李娜带了一瓶妈妈做的辣酱，在车上配馒头吃。",
+   "en": "Li Na brought a jar of her mom's chili sauce to eat with steamed buns on the train.",
+   "ko": "리나는 엄마가 만든 고추장 한 병을 가져와 기차에서 찐빵에 곁들여 먹었어요.",
+   "blank": "酱",
+   "src": "made"
+  }
+ ],
  "w|酷": [
   {
    "text": "你的新车真酷！",
@@ -49496,6 +50104,22 @@
    "en": "When Yang Yang couldn't find his wallet, the first person he suspected was his sister.",
    "ko": "양양은 지갑을 못 찾자 제일 먼저 누나를 의심했어요.",
    "blank": "钱包",
+   "src": "made"
+  }
+ ],
+ "w|钻": [
+  {
+   "text": "健身房下面在修地铁，工人整天用机器钻地。",
+   "en": "A subway is being built under the gym, and workers drill the ground with machines all day.",
+   "ko": "헬스장 아래에서 지하철 공사를 해서 인부들이 하루 종일 기계로 땅을 뚫어요.",
+   "blank": "钻",
+   "src": "made"
+  },
+  {
+   "text": "火车一路往山里开，钻过了一个又一个隧道。",
+   "en": "The train headed into the mountains, going through one tunnel after another.",
+   "ko": "기차는 산속으로 달리며 터널을 하나 또 하나 지나갔어요.",
+   "blank": "钻",
    "src": "made"
   }
  ],
@@ -50375,6 +50999,22 @@
    "en": "Pick whatever you like.",
    "ko": "맘대로 골라.",
    "blank": "随便"
+  }
+ ],
+ "w|随后": [
+  {
+   "text": "王刚先在跑步机上热身，随后去练器械。",
+   "en": "Wang Gang warmed up on the treadmill first and then went to use the machines.",
+   "ko": "왕강은 먼저 러닝머신에서 몸을 풀고 이어서 기구 운동을 했어요.",
+   "blank": "随后",
+   "src": "made"
+  },
+  {
+   "text": "火车在小站停了一会儿，随后又慢慢开动了。",
+   "en": "The train stopped at a small station for a while, then slowly started moving again.",
+   "ko": "기차는 작은 역에 잠시 섰다가 이어서 천천히 다시 출발했어요.",
+   "blank": "随后",
+   "src": "made"
   }
  ],
  "w|随意": [
