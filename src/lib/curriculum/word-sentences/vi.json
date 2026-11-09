@@ -1711,6 +1711,22 @@
    "blank": "bấm"
   }
  ],
+ "w|bầm": [
+  {
+   "text": "Hôm qua tập đấm bao, tay Đức bị bầm một mảng.",
+   "en": "After punching the bag yesterday, Đức's hand was bruised in one spot.",
+   "ko": "어제 샌드백을 쳤더니 득의 손에 멍이 들었어요.",
+   "blank": "bầm",
+   "src": "made"
+  },
+  {
+   "text": "Bức ảnh cho thấy cổ tay nạn nhân bị bầm, Trang đề nghị tòa xem kỹ.",
+   "en": "The photo showed the victim's wrist was bruised, and Trang asked the court to look closely.",
+   "ko": "사진에 피해자 손목에 멍이 든 게 보여서 짱은 재판부에 자세히 봐 달라고 했어요.",
+   "blank": "bầm",
+   "src": "made"
+  }
+ ],
  "w|bán": [
   {
    "text": "Cô ấy bán trái cây ở chợ.",
@@ -4211,6 +4227,22 @@
    "src": "made"
   }
  ],
+ "w|bí đỏ": [
+  {
+   "text": "Sau buổi tập, Đức ăn bí đỏ hấp với ức gà.",
+   "en": "After working out, Đức eats steamed pumpkin with chicken breast.",
+   "ko": "운동 뒤에 득은 찐 단호박과 닭가슴살을 먹어요.",
+   "blank": "bí đỏ",
+   "src": "made"
+  },
+  {
+   "text": "Giờ nghỉ trưa, Trang ăn hộp cháo bí đỏ ở căng tin tòa án.",
+   "en": "At lunch break, Trang ate a box of pumpkin porridge in the courthouse canteen.",
+   "ko": "점심시간에 짱은 법원 구내식당에서 호박죽을 먹었어요.",
+   "blank": "bí đỏ",
+   "src": "made"
+  }
+ ],
  "w|bị động": [
   {
    "text": "Minh không muốn đội mình bị động khi thanh tra đến bất ngờ.",
@@ -4297,6 +4329,22 @@
    "en": "Don't run; it's easy to get hurt.",
    "ko": "뛰지 마, 다치기 쉬워.",
    "blank": "bị thương"
+  }
+ ],
+ "w|bí xanh": [
+  {
+   "text": "Mẹ nấu canh bí xanh nấu tôm cho Đức ăn sau buổi tập.",
+   "en": "His mother cooked winter melon soup with shrimp for Đức after his workout.",
+   "ko": "어머니가 운동 끝난 득에게 동아 새우국을 끓여 줬어요.",
+   "blank": "bí xanh",
+   "src": "made"
+  },
+  {
+   "text": "Vụ kiện là tranh chấp giữa hai nhà vườn trồng bí xanh, Trang ngồi nghe cả buổi.",
+   "en": "The lawsuit was a dispute between two winter melon farms, and Trang sat listening the whole session.",
+   "ko": "소송은 동아를 기르는 두 농가의 분쟁이라 짱은 내내 앉아 들었어요.",
+   "blank": "bí xanh",
+   "src": "made"
   }
  ],
  "w|bia": [
@@ -5564,6 +5612,22 @@
    "en": "Mai bought a bag of old cotton wool to stuff a fabric teddy bear for her child.",
    "ko": "마이는 아이의 천 곰 인형 속을 채우려고 낡은 솜 한 봉지를 샀어요.",
    "blank": "bông",
+   "src": "made"
+  }
+ ],
+ "w|bỗng": [
+  {
+   "text": "Đang chạy, Đức bỗng thấy chóng mặt nên xuống máy ngồi nghỉ.",
+   "en": "While running, Đức suddenly felt dizzy, so he got off the machine to rest.",
+   "ko": "달리다가 득은 갑자기 어지러워서 기계에서 내려 앉아 쉬었어요.",
+   "blank": "bỗng",
+   "src": "made"
+  },
+  {
+   "text": "Phòng xử án bỗng im phăng phắc khi Trang đưa ra bằng chứng mới.",
+   "en": "The courtroom suddenly went dead silent when Trang presented new evidence.",
+   "ko": "짱이 새 증거를 내놓자 법정이 갑자기 쥐 죽은 듯 조용해졌어요.",
+   "blank": "bỗng",
    "src": "made"
   }
  ],
@@ -7364,6 +7428,22 @@
    "en": "The company promises a refund if you're not satisfied.",
    "ko": "회사는 만족하지 않으면 환불해 주겠다고 약속해요.",
    "blank": "cam kết",
+   "src": "made"
+  }
+ ],
+ "w|cảm lạnh": [
+  {
+   "text": "Đức bị cảm lạnh nên nghỉ tập ba hôm.",
+   "en": "Đức caught a cold, so he skipped training for three days.",
+   "ko": "득은 감기에 걸려서 사흘 동안 운동을 쉬었어요.",
+   "blank": "cảm lạnh",
+   "src": "made"
+  },
+  {
+   "text": "Bị cảm lạnh, Trang vẫn cố đến tòa để bào chữa cho thân chủ.",
+   "en": "Even with a cold, Trang still made it to court to defend her client.",
+   "ko": "감기에 걸렸어도 짱은 의뢰인을 변호하러 꼭 법정에 나갔어요.",
+   "blank": "cảm lạnh",
    "src": "made"
   }
  ],
@@ -12801,6 +12881,22 @@
    "src": "made"
   }
  ],
+ "w|chuyển khoản": [
+  {
+   "text": "Đức chuyển khoản đóng tiền gói tập ba tháng.",
+   "en": "Đức made a bank transfer to pay for a three-month membership.",
+   "ko": "득은 계좌 이체로 석 달 회원권 값을 냈어요.",
+   "blank": "chuyển khoản",
+   "src": "made"
+  },
+  {
+   "text": "Bị cáo khai đã chuyển khoản tiền đặt cọc cho người bán nhà.",
+   "en": "The defendant testified that he had transferred the deposit to the house seller.",
+   "ko": "피고인은 집 판 사람에게 계약금을 계좌로 보냈다고 진술했어요.",
+   "blank": "chuyển khoản",
+   "src": "made"
+  }
+ ],
  "w|chuyên môn": [
   {
    "text": "Về chuyên môn, Long hiểu rõ từng loại bê tông và cách đổ móng.",
@@ -15341,6 +15437,22 @@
    "en": "Tea as well as coffee — I like both.",
    "ko": "차도 커피도 둘 다 좋아해.",
    "blank": "cũng như"
+  }
+ ],
+ "w|cung ứng": [
+  {
+   "text": "Phòng gym của Đức ký hợp đồng với một công ty chuyên cung ứng thiết bị tập.",
+   "en": "Đức's gym signed a contract with a company that supplies exercise equipment.",
+   "ko": "득이 다니는 헬스장은 운동 기구를 공급하는 회사와 계약을 맺었어요.",
+   "blank": "cung ứng",
+   "src": "made"
+  },
+  {
+   "text": "Vụ án xoay quanh một công ty không cung ứng đủ thuốc cho bệnh viện như hợp đồng.",
+   "en": "The case revolves around a company that failed to supply enough medicine to the hospital as contracted.",
+   "ko": "사건은 계약대로 병원에 약을 충분히 공급하지 않은 회사를 둘러싼 것이었어요.",
+   "blank": "cung ứng",
+   "src": "made"
   }
  ],
  "w|cùng với": [
@@ -18961,6 +19073,22 @@
    "src": "tatoeba:5161351/truongap en:59985/CK"
   }
  ],
+ "w|đèn trần": [
+  {
+   "text": "Thấy đèn trần ở góc tạ bị nhấp nháy, Đức báo cho quản lý.",
+   "en": "The ceiling light in the weights corner was flickering, and Đức reported it to the manager.",
+   "ko": "웨이트 구역 천장 등이 깜빡거려서 득이 관리자에게 알렸어요.",
+   "blank": "đèn trần",
+   "src": "made"
+  },
+  {
+   "text": "Chiếc đèn trần rơi xuống làm khách bị thương, nên chủ quán bị kiện; Trang là luật sư bên nguyên.",
+   "en": "A ceiling light fell and injured a customer, so the shop owner was sued; Trang is the plaintiff's lawyer.",
+   "ko": "천장 등이 떨어져 손님이 다쳐서 가게 주인이 소송을 당했고 짱은 원고 측 변호사예요.",
+   "blank": "đèn trần",
+   "src": "made"
+  }
+ ],
  "w|đèo": [
   {
    "text": "Xe của Quang leo qua con đèo quanh co gần một tiếng mới tới nơi.",
@@ -21909,6 +22037,22 @@
    "src": "made"
   }
  ],
+ "w|đóng đinh": [
+  {
+   "text": "Đức tự đóng đinh treo tấm gương trong góc tập ở nhà.",
+   "en": "Đức hammered in a nail himself to hang a mirror in his home workout corner.",
+   "ko": "득은 집 운동 구석에 거울을 걸려고 직접 못을 박았어요.",
+   "blank": "đóng đinh",
+   "src": "made"
+  },
+  {
+   "text": "Vụ án liên quan đến một thợ mộc bị cáo buộc đóng đinh sai làm sập mái hiên.",
+   "en": "The case involves a carpenter accused of nailing incorrectly and causing the awning to collapse.",
+   "ko": "사건은 못을 잘못 박아 차양을 무너뜨렸다는 혐의를 받는 목수와 관련 있었어요.",
+   "blank": "đóng đinh",
+   "src": "made"
+  }
+ ],
  "w|đồng đội": [
   {
    "text": "Đồng đội luôn cổ vũ mình trên sân.",
@@ -22709,6 +22853,22 @@
    "src": "made"
   }
  ],
+ "w|đun sôi": [
+  {
+   "text": "Đức đun sôi nước pha bình trà gừng mang đi tập.",
+   "en": "Đức boiled water to make a flask of ginger tea to take to the gym.",
+   "ko": "득은 운동 갈 때 가져갈 생강차를 타려고 물을 끓였어요.",
+   "blank": "đun sôi",
+   "src": "made"
+  },
+  {
+   "text": "Trang về nhà đun sôi nước pha mì vì cả ngày ở tòa chưa ăn gì.",
+   "en": "Trang went home and boiled water for noodles because she hadn't eaten all day at court.",
+   "ko": "짱은 하루 종일 법정에 있느라 아무것도 못 먹어서 집에 와 라면 물을 끓였어요.",
+   "blank": "đun sôi",
+   "src": "made"
+  }
+ ],
  "w|dùng": [
   {
    "text": "Cậu dùng đũa hay thìa?",
@@ -23088,6 +23248,22 @@
    "en": "Thảo slows down so even the weakest student can catch up.",
    "ko": "타오는 가장 느린 학생도 따라올 수 있게 천천히 헤엄쳐요.",
    "blank": "đuổi kịp",
+   "src": "made"
+  }
+ ],
+ "w|duỗi thẳng": [
+  {
+   "text": "Huấn luyện viên dặn Đức duỗi thẳng lưng khi gánh tạ.",
+   "en": "The coach told Đức to straighten his back when squatting with the bar.",
+   "ko": "코치는 득에게 바벨을 메고 앉을 때 허리를 곧게 펴라고 했어요.",
+   "blank": "duỗi thẳng",
+   "src": "made"
+  },
+  {
+   "text": "Ngồi cả buổi, Trang duỗi thẳng chân dưới bàn cho đỡ mỏi.",
+   "en": "After sitting all session, Trang stretched her legs out under the table to ease the stiffness.",
+   "ko": "하루 종일 앉아 있던 짱은 덜 뻐근하게 탁자 밑으로 다리를 쭉 폈어요.",
+   "blank": "duỗi thẳng",
    "src": "made"
   }
  ],
@@ -24027,6 +24203,22 @@
    "blank": "gặp"
   }
  ],
+ "w|gập": [
+  {
+   "text": "Đức gập người chạm ngón chân để giãn cơ.",
+   "en": "Đức bent forward to touch his toes to stretch.",
+   "ko": "득은 스트레칭하려고 몸을 숙여 발끝을 짚었어요.",
+   "blank": "gập",
+   "src": "made"
+  },
+  {
+   "text": "Trang gập tập hồ sơ lại khi thẩm phán tuyên bố nghỉ giải lao.",
+   "en": "Trang closed her case file when the judge called a recess.",
+   "ko": "판사가 휴정을 선언하자 짱은 서류철을 덮었어요.",
+   "blank": "gập",
+   "src": "made"
+  }
+ ],
  "w|gấp gáp": [
   {
    "text": "Thời gian bàn giao quá gấp gáp, Nam chỉ kịp chỉ cho anh Phúc những việc chính.",
@@ -24817,6 +25009,22 @@
    "blank": "gia đình"
   }
  ],
+ "w|giả định": [
+  {
+   "text": "Huấn luyện viên đưa ra một tình huống giả định để Đức tính lượng calo cần ăn.",
+   "en": "The coach gave Đức a hypothetical situation to calculate how many calories to eat.",
+   "ko": "코치는 득에게 가정한 상황을 주고 먹어야 할 칼로리를 계산하게 했어요.",
+   "blank": "giả định",
+   "src": "made"
+  },
+  {
+   "text": "Thẩm phán không chấp nhận câu hỏi giả định mà luật sư bên kia đặt cho Trang.",
+   "en": "The judge did not allow the hypothetical question the opposing lawyer put to Trang.",
+   "ko": "판사는 상대 변호사가 짱에게 던진 가정 질문을 받아들이지 않았어요.",
+   "blank": "giả định",
+   "src": "made"
+  }
+ ],
  "w|giả dối": [
   {
    "text": "Tôi tự hỏi điều giả dối nào nằm sau nụ cười ấy.",
@@ -24849,6 +25057,22 @@
    "src": "made"
   }
  ],
+ "w|giá mà": [
+  {
+   "text": "Đức thở dài: giá mà hồi trẻ anh chịu khó tập sớm hơn.",
+   "en": "Đức sighed: if only he had started working out earlier when he was young.",
+   "ko": "득은 한숨을 쉬었어요. 젊었을 때 일찍 운동을 시작했더라면 좋았을 텐데요.",
+   "blank": "giá mà",
+   "src": "made"
+  },
+  {
+   "text": "Thân chủ nói với Trang: giá mà tôi đọc kỹ hợp đồng trước khi ký.",
+   "en": "The client said to Trang: if only I had read the contract carefully before signing.",
+   "ko": "의뢰인은 짱에게 서명하기 전에 계약서를 꼼꼼히 읽었더라면 좋았을 거라고 했어요.",
+   "blank": "giá mà",
+   "src": "made"
+  }
+ ],
  "w|giá sách": [
   {
    "text": "Long viết rằng lá thư của Quân vẫn nằm trên giá sách cạnh bàn làm việc.",
@@ -24878,6 +25102,38 @@
    "en": "The shop's fresh milk comes from a cattle farm in Ba Vì.",
    "ko": "가게 우유는 바비의 소 목장에서 가져와요.",
    "blank": "gia súc",
+   "src": "made"
+  }
+ ],
+ "w|giả tạo": [
+  {
+   "text": "Đức không thích những lời khen giả tạo của nhân viên bán gói tập.",
+   "en": "Đức doesn't like the fake compliments from the staff selling membership packages.",
+   "ko": "득은 회원권을 파는 직원의 가식적인 칭찬이 싫어요.",
+   "blank": "giả tạo",
+   "src": "made"
+  },
+  {
+   "text": "Trang nhận ra giọt nước mắt giả tạo của nhân chứng trước tòa.",
+   "en": "Trang saw through the witness's fake tears in court.",
+   "ko": "짱은 법정에서 증인의 거짓 눈물을 알아챘어요.",
+   "blank": "giả tạo",
+   "src": "made"
+  }
+ ],
+ "w|giá thành": [
+  {
+   "text": "Đức thấy máy chạy bộ này giá thành hợp lý nên mua về nhà.",
+   "en": "Đức found this treadmill reasonably priced, so he bought one for home.",
+   "ko": "득은 이 러닝머신 가격이 적당하다고 생각해서 집에 들였어요.",
+   "blank": "giá thành",
+   "src": "made"
+  },
+  {
+   "text": "Trang chứng minh công ty đã khai khống giá thành sản phẩm để trốn thuế.",
+   "en": "Trang proved the company had inflated the cost of its products to evade taxes.",
+   "ko": "짱은 그 회사가 세금을 피하려고 제품 원가를 부풀렸다는 걸 증명했어요.",
+   "blank": "giá thành",
    "src": "made"
   }
  ],
@@ -25762,6 +26018,22 @@
    "en": "Hà's friend wore high heels for a forest walk, and everyone burst out laughing.",
    "ko": "하의 친구가 하이힐을 신고 숲 산책을 와서 모두 웃음을 터뜨렸어요.",
    "blank": "giày cao gót",
+   "src": "made"
+  }
+ ],
+ "w|giấy dán tường": [
+  {
+   "text": "Phòng thay đồ mới dán giấy dán tường màu xanh lá, Đức thấy rất dễ chịu.",
+   "en": "The new changing room has green wallpaper, and Đức finds it very pleasant.",
+   "ko": "새 탈의실에 초록색 벽지를 발라서 득은 아주 기분이 좋았어요.",
+   "blank": "giấy dán tường",
+   "src": "made"
+  },
+  {
+   "text": "Phòng làm việc của Trang ở tòa án có giấy dán tường cũ đã bong mép.",
+   "en": "Trang's office at the courthouse has old wallpaper peeling at the edges.",
+   "ko": "법원에 있는 짱의 사무실은 오래된 벽지가 가장자리부터 들떠 있어요.",
+   "blank": "giấy dán tường",
    "src": "made"
   }
  ],
@@ -29488,6 +29760,22 @@
    "en": "The queen wore a golden crown.",
    "ko": "왕비는 금관을 쓰고 있었어요.",
    "blank": "Hoàng hậu",
+   "src": "made"
+  }
+ ],
+ "w|hoảng loạn": [
+  {
+   "text": "Mất điện giữa giờ tập, vài người hoảng loạn nhưng Đức vẫn bình tĩnh.",
+   "en": "The power went out mid-session, and a few people panicked, but Đức stayed calm.",
+   "ko": "운동 중에 정전이 되자 몇몇은 허둥댔지만 득은 침착했어요.",
+   "blank": "hoảng loạn",
+   "src": "made"
+  },
+  {
+   "text": "Nhân chứng kể rằng đám đông hoảng loạn chạy ra khi có tiếng nổ.",
+   "en": "The witness said the crowd panicked and ran out when there was an explosion.",
+   "ko": "증인은 폭발음이 나자 사람들이 겁에 질려 뛰쳐나갔다고 진술했어요.",
+   "blank": "hoảng loạn",
    "src": "made"
   }
  ],
@@ -40887,6 +41175,22 @@
    "blank": "Môi trường"
   }
  ],
+ "w|mỗi tuần": [
+  {
+   "text": "Đức tập chân mỗi tuần hai buổi.",
+   "en": "Đức trains legs twice a week.",
+   "ko": "득은 일주일에 두 번 하체 운동을 해요.",
+   "blank": "mỗi tuần",
+   "src": "made"
+  },
+  {
+   "text": "Trang ra tòa mỗi tuần ít nhất hai lần.",
+   "en": "Trang goes to court at least twice a week.",
+   "ko": "짱은 일주일에 적어도 두 번 법정에 서요.",
+   "blank": "mỗi tuần",
+   "src": "made"
+  }
+ ],
  "w|mồm": [
   {
    "text": "Anh ta hễ mở mồm ra là y như rằng sẽ phàn nàn về điều gì đó.",
@@ -41859,6 +42163,22 @@
    "en": "This spoon is for stirring coffee.",
    "ko": "이 숟가락은 커피 젓는 용이야.",
    "blank": "Muỗng"
+  }
+ ],
+ "w|mướp": [
+  {
+   "text": "Đức mang hộp cơm có mướp xào tỏi đến phòng gym.",
+   "en": "Đức brought a lunch box with garlic-fried luffa to the gym.",
+   "ko": "득은 마늘에 볶은 수세미오이가 든 도시락을 헬스장에 가져왔어요.",
+   "blank": "mướp",
+   "src": "made"
+  },
+  {
+   "text": "Hai nhà hàng xóm kiện nhau vì giàn mướp leo sang mái nhà bên cạnh, Trang thấy vừa buồn cười vừa thương.",
+   "en": "Two neighbors sued each other over a luffa trellis climbing onto the next roof, and Trang found it both funny and sad.",
+   "ko": "두 이웃이 옆집 지붕으로 넘어간 수세미 덩굴 때문에 소송을 해서 짱은 우습기도 하고 안타깝기도 했어요.",
+   "blank": "mướp",
+   "src": "made"
   }
  ],
  "w|mứt": [
@@ -45111,6 +45431,22 @@
    "blank": "người bệnh"
   }
  ],
+ "w|người chiến thắng": [
+  {
+   "text": "Cuộc thi chống đẩy ở phòng gym có người chiến thắng là cô giáo dạy yoga.",
+   "en": "The winner of the gym's push-up contest was the yoga teacher.",
+   "ko": "헬스장 팔굽혀펴기 대회의 우승자는 요가 선생님이었어요.",
+   "blank": "người chiến thắng",
+   "src": "made"
+  },
+  {
+   "text": "Trong vụ tranh chấp giải thưởng, Trang đại diện cho người chiến thắng cuộc thi ảnh.",
+   "en": "In the prize dispute, Trang represented the winner of the photo contest.",
+   "ko": "상금 분쟁에서 짱은 사진 공모전 우승자를 대리했어요.",
+   "blank": "người chiến thắng",
+   "src": "made"
+  }
+ ],
  "w|người cũ": [
   {
    "text": "Ai cũng tò mò không biết người cũ của Nam có đến dự tiệc cưới không.",
@@ -45545,6 +45881,22 @@
    "blank": "Người ta"
   }
  ],
+ "w|người tham gia": [
+  {
+   "text": "Lớp đạp xe trong nhà có hơn hai chục người tham gia, Đức phải đến sớm giữ chỗ.",
+   "en": "The indoor cycling class has over twenty participants, so Đức has to come early to save a spot.",
+   "ko": "실내 사이클 수업에 참가자가 스무 명이 넘어서 득은 일찍 가서 자리를 잡아야 해요.",
+   "blank": "người tham gia",
+   "src": "made"
+  },
+  {
+   "text": "Trang phỏng vấn từng người tham gia buổi họp cổ đông hôm đó.",
+   "en": "Trang interviewed every participant in that day's shareholder meeting.",
+   "ko": "짱은 그날 주주 총회 참가자를 한 명씩 면담했어요.",
+   "blank": "người tham gia",
+   "src": "made"
+  }
+ ],
  "w|người thân": [
   {
    "text": "Người thân mình sống ở thành phố khác.",
@@ -45572,6 +45924,22 @@
    "en": "The social media page of Hương's company just hit ten thousand followers.",
    "ko": "흐엉 회사의 소셜 미디어 페이지가 팔로워 만 명을 넘었어요.",
    "blank": "người theo dõi",
+   "src": "made"
+  }
+ ],
+ "w|người thua cuộc": [
+  {
+   "text": "Thua trận vật tay, Đức vẫn cười và bắt tay như một người thua cuộc đàng hoàng.",
+   "en": "Losing the arm-wrestling match, Đức still smiled and shook hands like a gracious loser.",
+   "ko": "팔씨름에서 졌지만 득은 깔끔하게 진 사람답게 웃으며 악수했어요.",
+   "blank": "người thua cuộc",
+   "src": "made"
+  },
+  {
+   "text": "Trong vụ kiện về cuộc thi hát, Trang bảo vệ quyền lợi cho người thua cuộc.",
+   "en": "In the lawsuit over the singing contest, Trang defended the rights of the loser.",
+   "ko": "노래 대회 소송에서 짱은 진 쪽 참가자의 권리를 변호했어요.",
+   "blank": "người thua cuộc",
    "src": "made"
   }
  ],
@@ -45803,6 +46171,22 @@
    "en": "It's dangerous—don't get close.",
    "ko": "위험해, 가까이 가지 마.",
    "blank": "Nguy hiểm"
+  }
+ ],
+ "w|nguy kịch": [
+  {
+   "text": "Huấn luyện viên kể cho Đức nghe về một vận động viên từng rơi vào tình trạng nguy kịch vì tập quá sức.",
+   "en": "The coach told Đức about an athlete who once ended up in critical condition from overtraining.",
+   "ko": "코치는 무리하게 운동하다 위독한 상태에 빠졌던 선수 이야기를 득에게 들려줬어요.",
+   "blank": "nguy kịch",
+   "src": "made"
+  },
+  {
+   "text": "Theo hồ sơ Trang đọc, nạn nhân từng ở trong tình trạng nguy kịch suốt một tuần.",
+   "en": "According to the file Trang read, the victim was in critical condition for a whole week.",
+   "ko": "짱이 읽은 기록에 따르면 피해자는 일주일 내내 위독한 상태였어요.",
+   "blank": "nguy kịch",
+   "src": "made"
   }
  ],
  "w|nguyên đơn": [
@@ -53295,6 +53679,22 @@
    "src": "made"
   }
  ],
+ "w|quầy bán vé": [
+  {
+   "text": "Đức tranh thủ ghé quầy bán vé gần phòng gym mua vé xem bóng đá.",
+   "en": "Đức stopped by the ticket counter near the gym to buy football tickets.",
+   "ko": "득은 짬을 내 헬스장 근처 매표소에 들러 축구 표를 샀어요.",
+   "blank": "quầy bán vé",
+   "src": "made"
+  },
+  {
+   "text": "Nhân chứng là cô nhân viên quầy bán vé ở bến xe, Trang hỏi rất cẩn thận.",
+   "en": "The witness was the clerk at the bus station ticket counter, and Trang questioned her very carefully.",
+   "ko": "증인은 버스 터미널 매표소 직원이었고 짱은 아주 신중하게 질문했어요.",
+   "blank": "quầy bán vé",
+   "src": "made"
+  }
+ ],
  "w|quay đầu": [
   {
    "text": "Quay đầu lại xem ai đang gọi.",
@@ -56901,6 +57301,22 @@
    "blank": "Sinh ra"
   }
  ],
+ "w|sinh sản": [
+  {
+   "text": "Trong lúc chạy bộ, Đức xem phim tài liệu về cách loài rùa biển sinh sản.",
+   "en": "While running, Đức watched a documentary about how sea turtles reproduce.",
+   "ko": "득은 달리면서 바다거북이 어떻게 번식하는지 다룬 다큐멘터리를 봤어요.",
+   "blank": "sinh sản",
+   "src": "made"
+  },
+  {
+   "text": "Vụ kiện của trang trại liên quan đến giống bò không sinh sản được như quảng cáo.",
+   "en": "The farm's lawsuit involves a breed of cattle that couldn't reproduce as advertised.",
+   "ko": "농장의 소송은 광고와 달리 번식하지 못한 소 품종에 관한 것이었어요.",
+   "blank": "sinh sản",
+   "src": "made"
+  }
+ ],
  "w|sinh sôi": [
   {
    "text": "Mùa mưa đến, ếch nhái trong ruộng bên rừng sinh sôi rất nhanh, Nam nghe tiếng kêu suốt đêm.",
@@ -57637,6 +58053,22 @@
    "src": "made"
   }
  ],
+ "w|sóng thần": [
+  {
+   "text": "Trên màn hình phòng gym, Đức xem bản tin về sóng thần ở một vùng biển xa.",
+   "en": "On the gym's screen, Đức watched a news report about a tsunami in a distant sea.",
+   "ko": "득은 헬스장 화면에서 먼 바다의 쓰나미 소식을 봤어요.",
+   "blank": "sóng thần",
+   "src": "made"
+  },
+  {
+   "text": "Trang nhận một vụ kiện bảo hiểm cho ngôi nhà bị sóng thần cuốn trôi.",
+   "en": "Trang took on an insurance case for a house swept away by a tsunami.",
+   "ko": "짱은 쓰나미에 휩쓸려 간 집의 보험 소송을 맡았어요.",
+   "blank": "sóng thần",
+   "src": "made"
+  }
+ ],
  "w|sốt": [
   {
    "text": "Em bé bị sốt từ tối hôm qua.",
@@ -57742,6 +58174,22 @@
    "en": "The shop owner looked at Trang's muddy shoes sympathetically and brought out a pot of hot tea.",
    "ko": "가게 주인은 짱의 진흙투성이 신발을 안쓰럽게 보더니 뜨거운 차를 내왔어요.",
    "blank": "sự cảm thông",
+   "src": "made"
+  }
+ ],
+ "w|sự can đảm": [
+  {
+   "text": "Lần đầu thử nâng tạ nặng, Đức cần cả sự can đảm lẫn người đỡ tạ bên cạnh.",
+   "en": "Trying a heavy lift for the first time, Đức needed both courage and a spotter beside him.",
+   "ko": "처음 무거운 무게를 들 때 득은 용기도, 옆에서 잡아 줄 사람도 필요했어요.",
+   "blank": "sự can đảm",
+   "src": "made"
+  },
+  {
+   "text": "Trang khen sự can đảm của cô bé dám đứng lên làm chứng.",
+   "en": "Trang praised the courage of the girl who dared to testify.",
+   "ko": "짱은 용감하게 증언에 나선 여자아이의 용기를 칭찬했어요.",
+   "blank": "sự can đảm",
    "src": "made"
   }
  ],
@@ -58261,6 +58709,22 @@
    "en": "There's a big lion at the zoo.",
    "ko": "동물원에 큰 사자가 한 마리 있어.",
    "blank": "sư tử"
+  }
+ ],
+ "w|sự tự tin": [
+  {
+   "text": "Sau nửa năm tập luyện, Đức có thêm sự tự tin khi mặc áo ba lỗ.",
+   "en": "After half a year of training, Đức has gained confidence wearing a tank top.",
+   "ko": "반년 운동한 뒤로 득은 민소매를 입을 때 자신감이 생겼어요.",
+   "blank": "sự tự tin",
+   "src": "made"
+  },
+  {
+   "text": "Phiên tòa đầu tiên dạy Trang rằng sự tự tin đến từ việc chuẩn bị kỹ.",
+   "en": "Her first trial taught Trang that confidence comes from careful preparation.",
+   "ko": "첫 재판에서 짱은 자신감이 철저한 준비에서 나온다는 걸 배웠어요.",
+   "blank": "sự tự tin",
+   "src": "made"
   }
  ],
  "w|sự tức giận": [
@@ -60751,6 +61215,22 @@
    "src": "made"
   }
  ],
+ "w|thăm viếng": [
+  {
+   "text": "Cuối tuần Đức hay đi thăm viếng ông bà, nên anh tập gym vào sáng thứ Sáu.",
+   "en": "Đức often visits his grandparents on weekends, so he works out at the gym on Friday mornings.",
+   "ko": "득은 주말마다 조부모님을 찾아뵙는 일이 많아서 금요일 아침에 헬스장에 가요.",
+   "blank": "thăm viếng",
+   "src": "made"
+  },
+  {
+   "text": "Trang được phép thăm viếng thân chủ trong trại tạm giam trước phiên tòa.",
+   "en": "Trang was allowed to visit her client in the detention center before the trial.",
+   "ko": "짱은 재판 전에 구치소에 있는 의뢰인을 면회할 수 있었어요.",
+   "blank": "thăm viếng",
+   "src": "made"
+  }
+ ],
  "w|than": [
   {
    "text": "Tối đến, Đức nhóm than để nướng mực ngoài bãi biển.",
@@ -62166,6 +62646,22 @@
    "en": "Lan thought she had come in last, but it turned out there were a dozen people behind her.",
    "ko": "란은 꼴찌인 줄 알았는데 알고 보니 뒤에 열 명이나 더 있었어요.",
    "blank": "thì ra",
+   "src": "made"
+  }
+ ],
+ "w|thí sinh": [
+  {
+   "text": "Đức đăng ký làm thí sinh của cuộc thi thể hình cấp quận.",
+   "en": "Đức signed up as a contestant in the district bodybuilding competition.",
+   "ko": "득은 구 보디빌딩 대회 참가자로 등록했어요.",
+   "blank": "thí sinh",
+   "src": "made"
+  },
+  {
+   "text": "Trang bảo vệ một thí sinh bị loại oan khỏi kỳ thi tuyển công chức.",
+   "en": "Trang defended a candidate who was wrongly disqualified from the civil service exam.",
+   "ko": "짱은 공무원 시험에서 억울하게 탈락한 응시자를 변호했어요.",
+   "blank": "thí sinh",
    "src": "made"
   }
  ],
@@ -64865,6 +65361,22 @@
    "en": "Love yourself more.",
    "ko": "스스로를 더 아껴.",
    "blank": "thương yêu"
+  }
+ ],
+ "w|thủy triều": [
+  {
+   "text": "Ngoài giờ tập, Đức hay ra biển chạy bộ lúc thủy triều xuống.",
+   "en": "Outside the gym, Đức likes to run on the beach when the tide goes out.",
+   "ko": "득은 운동 시간 외에 썰물 때 바닷가에 나가 달리기를 즐겨요.",
+   "blank": "thủy triều",
+   "src": "made"
+  },
+  {
+   "text": "Nhân chứng khai thuyền bị lật vì thủy triều lên quá nhanh, Trang ghi lại từng chi tiết.",
+   "en": "The witness testified the boat capsized because the tide rose too fast, and Trang wrote down every detail.",
+   "ko": "증인은 밀물이 너무 빨리 들어와 배가 뒤집혔다고 진술했고 짱은 하나하나 받아 적었어요.",
+   "blank": "thủy triều",
+   "src": "made"
   }
  ],
  "w|thuyền": [
@@ -68825,6 +69337,22 @@
    "src": "made"
   }
  ],
+ "w|trong vắt": [
+  {
+   "text": "Bể bơi của phòng gym nước trong vắt, Đức bơi được mấy vòng liền.",
+   "en": "The gym pool's water is crystal clear, and Đức swam several laps in a row.",
+   "ko": "헬스장 수영장 물이 맑아서 득은 몇 바퀴를 내리 돌았어요.",
+   "blank": "trong vắt",
+   "src": "made"
+  },
+  {
+   "text": "Trang dùng ảnh dòng suối trong vắt trước khi nhà máy xây để chứng minh ô nhiễm.",
+   "en": "Trang used photos of the crystal-clear stream before the factory was built to prove the pollution.",
+   "ko": "짱은 공장이 들어서기 전 맑은 개울 사진으로 오염을 증명했어요.",
+   "blank": "trong vắt",
+   "src": "made"
+  }
+ ],
  "w|trong vòng": [
   {
    "text": "Đức dặn cả nhóm phải dọn xong lều trong vòng nửa tiếng.",
@@ -71237,6 +71765,22 @@
    "src": "made"
   }
  ],
+ "w|ủng": [
+  {
+   "text": "Trời mưa to, Đức đi ủng đến phòng gym rồi mới thay giày.",
+   "en": "It was pouring, so Đức wore rain boots to the gym and changed shoes there.",
+   "ko": "비가 많이 와서 득은 장화를 신고 헬스장에 가서 신발을 갈아 신었어요.",
+   "blank": "ủng",
+   "src": "made"
+  },
+  {
+   "text": "Đôi ủng dính bùn là vật chứng quan trọng mà Trang trình bày trước tòa.",
+   "en": "The muddy rubber boots were key evidence that Trang presented to the court.",
+   "ko": "진흙 묻은 장화는 짱이 법정에 제시한 중요한 증거물이었어요.",
+   "blank": "ủng",
+   "src": "made"
+  }
+ ],
  "w|ứng cử": [
   {
    "text": "Trong vở, nhân vật của Hùng ra ứng cử chức trưởng làng.",
@@ -72921,6 +73465,54 @@
    "src": "made"
   }
  ],
+ "w|viêm gan": [
+  {
+   "text": "Đức đi xét nghiệm viêm gan trước khi uống thực phẩm bổ sung.",
+   "en": "Đức got tested for hepatitis before taking supplements.",
+   "ko": "득은 보충제를 먹기 전에 간염 검사를 받았어요.",
+   "blank": "viêm gan",
+   "src": "made"
+  },
+  {
+   "text": "Trang bảo vệ một công nhân bị đuổi việc chỉ vì mắc viêm gan.",
+   "en": "Trang defended a worker who was fired just for having hepatitis.",
+   "ko": "짱은 간염에 걸렸다는 이유만으로 해고된 노동자를 변호했어요.",
+   "blank": "viêm gan",
+   "src": "made"
+  }
+ ],
+ "w|viêm họng": [
+  {
+   "text": "Đức bị viêm họng vì uống nước đá ngay sau khi tập.",
+   "en": "Đức got a sore throat from drinking ice water right after working out.",
+   "ko": "득은 운동 직후에 얼음물을 마셔서 인후염에 걸렸어요.",
+   "blank": "viêm họng",
+   "src": "made"
+  },
+  {
+   "text": "Trang bị viêm họng vì nói liên tục suốt phiên tòa dài.",
+   "en": "Trang got a sore throat from talking nonstop through the long trial.",
+   "ko": "짱은 긴 재판 내내 쉬지 않고 말해서 목이 붓고 아팠어요.",
+   "blank": "viêm họng",
+   "src": "made"
+  }
+ ],
+ "w|viêm phổi": [
+  {
+   "text": "Bác sĩ bảo Đức nghỉ tập vì vừa khỏi viêm phổi.",
+   "en": "The doctor told Đức to stop training since he had just recovered from pneumonia.",
+   "ko": "의사는 득이 폐렴에서 막 나았으니 운동을 쉬라고 했어요.",
+   "blank": "viêm phổi",
+   "src": "made"
+  },
+  {
+   "text": "Trong hồ sơ có giấy xác nhận bị cáo đang điều trị viêm phổi.",
+   "en": "The file contains a certificate that the defendant is being treated for pneumonia.",
+   "ko": "기록에는 피고인이 폐렴 치료를 받고 있다는 확인서가 있었어요.",
+   "blank": "viêm phổi",
+   "src": "made"
+  }
+ ],
  "w|viện phí": [
   {
    "text": "Quang mua bảo hiểm du lịch ở sân bay để khỏi lo viện phí nếu ốm ở nước ngoài.",
@@ -74305,6 +74897,22 @@
    "src": "tatoeba:849459/nthkmf en:566456/sundown"
   }
  ],
+ "w|xăng đan": [
+  {
+   "text": "Có người đi xăng đan vào phòng gym, Đức nhắc khéo là phải mang giày.",
+   "en": "Someone walked into the gym in sandals, and Đức tactfully reminded them to wear shoes.",
+   "ko": "누가 샌들을 신고 헬스장에 들어와서 득이 신발을 신어야 한다고 돌려 말했어요.",
+   "blank": "xăng đan",
+   "src": "made"
+  },
+  {
+   "text": "Nhân viên tòa án nhắc một người đi xăng đan rằng phải ăn mặc chỉnh tề.",
+   "en": "A court officer reminded someone in sandals that they had to dress properly.",
+   "ko": "법원 직원이 샌들을 신은 사람에게 단정하게 입어야 한다고 일렀어요.",
+   "blank": "xăng đan",
+   "src": "made"
+  }
+ ],
  "w|xanh": [
   {
    "text": "Áo xanh này hợp với cậu lắm.",
@@ -74393,6 +75001,22 @@
    "en": "Stir-fry the beef quickly over high heat.",
    "ko": "소고기는 센 불에 빠르게 볶아.",
    "blank": "xào"
+  }
+ ],
+ "w|xảo quyệt": [
+  {
+   "text": "Đức kể về một tay bán thực phẩm chức năng xảo quyệt từng lừa anh mua hàng giả.",
+   "en": "Đức talked about a cunning supplement seller who once tricked him into buying fakes.",
+   "ko": "득은 예전에 자기를 속여 가짜 제품을 팔았던 교활한 건강식품 판매원 얘기를 했어요.",
+   "blank": "xảo quyệt",
+   "src": "made"
+  },
+  {
+   "text": "Luật sư bên kia đặt câu hỏi rất xảo quyệt, nhưng Trang không mắc bẫy.",
+   "en": "The opposing lawyer asked very crafty questions, but Trang didn't fall into the trap.",
+   "ko": "상대 변호사가 아주 교활한 질문을 던졌지만 짱은 덫에 걸리지 않았어요.",
+   "blank": "xảo quyệt",
+   "src": "made"
   }
  ],
  "w|xắt": [
@@ -75465,6 +76089,22 @@
    "ko": "그녀가 갑자기 멈춰 서서 주위를 둘러봐요.",
    "blank": "xung quanh",
    "src": "tatoeba:724083/autuno en:10459900/cheesr"
+  }
+ ],
+ "w|xước": [
+  {
+   "text": "Đức bị thanh tạ làm xước đầu gối khi kéo tạ đơn.",
+   "en": "Đức scraped his knee on the bar during deadlifts.",
+   "ko": "득은 데드리프트를 하다가 바벨에 무릎이 긁혔어요.",
+   "blank": "xước",
+   "src": "made"
+  },
+  {
+   "text": "Trang chỉ ra rằng nạn nhân chỉ bị xước nhẹ ở cánh tay.",
+   "en": "Trang pointed out that the victim only had a light scratch on the arm.",
+   "ko": "짱은 피해자가 팔에 가볍게 긁힌 것뿐이라고 짚었어요.",
+   "blank": "xước",
+   "src": "made"
   }
  ],
  "w|xuống": [

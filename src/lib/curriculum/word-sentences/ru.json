@@ -157,6 +157,22 @@
    "src": "made"
   }
  ],
+ "w|автоматически": [
+  {
+   "text": "Свет в коридоре включается автоматически, когда Алексей выходит из палаты.",
+   "en": "The light in the corridor switches on automatically when Alexei leaves the ward.",
+   "ko": "알렉세이가 병실을 나서면 복도 불이 저절로 켜져요.",
+   "blank": "автоматически",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что почтовый ящик теперь сам открывается и закрывается автоматически.",
+   "en": "Natalia writes that the mailbox now opens and closes automatically by itself.",
+   "ko": "나탈리야는 이제 우편함이 저절로 열리고 닫힌다고 써요.",
+   "blank": "автоматически",
+   "src": "made"
+  }
+ ],
  "w|автомобиль": [
   {
    "text": "Ты собираешься купить этот автомобиль?",
@@ -1168,6 +1184,22 @@
    "en": "Elena was given access to the electronic archive of contracts.",
    "ko": "옐레나는 계약서 전자 보관함에 접근할 권한을 받았어요.",
    "blank": "архиву",
+   "src": "made"
+  }
+ ],
+ "w|аспирин": [
+  {
+   "text": "Медсестра запретила Алексею пить аспирин без назначения врача.",
+   "en": "The nurse forbade Alexei to take aspirin without a doctor's prescription.",
+   "ko": "간호사는 알렉세이에게 의사 처방 없이 아스피린을 먹지 말라고 했어요.",
+   "blank": "аспирин",
+   "src": "made"
+  },
+  {
+   "text": "В письме Наталья вспоминает, как в детстве бабушка лечила их аспирином с мёдом.",
+   "en": "In the letter Natalia recalls how as children grandma treated them with aspirin and honey.",
+   "ko": "나탈리야는 편지에서 어릴 때 할머니가 아스피린과 꿀로 자기들을 돌봐 주던 일을 떠올려요.",
+   "blank": "аспирином",
    "src": "made"
   }
  ],
@@ -3493,6 +3525,22 @@
    "en": "The hospital is around the corner.",
    "ko": "병원은 모퉁이 바로 옆이야.",
    "blank": "Больница"
+  }
+ ],
+ "w|больничный": [
+  {
+   "text": "Алексей устал от больничной еды и попросил жену принести супа.",
+   "en": "Alexei got tired of hospital food and asked his wife to bring some soup.",
+   "ko": "알렉세이는 병원 밥에 질려서 아내에게 수프를 가져다 달라고 했어요.",
+   "blank": "больничной",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет подруге, что сломала ногу и неделю пролежала на больничной койке.",
+   "en": "Natalia writes to her friend that she broke her leg and spent a week in a hospital bed.",
+   "ko": "나탈리야는 다리가 부러져 일주일 동안 병원 침대에 누워 있었다고 친구에게 써요.",
+   "blank": "больничной",
+   "src": "made"
   }
  ],
  "w|больной": [
@@ -7739,6 +7787,22 @@
    "blank": "волосы"
   }
  ],
+ "w|волосок": [
+  {
+   "text": "На рентгене врач заметил трещину толщиной с волосок.",
+   "en": "On the X-ray the doctor noticed a crack as thin as a hair.",
+   "ko": "의사는 엑스레이에서 머리카락처럼 가는 금을 발견했어요.",
+   "blank": "волосок",
+   "src": "made"
+  },
+  {
+   "text": "В конверт Наталья вложила рыжий волосок своего кота, чтобы подруга посмеялась.",
+   "en": "Natalia put a ginger hair from her cat into the envelope to make her friend laugh.",
+   "ko": "나탈리야는 친구를 웃기려고 고양이의 주황색 털 한 가닥을 봉투에 넣었어요.",
+   "blank": "волосок",
+   "src": "made"
+  }
+ ],
  "w|волшебник": [
   {
    "text": "Фокусник на свадьбе Михаила вёл себя как настоящий волшебник.",
@@ -8735,6 +8799,22 @@
    "blank": "врачу"
   }
  ],
+ "w|вращаться": [
+  {
+   "text": "После наркоза у Алексея всё вращалось перед глазами.",
+   "en": "After the anesthesia everything was spinning before Alexei's eyes.",
+   "ko": "마취에서 깨어난 뒤 알렉세이의 눈앞이 빙빙 돌았어요.",
+   "blank": "вращалось",
+   "src": "made"
+  },
+  {
+   "text": "Наталья шутит, что вся её жизнь теперь вращается вокруг внуков.",
+   "en": "Natalia jokes that her whole life now revolves around her grandchildren.",
+   "ko": "나탈리야는 이제 자기 인생이 온통 손주들 중심으로 돌아간다고 농담해요.",
+   "blank": "вращается",
+   "src": "made"
+  }
+ ],
  "w|вред": [
   {
    "text": "Ты думаешь, что телевизор приносит вред детям?",
@@ -8764,6 +8844,22 @@
    "en": "Svetlana believes rumors can harm the newspaper's reputation.",
    "ko": "스베틀라나는 소문이 신문사 평판에 해가 될 수 있다고 생각해요.",
    "blank": "вредить",
+   "src": "made"
+  }
+ ],
+ "w|вредный": [
+  {
+   "text": "Диетолог объяснил Алексею, чем вредна жирная пища.",
+   "en": "The dietitian explained to Alexei why fatty food is harmful.",
+   "ko": "영양사는 기름진 음식이 왜 해로운지 알렉세이에게 설명했어요.",
+   "blank": "вредна",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что бросила вредную привычку пить кофе на ночь.",
+   "en": "Natalia writes that she gave up the bad habit of drinking coffee at night.",
+   "ko": "나탈리야는 밤에 커피를 마시는 나쁜 습관을 끊었다고 써요.",
+   "blank": "вредную",
    "src": "made"
   }
  ],
@@ -8841,6 +8937,22 @@
    "en": "You seem to agree.",
    "ko": "너는 동의하는 것 같아.",
    "blank": "вроде"
+  }
+ ],
+ "w|вручную": [
+  {
+   "text": "Кровать Алексея старая, и её приходится поднимать вручную.",
+   "en": "Alexei's bed is old and has to be raised by hand.",
+   "ko": "알렉세이의 침대는 낡아서 손으로 올려야 해요.",
+   "blank": "вручную",
+   "src": "made"
+  },
+  {
+   "text": "Наталья по-прежнему пишет письма вручную, хотя у неё есть компьютер.",
+   "en": "Natalia still writes letters by hand, even though she has a computer.",
+   "ko": "나탈리야는 컴퓨터가 있는데도 여전히 손으로 편지를 써요.",
+   "blank": "вручную",
+   "src": "made"
   }
  ],
  "w|вряд": [
@@ -12275,6 +12387,22 @@
    "src": "tatoeba:2717243/Leonid204 en:434590/lukaszpp"
   }
  ],
+ "w|гормон": [
+  {
+   "text": "Анализ показал, что у Алексея не хватает одного гормона.",
+   "en": "The test showed that Alexei is short of one hormone.",
+   "ko": "검사 결과 알렉세이에게 호르몬 하나가 부족하다고 나왔어요.",
+   "blank": "гормона",
+   "src": "made"
+  },
+  {
+   "text": "Наталья шутит, что её плохое настроение — это просто гормоны.",
+   "en": "Natalia jokes that her bad mood is just hormones.",
+   "ko": "나탈리야는 기분이 안 좋은 건 그냥 호르몬 탓이라고 농담해요.",
+   "blank": "гормоны",
+   "src": "made"
+  }
+ ],
  "w|горничная": [
   {
    "text": "Новую гостиницу строит бригада Ивана, а горничная из соседнего отеля каждый день приносит им чай.",
@@ -13431,6 +13559,22 @@
    "en": "We can't decide without the data.",
    "ko": "데이터 없이는 못 정해.",
    "blank": "данных"
+  }
+ ],
+ "w|дантист": [
+  {
+   "text": "Из-за зубной боли Алексея отправили к дантисту на третий этаж.",
+   "en": "Because of a toothache Alexei was sent to the hospital dentist on the third floor.",
+   "ko": "이가 아파서 알렉세이는 삼 층에 있는 병원 치과 의사에게 보내졌어요.",
+   "blank": "дантисту",
+   "src": "made"
+  },
+  {
+   "text": "Наталья наконец нашла хорошего дантиста и делится его адресом с подругой.",
+   "en": "Natalia finally found a good dentist and shares his address with her friend.",
+   "ko": "나탈리야는 마침내 좋은 치과 의사를 찾아서 친구에게 주소를 알려 줘요.",
+   "blank": "дантиста",
+   "src": "made"
   }
  ],
  "w|дань": [
@@ -15999,6 +16143,22 @@
    "src": "made"
   }
  ],
+ "w|доставаться": [
+  {
+   "text": "Самые вкусные яблоки из передачи всегда доставались Алексею.",
+   "en": "The tastiest apples from the care package always went to Alexei.",
+   "ko": "보내온 꾸러미에서 제일 맛있는 사과는 늘 알렉세이 차지였어요.",
+   "blank": "доставались",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вспоминает, что в детстве ей всегда доставалась верхняя полка в поезде.",
+   "en": "Natalia recalls that as a child she always got the upper berth on the train.",
+   "ko": "나탈리야는 어릴 때 기차에서 늘 자기가 위쪽 침대를 차지했다고 떠올려요.",
+   "blank": "доставалась",
+   "src": "made"
+  }
+ ],
  "w|доставить": [
   {
    "text": "Мы можем доставить её сегодня вечером.",
@@ -18457,6 +18617,22 @@
    "src": "made"
   }
  ],
+ "w|завладеть": [
+  {
+   "text": "Мысль о доме совсем завладела Алексеем в последние дни перед выпиской.",
+   "en": "The thought of home completely took hold of Alexei in the last days before discharge.",
+   "ko": "퇴원을 며칠 앞두고 알렉세이는 온통 집 생각뿐이었어요.",
+   "blank": "завладела",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что новый роман так завладел её вниманием, что она забыла про ужин.",
+   "en": "Natalia writes that a new novel captured her attention so much that she forgot about dinner.",
+   "ko": "나탈리야는 새 소설에 푹 빠져서 저녁 먹는 것도 잊었다고 써요.",
+   "blank": "завладел",
+   "src": "made"
+  }
+ ],
  "w|завод": [
   {
    "text": "Павел часто ездит на завод, чтобы проверить качество продукции.",
@@ -19012,6 +19188,22 @@
    "en": "Natalia warned that a collar that's too tight could choke the puppy.",
    "ko": "나탈리야는 목줄이 너무 조이면 강아지가 숨이 막힐 수 있다고 경고했어요.",
    "blank": "задушить",
+   "src": "made"
+  }
+ ],
+ "w|задыхаться": [
+  {
+   "text": "На лестнице Алексей начал задыхаться и сел отдохнуть.",
+   "en": "On the stairs Alexei began to get out of breath and sat down to rest.",
+   "ko": "알렉세이는 계단에서 숨이 차기 시작해서 앉아 쉬었어요.",
+   "blank": "задыхаться",
+   "src": "made"
+  },
+  {
+   "text": "Наталья призналась, что в метро иногда начинает задыхаться от толпы.",
+   "en": "Natalia admitted that on the metro she sometimes starts to feel she can't breathe because of the crowd.",
+   "ko": "나탈리야는 지하철에서 사람이 많으면 가끔 숨이 막힌다고 털어놨어요.",
+   "blank": "задыхаться",
    "src": "made"
   }
  ],
@@ -21051,6 +21243,22 @@
    "src": "tatoeba:1383899/Biga en:274035/CK"
   }
  ],
+ "w|затылок": [
+  {
+   "text": "После падения у Алексея на затылке осталась большая шишка.",
+   "en": "After the fall Alexei had a big bump on the back of his head.",
+   "ko": "넘어진 뒤 알렉세이의 뒤통수에 커다란 혹이 났어요.",
+   "blank": "затылке",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вспоминает, как подруга стригла её коротко, почти под затылок.",
+   "en": "Natalia recalls how her friend cut her hair very short, almost up to the back of her head.",
+   "ko": "나탈리야는 친구가 자기 머리를 뒤통수까지 짧게 잘라 주던 일을 떠올려요.",
+   "blank": "затылок",
+   "src": "made"
+  }
+ ],
  "w|захват": [
   {
    "text": "В учебнике Андрей читал о захвате крепости в средние века.",
@@ -21572,6 +21780,22 @@
    "en": "A huge muscleman in a superhero costume overtook Svetlana.",
    "ko": "슈퍼히어로 옷을 입은 덩치 큰 남자가 스베틀라나를 앞질렀어요.",
    "blank": "здоровяк",
+   "src": "made"
+  }
+ ],
+ "w|здравоохранение": [
+  {
+   "text": "В очереди к врачу Алексей слушал, как пенсионеры ругают местное здравоохранение.",
+   "en": "In the line to see the doctor, Alexei listened to pensioners complaining about local health care.",
+   "ko": "알렉세이는 진료 대기 줄에서 연금 생활자들이 지역 의료 제도를 욕하는 걸 들었어요.",
+   "blank": "здравоохранение",
+   "src": "made"
+  },
+  {
+   "text": "Наталья считает, что в их маленьком городе здравоохранение стало лучше.",
+   "en": "Natalia thinks that health care in their small town has gotten better.",
+   "ko": "나탈리야는 자기네 작은 도시의 의료가 나아졌다고 생각해요.",
+   "blank": "здравоохранение",
    "src": "made"
   }
  ],
@@ -23625,6 +23849,22 @@
    "src": "made"
   }
  ],
+ "w|инфаркт": [
+  {
+   "text": "Врач объяснил Алексею, что инфаркт удалось предотвратить вовремя.",
+   "en": "The doctor explained to Alexei that a heart attack had been prevented in time.",
+   "ko": "의사는 알렉세이에게 심근경색을 제때 막을 수 있었다고 설명했어요.",
+   "blank": "инфаркт",
+   "src": "made"
+  },
+  {
+   "text": "Наталья с грустью сообщила, что у её отца был инфаркт.",
+   "en": "Natalia sadly reported that her father had had a heart attack.",
+   "ko": "나탈리야는 아버지가 심근경색을 겪었다고 슬프게 전했어요.",
+   "blank": "инфаркт",
+   "src": "made"
+  }
+ ],
  "w|инфекция": [
   {
    "text": "Перед поездкой врач предупредил Михаила, что в дороге легко подхватить инфекцию.",
@@ -24825,6 +25065,22 @@
    "src": "made"
   }
  ],
+ "w|карантин": [
+  {
+   "text": "Отделение закрыли на карантин, и к Алексею неделю никого не пускали.",
+   "en": "The ward was put under quarantine, and no one was allowed to visit Alexei for a week.",
+   "ko": "병동이 격리되어 일주일 동안 아무도 알렉세이를 면회하지 못했어요.",
+   "blank": "карантин",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вспоминает, как они сидели на карантине в общежитии и играли в карты.",
+   "en": "Natalia recalls how they were stuck in quarantine in the dorm and played cards.",
+   "ko": "나탈리야는 기숙사에서 격리되어 함께 카드놀이를 하던 때를 떠올려요.",
+   "blank": "карантине",
+   "src": "made"
+  }
+ ],
  "w|караоке": [
   {
    "text": "Свидетель утверждал, что в тот вечер видел Алексея в караоке.",
@@ -25188,6 +25444,22 @@
    "en": "In the breakfast scene Anna ate cold porridge about ten times.",
    "ko": "아침 식사 장면에서 안나는 식은 죽을 열 번쯤 먹었어요.",
    "blank": "кашу",
+   "src": "made"
+  }
+ ],
+ "w|кашель": [
+  {
+   "text": "Ночью Алексея мучил сухой кашель, и он не мог уснуть.",
+   "en": "At night Alexei was tormented by a dry cough and couldn't fall asleep.",
+   "ko": "알렉세이는 밤에 마른기침이 심해서 잠을 못 잤어요.",
+   "blank": "кашель",
+   "src": "made"
+  },
+  {
+   "text": "Наталья спрашивает подругу, прошёл ли у её сына кашель.",
+   "en": "Natalia asks her friend whether her son's cough has gone.",
+   "ko": "나탈리야는 친구에게 아들의 기침이 나았는지 물어요.",
+   "blank": "кашель",
    "src": "made"
   }
  ],
@@ -30087,6 +30359,22 @@
    "src": "tatoeba:12066431/marafon en:9668232/CK"
   }
  ],
+ "w|ловко": [
+  {
+   "text": "Медбрат ловко поставил Алексею капельницу с первого раза.",
+   "en": "The male nurse deftly put Alexei's IV in on the first try.",
+   "ko": "남자 간호사는 단번에 능숙하게 알렉세이에게 링거를 놓았어요.",
+   "blank": "ловко",
+   "src": "made"
+  },
+  {
+   "text": "Наталья ловко вклеила в письмо засушенный кленовый лист.",
+   "en": "Natalia deftly glued a dried maple leaf into the letter.",
+   "ko": "나탈리야는 말린 단풍잎을 솜씨 좋게 편지에 붙였어요.",
+   "blank": "ловко",
+   "src": "made"
+  }
+ ],
  "w|ловушка": [
   {
    "text": "Откуда вы знаете, что это не ловушка?",
@@ -31844,6 +32132,22 @@
    "en": "Irina mixed too many colours and got a disgusting brownish shade.",
    "ko": "이리나는 색을 너무 많이 섞어서 칙칙한 갈색이 나왔어요.",
    "blank": "мерзкий",
+   "src": "made"
+  }
+ ],
+ "w|мерзко": [
+  {
+   "text": "Лекарство на вкус было мерзко горьким, но Алексей его выпил.",
+   "en": "The medicine tasted disgustingly bitter, but Alexei drank it.",
+   "ko": "약이 역겹게 썼지만 알렉세이는 다 마셨어요.",
+   "blank": "мерзко",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что осенью у них в городе мерзко и сыро.",
+   "en": "Natalia writes that in autumn it's nasty and damp in their town.",
+   "ko": "나탈리야는 가을이면 자기네 도시가 칙칙하고 축축하다고 써요.",
+   "blank": "мерзко",
    "src": "made"
   }
  ],
@@ -33802,6 +34106,22 @@
    "en": "The climb onto the bridge at the end of the course was real torment for Irina.",
    "ko": "코스 끝의 다리 오르막은 이리나에게 정말 고문이었어요.",
    "blank": "мукой",
+   "src": "made"
+  }
+ ],
+ "w|мурашки": [
+  {
+   "text": "От холодного геля для УЗИ у Алексея побежали мурашки.",
+   "en": "The cold ultrasound gel gave Alexei goosebumps.",
+   "ko": "초음파 젤이 차가워서 알렉세이는 소름이 돋았어요.",
+   "blank": "мурашки",
+   "src": "made"
+  },
+  {
+   "text": "Наталья призналась, что от старой песни у неё до сих пор мурашки.",
+   "en": "Natalia admitted that the old song still gives her goosebumps.",
+   "ko": "나탈리야는 그 옛 노래를 들으면 아직도 소름이 돋는다고 털어놨어요.",
+   "blank": "мурашки",
    "src": "made"
   }
  ],
@@ -49125,6 +49445,22 @@
    "src": "made"
   }
  ],
+ "w|подвергать": [
+  {
+   "text": "Врач не хочет подвергать Алексея лишнему облучению и отменил второй снимок.",
+   "en": "The doctor doesn't want to expose Alexei to extra radiation and cancelled the second scan.",
+   "ko": "의사는 알렉세이가 방사선에 불필요하게 노출되지 않게 두 번째 촬영을 취소했어요.",
+   "blank": "подвергать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья просит подругу не подвергать себя опасности в горах.",
+   "en": "Natalia asks her friend not to put herself in danger in the mountains.",
+   "ko": "나탈리야는 친구에게 산에서 위험한 짓은 하지 말라고 부탁해요.",
+   "blank": "подвергать",
+   "src": "made"
+  }
+ ],
  "w|подвергнуться": [
   {
    "text": "В годы войны здание библиотеки подверглось бомбёжке, рассказывает Дмитрий экскурсантам.",
@@ -49250,6 +49586,22 @@
    "en": "Svetlana's friend ran the race with a pushchair, with nappies in her backpack.",
    "ko": "스베틀라나의 친구는 유모차를 밀며 달렸고, 배낭에는 기저귀가 들어 있었어요.",
    "blank": "подгузники",
+   "src": "made"
+  }
+ ],
+ "w|подделать": [
+  {
+   "text": "Врач со смехом сказал Алексею, что его подпись на рецепте никому не подделать.",
+   "en": "The doctor told Alexei with a laugh that no one could ever forge his signature on a prescription.",
+   "ko": "의사는 웃으며 자기 처방전 서명은 아무도 위조 못 한다고 알렉세이에게 말했어요.",
+   "blank": "подделать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вспоминает, как подруга пыталась подделать подпись мамы в дневнике.",
+   "en": "Natalia recalls how her friend tried to forge her mom's signature in the school diary.",
+   "ko": "나탈리야는 친구가 알림장에 엄마 서명을 위조하려던 일을 떠올려요.",
+   "blank": "подделать",
    "src": "made"
   }
  ],
@@ -52803,6 +53155,22 @@
    "src": "made"
   }
  ],
+ "w|порез": [
+  {
+   "text": "Медсестра обработала Алексею глубокий порез на ладони.",
+   "en": "The nurse treated a deep cut on Alexei's palm.",
+   "ko": "간호사가 알렉세이의 손바닥에 난 깊은 상처를 소독해 줬어요.",
+   "blank": "порез",
+   "src": "made"
+  },
+  {
+   "text": "Наталья вспоминает, как заклеивала подруге порез на коленке после падения с велосипеда.",
+   "en": "Natalia recalls putting a plaster on her friend's cut knee after she fell off her bike.",
+   "ko": "나탈리야는 친구가 자전거에서 넘어졌을 때 무릎 상처에 반창고를 붙여 주던 일을 떠올려요.",
+   "blank": "порез",
+   "src": "made"
+  }
+ ],
  "w|порезать": [
   {
    "text": "На уроке труда Иван случайно порезал палец ножом.",
@@ -55931,6 +56299,22 @@
    "src": "made"
   }
  ],
+ "w|прелестно": [
+  {
+   "text": "Дочка нарисовала Алексею открытку, и он сказал, что это прелестно.",
+   "en": "His daughter drew Alexei a card, and he said it was lovely.",
+   "ko": "딸이 카드를 그려 주자 알렉세이는 정말 예쁘다고 했어요.",
+   "blank": "прелестно",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что внучка в новом платье выглядит прелестно.",
+   "en": "Natalia writes that her granddaughter looks lovely in her new dress.",
+   "ko": "나탈리야는 손녀가 새 원피스를 입으니 정말 사랑스럽다고 써요.",
+   "blank": "прелестно",
+   "src": "made"
+  }
+ ],
  "w|прелестный": [
   {
    "text": "Никита сделал репортаж о прелестной деревне на берегу озера.",
@@ -57763,6 +58147,22 @@
    "src": "made"
   }
  ],
+ "w|припадок": [
+  {
+   "text": "Ночью у соседа Алексея случился припадок, и он сразу позвал медсестру.",
+   "en": "At night Alexei's neighbor had a seizure, and Alexei immediately called the nurse.",
+   "ko": "밤에 알렉세이 옆 환자가 발작을 일으켜서 알렉세이가 바로 간호사를 불렀어요.",
+   "blank": "припадок",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что у её собаки был припадок, но ветеринар помог.",
+   "en": "Natalia writes that her dog had a fit, but the vet helped.",
+   "ko": "나탈리야는 자기 개가 발작을 일으켰지만 수의사가 도와줬다고 써요.",
+   "blank": "припадок",
+   "src": "made"
+  }
+ ],
  "w|припоминать": [
   {
    "text": "Андрей припоминает, как в детстве прятался в этом чулане.",
@@ -58564,6 +58964,22 @@
    "en": "Elena's first pie turned out to be a complete flop.",
    "ko": "엘레나가 처음 만든 파이는 완전히 실패였어요.",
    "blank": "провалом",
+   "src": "made"
+  }
+ ],
+ "w|провалить": [
+  {
+   "text": "Из-за болезни Алексей боится провалить экзамен в университете.",
+   "en": "Because of his illness Alexei is afraid of failing his university exam.",
+   "ko": "알렉세이는 아파서 대학 시험을 망칠까 봐 걱정해요.",
+   "blank": "провалить",
+   "src": "made"
+  },
+  {
+   "text": "Наталья признаётся, что боялась провалить собеседование, но всё прошло хорошо.",
+   "en": "Natalia confesses that she was afraid of blowing the interview, but it all went well.",
+   "ko": "나탈리야는 면접을 망칠까 봐 걱정했는데 다 잘됐다고 털어놔요.",
+   "blank": "провалить",
    "src": "made"
   }
  ],
@@ -62503,6 +62919,22 @@
    "src": "made"
   }
  ],
+ "w|разыскать": [
+  {
+   "text": "Медсестре удалось разыскать родственников Алексея по старому номеру.",
+   "en": "The nurse managed to track down Alexei's relatives using an old number.",
+   "ko": "간호사는 옛 번호로 알렉세이의 가족을 겨우 찾아냈어요.",
+   "blank": "разыскать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что ей удалось разыскать их старую учительницу через соседей.",
+   "en": "Natalia writes that she managed to track down their old teacher through the neighbors.",
+   "ko": "나탈리야는 이웃들을 통해 옛 선생님을 찾아냈다고 써요.",
+   "blank": "разыскать",
+   "src": "made"
+  }
+ ],
  "w|разыскивать": [
   {
    "text": "У входа висело объявление: полиция разыскивает пропавшую собаку, и Михаил его сфотографировал.",
@@ -63503,6 +63935,22 @@
    "src": "tatoeba:13293699/EugeneGS en:13293697/EugeneGS"
   }
  ],
+ "w|реанимация": [
+  {
+   "text": "Алексей провёл в реанимации всего одну ночь.",
+   "en": "Alexei spent only one night in intensive care.",
+   "ko": "알렉세이는 중환자실에서 딱 하룻밤만 보냈어요.",
+   "blank": "реанимации",
+   "src": "made"
+  },
+  {
+   "text": "Наталья благодарит подругу-врача за то, что та столько лет работает в реанимации.",
+   "en": "Natalia thanks her doctor friend for working in intensive care for so many years.",
+   "ko": "나탈리야는 의사인 친구가 오랫동안 중환자실에서 일해 온 것에 고마워해요.",
+   "blank": "реанимации",
+   "src": "made"
+  }
+ ],
  "w|ребёнок": [
   {
    "text": "Ребёнок уже спит.",
@@ -64384,6 +64832,22 @@
    "en": "Anna flew in to see the Roman amphitheatre.",
    "ko": "안나는 로마 원형 극장을 보러 비행기를 타고 왔어요.",
    "blank": "римский",
+   "src": "made"
+  }
+ ],
+ "w|ринг": [
+  {
+   "text": "Сосед Алексея по палате — боксёр, который сломал руку на ринге.",
+   "en": "Alexei's roommate in the ward is a boxer who broke his arm in the ring.",
+   "ko": "알렉세이와 같은 병실을 쓰는 사람은 링에서 팔이 부러진 권투 선수예요.",
+   "blank": "ринге",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что её племянник впервые вышел на ринг и выиграл бой.",
+   "en": "Natalia writes that her nephew stepped into the ring for the first time and won the fight.",
+   "ko": "나탈리야는 조카가 처음으로 링에 올라 경기에서 이겼다고 써요.",
+   "blank": "ринг",
    "src": "made"
   }
  ],
@@ -65648,6 +66112,22 @@
    "en": "On the way Tatiana was reading a novel in which the hero saves his friend from suicide.",
    "ko": "가는 길에 타티아나는 주인공이 친구의 자살을 막는 소설을 읽었어요.",
    "blank": "самоубийства",
+   "src": "made"
+  }
+ ],
+ "w|самочувствие": [
+  {
+   "text": "Каждое утро врач спрашивает Алексея про самочувствие.",
+   "en": "Every morning the doctor asks Alexei how he's feeling.",
+   "ko": "의사는 매일 아침 알렉세이에게 몸 상태가 어떤지 물어요.",
+   "blank": "самочувствие",
+   "src": "made"
+  },
+  {
+   "text": "В каждом письме Наталья первым делом спрашивает о самочувствии мамы подруги.",
+   "en": "In every letter Natalia first asks how her friend's mother is feeling.",
+   "ko": "나탈리야는 편지마다 제일 먼저 친구 어머니의 안부를 물어요.",
+   "blank": "самочувствии",
    "src": "made"
   }
  ],
@@ -67087,6 +67567,22 @@
    "blank": "сердца"
   }
  ],
+ "w|сердцебиение": [
+  {
+   "text": "Прибор над кроватью Алексея пищит, если сердцебиение становится слишком частым.",
+   "en": "The device above Alexei's bed beeps if his heartbeat gets too fast.",
+   "ko": "알렉세이 침대 위 기계는 심장 박동이 너무 빨라지면 삐 소리를 내요.",
+   "blank": "сердцебиение",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что от волнения у неё учащённое сердцебиение перед каждой встречей.",
+   "en": "Natalia writes that she gets a racing heartbeat from nerves before every meeting.",
+   "ko": "나탈리야는 만남을 앞두면 긴장해서 심장이 빨리 뛴다고 써요.",
+   "blank": "сердцебиение",
+   "src": "made"
+  }
+ ],
  "w|серебро": [
   {
    "text": "Лунная дорожка на воде блестела, как серебро, и Павел долго не мог уснуть.",
@@ -67719,6 +68215,22 @@
    "ko": "사람들 사이를 헤치고 지나갔어요.",
    "blank": "сквозь",
    "src": "tatoeba:11693141/marafon en:11692562/CK"
+  }
+ ],
+ "w|скелет": [
+  {
+   "text": "В кабинете хирурга стоит пластиковый скелет, и Алексей с ним сфотографировался.",
+   "en": "There's a plastic skeleton in the surgeon's office, and Alexei took a photo with it.",
+   "ko": "외과 진료실에 플라스틱 해골 모형이 있어서 알렉세이가 같이 사진을 찍었어요.",
+   "blank": "скелет",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что её сын нашёл в лесу скелет птицы и принёс домой.",
+   "en": "Natalia writes that her son found a bird skeleton in the woods and brought it home.",
+   "ko": "나탈리야는 아들이 숲에서 새 뼈를 주워 집에 가져왔다고 써요.",
+   "blank": "скелет",
+   "src": "made"
   }
  ],
  "w|скидка": [
@@ -72017,6 +72529,22 @@
    "src": "made"
   }
  ],
+ "w|срабатывать": [
+  {
+   "text": "Датчик дыма в палате Алексея срабатывает даже от пара из чайника.",
+   "en": "The smoke detector in Alexei's ward goes off even from kettle steam.",
+   "ko": "알렉세이 병실의 화재 감지기는 주전자 김에도 울려요.",
+   "blank": "срабатывает",
+   "src": "made"
+  },
+  {
+   "text": "Наталья жалуется, что сигнализация в машине срабатывает от каждого порыва ветра.",
+   "en": "Natalia complains that her car alarm goes off at every gust of wind.",
+   "ko": "나탈리야는 차 경보기가 바람만 불어도 울린다고 투덜거려요.",
+   "blank": "срабатывает",
+   "src": "made"
+  }
+ ],
  "w|сработать": [
   {
    "text": "Я полагаю, что это может сработать.",
@@ -73169,6 +73697,22 @@
    "blank": "столько"
   }
  ],
+ "w|стонать": [
+  {
+   "text": "Алексей старался не стонать, чтобы не разбудить соседей.",
+   "en": "Alexei tried not to groan so as not to wake his neighbors.",
+   "ko": "알렉세이는 옆 사람들을 깨우지 않으려고 신음을 참았어요.",
+   "blank": "стонать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что её муж любит стонать даже от лёгкой простуды.",
+   "en": "Natalia writes that her husband likes to moan even over a mild cold.",
+   "ko": "나탈리야는 남편이 가벼운 감기에도 앓는 소리를 한다고 써요.",
+   "blank": "стонать",
+   "src": "made"
+  }
+ ],
  "w|стоп": [
   {
    "text": "Стоп! Вам нельзя здесь парковаться!",
@@ -73698,6 +74242,22 @@
    "en": "In the empty gym only the thump of Olga's ball could be heard.",
    "ko": "텅 빈 체육관에는 올가의 공 튀는 소리만 들렸어요.",
    "blank": "стук",
+   "src": "made"
+  }
+ ],
+ "w|стукнуть": [
+  {
+   "text": "Алексей нечаянно стукнул локтем капельницу.",
+   "en": "Alexei accidentally knocked the IV stand with his elbow.",
+   "ko": "알렉세이는 실수로 팔꿈치로 링거대를 쳤어요.",
+   "blank": "стукнул",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, как в детстве младший брат стукнул её мячом по голове.",
+   "en": "Natalia writes about how as a child her little brother hit her on the head with a ball.",
+   "ko": "나탈리야는 어릴 때 남동생이 공으로 자기 머리를 맞혔던 일을 써요.",
+   "blank": "стукнул",
    "src": "made"
   }
  ],
@@ -74286,6 +74846,22 @@
    "en": "Before the bakery Elena worked in banking for ten years.",
    "ko": "빵집을 열기 전에 엘레나는 십 년 동안 은행 쪽에서 일했어요.",
    "blank": "сфере",
+   "src": "made"
+  }
+ ],
+ "w|сфокусироваться": [
+  {
+   "text": "Чтобы не думать о боли, Алексей старается сфокусироваться на книге.",
+   "en": "To stop thinking about the pain, Alexei tries to focus on a book.",
+   "ko": "알렉세이는 통증을 잊으려고 책에 집중하려고 애써요.",
+   "blank": "сфокусироваться",
+   "src": "made"
+  },
+  {
+   "text": "Наталья признаётся, что дома ей трудно сфокусироваться на работе.",
+   "en": "Natalia confesses that at home she finds it hard to focus on work.",
+   "ko": "나탈리야는 집에서는 일에 집중하기 어렵다고 털어놔요.",
+   "blank": "сфокусироваться",
    "src": "made"
   }
  ],
@@ -75037,6 +75613,22 @@
    "src": "made"
   }
  ],
+ "w|талия": [
+  {
+   "text": "Врач измерил Алексею талию и посоветовал меньше сидеть.",
+   "en": "The doctor measured Alexei's waist and advised him to sit less.",
+   "ko": "의사는 알렉세이의 허리둘레를 재고 덜 앉아 있으라고 조언했어요.",
+   "blank": "талию",
+   "src": "made"
+  },
+  {
+   "text": "Наталья хвастается, что после йоги её талия стала тоньше.",
+   "en": "Natalia boasts that after yoga her waist has become slimmer.",
+   "ko": "나탈리야는 요가를 하고 나서 허리가 가늘어졌다고 자랑해요.",
+   "blank": "талия",
+   "src": "made"
+  }
+ ],
  "w|там": [
   {
    "text": "Оставь сумку там.",
@@ -75537,6 +76129,22 @@
    "ko": "아직도 열 있어?",
    "blank": "температура",
    "src": "tatoeba:11843592/Wezel en:6769478/CK"
+  }
+ ],
+ "w|теннис": [
+  {
+   "text": "Хирург пообещал Алексею, что через месяц он снова сможет играть в теннис.",
+   "en": "The surgeon promised Alexei that in a month he'd be able to play tennis again.",
+   "ko": "외과 의사는 한 달 뒤면 다시 테니스를 칠 수 있을 거라고 알렉세이에게 약속했어요.",
+   "blank": "теннис",
+   "src": "made"
+  },
+  {
+   "text": "Наталья пишет, что записалась на теннис и уже обыграла тренера.",
+   "en": "Natalia writes that she signed up for tennis and has already beaten the coach.",
+   "ko": "나탈리야는 테니스를 배우기 시작했는데 벌써 코치를 이겼다고 써요.",
+   "blank": "теннис",
+   "src": "made"
   }
  ],
  "w|тень": [
@@ -76913,6 +77521,22 @@
    "ko": "저한테는 좋은 코치가 있었어요.",
    "blank": "тренер",
    "src": "tatoeba:5297296/odexed en:2331582/CK"
+  }
+ ],
+ "w|тренировать": [
+  {
+   "text": "После операции Алексею велели каждый день тренировать ногу.",
+   "en": "After the operation Alexei was told to exercise his leg every day.",
+   "ko": "수술 뒤 알렉세이는 매일 다리 운동을 하라는 말을 들었어요.",
+   "blank": "тренировать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья советует подруге тренировать память стихами.",
+   "en": "Natalia advises her friend to train her memory with poems.",
+   "ko": "나탈리야는 친구에게 시를 외우며 기억력을 단련하라고 권해요.",
+   "blank": "тренировать",
+   "src": "made"
   }
  ],
  "w|тренироваться": [
@@ -85725,6 +86349,22 @@
    "ko": "대체 에너지가 뭐예요?",
    "blank": "энергия",
    "src": "tatoeba:8581627/marafon en:10181700/ddnktr"
+  }
+ ],
+ "w|эпидемия": [
+  {
+   "text": "Пожилой врач рассказал Алексею, как больница работала во время эпидемии гриппа.",
+   "en": "An elderly doctor told Alexei how the hospital worked during the flu epidemic.",
+   "ko": "나이 든 의사가 독감이 유행하던 때 병원이 어떻게 돌아갔는지 알렉세이에게 들려줬어요.",
+   "blank": "эпидемии",
+   "src": "made"
+  },
+  {
+   "text": "В письме Наталья рассказывает, как их город пережил эпидемию кори.",
+   "en": "In the letter Natalia tells how their town got through a measles epidemic.",
+   "ko": "나탈리야는 편지에서 자기네 도시가 홍역 유행을 어떻게 이겨 냈는지 이야기해요.",
+   "blank": "эпидемию",
+   "src": "made"
   }
  ],
  "w|эпизод": [

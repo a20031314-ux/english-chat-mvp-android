@@ -2779,6 +2779,22 @@
    "src": "made"
   }
  ],
+ "w|개찰구": [
+  {
+   "text": "준호는 손님에게 지하철 개찰구에서 카드를 찍는 법을 보여 줬어요.",
+   "en": "Junho showed a guest how to tap the card at the subway turnstile.",
+   "ko": "준호는 손님에게 지하철 개찰구에서 카드를 찍는 법을 보여 줬어요.",
+   "blank": "개찰구에서",
+   "src": "made"
+  },
+  {
+   "text": "하은은 이동장을 들고 개찰구를 통과했어요.",
+   "en": "Haeun went through the ticket gate holding the carrier.",
+   "ko": "하은은 이동장을 들고 개찰구를 통과했어요.",
+   "blank": "개찰구를",
+   "src": "made"
+  }
+ ],
  "w|개최하다": [
   {
    "text": "성호는 동네 극장에서 청소년 연극제를 해마다 개최해요.",
@@ -2840,6 +2856,22 @@
    "en": "When choosing a hotel, Yuna looks at objective facility details rather than star ratings.",
    "ko": "유나는 호텔을 고를 때 별점보다 객관적인 시설 정보를 봐요.",
    "blank": "객관적인",
+   "src": "made"
+  }
+ ],
+ "w|객실": [
+  {
+   "text": "준호는 손님이 나가자마자 객실 청소를 시작했어요.",
+   "en": "As soon as the guest left, Junho started cleaning the room.",
+   "ko": "준호는 손님이 나가자마자 객실 청소를 시작했어요.",
+   "blank": "객실",
+   "src": "made"
+  },
+  {
+   "text": "하은은 반려동물을 받아 주는 호텔 객실이 늘었다는 기사를 읽었어요.",
+   "en": "Haeun read an article saying more hotel rooms now accept pets.",
+   "ko": "하은은 반려동물을 받아 주는 호텔 객실이 늘었다는 기사를 읽었어요.",
+   "blank": "객실이",
    "src": "made"
   }
  ],
@@ -3913,6 +3945,22 @@
    "blank": "검소하다"
   }
  ],
+ "w|검역": [
+  {
+   "text": "해외에서 온 손님은 공항 검역 때문에 체크인이 늦어졌어요.",
+   "en": "A guest from abroad was late checking in because of quarantine inspection at the airport.",
+   "ko": "해외에서 온 손님은 공항 검역 때문에 체크인이 늦어졌어요.",
+   "blank": "검역",
+   "src": "made"
+  },
+  {
+   "text": "해외로 이사하는 고양이는 도착하면 검역을 받아야 해요.",
+   "en": "A cat moving abroad has to go through quarantine on arrival.",
+   "ko": "해외로 이사하는 고양이는 도착하면 검역을 받아야 해요.",
+   "blank": "검역을",
+   "src": "made"
+  }
+ ],
  "w|검은색": [
   {
    "text": "검은색으로 통일하자.",
@@ -4169,6 +4217,22 @@
    "en": "I spent a lazy morning.",
    "ko": "게으른 아침을 보냈어.",
    "blank": "게으른"
+  }
+ ],
+ "w|게이트": [
+  {
+   "text": "공항 셔틀버스가 늦어서 손님은 게이트가 닫히기 직전에 겨우 도착했대요.",
+   "en": "The airport shuttle was late, so the guest barely made it before the gate closed.",
+   "ko": "공항 셔틀버스가 늦어서 손님은 게이트가 닫히기 직전에 겨우 도착했대요.",
+   "blank": "게이트가",
+   "src": "made"
+  },
+  {
+   "text": "공항 게이트 앞에서 고양이가 울어서 하은은 이동장을 담요로 덮었어요.",
+   "en": "The cat cried in front of the airport gate, so Haeun covered the carrier with a blanket.",
+   "ko": "공항 게이트 앞에서 고양이가 울어서 하은은 이동장을 담요로 덮었어요.",
+   "blank": "게이트",
+   "src": "made"
   }
  ],
  "w|게임": [
@@ -20519,6 +20583,22 @@
    "blank": "당일에"
   }
  ],
+ "w|당일치기": [
+  {
+   "text": "준호는 당일치기로 온 손님에게 짐 보관 서비스를 안내했어요.",
+   "en": "Junho told a guest on a day trip about the luggage storage service.",
+   "ko": "준호는 당일치기로 온 손님에게 짐 보관 서비스를 안내했어요.",
+   "blank": "당일치기로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 강아지와 당일치기 여행을 다녀온 보호자에게 진드기 검사를 권했어요.",
+   "en": "Haeun recommended a tick check to an owner back from a day trip with their dog.",
+   "ko": "하은은 강아지와 당일치기 여행을 다녀온 보호자에게 진드기 검사를 권했어요.",
+   "blank": "당일치기",
+   "src": "made"
+  }
+ ],
  "w|당장": [
   {
    "text": "당장 나가!",
@@ -26287,6 +26367,22 @@
    "src": "made"
   }
  ],
+ "w|룸서비스": [
+  {
+   "text": "늦게 도착한 손님이 룸서비스로 라면을 주문했어요.",
+   "en": "A guest who arrived late ordered ramen through room service.",
+   "ko": "늦게 도착한 손님이 룸서비스로 라면을 주문했어요.",
+   "blank": "룸서비스로",
+   "src": "made"
+  },
+  {
+   "text": "여행지 호텔에서 강아지에게 룸서비스 음식을 준 보호자가 배탈 난 강아지를 데려왔어요.",
+   "en": "An owner who fed room-service food to their dog at a holiday hotel brought in the dog with an upset stomach.",
+   "ko": "여행지 호텔에서 강아지에게 룸서비스 음식을 준 보호자가 배탈 난 강아지를 데려왔어요.",
+   "blank": "룸서비스",
+   "src": "made"
+  }
+ ],
  "w|리더": [
   {
    "text": "지수는 능동적으로 사고할 뿐 아니라 통찰력 또한 뛰어나 리더가 될 자질이 충분하다.",
@@ -26827,6 +26923,22 @@
    "en": "Don't just do as you please.",
    "ko": "마음대로 하지 마.",
    "blank": "마음대로"
+  }
+ ],
+ "w|마일리지": [
+  {
+   "text": "준호는 손님에게 항공사 마일리지로 숙박비를 낼 수 있다고 알려 줬어요.",
+   "en": "Junho told a guest they could pay for the stay with airline miles.",
+   "ko": "준호는 손님에게 항공사 마일리지로 숙박비를 낼 수 있다고 알려 줬어요.",
+   "blank": "마일리지로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 모아 둔 마일리지로 학회 가는 비행기표를 샀어요.",
+   "en": "Haeun bought a plane ticket to the conference with the miles she'd saved up.",
+   "ko": "하은은 모아 둔 마일리지로 학회 가는 비행기표를 샀어요.",
+   "blank": "마일리지로",
+   "src": "made"
   }
  ],
  "w|마주치다": [
@@ -28252,6 +28364,22 @@
    "en": "Jiyoung wanted to learn how to choose a bed, so she borrowed a book about mattresses.",
    "ko": "지영은 침대 고르는 법을 알고 싶어서 매트리스에 관한 책을 빌렸어요.",
    "blank": "매트리스에",
+   "src": "made"
+  }
+ ],
+ "w|매표": [
+  {
+   "text": "호텔 앞 관광버스 매표 시간은 저녁 여섯 시까지예요.",
+   "en": "Ticket sales for the tour bus in front of the hotel run until six in the evening.",
+   "ko": "호텔 앞 관광버스 매표 시간은 저녁 여섯 시까지예요.",
+   "blank": "매표",
+   "src": "made"
+  },
+  {
+   "text": "기차역 매표 창구 직원이 하은에게 고양이 이동장 규정을 알려 줬어요.",
+   "en": "The station ticket window clerk told Haeun the rules for cat carriers.",
+   "ko": "기차역 매표 창구 직원이 하은에게 고양이 이동장 규정을 알려 줬어요.",
+   "blank": "매표",
    "src": "made"
   }
  ],
@@ -38277,6 +38405,22 @@
    "src": "made"
   }
  ],
+ "w|분실물": [
+  {
+   "text": "준호는 객실에서 나온 분실물을 상자에 담아 이름표를 붙였어요.",
+   "en": "Junho put the lost items found in the rooms in a box and labeled them.",
+   "ko": "준호는 객실에서 나온 분실물을 상자에 담아 이름표를 붙였어요.",
+   "blank": "분실물을",
+   "src": "made"
+  },
+  {
+   "text": "병원 대기실에는 주인을 기다리는 분실물이 몇 개 있어요.",
+   "en": "In the hospital waiting room there are a few lost items waiting for their owners.",
+   "ko": "병원 대기실에는 주인을 기다리는 분실물이 몇 개 있어요.",
+   "blank": "분실물이",
+   "src": "made"
+  }
+ ],
  "w|분야": [
   {
    "text": "관심 분야가 여러 개야.",
@@ -44885,6 +45029,22 @@
    "src": "made"
   }
  ],
+ "w|선착장": [
+  {
+   "text": "호텔 셔틀은 손님들을 선착장까지 데려다줘요.",
+   "en": "The hotel shuttle takes guests to the ferry dock.",
+   "ko": "호텔 셔틀은 손님들을 선착장까지 데려다줘요.",
+   "blank": "선착장까지",
+   "src": "made"
+  },
+  {
+   "text": "하은은 선착장에서 다친 갈매기를 발견하고 병원으로 데려왔어요.",
+   "en": "Haeun found an injured seagull at the dock and brought it to the hospital.",
+   "ko": "하은은 선착장에서 다친 갈매기를 발견하고 병원으로 데려왔어요.",
+   "blank": "선착장에서",
+   "src": "made"
+  }
+ ],
  "w|선출하다": [
   {
    "text": "벼룩시장 상인들은 경민을 새 상인회 회장으로 선출했어요.",
@@ -49271,6 +49431,22 @@
    "blank": "스위치가"
   }
  ],
+ "w|스위트룸": [
+  {
+   "text": "신혼부부가 스위트룸을 예약해서 준호는 꽃을 준비했어요.",
+   "en": "A newlywed couple booked the suite, so Junho prepared flowers.",
+   "ko": "신혼부부가 스위트룸을 예약해서 준호는 꽃을 준비했어요.",
+   "blank": "스위트룸을",
+   "src": "made"
+  },
+  {
+   "text": "어느 보호자는 강아지와 호텔 스위트룸에 묵었다며 사진을 보여 줬어요.",
+   "en": "One owner showed photos, saying they'd stayed in a hotel suite with their dog.",
+   "ko": "어느 보호자는 강아지와 호텔 스위트룸에 묵었다며 사진을 보여 줬어요.",
+   "blank": "스위트룸에",
+   "src": "made"
+  }
+ ],
  "w|스카프": [
   {
    "text": "준호는 할머니께 드릴 실크 스카프를 백화점에서 샀어요.",
@@ -49734,6 +49910,22 @@
    "en": "Every morning there's a long line of students wanting to buy bread before getting on the bus.",
    "ko": "버스 승차 전에 빵을 사려는 학생들로 아침마다 줄이 길어요.",
    "blank": "승차",
+   "src": "made"
+  }
+ ],
+ "w|승차권": [
+  {
+   "text": "준호는 손님 대신 서울 가는 기차 승차권을 인터넷으로 예매했어요.",
+   "en": "Junho booked a train ticket to Seoul online on the guest's behalf.",
+   "ko": "준호는 손님 대신 서울 가는 기차 승차권을 인터넷으로 예매했어요.",
+   "blank": "승차권을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 반려동물 동반 승차권을 따로 사야 한다는 걸 몰랐어요.",
+   "en": "Haeun didn't know she had to buy a separate ticket for traveling with a pet.",
+   "ko": "하은은 반려동물 동반 승차권을 따로 사야 한다는 걸 몰랐어요.",
+   "blank": "승차권을",
    "src": "made"
   }
  ],
@@ -50336,6 +50528,22 @@
    "en": "Mikyung decides when to pick the apples by watching the weather.",
    "ko": "미경은 사과를 따는 시점을 날씨를 보고 정해요.",
    "blank": "시점을",
+   "src": "made"
+  }
+ ],
+ "w|시차": [
+  {
+   "text": "장거리 비행으로 온 손님들은 시차 때문에 새벽에 아침 식사를 찾기도 해요.",
+   "en": "Guests from long-haul flights sometimes look for a meal at dawn because of jet lag.",
+   "ko": "장거리 비행으로 온 손님들은 시차 때문에 새벽에 아침 식사를 찾기도 해요.",
+   "blank": "시차",
+   "src": "made"
+  },
+  {
+   "text": "해외에서 온 강아지도 시차 때문에 밤에 잠을 못 잘 수 있어요.",
+   "en": "A dog that came from abroad can also have trouble sleeping at night because of jet lag.",
+   "ko": "해외에서 온 강아지도 시차 때문에 밤에 잠을 못 잘 수 있어요.",
+   "blank": "시차",
    "src": "made"
   }
  ],
@@ -58167,6 +58375,22 @@
    "blank": "여행이"
   }
  ],
+ "w|여행객": [
+  {
+   "text": "성수기라서 호텔 로비가 여행객으로 붐볐어요.",
+   "en": "It was peak season, so the hotel lobby was crowded with travelers.",
+   "ko": "성수기라서 호텔 로비가 여행객으로 붐볐어요.",
+   "blank": "여행객으로",
+   "src": "made"
+  },
+  {
+   "text": "여름휴가철에는 반려견을 맡기려는 여행객이 병원에 많이 와요.",
+   "en": "During summer vacation season, many travelers come to the hospital to board their dogs.",
+   "ko": "여름휴가철에는 반려견을 맡기려는 여행객이 병원에 많이 와요.",
+   "blank": "여행객이",
+   "src": "made"
+  }
+ ],
  "w|여행사": [
   {
    "text": "여행사 직원이 공항 카운터 앞에서 단체 손님들을 기다리고 있었어요.",
@@ -61702,6 +61926,22 @@
    "en": "At conferences Daeun becomes outgoing and talks even to researchers she's never met.",
    "ko": "다은은 학회에 가면 외향적으로 변해서 처음 보는 연구자에게도 말을 걸어요.",
    "blank": "외향적으로",
+   "src": "made"
+  }
+ ],
+ "w|외화": [
+  {
+   "text": "준호는 외화로 계산하려는 손님에게 환율을 설명했어요.",
+   "en": "Junho explained the exchange rate to a guest who wanted to pay in foreign currency.",
+   "ko": "준호는 외화로 계산하려는 손님에게 환율을 설명했어요.",
+   "blank": "외화로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 해외 학회 등록비를 외화로 송금했어요.",
+   "en": "Haeun sent the overseas conference registration fee in foreign currency.",
+   "ko": "하은은 해외 학회 등록비를 외화로 송금했어요.",
+   "blank": "외화로",
    "src": "made"
   }
  ],
@@ -75671,6 +75911,22 @@
    "src": "made"
   }
  ],
+ "w|조식": [
+  {
+   "text": "이 호텔 조식은 아침 여섯 시 반부터 나와요.",
+   "en": "Breakfast at this hotel is served from six thirty in the morning.",
+   "ko": "이 호텔 조식은 아침 여섯 시 반부터 나와요.",
+   "blank": "조식은",
+   "src": "made"
+  },
+  {
+   "text": "하은은 호텔 조식을 먹다가 병원에서 온 응급 전화를 받았어요.",
+   "en": "Haeun got an emergency call from the hospital while eating breakfast at a hotel.",
+   "ko": "하은은 호텔 조식을 먹다가 병원에서 온 응급 전화를 받았어요.",
+   "blank": "조식을",
+   "src": "made"
+  }
+ ],
  "w|조심스럽다": [
   {
    "text": "발걸음이 조심스러워.",
@@ -84601,6 +84857,22 @@
    "blank": "축하했어"
   }
  ],
+ "w|출간하다": [
+  {
+   "text": "준호가 일하는 호텔의 총지배인이 여행 수필집을 출간했어요.",
+   "en": "The general manager of the hotel where Junho works published a collection of travel essays.",
+   "ko": "준호가 일하는 호텔의 총지배인이 여행 수필집을 출간했어요.",
+   "blank": "출간했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은의 동물병원 원장님이 반려견 건강 책을 출간했어요.",
+   "en": "The director of Haeun's animal hospital published a book on dog health.",
+   "ko": "하은의 동물병원 원장님이 반려견 건강 책을 출간했어요.",
+   "blank": "출간했어요",
+   "src": "made"
+  }
+ ],
  "w|출구": [
   {
    "text": "출구로 나가자.",
@@ -84821,6 +85093,22 @@
    "en": "You have to attend to get the points.",
    "ko": "출석해야 점수를 받을 수 있어.",
    "blank": "출석해야"
+  }
+ ],
+ "w|출시하다": [
+  {
+   "text": "호텔은 겨울을 맞아 온천 패키지 상품을 새로 출시했어요.",
+   "en": "The hotel launched a new hot spring package for the winter.",
+   "ko": "호텔은 겨울을 맞아 온천 패키지 상품을 새로 출시했어요.",
+   "blank": "출시했어요",
+   "src": "made"
+  },
+  {
+   "text": "사료 회사가 노령견을 위한 새 사료를 출시했어요.",
+   "en": "A pet food company released a new food for senior dogs.",
+   "ko": "사료 회사가 노령견을 위한 새 사료를 출시했어요.",
+   "blank": "출시했어요",
+   "src": "made"
   }
  ],
  "w|출입": [
@@ -85799,6 +86087,22 @@
    "blank": "침대"
   }
  ],
+ "w|침대칸": [
+  {
+   "text": "밤기차 침대칸을 타고 온 손님은 아침 일찍 체크인을 부탁했어요.",
+   "en": "A guest who came on the night train's sleeper car asked for early check-in.",
+   "ko": "밤기차 침대칸을 타고 온 손님은 아침 일찍 체크인을 부탁했어요.",
+   "blank": "침대칸을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 침대칸에서는 반려동물을 데리고 탈 수 없다는 안내를 받았어요.",
+   "en": "Haeun was told pets aren't allowed in sleeper cars.",
+   "ko": "하은은 침대칸에서는 반려동물을 데리고 탈 수 없다는 안내를 받았어요.",
+   "blank": "침대칸에서는",
+   "src": "made"
+  }
+ ],
  "w|침략": [
   {
    "text": "이 연극은 침략을 앞둔 마을 사람들의 하룻밤을 그려요.",
@@ -85907,6 +86211,22 @@
    "en": "I took a deep breath to stay calm.",
    "ko": "침착하다 못해 심호흡을 했어.",
    "blank": "침착하다"
+  }
+ ],
+ "w|침투하다": [
+  {
+   "text": "창문 틈으로 찬 바람이 침투해서 준호는 수리 기사를 불렀어요.",
+   "en": "Cold air was seeping in through a gap in the window, so Junho called a repairman.",
+   "ko": "창문 틈으로 찬 바람이 침투해서 준호는 수리 기사를 불렀어요.",
+   "blank": "침투해서",
+   "src": "made"
+  },
+  {
+   "text": "하은은 피부에 침투한 진드기를 핀셋으로 조심스럽게 떼어 냈어요.",
+   "en": "Haeun carefully removed a tick that had burrowed into the skin with tweezers.",
+   "ko": "하은은 피부에 침투한 진드기를 핀셋으로 조심스럽게 떼어 냈어요.",
+   "blank": "침투한",
+   "src": "made"
   }
  ],
  "w|침해하다": [
@@ -86321,6 +86641,22 @@
    "en": "I dropped the cup.",
    "ko": "컵 떨어뜨렸어.",
    "blank": "컵"
+  }
+ ],
+ "w|케이블카": [
+  {
+   "text": "호텔 뒷산의 케이블카는 바람이 세면 운행을 멈춰요.",
+   "en": "The cable car on the hill behind the hotel stops running when the wind is strong.",
+   "ko": "호텔 뒷산의 케이블카는 바람이 세면 운행을 멈춰요.",
+   "blank": "케이블카는",
+   "src": "made"
+  },
+  {
+   "text": "하은의 강아지는 케이블카를 타자 무서워서 몸을 떨었어요.",
+   "en": "Haeun's puppy trembled in fear when they rode the cable car.",
+   "ko": "하은의 강아지는 케이블카를 타자 무서워서 몸을 떨었어요.",
+   "blank": "케이블카를",
+   "src": "made"
   }
  ],
  "w|케이크": [
@@ -87111,6 +87447,22 @@
    "src": "made"
   }
  ],
+ "w|탈락하다": [
+  {
+   "text": "준호는 호텔 요리 대회 예선에서 아쉽게 탈락했어요.",
+   "en": "Junho was narrowly eliminated in the preliminary round of the hotel cooking contest.",
+   "ko": "준호는 호텔 요리 대회 예선에서 아쉽게 탈락했어요.",
+   "blank": "탈락했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은의 강아지는 훈련 대회 첫 판에서 탈락했어요.",
+   "en": "Haeun's puppy was eliminated in the first round of the training contest.",
+   "ko": "하은의 강아지는 훈련 대회 첫 판에서 탈락했어요.",
+   "blank": "탈락했어요",
+   "src": "made"
+  }
+ ],
  "w|탈수": [
   {
    "text": "설사가 이틀째라는 아이 엄마에게 준호는 탈수를 막는 전해질 음료를 권했어요.",
@@ -87191,6 +87543,22 @@
    "src": "made"
   }
  ],
+ "w|탐색하다": [
+  {
+   "text": "준호는 손님에게 추천할 맛집을 찾으려고 근처 골목을 탐색했어요.",
+   "en": "Junho explored the nearby alleys to find good restaurants to recommend to guests.",
+   "ko": "준호는 손님에게 추천할 맛집을 찾으려고 근처 골목을 탐색했어요.",
+   "blank": "탐색했어요",
+   "src": "made"
+  },
+  {
+   "text": "겁먹은 고양이가 진료실 구석구석을 탐색하고 나서야 진정했어요.",
+   "en": "The scared cat only calmed down after exploring every corner of the exam room.",
+   "ko": "겁먹은 고양이가 진료실 구석구석을 탐색하고 나서야 진정했어요.",
+   "blank": "탐색하고",
+   "src": "made"
+  }
+ ],
  "w|탐정": [
   {
    "text": "탐정이 낡은 일기장에서 단서를 찾았어.",
@@ -87218,6 +87586,22 @@
    "en": "Before boarding the field trip bus, Mikyung's class called out their names one by one.",
    "ko": "미경의 반 아이들은 수학여행 버스 탑승 전에 이름을 한 명씩 불렀어요.",
    "blank": "탑승",
+   "src": "made"
+  }
+ ],
+ "w|탑승구": [
+  {
+   "text": "준호는 공항 탑승구 번호를 확인해 달라는 손님의 부탁을 받았어요.",
+   "en": "Junho was asked by a guest to check their boarding gate number at the airport.",
+   "ko": "준호는 공항 탑승구 번호를 확인해 달라는 손님의 부탁을 받았어요.",
+   "blank": "탑승구",
+   "src": "made"
+  },
+  {
+   "text": "하은은 강아지가 든 이동장을 들고 탑승구 앞에서 기다렸어요.",
+   "en": "Haeun waited in front of the boarding gate holding the carrier with the puppy inside.",
+   "ko": "하은은 강아지가 든 이동장을 들고 탑승구 앞에서 기다렸어요.",
+   "blank": "탑승구",
    "src": "made"
   }
  ],
@@ -87909,6 +88293,22 @@
    "src": "made"
   }
  ],
+ "w|통보하다": [
+  {
+   "text": "호텔은 공사 일정을 예약 손님들에게 미리 통보했어요.",
+   "en": "The hotel notified guests with reservations of the construction schedule in advance.",
+   "ko": "호텔은 공사 일정을 예약 손님들에게 미리 통보했어요.",
+   "blank": "통보했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은은 검사 결과를 보호자에게 전화로 통보했어요.",
+   "en": "Haeun informed the owner of the test results by phone.",
+   "ko": "하은은 검사 결과를 보호자에게 전화로 통보했어요.",
+   "blank": "통보했어요",
+   "src": "made"
+  }
+ ],
  "w|통역": [
   {
    "text": "회의 때 통역이 필요해.",
@@ -88174,6 +88574,22 @@
    "en": "Sohee spent a month in a seaside village after leaving her job.",
    "ko": "소희는 퇴사 후 한 달 동안 바닷가 마을에서 지냈어요.",
    "blank": "퇴사",
+   "src": "made"
+  }
+ ],
+ "w|퇴색하다": [
+  {
+   "text": "로비의 오래된 그림은 햇빛에 색이 퇴색해서 다시 손봐야 해요.",
+   "en": "The old painting in the lobby has faded in the sunlight and needs restoring.",
+   "ko": "로비의 오래된 그림은 햇빛에 색이 퇴색해서 다시 손봐야 해요.",
+   "blank": "퇴색해서",
+   "src": "made"
+  },
+  {
+   "text": "오래된 병원 간판은 햇볕에 퇴색해서 글자가 잘 안 보여요.",
+   "en": "The old hospital sign has faded in the sun and the letters are hard to read.",
+   "ko": "오래된 병원 간판은 햇볕에 퇴색해서 글자가 잘 안 보여요.",
+   "blank": "퇴색해서",
    "src": "made"
   }
  ],
@@ -88539,6 +88955,22 @@
    "ko": "다큐멘터리는 특수 카메라를 사용하여 심해의 자연환경을 촬영한 것이다.",
    "blank": "특수",
    "src": "krdict"
+  }
+ ],
+ "w|특실": [
+  {
+   "text": "준호는 손님에게 기차 특실 요금이 그리 비싸지 않다고 알려 줬어요.",
+   "en": "Junho told the guest that first-class train fares weren't that expensive.",
+   "ko": "준호는 손님에게 기차 특실 요금이 그리 비싸지 않다고 알려 줬어요.",
+   "blank": "특실",
+   "src": "made"
+  },
+  {
+   "text": "하은은 강아지가 다른 승객을 방해할까 봐 조용한 특실을 골랐어요.",
+   "en": "Worried the puppy might disturb other passengers, Haeun chose a quiet first-class car.",
+   "ko": "하은은 강아지가 다른 승객을 방해할까 봐 조용한 특실을 골랐어요.",
+   "blank": "특실을",
+   "src": "made"
   }
  ],
  "w|특이하다": [
@@ -89211,6 +89643,22 @@
    "blank": "판매"
   }
  ],
+ "w|판매되다": [
+  {
+   "text": "호텔 기념품점에서는 직접 만든 쿠키가 판매돼요.",
+   "en": "Homemade cookies are sold at the hotel gift shop.",
+   "ko": "호텔 기념품점에서는 직접 만든 쿠키가 판매돼요.",
+   "blank": "판매돼요",
+   "src": "made"
+  },
+  {
+   "text": "이 약은 동물병원에서만 판매돼요.",
+   "en": "This medicine is sold only at animal hospitals.",
+   "ko": "이 약은 동물병원에서만 판매돼요.",
+   "blank": "판매돼요",
+   "src": "made"
+  }
+ ],
  "w|판매원": [
   {
    "text": "맞은편 그릇 가게 판매원은 손님이 오면 늘 노래하듯 인사해요.",
@@ -89555,6 +90003,22 @@
    "src": "made"
   }
  ],
+ "w|페리": [
+  {
+   "text": "준호는 섬으로 가는 페리 시간표를 로비 게시판에 붙여 놓았어요.",
+   "en": "Junho posted the ferry timetable to the island on the lobby notice board.",
+   "ko": "준호는 섬으로 가는 페리 시간표를 로비 게시판에 붙여 놓았어요.",
+   "blank": "페리",
+   "src": "made"
+  },
+  {
+   "text": "하은은 섬에 있는 보호소에 봉사하러 페리를 탔어요.",
+   "en": "Haeun took a ferry to volunteer at a shelter on an island.",
+   "ko": "하은은 섬에 있는 보호소에 봉사하러 페리를 탔어요.",
+   "blank": "페리를",
+   "src": "made"
+  }
+ ],
  "w|펜": [
   {
    "text": "펜 좀 빌려 줘.",
@@ -89765,6 +90229,22 @@
    "en": "The convenience store is open.",
    "ko": "편의점이 열려 있어.",
    "blank": "편의점이"
+  }
+ ],
+ "w|편중되다": [
+  {
+   "text": "여름에는 예약이 주말에만 편중돼서 준호는 평일 할인을 제안했어요.",
+   "en": "In summer, bookings were concentrated on weekends, so Junho suggested weekday discounts.",
+   "ko": "여름에는 예약이 주말에만 편중돼서 준호는 평일 할인을 제안했어요.",
+   "blank": "편중돼서",
+   "src": "made"
+  },
+  {
+   "text": "하은의 병원 환자는 강아지와 고양이에 편중돼 있어요.",
+   "en": "The patients at Haeun's hospital are concentrated among dogs and cats.",
+   "ko": "하은의 병원 환자는 강아지와 고양이에 편중돼 있어요.",
+   "blank": "편중돼",
+   "src": "made"
   }
  ],
  "w|편지": [
@@ -90347,6 +90827,22 @@
    "src": "made"
   }
  ],
+ "w|폭로하다": [
+  {
+   "text": "한 기자가 호텔 업계의 과도한 수수료 문제를 폭로했어요.",
+   "en": "A reporter exposed the problem of excessive fees in the hotel industry.",
+   "ko": "한 기자가 호텔 업계의 과도한 수수료 문제를 폭로했어요.",
+   "blank": "폭로했어요",
+   "src": "made"
+  },
+  {
+   "text": "한 방송이 불법 번식장의 실태를 폭로했어요.",
+   "en": "A broadcast exposed the reality of illegal breeding facilities.",
+   "ko": "한 방송이 불법 번식장의 실태를 폭로했어요.",
+   "blank": "폭로했어요",
+   "src": "made"
+  }
+ ],
  "w|폭설": [
   {
    "text": "겨울 캠핑을 갔던 동민은 갑작스러운 폭설에 길이 막혀 하루 더 머물렀어요.",
@@ -90620,6 +91116,22 @@
    "en": "Sohee put up a sign in front of the shop saying fresh bread is out.",
    "ko": "소희는 가게 앞에 갓 구운 빵이 나왔다는 표지판을 세웠어요.",
    "blank": "표지판을",
+   "src": "made"
+  }
+ ],
+ "w|표출하다": [
+  {
+   "text": "화가 난 손님은 직원에게 불만을 거칠게 표출했어요.",
+   "en": "An angry guest vented his complaints harshly at the staff.",
+   "ko": "화가 난 손님은 직원에게 불만을 거칠게 표출했어요.",
+   "blank": "표출했어요",
+   "src": "made"
+  },
+  {
+   "text": "아픈 강아지는 짖는 소리로 불안을 표출했어요.",
+   "en": "The sick puppy expressed its anxiety by barking.",
+   "ko": "아픈 강아지는 짖는 소리로 불안을 표출했어요.",
+   "blank": "표출했어요",
    "src": "made"
   }
  ],
@@ -90955,6 +91467,22 @@
    "en": "Coat the frying pan with oil.",
    "ko": "프라이팬에 기름을 둘러.",
    "blank": "프라이팬에"
+  }
+ ],
+ "w|프런트": [
+  {
+   "text": "준호는 오늘 밤 프런트를 혼자 지켜야 해요.",
+   "en": "Junho has to watch the front desk alone tonight.",
+   "ko": "준호는 오늘 밤 프런트를 혼자 지켜야 해요.",
+   "blank": "프런트를",
+   "src": "made"
+  },
+  {
+   "text": "하은은 병원 프런트에서 보호자들의 접수를 받아요.",
+   "en": "Haeun handles owners' check-in at the hospital front desk.",
+   "ko": "하은은 병원 프런트에서 보호자들의 접수를 받아요.",
+   "blank": "프런트에서",
+   "src": "made"
   }
  ],
  "w|프로그래머": [
@@ -93317,6 +93845,22 @@
    "blank": "해질녘에"
   }
  ],
+ "w|해체하다": [
+  {
+   "text": "호텔은 낡은 별관을 해체하고 정원을 만들 계획이에요.",
+   "en": "The hotel plans to tear down the old annex and make a garden.",
+   "ko": "호텔은 낡은 별관을 해체하고 정원을 만들 계획이에요.",
+   "blank": "해체하고",
+   "src": "made"
+  },
+  {
+   "text": "하은은 고장 난 진료대를 해체해서 부품을 바꿨어요.",
+   "en": "Haeun took apart the broken exam table and replaced its parts.",
+   "ko": "하은은 고장 난 진료대를 해체해서 부품을 바꿨어요.",
+   "blank": "해체해서",
+   "src": "made"
+  }
+ ],
  "w|해치다": [
   {
    "text": "남을 해치는 말은 하지 말자.",
@@ -93841,6 +94385,22 @@
    "blank": "허가가"
   }
  ],
+ "w|허가하다": [
+  {
+   "text": "구청은 호텔 옥상에 수영장을 짓는 것을 허가했어요.",
+   "en": "The district office permitted the hotel to build a pool on the rooftop.",
+   "ko": "구청은 호텔 옥상에 수영장을 짓는 것을 허가했어요.",
+   "blank": "허가했어요",
+   "src": "made"
+  },
+  {
+   "text": "원장님은 보호자가 수술실 밖에서 기다리는 것을 허가했어요.",
+   "en": "The director allowed the owner to wait outside the operating room.",
+   "ko": "원장님은 보호자가 수술실 밖에서 기다리는 것을 허가했어요.",
+   "blank": "허가했어요",
+   "src": "made"
+  }
+ ],
  "w|허기지다": [
   {
    "text": "운동 후라 허기지다 못해 밥을 크게 떠.",
@@ -94237,6 +94797,22 @@
    "en": "I'm learning about revolutions in the history book.",
    "ko": "역사책에서 혁명을 배워.",
    "blank": "혁명을"
+  }
+ ],
+ "w|혁신하다": [
+  {
+   "text": "새 사장은 체크인 방식을 혁신하겠다고 약속했어요.",
+   "en": "The new president promised to innovate the check-in process.",
+   "ko": "새 사장은 체크인 방식을 혁신하겠다고 약속했어요.",
+   "blank": "혁신하겠다고",
+   "src": "made"
+  },
+  {
+   "text": "하은은 진료 예약 방식을 혁신해서 대기 시간을 줄였어요.",
+   "en": "Haeun overhauled the appointment system and cut waiting times.",
+   "ko": "하은은 진료 예약 방식을 혁신해서 대기 시간을 줄였어요.",
+   "blank": "혁신해서",
+   "src": "made"
   }
  ],
  "w|현관": [
@@ -95057,6 +95633,22 @@
    "en": "Pumpkin gets sweet when steamed.",
    "ko": "호박을 찌면 달콤해져.",
    "blank": "호박을"
+  }
+ ],
+ "w|호소하다": [
+  {
+   "text": "준호는 직원이 부족하다고 매니저에게 호소했어요.",
+   "en": "Junho appealed to the manager that the staff was short-handed.",
+   "ko": "준호는 직원이 부족하다고 매니저에게 호소했어요.",
+   "blank": "호소했어요",
+   "src": "made"
+  },
+  {
+   "text": "보호자는 고양이가 밥을 안 먹는다고 하은에게 호소했어요.",
+   "en": "The owner pleaded with Haeun that the cat wasn't eating.",
+   "ko": "보호자는 고양이가 밥을 안 먹는다고 하은에게 호소했어요.",
+   "blank": "호소했어요",
+   "src": "made"
   }
  ],
  "w|호수": [
@@ -95969,6 +96561,22 @@
    "blank": "확인해"
   }
  ],
+ "w|확장하다": [
+  {
+   "text": "호텔은 손님이 늘어서 식당을 위층까지 확장했어요.",
+   "en": "With more guests, the hotel expanded its restaurant to the floor above.",
+   "ko": "호텔은 손님이 늘어서 식당을 위층까지 확장했어요.",
+   "blank": "확장했어요",
+   "src": "made"
+  },
+  {
+   "text": "하은의 병원은 입원실을 넓게 확장했어요.",
+   "en": "Haeun's hospital expanded its inpatient ward.",
+   "ko": "하은의 병원은 입원실을 넓게 확장했어요.",
+   "blank": "확장했어요",
+   "src": "made"
+  }
+ ],
  "w|확정하다": [
   {
    "text": "재원네 가족은 단체 대화방에서 모일 날짜를 겨우 확정했어요.",
@@ -96085,6 +96693,38 @@
    "en": "Patient, please come this way.",
    "ko": "환자분 이쪽으로 오세요.",
    "blank": "환자분"
+  }
+ ],
+ "w|환전": [
+  {
+   "text": "손님이 환전이 되냐고 묻자 준호는 근처 은행을 알려 줬어요.",
+   "en": "When a guest asked if they could exchange money, Junho told them about a nearby bank.",
+   "ko": "손님이 환전이 되냐고 묻자 준호는 근처 은행을 알려 줬어요.",
+   "blank": "환전이",
+   "src": "made"
+  },
+  {
+   "text": "해외 출장을 앞둔 하은은 공항에서 환전을 하기로 했어요.",
+   "en": "With an overseas business trip coming up, Haeun decided to exchange money at the airport.",
+   "ko": "해외 출장을 앞둔 하은은 공항에서 환전을 하기로 했어요.",
+   "blank": "환전을",
+   "src": "made"
+  }
+ ],
+ "w|환전소": [
+  {
+   "text": "호텔 바로 옆 환전소는 밤 열 시까지 열어요.",
+   "en": "The currency exchange office right next to the hotel is open until ten at night.",
+   "ko": "호텔 바로 옆 환전소는 밤 열 시까지 열어요.",
+   "blank": "환전소는",
+   "src": "made"
+  },
+  {
+   "text": "하은은 공항 환전소 앞에서 줄을 오래 섰어요.",
+   "en": "Haeun stood in line for a long time in front of the airport currency exchange.",
+   "ko": "하은은 공항 환전소 앞에서 줄을 오래 섰어요.",
+   "blank": "환전소",
+   "src": "made"
   }
  ],
  "w|환절기": [

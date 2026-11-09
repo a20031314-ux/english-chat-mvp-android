@@ -261,6 +261,22 @@
    "blank": "あたり"
   }
  ],
+ "w|あだ名": [
+  {
+   "text": "キャンプ仲間の間で、亮のあだ名は「火起こし名人」だ。",
+   "en": "Among his camping friends, Ryo's nickname is \"the fire-starting master.\"",
+   "ko": "캠핑 친구들 사이에서 료의 별명은 '불 피우기 달인'이에요.",
+   "blank": "あだ名",
+   "src": "made"
+  },
+  {
+   "text": "常連客の子どもたちは、真由を「パンのお姉さん」というあだ名で呼ぶ。",
+   "en": "The regulars' children call Mayu by the nickname \"the bread lady.\"",
+   "ko": "단골손님 아이들은 마유를 '빵 언니'라는 별명으로 불러요.",
+   "blank": "あだ名",
+   "src": "made"
+  }
+ ],
  "w|あちこち": [
   {
    "text": "翔太は、図書館のあちこちを探してやっと辞書を見つけた。",
@@ -2007,6 +2023,22 @@
    "blank": "オタク"
   }
  ],
+ "w|おでん": [
+  {
+   "text": "夜は冷えたので、コンビニで買ったおでんを鍋で温め直した。",
+   "en": "It got cold at night, so they reheated the oden they had bought at a convenience store in a pot.",
+   "ko": "밤에는 추워서 편의점에서 산 오뎅을 냄비에 다시 데웠어요.",
+   "blank": "おでん",
+   "src": "made"
+  },
+  {
+   "text": "寒い日には、真由はおでんを作って店の皆で食べる。",
+   "en": "On cold days, Mayu makes oden and everyone at the shop eats it together.",
+   "ko": "추운 날에는 마유가 오뎅을 만들어서 가게 사람들과 다 같이 먹어요.",
+   "blank": "おでん",
+   "src": "made"
+  }
+ ],
  "w|おにぎり": [
   {
    "text": "荷物を待つ間、大輔はコンビニのおにぎりで昼を済ませた。",
@@ -2565,6 +2597,22 @@
    "en": "Please, hear me out.",
    "ko": "부탁이야, 들어 줘.",
    "blank": "お願い"
+  }
+ ],
+ "w|カーテン": [
+  {
+   "text": "キャンピングカーの窓のカーテンを閉めて、亮は早めに寝た。",
+   "en": "Ryo closed the curtains on the camper van's windows and went to bed early.",
+   "ko": "캠핑카 창문 커튼을 치고 료는 일찍 잤어요.",
+   "blank": "カーテン",
+   "src": "made"
+  },
+  {
+   "text": "朝日がまぶしいので、真由は店の窓にカーテンをつけた。",
+   "en": "The morning sun was too bright, so Mayu put curtains on the shop windows.",
+   "ko": "아침 햇살이 눈부셔서 마유는 가게 창문에 커튼을 달았어요.",
+   "blank": "カーテン",
+   "src": "made"
   }
  ],
  "w|カード": [
@@ -14693,6 +14741,22 @@
    "src": "made"
   }
  ],
+ "w|上空": [
+  {
+   "text": "キャンプ場の上空を、一機のヘリコプターがゆっくり横切っていった。",
+   "en": "A helicopter slowly crossed the sky above the campsite.",
+   "ko": "캠핑장 상공을 헬리콥터 한 대가 천천히 가로질러 갔어요.",
+   "blank": "上空",
+   "src": "made"
+  },
+  {
+   "text": "パン屋の上空に、真っ白な飛行機雲が一本伸びていた。",
+   "en": "A pure white contrail stretched across the sky above the bakery.",
+   "ko": "빵집 상공에 새하얀 비행기구름이 한 줄 뻗어 있었어요.",
+   "blank": "上空",
+   "src": "made"
+  }
+ ],
  "w|上級": [
   {
    "text": "直樹は上級の学芸員になるための試験を受けた。",
@@ -19025,6 +19089,22 @@
    "blank": "住宅"
   }
  ],
+ "w|住居": [
+  {
+   "text": "大昔の住居の跡が、キャンプ場の敷地内で見つかったそうだ。",
+   "en": "Apparently the remains of ancient dwellings were found on the campsite grounds.",
+   "ko": "아주 먼 옛날 주거 터가 캠핑장 부지 안에서 발견됐대요.",
+   "blank": "住居",
+   "src": "made"
+  },
+  {
+   "text": "店舗の二階が、真由の住居になっている。",
+   "en": "The second floor of the shop is where Mayu lives.",
+   "ko": "가게 이층이 마유의 주거 공간이에요.",
+   "blank": "住居",
+   "src": "made"
+  }
+ ],
  "w|住所": [
   {
    "text": "住所を紙に書いてください。",
@@ -20931,6 +21011,22 @@
    "src": "made"
   }
  ],
+ "w|催眠": [
+  {
+   "text": "焚き火の炎を見ていると、催眠術にかかったように眠くなる。",
+   "en": "Watching the campfire flames makes you sleepy, as if you were hypnotized.",
+   "ko": "모닥불 불꽃을 보고 있으면 최면에 걸린 것처럼 졸려요.",
+   "blank": "催眠",
+   "src": "made"
+  },
+  {
+   "text": "真由の妹は、催眠療法を受けてから眠れるようになったと話していた。",
+   "en": "Mayu's younger sister said she had been able to sleep since getting hypnotherapy.",
+   "ko": "마유의 여동생은 최면 요법을 받고 나서 잠을 잘 수 있게 됐다고 했어요.",
+   "blank": "催眠",
+   "src": "made"
+  }
+ ],
  "w|傭兵": [
   {
    "text": "翔太は、中世の傭兵を題材にした歴史小説を読み終えた。",
@@ -21908,6 +22004,22 @@
    "en": "Keiko's husband took part in an online bidding for an old hanging scroll.",
    "ko": "게이코의 남편은 오래된 족자의 인터넷 입찰에 참여했어요.",
    "blank": "入札",
+   "src": "made"
+  }
+ ],
+ "w|入浴": [
+  {
+   "text": "キャンプの帰りに、亮は近くの温泉で入浴してから家に向かった。",
+   "en": "On the way back from camping, Ryo took a bath at a nearby hot spring before heading home.",
+   "ko": "캠핑에서 돌아오는 길에 료는 근처 온천에서 목욕하고 집으로 향했어요.",
+   "blank": "入浴",
+   "src": "made"
+  },
+  {
+   "text": "真由は、仕事の疲れを入浴でゆっくりほぐす。",
+   "en": "Mayu slowly eases away the fatigue from work with a bath.",
+   "ko": "마유는 일의 피로를 목욕으로 천천히 풀어요.",
+   "blank": "入浴",
    "src": "made"
   }
  ],
@@ -26088,6 +26200,22 @@
    "en": "Keiko asked the shop if they could wrap it in nice paper as a gift.",
    "ko": "게이코는 선물용으로 예쁜 종이로 포장해 줄 수 있는지 가게에 물었어요.",
    "blank": "包ん",
+   "src": "made"
+  }
+ ],
+ "w|包丁": [
+  {
+   "text": "亮は持ってきた包丁で、まな板の上の野菜を切った。",
+   "en": "Ryo cut the vegetables on the cutting board with the kitchen knife he had brought.",
+   "ko": "료는 가져온 식칼로 도마 위의 채소를 썰었어요.",
+   "blank": "包丁",
+   "src": "made"
+  },
+  {
+   "text": "真由は新しい包丁で、サンドイッチを半分に切った。",
+   "en": "Mayu cut the sandwich in half with her new knife.",
+   "ko": "마유는 새 칼로 샌드위치를 반으로 잘랐어요.",
+   "blank": "包丁",
    "src": "made"
   }
  ],
@@ -31045,6 +31173,22 @@
    "blank": "土地"
   }
  ],
+ "w|土壌": [
+  {
+   "text": "この辺りの土壌は火山灰でできていて、水はけがいい。",
+   "en": "The soil around here is made of volcanic ash and drains well.",
+   "ko": "이 근처 토양은 화산재로 되어 있어서 물이 잘 빠져요.",
+   "blank": "土壌",
+   "src": "made"
+  },
+  {
+   "text": "真由は、土壌づくりにこだわる農家からライ麦を仕入れている。",
+   "en": "Mayu buys rye from a farmer who takes great care in building healthy soil.",
+   "ko": "마유는 토양 가꾸기에 공들이는 농가에서 호밀을 들여와요.",
+   "blank": "土壌",
+   "src": "made"
+  }
+ ],
  "w|土日": [
   {
    "text": "年末の土日は、どの店もすごく混んでいる。",
@@ -33771,6 +33915,22 @@
    "blank": "天使"
   }
  ],
+ "w|天候": [
+  {
+   "text": "山の天候は変わりやすいので、亮は雨具も用意した。",
+   "en": "Mountain weather changes easily, so Ryo also packed rain gear.",
+   "ko": "산의 날씨는 변하기 쉬워서 료는 비옷도 챙겼어요.",
+   "blank": "天候",
+   "src": "made"
+  },
+  {
+   "text": "パン生地のふくらみ方は、その日の天候によって変わる。",
+   "en": "How the dough rises changes with the weather that day.",
+   "ko": "빵 반죽이 부푸는 정도는 그날 날씨에 따라 달라져요.",
+   "blank": "天候",
+   "src": "made"
+  }
+ ],
  "w|天国": [
   {
    "text": "芝居の最後で、主人公の父は天国から家族を見守っている。",
@@ -33919,6 +34079,22 @@
    "en": "I like the morning sun.",
    "ko": "아침 태양이 좋아.",
    "blank": "太陽"
+  }
+ ],
+ "w|太陽光": [
+  {
+   "text": "亮のランタンは、太陽光で充電できるタイプだ。",
+   "en": "Ryo's lantern is the kind that can be charged with sunlight.",
+   "ko": "료의 랜턴은 태양광으로 충전할 수 있는 종류예요.",
+   "blank": "太陽光",
+   "src": "made"
+  },
+  {
+   "text": "店の屋根に太陽光パネルを付けて、電気代を節約している。",
+   "en": "The shop saves on electricity with solar panels on its roof.",
+   "ko": "가게 지붕에 태양광 패널을 달아서 전기 요금을 아끼고 있어요.",
+   "blank": "太陽光",
+   "src": "made"
   }
  ],
  "w|太鼓": [
@@ -35082,6 +35258,22 @@
    "en": "The tea set Chihiro ordered is still made by the craftsman's descendants.",
    "ko": "지히로가 주문한 다기는 장인의 자손이 지금도 만들고 있는 거예요.",
    "blank": "子孫",
+   "src": "made"
+  }
+ ],
+ "w|子猫": [
+  {
+   "text": "朝、テントの外で子猫が鳴いていて、亮はそっと様子を見守った。",
+   "en": "In the morning a kitten was mewing outside the tent, and Ryo quietly watched over it.",
+   "ko": "아침에 텐트 밖에서 새끼 고양이가 울고 있어서 료는 조용히 지켜봤어요.",
+   "blank": "子猫",
+   "src": "made"
+  },
+  {
+   "text": "店の裏に住みついた子猫に、常連客がみんなで名前をつけた。",
+   "en": "The regulars all together named the kitten that settled behind the shop.",
+   "ko": "가게 뒤에 자리 잡은 새끼 고양이에게 단골손님들이 다 같이 이름을 붙여 줬어요.",
+   "blank": "子猫",
    "src": "made"
   }
  ],
@@ -36691,6 +36883,22 @@
    "src": "made"
   }
  ],
+ "w|寄生": [
+  {
+   "text": "川魚に寄生する虫がいることもあるので、亮はしっかり火を通した。",
+   "en": "Since river fish can sometimes have parasites, Ryo cooked them thoroughly.",
+   "ko": "민물고기에 기생하는 벌레가 있을 수도 있어서 료는 충분히 익혔어요.",
+   "blank": "寄生",
+   "src": "made"
+  },
+  {
+   "text": "真由は、植物に寄生するキノコについてのテレビ番組を見た。",
+   "en": "Mayu watched a TV program about mushrooms that live as parasites on plants.",
+   "ko": "마유는 식물에 기생하는 버섯에 관한 텔레비전 프로그램을 봤어요.",
+   "blank": "寄生",
+   "src": "made"
+  }
+ ],
  "w|密か": [
   {
    "text": "翔太は、いつか海外支局で働くことを密かに夢見ている。",
@@ -37319,6 +37527,22 @@
    "blank": "小さな"
   }
  ],
+ "w|小児": [
+  {
+   "text": "キャンプ場の受付には、小児用のライフジャケットも置いてあった。",
+   "en": "The campsite reception also had life jackets for small children.",
+   "ko": "캠핑장 접수처에는 소아용 구명조끼도 놓여 있었어요.",
+   "blank": "小児",
+   "src": "made"
+  },
+  {
+   "text": "近くの病院で小児の患者を診ている医師が、毎朝クロワッサンを買っていく。",
+   "en": "A doctor who treats young patients at the nearby hospital buys a croissant every morning.",
+   "ko": "근처 병원에서 소아 환자를 보는 의사가 매일 아침 크루아상을 사 가요.",
+   "blank": "小児",
+   "src": "made"
+  }
+ ],
  "w|小型": [
   {
    "text": "市は、ゴミ収集に小型の電気自動車を使い始めた。",
@@ -37746,6 +37970,22 @@
    "en": "After she started running, Misaki felt she had finally found her place.",
    "ko": "달리기를 시작하고 나서 미사키는 드디어 자기 자리를 찾은 것 같았어요.",
    "blank": "居場所",
+   "src": "made"
+  }
+ ],
+ "w|居心地": [
+  {
+   "text": "小さなテントだったが、亮には意外と居心地がよかった。",
+   "en": "It was a small tent, but Ryo found it surprisingly comfortable.",
+   "ko": "작은 텐트였지만 료에게는 의외로 아늑했어요.",
+   "blank": "居心地",
+   "src": "made"
+  },
+  {
+   "text": "店の奥のイートインは小さいが、居心地がいいと評判だ。",
+   "en": "The eat-in space at the back of the shop is small, but it's known for being cozy.",
+   "ko": "가게 안쪽 취식 공간은 작지만 아늑하다고 평판이 좋아요.",
+   "blank": "居心地",
    "src": "made"
   }
  ],
@@ -43947,6 +44187,22 @@
    "src": "made"
   }
  ],
+ "w|手足": [
+  {
+   "text": "朝の冷え込みで、亮は手足がすっかり冷たくなっていた。",
+   "en": "In the morning chill, Ryo's hands and feet had gone completely cold.",
+   "ko": "아침 추위에 료는 손발이 완전히 차가워져 있었어요.",
+   "blank": "手足",
+   "src": "made"
+  },
+  {
+   "text": "一日中立ちっぱなしで、真由は夜には手足がだるかった。",
+   "en": "After standing all day, Mayu's arms and legs felt heavy by night.",
+   "ko": "하루 종일 서 있어서 마유는 밤에는 손발이 나른했어요.",
+   "blank": "手足",
+   "src": "made"
+  }
+ ],
  "w|手軽": [
   {
    "text": "図書館の新しい機械で、手軽に本を借りられるようになった。",
@@ -45664,6 +45920,22 @@
    "en": "The neighborhood association is urging households to cut the amount of garbage they put out.",
    "ko": "주민회는 가정 쓰레기 배출량을 줄이자고 호소하고 있어요.",
    "blank": "排出",
+   "src": "made"
+  }
+ ],
+ "w|排気": [
+  {
+   "text": "発電機の排気が気になって、亮は少し離れた場所にテントを移した。",
+   "en": "Bothered by the generator's exhaust, Ryo moved his tent a little farther away.",
+   "ko": "발전기 배기가 신경 쓰여서 료는 조금 떨어진 곳으로 텐트를 옮겼어요.",
+   "blank": "排気",
+   "src": "made"
+  },
+  {
+   "text": "厨房の排気がうまくいかず、店の中に焦げたにおいがこもった。",
+   "en": "The kitchen exhaust wasn't working well, and a burnt smell filled the shop.",
+   "ko": "주방 배기가 잘 안 돼서 가게 안에 탄 냄새가 가득 찼어요.",
+   "blank": "排気",
    "src": "made"
   }
  ],
@@ -50601,6 +50873,22 @@
    "blank": "木曜日"
   }
  ],
+ "w|木材": [
+  {
+   "text": "キャンプ場のコテージは、地元の木材で建てられている。",
+   "en": "The campsite's cottages are built with local timber.",
+   "ko": "캠핑장 코티지는 지역 목재로 지어졌어요.",
+   "blank": "木材",
+   "src": "made"
+  },
+  {
+   "text": "店のカウンターは、古い木材を再利用して作ったものだ。",
+   "en": "The shop's counter is made from reused old timber.",
+   "ko": "가게 카운터는 오래된 목재를 재활용해서 만든 거예요.",
+   "blank": "木材",
+   "src": "made"
+  }
+ ],
  "w|未だ": [
   {
    "text": "駅前の再開発の計画は、未だ具体的な日程が決まっていない。",
@@ -51881,6 +52169,22 @@
    "src": "made"
   }
  ],
+ "w|森林": [
+  {
+   "text": "キャンプ場は深い森林に囲まれていて、空気がおいしい。",
+   "en": "The campsite is surrounded by deep forest, and the air is fresh.",
+   "ko": "캠핑장은 깊은 삼림에 둘러싸여 있어서 공기가 맑아요.",
+   "blank": "森林",
+   "src": "made"
+  },
+  {
+   "text": "真由は休みの日、森林公園を散歩して気分を変える。",
+   "en": "On her days off, Mayu takes a walk in the forest park to refresh herself.",
+   "ko": "마유는 쉬는 날 삼림 공원을 산책하며 기분 전환을 해요.",
+   "blank": "森林",
+   "src": "made"
+  }
+ ],
  "w|椅子": [
   {
    "text": "亮は、窓を拭くために椅子の上に乗った。",
@@ -52516,6 +52820,22 @@
    "en": "Yumi's company's new product targets young women.",
    "ko": "유미 회사의 신상품은 젊은 여성을 표적으로 삼고 있어요.",
    "blank": "標的",
+   "src": "made"
+  }
+ ],
+ "w|標高": [
+  {
+   "text": "そのキャンプ場は、標高千メートルほどの高原にある。",
+   "en": "The campsite is on a plateau about a thousand meters above sea level.",
+   "ko": "그 캠핑장은 해발 천 미터쯤 되는 고원에 있어요.",
+   "blank": "標高",
+   "src": "made"
+  },
+  {
+   "text": "標高が高い町では、パンの焼き方を変える必要があるらしい。",
+   "en": "Apparently, in towns at high altitude you need to change how you bake bread.",
+   "ko": "해발이 높은 동네에서는 빵 굽는 법을 바꿔야 한대요.",
+   "blank": "標高",
    "src": "made"
   }
  ],
@@ -54465,6 +54785,22 @@
    "blank": "水"
   }
  ],
+ "w|水中": [
+  {
+   "text": "湖に潜ると、水中に小さな魚の群れが見えた。",
+   "en": "When Ryo dove into the lake, he saw a school of small fish underwater.",
+   "ko": "호수에 잠수하니 물속에 작은 물고기 떼가 보였어요.",
+   "blank": "水中",
+   "src": "made"
+  },
+  {
+   "text": "真由の趣味は、休みの日に海で水中写真を撮ることだ。",
+   "en": "Mayu's hobby is taking underwater photos in the sea on her days off.",
+   "ko": "마유의 취미는 쉬는 날 바다에서 수중 사진을 찍는 거예요.",
+   "blank": "水中",
+   "src": "made"
+  }
+ ],
  "w|水分": [
   {
    "text": "治療の後は、口の中が乾くので水分をよくとってください。",
@@ -55177,6 +55513,22 @@
    "blank": "治療"
   }
  ],
+ "w|沿岸": [
+  {
+   "text": "沿岸の道を車で走ると、右手にずっと海が見えた。",
+   "en": "Driving along the coastal road, Ryo could see the sea on the right the whole way.",
+   "ko": "연안 도로를 차로 달리니 오른쪽으로 계속 바다가 보였어요.",
+   "blank": "沿岸",
+   "src": "made"
+  },
+  {
+   "text": "沿岸の町で取れた海藻を練り込んだパンが、店の新商品だ。",
+   "en": "The shop's new item is bread kneaded with seaweed harvested in a coastal town.",
+   "ko": "연안 마을에서 난 해초를 넣어 반죽한 빵이 가게의 신상품이에요.",
+   "blank": "沿岸",
+   "src": "made"
+  }
+ ],
  "w|泊まる": [
   {
    "text": "容体が心配で、直樹はその夜病院に泊まった。",
@@ -55526,6 +55878,22 @@
    "en": "Mr. Sato, the head of the neighborhood association, apparently used to research earthquakes and tsunamis.",
    "ko": "주민회장 사토 씨는 예전에 지진과 쓰나미를 연구했대요.",
    "blank": "津波",
+   "src": "made"
+  }
+ ],
+ "w|洪水": [
+  {
+   "text": "川の近くは洪水の危険があるので、亮はテントを高い場所に張った。",
+   "en": "Near the river there's a risk of flooding, so Ryo pitched the tent on higher ground.",
+   "ko": "강 근처는 홍수 위험이 있어서 료는 텐트를 높은 곳에 쳤어요.",
+   "blank": "洪水",
+   "src": "made"
+  },
+  {
+   "text": "去年の大雨で近くの川が洪水を起こし、店も一週間休んだ。",
+   "en": "Last year the heavy rain caused the nearby river to flood, and the shop closed for a week.",
+   "ko": "작년 큰비에 근처 강이 홍수가 나서 가게도 일주일 쉬었어요.",
+   "blank": "洪水",
    "src": "made"
   }
  ],
@@ -55979,6 +56347,22 @@
    "src": "made"
   }
  ],
+ "w|海域": [
+  {
+   "text": "この海域ではイルカが見られることもあると、ガイドが教えてくれた。",
+   "en": "The guide told Ryo that dolphins can sometimes be seen in these waters.",
+   "ko": "이 해역에서는 돌고래를 볼 수도 있다고 가이드가 알려 줬어요.",
+   "blank": "海域",
+   "src": "made"
+  },
+  {
+   "text": "真由が使う塩は、きれいな海域でくんだ海水から作られている。",
+   "en": "The salt Mayu uses is made from seawater drawn from clean waters.",
+   "ko": "마유가 쓰는 소금은 깨끗한 해역에서 길어 온 바닷물로 만들어요.",
+   "blank": "海域",
+   "src": "made"
+  }
+ ],
  "w|海外": [
   {
    "text": "海外に行きたい。",
@@ -56393,6 +56777,22 @@
    "src": "made"
   }
  ],
+ "w|混雑": [
+  {
+   "text": "連休のキャンプ場は混雑していて、駐車場もいっぱいだった。",
+   "en": "The campsite was crowded over the long weekend, and the parking lot was full too.",
+   "ko": "연휴의 캠핑장은 혼잡해서 주차장도 꽉 찼어요.",
+   "blank": "混雑",
+   "src": "made"
+  },
+  {
+   "text": "朝の通勤時間は、店の前の道が人で混雑する。",
+   "en": "During the morning commute, the street in front of the shop is crowded with people.",
+   "ko": "아침 출근 시간에는 가게 앞 길이 사람들로 혼잡해요.",
+   "blank": "混雑",
+   "src": "made"
+  }
+ ],
  "w|添える": [
   {
    "text": "直樹は、展示品の写真に短い解説を添えた。",
@@ -56730,6 +57130,22 @@
    "en": "The village hot spring has soft water that warms you up well.",
    "ko": "마을 온천은 물이 부드러워서 몸이 잘 데워져요.",
    "blank": "湯",
+   "src": "made"
+  }
+ ],
+ "w|湿度": [
+  {
+   "text": "夏の夜でも山の上は湿度が低く、過ごしやすかった。",
+   "en": "Even on a summer night, the humidity on the mountain was low and it was pleasant.",
+   "ko": "여름밤에도 산 위는 습도가 낮아서 지내기 좋았어요.",
+   "blank": "湿度",
+   "src": "made"
+  },
+  {
+   "text": "湿度が高い日は、パン生地がべたつきやすい。",
+   "en": "On humid days, bread dough tends to get sticky.",
+   "ko": "습도가 높은 날은 빵 반죽이 끈적거리기 쉬워요.",
+   "blank": "湿度",
    "src": "made"
   }
  ],
@@ -59193,6 +59609,22 @@
    "src": "made"
   }
  ],
+ "w|獅子": [
+  {
+   "text": "キャンプ場の入り口には、石でできた獅子の像が二体並んでいた。",
+   "en": "Two stone lion statues stood side by side at the campsite entrance.",
+   "ko": "캠핑장 입구에는 돌로 만든 사자상 두 개가 나란히 있었어요.",
+   "blank": "獅子",
+   "src": "made"
+  },
+  {
+   "text": "お正月になると、真由は獅子の顔の形をしたパンを店に並べる。",
+   "en": "At New Year, Mayu lines the shop with bread shaped like a lion's face.",
+   "ko": "설날이 되면 마유는 사자 얼굴 모양 빵을 가게에 진열해요.",
+   "blank": "獅子",
+   "src": "made"
+  }
+ ],
  "w|獲得": [
   {
    "text": "ポイントを獲得した。",
@@ -60005,6 +60437,38 @@
    "blank": "生徒"
   }
  ],
+ "w|生息": [
+  {
+   "text": "管理人によると、この森には野生のシカが生息しているらしい。",
+   "en": "According to the caretaker, wild deer live in this forest.",
+   "ko": "관리인 말로는 이 숲에 야생 사슴이 서식한대요.",
+   "blank": "生息",
+   "src": "made"
+  },
+  {
+   "text": "店の近くの池には、珍しいカエルが生息している。",
+   "en": "A rare frog lives in the pond near the shop.",
+   "ko": "가게 근처 연못에는 희귀한 개구리가 서식해요.",
+   "blank": "生息",
+   "src": "made"
+  }
+ ],
+ "w|生態": [
+  {
+   "text": "亮は、キャンプ場の看板で森の生態について学んだ。",
+   "en": "Ryo learned about the forest's ecology from the signboards at the campsite.",
+   "ko": "료는 캠핑장 안내판에서 숲의 생태에 대해 배웠어요.",
+   "blank": "生態",
+   "src": "made"
+  },
+  {
+   "text": "真由は、パン酵母の生態に興味を持って本を読んだ。",
+   "en": "Interested in how baker's yeast lives, Mayu read a book about it.",
+   "ko": "마유는 빵 효모의 생태에 관심이 생겨 책을 읽었어요.",
+   "blank": "生態",
+   "src": "made"
+  }
+ ],
  "w|生成": [
   {
    "text": "ジムのアプリは、目標に合わせた練習メニューを自動で生成してくれる。",
@@ -60124,6 +60588,22 @@
    "en": "The chickens kept behind the shop laid eggs again this morning.",
    "ko": "가게 뒤에서 키우는 닭이 오늘 아침에도 알을 낳았어요.",
    "blank": "産んだ",
+   "src": "made"
+  }
+ ],
+ "w|産地": [
+  {
+   "text": "亮は、キャンプ場の近くの売店で産地直送のとうもろこしを買った。",
+   "en": "Ryo bought corn shipped straight from the farm at a stand near the campsite.",
+   "ko": "료는 캠핑장 근처 매점에서 산지 직송 옥수수를 샀어요.",
+   "blank": "産地",
+   "src": "made"
+  },
+  {
+   "text": "真由は、小麦の産地にこだわってパンを焼いている。",
+   "en": "Mayu is particular about where her wheat is grown when she bakes bread.",
+   "ko": "마유는 밀 산지를 꼼꼼히 따져서 빵을 구워요.",
+   "blank": "産地",
    "src": "made"
   }
  ],
@@ -65495,6 +65975,22 @@
    "blank": "精神"
   }
  ],
+ "w|糖尿": [
+  {
+   "text": "亮の父は糖尿の気があるので、キャンプ飯も甘いものを控えめにした。",
+   "en": "Ryo's father has a tendency toward diabetes, so they went easy on sweets in the camp meals.",
+   "ko": "료의 아버지는 당뇨 기가 있어서 캠핑 음식도 단 것을 줄였어요.",
+   "blank": "糖尿",
+   "src": "made"
+  },
+  {
+   "text": "糖尿の持病がある常連客のために、真由は砂糖を控えたパンも作っている。",
+   "en": "For regulars with diabetes, Mayu also makes bread with less sugar.",
+   "ko": "당뇨 지병이 있는 단골손님을 위해 마유는 설탕을 줄인 빵도 만들어요.",
+   "blank": "糖尿",
+   "src": "made"
+  }
+ ],
  "w|系列": [
   {
    "text": "直樹の高校は、大学の系列校なので受験がない。",
@@ -66999,6 +67495,22 @@
    "blank": "線"
   }
  ],
+ "w|線路": [
+  {
+   "text": "キャンプ場へ向かう途中、亮は古い線路沿いの道を歩いた。",
+   "en": "On the way to the campsite, Ryo walked along a road beside an old railway track.",
+   "ko": "캠핑장으로 가는 길에 료는 오래된 선로를 따라 난 길을 걸었어요.",
+   "blank": "線路",
+   "src": "made"
+  },
+  {
+   "text": "店の裏には線路があり、電車が通るたびに窓が少し揺れる。",
+   "en": "There are railway tracks behind the shop, and the windows shake a little whenever a train passes.",
+   "ko": "가게 뒤에는 선로가 있어서 전철이 지나갈 때마다 창문이 조금 흔들려요.",
+   "blank": "線路",
+   "src": "made"
+  }
+ ],
  "w|締める": [
   {
    "text": "開館式の日、直樹は久しぶりにネクタイを締めて出勤した。",
@@ -67805,6 +68317,22 @@
    "en": "Keep that in mind.",
    "ko": "귀에 담아 둬.",
    "blank": "耳"
+  }
+ ],
+ "w|聖地": [
+  {
+   "text": "この山は、キャンプ好きの聖地と呼ばれている。",
+   "en": "This mountain is called a mecca for camping lovers.",
+   "ko": "이 산은 캠핑 애호가들의 성지로 불려요.",
+   "blank": "聖地",
+   "src": "made"
+  },
+  {
+   "text": "この町は、パン好きにとっての聖地と言われるほどパン屋が多い。",
+   "en": "This town has so many bakeries that it's called a holy ground for bread lovers.",
+   "ko": "이 동네는 빵 애호가들의 성지라고 불릴 만큼 빵집이 많아요.",
+   "blank": "聖地",
+   "src": "made"
   }
  ],
  "w|聖堂": [
@@ -73935,6 +74463,22 @@
    "src": "made"
   }
  ],
+ "w|課税": [
+  {
+   "text": "焚き火を囲みながら、亮の友人は「ガソリンへの課税が高すぎる」とぼやいた。",
+   "en": "Sitting around the campfire, Ryo's friend grumbled that the tax on gasoline was too high.",
+   "ko": "모닥불을 둘러싸고 료의 친구는 \"휘발유 과세가 너무 높다\"고 투덜거렸어요.",
+   "blank": "課税",
+   "src": "made"
+  },
+  {
+   "text": "真由は、店の売り上げへの課税について税理士に相談した。",
+   "en": "Mayu consulted a tax accountant about taxation on the shop's sales.",
+   "ko": "마유는 가게 매출에 대한 과세에 대해 세무사와 상담했어요.",
+   "blank": "課税",
+   "src": "made"
+  }
+ ],
  "w|課金": [
   {
    "text": "おもちゃ売り場の店員は、最近の子どもはゲームの課金が多いと話していた。",
@@ -79805,6 +80349,22 @@
    "blank": "郵便局"
   }
  ],
+ "w|郵送": [
+  {
+   "text": "予約確認書が郵送で届いたので、亮は忘れずにかばんに入れた。",
+   "en": "The booking confirmation arrived by post, so Ryo made sure to put it in his bag.",
+   "ko": "예약 확인서가 우편으로 와서 료는 잊지 않고 가방에 넣었어요.",
+   "blank": "郵送",
+   "src": "made"
+  },
+  {
+   "text": "遠方の客には、焼き菓子の詰め合わせを郵送している。",
+   "en": "For customers far away, the shop mails assortments of baked goods.",
+   "ko": "먼 곳의 손님에게는 구움 과자 세트를 우편으로 보내요.",
+   "blank": "郵送",
+   "src": "made"
+  }
+ ],
  "w|都会": [
   {
    "text": "誠は田舎育ちなので、都会の大きな空港にはまだ慣れない。",
@@ -80299,6 +80859,22 @@
    "src": "made"
   }
  ],
+ "w|野獣": [
+  {
+   "text": "亮はテントの中で、夜中に野獣の遠吠えのような声を聞いて目が覚めた。",
+   "en": "Ryo woke up in the tent in the middle of the night after hearing what sounded like a wild beast howling.",
+   "ko": "료는 텐트 안에서 한밤중에 야수가 울부짖는 듯한 소리를 듣고 잠에서 깼어요.",
+   "blank": "野獣",
+   "src": "made"
+  },
+  {
+   "text": "真由は休憩中に、野獣が出てくる昔話の絵本を読んでいた。",
+   "en": "During her break, Mayu was reading a picture book of an old tale with a beast in it.",
+   "ko": "마유는 쉬는 시간에 야수가 나오는 옛날이야기 그림책을 읽고 있었어요.",
+   "blank": "野獣",
+   "src": "made"
+  }
+ ],
  "w|野球": [
   {
    "text": "野球、見に行こう。",
@@ -80599,6 +81175,22 @@
    "en": "I take notes in pencil.",
    "ko": "연필로 메모해.",
    "blank": "鉛筆"
+  }
+ ],
+ "w|鉱山": [
+  {
+   "text": "キャンプ場の近くには、昔栄えた鉱山の跡が残っている。",
+   "en": "Near the campsite are the remains of a mine that once flourished.",
+   "ko": "캠핑장 근처에는 옛날에 번성했던 광산 터가 남아 있어요.",
+   "blank": "鉱山",
+   "src": "made"
+  },
+  {
+   "text": "真由の祖父は、若いころ鉱山で働いていたそうだ。",
+   "en": "Mayu's grandfather apparently worked in a mine when he was young.",
+   "ko": "마유의 할아버지는 젊었을 때 광산에서 일했대요.",
+   "blank": "鉱山",
+   "src": "made"
   }
  ],
  "w|銀": [
@@ -82533,6 +83125,22 @@
    "src": "made"
   }
  ],
+ "w|電圧": [
+  {
+   "text": "ポータブル電源の電圧を確かめてから、亮はランタンをつないだ。",
+   "en": "Ryo checked the voltage of the portable power station before plugging in the lantern.",
+   "ko": "휴대용 전원의 전압을 확인한 뒤 료는 랜턴을 연결했어요.",
+   "blank": "電圧",
+   "src": "made"
+  },
+  {
+   "text": "新しいオーブンは電圧が違うので、工事が必要だと言われた。",
+   "en": "Mayu was told the new oven runs on a different voltage, so wiring work would be needed.",
+   "ko": "새 오븐은 전압이 달라서 공사가 필요하다는 말을 들었어요.",
+   "blank": "電圧",
+   "src": "made"
+  }
+ ],
  "w|電子": [
   {
    "text": "電子決済で払ったよ。",
@@ -82606,6 +83214,22 @@
    "en": "The mountain hotel on the away trip had bad reception, so Yumi couldn't call home.",
    "ko": "원정 간 산속 호텔은 전파가 약해서 유미는 집에 전화를 못 했어요.",
    "blank": "電波",
+   "src": "made"
+  }
+ ],
+ "w|電流": [
+  {
+   "text": "雷が近づいてきたので、亮は「電流が地面を伝わることもある」と言って皆を車に戻らせた。",
+   "en": "As the thunder approached, Ryo said current can travel through the ground and got everyone back into the car.",
+   "ko": "천둥이 가까워지자 료는 \"전류가 땅을 타고 올 수도 있다\"며 모두를 차로 돌려보냈어요.",
+   "blank": "電流",
+   "src": "made"
+  },
+  {
+   "text": "オーブンに電流が流れなくなり、真由は修理の人を呼んだ。",
+   "en": "Current stopped flowing to the oven, so Mayu called a repair person.",
+   "ko": "오븐에 전류가 흐르지 않게 돼서 마유는 수리 기사를 불렀어요.",
+   "blank": "電流",
    "src": "made"
   }
  ],
@@ -83798,6 +84422,22 @@
    "en": "Misaki photographed the morning scenery wrapped in fog.",
    "ko": "미사키는 안개에 싸인 아침 풍경을 사진으로 찍었어요.",
    "blank": "風景",
+   "src": "made"
+  }
+ ],
+ "w|風船": [
+  {
+   "text": "隣のテントの子どもが、赤い風船を持って走り回っていた。",
+   "en": "A child from the next tent was running around holding a red balloon.",
+   "ko": "옆 텐트 아이가 빨간 풍선을 들고 뛰어다니고 있었어요.",
+   "blank": "風船",
+   "src": "made"
+  },
+  {
+   "text": "開店記念の日、店の前に色とりどりの風船を飾った。",
+   "en": "On the shop's anniversary, colorful balloons were put up in front of it.",
+   "ko": "개점 기념일에 가게 앞에 알록달록한 풍선을 장식했어요.",
+   "blank": "風船",
    "src": "made"
   }
  ],
