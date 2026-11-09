@@ -4231,6 +4231,22 @@
    "src": "made"
   }
  ],
+ "w|검표": [
+  {
+   "text": "요즘 기차는 검표를 따로 안 하고 좌석 화면으로 확인해요.",
+   "en": "Trains these days don't do separate ticket checks; they confirm through the seat display.",
+   "ko": "요즘 기차는 검표를 따로 안 하고 좌석 화면으로 확인해요.",
+   "blank": "검표를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 기차 요리 체험 행사에 갔는데 검표를 마치자 식당칸으로 안내받았어요.",
+   "en": "Yuna went to a train cooking event and, after the ticket check, was shown to the dining car.",
+   "ko": "유나는 기차 요리 체험 행사에 갔는데 검표를 마치자 식당칸으로 안내받았어요.",
+   "blank": "검표를",
+   "src": "made"
+  }
+ ],
  "w|겁": [
   {
    "text": "갑자기 겁이 나서 멈췄어.",
@@ -5458,6 +5474,22 @@
    "en": "When diesel prices went up, the flour delivery fee went up along with them.",
    "ko": "경유 가격이 오르자 밀가루 배달비도 덩달아 올랐어요.",
    "blank": "경유",
+   "src": "made"
+  }
+ ],
+ "w|경유지": [
+  {
+   "text": "이 열차는 대전을 경유지로 거쳐서 부산까지 가요.",
+   "en": "This train goes to Busan, stopping in Daejeon along the way.",
+   "ko": "이 열차는 대전을 경유지로 거쳐서 부산까지 가요.",
+   "blank": "경유지로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 요리 교실 가는 길에 시장을 경유지로 넣어서 재료를 샀어요.",
+   "en": "On the way to cooking class, Yuna added the market as a stop and bought ingredients.",
+   "ko": "유나는 요리 교실 가는 길에 시장을 경유지로 넣어서 재료를 샀어요.",
+   "blank": "경유지로",
    "src": "made"
   }
  ],
@@ -8045,6 +8077,22 @@
    "en": "There's noise coming from a nearby factory.",
    "ko": "근처 공장에서 소리가 나.",
    "blank": "공장에서"
+  }
+ ],
+ "w|공정": [
+  {
+   "text": "태윤은 새 공장의 생산 공정을 보러 지방으로 가는 길이에요.",
+   "en": "Taeyoon is on his way to the provinces to see the production process at the new factory.",
+   "ko": "태윤은 새 공장의 생산 공정을 보러 지방으로 가는 길이에요.",
+   "blank": "공정을",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 된장이 만들어지는 공정을 사진으로 하나하나 보여 주셨어요.",
+   "en": "The teacher showed the process of making doenjang step by step with photos.",
+   "ko": "선생님은 된장이 만들어지는 공정을 사진으로 하나하나 보여 주셨어요.",
+   "blank": "공정을",
+   "src": "made"
   }
  ],
  "w|공정성": [
@@ -10975,6 +11023,22 @@
    "en": "Buy me just one more copy.",
    "ko": "한 권만 더 사 줘.",
    "blank": "권만"
+  }
+ ],
+ "w|권고사직": [
+  {
+   "text": "회사가 어려워지면서 태윤의 선배 몇 명이 권고사직을 받았어요.",
+   "en": "As the company struggled, some of Taeyoon's seniors were asked to resign.",
+   "ko": "회사가 어려워지면서 태윤의 선배 몇 명이 권고사직을 받았어요.",
+   "blank": "권고사직을",
+   "src": "made"
+  },
+  {
+   "text": "권고사직을 받은 아저씨는 요리를 배우며 새 일을 찾고 있대요.",
+   "en": "A man in Yuna's class who was asked to resign is learning to cook while looking for new work.",
+   "ko": "권고사직을 받은 아저씨는 요리를 배우며 새 일을 찾고 있대요.",
+   "blank": "권고사직을",
+   "src": "made"
   }
  ],
  "w|권력": [
@@ -14381,6 +14445,22 @@
    "src": "made"
   }
  ],
+ "w|기점": [
+  {
+   "text": "이 노선은 서울역을 기점으로 남쪽 바닷가까지 이어져요.",
+   "en": "This line starts from Seoul Station and runs to the southern coast.",
+   "ko": "이 노선은 서울역을 기점으로 남쪽 바닷가까지 이어져요.",
+   "blank": "기점으로",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 이 수업을 기점으로 한식 기초에서 응용으로 넘어간다고 하셨어요.",
+   "en": "The teacher said this class would be the turning point from basic Korean cooking to applied dishes.",
+   "ko": "선생님은 이 수업을 기점으로 한식 기초에서 응용으로 넘어간다고 하셨어요.",
+   "blank": "기점으로",
+   "src": "made"
+  }
+ ],
  "w|기준": [
   {
    "text": "합격 기준이 꽤 높아.",
@@ -14787,6 +14867,22 @@
    "en": "I'm glad the length fits perfectly.",
    "ko": "길이가 딱 맞아서 다행이야.",
    "blank": "길이가"
+  }
+ ],
+ "w|길치": [
+  {
+   "text": "태윤은 길치라서 환승역에서 출구를 두 번이나 잘못 나갔어요.",
+   "en": "Taeyoon has no sense of direction, so he took the wrong exit twice at the transfer station.",
+   "ko": "태윤은 길치라서 환승역에서 출구를 두 번이나 잘못 나갔어요.",
+   "blank": "길치라서",
+   "src": "made"
+  },
+  {
+   "text": "유나는 길치라서 요리 교실 첫날 건물을 못 찾고 한참 헤맸어요.",
+   "en": "Yuna has no sense of direction, so she wandered for ages unable to find the building on the first day of class.",
+   "ko": "유나는 길치라서 요리 교실 첫날 건물을 못 찾고 한참 헤맸어요.",
+   "blank": "길치라서",
+   "src": "made"
   }
  ],
  "w|김": [
@@ -22601,6 +22697,22 @@
    "src": "made"
   }
  ],
+ "w|대여": [
+  {
+   "text": "역 앞에서 자전거 대여를 해 주는데 한 시간에 천 원이래요.",
+   "en": "They rent out bikes in front of the station for a thousand won an hour.",
+   "ko": "역 앞에서 자전거 대여를 해 주는데 한 시간에 천 원이래요.",
+   "blank": "대여를",
+   "src": "made"
+  },
+  {
+   "text": "요리 교실은 수강생에게 앞치마와 칼을 무료로 대여해 줘요.",
+   "en": "The cooking class lends aprons and knives to students for free.",
+   "ko": "요리 교실은 수강생에게 앞치마와 칼을 무료로 대여해 줘요.",
+   "blank": "대여해",
+   "src": "made"
+  }
+ ],
  "w|대원": [
   {
    "text": "탐험대의 대원 한 명이 실종되었다.",
@@ -27793,6 +27905,22 @@
    "src": "made"
   }
  ],
+ "w|렌트": [
+  {
+   "text": "태윤은 역에 내려서 일주일 동안 쓸 차를 렌트했어요.",
+   "en": "Taeyoon got off at the station and rented a car for a week.",
+   "ko": "태윤은 역에 내려서 일주일 동안 쓸 차를 렌트했어요.",
+   "blank": "렌트했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 출장 요리 수업이 있는 날이면 큰 차를 렌트해요.",
+   "en": "On days with off-site cooking lessons, Yuna rents a large car.",
+   "ko": "유나는 출장 요리 수업이 있는 날이면 큰 차를 렌트해요.",
+   "blank": "렌트해요",
+   "src": "made"
+  }
+ ],
  "w|로고": [
   {
    "text": "현우는 기계가 제품에 로고를 똑바로 찍는지 하나하나 확인했어요.",
@@ -28760,6 +28888,22 @@
    "en": "Haeun had only a vague idea of what to do over the holiday.",
    "ko": "하은은 연휴에 뭘 할지 막연하게만 생각하고 있었어요.",
    "blank": "막연하게만",
+   "src": "made"
+  }
+ ],
+ "w|막차": [
+  {
+   "text": "회식이 길어지는 바람에 태윤은 막차를 겨우 잡았어요.",
+   "en": "The company dinner ran late, so Taeyoon barely caught the last train.",
+   "ko": "회식이 길어지는 바람에 태윤은 막차를 겨우 잡았어요.",
+   "blank": "막차를",
+   "src": "made"
+  },
+  {
+   "text": "저녁 수업이 늦게 끝나서 유나는 막차를 놓칠 뻔했어요.",
+   "en": "The evening class ended late, so Yuna almost missed the last bus.",
+   "ko": "저녁 수업이 늦게 끝나서 유나는 막차를 놓칠 뻔했어요.",
+   "blank": "막차를",
    "src": "made"
   }
  ],
@@ -33073,6 +33217,22 @@
    "src": "made"
   }
  ],
+ "w|문화재": [
+  {
+   "text": "역 근처 오래된 절은 나라에서 지정한 문화재예요.",
+   "en": "The old temple near the station is a nationally designated cultural heritage site.",
+   "ko": "역 근처 오래된 절은 나라에서 지정한 문화재예요.",
+   "blank": "문화재예요",
+   "src": "made"
+  },
+  {
+   "text": "종가의 장 담그는 법은 무형 문화재로 지정됐다고 선생님이 말씀하셨어요.",
+   "en": "The teacher said the head family's way of making sauces was designated as intangible cultural heritage.",
+   "ko": "종가의 장 담그는 법은 무형 문화재로 지정됐다고 선생님이 말씀하셨어요.",
+   "blank": "문화재로",
+   "src": "made"
+  }
+ ],
  "w|문화적": [
   {
    "text": "두 집안의 문화적 차이 때문에 준호는 폐백 순서를 여러 번 조율했어요.",
@@ -33247,6 +33407,22 @@
    "en": "Of course you can bring them.",
    "ko": "물론 데려가도 돼.",
    "blank": "물론"
+  }
+ ],
+ "w|물류": [
+  {
+   "text": "태윤은 물류 회사에 다녀서 창밖으로 지나가는 화물 열차가 반가웠어요.",
+   "en": "Taeyoon works at a logistics company, so he was glad to see the freight trains passing outside.",
+   "ko": "태윤은 물류 회사에 다녀서 창밖으로 지나가는 화물 열차가 반가웠어요.",
+   "blank": "물류",
+   "src": "made"
+  },
+  {
+   "text": "요리 교실 재료는 새벽마다 물류 센터에서 신선하게 들어와요.",
+   "en": "Ingredients for the cooking class come in fresh from the distribution center every dawn.",
+   "ko": "요리 교실 재료는 새벽마다 물류 센터에서 신선하게 들어와요.",
+   "blank": "물류",
+   "src": "made"
   }
  ],
  "w|물리": [
@@ -34841,6 +35017,22 @@
    "blank": "반가운"
   }
  ],
+ "w|반납": [
+  {
+   "text": "태윤은 빌린 차를 반납하려고 역 주차장으로 갔어요.",
+   "en": "Taeyoon went to the station parking lot to return the rental car.",
+   "ko": "태윤은 빌린 차를 반납하려고 역 주차장으로 갔어요.",
+   "blank": "반납하려고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 빌려 간 요리책을 수업 전에 반납했어요.",
+   "en": "Yuna returned the cookbook she borrowed before class.",
+   "ko": "유나는 빌려 간 요리책을 수업 전에 반납했어요.",
+   "blank": "반납했어요",
+   "src": "made"
+  }
+ ],
  "w|반년": [
   {
    "text": "반년 만에 고향에 왔어.",
@@ -35414,6 +35606,22 @@
    "en": "Daeun said mountain kids have well-developed leg muscles because they walk uphill every day.",
    "ko": "다은은 산골 아이들의 다리 근육이 잘 발달한 이유가 매일 오르막길을 걸어서라고 했어요.",
    "blank": "발달한",
+   "src": "made"
+  }
+ ],
+ "w|발령": [
+  {
+   "text": "태윤은 부산 지점으로 발령이 나서 짐을 싸 들고 기차에 올랐어요.",
+   "en": "Taeyoon was transferred to the Busan branch, so he packed his things and got on the train.",
+   "ko": "태윤은 부산 지점으로 발령이 나서 짐을 싸 들고 기차에 올랐어요.",
+   "blank": "발령이",
+   "src": "made"
+  },
+  {
+   "text": "남편이 지방으로 발령을 받아서 유나는 요리 교실을 곧 그만둬야 해요.",
+   "en": "Yuna's husband got transferred to the provinces, so she'll soon have to quit the cooking class.",
+   "ko": "남편이 지방으로 발령을 받아서 유나는 요리 교실을 곧 그만둬야 해요.",
+   "blank": "발령을",
    "src": "made"
   }
  ],
@@ -40023,6 +40231,22 @@
    "src": "made"
   }
  ],
+ "w|부임": [
+  {
+   "text": "새 지점장으로 부임하는 날이라 태윤은 넥타이를 몇 번이나 고쳐 맸어요.",
+   "en": "It was the day he took up his post as new branch manager, so Taeyoon retied his tie several times.",
+   "ko": "새 지점장으로 부임하는 날이라 태윤은 넥타이를 몇 번이나 고쳐 맸어요.",
+   "blank": "부임하는",
+   "src": "made"
+  },
+  {
+   "text": "새로 부임한 요리 교실 원장님은 호텔 주방장 출신이래요.",
+   "en": "The newly appointed cooking school director is said to be a former hotel head chef.",
+   "ko": "새로 부임한 요리 교실 원장님은 호텔 주방장 출신이래요.",
+   "blank": "부임한",
+   "src": "made"
+  }
+ ],
  "w|부자": [
   {
    "text": "부자가 되는 게 꿈이야.",
@@ -40935,6 +41159,22 @@
    "src": "made"
   }
  ],
+ "w|불량": [
+  {
+   "text": "지난주 불량 제품이 많이 나와서 태윤이 직접 공장에 내려가기로 했어요.",
+   "en": "Lots of defective products came out last week, so Taeyoon decided to go down to the factory himself.",
+   "ko": "지난주 불량 제품이 많이 나와서 태윤이 직접 공장에 내려가기로 했어요.",
+   "blank": "불량",
+   "src": "made"
+  },
+  {
+   "text": "유나가 산 달걀 한 판에 불량이 섞여 있어서 몇 개는 깨져 있었어요.",
+   "en": "The tray of eggs Yuna bought had some bad ones mixed in, and a few were cracked.",
+   "ko": "유나가 산 달걀 한 판에 불량이 섞여 있어서 몇 개는 깨져 있었어요.",
+   "blank": "불량이",
+   "src": "made"
+  }
+ ],
  "w|불리다": [
   {
    "text": "지금부터 이름이 불리는 학생들은 앞으로 나와 주십시오.",
@@ -41512,6 +41752,22 @@
    "en": "The sunlight was blinding, so Sujin pulled the train window's blind halfway down.",
    "ko": "햇빛이 눈부셔서 수진은 기차 창의 블라인드를 반쯤 내렸어요.",
    "blank": "블라인드를",
+   "src": "made"
+  }
+ ],
+ "w|블랙박스": [
+  {
+   "text": "태윤은 빌린 차에 블랙박스가 잘 켜져 있는지 확인했어요.",
+   "en": "Taeyoon checked that the dashcam in the rental car was on.",
+   "ko": "태윤은 빌린 차에 블랙박스가 잘 켜져 있는지 확인했어요.",
+   "blank": "블랙박스가",
+   "src": "made"
+  },
+  {
+   "text": "주차장에서 누가 유나 차를 긁었는데 블랙박스 덕분에 범인을 찾았어요.",
+   "en": "Someone scratched Yuna's car in the parking lot, but they found the culprit thanks to the dashcam.",
+   "ko": "주차장에서 누가 유나 차를 긁었는데 블랙박스 덕분에 범인을 찾았어요.",
+   "blank": "블랙박스",
    "src": "made"
   }
  ],
@@ -44025,6 +44281,22 @@
    "src": "made"
   }
  ],
+ "w|사직": [
+  {
+   "text": "태윤의 동기는 사직을 하고 고향에서 카페를 열었대요.",
+   "en": "Taeyoon's colleague quit his job and opened a café in his hometown.",
+   "ko": "태윤의 동기는 사직을 하고 고향에서 카페를 열었대요.",
+   "blank": "사직을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 회사에 사직 의사를 밝히고 요리를 제대로 배우기 시작했어요.",
+   "en": "Yuna told her company she was resigning and started learning to cook properly.",
+   "ko": "유나는 회사에 사직 의사를 밝히고 요리를 제대로 배우기 시작했어요.",
+   "blank": "사직",
+   "src": "made"
+  }
+ ],
  "w|사진": [
   {
    "text": "사진 잘 나왔어.",
@@ -44170,6 +44442,22 @@
    "en": "The elevator broke down, so they had to carry everything up the stairs.",
    "ko": "엘리베이터가 고장 나는 사태가 벌어져서 계단으로 짐을 날랐어요.",
    "blank": "사태가",
+   "src": "made"
+  }
+ ],
+ "w|사표": [
+  {
+   "text": "태윤은 힘들 때마다 사표를 쓸까 고민했지만 결국 버텼어요.",
+   "en": "Taeyoon thought about writing a resignation letter whenever things got hard, but he held on.",
+   "ko": "태윤은 힘들 때마다 사표를 쓸까 고민했지만 결국 버텼어요.",
+   "blank": "사표를",
+   "src": "made"
+  },
+  {
+   "text": "같은 반 민지 씨는 사표를 내고 반찬 가게를 차릴 준비를 하고 있어요.",
+   "en": "Minji in Yuna's class handed in her resignation and is preparing to open a side-dish shop.",
+   "ko": "같은 반 민지 씨는 사표를 내고 반찬 가게를 차릴 준비를 하고 있어요.",
+   "blank": "사표를",
    "src": "made"
   }
  ],
@@ -53221,6 +53509,22 @@
    "blank": "시아버지와"
   }
  ],
+ "w|시안": [
+  {
+   "text": "태윤은 기차에서 디자이너가 보낸 포장 시안을 하나씩 넘겨 봤어요.",
+   "en": "On the train, Taeyoon went through the packaging drafts the designer sent one by one.",
+   "ko": "태윤은 기차에서 디자이너가 보낸 포장 시안을 하나씩 넘겨 봤어요.",
+   "blank": "시안을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 요리 교실 홍보 포스터 시안을 두 개 만들어서 선생님께 보여 드렸어요.",
+   "en": "Yuna made two draft designs for the cooking class poster and showed them to the teacher.",
+   "ko": "유나는 요리 교실 홍보 포스터 시안을 두 개 만들어서 선생님께 보여 드렸어요.",
+   "blank": "시안을",
+   "src": "made"
+  }
+ ],
  "w|시어머니": [
   {
    "text": "시어머니가 오후에 오신대.",
@@ -61699,6 +62003,22 @@
    "src": "made"
   }
  ],
+ "w|역무원": [
+  {
+   "text": "역무원이 태윤에게 무거운 짐은 엘리베이터로 옮기라고 알려 줬어요.",
+   "en": "A station employee told Taeyoon to take the heavy luggage on the elevator.",
+   "ko": "역무원이 태윤에게 무거운 짐은 엘리베이터로 옮기라고 알려 줬어요.",
+   "blank": "역무원이",
+   "src": "made"
+  },
+  {
+   "text": "같은 반에는 지하철 역무원으로 일하는 아저씨도 있어요.",
+   "en": "There's also a man in Yuna's class who works as a subway station employee.",
+   "ko": "같은 반에는 지하철 역무원으로 일하는 아저씨도 있어요.",
+   "blank": "역무원으로",
+   "src": "made"
+  }
+ ],
  "w|역사": [
   {
    "text": "역사 공부하는 거 좋아해.",
@@ -66585,6 +66905,22 @@
    "blank": "운전기사에게"
   }
  ],
+ "w|운전면허": [
+  {
+   "text": "태윤은 운전면허를 딴 지 얼마 안 돼서 장거리는 기차를 타요.",
+   "en": "Taeyoon got his driver's license not long ago, so he takes the train for long trips.",
+   "ko": "태윤은 운전면허를 딴 지 얼마 안 돼서 장거리는 기차를 타요.",
+   "blank": "운전면허를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 요리 교실에 차를 몰고 다니려고 늦게나마 운전면허를 땄어요.",
+   "en": "Yuna finally got her driver's license so she could drive to cooking class.",
+   "ko": "유나는 요리 교실에 차를 몰고 다니려고 늦게나마 운전면허를 땄어요.",
+   "blank": "운전면허를",
+   "src": "made"
+  }
+ ],
  "w|운전사": [
   {
    "text": "학교 버스 운전사가 아이들과 인사했어.",
@@ -68163,6 +68499,38 @@
    "en": "It's the only chance, so let's take it.",
    "ko": "유일한 기회니까 잡자.",
    "blank": "유일한"
+  }
+ ],
+ "w|유적": [
+  {
+   "text": "기찻길 공사 중에 옛날 마을 유적이 나와서 공사가 잠시 멈췄대요.",
+   "en": "They say the railway construction paused for a while after remains of an old village were found.",
+   "ko": "기찻길 공사 중에 옛날 마을 유적이 나와서 공사가 잠시 멈췄대요.",
+   "blank": "유적이",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 옛날 부엌 유적에서 나온 그릇 사진을 보여 주셨어요.",
+   "en": "The teacher showed photos of bowls found at the remains of an ancient kitchen.",
+   "ko": "선생님은 옛날 부엌 유적에서 나온 그릇 사진을 보여 주셨어요.",
+   "blank": "유적에서",
+   "src": "made"
+  }
+ ],
+ "w|유적지": [
+  {
+   "text": "태윤은 일을 마치고 경주 유적지를 한 바퀴 돌아봤어요.",
+   "en": "After finishing work, Taeyoon took a walk around the historic sites in Gyeongju.",
+   "ko": "태윤은 일을 마치고 경주 유적지를 한 바퀴 돌아봤어요.",
+   "blank": "유적지를",
+   "src": "made"
+  },
+  {
+   "text": "이번 요리 교실 소풍은 백제 유적지에서 도시락을 먹는 거예요.",
+   "en": "This cooking class outing is eating packed lunches at a Baekje historic site.",
+   "ko": "이번 요리 교실 소풍은 백제 유적지에서 도시락을 먹는 거예요.",
+   "blank": "유적지에서",
+   "src": "made"
   }
  ],
  "w|유전": [
@@ -75473,6 +75841,22 @@
    "src": "made"
   }
  ],
+ "w|재고관리": [
+  {
+   "text": "태윤은 기차 안에서도 노트북으로 창고 재고관리 표를 확인했어요.",
+   "en": "Even on the train, Taeyoon checked the warehouse inventory sheet on his laptop.",
+   "ko": "태윤은 기차 안에서도 노트북으로 창고 재고관리 표를 확인했어요.",
+   "blank": "재고관리",
+   "src": "made"
+  },
+  {
+   "text": "유나는 요리 교실에서 냉장고 재고관리 하는 법도 배웠어요.",
+   "en": "Yuna also learned how to manage the fridge inventory at cooking class.",
+   "ko": "유나는 요리 교실에서 냉장고 재고관리 하는 법도 배웠어요.",
+   "blank": "재고관리",
+   "src": "made"
+  }
+ ],
  "w|재난": [
   {
    "text": "경민은 재난이 났을 때 정확한 정보를 빨리 전하는 게 기자의 일이라고 믿어요.",
@@ -77043,6 +77427,22 @@
    "src": "made"
   }
  ],
+ "w|전기차": [
+  {
+   "text": "요즘 역 주차장에는 전기차 충전소가 꽤 많이 생겼어요.",
+   "en": "These days a lot of electric car charging spots have appeared in station parking lots.",
+   "ko": "요즘 역 주차장에는 전기차 충전소가 꽤 많이 생겼어요.",
+   "blank": "전기차",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 전기차를 타고 다니시는데 장 보러 갈 때도 조용해서 좋대요.",
+   "en": "The teacher drives an electric car and likes that it's quiet even on grocery runs.",
+   "ko": "선생님은 전기차를 타고 다니시는데 장 보러 갈 때도 조용해서 좋대요.",
+   "blank": "전기차를",
+   "src": "made"
+  }
+ ],
  "w|전날": [
   {
    "text": "시험 전날에 복습했어.",
@@ -78608,6 +79008,38 @@
    "en": "Seoyeon's pharmacy gets regular disinfection once a month.",
    "ko": "서연의 약국은 정기적인 소독을 한 달에 한 번 해요.",
    "blank": "정기적인",
+   "src": "made"
+  }
+ ],
+ "w|정년": [
+  {
+   "text": "태윤의 아버지는 정년을 몇 해 앞두고 기차 여행을 자주 다니세요.",
+   "en": "Taeyoon's father often goes on train trips now that he's a few years from retirement age.",
+   "ko": "태윤의 아버지는 정년을 몇 해 앞두고 기차 여행을 자주 다니세요.",
+   "blank": "정년을",
+   "src": "made"
+  },
+  {
+   "text": "요리에는 정년이 없다며 일흔 살 할머니도 열심히 칼질을 하셨어요.",
+   "en": "Saying there's no retirement age in cooking, a seventy-year-old grandmother chopped away diligently.",
+   "ko": "요리에는 정년이 없다며 일흔 살 할머니도 열심히 칼질을 하셨어요.",
+   "blank": "정년이",
+   "src": "made"
+  }
+ ],
+ "w|정년퇴직": [
+  {
+   "text": "맞은편 아저씨는 정년퇴직 기념으로 아내와 전국 기차 일주를 하고 있대요.",
+   "en": "The man across from Taeyoon is touring the country by train with his wife to celebrate his retirement.",
+   "ko": "맞은편 아저씨는 정년퇴직 기념으로 아내와 전국 기차 일주를 하고 있대요.",
+   "blank": "정년퇴직",
+   "src": "made"
+  },
+  {
+   "text": "유나의 아버지는 정년퇴직 후에 유나와 같은 요리 교실에 다니세요.",
+   "en": "Yuna's father attends the same cooking class as her after retiring.",
+   "ko": "유나의 아버지는 정년퇴직 후에 유나와 같은 요리 교실에 다니세요.",
+   "blank": "정년퇴직",
    "src": "made"
   }
  ],
@@ -81033,6 +81465,22 @@
    "blank": "종이"
   }
  ],
+ "w|종점": [
+  {
+   "text": "태윤은 깜빡 잠이 들어서 종점까지 가 버렸어요.",
+   "en": "Taeyoon dozed off and ended up going all the way to the last stop.",
+   "ko": "태윤은 깜빡 잠이 들어서 종점까지 가 버렸어요.",
+   "blank": "종점까지",
+   "src": "made"
+  },
+  {
+   "text": "요리 교실은 마을버스 종점 바로 앞에 있어요.",
+   "en": "The cooking class is right in front of the village bus's last stop.",
+   "ko": "요리 교실은 마을버스 종점 바로 앞에 있어요.",
+   "blank": "종점",
+   "src": "made"
+  }
+ ],
  "w|종족": [
   {
    "text": "나라나 종족마다 결혼 관습과 장례 풍습이 조금씩 다르다.",
@@ -81937,6 +82385,22 @@
    "blank": "주택에"
   }
  ],
+ "w|주행": [
+  {
+   "text": "고속 열차는 시속 삼백 킬로미터로 주행해도 흔들림이 거의 없어요.",
+   "en": "The high-speed train barely shakes even when running at three hundred kilometers an hour.",
+   "ko": "고속 열차는 시속 삼백 킬로미터로 주행해도 흔들림이 거의 없어요.",
+   "blank": "주행해도",
+   "src": "made"
+  },
+  {
+   "text": "유나는 요리 교실에 가려고 처음으로 고속도로 주행을 해 봤어요.",
+   "en": "Yuna drove on the highway for the first time to get to cooking class.",
+   "ko": "유나는 요리 교실에 가려고 처음으로 고속도로 주행을 해 봤어요.",
+   "blank": "주행을",
+   "src": "made"
+  }
+ ],
  "w|죽": [
   {
    "text": "아플 때는 죽이 잘 넘어가.",
@@ -82515,6 +82979,22 @@
    "ko": "아파트 중앙에 놀이터가 있어서 아이들이 모이기가 좋다.",
    "blank": "중앙에",
    "src": "krdict"
+  }
+ ],
+ "w|중앙선": [
+  {
+   "text": "태윤은 기차 창밖으로 중앙선을 넘은 트럭을 보고 깜짝 놀랐어요.",
+   "en": "Taeyoon was startled to see a truck cross the center line outside the train window.",
+   "ko": "태윤은 기차 창밖으로 중앙선을 넘은 트럭을 보고 깜짝 놀랐어요.",
+   "blank": "중앙선을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 좁은 시골길에서 중앙선을 넘지 않으려고 천천히 운전했어요.",
+   "en": "Yuna drove slowly on the narrow country road so as not to cross the center line.",
+   "ko": "유나는 좁은 시골길에서 중앙선을 넘지 않으려고 천천히 운전했어요.",
+   "blank": "중앙선을",
+   "src": "made"
   }
  ],
  "w|중얼거리다": [
@@ -86499,6 +86979,22 @@
    "src": "made"
   }
  ],
+ "w|차선": [
+  {
+   "text": "창밖 고속도로에서는 차들이 차선을 바꾸며 기차를 따라오고 있었어요.",
+   "en": "On the highway outside, cars were changing lanes as they followed the train.",
+   "ko": "창밖 고속도로에서는 차들이 차선을 바꾸며 기차를 따라오고 있었어요.",
+   "blank": "차선을",
+   "src": "made"
+  },
+  {
+   "text": "요리 교실 가는 길에 공사 때문에 차선이 하나로 줄어서 길이 막혔어요.",
+   "en": "On the way to cooking class, construction narrowed the road to one lane and traffic backed up.",
+   "ko": "요리 교실 가는 길에 공사 때문에 차선이 하나로 줄어서 길이 막혔어요.",
+   "blank": "차선이",
+   "src": "made"
+  }
+ ],
  "w|차양": [
   {
    "text": "재원은 마당 평상 위에 차양을 쳐서 가족이 그늘에서 쉬게 했어요.",
@@ -86558,6 +87054,22 @@
    "en": "Sohee kindly explained the difference between the two kinds of ramen to a customer.",
    "ko": "소희는 두 라면의 차이점을 손님에게 친절하게 설명해 줬어요.",
    "blank": "차이점을",
+   "src": "made"
+  }
+ ],
+ "w|차장": [
+  {
+   "text": "열차 차장이 다음 역에서 문이 왼쪽으로 열린다고 방송했어요.",
+   "en": "The train conductor announced that the doors would open on the left at the next station.",
+   "ko": "열차 차장이 다음 역에서 문이 왼쪽으로 열린다고 방송했어요.",
+   "blank": "차장이",
+   "src": "made"
+  },
+  {
+   "text": "유나의 남편은 회사에서 차장으로 승진해서 요리 교실 수업료를 대신 내 줬어요.",
+   "en": "Yuna's husband got promoted to deputy manager and paid her cooking class fee.",
+   "ko": "유나의 남편은 회사에서 차장으로 승진해서 요리 교실 수업료를 대신 내 줬어요.",
+   "blank": "차장으로",
    "src": "made"
   }
  ],
@@ -88107,6 +88619,22 @@
    "blank": "첫째"
   }
  ],
+ "w|첫차": [
+  {
+   "text": "태윤은 일찍 도착하려고 새벽 첫차를 탔어요.",
+   "en": "Taeyoon took the first train at dawn to arrive early.",
+   "ko": "태윤은 일찍 도착하려고 새벽 첫차를 탔어요.",
+   "blank": "첫차를",
+   "src": "made"
+  },
+  {
+   "text": "아침 수업에 늦지 않으려고 유나는 첫차를 타고 시장에 들렀어요.",
+   "en": "Not to be late for the morning class, Yuna took the first bus and stopped by the market.",
+   "ko": "아침 수업에 늦지 않으려고 유나는 첫차를 타고 시장에 들렀어요.",
+   "blank": "첫차를",
+   "src": "made"
+  }
+ ],
  "w|청구서": [
   {
    "text": "전기 청구서가 도착했어.",
@@ -88860,6 +89388,22 @@
    "en": "Seoyeon liked the crescent-moon earrings the moment she saw them.",
    "ko": "서연은 초승달 모양 귀걸이를 보자마자 마음에 들었어요.",
    "blank": "초승달",
+   "src": "made"
+  }
+ ],
+ "w|초안": [
+  {
+   "text": "태윤은 도착하기 전에 보고서 초안을 다 써 두려고 서둘렀어요.",
+   "en": "Taeyoon hurried to finish the first draft of his report before arriving.",
+   "ko": "태윤은 도착하기 전에 보고서 초안을 다 써 두려고 서둘렀어요.",
+   "blank": "초안을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 자기만의 김치 레시피 초안을 써서 수업에 가져갔어요.",
+   "en": "Yuna wrote a first draft of her own kimchi recipe and brought it to class.",
+   "ko": "유나는 자기만의 김치 레시피 초안을 써서 수업에 가져갔어요.",
+   "blank": "초안을",
    "src": "made"
   }
  ],
@@ -90409,6 +90953,22 @@
    "en": "I'm preparing for employment.",
    "ko": "취업을 준비하고 있어.",
    "blank": "취업을"
+  }
+ ],
+ "w|취임": [
+  {
+   "text": "기차 안 뉴스 화면에는 새 시장의 취임 소식이 나오고 있었어요.",
+   "en": "The news screen on the train was showing the new mayor's inauguration.",
+   "ko": "기차 안 뉴스 화면에는 새 시장의 취임 소식이 나오고 있었어요.",
+   "blank": "취임",
+   "src": "made"
+  },
+  {
+   "text": "새 원장님 취임 축하 파티 음식은 수강생들이 함께 만들었어요.",
+   "en": "The students made the food together for the party celebrating the new director's inauguration.",
+   "ko": "새 원장님 취임 축하 파티 음식은 수강생들이 함께 만들었어요.",
+   "blank": "취임",
+   "src": "made"
   }
  ],
  "w|취직": [
@@ -92487,6 +93047,22 @@
    "src": "made"
   }
  ],
+ "w|탈진": [
+  {
+   "text": "밤샘 근무 뒤라 태윤은 기차에 타자마자 탈진한 듯 잠들었어요.",
+   "en": "After working all night, Taeyoon fell asleep as if exhausted the moment he got on the train.",
+   "ko": "밤샘 근무 뒤라 태윤은 기차에 타자마자 탈진한 듯 잠들었어요.",
+   "blank": "탈진한",
+   "src": "made"
+  },
+  {
+   "text": "여름에 불 앞에서 오래 일하면 탈진하기 쉬우니까 물을 자주 마시라고 선생님이 말했어요.",
+   "en": "The teacher said to drink water often because working at the stove long in summer can easily wear you out.",
+   "ko": "여름에 불 앞에서 오래 일하면 탈진하기 쉬우니까 물을 자주 마시라고 선생님이 말했어요.",
+   "blank": "탈진하기",
+   "src": "made"
+  }
+ ],
  "w|탈출": [
   {
    "text": "우리 팀은 이번 경기의 승리로 연패 탈출에 성공했다.",
@@ -93257,6 +93833,22 @@
    "blank": "토해"
   }
  ],
+ "w|톱": [
+  {
+   "text": "태윤은 할아버지 댁 헛간에서 녹슨 톱을 찾아 장작을 잘랐어요.",
+   "en": "Taeyoon found a rusty saw in his grandfather's barn and cut firewood.",
+   "ko": "태윤은 할아버지 댁 헛간에서 녹슨 톱을 찾아 장작을 잘랐어요.",
+   "blank": "톱을",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 언 고기를 자를 때 작은 톱 같은 칼을 쓰셨어요.",
+   "en": "The teacher used a knife like a small saw to cut the frozen meat.",
+   "ko": "선생님은 언 고기를 자를 때 작은 톱 같은 칼을 쓰셨어요.",
+   "blank": "톱",
+   "src": "made"
+  }
+ ],
  "w|통계": [
   {
    "text": "최신 통계를 발표했어.",
@@ -93645,6 +94237,22 @@
    "en": "I'll be discharged around the day after tomorrow.",
    "ko": "모레쯤 병원에서 나올 거야.",
    "blank": "퇴원해"
+  }
+ ],
+ "w|퇴임": [
+  {
+   "text": "옆자리 할아버지는 교장 선생님으로 퇴임하고 처음 여행을 떠난다고 했어요.",
+   "en": "The old man next to Taeyoon said it was his first trip since retiring as a school principal.",
+   "ko": "옆자리 할아버지는 교장 선생님으로 퇴임하고 처음 여행을 떠난다고 했어요.",
+   "blank": "퇴임하고",
+   "src": "made"
+  },
+  {
+   "text": "오래 가르치신 선생님의 퇴임 날 유나는 직접 만든 떡을 드렸어요.",
+   "en": "On the retirement day of the long-serving teacher, Yuna gave her rice cakes she'd made herself.",
+   "ko": "오래 가르치신 선생님의 퇴임 날 유나는 직접 만든 떡을 드렸어요.",
+   "blank": "퇴임",
+   "src": "made"
   }
  ],
  "w|퇴직": [
@@ -99533,6 +100141,22 @@
    "src": "made"
   }
  ],
+ "w|행선지": [
+  {
+   "text": "태윤은 기차표에 적힌 행선지를 다시 보고 맞는 열차에 탔어요.",
+   "en": "Taeyoon checked the destination on his ticket again and boarded the right train.",
+   "ko": "태윤은 기차표에 적힌 행선지를 다시 보고 맞는 열차에 탔어요.",
+   "blank": "행선지를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 택시 기사에게 행선지를 말하고 요리 재료 봉투를 꼭 안았어요.",
+   "en": "Yuna told the taxi driver her destination and held the grocery bags tight.",
+   "ko": "유나는 택시 기사에게 행선지를 말하고 요리 재료 봉투를 꼭 안았어요.",
+   "blank": "행선지를",
+   "src": "made"
+  }
+ ],
  "w|행성": [
   {
    "text": "화성은 붉은 행성으로 유명해.",
@@ -103377,6 +104001,22 @@
    "en": "You shouldn't wield power recklessly.",
    "ko": "권력을 함부로 휘두르면 안 돼.",
    "blank": "휘두르면"
+  }
+ ],
+ "w|휘발유": [
+  {
+   "text": "태윤은 렌터카를 돌려주기 전에 휘발유를 가득 채웠어요.",
+   "en": "Taeyoon filled the rental car up with gasoline before returning it.",
+   "ko": "태윤은 렌터카를 돌려주기 전에 휘발유를 가득 채웠어요.",
+   "blank": "휘발유를",
+   "src": "made"
+  },
+  {
+   "text": "요즘 휘발유 값이 올라서 유나는 요리 교실에 버스를 타고 다녀요.",
+   "en": "Gasoline prices have gone up lately, so Yuna takes the bus to cooking class.",
+   "ko": "요즘 휘발유 값이 올라서 유나는 요리 교실에 버스를 타고 다녀요.",
+   "blank": "휘발유",
+   "src": "made"
   }
  ],
  "w|휠체어": [
