@@ -3787,6 +3787,22 @@
    "blank": "也许"
   }
  ],
+ "w|习俗": [
+  {
+   "text": "法官考虑到当地的婚嫁习俗，主持双方调解。",
+   "en": "Taking local marriage customs into account, the judge oversaw mediation between the two sides.",
+   "ko": "판사는 그 지역 혼인 풍습을 고려해 양측 조정을 주재했어요.",
+   "blank": "习俗",
+   "src": "made"
+  },
+  {
+   "text": "小雪为一款旅行应用整理了各地的节日习俗。",
+   "en": "Xiaoxue compiled festival customs from different regions for a travel app.",
+   "ko": "샤오쉐는 여행 앱을 위해 지역마다 다른 명절 풍습을 정리했어요.",
+   "blank": "习俗",
+   "src": "made"
+  }
+ ],
  "w|习惯": [
   {
    "text": "养成习惯。",
@@ -5961,6 +5977,22 @@
    "en": "He's the company representative.",
    "ko": "그 사람은 회사 대표야.",
    "blank": "代表"
+  }
+ ],
+ "w|代表团": [
+  {
+   "text": "一个外国法律代表团专程来旁听这次庭审。",
+   "en": "A foreign legal delegation came specially to observe the trial.",
+   "ko": "외국 법률 대표단이 이번 재판을 방청하러 일부러 왔어요.",
+   "blank": "代表团",
+   "src": "made"
+  },
+  {
+   "text": "一个外地考察代表团专门来公司参观。",
+   "en": "A visiting delegation from out of town came specially to tour the company.",
+   "ko": "타지역 시찰 대표단이 회사를 둘러보러 일부러 왔어요.",
+   "blank": "代表团",
+   "src": "made"
   }
  ],
  "w|令": [
@@ -9998,6 +10030,22 @@
    "en": "Xiaoxue reminded the guest to take the key card so he wouldn't be locked out at midnight.",
    "ko": "샤오쉐는 손님에게 한밤중에 못 들어가는 일이 없도록 카드키를 챙기라고 일렀어요.",
    "blank": "免得",
+   "src": "made"
+  }
+ ],
+ "w|免疫": [
+  {
+   "text": "专家出庭作证说，接种以后，人体就会对这种病毒免疫。",
+   "en": "An expert testified in court that after vaccination the body becomes immune to this virus.",
+   "ko": "전문가는 법정에 나와 접종하면 몸이 이 바이러스에 면역이 생긴다고 증언했어요.",
+   "blank": "免疫",
+   "src": "made"
+  },
+  {
+   "text": "小雪笑着说，她早就对投资人的冷脸免疫了。",
+   "en": "Xiaoxue said with a laugh that she's long been immune to investors' cold shoulders.",
+   "ko": "샤오쉐는 투자자들의 냉담한 반응엔 이미 면역이 됐다며 웃었어요.",
+   "blank": "免疫",
    "src": "made"
   }
  ],
@@ -14055,6 +14103,22 @@
    "blank": "剑"
   }
  ],
+ "w|剥削": [
+  {
+   "text": "这家工厂被控剥削工人，长期不付加班费。",
+   "en": "This factory was accused of exploiting workers and long refusing to pay overtime.",
+   "ko": "이 공장은 노동자를 착취하고 오랫동안 초과 근무 수당을 안 준 혐의로 고소당했어요.",
+   "blank": "剥削",
+   "src": "made"
+  },
+  {
+   "text": "小雪坚决反对让员工无偿加班，她说那就是剥削。",
+   "en": "Xiaoxue firmly opposes making employees work unpaid overtime; she says that's exploitation.",
+   "ko": "샤오쉐는 직원에게 무급 야근을 시키는 데 단호히 반대하며 그건 착취라고 해요.",
+   "blank": "剥削",
+   "src": "made"
+  }
+ ],
  "w|剥夺": [
   {
    "text": "周强说，学做菜剥夺了他睡懒觉的周末，但他一点也不后悔。",
@@ -14604,6 +14668,22 @@
    "en": "This tour boat is powered by sails and is very quiet.",
    "ko": "이 유람선은 돛으로 동력을 얻어서 아주 조용히 움직여요.",
    "blank": "动力",
+   "src": "made"
+  }
+ ],
+ "w|动员": [
+  {
+   "text": "原告律师动员了几十名受害者一起出庭作证。",
+   "en": "The plaintiff's lawyer mobilized dozens of victims to testify in court together.",
+   "ko": "원고 측 변호사는 피해자 수십 명을 동원해 함께 법정에서 증언하게 했어요.",
+   "blank": "动员",
+   "src": "made"
+  },
+  {
+   "text": "上线前一晚，小雪动员全员一起找漏洞。",
+   "en": "The night before launch, Xiaoxue rallied everyone to hunt for bugs together.",
+   "ko": "출시 전날 밤 샤오쉐는 전 직원을 동원해 함께 버그를 찾았어요.",
+   "blank": "动员",
    "src": "made"
   }
  ],
@@ -16165,6 +16245,22 @@
    "blank": "压力"
   }
  ],
+ "w|压抑": [
+  {
+   "text": "宣判前，法庭里的气氛十分压抑。",
+   "en": "Before the verdict, the atmosphere in the courtroom was very oppressive.",
+   "ko": "선고 전 법정 안의 분위기는 몹시 무거웠어요.",
+   "blank": "压抑",
+   "src": "made"
+  },
+  {
+   "text": "连续加班一个月，办公室的气氛有些压抑。",
+   "en": "After a month of nonstop overtime, the mood in the office felt a bit stifling.",
+   "ko": "한 달 내내 야근하니 사무실 분위기가 좀 답답했어요.",
+   "blank": "压抑",
+   "src": "made"
+  }
+ ],
  "w|压迫": [
   {
    "text": "这出历史剧讲的是农民不再忍受地主压迫的故事。",
@@ -17544,6 +17640,22 @@
    "en": "This thermos has been especially popular lately, and by the time Li Na got there it was sold out.",
    "ko": "이 보온병이 요즘 특히 인기가 많아서 리나가 늦게 가니 다 팔렸어요.",
    "blank": "受欢迎",
+   "src": "made"
+  }
+ ],
+ "w|受苦": [
+  {
+   "text": "原告哭着说，这几年她和孩子没少受苦。",
+   "en": "The plaintiff said in tears that she and her children had suffered a great deal these past few years.",
+   "ko": "원고는 지난 몇 년 동안 자기와 아이들이 고생을 많이 했다며 울었어요.",
+   "blank": "受苦",
+   "src": "made"
+  },
+  {
+   "text": "小雪不想让团队跟着她受苦，坚持按时发工资。",
+   "en": "Xiaoxue didn't want her team to suffer along with her, so she insisted on paying salaries on time.",
+   "ko": "샤오쉐는 팀원들이 자기 때문에 고생하지 않게 월급만큼은 꼬박꼬박 제때 줬어요.",
+   "blank": "受苦",
    "src": "made"
   }
  ],
@@ -19887,6 +19999,22 @@
    "blank": "启动"
   }
  ],
+ "w|启发": [
+  {
+   "text": "一位老法官的几句话给了陈杰很大启发。",
+   "en": "A few words from an old judge gave Chen Jie great inspiration.",
+   "ko": "노판사의 몇 마디가 천제에게 큰 깨달음을 줬어요.",
+   "blank": "启发",
+   "src": "made"
+  },
+  {
+   "text": "一位老用户的建议启发小雪做了这个新功能。",
+   "en": "A long-time user's suggestion inspired Xiaoxue to build this new feature.",
+   "ko": "오랜 사용자의 제안이 샤오쉐가 이 새 기능을 만드는 데 영감을 줬어요.",
+   "blank": "启发",
+   "src": "made"
+  }
+ ],
  "w|吵": [
   {
    "text": "别再吵了。",
@@ -20758,6 +20886,22 @@
    "en": "The paint was fresh, and as soon as Lili walked in she couldn't stop coughing.",
    "ko": "페인트를 막 칠한 뒤라 리리는 문에 들어서자마자 기침이 멈추지 않았어요.",
    "blank": "咳嗽",
+   "src": "made"
+  }
+ ],
+ "w|品味": [
+  {
+   "text": "陈杰挑领带一向很有品味，同事们都夸他。",
+   "en": "Chen Jie has always had good taste in ties, and his colleagues all compliment him.",
+   "ko": "천제는 넥타이를 고르는 안목이 늘 좋아서 동료들이 다 칭찬해요.",
+   "blank": "品味",
+   "src": "made"
+  },
+  {
+   "text": "投资人称赞小雪的设计很有品味。",
+   "en": "The investor praised Xiaoxue's designs for their good taste.",
+   "ko": "투자자는 샤오쉐의 디자인이 무척 세련됐다고 칭찬했어요.",
+   "blank": "品味",
    "src": "made"
   }
  ],
@@ -23507,6 +23651,22 @@
    "blank": "块"
   }
  ],
+ "w|坚信": [
+  {
+   "text": "陈杰坚信自己的当事人是清白的。",
+   "en": "Chen Jie firmly believes his client is innocent.",
+   "ko": "천제는 자기 의뢰인이 결백하다고 굳게 믿어요.",
+   "blank": "坚信",
+   "src": "made"
+  },
+  {
+   "text": "投资人都摇头，小雪却坚信这个想法会成功。",
+   "en": "The investors all shook their heads, but Xiaoxue firmly believed the idea would succeed.",
+   "ko": "투자자들은 다 고개를 저었지만 샤오쉐는 이 아이디어가 성공할 거라고 굳게 믿었어요.",
+   "blank": "坚信",
+   "src": "made"
+  }
+ ],
  "w|坚决": [
   {
    "text": "姐姐态度坚决，说这次一定要把话讲清楚。",
@@ -23907,6 +24067,22 @@
    "src": "made"
   }
  ],
+ "w|堡垒": [
+  {
+   "text": "陈杰常说，法律是保护弱者的最后一道堡垒。",
+   "en": "Chen Jie often says the law is the last fortress protecting the weak.",
+   "ko": "천제는 법이 약자를 지키는 마지막 보루라고 자주 말해요.",
+   "blank": "堡垒",
+   "src": "made"
+  },
+  {
+   "text": "小雪团队开发的策略游戏里，玩家要守住一座堡垒。",
+   "en": "In the strategy game Xiaoxue's team developed, players have to defend a fortress.",
+   "ko": "샤오쉐 팀이 만든 전략 게임에서는 플레이어가 요새 하나를 지켜야 해요.",
+   "blank": "堡垒",
+   "src": "made"
+  }
+ ],
  "w|堵": [
   {
    "text": "去采访的路上堵了一个小时，黄涛差点迟到。",
@@ -24219,6 +24395,22 @@
    "src": "made"
   }
  ],
+ "w|处决": [
+  {
+   "text": "陈杰在法律史课上讲到，古代死刑犯常在秋天被处决。",
+   "en": "In his legal history class, Chen Jie explained that in ancient times condemned prisoners were often executed in autumn.",
+   "ko": "천제는 법률사 강의에서 옛날 사형수들이 주로 가을에 처형됐다고 설명했어요.",
+   "blank": "处决",
+   "src": "made"
+  },
+  {
+   "text": "在这款历史游戏里，有一段剧情是叛军首领被处决。",
+   "en": "In this history game, one part of the story has the rebel leader executed.",
+   "ko": "이 역사 게임에는 반란군 우두머리가 처형되는 장면이 있어요.",
+   "blank": "处决",
+   "src": "made"
+  }
+ ],
  "w|处在": [
   {
    "text": "餐馆刚开张不久，还处在摸索阶段。",
@@ -24248,6 +24440,22 @@
    "en": "Xiaoxue's toothache kept her awake, and she couldn't find an open clinic—an awkward situation.",
    "ko": "샤오쉐는 이가 아파 잠을 못 자는데 문 연 치과도 못 찾아서 난처했어요.",
    "blank": "处境",
+   "src": "made"
+  }
+ ],
+ "w|处处": [
+  {
+   "text": "对方律师处处针对陈杰请来的证人。",
+   "en": "The opposing lawyer went after the witness Chen Jie had called at every turn.",
+   "ko": "상대 변호사는 천제가 부른 증인을 사사건건 물고 늘어졌어요.",
+   "blank": "处处",
+   "src": "made"
+  },
+  {
+   "text": "小雪说，创业这条路上处处是坑。",
+   "en": "Xiaoxue says the road of starting a business is full of pitfalls everywhere.",
+   "ko": "샤오쉐는 창업의 길에는 곳곳에 함정이 있다고 해요.",
+   "blank": "处处",
    "src": "made"
   }
  ],
@@ -26436,6 +26644,22 @@
    "en": "The children in the pediatric ward all say Lili is their goddess.",
    "ko": "소아 병동 아이들은 모두 리리가 자기들의 여신이라고 해요.",
    "blank": "女神",
+   "src": "made"
+  }
+ ],
+ "w|奴役": [
+  {
+   "text": "陈杰的论文研究古代法律怎样对待被奴役的人。",
+   "en": "Chen Jie's thesis studies how ancient law treated enslaved people.",
+   "ko": "천제의 논문은 고대 법률이 노예로 부려진 사람들을 어떻게 다뤘는지 연구해요.",
+   "blank": "奴役",
+   "src": "made"
+  },
+  {
+   "text": "小雪开玩笑说，自己早就被手机奴役了。",
+   "en": "Xiaoxue joked that she's long been enslaved by her phone.",
+   "ko": "샤오쉐는 자기는 이미 휴대폰의 노예라고 농담했어요.",
+   "blank": "奴役",
    "src": "made"
   }
  ],
@@ -29326,6 +29550,22 @@
    "en": "Yang Yang and her cousin have been close since childhood, so she asked her to be bridesmaid.",
    "ko": "양양은 사촌 동생과 어릴 때부터 가까워서 이번에 들러리를 부탁했어요.",
    "blank": "密切",
+   "src": "made"
+  }
+ ],
+ "w|密度": [
+  {
+   "text": "法官指出，这片住宅区人口密度高，噪音纠纷也多。",
+   "en": "The judge pointed out that this residential area is densely populated and has many noise disputes.",
+   "ko": "판사는 이 주거 지역이 인구 밀도가 높아 소음 분쟁도 많다고 지적했어요.",
+   "blank": "密度",
+   "src": "made"
+  },
+  {
+   "text": "小雪抱怨这周的会议密度太高，根本没时间写代码。",
+   "en": "Xiaoxue complained that this week's meetings were so packed she had no time to code at all.",
+   "ko": "샤오쉐는 이번 주 회의가 너무 빽빽해서 코드 짤 시간이 전혀 없다고 투덜댔어요.",
+   "blank": "密度",
    "src": "made"
   }
  ],
@@ -32384,6 +32624,22 @@
    "en": "A referee saw a runner cutting the course and stepped in at once.",
    "ko": "심판은 지름길로 가는 선수를 보고 바로 가서 제지했어요.",
    "blank": "干预",
+   "src": "made"
+  }
+ ],
+ "w|平凡": [
+  {
+   "text": "被告只是一个平凡的出租车司机，从没进过法院。",
+   "en": "The defendant is just an ordinary taxi driver who had never been inside a courthouse.",
+   "ko": "피고는 법원에 와 본 적도 없는 평범한 택시 기사예요.",
+   "blank": "平凡",
+   "src": "made"
+  },
+  {
+   "text": "小雪希望这款应用能让平凡的上班族过得轻松一点。",
+   "en": "Xiaoxue hopes this app can make life a little easier for ordinary office workers.",
+   "ko": "샤오쉐는 이 앱이 평범한 직장인의 생활을 조금이라도 편하게 해 주길 바라요.",
+   "blank": "平凡",
    "src": "made"
   }
  ],
@@ -36349,6 +36605,22 @@
    "src": "made"
   }
  ],
+ "w|总数": [
+  {
+   "text": "这起非法集资案的受害人总数超过五百。",
+   "en": "The total number of victims in this illegal fundraising case exceeds five hundred.",
+   "ko": "이 불법 투자 모집 사건의 피해자는 모두 오백 명이 넘어요.",
+   "blank": "总数",
+   "src": "made"
+  },
+  {
+   "text": "应用上线三个月，用户总数突破了十万。",
+   "en": "Three months after launch, the app's total users passed one hundred thousand.",
+   "ko": "앱을 출시한 지 석 달 만에 전체 사용자가 십만 명을 넘었어요.",
+   "blank": "总数",
+   "src": "made"
+  }
+ ],
  "w|总是": [
   {
    "text": "你总是迟到。",
@@ -37119,6 +37391,22 @@
    "en": "What did you think of?",
    "ko": "뭐가 생각났어?",
    "blank": "想到"
+  }
+ ],
+ "w|想得到": [
+  {
+   "text": "谁想得到，关键证人竟然是被告的邻居。",
+   "en": "Who would have thought the key witness would turn out to be the defendant's neighbor?",
+   "ko": "핵심 증인이 피고의 이웃일 줄 누가 생각이나 했겠어요.",
+   "blank": "想得到",
+   "src": "made"
+  },
+  {
+   "text": "谁想得到，三个人的小团队能做出这么火的应用。",
+   "en": "Who could have imagined a tiny three-person team would make such a hit app?",
+   "ko": "세 명짜리 작은 팀이 이렇게 인기 있는 앱을 만들 줄 누가 알았겠어요.",
+   "blank": "想得到",
+   "src": "made"
   }
  ],
  "w|想必": [
@@ -41539,6 +41827,22 @@
    "src": "made"
   }
  ],
+ "w|捕捉": [
+  {
+   "text": "陈杰敏锐地捕捉到证人话里的矛盾。",
+   "en": "Chen Jie sharply caught the contradiction in the witness's words.",
+   "ko": "천제는 증인 말 속의 모순을 날카롭게 포착했어요.",
+   "blank": "捕捉",
+   "src": "made"
+  },
+  {
+   "text": "这款软件能自动捕捉用户的操作习惯。",
+   "en": "This software can automatically capture users' habits.",
+   "ko": "이 소프트웨어는 사용자의 조작 습관을 자동으로 포착해요.",
+   "blank": "捕捉",
+   "src": "made"
+  }
+ ],
  "w|损伤": [
   {
    "text": "黄涛提醒顾客，这种药吃多了会损伤胃黏膜。",
@@ -42763,6 +43067,22 @@
    "src": "made"
   }
  ],
+ "w|揭开": [
+  {
+   "text": "一份新的证据揭开了这起案件的真相。",
+   "en": "A new piece of evidence uncovered the truth of the case.",
+   "ko": "새로운 증거 하나가 이 사건의 진실을 밝혀냈어요.",
+   "blank": "揭开",
+   "src": "made"
+  },
+  {
+   "text": "发布会上，小雪亲手揭开了新产品的面纱。",
+   "en": "At the launch event, Xiaoxue personally unveiled the new product.",
+   "ko": "발표회에서 샤오쉐가 직접 신제품의 베일을 벗겼어요.",
+   "blank": "揭开",
+   "src": "made"
+  }
+ ],
  "w|揭露": [
   {
    "text": "一位记者揭露了有工厂偷偷往河里排污的事。",
@@ -43344,6 +43664,22 @@
    "en": "As the launch began, the big screen played photos from since Liu Fang's company was founded.",
    "ko": "발표회가 시작되자 큰 화면에 류팡의 회사가 세워진 뒤로의 사진들이 나왔어요.",
    "blank": "播放",
+   "src": "made"
+  }
+ ],
+ "w|擅自": [
+  {
+   "text": "被告未经同意，擅自拆除了邻居家的围墙。",
+   "en": "Without consent, the defendant took it upon himself to tear down the neighbor's wall.",
+   "ko": "피고는 동의도 없이 멋대로 이웃집 담장을 허물었어요.",
+   "blank": "擅自",
+   "src": "made"
+  },
+  {
+   "text": "实习生擅自修改了线上代码，结果系统崩溃了。",
+   "en": "An intern changed the live code without authorization, and the system crashed.",
+   "ko": "인턴이 멋대로 운영 중인 코드를 고쳐서 시스템이 다운됐어요.",
+   "blank": "擅自",
    "src": "made"
   }
  ],
@@ -44969,6 +45305,22 @@
    "src": "made"
   }
  ],
+ "w|斜": [
+  {
+   "text": "墙上的钟挂斜了，书记员踮起脚把它扶正。",
+   "en": "The clock on the wall was hanging crooked, and the clerk stood on tiptoe to straighten it.",
+   "ko": "벽시계가 비뚤게 걸려 있어서 서기가 발끝을 들고 바로잡았어요.",
+   "blank": "斜",
+   "src": "made"
+  },
+  {
+   "text": "小雪的显示器放斜了，看久了脖子疼。",
+   "en": "Xiaoxue's monitor is set at an angle, and her neck hurts after looking at it for a while.",
+   "ko": "샤오쉐의 모니터가 비스듬히 놓여 있어서 오래 보면 목이 아파요.",
+   "blank": "斜",
+   "src": "made"
+  }
+ ],
  "w|断": [
   {
    "text": "演到一半，黄涛手里的木剑突然断了，台下一片笑声。",
@@ -45629,6 +45981,22 @@
    "src": "made"
   }
  ],
+ "w|无罪": [
+  {
+   "text": "经过三次开庭，法院最终宣判被告无罪。",
+   "en": "After three hearings, the court finally found the defendant not guilty.",
+   "ko": "세 번의 재판 끝에 법원은 마침내 피고에게 무죄를 선고했어요.",
+   "blank": "无罪",
+   "src": "made"
+  },
+  {
+   "text": "周末小雪看了一部电影，讲一个程序员被冤枉、最后被判无罪。",
+   "en": "On the weekend, Xiaoxue watched a film about a programmer who was wrongly accused and finally found not guilty.",
+   "ko": "주말에 샤오쉐는 억울하게 누명을 쓴 프로그래머가 끝내 무죄 판결을 받는 영화를 봤어요.",
+   "blank": "无罪",
+   "src": "made"
+  }
+ ],
  "w|无聊": [
   {
    "text": "我好无聊。",
@@ -45730,6 +46098,22 @@
    "en": "Standing at the edge of the field, Wang Fang feels there are endless possibilities between heaven and earth.",
    "ko": "밭가에 서면 왕팡은 하늘과 땅 사이에 끝없는 가능성이 있다고 느껴요.",
    "blank": "无限",
+   "src": "made"
+  }
+ ],
+ "w|无需": [
+  {
+   "text": "法官表示，这一点双方已经认可，无需再争论。",
+   "en": "The judge said both sides had already accepted this point, so there was no need to argue further.",
+   "ko": "판사는 이 점은 양측이 이미 인정했으니 더 다툴 필요가 없다고 했어요.",
+   "blank": "无需",
+   "src": "made"
+  },
+  {
+   "text": "新版本无需注册，打开就能用。",
+   "en": "The new version doesn't require registration; you can use it right away.",
+   "ko": "새 버전은 가입할 필요 없이 열자마자 쓸 수 있어요.",
+   "blank": "无需",
    "src": "made"
   }
  ],
@@ -47091,6 +47475,22 @@
    "en": "Don't solve problems with violence.",
    "ko": "폭력으로 문제를 풀지 마.",
    "blank": "暴力"
+  }
+ ],
+ "w|暴动": [
+  {
+   "text": "这起案件涉及几年前监狱里的一次暴动。",
+   "en": "This case concerns a prison riot from a few years ago.",
+   "ko": "이 사건은 몇 년 전 교도소에서 일어난 폭동과 관련이 있어요.",
+   "blank": "暴动",
+   "src": "made"
+  },
+  {
+   "text": "在游戏的第二章，玩家需要平息一座城市的暴动。",
+   "en": "In the second chapter of the game, players have to put down a riot in a city.",
+   "ko": "게임의 두 번째 장에서 플레이어는 한 도시의 폭동을 진압해야 해요.",
+   "blank": "暴动",
+   "src": "made"
   }
  ],
  "w|暴露": [
@@ -49049,6 +49449,22 @@
    "src": "made"
   }
  ],
+ "w|杰作": [
+  {
+   "text": "陈杰办公室墙上挂着一幅书法杰作，是老师送的。",
+   "en": "A masterpiece of calligraphy hangs on the wall of Chen Jie's office, a gift from his teacher.",
+   "ko": "천제의 사무실 벽에는 스승이 준 서예 걸작이 걸려 있어요.",
+   "blank": "杰作",
+   "src": "made"
+  },
+  {
+   "text": "小雪一直把第一版界面称为自己的杰作。",
+   "en": "Xiaoxue has always called the first version of the interface her masterpiece.",
+   "ko": "샤오쉐는 첫 버전 화면을 늘 자기 걸작이라고 불러요.",
+   "blank": "杰作",
+   "src": "made"
+  }
+ ],
  "w|杰出": [
   {
    "text": "酒店大厅挂着一位杰出画家的作品。",
@@ -49384,6 +49800,22 @@
    "en": "Yang Yang marked the parts that need changing in red in the document.",
    "ko": "양양은 문서에서 고쳐야 할 곳을 빨간색 표시로 남겼어요.",
    "blank": "标记",
+   "src": "made"
+  }
+ ],
+ "w|标语": [
+  {
+   "text": "法院门外有人举着标语，等待判决结果。",
+   "en": "Outside the courthouse, people held up banners, waiting for the verdict.",
+   "ko": "법원 밖에서는 사람들이 표어를 들고 판결을 기다렸어요.",
+   "blank": "标语",
+   "src": "made"
+  },
+  {
+   "text": "办公室墙上贴着一条标语：先完成，再完美。",
+   "en": "A slogan on the office wall reads: Done first, perfect later.",
+   "ko": "사무실 벽에는 \"먼저 끝내고 그다음에 완벽하게\"라는 표어가 붙어 있어요.",
+   "blank": "标语",
    "src": "made"
   }
  ],
@@ -54755,6 +55187,22 @@
    "src": "made"
   }
  ],
+ "w|火药": [
+  {
+   "text": "被告在家中非法储存火药，被邻居举报。",
+   "en": "The defendant illegally stored gunpowder at home and was reported by a neighbor.",
+   "ko": "피고는 집에 화약을 불법으로 보관하다가 이웃의 신고를 받았어요.",
+   "blank": "火药",
+   "src": "made"
+  },
+  {
+   "text": "美术设计师给游戏画了一段火药爆炸的特效。",
+   "en": "The art designer drew a gunpowder explosion effect for the game.",
+   "ko": "아트 디자이너가 게임에 쓸 화약 폭발 효과를 그렸어요.",
+   "blank": "火药",
+   "src": "made"
+  }
+ ],
  "w|火车": [
   {
    "text": "坐火车去。",
@@ -56350,6 +56798,22 @@
    "en": "This dentist's distinguishing trait is her gentle touch, so kids aren't afraid of her.",
    "ko": "이 치과 의사의 특징은 손이 아주 가볍다는 거라 아이들도 무서워하지 않아요.",
    "blank": "特点",
+   "src": "made"
+  }
+ ],
+ "w|特种部队": [
+  {
+   "text": "那位证人曾在特种部队服役，回答问题非常简洁。",
+   "en": "That witness once served in the special forces and answered questions very concisely.",
+   "ko": "그 증인은 특수부대 출신이라 질문에 아주 간결하게 답했어요.",
+   "blank": "特种部队",
+   "src": "made"
+  },
+  {
+   "text": "在这款游戏里，玩家可以扮演特种部队的队员。",
+   "en": "In this game, players can play as special forces soldiers.",
+   "ko": "이 게임에서 플레이어는 특수부대 대원이 될 수 있어요.",
+   "blank": "特种部队",
    "src": "made"
   }
  ],
@@ -61296,6 +61760,22 @@
    "en": "Wang Fang demonstrated to the new clerk how to take payment with the barcode scanner.",
    "ko": "왕팡은 새로 온 점원에게 바코드 스캐너로 계산하는 법을 보여 줬어요.",
    "blank": "示范",
+   "src": "made"
+  }
+ ],
+ "w|礼仪": [
+  {
+   "text": "开庭前，书记员提醒旁听者遵守法庭礼仪。",
+   "en": "Before the hearing opened, the clerk reminded the audience to follow courtroom etiquette.",
+   "ko": "개정 전에 서기는 방청객들에게 법정 예절을 지키라고 당부했어요.",
+   "blank": "礼仪",
+   "src": "made"
+  },
+  {
+   "text": "为了见海外客户，小雪专门学了商务礼仪。",
+   "en": "To meet overseas clients, Xiaoxue took time to learn business etiquette.",
+   "ko": "해외 고객을 만나려고 샤오쉐는 비즈니스 예절을 따로 배웠어요.",
+   "blank": "礼仪",
    "src": "made"
   }
  ],
@@ -68415,6 +68895,22 @@
    "src": "made"
   }
  ],
+ "w|航母": [
+  {
+   "text": "被告是一名退伍军人，曾在航母上服役多年。",
+   "en": "The defendant is a veteran who served on an aircraft carrier for many years.",
+   "ko": "피고는 퇴역 군인으로 항공모함에서 여러 해 복무했어요.",
+   "blank": "航母",
+   "src": "made"
+  },
+  {
+   "text": "这款游戏的最后一关是一艘巨大的航母。",
+   "en": "The final level of this game takes place on a huge aircraft carrier.",
+   "ko": "이 게임의 마지막 스테이지는 거대한 항공모함이에요.",
+   "blank": "航母",
+   "src": "made"
+  }
+ ],
  "w|航海": [
   {
    "text": "王刚在候机时读一本关于古代航海的书。",
@@ -72751,6 +73247,22 @@
    "blank": "说不定"
   }
  ],
+ "w|说了算": [
+  {
+   "text": "律师可以据理力争，但最后还是法官说了算。",
+   "en": "Lawyers can argue their case, but in the end it's the judge who has the final say.",
+   "ko": "변호사가 이치를 따져 다툴 수는 있어도 결국 결정은 판사가 해요.",
+   "blank": "说了算",
+   "src": "made"
+  },
+  {
+   "text": "产品界面怎么设计，最后是小雪说了算。",
+   "en": "When it comes to the product's interface design, Xiaoxue has the final say.",
+   "ko": "제품 화면을 어떻게 디자인할지는 결국 샤오쉐가 정해요.",
+   "blank": "说了算",
+   "src": "made"
+  }
+ ],
  "w|说实话": [
   {
    "text": "说实话，我不知道。",
@@ -74143,6 +74655,22 @@
    "src": "made"
   }
  ],
+ "w|资讯": [
+  {
+   "text": "被告利用网站发布虚假资讯牟利，被提起公诉。",
+   "en": "The defendant was prosecuted for profiting by posting false information on a website.",
+   "ko": "피고는 웹사이트에 거짓 정보를 올려 돈을 벌다가 기소됐어요.",
+   "blank": "资讯",
+   "src": "made"
+  },
+  {
+   "text": "小雪的第一个产品是一款本地生活资讯应用。",
+   "en": "Xiaoxue's first product was a local lifestyle information app.",
+   "ko": "샤오쉐의 첫 제품은 동네 생활 정보 앱이었어요.",
+   "blank": "资讯",
+   "src": "made"
+  }
+ ],
  "w|资金": [
   {
    "text": "图书馆因为资金不够，今年没能买多少新书。",
@@ -75267,6 +75795,22 @@
    "blank": "踩"
   }
  ],
+ "w|踪迹": [
+  {
+   "text": "监控里找不到被告当晚出门的任何踪迹。",
+   "en": "The surveillance footage showed no trace of the defendant going out that night.",
+   "ko": "CCTV에서는 피고가 그날 밤 외출한 흔적을 전혀 찾을 수 없었어요.",
+   "blank": "踪迹",
+   "src": "made"
+  },
+  {
+   "text": "黑客入侵后几乎没有留下任何踪迹。",
+   "en": "The hacker left almost no trace after the break-in.",
+   "ko": "해커는 침입한 뒤 흔적을 거의 남기지 않았어요.",
+   "blank": "踪迹",
+   "src": "made"
+  }
+ ],
  "w|蹲": [
   {
    "text": "为了拍到好照片，摄影记者在雨里蹲了两个小时。",
@@ -75898,6 +76442,22 @@
    "en": "This road is relatively short.",
    "ko": "이 길이 비교적 가까워요.",
    "blank": "较",
+   "src": "made"
+  }
+ ],
+ "w|较量": [
+  {
+   "text": "这场庭审其实是两位资深律师之间的较量。",
+   "en": "This trial was really a contest between two veteran lawyers.",
+   "ko": "이번 재판은 사실상 노련한 변호사 두 사람의 대결이었어요.",
+   "blank": "较量",
+   "src": "made"
+  },
+  {
+   "text": "小雪的小公司正和几家大厂在同一个市场较量。",
+   "en": "Xiaoxue's small company is competing with several big firms in the same market.",
+   "ko": "샤오쉐의 작은 회사는 대기업 몇 곳과 같은 시장에서 겨루고 있어요.",
+   "blank": "较量",
    "src": "made"
   }
  ],
@@ -76957,6 +77517,22 @@
    "src": "made"
   }
  ],
+ "w|进球": [
+  {
+   "text": "这起官司起源于一场业余足球赛，原告进球后被对方球员打伤。",
+   "en": "This lawsuit started at an amateur football match, where the plaintiff was injured by an opposing player after scoring.",
+   "ko": "이 소송은 아마추어 축구 경기에서 시작됐는데, 원고가 골을 넣은 뒤 상대 선수에게 맞아 다쳤어요.",
+   "blank": "进球",
+   "src": "made"
+  },
+  {
+   "text": "公司周末踢友谊赛，小雪意外进球，全队都欢呼起来。",
+   "en": "At the company's weekend friendly match, Xiaoxue unexpectedly scored, and the whole team cheered.",
+   "ko": "회사 주말 친선 경기에서 샤오쉐가 뜻밖에 골을 넣자 팀 전체가 환호했어요.",
+   "blank": "进球",
+   "src": "made"
+  }
+ ],
  "w|进程": [
   {
    "text": "新的证据出现以后，整个审判的进程都放慢了。",
@@ -77200,6 +77776,22 @@
    "en": "Days of heavy rain forced the village school to close for three days.",
    "ko": "계속된 폭우 때문에 마을 초등학교가 사흘 동안 휴교했어요.",
    "blank": "迫使",
+   "src": "made"
+  }
+ ],
+ "w|迫害": [
+  {
+   "text": "原告指控前雇主因她举报问题而对她打击迫害。",
+   "en": "The plaintiff accused her former employer of persecuting her for reporting problems.",
+   "ko": "원고는 전 고용주가 자기의 내부 고발을 이유로 탄압했다고 고소했어요.",
+   "blank": "迫害",
+   "src": "made"
+  },
+  {
+   "text": "游戏剧情改编自一段历史，讲一位受迫害的学者逃往海外。",
+   "en": "The game's story is adapted from history and tells of a persecuted scholar fleeing abroad.",
+   "ko": "게임 줄거리는 역사를 각색한 것으로, 박해받던 학자가 해외로 도망치는 이야기예요.",
+   "blank": "迫害",
    "src": "made"
   }
  ],
@@ -77986,6 +78578,22 @@
    "en": "The last stretch leading to the finish was lined with spectators on both sides.",
    "ko": "결승점으로 이어지는 마지막 구간 양쪽에 관중이 가득 서 있었어요.",
    "blank": "通往",
+   "src": "made"
+  }
+ ],
+ "w|通报": [
+  {
+   "text": "法院发布通报，公布了这起案件的审理结果。",
+   "en": "The court issued a notice announcing the outcome of the trial.",
+   "ko": "법원은 공보를 내 이 사건의 재판 결과를 발표했어요.",
+   "blank": "通报",
+   "src": "made"
+  },
+  {
+   "text": "服务器故障以后，公司发了一份情况通报向用户道歉。",
+   "en": "After the server outage, the company issued a status report apologizing to users.",
+   "ko": "서버 장애 뒤 회사는 상황 보고를 내고 사용자들에게 사과했어요.",
+   "blank": "通报",
    "src": "made"
   }
  ],
@@ -79865,6 +80473,22 @@
    "src": "made"
   }
  ],
+ "w|铃声": [
+  {
+   "text": "庭审中突然响起手机铃声，法官当即提出警告。",
+   "en": "A phone ringtone suddenly went off during the trial, and the judge immediately issued a warning.",
+   "ko": "재판 도중 갑자기 휴대폰 벨소리가 울리자 판사가 바로 경고했어요.",
+   "blank": "铃声",
+   "src": "made"
+  },
+  {
+   "text": "小雪的手机铃声就是公司产品的提示音。",
+   "en": "Xiaoxue's phone ringtone is the alert sound from her company's product.",
+   "ko": "샤오쉐의 휴대폰 벨소리는 바로 회사 제품의 알림음이에요.",
+   "blank": "铃声",
+   "src": "made"
+  }
+ ],
  "w|铜": [
   {
    "text": "陈杰在旧船上找到一个铜铃，已经发绿了。",
@@ -81607,6 +82231,22 @@
    "en": "Focus your strength.",
    "ko": "힘을 모아야 해.",
    "blank": "集中"
+  }
+ ],
+ "w|集中营": [
+  {
+   "text": "陈杰读过一本书，讲的是战后对集中营看守的审判。",
+   "en": "Chen Jie read a book about the postwar trials of concentration camp guards.",
+   "ko": "천제는 전쟁 뒤 강제 수용소 간수들을 재판한 이야기를 다룬 책을 읽었어요.",
+   "blank": "集中营",
+   "src": "made"
+  },
+  {
+   "text": "团队为一家纪念馆开发导览软件，介绍集中营的历史。",
+   "en": "The team developed guide software for a memorial museum that explains the history of the concentration camps.",
+   "ko": "팀은 한 기념관을 위해 강제 수용소의 역사를 소개하는 안내 소프트웨어를 만들었어요.",
+   "blank": "集中营",
+   "src": "made"
   }
  ],
  "w|集会": [

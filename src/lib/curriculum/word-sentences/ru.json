@@ -2805,6 +2805,22 @@
    "src": "tatoeba:5926029/marafon en:3619746/CK"
   }
  ],
+ "w|бессильный": [
+  {
+   "text": "Сергей чувствовал себя бессильным, когда в час пик сломалась плита.",
+   "en": "Sergey felt powerless when the cooker broke down at rush hour.",
+   "ko": "붐비는 시간에 가스레인지가 고장 나자 세르게이는 어쩔 도리가 없다고 느꼈어요.",
+   "blank": "бессильным",
+   "src": "made"
+  },
+  {
+   "text": "Перед летней грозой Мария чувствует себя совсем бессильной.",
+   "en": "Before a summer thunderstorm Maria feels completely drained.",
+   "ko": "여름 뇌우가 오기 전이면 마리아는 기운이 하나도 없어요.",
+   "blank": "бессильной",
+   "src": "made"
+  }
+ ],
  "w|бессмысленный": [
   {
    "text": "Иван решил прекратить бессмысленный спор с одноклассником.",
@@ -3118,6 +3134,22 @@
    "en": "When the shoot ended early, Elena called the free evening a blessing.",
    "ko": "촬영이 일찍 끝나자 옐레나는 자유로운 저녁이 축복 같다고 했어요.",
    "blank": "благодатью",
+   "src": "made"
+  }
+ ],
+ "w|благополучно": [
+  {
+   "text": "Ресторан Сергея благополучно пережил свой первый трудный год.",
+   "en": "Sergey's restaurant safely got through its first difficult year.",
+   "ko": "세르게이의 식당은 힘든 첫해를 무사히 넘겼어요.",
+   "blank": "благополучно",
+   "src": "made"
+  },
+  {
+   "text": "Розы у Марии благополучно перезимовали под укрытием.",
+   "en": "Maria's roses survived the winter safely under cover.",
+   "ko": "마리아의 장미는 덮개 아래서 겨울을 무사히 났어요.",
+   "blank": "благополучно",
    "src": "made"
   }
  ],
@@ -4852,6 +4884,22 @@
    "en": "When the air conditioning broke, a revolt almost broke out in the carriage, Irina recalls.",
    "ko": "에어컨이 고장 나자 객차에서 폭동이 날 뻔했다고 이리나가 떠올려요.",
    "blank": "бунт",
+   "src": "made"
+  }
+ ],
+ "w|бурбон": [
+  {
+   "text": "Сергей держит в баре бутылку старого бурбона для постоянных гостей.",
+   "en": "Sergey keeps a bottle of aged bourbon behind the bar for regulars.",
+   "ko": "세르게이는 단골손님을 위해 바에 오래 숙성된 버번 한 병을 둬요.",
+   "blank": "бурбона",
+   "src": "made"
+  },
+  {
+   "text": "Мария впервые попробовала бурбон зимним вечером у камина.",
+   "en": "Maria first tried bourbon on a winter evening by the fireplace.",
+   "ko": "마리아는 겨울 저녁 벽난로 앞에서 처음으로 버번을 마셔 봤어요.",
+   "blank": "бурбон",
    "src": "made"
   }
  ],
@@ -8011,6 +8059,22 @@
    "src": "made"
   }
  ],
+ "w|возбудить": [
+  {
+   "text": "Сергей уверен, что запах свежего хлеба способен возбудить аппетит у любого гостя.",
+   "en": "Sergey is sure the smell of fresh bread can whet any guest's appetite.",
+   "ko": "세르게이는 갓 구운 빵 냄새가 어떤 손님의 식욕이든 돋운다고 믿어요.",
+   "blank": "возбудить",
+   "src": "made"
+  },
+  {
+   "text": "Осенняя выставка цветов возбудила у Марии интерес к садоводству.",
+   "en": "The autumn flower show sparked Maria's interest in gardening.",
+   "ko": "가을 꽃 전시회를 보고 마리아는 정원 가꾸기에 관심이 생겼어요.",
+   "blank": "возбудила",
+   "src": "made"
+  }
+ ],
  "w|возбуждать": [
   {
    "text": "Такие заголовки только возбуждают ненужные споры, предупредил Сергея редактор.",
@@ -9849,6 +9913,22 @@
    "en": "You seem to agree.",
    "ko": "너는 동의하는 것 같아.",
    "blank": "вроде"
+  }
+ ],
+ "w|вручить": [
+  {
+   "text": "Сергей вручил маленькой гостье подарок на день рождения.",
+   "en": "Sergey handed a little guest a birthday present.",
+   "ko": "세르게이는 꼬마 손님에게 생일 선물을 건넸어요.",
+   "blank": "вручил",
+   "src": "made"
+  },
+  {
+   "text": "Весной Марии вручили грамоту за лучший цветник во дворе.",
+   "en": "In spring Maria was presented with a certificate for the best flower bed in the courtyard.",
+   "ko": "봄에 마리아는 마당에서 가장 예쁜 꽃밭을 가꿨다고 상장을 받았어요.",
+   "blank": "вручили",
+   "src": "made"
   }
  ],
  "w|вручную": [
@@ -12325,6 +12405,22 @@
    "src": "tatoeba:13308776/frpzzd en:12303604/CK"
   }
  ],
+ "w|газировка": [
+  {
+   "text": "Сергей убрал из детского меню сладкую газировку.",
+   "en": "Sergey took sugary fizzy drinks off the children's menu.",
+   "ko": "세르게이는 어린이 메뉴에서 단 탄산음료를 뺐어요.",
+   "blank": "газировку",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Мария отказалась от холодной газировки и перешла на чай.",
+   "en": "In autumn Maria gave up cold fizzy drinks and switched to tea.",
+   "ko": "가을이 되자 마리아는 차가운 탄산음료를 끊고 차로 바꿨어요.",
+   "blank": "газировки",
+   "src": "made"
+  }
+ ],
  "w|галактика": [
   {
    "text": "Ночью над фермой Андрея видна светлая полоса Млечного Пути — наша галактика.",
@@ -12386,6 +12482,22 @@
    "en": "This tie doesn't go with the shirt.",
    "ko": "이 넥타이는 셔츠랑 안 어울려요.",
    "blank": "галстук",
+   "src": "made"
+  }
+ ],
+ "w|гамбургер": [
+  {
+   "text": "Сын Сергея всегда заказывает самый большой гамбургер в меню.",
+   "en": "Sergey's son always orders the biggest burger on the menu.",
+   "ko": "세르게이의 아들은 늘 메뉴에서 제일 큰 햄버거를 시켜요.",
+   "blank": "гамбургер",
+   "src": "made"
+  },
+  {
+   "text": "Летом Мария с детьми ела гамбургеры прямо на пляже.",
+   "en": "In summer Maria and the kids ate burgers right on the beach.",
+   "ko": "여름에 마리아는 아이들과 바닷가에서 햄버거를 먹었어요.",
+   "blank": "гамбургеры",
    "src": "made"
   }
  ],
@@ -15767,6 +15879,22 @@
    "src": "made"
   }
  ],
+ "w|демонстрировать": [
+  {
+   "text": "Сергей любит демонстрировать детям, как подбрасывать блины на сковороде.",
+   "en": "Sergey loves showing children how to flip pancakes in the pan.",
+   "ko": "세르게이는 아이들에게 프라이팬으로 팬케이크 뒤집는 법을 보여 주는 걸 좋아해요.",
+   "blank": "демонстрировать",
+   "src": "made"
+  },
+  {
+   "text": "Мария любит демонстрировать гостям свой цветущий весенний сад.",
+   "en": "Maria loves showing guests her blooming spring garden.",
+   "ko": "마리아는 꽃이 핀 봄 정원을 손님들에게 자랑하는 걸 좋아해요.",
+   "blank": "демонстрировать",
+   "src": "made"
+  }
+ ],
  "w|день": [
   {
    "text": "Добрый день!",
@@ -17663,6 +17791,22 @@
    "src": "made"
   }
  ],
+ "w|досадный": [
+  {
+   "text": "Сергей извинился перед гостями за досадную ошибку в счёте.",
+   "en": "Sergey apologised to the guests for an annoying mistake on the bill.",
+   "ko": "세르게이는 계산서에 생긴 언짢은 실수를 손님들에게 사과했어요.",
+   "blank": "досадную",
+   "src": "made"
+  },
+  {
+   "text": "Майские заморозки стали досадным сюрпризом для Марии.",
+   "en": "The May frosts were an annoying surprise for Maria.",
+   "ko": "오월에 내린 서리는 마리아에게 뜻밖의 속상한 일이었어요.",
+   "blank": "досадным",
+   "src": "made"
+  }
+ ],
  "w|доска": [
   {
    "text": "Андрей вспоминает, как друг рисовал карикатуры на школьной доске.",
@@ -18463,6 +18607,22 @@
    "blank": "Душа"
   }
  ],
+ "w|душить": [
+  {
+   "text": "Сергея душил смех, когда малыш заказал «суп без супа».",
+   "en": "Sergey was choking with laughter when a toddler ordered \"soup without the soup\".",
+   "ko": "꼬마가 '수프 없는 수프'를 주문하자 세르게이는 웃음을 참느라 혼났어요.",
+   "blank": "душил",
+   "src": "made"
+  },
+  {
+   "text": "Летняя жара душит Марию, и на выходные она уезжает за город.",
+   "en": "The summer heat stifles Maria, so at weekends she leaves the city.",
+   "ko": "여름 더위에 숨이 막혀서 마리아는 주말마다 교외로 떠나요.",
+   "blank": "душит",
+   "src": "made"
+  }
+ ],
  "w|дуэль": [
   {
    "text": "В ожидании Сергей читал роман о дуэли двух офицеров.",
@@ -19103,6 +19263,22 @@
    "src": "made"
   }
  ],
+ "w|жареный": [
+  {
+   "text": "Сергей подаёт к рыбе жареный картофель с укропом.",
+   "en": "Sergey serves fried potatoes with dill alongside the fish.",
+   "ko": "세르게이는 생선 요리에 딜을 뿌린 감자구이를 곁들여 내요.",
+   "blank": "жареный",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Мария обожает жареные каштаны.",
+   "en": "In autumn Maria loves roasted chestnuts.",
+   "ko": "가을이면 마리아는 군밤을 무척 좋아해요.",
+   "blank": "жареные",
+   "src": "made"
+  }
+ ],
  "w|жаркий": [
   {
    "text": "Дождевая вода испаряется в жаркий день.",
@@ -19241,6 +19417,22 @@
    "ko": "이보다 좋을 순 없었어요.",
    "blank": "желать",
    "src": "tatoeba:6885863/marafon en:6250381/CK"
+  }
+ ],
+ "w|желе": [
+  {
+   "text": "Для малышей Сергей делает разноцветное желе.",
+   "en": "For the little ones Sergey makes multicoloured jelly.",
+   "ko": "세르게이는 어린아이들을 위해 알록달록한 젤리를 만들어요.",
+   "blank": "желе",
+   "src": "made"
+  },
+  {
+   "text": "Летом Мария делает желе из свежей клубники.",
+   "en": "In summer Maria makes jelly from fresh strawberries.",
+   "ko": "여름에 마리아는 싱싱한 딸기로 젤리를 만들어요.",
+   "blank": "желе",
+   "src": "made"
   }
  ],
  "w|железный": [
@@ -24003,6 +24195,22 @@
    "src": "tatoeba:5516696/marafon en:2993312/CK"
   }
  ],
+ "w|зерно": [
+  {
+   "text": "Каждое утро Сергей сам мелет кофейные зёрна.",
+   "en": "Every morning Sergey grinds the coffee beans himself.",
+   "ko": "세르게이는 매일 아침 커피콩을 직접 갈아요.",
+   "blank": "зёрна",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Мария каждый день насыпает в кормушку зерно для синиц.",
+   "en": "In winter Maria pours grain into the feeder for the tits every day.",
+   "ko": "겨울이면 마리아는 매일 박새들이 먹을 곡식을 모이통에 부어 줘요.",
+   "blank": "зерно",
+   "src": "made"
+  }
+ ],
  "w|зима": [
   {
    "text": "Сергею нравится, когда зима снежная и морозная.",
@@ -26389,6 +26597,22 @@
    "src": "made"
   }
  ],
+ "w|испечь": [
+  {
+   "text": "Сергей обещал испечь торт к юбилею постоянной гостьи.",
+   "en": "Sergey promised to bake a cake for a regular guest's milestone birthday.",
+   "ko": "세르게이는 단골손님의 생신 잔치에 케이크를 구워 주기로 했어요.",
+   "blank": "испечь",
+   "src": "made"
+  },
+  {
+   "text": "К первому снегу Мария решила испечь пирог с брусникой.",
+   "en": "For the first snow Maria decided to bake a lingonberry pie.",
+   "ko": "첫눈이 오는 날에 맞춰 마리아는 월귤 파이를 굽기로 했어요.",
+   "blank": "испечь",
+   "src": "made"
+  }
+ ],
  "w|исповедь": [
   {
    "text": "Дмитрий посоветовал читательнице роман, построенный как исповедь старого врача.",
@@ -27558,6 +27782,22 @@
    "en": "In the morning there was a real carnival of butterflies in the clearing, and Olga couldn't take her eyes off it.",
    "ko": "아침에 풀밭에서 나비들이 축제라도 벌이듯 날아서 올가는 눈을 뗄 수 없었어요.",
    "blank": "карнавал",
+   "src": "made"
+  }
+ ],
+ "w|карри": [
+  {
+   "text": "Сергей добавил в меню мягкое карри с курицей.",
+   "en": "Sergey added a mild chicken curry to the menu.",
+   "ko": "세르게이는 메뉴에 순한 치킨 카레를 넣었어요.",
+   "blank": "карри",
+   "src": "made"
+  },
+  {
+   "text": "В холодные вечера Мария варит острое карри.",
+   "en": "On cold evenings Maria makes a spicy curry.",
+   "ko": "추운 저녁이면 마리아는 매운 카레를 끓여요.",
+   "blank": "карри",
    "src": "made"
   }
  ],
@@ -31965,6 +32205,22 @@
    "src": "made"
   }
  ],
+ "w|кукуруза": [
+  {
+   "text": "Летом Сергей жарит кукурузу на гриле прямо на веранде.",
+   "en": "In summer Sergey grills corn right on the veranda.",
+   "ko": "여름이면 세르게이는 테라스에서 바로 옥수수를 구워요.",
+   "blank": "кукурузу",
+   "src": "made"
+  },
+  {
+   "text": "В конце лета у Марии на даче поспела кукуруза.",
+   "en": "At the end of summer the corn ripened at Maria's dacha.",
+   "ko": "늦여름에 마리아의 다차에서 옥수수가 익었어요.",
+   "blank": "кукуруза",
+   "src": "made"
+  }
+ ],
  "w|кулак": [
   {
    "text": "От страха Никита так сжал кулак, что побелели пальцы.",
@@ -32104,6 +32360,22 @@
    "en": "Tatyana is glad it was running that helped her give up smoking for good.",
    "ko": "타티야나는 달리기 덕분에 담배를 완전히 끊을 수 있어서 기뻐해요.",
    "blank": "курении",
+   "src": "made"
+  }
+ ],
+ "w|куриный": [
+  {
+   "text": "Самое популярное блюдо у Сергея — куриный суп с лапшой.",
+   "en": "The most popular dish at Sergey's is chicken noodle soup.",
+   "ko": "세르게이네 식당에서 제일 인기 있는 메뉴는 닭고기 국수예요.",
+   "blank": "куриный",
+   "src": "made"
+  },
+  {
+   "text": "Когда приходят холода, Мария варит куриный бульон.",
+   "en": "When the cold weather comes, Maria makes chicken broth.",
+   "ko": "추워지면 마리아는 닭고기 육수를 끓여요.",
+   "blank": "куриный",
    "src": "made"
   }
  ],
@@ -32675,6 +32947,22 @@
    "src": "tatoeba:10147258/marafon en:10147170/ddnktr"
   }
  ],
+ "w|леденец": [
+  {
+   "text": "На кассе у Сергея стоит банка с леденцами для детей.",
+   "en": "At Sergey's till there's a jar of lollipops for the children.",
+   "ko": "세르게이네 계산대에는 아이들에게 줄 막대사탕 병이 놓여 있어요.",
+   "blank": "леденцами",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Мария носит в кармане леденец от кашля.",
+   "en": "In winter Maria carries a cough drop in her pocket.",
+   "ko": "겨울이면 마리아는 주머니에 기침 사탕을 넣고 다녀요.",
+   "blank": "леденец",
+   "src": "made"
+  }
+ ],
  "w|леди": [
   {
    "text": "Леди ждёт внизу.",
@@ -33082,6 +33370,22 @@
    "en": "Irina added a slice of lemon to the tea from her thermos.",
    "ko": "이리나는 보온병 차에 레몬 한 조각을 넣었어요.",
    "blank": "лимона",
+   "src": "made"
+  }
+ ],
+ "w|лимонад": [
+  {
+   "text": "Сергей сам готовит для гостей домашний лимонад с мятой.",
+   "en": "Sergey makes homemade mint lemonade for the guests himself.",
+   "ko": "세르게이는 손님들에게 낼 민트 레모네이드를 직접 만들어요.",
+   "blank": "лимонад",
+   "src": "made"
+  },
+  {
+   "text": "В жару у Марии в холодильнике всегда стоит кувшин лимонада.",
+   "en": "In hot weather Maria always has a jug of lemonade in the fridge.",
+   "ko": "더울 때면 마리아의 냉장고에는 늘 레모네이드 한 주전자가 있어요.",
+   "blank": "лимонада",
    "src": "made"
   }
  ],
@@ -37283,6 +37587,22 @@
    "src": "made"
   }
  ],
+ "w|мудро": [
+  {
+   "text": "Сергей мудро решил не спорить с капризным гостем.",
+   "en": "Sergey wisely decided not to argue with a fussy guest.",
+   "ko": "세르게이는 까다로운 손님과 다투지 않기로 현명하게 마음먹었어요.",
+   "blank": "мудро",
+   "src": "made"
+  },
+  {
+   "text": "Мария мудро решила не убирать тёплые вещи до конца мая.",
+   "en": "Maria wisely decided not to put away her warm clothes until the end of May.",
+   "ko": "마리아는 오월 말까지 두꺼운 옷을 정리하지 않기로 현명하게 마음먹었어요.",
+   "blank": "мудро",
+   "src": "made"
+  }
+ ],
  "w|мудрость": [
   {
    "text": "Мама сказала Андрею, что первым мириться — это мудрость, а не слабость.",
@@ -37750,6 +38070,22 @@
    "en": "Before winter the butcher Natalya knows advises her to stock up on meat.",
    "ko": "겨울이 오기 전에 단골 정육점 주인은 나탈리야에게 고기를 쟁여 두라고 해요.",
    "blank": "мясник",
+   "src": "made"
+  }
+ ],
+ "w|мясной": [
+  {
+   "text": "Каждую пятницу Сергей готовит большой мясной пирог.",
+   "en": "Every Friday Sergey makes a big meat pie.",
+   "ko": "금요일마다 세르게이는 커다란 고기 파이를 만들어요.",
+   "blank": "мясной",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Марии хочется сытного мясного рагу.",
+   "en": "In winter Maria craves a hearty meat stew.",
+   "ko": "겨울이면 마리아는 든든한 고기 스튜가 먹고 싶어져요.",
+   "blank": "мясного",
    "src": "made"
   }
  ],
@@ -45961,6 +46297,22 @@
    "src": "made"
   }
  ],
+ "w|омлет": [
+  {
+   "text": "По утрам Сергей готовит пышный омлет с сыром.",
+   "en": "In the mornings Sergey makes a fluffy cheese omelette.",
+   "ko": "아침마다 세르게이는 폭신한 치즈 오믈렛을 만들어요.",
+   "blank": "омлет",
+   "src": "made"
+  },
+  {
+   "text": "Весенним утром Мария завтракает омлетом с зелёным луком.",
+   "en": "On spring mornings Maria has an omelette with spring onions for breakfast.",
+   "ko": "봄날 아침이면 마리아는 쪽파를 넣은 오믈렛으로 아침을 먹어요.",
+   "blank": "омлетом",
+   "src": "made"
+  }
+ ],
  "w|он": [
   {
    "text": "Он уже спит.",
@@ -46794,6 +47146,22 @@
    "en": "Anna took a bag of salted nuts on the plane.",
    "ko": "안나는 짭짤한 견과류 한 봉지를 들고 비행기에 탔어요.",
    "blank": "орехов",
+   "src": "made"
+  }
+ ],
+ "w|орешек": [
+  {
+   "text": "Сергей украшает торт кедровыми орешками.",
+   "en": "Sergey decorates the cake with pine nuts.",
+   "ko": "세르게이는 케이크를 잣으로 장식해요.",
+   "blank": "орешками",
+   "src": "made"
+  },
+  {
+   "text": "В парке белка схватила орешек прямо из рук Марии.",
+   "en": "In the park a squirrel snatched a nut right out of Maria's hand.",
+   "ko": "공원에서 다람쥐가 마리아의 손에서 견과를 낚아챘어요.",
+   "blank": "орешек",
    "src": "made"
   }
  ],
@@ -51103,6 +51471,22 @@
    "blank": "Первая"
   }
  ],
+ "w|перебивать": [
+  {
+   "text": "Сергей никогда не перебивает гостей, когда они делают заказ.",
+   "en": "Sergey never interrupts guests when they're ordering.",
+   "ko": "세르게이는 손님이 주문할 때 절대 말을 끊지 않아요.",
+   "blank": "перебивает",
+   "src": "made"
+  },
+  {
+   "text": "Мария часто перебивает мужа, когда он начинает жаловаться на зиму.",
+   "en": "Maria often interrupts her husband when he starts complaining about winter.",
+   "ko": "마리아는 남편이 겨울 타령을 시작하면 자주 말을 끊어요.",
+   "blank": "перебивает",
+   "src": "made"
+  }
+ ],
  "w|перебор": [
   {
    "text": "Сергей подумал, что три разных бланка для одной жалобы — это явный перебор.",
@@ -52480,6 +52864,22 @@
    "en": "Before boarding Anna ate a chocolate pastry in the café.",
    "ko": "탑승 전에 안나는 카페에서 초콜릿 케이크를 먹었어요.",
    "blank": "пирожное",
+   "src": "made"
+  }
+ ],
+ "w|пирожок": [
+  {
+   "text": "Бабушка Сергея до сих пор лепит пирожки для ресторана.",
+   "en": "Sergey's grandmother still makes the little pies for the restaurant.",
+   "ko": "세르게이의 할머니는 지금도 식당에 낼 피로시키를 빚어요.",
+   "blank": "пирожки",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Мария печёт пирожки с капустой.",
+   "en": "In autumn Maria bakes little cabbage pies.",
+   "ko": "가을이면 마리아는 양배추 피로시키를 구워요.",
+   "blank": "пирожки",
    "src": "made"
   }
  ],
@@ -53930,6 +54330,22 @@
    "en": "Elena led a dog onto the stage on a short lead.",
    "ko": "엘레나는 짧은 목줄을 맨 개를 무대로 데리고 나왔어요.",
    "blank": "поводке",
+   "src": "made"
+  }
+ ],
+ "w|поворачиваться": [
+  {
+   "text": "На крошечной кухне Сергею трудно даже поворачиваться.",
+   "en": "In the tiny kitchen it's hard for Sergey even to turn around.",
+   "ko": "좁디좁은 주방에서 세르게이는 몸을 돌리기도 힘들어요.",
+   "blank": "поворачиваться",
+   "src": "made"
+  },
+  {
+   "text": "Мария заметила, что подсолнухи поворачиваются вслед за солнцем.",
+   "en": "Maria noticed that the sunflowers turn to follow the sun.",
+   "ko": "마리아는 해바라기가 해를 따라 고개를 돌린다는 걸 알아챘어요.",
+   "blank": "поворачиваются",
    "src": "made"
   }
  ],
@@ -56523,6 +56939,22 @@
    "ko": "제일 빠른 길을 찾아봐 주실 수 있어요?",
    "blank": "поискать",
    "src": "tatoeba:7743056/fizdyuk en:6546371/OsoHombre"
+  }
+ ],
+ "w|поистине": [
+  {
+   "text": "Свадебный торт у Сергея получился поистине огромным.",
+   "en": "The wedding cake Sergey made turned out truly enormous.",
+   "ko": "세르게이가 만든 웨딩 케이크는 정말 어마어마하게 컸어요.",
+   "blank": "поистине",
+   "src": "made"
+  },
+  {
+   "text": "В этом году осень в саду у Марии поистине золотая.",
+   "en": "This year autumn in Maria's garden is truly golden.",
+   "ko": "올해 마리아네 정원의 가을은 정말 황금빛이에요.",
+   "blank": "поистине",
+   "src": "made"
   }
  ],
  "w|поймать": [
@@ -61703,6 +62135,22 @@
    "src": "tatoeba:2177443/Tretiz en:680489/Source_VOA"
   }
  ],
+ "w|предсказать": [
+  {
+   "text": "Сергей никогда не может предсказать, сколько гостей придёт в воскресенье.",
+   "en": "Sergey can never predict how many guests will come on Sunday.",
+   "ko": "세르게이는 일요일에 손님이 몇 명 올지 도무지 예측할 수 없어요.",
+   "blank": "предсказать",
+   "src": "made"
+  },
+  {
+   "text": "Мария пытается предсказать погоду по облакам.",
+   "en": "Maria tries to predict the weather from the clouds.",
+   "ko": "마리아는 구름을 보고 날씨를 맞혀 보려고 해요.",
+   "blank": "предсказать",
+   "src": "made"
+  }
+ ],
  "w|представитель": [
   {
    "text": "На собрании жильцов Андрея выбрали представителем дома.",
@@ -63039,6 +63487,22 @@
    "ko": "우리는 최악에 대비해야 해요.",
    "blank": "приготовиться",
    "src": "tatoeba:3384266/odexed en:1096331/CK"
+  }
+ ],
+ "w|приготовление": [
+  {
+   "text": "У Сергея приготовление борща занимает почти полдня.",
+   "en": "For Sergey, making borscht takes almost half a day.",
+   "ko": "세르게이가 보르시를 만드는 데는 거의 반나절이 걸려요.",
+   "blank": "приготовление",
+   "src": "made"
+  },
+  {
+   "text": "Мария считает приготовление варенья главным делом августа.",
+   "en": "Maria considers making jam the main task of August.",
+   "ko": "마리아는 잼 만들기를 팔월의 가장 중요한 일로 여겨요.",
+   "blank": "приготовление",
+   "src": "made"
   }
  ],
  "w|придавать": [
@@ -65676,6 +66140,22 @@
    "en": "When Tatyana's name was called out, the waiter brought out a cake with candles.",
    "ko": "타티야나의 이름이 불리자 웨이터가 촛불 꽂은 케이크를 들고 나왔어요.",
    "blank": "прозвучало",
+   "src": "made"
+  }
+ ],
+ "w|проигнорировать": [
+  {
+   "text": "Сергей не смог проигнорировать отзыв о холодном супе.",
+   "en": "Sergey couldn't ignore the review about the cold soup.",
+   "ko": "세르게이는 수프가 식었다는 후기를 그냥 넘길 수 없었어요.",
+   "blank": "проигнорировать",
+   "src": "made"
+  },
+  {
+   "text": "Мария проигнорировала прогноз и попала под осенний ливень.",
+   "en": "Maria ignored the forecast and got caught in an autumn downpour.",
+   "ko": "마리아는 일기 예보를 무시했다가 가을 소나기를 맞았어요.",
+   "blank": "проигнорировала",
    "src": "made"
   }
  ],
@@ -68729,6 +69209,22 @@
    "src": "made"
   }
  ],
+ "w|раздавать": [
+  {
+   "text": "Пока дети ждут еду, Сергей начинает раздавать им раскраски.",
+   "en": "While the children wait for their food, Sergey starts handing out colouring books.",
+   "ko": "아이들이 음식을 기다리는 동안 세르게이는 색칠 공부 책을 나눠 줘요.",
+   "blank": "раздавать",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Мария раздаёт соседям лишние кабачки.",
+   "en": "In autumn Maria gives away her extra courgettes to the neighbours.",
+   "ko": "가을이면 마리아는 남는 애호박을 이웃들에게 나눠 줘요.",
+   "blank": "раздаёт",
+   "src": "made"
+  }
+ ],
  "w|раздевалка": [
   {
    "text": "Никита оставил куртку в раздевалке на первом этаже клиники.",
@@ -70463,6 +70959,22 @@
    "src": "made"
   }
  ],
+ "w|расширение": [
+  {
+   "text": "Сергей задумал расширение зала, потому что мест уже не хватает.",
+   "en": "Sergey is planning to expand the dining room because there aren't enough seats any more.",
+   "ko": "세르게이는 자리가 모자라서 홀을 넓힐 계획이에요.",
+   "blank": "расширение",
+   "src": "made"
+  },
+  {
+   "text": "Мария читала, что в сильную жару происходит расширение железнодорожных рельсов.",
+   "en": "Maria read that railway rails expand in extreme heat.",
+   "ko": "마리아는 심한 더위에 철도 레일이 늘어난다는 글을 읽었어요.",
+   "blank": "расширение",
+   "src": "made"
+  }
+ ],
  "w|расширить": [
   {
    "text": "Андрей мечтает расширить меню вегетарианскими блюдами.",
@@ -71158,6 +71670,22 @@
    "en": "The head of the department advised Elena not to take work home.",
    "ko": "부서장은 옐레나에게 일을 집에 가져가지 말라고 권했어요.",
    "blank": "рекомендовал",
+   "src": "made"
+  }
+ ],
+ "w|реконструкция": [
+  {
+   "text": "После реконструкции кухня у Сергея стала вдвое просторнее.",
+   "en": "After the renovation Sergey's kitchen became twice as spacious.",
+   "ko": "개조 공사 뒤 세르게이네 주방은 두 배로 넓어졌어요.",
+   "blank": "реконструкции",
+   "src": "made"
+  },
+  {
+   "text": "Весной в парке у дома Марии началась реконструкция фонтана.",
+   "en": "In spring the reconstruction of the fountain began in the park near Maria's house.",
+   "ko": "봄에 마리아네 집 근처 공원에서 분수 개조 공사가 시작됐어요.",
+   "blank": "реконструкция",
    "src": "made"
   }
  ],
@@ -72140,6 +72668,22 @@
    "en": "She got the lead role in the film.",
    "ko": "그녀가 그 영화의 주연을 맡았어요.",
    "blank": "роль",
+   "src": "made"
+  }
+ ],
+ "w|ром": [
+  {
+   "text": "Для взрослых гостей Сергей добавляет в десерт капельку рома.",
+   "en": "For adult guests Sergey adds a drop of rum to the dessert.",
+   "ko": "세르게이는 어른 손님 디저트에는 럼을 한 방울 넣어요.",
+   "blank": "рома",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Мария добавляет в горячий чай немного рома.",
+   "en": "In winter Maria adds a little rum to her hot tea.",
+   "ko": "겨울이면 마리아는 뜨거운 차에 럼을 조금 넣어요.",
+   "blank": "рома",
    "src": "made"
   }
  ],
@@ -75068,6 +75612,22 @@
    "en": "A siren blared loudly at the crossing, and Elena woke up.",
    "ko": "건널목에서 사이렌이 크게 울려서 옐레나가 잠에서 깼어요.",
    "blank": "сирена",
+   "src": "made"
+  }
+ ],
+ "w|сироп": [
+  {
+   "text": "Сергей щедро поливает блинчики кленовым сиропом.",
+   "en": "Sergey generously drizzles the pancakes with maple syrup.",
+   "ko": "세르게이는 팬케이크에 메이플 시럽을 듬뿍 뿌려요.",
+   "blank": "сиропом",
+   "src": "made"
+  },
+  {
+   "text": "Весной Мария собирает берёзовый сок и варит из него сироп.",
+   "en": "In spring Maria collects birch sap and boils it down into syrup.",
+   "ko": "봄이면 마리아는 자작나무 수액을 받아 시럽을 졸여요.",
+   "blank": "сироп",
    "src": "made"
   }
  ],
@@ -79371,6 +79931,22 @@
    "ko": "허리가 아파서 테니스를 못 쳤어요.",
    "blank": "спина",
    "src": "tatoeba:1508212/Biga en:282465/Eldad"
+  }
+ ],
+ "w|спиртное": [
+  {
+   "text": "Сергей строго следит, чтобы спиртное не продавали подросткам.",
+   "en": "Sergey strictly makes sure alcohol isn't sold to teenagers.",
+   "ko": "세르게이는 십 대에게 술을 팔지 않도록 철저히 신경 써요.",
+   "blank": "спиртное",
+   "src": "made"
+  },
+  {
+   "text": "На зимние праздники Мария почти не пьёт спиртное.",
+   "en": "Over the winter holidays Maria hardly drinks any alcohol.",
+   "ko": "겨울 연휴에 마리아는 술을 거의 안 마셔요.",
+   "blank": "спиртное",
+   "src": "made"
   }
  ],
  "w|список": [
@@ -85899,6 +86475,22 @@
    "src": "made"
   }
  ],
+ "w|тунец": [
+  {
+   "text": "Сергей сделал салат с тунцом фирменным блюдом ресторана.",
+   "en": "Sergey made the tuna salad the restaurant's signature dish.",
+   "ko": "세르게이는 참치 샐러드를 식당 대표 메뉴로 만들었어요.",
+   "blank": "тунцом",
+   "src": "made"
+  },
+  {
+   "text": "Весной Мария покупает на рынке свежего тунца.",
+   "en": "In spring Maria buys fresh tuna at the market.",
+   "ko": "봄이면 마리아는 시장에서 싱싱한 참치를 사요.",
+   "blank": "тунца",
+   "src": "made"
+  }
+ ],
  "w|туннель": [
   {
    "text": "Дорога к отелю, где остановился Сергей, идёт через длинный туннель в скале.",
@@ -87050,6 +87642,22 @@
    "en": "Tatiana decided to treat her compartment neighbours to homemade biscuits.",
    "ko": "타티아나는 같은 칸 사람들에게 집에서 구운 쿠키를 나눠 주기로 했어요.",
    "blank": "угостить",
+   "src": "made"
+  }
+ ],
+ "w|угощать": [
+  {
+   "text": "Сергей любит угощать именинников бесплатным мороженым.",
+   "en": "Sergey likes treating birthday guests to free ice cream.",
+   "ko": "세르게이는 생일인 손님에게 아이스크림을 공짜로 대접하는 걸 좋아해요.",
+   "blank": "угощать",
+   "src": "made"
+  },
+  {
+   "text": "Летом Мария угощает соседей малиной со своего огорода.",
+   "en": "In summer Maria treats her neighbours to raspberries from her garden.",
+   "ko": "여름이면 마리아는 텃밭에서 딴 산딸기를 이웃들에게 나눠 줘요.",
+   "blank": "угощает",
    "src": "made"
   }
  ],
@@ -91715,6 +92323,22 @@
    "blank": "Хорошо"
   }
  ],
+ "w|хот-дог": [
+  {
+   "text": "В выходные дети у Сергея чаще всего просят хот-дог с картошкой.",
+   "en": "At weekends the children at Sergey's most often ask for a hot dog with chips.",
+   "ko": "주말이면 세르게이네 식당에서 아이들이 제일 많이 찾는 건 감자튀김을 곁들인 핫도그예요.",
+   "blank": "хот-дог",
+   "src": "made"
+  },
+  {
+   "text": "На осенней ярмарке Мария купила горячий хот-дог.",
+   "en": "At the autumn fair Maria bought a hot hot dog.",
+   "ko": "가을 장터에서 마리아는 따끈한 핫도그를 샀어요.",
+   "blank": "хот-дог",
+   "src": "made"
+  }
+ ],
  "w|хотеть": [
   {
    "text": "Я хочу чаю.",
@@ -95622,6 +96246,22 @@
    "en": "In the last shot Anna bites into a red apple.",
    "ko": "마지막 장면에서 안나는 빨간 사과를 한 입 베어 물어요.",
    "blank": "яблоко",
+   "src": "made"
+  }
+ ],
+ "w|яблочко": [
+  {
+   "text": "Дочка Сергея помогает нарезать яблочко для детского салата.",
+   "en": "Sergey's daughter helps cut up an apple for the children's salad.",
+   "ko": "세르게이의 딸은 어린이 샐러드에 넣을 사과 써는 걸 도와요.",
+   "blank": "яблочко",
+   "src": "made"
+  },
+  {
+   "text": "В конце сентября Мария сорвала с ветки последнее яблочко.",
+   "en": "At the end of September Maria picked the last little apple from the branch.",
+   "ko": "구월 말에 마리아는 가지에 남은 마지막 사과를 땄어요.",
+   "blank": "яблочко",
    "src": "made"
   }
  ],
