@@ -3759,6 +3759,22 @@
    "blank": "bất cứ"
   }
  ],
+ "w|bất cứ đâu": [
+  {
+   "text": "Với chiếc laptop công ty cấp, Phong có thể làm việc ở bất cứ đâu.",
+   "en": "With the laptop the company provided, Phong can work anywhere.",
+   "ko": "회사가 준 노트북으로 퐁은 어디서든 일할 수 있어요.",
+   "blank": "bất cứ đâu",
+   "src": "made"
+  },
+  {
+   "text": "Đi công tác ở bất cứ đâu, Ngọc cũng mang theo giày chạy.",
+   "en": "Wherever she goes on business trips, Ngọc brings her running shoes.",
+   "ko": "어디로 출장을 가든 응옥은 러닝화를 챙겨요.",
+   "blank": "bất cứ đâu",
+   "src": "made"
+  }
+ ],
  "w|bắt đầu": [
   {
    "text": "Bắt đầu học từ trang năm.",
@@ -3863,6 +3879,22 @@
    "en": "Call me whenever you need.",
    "ko": "필요할 때 언제든 전화해.",
    "blank": "Bất kỳ"
+  }
+ ],
+ "w|bất kỳ đâu": [
+  {
+   "text": "Anh Tuấn nói rằng ở bất kỳ đâu thì người mới cũng cần thời gian để quen việc.",
+   "en": "Tuấn says that wherever you go, newcomers need time to get used to the job.",
+   "ko": "뚜언 씨는 어디서든 신입은 일에 익숙해질 시간이 필요하다고 말해요.",
+   "blank": "bất kỳ đâu",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc nói rằng ở bất kỳ đâu có đường chạy đẹp, cô ấy cũng muốn thử.",
+   "en": "Ngọc says that anywhere with a beautiful running route, she wants to give it a try.",
+   "ko": "응옥은 멋진 코스가 있는 곳이라면 어디든 뛰어 보고 싶다고 해요.",
+   "blank": "bất kỳ đâu",
+   "src": "made"
   }
  ],
  "w|bắt lấy": [
@@ -11453,6 +11485,22 @@
    "blank": "chị"
   }
  ],
+ "w|chỉ bảo": [
+  {
+   "text": "Phong cảm ơn anh Tuấn đã tận tình chỉ bảo từ ngày đầu tiên.",
+   "en": "Phong thanked Tuấn for patiently showing him the ropes from day one.",
+   "ko": "퐁은 첫날부터 친절하게 가르쳐 준 뚜언 씨에게 고마워했어요.",
+   "blank": "chỉ bảo",
+   "src": "made"
+  },
+  {
+   "text": "Các vận động viên lâu năm luôn sẵn lòng chỉ bảo Ngọc cách giữ nhịp thở.",
+   "en": "Veteran runners are always happy to show Ngọc how to keep her breathing steady.",
+   "ko": "오래 뛴 선수들은 언제나 기꺼이 응옥에게 호흡을 유지하는 법을 알려 줘요.",
+   "blank": "chỉ bảo",
+   "src": "made"
+  }
+ ],
  "w|chỉ cần": [
   {
    "text": "Minh viết: chỉ cần cậu trả lời một dòng thôi, mình cũng vui rồi.",
@@ -12252,6 +12300,22 @@
    "en": "Mai decides not to accept ads from any political party.",
    "ko": "마이는 어떤 정당의 광고도 받지 않기로 해요.",
    "blank": "chính đảng",
+   "src": "made"
+  }
+ ],
+ "w|chính gốc": [
+  {
+   "text": "Đồng nghiệp mới mang cho Phong một gói chè Thái Nguyên chính gốc.",
+   "en": "The new colleague brought Phong a packet of genuine Thái Nguyên tea.",
+   "ko": "새 동료가 퐁에게 진짜 타이응우옌 차 한 봉지를 가져다줬어요.",
+   "blank": "chính gốc",
+   "src": "made"
+  },
+  {
+   "text": "Sau cuộc đua, Ngọc được mời ăn bánh đa cua chính gốc Hải Phòng.",
+   "en": "After the race, Ngọc was treated to authentic Hải Phòng crab noodle soup.",
+   "ko": "경기가 끝난 뒤 응옥은 하이퐁 정통 게살 국수를 대접받았어요.",
+   "blank": "chính gốc",
    "src": "made"
   }
  ],
@@ -13333,6 +13397,22 @@
    "en": "Ask the landlord to fix the water pipe.",
    "ko": "집주인한테 수도관 고쳐 달라고 해.",
    "blank": "chủ nhà"
+  }
+ ],
+ "w|chủ nhân": [
+  {
+   "text": "Không ai biết chủ nhân của chiếc cốc trên bàn mới của Phong là ai.",
+   "en": "Nobody knows who the owner of the cup on Phong's new desk is.",
+   "ko": "퐁의 새 책상 위에 있는 컵의 주인이 누구인지 아무도 몰라요.",
+   "blank": "chủ nhân",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc là chủ nhân của tấm huy chương vàng nhóm nữ năm nay.",
+   "en": "Ngọc is this year's winner of the women's gold medal.",
+   "ko": "올해 여자부 금메달의 주인공은 응옥이에요.",
+   "blank": "chủ nhân",
+   "src": "made"
   }
  ],
  "w|chủ nhật": [
@@ -15220,6 +15300,22 @@
    "en": "When there are no customers, Mai's husband plays chess with the locksmith.",
    "ko": "손님이 없을 때 마이의 남편은 열쇠 가게 아저씨와 체스를 둬요.",
    "blank": "cờ vua",
+   "src": "made"
+  }
+ ],
+ "w|cổ xưa": [
+  {
+   "text": "Văn phòng của Phong nằm trong một tòa nhà cổ xưa ở trung tâm thành phố.",
+   "en": "Phong's office is in an ancient building in the city center.",
+   "ko": "퐁의 사무실은 시내 중심에 있는 아주 오래된 건물 안에 있어요.",
+   "blank": "cổ xưa",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc thích nhất đoạn đường chạy ngang qua cây cầu đá cổ xưa bên sông.",
+   "en": "Ngọc's favorite stretch is the one that crosses the ancient stone bridge by the river.",
+   "ko": "응옥이 가장 좋아하는 구간은 강가의 오래된 돌다리를 건너는 곳이에요.",
+   "blank": "cổ xưa",
    "src": "made"
   }
  ],
@@ -17193,6 +17289,22 @@
    "blank": "cuộc gọi"
   }
  ],
+ "w|cuộc gọi nhỡ": [
+  {
+   "text": "Ra khỏi phòng họp, Phong thấy có ba cuộc gọi nhỡ từ đồng nghiệp mới.",
+   "en": "Leaving the meeting room, Phong saw three missed calls from his new colleague.",
+   "ko": "회의실에서 나오자 퐁은 새 동료에게서 온 부재중 전화 세 통을 봤어요.",
+   "blank": "cuộc gọi nhỡ",
+   "src": "made"
+  },
+  {
+   "text": "Về đích xong, Ngọc mở điện thoại thấy hàng chục cuộc gọi nhỡ từ bạn bè.",
+   "en": "After finishing, Ngọc turned on her phone and saw dozens of missed calls from friends.",
+   "ko": "결승선을 통과한 뒤 응옥이 휴대폰을 켜 보니 친구들의 부재중 전화가 수십 통 와 있었어요.",
+   "blank": "cuộc gọi nhỡ",
+   "src": "made"
+  }
+ ],
  "w|cuộc hẹn": [
   {
    "text": "Họ dời cuộc hẹn sang chiều mai.",
@@ -18669,6 +18781,22 @@
    "src": "made"
   }
  ],
+ "w|đằng kia": [
+  {
+   "text": "Anh Tuấn chỉ cho Phong cái bàn trống ở đằng kia, cạnh cửa sổ.",
+   "en": "Tuấn pointed Phong to the empty desk over there, by the window.",
+   "ko": "뚜언 씨는 저쪽 창가에 있는 빈 책상을 퐁에게 가리켜 줬어요.",
+   "blank": "đằng kia",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc nhìn thấy vạch đích ở đằng kia và tăng tốc.",
+   "en": "Ngọc saw the finish line over there and sped up.",
+   "ko": "응옥은 저쪽에 결승선이 보이자 속도를 높였어요.",
+   "blank": "đằng kia",
+   "src": "made"
+  }
+ ],
  "w|đăng ký": [
   {
    "text": "Chúng tôi nên đăng ký ở đâu?",
@@ -18714,6 +18842,22 @@
    "en": "Mai thinks the fence has to be repainted anyway, so she might as well get the whole street to do it together.",
    "ko": "마이는 어차피 담장을 다시 칠해야 하니 차라리 온 동네가 같이 하자고 생각해요.",
    "blank": "đằng nào cũng",
+   "src": "made"
+  }
+ ],
+ "w|đằng này": [
+  {
+   "text": "Thấy Phong lúng túng, chị Hoa vẫy tay gọi em ngồi đằng này với chị.",
+   "en": "Seeing Phong flustered, Hoa waved him over to sit here with her.",
+   "ko": "퐁이 어쩔 줄 몰라 하자 호아 씨가 이쪽에 같이 앉으라고 손짓했어요.",
+   "blank": "đằng này",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc gọi to với bạn rằng mình đang ở đằng này, gần cổng xuất phát.",
+   "en": "Ngọc called out to her friend that she was over here, near the starting gate.",
+   "ko": "응옥은 친구에게 자기는 이쪽 출발 게이트 근처에 있다고 크게 외쳤어요.",
+   "blank": "đằng này",
    "src": "made"
   }
  ],
@@ -22745,6 +22889,22 @@
    "src": "made"
   }
  ],
+ "w|dìu dắt": [
+  {
+   "text": "Chị trưởng phòng hứa sẽ dìu dắt Phong trong những tháng đầu đi làm.",
+   "en": "The department head promised to guide Phong through his first months at work.",
+   "ko": "팀장님은 퐁이 일을 시작한 처음 몇 달 동안 이끌어 주겠다고 약속했어요.",
+   "blank": "dìu dắt",
+   "src": "made"
+  },
+  {
+   "text": "Huấn luyện viên đã dìu dắt Ngọc từ những buổi chạy năm cây số đầu tiên.",
+   "en": "The coach has guided Ngọc since her very first five-kilometer runs.",
+   "ko": "코치는 처음 5킬로미터를 달리던 때부터 응옥을 이끌어 왔어요.",
+   "blank": "dìu dắt",
+   "src": "made"
+  }
+ ],
  "w|do": [
   {
    "text": "Do kẹt xe nên tớ muộn.",
@@ -24441,6 +24601,22 @@
    "src": "made"
   }
  ],
+ "w|đồng bào": [
+  {
+   "text": "Công ty của Phong quyên góp gạo gửi đồng bào vùng lũ miền Trung.",
+   "en": "Phong's company donated rice to fellow countrymen in the flooded central region.",
+   "ko": "퐁의 회사는 중부 수해 지역 동포들에게 쌀을 기부했어요.",
+   "blank": "đồng bào",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức dành một phần tiền vé để giúp đồng bào vùng cao.",
+   "en": "The organizers set aside part of the entry fees to help people in the highlands.",
+   "ko": "주최 측은 참가비 일부를 고산 지대 동포들을 돕는 데 쓰기로 했어요.",
+   "blank": "đồng bào",
+   "src": "made"
+  }
+ ],
  "w|đồng cảm": [
   {
    "text": "Đồng cảm với bạn bè giúp mối quan hệ bền hơn.",
@@ -24686,6 +24862,22 @@
    "en": "Linh brings canned fish in case she doesn't catch anything.",
    "ko": "린은 아무것도 못 낚을 때를 대비해 생선 통조림을 챙겨 와요.",
    "blank": "đóng hộp",
+   "src": "made"
+  }
+ ],
+ "w|đồng hương": [
+  {
+   "text": "Phong mừng rỡ khi biết đồng nghiệp mới là đồng hương Nghệ An.",
+   "en": "Phong was delighted to learn his new colleague was from his home province, Nghệ An.",
+   "ko": "퐁은 새 동료가 같은 응에안 고향 사람이라는 걸 알고 무척 기뻐했어요.",
+   "blank": "đồng hương",
+   "src": "made"
+  },
+  {
+   "text": "Gặp một đồng hương ở vạch xuất phát, Ngọc vui hẳn lên.",
+   "en": "Meeting someone from her hometown at the starting line really cheered Ngọc up.",
+   "ko": "출발선에서 고향 사람을 만나자 응옥은 기분이 확 좋아졌어요.",
+   "blank": "đồng hương",
    "src": "made"
   }
  ],
@@ -38185,6 +38377,22 @@
    "blank": "Khuyên"
   }
  ],
+ "w|khuyên bảo": [
+  {
+   "text": "Trưởng phòng nhẹ nhàng khuyên bảo Phong đừng ôm hết việc một mình.",
+   "en": "The manager gently advised Phong not to take on all the work by himself.",
+   "ko": "팀장님은 퐁에게 일을 혼자 다 떠안지 말라고 부드럽게 타일렀어요.",
+   "blank": "khuyên bảo",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ khuyên bảo Ngọc ngủ sớm vào đêm trước ngày đua.",
+   "en": "Mom advised Ngọc to go to bed early the night before the race.",
+   "ko": "엄마는 응옥에게 대회 전날 밤엔 일찍 자라고 타일렀어요.",
+   "blank": "khuyên bảo",
+   "src": "made"
+  }
+ ],
  "w|khuyên can": [
   {
    "text": "Bạn bè khuyên can mãi, nhưng Long vẫn quyết mở thêm sạp trái cây.",
@@ -38214,6 +38422,22 @@
    "en": "Buy one get one free is this week's promotion.",
    "ko": "하나 사면 하나 더 주는 게 이번 주 행사예요.",
    "blank": "khuyến mãi",
+   "src": "made"
+  }
+ ],
+ "w|khuyên răn": [
+  {
+   "text": "Bố của Phong thường khuyên răn con phải biết lắng nghe đồng nghiệp.",
+   "en": "Phong's father often counsels him to listen to his colleagues.",
+   "ko": "퐁의 아버지는 동료의 말을 잘 들어야 한다고 늘 타일러요.",
+   "blank": "khuyên răn",
+   "src": "made"
+  },
+  {
+   "text": "Huấn luyện viên khuyên răn Ngọc không được chạy quá sức ngay từ đầu.",
+   "en": "The coach warned Ngọc not to push too hard right from the start.",
+   "ko": "코치는 응옥에게 처음부터 무리해서 달리면 안 된다고 타일렀어요.",
+   "blank": "khuyên răn",
    "src": "made"
   }
  ],
@@ -38615,6 +38839,22 @@
    "en": "This style of shirt is selling well.",
    "ko": "이런 스타일 옷이 잘 팔려.",
    "blank": "kiểu"
+  }
+ ],
+ "w|kiều bào": [
+  {
+   "text": "Đồng nghiệp mới của Phong là kiều bào ở Úc vừa về nước làm việc.",
+   "en": "Phong's new colleague is an overseas Vietnamese from Australia who just came back to work.",
+   "ko": "퐁의 새 동료는 호주에 살던 교포인데 일하러 막 귀국했어요.",
+   "blank": "kiều bào",
+   "src": "made"
+  },
+  {
+   "text": "Nhiều kiều bào về nước chỉ để chạy giải marathon này cùng Ngọc.",
+   "en": "Many overseas Vietnamese came home just to run this marathon with Ngọc.",
+   "ko": "많은 교포들이 응옥과 함께 이 마라톤을 뛰려고 귀국했어요.",
+   "blank": "kiều bào",
+   "src": "made"
   }
  ],
  "w|kiêu căng": [
@@ -39411,6 +39651,22 @@
    "en": "The weather feels odd today.",
    "ko": "오늘 날씨가 좀 이상해.",
    "blank": "lạ lùng"
+  }
+ ],
+ "w|la mắng": [
+  {
+   "text": "Phong lo bị la mắng vì gửi nhầm báo cáo, nhưng sếp chỉ cười.",
+   "en": "Phong worried he'd be scolded for sending the wrong report, but the boss just laughed.",
+   "ko": "퐁은 보고서를 잘못 보내서 혼날까 봐 걱정했지만 상사는 웃기만 했어요.",
+   "blank": "la mắng",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc bị huấn luyện viên la mắng vì bỏ buổi tập dài cuối tuần.",
+   "en": "Ngọc got scolded by the coach for skipping the weekend long run.",
+   "ko": "응옥은 주말 장거리 훈련을 빠져서 코치에게 혼났어요.",
+   "blank": "la mắng",
+   "src": "made"
   }
  ],
  "w|lá phiếu": [
@@ -44323,6 +44579,22 @@
    "blank": "Mang đi"
   }
  ],
+ "w|mắng mỏ": [
+  {
+   "text": "Đồng nghiệp cũ của Phong từng bị sếp mắng mỏ trước mặt cả phòng.",
+   "en": "Phong's former colleague was once berated by the boss in front of the whole office.",
+   "ko": "퐁의 예전 동료는 사무실 사람들 앞에서 상사에게 꾸지람을 들은 적이 있어요.",
+   "blank": "mắng mỏ",
+   "src": "made"
+  },
+  {
+   "text": "Hồi nhỏ Ngọc hay bị mắng mỏ vì chạy nhảy suốt ngày.",
+   "en": "As a child, Ngọc was often scolded for running around all day.",
+   "ko": "어렸을 때 응옥은 하루 종일 뛰어다닌다고 자주 꾸중을 들었어요.",
+   "blank": "mắng mỏ",
+   "src": "made"
+  }
+ ],
  "w|mang thai": [
   {
    "text": "Anh ấy rất vui vì vợ anh đang mang thai.",
@@ -48951,6 +49223,22 @@
    "src": "made"
   }
  ],
+ "w|nêu lên": [
+  {
+   "text": "Trong cuộc họp đầu tiên, Phong mạnh dạn nêu lên ý kiến về quy trình mới.",
+   "en": "At his first meeting, Phong boldly raised his opinion about the new process.",
+   "ko": "첫 회의에서 퐁은 새 절차에 대한 의견을 과감하게 내놓았어요.",
+   "blank": "nêu lên",
+   "src": "made"
+  },
+  {
+   "text": "Sau giải, Ngọc nêu lên vấn đề thiếu trạm nước ở nửa sau đường chạy.",
+   "en": "After the race, Ngọc raised the issue of too few water stations in the second half of the course.",
+   "ko": "대회가 끝난 뒤 응옥은 코스 후반에 급수대가 부족하다는 문제를 제기했어요.",
+   "blank": "nêu lên",
+   "src": "made"
+  }
+ ],
  "w|nếu như": [
   {
    "text": "Nếu như mưa thì mình ở nhà.",
@@ -51483,6 +51771,22 @@
    "src": "made"
   }
  ],
+ "w|người bản địa": [
+  {
+   "text": "Cô đồng nghiệp mới là người bản địa Đà Lạt nên rủ Phong đi ăn những quán ít khách du lịch biết.",
+   "en": "The new colleague is a Đà Lạt native, so she invited Phong to eat at places few tourists know.",
+   "ko": "새 동료는 달랏 토박이라서 관광객이 잘 모르는 식당에 퐁을 데려갔어요.",
+   "blank": "người bản địa",
+   "src": "made"
+  },
+  {
+   "text": "Đường chạy đi qua bản làng, nơi người bản địa đứng hai bên vỗ tay cổ vũ Ngọc.",
+   "en": "The course passes through a village where locals stand on both sides clapping for Ngọc.",
+   "ko": "코스가 마을을 지나는데 원주민들이 양쪽에 서서 응옥에게 박수를 쳐 줬어요.",
+   "blank": "người bản địa",
+   "src": "made"
+  }
+ ],
  "w|người bán hàng": [
   {
    "text": "Người bán hàng giới thiệu sản phẩm rất nhiệt tình.",
@@ -51495,6 +51799,22 @@
    "en": "I asked the salesperson about the shirt size.",
    "ko": "옷 사이즈를 판매원에게 물어봤어.",
    "blank": "người bán hàng"
+  }
+ ],
+ "w|người bản xứ": [
+  {
+   "text": "Anh Mark, đồng nghiệp mới của Phong, là người bản xứ nên hay giúp cả phòng sửa email tiếng Anh.",
+   "en": "Mark, Phong's new colleague, is a native speaker, so he often helps the whole team fix their English emails.",
+   "ko": "퐁의 새 동료 마크 씨는 원어민이라서 팀 전체의 영어 이메일을 자주 고쳐 줘요.",
+   "blank": "người bản xứ",
+   "src": "made"
+  },
+  {
+   "text": "Ở giải chạy nước ngoài, Ngọc nhờ một người bản xứ đọc giúp bảng hướng dẫn.",
+   "en": "At a race abroad, Ngọc asked a native to read the instruction board for her.",
+   "ko": "해외 마라톤 대회에서 응옥은 현지인에게 안내판을 읽어 달라고 부탁했어요.",
+   "blank": "người bản xứ",
+   "src": "made"
   }
  ],
  "w|người bảo lãnh": [
@@ -51540,6 +51860,22 @@
    "en": "In the prize dispute, Trang represented the winner of the photo contest.",
    "ko": "상금 분쟁에서 짱은 사진 공모전 우승자를 대리했어요.",
    "blank": "người chiến thắng",
+   "src": "made"
+  }
+ ],
+ "w|người chủ": [
+  {
+   "text": "Phong thuê phòng trọ gần công ty, người chủ nhà rất dễ tính.",
+   "en": "Phong rents a room near the office, and the landlord is very easygoing.",
+   "ko": "퐁은 회사 근처에 방을 얻었는데 집주인이 아주 너그러워요.",
+   "blank": "người chủ",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc ăn sáng ở quán quen, người chủ quán còn tặng thêm quả trứng chúc may mắn.",
+   "en": "Ngọc had breakfast at her usual place, and the owner even gave her an extra egg for luck.",
+   "ko": "응옥이 단골집에서 아침을 먹는데 주인이 행운을 빈다며 달걀을 하나 더 줬어요.",
+   "blank": "người chủ",
    "src": "made"
   }
  ],
@@ -51605,6 +51941,22 @@
    "src": "made"
   }
  ],
+ "w|người dân tộc": [
+  {
+   "text": "Chị Hoa, đồng nghiệp mới của Phong, là người dân tộc Tày và nói được ba thứ tiếng.",
+   "en": "Hoa, Phong's new colleague, is ethnically Tày and speaks three languages.",
+   "ko": "퐁의 새 동료 호아 씨는 따이족이고 세 가지 언어를 해요.",
+   "blank": "người dân tộc",
+   "src": "made"
+  },
+  {
+   "text": "Nhiều người dân tộc Mông ở Sa Pa cũng đăng ký chạy giải năm nay cùng Ngọc.",
+   "en": "Many Hmong people from Sa Pa also signed up to run this year's race alongside Ngọc.",
+   "ko": "사파의 몽족 사람들도 올해 응옥과 함께 대회에 많이 참가 신청했어요.",
+   "blank": "người dân tộc",
+   "src": "made"
+  }
+ ],
  "w|người đẹp": [
   {
    "text": "Bìa sách mới vẽ một người đẹp đứng dưới mưa, Nam và chị Vy đều thích.",
@@ -51618,6 +51970,38 @@
    "en": "Thảo's áo dài this autumn made the neighbors jokingly call her the beauty of the street.",
    "ko": "올가을 타오의 아오자이를 보고 이웃들은 장난삼아 거리의 미인이라고 불러요.",
    "blank": "người đẹp",
+   "src": "made"
+  }
+ ],
+ "w|người đi đường": [
+  {
+   "text": "Sáng nay Phong bị lạc nên phải hỏi một người đi đường chỉ đến tòa nhà công ty.",
+   "en": "This morning Phong got lost and had to ask a passerby for directions to the office building.",
+   "ko": "오늘 아침 퐁은 길을 잃어서 행인에게 회사 건물로 가는 길을 물어야 했어요.",
+   "blank": "người đi đường",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc chạy luyện tập trên vỉa hè từ rất sớm nên ít gặp người đi đường.",
+   "en": "Ngọc trains on the sidewalk very early, so she rarely meets pedestrians.",
+   "ko": "응옥은 아주 이른 시간에 인도에서 훈련해서 행인을 거의 만나지 않아요.",
+   "blank": "người đi đường",
+   "src": "made"
+  }
+ ],
+ "w|người địa phương": [
+  {
+   "text": "Phong hỏi đồng nghiệp mới, vốn là người địa phương, xem nên thuê nhà ở khu nào.",
+   "en": "Phong asked his new colleague, a local, which neighborhood he should rent in.",
+   "ko": "퐁은 그 지역 사람인 새 동료에게 어느 동네에 집을 구하면 좋을지 물었어요.",
+   "blank": "người địa phương",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc được người địa phương mời uống nước dừa ở trạm tiếp sức.",
+   "en": "Locals offered Ngọc coconut water at the aid station.",
+   "ko": "급수대에서 동네 사람들이 응옥에게 코코넛 물을 권했어요.",
+   "blank": "người địa phương",
    "src": "made"
   }
  ],
@@ -51779,6 +52163,22 @@
    "src": "made"
   }
  ],
+ "w|người hàng xóm": [
+  {
+   "text": "Phong bất ngờ khi đồng nghiệp mới hóa ra là người hàng xóm ở cùng chung cư.",
+   "en": "Phong was surprised that his new colleague turned out to be a neighbor in the same apartment building.",
+   "ko": "퐁은 새 동료가 같은 아파트에 사는 이웃이라는 걸 알고 놀랐어요.",
+   "blank": "người hàng xóm",
+   "src": "made"
+  },
+  {
+   "text": "Sáng nào Ngọc cũng chạy bộ với người hàng xóm quanh hồ.",
+   "en": "Every morning Ngọc goes jogging around the lake with her neighbor.",
+   "ko": "응옥은 매일 아침 이웃과 함께 호수 둘레를 달려요.",
+   "blank": "người hàng xóm",
+   "src": "made"
+  }
+ ],
  "w|người hầu": [
   {
    "text": "Bạn đã nhìn thấy người hầu nào của tôi?",
@@ -51855,6 +52255,38 @@
    "en": "Don't take things from strangers on the street.",
    "ko": "길에서 모르는 사람이 주는 건 받지 마.",
    "blank": "người lạ"
+  }
+ ],
+ "w|người lạ mặt": [
+  {
+   "text": "Bảo vệ tưởng Phong là người lạ mặt nên không cho vào thang máy.",
+   "en": "The security guard thought Phong was a stranger and wouldn't let him into the elevator.",
+   "ko": "경비원은 퐁을 낯선 사람으로 여겨 엘리베이터에 태워 주지 않았어요.",
+   "blank": "người lạ mặt",
+   "src": "made"
+  },
+  {
+   "text": "Ở đoạn cuối, một người lạ mặt đưa cho Ngọc chai nước và hô to cố lên.",
+   "en": "Near the end, a stranger handed Ngọc a bottle of water and shouted encouragement.",
+   "ko": "마지막 구간에서 낯선 사람이 응옥에게 물병을 건네며 힘내라고 외쳤어요.",
+   "blank": "người lạ mặt",
+   "src": "made"
+  }
+ ],
+ "w|người làm": [
+  {
+   "text": "Công ty đang thiếu người làm nên Phong được nhận ngay sau buổi phỏng vấn.",
+   "en": "The company is short of workers, so Phong was hired right after the interview.",
+   "ko": "회사에 일손이 부족해서 퐁은 면접 직후 바로 채용됐어요.",
+   "blank": "người làm",
+   "src": "made"
+  },
+  {
+   "text": "Ông chủ xưởng cho tất cả người làm nghỉ buổi sáng để đi cổ vũ Ngọc.",
+   "en": "The workshop owner gave all the workers the morning off to go cheer for Ngọc.",
+   "ko": "공장 사장님은 응옥을 응원하라고 일꾼들 모두에게 오전 휴가를 줬어요.",
+   "blank": "người làm",
+   "src": "made"
   }
  ],
  "w|người lao động": [
@@ -52040,6 +52472,22 @@
    "en": "When the app malfunctioned, the spokesperson for Hương's company apologized to customers.",
    "ko": "앱에 오류가 나자 흐엉 회사의 대변인이 고객에게 사과했어요.",
    "blank": "người phát ngôn",
+   "src": "made"
+  }
+ ],
+ "w|người qua đường": [
+  {
+   "text": "Phong đứng ở cửa văn phòng chờ đồng nghiệp, nhìn dòng người qua đường vội vã.",
+   "en": "Phong stood at the office door waiting for a colleague, watching the stream of passersby hurry along.",
+   "ko": "퐁은 사무실 문 앞에서 동료를 기다리며 바삐 지나가는 행인들을 바라봤어요.",
+   "blank": "người qua đường",
+   "src": "made"
+  },
+  {
+   "text": "Nhiều người qua đường dừng lại cổ vũ khi Ngọc chạy ngang.",
+   "en": "Many passersby stopped to cheer as Ngọc ran past.",
+   "ko": "응옥이 지나가자 많은 행인들이 멈춰 서서 응원했어요.",
+   "blank": "người qua đường",
    "src": "made"
   }
  ],
@@ -52295,6 +52743,22 @@
    "src": "made"
   }
  ],
+ "w|người việt": [
+  {
+   "text": "Ở văn phòng, chỉ có Phong và anh Minh là người Việt, còn lại là người nước ngoài.",
+   "en": "At the office, only Phong and Minh are Vietnamese; everyone else is a foreigner.",
+   "ko": "사무실에서 베트남 사람은 퐁과 민 씨뿐이고 나머지는 외국인이에요.",
+   "blank": "người Việt",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc là một trong số ít người Việt về đích ở giải chạy quốc tế ấy.",
+   "en": "Ngọc was one of the few Vietnamese to finish that international race.",
+   "ko": "응옥은 그 국제 대회를 완주한 몇 안 되는 베트남 사람 중 한 명이에요.",
+   "blank": "người Việt",
+   "src": "made"
+  }
+ ],
  "w|người xem": [
   {
    "text": "Người xem vỗ tay rất nhiệt tình.",
@@ -52474,6 +52938,22 @@
    "en": "According to the file Trang read, the victim was in critical condition for a whole week.",
    "ko": "짱이 읽은 기록에 따르면 피해자는 일주일 내내 위독한 상태였어요.",
    "blank": "nguy kịch",
+   "src": "made"
+  }
+ ],
+ "w|nguyên bản": [
+  {
+   "text": "Phong giữ lại tài liệu nguyên bản trước khi chỉnh sửa hợp đồng.",
+   "en": "Phong kept the original document before editing the contract.",
+   "ko": "퐁은 계약서를 고치기 전에 원본 문서를 따로 남겨 뒀어요.",
+   "blank": "nguyên bản",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc vẫn giữ tấm bản đồ đường chạy nguyên bản từ giải đầu tiên mình tham gia.",
+   "en": "Ngọc still keeps the original course map from the first race she ran.",
+   "ko": "응옥은 처음 참가한 대회의 코스 지도 원본을 아직도 갖고 있어요.",
+   "blank": "nguyên bản",
    "src": "made"
   }
  ],
@@ -53567,6 +54047,22 @@
    "en": "Once you apologize, you'll be forgiven.",
    "ko": "잘못을 인정하면 용서받을 수 있어.",
    "blank": "Nhận lỗi"
+  }
+ ],
+ "w|nhấn mạnh": [
+  {
+   "text": "Chị trưởng phòng nhấn mạnh rằng Phong cứ hỏi nếu có gì chưa rõ.",
+   "en": "The department head stressed that Phong should just ask if anything was unclear.",
+   "ko": "팀장님은 퐁에게 모르는 게 있으면 그냥 물어보라고 강조했어요.",
+   "blank": "nhấn mạnh",
+   "src": "made"
+  },
+  {
+   "text": "Huấn luyện viên nhấn mạnh với Ngọc rằng ngủ đủ quan trọng không kém tập luyện.",
+   "en": "The coach stressed to Ngọc that getting enough sleep is just as important as training.",
+   "ko": "코치는 응옥에게 충분히 자는 것도 훈련만큼 중요하다고 강조했어요.",
+   "blank": "nhấn mạnh",
+   "src": "made"
   }
  ],
  "w|nhắn nhủ": [
@@ -59905,6 +60401,22 @@
    "src": "made"
   }
  ],
+ "w|phủ định": [
+  {
+   "text": "Khi bị hỏi có phải ngại giao tiếp không, Phong lắc đầu phủ định ngay.",
+   "en": "When asked if he was shy, Phong immediately shook his head in denial.",
+   "ko": "사람 만나는 걸 어려워하냐는 질문에 퐁은 바로 고개를 저으며 부정했어요.",
+   "blank": "phủ định",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc phủ định tin đồn rằng mình sẽ bỏ giải vì chấn thương.",
+   "en": "Ngọc denied the rumor that she would drop out of the race due to injury.",
+   "ko": "응옥은 부상 때문에 대회를 포기한다는 소문을 부인했어요.",
+   "blank": "phủ định",
+   "src": "made"
+  }
+ ],
  "w|phù hợp": [
   {
    "text": "Tuấn mặc bộ vest tối màu, rất phù hợp với không khí trang nghiêm của tòa.",
@@ -61087,6 +61599,22 @@
    "src": "tatoeba:13896350/leucammieuvu en:6630944/Eccles17"
   }
  ],
+ "w|quát tháo": [
+  {
+   "text": "Trưởng nhóm của Phong chưa bao giờ quát tháo ai, kể cả khi dự án bị trễ.",
+   "en": "Phong's team leader has never yelled at anyone, even when a project ran late.",
+   "ko": "퐁의 팀장은 프로젝트가 늦어져도 누구에게 소리친 적이 없어요.",
+   "blank": "quát tháo",
+   "src": "made"
+  },
+  {
+   "text": "Một tài xế quát tháo vì đường bị chặn, nhưng Ngọc vẫn chạy tiếp.",
+   "en": "A driver shouted angrily because the road was blocked, but Ngọc kept running.",
+   "ko": "도로가 막혀 한 운전자가 고함을 질렀지만 응옥은 계속 달렸어요.",
+   "blank": "quát tháo",
+   "src": "made"
+  }
+ ],
  "w|quay": [
   {
    "text": "Trong bài ẩm thực, Minh tả cách ông chủ quán quay heo trên than hồng suốt đêm.",
@@ -62156,6 +62684,22 @@
    "en": "Working in the fields all year, Trang's arms are very strong.",
    "ko": "일 년 내내 밭일을 해서 짱의 팔은 아주 단단해요.",
    "blank": "rắn chắc",
+   "src": "made"
+  }
+ ],
+ "w|răn dạy": [
+  {
+   "text": "Ông giám đốc hay răn dạy nhân viên mới rằng chữ tín quan trọng hơn lợi nhuận.",
+   "en": "The director often lectures new staff that trust matters more than profit.",
+   "ko": "사장님은 신입 직원들에게 신용이 이익보다 중요하다고 자주 가르쳐요.",
+   "blank": "răn dạy",
+   "src": "made"
+  },
+  {
+   "text": "Bà nội từng răn dạy Ngọc rằng đã bắt đầu thì phải đi đến cùng.",
+   "en": "Ngọc's grandmother once taught her that whatever you start, you must see through.",
+   "ko": "할머니는 응옥에게 시작했으면 끝까지 가야 한다고 가르치셨어요.",
+   "blank": "răn dạy",
    "src": "made"
   }
  ],
@@ -68315,6 +68859,22 @@
    "blank": "Tấn công"
   }
  ],
+ "w|tán đồng": [
+  {
+   "text": "Trưởng phòng gật đầu tán đồng khi Phong đề nghị đổi giờ họp.",
+   "en": "The manager nodded in agreement when Phong suggested changing the meeting time.",
+   "ko": "퐁이 회의 시간을 바꾸자고 하자 팀장님은 고개를 끄덕이며 동의했어요.",
+   "blank": "tán đồng",
+   "src": "made"
+  },
+  {
+   "text": "Các vận động viên đều tán đồng với Ngọc rằng đường chạy năm nay đẹp nhất.",
+   "en": "The runners all agreed with Ngọc that this year's course was the most beautiful.",
+   "ko": "선수들은 모두 올해 코스가 가장 아름답다는 응옥의 말에 동의했어요.",
+   "blank": "tán đồng",
+   "src": "made"
+  }
+ ],
  "w|tận dụng": [
   {
    "text": "Bác sĩ Đức tận dụng giờ nghỉ trưa để đọc tài liệu chuyên ngành.",
@@ -68408,6 +68968,22 @@
    "en": "Dr. Hương is known for her dedication; she asks every patient about their condition in detail.",
    "ko": "흐엉 선생님은 헌신적이기로 유명해서 환자 한 명 한 명을 꼼꼼히 살펴요.",
    "blank": "tận tâm",
+   "src": "made"
+  }
+ ],
+ "w|tán thành": [
+  {
+   "text": "Cả phòng đều tán thành đề xuất của Phong về việc họp ngắn mỗi sáng.",
+   "en": "The whole office approved Phong's proposal for a short meeting every morning.",
+   "ko": "팀 전체가 매일 아침 짧게 회의하자는 퐁의 제안에 찬성했어요.",
+   "blank": "tán thành",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc tán thành ý kiến đổi giờ xuất phát sớm hơn để tránh nắng.",
+   "en": "Ngọc supported the idea of moving the start time earlier to avoid the sun.",
+   "ko": "응옥은 햇볕을 피하려고 출발 시간을 앞당기자는 의견에 찬성했어요.",
+   "blank": "tán thành",
    "src": "made"
   }
  ],
@@ -75591,6 +76167,22 @@
    "blank": "tin nhắn"
   }
  ],
+ "w|tin nhắn thoại": [
+  {
+   "text": "Phong nghe lại tin nhắn thoại của trưởng phòng để ghi chú cho đủ.",
+   "en": "Phong listened to the manager's voice message again to take complete notes.",
+   "ko": "퐁은 빠짐없이 메모하려고 팀장님의 음성 메시지를 다시 들었어요.",
+   "blank": "tin nhắn thoại",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ gửi cho Ngọc một tin nhắn thoại chúc con về đích an toàn.",
+   "en": "Mom sent Ngọc a voice message wishing her a safe finish.",
+   "ko": "엄마는 응옥에게 무사히 완주하라고 음성 메시지를 보냈어요.",
+   "blank": "tin nhắn thoại",
+   "src": "made"
+  }
+ ],
  "w|tin tức": [
   {
    "text": "Tin tức buổi sáng nói về thời tiết xấu.",
@@ -79319,6 +79911,22 @@
    "src": "made"
   }
  ],
+ "w|trước hết": [
+  {
+   "text": "Theo anh Tuấn, trước hết Phong nên làm quen với tất cả mọi người trong phòng.",
+   "en": "According to Tuấn, first of all Phong should get to know everyone in the department.",
+   "ko": "뚜언 씨 말로는 퐁이 무엇보다 먼저 팀 사람들 모두와 인사를 나눠야 해요.",
+   "blank": "trước hết",
+   "src": "made"
+  },
+  {
+   "text": "Muốn chạy marathon, trước hết Ngọc phải tập chạy đều mỗi ngày.",
+   "en": "To run a marathon, first of all Ngọc has to train regularly every day.",
+   "ko": "마라톤을 뛰려면 응옥은 먼저 매일 꾸준히 달려야 해요.",
+   "blank": "trước hết",
+   "src": "made"
+  }
+ ],
  "w|trước khi": [
   {
    "text": "Rửa tay trước khi ăn nhé.",
@@ -80043,6 +80651,22 @@
    "en": "It suddenly started pouring.",
    "ko": "갑자기 비가 세차게 왔어.",
    "blank": "Tự nhiên"
+  }
+ ],
+ "w|từ phía": [
+  {
+   "text": "Phong nhận được nhiều sự giúp đỡ từ phía đồng nghiệp trong tuần đầu.",
+   "en": "Phong received a lot of help from his colleagues in the first week.",
+   "ko": "퐁은 첫 주에 동료들 쪽에서 많은 도움을 받았어요.",
+   "blank": "từ phía",
+   "src": "made"
+  },
+  {
+   "text": "Tiếng reo hò từ phía khán đài giúp Ngọc có thêm sức ở đoạn cuối.",
+   "en": "The cheers from the stands gave Ngọc extra strength in the final stretch.",
+   "ko": "관중석 쪽에서 들려오는 함성이 응옥에게 마지막 구간에서 힘을 더해 줬어요.",
+   "blank": "từ phía",
+   "src": "made"
   }
  ],
  "w|tủ quần áo": [
@@ -83246,6 +83870,22 @@
    "en": "The guest booked the best room for a trip with his fiancée and asked Thảo to scatter roses.",
    "ko": "그 손님은 약혼녀와의 여행을 위해 가장 좋은 방을 예약하고 타오에게 장미를 뿌려 달라고 했어요.",
    "blank": "vị hôn thê",
+   "src": "made"
+  }
+ ],
+ "w|vị khách": [
+  {
+   "text": "Phong được giao tiếp đón một vị khách quan trọng của công ty.",
+   "en": "Phong was assigned to welcome an important guest of the company.",
+   "ko": "퐁은 회사의 중요한 손님을 맞이하는 일을 맡았어요.",
+   "blank": "vị khách",
+   "src": "made"
+  },
+  {
+   "text": "Ban tổ chức mời một vị khách đặc biệt đánh trống xuất phát.",
+   "en": "The organizers invited a special guest to beat the starting drum.",
+   "ko": "주최 측은 특별 손님을 모셔 출발 북을 치게 했어요.",
+   "blank": "vị khách",
    "src": "made"
   }
  ],

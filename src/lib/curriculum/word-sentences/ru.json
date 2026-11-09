@@ -581,6 +581,22 @@
    "src": "made"
   }
  ],
+ "w|активно": [
+  {
+   "text": "Михаил активно пользуется кешбэком при покупках.",
+   "en": "Mikhail actively uses cashback when he shops.",
+   "ko": "미하일은 쇼핑할 때 캐시백을 적극적으로 써요.",
+   "blank": "активно",
+   "src": "made"
+  },
+  {
+   "text": "Светлана активно подпевала каждой песне.",
+   "en": "Svetlana sang along enthusiastically to every song.",
+   "ko": "스베틀라나는 노래마다 열심히 따라 불렀어요.",
+   "blank": "активно",
+   "src": "made"
+  }
+ ],
  "w|активность": [
   {
    "text": "Следствие проверяло подозрительную активность на банковском счёте, о которой рассказал Алексей.",
@@ -3043,6 +3059,22 @@
    "src": "made"
   }
  ],
+ "w|бикини": [
+  {
+   "text": "Михаил заказал жене бикини к отпуску на море.",
+   "en": "Mikhail ordered a bikini for his wife for their seaside holiday.",
+   "ko": "미하일은 바닷가 휴가에 맞춰 아내에게 비키니를 주문해 줬어요.",
+   "blank": "бикини",
+   "src": "made"
+  },
+  {
+   "text": "На пляжном концерте многие зрители танцевали в бикини, а Светлана пришла в сарафане.",
+   "en": "At the beach concert many spectators danced in bikinis, but Svetlana came in a sundress.",
+   "ko": "해변 콘서트에서 많은 관객이 비키니 차림으로 춤췄지만 스베틀라나는 원피스를 입고 왔어요.",
+   "blank": "бикини",
+   "src": "made"
+  }
+ ],
  "w|билет": [
   {
    "text": "Тебе купить входной билет на концерт?",
@@ -4887,6 +4919,22 @@
    "src": "made"
   }
  ],
+ "w|букет": [
+  {
+   "text": "Михаил заказал букет с доставкой на день рождения мамы.",
+   "en": "Mikhail ordered a bouquet to be delivered for his mum's birthday.",
+   "ko": "미하일은 엄마 생신에 맞춰 꽃다발 배달을 주문했어요.",
+   "blank": "букет",
+   "src": "made"
+  },
+  {
+   "text": "Светлана бросила на сцену маленький букет ромашек.",
+   "en": "Svetlana threw a small bouquet of daisies onto the stage.",
+   "ko": "스베틀라나는 무대 위로 작은 데이지 꽃다발을 던졌어요.",
+   "blank": "букет",
+   "src": "made"
+  }
+ ],
  "w|булочка": [
   {
    "text": "Каждое утро Сергей покупает булочку в киоске у стройки.",
@@ -5092,6 +5140,22 @@
    "en": "Olga's compartment neighbour works as an accountant and spent the whole trip calculating something in a notebook.",
    "ko": "올가와 같은 칸 여자는 회계사인데 가는 내내 수첩에 뭔가를 계산했어요.",
    "blank": "бухгалтером",
+   "src": "made"
+  }
+ ],
+ "w|бухта": [
+  {
+   "text": "Андрей поставил палатку на берегу тихой бухты.",
+   "en": "Andrei pitched the tent on the shore of a quiet bay.",
+   "ko": "안드레이는 조용한 만 기슭에 텐트를 쳤어요.",
+   "blank": "бухты",
+   "src": "made"
+  },
+  {
+   "text": "Поезд шёл вдоль моря, и Ирина узнала знакомую бухту.",
+   "en": "The train ran along the sea, and Irina recognised a familiar bay.",
+   "ko": "기차가 바닷가를 따라 달리자 이리나는 낯익은 만을 알아봤어요.",
+   "blank": "бухту",
    "src": "made"
   }
  ],
@@ -6324,6 +6388,22 @@
    "en": "Anna's neighbour, a war veteran, plants tulips by the entrance every spring.",
    "ko": "안나의 이웃인 참전 용사는 봄마다 현관 옆에 튤립을 심어요.",
    "blank": "ветеран",
+   "src": "made"
+  }
+ ],
+ "w|ветка": [
+  {
+   "text": "Андрей собирал сухие ветки для костра.",
+   "en": "Andrei was gathering dry branches for the campfire.",
+   "ko": "안드레이는 모닥불에 쓸 마른 나뭇가지를 모았어요.",
+   "blank": "ветки",
+   "src": "made"
+  },
+  {
+   "text": "На столике стояла ветка сирени, и Ирина вспомнила о доме.",
+   "en": "There was a sprig of lilac on the table, and Irina thought of home.",
+   "ko": "탁자 위 라일락 가지를 보고 이리나는 집이 생각났어요.",
+   "blank": "ветка",
    "src": "made"
   }
  ],
@@ -8251,6 +8331,22 @@
    "src": "made"
   }
  ],
+ "w|возврат": [
+  {
+   "text": "Михаил оформил возврат, потому что пришёл не тот цвет.",
+   "en": "Mikhail arranged a return because the wrong colour arrived.",
+   "ko": "색이 다른 게 와서 미하일은 반품을 신청했어요.",
+   "blank": "возврат",
+   "src": "made"
+  },
+  {
+   "text": "Концерт перенесли, и Светлана подала заявку на возврат денег.",
+   "en": "The concert was postponed, and Svetlana applied for a refund.",
+   "ko": "콘서트가 연기돼서 스베틀라나는 환불을 신청했어요.",
+   "blank": "возврат",
+   "src": "made"
+  }
+ ],
  "w|возвращать": [
   {
    "text": "Иван не забывает возвращать чужие инструменты на место.",
@@ -8645,6 +8741,22 @@
    "src": "made"
   }
  ],
+ "w|вой": [
+  {
+   "text": "Ночью Андрей услышал далёкий вой волков.",
+   "en": "At night Andrei heard the distant howling of wolves.",
+   "ko": "밤에 안드레이는 멀리서 늑대 울음소리를 들었어요.",
+   "blank": "вой",
+   "src": "made"
+  },
+  {
+   "text": "Ирину разбудил протяжный вой ветра за окном.",
+   "en": "Irina was woken by the long howl of the wind outside.",
+   "ko": "이리나는 창밖에서 길게 울부짖는 바람 소리에 잠이 깼어요.",
+   "blank": "вой",
+   "src": "made"
+  }
+ ],
  "w|война": [
   {
    "text": "Война давно кончилась.",
@@ -8795,6 +8907,22 @@
    "en": "Mom is worrying for nothing.",
    "ko": "엄마는 쓸데없이 걱정하셔.",
    "blank": "волнуется"
+  }
+ ],
+ "w|волокно": [
+  {
+   "text": "Андрей выбрал верёвку из прочного синтетического волокна.",
+   "en": "Andrei chose a rope made of strong synthetic fibre.",
+   "ko": "안드레이는 튼튼한 합성 섬유로 된 밧줄을 골랐어요.",
+   "blank": "волокна",
+   "src": "made"
+  },
+  {
+   "text": "Плед в купе Ирины сделан из натурального волокна.",
+   "en": "The blanket in Irina's compartment is made of natural fibre.",
+   "ko": "이리나 칸의 담요는 천연 섬유로 만들었어요.",
+   "blank": "волокна",
+   "src": "made"
   }
  ],
  "w|волос": [
@@ -9157,6 +9285,22 @@
    "src": "made"
   }
  ],
+ "w|ворон": [
+  {
+   "text": "Над лагерем Андрея громко каркал старый ворон.",
+   "en": "An old raven cawed loudly above Andrei's camp.",
+   "ko": "안드레이의 야영지 위에서 늙은 까마귀가 시끄럽게 울었어요.",
+   "blank": "ворон",
+   "src": "made"
+  },
+  {
+   "text": "На перроне Ирина заметила огромного чёрного ворона.",
+   "en": "On the platform Irina noticed a huge black raven.",
+   "ko": "이리나는 승강장에서 커다란 검은 까마귀를 봤어요.",
+   "blank": "ворона",
+   "src": "made"
+  }
+ ],
  "w|ворона": [
   {
    "text": "Наглая ворона утащила у Павла кусок хлеба.",
@@ -9397,6 +9541,22 @@
    "src": "made"
   }
  ],
+ "w|воссоздать": [
+  {
+   "text": "Андрей хочет воссоздать поход, в который ходил с отцом много лет назад.",
+   "en": "Andrei wants to recreate the hike he went on with his father many years ago.",
+   "ko": "안드레이는 오래전 아버지와 갔던 캠핑을 그대로 다시 해 보고 싶어 해요.",
+   "blank": "воссоздать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина пытается воссоздать в дневнике каждый день поездки.",
+   "en": "Irina is trying to recreate every day of the trip in her diary.",
+   "ko": "이리나는 여행의 하루하루를 일기에 되살려 보려고 해요.",
+   "blank": "воссоздать",
+   "src": "made"
+  }
+ ],
  "w|восстание": [
   {
    "text": "Иван готовит доклад о крестьянском восстании в старой России.",
@@ -9554,6 +9714,22 @@
    "en": "Irina's pupils admire her ability to solve problems in her head.",
    "ko": "이리나의 학생들은 이리나가 암산으로 문제를 푸는 실력에 감탄해요.",
    "blank": "восхищаются",
+   "src": "made"
+  }
+ ],
+ "w|восход": [
+  {
+   "text": "Андрей встал рано, чтобы встретить восход над рекой.",
+   "en": "Andrei got up early to watch the sunrise over the river.",
+   "ko": "안드레이는 강 위로 해가 뜨는 걸 보려고 일찍 일어났어요.",
+   "blank": "восход",
+   "src": "made"
+  },
+  {
+   "text": "Ирина встретила восход в тамбуре с чашкой кофе.",
+   "en": "Irina watched the sunrise in the vestibule with a cup of coffee.",
+   "ko": "이리나는 커피 한 잔을 들고 객차 연결 통로에서 해돋이를 맞았어요.",
+   "blank": "восход",
    "src": "made"
   }
  ],
@@ -10683,6 +10859,22 @@
    "src": "made"
   }
  ],
+ "w|втягивать": [
+  {
+   "text": "Андрей не любит втягивать друзей в опасные походы.",
+   "en": "Andrei doesn't like dragging his friends into dangerous hikes.",
+   "ko": "안드레이는 친구들을 위험한 산행에 끌어들이는 걸 싫어해요.",
+   "blank": "втягивать",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик пытался втягивать Ирину в спор о футболе, но она отказалась.",
+   "en": "A fellow passenger tried to drag Irina into an argument about football, but she declined.",
+   "ko": "길동무가 이리나를 축구 논쟁에 끌어들이려 했지만 이리나는 거절했어요.",
+   "blank": "втягивать",
+   "src": "made"
+  }
+ ],
  "w|втянуть": [
   {
    "text": "Одноклассники пытались втянуть Михаила в спор о футболе прямо на уроке.",
@@ -11054,6 +11246,22 @@
    "en": "Maria quickly explained to the client where his benefit lay.",
    "ko": "마리야는 고객에게 어떤 이득이 있는지 금방 설명했어요.",
    "blank": "выгода",
+   "src": "made"
+  }
+ ],
+ "w|выгодно": [
+  {
+   "text": "Покупать бытовую технику онлайн Михаилу выгодно.",
+   "en": "For Mikhail it pays to buy household appliances online.",
+   "ko": "미하일에게는 가전제품을 온라인으로 사는 게 이득이에요.",
+   "blank": "выгодно",
+   "src": "made"
+  },
+  {
+   "text": "Светлана купила билеты заранее, потому что так было выгодно.",
+   "en": "Svetlana bought the tickets in advance because it was cheaper that way.",
+   "ko": "스베틀라나는 미리 사는 게 이득이라서 표를 일찍 샀어요.",
+   "blank": "выгодно",
    "src": "made"
   }
  ],
@@ -16119,6 +16327,22 @@
    "src": "made"
   }
  ],
+ "w|денежный": [
+  {
+   "text": "Михаил получил денежный перевод от магазина за возвращённый товар.",
+   "en": "Mikhail received a money transfer from the shop for the returned item.",
+   "ko": "미하일은 반품한 물건값을 가게에서 송금받았어요.",
+   "blank": "денежный",
+   "src": "made"
+  },
+  {
+   "text": "Музыкантам вручили денежную премию, и Светлана громко хлопала.",
+   "en": "The musicians were given a cash prize, and Svetlana clapped loudly.",
+   "ko": "음악가들이 상금을 받자 스베틀라나는 크게 박수를 쳤어요.",
+   "blank": "денежную",
+   "src": "made"
+  }
+ ],
  "w|день": [
   {
    "text": "Добрый день!",
@@ -16648,6 +16872,22 @@
    "en": "A local radio announcer trains in the same group as Anna.",
    "ko": "지역 라디오 아나운서가 안나와 같은 반에서 운동해요.",
    "blank": "диктор",
+   "src": "made"
+  }
+ ],
+ "w|дилер": [
+  {
+   "text": "Михаил сравнил цены в интернете и у местного дилера.",
+   "en": "Mikhail compared the prices online and at the local dealer's.",
+   "ko": "미하일은 인터넷 가격과 동네 대리점 가격을 비교했어요.",
+   "blank": "дилера",
+   "src": "made"
+  },
+  {
+   "text": "Рядом со Светланой сидел автомобильный дилер, большой фанат джаза.",
+   "en": "Next to Svetlana sat a car dealer, a big jazz fan.",
+   "ko": "스베틀라나 옆에는 재즈를 아주 좋아하는 자동차 딜러가 앉아 있었어요.",
+   "blank": "дилер",
    "src": "made"
   }
  ],
@@ -17625,6 +17865,22 @@
    "blank": "должна"
   }
  ],
+ "w|должник": [
+  {
+   "text": "Друг Михаила до сих пор его должник за общий заказ.",
+   "en": "Mikhail's friend still owes him for their joint order.",
+   "ko": "미하일의 친구는 같이 주문한 값을 아직 미하일에게 빚지고 있어요.",
+   "blank": "должник",
+   "src": "made"
+  },
+  {
+   "text": "Друг подарил Светлане билет, и теперь она чувствует себя его должником.",
+   "en": "A friend gave Svetlana a ticket, and now she feels in his debt.",
+   "ko": "친구가 표를 선물해 줘서 스베틀라나는 이제 빚진 기분이에요.",
+   "blank": "должником",
+   "src": "made"
+  }
+ ],
  "w|должное": [
   {
    "text": "Алексей отдал должное честности бывшего начальника.",
@@ -18312,6 +18568,22 @@
    "en": "In summer strawberries become affordable, and Anna makes jam.",
    "ko": "여름이면 딸기 값이 싸져서 안나는 잼을 만들어요.",
    "blank": "доступной",
+   "src": "made"
+  }
+ ],
+ "w|достучаться": [
+  {
+   "text": "Михаил целый день не мог достучаться до службы поддержки.",
+   "en": "Mikhail couldn't get through to customer support all day.",
+   "ko": "미하일은 하루 종일 고객센터와 연락이 닿지 않았어요.",
+   "blank": "достучаться",
+   "src": "made"
+  },
+  {
+   "text": "Светлана долго не могла достучаться до подруги в гримёрке.",
+   "en": "Svetlana couldn't get through to her friend in the dressing room for a long time.",
+   "ko": "스베틀라나는 분장실에 있는 친구에게 한참 동안 연락이 닿지 않았어요.",
+   "blank": "достучаться",
    "src": "made"
   }
  ],
@@ -19643,6 +19915,22 @@
    "src": "tatoeba:5946945/marafon en:5759677/Hybrid"
   }
  ],
+ "w|желательно": [
+  {
+   "text": "Андрей сказал, что костёр желательно потушить водой, а не землёй.",
+   "en": "Andrei said it's best to put the fire out with water rather than earth.",
+   "ko": "안드레이는 모닥불은 흙보다 물로 끄는 게 좋다고 했어요.",
+   "blank": "желательно",
+   "src": "made"
+  },
+  {
+   "text": "Проводник сказал Ирине, что билет желательно держать под рукой.",
+   "en": "The attendant told Irina it's best to keep her ticket handy.",
+   "ko": "승무원은 이리나에게 표를 가까이 두는 게 좋다고 했어요.",
+   "blank": "желательно",
+   "src": "made"
+  }
+ ],
  "w|желать": [
   {
    "text": "Чего ещё я мог бы желать?",
@@ -20111,6 +20399,22 @@
    "en": "I don't want a life like that.",
    "ko": "그런 삶은 원하지 않아.",
    "blank": "жизни"
+  }
+ ],
+ "w|жилет": [
+  {
+   "text": "Михаил выбрал на сайте тёплый жилет для рыбалки.",
+   "en": "Mikhail picked a warm vest for fishing on the website.",
+   "ko": "미하일은 사이트에서 낚시할 때 입을 따뜻한 조끼를 골랐어요.",
+   "blank": "жилет",
+   "src": "made"
+  },
+  {
+   "text": "Гитарист вышел на сцену в чёрном кожаном жилете, и Светлана завизжала.",
+   "en": "The guitarist came on stage in a black leather vest, and Svetlana squealed.",
+   "ko": "기타리스트가 검은 가죽 조끼를 입고 무대에 오르자 스베틀라나는 비명을 질렀어요.",
+   "blank": "жилете",
+   "src": "made"
   }
  ],
  "w|жилец": [
@@ -20743,6 +21047,22 @@
    "ko": "왜 나는 개를 키우면 안 돼?",
    "blank": "завести",
    "src": "tatoeba:12378505/xlenchik en:4499785/CK"
+  }
+ ],
+ "w|завестись": [
+  {
+   "text": "С весны у Михаила завелась привычка заказывать продукты онлайн.",
+   "en": "Since spring Mikhail has got into the habit of ordering groceries online.",
+   "ko": "봄부터 미하일은 식료품을 온라인으로 주문하는 습관이 생겼어요.",
+   "blank": "завелась",
+   "src": "made"
+  },
+  {
+   "text": "Светлана завелась с первой песни и танцевала до самого конца.",
+   "en": "Svetlana got fired up from the first song and danced to the very end.",
+   "ko": "스베틀라나는 첫 곡부터 신이 나서 끝까지 춤을 췄어요.",
+   "blank": "завелась",
+   "src": "made"
   }
  ],
  "w|завещание": [
@@ -21396,6 +21716,22 @@
    "en": "Irina left the camp long before dawn.",
    "ko": "이리나는 동트기 한참 전에 캠프를 나섰어요.",
    "blank": "задолго",
+   "src": "made"
+  }
+ ],
+ "w|задолжать": [
+  {
+   "text": "Михаил задолжал магазину за прошлый заказ.",
+   "en": "Mikhail owed the shop money for his previous order.",
+   "ko": "미하일은 지난번 주문 값을 가게에 아직 못 갚았어요.",
+   "blank": "задолжал",
+   "src": "made"
+  },
+  {
+   "text": "Светлана задолжала подруге за билет и вернула деньги после концерта.",
+   "en": "Svetlana owed her friend for the ticket and paid her back after the concert.",
+   "ko": "스베틀라나는 친구에게 표값을 빚졌다가 콘서트가 끝나고 갚았어요.",
+   "blank": "задолжала",
    "src": "made"
   }
  ],
@@ -25129,6 +25465,22 @@
    "blank": "играй"
   }
  ],
+ "w|игровой": [
+  {
+   "text": "Михаил заказал игровую мышь со скидкой.",
+   "en": "Mikhail ordered a gaming mouse at a discount.",
+   "ko": "미하일은 게이밍 마우스를 할인가에 주문했어요.",
+   "blank": "игровую",
+   "src": "made"
+  },
+  {
+   "text": "Светлана пошла на концерт музыки из известной игровой серии.",
+   "en": "Svetlana went to a concert of music from a well-known video game series.",
+   "ko": "스베틀라나는 유명한 게임 시리즈의 음악 콘서트에 갔어요.",
+   "blank": "игровой",
+   "src": "made"
+  }
+ ],
  "w|игрок": [
   {
    "text": "Я слышал, ты хороший игрок в теннис.",
@@ -25908,6 +26260,22 @@
    "en": "The view from Olga's new window is amazingly beautiful at sunset.",
    "ko": "올가의 새 창밖 풍경은 해 질 녘에 놀랍도록 아름다워요.",
    "blank": "изумительно",
+   "src": "made"
+  }
+ ],
+ "w|изумительный": [
+  {
+   "text": "Плед, который заказал Михаил, оказался изумительным на ощупь.",
+   "en": "The blanket Mikhail ordered turned out to be wonderful to the touch.",
+   "ko": "미하일이 주문한 담요는 촉감이 정말 훌륭했어요.",
+   "blank": "изумительным",
+   "src": "made"
+  },
+  {
+   "text": "Голос солистки показался Светлане просто изумительным.",
+   "en": "The lead singer's voice seemed simply marvellous to Svetlana.",
+   "ko": "스베틀라나에게 리드 보컬의 목소리는 그야말로 황홀했어요.",
+   "blank": "изумительным",
    "src": "made"
   }
  ],
@@ -27515,6 +27883,22 @@
    "src": "tatoeba:5988554/odexed en:2387268/CK"
   }
  ],
+ "w|каблук": [
+  {
+   "text": "У туфель, которые заказал Михаил, оказался слишком высокий каблук.",
+   "en": "The shoes Mikhail ordered turned out to have too high a heel.",
+   "ko": "미하일이 주문한 구두는 굽이 너무 높았어요.",
+   "blank": "каблук",
+   "src": "made"
+  },
+  {
+   "text": "К концу концерта у Светланы отвалился каблук.",
+   "en": "By the end of the concert Svetlana's heel had come off.",
+   "ko": "콘서트가 끝날 무렵 스베틀라나의 구두 굽이 떨어져 나갔어요.",
+   "blank": "каблук",
+   "src": "made"
+  }
+ ],
  "w|кадр": [
   {
    "text": "Андрей вложил в конверт старый кадр, где они вдвоём стоят на мосту.",
@@ -28563,6 +28947,22 @@
    "en": "I live in this apartment.",
    "ko": "나는 이 아파트에 살아.",
    "blank": "квартире"
+  }
+ ],
+ "w|квитанция": [
+  {
+   "text": "Курьер отдал Михаилу посылку и электронную квитанцию.",
+   "en": "The courier gave Mikhail the parcel and an electronic receipt.",
+   "ko": "택배 기사는 미하일에게 소포와 전자 영수증을 건넸어요.",
+   "blank": "квитанцию",
+   "src": "made"
+  },
+  {
+   "text": "Светлана сохранила квитанцию о покупке билета на всякий случай.",
+   "en": "Svetlana kept the receipt for the ticket just in case.",
+   "ko": "스베틀라나는 혹시 몰라 표를 산 영수증을 챙겨 두었어요.",
+   "blank": "квитанцию",
+   "src": "made"
   }
  ],
  "w|кейс": [
@@ -30681,6 +31081,22 @@
    "src": "made"
   }
  ],
+ "w|конфиденциально": [
+  {
+   "text": "Магазин обещал хранить данные Михаила конфиденциально.",
+   "en": "The shop promised to keep Mikhail's data confidential.",
+   "ko": "가게는 미하일의 정보를 비밀로 지키겠다고 약속했어요.",
+   "blank": "конфиденциально",
+   "src": "made"
+  },
+  {
+   "text": "Организатор конфиденциально сообщил Светлане, что в конце будет сюрприз.",
+   "en": "The organiser told Svetlana confidentially that there would be a surprise at the end.",
+   "ko": "주최자는 스베틀라나에게 마지막에 깜짝 무대가 있다고 살짝 귀띔해 줬어요.",
+   "blank": "конфиденциально",
+   "src": "made"
+  }
+ ],
  "w|конфиденциальность": [
   {
    "text": "Павел подписал бумагу о конфиденциальности, прежде чем увидеть запасники.",
@@ -30822,6 +31238,22 @@
    "en": "In Maria's chess app the knight moves in an L shape, just as it should.",
    "ko": "마리아의 체스 앱에서 나이트는 규칙대로 ㄱ자 모양으로 움직여요.",
    "blank": "конь",
+   "src": "made"
+  }
+ ],
+ "w|конюшня": [
+  {
+   "text": "Рядом с поляной Андрей нашёл старую конюшню.",
+   "en": "Next to the clearing Andrei found an old stable.",
+   "ko": "안드레이는 공터 옆에서 오래된 마구간을 발견했어요.",
+   "blank": "конюшню",
+   "src": "made"
+  },
+  {
+   "text": "Ирина сошла на станции, чтобы навестить подругу, которая держит конюшню.",
+   "en": "Irina got off at the station to visit a friend who keeps a stable.",
+   "ko": "이리나는 마구간을 운영하는 친구를 만나려고 그 역에서 내렸어요.",
+   "blank": "конюшню",
    "src": "made"
   }
  ],
@@ -31979,6 +32411,22 @@
    "blank": "Крови"
   }
  ],
+ "w|крокодил": [
+  {
+   "text": "Андрей подключил фонарь к аккумулятору зажимом-крокодилом.",
+   "en": "Andrei connected the lamp to the battery with an alligator clip.",
+   "ko": "안드레이는 악어 집게로 랜턴을 배터리에 연결했어요.",
+   "blank": "крокодилом",
+   "src": "made"
+  },
+  {
+   "text": "Дети попутчицы читали Ирине сказку про крокодила.",
+   "en": "The fellow passenger's children read Irina a fairy tale about a crocodile.",
+   "ko": "길동무의 아이들이 이리나에게 악어 동화를 읽어 줬어요.",
+   "blank": "крокодила",
+   "src": "made"
+  }
+ ],
  "w|кролик": [
   {
    "text": "Возле палатки Сергей заметил дикого кролика.",
@@ -33045,6 +33493,22 @@
    "src": "made"
   }
  ],
+ "w|лак": [
+  {
+   "text": "Сестра попросила Михаила заказать ей красный лак для ногтей.",
+   "en": "Mikhail's sister asked him to order her some red nail polish.",
+   "ko": "미하일의 여동생은 빨간 매니큐어를 주문해 달라고 부탁했어요.",
+   "blank": "лак",
+   "src": "made"
+  },
+  {
+   "text": "Светлана накрасила ногти блестящим лаком под цвет платья.",
+   "en": "Svetlana painted her nails with glittery polish to match her dress.",
+   "ko": "스베틀라나는 원피스 색에 맞춰 반짝이는 매니큐어를 발랐어요.",
+   "blank": "лаком",
+   "src": "made"
+  }
+ ],
  "w|лампа": [
   {
    "text": "На чердаке Андрей отыскал бабушкину настольную лампу.",
@@ -33553,6 +34017,22 @@
    "src": "tatoeba:2890291/sharptoothed en:2890290/sharptoothed"
   }
  ],
+ "w|летучий": [
+  {
+   "text": "В сумерках над палаткой Андрея кружили летучие мыши.",
+   "en": "At dusk bats circled over Andrei's tent.",
+   "ko": "해 질 녘 안드레이의 텐트 위로 박쥐들이 맴돌았어요.",
+   "blank": "летучие",
+   "src": "made"
+  },
+  {
+   "text": "Ирина изучает летучие вещества и везёт на конференцию доклад.",
+   "en": "Irina studies volatile substances and is taking a paper to a conference.",
+   "ko": "이리나는 휘발성 물질을 연구하는데 학회에 발표문을 들고 가는 길이에요.",
+   "blank": "летучие",
+   "src": "made"
+  }
+ ],
  "w|лечение": [
   {
    "text": "Ты пробовала лечение гипнозом?",
@@ -33851,6 +34331,22 @@
    "ko": "엘리베이터 좀 잡아 줄래?",
    "blank": "лифт",
    "src": "tatoeba:6317373/marafon en:3043615/CK"
+  }
+ ],
+ "w|лифчик": [
+  {
+   "text": "Жена Михаила заказала спортивный лифчик для бега.",
+   "en": "Mikhail's wife ordered a sports bra for running.",
+   "ko": "미하일의 아내는 달리기용 스포츠 브라를 주문했어요.",
+   "blank": "лифчик",
+   "src": "made"
+  },
+  {
+   "text": "Светлана надела под концертное платье удобный лифчик без косточек.",
+   "en": "Under her concert dress Svetlana wore a comfortable bra without underwire.",
+   "ko": "스베틀라나는 공연용 원피스 안에 와이어 없는 편한 브래지어를 입었어요.",
+   "blank": "лифчик",
+   "src": "made"
   }
  ],
  "w|лихорадка": [
@@ -34357,6 +34853,22 @@
    "ko": "달은 하늘에 없을 때 어디로 가요?",
    "blank": "луна",
    "src": "tatoeba:4409746/Selena777 en:4387824/Hybrid"
+  }
+ ],
+ "w|лунный": [
+  {
+   "text": "Ночью Андрей шёл к палатке по лунной дорожке.",
+   "en": "At night Andrei walked to the tent along a path of moonlight.",
+   "ko": "밤에 안드레이는 달빛 비친 길을 따라 텐트로 갔어요.",
+   "blank": "лунной",
+   "src": "made"
+  },
+  {
+   "text": "Ирина не могла уснуть и любовалась лунным пейзажем за окном.",
+   "en": "Irina couldn't sleep and admired the moonlit landscape outside the window.",
+   "ko": "이리나는 잠이 오지 않아 창밖 달빛 풍경을 바라봤어요.",
+   "blank": "лунным",
+   "src": "made"
   }
  ],
  "w|луч": [
@@ -35643,6 +36155,22 @@
    "src": "made"
   }
  ],
+ "w|медальон": [
+  {
+   "text": "Михаил заказал серебряный медальон в подарок бабушке.",
+   "en": "Mikhail ordered a silver locket as a present for his grandmother.",
+   "ko": "미하일은 할머니께 드릴 은 로켓 목걸이를 주문했어요.",
+   "blank": "медальон",
+   "src": "made"
+  },
+  {
+   "text": "Певица подарила Светлане медальон со своим портретом.",
+   "en": "The singer gave Svetlana a locket with her portrait.",
+   "ko": "가수는 스베틀라나에게 자기 초상이 든 로켓을 선물했어요.",
+   "blank": "медальон",
+   "src": "made"
+  }
+ ],
  "w|медведь": [
   {
    "text": "Медведь зарычал, и я упала в обморок.",
@@ -36318,6 +36846,22 @@
    "en": "I take the subway to work.",
    "ko": "저는 지하철로 출근해요.",
    "blank": "метро",
+   "src": "made"
+  }
+ ],
+ "w|мех": [
+  {
+   "text": "У Андрея с собой старая шапка из овечьего меха.",
+   "en": "Andrei has an old sheepskin fur hat with him.",
+   "ko": "안드레이는 양털로 만든 낡은 모자를 가지고 왔어요.",
+   "blank": "меха",
+   "src": "made"
+  },
+  {
+   "text": "У соседки Ирины по купе воротник из лисьего меха.",
+   "en": "Irina's neighbour in the compartment has a fox fur collar.",
+   "ko": "같은 칸에 탄 이리나의 이웃은 여우털 깃을 달고 있어요.",
+   "blank": "меха",
    "src": "made"
   }
  ],
@@ -37245,6 +37789,22 @@
    "ko": "이 함수에서 모델을 학습시켜요.",
    "blank": "модель",
    "src": "tatoeba:13160513/EugeneGS en:13214518/EugeneGS"
+  }
+ ],
+ "w|модный": [
+  {
+   "text": "Михаил не гонится за модными вещами, ему важнее качество.",
+   "en": "Mikhail doesn't chase fashionable things; quality matters more to him.",
+   "ko": "미하일은 유행하는 물건을 좇지 않고 품질을 더 중요하게 여겨요.",
+   "blank": "модными",
+   "src": "made"
+  },
+  {
+   "text": "Светлана не любит модные клубы и предпочитает старые концертные залы.",
+   "en": "Svetlana doesn't like trendy clubs and prefers old concert halls.",
+   "ko": "스베틀라나는 유행하는 클럽보다 오래된 공연장을 좋아해요.",
+   "blank": "модные",
+   "src": "made"
   }
  ],
  "w|можно": [
@@ -38283,6 +38843,22 @@
    "blank": "нас"
   }
  ],
+ "w|мысленно": [
+  {
+   "text": "Перед сном Андрей мысленно прошёл весь завтрашний маршрут.",
+   "en": "Before going to sleep Andrei went over the whole of tomorrow's route in his head.",
+   "ko": "잠들기 전 안드레이는 내일 갈 길을 머릿속으로 다 짚어 봤어요.",
+   "blank": "мысленно",
+   "src": "made"
+  },
+  {
+   "text": "Ирина мысленно попрощалась с городом, когда поезд тронулся.",
+   "en": "Irina silently said goodbye to the city as the train pulled away.",
+   "ko": "기차가 출발하자 이리나는 속으로 도시와 작별했어요.",
+   "blank": "мысленно",
+   "src": "made"
+  }
+ ],
  "w|мыслить": [
   {
    "text": "Михаил умеет мыслить спокойно, даже когда всё идёт не по плану.",
@@ -38992,6 +39568,22 @@
    "en": "Olga pressed on the tent peg with her foot and it went easily into the ground.",
    "ko": "올가가 발로 말뚝을 누르자 땅에 쉽게 박혔어요.",
    "blank": "надавила",
+   "src": "made"
+  }
+ ],
+ "w|надвигаться": [
+  {
+   "text": "С запада надвигалась гроза, и Андрей укрепил палатку.",
+   "en": "A storm was approaching from the west, so Andrei secured the tent.",
+   "ko": "서쪽에서 폭풍이 다가오자 안드레이는 텐트를 단단히 고정했어요.",
+   "blank": "надвигалась",
+   "src": "made"
+  },
+  {
+   "text": "Ирина смотрела, как на поезд надвигаются тяжёлые тучи.",
+   "en": "Irina watched heavy clouds closing in on the train.",
+   "ko": "이리나는 먹구름이 기차 쪽으로 몰려오는 걸 바라봤어요.",
+   "blank": "надвигаются",
    "src": "made"
   }
  ],
@@ -41987,6 +42579,22 @@
    "src": "made"
   }
  ],
+ "w|незнакомый": [
+  {
+   "text": "Михаил не стал заказывать у незнакомого продавца без рейтинга.",
+   "en": "Mikhail didn't order from an unfamiliar seller with no rating.",
+   "ko": "미하일은 평점 없는 낯선 판매자에게는 주문하지 않았어요.",
+   "blank": "незнакомого",
+   "src": "made"
+  },
+  {
+   "text": "На бис группа сыграла незнакомую Светлане песню.",
+   "en": "For the encore the band played a song Svetlana didn't know.",
+   "ko": "앙코르로 밴드는 스베틀라나가 모르는 노래를 연주했어요.",
+   "blank": "незнакомую",
+   "src": "made"
+  }
+ ],
  "w|неизбежно": [
   {
    "text": "Перерыв в заседании неизбежно затянулся, и Алексей пошёл за кофе.",
@@ -42486,6 +43094,22 @@
    "en": "In the middle of the course an unexpected uphill climb awaited Anna.",
    "ko": "코스 중간에 뜻밖의 오르막이 안나를 기다리고 있었어요.",
    "blank": "неожиданный",
+   "src": "made"
+  }
+ ],
+ "w|неофициально": [
+  {
+   "text": "Андрей разбил лагерь неофициально, на поляне за заповедником.",
+   "en": "Andrei set up camp unofficially, in a clearing behind the nature reserve.",
+   "ko": "안드레이는 보호구역 뒤 공터에 비공식적으로 야영지를 차렸어요.",
+   "blank": "неофициально",
+   "src": "made"
+  },
+  {
+   "text": "Проводник неофициально разрешил Ирине пересесть в пустое купе.",
+   "en": "The attendant unofficially let Irina move to an empty compartment.",
+   "ko": "승무원은 이리나가 빈 칸으로 옮겨 앉게 슬쩍 허락해 줬어요.",
+   "blank": "неофициально",
    "src": "made"
   }
  ],
@@ -44283,6 +44907,22 @@
    "src": "made"
   }
  ],
+ "w|обезвредить": [
+  {
+   "text": "Антивирус обезвредил вирус в письме, которое пришло Михаилу от фальшивого магазина.",
+   "en": "The antivirus neutralised a virus in an email Mikhail got from a fake shop.",
+   "ko": "백신 프로그램이 가짜 쇼핑몰에서 미하일에게 온 메일 속 바이러스를 막아 냈어요.",
+   "blank": "обезвредил",
+   "src": "made"
+  },
+  {
+   "text": "Охранники быстро обезвредили пьяного зрителя рядом со Светланой.",
+   "en": "The guards quickly subdued a drunk spectator next to Svetlana.",
+   "ko": "경호원들은 스베틀라나 옆의 술 취한 관객을 재빨리 제압했어요.",
+   "blank": "обезвредили",
+   "src": "made"
+  }
+ ],
  "w|обезьяна": [
   {
    "text": "Сергей лазил по скалам так ловко, что друзья прозвали его обезьяной.",
@@ -44296,6 +44936,22 @@
    "en": "The mascot of Maria's startup is a cheerful cartoon monkey.",
    "ko": "마리아 스타트업의 마스코트는 명랑한 만화 원숭이예요.",
    "blank": "обезьяна",
+   "src": "made"
+  }
+ ],
+ "w|обезьянка": [
+  {
+   "text": "Дочка Андрея взяла в поход плюшевую обезьянку.",
+   "en": "Andrei's daughter brought a stuffed toy monkey on the trip.",
+   "ko": "안드레이의 딸은 캠핑에 원숭이 인형을 가져왔어요.",
+   "blank": "обезьянку",
+   "src": "made"
+  },
+  {
+   "text": "Мальчик в соседнем купе всю дорогу не выпускал из рук игрушечную обезьянку.",
+   "en": "The boy in the next compartment didn't let go of his toy monkey the whole way.",
+   "ko": "옆 칸 남자아이는 가는 내내 장난감 원숭이를 손에서 놓지 않았어요.",
+   "blank": "обезьянку",
    "src": "made"
   }
  ],
@@ -48043,6 +48699,22 @@
    "src": "made"
   }
  ],
+ "w|осматривать": [
+  {
+   "text": "Каждое утро Андрей осматривает палатку после ветра.",
+   "en": "Every morning Andrei inspects the tent after the wind.",
+   "ko": "안드레이는 매일 아침 바람이 분 뒤 텐트를 살펴봐요.",
+   "blank": "осматривает",
+   "src": "made"
+  },
+  {
+   "text": "На границе пограничники долго осматривали багаж Ирины.",
+   "en": "At the border the guards spent a long time inspecting Irina's luggage.",
+   "ko": "국경에서 국경수비대가 이리나의 짐을 오래 검사했어요.",
+   "blank": "осматривали",
+   "src": "made"
+  }
+ ],
  "w|осмелиться": [
   {
    "text": "Свидетель долго молчал, но всё же осмелился посмотреть Алексею в глаза.",
@@ -49233,6 +49905,22 @@
    "blank": "отца"
   }
  ],
+ "w|отзыв": [
+  {
+   "text": "Перед покупкой Михаил всегда читает отзывы.",
+   "en": "Before buying anything Mikhail always reads the reviews.",
+   "ko": "미하일은 물건을 사기 전에 늘 후기를 읽어요.",
+   "blank": "отзывы",
+   "src": "made"
+  },
+  {
+   "text": "После концерта Светлана написала восторженный отзыв о группе.",
+   "en": "After the concert Svetlana wrote a rave review of the band.",
+   "ko": "콘서트가 끝난 뒤 스베틀라나는 밴드에 대한 열광적인 후기를 썼어요.",
+   "blank": "отзыв",
+   "src": "made"
+  }
+ ],
  "w|отказ": [
   {
    "text": "Иван получил отказ, когда попросил перенести экзамен.",
@@ -49342,6 +50030,22 @@
    "en": "Anna declined the picnic invitation because prolonged rain was forecast.",
    "ko": "긴 비 예보가 있어서 안나는 소풍 초대를 거절했어요.",
    "blank": "отклонила",
+   "src": "made"
+  }
+ ],
+ "w|отключаться": [
+  {
+   "text": "В лесу у Андрея постоянно отключается связь.",
+   "en": "In the forest Andrei's phone signal keeps cutting out.",
+   "ko": "숲에서는 안드레이의 통신이 자꾸 끊겨요.",
+   "blank": "отключается",
+   "src": "made"
+  },
+  {
+   "text": "Ноутбук Ирины всё время отключается от вагонного интернета.",
+   "en": "Irina's laptop keeps disconnecting from the train's internet.",
+   "ko": "이리나의 노트북은 기차 인터넷에서 자꾸 연결이 끊겨요.",
+   "blank": "отключается",
    "src": "made"
   }
  ],
@@ -51383,6 +52087,22 @@
    "src": "tatoeba:12670527/marafon en:6381618/OsoHombre"
   }
  ],
+ "w|панда": [
+  {
+   "text": "На футболке у сына Андрея нарисована панда.",
+   "en": "There's a panda on the T-shirt of Andrei's son.",
+   "ko": "안드레이 아들의 티셔츠에는 판다가 그려져 있어요.",
+   "blank": "панда",
+   "src": "made"
+  },
+  {
+   "text": "На кружке у Ирины нарисована панда с бамбуком.",
+   "en": "Irina's mug has a panda with bamboo on it.",
+   "ko": "이리나의 머그잔에는 대나무를 든 판다가 그려져 있어요.",
+   "blank": "панда",
+   "src": "made"
+  }
+ ],
  "w|панель": [
   {
    "text": "На панели управления у Алексея замигала красная лампочка.",
@@ -52676,6 +53396,22 @@
    "en": "After the change of coach Olga began to play more confidently.",
    "ko": "코치가 바뀐 뒤 올가는 더 자신 있게 뛰기 시작했어요.",
    "blank": "перемены",
+   "src": "made"
+  }
+ ],
+ "w|переместить": [
+  {
+   "text": "Михаил решил переместить дорогие наушники в список желаний.",
+   "en": "Mikhail decided to move the expensive headphones to his wish list.",
+   "ko": "미하일은 비싼 헤드폰을 위시리스트로 옮기기로 했어요.",
+   "blank": "переместить",
+   "src": "made"
+  },
+  {
+   "text": "Администратор решил переместить Светлану на свободное место ближе к сцене.",
+   "en": "The manager decided to move Svetlana to a free seat closer to the stage.",
+   "ko": "관리자는 스베틀라나를 무대에 더 가까운 빈자리로 옮겨 주기로 했어요.",
+   "blank": "переместить",
    "src": "made"
   }
  ],
@@ -54863,6 +55599,22 @@
    "src": "tatoeba:4114726/Ooneykcall en:4111327/Dani6187"
   }
  ],
+ "w|поверх": [
+  {
+   "text": "Курьер положил коробку Михаила поверх других посылок.",
+   "en": "The courier put Mikhail's box on top of the other parcels.",
+   "ko": "택배 기사는 미하일의 상자를 다른 소포들 위에 올려 두었어요.",
+   "blank": "поверх",
+   "src": "made"
+  },
+  {
+   "text": "Светлана надела джинсовую куртку поверх платья.",
+   "en": "Svetlana put a denim jacket on over her dress.",
+   "ko": "스베틀라나는 원피스 위에 청재킷을 걸쳤어요.",
+   "blank": "поверх",
+   "src": "made"
+  }
+ ],
  "w|поверхность": [
   {
    "text": "Эта пустыня напоминает поверхность луны.",
@@ -55197,6 +55949,22 @@
    "src": "made"
   }
  ],
+ "w|повторный": [
+  {
+   "text": "Магазин дал Михаилу скидку на повторный заказ.",
+   "en": "The shop gave Mikhail a discount on his repeat order.",
+   "ko": "가게는 미하일의 재주문에 할인을 해 줬어요.",
+   "blank": "повторный",
+   "src": "made"
+  },
+  {
+   "text": "Светлана уже купила билет на повторный концерт в декабре.",
+   "en": "Svetlana has already bought a ticket for the repeat concert in December.",
+   "ko": "스베틀라나는 벌써 십이월 재공연 표를 샀어요.",
+   "blank": "повторный",
+   "src": "made"
+  }
+ ],
  "w|повторять": [
   {
    "text": "Сколько раз мне нужно тебе повторять?",
@@ -55323,6 +56091,22 @@
    "ko": "우리 죽을 수도 있었어.",
    "blank": "погибнуть",
    "src": "tatoeba:7993297/marafon en:6824204/CK"
+  }
+ ],
+ "w|поглотить": [
+  {
+   "text": "Туман быстро поглотил лодку, на которой плыл Андрей.",
+   "en": "The fog quickly swallowed up the boat Andrei was in.",
+   "ko": "안개가 안드레이가 탄 보트를 금세 삼켜 버렸어요.",
+   "blank": "поглотил",
+   "src": "made"
+  },
+  {
+   "text": "Темнота за окном поглотила последние огни города, и Ирина задремала.",
+   "en": "The darkness outside swallowed the last lights of the city, and Irina dozed off.",
+   "ko": "창밖 어둠이 도시의 마지막 불빛을 삼키자 이리나는 꾸벅 졸았어요.",
+   "blank": "поглотила",
+   "src": "made"
   }
  ],
  "w|поглядеть": [
@@ -59875,6 +60659,22 @@
    "src": "made"
   }
  ],
+ "w|порекомендовать": [
+  {
+   "text": "Лесник порекомендовал Андрею удобное место для ночлега.",
+   "en": "The forest ranger recommended a good place for Andrei to spend the night.",
+   "ko": "산림 관리인이 안드레이에게 하룻밤 묵기 좋은 곳을 추천해 줬어요.",
+   "blank": "порекомендовал",
+   "src": "made"
+  },
+  {
+   "text": "Проводница порекомендовала Ирине попробовать местные пирожки на станции.",
+   "en": "The attendant recommended that Irina try the local pies at the station.",
+   "ko": "여자 승무원은 이리나에게 역에서 파는 그 지방 피로시키를 먹어 보라고 권했어요.",
+   "blank": "порекомендовала",
+   "src": "made"
+  }
+ ],
  "w|порог": [
   {
    "text": "Каждое утро у порога редакции Дмитрия ждёт свежий тираж.",
@@ -60142,6 +60942,22 @@
    "en": "Tatiana decided to dedicate the weekend to testing the new version.",
    "ko": "타티야나는 주말을 새 버전 테스트에 쓰기로 했어요.",
    "blank": "посвятить",
+   "src": "made"
+  }
+ ],
+ "w|посвящение": [
+  {
+   "text": "Андрей взял в поход книгу с посвящением от деда.",
+   "en": "Andrei took on the trip a book with a dedication from his grandfather.",
+   "ko": "안드레이는 할아버지가 헌사를 써 준 책을 캠핑에 가져갔어요.",
+   "blank": "посвящением",
+   "src": "made"
+  },
+  {
+   "text": "Ирина дочитала посвящение и закрыла книгу.",
+   "en": "Irina finished reading the dedication and closed the book.",
+   "ko": "이리나는 헌사를 끝까지 읽고 책을 덮었어요.",
+   "blank": "посвящение",
    "src": "made"
   }
  ],
@@ -63815,6 +64631,22 @@
    "src": "made"
   }
  ],
+ "w|приблизиться": [
+  {
+   "text": "Андрей запретил детям приближаться к краю обрыва.",
+   "en": "Andrei forbade the children to go near the edge of the cliff.",
+   "ko": "안드레이는 아이들에게 절벽 끝으로 가까이 가지 말라고 했어요.",
+   "blank": "приближаться",
+   "src": "made"
+  },
+  {
+   "text": "Поезд медленно приближался к вокзалу, и Ирина взяла сумку.",
+   "en": "The train was slowly approaching the station, and Irina picked up her bag.",
+   "ko": "기차가 천천히 역에 다가가자 이리나는 가방을 챙겼어요.",
+   "blank": "приближался",
+   "src": "made"
+  }
+ ],
  "w|прибор": [
   {
    "text": "Андрей купил прибор, который ищет проводку в стенах.",
@@ -65193,6 +66025,22 @@
    "src": "tatoeba:13468094/Wezel en:8946691/sundown"
   }
  ],
+ "w|примерить": [
+  {
+   "text": "Михаил не смог примерить куртку и заказал её на размер больше.",
+   "en": "Mikhail couldn't try the jacket on, so he ordered it a size up.",
+   "ko": "미하일은 재킷을 입어 볼 수 없어서 한 치수 크게 주문했어요.",
+   "blank": "примерить",
+   "src": "made"
+  },
+  {
+   "text": "В палатке с сувенирами Светлана решила примерить футболку группы.",
+   "en": "At the merch stall Svetlana decided to try on the band's T-shirt.",
+   "ko": "기념품 천막에서 스베틀라나는 밴드 티셔츠를 입어 보기로 했어요.",
+   "blank": "примерить",
+   "src": "made"
+  }
+ ],
  "w|примерно": [
   {
    "text": "Что ты делала вчера примерно в это время?",
@@ -65680,6 +66528,22 @@
    "en": "Tatiana asked the neighbour's boy not to bother the goats.",
    "ko": "타티야나는 옆집 남자아이에게 염소들을 괴롭히지 말라고 했어요.",
    "blank": "приставать",
+   "src": "made"
+  }
+ ],
+ "w|пристать": [
+  {
+   "text": "Реклама нового телефона буквально пристала к Михаилу на всех сайтах.",
+   "en": "The ad for the new phone literally followed Mikhail around every website.",
+   "ko": "새 휴대폰 광고가 사이트마다 미하일을 졸졸 따라다녔어요.",
+   "blank": "пристала",
+   "src": "made"
+  },
+  {
+   "text": "К Светлане пристал навязчивый фанат, и охрана его увела.",
+   "en": "A pushy fan started bothering Svetlana, and security led him away.",
+   "ko": "성가신 팬이 스베틀라나에게 들러붙자 경호원이 그를 데려갔어요.",
+   "blank": "пристал",
    "src": "made"
   }
  ],
@@ -66959,6 +67823,22 @@
    "src": "tatoeba:5962774/marafon en:5848279/CK"
   }
  ],
+ "w|прозвать": [
+  {
+   "text": "Друзья в шутку прозвали Михаила королём скидок.",
+   "en": "His friends jokingly nicknamed Mikhail the king of discounts.",
+   "ko": "친구들은 장난으로 미하일을 할인의 왕이라고 불렀어요.",
+   "blank": "прозвали",
+   "src": "made"
+  },
+  {
+   "text": "Фанаты прозвали солистку, которую обожает Светлана, северным соловьём.",
+   "en": "Fans nicknamed the singer Svetlana adores the northern nightingale.",
+   "ko": "팬들은 스베틀라나가 아주 좋아하는 그 가수를 북쪽의 나이팅게일이라고 불렀어요.",
+   "blank": "прозвали",
+   "src": "made"
+  }
+ ],
  "w|прозвище": [
   {
    "text": "Друзья до сих пор называют Михаила школьным прозвищем.",
@@ -68093,6 +68973,22 @@
    "src": "made"
   }
  ],
+ "w|прохладно": [
+  {
+   "text": "К вечеру в лесу стало прохладно, и Андрей надел куртку.",
+   "en": "By evening it got cool in the forest, and Andrei put on his jacket.",
+   "ko": "저녁이 되자 숲이 서늘해져서 안드레이는 재킷을 입었어요.",
+   "blank": "прохладно",
+   "src": "made"
+  },
+  {
+   "text": "Ночью в вагоне было прохладно, и Ирина попросила второе одеяло.",
+   "en": "At night it was cool in the carriage, and Irina asked for a second blanket.",
+   "ko": "밤에 객차가 서늘해서 이리나는 담요를 하나 더 달라고 했어요.",
+   "blank": "прохладно",
+   "src": "made"
+  }
+ ],
  "w|проход": [
   {
    "text": "Сергей попросил туристов освободить проход к лестнице.",
@@ -68817,6 +69713,22 @@
    "ko": "죄송해요, 놀라게 하려던 건 아니었어요.",
    "blank": "пугать",
    "src": "tatoeba:7911754/marafon en:2396319/CK"
+  }
+ ],
+ "w|пуговица": [
+  {
+   "text": "На новой рубашке Михаила не хватало одной пуговицы.",
+   "en": "Mikhail's new shirt was missing a button.",
+   "ko": "미하일의 새 셔츠에는 단추 하나가 없었어요.",
+   "blank": "пуговицы",
+   "src": "made"
+  },
+  {
+   "text": "В толпе Светлана потеряла пуговицу от пальто.",
+   "en": "In the crowd Svetlana lost a button from her coat.",
+   "ko": "인파 속에서 스베틀라나는 코트 단추 하나를 잃어버렸어요.",
+   "blank": "пуговицу",
+   "src": "made"
   }
  ],
  "w|пузырь": [
@@ -69633,6 +70545,22 @@
    "src": "tatoeba:639242/shanghainese en:262967"
   }
  ],
+ "w|радуга": [
+  {
+   "text": "После дождя над озером Андрей увидел яркую радугу.",
+   "en": "After the rain Andrei saw a bright rainbow over the lake.",
+   "ko": "비가 그친 뒤 안드레이는 호수 위에 뜬 선명한 무지개를 봤어요.",
+   "blank": "радугу",
+   "src": "made"
+  },
+  {
+   "text": "Пассажиры бросились к окнам, когда Ирина показала на радугу.",
+   "en": "The passengers rushed to the windows when Irina pointed to the rainbow.",
+   "ko": "이리나가 무지개를 가리키자 승객들이 창가로 몰려갔어요.",
+   "blank": "радугу",
+   "src": "made"
+  }
+ ],
  "w|раз": [
   {
    "text": "Ещё раз, пожалуйста.",
@@ -69994,6 +70922,22 @@
    "en": "With the warm weather Natalya untied the sacks of stored tulip bulbs.",
    "ko": "날이 따뜻해지자 나탈리야는 보관해 둔 튤립 알뿌리 자루를 풀었어요.",
    "blank": "развязала",
+   "src": "made"
+  }
+ ],
+ "w|разгадать": [
+  {
+   "text": "Михаил никак не мог разгадать, куда пропала его посылка.",
+   "en": "Mikhail just couldn't figure out where his parcel had gone.",
+   "ko": "미하일은 소포가 어디로 사라졌는지 도무지 알 수 없었어요.",
+   "blank": "разгадать",
+   "src": "made"
+  },
+  {
+   "text": "Светлана так и не смогла разгадать смысл последней песни.",
+   "en": "Svetlana never managed to work out the meaning of the last song.",
+   "ko": "스베틀라나는 마지막 노래의 뜻을 끝내 알아내지 못했어요.",
+   "blank": "разгадать",
    "src": "made"
   }
  ],
@@ -71312,6 +72256,22 @@
    "en": "The market guard passed on to Maria an order to move her car out of the aisle.",
    "ko": "시장 경비원은 마리야에게 통로에서 차를 빼라는 지시를 전했어요.",
    "blank": "распоряжение",
+   "src": "made"
+  }
+ ],
+ "w|распродажа": [
+  {
+   "text": "Михаил ждал распродажу, чтобы купить кроссовки дешевле.",
+   "en": "Mikhail waited for the sale to buy trainers more cheaply.",
+   "ko": "미하일은 운동화를 싸게 사려고 세일을 기다렸어요.",
+   "blank": "распродажу",
+   "src": "made"
+  },
+  {
+   "text": "После шоу в фойе началась распродажа старых альбомов, и Светлана купила два.",
+   "en": "After the show a sale of old albums started in the foyer, and Svetlana bought two.",
+   "ko": "공연 뒤 로비에서 옛 앨범 할인 판매가 시작돼 스베틀라나는 두 장을 샀어요.",
+   "blank": "распродажа",
    "src": "made"
   }
  ],
@@ -73931,6 +74891,22 @@
    "src": "made"
   }
  ],
+ "w|ручей": [
+  {
+   "text": "Андрей набрал воды из холодного ручья.",
+   "en": "Andrei fetched water from the cold stream.",
+   "ko": "안드레이는 차가운 시냇물을 떠 왔어요.",
+   "blank": "ручья",
+   "src": "made"
+  },
+  {
+   "text": "Поезд, в котором ехала Ирина, проехал мост над горным ручьём.",
+   "en": "The train Irina was on crossed a bridge over a mountain stream.",
+   "ko": "이리나가 탄 기차는 산골 시냇물 위 다리를 지나갔어요.",
+   "blank": "ручьём",
+   "src": "made"
+  }
+ ],
  "w|ручка": [
   {
    "text": "Моя ручка не пишет, что вы с ней сделали?",
@@ -73960,6 +74936,22 @@
    "en": "Tatiana bought a wool sweater, hand-knitted, from her neighbour.",
    "ko": "타티야나는 이웃에게서 손으로 뜬 털 스웨터를 샀어요.",
    "blank": "ручной",
+   "src": "made"
+  }
+ ],
+ "w|рушиться": [
+  {
+   "text": "Старый мост через реку начал рушиться, и Андрей пошёл в обход.",
+   "en": "The old bridge over the river was starting to collapse, so Andrei took a detour.",
+   "ko": "강 위 낡은 다리가 무너지기 시작해서 안드레이는 돌아서 갔어요.",
+   "blank": "рушиться",
+   "src": "made"
+  },
+  {
+   "text": "Из окна Ирина видела, как рушится старая водонапорная башня.",
+   "en": "From the window Irina watched an old water tower crumbling.",
+   "ko": "이리나는 창밖으로 낡은 급수탑이 무너져 내리는 걸 봤어요.",
+   "blank": "рушится",
    "src": "made"
   }
  ],
@@ -74339,6 +75331,22 @@
    "blank": "сама"
   }
  ],
+ "w|самка": [
+  {
+   "text": "Андрей заметил у реки самку оленя с детёнышем.",
+   "en": "Andrei spotted a female deer with her young by the river.",
+   "ko": "안드레이는 강가에서 새끼를 데리고 있는 암사슴을 봤어요.",
+   "blank": "самку",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик рассказал Ирине, что самка кукушки не высиживает птенцов.",
+   "en": "A fellow passenger told Irina that a female cuckoo doesn't hatch its own chicks.",
+   "ko": "길동무가 이리나에게 뻐꾸기 암컷은 알을 직접 품지 않는다고 알려 줬어요.",
+   "blank": "самка",
+   "src": "made"
+  }
+ ],
  "w|самозащита": [
   {
    "text": "Андрей спорил с другом, можно ли назвать поступок героя самозащитой.",
@@ -74541,6 +75549,22 @@
    "en": "Don't try to run off.",
    "ko": "도망치려고 하지 마.",
    "blank": "сбежать"
+  }
+ ],
+ "w|сбережение": [
+  {
+   "text": "На новый ноутбук Михаил потратил почти все сбережения.",
+   "en": "Mikhail spent almost all his savings on the new laptop.",
+   "ko": "미하일은 새 노트북에 저축한 돈을 거의 다 썼어요.",
+   "blank": "сбережения",
+   "src": "made"
+  },
+  {
+   "text": "Светлана отложила из сбережений на билеты в первый ряд.",
+   "en": "Svetlana set aside money from her savings for front-row tickets.",
+   "ko": "스베틀라나는 맨 앞줄 표를 사려고 저축에서 돈을 떼어 놓았어요.",
+   "blank": "сбережений",
+   "src": "made"
   }
  ],
  "w|сбивать": [
@@ -74891,6 +75915,22 @@
    "src": "made"
   }
  ],
+ "w|световой": [
+  {
+   "text": "Михаил заказал к празднику световую гирлянду для балкона.",
+   "en": "Mikhail ordered a string of lights for the balcony for the holiday.",
+   "ko": "미하일은 명절에 맞춰 발코니에 걸 전구 장식을 주문했어요.",
+   "blank": "световую",
+   "src": "made"
+  },
+  {
+   "text": "Светлану так поразило световое шоу, что она забыла снимать видео.",
+   "en": "The light show amazed Svetlana so much that she forgot to film it.",
+   "ko": "조명 쇼에 너무 감탄해서 스베틀라나는 영상 찍는 것도 잊었어요.",
+   "blank": "световое",
+   "src": "made"
+  }
+ ],
  "w|свеча": [
   {
    "text": "Павел зажёг на столе ароматную свечу.",
@@ -74964,6 +76004,22 @@
    "en": "The early blossoming of bird cherry is a sign of a warm spring, Anna believes.",
    "ko": "안나는 귀룽나무 꽃이 일찍 피면 봄이 따뜻하다는 증거라고 생각해요.",
    "blank": "свидетельствует",
+   "src": "made"
+  }
+ ],
+ "w|свинец": [
+  {
+   "text": "Андрей отлил грузила для удочки из свинца.",
+   "en": "Andrei cast weights for his fishing rod out of lead.",
+   "ko": "안드레이는 납으로 낚싯대 봉돌을 만들었어요.",
+   "blank": "свинца",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик Ирины рассказал, как раньше в трубы добавляли свинец.",
+   "en": "Irina's fellow passenger told her how lead used to be added to pipes.",
+   "ko": "이리나의 길동무는 예전에는 수도관에 납을 넣었다는 이야기를 해 줬어요.",
+   "blank": "свинец",
    "src": "made"
   }
  ],
@@ -75969,6 +77025,22 @@
    "src": "tatoeba:3330731/odexed en:3159575"
   }
  ],
+ "w|сено": [
+  {
+   "text": "Первую ночь Андрей спал в палатке на мягком сене.",
+   "en": "The first night Andrei slept in the tent on soft hay.",
+   "ko": "첫날 밤 안드레이는 텐트 안 푹신한 건초 위에서 잤어요.",
+   "blank": "сене",
+   "src": "made"
+  },
+  {
+   "text": "Из окна поезда Ирина видела стога сена на полях.",
+   "en": "From the train window Irina saw haystacks in the fields.",
+   "ko": "기차 창밖으로 이리나는 들판의 건초 더미를 봤어요.",
+   "blank": "сена",
+   "src": "made"
+  }
+ ],
  "w|сентябрь": [
   {
    "text": "Для Сергея настоящая осень начинается не в сентябре, а с первым холодным дождём.",
@@ -75982,6 +77054,22 @@
    "en": "Maria hadn't seen her school friends since last September.",
    "ko": "마리아는 지난 구월 이후로 학교 친구들을 못 봤어요.",
    "blank": "сентября",
+   "src": "made"
+  }
+ ],
+ "w|сера": [
+  {
+   "text": "Возле горячего источника Андрей почувствовал запах серы.",
+   "en": "Near the hot spring Andrei caught the smell of sulphur.",
+   "ko": "온천 근처에서 안드레이는 유황 냄새를 맡았어요.",
+   "blank": "серы",
+   "src": "made"
+  },
+  {
+   "text": "Рядом с заводом за окном пахло серой, и Ирина закрыла форточку.",
+   "en": "Near the factory outside it smelled of sulphur, and Irina shut the small window.",
+   "ko": "창밖 공장 근처에서 유황 냄새가 나서 이리나는 작은 창을 닫았어요.",
+   "blank": "серой",
    "src": "made"
   }
  ],
@@ -76649,6 +77737,22 @@
    "en": "In a situation like this, better keep quiet.",
    "ko": "이런 상황에서는 그냥 입을 다물어.",
    "blank": "ситуации"
+  }
+ ],
+ "w|сияние": [
+  {
+   "text": "Андрей долго смотрел на сияние звёзд над озером.",
+   "en": "Andrei gazed for a long time at the shining stars over the lake.",
+   "ko": "안드레이는 호수 위 별빛을 오래 바라봤어요.",
+   "blank": "сияние",
+   "src": "made"
+  },
+  {
+   "text": "Северное сияние Ирина впервые увидела из окна поезда.",
+   "en": "Irina saw the northern lights for the first time from a train window.",
+   "ko": "이리나는 기차 창밖으로 오로라를 처음 봤어요.",
+   "blank": "сияние",
+   "src": "made"
   }
  ],
  "w|сиять": [
@@ -82047,6 +83151,22 @@
    "src": "made"
   }
  ],
+ "w|сталь": [
+  {
+   "text": "Котелок у Андрея из нержавеющей стали.",
+   "en": "Andrei's cooking pot is made of stainless steel.",
+   "ko": "안드레이의 캠핑 냄비는 스테인리스강으로 만들었어요.",
+   "blank": "стали",
+   "src": "made"
+  },
+  {
+   "text": "Колёса из стали мерно стучали под вагоном, где спала Ирина.",
+   "en": "The steel wheels knocked steadily under the carriage where Irina slept.",
+   "ko": "이리나가 자던 객차 아래에서 강철 바퀴가 일정하게 덜컹거렸어요.",
+   "blank": "стали",
+   "src": "made"
+  }
+ ],
  "w|стальной": [
   {
    "text": "У входа в зал суда стояла стальная рамка металлоискателя.",
@@ -83267,6 +84387,22 @@
    "ko": "스트레스를 풀려고 운동해요.",
    "blank": "стресс",
    "src": "tatoeba:9958096/Ooneykcall en:9956959/Akh2403"
+  }
+ ],
+ "w|стрижка": [
+  {
+   "text": "Михаил купил в интернете машинку для стрижки волос.",
+   "en": "Mikhail bought a hair clipper online.",
+   "ko": "미하일은 인터넷에서 이발기를 샀어요.",
+   "blank": "стрижки",
+   "src": "made"
+  },
+  {
+   "text": "Перед концертом Светлана сделала новую короткую стрижку.",
+   "en": "Before the concert Svetlana got a new short haircut.",
+   "ko": "콘서트 전에 스베틀라나는 짧은 머리로 새로 잘랐어요.",
+   "blank": "стрижку",
+   "src": "made"
   }
  ],
  "w|строгий": [
@@ -87121,6 +88257,22 @@
    "src": "made"
   }
  ],
+ "w|треугольник": [
+  {
+   "text": "Андрей сложил дрова для костра треугольником.",
+   "en": "Andrei stacked the firewood for the campfire in a triangle.",
+   "ko": "안드레이는 모닥불 장작을 삼각형으로 쌓았어요.",
+   "blank": "треугольником",
+   "src": "made"
+  },
+  {
+   "text": "Сын Ирины рисовал треугольники на запотевшем стекле.",
+   "en": "Irina's son drew triangles on the misted glass.",
+   "ko": "이리나의 아들은 김 서린 유리창에 삼각형을 그렸어요.",
+   "blank": "треугольники",
+   "src": "made"
+  }
+ ],
  "w|трещина": [
   {
    "text": "Михаил заметил трещину в днище котелка и расстроился.",
@@ -89937,6 +91089,22 @@
    "src": "made"
   }
  ],
+ "w|уместно": [
+  {
+   "text": "Андрей решил, что шутить у ночного костра вполне уместно.",
+   "en": "Andrei decided that joking around the campfire at night was perfectly fitting.",
+   "ko": "안드레이는 밤 모닥불 가에서 농담하는 건 딱 어울린다고 생각했어요.",
+   "blank": "уместно",
+   "src": "made"
+  },
+  {
+   "text": "Ирина спросила, уместно ли есть в купе с сильным запахом.",
+   "en": "Irina asked whether it was appropriate to eat strong-smelling food in the compartment.",
+   "ko": "이리나는 칸 안에서 냄새가 강한 음식을 먹어도 되는지 물었어요.",
+   "blank": "уместно",
+   "src": "made"
+  }
+ ],
  "w|уметь": [
   {
    "text": "Надо уметь молчать.",
@@ -90681,6 +91849,22 @@
    "ko": "노력을 기울여야 해요.",
    "blank": "усилие",
    "src": "tatoeba:4893882/odexed en:687950/lukaszpp"
+  }
+ ],
+ "w|усилить": [
+  {
+   "text": "Ветер усилил пламя, и Андрей отодвинул рюкзаки от костра.",
+   "en": "The wind made the flames stronger, and Andrei moved the backpacks away from the fire.",
+   "ko": "바람에 불길이 세지자 안드레이는 배낭을 모닥불에서 멀리 옮겼어요.",
+   "blank": "усилил",
+   "src": "made"
+  },
+  {
+   "text": "Стук колёс только усилил сонливость Ирины.",
+   "en": "The clatter of the wheels only increased Irina's drowsiness.",
+   "ko": "바퀴 소리에 이리나는 더 졸렸어요.",
+   "blank": "усилил",
+   "src": "made"
   }
  ],
  "w|ускользнуть": [
@@ -93030,6 +94214,22 @@
    "en": "In history class Irina drew a hut of primitive people.",
    "ko": "역사 시간에 이리나는 원시인의 오두막을 그렸어요.",
    "blank": "хижину",
+   "src": "made"
+  }
+ ],
+ "w|химикат": [
+  {
+   "text": "Андрей моет посуду без химикатов, чтобы не загрязнять озеро.",
+   "en": "Andrei washes the dishes without chemicals so as not to pollute the lake.",
+   "ko": "안드레이는 호수를 더럽히지 않으려고 화학 세제 없이 설거지를 해요.",
+   "blank": "химикатов",
+   "src": "made"
+  },
+  {
+   "text": "Ирина читала статью о химикатах в сельском хозяйстве.",
+   "en": "Irina was reading an article about chemicals in agriculture.",
+   "ko": "이리나는 농업에 쓰이는 화학 약품에 관한 기사를 읽었어요.",
+   "blank": "химикатах",
    "src": "made"
   }
  ],
@@ -95553,6 +96753,22 @@
    "src": "tatoeba:10165503/marafon en:5228913/AlanF_US"
   }
  ],
+ "w|чулок": [
+  {
+   "text": "Михаил заказал бабушке шерстяные чулки на зиму.",
+   "en": "Mikhail ordered his grandmother woollen stockings for the winter.",
+   "ko": "미하일은 할머니께 겨울용 털양말을 주문해 드렸어요.",
+   "blank": "чулки",
+   "src": "made"
+  },
+  {
+   "text": "На старой афише в фойе Светлана увидела певицу в шёлковых чулках.",
+   "en": "On an old poster in the foyer Svetlana saw the singer in silk stockings.",
+   "ko": "로비의 옛 포스터에서 스베틀라나는 비단 스타킹을 신은 가수를 봤어요.",
+   "blank": "чулках",
+   "src": "made"
+  }
+ ],
  "w|чума": [
   {
    "text": "В холле больницы Никита читал статью об эпидемии чумы в Средние века.",
@@ -95738,6 +96954,22 @@
    "en": "Anna was watching a film in which someone tried to blackmail a nurse with photos.",
    "ko": "안나는 누군가 사진으로 간호사를 협박하려는 영화를 봤어요.",
    "blank": "шантажировать",
+   "src": "made"
+  }
+ ],
+ "w|шапка": [
+  {
+   "text": "Михаил заказал маме тёплую вязаную шапку.",
+   "en": "Mikhail ordered a warm knitted hat for his mum.",
+   "ko": "미하일은 엄마에게 드릴 따뜻한 털모자를 주문했어요.",
+   "blank": "шапку",
+   "src": "made"
+  },
+  {
+   "text": "На зимнем концерте под открытым небом Светлана не снимала шапку.",
+   "en": "At the open-air winter concert Svetlana kept her hat on.",
+   "ko": "야외 겨울 콘서트에서 스베틀라나는 모자를 벗지 않았어요.",
+   "blank": "шапку",
    "src": "made"
   }
  ],
@@ -96281,6 +97513,22 @@
    "src": "made"
   }
  ],
+ "w|шорты": [
+  {
+   "text": "Михаил заказал на лето две пары лёгких шорт.",
+   "en": "Mikhail ordered two pairs of light shorts for the summer.",
+   "ko": "미하일은 여름에 입을 가벼운 반바지 두 벌을 주문했어요.",
+   "blank": "шорт",
+   "src": "made"
+  },
+  {
+   "text": "Светлана пришла на летний концерт в джинсовых шортах.",
+   "en": "Svetlana came to the summer concert in denim shorts.",
+   "ko": "스베틀라나는 청반바지를 입고 여름 콘서트에 왔어요.",
+   "blank": "шортах",
+   "src": "made"
+  }
+ ],
  "w|шоссе": [
   {
    "text": "Я попал в пробку на скоростном шоссе.",
@@ -96702,6 +97950,22 @@
    "en": "Because of smoke in the next carriage an evacuation was announced, and Svetlana went out onto the platform.",
    "ko": "옆 객차에서 연기가 나서 대피 안내가 나왔고 스베틀라나는 승강장으로 나갔어요.",
    "blank": "эвакуацию",
+   "src": "made"
+  }
+ ],
+ "w|эвакуировать": [
+  {
+   "text": "Из-за пожарной тревоги склад эвакуировали, и заказ Михаила задержался.",
+   "en": "Because of a fire alarm the warehouse was evacuated, and Mikhail's order was delayed.",
+   "ko": "화재 경보로 창고 직원들이 대피하는 바람에 미하일의 주문이 늦어졌어요.",
+   "blank": "эвакуировали",
+   "src": "made"
+  },
+  {
+   "text": "Из-за задымления зрителей эвакуировали, и Светлана ждала на улице.",
+   "en": "Because of smoke the audience was evacuated, and Svetlana waited outside.",
+   "ko": "연기 때문에 관객들이 대피해서 스베틀라나는 밖에서 기다렸어요.",
+   "blank": "эвакуировали",
    "src": "made"
   }
  ],
@@ -97638,6 +98902,22 @@
    "en": "A fellow passenger told Natalia that he used to work as an engineer at a nuclear reactor.",
    "ko": "같은 칸 승객은 나탈리야에게 예전에 원자로 기술자로 일했다고 말했어요.",
    "blank": "ядерном",
+   "src": "made"
+  }
+ ],
+ "w|ядовитый": [
+  {
+   "text": "Андрей предупредил детей, что эти ягоды ядовитые.",
+   "en": "Andrei warned the children that these berries are poisonous.",
+   "ko": "안드레이는 아이들에게 이 열매는 독이 있다고 일러 줬어요.",
+   "blank": "ядовитые",
+   "src": "made"
+  },
+  {
+   "text": "Ирина прочитала в журнале, что в этих краях живёт ядовитая змея.",
+   "en": "Irina read in a magazine that a venomous snake lives in these parts.",
+   "ko": "이리나는 잡지에서 이 지역에 독사가 산다는 글을 읽었어요.",
+   "blank": "ядовитая",
    "src": "made"
   }
  ],

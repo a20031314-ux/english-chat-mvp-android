@@ -3041,6 +3041,22 @@
    "src": "made"
   }
  ],
+ "w|أسطوري": [
+  {
+   "text": "صار كرم جار أحمد أسطوريا في الحي.",
+   "en": "Ahmed's neighbor's generosity became legendary in the neighborhood.",
+   "ko": "아흐마드 이웃의 너그러움은 동네에서 전설이 됐어요.",
+   "blank": "أسطوريا",
+   "src": "made"
+  },
+  {
+   "text": "حكى الدليل لمريم قصة طائر أسطوري يعيش في الجبل.",
+   "en": "The guide told Maryam the story of a legendary bird that lives on the mountain.",
+   "ko": "안내인은 마르얌에게 산에 산다는 전설의 새 이야기를 해 줬어요.",
+   "blank": "أسطوري",
+   "src": "made"
+  }
+ ],
  "w|أسطول": [
   {
    "text": "تملك الشركة التي يدافع عنها أحمد أسطولا من شاحنات النقل.",
@@ -7527,6 +7543,22 @@
    "blank": "إحدى"
   }
  ],
+ "w|إحراج": [
+  {
+   "text": "سبب صوت التلفاز العالي إحراجا لأحمد أمام الجيران.",
+   "en": "The loud TV caused Ahmed embarrassment in front of the neighbors.",
+   "ko": "텔레비전 소리가 너무 커서 아흐마드는 이웃들 앞에서 민망했어요.",
+   "blank": "إحراجا",
+   "src": "made"
+  },
+  {
+   "text": "تجنبت مريم إحراج صديقتها حين نسيت الخيمة.",
+   "en": "Maryam avoided embarrassing her friend when she forgot the tent.",
+   "ko": "친구가 텐트를 깜빡했을 때 마르얌은 친구가 민망하지 않게 넘어갔어요.",
+   "blank": "إحراج",
+   "src": "made"
+  }
+ ],
  "w|إحساس": [
   {
    "text": "لدي إحساس أن شيئًا جيدًا سيحدث.",
@@ -7692,6 +7724,22 @@
    "en": "Fatima says reading increases children's understanding of the world.",
    "ko": "파티마는 독서가 아이들이 세상을 이해하는 힘을 키운다고 말해요.",
    "blank": "إدراك",
+   "src": "made"
+  }
+ ],
+ "w|إدلاء": [
+  {
+   "text": "رفض أحمد الإدلاء برأيه في خلاف الجارين.",
+   "en": "Ahmed refused to give his opinion on the two neighbors' dispute.",
+   "ko": "아흐마드는 두 이웃의 다툼에 대해 의견을 내지 않았어요.",
+   "blank": "الإدلاء",
+   "src": "made"
+  },
+  {
+   "text": "امتنعت مريم عن الإدلاء بأي تعليق حين احترق العشاء.",
+   "en": "Maryam refrained from making any comment when dinner burned.",
+   "ko": "저녁이 타 버렸을 때 마르얌은 아무 말도 하지 않았어요.",
+   "blank": "الإدلاء",
    "src": "made"
   }
  ],
@@ -10551,6 +10599,22 @@
    "src": "made"
   }
  ],
+ "w|احتجاز": [
+  {
+   "text": "اعترض أحمد على احتجاز البلدية لسيارة جاره.",
+   "en": "Ahmed objected to the municipality impounding his neighbor's car.",
+   "ko": "아흐마드는 구청이 이웃의 차를 견인해 간 것에 항의했어요.",
+   "blank": "احتجاز",
+   "src": "made"
+  },
+  {
+   "text": "أدى السيل إلى احتجاز مريم وأصدقائها في المخيم يومين.",
+   "en": "The flood left Maryam and her friends stranded at the camp for two days.",
+   "ko": "급류 때문에 마르얌 일행은 이틀 동안 캠핑장에 발이 묶였어요.",
+   "blank": "احتجاز",
+   "src": "made"
+  }
+ ],
  "w|احترام": [
   {
    "text": "العلاقات الناجحة تحتاج إلى احترام متبادل.",
@@ -12338,6 +12402,22 @@
    "en": "At the station, Nour heard a call for the owner of an abandoned blue bag.",
    "ko": "누르는 역에서 주인 없는 파란 가방의 주인을 찾는 방송을 들었어요.",
    "blank": "استدعاء",
+   "src": "made"
+  }
+ ],
+ "w|استدعى": [
+  {
+   "text": "استدعى أحمد السباك ليصلح تسرب الماء عند الجيران.",
+   "en": "Ahmed called the plumber to fix the water leak at the neighbors'.",
+   "ko": "아흐마드는 이웃집 물이 새서 배관공을 불렀어요.",
+   "blank": "استدعى",
+   "src": "made"
+  },
+  {
+   "text": "استدعت مريم الحارس حين رأت أفعى قرب الخيمة.",
+   "en": "Maryam called the ranger when she saw a snake near the tent.",
+   "ko": "마르얌은 텐트 근처에서 뱀을 보고 관리인을 불렀어요.",
+   "blank": "استدعت",
    "src": "made"
   }
  ],
@@ -16227,6 +16307,22 @@
    "src": "made"
   }
  ],
+ "w|امتداد": [
+  {
+   "text": "زرع الجيران الورد على امتداد الشارع، وساعدهم أحمد.",
+   "en": "The neighbors planted roses along the length of the street, and Ahmed helped them.",
+   "ko": "이웃들이 길을 따라 장미를 심었고 아흐마드도 거들었어요.",
+   "blank": "امتداد",
+   "src": "made"
+  },
+  {
+   "text": "مشت مريم على امتداد النهر حتى الغروب.",
+   "en": "Maryam walked along the river until sunset.",
+   "ko": "마르얌은 해 질 녘까지 강을 따라 걸었어요.",
+   "blank": "امتداد",
+   "src": "made"
+  }
+ ],
  "w|امتعاض": [
   {
    "text": "ظهر الامتعاض على وجه خالد حين تأخر أخوه عن الموعد.",
@@ -17170,6 +17266,22 @@
    "en": "A quarrel broke out between two swimmers over the lane, and Layla stepped in to calm them down.",
    "ko": "레인을 두고 두 사람이 다투기 시작해서 라일라가 끼어들어 말렸어요.",
    "blank": "اندلعت",
+   "src": "made"
+  }
+ ],
+ "w|اندماج": [
+  {
+   "text": "ساعد أحمد العائلة الجديدة على الاندماج في الحي.",
+   "en": "Ahmed helped the new family settle into the neighborhood.",
+   "ko": "아흐마드는 새로 온 가족이 동네에 어울리도록 도왔어요.",
+   "blank": "الاندماج",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت مريم اندماج الأطفال السريع في ألعاب المخيم.",
+   "en": "Maryam noticed how quickly the children joined in the camp games.",
+   "ko": "마르얌은 아이들이 캠프 놀이에 금방 섞이는 걸 봤어요.",
+   "blank": "اندماج",
    "src": "made"
   }
  ],
@@ -18357,6 +18469,22 @@
    "en": "The weather became calm after the storm.",
    "ko": "폭풍 후에 날씨가 조용해졌어.",
    "blank": "بات"
+  }
+ ],
+ "w|باحة": [
+  {
+   "text": "يراقب أحمد أطفال الجيران من النافذة وهم يلعبون في باحة العمارة.",
+   "en": "Ahmed watches the neighbors' children from the window as they play in the building's courtyard.",
+   "ko": "아흐마드는 창문으로 건물 마당에서 노는 이웃 아이들을 지켜봐요.",
+   "blank": "باحة",
+   "src": "made"
+  },
+  {
+   "text": "نصبت مريم الخيمة في باحة بيت ريفي.",
+   "en": "Maryam pitched the tent in the courtyard of a country house.",
+   "ko": "마르얌은 시골집 마당에 텐트를 쳤어요.",
+   "blank": "باحة",
+   "src": "made"
   }
  ],
  "w|باحث": [
@@ -20669,6 +20797,22 @@
    "blank": "بصمة"
   }
  ],
+ "w|بصيرة": [
+  {
+   "text": "لجار أحمد العجوز بصيرة تجعله يفهم الناس بسرعة.",
+   "en": "Ahmed's old neighbor has an insight that lets him understand people quickly.",
+   "ko": "아흐마드의 나이 든 이웃은 사람을 금방 꿰뚫어 보는 혜안이 있어요.",
+   "blank": "بصيرة",
+   "src": "made"
+  },
+  {
+   "text": "أنقذت بصيرة مريم أصدقاءها حين اختارت مكانا عاليا للخيمة قبل السيل.",
+   "en": "Maryam's foresight saved her friends when she chose high ground for the tent before the flood.",
+   "ko": "마르얌이 앞을 내다보고 홍수 전에 높은 곳에 텐트를 쳐서 친구들을 구했어요.",
+   "blank": "بصيرة",
+   "src": "made"
+  }
+ ],
  "w|بضاعة": [
   {
    "text": "وصلت بضاعة جديدة إلى المتجر.",
@@ -21669,6 +21813,22 @@
    "en": "The child wet his hands in the sink.",
    "ko": "아이가 싱크대에서 손을 적셨다.",
    "blank": "بلل"
+  }
+ ],
+ "w|بلورة": [
+  {
+   "text": "علق أحمد بلورة ملونة على النافذة فرسمت ألوانا على جدار جاره.",
+   "en": "Ahmed hung a colored crystal in the window, and it cast colors on his neighbor's wall.",
+   "ko": "아흐마드가 창에 색 크리스털을 달자 이웃집 벽에 무지개 빛이 비쳤어요.",
+   "blank": "بلورة",
+   "src": "made"
+  },
+  {
+   "text": "وجدت مريم بلورة ملح على صخرة قرب البحر.",
+   "en": "Maryam found a salt crystal on a rock near the sea.",
+   "ko": "마르얌은 바닷가 바위에서 소금 결정을 발견했어요.",
+   "blank": "بلورة",
+   "src": "made"
   }
  ],
  "w|بلوزة": [
@@ -23431,6 +23591,22 @@
    "en": "The children followed the teacher to the classroom.",
    "ko": "아이들이 선생님을 교실까지 따라갔어요.",
    "blank": "تبع"
+  }
+ ],
+ "w|تبعا": [
+  {
+   "text": "يرتب أحمد جدول تنظيف الدرج تبعا لمواعيد الجيران.",
+   "en": "Ahmed arranges the stair-cleaning schedule according to the neighbors' timetables.",
+   "ko": "아흐마드는 이웃들 일정에 맞춰 계단 청소 순서를 정해요.",
+   "blank": "تبعا",
+   "src": "made"
+  },
+  {
+   "text": "غيرت مريم مكان الخيمة تبعا لاتجاه الريح.",
+   "en": "Maryam moved the tent according to the wind direction.",
+   "ko": "마르얌은 바람 방향에 따라 텐트 자리를 옮겼어요.",
+   "blank": "تبعا",
+   "src": "made"
   }
  ],
  "w|تبعة": [
@@ -25765,6 +25941,22 @@
    "src": "made"
   }
  ],
+ "w|ترقوة": [
+  {
+   "text": "انكسرت ترقوة جار أحمد حين سقط عن الدراجة.",
+   "en": "Ahmed's neighbor broke his collarbone when he fell off his bike.",
+   "ko": "아흐마드의 이웃은 자전거에서 떨어져 쇄골이 부러졌어요.",
+   "blank": "ترقوة",
+   "src": "made"
+  },
+  {
+   "text": "سقطت مريم عن الصخرة وتألمت عظمة الترقوة.",
+   "en": "Maryam fell off the rock and her collarbone hurt.",
+   "ko": "마르얌은 바위에서 떨어져 쇄골이 아팠어요.",
+   "blank": "الترقوة",
+   "src": "made"
+  }
+ ],
  "w|ترقى": [
   {
    "text": "ترقى سامي إلى منصب نائب رئيس التحرير.",
@@ -25916,6 +26108,38 @@
    "en": "Layla laughed at how her letter and her friend's letter arrived on the same day.",
    "ko": "레일라는 자기 편지와 친구 편지가 같은 날 오간 게 우스웠어요.",
    "blank": "تزامن",
+   "src": "made"
+  }
+ ],
+ "w|تزاوج": [
+  {
+   "text": "حكى أحمد لجاره عن موسم تزاوج الحمام على السطح.",
+   "en": "Ahmed told his neighbor about the pigeons' mating season on the roof.",
+   "ko": "아흐마드는 이웃에게 옥상 비둘기들의 짝짓기 철 이야기를 했어요.",
+   "blank": "تزاوج",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت مريم طيورا في موسم التزاوج قرب البحيرة.",
+   "en": "Maryam watched birds in the mating season near the lake.",
+   "ko": "마르얌은 호숫가에서 짝짓기 철을 맞은 새들을 봤어요.",
+   "blank": "التزاوج",
+   "src": "made"
+  }
+ ],
+ "w|تزايد": [
+  {
+   "text": "تزايد عدد السيارات في الحي، فاقترح أحمد موقفا مشتركا.",
+   "en": "The number of cars in the neighborhood increased, so Ahmed suggested a shared parking lot.",
+   "ko": "동네에 차가 늘어나자 아흐마드는 공동 주차장을 제안했어요.",
+   "blank": "تزايد",
+   "src": "made"
+  },
+  {
+   "text": "تزايدت الغيوم فوق المخيم، فجمعت مريم الأغراض.",
+   "en": "The clouds built up over the camp, so Maryam gathered her things.",
+   "ko": "캠핑장 위로 구름이 몰려오자 마르얌은 짐을 챙겼어요.",
+   "blank": "تزايدت",
    "src": "made"
   }
  ],
@@ -28165,6 +28389,22 @@
    "src": "made"
   }
  ],
+ "w|تعهد": [
+  {
+   "text": "تعهد أحمد بسقي نباتات جاره أثناء سفره.",
+   "en": "Ahmed promised to water his neighbor's plants while he was away.",
+   "ko": "아흐마드는 이웃이 여행 간 동안 화분에 물을 주겠다고 약속했어요.",
+   "blank": "تعهد",
+   "src": "made"
+  },
+  {
+   "text": "تعهدت مريم بجمع القمامة قبل مغادرة المخيم.",
+   "en": "Maryam pledged to collect the trash before leaving the campsite.",
+   "ko": "마르얌은 캠핑장을 떠나기 전에 쓰레기를 치우겠다고 약속했어요.",
+   "blank": "تعهدت",
+   "src": "made"
+  }
+ ],
  "w|تعهيد": [
   {
    "text": "قررت الجريدة تعهيد الطباعة إلى شركة خارجية لتوفير المال.",
@@ -28686,6 +28926,22 @@
    "en": "Rana filed a lawsuit against a company over pay discrimination.",
    "ko": "라나는 임금 차별을 이유로 한 회사를 상대로 소송을 냈어요.",
    "blank": "التفرقة",
+   "src": "made"
+  }
+ ],
+ "w|تفريق": [
+  {
+   "text": "تدخل أحمد في تفريق طفلين يتشاجران في الشارع.",
+   "en": "Ahmed stepped in to separate two children fighting in the street.",
+   "ko": "아흐마드는 길에서 싸우는 아이 둘을 떼어 놓았어요.",
+   "blank": "تفريق",
+   "src": "made"
+  },
+  {
+   "text": "لم تستطع مريم التفريق بين الفطر السام والصالح.",
+   "en": "Maryam couldn't tell the poisonous mushrooms from the edible ones.",
+   "ko": "마르얌은 독버섯과 먹는 버섯을 구별하지 못했어요.",
+   "blank": "التفريق",
    "src": "made"
   }
  ],
@@ -31476,6 +31732,22 @@
    "en": "Nour made a quick breakfast of toast and cheese before the workers arrived.",
    "ko": "누르는 일꾼들이 오기 전에 토스트와 치즈로 아침을 간단히 차렸어요.",
    "blank": "التوست",
+   "src": "made"
+  }
+ ],
+ "w|توسع": [
+  {
+   "text": "توسع دكان الحي فصار أحمد يشتري منه كل شيء.",
+   "en": "The neighborhood shop expanded, so Ahmed now buys everything there.",
+   "ko": "동네 가게가 커져서 아흐마드는 이제 뭐든 거기서 사요.",
+   "blank": "توسع",
+   "src": "made"
+  },
+  {
+   "text": "توسعت البحيرة بعد الأمطار حتى اقتربت من خيمة مريم.",
+   "en": "The lake widened after the rains until it came close to Maryam's tent.",
+   "ko": "비가 온 뒤 호수가 넓어져 마르얌의 텐트 가까이까지 왔어요.",
+   "blank": "توسعت",
    "src": "made"
   }
  ],
@@ -37787,6 +38059,22 @@
    "en": "The farmers harvested the wheat in summer.",
    "ko": "농부들이 여름에 밀을 수확했어.",
    "blank": "حصد"
+  }
+ ],
+ "w|حصر": [
+  {
+   "text": "حصر أحمد أسماء الجيران الذين سيحضرون الاجتماع.",
+   "en": "Ahmed listed the names of the neighbors who would attend the meeting.",
+   "ko": "아흐마드는 모임에 올 이웃들 이름을 정리했어요.",
+   "blank": "حصر",
+   "src": "made"
+  },
+  {
+   "text": "حصرت مريم الطعام المتبقي لتعرف كم يوما يكفي.",
+   "en": "Maryam counted up the remaining food to know how many days it would last.",
+   "ko": "마르얌은 남은 음식으로 며칠 버틸지 알려고 하나하나 셌어요.",
+   "blank": "حصرت",
+   "src": "made"
   }
  ],
  "w|حصل": [
@@ -50609,6 +50897,22 @@
    "src": "made"
   }
  ],
+ "w|سرد": [
+  {
+   "text": "سرد الجار العجوز لأحمد قصة الحي القديم.",
+   "en": "The old neighbor told Ahmed the story of the old neighborhood.",
+   "ko": "나이 든 이웃이 아흐마드에게 옛 동네 이야기를 들려줬어요.",
+   "blank": "سرد",
+   "src": "made"
+  },
+  {
+   "text": "سردت مريم حكايات مخيفة حول النار.",
+   "en": "Maryam told scary stories around the fire.",
+   "ko": "마르얌은 모닥불 둘레에서 무서운 이야기를 들려줬어요.",
+   "blank": "سردت",
+   "src": "made"
+  }
+ ],
  "w|سرداب": [
   {
    "text": "اكتشف عمال البلدية سردابا قديما تحت الساحة، فأوقف خالد الحفر.",
@@ -53955,6 +54259,22 @@
    "blank": "شراب"
   }
  ],
+ "w|شراع": [
+  {
+   "text": "يصنع جار أحمد شراعا لقاربه في الكراج.",
+   "en": "Ahmed's neighbor is making a sail for his boat in the garage.",
+   "ko": "아흐마드의 이웃은 차고에서 보트 돛을 만들고 있어요.",
+   "blank": "شراعا",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم شراعا أبيض في البحيرة.",
+   "en": "Maryam saw a white sail on the lake.",
+   "ko": "마르얌은 호수 위 하얀 돛을 봤어요.",
+   "blank": "شراعا",
+   "src": "made"
+  }
+ ],
  "w|شراكة": [
   {
    "text": "جاء كريم إلى الشركة ليدير شراكة جديدة مع مصنع في الشمال.",
@@ -54189,6 +54509,22 @@
    "en": "My father's company expanded this year.",
    "ko": "아버지 회사가 올해 확장됐어.",
    "blank": "شركة"
+  }
+ ],
+ "w|شروع": [
+  {
+   "text": "استأذن أحمد جيرانه قبل الشروع في ترميم الشرفة.",
+   "en": "Ahmed asked his neighbors' permission before starting to repair the balcony.",
+   "ko": "아흐마드는 발코니 공사를 시작하기 전에 이웃들에게 양해를 구했어요.",
+   "blank": "الشروع",
+   "src": "made"
+  },
+  {
+   "text": "أجلت مريم الشروع في التسلق حتى يتوقف المطر.",
+   "en": "Maryam put off starting the climb until the rain stopped.",
+   "ko": "마르얌은 비가 그칠 때까지 등반을 미뤘어요.",
+   "blank": "الشروع",
+   "src": "made"
   }
  ],
  "w|شروق": [
@@ -55855,6 +56191,22 @@
    "src": "made"
   }
  ],
+ "w|صاعق": [
+  {
+   "text": "كان خبر رحيل الجار العجوز صاعقا لأحمد.",
+   "en": "The news of the old neighbor's passing was shocking for Ahmed.",
+   "ko": "나이 든 이웃이 세상을 떠났다는 소식은 아흐마드에게 큰 충격이었어요.",
+   "blank": "صاعقا",
+   "src": "made"
+  },
+  {
+   "text": "سمعت مريم صوت رعد صاعق فوق الخيمة.",
+   "en": "Maryam heard a crashing sound of thunder above the tent.",
+   "ko": "마르얌은 텐트 위에서 귀청을 찢는 천둥소리를 들었어요.",
+   "blank": "صاعق",
+   "src": "made"
+  }
+ ],
  "w|صاعقة": [
   {
    "text": "سقطت صاعقة على شجرة قريبة من خيمة خالد.",
@@ -56649,6 +57001,22 @@
    "en": "I found an exchange office next to the hotel.",
    "ko": "호텔 옆에 환전소를 찾았어.",
    "blank": "صرافة"
+  }
+ ],
+ "w|صرح": [
+  {
+   "text": "صرح أحمد لجاره بأنه سينتقل قريبا.",
+   "en": "Ahmed told his neighbor openly that he would move soon.",
+   "ko": "아흐마드는 이웃에게 곧 이사 간다고 털어놨어요.",
+   "blank": "صرح",
+   "src": "made"
+  },
+  {
+   "text": "صرحت مريم بأنها تخاف من الظلام في الغابة.",
+   "en": "Maryam admitted openly that she is afraid of the dark in the forest.",
+   "ko": "마르얌은 숲속 어둠이 무섭다고 솔직히 말했어요.",
+   "blank": "صرحت",
+   "src": "made"
   }
  ],
  "w|صرخ": [
@@ -61641,6 +62009,22 @@
    "blank": "عدا"
   }
  ],
+ "w|عداء": [
+  {
+   "text": "انتهى العداء القديم بين أحمد وجاره بعد فنجان قهوة.",
+   "en": "The old hostility between Ahmed and his neighbor ended over a cup of coffee.",
+   "ko": "아흐마드와 이웃 사이의 오랜 앙금이 커피 한 잔으로 풀렸어요.",
+   "blank": "العداء",
+   "src": "made"
+  },
+  {
+   "text": "مر عداء صباحي قرب خيمة مريم وحياها.",
+   "en": "A morning runner passed by Maryam's tent and greeted her.",
+   "ko": "아침에 달리던 사람이 마르얌의 텐트 옆을 지나며 인사했어요.",
+   "blank": "عداء",
+   "src": "made"
+  }
+ ],
  "w|عداد": [
   {
    "text": "سجل أحمد قراءة عداد الكهرباء في آخر الشهر.",
@@ -63425,6 +63809,22 @@
    "blank": "عكس"
   }
  ],
+ "w|عكسي": [
+  {
+   "text": "سار أحمد في الاتجاه العكسي فلم يلتق بجاره.",
+   "en": "Ahmed walked in the opposite direction, so he didn't meet his neighbor.",
+   "ko": "아흐마드는 반대쪽으로 걸어서 이웃과 엇갈렸어요.",
+   "blank": "العكسي",
+   "src": "made"
+  },
+  {
+   "text": "أخذت مريم الطريق العكسي فتاهت قليلا.",
+   "en": "Maryam took the opposite path and got a little lost.",
+   "ko": "마르얌은 반대 길로 가서 잠깐 길을 잃었어요.",
+   "blank": "العكسي",
+   "src": "made"
+  }
+ ],
  "w|علاج": [
   {
    "text": "بدأت العلاج منذ أسبوع.",
@@ -64273,6 +64673,22 @@
    "en": "I didn't know the answer then.",
    "ko": "그때는 답을 몰랐어.",
    "blank": "عندئذ"
+  }
+ ],
+ "w|عندليب": [
+  {
+   "text": "يغرد عندليب على شجرة أحمد كل صباح.",
+   "en": "A nightingale sings in Ahmed's tree every morning.",
+   "ko": "아흐마드네 나무에서 아침마다 나이팅게일이 울어요.",
+   "blank": "عندليب",
+   "src": "made"
+  },
+  {
+   "text": "استيقظت مريم على صوت عندليب قرب الخيمة.",
+   "en": "Maryam woke up to the sound of a nightingale near the tent.",
+   "ko": "마르얌은 텐트 근처 나이팅게일 소리에 잠이 깼어요.",
+   "blank": "عندليب",
+   "src": "made"
   }
  ],
  "w|عندما": [
@@ -65917,6 +66333,22 @@
    "blank": "غني"
   }
  ],
+ "w|غنيمة": [
+  {
+   "text": "اعتبر أحمد الكعك الذي أهدته الجارة غنيمة لذيذة.",
+   "en": "Ahmed considered the cake the neighbor gave him a delicious prize.",
+   "ko": "아흐마드는 이웃이 준 케이크를 맛있는 전리품처럼 여겼어요.",
+   "blank": "غنيمة",
+   "src": "made"
+  },
+  {
+   "text": "كانت سمكة كبيرة غنيمة مريم من صيد الصباح.",
+   "en": "A big fish was Maryam's prize from the morning's fishing.",
+   "ko": "아침 낚시에서 마르얌이 건진 건 큰 물고기 한 마리였어요.",
+   "blank": "غنيمة",
+   "src": "made"
+  }
+ ],
  "w|غواصة": [
   {
    "text": "بنى عمر على المسرح غواصة كبيرة من الخشب والقماش.",
@@ -67315,6 +67747,22 @@
    "en": "The dance group gave a great performance.",
    "ko": "댄스 그룹이 멋진 공연을 보여줬어.",
    "blank": "فرقة"
+  }
+ ],
+ "w|فرك": [
+  {
+   "text": "فرك أحمد يديه من البرد وهو ينتظر جاره.",
+   "en": "Ahmed rubbed his hands against the cold while waiting for his neighbor.",
+   "ko": "아흐마드는 이웃을 기다리며 추워서 손을 비볐어요.",
+   "blank": "فرك",
+   "src": "made"
+  },
+  {
+   "text": "فركت مريم عودين لتشعل النار.",
+   "en": "Maryam rubbed two sticks together to light the fire.",
+   "ko": "마르얌은 불을 피우려고 나뭇가지 두 개를 비볐어요.",
+   "blank": "فركت",
+   "src": "made"
   }
  ],
  "w|فرم": [
@@ -73771,6 +74219,22 @@
    "blank": "الكسل"
   }
  ],
+ "w|كسوف": [
+  {
+   "text": "شاهد أحمد مع جيرانه كسوف الشمس من السطح.",
+   "en": "Ahmed watched the solar eclipse from the roof with his neighbors.",
+   "ko": "아흐마드는 이웃들과 옥상에서 일식을 봤어요.",
+   "blank": "كسوف",
+   "src": "made"
+  },
+  {
+   "text": "خيمت مريم في الصحراء لتشاهد كسوفا كليا.",
+   "en": "Maryam camped in the desert to watch a total eclipse.",
+   "ko": "마르얌은 개기 일식을 보려고 사막에서 캠핑했어요.",
+   "blank": "كسوفا",
+   "src": "made"
+  }
+ ],
  "w|كسول": [
   {
    "text": "لا تكن كسول في أداء واجباتك.",
@@ -74138,6 +74602,22 @@
    "en": "Both bags were heavy, so a young man helped Nour lift them.",
    "ko": "가방 두 개가 다 무거워서 한 청년이 누르를 도와 들어 주었어요.",
    "blank": "كلتا",
+   "src": "made"
+  }
+ ],
+ "w|كلتاهما": [
+  {
+   "text": "لأحمد جارتان، كلتاهما تخبز الخبز كل جمعة.",
+   "en": "Ahmed has two neighbors, both of whom bake bread every Friday.",
+   "ko": "아흐마드에게는 이웃이 두 명 있는데 둘 다 금요일마다 빵을 구워요.",
+   "blank": "كلتاهما",
+   "src": "made"
+  },
+  {
+   "text": "حملت مريم حقيبتين كلتاهما ثقيلة.",
+   "en": "Maryam carried two bags, both of them heavy.",
+   "ko": "마르얌은 둘 다 무거운 가방 두 개를 들었어요.",
+   "blank": "كلتاهما",
    "src": "made"
   }
  ],
@@ -79956,6 +80436,22 @@
    "en": "Nour sent her friend a complete description of her new life.",
    "ko": "누르는 친구에게 새 생활을 빠짐없이 적어 보냈어요.",
    "blank": "متكاملا",
+   "src": "made"
+  }
+ ],
+ "w|متكرر": [
+  {
+   "text": "انزعج أحمد من الطرق المتكرر على باب الجيران.",
+   "en": "Ahmed was bothered by the repeated knocking on the neighbors' door.",
+   "ko": "아흐마드는 이웃집 문을 자꾸 두드리는 소리에 짜증이 났어요.",
+   "blank": "المتكرر",
+   "src": "made"
+  },
+  {
+   "text": "منع المطر المتكرر مريم من إشعال النار.",
+   "en": "The repeated rain kept Maryam from lighting the fire.",
+   "ko": "비가 자꾸 와서 마르얌은 불을 피우지 못했어요.",
+   "blank": "المتكرر",
    "src": "made"
   }
  ],
@@ -88891,6 +89387,22 @@
    "blank": "مغن"
   }
  ],
+ "w|مغناطيس": [
+  {
+   "text": "استعار أحمد من جاره مغناطيسا ليلتقط المسامير.",
+   "en": "Ahmed borrowed a magnet from his neighbor to pick up the nails.",
+   "ko": "아흐마드는 못을 주우려고 이웃에게서 자석을 빌렸어요.",
+   "blank": "مغناطيسا",
+   "src": "made"
+  },
+  {
+   "text": "استعملت مريم مغناطيسا صغيرا لتصنع بوصلة.",
+   "en": "Maryam used a small magnet to make a compass.",
+   "ko": "마르얌은 작은 자석으로 나침반을 만들었어요.",
+   "blank": "مغناطيسا",
+   "src": "made"
+  }
+ ],
  "w|مغناطيسي": [
   {
    "text": "علق كريم صور المطلوبين على لوح مغناطيسي في غرفة الاجتماعات.",
@@ -89586,6 +90098,22 @@
    "en": "Fatima's daughter put up strong resistance to the idea of leaving her school.",
    "ko": "파티마의 딸은 학교를 옮긴다는 생각에 크게 반발했어요.",
    "blank": "مقاومة",
+   "src": "made"
+  }
+ ],
+ "w|مقايضة": [
+  {
+   "text": "عرض أحمد على جاره مقايضة: البيض مقابل الخضار.",
+   "en": "Ahmed offered his neighbor a swap: eggs for vegetables.",
+   "ko": "아흐마드는 이웃에게 달걀과 채소를 바꾸자고 했어요.",
+   "blank": "مقايضة",
+   "src": "made"
+  },
+  {
+   "text": "أجرت مريم مقايضة مع المخيمين: حطب مقابل قهوة.",
+   "en": "Maryam made a trade with the other campers: firewood for coffee.",
+   "ko": "마르얌은 다른 캠핑객들과 장작을 커피로 바꿨어요.",
+   "blank": "مقايضة",
    "src": "made"
   }
  ],
@@ -90831,6 +91359,22 @@
    "en": "It is said that an angel protects children.",
    "ko": "천사가 아이들을 지킨다고 해요.",
    "blank": "ملاك"
+  }
+ ],
+ "w|ملاكم": [
+  {
+   "text": "اكتشف أحمد أن جاره الجديد ملاكم محترف.",
+   "en": "Ahmed discovered that his new neighbor was a professional boxer.",
+   "ko": "아흐마드는 새 이웃이 프로 권투 선수라는 걸 알게 됐어요.",
+   "blank": "ملاكم",
+   "src": "made"
+  },
+  {
+   "text": "تعرفت مريم في المخيم على ملاكم يحب الطبخ.",
+   "en": "At the campsite Maryam met a boxer who loves cooking.",
+   "ko": "마르얌은 캠핑장에서 요리를 좋아하는 권투 선수를 알게 됐어요.",
+   "blank": "ملاكم",
+   "src": "made"
   }
  ],
  "w|ملاكمة": [
@@ -92967,6 +93511,22 @@
    "src": "made"
   }
  ],
+ "w|منقذ": [
+  {
+   "text": "كان أحمد منقذ جاره حين علق في المصعد.",
+   "en": "Ahmed was his neighbor's rescuer when he got stuck in the elevator.",
+   "ko": "이웃이 엘리베이터에 갇혔을 때 아흐마드가 구해 줬어요.",
+   "blank": "منقذ",
+   "src": "made"
+  },
+  {
+   "text": "رافق منقذ متطوع مريم وأصدقاءها في النزول إلى النهر.",
+   "en": "A volunteer lifeguard went with Maryam and her friends down to the river.",
+   "ko": "자원봉사 구조대원이 강으로 내려가는 마르얌 일행과 함께했어요.",
+   "blank": "منقذ",
+   "src": "made"
+  }
+ ],
  "w|منقطع": [
   {
    "text": "انتظر يوسف خمس دقائق ثم عاد الاتصال المنقطع مع العيادة.",
@@ -93148,6 +93708,22 @@
    "en": "Nour wrote that her grandmother's old house had become deserted.",
    "ko": "누르는 할머니의 옛집이 빈집이 됐다고 썼어요.",
    "blank": "مهجورا",
+   "src": "made"
+  }
+ ],
+ "w|مهد": [
+  {
+   "text": "أهدى أحمد جاره مهدا لطفله الجديد.",
+   "en": "Ahmed gave his neighbor a cradle for his new baby.",
+   "ko": "아흐마드는 이웃에게 갓난아기용 요람을 선물했어요.",
+   "blank": "مهدا",
+   "src": "made"
+  },
+  {
+   "text": "خيمت مريم قرب قرية تعتبر مهد صناعة الفخار في المنطقة.",
+   "en": "Maryam camped near a village considered the cradle of pottery-making in the region.",
+   "ko": "마르얌은 그 지역 도자기 공예의 발상지인 마을 근처에서 캠핑했어요.",
+   "blank": "مهد",
    "src": "made"
   }
  ],
@@ -94155,6 +94731,22 @@
    "en": "The newborn finally slept.",
    "ko": "신생아가 드디어 잠들었어.",
    "blank": "المولود"
+  }
+ ],
+ "w|مومياء": [
+  {
+   "text": "حكى أحمد لابن الجيران عن مومياء رآها في المتحف.",
+   "en": "Ahmed told the neighbors' son about a mummy he saw at the museum.",
+   "ko": "아흐마드는 이웃집 아이에게 박물관에서 본 미라 이야기를 해 줬어요.",
+   "blank": "مومياء",
+   "src": "made"
+  },
+  {
+   "text": "بدت مريم في كيس النوم مثل مومياء، فضحك أصدقاؤها.",
+   "en": "Maryam looked like a mummy in her sleeping bag, and her friends laughed.",
+   "ko": "침낭 속 마르얌이 미라 같아서 친구들이 웃었어요.",
+   "blank": "مومياء",
+   "src": "made"
   }
  ],
  "w|موهبة": [
@@ -96763,6 +97355,22 @@
    "blank": "نصيحة"
   }
  ],
+ "w|نضال": [
+  {
+   "text": "حكى الجار العجوز لأحمد عن نضال عائلته من أجل البيت.",
+   "en": "The old neighbor told Ahmed about his family's struggle for the house.",
+   "ko": "나이 든 이웃은 아흐마드에게 집을 지키려고 가족이 애쓴 이야기를 했어요.",
+   "blank": "نضال",
+   "src": "made"
+  },
+  {
+   "text": "قرأت مريم قرب النار رواية عن نضال امرأة في الريف.",
+   "en": "By the fire Maryam read a novel about a woman's struggle in the countryside.",
+   "ko": "마르얌은 모닥불 옆에서 시골 여성의 투쟁을 다룬 소설을 읽었어요.",
+   "blank": "نضال",
+   "src": "made"
+  }
+ ],
  "w|نضج": [
   {
    "text": "وجد عمر توتا بريا نضج تحت شمس الصيف.",
@@ -98011,6 +98619,22 @@
    "blank": "نهب"
   }
  ],
+ "w|نهج": [
+  {
+   "text": "اتبع أحمد نهج أبيه في مساعدة الجيران.",
+   "en": "Ahmed followed his father's way of helping the neighbors.",
+   "ko": "아흐마드는 아버지처럼 이웃을 도우며 살았어요.",
+   "blank": "نهج",
+   "src": "made"
+  },
+  {
+   "text": "تحب مريم نهج التخييم البسيط بلا كهرباء.",
+   "en": "Maryam loves the simple style of camping without electricity.",
+   "ko": "마르얌은 전기 없이 단순하게 캠핑하는 방식을 좋아해요.",
+   "blank": "نهج",
+   "src": "made"
+  }
+ ],
  "w|نهر": [
   {
    "text": "أحب الجلوس بجانب نهر في المساء.",
@@ -98484,6 +99108,22 @@
    "en": "Rana read in the news that the police caught a fugitive inside a shopping centre.",
    "ko": "라나는 경찰이 쇼핑센터 안에서 도주자를 잡았다는 뉴스를 읽었어요.",
    "blank": "هارب",
+   "src": "made"
+  }
+ ],
+ "w|هالة": [
+  {
+   "text": "ظهرت هالة حول القمر ليلة جلس أحمد مع جاره على الدرج.",
+   "en": "A halo appeared around the moon the night Ahmed sat with his neighbor on the steps.",
+   "ko": "아흐마드가 이웃과 계단에 앉아 있던 밤, 달 둘레에 달무리가 생겼어요.",
+   "blank": "هالة",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم هالة ضوء حول النار من بعيد.",
+   "en": "Maryam saw a halo of light around the fire from far away.",
+   "ko": "마르얌은 멀리서 모닥불 둘레에 퍼진 빛무리를 봤어요.",
+   "blank": "هالة",
    "src": "made"
   }
  ],

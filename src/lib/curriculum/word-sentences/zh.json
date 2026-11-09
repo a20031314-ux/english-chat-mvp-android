@@ -1143,6 +1143,22 @@
    "src": "made"
   }
  ],
+ "w|下属": [
+  {
+   "text": "马林对下属很严格，但从来不发脾气。",
+   "en": "Ma Lin is strict with his subordinates but never loses his temper.",
+   "ko": "마린은 부하 직원에게 엄격하지만 화를 내는 법은 없어요.",
+   "blank": "下属",
+   "src": "made"
+  },
+  {
+   "text": "主管把孙悦当成自己最得力的下属。",
+   "en": "The supervisor regards Sun Yue as her most capable subordinate.",
+   "ko": "팀장은 쑨웨를 가장 유능한 부하 직원으로 여겨요.",
+   "blank": "下属",
+   "src": "made"
+  }
+ ],
  "w|下手": [
   {
    "text": "有位顾客嫌药太贵，犹豫了半天也不知道该从哪种下手。",
@@ -1446,6 +1462,22 @@
    "en": "This new material is not only light but also very strong.",
    "ko": "이 신소재는 가벼울 뿐 아니라 아주 튼튼해요.",
    "blank": "不但",
+   "src": "made"
+  }
+ ],
+ "w|不便": [
+  {
+   "text": "车间离市区很远，工人上下班很不便。",
+   "en": "The workshop is far from downtown, which makes commuting inconvenient for the workers.",
+   "ko": "작업장이 시내에서 멀어서 직원들이 출퇴근하기 불편해요.",
+   "blank": "不便",
+   "src": "made"
+  },
+  {
+   "text": "孙悦住得远，没车上下班很不便。",
+   "en": "Sun Yue lives far away, and commuting without a car is inconvenient.",
+   "ko": "쑨웨는 멀리 살아서 차 없이 출퇴근하기가 불편해요.",
+   "blank": "不便",
    "src": "made"
   }
  ],
@@ -1977,6 +2009,22 @@
    "blank": "不管"
   }
  ],
+ "w|不至于": [
+  {
+   "text": "订单多是多，不过还不至于要加夜班。",
+   "en": "There are a lot of orders, but not so many that they need a night shift.",
+   "ko": "주문이 많긴 해도 야간 근무를 할 정도는 아니에요.",
+   "blank": "不至于",
+   "src": "made"
+  },
+  {
+   "text": "迟到一次还不至于被扣奖金，孙悦这才放下心来。",
+   "en": "Being late once won't cost you your bonus, so Sun Yue finally relaxed.",
+   "ko": "한 번 지각했다고 보너스가 깎일 정도는 아니라서 쑨웨는 그제야 마음을 놓았어요.",
+   "blank": "不至于",
+   "src": "made"
+  }
+ ],
  "w|不良": [
   {
    "text": "老师提醒大家，边做饭边玩手机是个不良习惯。",
@@ -2297,6 +2345,22 @@
    "src": "made"
   }
  ],
+ "w|专用": [
+  {
+   "text": "车间里有一台切木头的专用机器。",
+   "en": "The workshop has a special machine just for cutting wood.",
+   "ko": "작업장에는 나무를 자르는 전용 기계가 한 대 있어요.",
+   "blank": "专用",
+   "src": "made"
+  },
+  {
+   "text": "顶楼的会议室是接待客户专用的。",
+   "en": "The top-floor meeting room is reserved for receiving clients.",
+   "ko": "꼭대기 층 회의실은 고객 접대 전용이에요.",
+   "blank": "专用",
+   "src": "made"
+  }
+ ],
  "w|专门": [
   {
    "text": "赵磊的妈妈专门开车来机场接他。",
@@ -2418,6 +2482,22 @@
    "en": "Wang Fang has been busy with work lately and nearly missed cooking class several times.",
    "ko": "왕팡은 요즘 업무가 바빠서 요리 수업에 늦을 뻔한 적이 여러 번이에요.",
    "blank": "业务",
+   "src": "made"
+  }
+ ],
+ "w|业绩": [
+  {
+   "text": "今年车间的业绩比去年好了不少。",
+   "en": "The workshop's performance this year is much better than last year.",
+   "ko": "올해 작업장 실적이 작년보다 꽤 좋아졌어요.",
+   "blank": "业绩",
+   "src": "made"
+  },
+  {
+   "text": "第一个月，孙悦的业绩就进了部门前三名。",
+   "en": "In her first month, Sun Yue's performance was already in the department's top three.",
+   "ko": "첫 달부터 쑨웨의 실적이 부서에서 세 손가락 안에 들었어요.",
+   "blank": "业绩",
    "src": "made"
   }
  ],
@@ -3941,6 +4021,22 @@
    "en": "This book is pretty good.",
    "ko": "이 책 괜찮네.",
    "blank": "书"
+  }
+ ],
+ "w|书写": [
+  {
+   "text": "老工人用毛笔在每件家具底下书写厂名。",
+   "en": "An old worker writes the factory's name with a brush on the bottom of each piece.",
+   "ko": "늙은 직원이 붓으로 가구마다 밑바닥에 공장 이름을 써요.",
+   "blank": "书写",
+   "src": "made"
+  },
+  {
+   "text": "公司规定，合同必须用黑色的笔书写。",
+   "en": "Company rules say contracts must be written in black pen.",
+   "ko": "회사 규정상 계약서는 반드시 검은 펜으로 써야 해요.",
+   "blank": "书写",
+   "src": "made"
   }
  ],
  "w|书籍": [
@@ -7071,6 +7167,22 @@
    "src": "made"
   }
  ],
+ "w|传输": [
+  {
+   "text": "车间的生产记录会自动传输到办公室的电脑上。",
+   "en": "The workshop's production records are automatically sent to the office computers.",
+   "ko": "작업장 생산 기록은 사무실 컴퓨터로 자동 전송돼요.",
+   "blank": "传输",
+   "src": "made"
+  },
+  {
+   "text": "公司的网太慢了，大文件传输要等很久。",
+   "en": "The company's internet is so slow that transferring big files takes forever.",
+   "ko": "회사 인터넷이 너무 느려서 큰 파일을 전송하려면 한참 기다려야 해요.",
+   "blank": "传输",
+   "src": "made"
+  }
+ ],
  "w|传达": [
   {
    "text": "班长没能来，托小明向大家传达了问候。",
@@ -9279,6 +9391,22 @@
    "en": "What if it rains?",
    "ko": "만약 비가 오면 어쩌지?",
    "blank": "假如"
+  }
+ ],
+ "w|假定": [
+  {
+   "text": "马林算了算，假定每天多做十把椅子，月底就能按时交货。",
+   "en": "Ma Lin worked it out: assuming they make ten more chairs a day, they can deliver on time at the end of the month.",
+   "ko": "마린이 계산해 보니 하루에 의자를 열 개 더 만든다고 가정하면 월말에 제때 납품할 수 있어요.",
+   "blank": "假定",
+   "src": "made"
+  },
+  {
+   "text": "孙悦假定客户都看过合同，结果闹了误会。",
+   "en": "Sun Yue assumed the clients had all read the contract, which led to a misunderstanding.",
+   "ko": "쑨웨는 고객들이 다 계약서를 읽었다고 가정했다가 오해가 생겼어요.",
+   "blank": "假定",
+   "src": "made"
   }
  ],
  "w|假期": [
@@ -12795,6 +12923,22 @@
    "src": "made"
   }
  ],
+ "w|出版社": [
+  {
+   "text": "一家出版社订了一批书架，要放在新办公室里。",
+   "en": "A publishing house ordered a batch of bookshelves for its new office.",
+   "ko": "한 출판사가 새 사무실에 놓을 책장을 주문했어요.",
+   "blank": "出版社",
+   "src": "made"
+  },
+  {
+   "text": "孙悦以前在一家出版社做编辑，这周刚来我们公司。",
+   "en": "Sun Yue used to be an editor at a publishing house and just joined our company this week.",
+   "ko": "쑨웨는 전에 출판사에서 편집자로 일했고, 이번 주에 우리 회사에 막 왔어요.",
+   "blank": "出版社",
+   "src": "made"
+  }
+ ],
  "w|出现": [
   {
    "text": "他突然出现了。",
@@ -14330,6 +14474,22 @@
    "en": "Sun Yue told the person asking directions to follow this street, and the post office would be just ahead.",
    "ko": "쑨웨는 길을 묻는 사람에게 이 길을 따라가면 앞쪽에 바로 우체국이 있다고 알려 줬어요.",
    "blank": "前方",
+   "src": "made"
+  }
+ ],
+ "w|前景": [
+  {
+   "text": "马林觉得，实木家具在这个城市的前景还不错。",
+   "en": "Ma Lin thinks solid wood furniture has decent prospects in this city.",
+   "ko": "마린은 이 도시에서 원목 가구의 전망이 꽤 괜찮다고 생각해요.",
+   "blank": "前景",
+   "src": "made"
+  },
+  {
+   "text": "主管很看好孙悦在公司的前景。",
+   "en": "The supervisor thinks Sun Yue has a bright future at the company.",
+   "ko": "팀장은 회사에서 쑨웨의 앞날을 밝게 보고 있어요.",
+   "blank": "前景",
    "src": "made"
   }
  ],
@@ -25001,6 +25161,22 @@
    "src": "made"
   }
  ],
+ "w|复习": [
+  {
+   "text": "女儿在家复习的时候，马林连电视都不开。",
+   "en": "When his daughter is studying at home, Ma Lin doesn't even turn on the TV.",
+   "ko": "딸이 집에서 복습할 때 마린은 텔레비전도 안 켜요.",
+   "blank": "复习",
+   "src": "made"
+  },
+  {
+   "text": "为了熟悉业务，孙悦晚上回家还复习产品资料。",
+   "en": "To learn the ropes, Sun Yue reviews the product materials even after going home at night.",
+   "ko": "업무를 익히려고 쑨웨는 밤에 집에 가서도 제품 자료를 복습해요.",
+   "blank": "复习",
+   "src": "made"
+  }
+ ],
  "w|复仇": [
   {
    "text": "副刊连载的武侠小说里，主角一心要为师父复仇。",
@@ -29177,6 +29353,22 @@
    "src": "made"
   }
  ],
+ "w|定律": [
+  {
+   "text": "马林常说，做生意也有定律：东西好，客户自然会回来。",
+   "en": "Ma Lin often says business has a law too: if the product is good, customers will naturally come back.",
+   "ko": "마린은 장사에도 법칙이 있다고 자주 말해요. 물건이 좋으면 손님은 저절로 다시 와요.",
+   "blank": "定律",
+   "src": "made"
+  },
+  {
+   "text": "孙悦开玩笑说，越赶时间打印机越坏，这是办公室定律。",
+   "en": "Sun Yue joked that the more you're in a hurry, the more the printer breaks; it's an office law.",
+   "ko": "쑨웨는 바쁠수록 프린터가 고장 난다며 그게 사무실 법칙이라고 농담했어요.",
+   "blank": "定律",
+   "src": "made"
+  }
+ ],
  "w|定期": [
   {
    "text": "小区物业定期来检查消防设备。",
@@ -32184,6 +32376,22 @@
    "en": "Put the tools back where they were.",
    "ko": "도구를 제자리에 갖다 놓으세요.",
    "blank": "工具",
+   "src": "made"
+  }
+ ],
+ "w|工匠": [
+  {
+   "text": "马林最佩服厂里那位老工匠，他做了四十年椅子。",
+   "en": "Ma Lin admires the factory's old craftsman most; he has been making chairs for forty years.",
+   "ko": "마린은 공장의 늙은 장인을 가장 존경하는데, 그분은 사십 년 동안 의자를 만들었어요.",
+   "blank": "工匠",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的父亲是个老工匠，专门修钟表。",
+   "en": "Sun Yue's father is an old craftsman who repairs clocks and watches.",
+   "ko": "쑨웨의 아버지는 시계를 고치는 늙은 장인이에요.",
+   "blank": "工匠",
    "src": "made"
   }
  ],
@@ -36025,6 +36233,22 @@
    "src": "made"
   }
  ],
+ "w|微微": [
+  {
+   "text": "机器一启动，地面就微微发抖。",
+   "en": "As soon as the machine starts, the floor trembles slightly.",
+   "ko": "기계가 돌기 시작하면 바닥이 살짝 떨려요.",
+   "blank": "微微",
+   "src": "made"
+  },
+  {
+   "text": "听到大家叫她小孙，孙悦微微一笑。",
+   "en": "Hearing everyone call her Little Sun, Sun Yue smiled faintly.",
+   "ko": "다들 샤오쑨이라고 부르자 쑨웨는 살짝 웃었어요.",
+   "blank": "微微",
+   "src": "made"
+  }
+ ],
  "w|微笑": [
   {
    "text": "她给了我一个微笑。",
@@ -37272,6 +37496,22 @@
    "en": "After a whole week of work, Liu Fang finally fixed the bug.",
    "ko": "꼬박 일주일을 고친 끝에 류팡은 드디어 그 오류를 해결했어요.",
    "blank": "总算",
+   "src": "made"
+  }
+ ],
+ "w|总经理": [
+  {
+   "text": "总经理亲自来车间视察，夸工人们手艺好。",
+   "en": "The general manager came to inspect the workshop in person and praised the workers' skill.",
+   "ko": "사장이 직접 작업장을 둘러보고 직원들 솜씨가 좋다고 칭찬했어요.",
+   "blank": "总经理",
+   "src": "made"
+  },
+  {
+   "text": "总经理在走廊里遇到孙悦，问她习不习惯。",
+   "en": "The general manager ran into Sun Yue in the hallway and asked if she was settling in.",
+   "ko": "사장이 복도에서 쑨웨를 만나 적응은 잘 되는지 물었어요.",
+   "blank": "总经理",
    "src": "made"
   }
  ],
@@ -43209,6 +43449,22 @@
    "src": "made"
   }
  ],
+ "w|推开": [
+  {
+   "text": "马林推开仓库的大门，一股木头的香味扑面而来。",
+   "en": "Ma Lin pushed open the warehouse door, and the scent of wood rushed at him.",
+   "ko": "마린이 창고 문을 밀어 열자 나무 향이 확 풍겨 왔어요.",
+   "blank": "推开",
+   "src": "made"
+  },
+  {
+   "text": "孙悦推开会议室的门，大家都已经坐好了。",
+   "en": "Sun Yue pushed open the meeting room door, and everyone was already seated.",
+   "ko": "쑨웨가 회의실 문을 밀고 들어가니 다들 이미 앉아 있었어요.",
+   "blank": "推开",
+   "src": "made"
+  }
+ ],
  "w|推测": [
   {
    "text": "宾客们纷纷推测，下一个结婚的会是伴郎。",
@@ -43831,6 +44087,22 @@
    "ko": "어떤 단어가 든 문장을 검색해서 그 번역을 볼 수 있어요.",
    "blank": "搜索",
    "src": "tatoeba:811373/fucongcong en:704106/jakov"
+  }
+ ],
+ "w|搜集": [
+  {
+   "text": "马林搜集了很多老家具的照片，用来设计新款。",
+   "en": "Ma Lin collected many photos of old furniture to design new models.",
+   "ko": "마린은 새 제품을 디자인하려고 옛 가구 사진을 많이 모았어요.",
+   "blank": "搜集",
+   "src": "made"
+  },
+  {
+   "text": "孙悦负责搜集竞争对手的价格信息。",
+   "en": "Sun Yue is in charge of gathering competitors' pricing information.",
+   "ko": "쑨웨는 경쟁사 가격 정보를 모으는 일을 맡았어요.",
+   "blank": "搜集",
+   "src": "made"
   }
  ],
  "w|搞": [
@@ -45665,6 +45937,22 @@
    "blank": "数据"
   }
  ],
+ "w|数据库": [
+  {
+   "text": "所有订单都存在公司的数据库里。",
+   "en": "All the orders are stored in the company database.",
+   "ko": "모든 주문은 회사 데이터베이스에 저장돼요.",
+   "blank": "数据库",
+   "src": "made"
+  },
+  {
+   "text": "主管让孙悦先熟悉客户数据库。",
+   "en": "The supervisor asked Sun Yue to first get familiar with the customer database.",
+   "ko": "팀장은 쑨웨에게 먼저 고객 데이터베이스를 익히라고 했어요.",
+   "blank": "数据库",
+   "src": "made"
+  }
+ ],
  "w|数目": [
   {
    "text": "周强算了算，这笔订单的数目比去年多了一倍。",
@@ -47397,6 +47685,22 @@
    "blank": "明白"
   }
  ],
+ "w|明知": [
+  {
+   "text": "明知交货期很紧，马林还是接下了这笔大单。",
+   "en": "Even though he knew the deadline was tight, Ma Lin still took the big order.",
+   "ko": "납기가 빠듯한 걸 뻔히 알면서도 마린은 그 큰 주문을 받았어요.",
+   "blank": "明知",
+   "src": "made"
+  },
+  {
+   "text": "孙悦明知报告不是自己写错的，还是主动道了歉。",
+   "en": "Though she knew full well the report error wasn't hers, Sun Yue still apologized on her own.",
+   "ko": "쑨웨는 보고서를 자기가 틀리게 쓴 게 아닌 줄 알면서도 먼저 사과했어요.",
+   "blank": "明知",
+   "src": "made"
+  }
+ ],
  "w|明确": [
   {
    "text": "马林给自己定了一个明确的目标：今年秋天要去看一次红叶。",
@@ -48856,6 +49160,22 @@
    "en": "Runners must obey the officials' instructions.",
    "ko": "선수들은 심판의 지시에 따라야 해요.",
    "blank": "服从",
+   "src": "made"
+  }
+ ],
+ "w|服侍": [
+  {
+   "text": "马林的爷爷年轻时在大户人家服侍过老爷，后来才学了木匠手艺。",
+   "en": "Ma Lin's grandfather served a wealthy master when he was young and only later learned carpentry.",
+   "ko": "마린의 할아버지는 젊을 때 부잣집 나리를 시중들다가 나중에야 목수 일을 배웠어요.",
+   "blank": "服侍",
+   "src": "made"
+  },
+  {
+   "text": "每个周末，孙悦都回老家服侍年迈的奶奶。",
+   "en": "Every weekend, Sun Yue goes back to her hometown to look after her elderly grandmother.",
+   "ko": "쑨웨는 주말마다 고향에 가서 연로한 할머니를 보살펴요.",
+   "blank": "服侍",
    "src": "made"
   }
  ],
@@ -50491,6 +50811,22 @@
    "src": "made"
   }
  ],
+ "w|标签": [
+  {
+   "text": "每块木板上都贴着标签，写明产地和尺寸。",
+   "en": "Every board has a label stating its origin and size.",
+   "ko": "나무판마다 원산지와 크기를 적은 라벨이 붙어 있어요.",
+   "blank": "标签",
+   "src": "made"
+  },
+  {
+   "text": "孙悦给每个文件夹都贴上了标签。",
+   "en": "Sun Yue put a label on every folder.",
+   "ko": "쑨웨는 파일철마다 라벨을 붙였어요.",
+   "blank": "标签",
+   "src": "made"
+  }
+ ],
  "w|标记": [
   {
    "text": "舞台地板上贴着彩色标记，提醒演员该站在哪里。",
@@ -51024,6 +51360,22 @@
    "en": "Xiaoxue's little brother doesn't like music; all he wants is to play baseball.",
    "ko": "샤오쉐의 남동생은 음악을 싫어하고 야구만 하고 싶어 해요.",
    "blank": "棒球",
+   "src": "made"
+  }
+ ],
+ "w|棕色": [
+  {
+   "text": "这批桌子统一刷成了棕色，看上去很稳重。",
+   "en": "This batch of tables was all painted brown and looks very solid.",
+   "ko": "이번 탁자들은 모두 갈색으로 칠해서 묵직해 보여요.",
+   "blank": "棕色",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的桌上放着一个棕色的皮包。",
+   "en": "A brown leather bag sits on Sun Yue's desk.",
+   "ko": "쑨웨의 책상 위에 갈색 가죽 가방이 놓여 있어요.",
+   "blank": "棕色",
    "src": "made"
   }
  ],
@@ -55291,6 +55643,22 @@
    "src": "made"
   }
  ],
+ "w|渠道": [
+  {
+   "text": "厂里打算拓宽销售渠道，在网上开个店。",
+   "en": "The factory plans to broaden its sales channels by opening an online store.",
+   "ko": "공장은 판매 경로를 넓히려고 온라인 가게를 열 계획이에요.",
+   "blank": "渠道",
+   "src": "made"
+  },
+  {
+   "text": "孙悦很快就找到了一个新的销售渠道。",
+   "en": "Sun Yue quickly found a new sales channel.",
+   "ko": "쑨웨는 금방 새로운 판매 경로를 찾아냈어요.",
+   "blank": "渠道",
+   "src": "made"
+  }
+ ],
  "w|温和": [
   {
    "text": "小明的新邻居是位说话很温和的老太太。",
@@ -58016,6 +58384,22 @@
    "en": "In ancient times, autumn was the season when nobles went hunting.",
    "ko": "옛날에는 가을이 귀족들의 사냥철이었어요.",
    "blank": "狩猎",
+   "src": "made"
+  }
+ ],
+ "w|独一无二": [
+  {
+   "text": "每一张手工雕花的床都是独一无二的。",
+   "en": "Every hand-carved bed is one of a kind.",
+   "ko": "손으로 조각한 침대는 하나하나가 세상에 하나뿐이에요.",
+   "blank": "独一无二",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的笔迹很特别，同事们说简直独一无二。",
+   "en": "Sun Yue's handwriting is so distinctive that colleagues say it's one of a kind.",
+   "ko": "쑨웨의 글씨체가 아주 독특해서 동료들은 세상에 하나뿐이라고 해요.",
+   "blank": "独一无二",
    "src": "made"
   }
  ],
@@ -66953,6 +67337,22 @@
    "src": "made"
   }
  ],
+ "w|编号": [
+  {
+   "text": "马林的工厂专门生产实木家具，每件都有自己的编号。",
+   "en": "Ma Lin's factory makes solid wood furniture, and every piece has its own serial number.",
+   "ko": "마린의 공장은 원목 가구를 만드는데, 하나하나 고유 번호가 있어요.",
+   "blank": "编号",
+   "src": "made"
+  },
+  {
+   "text": "孙悦的工牌上印着她的员工编号。",
+   "en": "Sun Yue's badge shows her employee number.",
+   "ko": "쑨웨의 사원증에는 사원 번호가 찍혀 있어요.",
+   "blank": "编号",
+   "src": "made"
+  }
+ ],
  "w|编辑": [
   {
    "text": "一位杂志编辑来工地采访，想写写周强他们的故事。",
@@ -68582,6 +68982,22 @@
    "en": "Liu Fang's friend opened an art studio and invited her to invest for a small share.",
    "ko": "류팡의 친구가 화실을 열고 류팡에게 돈을 보태 지분을 조금 가지라고 권했어요.",
    "blank": "股份",
+   "src": "made"
+  }
+ ],
+ "w|股权": [
+  {
+   "text": "有位老股东想转让手里的股权。",
+   "en": "An old shareholder wants to transfer his equity stake.",
+   "ko": "한 오래된 주주가 가지고 있는 지분을 넘기고 싶어 해요.",
+   "blank": "股权",
+   "src": "made"
+  },
+  {
+   "text": "孙悦好奇地问，普通员工也能拿到公司的股权吗？",
+   "en": "Sun Yue asked curiously whether ordinary employees can get company equity too.",
+   "ko": "쑨웨는 일반 직원도 회사 지분을 받을 수 있냐고 궁금해서 물었어요.",
+   "blank": "股权",
    "src": "made"
   }
  ],
@@ -70975,6 +71391,22 @@
    "src": "made"
   }
  ],
+ "w|落地": [
+  {
+   "text": "新工厂的计划终于落地了，明年春天开工。",
+   "en": "The plan for the new factory has finally gone ahead, and construction starts next spring.",
+   "ko": "새 공장 계획이 드디어 실행돼서 내년 봄에 착공해요.",
+   "blank": "落地",
+   "src": "made"
+  },
+  {
+   "text": "孙悦提出的方案很快就落地了。",
+   "en": "The plan Sun Yue proposed was quickly put into practice.",
+   "ko": "쑨웨가 낸 방안은 금방 실행됐어요.",
+   "blank": "落地",
+   "src": "made"
+  }
+ ],
  "w|葡萄": [
   {
    "text": "甜点课上，老师用葡萄和酸奶做了一道简单的沙拉。",
@@ -72227,6 +72659,22 @@
    "src": "made"
   }
  ],
+ "w|装修": [
+  {
+   "text": "最近不少人家在装修，厂里的橱柜订单一下子多了。",
+   "en": "Lately many families are renovating, so the factory's cabinet orders suddenly increased.",
+   "ko": "요즘 집을 고치는 사람이 많아서 공장의 찬장 주문이 갑자기 늘었어요.",
+   "blank": "装修",
+   "src": "made"
+  },
+  {
+   "text": "公司正在装修，孙悦只好暂时在走廊办公。",
+   "en": "The office is being renovated, so Sun Yue has to work in the hallway for now.",
+   "ko": "회사가 공사 중이라 쑨웨는 당분간 복도에서 일할 수밖에 없어요.",
+   "blank": "装修",
+   "src": "made"
+  }
+ ],
  "w|装备": [
   {
    "text": "消防队新到了一批救援装备，陈杰去现场验收。",
@@ -72532,6 +72980,22 @@
    "en": "Before the meeting, Li Na wrote the key points on the whiteboard.",
    "ko": "회의 전에 리나는 요점을 화이트보드에 적었어요.",
    "blank": "要点",
+   "src": "made"
+  }
+ ],
+ "w|要素": [
+  {
+   "text": "马林认为，好家具有三个要素：木料、手艺和耐心。",
+   "en": "Ma Lin believes good furniture has three elements: wood, skill and patience.",
+   "ko": "마린은 좋은 가구에 세 가지 요소가 있다고 생각해요. 목재, 솜씨, 그리고 인내예요.",
+   "blank": "要素",
+   "src": "made"
+  },
+  {
+   "text": "孙悦认为，一个好广告有几个要素：简单、真实、好记。",
+   "en": "Sun Yue believes a good ad has a few key elements: simple, honest and memorable.",
+   "ko": "쑨웨는 좋은 광고에 몇 가지 요소가 있다고 봐요. 간단하고, 진실하고, 기억하기 쉬워야 해요.",
+   "blank": "要素",
    "src": "made"
   }
  ],
@@ -73785,6 +74249,22 @@
    "src": "made"
   }
  ],
+ "w|证书": [
+  {
+   "text": "新来的木工都要先拿到安全证书才能上岗。",
+   "en": "New carpenters must get a safety certificate before they can start work.",
+   "ko": "새로 온 목공들은 먼저 안전 자격증을 따야 일을 시작할 수 있어요.",
+   "blank": "证书",
+   "src": "made"
+  },
+  {
+   "text": "孙悦把几本证书整整齐齐地放进了抽屉。",
+   "en": "Sun Yue neatly put several certificates into the drawer.",
+   "ko": "쑨웨는 자격증 몇 개를 서랍에 가지런히 넣었어요.",
+   "blank": "证书",
+   "src": "made"
+  }
+ ],
  "w|证人": [
   {
    "text": "他是重要证人。",
@@ -74307,6 +74787,22 @@
    "en": "I want to learn a new language.",
    "ko": "새 언어를 하나 배우고 싶어.",
    "blank": "语言"
+  }
+ ],
+ "w|语音": [
+  {
+   "text": "马林在群里发了一条语音，通知大家明天停电。",
+   "en": "Ma Lin sent a voice message in the group chat telling everyone the power would be off tomorrow.",
+   "ko": "마린은 단체방에 음성 메시지를 보내 내일 정전된다고 알렸어요.",
+   "blank": "语音",
+   "src": "made"
+  },
+  {
+   "text": "孙悦不爱打字，总是发语音跟同事沟通。",
+   "en": "Sun Yue doesn't like typing and always sends voice messages to colleagues.",
+   "ko": "쑨웨는 타자 치는 걸 싫어해서 늘 음성 메시지로 동료와 이야기해요.",
+   "blank": "语音",
+   "src": "made"
   }
  ],
  "w|误会": [
@@ -75343,6 +75839,22 @@
    "en": "Take responsibility.",
    "ko": "책임을 져.",
    "blank": "责任"
+  }
+ ],
+ "w|账": [
+  {
+   "text": "马林每个月都要把车间的账算清楚。",
+   "en": "Every month Ma Lin has to settle the workshop's accounts.",
+   "ko": "마린은 매달 작업장 장부를 꼼꼼히 정리해야 해요.",
+   "blank": "账",
+   "src": "made"
+  },
+  {
+   "text": "孙悦帮财务把上个月的账核对了一遍。",
+   "en": "Sun Yue helped the finance team check last month's accounts.",
+   "ko": "쑨웨는 재무팀을 도와 지난달 장부를 한 번 맞춰 봤어요.",
+   "blank": "账",
+   "src": "made"
   }
  ],
  "w|账户": [
@@ -77723,6 +78235,22 @@
    "src": "made"
   }
  ],
+ "w|输出": [
+  {
+   "text": "这家工厂的家具不光在国内卖，还输出到好几个国家。",
+   "en": "This factory's furniture is not only sold at home but also exported to several countries.",
+   "ko": "이 공장의 가구는 국내에서만 팔리는 게 아니라 여러 나라로 수출돼요.",
+   "blank": "输出",
+   "src": "made"
+  },
+  {
+   "text": "孙悦负责把分析结果输出成报表。",
+   "en": "Sun Yue is responsible for exporting the analysis results as reports.",
+   "ko": "쑨웨는 분석 결과를 보고서로 출력하는 일을 맡았어요.",
+   "blank": "输出",
+   "src": "made"
+  }
+ ],
  "w|辛苦": [
   {
    "text": "你辛苦了。",
@@ -79999,6 +80527,22 @@
    "src": "made"
   }
  ],
+ "w|造就": [
+  {
+   "text": "几十年的好手艺造就了这家工厂的名声。",
+   "en": "Decades of fine craftsmanship built this factory's reputation.",
+   "ko": "수십 년의 좋은 솜씨가 이 공장의 명성을 만들어 냈어요.",
+   "blank": "造就",
+   "src": "made"
+  },
+  {
+   "text": "同事们都说，是辛苦的童年造就了孙悦的坚强。",
+   "en": "Her colleagues all say a hard childhood made Sun Yue strong.",
+   "ko": "동료들은 고생스러운 어린 시절이 쑨웨를 강하게 만들었다고 말해요.",
+   "blank": "造就",
+   "src": "made"
+  }
+ ],
  "w|造成": [
   {
    "text": "造成损失。",
@@ -81887,6 +82431,22 @@
    "src": "made"
   }
  ],
+ "w|键": [
+  {
+   "text": "马林按下红色的键，整条生产线停了下来。",
+   "en": "Ma Lin pressed the red button, and the whole production line stopped.",
+   "ko": "마린이 빨간 버튼을 누르자 생산 라인 전체가 멈췄어요.",
+   "blank": "键",
+   "src": "made"
+  },
+  {
+   "text": "孙悦不知道复印机该按哪个键，旁边的同事过来帮了她。",
+   "en": "Sun Yue didn't know which button to press on the copier, so a nearby colleague came to help.",
+   "ko": "쑨웨가 복사기의 어느 버튼을 눌러야 할지 몰라서 옆 동료가 와서 도와줬어요.",
+   "blank": "键",
+   "src": "made"
+  }
+ ],
  "w|锻炼": [
   {
    "text": "赵磊的爸爸有心脏病，所以赵磊特别注意锻炼。",
@@ -83593,6 +84153,22 @@
    "src": "made"
   }
  ],
+ "w|雇用": [
+  {
+   "text": "厂里最近雇用了一批年轻的木工。",
+   "en": "The factory recently hired a group of young carpenters.",
+   "ko": "공장은 최근 젊은 목공들을 고용했어요.",
+   "blank": "雇用",
+   "src": "made"
+  },
+  {
+   "text": "公司是从去年才开始雇用应届毕业生的。",
+   "en": "The company only started hiring fresh graduates last year.",
+   "ko": "회사는 작년부터야 졸업 예정자를 고용하기 시작했어요.",
+   "blank": "雇用",
+   "src": "made"
+  }
+ ],
  "w|雕像": [
   {
    "text": "广场上新立了一座雕像，黄涛去拍了照片。",
@@ -84773,6 +85349,22 @@
    "src": "made"
   }
  ],
+ "w|题目": [
+  {
+   "text": "工厂办了一场技能比赛，今年的题目是做一张小板凳。",
+   "en": "The factory held a skills contest, and this year's task is to make a small stool.",
+   "ko": "공장에서 기술 대회를 열었는데, 올해 과제는 작은 걸상 만들기예요.",
+   "blank": "题目",
+   "src": "made"
+  },
+  {
+   "text": "面试的题目很难，孙悦却答得很漂亮。",
+   "en": "The interview questions were hard, but Sun Yue answered them beautifully.",
+   "ko": "면접 문제가 어려웠는데도 쑨웨는 멋지게 답했어요.",
+   "blank": "题目",
+   "src": "made"
+  }
+ ],
  "w|颜色": [
   {
    "text": "你喜欢什么颜色？",
@@ -85775,6 +86367,22 @@
    "src": "made"
   }
  ],
+ "w|高温": [
+  {
+   "text": "木料不能受潮，也不能放在高温的地方。",
+   "en": "Timber can't get damp or be kept somewhere hot.",
+   "ko": "목재는 습기를 먹으면 안 되고 온도가 높은 곳에 둬도 안 돼요.",
+   "blank": "高温",
+   "src": "made"
+  },
+  {
+   "text": "这几天持续高温，孙悦每天自己带一壶凉茶上班。",
+   "en": "It's been scorching for days, so Sun Yue brings her own pot of herbal tea to work every day.",
+   "ko": "요 며칠 폭염이 계속돼서 쑨웨는 매일 시원한 차를 한 병씩 싸 와요.",
+   "blank": "高温",
+   "src": "made"
+  }
+ ],
  "w|高级": [
   {
    "text": "婚宴上的菜都很高级，客人们吃得赞不绝口。",
@@ -85788,6 +86396,22 @@
    "en": "Liu Fang's title is senior engineer, and it's even busier than she expected.",
    "ko": "류팡의 직위는 선임 엔지니어인데 생각보다 더 바빠요.",
    "blank": "高级",
+   "src": "made"
+  }
+ ],
+ "w|高考": [
+  {
+   "text": "马林的女儿明年要高考，他最近都早早回家。",
+   "en": "Ma Lin's daughter takes the college entrance exam next year, so he has been going home early lately.",
+   "ko": "마린의 딸이 내년에 대입 시험을 봐서 마린은 요즘 일찍 집에 가요.",
+   "blank": "高考",
+   "src": "made"
+  },
+  {
+   "text": "孙悦说，她高考那年数学考得特别好。",
+   "en": "Sun Yue says she did especially well in math the year she took the college entrance exam.",
+   "ko": "쑨웨는 대입 시험 보던 해에 수학을 특히 잘 봤대요.",
+   "blank": "高考",
    "src": "made"
   }
  ],
@@ -86226,6 +86850,22 @@
    "en": "The neighbors encouraged Liu Fang to join the residents' committee, saying she's conscientious.",
    "ko": "이웃들은 류팡이 일을 꼼꼼히 한다며 입주자 대표 회의에 나가 보라고 권했어요.",
    "blank": "鼓励",
+   "src": "made"
+  }
+ ],
+ "w|鼓掌": [
+  {
+   "text": "厂庆那天，工人们为退休的老师傅鼓掌送行。",
+   "en": "On the factory's anniversary, the workers applauded to see off a retiring master.",
+   "ko": "공장 창립 기념일에 직원들이 은퇴하는 선배 기술자를 박수로 배웅했어요.",
+   "blank": "鼓掌",
+   "src": "made"
+  },
+  {
+   "text": "孙悦上班第一天，全部门的人都为她鼓掌欢迎。",
+   "en": "On Sun Yue's first day, the whole department welcomed her with applause.",
+   "ko": "쑨웨가 출근한 첫날 부서 사람들이 모두 박수로 환영했어요.",
+   "blank": "鼓掌",
    "src": "made"
   }
  ],
