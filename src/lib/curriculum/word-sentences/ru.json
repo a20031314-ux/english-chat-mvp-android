@@ -125,6 +125,22 @@
    "src": "tatoeba:10934929/marafon en:35258/CK"
   }
  ],
+ "w|автограф": [
+  {
+   "text": "Андрей встретил в аптеке известного хоккеиста и попросил автограф.",
+   "en": "Andrey met a famous hockey player in the pharmacy and asked for an autograph.",
+   "ko": "안드레이는 약국에서 유명한 하키 선수를 만나 사인을 부탁했어요.",
+   "blank": "автограф",
+   "src": "made"
+  },
+  {
+   "text": "На стене охотничьего домика Ирина нашла автограф известного писателя.",
+   "en": "On the wall of the hunting lodge Irina found the autograph of a famous writer.",
+   "ko": "이리나는 사냥 오두막 벽에서 유명 작가의 사인을 발견했어요.",
+   "blank": "автограф",
+   "src": "made"
+  }
+ ],
  "w|автомат": [
   {
    "text": "На перемене Сергей купил в автомате бутылку воды.",
@@ -577,6 +593,22 @@
    "en": "Hello, who is this?",
    "ko": "여보세요, 누구세요?",
    "blank": "Алло"
+  }
+ ],
+ "w|алмаз": [
+  {
+   "text": "На пальце у аптекарши блестело кольцо с маленьким алмазом.",
+   "en": "A ring with a small diamond sparkled on the pharmacist's finger.",
+   "ko": "약사의 손가락에서 작은 다이아몬드 반지가 반짝였어요.",
+   "blank": "алмазом",
+   "src": "made"
+  },
+  {
+   "text": "Капли росы на паутине сверкали, как алмазы, и Ирина достала фотоаппарат.",
+   "en": "Dewdrops on the spider web sparkled like diamonds, and Irina took out her camera.",
+   "ko": "거미줄에 맺힌 이슬이 다이아몬드처럼 반짝여서 이리나는 카메라를 꺼냈어요.",
+   "blank": "алмазы",
+   "src": "made"
   }
  ],
  "w|алтарь": [
@@ -1455,6 +1487,22 @@
    "src": "tatoeba:4489983/Wezel en:1173002/eastasiastudent"
   }
  ],
+ "w|барабан": [
+  {
+   "text": "За стеной аптеки кто-то бил в барабан, и у Андрея разболелась голова.",
+   "en": "Someone was beating a drum behind the pharmacy wall, and Andrey got a headache.",
+   "ko": "약국 벽 너머에서 누가 북을 쳐서 안드레이는 머리가 아파졌어요.",
+   "blank": "барабан",
+   "src": "made"
+  },
+  {
+   "text": "Дятел стучал так громко, что Ирине показалось, будто где-то бьют в барабан.",
+   "en": "The woodpecker knocked so loudly that it seemed to Irina someone was beating a drum.",
+   "ko": "딱따구리가 너무 크게 쪼아서 이리나는 어디서 북을 치는 줄 알았어요.",
+   "blank": "барабан",
+   "src": "made"
+  }
+ ],
  "w|барахло": [
   {
    "text": "На чердаке избушки Алексей хранит всякое барахло для рыбалки.",
@@ -1532,6 +1580,22 @@
    "en": "In the history section Olga told the story of a baron who built the town's first hospital.",
    "ko": "역사 코너에서 올가는 이 도시에 첫 병원을 세운 남작 이야기를 소개했어요.",
    "blank": "бароне",
+   "src": "made"
+  }
+ ],
+ "w|баскетбол": [
+  {
+   "text": "Андрей сломал палец, играя в баскетбол, и пришёл за шиной.",
+   "en": "Andrey broke his finger playing basketball and came for a splint.",
+   "ko": "안드레이는 농구를 하다 손가락이 부러져서 부목을 사러 왔어요.",
+   "blank": "баскетбол",
+   "src": "made"
+  },
+  {
+   "text": "Ирина в школе играла в баскетбол, а теперь предпочитает походы.",
+   "en": "Irina played basketball at school, but now she prefers hiking.",
+   "ko": "이리나는 학교 다닐 때 농구를 했지만 지금은 하이킹을 더 좋아해요.",
+   "blank": "баскетбол",
    "src": "made"
   }
  ],
@@ -1862,6 +1926,22 @@
    "en": "Olga wrote to Natasha that her husband fries eggs and bacon every morning.",
    "ko": "올가는 나타샤에게 남편이 매일 아침 베이컨 달걀프라이를 한다고 썼어요.",
    "blank": "беконом",
+   "src": "made"
+  }
+ ],
+ "w|белок": [
+  {
+   "text": "Фармацевт посоветовал Андрею коктейль, в котором много белка.",
+   "en": "The pharmacist recommended Andrey a shake with a lot of protein in it.",
+   "ko": "약사가 안드레이에게 단백질이 많이 든 셰이크를 권했어요.",
+   "blank": "белка",
+   "src": "made"
+  },
+  {
+   "text": "Ирина знает, что белок в походе нужен не меньше, чем вода.",
+   "en": "Irina knows that protein on a hike is needed as much as water.",
+   "ko": "이리나는 캠핑에서 단백질이 물만큼 중요하다는 걸 알아요.",
+   "blank": "белок",
    "src": "made"
   }
  ],
@@ -2623,6 +2703,22 @@
    "src": "made"
   }
  ],
+ "w|блинчик": [
+  {
+   "text": "Андрей обжёг руку, когда жарил блинчики, и пришёл за мазью.",
+   "en": "Andrey burned his hand frying pancakes and came for some ointment.",
+   "ko": "안드레이는 팬케이크를 굽다가 손을 데어서 연고를 사러 왔어요.",
+   "blank": "блинчики",
+   "src": "made"
+  },
+  {
+   "text": "Ирина бросила плоский камень, и он сделал по воде несколько блинчиков.",
+   "en": "Irina threw a flat stone, and it skipped across the water several times.",
+   "ko": "이리나가 납작한 돌을 던지자 물 위에서 여러 번 통통 튀었어요.",
+   "blank": "блинчиков",
+   "src": "made"
+  }
+ ],
  "w|блог": [
   {
    "text": "Иван ведёт блог о жизни в старших классах.",
@@ -3183,6 +3279,22 @@
    "ko": "이 신발 색깔이 마음에 안 들어요.",
    "blank": "ботинок",
    "src": "tatoeba:7919719/Wezzel en:7901839/CK"
+  }
+ ],
+ "w|боулинг": [
+  {
+   "text": "Андрей потянул руку в боулинге и пришёл за эластичным бинтом.",
+   "en": "Andrey strained his arm bowling and came for an elastic bandage.",
+   "ko": "안드레이는 볼링을 치다가 팔을 삐어서 압박 붕대를 사러 왔어요.",
+   "blank": "боулинге",
+   "src": "made"
+  },
+  {
+   "text": "Ирина подумала, что сбивать шишки камнями — почти как боулинг.",
+   "en": "Irina thought that knocking down pine cones with stones is almost like bowling.",
+   "ko": "이리나는 돌로 솔방울을 맞혀 떨어뜨리는 게 거의 볼링 같다고 생각했어요.",
+   "blank": "боулинг",
+   "src": "made"
   }
  ],
  "w|бочка": [
@@ -4275,6 +4387,22 @@
    "src": "tatoeba:14092115/marafon en:10932609/sabretou"
   }
  ],
+ "w|вежливость": [
+  {
+   "text": "Андрея всегда радует вежливость местного фармацевта.",
+   "en": "Andrey is always pleased by the local pharmacist's politeness.",
+   "ko": "안드레이는 동네 약사의 친절함이 늘 반가워요.",
+   "blank": "вежливость",
+   "src": "made"
+  },
+  {
+   "text": "Лесник ответил Ирине с подчёркнутой вежливостью.",
+   "en": "The forester answered Irina with pointed politeness.",
+   "ko": "산림 관리인은 이리나에게 깍듯이 예의를 갖춰 대답했어요.",
+   "blank": "вежливостью",
+   "src": "made"
+  }
+ ],
  "w|вежливый": [
   {
    "text": "Андрей всегда вежлив с вахтёршей, и она пускает его в школу пораньше.",
@@ -5036,6 +5164,22 @@
    "en": "She began to sigh heavily.",
    "ko": "그녀는 깊게 한숨을 쉬기 시작했어요.",
    "blank": "вздыхать",
+   "src": "made"
+  }
+ ],
+ "w|взлететь": [
+  {
+   "text": "Андрей купил таблетки от укачивания: завтра его самолёт взлетит рано утром.",
+   "en": "Andrey bought motion-sickness pills: tomorrow his plane takes off early in the morning.",
+   "ko": "안드레이는 멀미약을 샀어요. 내일 그의 비행기가 아침 일찍 이륙하거든요.",
+   "blank": "взлетит",
+   "src": "made"
+  },
+  {
+   "text": "Из камышей вдруг взлетела цапля, и Ирина вздрогнула.",
+   "en": "A heron suddenly took off from the reeds, and Irina flinched.",
+   "ko": "갈대숲에서 갑자기 왜가리가 날아올라 이리나는 깜짝 놀랐어요.",
+   "blank": "взлетела",
    "src": "made"
   }
  ],
@@ -7026,6 +7170,22 @@
    "en": "The security guard told Natalia that thefts in the changing rooms had started again.",
    "ko": "경비원은 탈의실에서 또 도난이 생기기 시작했다고 나탈리야에게 말했어요.",
    "blank": "воровать",
+   "src": "made"
+  }
+ ],
+ "w|воровство": [
+  {
+   "text": "Охранник рассказал Андрею, что из-за воровства в аптеке поставили камеры.",
+   "en": "The security guard told Andrey that cameras were installed in the pharmacy because of theft.",
+   "ko": "경비원이 안드레이에게 도난 때문에 약국에 카메라를 달았다고 말해 줬어요.",
+   "blank": "воровства",
+   "src": "made"
+  },
+  {
+   "text": "Рыбаки жаловались Ирине на воровство сетей.",
+   "en": "The fishermen complained to Irina about nets being stolen.",
+   "ko": "어부들이 이리나에게 그물 도난에 대해 하소연했어요.",
+   "blank": "воровство",
    "src": "made"
   }
  ],
@@ -10439,6 +10599,22 @@
    "src": "made"
   }
  ],
+ "w|гол": [
+  {
+   "text": "Сын Андрея ушиб колено, когда забивал гол, и теперь нужна мазь.",
+   "en": "Andrey's son bruised his knee scoring a goal, and now they need ointment.",
+   "ko": "안드레이의 아들이 골을 넣다가 무릎을 다쳐서 이제 연고가 필요해요.",
+   "blank": "гол",
+   "src": "made"
+  },
+  {
+   "text": "На поляне у реки дети играли в футбол, и Ирина видела, как мальчик забил гол.",
+   "en": "Children were playing football in the meadow by the river, and Irina saw a boy score a goal.",
+   "ko": "강가 풀밭에서 아이들이 축구를 했는데, 이리나는 한 소년이 골을 넣는 걸 봤어요.",
+   "blank": "гол",
+   "src": "made"
+  }
+ ],
  "w|голова": [
   {
    "text": "У меня болит голова.",
@@ -11416,6 +11592,22 @@
    "en": "Anna politely answered her fellow passenger's rude question.",
    "ko": "안나는 동승객의 무례한 질문에 공손하게 대답했어요.",
    "blank": "грубый",
+   "src": "made"
+  }
+ ],
+ "w|грудной": [
+  {
+   "text": "Андрей выбрал смесь для грудного ребёнка своей сестры.",
+   "en": "Andrey picked out formula for his sister's baby.",
+   "ko": "안드레이는 여동생의 젖먹이 아기에게 줄 분유를 골랐어요.",
+   "blank": "грудного",
+   "src": "made"
+  },
+  {
+   "text": "После купания в холодной реке у Ирины начался грудной кашель.",
+   "en": "After swimming in the cold river, Irina developed a chesty cough.",
+   "ko": "차가운 강에서 수영한 뒤 이리나는 가슴 기침이 시작됐어요.",
+   "blank": "грудной",
    "src": "made"
   }
  ],
@@ -16775,6 +16967,22 @@
    "src": "tatoeba:11822478/marafon en:4013928/CK"
   }
  ],
+ "w|задолго": [
+  {
+   "text": "Андрей пришёл к аптеке задолго до открытия.",
+   "en": "Andrey arrived at the pharmacy long before it opened.",
+   "ko": "안드레이는 문 열기 한참 전에 약국에 도착했어요.",
+   "blank": "задолго",
+   "src": "made"
+  },
+  {
+   "text": "Ирина вышла из лагеря задолго до рассвета.",
+   "en": "Irina left the camp long before dawn.",
+   "ko": "이리나는 동트기 한참 전에 캠프를 나섰어요.",
+   "blank": "задолго",
+   "src": "made"
+  }
+ ],
  "w|задумать": [
   {
    "text": "Что ты задумал?",
@@ -17703,6 +17911,22 @@
    "src": "made"
   }
  ],
+ "w|заноза": [
+  {
+   "text": "Андрею понадобился пинцет, чтобы вытащить занозу из пальца.",
+   "en": "Andrey needed tweezers to pull a splinter out of his finger.",
+   "ko": "안드레이는 손가락에 박힌 가시를 빼려고 핀셋이 필요했어요.",
+   "blank": "занозу",
+   "src": "made"
+  },
+  {
+   "text": "Пока Ирина собирала хворост, ей в палец впилась заноза.",
+   "en": "While Irina was gathering brushwood, a splinter got stuck in her finger.",
+   "ko": "이리나가 땔감을 줍는 사이 손가락에 가시가 박혔어요.",
+   "blank": "заноза",
+   "src": "made"
+  }
+ ],
  "w|зануда": [
   {
    "text": "Сосед по палате оказался ужасным занудой, но Никите он всё равно понравился.",
@@ -17967,6 +18191,22 @@
    "ko": "그 소식을 듣고 울고 싶었어요.",
    "blank": "заплакать",
    "src": "tatoeba:521851/papersaltserver en:352274/human600"
+  }
+ ],
+ "w|запланировать": [
+  {
+   "text": "Андрей заранее запланировал зайти в аптеку после работы.",
+   "en": "Andrey planned in advance to drop by the pharmacy after work.",
+   "ko": "안드레이는 퇴근 후 약국에 들르기로 미리 계획해 뒀어요.",
+   "blank": "запланировал",
+   "src": "made"
+  },
+  {
+   "text": "Ирина запланировала сплав по реке на конец июля.",
+   "en": "Irina planned a river rafting trip for the end of July.",
+   "ko": "이리나는 칠월 말에 강 래프팅을 계획했어요.",
+   "blank": "запланировала",
+   "src": "made"
   }
  ],
  "w|заплатить": [
@@ -20353,6 +20593,22 @@
    "src": "made"
   }
  ],
+ "w|иммунитет": [
+  {
+   "text": "Провизор посоветовал Андрею витамины для укрепления иммунитета.",
+   "en": "The pharmacist recommended vitamins to Andrey to strengthen his immunity.",
+   "ko": "약사가 안드레이에게 면역력을 높이는 비타민을 권했어요.",
+   "blank": "иммунитета",
+   "src": "made"
+  },
+  {
+   "text": "Ирина уверена, что прогулки по лесу укрепляют иммунитет.",
+   "en": "Irina is sure that walks in the forest strengthen immunity.",
+   "ko": "이리나는 숲 산책이 면역력을 높여 준다고 확신해요.",
+   "blank": "иммунитет",
+   "src": "made"
+  }
+ ],
  "w|император": [
   {
    "text": "Старый сосед показал Андрею монету с профилем императора.",
@@ -22245,6 +22501,22 @@
    "src": "tatoeba:4540699/Wezel en:565798/darinmex"
   }
  ],
+ "w|кинжал": [
+  {
+   "text": "Андрей порезался о старинный кинжал у друга на стене и пришёл за пластырем.",
+   "en": "Andrey cut himself on an antique dagger on his friend's wall and came for a plaster.",
+   "ko": "안드레이는 친구 집 벽에 걸린 오래된 단검에 베여서 반창고를 사러 왔어요.",
+   "blank": "кинжал",
+   "src": "made"
+  },
+  {
+   "text": "Ирина нашла в реке ржавый кинжал и отнесла его в краеведческий музей.",
+   "en": "Irina found a rusty dagger in the river and took it to the local history museum.",
+   "ko": "이리나는 강에서 녹슨 단검을 찾아 향토 박물관에 가져갔어요.",
+   "blank": "кинжал",
+   "src": "made"
+  }
+ ],
  "w|кино": [
   {
    "text": "Не хотели бы вы пойти со мной в кино?",
@@ -22543,6 +22815,22 @@
    "en": "Call the client yourself.",
    "ko": "고객한테 직접 전화해.",
    "blank": "клиенту"
+  }
+ ],
+ "w|клиентка": [
+  {
+   "text": "Пожилая клиентка долго выбирала крем для рук, пока Андрей ждал своей очереди.",
+   "en": "An elderly customer spent a long time choosing hand cream while Andrey waited his turn.",
+   "ko": "나이 든 여자 손님이 핸드크림을 한참 고르는 동안 안드레이는 차례를 기다렸어요.",
+   "blank": "клиентка",
+   "src": "made"
+  },
+  {
+   "text": "Хозяйка лодочной станции встретила Ирину как давнюю клиентку.",
+   "en": "The owner of the boat station greeted Irina like a long-time customer.",
+   "ko": "보트 대여소 주인은 이리나를 오랜 단골처럼 맞아 주었어요.",
+   "blank": "клиентку",
+   "src": "made"
   }
  ],
  "w|клиника": [
@@ -23230,6 +23518,22 @@
    "en": "In winter Svetlana likes to boss the kids around when they build a snow fort.",
    "ko": "겨울이면 스베틀라나는 아이들이 눈 요새를 쌓을 때 이것저것 지시하는 걸 좋아해요.",
    "blank": "командовать",
+   "src": "made"
+  }
+ ],
+ "w|командующий": [
+  {
+   "text": "У кассы Андрей узнал бывшего командующего гарнизоном, который покупал капли.",
+   "en": "At the till Andrey recognised the former garrison commander, who was buying drops.",
+   "ko": "안드레이는 계산대에서 안약을 사던 전 수비대 사령관을 알아봤어요.",
+   "blank": "командующего",
+   "src": "made"
+  },
+  {
+   "text": "В лесном музее Ирина видела карту, которую рисовал командующий партизанским отрядом.",
+   "en": "In the forest museum Irina saw a map drawn by the commander of a partisan unit.",
+   "ko": "이리나는 숲속 박물관에서 빨치산 부대 사령관이 그린 지도를 봤어요.",
+   "blank": "командующий",
    "src": "made"
   }
  ],
@@ -26269,6 +26573,38 @@
    "src": "tatoeba:6370317/marafon en:6272994/CK"
   }
  ],
+ "w|лимон": [
+  {
+   "text": "Андрей купил леденцы от горла со вкусом лимона.",
+   "en": "Andrey bought lemon-flavoured throat lozenges.",
+   "ko": "안드레이는 레몬 맛 목캔디를 샀어요.",
+   "blank": "лимона",
+   "src": "made"
+  },
+  {
+   "text": "Ирина добавила дольку лимона в чай из термоса.",
+   "en": "Irina added a slice of lemon to the tea from her thermos.",
+   "ko": "이리나는 보온병 차에 레몬 한 조각을 넣었어요.",
+   "blank": "лимона",
+   "src": "made"
+  }
+ ],
+ "w|лимузин": [
+  {
+   "text": "Перед аптекой остановился белый лимузин, и Андрей удивлённо обернулся.",
+   "en": "A white limousine stopped in front of the pharmacy, and Andrey turned around in surprise.",
+   "ko": "약국 앞에 흰 리무진이 서자 안드레이가 놀라서 돌아봤어요.",
+   "blank": "лимузин",
+   "src": "made"
+  },
+  {
+   "text": "На лесной дороге Ирина с изумлением увидела застрявший в грязи лимузин.",
+   "en": "On the forest road Irina was amazed to see a limousine stuck in the mud.",
+   "ko": "이리나는 숲길에서 진흙에 빠진 리무진을 보고 깜짝 놀랐어요.",
+   "blank": "лимузин",
+   "src": "made"
+  }
+ ],
  "w|линия": [
   {
    "text": "Я позвонил ему, но линия была занята.",
@@ -26803,6 +27139,22 @@
    "en": "This is the best place.",
    "ko": "여기가 제일 좋은 데야.",
    "blank": "лучшее"
+  }
+ ],
+ "w|лыжа": [
+  {
+   "text": "Андрей подвернул ногу на лыжах и купил мазь от ушибов.",
+   "en": "Andrey twisted his ankle skiing and bought ointment for bruises.",
+   "ko": "안드레이는 스키를 타다 발목을 삐어서 타박상 연고를 샀어요.",
+   "blank": "лыжах",
+   "src": "made"
+  },
+  {
+   "text": "Ирина сломала лыжу, когда спускалась к замёрзшей реке.",
+   "en": "Irina broke a ski going down to the frozen river.",
+   "ko": "이리나는 얼어붙은 강으로 내려가다가 스키 한 짝을 부러뜨렸어요.",
+   "blank": "лыжу",
+   "src": "made"
   }
  ],
  "w|любезный": [
@@ -28286,6 +28638,22 @@
    "en": "The casing of Elena's new prototype is made of light metal.",
    "ko": "엘레나의 새 시제품 외장은 가벼운 금속으로 만들어졌어요.",
    "blank": "металла",
+   "src": "made"
+  }
+ ],
+ "w|метка": [
+  {
+   "text": "На коробке стояла красная метка «по рецепту», и Андрею пришлось идти к врачу.",
+   "en": "The box had a red \"prescription only\" mark, so Andrey had to go to the doctor.",
+   "ko": "상자에 빨간 \"처방전 필요\" 표시가 있어서 안드레이는 병원에 가야 했어요.",
+   "blank": "метка",
+   "src": "made"
+  },
+  {
+   "text": "Ирина шла по лесной тропе, следя за жёлтыми метками на деревьях.",
+   "en": "Irina walked along the forest trail, following the yellow marks on the trees.",
+   "ko": "이리나는 나무에 그려진 노란 표시를 따라 숲길을 걸었어요.",
+   "blank": "метками",
    "src": "made"
   }
  ],
@@ -32195,6 +32563,22 @@
    "ko": "제일 좋아하는 국립공원이 어디야?",
    "blank": "национальный",
    "src": "tatoeba:4606627/odexed en:906823/CK"
+  }
+ ],
+ "w|нацист": [
+  {
+   "text": "Пожилой мужчина в очереди рассказывал Андрею, как его дед воевал с нацистами.",
+   "en": "An elderly man in the queue was telling Andrey how his grandfather fought the Nazis.",
+   "ko": "줄에 선 노인이 안드레이에게 자기 할아버지가 나치와 싸운 이야기를 했어요.",
+   "blank": "нацистами",
+   "src": "made"
+  },
+  {
+   "text": "Местный старик показал Ирине окопы, где партизаны воевали против нацистов.",
+   "en": "A local old man showed Irina the trenches where partisans fought against the Nazis.",
+   "ko": "동네 노인이 이리나에게 빨치산이 나치에 맞서 싸운 참호를 보여 줬어요.",
+   "blank": "нацистов",
+   "src": "made"
   }
  ],
  "w|нация": [
@@ -37007,6 +37391,22 @@
    "blank": "операция"
   }
  ],
+ "w|оперировать": [
+  {
+   "text": "Хирург, который оперировал маму Андрея, выписал ей обезболивающее.",
+   "en": "The surgeon who operated on Andrey's mother prescribed her a painkiller.",
+   "ko": "안드레이 엄마를 수술한 외과 의사가 진통제를 처방해 줬어요.",
+   "blank": "оперировал",
+   "src": "made"
+  },
+  {
+   "text": "Ирина узнала, что раненого бобра будут оперировать в городской клинике.",
+   "en": "Irina learned that the injured beaver would be operated on at a city clinic.",
+   "ko": "이리나는 다친 비버가 도시 병원에서 수술을 받게 된다는 걸 알았어요.",
+   "blank": "оперировать",
+   "src": "made"
+  }
+ ],
  "w|описание": [
   {
    "text": "Мне нравится это описание.",
@@ -37069,6 +37469,22 @@
    "ko": "책값을 수표로 낼 수 있어요?",
    "blank": "оплатить",
    "src": "tatoeba:598843/kobylkin en:33033/CK"
+  }
+ ],
+ "w|оплачивать": [
+  {
+   "text": "Андрей всегда оплачивает лекарства картой.",
+   "en": "Andrey always pays for medicine by card.",
+   "ko": "안드레이는 늘 약값을 카드로 계산해요.",
+   "blank": "оплачивает",
+   "src": "made"
+  },
+  {
+   "text": "Ирина оплачивала прокат лодки наличными.",
+   "en": "Irina paid for the boat rental in cash.",
+   "ko": "이리나는 보트 대여료를 현금으로 냈어요.",
+   "blank": "оплачивала",
+   "src": "made"
   }
  ],
  "w|опоздание": [
@@ -44945,6 +45361,22 @@
    "blank": "позвонил"
   }
  ],
+ "w|позвоночник": [
+  {
+   "text": "Андрей спросил, какой пояс лучше всего поддерживает позвоночник.",
+   "en": "Andrey asked which belt supports the spine best.",
+   "ko": "안드레이는 어떤 허리 보호대가 척추를 가장 잘 받쳐 주는지 물었어요.",
+   "blank": "позвоночник",
+   "src": "made"
+  },
+  {
+   "text": "После ночи на жёсткой земле у Ирины ныл позвоночник.",
+   "en": "After a night on the hard ground, Irina's spine ached.",
+   "ko": "딱딱한 땅에서 하룻밤을 자고 나니 이리나는 척추가 쑤셨어요.",
+   "blank": "позвоночник",
+   "src": "made"
+  }
+ ],
  "w|поздний": [
   {
    "text": "Павел с женой сели ужинать только поздним вечером.",
@@ -46745,6 +47177,22 @@
    "src": "made"
   }
  ],
+ "w|попкорн": [
+  {
+   "text": "Андрей с удивлением заметил, что в аптеке продают даже попкорн.",
+   "en": "Andrey noticed with surprise that the pharmacy even sells popcorn.",
+   "ko": "안드레이는 약국에서 팝콘까지 판다는 걸 보고 놀랐어요.",
+   "blank": "попкорн",
+   "src": "made"
+  },
+  {
+   "text": "Вечером Ирина пожарила попкорн прямо на костре.",
+   "en": "In the evening Irina made popcorn right on the campfire.",
+   "ko": "저녁에 이리나는 모닥불에서 바로 팝콘을 튀겼어요.",
+   "blank": "попкорн",
+   "src": "made"
+  }
+ ],
  "w|пополам": [
   {
    "text": "Сергей с братом поделили счёт за подарок отцу пополам.",
@@ -48362,6 +48810,22 @@
    "en": "The vendors at the market were discussing the theft of someone's bag from a car, and Maria listened.",
    "ko": "시장 상인들이 차에서 누군가의 가방을 훔쳐 간 사건을 얘기해서 마리야는 귀를 기울였어요.",
    "blank": "похищение",
+   "src": "made"
+  }
+ ],
+ "w|похмелье": [
+  {
+   "text": "Мужчина в очереди перед Андреем шёпотом попросил средство от похмелья.",
+   "en": "The man in the queue ahead of Andrey whispered a request for a hangover remedy.",
+   "ko": "안드레이 앞에 줄 선 남자가 숙취약을 작은 소리로 달라고 했어요.",
+   "blank": "похмелья",
+   "src": "made"
+  },
+  {
+   "text": "Утром после праздника у костра у друга Ирины было тяжёлое похмелье.",
+   "en": "The morning after the campfire party, Irina's friend had a bad hangover.",
+   "ko": "모닥불 파티 다음 날 아침 이리나의 친구는 숙취가 심했어요.",
+   "blank": "похмелье",
    "src": "made"
   }
  ],
@@ -50212,6 +50676,22 @@
    "en": "The chemistry teacher forbade Irina to touch the instrument without permission.",
    "ko": "화학 선생님은 이리나에게 허락 없이 기구를 만지지 말라고 했어요.",
    "blank": "прибор",
+   "src": "made"
+  }
+ ],
+ "w|прибывать": [
+  {
+   "text": "Новая партия лекарств прибывает в аптеку по вторникам, объяснили Андрею.",
+   "en": "Andrey was told that a new batch of medicines arrives at the pharmacy on Tuesdays.",
+   "ko": "안드레이는 새 약이 화요일마다 약국에 들어온다는 설명을 들었어요.",
+   "blank": "прибывает",
+   "src": "made"
+  },
+  {
+   "text": "Весной вода в реке прибывает, и Ирина ставит палатку повыше.",
+   "en": "In spring the river water rises, and Irina pitches her tent higher up.",
+   "ko": "봄에는 강물이 불어서 이리나는 텐트를 더 높은 곳에 쳐요.",
+   "blank": "прибывает",
    "src": "made"
   }
  ],
@@ -56607,6 +57087,22 @@
    "src": "made"
   }
  ],
+ "w|реабилитация": [
+  {
+   "text": "Андрей покупает бинты для мамы, у которой сейчас реабилитация после травмы.",
+   "en": "Andrey is buying bandages for his mother, who is now in rehabilitation after an injury.",
+   "ko": "안드레이는 부상 후 재활 중인 엄마를 위해 붕대를 사요.",
+   "blank": "реабилитация",
+   "src": "made"
+  },
+  {
+   "text": "Ирина помогает в центре, где проходят реабилитацию раненые совы.",
+   "en": "Irina helps out at a centre where injured owls go through rehabilitation.",
+   "ko": "이리나는 다친 올빼미들이 재활하는 센터에서 일을 도와요.",
+   "blank": "реабилитацию",
+   "src": "made"
+  }
+ ],
  "w|реагировать": [
   {
    "text": "Учительница похвалила Алексея за то, что он спокойно реагирует на критику.",
@@ -56792,6 +57288,22 @@
    "en": "Maria registered for the press conference five minutes before it started.",
    "ko": "마리야는 기자 회견 시작 5분 전에 등록을 마쳤어요.",
    "blank": "регистрацию",
+   "src": "made"
+  }
+ ],
+ "w|регулярно": [
+  {
+   "text": "Андрей регулярно покупает витамины в одной и той же аптеке.",
+   "en": "Andrey regularly buys vitamins at the same pharmacy.",
+   "ko": "안드레이는 늘 같은 약국에서 꾸준히 비타민을 사요.",
+   "blank": "регулярно",
+   "src": "made"
+  },
+  {
+   "text": "Ирина регулярно ходит в лес за грибами.",
+   "en": "Irina regularly goes to the forest for mushrooms.",
+   "ko": "이리나는 꾸준히 숲에 버섯을 따러 가요.",
+   "blank": "регулярно",
    "src": "made"
   }
  ],
@@ -58312,6 +58824,22 @@
    "en": "Maria's neighbour always holds the door for her, like a real knight.",
    "ko": "마리아의 이웃은 진짜 기사처럼 늘 문을 잡아 줘요.",
    "blank": "рыцарь",
+   "src": "made"
+  }
+ ],
+ "w|рычаг": [
+  {
+   "text": "Кресло для измерения давления регулируется рычагом, и Андрей долго с ним возился.",
+   "en": "The blood-pressure chair is adjusted with a lever, and Andrey fiddled with it for a long time.",
+   "ko": "혈압 측정 의자는 레버로 조절하는데, 안드레이는 한참 씨름했어요.",
+   "blank": "рычагом",
+   "src": "made"
+  },
+  {
+   "text": "Ирина использовала толстую палку как рычаг, чтобы сдвинуть бревно.",
+   "en": "Irina used a thick stick as a lever to move the log.",
+   "ko": "이리나는 굵은 막대기를 지렛대 삼아 통나무를 옮겼어요.",
+   "blank": "рычаг",
    "src": "made"
   }
  ],
@@ -63253,6 +63781,22 @@
    "src": "tatoeba:8923317/carlosalberto en:8923280/carlosalberto"
   }
  ],
+ "w|сорт": [
+  {
+   "text": "Андрей спросил, какой сорт чая лучше помогает от простуды.",
+   "en": "Andrey asked which kind of tea helps best with a cold.",
+   "ko": "안드레이는 감기에 어떤 차가 제일 좋은지 물었어요.",
+   "blank": "сорт",
+   "src": "made"
+  },
+  {
+   "text": "Ирина не знала, какой сорт яблок растёт в заброшенном саду у реки.",
+   "en": "Irina didn't know what variety of apples grew in the abandoned orchard by the river.",
+   "ko": "이리나는 강가 버려진 과수원에서 어떤 품종의 사과가 자라는지 몰랐어요.",
+   "blank": "сорт",
+   "src": "made"
+  }
+ ],
  "w|сосед": [
   {
    "text": "Как тебе твой новый сосед по комнате?",
@@ -63712,6 +64256,22 @@
    "en": "The farmer next door is Elena's loyal ally — he brings her the freshest eggs.",
    "ko": "이웃 농부는 엘레나의 든든한 동지라서 가장 신선한 달걀을 가져다줘요.",
    "blank": "союзник",
+   "src": "made"
+  }
+ ],
+ "w|спагетти": [
+  {
+   "text": "Андрей зашёл в аптеку по дороге домой с пакетом, где лежали спагетти и сыр.",
+   "en": "Andrey stopped at the pharmacy on his way home, carrying a bag with spaghetti and cheese.",
+   "ko": "안드레이는 스파게티와 치즈가 든 봉지를 들고 집에 가는 길에 약국에 들렀어요.",
+   "blank": "спагетти",
+   "src": "made"
+  },
+  {
+   "text": "У костра Ирина сварила спагетти в старом котелке.",
+   "en": "By the campfire Irina cooked spaghetti in an old pot.",
+   "ko": "이리나는 모닥불 옆에서 낡은 냄비에 스파게티를 삶았어요.",
+   "blank": "спагетти",
    "src": "made"
   }
  ],
@@ -64217,6 +64777,22 @@
    "src": "made"
   }
  ],
+ "w|спортсмен": [
+  {
+   "text": "Провизор объяснил Андрею, какие добавки обычно пьют спортсмены.",
+   "en": "The pharmacist explained to Andrey which supplements athletes usually take.",
+   "ko": "약사가 안드레이에게 운동선수들이 보통 먹는 보충제를 설명해 줬어요.",
+   "blank": "спортсмены",
+   "src": "made"
+  },
+  {
+   "text": "Мимо Ирины по берегу пробежал спортсмен в наушниках.",
+   "en": "An athlete in headphones ran past Irina along the bank.",
+   "ko": "헤드폰을 낀 운동선수가 강둑을 따라 이리나 옆을 달려 지나갔어요.",
+   "blank": "спортсмен",
+   "src": "made"
+  }
+ ],
  "w|способ": [
   {
    "text": "Есть способ проще.",
@@ -64703,6 +65279,22 @@
    "src": "tatoeba:11084974/soniamiku en:12381705/Miktsoanit"
   }
  ],
+ "w|срыв": [
+  {
+   "text": "Андрей купил успокоительное для брата, у которого после сессии случился нервный срыв.",
+   "en": "Andrey bought a sedative for his brother, who had a nervous breakdown after exams.",
+   "ko": "안드레이는 시험 기간 뒤 신경쇠약이 온 동생에게 줄 진정제를 샀어요.",
+   "blank": "срыв",
+   "src": "made"
+  },
+  {
+   "text": "Ирина уехала в лес, чтобы не довести себя до срыва на работе.",
+   "en": "Irina went off to the forest so as not to push herself to a breakdown at work.",
+   "ko": "이리나는 직장에서 무너지지 않으려고 숲으로 떠났어요.",
+   "blank": "срыва",
+   "src": "made"
+  }
+ ],
  "w|ссора": [
   {
    "text": "После небольшой ссоры Алексей и его друг помирились на следующий день.",
@@ -65002,6 +65594,22 @@
    "en": "Maria kicked off the evening with a toast to friendship.",
    "ko": "마리아는 우정을 위한 건배로 저녁을 시작했어요.",
    "blank": "старт",
+   "src": "made"
+  }
+ ],
+ "w|старуха": [
+  {
+   "text": "Андрей пропустил вперёд старуху с палочкой.",
+   "en": "Andrey let an old woman with a cane go ahead of him.",
+   "ko": "안드레이는 지팡이를 짚은 할머니에게 먼저 가시라고 양보했어요.",
+   "blank": "старуху",
+   "src": "made"
+  },
+  {
+   "text": "В деревне у реки старуха продала Ирине банку черники.",
+   "en": "In the village by the river an old woman sold Irina a jar of blueberries.",
+   "ko": "강가 마을에서 할머니가 이리나에게 블루베리 한 병을 팔았어요.",
+   "blank": "старуха",
    "src": "made"
   }
  ],
@@ -75786,6 +76394,38 @@
    "en": "Irina blew up a balloon for the school party.",
    "ko": "이리나는 학교 행사용 풍선을 불었어요.",
    "blank": "шарик",
+   "src": "made"
+  }
+ ],
+ "w|шарф": [
+  {
+   "text": "Андрей замотал горло тёплым шарфом и пошёл за каплями от насморка.",
+   "en": "Andrey wrapped his throat in a warm scarf and went for some nose drops.",
+   "ko": "안드레이는 따뜻한 목도리로 목을 감싸고 콧물약을 사러 갔어요.",
+   "blank": "шарфом",
+   "src": "made"
+  },
+  {
+   "text": "Ветер с реки был холодным, и Ирина завязала шарф потуже.",
+   "en": "The wind from the river was cold, and Irina tied her scarf tighter.",
+   "ko": "강바람이 차가워서 이리나는 목도리를 더 단단히 맸어요.",
+   "blank": "шарф",
+   "src": "made"
+  }
+ ],
+ "w|шахматы": [
+  {
+   "text": "Фармацевт признался Андрею, что по вечерам играет в шахматы с соседом.",
+   "en": "The pharmacist confessed to Andrey that he plays chess with his neighbour in the evenings.",
+   "ko": "약사는 저녁마다 이웃과 체스를 둔다고 안드레이에게 털어놓았어요.",
+   "blank": "шахматы",
+   "src": "made"
+  },
+  {
+   "text": "Вечером в палатке Ирина играла с братом в шахматы.",
+   "en": "In the evening Irina played chess with her brother in the tent.",
+   "ko": "저녁에 이리나는 텐트에서 오빠와 체스를 뒀어요.",
+   "blank": "шахматы",
    "src": "made"
   }
  ],

@@ -3781,6 +3781,22 @@
    "blank": "产生"
   }
  ],
+ "w|产量": [
+  {
+   "text": "换了新烤箱以后，面包的产量翻了一番。",
+   "en": "After switching to a new oven, bread output doubled.",
+   "ko": "새 오븐으로 바꾼 뒤 빵 생산량이 두 배로 늘었어요.",
+   "blank": "产量",
+   "src": "made"
+  },
+  {
+   "text": "客户是一家工厂，想用他们的软件统计每天的产量。",
+   "en": "The client is a factory that wants to use their software to track daily output.",
+   "ko": "고객은 공장인데 그 회사 소프트웨어로 하루 생산량을 집계하고 싶어 해요.",
+   "blank": "产量",
+   "src": "made"
+  }
+ ],
  "w|享受": [
   {
    "text": "享受假期吧。",
@@ -3945,6 +3961,22 @@
    "en": "And this person?",
    "ko": "이 사람은?",
    "blank": "人"
+  }
+ ],
+ "w|人为": [
+  {
+   "text": "小明说，大家疏远并不是人为的，只是各自太忙了。",
+   "en": "Xiao Ming said nobody drifted apart on purpose; everyone was just too busy.",
+   "ko": "샤오밍은 서로 멀어진 게 일부러 그런 게 아니라 다들 너무 바빴을 뿐이라고 했어요.",
+   "blank": "人为",
+   "src": "made"
+  },
+  {
+   "text": "机场说这次延误不是天气原因，而是人为的失误。",
+   "en": "The airport said this delay wasn't due to weather, but human error.",
+   "ko": "공항 측은 이번 지연이 날씨 때문이 아니라 사람의 실수 때문이라고 했어요.",
+   "blank": "人为",
+   "src": "made"
   }
  ],
  "w|人人": [
@@ -5349,6 +5381,22 @@
    "blank": "会"
   }
  ],
+ "w|会员": [
+  {
+   "text": "小明办了这家餐厅的会员卡，吃饭可以打折。",
+   "en": "Xiao Ming has a membership card for this restaurant, so the meal was discounted.",
+   "ko": "샤오밍은 이 식당 회원 카드가 있어서 밥값을 할인받았어요.",
+   "blank": "会员",
+   "src": "made"
+  },
+  {
+   "text": "丽丽是航空公司的金卡会员，可以进贵宾室休息。",
+   "en": "Lili is a gold-card member of the airline and can rest in the VIP lounge.",
+   "ko": "리리는 항공사 골드 회원이라서 라운지에서 쉴 수 있어요.",
+   "blank": "会员",
+   "src": "made"
+  }
+ ],
  "w|会见": [
   {
    "text": "馆长和外国代表团的会见安排在上午十点。",
@@ -5532,6 +5580,22 @@
    "en": "Legend says immortals live in the mountains.",
    "ko": "전설에 따르면 산속에 신선이 산대요.",
    "blank": "传说",
+   "src": "made"
+  }
+ ],
+ "w|传达": [
+  {
+   "text": "班长没能来，托小明向大家传达了问候。",
+   "en": "The class monitor couldn't come and asked Xiao Ming to pass on his greetings to everyone.",
+   "ko": "반장은 오지 못해서 샤오밍에게 모두에게 안부를 전해 달라고 했어요.",
+   "blank": "传达",
+   "src": "made"
+  },
+  {
+   "text": "广播向乘客传达了航班延误的消息。",
+   "en": "The announcement informed passengers that the flight was delayed.",
+   "ko": "안내 방송이 승객들에게 항공편 지연 소식을 알렸어요.",
+   "blank": "传达",
    "src": "made"
   }
  ],
@@ -7324,6 +7388,22 @@
    "en": "The chief editor told Sun Yue to rest, but she insisted on finishing the edits before leaving.",
    "ko": "편집장이 쉬라고 했지만 쑨웨는 굳이 원고를 다 고치고 나서야 갔어요.",
    "blank": "偏",
+   "src": "made"
+  }
+ ],
+ "w|偏偏": [
+  {
+   "text": "厨房最忙的时候，冰箱偏偏坏了。",
+   "en": "Right when the kitchen was busiest, the fridge just had to break down.",
+   "ko": "주방이 가장 바쁠 때 하필 냉장고가 고장 났어요.",
+   "blank": "偏偏",
+   "src": "made"
+  },
+  {
+   "text": "大家都准备下班了，服务器偏偏在这时候出了问题。",
+   "en": "Everyone was about to leave when the server just had to fail.",
+   "ko": "다들 퇴근하려는데 하필 그때 서버에 문제가 생겼어요.",
+   "blank": "偏偏",
    "src": "made"
   }
  ],
@@ -9883,6 +9963,22 @@
    "blank": "准备"
   }
  ],
+ "w|准时": [
+  {
+   "text": "小明一向守时，这次又准时到了餐厅。",
+   "en": "Xiao Ming is always punctual, and this time again he arrived at the restaurant on time.",
+   "ko": "샤오밍은 늘 시간을 잘 지켜서 이번에도 정각에 식당에 도착했어요.",
+   "blank": "准时",
+   "src": "made"
+  },
+  {
+   "text": "天气好转后，丽丽的航班终于准时起飞了。",
+   "en": "After the weather improved, Lili's flight finally took off on time.",
+   "ko": "날씨가 좋아진 뒤 리리의 비행기는 마침내 정시에 이륙했어요.",
+   "blank": "准时",
+   "src": "made"
+  }
+ ],
  "w|准确": [
   {
    "text": "屏幕上的登机时间很准确，赵磊一分钟也没多等。",
@@ -10228,6 +10324,22 @@
    "en": "It started pouring after work, and Lin Jing waited a long time by the road before getting a taxi.",
    "ko": "퇴근할 때 큰비가 내려서 린징은 길가에서 한참 기다린 끝에 택시를 잡았어요.",
    "blank": "出租车",
+   "src": "made"
+  }
+ ],
+ "w|出自": [
+  {
+   "text": "菜单上这道汤的做法出自王刚奶奶的老食谱。",
+   "en": "The method for this soup on the menu comes from Wang Gang's grandma's old recipe.",
+   "ko": "메뉴판의 이 국 요리법은 왕강 할머니의 옛 레시피에서 나왔어요.",
+   "blank": "出自",
+   "src": "made"
+  },
+  {
+   "text": "公司的标志出自一位年轻插画家之手。",
+   "en": "The company's logo was created by a young illustrator.",
+   "ko": "회사 로고는 한 젊은 일러스트레이터의 손에서 나왔어요.",
+   "blank": "出自",
    "src": "made"
   }
  ],
@@ -11141,6 +11253,22 @@
    "src": "made"
   }
  ],
+ "w|制止": [
+  {
+   "text": "王刚及时制止了学徒往热油里倒水。",
+   "en": "Wang Gang stopped the apprentice just in time from pouring water into the hot oil.",
+   "ko": "왕강은 견습생이 뜨거운 기름에 물을 붓는 걸 제때 막았어요.",
+   "blank": "制止",
+   "src": "made"
+  },
+  {
+   "text": "李娜在会议上制止了两个同事的争吵。",
+   "en": "Li Na stopped two coworkers from arguing in the meeting.",
+   "ko": "리나는 회의에서 동료 두 명의 말다툼을 말렸어요.",
+   "blank": "制止",
+   "src": "made"
+  }
+ ],
  "w|制造": [
   {
    "text": "他们制造汽车。",
@@ -11611,6 +11739,22 @@
    "src": "made"
   }
  ],
+ "w|功课": [
+  {
+   "text": "王刚的儿子放学后就在餐馆角落里写功课。",
+   "en": "After school, Wang Gang's son does his homework in a corner of the restaurant.",
+   "ko": "왕강의 아들은 학교가 끝나면 식당 구석에서 숙제를 해요.",
+   "blank": "功课",
+   "src": "made"
+  },
+  {
+   "text": "李娜说，创业以前她要先做好功课，了解整个市场。",
+   "en": "Li Na said that before starting a business, she had to do her homework and understand the whole market.",
+   "ko": "리나는 창업 전에 먼저 숙제하듯 시장 전체를 파악해야 했다고 말했어요.",
+   "blank": "功课",
+   "src": "made"
+  }
+ ],
  "w|加": [
   {
    "text": "再加一点。",
@@ -11713,6 +11857,22 @@
    "en": "I'm cheering myself on.",
    "ko": "나 스스로에게 힘을 줘.",
    "blank": "加油"
+  }
+ ],
+ "w|加班": [
+  {
+   "text": "春节前订餐的人太多，王刚天天加班到半夜。",
+   "en": "Before Spring Festival there were so many bookings that Wang Gang worked overtime until midnight every day.",
+   "ko": "설 전에 예약이 너무 많아서 왕강은 날마다 자정까지 야근했어요.",
+   "blank": "加班",
+   "src": "made"
+  },
+  {
+   "text": "上线前一周，整个团队每天都加班。",
+   "en": "The week before launch, the whole team worked overtime every day.",
+   "ko": "출시 전 일주일 동안 팀 전체가 날마다 야근했어요.",
+   "blank": "加班",
+   "src": "made"
   }
  ],
  "w|加速": [
@@ -12760,6 +12920,22 @@
    "en": "As soon as winter comes, the cold north wind takes over the whole city.",
    "ko": "겨울만 되면 차가운 북풍이 도시 전체를 차지해요.",
    "blank": "占据",
+   "src": "made"
+  }
+ ],
+ "w|占有": [
+  {
+   "text": "这家餐馆在本地的川菜市场上占有很大份额。",
+   "en": "This restaurant holds a large share of the local Sichuan food market.",
+   "ko": "이 식당은 이 지역 쓰촨 요리 시장에서 큰 몫을 차지하고 있어요.",
+   "blank": "占有",
+   "src": "made"
+  },
+  {
+   "text": "这家公司的软件在校园市场上占有一席之地。",
+   "en": "This company's software has carved out a place in the campus market.",
+   "ko": "이 회사 소프트웨어는 캠퍼스 시장에서 한자리를 차지하고 있어요.",
+   "blank": "占有",
    "src": "made"
   }
  ],
@@ -15159,6 +15335,22 @@
    "src": "made"
   }
  ],
+ "w|合伙人": [
+  {
+   "text": "小明和大学室友成了合伙人，一起开了一家设计公司。",
+   "en": "Xiao Ming and his college roommate became partners and started a design company together.",
+   "ko": "샤오밍은 대학 룸메이트와 동업자가 되어 디자인 회사를 같이 차렸어요.",
+   "blank": "合伙人",
+   "src": "made"
+  },
+  {
+   "text": "丽丽和合伙人约好在机场咖啡厅碰头。",
+   "en": "Lili arranged to meet her business partner at the airport café.",
+   "ko": "리리는 동업자와 공항 카페에서 만나기로 했어요.",
+   "blank": "合伙人",
+   "src": "made"
+  }
+ ],
  "w|合作": [
   {
    "text": "希望继续合作。",
@@ -15551,6 +15743,22 @@
    "src": "made"
   }
  ],
+ "w|名声": [
+  {
+   "text": "小明说，阿强在船上的名声很好，大家都信得过他。",
+   "en": "Xiao Ming said A Qiang has a great reputation on the ship, and everyone trusts him.",
+   "ko": "샤오밍은 아창이 배에서 평판이 좋아서 다들 믿는다고 했어요.",
+   "blank": "名声",
+   "src": "made"
+  },
+  {
+   "text": "这家航空公司服务好，名声在外。",
+   "en": "This airline has good service and a widespread reputation.",
+   "ko": "이 항공사는 서비스가 좋아서 평판이 널리 나 있어요.",
+   "blank": "名声",
+   "src": "made"
+  }
+ ],
  "w|名字": [
   {
    "text": "你叫什么名字？",
@@ -15625,6 +15833,22 @@
    "en": "We'll talk after you graduate.",
    "ko": "졸업하고 나서 얘기하자.",
    "blank": "后"
+  }
+ ],
+ "w|后代": [
+  {
+   "text": "聊到家族，有个同学说自己是一位老画家的后代。",
+   "en": "Talking about families, one classmate said he's a descendant of an old painter.",
+   "ko": "집안 이야기를 하다가 한 동창이 자기가 옛 화가의 후손이라고 했어요.",
+   "blank": "后代",
+   "src": "made"
+  },
+  {
+   "text": "这对老夫妇要飞去南方看望他们的后代。",
+   "en": "This elderly couple is flying south to visit their descendants.",
+   "ko": "이 노부부는 자손들을 보러 남쪽으로 날아가요.",
+   "blank": "后代",
+   "src": "made"
   }
  ],
  "w|后悔": [
@@ -15835,6 +16059,22 @@
    "en": "Are you busy?",
    "ko": "너 바빠?",
    "blank": "吗"
+  }
+ ],
+ "w|君主": [
+  {
+   "text": "教历史的同学讲了一个古代君主微服出巡的故事。",
+   "en": "A classmate who teaches history told a story about an ancient monarch traveling in disguise.",
+   "ko": "역사를 가르치는 동창은 옛날 군주가 평복 차림으로 민정을 살피러 나간 이야기를 했어요.",
+   "blank": "君主",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在机场书店买了一本关于古代君主的传记。",
+   "en": "Lili bought a biography of an ancient monarch at the airport bookstore.",
+   "ko": "리리는 공항 서점에서 옛 군주의 전기를 한 권 샀어요.",
+   "blank": "君主",
+   "src": "made"
   }
  ],
  "w|否则": [
@@ -16207,6 +16447,22 @@
    "blank": "呆"
   }
  ],
+ "w|呈现": [
+  {
+   "text": "大家的照片拼在一起，呈现出了十年间的变化。",
+   "en": "Everyone's photos, put together, showed the changes over ten years.",
+   "ko": "모두의 사진을 모아 놓으니 십 년 동안의 변화가 고스란히 드러났어요.",
+   "blank": "呈现",
+   "src": "made"
+  },
+  {
+   "text": "从飞机上往下看，整座城市呈现出一片金色。",
+   "en": "Looking down from the plane, the whole city appeared golden.",
+   "ko": "비행기에서 내려다보니 도시 전체가 금빛으로 보였어요.",
+   "blank": "呈现",
+   "src": "made"
+  }
+ ],
  "w|告别": [
   {
    "text": "闭馆前，老讲解员向观众挥手告别。",
@@ -16545,6 +16801,22 @@
    "en": "Peace is more important than war.",
    "ko": "평화는 전쟁보다 중요해.",
    "blank": "和平"
+  }
+ ],
+ "w|和谐": [
+  {
+   "text": "大家一边吃一边聊，气氛十分和谐。",
+   "en": "Everyone ate and chatted, and the atmosphere was very harmonious.",
+   "ko": "다들 먹으면서 이야기를 나눠서 분위기가 아주 화기애애했어요.",
+   "blank": "和谐",
+   "src": "made"
+  },
+  {
+   "text": "机场大厅的颜色搭配很和谐，让人觉得放松。",
+   "en": "The colors in the airport hall go together harmoniously and make people feel relaxed.",
+   "ko": "공항 홀은 색 배합이 조화로워서 마음이 편안해져요.",
+   "blank": "和谐",
+   "src": "made"
   }
  ],
  "w|咒语": [
@@ -18497,6 +18769,22 @@
    "blank": "在意"
   }
  ],
+ "w|在线": [
+  {
+   "text": "这家餐馆开通了在线点餐，外卖订单多了不少。",
+   "en": "The restaurant launched online ordering, and delivery orders went up a lot.",
+   "ko": "이 식당이 온라인 주문을 열자 배달 주문이 꽤 늘었어요.",
+   "blank": "在线",
+   "src": "made"
+  },
+  {
+   "text": "这款软件现在有一万多名用户同时在线。",
+   "en": "This software now has over ten thousand users online at the same time.",
+   "ko": "이 소프트웨어는 지금 동시 접속자가 만 명이 넘어요.",
+   "blank": "在线",
+   "src": "made"
+  }
+ ],
  "w|地": [
   {
    "text": "好好地说。",
@@ -19608,6 +19896,22 @@
    "en": "He is in danger.",
    "ko": "그는 위험에 처해 있어요.",
    "blank": "处于",
+   "src": "made"
+  }
+ ],
+ "w|处在": [
+  {
+   "text": "餐馆刚开张不久，还处在摸索阶段。",
+   "en": "The restaurant opened not long ago and is still in the trial-and-error stage.",
+   "ko": "식당은 문을 연 지 얼마 안 돼서 아직 이것저것 시도해 보는 단계에 있어요.",
+   "blank": "处在",
+   "src": "made"
+  },
+  {
+   "text": "公司目前处在最困难的时期，大家都很拼。",
+   "en": "The company is in its toughest period right now, and everyone is going all out.",
+   "ko": "회사는 지금 가장 어려운 시기에 있어서 다들 열심히 해요.",
+   "blank": "处在",
    "src": "made"
   }
  ],
@@ -21135,6 +21439,22 @@
    "src": "made"
   }
  ],
+ "w|夺取": [
+  {
+   "text": "王刚带着这道红烧鱼参加比赛，一举夺取了金奖。",
+   "en": "Wang Gang entered a competition with this braised fish and won the gold medal in one go.",
+   "ko": "왕강은 이 생선조림으로 대회에 나가 단번에 금상을 따냈어요.",
+   "blank": "夺取",
+   "src": "made"
+  },
+  {
+   "text": "为了夺取更多用户，公司决定先免费推出基础版。",
+   "en": "To win more users, the company decided to launch the basic version for free first.",
+   "ko": "더 많은 사용자를 끌어오려고 회사는 기본판을 먼저 무료로 내놓기로 했어요.",
+   "blank": "夺取",
+   "src": "made"
+  }
+ ],
  "w|夺走": [
   {
    "text": "一场大火夺走了学校的老礼堂，小明一说起就很遗憾。",
@@ -21653,6 +21973,22 @@
    "en": "He doesn't seem to be around.",
    "ko": "그 사람 없는 모양이야.",
    "blank": "好像"
+  }
+ ],
+ "w|好友": [
+  {
+   "text": "小明和他的好友在聚会上又碰杯又拥抱。",
+   "en": "Xiao Ming and his good friend clinked glasses and hugged at the reunion.",
+   "ko": "샤오밍은 단짝과 모임에서 건배도 하고 끌어안기도 했어요.",
+   "blank": "好友",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的好友在出口举着牌子等她。",
+   "en": "Lili's good friend was waiting for her at the exit holding up a sign.",
+   "ko": "리리의 단짝 친구가 출구에서 팻말을 들고 기다리고 있었어요.",
+   "blank": "好友",
+   "src": "made"
   }
  ],
  "w|好吃": [
@@ -22349,6 +22685,22 @@
    "blank": "嫁给"
   }
  ],
+ "w|嫂子": [
+  {
+   "text": "小明带来了嫂子做的点心，大家都抢着吃。",
+   "en": "Xiao Ming brought snacks his sister-in-law made, and everyone scrambled to eat them.",
+   "ko": "샤오밍이 형수님이 만든 간식을 가져오자 다들 앞다퉈 먹었어요.",
+   "blank": "嫂子",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的嫂子特地开车送她到机场。",
+   "en": "Lili's sister-in-law drove her to the airport specially.",
+   "ko": "리리의 새언니가 일부러 차로 공항까지 데려다줬어요.",
+   "blank": "嫂子",
+   "src": "made"
+  }
+ ],
  "w|嫉妒": [
   {
    "text": "别嫉妒别人。",
@@ -22376,6 +22728,22 @@
    "en": "Railway police were checking IDs in the carriage, reportedly looking for a fugitive suspect.",
    "ko": "철도 경찰이 객차에서 신분증을 확인했는데 도주한 용의자를 찾는다고 했어요.",
    "blank": "嫌犯",
+   "src": "made"
+  }
+ ],
+ "w|嫌疑人": [
+  {
+   "text": "当警察的同学讲起一个案子，嫌疑人最后在火车站被抓到了。",
+   "en": "A classmate who's a police officer talked about a case where the suspect was finally caught at the train station.",
+   "ko": "경찰이 된 동창이 사건 이야기를 했는데, 용의자는 결국 기차역에서 잡혔대요.",
+   "blank": "嫌疑人",
+   "src": "made"
+  },
+  {
+   "text": "机场电视在播新闻：一名嫌疑人在登机前被警察带走了。",
+   "en": "The airport TV was showing news: a suspect was taken away by police before boarding.",
+   "ko": "공항 텔레비전에서 용의자 한 명이 탑승 전에 경찰에 연행됐다는 뉴스가 나왔어요.",
+   "blank": "嫌疑人",
    "src": "made"
   }
  ],
@@ -22602,6 +22970,22 @@
    "en": "Li Na learned many tea-roasting tricks from the old tea farmers.",
    "ko": "리나는 나이 든 차 농부들에게서 차 덖는 요령을 많이 배웠어요.",
    "blank": "学到",
+   "src": "made"
+  }
+ ],
+ "w|学术": [
+  {
+   "text": "王刚偶尔会读一些关于饮食文化的学术文章。",
+   "en": "Wang Gang occasionally reads academic articles on food culture.",
+   "ko": "왕강은 가끔 음식 문화에 관한 학술 글을 읽어요.",
+   "blank": "学术",
+   "src": "made"
+  },
+  {
+   "text": "李娜的合伙人以前在大学做学术研究。",
+   "en": "Li Na's partner used to do academic research at a university.",
+   "ko": "리나의 동업자는 예전에 대학에서 학술 연구를 했어요.",
+   "blank": "学术",
    "src": "made"
   }
  ],
@@ -23139,6 +23523,22 @@
    "en": "This is precious, don't drop it.",
    "ko": "이거 귀한 거니까 떨어뜨리지 마.",
    "blank": "宝贝"
+  }
+ ],
+ "w|实习": [
+  {
+   "text": "有个烹饪学校的学生来厨房实习，跟着王刚学刀工。",
+   "en": "A cooking school student came to do an internship in the kitchen and learned knife skills from Wang Gang.",
+   "ko": "요리 학교 학생이 주방에 실습하러 와서 왕강에게 칼질을 배워요.",
+   "blank": "实习",
+   "src": "made"
+  },
+  {
+   "text": "这个暑假有三个大学生来公司实习。",
+   "en": "Three college students are interning at the company this summer.",
+   "ko": "이번 여름방학에 대학생 세 명이 회사에 와서 인턴을 해요.",
+   "blank": "实习",
+   "src": "made"
   }
  ],
  "w|实力": [
@@ -27163,6 +27563,22 @@
    "src": "made"
   }
  ],
+ "w|延伸": [
+  {
+   "text": "聊天的话题从学校一直延伸到了各自的家庭。",
+   "en": "The conversation stretched from school all the way to everyone's families.",
+   "ko": "이야기는 학교에서 각자의 가정까지 이어졌어요.",
+   "blank": "延伸",
+   "src": "made"
+  },
+  {
+   "text": "长长的跑道一直延伸到海边。",
+   "en": "The long runway stretches all the way to the sea.",
+   "ko": "긴 활주로가 바닷가까지 쭉 뻗어 있어요.",
+   "blank": "延伸",
+   "src": "made"
+  }
+ ],
  "w|建": [
   {
    "text": "这个市场原来是一片空地，十年前才建起了顶棚。",
@@ -27798,6 +28214,22 @@
    "en": "After that concert, Xiaoxue felt a strong desire to learn the cello.",
    "ko": "그 음악회를 듣고 나서 샤오쉐는 첼로를 배우고 싶다는 강한 열망이 생겼어요.",
    "blank": "强烈",
+   "src": "made"
+  }
+ ],
+ "w|强盗": [
+  {
+   "text": "大家想起中学时一起演过话剧，小明演的是一个强盗。",
+   "en": "Everyone remembered putting on a play in middle school, where Xiao Ming played a robber.",
+   "ko": "다들 중학교 때 같이 연극을 했던 걸 떠올렸는데, 샤오밍은 강도 역을 맡았어요.",
+   "blank": "强盗",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在飞机上看了一部电影，讲的是一群强盗劫火车的故事。",
+   "en": "On the plane Lili watched a movie about a gang of robbers holding up a train.",
+   "ko": "리리는 비행기에서 강도 무리가 기차를 터는 영화를 봤어요.",
+   "blank": "强盗",
    "src": "made"
   }
  ],
@@ -29271,6 +29703,22 @@
    "blank": "性"
   }
  ],
+ "w|性别": [
+  {
+   "text": "填聚会登记表时，小明发现表上居然没有性别这一栏。",
+   "en": "Filling in the reunion sign-up form, Xiao Ming noticed it didn't even have a gender field.",
+   "ko": "모임 신청서를 쓰다가 샤오밍은 성별 칸이 아예 없다는 걸 알았어요.",
+   "blank": "性别",
+   "src": "made"
+  },
+  {
+   "text": "丽丽填入境卡时，在性别一栏写了“女”。",
+   "en": "When filling in the arrival card, Lili wrote “female” in the gender field.",
+   "ko": "리리는 입국 카드를 쓰면서 성별 칸에 ‘여’라고 적었어요.",
+   "blank": "性别",
+   "src": "made"
+  }
+ ],
  "w|性命": [
   {
    "text": "他救了我的性命。",
@@ -29361,6 +29809,22 @@
    "en": "This is weird.",
    "ko": "이거 이상해.",
    "blank": "怪"
+  }
+ ],
+ "w|怪人": [
+  {
+   "text": "当年大家都说老张是个怪人，现在发现他只是比较有个性。",
+   "en": "Back then everyone said Lao Zhang was an oddball; now they realize he just has a strong personality.",
+   "ko": "그때 다들 라오장을 괴짜라고 했는데, 지금 보니 그냥 개성이 강했던 거예요.",
+   "blank": "怪人",
+   "src": "made"
+  },
+  {
+   "text": "候机厅里有个怪人一直对着窗户自言自语。",
+   "en": "In the waiting hall, an odd man kept talking to himself in front of the window.",
+   "ko": "대합실에 이상한 사람이 창문을 보며 계속 혼잣말을 했어요.",
+   "blank": "怪人",
+   "src": "made"
   }
  ],
  "w|怪兽": [
@@ -29673,6 +30137,22 @@
    "en": "Wishing you prosperity.",
    "ko": "부자 되세요.",
    "blank": "恭喜"
+  }
+ ],
+ "w|恶劣": [
+  {
+   "text": "那天天气恶劣，有几个同学的航班取消了，没能赶来。",
+   "en": "The weather was bad that day, and several classmates' flights were canceled, so they couldn't make it.",
+   "ko": "그날 날씨가 나빠서 몇몇 동창은 항공편이 취소돼 오지 못했어요.",
+   "blank": "恶劣",
+   "src": "made"
+  },
+  {
+   "text": "因为天气恶劣，好几个航班都改到了明天。",
+   "en": "Because of bad weather, several flights were moved to tomorrow.",
+   "ko": "날씨가 나빠서 여러 항공편이 내일로 미뤄졌어요.",
+   "blank": "恶劣",
+   "src": "made"
   }
  ],
  "w|恶心": [
@@ -31865,6 +32345,22 @@
    "src": "made"
   }
  ],
+ "w|扩张": [
+  {
+   "text": "老同学说，他的公司这几年扩张得很快，在好几个城市开了分店。",
+   "en": "An old classmate said his company has expanded fast in recent years, opening branches in several cities.",
+   "ko": "옛 동창은 자기 회사가 몇 년 사이 빠르게 커져서 여러 도시에 지점을 냈다고 했어요.",
+   "blank": "扩张",
+   "src": "made"
+  },
+  {
+   "text": "新闻说这座机场还要扩张，明年会多一个航站楼。",
+   "en": "The news says this airport will expand further, adding another terminal next year.",
+   "ko": "뉴스에 따르면 이 공항이 더 커져서 내년에 터미널이 하나 늘어난대요.",
+   "blank": "扩张",
+   "src": "made"
+  }
+ ],
  "w|扫": [
   {
    "text": "下雪后，黄涛和邻居们一起把门口的雪扫干净。",
@@ -32109,6 +32605,22 @@
    "src": "made"
   }
  ],
+ "w|抄": [
+  {
+   "text": "学徒把王刚写在黑板上的配方抄在了本子上。",
+   "en": "The apprentice copied the recipe Wang Gang wrote on the blackboard into his notebook.",
+   "ko": "견습생은 왕강이 칠판에 쓴 배합을 공책에 베꼈어요.",
+   "blank": "抄",
+   "src": "made"
+  },
+  {
+   "text": "李娜发现竞争对手抄了他们的界面设计。",
+   "en": "Li Na discovered that a competitor had copied their interface design.",
+   "ko": "리나는 경쟁사가 자기들 화면 디자인을 베낀 걸 알아냈어요.",
+   "blank": "抄",
+   "src": "made"
+  }
+ ],
  "w|把": [
   {
    "text": "把门关上。",
@@ -32241,6 +32753,22 @@
    "en": "Investment carries risk.",
    "ko": "투자에는 위험이 있어.",
    "blank": "投资"
+  }
+ ],
+ "w|投资者": [
+  {
+   "text": "做生意的同学说，他正在找投资者，想开一家咖啡馆。",
+   "en": "A classmate in business said he's looking for investors to open a café.",
+   "ko": "사업하는 동창은 카페를 열려고 투자자를 찾고 있다고 했어요.",
+   "blank": "投资者",
+   "src": "made"
+  },
+  {
+   "text": "丽丽这次出差是去见一位重要的投资者。",
+   "en": "Lili's business trip this time is to meet an important investor.",
+   "ko": "리리의 이번 출장은 중요한 투자자를 만나러 가는 거예요.",
+   "blank": "投资者",
+   "src": "made"
   }
  ],
  "w|投降": [
@@ -32508,6 +33036,22 @@
    "en": "Lin Jing couldn't lift her suitcase by herself, so the inn owner came over to help.",
    "ko": "린징이 혼자 캐리어를 들 수 없자 숙소 주인이 와서 거들어 줬어요.",
    "blank": "抬",
+   "src": "made"
+  }
+ ],
+ "w|抬头": [
+  {
+   "text": "王刚忙了一上午，抬头一看，已经十二点了。",
+   "en": "Wang Gang worked all morning, and when he looked up, it was already noon.",
+   "ko": "왕강은 오전 내내 바빴는데 고개를 들어 보니 벌써 열두 시였어요.",
+   "blank": "抬头",
+   "src": "made"
+  },
+  {
+   "text": "李娜盯着屏幕写了一整天代码，连抬头的时间都没有。",
+   "en": "Li Na stared at the screen writing code all day without even time to look up.",
+   "ko": "리나는 하루 종일 화면만 보며 코드를 짜느라 고개 들 틈도 없었어요.",
+   "blank": "抬头",
    "src": "made"
   }
  ],
@@ -33349,6 +33893,22 @@
    "blank": "挖"
   }
  ],
+ "w|挖掘": [
+  {
+   "text": "王刚喜欢去乡下挖掘快要失传的家常菜。",
+   "en": "Wang Gang likes going to the countryside to dig up home-style dishes that are about to be lost.",
+   "ko": "왕강은 시골에 가서 사라져 가는 가정식 요리를 발굴하는 걸 좋아해요.",
+   "blank": "挖掘",
+   "src": "made"
+  },
+  {
+   "text": "李娜希望通过用户数据挖掘出新的需求。",
+   "en": "Li Na hopes to uncover new needs from user data.",
+   "ko": "리나는 사용자 데이터에서 새로운 수요를 찾아내고 싶어요.",
+   "blank": "挖掘",
+   "src": "made"
+  }
+ ],
  "w|挣": [
   {
    "text": "周强加班加点，就是想多挣点钱给家里换套大房子。",
@@ -34113,6 +34673,22 @@
    "en": "Make a suggestion.",
    "ko": "제안 하나 할게.",
    "blank": "提"
+  }
+ ],
+ "w|提交": [
+  {
+   "text": "王刚把下个月的采购单提交给了老板。",
+   "en": "Wang Gang submitted next month's purchase list to the boss.",
+   "ko": "왕강은 다음 달 구매 목록을 사장에게 제출했어요.",
+   "blank": "提交",
+   "src": "made"
+  },
+  {
+   "text": "李娜赶在截止日期前把新版本提交到了应用商店。",
+   "en": "Li Na submitted the new version to the app store just before the deadline.",
+   "ko": "리나는 마감 직전에 새 버전을 앱 스토어에 제출했어요.",
+   "blank": "提交",
+   "src": "made"
   }
  ],
  "w|提供": [
@@ -34893,6 +35469,22 @@
    "src": "made"
   }
  ],
+ "w|支撑": [
+  {
+   "text": "那几年小明家里困难，是同学们的鼓励支撑他读完了大学。",
+   "en": "Xiao Ming's family struggled back then, and his classmates' encouragement kept him going through college.",
+   "ko": "그 몇 년 동안 샤오밍네 형편이 어려웠는데, 친구들의 격려가 그를 버티게 해서 대학을 마쳤어요.",
+   "blank": "支撑",
+   "src": "made"
+  },
+  {
+   "text": "候机厅的屋顶靠几根巨大的钢柱支撑着。",
+   "en": "The waiting hall's roof is held up by a few huge steel columns.",
+   "ko": "대합실 지붕은 거대한 강철 기둥 몇 개가 받치고 있어요.",
+   "blank": "支撑",
+   "src": "made"
+  }
+ ],
  "w|支票": [
   {
    "text": "一位老先生想用支票付钱，摊主笑着说只收现金。",
@@ -35325,6 +35917,22 @@
    "blank": "政治"
   }
  ],
+ "w|政治家": [
+  {
+   "text": "当年最爱演讲的同学说，他小时候梦想当政治家。",
+   "en": "The classmate who loved giving speeches back then said he dreamed of being a politician as a kid.",
+   "ko": "그때 연설을 제일 좋아하던 동창은 어릴 때 정치가가 꿈이었다고 했어요.",
+   "blank": "政治家",
+   "src": "made"
+  },
+  {
+   "text": "贵宾室的电视上，一位政治家正在接受采访。",
+   "en": "On the lounge TV, a politician was being interviewed.",
+   "ko": "라운지 텔레비전에서 한 정치가가 인터뷰를 하고 있었어요.",
+   "blank": "政治家",
+   "src": "made"
+  }
+ ],
  "w|政策": [
   {
    "text": "马林认为新出台的政策对小商户不太公平。",
@@ -35385,6 +35993,22 @@
    "src": "made"
   }
  ],
+ "w|效力": [
+  {
+   "text": "王刚在这家餐馆效力了十年，从来没想过跳槽。",
+   "en": "Wang Gang has served this restaurant for ten years and never thought of leaving.",
+   "ko": "왕강은 이 식당에서 십 년 동안 일하면서 한 번도 이직을 생각해 본 적이 없어요.",
+   "blank": "效力",
+   "src": "made"
+  },
+  {
+   "text": "律师说，这份合同签字以后才具有法律效力。",
+   "en": "The lawyer said this contract only becomes legally binding once it's signed.",
+   "ko": "변호사는 이 계약서가 서명해야 법적 효력이 생긴다고 했어요.",
+   "blank": "效力",
+   "src": "made"
+  }
+ ],
  "w|效果": [
   {
    "text": "这个药效果很好。",
@@ -35398,6 +36022,22 @@
    "en": "After a month of practice, the results are good.",
    "ko": "한 달 연습했더니 효과가 괜찮아요.",
    "blank": "效果",
+   "src": "made"
+  }
+ ],
+ "w|效率": [
+  {
+   "text": "王刚重新安排了灶台的位置，厨房的效率提高了很多。",
+   "en": "Wang Gang rearranged the stoves, and the kitchen's efficiency improved greatly.",
+   "ko": "왕강이 화구 배치를 바꾸자 주방 효율이 훨씬 높아졌어요.",
+   "blank": "效率",
+   "src": "made"
+  },
+  {
+   "text": "李娜引进了一套新工具，团队的开发效率提高了一倍。",
+   "en": "Li Na brought in a new set of tools, and the team's development efficiency doubled.",
+   "ko": "리나가 새 도구를 들여오자 팀 개발 효율이 두 배가 됐어요.",
+   "blank": "效率",
    "src": "made"
   }
  ],
@@ -38543,6 +39183,22 @@
    "src": "made"
   }
  ],
+ "w|本性": [
+  {
+   "text": "小明觉得，阿强爱帮人的本性一点都没变。",
+   "en": "Xiao Ming felt that A Qiang's helpful nature hadn't changed one bit.",
+   "ko": "샤오밍은 아창의 남을 돕기 좋아하는 본성이 조금도 변하지 않았다고 느꼈어요.",
+   "blank": "本性",
+   "src": "made"
+  },
+  {
+   "text": "延误了五个小时，乘客们的急躁本性都露出来了。",
+   "en": "After a five-hour delay, the passengers' impatient nature came out.",
+   "ko": "다섯 시간 지연되자 승객들의 급한 본성이 다 드러났어요.",
+   "blank": "本性",
+   "src": "made"
+  }
+ ],
  "w|本来": [
   {
    "text": "本来就不该来。",
@@ -38898,6 +39554,22 @@
    "en": "The honey Sun Yue uses comes from a village in the mountains.",
    "ko": "쑨웨가 쓰는 꿀은 산속 마을에서 와요.",
    "blank": "村庄",
+   "src": "made"
+  }
+ ],
+ "w|村民": [
+  {
+   "text": "有个同学回老家当了村官，帮村民修了一条新路。",
+   "en": "One classmate went back home to become a village official and helped the villagers build a new road.",
+   "ko": "한 동창은 고향에 돌아가 마을 간부가 되어 주민들을 도와 새 길을 냈어요.",
+   "blank": "村民",
+   "src": "made"
+  },
+  {
+   "text": "机场周边的村民有不少在机场工作。",
+   "en": "Quite a few villagers near the airport work at the airport.",
+   "ko": "공항 주변 마을 주민 중 꽤 많은 사람이 공항에서 일해요.",
+   "blank": "村民",
    "src": "made"
   }
  ],
@@ -40699,6 +41371,22 @@
    "src": "made"
   }
  ],
+ "w|步兵": [
+  {
+   "text": "讲历史的同学说，古代打仗时步兵总是走在最前面。",
+   "en": "The history classmate said that in ancient wars, the infantry always marched at the front.",
+   "ko": "역사 이야기를 하던 동창은 옛날 전쟁에서는 보병이 늘 맨 앞에 섰다고 했어요.",
+   "blank": "步兵",
+   "src": "made"
+  },
+  {
+   "text": "机场的展览介绍了这座城市的历史，还有古代步兵用过的盔甲。",
+   "en": "The airport exhibition introduced the city's history, including armor once used by ancient infantry.",
+   "ko": "공항 전시는 이 도시의 역사를 소개했는데 옛 보병이 쓰던 갑옷도 있었어요.",
+   "blank": "步兵",
+   "src": "made"
+  }
+ ],
  "w|武力": [
   {
    "text": "这本政治学著作认为，用武力解决争端代价太大。",
@@ -41163,6 +41851,22 @@
    "blank": "毕业"
   }
  ],
+ "w|毕业生": [
+  {
+   "text": "大家感叹，现在的毕业生找工作比当年难多了。",
+   "en": "Everyone sighed that graduates today have a much harder time finding jobs than they did.",
+   "ko": "다들 요즘 졸업생은 그때보다 취업하기가 훨씬 힘들다고 한숨지었어요.",
+   "blank": "毕业生",
+   "src": "made"
+  },
+  {
+   "text": "同一个航班上有不少应届毕业生，要出国读研。",
+   "en": "The same flight had many new graduates heading abroad for grad school.",
+   "ko": "같은 비행기에 대학원 공부하러 유학 가는 올해 졸업생이 많았어요.",
+   "blank": "毕业生",
+   "src": "made"
+  }
+ ],
  "w|毕竟": [
   {
    "text": "毕竟他还年轻。",
@@ -41474,6 +42178,22 @@
    "en": "Liu Fang's English is good, so the manager put her in charge of contacting overseas clients.",
    "ko": "류팡은 영어 실력이 좋아서 매니저가 해외 고객 연락을 맡겼어요.",
    "blank": "水平",
+   "src": "made"
+  }
+ ],
+ "w|水手": [
+  {
+   "text": "老同学阿强毕业后当了水手，跑遍了世界各地的港口。",
+   "en": "After graduating, old classmate A Qiang became a sailor and visited ports all over the world.",
+   "ko": "동창 아창은 졸업 후 선원이 되어 세계 곳곳의 항구를 누볐어요.",
+   "blank": "水手",
+   "src": "made"
+  },
+  {
+   "text": "丽丽旁边坐着一个老水手，正在讲海上的故事。",
+   "en": "Next to Lili sat an old sailor telling stories about the sea.",
+   "ko": "리리 옆에는 늙은 선원이 앉아 바다 이야기를 하고 있었어요.",
+   "blank": "水手",
    "src": "made"
   }
  ],
@@ -43021,6 +43741,22 @@
    "blank": "清理"
   }
  ],
+ "w|清白": [
+  {
+   "text": "当年小明被冤枉偷了班费，后来真相大白，还了他清白。",
+   "en": "Back then Xiao Ming was wrongly accused of stealing class funds; later the truth came out and cleared his name.",
+   "ko": "그때 샤오밍은 반비를 훔쳤다는 누명을 썼는데, 나중에 진실이 밝혀져 결백이 증명됐어요.",
+   "blank": "清白",
+   "src": "made"
+  },
+  {
+   "text": "行李箱里的东西被查了一遍，丽丽总算证明了自己的清白。",
+   "en": "After her suitcase was searched, Lili finally proved her innocence.",
+   "ko": "캐리어를 한 번 다 검사받고 나서야 리리는 자기 결백을 증명했어요.",
+   "blank": "清白",
+   "src": "made"
+  }
+ ],
  "w|清醒": [
   {
    "text": "我现在很清醒。",
@@ -43476,6 +44212,22 @@
    "en": "A decommissioned submarine is docked at the port and has been turned into a museum.",
    "ko": "항구에 퇴역한 잠수함 한 척이 있는데 지금은 박물관으로 바뀌었어요.",
    "blank": "潜艇",
+   "src": "made"
+  }
+ ],
+ "w|激光": [
+  {
+   "text": "厨房新买的刀是用激光切割的，非常锋利。",
+   "en": "The kitchen's new knives were laser-cut and are very sharp.",
+   "ko": "주방에 새로 산 칼은 레이저로 잘라 만들어서 아주 날카로워요.",
+   "blank": "激光",
+   "src": "made"
+  },
+  {
+   "text": "隔壁公司做的是激光打印机的驱动程序。",
+   "en": "The company next door makes drivers for laser printers.",
+   "ko": "옆 회사는 레이저 프린터 드라이버를 만들어요.",
+   "blank": "激光",
    "src": "made"
   }
  ],
@@ -46231,6 +46983,22 @@
    "src": "made"
   }
  ],
+ "w|电源": [
+  {
+   "text": "下班前，王刚会检查每台机器的电源是否关好。",
+   "en": "Before leaving work, Wang Gang checks that every machine's power is switched off.",
+   "ko": "퇴근 전에 왕강은 기계마다 전원이 꺼졌는지 확인해요.",
+   "blank": "电源",
+   "src": "made"
+  },
+  {
+   "text": "有人不小心踢掉了电源，李娜半天的工作差点白做。",
+   "en": "Someone accidentally kicked out the power, and half a day of Li Na's work was almost lost.",
+   "ko": "누가 실수로 전원을 차서 뽑는 바람에 리나의 반나절 작업이 날아갈 뻔했어요.",
+   "blank": "电源",
+   "src": "made"
+  }
+ ],
  "w|电视": [
   {
    "text": "打开电视。",
@@ -46346,6 +47114,22 @@
    "en": "What does your boyfriend do for work?",
    "ko": "남자 친구는 무슨 일 해요?",
    "blank": "男友",
+   "src": "made"
+  }
+ ],
+ "w|男女": [
+  {
+   "text": "聚会上男女同学分成两队，比赛唱老歌。",
+   "en": "At the reunion, the male and female classmates split into two teams for an oldies singing contest.",
+   "ko": "모임에서 남녀 동창들이 두 팀으로 나눠 옛 노래 부르기 대결을 했어요.",
+   "blank": "男女",
+   "src": "made"
+  },
+  {
+   "text": "安检口分男女两条队伍检查。",
+   "en": "At security, men and women are checked in two separate lines.",
+   "ko": "보안 검색대에서는 남녀가 두 줄로 나뉘어 검사를 받아요.",
+   "blank": "男女",
    "src": "made"
   }
  ],
@@ -47203,6 +47987,22 @@
    "en": "The situation is good for now.",
    "ko": "현재 상황은 괜찮아.",
    "blank": "目前"
+  }
+ ],
+ "w|目录": [
+  {
+   "text": "新菜单的目录分成了冷菜、热菜和汤三部分。",
+   "en": "The new menu's table of contents is split into cold dishes, hot dishes and soups.",
+   "ko": "새 메뉴판 목차는 냉채, 더운 요리, 국 세 부분으로 나뉘어 있어요.",
+   "blank": "目录",
+   "src": "made"
+  },
+  {
+   "text": "用户手册的目录太长了，李娜决定重新整理。",
+   "en": "The user manual's table of contents was too long, so Li Na decided to reorganize it.",
+   "ko": "사용 설명서 목차가 너무 길어서 리나는 다시 정리하기로 했어요.",
+   "blank": "目录",
+   "src": "made"
   }
  ],
  "w|目标": [
@@ -48235,6 +49035,22 @@
    "src": "made"
   }
  ],
+ "w|知名": [
+  {
+   "text": "当年班上最安静的女生，现在成了知名的作家。",
+   "en": "The quietest girl in class back then is now a well-known writer.",
+   "ko": "그때 반에서 가장 조용하던 여학생은 지금 유명한 작가가 됐어요.",
+   "blank": "知名",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在候机时认出了一位知名的主持人。",
+   "en": "While waiting to board, Lili recognized a well-known TV host.",
+   "ko": "리리는 탑승을 기다리다가 유명한 진행자를 알아봤어요.",
+   "blank": "知名",
+   "src": "made"
+  }
+ ],
  "w|知识": [
   {
    "text": "王刚说，做菜不光靠手艺，还要懂营养知识。",
@@ -48387,6 +49203,22 @@
    "en": "He went to chop firewood.",
    "ko": "그는 장작 하러 갔어.",
    "blank": "砍"
+  }
+ ],
+ "w|研制": [
+  {
+   "text": "王刚花了半年时间，研制出一种新的辣酱。",
+   "en": "Wang Gang spent half a year developing a new chili sauce.",
+   "ko": "왕강은 반년 동안 새로운 고추장을 개발했어요.",
+   "blank": "研制",
+   "src": "made"
+  },
+  {
+   "text": "李娜的团队正在研制一款帮助老人用手机的应用。",
+   "en": "Li Na's team is developing an app that helps elderly people use their phones.",
+   "ko": "리나 팀은 노인들의 스마트폰 사용을 돕는 앱을 개발하고 있어요.",
+   "blank": "研制",
+   "src": "made"
   }
  ],
  "w|研发": [
@@ -49207,6 +50039,22 @@
    "src": "made"
   }
  ],
+ "w|私下": [
+  {
+   "text": "两个老同学私下约好，下个月一起去爬山。",
+   "en": "Two old classmates privately agreed to go hiking together next month.",
+   "ko": "두 동창은 따로 다음 달에 같이 등산 가기로 약속했어요.",
+   "blank": "私下",
+   "src": "made"
+  },
+  {
+   "text": "登机口有两个乘务员在私下聊天，看到丽丽就不说话了。",
+   "en": "Two flight attendants were chatting privately at the gate and stopped when they saw Lili.",
+   "ko": "탑승구에서 승무원 두 명이 따로 수다를 떨다가 리리를 보자 말을 멈췄어요.",
+   "blank": "私下",
+   "src": "made"
+  }
+ ],
  "w|私人": [
   {
    "text": "这是私人问题。",
@@ -49375,6 +50223,22 @@
    "src": "made"
   }
  ],
+ "w|科研": [
+  {
+   "text": "王刚的表妹在大学做食品科研，常来厨房找他聊天。",
+   "en": "Wang Gang's cousin does food science research at a university and often drops by the kitchen to chat.",
+   "ko": "왕강의 사촌 여동생은 대학에서 식품 연구를 하는데 자주 주방에 놀러 와요.",
+   "blank": "科研",
+   "src": "made"
+  },
+  {
+   "text": "李娜以前在研究所做科研，后来才出来创业。",
+   "en": "Li Na used to do scientific research at an institute before going out to start a business.",
+   "ko": "리나는 예전에 연구소에서 과학 연구를 하다가 나중에 창업했어요.",
+   "blank": "科研",
+   "src": "made"
+  }
+ ],
  "w|秒": [
   {
    "text": "再等几秒。",
@@ -49402,6 +50266,22 @@
    "en": "Li Na used to work as a secretary for a boss in the city and worked overtime every day.",
    "ko": "리나는 예전에 도시에서 한 사장의 비서로 일하며 매일 야근했어요.",
    "blank": "秘书",
+   "src": "made"
+  }
+ ],
+ "w|秘书长": [
+  {
+   "text": "当年的班长现在是一个行业协会的秘书长，忙得很。",
+   "en": "The old class monitor is now secretary-general of an industry association and very busy.",
+   "ko": "예전 반장은 지금 한 업계 협회의 사무총장이라 무척 바빠요.",
+   "blank": "秘书长",
+   "src": "made"
+  },
+  {
+   "text": "电视上说，联合会的秘书长今天也从这个机场出发。",
+   "en": "The TV said the federation's secretary-general was also departing from this airport today.",
+   "ko": "텔레비전에서 연맹 사무총장도 오늘 이 공항에서 출발한다고 했어요.",
+   "blank": "秘书长",
    "src": "made"
   }
  ],
@@ -49943,6 +50823,22 @@
    "src": "made"
   }
  ],
+ "w|竞赛": [
+  {
+   "text": "王刚报名参加了全市的厨艺竞赛。",
+   "en": "Wang Gang signed up for the citywide cooking competition.",
+   "ko": "왕강은 시 전체 요리 경연에 참가 신청을 했어요.",
+   "blank": "竞赛",
+   "src": "made"
+  },
+  {
+   "text": "李娜大学时参加过编程竞赛，还拿了奖。",
+   "en": "Li Na entered a programming competition in college and won a prize.",
+   "ko": "리나는 대학 때 프로그래밍 대회에 나가 상을 받은 적이 있어요.",
+   "blank": "竞赛",
+   "src": "made"
+  }
+ ],
  "w|竞选": [
   {
    "text": "学生会竞选那天，小明紧张得手心直冒汗。",
@@ -50048,6 +50944,22 @@
    "en": "A neighbor's kid came to borrow a pen, and Wang Fang gave him a notebook too.",
    "ko": "이웃집 아이가 펜을 빌리러 와서 왕팡은 공책도 하나 같이 줬어요.",
    "blank": "笔",
+   "src": "made"
+  }
+ ],
+ "w|笔记": [
+  {
+   "text": "王刚的笔记里记满了各种调料的比例。",
+   "en": "Wang Gang's notes are full of ratios for all kinds of seasonings.",
+   "ko": "왕강의 노트에는 갖가지 양념 비율이 빼곡히 적혀 있어요.",
+   "blank": "笔记",
+   "src": "made"
+  },
+  {
+   "text": "开会时李娜习惯用平板记笔记。",
+   "en": "Li Na usually takes notes on a tablet in meetings.",
+   "ko": "리나는 회의 때 태블릿으로 노트하는 게 습관이에요.",
+   "blank": "笔记",
    "src": "made"
   }
  ],
@@ -51337,6 +52249,22 @@
    "blank": "组织"
   }
  ],
+ "w|组长": [
+  {
+   "text": "王刚现在是冷菜组的组长，手下有四个人。",
+   "en": "Wang Gang is now head of the cold-dish team, with four people under him.",
+   "ko": "왕강은 지금 냉채팀 조장이라 밑에 네 명이 있어요.",
+   "blank": "组长",
+   "src": "made"
+  },
+  {
+   "text": "李娜被选为前端组的组长。",
+   "en": "Li Na was chosen as leader of the front-end team.",
+   "ko": "리나는 프런트엔드 팀장으로 뽑혔어요.",
+   "blank": "组长",
+   "src": "made"
+  }
+ ],
  "w|绅士": [
   {
    "text": "张伟像个绅士一样，替新娘拉开了椅子。",
@@ -51546,6 +52474,22 @@
    "en": "Li Na runs the tea garden and also opened a small guesthouse.",
    "ko": "리나는 차밭을 운영하면서 작은 민박도 열었어요.",
    "blank": "经营",
+   "src": "made"
+  }
+ ],
+ "w|经费": [
+  {
+   "text": "老板说今年的装修经费不够，只能先换掉旧灶台。",
+   "en": "The boss said this year's renovation budget isn't enough, so only the old stoves can be replaced first.",
+   "ko": "사장은 올해 인테리어 비용이 모자라서 낡은 화구부터 바꿀 수밖에 없다고 했어요.",
+   "blank": "经费",
+   "src": "made"
+  },
+  {
+   "text": "公司的推广经费有限，只能靠用户口碑。",
+   "en": "The company's promotion budget is limited, so it has to rely on word of mouth.",
+   "ko": "회사 홍보 경비가 넉넉하지 않아서 사용자 입소문에 기댈 수밖에 없어요.",
+   "blank": "经费",
    "src": "made"
   }
  ],
@@ -51993,6 +52937,22 @@
    "src": "made"
   }
  ],
+ "w|缓慢": [
+  {
+   "text": "聚会开始时气氛有点拘谨，话题推进得很缓慢。",
+   "en": "At first the reunion was a bit stiff, and the conversation moved slowly.",
+   "ko": "모임 초반엔 분위기가 좀 어색해서 이야기가 느리게 흘러갔어요.",
+   "blank": "缓慢",
+   "src": "made"
+  },
+  {
+   "text": "安检队伍移动得非常缓慢，丽丽有点着急了。",
+   "en": "The security line moved very slowly, and Lili started to get anxious.",
+   "ko": "보안 검색 줄이 아주 느리게 줄어서 리리는 조금 초조해졌어요.",
+   "blank": "缓慢",
+   "src": "made"
+  }
+ ],
  "w|编剧": [
   {
    "text": "王刚采访了一位电视剧编剧，聊了整整一下午。",
@@ -52214,6 +53174,22 @@
    "en": "I met him online.",
    "ko": "저는 그를 인터넷에서 알게 됐어요.",
    "blank": "网络",
+   "src": "made"
+  }
+ ],
+ "w|网页": [
+  {
+   "text": "餐馆的网页上可以看到每天的特价菜。",
+   "en": "You can see the daily specials on the restaurant's web page.",
+   "ko": "식당 웹 페이지에서 매일 특가 메뉴를 볼 수 있어요.",
+   "blank": "网页",
+   "src": "made"
+  },
+  {
+   "text": "公司网页上的介绍写得太专业了，用户看不懂。",
+   "en": "The introduction on the company's web page is too technical for users to understand.",
+   "ko": "회사 웹 페이지 소개글이 너무 전문적이라 사용자들이 이해를 못 해요.",
+   "blank": "网页",
    "src": "made"
   }
  ],
@@ -52500,6 +53476,22 @@
    "en": "There's a thank-you letter posted at the restaurant door, written by local residents to the owner, Yang Yang noticed.",
    "ko": "양양이 보니 식당 문에 근처 주민들이 사장님께 쓴 감사 편지가 붙어 있었어요.",
    "blank": "群众",
+   "src": "made"
+  }
+ ],
+ "w|群体": [
+  {
+   "text": "做社工的同学说，她现在主要帮助外来务工人员这个群体。",
+   "en": "A classmate who's a social worker said she now mainly helps the migrant worker community.",
+   "ko": "사회복지사가 된 동창은 지금 주로 이주 노동자 집단을 돕는다고 했어요.",
+   "blank": "群体",
+   "src": "made"
+  },
+  {
+   "text": "机场为老人和孩子这样的特殊群体开了专用通道。",
+   "en": "The airport opened a dedicated lane for special groups like the elderly and children.",
+   "ko": "공항은 노인과 어린이 같은 특별한 집단을 위해 전용 통로를 열었어요.",
+   "blank": "群体",
    "src": "made"
   }
  ],
@@ -54137,6 +55129,22 @@
    "src": "made"
   }
  ],
+ "w|自称": [
+  {
+   "text": "有位客人自称是美食评论家，要求见主厨。",
+   "en": "A customer who claimed to be a food critic asked to see the head chef.",
+   "ko": "자칭 음식 평론가라는 손님이 주방장을 만나고 싶다고 했어요.",
+   "blank": "自称",
+   "src": "made"
+  },
+  {
+   "text": "有个人自称是大公司的总监，打电话来要合作。",
+   "en": "Someone claiming to be a director at a big company called wanting to partner.",
+   "ko": "자칭 대기업 이사라는 사람이 협업하자고 전화했어요.",
+   "blank": "自称",
+   "src": "made"
+  }
+ ],
  "w|自行": [
   {
    "text": "饭后大家自行安排，小明带几个人去唱歌了。",
@@ -54539,6 +55547,22 @@
    "en": "We'll go by boat.",
    "ko": "우리 배로 가자.",
    "blank": "船"
+  }
+ ],
+ "w|船员": [
+  {
+   "text": "阿强说，他们船上的船员来自好几个地方。",
+   "en": "A Qiang said the crew on his ship come from many different places.",
+   "ko": "아창은 자기 배 선원들이 여러 지역에서 왔다고 했어요.",
+   "blank": "船员",
+   "src": "made"
+  },
+  {
+   "text": "船员们刚下船，就直接到机场转机回家。",
+   "en": "The crew got off the ship and went straight to the airport to fly home.",
+   "ko": "선원들은 배에서 내리자마자 바로 공항으로 가서 비행기를 갈아타고 집에 가요.",
+   "blank": "船员",
+   "src": "made"
   }
  ],
  "w|船长": [
@@ -55087,6 +56111,22 @@
    "en": "Go buy some fresh vegetables.",
    "ko": "신선한 채소 좀 사 와.",
    "blank": "菜"
+  }
+ ],
+ "w|营业": [
+  {
+   "text": "餐馆的营业时间是上午十一点到晚上十点。",
+   "en": "The restaurant's business hours are from eleven in the morning to ten at night.",
+   "ko": "식당 영업시간은 오전 열한 시부터 밤 열 시까지예요.",
+   "blank": "营业",
+   "src": "made"
+  },
+  {
+   "text": "楼下的餐厅停止营业了，大家只好叫外卖。",
+   "en": "The restaurant downstairs has closed for business, so everyone has to order delivery.",
+   "ko": "아래층 식당이 영업을 멈춰서 다들 배달을 시켜야 해요.",
+   "blank": "营业",
+   "src": "made"
   }
  ],
  "w|营养": [
@@ -55781,6 +56821,22 @@
    "src": "made"
   }
  ],
+ "w|表哥": [
+  {
+   "text": "小明的表哥也是这个班的，那天一起来了。",
+   "en": "Xiao Ming's cousin was also in this class and came along that day.",
+   "ko": "샤오밍의 사촌 형도 같은 반이라 그날 같이 왔어요.",
+   "blank": "表哥",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的表哥在机场当地勤，帮她办了托运。",
+   "en": "Lili's cousin works on the airport ground staff and helped her check her bag.",
+   "ko": "리리의 사촌 오빠가 공항 지상직이라서 짐 부치는 걸 도와줬어요.",
+   "blank": "表哥",
+   "src": "made"
+  }
+ ],
  "w|表情": [
   {
    "text": "他的表情很奇怪。",
@@ -56279,6 +57335,22 @@
    "blank": "要求"
   }
  ],
+ "w|要点": [
+  {
+   "text": "王刚给新来的学徒讲了切菜的几个要点。",
+   "en": "Wang Gang explained a few key points of cutting vegetables to the new apprentice.",
+   "ko": "왕강은 새로 온 견습생에게 채소 써는 요령 몇 가지를 알려 줬어요.",
+   "blank": "要点",
+   "src": "made"
+  },
+  {
+   "text": "开会前，李娜把要点写在了白板上。",
+   "en": "Before the meeting, Li Na wrote the key points on the whiteboard.",
+   "ko": "회의 전에 리나는 요점을 화이트보드에 적었어요.",
+   "blank": "要点",
+   "src": "made"
+  }
+ ],
  "w|要紧": [
   {
    "text": "教练说，练多少不要紧，关键是动作要标准。",
@@ -56565,6 +57637,22 @@
    "en": "You have to follow the rules.",
    "ko": "일하려면 규칙을 지켜야 해.",
    "blank": "规矩"
+  }
+ ],
+ "w|规范": [
+  {
+   "text": "厨房有一套卫生规范，每个人都必须遵守。",
+   "en": "The kitchen has a set of hygiene standards that everyone must follow.",
+   "ko": "주방에는 위생 규정이 있어서 모두 꼭 지켜야 해요.",
+   "blank": "规范",
+   "src": "made"
+  },
+  {
+   "text": "李娜给团队定了写代码的规范，大家都照着做。",
+   "en": "Li Na set coding standards for the team, and everyone follows them.",
+   "ko": "리나가 팀의 코드 작성 규범을 정하자 모두 그대로 따라요.",
+   "blank": "规范",
+   "src": "made"
   }
  ],
  "w|觉得": [
@@ -57273,6 +58361,22 @@
    "blank": "设计"
   }
  ],
+ "w|设计师": [
+  {
+   "text": "同桌如今是一名服装设计师，还带来了自己设计的围巾。",
+   "en": "His old deskmate is now a fashion designer and even brought a scarf she designed.",
+   "ko": "옛 짝꿍은 지금 의상 디자이너라서 직접 만든 스카프까지 가져왔어요.",
+   "blank": "设计师",
+   "src": "made"
+  },
+  {
+   "text": "这座航站楼是一位外国设计师的作品。",
+   "en": "This terminal is the work of a foreign designer.",
+   "ko": "이 터미널은 외국 디자이너의 작품이에요.",
+   "blank": "设计师",
+   "src": "made"
+  }
+ ],
  "w|访问": [
   {
    "text": "下周有一位作家要来学校访问，陈杰准备了几个问题。",
@@ -57455,6 +58559,22 @@
    "en": "That sounds like a curse.",
    "ko": "그건 저주처럼 들려.",
    "blank": "诅咒"
+  }
+ ],
+ "w|识别": [
+  {
+   "text": "十几年没见，小明差点没识别出坐在角落的老同桌。",
+   "en": "After more than ten years, Xiao Ming almost didn't recognize his old deskmate sitting in the corner.",
+   "ko": "십몇 년 만이라 샤오밍은 구석에 앉은 옛 짝꿍을 하마터면 못 알아볼 뻔했어요.",
+   "blank": "识别",
+   "src": "made"
+  },
+  {
+   "text": "自助通道能自动识别乘客的面部。",
+   "en": "The self-service lane can automatically recognize passengers' faces.",
+   "ko": "셀프 통로는 승객 얼굴을 자동으로 인식해요.",
+   "blank": "识别",
+   "src": "made"
   }
  ],
  "w|诉讼": [
@@ -57748,6 +58868,22 @@
    "en": "Before family and friends, Yang Yang and the groom spoke their vows to each other.",
    "ko": "가족과 친구들 앞에서 양양과 신랑은 서로에게 맹세를 했어요.",
    "blank": "誓言",
+   "src": "made"
+  }
+ ],
+ "w|语气": [
+  {
+   "text": "王刚批评学徒时语气很温和，从不大声骂人。",
+   "en": "When Wang Gang corrects the apprentices, his tone is gentle; he never yells.",
+   "ko": "왕강은 견습생을 나무랄 때도 말투가 부드럽고 절대 소리치지 않아요.",
+   "blank": "语气",
+   "src": "made"
+  },
+  {
+   "text": "李娜给客户回邮件时特别注意语气，怕对方误会。",
+   "en": "When replying to the client, Li Na was careful about her tone so as not to be misunderstood.",
+   "ko": "리나는 고객에게 답장할 때 오해가 없도록 말투에 특히 신경 썼어요.",
+   "blank": "语气",
    "src": "made"
   }
  ],
@@ -58865,6 +60001,22 @@
    "src": "made"
   }
  ],
+ "w|资助": [
+  {
+   "text": "老板资助王刚去外地学习做点心。",
+   "en": "The boss sponsored Wang Gang to go study pastry-making in another city.",
+   "ko": "사장은 왕강이 다른 지역에 가서 딤섬 만들기를 배우도록 비용을 대 줬어요.",
+   "blank": "资助",
+   "src": "made"
+  },
+  {
+   "text": "一个创业基金愿意资助李娜的团队一年。",
+   "en": "A startup fund is willing to sponsor Li Na's team for a year.",
+   "ko": "한 창업 기금이 리나 팀을 일 년 동안 지원하겠다고 했어요.",
+   "blank": "资助",
+   "src": "made"
+  }
+ ],
  "w|资料": [
   {
    "text": "准备资料。",
@@ -59773,6 +60925,22 @@
    "src": "made"
   }
  ],
+ "w|跨": [
+  {
+   "text": "为了参加同学聚会，小明特地跨了半个城市赶过来。",
+   "en": "To attend the class reunion, Xiao Ming came all the way across half the city.",
+   "ko": "동창회에 가려고 샤오밍은 일부러 도시 절반을 가로질러 왔어요.",
+   "blank": "跨",
+   "src": "made"
+  },
+  {
+   "text": "丽丽拖着箱子，一步跨上了机场的自动扶梯。",
+   "en": "Lili, pulling her suitcase, stepped onto the airport escalator in one stride.",
+   "ko": "리리는 캐리어를 끌고 공항 에스컬레이터에 한 걸음에 올라탔어요.",
+   "blank": "跨",
+   "src": "made"
+  }
+ ],
  "w|跪": [
   {
    "text": "教练让王刚单膝跪在垫子上，练习核心力量。",
@@ -59848,6 +61016,22 @@
    "en": "Lin Jing takes the shuttle to the factory every day and knows the route like the back of her hand.",
    "ko": "린징은 매일 통근 버스를 타고 공장에 가서 그 노선을 훤히 알아요.",
    "blank": "路线",
+   "src": "made"
+  }
+ ],
+ "w|路过": [
+  {
+   "text": "每天早上，王刚都会路过菜市场，顺便挑些新鲜的蔬菜。",
+   "en": "Every morning Wang Gang passes the market and picks up some fresh vegetables on the way.",
+   "ko": "왕강은 매일 아침 시장을 지나가면서 신선한 채소를 골라요.",
+   "blank": "路过",
+   "src": "made"
+  },
+  {
+   "text": "李娜每天上班都会路过一家咖啡店，买杯拿铁再进公司。",
+   "en": "Every day on her way to work, Li Na passes a coffee shop and buys a latte before going into the office.",
+   "ko": "리나는 매일 출근길에 카페를 지나가며 라테를 한 잔 사서 회사에 들어가요.",
+   "blank": "路过",
    "src": "made"
   }
  ],
@@ -60206,6 +61390,22 @@
    "en": "After the big bridge, the course turns east toward the riverside park.",
    "ko": "큰 다리를 지나면 코스가 동쪽 강변 공원으로 꺾여요.",
    "blank": "转向",
+   "src": "made"
+  }
+ ],
+ "w|转换": [
+  {
+   "text": "王刚在炒锅和蒸笼之间来回转换，忙得满头大汗。",
+   "en": "Wang Gang switched back and forth between the wok and the steamer, sweating heavily.",
+   "ko": "왕강은 웍과 찜통 사이를 오가느라 땀범벅이 됐어요.",
+   "blank": "转换",
+   "src": "made"
+  },
+  {
+   "text": "这个小工具可以把语音转换成文字。",
+   "en": "This little tool can convert speech into text.",
+   "ko": "이 작은 도구는 음성을 글자로 바꿔 줘요.",
+   "blank": "转换",
    "src": "made"
   }
  ],
@@ -64833,6 +66033,22 @@
    "src": "made"
   }
  ],
+ "w|难看": [
+  {
+   "text": "小明翻出毕业照，笑着说自己当年的发型真难看。",
+   "en": "Xiao Ming dug out his graduation photo and laughed that his old haircut was really ugly.",
+   "ko": "샤오밍은 졸업 사진을 꺼내 보고 그때 머리 모양이 정말 못났다며 웃었어요.",
+   "blank": "难看",
+   "src": "made"
+  },
+  {
+   "text": "丽丽熬夜赶飞机，脸色难看得很。",
+   "en": "Lili stayed up all night to catch her flight, and she looked awful.",
+   "ko": "리리는 비행기 때문에 밤을 새워서 안색이 무척 안 좋았어요.",
+   "blank": "难看",
+   "src": "made"
+  }
+ ],
  "w|难过": [
   {
    "text": "别太难过了。",
@@ -64859,6 +66075,22 @@
    "en": "Are we just going to leave it like this?",
    "ko": "설마 그냥 넘어가려고?",
    "blank": "难道"
+  }
+ ],
+ "w|难题": [
+  {
+   "text": "怎么让菜在送到桌上时还保持热度，是厨房的一大难题。",
+   "en": "Keeping dishes hot by the time they reach the table is a big problem for the kitchen.",
+   "ko": "음식을 테이블에 낼 때까지 따뜻하게 유지하는 게 주방의 큰 숙제예요.",
+   "blank": "难题",
+   "src": "made"
+  },
+  {
+   "text": "李娜花了三天时间，终于解决了这个技术难题。",
+   "en": "Li Na spent three days and finally solved this technical problem.",
+   "ko": "리나는 사흘 만에 마침내 이 기술 난제를 풀었어요.",
+   "blank": "难题",
+   "src": "made"
   }
  ],
  "w|集": [
@@ -64966,6 +66198,22 @@
    "en": "In the tea-picking season, Li Na hires a few village women to help.",
    "ko": "찻잎 따는 철이 되면 리나는 마을 아주머니 몇 분을 고용해 도움을 받아요.",
    "blank": "雇",
+   "src": "made"
+  }
+ ],
+ "w|雇佣": [
+  {
+   "text": "生意越来越好，老板又雇佣了两个洗碗工。",
+   "en": "Business kept getting better, so the boss hired two more dishwashers.",
+   "ko": "장사가 점점 잘되자 사장은 설거지 직원을 두 명 더 고용했어요.",
+   "blank": "雇佣",
+   "src": "made"
+  },
+  {
+   "text": "公司打算再雇佣两名测试工程师。",
+   "en": "The company plans to hire two more test engineers.",
+   "ko": "회사는 테스트 엔지니어를 두 명 더 고용할 계획이에요.",
+   "blank": "雇佣",
    "src": "made"
   }
  ],
@@ -65618,6 +66866,22 @@
    "en": "Before the launch event, Liu Fang had everyone get the demo phones and computers ready.",
    "ko": "발표회 전에 류팡은 모두에게 시연용 휴대폰과 컴퓨터를 준비해 두라고 했어요.",
    "blank": "预备",
+   "src": "made"
+  }
+ ],
+ "w|预定": [
+  {
+   "text": "周末的包间早就被客人预定满了。",
+   "en": "The private rooms for the weekend were booked up long ago.",
+   "ko": "주말 별실은 손님들이 진작에 다 예약했어요.",
+   "blank": "预定",
+   "src": "made"
+  },
+  {
+   "text": "李娜预定了周五下午的会议室，准备和客户开会。",
+   "en": "Li Na reserved the meeting room for Friday afternoon to meet with a client.",
+   "ko": "리나는 고객과 회의하려고 금요일 오후 회의실을 예약했어요.",
+   "blank": "预定",
    "src": "made"
   }
  ],
@@ -67011,6 +68275,22 @@
    "en": "Black makes you look slimmer.",
    "ko": "검은색이 더 날씬해 보여.",
    "blank": "黑色"
+  }
+ ],
+ "w|鼓": [
+  {
+   "text": "王刚鼓起勇气，向老板提出想自己设计一道新菜。",
+   "en": "Wang Gang worked up the courage to tell the boss he wanted to design a new dish himself.",
+   "ko": "왕강은 용기를 내서 사장에게 새 요리를 직접 만들어 보고 싶다고 했어요.",
+   "blank": "鼓",
+   "src": "made"
+  },
+  {
+   "text": "第一次向投资人演示产品前，李娜鼓了好几次勇气。",
+   "en": "Before demoing the product to investors for the first time, Li Na had to summon her courage several times.",
+   "ko": "투자자에게 처음 제품을 시연하기 전에 리나는 몇 번이나 용기를 냈어요.",
+   "blank": "鼓",
+   "src": "made"
   }
  ],
  "w|鼓励": [

@@ -751,6 +751,22 @@
    "src": "made"
   }
  ],
+ "w|가정하다": [
+  {
+   "text": "성호는 관객이 배우와 같은 방 안에 있다고 가정하고 무대를 꾸몄어요.",
+   "en": "Seongho designed the stage assuming the audience was in the same room as the actors.",
+   "ko": "성호는 관객이 배우와 같은 방 안에 있다고 가정하고 무대를 꾸몄어요.",
+   "blank": "가정하고",
+   "src": "made"
+  },
+  {
+   "text": "미경은 최악의 경우를 가정하고 수술 준비를 더 꼼꼼히 했어요.",
+   "en": "Mikyung prepared for the surgery more thoroughly, assuming the worst case.",
+   "ko": "미경은 최악의 경우를 가정하고 수술 준비를 더 꼼꼼히 했어요.",
+   "blank": "가정하고",
+   "src": "made"
+  }
+ ],
  "w|가져가다": [
   {
    "text": "남은 피자 가져가.",
@@ -865,6 +881,22 @@
    "blank": "가치가"
   }
  ],
+ "w|가치관": [
+  {
+   "text": "성호의 새 작품은 세대마다 다른 가치관이 부딪히는 가족 이야기예요.",
+   "en": "Seongho's new work is a family story where the values of different generations clash.",
+   "ko": "성호의 새 작품은 세대마다 다른 가치관이 부딪히는 가족 이야기예요.",
+   "blank": "가치관이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 동물을 가족으로 여기는 가치관을 가진 보호자들을 많이 만나요.",
+   "en": "Mikyung meets many owners who hold the value that animals are family.",
+   "ko": "미경은 동물을 가족으로 여기는 가치관을 가진 보호자들을 많이 만나요.",
+   "blank": "가치관을",
+   "src": "made"
+  }
+ ],
  "w|가치있다": [
   {
    "text": "공장장은 현장 직원의 의견이 가장 가치있는 정보라고 말했어요.",
@@ -969,6 +1001,22 @@
    "en": "Grab your own bag.",
    "ko": "가방은 각자 챙겨.",
    "blank": "각자"
+  }
+ ],
+ "w|각종": [
+  {
+   "text": "성호의 극장 창고에는 각종 소품과 의상이 가득 쌓여 있어요.",
+   "en": "Seongho's theater storeroom is packed with all kinds of props and costumes.",
+   "ko": "성호의 극장 창고에는 각종 소품과 의상이 가득 쌓여 있어요.",
+   "blank": "각종",
+   "src": "made"
+  },
+  {
+   "text": "미경의 동물병원에서는 각종 예방 주사를 한 번에 맞힐 수 있어요.",
+   "en": "At Mikyung's animal clinic, you can get all kinds of vaccinations done at once.",
+   "ko": "미경의 동물병원에서는 각종 예방 주사를 한 번에 맞힐 수 있어요.",
+   "blank": "각종",
+   "src": "made"
   }
  ],
  "w|간": [
@@ -1100,6 +1148,22 @@
    "en": "The patient's family prayed earnestly in front of the operating room.",
    "ko": "환자 가족들은 수술실 앞에서 간절히 기도했어요.",
    "blank": "간절히",
+   "src": "made"
+  }
+ ],
+ "w|간주하다": [
+  {
+   "text": "성호는 리허설에 늦은 배우를 그날 공연에서 빠진 것으로 간주했어요.",
+   "en": "Seongho treated the actor who was late for rehearsal as dropped from that day's show.",
+   "ko": "성호는 리허설에 늦은 배우를 그날 공연에서 빠진 것으로 간주했어요.",
+   "blank": "간주했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 열이 나는 동물은 일단 전염병 의심 환자로 간주해요.",
+   "en": "Mikyung treats any animal with a fever as a suspected infectious case for now.",
+   "ko": "미경은 열이 나는 동물은 일단 전염병 의심 환자로 간주해요.",
+   "blank": "간주해요",
    "src": "made"
   }
  ],
@@ -1643,6 +1707,22 @@
    "blank": "감싸"
   }
  ],
+ "w|감안하다": [
+  {
+   "text": "성호는 관객 대부분이 학생이라는 점을 감안해서 표값을 낮췄어요.",
+   "en": "Taking into account that most of the audience were students, Seongho lowered ticket prices.",
+   "ko": "성호는 관객 대부분이 학생이라는 점을 감안해서 표값을 낮췄어요.",
+   "blank": "감안해서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 고양이의 나이를 감안해서 마취약을 적게 썼어요.",
+   "en": "Considering the cat's age, Mikyung used less anesthetic.",
+   "ko": "미경은 고양이의 나이를 감안해서 마취약을 적게 썼어요.",
+   "blank": "감안해서",
+   "src": "made"
+  }
+ ],
  "w|감염": [
   {
    "text": "내 컴퓨터는 바이러스에 감염이 되어서 수리해야 한다.",
@@ -2101,6 +2181,22 @@
    "blank": "강한"
   }
  ],
+ "w|강화하다": [
+  {
+   "text": "사고가 난 뒤 성호는 무대 장치 안전 점검을 강화했어요.",
+   "en": "After the accident, Seongho tightened the safety checks on stage equipment.",
+   "ko": "사고가 난 뒤 성호는 무대 장치 안전 점검을 강화했어요.",
+   "blank": "강화했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 여름이 오기 전에 진드기 예방 교육을 강화하기로 했어요.",
+   "en": "Mikyung decided to strengthen tick prevention education before summer comes.",
+   "ko": "미경은 여름이 오기 전에 진드기 예방 교육을 강화하기로 했어요.",
+   "blank": "강화하기로",
+   "src": "made"
+  }
+ ],
  "w|갖다": [
   {
    "text": "휴지 좀 갖고 와.",
@@ -2337,6 +2433,22 @@
    "src": "made"
   }
  ],
+ "w|개선하다": [
+  {
+   "text": "성호는 관객 의견을 듣고 극장 화장실 동선을 개선했어요.",
+   "en": "Seongho listened to audience feedback and improved the route to the theater restrooms.",
+   "ko": "성호는 관객 의견을 듣고 극장 화장실 동선을 개선했어요.",
+   "blank": "개선했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 입원실 환기를 개선하려고 창문을 새로 달았어요.",
+   "en": "Mikyung installed new windows to improve ventilation in the ward.",
+   "ko": "미경은 입원실 환기를 개선하려고 창문을 새로 달았어요.",
+   "blank": "개선하려고",
+   "src": "made"
+  }
+ ],
  "w|개성": [
   {
    "text": "강한 개성이 돋보여.",
@@ -2472,6 +2584,22 @@
    "en": "When signing up for cooking school, Yuna signed a consent form for her personal information.",
    "ko": "유나는 요리 학원에 등록하면서 개인정보 동의서에 서명했어요.",
    "blank": "개인정보",
+   "src": "made"
+  }
+ ],
+ "w|개최하다": [
+  {
+   "text": "성호는 동네 극장에서 청소년 연극제를 해마다 개최해요.",
+   "en": "Seongho holds a youth theater festival at the local theater every year.",
+   "ko": "성호는 동네 극장에서 청소년 연극제를 해마다 개최해요.",
+   "blank": "개최해요",
+   "src": "made"
+  },
+  {
+   "text": "미경의 병원은 봄마다 무료 건강 검진 행사를 개최해요.",
+   "en": "Mikyung's clinic holds a free health checkup event every spring.",
+   "ko": "미경의 병원은 봄마다 무료 건강 검진 행사를 개최해요.",
+   "blank": "개최해요",
    "src": "made"
   }
  ],
@@ -2685,6 +2813,22 @@
    "en": "I've done business with that store for a long time.",
    "ko": "그 가게와 오래 거래했어.",
    "blank": "거래했어"
+  }
+ ],
+ "w|거론하다": [
+  {
+   "text": "평론가들은 성호의 작품을 올해 최고의 연극으로 거론했어요.",
+   "en": "Critics named Seongho's work as the best play of the year.",
+   "ko": "평론가들은 성호의 작품을 올해 최고의 연극으로 거론했어요.",
+   "blank": "거론했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 수의사 모임에서 유기견 문제를 다시 거론했어요.",
+   "en": "Mikyung brought up the issue of abandoned dogs again at the vets' meeting.",
+   "ko": "미경은 수의사 모임에서 유기견 문제를 다시 거론했어요.",
+   "blank": "거론했어요",
+   "src": "made"
   }
  ],
  "w|거리": [
@@ -3543,6 +3687,22 @@
    "blank": "검은색"
   }
  ],
+ "w|검증하다": [
+  {
+   "text": "성호는 새 무대 장치가 배우 무게를 버티는지 직접 올라가서 검증했어요.",
+   "en": "Seongho climbed onto the new stage equipment himself to verify it could hold the actors' weight.",
+   "ko": "성호는 새 무대 장치가 배우 무게를 버티는지 직접 올라가서 검증했어요.",
+   "blank": "검증했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 인터넷에서 본 민간요법이 효과가 있는지 직접 검증해 보기로 했어요.",
+   "en": "Mikyung decided to verify for herself whether a home remedy she saw online works.",
+   "ko": "미경은 인터넷에서 본 민간요법이 효과가 있는지 직접 검증해 보기로 했어요.",
+   "blank": "검증해",
+   "src": "made"
+  }
+ ],
  "w|검토": [
   {
    "text": "사장님은 새 메뉴 가격을 검토 중이에요.",
@@ -3995,6 +4155,22 @@
    "src": "made"
   }
  ],
+ "w|견해": [
+  {
+   "text": "결말을 두고 배우들의 견해가 갈리자 성호는 두 가지 버전을 다 연습해 보자고 했어요.",
+   "en": "When the actors' views on the ending split, Seongho suggested rehearsing both versions.",
+   "ko": "결말을 두고 배우들의 견해가 갈리자 성호는 두 가지 버전을 다 연습해 보자고 했어요.",
+   "blank": "견해가",
+   "src": "made"
+  },
+  {
+   "text": "중성화 수술 시기에 대해 미경은 다른 수의사들과 견해가 조금 달라요.",
+   "en": "Mikyung's view on when to neuter differs slightly from other vets'.",
+   "ko": "중성화 수술 시기에 대해 미경은 다른 수의사들과 견해가 조금 달라요.",
+   "blank": "견해가",
+   "src": "made"
+  }
+ ],
  "w|결과": [
   {
    "text": "결과가 나왔어.",
@@ -4216,6 +4392,22 @@
    "en": "In her science lab report, Seoyeon found a flaw in the experiment design.",
    "ko": "과학 실험 보고서에서 서연은 실험 설계의 결함을 찾아냈어요.",
    "blank": "결함을",
+   "src": "made"
+  }
+ ],
+ "w|결합하다": [
+  {
+   "text": "성호는 전통 탈춤과 현대 무용을 결합한 공연을 준비하고 있어요.",
+   "en": "Seongho is preparing a performance that combines traditional mask dance and modern dance.",
+   "ko": "성호는 전통 탈춤과 현대 무용을 결합한 공연을 준비하고 있어요.",
+   "blank": "결합한",
+   "src": "made"
+  },
+  {
+   "text": "미경은 침 치료와 약물 치료를 결합해서 노견의 관절염을 다스려요.",
+   "en": "Mikyung treats the old dog's arthritis by combining acupuncture and medication.",
+   "ko": "미경은 침 치료와 약물 치료를 결합해서 노견의 관절염을 다스려요.",
+   "blank": "결합해서",
    "src": "made"
   }
  ],
@@ -4887,6 +5079,22 @@
    "blank": "경험"
   }
  ],
+ "w|경험하다": [
+  {
+   "text": "성호는 배우들이 극 속 인물의 가난을 직접 경험해 보도록 하루 동안 쪽방에서 지내게 했어요.",
+   "en": "Seongho had the actors spend a day in a tiny room so they could experience their characters' poverty firsthand.",
+   "ko": "성호는 배우들이 극 속 인물의 가난을 직접 경험해 보도록 하루 동안 쪽방에서 지내게 했어요.",
+   "blank": "경험해",
+   "src": "made"
+  },
+  {
+   "text": "미경은 처음 반려동물을 떠나보낸 보호자가 경험하는 슬픔을 잘 알아요.",
+   "en": "Mikyung understands well the grief owners experience when they lose a pet for the first time.",
+   "ko": "미경은 처음 반려동물을 떠나보낸 보호자가 경험하는 슬픔을 잘 알아요.",
+   "blank": "경험하는",
+   "src": "made"
+  }
+ ],
  "w|곁": [
   {
    "text": "내 곁에 있어 줘.",
@@ -5015,6 +5223,22 @@
    "blank": "계산서가"
   }
  ],
+ "w|계산원": [
+  {
+   "text": "태윤은 가게를 열기 전에 큰 마트에서 계산원으로 일했어요.",
+   "en": "Before opening his shop, Taeyun worked as a cashier at a big mart.",
+   "ko": "태윤은 가게를 열기 전에 큰 마트에서 계산원으로 일했어요.",
+   "blank": "계산원으로",
+   "src": "made"
+  },
+  {
+   "text": "유나의 아래층 이웃은 동네 마트 계산원이라서 유나와 자주 마주쳐요.",
+   "en": "Yuna's downstairs neighbor is a cashier at the local mart, so they run into each other often.",
+   "ko": "유나의 아래층 이웃은 동네 마트 계산원이라서 유나와 자주 마주쳐요.",
+   "blank": "계산원이라서",
+   "src": "made"
+  }
+ ],
  "w|계산하다": [
   {
    "text": "계산은 제가 할게요.",
@@ -5113,6 +5337,22 @@
    "en": "Read the contract terms carefully.",
    "ko": "계약 내용을 자세히 읽어.",
    "blank": "계약"
+  }
+ ],
+ "w|계약금": [
+  {
+   "text": "태윤은 가게 옆 창고를 빌리려고 주인에게 계약금을 보냈어요.",
+   "en": "Taeyun sent the owner a deposit to rent the storeroom next to the shop.",
+   "ko": "태윤은 가게 옆 창고를 빌리려고 주인에게 계약금을 보냈어요.",
+   "blank": "계약금을",
+   "src": "made"
+  },
+  {
+   "text": "유나의 옆집 부부는 새 아파트 계약금을 내고 다음 달에 이사 간대요.",
+   "en": "The couple next door to Yuna paid the deposit on a new apartment and are moving next month.",
+   "ko": "유나의 옆집 부부는 새 아파트 계약금을 내고 다음 달에 이사 간대요.",
+   "blank": "계약금을",
+   "src": "made"
   }
  ],
  "w|계약서": [
@@ -5838,6 +6078,22 @@
    "en": "Haeun wrote a series on the history of an orphanage that cared for war orphans.",
    "ko": "하은은 전쟁 고아를 돌봤던 보육원의 역사를 연재했어요.",
    "blank": "고아를",
+   "src": "made"
+  }
+ ],
+ "w|고안하다": [
+  {
+   "text": "성호는 무대가 천천히 돌아가는 장치를 직접 고안했어요.",
+   "en": "Seongho designed a device himself that slowly rotates the stage.",
+   "ko": "성호는 무대가 천천히 돌아가는 장치를 직접 고안했어요.",
+   "blank": "고안했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 고양이가 상처를 핥지 못하게 하는 부드러운 옷을 고안했어요.",
+   "en": "Mikyung designed soft clothing that keeps cats from licking their wounds.",
+   "ko": "미경은 고양이가 상처를 핥지 못하게 하는 부드러운 옷을 고안했어요.",
+   "blank": "고안했어요",
    "src": "made"
   }
  ],
@@ -6607,6 +6863,22 @@
    "en": "There's a shortage of mask supply.",
    "ko": "마스크 공급이 부족해.",
    "blank": "공급이"
+  }
+ ],
+ "w|공급하다": [
+  {
+   "text": "극장 근처 꽃집이 공연 마지막 날마다 성호의 극단에 꽃다발을 공급해요.",
+   "en": "A flower shop near the theater supplies Seongho's company with bouquets on every closing night.",
+   "ko": "극장 근처 꽃집이 공연 마지막 날마다 성호의 극단에 꽃다발을 공급해요.",
+   "blank": "공급해요",
+   "src": "made"
+  },
+  {
+   "text": "근처 농장이 미경의 병원에 유기견들이 먹을 사료를 무료로 공급해요.",
+   "en": "A nearby farm supplies Mikyung's clinic with free food for the abandoned dogs.",
+   "ko": "근처 농장이 미경의 병원에 유기견들이 먹을 사료를 무료로 공급해요.",
+   "blank": "공급해요",
+   "src": "made"
   }
  ],
  "w|공기": [
@@ -7455,6 +7727,22 @@
    "en": "Let's tour the historic sites at a leisurely pace.",
    "ko": "유적지를 천천히 관광하자.",
    "blank": "관광하자"
+  }
+ ],
+ "w|관념": [
+  {
+   "text": "성호는 연극이 꼭 진지해야 한다는 관념을 깨고 싶어서 코미디를 골랐어요.",
+   "en": "Seongho chose a comedy because he wanted to break the notion that theater has to be serious.",
+   "ko": "성호는 연극이 꼭 진지해야 한다는 관념을 깨고 싶어서 코미디를 골랐어요.",
+   "blank": "관념을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 고양이는 산책을 안 한다는 고정 관념이 꼭 맞지는 않다고 말해요.",
+   "en": "Mikyung says the stereotype that cats don't go for walks isn't always true.",
+   "ko": "미경은 고양이는 산책을 안 한다는 고정 관념이 꼭 맞지는 않다고 말해요.",
+   "blank": "관념이",
+   "src": "made"
   }
  ],
  "w|관대하다": [
@@ -8639,6 +8927,22 @@
    "blank": "구월에"
   }
  ],
+ "w|구입": [
+  {
+   "text": "태윤의 가게에서는 술 구입을 원하는 손님의 신분증을 꼭 확인해요.",
+   "en": "At Taeyun's shop, they always check the ID of customers who want to buy alcohol.",
+   "ko": "태윤의 가게에서는 술 구입을 원하는 손님의 신분증을 꼭 확인해요.",
+   "blank": "구입을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이웃들과 함께 경비실에 둘 선풍기 구입을 의논했어요.",
+   "en": "Yuna discussed with her neighbors buying a fan for the security office.",
+   "ko": "유나는 이웃들과 함께 경비실에 둘 선풍기 구입을 의논했어요.",
+   "blank": "구입을",
+   "src": "made"
+  }
+ ],
  "w|구입하다": [
   {
    "text": "새 노트북을 구입해.",
@@ -8740,6 +9044,22 @@
    "en": "Before going grocery shopping, Haeun wrote down the ingredients she needed in detail.",
    "ko": "하은은 장보기 전에 필요한 재료를 구체적으로 적었어요.",
    "blank": "구체적으로",
+   "src": "made"
+  }
+ ],
+ "w|구출": [
+  {
+   "text": "성호가 연출한 연극은 산에서 조난당한 등산객의 구출 과정을 다뤄요.",
+   "en": "The play Seongho directed deals with the rescue of a hiker stranded in the mountains.",
+   "ko": "성호가 연출한 연극은 산에서 조난당한 등산객의 구출 과정을 다뤄요.",
+   "blank": "구출",
+   "src": "made"
+  },
+  {
+   "text": "하수구에 빠진 새끼 고양이의 구출 소식을 듣고 미경은 병원 문을 열어 두었어요.",
+   "en": "Hearing that a kitten was rescued from a drain, Mikyung kept the clinic open.",
+   "ko": "하수구에 빠진 새끼 고양이의 구출 소식을 듣고 미경은 병원 문을 열어 두었어요.",
+   "blank": "구출",
    "src": "made"
   }
  ],
@@ -10987,6 +11307,22 @@
    "en": "Read it letter by letter.",
    "ko": "글자 하나하나 읽어 봐.",
    "blank": "글자"
+  }
+ ],
+ "w|글피": [
+  {
+   "text": "태윤은 글피에 들어올 라면 상자를 미리 주문해 뒀어요.",
+   "en": "Taeyun ordered in advance the boxes of ramen arriving three days from now.",
+   "ko": "태윤은 글피에 들어올 라면 상자를 미리 주문해 뒀어요.",
+   "blank": "글피에",
+   "src": "made"
+  },
+  {
+   "text": "유나는 글피에 이웃들과 아파트 화단을 같이 정리하기로 했어요.",
+   "en": "Yuna agreed to tidy up the apartment flower bed with her neighbors three days from now.",
+   "ko": "유나는 글피에 이웃들과 아파트 화단을 같이 정리하기로 했어요.",
+   "blank": "글피에",
+   "src": "made"
   }
  ],
  "w|긁다": [
@@ -14257,6 +14593,22 @@
    "en": "The symptoms showed up again.",
    "ko": "증상이 또 나타났어요.",
    "blank": "나타났어요"
+  }
+ ],
+ "w|나타내다": [
+  {
+   "text": "성호는 주인공의 외로움을 텅 빈 무대와 파란 조명으로 나타냈어요.",
+   "en": "Seongho expressed the main character's loneliness with an empty stage and blue lighting.",
+   "ko": "성호는 주인공의 외로움을 텅 빈 무대와 파란 조명으로 나타냈어요.",
+   "blank": "나타냈어요",
+   "src": "made"
+  },
+  {
+   "text": "개가 꼬리를 다리 사이에 넣는 건 두려움을 나타내는 거라고 미경이 설명했어요.",
+   "en": "Mikyung explained that a dog tucking its tail between its legs shows fear.",
+   "ko": "개가 꼬리를 다리 사이에 넣는 건 두려움을 나타내는 거라고 미경이 설명했어요.",
+   "blank": "나타내는",
+   "src": "made"
   }
  ],
  "w|나흘": [
@@ -19795,6 +20147,22 @@
    "src": "made"
   }
  ],
+ "w|대처": [
+  {
+   "text": "공연 중에 조명이 꺼졌지만 성호의 침착한 대처 덕분에 관객들은 동요하지 않았어요.",
+   "en": "The lights went out during the show, but thanks to Seongho's calm handling, the audience didn't panic.",
+   "ko": "공연 중에 조명이 꺼졌지만 성호의 침착한 대처 덕분에 관객들은 동요하지 않았어요.",
+   "blank": "대처",
+   "src": "made"
+  },
+  {
+   "text": "미경은 개가 초콜릿을 먹었을 때의 대처 방법을 보호자들에게 알려 줘요.",
+   "en": "Mikyung tells pet owners how to deal with a dog that has eaten chocolate.",
+   "ko": "미경은 개가 초콜릿을 먹었을 때의 대처 방법을 보호자들에게 알려 줘요.",
+   "blank": "대처",
+   "src": "made"
+  }
+ ],
  "w|대처하다": [
   {
    "text": "생방송 중에 원고가 사라졌지만 태윤은 침착하게 대처했어요.",
@@ -20083,6 +20451,22 @@
    "src": "made"
   }
  ],
+ "w|대형마트": [
+  {
+   "text": "근처에 대형마트가 생긴 뒤로 태윤의 가게 손님이 조금 줄었어요.",
+   "en": "Since a big supermarket opened nearby, Taeyun's shop has had a few fewer customers.",
+   "ko": "근처에 대형마트가 생긴 뒤로 태윤의 가게 손님이 조금 줄었어요.",
+   "blank": "대형마트가",
+   "src": "made"
+  },
+  {
+   "text": "유나는 대형마트에 갈 때 옆집 할머니의 장도 같이 봐 드려요.",
+   "en": "When Yuna goes to the big supermarket, she does the grandmother next door's shopping too.",
+   "ko": "유나는 대형마트에 갈 때 옆집 할머니의 장도 같이 봐 드려요.",
+   "blank": "대형마트에",
+   "src": "made"
+  }
+ ],
  "w|대화": [
   {
    "text": "깊은 대화를 나눴어.",
@@ -20315,6 +20699,22 @@
    "en": "When I'm nervous my hands get fumbling.",
    "ko": "긴장하면 손이 덜렁대.",
    "blank": "덜렁대"
+  }
+ ],
+ "w|덤": [
+  {
+   "text": "태윤은 단골 할머니에게 귤 두 개를 덤으로 얹어 드렸어요.",
+   "en": "Taeyun gave an elderly regular two extra tangerines for free.",
+   "ko": "태윤은 단골 할머니에게 귤 두 개를 덤으로 얹어 드렸어요.",
+   "blank": "덤으로",
+   "src": "made"
+  },
+  {
+   "text": "유나가 동네 정육점에서 고기를 사자 사장님이 뼈를 덤으로 넣어 주셨어요.",
+   "en": "When Yuna bought meat at the neighborhood butcher, the owner threw in some bones for free.",
+   "ko": "유나가 동네 정육점에서 고기를 사자 사장님이 뼈를 덤으로 넣어 주셨어요.",
+   "blank": "덤으로",
+   "src": "made"
   }
  ],
  "w|덤벙대다": [
@@ -21616,6 +22016,22 @@
    "en": "The pool locker rooms can only be used by people of the same sex.",
    "ko": "수영장 탈의실은 동성끼리만 쓸 수 있어요.",
    "blank": "동성끼리만",
+   "src": "made"
+  }
+ ],
+ "w|동성애": [
+  {
+   "text": "성호의 극단은 동성애를 다룬 고전 희곡을 이번 시즌에 다시 올려요.",
+   "en": "Seongho's theater company is restaging a classic play about homosexuality this season.",
+   "ko": "성호의 극단은 동성애를 다룬 고전 희곡을 이번 시즌에 다시 올려요.",
+   "blank": "동성애를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 동물에게도 동성애 행동이 나타난다는 연구 기사를 흥미롭게 읽었어요.",
+   "en": "Mikyung read with interest an article about research showing homosexual behavior in animals too.",
+   "ko": "미경은 동물에게도 동성애 행동이 나타난다는 연구 기사를 흥미롭게 읽었어요.",
+   "blank": "동성애",
    "src": "made"
   }
  ],
@@ -23059,6 +23475,22 @@
    "src": "made"
   }
  ],
+ "w|따끈하다": [
+  {
+   "text": "태윤은 아침마다 따끈한 호빵을 찜기에서 꺼내 팔아요.",
+   "en": "Every morning Taeyun takes warm steamed buns out of the steamer and sells them.",
+   "ko": "태윤은 아침마다 따끈한 호빵을 찜기에서 꺼내 팔아요.",
+   "blank": "따끈한",
+   "src": "made"
+  },
+  {
+   "text": "유나는 옆집에서 받은 떡을 따끈할 때 먹으려고 서둘러 집에 들어갔어요.",
+   "en": "Yuna hurried home to eat the rice cake from next door while it was still warm.",
+   "ko": "유나는 옆집에서 받은 떡을 따끈할 때 먹으려고 서둘러 집에 들어갔어요.",
+   "blank": "따끈할",
+   "src": "made"
+  }
+ ],
  "w|따님": [
   {
    "text": "여기 김 선생님과 그 따님께서 나오셨습니다.",
@@ -23981,6 +24413,22 @@
    "en": "Careful, the coffee is hot.",
    "ko": "커피가 뜨거워서 조심하세요.",
    "blank": "뜨거워서"
+  }
+ ],
+ "w|뜨끈하다": [
+  {
+   "text": "추운 날 태윤은 가게 난로 옆에서 뜨끈한 어묵 국물을 마셨어요.",
+   "en": "On a cold day, Taeyun drank hot fish cake broth by the shop's heater.",
+   "ko": "추운 날 태윤은 가게 난로 옆에서 뜨끈한 어묵 국물을 마셨어요.",
+   "blank": "뜨끈한",
+   "src": "made"
+  },
+  {
+   "text": "유나는 감기에 걸린 이웃에게 뜨끈한 미역국을 끓여 갔어요.",
+   "en": "Yuna made hot seaweed soup and brought it to her neighbor who had a cold.",
+   "ko": "유나는 감기에 걸린 이웃에게 뜨끈한 미역국을 끓여 갔어요.",
+   "blank": "뜨끈한",
+   "src": "made"
   }
  ],
  "w|뜨다": [
@@ -26111,6 +26559,22 @@
    "blank": "매주"
   }
  ],
+ "w|매진": [
+  {
+   "text": "점심 전에 도시락이 매진이 되자 태윤은 다음 날 주문을 늘렸어요.",
+   "en": "When the lunch boxes sold out before noon, Taeyun increased his order for the next day.",
+   "ko": "점심 전에 도시락이 매진이 되자 태윤은 다음 날 주문을 늘렸어요.",
+   "blank": "매진이",
+   "src": "made"
+  },
+  {
+   "text": "동네 빵집 크루아상이 일찍 매진이라 유나는 이웃과 다른 빵을 나눠 샀어요.",
+   "en": "The croissants at the local bakery sold out early, so Yuna and her neighbor split a different bread.",
+   "ko": "동네 빵집 크루아상이 일찍 매진이라 유나는 이웃과 다른 빵을 나눠 샀어요.",
+   "blank": "매진이라",
+   "src": "made"
+  }
+ ],
  "w|매체": [
   {
    "text": "사회 선생님은 신문과 방송 같은 매체가 여론에 미치는 영향을 설명하셨어요.",
@@ -26140,6 +26604,22 @@
    "en": "Thanks to Christmas cakes, Sohee's bakery has its highest sales in December.",
    "ko": "크리스마스 케이크 덕분에 소희의 빵집은 십이월 매출이 가장 높아요.",
    "blank": "매출이",
+   "src": "made"
+  }
+ ],
+ "w|매콤하다": [
+  {
+   "text": "태윤은 매콤한 컵라면을 계산대 옆에 따로 쌓아 두었어요.",
+   "en": "Taeyun stacked the spicy cup noodles separately next to the checkout.",
+   "ko": "태윤은 매콤한 컵라면을 계산대 옆에 따로 쌓아 두었어요.",
+   "blank": "매콤한",
+   "src": "made"
+  },
+  {
+   "text": "아래층 아주머니가 만든 떡볶이는 매콤해서 유나 입맛에 딱 맞아요.",
+   "en": "The tteokbokki the woman downstairs makes is spicy, so it suits Yuna's taste perfectly.",
+   "ko": "아래층 아주머니가 만든 떡볶이는 매콤해서 유나 입맛에 딱 맞아요.",
+   "blank": "매콤해서",
    "src": "made"
   }
  ],
@@ -26751,6 +27231,22 @@
    "src": "made"
   }
  ],
+ "w|멤버십": [
+  {
+   "text": "태윤은 단골손님들을 위해 가게 멤버십을 만들었어요.",
+   "en": "Taeyun created a shop membership for his regular customers.",
+   "ko": "태윤은 단골손님들을 위해 가게 멤버십을 만들었어요.",
+   "blank": "멤버십을",
+   "src": "made"
+  },
+  {
+   "text": "유나와 이웃들은 헬스장 멤버십을 같이 끊어서 할인을 받았어요.",
+   "en": "Yuna and her neighbors signed up for gym memberships together and got a discount.",
+   "ko": "유나와 이웃들은 헬스장 멤버십을 같이 끊어서 할인을 받았어요.",
+   "blank": "멤버십을",
+   "src": "made"
+  }
+ ],
  "w|며느리": [
   {
    "text": "며느리가 저녁을 차렸어.",
@@ -26791,6 +27287,22 @@
    "en": "I got nervous before the interview.",
    "ko": "면담을 앞두고 긴장됐어.",
    "blank": "면담을"
+  }
+ ],
+ "w|면도하다": [
+  {
+   "text": "태윤은 면도할 시간이 없어서 수염이 난 채로 가게 문을 열었어요.",
+   "en": "Taeyun had no time to shave, so he opened the shop with stubble.",
+   "ko": "태윤은 면도할 시간이 없어서 수염이 난 채로 가게 문을 열었어요.",
+   "blank": "면도할",
+   "src": "made"
+  },
+  {
+   "text": "유나의 옆집 아저씨는 매일 아침 면도하면서 창문을 열어 놓고 노래를 불러요.",
+   "en": "Every morning, the man next door to Yuna sings with the window open while he shaves.",
+   "ko": "유나의 옆집 아저씨는 매일 아침 면도하면서 창문을 열어 놓고 노래를 불러요.",
+   "blank": "면도하면서",
+   "src": "made"
   }
  ],
  "w|면세점": [
@@ -27557,6 +28069,22 @@
    "en": "I go to the gym every Thursday.",
    "ko": "목요일마다 헬스장에 가.",
    "blank": "목요일마다"
+  }
+ ],
+ "w|목욕하다": [
+  {
+   "text": "태윤은 가게 문을 닫고 집에 가서 바로 목욕했어요.",
+   "en": "Taeyun closed the shop, went home, and took a bath right away.",
+   "ko": "태윤은 가게 문을 닫고 집에 가서 바로 목욕했어요.",
+   "blank": "목욕했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나네 강아지는 목욕하고 나면 옆집 마당까지 뛰어다녀요.",
+   "en": "After a bath, Yuna's puppy runs all the way into the neighbor's yard.",
+   "ko": "유나네 강아지는 목욕하고 나면 옆집 마당까지 뛰어다녀요.",
+   "blank": "목욕하고",
+   "src": "made"
   }
  ],
  "w|목장": [
@@ -29410,6 +29938,22 @@
    "en": "Minors can't go into the deep pool without a guardian.",
    "ko": "미성년자는 보호자 없이 깊은 풀에 들어갈 수 없어요.",
    "blank": "미성년자는",
+   "src": "made"
+  }
+ ],
+ "w|미세먼지": [
+  {
+   "text": "미세먼지가 심한 날이면 태윤의 가게에서는 마스크가 금방 동나요.",
+   "en": "On days when fine dust is bad, masks sell out quickly at Taeyun's shop.",
+   "ko": "미세먼지가 심한 날이면 태윤의 가게에서는 마스크가 금방 동나요.",
+   "blank": "미세먼지가",
+   "src": "made"
+  },
+  {
+   "text": "미세먼지 때문에 유나는 이웃과 하던 아침 산책을 쉬기로 했어요.",
+   "en": "Because of the fine dust, Yuna decided to skip her morning walk with her neighbor.",
+   "ko": "미세먼지 때문에 유나는 이웃과 하던 아침 산책을 쉬기로 했어요.",
+   "blank": "미세먼지",
    "src": "made"
   }
  ],
@@ -31320,6 +31864,22 @@
    "en": "Having left her wallet at home, Yuna had no way to pay for lunch.",
    "ko": "지갑을 두고 나온 유나는 점심값을 낼 방도가 없었어요.",
    "blank": "방도가",
+   "src": "made"
+  }
+ ],
+ "w|방면": [
+  {
+   "text": "성호는 연기뿐 아니라 조명과 음향 방면에도 재주가 있어요.",
+   "en": "Seongho is talented not only in acting but also in lighting and sound.",
+   "ko": "성호는 연기뿐 아니라 조명과 음향 방면에도 재주가 있어요.",
+   "blank": "방면에도",
+   "src": "made"
+  },
+  {
+   "text": "미경은 개와 고양이뿐 아니라 새와 파충류 방면에도 경험이 많아요.",
+   "en": "Mikyung has a lot of experience not only with dogs and cats but also with birds and reptiles.",
+   "ko": "미경은 개와 고양이뿐 아니라 새와 파충류 방면에도 경험이 많아요.",
+   "blank": "방면에도",
    "src": "made"
   }
  ],
@@ -34601,6 +35161,22 @@
    "src": "made"
   }
  ],
+ "w|부문": [
+  {
+   "text": "성호의 연극이 올해 연극제 연출 부문에서 상을 받았어요.",
+   "en": "Seongho's play won a prize in the directing category at this year's theater festival.",
+   "ko": "성호의 연극이 올해 연극제 연출 부문에서 상을 받았어요.",
+   "blank": "부문에서",
+   "src": "made"
+  },
+  {
+   "text": "미경의 병원은 요즘 진료보다 미용 부문의 손님이 더 많아요.",
+   "en": "These days Mikyung's clinic has more customers in its grooming section than for treatment.",
+   "ko": "미경의 병원은 요즘 진료보다 미용 부문의 손님이 더 많아요.",
+   "blank": "부문의",
+   "src": "made"
+  }
+ ],
  "w|부부": [
   {
    "text": "부부가 같이 산책했어.",
@@ -35163,6 +35739,22 @@
    "en": "I took a deep breath to calm my anger.",
    "ko": "분노를 가라앉히려고 심호흡했어.",
    "blank": "분노를"
+  }
+ ],
+ "w|분량": [
+  {
+   "text": "대본 분량이 너무 많아서 성호는 이 막을 통째로 줄였어요.",
+   "en": "The script was too long, so Seongho cut the second act entirely.",
+   "ko": "대본 분량이 너무 많아서 성호는 이 막을 통째로 줄였어요.",
+   "blank": "분량이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 고양이가 하루에 먹는 사료 분량을 저울로 재 보라고 했어요.",
+   "en": "Mikyung told the owner to weigh the amount of food the cat eats per day.",
+   "ko": "미경은 고양이가 하루에 먹는 사료 분량을 저울로 재 보라고 했어요.",
+   "blank": "분량을",
+   "src": "made"
   }
  ],
  "w|분류하다": [
@@ -36351,6 +36943,22 @@
    "src": "made"
   }
  ],
+ "w|비례": [
+  {
+   "text": "성호는 배우 출연료를 무대에 나오는 시간에 비례해서 정했어요.",
+   "en": "Seongho set the actors' fees in proportion to their time on stage.",
+   "ko": "성호는 배우 출연료를 무대에 나오는 시간에 비례해서 정했어요.",
+   "blank": "비례해서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 약의 양을 강아지 몸무게에 비례해서 정해요.",
+   "en": "Mikyung sets the amount of medicine in proportion to the puppy's weight.",
+   "ko": "미경은 약의 양을 강아지 몸무게에 비례해서 정해요.",
+   "blank": "비례해서",
+   "src": "made"
+  }
+ ],
  "w|비로소": [
   {
    "text": "그때 비로소 내 마음을 알았어.",
@@ -36652,6 +37260,22 @@
    "en": "Mikyeong's friend from art class is a temporary worker, so it's hard for her to fit in the class schedule.",
    "ko": "미경의 미술 친구는 비정규직이라 수업 시간을 맞추기가 어려워요.",
    "blank": "비정규직이라",
+   "src": "made"
+  }
+ ],
+ "w|비중": [
+  {
+   "text": "성호의 극장 수입에서 단체 관람이 차지하는 비중이 점점 커지고 있어요.",
+   "en": "Group bookings are taking up a growing share of Seongho's theater revenue.",
+   "ko": "성호의 극장 수입에서 단체 관람이 차지하는 비중이 점점 커지고 있어요.",
+   "blank": "비중이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 노견의 식단에서 단백질 비중을 조금 높이라고 권했어요.",
+   "en": "Mikyung recommended slightly increasing the share of protein in the old dog's diet.",
+   "ko": "미경은 노견의 식단에서 단백질 비중을 조금 높이라고 권했어요.",
+   "blank": "비중을",
    "src": "made"
   }
  ],
@@ -37987,6 +38611,22 @@
    "src": "krdict"
   }
  ],
+ "w|사상": [
+  {
+   "text": "성호는 백 년 전 작가의 사상을 이해하려고 그 시대 책을 찾아 읽었어요.",
+   "en": "Seongho looked up books from that era to understand the ideas of a writer from a hundred years ago.",
+   "ko": "성호는 백 년 전 작가의 사상을 이해하려고 그 시대 책을 찾아 읽었어요.",
+   "blank": "사상을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 생명은 모두 소중하다는 스승의 사상에 영향을 받아 수의사가 됐어요.",
+   "en": "Mikyung became a vet influenced by her mentor's belief that all life is precious.",
+   "ko": "미경은 생명은 모두 소중하다는 스승의 사상에 영향을 받아 수의사가 됐어요.",
+   "blank": "사상에",
+   "src": "made"
+  }
+ ],
  "w|사상자": [
   {
    "text": "역사 선생님은 그 전투에서 사상자가 수천 명에 달했다고 설명하셨어요.",
@@ -38241,6 +38881,22 @@
    "en": "I called my son-in-law.",
    "ko": "사위한테 전화했어.",
    "blank": "사위한테"
+  }
+ ],
+ "w|사은품": [
+  {
+   "text": "음료 회사에서 보낸 사은품 컵을 태윤은 손님들에게 나눠 줬어요.",
+   "en": "Taeyun handed out to customers the free cups sent by a drink company.",
+   "ko": "음료 회사에서 보낸 사은품 컵을 태윤은 손님들에게 나눠 줬어요.",
+   "blank": "사은품",
+   "src": "made"
+  },
+  {
+   "text": "유나는 마트에서 받은 사은품 수건을 옆집 할머니께 드렸어요.",
+   "en": "Yuna gave the free towel she got at the mart to the grandmother next door.",
+   "ko": "유나는 마트에서 받은 사은품 수건을 옆집 할머니께 드렸어요.",
+   "blank": "사은품",
+   "src": "made"
   }
  ],
  "w|사이": [
@@ -39693,6 +40349,22 @@
    "blank": "상자를"
   }
  ],
+ "w|상점": [
+  {
+   "text": "태윤의 상점은 골목 끝에서 삼십 년째 같은 자리를 지키고 있어요.",
+   "en": "Taeyun's store has stood in the same spot at the end of the alley for thirty years.",
+   "ko": "태윤의 상점은 골목 끝에서 삼십 년째 같은 자리를 지키고 있어요.",
+   "blank": "상점은",
+   "src": "made"
+  },
+  {
+   "text": "유나의 동네 골목에는 오래된 상점이 많아서 이웃끼리 서로 잘 알아요.",
+   "en": "There are many old stores in Yuna's neighborhood alley, so neighbors all know each other well.",
+   "ko": "유나의 동네 골목에는 오래된 상점이 많아서 이웃끼리 서로 잘 알아요.",
+   "blank": "상점이",
+   "src": "made"
+  }
+ ],
  "w|상처": [
   {
    "text": "상처에 연고 발라.",
@@ -39793,6 +40465,22 @@
    "en": "This product is sold out.",
    "ko": "이 상품은 품절이야.",
    "blank": "상품은"
+  }
+ ],
+ "w|상품권": [
+  {
+   "text": "태윤은 설날에 가게 일을 도와준 조카에게 상품권을 줬어요.",
+   "en": "Taeyun gave a gift card to his nephew who helped at the shop over the Lunar New Year.",
+   "ko": "태윤은 설날에 가게 일을 도와준 조카에게 상품권을 줬어요.",
+   "blank": "상품권을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 새로 이사 온 이웃에게 환영 선물로 빵집 상품권을 건넸어요.",
+   "en": "Yuna gave the new neighbor a bakery gift card as a welcome present.",
+   "ko": "유나는 새로 이사 온 이웃에게 환영 선물로 빵집 상품권을 건넸어요.",
+   "blank": "상품권을",
+   "src": "made"
   }
  ],
  "w|상하다": [
@@ -42447,6 +43135,22 @@
    "src": "made"
   }
  ],
+ "w|세수하다": [
+  {
+   "text": "태윤은 늦잠을 자서 세수하자마자 가게로 뛰어갔어요.",
+   "en": "Taeyun overslept, so he ran to the shop as soon as he washed his face.",
+   "ko": "태윤은 늦잠을 자서 세수하자마자 가게로 뛰어갔어요.",
+   "blank": "세수하자마자",
+   "src": "made"
+  },
+  {
+   "text": "유나는 세수하고 있을 때 옆집 사람이 초인종을 눌러서 수건을 두른 채 나갔어요.",
+   "en": "The neighbor rang the doorbell while Yuna was washing her face, so she went out with a towel around her.",
+   "ko": "유나는 세수하고 있을 때 옆집 사람이 초인종을 눌러서 수건을 두른 채 나갔어요.",
+   "blank": "세수하고",
+   "src": "made"
+  }
+ ],
  "w|세심하다": [
   {
    "text": "성호는 동료들의 이름과 취향을 세심하게 메모해 뒀어요.",
@@ -43491,6 +44195,22 @@
    "blank": "손가락이"
   }
  ],
+ "w|손길": [
+  {
+   "text": "오래된 극장 의자 하나하나에 관리인의 손길이 닿아 있다고 성호는 느꼈어요.",
+   "en": "Seongho felt the caretaker's touch on every single old theater seat.",
+   "ko": "오래된 극장 의자 하나하나에 관리인의 손길이 닿아 있다고 성호는 느꼈어요.",
+   "blank": "손길이",
+   "src": "made"
+  },
+  {
+   "text": "겁먹은 고양이도 미경의 부드러운 손길에는 금방 얌전해져요.",
+   "en": "Even frightened cats quickly calm down at Mikyung's gentle touch.",
+   "ko": "겁먹은 고양이도 미경의 부드러운 손길에는 금방 얌전해져요.",
+   "blank": "손길에는",
+   "src": "made"
+  }
+ ],
  "w|손녀": [
   {
    "text": "손녀가 그림 그려 줬어.",
@@ -43594,6 +44314,22 @@
    "en": "Mikyung writes what she needs to study in a palm-sized notebook and carries it around.",
    "ko": "미경은 공부할 내용을 손바닥만 한 수첩에 적어 다녀요.",
    "blank": "손바닥만",
+   "src": "made"
+  }
+ ],
+ "w|손상되다": [
+  {
+   "text": "비가 새는 바람에 무대 바닥이 손상되어 성호는 공연을 하루 미뤘어요.",
+   "en": "The stage floor was damaged by a leak, so Seongho postponed the show by a day.",
+   "ko": "비가 새는 바람에 무대 바닥이 손상되어 성호는 공연을 하루 미뤘어요.",
+   "blank": "손상되어",
+   "src": "made"
+  },
+  {
+   "text": "미경은 엑스레이에서 강아지의 무릎 연골이 손상된 것을 확인했어요.",
+   "en": "Mikyung confirmed on the X-ray that the puppy's knee cartilage was damaged.",
+   "ko": "미경은 엑스레이에서 강아지의 무릎 연골이 손상된 것을 확인했어요.",
+   "blank": "손상된",
    "src": "made"
   }
  ],
@@ -43994,6 +44730,22 @@
    "en": "Jiyoung took her water bill and checked the charges on a library computer.",
    "ko": "지영은 수도세 고지서를 들고 도서관 컴퓨터로 요금을 확인했어요.",
    "blank": "수도세",
+   "src": "made"
+  }
+ ],
+ "w|수량": [
+  {
+   "text": "성호는 공연 전에 팸플릿 수량이 좌석 수만큼 되는지 확인했어요.",
+   "en": "Before the show, Seongho checked whether the number of pamphlets matched the number of seats.",
+   "ko": "성호는 공연 전에 팸플릿 수량이 좌석 수만큼 되는지 확인했어요.",
+   "blank": "수량이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 매주 금요일에 백신 수량을 세고 모자라면 주문해요.",
+   "en": "Every Friday Mikyung counts the vaccine stock and orders more if it's short.",
+   "ko": "미경은 매주 금요일에 백신 수량을 세고 모자라면 주문해요.",
+   "blank": "수량을",
    "src": "made"
   }
  ],
@@ -44454,6 +45206,22 @@
    "en": "The new intern greeted everyone shyly and sat next to Sohee.",
    "ko": "새로 온 인턴은 수줍게 인사하고 소희 옆자리에 앉았어요.",
    "blank": "수줍게",
+   "src": "made"
+  }
+ ],
+ "w|수집": [
+  {
+   "text": "성호는 오래된 연극 포스터 수집을 취미로 삼고 있어요.",
+   "en": "Seongho has taken up collecting old theater posters as a hobby.",
+   "ko": "성호는 오래된 연극 포스터 수집을 취미로 삼고 있어요.",
+   "blank": "수집을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 유기 동물에게 줄 담요와 사료 수집을 동네에 부탁했어요.",
+   "en": "Mikyung asked the neighborhood to help collect blankets and food for abandoned animals.",
+   "ko": "미경은 유기 동물에게 줄 담요와 사료 수집을 동네에 부탁했어요.",
+   "blank": "수집을",
    "src": "made"
   }
  ],
@@ -45117,6 +45885,22 @@
    "en": "The supermarket closes early.",
    "ko": "슈퍼가 일찍 문을 닫아.",
    "blank": "슈퍼가"
+  }
+ ],
+ "w|슈퍼마켓": [
+  {
+   "text": "태윤은 길 건너 슈퍼마켓보다 물건값을 조금 싸게 받아요.",
+   "en": "Taeyun charges a little less than the supermarket across the street.",
+   "ko": "태윤은 길 건너 슈퍼마켓보다 물건값을 조금 싸게 받아요.",
+   "blank": "슈퍼마켓보다",
+   "src": "made"
+  },
+  {
+   "text": "유나는 슈퍼마켓에서 우연히 아래층 이웃을 만나 한참 이야기했어요.",
+   "en": "Yuna ran into her downstairs neighbor at the supermarket and talked for a long time.",
+   "ko": "유나는 슈퍼마켓에서 우연히 아래층 이웃을 만나 한참 이야기했어요.",
+   "blank": "슈퍼마켓에서",
+   "src": "made"
   }
  ],
  "w|스님": [
@@ -46329,6 +47113,22 @@
    "blank": "시험하는"
   }
  ],
+ "w|시효": [
+  {
+   "text": "성호가 올린 법정극에서는 공소 시효가 끝나기 직전에 범인이 잡혀요.",
+   "en": "In the courtroom drama Seongho staged, the culprit is caught just before the statute of limitations runs out.",
+   "ko": "성호가 올린 법정극에서는 공소 시효가 끝나기 직전에 범인이 잡혀요.",
+   "blank": "시효가",
+   "src": "made"
+  },
+  {
+   "text": "미경은 오래된 진료비 청구에 시효가 있는지 변호사에게 물어봤어요.",
+   "en": "Mikyung asked a lawyer whether old unpaid vet bills have a time limit for collection.",
+   "ko": "미경은 오래된 진료비 청구에 시효가 있는지 변호사에게 물어봤어요.",
+   "blank": "시효가",
+   "src": "made"
+  }
+ ],
  "w|식감": [
   {
    "text": "민수는 갓 튀긴 어묵의 쫄깃한 식감이 마음에 들었어요.",
@@ -46917,6 +47717,22 @@
    "blank": "신사가"
   }
  ],
+ "w|신상품": [
+  {
+   "text": "태윤은 신상품 음료를 냉장고 맨 앞 칸에 넣었어요.",
+   "en": "Taeyun put the new drinks in the very front of the fridge.",
+   "ko": "태윤은 신상품 음료를 냉장고 맨 앞 칸에 넣었어요.",
+   "blank": "신상품",
+   "src": "made"
+  },
+  {
+   "text": "유나는 옆집 친구와 화장품 가게에서 신상품을 구경했어요.",
+   "en": "Yuna browsed the new arrivals at a cosmetics shop with her friend next door.",
+   "ko": "유나는 옆집 친구와 화장품 가게에서 신상품을 구경했어요.",
+   "blank": "신상품을",
+   "src": "made"
+  }
+ ],
  "w|신생아": [
   {
    "text": "성호 씨는 신생아 딸 사진을 보여 주며 활짝 웃었어요.",
@@ -47099,6 +47915,22 @@
    "en": "They said my kidney function is a bit weak.",
    "ko": "신장 기능이 약한 편이래.",
    "blank": "신장"
+  }
+ ],
+ "w|신제품": [
+  {
+   "text": "과자 회사 직원이 신제품 시식용 과자를 들고 태윤의 가게에 들렀어요.",
+   "en": "An employee from a snack company stopped by Taeyun's shop with samples of a new product.",
+   "ko": "과자 회사 직원이 신제품 시식용 과자를 들고 태윤의 가게에 들렀어요.",
+   "blank": "신제품",
+   "src": "made"
+  },
+  {
+   "text": "위층 이웃이 회사에서 받은 신제품 라면을 유나에게 몇 개 줬어요.",
+   "en": "The upstairs neighbor gave Yuna a few packs of a new ramen product from work.",
+   "ko": "위층 이웃이 회사에서 받은 신제품 라면을 유나에게 몇 개 줬어요.",
+   "blank": "신제품",
+   "src": "made"
   }
  ],
  "w|신중하다": [
@@ -49335,6 +50167,22 @@
    "src": "made"
   }
  ],
+ "w|아울렛": [
+  {
+   "text": "태윤은 쉬는 날 아울렛에 가서 가게에서 입을 앞치마를 샀어요.",
+   "en": "On his day off, Taeyun went to an outlet and bought an apron to wear at the shop.",
+   "ko": "태윤은 쉬는 날 아울렛에 가서 가게에서 입을 앞치마를 샀어요.",
+   "blank": "아울렛에",
+   "src": "made"
+  },
+  {
+   "text": "유나는 위층 언니와 함께 아울렛에서 겨울 외투를 골랐어요.",
+   "en": "Yuna picked out a winter coat at an outlet with the woman from upstairs.",
+   "ko": "유나는 위층 언니와 함께 아울렛에서 겨울 외투를 골랐어요.",
+   "blank": "아울렛에서",
+   "src": "made"
+  }
+ ],
  "w|아이": [
   {
    "text": "아이 손 꼭 잡고 건너.",
@@ -51229,6 +52077,22 @@
    "src": "made"
   }
  ],
+ "w|양치하다": [
+  {
+   "text": "태윤은 점심을 먹고 가게 뒤 작은 세면대에서 양치했어요.",
+   "en": "After lunch, Taeyun brushed his teeth at the small sink behind the shop.",
+   "ko": "태윤은 점심을 먹고 가게 뒤 작은 세면대에서 양치했어요.",
+   "blank": "양치했어요",
+   "src": "made"
+  },
+  {
+   "text": "유나는 양치하다가 위층에서 쿵 하는 소리를 듣고 깜짝 놀랐어요.",
+   "en": "Yuna was startled by a thud from upstairs while brushing her teeth.",
+   "ko": "유나는 양치하다가 위층에서 쿵 하는 소리를 듣고 깜짝 놀랐어요.",
+   "blank": "양치하다가",
+   "src": "made"
+  }
+ ],
  "w|양파": [
   {
    "text": "양파를 썰다가 울었어.",
@@ -51847,6 +52711,22 @@
    "en": "Is the bread from yesterday still there?",
    "ko": "어제 산 빵 아직 있어?",
    "blank": "어제"
+  }
+ ],
+ "w|어제오늘": [
+  {
+   "text": "어제오늘 아이스크림이 잘 팔려서 태윤의 가게 냉동고가 거의 비었어요.",
+   "en": "Ice cream sold so well these past couple of days that the freezer in Taeyun's shop is almost empty.",
+   "ko": "어제오늘 아이스크림이 잘 팔려서 태윤의 가게 냉동고가 거의 비었어요.",
+   "blank": "어제오늘",
+   "src": "made"
+  },
+  {
+   "text": "어제오늘 윗집에서 공사를 해서 유나는 낮잠을 거의 못 잤어요.",
+   "en": "The upstairs neighbors have been doing construction these past couple of days, so Yuna could hardly nap.",
+   "ko": "어제오늘 윗집에서 공사를 해서 유나는 낮잠을 거의 못 잤어요.",
+   "blank": "어제오늘",
+   "src": "made"
   }
  ],
  "w|어젯밤": [
@@ -56301,6 +57181,22 @@
    "src": "made"
   }
  ],
+ "w|완성": [
+  {
+   "text": "성호는 무대 세트의 완성을 앞두고 밤늦게까지 극장에 남았어요.",
+   "en": "With the stage set almost finished, Seongho stayed at the theater until late at night.",
+   "ko": "성호는 무대 세트의 완성을 앞두고 밤늦게까지 극장에 남았어요.",
+   "blank": "완성을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 새 진료실 공사의 완성을 기다리며 임시 진료실에서 일하고 있어요.",
+   "en": "Mikyung is working in a temporary exam room while waiting for the new one to be finished.",
+   "ko": "미경은 새 진료실 공사의 완성을 기다리며 임시 진료실에서 일하고 있어요.",
+   "blank": "완성을",
+   "src": "made"
+  }
+ ],
  "w|완성하다": [
   {
    "text": "보고서를 드디어 완성했어.",
@@ -60327,6 +61223,22 @@
    "src": "krdict"
   }
  ],
+ "w|이념": [
+  {
+   "text": "성호는 이념 갈등으로 갈라진 두 형제의 이야기를 무대에 올렸어요.",
+   "en": "Seongho put on stage the story of two brothers divided by an ideological conflict.",
+   "ko": "성호는 이념 갈등으로 갈라진 두 형제의 이야기를 무대에 올렸어요.",
+   "blank": "이념",
+   "src": "made"
+  },
+  {
+   "text": "미경은 동물 복지는 이념의 문제가 아니라 상식의 문제라고 생각해요.",
+   "en": "Mikyung thinks animal welfare isn't a matter of ideology but of common sense.",
+   "ko": "미경은 동물 복지는 이념의 문제가 아니라 상식의 문제라고 생각해요.",
+   "blank": "이념의",
+   "src": "made"
+  }
+ ],
  "w|이대로": [
   {
    "text": "이대로 가자.",
@@ -60929,6 +61841,22 @@
    "en": "This exam was easy.",
    "ko": "이번 시험은 쉬웠어.",
    "blank": "이번"
+  }
+ ],
+ "w|이벤트": [
+  {
+   "text": "태윤의 가게는 이번 주에 라면 다섯 개를 사면 하나를 더 주는 이벤트를 해요.",
+   "en": "This week Taeyun's shop is running a promotion where you get one free when you buy five packs of ramen.",
+   "ko": "태윤의 가게는 이번 주에 라면 다섯 개를 사면 하나를 더 주는 이벤트를 해요.",
+   "blank": "이벤트를",
+   "src": "made"
+  },
+  {
+   "text": "관리사무소에서 이웃끼리 화분을 나누는 이벤트를 열어서 유나도 참여했어요.",
+   "en": "The management office held an event for neighbors to share potted plants, so Yuna joined in.",
+   "ko": "관리사무소에서 이웃끼리 화분을 나누는 이벤트를 열어서 유나도 참여했어요.",
+   "blank": "이벤트를",
+   "src": "made"
   }
  ],
  "w|이별": [
@@ -65025,6 +65953,22 @@
    "blank": "장미가"
   }
  ],
+ "w|장바구니": [
+  {
+   "text": "태윤의 가게 입구에는 손님들이 쓰는 장바구니가 쌓여 있어요.",
+   "en": "Shopping baskets for customers are stacked at the entrance of Taeyun's shop.",
+   "ko": "태윤의 가게 입구에는 손님들이 쓰는 장바구니가 쌓여 있어요.",
+   "blank": "장바구니가",
+   "src": "made"
+  },
+  {
+   "text": "유나는 장을 보고 오다가 무거운 장바구니를 든 이웃 할머니를 도와드렸어요.",
+   "en": "On her way back from shopping, Yuna helped an elderly neighbor carrying a heavy shopping bag.",
+   "ko": "유나는 장을 보고 오다가 무거운 장바구니를 든 이웃 할머니를 도와드렸어요.",
+   "blank": "장바구니를",
+   "src": "made"
+  }
+ ],
  "w|장부": [
   {
    "text": "재원은 학급 회비 장부를 꼼꼼하게 정리했어요.",
@@ -65306,6 +66250,22 @@
    "en": "A cultural foundation restored the village's old pavilion.",
    "ko": "한 문화 재단이 마을의 오래된 정자를 고쳐 줬어요.",
    "blank": "재단이",
+   "src": "made"
+  }
+ ],
+ "w|재래시장": [
+  {
+   "text": "태윤은 새벽마다 재래시장에 가서 싱싱한 채소를 떼어 와요.",
+   "en": "Every dawn Taeyun goes to the traditional market to buy fresh vegetables wholesale.",
+   "ko": "태윤은 새벽마다 재래시장에 가서 싱싱한 채소를 떼어 와요.",
+   "blank": "재래시장에",
+   "src": "made"
+  },
+  {
+   "text": "유나는 앞집 아주머니를 따라 재래시장에 가서 김장 재료를 샀어요.",
+   "en": "Yuna followed the woman across the hall to the traditional market and bought ingredients for kimchi-making.",
+   "ko": "유나는 앞집 아주머니를 따라 재래시장에 가서 김장 재료를 샀어요.",
+   "blank": "재래시장에",
    "src": "made"
   }
  ],
@@ -66237,6 +67197,22 @@
    "src": "made"
   }
  ],
+ "w|적립": [
+  {
+   "text": "태윤의 가게에서 포인트 적립을 하려면 전화번호를 말하면 돼요.",
+   "en": "To collect points at Taeyun's shop, you just give your phone number.",
+   "ko": "태윤의 가게에서 포인트 적립을 하려면 전화번호를 말하면 돼요.",
+   "blank": "적립을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 옆집 언니에게 카드 포인트 적립 방법을 알려 줬어요.",
+   "en": "Yuna showed the woman next door how to collect card points.",
+   "ko": "유나는 옆집 언니에게 카드 포인트 적립 방법을 알려 줬어요.",
+   "blank": "적립",
+   "src": "made"
+  }
+ ],
  "w|적성": [
   {
    "text": "성호는 몸을 움직이는 일이 적성에 맞아서 사무직을 그만뒀어요.",
@@ -66957,6 +67933,22 @@
    "blank": "전통을"
   }
  ],
+ "w|전통시장": [
+  {
+   "text": "태윤은 명절이 되면 전통시장 떡집에서 떡을 사다가 가게에 내놓아요.",
+   "en": "On holidays, Taeyun buys rice cakes from a shop in the traditional market and puts them out in his store.",
+   "ko": "태윤은 명절이 되면 전통시장 떡집에서 떡을 사다가 가게에 내놓아요.",
+   "blank": "전통시장",
+   "src": "made"
+  },
+  {
+   "text": "이웃들은 주말마다 전통시장에서 장을 보고 유나네 집에 모여 밥을 먹어요.",
+   "en": "Every weekend the neighbors shop at the traditional market and gather at Yuna's place to eat.",
+   "ko": "이웃들은 주말마다 전통시장에서 장을 보고 유나네 집에 모여 밥을 먹어요.",
+   "blank": "전통시장에서",
+   "src": "made"
+  }
+ ],
  "w|전통적": [
   {
    "text": "현우는 쑥과 팥을 넣은 전통적인 떡빵도 팔아요.",
@@ -67606,6 +68598,22 @@
    "en": "Seoyeon made contact with a famous orchestra and got an audition.",
    "ko": "서연은 유명 오케스트라 쪽과 접촉이 생겨서 오디션 기회를 얻었어요.",
    "blank": "접촉이",
+   "src": "made"
+  }
+ ],
+ "w|접촉하다": [
+  {
+   "text": "성호는 지방 공연을 늘리려고 여러 극장 관계자와 접촉했어요.",
+   "en": "Seongho contacted people at several theaters to add more regional performances.",
+   "ko": "성호는 지방 공연을 늘리려고 여러 극장 관계자와 접촉했어요.",
+   "blank": "접촉했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 전염병에 걸린 고양이와 접촉한 동물들을 따로 살펴봤어요.",
+   "en": "Mikyung separately examined the animals that had come into contact with the cat with an infectious disease.",
+   "ko": "미경은 전염병에 걸린 고양이와 접촉한 동물들을 따로 살펴봤어요.",
+   "blank": "접촉한",
    "src": "made"
   }
  ],
@@ -70689,6 +71697,22 @@
    "blank": "줄은"
   }
  ],
+ "w|줄거리": [
+  {
+   "text": "성호는 관객들이 줄거리를 쉽게 따라오도록 첫 장면을 다시 썼어요.",
+   "en": "Seongho rewrote the first scene so the audience could follow the plot easily.",
+   "ko": "성호는 관객들이 줄거리를 쉽게 따라오도록 첫 장면을 다시 썼어요.",
+   "blank": "줄거리를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 대기실에서 아이가 읽어 주는 동화책 줄거리를 듣고 웃었어요.",
+   "en": "Mikyung laughed listening to a child tell the plot of a picture book in the waiting room.",
+   "ko": "미경은 대기실에서 아이가 읽어 주는 동화책 줄거리를 듣고 웃었어요.",
+   "blank": "줄거리를",
+   "src": "made"
+  }
+ ],
  "w|줄곧": [
   {
    "text": "민수는 수업 시간 내내 줄곧 창밖만 바라봤어요.",
@@ -70868,6 +71892,22 @@
    "en": "Middle-aged members make up the largest group in Seoyeon's swim class.",
    "ko": "서연의 수영반에는 중년 회원들이 제일 많아요.",
    "blank": "중년",
+   "src": "made"
+  }
+ ],
+ "w|중단": [
+  {
+   "text": "폭설 때문에 공연 중단이 결정되자 성호는 관객들에게 표값을 돌려줬어요.",
+   "en": "When the show was called off because of heavy snow, Seongho refunded the audience their tickets.",
+   "ko": "폭설 때문에 공연 중단이 결정되자 성호는 관객들에게 표값을 돌려줬어요.",
+   "blank": "중단이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 강아지가 약을 먹고 토하자 투약 중단을 결정했어요.",
+   "en": "When the puppy vomited after taking the medicine, Mikyung decided to stop the medication.",
+   "ko": "미경은 강아지가 약을 먹고 토하자 투약 중단을 결정했어요.",
+   "blank": "중단을",
    "src": "made"
   }
  ],
@@ -71635,6 +72675,22 @@
    "en": "Look for last month's receipts.",
    "ko": "지난달 영수증을 찾아봐.",
    "blank": "지난달"
+  }
+ ],
+ "w|지난밤": [
+  {
+   "text": "지난밤에 누가 가게 앞 화분을 넘어뜨려서 태윤이 아침부터 치웠어요.",
+   "en": "Someone knocked over the flowerpot in front of the shop last night, so Taeyun cleaned up first thing in the morning.",
+   "ko": "지난밤에 누가 가게 앞 화분을 넘어뜨려서 태윤이 아침부터 치웠어요.",
+   "blank": "지난밤에",
+   "src": "made"
+  },
+  {
+   "text": "지난밤 옆집 개가 계속 짖어서 유나는 잠을 설쳤어요.",
+   "en": "The dog next door kept barking last night, so Yuna slept badly.",
+   "ko": "지난밤 옆집 개가 계속 짖어서 유나는 잠을 설쳤어요.",
+   "blank": "지난밤",
+   "src": "made"
   }
  ],
  "w|지난번": [
@@ -72577,6 +73633,22 @@
    "src": "made"
   }
  ],
+ "w|직구": [
+  {
+   "text": "태윤은 해외 직구로 산 과자를 가게에 들여놓았다가 금방 다 팔았어요.",
+   "en": "Taeyun stocked snacks he ordered directly from overseas and quickly sold them all.",
+   "ko": "태윤은 해외 직구로 산 과자를 가게에 들여놓았다가 금방 다 팔았어요.",
+   "blank": "직구로",
+   "src": "made"
+  },
+  {
+   "text": "유나가 직구를 잘해서 이웃들이 해외 물건을 사 달라고 부탁해요.",
+   "en": "Yuna is good at ordering directly from overseas, so her neighbors ask her to buy foreign goods for them.",
+   "ko": "유나가 직구를 잘해서 이웃들이 해외 물건을 사 달라고 부탁해요.",
+   "blank": "직구를",
+   "src": "made"
+  }
+ ],
  "w|직업": [
   {
    "text": "꿈의 직업을 찾고 있어.",
@@ -72867,6 +73939,22 @@
    "blank": "진심으로"
   }
  ],
+ "w|진열대": [
+  {
+   "text": "태윤은 아침마다 진열대의 물건을 앞으로 당겨서 가지런히 놓아요.",
+   "en": "Every morning Taeyun pulls the items on the shelves forward and lines them up neatly.",
+   "ko": "태윤은 아침마다 진열대의 물건을 앞으로 당겨서 가지런히 놓아요.",
+   "blank": "진열대의",
+   "src": "made"
+  },
+  {
+   "text": "유나는 동네 가게 진열대에서 옆집 아이가 좋아하는 과자를 골라 선물했어요.",
+   "en": "Yuna picked a snack the kid next door likes from the shelf at the local shop and gave it as a gift.",
+   "ko": "유나는 동네 가게 진열대에서 옆집 아이가 좋아하는 과자를 골라 선물했어요.",
+   "blank": "진열대에서",
+   "src": "made"
+  }
+ ],
  "w|진입": [
   {
    "text": "학교 정문은 등교 시간에 차량 진입이 금지돼요.",
@@ -73117,6 +74205,22 @@
    "en": "There's a lot of mud on my shoes.",
    "ko": "신발에 진흙이 잔뜩 묻었어.",
    "blank": "진흙이"
+  }
+ ],
+ "w|질기다": [
+  {
+   "text": "태윤은 육포가 너무 질겨서 잘 안 팔린다고 투덜거렸어요.",
+   "en": "Taeyun grumbled that the beef jerky doesn't sell well because it's too tough.",
+   "ko": "태윤은 육포가 너무 질겨서 잘 안 팔린다고 투덜거렸어요.",
+   "blank": "질겨서",
+   "src": "made"
+  },
+  {
+   "text": "옆집 아저씨가 구워 준 고기는 좀 질겼지만 유나는 맛있게 먹었어요.",
+   "en": "The meat the man next door grilled was a bit tough, but Yuna enjoyed it.",
+   "ko": "옆집 아저씨가 구워 준 고기는 좀 질겼지만 유나는 맛있게 먹었어요.",
+   "blank": "질겼지만",
+   "src": "made"
   }
  ],
  "w|질리다": [
@@ -73963,6 +75067,22 @@
    "en": "Want some doenjang stew?",
    "ko": "된장찌개 먹을래?",
    "blank": "된장찌개"
+  }
+ ],
+ "w|찌다": [
+  {
+   "text": "태윤은 가게에서 과자를 하나씩 집어 먹다가 살이 쪘어요.",
+   "en": "Taeyun gained weight from snacking on chips one by one at the shop.",
+   "ko": "태윤은 가게에서 과자를 하나씩 집어 먹다가 살이 쪘어요.",
+   "blank": "쪘어요",
+   "src": "made"
+  },
+  {
+   "text": "옆집 할머니가 자꾸 반찬을 주셔서 유나는 겨울 동안 살이 좀 쪘어요.",
+   "en": "The grandmother next door kept giving her side dishes, so Yuna put on some weight over the winter.",
+   "ko": "옆집 할머니가 자꾸 반찬을 주셔서 유나는 겨울 동안 살이 좀 쪘어요.",
+   "blank": "쪘어요",
+   "src": "made"
   }
  ],
  "w|찌르다": [
@@ -76455,6 +77575,22 @@
    "src": "krdict"
   }
  ],
+ "w|총량": [
+  {
+   "text": "성호는 한 시즌에 쓰는 조명 전기의 총량을 줄이려고 장비를 바꿨어요.",
+   "en": "Seongho replaced the equipment to reduce the total amount of electricity the lights use in a season.",
+   "ko": "성호는 한 시즌에 쓰는 조명 전기의 총량을 줄이려고 장비를 바꿨어요.",
+   "blank": "총량을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 간식까지 합친 하루 칼로리 총량을 계산해서 보호자에게 보여 줬어요.",
+   "en": "Mikyung calculated the total daily calories including treats and showed the owner.",
+   "ko": "미경은 간식까지 합친 하루 칼로리 총량을 계산해서 보호자에게 보여 줬어요.",
+   "blank": "총량을",
+   "src": "made"
+  }
+ ],
  "w|총리": [
   {
    "text": "태윤은 한 나라의 대통령과 총리가 어떻게 다른지 배웠어요.",
@@ -78265,6 +79401,22 @@
    "en": "Can I take a photo with the camera?",
    "ko": "카메라로 찍어도 돼?",
    "blank": "카메라로"
+  }
+ ],
+ "w|카운터": [
+  {
+   "text": "태윤은 카운터 옆에 껌과 사탕을 놓아서 손님들이 하나씩 집게 해요.",
+   "en": "Taeyun puts gum and candy next to the counter so customers grab one each.",
+   "ko": "태윤은 카운터 옆에 껌과 사탕을 놓아서 손님들이 하나씩 집게 해요.",
+   "blank": "카운터",
+   "src": "made"
+  },
+  {
+   "text": "유나는 관리사무소 카운터에 이웃의 택배를 맡겨 두었어요.",
+   "en": "Yuna left her neighbor's package at the management office counter.",
+   "ko": "유나는 관리사무소 카운터에 이웃의 택배를 맡겨 두었어요.",
+   "blank": "카운터에",
+   "src": "made"
   }
  ],
  "w|카페": [
@@ -80545,6 +81697,22 @@
    "src": "made"
   }
  ],
+ "w|특가": [
+  {
+   "text": "태윤은 유통기한이 가까운 빵을 특가로 내놓았어요.",
+   "en": "Taeyun put the bread close to its expiration date out at a special price.",
+   "ko": "태윤은 유통기한이 가까운 빵을 특가로 내놓았어요.",
+   "blank": "특가로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 수박 특가 소식을 이웃 단톡방에 바로 올렸어요.",
+   "en": "Yuna immediately posted the watermelon sale news in the neighbors' group chat.",
+   "ko": "유나는 수박 특가 소식을 이웃 단톡방에 바로 올렸어요.",
+   "blank": "특가",
+   "src": "made"
+  }
+ ],
  "w|특권": [
   {
    "text": "고학년이 급식을 먼저 먹는 건 특권이 아니라는 의견이 나왔어요.",
@@ -81153,6 +82321,22 @@
    "blank": "파티"
   }
  ],
+ "w|파편": [
+  {
+   "text": "리허설 때 소품 접시가 깨져서 성호는 무대 위 파편을 조심스럽게 쓸어 담았어요.",
+   "en": "A prop plate broke during rehearsal, so Seongho carefully swept up the shards on stage.",
+   "ko": "리허설 때 소품 접시가 깨져서 성호는 무대 위 파편을 조심스럽게 쓸어 담았어요.",
+   "blank": "파편을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 고양이 발바닥에 박힌 유리 파편을 조심스럽게 빼냈어요.",
+   "en": "Mikyung carefully removed a glass shard stuck in a cat's paw.",
+   "ko": "미경은 고양이 발바닥에 박힌 유리 파편을 조심스럽게 빼냈어요.",
+   "blank": "파편을",
+   "src": "made"
+  }
+ ],
  "w|팍": [
   {
    "text": "문을 팍 닫았어.",
@@ -81553,6 +82737,22 @@
    "en": "I've waited quite a while.",
    "ko": "퍽 오래 기다린 셈이야.",
    "blank": "퍽"
+  }
+ ],
+ "w|퍽퍽하다": [
+  {
+   "text": "손님이 삶은 달걀 노른자가 퍽퍽하다고 하자 태윤은 우유를 같이 권했어요.",
+   "en": "When a customer said the boiled egg yolk was dry, Taeyun suggested having milk with it.",
+   "ko": "손님이 삶은 달걀 노른자가 퍽퍽하다고 하자 태윤은 우유를 같이 권했어요.",
+   "blank": "퍽퍽하다고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이웃에게 받은 고구마가 너무 퍽퍽해서 우유랑 같이 먹었어요.",
+   "en": "The sweet potatoes Yuna got from her neighbor were so dry that she ate them with milk.",
+   "ko": "유나는 이웃에게 받은 고구마가 너무 퍽퍽해서 우유랑 같이 먹었어요.",
+   "blank": "퍽퍽해서",
+   "src": "made"
   }
  ],
  "w|펜": [
@@ -82718,6 +83918,22 @@
    "en": "Sujin admires the elderly patient who never loses her dignity even when she's sick.",
    "ko": "아파도 늘 품위를 잃지 않는 할머니 환자를 수진은 존경해요.",
    "blank": "품위를",
+   "src": "made"
+  }
+ ],
+ "w|품절": [
+  {
+   "text": "손님이 찾는 우유가 품절이라 태윤은 내일 다시 오라고 했어요.",
+   "en": "The milk the customer wanted was out of stock, so Taeyun told them to come back tomorrow.",
+   "ko": "손님이 찾는 우유가 품절이라 태윤은 내일 다시 오라고 했어요.",
+   "blank": "품절이라",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이웃이 찾던 기저귀가 온라인에서도 품절인 걸 보고 자기 아이 것을 나눠 줬어요.",
+   "en": "Seeing that the diapers her neighbor wanted were sold out online too, Yuna shared some of her own child's.",
+   "ko": "유나는 이웃이 찾던 기저귀가 온라인에서도 품절인 걸 보고 자기 아이 것을 나눠 줬어요.",
+   "blank": "품절인",
    "src": "made"
   }
  ],
@@ -83920,6 +85136,22 @@
    "en": "The midday sun was so hot that Haeun took shelter under a beach umbrella.",
    "ko": "한낮의 햇볕이 너무 뜨거워서 하은은 파라솔 아래로 피했어요.",
    "blank": "한낮의",
+   "src": "made"
+  }
+ ],
+ "w|한도": [
+  {
+   "text": "성호는 정해진 예산 한도 안에서 의상을 새로 맞췄어요.",
+   "en": "Seongho had new costumes made within the set budget limit.",
+   "ko": "성호는 정해진 예산 한도 안에서 의상을 새로 맞췄어요.",
+   "blank": "한도",
+   "src": "made"
+  },
+  {
+   "text": "보험 보장 한도를 넘는 수술비 때문에 보호자가 고민하자 미경은 나눠 내도 된다고 했어요.",
+   "en": "When the owner worried about surgery costs over the insurance coverage limit, Mikyung said they could pay in installments.",
+   "ko": "보험 보장 한도를 넘는 수술비 때문에 보호자가 고민하자 미경은 나눠 내도 된다고 했어요.",
+   "blank": "한도를",
    "src": "made"
   }
  ],
@@ -86715,6 +87947,22 @@
    "src": "krdict"
   }
  ],
+ "w|홈쇼핑": [
+  {
+   "text": "태윤의 어머니는 홈쇼핑에서 산 냄비를 가게에 가져와 자랑했어요.",
+   "en": "Taeyun's mother brought the pot she bought from a home shopping channel to the shop to show it off.",
+   "ko": "태윤의 어머니는 홈쇼핑에서 산 냄비를 가게에 가져와 자랑했어요.",
+   "blank": "홈쇼핑에서",
+   "src": "made"
+  },
+  {
+   "text": "옆집 할머니는 홈쇼핑 방송을 보다가 유나에게 전화해서 주문하는 법을 물어요.",
+   "en": "While watching a home shopping show, the grandmother next door calls Yuna to ask how to order.",
+   "ko": "옆집 할머니는 홈쇼핑 방송을 보다가 유나에게 전화해서 주문하는 법을 물어요.",
+   "blank": "홈쇼핑",
+   "src": "made"
+  }
+ ],
  "w|홍보": [
   {
    "text": "민수는 학교 축제 홍보 포스터를 직접 그렸어요.",
@@ -86975,6 +88223,22 @@
    "en": "I use cosmetics for sensitive skin.",
    "ko": "민감 피부에 맞는 화장품을 써.",
    "blank": "화장품을"
+  }
+ ],
+ "w|화장하다": [
+  {
+   "text": "단골손님이 진하게 화장하고 와서 태윤은 처음에 못 알아봤어요.",
+   "en": "A regular came in wearing heavy makeup, so Taeyun didn't recognize her at first.",
+   "ko": "단골손님이 진하게 화장하고 와서 태윤은 처음에 못 알아봤어요.",
+   "blank": "화장하고",
+   "src": "made"
+  },
+  {
+   "text": "유나는 아파트 반상회에 가려고 급하게 화장했어요.",
+   "en": "Yuna quickly put on makeup to go to the apartment residents' meeting.",
+   "ko": "유나는 아파트 반상회에 가려고 급하게 화장했어요.",
+   "blank": "화장했어요",
+   "src": "made"
   }
  ],
  "w|화재": [
@@ -87501,6 +88765,22 @@
    "ko": "의사는 새로 개발된 방법을 이용해서 치료를 받으면 회복이 더 빠르다고 말했다.",
    "blank": "회복이",
    "src": "krdict"
+  }
+ ],
+ "w|회복되다": [
+  {
+   "text": "목감기에 걸렸던 주연 배우의 목소리가 회복되어서 성호는 한숨 돌렸어요.",
+   "en": "Seongho breathed a sigh of relief when the lead actor's voice recovered from a sore throat.",
+   "ko": "목감기에 걸렸던 주연 배우의 목소리가 회복되어서 성호는 한숨 돌렸어요.",
+   "blank": "회복되어서",
+   "src": "made"
+  },
+  {
+   "text": "수술을 받은 강아지가 빨리 회복되자 미경은 주인에게 기쁜 소식을 전했어요.",
+   "en": "When the dog recovered quickly after surgery, Mikyung gave the owner the good news.",
+   "ko": "수술을 받은 강아지가 빨리 회복되자 미경은 주인에게 기쁜 소식을 전했어요.",
+   "blank": "회복되자",
+   "src": "made"
   }
  ],
  "w|회복하다": [

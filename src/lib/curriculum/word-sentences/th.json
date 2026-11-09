@@ -3011,6 +3011,22 @@
    "src": "made"
   }
  ],
+ "w|กาลเวลา": [
+  {
+   "text": "ต้นไม้เก่าแก่ในวัดผ่านกาลเวลามาหลายร้อยปี",
+   "en": "The ancient tree at the temple has stood through hundreds of years of time.",
+   "ko": "절의 오래된 나무는 수백 년의 세월을 견뎌 왔어요.",
+   "blank": "กาลเวลา",
+   "src": "made"
+  },
+  {
+   "text": "แม้กาลเวลาจะผ่านไปนาน มิตรภาพของสุดากับเพื่อนก็ไม่เปลี่ยน",
+   "en": "Even though much time has passed, the friendship between Suda and her friends hasn't changed.",
+   "ko": "세월이 오래 흘렀어도 수다와 친구들의 우정은 변하지 않았어요.",
+   "blank": "กาลเวลา",
+   "src": "made"
+  }
+ ],
  "w|กาว": [
   {
    "text": "ขาเก้าอี้หลุด ธนาเลยทากาวแล้วรอให้แห้งทั้งคืน",
@@ -7913,6 +7929,22 @@
    "src": "made"
   }
  ],
+ "w|ครบรอบ": [
+  {
+   "text": "ปีนี้ร้านต้นไม้ของธนาครบรอบห้าปีพอดีกับช่วงต้นหน้าฝน",
+   "en": "This year Thana's plant shop marks its fifth anniversary just as the rainy season begins.",
+   "ko": "올해 타나의 화원은 우기가 시작될 즈음 딱 오 주년을 맞아요.",
+   "blank": "ครบรอบ",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้กลุ่มของสุดาครบรอบยี่สิบปีที่เรียนจบ",
+   "en": "This year Suda's group marks twenty years since graduation.",
+   "ko": "올해는 수다네 무리가 졸업한 지 이십 주년이 돼요.",
+   "blank": "ครบรอบ",
+   "src": "made"
+  }
+ ],
  "w|ครรภ์": [
   {
    "text": "ฟิตเนสของเอกมีคลาสโยคะสำหรับคุณแม่ที่ตั้งครรภ์",
@@ -8021,6 +8053,22 @@
    "blank": "ครั้ง"
   }
  ],
+ "w|ครั้งนั้น": [
+  {
+   "text": "ปีก่อนน้ำท่วมหนักมาก ครั้งนั้นธนาต้องย้ายของขึ้นชั้นบน",
+   "en": "Last year the flooding was severe; that time Thana had to move his things upstairs.",
+   "ko": "작년에 홍수가 심했는데, 그때 타나는 짐을 위층으로 옮겨야 했어요.",
+   "blank": "ครั้งนั้น",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนๆ หัวเราะเมื่อนึกถึงทริปทะเลครั้งนั้นที่รถเสียกลางทาง",
+   "en": "The friends laughed remembering that beach trip when the car broke down halfway.",
+   "ko": "친구들은 도중에 차가 고장 났던 그때 바다 여행을 떠올리며 웃었어요.",
+   "blank": "ครั้งนั้น",
+   "src": "made"
+  }
+ ],
  "w|ครั้งแรก": [
   {
    "text": "นี่เป็นครั้งแรกที่ฉันมาเมืองนี้",
@@ -8033,6 +8081,22 @@
    "en": "The first time I tried spicy food I cried.",
    "ko": "매운 음식을 처음 먹었을 때 눈물이 났어.",
    "blank": "ครั้งแรก"
+  }
+ ],
+ "w|ครั้งแล้วครั้งเล่า": [
+  {
+   "text": "ธนาบอกลูกครั้งแล้วครั้งเล่าว่าให้ใส่เสื้อกันหนาวก่อนออกจากบ้าน",
+   "en": "Thana told his child again and again to put on a jacket before leaving the house.",
+   "ko": "타나는 아이에게 집을 나서기 전에 외투를 입으라고 몇 번이고 말했어요.",
+   "blank": "ครั้งแล้วครั้งเล่า",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนๆ ขอให้เก่งเล่าเรื่องผีที่โรงเรียนครั้งแล้วครั้งเล่า",
+   "en": "The friends asked Keng to tell the school ghost story over and over.",
+   "ko": "친구들은 깽에게 학교 귀신 이야기를 몇 번이고 해 달라고 졸랐어요.",
+   "blank": "ครั้งแล้วครั้งเล่า",
+   "src": "made"
   }
  ],
  "w|ครั้งสุดท้าย": [
@@ -16237,6 +16301,22 @@
    "blank": "ช่วง"
   }
  ],
+ "w|ช่วงนี้": [
+  {
+   "text": "ช่วงนี้อากาศเปลี่ยนบ่อย ธนาเลยเป็นหวัดง่าย",
+   "en": "The weather changes a lot these days, so Thana catches colds easily.",
+   "ko": "요즘 날씨가 자주 바뀌어서 타나는 감기에 쉽게 걸려요.",
+   "blank": "ช่วงนี้",
+   "src": "made"
+  },
+  {
+   "text": "สุดาถามเพื่อนว่าช่วงนี้ทำงานที่ไหนอยู่",
+   "en": "Suda asked her friend where she was working these days.",
+   "ko": "수다는 친구에게 요즘 어디서 일하냐고 물었어요.",
+   "blank": "ช่วงนี้",
+   "src": "made"
+  }
+ ],
  "w|ช่วงเวลา": [
   {
    "text": "ช่วงเวลานี้รถติดมาก",
@@ -17725,6 +17805,22 @@
    "blank": "เช้า"
   }
  ],
+ "w|เช้านี้": [
+  {
+   "text": "เช้านี้มีหมอกลงจัดจนธนามองไม่เห็นตึกฝั่งตรงข้าม",
+   "en": "This morning the fog was so thick that Thana couldn't see the building across the street.",
+   "ko": "오늘 아침 안개가 짙어서 타나는 길 건너 건물이 안 보였어요.",
+   "blank": "เช้านี้",
+   "src": "made"
+  },
+  {
+   "text": "เช้านี้สุดาตื่นเต้นจนกินข้าวไม่ลง",
+   "en": "This morning Suda was so excited she couldn't eat.",
+   "ko": "오늘 아침 수다는 너무 설레서 밥이 넘어가지 않았어요.",
+   "blank": "เช้านี้",
+   "src": "made"
+  }
+ ],
  "w|เชิง": [
   {
    "text": "ธนาเลือกหนังสือเชิงวิชาการมากกว่านิยายเสมอ",
@@ -18715,6 +18811,22 @@
    "en": "This soup is a bit salty.",
    "ko": "이 수프가 좀 짜.",
    "blank": "ซุป"
+  }
+ ],
+ "w|เซ็กซี่": [
+  {
+   "text": "นิตยสารแฟชั่นเล่มใหม่บอกว่าชุดว่ายน้ำสีแดงจะเป็นลุคเซ็กซี่ของหน้าร้อนปีนี้",
+   "en": "The new fashion magazine says red swimsuits will be this summer's sexy look.",
+   "ko": "새 패션 잡지는 빨간 수영복이 올여름 섹시한 룩이 될 거라고 해요.",
+   "blank": "เซ็กซี่",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนแซวเก่งว่าใส่เสื้อเชิ้ตแกะกระดุมแบบนี้ดูเซ็กซี่เกินไปแล้ว",
+   "en": "The friends teased Keng that his unbuttoned shirt looked a bit too sexy.",
+   "ko": "친구들은 깽에게 셔츠 단추를 그렇게 풀면 너무 섹시해 보인다고 놀렸어요.",
+   "blank": "เซ็กซี่",
+   "src": "made"
   }
  ],
  "w|เซ็น": [
@@ -19923,6 +20035,22 @@
    "en": "Don't pull my shirt.",
    "ko": "내 옷 잡지 마.",
    "blank": "ดึง"
+  }
+ ],
+ "w|ดึงดูด": [
+  {
+   "text": "ทุ่งดอกไม้บานช่วงหน้าหนาวดึงดูดนักท่องเที่ยวจำนวนมาก",
+   "en": "The fields of flowers blooming in the cool season attract lots of tourists.",
+   "ko": "겨울철에 피는 꽃밭은 많은 관광객을 끌어모아요.",
+   "blank": "ดึงดูด",
+   "src": "made"
+  },
+  {
+   "text": "เรื่องเล่าตลกๆ ของเก่งดึงดูดความสนใจคนทั้งโต๊ะ",
+   "en": "Keng's funny stories drew the attention of the whole table.",
+   "ko": "깽의 웃긴 이야기에 테이블 사람들 모두 귀를 기울였어요.",
+   "blank": "ดึงดูด",
+   "src": "made"
   }
  ],
  "w|ดื่ม": [
@@ -21685,6 +21813,22 @@
    "blank": "ตอน"
   }
  ],
+ "w|ตอนกลางคืน": [
+  {
+   "text": "หน้าหนาวตอนกลางคืนอุณหภูมิลดลงเร็วกว่าที่ธนาคิด",
+   "en": "In the cool season, the temperature at night drops faster than Thana expected.",
+   "ko": "겨울철 밤에는 기온이 타나가 생각한 것보다 빨리 떨어져요.",
+   "blank": "ตอนกลางคืน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเลือกร้านริมแม่น้ำที่ตอนกลางคืนมองเห็นไฟสวยมาก",
+   "en": "Suda chose a riverside restaurant where the lights look beautiful at night.",
+   "ko": "수다는 밤에 불빛이 아주 예쁘게 보이는 강가 식당을 골랐어요.",
+   "blank": "ตอนกลางคืน",
+   "src": "made"
+  }
+ ],
  "w|ตอนกลางวัน": [
   {
    "text": "ตอนกลางวันแดดแรง",
@@ -21725,6 +21869,22 @@
    "en": "I run every morning.",
    "ko": "나는 매일 아침에 뛰어.",
    "blank": "ตอนเช้า"
+  }
+ ],
+ "w|ตอนต้น": [
+  {
+   "text": "ตอนต้นเดือนพฤศจิกายน อากาศเริ่มเย็นลงนิดหน่อย",
+   "en": "At the beginning of November the weather starts to cool down a little.",
+   "ko": "십일월 초에는 날씨가 조금씩 선선해지기 시작해요.",
+   "blank": "ตอนต้น",
+   "src": "made"
+  },
+  {
+   "text": "ตอนต้นงานทุกคนยังเขินๆ แต่ไม่นานก็คุยกันสนุก",
+   "en": "At the start of the party everyone was still a bit shy, but soon they were chatting happily.",
+   "ko": "모임 초반엔 다들 좀 어색했지만 금세 즐겁게 이야기했어요.",
+   "blank": "ตอนต้น",
+   "src": "made"
   }
  ],
  "w|ตอนนี้": [
@@ -22305,6 +22465,38 @@
    "en": "We've known each other since we were kids.",
    "ko": "어릴 때부터 알았어.",
    "blank": "ตั้งแต่"
+  }
+ ],
+ "w|ตั้งแต่นี้ไป": [
+  {
+   "text": "ธนาบอกตัวเองว่าตั้งแต่นี้ไปจะตื่นเช้าออกไปวิ่งตอนอากาศเย็น",
+   "en": "Thana told himself that from now on he'll get up early to run while it's cool.",
+   "ko": "타나는 이제부터 선선할 때 일찍 일어나 달리기를 하겠다고 다짐했어요.",
+   "blank": "ตั้งแต่นี้ไป",
+   "src": "made"
+  },
+  {
+   "text": "ทุกคนตกลงกันว่าตั้งแต่นี้ไปจะผลัดกันเป็นเจ้าภาพ",
+   "en": "Everyone agreed that from now on they'll take turns hosting.",
+   "ko": "다들 이제부터 돌아가며 모임을 주최하기로 했어요.",
+   "blank": "ตั้งแต่นี้ไป",
+   "src": "made"
+  }
+ ],
+ "w|ตั้งแต่แรก": [
+  {
+   "text": "ธนาควรเอาร่มติดตัวไปตั้งแต่แรก จะได้ไม่เปียก",
+   "en": "Thana should have brought an umbrella from the start so he wouldn't get wet.",
+   "ko": "타나는 처음부터 우산을 챙겼어야 젖지 않았을 거예요.",
+   "blank": "ตั้งแต่แรก",
+   "src": "made"
+  },
+  {
+   "text": "สุดารู้ตั้งแต่แรกแล้วว่าเก่งจะมาสายเหมือนเดิม",
+   "en": "Suda knew from the start that Keng would be late as usual.",
+   "ko": "수다는 깽이 늘 그렇듯 늦을 거라는 걸 처음부터 알았어요.",
+   "blank": "ตั้งแต่แรก",
+   "src": "made"
   }
  ],
  "w|ตั้งท้อง": [
@@ -23425,6 +23617,22 @@
    "src": "made"
   }
  ],
+ "w|เต้นรำ": [
+  {
+   "text": "เด็กๆ ในซอยออกมาเต้นรำกลางสายฝนแรกของปี",
+   "en": "The kids in the lane came out to dance in the first rain of the year.",
+   "ko": "골목 아이들이 올해 첫 비를 맞으며 나와서 춤을 췄어요.",
+   "blank": "เต้นรำ",
+   "src": "made"
+  },
+  {
+   "text": "พอเพลงเก่าดังขึ้น สุดากับเพื่อนก็ลุกขึ้นเต้นรำกันกลางร้าน",
+   "en": "When an old song came on, Suda and her friends got up and danced in the middle of the restaurant.",
+   "ko": "옛날 노래가 나오자 수다와 친구들은 일어나 식당 한가운데서 춤을 췄어요.",
+   "blank": "เต้นรำ",
+   "src": "made"
+  }
+ ],
  "w|เต็ม": [
   {
    "text": "ถ้วยน้ำเต็มแล้ว",
@@ -23831,6 +24039,22 @@
    "en": "I learned how to do my own makeup.",
    "ko": "나는 스스로 화장하는 법을 배웠어.",
    "blank": "แต่งหน้า"
+  }
+ ],
+ "w|แต่เดิม": [
+  {
+   "text": "แต่เดิมธนาไม่ชอบหน้าฝน แต่ตอนนี้กลับชอบฟังเสียงฝนตก",
+   "en": "Originally Thana didn't like the rainy season, but now he enjoys listening to the rain.",
+   "ko": "원래 타나는 우기를 싫어했지만 지금은 오히려 빗소리 듣는 걸 좋아해요.",
+   "blank": "แต่เดิม",
+   "src": "made"
+  },
+  {
+   "text": "แต่เดิมสุดากับเพื่อนนัดเจอกันทุกปี แต่หยุดไปหลายปีเพราะงานยุ่ง",
+   "en": "Originally Suda and her friends met every year, but they stopped for several years because of busy work.",
+   "ko": "원래 수다와 친구들은 해마다 만났지만 일이 바빠서 몇 년 동안 못 만났어요.",
+   "blank": "แต่เดิม",
+   "src": "made"
   }
  ],
  "w|แต่ทว่า": [
@@ -25611,6 +25835,22 @@
    "blank": "ทั้ง"
   }
  ],
+ "w|ทั้งคืน": [
+  {
+   "text": "พายุเข้า ไฟดับทั้งคืน ธนาต้องจุดเทียนนั่งรอ",
+   "en": "A storm hit and the power was out all night, so Thana had to light candles and wait.",
+   "ko": "폭풍이 와서 밤새 정전이 되자 타나는 촛불을 켜고 기다려야 했어요.",
+   "blank": "ทั้งคืน",
+   "src": "made"
+  },
+  {
+   "text": "หลังงานเลี้ยง สุดากับเพื่อนสนิทคุยโทรศัพท์กันทั้งคืน",
+   "en": "After the party, Suda and her best friend talked on the phone all night.",
+   "ko": "모임이 끝난 뒤 수다와 단짝은 밤새 통화했어요.",
+   "blank": "ทั้งคืน",
+   "src": "made"
+  }
+ ],
  "w|ทั้งคู่": [
   {
    "text": "ทั้งคู่ยิ้มให้กันอย่างอบอุ่น",
@@ -25684,6 +25924,22 @@
    "en": "The boss entrusted Napha with all the documents for the new project.",
    "ko": "상사는 새 프로젝트 서류 일체를 나파에게 맡겼어요.",
    "blank": "ทั้งปวง",
+   "src": "made"
+  }
+ ],
+ "w|ทั้งวัน": [
+  {
+   "text": "วันอาทิตย์ฝนตกทั้งวัน ธนาเลยนอนอ่านหนังสืออยู่บ้าน",
+   "en": "On Sunday it rained all day, so Thana stayed home reading.",
+   "ko": "일요일에 하루 종일 비가 와서 타나는 집에서 누워 책을 읽었어요.",
+   "blank": "ทั้งวัน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาใช้เวลาทั้งวันเตรียมของขวัญเล็กๆ ให้เพื่อนทุกคน",
+   "en": "Suda spent the whole day preparing small gifts for all her friends.",
+   "ko": "수다는 친구들에게 줄 작은 선물을 준비하느라 하루를 다 보냈어요.",
+   "blank": "ทั้งวัน",
    "src": "made"
   }
  ],
@@ -27349,6 +27605,38 @@
    "en": "Thank you, everyone.",
    "ko": "다들 고마워.",
    "blank": "ทุกคน"
+  }
+ ],
+ "w|ทุกครั้ง": [
+  {
+   "text": "ทุกครั้งที่ฤดูหนาวมาถึง ธนาจะนึกถึงบ้านเกิดที่เชียงราย",
+   "en": "Every time winter arrives, Thana thinks of his hometown in Chiang Rai.",
+   "ko": "겨울이 올 때마다 타나는 치앙라이 고향을 떠올려요.",
+   "blank": "ทุกครั้ง",
+   "src": "made"
+  },
+  {
+   "text": "ทุกครั้งที่เจอกัน เพื่อนๆ จะถ่ายรูปหมู่หน้าร้านเดิม",
+   "en": "Every time they meet, the friends take a group photo in front of the same restaurant.",
+   "ko": "만날 때마다 친구들은 같은 식당 앞에서 단체 사진을 찍어요.",
+   "blank": "ทุกครั้ง",
+   "src": "made"
+  }
+ ],
+ "w|ทุกคืน": [
+  {
+   "text": "หน้าร้อนธนาต้องเปิดพัดลมนอนทุกคืน",
+   "en": "In the hot season Thana has to sleep with the fan on every night.",
+   "ko": "더운 계절이면 타나는 매일 밤 선풍기를 켜고 자야 해요.",
+   "blank": "ทุกคืน",
+   "src": "made"
+  },
+  {
+   "text": "สมัยเรียนสุดากับเพื่อนสนิทคุยโทรศัพท์กันทุกคืนจนแม่ดุ",
+   "en": "In school, Suda and her best friend talked on the phone every night until her mother scolded her.",
+   "ko": "학창 시절 수다와 단짝은 엄마가 혼낼 만큼 매일 밤 통화했어요.",
+   "blank": "ทุกคืน",
+   "src": "made"
   }
  ],
  "w|ทุกที่": [
@@ -29979,6 +30267,22 @@
    "blank": "น่ารัก"
   }
  ],
+ "w|น่ารังเกียจ": [
+  {
+   "text": "หลังน้ำลด ซอยหน้าบ้านธนามีกลิ่นโคลนน่ารังเกียจ",
+   "en": "After the flood receded, the lane in front of Thana's house had a disgusting smell of mud.",
+   "ko": "물이 빠진 뒤 타나네 집 앞 골목에서 역겨운 진흙 냄새가 났어요.",
+   "blank": "น่ารังเกียจ",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนๆ เล่าถึงอาหารโรงอาหารสมัยเรียนที่รสชาติน่ารังเกียจ",
+   "en": "The friends talked about the disgusting-tasting cafeteria food from their school days.",
+   "ko": "친구들은 학창 시절 맛이 형편없던 급식 이야기를 했어요.",
+   "blank": "น่ารังเกียจ",
+   "src": "made"
+  }
+ ],
  "w|น่ารำคาญ": [
   {
    "text": "เสียงดังน่ารำคาญจริง ๆ",
@@ -31439,6 +31743,22 @@
    "src": "made"
   }
  ],
+ "w|ในความเป็นจริง": [
+  {
+   "text": "ในความเป็นจริง หน้าหนาวที่กรุงเทพฯ แค่เย็นสบายไม่กี่วัน",
+   "en": "In reality, winter in Bangkok is just a few pleasantly cool days.",
+   "ko": "사실 방콕의 겨울은 며칠 시원할 뿐이에요.",
+   "blank": "ในความเป็นจริง",
+   "src": "made"
+  },
+  {
+   "text": "ในความเป็นจริง สุดาไม่ได้คุยกับเพื่อนบางคนมาเกือบสิบปีแล้ว",
+   "en": "In reality, Suda hasn't talked with some of her friends for almost ten years.",
+   "ko": "사실 수다는 몇몇 친구와 거의 십 년 동안 연락하지 않았어요.",
+   "blank": "ในความเป็นจริง",
+   "src": "made"
+  }
+ ],
  "w|ในทางกลับกัน": [
   {
    "text": "ชัยอยากจัดงานใหญ่ ในทางกลับกันเจ้าสาวอยากจัดเล็กๆ ที่บ้าน",
@@ -31467,6 +31787,38 @@
    "en": "He finally made a decision.",
    "ko": "그는 결국 결정을 내렸어.",
    "blank": "ในที่สุด"
+  }
+ ],
+ "w|ในไม่ช้า": [
+  {
+   "text": "ท้องฟ้ามืดครึ้มแบบนี้ ในไม่ช้าฝนคงตกลงมา",
+   "en": "With the sky this dark and cloudy, it will probably rain soon.",
+   "ko": "하늘이 이렇게 잔뜩 흐린 걸 보니 곧 비가 올 것 같아요.",
+   "blank": "ในไม่ช้า",
+   "src": "made"
+  },
+  {
+   "text": "สุดาส่งข้อความในกลุ่มว่าในไม่ช้าจะส่งแผนที่ร้านให้",
+   "en": "Suda messaged the group that she would send the restaurant map shortly.",
+   "ko": "수다는 단체방에 곧 식당 지도를 보내겠다고 메시지를 보냈어요.",
+   "blank": "ในไม่ช้า",
+   "src": "made"
+  }
+ ],
+ "w|ในเวลาเดียวกัน": [
+  {
+   "text": "ในเวลาเดียวกันที่ภาคเหนือหนาวจัด ภาคใต้ยังมีฝนตกหนัก",
+   "en": "At the same time that the north is very cold, the south still has heavy rain.",
+   "ko": "북부가 몹시 추운 같은 시기에 남부는 아직 비가 많이 와요.",
+   "blank": "ในเวลาเดียวกัน",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนสองคนพูดชื่อครูคนเดียวกันขึ้นมาในเวลาเดียวกันจนทุกคนหัวเราะ",
+   "en": "Two friends said the same teacher's name at the same time, and everyone laughed.",
+   "ko": "친구 둘이 동시에 같은 선생님 이름을 말해서 모두 웃었어요.",
+   "blank": "ในเวลาเดียวกัน",
+   "src": "made"
   }
  ],
  "w|บกพร่อง": [
@@ -31730,6 +32082,22 @@
    "en": "Suda's team hit its sales target before the end of the quarter.",
    "ko": "수다의 팀은 분기 말 전에 목표 매출을 달성했어요.",
    "blank": "บรรลุ",
+   "src": "made"
+  }
+ ],
+ "w|บรรเลง": [
+  {
+   "text": "ร้านกาแฟที่ธนาชอบไปมีวงดนตรีมาบรรเลงเพลงคริสต์มาสตอนปลายปี",
+   "en": "The café Thana likes has a band that plays Christmas songs at the end of the year.",
+   "ko": "타나가 즐겨 가는 카페에서는 연말에 밴드가 크리스마스 노래를 연주해요.",
+   "blank": "บรรเลง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านที่สุดาจองมีนักดนตรีบรรเลงเปียโนเบาๆ ตลอดมื้อค่ำ",
+   "en": "The restaurant Suda booked has a musician playing soft piano throughout dinner.",
+   "ko": "수다가 예약한 식당에서는 저녁 내내 피아니스트가 잔잔하게 연주해요.",
+   "blank": "บรรเลง",
    "src": "made"
   }
  ],
@@ -34981,6 +35349,22 @@
    "blank": "ปรึกษา"
   }
  ],
+ "w|ปลด": [
+  {
+   "text": "พอหน้าร้อนมาถึง ธนาก็ปลดผ้าห่มหนาออกจากเตียง",
+   "en": "When the hot season arrived, Thana took the thick blanket off the bed.",
+   "ko": "더운 계절이 오자 타나는 침대에서 두꺼운 이불을 걷어 냈어요.",
+   "blank": "ปลด",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนคนหนึ่งเล่าว่าเพิ่งปลดหนี้บ้านได้หมดเมื่อเดือนก่อน",
+   "en": "One friend said she had just paid off her house loan last month.",
+   "ko": "한 친구는 지난달에 집 대출을 다 갚았다고 했어요.",
+   "blank": "ปลด",
+   "src": "made"
+  }
+ ],
  "w|ปลดล็อก": [
   {
    "text": "ใช้ลายนิ้วมือเพื่อปลดล็อก",
@@ -36169,6 +36553,22 @@
    "src": "made"
   }
  ],
+ "w|เป็นได้": [
+  {
+   "text": "อากาศร้อนอบอ้าวแบบนี้ พายุฤดูร้อนก็เป็นได้",
+   "en": "With such muggy heat, a summer storm is possible.",
+   "ko": "이렇게 후덥지근하면 여름 폭풍이 올 수도 있어요.",
+   "blank": "เป็นได้",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนบอกสุดาว่าถ้าไม่ติดงาน ปีหน้าไปเที่ยวญี่ปุ่นด้วยกันก็เป็นได้",
+   "en": "Her friend told Suda that if work allows, they could even travel to Japan together next year.",
+   "ko": "친구는 수다에게 일만 없으면 내년에 같이 일본 여행을 갈 수도 있다고 했어요.",
+   "blank": "เป็นได้",
+   "src": "made"
+  }
+ ],
  "w|เป็นต้น": [
   {
    "text": "ประยุทธดูแลงานเอกสารหลายอย่าง เช่น ทะเบียนบ้าน บัตรประชาชน เป็นต้น",
@@ -36852,6 +37252,22 @@
    "en": "This detergent smells nice.",
    "ko": "이 세제는 향이 좋아.",
    "blank": "ผงซักฟอก",
+   "src": "made"
+  }
+ ],
+ "w|ผนวก": [
+  {
+   "text": "ธนาอ่านข่าวว่าเทศบาลจะผนวกงานลอยกระทงเข้ากับเทศกาลปลายปี",
+   "en": "Thana read in the news that the city will combine the Loy Krathong event with the year-end festival.",
+   "ko": "타나는 시청이 러이끄라통 행사를 연말 축제와 합칠 거라는 기사를 읽었어요.",
+   "blank": "ผนวก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาผนวกงานเลี้ยงรุ่นเข้ากับงานวันเกิดของเพื่อนในคืนเดียวกัน",
+   "en": "Suda combined the reunion with a friend's birthday party on the same night.",
+   "ko": "수다는 동창 모임을 같은 날 밤 친구 생일 파티와 합쳤어요.",
+   "blank": "ผนวก",
    "src": "made"
   }
  ],
@@ -39142,6 +39558,22 @@
    "en": "Reading Wanna's letter, Malee could feel the loneliness hidden in every line.",
    "ko": "말리는 완나의 편지를 읽고 줄마다 숨은 외로움을 느꼈어요.",
    "blank": "แฝง",
+   "src": "made"
+  }
+ ],
+ "w|พก": [
+  {
+   "text": "หน้าฝนธนาพกร่มพับไว้ในกระเป๋าตลอด",
+   "en": "In the rainy season Thana always carries a folding umbrella in his bag.",
+   "ko": "우기에 타나는 늘 가방에 접이식 우산을 넣고 다녀요.",
+   "blank": "พก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาพกอัลบั้มรูปสมัยมัธยมมาให้เพื่อนดู",
+   "en": "Suda brought along her high school photo album to show her friends.",
+   "ko": "수다는 친구들에게 보여 주려고 고등학교 때 앨범을 챙겨 왔어요.",
+   "blank": "พก",
    "src": "made"
   }
  ],
@@ -44391,6 +44823,22 @@
    "blank": "เมื่อก่อน"
   }
  ],
+ "w|เมื่อกี้": [
+  {
+   "text": "เมื่อกี้แดดยังออกอยู่เลย ตอนนี้ฝนตกแล้ว",
+   "en": "The sun was out just a moment ago, and now it's raining.",
+   "ko": "방금 전까지 해가 났는데 지금은 비가 와요.",
+   "blank": "เมื่อกี้",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อกี้เก่งโทรมาบอกว่ากำลังหาที่จอดรถอยู่",
+   "en": "Keng called just now to say he's looking for a parking spot.",
+   "ko": "깽이 방금 전화해서 주차할 곳을 찾고 있다고 했어요.",
+   "blank": "เมื่อกี้",
+   "src": "made"
+  }
+ ],
  "w|เมื่อคืน": [
   {
    "text": "เมื่อคืนฉันนอนดึกมาก",
@@ -44437,6 +44885,22 @@
    "src": "made"
   }
  ],
+ "w|เมื่อเช้า": [
+  {
+   "text": "เมื่อเช้าธนาเห็นน้ำค้างเกาะอยู่บนใบหญ้าเต็มสนาม",
+   "en": "This morning Thana saw dew all over the grass in the yard.",
+   "ko": "아침에 타나는 마당 풀잎에 이슬이 가득 맺힌 걸 봤어요.",
+   "blank": "เมื่อเช้า",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อเช้าสุดาไปร้านดอกไม้ซื้อช่อดอกไม้มาประดับโต๊ะ",
+   "en": "This morning Suda went to the florist to buy a bouquet to decorate the table.",
+   "ko": "아침에 수다는 꽃집에 가서 테이블을 장식할 꽃다발을 샀어요.",
+   "blank": "เมื่อเช้า",
+   "src": "made"
+  }
+ ],
  "w|เมื่อใด": [
   {
    "text": "วิชัยไม่แน่ใจว่าพัสดุจะมาส่งเมื่อใด",
@@ -44450,6 +44914,22 @@
    "en": "Napa doesn't know when the band will come back to play here again.",
    "ko": "나파는 밴드가 언제 다시 여기서 공연할지 몰라요.",
    "blank": "เมื่อใด",
+   "src": "made"
+  }
+ ],
+ "w|เมื่อไม่นานมานี้": [
+  {
+   "text": "เมื่อไม่นานมานี้กรมอุตุฯ ประกาศว่าเข้าสู่ฤดูหนาวแล้ว",
+   "en": "Not long ago the weather department announced that the cool season had begun.",
+   "ko": "얼마 전 기상청은 겨울철에 접어들었다고 발표했어요.",
+   "blank": "เมื่อไม่นานมานี้",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเพิ่งรู้ว่าเพื่อนคนหนึ่งเพิ่งแต่งงานเมื่อไม่นานมานี้",
+   "en": "Suda only just learned that one of her friends got married not long ago.",
+   "ko": "수다는 친구 한 명이 얼마 전에 결혼했다는 걸 이제야 알았어요.",
+   "blank": "เมื่อไม่นานมานี้",
    "src": "made"
   }
  ],
@@ -44967,6 +45447,22 @@
    "en": "Put on a coat, otherwise you will be cold.",
    "ko": "코트 입어. 안 그러면 추워.",
    "blank": "ไม่งั้น"
+  }
+ ],
+ "w|ไม่ช้าก็เร็ว": [
+  {
+   "text": "ธนารู้ว่าไม่ช้าก็เร็วลมหนาวจะมาถึงกรุงเทพฯ",
+   "en": "Thana knows that sooner or later the cold wind will reach Bangkok.",
+   "ko": "타나는 머지않아 찬 바람이 방콕에 올 거라는 걸 알아요.",
+   "blank": "ไม่ช้าก็เร็ว",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเชื่อว่าไม่ช้าก็เร็วทุกคนต้องได้กลับมาเจอกันอีก",
+   "en": "Suda believed that sooner or later everyone would get together again.",
+   "ko": "수다는 머지않아 모두가 다시 만나게 될 거라고 믿었어요.",
+   "blank": "ไม่ช้าก็เร็ว",
+   "src": "made"
   }
  ],
  "w|ไม่ได้เรื่อง": [
@@ -46071,6 +46567,22 @@
    "src": "made"
   }
  ],
+ "w|ยึดมั่น": [
+  {
+   "text": "คุณยายของธนายึดมั่นว่าต้องดื่มน้ำขิงทุกเช้าตอนหน้าหนาว",
+   "en": "Thana's grandmother firmly believes in drinking ginger tea every morning in the cool season.",
+   "ko": "타나의 할머니는 겨울엔 매일 아침 생강차를 마셔야 한다고 굳게 믿어요.",
+   "blank": "ยึดมั่น",
+   "src": "made"
+  },
+  {
+   "text": "สุดายึดมั่นในคำสัญญาว่าจะไม่ทิ้งเพื่อนกลุ่มนี้",
+   "en": "Suda holds firmly to her promise never to abandon this group of friends.",
+   "ko": "수다는 이 친구들을 절대 저버리지 않겠다는 약속을 굳게 지켜요.",
+   "blank": "ยึดมั่น",
+   "src": "made"
+  }
+ ],
  "w|ยืด": [
   {
    "text": "ผ้ายืดได้เล็กน้อย",
@@ -46500,6 +47012,22 @@
    "en": "Passengers jostled to get on the train, and Napha nearly dropped her bag.",
    "ko": "승객들이 앞다투어 기차에 오르는 바람에 나파는 가방을 떨어뜨릴 뻔했어요.",
    "blank": "แย่ง",
+   "src": "made"
+  }
+ ],
+ "w|แย้ง": [
+  {
+   "text": "เพื่อนบ้านแย้งธนาว่าหน้าหนาวปีนี้ไม่ได้หนาวกว่าปีที่แล้ว",
+   "en": "The neighbor argued with Thana that this winter isn't colder than last year.",
+   "ko": "이웃은 올겨울이 작년보다 춥지 않다고 타나의 말에 반박했어요.",
+   "blank": "แย้ง",
+   "src": "made"
+  },
+  {
+   "text": "เก่งแย้งว่าเป็นคนจ่ายค่าอาหารครั้งที่แล้ว ไม่ใช่สุดา",
+   "en": "Keng objected that he was the one who paid for the meal last time, not Suda.",
+   "ko": "깽은 지난번 밥값은 수다가 아니라 자기가 냈다고 반박했어요.",
+   "blank": "แย้ง",
    "src": "made"
   }
  ],
@@ -47875,6 +48403,22 @@
    "en": "The news reports the parliament's resolution.",
    "ko": "뉴스가 국회의 의결을 보도해.",
    "blank": "รัฐสภา"
+  }
+ ],
+ "w|รัด": [
+  {
+   "text": "ธนารัดเชือกผูกกระถางต้นไม้ไว้กับรั้วกันพายุ",
+   "en": "Thana tied the flowerpot tightly to the fence with rope against the storm.",
+   "ko": "타나는 폭풍에 대비해 화분을 밧줄로 울타리에 단단히 묶었어요.",
+   "blank": "รัด",
+   "src": "made"
+  },
+  {
+   "text": "สุดารัดผมเป็นหางม้าให้ดูเหมือนสมัยเรียน",
+   "en": "Suda tied her hair in a ponytail to look like she did in school.",
+   "ko": "수다는 학창 시절처럼 보이려고 머리를 포니테일로 묶었어요.",
+   "blank": "รัด",
+   "src": "made"
   }
  ],
  "w|รับ": [
@@ -56675,6 +57219,22 @@
    "src": "made"
   }
  ],
+ "w|สักพัก": [
+  {
+   "text": "ฝนหยุดไปสักพักแล้วก็กลับมาตกหนักอีก",
+   "en": "The rain stopped for a while and then came back heavily again.",
+   "ko": "비가 잠시 그쳤다가 다시 세차게 내렸어요.",
+   "blank": "สักพัก",
+   "src": "made"
+  },
+  {
+   "text": "สุดาขอตัวออกไปรับโทรศัพท์สักพักแล้วรีบกลับมาที่โต๊ะ",
+   "en": "Suda excused herself to take a call for a moment and hurried back to the table.",
+   "ko": "수다는 잠시 전화를 받으러 나갔다가 서둘러 자리로 돌아왔어요.",
+   "blank": "สักพัก",
+   "src": "made"
+  }
+ ],
  "w|สักวัน": [
   {
    "text": "วิชัยหวังว่าสักวันจะได้มีบ้านเล็กๆ ริมทะเล",
@@ -59003,6 +59563,22 @@
    "src": "made"
   }
  ],
+ "w|เสียเวลา": [
+  {
+   "text": "ธนาไม่อยากเสียเวลารอรถเมล์กลางฝน จึงเรียกแท็กซี่",
+   "en": "Thana didn't want to waste time waiting for the bus in the rain, so he called a taxi.",
+   "ko": "타나는 빗속에서 버스를 기다리며 시간을 낭비하기 싫어서 택시를 불렀어요.",
+   "blank": "เสียเวลา",
+   "src": "made"
+  },
+  {
+   "text": "สุดาจองร้านไว้ล่วงหน้าเพราะไม่อยากให้เพื่อนเสียเวลารอโต๊ะ",
+   "en": "Suda booked the restaurant in advance because she didn't want her friends to waste time waiting for a table.",
+   "ko": "수다는 친구들이 자리를 기다리느라 시간을 낭비하지 않게 식당을 미리 예약했어요.",
+   "blank": "เสียเวลา",
+   "src": "made"
+  }
+ ],
  "w|เสียสละ": [
   {
    "text": "แม่มักเสียสละเพื่อลูกเสมอ",
@@ -61101,6 +61677,22 @@
    "blank": "หลังจากนั้น"
   }
  ],
+ "w|หลังจากนี้": [
+  {
+   "text": "ธนาตั้งใจว่าหลังจากนี้จะตากผ้าในบ้านจนกว่าฝนจะหยุด",
+   "en": "Thana decided that from now on he'll dry his clothes indoors until the rain stops.",
+   "ko": "타나는 앞으로 비가 그칠 때까지 빨래를 집 안에서 말리기로 했어요.",
+   "blank": "หลังจากนี้",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเสนอว่าหลังจากนี้ควรนัดกันทุกหกเดือน",
+   "en": "Suda suggested that from now on they should meet every six months.",
+   "ko": "수다는 앞으로 여섯 달마다 만나자고 제안했어요.",
+   "blank": "หลังจากนี้",
+   "src": "made"
+  }
+ ],
  "w|หลับ": [
   {
    "text": "เขากำลังนอนหลับเหมือนเด็กทารก",
@@ -61825,6 +62417,22 @@
    "en": "Be careful when slicing the meat.",
    "ko": "고기 썰 때 조심해.",
    "blank": "หั่น"
+  }
+ ],
+ "w|หันไป": [
+  {
+   "text": "ธนาหันไปมองต้นไม้หน้าบ้านที่ใบเริ่มเปลี่ยนสี",
+   "en": "Thana turned to look at the tree in front of the house whose leaves had started to change color.",
+   "ko": "타나는 잎 색이 변하기 시작한 집 앞 나무를 돌아봤어요.",
+   "blank": "หันไป",
+   "src": "made"
+  },
+  {
+   "text": "สุดาหันไปกอดเพื่อนสนิทที่เพิ่งเดินเข้าร้านมา",
+   "en": "Suda turned to hug her close friend who had just walked into the restaurant.",
+   "ko": "수다는 막 식당에 들어온 단짝 친구를 돌아서 안아 줬어요.",
+   "blank": "หันไป",
+   "src": "made"
   }
  ],
  "w|หันหน้า": [
@@ -62870,6 +63478,22 @@
    "en": "Chan tried mixing the paint several times, but the green still came out as dull as before.",
    "ko": "짠은 물감을 여러 번 섞어 봤지만 초록색은 여전히 칙칙했어요.",
    "blank": "เหมือนเดิม",
+   "src": "made"
+  }
+ ],
+ "w|เหยียด": [
+  {
+   "text": "ธนาเหยียดแขนขาบนระเบียงรับแดดอุ่นๆ ยามเช้า",
+   "en": "Thana stretched his arms and legs on the balcony in the warm morning sun.",
+   "ko": "타나는 베란다에서 따뜻한 아침 햇살을 받으며 팔다리를 쭉 폈어요.",
+   "blank": "เหยียด",
+   "src": "made"
+  },
+  {
+   "text": "หลังนั่งนาน สุดาลุกขึ้นเหยียดขาข้างโต๊ะ",
+   "en": "After sitting for a long time, Suda stood up and stretched her legs beside the table.",
+   "ko": "오래 앉아 있다가 수다는 일어나 테이블 옆에서 다리를 쭉 폈어요.",
+   "blank": "เหยียด",
    "src": "made"
   }
  ],
@@ -66285,6 +66909,22 @@
    "en": "I'm twenty-one years old.",
    "ko": "스물한 살이야.",
    "blank": "ยี่สิบเอ็ด"
+  }
+ ],
+ "w|เอน": [
+  {
+   "text": "ต้นมะพร้าวริมทางเอนไปตามแรงลมมรสุม",
+   "en": "The coconut trees by the road leaned with the force of the monsoon wind.",
+   "ko": "길가의 야자나무들이 몬순 바람에 기울어졌어요.",
+   "blank": "เอน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเอนหลังพิงเก้าอี้แล้วฟังเพื่อนเล่าเรื่องลูก",
+   "en": "Suda leaned back in her chair and listened to her friend talk about her kids.",
+   "ko": "수다는 의자에 등을 기대고 친구의 아이 이야기를 들었어요.",
+   "blank": "เอน",
+   "src": "made"
   }
  ],
  "w|เอ็นดู": [

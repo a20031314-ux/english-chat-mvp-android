@@ -2311,6 +2311,22 @@
    "src": "made"
   }
  ],
+ "w|afilar": [
+  {
+   "text": "Antes de podar el seto, Diego tuvo que afilar las tijeras.",
+   "en": "Before trimming the hedge, Diego had to sharpen the shears.",
+   "ko": "디에고는 울타리를 다듬기 전에 가위를 갈아야 했어요.",
+   "blank": "afilar",
+   "src": "made"
+  },
+  {
+   "text": "Antes de cortar el jamón, el padre de Sofía tuvo que afilar el cuchillo.",
+   "en": "Before carving the ham, Sofía's father had to sharpen the knife.",
+   "ko": "소피아의 아버지는 하몽을 썰기 전에 칼을 갈아야 했어요.",
+   "blank": "afilar",
+   "src": "made"
+  }
+ ],
  "w|afirmación": [
   {
    "text": "La profesora pidió a Pablo que demostrara su afirmación con datos.",
@@ -3691,6 +3707,22 @@
    "blank": "alfa"
   }
  ],
+ "w|alfiler": [
+  {
+   "text": "Al quitar el papel pintado, Diego se pinchó con un alfiler olvidado en la pared.",
+   "en": "While stripping the wallpaper, Diego pricked himself on a pin left in the wall.",
+   "ko": "디에고는 벽지를 뜯다가 벽에 남아 있던 핀에 찔렸어요.",
+   "blank": "alfiler",
+   "src": "made"
+  },
+  {
+   "text": "Sofía llevaba en la chaqueta el alfiler con el escudo del colegio.",
+   "en": "Sofía wore the pin with the school crest on her jacket.",
+   "ko": "소피아는 재킷에 학교 문장이 새겨진 핀을 달고 왔어요.",
+   "blank": "alfiler",
+   "src": "made"
+  }
+ ],
  "w|alfombra": [
   {
    "text": "La alfombra nueva cubre todo el salón.",
@@ -4449,6 +4481,22 @@
    "src": "made"
   }
  ],
+ "w|aluminio": [
+  {
+   "text": "Las ventanas nuevas tienen marcos de aluminio, pero Diego quería conservar las de madera.",
+   "en": "The new windows have aluminium frames, but Diego wanted to keep the wooden ones.",
+   "ko": "새 창문은 알루미늄 틀이지만 디에고는 나무 창문을 그대로 두고 싶었어요.",
+   "blank": "aluminio",
+   "src": "made"
+  },
+  {
+   "text": "Sofía envolvió las patatas en papel de aluminio y las metió en la barbacoa.",
+   "en": "Sofía wrapped the potatoes in aluminium foil and put them on the barbecue.",
+   "ko": "소피아는 감자를 은박지에 싸서 바비큐 그릴에 넣었어요.",
+   "blank": "aluminio",
+   "src": "made"
+  }
+ ],
  "w|alumno": [
   {
    "text": "Cada alumno debe entregar el ensayo.",
@@ -5150,6 +5198,22 @@
    "en": "To butcher a lamb you need to know its anatomy well, Lucía explains to the students.",
    "ko": "루시아는 학생들에게 양을 부위별로 나누려면 그 해부 구조를 잘 알아야 한다고 설명해요.",
    "blank": "anatomía",
+   "src": "made"
+  }
+ ],
+ "w|ancestral": [
+  {
+   "text": "En medio del bosque hay un roble ancestral que Pablo no puede abrazar ni con los brazos abiertos.",
+   "en": "In the middle of the forest there is an ancient oak that Pablo can't wrap his arms around.",
+   "ko": "숲 한가운데 팔을 다 벌려도 파블로가 안을 수 없는 오래된 참나무가 있어요.",
+   "blank": "ancestral",
+   "src": "made"
+  },
+  {
+   "text": "Elena cree que el miedo de los gatos a los ruidos fuertes es un instinto ancestral.",
+   "en": "Elena believes cats' fear of loud noises is an ancestral instinct.",
+   "ko": "엘레나는 고양이가 큰 소리를 무서워하는 게 조상 대대로 내려온 본능이라고 생각해요.",
+   "blank": "ancestral",
    "src": "made"
   }
  ],
@@ -7458,6 +7522,22 @@
    "en": "A seagull tried to snatch a bun from a customer's hands at the door of Sofía's bakery.",
    "ko": "갈매기가 소피아네 빵집 앞에서 손님 손에 든 빵을 낚아채려 했어요.",
    "blank": "arrebatar",
+   "src": "made"
+  }
+ ],
+ "w|arrecife": [
+  {
+   "text": "Pablo había visto un arrecife en la costa, pero nunca un río tan transparente.",
+   "en": "Pablo had seen a reef on the coast, but never such a clear river.",
+   "ko": "파블로는 바닷가에서 산호초는 봤지만 이렇게 맑은 강은 처음이었어요.",
+   "blank": "arrecife",
+   "src": "made"
+  },
+  {
+   "text": "El pez payaso que atendió Elena venía de un acuario con un arrecife de coral artificial.",
+   "en": "The clownfish Elena treated came from an aquarium with an artificial coral reef.",
+   "ko": "엘레나가 돌본 흰동가리는 인공 산호초가 있는 수족관에서 왔어요.",
+   "blank": "arrecife",
    "src": "made"
   }
  ],
@@ -9833,6 +9913,22 @@
    "blank": "ave"
   }
  ],
+ "w|avena": [
+  {
+   "text": "Antes de empezar a trabajar, Diego desayuna un tazón de avena con plátano.",
+   "en": "Before starting work, Diego has a bowl of oats with banana for breakfast.",
+   "ko": "디에고는 일을 시작하기 전에 바나나를 넣은 귀리 한 그릇으로 아침을 먹어요.",
+   "blank": "avena",
+   "src": "made"
+  },
+  {
+   "text": "Andrés, que ahora es muy deportista, solo pidió unas galletas de avena con el café.",
+   "en": "Andrés, who is very sporty now, only ordered some oat biscuits with his coffee.",
+   "ko": "요즘 운동에 빠진 안드레스는 커피에 귀리 쿠키만 시켰어요.",
+   "blank": "avena",
+   "src": "made"
+  }
+ ],
  "w|avenida": [
   {
    "text": "La avenida principal está cerrada hoy.",
@@ -9945,6 +10041,22 @@
    "en": "They closed the street without prior notice.",
    "ko": "사전 안내 없이 길을 막았어.",
    "blank": "aviso"
+  }
+ ],
+ "w|avispa": [
+  {
+   "text": "Una avispa se metió en la tienda de campaña de Pablo y no lo dejó dormir.",
+   "en": "A wasp got into Pablo's tent and wouldn't let him sleep.",
+   "ko": "말벌 한 마리가 파블로의 텐트에 들어와서 잠을 못 잤어요.",
+   "blank": "avispa",
+   "src": "made"
+  },
+  {
+   "text": "Al perro de Marta le picó una avispa en el hocico y Elena le puso una inyección.",
+   "en": "Marta's dog was stung on the snout by a wasp and Elena gave it an injection.",
+   "ko": "마르타의 개가 주둥이를 말벌에 쏘여서 엘레나가 주사를 놨어요.",
+   "blank": "avispa",
+   "src": "made"
   }
  ],
  "w|ay": [
@@ -11787,6 +11899,22 @@
    "src": "made"
   }
  ],
+ "w|bizcocho": [
+  {
+   "text": "La vecina de Diego le trajo un bizcocho de limón para celebrar que por fin había terminado el tejado.",
+   "en": "Diego's neighbour brought him a lemon sponge cake to celebrate finally finishing the roof.",
+   "ko": "이웃집 아주머니가 지붕 공사가 드디어 끝난 걸 축하하려고 디에고에게 레몬 카스텔라를 가져왔어요.",
+   "blank": "bizcocho",
+   "src": "made"
+  },
+  {
+   "text": "Sofía apareció en la cena con un bizcocho de chocolate hecho por ella.",
+   "en": "Sofía showed up at the dinner with a chocolate sponge cake she had made herself.",
+   "ko": "소피아는 직접 만든 초콜릿 케이크를 들고 저녁 모임에 나타났어요.",
+   "blank": "bizcocho",
+   "src": "made"
+  }
+ ],
  "w|blanco": [
   {
    "text": "Ponte la camisa blanca.",
@@ -12269,6 +12397,22 @@
    "en": "My uncle has worked as a firefighter since youth.",
    "ko": "삼촌은 젊을 때부터 소방관으로 일해.",
    "blank": "bombero"
+  }
+ ],
+ "w|bombilla": [
+  {
+   "text": "Diego cambió la bombilla del pasillo, que llevaba semanas fundida.",
+   "en": "Diego changed the light bulb in the hallway, which had been burnt out for weeks.",
+   "ko": "디에고는 몇 주째 나가 있던 복도 전구를 갈았어요.",
+   "blank": "bombilla",
+   "src": "made"
+  },
+  {
+   "text": "En el jardín de Sofía colgaron una guirnalda de bombillas para la cena.",
+   "en": "In Sofía's garden they hung a string of light bulbs for the dinner.",
+   "ko": "소피아네 정원에 저녁 모임을 위해 전구 줄을 걸었어요.",
+   "blank": "bombillas",
+   "src": "made"
   }
  ],
  "w|bombón": [
@@ -12837,6 +12981,22 @@
    "blank": "británico"
   }
  ],
+ "w|broche": [
+  {
+   "text": "Pablo perdió el broche de su mochila al saltar entre las piedras del río.",
+   "en": "Pablo lost the clasp of his backpack while jumping between the stones in the river.",
+   "ko": "파블로는 강의 돌 사이를 건너뛰다가 배낭 버클을 잃어버렸어요.",
+   "blank": "broche",
+   "src": "made"
+  },
+  {
+   "text": "El cachorro se tragó un broche de su dueña y Elena tuvo que sacárselo.",
+   "en": "The puppy swallowed a brooch belonging to its owner and Elena had to get it out.",
+   "ko": "강아지가 주인의 브로치를 삼켜서 엘레나가 꺼내야 했어요.",
+   "blank": "broche",
+   "src": "made"
+  }
+ ],
  "w|broma": [
   {
    "text": "Era solo una broma inocente.",
@@ -12941,6 +13101,22 @@
    "en": "The kids dressed one of them as a wizard.",
    "ko": "아이들이 한 명을 마법사로 분장시켰어.",
    "blank": "brujo"
+  }
+ ],
+ "w|brújula": [
+  {
+   "text": "El móvil se quedó sin batería, así que Pablo sacó la brújula para orientarse.",
+   "en": "His phone ran out of battery, so Pablo took out the compass to find his way.",
+   "ko": "휴대폰 배터리가 다 돼서 파블로는 방향을 잡으려고 나침반을 꺼냈어요.",
+   "blank": "brújula",
+   "src": "made"
+  },
+  {
+   "text": "El niño le regaló a Elena una brújula de juguete para que nunca se perdiera.",
+   "en": "The boy gave Elena a toy compass so she would never get lost.",
+   "ko": "아이는 엘레나가 길을 잃지 않도록 장난감 나침반을 선물했어요.",
+   "blank": "brújula",
+   "src": "made"
   }
  ],
  "w|brusco": [
@@ -13385,6 +13561,22 @@
    "en": "Act like a real gentleman.",
    "ko": "진짜 신사답게 행동해.",
    "blank": "caballero"
+  }
+ ],
+ "w|caballito": [
+  {
+   "text": "En la feria del pueblo, Pablo subió a su sobrina a un caballito del tiovivo.",
+   "en": "At the village fair, Pablo put his niece on a little horse on the merry-go-round.",
+   "ko": "파블로는 마을 장터에서 조카를 회전목마 말에 태워 줬어요.",
+   "blank": "caballito",
+   "src": "made"
+  },
+  {
+   "text": "La hija de Elena monta en un caballito de madera mientras su madre termina de trabajar.",
+   "en": "Elena's daughter rides a wooden rocking horse while her mother finishes work.",
+   "ko": "엘레나의 딸은 엄마가 일을 마칠 때까지 나무 흔들말을 타고 놀아요.",
+   "blank": "caballito",
+   "src": "made"
   }
  ],
  "w|caballo": [
@@ -14847,6 +15039,22 @@
    "en": "They wrote a song together.",
    "ko": "둘이서 노래를 썼어.",
    "blank": "canción"
+  }
+ ],
+ "w|candado": [
+  {
+   "text": "Diego puso un candado en el cobertizo para que nadie se llevara las herramientas.",
+   "en": "Diego put a padlock on the shed so no one would take the tools.",
+   "ko": "디에고는 아무도 연장을 가져가지 못하게 창고에 자물쇠를 달았어요.",
+   "blank": "candado",
+   "src": "made"
+  },
+  {
+   "text": "En el puente del río, Sofía y sus amigos encontraron el candado que habían puesto hace años.",
+   "en": "On the bridge over the river, Sofía and her friends found the padlock they had put there years ago.",
+   "ko": "소피아와 친구들은 강 다리에서 몇 년 전에 걸어 둔 자물쇠를 찾았어요.",
+   "blank": "candado",
+   "src": "made"
   }
  ],
  "w|candidato": [
@@ -16547,6 +16755,22 @@
    "src": "made"
   }
  ],
+ "w|caviar": [
+  {
+   "text": "Para celebrar la compra de la casa, Diego abrió una lata de caviar que le habían regalado.",
+   "en": "To celebrate buying the house, Diego opened a tin of caviar he had been given.",
+   "ko": "디에고는 집을 산 걸 축하하려고 선물 받은 캐비아 통조림을 땄어요.",
+   "blank": "caviar",
+   "src": "made"
+  },
+  {
+   "text": "Para la ocasión, Javier trajo una lata de caviar que nadie se atrevió a probar.",
+   "en": "For the occasion, Javier brought a tin of caviar that nobody dared to try.",
+   "ko": "하비에르는 이날을 위해 캐비아 통조림을 가져왔지만 아무도 먹어 볼 엄두를 못 냈어요.",
+   "blank": "caviar",
+   "src": "made"
+  }
+ ],
  "w|caza": [
   {
    "text": "La caza está prohibida en esta zona.",
@@ -17093,6 +17317,22 @@
    "en": "My closest friend moved yesterday.",
    "ko": "제일 가까운 친구가 어제 이사했어.",
    "blank": "cercano"
+  }
+ ],
+ "w|cerdito": [
+  {
+   "text": "En la granja junto al río, Pablo vio un cerdito revolcándose en el barro.",
+   "en": "At the farm by the river, Pablo saw a piglet rolling in the mud.",
+   "ko": "파블로는 강가 농장에서 진흙에서 뒹구는 아기 돼지를 봤어요.",
+   "blank": "cerdito",
+   "src": "made"
+  },
+  {
+   "text": "Un niño trajo a la clínica de Elena un cerdito vietnamita que no quería comer.",
+   "en": "A boy brought a Vietnamese pot-bellied piglet that wouldn't eat to Elena's clinic.",
+   "ko": "한 아이가 밥을 안 먹는 베트남 아기 돼지를 엘레나의 병원에 데려왔어요.",
+   "blank": "cerdito",
+   "src": "made"
   }
  ],
  "w|cerdo": [
@@ -18159,6 +18399,22 @@
    "blank": "cima"
   }
  ],
+ "w|cimiento": [
+  {
+   "text": "Una grieta enorme le hizo sospechar a Diego que había un problema en el cimiento de la casa.",
+   "en": "A huge crack made Diego suspect there was a problem with the house's foundation.",
+   "ko": "큰 금을 보고 디에고는 집 기초에 문제가 있다고 의심했어요.",
+   "blank": "cimiento",
+   "src": "made"
+  },
+  {
+   "text": "Sofía dijo que aquella amistad era el cimiento de todo lo bueno de su juventud.",
+   "en": "Sofía said that friendship was the foundation of everything good in her youth.",
+   "ko": "소피아는 그 우정이 자기 젊은 시절의 좋은 것들의 바탕이었다고 말했어요.",
+   "blank": "cimiento",
+   "src": "made"
+  }
+ ],
  "w|cinco": [
   {
    "text": "Nos vemos a las cinco.",
@@ -18805,6 +19061,54 @@
    "src": "made"
   }
  ],
+ "w|cloaca": [
+  {
+   "text": "Las tuberías de la casa de Diego no estaban conectadas a la cloaca municipal.",
+   "en": "The pipes in Diego's house weren't connected to the town sewer.",
+   "ko": "디에고네 집 배관은 시 하수도에 연결돼 있지 않았어요.",
+   "blank": "cloaca",
+   "src": "made"
+  },
+  {
+   "text": "Los amigos de Sofía se rieron al recordar el día en que una pelota cayó a la cloaca del barrio.",
+   "en": "Sofía's friends laughed remembering the day a ball fell into the neighbourhood sewer.",
+   "ko": "소피아의 친구들은 공이 동네 하수구에 빠졌던 날을 떠올리며 웃었어요.",
+   "blank": "cloaca",
+   "src": "made"
+  }
+ ],
+ "w|clon": [
+  {
+   "text": "El biólogo le explicó a Pablo que cada álamo de la ribera es un clon del árbol vecino.",
+   "en": "The biologist explained to Pablo that each poplar on the riverbank is a clone of the tree next to it.",
+   "ko": "생물학자는 파블로에게 강가의 포플러 하나하나가 옆 나무의 복제라고 설명했어요.",
+   "blank": "clon",
+   "src": "made"
+  },
+  {
+   "text": "El dueño de un perro famoso le preguntó a Elena si se podía hacer un clon de su mascota.",
+   "en": "The owner of a famous dog asked Elena whether a clone of his pet could be made.",
+   "ko": "유명한 개의 주인이 엘레나에게 자기 반려견을 복제할 수 있느냐고 물었어요.",
+   "blank": "clon",
+   "src": "made"
+  }
+ ],
+ "w|clonar": [
+  {
+   "text": "En el vivero quieren clonar el roble más viejo del bosque para que no se pierda, según le contaron a Pablo.",
+   "en": "At the nursery they want to clone the oldest oak in the forest so it isn't lost, they told Pablo.",
+   "ko": "묘목장에서는 숲에서 가장 오래된 참나무가 사라지지 않게 복제하려 한다고 파블로에게 말해 줬어요.",
+   "blank": "clonar",
+   "src": "made"
+  },
+  {
+   "text": "Elena piensa que clonar mascotas no devuelve al animal que uno ha perdido.",
+   "en": "Elena thinks that cloning pets doesn't bring back the animal you've lost.",
+   "ko": "엘레나는 반려동물을 복제한다고 잃은 동물이 돌아오지는 않는다고 생각해요.",
+   "blank": "clonar",
+   "src": "made"
+  }
+ ],
  "w|club": [
   {
    "text": "Entramos al club de noche.",
@@ -18938,6 +19242,22 @@
    "en": "Marta's brother won a copper medal in the children's race.",
    "ko": "마르타의 남동생은 어린이 경주에서 구리 메달을 땄어요.",
    "blank": "cobre",
+   "src": "made"
+  }
+ ],
+ "w|cobro": [
+  {
+   "text": "En el refugio de montaña no aceptan tarjetas, y el cobro se hace en efectivo, así que Pablo tuvo que buscar un cajero.",
+   "en": "The mountain hut doesn't take cards and payment is in cash, so Pablo had to look for an ATM.",
+   "ko": "산장은 카드를 안 받고 현금으로만 계산해서 파블로는 현금인출기를 찾아야 했어요.",
+   "blank": "cobro",
+   "src": "made"
+  },
+  {
+   "text": "Al revisar la factura, el cliente vio un cobro doble y Elena lo corrigió enseguida.",
+   "en": "When checking the bill, the client saw a double charge and Elena corrected it right away.",
+   "ko": "고객이 청구서에서 이중 결제를 발견하자 엘레나는 바로 고쳐 줬어요.",
+   "blank": "cobro",
    "src": "made"
   }
  ],
@@ -19205,6 +19525,22 @@
    "en": "I don't think the dates will coincide.",
    "ko": "날짜가 맞을 것 같지는 않아.",
    "blank": "coincidir"
+  }
+ ],
+ "w|cojín": [
+  {
+   "text": "Diego encontró un cojín bordado que su abuela había hecho a mano.",
+   "en": "Diego found an embroidered cushion his grandmother had made by hand.",
+   "ko": "디에고는 할머니가 손수 수놓은 쿠션을 찾았어요.",
+   "blank": "cojín",
+   "src": "made"
+  },
+  {
+   "text": "Elena se quedó dormida en el sofá de Sofía abrazada a un cojín.",
+   "en": "Elena fell asleep on Sofía's sofa hugging a cushion.",
+   "ko": "엘레나는 소피아네 소파에서 쿠션을 끌어안고 잠들었어요.",
+   "blank": "cojín",
+   "src": "made"
   }
  ],
  "w|cojo": [
@@ -23491,6 +23827,22 @@
    "src": "made"
   }
  ],
+ "w|convoy": [
+  {
+   "text": "Un convoy de camiones madereros obligó a Pablo a apartarse del camino.",
+   "en": "A convoy of logging trucks forced Pablo to step off the road.",
+   "ko": "목재 트럭 행렬 때문에 파블로는 길에서 비켜서야 했어요.",
+   "blank": "convoy",
+   "src": "made"
+  },
+  {
+   "text": "El caballo herido llegó a la clínica de Elena escoltado por un pequeño convoy de la protectora.",
+   "en": "The injured horse arrived at Elena's clinic escorted by a small convoy from the animal shelter.",
+   "ko": "다친 말은 보호소 차량 몇 대의 호위를 받으며 엘레나의 병원에 도착했어요.",
+   "blank": "convoy",
+   "src": "made"
+  }
+ ],
  "w|cooperación": [
   {
    "text": "Sin la cooperación de los electricistas, Pablo no habría terminado a tiempo.",
@@ -26029,6 +26381,22 @@
    "src": "made"
   }
  ],
+ "w|cúpula": [
+  {
+   "text": "Desde el jardín, Diego ve la cúpula de la iglesia del pueblo por encima de los tejados.",
+   "en": "From the garden, Diego can see the dome of the village church above the rooftops.",
+   "ko": "디에고는 정원에서 지붕들 너머로 마을 성당의 돔을 볼 수 있어요.",
+   "blank": "cúpula",
+   "src": "made"
+  },
+  {
+   "text": "Los amigos de Sofía se hicieron una foto delante de la cúpula de la catedral, como en el viaje de fin de curso.",
+   "en": "Sofía's friends took a photo in front of the cathedral dome, just like on their end-of-year school trip.",
+   "ko": "소피아의 친구들은 수학여행 때처럼 대성당 돔 앞에서 사진을 찍었어요.",
+   "blank": "cúpula",
+   "src": "made"
+  }
+ ],
  "w|cura": [
   {
    "text": "Aún no hay cura para esa enfermedad.",
@@ -26707,6 +27075,22 @@
    "src": "made"
   }
  ],
+ "w|decorar": [
+  {
+   "text": "La hermana de Diego le ayudará a decorar el dormitorio cuando acabe la obra.",
+   "en": "Diego's sister will help him decorate the bedroom when the work is finished.",
+   "ko": "공사가 끝나면 디에고의 누나가 침실 꾸미는 걸 도와줄 거예요.",
+   "blank": "decorar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía pidió a sus sobrinos que la ayudaran a decorar el salón con globos.",
+   "en": "Sofía asked her nephews to help her decorate the living room with balloons.",
+   "ko": "소피아는 조카들에게 거실을 풍선으로 꾸미는 걸 도와 달라고 했어요.",
+   "blank": "decorar",
+   "src": "made"
+  }
+ ],
  "w|decreto": [
   {
    "text": "Un nuevo decreto obliga a Pablo y sus compañeros a llevar cámara en el uniforme.",
@@ -26931,6 +27315,22 @@
    "en": "There is still no definitive plan.",
    "ko": "아직 확정된 계획은 없어.",
    "blank": "definitivo"
+  }
+ ],
+ "w|defraudar": [
+  {
+   "text": "Diego no quiere defraudar a su abuelo, que construyó la casa con sus propias manos.",
+   "en": "Diego doesn't want to let down his grandfather, who built the house with his own hands.",
+   "ko": "디에고는 손수 이 집을 지은 할아버지를 실망시키고 싶지 않아요.",
+   "blank": "defraudar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía no quería defraudar a nadie, así que reservó la mesa con un mes de antelación.",
+   "en": "Sofía didn't want to disappoint anyone, so she booked the table a month in advance.",
+   "ko": "소피아는 아무도 실망시키고 싶지 않아서 한 달 전에 자리를 예약했어요.",
+   "blank": "defraudar",
+   "src": "made"
   }
  ],
  "w|defunción": [
@@ -28089,6 +28489,22 @@
    "src": "made"
   }
  ],
+ "w|desagüe": [
+  {
+   "text": "El desagüe del patio estaba lleno de hojas y Diego tuvo que limpiarlo a mano.",
+   "en": "The patio drain was full of leaves and Diego had to clean it by hand.",
+   "ko": "마당 배수구가 낙엽으로 꽉 차서 디에고는 손으로 치워야 했어요.",
+   "blank": "desagüe",
+   "src": "made"
+  },
+  {
+   "text": "Alguien tiró restos de arroz por el desagüe y Sofía tuvo que desatascarlo.",
+   "en": "Someone threw leftover rice down the drain and Sofía had to unblock it.",
+   "ko": "누가 남은 밥을 배수구에 버려서 소피아가 뚫어야 했어요.",
+   "blank": "desagüe",
+   "src": "made"
+  }
+ ],
  "w|desamparado": [
   {
    "text": "En la puerta de la clínica había un gatito desamparado, y Javier le dio agua.",
@@ -28446,6 +28862,22 @@
    "en": "The man on the fourth floor says he is a descendant of a famous painter, but Elena doesn't believe it.",
    "ko": "4층 아저씨는 유명한 화가의 후손이라고 하지만 엘레나는 안 믿어요.",
    "blank": "descendiente",
+   "src": "made"
+  }
+ ],
+ "w|descenso": [
+  {
+   "text": "El descenso en canoa por el río duró casi toda la mañana, y Pablo acabó empapado.",
+   "en": "The canoe trip down the river took almost the whole morning, and Pablo ended up soaked.",
+   "ko": "카누로 강을 내려가는 데 거의 오전 내내 걸렸고, 파블로는 흠뻑 젖었어요.",
+   "blank": "descenso",
+   "src": "made"
+  },
+  {
+   "text": "Elena notó un descenso de temperatura en el gato y lo tapó con una manta.",
+   "en": "Elena noticed a drop in the cat's temperature and covered it with a blanket.",
+   "ko": "엘레나는 고양이 체온이 떨어진 걸 보고 담요로 덮어 줬어요.",
+   "blank": "descenso",
    "src": "made"
   }
  ],
@@ -29211,6 +29643,22 @@
    "en": "I went for a walk to clear my mind.",
    "ko": "머리를 비우려고 산책하러 나갔어.",
    "blank": "despejar"
+  }
+ ],
+ "w|despensa": [
+  {
+   "text": "La abuela de Diego guardaba la manteca en un tarro de barro en la despensa.",
+   "en": "Diego's grandmother kept the lard in a clay jar in the pantry.",
+   "ko": "디에고의 할머니는 라드를 식료품 창고의 흙 항아리에 보관했어요.",
+   "blank": "despensa",
+   "src": "made"
+  },
+  {
+   "text": "La despensa de Sofía se quedó vacía después de tantos invitados.",
+   "en": "Sofía's pantry was left empty after so many guests.",
+   "ko": "손님이 그렇게 많이 오고 나니 소피아네 식료품 창고가 텅 비었어요.",
+   "blank": "despensa",
+   "src": "made"
   }
  ],
  "w|desperdiciar": [
@@ -30722,6 +31170,22 @@
    "en": "During the campaign, a member of parliament came into Marta's shop to buy water.",
    "ko": "선거 운동 기간에 국회의원 한 명이 물을 사러 마르타의 가게에 들어왔어요.",
    "blank": "diputado",
+   "src": "made"
+  }
+ ],
+ "w|dique": [
+  {
+   "text": "Unos castores habían construido un dique de ramas que cortaba medio río, y Pablo lo fotografió.",
+   "en": "Some beavers had built a dam of branches across half the river, and Pablo photographed it.",
+   "ko": "비버들이 나뭇가지로 강 절반을 막는 둑을 쌓아 놔서 파블로는 사진을 찍었어요.",
+   "blank": "dique",
+   "src": "made"
+  },
+  {
+   "text": "La clínica de Elena está junto al dique del puerto, y desde la ventana se ven los barcos.",
+   "en": "Elena's clinic is next to the harbour breakwater, and you can see the boats from the window.",
+   "ko": "엘레나의 병원은 항구 방파제 옆이라 창문으로 배들이 보여요.",
+   "blank": "dique",
    "src": "made"
   }
  ],
@@ -32593,6 +33057,22 @@
    "blank": "duró"
   }
  ],
+ "w|durmiente": [
+  {
+   "text": "Los vecinos llaman a la casa de Diego «la casa durmiente» porque estuvo cerrada veinte años.",
+   "en": "The neighbours call Diego's house \"the sleeping house\" because it was shut for twenty years.",
+   "ko": "이웃들은 디에고네 집이 이십 년 동안 닫혀 있어서 '잠자는 집'이라고 불러요.",
+   "blank": "durmiente",
+   "src": "made"
+  },
+  {
+   "text": "Para la fiesta, Sofía recuperó el disfraz de bella durmiente que llevó en el colegio.",
+   "en": "For the party, Sofía dug out the sleeping beauty costume she wore at school.",
+   "ko": "소피아는 파티를 위해 학교 때 입었던 잠자는 숲속의 공주 옷을 꺼냈어요.",
+   "blank": "durmiente",
+   "src": "made"
+  }
+ ],
  "w|duro": [
   {
    "text": "El pan de ayer está muy duro.",
@@ -33447,6 +33927,22 @@
    "blank": "ello"
   }
  ],
+ "w|elogio": [
+  {
+   "text": "El mejor elogio que recibió Pablo fue que sabía moverse por el bosque sin hacer ruido.",
+   "en": "The best compliment Pablo got was that he could move through the forest without a sound.",
+   "ko": "파블로가 들은 최고의 칭찬은 숲에서 소리 없이 움직일 줄 안다는 거였어요.",
+   "blank": "elogio",
+   "src": "made"
+  },
+  {
+   "text": "Las reseñas de la clínica están llenas de elogios para Elena y su equipo.",
+   "en": "The clinic's reviews are full of praise for Elena and her team.",
+   "ko": "병원 후기는 엘레나와 직원들에 대한 칭찬으로 가득해요.",
+   "blank": "elogios",
+   "src": "made"
+  }
+ ],
  "w|embajada": [
   {
    "text": "Fue a la embajada a renovar el pasaporte.",
@@ -34115,6 +34611,22 @@
    "en": "His style doesn't seem to fit here.",
    "ko": "그의 스타일이 여기엔 안 맞는 것 같아.",
    "blank": "encajar"
+  }
+ ],
+ "w|encaje": [
+  {
+   "text": "En la orilla, Pablo encontró una hoja seca tan fina que parecía de encaje.",
+   "en": "On the bank, Pablo found a dry leaf so thin it looked like lace.",
+   "ko": "파블로는 강가에서 레이스처럼 얇은 마른 잎을 발견했어요.",
+   "blank": "encaje",
+   "src": "made"
+  },
+  {
+   "text": "La dueña del caniche llegó a la clínica de Elena con un vestido de encaje.",
+   "en": "The poodle's owner came to Elena's clinic in a lace dress.",
+   "ko": "푸들 주인은 레이스 원피스를 입고 엘레나의 동물병원에 왔어요.",
+   "blank": "encaje",
+   "src": "made"
   }
  ],
  "w|encantador": [
@@ -35873,6 +36385,22 @@
    "en": "The staircase creaks a lot.",
    "ko": "계단이 많이 삐걱거려.",
    "blank": "escalera"
+  }
+ ],
+ "w|escalofriante": [
+  {
+   "text": "Por la noche, Pablo oyó un aullido escalofriante al otro lado del río.",
+   "en": "At night, Pablo heard a chilling howl on the other side of the river.",
+   "ko": "밤에 파블로는 강 건너편에서 소름 끼치는 울음소리를 들었어요.",
+   "blank": "escalofriante",
+   "src": "made"
+  },
+  {
+   "text": "Elena se acuerda de un caso escalofriante: un perro que sobrevivió tres días atrapado en un pozo.",
+   "en": "Elena remembers a chilling case: a dog that survived three days trapped in a well.",
+   "ko": "엘레나는 우물에 갇혀 사흘을 버틴 개의 오싹한 사례를 기억해요.",
+   "blank": "escalofriante",
+   "src": "made"
   }
  ],
  "w|escalofrío": [
@@ -37855,6 +38383,22 @@
    "src": "made"
   }
  ],
+ "w|estiércol": [
+  {
+   "text": "El sendero olía a estiércol porque por allí pasaban las vacas, y Pablo se tapó la nariz.",
+   "en": "The path smelled of manure because the cows passed that way, and Pablo held his nose.",
+   "ko": "소들이 지나다니는 길이라 소똥 냄새가 나서 파블로는 코를 막았어요.",
+   "blank": "estiércol",
+   "src": "made"
+  },
+  {
+   "text": "Elena volvió de la granja con las botas llenas de estiércol.",
+   "en": "Elena came back from the farm with her boots covered in manure.",
+   "ko": "엘레나는 장화에 거름이 잔뜩 묻은 채 농장에서 돌아왔어요.",
+   "blank": "estiércol",
+   "src": "made"
+  }
+ ],
  "w|estilo": [
   {
    "text": "Me gusta tu estilo de vestir.",
@@ -37975,6 +38519,22 @@
    "en": "Take this and come.",
    "ko": "이거 들고 와.",
    "blank": "esto"
+  }
+ ],
+ "w|estofado": [
+  {
+   "text": "Los obreros de Diego almuerzan un estofado que trae la dueña del bar de la esquina.",
+   "en": "Diego's workers have a stew for lunch that the owner of the corner bar brings over.",
+   "ko": "디에고네 인부들은 모퉁이 바 주인이 가져다주는 스튜로 점심을 먹어요.",
+   "blank": "estofado",
+   "src": "made"
+  },
+  {
+   "text": "La madre de Sofía preparó un estofado de ternera para recibir a todos.",
+   "en": "Sofía's mother made a beef stew to welcome everyone.",
+   "ko": "소피아의 어머니는 모두를 맞이하려고 소고기 스튜를 끓였어요.",
+   "blank": "estofado",
+   "src": "made"
   }
  ],
  "w|estómago": [
@@ -38303,6 +38863,22 @@
    "en": "The study is at the end of the hallway.",
    "ko": "서재는 복도 끝에 있어.",
    "blank": "estudio"
+  }
+ ],
+ "w|estufa": [
+  {
+   "text": "En invierno, la única estufa de la casa apenas calienta la cocina de Diego.",
+   "en": "In winter, the only heater in the house barely warms Diego's kitchen.",
+   "ko": "겨울이면 집에 하나뿐인 난로로는 디에고네 부엌도 겨우 데워져요.",
+   "blank": "estufa",
+   "src": "made"
+  },
+  {
+   "text": "Hacía frío en la terraza, así que los amigos de Sofía encendieron una estufa de gas junto a la mesa.",
+   "en": "It was cold on the terrace, so Sofía's friends lit a gas heater next to the table.",
+   "ko": "테라스가 추워서 소피아의 친구들은 식탁 옆에 가스 난로를 켰어요.",
+   "blank": "estufa",
+   "src": "made"
   }
  ],
  "w|estupendamente": [
@@ -40085,6 +40661,22 @@
    "src": "made"
   }
  ],
+ "w|fachada": [
+  {
+   "text": "El ayuntamiento obliga a Diego a pintar la fachada del mismo color que tenía.",
+   "en": "The town hall requires Diego to paint the façade the same colour it was.",
+   "ko": "시청은 디에고에게 건물 외벽을 원래 색으로 칠하라고 해요.",
+   "blank": "fachada",
+   "src": "made"
+  },
+  {
+   "text": "Cuando Sofía vio la fachada de su antiguo colegio, se le escapó una lágrima.",
+   "en": "When Sofía saw the front of her old school, a tear slipped out.",
+   "ko": "옛 학교 건물 정면을 보자 소피아는 눈물이 핑 돌았어요.",
+   "blank": "fachada",
+   "src": "made"
+  }
+ ],
  "w|facial": [
   {
    "text": "Al terminar, Hugo se pone una crema facial para la piel seca.",
@@ -41033,6 +41625,22 @@
    "src": "made"
   }
  ],
+ "w|fértil": [
+  {
+   "text": "La tierra junto al río es muy fértil, y por eso hay tantos huertos en la zona, le explicó el guarda a Pablo.",
+   "en": "The land by the river is very fertile, which is why there are so many vegetable gardens in the area, the ranger explained to Pablo.",
+   "ko": "감시원은 파블로에게 강가 땅이 아주 기름져서 이 지역에 텃밭이 그렇게 많다고 설명했어요.",
+   "blank": "fértil",
+   "src": "made"
+  },
+  {
+   "text": "Elena le explicó al ganadero que la vaca estaba en su etapa más fértil.",
+   "en": "Elena explained to the farmer that the cow was at her most fertile stage.",
+   "ko": "엘레나는 목장 주인에게 소가 가장 임신하기 좋은 시기라고 설명했어요.",
+   "blank": "fértil",
+   "src": "made"
+  }
+ ],
  "w|fertilidad": [
   {
    "text": "La hermana de Mateo leyó que el deporte moderado puede ayudar a la fertilidad.",
@@ -41198,6 +41806,22 @@
    "en": "Carmen invented a fictional restaurant for the school's final exam.",
    "ko": "카르멘은 학교 기말시험을 위해 가상의 식당을 만들었어요.",
    "blank": "ficticio",
+   "src": "made"
+  }
+ ],
+ "w|fidelidad": [
+  {
+   "text": "Pablo dice que los cisnes son famosos por su fidelidad a la pareja.",
+   "en": "Pablo says swans are famous for their faithfulness to their partner.",
+   "ko": "파블로는 백조가 짝에게 충실하기로 유명하다고 말해요.",
+   "blank": "fidelidad",
+   "src": "made"
+  },
+  {
+   "text": "La fidelidad de ese perro es increíble: espera a su dueño en la puerta de la clínica de Elena todos los días.",
+   "en": "That dog's loyalty is incredible: it waits for its owner at the door of Elena's clinic every day.",
+   "ko": "그 개의 충성심은 정말 대단해서 매일 엘레나 병원 문 앞에서 주인을 기다려요.",
+   "blank": "fidelidad",
    "src": "made"
   }
  ],
@@ -41438,6 +42062,22 @@
    "en": "The film's director had studied ballet before making movies.",
    "ko": "그 영화의 감독은 영화를 하기 전에 발레를 배웠어요.",
    "blank": "filme",
+   "src": "made"
+  }
+ ],
+ "w|filo": [
+  {
+   "text": "Diego pasó el dedo por el filo del cincel para comprobar si cortaba.",
+   "en": "Diego ran his finger along the edge of the chisel to check whether it was sharp.",
+   "ko": "디에고는 끌이 잘 드는지 보려고 날에 손가락을 대 봤어요.",
+   "blank": "filo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía cortó la tarta con el filo de un cuchillo de pan.",
+   "en": "Sofía cut the cake with the edge of a bread knife.",
+   "ko": "소피아는 빵칼 날로 케이크를 잘랐어요.",
+   "blank": "filo",
    "src": "made"
   }
  ],
@@ -42797,6 +43437,22 @@
    "src": "made"
   }
  ],
+ "w|fregadero": [
+  {
+   "text": "Diego arrancó el fregadero de piedra y lo convirtió en una jardinera.",
+   "en": "Diego pulled out the stone sink and turned it into a planter.",
+   "ko": "디에고는 돌 개수대를 뜯어내서 화분으로 만들었어요.",
+   "blank": "fregadero",
+   "src": "made"
+  },
+  {
+   "text": "Después de cenar, Sofía y Elena lavaron los platos en el fregadero, como en los viejos tiempos.",
+   "en": "After dinner, Sofía and Elena washed the dishes in the sink, like in the old days.",
+   "ko": "저녁을 먹고 소피아와 엘레나는 옛날처럼 개수대에서 설거지를 했어요.",
+   "blank": "fregadero",
+   "src": "made"
+  }
+ ],
  "w|freír": [
   {
    "text": "Voy a freír unos huevos para el almuerzo.",
@@ -42988,6 +43644,22 @@
    "en": "Lucía tries not to show her frustration when a dish comes back to the kitchen.",
    "ko": "루시아는 요리가 주방으로 돌아오면 속상한 티를 안 내려고 해요.",
    "blank": "frustración",
+   "src": "made"
+  }
+ ],
+ "w|frustrado": [
+  {
+   "text": "Tras tres horas sin encontrar la fuga, Diego estaba frustrado y se sentó en la escalera.",
+   "en": "After three hours without finding the leak, Diego was frustrated and sat down on the stairs.",
+   "ko": "세 시간 동안 새는 곳을 못 찾자 디에고는 답답해서 계단에 주저앉았어요.",
+   "blank": "frustrado",
+   "src": "made"
+  },
+  {
+   "text": "Carlos estaba frustrado porque el tren se retrasó y llegó tarde a la reunión con Sofía.",
+   "en": "Carlos was frustrated because the train was delayed and he arrived late to the get-together with Sofía.",
+   "ko": "카를로스는 기차가 늦어 소피아와의 모임에 늦게 도착해서 속상했어요.",
+   "blank": "frustrado",
    "src": "made"
   }
  ],
@@ -43487,6 +44159,22 @@
    "src": "made"
   }
  ],
+ "w|fusible": [
+  {
+   "text": "Cada vez que Diego enchufa la radial, salta un fusible.",
+   "en": "Every time Diego plugs in the angle grinder, a fuse blows.",
+   "ko": "디에고가 그라인더를 꽂을 때마다 퓨즈가 나가요.",
+   "blank": "fusible",
+   "src": "made"
+  },
+  {
+   "text": "A mitad de la fiesta saltó un fusible y la casa de Sofía se quedó a oscuras.",
+   "en": "Halfway through the party a fuse blew and Sofía's house was left in the dark.",
+   "ko": "파티 도중에 퓨즈가 나가서 소피아네 집이 깜깜해졌어요.",
+   "blank": "fusible",
+   "src": "made"
+  }
+ ],
  "w|fusil": [
   {
    "text": "En el museo militar, Mateo vio un fusil de la Primera Guerra Mundial.",
@@ -43606,6 +44294,22 @@
    "en": "Lola found out the company holds a charity gala every December.",
    "ko": "롤라는 회사가 매년 십이월에 자선 갈라를 연다는 걸 알게 됐어요.",
    "blank": "gala",
+   "src": "made"
+  }
+ ],
+ "w|galáctico": [
+  {
+   "text": "Lejos de la ciudad, el cielo estrellado tenía un aspecto galáctico que dejó a Pablo sin palabras.",
+   "en": "Far from the city, the starry sky had a galactic look that left Pablo speechless.",
+   "ko": "도시에서 멀리 떨어진 곳의 별이 가득한 하늘은 은하 같아서 파블로는 말을 잃었어요.",
+   "blank": "galáctico",
+   "src": "made"
+  },
+  {
+   "text": "Los compañeros dicen que Elena tiene una paciencia galáctica con los gatos más bravos.",
+   "en": "Her colleagues say Elena has galactic patience with the fiercest cats.",
+   "ko": "동료들은 엘레나가 가장 사나운 고양이 앞에서도 인내심이 우주급이라고 말해요.",
+   "blank": "galáctica",
    "src": "made"
   }
  ],
@@ -44510,6 +45214,22 @@
    "en": "The company organizes a gypsy guitar concert every summer.",
    "ko": "회사는 매년 여름 집시 기타 공연을 열어요.",
    "blank": "gitana",
+   "src": "made"
+  }
+ ],
+ "w|glaciar": [
+  {
+   "text": "El río nace en un glaciar que Pablo quiere visitar el año que viene.",
+   "en": "The river begins at a glacier that Pablo wants to visit next year.",
+   "ko": "이 강은 빙하에서 시작되는데 파블로는 내년에 거기 가 보고 싶어 해요.",
+   "blank": "glaciar",
+   "src": "made"
+  },
+  {
+   "text": "En la sala de espera de Elena hay un póster de un oso polar sobre un glaciar.",
+   "en": "In Elena's waiting room there's a poster of a polar bear on a glacier.",
+   "ko": "엘레나 병원 대기실에는 빙하 위 북극곰 포스터가 걸려 있어요.",
+   "blank": "glaciar",
    "src": "made"
   }
  ],
@@ -45725,6 +46445,22 @@
    "src": "made"
   }
  ],
+ "w|guisante": [
+  {
+   "text": "Para cenar junto al río, Pablo calentó una lata de arroz con guisantes.",
+   "en": "For dinner by the river, Pablo heated up a tin of rice with peas.",
+   "ko": "파블로는 강가에서 저녁으로 완두콩밥 통조림을 데웠어요.",
+   "blank": "guisantes",
+   "src": "made"
+  },
+  {
+   "text": "El hámster de Lucas se metió un guisante en el moflete y no quería soltarlo, y Elena se rio.",
+   "en": "Lucas's hamster stuffed a pea in its cheek and wouldn't let go, and Elena laughed.",
+   "ko": "루카스의 햄스터가 볼에 완두콩을 넣고 안 내놓아서 엘레나가 웃었어요.",
+   "blank": "guisante",
+   "src": "made"
+  }
+ ],
  "w|guitarra": [
   {
    "text": "Tocó la guitarra toda la tarde.",
@@ -46253,6 +46989,22 @@
    "en": "The fact is that it's raining.",
    "ko": "비 온다는 게 사실이야.",
    "blank": "hecho"
+  }
+ ],
+ "w|hedor": [
+  {
+   "text": "Cerca de la depuradora había un hedor tan fuerte que Pablo cambió de ruta.",
+   "en": "Near the water treatment plant there was such a strong stench that Pablo changed his route.",
+   "ko": "정수장 근처에 악취가 너무 심해서 파블로는 길을 바꿨어요.",
+   "blank": "hedor",
+   "src": "made"
+  },
+  {
+   "text": "El perro había comido algo podrido y tenía un hedor que llenó toda la consulta de Elena.",
+   "en": "The dog had eaten something rotten and gave off a stench that filled Elena's whole consulting room.",
+   "ko": "개가 상한 걸 먹어서 엘레나의 진료실 전체에 악취가 진동했어요.",
+   "blank": "hedor",
+   "src": "made"
   }
  ],
  "w|helada": [
@@ -47673,6 +48425,22 @@
    "blank": "huérfano"
   }
  ],
+ "w|huerto": [
+  {
+   "text": "El guarda tiene un huerto con tomates y lechugas, y le regaló a Pablo unos cuantos.",
+   "en": "The ranger has a vegetable garden with tomatoes and lettuces, and gave Pablo a few.",
+   "ko": "감시원은 토마토와 상추를 기르는 텃밭이 있어서 파블로에게 몇 개 나눠 줬어요.",
+   "blank": "huerto",
+   "src": "made"
+  },
+  {
+   "text": "Elena tiene un pequeño huerto detrás de la clínica donde cultiva hierbas para los conejos.",
+   "en": "Elena has a small vegetable patch behind the clinic where she grows herbs for the rabbits.",
+   "ko": "엘레나는 병원 뒤 작은 텃밭에서 토끼에게 줄 풀을 길러요.",
+   "blank": "huerto",
+   "src": "made"
+  }
+ ],
  "w|hueso": [
   {
    "text": "El perro mastica un hueso.",
@@ -48428,6 +49196,22 @@
    "en": "Elena painted an imaginary landscape with floating mountains.",
    "ko": "엘레나는 떠다니는 산이 있는 상상 속 풍경을 그렸어요.",
    "blank": "imaginario",
+   "src": "made"
+  }
+ ],
+ "w|imán": [
+  {
+   "text": "Pegado a la nevera vieja, Diego encontró un imán con forma de sol.",
+   "en": "Stuck to the old fridge, Diego found a sun-shaped magnet.",
+   "ko": "디에고는 낡은 냉장고에 붙은 해 모양 자석을 발견했어요.",
+   "blank": "imán",
+   "src": "made"
+  },
+  {
+   "text": "Cada amigo de Sofía se llevó un imán con la foto del grupo para la nevera.",
+   "en": "Each of Sofía's friends took home a fridge magnet with the group photo.",
+   "ko": "소피아의 친구들은 저마다 단체 사진이 들어간 냉장고 자석을 가져갔어요.",
+   "blank": "imán",
    "src": "made"
   }
  ],
@@ -49607,6 +50391,22 @@
    "src": "made"
   }
  ],
+ "w|indiferente": [
+  {
+   "text": "El zorro miró a Pablo con aire indiferente y siguió su camino.",
+   "en": "The fox looked at Pablo with an indifferent air and went on its way.",
+   "ko": "여우는 무심한 얼굴로 파블로를 보더니 가던 길을 갔어요.",
+   "blank": "indiferente",
+   "src": "made"
+  },
+  {
+   "text": "El gato se mostró indiferente cuando Elena le enseñó el juguete nuevo.",
+   "en": "The cat seemed indifferent when Elena showed it the new toy.",
+   "ko": "엘레나가 새 장난감을 보여 줘도 고양이는 시큰둥했어요.",
+   "blank": "indiferente",
+   "src": "made"
+  }
+ ],
  "w|indígena": [
   {
    "text": "Mateo hizo un trabajo sobre la cultura indígena de los Andes.",
@@ -50621,6 +51421,22 @@
    "src": "made"
   }
  ],
+ "w|inmobiliaria": [
+  {
+   "text": "La inmobiliaria le dijo a Diego que la casa valdría el doble después de la reforma.",
+   "en": "The estate agency told Diego the house would be worth twice as much after the renovation.",
+   "ko": "부동산 중개소는 디에고에게 수리하고 나면 집값이 두 배가 될 거라고 했어요.",
+   "blank": "inmobiliaria",
+   "src": "made"
+  },
+  {
+   "text": "Diana, que trabaja en una inmobiliaria, ayudó a Sofía a encontrar la casa rural.",
+   "en": "Diana, who works at an estate agency, helped Sofía find the country house.",
+   "ko": "부동산 중개소에서 일하는 디아나가 소피아가 시골집을 찾는 걸 도와줬어요.",
+   "blank": "inmobiliaria",
+   "src": "made"
+  }
+ ],
  "w|inmobiliario": [
   {
    "text": "Una agencia inmobiliaria del barrio le ayudó a Andrés a encontrar el piso.",
@@ -50820,6 +51636,22 @@
    "en": "Elena has an unforgettable memory of her first Sunday selling at the flea market.",
    "ko": "엘레나는 벼룩시장에서 처음 장사한 일요일을 잊지 못해요.",
    "blank": "inolvidable",
+   "src": "made"
+  }
+ ],
+ "w|inquietante": [
+  {
+   "text": "Al caer la tarde, el silencio del bosque le pareció a Pablo un poco inquietante.",
+   "en": "As evening fell, the silence of the forest seemed a little unsettling to Pablo.",
+   "ko": "해가 지자 파블로에게는 숲의 고요함이 조금 불안하게 느껴졌어요.",
+   "blank": "inquietante",
+   "src": "made"
+  },
+  {
+   "text": "La radiografía del perro mostraba una sombra inquietante, y Elena pidió más pruebas.",
+   "en": "The dog's X-ray showed a worrying shadow, and Elena ordered more tests.",
+   "ko": "개 엑스레이에 걱정스러운 그림자가 보여서 엘레나는 검사를 더 하자고 했어요.",
+   "blank": "inquietante",
    "src": "made"
   }
  ],
@@ -52309,6 +53141,22 @@
    "src": "made"
   }
  ],
+ "w|invernadero": [
+  {
+   "text": "Junto a la casa del guarda hay un invernadero donde crecen plantones de pino.",
+   "en": "Next to the ranger's house there's a greenhouse where pine seedlings grow.",
+   "ko": "감시원 집 옆에는 소나무 묘목이 자라는 온실이 있어요.",
+   "blank": "invernadero",
+   "src": "made"
+  },
+  {
+   "text": "La iguana estaba enferma porque vivía en un invernadero sin luz ultravioleta, le dijo Elena al dueño.",
+   "en": "The iguana was sick because it lived in a greenhouse without ultraviolet light, Elena told the owner.",
+   "ko": "엘레나는 주인에게 이구아나가 자외선 없는 온실에서 살아서 아팠다고 말했어요.",
+   "blank": "invernadero",
+   "src": "made"
+  }
+ ],
  "w|inversión": [
   {
    "text": "Hicieron una inversión segura en vivienda.",
@@ -53240,6 +54088,22 @@
    "en": "There was also a painting of a rider on a white horse.",
    "ko": "흰 말을 탄 기수 그림도 있었어요.",
    "blank": "jinete",
+   "src": "made"
+  }
+ ],
+ "w|jirafa": [
+  {
+   "text": "Pablo vio una nube con forma de jirafa sobre las copas de los árboles.",
+   "en": "Pablo saw a giraffe-shaped cloud over the treetops.",
+   "ko": "파블로는 나무 꼭대기 위로 기린 모양 구름을 봤어요.",
+   "blank": "jirafa",
+   "src": "made"
+  },
+  {
+   "text": "Durante la carrera, Elena hizo prácticas en un zoo y ayudó a curar a una jirafa.",
+   "en": "During her degree, Elena did an internship at a zoo and helped treat a giraffe.",
+   "ko": "엘레나는 대학 시절 동물원에서 실습하며 기린 치료를 도왔어요.",
+   "blank": "jirafa",
    "src": "made"
   }
  ],
@@ -54333,6 +55197,22 @@
    "blank": "largo"
   }
  ],
+ "w|larva": [
+  {
+   "text": "Pablo levantó una piedra del río y encontró una larva de libélula pegada debajo.",
+   "en": "Pablo lifted a stone in the river and found a dragonfly larva stuck underneath.",
+   "ko": "파블로가 강의 돌을 들추자 밑에 잠자리 애벌레가 붙어 있었어요.",
+   "blank": "larva",
+   "src": "made"
+  },
+  {
+   "text": "Al examinar al perro, Elena encontró una larva de mosca en la herida.",
+   "en": "Examining the dog, Elena found a fly larva in the wound.",
+   "ko": "엘레나는 개를 살펴보다가 상처에서 파리 유충을 발견했어요.",
+   "blank": "larva",
+   "src": "made"
+  }
+ ],
  "w|láser": [
   {
    "text": "Mateo usó un puntero láser para jugar con el gato.",
@@ -55399,6 +56279,22 @@
    "blank": "lidiar"
   }
  ],
+ "w|liebre": [
+  {
+   "text": "Una liebre salió corriendo de entre los arbustos y asustó a Pablo.",
+   "en": "A hare dashed out from the bushes and startled Pablo.",
+   "ko": "산토끼 한 마리가 덤불에서 튀어나와 파블로를 놀라게 했어요.",
+   "blank": "liebre",
+   "src": "made"
+  },
+  {
+   "text": "Un cazador trajo a Elena una liebre con una pata rota.",
+   "en": "A hunter brought Elena a hare with a broken leg.",
+   "ko": "한 사냥꾼이 다리가 부러진 산토끼를 엘레나에게 데려왔어요.",
+   "blank": "liebre",
+   "src": "made"
+  }
+ ],
  "w|lienzo": [
   {
    "text": "Pablo recuperó un lienzo robado del museo que estaba escondido en un garaje.",
@@ -56327,6 +57223,22 @@
    "en": "She considers the diploma her greatest achievement.",
    "ko": "그 학위를 자신의 가장 큰 성과로 여겨.",
    "blank": "logro"
+  }
+ ],
+ "w|lona": [
+  {
+   "text": "Cuando empezó a llover, Diego cubrió los sacos de cemento con una lona.",
+   "en": "When it started to rain, Diego covered the cement bags with a tarp.",
+   "ko": "비가 오기 시작하자 디에고는 시멘트 포대를 방수포로 덮었어요.",
+   "blank": "lona",
+   "src": "made"
+  },
+  {
+   "text": "Como amenazaba lluvia, montaron una lona sobre la mesa del patio de Sofía.",
+   "en": "As rain was threatening, they put up a tarp over the table in Sofía's patio.",
+   "ko": "비가 올 것 같아서 소피아네 마당 식탁 위에 천막을 쳤어요.",
+   "blank": "lona",
+   "src": "made"
   }
  ],
  "w|longitud": [
@@ -57633,6 +58545,22 @@
    "blank": "manta"
   }
  ],
+ "w|manteca": [
+  {
+   "text": "La abuela de Diego guardaba la manteca en un tarro de barro en la despensa.",
+   "en": "Diego's grandmother kept the lard in a clay jar in the pantry.",
+   "ko": "디에고의 할머니는 라드를 식료품 창고의 흙 항아리에 보관했어요.",
+   "blank": "manteca",
+   "src": "made"
+  },
+  {
+   "text": "En el pueblo de Sofía, las magdalenas se hacen con manteca y quedan muy tiernas.",
+   "en": "In Sofía's village, muffins are made with lard and turn out very soft.",
+   "ko": "소피아네 마을에서는 머핀을 라드로 만들어서 아주 부드러워요.",
+   "blank": "manteca",
+   "src": "made"
+  }
+ ],
  "w|mantener": [
   {
    "text": "Mantén la calma, ¿sí?",
@@ -58555,6 +59483,22 @@
    "en": "This material is very sturdy.",
    "ko": "이 소재는 아주 튼튼해.",
    "blank": "material"
+  }
+ ],
+ "w|maternidad": [
+  {
+   "text": "Diego encontró en un cajón unas cartas de su bisabuela sobre la maternidad y la vida en el campo.",
+   "en": "Diego found some letters in a drawer from his great-grandmother about motherhood and life in the countryside.",
+   "ko": "디에고는 서랍에서 증조할머니가 모성과 시골 생활에 대해 쓴 편지들을 찾았어요.",
+   "blank": "maternidad",
+   "src": "made"
+  },
+  {
+   "text": "Marta habló de la maternidad y de lo mucho que le ha cambiado la vida desde que nació su hija.",
+   "en": "Marta talked about motherhood and how much her life has changed since her daughter was born.",
+   "ko": "마르타는 엄마가 된다는 것과 딸이 태어난 뒤 삶이 얼마나 바뀌었는지 이야기했어요.",
+   "blank": "maternidad",
+   "src": "made"
   }
  ],
  "w|matón": [
@@ -63877,6 +64821,22 @@
    "blank": "nudo"
   }
  ],
+ "w|nuera": [
+  {
+   "text": "La nuera del guarda forestal le preparó a Pablo un mapa de los senderos.",
+   "en": "The forest ranger's daughter-in-law made Pablo a map of the trails.",
+   "ko": "산림 감시원의 며느리가 파블로에게 오솔길 지도를 그려 줬어요.",
+   "blank": "nuera",
+   "src": "made"
+  },
+  {
+   "text": "Doña Carmen vino a la consulta de Elena con su nuera y el loro de la familia.",
+   "en": "Doña Carmen came to Elena's practice with her daughter-in-law and the family parrot.",
+   "ko": "카르멘 할머니는 며느리와 집 앵무새를 데리고 엘레나의 진료실에 왔어요.",
+   "blank": "nuera",
+   "src": "made"
+  }
+ ],
  "w|nuestro": [
   {
    "text": "Nuestro perro es enorme.",
@@ -64238,6 +65198,22 @@
    "en": "Carmen rubbed out an obscene drawing someone had made on the whiteboard.",
    "ko": "카르멘은 누가 칠판에 그려 놓은 음란한 낙서를 지웠어요.",
    "blank": "obsceno",
+   "src": "made"
+  }
+ ],
+ "w|obsequio": [
+  {
+   "text": "El guarda le dio a Pablo una bellota tallada como obsequio de despedida.",
+   "en": "The ranger gave Pablo a carved acorn as a farewell gift.",
+   "ko": "감시원은 파블로에게 작별 선물로 깎아 만든 도토리를 줬어요.",
+   "blank": "obsequio",
+   "src": "made"
+  },
+  {
+   "text": "Una familia agradecida le trajo a Elena un ramo de flores como obsequio.",
+   "en": "A grateful family brought Elena a bouquet of flowers as a gift.",
+   "ko": "고마워하는 한 가족이 엘레나에게 꽃다발을 선물로 가져왔어요.",
+   "blank": "obsequio",
    "src": "made"
   }
  ],
@@ -65050,6 +66026,22 @@
    "en": "Elena's penthouse neighbor has an almost Olympic-size pool.",
    "ko": "엘레나네 꼭대기 층 이웃은 올림픽 규격에 가까운 수영장이 있어요.",
    "blank": "olímpica",
+   "src": "made"
+  }
+ ],
+ "w|olivo": [
+  {
+   "text": "Pablo se sentó a la sombra de un olivo para comerse el bocadillo.",
+   "en": "Pablo sat in the shade of an olive tree to eat his sandwich.",
+   "ko": "파블로는 샌드위치를 먹으려고 올리브나무 그늘에 앉았어요.",
+   "blank": "olivo",
+   "src": "made"
+  },
+  {
+   "text": "La clínica de Elena está en una calle con un olivo centenario en la acera.",
+   "en": "Elena's clinic is on a street with a hundred-year-old olive tree on the pavement.",
+   "ko": "엘레나의 병원은 인도에 백 년 된 올리브나무가 있는 거리에 있어요.",
+   "blank": "olivo",
    "src": "made"
   }
  ],
@@ -68823,6 +69815,22 @@
    "blank": "perdono"
   }
  ],
+ "w|peregrino": [
+  {
+   "text": "En el desván, Diego encontró una figurita de un peregrino con su bastón y su concha.",
+   "en": "In the attic, Diego found a little figure of a pilgrim with his staff and shell.",
+   "ko": "디에고는 다락방에서 지팡이와 조개껍데기를 든 순례자 인형을 찾았어요.",
+   "blank": "peregrino",
+   "src": "made"
+  },
+  {
+   "text": "Uno de los amigos de Sofía acaba de volver del Camino y todos lo llaman el peregrino.",
+   "en": "One of Sofía's friends has just come back from the Camino and everyone calls him the pilgrim.",
+   "ko": "소피아의 친구 한 명이 순례길에서 막 돌아와서 다들 그를 순례자라고 불러요.",
+   "blank": "peregrino",
+   "src": "made"
+  }
+ ],
  "w|perezoso": [
   {
    "text": "El gato de Andrés es tan perezoso que duerme todo el día junto a la estufa.",
@@ -69187,6 +70195,22 @@
    "en": "He chased his dream without giving up.",
    "ko": "포기하지 않고 꿈을 쫓았어.",
    "blank": "Persiguió"
+  }
+ ],
+ "w|persiana": [
+  {
+   "text": "La persiana del dormitorio no baja, y Diego tiene que cambiar la cinta.",
+   "en": "The bedroom blind won't come down, and Diego has to replace the strap.",
+   "ko": "침실 블라인드가 안 내려가서 디에고는 끈을 갈아야 해요.",
+   "blank": "persiana",
+   "src": "made"
+  },
+  {
+   "text": "Sofía bajó la persiana porque el sol daba de lleno en la mesa.",
+   "en": "Sofía lowered the blind because the sun was shining right on the table.",
+   "ko": "햇빛이 식탁에 정면으로 들어서 소피아는 블라인드를 내렸어요.",
+   "blank": "persiana",
+   "src": "made"
   }
  ],
  "w|persistente": [
@@ -71149,6 +72173,22 @@
    "blank": "pongo"
   }
  ],
+ "w|popa": [
+  {
+   "text": "En el salón de Diego cuelga un cuadro de un velero, y en la popa se lee el nombre de la casa.",
+   "en": "In Diego's living room hangs a painting of a sailboat, and on the stern you can read the name of the house.",
+   "ko": "디에고네 거실에는 범선 그림이 걸려 있는데, 배 뒷부분에 집 이름이 적혀 있어요.",
+   "blank": "popa",
+   "src": "made"
+  },
+  {
+   "text": "Pablo contó que había pasado el verano trabajando en la popa de un barco de pesca.",
+   "en": "Pablo said he had spent the summer working at the stern of a fishing boat.",
+   "ko": "파블로는 여름 내내 고깃배 뒤쪽에서 일했다고 했어요.",
+   "blank": "popa",
+   "src": "made"
+  }
+ ],
  "w|popular": [
   {
    "text": "Esa canción se volvió muy popular.",
@@ -72172,6 +73212,22 @@
    "en": "Marta ran a preliminary half-marathon in the spring.",
    "ko": "마르타는 봄에 예비 대회로 하프 마라톤을 뛰었어요.",
    "blank": "preliminar",
+   "src": "made"
+  }
+ ],
+ "w|prematuro": [
+  {
+   "text": "El arquitecto le dijo a Diego que sería prematuro tirar el muro antes de revisar la estructura.",
+   "en": "The architect told Diego it would be premature to knock down the wall before checking the structure.",
+   "ko": "건축가는 디에고에게 구조를 점검하기 전에 벽을 허무는 건 성급하다고 말했어요.",
+   "blank": "prematuro",
+   "src": "made"
+  },
+  {
+   "text": "El hijo de Marta fue prematuro, pero ahora es el niño más alto de su clase.",
+   "en": "Marta's son was premature, but now he's the tallest boy in his class.",
+   "ko": "마르타의 아들은 일찍 태어났지만 지금은 반에서 키가 제일 커요.",
+   "blank": "prematuro",
    "src": "made"
   }
  ],
@@ -74777,6 +75833,22 @@
    "src": "made"
   }
  ],
+ "w|pulpo": [
+  {
+   "text": "En la cocina vieja, Diego halló un azulejo pintado con un pulpo azul.",
+   "en": "In the old kitchen, Diego found a tile painted with a blue octopus.",
+   "ko": "디에고는 옛 부엌에서 파란 문어가 그려진 타일을 발견했어요.",
+   "blank": "pulpo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía pidió pulpo a la gallega para compartir con todo el grupo.",
+   "en": "Sofía ordered Galician-style octopus to share with the whole group.",
+   "ko": "소피아는 다 같이 나눠 먹으려고 갈리시아식 문어 요리를 시켰어요.",
+   "blank": "pulpo",
+   "src": "made"
+  }
+ ],
  "w|pulsar": [
   {
    "text": "Sergio solo tiene que pulsar un botón para publicar la noticia en la web.",
@@ -74821,6 +75893,22 @@
    "en": "I feel my pulse racing from nerves.",
    "ko": "긴장해서 맥박이 빨라진 게 느껴져.",
    "blank": "pulso"
+  }
+ ],
+ "w|puma": [
+  {
+   "text": "En el centro de visitantes, Pablo vio un puma disecado y se quedó impresionado.",
+   "en": "At the visitor centre, Pablo saw a stuffed puma and was amazed.",
+   "ko": "파블로는 방문자 센터에서 박제된 퓨마를 보고 깜짝 놀랐어요.",
+   "blank": "puma",
+   "src": "made"
+  },
+  {
+   "text": "El gato de Ana es tan grande que Elena bromea diciendo que parece un puma.",
+   "en": "Ana's cat is so big that Elena jokes it looks like a puma.",
+   "ko": "아나의 고양이가 너무 커서 엘레나는 퓨마 같다고 농담해요.",
+   "blank": "puma",
+   "src": "made"
   }
  ],
  "w|puñado": [
@@ -75790,6 +76878,22 @@
    "en": "For her birthday, her coworkers gave Carmen a bouquet of roses.",
    "ko": "생일에 동료들이 카르멘에게 장미 꽃다발을 선물했어요.",
    "blank": "ramo",
+   "src": "made"
+  }
+ ],
+ "w|rampa": [
+  {
+   "text": "Para subir la carretilla al porche, Diego construyó una rampa con tablones.",
+   "en": "To get the wheelbarrow up to the porch, Diego built a ramp out of planks.",
+   "ko": "디에고는 손수레를 현관까지 올리려고 널빤지로 경사로를 만들었어요.",
+   "blank": "rampa",
+   "src": "made"
+  },
+  {
+   "text": "El restaurante tenía una rampa en la entrada, así que Lucía pudo entrar con la silla de ruedas sin problema.",
+   "en": "The restaurant had a ramp at the entrance, so Lucía could get in with her wheelchair without any trouble.",
+   "ko": "식당 입구에 경사로가 있어서 루시아는 휠체어를 타고 문제없이 들어갈 수 있었어요.",
+   "blank": "rampa",
    "src": "made"
   }
  ],
@@ -80389,6 +81493,22 @@
    "src": "made"
   }
  ],
+ "w|rinoceronte": [
+  {
+   "text": "En el museo del parque natural, a Pablo le sorprendió ver un fósil de rinoceronte lanudo.",
+   "en": "In the nature park museum, Pablo was surprised to see a fossil of a woolly rhinoceros.",
+   "ko": "자연공원 박물관에서 파블로는 털코뿔소 화석을 보고 놀랐어요.",
+   "blank": "rinoceronte",
+   "src": "made"
+  },
+  {
+   "text": "En la pared de la consulta de Elena hay un dibujo de un rinoceronte que le hizo su sobrino.",
+   "en": "On the wall of Elena's consulting room there's a drawing of a rhinoceros her nephew made for her.",
+   "ko": "엘레나의 진료실 벽에는 조카가 그려 준 코뿔소 그림이 있어요.",
+   "blank": "rinoceronte",
+   "src": "made"
+  }
+ ],
  "w|riñón": [
   {
    "text": "Le duele el riñón después del golpe.",
@@ -82147,6 +83267,22 @@
    "blank": "sargento"
   }
  ],
+ "w|sartén": [
+  {
+   "text": "La única sartén que quedaba en la casa estaba tan oxidada que Diego la tiró.",
+   "en": "The only frying pan left in the house was so rusty that Diego threw it out.",
+   "ko": "집에 남은 프라이팬 하나가 너무 녹슬어서 디에고는 버렸어요.",
+   "blank": "sartén",
+   "src": "made"
+  },
+  {
+   "text": "Sofía sirvió las tortillas directamente en la sartén, en medio de la mesa.",
+   "en": "Sofía served the omelettes straight in the frying pan, in the middle of the table.",
+   "ko": "소피아는 토르티야를 프라이팬째 식탁 가운데에 내놓았어요.",
+   "blank": "sartén",
+   "src": "made"
+  }
+ ],
  "w|sastre": [
   {
    "text": "Diego llevó su chaqueta de cocinero al sastre para que le arreglara las mangas.",
@@ -83433,6 +84569,22 @@
    "en": "She finished in seventh place in the race.",
    "ko": "경주에서 일곱 번째로 들어왔어.",
    "blank": "séptimo"
+  }
+ ],
+ "w|sequía": [
+  {
+   "text": "Tras la sequía del verano, el río llevaba tan poca agua que Pablo pudo cruzarlo andando.",
+   "en": "After the summer drought, the river had so little water that Pablo could walk across it.",
+   "ko": "여름 가뭄 뒤라 강물이 적어서 파블로는 걸어서 건널 수 있었어요.",
+   "blank": "sequía",
+   "src": "made"
+  },
+  {
+   "text": "Con la sequía, Elena atiende a más ovejas deshidratadas que nunca.",
+   "en": "With the drought, Elena is treating more dehydrated sheep than ever.",
+   "ko": "가뭄 때문에 엘레나는 탈수된 양을 그 어느 때보다 많이 진료해요.",
+   "blank": "sequía",
+   "src": "made"
   }
  ],
  "w|ser": [
@@ -85321,6 +86473,22 @@
    "blank": "sonrió"
   }
  ],
+ "w|sonriente": [
+  {
+   "text": "El fontanero llegó sonriente porque Diego le había dicho que la avería era pequeña.",
+   "en": "The plumber arrived smiling because Diego had told him the fault was small.",
+   "ko": "디에고가 고장이 작다고 해서 배관공은 웃으며 왔어요.",
+   "blank": "sonriente",
+   "src": "made"
+  },
+  {
+   "text": "En la foto de grupo, Sofía sale sonriente entre sus dos mejores amigas.",
+   "en": "In the group photo, Sofía is smiling between her two best friends.",
+   "ko": "단체 사진에서 소피아는 가장 친한 친구 둘 사이에서 웃고 있어요.",
+   "blank": "sonriente",
+   "src": "made"
+  }
+ ],
  "w|sonrisa": [
   {
    "text": "Su sonrisa iluminó toda la habitación.",
@@ -85422,6 +86590,22 @@
    "en": "Lola bought a stand for the front desk tablet.",
    "ko": "롤라는 프런트 태블릿 거치대를 샀어요.",
    "blank": "soporte",
+   "src": "made"
+  }
+ ],
+ "w|sorbo": [
+  {
+   "text": "Pablo bebió un sorbo de agua del termo y siguió subiendo por el bosque.",
+   "en": "Pablo took a sip of water from the thermos and kept climbing through the forest.",
+   "ko": "파블로는 보온병 물을 한 모금 마시고 계속 숲을 올라갔어요.",
+   "blank": "sorbo",
+   "src": "made"
+  },
+  {
+   "text": "Elena tomó un sorbo de café frío entre consulta y consulta.",
+   "en": "Elena took a sip of cold coffee between appointments.",
+   "ko": "엘레나는 진료 사이사이에 식은 커피를 한 모금 마셨어요.",
+   "blank": "sorbo",
    "src": "made"
   }
  ],
@@ -87809,6 +88993,22 @@
    "blank": "tela"
   }
  ],
+ "w|telaraña": [
+  {
+   "text": "Al amanecer, cada telaraña del sendero brillaba con gotas de rocío, y Pablo sacó la cámara.",
+   "en": "At dawn, every spider web on the path glittered with dew, and Pablo took out his camera.",
+   "ko": "새벽에 길가 거미줄마다 이슬이 반짝여서 파블로는 카메라를 꺼냈어요.",
+   "blank": "telaraña",
+   "src": "made"
+  },
+  {
+   "text": "En el rincón del almacén de la clínica había una telaraña enorme, y Elena la quitó con la escoba.",
+   "en": "In the corner of the clinic's storeroom there was a huge cobweb, and Elena removed it with the broom.",
+   "ko": "병원 창고 구석에 큰 거미줄이 있어서 엘레나가 빗자루로 걷어 냈어요.",
+   "blank": "telaraña",
+   "src": "made"
+  }
+ ],
  "w|tele": [
   {
    "text": "Apagué la tele y me fui a dormir.",
@@ -88448,6 +89648,22 @@
    "en": "The boy in the next seat was very stubborn and wouldn't take his shoes off the table, Sofía said.",
    "ko": "옆자리 아이가 너무 고집이 세서 탁자에서 신발을 안 내렸다고 소피아가 말했어요.",
    "blank": "terco",
+   "src": "made"
+  }
+ ],
+ "w|térmico": [
+  {
+   "text": "Por la noche baja mucho la temperatura, así que Pablo se puso una camiseta térmica.",
+   "en": "At night the temperature drops a lot, so Pablo put on a thermal shirt.",
+   "ko": "밤에는 기온이 많이 떨어져서 파블로는 보온 셔츠를 입었어요.",
+   "blank": "térmica",
+   "src": "made"
+  },
+  {
+   "text": "Para los cachorros recién nacidos, Elena usa una manta térmica que mantiene el calor.",
+   "en": "For newborn puppies, Elena uses a thermal blanket that keeps them warm.",
+   "ko": "엘레나는 갓 태어난 강아지들에게 온기를 지켜 주는 보온 담요를 써요.",
+   "blank": "térmica",
    "src": "made"
   }
  ],
@@ -89669,6 +90885,22 @@
    "blank": "torre"
   }
  ],
+ "w|torrente": [
+  {
+   "text": "Después de la tormenta, el arroyo se convirtió en un torrente y Pablo no pudo cruzarlo.",
+   "en": "After the storm, the stream turned into a torrent and Pablo couldn't cross it.",
+   "ko": "폭풍이 지나자 개울이 급류로 변해서 파블로는 건널 수 없었어요.",
+   "blank": "torrente",
+   "src": "made"
+  },
+  {
+   "text": "Ese lunes entró en la clínica un torrente de pacientes después del puente festivo, y Elena no paró ni para comer.",
+   "en": "That Monday a flood of patients came into the clinic after the long weekend, and Elena didn't stop even to eat.",
+   "ko": "연휴 뒤 그 월요일에는 환자가 쏟아져 들어와서 엘레나는 밥 먹을 틈도 없었어요.",
+   "blank": "torrente",
+   "src": "made"
+  }
+ ],
  "w|torso": [
   {
    "text": "Mateo se mira el torso en el espejo para ver si los abdominales se notan más.",
@@ -90651,6 +91883,22 @@
    "src": "made"
   }
  ],
+ "w|trasto": [
+  {
+   "text": "Diego llevó al punto limpio cada trasto que había en el garaje.",
+   "en": "Diego took every bit of junk in the garage to the recycling centre.",
+   "ko": "디에고는 차고에 있던 잡동사니를 하나하나 재활용 센터로 가져갔어요.",
+   "blank": "trasto",
+   "src": "made"
+  },
+  {
+   "text": "Javier aún conserva cada trasto del piso de estudiantes que compartió con Sofía.",
+   "en": "Javier still keeps every bit of junk from the student flat he shared with Sofía.",
+   "ko": "하비에르는 소피아와 함께 살던 학생 시절 집의 잡동사니를 아직도 다 갖고 있어요.",
+   "blank": "trasto",
+   "src": "made"
+  }
+ ],
  "w|trastorno": [
   {
    "text": "Andrés explicó que algunos perros sufren un trastorno de ansiedad cuando se quedan solos.",
@@ -91623,6 +92871,22 @@
    "en": "Can I have the last piece?",
    "ko": "마지막 조각 나 줄래?",
    "blank": "último"
+  }
+ ],
+ "w|umbral": [
+  {
+   "text": "El umbral de la puerta principal está tan gastado que Diego lo va a cambiar.",
+   "en": "The threshold of the front door is so worn that Diego is going to replace it.",
+   "ko": "현관 문지방이 너무 닳아서 디에고는 새로 바꿀 거예요.",
+   "blank": "umbral",
+   "src": "made"
+  },
+  {
+   "text": "Al cruzar el umbral, Sofía reconoció enseguida la voz de su amiga Elena.",
+   "en": "As she crossed the threshold, Sofía immediately recognised her friend Elena's voice.",
+   "ko": "문지방을 넘자마자 소피아는 친구 엘레나의 목소리를 알아들었어요.",
+   "blank": "umbral",
+   "src": "made"
   }
  ],
  "w|uña": [
@@ -93936,6 +95200,22 @@
    "en": "Nuria learned to make a Vietnamese sandwich with crusty bread.",
    "ko": "누리아는 바삭한 빵으로 베트남식 샌드위치 만드는 법을 배웠어요.",
    "blank": "vietnamita",
+   "src": "made"
+  }
+ ],
+ "w|viga": [
+  {
+   "text": "Una viga del techo estaba podrida, así que Diego llamó a un carpintero.",
+   "en": "One of the ceiling beams was rotten, so Diego called a carpenter.",
+   "ko": "천장 들보 하나가 썩어서 디에고는 목수를 불렀어요.",
+   "blank": "viga",
+   "src": "made"
+  },
+  {
+   "text": "La casa rural que alquiló Sofía tiene vigas de madera en el techo.",
+   "en": "The country house Sofía rented has wooden beams on the ceiling.",
+   "ko": "소피아가 빌린 시골집은 천장에 나무 들보가 있어요.",
+   "blank": "vigas",
    "src": "made"
   }
  ],

@@ -497,6 +497,22 @@
    "src": "made"
   }
  ],
+ "w|acclamation": [
+  {
+   "text": "Le discours de Louis est accueilli par une acclamation générale dans la salle des fêtes.",
+   "en": "Louis's speech is greeted with general cheering in the village hall.",
+   "ko": "루이의 연설에 마을 회관이 온통 환호로 가득해요.",
+   "blank": "acclamation",
+   "src": "made"
+  },
+  {
+   "text": "Claire décrit l'acclamation du public à la fin du concert de sa fille.",
+   "en": "Claire describes the audience's cheers at the end of her daughter's concert.",
+   "ko": "클레르는 딸의 연주회 끝에 관객이 환호하던 모습을 적어요.",
+   "blank": "acclamation",
+   "src": "made"
+  }
+ ],
  "w|accompagner": [
   {
    "text": "Je peux t’accompagner à la gare si tu veux.",
@@ -791,6 +807,22 @@
    "blank": "acier"
   }
  ],
+ "w|acquérir": [
+  {
+   "text": "La commune souhaite acquérir le vieux cinéma pour en faire une médiathèque, explique Louis.",
+   "en": "The town wants to acquire the old cinema to turn it into a media library, Louis explains.",
+   "ko": "루이는 시가 옛 영화관을 사들여 도서관으로 만들려 한다고 설명해요.",
+   "blank": "acquérir",
+   "src": "made"
+  },
+  {
+   "text": "Claire annonce à son ami qu'elle vient d'acquérir une petite maison au bord de la mer.",
+   "en": "Claire tells her friend she has just bought a small house by the sea.",
+   "ko": "클레르는 친구에게 바닷가 작은 집을 막 샀다고 알려요.",
+   "blank": "acquérir",
+   "src": "made"
+  }
+ ],
  "w|acquis": [
   {
    "text": "Les syndicats veulent protéger les acquis des salariés, explique Thomas.",
@@ -1012,6 +1044,22 @@
    "en": "After the race, Claire's brother insists on paying the bill at the restaurant.",
    "ko": "경주가 끝나고 클레르의 오빠는 식당에서 자기가 계산하겠다고 고집해요.",
    "blank": "addition",
+   "src": "made"
+  }
+ ],
+ "w|adéquat": [
+  {
+   "text": "Paul vérifie qu'il a un équipement adéquat avant de partir en montagne.",
+   "en": "Paul checks he has the right equipment before heading into the mountains.",
+   "ko": "폴은 산에 가기 전에 알맞은 장비를 챙겼는지 확인해요.",
+   "blank": "adéquat",
+   "src": "made"
+  },
+  {
+   "text": "Émilie cherche un cadeau adéquat pour sa belle-mère, qui a déjà tout.",
+   "en": "Émilie is looking for a suitable gift for her mother-in-law, who already has everything.",
+   "ko": "에밀리는 이미 다 가진 시어머니께 드릴 알맞은 선물을 찾아요.",
+   "blank": "adéquat",
    "src": "made"
   }
  ],
@@ -2297,6 +2345,22 @@
    "src": "made"
   }
  ],
+ "w|allégation": [
+  {
+   "text": "Louis refuse de commenter la moindre allégation publiée dans le journal local.",
+   "en": "Louis refuses to comment on any allegation published in the local paper.",
+   "ko": "루이는 지역 신문에 실린 어떤 의혹에도 언급하지 않겠다고 해요.",
+   "blank": "allégation",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit qu'elle ne croit pas à l'allégation selon laquelle leur ancien lycée va fermer.",
+   "en": "Claire writes that she doesn't believe the claim that their old high school is going to close.",
+   "ko": "클레르는 모교가 문을 닫는다는 주장을 믿지 않는다고 써요.",
+   "blank": "allégation",
+   "src": "made"
+  }
+ ],
  "w|allégeance": [
   {
    "text": "Le gang exigeait une allégeance totale de ses membres, raconte Thomas.",
@@ -2549,6 +2613,22 @@
    "blank": "Alors"
   }
  ],
+ "w|alphabet": [
+  {
+   "text": "Louis classe les dossiers des habitants par ordre de l'alphabet.",
+   "en": "Louis files the residents' records in alphabetical order.",
+   "ko": "루이는 주민 서류를 알파벳순으로 정리해요.",
+   "blank": "alphabet",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte que sa petite-fille connaît déjà tout l'alphabet par cœur.",
+   "en": "Claire writes that her granddaughter already knows the whole alphabet by heart.",
+   "ko": "클레르는 손녀가 벌써 알파벳을 다 외운다고 써요.",
+   "blank": "alphabet",
+   "src": "made"
+  }
+ ],
  "w|alternative": [
   {
    "text": "Si la salle des fêtes est prise, Julien propose une alternative au gymnase.",
@@ -2712,6 +2792,22 @@
    "en": "Inès's neighbor is a paramedic and often gets home late at night.",
    "ko": "이네스의 이웃은 구급대원이라 밤늦게 들어올 때가 많아요.",
    "blank": "ambulancier",
+   "src": "made"
+  }
+ ],
+ "w|ambulant": [
+  {
+   "text": "Louis accorde une autorisation à un vendeur ambulant pour le marché de Noël.",
+   "en": "Louis grants a permit to a street vendor for the Christmas market.",
+   "ko": "루이는 크리스마스 시장에 나올 노점상에게 허가를 내줘요.",
+   "blank": "ambulant",
+   "src": "made"
+  },
+  {
+   "text": "Claire se rappelle le marchand ambulant qui vendait des crêpes devant leur lycée.",
+   "en": "Claire remembers the street seller who sold crêpes outside their high school.",
+   "ko": "클레르는 고등학교 앞에서 크레프를 팔던 떠돌이 장수를 떠올려요.",
+   "blank": "ambulant",
    "src": "made"
   }
  ],
@@ -3450,6 +3546,22 @@
    "en": "The chef explains to Léa that vinegar acts almost like a natural antibiotic.",
    "ko": "셰프는 레아에게 식초가 거의 천연 항생제처럼 작용한다고 설명해요.",
    "blank": "antibiotique",
+   "src": "made"
+  }
+ ],
+ "w|anticiper": [
+  {
+   "text": "Louis essaie d'anticiper les questions des journalistes avant la conférence de presse.",
+   "en": "Louis tries to anticipate the journalists' questions before the press conference.",
+   "ko": "루이는 기자 회견 전에 기자들의 질문을 미리 짐작해 봐요.",
+   "blank": "anticiper",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit qu'elle n'avait pas su anticiper à quel point leur ville natale changerait.",
+   "en": "Claire writes that she hadn't foreseen how much their hometown would change.",
+   "ko": "클레르는 고향이 이렇게나 바뀔 줄은 미처 몰랐다고 써요.",
+   "blank": "anticiper",
    "src": "made"
   }
  ],
@@ -5127,6 +5239,22 @@
    "en": "The atmosphere here is really relaxed.",
    "ko": "여기 분위기가 정말 편해.",
    "blank": "atmosphère"
+  }
+ ],
+ "w|atome": [
+  {
+   "text": "Autour du feu, Paul explique à son fils que tout, même une flamme, est fait d'atomes.",
+   "en": "Around the fire, Paul explains to his son that everything, even a flame, is made of atoms.",
+   "ko": "모닥불 옆에서 폴은 아들에게 불꽃까지도 모두 원자로 되어 있다고 설명해요.",
+   "blank": "atomes",
+   "src": "made"
+  },
+  {
+   "text": "Pendant les vacances, Émilie regarde un documentaire sur l'atome avec ses enfants.",
+   "en": "During the holidays, Émilie watches a documentary about the atom with her children.",
+   "ko": "방학 동안 에밀리는 아이들과 원자에 관한 다큐멘터리를 봐요.",
+   "blank": "atome",
+   "src": "made"
   }
  ],
  "w|atout": [
@@ -8139,6 +8267,22 @@
    "blank": "blague"
   }
  ],
+ "w|blaireau": [
+  {
+   "text": "À la tombée de la nuit, Paul aperçoit un blaireau qui sort de son terrier.",
+   "en": "At nightfall, Paul spots a badger coming out of its burrow.",
+   "ko": "해 질 무렵 폴은 굴에서 나오는 오소리를 봐요.",
+   "blank": "blaireau",
+   "src": "made"
+  },
+  {
+   "text": "Émilie offre à son mari un blaireau en poils naturels pour se raser.",
+   "en": "Émilie gives her husband a natural-bristle shaving brush.",
+   "ko": "에밀리는 남편에게 천연모 면도 솔을 선물해요.",
+   "blank": "blaireau",
+   "src": "made"
+  }
+ ],
  "w|blâme": [
   {
    "text": "Thomas craint de recevoir un blâme s'il envoie le mauvais fichier au client.",
@@ -9453,6 +9597,22 @@
    "blank": "briller"
   }
  ],
+ "w|brin": [
+  {
+   "text": "Couché dans l'herbe, Paul mâchonne un brin d'herbe en regardant les étoiles.",
+   "en": "Lying in the grass, Paul chews a blade of grass while watching the stars.",
+   "ko": "풀밭에 누운 폴은 풀잎 하나를 씹으며 별을 봐요.",
+   "blank": "brin",
+   "src": "made"
+  },
+  {
+   "text": "Émilie ajoute un brin de romarin dans la marmite de ragoût.",
+   "en": "Émilie adds a sprig of rosemary to the stew pot.",
+   "ko": "에밀리는 스튜 냄비에 로즈메리 한 줄기를 넣어요.",
+   "blank": "brin",
+   "src": "made"
+  }
+ ],
  "w|brique": [
   {
    "text": "Sous le plâtre, Louis découvre un beau mur en brique.",
@@ -9659,6 +9819,22 @@
    "src": "made"
   }
  ],
+ "w|brume": [
+  {
+   "text": "Au réveil, une épaisse brume recouvre la vallée, et Paul ne voit plus la rivière.",
+   "en": "When he wakes up, a thick mist covers the valley, and Paul can't see the river anymore.",
+   "ko": "폴이 깨어 보니 짙은 안개가 골짜기를 덮어 강이 안 보여요.",
+   "blank": "brume",
+   "src": "made"
+  },
+  {
+   "text": "Ce matin, Émilie boit son café en regardant la brume se lever sur les champs.",
+   "en": "This morning, Émilie drinks her coffee watching the mist rise over the fields.",
+   "ko": "오늘 아침 에밀리는 들판 위로 안개가 걷히는 걸 보며 커피를 마셔요.",
+   "blank": "brume",
+   "src": "made"
+  }
+ ],
  "w|brun": [
   {
    "text": "Selon le témoin, le voleur portait une veste brune, note Antoine.",
@@ -9704,6 +9880,22 @@
    "en": "A sudden change in the weather forces Manon to leave the beach.",
    "ko": "날씨가 갑자기 바뀌어서 마농은 해변을 떠나야 해요.",
    "blank": "brutal",
+   "src": "made"
+  }
+ ],
+ "w|brutalité": [
+  {
+   "text": "Louis lit dans le rapport que la brutalité des échanges en ligne inquiète les élus.",
+   "en": "Louis reads in the report that the harshness of online exchanges worries elected officials.",
+   "ko": "루이는 보고서에서 온라인 논쟁이 거칠어서 의원들이 걱정한다는 걸 읽어요.",
+   "blank": "brutalité",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit qu'un roman historique l'a bouleversée par la brutalité de ses scènes de guerre.",
+   "en": "Claire writes that a historical novel moved her with the harshness of its war scenes.",
+   "ko": "클레르는 역사 소설의 전쟁 장면이 너무 가혹해서 마음이 흔들렸다고 써요.",
+   "blank": "brutalité",
    "src": "made"
   }
  ],
@@ -10485,6 +10677,22 @@
    "en": "We rented a van for the move.",
    "ko": "이사하려고 밴을 빌렸어.",
    "blank": "camionnette"
+  }
+ ],
+ "w|camouflage": [
+  {
+   "text": "Louis trouve que le discours du candidat n'est qu'un camouflage de ses vraies intentions.",
+   "en": "Louis finds the candidate's speech is just a cover for his real intentions.",
+   "ko": "루이는 후보의 연설이 속셈을 가리는 위장일 뿐이라고 생각해요.",
+   "blank": "camouflage",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte que son petit-fils adore les pantalons de camouflage et veut devenir explorateur.",
+   "en": "Claire writes that her grandson loves camouflage trousers and wants to be an explorer.",
+   "ko": "클레르는 손자가 위장 무늬 바지를 좋아하고 탐험가가 되고 싶어 한다고 써요.",
+   "blank": "camouflage",
+   "src": "made"
   }
  ],
  "w|camp": [
@@ -14607,6 +14815,22 @@
    "blank": "coach"
   }
  ],
+ "w|cobaye": [
+  {
+   "text": "Paul plaisante : il sert de cobaye à sa sœur, qui teste ses nouvelles recettes de camping.",
+   "en": "Paul jokes that he's his sister's guinea pig for her new camping recipes.",
+   "ko": "폴은 누나의 새 캠핑 요리를 맛보는 실험 대상이라고 농담해요.",
+   "blank": "cobaye",
+   "src": "made"
+  },
+  {
+   "text": "La fille d'Émilie nourrit son cobaye avec des feuilles de salade.",
+   "en": "Émilie's daughter feeds her guinea pig lettuce leaves.",
+   "ko": "에밀리의 딸은 기니피그에게 상추를 줘요.",
+   "blank": "cobaye",
+   "src": "made"
+  }
+ ],
  "w|cochon": [
   {
    "text": "Un cochon court dans la ferme.",
@@ -15291,6 +15515,22 @@
    "src": "made"
   }
  ],
+ "w|comète": [
+  {
+   "text": "Allongé dans l'herbe, Paul espère voir passer la comète annoncée à la radio.",
+   "en": "Lying in the grass, Paul hopes to see the comet announced on the radio.",
+   "ko": "풀밭에 누운 폴은 라디오에서 말한 혜성이 지나가는 걸 보고 싶어 해요.",
+   "blank": "comète",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie dessine une comète avec une longue queue dorée.",
+   "en": "Émilie's son draws a comet with a long golden tail.",
+   "ko": "에밀리의 아들이 긴 금빛 꼬리가 달린 혜성을 그려요.",
+   "blank": "comète",
+   "src": "made"
+  }
+ ],
  "w|comique": [
   {
    "text": "Le stagiaire a glissé dans la boue de façon si comique que même Louis a ri.",
@@ -15621,6 +15861,22 @@
    "en": "I work in digital communication.",
    "ko": "나는 디지털 커뮤니케이션 분야에서 일해.",
    "blank": "communication"
+  }
+ ],
+ "w|communion": [
+  {
+   "text": "Après la fête du village, Louis sent une vraie communion entre les habitants.",
+   "en": "After the village fair, Louis feels a real sense of togetherness among the residents.",
+   "ko": "마을 잔치가 끝나고 루이는 주민들 사이에 진짜 하나 된 마음을 느껴요.",
+   "blank": "communion",
+   "src": "made"
+  },
+  {
+   "text": "Claire évoque la communion de son neveu, où toute la famille s'est retrouvée.",
+   "en": "Claire mentions her nephew's first communion, where the whole family got together.",
+   "ko": "클레르는 온 가족이 모였던 조카의 첫 영성체 이야기를 해요.",
+   "blank": "communion",
+   "src": "made"
   }
  ],
  "w|communiquer": [
@@ -15962,6 +16218,22 @@
    "en": "In the novel Léa is reading, doctors uncover a plot against the king.",
    "ko": "레아가 읽는 소설에서 의사들이 왕을 노린 음모를 밝혀내요.",
    "blank": "complot",
+   "src": "made"
+  }
+ ],
+ "w|comploter": [
+  {
+   "text": "Louis entend deux conseillers comploter dans le couloir pour faire tomber l'adjoint.",
+   "en": "Louis hears two councillors plotting in the corridor to bring down the deputy mayor.",
+   "ko": "루이는 복도에서 두 의원이 부시장을 끌어내리려고 모의하는 소리를 들어요.",
+   "blank": "comploter",
+   "src": "made"
+  },
+  {
+   "text": "Claire se souvient qu'enfants, ils aimaient comploter des farces contre leurs grands frères.",
+   "en": "Claire remembers that as kids they loved plotting pranks against their big brothers.",
+   "ko": "클레르는 어릴 때 형들에게 장난칠 궁리를 하던 걸 떠올려요.",
+   "blank": "comploter",
    "src": "made"
   }
  ],
@@ -19953,6 +20225,22 @@
    "src": "made"
   }
  ],
+ "w|croc": [
+  {
+   "text": "Le chien de Paul montre les crocs quand un renard s'approche du camp.",
+   "en": "Paul's dog bares its fangs when a fox approaches the camp.",
+   "ko": "여우가 캠프에 다가오자 폴의 개가 송곳니를 드러내요.",
+   "blank": "crocs",
+   "src": "made"
+  },
+  {
+   "text": "Le chiot d'Émilie plante ses crocs dans une pantoufle et refuse de la lâcher.",
+   "en": "Émilie's puppy sinks its teeth into a slipper and refuses to let go.",
+   "ko": "에밀리의 강아지가 슬리퍼를 물고 놓지 않아요.",
+   "blank": "crocs",
+   "src": "made"
+  }
+ ],
  "w|crochet": [
   {
    "text": "Hugo accroche son manteau au crochet derrière la porte.",
@@ -20474,6 +20762,22 @@
    "en": "In Émilie's team, the morning coffee has become a real ritual.",
    "ko": "에밀리의 팀에서 아침 커피는 거의 숭배의 대상이 됐어요.",
    "blank": "culte",
+   "src": "made"
+  }
+ ],
+ "w|cultivé": [
+  {
+   "text": "Le guide de Paul est un homme cultivé qui connaît le nom latin de chaque plante.",
+   "en": "Paul's guide is a cultured man who knows the Latin name of every plant.",
+   "ko": "폴의 안내인은 식물마다 라틴어 이름을 아는 교양 있는 사람이에요.",
+   "blank": "cultivé",
+   "src": "made"
+  },
+  {
+   "text": "Émilie montre le potager où son père a cultivé des tomates toute sa vie.",
+   "en": "Émilie shows the vegetable garden where her father grew tomatoes all his life.",
+   "ko": "에밀리는 아버지가 평생 토마토를 키운 텃밭을 보여 줘요.",
+   "blank": "cultivé",
    "src": "made"
   }
  ],
@@ -21405,6 +21709,22 @@
    "en": "How do you trigger a chemical reaction?",
    "ko": "화학 반응을 어떻게 일으키지?",
    "blank": "déclencher"
+  }
+ ],
+ "w|déclencheur": [
+  {
+   "text": "Selon Louis, la fermeture de la gare a été le déclencheur de la colère des habitants.",
+   "en": "According to Louis, the station closure was what set off the residents' anger.",
+   "ko": "루이는 역 폐쇄가 주민 분노의 도화선이었다고 봐요.",
+   "blank": "déclencheur",
+   "src": "made"
+  },
+  {
+   "text": "Claire pense qu'une vieille chanson a été le déclencheur de son envie de lui écrire.",
+   "en": "Claire thinks an old song was what triggered her urge to write to him.",
+   "ko": "클레르는 옛 노래 한 곡 때문에 친구에게 편지를 쓰고 싶어졌다고 생각해요.",
+   "blank": "déclencheur",
+   "src": "made"
   }
  ],
  "w|décliner": [
@@ -23017,6 +23337,22 @@
    "src": "made"
   }
  ],
+ "w|dérivé": [
+  {
+   "text": "Louis explique au conseil que le plastique est un dérivé du pétrole qu'il faut limiter dans les cantines.",
+   "en": "Louis explains to the council that plastic is an oil derivative that should be limited in school canteens.",
+   "ko": "루이는 의회에서 플라스틱이 석유 파생물이라 급식실에서 줄여야 한다고 설명해요.",
+   "blank": "dérivé",
+   "src": "made"
+  },
+  {
+   "text": "Claire explique que le français est un dérivé du latin qu'ils détestaient tant au lycée.",
+   "en": "Claire explains that French is a derivative of the Latin they hated so much in high school.",
+   "ko": "클레르는 프랑스어가 고등학교 때 그렇게 싫어하던 라틴어에서 나왔다고 설명해요.",
+   "blank": "dérivé",
+   "src": "made"
+  }
+ ],
  "w|dernier": [
   {
    "text": "Le dernier train part bientôt.",
@@ -23757,6 +24093,22 @@
    "blank": "déterminer"
   }
  ],
+ "w|déterrer": [
+  {
+   "text": "Le chien de Paul s'amuse à déterrer les os qu'il a cachés la veille.",
+   "en": "Paul's dog has fun digging up the bones it hid the day before.",
+   "ko": "폴의 개는 전날 숨겨 둔 뼈를 파내며 놀아요.",
+   "blank": "déterrer",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie s'amusent à déterrer un vieux trésor qu'ils ont enterré l'été dernier.",
+   "en": "Émilie's children have fun digging up an old treasure they buried last summer.",
+   "ko": "에밀리의 아이들은 지난여름 묻어 둔 보물을 파내며 놀아요.",
+   "blank": "déterrer",
+   "src": "made"
+  }
+ ],
  "w|détester": [
   {
    "text": "Je vais détester ce film, j'en suis sûr.",
@@ -23819,6 +24171,22 @@
    "src": "made"
   }
  ],
+ "w|détraqué": [
+  {
+   "text": "La photocopieuse de la mairie est encore détraquée, soupire Louis.",
+   "en": "The city hall photocopier is broken again, Louis sighs.",
+   "ko": "루이는 시청 복사기가 또 고장 났다고 한숨을 쉬어요.",
+   "blank": "détraquée",
+   "src": "made"
+  },
+  {
+   "text": "Claire confie que sa vieille horloge est détraquée et sonne à minuit pile chaque après-midi.",
+   "en": "Claire confides that her old clock is broken and strikes midnight every afternoon.",
+   "ko": "클레르는 오래된 시계가 고장 나서 오후마다 자정 종을 친다고 털어놓아요.",
+   "blank": "détraquée",
+   "src": "made"
+  }
+ ],
  "w|détresse": [
   {
    "text": "Il était en pleine détresse.",
@@ -23831,6 +24199,22 @@
    "en": "You could see the distress on his face.",
    "ko": "그의 얼굴에 고통이 드러났어.",
    "blank": "détresse"
+  }
+ ],
+ "w|détroit": [
+  {
+   "text": "Pour rejoindre l'île, Paul doit traverser un étroit détroit en kayak.",
+   "en": "To reach the island, Paul has to cross a narrow strait by kayak.",
+   "ko": "폴은 섬에 가려면 카약으로 좁은 해협을 건너야 해요.",
+   "blank": "détroit",
+   "src": "made"
+  },
+  {
+   "text": "Sur la carte, la fille d'Émilie cherche le détroit qui sépare l'Europe de l'Afrique.",
+   "en": "On the map, Émilie's daughter looks for the strait separating Europe from Africa.",
+   "ko": "에밀리의 딸은 지도에서 유럽과 아프리카를 가르는 해협을 찾아요.",
+   "blank": "détroit",
+   "src": "made"
   }
  ],
  "w|détruire": [
@@ -24099,6 +24483,22 @@
    "src": "made"
   }
  ],
+ "w|dévotion": [
+  {
+   "text": "Louis salue la dévotion des bénévoles qui tiennent la soupe populaire chaque hiver.",
+   "en": "Louis praises the dedication of the volunteers who run the soup kitchen every winter.",
+   "ko": "루이는 겨울마다 무료 급식소를 지키는 자원봉사자들의 헌신을 칭찬해요.",
+   "blank": "dévotion",
+   "src": "made"
+  },
+  {
+   "text": "Claire admire la dévotion de son ami envers sa mère malade.",
+   "en": "Claire admires her friend's devotion to his sick mother.",
+   "ko": "클레르는 아픈 어머니를 정성껏 돌보는 친구의 헌신에 감탄해요.",
+   "blank": "dévotion",
+   "src": "made"
+  }
+ ],
  "w|dévoué": [
   {
    "text": "Antoine a une assistante dévouée qui relit chaque pièce du dossier.",
@@ -24295,6 +24695,22 @@
    "en": "Do you see the difference now?",
    "ko": "이제 차이점이 보여?",
    "blank": "différence"
+  }
+ ],
+ "w|différencier": [
+  {
+   "text": "Louis apprend aux stagiaires à différencier une plainte d'une simple demande d'information.",
+   "en": "Louis teaches the interns to tell a complaint from a simple request for information.",
+   "ko": "루이는 실습생들에게 민원과 단순 문의를 구별하는 법을 가르쳐요.",
+   "blank": "différencier",
+   "src": "made"
+  },
+  {
+   "text": "Claire avoue qu'elle a du mal à différencier les jumeaux de sa voisine.",
+   "en": "Claire admits she has trouble telling her neighbor's twins apart.",
+   "ko": "클레르는 이웃집 쌍둥이를 구별하기가 어렵다고 털어놓아요.",
+   "blank": "différencier",
+   "src": "made"
   }
  ],
  "w|différent": [
@@ -24917,6 +25333,22 @@
    "src": "made"
   }
  ],
+ "w|disperser": [
+  {
+   "text": "Louis demande à la police municipale de disperser le rassemblement devant la mairie avant la nuit.",
+   "en": "Louis asks the municipal police to clear the gathering outside city hall before nightfall.",
+   "ko": "루이는 시청 앞 모임을 밤이 되기 전에 해산시켜 달라고 시 경찰에 요청해요.",
+   "blank": "disperser",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte que le vent a fini par disperser les nuages juste avant le mariage de sa fille.",
+   "en": "Claire writes that the wind finally blew the clouds away just before her daughter's wedding.",
+   "ko": "클레르는 딸 결혼식 직전에 바람이 구름을 흩어 놓았다고 써요.",
+   "blank": "disperser",
+   "src": "made"
+  }
+ ],
  "w|disponible": [
   {
    "text": "Je ne suis pas disponible ce soir.",
@@ -25114,6 +25546,22 @@
    "en": "In autumn, the city's faint noise seems more distant than in summer.",
    "ko": "가을이면 먼 도시 소음이 여름보다 더 멀게 느껴져요.",
    "blank": "distant",
+   "src": "made"
+  }
+ ],
+ "w|distinction": [
+  {
+   "text": "Louis reçoit une distinction pour ses trente ans de service à la mairie.",
+   "en": "Louis receives an award for his thirty years of service at city hall.",
+   "ko": "루이는 시청에서 삼십 년 일한 공로로 상을 받아요.",
+   "blank": "distinction",
+   "src": "made"
+  },
+  {
+   "text": "Claire félicite son ami pour la distinction qu'il a reçue de son université.",
+   "en": "Claire congratulates her friend on the honor he received from his university.",
+   "ko": "클레르는 친구가 대학에서 받은 상을 축하해요.",
+   "blank": "distinction",
    "src": "made"
   }
  ],
@@ -25617,6 +26065,22 @@
    "blank": "domicile"
   }
  ],
+ "w|domination": [
+  {
+   "text": "Louis regrette la domination d'un seul promoteur sur tous les projets immobiliers de la ville.",
+   "en": "Louis regrets one developer's dominance over all the town's building projects.",
+   "ko": "루이는 한 개발업자가 시의 모든 건설 사업을 쥐고 있는 게 아쉬워요.",
+   "blank": "domination",
+   "src": "made"
+  },
+  {
+   "text": "Claire se moque gentiment de la domination de son chat sur toute la maison.",
+   "en": "Claire gently jokes about her cat ruling the whole house.",
+   "ko": "클레르는 고양이가 온 집을 지배한다며 가볍게 놀려요.",
+   "blank": "domination",
+   "src": "made"
+  }
+ ],
  "w|dominer": [
   {
    "text": "Le scandale domine la une du journal de Hugo depuis trois jours.",
@@ -25659,6 +26123,22 @@
    "en": "She has a gift for music.",
    "ko": "그녀는 음악에 재능이 있어요.",
    "blank": "don"
+  }
+ ],
+ "w|donateur": [
+  {
+   "text": "Louis remercie un généreux donateur qui a financé la rénovation de l'église.",
+   "en": "Louis thanks a generous donor who funded the church renovation.",
+   "ko": "루이는 성당 보수 비용을 댄 너그러운 기부자에게 감사해요.",
+   "blank": "donateur",
+   "src": "made"
+  },
+  {
+   "text": "Claire annonce qu'un donateur anonyme a offert un piano à l'école du village.",
+   "en": "Claire announces that an anonymous donor has given a piano to the village school.",
+   "ko": "클레르는 익명의 기부자가 마을 학교에 피아노를 선물했다고 알려요.",
+   "blank": "donateur",
+   "src": "made"
   }
  ],
  "w|donation": [
@@ -27123,6 +27603,22 @@
    "src": "made"
   }
  ],
+ "w|effondrement": [
+  {
+   "text": "Le gardien raconte à Paul l'effondrement d'une partie de la falaise l'hiver dernier.",
+   "en": "The warden tells Paul about part of the cliff collapsing last winter.",
+   "ko": "관리인은 폴에게 지난겨울 절벽 일부가 무너진 일을 들려줘요.",
+   "blank": "effondrement",
+   "src": "made"
+  },
+  {
+   "text": "Émilie entend un grand bruit : c'est l'effondrement de la tour de cubes de son fils.",
+   "en": "Émilie hears a loud noise: it's her son's block tower collapsing.",
+   "ko": "에밀리는 큰 소리를 들어요. 아들의 블록 탑이 무너진 거예요.",
+   "blank": "effondrement",
+   "src": "made"
+  }
+ ],
  "w|effondrer": [
   {
    "text": "Le vieux pont s'est effondré pendant la nuit, et Hugo part couvrir l'événement.",
@@ -27235,6 +27731,22 @@
    "en": "She is also interested in this project.",
    "ko": "그녀도 이 프로젝트에 관심 있어.",
    "blank": "également"
+  }
+ ],
+ "w|égaler": [
+  {
+   "text": "Louis espère égaler le record de participation aux dernières élections municipales.",
+   "en": "Louis hopes to match the turnout record of the last municipal elections.",
+   "ko": "루이는 지난 지방 선거 투표율 기록과 같아지기를 바라요.",
+   "blank": "égaler",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit à son vieil ami qu'aucun gâteau ne pourra égaler ceux de sa grand-mère.",
+   "en": "Claire writes to her old friend that no cake will ever match her grandmother's.",
+   "ko": "클레르는 옛 친구에게 할머니 케이크만 한 건 없을 거라고 써요.",
+   "blank": "égaler",
+   "src": "made"
   }
  ],
  "w|égalité": [
@@ -27409,6 +27921,22 @@
    "src": "made"
   }
  ],
+ "w|élargir": [
+  {
+   "text": "Louis propose d'élargir le trottoir de la rue principale pour les poussettes.",
+   "en": "Louis proposes widening the sidewalk on the main street for strollers.",
+   "ko": "루이는 유모차가 다니기 좋게 큰길 인도를 넓히자고 제안해요.",
+   "blank": "élargir",
+   "src": "made"
+  },
+  {
+   "text": "Claire espère élargir son cercle d'amis en s'inscrivant à une chorale.",
+   "en": "Claire hopes to widen her circle of friends by joining a choir.",
+   "ko": "클레르는 합창단에 들어가 친구를 더 사귀고 싶어 해요.",
+   "blank": "élargir",
+   "src": "made"
+  }
+ ],
  "w|élastique": [
   {
    "text": "Hugo réussit une pâte à pizza souple et élastique du premier coup.",
@@ -27515,6 +28043,22 @@
    "src": "made"
   }
  ],
+ "w|élégance": [
+  {
+   "text": "Paul admire l'élégance d'un héron qui pêche au bord de l'eau.",
+   "en": "Paul admires the elegance of a heron fishing at the water's edge.",
+   "ko": "폴은 물가에서 물고기를 잡는 왜가리의 우아함에 감탄해요.",
+   "blank": "élégance",
+   "src": "made"
+  },
+  {
+   "text": "La grand-mère d'Émilie s'habille toujours avec une élégance discrète pour les repas de fête.",
+   "en": "Émilie's grandmother always dresses with quiet elegance for holiday meals.",
+   "ko": "에밀리의 할머니는 명절 식사 때마다 은은하게 우아한 차림을 해요.",
+   "blank": "élégance",
+   "src": "made"
+  }
+ ],
  "w|élégant": [
   {
    "text": "Avec son long cou blanc, le héron paraît très élégant aux yeux de Paul.",
@@ -27599,6 +28143,22 @@
    "en": "It's hard to élever a child alone.",
    "ko": "혼자 아이를 élever하는 건 어려워.",
    "blank": "élever"
+  }
+ ],
+ "w|élimination": [
+  {
+   "text": "Louis supervise l'élimination des archives papier devenues inutiles.",
+   "en": "Louis oversees the disposal of paper archives that are no longer needed.",
+   "ko": "루이는 필요 없어진 종이 기록물 폐기를 감독해요.",
+   "blank": "élimination",
+   "src": "made"
+  },
+  {
+   "text": "Claire suit le tournoi de tennis et raconte l'élimination surprise de la favorite.",
+   "en": "Claire follows the tennis tournament and writes about the favorite's surprise elimination.",
+   "ko": "클레르는 테니스 대회를 보다가 우승 후보가 뜻밖에 탈락한 이야기를 써요.",
+   "blank": "élimination",
+   "src": "made"
   }
  ],
  "w|éliminer": [
@@ -28605,6 +29165,22 @@
    "en": "Finally, you arrived!",
    "ko": "드디어, 네가 도착했네!",
    "blank": "Enfin"
+  }
+ ],
+ "w|enflammer": [
+  {
+   "text": "Paul souffle doucement sur les brindilles pour enflammer le petit tas de bois.",
+   "en": "Paul blows gently on the twigs to set the small pile of wood alight.",
+   "ko": "폴은 작은 나무 더미에 불을 붙이려고 잔가지에 살살 바람을 불어요.",
+   "blank": "enflammer",
+   "src": "made"
+  },
+  {
+   "text": "Émilie craque une allumette pour enflammer les bougies du gâteau.",
+   "en": "Émilie strikes a match to light the candles on the cake.",
+   "ko": "에밀리는 성냥을 그어 케이크 초에 불을 붙여요.",
+   "blank": "enflammer",
+   "src": "made"
   }
  ],
  "w|enfoncer": [
@@ -29999,6 +30575,22 @@
    "blank": "équipement"
   }
  ],
+ "w|équiper": [
+  {
+   "text": "La mairie veut équiper toutes les écoles de la ville en tableaux numériques, annonce Louis.",
+   "en": "City hall wants to equip all the town's schools with digital whiteboards, Louis announces.",
+   "ko": "루이는 시가 모든 학교에 전자칠판을 들이려 한다고 발표해요.",
+   "blank": "équiper",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte qu'elle a fini d'équiper son atelier de peinture dans le grenier.",
+   "en": "Claire writes that she has finished kitting out her painting studio in the attic.",
+   "ko": "클레르는 다락에 그림 작업실을 다 꾸몄다고 써요.",
+   "blank": "équiper",
+   "src": "made"
+  }
+ ],
  "w|équipier": [
   {
    "text": "Louis présente son nouvel équipier au reste du service.",
@@ -31381,6 +31973,22 @@
    "en": "I will carefully review this file.",
    "ko": "이 서류를 꼼꼼히 살펴볼게요.",
    "blank": "examiner"
+  }
+ ],
+ "w|exaucer": [
+  {
+   "text": "Paul fait un vœu en voyant une étoile filante, et espère que le ciel va l'exaucer.",
+   "en": "Paul makes a wish when he sees a shooting star and hopes the sky will grant it.",
+   "ko": "폴은 별똥별을 보고 소원을 빌며 하늘이 들어주길 바라요.",
+   "blank": "exaucer",
+   "src": "made"
+  },
+  {
+   "text": "Le plus jeune fils d'Émilie espère que le père Noël va exaucer son vœu.",
+   "en": "Émilie's youngest son hopes Father Christmas will grant his wish.",
+   "ko": "에밀리의 막내아들은 산타 할아버지가 소원을 들어주길 바라요.",
+   "blank": "exaucer",
+   "src": "made"
   }
  ],
  "w|excellence": [
@@ -37143,6 +37751,22 @@
    "blank": "glacé"
   }
  ],
+ "w|glacial": [
+  {
+   "text": "Un vent glacial souffle toute la nuit sur la tente de Paul.",
+   "en": "An icy wind blows all night on Paul's tent.",
+   "ko": "밤새 폴의 텐트에 얼음장 같은 바람이 불어요.",
+   "blank": "glacial",
+   "src": "made"
+  },
+  {
+   "text": "Malgré le vent glacial, Émilie emmène toute la famille se promener après le déjeuner.",
+   "en": "Despite the icy wind, Émilie takes the whole family for a walk after lunch.",
+   "ko": "얼음장 같은 바람에도 에밀리는 점심 뒤 온 가족을 데리고 산책해요.",
+   "blank": "glacial",
+   "src": "made"
+  }
+ ],
  "w|glaçon": [
   {
    "text": "Antoine met trop de glaçons dans les verres, et son père le gronde.",
@@ -38578,6 +39202,22 @@
    "en": "After work, Camille and her colleague share a hamburger.",
    "ko": "퇴근 후 카미유와 동료는 햄버거를 나눠 먹어요.",
    "blank": "hamburger",
+   "src": "made"
+  }
+ ],
+ "w|hameçon": [
+  {
+   "text": "Paul accroche un ver à son hameçon et lance sa ligne dans la rivière.",
+   "en": "Paul hooks a worm onto his fishhook and casts his line into the river.",
+   "ko": "폴은 낚싯바늘에 지렁이를 끼우고 강에 줄을 던져요.",
+   "blank": "hameçon",
+   "src": "made"
+  },
+  {
+   "text": "Le grand-père d'Émilie montre aux enfants comment fixer un hameçon sans se piquer.",
+   "en": "Émilie's grandfather shows the children how to attach a fishhook without pricking themselves.",
+   "ko": "에밀리의 할아버지가 아이들에게 찔리지 않고 낚싯바늘 다는 법을 보여 줘요.",
+   "blank": "hameçon",
    "src": "made"
   }
  ],
@@ -40311,6 +40951,22 @@
    "en": "This building has ten floors.",
    "ko": "이 immeuble 는 열 층이야.",
    "blank": "immeuble"
+  }
+ ],
+ "w|immigrant": [
+  {
+   "text": "Louis aide un immigrant à remplir son dossier d'inscription sur les listes électorales.",
+   "en": "Louis helps an immigrant fill in his voter registration form.",
+   "ko": "루이는 이민자가 선거인 명부 등록 서류를 채우는 걸 도와줘요.",
+   "blank": "immigrant",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte l'histoire de son grand-père, un immigrant arrivé au port avec une seule valise.",
+   "en": "Claire tells the story of her grandfather, an immigrant who arrived at the port with just one suitcase.",
+   "ko": "클레르는 가방 하나만 들고 항구에 도착한 이민자였던 할아버지 이야기를 적어요.",
+   "blank": "immigrant",
+   "src": "made"
   }
  ],
  "w|immigration": [
@@ -42131,6 +42787,22 @@
    "src": "made"
   }
  ],
+ "w|inondation": [
+  {
+   "text": "Le gardien prévient Paul qu'une inondation a déjà emporté des tentes au bord de l'eau.",
+   "en": "The warden warns Paul that a flood has already swept away tents by the water.",
+   "ko": "관리인은 폴에게 물가 텐트들이 홍수에 쓸려 간 적이 있다고 경고해요.",
+   "blank": "inondation",
+   "src": "made"
+  },
+  {
+   "text": "Émilie montre aux enfants la marque laissée sur le mur par l'inondation d'autrefois.",
+   "en": "Émilie shows the children the mark left on the wall by the flood long ago.",
+   "ko": "에밀리는 아이들에게 옛날 홍수가 벽에 남긴 자국을 보여 줘요.",
+   "blank": "inondation",
+   "src": "made"
+  }
+ ],
  "w|inondé": [
   {
    "text": "Après l'orage, Antoine découvre le sous-sol de l'usine complètement inondé.",
@@ -43225,6 +43897,22 @@
    "src": "made"
   }
  ],
+ "w|intouchable": [
+  {
+   "text": "Dans la réserve, cette partie de la forêt est intouchable, explique le garde à Paul.",
+   "en": "In the reserve, this part of the forest is off-limits, the ranger explains to Paul.",
+   "ko": "관리원은 폴에게 보호구역의 이 숲은 손댈 수 없는 곳이라고 설명해요.",
+   "blank": "intouchable",
+   "src": "made"
+  },
+  {
+   "text": "Pour les enfants d'Émilie, la dernière part de tarte de mamie est intouchable.",
+   "en": "For Émilie's children, grandma's last slice of tart is sacred.",
+   "ko": "에밀리의 아이들에게 할머니 파이 마지막 조각은 아무도 못 건드려요.",
+   "blank": "intouchable",
+   "src": "made"
+  }
+ ],
  "w|intrigue": [
   {
    "text": "Paul n'a pas compris l'intrigue du film projeté en classe.",
@@ -43678,6 +44366,22 @@
    "en": "The coach thought it irresponsible of Manon to play with an injured ankle.",
    "ko": "코치는 마농이 다친 발목으로 뛴 게 무책임하다고 봤어요.",
    "blank": "irresponsable",
+   "src": "made"
+  }
+ ],
+ "w|irruption": [
+  {
+   "text": "Un groupe d'habitants fait irruption dans la salle du conseil, et Louis suspend la séance.",
+   "en": "A group of residents bursts into the council chamber, and Louis suspends the session.",
+   "ko": "주민 몇 명이 시의회 회의실에 들이닥치자 루이는 회의를 잠시 멈춰요.",
+   "blank": "irruption",
+   "src": "made"
+  },
+  {
+   "text": "Claire décrit l'irruption joyeuse de ses petits-enfants dans sa cuisine un dimanche matin.",
+   "en": "Claire describes her grandchildren bursting cheerfully into her kitchen one Sunday morning.",
+   "ko": "클레르는 어느 일요일 아침 손주들이 부엌으로 우르르 들이닥친 장면을 적어요.",
+   "blank": "irruption",
    "src": "made"
   }
  ],
@@ -46723,6 +47427,22 @@
    "blank": "loyer"
   }
  ],
+ "w|lucide": [
+  {
+   "text": "Malgré la fatigue, Paul reste lucide et décide de rentrer avant l'orage.",
+   "en": "Despite being tired, Paul stays clear-headed and decides to head back before the storm.",
+   "ko": "피곤해도 폴은 정신을 바짝 차리고 폭풍 전에 돌아가기로 해요.",
+   "blank": "lucide",
+   "src": "made"
+  },
+  {
+   "text": "À quatre-vingt-dix ans, la grand-mère d'Émilie reste parfaitement lucide.",
+   "en": "At ninety, Émilie's grandmother is still perfectly lucid.",
+   "ko": "아흔 살인 에밀리의 할머니는 여전히 정신이 또렷해요.",
+   "blank": "lucide",
+   "src": "made"
+  }
+ ],
  "w|lueur": [
   {
    "text": "Lucas voit la lueur d'une lampe dans le refuge au loin.",
@@ -47936,6 +48656,22 @@
    "en": "Émilie's daughter is starting to show real talent for drawing.",
    "ko": "에밀리의 딸은 그림에 진짜 재능을 보이기 시작해요.",
    "blank": "manifester",
+   "src": "made"
+  }
+ ],
+ "w|manigance": [
+  {
+   "text": "Louis soupçonne une manigance de l'opposition pour retarder le vote du budget.",
+   "en": "Louis suspects a scheme by the opposition to delay the budget vote.",
+   "ko": "루이는 야당이 예산 표결을 늦추려고 꾸민 수작이라고 의심해요.",
+   "blank": "manigance",
+   "src": "made"
+  },
+  {
+   "text": "Dans sa lettre, Claire se souvient de leurs petites manigances pour sécher les cours de latin.",
+   "en": "In her letter, Claire remembers their little schemes to skip Latin class.",
+   "ko": "클레르는 편지에서 라틴어 수업을 빼먹으려고 꾸민 작은 꾀들을 떠올려요.",
+   "blank": "manigances",
    "src": "made"
   }
  ],
@@ -49667,6 +50403,22 @@
    "blank": "mercredi"
   }
  ],
+ "w|mercure": [
+  {
+   "text": "Au lever du jour, Paul regarde le mercure du thermomètre descendre sous zéro.",
+   "en": "At daybreak, Paul watches the mercury in the thermometer drop below zero.",
+   "ko": "동틀 녘 폴은 온도계 수은이 영하로 내려가는 걸 봐요.",
+   "blank": "mercure",
+   "src": "made"
+  },
+  {
+   "text": "Émilie range le vieux thermomètre de sa grand-mère, qui contient encore du mercure, hors de portée des enfants.",
+   "en": "Émilie puts her grandmother's old thermometer, which still contains mercury, out of the children's reach.",
+   "ko": "에밀리는 아직 수은이 든 할머니의 옛 온도계를 아이들 손이 안 닿는 곳에 둬요.",
+   "blank": "mercure",
+   "src": "made"
+  }
+ ],
  "w|mère": [
   {
    "text": "Ma mère prépare le dîner.",
@@ -49735,6 +50487,22 @@
    "en": "I lost my keys.",
    "ko": "나는 내 열쇠를 잃어버렸어.",
    "blank": "mes"
+  }
+ ],
+ "w|mesquin": [
+  {
+   "text": "Paul trouve mesquin le voisin de camping qui se plaint du moindre bruit.",
+   "en": "Paul finds the neighboring camper who complains about the slightest noise petty.",
+   "ko": "폴은 작은 소리에도 불평하는 옆 캠핑객이 쩨쩨하다고 생각해요.",
+   "blank": "mesquin",
+   "src": "made"
+  },
+  {
+   "text": "Émilie demande aux cousins d'arrêter ces disputes mesquines pour un dernier morceau de gâteau.",
+   "en": "Émilie asks the cousins to stop their petty squabbles over the last piece of cake.",
+   "ko": "에밀리는 사촌들에게 마지막 케이크 조각을 두고 쩨쩨하게 다투지 말라고 해요.",
+   "blank": "mesquines",
+   "src": "made"
   }
  ],
  "w|message": [
@@ -50893,6 +51661,22 @@
    "en": "Half of the class is absent.",
    "ko": "반이 결석했어.",
    "blank": "moitié"
+  }
+ ],
+ "w|molécule": [
+  {
+   "text": "Le fils de Paul demande quelle molécule donne son odeur à la résine de pin.",
+   "en": "Paul's son asks which molecule gives pine resin its smell.",
+   "ko": "폴의 아들이 송진 냄새를 내는 분자가 뭐냐고 물어요.",
+   "blank": "molécule",
+   "src": "made"
+  },
+  {
+   "text": "Pour amuser ses enfants, Émilie construit une molécule d'eau avec des bonbons et des cure-dents.",
+   "en": "To amuse her kids, Émilie builds a water molecule out of sweets and toothpicks.",
+   "ko": "에밀리는 아이들을 즐겁게 하려고 사탕과 이쑤시개로 물 분자를 만들어요.",
+   "blank": "molécule",
+   "src": "made"
   }
  ],
  "w|môme": [
@@ -54463,6 +55247,22 @@
    "blank": "orage"
   }
  ],
+ "w|oral": [
+  {
+   "text": "Paul raconte que les légendes de la région ont longtemps été transmises par tradition orale.",
+   "en": "Paul says the region's legends were long passed down by oral tradition.",
+   "ko": "폴은 이 지역 전설이 오랫동안 입으로 전해졌다고 말해요.",
+   "blank": "orale",
+   "src": "made"
+  },
+  {
+   "text": "La fille d'Émilie révise pour son examen oral d'anglais pendant les vacances.",
+   "en": "Émilie's daughter revises for her oral English exam during the holidays.",
+   "ko": "에밀리의 딸은 방학 동안 영어 구술시험을 준비해요.",
+   "blank": "oral",
+   "src": "made"
+  }
+ ],
  "w|orange": [
   {
    "text": "Mon pull préféré est orange.",
@@ -54844,6 +55644,22 @@
    "en": "A crate of water fell on Inès's toe.",
    "ko": "물 상자가 이네스의 발가락 위로 떨어졌어요.",
    "blank": "orteil",
+   "src": "made"
+  }
+ ],
+ "w|orthodoxe": [
+  {
+   "text": "Louis organise une réunion entre le prêtre orthodoxe et le curé pour la fête de quartier.",
+   "en": "Louis arranges a meeting between the Orthodox priest and the parish priest for the neighborhood party.",
+   "ko": "루이는 동네 잔치를 위해 정교회 신부와 본당 신부의 만남을 마련해요.",
+   "blank": "orthodoxe",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte qu'elle a visité une petite église orthodoxe aux murs couverts d'icônes.",
+   "en": "Claire writes that she visited a small Orthodox church with walls covered in icons.",
+   "ko": "클레르는 벽이 성화로 가득한 작은 정교회 성당에 다녀왔다고 써요.",
+   "blank": "orthodoxe",
    "src": "made"
   }
  ],
@@ -56381,6 +57197,22 @@
    "src": "made"
   }
  ],
+ "w|partition": [
+  {
+   "text": "Pour le concert de la fanfare municipale, Louis distribue une partition à chaque musicien.",
+   "en": "For the municipal brass band concert, Louis hands out a score to each musician.",
+   "ko": "루이는 시립 악단 연주회를 위해 연주자마다 악보를 나눠 줘요.",
+   "blank": "partition",
+   "src": "made"
+  },
+  {
+   "text": "Claire glisse dans l'enveloppe une partition de la chanson qu'ils chantaient en colonie.",
+   "en": "Claire slips into the envelope a score of the song they used to sing at summer camp.",
+   "ko": "클레르는 여름 캠프에서 부르던 노래 악보를 봉투에 넣어요.",
+   "blank": "partition",
+   "src": "made"
+  }
+ ],
  "w|partout": [
   {
    "text": "J’ai cherché partout mais je ne l’ai pas trouvé.",
@@ -57337,6 +58169,22 @@
    "en": "He receives a small retirement pension.",
    "ko": "그는 작은 연금을 받아.",
    "blank": "pension"
+  }
+ ],
+ "w|pente": [
+  {
+   "text": "Paul monte la tente sur un terrain plat, loin de la pente trop raide.",
+   "en": "Paul pitches the tent on flat ground, away from the steep slope.",
+   "ko": "폴은 너무 가파른 비탈을 피해 평평한 땅에 텐트를 쳐요.",
+   "blank": "pente",
+   "src": "made"
+  },
+  {
+   "text": "Les enfants d'Émilie descendent la pente du jardin en luge improvisée sur un carton.",
+   "en": "Émilie's children slide down the garden slope on a cardboard sled.",
+   "ko": "에밀리의 아이들은 정원 비탈을 상자 썰매로 내려와요.",
+   "blank": "pente",
+   "src": "made"
   }
  ],
  "w|perception": [
@@ -58915,6 +59763,22 @@
    "src": "made"
   }
  ],
+ "w|plaine": [
+  {
+   "text": "Le camping de Paul se trouve au milieu d'une vaste plaine couverte de blé.",
+   "en": "Paul's campsite is in the middle of a vast plain covered with wheat.",
+   "ko": "폴의 캠핑장은 밀밭으로 덮인 넓은 평야 한가운데 있어요.",
+   "blank": "plaine",
+   "src": "made"
+  },
+  {
+   "text": "Depuis la fenêtre de la maison familiale, Émilie voit la plaine s'étendre jusqu'à l'horizon.",
+   "en": "From the family home's window, Émilie sees the plain stretching to the horizon.",
+   "ko": "에밀리는 시골집 창문으로 지평선까지 펼쳐진 평야를 봐요.",
+   "blank": "plaine",
+   "src": "made"
+  }
+ ],
  "w|plainte": [
   {
    "text": "Je voudrais déposer une plainte.",
@@ -59121,6 +59985,22 @@
    "src": "made"
   }
  ],
+ "w|plantation": [
+  {
+   "text": "En chemin, Paul traverse une plantation de pins alignés comme des soldats.",
+   "en": "On the way, Paul goes through a pine plantation lined up like soldiers.",
+   "ko": "가는 길에 폴은 군인처럼 줄지어 선 소나무 조림지를 지나요.",
+   "blank": "plantation",
+   "src": "made"
+  },
+  {
+   "text": "Le grand-père d'Émilie raconte qu'il a travaillé jeune dans une plantation de tabac.",
+   "en": "Émilie's grandfather tells how he worked on a tobacco plantation when he was young.",
+   "ko": "에밀리의 할아버지는 젊을 때 담배 농장에서 일했다고 이야기해요.",
+   "blank": "plantation",
+   "src": "made"
+  }
+ ],
  "w|plante": [
   {
    "text": "Je dois arroser la plante tous les jours.",
@@ -59235,6 +60115,22 @@
    "en": "We are going to have a picnic on the plateau.",
    "ko": "고원에서 피크닉을 할 거야.",
    "blank": "plateau"
+  }
+ ],
+ "w|plausible": [
+  {
+   "text": "L'histoire de fantômes que raconte Paul semble presque plausible dans le noir.",
+   "en": "The ghost story Paul tells seems almost believable in the dark.",
+   "ko": "어둠 속에서 들으니 폴이 하는 유령 이야기가 그럴듯하게 들려요.",
+   "blank": "plausible",
+   "src": "made"
+  },
+  {
+   "text": "L'excuse de son fils pour le vase cassé ne paraît pas très plausible à Émilie.",
+   "en": "Her son's excuse for the broken vase doesn't seem very plausible to Émilie.",
+   "ko": "깨진 꽃병에 대한 아들의 변명이 에밀리에게는 별로 그럴듯해 보이지 않아요.",
+   "blank": "plausible",
+   "src": "made"
   }
  ],
  "w|plein": [
@@ -61073,6 +61969,22 @@
    "src": "made"
   }
  ],
+ "w|prédiction": [
+  {
+   "text": "Louis se méfie de toute prédiction sur le résultat du référendum local.",
+   "en": "Louis is wary of any prediction about the result of the local referendum.",
+   "ko": "루이는 주민 투표 결과에 대한 어떤 예측도 믿지 않아요.",
+   "blank": "prédiction",
+   "src": "made"
+  },
+  {
+   "text": "Claire rappelle à son ami sa prédiction d'autrefois : il disait qu'elle deviendrait peintre.",
+   "en": "Claire reminds her friend of his old prediction: he said she would become a painter.",
+   "ko": "클레르는 친구에게 예전에 자기가 화가가 될 거라던 예언을 떠올리게 해요.",
+   "blank": "prédiction",
+   "src": "made"
+  }
+ ],
  "w|prédire": [
   {
    "text": "Personne ne peut prédire la décision du jury, rappelle Antoine à sa cliente.",
@@ -61525,6 +62437,22 @@
    "en": "Our president is visiting the city today.",
    "ko": "오늘 우리 대통령이 그 도시를 방문해.",
    "blank": "président"
+  }
+ ],
+ "w|présidentiel": [
+  {
+   "text": "Louis installe les isoloirs pour l'élection présidentielle de dimanche.",
+   "en": "Louis sets up the voting booths for Sunday's presidential election.",
+   "ko": "루이는 일요일 대통령 선거에 쓸 기표소를 설치해요.",
+   "blank": "présidentielle",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit qu'elle a suivi le débat présidentiel à la télévision jusqu'à minuit.",
+   "en": "Claire writes that she watched the presidential debate on TV until midnight.",
+   "ko": "클레르는 대통령 후보 토론을 텔레비전으로 자정까지 봤다고 써요.",
+   "blank": "présidentiel",
+   "src": "made"
   }
  ],
  "w|presque": [
@@ -62811,6 +63739,22 @@
    "src": "made"
   }
  ],
+ "w|proportion": [
+  {
+   "text": "Louis constate qu'une faible proportion des jeunes vote aux élections locales.",
+   "en": "Louis notes that a small proportion of young people vote in local elections.",
+   "ko": "루이는 지방 선거에 투표하는 젊은이 비율이 낮다는 걸 알아요.",
+   "blank": "proportion",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit qu'une grande proportion de leurs anciens camarades vit encore dans la région.",
+   "en": "Claire writes that a large proportion of their old classmates still live in the area.",
+   "ko": "클레르는 옛 동창 중 많은 수가 아직 그 지역에 산다고 써요.",
+   "blank": "proportion",
+   "src": "made"
+  }
+ ],
  "w|propos": [
   {
    "text": "À propos de ton idée, j’ai une question.",
@@ -62908,6 +63852,22 @@
    "en": "Léa complains to her colleagues that her landlord is raising the rent again.",
    "ko": "레아는 집주인이 또 월세를 올린다고 동료들에게 투덜거려요.",
    "blank": "proprio",
+   "src": "made"
+  }
+ ],
+ "w|prospère": [
+  {
+   "text": "Le village près du camping était autrefois prospère grâce au commerce du bois, raconte Paul.",
+   "en": "The village near the campsite was once prosperous thanks to the timber trade, Paul says.",
+   "ko": "폴은 캠핑장 근처 마을이 예전에 목재 거래로 번성했다고 말해요.",
+   "blank": "prospère",
+   "src": "made"
+  },
+  {
+   "text": "L'oncle d'Émilie tient un commerce prospère dans la ville voisine.",
+   "en": "Émilie's uncle runs a prosperous shop in the next town.",
+   "ko": "에밀리의 삼촌은 이웃 도시에서 잘되는 가게를 해요.",
+   "blank": "prospère",
    "src": "made"
   }
  ],
@@ -63787,6 +64747,22 @@
    "src": "made"
   }
  ],
+ "w|qualifier": [
+  {
+   "text": "Paul a du mal à qualifier la couleur du ciel au coucher du soleil.",
+   "en": "Paul struggles to describe the colour of the sky at sunset.",
+   "ko": "폴은 해 질 녘 하늘빛을 뭐라고 해야 할지 모르겠어요.",
+   "blank": "qualifier",
+   "src": "made"
+  },
+  {
+   "text": "Le cousin d'Émilie est fier de se qualifier pour la finale du tournoi d'échecs.",
+   "en": "Émilie's cousin is proud to qualify for the chess tournament final.",
+   "ko": "에밀리의 사촌은 체스 대회 결승에 올라서 뿌듯해해요.",
+   "blank": "qualifier",
+   "src": "made"
+  }
+ ],
  "w|qualité": [
   {
    "text": "La qualité de ce produit est excellente.",
@@ -64627,6 +65603,22 @@
    "blank": "raisonnable"
   }
  ],
+ "w|raisonnement": [
+  {
+   "text": "Le raisonnement de Louis convainc finalement les conseillers les plus sceptiques.",
+   "en": "Louis's reasoning finally convinces the most skeptical councillors.",
+   "ko": "루이의 논리가 결국 가장 회의적인 의원들까지 설득해요.",
+   "blank": "raisonnement",
+   "src": "made"
+  },
+  {
+   "text": "Claire trouve le raisonnement de son ami un peu étrange, mais elle le lit avec plaisir.",
+   "en": "Claire finds her friend's reasoning a little strange, but she enjoys reading it.",
+   "ko": "클레르는 친구의 논리가 좀 이상하다고 생각하지만 즐겁게 읽어요.",
+   "blank": "raisonnement",
+   "src": "made"
+  }
+ ],
  "w|raisonner": [
   {
    "text": "Lucas essaie de raisonner son petit frère qui veut descendre à chaque gare.",
@@ -65307,6 +66299,22 @@
    "src": "made"
   }
  ],
+ "w|rebondir": [
+  {
+   "text": "Paul regarde le ballon rebondir sur les galets avant de tomber dans le lac.",
+   "en": "Paul watches the ball bounce off the pebbles before falling into the lake.",
+   "ko": "폴은 공이 자갈 위에서 튀다가 호수에 빠지는 걸 봐요.",
+   "blank": "rebondir",
+   "src": "made"
+  },
+  {
+   "text": "Émilie interdit aux enfants de rebondir sur le canapé du salon.",
+   "en": "Émilie forbids the children to bounce on the living-room sofa.",
+   "ko": "에밀리는 아이들에게 거실 소파에서 뛰지 말라고 해요.",
+   "blank": "rebondir",
+   "src": "made"
+  }
+ ],
  "w|récemment": [
   {
    "text": "J’ai vu ce film récemment.",
@@ -65608,6 +66616,22 @@
    "en": "To reward her loyal customers, Chloé gives away a tempered glass protector.",
    "ko": "단골손님에게 보답하려고 클로에는 강화 유리 필름을 선물해요.",
    "blank": "récompenser",
+   "src": "made"
+  }
+ ],
+ "w|reconduire": [
+  {
+   "text": "Le dernier soir, Paul propose de reconduire la famille hollandaise jusqu'à la gare.",
+   "en": "On the last evening, Paul offers to drive the Dutch family back to the station.",
+   "ko": "마지막 날 저녁 폴은 네덜란드 가족을 역까지 데려다주겠다고 해요.",
+   "blank": "reconduire",
+   "src": "made"
+  },
+  {
+   "text": "La famille d'Émilie a décidé de reconduire la tradition du grand pique-nique de Pâques.",
+   "en": "Émilie's family has decided to carry on the big Easter picnic tradition.",
+   "ko": "에밀리 가족은 부활절 큰 소풍 전통을 올해도 이어 가기로 했어요.",
+   "blank": "reconduire",
    "src": "made"
   }
  ],
@@ -67276,6 +68300,22 @@
    "en": "Léa says her dog spends its days sniffing the bushes in the garden.",
    "ko": "레아는 개가 하루 종일 마당 덤불 냄새를 맡고 다닌다고 해요.",
    "blank": "renifler",
+   "src": "made"
+  }
+ ],
+ "w|renommée": [
+  {
+   "text": "La renommée du marché de Noël attire des visiteurs de toute la région, se réjouit Louis.",
+   "en": "The fame of the Christmas market draws visitors from the whole region, Louis is pleased to say.",
+   "ko": "루이는 크리스마스 시장이 유명해서 지역 곳곳에서 사람들이 온다며 기뻐해요.",
+   "blank": "renommée",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit que la renommée de leur ancien professeur de dessin a dépassé la région.",
+   "en": "Claire writes that their old art teacher's fame has spread beyond the region.",
+   "ko": "클레르는 옛 미술 선생님의 명성이 지역 밖까지 퍼졌다고 써요.",
+   "blank": "renommée",
    "src": "made"
   }
  ],
@@ -69283,6 +70323,22 @@
    "src": "made"
   }
  ],
+ "w|riposter": [
+  {
+   "text": "Accusé de favoritisme, Louis choisit de riposter calmement par un communiqué.",
+   "en": "Accused of favoritism, Louis chooses to respond calmly with a statement.",
+   "ko": "특혜 의혹을 받은 루이는 차분하게 성명을 내서 맞서기로 해요.",
+   "blank": "riposter",
+   "src": "made"
+  },
+  {
+   "text": "Claire rit en se rappelant comme son ami savait riposter du tac au tac aux professeurs.",
+   "en": "Claire laughs remembering how her friend could fire back at teachers in a flash.",
+   "ko": "클레르는 친구가 선생님들에게 척척 받아치던 모습을 떠올리며 웃어요.",
+   "blank": "riposter",
+   "src": "made"
+  }
+ ],
  "w|rire": [
   {
    "text": "J'adore rire avec mes amis.",
@@ -69367,6 +70423,22 @@
    "en": "Don't mess with his routine.",
    "ko": "그의 하루 순서를 건드리지 마.",
    "blank": "rituel"
+  }
+ ],
+ "w|rivage": [
+  {
+   "text": "Au petit matin, Paul marche le long du rivage du lac pour ramasser du bois flotté.",
+   "en": "Early in the morning, Paul walks along the lakeshore to gather driftwood.",
+   "ko": "이른 아침 폴은 떠내려온 나무를 주우러 호숫가를 따라 걸어요.",
+   "blank": "rivage",
+   "src": "made"
+  },
+  {
+   "text": "Émilie pose sur la table un vieux tableau de sa mère représentant un rivage breton.",
+   "en": "Émilie puts an old painting by her mother of a Breton shore on the table.",
+   "ko": "에밀리는 어머니가 그린 브르타뉴 바닷가 옛 그림을 탁자에 놓아요.",
+   "blank": "rivage",
+   "src": "made"
   }
  ],
  "w|rival": [
@@ -69471,6 +70543,22 @@
    "en": "I built a robot in class.",
    "ko": "나는 수업에서 로봇을 만들었어.",
    "blank": "robot"
+  }
+ ],
+ "w|robuste": [
+  {
+   "text": "Louis choisit des bancs robustes pour la nouvelle place du marché.",
+   "en": "Louis picks sturdy benches for the new market square.",
+   "ko": "루이는 새 시장 광장에 놓을 튼튼한 벤치를 골라요.",
+   "blank": "robustes",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit qu'à quatre-vingts ans, sa mère reste d'une santé robuste.",
+   "en": "Claire writes that at eighty, her mother is still in robust health.",
+   "ko": "클레르는 여든인 어머니가 여전히 정정하다고 써요.",
+   "blank": "robuste",
+   "src": "made"
   }
  ],
  "w|rocher": [
@@ -69739,6 +70827,22 @@
    "src": "made"
   }
  ],
+ "w|roulement": [
+  {
+   "text": "Les agents de la mairie travaillent par roulement le samedi matin, précise Louis.",
+   "en": "City hall staff work Saturday mornings on a rota, Louis specifies.",
+   "ko": "루이는 시청 직원들이 토요일 아침에 돌아가며 근무한다고 덧붙여요.",
+   "blank": "roulement",
+   "src": "made"
+  },
+  {
+   "text": "Claire explique qu'avec ses sœurs, elles gardent leur mère par roulement chaque week-end.",
+   "en": "Claire explains that she and her sisters take turns looking after their mother every weekend.",
+   "ko": "클레르는 언니들과 주말마다 돌아가며 어머니를 돌본다고 설명해요.",
+   "blank": "roulement",
+   "src": "made"
+  }
+ ],
  "w|rouler": [
   {
    "text": "On va rouler toute la nuit.",
@@ -69854,6 +70958,22 @@
    "en": "Manon ties her hair back with a ribbon before running on the treadmill.",
    "ko": "마농은 러닝머신을 뛰기 전에 리본으로 머리를 묶어요.",
    "blank": "ruban",
+   "src": "made"
+  }
+ ],
+ "w|ruche": [
+  {
+   "text": "Paul garde ses distances avec une ruche installée dans un vieux chêne.",
+   "en": "Paul keeps his distance from a hive set up in an old oak.",
+   "ko": "폴은 오래된 떡갈나무에 있는 벌집에서 멀찍이 떨어져 있어요.",
+   "blank": "ruche",
+   "src": "made"
+  },
+  {
+   "text": "Émilie achète du miel au voisin, qui possède une ruche au fond de son jardin.",
+   "en": "Émilie buys honey from the neighbor, who has a beehive at the end of his garden.",
+   "ko": "에밀리는 정원 끝에 벌통이 있는 이웃에게서 꿀을 사요.",
+   "blank": "ruche",
    "src": "made"
   }
  ],
@@ -70630,6 +71750,22 @@
    "en": "Sarah's friends talk about a gory film they had watched in secret.",
    "ko": "사라의 친구들은 몰래 봤던 잔인한 영화 이야기를 해요.",
    "blank": "sanglant",
+   "src": "made"
+  }
+ ],
+ "w|sanglier": [
+  {
+   "text": "Paul entend un sanglier fouiller le sol tout près du camp.",
+   "en": "Paul hears a wild boar rooting around in the ground right near the camp.",
+   "ko": "폴은 캠프 바로 옆에서 멧돼지가 땅을 파헤치는 소리를 들어요.",
+   "blank": "sanglier",
+   "src": "made"
+  },
+  {
+   "text": "Pour le réveillon, le frère d'Émilie apporte un pâté de sanglier fait maison.",
+   "en": "For the holiday dinner, Émilie's brother brings a homemade wild boar pâté.",
+   "ko": "명절 저녁에 에밀리의 오빠가 직접 만든 멧돼지 파테를 가져와요.",
+   "blank": "sanglier",
    "src": "made"
   }
  ],
@@ -74537,6 +75673,22 @@
    "blank": "soutenir"
   }
  ],
+ "w|soutenu": [
+  {
+   "text": "Dans ses courriers officiels, Louis emploie toujours un langage soutenu.",
+   "en": "In his official letters, Louis always uses formal language.",
+   "ko": "루이는 공문에서 늘 격식 있는 말을 써요.",
+   "blank": "soutenu",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte que son fils travaille à un rythme soutenu pour préparer ses examens.",
+   "en": "Claire writes that her son is working at a steady pace to prepare for his exams.",
+   "ko": "클레르는 아들이 시험 준비로 꾸준히 열심히 공부한다고 써요.",
+   "blank": "soutenu",
+   "src": "made"
+  }
+ ],
  "w|souterrain": [
   {
    "text": "Julien connaît une rivière souterraine qui coule sous le village.",
@@ -75467,6 +76619,22 @@
    "en": "That was a stupid mistake.",
    "ko": "그건 어리석은 실수였어.",
    "blank": "stupide"
+  }
+ ],
+ "w|stupidité": [
+  {
+   "text": "Louis n'en revient pas de la stupidité de certaines plaintes reçues à l'accueil.",
+   "en": "Louis can't get over how stupid some of the complaints at the front desk are.",
+   "ko": "루이는 민원 창구에 들어온 몇몇 불만이 얼마나 어처구니없는지 믿기지 않아요.",
+   "blank": "stupidité",
+   "src": "made"
+  },
+  {
+   "text": "Claire s'excuse de la stupidité de sa dernière lettre, écrite trop vite.",
+   "en": "Claire apologizes for how silly her last letter was, written too quickly.",
+   "ko": "클레르는 너무 서둘러 쓴 지난 편지가 어리석었다고 사과해요.",
+   "blank": "stupidité",
+   "src": "made"
   }
  ],
  "w|style": [
@@ -78187,6 +79355,22 @@
    "blank": "thérapie"
   }
  ],
+ "w|thermique": [
+  {
+   "text": "Paul enfile un maillot thermique avant de se glisser dans son sac de couchage.",
+   "en": "Paul puts on a thermal top before slipping into his sleeping bag.",
+   "ko": "폴은 침낭에 들어가기 전에 보온 내의를 입어요.",
+   "blank": "thermique",
+   "src": "made"
+  },
+  {
+   "text": "Émilie fait installer une meilleure isolation thermique dans la maison de vacances.",
+   "en": "Émilie has better thermal insulation put in the holiday house.",
+   "ko": "에밀리는 별장에 더 좋은 단열재를 넣게 해요.",
+   "blank": "thermique",
+   "src": "made"
+  }
+ ],
  "w|thèse": [
   {
    "text": "La sœur de Thomas écrit une thèse sur l'histoire de la cuisine française.",
@@ -79991,6 +81175,22 @@
    "src": "made"
   }
  ],
+ "w|tribal": [
+  {
+   "text": "Le musée de la ville prépare une exposition sur l'art tribal, annonce Louis.",
+   "en": "The town museum is preparing an exhibition on tribal art, Louis announces.",
+   "ko": "루이는 시립 박물관이 부족 예술 전시를 준비한다고 알려요.",
+   "blank": "tribal",
+   "src": "made"
+  },
+  {
+   "text": "Claire raconte un voyage où elle a acheté un masque tribal sur un marché d'artisans.",
+   "en": "Claire tells of a trip where she bought a tribal mask at a craft market.",
+   "ko": "클레르는 공예 시장에서 부족 가면을 산 여행 이야기를 해요.",
+   "blank": "tribal",
+   "src": "made"
+  }
+ ],
  "w|tribu": [
   {
    "text": "Cette tribu vit dans la forêt depuis des siècles.",
@@ -80233,6 +81433,22 @@
    "src": "made"
   }
  ],
+ "w|tronc": [
+  {
+   "text": "Paul s'assoit sur un tronc couché pour lacer ses chaussures de marche.",
+   "en": "Paul sits on a fallen trunk to lace up his hiking boots.",
+   "ko": "폴은 쓰러진 나무 둥치에 앉아 등산화 끈을 매요.",
+   "blank": "tronc",
+   "src": "made"
+  },
+  {
+   "text": "Émilie accroche des guirlandes lumineuses au tronc du vieux tilleul.",
+   "en": "Émilie hangs fairy lights on the trunk of the old lime tree.",
+   "ko": "에밀리는 오래된 보리수 둥치에 꼬마전구를 감아요.",
+   "blank": "tronc",
+   "src": "made"
+  }
+ ],
  "w|trône": [
   {
    "text": "Il rêve de monter sur le trône.",
@@ -80274,6 +81490,22 @@
    "en": "Camille received the trophy for best salesperson of the year.",
    "ko": "카미유는 올해의 판매왕 트로피를 받았어요.",
    "blank": "trophée",
+   "src": "made"
+  }
+ ],
+ "w|tropical": [
+  {
+   "text": "Paul se souvient d'un camping sous un climat tropical où il pleuvait chaque après-midi.",
+   "en": "Paul remembers a camping trip in a tropical climate where it rained every afternoon.",
+   "ko": "폴은 오후마다 비가 오던 열대 기후에서의 캠핑을 떠올려요.",
+   "blank": "tropical",
+   "src": "made"
+  },
+  {
+   "text": "Émilie prépare une salade de fruits tropicale pour le goûter.",
+   "en": "Émilie makes a tropical fruit salad for the afternoon snack.",
+   "ko": "에밀리는 간식으로 열대 과일 샐러드를 만들어요.",
+   "blank": "tropicale",
    "src": "made"
   }
  ],
@@ -81295,6 +82527,22 @@
    "src": "made"
   }
  ],
+ "w|variable": [
+  {
+   "text": "Louis explique que les horaires d'ouverture sont variables selon les saisons.",
+   "en": "Louis explains that opening hours vary with the seasons.",
+   "ko": "루이는 문 여는 시간이 계절마다 다르다고 설명해요.",
+   "blank": "variables",
+   "src": "made"
+  },
+  {
+   "text": "Claire écrit que le temps est très variable cet automne, entre soleil et averses.",
+   "en": "Claire writes that the weather is very changeable this autumn, between sun and showers.",
+   "ko": "클레르는 이번 가을 날씨가 해와 소나기 사이를 오가며 변덕스럽다고 써요.",
+   "blank": "variable",
+   "src": "made"
+  }
+ ],
  "w|variété": [
   {
    "text": "Julien traite une grande variété d'affaires, du vol de vélo au divorce.",
@@ -81591,6 +82839,22 @@
    "en": "I'm not going to take revenge, it's pointless.",
    "ko": "복수하지 않을 거야, 의미 없어.",
    "blank": "venger"
+  }
+ ],
+ "w|venin": [
+  {
+   "text": "Le guide rassure Paul : le venin de cette araignée est sans danger pour l'homme.",
+   "en": "The guide reassures Paul that this spider's venom is harmless to humans.",
+   "ko": "안내인은 이 거미 독이 사람에게는 위험하지 않다며 폴을 안심시켜요.",
+   "blank": "venin",
+   "src": "made"
+  },
+  {
+   "text": "En regardant un film d'aventure, le fils d'Émilie demande si le venin du serpent est mortel.",
+   "en": "Watching an adventure film, Émilie's son asks whether the snake's venom is deadly.",
+   "ko": "모험 영화를 보던 에밀리의 아들이 뱀독이 치명적이냐고 물어요.",
+   "blank": "venin",
+   "src": "made"
   }
  ],
  "w|venir": [
@@ -82486,6 +83750,22 @@
    "en": "Chloé's colleague plays the violin in an amateur orchestra at weekends.",
    "ko": "클로에의 동료는 주말에 아마추어 오케스트라에서 바이올린을 켜요.",
    "blank": "violon",
+   "src": "made"
+  }
+ ],
+ "w|vipère": [
+  {
+   "text": "Paul s'arrête net sur le sentier : une vipère se chauffe au soleil sur un rocher.",
+   "en": "Paul stops dead on the path: a viper is basking on a rock.",
+   "ko": "폴은 길에서 뚝 멈춰요. 살무사 한 마리가 바위 위에서 햇볕을 쬐고 있어요.",
+   "blank": "vipère",
+   "src": "made"
+  },
+  {
+   "text": "Le grand-père d'Émilie raconte qu'une vipère s'était cachée un jour dans la cave.",
+   "en": "Émilie's grandfather tells how a viper once hid in the cellar.",
+   "ko": "에밀리의 할아버지는 언젠가 지하실에 살무사가 숨어 있었다고 이야기해요.",
+   "blank": "vipère",
    "src": "made"
   }
  ],

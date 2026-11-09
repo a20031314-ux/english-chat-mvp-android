@@ -1409,6 +1409,22 @@
    "src": "tatoeba:3534112/tucm en:71886/CM"
   }
  ],
+ "w|băm": [
+  {
+   "text": "Tuấn băm thịt bằng hai con dao, tiếng cộp cộp vang cả bếp.",
+   "en": "Tuấn minces the meat with two knives, the chopping echoing through the kitchen.",
+   "ko": "뚜언이 칼 두 자루로 고기를 다지면 탁탁 소리가 주방에 울려요.",
+   "blank": "băm",
+   "src": "made"
+  },
+  {
+   "text": "Mai băm nhỏ thịt ghẹ để làm chả.",
+   "en": "Mai minces the crab meat finely to make patties.",
+   "ko": "마이는 게살을 잘게 다져 완자를 만들어요.",
+   "blank": "băm",
+   "src": "made"
+  }
+ ],
  "w|bấm": [
   {
    "text": "Bấm nút này để mở cửa tự động.",
@@ -1507,6 +1523,22 @@
    "blank": "Bận"
   }
  ],
+ "w|bàn ăn": [
+  {
+   "text": "Tuấn kê thêm một bàn ăn dài cho nhóm khách đặt tiệc sinh nhật.",
+   "en": "Tuấn set up an extra long dining table for a group booking a birthday party.",
+   "ko": "뚜언은 생일 파티를 예약한 손님들을 위해 긴 식탁을 하나 더 놓았어요.",
+   "blank": "bàn ăn",
+   "src": "made"
+  },
+  {
+   "text": "Nhà Mai kê bàn ăn ngoài hiên để vừa ăn vừa hóng gió biển.",
+   "en": "Mai's family puts the dining table out on the porch so they can enjoy the sea breeze while eating.",
+   "ko": "마이네 가족은 바닷바람을 쐬며 먹으려고 식탁을 툇마루에 내놓아요.",
+   "blank": "bàn ăn",
+   "src": "made"
+  }
+ ],
  "w|bàn bạc": [
   {
    "text": "Trước khi quyết định, tôi muốn bàn bạc với gia đình mình.",
@@ -1565,6 +1597,22 @@
    "en": "Soaking your feet helps you sleep.",
    "ko": "발 담그면 잠이 잘 와.",
    "blank": "bàn chân"
+  }
+ ],
+ "w|bán chạy": [
+  {
+   "text": "Món cá kho tộ là món bán chạy nhất ở quán của Tuấn.",
+   "en": "Braised fish in a clay pot is the best-selling dish at Tuấn's restaurant.",
+   "ko": "뚝배기 생선 조림은 뚜언 식당에서 가장 잘 팔리는 메뉴예요.",
+   "blank": "bán chạy",
+   "src": "made"
+  },
+  {
+   "text": "Mùa hè, nón lá in hình biển của Mai bán chạy nhất chợ.",
+   "en": "In summer, Mai's conical hats with seaside prints sell better than anything at the market.",
+   "ko": "여름이면 바다 그림이 들어간 마이의 논라가 시장에서 제일 잘 팔려요.",
+   "blank": "bán chạy",
+   "src": "made"
   }
  ],
  "w|ban công": [
@@ -4279,6 +4327,22 @@
    "src": "made"
   }
  ],
+ "w|bơ đậu phộng": [
+  {
+   "text": "Tuấn thử làm bánh mì nướng phết bơ đậu phộng cho thực đơn bữa sáng.",
+   "en": "Tuấn tried making toast spread with peanut butter for the breakfast menu.",
+   "ko": "뚜언은 아침 메뉴로 땅콩버터 바른 토스트를 만들어 봤어요.",
+   "blank": "bơ đậu phộng",
+   "src": "made"
+  },
+  {
+   "text": "Mai mang theo bánh mì kẹp bơ đậu phộng cho chuyến đi câu sáng sớm.",
+   "en": "Mai brings peanut butter sandwiches for the early morning fishing trip.",
+   "ko": "마이는 새벽 낚시에 땅콩버터 샌드위치를 챙겨 가요.",
+   "blank": "bơ đậu phộng",
+   "src": "made"
+  }
+ ],
  "w|bỏ đi": [
   {
    "text": "Đừng bỏ đi khi đang nói chuyện.",
@@ -4494,6 +4558,22 @@
    "en": "Ngọc's brother-in-law said his old factory used to exploit workers to exhaustion.",
    "ko": "응옥의 형부는 예전 공장이 노동자들을 지칠 때까지 착취했다고 말했어요.",
    "blank": "bóc lột",
+   "src": "made"
+  }
+ ],
+ "w|bóc vỏ": [
+  {
+   "text": "Mỗi sáng, cả bếp của Tuấn ngồi bóc vỏ tỏi cho cả ngày.",
+   "en": "Every morning, Tuấn's whole kitchen sits peeling garlic for the day.",
+   "ko": "매일 아침 뚜언의 주방 식구들은 앉아서 하루 쓸 마늘 껍질을 까요.",
+   "blank": "bóc vỏ",
+   "src": "made"
+  },
+  {
+   "text": "Cả nhà Mai ngồi bóc vỏ tôm luộc trên chiếu ngoài hiên.",
+   "en": "Mai's family sits on a mat on the porch peeling boiled shrimp.",
+   "ko": "마이네 가족은 툇마루 돗자리에 앉아 삶은 새우 껍질을 까요.",
+   "blank": "bóc vỏ",
    "src": "made"
   }
  ],
@@ -5133,6 +5213,22 @@
    "en": "They hung a painting on the wall in the living room.",
    "ko": "그들은 거실 벽에 그림을 걸었어.",
    "blank": "bức tường"
+  }
+ ],
+ "w|bùi": [
+  {
+   "text": "Khoai lang nướng ở quán của Tuấn ăn bùi và thơm lắm.",
+   "en": "The roasted sweet potatoes at Tuấn's restaurant are nutty and fragrant.",
+   "ko": "뚜언 식당의 군고구마는 고소하고 향긋해요.",
+   "blank": "bùi",
+   "src": "made"
+  },
+  {
+   "text": "Mai thích món chè đậu xanh bùi béo bán ngoài bãi biển.",
+   "en": "Mai loves the nutty mung bean dessert sold on the beach.",
+   "ko": "마이는 바닷가에서 파는 고소한 녹두 디저트를 좋아해요.",
+   "blank": "bùi",
+   "src": "made"
   }
  ],
  "w|bụi": [
@@ -6557,6 +6653,22 @@
    "src": "tatoeba:13508517/leucammieuvu en:13505166/Nuel"
   }
  ],
+ "w|cán": [
+  {
+   "text": "Tuấn tự tay cán bột làm mì cho món đặc biệt cuối tuần.",
+   "en": "Tuấn rolls out the dough himself to make noodles for the weekend special.",
+   "ko": "뚜언은 주말 특별 메뉴용 면을 만들려고 직접 반죽을 밀어요.",
+   "blank": "cán",
+   "src": "made"
+  },
+  {
+   "text": "Bà Mai dùng chai thủy tinh cán mỏng bột làm bánh đa.",
+   "en": "Mai's grandmother uses a glass bottle to roll the dough thin for rice crackers.",
+   "ko": "마이의 할머니는 유리병으로 반죽을 얇게 밀어 쌀과자를 만들어요.",
+   "blank": "cán",
+   "src": "made"
+  }
+ ],
  "w|cắn": [
   {
    "text": "Bạn phải bỏ thói quen cắn móng đi.",
@@ -6961,6 +7073,22 @@
    "en": "Everyone should read this warning.",
    "ko": "이 경고는 모두가 읽어야 해.",
    "blank": "Cảnh báo"
+  }
+ ],
+ "w|canh chua": [
+  {
+   "text": "Trưa nóng, khách ở quán Tuấn thích gọi tô canh chua cá lóc.",
+   "en": "On hot afternoons, customers at Tuấn's place love to order sour soup with snakehead fish.",
+   "ko": "더운 점심이면 뚜언 식당 손님들은 가물치 새콤한 국을 즐겨 시켜요.",
+   "blank": "canh chua",
+   "src": "made"
+  },
+  {
+   "text": "Mai nấu canh chua cá đuối cho cả nhà sau chuyến biển.",
+   "en": "Mai cooks sour stingray soup for the whole family after the fishing trip.",
+   "ko": "마이는 출어에서 돌아온 가족을 위해 가오리 새콤한 국을 끓여요.",
+   "blank": "canh chua",
+   "src": "made"
   }
  ],
  "w|cảnh đẹp": [
@@ -8530,6 +8658,22 @@
    "en": "Linh's medicine storeroom is quite cramped, so she has to stack things up to the ceiling.",
    "ko": "린의 약 창고는 꽤 비좁아서 천장까지 쌓아야 해요.",
    "blank": "chật hẹp",
+   "src": "made"
+  }
+ ],
+ "w|chất liệu": [
+  {
+   "text": "Quán của Tuấn chọn khăn trải bàn bằng chất liệu cotton cho dễ giặt.",
+   "en": "Tuấn's restaurant picked cotton tablecloths because they're easy to wash.",
+   "ko": "뚜언의 식당은 빨기 쉽게 면 소재 식탁보를 골랐어요.",
+   "blank": "chất liệu",
+   "src": "made"
+  },
+  {
+   "text": "Mai bán khăn choàng đi biển làm từ chất liệu lụa mỏng.",
+   "en": "Mai sells beach shawls made from thin silk.",
+   "ko": "마이는 얇은 실크 소재로 만든 바닷가 숄을 팔아요.",
+   "blank": "chất liệu",
    "src": "made"
   }
  ],
@@ -16989,6 +17133,22 @@
    "blank": "Đêm nay"
   }
  ],
+ "w|đêm qua": [
+  {
+   "text": "Quán mất điện đêm qua, Tuấn phải thắp nến cho khách ăn tiếp.",
+   "en": "The power went out last night, so Tuấn had to light candles so the customers could keep eating.",
+   "ko": "어젯밤 정전이 돼서 뚜언은 손님들이 계속 먹을 수 있게 초를 켰어요.",
+   "blank": "đêm qua",
+   "src": "made"
+  },
+  {
+   "text": "Bão về đêm qua, Mai thức trắng nghe sóng đập vào kè.",
+   "en": "A storm came in last night, and Mai stayed up all night listening to waves pounding the seawall.",
+   "ko": "어젯밤 폭풍이 와서 마이는 방파제에 부딪히는 파도 소리를 들으며 밤을 새웠어요.",
+   "blank": "đêm qua",
+   "src": "made"
+  }
+ ],
  "w|đen": [
   {
    "text": "Áo đen hợp với quần jean.",
@@ -21005,6 +21165,22 @@
    "blank": "dường như"
   }
  ],
+ "w|đường phèn": [
+  {
+   "text": "Tuấn chưng yến với đường phèn làm món tráng miệng cho khách quen.",
+   "en": "Tuấn steams bird's nest with rock sugar as a dessert for regulars.",
+   "ko": "뚜언은 단골손님 디저트로 제비집을 얼음설탕과 함께 쪄요.",
+   "blank": "đường phèn",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ Mai nấu nước sâm với đường phèn bán cho khách tắm biển.",
+   "en": "Mai's mother brews herbal tea with rock sugar to sell to beachgoers.",
+   "ko": "마이의 엄마는 얼음설탕을 넣은 약초차를 끓여 해수욕객에게 팔아요.",
+   "blank": "đường phèn",
+   "src": "made"
+  }
+ ],
  "w|đường phố": [
   {
    "text": "Đường phố lúc này đông nghịt người.",
@@ -22105,6 +22281,22 @@
    "src": "made"
   }
  ],
+ "w|ghế bành": [
+  {
+   "text": "Bà nội của Tuấn hay ngồi chiếc ghế bành cạnh quầy thu ngân.",
+   "en": "Tuấn's grandmother likes to sit in the armchair next to the cash counter.",
+   "ko": "뚜언의 할머니는 계산대 옆 안락의자에 자주 앉아 계세요.",
+   "blank": "ghế bành",
+   "src": "made"
+  },
+  {
+   "text": "Ông ngoại Mai thích ngồi ghế bành ngoài hiên nhìn ra biển.",
+   "en": "Mai's grandfather likes to sit in an armchair on the porch looking out at the sea.",
+   "ko": "마이의 외할아버지는 툇마루 안락의자에 앉아 바다를 바라보는 걸 좋아해요.",
+   "blank": "ghế bành",
+   "src": "made"
+  }
+ ],
  "w|ghé qua": [
   {
    "text": "Giám đốc ghé qua bàn của Phong để chào và hỏi han vài câu.",
@@ -22118,6 +22310,22 @@
    "en": "On a rainy afternoon, Ngọc drops by her usual dessert shop for hot sweet soup.",
    "ko": "비 오는 오후 응옥은 단골 디저트 가게에 들러 따뜻한 체를 먹어요.",
    "blank": "ghé qua",
+   "src": "made"
+  }
+ ],
+ "w|ghế sofa": [
+  {
+   "text": "Góc chờ của quán Tuấn có một chiếc ghế sofa cho khách ngồi đợi bàn.",
+   "en": "The waiting corner at Tuấn's restaurant has a sofa for customers waiting for a table.",
+   "ko": "뚜언 식당 대기 공간에는 자리를 기다리는 손님용 소파가 있어요.",
+   "blank": "ghế sofa",
+   "src": "made"
+  },
+  {
+   "text": "Khu nghỉ dưỡng gần nhà Mai đặt ghế sofa ngay trên bãi cát.",
+   "en": "The resort near Mai's house puts sofas right on the sand.",
+   "ko": "마이네 집 근처 리조트는 모래사장 위에 소파를 놓아 둬요.",
+   "blank": "ghế sofa",
    "src": "made"
   }
  ],
@@ -23591,6 +23799,22 @@
    "src": "made"
   }
  ],
+ "w|giòn tan": [
+  {
+   "text": "Món chả giò của Tuấn chiên vàng, cắn vào giòn tan.",
+   "en": "Tuấn's spring rolls are fried golden and shatteringly crisp when you bite in.",
+   "ko": "뚜언의 짜조는 노릇하게 튀겨져 한입 물면 바삭해요.",
+   "blank": "giòn tan",
+   "src": "made"
+  },
+  {
+   "text": "Bánh tráng nướng ở chợ đêm ven biển giòn tan, Mai ăn liền hai cái.",
+   "en": "The grilled rice paper at the seaside night market is so crisp that Mai ate two in a row.",
+   "ko": "바닷가 야시장의 구운 라이스페이퍼가 바삭해서 마이는 연달아 두 장을 먹었어요.",
+   "blank": "giòn tan",
+   "src": "made"
+  }
+ ],
  "w|giống": [
   {
    "text": "Cậu giống mẹ quá.",
@@ -23921,6 +24145,22 @@
    "src": "tatoeba:8981919/dotheduyet1999 en:7543110/CK"
   }
  ],
+ "w|gỏi": [
+  {
+   "text": "Món gỏi ngó sen tôm thịt của Tuấn chua ngọt vừa miệng.",
+   "en": "Tuấn's lotus-stem salad with shrimp and pork is just the right balance of sour and sweet.",
+   "ko": "뚜언의 새우 돼지고기 연근줄기 샐러드는 새콤달콤 입에 딱 맞아요.",
+   "blank": "gỏi",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ Mai làm gỏi cá trích trộn với rau rừng và đậu phộng.",
+   "en": "Mai's mother makes herring salad tossed with wild greens and peanuts.",
+   "ko": "마이의 엄마는 청어를 산나물, 땅콩과 버무려 회무침을 만들어요.",
+   "blank": "gỏi",
+   "src": "made"
+  }
+ ],
  "w|gọi": [
   {
    "text": "Nhớ gọi cho mẹ nhé.",
@@ -24132,6 +24372,22 @@
    "en": "Everyone contributed a bit of food to the party.",
    "ko": "각자 파티 음식을 조금씩 가져왔어요.",
    "blank": "góp",
+   "src": "made"
+  }
+ ],
+ "w|gọt": [
+  {
+   "text": "Tuấn gọt vỏ cả rổ khoai tây trong chưa đầy mười phút.",
+   "en": "Tuấn peels a whole basket of potatoes in under ten minutes.",
+   "ko": "뚜언은 감자 한 바구니를 십 분도 안 돼서 다 깎아요.",
+   "blank": "gọt",
+   "src": "made"
+  },
+  {
+   "text": "Ngồi dưới gốc dừa, Mai gọt xoài xanh chấm muối ớt.",
+   "en": "Sitting under a coconut palm, Mai peels green mango to dip in chili salt.",
+   "ko": "야자수 아래 앉아 마이는 풋망고를 깎아 고추소금에 찍어 먹어요.",
+   "blank": "gọt",
    "src": "made"
   }
  ],
@@ -25166,6 +25422,22 @@
    "en": "Hương writes that there's a lot of pollen this season and she sneezes nonstop whenever she goes out.",
    "ko": "흐엉은 이맘때 꽃가루가 많아 밖에 나가면 재채기를 계속한다고 써요.",
    "blank": "hắt hơi",
+   "src": "made"
+  }
+ ],
+ "w|hạt tiêu": [
+  {
+   "text": "Tuấn chỉ dùng hạt tiêu Phú Quốc xay tươi cho món bò lúc lắc.",
+   "en": "Tuấn only uses freshly ground Phú Quốc pepper for his shaking beef.",
+   "ko": "뚜언은 보 룩락에 갓 간 푸꾸옥 후추만 써요.",
+   "blank": "hạt tiêu",
+   "src": "made"
+  },
+  {
+   "text": "Mai rắc chút hạt tiêu lên bát cháo hàu cho dậy mùi.",
+   "en": "Mai sprinkles a little pepper on the oyster porridge to bring out the aroma.",
+   "ko": "마이는 굴죽에 후추를 조금 뿌려 향을 살려요.",
+   "blank": "hạt tiêu",
    "src": "made"
   }
  ],
@@ -36631,6 +36903,22 @@
    "blank": "mở cửa"
   }
  ],
+ "w|mở đầu": [
+  {
+   "text": "Mỗi sáng, Tuấn mở đầu ngày làm việc bằng một ấm trà nóng trong bếp quán.",
+   "en": "Every morning, Tuấn starts the workday with a pot of hot tea in the restaurant kitchen.",
+   "ko": "매일 아침 뚜언은 식당 주방에서 뜨거운 차 한 주전자로 하루 일을 시작해요.",
+   "blank": "mở đầu",
+   "src": "made"
+  },
+  {
+   "text": "Lễ hội biển ở làng của Mai mở đầu bằng màn múa lân.",
+   "en": "The sea festival in Mai's village opens with a lion dance.",
+   "ko": "마이 마을의 바다 축제는 사자춤으로 시작해요.",
+   "blank": "mở đầu",
+   "src": "made"
+  }
+ ],
  "w|mơ hồ": [
   {
    "text": "Giải thích của anh ấy còn mơ hồ quá.",
@@ -37407,6 +37695,22 @@
    "blank": "Mũ"
   }
  ],
+ "w|mù tạt": [
+  {
+   "text": "Có khách xin thêm mù tạt để chấm gỏi cá, Tuấn mang ra ngay.",
+   "en": "A customer asked for extra wasabi for the raw fish salad, and Tuấn brought it right out.",
+   "ko": "손님이 생선회 무침에 찍을 와사비를 더 달라고 하자 뚜언은 바로 가져왔어요.",
+   "blank": "mù tạt",
+   "src": "made"
+  },
+  {
+   "text": "Ăn gỏi cá ngừ, Mai thích chấm thêm một chút mù tạt cay nồng.",
+   "en": "When eating raw tuna salad, Mai likes dipping it in a bit of sharp wasabi.",
+   "ko": "참치회 무침을 먹을 때 마이는 톡 쏘는 와사비를 조금 찍는 걸 좋아해요.",
+   "blank": "mù tạt",
+   "src": "made"
+  }
+ ],
  "w|mua": [
   {
    "text": "Mua thêm bánh mì đi.",
@@ -37837,6 +38141,22 @@
    "en": "Eleven people fit at this table.",
    "ko": "열한 명이면 이 테이블에 딱 맞아.",
    "blank": "Mười một"
+  }
+ ],
+ "w|muối tiêu": [
+  {
+   "text": "Gà luộc ở quán Tuấn ăn kèm chén muối tiêu chanh.",
+   "en": "The boiled chicken at Tuấn's place comes with a small bowl of salt, pepper and lime.",
+   "ko": "뚜언 식당의 삶은 닭은 소금 후추 라임 소스와 같이 나와요.",
+   "blank": "muối tiêu",
+   "src": "made"
+  },
+  {
+   "text": "Ghẹ hấp chấm muối tiêu chanh là món Mai mê nhất.",
+   "en": "Steamed crab dipped in salt, pepper and lime is Mai's favorite dish.",
+   "ko": "찐 꽃게를 소금 후추 라임에 찍어 먹는 게 마이가 제일 좋아하는 음식이에요.",
+   "blank": "muối tiêu",
+   "src": "made"
   }
  ],
  "w|muốn": [
@@ -39243,6 +39563,22 @@
    "en": "It's a lovely day. Let's go for a walk.",
    "ko": "날씨 좋으니 산책하자.",
    "blank": "ngày"
+  }
+ ],
+ "w|ngậy": [
+  {
+   "text": "Tuấn nấu cháo với nước cốt dừa nên ăn rất ngậy.",
+   "en": "Tuấn cooks the porridge with coconut milk, so it's very rich.",
+   "ko": "뚜언은 코코넛 밀크로 죽을 끓여서 아주 고소하고 진해요.",
+   "blank": "ngậy",
+   "src": "made"
+  },
+  {
+   "text": "Sò điệp nướng mỡ hành ở quán gần nhà Mai béo ngậy.",
+   "en": "The grilled scallops with scallion oil at the place near Mai's house are rich and buttery.",
+   "ko": "마이네 근처 가게의 파기름 가리비 구이는 진하고 고소해요.",
+   "blank": "ngậy",
+   "src": "made"
   }
  ],
  "w|ngay bây giờ": [
@@ -44069,6 +44405,22 @@
    "blank": "nói với"
   }
  ],
+ "w|nộm": [
+  {
+   "text": "Khách miền Bắc hay gọi đĩa nộm đu đủ của Tuấn để ăn kèm bia.",
+   "en": "Northern customers often order Tuấn's papaya salad to go with beer.",
+   "ko": "북부 손님들은 맥주 안주로 뚜언의 파파야 무침을 자주 시켜요.",
+   "blank": "nộm",
+   "src": "made"
+  },
+  {
+   "text": "Mai mang hộp nộm sứa ra bãi biển ăn trưa.",
+   "en": "Mai brings a box of jellyfish salad to the beach for lunch.",
+   "ko": "마이는 해파리 무침 한 통을 들고 바닷가에 점심을 먹으러 가요.",
+   "blank": "nộm",
+   "src": "made"
+  }
+ ],
  "w|nón": [
   {
    "text": "Con gái Phong đòi mua chiếc nón len màu hồng ở quầy trẻ em.",
@@ -44423,6 +44775,22 @@
    "src": "made"
   }
  ],
+ "w|nước chấm": [
+  {
+   "text": "Tuấn tự pha nước chấm theo công thức của mẹ.",
+   "en": "Tuấn mixes the dipping sauce himself using his mother's recipe.",
+   "ko": "뚜언은 엄마 레시피대로 소스를 직접 만들어요.",
+   "blank": "nước chấm",
+   "src": "made"
+  },
+  {
+   "text": "Hải sản ở chợ biển tươi đến mức Mai chỉ cần chấm muối, chẳng cần nước chấm cầu kỳ.",
+   "en": "The seafood at the beach market is so fresh that Mai only needs salt, no fancy dipping sauce.",
+   "ko": "바닷가 시장 해산물이 워낙 싱싱해서 마이는 복잡한 소스 없이 소금만 찍어요.",
+   "blank": "nước chấm",
+   "src": "made"
+  }
+ ],
  "w|nước chanh": [
   {
    "text": "Nước chanh này quá ngọt.",
@@ -44451,6 +44819,22 @@
    "en": "The ice has all melted—make some more.",
    "ko": "얼음이 다 녹았어, 더 만들어.",
    "blank": "Nước đá"
+  }
+ ],
+ "w|nước dùng": [
+  {
+   "text": "Tuấn ninh xương bò suốt đêm để có nồi nước dùng thật trong.",
+   "en": "Tuấn simmers beef bones all night to get a really clear broth.",
+   "ko": "뚜언은 맑은 육수를 얻으려고 소뼈를 밤새 고아요.",
+   "blank": "nước dùng",
+   "src": "made"
+  },
+  {
+   "text": "Mai dùng đầu tôm để nấu nước dùng cho món bún.",
+   "en": "Mai uses shrimp heads to make the broth for the noodle dish.",
+   "ko": "마이는 국수 육수를 내려고 새우 머리를 써요.",
+   "blank": "nước dùng",
+   "src": "made"
   }
  ],
  "w|nước ép": [
@@ -44497,6 +44881,22 @@
    "en": "She only sprays perfume in the morning.",
    "ko": "그녀는 아침에만 향수를 뿌려.",
    "blank": "nước hoa"
+  }
+ ],
+ "w|nước lèo": [
+  {
+   "text": "Nồi hủ tiếu của Tuấn nổi tiếng vì nước lèo ngọt thanh.",
+   "en": "Tuấn's hủ tiếu is famous for its delicately sweet broth.",
+   "ko": "뚜언의 후띠에우는 담백하고 달큰한 국물로 유명해요.",
+   "blank": "nước lèo",
+   "src": "made"
+  },
+  {
+   "text": "Quán hủ tiếu ven biển của dì Mai dùng nước lèo nấu từ cá.",
+   "en": "Mai's aunt's seaside noodle shop uses a broth made from fish.",
+   "ko": "마이 이모의 바닷가 후띠에우 가게는 생선으로 낸 국물을 써요.",
+   "blank": "nước lèo",
+   "src": "made"
   }
  ],
  "w|nước lọc": [
@@ -45416,6 +45816,22 @@
    "en": "This dish is spicy because it has a lot of chili.",
    "ko": "이 요리는 고추가 많이 들어가서 매워요.",
    "blank": "ớt",
+   "src": "made"
+  }
+ ],
+ "w|ớt bột": [
+  {
+   "text": "Tuấn rắc thêm ớt bột vào nồi bò kho cho có màu đỏ đẹp.",
+   "en": "Tuấn sprinkles more chili powder into the beef stew to give it a nice red color.",
+   "ko": "뚜언은 소고기 스튜에 고춧가루를 더 뿌려 빨간 색을 예쁘게 내요.",
+   "blank": "ớt bột",
+   "src": "made"
+  },
+  {
+   "text": "Mai ướp cá với ớt bột và sả trước khi nướng.",
+   "en": "Mai marinates the fish with chili powder and lemongrass before grilling.",
+   "ko": "마이는 굽기 전에 생선을 고춧가루와 레몬그라스로 재워요.",
+   "blank": "ớt bột",
    "src": "made"
   }
  ],
@@ -47305,6 +47721,22 @@
    "blank": "phục vụ"
   }
  ],
+ "w|phủi": [
+  {
+   "text": "Trước giờ mở cửa, Tuấn phủi sạch bụi trên mấy khung tranh treo tường.",
+   "en": "Before opening, Tuấn dusts off the picture frames hanging on the wall.",
+   "ko": "문 열기 전에 뚜언은 벽에 걸린 액자들 먼지를 털어요.",
+   "blank": "phủi",
+   "src": "made"
+  },
+  {
+   "text": "Mai phủi cát dính trên chân trước khi bước vào quán.",
+   "en": "Mai brushes the sand off her feet before stepping into the café.",
+   "ko": "마이는 가게에 들어가기 전에 발에 묻은 모래를 털어요.",
+   "blank": "phủi",
+   "src": "made"
+  }
+ ],
  "w|phun": [
   {
    "text": "Long dùng bình xịt phun nước lên mấy chậu lan trên ban công.",
@@ -48159,6 +48591,22 @@
    "en": "Don't forget to lock the door.",
    "ko": "문 잠그는 거 잊지 마.",
    "blank": "quên"
+  }
+ ],
+ "w|quen biết": [
+  {
+   "text": "Khách ở quán Tuấn phần lớn là người quen biết trong khu phố.",
+   "en": "Most of the customers at Tuấn's place are people he knows from the neighborhood.",
+   "ko": "뚜언의 식당 손님은 대부분 동네에서 알고 지내는 사람들이에요.",
+   "blank": "quen biết",
+   "src": "made"
+  },
+  {
+   "text": "Mai quen biết hầu hết ngư dân trong làng chài.",
+   "en": "Mai knows almost all the fishermen in the fishing village.",
+   "ko": "마이는 어촌의 어부들을 거의 다 알아요.",
+   "blank": "quen biết",
+   "src": "made"
   }
  ],
  "w|quên mất": [
@@ -49566,6 +50014,22 @@
    "en": "When she was young, Hà roamed the streets as a street vendor.",
    "ko": "하 아주머니는 젊었을 때 행상으로 이 거리 저 거리를 떠돌았어요.",
    "blank": "rong ruổi",
+   "src": "made"
+  }
+ ],
+ "w|rộng thùng thình": [
+  {
+   "text": "Chiếc tạp dề mới của Tuấn rộng thùng thình, quấn hai vòng vẫn còn dư.",
+   "en": "Tuấn's new apron is way too baggy; even wrapped around twice there's extra.",
+   "ko": "뚜언의 새 앞치마는 헐렁해서 두 번 감아도 남아요.",
+   "blank": "rộng thùng thình",
+   "src": "made"
+  },
+  {
+   "text": "Mai mượn chiếc áo sơ mi rộng thùng thình của bố để che nắng.",
+   "en": "Mai borrowed her father's baggy shirt to keep the sun off.",
+   "ko": "마이는 햇볕을 가리려고 아빠의 헐렁한 셔츠를 빌려 입었어요.",
+   "blank": "rộng thùng thình",
    "src": "made"
   }
  ],
@@ -53967,6 +54431,22 @@
    "blank": "tàu"
   }
  ],
+ "w|tàu điện": [
+  {
+   "text": "Quán của Tuấn ở ngay cạnh ga tàu điện nên trưa nào cũng kín chỗ.",
+   "en": "Tuấn's restaurant is right next to the metro station, so it's packed every lunchtime.",
+   "ko": "뚜언의 식당은 전철역 바로 옆이라 점심마다 자리가 꽉 차요.",
+   "blank": "tàu điện",
+   "src": "made"
+  },
+  {
+   "text": "Mai đi tàu điện từ trung tâm ra biển chỉ mất hai mươi phút.",
+   "en": "Mai takes the tram from downtown to the beach, which takes only twenty minutes.",
+   "ko": "마이는 시내에서 바다까지 전차로 이십 분이면 가요.",
+   "blank": "tàu điện",
+   "src": "made"
+  }
+ ],
  "w|tàu hỏa": [
   {
    "text": "Tàu hỏa đến ga đúng giờ sáng nay.",
@@ -54314,6 +54794,22 @@
    "en": "Playing against a much taller team is a big challenge for Hương.",
    "ko": "훨씬 키가 큰 팀과 경기하는 건 흐엉에게 큰 도전이에요.",
    "blank": "thách thức",
+   "src": "made"
+  }
+ ],
+ "w|thái": [
+  {
+   "text": "Cậu phụ bếp mới thái hành chưa đều nên Tuấn chỉ lại cách cầm dao.",
+   "en": "The new kitchen helper doesn't slice the onions evenly, so Tuấn shows him again how to hold the knife.",
+   "ko": "새 주방 보조가 양파를 고르게 못 썰어서 뚜언이 칼 잡는 법을 다시 알려 줘요.",
+   "blank": "thái",
+   "src": "made"
+  },
+  {
+   "text": "Mai thái mực thành từng khoanh tròn để chiên giòn.",
+   "en": "Mai slices the squid into rings for deep-frying.",
+   "ko": "마이는 튀기려고 오징어를 동그랗게 썰어요.",
+   "blank": "thái",
    "src": "made"
   }
  ],
@@ -60081,6 +60577,22 @@
    "blank": "Tội phạm"
   }
  ],
+ "w|tối qua": [
+  {
+   "text": "Quán của Tuấn tối qua đông khách đến tận nửa đêm.",
+   "en": "Last night Tuấn's restaurant was full of customers until midnight.",
+   "ko": "어젯밤 뚜언의 식당은 자정까지 손님이 많았어요.",
+   "blank": "tối qua",
+   "src": "made"
+  },
+  {
+   "text": "Mai kể tối qua mình ngồi trên bờ cát ngắm trăng đến khuya.",
+   "en": "Mai says she sat on the sand last night watching the moon until late.",
+   "ko": "마이는 어젯밤 모래사장에 앉아 늦게까지 달을 봤다고 해요.",
+   "blank": "tối qua",
+   "src": "made"
+  }
+ ],
  "w|tối tăm": [
   {
    "text": "Hành lang tối tăm, nhớ mang đèn.",
@@ -61177,6 +61689,22 @@
    "en": "Sorry I was late for our appointment yesterday.",
    "ko": "어제 약속에 늦어서 미안해.",
    "blank": "trễ hẹn"
+  }
+ ],
+ "w|trẻ sơ sinh": [
+  {
+   "text": "Nhà Tuấn mới có thêm một trẻ sơ sinh nên anh xin về sớm vài hôm.",
+   "en": "Tuấn's family has a new baby, so he asked to go home early for a few days.",
+   "ko": "뚜언의 집에 갓난아기가 생겨서 그는 며칠 일찍 퇴근하겠다고 했어요.",
+   "blank": "trẻ sơ sinh",
+   "src": "made"
+  },
+  {
+   "text": "Bác sĩ dặn chị Mai không nên cho trẻ sơ sinh ra biển lúc nắng gắt.",
+   "en": "The doctor told Mai not to take a newborn to the beach in harsh sun.",
+   "ko": "의사는 마이에게 볕이 강할 때 갓난아기를 바다에 데려가지 말라고 했어요.",
+   "blank": "trẻ sơ sinh",
+   "src": "made"
   }
  ],
  "w|trên": [
@@ -63479,6 +64007,22 @@
    "src": "made"
   }
  ],
+ "w|tương cà": [
+  {
+   "text": "Bọn trẻ đến quán Tuấn chỉ thích ăn khoai tây chiên chấm tương cà.",
+   "en": "Kids who come to Tuấn's place only want fries dipped in ketchup.",
+   "ko": "뚜언 식당에 오는 아이들은 감자튀김에 케첩 찍어 먹는 것만 좋아해요.",
+   "blank": "tương cà",
+   "src": "made"
+  },
+  {
+   "text": "Em trai Mai ăn mực nướng mà cũng đòi chấm tương cà.",
+   "en": "Mai's younger brother even wants ketchup with his grilled squid.",
+   "ko": "마이의 남동생은 구운 오징어도 케첩에 찍어 먹겠대요.",
+   "blank": "tương cà",
+   "src": "made"
+  }
+ ],
  "w|tượng đài": [
   {
    "text": "Phòng gym của Tuấn nằm ngay cạnh tượng đài ở trung tâm thị trấn.",
@@ -63523,6 +64067,22 @@
    "en": "Don't worry too much about the future.",
    "ko": "미래에 대해 너무 걱정하지 마.",
    "blank": "tương lai"
+  }
+ ],
+ "w|tương ớt": [
+  {
+   "text": "Trên mỗi bàn ở quán Tuấn đều có một lọ tương ớt tự làm.",
+   "en": "Every table at Tuấn's restaurant has a jar of homemade chili sauce.",
+   "ko": "뚜언 식당의 식탁마다 직접 만든 칠리소스 한 병이 놓여 있어요.",
+   "blank": "tương ớt",
+   "src": "made"
+  },
+  {
+   "text": "Mai mua mấy chai tương ớt làng chài về làm quà.",
+   "en": "Mai buys a few bottles of fishing-village chili sauce to take home as gifts.",
+   "ko": "마이는 어촌 칠리소스 몇 병을 선물로 사 가요.",
+   "blank": "tương ớt",
+   "src": "made"
   }
  ],
  "w|tương tự": [
@@ -66509,6 +67069,38 @@
    "src": "made"
   }
  ],
+ "w|vượt": [
+  {
+   "text": "Năm nay doanh thu của quán Tuấn đã vượt mức đặt ra từ đầu năm.",
+   "en": "This year Tuấn's restaurant revenue has exceeded the target set at the start of the year.",
+   "ko": "올해 뚜언 식당 매출은 연초에 세운 목표를 넘었어요.",
+   "blank": "vượt",
+   "src": "made"
+  },
+  {
+   "text": "Thuyền của bố Mai phải vượt sóng lớn mới vào được bờ.",
+   "en": "Mai's father's boat had to get through big waves to reach the shore.",
+   "ko": "마이 아빠의 배는 큰 파도를 넘어야 해안에 닿을 수 있었어요.",
+   "blank": "vượt",
+   "src": "made"
+  }
+ ],
+ "w|vượt đèn đỏ": [
+  {
+   "text": "Tuấn giao hàng muộn nhưng nhất định không vượt đèn đỏ.",
+   "en": "Tuấn is late with the delivery but absolutely won't run a red light.",
+   "ko": "뚜언은 배달이 늦었어도 절대 빨간불에 지나가지 않아요.",
+   "blank": "vượt đèn đỏ",
+   "src": "made"
+  },
+  {
+   "text": "Trên đường ra biển, Mai thấy một thanh niên vượt đèn đỏ suýt đâm vào xe buýt.",
+   "en": "On the way to the beach, Mai saw a young man run a red light and nearly hit a bus.",
+   "ko": "바다에 가는 길에 마이는 한 청년이 빨간불에 달리다 버스와 부딪칠 뻔한 걸 봤어요.",
+   "blank": "vượt đèn đỏ",
+   "src": "made"
+  }
+ ],
  "w|vượt lên": [
   {
    "text": "Đội của Long vượt lên dẫn trước các đội khác trong cuộc thi an toàn.",
@@ -66907,6 +67499,22 @@
    "blank": "xào"
   }
  ],
+ "w|xắt": [
+  {
+   "text": "Tuấn xắt mỏng thịt bò để nhúng lẩu cho nhanh chín.",
+   "en": "Tuấn slices the beef thin so it cooks quickly in the hotpot.",
+   "ko": "뚜언은 샤브샤브에 빨리 익게 소고기를 얇게 썰어요.",
+   "blank": "xắt",
+   "src": "made"
+  },
+  {
+   "text": "Mai xắt nhỏ rau răm rắc lên đĩa ốc luộc.",
+   "en": "Mai chops Vietnamese coriander and sprinkles it over the boiled snails.",
+   "ko": "마이는 라우람을 잘게 썰어 삶은 고둥 위에 뿌려요.",
+   "blank": "xắt",
+   "src": "made"
+  }
+ ],
  "w|xấu": [
   {
    "text": "Thời tiết hôm nay xấu quá.",
@@ -67228,6 +67836,22 @@
    "en": "According to the papers, Mai's great-grandfather once disputed this land and the court took two years to try the case.",
    "ko": "서류에 따르면 마이의 증조할아버지가 이 땅을 두고 다퉜고 법원 재판이 이 년이나 걸렸어요.",
    "blank": "xét xử",
+   "src": "made"
+  }
+ ],
+ "w|xì dầu": [
+  {
+   "text": "Khách ăn chay ở quán Tuấn được phục vụ xì dầu thay cho nước mắm.",
+   "en": "Vegetarian customers at Tuấn's place are served soy sauce instead of fish sauce.",
+   "ko": "뚜언 식당의 채식 손님에게는 생선 소스 대신 간장을 내줘요.",
+   "blank": "xì dầu",
+   "src": "made"
+  },
+  {
+   "text": "Mai rưới chút xì dầu lên đĩa cá hấp gừng.",
+   "en": "Mai drizzles a little soy sauce over the steamed fish with ginger.",
+   "ko": "마이는 생강 생선찜에 간장을 조금 뿌려요.",
+   "blank": "xì dầu",
    "src": "made"
   }
  ],
@@ -67831,6 +68455,22 @@
    "en": "Sit down here with me.",
    "ko": "여기 나랑 앉아.",
    "blank": "xuống"
+  }
+ ],
+ "w|xuồng": [
+  {
+   "text": "Mùa nước nổi, ông Tư chèo xuồng mang cá linh tươi đến bán cho quán của Tuấn.",
+   "en": "In the flood season, Mr. Tư paddles his little boat over to sell fresh linh fish to Tuấn's restaurant.",
+   "ko": "물이 불어나는 철이면 뜨 아저씨가 작은 배를 저어 뚜언의 식당에 싱싱한 린 생선을 팔러 와요.",
+   "blank": "xuồng",
+   "src": "made"
+  },
+  {
+   "text": "Anh trai Mai chèo xuồng ra rạn san hô bắt ốc.",
+   "en": "Mai's brother paddles a small boat out to the coral reef to catch sea snails.",
+   "ko": "마이의 오빠는 작은 배를 저어 산호초에 고둥을 잡으러 가요.",
+   "blank": "xuồng",
+   "src": "made"
   }
  ],
  "w|xương": [

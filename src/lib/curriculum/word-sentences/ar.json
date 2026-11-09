@@ -2905,6 +2905,22 @@
    "blank": "أشعل"
   }
  ],
+ "w|أشغل": [
+  {
+   "text": "أشغل خالد ابنه في تغليف الخبز طوال العطلة.",
+   "en": "Khaled kept his son busy wrapping bread all through the holiday.",
+   "ko": "칼리드는 방학 내내 아들에게 빵 포장 일을 시켰어요.",
+   "blank": "أشغل",
+   "src": "made"
+  },
+  {
+   "text": "أشغلت ليلى العمال الجدد بترتيب المواد حتى يصل الإسمنت.",
+   "en": "Layla kept the new workers busy arranging materials until the cement arrived.",
+   "ko": "라일라는 시멘트가 올 때까지 새 인부들에게 자재 정리를 시켰어요.",
+   "blank": "أشغلت",
+   "src": "made"
+  }
+ ],
  "w|أشقر": [
   {
    "text": "انضم إلى فريق خالد عامل شاب بشعر أشقر وابتسامة خجولة.",
@@ -4131,6 +4147,22 @@
    "src": "made"
   }
  ],
+ "w|أفوكادو": [
+  {
+   "text": "يبيع خالد خبزا محمصا مع الأفوكادو للطلاب صباحا.",
+   "en": "Khaled sells toast with avocado to students in the morning.",
+   "ko": "칼리드는 아침에 학생들에게 아보카도 토스트를 팔아요.",
+   "blank": "الأفوكادو",
+   "src": "made"
+  },
+  {
+   "text": "أكلت ليلى أفوكادو بالملعقة وهي تنتظر الشاحنة.",
+   "en": "Layla ate an avocado with a spoon while waiting for the truck.",
+   "ko": "라일라는 트럭을 기다리며 아보카도를 숟가락으로 떠먹었어요.",
+   "blank": "أفوكادو",
+   "src": "made"
+  }
+ ],
  "w|أقارب": [
   {
    "text": "قابلت أقارب في العطلة الماضية.",
@@ -4712,6 +4744,22 @@
    "en": "Mariam asked the jewelry seller if the stone was a real diamond.",
    "ko": "마리암은 장신구 상인에게 그 돌이 진짜 다이아몬드냐고 물었어요.",
    "blank": "ألماسا",
+   "src": "made"
+  }
+ ],
+ "w|ألمعي": [
+  {
+   "text": "وصف المعلم القديم يوسف بأنه كان طالبا ألمعيا.",
+   "en": "Youssef's old teacher described him as having been a brilliant student.",
+   "ko": "유수프의 옛 선생님은 유수프가 아주 총명한 학생이었다고 했어요.",
+   "blank": "ألمعيا",
+   "src": "made"
+  },
+  {
+   "text": "اشترى طالب ألمعي من سارة كتب رياضيات قديمة.",
+   "en": "A brilliant student bought old math books from Sara.",
+   "ko": "총명한 학생이 사라에게서 옛 수학책을 샀어요.",
+   "blank": "ألمعي",
    "src": "made"
   }
  ],
@@ -6459,6 +6507,22 @@
    "en": "I will visit my family during the winter holiday.",
    "ko": "나는 겨울 휴가에 가족을 방문할 것이다.",
    "blank": "إجازة"
+  }
+ ],
+ "w|إجاص": [
+  {
+   "text": "اشترى خالد صندوق إجاص من السوق ليصنع منه مربى.",
+   "en": "Khaled bought a box of pears at the market to make jam from them.",
+   "ko": "칼리드는 잼을 만들려고 시장에서 배 한 상자를 샀어요.",
+   "blank": "إجاص",
+   "src": "made"
+  },
+  {
+   "text": "زرعت ليلى شجرة إجاص صغيرة في زاوية الموقع لتبقى بعد البناء.",
+   "en": "Layla planted a small pear tree in a corner of the site to remain after construction.",
+   "ko": "라일라는 공사가 끝나도 남도록 현장 구석에 작은 배나무를 심었어요.",
+   "blank": "إجاص",
+   "src": "made"
   }
  ],
  "w|إجباريا": [
@@ -12489,6 +12553,22 @@
    "src": "made"
   }
  ],
+ "w|اعتزل": [
+  {
+   "text": "غنى في عرس يوسف مطرب قديم اعتزل الغناء منذ سنوات.",
+   "en": "An old singer who had retired from singing years ago sang at Youssef's wedding.",
+   "ko": "유수프의 결혼식에서 몇 년 전 은퇴한 옛 가수가 노래했어요.",
+   "blank": "اعتزل",
+   "src": "made"
+  },
+  {
+   "text": "تبيع سارة في سوق المستعمل أدوات خياطة من امرأة اعتزلت المهنة.",
+   "en": "At the flea market Sara sells sewing tools from a woman who retired from the trade.",
+   "ko": "사라는 벼룩시장에서 일을 그만둔 재봉사의 바느질 도구를 팔아요.",
+   "blank": "اعتزلت",
+   "src": "made"
+  }
+ ],
  "w|اعتصام": [
   {
    "text": "نفذ المعلمون اعتصاما في ساحة المدرسة للمطالبة برواتب أفضل، وكان خالد بينهم.",
@@ -12577,6 +12657,22 @@
    "en": "Did they finally arrest the criminal?",
    "ko": "결국 범인을 체포했어?",
    "blank": "اعتقلوا"
+  }
+ ],
+ "w|اعتكف": [
+  {
+   "text": "اعتكف يوسف في غرفته ليلة العرس ليحفظ كلمته أمام الضيوف.",
+   "en": "Youssef shut himself away in his room the night before the wedding to memorize his speech.",
+   "ko": "유수프는 하객 앞에서 할 말을 외우려고 결혼 전날 밤 방에 틀어박혔어요.",
+   "blank": "اعتكف",
+   "src": "made"
+  },
+  {
+   "text": "يعتكف بائع الكتب في ركنه ويقرأ طوال اليوم، كما تقول سارة.",
+   "en": "The book seller shuts himself in his corner and reads all day, as Sara says.",
+   "ko": "사라 말로는 책 장수는 하루 종일 자기 구석에 틀어박혀 책만 읽는대요.",
+   "blank": "يعتكف",
+   "src": "made"
   }
  ],
  "w|اعتماد": [
@@ -12687,6 +12783,22 @@
    "src": "made"
   }
  ],
+ "w|اغتاظ": [
+  {
+   "text": "اغتاظ يوسف حين تأخر المصور ساعة كاملة.",
+   "en": "Youssef got annoyed when the photographer was a whole hour late.",
+   "ko": "사진사가 꼬박 한 시간 늦자 유수프는 화가 났어요.",
+   "blank": "اغتاظ",
+   "src": "made"
+  },
+  {
+   "text": "اغتاظت سارة حين باع جارها المرآة التي حجزتها.",
+   "en": "Sara got angry when her neighbor sold the mirror she had reserved.",
+   "ko": "사라는 찜해 둔 거울을 옆 상인이 팔아 버리자 화가 났어요.",
+   "blank": "اغتاظت",
+   "src": "made"
+  }
+ ],
  "w|اغتال": [
   {
    "text": "يتحدث كتاب التاريخ الذي يقرؤه سامي عن ثائر اغتال حاكما ظالما.",
@@ -12700,6 +12812,22 @@
    "en": "Rana bought an old book about a man who assassinated a minister in the nineteenth century.",
    "ko": "라나는 십구 세기에 장관을 암살한 남자에 관한 오래된 책을 샀어요.",
    "blank": "اغتال",
+   "src": "made"
+  }
+ ],
+ "w|اغتر": [
+  {
+   "text": "قالت أم يوسف: لا تغتر بكلام المدعوين الجميل، فالزواج مسؤولية.",
+   "en": "Youssef's mother said: don't be fooled by the guests' nice words, marriage is a responsibility.",
+   "ko": "유수프의 어머니는 하객들의 칭찬에 우쭐하지 말라며 결혼은 책임이라고 했어요.",
+   "blank": "تغتر",
+   "src": "made"
+  },
+  {
+   "text": "اغترت سارة بالسعر الرخيص واشترت ساعة لا تعمل.",
+   "en": "Sara was deceived by the cheap price and bought a watch that doesn't work.",
+   "ko": "사라는 싼 값에 넘어가 고장 난 시계를 샀어요.",
+   "blank": "اغترت",
    "src": "made"
   }
  ],
@@ -12905,6 +13033,22 @@
    "blank": "افتقد"
   }
  ],
+ "w|افتقر": [
+  {
+   "text": "افتقر حفل يوسف إلى الموسيقى بعد أن تعطل مكبر الصوت.",
+   "en": "Youssef's party lacked music after the speaker broke down.",
+   "ko": "스피커가 고장 나서 유수프의 잔치에는 음악이 없었어요.",
+   "blank": "افتقر",
+   "src": "made"
+  },
+  {
+   "text": "يفتقر السوق إلى مكان للظل، فتجلب سارة مظلتها معها.",
+   "en": "The market lacks a shady spot, so Sara brings her parasol.",
+   "ko": "시장에 그늘이 없어서 사라는 양산을 챙겨 와요.",
+   "blank": "يفتقر",
+   "src": "made"
+  }
+ ],
  "w|اقتبس": [
   {
    "text": "اقتبس يوسف جملة من كتاب طبي في رسالته إلى الإدارة.",
@@ -13098,6 +13242,38 @@
    "en": "Layla's session at the pool is limited to freestyle swimming.",
    "ko": "라일라의 수영장 수업은 자유형만 해요.",
    "blank": "تقتصر",
+   "src": "made"
+  }
+ ],
+ "w|اقتنع": [
+  {
+   "text": "اقتنع والد العروس بيوسف بعد أول لقاء.",
+   "en": "The bride's father was convinced about Youssef after the first meeting.",
+   "ko": "신부의 아버지는 첫 만남 뒤 유수프를 마음에 들어 했어요.",
+   "blank": "اقتنع",
+   "src": "made"
+  },
+  {
+   "text": "اقتنعت سارة أخيرا ببيع الراديو القديم بنصف ثمنه.",
+   "en": "Sara was finally persuaded to sell the old radio for half its price.",
+   "ko": "사라는 결국 옛 라디오를 반값에 팔기로 마음먹었어요.",
+   "blank": "اقتنعت",
+   "src": "made"
+  }
+ ],
+ "w|اقتنى": [
+  {
+   "text": "اقتنى يوسف خاتما قديما من جدته ليقدمه للعروس.",
+   "en": "Youssef acquired an old ring from his grandmother to give to the bride.",
+   "ko": "유수프는 신부에게 주려고 할머니께 옛 반지를 받았어요.",
+   "blank": "اقتنى",
+   "src": "made"
+  },
+  {
+   "text": "اقتنت سارة مجموعة طوابع نادرة من رجل مسافر.",
+   "en": "Sara acquired a rare stamp collection from a man who was leaving town.",
+   "ko": "사라는 떠나는 남자에게서 희귀한 우표 모음을 손에 넣었어요.",
+   "blank": "اقتنت",
    "src": "made"
   }
  ],
@@ -13849,6 +14025,22 @@
    "src": "made"
   }
  ],
+ "w|انبعث": [
+  {
+   "text": "انبعثت رائحة البخور من قاعة عرس يوسف.",
+   "en": "The scent of incense drifted out of Youssef's wedding hall.",
+   "ko": "유수프의 결혼식장에서 향 냄새가 퍼져 나왔어요.",
+   "blank": "انبعثت",
+   "src": "made"
+  },
+  {
+   "text": "انبعث صوت أغنية قديمة من الحاكي الذي تبيعه سارة.",
+   "en": "The sound of an old song came out of the gramophone Sara was selling.",
+   "ko": "사라가 파는 축음기에서 옛 노래가 흘러나왔어요.",
+   "blank": "انبعث",
+   "src": "made"
+  }
+ ],
  "w|انبغى": [
   {
    "text": "ينبغي أن نعمل بجد.",
@@ -14269,6 +14461,22 @@
    "src": "made"
   }
  ],
+ "w|انتهز": [
+  {
+   "text": "انتهز يوسف فرصة الهدوء ليشكر والديه أمام الجميع.",
+   "en": "Youssef seized a quiet moment to thank his parents in front of everyone.",
+   "ko": "유수프는 조용해진 틈을 타 모두 앞에서 부모님께 감사 인사를 했어요.",
+   "blank": "انتهز",
+   "src": "made"
+  },
+  {
+   "text": "انتهزت سارة غياب الزحام لترتب بضاعتها من جديد.",
+   "en": "Sara took advantage of the lull in crowds to rearrange her goods.",
+   "ko": "사라는 손님이 뜸한 틈을 타 물건을 새로 정리했어요.",
+   "blank": "انتهزت",
+   "src": "made"
+  }
+ ],
  "w|انتهى": [
   {
    "text": "انتهى الفيلم في الساعة العاشرة.",
@@ -14331,6 +14539,38 @@
    "src": "made"
   }
  ],
+ "w|انحدر": [
+  {
+   "text": "انحدر موكب يوسف نحو البحر حيث تقام الحفلة.",
+   "en": "Youssef's procession went down toward the sea where the party was held.",
+   "ko": "유수프의 행렬은 잔치가 열리는 바닷가로 내려갔어요.",
+   "blank": "انحدر",
+   "src": "made"
+  },
+  {
+   "text": "يقام السوق في شارع ينحدر نحو النهر، وبسطة سارة في أسفله.",
+   "en": "The market is held on a street that slopes down to the river, and Sara's stall is at the bottom.",
+   "ko": "시장은 강 쪽으로 내리막인 길에 서는데 사라의 좌판은 맨 아래에 있어요.",
+   "blank": "ينحدر",
+   "src": "made"
+  }
+ ],
+ "w|انحرف": [
+  {
+   "text": "انحرفت سيارة العروسين عن الطريق قليلا بسبب الزحام، فضحك يوسف.",
+   "en": "The newlyweds' car veered slightly off the road because of the crowd, and Youssef laughed.",
+   "ko": "인파 때문에 신혼부부 차가 길에서 살짝 벗어나자 유수프가 웃었어요.",
+   "blank": "انحرفت",
+   "src": "made"
+  },
+  {
+   "text": "انحرفت سارة عن طريقها المعتاد لتمر ببائع الصحون.",
+   "en": "Sara deviated from her usual route to pass by the plate seller.",
+   "ko": "사라는 접시 장수에게 들르려고 늘 다니던 길을 벗어났어요.",
+   "blank": "انحرفت",
+   "src": "made"
+  }
+ ],
  "w|انحنى": [
   {
    "text": "انحنى الطفل ليأخذ الكرة.",
@@ -14343,6 +14583,22 @@
    "en": "The actor bowed to the audience after the show.",
    "ko": "배우가 공연 후에 관객에게 인사했어.",
    "blank": "انحنى"
+  }
+ ],
+ "w|انخدع": [
+  {
+   "text": "انخدع يوسف بالموقع وحجز قاعة أصغر مما ظهر في الصور.",
+   "en": "Youssef was fooled by the website and booked a hall smaller than it looked in the photos.",
+   "ko": "유수프는 웹사이트에 속아서 사진보다 작은 홀을 예약했어요.",
+   "blank": "انخدع",
+   "src": "made"
+  },
+  {
+   "text": "انخدعت سارة مرة بلوحة مزيفة، ومنذ ذلك اليوم صارت حذرة.",
+   "en": "Sara was once fooled by a fake painting, and since then she's been careful.",
+   "ko": "사라는 한번 가짜 그림에 속은 뒤로 조심하게 됐어요.",
+   "blank": "انخدعت",
+   "src": "made"
   }
  ],
  "w|انخرط": [
@@ -15019,6 +15275,22 @@
    "blank": "انكسر"
   }
  ],
+ "w|انكشف": [
+  {
+   "text": "انكشف سر المفاجأة قبل العرس لأن أخا يوسف لم يكتمه.",
+   "en": "The surprise was revealed before the wedding because Youssef's brother didn't keep it quiet.",
+   "ko": "유수프의 동생이 입을 다물지 못해서 깜짝 선물이 결혼식 전에 들통났어요.",
+   "blank": "انكشف",
+   "src": "made"
+  },
+  {
+   "text": "انكشف أن الإبريق الذي باعته سارة فضة حقيقية.",
+   "en": "It turned out that the jug Sara had sold was real silver.",
+   "ko": "사라가 판 주전자가 진짜 은이었다는 게 드러났어요.",
+   "blank": "انكشف",
+   "src": "made"
+  }
+ ],
  "w|انكماش": [
   {
    "text": "تحدث أحمد ورفاقه حول النار عن انكماش الاقتصاد هذا العام.",
@@ -15079,6 +15351,22 @@
    "en": "The team lost in the last match.",
    "ko": "팀이 마지막 경기에서 졌어.",
    "blank": "انهزم"
+  }
+ ],
+ "w|انهمر": [
+  {
+   "text": "انهمر المطر فجأة فركض ضيوف يوسف إلى الخيمة.",
+   "en": "The rain suddenly poured down and Youssef's guests ran into the tent.",
+   "ko": "갑자기 비가 쏟아지자 유수프의 하객들이 천막으로 뛰어갔어요.",
+   "blank": "انهمر",
+   "src": "made"
+  },
+  {
+   "text": "انهمرت الأمطار فغطت سارة الكتب بالبلاستيك بسرعة.",
+   "en": "The rain poured down and Sara quickly covered the books with plastic.",
+   "ko": "비가 쏟아지자 사라는 얼른 책을 비닐로 덮었어요.",
+   "blank": "انهمرت",
+   "src": "made"
   }
  ],
  "w|انهمك": [
@@ -15287,6 +15575,22 @@
    "en": "Is this the kitchen door?",
    "ko": "이게 주방 문이야?",
    "blank": "باب"
+  }
+ ],
+ "w|بابايا": [
+  {
+   "text": "لم يتذوق خالد البابايا قبل أن يجلبها له صديق مسافر.",
+   "en": "Khaled had never tasted papaya before a traveling friend brought him some.",
+   "ko": "칼리드는 여행하는 친구가 가져다주기 전까지 파파야를 먹어 본 적이 없었어요.",
+   "blank": "البابايا",
+   "src": "made"
+  },
+  {
+   "text": "جاء مهندس زميل لليلى بعصير بابايا من بلده.",
+   "en": "An engineer colleague of Layla's brought papaya juice from his country.",
+   "ko": "라일라의 동료 엔지니어가 고향에서 파파야 주스를 가져왔어요.",
+   "blank": "بابايا",
+   "src": "made"
   }
  ],
  "w|بابونج": [
@@ -16655,6 +16959,22 @@
    "blank": "برزت"
   }
  ],
+ "w|برع": [
+  {
+   "text": "برع خالد في صنع الخبز منذ كان صبيا في مخبز جده.",
+   "en": "Khaled excelled at making bread since he was a boy in his grandfather's bakery.",
+   "ko": "칼리드는 어릴 때 할아버지 빵집에서부터 빵을 잘 만들었어요.",
+   "blank": "برع",
+   "src": "made"
+  },
+  {
+   "text": "برعت ليلى في قراءة المخططات منذ سنتها الأولى في الجامعة.",
+   "en": "Layla has excelled at reading blueprints since her first year at university.",
+   "ko": "라일라는 대학 일학년 때부터 도면을 잘 읽었어요.",
+   "blank": "برعت",
+   "src": "made"
+  }
+ ],
  "w|برعم": [
   {
    "text": "لاحظ سامي أول برعم في شجرة الليمون أمام بيته.",
@@ -16715,6 +17035,22 @@
    "en": "Lightning usually comes before thunder.",
    "ko": "번개는 보통 천둥보다 먼저 와.",
    "blank": "البرق"
+  }
+ ],
+ "w|برقوق": [
+  {
+   "text": "يحشو خالد الكعك بمربى البرقوق الذي تصنعه أمه.",
+   "en": "Khaled fills the cookies with plum jam that his mother makes.",
+   "ko": "칼리드는 어머니가 만든 자두잼을 과자 속에 넣어요.",
+   "blank": "البرقوق",
+   "src": "made"
+  },
+  {
+   "text": "وقفت ليلى تحت شجرة برقوق قرب السور لتراجع المخططات.",
+   "en": "Layla stood under a plum tree near the fence to review the plans.",
+   "ko": "라일라는 담장 옆 자두나무 아래 서서 도면을 검토했어요.",
+   "blank": "برقوق",
+   "src": "made"
   }
  ],
  "w|بركان": [
@@ -17504,6 +17840,22 @@
    "en": "Huda joined a sports delegation representing her country in a marathon abroad.",
    "ko": "후다는 해외 마라톤에 나라를 대표하는 선수단에 합류했어요.",
    "blank": "بعثة",
+   "src": "made"
+  }
+ ],
+ "w|بعثر": [
+  {
+   "text": "بعثر خالد الطحين على الطاولة قبل أن يفرد العجين.",
+   "en": "Khaled scattered flour on the table before rolling out the dough.",
+   "ko": "칼리드는 반죽을 밀기 전에 탁자에 밀가루를 흩뿌렸어요.",
+   "blank": "بعثر",
+   "src": "made"
+  },
+  {
+   "text": "بعثرت الريح أوراق ليلى في كل أنحاء الموقع.",
+   "en": "The wind scattered Layla's papers all over the site.",
+   "ko": "바람이 라일라의 서류를 현장 곳곳에 흩날렸어요.",
+   "blank": "بعثرت",
    "src": "made"
   }
  ],
@@ -18537,6 +18889,22 @@
    "src": "made"
   }
  ],
+ "w|بهاء": [
+  {
+   "text": "قال يوسف إن بهاء العروس أنساه كل تعب التحضير.",
+   "en": "Youssef said the bride's radiance made him forget all the tiring preparations.",
+   "ko": "유수프는 신부의 눈부신 모습에 준비하며 쌓인 피로를 다 잊었다고 했어요.",
+   "blank": "بهاء",
+   "src": "made"
+  },
+  {
+   "text": "حافظ الفستان القديم على بهائه رغم مرور السنين، كما لاحظت سارة.",
+   "en": "The old dress kept its splendor despite the years, as Sara noticed.",
+   "ko": "사라가 보니 그 옛 드레스는 세월이 흘러도 화사함을 잃지 않았어요.",
+   "blank": "بهائه",
+   "src": "made"
+  }
+ ],
  "w|بهار": [
   {
    "text": "ضع قليلاً من بهار على البطاطا.",
@@ -18549,6 +18917,22 @@
    "en": "This soup needs more spice.",
    "ko": "이 수프는 향신료가 더 필요해.",
    "blank": "بهار"
+  }
+ ],
+ "w|بهارات": [
+  {
+   "text": "يخلط خالد بهارات سرية في خبز الأعياد.",
+   "en": "Khaled mixes secret spices into the holiday bread.",
+   "ko": "칼리드는 명절 빵에 비밀 향신료를 섞어요.",
+   "blank": "بهارات",
+   "src": "made"
+  },
+  {
+   "text": "لم تتحمل ليلى البهارات الحارة في غداء الورشة.",
+   "en": "Layla couldn't handle the hot spices in the site lunch.",
+   "ko": "라일라는 공사장 점심의 매운 향신료를 견디지 못했어요.",
+   "blank": "البهارات",
+   "src": "made"
   }
  ],
  "w|بهجة": [
@@ -18577,6 +18961,22 @@
    "en": "Speak calmly, please.",
    "ko": "조용히 말해 주세요.",
    "blank": "بهدوء"
+  }
+ ],
+ "w|بهر": [
+  {
+   "text": "بهر خالد الزبائن بكعكة على شكل سفينة.",
+   "en": "Khaled dazzled customers with a cake shaped like a ship.",
+   "ko": "칼리드는 배 모양 케이크로 손님들을 감탄하게 했어요.",
+   "blank": "بهر",
+   "src": "made"
+  },
+  {
+   "text": "بهرت سرعة الرافعة الجديدة ليلى وفريقها.",
+   "en": "The speed of the new crane impressed Layla and her team.",
+   "ko": "새 크레인의 속도에 라일라와 팀은 감탄했어요.",
+   "blank": "بهرت",
+   "src": "made"
   }
  ],
  "w|بواب": [
@@ -18941,6 +19341,22 @@
    "blank": "تأخير"
   }
  ],
+ "w|تأرجح": [
+  {
+   "text": "تأرجحت لافتة مخبز خالد في الريح طوال الليل.",
+   "en": "Khaled's bakery sign swung in the wind all night.",
+   "ko": "칼리드의 빵집 간판이 밤새 바람에 흔들렸어요.",
+   "blank": "تأرجحت",
+   "src": "made"
+  },
+  {
+   "text": "تأرجح الحمل على حبل الرافعة فصرخت ليلى في العمال أن يبتعدوا.",
+   "en": "The load swung on the crane's cable, so Layla shouted at the workers to move away.",
+   "ko": "크레인 줄에 매달린 짐이 흔들리자 라일라는 인부들에게 물러나라고 소리쳤어요.",
+   "blank": "تأرجح",
+   "src": "made"
+  }
+ ],
  "w|تأسس": [
   {
    "text": "علم حسن أن القسم الذي التحق به تأسس قبل عامين فقط.",
@@ -18985,6 +19401,22 @@
    "en": "My visa expired yesterday.",
    "ko": "내 비자가 어제 만료됐어.",
    "blank": "تأشيرتي"
+  }
+ ],
+ "w|تأفف": [
+  {
+   "text": "لا يتأفف خالد من الاستيقاظ في الرابعة صباحا.",
+   "en": "Khaled doesn't complain about getting up at four in the morning.",
+   "ko": "칼리드는 새벽 네 시에 일어나는 걸 불평하지 않아요.",
+   "blank": "يتأفف",
+   "src": "made"
+  },
+  {
+   "text": "تأففت ليلى من الغبار لكنها لم تترك الموقع.",
+   "en": "Layla grumbled about the dust but didn't leave the site.",
+   "ko": "라일라는 먼지에 투덜댔지만 현장을 떠나지 않았어요.",
+   "blank": "تأففت",
+   "src": "made"
   }
  ],
  "w|تأقلم": [
@@ -19481,6 +19913,22 @@
    "src": "made"
   }
  ],
+ "w|تبعثر": [
+  {
+   "text": "سقط كيس السكر فتبعثر على أرض مخبز خالد.",
+   "en": "The sugar bag fell and scattered over the floor of Khaled's bakery.",
+   "ko": "설탕 봉지가 떨어져 칼리드의 빵집 바닥에 흩어졌어요.",
+   "blank": "فتبعثر",
+   "src": "made"
+  },
+  {
+   "text": "تبعثرت المسامير من الصندوق فجمعتها ليلى بمغناطيس.",
+   "en": "The nails scattered out of the box, so Layla collected them with a magnet.",
+   "ko": "상자에서 못이 쏟아지자 라일라는 자석으로 주워 모았어요.",
+   "blank": "تبعثرت",
+   "src": "made"
+  }
+ ],
  "w|تبغ": [
   {
    "text": "حذر خالد طلابه من أضرار التبغ على الرئتين.",
@@ -19510,6 +19958,22 @@
    "en": "In the scene Huda dressed the salad with olive oil and salt.",
    "ko": "후다는 그 장면에서 올리브유와 소금으로 샐러드에 간을 했어요.",
    "blank": "تبلت",
+   "src": "made"
+  }
+ ],
+ "w|تبلور": [
+  {
+   "text": "تبلورت فكرة المخبز في رأس خالد وهو يساعد جده.",
+   "en": "The idea of the bakery took shape in Khaled's mind as he helped his grandfather.",
+   "ko": "빵집 생각은 칼리드가 할아버지를 돕는 동안 구체화됐어요.",
+   "blank": "تبلورت",
+   "src": "made"
+  },
+  {
+   "text": "بعد أسابيع من النقاش تبلور تصميم ليلى للجسر.",
+   "en": "After weeks of discussion Layla's design for the bridge took shape.",
+   "ko": "몇 주 논의 끝에 라일라의 다리 설계가 구체화됐어요.",
+   "blank": "تبلور",
    "src": "made"
   }
  ],
@@ -19701,6 +20165,22 @@
    "blank": "تجربة"
   }
  ],
+ "w|تجرع": [
+  {
+   "text": "تجرع خالد كوب الشاي الساخن ثم عاد إلى الفرن.",
+   "en": "Khaled gulped down the hot cup of tea, then went back to the oven.",
+   "ko": "칼리드는 뜨거운 차를 들이켜고 다시 오븐으로 갔어요.",
+   "blank": "تجرع",
+   "src": "made"
+  },
+  {
+   "text": "تتجرع ليلى الماء كل ساعة لأن الشمس قوية.",
+   "en": "Layla drinks water every hour because the sun is strong.",
+   "ko": "햇볕이 강해서 라일라는 한 시간마다 물을 들이켜요.",
+   "blank": "تتجرع",
+   "src": "made"
+  }
+ ],
  "w|تجسس": [
   {
    "text": "اتهم علي أخته بالتجسس على هاتفه.",
@@ -19730,6 +20210,22 @@
    "en": "One of the spectators burped loudly and Rana looked at him in surprise.",
    "ko": "방청객 한 명이 크게 트림하자 라나가 놀란 눈으로 쳐다봤어요.",
    "blank": "تجشأ",
+   "src": "made"
+  }
+ ],
+ "w|تجعد": [
+  {
+   "text": "تجعدت يدا خالد من سنوات العجن.",
+   "en": "Khaled's hands became wrinkled from years of kneading.",
+   "ko": "칼리드의 손은 오랜 반죽질로 주름졌어요.",
+   "blank": "تجعدت",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت ليلى أن المخطط تجعد من المطر.",
+   "en": "Layla noticed that the plan had crinkled from the rain.",
+   "ko": "라일라는 도면이 비에 젖어 쭈글쭈글해진 걸 알아챘어요.",
+   "blank": "تجعد",
    "src": "made"
   }
  ],
@@ -19838,6 +20334,22 @@
    "en": "Nour wrote that she had walked around the neighborhood where they grew up yesterday.",
    "ko": "누르는 어제 둘이 자란 동네를 돌아다녔다고 썼어요.",
    "blank": "تجولت",
+   "src": "made"
+  }
+ ],
+ "w|تحاشى": [
+  {
+   "text": "يتحاشى خالد استعمال الألوان الصناعية في الحلويات.",
+   "en": "Khaled avoids using artificial colors in the sweets.",
+   "ko": "칼리드는 과자에 인공 색소를 쓰지 않으려 해요.",
+   "blank": "يتحاشى",
+   "src": "made"
+  },
+  {
+   "text": "تتحاشى ليلى المشي تحت الرافعة أثناء العمل.",
+   "en": "Layla avoids walking under the crane during work.",
+   "ko": "라일라는 작업 중에는 크레인 밑으로 걷지 않아요.",
+   "blank": "تتحاشى",
    "src": "made"
   }
  ],
@@ -20363,6 +20875,22 @@
    "src": "made"
   }
  ],
+ "w|تخبط": [
+  {
+   "text": "تخبط خالد في أول شهر لأنه لم يعرف كم يخبز كل يوم.",
+   "en": "Khaled floundered in the first month because he didn't know how much to bake each day.",
+   "ko": "칼리드는 첫 달에 하루에 얼마나 구워야 할지 몰라 갈팡질팡했어요.",
+   "blank": "تخبط",
+   "src": "made"
+  },
+  {
+   "text": "تخبطت الشركة في المشروع حتى جاءت ليلى ونظمت العمل.",
+   "en": "The company floundered on the project until Layla came and organized the work.",
+   "ko": "라일라가 와서 일을 정리하기 전까지 회사는 그 공사에서 우왕좌왕했어요.",
+   "blank": "تخبطت",
+   "src": "made"
+  }
+ ],
  "w|تخدر": [
   {
    "text": "تخدرت قدم علي بعد جلسة طويلة من التمدد على الأرض.",
@@ -20643,6 +21171,22 @@
    "en": "I practiced playing for several years.",
    "ko": "몇 년 동안 연주를 연습했어.",
    "blank": "تدربت"
+  }
+ ],
+ "w|تدرج": [
+  {
+   "text": "يتدرج لون الخبز في فرن خالد من الأبيض إلى الذهبي.",
+   "en": "The bread's color in Khaled's oven gradually goes from white to golden.",
+   "ko": "칼리드의 오븐 속 빵은 흰색에서 황금색으로 서서히 변해요.",
+   "blank": "يتدرج",
+   "src": "made"
+  },
+  {
+   "text": "تدرجت ليلى في الشركة من متدربة إلى مهندسة مسؤولة.",
+   "en": "Layla rose step by step in the company from trainee to engineer in charge.",
+   "ko": "라일라는 회사에서 수습생부터 책임 엔지니어까지 차근차근 올라갔어요.",
+   "blank": "تدرجت",
+   "src": "made"
   }
  ],
  "w|تدريب": [
@@ -21106,6 +21650,22 @@
    "en": "Maryam organized a fun day for the employees in a public park.",
    "ko": "마리암은 공원에서 직원들을 위한 야유회를 열었어요.",
    "blank": "ترفيهيا",
+   "src": "made"
+  }
+ ],
+ "w|ترقب": [
+  {
+   "text": "ترقب الزبائن خروج الخبز الساخن من فرن خالد.",
+   "en": "The customers waited eagerly for the hot bread to come out of Khaled's oven.",
+   "ko": "손님들은 칼리드의 오븐에서 따끈한 빵이 나오길 기다렸어요.",
+   "blank": "ترقب",
+   "src": "made"
+  },
+  {
+   "text": "تترقب ليلى نتيجة فحص الخرسانة قبل بناء الطابق الثاني.",
+   "en": "Layla is awaiting the concrete test result before building the second floor.",
+   "ko": "라일라는 이 층을 올리기 전에 콘크리트 검사 결과를 기다리고 있어요.",
+   "blank": "تترقب",
    "src": "made"
   }
  ],
@@ -22715,6 +23275,22 @@
    "en": "I received a condolence message after my grandfather's death.",
    "ko": "할아버지께서 돌아가신 후에 조의 메시지를 받았어.",
    "blank": "تعزية"
+  }
+ ],
+ "w|تعزيز": [
+  {
+   "text": "يرى يوسف في العرس فرصة لتعزيز الروابط بين العائلتين.",
+   "en": "Youssef sees the wedding as a chance to strengthen ties between the two families.",
+   "ko": "유수프는 결혼식을 두 집안의 유대를 다질 기회로 봐요.",
+   "blank": "لتعزيز",
+   "src": "made"
+  },
+  {
+   "text": "طلبت سارة من البلدية تعزيز الإنارة في السوق مساء.",
+   "en": "Sara asked the municipality to improve the lighting in the market in the evening.",
+   "ko": "사라는 시청에 저녁 시장 조명을 늘려 달라고 했어요.",
+   "blank": "تعزيز",
+   "src": "made"
   }
  ],
  "w|تعشى": [
@@ -24826,6 +25402,22 @@
    "en": "Maryam loves autumn for the variety of leaf colors.",
    "ko": "마리암은 단풍 색이 다양해서 가을을 좋아해요.",
    "blank": "تنوع",
+   "src": "made"
+  }
+ ],
+ "w|تنويم": [
+  {
+   "text": "غنت جدة يوسف أغنية تنويم قديمة فبكى الضيوف.",
+   "en": "Youssef's grandmother sang an old lullaby and the guests cried.",
+   "ko": "유수프의 할머니가 옛 자장가를 부르자 하객들이 울었어요.",
+   "blank": "تنويم",
+   "src": "made"
+  },
+  {
+   "text": "وجدت سارة لعبة تنويم قديمة تعزف لحنا هادئا للأطفال.",
+   "en": "Sara found an old sleep toy that plays a calm tune for children.",
+   "ko": "사라는 아이들 재우는 잔잔한 곡이 나오는 옛 장난감을 찾았어요.",
+   "blank": "تنويم",
    "src": "made"
   }
  ],
@@ -27599,6 +28191,22 @@
    "en": "The body needs rest after exercise.",
    "ko": "운동 후에는 몸이 휴식이 필요하다.",
    "blank": "الجسم"
+  }
+ ],
+ "w|جسور": [
+  {
+   "text": "كان يوسف جسورا ورقص أمام الجميع رغم خجله.",
+   "en": "Youssef was bold and danced in front of everyone despite his shyness.",
+   "ko": "유수프는 수줍음이 많지만 용기 내서 모두 앞에서 춤을 췄어요.",
+   "blank": "جسورا",
+   "src": "made"
+  },
+  {
+   "text": "ساومت سارة تاجرا جسورا رفض أن ينزل السعر.",
+   "en": "Sara haggled with a bold trader who refused to lower the price.",
+   "ko": "사라는 값을 내려 주지 않는 배짱 좋은 상인과 흥정했어요.",
+   "blank": "جسورا",
+   "src": "made"
   }
  ],
  "w|جشع": [
@@ -31665,6 +32273,22 @@
    "blank": "حليف"
   }
  ],
+ "w|حما": [
+  {
+   "text": "صافح يوسف حماه وقبل يده أمام الضيوف.",
+   "en": "Youssef shook hands with his father-in-law and kissed his hand in front of the guests.",
+   "ko": "유수프는 하객들 앞에서 장인과 악수하고 손에 입을 맞췄어요.",
+   "blank": "حماه",
+   "src": "made"
+  },
+  {
+   "text": "جاءت سارة إلى السوق مع حميها ليختار مكتبا قديما.",
+   "en": "Sara came to the market with her father-in-law so he could choose an old desk.",
+   "ko": "사라는 시아버지가 옛 책상을 고를 수 있게 함께 시장에 왔어요.",
+   "blank": "حميها",
+   "src": "made"
+  }
+ ],
  "w|حماة": [
   {
    "text": "ذهبت إلى بيت الحماة يوم الجمعة.",
@@ -34955,6 +35579,22 @@
    "src": "made"
   }
  ],
+ "w|دراق": [
+  {
+   "text": "في الصيف يصنع خالد فطيرة دراق تحبها جارته.",
+   "en": "In summer Khaled makes a peach tart that his neighbor loves.",
+   "ko": "여름이면 칼리드는 이웃 아주머니가 좋아하는 복숭아 타르트를 만들어요.",
+   "blank": "دراق",
+   "src": "made"
+  },
+  {
+   "text": "وزعت ليلى على العمال حبات الدراق الباردة في الظهيرة.",
+   "en": "Layla handed out cold peaches to the workers at midday.",
+   "ko": "라일라는 한낮에 인부들에게 시원한 복숭아를 나눠 줬어요.",
+   "blank": "الدراق",
+   "src": "made"
+  }
+ ],
  "w|درب": [
   {
    "text": "درب المدرب الفريق جيداً.",
@@ -35553,6 +36193,22 @@
    "en": "I need a strong brain to solve this problem.",
    "ko": "이 문제를 풀려면 강한 뇌가 필요해.",
    "blank": "دماغ"
+  }
+ ],
+ "w|دمث": [
+  {
+   "text": "استقبل يوسف الضيوف عند الباب بوجه بشوش وطبع دمث.",
+   "en": "Youssef welcomed the guests at the door with a cheerful face and a gentle manner.",
+   "ko": "유수프는 밝은 얼굴과 온화한 태도로 문 앞에서 하객들을 맞았어요.",
+   "blank": "دمث",
+   "src": "made"
+  },
+  {
+   "text": "يدير السوق رجل دمث الأخلاق يحل مشاكل سارة بسرعة.",
+   "en": "The market is run by a gentle-natured man who solves Sara's problems quickly.",
+   "ko": "시장은 성품이 온화한 남자가 운영하는데 사라의 문제를 금방 해결해 줘요.",
+   "blank": "دمث",
+   "src": "made"
   }
  ],
  "w|دمر": [
@@ -36319,6 +36975,22 @@
    "src": "made"
   }
  ],
+ "w|ذرية": [
+  {
+   "text": "دعا شيخ القرية ليوسف وعروسه بذرية صالحة.",
+   "en": "The village elder prayed that Youssef and his bride be blessed with good offspring.",
+   "ko": "마을 어르신은 유수프 부부가 좋은 자손을 보게 해 달라고 축복했어요.",
+   "blank": "بذرية",
+   "src": "made"
+  },
+  {
+   "text": "قال الرجل لسارة إن الكرسي بقي في عائلته وذريته قرنا كاملا.",
+   "en": "The man told Sara the chair stayed in his family and descendants for a whole century.",
+   "ko": "남자는 그 의자가 꼬박 백 년 동안 집안 자손들에게 대물림됐다고 사라에게 말했어요.",
+   "blank": "وذريته",
+   "src": "made"
+  }
+ ],
  "w|ذعر": [
   {
    "text": "ذعر الناس في الشارع كان واضحًا.",
@@ -36775,6 +37447,22 @@
    "en": "This is the main reason for my choice.",
    "ko": "이것이 내가 선택한 주된 이유예요.",
    "blank": "رئيسي"
+  }
+ ],
+ "w|رائب": [
+  {
+   "text": "يعجن خالد خبز الصباح بقليل من الرائب ليصبح طريا.",
+   "en": "Khaled kneads the morning bread with a little yogurt so it turns out soft.",
+   "ko": "칼리드는 아침 빵을 부드럽게 하려고 반죽에 요구르트를 조금 넣어요.",
+   "blank": "الرائب",
+   "src": "made"
+  },
+  {
+   "text": "أحضرت ليلى إلى الورشة علبة رائب لتأكلها في الاستراحة.",
+   "en": "Layla brought a pot of yogurt to the site to eat during the break.",
+   "ko": "라일라는 쉬는 시간에 먹으려고 공사장에 요구르트를 가져왔어요.",
+   "blank": "رائب",
+   "src": "made"
   }
  ],
  "w|رائحة": [
@@ -37799,6 +38487,22 @@
    "en": "I want to spray water on the plants.",
    "ko": "나는 식물에 물을 뿌리고 싶어.",
    "blank": "رش"
+  }
+ ],
+ "w|رشاقة": [
+  {
+   "text": "رقصت أخت يوسف الصغيرة برشاقة أدهشت الضيوف.",
+   "en": "Youssef's little sister danced with an agility that amazed the guests.",
+   "ko": "유수프의 여동생은 하객들이 놀랄 만큼 날렵하게 춤을 췄어요.",
+   "blank": "برشاقة",
+   "src": "made"
+  },
+  {
+   "text": "تنقل سارة الصناديق الثقيلة برشاقة لاعبة.",
+   "en": "Sara moves the heavy boxes with an athlete's agility.",
+   "ko": "사라는 무거운 상자를 운동선수처럼 날렵하게 옮겨요.",
+   "blank": "برشاقة",
+   "src": "made"
   }
  ],
  "w|رشة": [
@@ -38973,6 +39677,22 @@
    "src": "made"
   }
  ],
+ "w|رونق": [
+  {
+   "text": "أضافت الأضواء رونقا خاصا على حديقة عرس يوسف.",
+   "en": "The lights added a special splendor to Youssef's wedding garden.",
+   "ko": "조명이 유수프의 결혼식 정원에 특별한 운치를 더했어요.",
+   "blank": "رونقا",
+   "src": "made"
+  },
+  {
+   "text": "نظفت سارة الصينية النحاسية فعاد إليها رونقها.",
+   "en": "Sara cleaned the copper tray and its luster returned.",
+   "ko": "사라가 놋쇠 쟁반을 닦자 윤기가 되살아났어요.",
+   "blank": "رونقها",
+   "src": "made"
+  }
+ ],
  "w|روى": [
   {
    "text": "جدي روى لنا قصة جميلة.",
@@ -39359,6 +40079,22 @@
    "blank": "زبون"
   }
  ],
+ "w|زبيب": [
+  {
+   "text": "ينقع خالد الزبيب في الماء قبل أن يضعه في الخبز.",
+   "en": "Khaled soaks the raisins in water before putting them in the bread.",
+   "ko": "칼리드는 건포도를 빵에 넣기 전에 물에 불려요.",
+   "blank": "الزبيب",
+   "src": "made"
+  },
+  {
+   "text": "تأكل ليلى حفنة زبيب حين تشعر بالتعب.",
+   "en": "Layla eats a handful of raisins when she feels tired.",
+   "ko": "라일라는 피곤할 때 건포도 한 줌을 먹어요.",
+   "blank": "زبيب",
+   "src": "made"
+  }
+ ],
  "w|زجاج": [
   {
    "text": "انكسر زجاج النافذة أثناء اللعب.",
@@ -39549,6 +40285,22 @@
    "en": "The smell of zaatar is coming from the oven.",
    "ko": "오븐에서 자타르 냄새가 나.",
    "blank": "الزعتر"
+  }
+ ],
+ "w|زعفران": [
+  {
+   "text": "يضيف خالد خيوطا من الزعفران إلى كعك العيد.",
+   "en": "Khaled adds threads of saffron to the holiday cookies.",
+   "ko": "칼리드는 명절 과자에 사프란 몇 가닥을 넣어요.",
+   "blank": "الزعفران",
+   "src": "made"
+  },
+  {
+   "text": "أهدت ليلى عمالها أرزا بالزعفران بعد صب السقف.",
+   "en": "Layla treated her workers to saffron rice after the roof was poured.",
+   "ko": "지붕 타설을 마치고 라일라는 인부들에게 사프란 밥을 대접했어요.",
+   "blank": "بالزعفران",
+   "src": "made"
   }
  ],
  "w|زعل": [
@@ -40935,6 +41687,22 @@
    "blank": "سجن"
   }
  ],
+ "w|سجية": [
+  {
+   "text": "يضحك يوسف بسجية طيبة تجعل الجميع يرتاحون له.",
+   "en": "Youssef laughs with a good-natured disposition that puts everyone at ease.",
+   "ko": "유수프는 타고난 선한 웃음으로 모두를 편하게 해요.",
+   "blank": "بسجية",
+   "src": "made"
+  },
+  {
+   "text": "تتحدث سارة مع الزبائن بسجيتها فيحبونها.",
+   "en": "Sara talks to customers in her natural way and they love her.",
+   "ko": "사라는 손님들과 꾸밈없이 이야기해서 사랑받아요.",
+   "blank": "بسجيتها",
+   "src": "made"
+  }
+ ],
  "w|سجين": [
   {
    "text": "كان الرجل سجين في هذا المكان لفترة طويلة.",
@@ -42137,6 +42905,22 @@
    "blank": "سلعة"
   }
  ],
+ "w|سلف": [
+  {
+   "text": "حكى يوسف للضيوف عن سلف العائلة الذي بنى بيتها الأول.",
+   "en": "Youssef told the guests about the family ancestor who built its first house.",
+   "ko": "유수프는 하객들에게 집안의 첫 집을 지은 조상 이야기를 했어요.",
+   "blank": "سلف",
+   "src": "made"
+  },
+  {
+   "text": "ورثت سارة البسطة عن سلفها في السوق، امرأة باعت فيها ثلاثين عاما.",
+   "en": "Sara inherited the stall from her predecessor at the market, a woman who sold there for thirty years.",
+   "ko": "사라는 시장의 전 주인에게서 좌판을 물려받았는데, 그분은 거기서 삼십 년을 장사했어요.",
+   "blank": "سلفها",
+   "src": "made"
+  }
+ ],
  "w|سلفا": [
   {
    "text": "دفع حسن نصف ثمن الخشب سلفا ليضمن وصوله في موعده.",
@@ -42269,6 +43053,22 @@
    "src": "made"
   }
  ],
+ "w|سماق": [
+  {
+   "text": "يرش خالد السماق والبصل على فطائر الصباح.",
+   "en": "Khaled sprinkles sumac and onion on the morning pastries.",
+   "ko": "칼리드는 아침 파이에 수막과 양파를 뿌려요.",
+   "blank": "السماق",
+   "src": "made"
+  },
+  {
+   "text": "أكلت ليلى سلطة بالسماق والخبز المحمص في الظل.",
+   "en": "Layla ate a salad with sumac and toasted bread in the shade.",
+   "ko": "라일라는 그늘에서 수막과 구운 빵을 넣은 샐러드를 먹었어요.",
+   "blank": "بالسماق",
+   "src": "made"
+  }
+ ],
  "w|سمة": [
   {
    "text": "الهدوء سمة واضحة في جار حسن الجديد.",
@@ -42353,6 +43153,22 @@
    "en": "I saw a fish swimming in the tank.",
    "ko": "수조에서 수영하는 물고기를 봤어.",
    "blank": "سمكة"
+  }
+ ],
+ "w|سمن": [
+  {
+   "text": "يدهن خالد الكعك بالسمن البلدي قبل أن يضعه في الفرن.",
+   "en": "Khaled brushes the cookies with country ghee before putting them in the oven.",
+   "ko": "칼리드는 과자를 오븐에 넣기 전에 시골식 버터기름을 발라요.",
+   "blank": "بالسمن",
+   "src": "made"
+  },
+  {
+   "text": "قالت ليلى إن الطباخ يسرف في السمن في أكل العمال.",
+   "en": "Layla said the cook uses too much ghee in the workers' food.",
+   "ko": "라일라는 요리사가 인부들 밥에 버터기름을 너무 많이 넣는다고 했어요.",
+   "blank": "السمن",
+   "src": "made"
   }
  ],
  "w|سمنة": [
@@ -44849,6 +45665,22 @@
    "src": "made"
   }
  ],
+ "w|شمام": [
+  {
+   "text": "قدم خالد لزبائنه قطع شمام باردة في يوم حار.",
+   "en": "Khaled offered his customers cold slices of cantaloupe on a hot day.",
+   "ko": "더운 날 칼리드는 손님들에게 시원한 멜론 조각을 대접했어요.",
+   "blank": "شمام",
+   "src": "made"
+  },
+  {
+   "text": "قطع العمال الشمام على لوح خشب وأعطوا ليلى أكبر قطعة.",
+   "en": "The workers cut the cantaloupe on a wooden board and gave Layla the biggest piece.",
+   "ko": "인부들이 나무판 위에서 멜론을 잘라 라일라에게 가장 큰 조각을 줬어요.",
+   "blank": "الشمام",
+   "src": "made"
+  }
+ ],
  "w|شمس": [
   {
    "text": "الشمس مشرقة اليوم.",
@@ -46215,6 +47047,22 @@
    "en": "The child screamed when he saw the insect.",
    "ko": "아이가 벌레를 보고 소리쳤어요.",
    "blank": "صرخ"
+  }
+ ],
+ "w|صرخة": [
+  {
+   "text": "أطلقت أخت يوسف صرخة فرح حين دخل العروسان.",
+   "en": "Youssef's sister let out a cry of joy when the couple came in.",
+   "ko": "신랑 신부가 들어오자 유수프의 누나가 기쁨의 함성을 질렀어요.",
+   "blank": "صرخة",
+   "src": "made"
+  },
+  {
+   "text": "سمعت سارة صرخة طفل فرح بسيارة خشبية اشتراها.",
+   "en": "Sara heard the shout of a child delighted with a wooden car he had bought.",
+   "ko": "사라는 나무 자동차를 산 아이가 기뻐서 지르는 소리를 들었어요.",
+   "blank": "صرخة",
+   "src": "made"
   }
  ],
  "w|صرصور": [
@@ -48417,6 +49265,22 @@
    "en": "We bought a new bag of flour today.",
    "ko": "오늘 새 밀가루 한 봉지를 샀어.",
    "blank": "طحين"
+  }
+ ],
+ "w|طحينة": [
+  {
+   "text": "يصنع خالد كعكا بالطحينة والسكر لا يعرفه أحد غيره.",
+   "en": "Khaled makes tahini-and-sugar cookies that nobody but him knows how to make.",
+   "ko": "칼리드는 자기만 아는 타히니 설탕 과자를 만들어요.",
+   "blank": "بالطحينة",
+   "src": "made"
+  },
+  {
+   "text": "أكلت ليلى الفلافل مع الطحينة واقفة قرب الرافعة.",
+   "en": "Layla ate falafel with tahini standing by the crane.",
+   "ko": "라일라는 크레인 옆에 서서 타히니를 곁들인 팔라펠을 먹었어요.",
+   "blank": "الطحينة",
+   "src": "made"
   }
  ],
  "w|طراز": [
@@ -51721,6 +52585,22 @@
    "blank": "العقل"
   }
  ],
+ "w|عقلاني": [
+  {
+   "text": "قرار خالد بإغلاق المخبز يوم الأحد قرار عقلاني بعد تعب الأسبوع.",
+   "en": "Khaled's decision to close the bakery on Sundays is a rational one after the tiring week.",
+   "ko": "일요일에 빵집을 닫기로 한 칼리드의 결정은 힘든 한 주를 생각하면 합리적이에요.",
+   "blank": "عقلاني",
+   "src": "made"
+  },
+  {
+   "text": "تحب ليلى رئيسها لأنه عقلاني ولا يصرخ.",
+   "en": "Layla likes her boss because he is rational and doesn't shout.",
+   "ko": "라일라는 상사가 합리적이고 소리를 지르지 않아서 좋아해요.",
+   "blank": "عقلاني",
+   "src": "made"
+  }
+ ],
  "w|عقلي": [
   {
    "text": "أحس عقلي مشغول اليوم.",
@@ -52103,6 +52983,22 @@
    "en": "We went up to the attic and found old photos.",
    "ko": "다락방에 올라갔다가 옛날 사진을 찾았어.",
    "blank": "العلية"
+  }
+ ],
+ "w|عليق": [
+  {
+   "text": "يزين خالد كعكة الميلاد بحبات العليق الأحمر.",
+   "en": "Khaled decorates the birthday cake with red raspberries.",
+   "ko": "칼리드는 생일 케이크를 빨간 산딸기로 장식해요.",
+   "blank": "العليق",
+   "src": "made"
+  },
+  {
+   "text": "علقت أشواك العليق بثياب ليلى حين نزلت إلى المنحدر.",
+   "en": "Bramble thorns caught on Layla's clothes when she went down the slope.",
+   "ko": "라일라가 비탈을 내려갈 때 산딸기 가시덤불이 옷에 걸렸어요.",
+   "blank": "العليق",
+   "src": "made"
   }
  ],
  "w|عليل": [
@@ -55561,6 +56457,22 @@
    "src": "made"
   }
  ],
+ "w|فطن": [
+  {
+   "text": "كان يوسف فطنا ولاحظ أن جدته متعبة فأجلسها.",
+   "en": "Youssef was perceptive and noticed his grandmother was tired, so he seated her.",
+   "ko": "눈치 빠른 유수프는 할머니가 지치신 걸 알아채고 자리에 앉혀 드렸어요.",
+   "blank": "فطنا",
+   "src": "made"
+  },
+  {
+   "text": "كانت سارة فطنة فعرفت من الوزن أن الخاتم ذهب حقيقي.",
+   "en": "Sharp-minded Sara could tell from its weight that the ring was real gold.",
+   "ko": "눈썰미 좋은 사라는 무게만으로 반지가 진짜 금인 걸 알았어요.",
+   "blank": "فطنة",
+   "src": "made"
+  }
+ ],
  "w|فطنة": [
   {
    "text": "أنهى حسن الخلاف على الموقف بفطنة دون أن يغضب أحدا.",
@@ -57581,6 +58493,22 @@
    "blank": "القرنبيط"
   }
  ],
+ "w|قرنفل": [
+  {
+   "text": "تفوح رائحة القرنفل من مخبز خالد في الشتاء.",
+   "en": "The smell of cloves wafts from Khaled's bakery in winter.",
+   "ko": "겨울이면 칼리드의 빵집에서 정향 냄새가 풍겨요.",
+   "blank": "القرنفل",
+   "src": "made"
+  },
+  {
+   "text": "تضع ليلى عود قرنفل في قهوتها كما كانت جدتها تفعل.",
+   "en": "Layla puts a clove in her coffee the way her grandmother used to.",
+   "ko": "라일라는 할머니가 그랬듯 커피에 정향 한 알을 넣어요.",
+   "blank": "قرنفل",
+   "src": "made"
+  }
+ ],
  "w|قروي": [
   {
    "text": "يحن كريم إلى الهدوء القروي الذي عاش فيه طفولته.",
@@ -57785,6 +58713,22 @@
    "en": "Can you peel potatoes quickly?",
    "ko": "감자를 빨리 깔 수 있어?",
    "blank": "تقشر"
+  }
+ ],
+ "w|قشطة": [
+  {
+   "text": "يحب الأطفال كعكة خالد المحشوة بالقشطة والعسل.",
+   "en": "Children love Khaled's cake filled with cream and honey.",
+   "ko": "아이들은 칼리드가 크림과 꿀을 넣어 만든 케이크를 좋아해요.",
+   "blank": "بالقشطة",
+   "src": "made"
+  },
+  {
+   "text": "جلبت زوجة الحارس لعمال ليلى صحنا من القشطة بالعسل.",
+   "en": "The guard's wife brought Layla's workers a dish of cream with honey.",
+   "ko": "경비원의 아내가 라일라의 인부들에게 꿀 바른 크림 한 접시를 가져왔어요.",
+   "blank": "القشطة",
+   "src": "made"
   }
  ],
  "w|قص": [
@@ -59099,6 +60043,22 @@
    "blank": "كاتباً"
   }
  ],
+ "w|كاتشب": [
+  {
+   "text": "طلب طفل من خالد كاتشب على فطيرة الجبن فضحك الخباز.",
+   "en": "A child asked Khaled for ketchup on the cheese pie, and the baker laughed.",
+   "ko": "한 아이가 치즈 파이에 케첩을 달라고 하자 제빵사 칼리드가 웃었어요.",
+   "blank": "كاتشب",
+   "src": "made"
+  },
+  {
+   "text": "طلب العمال من ليلى بطاطا مقلية مع الكاتشب يوم الجمعة.",
+   "en": "The workers asked Layla for fries with ketchup on Friday.",
+   "ko": "인부들은 금요일에 라일라에게 케첩 곁들인 감자튀김을 사 달라고 했어요.",
+   "blank": "الكاتشب",
+   "src": "made"
+  }
+ ],
  "w|كاحل": [
   {
    "text": "التويت كاحل أثناء اللعب.",
@@ -59171,6 +60131,22 @@
    "en": "We must prepare for any natural disaster.",
    "ko": "우리는 어떤 자연재해에도 대비해야 해.",
    "blank": "كارثة"
+  }
+ ],
+ "w|كاريزما": [
+  {
+   "text": "يملك عم يوسف كاريزما جعلت الضيوف يصمتون حين وقف يتكلم.",
+   "en": "Youssef's uncle has a charisma that made the guests fall silent when he stood to speak.",
+   "ko": "유수프의 삼촌이 말하려고 일어서자 그 카리스마에 하객들이 조용해졌어요.",
+   "blank": "كاريزما",
+   "src": "made"
+  },
+  {
+   "text": "لبائع الساعات كاريزما تجذب الزبائن، فتراقبه سارة لتتعلم.",
+   "en": "The watch seller has a charisma that attracts customers, so Sara watches him to learn.",
+   "ko": "시계 장수는 손님을 끄는 카리스마가 있어서 사라는 그를 보며 배워요.",
+   "blank": "كاريزما",
+   "src": "made"
   }
  ],
  "w|كاشير": [
@@ -60083,6 +61059,22 @@
    "src": "made"
   }
  ],
+ "w|كزبرة": [
+  {
+   "text": "يرش خالد الكزبرة الخضراء على فطائر اللحم قبل البيع.",
+   "en": "Khaled sprinkles fresh coriander on the meat pies before selling them.",
+   "ko": "칼리드는 고기 파이를 팔기 전에 생고수를 뿌려요.",
+   "blank": "الكزبرة",
+   "src": "made"
+  },
+  {
+   "text": "يزرع حارس الموقع كزبرة في علب قديمة، وليلى تأخذ منها أحيانا.",
+   "en": "The site guard grows coriander in old cans, and Layla sometimes takes some.",
+   "ko": "공사장 경비원은 낡은 깡통에 고수를 기르는데 라일라가 가끔 얻어 가요.",
+   "blank": "كزبرة",
+   "src": "made"
+  }
+ ],
  "w|كسب": [
   {
    "text": "كسبت جائزة في المسابقة.",
@@ -60645,6 +61637,22 @@
    "en": "This is a portable and lightweight computer.",
    "ko": "이건 휴대용 컴퓨터고 가벼워.",
    "blank": "كمبيوتر"
+  }
+ ],
+ "w|كمثرى": [
+  {
+   "text": "جرب خالد كعكة بالكمثرى فنفدت قبل الظهر.",
+   "en": "Khaled tried a pear cake and it sold out before noon.",
+   "ko": "칼리드가 배 케이크를 시험 삼아 내놨더니 정오 전에 다 팔렸어요.",
+   "blank": "بالكمثرى",
+   "src": "made"
+  },
+  {
+   "text": "تحمل ليلى كمثرى في حقيبتها كل يوم.",
+   "en": "Layla carries a pear in her bag every day.",
+   "ko": "라일라는 매일 가방에 배 하나를 넣고 다녀요.",
+   "blank": "كمثرى",
+   "src": "made"
   }
  ],
  "w|كمون": [
@@ -61211,6 +62219,22 @@
    "src": "made"
   }
  ],
+ "w|كيوي": [
+  {
+   "text": "زين خالد التارت بشرائح الكيوي الخضراء.",
+   "en": "Khaled decorated the tart with green kiwi slices.",
+   "ko": "칼리드는 타르트를 초록 키위 조각으로 장식했어요.",
+   "blank": "الكيوي",
+   "src": "made"
+  },
+  {
+   "text": "وجدت ليلى حبة كيوي منسية في جيب سترتها.",
+   "en": "Layla found a forgotten kiwi in her jacket pocket.",
+   "ko": "라일라는 조끼 주머니에서 잊고 있던 키위 하나를 찾았어요.",
+   "blank": "كيوي",
+   "src": "made"
+  }
+ ],
  "w|ل": [
   {
    "text": "ذهبت لشراء الخبز.",
@@ -61671,6 +62695,22 @@
    "blank": "لبس"
   }
  ],
+ "w|لبق": [
+  {
+   "text": "كان صديق يوسف لبقا في كلمته فأضحك الحاضرين.",
+   "en": "Youssef's friend was tactful in his speech and made the audience laugh.",
+   "ko": "유수프의 친구는 재치 있게 축사를 해서 사람들을 웃겼어요.",
+   "blank": "لبقا",
+   "src": "made"
+  },
+  {
+   "text": "ردت سارة على الزبون الغاضب بأسلوب لبق.",
+   "en": "Sara answered the angry customer tactfully.",
+   "ko": "사라는 화난 손님에게 재치 있게 대답했어요.",
+   "blank": "لبق",
+   "src": "made"
+  }
+ ],
  "w|لبن": [
   {
    "text": "لبن طازج متوفر في السوق.",
@@ -61683,6 +62723,22 @@
    "en": "I like to drink yogurt every morning.",
    "ko": "나는 매일 아침 요구르트를 마시는 걸 좋아해.",
    "blank": "اللبن"
+  }
+ ],
+ "w|لبنة": [
+  {
+   "text": "يبيع خالد فطائر محشوة باللبنة والنعناع.",
+   "en": "Khaled sells pastries filled with labneh and mint.",
+   "ko": "칼리드는 라브네와 민트를 넣은 파이를 팔아요.",
+   "blank": "باللبنة",
+   "src": "made"
+  },
+  {
+   "text": "تحب ليلى شطيرة اللبنة مع الزيتون في الصباح الباكر.",
+   "en": "Layla likes a labneh sandwich with olives early in the morning.",
+   "ko": "라일라는 이른 아침에 올리브를 곁들인 라브네 샌드위치를 좋아해요.",
+   "blank": "اللبنة",
+   "src": "made"
   }
  ],
  "w|لبى": [
@@ -62487,6 +63543,22 @@
    "en": "When I saw him, he smiled at me.",
    "ko": "그를 봤을 때, 그는 나에게 미소 지었어.",
    "blank": "لما"
+  }
+ ],
+ "w|لماح": [
+  {
+   "text": "ابن عم يوسف ولد لماح يفهم الإشارة قبل أن تكتمل.",
+   "en": "Youssef's cousin is a quick-witted boy who gets the hint before it's finished.",
+   "ko": "유수프의 사촌은 말이 끝나기도 전에 눈치를 채는 영리한 아이예요.",
+   "blank": "لماح",
+   "src": "made"
+  },
+  {
+   "text": "ابن سارة لماح يكتشف القطع الثمينة قبل أمه.",
+   "en": "Sara's son is quick-eyed and spots valuable pieces before his mother.",
+   "ko": "사라의 아들은 눈치가 빨라서 엄마보다 먼저 값진 물건을 찾아내요.",
+   "blank": "لماح",
+   "src": "made"
   }
  ],
  "w|لماذا": [
@@ -63465,6 +64537,22 @@
    "src": "made"
   }
  ],
+ "w|مائي": [
+  {
+   "text": "علق خالد لوحة مائية لحقل قمح فوق الفرن.",
+   "en": "Khaled hung a watercolor of a wheat field above the oven.",
+   "ko": "칼리드는 오븐 위에 밀밭을 그린 수채화를 걸었어요.",
+   "blank": "مائية",
+   "src": "made"
+  },
+  {
+   "text": "وجدت ليلى خزانا مائيا قديما تحت أساسات المبنى.",
+   "en": "Layla found an old water tank under the building's foundations.",
+   "ko": "라일라는 건물 기초 밑에서 오래된 물탱크를 발견했어요.",
+   "blank": "مائيا",
+   "src": "made"
+  }
+ ],
  "w|مائية": [
   {
    "text": "رسمت ابنة أخت سامي البحر بالألوان المائية.",
@@ -63817,6 +64905,22 @@
    "en": "In May, the trees blossom.",
    "ko": "5월에 나무가 꽃을 피워.",
    "blank": "مايو"
+  }
+ ],
+ "w|مايونيز": [
+  {
+   "text": "يضع خالد قليلا من المايونيز في شطائر الدجاج.",
+   "en": "Khaled puts a little mayonnaise in the chicken sandwiches.",
+   "ko": "칼리드는 닭고기 샌드위치에 마요네즈를 조금 넣어요.",
+   "blank": "المايونيز",
+   "src": "made"
+  },
+  {
+   "text": "تتجنب ليلى المايونيز في الحر لأنه يفسد بسرعة.",
+   "en": "Layla avoids mayonnaise in the heat because it spoils quickly.",
+   "ko": "라일라는 더울 때 마요네즈를 피해요. 금방 상하거든요.",
+   "blank": "المايونيز",
+   "src": "made"
   }
  ],
  "w|مبادرة": [
@@ -64953,6 +66057,22 @@
    "blank": "متفائل"
   }
  ],
+ "w|متفان": [
+  {
+   "text": "شكر يوسف طباخ العرس، فهو رجل متفان لم يسترح طوال الليل.",
+   "en": "Youssef thanked the wedding cook, a devoted man who didn't rest all night.",
+   "ko": "유수프는 밤새 쉬지 않고 일한 성실한 결혼식 요리사에게 감사했어요.",
+   "blank": "متفان",
+   "src": "made"
+  },
+  {
+   "text": "تساعد سارة في البسطة فتاة متفانية لا تتأخر أبدا.",
+   "en": "A devoted girl who is never late helps Sara at the stall.",
+   "ko": "한 번도 늦지 않는 성실한 아가씨가 사라의 좌판을 도와요.",
+   "blank": "متفانية",
+   "src": "made"
+  }
+ ],
  "w|متفاوت": [
   {
    "text": "ساعد الإخوة أمهم بقدر متفاوت في تحضير الطعام.",
@@ -64981,6 +66101,22 @@
    "en": "I am free on the weekend.",
    "ko": "주말에 시간 돼.",
    "blank": "متفرغ"
+  }
+ ],
+ "w|متفهم": [
+  {
+   "text": "كان والد العروس متفهما حين طلب يوسف تأجيل الموعد.",
+   "en": "The bride's father was understanding when Youssef asked to postpone the date.",
+   "ko": "유수프가 날짜를 미루자고 했을 때 신부의 아버지는 너그럽게 이해해 줬어요.",
+   "blank": "متفهما",
+   "src": "made"
+  },
+  {
+   "text": "كان الزبون متفهما حين أخبرته سارة أن المصباح مكسور.",
+   "en": "The customer was understanding when Sara told him the lamp was broken.",
+   "ko": "사라가 램프가 깨졌다고 하자 손님은 너그럽게 이해했어요.",
+   "blank": "متفهما",
+   "src": "made"
   }
  ],
  "w|متقدم": [
@@ -67292,6 +68428,22 @@
    "en": "A municipal inspector stopped at Mariam's stall to check the scales.",
    "ko": "시청 검사원이 저울을 확인하러 마리암의 노점에 들렀어요.",
    "blank": "مدقق",
+   "src": "made"
+  }
+ ],
+ "w|مدلل": [
+  {
+   "text": "كان ابن أخت يوسف طفلا مدللا يبكي إن لم يجلس بجانب العريس.",
+   "en": "Youssef's nephew was a spoiled child who cried if he couldn't sit next to the groom.",
+   "ko": "유수프의 조카는 신랑 옆에 못 앉으면 우는 응석받이였어요.",
+   "blank": "مدللا",
+   "src": "made"
+  },
+  {
+   "text": "قال البائع لسارة إن قطته مدللة لا تأكل إلا السمك.",
+   "en": "The seller told Sara his cat is pampered and eats only fish.",
+   "ko": "상인은 자기 고양이가 응석받이라 생선만 먹는다고 사라에게 말했어요.",
+   "blank": "مدللة",
    "src": "made"
   }
  ],
@@ -69631,6 +70783,22 @@
    "en": "You are not allowed to enter now.",
    "ko": "지금 입장할 수 없어.",
    "blank": "مسموح"
+  }
+ ],
+ "w|مسن": [
+  {
+   "text": "جلس رجل مسن في الصف الأول يروي كيف رأى يوسف طفلا.",
+   "en": "An elderly man sat in the front row recounting how he had seen Youssef as a child.",
+   "ko": "앞줄에 앉은 노인이 어린 유수프를 봤던 이야기를 들려줬어요.",
+   "blank": "مسن",
+   "src": "made"
+  },
+  {
+   "text": "باعت سيدة مسنة لسارة صندوق رسائل من شبابها.",
+   "en": "An elderly lady sold Sara a box of letters from her youth.",
+   "ko": "나이 든 부인이 젊은 시절 편지가 든 상자를 사라에게 팔았어요.",
+   "blank": "مسنة",
+   "src": "made"
   }
  ],
  "w|مسنين": [
@@ -73473,6 +74641,22 @@
    "src": "made"
   }
  ],
+ "w|ملامح": [
+  {
+   "text": "ظهرت على ملامح يوسف السعادة حين رأى العروس.",
+   "en": "Happiness showed on Youssef's features when he saw the bride.",
+   "ko": "신부를 보자 유수프의 얼굴에 행복이 드러났어요.",
+   "blank": "ملامح",
+   "src": "made"
+  },
+  {
+   "text": "تأملت سارة ملامح المرأة في الصورة القديمة.",
+   "en": "Sara studied the features of the woman in the old photo.",
+   "ko": "사라는 옛 사진 속 여자의 얼굴을 찬찬히 들여다봤어요.",
+   "blank": "ملامح",
+   "src": "made"
+  }
+ ],
  "w|ملايين": [
   {
    "text": "في ملايين الناس بالساحة اليوم.",
@@ -74348,6 +75532,22 @@
    "en": "Mariam wrote her letter at night after a long shift at the bakery.",
    "ko": "마리암은 빵집에서 긴 근무를 마치고 밤에 편지를 썼어요.",
    "blank": "مناوبة",
+   "src": "made"
+  }
+ ],
+ "w|منبت": [
+  {
+   "text": "سأل الضيوف العروس عن منبت عائلتها فقال يوسف إنها من الساحل.",
+   "en": "The guests asked the bride about her family's roots, and Youssef said she was from the coast.",
+   "ko": "하객들이 신부의 집안 뿌리를 묻자 유수프가 해안 출신이라고 했어요.",
+   "blank": "منبت",
+   "src": "made"
+  },
+  {
+   "text": "لا تعرف سارة منبت هذا الصندوق، لكن نقوشه شرقية.",
+   "en": "Sara doesn't know where this chest comes from, but its carvings are eastern.",
+   "ko": "사라는 이 궤짝의 출처를 모르지만 무늬는 동양풍이에요.",
+   "blank": "منبت",
    "src": "made"
   }
  ],
@@ -76869,6 +78069,22 @@
    "en": "I planted a new plant on the balcony.",
    "ko": "나는 발코니에 새로운 식물을 심었어.",
    "blank": "نبات"
+  }
+ ],
+ "w|نباتي": [
+  {
+   "text": "صنع خالد خبزا نباتيا بلا بيض ولا حليب لزبونة دائمة.",
+   "en": "Khaled made a vegan bread without eggs or milk for a regular customer.",
+   "ko": "칼리드는 단골손님을 위해 달걀도 우유도 없는 비건 빵을 만들었어요.",
+   "blank": "نباتيا",
+   "src": "made"
+  },
+  {
+   "text": "تتبع ليلى نظاما نباتيا، فتحضر غداءها معها.",
+   "en": "Layla follows a vegetarian diet, so she brings her own lunch.",
+   "ko": "라일라는 채식을 해서 점심을 직접 싸 와요.",
+   "blank": "نباتيا",
+   "src": "made"
   }
  ],
  "w|نبتة": [
@@ -80425,6 +81641,22 @@
    "src": "made"
   }
  ],
+ "w|هيبة": [
+  {
+   "text": "دخل جد يوسف القاعة بهيبة فوقف له الجميع.",
+   "en": "Youssef's grandfather entered the hall with such dignity that everyone stood for him.",
+   "ko": "유수프의 할아버지가 위엄 있게 들어오자 모두 일어섰어요.",
+   "blank": "بهيبة",
+   "src": "made"
+  },
+  {
+   "text": "اشترت سارة ساعة حائط لها هيبة في أي غرفة.",
+   "en": "Sara bought a wall clock that looks imposing in any room.",
+   "ko": "사라는 어느 방에 걸어도 위엄 있어 보이는 벽시계를 샀어요.",
+   "blank": "هيبة",
+   "src": "made"
+  }
+ ],
  "w|هيكل": [
   {
    "text": "وضع عمر هيكل المسرحية قبل أن يكتب أي حوار.",
@@ -81619,6 +82851,22 @@
    "src": "made"
   }
  ],
+ "w|وسامة": [
+  {
+   "text": "مدحت الجارات وسامة يوسف في بدلته الجديدة.",
+   "en": "The neighbor women praised Youssef's good looks in his new suit.",
+   "ko": "이웃 아주머니들은 새 양복을 입은 유수프가 잘생겼다고 칭찬했어요.",
+   "blank": "وسامة",
+   "src": "made"
+  },
+  {
+   "text": "رأت سارة صورة جندي شاب تبدو وسامته رغم اصفرار الورق.",
+   "en": "Sara saw a photo of a young soldier whose handsomeness showed despite the yellowed paper.",
+   "ko": "사라는 누렇게 바랜 종이에도 잘생긴 얼굴이 드러나는 젊은 군인 사진을 봤어요.",
+   "blank": "وسامته",
+   "src": "made"
+  }
+ ],
  "w|وسخ": [
   {
    "text": "ملابسي وسخة اليوم.",
@@ -82166,6 +83414,22 @@
    "en": "Nour dealt calmly with the rudeness of a customer who refused to stand in line.",
    "ko": "누르는 줄을 서지 않겠다고 버틴 손님의 무례함을 침착하게 넘겼어요.",
    "blank": "وقاحة",
+   "src": "made"
+  }
+ ],
+ "w|وقار": [
+  {
+   "text": "تكلم والد يوسف بوقار عن معنى الزواج.",
+   "en": "Youssef's father spoke with gravity about the meaning of marriage.",
+   "ko": "유수프의 아버지는 결혼의 의미에 대해 진중하게 말했어요.",
+   "blank": "بوقار",
+   "src": "made"
+  },
+  {
+   "text": "يمشي بائع السجاد بين البسطات بوقار، وسارة تحييه كل صباح.",
+   "en": "The carpet seller walks among the stalls with dignity, and Sara greets him every morning.",
+   "ko": "양탄자 장수는 점잖게 좌판 사이를 걷고 사라는 아침마다 인사해요.",
+   "blank": "بوقار",
    "src": "made"
   }
  ],
@@ -82863,6 +84127,22 @@
    "en": "I attended a Jewish celebration in Jerusalem.",
    "ko": "예루살렘에서 유대교 축제에 참석했어요.",
    "blank": "يهودية"
+  }
+ ],
+ "w|يوسفي": [
+  {
+   "text": "يضع خالد قشر اليوسفي في كعكة الشتاء ليعطيها رائحة.",
+   "en": "Khaled puts mandarin peel in the winter cake to give it a scent.",
+   "ko": "칼리드는 겨울 케이크에 향을 내려고 귤껍질을 넣어요.",
+   "blank": "اليوسفي",
+   "src": "made"
+  },
+  {
+   "text": "قشرت ليلى حبة يوسفي وتقاسمتها مع الحارس.",
+   "en": "Layla peeled a mandarin and shared it with the guard.",
+   "ko": "라일라는 귤 하나를 까서 경비원과 나눠 먹었어요.",
+   "blank": "يوسفي",
+   "src": "made"
   }
  ],
  "w|يوغا": [

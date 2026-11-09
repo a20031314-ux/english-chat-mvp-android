@@ -175,6 +175,22 @@
    "src": "made"
   }
  ],
+ "w|adrenalin": [
+  {
+   "text": "Rudi menyuntikkan adrenalin ketika jantung anjing kecil itu melemah.",
+   "en": "Rudi injected adrenaline when the little dog's heart weakened.",
+   "ko": "작은 개의 심장이 약해지자 루디는 아드레날린을 주사했어요.",
+   "blank": "adrenalin",
+   "src": "made"
+  },
+  {
+   "text": "Rina merasakan adrenalin mengalir saat menyeberangi jembatan gantung.",
+   "en": "Rina felt the adrenaline rush as she crossed the suspension bridge.",
+   "ko": "리나는 출렁다리를 건너며 아드레날린이 솟는 걸 느꼈어요.",
+   "blank": "adrenalin",
+   "src": "made"
+  }
+ ],
  "w|aduh": [
   {
    "text": "Aduh, kakiku terantuk meja.",
@@ -783,6 +799,22 @@
    "blank": "aliran"
   }
  ],
+ "w|alis": [
+  {
+   "text": "Rudi tertawa melihat kucing yang punya bulu hitam seperti alis di atas matanya.",
+   "en": "Rudi laughed at the cat that had black fur like eyebrows above its eyes.",
+   "ko": "루디는 눈 위에 눈썹 같은 검은 털이 난 고양이를 보고 웃었어요.",
+   "blank": "alis",
+   "src": "made"
+  },
+  {
+   "text": "Ibu Rina merapikan alis sebelum berangkat ke pesta panen.",
+   "en": "Rina's mother tidied her eyebrows before leaving for the harvest festival.",
+   "ko": "리나의 엄마는 추수 잔치에 가기 전에 눈썹을 다듬었어요.",
+   "blank": "alis",
+   "src": "made"
+  }
+ ],
  "w|alkohol": [
   {
    "text": "Dia menolak minum alkohol di pesta.",
@@ -1266,6 +1298,22 @@
    "en": "Rina wrapped the antique wardrobe inherited from her grandmother in a thick blanket.",
    "ko": "리나는 할머니께 물려받은 골동품 옷장을 두꺼운 담요로 쌌어요.",
    "blank": "antik",
+   "src": "made"
+  }
+ ],
+ "w|anting": [
+  {
+   "text": "Seekor anak kucing menarik anting pemiliknya saat diperiksa Rudi.",
+   "en": "A kitten tugged at its owner's earring while Rudi was examining it.",
+   "ko": "루디가 진찰하는 동안 새끼 고양이가 주인의 귀걸이를 잡아당겼어요.",
+   "blank": "anting",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Rina memberinya anting perak warisan keluarga.",
+   "en": "Rina's grandmother gave her silver earrings that are a family heirloom.",
+   "ko": "리나의 할머니는 집안 대대로 내려온 은귀걸이를 리나에게 줬어요.",
+   "blank": "anting",
    "src": "made"
   }
  ],
@@ -2913,6 +2961,22 @@
    "en": "National unity must be guarded together.",
    "ko": "민족의 단결은 함께 지켜야 해.",
    "blank": "bangsa"
+  }
+ ],
+ "w|bangsal": [
+  {
+   "text": "Klinik Rudi punya bangsal kecil untuk hewan yang harus dirawat inap.",
+   "en": "Rudi's clinic has a small ward for animals that need to stay overnight.",
+   "ko": "루디의 병원에는 입원해야 하는 동물을 위한 작은 병실이 있어요.",
+   "blank": "bangsal",
+   "src": "made"
+  },
+  {
+   "text": "Puskesmas di desa Rina hanya punya satu bangsal untuk pasien rawat inap.",
+   "en": "The health center in Rina's village has only one ward for inpatients.",
+   "ko": "리나네 마을 보건소에는 입원 환자용 병실이 하나뿐이에요.",
+   "blank": "bangsal",
+   "src": "made"
   }
  ],
  "w|bangsawan": [
@@ -4952,6 +5016,22 @@
    "en": "Everyone cheered when the newlywed couple from their year kissed on stage.",
    "ko": "같은 학년 출신 신혼부부가 무대에서 입을 맞추자 모두 환호했어요.",
    "blank": "berciuman",
+   "src": "made"
+  }
+ ],
+ "w|bercumbu": [
+  {
+   "text": "Rudi tersenyum melihat dua ekor merpati bercumbu di atap klinik.",
+   "en": "Rudi smiled at two doves billing and cooing on the clinic roof.",
+   "ko": "루디는 병원 지붕에서 비둘기 두 마리가 사랑을 나누는 걸 보고 미소 지었어요.",
+   "blank": "bercumbu",
+   "src": "made"
+  },
+  {
+   "text": "Rina menunjuk sepasang burung yang bercumbu di dahan pohon cemara.",
+   "en": "Rina pointed to a pair of birds courting on a pine branch.",
+   "ko": "리나는 소나무 가지에서 구애하는 새 한 쌍을 가리켰어요.",
+   "blank": "bercumbu",
    "src": "made"
   }
  ],
@@ -8783,6 +8863,22 @@
    "blank": "Bertugas"
   }
  ],
+ "w|bertujuan": [
+  {
+   "text": "Program vaksinasi gratis Rudi bertujuan melindungi hewan liar di kampung.",
+   "en": "Rudi's free vaccination program aims to protect stray animals in the village.",
+   "ko": "루디의 무료 예방접종 사업은 마을의 떠돌이 동물을 보호하는 게 목적이에요.",
+   "blank": "bertujuan",
+   "src": "made"
+  },
+  {
+   "text": "Rina ikut kelompok pemuda yang bertujuan menanam kembali hutan di lereng.",
+   "en": "Rina joined a youth group that aims to replant the forest on the slopes.",
+   "ko": "리나는 비탈의 숲을 다시 가꾸려는 청년 모임에 들어갔어요.",
+   "blank": "bertujuan",
+   "src": "made"
+  }
+ ],
  "w|bertukar": [
   {
    "text": "Sebelum pentas, Bayu dan Rina bertukar kostum karena ukurannya tertukar.",
@@ -9183,6 +9279,22 @@
    "en": "Exactly right, I agree.",
    "ko": "맞아, 나도 동의해.",
    "blank": "Betul"
+  }
+ ],
+ "w|biadab": [
+  {
+   "text": "Rudi marah mendengar berita perlakuan biadab terhadap hewan di sebuah pasar.",
+   "en": "Rudi was angry to hear news of brutal treatment of animals at a market.",
+   "ko": "루디는 한 시장에서 동물을 잔혹하게 다뤘다는 뉴스를 듣고 화가 났어요.",
+   "blank": "biadab",
+   "src": "made"
+  },
+  {
+   "text": "Guru sejarah Rina bercerita tentang penjajah biadab yang membakar desa-desa.",
+   "en": "Rina's history teacher told of brutal colonizers who burned villages.",
+   "ko": "리나의 역사 선생님은 마을을 불태운 잔혹한 침략자들에 대해 이야기했어요.",
+   "blank": "biadab",
+   "src": "made"
   }
  ],
  "w|biar": [
@@ -11155,6 +11267,22 @@
    "en": "It was so careless to leave the stove on.",
    "ko": "가스불을 켜 둔 채 나가다니 너무 부주의해.",
    "blank": "Ceroboh"
+  }
+ ],
+ "w|cerutu": [
+  {
+   "text": "Rudi meminta pemilik anjing itu tidak mengisap cerutu di ruang tunggu.",
+   "en": "Rudi asked the dog owner not to smoke a cigar in the waiting room.",
+   "ko": "루디는 개 주인에게 대기실에서 시가를 피우지 말라고 했어요.",
+   "blank": "cerutu",
+   "src": "made"
+  },
+  {
+   "text": "Kakek Rina suka duduk di beranda sambil mengisap cerutu daun jagung.",
+   "en": "Rina's grandfather likes to sit on the porch smoking a corn-husk cigar.",
+   "ko": "리나의 할아버지는 옥수수 잎 시가를 피우며 툇마루에 앉아 있는 걸 좋아해요.",
+   "blank": "cerutu",
+   "src": "made"
   }
  ],
  "w|cetakan": [
@@ -13997,6 +14125,22 @@
    "en": "Their performance last night was fantastic.",
    "ko": "어젯밤 그들의 공연이 정말 환상적이었어.",
    "blank": "Fantastis"
+  }
+ ],
+ "w|farmasi": [
+  {
+   "text": "Rudi memesan salep khusus dari bagian farmasi rumah sakit hewan pusat.",
+   "en": "Rudi ordered a special ointment from the central animal hospital's pharmacy.",
+   "ko": "루디는 중앙 동물병원 약제부에 특별한 연고를 주문했어요.",
+   "blank": "farmasi",
+   "src": "made"
+  },
+  {
+   "text": "Rina ingin kuliah di jurusan farmasi agar bisa membuka apotek di desa.",
+   "en": "Rina wants to study pharmacy so she can open a drugstore in the village.",
+   "ko": "리나는 마을에 약국을 열려고 약학과에 가고 싶어요.",
+   "blank": "farmasi",
+   "src": "made"
   }
  ],
  "w|fasilitas": [
@@ -22473,6 +22617,22 @@
    "blank": "Kelahiran"
   }
  ],
+ "w|kelainan": [
+  {
+   "text": "Rudi menemukan kelainan pada detak jantung kucing persia itu.",
+   "en": "Rudi found an irregularity in the Persian cat's heartbeat.",
+   "ko": "루디는 페르시안 고양이의 심장 박동에서 이상을 발견했어요.",
+   "blank": "kelainan",
+   "src": "made"
+  },
+  {
+   "text": "Bidan desa memeriksa apakah bayi tetangga Rina punya kelainan jantung.",
+   "en": "The village midwife checked whether Rina's neighbor's baby had a heart defect.",
+   "ko": "마을 산파는 리나네 이웃 아기에게 심장 이상이 있는지 살펴봤어요.",
+   "blank": "kelainan",
+   "src": "made"
+  }
+ ],
  "w|kelak": [
   {
    "text": "Budi berharap kelak anaknya mau meneruskan sawah keluarga.",
@@ -23325,6 +23485,22 @@
    "en": "He nodded his head.",
    "ko": "그는 고개를 끄덕였어.",
    "blank": "kepala"
+  }
+ ],
+ "w|kepanasan": [
+  {
+   "text": "Rudi menyuruh pemilik membawa anjing yang kepanasan itu ke ruangan ber-AC.",
+   "en": "Rudi told the owner to bring the overheated dog into the air-conditioned room.",
+   "ko": "루디는 더위 먹은 개를 에어컨 있는 방으로 데려오라고 주인에게 말했어요.",
+   "blank": "kepanasan",
+   "src": "made"
+  },
+  {
+   "text": "Turis dari kota tampak kepanasan meski udara di desa Rina sejuk.",
+   "en": "The tourists from the city looked overheated even though the air in Rina's village was cool.",
+   "ko": "리나네 마을 공기가 서늘한데도 도시에서 온 관광객들은 더워 보였어요.",
+   "blank": "kepanasan",
+   "src": "made"
   }
  ],
  "w|kepemilikan": [
@@ -31001,6 +31177,22 @@
    "blank": "melindungi"
   }
  ],
+ "w|melintas": [
+  {
+   "text": "Rudi melihat seekor rusa melintas di jalan saat pulang dari peternakan.",
+   "en": "Rudi saw a deer cross the road on his way back from the farm.",
+   "ko": "루디는 농장에서 돌아오는 길에 사슴 한 마리가 길을 건너는 걸 봤어요.",
+   "blank": "melintas",
+   "src": "made"
+  },
+  {
+   "text": "Rina melambai setiap kali truk sayur melintas di depan rumahnya.",
+   "en": "Rina waves every time the vegetable truck passes in front of her house.",
+   "ko": "리나는 채소 트럭이 집 앞을 지나갈 때마다 손을 흔들어요.",
+   "blank": "melintas",
+   "src": "made"
+  }
+ ],
  "w|melintasi": [
   {
    "text": "Mereka melintasi jembatan dengan hati-hati.",
@@ -33633,6 +33825,22 @@
    "src": "made"
   }
  ],
+ "w|memfoto": [
+  {
+   "text": "Rudi memfoto luka di kaki kambing untuk dikirim ke rekan dokternya.",
+   "en": "Rudi photographed the wound on the goat's leg to send to a fellow vet.",
+   "ko": "루디는 동료 수의사에게 보내려고 염소 다리의 상처를 사진으로 찍었어요.",
+   "blank": "memfoto",
+   "src": "made"
+  },
+  {
+   "text": "Rina memfoto matahari terbit dari puncak bukit dekat desanya.",
+   "en": "Rina photographed the sunrise from the hilltop near her village.",
+   "ko": "리나는 마을 근처 언덕 꼭대기에서 해돋이를 찍었어요.",
+   "blank": "memfoto",
+   "src": "made"
+  }
+ ],
  "w|memicu": [
   {
    "text": "Suara ponsel yang keras memicu teguran dari pustakawan.",
@@ -34065,6 +34273,22 @@
    "en": "We have to fix this mistake.",
    "ko": "우리는 이 실수를 고쳐야 해.",
    "blank": "memperbaiki"
+  }
+ ],
+ "w|memperbarui": [
+  {
+   "text": "Rudi memperbarui catatan vaksin semua pasiennya setiap bulan.",
+   "en": "Rudi updates the vaccination records of all his patients every month.",
+   "ko": "루디는 매달 모든 환자의 예방접종 기록을 갱신해요.",
+   "blank": "memperbarui",
+   "src": "made"
+  },
+  {
+   "text": "Rina membantu ayahnya memperbarui atap ijuk rumah mereka.",
+   "en": "Rina helped her father renew the palm-fiber roof of their house.",
+   "ko": "리나는 아빠를 도와 집의 야자섬유 지붕을 새로 이었어요.",
+   "blank": "memperbarui",
+   "src": "made"
   }
  ],
  "w|memperbesar": [
@@ -34927,6 +35151,22 @@
    "blank": "menabrak"
   }
  ],
+ "w|menabung": [
+  {
+   "text": "Rudi menabung berbulan-bulan untuk membeli alat rontgen bekas bagi kliniknya.",
+   "en": "Rudi saved for months to buy a used X-ray machine for his clinic.",
+   "ko": "루디는 병원에 쓸 중고 엑스레이 기계를 사려고 몇 달 동안 돈을 모았어요.",
+   "blank": "menabung",
+   "src": "made"
+  },
+  {
+   "text": "Rina menabung dari hasil menjual sayur untuk membeli sepatu sekolah.",
+   "en": "Rina saves money from selling vegetables to buy school shoes.",
+   "ko": "리나는 채소를 판 돈을 모아 학교 신발을 사려고 해요.",
+   "blank": "menabung",
+   "src": "made"
+  }
+ ],
  "w|menahan": [
   {
    "text": "Coba menahan napas sebentar.",
@@ -35777,6 +36017,22 @@
    "src": "made"
   }
  ],
+ "w|menceraikan": [
+  {
+   "text": "Dalam film yang ditonton Rudi, seorang suami menceraikan istrinya demi warisan seekor kuda pacu.",
+   "en": "In the film Rudi watched, a husband divorces his wife over the inheritance of a racehorse.",
+   "ko": "루디가 본 영화에서 한 남편은 경주마 유산 때문에 아내와 이혼해요.",
+   "blank": "menceraikan",
+   "src": "made"
+  },
+  {
+   "text": "Dalam cerita rakyat yang diceritakan nenek Rina, seorang raja menceraikan permaisurinya karena fitnah.",
+   "en": "In the folk tale Rina's grandmother tells, a king divorces his queen because of slander.",
+   "ko": "리나의 할머니가 들려주는 민담에서 한 왕은 모함 때문에 왕비와 이혼해요.",
+   "blank": "menceraikan",
+   "src": "made"
+  }
+ ],
  "w|menceritakan": [
   {
    "text": "Dia menceritakan kisah lama.",
@@ -36404,6 +36660,22 @@
    "en": "The new system can detect fake transactions within seconds.",
    "ko": "새 시스템은 가짜 거래를 몇 초 만에 잡아낼 수 있어요.",
    "blank": "mendeteksi",
+   "src": "made"
+  }
+ ],
+ "w|mendiagnosis": [
+  {
+   "text": "Rudi butuh hasil tes darah sebelum mendiagnosis penyakit kelinci itu.",
+   "en": "Rudi needs the blood test results before diagnosing the rabbit's illness.",
+   "ko": "루디는 토끼의 병을 진단하기 전에 혈액 검사 결과가 필요해요.",
+   "blank": "mendiagnosis",
+   "src": "made"
+  },
+  {
+   "text": "Dokter dari kota datang untuk mendiagnosis penyakit kulit yang dialami anak-anak desa Rina.",
+   "en": "A doctor from the city came to diagnose the skin disease affecting children in Rina's village.",
+   "ko": "도시에서 온 의사가 리나네 마을 아이들의 피부병을 진단하러 왔어요.",
+   "blank": "mendiagnosis",
    "src": "made"
   }
  ],
@@ -38431,6 +38703,22 @@
    "src": "made"
   }
  ],
+ "w|mengelak": [
+  {
+   "text": "Kucing itu terus mengelak setiap kali Rudi mencoba memberinya obat.",
+   "en": "The cat kept dodging every time Rudi tried to give it medicine.",
+   "ko": "루디가 약을 먹이려 할 때마다 고양이는 계속 피했어요.",
+   "blank": "mengelak",
+   "src": "made"
+  },
+  {
+   "text": "Adik Rina selalu mengelak saat ditanya siapa yang memetik stroberi di kebun.",
+   "en": "Rina's little brother always dodges the question of who picked the strawberries in the garden.",
+   "ko": "리나의 동생은 밭에서 누가 딸기를 땄냐고 물으면 늘 말을 돌려요.",
+   "blank": "mengelak",
+   "src": "made"
+  }
+ ],
  "w|mengelilingi": [
   {
    "text": "Para penari mengelilingi Bayu di tengah panggung.",
@@ -39119,6 +39407,22 @@
    "blank": "menggantung"
   }
  ],
+ "w|menggaruk": [
+  {
+   "text": "Anjing itu tidak berhenti menggaruk telinganya, jadi Rudi memeriksa kutunya.",
+   "en": "The dog wouldn't stop scratching its ear, so Rudi checked it for fleas.",
+   "ko": "개가 귀를 계속 긁어서 루디는 벼룩이 있는지 살펴봤어요.",
+   "blank": "menggaruk",
+   "src": "made"
+  },
+  {
+   "text": "Rina menggaruk lengannya yang digigit serangga di kebun teh.",
+   "en": "Rina scratched her arm where an insect had bitten her in the tea garden.",
+   "ko": "리나는 차밭에서 벌레에 물린 팔을 긁었어요.",
+   "blank": "menggaruk",
+   "src": "made"
+  }
+ ],
  "w|menggeledah": [
   {
    "text": "Petugas pelabuhan menggeledah kapal yang dicurigai membawa ikan ilegal.",
@@ -39429,6 +39733,22 @@
    "en": "Spending time here is fun.",
    "ko": "여기서 시간을 보내는 건 즐거워.",
    "blank": "Menghabiskan"
+  }
+ ],
+ "w|menghadang": [
+  {
+   "text": "Seekor angsa galak menghadang Rudi di halaman peternakan.",
+   "en": "A fierce goose blocked Rudi's way in the farmyard.",
+   "ko": "사나운 거위 한 마리가 농장 마당에서 루디의 앞을 막아섰어요.",
+   "blank": "menghadang",
+   "src": "made"
+  },
+  {
+   "text": "Kabut tebal menghadang langkah Rina di jalan menuju sekolah.",
+   "en": "Thick fog blocked Rina's way on the road to school.",
+   "ko": "짙은 안개가 학교 가는 길에서 리나의 앞을 가로막았어요.",
+   "blank": "menghadang",
+   "src": "made"
   }
  ],
  "w|menghadap": [
@@ -40514,6 +40834,22 @@
    "en": "Dewi's job is to turn sales data into easy-to-read charts.",
    "ko": "디위의 일은 판매 자료를 보기 쉬운 그래프로 정리하는 거예요.",
    "blank": "mengolah",
+   "src": "made"
+  }
+ ],
+ "w|mengompol": [
+  {
+   "text": "Anak anjing itu mengompol di meja periksa karena takut pada Rudi.",
+   "en": "The puppy wet itself on the exam table because it was scared of Rudi.",
+   "ko": "강아지가 루디를 무서워해서 진찰대 위에 오줌을 쌌어요.",
+   "blank": "mengompol",
+   "src": "made"
+  },
+  {
+   "text": "Adik bungsu Rina masih suka mengompol kalau malamnya terlalu dingin.",
+   "en": "Rina's youngest sibling still tends to wet the bed when the night is too cold.",
+   "ko": "리나의 막내 동생은 밤이 너무 추우면 아직도 이불에 오줌을 싸요.",
+   "blank": "mengompol",
    "src": "made"
   }
  ],
@@ -42660,6 +42996,22 @@
    "en": "Siti copied the new address into a small notebook so she wouldn't forget.",
    "ko": "시티는 잊지 않으려고 새 주소를 작은 수첩에 옮겨 적었어요.",
    "blank": "menyalin",
+   "src": "made"
+  }
+ ],
+ "w|menyalurkan": [
+  {
+   "text": "Rudi menyalurkan makanan sumbangan warga ke tempat penampungan hewan.",
+   "en": "Rudi distributes food donated by residents to the animal shelter.",
+   "ko": "루디는 주민들이 기부한 사료를 동물 보호소에 전달해요.",
+   "blank": "menyalurkan",
+   "src": "made"
+  },
+  {
+   "text": "Kepala desa menyalurkan bantuan beras kepada keluarga Rina setelah longsor.",
+   "en": "The village head distributed rice aid to Rina's family after the landslide.",
+   "ko": "산사태 뒤 이장님이 리나네 가족에게 쌀 지원을 전달했어요.",
+   "blank": "menyalurkan",
    "src": "made"
   }
  ],
@@ -45487,6 +45839,22 @@
    "blank": "monyet"
   }
  ],
+ "w|morfin": [
+  {
+   "text": "Rudi menjelaskan bahwa morfin hanya dipakai untuk hewan yang sangat kesakitan.",
+   "en": "Rudi explained that morphine is only used for animals in severe pain.",
+   "ko": "루디는 모르핀이 아주 심하게 아픈 동물에게만 쓰인다고 설명했어요.",
+   "blank": "morfin",
+   "src": "made"
+  },
+  {
+   "text": "Dokter puskesmas menjelaskan kepada Rina bahwa morfin hanya diberikan di rumah sakit besar.",
+   "en": "The health-center doctor explained to Rina that morphine is only given at big hospitals.",
+   "ko": "보건소 의사는 리나에게 모르핀은 큰 병원에서만 준다고 설명했어요.",
+   "blank": "morfin",
+   "src": "made"
+  }
+ ],
  "w|motel": [
   {
    "text": "Mereka bermalam di motel dekat jalan tol.",
@@ -46945,6 +47313,22 @@
    "blank": "nyenyak"
   }
  ],
+ "w|nyeri": [
+  {
+   "text": "Rudi memberi obat pereda nyeri kepada kuda yang kakinya bengkak.",
+   "en": "Rudi gave pain relief to the horse with a swollen leg.",
+   "ko": "루디는 다리가 부은 말에게 진통제를 줬어요.",
+   "blank": "nyeri",
+   "src": "made"
+  },
+  {
+   "text": "Rina merasakan nyeri di lutut setelah mendaki jalan setapak yang curam.",
+   "en": "Rina felt pain in her knee after climbing the steep footpath.",
+   "ko": "리나는 가파른 오솔길을 오른 뒤 무릎에 통증을 느꼈어요.",
+   "blank": "nyeri",
+   "src": "made"
+  }
+ ],
  "w|nyonya": [
   {
    "text": "Nyonya itu ramah sekali.",
@@ -47427,6 +47811,22 @@
    "en": "Regular training strengthens back muscles.",
    "ko": "규칙적인 운동이 등 근육을 강화해.",
    "blank": "otot"
+  }
+ ],
+ "w|overdosis": [
+  {
+   "text": "Rudi menjelaskan cara mencegah overdosis obat cacing pada anak anjing.",
+   "en": "Rudi explained how to prevent an overdose of deworming medicine in puppies.",
+   "ko": "루디는 강아지 구충제 과다 복용을 막는 방법을 설명했어요.",
+   "blank": "overdosis",
+   "src": "made"
+  },
+  {
+   "text": "Penyuluh kesehatan mengingatkan warga desa Rina tentang bahaya overdosis obat warung.",
+   "en": "The health educator reminded Rina's villagers about the danger of overdosing on over-the-counter drugs.",
+   "ko": "보건 교육 담당자는 리나네 마을 사람들에게 가게 약 과다 복용의 위험을 일깨웠어요.",
+   "blank": "overdosis",
+   "src": "made"
   }
  ],
  "w|pabrik": [
@@ -48029,6 +48429,22 @@
    "src": "made"
   }
  ],
+ "w|pangkuan": [
+  {
+   "text": "Kucing kecil itu tertidur di pangkuan Rudi setelah diberi suntikan.",
+   "en": "The little cat fell asleep on Rudi's lap after getting its shot.",
+   "ko": "작은 고양이는 주사를 맞고 루디의 무릎에서 잠들었어요.",
+   "blank": "pangkuan",
+   "src": "made"
+  },
+  {
+   "text": "Adik Rina tertidur di pangkuan nenek sambil mendengar dongeng.",
+   "en": "Rina's little sister fell asleep on her grandmother's lap listening to a story.",
+   "ko": "리나의 동생은 옛날이야기를 듣다가 할머니 무릎에서 잠들었어요.",
+   "blank": "pangkuan",
+   "src": "made"
+  }
+ ],
  "w|panglima": [
   {
    "text": "Untuk tugas sejarah, Dimas menulis biografi seorang panglima perang kemerdekaan.",
@@ -48169,6 +48585,22 @@
    "en": "The damage after the storm was so severe.",
    "ko": "폭풍 뒤 피해가 정말 심각했어.",
    "blank": "Parah"
+  }
+ ],
+ "w|paramedis": [
+  {
+   "text": "Rudi dibantu seorang paramedis veteriner yang sudah berpengalaman.",
+   "en": "Rudi is assisted by an experienced veterinary paramedic.",
+   "ko": "루디는 경험 많은 수의 보조원의 도움을 받아요.",
+   "blank": "paramedis",
+   "src": "made"
+  },
+  {
+   "text": "Rina bercita-cita menjadi paramedis supaya bisa menolong warga desanya.",
+   "en": "Rina dreams of becoming a paramedic so she can help her villagers.",
+   "ko": "리나는 마을 사람들을 도울 수 있게 응급구조사가 되고 싶어요.",
+   "blank": "paramedis",
+   "src": "made"
   }
  ],
  "w|parasit": [
@@ -50594,6 +51026,22 @@
    "en": "Siti tied a red ribbon as a marker on her suitcase.",
    "ko": "시티는 자기 캐리어를 알아보려고 빨간 리본을 묶었어요.",
    "blank": "penanda",
+   "src": "made"
+  }
+ ],
+ "w|penangkal": [
+  {
+   "text": "Rudi selalu menyimpan serum penangkal bisa ular di lemari pendingin.",
+   "en": "Rudi always keeps snake antivenom serum in the refrigerator.",
+   "ko": "루디는 늘 뱀독 해독 혈청을 냉장고에 보관해요.",
+   "blank": "penangkal",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Rina percaya daun sirih adalah penangkal masuk angin yang ampuh.",
+   "en": "Rina's grandmother believes betel leaf is a powerful remedy against colds.",
+   "ko": "리나의 할머니는 구장 잎이 감기를 막는 데 아주 좋다고 믿어요.",
+   "blank": "penangkal",
    "src": "made"
   }
  ],
@@ -53080,6 +53528,22 @@
    "en": "The news on the TV in Ayu's shop reported a drug smuggler caught at the port.",
    "ko": "아유 가게 TV 뉴스에서 항구에서 붙잡힌 마약 밀수범 소식을 전했어요.",
    "blank": "penyelundup",
+   "src": "made"
+  }
+ ],
+ "w|penyembuh": [
+  {
+   "text": "Para pemilik hewan di kota itu menganggap Rudi sebagai penyembuh yang sabar.",
+   "en": "Pet owners in that town see Rudi as a patient healer.",
+   "ko": "그 도시의 반려동물 주인들은 루디를 참을성 있는 치료사로 여겨요.",
+   "blank": "penyembuh",
+   "src": "made"
+  },
+  {
+   "text": "Warga desa Rina masih percaya pada penyembuh tradisional di lereng gunung.",
+   "en": "Rina's villagers still believe in the traditional healer on the mountain slope.",
+   "ko": "리나네 마을 사람들은 아직도 산비탈의 전통 치료사를 믿어요.",
+   "blank": "penyembuh",
    "src": "made"
   }
  ],
@@ -55945,6 +56409,22 @@
    "blank": "pimpinan"
   }
  ],
+ "w|pincang": [
+  {
+   "text": "Anjing tua itu berjalan pincang karena sendinya meradang, jelas Rudi.",
+   "en": "The old dog walks with a limp because its joints are inflamed, Rudi explained.",
+   "ko": "늙은 개가 관절에 염증이 있어서 절뚝거린다고 루디가 설명했어요.",
+   "blank": "pincang",
+   "src": "made"
+  },
+  {
+   "text": "Kambing milik Rina jalannya pincang setelah tersandung batu.",
+   "en": "Rina's goat has been walking with a limp since it tripped on a rock.",
+   "ko": "리나의 염소는 돌에 걸려 넘어진 뒤로 절뚝거리며 걸어요.",
+   "blank": "pincang",
+   "src": "made"
+  }
+ ],
  "w|pindah": [
   {
    "text": "Kami akan pindah ke kota lain.",
@@ -57317,6 +57797,22 @@
    "blank": "Puncak"
   }
  ],
+ "w|pundak": [
+  {
+   "text": "Burung beo itu suka bertengger di pundak Rudi selama pemeriksaan.",
+   "en": "The parrot likes to perch on Rudi's shoulder during the checkup.",
+   "ko": "그 앵무새는 진찰하는 동안 루디의 어깨에 앉아 있는 걸 좋아해요.",
+   "blank": "pundak",
+   "src": "made"
+  },
+  {
+   "text": "Rina memikul keranjang kayu bakar di pundak saat menuruni bukit.",
+   "en": "Rina carried a basket of firewood on her shoulder as she went down the hill.",
+   "ko": "리나는 땔감 바구니를 어깨에 메고 언덕을 내려갔어요.",
+   "blank": "pundak",
+   "src": "made"
+  }
+ ],
  "w|punggung": [
   {
    "text": "Punggungku sakit setelah mengangkat kotak.",
@@ -58154,6 +58650,22 @@
    "en": "Ayu and her cousins made two teams to play football in the yard.",
    "ko": "아유와 사촌들은 마당에서 공을 차려고 두 팀으로 나눴어요.",
    "blank": "regu",
+   "src": "made"
+  }
+ ],
+ "w|rehabilitasi": [
+  {
+   "text": "Setelah operasi kaki, anjing itu menjalani rehabilitasi di klinik Rudi.",
+   "en": "After leg surgery, the dog went through rehabilitation at Rudi's clinic.",
+   "ko": "다리 수술 후 그 개는 루디의 병원에서 재활을 받았어요.",
+   "blank": "rehabilitasi",
+   "src": "made"
+  },
+  {
+   "text": "Paman Rina menjalani rehabilitasi setelah jatuh dari pohon cengkih.",
+   "en": "Rina's uncle went through rehabilitation after falling from a clove tree.",
+   "ko": "리나의 삼촌은 정향나무에서 떨어진 뒤 재활 치료를 받았어요.",
+   "blank": "rehabilitasi",
    "src": "made"
   }
  ],
@@ -62897,6 +63409,22 @@
    "blank": "seperti"
   }
  ],
+ "w|sepeser": [
+  {
+   "text": "Rudi tidak meminta sepeser pun dari nenek yang membawa kucing liar terluka.",
+   "en": "Rudi didn't ask a single cent from the grandmother who brought in an injured stray cat.",
+   "ko": "루디는 다친 길고양이를 데려온 할머니에게 한 푼도 받지 않았어요.",
+   "blank": "sepeser",
+   "src": "made"
+  },
+  {
+   "text": "Rina tidak punya uang sepeser pun saat ketinggalan angkot terakhir.",
+   "en": "Rina didn't have a single cent when she missed the last minibus.",
+   "ko": "리나는 마지막 미니버스를 놓쳤을 때 돈이 한 푼도 없었어요.",
+   "blank": "sepeser",
+   "src": "made"
+  }
+ ],
  "w|sepi": [
   {
    "text": "Setelah hakim keluar, ruang sidang mendadak sepi.",
@@ -63077,6 +63605,22 @@
    "src": "made"
   }
  ],
+ "w|serasi": [
+  {
+   "text": "Pasangan muda itu datang ke klinik Rudi dengan kaus serasi bergambar kucing.",
+   "en": "The young couple came to Rudi's clinic in matching cat T-shirts.",
+   "ko": "그 젊은 부부는 고양이 그림이 있는 커플 티셔츠를 입고 루디의 병원에 왔어요.",
+   "blank": "serasi",
+   "src": "made"
+  },
+  {
+   "text": "Rina memakai kebaya yang serasi dengan selendang ibunya saat pesta panen.",
+   "en": "Rina wore a kebaya that matched her mother's shawl at the harvest festival.",
+   "ko": "리나는 추수 잔치에 엄마의 숄과 어울리는 끄바야를 입었어요.",
+   "blank": "serasi",
+   "src": "made"
+  }
+ ],
  "w|serat": [
   {
    "text": "Eko membawa tali dari serat sabut kelapa untuk mengikat terpal.",
@@ -63207,6 +63751,22 @@
    "en": "This is a serious problem.",
    "ko": "이건 심각한 문제야.",
    "blank": "serius"
+  }
+ ],
+ "w|serpihan": [
+  {
+   "text": "Rudi mengeluarkan serpihan kaca dari telapak kaki anjing itu.",
+   "en": "Rudi removed a shard of glass from the dog's paw.",
+   "ko": "루디는 개의 발바닥에서 유리 조각을 빼냈어요.",
+   "blank": "serpihan",
+   "src": "made"
+  },
+  {
+   "text": "Rina menyapu serpihan genteng yang jatuh karena angin kencang.",
+   "en": "Rina swept up pieces of roof tile that had fallen in the strong wind.",
+   "ko": "리나는 강풍에 떨어진 기와 조각을 쓸어 냈어요.",
+   "blank": "serpihan",
+   "src": "made"
   }
  ],
  "w|sersan": [
@@ -66883,6 +67443,22 @@
    "blank": "Tembakan"
   }
  ],
+ "w|tembakau": [
+  {
+   "text": "Rudi memperingatkan bahwa asap tembakau juga berbahaya bagi kucing di rumah.",
+   "en": "Rudi warned that tobacco smoke is also harmful to cats at home.",
+   "ko": "루디는 담배 연기가 집 고양이에게도 해롭다고 경고했어요.",
+   "blank": "tembakau",
+   "src": "made"
+  },
+  {
+   "text": "Banyak petani di desa Rina beralih dari tembakau ke kopi.",
+   "en": "Many farmers in Rina's village have switched from tobacco to coffee.",
+   "ko": "리나네 마을의 많은 농부가 담배에서 커피로 작물을 바꿨어요.",
+   "blank": "tembakau",
+   "src": "made"
+  }
+ ],
  "w|tembok": [
   {
    "text": "Tembok rumah itu dicat putih.",
@@ -68929,6 +69505,22 @@
    "blank": "terpenting"
   }
  ],
+ "w|terpenuhi": [
+  {
+   "text": "Rudi senang karena kebutuhan obat kliniknya akhirnya terpenuhi.",
+   "en": "Rudi is happy because his clinic's medicine needs have finally been met.",
+   "ko": "루디는 병원에 필요한 약이 마침내 다 갖춰져서 기뻐요.",
+   "blank": "terpenuhi",
+   "src": "made"
+  },
+  {
+   "text": "Kebutuhan air bersih di desa Rina akhirnya terpenuhi berkat pipa baru.",
+   "en": "Clean water needs in Rina's village were finally met thanks to a new pipe.",
+   "ko": "새 수도관 덕분에 리나네 마을의 깨끗한 물 문제가 마침내 해결됐어요.",
+   "blank": "terpenuhi",
+   "src": "made"
+  }
+ ],
  "w|terperangkap": [
   {
    "text": "Seekor kucing terperangkap di atap kantor polisi dan harus diturunkan dengan tangga.",
@@ -69371,6 +69963,22 @@
    "en": "Only a little rice is left.",
    "ko": "밥이 조금만 남았어.",
    "blank": "Tersisa"
+  }
+ ],
+ "w|tertabrak": [
+  {
+   "text": "Kucing yang tertabrak motor itu selamat berkat operasi cepat Rudi.",
+   "en": "The cat that was hit by a motorbike survived thanks to Rudi's quick surgery.",
+   "ko": "오토바이에 치인 고양이는 루디의 빠른 수술 덕분에 살았어요.",
+   "blank": "tertabrak",
+   "src": "made"
+  },
+  {
+   "text": "Ayam Rina hampir tertabrak sepeda motor tukang sayur pagi tadi.",
+   "en": "Rina's chicken was almost hit by the vegetable seller's motorbike this morning.",
+   "ko": "오늘 아침 리나의 닭이 채소 장수 오토바이에 치일 뻔했어요.",
+   "blank": "tertabrak",
+   "src": "made"
   }
  ],
  "w|tertahan": [
@@ -70609,6 +71217,22 @@
    "src": "made"
   }
  ],
+ "w|transplantasi": [
+  {
+   "text": "Rudi membaca jurnal tentang transplantasi ginjal pada kucing.",
+   "en": "Rudi read a journal article about kidney transplants in cats.",
+   "ko": "루디는 고양이 신장 이식에 관한 학술지를 읽었어요.",
+   "blank": "transplantasi",
+   "src": "made"
+  },
+  {
+   "text": "Rina membaca kisah pasien transplantasi hati yang kembali mendaki gunung.",
+   "en": "Rina read the story of a liver transplant patient who went back to mountain climbing.",
+   "ko": "리나는 간이식 환자가 다시 산에 오르게 된 이야기를 읽었어요.",
+   "blank": "transplantasi",
+   "src": "made"
+  }
+ ],
  "w|transportasi": [
   {
    "text": "Di desa terpencil itu, transportasi umum hanya ada dua kali sehari.",
@@ -70898,6 +71522,22 @@
    "en": "Ayu's running route is lined with green plants along the city park.",
    "ko": "아유의 달리기 길은 도시 공원을 따라 초록 식물로 가득해요.",
    "blank": "tumbuhan",
+   "src": "made"
+  }
+ ],
+ "w|tumit": [
+  {
+   "text": "Kuda itu terluka di bagian tumit, jadi Rudi membalutnya dengan hati-hati.",
+   "en": "The horse was injured in the heel, so Rudi bandaged it carefully.",
+   "ko": "말이 뒤꿈치를 다쳐서 루디는 조심스럽게 붕대를 감았어요.",
+   "blank": "tumit",
+   "src": "made"
+  },
+  {
+   "text": "Sandal baru Rina terlalu keras sampai tumit kakinya lecet.",
+   "en": "Rina's new sandals were so stiff that her heel got blistered.",
+   "ko": "리나의 새 샌들이 너무 딱딱해서 뒤꿈치가 까졌어요.",
+   "blank": "tumit",
    "src": "made"
   }
  ],
