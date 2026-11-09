@@ -124,7 +124,8 @@ node --experimental-strip-types scripts/story/plan.ts <언어> --done <묶음>
 ## 6. 만든 것·남은 것 (모으는 쪽, 이 채팅)
 
 - 만듦(2026-11-10): analyze.ts 모든 언어(문법·표현 칸은 규칙 파일 있는 언어만, 빈칸 실패 이유, merge 파일 `tmp/story/<언어>/`) · plan.ts · settings.json · 쓰는 쪽 지침 `scripts/story/WRITER.md` · merge 파일 쓰기 원자화(동시 실행).
-- 남음: `--replace`(보는 쪽 수정), Cursor 프롬프트 새로 쓰기.
+- 다 채움(2026-11-10): 13개 언어 동시 에이전트(언어당 11~16바퀴) — 합 낱말 98,205 · 문장 196,410, 모자람 6(일부러 뺀 낱말, settings.json skip). 원어민 표본 확인은 보류.
+- 남음(쓸 때만): `--replace`(보는 쪽 수정), 태국어 analyze에 이야기 전체 글자 세기 넣기.
 
 
 1. `analyze.ts`를 모든 언어에서 돌게 한다.
