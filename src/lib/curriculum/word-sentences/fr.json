@@ -5773,6 +5773,22 @@
    "src": "made"
   }
  ],
+ "w|avide": [
+  {
+   "text": "Le public, avide de nouveautés, a réservé toutes les places en une heure.",
+   "en": "The audience, eager for new things, booked every seat in an hour.",
+   "ko": "새로운 걸 갈망하는 관객들이 한 시간 만에 좌석을 모두 예약했어요.",
+   "blank": "avide",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Sarah était avide d'un grand plat de pâtes.",
+   "en": "After the race, Sarah was craving a big plate of pasta.",
+   "ko": "경기 후 사라는 파스타 한 접시가 간절했어요.",
+   "blank": "avide",
+   "src": "made"
+  }
+ ],
  "w|avion": [
   {
    "text": "J'ai pris l'avion hier soir.",
@@ -8424,6 +8440,22 @@
    "en": "In autumn, Léa likes to read a good book under a blanket.",
    "ko": "가을이면 레아는 담요를 덮고 좋은 책을 읽는 걸 좋아해요.",
    "blank": "bouquin",
+   "src": "made"
+  }
+ ],
+ "w|bourgeois": [
+  {
+   "text": "La pièce se moque d'une famille bourgeoise obsédée par les apparences.",
+   "en": "The play mocks a bourgeois family obsessed with appearances.",
+   "ko": "그 연극은 겉모습에 집착하는 부르주아 가족을 비꼬아요.",
+   "blank": "bourgeoise",
+   "src": "made"
+  },
+  {
+   "text": "Le parcours traverse les beaux quartiers bourgeois de l'ouest.",
+   "en": "The course goes through the smart bourgeois districts in the west.",
+   "ko": "코스는 서쪽 부유한 동네를 지나가요.",
+   "blank": "bourgeois",
    "src": "made"
   }
  ],
@@ -13257,6 +13289,22 @@
    "src": "made"
   }
  ],
+ "w|civique": [
+  {
+   "text": "Le théâtre propose des ateliers d'éducation civique pour les lycéens.",
+   "en": "The theater offers civic education workshops for high school students.",
+   "ko": "극장은 고등학생을 위한 시민 교육 강좌를 열어요.",
+   "blank": "civique",
+   "src": "made"
+  },
+  {
+   "text": "Pour Sarah, aider les bénévoles à ramasser les gobelets est un geste civique.",
+   "en": "For Sarah, helping the volunteers pick up the cups is a civic gesture.",
+   "ko": "사라에게 자원봉사자를 도와 컵을 줍는 건 시민으로서의 행동이에요.",
+   "blank": "civique",
+   "src": "made"
+  }
+ ],
  "w|clair": [
   {
    "text": "Le ciel est très clair ce matin.",
@@ -14657,6 +14705,22 @@
    "src": "made"
   }
  ],
+ "w|comparaître": [
+  {
+   "text": "Dans la pièce, le héros doit comparaître devant un tribunal imaginaire.",
+   "en": "In the play, the hero has to appear before an imaginary court.",
+   "ko": "극 중에서 주인공은 상상 속 법정에 출두해야 해요.",
+   "blank": "comparaître",
+   "src": "made"
+  },
+  {
+   "text": "Le coureur qui avait triché devra comparaître devant la commission de discipline.",
+   "en": "The runner who had cheated will have to appear before the disciplinary committee.",
+   "ko": "부정을 저지른 주자는 징계 위원회에 출석해야 해요.",
+   "blank": "comparaître",
+   "src": "made"
+  }
+ ],
  "w|comparer": [
   {
    "text": "Il faut comparer les prix avant d'acheter.",
@@ -14998,6 +15062,22 @@
    "en": "Léa rewrites the report so that everyone can understand it.",
    "ko": "레아는 누구나 이해할 수 있게 보고서를 다시 써요.",
    "blank": "compréhensible",
+   "src": "made"
+  }
+ ],
+ "w|compréhensif": [
+  {
+   "text": "Le régisseur s'est montré compréhensif quand Antoine a oublié son texte.",
+   "en": "The stage manager was understanding when Antoine forgot his lines.",
+   "ko": "앙투안이 대사를 잊었을 때 무대 감독은 너그럽게 넘어가 줬어요.",
+   "blank": "compréhensif",
+   "src": "made"
+  },
+  {
+   "text": "L'entraîneur de Sarah est très compréhensif quand elle doit sauter une séance.",
+   "en": "Sarah's coach is very understanding when she has to skip a session.",
+   "ko": "사라의 코치는 사라가 훈련을 빠져야 할 때 아주 너그러워요.",
+   "blank": "compréhensif",
    "src": "made"
   }
  ],
@@ -22239,6 +22319,22 @@
    "blank": "deuxième"
   }
  ],
+ "w|dévaliser": [
+  {
+   "text": "Dans la comédie, deux maladroits tentent de dévaliser une bijouterie.",
+   "en": "In the comedy, two bunglers try to rob a jewelry shop.",
+   "ko": "그 희극에서는 서툰 두 사람이 보석 가게를 털려고 해요.",
+   "blank": "dévaliser",
+   "src": "made"
+  },
+  {
+   "text": "Pendant la course, des voleurs ont tenté de dévaliser les sacs à la consigne.",
+   "en": "During the race, thieves tried to rob the bags at the cloakroom.",
+   "ko": "경기 중에 도둑들이 짐 보관소의 가방을 털려고 했어요.",
+   "blank": "dévaliser",
+   "src": "made"
+  }
+ ],
  "w|devant": [
   {
    "text": "Attends-moi devant le cinéma.",
@@ -22476,6 +22572,22 @@
    "en": "The surgeon dictates his report as soon as the operation is over.",
    "ko": "외과 의사는 수술이 끝나자마자 보고서를 구술해요.",
    "blank": "dicte",
+   "src": "made"
+  }
+ ],
+ "w|dicton": [
+  {
+   "text": "Antoine répète souvent le dicton : « Le spectacle doit continuer. »",
+   "en": "Antoine often repeats the saying: \"The show must go on.\"",
+   "ko": "앙투안은 「공연은 계속되어야 한다」는 말을 자주 해요.",
+   "blank": "dicton",
+   "src": "made"
+  },
+  {
+   "text": "Sarah aime le dicton selon lequel le plus dur, c'est de lacer ses chaussures.",
+   "en": "Sarah likes the saying that the hardest part is lacing up your shoes.",
+   "ko": "사라는 제일 힘든 건 신발 끈을 매는 일이라는 말을 좋아해요.",
+   "blank": "dicton",
    "src": "made"
   }
  ],
@@ -23212,6 +23324,22 @@
    "en": "Émilie struggles to hide her tears during her mother's speech.",
    "ko": "에밀리는 어머니의 축사를 들으며 눈물을 감추기 힘들어해요.",
    "blank": "dissimuler",
+   "src": "made"
+  }
+ ],
+ "w|dissoudre": [
+  {
+   "text": "La compagnie a failli se dissoudre après l'échec de sa dernière création.",
+   "en": "The company nearly broke up after its last production flopped.",
+   "ko": "극단은 지난 작품이 실패하고 나서 해체될 뻔했어요.",
+   "blank": "dissoudre",
+   "src": "made"
+  },
+  {
+   "text": "Sarah fait dissoudre une pastille de sels minéraux dans sa gourde.",
+   "en": "Sarah dissolves a mineral salt tablet in her water bottle.",
+   "ko": "사라는 물병에 미네랄 알약을 녹여요.",
+   "blank": "dissoudre",
    "src": "made"
   }
  ],
@@ -27873,6 +28001,22 @@
    "blank": "équipe"
   }
  ],
+ "w|équipé": [
+  {
+   "text": "Le nouveau théâtre est équipé d'une scène tournante.",
+   "en": "The new theater is equipped with a revolving stage.",
+   "ko": "새 극장에는 회전 무대가 갖춰져 있어요.",
+   "blank": "équipé",
+   "src": "made"
+  },
+  {
+   "text": "Sarah est partie bien équipée, avec gourde et gels énergétiques.",
+   "en": "Sarah set off well equipped, with a water bottle and energy gels.",
+   "ko": "사라는 물병과 에너지 젤을 챙겨 단단히 준비하고 출발했어요.",
+   "blank": "équipée",
+   "src": "made"
+  }
+ ],
  "w|équipement": [
   {
    "text": "Cet équipement est nécessaire pour le sport.",
@@ -29923,6 +30067,22 @@
    "src": "made"
   }
  ],
+ "w|expulsion": [
+  {
+   "text": "Le deuxième acte montre l'expulsion d'une famille de sa ferme.",
+   "en": "The second act shows a family being evicted from their farm.",
+   "ko": "두 번째 막에서는 한 가족이 농장에서 쫓겨나는 장면이 나와요.",
+   "blank": "expulsion",
+   "src": "made"
+  },
+  {
+   "text": "Un coureur qui avait coupé le parcours a reçu une expulsion de la course.",
+   "en": "A runner who had cut the course was thrown out of the race.",
+   "ko": "코스를 가로지른 주자는 경기에서 퇴출됐어요.",
+   "blank": "expulsion",
+   "src": "made"
+  }
+ ],
  "w|exquis": [
   {
    "text": "Le critique gastronomique du journal a trouvé le dessert du nouveau restaurant exquis.",
@@ -30453,6 +30613,22 @@
    "en": "You have to be patient.",
    "ko": "인내심 있어야 해.",
    "blank": "falloir"
+  }
+ ],
+ "w|falsifier": [
+  {
+   "text": "Dans l'intrigue, un notaire essaie de falsifier un testament.",
+   "en": "In the plot, a notary tries to forge a will.",
+   "ko": "줄거리에서 공증인은 유언장을 위조하려고 해요.",
+   "blank": "falsifier",
+   "src": "made"
+  },
+  {
+   "text": "Un participant a été disqualifié pour avoir tenté de falsifier son temps.",
+   "en": "A participant was disqualified for trying to fake his time.",
+   "ko": "한 참가자는 기록을 조작하려다 실격당했어요.",
+   "blank": "falsifier",
+   "src": "made"
   }
  ],
  "w|fameux": [
@@ -32304,6 +32480,22 @@
    "en": "A sports foundation pays for Léa's studies.",
    "ko": "한 스포츠 재단이 레아의 학비를 대 줘요.",
    "blank": "fondation",
+   "src": "made"
+  }
+ ],
+ "w|fondement": [
+  {
+   "text": "Pour Antoine, l'écoute est le fondement du travail d'acteur.",
+   "en": "For Antoine, listening is the foundation of an actor's craft.",
+   "ko": "앙투안에게 듣는 것은 배우 일의 기본이에요.",
+   "blank": "fondement",
+   "src": "made"
+  },
+  {
+   "text": "La régularité est le fondement de l'entraînement de Sarah.",
+   "en": "Consistency is the foundation of Sarah's training.",
+   "ko": "꾸준함은 사라 훈련의 기본이에요.",
+   "blank": "fondement",
    "src": "made"
   }
  ],
@@ -34443,6 +34635,22 @@
    "src": "made"
   }
  ],
+ "w|gifle": [
+  {
+   "text": "Dans la scène finale, la comtesse donne une gifle retentissante à son mari.",
+   "en": "In the final scene, the countess gives her husband a resounding slap.",
+   "ko": "마지막 장면에서 백작 부인은 남편의 뺨을 세게 때려요.",
+   "blank": "gifle",
+   "src": "made"
+  },
+  {
+   "text": "Le froid du matin a fait à Sarah l'effet d'une gifle au départ.",
+   "en": "The morning cold hit Sarah like a slap at the start.",
+   "ko": "출발할 때 아침 추위가 사라의 뺨을 때리는 것 같았어요.",
+   "blank": "gifle",
+   "src": "made"
+  }
+ ],
  "w|gifler": [
   {
    "text": "Dans la pièce de Molière, Paul doit faire semblant de gifler son partenaire.",
@@ -34830,6 +35038,22 @@
    "en": "The leader of the military band holds the rank of colonel.",
    "ko": "군악대 지휘자의 계급은 대령이에요.",
    "blank": "grade",
+   "src": "made"
+  }
+ ],
+ "w|graffiti": [
+  {
+   "text": "Un graffiti géant décore le mur de la loge d'Antoine.",
+   "en": "A giant piece of graffiti decorates the wall of Antoine's dressing room.",
+   "ko": "앙투안의 분장실 벽은 커다란 그라피티로 꾸며져 있어요.",
+   "blank": "graffiti",
+   "src": "made"
+  },
+  {
+   "text": "Un graffiti d'encouragement attend les coureurs sous le pont.",
+   "en": "A graffiti message of encouragement awaits the runners under the bridge.",
+   "ko": "다리 밑에는 주자들을 응원하는 그라피티가 있어요.",
+   "blank": "graffiti",
    "src": "made"
   }
  ],
@@ -36025,6 +36249,22 @@
    "en": "He has been afraid of heights since childhood.",
    "ko": "그는 어릴 적부터 hauteur를 무서워했어.",
    "blank": "hauteur"
+  }
+ ],
+ "w|hectare": [
+  {
+   "text": "Le festival de théâtre se tient dans un parc de dix hectares.",
+   "en": "The theater festival is held in a ten-hectare park.",
+   "ko": "연극 축제는 십 헥타르 넓이의 공원에서 열려요.",
+   "blank": "hectares",
+   "src": "made"
+  },
+  {
+   "text": "Le village des coureurs occupe plusieurs hectares au bord du lac.",
+   "en": "The runners' village covers several hectares by the lake.",
+   "ko": "선수촌은 호숫가 몇 헥타르를 차지해요.",
+   "blank": "hectares",
+   "src": "made"
   }
  ],
  "w|hein": [
@@ -37951,6 +38191,22 @@
    "src": "made"
   }
  ],
+ "w|improbable": [
+  {
+   "text": "La pièce raconte la rencontre improbable d'un clown et d'une reine.",
+   "en": "The play tells of the unlikely meeting of a clown and a queen.",
+   "ko": "그 연극은 광대와 여왕의 뜻밖의 만남을 그려요.",
+   "blank": "improbable",
+   "src": "made"
+  },
+  {
+   "text": "Il semblait improbable que Sarah termine après sa blessure au genou.",
+   "en": "It seemed unlikely that Sarah would finish after her knee injury.",
+   "ko": "무릎을 다친 뒤라 사라가 완주할 것 같지 않았어요.",
+   "blank": "improbable",
+   "src": "made"
+  }
+ ],
  "w|improviser": [
   {
    "text": "Sans réseau dans le train, Lucas doit improviser pour trouver son hôtel.",
@@ -38060,6 +38316,22 @@
    "en": "Her uncle's unexpected visit forces Sarah to set an extra plate.",
    "ko": "삼촌이 예고 없이 오셔서 사라는 접시를 하나 더 놓아야 해요.",
    "blank": "inattendue",
+   "src": "made"
+  }
+ ],
+ "w|inauguration": [
+  {
+   "text": "Le maire a coupé le ruban lors de l'inauguration de la nouvelle salle.",
+   "en": "The mayor cut the ribbon at the opening of the new auditorium.",
+   "ko": "시장이 새 공연장 개관식에서 테이프를 잘랐어요.",
+   "blank": "inauguration",
+   "src": "made"
+  },
+  {
+   "text": "Sarah a couru le jour de l'inauguration du nouveau parcours le long du fleuve.",
+   "en": "Sarah ran on the day the new riverside course opened.",
+   "ko": "사라는 강변 새 코스가 개통되는 날 달렸어요.",
+   "blank": "inauguration",
    "src": "made"
   }
  ],
@@ -43643,6 +43915,22 @@
    "blank": "magique"
   }
  ],
+ "w|magistrat": [
+  {
+   "text": "Antoine joue un magistrat qui cache un lourd secret.",
+   "en": "Antoine plays a magistrate hiding a heavy secret.",
+   "ko": "앙투안은 무거운 비밀을 숨긴 판사 역을 맡아요.",
+   "blank": "magistrat",
+   "src": "made"
+  },
+  {
+   "text": "Un magistrat à la retraite courait à côté de Sarah pendant dix kilomètres.",
+   "en": "A retired magistrate ran next to Sarah for ten kilometers.",
+   "ko": "은퇴한 판사 한 분이 십 킬로미터 동안 사라 옆에서 달렸어요.",
+   "blank": "magistrat",
+   "src": "made"
+  }
+ ],
  "w|magnétique": [
   {
    "text": "Thomas explique que les oiseaux migrateurs se guident grâce au champ magnétique de la Terre.",
@@ -44432,6 +44720,22 @@
    "en": "Émilie's daughter is starting to show real talent for drawing.",
    "ko": "에밀리의 딸은 그림에 진짜 재능을 보이기 시작해요.",
    "blank": "manifester",
+   "src": "made"
+  }
+ ],
+ "w|manipulation": [
+  {
+   "text": "La pièce parle de la manipulation d'un vieux roi par ses conseillers.",
+   "en": "The play is about an old king being manipulated by his advisers.",
+   "ko": "그 연극은 신하들에게 조종당하는 늙은 왕 이야기예요.",
+   "blank": "manipulation",
+   "src": "made"
+  },
+  {
+   "text": "Sarah se méfie de la manipulation des chiffres dans les publicités pour chaussures.",
+   "en": "Sarah is wary of how figures are twisted in shoe adverts.",
+   "ko": "사라는 운동화 광고에서 숫자를 교묘하게 쓰는 걸 경계해요.",
+   "blank": "manipulation",
    "src": "made"
   }
  ],
@@ -46613,6 +46917,22 @@
    "en": "There are a thousand stars in the sky.",
    "ko": "하늘에 별이 천 개 있어.",
    "blank": "millier"
+  }
+ ],
+ "w|millimètre": [
+  {
+   "text": "Le décor a été mesuré au millimètre pour passer par la porte du théâtre.",
+   "en": "The set was measured to the millimeter to fit through the theater door.",
+   "ko": "무대 세트는 극장 문을 통과하도록 밀리미터 단위로 쟀어요.",
+   "blank": "millimètre",
+   "src": "made"
+  },
+  {
+   "text": "Sarah a perdu le podium de sa catégorie à un millimètre près sur la photo d'arrivée.",
+   "en": "Sarah missed the podium in her category by a millimeter on the finish-line photo.",
+   "ko": "결승선 사진에서 사라는 아슬아슬하게 자기 부문 시상대를 놓쳤어요.",
+   "blank": "millimètre",
+   "src": "made"
   }
  ],
  "w|million": [
@@ -50819,6 +51139,22 @@
    "src": "made"
   }
  ],
+ "w|oriental": [
+  {
+   "text": "Les costumes s'inspirent des tissus orientaux du siècle dernier.",
+   "en": "The costumes are inspired by the oriental fabrics of the last century.",
+   "ko": "의상은 지난 세기 동양 직물에서 영감을 받았어요.",
+   "blank": "orientaux",
+   "src": "made"
+  },
+  {
+   "text": "Le quartier oriental de la ville est le passage préféré de Sarah.",
+   "en": "The eastern part of the city is Sarah's favorite stretch.",
+   "ko": "도시 동쪽 동네는 사라가 가장 좋아하는 구간이에요.",
+   "blank": "oriental",
+   "src": "made"
+  }
+ ],
  "w|orientation": [
   {
    "text": "Pour la chasse au trésor, Louis teste le sens de l'orientation de ses enfants.",
@@ -54343,6 +54679,22 @@
    "blank": "pierre"
   }
  ],
+ "w|piétiner": [
+  {
+   "text": "Au début des répétitions, la troupe a eu l'impression de piétiner pendant des semaines.",
+   "en": "At the start of rehearsals, the company felt they were going nowhere for weeks.",
+   "ko": "연습 초반에 극단은 몇 주 동안 제자리걸음하는 느낌이었어요.",
+   "blank": "piétiner",
+   "src": "made"
+  },
+  {
+   "text": "Au départ, des milliers de coureurs piétinent derrière la ligne en attendant le signal.",
+   "en": "At the start, thousands of runners shuffle behind the line waiting for the signal.",
+   "ko": "출발선 뒤에서 수천 명의 주자가 신호를 기다리며 발을 굴러요.",
+   "blank": "piétinent",
+   "src": "made"
+  }
+ ],
  "w|pieu": [
   {
    "text": "Louis plante un pieu dans le jardin pour tenir le jeune pommier.",
@@ -54356,6 +54708,22 @@
    "en": "The organizers tie the banner to a stake driven into the ground.",
    "ko": "주최 측은 땅에 박은 말뚝에 현수막을 묶어요.",
    "blank": "pieu",
+   "src": "made"
+  }
+ ],
+ "w|pieux": [
+  {
+   "text": "La grand-mère du héros est une femme pieuse qui va à la messe chaque matin.",
+   "en": "The hero's grandmother is a devout woman who goes to Mass every morning.",
+   "ko": "주인공의 할머니는 매일 아침 미사에 가는 독실한 여자예요.",
+   "blank": "pieuse",
+   "src": "made"
+  },
+  {
+   "text": "La tante de Sarah, très pieuse, a allumé un cierge pour sa course.",
+   "en": "Sarah's very devout aunt lit a candle for her race.",
+   "ko": "독실한 사라의 이모가 경기를 위해 초를 켜 줬어요.",
+   "blank": "pieuse",
    "src": "made"
   }
  ],
@@ -55183,6 +55551,22 @@
    "blank": "pleuvoir"
   }
  ],
+ "w|pli": [
+  {
+   "text": "La costumière repasse chaque pli de la robe de la reine.",
+   "en": "The costume maker irons every pleat of the queen's dress.",
+   "ko": "의상 담당자는 여왕 드레스의 주름을 하나하나 다려요.",
+   "blank": "pli",
+   "src": "made"
+  },
+  {
+   "text": "Sarah a pris le pli de courir avant le petit-déjeuner.",
+   "en": "Sarah has got into the habit of running before breakfast.",
+   "ko": "사라는 아침 먹기 전에 달리는 게 버릇이 됐어요.",
+   "blank": "pli",
+   "src": "made"
+  }
+ ],
  "w|plier": [
   {
    "text": "Lucas plie sa copie en deux avant de la rendre.",
@@ -55863,6 +56247,22 @@
    "en": "This singer is very popular in France.",
    "ko": "이 가수는 프랑스에서 매우 인기가 많아요.",
    "blank": "populaire"
+  }
+ ],
+ "w|popularité": [
+  {
+   "text": "La popularité de la pièce a surpris toute la troupe.",
+   "en": "The play's popularity surprised the whole company.",
+   "ko": "작품의 인기에 극단 모두가 놀랐어요.",
+   "blank": "popularité",
+   "src": "made"
+  },
+  {
+   "text": "La popularité du marathon oblige les organisateurs à tirer les dossards au sort.",
+   "en": "The marathon's popularity forces the organizers to allocate bibs by lottery.",
+   "ko": "마라톤 인기가 너무 높아 주최 측은 참가 번호를 추첨으로 정해요.",
+   "blank": "popularité",
+   "src": "made"
   }
  ],
  "w|population": [
@@ -57585,6 +57985,22 @@
    "blank": "printemps"
   }
  ],
+ "w|prioritaire": [
+  {
+   "text": "Les abonnés sont prioritaires pour réserver les places de la première.",
+   "en": "Subscribers have priority to book seats for the opening night.",
+   "ko": "정기 회원은 첫 공연 좌석을 우선 예약할 수 있어요.",
+   "blank": "prioritaires",
+   "src": "made"
+  },
+  {
+   "text": "Les coureurs blessés sont prioritaires au poste de secours.",
+   "en": "Injured runners get priority at the first-aid station.",
+   "ko": "다친 주자들은 구호소에서 먼저 치료받아요.",
+   "blank": "prioritaires",
+   "src": "made"
+  }
+ ],
  "w|priorité": [
   {
    "text": "Ma priorité aujourd'hui est de finir ce travail.",
@@ -57653,6 +58069,22 @@
    "en": "My garden is a private space.",
    "ko": "내 정원은 사적인 공간이야.",
    "blank": "privé"
+  }
+ ],
+ "w|priver": [
+  {
+   "text": "Le metteur en scène a menacé de priver Antoine de son solo s'il arrivait encore en retard.",
+   "en": "The director threatened to take Antoine's solo away if he was late again.",
+   "ko": "연출가는 앙투안이 또 늦으면 독백을 빼 버리겠다고 했어요.",
+   "blank": "priver",
+   "src": "made"
+  },
+  {
+   "text": "Sarah refuse de se priver de chocolat pendant sa préparation.",
+   "en": "Sarah refuses to go without chocolate during her training.",
+   "ko": "사라는 훈련 기간에도 초콜릿을 끊지 않아요.",
+   "blank": "priver",
+   "src": "made"
   }
  ],
  "w|privilège": [
@@ -58211,6 +58643,22 @@
    "blank": "projet"
   }
  ],
+ "w|projeter": [
+  {
+   "text": "Pendant le spectacle, on va projeter des images de la mer sur le rideau.",
+   "en": "During the show, images of the sea will be projected onto the curtain.",
+   "ko": "공연 중에 막 위에 바다 영상을 비출 거예요.",
+   "blank": "projeter",
+   "src": "made"
+  },
+  {
+   "text": "Sarah projette de courir à l'étranger l'année prochaine.",
+   "en": "Sarah plans to run abroad next year.",
+   "ko": "사라는 내년에 외국에서 달릴 계획이에요.",
+   "blank": "projette",
+   "src": "made"
+  }
+ ],
  "w|promenade": [
   {
    "text": "On part en promenade avant le dîner.",
@@ -58601,6 +59049,22 @@
    "src": "made"
   }
  ],
+ "w|protestation": [
+  {
+   "text": "La hausse du prix des billets a provoqué une vague de protestation.",
+   "en": "The rise in ticket prices sparked a wave of protest.",
+   "ko": "입장권 값이 오르자 항의가 잇따랐어요.",
+   "blank": "protestation",
+   "src": "made"
+  },
+  {
+   "text": "La fermeture des routes a suscité la protestation de quelques commerçants.",
+   "en": "The road closures drew protests from some shopkeepers.",
+   "ko": "도로 통제에 몇몇 상인이 항의했어요.",
+   "blank": "protestation",
+   "src": "made"
+  }
+ ],
  "w|protester": [
   {
    "text": "Les élèves vont protester auprès du proviseur contre la fermeture de la cantine le mercredi.",
@@ -58673,6 +59137,22 @@
    "en": "That smell must be coming from the kitchen.",
    "ko": "이 냄새는 부엌에서 나는 게 틀림없어.",
    "blank": "provenir"
+  }
+ ],
+ "w|proverbe": [
+  {
+   "text": "Le vieux valet de la pièce parle presque uniquement en proverbes.",
+   "en": "The old valet in the play speaks almost entirely in proverbs.",
+   "ko": "그 연극의 늙은 하인은 거의 속담으로만 말해요.",
+   "blank": "proverbes",
+   "src": "made"
+  },
+  {
+   "text": "Sarah a écrit un proverbe sur son bras pour se donner du courage.",
+   "en": "Sarah wrote a proverb on her arm to give herself courage.",
+   "ko": "사라는 힘을 내려고 팔에 속담을 적었어요.",
+   "blank": "proverbe",
+   "src": "made"
   }
  ],
  "w|providence": [
@@ -59132,6 +59612,22 @@
    "en": "The evening before the race, Claire eats mashed sweet potatoes.",
    "ko": "경주 전날 저녁에 클레르는 고구마 퓌레를 먹어요.",
    "blank": "purée",
+   "src": "made"
+  }
+ ],
+ "w|pureté": [
+  {
+   "text": "Antoine admire la pureté de la voix de la jeune chanteuse.",
+   "en": "Antoine admires the purity of the young singer's voice.",
+   "ko": "앙투안은 젊은 가수 목소리의 맑음에 감탄해요.",
+   "blank": "pureté",
+   "src": "made"
+  },
+  {
+   "text": "Sarah se souvient de la pureté de l'air au sommet de la dernière côte.",
+   "en": "Sarah remembers how pure the air was at the top of the last hill.",
+   "ko": "사라는 마지막 언덕 꼭대기의 깨끗한 공기를 기억해요.",
+   "blank": "pureté",
    "src": "made"
   }
  ],
@@ -60767,6 +61263,22 @@
    "src": "made"
   }
  ],
+ "w|réciter": [
+  {
+   "text": "Antoine récite son monologue dans la voiture chaque matin.",
+   "en": "Antoine recites his monologue in the car every morning.",
+   "ko": "앙투안은 매일 아침 차 안에서 독백을 외워요.",
+   "blank": "récite",
+   "src": "made"
+  },
+  {
+   "text": "Pour tenir le rythme, Sarah se met à réciter les poèmes appris à l'école.",
+   "en": "To keep the pace, Sarah starts reciting the poems she learned at school.",
+   "ko": "사라는 속도를 유지하려고 학교에서 배운 시를 읊기 시작해요.",
+   "blank": "réciter",
+   "src": "made"
+  }
+ ],
  "w|réclamer": [
   {
    "text": "Le nouveau collègue de Julien réclame déjà un deuxième écran.",
@@ -62399,6 +62911,22 @@
    "blank": "renfort"
   }
  ],
+ "w|renier": [
+  {
+   "text": "Le personnage d'Antoine finit par renier son propre frère devant le tribunal.",
+   "en": "Antoine's character ends up disowning his own brother before the court.",
+   "ko": "앙투안이 맡은 인물은 결국 법정에서 친형을 부인해요.",
+   "blank": "renier",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Sarah a juré de ne jamais renier sa passion pour la course à pied.",
+   "en": "After the race, Sarah swore never to give up her passion for running.",
+   "ko": "경기가 끝나고 사라는 달리기에 대한 열정을 절대 버리지 않겠다고 다짐했어요.",
+   "blank": "renier",
+   "src": "made"
+  }
+ ],
  "w|renifler": [
   {
    "text": "Un lecteur enrhumé n'arrêtait pas de renifler dans la salle silencieuse.",
@@ -63041,6 +63569,22 @@
    "en": "This school has an excellent reputation.",
    "ko": "이 학교는 아주 좋은 명성을 가지고 있어요.",
    "blank": "réputation"
+  }
+ ],
+ "w|réputé": [
+  {
+   "text": "Antoine joue dans un théâtre réputé pour ses comédies.",
+   "en": "Antoine performs in a theater known for its comedies.",
+   "ko": "앙투안은 희극으로 이름난 극장에서 연기해요.",
+   "blank": "réputé",
+   "src": "made"
+  },
+  {
+   "text": "Ce marathon est réputé pour son parcours plat et rapide.",
+   "en": "This marathon is known for its flat, fast course.",
+   "ko": "이 마라톤은 평탄하고 빠른 코스로 유명해요.",
+   "blank": "réputé",
+   "src": "made"
   }
  ],
  "w|requête": [
@@ -63989,6 +64533,22 @@
    "blank": "révéler"
   }
  ],
+ "w|revendiquer": [
+  {
+   "text": "Deux auteurs revendiquent la paternité de la pièce.",
+   "en": "Two writers claim authorship of the play.",
+   "ko": "두 작가가 서로 그 희곡을 자기가 썼다고 주장해요.",
+   "blank": "revendiquent",
+   "src": "made"
+  },
+  {
+   "text": "Sarah ne cherche pas à gagner, elle veut juste revendiquer le droit de courir à son rythme.",
+   "en": "Sarah isn't trying to win; she just wants to claim the right to run at her own pace.",
+   "ko": "사라는 이기려는 게 아니라 자기 속도로 달릴 권리를 내세우고 싶을 뿐이에요.",
+   "blank": "revendiquer",
+   "src": "made"
+  }
+ ],
  "w|revendre": [
   {
    "text": "Antoine veut revendre le vieux tracteur de son père à un voisin.",
@@ -64527,6 +65087,22 @@
    "blank": "rocher"
   }
  ],
+ "w|rodéo": [
+  {
+   "text": "Pour le western musical, Antoine a appris à faire semblant de monter au rodéo.",
+   "en": "For the musical western, Antoine learned to pretend to ride in a rodeo.",
+   "ko": "서부 뮤지컬을 위해 앙투안은 로데오 타는 시늉을 배웠어요.",
+   "blank": "rodéo",
+   "src": "made"
+  },
+  {
+   "text": "Au ravitaillement, la bousculade ressemblait à un vrai rodéo.",
+   "en": "At the refreshment station, the jostling looked like a real rodeo.",
+   "ko": "급수대에서 서로 밀치는 모습이 정말 로데오 같았어요.",
+   "blank": "rodéo",
+   "src": "made"
+  }
+ ],
  "w|rôder": [
   {
    "text": "Selon les voisins, un homme semblait rôder autour de l'entrepôt la nuit du vol.",
@@ -64669,6 +65245,22 @@
    "en": "I bought a pink sweater yesterday.",
    "ko": "어제 핑크색 스웨터를 샀어.",
    "blank": "rose"
+  }
+ ],
+ "w|rotation": [
+  {
+   "text": "Les comédiens jouent les petits rôles par rotation chaque soir.",
+   "en": "The actors take turns playing the small parts every night.",
+   "ko": "배우들은 매일 밤 돌아가며 단역을 맡아요.",
+   "blank": "rotation",
+   "src": "made"
+  },
+  {
+   "text": "Les bénévoles du ravitaillement travaillent par rotation de deux heures.",
+   "en": "The refreshment volunteers work in two-hour rotations.",
+   "ko": "급수대 자원봉사자들은 두 시간씩 교대로 일해요.",
+   "blank": "rotation",
+   "src": "made"
   }
  ],
  "w|rôti": [
@@ -65531,6 +66123,22 @@
    "en": "Shall we meet on Saturday for dinner?",
    "ko": "우리 samedi에 저녁 먹을까?",
    "blank": "samedi"
+  }
+ ],
+ "w|sanction": [
+  {
+   "text": "Le règlement de la troupe prévoit une sanction pour chaque retard.",
+   "en": "The company's rules set a penalty for every late arrival.",
+   "ko": "극단 규칙에는 지각할 때마다 벌칙이 있어요.",
+   "blank": "sanction",
+   "src": "made"
+  },
+  {
+   "text": "Jeter sa bouteille hors des zones prévues expose à une sanction.",
+   "en": "Throwing your bottle outside the designated zones can lead to a penalty.",
+   "ko": "지정 구역 밖에 병을 버리면 벌칙을 받을 수 있어요.",
+   "blank": "sanction",
+   "src": "made"
   }
  ],
  "w|sanctuaire": [
@@ -67653,6 +68261,22 @@
    "en": "Without a nap, I can't get through the afternoon.",
    "ko": "낮잠 없으면 오후를 못 버텨.",
    "blank": "sieste"
+  }
+ ],
+ "w|sifflement": [
+  {
+   "text": "Un sifflement du micro a interrompu Antoine au milieu de sa tirade.",
+   "en": "A whistle from the microphone interrupted Antoine in the middle of his speech.",
+   "ko": "마이크에서 삐 소리가 나서 앙투안의 긴 대사가 끊겼어요.",
+   "blank": "sifflement",
+   "src": "made"
+  },
+  {
+   "text": "Le sifflement du vent dans les oreilles accompagne Sarah sur le pont.",
+   "en": "The whistling of the wind in her ears accompanies Sarah on the bridge.",
+   "ko": "다리 위에서 사라의 귓가에 바람 소리가 휘익 스쳐요.",
+   "blank": "sifflement",
+   "src": "made"
   }
  ],
  "w|siffler": [
@@ -77087,6 +77711,22 @@
    "en": "It's hard to live without you.",
    "ko": "너 없이 사는 건 힘들어.",
    "blank": "vivre"
+  }
+ ],
+ "w|vocabulaire": [
+  {
+   "text": "Le vocabulaire de Molière surprend parfois les jeunes spectateurs.",
+   "en": "Molière's vocabulary sometimes surprises young audiences.",
+   "ko": "몰리에르의 어휘는 가끔 젊은 관객들을 놀라게 해요.",
+   "blank": "vocabulaire",
+   "src": "made"
+  },
+  {
+   "text": "Le vocabulaire des coureurs, entre fractionné et allure, perd vite les débutants.",
+   "en": "Runners' vocabulary, with intervals and pace, quickly loses beginners.",
+   "ko": "인터벌이니 페이스니 하는 달리기 용어에 초보자는 금방 헷갈려요.",
+   "blank": "vocabulaire",
+   "src": "made"
   }
  ],
  "w|vocal": [
