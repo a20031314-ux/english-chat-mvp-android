@@ -311,6 +311,22 @@
    "blank": "가렸어"
   }
  ],
+ "w|가리키다": [
+  {
+   "text": "동생은 범인이 형이라며 경민을 손가락으로 가리켰어요.",
+   "en": "His younger brother pointed at Gyeongmin, saying he was the culprit.",
+   "ko": "동생은 범인이 형이라며 경민을 손가락으로 가리켰어요.",
+   "blank": "가리켰어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 졸업 사진 속 자기 얼굴을 가리키며 웃었어요.",
+   "en": "Daeun laughed as she pointed at her own face in the graduation photo.",
+   "ko": "다은은 졸업 사진 속 자기 얼굴을 가리키며 웃었어요.",
+   "blank": "가리키며",
+   "src": "made"
+  }
+ ],
  "w|가만": [
   {
    "text": "가만 있으면 더 편해질 거야.",
@@ -483,6 +499,22 @@
    "en": "There's a pain in my chest.",
    "ko": "가슴 쪽에 통증이 있어.",
    "blank": "가슴"
+  }
+ ],
+ "w|가엾다": [
+  {
+   "text": "비를 쫄딱 맞고 들어온 동생이 가엾어서 경민은 화가 다 풀렸어요.",
+   "en": "Gyeongmin's anger melted away because his brother, who came in soaked from the rain, looked so pitiful.",
+   "ko": "비를 쫄딱 맞고 들어온 동생이 가엾어서 경민은 화가 다 풀렸어요.",
+   "blank": "가엾어서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 혼자 아이를 키우느라 지친 친구가 가엾게 느껴졌어요.",
+   "en": "Daeun felt sorry for her friend, who was worn out from raising a child alone.",
+   "ko": "다은은 혼자 아이를 키우느라 지친 친구가 가엾게 느껴졌어요.",
+   "blank": "가엾게",
+   "src": "made"
   }
  ],
  "w|가운데": [
@@ -4085,6 +4117,22 @@
    "blank": "고백했어"
   }
  ],
+ "w|고상하다": [
+  {
+   "text": "경민은 고상한 척하는 누나를 보고 웃음을 참았어요.",
+   "en": "Gyeongmin held back a laugh watching his sister act all refined.",
+   "ko": "경민은 고상한 척하는 누나를 보고 웃음을 참았어요.",
+   "blank": "고상한",
+   "src": "made"
+  },
+  {
+   "text": "모임 장소는 클래식 음악이 흐르는 고상한 식당이었어요.",
+   "en": "The reunion spot was an elegant restaurant with classical music playing.",
+   "ko": "모임 장소는 클래식 음악이 흐르는 고상한 식당이었어요.",
+   "blank": "고상한",
+   "src": "made"
+  }
+ ],
  "w|고생": [
   {
    "text": "민수는 동아리 발표를 준비하느라 고생을 많이 했어요.",
@@ -5193,6 +5241,22 @@
    "blank": "관계를"
   }
  ],
+ "w|관계없다": [
+  {
+   "text": "누나는 그 싸움이 자기와는 관계없다며 방으로 들어갔어요.",
+   "en": "His sister said the fight had nothing to do with her and went to her room.",
+   "ko": "누나는 그 싸움이 자기와는 관계없다며 방으로 들어갔어요.",
+   "blank": "관계없다며",
+   "src": "made"
+  },
+  {
+   "text": "다은은 나이와 관계없이 친구는 친구라고 생각해요.",
+   "en": "Daeun thinks friends are friends regardless of age.",
+   "ko": "다은은 나이와 관계없이 친구는 친구라고 생각해요.",
+   "blank": "관계없이",
+   "src": "made"
+  }
+ ],
  "w|관계하다": [
   {
    "text": "그 일과는 관계하지 않기로 했어.",
@@ -5957,6 +6021,22 @@
    "en": "I can see the sun through the clouds.",
    "ko": "구름 사이로 해 보여.",
    "blank": "구름"
+  }
+ ],
+ "w|구리다": [
+  {
+   "text": "형이 신고 다니는 운동화에서 구린 냄새가 나서 경민이 한마디 했어요.",
+   "en": "Gyeongmin said something because the sneakers his brother wore smelled bad.",
+   "ko": "형이 신고 다니는 운동화에서 구린 냄새가 나서 경민이 한마디 했어요.",
+   "blank": "구린",
+   "src": "made"
+  },
+  {
+   "text": "친구가 가져온 와인 맛이 좀 구리다고 다들 웃었어요.",
+   "en": "Everyone laughed that the wine a friend brought tasted kind of bad.",
+   "ko": "친구가 가져온 와인 맛이 좀 구리다고 다들 웃었어요.",
+   "blank": "구리다고",
+   "src": "made"
   }
  ],
  "w|구매": [
@@ -7647,6 +7727,22 @@
    "src": "made"
   }
  ],
+ "w|극복하다": [
+  {
+   "text": "경민 형제는 서로 대화하며 오래된 오해를 극복했어요.",
+   "en": "Gyeongmin and his brother overcame their old misunderstanding by talking it out.",
+   "ko": "경민 형제는 서로 대화하며 오래된 오해를 극복했어요.",
+   "blank": "극복했어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 친구들 덕분에 힘든 시기를 극복할 수 있었다고 말했어요.",
+   "en": "Daeun said she was able to get through a hard time thanks to her friends.",
+   "ko": "다은은 친구들 덕분에 힘든 시기를 극복할 수 있었다고 말했어요.",
+   "blank": "극복할",
+   "src": "made"
+  }
+ ],
  "w|극심하다": [
   {
    "text": "시험 전날 경민은 극심한 긴장 때문에 잠을 설쳤어요.",
@@ -8427,6 +8523,22 @@
    "blank": "기분이"
   }
  ],
+ "w|기뻐하다": [
+  {
+   "text": "경민이 먼저 손을 내밀자 동생이 무척 기뻐했어요.",
+   "en": "When Gyeongmin reached out first, his brother was really happy.",
+   "ko": "경민이 먼저 손을 내밀자 동생이 무척 기뻐했어요.",
+   "blank": "기뻐했어요",
+   "src": "made"
+  },
+  {
+   "text": "다은이 결혼 소식을 전하자 친구들이 함께 기뻐했어요.",
+   "en": "When Daeun shared the news that she was getting married, her friends were happy together.",
+   "ko": "다은이 결혼 소식을 전하자 친구들이 함께 기뻐했어요.",
+   "blank": "기뻐했어요",
+   "src": "made"
+  }
+ ],
  "w|기쁘다": [
   {
    "text": "소식 듣고 정말 기뻐.",
@@ -8827,6 +8939,22 @@
    "en": "I stretched to release the tension.",
    "ko": "긴장을 풀려고 스트레칭을 했어.",
    "blank": "긴장을"
+  }
+ ],
+ "w|긴장되다": [
+  {
+   "text": "경민은 형에게 먼저 사과하려니 괜히 긴장됐어요.",
+   "en": "Gyeongmin felt oddly nervous about apologizing to his brother first.",
+   "ko": "경민은 형에게 먼저 사과하려니 괜히 긴장됐어요.",
+   "blank": "긴장됐어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 십 년 만에 만나는 친구들이라 식당 앞에서 긴장됐어요.",
+   "en": "Daeun felt nervous in front of the restaurant since she was meeting friends she hadn't seen in ten years.",
+   "ko": "다은은 십 년 만에 만나는 친구들이라 식당 앞에서 긴장됐어요.",
+   "blank": "긴장됐어요",
+   "src": "made"
   }
  ],
  "w|긴장하다": [
@@ -11686,6 +11814,22 @@
    "en": "Daeun put a password on the file so customers' personal information wouldn't be exposed.",
    "ko": "다은은 고객 개인 정보가 노출되지 않게 파일에 암호를 걸었어요.",
    "blank": "노출되지",
+   "src": "made"
+  }
+ ],
+ "w|노출되다": [
+  {
+   "text": "경민의 일기가 동생에게 노출되면서 오해가 시작됐어요.",
+   "en": "The misunderstanding started when Gyeongmin's diary was exposed to his brother.",
+   "ko": "경민의 일기가 동생에게 노출되면서 오해가 시작됐어요.",
+   "blank": "노출되면서",
+   "src": "made"
+  },
+  {
+   "text": "친구는 햇볕에 오래 노출되는 일을 해서 얼굴이 많이 탔어요.",
+   "en": "The friend's face was very tanned because her job keeps her exposed to the sun for long hours.",
+   "ko": "친구는 햇볕에 오래 노출되는 일을 해서 얼굴이 많이 탔어요.",
+   "blank": "노출되는",
    "src": "made"
   }
  ],
@@ -16079,6 +16223,22 @@
    "blank": "두려움을"
   }
  ],
+ "w|두려워하다": [
+  {
+   "text": "경민의 동생은 형이 화낼까 봐 사실대로 말하기를 두려워했어요.",
+   "en": "Gyeongmin's younger brother was afraid to tell the truth in case Gyeongmin got angry.",
+   "ko": "경민의 동생은 형이 화낼까 봐 사실대로 말하기를 두려워했어요.",
+   "blank": "두려워했어요",
+   "src": "made"
+  },
+  {
+   "text": "민지는 오랜만의 모임에서 어색해질까 봐 두려워했어요.",
+   "en": "Minji was afraid things would be awkward at the reunion after so long.",
+   "ko": "민지는 오랜만의 모임에서 어색해질까 봐 두려워했어요.",
+   "blank": "두려워했어요",
+   "src": "made"
+  }
+ ],
  "w|두렵다": [
   {
    "text": "어두운 길이 좀 두려워.",
@@ -18553,6 +18713,22 @@
    "blank": "만일"
   }
  ],
+ "w|만족": [
+  {
+   "text": "오해가 풀리자 경민은 만족스러운 미소를 지었어요.",
+   "en": "When the misunderstanding was cleared up, Gyeongmin smiled with satisfaction.",
+   "ko": "오해가 풀리자 경민은 만족스러운 미소를 지었어요.",
+   "blank": "만족스러운",
+   "src": "made"
+  },
+  {
+   "text": "다은은 지금 하는 일에 꽤 만족하고 있다고 말했어요.",
+   "en": "Daeun said she's quite satisfied with the work she's doing now.",
+   "ko": "다은은 지금 하는 일에 꽤 만족하고 있다고 말했어요.",
+   "blank": "만족하고",
+   "src": "made"
+  }
+ ],
  "w|만족하다": [
   {
    "text": "결과가 마음에 들어서 만족해.",
@@ -18919,6 +19095,22 @@
    "en": "I cut the mango and put it on a plate.",
    "ko": "망고를 잘라서 접시에 담았어.",
    "blank": "망고를"
+  }
+ ],
+ "w|망설이다": [
+  {
+   "text": "경민은 동생 방문 앞에서 한참을 망설였어요.",
+   "en": "Gyeongmin hesitated for a long time in front of his sibling's door.",
+   "ko": "경민은 동생 방문 앞에서 한참을 망설였어요.",
+   "blank": "망설였어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 모임에 나갈까 말까 한참 망설였어요.",
+   "en": "Daeun hesitated for a long time about whether to go to the reunion.",
+   "ko": "다은은 모임에 나갈까 말까 한참 망설였어요.",
+   "blank": "망설였어요",
+   "src": "made"
   }
  ],
  "w|망치": [
@@ -21521,6 +21713,22 @@
    "src": "made"
   }
  ],
+ "w|물리치다": [
+  {
+   "text": "어릴 때 경민은 동네 형들을 물리치는 영웅 놀이를 동생과 자주 했어요.",
+   "en": "As a kid, Gyeongmin often played hero with his brother, fighting off the older neighborhood boys.",
+   "ko": "어릴 때 경민은 동네 형들을 물리치는 영웅 놀이를 동생과 자주 했어요.",
+   "blank": "물리치는",
+   "src": "made"
+  },
+  {
+   "text": "다은은 친구들과 학창 시절 반 대항 게임에서 상대 팀을 물리친 이야기를 했어요.",
+   "en": "Daeun talked with her friends about beating the other team in a class competition back in school.",
+   "ko": "다은은 친구들과 학창 시절 반 대항 게임에서 상대 팀을 물리친 이야기를 했어요.",
+   "blank": "물리친",
+   "src": "made"
+  }
+ ],
  "w|물방울": [
   {
    "text": "유리창에 물방울이 맺혔어.",
@@ -22103,6 +22311,22 @@
    "en": "Someone pushed my back.",
    "ko": "누가 등을 밀었어.",
    "blank": "밀었어"
+  }
+ ],
+ "w|밉다": [
+  {
+   "text": "경민은 말없이 자기 옷을 입고 나간 형이 너무 미웠어요.",
+   "en": "Gyeongmin really resented his brother for wearing his clothes out without asking.",
+   "ko": "경민은 말없이 자기 옷을 입고 나간 형이 너무 미웠어요.",
+   "blank": "미웠어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 연락을 끊었던 친구가 미웠지만 막상 만나니 반가웠어요.",
+   "en": "Daeun had resented the friend who cut off contact, but she was glad to see her in person.",
+   "ko": "다은은 연락을 끊었던 친구가 미웠지만 막상 만나니 반가웠어요.",
+   "blank": "미웠지만",
+   "src": "made"
   }
  ],
  "w|및": [
@@ -22869,6 +23093,22 @@
    "blank": "반창고가"
   }
  ],
+ "w|반하다": [
+  {
+   "text": "경민의 누나는 대학 동기에게 첫눈에 반했대요.",
+   "en": "Gyeongmin's sister apparently fell for a college classmate at first sight.",
+   "ko": "경민의 누나는 대학 동기에게 첫눈에 반했대요.",
+   "blank": "반했대요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 고등학생 때 반했던 선배 이야기가 나오자 얼굴이 빨개졌어요.",
+   "en": "Daeun blushed when the senior she'd had a crush on in high school came up.",
+   "ko": "다은은 고등학생 때 반했던 선배 이야기가 나오자 얼굴이 빨개졌어요.",
+   "blank": "반했던",
+   "src": "made"
+  }
+ ],
  "w|받다": [
   {
    "text": "선물 받았어요.",
@@ -23629,6 +23869,22 @@
    "en": "The napa cabbage looks fresh.",
    "ko": "배추가 싱싱해 보여.",
    "blank": "배추가"
+  }
+ ],
+ "w|배치하다": [
+  {
+   "text": "경민은 동생과 같이 쓰는 방의 책상을 다시 배치했어요.",
+   "en": "Gyeongmin rearranged the desks in the room he shares with his brother.",
+   "ko": "경민은 동생과 같이 쓰는 방의 책상을 다시 배치했어요.",
+   "blank": "배치했어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 친구들이 다 앉을 수 있게 식당 의자를 배치했어요.",
+   "en": "Daeun arranged the restaurant chairs so all her friends could sit.",
+   "ko": "다은은 친구들이 다 앉을 수 있게 식당 의자를 배치했어요.",
+   "blank": "배치했어요",
+   "src": "made"
   }
  ],
  "w|배터리": [
@@ -24533,6 +24789,22 @@
    "en": "Let's go to the roof to see the stars.",
    "ko": "별 보러 옥상 가자.",
    "blank": "별"
+  }
+ ],
+ "w|별나다": [
+  {
+   "text": "경민의 동생은 양말을 짝짝이로 신는 별난 습관이 있어요.",
+   "en": "Gyeongmin's younger brother has the odd habit of wearing mismatched socks.",
+   "ko": "경민의 동생은 양말을 짝짝이로 신는 별난 습관이 있어요.",
+   "blank": "별난",
+   "src": "made"
+  },
+  {
+   "text": "다은의 친구 중에는 고양이를 열 마리 키우는 별난 친구가 있어요.",
+   "en": "Among Daeun's friends, there's an eccentric one who keeps ten cats.",
+   "ko": "다은의 친구 중에는 고양이를 열 마리 키우는 별난 친구가 있어요.",
+   "blank": "별난",
+   "src": "made"
   }
  ],
  "w|별다르다": [
@@ -25658,6 +25930,22 @@
    "blank": "부상이"
   }
  ],
+ "w|부상당하다": [
+  {
+   "text": "경민의 동생은 축구를 하다가 부상당해서 한동안 깁스를 했어요.",
+   "en": "Gyeongmin's brother got injured playing soccer and wore a cast for a while.",
+   "ko": "경민의 동생은 축구를 하다가 부상당해서 한동안 깁스를 했어요.",
+   "blank": "부상당해서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 교통사고로 부상당했던 친구가 다 나았다는 소식에 기뻤어요.",
+   "en": "Daeun was glad to hear that her friend who'd been injured in a car accident had fully recovered.",
+   "ko": "다은은 교통사고로 부상당했던 친구가 다 나았다는 소식에 기뻤어요.",
+   "blank": "부상당했던",
+   "src": "made"
+  }
+ ],
  "w|부서": [
   {
    "text": "각 부서마다 하는 일을 분담하여 회사의 사무를 처리한다.",
@@ -26392,6 +26680,22 @@
    "blank": "불안한"
   }
  ],
+ "w|불쾌하다": [
+  {
+   "text": "경민은 형이 친구들 앞에서 자기를 놀려서 불쾌했어요.",
+   "en": "Gyeongmin was annoyed because his brother teased him in front of his friends.",
+   "ko": "경민은 형이 친구들 앞에서 자기를 놀려서 불쾌했어요.",
+   "blank": "불쾌했어요",
+   "src": "made"
+  },
+  {
+   "text": "옆 테이블 손님이 너무 시끄러워서 다은은 조금 불쾌했어요.",
+   "en": "Daeun was a bit annoyed because the customers at the next table were so loud.",
+   "ko": "옆 테이블 손님이 너무 시끄러워서 다은은 조금 불쾌했어요.",
+   "blank": "불쾌했어요",
+   "src": "made"
+  }
+ ],
  "w|불타다": [
   {
    "text": "낡은 창고가 불타.",
@@ -26418,6 +26722,22 @@
    "en": "Those shoes were uncomfortable.",
    "ko": "구두 신으니까 불편했어.",
    "blank": "불편했어"
+  }
+ ],
+ "w|불평": [
+  {
+   "text": "경민의 형은 설거지 순번에 대한 불평을 늘어놨어요.",
+   "en": "Gyeongmin's brother went on and on with complaints about the dish-washing rotation.",
+   "ko": "경민의 형은 설거지 순번에 대한 불평을 늘어놨어요.",
+   "blank": "불평을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 식당 음식에 대한 불평은 하지 않기로 했어요.",
+   "en": "Daeun decided not to make any complaints about the restaurant's food.",
+   "ko": "다은은 식당 음식에 대한 불평은 하지 않기로 했어요.",
+   "blank": "불평은",
+   "src": "made"
   }
  ],
  "w|불합격": [
@@ -27014,6 +27334,22 @@
    "en": "I need a visa.",
    "ko": "비자가 필요해.",
    "blank": "비자가"
+  }
+ ],
+ "w|비참하다": [
+  {
+   "text": "형제끼리 크게 싸운 날 경민은 혼자 방에 앉아 비참한 기분이 들었어요.",
+   "en": "The day the brothers had a big fight, Gyeongmin sat alone in his room feeling miserable.",
+   "ko": "형제끼리 크게 싸운 날 경민은 혼자 방에 앉아 비참한 기분이 들었어요.",
+   "blank": "비참한",
+   "src": "made"
+  },
+  {
+   "text": "다은은 취업에 실패하고 비참했던 시절을 웃으며 이야기했어요.",
+   "en": "Daeun laughed as she talked about the miserable days when she failed to get a job.",
+   "ko": "다은은 취업에 실패하고 비참했던 시절을 웃으며 이야기했어요.",
+   "blank": "비참했던",
+   "src": "made"
   }
  ],
  "w|비추다": [
@@ -33472,6 +33808,22 @@
    "blank": "슬쩍"
   }
  ],
+ "w|슬퍼하다": [
+  {
+   "text": "엄마는 형제가 서로 말도 안 하는 걸 보고 슬퍼하셨어요.",
+   "en": "Mom was saddened to see the brothers not even speaking to each other.",
+   "ko": "엄마는 형제가 서로 말도 안 하는 걸 보고 슬퍼하셨어요.",
+   "blank": "슬퍼하셨어요",
+   "src": "made"
+  },
+  {
+   "text": "친구들은 유학 간 지수가 오지 못한 걸 슬퍼했어요.",
+   "en": "The friends were sad that Jisu, who had gone abroad to study, couldn't come.",
+   "ko": "친구들은 유학 간 지수가 오지 못한 걸 슬퍼했어요.",
+   "blank": "슬퍼했어요",
+   "src": "made"
+  }
+ ],
  "w|슬프다": [
   {
    "text": "영화 끝나니까 슬퍼.",
@@ -34406,6 +34758,22 @@
    "blank": "신뢰를"
   }
  ],
+ "w|신뢰하다": [
+  {
+   "text": "경민은 누나를 신뢰했기 때문에 비밀을 털어놨어요.",
+   "en": "Gyeongmin told his older sister his secret because he trusted her.",
+   "ko": "경민은 누나를 신뢰했기 때문에 비밀을 털어놨어요.",
+   "blank": "신뢰했기",
+   "src": "made"
+  },
+  {
+   "text": "다은은 고등학교 친구들을 누구보다 신뢰해요.",
+   "en": "Daeun trusts her high school friends more than anyone.",
+   "ko": "다은은 고등학교 친구들을 누구보다 신뢰해요.",
+   "blank": "신뢰해요",
+   "src": "made"
+  }
+ ],
  "w|신문": [
   {
    "text": "신문에서 읽었어.",
@@ -35238,6 +35606,22 @@
    "blank": "심장"
   }
  ],
+ "w|심정": [
+  {
+   "text": "경민은 누나에게 서운했던 심정을 편지로 썼어요.",
+   "en": "Gyeongmin wrote a letter to his sister about how hurt he had felt.",
+   "ko": "경민은 누나에게 서운했던 심정을 편지로 썼어요.",
+   "blank": "심정을",
+   "src": "made"
+  },
+  {
+   "text": "친구들은 이혼한 민수의 심정을 조심스럽게 물었어요.",
+   "en": "The friends carefully asked how Minsu, who had gotten divorced, was feeling.",
+   "ko": "친구들은 이혼한 민수의 심정을 조심스럽게 물었어요.",
+   "blank": "심정을",
+   "src": "made"
+  }
+ ],
  "w|심지어": [
   {
    "text": "심지어 사과 한마디도 없었어.",
@@ -35606,6 +35990,22 @@
    "en": "I prepared, expecting questions to pour in.",
    "ko": "질문이 쏟아지다 싶어 준비를 했어.",
    "blank": "쏟아지다"
+  }
+ ],
+ "w|쐬다": [
+  {
+   "text": "경민은 머리를 식히려고 밖에 나가 바람을 쐬었어요.",
+   "en": "Gyeongmin went outside to get some fresh air and clear his head.",
+   "ko": "경민은 머리를 식히려고 밖에 나가 바람을 쐬었어요.",
+   "blank": "쐬었어요",
+   "src": "made"
+  },
+  {
+   "text": "식사 후 다은과 친구들은 강가에서 바람을 쐬었어요.",
+   "en": "After the meal, Daeun and her friends got some fresh air by the river.",
+   "ko": "식사 후 다은과 친구들은 강가에서 바람을 쐬었어요.",
+   "blank": "쐬었어요",
+   "src": "made"
   }
  ],
  "w|쑤시다": [
@@ -36322,6 +36722,22 @@
    "blank": "아빠랑"
   }
  ],
+ "w|아쉽다": [
+  {
+   "text": "경민은 동생 생일을 깜빡한 게 두고두고 아쉬웠어요.",
+   "en": "Gyeongmin kept regretting that he had forgotten his sibling's birthday.",
+   "ko": "경민은 동생 생일을 깜빡한 게 두고두고 아쉬웠어요.",
+   "blank": "아쉬웠어요",
+   "src": "made"
+  },
+  {
+   "text": "모임이 너무 일찍 끝나서 다은은 아쉬웠어요.",
+   "en": "Daeun was disappointed that the reunion ended so early.",
+   "ko": "모임이 너무 일찍 끝나서 다은은 아쉬웠어요.",
+   "blank": "아쉬웠어요",
+   "src": "made"
+  }
+ ],
  "w|아예": [
   {
    "text": "아예 안 갈래.",
@@ -36788,6 +37204,38 @@
    "en": "Mom gave me a tight hug.",
    "ko": "엄마가 나를 꼭 안아 줬어.",
    "blank": "안아"
+  }
+ ],
+ "w|안심": [
+  {
+   "text": "형이 화가 풀린 걸 보고 경민은 그제야 안심이 됐어요.",
+   "en": "Only when he saw his brother had calmed down did Gyeongmin feel at ease.",
+   "ko": "형이 화가 풀린 걸 보고 경민은 그제야 안심이 됐어요.",
+   "blank": "안심이",
+   "src": "made"
+  },
+  {
+   "text": "친구들의 따뜻한 말에 다은은 마음속 깊이 안심이 됐어요.",
+   "en": "Daeun felt deeply reassured by her friends' warm words.",
+   "ko": "친구들의 따뜻한 말에 다은은 마음속 깊이 안심이 됐어요.",
+   "blank": "안심이",
+   "src": "made"
+  }
+ ],
+ "w|안심하다": [
+  {
+   "text": "동생이 무사히 집에 도착했다는 문자를 받고 경민은 안심했어요.",
+   "en": "Gyeongmin was relieved after getting a text that his brother got home safely.",
+   "ko": "동생이 무사히 집에 도착했다는 문자를 받고 경민은 안심했어요.",
+   "blank": "안심했어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 친구들이 다들 잘 지낸다는 말에 안심했어요.",
+   "en": "Daeun was relieved to hear that all her friends were doing well.",
+   "ko": "다은은 친구들이 다들 잘 지낸다는 말에 안심했어요.",
+   "blank": "안심했어요",
+   "src": "made"
   }
  ],
  "w|안전": [
@@ -41550,6 +41998,22 @@
    "src": "made"
   }
  ],
+ "w|온전히": [
+  {
+   "text": "경민은 그제야 동생의 마음을 온전히 이해할 수 있었어요.",
+   "en": "Only then could Gyeongmin fully understand his brother's feelings.",
+   "ko": "경민은 그제야 동생의 마음을 온전히 이해할 수 있었어요.",
+   "blank": "온전히",
+   "src": "made"
+  },
+  {
+   "text": "다은은 그날 저녁만큼은 친구들에게 온전히 집중했어요.",
+   "en": "For that evening at least, Daeun focused fully on her friends.",
+   "ko": "다은은 그날 저녁만큼은 친구들에게 온전히 집중했어요.",
+   "blank": "온전히",
+   "src": "made"
+  }
+ ],
  "w|온통": [
   {
    "text": "그의 머릿속에는 온통 그 여자 생각뿐이었다.",
@@ -42356,6 +42820,22 @@
    "en": "I'm trying to cut back on greed a bit.",
    "ko": "욕심을 조금 줄여 보려고 해.",
    "blank": "욕심을"
+  }
+ ],
+ "w|욕하다": [
+  {
+   "text": "경민은 화가 나도 형을 욕하지는 않았어요.",
+   "en": "Even when he was angry, Gyeongmin didn't swear at his brother.",
+   "ko": "경민은 화가 나도 형을 욕하지는 않았어요.",
+   "blank": "욕하지는",
+   "src": "made"
+  },
+  {
+   "text": "친구들은 학창 시절 자기들을 괴롭히던 선생님을 욕하며 웃었어요.",
+   "en": "The friends laughed as they cursed the teacher who used to give them a hard time in school.",
+   "ko": "친구들은 학창 시절 자기들을 괴롭히던 선생님을 욕하며 웃었어요.",
+   "blank": "욕하며",
+   "src": "made"
   }
  ],
  "w|용감하다": [
@@ -43352,6 +43832,22 @@
    "en": "The whiskey aroma lingers heavily.",
    "ko": "위스키 향이 묵직하게 남아.",
    "blank": "위스키"
+  }
+ ],
+ "w|위안": [
+  {
+   "text": "경민은 힘들 때 누나가 해 준 말에서 큰 위안을 얻었어요.",
+   "en": "Gyeongmin found great comfort in what his sister said when he was struggling.",
+   "ko": "경민은 힘들 때 누나가 해 준 말에서 큰 위안을 얻었어요.",
+   "blank": "위안을",
+   "src": "made"
+  },
+  {
+   "text": "다은에게 친구들과의 수다는 큰 위안이 돼요.",
+   "en": "Chatting with her friends is a great comfort to Daeun.",
+   "ko": "다은에게 친구들과의 수다는 큰 위안이 돼요.",
+   "blank": "위안이",
+   "src": "made"
   }
  ],
  "w|위원": [
@@ -47030,6 +47526,22 @@
    "src": "made"
   }
  ],
+ "w|자부심": [
+  {
+   "text": "경민은 동생이 상을 받았을 때 형으로서 자부심을 느꼈어요.",
+   "en": "Gyeongmin felt proud as an older brother when his sibling won an award.",
+   "ko": "경민은 동생이 상을 받았을 때 형으로서 자부심을 느꼈어요.",
+   "blank": "자부심을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 간호사라는 직업에 큰 자부심을 갖고 있어요.",
+   "en": "Daeun takes great pride in her profession as a nurse.",
+   "ko": "다은은 간호사라는 직업에 큰 자부심을 갖고 있어요.",
+   "blank": "자부심을",
+   "src": "made"
+  }
+ ],
  "w|자산": [
   {
    "text": "극단의 가장 큰 자산은 오래 함께한 배우들이에요.",
@@ -47728,6 +48240,22 @@
    "en": "I tugged the sleeve to get their attention.",
    "ko": "소매를 잡아당겨서 주의를 끌었어.",
    "blank": "잡아당겨서"
+  }
+ ],
+ "w|잡아먹다": [
+  {
+   "text": "경민의 동생은 공룡이 사람을 잡아먹는 영화를 보고 밤새 무서워했어요.",
+   "en": "Gyeongmin's brother was scared all night after watching a movie where dinosaurs eat people.",
+   "ko": "경민의 동생은 공룡이 사람을 잡아먹는 영화를 보고 밤새 무서워했어요.",
+   "blank": "잡아먹는",
+   "src": "made"
+  },
+  {
+   "text": "친구는 상사가 자기를 잡아먹을 듯이 노려봤다며 하소연했어요.",
+   "en": "A friend complained that her boss glared at her as if he would eat her alive.",
+   "ko": "친구는 상사가 자기를 잡아먹을 듯이 노려봤다며 하소연했어요.",
+   "blank": "잡아먹을",
+   "src": "made"
   }
  ],
  "w|잡지": [
@@ -48964,6 +49492,22 @@
    "src": "made"
   }
  ],
+ "w|적응하다": [
+  {
+   "text": "경민은 형이 결혼해서 집을 떠난 생활에 아직 적응하지 못했어요.",
+   "en": "Gyeongmin still hasn't adjusted to life after his brother married and left home.",
+   "ko": "경민은 형이 결혼해서 집을 떠난 생활에 아직 적응하지 못했어요.",
+   "blank": "적응하지",
+   "src": "made"
+  },
+  {
+   "text": "외국에서 돌아온 친구는 한국 생활에 다시 적응하는 중이에요.",
+   "en": "The friend who came back from abroad is readjusting to life in Korea.",
+   "ko": "외국에서 돌아온 친구는 한국 생활에 다시 적응하는 중이에요.",
+   "blank": "적응하는",
+   "src": "made"
+  }
+ ],
  "w|적절하다": [
   {
    "text": "타이밍이 적절하다 보니 일이 순조로웠어.",
@@ -49932,6 +50476,22 @@
    "en": "We shared a meal and warmth.",
    "ko": "정을 나누며 밥을 먹었어.",
    "blank": "정을"
+  }
+ ],
+ "w|정교하다": [
+  {
+   "text": "경민은 동생이 정교하게 만든 모형 비행기를 실수로 부쉈어요.",
+   "en": "Gyeongmin accidentally broke the model airplane his brother had made so intricately.",
+   "ko": "경민은 동생이 정교하게 만든 모형 비행기를 실수로 부쉈어요.",
+   "blank": "정교하게",
+   "src": "made"
+  },
+  {
+   "text": "친구 하나가 손으로 직접 만든 정교한 반지를 보여 줬어요.",
+   "en": "One of the friends showed off an intricate ring she'd made by hand.",
+   "ko": "친구 하나가 손으로 직접 만든 정교한 반지를 보여 줬어요.",
+   "blank": "정교한",
+   "src": "made"
   }
  ],
  "w|정글": [
@@ -51188,6 +51748,22 @@
    "en": "A team with respect is strong.",
    "ko": "존중이 있는 팀이 강해.",
    "blank": "존중이"
+  }
+ ],
+ "w|존중하다": [
+  {
+   "text": "경민은 동생의 결정도 존중해야 한다는 걸 뒤늦게 깨달았어요.",
+   "en": "Gyeongmin belatedly realized he should respect his younger sister's decision too.",
+   "ko": "경민은 동생의 결정도 존중해야 한다는 걸 뒤늦게 깨달았어요.",
+   "blank": "존중해야",
+   "src": "made"
+  },
+  {
+   "text": "다은의 친구들은 서로의 선택을 존중해요.",
+   "en": "Daeun's friends respect each other's choices.",
+   "ko": "다은의 친구들은 서로의 선택을 존중해요.",
+   "blank": "존중해요",
+   "src": "made"
   }
  ],
  "w|졸다": [
@@ -52554,6 +53130,22 @@
    "blank": "지갑에"
   }
  ],
+ "w|지겹다": [
+  {
+   "text": "경민은 형의 똑같은 잔소리가 이제 지겨웠어요.",
+   "en": "Gyeongmin was now sick of his older brother's same old nagging.",
+   "ko": "경민은 형의 똑같은 잔소리가 이제 지겨웠어요.",
+   "blank": "지겨웠어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 반복되는 회사 생활이 지겹다고 친구들에게 털어놨어요.",
+   "en": "Daeun confided to her friends that she was tired of the repetitive office life.",
+   "ko": "다은은 반복되는 회사 생활이 지겹다고 친구들에게 털어놨어요.",
+   "blank": "지겹다고",
+   "src": "made"
+  }
+ ],
  "w|지경": [
   {
    "text": "숙제가 너무 많아서 동민은 잠잘 시간도 없을 지경이었어요.",
@@ -53827,6 +54419,22 @@
    "en": "I try to manage my jealousy.",
    "ko": "질투심을 다스리려고 해.",
    "blank": "질투심을"
+  }
+ ],
+ "w|질투하다": [
+  {
+   "text": "경민은 부모님이 동생만 칭찬하는 것 같아서 질투했어요.",
+   "en": "Gyeongmin was jealous because it seemed his parents only praised his younger brother.",
+   "ko": "경민은 부모님이 동생만 칭찬하는 것 같아서 질투했어요.",
+   "blank": "질투했어요",
+   "src": "made"
+  },
+  {
+   "text": "친구들은 학창 시절 다은이 반장을 질투했던 일을 놀렸어요.",
+   "en": "The friends teased Daeun about how she'd been jealous of the class president back in school.",
+   "ko": "친구들은 학창 시절 다은이 반장을 질투했던 일을 놀렸어요.",
+   "blank": "질투했던",
+   "src": "made"
   }
  ],
  "w|질환": [
@@ -58551,6 +59159,22 @@
    "src": "krdict"
   }
  ],
+ "w|터놓다": [
+  {
+   "text": "경민은 그날 밤 누나와 속마음을 터놓고 이야기했어요.",
+   "en": "That night Gyeongmin opened up and talked honestly with his sister.",
+   "ko": "경민은 그날 밤 누나와 속마음을 터놓고 이야기했어요.",
+   "blank": "터놓고",
+   "src": "made"
+  },
+  {
+   "text": "친구들은 새벽까지 서로의 고민을 터놓고 이야기했어요.",
+   "en": "The friends opened up about their worries and talked until dawn.",
+   "ko": "친구들은 새벽까지 서로의 고민을 터놓고 이야기했어요.",
+   "blank": "터놓고",
+   "src": "made"
+  }
+ ],
  "w|터뜨리다": [
   {
    "text": "폭죽을 크게 터뜨렸어.",
@@ -59202,6 +59826,22 @@
    "en": "Sohee ended up getting on casual terms with the college student who comes every day.",
    "ko": "소희는 매일 오는 대학생 손님과 어느새 말을 텄어요.",
    "blank": "텄어요",
+   "src": "made"
+  }
+ ],
+ "w|트라우마": [
+  {
+   "text": "경민의 동생은 어릴 때 개에게 물린 트라우마가 있어요.",
+   "en": "Gyeongmin's younger brother has trauma from being bitten by a dog as a kid.",
+   "ko": "경민의 동생은 어릴 때 개에게 물린 트라우마가 있어요.",
+   "blank": "트라우마가",
+   "src": "made"
+  },
+  {
+   "text": "다은은 친구에게 시험 실패의 트라우마를 이겨 낸 방법을 들었어요.",
+   "en": "Daeun heard from a friend how she got over the trauma of failing an exam.",
+   "ko": "다은은 친구에게 시험 실패의 트라우마를 이겨 낸 방법을 들었어요.",
+   "blank": "트라우마를",
    "src": "made"
   }
  ],

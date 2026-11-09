@@ -507,6 +507,22 @@
    "blank": "acidente"
   }
  ],
+ "w|ácido": [
+  {
+   "text": "O Gabriel derramou suco de limão na toalha, e o ácido manchou o tecido.",
+   "en": "Gabriel spilled lemon juice on the tablecloth, and the acid stained the fabric.",
+   "ko": "가브리엘이 식탁보에 레몬즙을 쏟아서 산 때문에 천에 얼룩이 졌어요.",
+   "blank": "ácido",
+   "src": "made"
+  },
+  {
+   "text": "A bateria inchada vazou um pouco de ácido na bancada da Luísa.",
+   "en": "The swollen battery leaked a little acid onto Luísa's workbench.",
+   "ko": "부푼 배터리에서 루이자의 작업대로 산이 조금 샜어요.",
+   "blank": "ácido",
+   "src": "made"
+  }
+ ],
  "w|acima": [
   {
    "text": "O ninho está acima da porta.",
@@ -1335,6 +1351,22 @@
    "ko": "그 사람 태도는 못 참겠어요.",
    "blank": "aguentar",
    "src": "tatoeba:1248864/Welton en:285232/CK"
+  }
+ ],
+ "w|águia": [
+  {
+   "text": "O bolo de casamento tinha uma águia de açúcar no topo, símbolo da família.",
+   "en": "The wedding cake had a sugar eagle on top, the family's symbol.",
+   "ko": "웨딩 케이크 꼭대기에는 가문의 상징인 설탕 독수리가 있었어요.",
+   "blank": "águia",
+   "src": "made"
+  },
+  {
+   "text": "A capinha do cliente tinha o desenho de uma águia dourada.",
+   "en": "The customer's phone case had a golden eagle design.",
+   "ko": "손님 휴대폰 케이스에는 금색 독수리 그림이 있었어요.",
+   "blank": "águia",
+   "src": "made"
   }
  ],
  "w|ah": [
@@ -3333,6 +3365,22 @@
    "ko": "서두를 필요 없어요.",
    "blank": "apressar",
    "src": "tatoeba:1120499/brauliobezerra en:411309/CK"
+  }
+ ],
+ "w|apropriar": [
+  {
+   "text": "A tia do Gabriel tentou se apropriar do arranjo de flores da mesa principal.",
+   "en": "Gabriel's aunt tried to take the flower arrangement from the main table for herself.",
+   "ko": "가브리엘의 이모는 주 테이블의 꽃꽂이를 챙겨 가려 했어요.",
+   "blank": "apropriar",
+   "src": "made"
+  },
+  {
+   "text": "Um técnico antigo tentou se apropriar dos clientes da Luísa.",
+   "en": "A former technician tried to take Luísa's customers for himself.",
+   "ko": "예전 기술자 한 명이 루이자의 손님들을 가로채려 했어요.",
+   "blank": "apropriar",
+   "src": "made"
   }
  ],
  "w|aprovar": [
@@ -5733,6 +5781,22 @@
    "blank": "base"
   }
  ],
+ "w|baseado": [
+  {
+   "text": "O discurso do Gabriel foi baseado nas cartas antigas dos noivos.",
+   "en": "Gabriel's speech was based on the couple's old letters.",
+   "ko": "가브리엘의 축사는 신랑 신부의 옛 편지를 바탕으로 했어요.",
+   "blank": "baseado",
+   "src": "made"
+  },
+  {
+   "text": "O preço da Luísa é baseado no tempo de trabalho e na peça.",
+   "en": "Luísa's price is based on the work time and the part.",
+   "ko": "루이자의 가격은 작업 시간과 부품값을 바탕으로 해요.",
+   "blank": "baseado",
+   "src": "made"
+  }
+ ],
  "w|basear": [
   {
    "text": "O filme é baseado numa história real.",
@@ -6173,6 +6237,22 @@
    "src": "tatoeba:7265020/carlosalberto en:5888165/mailohilohi"
   }
  ],
+ "w|bicho": [
+  {
+   "text": "O Gabriel ficou com medo de um bicho que caiu no copo dele.",
+   "en": "Gabriel got scared of a bug that fell into his glass.",
+   "ko": "가브리엘은 컵에 떨어진 벌레를 보고 겁을 먹었어요.",
+   "blank": "bicho",
+   "src": "made"
+  },
+  {
+   "text": "Um bicho pequeno estava morando dentro do carregador.",
+   "en": "A little bug was living inside the charger.",
+   "ko": "작은 벌레가 충전기 안에 살고 있었어요.",
+   "blank": "bicho",
+   "src": "made"
+  }
+ ],
  "w|bicicleta": [
   {
    "text": "Tire as suas mãos da minha bicicleta!",
@@ -6251,6 +6331,22 @@
    "ko": "표를 취소하고 싶어요.",
    "blank": "bilhete",
    "src": "tatoeba:3754189/marcosmilton en:3753818/tanay"
+  }
+ ],
+ "w|biológico": [
+  {
+   "text": "A madrinha só usou flores e pratos de material biológico na decoração.",
+   "en": "The matron of honor only used flowers and plates made of biodegradable material in the decoration.",
+   "ko": "들러리 대표는 장식에 꽃과 생분해성 소재 접시만 썼어요.",
+   "blank": "biológico",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa leva as baterias velhas para um ponto de descarte de lixo biológico e eletrônico.",
+   "en": "Luísa takes old batteries to a drop-off point for biological and electronic waste.",
+   "ko": "루이자는 다 쓴 배터리를 생물·전자 폐기물 수거함에 가져가요.",
+   "blank": "biológico",
+   "src": "made"
   }
  ],
  "w|biscoito": [
@@ -6662,6 +6758,22 @@
    "en": "Rita always keeps an eraser on her desk to rub out marks in the books.",
    "ko": "히타는 책에 남은 자국을 지우려고 책상에 늘 지우개를 둬요.",
    "blank": "borracha",
+   "src": "made"
+  }
+ ],
+ "w|bosque": [
+  {
+   "text": "As fotos dos noivos foram feitas num bosque perto da fazenda.",
+   "en": "The couple's photos were taken in a grove near the farm.",
+   "ko": "신랑 신부 사진은 농장 근처 숲에서 찍었어요.",
+   "blank": "bosque",
+   "src": "made"
+  },
+  {
+   "text": "Um cliente deixou cair o celular numa trilha do bosque.",
+   "en": "A customer dropped his phone on a trail in the woods.",
+   "ko": "한 손님이 숲길에서 휴대폰을 떨어뜨렸어요.",
+   "blank": "bosque",
    "src": "made"
   }
  ],
@@ -10627,6 +10739,22 @@
    "blank": "colega"
   }
  ],
+ "w|colegial": [
+  {
+   "text": "A noiva e o Gabriel se conheceram quando ainda eram colegiais.",
+   "en": "The bride and Gabriel met when they were still high school students.",
+   "ko": "신부와 가브리엘은 고등학생 때 처음 만났어요.",
+   "blank": "colegiais",
+   "src": "made"
+  },
+  {
+   "text": "Um colegial trouxe um celular que caiu na privada da escola.",
+   "en": "A high school student brought in a phone that fell into the school toilet.",
+   "ko": "한 고등학생이 학교 변기에 빠진 휴대폰을 가져왔어요.",
+   "blank": "colegial",
+   "src": "made"
+  }
+ ],
  "w|colégio": [
   {
    "text": "O que vocês odiavam escrever no colégio?",
@@ -10641,6 +10769,22 @@
    "ko": "학교에서 프랑스어를 배워요.",
    "blank": "colégio",
    "src": "tatoeba:2453761/alexmarcelo en:2451608/CK"
+  }
+ ],
+ "w|coletar": [
+  {
+   "text": "O Gabriel ficou encarregado de coletar os cartões dos convidados.",
+   "en": "Gabriel was in charge of collecting the guests' cards.",
+   "ko": "가브리엘은 하객들의 축하 카드를 모으는 일을 맡았어요.",
+   "blank": "coletar",
+   "src": "made"
+  },
+  {
+   "text": "A loja da Luísa ajuda a coletar celulares velhos para reciclagem.",
+   "en": "Luísa's shop helps collect old phones for recycling.",
+   "ko": "루이자의 가게는 재활용을 위해 오래된 휴대폰을 모으는 일을 도와요.",
+   "blank": "coletar",
+   "src": "made"
   }
  ],
  "w|colher": [
@@ -13455,6 +13599,22 @@
    "blank": "criar"
   }
  ],
+ "w|criativo": [
+  {
+   "text": "O Gabriel escreveu um convite criativo em forma de mapa.",
+   "en": "Gabriel wrote a creative invitation in the shape of a map.",
+   "ko": "가브리엘은 지도 모양의 창의적인 청첩장을 만들었어요.",
+   "blank": "criativo",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa encontrou um jeito criativo de prender o botão solto.",
+   "en": "Luísa found a creative way to attach the loose button.",
+   "ko": "루이자는 헐거운 버튼을 고정할 기발한 방법을 찾았어요.",
+   "blank": "criativo",
+   "src": "made"
+  }
+ ],
  "w|criatura": [
   {
    "text": "O dragão é uma criatura imaginária.",
@@ -14440,6 +14600,22 @@
    "en": "A heavy box fell on Inês's toe.",
    "ko": "무거운 상자가 이네스의 발가락에 떨어졌어요.",
    "blank": "dedo do pé",
+   "src": "made"
+  }
+ ],
+ "w|defeito": [
+  {
+   "text": "O vestido da noiva tinha um pequeno defeito na barra, mas ninguém notou.",
+   "en": "The bride's dress had a small flaw in the hem, but nobody noticed.",
+   "ko": "신부 드레스 밑단에 작은 흠이 있었지만 아무도 몰랐어요.",
+   "blank": "defeito",
+   "src": "made"
+  },
+  {
+   "text": "O celular novo veio com um defeito no alto-falante.",
+   "en": "The new phone came with a defect in the speaker.",
+   "ko": "새 휴대폰은 스피커에 결함이 있었어요.",
+   "blank": "defeito",
    "src": "made"
   }
  ],
@@ -15779,6 +15955,22 @@
    "en": "I hired a private detective.",
    "ko": "사설 탐정을 불렀어.",
    "blank": "detetive"
+  }
+ ],
+ "w|detonar": [
+  {
+   "text": "A banda prometeu detonar na pista de dança depois da meia-noite.",
+   "en": "The band promised to rock the dance floor after midnight.",
+   "ko": "밴드는 자정이 지나면 무대를 뒤집어 놓겠다고 했어요.",
+   "blank": "detonar",
+   "src": "made"
+  },
+  {
+   "text": "O cliente conseguiu detonar a bateria deixando o celular no sol do carro.",
+   "en": "The customer managed to wreck the battery by leaving the phone in the sun in the car.",
+   "ko": "손님은 휴대폰을 햇볕 드는 차 안에 둬서 배터리를 망가뜨렸어요.",
+   "blank": "detonar",
+   "src": "made"
   }
  ],
  "w|deus": [
@@ -17495,6 +17687,22 @@
    "ko": "저는 이 건물에서 일해요.",
    "blank": "edifício",
    "src": "tatoeba:4899559/bill en:2546127/CK"
+  }
+ ],
+ "w|editor": [
+  {
+   "text": "O noivo trabalha como editor numa revista de viagens.",
+   "en": "The groom works as an editor at a travel magazine.",
+   "ko": "신랑은 여행 잡지 편집자로 일해요.",
+   "blank": "editor",
+   "src": "made"
+  },
+  {
+   "text": "O editor de um jornal trouxe o celular com todas as entrevistas da semana.",
+   "en": "A newspaper editor brought in the phone with all of the week's interviews.",
+   "ko": "한 신문사 편집자가 그 주 인터뷰가 전부 든 휴대폰을 가져왔어요.",
+   "blank": "editor",
+   "src": "made"
   }
  ],
  "w|educação": [
@@ -19581,6 +19789,22 @@
    "src": "tatoeba:378227/brauliobezerra en:323554"
   }
  ],
+ "w|esfregar": [
+  {
+   "text": "O Gabriel teve que esfregar a mancha de vinho na camisa branca.",
+   "en": "Gabriel had to scrub the wine stain on his white shirt.",
+   "ko": "가브리엘은 흰 셔츠에 묻은 와인 얼룩을 문질러야 했어요.",
+   "blank": "esfregar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa mandou o cliente não esfregar a tela molhada na roupa.",
+   "en": "Luísa told the customer not to rub the wet screen on his clothes.",
+   "ko": "루이자는 손님에게 젖은 화면을 옷에 문지르지 말라고 했어요.",
+   "blank": "esfregar",
+   "src": "made"
+  }
+ ],
  "w|esmagar": [
   {
    "text": "Lucas lembrou do dia em que o Rafael sentou e esmagou o bolo de aniversário.",
@@ -20145,6 +20369,22 @@
    "blank": "estado"
   }
  ],
+ "w|estágio": [
+  {
+   "text": "O Gabriel conheceu a noiva durante o estágio num escritório de advocacia.",
+   "en": "Gabriel met the bride during his internship at a law firm.",
+   "ko": "가브리엘은 법률 사무소 인턴십 때 신부를 만났어요.",
+   "blank": "estágio",
+   "src": "made"
+  },
+  {
+   "text": "Uma estudante faz estágio na loja da Luísa às tardes.",
+   "en": "A student does an internship at Luísa's shop in the afternoons.",
+   "ko": "한 학생이 오후마다 루이자의 가게에서 실습해요.",
+   "blank": "estágio",
+   "src": "made"
+  }
+ ],
  "w|estante": [
   {
    "text": "O Gabriel arrumou os jogos de tabuleiro na estante da sala.",
@@ -20219,6 +20459,22 @@
    "en": "I prefer this one.",
    "ko": "이게 더 좋아.",
    "blank": "este"
+  }
+ ],
+ "w|estelar": [
+  {
+   "text": "Os noivos dançaram sob um teto pintado com um céu estelar.",
+   "en": "The couple danced under a ceiling painted with a starry sky.",
+   "ko": "신랑 신부는 별이 가득한 하늘이 그려진 천장 아래서 춤을 췄어요.",
+   "blank": "estelar",
+   "src": "made"
+  },
+  {
+   "text": "O cliente tinha um papel de parede estelar com galáxias e planetas.",
+   "en": "The customer had a starry wallpaper with galaxies and planets.",
+   "ko": "손님의 배경 화면은 은하와 행성이 가득한 별 그림이었어요.",
+   "blank": "estelar",
+   "src": "made"
   }
  ],
  "w|estilo": [
@@ -21449,6 +21705,22 @@
    "en": "We have to speak plainly.",
    "ko": "솔직히 말해야 해.",
    "blank": "falar"
+  }
+ ],
+ "w|falecido": [
+  {
+   "text": "A noiva colocou uma foto do pai falecido no altar.",
+   "en": "The bride put a photo of her late father on the altar.",
+   "ko": "신부는 돌아가신 아버지의 사진을 제단에 올려 두었어요.",
+   "blank": "falecido",
+   "src": "made"
+  },
+  {
+   "text": "Uma senhora queria recuperar as mensagens de voz do marido falecido.",
+   "en": "An old lady wanted to recover her late husband's voice messages.",
+   "ko": "한 할머니는 돌아가신 남편의 음성 메시지를 되살리고 싶어 했어요.",
+   "blank": "falecido",
+   "src": "made"
   }
  ],
  "w|falhar": [
@@ -22949,6 +23221,22 @@
    "src": "made"
   }
  ],
+ "w|formiga": [
+  {
+   "text": "Uma fila de formigas atacou o bolo antes da festa de casamento começar.",
+   "en": "A line of ants attacked the cake before the wedding party started.",
+   "ko": "결혼 파티가 시작되기도 전에 개미 떼가 케이크를 덮쳤어요.",
+   "blank": "formigas",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa achou uma formiga andando dentro da tela de um celular.",
+   "en": "Luísa found an ant walking inside a phone screen.",
+   "ko": "루이자는 휴대폰 화면 안에서 기어 다니는 개미를 발견했어요.",
+   "blank": "formiga",
+   "src": "made"
+  }
+ ],
  "w|fornecer": [
   {
    "text": "A prefeitura precisa fornecer uniformes para os agentes de saúde.",
@@ -23431,6 +23719,22 @@
    "blank": "fugir"
   }
  ],
+ "w|fugitivo": [
+  {
+   "text": "O filme favorito do noivo é sobre um fugitivo que atravessa o país de trem.",
+   "en": "The groom's favorite movie is about a fugitive who crosses the country by train.",
+   "ko": "신랑이 가장 좋아하는 영화는 기차로 나라를 가로지르는 도망자 이야기예요.",
+   "blank": "fugitivo",
+   "src": "made"
+  },
+  {
+   "text": "O jornal contou que a polícia achou um fugitivo pelo sinal do celular dele.",
+   "en": "The paper reported that police found a fugitive through his phone signal.",
+   "ko": "신문에 따르면 경찰은 휴대폰 신호로 도망자를 찾아냈대요.",
+   "blank": "fugitivo",
+   "src": "made"
+  }
+ ],
  "w|fumaça": [
   {
    "text": "Eu senti o cheiro de fumaça no elevador.",
@@ -23583,6 +23887,22 @@
    "en": "We'll see each other down the road.",
    "ko": "나중에 또 보자.",
    "blank": "futuro"
+  }
+ ],
+ "w|gabar": [
+  {
+   "text": "O padrinho adora se gabar de ter apresentado os noivos.",
+   "en": "The best man loves to brag about having introduced the couple.",
+   "ko": "들러리 대표는 신랑 신부를 소개해 준 걸 자랑하길 좋아해요.",
+   "blank": "gabar",
+   "src": "made"
+  },
+  {
+   "text": "O vizinho da loja vive se gabando do celular caro, mas sempre traz para consertar.",
+   "en": "The shop's neighbor is always bragging about his expensive phone, but always brings it in for repair.",
+   "ko": "가게 이웃은 비싼 휴대폰을 늘 자랑하면서도 맨날 고치러 가져와요.",
+   "blank": "gabando",
+   "src": "made"
   }
  ],
  "w|gabinete": [
@@ -23941,6 +24261,22 @@
    "ko": "제가 방아쇠를 당겼어요.",
    "blank": "gatilho",
    "src": "tatoeba:5497320/bill en:3819092/CK"
+  }
+ ],
+ "w|gatinho": [
+  {
+   "text": "Um gatinho entrou na igreja e deitou embaixo do banco do Gabriel.",
+   "en": "A kitten came into the church and lay down under Gabriel's pew.",
+   "ko": "새끼 고양이가 성당에 들어와 가브리엘의 의자 밑에 누웠어요.",
+   "blank": "gatinho",
+   "src": "made"
+  },
+  {
+   "text": "A cliente chorou porque todas as fotos do gatinho dela estavam no celular quebrado.",
+   "en": "The customer cried because all the photos of her kitten were on the broken phone.",
+   "ko": "손님은 새끼 고양이 사진이 전부 고장 난 휴대폰에 있어서 울었어요.",
+   "blank": "gatinho",
+   "src": "made"
   }
  ],
  "w|gato": [
@@ -24953,6 +25289,22 @@
    "blank": "guardar"
   }
  ],
+ "w|guardião": [
+  {
+   "text": "O Gabriel ficou como guardião das alianças até a hora da troca.",
+   "en": "Gabriel was the keeper of the rings until it was time to exchange them.",
+   "ko": "가브리엘은 반지 교환 순서까지 반지를 지키는 역할을 맡았어요.",
+   "blank": "guardião",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa se vê como uma guardiã dos dados dos clientes.",
+   "en": "Luísa sees herself as a guardian of her customers' data.",
+   "ko": "루이자는 자신을 고객 데이터의 수호자라고 생각해요.",
+   "blank": "guardiã",
+   "src": "made"
+  }
+ ],
  "w|guerra": [
   {
    "text": "A guerra durou anos.",
@@ -25075,6 +25427,22 @@
    "ko": "헬리콥터 한 대가 우리 위를 빙빙 돌았어요.",
    "blank": "helicóptero",
    "src": "tatoeba:3453834/piterkeo en:33897/CM"
+  }
+ ],
+ "w|herdeiro": [
+  {
+   "text": "O noivo é o único herdeiro da fazenda onde aconteceu a festa.",
+   "en": "The groom is the only heir to the farm where the party took place.",
+   "ko": "신랑은 파티가 열린 농장의 유일한 상속자예요.",
+   "blank": "herdeiro",
+   "src": "made"
+  },
+  {
+   "text": "O filho da Luísa vai ser o herdeiro da loja, mas prefere jogar videogame.",
+   "en": "Luísa's son will be the heir to the shop, but he prefers playing video games.",
+   "ko": "루이자의 아들이 가게를 물려받을 테지만 그는 게임을 더 좋아해요.",
+   "blank": "herdeiro",
+   "src": "made"
   }
  ],
  "w|herói": [
@@ -26085,6 +26453,22 @@
    "src": "tatoeba:5864782/ajdavidl en:3396434/CK"
   }
  ],
+ "w|incapaz": [
+  {
+   "text": "Emocionado, o Gabriel foi incapaz de terminar o discurso.",
+   "en": "Moved, Gabriel was unable to finish his speech.",
+   "ko": "감정이 북받친 가브리엘은 축사를 끝내지 못했어요.",
+   "blank": "incapaz",
+   "src": "made"
+  },
+  {
+   "text": "Sem a peça original, a Luísa foi incapaz de consertar o aparelho.",
+   "en": "Without the original part, Luísa was unable to fix the device.",
+   "ko": "정품 부품이 없어서 루이자는 기기를 고칠 수 없었어요.",
+   "blank": "incapaz",
+   "src": "made"
+  }
+ ],
  "w|incêndio": [
   {
    "text": "Nós não sabemos o que causou o incêndio.",
@@ -26319,6 +26703,22 @@
    "src": "tatoeba:2039676/MarlonX19 en:454473/FeuDRenais"
   }
  ],
+ "w|inesperado": [
+  {
+   "text": "A chuva inesperada obrigou todo mundo a correr para dentro do salão.",
+   "en": "The unexpected rain forced everyone to run into the hall.",
+   "ko": "갑작스러운 비에 모두 연회장 안으로 뛰어 들어가야 했어요.",
+   "blank": "inesperada",
+   "src": "made"
+  },
+  {
+   "text": "Uma visita inesperada da fiscalização deixou a Luísa nervosa.",
+   "en": "An unexpected inspection visit made Luísa nervous.",
+   "ko": "예고 없는 단속 방문에 루이자는 긴장했어요.",
+   "blank": "inesperada",
+   "src": "made"
+  }
+ ],
  "w|infância": [
   {
    "text": "Nós nos conhecemos desde a infância.",
@@ -26455,6 +26855,22 @@
    "en": "The information was wrong.",
    "ko": "정보가 틀렸어.",
    "blank": "informação"
+  }
+ ],
+ "w|informante": [
+  {
+   "text": "O tio do Gabriel contou que foi informante da polícia num caso antigo, e ninguém acreditou.",
+   "en": "Gabriel's uncle said he was a police informant in an old case, and nobody believed him.",
+   "ko": "가브리엘의 삼촌은 옛날 사건에서 경찰 정보원이었다고 했지만 아무도 안 믿었어요.",
+   "blank": "informante",
+   "src": "made"
+  },
+  {
+   "text": "Na série que a Luísa vê na loja, um informante esconde provas num celular velho.",
+   "en": "In the series Luísa watches at the shop, an informant hides evidence in an old phone.",
+   "ko": "루이자가 가게에서 보는 드라마에서 정보원이 오래된 휴대폰에 증거를 숨겨요.",
+   "blank": "informante",
+   "src": "made"
   }
  ],
  "w|informar": [
@@ -26783,6 +27199,22 @@
    "ko": "저는 악기를 하나도 못 다뤄요.",
    "blank": "instrumento",
    "src": "tatoeba:5073515/bill en:5070039/jhomel"
+  }
+ ],
+ "w|insultar": [
+  {
+   "text": "O Gabriel pediu ao primo que não fosse insultar o garçom de novo.",
+   "en": "Gabriel asked his cousin not to go insulting the waiter again.",
+   "ko": "가브리엘은 사촌에게 또 웨이터를 모욕하지 말라고 했어요.",
+   "blank": "insultar",
+   "src": "made"
+  },
+  {
+   "text": "O cliente começou a insultar a Luísa por causa do preço do conserto.",
+   "en": "The customer started insulting Luísa over the price of the repair.",
+   "ko": "손님이 수리비 때문에 루이자에게 욕을 하기 시작했어요.",
+   "blank": "insultar",
+   "src": "made"
   }
  ],
  "w|inteiro": [
@@ -30325,6 +30757,22 @@
    "blank": "manhã"
   }
  ],
+ "w|manipular": [
+  {
+   "text": "O fotógrafo sabe manipular a luz para todo mundo sair bonito.",
+   "en": "The photographer knows how to manipulate the light so everyone looks good.",
+   "ko": "사진작가는 모두가 예쁘게 나오도록 빛을 다룰 줄 알아요.",
+   "blank": "manipular",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa usa uma pinça bem fina para manipular as peças pequenas.",
+   "en": "Luísa uses very fine tweezers to handle the small parts.",
+   "ko": "루이자는 작은 부품을 다루려고 아주 가는 핀셋을 써요.",
+   "blank": "manipular",
+   "src": "made"
+  }
+ ],
  "w|mano": [
   {
    "text": "O colega da mesa ao lado chama todo mundo de mano, até o Rafael.",
@@ -31315,6 +31763,22 @@
    "blank": "Menos"
   }
  ],
+ "w|mensageiro": [
+  {
+   "text": "Um mensageiro chegou com um telegrama do avô que mora longe.",
+   "en": "A messenger arrived with a telegram from the grandfather who lives far away.",
+   "ko": "멀리 사는 할아버지의 전보를 든 전령이 도착했어요.",
+   "blank": "mensageiro",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa mandou um mensageiro de moto levar o celular consertado.",
+   "en": "Luísa sent a motorcycle courier to deliver the repaired phone.",
+   "ko": "루이자는 오토바이 배달원을 보내 고친 휴대폰을 전해 줬어요.",
+   "blank": "mensageiro",
+   "src": "made"
+  }
+ ],
  "w|mensagem": [
   {
    "text": "Chegou uma mensagem sua.",
@@ -31704,6 +32168,22 @@
    "en": "At lunchtime, the line for the microwave wraps around the kitchenette.",
    "ko": "점심시간이면 전자레인지 앞 줄이 탕비실을 한 바퀴 돌아요.",
    "blank": "micro-ondas",
+   "src": "made"
+  }
+ ],
+ "w|microfone": [
+  {
+   "text": "O microfone falhou bem quando o Gabriel começou a falar.",
+   "en": "The microphone cut out right when Gabriel started speaking.",
+   "ko": "가브리엘이 말을 시작하자마자 마이크가 먹통이 됐어요.",
+   "blank": "microfone",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa trocou o microfone do celular de um cantor de bar.",
+   "en": "Luísa replaced the microphone in a bar singer's phone.",
+   "ko": "루이자는 술집 가수의 휴대폰 마이크를 갈아 줬어요.",
+   "blank": "microfone",
    "src": "made"
   }
  ],
@@ -35185,6 +35665,22 @@
    "src": "tatoeba:8096194/iT4LL en:7734062/CK"
   }
  ],
+ "w|otário": [
+  {
+   "text": "O Gabriel se sentiu um otário quando viu que pagou o dobro pelo terno.",
+   "en": "Gabriel felt like a sucker when he saw he'd paid double for the suit.",
+   "ko": "가브리엘은 양복값을 두 배로 낸 걸 알고 호구가 된 기분이었어요.",
+   "blank": "otário",
+   "src": "made"
+  },
+  {
+   "text": "O cliente se sentiu um otário depois de comprar uma tela falsa pela internet.",
+   "en": "The customer felt like a sucker after buying a fake screen online.",
+   "ko": "손님은 인터넷에서 가짜 화면을 사고 호구가 된 기분이었어요.",
+   "blank": "otário",
+   "src": "made"
+  }
+ ],
  "w|ótimo": [
   {
    "text": "O almoço ficou ótimo.",
@@ -38137,6 +38633,22 @@
    "src": "made"
   }
  ],
+ "w|poeta": [
+  {
+   "text": "Um poeta amigo dos noivos leu versos durante o jantar.",
+   "en": "A poet friend of the couple read verses during dinner.",
+   "ko": "신랑 신부의 친구인 시인이 저녁 식사 중에 시를 낭독했어요.",
+   "blank": "poeta",
+   "src": "made"
+  },
+  {
+   "text": "Um poeta perdeu todos os poemas quando o celular dele apagou.",
+   "en": "A poet lost all his poems when his phone died.",
+   "ko": "한 시인은 휴대폰이 꺼지면서 시를 전부 잃었어요.",
+   "blank": "poeta",
+   "src": "made"
+  }
+ ],
  "w|pois": [
   {
    "text": "Pois é, eu avisei.",
@@ -40449,6 +40961,22 @@
    "blank": "próximo"
   }
  ],
+ "w|psicopata": [
+  {
+   "text": "Na mesa do Gabriel, todo mundo comentava um filme de suspense sobre um psicopata.",
+   "en": "At Gabriel's table, everyone was talking about a thriller about a psychopath.",
+   "ko": "가브리엘의 테이블에서는 다들 사이코패스가 나오는 스릴러 영화 이야기를 했어요.",
+   "blank": "psicopata",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa viu na tela de um cliente um filme sobre um psicopata que hackeia celulares.",
+   "en": "On a customer's screen, Luísa saw a movie about a psychopath who hacks phones.",
+   "ko": "루이자는 손님 화면에서 휴대폰을 해킹하는 사이코패스 영화를 봤어요.",
+   "blank": "psicopata",
+   "src": "made"
+  }
+ ],
  "w|psiquiatra": [
   {
    "text": "A dona do cachorro brincou que ele precisava de um psiquiatra, e o Rafael riu.",
@@ -42605,6 +43133,22 @@
    "src": "tatoeba:1230547/alexmarcelo en:1230545/alec"
   }
  ],
+ "w|remoto": [
+  {
+   "text": "O casamento foi num sítio remoto, sem sinal de celular.",
+   "en": "The wedding was at a remote country place with no cell signal.",
+   "ko": "결혼식은 휴대폰이 안 터지는 외딴 시골집에서 열렸어요.",
+   "blank": "remoto",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa às vezes faz suporte remoto pelo computador.",
+   "en": "Luísa sometimes does remote support from her computer.",
+   "ko": "루이자는 가끔 컴퓨터로 원격 지원을 해요.",
+   "blank": "remoto",
+   "src": "made"
+  }
+ ],
  "w|remover": [
   {
    "text": "Depois da peça, o Pedro leva meia hora para remover a maquiagem.",
@@ -42838,6 +43382,22 @@
    "en": "Inês went to work with a cold and wore a mask all day.",
    "ko": "이네스는 감기에 걸린 채 출근해서 하루 종일 마스크를 썼어요.",
    "blank": "resfriado",
+   "src": "made"
+  }
+ ],
+ "w|resgatar": [
+  {
+   "text": "O Gabriel teve que resgatar o buquê que caiu na piscina.",
+   "en": "Gabriel had to rescue the bouquet that fell into the pool.",
+   "ko": "가브리엘은 수영장에 빠진 부케를 건져 내야 했어요.",
+   "blank": "resgatar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa conseguiu resgatar as fotos de um celular que caiu no mar.",
+   "en": "Luísa managed to recover the photos from a phone that fell into the sea.",
+   "ko": "루이자는 바다에 빠진 휴대폰에서 사진을 살려 냈어요.",
+   "blank": "resgatar",
    "src": "made"
   }
  ],
@@ -45371,6 +45931,22 @@
    "blank": "servir"
   }
  ],
+ "w|servo": [
+  {
+   "text": "No teatro do casamento, o primo do Gabriel fez o papel de um servo do rei.",
+   "en": "In the wedding skit, Gabriel's cousin played a servant of the king.",
+   "ko": "결혼식 촌극에서 가브리엘의 사촌은 왕의 하인 역을 맡았어요.",
+   "blank": "servo",
+   "src": "made"
+  },
+  {
+   "text": "O cliente tratava a Luísa como se ela fosse sua serva, e ela pediu respeito.",
+   "en": "The customer treated Luísa as if she were his servant, and she asked for respect.",
+   "ko": "손님이 루이자를 하인처럼 대하자 그녀는 존중해 달라고 했어요.",
+   "blank": "serva",
+   "src": "made"
+  }
+ ],
  "w|sessão": [
   {
    "text": "Você responderá estas perguntas em uma sessão fechada?",
@@ -47245,6 +47821,22 @@
    "en": "They released the suspect yesterday.",
    "ko": "어제 용의자를 풀어 줬어.",
    "blank": "suspeito"
+  }
+ ],
+ "w|suspenso": [
+  {
+   "text": "Os noivos entraram sob um lustre suspenso cheio de velas.",
+   "en": "The couple entered under a hanging chandelier full of candles.",
+   "ko": "신랑 신부는 촛불이 가득한 매달린 샹들리에 아래로 입장했어요.",
+   "blank": "suspenso",
+   "src": "made"
+  },
+  {
+   "text": "A conta do cliente estava com o serviço suspenso por falta de pagamento.",
+   "en": "The customer's account had its service suspended for nonpayment.",
+   "ko": "손님 계정은 요금 미납으로 서비스가 정지돼 있었어요.",
+   "blank": "suspenso",
+   "src": "made"
   }
  ],
  "w|sussurrar": [
@@ -49511,6 +50103,22 @@
    "src": "made"
   }
  ],
+ "w|transportar": [
+  {
+   "text": "Uma van vai transportar os convidados do hotel até a fazenda.",
+   "en": "A van will transport the guests from the hotel to the farm.",
+   "ko": "승합차가 하객들을 호텔에서 농장까지 실어 나를 거예요.",
+   "blank": "transportar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa usa uma caixa acolchoada para transportar as telas novas.",
+   "en": "Luísa uses a padded box to transport the new screens.",
+   "ko": "루이자는 새 화면을 옮길 때 완충 상자를 써요.",
+   "blank": "transportar",
+   "src": "made"
+  }
+ ],
  "w|transporte": [
   {
    "text": "Por que meios de transporte tu chegaste aqui?",
@@ -49988,6 +50596,22 @@
    "en": "Here comes the whole gang for dinner!",
    "ko": "저녁 먹으러 다들 우르르 온다!",
    "blank": "tropa",
+   "src": "made"
+  }
+ ],
+ "w|trovão": [
+  {
+   "text": "No meio da cerimônia, um trovão fez todos os convidados pularem.",
+   "en": "In the middle of the ceremony, a clap of thunder made all the guests jump.",
+   "ko": "예식 도중 천둥소리에 하객들이 모두 펄쩍 뛰었어요.",
+   "blank": "trovão",
+   "src": "made"
+  },
+  {
+   "text": "Um raio caiu perto da loja, e o trovão assustou a Luísa.",
+   "en": "Lightning struck near the shop, and the thunder startled Luísa.",
+   "ko": "가게 근처에 벼락이 떨어져서 천둥소리에 루이자가 놀랐어요.",
+   "blank": "trovão",
    "src": "made"
   }
  ],
@@ -51279,6 +51903,22 @@
    "en": "You can wear this shirt.",
    "ko": "이 셔츠 입어도 돼.",
    "blank": "vestir"
+  }
+ ],
+ "w|veterano": [
+  {
+   "text": "O avô da noiva, um veterano da marinha, fez o primeiro brinde.",
+   "en": "The bride's grandfather, a navy veteran, made the first toast.",
+   "ko": "해군 출신 노병인 신부의 할아버지가 첫 건배를 했어요.",
+   "blank": "veterano",
+   "src": "made"
+  },
+  {
+   "text": "Um veterano do bairro ensinou a Luísa a soldar quando ela era jovem.",
+   "en": "A veteran from the neighborhood taught Luísa to solder when she was young.",
+   "ko": "동네 베테랑이 젊은 루이자에게 납땜을 가르쳐 줬어요.",
+   "blank": "veterano",
+   "src": "made"
   }
  ],
  "w|vez": [

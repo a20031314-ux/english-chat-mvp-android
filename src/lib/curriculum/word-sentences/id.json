@@ -2079,6 +2079,22 @@
    "blank": "ban"
   }
  ],
+ "w|bandar": [
+  {
+   "text": "Fajar membaca berita bahwa polisi menangkap bandar narkoba yang memakai jasa kurir.",
+   "en": "Fajar read news that the police caught a drug dealer who used courier services.",
+   "ko": "파자르는 경찰이 택배를 이용한 마약상을 잡았다는 기사를 읽었어요.",
+   "blank": "bandar",
+   "src": "made"
+  },
+  {
+   "text": "Guru bilang dulu kota itu adalah bandar dagang rempah yang ramai.",
+   "en": "The teacher said that the city used to be a busy spice-trading port.",
+   "ko": "선생님은 그 도시가 예전에 향신료 무역으로 붐비던 항구였다고 했어요.",
+   "blank": "bandar",
+   "src": "made"
+  }
+ ],
  "w|bandara": [
   {
    "text": "Kami tiba di bandara pagi-pagi.",
@@ -4007,6 +4023,22 @@
    "blank": "bergerak"
   }
  ],
+ "w|bergeser": [
+  {
+   "text": "Jadwal pengiriman paket Fajar bergeser dua hari karena libur nasional.",
+   "en": "Fajar's delivery schedule shifted two days because of a national holiday.",
+   "ko": "공휴일 때문에 파자르의 택배 배송 일정이 이틀 밀렸어요.",
+   "blank": "bergeser",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bergeser sedikit supaya teman di sebelahnya bisa memakai kompor.",
+   "en": "Lestari shifted over a little so the friend next to her could use the stove.",
+   "ko": "레스타리는 옆 친구가 가스레인지를 쓸 수 있게 조금 비켜섰어요.",
+   "blank": "bergeser",
+   "src": "made"
+  }
+ ],
  "w|bergoyang": [
   {
    "text": "Rudi ingat mereka bergoyang mengikuti lagu dangdut di pesta pernikahan kakak Bayu.",
@@ -4751,6 +4783,22 @@
    "en": "That problem continued without a clear solution.",
    "ko": "그 문제는 분명한 해결책 없이 계속됐어.",
    "blank": "berlanjut"
+  }
+ ],
+ "w|berlapis": [
+  {
+   "text": "Paket kaca itu dibungkus plastik gelembung berlapis supaya tidak pecah.",
+   "en": "The glass parcel was wrapped in layered bubble wrap so it wouldn't break.",
+   "ko": "유리 택배는 깨지지 않게 뽁뽁이로 여러 겹 싸여 있었어요.",
+   "blank": "berlapis",
+   "src": "made"
+  },
+  {
+   "text": "Hari ini Lestari belajar membuat kue lapis berlapis sembilan.",
+   "en": "Today Lestari is learning to make a nine-layer layered cake.",
+   "ko": "오늘 레스타리는 아홉 겹짜리 레이어 케이크 만드는 법을 배워요.",
+   "blank": "berlapis",
+   "src": "made"
   }
  ],
  "w|berlari": [
@@ -6623,6 +6671,22 @@
    "blank": "bisa"
   }
  ],
+ "w|bisbol": [
+  {
+   "text": "Fajar memesan sarung tangan bisbol untuk keponakannya yang tinggal di luar negeri.",
+   "en": "Fajar ordered a baseball glove for his nephew who lives abroad.",
+   "ko": "파자르는 외국에 사는 조카에게 야구 글러브를 주문해 줬어요.",
+   "blank": "bisbol",
+   "src": "made"
+  },
+  {
+   "text": "Kelas hari ini membuat hot dog dan jagung bakar seperti di stadion bisbol.",
+   "en": "Today's class made hot dogs and grilled corn like at a baseball stadium.",
+   "ko": "오늘 수업에서는 야구장처럼 핫도그와 구운 옥수수를 만들었어요.",
+   "blank": "bisbol",
+   "src": "made"
+  }
+ ],
  "w|bisnis": [
   {
    "text": "Bisnis ini sedang naik.",
@@ -7325,6 +7389,22 @@
    "en": "A rotten smell came from the trash.",
    "ko": "쓰레기통에서 썩은 냄새가 났어.",
    "blank": "busuk"
+  }
+ ],
+ "w|busur": [
+  {
+   "text": "Untuk hobi memanah, Fajar membeli busur kayu dari penjual di Bandung.",
+   "en": "For his archery hobby, Fajar bought a wooden bow from a seller in Bandung.",
+   "ko": "파자르는 활쏘기 취미 때문에 반둥의 판매자에게서 나무 활을 샀어요.",
+   "blank": "busur",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menghias kue ulang tahun dengan bentuk busur dan panah dari cokelat.",
+   "en": "Lestari decorated the birthday cake with a bow and arrow made of chocolate.",
+   "ko": "레스타리는 생일 케이크를 초콜릿 활과 화살로 장식했어요.",
+   "blank": "busur",
+   "src": "made"
   }
  ],
  "w|buta": [
@@ -8363,6 +8443,22 @@
    "en": "Learn the basics first.",
    "ko": "먼저 기초부터 배워.",
    "blank": "dasar"
+  }
+ ],
+ "w|dasi": [
+  {
+   "text": "Fajar bingung memilih warna dasi yang cocok dengan kemejanya.",
+   "en": "Fajar couldn't decide which tie color would match his shirt.",
+   "ko": "파자르는 셔츠에 어울리는 넥타이 색을 고르느라 고민했어요.",
+   "blank": "dasi",
+   "src": "made"
+  },
+  {
+   "text": "Seorang peserta pria melepas dasi sebelum mulai memotong bawang.",
+   "en": "A male participant took off his tie before he started chopping onions.",
+   "ko": "한 남자 참가자는 양파를 썰기 전에 넥타이를 풀었어요.",
+   "blank": "dasi",
+   "src": "made"
   }
  ],
  "w|data": [
@@ -11163,6 +11259,22 @@
    "blank": "Guna"
   }
  ],
+ "w|gunting": [
+  {
+   "text": "Fajar mengambil gunting untuk membuka kardus paket yang dilakban rapat.",
+   "en": "Fajar grabbed scissors to open the tightly taped parcel box.",
+   "ko": "파자르는 테이프로 꽁꽁 싸맨 택배 상자를 열려고 가위를 집었어요.",
+   "blank": "gunting",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memakai gunting dapur untuk memotong daun bawang.",
+   "en": "Lestari used kitchen scissors to cut the spring onions.",
+   "ko": "레스타리는 부엌 가위로 쪽파를 잘랐어요.",
+   "blank": "gunting",
+   "src": "made"
+  }
+ ],
  "w|gunung": [
   {
    "text": "Kami mendaki gunung kemarin.",
@@ -13221,6 +13333,22 @@
    "blank": "jarum"
   }
  ],
+ "w|jas": [
+  {
+   "text": "Fajar memesan jas hitam secara daring untuk acara wisuda adiknya.",
+   "en": "Fajar ordered a black suit jacket online for his sister's graduation.",
+   "ko": "파자르는 여동생 졸업식에 입으려고 검은 재킷을 온라인으로 주문했어요.",
+   "blank": "jas",
+   "src": "made"
+  },
+  {
+   "text": "Lestari datang ke kelas memasak memakai jas putih seperti koki sungguhan.",
+   "en": "Lestari came to the cooking class wearing a white jacket like a real chef.",
+   "ko": "레스타리는 진짜 요리사처럼 흰 재킷을 입고 요리 수업에 왔어요.",
+   "blank": "jas",
+   "src": "made"
+  }
+ ],
  "w|jasa": [
   {
    "text": "Pabrik tempat Bayu bekerja memakai jasa angkutan dari perusahaan lain.",
@@ -13537,6 +13665,22 @@
    "en": "Our team became the champion this year.",
    "ko": "우리 팀이 올해 우승했어.",
    "blank": "juara"
+  }
+ ],
+ "w|jubah": [
+  {
+   "text": "Fajar juga membeli jubah mandi untuk hadiah ulang tahun ibunya.",
+   "en": "Fajar also bought a bathrobe as a birthday present for his mother.",
+   "ko": "파자르는 어머니 생신 선물로 목욕 가운도 샀어요.",
+   "blank": "jubah",
+   "src": "made"
+  },
+  {
+   "text": "Guru masak itu memakai jubah cokelat panjang saat menyambut peserta.",
+   "en": "The cooking teacher wore a long brown robe when welcoming the participants.",
+   "ko": "요리 선생님은 긴 갈색 가운을 입고 참가자들을 맞았어요.",
+   "blank": "jubah",
+   "src": "made"
   }
  ],
  "w|judul": [
@@ -14437,6 +14581,22 @@
    "blank": "Kantor"
   }
  ],
+ "w|kaos": [
+  {
+   "text": "Toko itu memberi bonus kaos gratis untuk setiap pembelian di atas dua ratus ribu.",
+   "en": "That shop gives a free T-shirt for every purchase over two hundred thousand.",
+   "ko": "그 가게는 이십만 루피아 넘게 사면 티셔츠를 공짜로 줘요.",
+   "blank": "kaos",
+   "src": "made"
+  },
+  {
+   "text": "Saat menggoreng, kaos Lestari terkena cipratan saus sambal.",
+   "en": "While frying, Lestari's T-shirt got splattered with chili sauce.",
+   "ko": "튀기는 동안 레스타리의 티셔츠에 칠리소스가 튀었어요.",
+   "blank": "kaos",
+   "src": "made"
+  }
+ ],
  "w|kapal": [
   {
    "text": "Kapal itu besar sekali.",
@@ -14769,6 +14929,22 @@
    "en": "He spoke on behalf of the working class.",
    "ko": "그는 노동자들을 대표해 말했어.",
    "blank": "kaum"
+  }
+ ],
+ "w|kaus": [
+  {
+   "text": "Adik Fajar minta dibelikan kaus bergambar tim sepak bola favoritnya.",
+   "en": "Fajar's younger brother asked him to buy a T-shirt with his favorite football team on it.",
+   "ko": "파자르의 동생은 좋아하는 축구팀이 그려진 티셔츠를 사 달라고 했어요.",
+   "blank": "kaus",
+   "src": "made"
+  },
+  {
+   "text": "Semua peserta mendapat kaus bertuliskan nama sekolah masak itu.",
+   "en": "All the participants got a T-shirt with the cooking school's name on it.",
+   "ko": "참가자 모두 요리 학교 이름이 적힌 티셔츠를 받았어요.",
+   "blank": "kaus",
+   "src": "made"
   }
  ],
  "w|kawan": [
@@ -15186,6 +15362,22 @@
    "en": "Lestari saw the confusion on the face of a tourist looking for mineral water.",
    "ko": "레스타리는 생수를 찾는 관광객 얼굴에 떠오른 당황한 기색을 봤어요.",
    "blank": "kebingungan",
+   "src": "made"
+  }
+ ],
+ "w|kebodohan": [
+  {
+   "text": "Fajar menertawakan kebodohan dirinya sendiri karena salah menulis alamat.",
+   "en": "Fajar laughed at his own foolishness for writing the wrong address.",
+   "ko": "파자르는 주소를 잘못 쓴 자기 실수에 웃음이 났어요.",
+   "blank": "kebodohan",
+   "src": "made"
+  },
+  {
+   "text": "Guru bercerita tentang kebodohan masa mudanya yang pernah memasukkan garam ke kue.",
+   "en": "The teacher told about the foolishness of her youth when she once put salt in a cake.",
+   "ko": "선생님은 젊을 때 케이크에 소금을 넣었던 어리석은 실수를 이야기했어요.",
+   "blank": "kebodohan",
    "src": "made"
   }
  ],
@@ -15751,6 +15943,22 @@
    "blank": "kekacauan"
   }
  ],
+ "w|kekaisaran": [
+  {
+   "text": "Fajar suka membaca novel sejarah tentang kekaisaran Romawi.",
+   "en": "Fajar likes reading historical novels about the Roman Empire.",
+   "ko": "파자르는 로마 제국에 관한 역사 소설을 즐겨 읽어요.",
+   "blank": "kekaisaran",
+   "src": "made"
+  },
+  {
+   "text": "Guru menjelaskan bahwa mi berasal dari dapur kekaisaran Tiongkok zaman dulu.",
+   "en": "The teacher explained that noodles came from the imperial kitchens of ancient China.",
+   "ko": "선생님은 국수가 옛 중국 황실 부엌에서 왔다고 설명했어요.",
+   "blank": "kekaisaran",
+   "src": "made"
+  }
+ ],
  "w|kekalahan": [
   {
    "text": "Fajar menerima kekalahan di pengadilan dengan kepala tegak.",
@@ -16279,6 +16487,22 @@
    "blank": "Kembar"
   }
  ],
+ "w|kemeja": [
+  {
+   "text": "Fajar mengembalikan kemeja biru karena kancingnya ada yang lepas.",
+   "en": "Fajar returned the blue shirt because one of its buttons had come off.",
+   "ko": "파자르는 단추 하나가 떨어져서 파란 셔츠를 반품했어요.",
+   "blank": "kemeja",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menggulung lengan kemeja supaya tidak kena tepung.",
+   "en": "Lestari rolled up her shirt sleeves so they wouldn't get floury.",
+   "ko": "레스타리는 밀가루가 묻지 않게 셔츠 소매를 걷었어요.",
+   "blank": "kemeja",
+   "src": "made"
+  }
+ ],
  "w|kemenangan": [
   {
    "text": "Kemenangan itu dirayakan meriah.",
@@ -16623,6 +16847,22 @@
    "en": "He was born in a small kingdom.",
    "ko": "그는 작은 왕국에서 태어났어.",
    "blank": "kerajaan"
+  }
+ ],
+ "w|keranjang": [
+  {
+   "text": "Fajar memasukkan tiga buku ke keranjang belanja, lalu lupa membayarnya.",
+   "en": "Fajar put three books in the shopping cart and then forgot to pay for them.",
+   "ko": "파자르는 책 세 권을 장바구니에 담아 놓고 결제하는 걸 잊었어요.",
+   "blank": "keranjang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menaruh sayuran yang sudah dicuci di keranjang plastik.",
+   "en": "Lestari put the washed vegetables in a plastic basket.",
+   "ko": "레스타리는 씻은 채소를 플라스틱 바구니에 담았어요.",
+   "blank": "keranjang",
+   "src": "made"
   }
  ],
  "w|keras": [
@@ -19009,6 +19249,22 @@
    "en": "There's a man at the door.",
    "ko": "문 앞에 남자가 있어.",
    "blank": "laki-laki"
+  }
+ ],
+ "w|laksamana": [
+  {
+   "text": "Fajar membeli buku biografi seorang laksamana dari zaman kerajaan Majapahit.",
+   "en": "Fajar bought a biography of an admiral from the Majapahit kingdom era.",
+   "ko": "파자르는 마자파힛 왕국 시대 제독의 전기를 샀어요.",
+   "blank": "laksamana",
+   "src": "made"
+  },
+  {
+   "text": "Kata guru, resep rendang itu berasal dari keluarga seorang laksamana di Sumatra.",
+   "en": "According to the teacher, that rendang recipe came from the family of an admiral in Sumatra.",
+   "ko": "선생님 말로는 그 른당 요리법은 수마트라의 한 제독 집안에서 전해졌대요.",
+   "blank": "laksamana",
+   "src": "made"
   }
  ],
  "w|lalat": [
@@ -22175,6 +22431,22 @@
    "blank": "memandang"
   }
  ],
+ "w|memandu": [
+  {
+   "text": "Petugas layanan pelanggan memandu Fajar langkah demi langkah untuk mengajukan retur.",
+   "en": "The customer service agent guided Fajar step by step to request a return.",
+   "ko": "고객센터 직원이 파자르에게 반품 신청 방법을 하나하나 안내했어요.",
+   "blank": "memandu",
+   "src": "made"
+  },
+  {
+   "text": "Asisten guru memandu peserta mengenal bumbu-bumbu dapur.",
+   "en": "The teaching assistant guided the participants in getting to know kitchen spices.",
+   "ko": "보조 강사가 참가자들에게 부엌 양념을 하나하나 소개했어요.",
+   "blank": "memandu",
+   "src": "made"
+  }
+ ],
  "w|memanfaatkan": [
   {
    "text": "Dia pandai memanfaatkan waktu luang.",
@@ -22649,6 +22921,22 @@
    "blank": "membangunkan"
   }
  ],
+ "w|membantah": [
+  {
+   "text": "Penjual itu membantah tuduhan Fajar bahwa barangnya palsu.",
+   "en": "The seller denied Fajar's accusation that the goods were fake.",
+   "ko": "판매자는 물건이 가짜라는 파자르의 주장을 부인했어요.",
+   "blank": "membantah",
+   "src": "made"
+  },
+  {
+   "text": "Lestari tidak berani membantah guru yang bilang adonannya terlalu encer.",
+   "en": "Lestari didn't dare argue with the teacher who said her batter was too runny.",
+   "ko": "레스타리는 반죽이 너무 묽다는 선생님 말에 감히 반박하지 못했어요.",
+   "blank": "membantah",
+   "src": "made"
+  }
+ ],
  "w|membantai": [
   {
    "text": "Rudi baru selesai membaca novel sejarah tentang pasukan yang membantai penduduk satu desa.",
@@ -23021,6 +23309,38 @@
    "blank": "membicarakan"
   }
  ],
+ "w|membidik": [
+  {
+   "text": "Toko itu membidik anak muda dengan iklan di media sosial.",
+   "en": "That shop targets young people with ads on social media.",
+   "ko": "그 가게는 소셜 미디어 광고로 젊은 층을 겨냥해요.",
+   "blank": "membidik",
+   "src": "made"
+  },
+  {
+   "text": "Sekolah masak itu membidik ibu rumah tangga yang ingin berjualan dari rumah.",
+   "en": "That cooking school targets housewives who want to sell food from home.",
+   "ko": "그 요리 학교는 집에서 장사하고 싶은 주부들을 겨냥해요.",
+   "blank": "membidik",
+   "src": "made"
+  }
+ ],
+ "w|membimbing": [
+  {
+   "text": "Kakak Fajar membimbing dia memilih laptop yang sesuai untuk kuliah.",
+   "en": "Fajar's older brother guided him in choosing a laptop suitable for college.",
+   "ko": "파자르의 형이 대학 공부에 맞는 노트북을 고르도록 도와줬어요.",
+   "blank": "membimbing",
+   "src": "made"
+  },
+  {
+   "text": "Koki tamu itu dengan sabar membimbing Lestari menghias kue.",
+   "en": "The guest chef patiently guided Lestari in decorating the cake.",
+   "ko": "초대 요리사는 레스타리가 케이크를 장식하도록 차분히 지도했어요.",
+   "blank": "membimbing",
+   "src": "made"
+  }
+ ],
  "w|membingungkan": [
   {
    "text": "Petunjuk itu membingungkan banyak peserta.",
@@ -23377,6 +23697,22 @@
    "blank": "memegang"
   }
  ],
+ "w|memelihara": [
+  {
+   "text": "Fajar memesan akuarium kecil karena ingin memelihara ikan cupang.",
+   "en": "Fajar ordered a small aquarium because he wants to keep betta fish.",
+   "ko": "파자르는 베타를 기르고 싶어서 작은 어항을 주문했어요.",
+   "blank": "memelihara",
+   "src": "made"
+  },
+  {
+   "text": "Guru masak itu memelihara ragi sendiri untuk membuat roti.",
+   "en": "The cooking teacher keeps her own yeast starter for making bread.",
+   "ko": "요리 선생님은 빵을 만들려고 효모 종균을 직접 길러요.",
+   "blank": "memelihara",
+   "src": "made"
+  }
+ ],
  "w|memeluk": [
   {
    "text": "Ibu memeluk anaknya dengan hangat.",
@@ -23577,6 +23913,22 @@
    "en": "That company has a lot of branches.",
    "ko": "그 회사는 지점이 많아.",
    "blank": "memiliki"
+  }
+ ],
+ "w|memimpikan": [
+  {
+   "text": "Sudah lama Fajar memimpikan sepeda balap, dan akhirnya dia memesannya.",
+   "en": "Fajar had long dreamed of a racing bike, and finally he ordered one.",
+   "ko": "파자르는 오랫동안 경주용 자전거를 꿈꿨는데 드디어 주문했어요.",
+   "blank": "memimpikan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memimpikan toko kue kecil di dekat rumahnya.",
+   "en": "Lestari dreams of a small cake shop near her house.",
+   "ko": "레스타리는 집 근처에 작은 케이크 가게를 여는 꿈을 꿔요.",
+   "blank": "memimpikan",
+   "src": "made"
   }
  ],
  "w|memimpin": [
@@ -24843,6 +25195,22 @@
    "src": "made"
   }
  ],
+ "w|menawar": [
+  {
+   "text": "Di aplikasi itu Fajar tidak bisa menawar seperti di pasar.",
+   "en": "In that app Fajar can't haggle like he can at the market.",
+   "ko": "그 앱에서는 파자르가 시장에서처럼 값을 깎을 수 없어요.",
+   "blank": "menawar",
+   "src": "made"
+  },
+  {
+   "text": "Sebelum kelas, Lestari menawar harga cabai di pasar dekat sekolah masak.",
+   "en": "Before class, Lestari haggled over the price of chilies at the market near the cooking school.",
+   "ko": "수업 전에 레스타리는 요리 학교 근처 시장에서 고추 값을 흥정했어요.",
+   "blank": "menawar",
+   "src": "made"
+  }
+ ],
  "w|menawarkan": [
   {
    "text": "Dia menawarkan bantuan dengan tulus.",
@@ -25903,6 +26271,22 @@
    "src": "made"
   }
  ],
+ "w|menetes": [
+  {
+   "text": "Botol sirup yang dipesan Fajar bocor, dan isinya menetes dari kardus.",
+   "en": "The syrup bottle Fajar ordered leaked, and its contents were dripping from the box.",
+   "ko": "파자르가 주문한 시럽 병이 새서 상자에서 내용물이 뚝뚝 떨어졌어요.",
+   "blank": "menetes",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menunggu sampai minyak berhenti menetes dari pisang goreng.",
+   "en": "Lestari waited until the oil stopped dripping from the fried bananas.",
+   "ko": "레스타리는 바나나 튀김에서 기름이 그만 떨어질 때까지 기다렸어요.",
+   "blank": "menetes",
+   "src": "made"
+  }
+ ],
  "w|mengabaikan": [
   {
    "text": "Jangan mengabaikan peringatan dari dokter.",
@@ -26509,6 +26893,22 @@
    "src": "made"
   }
  ],
+ "w|mengasuh": [
+  {
+   "text": "Fajar membelikan mainan untuk keponakan yang dia bantu mengasuh setiap Sabtu.",
+   "en": "Fajar bought toys for the nephew he helps look after every Saturday.",
+   "ko": "파자르는 토요일마다 돌봐 주는 조카에게 장난감을 사 줬어요.",
+   "blank": "mengasuh",
+   "src": "made"
+  },
+  {
+   "text": "Lestari ikut kelas pada pagi hari karena sore dia harus mengasuh adiknya.",
+   "en": "Lestari takes the morning class because in the afternoon she has to look after her younger sibling.",
+   "ko": "레스타리는 오후에 동생을 돌봐야 해서 오전 수업을 들어요.",
+   "blank": "mengasuh",
+   "src": "made"
+  }
+ ],
  "w|mengatakan": [
   {
    "text": "Dia mengatakan yang sebenarnya.",
@@ -26549,6 +26949,22 @@
    "en": "She's good at managing time.",
    "ko": "걔는 시간 관리를 잘해.",
    "blank": "mengatur"
+  }
+ ],
+ "w|mengawal": [
+  {
+   "text": "Kurir itu sudah biasa mengawal paket mahal sampai ke tangan penerima.",
+   "en": "That courier is used to escorting expensive parcels right into the recipient's hands.",
+   "ko": "그 택배 기사는 비싼 택배를 받는 사람 손에 전달할 때까지 지키는 데 익숙해요.",
+   "blank": "mengawal",
+   "src": "made"
+  },
+  {
+   "text": "Dua petugas mengawal koki terkenal yang datang sebagai tamu kelas.",
+   "en": "Two staff members escorted the famous chef who came as a guest of the class.",
+   "ko": "직원 두 명이 수업에 초대 손님으로 온 유명 요리사를 수행했어요.",
+   "blank": "mengawal",
+   "src": "made"
   }
  ],
  "w|mengawasi": [
@@ -26842,6 +27258,22 @@
    "en": "The director introduced Siti to the new costume designer.",
    "ko": "감독이 시티에게 새 의상 담당자를 소개했어요.",
    "blank": "mengenalkan",
+   "src": "made"
+  }
+ ],
+ "w|mengenang": [
+  {
+   "text": "Fajar membeli bingkai foto untuk mengenang perjalanan bersama ayahnya.",
+   "en": "Fajar bought a photo frame to remember a trip with his father.",
+   "ko": "파자르는 아버지와 함께한 여행을 추억하려고 사진 액자를 샀어요.",
+   "blank": "mengenang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membuat opor ayam untuk mengenang masakan almarhumah neneknya.",
+   "en": "Lestari made chicken opor in memory of her late grandmother's cooking.",
+   "ko": "레스타리는 돌아가신 할머니의 음식을 추억하며 오포르 아얌을 만들었어요.",
+   "blank": "mengenang",
    "src": "made"
   }
  ],
@@ -27148,6 +27580,22 @@
    "en": "The police searched the empty house at the end of the alley after a theft report.",
    "ko": "도난 신고가 들어온 뒤 경찰이 골목 끝 빈집을 수색했어요.",
    "blank": "menggeledah",
+   "src": "made"
+  }
+ ],
+ "w|menggendong": [
+  {
+   "text": "Fajar mencari gendongan bayi untuk kakaknya yang sering menggendong anak ke pasar.",
+   "en": "Fajar looked for a baby carrier for his sister, who often carries her child to the market.",
+   "ko": "파자르는 아이를 자주 안고 시장에 가는 누나에게 줄 아기띠를 찾았어요.",
+   "blank": "menggendong",
+   "src": "made"
+  },
+  {
+   "text": "Seorang peserta datang sambil menggendong bayinya yang sedang tidur.",
+   "en": "A participant arrived carrying her sleeping baby.",
+   "ko": "한 참가자가 잠든 아기를 안고 왔어요.",
+   "blank": "menggendong",
    "src": "made"
   }
  ],
@@ -27459,6 +27907,22 @@
    "en": "That venture is starting to make money.",
    "ko": "그 사업이 돈을 벌기 시작해.",
    "blank": "menghasilkan"
+  }
+ ],
+ "w|menghemat": [
+  {
+   "text": "Fajar sering belanja saat ada gratis ongkir supaya bisa menghemat uang.",
+   "en": "Fajar often shops when there's free shipping so he can save money.",
+   "ko": "파자르는 돈을 아끼려고 무료 배송일 때 자주 쇼핑해요.",
+   "blank": "menghemat",
+   "src": "made"
+  },
+  {
+   "text": "Guru mengajari cara menghemat minyak saat menggoreng tahu.",
+   "en": "The teacher taught how to save oil when frying tofu.",
+   "ko": "선생님은 두부를 튀길 때 기름을 아끼는 법을 가르쳐 줬어요.",
+   "blank": "menghemat",
+   "src": "made"
   }
  ],
  "w|menghentikan": [
@@ -30589,6 +31053,22 @@
    "blank": "Merekam"
   }
  ],
+ "w|merekomendasikan": [
+  {
+   "text": "Teman kantor Fajar merekomendasikan toko daring yang jual barang elektronik murah.",
+   "en": "Fajar's office friend recommended an online shop that sells cheap electronics.",
+   "ko": "파자르의 회사 친구가 싼 전자제품을 파는 온라인 가게를 추천했어요.",
+   "blank": "merekomendasikan",
+   "src": "made"
+  },
+  {
+   "text": "Guru merekomendasikan gula aren untuk kolak supaya rasanya lebih harum.",
+   "en": "The teacher recommended palm sugar for the kolak so it would taste more fragrant.",
+   "ko": "선생님은 콜락에 야자당을 넣으면 향이 더 좋다고 권했어요.",
+   "blank": "merekomendasikan",
+   "src": "made"
+  }
+ ],
  "w|merekrut": [
   {
    "text": "Pabrik sedang merekrut tiga puluh penjahit untuk musim ramai.",
@@ -30633,6 +31113,22 @@
    "en": "She likes to plan everything far in advance.",
    "ko": "그는 모든 걸 미리미리 계획하는 걸 좋아해.",
    "blank": "merencanakan"
+  }
+ ],
+ "w|merendahkan": [
+  {
+   "text": "Fajar kesal karena ada penjual yang merendahkan pembeli di kolom komentar.",
+   "en": "Fajar was annoyed because a seller belittled a buyer in the comments.",
+   "ko": "파자르는 한 판매자가 댓글 창에서 구매자를 깔보는 걸 보고 짜증이 났어요.",
+   "blank": "merendahkan",
+   "src": "made"
+  },
+  {
+   "text": "Guru yang baik tidak pernah merendahkan masakan peserta yang gagal.",
+   "en": "A good teacher never belittles a participant's failed dish.",
+   "ko": "좋은 선생님은 참가자가 망친 요리를 절대 깔보지 않아요.",
+   "blank": "merendahkan",
+   "src": "made"
   }
  ],
  "w|merenggut": [
@@ -34251,6 +34747,22 @@
    "src": "made"
   }
  ],
+ "w|pembeli": [
+  {
+   "text": "Banyak pembeli memberi bintang lima untuk toko daring itu.",
+   "en": "Many buyers gave that online shop five stars.",
+   "ko": "많은 구매자가 그 온라인 가게에 별 다섯 개를 줬어요.",
+   "blank": "pembeli",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bermimpi kue buatannya suatu hari punya banyak pembeli.",
+   "en": "Lestari dreams that one day her cakes will have lots of buyers.",
+   "ko": "레스타리는 언젠가 자기가 만든 케이크를 사는 사람이 많아지기를 꿈꿔요.",
+   "blank": "pembeli",
+   "src": "made"
+  }
+ ],
  "w|pemberani": [
   {
    "text": "Pemberani itu menolong orang yang tenggelam.",
@@ -34337,6 +34849,22 @@
    "en": "A liar will lose friends.",
    "ko": "거짓말쟁이는 친구를 잃게 돼.",
    "blank": "Pembohong"
+  }
+ ],
+ "w|pembuangan": [
+  {
+   "text": "Fajar memesan pipa baru karena saluran pembuangan di dapurnya bocor.",
+   "en": "Fajar ordered a new pipe because the drain in his kitchen was leaking.",
+   "ko": "파자르는 부엌 배수관이 새서 새 파이프를 주문했어요.",
+   "blank": "pembuangan",
+   "src": "made"
+  },
+  {
+   "text": "Lemak bekas tidak boleh dibuang ke saluran pembuangan, kata guru.",
+   "en": "Used fat must not be poured into the drain, the teacher said.",
+   "ko": "선생님은 쓴 기름을 배수구에 버리면 안 된다고 했어요.",
+   "blank": "pembuangan",
+   "src": "made"
   }
  ],
  "w|pembuat": [
@@ -34509,6 +35037,22 @@
    "blank": "pemiliknya"
   }
  ],
+ "w|pemilu": [
+  {
+   "text": "Menjelang pemilu, aplikasi belanja itu penuh iklan bendera dan stiker.",
+   "en": "Ahead of the election, that shopping app was full of ads for flags and stickers.",
+   "ko": "선거를 앞두고 그 쇼핑 앱은 깃발과 스티커 광고로 가득했어요.",
+   "blank": "pemilu",
+   "src": "made"
+  },
+  {
+   "text": "Kelas masak diliburkan pada hari pemilu supaya semua bisa memilih.",
+   "en": "The cooking class was cancelled on election day so everyone could vote.",
+   "ko": "선거일에는 모두 투표할 수 있게 요리 수업이 쉬었어요.",
+   "blank": "pemilu",
+   "src": "made"
+  }
+ ],
  "w|pemimpin": [
   {
    "text": "Pemimpin itu bijaksana.",
@@ -34679,6 +35223,22 @@
    "en": "The search results appeared on the screen.",
    "ko": "검색 결과가 화면에 나타났어.",
    "blank": "pencarian"
+  }
+ ],
+ "w|penculik": [
+  {
+   "text": "Fajar baru saja membeli film detektif tentang polisi yang mengejar penculik anak.",
+   "en": "Fajar just bought a detective film about police chasing a child kidnapper.",
+   "ko": "파자르는 아이 납치범을 쫓는 경찰 이야기의 형사 영화를 막 샀어요.",
+   "blank": "penculik",
+   "src": "made"
+  },
+  {
+   "text": "Sambil mengaduk adonan, para peserta membahas film tentang penculik yang ditangkap polisi.",
+   "en": "While stirring the batter, the participants discussed a film about a kidnapper caught by the police.",
+   "ko": "참가자들은 반죽을 저으며 경찰에 잡힌 납치범 영화 이야기를 했어요.",
+   "blank": "penculik",
+   "src": "made"
   }
  ],
  "w|penculikan": [
@@ -36217,6 +36777,22 @@
    "en": "He regrets his actions.",
    "ko": "그는 자신의 행동을 후회해.",
    "blank": "perbuatannya"
+  }
+ ],
+ "w|perburuan": [
+  {
+   "text": "Banyak orang berlomba dalam perburuan diskon setiap tanggal kembar.",
+   "en": "Many people compete in the hunt for discounts on every double-date sale.",
+   "ko": "많은 사람이 날짜와 달이 같은 날마다 할인을 찾아 경쟁해요.",
+   "blank": "perburuan",
+   "src": "made"
+  },
+  {
+   "text": "Guru bercerita tentang tradisi perburuan rusa di desanya pada zaman dulu.",
+   "en": "The teacher talked about the old deer-hunting tradition in her village.",
+   "ko": "선생님은 예전에 자기 마을에 있던 사슴 사냥 전통을 이야기했어요.",
+   "blank": "perburuan",
+   "src": "made"
   }
  ],
  "w|percakapan": [
@@ -41311,6 +41887,22 @@
    "blank": "segera"
   }
  ],
+ "w|seharga": [
+  {
+   "text": "Fajar akhirnya membeli sepatu kulit seharga tiga ratus ribu rupiah.",
+   "en": "Fajar finally bought leather shoes costing three hundred thousand rupiah.",
+   "ko": "파자르는 결국 삼십만 루피아짜리 가죽 구두를 샀어요.",
+   "blank": "seharga",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membeli pisau koki seharga setengah juta untuk kelas itu.",
+   "en": "Lestari bought a chef's knife costing half a million for that class.",
+   "ko": "레스타리는 그 수업을 위해 오십만 루피아짜리 요리용 칼을 샀어요.",
+   "blank": "seharga",
+   "src": "made"
+  }
+ ],
  "w|sehari": [
   {
    "text": "Dia bekerja sehari penuh.",
@@ -43105,6 +43697,22 @@
    "en": "Call me after you arrive.",
    "ko": "도착한 뒤에 전화해.",
    "blank": "setelah"
+  }
+ ],
+ "w|setelan": [
+  {
+   "text": "Ternyata setelan yang dipesan Fajar terlalu besar di bagian bahu.",
+   "en": "The suit Fajar ordered turned out to be too big in the shoulders.",
+   "ko": "파자르가 주문한 정장은 어깨 부분이 너무 컸어요.",
+   "blank": "setelan",
+   "src": "made"
+  },
+  {
+   "text": "Peserta paling muda datang dengan setelan olahraga dan sepatu putih.",
+   "en": "The youngest participant came in a tracksuit and white shoes.",
+   "ko": "가장 어린 참가자는 운동복 차림에 흰 운동화를 신고 왔어요.",
+   "blank": "setelan",
+   "src": "made"
   }
  ],
  "w|setempat": [
@@ -45294,6 +45902,22 @@
    "en": "Putri is on her way to Jakarta to watch a theater performance.",
    "ko": "푸트리는 연극 공연을 보러 자카르타로 가는 길이에요.",
    "blank": "teater",
+   "src": "made"
+  }
+ ],
+ "w|tebakan": [
+  {
+   "text": "Rupanya tebakan Fajar benar, paketnya datang tepat sebelum hujan turun.",
+   "en": "Fajar's guess was right; the package came just before the rain started.",
+   "ko": "파자르의 짐작대로 택배는 비가 오기 직전에 도착했어요.",
+   "blank": "tebakan",
+   "src": "made"
+  },
+  {
+   "text": "Guru menyuruh peserta menebak bumbu rahasia, dan tebakan Lestari paling dekat.",
+   "en": "The teacher asked the participants to guess the secret spice, and Lestari's guess was the closest.",
+   "ko": "선생님이 비밀 양념을 맞혀 보라고 했는데 레스타리의 추측이 가장 가까웠어요.",
+   "blank": "tebakan",
    "src": "made"
   }
  ],
@@ -48865,6 +49489,22 @@
    "en": "The main road is very crowded.",
    "ko": "대로가 아주 붐벼.",
    "blank": "utama"
+  }
+ ],
+ "w|utang": [
+  {
+   "text": "Fajar tidak mau belanja dengan cicilan karena takut punya utang.",
+   "en": "Fajar doesn't want to shop in installments because he's afraid of having debt.",
+   "ko": "파자르는 빚이 생길까 봐 할부로 쇼핑하지 않으려고 해요.",
+   "blank": "utang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari baru selesai membayar utang kursus memasak bulan lalu.",
+   "en": "Lestari just finished paying off her cooking course debt last month.",
+   "ko": "레스타리는 지난달에야 요리 강좌 빚을 다 갚았어요.",
+   "blank": "utang",
+   "src": "made"
   }
  ],
  "w|utara": [
