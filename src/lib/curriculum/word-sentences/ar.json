@@ -2781,6 +2781,22 @@
    "blank": "أساسي"
   }
  ],
+ "w|أسبقية": [
+  {
+   "text": "اختار خالد مكانا قرب النهر لأن الأسبقية لمن يصل أولا.",
+   "en": "Khalid chose a spot by the river because priority goes to whoever arrives first.",
+   "ko": "먼저 온 사람이 우선이라서 칼리드는 강가 자리를 골랐어요.",
+   "blank": "الأسبقية",
+   "src": "made"
+  },
+  {
+   "text": "أعطت ليلى أسبقية لرسائل صديقتها على كل البريد.",
+   "en": "Layla gave her friend's letters priority over all the other mail.",
+   "ko": "레일라는 다른 우편물보다 친구 편지를 먼저 읽었어요.",
+   "blank": "أسبقية",
+   "src": "made"
+  }
+ ],
  "w|أسبوع": [
   {
    "text": "بقي أسبوع للاختبار.",
@@ -5895,6 +5911,22 @@
    "en": "I like coffee.",
    "ko": "나 커피 좋아해.",
    "blank": "أنا"
+  }
+ ],
+ "w|أناة": [
+  {
+   "text": "تعلم خالد أن إشعال النار تحت المطر يحتاج إلى أناة.",
+   "en": "Khalid learned that lighting a fire in the rain takes patience.",
+   "ko": "칼리드는 빗속에서 불을 피우려면 참을성이 필요하다는 걸 배웠어요.",
+   "blank": "أناة",
+   "src": "made"
+  },
+  {
+   "text": "تعلمت ليلى من صديقتها القديمة الأناة في الحكم على الناس.",
+   "en": "Layla learned patience in judging people from her old friend.",
+   "ko": "레일라는 옛 친구에게서 사람을 섣불리 판단하지 않는 법을 배웠어요.",
+   "blank": "الأناة",
+   "src": "made"
   }
  ],
  "w|أنار": [
@@ -12341,6 +12373,22 @@
    "src": "made"
   }
  ],
+ "w|استشراف": [
+  {
+   "text": "حاول خالد استشراف الطقس من شكل الغيوم.",
+   "en": "Khalid tried to forecast the weather from the shape of the clouds.",
+   "ko": "칼리드는 구름 모양을 보고 날씨를 내다보려고 했어요.",
+   "blank": "استشراف",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى عن استشراف مستقبل ابنتها بعد الجامعة.",
+   "en": "Layla wrote about looking ahead to her daughter's future after university.",
+   "ko": "레일라는 딸의 대학 졸업 후 앞날을 내다보는 이야기를 썼어요.",
+   "blank": "استشراف",
+   "src": "made"
+  }
+ ],
  "w|استشعر": [
   {
    "text": "استشعر خالد رائحة غاز على الدرج، فاتصل بحارس البناية فورا.",
@@ -13502,6 +13550,22 @@
    "en": "Mariam said people's consumption of sweets goes up during holidays.",
    "ko": "마리암은 명절이면 사람들이 과자를 더 많이 산다고 했어요.",
    "blank": "استهلاك",
+   "src": "made"
+  }
+ ],
+ "w|استهلال": [
+  {
+   "text": "كتب خالد في دفتره أن استهلال الرحلة كان صعبا بسبب المطر.",
+   "en": "Khalid wrote in his notebook that the start of the trip was hard because of the rain.",
+   "ko": "칼리드는 공책에 비 때문에 여행 첫머리가 힘들었다고 적었어요.",
+   "blank": "استهلال",
+   "src": "made"
+  },
+  {
+   "text": "اختارت ليلى بيت شعر استهلالا لرسالتها.",
+   "en": "Layla chose a line of poetry as the opening of her letter.",
+   "ko": "레일라는 시 한 구절로 편지를 열었어요.",
+   "blank": "استهلالا",
    "src": "made"
   }
  ],
@@ -15703,6 +15767,22 @@
    "src": "made"
   }
  ],
+ "w|امتثال": [
+  {
+   "text": "امتثالا لتعليمات الحارس، أطفأ خالد النار قبل النوم.",
+   "en": "In compliance with the ranger's instructions, Khalid put out the fire before sleeping.",
+   "ko": "칼리드는 관리인 지시에 따라 자기 전에 불을 껐어요.",
+   "blank": "امتثالا",
+   "src": "made"
+  },
+  {
+   "text": "مدحت ليلى امتثال ابنها لقواعد البيت.",
+   "en": "Layla praised her son's compliance with the house rules.",
+   "ko": "레일라는 아들이 집안 규칙을 잘 지킨다고 칭찬했어요.",
+   "blank": "امتثال",
+   "src": "made"
+  }
+ ],
  "w|امتثل": [
   {
    "text": "امتثل كريم لقواعد الصحيفة ولم يذكر اسم المصدر.",
@@ -16874,6 +16954,22 @@
    "en": "Fatima read the children a story about a snowman who melted in the sun.",
    "ko": "파티마는 아이들에게 햇볕에 녹아 버린 눈사람 이야기를 읽어 줬어요.",
    "blank": "انصهر",
+   "src": "made"
+  }
+ ],
+ "w|انصياع": [
+  {
+   "text": "رفض كلب خالد الانصياع للأوامر حين رأى الأرنب.",
+   "en": "Khalid's dog refused to obey commands when it saw the rabbit.",
+   "ko": "칼리드의 개는 토끼를 보자 말을 전혀 듣지 않았어요.",
+   "blank": "الانصياع",
+   "src": "made"
+  },
+  {
+   "text": "اشتكت ليلى من عدم انصياع ابنها المراهق لأي نصيحة.",
+   "en": "Layla complained that her teenage son wouldn't listen to any advice.",
+   "ko": "레일라는 사춘기 아들이 어떤 충고도 듣지 않는다고 하소연했어요.",
+   "blank": "انصياع",
    "src": "made"
   }
  ],
@@ -22003,6 +22099,22 @@
    "src": "made"
   }
  ],
+ "w|تآمر": [
+  {
+   "text": "قرأ خالد قرب النار رواية عن تآمر في قصر قديم.",
+   "en": "By the fire Khalid read a novel about a conspiracy in an old palace.",
+   "ko": "칼리드는 모닥불 옆에서 옛 궁전의 음모를 다룬 소설을 읽었어요.",
+   "blank": "تآمر",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى عن مسلسل يدور حول تآمر عائلي على ميراث.",
+   "en": "Layla wrote about a TV series revolving around a family conspiracy over an inheritance.",
+   "ko": "레일라는 유산을 둘러싼 집안 음모를 다룬 드라마 이야기를 썼어요.",
+   "blank": "تآمر",
+   "src": "made"
+  }
+ ],
  "w|تأثير": [
   {
    "text": "للكلمة تأثير كبير على الناس.",
@@ -24023,6 +24135,22 @@
    "blank": "التخفيضات"
   }
  ],
+ "w|تخل": [
+  {
+   "text": "لم يكن ترك الهاتف في السيارة تخليا سهلا على خالد.",
+   "en": "Leaving his phone in the car was not an easy thing for Khalid to give up.",
+   "ko": "휴대폰을 차에 두고 오는 건 칼리드에게 쉽지 않은 포기였어요.",
+   "blank": "تخليا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن انتقالها لم يكن تخليا عن صداقتهما.",
+   "en": "Layla wrote that her move was not an abandonment of their friendship.",
+   "ko": "레일라는 자기가 이사 간 게 둘의 우정을 버린 건 아니라고 썼어요.",
+   "blank": "تخليا",
+   "src": "made"
+  }
+ ],
  "w|تخلص": [
   {
    "text": "تخلص من العادات السيئة.",
@@ -24397,6 +24525,38 @@
    "blank": "تدهورت"
   }
  ],
+ "w|تدوير": [
+  {
+   "text": "جمع خالد القوارير الفارغة ليضعها في حاوية التدوير.",
+   "en": "Khalid gathered the empty bottles to put them in the recycling bin.",
+   "ko": "칼리드는 빈 병을 모아 재활용 통에 넣었어요.",
+   "blank": "التدوير",
+   "src": "made"
+  },
+  {
+   "text": "حكت ليلى عن مشروع تدوير الورق في مدرسة ابنتها.",
+   "en": "Layla told about the paper recycling project at her daughter's school.",
+   "ko": "레일라는 딸 학교의 종이 재활용 활동 이야기를 했어요.",
+   "blank": "تدوير",
+   "src": "made"
+  }
+ ],
+ "w|تذبذب": [
+  {
+   "text": "تذبذبت إشارة الهاتف في الوادي فلم يستطع خالد الاتصال.",
+   "en": "The phone signal kept fluctuating in the valley, so Khalid couldn't call.",
+   "ko": "골짜기에서 전화 신호가 들쭉날쭉해서 칼리드는 통화를 못 했어요.",
+   "blank": "تذبذبت",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن راتبها يتذبذب من شهر إلى شهر.",
+   "en": "Layla wrote that her salary fluctuates from month to month.",
+   "ko": "레일라는 월급이 달마다 들쭉날쭉하다고 썼어요.",
+   "blank": "يتذبذب",
+   "src": "made"
+  }
+ ],
  "w|تذكاري": [
   {
    "text": "أهدى الفريق خالدا كوبا تذكاريا عليه شعار الشركة.",
@@ -24559,6 +24719,22 @@
    "en": "When he sensed danger, he stepped back.",
    "ko": "위험을 느끼자 그는 뒤로 한 걸음 물러섰어.",
    "blank": "تراجع"
+  }
+ ],
+ "w|تراض": [
+  {
+   "text": "قسم خالد ورفاقه المهام بينهم عن تراض.",
+   "en": "Khalid and his companions divided the tasks among themselves by mutual agreement.",
+   "ko": "칼리드와 일행은 서로 합의해서 할 일을 나눴어요.",
+   "blank": "تراض",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن أخاها ترك شريكه في العمل عن تراض.",
+   "en": "Layla wrote that her brother parted ways with his business partner amicably.",
+   "ko": "레일라는 오빠가 동업자와 좋게 합의하고 헤어졌다고 썼어요.",
+   "blank": "تراض",
+   "src": "made"
   }
  ],
  "w|تراضى": [
@@ -24959,6 +25135,38 @@
    "src": "made"
   }
  ],
+ "w|تزامن": [
+  {
+   "text": "لاحظ خالد تزامن نقيق الضفادع مع غروب الشمس.",
+   "en": "Khalid noticed the frogs' croaking coincided with sunset.",
+   "ko": "칼리드는 해가 질 때 개구리 울음이 맞춰 시작된다는 걸 알아챘어요.",
+   "blank": "تزامن",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت ليلى من تزامن رسالتها مع رسالة صديقتها في اليوم نفسه.",
+   "en": "Layla laughed at how her letter and her friend's letter arrived on the same day.",
+   "ko": "레일라는 자기 편지와 친구 편지가 같은 날 오간 게 우스웠어요.",
+   "blank": "تزامن",
+   "src": "made"
+  }
+ ],
+ "w|تزعزع": [
+  {
+   "text": "تزعزعت الخيمة في الريح لكن خالد ثبتها بالحبال.",
+   "en": "The tent shook in the wind, but Khalid secured it with ropes.",
+   "ko": "텐트가 바람에 흔들렸지만 칼리드가 줄로 단단히 고정했어요.",
+   "blank": "تزعزعت",
+   "src": "made"
+  },
+  {
+   "text": "لم تتزعزع ثقة ليلى بصديقتها رغم سنوات الغياب.",
+   "en": "Layla's trust in her friend was not shaken despite years apart.",
+   "ko": "오랜 세월 못 만났어도 친구에 대한 레일라의 믿음은 흔들리지 않았어요.",
+   "blank": "تتزعزع",
+   "src": "made"
+  }
+ ],
  "w|تزلج": [
   {
    "text": "علق يوسف على الجدار صورة لعائلته في رحلة تزلج على الجبل.",
@@ -25032,6 +25240,22 @@
    "en": "The children race to Nour's bakery when the cakes come out of the oven.",
    "ko": "케이크가 오븐에서 나오면 아이들이 누르의 빵집으로 앞다퉈 달려와요.",
    "blank": "يتسابق",
+   "src": "made"
+  }
+ ],
+ "w|تساقط": [
+  {
+   "text": "تساقط الثلج على خيمة خالد طوال الليل.",
+   "en": "Snow fell on Khalid's tent all night.",
+   "ko": "밤새 칼리드의 텐트 위로 눈이 내렸어요.",
+   "blank": "تساقط",
+   "src": "made"
+  },
+  {
+   "text": "تتساقط أوراق الشجر أمام نافذة ليلى وهي تكتب.",
+   "en": "Leaves fall outside Layla's window as she writes.",
+   "ko": "레일라가 편지를 쓰는 동안 창밖으로 나뭇잎이 떨어져요.",
+   "blank": "تتساقط",
    "src": "made"
   }
  ],
@@ -28077,6 +28301,22 @@
    "src": "made"
   }
  ],
+ "w|تقهقر": [
+  {
+   "text": "أجبر المطر خالدا على تقهقر سريع إلى السيارة.",
+   "en": "The rain forced Khalid into a quick retreat to the car.",
+   "ko": "비 때문에 칼리드는 서둘러 차로 물러났어요.",
+   "blank": "تقهقر",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت ليلى تقهقر مستواها في الرسم بعد سنوات من الانقطاع.",
+   "en": "Layla noticed her drawing skills had slipped after years of not practicing.",
+   "ko": "레일라는 몇 년 쉬었더니 그림 실력이 뒷걸음질 친 걸 느꼈어요.",
+   "blank": "تقهقر",
+   "src": "made"
+  }
+ ],
  "w|تقوى": [
   {
    "text": "تقوى أحمد بكلمات صديقه في أيام مرضه الطويل.",
@@ -28196,6 +28436,22 @@
    "en": "Mona launched a campaign to limit the breeding of stray dogs.",
    "ko": "모나는 떠돌이 개가 늘어나는 걸 막는 캠페인을 시작했어요.",
    "blank": "تكاثر",
+   "src": "made"
+  }
+ ],
+ "w|تكافؤ": [
+  {
+   "text": "أصر خالد على تكافؤ الفريقين في لعبة شد الحبل.",
+   "en": "Khalid insisted that the two teams be evenly matched in tug-of-war.",
+   "ko": "칼리드는 줄다리기에서 두 팀의 힘이 비슷해야 한다고 고집했어요.",
+   "blank": "تكافؤ",
+   "src": "made"
+  },
+  {
+   "text": "تحدثت ليلى عن تكافؤ الفرص بين البنات والأولاد في مدرستها.",
+   "en": "Layla talked about equal opportunities for girls and boys at her school.",
+   "ko": "레일라는 자기 학교에서 남녀 학생에게 기회가 똑같이 주어진다고 이야기했어요.",
+   "blank": "تكافؤ",
    "src": "made"
   }
  ],
@@ -28987,6 +29243,22 @@
    "en": "Take your time with your decisions.",
    "ko": "결정은 천천히 해.",
    "blank": "تمهل"
+  }
+ ],
+ "w|تمهيد": [
+  {
+   "text": "أشعل خالد نارا صغيرة تمهيدا لطهو العشاء.",
+   "en": "Khalid lit a small fire in preparation for cooking dinner.",
+   "ko": "칼리드는 저녁을 하려고 먼저 작은 불을 피웠어요.",
+   "blank": "تمهيدا",
+   "src": "made"
+  },
+  {
+   "text": "لم تكتب ليلى أي تمهيد، بل بدأت بالخبر مباشرة.",
+   "en": "Layla wrote no introduction and started right away with the news.",
+   "ko": "레일라는 서두 없이 바로 소식부터 썼어요.",
+   "blank": "تمهيد",
+   "src": "made"
   }
  ],
  "w|تمويل": [
@@ -29853,6 +30125,22 @@
    "blank": "تواضع"
   }
  ],
+ "w|تواطؤ": [
+  {
+   "text": "كان بين أصدقاء خالد تواطؤ لإخفاء الحلوى عنه.",
+   "en": "Khalid's friends were in cahoots to hide the sweets from him.",
+   "ko": "칼리드의 친구들은 짜고 간식을 칼리드 몰래 숨겼어요.",
+   "blank": "تواطؤ",
+   "src": "made"
+  },
+  {
+   "text": "اكتشفت ليلى تواطؤ أختها وأمها في تنظيم حفلة مفاجئة لها.",
+   "en": "Layla discovered her sister and mother had secretly teamed up to throw her a surprise party.",
+   "ko": "레일라는 언니와 엄마가 몰래 짜고 깜짝 파티를 준비한 걸 알아챘어요.",
+   "blank": "تواطؤ",
+   "src": "made"
+  }
+ ],
  "w|توافق": [
   {
    "text": "توافق موعد الإجازة مع عيد ميلاد ابنة أحمد.",
@@ -29866,6 +30154,22 @@
    "en": "The new charger wasn't compatible with the customer's old phone.",
    "ko": "새 충전기는 손님의 옛날 휴대폰과 맞지 않았어요.",
    "blank": "يتوافق",
+   "src": "made"
+  }
+ ],
+ "w|توال": [
+  {
+   "text": "أمطرت السماء على خالد ثلاثة أيام على التوالي.",
+   "en": "It rained on Khalid for three days in a row.",
+   "ko": "칼리드가 있는 동안 사흘 내리 비가 왔어요.",
+   "blank": "التوالي",
+   "src": "made"
+  },
+  {
+   "text": "فازت ابنة ليلى بالجائزة للسنة الثانية على التوالي.",
+   "en": "Layla's daughter won the prize for the second year in a row.",
+   "ko": "레일라의 딸이 이 년 연속 상을 받았어요.",
+   "blank": "التوالي",
    "src": "made"
   }
  ],
@@ -30114,6 +30418,22 @@
    "en": "Fatima gave an explanation for why she missed the last get-together.",
    "ko": "파티마는 지난 모임에 빠진 이유를 설명했어요.",
    "blank": "توضيحا",
+   "src": "made"
+  }
+ ],
+ "w|توطئة": [
+  {
+   "text": "كانت ليلة التخييم الأولى توطئة لرحلة أطول خطط لها خالد.",
+   "en": "The first night of camping was a prelude to a longer trip Khalid had planned.",
+   "ko": "첫날 밤 캠핑은 칼리드가 계획한 더 긴 여행의 맛보기였어요.",
+   "blank": "توطئة",
+   "src": "made"
+  },
+  {
+   "text": "جعلت ليلى أخبار الطقس توطئة لرسالتها.",
+   "en": "Layla used weather news as a preface to her letter.",
+   "ko": "레일라는 날씨 이야기로 편지를 시작했어요.",
+   "blank": "توطئة",
    "src": "made"
   }
  ],
@@ -30637,6 +30957,22 @@
    "en": "The mother sometimes feels pain in her breast.",
    "ko": "엄마는 가끔 가슴에 통증을 느껴.",
    "blank": "ثدي"
+  }
+ ],
+ "w|ثديي": [
+  {
+   "text": "شرح خالد لابنه أن الخفاش حيوان ثديي.",
+   "en": "Khalid explained to his son that the bat is a mammal.",
+   "ko": "칼리드는 아들에게 박쥐가 포유동물이라고 설명했어요.",
+   "blank": "ثديي",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن ابنتها تحفظ اسم كل ثديي يعيش في البحر.",
+   "en": "Layla wrote that her daughter knows the name of every mammal that lives in the sea.",
+   "ko": "레일라는 딸이 바다에 사는 포유류 이름을 다 외운다고 썼어요.",
+   "blank": "ثديي",
+   "src": "made"
   }
  ],
  "w|ثرثار": [
@@ -32021,6 +32357,22 @@
    "blank": "جدول"
   }
  ],
+ "w|جدولة": [
+  {
+   "text": "أعاد خالد جدولة الرحلة بسبب العاصفة.",
+   "en": "Khalid rescheduled the trip because of the storm.",
+   "ko": "칼리드는 폭풍 때문에 여행 일정을 다시 짰어요.",
+   "blank": "جدولة",
+   "src": "made"
+  },
+  {
+   "text": "طلبت ليلى من صديقتها جدولة مكالمة شهرية بينهما.",
+   "en": "Layla asked her friend to schedule a monthly call between them.",
+   "ko": "레일라는 친구에게 한 달에 한 번 통화 일정을 잡자고 했어요.",
+   "blank": "جدولة",
+   "src": "made"
+  }
+ ],
  "w|جدوى": [
   {
    "text": "لا جدوى من الحديث مع صاحب العمارة عن الأنبوب المكسور، فهو لا يرد على الهاتف.",
@@ -32411,6 +32763,22 @@
    "en": "Do not exceed the recommended dosage.",
    "ko": "권장 복용량을 초과하지 마세요.",
    "blank": "جرعة"
+  }
+ ],
+ "w|جرف": [
+  {
+   "text": "جرف السيل بعض أغراض خالد إلى النهر.",
+   "en": "The flood swept some of Khalid's things into the river.",
+   "ko": "급류가 칼리드의 짐 몇 개를 강으로 휩쓸어 갔어요.",
+   "blank": "جرف",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن الفيضان جرف الجسر القديم في قريتها.",
+   "en": "Layla wrote that the flood swept away the old bridge in her village.",
+   "ko": "레일라는 홍수가 마을의 옛 다리를 쓸어 갔다고 썼어요.",
+   "blank": "جرف",
+   "src": "made"
   }
  ],
  "w|جرم": [
@@ -40135,6 +40503,22 @@
    "src": "made"
   }
  ],
+ "w|خندق": [
+  {
+   "text": "حفر خالد خندقا صغيرا حول الخيمة ليصرف ماء المطر.",
+   "en": "Khalid dug a small trench around the tent to drain the rainwater.",
+   "ko": "칼리드는 빗물이 빠지도록 텐트 둘레에 작은 도랑을 팠어요.",
+   "blank": "خندقا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أنها زارت خندقا قديما من أيام الحرب قرب مدينتها.",
+   "en": "Layla wrote that she had visited an old wartime trench near her city.",
+   "ko": "레일라는 동네 근처의 오래된 전쟁 참호에 다녀왔다고 썼어요.",
+   "blank": "خندقا",
+   "src": "made"
+  }
+ ],
  "w|خنزير": [
   {
    "text": "رأيت خنزير يركض في الغابة.",
@@ -41437,6 +41821,22 @@
    "en": "Sometimes you have to use self-defense.",
    "ko": "가끔은 자신을 방어해야 해요.",
    "blank": "دفاع"
+  }
+ ],
+ "w|دفاعي": [
+  {
+   "text": "وضع خالد الطعام في صندوق محكم كإجراء دفاعي ضد الحيوانات.",
+   "en": "Khalid put the food in a sealed box as a defensive measure against animals.",
+   "ko": "칼리드는 동물을 막으려고 음식을 꽉 닫히는 상자에 넣었어요.",
+   "blank": "دفاعي",
+   "src": "made"
+  },
+  {
+   "text": "اعتذرت ليلى لصديقتها عن ردها الدفاعي في رسالتها السابقة.",
+   "en": "Layla apologized to her friend for her defensive reply in her previous letter.",
+   "ko": "레일라는 지난 편지에서 방어적으로 답한 것을 친구에게 사과했어요.",
+   "blank": "الدفاعي",
+   "src": "made"
   }
  ],
  "w|دفتر": [
@@ -48351,6 +48751,22 @@
    "src": "made"
   }
  ],
+ "w|سحلية": [
+  {
+   "text": "اختبأت سحلية في حذاء خالد خارج الخيمة.",
+   "en": "A lizard hid in Khalid's shoe outside the tent.",
+   "ko": "텐트 밖에 둔 칼리드의 신발에 도마뱀이 숨어 있었어요.",
+   "blank": "سحلية",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت ليلى حين تذكرت سحلية أمسكتها صديقتها في المدرسة.",
+   "en": "Layla laughed remembering a lizard her friend caught at school.",
+   "ko": "레일라는 친구가 학교에서 도마뱀을 잡았던 일이 생각나서 웃었어요.",
+   "blank": "سحلية",
+   "src": "made"
+  }
+ ],
  "w|سحور": [
   {
    "text": "يفتح سامي المطعم ليلا في رمضان لتقديم السحور.",
@@ -52565,6 +52981,22 @@
    "src": "made"
   }
  ],
+ "w|شفق": [
+  {
+   "text": "تأمل خالد الشفق الأحمر فوق الجبال.",
+   "en": "Khalid gazed at the red twilight over the mountains.",
+   "ko": "칼리드는 산 위로 붉게 물든 노을을 바라봤어요.",
+   "blank": "الشفق",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أنها تشرب الشاي كل يوم وقت الشفق.",
+   "en": "Layla wrote that she drinks tea every day at dusk.",
+   "ko": "레일라는 날마다 해 질 녘에 차를 마신다고 썼어요.",
+   "blank": "الشفق",
+   "src": "made"
+  }
+ ],
  "w|شفقة": [
   {
    "text": "ما بدي شفقة من حدا.",
@@ -52805,6 +53237,22 @@
    "src": "made"
   }
  ],
+ "w|شلال": [
+  {
+   "text": "سبح خالد تحت شلال صغير بارد.",
+   "en": "Khalid swam under a small, cold waterfall.",
+   "ko": "칼리드는 작고 차가운 폭포 아래서 수영했어요.",
+   "blank": "شلال",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى رحلتهما المدرسية إلى الشلال.",
+   "en": "Layla remembered their school trip to the waterfall.",
+   "ko": "레일라는 둘이 함께 갔던 폭포 수학여행을 떠올렸어요.",
+   "blank": "الشلال",
+   "src": "made"
+  }
+ ],
  "w|شلل": [
   {
    "text": "بعد الحادث أصاب القطة شلل مؤقت في رجليها الخلفيتين.",
@@ -52894,6 +53342,22 @@
    "en": "The workers cut the cantaloupe on a wooden board and gave Layla the biggest piece.",
    "ko": "인부들이 나무판 위에서 멜론을 잘라 라일라에게 가장 큰 조각을 줬어요.",
    "blank": "الشمام",
+   "src": "made"
+  }
+ ],
+ "w|شمبانزي": [
+  {
+   "text": "حكى خالد لأطفاله قرب النار قصة شمبانزي ذكي.",
+   "en": "By the fire Khalid told his children a story about a clever chimpanzee.",
+   "ko": "칼리드는 모닥불 옆에서 아이들에게 똑똑한 침팬지 이야기를 들려줬어요.",
+   "blank": "شمبانزي",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت ليلى لصديقتها بطاقة عليها صورة شمبانزي يضحك.",
+   "en": "Layla sent her friend a card with a picture of a laughing chimpanzee.",
+   "ko": "레일라는 웃는 침팬지 그림이 있는 카드를 친구에게 보냈어요.",
+   "blank": "شمبانزي",
    "src": "made"
   }
  ],
@@ -53708,6 +54172,22 @@
    "en": "Fatima gave her friend's son a rocket-shaped toy.",
    "ko": "파티마는 친구 아들에게 로켓 모양 장난감을 선물했어요.",
    "blank": "صاروخ",
+   "src": "made"
+  }
+ ],
+ "w|صاعقة": [
+  {
+   "text": "سقطت صاعقة على شجرة قريبة من خيمة خالد.",
+   "en": "Lightning struck a tree near Khalid's tent.",
+   "ko": "칼리드의 텐트 근처 나무에 벼락이 떨어졌어요.",
+   "blank": "صاعقة",
+   "src": "made"
+  },
+  {
+   "text": "كان خبر سفر صديقتها صاعقة لليلى.",
+   "en": "The news of her friend's departure hit Layla like a thunderbolt.",
+   "ko": "친구가 떠난다는 소식은 레일라에게 청천벽력이었어요.",
+   "blank": "صاعقة",
    "src": "made"
   }
  ],
@@ -54862,6 +55342,22 @@
    "en": "The water polished the river stones until they became smooth as glass.",
    "ko": "강물이 돌을 유리처럼 매끈하게 다듬었어요.",
    "blank": "صقل",
+   "src": "made"
+  }
+ ],
+ "w|صقيع": [
+  {
+   "text": "غطى الصقيع سيارة خالد في الصباح.",
+   "en": "Frost covered Khalid's car in the morning.",
+   "ko": "아침에 칼리드의 차가 서리로 덮였어요.",
+   "blank": "الصقيع",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن الصقيع أتلف ورود حديقتها.",
+   "en": "Layla wrote that the frost had ruined the roses in her garden.",
+   "ko": "레일라는 서리 때문에 정원 장미가 상했다고 썼어요.",
+   "blank": "الصقيع",
    "src": "made"
   }
  ],
@@ -59774,6 +60270,22 @@
    "en": "Fatima lives in an old, established neighborhood where all the families know each other.",
    "ko": "파티마는 모든 집이 서로 아는 오래된 동네에 살아요.",
    "blank": "عريق",
+   "src": "made"
+  }
+ ],
+ "w|عرين": [
+  {
+   "text": "قال الدليل لخالد إن هذا الكهف كان عرين ذئب.",
+   "en": "The guide told Khalid that this cave used to be a wolf's den.",
+   "ko": "안내인은 칼리드에게 이 동굴이 늑대 굴이었다고 말했어요.",
+   "blank": "عرين",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن زيارتها لحديقة الحيوان انتهت أمام عرين الأسد.",
+   "en": "Layla wrote that her visit to the zoo ended in front of the lion's den.",
+   "ko": "레일라는 동물원 구경이 사자 굴 앞에서 끝났다고 썼어요.",
+   "blank": "عرين",
    "src": "made"
   }
  ],
@@ -65935,6 +66447,22 @@
    "src": "made"
   }
  ],
+ "w|فهد": [
+  {
+   "text": "شاهد خالد قبل النوم فيلما عن فهد يطارد غزالا.",
+   "en": "Before sleeping Khalid watched a film about a cheetah chasing a gazelle.",
+   "ko": "칼리드는 자기 전에 치타가 가젤을 쫓는 영화를 봤어요.",
+   "blank": "فهد",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت ليلى لصديقتها صورة فهد التقطتها في حديقة الحيوان.",
+   "en": "Layla sent her friend a photo of a cheetah she took at the zoo.",
+   "ko": "레일라는 동물원에서 찍은 치타 사진을 친구에게 보냈어요.",
+   "blank": "فهد",
+   "src": "made"
+  }
+ ],
  "w|فهرس": [
   {
    "text": "فهرس سامي أرشيف الصور حسب السنوات.",
@@ -68851,6 +69379,22 @@
    "en": "I love looking at the moon in the clear sky.",
    "ko": "맑은 하늘에서 달을 보는 걸 좋아해요.",
    "blank": "القمر"
+  }
+ ],
+ "w|قمري": [
+  {
+   "text": "رأى خالد خسوفا قمريا من أمام خيمته.",
+   "en": "Khalid saw a lunar eclipse from in front of his tent.",
+   "ko": "칼리드는 텐트 앞에서 월식을 봤어요.",
+   "blank": "قمريا",
+   "src": "made"
+  },
+  {
+   "text": "ذكرت ليلى أن التقويم القمري يحدد مواعيد الأعياد في بلدها.",
+   "en": "Layla mentioned that the lunar calendar sets the dates of holidays in her country.",
+   "ko": "레일라는 자기 나라에서는 음력으로 명절 날짜를 정한다고 했어요.",
+   "blank": "القمري",
+   "src": "made"
   }
  ],
  "w|قمع": [
@@ -75945,6 +76489,22 @@
    "src": "made"
   }
  ],
+ "w|متجمد": [
+  {
+   "text": "استيقظ خالد فوجد ماء القارورة متجمدا.",
+   "en": "Khalid woke up to find the water in the bottle frozen.",
+   "ko": "칼리드가 일어나 보니 물병 속 물이 얼어 있었어요.",
+   "blank": "متجمدا",
+   "src": "made"
+  },
+  {
+   "text": "وصفت ليلى البحيرة المتجمدة قرب بيتها الجديد.",
+   "en": "Layla described the frozen lake near her new house.",
+   "ko": "레일라는 새집 근처의 얼어붙은 호수를 묘사했어요.",
+   "blank": "المتجمدة",
+   "src": "made"
+  }
+ ],
  "w|متجهم": [
   {
    "text": "دخل المدير متجهما، فصمت حسن وزملاؤه.",
@@ -80508,6 +81068,22 @@
    "en": "School memories were the core of the conversation between Maryam and her friends.",
    "ko": "마르얌과 친구들의 이야기는 학교 시절 추억이 중심이었어요.",
    "blank": "مرتكز",
+   "src": "made"
+  }
+ ],
+ "w|مرج": [
+  {
+   "text": "نصب خالد خيمته في مرج أخضر قرب النهر.",
+   "en": "Khalid pitched his tent in a green meadow near the river.",
+   "ko": "칼리드는 강가 푸른 풀밭에 텐트를 쳤어요.",
+   "blank": "مرج",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت ليلى المرج الذي كانتا تقطفان فيه الأزهار.",
+   "en": "Layla remembered the meadow where the two of them used to pick flowers.",
+   "ko": "레일라는 둘이 꽃을 따던 풀밭을 떠올렸어요.",
+   "blank": "المرج",
    "src": "made"
   }
  ],
@@ -86079,6 +86655,22 @@
    "src": "made"
   }
  ],
+ "w|مقاربة": [
+  {
+   "text": "اعتمد خالد مقاربة بسيطة في التخييم: حقيبة واحدة لا غير.",
+   "en": "Khalid took a simple approach to camping: one bag and nothing more.",
+   "ko": "칼리드는 캠핑을 단순하게 했어요. 가방 하나면 끝이었어요.",
+   "blank": "مقاربة",
+   "src": "made"
+  },
+  {
+   "text": "تحدثت ليلى في رسالتها عن مقاربة جديدة في تعليم الأطفال القراءة.",
+   "en": "In her letter Layla talked about a new approach to teaching children to read.",
+   "ko": "레일라는 편지에서 아이들에게 읽기를 가르치는 새로운 방법을 이야기했어요.",
+   "blank": "مقاربة",
+   "src": "made"
+  }
+ ],
  "w|مقارنة": [
   {
    "text": "أحب القيام بعملية مقارنة بين الأفكار المختلفة.",
@@ -89675,6 +90267,22 @@
    "en": "I like to be well-mannered with everyone.",
    "ko": "나는 모두에게 예의 바르게 대하고 싶어.",
    "blank": "مهذب"
+  }
+ ],
+ "w|مهر": [
+  {
+   "text": "رأى خالد مهرا صغيرا يركض خلف أمه في الوادي.",
+   "en": "Khalid saw a little foal running after its mother in the valley.",
+   "ko": "칼리드는 골짜기에서 어미를 따라 뛰는 망아지를 봤어요.",
+   "blank": "مهرا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن فرس جيرانها ولدت مهرا أبيض.",
+   "en": "Layla wrote that her neighbors' mare gave birth to a white foal.",
+   "ko": "레일라는 이웃집 암말이 흰 망아지를 낳았다고 썼어요.",
+   "blank": "مهرا",
+   "src": "made"
   }
  ],
  "w|مهرج": [
@@ -95053,6 +95661,22 @@
    "blank": "هجرة"
   }
  ],
+ "w|هجري": [
+  {
+   "text": "بدأت رحلة خالد في أول شهر من السنة الهجرية.",
+   "en": "Khalid's trip began in the first month of the Hijri year.",
+   "ko": "칼리드의 여행은 이슬람력 첫 달에 시작됐어요.",
+   "blank": "الهجرية",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى التاريخ الهجري أعلى الرسالة.",
+   "en": "Layla wrote the Hijri date at the top of the letter.",
+   "ko": "레일라는 편지 맨 위에 이슬람력 날짜를 적었어요.",
+   "blank": "الهجري",
+   "src": "made"
+  }
+ ],
  "w|هجوم": [
   {
    "text": "نفذ الفريق هجوم قوي.",
@@ -98819,6 +99443,22 @@
    "en": "The weather is very cold in January.",
    "ko": "1월에는 날씨가 아주 추워.",
    "blank": "يناير"
+  }
+ ],
+ "w|ينبوع": [
+  {
+   "text": "ملأ خالد قارورته من ينبوع بارد.",
+   "en": "Khalid filled his bottle from a cold spring.",
+   "ko": "칼리드는 차가운 샘에서 물병을 채웠어요.",
+   "blank": "ينبوع",
+   "src": "made"
+  },
+  {
+   "text": "كتبت ليلى أن في قرية جدتها ينبوعا لا يجف أبدا.",
+   "en": "Layla wrote that in her grandmother's village there is a spring that never dries up.",
+   "ko": "레일라는 할머니 마을에 마르지 않는 샘이 있다고 썼어요.",
+   "blank": "ينبوعا",
+   "src": "made"
   }
  ],
  "w|يهودي": [

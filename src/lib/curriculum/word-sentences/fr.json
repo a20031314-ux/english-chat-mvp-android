@@ -4633,6 +4633,22 @@
    "blank": "aperçu"
   }
  ],
+ "w|apôtre": [
+  {
+   "text": "Antoine se fait l'apôtre du théâtre de rue dans toutes ses interviews.",
+   "en": "Antoine acts as an advocate for street theater in all his interviews.",
+   "ko": "앙투안은 인터뷰마다 거리극을 열렬히 옹호해요.",
+   "blank": "apôtre",
+   "src": "made"
+  },
+  {
+   "text": "Sarah se fait l'apôtre des produits locaux auprès de tous ses clients.",
+   "en": "Sarah champions local products to all her customers.",
+   "ko": "사라는 모든 손님에게 지역 농산물을 열심히 권해요.",
+   "blank": "apôtre",
+   "src": "made"
+  }
+ ],
  "w|apparaître": [
   {
    "text": "Elle va apparaître sur scène bientôt.",
@@ -5970,6 +5986,22 @@
    "en": "Camille checks the look of the fabric before putting it on the shelf.",
    "ko": "카미유는 천을 진열하기 전에 겉모양을 확인해요.",
    "blank": "aspect",
+   "src": "made"
+  }
+ ],
+ "w|asperge": [
+  {
+   "text": "Après la première, Antoine dîne d'asperges et de poisson avec la troupe.",
+   "en": "After opening night, Antoine has asparagus and fish for dinner with the troupe.",
+   "ko": "첫 공연이 끝나고 앙투안은 극단 사람들과 아스파라거스와 생선으로 저녁을 먹어요.",
+   "blank": "asperges",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Sarah vend les asperges du maraîcher voisin.",
+   "en": "In spring, Sarah sells asparagus from the nearby market gardener.",
+   "ko": "봄이면 사라는 근처 채소 농가의 아스파라거스를 팔아요.",
+   "blank": "asperges",
    "src": "made"
   }
  ],
@@ -7959,6 +7991,22 @@
    "blank": "avocat"
   }
  ],
+ "w|avoine": [
+  {
+   "text": "Le matin du déménagement, Nicolas avale un bol de flocons d'avoine en vitesse.",
+   "en": "On the morning of the move, Nicolas gulps down a bowl of oatmeal.",
+   "ko": "이삿날 아침 니콜라는 오트밀 한 그릇을 허겁지겁 먹어요.",
+   "blank": "avoine",
+   "src": "made"
+  },
+  {
+   "text": "La veille de la course, Inès mange un porridge d'avoine et de banane.",
+   "en": "The day before the race, Inès eats an oat and banana porridge.",
+   "ko": "경주 전날 이네스는 귀리와 바나나로 만든 죽을 먹어요.",
+   "blank": "avoine",
+   "src": "made"
+  }
+ ],
  "w|avoir": [
   {
    "text": "Tu dois avoir confiance en toi.",
@@ -8078,6 +8126,22 @@
    "en": "Claire's son is taking his baccalaureate at the end of the month.",
    "ko": "클레르의 아들은 이달 말에 바칼로레아 시험을 봐요.",
    "blank": "bac",
+   "src": "made"
+  }
+ ],
+ "w|bâche": [
+  {
+   "text": "Nicolas couvre les meubles d'une bâche, car il pleut sur le trottoir.",
+   "en": "Nicolas covers the furniture with a tarp because it's raining on the sidewalk.",
+   "ko": "인도에 비가 내려서 니콜라는 가구를 방수포로 덮어요.",
+   "blank": "bâche",
+   "src": "made"
+  },
+  {
+   "text": "Les bénévoles installent une bâche au-dessus du stand où Inès récupère son dossard.",
+   "en": "The volunteers put up a tarp over the stand where Inès picks up her race bib.",
+   "ko": "자원봉사자들이 이네스가 번호표를 받는 부스 위에 천막을 쳐요.",
+   "blank": "bâche",
    "src": "made"
   }
  ],
@@ -8375,6 +8439,22 @@
    "blank": "balancer"
   }
  ],
+ "w|balançoire": [
+  {
+   "text": "Les anciens propriétaires ont laissé une balançoire pour les enfants de Nicolas.",
+   "en": "The previous owners left a swing for Nicolas's children.",
+   "ko": "전 주인이 니콜라의 아이들을 위해 그네를 남겨 두었어요.",
+   "blank": "balançoire",
+   "src": "made"
+  },
+  {
+   "text": "Dans le parc où Inès s'entraîne, des enfants jouent sur une balançoire.",
+   "en": "In the park where Inès trains, children play on a swing.",
+   "ko": "이네스가 훈련하는 공원에서 아이들이 그네를 타요.",
+   "blank": "balançoire",
+   "src": "made"
+  }
+ ],
  "w|balayage": [
   {
    "text": "Thomas regarde l'agent d'entretien faire le balayage du couloir à l'aube.",
@@ -8669,6 +8749,22 @@
    "src": "made"
   }
  ],
+ "w|bannière": [
+  {
+   "text": "Une immense bannière annonce la pièce d'Antoine sur la façade du théâtre.",
+   "en": "A huge banner announces Antoine's play on the theater's façade.",
+   "ko": "극장 정면에 앙투안의 연극을 알리는 커다란 현수막이 걸려 있어요.",
+   "blank": "bannière",
+   "src": "made"
+  },
+  {
+   "text": "Sarah accroche une bannière colorée pour l'anniversaire de sa boutique.",
+   "en": "Sarah hangs a colorful banner for her shop's anniversary.",
+   "ko": "사라는 가게 개업 기념일에 알록달록한 현수막을 걸어요.",
+   "blank": "bannière",
+   "src": "made"
+  }
+ ],
  "w|bannir": [
   {
    "text": "La classe de Hugo a décidé de bannir les insultes dans la cour.",
@@ -8712,6 +8808,22 @@
    "en": "Chloé's dog stole a chicken leg during the village banquet.",
    "ko": "클로에의 개가 마을 연회에서 닭다리를 훔쳤어요.",
    "blank": "banquet",
+   "src": "made"
+  }
+ ],
+ "w|banquette": [
+  {
+   "text": "La banquette de la cuisine ne passe pas par la porte, et Nicolas doit la démonter.",
+   "en": "The kitchen bench won't fit through the door, and Nicolas has to take it apart.",
+   "ko": "부엌 벤치 의자가 문을 통과하지 못해서 니콜라가 분해해야 해요.",
+   "blank": "banquette",
+   "src": "made"
+  },
+  {
+   "text": "Dans le bus du retour, Inès s'endort sur la banquette du fond.",
+   "en": "On the bus home, Inès falls asleep on the back seat.",
+   "ko": "돌아오는 버스에서 이네스는 맨 뒷좌석에서 잠들어요.",
+   "blank": "banquette",
    "src": "made"
   }
  ],
@@ -8851,6 +8963,22 @@
    "en": "The barbecue's ready, come eat.",
    "ko": "바베큐 다 됐으니 먹자.",
    "blank": "barbecue"
+  }
+ ],
+ "w|barbelé": [
+  {
+   "text": "Le jardin de la nouvelle maison de Nicolas est entouré d'un vieux fil barbelé.",
+   "en": "The garden of Nicolas's new house is surrounded by an old barbed-wire fence.",
+   "ko": "니콜라의 새집 정원은 낡은 철조망으로 둘러싸여 있어요.",
+   "blank": "barbelé",
+   "src": "made"
+  },
+  {
+   "text": "Le parcours du marathon longe un ancien camp entouré de barbelé, et Inès ralentit pour lire le panneau.",
+   "en": "The marathon route runs alongside an old camp surrounded by barbed wire, and Inès slows down to read the sign.",
+   "ko": "마라톤 코스가 철조망에 둘러싸인 옛 수용소 옆을 지나서 이네스는 안내판을 읽으려고 속도를 늦춰요.",
+   "blank": "barbelé",
+   "src": "made"
   }
  ],
  "w|barbier": [
@@ -9831,6 +9959,22 @@
    "src": "made"
   }
  ],
+ "w|biberon": [
+  {
+   "text": "La femme de Nicolas prépare un biberon pour le bébé au milieu des cartons.",
+   "en": "Nicolas's wife prepares a bottle for the baby amid the boxes.",
+   "ko": "니콜라의 아내는 상자 더미 사이에서 아기 젖병을 준비해요.",
+   "blank": "biberon",
+   "src": "made"
+  },
+  {
+   "text": "Sur le bord de la route, une maman donne le biberon en encourageant Inès.",
+   "en": "On the roadside, a mother bottle-feeds her baby while cheering on Inès.",
+   "ko": "길가에서 한 엄마가 아기에게 젖병을 물리며 이네스를 응원해요.",
+   "blank": "biberon",
+   "src": "made"
+  }
+ ],
  "w|bible": [
   {
    "text": "Il a lu la bible chaque soir.",
@@ -9888,6 +10032,22 @@
    "en": "Early in the morning, a doe passes behind the actress, and Inès keeps the take.",
    "ko": "이른 아침 암사슴이 여배우 뒤로 지나가서 이네스는 그 장면을 그대로 써요.",
    "blank": "biche",
+   "src": "made"
+  }
+ ],
+ "w|bicyclette": [
+  {
+   "text": "Nicolas accroche sa bicyclette au mur du nouveau garage.",
+   "en": "Nicolas hangs his bicycle on the wall of the new garage.",
+   "ko": "니콜라는 새 차고 벽에 자전거를 걸어요.",
+   "blank": "bicyclette",
+   "src": "made"
+  },
+  {
+   "text": "Pour s'entraîner, Inès alterne la course et la bicyclette.",
+   "en": "To train, Inès alternates running and cycling.",
+   "ko": "이네스는 훈련할 때 달리기와 자전거를 번갈아 해요.",
+   "blank": "bicyclette",
    "src": "made"
   }
  ],
@@ -10329,6 +10489,22 @@
    "blank": "blanc"
   }
  ],
+ "w|blanchiment": [
+  {
+   "text": "La pièce d'Antoine raconte une affaire de blanchiment d'argent dans une petite banque.",
+   "en": "Antoine's play tells of a money-laundering case in a small bank.",
+   "ko": "앙투안의 연극은 작은 은행에서 벌어진 돈세탁 사건을 다뤄요.",
+   "blank": "blanchiment",
+   "src": "made"
+  },
+  {
+   "text": "Sarah lit dans le journal un article sur le blanchiment d'argent dans les petits commerces.",
+   "en": "Sarah reads a newspaper article about money laundering in small shops.",
+   "ko": "사라는 신문에서 작은 가게들의 돈세탁에 관한 기사를 읽어요.",
+   "blank": "blanchiment",
+   "src": "made"
+  }
+ ],
  "w|blanchir": [
   {
    "text": "L'enquête de Thomas montre que le bar servait à blanchir de l'argent.",
@@ -10342,6 +10518,22 @@
    "en": "Chloé uses baking soda to whiten an old linen sheet.",
    "ko": "클로에는 베이킹 소다로 낡은 리넨 시트를 하얗게 만들어요.",
    "blank": "blanchir",
+   "src": "made"
+  }
+ ],
+ "w|blasphème": [
+  {
+   "text": "Au dix-septième siècle, la pièce fut accusée de blasphème, raconte Antoine au public.",
+   "en": "In the seventeenth century, the play was accused of blasphemy, Antoine tells the audience.",
+   "ko": "십칠 세기에 이 연극은 신성 모독이라는 비난을 받았다고 앙투안이 관객에게 말해요.",
+   "blank": "blasphème",
+   "src": "made"
+  },
+  {
+   "text": "Le grand-père de Sarah considérait le gaspillage du pain comme un blasphème.",
+   "en": "Sarah's grandfather considered wasting bread a blasphemy.",
+   "ko": "사라의 할아버지는 빵을 버리는 걸 신성 모독처럼 여겼어요.",
+   "blank": "blasphème",
    "src": "made"
   }
  ],
@@ -11827,6 +12019,22 @@
    "blank": "bref"
   }
  ],
+ "w|bretelle": [
+  {
+   "text": "La bretelle du sac de Nicolas a lâché dans l'escalier.",
+   "en": "The strap of Nicolas's bag gave way on the stairs.",
+   "ko": "니콜라의 가방 끈이 계단에서 끊어졌어요.",
+   "blank": "bretelle",
+   "src": "made"
+  },
+  {
+   "text": "Inès règle la bretelle de son sac d'hydratation avant le départ.",
+   "en": "Inès adjusts the strap of her hydration pack before the start.",
+   "ko": "이네스는 출발 전에 수분 배낭 끈을 조절해요.",
+   "blank": "bretelle",
+   "src": "made"
+  }
+ ],
  "w|brevet": [
   {
    "text": "Louis raconte l'histoire d'un artisan qui a déposé un brevet pour une serrure.",
@@ -12925,6 +13133,22 @@
    "src": "made"
   }
  ],
+ "w|cafetière": [
+  {
+   "text": "La première chose que Nicolas déballe, c'est la cafetière.",
+   "en": "The first thing Nicolas unpacks is the coffee maker.",
+   "ko": "니콜라가 가장 먼저 푸는 짐은 커피 메이커예요.",
+   "blank": "cafetière",
+   "src": "made"
+  },
+  {
+   "text": "Le matin du marathon, Inès oublie d'allumer la cafetière.",
+   "en": "On the morning of the marathon, Inès forgets to turn on the coffee maker.",
+   "ko": "마라톤 날 아침 이네스는 커피 메이커 켜는 걸 잊어요.",
+   "blank": "cafetière",
+   "src": "made"
+  }
+ ],
  "w|cage": [
   {
    "text": "L'oiseau chante dans sa cage chaque matin.",
@@ -13151,6 +13375,22 @@
    "en": "I'm going to calm the crying baby.",
    "ko": "나는 우는 아기를 진정시킬 거야.",
    "blank": "calmer"
+  }
+ ],
+ "w|calomnie": [
+  {
+   "text": "La pièce d'Antoine montre comment une calomnie peut détruire un village entier.",
+   "en": "Antoine's play shows how a slander can destroy an entire village.",
+   "ko": "앙투안의 연극은 중상모략 하나가 마을 전체를 어떻게 무너뜨리는지 보여 줘요.",
+   "blank": "calomnie",
+   "src": "made"
+  },
+  {
+   "text": "Une rumeur sur l'épicerie de Sarah s'est révélée être une pure calomnie.",
+   "en": "A rumor about Sarah's shop turned out to be pure slander.",
+   "ko": "사라의 가게에 대한 소문은 순전한 모함으로 드러났어요.",
+   "blank": "calomnie",
+   "src": "made"
   }
  ],
  "w|calorie": [
@@ -13439,6 +13679,22 @@
    "blank": "canal"
   }
  ],
+ "w|canalisation": [
+  {
+   "text": "Le plombier découvre une canalisation fissurée sous l'évier de Nicolas.",
+   "en": "The plumber discovers a cracked pipe under Nicolas's sink.",
+   "ko": "배관공이 니콜라네 싱크대 밑에서 금 간 배관을 찾아내요.",
+   "blank": "canalisation",
+   "src": "made"
+  },
+  {
+   "text": "Une canalisation a éclaté sur le parcours, et Inès doit courir dans l'eau.",
+   "en": "A pipe burst on the route, and Inès has to run through water.",
+   "ko": "코스에서 수도관이 터져서 이네스는 물속을 달려야 해요.",
+   "blank": "canalisation",
+   "src": "made"
+  }
+ ],
  "w|canapé": [
   {
    "text": "Je me repose sur le canapé après le travail.",
@@ -13524,6 +13780,22 @@
    "en": "Chloé drinks a can of lemonade sitting on an old trunk.",
    "ko": "클로에는 낡은 트렁크에 앉아 레모네이드 한 캔을 마셔요.",
    "blank": "canette",
+   "src": "made"
+  }
+ ],
+ "w|caniveau": [
+  {
+   "text": "Le billet d'Antoine s'est envolé et a fini dans le caniveau devant le théâtre.",
+   "en": "Antoine's ticket blew away and ended up in the gutter in front of the theater.",
+   "ko": "앙투안의 표가 바람에 날려 극장 앞 배수로에 떨어졌어요.",
+   "blank": "caniveau",
+   "src": "made"
+  },
+  {
+   "text": "Une pièce de monnaie roule de la main de Sarah jusque dans le caniveau.",
+   "en": "A coin rolls from Sarah's hand into the gutter.",
+   "ko": "동전 하나가 사라의 손에서 굴러 배수로로 들어가요.",
+   "blank": "caniveau",
    "src": "made"
   }
  ],
@@ -16261,6 +16533,22 @@
    "blank": "chaud"
   }
  ],
+ "w|chaudière": [
+  {
+   "text": "Le premier hiver, la chaudière de la nouvelle maison de Nicolas tombe en panne.",
+   "en": "The first winter, the boiler in Nicolas's new house breaks down.",
+   "ko": "첫겨울에 니콜라의 새집 보일러가 고장 나요.",
+   "blank": "chaudière",
+   "src": "made"
+  },
+  {
+   "text": "Ce matin-là, la chaudière est en panne, et Inès prend une douche froide avant le marathon.",
+   "en": "That morning, the boiler is broken, and Inès takes a cold shower before the marathon.",
+   "ko": "그날 아침 보일러가 고장 나서 이네스는 마라톤 전에 찬물로 샤워해요.",
+   "blank": "chaudière",
+   "src": "made"
+  }
+ ],
  "w|chauffage": [
   {
    "text": "En hiver, Lucas allume le chauffage dès le mois d'octobre.",
@@ -17447,6 +17735,22 @@
    "src": "made"
   }
  ],
+ "w|cirer": [
+  {
+   "text": "Avant de vendre, Nicolas a fait cirer le vieux parquet de l'entrée.",
+   "en": "Before selling, Nicolas had the old hallway floor waxed.",
+   "ko": "팔기 전에 니콜라는 현관의 낡은 마루에 왁스를 먹였어요.",
+   "blank": "cirer",
+   "src": "made"
+  },
+  {
+   "text": "La veille du marathon, Inès aide son grand-père à cirer ses souliers pour venir l'encourager.",
+   "en": "The day before the marathon, Inès helps her grandfather polish his shoes so he can come and cheer her on.",
+   "ko": "마라톤 전날 이네스는 응원하러 올 할아버지의 구두를 닦는 걸 도와드려요.",
+   "blank": "cirer",
+   "src": "made"
+  }
+ ],
  "w|cirque": [
   {
    "text": "On va au cirque ce week-end.",
@@ -18133,6 +18437,22 @@
    "src": "made"
   }
  ],
+ "w|cloison": [
+  {
+   "text": "Nicolas veut abattre une cloison pour agrandir le salon.",
+   "en": "Nicolas wants to knock down a partition wall to enlarge the living room.",
+   "ko": "니콜라는 거실을 넓히려고 칸막이벽 하나를 허물고 싶어 해요.",
+   "blank": "cloison",
+   "src": "made"
+  },
+  {
+   "text": "Dans le gymnase, une cloison sépare le vestiaire des femmes de celui des hommes, et Inès s'y change.",
+   "en": "In the gym, a partition separates the women's changing room from the men's, and Inès changes there.",
+   "ko": "체육관에서 칸막이가 여자 탈의실과 남자 탈의실을 나누고, 이네스는 거기서 옷을 갈아입어요.",
+   "blank": "cloison",
+   "src": "made"
+  }
+ ],
  "w|clone": [
   {
    "text": "Thomas plaisante en disant que tous les sapins de la forêt sont des clones.",
@@ -18239,6 +18559,22 @@
    "blank": "coach"
   }
  ],
+ "w|coalition": [
+  {
+   "text": "Plusieurs petits théâtres forment une coalition pour défendre leurs subventions, et Antoine les soutient.",
+   "en": "Several small theaters form a coalition to defend their grants, and Antoine supports them.",
+   "ko": "작은 극장 여러 곳이 지원금을 지키려고 연합을 꾸리고, 앙투안이 힘을 보태요.",
+   "blank": "coalition",
+   "src": "made"
+  },
+  {
+   "text": "Sarah rejoint une coalition de commerçants contre la hausse des loyers.",
+   "en": "Sarah joins a coalition of shopkeepers against rising rents.",
+   "ko": "사라는 임대료 인상에 반대하는 상인 연합에 들어가요.",
+   "blank": "coalition",
+   "src": "made"
+  }
+ ],
  "w|cobaye": [
   {
    "text": "Paul plaisante : il sert de cobaye à sa sœur, qui teste ses nouvelles recettes de camping.",
@@ -18283,6 +18619,22 @@
    "en": "The pig likes to roll in the mud.",
    "ko": "돼지는 진흙에서 구르는 걸 좋아해.",
    "blank": "cochon"
+  }
+ ],
+ "w|cockpit": [
+  {
+   "text": "Nicolas emballe la maquette de cockpit que son fils a construite.",
+   "en": "Nicolas packs the cockpit model his son built.",
+   "ko": "니콜라는 아들이 만든 조종석 모형을 포장해요.",
+   "blank": "cockpit",
+   "src": "made"
+  },
+  {
+   "text": "Inès est pilote de ligne, et elle pense au marathon même dans le cockpit.",
+   "en": "Inès is an airline pilot, and she thinks about the marathon even in the cockpit.",
+   "ko": "이네스는 여객기 조종사라 조종석에서도 마라톤 생각을 해요.",
+   "blank": "cockpit",
+   "src": "made"
   }
  ],
  "w|cocktail": [
@@ -18887,6 +19239,22 @@
    "en": "The colonel is respected by everyone.",
    "ko": "대령은 모두에게 존경받아.",
    "blank": "colonel"
+  }
+ ],
+ "w|colonial": [
+  {
+   "text": "La pièce d'Antoine critique la violence de l'époque coloniale.",
+   "en": "Antoine's play criticizes the violence of the colonial era.",
+   "ko": "앙투안의 연극은 식민지 시대의 폭력을 비판해요.",
+   "blank": "coloniale",
+   "src": "made"
+  },
+  {
+   "text": "L'immeuble de Sarah date de l'époque coloniale, avec de hauts plafonds.",
+   "en": "Sarah's building dates from the colonial era, with high ceilings.",
+   "ko": "사라의 가게가 있는 건물은 식민지 시대에 지어져 천장이 높아요.",
+   "blank": "coloniale",
+   "src": "made"
   }
  ],
  "w|colonie": [
@@ -21261,6 +21629,22 @@
    "blank": "congrès"
   }
  ],
+ "w|conjoint": [
+  {
+   "text": "Nicolas et sa conjointe signent ensemble le bail du nouvel appartement.",
+   "en": "Nicolas and his partner sign the new apartment lease together.",
+   "ko": "니콜라와 배우자는 새 아파트 임대 계약서에 함께 서명해요.",
+   "blank": "conjointe",
+   "src": "made"
+  },
+  {
+   "text": "Le conjoint d'Inès l'attend à l'arrivée avec une couverture.",
+   "en": "Inès's partner waits for her at the finish with a blanket.",
+   "ko": "이네스의 배우자가 결승선에서 담요를 들고 기다려요.",
+   "blank": "conjoint",
+   "src": "made"
+  }
+ ],
  "w|conjugal": [
   {
    "text": "Les parents d'Antoine fêtent cinquante ans de bonheur conjugal avec tout le village.",
@@ -22393,6 +22777,22 @@
    "en": "The contract is valid for one year.",
    "ko": "계약은 1년 동안 유효해.",
    "blank": "contrat"
+  }
+ ],
+ "w|contravention": [
+  {
+   "text": "Le camion de déménagement de Nicolas a reçu une contravention pour stationnement gênant.",
+   "en": "Nicolas's moving truck got a ticket for obstructive parking.",
+   "ko": "니콜라의 이삿짐 트럭이 주차 위반 딱지를 받았어요.",
+   "blank": "contravention",
+   "src": "made"
+  },
+  {
+   "text": "Le jour du marathon, Inès a trouvé une contravention sur son pare-brise.",
+   "en": "On marathon day, Inès found a ticket on her windshield.",
+   "ko": "마라톤 날 이네스는 앞 유리에 붙은 주차 딱지를 발견했어요.",
+   "blank": "contravention",
+   "src": "made"
   }
  ],
  "w|contre": [
@@ -25977,6 +26377,22 @@
    "blank": "débile"
   }
  ],
+ "w|débit": [
+  {
+   "text": "Le metteur en scène demande à Antoine de ralentir son débit dans la deuxième scène.",
+   "en": "The director asks Antoine to slow down his delivery in the second scene.",
+   "ko": "연출가가 앙투안에게 둘째 장면에서 말 속도를 늦추라고 해요.",
+   "blank": "débit",
+   "src": "made"
+  },
+  {
+   "text": "L'épicerie de Sarah a aussi une licence de débit de tabac.",
+   "en": "Sarah's shop also has a license to sell tobacco.",
+   "ko": "사라의 가게는 담배 판매 허가도 있어요.",
+   "blank": "débit",
+   "src": "made"
+  }
+ ],
  "w|débloquer": [
   {
    "text": "Le département va débloquer des fonds pour la piscine, annonce Paul.",
@@ -26589,6 +27005,22 @@
    "src": "made"
   }
  ],
+ "w|décontracté": [
+  {
+   "text": "Malgré les cartons partout, Nicolas reste décontracté et sifflote.",
+   "en": "Despite the boxes everywhere, Nicolas stays relaxed and whistles.",
+   "ko": "사방에 상자가 있어도 니콜라는 느긋하게 휘파람을 불어요.",
+   "blank": "décontracté",
+   "src": "made"
+  },
+  {
+   "text": "Au départ, Inès semble décontractée, mais son cœur bat très fort.",
+   "en": "At the start, Inès looks relaxed, but her heart is pounding.",
+   "ko": "출발선에서 이네스는 느긋해 보이지만 심장은 쿵쾅거려요.",
+   "blank": "décontractée",
+   "src": "made"
+  }
+ ],
  "w|décor": [
   {
    "text": "Hugo n'aime pas trop le décor du hall, avec ses plantes en plastique.",
@@ -26783,6 +27215,22 @@
    "en": "Come inside, it’s cold outside.",
    "ko": "안으로 들어와, 밖이 추워.",
    "blank": "dedans"
+  }
+ ],
+ "w|dédicace": [
+  {
+   "text": "Après le spectacle, Antoine écrit une dédicace sur le programme d'une spectatrice.",
+   "en": "After the show, Antoine writes a dedication on a spectator's program.",
+   "ko": "공연이 끝나고 앙투안은 한 관객의 프로그램에 사인 문구를 적어 줘요.",
+   "blank": "dédicace",
+   "src": "made"
+  },
+  {
+   "text": "Sarah garde un livre de cuisine avec la dédicace de son ancienne patronne.",
+   "en": "Sarah keeps a cookbook with a dedication from her former boss.",
+   "ko": "사라는 예전 사장이 글을 적어 준 요리책을 간직해요.",
+   "blank": "dédicace",
+   "src": "made"
   }
  ],
  "w|dédier": [
@@ -27266,6 +27714,22 @@
    "en": "Manon managed to dig up an old ice-cream machine at a flea market.",
    "ko": "마농은 벼룩시장에서 오래된 아이스크림 기계를 용케 구했어요.",
    "blank": "dégoter",
+   "src": "made"
+  }
+ ],
+ "w|dégoût": [
+  {
+   "text": "Le personnage d'Antoine montre son dégoût en recrachant le vin.",
+   "en": "Antoine's character shows his disgust by spitting out the wine.",
+   "ko": "앙투안이 맡은 인물은 포도주를 뱉으며 역겨움을 드러내요.",
+   "blank": "dégoût",
+   "src": "made"
+  },
+  {
+   "text": "Sarah cache son dégoût quand un client laisse traîner un chewing-gum sur le comptoir.",
+   "en": "Sarah hides her disgust when a customer leaves chewing gum on the counter.",
+   "ko": "손님이 계산대에 껌을 붙여 두자 사라는 역겨움을 꾹 참아요.",
+   "blank": "dégoût",
    "src": "made"
   }
  ],
@@ -28040,6 +28504,22 @@
    "en": "The town hall wants to knock down the old barn behind Sarah's house.",
    "ko": "면사무소는 사라네 집 뒤 낡은 헛간을 허물려고 해요.",
    "blank": "démolir",
+   "src": "made"
+  }
+ ],
+ "w|démolition": [
+  {
+   "text": "La démolition du vieux garage commence le lendemain du déménagement de Nicolas.",
+   "en": "Demolition of the old garage starts the day after Nicolas's move.",
+   "ko": "니콜라가 이사한 다음 날 낡은 차고 철거가 시작돼요.",
+   "blank": "démolition",
+   "src": "made"
+  },
+  {
+   "text": "Le parcours passe devant un chantier de démolition, et Inès respire la poussière.",
+   "en": "The route passes a demolition site, and Inès breathes in the dust.",
+   "ko": "코스가 철거 현장 앞을 지나서 이네스는 먼지를 들이마셔요.",
+   "blank": "démolition",
    "src": "made"
   }
  ],
@@ -30239,6 +30719,22 @@
    "blank": "diamant"
   }
  ],
+ "w|diamètre": [
+  {
+   "text": "Le décor tourne sur un plateau d'un grand diamètre, et Antoine doit garder l'équilibre.",
+   "en": "The set turns on a wide-diameter platform, and Antoine has to keep his balance.",
+   "ko": "무대 장치가 지름이 큰 회전판 위에서 돌아서 앙투안은 균형을 잡아야 해요.",
+   "blank": "diamètre",
+   "src": "made"
+  },
+  {
+   "text": "Sarah vend des fromages ronds de différents diamètres.",
+   "en": "Sarah sells round cheeses of different diameters.",
+   "ko": "사라는 지름이 서로 다른 둥근 치즈를 팔아요.",
+   "blank": "diamètres",
+   "src": "made"
+  }
+ ],
  "w|diarrhée": [
   {
    "text": "Dans la salle d'attente, Antoine lit une affiche sur la diarrhée du voyageur.",
@@ -30347,6 +30843,22 @@
    "en": "For him, God is everywhere.",
    "ko": "그에게 신은 어디에나 있어.",
    "blank": "dieu"
+  }
+ ],
+ "w|diffamation": [
+  {
+   "text": "Un critique a été poursuivi pour diffamation après un article sur la troupe d'Antoine.",
+   "en": "A critic was sued for defamation after an article about Antoine's troupe.",
+   "ko": "한 평론가가 앙투안의 극단에 관한 기사로 명예훼손 소송을 당했어요.",
+   "blank": "diffamation",
+   "src": "made"
+  },
+  {
+   "text": "Sarah a porté plainte pour diffamation après un faux avis sur internet.",
+   "en": "Sarah filed a complaint for defamation after a fake online review.",
+   "ko": "사라는 인터넷에 올라온 거짓 후기 때문에 명예훼손으로 고소했어요.",
+   "blank": "diffamation",
+   "src": "made"
   }
  ],
  "w|différemment": [
@@ -32289,6 +32801,22 @@
    "en": "She is very talented at music.",
    "ko": "그녀는 음악에 아주 재능이 있어.",
    "blank": "douée"
+  }
+ ],
+ "w|douillet": [
+  {
+   "text": "Nicolas veut faire de la petite chambre un coin douillet pour lire.",
+   "en": "Nicolas wants to make the small room into a cozy reading corner.",
+   "ko": "니콜라는 작은 방을 아늑한 독서 공간으로 꾸미고 싶어 해요.",
+   "blank": "douillet",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Inès ne rêve que de son lit douillet.",
+   "en": "After the race, Inès dreams only of her cozy bed.",
+   "ko": "경주가 끝나자 이네스는 아늑한 침대 생각뿐이에요.",
+   "blank": "douillet",
+   "src": "made"
   }
  ],
  "w|douleur": [
@@ -34747,6 +35275,22 @@
    "src": "made"
   }
  ],
+ "w|émeraude": [
+  {
+   "text": "La salle de bains de la nouvelle maison de Nicolas est carrelée en vert émeraude.",
+   "en": "The bathroom in Nicolas's new house is tiled in emerald green.",
+   "ko": "니콜라의 새집 욕실은 에메랄드빛 초록 타일로 돼 있어요.",
+   "blank": "émeraude",
+   "src": "made"
+  },
+  {
+   "text": "Inès porte un bandeau vert émeraude pour que sa famille la repère facilement.",
+   "en": "Inès wears an emerald-green headband so her family can spot her easily.",
+   "ko": "이네스는 가족이 쉽게 알아보도록 에메랄드빛 초록 머리띠를 해요.",
+   "blank": "émeraude",
+   "src": "made"
+  }
+ ],
  "w|émetteur": [
   {
    "text": "Le livreur parle à son collègue grâce à un petit émetteur radio fixé à sa ceinture.",
@@ -34928,6 +35472,22 @@
    "en": "In the action scene, Camille grabs a plastic sword.",
    "ko": "액션 장면에서 카미유는 플라스틱 칼을 집어 들어요.",
    "blank": "empare",
+   "src": "made"
+  }
+ ],
+ "w|empathie": [
+  {
+   "text": "Pour jouer ce rôle difficile, Antoine doit faire preuve de beaucoup d'empathie.",
+   "en": "To play this difficult role, Antoine has to show a lot of empathy.",
+   "ko": "이 어려운 역을 하려면 앙투안은 공감 능력을 많이 발휘해야 해요.",
+   "blank": "empathie",
+   "src": "made"
+  },
+  {
+   "text": "Sarah écoute les clients âgés avec beaucoup d'empathie.",
+   "en": "Sarah listens to elderly customers with a lot of empathy.",
+   "ko": "사라는 나이 든 손님들의 말을 아주 공감하며 들어 줘요.",
+   "blank": "empathie",
    "src": "made"
   }
  ],
@@ -45045,6 +45605,22 @@
    "blank": "gars"
   }
  ],
+ "w|gaspillage": [
+  {
+   "text": "Nicolas donne ses vieux meubles pour éviter le gaspillage.",
+   "en": "Nicolas gives away his old furniture to avoid waste.",
+   "ko": "니콜라는 낭비를 막으려고 헌 가구를 남에게 줘요.",
+   "blank": "gaspillage",
+   "src": "made"
+  },
+  {
+   "text": "Inès regrette le gaspillage de bouteilles en plastique aux ravitaillements.",
+   "en": "Inès regrets the waste of plastic bottles at the refreshment stations.",
+   "ko": "이네스는 급수대에서 버려지는 플라스틱 병이 아까워요.",
+   "blank": "gaspillage",
+   "src": "made"
+  }
+ ],
  "w|gaspiller": [
   {
    "text": "Hugo refuse de gaspiller de l'argent et récupère les vieilles tuiles du toit.",
@@ -49423,6 +49999,22 @@
    "src": "made"
   }
  ],
+ "w|hystérie": [
+  {
+   "text": "À la fin du spectacle, une vague d'hystérie traverse le public, et Antoine n'en revient pas.",
+   "en": "At the end of the show, a wave of hysteria sweeps through the audience, and Antoine can't believe it.",
+   "ko": "공연이 끝나자 관객석에 광란의 물결이 일고, 앙투안은 믿기지 않아 해요.",
+   "blank": "hystérie",
+   "src": "made"
+  },
+  {
+   "text": "Le jour des soldes, une petite hystérie gagne l'épicerie de Sarah.",
+   "en": "On sale day, a little frenzy takes over Sarah's corner shop.",
+   "ko": "세일하는 날 사라의 가게에 작은 소동이 벌어져요.",
+   "blank": "hystérie",
+   "src": "made"
+  }
+ ],
  "w|hystérique": [
   {
    "text": "Hugo a entendu un rire hystérique dans la cuisine et a cru que sa sœur se moquait de lui.",
@@ -53785,6 +54377,22 @@
    "src": "made"
   }
  ],
+ "w|intriguer": [
+  {
+   "text": "Une petite porte au fond de la cave commence à intriguer Nicolas.",
+   "en": "A little door at the back of the cellar starts to intrigue Nicolas.",
+   "ko": "지하실 안쪽의 작은 문이 니콜라의 호기심을 자극하기 시작해요.",
+   "blank": "intriguer",
+   "src": "made"
+  },
+  {
+   "text": "Le coureur déguisé en dinosaure ne cesse d'intriguer Inès pendant la course.",
+   "en": "The runner dressed as a dinosaur keeps intriguing Inès during the race.",
+   "ko": "공룡 분장을 한 주자가 경주 내내 이네스의 호기심을 끌어요.",
+   "blank": "intriguer",
+   "src": "made"
+  }
+ ],
  "w|introduction": [
   {
    "text": "Thomas rédige l'introduction de son rapport annuel sur la sécurité routière.",
@@ -54887,6 +55495,22 @@
    "blank": "job"
   }
  ],
+ "w|jockey": [
+  {
+   "text": "Antoine apprend à monter à cheval pour jouer un ancien jockey.",
+   "en": "Antoine learns to ride a horse to play a former jockey.",
+   "ko": "앙투안은 왕년의 기수를 연기하려고 말 타기를 배워요.",
+   "blank": "jockey",
+   "src": "made"
+  },
+  {
+   "text": "Un ancien jockey, tout petit et très drôle, fait ses courses chez Sarah.",
+   "en": "A former jockey, very small and very funny, does his shopping at Sarah's.",
+   "ko": "아주 작고 재미있는 전직 기수가 사라의 가게에서 장을 봐요.",
+   "blank": "jockey",
+   "src": "made"
+  }
+ ],
  "w|jogging": [
   {
    "text": "Nicolas s'est foulé la cheville pendant son jogging du dimanche matin.",
@@ -55545,6 +56169,22 @@
    "en": "A kilometer on foot wears out your shoes.",
    "ko": "1킬로미터를 걸으면 신발이 닳지.",
    "blank": "kilomètre"
+  }
+ ],
+ "w|kiosque": [
+  {
+   "text": "Antoine achète le journal au kiosque pour lire la critique de la pièce.",
+   "en": "Antoine buys the paper at the newsstand to read the review of the play.",
+   "ko": "앙투안은 연극 평을 읽으려고 가판대에서 신문을 사요.",
+   "blank": "kiosque",
+   "src": "made"
+  },
+  {
+   "text": "Depuis que le kiosque d'en face a fermé, Sarah vend aussi des journaux.",
+   "en": "Since the newsstand across the street closed, Sarah also sells newspapers.",
+   "ko": "맞은편 가판대가 문을 닫은 뒤로 사라가 신문도 팔아요.",
+   "blank": "kiosque",
+   "src": "made"
   }
  ],
  "w|kit": [
@@ -57711,6 +58351,22 @@
    "src": "made"
   }
  ],
+ "w|louange": [
+  {
+   "text": "La presse ne tarit pas de louanges sur la performance d'Antoine.",
+   "en": "The press is full of praise for Antoine's performance.",
+   "ko": "언론은 앙투안의 연기를 끝없이 칭찬해요.",
+   "blank": "louanges",
+   "src": "made"
+  },
+  {
+   "text": "Les louanges des clients sur ses confitures font rougir Sarah.",
+   "en": "Customers' praise of her jams makes Sarah blush.",
+   "ko": "손님들이 잼을 칭찬하자 사라의 얼굴이 빨개져요.",
+   "blank": "louanges",
+   "src": "made"
+  }
+ ],
  "w|louche": [
   {
    "text": "La sœur d'Antoine trouve son comportement un peu louche depuis hier.",
@@ -59775,6 +60431,22 @@
    "src": "made"
   }
  ],
+ "w|maritime": [
+  {
+   "text": "La nouvelle pièce d'Antoine se passe dans un petit port maritime.",
+   "en": "Antoine's new play is set in a small seaport.",
+   "ko": "앙투안의 새 연극은 작은 항구 마을이 배경이에요.",
+   "blank": "maritime",
+   "src": "made"
+  },
+  {
+   "text": "L'épicerie de Sarah vend des cartes postales de la gare maritime toute proche.",
+   "en": "Sarah's shop sells postcards of the nearby ferry terminal.",
+   "ko": "사라의 가게는 근처 여객선 터미널 엽서를 팔아요.",
+   "blank": "maritime",
+   "src": "made"
+  }
+ ],
  "w|marketing": [
   {
    "text": "Louis doit superviser le stagiaire qui écrit la page sur le marketing des grandes surfaces.",
@@ -60855,6 +61527,22 @@
    "blank": "meilleur"
   }
  ],
+ "w|mélancolique": [
+  {
+   "text": "Le monologue final rend Antoine mélancolique chaque soir.",
+   "en": "The final monologue makes Antoine melancholy every night.",
+   "ko": "마지막 독백 때문에 앙투안은 매일 밤 울적해져요.",
+   "blank": "mélancolique",
+   "src": "made"
+  },
+  {
+   "text": "Les jours de pluie, Sarah devient mélancolique derrière son comptoir vide.",
+   "en": "On rainy days, Sarah grows melancholy behind her empty counter.",
+   "ko": "비 오는 날이면 사라는 손님 없는 계산대 뒤에서 울적해져요.",
+   "blank": "mélancolique",
+   "src": "made"
+  }
+ ],
  "w|mélange": [
   {
    "text": "Ce mélange de fruits est délicieux.",
@@ -61110,6 +61798,22 @@
    "en": "The documentary Émilie saw tells the story of a former beggar who became a marathon runner.",
    "ko": "에밀리가 본 다큐멘터리는 거지였다가 마라톤 선수가 된 사람의 이야기예요.",
    "blank": "mendiant",
+   "src": "made"
+  }
+ ],
+ "w|mendier": [
+  {
+   "text": "Dans la pièce, le personnage d'Antoine doit mendier devant une église.",
+   "en": "In the play, Antoine's character has to beg in front of a church.",
+   "ko": "연극에서 앙투안의 인물은 성당 앞에서 구걸해야 해요.",
+   "blank": "mendier",
+   "src": "made"
+  },
+  {
+   "text": "Sarah offre un sandwich à l'homme qui vient mendier devant sa porte.",
+   "en": "Sarah gives a sandwich to the man who comes to beg at her door.",
+   "ko": "사라는 가게 앞에서 구걸하는 남자에게 샌드위치를 줘요.",
+   "blank": "mendier",
    "src": "made"
   }
  ],
@@ -62435,6 +63139,22 @@
    "blank": "minute"
   }
  ],
+ "w|minuteur": [
+  {
+   "text": "Nicolas met un minuteur pour ne pas oublier les pâtes au milieu des cartons.",
+   "en": "Nicolas sets a timer so he won't forget the pasta amid the boxes.",
+   "ko": "니콜라는 상자 정리하다 파스타를 잊지 않으려고 타이머를 맞춰요.",
+   "blank": "minuteur",
+   "src": "made"
+  },
+  {
+   "text": "Pendant l'entraînement, Inès utilise un minuteur pour ses fractionnés.",
+   "en": "During training, Inès uses a timer for her intervals.",
+   "ko": "훈련할 때 이네스는 인터벌 달리기에 타이머를 써요.",
+   "blank": "minuteur",
+   "src": "made"
+  }
+ ],
  "w|minutieux": [
   {
    "text": "Hugo fait un travail minutieux pour réparer les reliures abîmées.",
@@ -62611,6 +63331,22 @@
    "en": "This sculpture is very mobile and easy to move.",
    "ko": "이 조각상은 매우 이동성이 좋아서 옮기기 쉬워.",
    "blank": "mobile"
+  }
+ ],
+ "w|mobilier": [
+  {
+   "text": "Le nouvel appartement de Nicolas est loué avec tout le mobilier.",
+   "en": "Nicolas's new apartment is rented with all the furniture.",
+   "ko": "니콜라의 새 아파트는 가구가 모두 딸린 채로 임대돼요.",
+   "blank": "mobilier",
+   "src": "made"
+  },
+  {
+   "text": "Le mobilier urbain du parcours est décoré de ballons pour encourager Inès et les autres coureurs.",
+   "en": "The street furniture along the route is decorated with balloons to cheer on Inès and the other runners.",
+   "ko": "코스의 거리 시설물이 이네스와 다른 주자들을 응원하는 풍선으로 꾸며져 있어요.",
+   "blank": "mobilier",
+   "src": "made"
   }
  ],
  "w|moche": [
@@ -62863,6 +63599,22 @@
    "en": "He worked here for six months.",
    "ko": "여기서 6개월 동안 일했어.",
    "blank": "mois"
+  }
+ ],
+ "w|moisissure": [
+  {
+   "text": "Derrière l'armoire, Nicolas découvre des traces de moisissure sur le mur.",
+   "en": "Behind the wardrobe, Nicolas discovers traces of mold on the wall.",
+   "ko": "옷장 뒤에서 니콜라는 벽에 핀 곰팡이 자국을 발견해요.",
+   "blank": "moisissure",
+   "src": "made"
+  },
+  {
+   "text": "Inès jette son vieux sac de sport, envahi par la moisissure.",
+   "en": "Inès throws away her old gym bag, overrun with mold.",
+   "ko": "이네스는 곰팡이가 잔뜩 핀 낡은 운동 가방을 버려요.",
+   "blank": "moisissure",
+   "src": "made"
   }
  ],
  "w|moitié": [
@@ -64417,6 +65169,22 @@
    "src": "made"
   }
  ],
+ "w|narrateur": [
+  {
+   "text": "Antoine joue le narrateur qui commente l'histoire depuis le bord de la scène.",
+   "en": "Antoine plays the narrator who comments on the story from the edge of the stage.",
+   "ko": "앙투안은 무대 가장자리에서 이야기를 풀어 가는 해설자를 맡아요.",
+   "blank": "narrateur",
+   "src": "made"
+  },
+  {
+   "text": "Sarah lit des romans policiers dont le narrateur est souvent le coupable.",
+   "en": "Sarah reads detective novels in which the narrator is often the culprit.",
+   "ko": "사라는 화자가 범인인 경우가 많은 추리 소설을 읽어요.",
+   "blank": "narrateur",
+   "src": "made"
+  }
+ ],
  "w|natal": [
   {
    "text": "Antoine est revenu vivre dans son village natal après vingt ans en ville.",
@@ -64477,6 +65245,22 @@
    "blank": "national"
   }
  ],
+ "w|nationalité": [
+  {
+   "text": "La troupe d'Antoine réunit des comédiens de plusieurs nationalités.",
+   "en": "Antoine's troupe brings together actors of several nationalities.",
+   "ko": "앙투안의 극단에는 여러 국적의 배우들이 모여 있어요.",
+   "blank": "nationalités",
+   "src": "made"
+  },
+  {
+   "text": "Les clients de Sarah viennent de toutes les nationalités du quartier.",
+   "en": "Sarah's customers come from every nationality in the neighborhood.",
+   "ko": "사라의 손님은 동네의 온갖 국적 사람들이에요.",
+   "blank": "nationalités",
+   "src": "made"
+  }
+ ],
  "w|nature": [
   {
    "text": "J’adore me promener dans la nature.",
@@ -64517,6 +65301,22 @@
    "en": "You can come naturally if you want.",
    "ko": "원한다면 자연스럽게 와도 돼.",
    "blank": "naturellement"
+  }
+ ],
+ "w|naufrage": [
+  {
+   "text": "Le déménagement de Nicolas a tourné au naufrage quand le camion est tombé en panne.",
+   "en": "Nicolas's move turned into a disaster when the truck broke down.",
+   "ko": "트럭이 고장 나면서 니콜라의 이사는 엉망이 됐어요.",
+   "blank": "naufrage",
+   "src": "made"
+  },
+  {
+   "text": "Sous la pluie battante, le marathon tourne au naufrage pour beaucoup de coureurs, mais pas pour Inès.",
+   "en": "In the pouring rain, the marathon becomes a shipwreck for many runners, but not for Inès.",
+   "ko": "폭우 속에서 많은 주자에게 마라톤이 엉망이 되지만 이네스는 아니에요.",
+   "blank": "naufrage",
+   "src": "made"
   }
  ],
  "w|nausée": [
@@ -66981,6 +67781,22 @@
    "src": "made"
   }
  ],
+ "w|oppression": [
+  {
+   "text": "La pièce d'Antoine raconte la lutte d'un peuple contre l'oppression.",
+   "en": "Antoine's play tells of a people's struggle against oppression.",
+   "ko": "앙투안의 연극은 억압에 맞선 한 민족의 투쟁을 그려요.",
+   "blank": "oppression",
+   "src": "made"
+  },
+  {
+   "text": "Une cliente âgée raconte à Sarah les années d'oppression qu'elle a vécues dans sa jeunesse.",
+   "en": "An elderly customer tells Sarah about the years of oppression she lived through in her youth.",
+   "ko": "나이 든 손님이 젊은 시절 겪은 억압의 세월을 사라에게 들려줘요.",
+   "blank": "oppression",
+   "src": "made"
+  }
+ ],
  "w|optimisme": [
   {
    "text": "Paul rentre chez lui plein d'optimisme pour la suite.",
@@ -67360,6 +68176,22 @@
    "en": "Sarah's friend now works for a nature conservation organisation.",
    "ko": "사라의 친구는 이제 자연 보호 단체에서 일해요.",
    "blank": "organisme",
+   "src": "made"
+  }
+ ],
+ "w|orge": [
+  {
+   "text": "Le voisin de Nicolas cultive de l'orge dans le champ derrière la maison.",
+   "en": "Nicolas's neighbor grows barley in the field behind the house.",
+   "ko": "니콜라의 이웃은 집 뒤 밭에 보리를 길러요.",
+   "blank": "orge",
+   "src": "made"
+  },
+  {
+   "text": "Inès boit une boisson à l'orge grillée après la course.",
+   "en": "Inès drinks a roasted barley drink after the race.",
+   "ko": "경주 뒤 이네스는 볶은 보리 음료를 마셔요.",
+   "blank": "orge",
    "src": "made"
   }
  ],
@@ -70487,6 +71319,22 @@
    "src": "made"
   }
  ],
+ "w|penchant": [
+  {
+   "text": "Nicolas a un certain penchant pour les meubles anciens, et il en garde trop.",
+   "en": "Nicolas has a certain fondness for antique furniture, and he keeps too much of it.",
+   "ko": "니콜라는 옛 가구를 꽤 좋아해서 너무 많이 간직해요.",
+   "blank": "penchant",
+   "src": "made"
+  },
+  {
+   "text": "Inès a un penchant pour les courses longues plutôt que les sprints.",
+   "en": "Inès has a liking for long races rather than sprints.",
+   "ko": "이네스는 단거리보다 장거리를 좋아해요.",
+   "blank": "penchant",
+   "src": "made"
+  }
+ ],
  "w|pencher": [
   {
    "text": "Hugo doit pencher la tête pour voir le tableau derrière son grand voisin.",
@@ -70515,6 +71363,22 @@
    "en": "Don't talk during the movie.",
    "ko": "영화 보는 동안 말하지 마.",
    "blank": "pendant"
+  }
+ ],
+ "w|pendentif": [
+  {
+   "text": "Dans la pièce, le personnage d'Antoine offre un pendentif à sa fille.",
+   "en": "In the play, Antoine's character gives his daughter a pendant.",
+   "ko": "연극에서 앙투안이 맡은 인물은 딸에게 펜던트를 선물해요.",
+   "blank": "pendentif",
+   "src": "made"
+  },
+  {
+   "text": "Sarah porte toujours le pendentif que lui a offert sa mère.",
+   "en": "Sarah always wears the pendant her mother gave her.",
+   "ko": "사라는 어머니가 준 펜던트를 늘 하고 다녀요.",
+   "blank": "pendentif",
+   "src": "made"
   }
  ],
  "w|pendre": [
@@ -70680,6 +71544,22 @@
    "en": "Chloé explains that apple seeds contain a substance toxic to parrots.",
    "ko": "클로에는 사과씨에 앵무새에게 해로운 성분이 있다고 설명해요.",
    "blank": "pépin",
+   "src": "made"
+  }
+ ],
+ "w|percée": [
+  {
+   "text": "Ce rôle a été la vraie percée d'Antoine, après des années de petits rôles.",
+   "en": "This role was Antoine's real breakthrough, after years of small parts.",
+   "ko": "이 역은 작은 배역만 하던 앙투안에게 진짜 도약이 됐어요.",
+   "blank": "percée",
+   "src": "made"
+  },
+  {
+   "text": "La vente en ligne a été une vraie percée pour la petite épicerie de Sarah.",
+   "en": "Online sales were a real breakthrough for Sarah's little shop.",
+   "ko": "온라인 판매는 사라의 작은 가게에 진짜 돌파구가 됐어요.",
+   "blank": "percée",
    "src": "made"
   }
  ],
@@ -72241,6 +73121,22 @@
    "src": "made"
   }
  ],
+ "w|pioche": [
+  {
+   "text": "Nicolas a besoin d'une pioche pour arracher les vieilles souches du jardin.",
+   "en": "Nicolas needs a pickaxe to pull out the old stumps in the garden.",
+   "ko": "니콜라는 정원의 오래된 그루터기를 뽑으려면 곡괭이가 필요해요.",
+   "blank": "pioche",
+   "src": "made"
+  },
+  {
+   "text": "Inès passe en courant devant un potager où un vieil homme retourne la terre à la pioche.",
+   "en": "Inès runs past a vegetable garden where an old man is turning the soil with a pickaxe.",
+   "ko": "이네스는 한 노인이 곡괭이로 흙을 갈아엎는 텃밭 앞을 달려 지나가요.",
+   "blank": "pioche",
+   "src": "made"
+  }
+ ],
  "w|pion": [
   {
    "text": "Le pion a surpris Lucas avec son téléphone pendant l'étude.",
@@ -73602,6 +74498,22 @@
    "en": "Dr Moreau has very specialized knowledge of heart disease.",
    "ko": "모로 선생님은 심장병에 대해 아주 전문적인 지식이 있어요.",
    "blank": "pointues",
+   "src": "made"
+  }
+ ],
+ "w|pointure": [
+  {
+   "text": "En vidant les placards, Nicolas trouve des chaussures qui ne sont plus à sa pointure.",
+   "en": "Emptying the closets, Nicolas finds shoes that are no longer his size.",
+   "ko": "벽장을 비우다가 니콜라는 이제 발에 안 맞는 신발을 찾아요.",
+   "blank": "pointure",
+   "src": "made"
+  },
+  {
+   "text": "Inès prend toujours ses chaussures de course une pointure au-dessus.",
+   "en": "Inès always gets her running shoes one size up.",
+   "ko": "이네스는 운동화를 늘 한 치수 크게 사요.",
+   "blank": "pointure",
    "src": "made"
   }
  ],
@@ -75182,6 +76094,22 @@
    "en": "Sarah's grandfather claims he can predict rain thanks to his knee.",
    "ko": "사라의 할아버지는 무릎으로 비를 예측할 수 있다고 우겨요.",
    "blank": "prédire",
+   "src": "made"
+  }
+ ],
+ "w|préfecture": [
+  {
+   "text": "Antoine doit passer à la préfecture pour renouveler ses papiers avant la tournée.",
+   "en": "Antoine has to go to the prefecture to renew his papers before the tour.",
+   "ko": "순회공연 전에 앙투안은 서류를 갱신하러 도청에 가야 해요.",
+   "blank": "préfecture",
+   "src": "made"
+  },
+  {
+   "text": "La boutique de Sarah se trouve juste en face de la préfecture.",
+   "en": "Sarah's shop is right across from the prefecture.",
+   "ko": "사라의 가게는 도청 바로 맞은편에 있어요.",
+   "blank": "préfecture",
    "src": "made"
   }
  ],
@@ -80859,6 +81787,22 @@
    "src": "made"
   }
  ],
+ "w|réconciliation": [
+  {
+   "text": "La pièce se termine par la réconciliation de deux frères, et Antoine pleure à chaque représentation.",
+   "en": "The play ends with the reconciliation of two brothers, and Antoine cries at every performance.",
+   "ko": "연극은 두 형제의 화해로 끝나고, 앙투안은 공연 때마다 울어요.",
+   "blank": "réconciliation",
+   "src": "made"
+  },
+  {
+   "text": "La réconciliation entre les deux voisins a eu lieu devant le comptoir de Sarah.",
+   "en": "The reconciliation between the two neighbors took place in front of Sarah's counter.",
+   "ko": "두 이웃의 화해는 사라의 계산대 앞에서 이루어졌어요.",
+   "blank": "réconciliation",
+   "src": "made"
+  }
+ ],
  "w|réconcilier": [
   {
    "text": "Paul aide Simon à se réconcilier avec la comptable après un malentendu.",
@@ -82671,6 +83615,22 @@
    "src": "made"
   }
  ],
+ "w|rempart": [
+  {
+   "text": "Cet été, Antoine joue en plein air au pied des remparts de la vieille ville.",
+   "en": "This summer, Antoine performs outdoors at the foot of the old town's ramparts.",
+   "ko": "올여름 앙투안은 구시가지 성벽 아래 야외 무대에서 공연해요.",
+   "blank": "remparts",
+   "src": "made"
+  },
+  {
+   "text": "Pour les vieux du quartier, l'épicerie de Sarah est un rempart contre la solitude.",
+   "en": "For the neighborhood's old people, Sarah's shop is a bulwark against loneliness.",
+   "ko": "동네 노인들에게 사라의 가게는 외로움을 막아 주는 방패예요.",
+   "blank": "rempart",
+   "src": "made"
+  }
+ ],
  "w|remplaçant": [
   {
    "text": "Le grutier est malade, alors Louis attend son remplaçant.",
@@ -83053,6 +84013,22 @@
    "src": "made"
   }
  ],
+ "w|rénover": [
+  {
+   "text": "Nicolas compte rénover la salle de bains avant l'arrivée de ses parents.",
+   "en": "Nicolas plans to renovate the bathroom before his parents arrive.",
+   "ko": "니콜라는 부모님이 오시기 전에 욕실을 고칠 계획이에요.",
+   "blank": "rénover",
+   "src": "made"
+  },
+  {
+   "text": "La ville a fait rénover la piste du stade où s'entraîne Inès.",
+   "en": "The town had the stadium track where Inès trains renovated.",
+   "ko": "시가 이네스가 훈련하는 경기장 트랙을 새로 고쳤어요.",
+   "blank": "rénover",
+   "src": "made"
+  }
+ ],
  "w|renseignement": [
   {
    "text": "Je cherche un renseignement sur ce produit.",
@@ -83354,6 +84330,38 @@
    "en": "After dropping out last year, Claire had to rethink her whole training.",
    "ko": "작년에 기권한 뒤 클레르는 훈련 전체를 다시 짜야 했어요.",
    "blank": "repenser",
+   "src": "made"
+  }
+ ],
+ "w|repentir": [
+  {
+   "text": "Dans la pièce, le personnage d'Antoine finit par se repentir de ses mensonges.",
+   "en": "In the play, Antoine's character ends up repenting of his lies.",
+   "ko": "연극에서 앙투안의 인물은 결국 자기 거짓말을 뉘우쳐요.",
+   "blank": "repentir",
+   "src": "made"
+  },
+  {
+   "text": "Le garçon qui avait volé des bonbons revient chez Sarah pour se repentir.",
+   "en": "The boy who had stolen sweets comes back to Sarah's shop to apologize.",
+   "ko": "사탕을 훔쳤던 소년이 뉘우치러 사라의 가게에 다시 와요.",
+   "blank": "repentir",
+   "src": "made"
+  }
+ ],
+ "w|répercussion": [
+  {
+   "text": "Le succès de la pièce a eu des répercussions sur toute la carrière d'Antoine.",
+   "en": "The play's success had repercussions on Antoine's whole career.",
+   "ko": "연극의 성공은 앙투안의 경력 전체에 영향을 미쳤어요.",
+   "blank": "répercussions",
+   "src": "made"
+  },
+  {
+   "text": "La fermeture du supermarché a eu des répercussions positives sur l'épicerie de Sarah.",
+   "en": "The supermarket's closing had positive repercussions for Sarah's shop.",
+   "ko": "슈퍼마켓이 문을 닫으면서 사라의 가게에 좋은 영향이 생겼어요.",
+   "blank": "répercussions",
    "src": "made"
   }
  ],
@@ -85443,6 +86451,22 @@
    "src": "made"
   }
  ],
+ "w|rincer": [
+  {
+   "text": "Avant d'emballer la vaisselle, Nicolas prend le temps de la rincer.",
+   "en": "Before packing the dishes, Nicolas takes the time to rinse them.",
+   "ko": "그릇을 싸기 전에 니콜라는 시간을 들여 헹궈요.",
+   "blank": "rincer",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Inès se dépêche de rincer sa gourde à la fontaine.",
+   "en": "After the race, Inès hurries to rinse her water bottle at the fountain.",
+   "ko": "경주가 끝나자 이네스는 서둘러 분수대에서 물병을 헹궈요.",
+   "blank": "rincer",
+   "src": "made"
+  }
+ ],
  "w|ringard": [
   {
    "text": "Lucas trouve que le pull de son prof de maths est un peu ringard.",
@@ -86075,6 +87099,22 @@
    "src": "made"
   }
  ],
+ "w|rouille": [
+  {
+   "text": "Nicolas gratte la rouille sur le portail avant de le repeindre.",
+   "en": "Nicolas scrapes the rust off the gate before repainting it.",
+   "ko": "니콜라는 대문을 다시 칠하기 전에 녹을 긁어내요.",
+   "blank": "rouille",
+   "src": "made"
+  },
+  {
+   "text": "Au vestiaire du stade, la rouille bloque le cadenas du casier d'Inès.",
+   "en": "In the stadium locker room, rust jams the padlock on Inès's locker.",
+   "ko": "경기장 탈의실에서 녹이 슬어 이네스의 사물함 자물쇠가 안 열려요.",
+   "blank": "rouille",
+   "src": "made"
+  }
+ ],
  "w|rouiller": [
   {
    "text": "Après l'été, Lucas trouve que l'anglais de ses élèves a un peu rouillé.",
@@ -86659,6 +87699,22 @@
    "src": "made"
   }
  ],
+ "w|sacoche": [
+  {
+   "text": "Antoine range son texte et ses lunettes dans une vieille sacoche en cuir.",
+   "en": "Antoine puts his script and glasses in an old leather satchel.",
+   "ko": "앙투안은 대본과 안경을 낡은 가죽 가방에 넣어요.",
+   "blank": "sacoche",
+   "src": "made"
+  },
+  {
+   "text": "Un client a oublié sa sacoche près de la caisse, et Sarah la met de côté.",
+   "en": "A customer forgot his satchel near the till, and Sarah puts it aside.",
+   "ko": "한 손님이 계산대 옆에 가방을 두고 가서 사라가 따로 챙겨 둬요.",
+   "blank": "sacoche",
+   "src": "made"
+  }
+ ],
  "w|sacré": [
   {
    "text": "C’est un endroit sacré pour eux.",
@@ -86671,6 +87727,22 @@
    "en": "The temple is a sacred place.",
    "ko": "그 사원은 신성한 곳이야.",
    "blank": "sacré"
+  }
+ ],
+ "w|sacrement": [
+  {
+   "text": "Dans ce drame paysan, Antoine joue un vieux curé qui administre le sacrement du baptême.",
+   "en": "In this rural drama, Antoine plays an old priest who administers the sacrament of baptism.",
+   "ko": "이 농촌 드라마에서 앙투안은 세례 성사를 집전하는 늙은 신부를 연기해요.",
+   "blank": "sacrement",
+   "src": "made"
+  },
+  {
+   "text": "Avant chaque sacrement de la paroisse, les familles achètent leurs dragées chez Sarah.",
+   "en": "Before every parish sacrament, families buy their sugared almonds at Sarah's.",
+   "ko": "본당 성사가 있을 때마다 가족들이 사라의 가게에서 드라제를 사요.",
+   "blank": "sacrement",
+   "src": "made"
   }
  ],
  "w|sacrifice": [
@@ -87066,6 +88138,22 @@
    "en": "The hotel garden is a little sanctuary for birds, Léa says with a smile.",
    "ko": "호텔 정원은 새들의 작은 안식처라며 레아가 웃어요.",
    "blank": "sanctuaire",
+   "src": "made"
+  }
+ ],
+ "w|sandale": [
+  {
+   "text": "Pour la scène de plage, Antoine traverse la scène en sandales.",
+   "en": "For the beach scene, Antoine crosses the stage in sandals.",
+   "ko": "해변 장면에서 앙투안은 샌들을 신고 무대를 가로질러요.",
+   "blank": "sandales",
+   "src": "made"
+  },
+  {
+   "text": "L'été, Sarah suspend des sandales en plastique devant la vitrine.",
+   "en": "In summer, Sarah hangs plastic sandals in front of the shop window.",
+   "ko": "여름이면 사라는 진열창 앞에 플라스틱 샌들을 걸어요.",
+   "blank": "sandales",
    "src": "made"
   }
  ],
@@ -89145,6 +90233,22 @@
    "src": "made"
   }
  ],
+ "w|serein": [
+  {
+   "text": "Une fois le dernier carton posé, Nicolas se sent enfin serein.",
+   "en": "Once the last box is down, Nicolas finally feels calm.",
+   "ko": "마지막 상자를 내려놓자 니콜라는 드디어 마음이 편해요.",
+   "blank": "serein",
+   "src": "made"
+  },
+  {
+   "text": "Après des mois d'entraînement, Inès arrive sereine sur la ligne de départ.",
+   "en": "After months of training, Inès arrives calm at the starting line.",
+   "ko": "몇 달 훈련한 이네스는 담담하게 출발선에 서요.",
+   "blank": "sereine",
+   "src": "made"
+  }
+ ],
  "w|sérénité": [
   {
    "text": "Malgré le stress, Paul garde une certaine sérénité pendant la réunion.",
@@ -89586,6 +90690,22 @@
    "en": "On the shop radio, Inès hears a debate about sex education in schools.",
    "ko": "가게 라디오에서 이네스는 학교 성교육에 관한 토론을 들어요.",
    "blank": "sexuelle",
+   "src": "made"
+  }
+ ],
+ "w|shampoing": [
+  {
+   "text": "Le premier soir, Nicolas cherche son shampoing dans une dizaine de cartons.",
+   "en": "The first evening, Nicolas searches for his shampoo in a dozen boxes.",
+   "ko": "첫날 저녁 니콜라는 상자 열댓 개를 뒤지며 샴푸를 찾아요.",
+   "blank": "shampoing",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Inès se lave les cheveux avec un shampoing à la menthe.",
+   "en": "After the race, Inès washes her hair with a mint shampoo.",
+   "ko": "경주를 마치고 이네스는 박하 샴푸로 머리를 감아요.",
+   "blank": "shampoing",
    "src": "made"
   }
  ],
@@ -94443,6 +95563,22 @@
    "src": "made"
   }
  ],
+ "w|tabouret": [
+  {
+   "text": "Nicolas grimpe sur un tabouret pour décrocher les rideaux.",
+   "en": "Nicolas climbs on a stool to take down the curtains.",
+   "ko": "니콜라는 커튼을 떼려고 의자에 올라가요.",
+   "blank": "tabouret",
+   "src": "made"
+  },
+  {
+   "text": "À l'arrivée, Inès s'effondre sur un tabouret du stand de massage.",
+   "en": "At the finish, Inès collapses onto a stool at the massage stand.",
+   "ko": "결승선에서 이네스는 마사지 부스의 의자에 털썩 주저앉아요.",
+   "blank": "tabouret",
+   "src": "made"
+  }
+ ],
  "w|tache": [
   {
    "text": "Il y a une tache sur ta chemise.",
@@ -94469,6 +95605,22 @@
    "en": "I finished my task for today.",
    "ko": "오늘 할 일을 끝냈어.",
    "blank": "tâche"
+  }
+ ],
+ "w|tacher": [
+  {
+   "text": "Nicolas met une vieille chemise pour ne pas tacher ses vêtements en peignant.",
+   "en": "Nicolas puts on an old shirt so he won't stain his clothes while painting.",
+   "ko": "니콜라는 페인트칠하다 옷에 얼룩이 지지 않게 헌 셔츠를 입어요.",
+   "blank": "tacher",
+   "src": "made"
+  },
+  {
+   "text": "Inès renverse son gel énergétique et a peur de tacher son tee-shirt neuf.",
+   "en": "Inès spills her energy gel and is afraid of staining her new T-shirt.",
+   "ko": "이네스는 에너지 젤을 쏟아서 새 티셔츠가 얼룩질까 봐 걱정해요.",
+   "blank": "tacher",
+   "src": "made"
   }
  ],
  "w|tact": [
@@ -96051,6 +97203,22 @@
    "blank": "thé"
   }
  ],
+ "w|théâtral": [
+  {
+   "text": "Antoine trouve le jeu de son partenaire un peu trop théâtral.",
+   "en": "Antoine finds his partner's acting a bit too theatrical.",
+   "ko": "앙투안은 상대 배우의 연기가 좀 과장됐다고 생각해요.",
+   "blank": "théâtral",
+   "src": "made"
+  },
+  {
+   "text": "Un client salue Sarah d'une révérence théâtrale chaque fois qu'il entre.",
+   "en": "A customer greets Sarah with a theatrical bow every time he comes in.",
+   "ko": "한 손님은 들어올 때마다 과장된 인사로 사라를 맞아요.",
+   "blank": "théâtrale",
+   "src": "made"
+  }
+ ],
  "w|théâtre": [
   {
    "text": "On va au théâtre ce soir.",
@@ -96611,6 +97779,22 @@
    "en": "I like your style.",
    "ko": "너 스타일 마음에 들어.",
    "blank": "ton"
+  }
+ ],
+ "w|tondeuse": [
+  {
+   "text": "Nicolas range la tondeuse au fond du nouveau cabanon.",
+   "en": "Nicolas puts the lawnmower at the back of the new shed.",
+   "ko": "니콜라는 잔디 깎는 기계를 새 창고 안쪽에 넣어 둬요.",
+   "blank": "tondeuse",
+   "src": "made"
+  },
+  {
+   "text": "L'odeur d'herbe coupée par une tondeuse accompagne Inès dans le parc.",
+   "en": "The smell of grass cut by a mower follows Inès through the park.",
+   "ko": "잔디 깎는 기계가 지나간 풀 냄새가 공원을 달리는 이네스를 따라와요.",
+   "blank": "tondeuse",
+   "src": "made"
   }
  ],
  "w|tong": [
@@ -98649,6 +99833,22 @@
    "src": "made"
   }
  ],
+ "w|tronçonneuse": [
+  {
+   "text": "Nicolas emprunte une tronçonneuse pour couper l'arbre mort du jardin.",
+   "en": "Nicolas borrows a chainsaw to cut down the dead tree in the garden.",
+   "ko": "니콜라는 정원의 죽은 나무를 베려고 전기톱을 빌려요.",
+   "blank": "tronçonneuse",
+   "src": "made"
+  },
+  {
+   "text": "Pendant l'entraînement en forêt, le bruit d'une tronçonneuse couvre la musique d'Inès.",
+   "en": "During training in the forest, the noise of a chainsaw drowns out Inès's music.",
+   "ko": "숲에서 훈련하는 동안 전기톱 소리가 이네스의 음악을 덮어 버려요.",
+   "blank": "tronçonneuse",
+   "src": "made"
+  }
+ ],
  "w|trône": [
   {
    "text": "Il rêve de monter sur le trône.",
@@ -99023,6 +100223,22 @@
    "blank": "tueur"
   }
  ],
+ "w|tuile": [
+  {
+   "text": "Après la tempête, Nicolas monte sur le toit pour remplacer une tuile cassée.",
+   "en": "After the storm, Nicolas climbs onto the roof to replace a broken tile.",
+   "ko": "폭풍이 지나간 뒤 니콜라는 깨진 기와를 갈려고 지붕에 올라가요.",
+   "blank": "tuile",
+   "src": "made"
+  },
+  {
+   "text": "Une tuile tombée d'un toit a failli toucher Inès pendant son footing.",
+   "en": "A tile that fell from a roof nearly hit Inès during her jog.",
+   "ko": "지붕에서 떨어진 기와가 조깅하던 이네스를 칠 뻔했어요.",
+   "blank": "tuile",
+   "src": "made"
+  }
+ ],
  "w|tumeur": [
   {
    "text": "Les médecins ont découvert une tumeur, mais elle est bénigne.",
@@ -99049,6 +100265,22 @@
    "en": "There is a lot of noise in this tunnel.",
    "ko": "이 터널 안은 소음이 많아.",
    "blank": "tunnel"
+  }
+ ],
+ "w|turbulence": [
+  {
+   "text": "En revenant de la tournée, l'avion d'Antoine traverse une zone de turbulence.",
+   "en": "Coming back from the tour, Antoine's plane goes through turbulence.",
+   "ko": "순회공연에서 돌아오는 길에 앙투안이 탄 비행기가 난기류를 지나요.",
+   "blank": "turbulence",
+   "src": "made"
+  },
+  {
+   "text": "Un client pilote raconte à Sarah la turbulence qu'il a traversée la veille.",
+   "en": "A customer who is a pilot tells Sarah about the turbulence he went through the day before.",
+   "ko": "조종사인 손님이 전날 겪은 난기류 이야기를 사라에게 해요.",
+   "blank": "turbulence",
+   "src": "made"
   }
  ],
  "w|turc": [
@@ -100693,6 +101925,22 @@
    "blank": "vers"
   }
  ],
+ "w|versement": [
+  {
+   "text": "Antoine attend le versement de son cachet pour payer son loyer.",
+   "en": "Antoine is waiting for his fee to be paid so he can pay his rent.",
+   "ko": "앙투안은 출연료가 들어오기를 기다렸다가 월세를 내요.",
+   "blank": "versement",
+   "src": "made"
+  },
+  {
+   "text": "Sarah accepte le versement en trois fois pour les grosses commandes.",
+   "en": "Sarah accepts payment in three installments for big orders.",
+   "ko": "사라는 큰 주문은 세 번에 나눠 내도 받아 줘요.",
+   "blank": "versement",
+   "src": "made"
+  }
+ ],
  "w|verser": [
   {
    "text": "Peux-tu verser le lait dans la casserole ?",
@@ -100906,6 +102154,22 @@
    "en": "The band's drummer is also a vet and treats horses during the week.",
    "ko": "밴드 드러머는 수의사이기도 해서 주중엔 말을 돌봐요.",
    "blank": "vétérinaire",
+   "src": "made"
+  }
+ ],
+ "w|veuf": [
+  {
+   "text": "Antoine joue un veuf qui apprend à vivre seul après quarante ans de mariage.",
+   "en": "Antoine plays a widower learning to live alone after forty years of marriage.",
+   "ko": "앙투안은 결혼 사십 년 만에 혼자 사는 법을 배우는 홀아비를 연기해요.",
+   "blank": "veuf",
+   "src": "made"
+  },
+  {
+   "text": "Chaque matin, un vieux veuf vient acheter son pain chez Sarah.",
+   "en": "Every morning, an old widower comes to buy his bread at Sarah's.",
+   "ko": "매일 아침 나이 든 홀아비가 사라의 가게에 빵을 사러 와요.",
+   "blank": "veuf",
    "src": "made"
   }
  ],
@@ -102774,6 +104038,22 @@
    "en": "Léa hangs a black-and-white zebra poster in the hallway.",
    "ko": "레아는 현관에 흑백 얼룩말 포스터를 걸어요.",
    "blank": "zèbre",
+   "src": "made"
+  }
+ ],
+ "w|zèle": [
+  {
+   "text": "Le jeune assistant prépare les costumes avec un zèle qui amuse Antoine.",
+   "en": "The young assistant prepares the costumes with a zeal that amuses Antoine.",
+   "ko": "젊은 조수가 열성적으로 의상을 준비해서 앙투안이 웃어요.",
+   "blank": "zèle",
+   "src": "made"
+  },
+  {
+   "text": "Le nouveau livreur range les rayons avec un zèle qui étonne Sarah.",
+   "en": "The new delivery man stocks the shelves with a zeal that surprises Sarah.",
+   "ko": "새 배달원이 열성적으로 진열대를 정리해서 사라가 놀라요.",
+   "blank": "zèle",
    "src": "made"
   }
  ],

@@ -539,6 +539,22 @@
    "blank": "accanto"
   }
  ],
+ "w|accantonare": [
+  {
+   "text": "Il cliente decide di accantonare il progetto della piscina, e Marco ci resta male.",
+   "en": "The client decides to shelve the swimming pool project, and Marco is disappointed.",
+   "ko": "고객이 수영장 계획을 보류하기로 해서 마르코는 서운해요.",
+   "blank": "accantonare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ammette di aver dovuto accantonare il sogno di aprire una libreria.",
+   "en": "Giulia admits she had to set aside her dream of opening a bookshop.",
+   "ko": "줄리아는 서점을 열고 싶던 꿈을 접어야 했다고 고백해요.",
+   "blank": "accantonare",
+   "src": "made"
+  }
+ ],
  "w|accappatoio": [
   {
    "text": "Andrea monta un gancio dietro la porta del bagno per appendere l'accappatoio.",
@@ -803,6 +819,54 @@
    "src": "made"
   }
  ],
+ "w|accingersi": [
+  {
+   "text": "Marco si accinge a gettare il cemento quando comincia a piovere.",
+   "en": "Marco is about to pour the concrete when it starts to rain.",
+   "ko": "마르코가 콘크리트를 부으려는 순간 비가 오기 시작해요.",
+   "blank": "accinge",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive questa lettera mentre si accinge a partire per un lungo viaggio.",
+   "en": "Giulia writes this letter as she gets ready to leave on a long journey.",
+   "ko": "줄리아는 긴 여행을 떠나려는 참에 이 편지를 써요.",
+   "blank": "accinge",
+   "src": "made"
+  }
+ ],
+ "w|acciuffare": [
+  {
+   "text": "Marco riesce ad acciuffare il cappello prima che il vento lo porti giù dal ponteggio.",
+   "en": "Marco manages to grab his hat before the wind blows it off the scaffolding.",
+   "ko": "마르코는 바람에 비계 아래로 날아가기 직전에 모자를 낚아채요.",
+   "blank": "acciuffare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta che il vicino è riuscito ad acciuffare il gatto scappato sul tetto.",
+   "en": "Giulia says her neighbour managed to catch the cat that had escaped onto the roof.",
+   "ko": "줄리아는 이웃이 지붕으로 도망간 고양이를 붙잡았다고 이야기해요.",
+   "blank": "acciuffare",
+   "src": "made"
+  }
+ ],
+ "w|accludere": [
+  {
+   "text": "Ogni venerdì Marco deve accludere le foto del cantiere alla relazione settimanale.",
+   "en": "Every Friday Marco has to enclose photos of the site with the weekly report.",
+   "ko": "마르코는 금요일마다 주간 보고서에 현장 사진을 첨부해야 해요.",
+   "blank": "accludere",
+   "src": "made"
+  },
+  {
+   "text": "Giulia decide di accludere alla lettera una foto delle loro vecchie vacanze.",
+   "en": "Giulia decides to enclose a photo from their old holidays with the letter.",
+   "ko": "줄리아는 편지에 둘이 예전에 놀러 갔을 때 찍은 사진을 동봉하기로 해요.",
+   "blank": "accludere",
+   "src": "made"
+  }
+ ],
  "w|accogliente": [
   {
    "text": "La cucina del corso è piccola ma accogliente, e Andrea ci sta bene.",
@@ -924,6 +988,22 @@
    "en": "Sara tried to please everyone, but in the end the sofa didn't fit in the living room.",
    "ko": "사라는 모두를 만족시키려 했지만 결국 소파가 거실에 안 들어갔어요.",
    "blank": "accontentare",
+   "src": "made"
+  }
+ ],
+ "w|accorciare": [
+  {
+   "text": "Per farlo entrare nel muro, Marco deve accorciare il tubo di qualche centimetro.",
+   "en": "To fit it into the wall, Marco has to shorten the pipe by a few centimetres.",
+   "ko": "벽에 맞추려면 마르코는 관을 몇 센티미터 잘라 내야 해요.",
+   "blank": "accorciare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive a Chiara di aver deciso di accorciare i capelli dopo tanti anni.",
+   "en": "Giulia writes to Chiara that she has decided to cut her hair short after so many years.",
+   "ko": "줄리아는 키아라에게 오랜만에 머리를 짧게 자르기로 했다고 써요.",
+   "blank": "accorciare",
    "src": "made"
   }
  ],
@@ -1483,6 +1563,22 @@
    "src": "made"
   }
  ],
+ "w|aderire": [
+  {
+   "text": "Marco decide di aderire allo sciopero dei lavoratori edili.",
+   "en": "Marco decides to join the construction workers' strike.",
+   "ko": "마르코는 건설 노동자 파업에 동참하기로 해요.",
+   "blank": "aderire",
+   "src": "made"
+  },
+  {
+   "text": "Giulia invita Chiara ad aderire all'associazione degli ex alunni del liceo.",
+   "en": "Giulia invites Chiara to join the high school alumni association.",
+   "ko": "줄리아는 키아라에게 고등학교 동문회에 가입하라고 권해요.",
+   "blank": "aderire",
+   "src": "made"
+  }
+ ],
  "w|adesivo": [
   {
    "text": "Sul portatile di Simone c'è un adesivo con il logo del giornale.",
@@ -1525,6 +1621,22 @@
    "en": "Being a teenager is not easy.",
    "ko": "청소년이 되는 건 쉽지 않아.",
    "blank": "adolescente"
+  }
+ ],
+ "w|adoperare": [
+  {
+   "text": "Marco insegna all'apprendista come adoperare la livella.",
+   "en": "Marco shows the apprentice how to use the spirit level.",
+   "ko": "마르코는 견습생에게 수평계 쓰는 법을 가르쳐요.",
+   "blank": "adoperare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta che sua nonna sapeva adoperare la macchina da cucire meglio di chiunque.",
+   "en": "Giulia says her grandmother could use the sewing machine better than anyone.",
+   "ko": "줄리아는 할머니가 누구보다 재봉틀을 잘 다뤘다고 이야기해요.",
+   "blank": "adoperare",
+   "src": "made"
   }
  ],
  "w|adorabile": [
@@ -1877,6 +1989,22 @@
    "src": "made"
   }
  ],
+ "w|affiggere": [
+  {
+   "text": "All'ingresso del cantiere Marco deve affiggere il cartello con i dati dei lavori.",
+   "en": "At the site entrance Marco has to put up the sign with the details of the works.",
+   "ko": "마르코는 현장 입구에 공사 정보가 적힌 표지판을 붙여야 해요.",
+   "blank": "affiggere",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive che in paese il comune ha fatto affiggere i manifesti per la festa di settembre.",
+   "en": "Giulia writes that the council has had posters put up in the village for the September festival.",
+   "ko": "줄리아는 마을에 구월 축제 포스터가 붙었다고 써요.",
+   "blank": "affiggere",
+   "src": "made"
+  }
+ ],
  "w|affilare": [
   {
    "text": "Stefano usa una vecchia lama per affilare le matite dell'ufficio.",
@@ -1984,6 +2112,22 @@
    "en": "For a scene at the harbour they sank an old boat, and Giulia filmed everything.",
    "ko": "항구 장면을 위해 낡은 배를 가라앉혔고 줄리아가 전부 찍었어요.",
    "blank": "affondare",
+   "src": "made"
+  }
+ ],
+ "w|affrettarsi": [
+  {
+   "text": "Prima del temporale Marco deve affrettarsi a coprire il cemento fresco.",
+   "en": "Before the storm Marco has to hurry to cover the fresh concrete.",
+   "ko": "폭풍우가 오기 전에 마르코는 서둘러 갓 부은 콘크리트를 덮어야 해요.",
+   "blank": "affrettarsi",
+   "src": "made"
+  },
+  {
+   "text": "Giulia dice a Chiara di non affrettarsi a rispondere, perché aspetterà volentieri.",
+   "en": "Giulia tells Chiara not to rush to reply, because she'll happily wait.",
+   "ko": "줄리아는 키아라에게 기꺼이 기다릴 테니 서둘러 답장하지 않아도 된다고 해요.",
+   "blank": "affrettarsi",
    "src": "made"
   }
  ],
@@ -2380,6 +2524,22 @@
    "en": "In August Martina is already preparing the plan for the new school year.",
    "ko": "팔월에 마르티나는 벌써 새 학년 수업 계획을 짜요.",
    "blank": "agosto",
+   "src": "made"
+  }
+ ],
+ "w|agricolo": [
+  {
+   "text": "Il nuovo cantiere di Marco si trova in mezzo a una zona agricola.",
+   "en": "Marco's new building site is in the middle of farmland.",
+   "ko": "마르코의 새 공사 현장은 농경지 한가운데에 있어요.",
+   "blank": "agricola",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive che suo marito insegna in un istituto agricolo vicino a casa.",
+   "en": "Giulia writes that her husband teaches at an agricultural college near their home.",
+   "ko": "줄리아는 남편이 집 근처 농업 학교에서 가르친다고 써요.",
+   "blank": "agricolo",
    "src": "made"
   }
  ],
@@ -2927,6 +3087,22 @@
    "src": "made"
   }
  ],
+ "w|allevatore": [
+  {
+   "text": "Marco racconta che il terreno del cantiere apparteneva a un allevatore di mucche.",
+   "en": "Marco says the land of the building site used to belong to a cattle farmer.",
+   "ko": "마르코 말로는 공사장 땅이 원래 소 키우는 농부의 것이었대요.",
+   "blank": "allevatore",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta a Chiara che un loro compagno di classe è diventato allevatore di capre.",
+   "en": "Giulia tells Chiara that one of their classmates has become a goat farmer.",
+   "ko": "줄리아는 키아라에게 반 친구 하나가 염소 농장 주인이 됐다고 이야기해요.",
+   "blank": "allevatore",
+   "src": "made"
+  }
+ ],
  "w|alleviare": [
   {
    "text": "Un bagno caldo aiuta ad alleviare il mal di schiena di Luca dopo la legna.",
@@ -3030,6 +3206,22 @@
    "en": "After ten hours on her feet, Elena says the neon lights almost make her hallucinate.",
    "ko": "열 시간을 서 있었더니 엘레나는 형광등 때문에 헛것이 보일 지경이라고 해요.",
    "blank": "allucinazione",
+   "src": "made"
+  }
+ ],
+ "w|alludere": [
+  {
+   "text": "Il capo sembra alludere a un ritardo di Marco, ma non lo dice chiaramente.",
+   "en": "The boss seems to be hinting at Marco being late, but he doesn't say it clearly.",
+   "ko": "상사는 마르코가 늦은 걸 넌지시 비추는 것 같지만 대놓고 말하지는 않아요.",
+   "blank": "alludere",
+   "src": "made"
+  },
+  {
+   "text": "Nella lettera Giulia sembra alludere a un vecchio segreto che solo Chiara conosce.",
+   "en": "In the letter Giulia seems to allude to an old secret that only Chiara knows.",
+   "ko": "편지에서 줄리아는 키아라만 아는 오래된 비밀을 넌지시 언급하는 것 같아요.",
+   "blank": "alludere",
    "src": "made"
   }
  ],
@@ -4739,6 +4931,22 @@
    "src": "made"
   }
  ],
+ "w|apparecchiatura": [
+  {
+   "text": "Marco scarica dal camion l'apparecchiatura per misurare il terreno.",
+   "en": "Marco unloads the equipment for surveying the ground from the lorry.",
+   "ko": "마르코는 트럭에서 땅을 측량하는 장비를 내려요.",
+   "blank": "apparecchiatura",
+   "src": "made"
+  },
+  {
+   "text": "Nella lettera Giulia racconta a Chiara che la clinica dove lavora ha un'apparecchiatura nuovissima.",
+   "en": "In the letter Giulia tells Chiara that the clinic where she works has brand-new equipment.",
+   "ko": "편지에서 줄리아는 키아라에게 자기가 일하는 병원에 최신 장비가 들어왔다고 전해요.",
+   "blank": "apparecchiatura",
+   "src": "made"
+  }
+ ],
  "w|apparente": [
   {
    "text": "Nonostante la calma apparente, Luca ha paura di bruciare il risotto.",
@@ -5231,6 +5439,22 @@
    "en": "We're late for the appointment.",
    "ko": "약속에 늦었어.",
    "blank": "appuntamento"
+  }
+ ],
+ "w|appuntare": [
+  {
+   "text": "Marco usa una matita da carpentiere per appuntare le misure direttamente sulla trave.",
+   "en": "Marco uses a carpenter's pencil to jot the measurements straight onto the beam.",
+   "ko": "마르코는 목공용 연필로 들보에 치수를 적어 둬요.",
+   "blank": "appuntare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia si è appuntata il nuovo indirizzo di Chiara su un foglietto.",
+   "en": "Giulia jotted down Chiara's new address on a slip of paper.",
+   "ko": "줄리아는 키아라의 새 주소를 쪽지에 적어 뒀어요.",
+   "blank": "appuntata",
+   "src": "made"
   }
  ],
  "w|appunto": [
@@ -5960,6 +6184,22 @@
    "en": "In a mountain trattoria Laura tries a roast pork.",
    "ko": "산속 식당에서 라우라는 돼지고기 로스트를 맛봐요.",
    "blank": "arrosto",
+   "src": "made"
+  }
+ ],
+ "w|arrotolare": [
+  {
+   "text": "A fine giornata Marco aiuta ad arrotolare il tubo dell'acqua.",
+   "en": "At the end of the day Marco helps roll up the water hose.",
+   "ko": "하루 일이 끝나면 마르코는 물 호스 감는 걸 도와요.",
+   "blank": "arrotolare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia vuole arrotolare il vecchio poster del loro gruppo preferito e spedirlo a Chiara.",
+   "en": "Giulia wants to roll up the old poster of their favourite band and send it to Chiara.",
+   "ko": "줄리아는 둘이 좋아하던 밴드의 옛 포스터를 돌돌 말아 키아라에게 보내려고 해요.",
+   "blank": "arrotolare",
    "src": "made"
   }
  ],
@@ -7231,6 +7471,22 @@
    "blank": "attento"
   }
  ],
+ "w|attenuare": [
+  {
+   "text": "Marco monta dei pannelli per attenuare il rumore che arriva ai vicini.",
+   "en": "Marco puts up panels to reduce the noise reaching the neighbours.",
+   "ko": "마르코는 이웃에게 가는 소음을 줄이려고 방음판을 세워요.",
+   "blank": "attenuare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia spera che le sue lettere possano attenuare la distanza tra lei e Chiara.",
+   "en": "Giulia hopes her letters can soften the distance between her and Chiara.",
+   "ko": "줄리아는 편지가 키아라와의 거리를 조금이라도 좁혀 주길 바라요.",
+   "blank": "attenuare",
+   "src": "made"
+  }
+ ],
  "w|attenzione": [
   {
    "text": "Attenzione a dove cammini.",
@@ -7528,6 +7784,22 @@
    "en": "Behind the counter Francesca keeps a tool for opening the wooden crates.",
    "ko": "프란체스카는 계산대 뒤에 나무 상자를 여는 도구를 둬요.",
    "blank": "attrezzo",
+   "src": "made"
+  }
+ ],
+ "w|attribuire": [
+  {
+   "text": "Il direttore dei lavori tende ad attribuire a Marco errori che non sono suoi.",
+   "en": "The works manager tends to blame Marco for mistakes that aren't his.",
+   "ko": "공사 감독은 자기 탓이 아닌 실수까지 마르코에게 돌리는 경향이 있어요.",
+   "blank": "attribuire",
+   "src": "made"
+  },
+  {
+   "text": "Giulia chiede a Chiara di non attribuire troppa importanza al loro vecchio litigio.",
+   "en": "Giulia asks Chiara not to attach too much importance to their old quarrel.",
+   "ko": "줄리아는 키아라에게 예전 다툼을 너무 마음에 두지 말라고 해요.",
+   "blank": "attribuire",
    "src": "made"
   }
  ],
@@ -11725,6 +11997,22 @@
    "src": "made"
   }
  ],
+ "w|calcolatore": [
+  {
+   "text": "Marco controlla le quantità di cemento con un piccolo calcolatore tascabile.",
+   "en": "Marco checks the amounts of cement with a small pocket calculator.",
+   "ko": "마르코는 작은 휴대용 계산기로 시멘트 양을 확인해요.",
+   "blank": "calcolatore",
+   "src": "made"
+  },
+  {
+   "text": "Nella lettera Giulia descrive il suo ex come un uomo freddo e calcolatore.",
+   "en": "In the letter Giulia describes her ex as a cold, calculating man.",
+   "ko": "편지에서 줄리아는 옛 남자 친구를 차갑고 계산적인 사람이라고 묘사해요.",
+   "blank": "calcolatore",
+   "src": "made"
+  }
+ ],
  "w|calcolo": [
   {
    "text": "Andrea ha rifatto il calcolo dei carichi perché qualcosa non tornava.",
@@ -12243,6 +12531,22 @@
    "en": "It doesn't fall within my field.",
    "ko": "그건 내 영역이 아니야.",
    "blank": "campo"
+  }
+ ],
+ "w|camuffare": [
+  {
+   "text": "Marco pianta un'edera per camuffare il vecchio muro di cemento.",
+   "en": "Marco plants ivy to disguise the old concrete wall.",
+   "ko": "마르코는 낡은 콘크리트 벽을 가리려고 담쟁이를 심어요.",
+   "blank": "camuffare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ricorda quando Chiara cercava di camuffare la voce per telefonare a scuola.",
+   "en": "Giulia remembers when Chiara used to try to disguise her voice to phone the school.",
+   "ko": "줄리아는 키아라가 목소리를 바꿔서 학교에 전화하려던 때를 떠올려요.",
+   "blank": "camuffare",
+   "src": "made"
   }
  ],
  "w|canaglia": [
@@ -14897,6 +15201,22 @@
    "blank": "chimico"
   }
  ],
+ "w|chinarsi": [
+  {
+   "text": "Per passare sotto le impalcature Marco deve chinarsi.",
+   "en": "To get under the scaffolding Marco has to bend down.",
+   "ko": "비계 밑을 지나가려면 마르코는 몸을 숙여야 해요.",
+   "blank": "chinarsi",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive che con il mal di schiena non riesce più a chinarsi sull'orto.",
+   "en": "Giulia writes that with her bad back she can no longer bend over the vegetable garden.",
+   "ko": "줄리아는 허리가 아파서 이제 텃밭에 허리를 굽히기 힘들다고 써요.",
+   "blank": "chinarsi",
+   "src": "made"
+  }
+ ],
  "w|chiodo": [
   {
    "text": "Andrea pianta un chiodo nel muro per appendere il quadro del nonno.",
@@ -17223,6 +17543,22 @@
    "en": "The shopping mall opens early.",
    "ko": "쇼핑몰이 일찍 열어.",
    "blank": "commerciale"
+  }
+ ],
+ "w|commercialista": [
+  {
+   "text": "A fine mese Marco porta le fatture al commercialista.",
+   "en": "At the end of the month Marco takes the invoices to the accountant.",
+   "ko": "마르코는 월말마다 세무사에게 영수증을 가져가요.",
+   "blank": "commercialista",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive a Chiara di aver sposato un commercialista tranquillo e simpatico.",
+   "en": "Giulia writes to Chiara that she has married a calm, likeable accountant.",
+   "ko": "줄리아는 키아라에게 차분하고 다정한 세무사와 결혼했다고 써요.",
+   "blank": "commercialista",
+   "src": "made"
   }
  ],
  "w|commerciante": [
@@ -19567,6 +19903,22 @@
    "src": "made"
   }
  ],
+ "w|contabilità": [
+  {
+   "text": "La moglie di Marco si occupa della contabilità della piccola impresa edile.",
+   "en": "Marco's wife does the bookkeeping for the small building firm.",
+   "ko": "마르코의 아내는 작은 건설 회사의 회계를 맡고 있어요.",
+   "blank": "contabilità",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive a Chiara che adesso tiene la contabilità del negozio di fiori.",
+   "en": "Giulia writes to Chiara that she now keeps the books for the flower shop.",
+   "ko": "줄리아는 키아라에게 요즘 꽃집 장부를 맡고 있다고 써요.",
+   "blank": "contabilità",
+   "src": "made"
+  }
+ ],
  "w|contadino": [
   {
    "text": "Il contadino alza presto al mattino.",
@@ -20292,6 +20644,22 @@
    "en": "Martina took a first-aid course and knows what to do for someone having a seizure.",
    "ko": "마르티나는 응급 처치 교육을 받아서 경련을 일으킨 사람을 어떻게 돕는지 알아요.",
    "blank": "convulsione",
+   "src": "made"
+  }
+ ],
+ "w|cooperare": [
+  {
+   "text": "In cantiere Marco deve cooperare con operai di tante ditte diverse.",
+   "en": "On site Marco has to cooperate with workers from lots of different firms.",
+   "ko": "현장에서 마르코는 여러 업체에서 온 인부들과 협력해야 해요.",
+   "blank": "cooperare",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ricorda a Chiara quando dovevano cooperare per nascondere la pagella ai genitori.",
+   "en": "Giulia reminds Chiara of when they had to work together to hide their report cards from their parents.",
+   "ko": "줄리아는 키아라에게 둘이 힘을 합쳐 부모님께 성적표를 숨기던 때를 떠올려 줘요.",
+   "blank": "cooperare",
    "src": "made"
   }
  ],
@@ -25573,6 +25941,22 @@
    "src": "made"
   }
  ],
+ "w|disoccupazione": [
+  {
+   "text": "Prima di trovare posto in cantiere, Marco ha passato sei mesi di disoccupazione.",
+   "en": "Before getting a job on the building site, Marco spent six months unemployed.",
+   "ko": "마르코는 공사 현장에 일자리를 얻기 전에 여섯 달 동안 실업 상태였어요.",
+   "blank": "disoccupazione",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive a Chiara che suo fratello ha perso il lavoro e prende la disoccupazione.",
+   "en": "Giulia writes to Chiara that her brother has lost his job and is on unemployment benefit.",
+   "ko": "줄리아는 키아라에게 오빠가 일자리를 잃고 실업 수당을 받는다고 써요.",
+   "blank": "disoccupazione",
+   "src": "made"
+  }
+ ],
  "w|disonesto": [
   {
    "text": "Davide scopre che il fornitore è disonesto e lo dice subito al capo.",
@@ -28259,6 +28643,22 @@
    "src": "made"
   }
  ],
+ "w|elettricista": [
+  {
+   "text": "Marco aspetta l'elettricista prima di chiudere le tracce nei muri.",
+   "en": "Marco waits for the electrician before filling in the channels in the walls.",
+   "ko": "마르코는 벽의 배선 홈을 메우기 전에 전기 기사를 기다려요.",
+   "blank": "elettricista",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta a Chiara che l'elettricista è venuto tre volte e la luce salta ancora.",
+   "en": "Giulia tells Chiara the electrician has come three times and the power still trips.",
+   "ko": "줄리아는 키아라에게 전기 기사가 세 번이나 왔는데도 아직 전기가 나간다고 이야기해요.",
+   "blank": "elettricista",
+   "src": "made"
+  }
+ ],
  "w|elettrico": [
   {
    "text": "Abbiamo comprato un forno elettrico.",
@@ -30889,6 +31289,22 @@
    "src": "made"
   }
  ],
+ "w|falegname": [
+  {
+   "text": "Marco chiama un falegname per montare porte e finestre.",
+   "en": "Marco calls a carpenter to fit the doors and windows.",
+   "ko": "마르코는 문과 창문을 달려고 목수를 불러요.",
+   "blank": "falegname",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta che suo padre, il falegname del paese, chiede sempre di Chiara.",
+   "en": "Giulia says her father, the village carpenter, always asks after Chiara.",
+   "ko": "줄리아는 마을 목수인 아버지가 늘 키아라 안부를 묻는다고 이야기해요.",
+   "blank": "falegname",
+   "src": "made"
+  }
+ ],
  "w|fallimento": [
   {
    "text": "Il fallimento dell'azienda ha scioccato tutti.",
@@ -31868,6 +32284,22 @@
    "en": "According to Giulia, groups of friends breaking up after school is a normal phenomenon.",
    "ko": "줄리아는 졸업 후 친구 무리가 흩어지는 게 자연스러운 현상이라고 봐요.",
    "blank": "fenomeno",
+   "src": "made"
+  }
+ ],
+ "w|ferie": [
+  {
+   "text": "Marco non vede l'ora che arrivino le ferie di agosto.",
+   "en": "Marco can't wait for the August holidays to arrive.",
+   "ko": "마르코는 팔월 휴가가 오기만을 손꼽아 기다려요.",
+   "blank": "ferie",
+   "src": "made"
+  },
+  {
+   "text": "Giulia propone a Chiara di passare le ferie insieme al mare, come una volta.",
+   "en": "Giulia suggests to Chiara that they spend their holidays together at the seaside, like in the old days.",
+   "ko": "줄리아는 키아라에게 예전처럼 바닷가에서 함께 휴가를 보내자고 제안해요.",
+   "blank": "ferie",
    "src": "made"
   }
  ],
@@ -42765,6 +43197,22 @@
    "blank": "interesse"
   }
  ],
+ "w|interfaccia": [
+  {
+   "text": "Il nuovo escavatore ha un'interfaccia digitale che Marco ancora non capisce.",
+   "en": "The new excavator has a digital interface that Marco still doesn't understand.",
+   "ko": "새 굴착기에는 마르코가 아직 이해하지 못하는 디지털 조작 화면이 있어요.",
+   "blank": "interfaccia",
+   "src": "made"
+  },
+  {
+   "text": "Giulia confessa a Chiara che la nuova interfaccia della banca online la fa impazzire.",
+   "en": "Giulia admits to Chiara that the online bank's new interface is driving her mad.",
+   "ko": "줄리아는 키아라에게 인터넷 뱅킹의 새 화면 때문에 미치겠다고 털어놓아요.",
+   "blank": "interfaccia",
+   "src": "made"
+  }
+ ],
  "w|interferire": [
   {
    "text": "Il produttore cerca sempre di interferire con le scelte del regista, e Davide si arrabbia.",
@@ -47407,6 +47855,22 @@
    "src": "made"
   }
  ],
+ "w|malfunzionamento": [
+  {
+   "text": "Per un malfunzionamento della gru, Marco e la squadra restano fermi due ore.",
+   "en": "Because of a crane malfunction, Marco and the crew are stuck for two hours.",
+   "ko": "크레인이 고장 나서 마르코와 작업반은 두 시간 동안 손을 놓고 있어요.",
+   "blank": "malfunzionamento",
+   "src": "made"
+  },
+  {
+   "text": "Giulia spiega a Chiara che le email non partivano per un malfunzionamento del computer.",
+   "en": "Giulia explains to Chiara that her emails weren't going out because of a computer fault.",
+   "ko": "줄리아는 키아라에게 컴퓨터 고장 때문에 이메일이 안 보내졌다고 설명해요.",
+   "blank": "malfunzionamento",
+   "src": "made"
+  }
+ ],
  "w|malgrado": [
   {
    "text": "Simone tiene la finestra aperta malgrado il rumore della strada.",
@@ -50113,6 +50577,22 @@
    "src": "made"
   }
  ],
+ "w|microscopio": [
+  {
+   "text": "In laboratorio l'ingegnere osserva al microscopio il campione di cemento portato da Marco.",
+   "en": "In the lab the engineer examines under the microscope the cement sample Marco brought.",
+   "ko": "연구실에서 엔지니어는 마르코가 가져온 시멘트 시료를 현미경으로 살펴봐요.",
+   "blank": "microscopio",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ricorda a Chiara le ore passate al microscopio nel laboratorio del liceo.",
+   "en": "Giulia reminds Chiara of the hours they spent at the microscope in the school lab.",
+   "ko": "줄리아는 키아라에게 고등학교 실험실에서 현미경을 들여다보던 시간을 떠올려 줘요.",
+   "blank": "microscopio",
+   "src": "made"
+  }
+ ],
  "w|midollo": [
   {
    "text": "Stefano racconta che sua cugina si è iscritta come donatrice di midollo.",
@@ -51991,6 +52471,22 @@
    "blank": "mosso"
   }
  ],
+ "w|muratore": [
+  {
+   "text": "Marco fa il muratore da quando aveva diciotto anni.",
+   "en": "Marco has been a bricklayer since he was eighteen.",
+   "ko": "마르코는 열여덟 살 때부터 벽돌공으로 일했어요.",
+   "blank": "muratore",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ricorda a Chiara il muratore che fischiava sempre sotto le loro finestre.",
+   "en": "Giulia reminds Chiara of the bricklayer who always whistled under their windows.",
+   "ko": "줄리아는 키아라에게 늘 창문 아래서 휘파람을 불던 벽돌공을 떠올려 줘요.",
+   "blank": "muratore",
+   "src": "made"
+  }
+ ],
  "w|muro": [
   {
    "text": "Hanno dipinto il muro di blu.",
@@ -52646,6 +53142,22 @@
    "en": "At the market Martina tried to bargain over the price of the fish.",
    "ko": "시장에서 마르티나는 생선값을 흥정해 봤어요.",
    "blank": "negoziare",
+   "src": "made"
+  }
+ ],
+ "w|negoziato": [
+  {
+   "text": "Dopo un lungo negoziato con il cliente, Marco ottiene una settimana in più.",
+   "en": "After a long negotiation with the client, Marco gets an extra week.",
+   "ko": "고객과 오래 협상한 끝에 마르코는 일주일을 더 얻어 내요.",
+   "blank": "negoziato",
+   "src": "made"
+  },
+  {
+   "text": "Dopo un lungo negoziato con il marito, Giulia ha ottenuto di adottare un cane.",
+   "en": "After a long negotiation with her husband, Giulia has got her way about adopting a dog.",
+   "ko": "남편과 오래 협상한 끝에 줄리아는 개를 입양하기로 허락받았어요.",
+   "blank": "negoziato",
    "src": "made"
   }
  ],
@@ -59121,6 +59633,22 @@
    "blank": "periodo"
   }
  ],
+ "w|perizia": [
+  {
+   "text": "Prima di abbattere il muro, Marco aspetta la perizia dell'ingegnere.",
+   "en": "Before knocking down the wall, Marco waits for the engineer's survey report.",
+   "ko": "마르코는 벽을 허물기 전에 엔지니어의 감정 결과를 기다려요.",
+   "blank": "perizia",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta a Chiara che il restauratore ha sistemato il vecchio pianoforte con grande perizia.",
+   "en": "Giulia tells Chiara that the restorer repaired the old piano with great skill.",
+   "ko": "줄리아는 키아라에게 복원 기술자가 낡은 피아노를 아주 솜씨 좋게 고쳤다고 이야기해요.",
+   "blank": "perizia",
+   "src": "made"
+  }
+ ],
  "w|perlomeno": [
   {
    "text": "Il riscaldamento non è perfetto, ma perlomeno Simone ha l'acqua calda.",
@@ -59830,6 +60358,22 @@
    "en": "These days Laura is planning the autumn events.",
    "ko": "요즘 라우라는 가을 행사를 계획하고 있어요.",
    "blank": "pianificando",
+   "src": "made"
+  }
+ ],
+ "w|pianificazione": [
+  {
+   "text": "Secondo Marco una buona pianificazione evita metà dei problemi in cantiere.",
+   "en": "According to Marco, good planning prevents half the problems on site.",
+   "ko": "마르코는 계획만 잘 세워도 현장 문제의 절반은 막을 수 있다고 생각해요.",
+   "blank": "pianificazione",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive a Chiara che la pianificazione del loro viaggio insieme può finalmente cominciare.",
+   "en": "Giulia writes to Chiara that planning their trip together can finally begin.",
+   "ko": "줄리아는 키아라에게 함께 갈 여행 계획을 드디어 시작해도 된다고 써요.",
+   "blank": "pianificazione",
    "src": "made"
   }
  ],
@@ -63913,6 +64457,22 @@
    "src": "made"
   }
  ],
+ "w|programmatore": [
+  {
+   "text": "Il fratello di Marco fa il programmatore e lo prende in giro per le mani sempre sporche.",
+   "en": "Marco's brother is a programmer and teases him about his permanently dirty hands.",
+   "ko": "마르코의 형은 프로그래머인데, 마르코의 손이 늘 더럽다고 놀려요.",
+   "blank": "programmatore",
+   "src": "made"
+  },
+  {
+   "text": "La figlia di Giulia ha sposato un programmatore e vive in un'altra città.",
+   "en": "Giulia's daughter married a programmer and lives in another city.",
+   "ko": "줄리아의 딸은 프로그래머와 결혼해서 다른 도시에 살아요.",
+   "blank": "programmatore",
+   "src": "made"
+  }
+ ],
  "w|programmazione": [
   {
    "text": "Marco passa la mattina sulla programmazione delle ferie del reparto.",
@@ -67283,6 +67843,38 @@
    "src": "made"
   }
  ],
+ "w|redattore": [
+  {
+   "text": "Un redattore del giornale locale viene in cantiere a intervistare Marco.",
+   "en": "An editor from the local paper comes to the site to interview Marco.",
+   "ko": "지역 신문 편집자가 마르코를 인터뷰하러 공사 현장에 와요.",
+   "blank": "redattore",
+   "src": "made"
+  },
+  {
+   "text": "Giulia racconta a Chiara che suo figlio lavora come redattore in una casa editrice.",
+   "en": "Giulia tells Chiara that her son works as an editor at a publishing house.",
+   "ko": "줄리아는 키아라에게 아들이 출판사 편집자로 일한다고 이야기해요.",
+   "blank": "redattore",
+   "src": "made"
+  }
+ ],
+ "w|redditizio": [
+  {
+   "text": "Per l'impresa di Marco questo lavoro non è molto redditizio, ma porta nuovi clienti.",
+   "en": "For Marco's firm this job isn't very profitable, but it brings in new clients.",
+   "ko": "마르코의 회사에 이 일은 별로 돈이 안 되지만 새 고객을 데려와요.",
+   "blank": "redditizio",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive a Chiara che il negozio di fiori è diventato finalmente redditizio.",
+   "en": "Giulia writes to Chiara that the flower shop has finally become profitable.",
+   "ko": "줄리아는 키아라에게 꽃집이 드디어 돈을 벌기 시작했다고 써요.",
+   "blank": "redditizio",
+   "src": "made"
+  }
+ ],
  "w|reddito": [
   {
    "text": "Con il lavoro in cantiere Marco ha un reddito sicuro per la famiglia.",
@@ -70067,6 +70659,22 @@
    "en": "He repeated the same mistake.",
    "ko": "같은 실수를 반복했어.",
    "blank": "ripetuto"
+  }
+ ],
+ "w|ripetitore": [
+  {
+   "text": "Sul tetto del palazzo Marco aiuta a montare un ripetitore per il segnale dei telefoni.",
+   "en": "On the roof of the building Marco helps install a repeater for the phone signal.",
+   "ko": "마르코는 건물 옥상에 휴대폰 신호 중계기를 설치하는 걸 도와요.",
+   "blank": "ripetitore",
+   "src": "made"
+  },
+  {
+   "text": "Giulia scrive che nel suo paese di montagna hanno finalmente installato un ripetitore.",
+   "en": "Giulia writes that in her mountain village they've finally installed a signal repeater.",
+   "ko": "줄리아는 자기가 사는 산골 마을에 드디어 중계기가 설치됐다고 써요.",
+   "blank": "ripetitore",
+   "src": "made"
   }
  ],
  "w|ripieno": [
@@ -81279,6 +81887,22 @@
    "blank": "stile"
   }
  ],
+ "w|stilista": [
+  {
+   "text": "Il palazzo che Marco sta costruendo diventerà l'atelier di una stilista.",
+   "en": "The building Marco is putting up will become a fashion designer's studio.",
+   "ko": "마르코가 짓고 있는 건물은 한 패션 디자이너의 아틀리에가 될 거예요.",
+   "blank": "stilista",
+   "src": "made"
+  },
+  {
+   "text": "Nella lettera Giulia confessa a Chiara che da bambina sognava di fare la stilista.",
+   "en": "In the letter Giulia confesses to Chiara that as a child she dreamed of being a fashion designer.",
+   "ko": "편지에서 줄리아는 키아라에게 어릴 적 꿈이 패션 디자이너였다고 털어놓아요.",
+   "blank": "stilista",
+   "src": "made"
+  }
+ ],
  "w|stimare": [
   {
    "text": "Marco deve stimare i costi del nuovo progetto per domani.",
@@ -83232,6 +83856,22 @@
    "en": "In the village nobody wears high heels, because the streets are made of stone.",
    "ko": "마을 길이 돌로 되어 있어서 아무도 하이힐을 안 신어요.",
    "blank": "tacco",
+   "src": "made"
+  }
+ ],
+ "w|taccuino": [
+  {
+   "text": "Marco annota le misure su un taccuino sporco di cemento.",
+   "en": "Marco jots down the measurements in a notebook covered in cement.",
+   "ko": "마르코는 시멘트가 묻은 수첩에 치수를 적어요.",
+   "blank": "taccuino",
+   "src": "made"
+  },
+  {
+   "text": "Giulia ritrova il taccuino dove lei e Chiara scrivevano poesie da ragazze.",
+   "en": "Giulia finds the notebook where she and Chiara used to write poems as girls.",
+   "ko": "줄리아는 어릴 적 키아라와 함께 시를 쓰던 수첩을 다시 찾아요.",
+   "blank": "taccuino",
    "src": "made"
   }
  ],

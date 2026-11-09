@@ -1405,6 +1405,22 @@
    "blank": "กลับ"
   }
  ],
+ "w|กลับกลาย": [
+  {
+   "text": "ละครตลกเรื่องนี้กลับกลายเป็นเรื่องเศร้าในองก์สุดท้าย",
+   "en": "This comedy turns into a sad story in the final act.",
+   "ko": "이 코미디는 마지막 막에서 슬픈 이야기로 바뀌어요.",
+   "blank": "กลับกลาย",
+   "src": "made"
+  },
+  {
+   "text": "การเดินทางที่ควรจะสบายกลับกลายเป็นวุ่นวายเพราะรถไฟเสีย",
+   "en": "The trip that should have been relaxing turned chaotic because the train broke down.",
+   "ko": "편해야 할 여행이 기차 고장으로 엉망이 되어 버렸어요.",
+   "blank": "กลับกลาย",
+   "src": "made"
+  }
+ ],
  "w|กลับกัน": [
   {
    "text": "บ้านธนาเงียบตอนกลางวันแต่กลับกันกับบ้านข้างๆ ที่มีเด็กเล็กสามคน",
@@ -1947,6 +1963,22 @@
    "en": "The army is training around here.",
    "ko": "군대가 이 근처에서 훈련 중이야.",
    "blank": "กองทัพ"
+  }
+ ],
+ "w|กองทัพบก": [
+  {
+   "text": "วงโยธวาทิตของกองทัพบกมาเล่นในงานกาลาของโรงละคร",
+   "en": "The army's marching band came to play at the theater's gala.",
+   "ko": "육군 군악대가 극장 갈라 행사에 와서 연주했어요.",
+   "blank": "กองทัพบก",
+   "src": "made"
+  },
+  {
+   "text": "ทหารกองทัพบกหลายนายนั่งอยู่ตู้เดียวกับจันทร์",
+   "en": "Several army soldiers are sitting in the same car as Chan.",
+   "ko": "육군 군인 여러 명이 짠과 같은 칸에 앉아 있어요.",
+   "blank": "กองทัพบก",
+   "src": "made"
   }
  ],
  "w|กองทุน": [
@@ -4013,6 +4045,22 @@
    "blank": "กุญแจ"
   }
  ],
+ "w|กุญแจมือ": [
+  {
+   "text": "ในฉากสุดท้าย ตัวละครของประยุทธถูกใส่กุญแจมือ",
+   "en": "In the final scene, Prayut's character is put in handcuffs.",
+   "ko": "마지막 장면에서 쁘라윳의 배역은 수갑을 차요.",
+   "blank": "กุญแจมือ",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจรถไฟพาผู้ต้องหาที่ใส่กุญแจมือลงที่สถานีหน้า",
+   "en": "Railway police took a handcuffed suspect off at the next station.",
+   "ko": "철도 경찰이 수갑을 찬 용의자를 다음 역에서 데리고 내렸어요.",
+   "blank": "กุญแจมือ",
+   "src": "made"
+  }
+ ],
  "w|กุนเชียง": [
   {
    "text": "กุนเชียงทอดกับข้าวสวยเป็นเมนูที่เด็กๆ ชอบมาก",
@@ -4998,6 +5046,22 @@
    "en": "A boy on the train made funny faces to make Napha laugh.",
    "ko": "기차에 탄 남자아이가 나파를 웃기려고 일부러 우스운 표정을 지었어요.",
    "blank": "แกล้งทำ",
+   "src": "made"
+  }
+ ],
+ "w|แกลลอน": [
+  {
+   "text": "ทีมงานใช้น้ำหลายแกลลอนทำฉากฝนตก",
+   "en": "The crew used several gallons of water to make the rain scene.",
+   "ko": "스태프는 비 장면을 만들려고 물을 몇 갤런이나 썼어요.",
+   "blank": "แกลลอน",
+   "src": "made"
+  },
+  {
+   "text": "แม่ค้าหิ้วน้ำดื่มแกลลอนใหญ่ขึ้นมาขายบนรถไฟ",
+   "en": "A vendor carried big gallon jugs of drinking water onto the train to sell.",
+   "ko": "상인이 큰 갤런 통 생수를 들고 기차에 올라와 팔았어요.",
+   "blank": "แกลลอน",
    "src": "made"
   }
  ],
@@ -9965,6 +10029,22 @@
    "en": "This clinic is open until evening.",
    "ko": "이 클리닉은 저녁까지 열어.",
    "blank": "คลินิก"
+  }
+ ],
+ "w|คลิป": [
+  {
+   "text": "มีคนแอบถ่ายคลิปการแสดงไปลงโซเชียล",
+   "en": "Someone secretly filmed a clip of the show and posted it on social media.",
+   "ko": "누군가 공연 영상을 몰래 찍어서 SNS에 올렸어요.",
+   "blank": "คลิป",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ถ่ายคลิปทุ่งนาสองข้างทางส่งให้แม่",
+   "en": "Chan filmed a clip of the rice fields along the way and sent it to her mom.",
+   "ko": "짠은 길가 논 풍경을 영상으로 찍어 엄마에게 보냈어요.",
+   "blank": "คลิป",
+   "src": "made"
   }
  ],
  "w|คลี่": [
@@ -19309,6 +19389,22 @@
    "src": "made"
   }
  ],
+ "w|ชักจูง": [
+  {
+   "text": "ตัวละครของประยุทธพยายามชักจูงพระเอกให้ทรยศเพื่อน",
+   "en": "Prayut's character tries to persuade the hero to betray his friend.",
+   "ko": "쁘라윳의 배역은 주인공을 꾀어 친구를 배신하게 하려고 해요.",
+   "blank": "ชักจูง",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานขายบนรถไฟพยายามชักจูงให้จันทร์ซื้อขนมเพิ่ม",
+   "en": "The vendor on the train tried to talk Chan into buying more snacks.",
+   "ko": "기차 안 판매원은 짠에게 간식을 더 사라고 부추겼어요.",
+   "blank": "ชักจูง",
+   "src": "made"
+  }
+ ],
  "w|ชักชวน": [
   {
    "text": "เพื่อนชักชวนให้ไปดูหนัง",
@@ -21691,6 +21787,22 @@
    "src": "made"
   }
  ],
+ "w|ซ้ำแล้วซ้ำอีก": [
+  {
+   "text": "ประยุทธซ้อมบทพูดยาวซ้ำแล้วซ้ำอีกจนคล่อง",
+   "en": "Prayut rehearsed the long monologue over and over until it was smooth.",
+   "ko": "쁘라윳은 긴 대사를 입에 붙을 때까지 몇 번이고 연습했어요.",
+   "blank": "ซ้ำแล้วซ้ำอีก",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานประกาศชื่อสถานีถัดไปซ้ำแล้วซ้ำอีก",
+   "en": "The attendant announced the name of the next station again and again.",
+   "ko": "승무원이 다음 역 이름을 계속해서 안내했어요.",
+   "blank": "ซ้ำแล้วซ้ำอีก",
+   "src": "made"
+  }
+ ],
  "w|ซิ": [
   {
    "text": "เอาซิ",
@@ -22777,6 +22889,22 @@
    "en": "Mom scolded me for coming home late.",
    "ko": "엄마가 늦게 와서 혼냈어.",
    "blank": "ด่า"
+  }
+ ],
+ "w|ด่าง": [
+  {
+   "text": "ชุดของนางเอกมีรอยด่างจากน้ำชาที่หกเมื่อคืน",
+   "en": "The leading lady's costume has a stain from tea spilled last night.",
+   "ko": "여주인공 의상에 어젯밤 쏟은 차 얼룩이 생겼어요.",
+   "blank": "ด่าง",
+   "src": "made"
+  },
+  {
+   "text": "เสื้อสีขาวของจันทร์มีจุดด่างจากกาแฟที่หก",
+   "en": "Chan's white shirt has a stain from spilled coffee.",
+   "ko": "짠의 흰 셔츠에 쏟은 커피 얼룩이 있어요.",
+   "blank": "ด่าง",
+   "src": "made"
   }
  ],
  "w|ด่าน": [
@@ -24279,6 +24407,22 @@
    "en": "I really can't.",
    "ko": "그건 안 돼.",
    "blank": "ได้"
+  }
+ ],
+ "w|ได้กลิ่น": [
+  {
+   "text": "ผู้ชมแถวหน้าได้กลิ่นควันจากเครื่องทำหมอกบนเวที",
+   "en": "The audience in the front row could smell the smoke from the fog machine on stage.",
+   "ko": "앞줄 관객들은 무대 위 연무기에서 나오는 연기 냄새를 맡았어요.",
+   "blank": "ได้กลิ่น",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ได้กลิ่นไก่ย่างลอยมาจากรถเสบียง",
+   "en": "Chan could smell grilled chicken wafting from the dining car.",
+   "ko": "짠은 식당칸에서 풍겨 오는 구운 닭 냄새를 맡았어요.",
+   "blank": "ได้กลิ่น",
+   "src": "made"
   }
  ],
  "w|ได้แก่": [
@@ -30983,6 +31127,22 @@
    "src": "made"
   }
  ],
+ "w|ทำความเคารพ": [
+  {
+   "text": "นักแสดงทุกคนออกมาทำความเคารพผู้ชมเมื่อละครจบ",
+   "en": "All the actors came out to bow to the audience when the play ended.",
+   "ko": "연극이 끝나자 배우들이 모두 나와 관객에게 인사했어요.",
+   "blank": "ทำความเคารพ",
+   "src": "made"
+  },
+  {
+   "text": "นายสถานีทำความเคารพเมื่อขบวนรถไฟเคลื่อนออก",
+   "en": "The stationmaster saluted as the train pulled out.",
+   "ko": "기차가 출발하자 역장이 경례를 했어요.",
+   "blank": "ทำความเคารพ",
+   "src": "made"
+  }
+ ],
  "w|ทำความสะอาด": [
   {
    "text": "ช่วยทำความสะอาดห้องหน่อย",
@@ -31221,6 +31381,22 @@
    "en": "Who hurt you?",
    "ko": "누가 너를 해쳤어?",
    "blank": "ทำร้าย"
+  }
+ ],
+ "w|ทำร้ายร่างกาย": [
+  {
+   "text": "ฉากที่ตัวร้ายทำร้ายร่างกายพระเอกถูกออกแบบให้ปลอดภัย",
+   "en": "The scene where the villain physically attacks the hero was choreographed to be safe.",
+   "ko": "악역이 주인공을 폭행하는 장면은 안전하게 짜여 있어요.",
+   "blank": "ทำร้ายร่างกาย",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวในหนังสือพิมพ์รายงานว่าผู้โดยสารคนหนึ่งถูกจับข้อหาทำร้ายร่างกาย",
+   "en": "The newspaper reported that a passenger was arrested on an assault charge.",
+   "ko": "신문은 한 승객이 폭행 혐의로 체포됐다고 보도했어요.",
+   "blank": "ทำร้ายร่างกาย",
+   "src": "made"
   }
  ],
  "w|ทำลาย": [
@@ -32436,6 +32612,22 @@
    "en": "Chan's grandmother still lights incense to the gods at the shrine before planting every year.",
    "ko": "짠의 할머니는 매년 모내기 전에 사당의 신께 향을 피워요.",
    "blank": "เทพเจ้า",
+   "src": "made"
+  }
+ ],
+ "w|เทรนด์": [
+  {
+   "text": "ละครเวทีแบบดูใกล้ชิดกำลังเป็นเทรนด์ในหมู่คนรุ่นใหม่",
+   "en": "Intimate, up-close theater is becoming a trend among young people.",
+   "ko": "가까이서 보는 연극이 젊은 층 사이에서 유행이에요.",
+   "blank": "เทรนด์",
+   "src": "made"
+  },
+  {
+   "text": "การนั่งรถไฟเที่ยวช้า ๆ กลายเป็นเทรนด์ของคนรุ่นใหม่",
+   "en": "Slow train travel has become a trend among young people.",
+   "ko": "느긋한 기차 여행이 젊은 세대의 유행이 됐어요.",
+   "blank": "เทรนด์",
    "src": "made"
   }
  ],
@@ -35529,6 +35721,22 @@
    "blank": "น้ำมัน"
   }
  ],
+ "w|น้ำมันดิบ": [
+  {
+   "text": "ละครการเมืองเรื่องนี้พูดถึงบริษัทที่แย่งกันขุดน้ำมันดิบ",
+   "en": "This political play is about companies fighting over drilling for crude oil.",
+   "ko": "이 정치극은 원유 채굴을 두고 다투는 회사들 이야기예요.",
+   "blank": "น้ำมันดิบ",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟบรรทุกน้ำมันดิบแล่นสวนไปทางใต้",
+   "en": "A train carrying crude oil passed going south.",
+   "ko": "원유를 실은 기차가 남쪽으로 지나갔어요.",
+   "blank": "น้ำมันดิบ",
+   "src": "made"
+  }
+ ],
  "w|น้ำมันรถ": [
   {
    "text": "ราคาน้ำมันรถขึ้นอีกแล้ว ค่าเดินทางทริปนี้เลยแพงกว่าที่คิด",
@@ -37993,6 +38201,22 @@
    "blank": "บางที"
   }
  ],
+ "w|บางส่วน": [
+  {
+   "text": "ตั๋วบางส่วนยังเหลือสำหรับรอบบ่าย",
+   "en": "Some tickets are still left for the afternoon show.",
+   "ko": "오후 공연 표가 아직 일부 남아 있어요.",
+   "blank": "บางส่วน",
+   "src": "made"
+  },
+  {
+   "text": "ทางรถไฟบางส่วนกำลังซ่อม รถไฟจึงต้องแล่นช้า",
+   "en": "Part of the railway is under repair, so the train has to go slowly.",
+   "ko": "철로 일부가 공사 중이라 기차가 천천히 달려야 해요.",
+   "blank": "บางส่วน",
+   "src": "made"
+  }
+ ],
  "w|บางสิ่ง": [
   {
    "text": "ชัยรู้สึกว่าข่าวนี้ยังขาดบางสิ่งที่ผู้อ่านอยากรู้",
@@ -38157,6 +38381,22 @@
    "en": "My hometown is in the provinces.",
    "ko": "내 고향은 지방에 있어.",
    "blank": "บ้านเกิด"
+  }
+ ],
+ "w|บ้านนอก": [
+  {
+   "text": "ประยุทธรับบทหนุ่มบ้านนอกที่เข้ากรุงครั้งแรก",
+   "en": "Prayut plays a country boy coming to the capital for the first time.",
+   "ko": "쁘라윳은 처음 상경한 시골 청년 역을 맡았어요.",
+   "blank": "บ้านนอก",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ภูมิใจที่เป็นสาวบ้านนอกและกลับบ้านทุกปี",
+   "en": "Chan is proud to be a country girl and goes home every year.",
+   "ko": "짠은 시골 아가씨인 게 자랑스럽고 해마다 고향에 가요.",
+   "blank": "บ้านนอก",
+   "src": "made"
   }
  ],
  "w|บ้านพัก": [
@@ -39556,6 +39796,22 @@
    "en": "Fire officers are on duty backstage for every performance.",
    "ko": "소방관이 공연 때마다 무대 뒤에서 근무해요.",
    "blank": "ปฏิบัติงาน",
+   "src": "made"
+  }
+ ],
+ "w|ปฏิบัติธรรม": [
+  {
+   "text": "ก่อนรับบทพระ ประยุทธไปปฏิบัติธรรมที่วัดหนึ่งอาทิตย์",
+   "en": "Before playing a monk, Prayut went on a meditation retreat at a temple for a week.",
+   "ko": "스님 역을 맡기 전에 쁘라윳은 절에서 일주일 동안 수행을 했어요.",
+   "blank": "ปฏิบัติธรรม",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์กำลังเดินทางไปปฏิบัติธรรมที่วัดบนเขา",
+   "en": "Chan is on her way to a meditation retreat at a mountain temple.",
+   "ko": "짠은 산속 절로 수행하러 가는 길이에요.",
+   "blank": "ปฏิบัติธรรม",
    "src": "made"
   }
  ],
@@ -42997,6 +43253,22 @@
    "src": "made"
   }
  ],
+ "w|เปลือย": [
+  {
+   "text": "นักแสดงเดินเท้าเปลือยบนเวทีตลอดทั้งเรื่อง",
+   "en": "The actors walk barefoot on stage throughout the whole play.",
+   "ko": "배우들은 연극 내내 맨발로 무대를 걸어요.",
+   "blank": "เปลือย",
+   "src": "made"
+  },
+  {
+   "text": "เด็กชายบ้านริมทางรถไฟวิ่งเท้าเปลือยโบกมือให้รถไฟ",
+   "en": "A boy from a house by the tracks ran barefoot, waving at the train.",
+   "ko": "철길 옆 집 남자아이가 맨발로 뛰며 기차에 손을 흔들었어요.",
+   "blank": "เปลือย",
+   "src": "made"
+  }
+ ],
  "w|เปอร์เซ็นต์": [
   {
    "text": "เปอร์เซ็นต์ส่วนลดสูงมาก",
@@ -44600,6 +44872,22 @@
    "en": "A film director walked past Wanna at the boarding gate.",
    "ko": "한 영화감독이 탑승구에서 완나 옆을 지나갔어요.",
    "blank": "ผู้กำกับ",
+   "src": "made"
+  }
+ ],
+ "w|ผู้เกี่ยวข้อง": [
+  {
+   "text": "ผู้กำกับขอบคุณผู้เกี่ยวข้องทุกคนในคืนเปิดการแสดง",
+   "en": "The director thanked everyone involved on opening night.",
+   "ko": "연출가는 개막 날 밤에 관계자 모두에게 감사 인사를 했어요.",
+   "blank": "ผู้เกี่ยวข้อง",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่สถานีขอให้ผู้เกี่ยวข้องตรวจรางก่อนปล่อยขบวน",
+   "en": "Station staff asked those responsible to inspect the tracks before letting the train go.",
+   "ko": "역 직원은 열차를 보내기 전에 관계자들에게 선로를 점검하라고 했어요.",
+   "blank": "ผู้เกี่ยวข้อง",
    "src": "made"
   }
  ],
@@ -51033,6 +51321,22 @@
    "src": "made"
   }
  ],
+ "w|มหาลัย": [
+  {
+   "text": "ประยุทธเริ่มเล่นละครตั้งแต่สมัยเรียนมหาลัย",
+   "en": "Prayut started acting back in his university days.",
+   "ko": "쁘라윳은 대학 시절부터 연극을 시작했어요.",
+   "blank": "มหาลัย",
+   "src": "made"
+  },
+  {
+   "text": "นักศึกษามหาลัยกลุ่มใหญ่ขึ้นรถไฟไปเที่ยวทะเล",
+   "en": "A big group of university students got on the train for a beach trip.",
+   "ko": "대학생 한 무리가 바다로 놀러 가려고 기차에 탔어요.",
+   "blank": "มหาลัย",
+   "src": "made"
+  }
+ ],
  "w|มหาวิทยาลัย": [
   {
    "text": "สอบเข้ามหาวิทยาลัยปีหน้า",
@@ -51684,6 +51988,22 @@
    "en": "This music school teaches according to the standards of a foreign music institute.",
    "ko": "이 음악 학교는 외국 음악원의 기준에 따라 가르쳐요.",
    "blank": "มาตรฐาน",
+   "src": "made"
+  }
+ ],
+ "w|มาตราส่วน": [
+  {
+   "text": "ผู้ออกแบบฉากทำแบบจำลองเวทีตามมาตราส่วน",
+   "en": "The set designer made a scale model of the stage.",
+   "ko": "무대 디자이너는 축척에 맞춰 무대 모형을 만들었어요.",
+   "blank": "มาตราส่วน",
+   "src": "made"
+  },
+  {
+   "text": "แผนที่เส้นทางรถไฟในสมุดไม่ได้วาดตามมาตราส่วน",
+   "en": "The railway map in the notebook isn't drawn to scale.",
+   "ko": "공책 속 철도 노선도는 축척대로 그려지지 않았어요.",
+   "blank": "มาตราส่วน",
    "src": "made"
   }
  ],
@@ -56309,6 +56629,22 @@
    "src": "made"
   }
  ],
+ "w|รอยสัก": [
+  {
+   "text": "ทีมแต่งหน้าวาดรอยสักปลอมบนแขนของประยุทธ",
+   "en": "The makeup team drew a fake tattoo on Prayut's arm.",
+   "ko": "분장팀이 쁘라윳의 팔에 가짜 문신을 그렸어요.",
+   "blank": "รอยสัก",
+   "src": "made"
+  },
+  {
+   "text": "ชายที่นั่งตรงข้ามจันทร์มีรอยสักรูปมังกรที่แขน",
+   "en": "The man sitting across from Chan has a dragon tattoo on his arm.",
+   "ko": "짠의 맞은편에 앉은 남자는 팔에 용 문신이 있어요.",
+   "blank": "รอยสัก",
+   "src": "made"
+  }
+ ],
  "w|ระฆัง": [
   {
    "text": "ทุกเช้า เอกได้ยินเสียงระฆังจากวัดข้างสำนักงาน",
@@ -57989,6 +58325,22 @@
    "src": "made"
   }
  ],
+ "w|รุกราน": [
+  {
+   "text": "ละครเวทีเรื่องใหม่เล่าถึงเมืองโบราณที่ถูกข้าศึกรุกราน",
+   "en": "The new stage play tells of an ancient city invaded by enemies.",
+   "ko": "새 연극은 적에게 침략당한 고대 도시 이야기를 다뤄요.",
+   "blank": "รุกราน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อ่านหนังสือประวัติศาสตร์เรื่องสงครามที่ต่างชาติรุกรานแผ่นดิน",
+   "en": "Chan is reading a history book about a war in which foreign powers invaded the land.",
+   "ko": "짠은 외세가 땅을 침략한 전쟁에 관한 역사책을 읽고 있어요.",
+   "blank": "รุกราน",
+   "src": "made"
+  }
+ ],
  "w|รุ้ง": [
   {
    "text": "หลังฝนตกมีรุ้งบนฟ้า",
@@ -58233,6 +58585,38 @@
    "src": "made"
   }
  ],
+ "w|รูปปั้น": [
+  {
+   "text": "ในองก์ที่สอง ประยุทธต้องยืนนิ่งเหมือนรูปปั้นนานห้านาที",
+   "en": "In the second act, Prayut has to stand still like a statue for five minutes.",
+   "ko": "두 번째 막에서 쁘라윳은 오 분 동안 조각상처럼 가만히 서 있어야 해요.",
+   "blank": "รูปปั้น",
+   "src": "made"
+  },
+  {
+   "text": "หน้าสถานีมีรูปปั้นช้างตัวใหญ่ต้อนรับนักท่องเที่ยว",
+   "en": "A big elephant statue in front of the station welcomes tourists.",
+   "ko": "역 앞에는 커다란 코끼리 조각상이 관광객을 맞아요.",
+   "blank": "รูปปั้น",
+   "src": "made"
+  }
+ ],
+ "w|รูปภาพ": [
+  {
+   "text": "ผนังห้องโถงมีรูปภาพนักแสดงรุ่นเก่าติดเรียงกัน",
+   "en": "The lobby walls are lined with pictures of actors from past generations.",
+   "ko": "로비 벽에는 옛 배우들의 사진이 나란히 걸려 있어요.",
+   "blank": "รูปภาพ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เปิดรูปภาพเก่าในโทรศัพท์ดูฆ่าเวลา",
+   "en": "Chan looked through old pictures on her phone to kill time.",
+   "ko": "짠은 시간을 때우려고 휴대폰 속 옛 사진을 넘겨 봤어요.",
+   "blank": "รูปภาพ",
+   "src": "made"
+  }
+ ],
  "w|รูปร่าง": [
   {
    "text": "ภูเขาลูกนั้นมีรูปร่างเหมือนช้างนอนหมอบ",
@@ -58246,6 +58630,22 @@
    "en": "New phones are so thin in shape that Chan has to open the back cover carefully.",
    "ko": "새 휴대폰은 모양이 얇아서 짠은 뒷면 덮개를 조심스럽게 열어야 해요.",
    "blank": "รูปร่าง",
+   "src": "made"
+  }
+ ],
+ "w|รูปลักษณ์": [
+  {
+   "text": "ช่างแต่งหน้าเปลี่ยนรูปลักษณ์ของประยุทธให้ดูแก่ขึ้นยี่สิบปี",
+   "en": "The makeup artist changed Prayut's appearance to look twenty years older.",
+   "ko": "분장사는 쁘라윳의 외모를 스무 살 더 들어 보이게 바꿨어요.",
+   "blank": "รูปลักษณ์",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟขบวนใหม่มีรูปลักษณ์ทันสมัยกว่าเดิมมาก",
+   "en": "The new train looks much more modern than the old one.",
+   "ko": "새 열차는 예전보다 훨씬 현대적인 모습이에요.",
+   "blank": "รูปลักษณ์",
    "src": "made"
   }
  ],
@@ -58699,6 +59099,22 @@
    "en": "I want to hear your story.",
    "ko": "네 이야기를 듣고 싶어.",
    "blank": "เรื่องราว"
+  }
+ ],
+ "w|เรื่องไร้สาระ": [
+  {
+   "text": "ตัวละครของประยุทธชอบพูดเรื่องไร้สาระจนคนดูหัวเราะ",
+   "en": "Prayut's character loves talking nonsense, which makes the audience laugh.",
+   "ko": "쁘라윳의 배역은 쓸데없는 소리를 잘해서 관객을 웃겨요.",
+   "blank": "เรื่องไร้สาระ",
+   "src": "made"
+  },
+  {
+   "text": "ผู้โดยสารสองคนเถียงกันเรื่องไร้สาระทั้งคืน",
+   "en": "Two passengers argued about nonsense all night.",
+   "ko": "승객 두 명이 밤새 쓸데없는 일로 말다툼했어요.",
+   "blank": "เรื่องไร้สาระ",
+   "src": "made"
   }
  ],
  "w|เรื่องส่วนตัว": [
@@ -59975,6 +60391,22 @@
    "blank": "ละเอียด"
   }
  ],
+ "w|ละเอียดอ่อน": [
+  {
+   "text": "บทนี้พูดถึงเรื่องละเอียดอ่อนในครอบครัว ประยุทธจึงเล่นอย่างระวัง",
+   "en": "This role deals with a sensitive family matter, so Prayut plays it carefully.",
+   "ko": "이 배역은 가족 안의 민감한 문제를 다뤄서 쁘라윳은 조심스럽게 연기해요.",
+   "blank": "ละเอียดอ่อน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เป็นคนจิตใจละเอียดอ่อน ร้องไห้ง่ายเวลาบอกลาครอบครัว",
+   "en": "Chan is a sensitive person who cries easily when saying goodbye to family.",
+   "ko": "짠은 마음이 여려서 가족과 헤어질 때 쉽게 울어요.",
+   "blank": "ละเอียดอ่อน",
+   "src": "made"
+  }
+ ],
  "w|ลักพาตัว": [
   {
    "text": "เรื่องย่อของละครคือเด็กชายคนหนึ่งถูกลักพาตัวไปจากตลาดน้ำ",
@@ -60418,6 +60850,22 @@
    "en": "The glass of the dessert case is covered in children's fingerprints.",
    "ko": "디저트 진열장 유리가 아이들 손자국으로 가득해요.",
    "blank": "ลายนิ้วมือ",
+   "src": "made"
+  }
+ ],
+ "w|ลายมือ": [
+  {
+   "text": "ประยุทธจดโน้ตในบทด้วยลายมือที่อ่านยาก",
+   "en": "Prayut writes notes in his script in hard-to-read handwriting.",
+   "ko": "쁘라윳은 알아보기 힘든 글씨로 대본에 메모를 해요.",
+   "blank": "ลายมือ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อ่านจดหมายลายมือของยายระหว่างทาง",
+   "en": "Chan read her grandmother's handwritten letter on the way.",
+   "ko": "짠은 가는 길에 할머니가 손으로 쓴 편지를 읽었어요.",
+   "blank": "ลายมือ",
    "src": "made"
   }
  ],
@@ -61587,6 +62035,22 @@
    "blank": "เล่า"
   }
  ],
+ "w|เล่าเรียน": [
+  {
+   "text": "ประยุทธทิ้งการเล่าเรียนกลางคันเพื่อมาเป็นนักแสดง",
+   "en": "Prayut quit his studies halfway through to become an actor.",
+   "ko": "쁘라윳은 배우가 되려고 학업을 중간에 그만뒀어요.",
+   "blank": "เล่าเรียน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ย้ายเข้าเมืองเพื่อเล่าเรียนตั้งแต่อายุสิบห้า",
+   "en": "Chan moved to the city to study when she was fifteen.",
+   "ko": "짠은 열다섯 살 때 공부하러 도시로 이사했어요.",
+   "blank": "เล่าเรียน",
+   "src": "made"
+  }
+ ],
  "w|เล่าเรื่อง": [
   {
    "text": "อนันต์ชอบเล่าเรื่องเบื้องหลังของสิ่งของแต่ละชิ้นให้ผู้ชมฟัง",
@@ -62103,6 +62567,22 @@
    "blank": "โลก"
   }
  ],
+ "w|โลกาภิวัตน์": [
+  {
+   "text": "ละครเรื่องนี้ตั้งคำถามว่าโลกาภิวัตน์เปลี่ยนหมู่บ้านไปอย่างไร",
+   "en": "This play asks how globalization changed a village.",
+   "ko": "이 연극은 세계화가 마을을 어떻게 바꿨는지 질문을 던져요.",
+   "blank": "โลกาภิวัตน์",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์คุยกับนักศึกษาข้าง ๆ เรื่องโลกาภิวัตน์กับชีวิตคนชนบท",
+   "en": "Chan chatted with the student next to her about globalization and rural life.",
+   "ko": "짠은 옆자리 대학생과 세계화와 시골 생활에 대해 이야기했어요.",
+   "blank": "โลกาภิวัตน์",
+   "src": "made"
+  }
+ ],
  "w|โลโก้": [
   {
    "text": "ชัยติดโลโก้บริษัทลงบนกล่องสินค้าทุกใบ",
@@ -62462,6 +62942,22 @@
    "en": "The tourist got the tones wrong, so Malee didn't know which fruit the customer wanted.",
    "ko": "관광객이 성조를 틀리게 발음해서 말리는 손님이 무슨 과일을 원하는지 몰랐어요.",
    "blank": "วรรณยุกต์",
+   "src": "made"
+  }
+ ],
+ "w|วลี": [
+  {
+   "text": "ประยุทธพูดวลีเด็ดของตัวละครจนคนดูปรบมือ",
+   "en": "Prayut delivered the character's catchphrase and the audience applauded.",
+   "ko": "쁘라윳이 배역의 명대사를 하자 관객들이 박수를 쳤어요.",
+   "blank": "วลี",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์จดวลีภาษาอังกฤษจากป้ายในสถานีลงสมุด",
+   "en": "Chan copied English expressions from the station signs into her notebook.",
+   "ko": "짠은 역 표지판에 있는 영어 표현을 공책에 적었어요.",
+   "blank": "วลี",
    "src": "made"
   }
  ],
@@ -63251,6 +63747,22 @@
    "en": "The next agenda item is the budget.",
    "ko": "다음 안건은 예산이야.",
    "blank": "วาระ"
+  }
+ ],
+ "w|ว่าว": [
+  {
+   "text": "ฉากเปิดเรื่องมีเด็ก ๆ วิ่งเล่นว่าวบนเวที",
+   "en": "The opening scene has children running around flying kites on stage.",
+   "ko": "첫 장면에서는 아이들이 무대 위를 뛰어다니며 연을 날려요.",
+   "blank": "ว่าว",
+   "src": "made"
+  },
+  {
+   "text": "เด็ก ๆ ในทุ่งกำลังเล่นว่าวตอนรถไฟแล่นผ่าน",
+   "en": "Kids in the field were flying kites as the train went by.",
+   "ko": "기차가 지나갈 때 들판에서 아이들이 연을 날리고 있었어요.",
+   "blank": "ว่าว",
+   "src": "made"
   }
  ],
  "w|ว้าว": [
@@ -66735,6 +67247,22 @@
    "src": "made"
   }
  ],
+ "w|ส่วนที่เหลือ": [
+  {
+   "text": "ประยุทธจำบทได้ครึ่งเรื่อง ส่วนที่เหลือจะท่องคืนนี้",
+   "en": "Prayut has memorized half the script and will learn the rest tonight.",
+   "ko": "쁘라윳은 대본을 절반 외웠고 나머지는 오늘 밤에 외울 거예요.",
+   "blank": "ส่วนที่เหลือ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์กินข้าวกล่องไปครึ่งหนึ่ง แล้วเก็บส่วนที่เหลือไว้มื้อเย็น",
+   "en": "Chan ate half her boxed lunch and saved the rest for dinner.",
+   "ko": "짠은 도시락을 반만 먹고 나머지는 저녁으로 남겨 뒀어요.",
+   "blank": "ส่วนที่เหลือ",
+   "src": "made"
+  }
+ ],
  "w|ส่วนน้อย": [
   {
    "text": "มีเพียงส่วนน้อยที่ไม่เห็นด้วย",
@@ -68143,6 +68671,22 @@
    "en": "This public park is beautiful.",
    "ko": "이 공원은 정말 예뻐.",
    "blank": "สาธารณะ"
+  }
+ ],
+ "w|สาธิต": [
+  {
+   "text": "ครูสอนการแสดงสาธิตวิธีร้องไห้บนเวทีให้นักเรียนดู",
+   "en": "The acting teacher demonstrated how to cry on stage for the students.",
+   "ko": "연기 선생님이 학생들에게 무대에서 우는 법을 시범으로 보여 줬어요.",
+   "blank": "สาธิต",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานสาธิตวิธีกางเตียงนอนในตู้รถไฟให้จันทร์ดู",
+   "en": "The attendant demonstrated to Chan how to fold out the bed in the sleeper car.",
+   "ko": "승무원이 짠에게 침대칸 침대 펴는 법을 시범으로 보여 줬어요.",
+   "blank": "สาธิต",
+   "src": "made"
   }
  ],
  "w|สาบาน": [
@@ -70542,6 +71086,22 @@
    "en": "Pranee said the tiles around the pool have started to deteriorate and need fixing soon.",
    "ko": "쁘라니는 수영장 둘레 타일이 낡기 시작해서 빨리 고쳐야 한다고 했어요.",
    "blank": "เสื่อม",
+   "src": "made"
+  }
+ ],
+ "w|เสื่อมโทรม": [
+  {
+   "text": "โรงละครเก่าแห่งนี้เสื่อมโทรมจนต้องปิดซ่อม",
+   "en": "This old theater has deteriorated so much it has to close for repairs.",
+   "ko": "이 오래된 극장은 너무 낡아서 수리를 위해 문을 닫아야 해요.",
+   "blank": "เสื่อมโทรม",
+   "src": "made"
+  },
+  {
+   "text": "สถานีเล็ก ๆ ริมทางดูเสื่อมโทรมเพราะไม่มีคนดูแล",
+   "en": "The little station by the tracks looks run-down because no one looks after it.",
+   "ko": "철길 옆 작은 역은 돌보는 사람이 없어 낡아 보여요.",
+   "blank": "เสื่อมโทรม",
    "src": "made"
   }
  ],
@@ -72991,6 +73551,22 @@
    "blank": "หลายคน"
   }
  ],
+ "w|หลายอย่าง": [
+  {
+   "text": "ประยุทธทำได้หลายอย่าง ทั้งร้อง เต้น และเล่นดนตรี",
+   "en": "Prayut can do many things: sing, dance, and play music.",
+   "ko": "쁘라윳은 노래, 춤, 악기 연주까지 여러 가지를 할 줄 알아요.",
+   "blank": "หลายอย่าง",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เห็นวิวสวย ๆ หลายอย่างจากหน้าต่างรถไฟ",
+   "en": "Chan saw many beautiful sights from the train window.",
+   "ko": "짠은 기차 창밖으로 아름다운 풍경을 여러 가지 봤어요.",
+   "blank": "หลายอย่าง",
+   "src": "made"
+  }
+ ],
  "w|หลีก": [
   {
    "text": "รถคันนั้นหักหลีกทันเวลา",
@@ -74347,6 +74923,22 @@
    "blank": "หิน"
   }
  ],
+ "w|หินอ่อน": [
+  {
+   "text": "บันไดหินอ่อนหน้าโรงละครเย็นและลื่น",
+   "en": "The marble stairs in front of the theater are cold and slippery.",
+   "ko": "극장 앞 대리석 계단은 차갑고 미끄러워요.",
+   "blank": "หินอ่อน",
+   "src": "made"
+  },
+  {
+   "text": "พื้นสถานีปลายทางปูด้วยหินอ่อนเก่าแก่",
+   "en": "The floor of the terminal station is laid with old marble.",
+   "ko": "종착역 바닥은 오래된 대리석으로 깔려 있어요.",
+   "blank": "หินอ่อน",
+   "src": "made"
+  }
+ ],
  "w|หิมะ": [
   {
    "text": "หิมะตกที่ดอยอินทนนท์",
@@ -75317,6 +75909,22 @@
    "en": "I caught a glimpse of him standing in the corner.",
    "ko": "그가 모퉁이에 서 있는 걸 흘깃 봤어.",
    "blank": "เหลือบ"
+  }
+ ],
+ "w|เหี่ยว": [
+  {
+   "text": "ดอกไม้ที่แฟนคลับให้ประยุทธเมื่อวานเริ่มเหี่ยวแล้ว",
+   "en": "The flowers fans gave Prayut yesterday are already starting to wilt.",
+   "ko": "어제 팬들이 쁘라윳에게 준 꽃이 벌써 시들기 시작했어요.",
+   "blank": "เหี่ยว",
+   "src": "made"
+  },
+  {
+   "text": "พวงมาลัยที่จันทร์ซื้อตอนขึ้นรถไฟเริ่มเหี่ยวแล้ว",
+   "en": "The garland Chan bought when boarding the train is starting to wilt.",
+   "ko": "짠이 기차를 탈 때 산 꽃목걸이가 시들기 시작했어요.",
+   "blank": "เหี่ยว",
+   "src": "made"
   }
  ],
  "w|แห่": [
@@ -77589,6 +78197,22 @@
    "en": "I really want to change careers.",
    "ko": "직업을 바꾸고 싶어.",
    "blank": "อาชีพ"
+  }
+ ],
+ "w|อาชีวศึกษา": [
+  {
+   "text": "นักเรียนอาชีวศึกษาช่วยสร้างฉากไม้ให้โรงละคร",
+   "en": "Vocational students helped build the wooden sets for the theater.",
+   "ko": "직업 학교 학생들이 극장의 나무 세트 제작을 도왔어요.",
+   "blank": "อาชีวศึกษา",
+   "src": "made"
+  },
+  {
+   "text": "น้องชายของจันทร์เรียนอาชีวศึกษาสาขาช่างกล",
+   "en": "Chan's younger brother is in vocational school studying mechanics.",
+   "ko": "짠의 남동생은 직업 학교에서 기계과를 다녀요.",
+   "blank": "อาชีวศึกษา",
+   "src": "made"
   }
  ],
  "w|อาญา": [
