@@ -5345,6 +5345,22 @@
    "blank": "경제"
   }
  ],
+ "w|경제위기": [
+  {
+   "text": "신문은 경제위기 속에서도 문을 연 작은 가게들을 소개했어요.",
+   "en": "The newspaper introduced small shops that opened despite the economic crisis.",
+   "ko": "신문은 경제위기 속에서도 문을 연 작은 가게들을 소개했어요.",
+   "blank": "경제위기",
+   "src": "made"
+  },
+  {
+   "text": "다은과 함께 뛴 아저씨는 경제위기 때 사업을 접고 달리기로 마음을 다잡았대요.",
+   "en": "The man who ran with Daeun said he closed his business during the economic crisis and steadied himself through running.",
+   "ko": "다은과 함께 뛴 아저씨는 경제위기 때 사업을 접고 달리기로 마음을 다잡았대요.",
+   "blank": "경제위기",
+   "src": "made"
+  }
+ ],
  "w|경제적": [
   {
    "text": "준호 부부는 경제적인 이유로 신혼여행을 가까운 섬으로 갔어요.",
@@ -9819,6 +9835,22 @@
    "src": "made"
   }
  ],
+ "w|구조조정": [
+  {
+   "text": "경민은 대기업 구조조정으로 직원들이 떠나는 이야기를 취재했어요.",
+   "en": "Kyungmin reported on employees leaving due to a big company's restructuring.",
+   "ko": "경민은 대기업 구조조정으로 직원들이 떠나는 이야기를 취재했어요.",
+   "blank": "구조조정으로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 회사 구조조정으로 마음고생을 하다가 달리기를 시작했어요.",
+   "en": "Daeun started running after going through stress from her company's restructuring.",
+   "ko": "다은은 회사 구조조정으로 마음고생을 하다가 달리기를 시작했어요.",
+   "blank": "구조조정으로",
+   "src": "made"
+  }
+ ],
  "w|구조하다": [
   {
    "text": "소방관이 사람을 구조해.",
@@ -10029,6 +10061,22 @@
    "en": "This is my first time in the country.",
    "ko": "국내는 처음이야.",
    "blank": "국내는"
+  }
+ ],
+ "w|국내총생산": [
+  {
+   "text": "경민은 국내총생산이 왜 줄었는지 전문가에게 물었어요.",
+   "en": "Kyungmin asked an expert why gross domestic product had fallen.",
+   "ko": "경민은 국내총생산이 왜 줄었는지 전문가에게 물었어요.",
+   "blank": "국내총생산이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 큰 마라톤 대회가 국내총생산에 얼마나 보탬이 되는지 궁금했어요.",
+   "en": "Daeun wondered how much a big marathon contributes to gross domestic product.",
+   "ko": "다은은 큰 마라톤 대회가 국내총생산에 얼마나 보탬이 되는지 궁금했어요.",
+   "blank": "국내총생산에",
+   "src": "made"
   }
  ],
  "w|국립공원": [
@@ -12658,6 +12706,22 @@
    "en": "Migyeong got financial counseling to take out a loan for the repairs.",
    "ko": "미경은 수리비 대출을 받으려고 금융 상담을 받았어요.",
    "blank": "금융",
+   "src": "made"
+  }
+ ],
+ "w|금융위기": [
+  {
+   "text": "경민은 지난 금융위기 때 은행들이 어떻게 대응했는지 정리했어요.",
+   "en": "Kyungmin summarized how banks responded during the last financial crisis.",
+   "ko": "경민은 지난 금융위기 때 은행들이 어떻게 대응했는지 정리했어요.",
+   "blank": "금융위기",
+   "src": "made"
+  },
+  {
+   "text": "이 마라톤 대회는 금융위기 때 후원사가 빠져서 한동안 열리지 못했어요.",
+   "en": "This marathon couldn't be held for a while because sponsors pulled out during the financial crisis.",
+   "ko": "이 마라톤 대회는 금융위기 때 후원사가 빠져서 한동안 열리지 못했어요.",
+   "blank": "금융위기",
    "src": "made"
   }
  ],
@@ -22271,6 +22335,22 @@
    "blank": "대출"
   }
  ],
+ "w|대출금": [
+  {
+   "text": "경민은 대출금을 갚느라 허덕이는 청년들의 사연을 기사로 썼어요.",
+   "en": "Kyungmin wrote an article about young people struggling to pay off their loans.",
+   "ko": "경민은 대출금을 갚느라 허덕이는 청년들의 사연을 기사로 썼어요.",
+   "blank": "대출금을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 대출금을 다 갚은 기념으로 처음 풀코스에 도전했어요.",
+   "en": "Daeun took on her first full marathon to celebrate paying off her loan.",
+   "ko": "다은은 대출금을 다 갚은 기념으로 처음 풀코스에 도전했어요.",
+   "blank": "대출금을",
+   "src": "made"
+  }
+ ],
  "w|대충": [
   {
    "text": "대충 해 두지 마.",
@@ -27103,6 +27183,22 @@
    "src": "krdict"
   }
  ],
+ "w|로션": [
+  {
+   "text": "경민은 건조한 사무실에서 손에 로션을 자주 발라요.",
+   "en": "Kyungmin often puts lotion on his hands in the dry office.",
+   "ko": "경민은 건조한 사무실에서 손에 로션을 자주 발라요.",
+   "blank": "로션을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 바람에 튼 다리에 로션을 듬뿍 발랐어요.",
+   "en": "Daeun slathered lotion on her wind-chapped legs.",
+   "ko": "다은은 바람에 튼 다리에 로션을 듬뿍 발랐어요.",
+   "blank": "로션을",
+   "src": "made"
+  }
+ ],
  "w|룸메이트": [
   {
    "text": "민수의 대학 룸메이트가 결혼식 축사를 맡았어요.",
@@ -27736,6 +27832,22 @@
    "en": "The photographer said that, last of all, they should take a group photo with all the guests.",
    "ko": "사진 작가는 마지막으로 하객 모두와 단체 사진을 찍자고 했어요.",
    "blank": "마지막으로",
+   "src": "made"
+  }
+ ],
+ "w|마지못해": [
+  {
+   "text": "경민은 편집장의 지시에 마지못해 기사 제목을 바꿨어요.",
+   "en": "Kyungmin reluctantly changed the headline at the editor's order.",
+   "ko": "경민은 편집장의 지시에 마지못해 기사 제목을 바꿨어요.",
+   "blank": "마지못해",
+   "src": "made"
+  },
+  {
+   "text": "다은은 친구의 부탁에 마지못해 마라톤 신청서를 냈다가 달리기에 빠졌어요.",
+   "en": "Daeun reluctantly signed up for a marathon at a friend's request and then fell in love with running.",
+   "ko": "다은은 친구의 부탁에 마지못해 마라톤 신청서를 냈다가 달리기에 빠졌어요.",
+   "blank": "마지못해",
    "src": "made"
   }
  ],
@@ -31667,6 +31779,22 @@
    "blank": "무역이"
   }
  ],
+ "w|무역수지": [
+  {
+   "text": "경민은 수출이 늘어서 무역수지가 흑자로 돌아섰다고 보도했어요.",
+   "en": "Kyungmin reported that exports rose and the trade balance turned to a surplus.",
+   "ko": "경민은 수출이 늘어서 무역수지가 흑자로 돌아섰다고 보도했어요.",
+   "blank": "무역수지가",
+   "src": "made"
+  },
+  {
+   "text": "다은의 동호회 회원은 무역수지 통계를 내는 공무원이에요.",
+   "en": "A member of Daeun's club is a civil servant who compiles trade balance statistics.",
+   "ko": "다은의 동호회 회원은 무역수지 통계를 내는 공무원이에요.",
+   "blank": "무역수지",
+   "src": "made"
+  }
+ ],
  "w|무의미하다": [
   {
    "text": "태윤은 아무도 읽지 않는 보고서를 쓰는 건 무의미하다고 생각했어요.",
@@ -35279,6 +35407,22 @@
    "blank": "배달하기"
   }
  ],
+ "w|배당": [
+  {
+   "text": "경민은 회사들이 주주 배당을 늘린다는 소식을 전했어요.",
+   "en": "Kyungmin delivered the news that companies are increasing shareholder dividends.",
+   "ko": "경민은 회사들이 주주 배당을 늘린다는 소식을 전했어요.",
+   "blank": "배당을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 작은 주식 배당으로 마라톤 참가비를 냈어요.",
+   "en": "Daeun paid the marathon entry fee with a small stock dividend.",
+   "ko": "다은은 작은 주식 배당으로 마라톤 참가비를 냈어요.",
+   "blank": "배당으로",
+   "src": "made"
+  }
+ ],
  "w|배려": [
   {
    "text": "작은 배려가 하루를 바꿔.",
@@ -35672,6 +35816,22 @@
    "en": "Seoyeon goes to the same place every year to see the swans floating on the winter lake.",
    "ko": "서연은 겨울 호수에 떠 있는 백조를 보러 해마다 같은 곳에 가요.",
    "blank": "백조를",
+   "src": "made"
+  }
+ ],
+ "w|백팩": [
+  {
+   "text": "경민은 노트북과 녹음기를 백팩에 넣고 취재를 나갔어요.",
+   "en": "Kyungmin put his laptop and recorder in his backpack and went out to report.",
+   "ko": "경민은 노트북과 녹음기를 백팩에 넣고 취재를 나갔어요.",
+   "blank": "백팩에",
+   "src": "made"
+  },
+  {
+   "text": "다은은 갈아입을 옷을 백팩에 챙겨서 대회장에 갔어요.",
+   "en": "Daeun packed a change of clothes in her backpack and went to the race venue.",
+   "ko": "다은은 갈아입을 옷을 백팩에 챙겨서 대회장에 갔어요.",
+   "blank": "백팩에",
    "src": "made"
   }
  ],
@@ -38221,6 +38381,22 @@
    "src": "krdict"
   }
  ],
+ "w|부가가치세": [
+  {
+   "text": "경민은 물건값에 부가가치세가 어떻게 붙는지 그림으로 설명했어요.",
+   "en": "Kyungmin explained with a diagram how value-added tax is added to prices.",
+   "ko": "경민은 물건값에 부가가치세가 어떻게 붙는지 그림으로 설명했어요.",
+   "blank": "부가가치세가",
+   "src": "made"
+  },
+  {
+   "text": "다은이 산 러닝화 영수증에는 부가가치세가 따로 적혀 있었어요.",
+   "en": "Daeun's running shoe receipt listed value-added tax separately.",
+   "ko": "다은이 산 러닝화 영수증에는 부가가치세가 따로 적혀 있었어요.",
+   "blank": "부가가치세가",
+   "src": "made"
+  }
+ ],
  "w|부가세": [
   {
    "text": "벼룩시장 물건 값에는 부가세가 붙지 않는다고 경민이 손님에게 설명했어요.",
@@ -38313,6 +38489,22 @@
    "src": "made"
   }
  ],
+ "w|부도": [
+  {
+   "text": "그 회사가 부도를 내자 하청 업체들도 어려워졌다고 경민이 보도했어요.",
+   "en": "Kyungmin reported that when the company defaulted, its subcontractors also struggled.",
+   "ko": "그 회사가 부도를 내자 하청 업체들도 어려워졌다고 경민이 보도했어요.",
+   "blank": "부도를",
+   "src": "made"
+  },
+  {
+   "text": "대회 후원사가 부도가 나서 기념품이 나오지 않았어요.",
+   "en": "The race's sponsor defaulted, so no souvenirs were handed out.",
+   "ko": "대회 후원사가 부도가 나서 기념품이 나오지 않았어요.",
+   "blank": "부도가",
+   "src": "made"
+  }
+ ],
  "w|부동산": [
   {
    "text": "삼촌은 부동산에 투자하여 큰돈을 벌었다.",
@@ -38357,6 +38549,22 @@
    "en": "The voice sounded soft.",
    "ko": "목소리가 부드럽게 들렸어.",
    "blank": "부드럽게"
+  }
+ ],
+ "w|부득이": [
+  {
+   "text": "인쇄기 고장으로 신문 배달이 부득이 늦어졌어요.",
+   "en": "Due to a printing press breakdown, newspaper delivery was unavoidably delayed.",
+   "ko": "인쇄기 고장으로 신문 배달이 부득이 늦어졌어요.",
+   "blank": "부득이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 발목을 다쳐서 부득이 중간에 경기를 포기했어요.",
+   "en": "Daeun hurt her ankle and unavoidably had to drop out of the race midway.",
+   "ko": "다은은 발목을 다쳐서 부득이 중간에 경기를 포기했어요.",
+   "blank": "부득이",
+   "src": "made"
   }
  ],
  "w|부디": [
@@ -39075,6 +39283,22 @@
    "en": "I asked my sibling to run an errand.",
    "ko": "동생에게 심부름을 부탁했어.",
    "blank": "부탁했어"
+  }
+ ],
+ "w|부패": [
+  {
+   "text": "경민의 기사는 지방 관청의 부패 문제를 세상에 알렸어요.",
+   "en": "Kyungmin's article brought a local government office's corruption problem to light.",
+   "ko": "경민의 기사는 지방 관청의 부패 문제를 세상에 알렸어요.",
+   "blank": "부패",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마라톤 협회의 부패 소식을 듣고 실망했어요.",
+   "en": "Daeun was disappointed to hear news of corruption in the marathon association.",
+   "ko": "다은은 마라톤 협회의 부패 소식을 듣고 실망했어요.",
+   "blank": "부패",
+   "src": "made"
   }
  ],
  "w|부품": [
@@ -40581,6 +40805,22 @@
    "en": "As the problem stemmed from a small mistake, it grew.",
    "ko": "문제는 작은 실수에서 비롯하다 보니 커졌어.",
    "blank": "비롯하다"
+  }
+ ],
+ "w|비리": [
+  {
+   "text": "경민은 공사 입찰 비리를 몇 달 동안 추적했어요.",
+   "en": "Kyungmin tracked corruption in construction bidding for months.",
+   "ko": "경민은 공사 입찰 비리를 몇 달 동안 추적했어요.",
+   "blank": "비리를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 기록 조작 비리가 드러난 대회에는 다시 나가지 않기로 했어요.",
+   "en": "Daeun decided never to enter again a race where record-tampering corruption came to light.",
+   "ko": "다은은 기록 조작 비리가 드러난 대회에는 다시 나가지 않기로 했어요.",
+   "blank": "비리가",
+   "src": "made"
   }
  ],
  "w|비만": [
@@ -44697,6 +44937,22 @@
    "blank": "샌드위치"
   }
  ],
+ "w|샌들": [
+  {
+   "text": "경민은 여름 특집으로 발이 편한 샌들을 다룬 기사를 썼어요.",
+   "en": "For a summer special, Kyungmin wrote an article on comfortable sandals.",
+   "ko": "경민은 여름 특집으로 발이 편한 샌들을 다룬 기사를 썼어요.",
+   "blank": "샌들을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 경기가 끝나자 운동화를 벗고 샌들로 갈아 신었어요.",
+   "en": "When the race was over, Daeun took off her running shoes and switched to sandals.",
+   "ko": "다은은 경기가 끝나자 운동화를 벗고 샌들로 갈아 신었어요.",
+   "blank": "샌들로",
+   "src": "made"
+  }
+ ],
  "w|샐러드": [
   {
    "text": "점심은 가벼운 샐러드로 해결했어.",
@@ -46149,6 +46405,22 @@
    "src": "made"
   }
  ],
+ "w|선크림": [
+  {
+   "text": "경민은 야외 취재를 나가기 전에 선크림을 꼭 발라요.",
+   "en": "Kyungmin always puts on sunscreen before going out to report outdoors.",
+   "ko": "경민은 야외 취재를 나가기 전에 선크림을 꼭 발라요.",
+   "blank": "선크림을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 햇볕이 강해서 출발 전에 선크림을 두 번 발랐어요.",
+   "en": "The sun was strong, so Daeun put on sunscreen twice before the start.",
+   "ko": "다은은 햇볕이 강해서 출발 전에 선크림을 두 번 발랐어요.",
+   "blank": "선크림을",
+   "src": "made"
+  }
+ ],
  "w|선택되다": [
   {
    "text": "대표로 선택됐어.",
@@ -47421,6 +47693,22 @@
    "src": "krdict"
   }
  ],
+ "w|세율": [
+  {
+   "text": "정부가 세율을 바꾼다는 소식에 독자 문의가 쏟아졌어요.",
+   "en": "Reader inquiries poured in at the news that the government was changing tax rates.",
+   "ko": "정부가 세율을 바꾼다는 소식에 독자 문의가 쏟아졌어요.",
+   "blank": "세율을",
+   "src": "made"
+  },
+  {
+   "text": "다은의 동호회에는 세율이 바뀌면 바로 알려 주는 세무사가 있어요.",
+   "en": "Daeun's club has a tax accountant who lets everyone know right away when tax rates change.",
+   "ko": "다은의 동호회에는 세율이 바뀌면 바로 알려 주는 세무사가 있어요.",
+   "blank": "세율이",
+   "src": "made"
+  }
+ ],
  "w|세일": [
   {
    "text": "세일이 시작됐어.",
@@ -47761,6 +48049,22 @@
    "src": "made"
   }
  ],
+ "w|소득세": [
+  {
+   "text": "경민은 직장인의 소득세 신고 방법을 쉽게 정리했어요.",
+   "en": "Kyungmin wrote an easy summary of how office workers file income tax.",
+   "ko": "경민은 직장인의 소득세 신고 방법을 쉽게 정리했어요.",
+   "blank": "소득세",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마라톤 상금에도 소득세가 붙는다는 걸 처음 알았어요.",
+   "en": "Daeun learned for the first time that income tax applies to marathon prize money too.",
+   "ko": "다은은 마라톤 상금에도 소득세가 붙는다는 걸 처음 알았어요.",
+   "blank": "소득세가",
+   "src": "made"
+  }
+ ],
  "w|소란": [
   {
    "text": "쉬는 시간에 복도에서 소란이 일어나서 선생님이 나오셨어요.",
@@ -47848,6 +48152,22 @@
    "en": "In front of the lighthouse, Sohee wished for her whole family's health.",
    "ko": "소희는 등대 앞에서 가족이 모두 건강하기를 소망했어요.",
    "blank": "소망했어요",
+   "src": "made"
+  }
+ ],
+ "w|소매": [
+  {
+   "text": "경민은 셔츠 소매를 걷어붙이고 마감 기사를 쓰기 시작했어요.",
+   "en": "Kyungmin rolled up his shirt sleeves and started writing the deadline article.",
+   "ko": "경민은 셔츠 소매를 걷어붙이고 마감 기사를 쓰기 시작했어요.",
+   "blank": "소매를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 땀을 소매로 닦으며 결승선까지 달렸어요.",
+   "en": "Daeun ran to the finish line wiping sweat with her sleeve.",
+   "ko": "다은은 땀을 소매로 닦으며 결승선까지 달렸어요.",
+   "blank": "소매로",
    "src": "made"
   }
  ],
@@ -48699,6 +49019,22 @@
    "en": "I hurt my wrist when I fell.",
    "ko": "넘어지면서 손목을 다쳤어.",
    "blank": "손목을"
+  }
+ ],
+ "w|손목시계": [
+  {
+   "text": "경민은 휴대폰 대신 손목시계로 마감 시간을 확인해요.",
+   "en": "Kyungmin checks the deadline time on his wristwatch instead of his phone.",
+   "ko": "경민은 휴대폰 대신 손목시계로 마감 시간을 확인해요.",
+   "blank": "손목시계로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 달리는 동안 손목시계로 속도를 확인했어요.",
+   "en": "While running, Daeun checked her pace on her wristwatch.",
+   "ko": "다은은 달리는 동안 손목시계로 속도를 확인했어요.",
+   "blank": "손목시계로",
+   "src": "made"
   }
  ],
  "w|손바닥": [
@@ -49693,6 +50029,22 @@
    "src": "made"
   }
  ],
+ "w|수익률": [
+  {
+   "text": "경민은 펀드 수익률이 높다고 다 좋은 건 아니라고 썼어요.",
+   "en": "Kyungmin wrote that a high fund return isn't always a good thing.",
+   "ko": "경민은 펀드 수익률이 높다고 다 좋은 건 아니라고 썼어요.",
+   "blank": "수익률이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 주식 수익률보다 마라톤 기록이 더 신경 쓰인대요.",
+   "en": "Daeun says she cares more about her marathon time than her stock returns.",
+   "ko": "다은은 주식 수익률보다 마라톤 기록이 더 신경 쓰인대요.",
+   "blank": "수익률보다",
+   "src": "made"
+  }
+ ],
  "w|수입": [
   {
    "text": "수입 과일이 신선해.",
@@ -50659,6 +51011,22 @@
    "blank": "스타가"
   }
  ],
+ "w|스타킹": [
+  {
+   "text": "경민은 생활면에 올이 잘 안 나가는 스타킹 고르는 법을 소개했어요.",
+   "en": "Kyungmin introduced how to choose run-resistant stockings in the lifestyle section.",
+   "ko": "경민은 생활면에 올이 잘 안 나가는 스타킹 고르는 법을 소개했어요.",
+   "blank": "스타킹",
+   "src": "made"
+  },
+  {
+   "text": "다은은 추운 날 달릴 때 운동복 안에 얇은 스타킹을 신어요.",
+   "en": "When running on cold days, Daeun wears thin stockings under her running clothes.",
+   "ko": "다은은 추운 날 달릴 때 운동복 안에 얇은 스타킹을 신어요.",
+   "blank": "스타킹을",
+   "src": "made"
+  }
+ ],
  "w|스타트업": [
   {
    "text": "성호의 현장에는 드론으로 공정을 기록하는 스타트업 직원들이 와 있었어요.",
@@ -50776,6 +51144,22 @@
    "en": "Sohee's younger sibling sneakily took a cookie from the display case.",
    "ko": "소희의 동생이 슬그머니 진열대에서 쿠키를 하나 집어 갔어요.",
    "blank": "슬그머니",
+   "src": "made"
+  }
+ ],
+ "w|슬리퍼": [
+  {
+   "text": "경민은 야근할 때 구두를 벗고 슬리퍼로 갈아 신어요.",
+   "en": "When working late, Kyungmin takes off his dress shoes and changes into slippers.",
+   "ko": "경민은 야근할 때 구두를 벗고 슬리퍼로 갈아 신어요.",
+   "blank": "슬리퍼로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마라톤 다음 날 발이 부어서 슬리퍼만 신고 다녔어요.",
+   "en": "The day after the marathon, Daeun's feet were swollen, so she only wore slippers.",
+   "ko": "다은은 마라톤 다음 날 발이 부어서 슬리퍼만 신고 다녔어요.",
+   "blank": "슬리퍼만",
    "src": "made"
   }
  ],
@@ -52640,6 +53024,22 @@
    "en": "Yuna paid for her train ticket with a credit card.",
    "ko": "유나는 신용 카드로 기차표를 결제했어요.",
    "blank": "신용",
+   "src": "made"
+  }
+ ],
+ "w|신용등급": [
+  {
+   "text": "경민은 신용등급을 올리는 방법을 묻는 독자 질문에 답했어요.",
+   "en": "Kyungmin answered a reader's question about how to raise one's credit rating.",
+   "ko": "경민은 신용등급을 올리는 방법을 묻는 독자 질문에 답했어요.",
+   "blank": "신용등급을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 신용등급이 올라서 새 운동화를 할부로 샀어요.",
+   "en": "Daeun's credit rating went up, so she bought new running shoes in installments.",
+   "ko": "다은은 신용등급이 올라서 새 운동화를 할부로 샀어요.",
+   "blank": "신용등급이",
    "src": "made"
   }
  ],
@@ -56645,6 +57045,22 @@
    "src": "made"
   }
  ],
+ "w|액세서리": [
+  {
+   "text": "경민의 동료는 액세서리 업계의 유행을 취재했어요.",
+   "en": "Kyungmin's colleague reported on trends in the accessories industry.",
+   "ko": "경민의 동료는 액세서리 업계의 유행을 취재했어요.",
+   "blank": "액세서리",
+   "src": "made"
+  },
+  {
+   "text": "다은은 달리다가 걸리적거릴까 봐 액세서리를 모두 뺐어요.",
+   "en": "Daeun took off all her accessories so they wouldn't get in the way while running.",
+   "ko": "다은은 달리다가 걸리적거릴까 봐 액세서리를 모두 뺐어요.",
+   "blank": "액세서리를",
+   "src": "made"
+  }
+ ],
  "w|액자": [
   {
    "text": "도배를 마친 현우는 벽에 가족사진 액자를 걸었어요.",
@@ -57244,6 +57660,22 @@
    "en": "On Adoption Day, Haeun met three families of adoptive parents.",
    "ko": "하은은 입양 가족의 날을 맞아 양부모 세 가족을 만났어요.",
    "blank": "양부모",
+   "src": "made"
+  }
+ ],
+ "w|양산": [
+  {
+   "text": "폭염 기사에는 양산을 쓴 시민들 사진이 실렸어요.",
+   "en": "The heat wave article ran with photos of citizens holding parasols.",
+   "ko": "폭염 기사에는 양산을 쓴 시민들 사진이 실렸어요.",
+   "blank": "양산을",
+   "src": "made"
+  },
+  {
+   "text": "다은의 할머니는 양산을 쓰고 결승선에서 손녀를 기다리셨어요.",
+   "en": "Daeun's grandmother waited at the finish line for her granddaughter under a parasol.",
+   "ko": "다은의 할머니는 양산을 쓰고 결승선에서 손녀를 기다리셨어요.",
+   "blank": "양산을",
    "src": "made"
   }
  ],
@@ -62773,6 +63205,22 @@
    "src": "made"
   }
  ],
+ "w|옷깃": [
+  {
+   "text": "편집장은 옷깃을 여미며 추운 인쇄소 안으로 들어갔어요.",
+   "en": "The editor-in-chief pulled his collar closed and went into the cold printing plant.",
+   "ko": "편집장은 옷깃을 여미며 추운 인쇄소 안으로 들어갔어요.",
+   "blank": "옷깃을",
+   "src": "made"
+  },
+  {
+   "text": "출발 전에 바람이 차서 다은은 점퍼 옷깃을 세웠어요.",
+   "en": "The wind was cold before the start, so Daeun turned up the collar of her jacket.",
+   "ko": "출발 전에 바람이 차서 다은은 점퍼 옷깃을 세웠어요.",
+   "blank": "옷깃을",
+   "src": "made"
+  }
+ ],
  "w|옷장": [
   {
    "text": "겨울옷을 옷장에 넣어 뒀어.",
@@ -63446,6 +63894,22 @@
    "en": "Haeun sent the overseas conference registration fee in foreign currency.",
    "ko": "하은은 해외 학회 등록비를 외화로 송금했어요.",
    "blank": "외화로",
+   "src": "made"
+  }
+ ],
+ "w|외환": [
+  {
+   "text": "정부가 외환 시장을 지켜보고 있다는 기사가 경제면에 실렸어요.",
+   "en": "An article saying the government is watching the foreign exchange market appeared in the business section.",
+   "ko": "정부가 외환 시장을 지켜보고 있다는 기사가 경제면에 실렸어요.",
+   "blank": "외환",
+   "src": "made"
+  },
+  {
+   "text": "다은은 은행 외환 창구에서 일하다가 마라톤 동호회에 들어갔어요.",
+   "en": "Daeun joined a marathon club while working at a bank's foreign exchange counter.",
+   "ko": "다은은 은행 외환 창구에서 일하다가 마라톤 동호회에 들어갔어요.",
+   "blank": "외환",
    "src": "made"
   }
  ],
@@ -75013,6 +75477,22 @@
    "blank": "전세"
   }
  ],
+ "w|전셋값": [
+  {
+   "text": "경민은 전셋값이 올라 이사를 고민하는 신혼부부를 인터뷰했어요.",
+   "en": "Kyungmin interviewed newlyweds considering moving because rent deposits had risen.",
+   "ko": "경민은 전셋값이 올라 이사를 고민하는 신혼부부를 인터뷰했어요.",
+   "blank": "전셋값이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 전셋값이 싼 동네로 이사하면서 새 달리기 코스를 찾았어요.",
+   "en": "Moving to a neighborhood with cheaper rent deposits, Daeun found a new running course.",
+   "ko": "다은은 전셋값이 싼 동네로 이사하면서 새 달리기 코스를 찾았어요.",
+   "blank": "전셋값이",
+   "src": "made"
+  }
+ ],
  "w|전송하다": [
   {
    "text": "동민은 산 위에서 찍은 풍경 사진을 엄마에게 전송했어요.",
@@ -82781,6 +83261,22 @@
    "blank": "집이"
   }
  ],
+ "w|집값": [
+  {
+   "text": "이번 주 신문 일면은 집값이 다시 오른다는 기사였어요.",
+   "en": "This week's front page was an article saying housing prices are rising again.",
+   "ko": "이번 주 신문 일면은 집값이 다시 오른다는 기사였어요.",
+   "blank": "집값이",
+   "src": "made"
+  },
+  {
+   "text": "다은과 친구들은 달리면서 서울 집값 이야기를 했어요.",
+   "en": "Daeun and her friends talked about Seoul housing prices while running.",
+   "ko": "다은과 친구들은 달리면서 서울 집값 이야기를 했어요.",
+   "blank": "집값",
+   "src": "made"
+  }
+ ],
  "w|집게": [
   {
    "text": "준호는 집게로 고기를 뒤집으며 동생 접시에 하나씩 놓아 줬어요.",
@@ -85524,6 +86020,22 @@
    "en": "Yuna learned sign language for her role as a musician who is losing her hearing.",
    "ko": "유나는 청력을 잃어 가는 음악가 역을 위해 수어를 배웠어요.",
    "blank": "청력을",
+   "src": "made"
+  }
+ ],
+ "w|청렴": [
+  {
+   "text": "경민은 평생 청렴을 지켜 온 옛 시장을 인터뷰했어요.",
+   "en": "Kyungmin interviewed a former mayor who had kept his integrity all his life.",
+   "ko": "경민은 평생 청렴을 지켜 온 옛 시장을 인터뷰했어요.",
+   "blank": "청렴을",
+   "src": "made"
+  },
+  {
+   "text": "새 협회장은 청렴을 강조하며 후원금 내역을 모두 공개했어요.",
+   "en": "The new association head stressed integrity and made all sponsorship records public.",
+   "ko": "새 협회장은 청렴을 강조하며 후원금 내역을 모두 공개했어요.",
+   "blank": "청렴을",
    "src": "made"
   }
  ],
@@ -89687,6 +90199,22 @@
    "src": "made"
   }
  ],
+ "w|탈세": [
+  {
+   "text": "경민은 유명 식당 주인의 탈세 의혹을 보도했어요.",
+   "en": "Kyungmin reported on suspicions of tax evasion by a famous restaurant owner.",
+   "ko": "경민은 유명 식당 주인의 탈세 의혹을 보도했어요.",
+   "blank": "탈세",
+   "src": "made"
+  },
+  {
+   "text": "다은이 달리면서 듣던 라디오에서 연예인 탈세 소식이 나왔어요.",
+   "en": "A news item about a celebrity's tax evasion came on the radio Daeun was listening to while running.",
+   "ko": "다은이 달리면서 듣던 라디오에서 연예인 탈세 소식이 나왔어요.",
+   "blank": "탈세",
+   "src": "made"
+  }
+ ],
  "w|탈수": [
   {
    "text": "설사가 이틀째라는 아이 엄마에게 준호는 탈수를 막는 전해질 음료를 권했어요.",
@@ -90925,6 +91453,22 @@
    "blank": "투자가"
   }
  ],
+ "w|투자금": [
+  {
+   "text": "경민은 투자금을 돌려받지 못한 사람들의 피해 사례를 모았어요.",
+   "en": "Kyungmin collected cases of people who couldn't get their invested money back.",
+   "ko": "경민은 투자금을 돌려받지 못한 사람들의 피해 사례를 모았어요.",
+   "blank": "투자금을",
+   "src": "made"
+  },
+  {
+   "text": "다은의 친구는 스포츠 용품 가게를 열려고 투자금을 모으고 있어요.",
+   "en": "Daeun's friend is raising investment money to open a sporting goods store.",
+   "ko": "다은의 친구는 스포츠 용품 가게를 열려고 투자금을 모으고 있어요.",
+   "blank": "투자금을",
+   "src": "made"
+  }
+ ],
  "w|투자자": [
   {
    "text": "건물주와 투자자들이 현장을 둘러보러 와서 성호가 안내를 맡았어요.",
@@ -91609,6 +92153,22 @@
    "en": "I shooed the fly out the window.",
    "ko": "창문으로 파리를 내보냈어.",
    "blank": "파리를"
+  }
+ ],
+ "w|파산": [
+  {
+   "text": "신문은 한 건설사의 파산 소식을 경제면에 실었어요.",
+   "en": "The newspaper ran news of a construction company's bankruptcy in the business section.",
+   "ko": "신문은 한 건설사의 파산 소식을 경제면에 실었어요.",
+   "blank": "파산",
+   "src": "made"
+  },
+  {
+   "text": "다은과 같이 뛴 사람은 회사의 파산 뒤에 마라톤으로 다시 힘을 냈대요.",
+   "en": "A person who ran with Daeun said marathons gave him strength again after his company's bankruptcy.",
+   "ko": "다은과 같이 뛴 사람은 회사의 파산 뒤에 마라톤으로 다시 힘을 냈대요.",
+   "blank": "파산",
+   "src": "made"
   }
  ],
  "w|파스": [
@@ -94607,6 +95167,22 @@
    "blank": "하여튼"
   }
  ],
+ "w|하이힐": [
+  {
+   "text": "신문 패션면은 하이힐이 발 건강에 미치는 영향을 다뤘어요.",
+   "en": "The newspaper's fashion page covered how high heels affect foot health.",
+   "ko": "신문 패션면은 하이힐이 발 건강에 미치는 영향을 다뤘어요.",
+   "blank": "하이힐이",
+   "src": "made"
+  },
+  {
+   "text": "다은의 친구는 하이힐을 신고 응원하러 왔다가 발이 아파 고생했어요.",
+   "en": "Daeun's friend came to cheer in high heels and suffered from sore feet.",
+   "ko": "다은의 친구는 하이힐을 신고 응원하러 왔다가 발이 아파 고생했어요.",
+   "blank": "하이힐을",
+   "src": "made"
+  }
+ ],
  "w|하지만": [
   {
    "text": "하지만 괜찮아.",
@@ -96305,6 +96881,22 @@
    "src": "made"
   }
  ],
+ "w|핸드백": [
+  {
+   "text": "경민은 기자실에 놓고 간 핸드백을 주인에게 돌려줬어요.",
+   "en": "Kyungmin returned a handbag left behind in the press room to its owner.",
+   "ko": "경민은 기자실에 놓고 간 핸드백을 주인에게 돌려줬어요.",
+   "blank": "핸드백을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 응원 온 언니에게 핸드백을 맡기고 출발선에 섰어요.",
+   "en": "Daeun left her handbag with her older sister, who came to cheer, and stood at the starting line.",
+   "ko": "다은은 응원 온 언니에게 핸드백을 맡기고 출발선에 섰어요.",
+   "blank": "핸드백을",
+   "src": "made"
+  }
+ ],
  "w|핸드폰": [
   {
    "text": "핸드폰 액정 깨졌어.",
@@ -96777,6 +97369,22 @@
    "en": "Watch your back.",
    "ko": "허리 조심해.",
    "blank": "허리"
+  }
+ ],
+ "w|허리띠": [
+  {
+   "text": "경민은 출근길에 허리띠를 깜빡해서 하루 종일 바지를 추슬렀어요.",
+   "en": "Kyungmin forgot his belt on the way to work and kept pulling up his pants all day.",
+   "ko": "경민은 출근길에 허리띠를 깜빡해서 하루 종일 바지를 추슬렀어요.",
+   "blank": "허리띠를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 물병을 넣을 수 있는 허리띠를 차고 마라톤에 나갔어요.",
+   "en": "Daeun wore a belt that holds a water bottle and ran the marathon.",
+   "ko": "다은은 물병을 넣을 수 있는 허리띠를 차고 마라톤에 나갔어요.",
+   "blank": "허리띠를",
+   "src": "made"
   }
  ],
  "w|허무": [
@@ -99129,6 +99737,22 @@
    "src": "made"
   }
  ],
+ "w|환율": [
+  {
+   "text": "환율이 오르면서 해외여행 비용도 늘었다고 경민이 썼어요.",
+   "en": "Kyungmin wrote that as the exchange rate rose, overseas travel costs went up too.",
+   "ko": "환율이 오르면서 해외여행 비용도 늘었다고 경민이 썼어요.",
+   "blank": "환율이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 해외 마라톤에 나가려다가 환율이 너무 올라서 포기했어요.",
+   "en": "Daeun was going to run an overseas marathon but gave up because the exchange rate rose too much.",
+   "ko": "다은은 해외 마라톤에 나가려다가 환율이 너무 올라서 포기했어요.",
+   "blank": "환율이",
+   "src": "made"
+  }
+ ],
  "w|환자": [
   {
    "text": "환자가 많이 대기 중이야.",
@@ -99693,6 +100317,22 @@
    "en": "The crosswalk is nearby.",
    "ko": "횡단보도가 가까워.",
    "blank": "횡단보도가"
+  }
+ ],
+ "w|횡령": [
+  {
+   "text": "회사 공금 횡령으로 재판을 받는 직원의 기사가 사회면에 실렸어요.",
+   "en": "An article about an employee on trial for embezzling company funds ran in the society section.",
+   "ko": "회사 공금 횡령으로 재판을 받는 직원의 기사가 사회면에 실렸어요.",
+   "blank": "횡령으로",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 협회 간부가 후원금 횡령으로 뉴스에 나왔어요.",
+   "en": "An official of the marathon association was on the news for embezzling sponsorship money.",
+   "ko": "마라톤 협회 간부가 후원금 횡령으로 뉴스에 나왔어요.",
+   "blank": "횡령으로",
+   "src": "made"
   }
  ],
  "w|효과": [

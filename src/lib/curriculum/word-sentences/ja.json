@@ -15727,6 +15727,22 @@
    "blank": "世間"
   }
  ],
+ "w|両国": [
+  {
+   "text": "隣り合う二つの国の歴史を比べた本を読んで、翔太は両国の意外な共通点に気づいた。",
+   "en": "Reading a book comparing the histories of two neighboring countries, Shota noticed surprising similarities between them.",
+   "ko": "이웃한 두 나라의 역사를 비교한 책을 읽고 쇼타는 양국의 뜻밖의 공통점을 알아챘어요.",
+   "blank": "両国",
+   "src": "made"
+  },
+  {
+   "text": "由美は、二つの国の作曲家の曲を集めた演奏会に、両国の友好を願って出演した。",
+   "en": "Yumi performed in a concert of works by composers from two countries, hoping for friendship between them.",
+   "ko": "유미는 두 나라 작곡가의 곡을 모은 연주회에 양국의 우호를 바라며 출연했어요.",
+   "blank": "両国",
+   "src": "made"
+  }
+ ],
  "w|両手": [
   {
    "text": "治療中、拓也は緊張して両手をぎゅっと握っていた。",
@@ -16362,6 +16378,22 @@
    "en": "The guests of honor at the welcome party were Chihiro and the two others who had just joined.",
    "ko": "환영회의 주인공은 새로 들어온 치히로네 세 명이었어요.",
    "blank": "主役",
+   "src": "made"
+  }
+ ],
+ "w|主権": [
+  {
+   "text": "翔太は、国家の主権について書かれた本をレポートのために借りた。",
+   "en": "Shota borrowed a book about national sovereignty for a report.",
+   "ko": "쇼타는 보고서를 위해 국가 주권에 관한 책을 빌렸어요.",
+   "blank": "主権",
+   "src": "made"
+  },
+  {
+   "text": "由美が練習している合唱曲は、ある国が主権を取り戻した記念に作られたそうだ。",
+   "en": "The choral piece Yumi is practicing was apparently written to mark a country regaining its sovereignty.",
+   "ko": "유미가 연습하는 합창곡은 어떤 나라가 주권을 되찾은 것을 기념해 만들어졌대요.",
+   "blank": "主権",
    "src": "made"
   }
  ],
@@ -17081,6 +17113,22 @@
    "en": "I hear they're starting a new business.",
    "ko": "새 사업 시작한대.",
    "blank": "事業"
+  }
+ ],
+ "w|事象": [
+  {
+   "text": "翔太は、自然界の不思議な事象を集めた図鑑を夢中で読んだ。",
+   "en": "Shota was absorbed in an illustrated book collecting strange phenomena of the natural world.",
+   "ko": "쇼타는 자연계의 신기한 사상을 모은 도감을 푹 빠져 읽었어요.",
+   "blank": "事象",
+   "src": "made"
+  },
+  {
+   "text": "由美は、音楽が記憶を呼び起こすという事象に興味を持った。",
+   "en": "Yumi became interested in the phenomenon of music bringing back memories.",
+   "ko": "유미는 음악이 기억을 불러일으킨다는 현상에 관심을 가졌어요.",
+   "blank": "事象",
+   "src": "made"
   }
  ],
  "w|事項": [
@@ -20021,6 +20069,22 @@
    "src": "tatoeba:148317 en:266242"
   }
  ],
+ "w|供述": [
+  {
+   "text": "翔太が読んでいる推理小説では、容疑者の供述に大きな矛盾がある。",
+   "en": "In the mystery novel Shota is reading, there's a big contradiction in the suspect's statement.",
+   "ko": "쇼타가 읽는 추리 소설에서는 용의자 진술에 큰 모순이 있어요.",
+   "blank": "供述",
+   "src": "made"
+  },
+  {
+   "text": "由美が出たミュージカルには、証人の供述を歌で表す場面があった。",
+   "en": "The musical Yumi was in had a scene where a witness's statement was expressed in song.",
+   "ko": "유미가 나온 뮤지컬에는 증인의 진술을 노래로 표현하는 장면이 있었어요.",
+   "blank": "供述",
+   "src": "made"
+  }
+ ],
  "w|依存": [
   {
    "text": "スマホへの依存が強い。",
@@ -20345,6 +20409,22 @@
    "src": "made"
   }
  ],
+ "w|保留": [
+  {
+   "text": "翔太は、本を買うかどうかの判断を保留して、まず図書館で借りることにした。",
+   "en": "Shota put off deciding whether to buy the book and borrowed it from the library first.",
+   "ko": "쇼타는 책을 살지 말지 판단을 보류하고 먼저 도서관에서 빌리기로 했어요.",
+   "blank": "保留",
+   "src": "made"
+  },
+  {
+   "text": "留学するかどうか、由美はまだ返事を保留にしている。",
+   "en": "Yumi is still holding off on her answer about whether to study abroad.",
+   "ko": "유학을 갈지 말지 유미는 아직 답을 보류하고 있어요.",
+   "blank": "保留",
+   "src": "made"
+  }
+ ],
  "w|保管": [
   {
    "text": "卒業アルバムの原稿は、職員室の金庫で保管されている。",
@@ -20642,6 +20722,22 @@
    "en": "Yumi believes nursing work is a lifelong discipline.",
    "ko": "유미는 간호사 일은 평생 수행이라고 생각해요.",
    "blank": "修行",
+   "src": "made"
+  }
+ ],
+ "w|修道院": [
+  {
+   "text": "中世の修道院では修道士が本を手で写していたと、翔太は本で知った。",
+   "en": "Shota learned from a book that in medieval monasteries, monks copied books by hand.",
+   "ko": "중세 수도원에서는 수도사가 책을 손으로 베꼈다는 걸 쇼타는 책에서 알았어요.",
+   "blank": "修道院",
+   "src": "made"
+  },
+  {
+   "text": "由美が歌う聖歌は、昔ある修道院で生まれたものだ。",
+   "en": "The hymn Yumi sings was born long ago in a monastery.",
+   "ko": "유미가 부르는 성가는 옛날 어느 수도원에서 생겨난 거예요.",
+   "blank": "修道院",
    "src": "made"
   }
  ],
@@ -22559,6 +22655,22 @@
    "en": "Know a nearby park?",
    "ko": "근처 공원 알아?",
    "blank": "公園"
+  }
+ ],
+ "w|公安": [
+  {
+   "text": "翔太が借りたのは、公安の刑事が主人公のスパイ小説だ。",
+   "en": "What Shota borrowed was a spy novel whose hero is a public security detective.",
+   "ko": "쇼타가 빌린 건 공안 형사가 주인공인 스파이 소설이에요.",
+   "blank": "公安",
+   "src": "made"
+  },
+  {
+   "text": "由美の兄は、県の公安委員会で働いている。",
+   "en": "Yumi's older brother works for the prefectural public safety commission.",
+   "ko": "유미의 오빠는 현 공안 위원회에서 일해요.",
+   "blank": "公安",
+   "src": "made"
   }
  ],
  "w|公平": [
@@ -24873,6 +24985,22 @@
    "src": "made"
   }
  ],
+ "w|別荘": [
+  {
+   "text": "翔太は、図書館で借りた本を持って家族の別荘に出かけた。",
+   "en": "Shota headed to his family's vacation house with books he had borrowed from the library.",
+   "ko": "쇼타는 도서관에서 빌린 책을 들고 가족 별장에 갔어요.",
+   "blank": "別荘",
+   "src": "made"
+  },
+  {
+   "text": "由美の先生は、夏になると高原の別荘でピアノの合宿を開く。",
+   "en": "In summer, Yumi's teacher holds a piano camp at a villa in the highlands.",
+   "ko": "유미의 선생님은 여름이 되면 고원 별장에서 피아노 합숙을 열어요.",
+   "blank": "別荘",
+   "src": "made"
+  }
+ ],
  "w|利点": [
   {
    "text": "小さな厨房の利点は、みんなの動きがよく見えることだ。",
@@ -24915,6 +25043,22 @@
    "en": "Let's share the profits.",
    "ko": "이익을 나누자.",
    "blank": "利益"
+  }
+ ],
+ "w|到来": [
+  {
+   "text": "図書館の展示コーナーには、冬の到来に合わせて雪の本が並んでいる。",
+   "en": "The library's display corner has books about snow lined up for the arrival of winter.",
+   "ko": "도서관 전시 코너에는 겨울이 온 것에 맞춰 눈에 관한 책이 놓여 있어요.",
+   "blank": "到来",
+   "src": "made"
+  },
+  {
+   "text": "由美は発表会で、春の到来を感じさせる明るい曲を弾いた。",
+   "en": "At the recital, Yumi played a bright piece that evoked the arrival of spring.",
+   "ko": "유미는 발표회에서 봄이 왔음을 느끼게 하는 밝은 곡을 연주했어요.",
+   "blank": "到来",
+   "src": "made"
   }
  ],
  "w|到着": [
@@ -25111,6 +25255,22 @@
    "ko": "이 일의 재미는 기술이 계속 발전하니까 늘 자극을 받을 수 있다는 거예요.",
    "blank": "刺激",
    "src": "tatoeba:76737/mookeee en:326983/papabear"
+  }
+ ],
+ "w|刺身": [
+  {
+   "text": "翔太は、図書館で借りた料理本を見ながら刺身の盛り付けに挑戦した。",
+   "en": "Shota tried arranging sashimi while following a cookbook he borrowed from the library.",
+   "ko": "쇼타는 도서관에서 빌린 요리책을 보면서 회 담기에 도전했어요.",
+   "blank": "刺身",
+   "src": "made"
+  },
+  {
+   "text": "発表会のあと、由美は家族とお寿司屋さんで刺身を食べた。",
+   "en": "After the recital, Yumi ate sashimi with her family at a sushi restaurant.",
+   "ko": "발표회가 끝나고 유미는 가족과 초밥집에서 회를 먹었어요.",
+   "blank": "刺身",
+   "src": "made"
   }
  ],
  "w|削る": [
@@ -27331,6 +27491,22 @@
    "src": "made"
   }
  ],
+ "w|却下": [
+  {
+   "text": "夜も開館してほしいという翔太の要望は、予算の都合で却下された。",
+   "en": "Shota's request for the library to open at night was rejected for budget reasons.",
+   "ko": "밤에도 문을 열어 달라는 쇼타의 요청은 예산 사정으로 각하됐어요.",
+   "blank": "却下",
+   "src": "made"
+  },
+  {
+   "text": "由美は発表会でロックを弾きたいと言ったが、先生に却下された。",
+   "en": "Yumi said she wanted to play rock at the recital, but the teacher turned it down.",
+   "ko": "유미는 발표회에서 록을 치고 싶다고 했지만 선생님이 거절했어요.",
+   "blank": "却下",
+   "src": "made"
+  }
+ ],
  "w|卵": [
   {
    "text": "卵、買ってきた？",
@@ -29271,6 +29447,22 @@
    "blank": "合計"
   }
  ],
+ "w|合間": [
+  {
+   "text": "翔太は、仕事の合間に図書館で新聞を読むのが日課だ。",
+   "en": "Reading the newspaper at the library in between work is part of Shota's daily routine.",
+   "ko": "쇼타는 일하는 틈틈이 도서관에서 신문을 읽는 게 일과예요.",
+   "blank": "合間",
+   "src": "made"
+  },
+  {
+   "text": "レッスンの合間に、由美は友達とお菓子を食べた。",
+   "en": "Between lessons, Yumi ate snacks with her friends.",
+   "ko": "레슨 사이사이에 유미는 친구들과 과자를 먹었어요.",
+   "blank": "合間",
+   "src": "made"
+  }
+ ],
  "w|同じ": [
   {
    "text": "同じやつでいい。",
@@ -30063,6 +30255,22 @@
    "blank": "周囲"
   }
  ],
+ "w|周期": [
+  {
+   "text": "翔太は、月の満ち欠けの周期を調べるために天文学の棚へ向かった。",
+   "en": "Shota went to the astronomy shelf to look up the cycle of the moon's phases.",
+   "ko": "쇼타는 달이 차고 기우는 주기를 알아보려고 천문학 서가로 갔어요.",
+   "blank": "周期",
+   "src": "made"
+  },
+  {
+   "text": "この曲では、同じ旋律が一定の周期でくり返される。",
+   "en": "In this piece, the same melody repeats at regular intervals.",
+   "ko": "이 곡에서는 같은 선율이 일정한 주기로 되풀이돼요.",
+   "blank": "周期",
+   "src": "made"
+  }
+ ],
  "w|周波数": [
   {
    "text": "誠は、森の中でラジオの周波数を合わせて天気予報を聞いた。",
@@ -30153,6 +30361,22 @@
    "en": "I like this flavor.",
    "ko": "이 맛 좋아.",
    "blank": "味"
+  }
+ ],
+ "w|味わい": [
+  {
+   "text": "古い紙の本には、電子書籍にはない味わいがあると翔太は思う。",
+   "en": "Shota thinks old paper books have a charm that e-books lack.",
+   "ko": "쇼타는 오래된 종이책에는 전자책에 없는 맛이 있다고 생각해요.",
+   "blank": "味わい",
+   "src": "made"
+  },
+  {
+   "text": "先生の弾くバッハには、深い味わいがある。",
+   "en": "The teacher's Bach playing has a deep richness to it.",
+   "ko": "선생님이 치는 바흐에는 깊은 맛이 있어요.",
+   "blank": "味わい",
+   "src": "made"
   }
  ],
  "w|味わう": [
@@ -30601,6 +30825,22 @@
    "en": "This is a big problem.",
    "ko": "큰일이야.",
    "blank": "問題"
+  }
+ ],
+ "w|啓発": [
+  {
+   "text": "図書館には、詐欺の被害を防ぐための啓発ポスターが貼られていた。",
+   "en": "Awareness posters for preventing fraud were put up in the library.",
+   "ko": "도서관에는 사기 피해를 막기 위한 계몽 포스터가 붙어 있었어요.",
+   "blank": "啓発",
+   "src": "made"
+  },
+  {
+   "text": "音楽教室は、耳の健康についての啓発活動として講座を開いた。",
+   "en": "The music school held a course as an awareness campaign about ear health.",
+   "ko": "음악 교실은 귀 건강에 관한 계몽 활동으로 강좌를 열었어요.",
+   "blank": "啓発",
+   "src": "made"
   }
  ],
  "w|喉": [
@@ -32669,6 +32909,22 @@
    "blank": "壁"
   }
  ],
+ "w|壁紙": [
+  {
+   "text": "図書館の子どもコーナーは、動物の壁紙で明るく飾られている。",
+   "en": "The library's children's corner is brightly decorated with animal wallpaper.",
+   "ko": "도서관 어린이 코너는 동물 벽지로 밝게 꾸며져 있어요.",
+   "blank": "壁紙",
+   "src": "made"
+  },
+  {
+   "text": "由美は、好きな作曲家の写真をスマホの壁紙にしている。",
+   "en": "Yumi uses a photo of her favorite composer as her phone wallpaper.",
+   "ko": "유미는 좋아하는 작곡가 사진을 스마트폰 배경 화면으로 해 뒀어요.",
+   "blank": "壁紙",
+   "src": "made"
+  }
+ ],
  "w|壊す": [
   {
    "text": "子供の前で、子供の夢を壊すようなことを言わないでよ。",
@@ -33305,6 +33561,22 @@
    "src": "made"
   }
  ],
+ "w|外食": [
+  {
+   "text": "外食が続いたので、翔太は図書館で家庭料理のレシピ本を借りた。",
+   "en": "After eating out a lot, Shota borrowed a home-cooking recipe book from the library.",
+   "ko": "외식이 계속돼서 쇼타는 도서관에서 집밥 레시피 책을 빌렸어요.",
+   "blank": "外食",
+   "src": "made"
+  },
+  {
+   "text": "レッスンが長引いた日は、由美の家は外食になることが多い。",
+   "en": "On days when lessons run late, Yumi's family often eats out.",
+   "ko": "레슨이 길어진 날은 유미네 집은 외식할 때가 많아요.",
+   "blank": "外食",
+   "src": "made"
+  }
+ ],
  "w|多々": [
   {
    "text": "空港では、荷物の預け忘れなどのトラブルが多々あるらしい。",
@@ -33726,6 +33998,22 @@
    "en": "The historical novel Aoi is reading has a colonel as its main character.",
    "ko": "아오이가 읽는 역사 소설에는 어느 대령이 주인공으로 나와요.",
    "blank": "大佐",
+   "src": "made"
+  }
+ ],
+ "w|大作": [
+  {
+   "text": "翔太は、全十巻の歴史小説という大作に挑戦している。",
+   "en": "Shota is taking on a huge work, a ten-volume historical novel.",
+   "ko": "쇼타는 전 열 권짜리 역사 소설이라는 대작에 도전하고 있어요.",
+   "blank": "大作",
+   "src": "made"
+  },
+  {
+   "text": "由美は、演奏に一時間近くかかる大作の練習に取り組んでいる。",
+   "en": "Yumi is working on a major piece that takes nearly an hour to perform.",
+   "ko": "유미는 연주에 한 시간 가까이 걸리는 대작을 연습하고 있어요.",
+   "blank": "大作",
    "src": "made"
   }
  ],
@@ -40249,6 +40537,22 @@
    "src": "made"
   }
  ],
+ "w|廃墟": [
+  {
+   "text": "翔太が借りたのは、世界の廃墟を撮った写真集だった。",
+   "en": "What Shota borrowed was a photo book of ruins around the world.",
+   "ko": "쇼타가 빌린 건 세계의 폐허를 찍은 사진집이었어요.",
+   "blank": "廃墟",
+   "src": "made"
+  },
+  {
+   "text": "由美の好きなバンドは、古い工場の廃墟でミュージックビデオを撮った。",
+   "en": "Yumi's favorite band shot a music video in the ruins of an old factory.",
+   "ko": "유미가 좋아하는 밴드는 낡은 공장 폐허에서 뮤직비디오를 찍었어요.",
+   "blank": "廃墟",
+   "src": "made"
+  }
+ ],
  "w|廃棄": [
   {
    "text": "飲食店の食品廃棄の問題について、翔太は記事を書いた。",
@@ -40838,6 +41142,22 @@
    "en": "For a meeting with a client, Yumi made a whirlwind day trip to Osaka.",
    "ko": "거래처와의 미팅 때문에 유미는 당일치기 강행군 출장으로 오사카에 갔어요.",
    "blank": "弾丸",
+   "src": "made"
+  }
+ ],
+ "w|弾圧": [
+  {
+   "text": "言論の弾圧を受けた作家の伝記を読んで、翔太は深く考えさせられた。",
+   "en": "Reading the biography of a writer who faced suppression of free speech made Shota think deeply.",
+   "ko": "언론 탄압을 받은 작가의 전기를 읽고 쇼타는 깊이 생각하게 됐어요.",
+   "blank": "弾圧",
+   "src": "made"
+  },
+  {
+   "text": "先生は、弾圧の時代を生き抜いた作曲家の話をした。",
+   "en": "The teacher talked about a composer who survived an era of oppression.",
+   "ko": "선생님은 탄압의 시대를 견뎌 낸 작곡가 이야기를 했어요.",
+   "blank": "弾圧",
    "src": "made"
   }
  ],
@@ -42594,6 +42914,22 @@
    "en": "Yumi wrote that prices had risen sharply lately and things were tough.",
    "ko": "요즘 물가가 급격히 올라서 힘들다고 유미는 썼어요.",
    "blank": "急激",
+   "src": "made"
+  }
+ ],
+ "w|急行": [
+  {
+   "text": "翔太は急行電車に乗って、隣町の大きな図書館に通っている。",
+   "en": "Shota takes the express train to go to the big library in the next town.",
+   "ko": "쇼타는 급행 전철을 타고 옆 동네의 큰 도서관에 다녀요.",
+   "blank": "急行",
+   "src": "made"
+  },
+  {
+   "text": "由美は急行に乗り遅れて、レッスンに遅刻した。",
+   "en": "Yumi missed the express and was late for her lesson.",
+   "ko": "유미는 급행을 놓쳐서 레슨에 지각했어요.",
+   "blank": "急行",
    "src": "made"
   }
  ],
@@ -44368,6 +44704,22 @@
    "en": "Misaki's new house is an old wooden home built shortly after the war.",
    "ko": "미사키의 새집은 전후 얼마 안 돼 지어진 오래된 목조 주택이에요.",
    "blank": "戦後",
+   "src": "made"
+  }
+ ],
+ "w|戦時": [
+  {
+   "text": "翔太は、戦時の暮らしを記録した日記を図書館で見つけた。",
+   "en": "Shota found a diary recording life in wartime at the library.",
+   "ko": "쇼타는 전시의 생활을 기록한 일기를 도서관에서 찾았어요.",
+   "blank": "戦時",
+   "src": "made"
+  },
+  {
+   "text": "先生は、戦時に作られた歌の背景について話してくれた。",
+   "en": "The teacher told us about the background of songs written during wartime.",
+   "ko": "선생님은 전시에 만들어진 노래의 배경에 대해 이야기해 줬어요.",
+   "blank": "戦時",
    "src": "made"
   }
  ],
@@ -46845,6 +47197,22 @@
    "src": "made"
   }
  ],
+ "w|接種": [
+  {
+   "text": "図書館の掲示板に、ワクチン接種の案内が貼ってあった。",
+   "en": "A notice about vaccinations was posted on the library bulletin board.",
+   "ko": "도서관 게시판에 백신 접종 안내가 붙어 있었어요.",
+   "blank": "接種",
+   "src": "made"
+  },
+  {
+   "text": "海外での演奏会の前に、由美は予防接種を受けた。",
+   "en": "Before the concert abroad, Yumi got vaccinated.",
+   "ko": "해외 연주회 전에 유미는 예방 접종을 맞았어요.",
+   "blank": "接種",
+   "src": "made"
+  }
+ ],
  "w|接続": [
   {
    "text": "接続が切れたよ。",
@@ -47258,6 +47626,22 @@
    "en": "You need to show your card to borrow books at the library.",
    "ko": "도서관에서 책을 빌리려면 카드 제시가 필요해요.",
    "blank": "提示",
+   "src": "made"
+  }
+ ],
+ "w|提言": [
+  {
+   "text": "利用者の会は、図書館の開館時間について市に提言を出した。",
+   "en": "The library users' association submitted a proposal to the city about opening hours.",
+   "ko": "이용자 모임은 도서관 개관 시간에 대해 시에 제언을 냈어요.",
+   "blank": "提言",
+   "src": "made"
+  },
+  {
+   "text": "由美は、練習室を増やしてほしいという提言を教室に出した。",
+   "en": "Yumi submitted a proposal to the school asking for more practice rooms.",
+   "ko": "유미는 연습실을 늘려 달라는 제언을 교실에 냈어요.",
+   "blank": "提言",
    "src": "made"
   }
  ],
@@ -48245,6 +48629,22 @@
    "en": "We discussed the policy.",
    "ko": "정책에 대해 이야기했어.",
    "blank": "政策"
+  }
+ ],
+ "w|故意": [
+  {
+   "text": "本を故意に汚した場合は、弁償しなければならない。",
+   "en": "If you deliberately damage a book, you have to pay for it.",
+   "ko": "책을 고의로 더럽힌 경우에는 변상해야 해요.",
+   "blank": "故意",
+   "src": "made"
+  },
+  {
+   "text": "先生は、故意にテンポを揺らすのも表現の一つだと教えた。",
+   "en": "The teacher taught that deliberately shifting the tempo is also a form of expression.",
+   "ko": "선생님은 일부러 템포를 흔드는 것도 표현의 하나라고 가르쳤어요.",
+   "blank": "故意",
+   "src": "made"
   }
  ],
  "w|故郷": [
@@ -50603,6 +51003,22 @@
    "blank": "普通"
   }
  ],
+ "w|景品": [
+  {
+   "text": "読書スタンプを集めた子どもは、図書館から景品がもらえる。",
+   "en": "Children who collect reading stamps can get a prize from the library.",
+   "ko": "독서 도장을 모은 어린이는 도서관에서 경품을 받을 수 있어요.",
+   "blank": "景品",
+   "src": "made"
+  },
+  {
+   "text": "音楽教室のくじ引きで、由美は景品のメトロノームを当てた。",
+   "en": "Yumi won a metronome as a prize in the music school's raffle.",
+   "ko": "음악 교실 제비뽑기에서 유미는 경품으로 메트로놈을 받았어요.",
+   "blank": "景品",
+   "src": "made"
+  }
+ ],
  "w|景気": [
   {
    "text": "景気が悪くなってから、大輔はセールの時期にしか買い物をしない。",
@@ -52345,6 +52761,22 @@
    "src": "made"
   }
  ],
+ "w|東部": [
+  {
+   "text": "市の東部に、新しい図書館が建てられる予定だ。",
+   "en": "A new library is set to be built in the eastern part of the city.",
+   "ko": "시 동부에 새 도서관이 지어질 예정이에요.",
+   "blank": "東部",
+   "src": "made"
+  },
+  {
+   "text": "由美は、市の東部にある音楽教室に通っている。",
+   "en": "Yumi goes to a music school in the eastern part of the city.",
+   "ko": "유미는 시 동부에 있는 음악 교실에 다녀요.",
+   "blank": "東部",
+   "src": "made"
+  }
+ ],
  "w|板": [
   {
    "text": "木の板を切った。",
@@ -53392,6 +53824,22 @@
    "en": "Before games, Yumi listens to songs by her favorite band to focus.",
    "ko": "유미는 경기 전에 좋아하는 밴드의 곡을 들으며 집중해요.",
    "blank": "楽曲",
+   "src": "made"
+  }
+ ],
+ "w|楽譜": [
+  {
+   "text": "この図書館では、ピアノの楽譜も借りることができる。",
+   "en": "At this library, you can borrow piano sheet music too.",
+   "ko": "이 도서관에서는 피아노 악보도 빌릴 수 있어요.",
+   "blank": "楽譜",
+   "src": "made"
+  },
+  {
+   "text": "由美は、楽譜に先生の注意を赤ペンで書き込んだ。",
+   "en": "Yumi wrote her teacher's notes on the sheet music in red pen.",
+   "ko": "유미는 악보에 선생님의 주의 사항을 빨간 펜으로 적어 넣었어요.",
+   "blank": "楽譜",
    "src": "made"
   }
  ],
@@ -56454,6 +56902,22 @@
    "en": "Newspaper reporters need to know the laws related to news gathering well.",
    "ko": "신문사 기자는 취재와 관련된 법령을 잘 알아 둬야 해요.",
    "blank": "法令",
+   "src": "made"
+  }
+ ],
+ "w|法制": [
+  {
+   "text": "翔太は大学院で、近代の法制の歴史を研究している。",
+   "en": "Shota studies the history of the modern legal system in graduate school.",
+   "ko": "쇼타는 대학원에서 근대 법제의 역사를 연구해요.",
+   "blank": "法制",
+   "src": "made"
+  },
+  {
+   "text": "先生は、音楽の著作権に関する法制は国によって違うと説明した。",
+   "en": "The teacher explained that the legal framework for music copyright differs by country.",
+   "ko": "선생님은 음악 저작권에 관한 법제가 나라마다 다르다고 설명했어요.",
+   "blank": "法制",
    "src": "made"
   }
  ],
@@ -62965,6 +63429,22 @@
    "src": "made"
   }
  ],
+ "w|登記": [
+  {
+   "text": "翔太は、土地の登記の調べ方を司書に教えてもらった。",
+   "en": "The librarian showed Shota how to look up land registration records.",
+   "ko": "쇼타는 토지 등기 조회하는 법을 사서에게 배웠어요.",
+   "blank": "登記",
+   "src": "made"
+  },
+  {
+   "text": "音楽教室を始めるため、由美の先生は会社の登記を済ませた。",
+   "en": "To start the music school, Yumi's teacher completed the company's registration.",
+   "ko": "음악 교실을 시작하려고 유미의 선생님은 회사 등기를 마쳤어요.",
+   "blank": "登記",
+   "src": "made"
+  }
+ ],
  "w|登録": [
   {
    "text": "もう登録した？",
@@ -66723,6 +67203,22 @@
    "blank": "答えられない"
   }
  ],
+ "w|答弁": [
+  {
+   "text": "翔太は、国会での大臣の答弁を記録した議事録を図書館で読んだ。",
+   "en": "At the library, Shota read the minutes recording a minister's answers in parliament.",
+   "ko": "쇼타는 국회에서의 장관 답변을 기록한 의사록을 도서관에서 읽었어요.",
+   "blank": "答弁",
+   "src": "made"
+  },
+  {
+   "text": "由美は、文化予算をめぐる市議会の答弁をニュースで聞いた。",
+   "en": "Yumi heard the city council's answers on the culture budget on the news.",
+   "ko": "유미는 문화 예산을 둘러싼 시의회 답변을 뉴스로 들었어요.",
+   "blank": "答弁",
+   "src": "made"
+  }
+ ],
  "w|節約": [
   {
    "text": "古着を買うのは、節約にもなるし環境にもいい。",
@@ -67431,6 +67927,22 @@
    "en": "It's time to wrap up.",
    "ko": "종료 시간이야.",
    "blank": "終了"
+  }
+ ],
+ "w|終始": [
+  {
+   "text": "翔太が聞いた作家の講演会は、終始なごやかな雰囲気だった。",
+   "en": "The author's talk Shota attended had a friendly atmosphere from start to finish.",
+   "ko": "쇼타가 들은 작가 강연회는 시종 화기애애한 분위기였어요.",
+   "blank": "終始",
+   "src": "made"
+  },
+  {
+   "text": "初めての発表会の間、由美は終始緊張していた。",
+   "en": "Yumi was nervous throughout her first recital.",
+   "ko": "첫 발표회 동안 유미는 내내 긴장했어요.",
+   "blank": "終始",
+   "src": "made"
   }
  ],
  "w|終戦": [
@@ -70011,6 +70523,22 @@
    "blank": "脳"
   }
  ],
+ "w|脳みそ": [
+  {
+   "text": "難しい哲学書を読んで、翔太は「脳みそが疲れた」と笑った。",
+   "en": "After reading a difficult philosophy book, Shota laughed that his brain was tired.",
+   "ko": "어려운 철학책을 읽고 쇼타는 \"뇌가 지쳤다\"며 웃었어요.",
+   "blank": "脳みそ",
+   "src": "made"
+  },
+  {
+   "text": "先生は「指だけでなく脳みそで弾きなさい」とよく言う。",
+   "en": "The teacher often says to play not just with your fingers but with your brain.",
+   "ko": "선생님은 \"손가락만이 아니라 머리로 쳐라\"라고 자주 말해요.",
+   "blank": "脳みそ",
+   "src": "made"
+  }
+ ],
  "w|腐る": [
   {
    "text": "市役所の冷蔵庫に置き忘れた弁当が、休み明けには腐っていた。",
@@ -70507,6 +71035,22 @@
    "en": "I want more freedom.",
    "ko": "자유가 더 필요해.",
    "blank": "自由"
+  }
+ ],
+ "w|自発": [
+  {
+   "text": "誰かに頼まれたわけでもなく、翔太は自発的に図書館のボランティアを始めた。",
+   "en": "Without anyone asking him, Shota voluntarily started volunteering at the library.",
+   "ko": "누가 부탁한 것도 아닌데 쇼타는 자발적으로 도서관 봉사 활동을 시작했어요.",
+   "blank": "自発",
+   "src": "made"
+  },
+  {
+   "text": "由美は自発的に、毎朝音階の練習を始めた。",
+   "en": "Yumi started practicing scales every morning on her own initiative.",
+   "ko": "유미는 자발적으로 매일 아침 음계 연습을 시작했어요.",
+   "blank": "自発",
+   "src": "made"
   }
  ],
  "w|自社": [
@@ -71174,6 +71718,22 @@
    "en": "The front desk received several complaints that it was too hot inside.",
    "ko": "관내가 너무 덥다는 불만이 접수처에 여러 건 들어왔어요.",
    "blank": "苦情",
+   "src": "made"
+  }
+ ],
+ "w|苦戦": [
+  {
+   "text": "翔太は、古い漢字だらけの資料を読むのに苦戦した。",
+   "en": "Shota struggled to read documents full of old kanji.",
+   "ko": "쇼타는 옛 한자투성이 자료를 읽느라 고전했어요.",
+   "blank": "苦戦",
+   "src": "made"
+  },
+  {
+   "text": "由美は、速いパッセージを弾きこなすのに苦戦している。",
+   "en": "Yumi is struggling to master a fast passage.",
+   "ko": "유미는 빠른 패시지를 소화하느라 고전하고 있어요.",
+   "blank": "苦戦",
    "src": "made"
   }
  ],
@@ -76955,6 +77515,22 @@
    "src": "made"
   }
  ],
+ "w|資材": [
+  {
+   "text": "建設資材の値上がりで、図書館の改修工事が遅れている。",
+   "en": "Renovation work on the library is delayed because of rising construction material prices.",
+   "ko": "건설 자재 가격이 올라서 도서관 개보수 공사가 늦어지고 있어요.",
+   "blank": "資材",
+   "src": "made"
+  },
+  {
+   "text": "音楽教室の新しい防音室には、特別な資材が使われている。",
+   "en": "Special materials are used in the music school's new soundproof room.",
+   "ko": "음악 교실의 새 방음실에는 특별한 자재가 쓰였어요.",
+   "blank": "資材",
+   "src": "made"
+  }
+ ],
  "w|資格": [
   {
    "text": "資格を取ったよ。",
@@ -78494,6 +79070,38 @@
    "en": "This program crawls the site every night to check for broken links.",
    "ko": "이 프로그램은 매일 밤 사이트를 순회하며 끊긴 링크를 찾아요.",
    "blank": "巡回",
+   "src": "made"
+  }
+ ],
+ "w|巡査": [
+  {
+   "text": "図書館の前で、自転車に乗った巡査が子どもたちに声をかけていた。",
+   "en": "In front of the library, a police officer on a bicycle was talking to some children.",
+   "ko": "도서관 앞에서 자전거를 탄 순경이 아이들에게 말을 걸고 있었어요.",
+   "blank": "巡査",
+   "src": "made"
+  },
+  {
+   "text": "音楽教室の夏祭りには、近くの交番の巡査も聴きに来た。",
+   "en": "A police officer from the nearby police box also came to listen at the music school's summer festival.",
+   "ko": "음악 교실 여름 축제에는 근처 파출소 순경도 들으러 왔어요.",
+   "blank": "巡査",
+   "src": "made"
+  }
+ ],
+ "w|巡礼": [
+  {
+   "text": "翔太は、ヨーロッパの巡礼の道を歩いた人の旅行記を読んだ。",
+   "en": "Shota read the travelogue of someone who walked a pilgrimage route in Europe.",
+   "ko": "쇼타는 유럽 순례길을 걸은 사람의 여행기를 읽었어요.",
+   "blank": "巡礼",
+   "src": "made"
+  },
+  {
+   "text": "由美は、聖地を巡礼する人々を描いた合唱曲を練習している。",
+   "en": "Yumi is practicing a choral piece depicting people on a pilgrimage to a holy site.",
+   "ko": "유미는 성지를 순례하는 사람들을 그린 합창곡을 연습하고 있어요.",
+   "blank": "巡礼",
    "src": "made"
   }
  ],
@@ -83425,6 +84033,22 @@
    "blank": "防衛"
   }
  ],
+ "w|阻害": [
+  {
+   "text": "館内の話し声は、ほかの利用者の集中を阻害する。",
+   "en": "Talking inside the library disturbs other visitors' concentration.",
+   "ko": "관내의 말소리는 다른 이용자의 집중을 저해해요.",
+   "blank": "阻害",
+   "src": "made"
+  },
+  {
+   "text": "肩に力が入ると指の動きを阻害すると、先生は由美に注意した。",
+   "en": "The teacher warned Yumi that tensing her shoulders hinders her finger movement.",
+   "ko": "어깨에 힘이 들어가면 손가락 움직임을 방해한다고 선생님은 유미에게 주의를 줬어요.",
+   "blank": "阻害",
+   "src": "made"
+  }
+ ],
  "w|阻止": [
   {
    "text": "ゴール前で、直樹は相手のシュートを阻止した。",
@@ -85042,6 +85666,22 @@
    "en": "While writing the letter, Mayu turned the radio down a little.",
    "ko": "편지를 쓰면서 마유는 라디오 음량을 조금 낮췄어요.",
    "blank": "音量",
+   "src": "made"
+  }
+ ],
+ "w|音響": [
+  {
+   "text": "図書館のホールは音響がよく、朗読会によく使われる。",
+   "en": "The library hall has good acoustics and is often used for readings.",
+   "ko": "도서관 홀은 음향이 좋아서 낭독회에 자주 쓰여요.",
+   "blank": "音響",
+   "src": "made"
+  },
+  {
+   "text": "音楽教室の新しいホールは、音響設備がとてもいい。",
+   "en": "The music school's new hall has excellent sound equipment.",
+   "ko": "음악 교실의 새 홀은 음향 설비가 아주 좋아요.",
+   "blank": "音響",
    "src": "made"
   }
  ],
