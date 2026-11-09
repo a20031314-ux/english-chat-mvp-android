@@ -1733,6 +1733,22 @@
    "src": "made"
   }
  ],
+ "w|atmosfer": [
+  {
+   "text": "Langit malam di sana sangat jernih karena atmosfer di pegunungan bebas polusi.",
+   "en": "The night sky there is very clear because the mountain atmosphere is free of pollution.",
+   "ko": "그곳 밤하늘은 산의 대기에 오염이 없어서 아주 맑아요.",
+   "blank": "atmosfer",
+   "src": "made"
+  },
+  {
+   "text": "Sebelum konser dimulai, atmosfer di dalam stadion sudah sangat meriah.",
+   "en": "Before the concert started, the atmosphere inside the stadium was already electric.",
+   "ko": "공연이 시작되기 전부터 경기장 안 분위기는 이미 아주 뜨거웠어요.",
+   "blank": "atmosfer",
+   "src": "made"
+  }
+ ],
  "w|aturan": [
   {
    "text": "Ikuti aturan di sini.",
@@ -2519,6 +2535,22 @@
    "blank": "bangga"
   }
  ],
+ "w|bangkai": [
+  {
+   "text": "Bau busuk dari bangkai burung di semak-semak membuat Rudi menutup hidung.",
+   "en": "The stench of a dead bird in the bushes made Rudi hold his nose.",
+   "ko": "덤불 속 새 사체에서 나는 악취 때문에 루디는 코를 막았어요.",
+   "blank": "bangkai",
+   "src": "made"
+  },
+  {
+   "text": "Lirik lagu itu menyamakan cinta lama dengan bangkai kapal di dasar laut.",
+   "en": "The song's lyrics compare an old love to a shipwreck on the seabed.",
+   "ko": "그 노래 가사는 옛사랑을 바다 밑 난파선에 빗대요.",
+   "blank": "bangkai",
+   "src": "made"
+  }
+ ],
  "w|bangkit": [
   {
    "text": "Dia bangkit dari kursi dengan cepat.",
@@ -3135,6 +3167,22 @@
    "en": "Freedom to choose is everyone's right.",
    "ko": "선택할 자유는 모두의 권리야.",
    "blank": "Bebas"
+  }
+ ],
+ "w|bebatuan": [
+  {
+   "text": "Rudi melompati bebatuan besar di sungai yang licin karena lumut.",
+   "en": "Rudi jumped across the big rocks in the river, slippery with moss.",
+   "ko": "루디는 이끼 때문에 미끄러운 강의 큰 바위들을 건너뛰었어요.",
+   "blank": "bebatuan",
+   "src": "made"
+  },
+  {
+   "text": "Panggung terbuka itu berdiri di antara bebatuan besar di tepi danau.",
+   "en": "The open-air stage stood among big rocks at the edge of the lake.",
+   "ko": "그 야외 무대는 호숫가의 큰 바위들 사이에 세워져 있었어요.",
+   "blank": "bebatuan",
+   "src": "made"
   }
  ],
  "w|bebek": [
@@ -4058,6 +4106,22 @@
    "en": "Early in the morning, shoppers were already lined up in front of the famous tofu stall.",
    "ko": "아침 일찍부터 그 유명한 두부 가게 앞에는 손님들이 줄을 섰어요.",
    "blank": "berbaris",
+   "src": "made"
+  }
+ ],
+ "w|berbasa-basi": [
+  {
+   "text": "Rudi sempat berbasa-basi dengan penjaga pos sebelum mulai mendaki.",
+   "en": "Rudi made small talk with the post guard before starting the climb.",
+   "ko": "루디는 등산을 시작하기 전에 초소 경비원과 잠깐 인사말을 나눴어요.",
+   "blank": "berbasa-basi",
+   "src": "made"
+  },
+  {
+   "text": "Saat antre, Rina berbasa-basi dengan penonton di sebelahnya soal cuaca.",
+   "en": "While waiting in line, Rina made small talk about the weather with the person next to her.",
+   "ko": "줄을 서는 동안 리나는 옆 사람과 날씨 이야기로 가볍게 말을 나눴어요.",
+   "blank": "berbasa-basi",
    "src": "made"
   }
  ],
@@ -6675,6 +6739,22 @@
    "blank": "berputar"
   }
  ],
+ "w|berputar-putar": [
+  {
+   "text": "Rudi dan teman-temannya tersesat dan berputar-putar di hutan selama satu jam.",
+   "en": "Rudi and his friends got lost and went around in circles in the forest for an hour.",
+   "ko": "루디와 친구들은 길을 잃고 숲에서 한 시간 동안 빙빙 돌았어요.",
+   "blank": "berputar-putar",
+   "src": "made"
+  },
+  {
+   "text": "Antrean penonton berputar-putar mengelilingi gedung konser sejak sore.",
+   "en": "The line of concertgoers had been winding around the concert hall since the afternoon.",
+   "ko": "관객 줄이 오후부터 공연장을 빙 둘러 감고 있었어요.",
+   "blank": "berputar-putar",
+   "src": "made"
+  }
+ ],
  "w|bersabar": [
   {
    "text": "Agus meminta warga di ruang tunggu untuk bersabar sebentar.",
@@ -7611,6 +7691,22 @@
    "blank": "berubah"
   }
  ],
+ "w|berujung": [
+  {
+   "text": "Jalan setapak yang dipilih Rudi ternyata berujung di sebuah air terjun kecil.",
+   "en": "The path Rudi chose turned out to end at a small waterfall.",
+   "ko": "루디가 고른 오솔길은 알고 보니 작은 폭포에서 끝났어요.",
+   "blank": "berujung",
+   "src": "made"
+  },
+  {
+   "text": "Desak-desakan di pintu masuk hampir berujung ricuh.",
+   "en": "The pushing and shoving at the entrance almost ended in chaos.",
+   "ko": "입구에서 밀치락달치락하던 게 하마터면 소동으로 번질 뻔했어요.",
+   "blank": "berujung",
+   "src": "made"
+  }
+ ],
  "w|berulang": [
   {
    "text": "Andi sudah berulang kali melapor soal motor yang parkir di depan rumahnya.",
@@ -8148,6 +8244,22 @@
    "en": "The used-book seller gave Lestari a biology textbook for ten thousand rupiah.",
    "ko": "헌책 장수가 레스타리에게 생물학 교과서를 만 루피아에 줬어요.",
    "blank": "biologi",
+   "src": "made"
+  }
+ ],
+ "w|biologis": [
+  {
+   "text": "Pemandu bilang daun-daun yang jatuh akan terurai lewat proses biologis.",
+   "en": "The guide said the fallen leaves will break down through a biological process.",
+   "ko": "가이드는 떨어진 잎들이 생물학적 과정을 통해 분해된다고 말했어요.",
+   "blank": "biologis",
+   "src": "made"
+  },
+  {
+   "text": "Rina bercanda bahwa menonton konser sudah jadi kebutuhan biologis baginya.",
+   "en": "Rina jokes that going to concerts has become a biological need for her.",
+   "ko": "리나는 공연 보는 게 자기한테는 생리적 욕구가 됐다고 농담해요.",
+   "blank": "biologis",
    "src": "made"
   }
  ],
@@ -10095,6 +10207,22 @@
    "blank": "danau"
   }
  ],
+ "w|dangkal": [
+  {
+   "text": "Dari tepi danau yang dangkal, Rudi bisa melihat ikan-ikan kecil berenang.",
+   "en": "From the shallow edge of the lake, Rudi could see little fish swimming.",
+   "ko": "얕은 호숫가에서 루디는 작은 물고기들이 헤엄치는 걸 볼 수 있었어요.",
+   "blank": "dangkal",
+   "src": "made"
+  },
+  {
+   "text": "Rina kesal pada orang yang menganggap musik itu dangkal hanya karena liriknya sederhana.",
+   "en": "Rina is annoyed with people who think the music is shallow just because the lyrics are simple.",
+   "ko": "리나는 가사가 단순하다는 이유만으로 그 음악을 얕다고 여기는 사람들에게 짜증이 나요.",
+   "blank": "dangkal",
+   "src": "made"
+  }
+ ],
  "w|dansa": [
   {
    "text": "Pasangan itu menari dansa di aula.",
@@ -10294,6 +10422,22 @@
    "en": "The rice fields in the lowland look flat and green after the first rain.",
    "ko": "저지대의 논은 첫비가 온 뒤 평평하고 푸르러 보여요.",
    "blank": "datar",
+   "src": "made"
+  }
+ ],
+ "w|dataran": [
+  {
+   "text": "Malam itu Rudi dan teman-temannya mendirikan tenda di dataran tinggi yang sejuk.",
+   "en": "That night Rudi and his friends pitched their tent on a cool highland plateau.",
+   "ko": "그날 밤 루디와 친구들은 서늘한 고원에 텐트를 쳤어요.",
+   "blank": "dataran",
+   "src": "made"
+  },
+  {
+   "text": "Panggung utama didirikan di dataran luas di pinggir kota.",
+   "en": "The main stage was set up on a wide plain at the edge of town.",
+   "ko": "메인 무대는 도시 외곽의 넓은 평지에 세워졌어요.",
+   "blank": "dataran",
    "src": "made"
   }
  ],
@@ -12219,6 +12363,22 @@
    "src": "made"
   }
  ],
+ "w|fenomena": [
+  {
+   "text": "Pemandu menjelaskan bahwa kabut tebal di pagi hari adalah fenomena biasa di lembah ini.",
+   "en": "The guide explained that thick morning fog is a common phenomenon in this valley.",
+   "ko": "가이드는 아침의 짙은 안개가 이 골짜기에서는 흔한 현상이라고 설명했어요.",
+   "blank": "fenomena",
+   "src": "made"
+  },
+  {
+   "text": "Para kritikus menyebut popularitas penyanyi muda itu sebagai fenomena tahun ini.",
+   "en": "Critics call the young singer's popularity the phenomenon of the year.",
+   "ko": "비평가들은 그 젊은 가수의 인기를 올해의 현상이라고 불러요.",
+   "blank": "fenomena",
+   "src": "made"
+  }
+ ],
  "w|festival": [
   {
    "text": "Festival musik itu menarik banyak pengunjung.",
@@ -12997,6 +13157,22 @@
    "blank": "gelas"
   }
  ],
+ "w|gelembung": [
+  {
+   "text": "Rudi mengamati gelembung kecil yang naik dari dasar kolam.",
+   "en": "Rudi watched the little bubbles rising from the bottom of the pond.",
+   "ko": "루디는 연못 바닥에서 올라오는 작은 거품을 지켜봤어요.",
+   "blank": "gelembung",
+   "src": "made"
+  },
+  {
+   "text": "Mesin di panggung meniupkan gelembung sabun ke arah penonton.",
+   "en": "A machine on stage blew soap bubbles toward the audience.",
+   "ko": "무대 위 기계가 관객 쪽으로 비눗방울을 불어 냈어요.",
+   "blank": "gelembung",
+   "src": "made"
+  }
+ ],
  "w|gelisah": [
   {
    "text": "Dia merasa gelisah menunggu hasil ujian.",
@@ -13213,6 +13389,22 @@
    "en": "They go to church in the morning.",
    "ko": "그들은 아침에 교회에 가.",
    "blank": "gereja"
+  }
+ ],
+ "w|gerhana": [
+  {
+   "text": "Malam itu ada gerhana bulan, jadi Rudi bangun tengah malam untuk melihatnya.",
+   "en": "There was a lunar eclipse that night, so Rudi got up at midnight to watch it.",
+   "ko": "그날 밤 월식이 있어서 루디는 그걸 보려고 한밤중에 일어났어요.",
+   "blank": "gerhana",
+   "src": "made"
+  },
+  {
+   "text": "Konser itu bertepatan dengan gerhana bulan, dan penonton bersorak saat bulan memerah.",
+   "en": "The concert coincided with a lunar eclipse, and the crowd cheered as the moon turned red.",
+   "ko": "공연이 월식과 겹쳐서 달이 붉어지자 관객들이 환호했어요.",
+   "blank": "gerhana",
+   "src": "made"
   }
  ],
  "w|gerombolan": [
@@ -14761,6 +14953,22 @@
    "en": "He ignored the ads on the website.",
    "ko": "그는 웹사이트의 광고를 무시했어.",
    "blank": "iklan"
+  }
+ ],
+ "w|iklim": [
+  {
+   "text": "Rudi membawa jaket tebal karena iklim di pegunungan ini sejuk sepanjang tahun.",
+   "en": "Rudi brought a thick jacket because the climate in these mountains is cool all year.",
+   "ko": "이 산악 지대는 일 년 내내 서늘한 기후라서 루디는 두꺼운 재킷을 가져왔어요.",
+   "blank": "iklim",
+   "src": "made"
+  },
+  {
+   "text": "Konser itu sekaligus menggalang dana untuk kampanye perubahan iklim.",
+   "en": "The concert also raised money for a climate change campaign.",
+   "ko": "그 공연은 기후 변화 캠페인을 위한 모금도 함께 했어요.",
+   "blank": "iklim",
+   "src": "made"
   }
  ],
  "w|ikut": [
@@ -18759,6 +18967,22 @@
    "blank": "keempat"
   }
  ],
+ "w|keenam": [
+  {
+   "text": "Ini sudah perjalanan berkemah keenam Rudi tahun ini.",
+   "en": "This is already Rudi's sixth camping trip this year.",
+   "ko": "이번이 벌써 올해 루디의 여섯 번째 캠핑 여행이에요.",
+   "blank": "keenam",
+   "src": "made"
+  },
+  {
+   "text": "Lagu keenam malam itu adalah lagu favorit Rina sejak SMA.",
+   "en": "The sixth song that night was Rina's favorite since high school.",
+   "ko": "그날 밤 여섯 번째 노래는 리나가 고등학교 때부터 좋아한 노래였어요.",
+   "blank": "keenam",
+   "src": "made"
+  }
+ ],
  "w|kegagalan": [
   {
    "text": "Kegagalan itu mengajarinya banyak pelajaran.",
@@ -20335,6 +20559,22 @@
    "blank": "keras"
   }
  ],
+ "w|kerbau": [
+  {
+   "text": "Di pinggir sawah, Rudi melihat seekor kerbau berendam di lumpur.",
+   "en": "At the edge of the rice field, Rudi saw a water buffalo wallowing in the mud.",
+   "ko": "논 가장자리에서 루디는 물소 한 마리가 진흙에 몸을 담그고 있는 걸 봤어요.",
+   "blank": "kerbau",
+   "src": "made"
+  },
+  {
+   "text": "Dalam perjalanan pulang, mobil Rina harus berhenti karena ada kerbau menyeberang jalan.",
+   "en": "On the way home, Rina's car had to stop because a water buffalo was crossing the road.",
+   "ko": "집에 오는 길에 물소가 길을 건너서 리나의 차가 멈춰야 했어요.",
+   "blank": "kerbau",
+   "src": "made"
+  }
+ ],
  "w|kerdil": [
   {
    "text": "Di panggung belakang ada pohon kerdil dalam pot untuk dekorasi.",
@@ -21731,6 +21971,22 @@
    "src": "made"
   }
  ],
+ "w|komet": [
+  {
+   "text": "Kata pemandu, komet terakhir terlihat dari bukit ini bertahun-tahun yang lalu.",
+   "en": "According to the guide, the last comet was seen from this hill years ago.",
+   "ko": "가이드 말로는 이 언덕에서 마지막으로 혜성이 보인 건 몇 년 전이래요.",
+   "blank": "komet",
+   "src": "made"
+  },
+  {
+   "text": "Lagu penutup bercerita tentang komet yang hanya lewat sekali seumur hidup.",
+   "en": "The closing song is about a comet that passes only once in a lifetime.",
+   "ko": "마지막 곡은 평생 한 번만 지나가는 혜성에 대한 노래예요.",
+   "blank": "komet",
+   "src": "made"
+  }
+ ],
  "w|komik": [
   {
    "text": "Andi suka menggambar komik di halaman belakang buku tulisnya.",
@@ -22740,6 +22996,22 @@
    "en": "Intan kept her packed food in the small fridge in the dining car.",
    "ko": "인탄은 싸 온 음식을 식당칸 작은 냉장고에 넣어 뒀어요.",
    "blank": "kulkas",
+   "src": "made"
+  }
+ ],
+ "w|kumbang": [
+  {
+   "text": "Seekor kumbang hitam merayap pelan di atas ransel Rudi.",
+   "en": "A black beetle crawled slowly over Rudi's backpack.",
+   "ko": "검은 딱정벌레 한 마리가 루디의 배낭 위를 천천히 기어갔어요.",
+   "blank": "kumbang",
+   "src": "made"
+  },
+  {
+   "text": "Seekor kumbang terbang ke arah lampu panggung dan membuat penyanyinya tertawa.",
+   "en": "A beetle flew toward the stage lights and made the singer laugh.",
+   "ko": "딱정벌레 한 마리가 무대 조명 쪽으로 날아가서 가수를 웃게 했어요.",
+   "blank": "kumbang",
    "src": "made"
   }
  ],
@@ -31019,6 +31291,22 @@
    "src": "made"
   }
  ],
+ "w|mendampingi": [
+  {
+   "text": "Seorang pemandu lokal mendampingi Rudi selama pendakian ke puncak.",
+   "en": "A local guide accompanied Rudi throughout the climb to the summit.",
+   "ko": "현지 가이드 한 명이 정상까지 오르는 내내 루디와 함께했어요.",
+   "blank": "mendampingi",
+   "src": "made"
+  },
+  {
+   "text": "Ibu Rina ikut mendampingi adik Rina yang masih SMP.",
+   "en": "Rina's mother came along to accompany Rina's younger sibling, who is still in middle school.",
+   "ko": "리나의 엄마는 아직 중학생인 리나 동생을 데리고 함께 왔어요.",
+   "blank": "mendampingi",
+   "src": "made"
+  }
+ ],
  "w|mendapat": [
   {
    "text": "Aku mendapat kabar baik.",
@@ -31089,6 +31377,22 @@
    "en": "The police will go to the scene later.",
    "ko": "경찰이 나중에 현장으로 찾아갈 거야.",
    "blank": "mendatangi"
+  }
+ ],
+ "w|mendatangkan": [
+  {
+   "text": "Api unggun yang terlalu besar bisa mendatangkan masalah kalau angin bertiup kencang.",
+   "en": "A campfire that is too big can bring trouble if the wind blows hard.",
+   "ko": "모닥불이 너무 크면 바람이 세게 불 때 문제가 생길 수 있어요.",
+   "blank": "mendatangkan",
+   "src": "made"
+  },
+  {
+   "text": "Panitia konser mendatangkan band tamu dari luar kota.",
+   "en": "The concert organizers brought in a guest band from out of town.",
+   "ko": "공연 주최 측은 다른 도시에서 게스트 밴드를 불러왔어요.",
+   "blank": "mendatangkan",
+   "src": "made"
   }
  ],
  "w|mendayung": [
@@ -31300,6 +31604,22 @@
    "en": "The restaurant owner dared to break with tradition by serving a vegetarian rendang.",
    "ko": "그 식당 주인은 채식 른당을 내놓으며 과감하게 전통을 깼어요.",
    "blank": "mendobrak",
+   "src": "made"
+  }
+ ],
+ "w|mendominasi": [
+  {
+   "text": "Pohon pinus mendominasi hutan di sekitar perkemahan.",
+   "en": "Pine trees dominate the forest around the campsite.",
+   "ko": "야영지 주변 숲은 소나무가 대부분을 차지해요.",
+   "blank": "mendominasi",
+   "src": "made"
+  },
+  {
+   "text": "Suara drum mendominasi lagu pembuka sampai vokalnya hampir tidak terdengar.",
+   "en": "The drums dominated the opening song so much that the vocals were barely audible.",
+   "ko": "첫 곡에서 드럼 소리가 너무 커서 보컬이 거의 들리지 않았어요.",
+   "blank": "mendominasi",
    "src": "made"
   }
  ],
@@ -33063,6 +33383,22 @@
    "blank": "mengembangkan"
   }
  ],
+ "w|mengemis": [
+  {
+   "text": "Seekor monyet duduk di dekat tenda seolah-olah sedang mengemis makanan dari Rudi.",
+   "en": "A monkey sat near the tent as if begging Rudi for food.",
+   "ko": "원숭이 한 마리가 루디에게 먹을 걸 구걸하듯 텐트 옆에 앉아 있었어요.",
+   "blank": "mengemis",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pria di luar stadion mengemis tiket kepada setiap penonton yang lewat.",
+   "en": "A man outside the stadium begged every passing fan for a ticket.",
+   "ko": "경기장 밖에서 한 남자가 지나가는 관객마다 표를 달라고 애원했어요.",
+   "blank": "mengemis",
+   "src": "made"
+  }
+ ],
  "w|mengemudi": [
   {
    "text": "Dia belajar mengemudi di akhir pekan.",
@@ -33509,6 +33845,22 @@
    "en": "She tried to describe those complicated feelings.",
    "ko": "그녀는 그 복잡한 감정을 묘사하려 했어.",
    "blank": "menggambarkan"
+  }
+ ],
+ "w|menggandakan": [
+  {
+   "text": "Rudi menggandakan persediaan air karena rute besok jauh lebih panjang.",
+   "en": "Rudi doubled his water supply because tomorrow's route is much longer.",
+   "ko": "내일 코스가 훨씬 길어서 루디는 물을 두 배로 챙겼어요.",
+   "blank": "menggandakan",
+   "src": "made"
+  },
+  {
+   "text": "Promotor menggandakan jumlah petugas keamanan untuk konser malam ini.",
+   "en": "The promoter doubled the number of security staff for tonight's concert.",
+   "ko": "기획사는 오늘 밤 공연을 위해 경호 인력을 두 배로 늘렸어요.",
+   "blank": "menggandakan",
+   "src": "made"
   }
  ],
  "w|mengganggu": [
@@ -35713,6 +36065,22 @@
    "blank": "menjamin"
   }
  ],
+ "w|menjangkau": [
+  {
+   "text": "Sinyal ponsel tidak bisa menjangkau perkemahan Rudi di balik bukit.",
+   "en": "The phone signal can't reach Rudi's camp behind the hill.",
+   "ko": "휴대폰 신호가 언덕 너머 루디의 야영지까지 닿지 않아요.",
+   "blank": "menjangkau",
+   "src": "made"
+  },
+  {
+   "text": "Rina kagum karena suara penyanyi itu mampu menjangkau nada yang sangat tinggi.",
+   "en": "Rina was amazed that the singer's voice could reach very high notes.",
+   "ko": "리나는 그 가수의 목소리가 아주 높은 음까지 닿아서 감탄했어요.",
+   "blank": "menjangkau",
+   "src": "made"
+  }
+ ],
  "w|menjanjikan": [
   {
    "text": "Hasil uji coba itu menjanjikan untuk masa depan.",
@@ -36643,6 +37011,22 @@
    "en": "She likes to disguise herself at costume parties.",
    "ko": "그녀는 코스튬 파티에서 변장하는 걸 좋아해.",
    "blank": "menyamar"
+  }
+ ],
+ "w|menyambung": [
+  {
+   "text": "Rudi menyambung tali tenda yang putus dengan simpul yang kuat.",
+   "en": "Rudi joined the broken tent rope with a strong knot.",
+   "ko": "루디는 끊어진 텐트 줄을 튼튼한 매듭으로 이었어요.",
+   "blank": "menyambung",
+   "src": "made"
+  },
+  {
+   "text": "Penyanyi itu langsung menyambung ke lagu berikutnya tanpa jeda.",
+   "en": "The singer went straight into the next song without a break.",
+   "ko": "그 가수는 쉬지 않고 바로 다음 곡으로 이어 갔어요.",
+   "blank": "menyambung",
+   "src": "made"
   }
  ],
  "w|menyambut": [
@@ -38949,6 +39333,22 @@
    "src": "made"
   }
  ],
+ "w|molekul": [
+  {
+   "text": "Sambil menyeduh kopi, Dimas menjelaskan kepada Rudi bahwa molekul air bergerak lebih cepat saat dipanaskan.",
+   "en": "While brewing coffee, Dimas explained to Rudi that water molecules move faster when heated.",
+   "ko": "커피를 내리면서 디마스는 루디에게 물 분자가 데워지면 더 빨리 움직인다고 설명했어요.",
+   "blank": "molekul",
+   "src": "made"
+  },
+  {
+   "text": "Rina merasa setiap molekul di tubuhnya ikut bergetar saat bas berdentum.",
+   "en": "Rina felt every molecule in her body vibrate when the bass boomed.",
+   "ko": "베이스가 쿵쿵 울릴 때 리나는 몸의 분자 하나하나가 같이 떨리는 것 같았어요.",
+   "blank": "molekul",
+   "src": "made"
+  }
+ ],
  "w|momen": [
   {
    "text": "Momen itu akan selalu diingat.",
@@ -40153,6 +40553,22 @@
    "blank": "Nyaman"
   }
  ],
+ "w|nyamuk": [
+  {
+   "text": "Rudi lupa membawa obat nyamuk, jadi tangannya penuh bentol.",
+   "en": "Rudi forgot to bring mosquito repellent, so his arms were covered in bites.",
+   "ko": "루디는 모기약을 깜빡해서 팔이 물린 자국투성이였어요.",
+   "blank": "nyamuk",
+   "src": "made"
+  },
+  {
+   "text": "Konser di lapangan terbuka itu penuh nyamuk, jadi Rina membawa minyak kayu putih.",
+   "en": "The open-field concert was full of mosquitoes, so Rina brought eucalyptus oil.",
+   "ko": "야외 공연장에 모기가 많아서 리나는 유칼립투스 오일을 가져갔어요.",
+   "blank": "nyamuk",
+   "src": "made"
+  }
+ ],
  "w|nyanyian": [
   {
    "text": "Agus hafal nyanyian daerah yang diajarkan guru seni budaya.",
@@ -41339,6 +41755,22 @@
    "src": "made"
   }
  ],
+ "w|parit": [
+  {
+   "text": "Air hujan semalam mengalir deras di parit sekitar tenda Rudi.",
+   "en": "Last night's rainwater rushed through the ditch around Rudi's tent.",
+   "ko": "어젯밤 빗물이 루디의 텐트 주위 도랑으로 세차게 흘렀어요.",
+   "blank": "parit",
+   "src": "made"
+  },
+  {
+   "text": "Hujan deras membuat parit di sekitar lapangan konser meluap.",
+   "en": "Heavy rain made the ditch around the concert field overflow.",
+   "ko": "폭우 때문에 공연장 주변 도랑이 넘쳤어요.",
+   "blank": "parit",
+   "src": "made"
+  }
+ ],
  "w|parkir": [
   {
    "text": "Parkir di sini hanya untuk pelanggan.",
@@ -41812,6 +42244,22 @@
    "en": "Lestari doesn't eat chili sauce that's too spicy before running.",
    "ko": "레스타리는 달리기 전에 너무 매운 삼발은 먹지 않아요.",
    "blank": "pedas",
+   "src": "made"
+  }
+ ],
+ "w|pedesaan": [
+  {
+   "text": "Rudi suka berkemah karena udara pedesaan jauh lebih bersih daripada udara kota.",
+   "en": "Rudi likes camping because the countryside air is much cleaner than city air.",
+   "ko": "루디는 시골 공기가 도시 공기보다 훨씬 깨끗해서 캠핑을 좋아해요.",
+   "blank": "pedesaan",
+   "src": "made"
+  },
+  {
+   "text": "Banyak lagu band itu bercerita tentang kehidupan sederhana di pedesaan.",
+   "en": "Many of the band's songs are about simple life in the countryside.",
+   "ko": "그 밴드의 노래 중 상당수가 시골의 소박한 삶에 관한 거예요.",
+   "blank": "pedesaan",
    "src": "made"
   }
  ],
@@ -42429,6 +42877,22 @@
    "en": "Many people came to that funeral.",
    "ko": "많은 사람이 그 장례식에 왔어.",
    "blank": "pemakaman"
+  }
+ ],
+ "w|pemakan": [
+  {
+   "text": "Pemandu bercerita bahwa harimau, pemakan daging terbesar di pulau itu, hampir punah.",
+   "en": "The guide said that the tiger, the biggest meat-eater on the island, is nearly extinct.",
+   "ko": "가이드는 그 섬에서 가장 큰 육식 동물인 호랑이가 거의 멸종했다고 이야기했어요.",
+   "blank": "pemakan",
+   "src": "made"
+  },
+  {
+   "text": "Di sela lagu, vokalis bercerita bahwa drummer mereka pemakan segala, dari sambal sampai durian.",
+   "en": "Between songs, the vocalist said their drummer eats everything, from chili sauce to durian.",
+   "ko": "노래 사이에 보컬은 자기네 드러머가 삼발부터 두리안까지 뭐든 먹는다고 이야기했어요.",
+   "blank": "pemakan",
+   "src": "made"
   }
  ],
  "w|pemalu": [
@@ -46087,6 +46551,22 @@
    "src": "made"
   }
  ],
+ "w|percikan": [
+  {
+   "text": "Rudi memperhatikan percikan api unggun yang terbang ke langit malam.",
+   "en": "Rudi watched the sparks from the campfire fly up into the night sky.",
+   "ko": "루디는 모닥불 불티가 밤하늘로 날아오르는 걸 바라봤어요.",
+   "blank": "percikan",
+   "src": "made"
+  },
+  {
+   "text": "Rina berteriak kegirangan melihat percikan kembang api di akhir lagu.",
+   "en": "Rina screamed with joy at the burst of fireworks at the end of the song.",
+   "ko": "리나는 노래 끝에 터지는 불꽃을 보고 신나서 소리를 질렀어요.",
+   "blank": "percikan",
+   "src": "made"
+  }
+ ],
  "w|percobaan": [
   {
    "text": "Percobaan ilmiah itu berhasil dengan baik.",
@@ -46512,6 +46992,22 @@
    "en": "Rina wrote about the new rule on the minimum age of marriage.",
    "ko": "리나는 혼인 최소 연령에 관한 새 규정에 대해 썼어요.",
    "blank": "perkawinan",
+   "src": "made"
+  }
+ ],
+ "w|perkebunan": [
+  {
+   "text": "Jalan setapak menuju danau melewati perkebunan teh yang luas.",
+   "en": "The footpath to the lake goes through a vast tea plantation.",
+   "ko": "호수로 가는 오솔길은 넓은 차 농장을 지나가요.",
+   "blank": "perkebunan",
+   "src": "made"
+  },
+  {
+   "text": "Konser itu diadakan di bekas perkebunan kopi yang kini jadi tempat wisata.",
+   "en": "The concert was held on a former coffee plantation that is now a tourist spot.",
+   "ko": "그 공연은 지금은 관광지가 된 옛 커피 농장에서 열렸어요.",
+   "blank": "perkebunan",
    "src": "made"
   }
  ],
@@ -49223,6 +49719,22 @@
    "blank": "pun"
   }
  ],
+ "w|punah": [
+  {
+   "text": "Pemandu bercerita bahwa harimau, pemakan daging terbesar di pulau itu, hampir punah.",
+   "en": "The guide said that the tiger, the biggest meat-eater on the island, is nearly extinct.",
+   "ko": "가이드는 그 섬에서 가장 큰 육식 동물인 호랑이가 거의 멸종했다고 이야기했어요.",
+   "blank": "punah",
+   "src": "made"
+  },
+  {
+   "text": "Lagu baru band itu mengajak penonton menjaga hutan agar satwa langka tidak punah.",
+   "en": "The band's new song urges listeners to protect forests so rare animals don't go extinct.",
+   "ko": "그 밴드의 새 노래는 희귀 동물이 멸종하지 않도록 숲을 지키자고 해요.",
+   "blank": "punah",
+   "src": "made"
+  }
+ ],
  "w|puncak": [
   {
    "text": "Mereka mencapai puncak gunung saat fajar.",
@@ -51445,6 +51957,22 @@
    "blank": "Samping"
   }
  ],
+ "w|samudra": [
+  {
+   "text": "Dari puncak bukit, Rudi bisa melihat samudra biru di kejauhan.",
+   "en": "From the hilltop, Rudi could see the blue ocean in the distance.",
+   "ko": "언덕 꼭대기에서 루디는 멀리 푸른 대양을 볼 수 있었어요.",
+   "blank": "samudra",
+   "src": "made"
+  },
+  {
+   "text": "Ribuan lampu ponsel membuat stadion terlihat seperti samudra cahaya.",
+   "en": "Thousands of phone lights made the stadium look like an ocean of light.",
+   "ko": "수천 개의 휴대폰 불빛이 경기장을 빛의 바다처럼 보이게 했어요.",
+   "blank": "samudra",
+   "src": "made"
+  }
+ ],
  "w|sana": [
   {
    "text": "Tunggu di sana.",
@@ -51735,6 +52263,22 @@
    "blank": "satu-satunya"
   }
  ],
+ "w|satuan": [
+  {
+   "text": "Aplikasi di ponsel Rudi mencatat jarak pendakian dalam satuan kilometer.",
+   "en": "The app on Rudi's phone records the hiking distance in kilometers.",
+   "ko": "루디의 휴대폰 앱은 등산 거리를 킬로미터 단위로 기록해요.",
+   "blank": "satuan",
+   "src": "made"
+  },
+  {
+   "text": "Penjual di luar stadion menjual stiker band per satuan dengan harga murah.",
+   "en": "Vendors outside the stadium sold band stickers individually at a low price.",
+   "ko": "경기장 밖 상인들은 밴드 스티커를 낱개로 싸게 팔았어요.",
+   "blank": "satuan",
+   "src": "made"
+  }
+ ],
  "w|saudara": [
   {
    "text": "Dia saudara sepupuku.",
@@ -51977,6 +52521,22 @@
    "en": "I thought it was easy; on the contrary it was hard.",
    "ko": "쉬울 줄 알았는데 오히려 어렵더라고.",
    "blank": "sebaliknya"
+  }
+ ],
+ "w|sebanding": [
+  {
+   "text": "Menurut Rudi, matahari terbit di sini sebanding dengan perjalanan panjang yang melelahkan itu.",
+   "en": "Rudi thinks the sunrise here is worth the long, tiring journey.",
+   "ko": "루디 생각에 여기 일출은 그 길고 힘든 여정만큼의 가치가 있어요.",
+   "blank": "sebanding",
+   "src": "made"
+  },
+  {
+   "text": "Rina kaget karena harga tiketnya sebanding dengan gajinya selama seminggu.",
+   "en": "Rina was shocked because the ticket price was equal to a week of her salary.",
+   "ko": "리나는 티켓 값이 자기 일주일 월급과 맞먹어서 깜짝 놀랐어요.",
+   "blank": "sebanding",
+   "src": "made"
   }
  ],
  "w|sebanyak": [
@@ -54943,6 +55503,22 @@
    "src": "made"
   }
  ],
+ "w|siklus": [
+  {
+   "text": "Pemandu bercerita tentang siklus air: hujan turun, mengalir ke sungai, lalu menguap lagi.",
+   "en": "The guide talked about the water cycle: rain falls, flows into rivers, then evaporates again.",
+   "ko": "가이드는 물의 순환에 대해 이야기했어요. 비가 내리고, 강으로 흐르고, 다시 증발한다고요.",
+   "blank": "siklus",
+   "src": "made"
+  },
+  {
+   "text": "Rina bercanda bahwa hidupnya mengikuti siklus menabung, beli tiket konser, lalu bokek lagi.",
+   "en": "Rina jokes that her life follows a cycle of saving, buying concert tickets, then going broke again.",
+   "ko": "리나는 자기 삶이 저축하고, 공연 표 사고, 다시 빈털터리가 되는 순환이라고 농담해요.",
+   "blank": "siklus",
+   "src": "made"
+  }
+ ],
  "w|siksaan": [
   {
    "text": "Drama sejarah itu menggambarkan siksaan yang dialami para tahanan zaman penjajahan.",
@@ -57405,6 +57981,22 @@
    "blank": "telepon"
   }
  ],
+ "w|teleskop": [
+  {
+   "text": "Rudi membawa teleskop kecil untuk mengamati bintang dari perkemahan.",
+   "en": "Rudi brought a small telescope to watch the stars from the campsite.",
+   "ko": "루디는 야영지에서 별을 보려고 작은 망원경을 가져왔어요.",
+   "blank": "teleskop",
+   "src": "made"
+  },
+  {
+   "text": "Dari tribun belakang, Rina bercanda bahwa dia butuh teleskop untuk melihat penyanyinya.",
+   "en": "From the back stands, Rina joked that she needed a telescope to see the singer.",
+   "ko": "뒤쪽 관람석에서 리나는 가수를 보려면 망원경이 필요하다고 농담했어요.",
+   "blank": "teleskop",
+   "src": "made"
+  }
+ ],
  "w|televisi": [
   {
    "text": "Televisi di ruang tamu sudah rusak.",
@@ -57855,6 +58447,22 @@
    "blank": "terasa"
   }
  ],
+ "w|teratas": [
+  {
+   "text": "Rudi menyimpan senter di kantong teratas ranselnya supaya mudah diambil.",
+   "en": "Rudi keeps his flashlight in the top pocket of his backpack so it's easy to grab.",
+   "ko": "루디는 꺼내기 쉽게 손전등을 배낭 맨 위 주머니에 넣어 둬요.",
+   "blank": "teratas",
+   "src": "made"
+  },
+  {
+   "text": "Rina mendapat kursi di baris teratas tribun, jadi panggung terlihat sangat kecil.",
+   "en": "Rina got a seat in the top row of the stands, so the stage looked tiny.",
+   "ko": "리나는 관람석 맨 윗줄 자리를 받아서 무대가 아주 작게 보였어요.",
+   "blank": "teratas",
+   "src": "made"
+  }
+ ],
  "w|teratur": [
   {
    "text": "Kata wali kelas, Eko harus belajar lebih teratur, bukan semalam sebelum ujian.",
@@ -58014,6 +58622,22 @@
    "en": "Afternoon practice ended just as the sun set behind the building.",
    "ko": "오후 연습은 해가 건물 뒤로 넘어갈 때 딱 끝났어요.",
    "blank": "terbenam",
+   "src": "made"
+  }
+ ],
+ "w|terbentuk": [
+  {
+   "text": "Pemandu bilang gua di dekat perkemahan terbentuk dari batu kapur selama ribuan tahun.",
+   "en": "The guide said the cave near the camp was formed from limestone over thousands of years.",
+   "ko": "가이드는 야영지 근처 동굴이 수천 년에 걸쳐 석회암으로 만들어졌다고 했어요.",
+   "blank": "terbentuk",
+   "src": "made"
+  },
+  {
+   "text": "Rina tahu bahwa band itu terbentuk ketika para anggotanya masih kuliah.",
+   "en": "Rina knows the band was formed when its members were still in college.",
+   "ko": "리나는 그 밴드가 멤버들이 아직 대학생일 때 결성됐다는 걸 알아요.",
+   "blank": "terbentuk",
    "src": "made"
   }
  ],
@@ -61282,6 +61906,22 @@
    "en": "The editor said Rina's piece needs a human element, not just numbers.",
    "ko": "편집자는 리나의 글에 숫자만이 아니라 사람 이야기가 필요하다고 했어요.",
    "blank": "unsur",
+   "src": "made"
+  }
+ ],
+ "w|unta": [
+  {
+   "text": "Melihat hamparan pasir di tepi pantai, Rudi bercanda bahwa mereka seharusnya naik unta.",
+   "en": "Seeing the stretch of sand by the beach, Rudi joked that they should have ridden camels.",
+   "ko": "해변의 넓은 모래밭을 보고 루디는 낙타를 타고 왔어야 했다고 농담했어요.",
+   "blank": "unta",
+   "src": "made"
+  },
+  {
+   "text": "Salah satu penari latar memakai kostum unta yang lucu.",
+   "en": "One of the backup dancers wore a funny camel costume.",
+   "ko": "백댄서 중 한 명이 귀여운 낙타 의상을 입었어요.",
+   "blank": "unta",
    "src": "made"
   }
  ],

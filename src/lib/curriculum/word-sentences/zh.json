@@ -2617,6 +2617,22 @@
    "blank": "之间"
   }
  ],
+ "w|乐园": [
+  {
+   "text": "对爱书的王刚来说，图书馆就是他的乐园。",
+   "en": "For book-loving Wang Gang, the library is his paradise.",
+   "ko": "책을 좋아하는 왕강에게 도서관은 낙원이에요.",
+   "blank": "乐园",
+   "src": "made"
+  },
+  {
+   "text": "对孩子们来说，周末的花鸟市场简直是个乐园。",
+   "en": "For the kids, the weekend flower and bird market is a real paradise.",
+   "ko": "아이들에게 주말 꽃·새 시장은 그야말로 낙원이에요.",
+   "blank": "乐园",
+   "src": "made"
+  }
+ ],
  "w|乐意": [
   {
    "text": "我很乐意帮忙。",
@@ -6363,6 +6379,22 @@
    "blank": "做事"
   }
  ],
+ "w|做人": [
+  {
+   "text": "王刚的父亲常说，读书先要学会做人。",
+   "en": "Wang Gang's father often says that before studying you must learn to be a decent person.",
+   "ko": "왕강의 아버지는 공부보다 먼저 사람 됨됨이를 배워야 한다고 자주 말해요.",
+   "blank": "做人",
+   "src": "made"
+  },
+  {
+   "text": "李娜觉得，市场里那些老摊主最懂得怎么做人。",
+   "en": "Li Na feels the old stall owners in the market know best how to get along with people.",
+   "ko": "리나는 시장의 오래된 상인들이 처신을 가장 잘 안다고 느껴요.",
+   "blank": "做人",
+   "src": "made"
+  }
+ ],
  "w|做出": [
   {
    "text": "做出决定吧。",
@@ -9293,6 +9325,22 @@
    "blank": "创造"
   }
  ],
+ "w|初中": [
+  {
+   "text": "图书馆楼上是一所初中，课间总能听到孩子们的笑声。",
+   "en": "Above the library is a middle school, and you can always hear kids laughing between classes.",
+   "ko": "도서관 위층은 중학교라 쉬는 시간마다 아이들 웃음소리가 들려요.",
+   "blank": "初中",
+   "src": "made"
+  },
+  {
+   "text": "李娜的女儿今年刚上初中，周末会来帮她看摊。",
+   "en": "Li Na's daughter just started middle school this year and helps mind the stall on weekends.",
+   "ko": "리나의 딸은 올해 막 중학교에 들어가서 주말에 가게 보는 걸 도와요.",
+   "blank": "初中",
+   "src": "made"
+  }
+ ],
  "w|判决": [
   {
    "text": "法院最后判决被告赔偿原告十万元。",
@@ -11709,6 +11757,22 @@
    "src": "made"
   }
  ],
+ "w|反击": [
+  {
+   "text": "在辩论赛上，王刚用书里的数据有力地反击了对方。",
+   "en": "At the debate, Wang Gang hit back at the other side with data from a book.",
+   "ko": "토론 대회에서 왕강은 책 속 데이터로 상대를 힘 있게 반박했어요.",
+   "blank": "反击",
+   "src": "made"
+  },
+  {
+   "text": "被别人说菜不新鲜，摊主马上笑着反击了一句。",
+   "en": "When someone said her vegetables weren't fresh, the stall owner immediately fired back with a smile.",
+   "ko": "채소가 안 싱싱하다는 말을 듣자 상인은 바로 웃으며 한마디 받아쳤어요.",
+   "blank": "反击",
+   "src": "made"
+  }
+ ],
  "w|反对": [
   {
    "text": "我反对。",
@@ -12024,6 +12088,22 @@
    "en": "Wang Fang posted an article online about her phone-repair experience, and it got lots of likes.",
    "ko": "왕팡이 인터넷에 휴대폰 수리 경험담을 올렸는데 '좋아요'가 많이 달렸어요.",
    "blank": "发表",
+   "src": "made"
+  }
+ ],
+ "w|发言": [
+  {
+   "text": "读书会上，王刚第一个举手发言。",
+   "en": "At the book club, Wang Gang was the first to raise his hand and speak.",
+   "ko": "독서 모임에서 왕강이 제일 먼저 손을 들고 발언했어요.",
+   "blank": "发言",
+   "src": "made"
+  },
+  {
+   "text": "市场改造的座谈会上，李娜代表摊主们发言。",
+   "en": "At the forum on renovating the market, Li Na spoke on behalf of the stall owners.",
+   "ko": "시장 개조 간담회에서 리나가 상인들을 대표해 발언했어요.",
+   "blank": "发言",
    "src": "made"
   }
  ],
@@ -13345,6 +13425,22 @@
    "en": "The result is equally bad.",
    "ko": "결과도 똑같이 나빠.",
    "blank": "同样"
+  }
+ ],
+ "w|同行": [
+  {
+   "text": "图书管理员说，王刚是她见过最懂古籍的同行。",
+   "en": "The librarian says Wang Gang is the colleague in her field who knows ancient books best.",
+   "ko": "사서는 왕강이 자기가 본 동업자 중에 고서를 가장 잘 안다고 해요.",
+   "blank": "同行",
+   "src": "made"
+  },
+  {
+   "text": "卖肉的老板说，他和隔壁那家既是邻居又是同行。",
+   "en": "The butcher says he and the shop next door are both neighbors and competitors in the same trade.",
+   "ko": "정육점 주인은 옆 가게와 이웃이면서 같은 업종이라고 해요.",
+   "blank": "同行",
+   "src": "made"
   }
  ],
  "w|名": [
@@ -15557,6 +15653,22 @@
    "blank": "团队"
   }
  ],
+ "w|困境": [
+  {
+   "text": "因为经费不够，这家社区图书馆陷入了困境。",
+   "en": "Due to insufficient funding, this community library is in a tight spot.",
+   "ko": "예산이 모자라서 이 동네 도서관은 곤경에 빠졌어요.",
+   "blank": "困境",
+   "src": "made"
+  },
+  {
+   "text": "超市开到对面以后，很多小摊都陷入了困境。",
+   "en": "After a supermarket opened across the street, many small stalls fell on hard times.",
+   "ko": "맞은편에 마트가 생긴 뒤 작은 가게들이 많이 어려움에 빠졌어요.",
+   "blank": "困境",
+   "src": "made"
+  }
+ ],
  "w|困扰": [
   {
    "text": "航班延误的问题已经困扰赵磊一整天了。",
@@ -17245,6 +17357,22 @@
    "en": "This place is huge.",
    "ko": "이 집 엄청 크다.",
    "blank": "大"
+  }
+ ],
+ "w|大不了": [
+  {
+   "text": "王刚说，书借不到大不了下周再来。",
+   "en": "Wang Gang says that if he can't borrow the book, he'll just come back next week at worst.",
+   "ko": "왕강은 책을 못 빌리면 다음 주에 다시 오면 그만이라고 해요.",
+   "blank": "大不了",
+   "src": "made"
+  },
+  {
+   "text": "李娜说，今天的排骨要是卖完了，大不了明天再买。",
+   "en": "Li Na says if today's ribs are sold out, she'll just buy them tomorrow.",
+   "ko": "리나는 오늘 갈비가 다 팔렸으면 내일 사면 그만이라고 해요.",
+   "blank": "大不了",
+   "src": "made"
   }
  ],
  "w|大事": [
@@ -21541,6 +21669,22 @@
    "blank": "尽快"
   }
  ],
+ "w|尽情": [
+  {
+   "text": "放了暑假，王刚终于可以在图书馆尽情看小说了。",
+   "en": "With summer vacation, Wang Gang can finally read novels at the library to his heart's content.",
+   "ko": "여름 방학이 되자 왕강은 드디어 도서관에서 마음껏 소설을 읽을 수 있어요.",
+   "blank": "尽情",
+   "src": "made"
+  },
+  {
+   "text": "夜市上，孩子们尽情地吃着各种小吃。",
+   "en": "At the night market, the kids ate all kinds of snacks to their heart's content.",
+   "ko": "야시장에서 아이들은 온갖 간식을 마음껏 먹었어요.",
+   "blank": "尽情",
+   "src": "made"
+  }
+ ],
  "w|尽管": [
   {
    "text": "尽管去吧。",
@@ -22237,6 +22381,22 @@
    "blank": "差不多"
   }
  ],
+ "w|差异": [
+  {
+   "text": "王刚发现，两个译本的差异比他想的大得多。",
+   "en": "Wang Gang discovered the differences between the two translations were much bigger than he'd thought.",
+   "ko": "왕강은 두 번역본의 차이가 생각보다 훨씬 크다는 걸 알았어요.",
+   "blank": "差异",
+   "src": "made"
+  },
+  {
+   "text": "李娜发现，南北方人买菜的习惯有很大差异。",
+   "en": "Li Na has noticed big differences in how northerners and southerners shop for food.",
+   "ko": "리나는 남쪽과 북쪽 사람들의 장보는 습관이 크게 다르다는 걸 알았어요.",
+   "blank": "差异",
+   "src": "made"
+  }
+ ],
  "w|差点": [
   {
    "text": "差点忘了。",
@@ -22721,6 +22881,22 @@
    "en": "He works hard.",
    "ko": "그는 일을 열심히 해.",
    "blank": "干活"
+  }
+ ],
+ "w|干涉": [
+  {
+   "text": "王刚觉得读什么书是自己的事，别人不该干涉。",
+   "en": "Wang Gang feels what he reads is his own business and others shouldn't interfere.",
+   "ko": "왕강은 무슨 책을 읽든 자기 일이니 남이 간섭하면 안 된다고 생각해요.",
+   "blank": "干涉",
+   "src": "made"
+  },
+  {
+   "text": "李娜说，买什么菜是她自己的事，婆婆不用干涉。",
+   "en": "Li Na says what groceries she buys is her own business and her mother-in-law needn't interfere.",
+   "ko": "리나는 무슨 채소를 사든 자기 일이니 시어머니가 간섭할 필요 없다고 해요.",
+   "blank": "干涉",
+   "src": "made"
   }
  ],
  "w|干脆": [
@@ -23481,6 +23657,22 @@
    "src": "made"
   }
  ],
+ "w|建筑物": [
+  {
+   "text": "新图书馆是城里最漂亮的建筑物之一。",
+   "en": "The new library is one of the most beautiful buildings in town.",
+   "ko": "새 도서관은 시내에서 가장 아름다운 건물 중 하나예요.",
+   "blank": "建筑物",
+   "src": "made"
+  },
+  {
+   "text": "市场旁边那栋老建筑物下个月要拆了。",
+   "en": "The old building next to the market will be torn down next month.",
+   "ko": "시장 옆 그 낡은 건물은 다음 달에 헐려요.",
+   "blank": "建筑物",
+   "src": "made"
+  }
+ ],
  "w|建议": [
   {
    "text": "听我的建议。",
@@ -23811,6 +24003,22 @@
    "blank": "引擎"
   }
  ],
+ "w|引用": [
+  {
+   "text": "王刚在论文里引用了三本旧杂志里的资料。",
+   "en": "Wang Gang cited material from three old magazines in his thesis.",
+   "ko": "왕강은 논문에 옛 잡지 세 권의 자료를 인용했어요.",
+   "blank": "引用",
+   "src": "made"
+  },
+  {
+   "text": "卖菜的大叔喜欢引用老话：“早市的菜最新鲜。”",
+   "en": "The vegetable seller likes to quote an old saying: \"The morning market's vegetables are freshest.\"",
+   "ko": "채소 파는 아저씨는 “아침 시장 채소가 제일 싱싱하다”는 옛말을 즐겨 인용해요.",
+   "blank": "引用",
+   "src": "made"
+  }
+ ],
  "w|引起": [
   {
    "text": "这会引起麻烦。",
@@ -23851,6 +24059,22 @@
    "en": "Mr. Zhang is here.",
    "ko": "장 선생님이 왔어.",
    "blank": "张"
+  }
+ ],
+ "w|弥补": [
+  {
+   "text": "王刚弄坏了一本书，自己花钱买了一本新的来弥补。",
+   "en": "Wang Gang damaged a book and paid for a new one himself to make up for it.",
+   "ko": "왕강은 책 한 권을 망가뜨려서 자기 돈으로 새 책을 사서 메웠어요.",
+   "blank": "弥补",
+   "src": "made"
+  },
+  {
+   "text": "老板少找了钱，又多送了一把葱来弥补。",
+   "en": "The owner gave too little change, so he threw in an extra bunch of scallions to make up for it.",
+   "ko": "주인이 거스름돈을 덜 줘서 파 한 단을 더 얹어 주며 메웠어요.",
+   "blank": "弥补",
+   "src": "made"
   }
  ],
  "w|弱": [
@@ -24553,6 +24777,22 @@
    "en": "I was so angry I cried.",
    "ko": "화가 나서 울었어.",
    "blank": "得"
+  }
+ ],
+ "w|得分": [
+  {
+   "text": "图书馆的知识竞赛上，王刚一个人就得分最多。",
+   "en": "At the library's quiz contest, Wang Gang alone scored the most points.",
+   "ko": "도서관 퀴즈 대회에서 왕강 혼자 가장 많은 점수를 땄어요.",
+   "blank": "得分",
+   "src": "made"
+  },
+  {
+   "text": "李娜的儿子在市场里玩投篮机，这一局得分比谁都高。",
+   "en": "Li Na's son played the basketball arcade game at the market and scored higher than anyone this round.",
+   "ko": "리나의 아들은 시장에서 농구 게임기를 했는데 이번 판에 누구보다 점수를 많이 땄어요.",
+   "blank": "得分",
+   "src": "made"
   }
  ],
  "w|得到": [
@@ -25736,6 +25976,22 @@
    "en": "You need to control your emotions.",
    "ko": "감정을 잘 다스려야 해요.",
    "blank": "情绪",
+   "src": "made"
+  }
+ ],
+ "w|情节": [
+  {
+   "text": "这本小说的情节很复杂，王刚看了两遍才明白。",
+   "en": "The plot of this novel is so complicated that Wang Gang only understood it after reading it twice.",
+   "ko": "이 소설은 줄거리가 복잡해서 왕강은 두 번 읽고서야 이해했어요.",
+   "blank": "情节",
+   "src": "made"
+  },
+  {
+   "text": "李娜跟卖菜的阿姨讲起昨晚电视剧的情节，两个人笑个不停。",
+   "en": "Li Na told the vegetable seller about the plot of last night's TV drama, and the two couldn't stop laughing.",
+   "ko": "리나가 채소 파는 아주머니에게 어젯밤 드라마 줄거리를 얘기하자 둘은 계속 웃었어요.",
+   "blank": "情节",
    "src": "made"
   }
  ],
@@ -28597,6 +28853,22 @@
    "src": "made"
   }
  ],
+ "w|指定": [
+  {
+   "text": "王刚把书放回了管理员指定的书架上。",
+   "en": "Wang Gang put the books back on the shelf the librarian designated.",
+   "ko": "왕강은 책을 사서가 지정한 책꽂이에 다시 꽂았어요.",
+   "blank": "指定",
+   "src": "made"
+  },
+  {
+   "text": "李娜跟老板约好，每天在指定的时间来取菜。",
+   "en": "Li Na arranged with the stall owner to pick up her vegetables at a set time every day.",
+   "ko": "리나는 주인과 매일 정해진 시간에 채소를 가지러 오기로 약속했어요.",
+   "blank": "指定",
+   "src": "made"
+  }
+ ],
  "w|指导": [
   {
    "text": "在老师的指导下，小明的作文进步得很快。",
@@ -29560,6 +29832,22 @@
    "en": "Liu Fang's computer still wouldn't turn on after she plugged it in.",
    "ko": "류팡의 컴퓨터는 전원을 꽂아도 켜지지 않았어요.",
    "blank": "插",
+   "src": "made"
+  }
+ ],
+ "w|握": [
+  {
+   "text": "王刚紧紧握着借书卡，生怕把它弄丢了。",
+   "en": "Wang Gang held his library card tightly, afraid of losing it.",
+   "ko": "왕강은 도서 대출 카드를 꼭 쥐고 잃어버릴까 봐 조마조마했어요.",
+   "blank": "握",
+   "src": "made"
+  },
+  {
+   "text": "李娜一只手握着女儿，一只手提着菜篮子。",
+   "en": "Li Na held her daughter's hand with one hand and carried the vegetable basket with the other.",
+   "ko": "리나는 한 손으로 딸 손을 잡고 다른 손으로 장바구니를 들었어요.",
+   "blank": "握",
    "src": "made"
   }
  ],
@@ -30982,6 +31270,22 @@
    "en": "On court you must be civil: no swearing and no pushing on purpose.",
    "ko": "코트에서는 예의를 지켜야 해요. 욕하면 안 되고 일부러 밀어서도 안 돼요.",
    "blank": "文明",
+   "src": "made"
+  }
+ ],
+ "w|文物": [
+  {
+   "text": "图书馆的特藏室里保存着几件珍贵的文物。",
+   "en": "The library's special collections room holds several precious cultural relics.",
+   "ko": "도서관 특별 소장실에는 귀한 문화재 몇 점이 보관돼 있어요.",
+   "blank": "文物",
+   "src": "made"
+  },
+  {
+   "text": "古玩市场里摆着很多老东西，但真正的文物很少。",
+   "en": "The antiques market is full of old things, but genuine cultural relics are rare.",
+   "ko": "골동품 시장에는 옛 물건이 많지만 진짜 문화재는 드물어요.",
+   "blank": "文物",
    "src": "made"
   }
  ],
@@ -33975,6 +34279,22 @@
    "src": "made"
   }
  ],
+ "w|核武器": [
+  {
+   "text": "王刚借的那本书讨论了核武器对国际关系的影响。",
+   "en": "The book Wang Gang borrowed discusses the impact of nuclear weapons on international relations.",
+   "ko": "왕강이 빌린 책은 핵무기가 국제 관계에 미치는 영향을 다뤄요.",
+   "blank": "核武器",
+   "src": "made"
+  },
+  {
+   "text": "收音机里正在播一条关于核武器谈判的新闻。",
+   "en": "The radio is broadcasting a news item about nuclear weapons talks.",
+   "ko": "라디오에서 핵무기 협상에 관한 뉴스가 나오고 있어요.",
+   "blank": "核武器",
+   "src": "made"
+  }
+ ],
  "w|根据": [
   {
    "text": "根据规定来。",
@@ -34455,6 +34775,22 @@
    "blank": "次"
   }
  ],
+ "w|次数": [
+  {
+   "text": "王刚这个月来图书馆的次数比上个月多了一倍。",
+   "en": "Wang Gang has come to the library twice as often this month as last.",
+   "ko": "왕강이 이번 달 도서관에 온 횟수는 지난달의 두 배예요.",
+   "blank": "次数",
+   "src": "made"
+  },
+  {
+   "text": "李娜每周去市场的次数不少于四回。",
+   "en": "Li Na goes to the market no fewer than four times a week.",
+   "ko": "리나가 시장에 가는 횟수는 일주일에 네 번이 넘어요.",
+   "blank": "次数",
+   "src": "made"
+  }
+ ],
  "w|欢乐": [
   {
    "text": "过年时一家人又围坐在一起，屋子里充满了欢乐的笑声。",
@@ -34872,6 +35208,22 @@
    "en": "Lin Jing wrote, \"When it comes to learning piano, I've finally taken the first step.\"",
    "ko": "린징은 “피아노 배우는 일, 드디어 첫걸음을 뗐어”라고 썼어요.",
    "blank": "步",
+   "src": "made"
+  }
+ ],
+ "w|武力": [
+  {
+   "text": "这本政治学著作认为，用武力解决争端代价太大。",
+   "en": "This political science work argues that settling disputes by force costs too much.",
+   "ko": "이 정치학 책은 무력으로 분쟁을 해결하는 건 대가가 너무 크다고 봐요.",
+   "blank": "武力",
+   "src": "made"
+  },
+  {
+   "text": "李娜看新闻说，邻国边境又发生了武力冲突。",
+   "en": "Li Na saw on the news that there was another armed clash on a neighboring country's border.",
+   "ko": "리나는 뉴스에서 이웃 나라 국경에 또 무력 충돌이 있었다고 봤어요.",
+   "blank": "武力",
    "src": "made"
   }
  ],
@@ -35417,6 +35769,22 @@
    "src": "made"
   }
  ],
+ "w|民间": [
+  {
+   "text": "王刚最近在读一本收集民间故事的书。",
+   "en": "Wang Gang has lately been reading a book collecting folk tales.",
+   "ko": "왕강은 요즘 민간 이야기를 모은 책을 읽고 있어요.",
+   "blank": "民间",
+   "src": "made"
+  },
+  {
+   "text": "这个市场里能买到很多民间手工艺品。",
+   "en": "You can buy lots of folk handicrafts at this market.",
+   "ko": "이 시장에서는 민간 수공예품을 많이 살 수 있어요.",
+   "blank": "民间",
+   "src": "made"
+  }
+ ],
  "w|气": [
   {
    "text": "别生我的气。",
@@ -35826,6 +36194,22 @@
    "en": "Sun Yue never imagined that a child patient she once cared for would become a doctor.",
    "ko": "쑨웨는 예전에 자기가 돌봤던 어린 환자가 지금 의사가 될 줄은 몰랐어요.",
    "blank": "没想到",
+   "src": "made"
+  }
+ ],
+ "w|没收": [
+  {
+   "text": "有个中学生在阅览室里吃泡面，零食被管理员没收了。",
+   "en": "A high school student was eating instant noodles in the reading room, and the librarian confiscated his snacks.",
+   "ko": "한 중학생이 열람실에서 컵라면을 먹다가 사서에게 간식을 압수당했어요.",
+   "blank": "没收",
+   "src": "made"
+  },
+  {
+   "text": "市场管理员没收了一个小贩的假秤。",
+   "en": "The market inspector confiscated a vendor's rigged scale.",
+   "ko": "시장 관리원이 한 노점상의 가짜 저울을 압수했어요.",
+   "blank": "没收",
    "src": "made"
   }
  ],
@@ -37175,6 +37559,22 @@
    "src": "made"
   }
  ],
+ "w|潜力": [
+  {
+   "text": "管理员说，王刚很有写作的潜力，应该多投稿。",
+   "en": "The librarian says Wang Gang has real potential as a writer and should submit more work.",
+   "ko": "사서는 왕강이 글쓰기에 잠재력이 있으니 투고를 더 하라고 했어요.",
+   "blank": "潜力",
+   "src": "made"
+  },
+  {
+   "text": "李娜觉得这个市场很有潜力，打算多开一个摊位。",
+   "en": "Li Na thinks this market has a lot of potential and plans to open another stall.",
+   "ko": "리나는 이 시장이 잠재력이 크다고 보고 가게를 하나 더 열 생각이에요.",
+   "blank": "潜力",
+   "src": "made"
+  }
+ ],
  "w|潜艇": [
   {
    "text": "陈杰在科技节上做了一个会下潜的潜艇模型。",
@@ -38243,6 +38643,22 @@
    "src": "made"
   }
  ],
+ "w|特权": [
+  {
+   "text": "在图书馆里，教授和学生一样排队，没有什么特权。",
+   "en": "In the library, professors line up just like students, with no special privileges.",
+   "ko": "도서관에서는 교수도 학생처럼 줄을 서서 특권이 없어요.",
+   "blank": "特权",
+   "src": "made"
+  },
+  {
+   "text": "李娜说，在市场里谁都得排队，没有人有特权。",
+   "en": "Li Na says everyone has to queue at the market; nobody has special privileges.",
+   "ko": "리나는 시장에서는 누구나 줄을 서야 하고 특권 있는 사람은 없다고 해요.",
+   "blank": "特权",
+   "src": "made"
+  }
+ ],
  "w|特殊": [
   {
    "text": "今天是特殊的日子。",
@@ -38508,6 +38924,22 @@
    "en": "In winter, wolves on the grassland have a hard time finding prey.",
    "ko": "겨울 초원의 늑대는 먹잇감을 찾기 어려워요.",
    "blank": "猎物",
+   "src": "made"
+  }
+ ],
+ "w|猛": [
+  {
+   "text": "王刚看书太投入，一抬头猛地发现天已经黑了。",
+   "en": "Wang Gang was so absorbed in reading that when he looked up he suddenly realized it was dark.",
+   "ko": "왕강은 책에 너무 빠져 있다가 고개를 들고서야 날이 저문 걸 퍼뜩 알았어요.",
+   "blank": "猛",
+   "src": "made"
+  },
+  {
+   "text": "一辆三轮车猛地冲过来，李娜赶紧往旁边躲。",
+   "en": "A tricycle cart came barreling toward her, and Li Na quickly jumped aside.",
+   "ko": "삼륜차 한 대가 확 달려들어서 리나는 얼른 옆으로 비켜섰어요.",
+   "blank": "猛",
    "src": "made"
   }
  ],
@@ -41501,6 +41933,22 @@
    "src": "made"
   }
  ],
+ "w|确切": [
+  {
+   "text": "王刚查了半天，也没找到那本书确切的出版年份。",
+   "en": "Wang Gang searched for ages but couldn't find the exact year the book was published.",
+   "ko": "왕강은 한참 찾아봤지만 그 책의 정확한 출판 연도를 못 찾았어요.",
+   "blank": "确切",
+   "src": "made"
+  },
+  {
+   "text": "李娜问卖鱼的这些鱼确切是什么时候捞的。",
+   "en": "Li Na asked the fishmonger exactly when these fish were caught.",
+   "ko": "리나는 생선 장수에게 이 물고기를 정확히 언제 잡았느냐고 물었어요.",
+   "blank": "确切",
+   "src": "made"
+  }
+ ],
  "w|确定": [
   {
    "text": "你确定吗？",
@@ -41632,6 +42080,22 @@
    "en": "Yang Yang's sister lived abroad for a few years and is still used to stating her weight in pounds.",
    "ko": "양양의 누나는 외국에서 몇 년 살아서 아직도 몸무게를 파운드로 말하는 게 익숙해요.",
    "blank": "磅",
+   "src": "made"
+  }
+ ],
+ "w|示威": [
+  {
+   "text": "王刚在报纸合订本里找到了一张当年工人示威的照片。",
+   "en": "In a bound volume of newspapers, Wang Gang found a photo of workers demonstrating back then.",
+   "ko": "왕강은 신문 합본에서 그 시절 노동자들이 시위하는 사진을 찾았어요.",
+   "blank": "示威",
+   "src": "made"
+  },
+  {
+   "text": "几个商贩在市场门口示威，抗议租金涨得太快。",
+   "en": "Several vendors demonstrated at the market entrance, protesting that rents were rising too fast.",
+   "ko": "상인 몇 명이 시장 입구에서 임대료가 너무 빨리 오른다고 시위했어요.",
+   "blank": "示威",
    "src": "made"
   }
  ],
@@ -42507,6 +42971,22 @@
    "en": "Who is he really?",
    "ko": "그는 도대체 누구야?",
    "blank": "究竟"
+  }
+ ],
+ "w|穷": [
+  {
+   "text": "王刚小时候家里很穷，图书馆是他唯一能免费看书的地方。",
+   "en": "Wang Gang's family was very poor when he was a child, and the library was the only place he could read for free.",
+   "ko": "왕강은 어릴 때 집이 무척 가난해서 도서관이 공짜로 책을 볼 수 있는 유일한 곳이었어요.",
+   "blank": "穷",
+   "src": "made"
+  },
+  {
+   "text": "李娜说，再穷也要让孩子吃上新鲜的水果。",
+   "en": "Li Na says that no matter how poor they are, her child must eat fresh fruit.",
+   "ko": "리나는 아무리 가난해도 아이에게 신선한 과일을 먹여야 한다고 말해요.",
+   "blank": "穷",
+   "src": "made"
   }
  ],
  "w|空": [
@@ -44457,6 +44937,22 @@
    "src": "made"
   }
  ],
+ "w|缘故": [
+  {
+   "text": "由于装修的缘故，图书馆三楼暂时关闭。",
+   "en": "Because of renovations, the library's third floor is temporarily closed.",
+   "ko": "공사 때문에 도서관 삼 층은 잠시 문을 닫았어요.",
+   "blank": "缘故",
+   "src": "made"
+  },
+  {
+   "text": "因为下雨的缘故，今天来买菜的人特别少。",
+   "en": "Because of the rain, very few people came to buy groceries today.",
+   "ko": "비가 와서 오늘은 장 보러 온 사람이 유난히 적어요.",
+   "blank": "缘故",
+   "src": "made"
+  }
+ ],
  "w|缺": [
   {
    "text": "市政府办公室还缺两个会说英语的人。",
@@ -44486,6 +44982,22 @@
    "en": "The manager thinks Li Na lacks hands-on experience but learns quickly.",
    "ko": "매니저는 리나가 실무 경험은 부족하지만 배우는 게 빠르다고 생각해요.",
    "blank": "缺乏",
+   "src": "made"
+  }
+ ],
+ "w|缺少": [
+  {
+   "text": "这个小镇的图书馆缺少新书，大部分都是十几年前的。",
+   "en": "This small town's library lacks new books; most of them are over a decade old.",
+   "ko": "이 작은 마을 도서관은 새 책이 부족해서 대부분 십여 년 전 책이에요.",
+   "blank": "缺少",
+   "src": "made"
+  },
+  {
+   "text": "今天包饺子还缺少一把韭菜，李娜又回市场跑了一趟。",
+   "en": "She was still short a bunch of chives for today's dumplings, so Li Na went back to the market.",
+   "ko": "오늘 만두 빚는 데 부추 한 단이 모자라서 리나는 시장에 한 번 더 다녀왔어요.",
+   "blank": "缺少",
    "src": "made"
   }
  ],
@@ -46025,6 +46537,22 @@
    "src": "made"
   }
  ],
+ "w|腐败": [
+  {
+   "text": "这本历史书讲的是一个腐败的王朝怎样走向灭亡。",
+   "en": "This history book is about how a corrupt dynasty fell.",
+   "ko": "이 역사책은 부패한 왕조가 어떻게 멸망했는지를 다뤄요.",
+   "blank": "腐败",
+   "src": "made"
+  },
+  {
+   "text": "天太热，有些没卖完的水果已经开始腐败了。",
+   "en": "It's so hot that some of the unsold fruit has already started to rot.",
+   "ko": "날이 너무 더워서 안 팔린 과일 몇몇이 벌써 썩기 시작했어요.",
+   "blank": "腐败",
+   "src": "made"
+  }
+ ],
  "w|腔": [
   {
    "text": "黄涛为了演好这个角色，专门学了一口老北京腔。",
@@ -47041,6 +47569,22 @@
    "src": "made"
   }
  ],
+ "w|著作": [
+  {
+   "text": "王刚花了一个月，读完了这位学者的全部著作。",
+   "en": "Wang Gang spent a month reading all of this scholar's works.",
+   "ko": "왕강은 한 달 동안 이 학자의 저서를 다 읽었어요.",
+   "blank": "著作",
+   "src": "made"
+  },
+  {
+   "text": "旧书摊上居然有一本这位作家早期的著作。",
+   "en": "Surprisingly, the used-book stall had one of this author's early works.",
+   "ko": "헌책 노점에 뜻밖에도 이 작가의 초기 저서가 한 권 있었어요.",
+   "blank": "著作",
+   "src": "made"
+  }
+ ],
  "w|著名": [
   {
    "text": "这是一家著名餐厅。",
@@ -47795,6 +48339,22 @@
    "en": "They plan to attack the bank.",
    "ko": "그들은 은행을 습격할 계획이야.",
    "blank": "袭击"
+  }
+ ],
+ "w|裁判": [
+  {
+   "text": "作文比赛由三位老师裁判，王刚得了二等奖。",
+   "en": "The essay contest was judged by three teachers, and Wang Gang won second prize.",
+   "ko": "작문 대회는 선생님 세 분이 심사했고 왕강은 이 등을 받았어요.",
+   "blank": "裁判",
+   "src": "made"
+  },
+  {
+   "text": "两个摊主为了摊位吵起来，最后请市场经理来裁判。",
+   "en": "Two stall owners argued over a spot, and in the end they asked the market manager to judge.",
+   "ko": "두 상인이 자리 때문에 다투다가 결국 시장 관리인에게 판정을 맡겼어요.",
+   "blank": "裁判",
+   "src": "made"
   }
  ],
  "w|装": [
@@ -48964,6 +49524,22 @@
    "en": "When picking up her race bib, the staff asked Lili to show her ID.",
    "ko": "번호표를 받을 때 직원은 리리에게 신분증을 보여 달라고 했어요.",
    "blank": "证件",
+   "src": "made"
+  }
+ ],
+ "w|证券": [
+  {
+   "text": "王刚借了一本讲证券投资的入门书。",
+   "en": "Wang Gang borrowed an introductory book on securities investing.",
+   "ko": "왕강은 증권 투자 입문서를 한 권 빌렸어요.",
+   "blank": "证券",
+   "src": "made"
+  },
+  {
+   "text": "卖水果的大爷退休前在证券公司上过班。",
+   "en": "The old man selling fruit worked at a securities firm before retiring.",
+   "ko": "과일 파는 할아버지는 은퇴 전에 증권 회사에 다녔어요.",
+   "blank": "证券",
    "src": "made"
   }
  ],
@@ -50547,6 +51123,22 @@
    "blank": "走开"
   }
  ],
+ "w|走私": [
+  {
+   "text": "王刚在看一本侦探小说，讲的是警察抓走私犯的故事。",
+   "en": "Wang Gang is reading a detective novel about the police catching smugglers.",
+   "ko": "왕강은 경찰이 밀수범을 잡는 탐정 소설을 읽고 있어요.",
+   "blank": "走私",
+   "src": "made"
+  },
+  {
+   "text": "新闻说，警方查获了一批走私进来的冻肉。",
+   "en": "The news said police seized a batch of smuggled frozen meat.",
+   "ko": "뉴스에서 경찰이 밀수된 냉동육을 적발했다고 했어요.",
+   "blank": "走私",
+   "src": "made"
+  }
+ ],
  "w|走路": [
   {
    "text": "我们走路去公园。",
@@ -50679,6 +51271,22 @@
    "en": "He gets up early.",
    "ko": "그는 일찍 일어나.",
    "blank": "起"
+  }
+ ],
+ "w|起义": [
+  {
+   "text": "王刚在研究明朝末年那次农民起义的经过。",
+   "en": "Wang Gang is researching the course of that peasant uprising at the end of the Ming dynasty.",
+   "ko": "왕강은 명나라 말기 그 농민 봉기의 과정을 연구하고 있어요.",
+   "blank": "起义",
+   "src": "made"
+  },
+  {
+   "text": "李娜的老家有一座纪念农民起义的石碑。",
+   "en": "Li Na's hometown has a stone monument commemorating a peasant uprising.",
+   "ko": "리나의 고향에는 농민 봉기를 기념하는 비석이 있어요.",
+   "blank": "起义",
+   "src": "made"
   }
  ],
  "w|起床": [
@@ -55609,6 +56217,22 @@
    "blank": "集中"
   }
  ],
+ "w|集会": [
+  {
+   "text": "图书馆前的广场上今天有一场小型集会。",
+   "en": "There's a small gathering in the square in front of the library today.",
+   "ko": "도서관 앞 광장에서 오늘 작은 집회가 있어요.",
+   "blank": "集会",
+   "src": "made"
+  },
+  {
+   "text": "市场管理处规定，周日上午不能在门口搞集会。",
+   "en": "The market office rules that no gatherings may be held at the entrance on Sunday mornings.",
+   "ko": "시장 관리소는 일요일 오전엔 입구에서 집회를 못 하게 했어요.",
+   "blank": "集会",
+   "src": "made"
+  }
+ ],
  "w|集合": [
   {
    "text": "旅行团的人都在登机口旁边集合，赵磊也跟了过去。",
@@ -56647,6 +57271,22 @@
    "en": "Bring some food.",
    "ko": "음식 좀 가져와.",
    "blank": "食物"
+  }
+ ],
+ "w|饥饿": [
+  {
+   "text": "王刚读了一本书，讲的是战争年代普通人怎样熬过饥饿。",
+   "en": "Wang Gang read a book about how ordinary people survived hunger in wartime.",
+   "ko": "왕강은 전쟁 시절 평범한 사람들이 굶주림을 어떻게 견뎠는지 다룬 책을 읽었어요.",
+   "blank": "饥饿",
+   "src": "made"
+  },
+  {
+   "text": "李娜的奶奶经历过饥饿的年代，从来不浪费一粒米。",
+   "en": "Li Na's grandmother lived through years of hunger and never wastes a single grain of rice.",
+   "ko": "리나의 할머니는 굶주림의 시절을 겪어서 쌀 한 톨도 버리지 않아요.",
+   "blank": "饥饿",
+   "src": "made"
   }
  ],
  "w|饭": [

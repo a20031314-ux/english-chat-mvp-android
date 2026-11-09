@@ -4027,6 +4027,22 @@
    "src": "made"
   }
  ],
+ "w|bởi vậy": [
+  {
+   "text": "Long đi chợ sớm nên chọn được cá tươi nhất, bởi vậy anh chẳng bao giờ ngủ nướng ngày chủ nhật.",
+   "en": "Long goes to the market early to get the freshest fish, which is why he never sleeps in on Sundays.",
+   "ko": "롱은 일찍 가야 제일 싱싱한 생선을 고를 수 있어서 일요일에도 늦잠을 안 자요.",
+   "blank": "bởi vậy",
+   "src": "made"
+  },
+  {
+   "text": "Linh sắp chuyển nhà, bởi vậy thư sau bạn nhớ gửi về địa chỉ mới.",
+   "en": "Linh is about to move, so her friend should send the next letter to the new address.",
+   "ko": "린은 곧 이사를 해서 다음 편지는 새 주소로 보내 달라고 했어요.",
+   "blank": "bởi vậy",
+   "src": "made"
+  }
+ ],
  "w|bởi vì": [
   {
    "text": "Em nghỉ bởi vì mệt.",
@@ -4589,6 +4605,38 @@
    "src": "made"
   }
  ],
+ "w|bún bò": [
+  {
+   "text": "Sáng nào Long cũng thấy hàng bún bò trong chợ đông kín người.",
+   "en": "Every morning Long sees the beef noodle stall in the market packed with people.",
+   "ko": "롱은 매일 아침 시장 안 분보 가게가 사람들로 꽉 찬 걸 봐요.",
+   "blank": "bún bò",
+   "src": "made"
+  },
+  {
+   "text": "Linh tả quán bún bò gần nhà mới, nước dùng thơm mùi sả.",
+   "en": "Linh described the beef noodle shop near her new home, whose broth smells of lemongrass.",
+   "ko": "린은 새집 근처 분보 가게를 묘사했는데, 국물에서 레몬그라스 향이 난대요.",
+   "blank": "bún bò",
+   "src": "made"
+  }
+ ],
+ "w|bún chả": [
+  {
+   "text": "Trưa nay Long ăn bún chả ở quán quen cuối dãy hàng khô.",
+   "en": "This noon Long had grilled pork with noodles at his usual place at the end of the dry goods row.",
+   "ko": "오늘 점심 롱은 건어물 줄 끝 단골집에서 분짜를 먹었어요.",
+   "blank": "bún chả",
+   "src": "made"
+  },
+  {
+   "text": "Lần tới bạn ra Hà Nội, Linh hứa sẽ dẫn đi ăn bún chả.",
+   "en": "Next time her friend comes to Hanoi, Linh promises to take her for bún chả.",
+   "ko": "린은 친구가 다음에 하노이에 오면 분짜를 먹으러 데려가겠다고 약속했어요.",
+   "blank": "bún chả",
+   "src": "made"
+  }
+ ],
  "w|bụng": [
   {
    "text": "Bụng mình đói quá rồi.",
@@ -5015,6 +5063,22 @@
    "blank": "cả"
   }
  ],
+ "w|cá basa": [
+  {
+   "text": "Long dừng lại ở sạp cá basa vì hôm nay giá rẻ hơn hẳn.",
+   "en": "Long stopped at the basa fish stall because prices were much lower today.",
+   "ko": "롱은 오늘 값이 훨씬 싸서 바사 생선 가게 앞에 멈췄어요.",
+   "blank": "cá basa",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể ở thành phố mình hay mua cá basa vì vừa rẻ vừa ít xương.",
+   "en": "Linh says that in the city she often buys basa fish because it's cheap and has few bones.",
+   "ko": "린은 도시에서는 싸고 가시가 적어서 바사 생선을 자주 산다고 했어요.",
+   "blank": "cá basa",
+   "src": "made"
+  }
+ ],
  "w|cá chép": [
   {
    "text": "Cả lớp của Quang học cách hấp cá chép với hành gừng cho dịp cúng ông Táo.",
@@ -5127,6 +5191,22 @@
    "src": "made"
   }
  ],
+ "w|cá khô": [
+  {
+   "text": "Mẹ dặn Long mua nửa cân cá khô để mang lên thành phố.",
+   "en": "Long's mother told him to buy half a kilo of dried fish to take to the city.",
+   "ko": "엄마는 롱에게 도시에 가져갈 말린 생선 반 킬로를 사 오라고 했어요.",
+   "blank": "cá khô",
+   "src": "made"
+  },
+  {
+   "text": "Linh gửi kèm lá thư một gói cá khô mẹ phơi ngoài sân.",
+   "en": "Along with the letter, Linh sent a pack of dried fish her mother had dried in the yard.",
+   "ko": "린은 편지와 함께 엄마가 마당에서 말린 생선 한 봉지를 보냈어요.",
+   "blank": "cá khô",
+   "src": "made"
+  }
+ ],
  "w|ca làm": [
   {
    "text": "Ca làm của tôi bắt đầu lúc sáu giờ.",
@@ -5203,6 +5283,22 @@
    "en": "This coffee is a bit bitter for me.",
    "ko": "이 커피는 나한테 좀 써.",
    "blank": "Cà phê"
+  }
+ ],
+ "w|cá rô": [
+  {
+   "text": "Bà bán cá bảo Long rằng cá rô đồng kho tộ là ngon nhất.",
+   "en": "The fishmonger told Long that field climbing perch braised in a clay pot is the best.",
+   "ko": "생선 파는 할머니가 롱에게 논 농어는 뚝배기 조림이 제일 맛있다고 했어요.",
+   "blank": "cá rô",
+   "src": "made"
+  },
+  {
+   "text": "Trong thư, Linh nhắc lại những buổi trưa hai đứa đi câu cá rô ngoài ruộng.",
+   "en": "In the letter, Linh recalled the afternoons the two of them spent fishing for perch in the rice fields.",
+   "ko": "편지에서 린은 둘이 논에 나가 농어를 낚던 낮을 떠올렸어요.",
+   "blank": "cá rô",
+   "src": "made"
   }
  ],
  "w|cà rốt": [
@@ -6785,6 +6881,22 @@
    "src": "made"
   }
  ],
+ "w|cay cay": [
+  {
+   "text": "Nước chấm ở quán này cay cay, vậy mà Long vẫn ăn hết cả bát.",
+   "en": "The dipping sauce here is a bit spicy, but Long still finished the whole bowl.",
+   "ko": "이 집 소스는 살짝 매운데도 롱은 한 그릇을 다 먹었어요.",
+   "blank": "cay cay",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhắc món gỏi cay cay hai đứa hay ăn sau giờ tan học.",
+   "en": "Linh mentioned the slightly spicy salad the two of them often ate after school.",
+   "ko": "린은 둘이 방과 후에 자주 먹던 살짝 매운 샐러드를 꺼냈어요.",
+   "blank": "cay cay",
+   "src": "made"
+  }
+ ],
  "w|cây cối": [
   {
    "text": "Mùa xuân cây cối đâm chồi.",
@@ -7899,6 +8011,22 @@
    "en": "I'll wait for you at the gate.",
    "ko": "문 앞에서 기다릴게.",
    "blank": "chị"
+  }
+ ],
+ "w|chỉ có": [
+  {
+   "text": "Long thích sạp của bà Tư, dù chỉ có ba loại rau nhưng loại nào cũng tươi.",
+   "en": "Long likes Mrs. Tư's stall; though it has only three kinds of vegetables, all are fresh.",
+   "ko": "롱은 뜨 할머니 가게를 좋아해요. 채소는 세 가지뿐이지만 다 싱싱해요.",
+   "blank": "chỉ có",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể căn phòng trọ nhỏ xíu, chỉ có một cái giường và một bàn viết.",
+   "en": "Linh says her rented room is tiny, with only a bed and a writing desk.",
+   "ko": "린은 자취방이 아주 작아서 침대 하나와 책상 하나뿐이라고 했어요.",
+   "blank": "chỉ có",
+   "src": "made"
   }
  ],
  "w|chỉ đạo": [
@@ -9527,6 +9655,22 @@
    "blank": "Chữa bệnh"
   }
  ],
+ "w|chua chua": [
+  {
+   "text": "Chị bán dưa muối cho Long nếm thử một miếng chua chua, giòn giòn.",
+   "en": "The pickle seller let Long taste a slightly sour, crunchy piece.",
+   "ko": "절임 파는 아주머니가 롱에게 새콤하고 아삭한 한 조각을 맛보게 했어요.",
+   "blank": "chua chua",
+   "src": "made"
+  },
+  {
+   "text": "Mỗi lần ăn me chua chua, Linh lại nhớ cổng trường cũ.",
+   "en": "Every time she eats slightly sour tamarind, Linh remembers the old school gate.",
+   "ko": "새콤한 타마린드를 먹을 때마다 린은 옛 학교 정문이 생각나요.",
+   "blank": "chua chua",
+   "src": "made"
+  }
+ ],
  "w|chưa hẳn": [
   {
    "text": "Nam bảo cây bưởi ra hoa nhiều chưa hẳn đã sai quả.",
@@ -9540,6 +9684,22 @@
    "en": "Thảo says swimming fast doesn't necessarily mean swimming with the right technique.",
    "ko": "타오는 빨리 헤엄친다고 꼭 기술이 맞는 건 아니라고 해요.",
    "blank": "chưa hẳn",
+   "src": "made"
+  }
+ ],
+ "w|chua ngọt": [
+  {
+   "text": "Long ghé quán cơm trong chợ gọi một đĩa sườn xào chua ngọt.",
+   "en": "Long stopped at a rice stall inside the market and ordered sweet and sour ribs.",
+   "ko": "롱은 시장 안 밥집에 들러 새콤달콤한 갈비 볶음 한 접시를 시켰어요.",
+   "blank": "chua ngọt",
+   "src": "made"
+  },
+  {
+   "text": "Linh viết rằng món cá kho chua ngọt của mẹ bạn là món ngon nhất Linh từng ăn.",
+   "en": "Linh wrote that her friend's mother's sweet and sour braised fish is the best dish she has ever had.",
+   "ko": "린은 친구 어머니의 새콤달콤한 생선 조림이 자기가 먹어 본 것 중 제일 맛있다고 썼어요.",
+   "blank": "chua ngọt",
    "src": "made"
   }
  ],
@@ -11379,6 +11539,22 @@
    "src": "made"
   }
  ],
+ "w|cồng kềnh": [
+  {
+   "text": "Bao gạo cồng kềnh quá nên Long phải mượn xe đẩy của chợ.",
+   "en": "The sack of rice was too bulky, so Long had to borrow a cart from the market.",
+   "ko": "쌀 포대가 너무 커서 롱은 시장 수레를 빌려야 했어요.",
+   "blank": "cồng kềnh",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể chiếc va li cồng kềnh mang lên thành phố năm ấy vẫn nằm dưới gầm giường.",
+   "en": "Linh says the bulky suitcase she brought to the city that year is still under her bed.",
+   "ko": "린은 그해 도시로 가져온 커다란 여행 가방이 아직 침대 밑에 있다고 했어요.",
+   "blank": "cồng kềnh",
+   "src": "made"
+  }
+ ],
  "w|công khai": [
   {
    "text": "Thầy hiệu trưởng công bố công khai kết quả bầu lớp trưởng trước toàn trường, và Minh trúng cử.",
@@ -12917,6 +13093,22 @@
    "blank": "dám"
   }
  ],
+ "w|dẫm": [
+  {
+   "text": "Một con mèo dẫm lên đống rau của bà bán hàng làm Long bật cười.",
+   "en": "A cat stepped on the vendor's pile of vegetables, which made Long burst out laughing.",
+   "ko": "고양이 한 마리가 상인의 채소 더미를 밟아서 롱이 웃음을 터뜨렸어요.",
+   "blank": "dẫm",
+   "src": "made"
+  },
+  {
+   "text": "Linh vẫn nhớ cái lần bạn lỡ dẫm vỡ chiếc kính của thầy giáo.",
+   "en": "Linh still remembers the time her friend accidentally stepped on and broke the teacher's glasses.",
+   "ko": "린은 친구가 실수로 선생님 안경을 밟아 깨뜨린 일을 아직 기억해요.",
+   "blank": "dẫm",
+   "src": "made"
+  }
+ ],
  "w|đâm": [
   {
    "text": "Hãy cẩn thận nếu không anh ta sẽ đâm sau lưng cậu.",
@@ -13858,6 +14050,22 @@
    "en": "I kept asking but he didn't answer.",
    "ko": "계속 물었는데 그는 대답하지 않았어요.",
    "blank": "đáp",
+   "src": "made"
+  }
+ ],
+ "w|đạp": [
+  {
+   "text": "Từ lúc trời còn tối, Long đã đạp xe ra chợ.",
+   "en": "While it was still dark, Long was already cycling to the market.",
+   "ko": "아직 어두울 때 롱은 벌써 자전거를 타고 시장에 갔어요.",
+   "blank": "đạp",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể giờ vẫn đạp xe đi làm mỗi sáng như hồi sinh viên.",
+   "en": "Linh says she still cycles to work every morning, just like in her student days.",
+   "ko": "린은 대학 시절처럼 지금도 매일 아침 자전거로 출근한다고 했어요.",
+   "blank": "đạp",
    "src": "made"
   }
  ],
@@ -19593,6 +19801,22 @@
    "blank": "ghế"
   }
  ],
+ "w|ghẹ": [
+  {
+   "text": "Long hỏi giá mấy con ghẹ còn đang bò trong chậu.",
+   "en": "Long asked the price of the blue crabs still crawling in the basin.",
+   "ko": "롱은 대야 안에서 아직 기어 다니는 꽃게 값을 물었어요.",
+   "blank": "ghẹ",
+   "src": "made"
+  },
+  {
+   "text": "Hai đứa từng luộc ghẹ trên bãi biển, Linh vẫn giữ tấm ảnh hôm ấy.",
+   "en": "The two of them once boiled crabs on the beach, and Linh still keeps the photo from that day.",
+   "ko": "둘은 해변에서 꽃게를 삶은 적이 있는데, 린은 그날 사진을 아직 간직해요.",
+   "blank": "ghẹ",
+   "src": "made"
+  }
+ ],
  "w|ghé qua": [
   {
    "text": "Giám đốc ghé qua bàn của Phong để chào và hỏi han vài câu.",
@@ -20114,6 +20338,22 @@
    "en": "They locked the dog in a cage.",
    "ko": "그들은 개를 우리에 가뒀어요.",
    "blank": "giam",
+   "src": "made"
+  }
+ ],
+ "w|giẫm": [
+  {
+   "text": "Lối đi trong chợ ướt nhẹp, Long suýt giẫm phải vũng nước.",
+   "en": "The market aisle was soaking wet, and Long almost stepped in a puddle.",
+   "ko": "시장 통로가 흠뻑 젖어서 롱은 물웅덩이를 밟을 뻔했어요.",
+   "blank": "giẫm",
+   "src": "made"
+  },
+  {
+   "text": "Hồi bé, Linh từng giẫm phải gai khi chạy chân đất theo bạn ra đồng.",
+   "en": "As a child, Linh once stepped on a thorn running barefoot after her friend to the fields.",
+   "ko": "어릴 때 린은 친구를 따라 맨발로 들판에 뛰어가다 가시를 밟은 적이 있어요.",
+   "blank": "giẫm",
    "src": "made"
   }
  ],
@@ -22207,6 +22447,22 @@
    "en": "These seeds are small but very fragrant when roasted.",
    "ko": "이 씨앗은 작지만 볶으면 아주 고소해.",
    "blank": "Hạt"
+  }
+ ],
+ "w|hàu": [
+  {
+   "text": "Long đứng xem người bán cạy hàu ngay tại sạp.",
+   "en": "Long stood watching the seller shuck oysters right at the stall.",
+   "ko": "롱은 상인이 가게에서 바로 굴을 까는 걸 서서 구경했어요.",
+   "blank": "hàu",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhớ lần cả hai ăn hàu sống rồi đau bụng suốt đêm.",
+   "en": "Linh remembers the time they both ate raw oysters and had stomachaches all night.",
+   "ko": "린은 둘이 생굴을 먹고 밤새 배가 아팠던 때를 기억해요.",
+   "blank": "hàu",
+   "src": "made"
   }
  ],
  "w|hầu hết": [
@@ -28797,6 +29053,22 @@
    "blank": "liên quan"
   }
  ],
+ "w|liệng": [
+  {
+   "text": "Ở chợ cá, Long thấy mấy con chim én liệng thấp trên mái tôn.",
+   "en": "At the fish market, Long saw some swallows gliding low over the tin roof.",
+   "ko": "생선 시장에서 롱은 제비 몇 마리가 양철 지붕 위를 낮게 나는 걸 봤어요.",
+   "blank": "liệng",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhớ những chiều hai đứa ngồi trên đê nhìn cánh diều liệng trên trời.",
+   "en": "Linh remembers afternoons on the dike watching kites soar in the sky.",
+   "ko": "린은 둘이 둑에 앉아 하늘을 나는 연을 바라보던 오후를 기억해요.",
+   "blank": "liệng",
+   "src": "made"
+  }
+ ],
  "w|liệt": [
   {
    "text": "Ông ấy bị liệt hai chân.",
@@ -33135,6 +33407,22 @@
    "src": "made"
   }
  ],
+ "w|mực ống": [
+  {
+   "text": "Người bán hàng chọn cho Long mấy con mực ống còn tươi rói.",
+   "en": "The seller picked out a few very fresh squid for Long.",
+   "ko": "상인이 롱에게 아주 싱싱한 오징어 몇 마리를 골라 줬어요.",
+   "blank": "mực ống",
+   "src": "made"
+  },
+  {
+   "text": "Linh hỏi bạn có còn thích món mực ống nhồi thịt như hồi xưa không.",
+   "en": "Linh asked if her friend still likes squid stuffed with pork like before.",
+   "ko": "린은 친구에게 예전처럼 고기 넣은 오징어순대를 아직 좋아하냐고 물었어요.",
+   "blank": "mực ống",
+   "src": "made"
+  }
+ ],
  "w|mục tiêu": [
   {
    "text": "Mục tiêu năm nay của mình là học thêm một ngôn ngữ.",
@@ -34045,6 +34333,22 @@
    "blank": "Ném"
   }
  ],
+ "w|nêm": [
+  {
+   "text": "Long xem bà chủ quán nêm nồi canh chua bằng chút nước mắm và đường.",
+   "en": "Long watched the stall owner season the sour soup with a little fish sauce and sugar.",
+   "ko": "롱은 식당 주인이 생선 소스와 설탕을 조금 넣어 새콤한 국의 간을 맞추는 걸 봤어요.",
+   "blank": "nêm",
+   "src": "made"
+  },
+  {
+   "text": "Linh thú thật vẫn chưa biết nêm canh cho vừa miệng.",
+   "en": "Linh admits she still doesn't know how to season soup just right.",
+   "ko": "린은 아직도 국 간을 맞출 줄 모른다고 털어놓았어요.",
+   "blank": "nêm",
+   "src": "made"
+  }
+ ],
  "w|nếm": [
   {
    "text": "Nếm thử món này xem đã vừa miệng chưa.",
@@ -34803,6 +35107,22 @@
    "src": "tatoeba:3468107/tucm en:1806185"
   }
  ],
+ "w|nghêu": [
+  {
+   "text": "Bà bán hàng khuyên Long ngâm nghêu với nước muối cho sạch cát.",
+   "en": "The vendor advised Long to soak the clams in salt water to get rid of the sand.",
+   "ko": "상인 할머니는 롱에게 모래가 빠지게 조개를 소금물에 담그라고 했어요.",
+   "blank": "nghêu",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhắc chuyến đi biển năm nào, khi cả nhóm cào nghêu đến tối mịt.",
+   "en": "Linh mentioned that beach trip years ago when the whole group raked for clams until dark.",
+   "ko": "린은 몇 년 전 바다 여행에서 다 같이 깜깜해질 때까지 조개를 캐던 일을 꺼냈어요.",
+   "blank": "nghêu",
+   "src": "made"
+  }
+ ],
  "w|nghĩ": [
   {
    "text": "Tớ nghĩ vậy là ổn.",
@@ -35519,6 +35839,22 @@
    "en": "The mangoes are really sweet this year.",
    "ko": "올해 망고가 아주 달아.",
    "blank": "ngọt"
+  }
+ ],
+ "w|ngọt lịm": [
+  {
+   "text": "Ở chợ sáng nay, Long mua được một quả xoài ngọt lịm với giá rất rẻ.",
+   "en": "At the market this morning, Long bought a very sweet mango for a cheap price.",
+   "ko": "오늘 아침 시장에서 롱은 아주 달콤한 망고를 싼값에 샀어요.",
+   "blank": "ngọt lịm",
+   "src": "made"
+  },
+  {
+   "text": "Linh viết cho bạn cũ rằng mùa này xoài quê ngọt lịm, ăn là nhớ nhau.",
+   "en": "Linh wrote to her old friend that mangoes back home are very sweet this season and make her miss her.",
+   "ko": "린은 옛 친구에게 요즘 고향 망고가 정말 달아서 먹을 때마다 친구가 생각난다고 썼어요.",
+   "blank": "ngọt lịm",
+   "src": "made"
   }
  ],
  "w|ngọt ngào": [
@@ -37157,6 +37493,38 @@
    "en": "They handled this matter quickly.",
    "ko": "그들은 이 일을 신속히 처리했어.",
    "blank": "nhanh chóng"
+  }
+ ],
+ "w|nhanh gọn": [
+  {
+   "text": "Cô bán gà làm thịt rất nhanh gọn, Long chỉ phải đợi vài phút.",
+   "en": "The chicken seller prepared the bird quickly and neatly, so Long only had to wait a few minutes.",
+   "ko": "닭 파는 아주머니가 손질을 빠르고 깔끔하게 해서 롱은 몇 분만 기다렸어요.",
+   "blank": "nhanh gọn",
+   "src": "made"
+  },
+  {
+   "text": "Linh dặn bạn trả lời nhanh gọn cũng được, miễn là có tin.",
+   "en": "Linh told her friend that a short, quick reply is fine as long as she hears from her.",
+   "ko": "린은 소식만 있으면 짧고 간단한 답장도 괜찮다고 했어요.",
+   "blank": "nhanh gọn",
+   "src": "made"
+  }
+ ],
+ "w|nhanh nhạy": [
+  {
+   "text": "Cô bán rau rất nhanh nhạy, Long vừa hỏi giá đã có ngay túi rau buộc sẵn.",
+   "en": "The vegetable seller is very quick; as soon as Long asked the price, a tied bag of greens was ready.",
+   "ko": "채소 파는 아주머니는 아주 눈치가 빨라서 롱이 값을 묻자마자 묶어 둔 채소 봉지가 나왔어요.",
+   "blank": "nhanh nhạy",
+   "src": "made"
+  },
+  {
+   "text": "Linh khen bạn từ nhỏ đã nhanh nhạy, chắc giờ làm gì cũng giỏi.",
+   "en": "Linh praised her friend for being quick-witted since childhood and surely good at everything now.",
+   "ko": "린은 친구가 어릴 때부터 눈치가 빨랐으니 지금은 뭘 해도 잘할 거라고 칭찬했어요.",
+   "blank": "nhanh nhạy",
+   "src": "made"
   }
  ],
  "w|nhập viện": [
@@ -40443,6 +40811,22 @@
    "blank": "Phép thuật"
   }
  ],
+ "w|phết": [
+  {
+   "text": "Ở hàng bánh mì đầu chợ, Long nhìn cô chủ phết pa tê lên ổ bánh thật đều tay.",
+   "en": "At the bread stall by the market entrance, Long watched the owner spread pâté evenly on the loaf.",
+   "ko": "시장 입구 반미 가게에서 롱은 주인이 빵에 파테를 고르게 바르는 걸 봤어요.",
+   "blank": "phết",
+   "src": "made"
+  },
+  {
+   "text": "Sáng nào Linh cũng phết bơ lên bánh mì, đúng thói quen hồi ở ký túc xá.",
+   "en": "Every morning Linh spreads butter on her bread, just like her habit from the dorm days.",
+   "ko": "린은 기숙사 시절 습관 그대로 매일 아침 빵에 버터를 발라요.",
+   "blank": "phết",
+   "src": "made"
+  }
+ ],
  "w|phi chính thức": [
   {
    "text": "Kết quả Minh nghe được từ bạn chỉ là tin phi chính thức, phải chờ trường công bố.",
@@ -42123,6 +42507,22 @@
    "blank": "Quét"
   }
  ],
+ "w|quết": [
+  {
+   "text": "Ở góc chợ, Long thấy một cô bán hàng đang quết chả cá bằng chày gỗ.",
+   "en": "In a corner of the market, Long saw a vendor pounding fish paste with a wooden pestle.",
+   "ko": "시장 구석에서 롱은 한 상인이 나무 공이로 어묵 반죽을 찧는 걸 봤어요.",
+   "blank": "quết",
+   "src": "made"
+  },
+  {
+   "text": "Linh còn nhớ bà ngoại của bạn ngồi quết chả cá trước hiên mỗi dịp Tết.",
+   "en": "Linh still remembers her friend's grandmother pounding fish paste on the porch every Tết.",
+   "ko": "린은 친구 외할머니가 설마다 처마 밑에서 어묵 반죽을 찧던 걸 아직 기억해요.",
+   "blank": "quết",
+   "src": "made"
+  }
+ ],
  "w|quốc gia": [
   {
    "text": "Mỗi quốc gia có văn hóa riêng.",
@@ -42441,6 +42841,22 @@
    "en": "The boss's decision surprised the whole team.",
    "ko": "상사 결정에 팀 전체가 놀랐어.",
    "blank": "Quyết định"
+  }
+ ],
+ "w|quyết tâm": [
+  {
+   "text": "Với quyết tâm học nấu ăn, tuần nào Long cũng tự đi chợ.",
+   "en": "Determined to learn to cook, Long goes to the market himself every week.",
+   "ko": "요리를 배우겠다는 결심으로 롱은 매주 직접 장을 봐요.",
+   "blank": "quyết tâm",
+   "src": "made"
+  },
+  {
+   "text": "Nhờ có quyết tâm, cuối cùng Linh cũng thi đỗ bằng lái xe.",
+   "en": "Thanks to her determination, Linh finally passed her driving test.",
+   "ko": "결심한 덕분에 린은 마침내 운전면허 시험에 붙었어요.",
+   "blank": "quyết tâm",
+   "src": "made"
   }
  ],
  "w|ra": [
@@ -44811,6 +45227,22 @@
    "src": "tatoeba:8998847/dotheduyet1999 en:3232346/_undertoad"
   }
  ],
+ "w|sò điệp": [
+  {
+   "text": "Hôm nay Long mua được ít sò điệp tươi để nấu cháo cho mẹ.",
+   "en": "Today Long got some fresh scallops to make rice porridge for his mother.",
+   "ko": "오늘 롱은 엄마께 죽을 끓여 드리려고 싱싱한 가리비를 조금 샀어요.",
+   "blank": "sò điệp",
+   "src": "made"
+  },
+  {
+   "text": "Trong thư, Linh khoe đã tập làm món sò điệp nướng mỡ hành.",
+   "en": "In the letter, Linh boasted that she'd learned to make scallops grilled with scallion oil.",
+   "ko": "편지에서 린은 파기름 가리비 구이를 만들 줄 알게 됐다고 자랑했어요.",
+   "blank": "sò điệp",
+   "src": "made"
+  }
+ ],
  "w|sợ hãi": [
   {
    "text": "Đừng sợ hãi, mình ở cạnh cậu.",
@@ -46327,6 +46759,22 @@
    "blank": "Tầm"
   }
  ],
+ "w|tẩm": [
+  {
+   "text": "Cô bán tôm chỉ cho Long cách tẩm bột rồi chiên cho giòn.",
+   "en": "The shrimp seller showed Long how to coat them in batter and fry them crispy.",
+   "ko": "새우 파는 아주머니가 롱에게 튀김옷을 입혀 바삭하게 튀기는 법을 알려 줬어요.",
+   "blank": "tẩm",
+   "src": "made"
+  },
+  {
+   "text": "Linh hỏi bạn còn nhớ cách tẩm bột chiên tôm mà cô giáo dạy không.",
+   "en": "Linh asked if her friend remembers how to batter and fry shrimp the way their teacher taught.",
+   "ko": "린은 친구에게 선생님이 가르쳐 준 새우 튀김옷 입히는 법을 기억하냐고 물었어요.",
+   "blank": "tẩm",
+   "src": "made"
+  }
+ ],
  "w|tạm biệt": [
   {
    "text": "Tạm biệt, mai gặp lại nhé.",
@@ -46428,6 +46876,22 @@
    "en": "I'm in a very good mood today.",
    "ko": "오늘 기분이 아주 좋아요.",
    "blank": "tâm trạng",
+   "src": "made"
+  }
+ ],
+ "w|tẩm ướp": [
+  {
+   "text": "Long thấy cô bán thịt đã tẩm ướp sườn từ sáng sớm để trưa nướng.",
+   "en": "Long saw that the butcher had marinated the ribs early in the morning to grill at noon.",
+   "ko": "롱은 정육점 아주머니가 점심에 구우려고 새벽부터 갈비를 양념해 둔 걸 봤어요.",
+   "blank": "tẩm ướp",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể đã học được cách tẩm ướp thịt nướng từ một chị hàng xóm.",
+   "en": "Linh says she learned how to marinate grilled meat from a neighbor.",
+   "ko": "린은 이웃 언니에게 구이용 고기 양념하는 법을 배웠다고 했어요.",
+   "blank": "tẩm ướp",
    "src": "made"
   }
  ],
@@ -47135,6 +47599,22 @@
    "en": "Don't let go right now.",
    "ko": "지금은 손 놓지 마.",
    "blank": "thả"
+  }
+ ],
+ "w|thả ra": [
+  {
+   "text": "Ông bán cua mở nắp giỏ, thả ra mấy con cua cho Long tự chọn.",
+   "en": "The crab seller opened the basket lid and let out a few crabs for Long to choose from.",
+   "ko": "게 파는 할아버지가 바구니 뚜껑을 열고 게 몇 마리를 꺼내 놓아 롱이 고르게 했어요.",
+   "blank": "thả ra",
+   "src": "made"
+  },
+  {
+   "text": "Con chim sẻ bị thương hôm trước đã khỏe, sáng nay Linh mở lồng thả ra.",
+   "en": "The injured sparrow from the other day has recovered, and this morning Linh opened the cage and let it go.",
+   "ko": "며칠 전 다친 참새가 나아서 오늘 아침 린이 새장을 열어 놓아줬어요.",
+   "blank": "thả ra",
+   "src": "made"
   }
  ],
  "w|tha thứ": [
@@ -49517,6 +49997,22 @@
    "blank": "Thông báo"
   }
  ],
+ "w|thong dong": [
+  {
+   "text": "Sáng chủ nhật, Long thong dong đi dạo giữa các sạp hoa.",
+   "en": "On Sunday morning, Long strolled leisurely among the flower stalls.",
+   "ko": "일요일 아침 롱은 꽃 가게 사이를 느긋하게 거닐었어요.",
+   "blank": "thong dong",
+   "src": "made"
+  },
+  {
+   "text": "Linh tả những chiều thong dong dạo bộ dọc bờ sông.",
+   "en": "Linh described the afternoons strolling leisurely along the riverbank.",
+   "ko": "린은 강가를 느긋하게 산책하는 오후를 그려 냈어요.",
+   "blank": "thong dong",
+   "src": "made"
+  }
+ ],
  "w|thông minh": [
   {
    "text": "Cậu bé này học rất thông minh.",
@@ -50961,6 +51457,22 @@
    "src": "made"
   }
  ],
+ "w|tiện dụng": [
+  {
+   "text": "Long mua một chiếc giỏ mây tiện dụng để lần sau đi chợ.",
+   "en": "Long bought a handy rattan basket for his next trip to the market.",
+   "ko": "롱은 다음에 장 볼 때 쓰려고 편리한 등나무 바구니를 샀어요.",
+   "blank": "tiện dụng",
+   "src": "made"
+  },
+  {
+   "text": "Linh gửi tặng bạn một cuốn sổ nhỏ tiện dụng để ghi chép.",
+   "en": "Linh sent her friend a handy little notebook for jotting things down.",
+   "ko": "린은 친구에게 메모하기 좋은 작고 편리한 수첩을 선물로 보냈어요.",
+   "blank": "tiện dụng",
+   "src": "made"
+  }
+ ],
  "w|tiến hành": [
   {
    "text": "Tiến hành cuộc họp đúng giờ giúp tiết kiệm thời gian.",
@@ -52219,6 +52731,22 @@
    "en": "Even when things are that bad, you still smile.",
    "ko": "그렇게 최악인데도 너는 웃네.",
    "blank": "Tồi tệ"
+  }
+ ],
+ "w|tối thiểu": [
+  {
+   "text": "Long cần mua tối thiểu năm cân gạo cho cả tháng.",
+   "en": "Long needs to buy at least five kilos of rice for the whole month.",
+   "ko": "롱은 한 달 동안 먹을 쌀을 최소 오 킬로는 사야 해요.",
+   "blank": "tối thiểu",
+   "src": "made"
+  },
+  {
+   "text": "Linh hứa mỗi tháng sẽ viết tối thiểu một lá thư cho bạn.",
+   "en": "Linh promised to write her friend at least one letter a month.",
+   "ko": "린은 친구에게 한 달에 최소 한 통은 편지를 쓰겠다고 약속했어요.",
+   "blank": "tối thiểu",
+   "src": "made"
   }
  ],
  "w|tóm": [
@@ -53955,6 +54483,38 @@
    "src": "made"
   }
  ],
+ "w|trứng chiên": [
+  {
+   "text": "Bà cụ bán xôi đầu chợ hay kẹp thêm trứng chiên cho Long.",
+   "en": "The old woman selling sticky rice at the market entrance often adds a fried egg for Long.",
+   "ko": "시장 입구에서 찹쌀밥 파는 할머니는 롱에게 자주 달걀부침을 얹어 줘요.",
+   "blank": "trứng chiên",
+   "src": "made"
+  },
+  {
+   "text": "Món đầu tiên Linh tự nấu khi ở trọ là trứng chiên cháy đen.",
+   "en": "The first dish Linh cooked herself in her rented room was a burnt fried egg.",
+   "ko": "린이 자취하며 처음 만든 요리는 새까맣게 탄 달걀부침이었어요.",
+   "blank": "trứng chiên",
+   "src": "made"
+  }
+ ],
+ "w|trứng gà": [
+  {
+   "text": "Long mua một chục trứng gà ta cho bữa sáng cả tuần.",
+   "en": "Long bought ten free-range chicken eggs for the whole week's breakfasts.",
+   "ko": "롱은 일주일 아침으로 토종 달걀 열 개를 샀어요.",
+   "blank": "trứng gà",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể mẹ vẫn nuôi gà sau nhà, sáng nào cũng nhặt được trứng gà.",
+   "en": "Linh says her mother still keeps chickens behind the house and collects eggs every morning.",
+   "ko": "린은 엄마가 아직 집 뒤에서 닭을 키워 매일 아침 달걀을 줍는다고 했어요.",
+   "blank": "trứng gà",
+   "src": "made"
+  }
+ ],
  "w|trung học": [
   {
    "text": "Trung học của mình cách nhà không xa.",
@@ -53967,6 +54527,38 @@
    "en": "She just graduated from secondary school this year.",
    "ko": "그녀는 올해 중등학교를 막 졸업했어.",
    "blank": "trung học"
+  }
+ ],
+ "w|trứng luộc": [
+  {
+   "text": "Bữa trưa vội của Long ở chợ là ổ bánh mì và một quả trứng luộc.",
+   "en": "Long's quick lunch at the market was a baguette and a boiled egg.",
+   "ko": "롱의 시장 점심은 바게트 하나와 삶은 달걀 하나로 간단했어요.",
+   "blank": "trứng luộc",
+   "src": "made"
+  },
+  {
+   "text": "Dạo này ăn kiêng, bữa tối Linh chỉ dám ăn một quả trứng luộc với rau.",
+   "en": "On a diet lately, Linh only dares to eat a boiled egg with vegetables for dinner.",
+   "ko": "요즘 다이어트 중이라 린은 저녁에 삶은 달걀 하나와 채소만 먹어요.",
+   "blank": "trứng luộc",
+   "src": "made"
+  }
+ ],
+ "w|trứng ốp la": [
+  {
+   "text": "Quán ăn sáng trong chợ có món bánh mì trứng ốp la mà Long rất thích.",
+   "en": "The breakfast stall in the market has a sunny-side-up egg baguette that Long loves.",
+   "ko": "시장 안 아침 가게에는 롱이 아주 좋아하는 반숙 달걀프라이 반미가 있어요.",
+   "blank": "trứng ốp la",
+   "src": "made"
+  },
+  {
+   "text": "Sáng nay Linh đi làm muộn vì mải làm trứng ốp la cho em trai.",
+   "en": "This morning Linh was late for work because she was busy making sunny-side-up eggs for her brother.",
+   "ko": "오늘 아침 린은 남동생에게 달걀프라이를 해 주느라 회사에 늦었어요.",
+   "blank": "trứng ốp la",
+   "src": "made"
   }
  ],
  "w|trung sĩ": [
@@ -54040,6 +54632,22 @@
    "en": "He used to be a lieutenant in the army.",
    "ko": "그는 군대에서 중위였어요.",
    "blank": "trung úy",
+   "src": "made"
+  }
+ ],
+ "w|trứng vịt": [
+  {
+   "text": "Ở hàng trứng, Long chọn mấy quả trứng vịt thật to để làm bánh.",
+   "en": "At the egg stall, Long chose a few big duck eggs for baking.",
+   "ko": "달걀 가게에서 롱은 빵을 만들려고 큰 오리알 몇 개를 골랐어요.",
+   "blank": "trứng vịt",
+   "src": "made"
+  },
+  {
+   "text": "Hồi nhỏ, Linh và bạn hay giành nhau quả trứng vịt lộn ở quán đầu ngõ.",
+   "en": "As kids, Linh and her friend used to fight over balut at the shop at the end of the alley.",
+   "ko": "어릴 때 린과 친구는 골목 어귀 가게에서 곤계란을 두고 자주 다퉜어요.",
+   "blank": "trứng vịt",
    "src": "made"
   }
  ],
@@ -56911,6 +57519,22 @@
    "blank": "vì sao"
   }
  ],
+ "w|vì thế": [
+  {
+   "text": "Hôm nay mưa to, chợ vắng khách, vì thế Long được mua rẻ hơn.",
+   "en": "It rained heavily today and the market was empty, so Long got cheaper prices.",
+   "ko": "오늘은 비가 많이 와서 시장에 손님이 없었고, 그래서 롱은 더 싸게 샀어요.",
+   "blank": "vì thế",
+   "src": "made"
+  },
+  {
+   "text": "Công việc mới bận rộn, vì thế Linh ít viết thư hơn trước.",
+   "en": "The new job is busy, so Linh writes fewer letters than before.",
+   "ko": "새 일이 바빠서 린은 예전보다 편지를 덜 써요.",
+   "blank": "vì thế",
+   "src": "made"
+  }
+ ],
  "w|vị trí": [
   {
    "text": "Vị trí này nhìn ra biển rất đẹp.",
@@ -57785,6 +58409,22 @@
    "en": "I already threw away the old box.",
    "ko": "낡은 상자는 이미 버렸어.",
    "blank": "vứt"
+  }
+ ],
+ "w|vứt bỏ": [
+  {
+   "text": "Long xin lại mấy lá cải còn tốt mà người bán định vứt bỏ.",
+   "en": "Long asked for a few still-good cabbage leaves that the seller was about to throw away.",
+   "ko": "롱은 상인이 버리려던 아직 멀쩡한 배춧잎 몇 장을 얻었어요.",
+   "blank": "vứt bỏ",
+   "src": "made"
+  },
+  {
+   "text": "Lúc dọn nhà, Linh không nỡ vứt bỏ xấp thư cũ của bạn.",
+   "en": "While packing to move, Linh couldn't bring herself to throw away her friend's old letters.",
+   "ko": "이삿짐을 싸면서 린은 친구의 옛 편지 묶음을 차마 버리지 못했어요.",
+   "blank": "vứt bỏ",
+   "src": "made"
   }
  ],
  "w|xa": [

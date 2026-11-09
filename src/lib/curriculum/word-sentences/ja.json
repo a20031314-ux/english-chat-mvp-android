@@ -291,6 +291,22 @@
    "blank": "あっ"
   }
  ],
+ "w|あっさり": [
+  {
+   "text": "悠斗の作るスープは、あっさりしていて食べやすい。",
+   "en": "The soup Yuto makes is light and easy to eat.",
+   "ko": "유토가 만드는 수프는 담백해서 먹기 편해요.",
+   "blank": "あっさり",
+   "src": "made"
+  },
+  {
+   "text": "ドレス選びに迷っていた千尋だが、最後はあっさり決めた。",
+   "en": "Chihiro had been torn about choosing a dress, but in the end she decided easily.",
+   "ko": "드레스 고르기로 고민하던 지히로였지만 마지막엔 쉽게 정했어요.",
+   "blank": "あっさり",
+   "src": "made"
+  }
+ ],
  "w|あっち": [
   {
    "text": "「楽屋はあっちだよ」と先輩が新人に廊下の奥を指さした。",
@@ -471,6 +487,22 @@
    "en": "This app is handy.",
    "ko": "이 앱 편하네.",
    "blank": "アプリ"
+  }
+ ],
+ "w|アプリケーション": [
+  {
+   "text": "店では、注文をタブレットのアプリケーションで管理している。",
+   "en": "The restaurant manages orders with a tablet application.",
+   "ko": "가게에서는 주문을 태블릿 애플리케이션으로 관리해요.",
+   "blank": "アプリケーション",
+   "src": "made"
+  },
+  {
+   "text": "ゲストの出欠は、スマホのアプリケーションで確認した。",
+   "en": "Chihiro checked guest attendance with a smartphone application.",
+   "ko": "지히로는 하객 참석 여부를 스마트폰 애플리케이션으로 확인했어요.",
+   "blank": "アプリケーション",
+   "src": "made"
   }
  ],
  "w|あまり": [
@@ -2575,6 +2607,22 @@
    "en": "This camera's nice.",
    "ko": "이 카메라 좋다.",
    "blank": "カメラ"
+  }
+ ],
+ "w|カメラマン": [
+  {
+   "text": "雑誌のカメラマンが、悠斗の作った料理を何枚も撮った。",
+   "en": "The magazine's photographer took many pictures of the dish Yuto made.",
+   "ko": "잡지 사진작가가 유토가 만든 요리를 여러 장 찍었어요.",
+   "blank": "カメラマン",
+   "src": "made"
+  },
+  {
+   "text": "カメラマンの指示で、千尋は新郎と並んで笑った。",
+   "en": "Following the photographer's directions, Chihiro smiled side by side with the groom.",
+   "ko": "사진작가의 지시에 따라 지히로는 신랑과 나란히 웃었어요.",
+   "blank": "カメラマン",
+   "src": "made"
   }
  ],
  "w|から": [
@@ -5689,6 +5737,22 @@
    "blank": "ぜひ"
   }
  ],
+ "w|セミナー": [
+  {
+   "text": "悠斗は、食品の安全についてのセミナーに参加した。",
+   "en": "Yuto attended a seminar on food safety.",
+   "ko": "유토는 식품 안전에 관한 세미나에 참가했어요.",
+   "blank": "セミナー",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、結婚式場のセミナーで準備の流れを学んだ。",
+   "en": "Chihiro learned the flow of preparations at a wedding venue seminar.",
+   "ko": "지히로는 결혼식장 세미나에서 준비 흐름을 배웠어요.",
+   "blank": "セミナー",
+   "src": "made"
+  }
+ ],
  "w|せめて": [
   {
    "text": "締め切りまでに、せめて見出しだけでも決めておきたい。",
@@ -7393,6 +7457,22 @@
    "en": "Let's watch TV.",
    "ko": "텔레비전 보자.",
    "blank": "テレビ"
+  }
+ ],
+ "w|テレビ局": [
+  {
+   "text": "テレビ局の取材が入ると聞いて、厨房は朝から緊張していた。",
+   "en": "Hearing that a TV station was coming to film, the kitchen was tense from morning.",
+   "ko": "방송국 취재가 온다는 말을 듣고 주방은 아침부터 긴장했어요.",
+   "blank": "テレビ局",
+   "src": "made"
+  },
+  {
+   "text": "千尋の新郎は、地方のテレビ局でディレクターをしている。",
+   "en": "Chihiro's groom works as a director at a regional TV station.",
+   "ko": "지히로의 신랑은 지방 방송국에서 감독으로 일해요.",
+   "blank": "テレビ局",
+   "src": "made"
   }
  ],
  "w|テロ": [
@@ -9476,6 +9556,22 @@
    "en": "Misaki's little brother was messing around on the pile of boxes, so she told him off.",
    "ko": "남동생이 상자 더미에서 장난치며 놀고 있어서 미사키가 주의를 줬어요.",
    "blank": "ふざけ",
+   "src": "made"
+  }
+ ],
+ "w|ふさわしい": [
+  {
+   "text": "季節にふさわしい器を選ぶのも、料理人の仕事だ。",
+   "en": "Choosing tableware suited to the season is also part of a cook's job.",
+   "ko": "계절에 어울리는 그릇을 고르는 것도 요리사의 일이에요.",
+   "blank": "ふさわしい",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、式にふさわしい靴を探して何軒も店を回った。",
+   "en": "Chihiro went to many shops looking for shoes suited to the ceremony.",
+   "ko": "지히로는 식에 어울리는 구두를 찾아 여러 가게를 돌았어요.",
+   "blank": "ふさわしい",
    "src": "made"
   }
  ],
@@ -16971,6 +17067,22 @@
    "src": "made"
   }
  ],
+ "w|作動": [
+  {
+   "text": "火災報知器が正しく作動するか、悠斗は月に一度確かめている。",
+   "en": "Yuto checks once a month that the fire alarm works properly.",
+   "ko": "유토는 화재경보기가 제대로 작동하는지 한 달에 한 번 확인해요.",
+   "blank": "作動",
+   "src": "made"
+  },
+  {
+   "text": "入場の瞬間、天井の照明が音楽に合わせて作動した。",
+   "en": "At the moment of the entrance, the ceiling lights went on in time with the music.",
+   "ko": "입장하는 순간 천장 조명이 음악에 맞춰 작동했어요.",
+   "blank": "作動",
+   "src": "made"
+  }
+ ],
  "w|作品": [
   {
    "text": "この作品、好きだよ。",
@@ -18601,6 +18713,22 @@
    "en": "The teacher's calling.",
    "ko": "선생님이 부르셔.",
    "blank": "先生"
+  }
+ ],
+ "w|先発": [
+  {
+   "text": "宴会の日は、先発の料理人が昼から仕込みを始める。",
+   "en": "On banquet days, the cooks on the first shift start prep at noon.",
+   "ko": "연회가 있는 날은 먼저 나온 요리사가 낮부터 밑 준비를 시작해요.",
+   "blank": "先発",
+   "src": "made"
+  },
+  {
+   "text": "遠くから来る親戚は、先発の車で式場に向かった。",
+   "en": "The relatives coming from far away headed to the venue in the first car.",
+   "ko": "멀리서 오는 친척들은 먼저 출발한 차로 식장에 갔어요.",
+   "blank": "先発",
+   "src": "made"
   }
  ],
  "w|先端": [
@@ -20985,6 +21113,22 @@
    "blank": "別れる"
   }
  ],
+ "w|利点": [
+  {
+   "text": "小さな厨房の利点は、みんなの動きがよく見えることだ。",
+   "en": "The advantage of a small kitchen is that you can see what everyone is doing.",
+   "ko": "작은 주방의 장점은 모두의 움직임이 잘 보인다는 거예요.",
+   "blank": "利点",
+   "src": "made"
+  },
+  {
+   "text": "少人数の式の利点は、ゲスト一人一人と話せることだ。",
+   "en": "The advantage of a small wedding is being able to talk with each guest.",
+   "ko": "소규모 결혼식의 장점은 하객 한 사람 한 사람과 이야기할 수 있다는 거예요.",
+   "blank": "利点",
+   "src": "made"
+  }
+ ],
  "w|利用": [
   {
    "text": "図書館をよく利用するよ。",
@@ -22219,6 +22363,22 @@
    "src": "made"
   }
  ],
+ "w|化する": [
+  {
+   "text": "昼のピークの間、厨房はまさに戦場と化した。",
+   "en": "During the lunch rush, the kitchen turned into a real battlefield.",
+   "ko": "점심 피크 동안 주방은 그야말로 전쟁터로 변했어요.",
+   "blank": "化し",
+   "src": "made"
+  },
+  {
+   "text": "式が終わると、会場は花びらの海と化していた。",
+   "en": "When the ceremony ended, the hall had turned into a sea of petals.",
+   "ko": "식이 끝나자 식장은 꽃잎의 바다로 변해 있었어요.",
+   "blank": "化し",
+   "src": "made"
+  }
+ ],
  "w|化学": [
   {
    "text": "化学の授業が好き。",
@@ -22636,6 +22796,22 @@
    "en": "Partway through, Mayu chased the leading group on her own.",
    "ko": "도중부터 마유는 혼자서 선두 그룹을 쫓았어요.",
    "blank": "単独",
+   "src": "made"
+  }
+ ],
+ "w|単発": [
+  {
+   "text": "悠斗は、週末だけの単発のアルバイトを雇った。",
+   "en": "Yuto hired a one-off part-timer just for the weekend.",
+   "ko": "유토는 주말에만 일하는 단기 아르바이트를 고용했어요.",
+   "blank": "単発",
+   "src": "made"
+  },
+  {
+   "text": "新郎の友人が、単発の余興として手品を見せた。",
+   "en": "A friend of the groom performed a magic trick as a one-time entertainment.",
+   "ko": "신랑 친구가 한 번뿐인 여흥으로 마술을 보여 줬어요.",
+   "blank": "単発",
    "src": "made"
   }
  ],
@@ -24015,6 +24191,22 @@
    "src": "made"
   }
  ],
+ "w|各社": [
+  {
+   "text": "悠斗は、業者各社の見積もりを比べて新しいオーブンを選んだ。",
+   "en": "Yuto compared quotes from various suppliers and chose a new oven.",
+   "ko": "유토는 업체 각 사의 견적을 비교해서 새 오븐을 골랐어요.",
+   "blank": "各社",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、結婚式場各社のパンフレットを集めて比べた。",
+   "en": "Chihiro gathered brochures from various wedding venues and compared them.",
+   "ko": "지히로는 결혼식장 각 사의 팸플릿을 모아서 비교했어요.",
+   "blank": "各社",
+   "src": "made"
+  }
+ ],
  "w|各種": [
   {
    "text": "新聞社には、各種の資料がそろった資料室がある。",
@@ -24438,6 +24630,22 @@
    "en": "An agent from the real estate office came along for the apartment viewing.",
    "ko": "집 보러 갈 때 부동산 담당자가 동행해 줬어요.",
    "blank": "同行",
+   "src": "made"
+  }
+ ],
+ "w|名刺": [
+  {
+   "text": "取引先の人に、悠斗は新しい名刺を渡した。",
+   "en": "Yuto handed his new business card to someone from a supplier.",
+   "ko": "유토는 거래처 사람에게 새 명함을 건넸어요.",
+   "blank": "名刺",
+   "src": "made"
+  },
+  {
+   "text": "受付で、新郎の上司は千尋の両親に名刺を渡した。",
+   "en": "At the reception desk, the groom's boss gave his business card to Chihiro's parents.",
+   "ko": "접수처에서 신랑의 상사는 지히로의 부모님께 명함을 드렸어요.",
+   "blank": "名刺",
    "src": "made"
   }
  ],
@@ -24886,6 +25094,22 @@
    "en": "Aoi wrote in her letter that she had joined a river cleanup at the neighborhood association's call.",
    "ko": "아오이는 동네 모임의 호소로 강 청소에 참가한 일을 편지에 썼어요.",
    "blank": "呼びかけ",
+   "src": "made"
+  }
+ ],
+ "w|呼び出し": [
+  {
+   "text": "休みの日に店から呼び出しがあり、悠斗は急いで駆けつけた。",
+   "en": "Yuto got called in by the restaurant on his day off and hurried over.",
+   "ko": "쉬는 날 가게에서 호출이 와서 유토는 서둘러 달려갔어요.",
+   "blank": "呼び出し",
+   "src": "made"
+  },
+  {
+   "text": "式の最中に、千尋の兄の携帯に仕事の呼び出しが入った。",
+   "en": "In the middle of the ceremony, Chihiro's brother got a work call on his phone.",
+   "ko": "식 도중에 지히로 오빠의 휴대폰으로 일 호출이 왔어요.",
+   "blank": "呼び出し",
    "src": "made"
   }
  ],
@@ -25525,6 +25749,22 @@
    "en": "The library is quiet and good for focus.",
    "ko": "도서관은 조용해서 집중돼.",
    "blank": "図書館"
+  }
+ ],
+ "w|図鑑": [
+  {
+   "text": "悠斗は、きのこの図鑑を見ながら新しいメニューを考えた。",
+   "en": "Yuto came up with a new menu while looking through a mushroom guidebook.",
+   "ko": "유토는 버섯 도감을 보면서 새 메뉴를 생각했어요.",
+   "blank": "図鑑",
+   "src": "made"
+  },
+  {
+   "text": "式の引き出物に、千尋は子ども向けの花の図鑑を選んだ。",
+   "en": "For the wedding favors, Chihiro chose a children's flower guidebook.",
+   "ko": "지히로는 식 답례품으로 어린이용 꽃 도감을 골랐어요.",
+   "blank": "図鑑",
+   "src": "made"
   }
  ],
  "w|固定": [
@@ -26387,6 +26627,22 @@
    "src": "made"
   }
  ],
+ "w|堪能": [
+  {
+   "text": "料理長はフランス語が堪能で、現地の料理人とも普通に話せる。",
+   "en": "The head chef is fluent in French and can talk easily with chefs there.",
+   "ko": "주방장은 프랑스어에 능통해서 현지 요리사와도 편하게 이야기해요.",
+   "blank": "堪能",
+   "src": "made"
+  },
+  {
+   "text": "ゲストは、シェフ自慢の料理を最後まで堪能した。",
+   "en": "The guests thoroughly enjoyed the chef's signature dishes to the very end.",
+   "ko": "하객들은 셰프가 자랑하는 요리를 끝까지 만끽했어요.",
+   "blank": "堪能",
+   "src": "made"
+  }
+ ],
  "w|報ずる": [
   {
    "text": "テレビは、運動不足の大人が増えていると報じていた。",
@@ -27160,6 +27416,22 @@
    "en": "The old station building looks plain from the outside, but inside it had been beautifully renovated.",
    "ko": "오래된 역사는 겉모습은 수수하지만 안은 아름답게 개조되어 있었어요.",
    "blank": "外見",
+   "src": "made"
+  }
+ ],
+ "w|外観": [
+  {
+   "text": "店の外観は古いが、厨房は最新の設備がそろっている。",
+   "en": "The restaurant looks old from the outside, but the kitchen has the latest equipment.",
+   "ko": "가게 외관은 낡았지만 주방은 최신 설비를 갖추고 있어요.",
+   "blank": "外観",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、教会の白い外観に一目で心を奪われた。",
+   "en": "Chihiro fell in love at first sight with the white exterior of the church.",
+   "ko": "지히로는 교회의 하얀 외관에 첫눈에 마음을 빼앗겼어요.",
+   "blank": "外観",
    "src": "made"
   }
  ],
@@ -28795,6 +29067,22 @@
    "blank": "姿勢"
   }
  ],
+ "w|威力": [
+  {
+   "text": "新しい換気扇は威力が強く、煙がすぐに消える。",
+   "en": "The new exhaust fan is powerful, so the smoke disappears right away.",
+   "ko": "새 환기팬은 위력이 세서 연기가 금방 사라져요.",
+   "blank": "威力",
+   "src": "made"
+  },
+  {
+   "text": "新郎の涙のスピーチは、ゲストを泣かせるほどの威力があった。",
+   "en": "The groom's tearful speech was powerful enough to make the guests cry.",
+   "ko": "신랑의 눈물 섞인 스피치는 하객들을 울릴 만큼 위력이 있었어요.",
+   "blank": "威力",
+   "src": "made"
+  }
+ ],
  "w|娘": [
   {
    "text": "娘が寝たよ。",
@@ -28897,6 +29185,22 @@
    "en": "I don't mind it.",
    "ko": "싫지 않아.",
    "blank": "嫌い"
+  }
+ ],
+ "w|嫌う": [
+  {
+   "text": "料理長は、包丁を雑に扱う人を何より嫌う。",
+   "en": "The head chef dislikes nothing more than people who handle knives carelessly.",
+   "ko": "주방장은 칼을 함부로 다루는 사람을 무엇보다 싫어해요.",
+   "blank": "嫌う",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、派手な演出を嫌う新郎の意見に合わせた。",
+   "en": "Chihiro went along with the groom, who dislikes flashy productions.",
+   "ko": "지히로는 화려한 연출을 싫어하는 신랑 의견에 맞췄어요.",
+   "blank": "嫌う",
+   "src": "made"
   }
  ],
  "w|嫌がらせ": [
@@ -32287,6 +32591,22 @@
    "blank": "建設"
   }
  ],
+ "w|建造": [
+  {
+   "text": "このレストランは、明治時代に建造された倉庫を改装したものだ。",
+   "en": "This restaurant is a renovated warehouse built in the Meiji era.",
+   "ko": "이 레스토랑은 메이지 시대에 건조된 창고를 개조한 거예요.",
+   "blank": "建造",
+   "src": "made"
+  },
+  {
+   "text": "千尋の式は、百年前に建造された洋館で行われた。",
+   "en": "Chihiro's wedding was held in a Western-style house built a hundred years ago.",
+   "ko": "지히로의 식은 백 년 전에 지어진 서양식 저택에서 열렸어요.",
+   "blank": "建造",
+   "src": "made"
+  }
+ ],
  "w|弁当": [
   {
    "text": "雨が降っていたので、私たちはピクニック用のお弁当を室内で食べなければいけなかった。",
@@ -32361,6 +32681,22 @@
    "en": "Let's rest before we catch a cold.",
    "ko": "감기 걸리기 전에 쉬자.",
    "blank": "引く"
+  }
+ ],
+ "w|引っ張る": [
+  {
+   "text": "ベテランの料理長が、若い悠斗たちを引っ張っている。",
+   "en": "The veteran head chef leads the young cooks, including Yuto.",
+   "ko": "베테랑 주방장이 유토 같은 젊은 요리사들을 이끌고 있어요.",
+   "blank": "引っ張っ",
+   "src": "made"
+  },
+  {
+   "text": "長いドレスの裾を、千尋の妹がそっと後ろで引っ張って直した。",
+   "en": "Chihiro's younger sister gently pulled the hem of the long dress from behind to straighten it.",
+   "ko": "긴 드레스 자락을 지히로의 여동생이 뒤에서 살짝 잡아당겨 정리했어요.",
+   "blank": "引っ張っ",
+   "src": "made"
   }
  ],
  "w|引っ越す": [
@@ -32521,6 +32857,22 @@
    "en": "We strengthened security.",
    "ko": "경비를 강화했어.",
    "blank": "強化"
+  }
+ ],
+ "w|強度": [
+  {
+   "text": "鍋の取っ手は、強度を確かめてから使うことにしている。",
+   "en": "Yuto makes a point of checking the strength of pot handles before using them.",
+   "ko": "냄비 손잡이는 강도를 확인한 다음 쓰기로 하고 있어요.",
+   "blank": "強度",
+   "src": "made"
+  },
+  {
+   "text": "ケーキの台は、重さに耐えられるよう強度を確認してある。",
+   "en": "The cake stand has been checked to make sure it's strong enough to hold the weight.",
+   "ko": "케이크 받침은 무게를 견딜 수 있도록 강도를 확인해 두었어요.",
+   "blank": "強度",
+   "src": "made"
   }
  ],
  "w|強引": [
@@ -33160,6 +33512,22 @@
    "en": "Following the manufacturer's manual, Yoko carefully replaced the battery.",
    "ko": "요코는 제조사 설명서에 따라 배터리를 조심스럽게 교체했어요.",
    "blank": "従っ",
+   "src": "made"
+  }
+ ],
+ "w|従事": [
+  {
+   "text": "悠斗の父も、長年和食の料理人として仕事に従事してきた。",
+   "en": "Yuto's father also worked for many years as a Japanese-cuisine chef.",
+   "ko": "유토의 아버지도 오랫동안 일식 요리사로 일해 왔어요.",
+   "blank": "従事",
+   "src": "made"
+  },
+  {
+   "text": "千尋の父は、長年医療に従事してきた医師だ。",
+   "en": "Chihiro's father is a doctor who has worked in medicine for many years.",
+   "ko": "지히로의 아버지는 오랫동안 의료에 종사해 온 의사예요.",
+   "blank": "従事",
    "src": "made"
   }
  ],
@@ -36315,6 +36683,38 @@
    "blank": "指"
   }
  ],
+ "w|指す": [
+  {
+   "text": "「火加減」とは、料理の火の強さを指す言葉だ。",
+   "en": "\"Hikagen\" is a word that refers to the strength of the heat in cooking.",
+   "ko": "\"불 조절\"은 요리할 때 불 세기를 가리키는 말이에요.",
+   "blank": "指す",
+   "src": "made"
+  },
+  {
+   "text": "司会者が指したほうを見ると、新郎の祖父が手を振っていた。",
+   "en": "When Chihiro looked where the MC pointed, the groom's grandfather was waving.",
+   "ko": "사회자가 가리킨 쪽을 보니 신랑 할아버지가 손을 흔들고 있었어요.",
+   "blank": "指し",
+   "src": "made"
+  }
+ ],
+ "w|指令": [
+  {
+   "text": "料理長の指令で、厨房の全員が一斉に盛りつけを始めた。",
+   "en": "On the head chef's order, everyone in the kitchen started plating at once.",
+   "ko": "주방장의 지령으로 주방 모두가 일제히 담기 시작했어요.",
+   "blank": "指令",
+   "src": "made"
+  },
+  {
+   "text": "式場のスタッフは、無線の指令に合わせて扉を開けた。",
+   "en": "The venue staff opened the doors in line with instructions over the radio.",
+   "ko": "식장 스태프는 무전 지령에 맞춰 문을 열었어요.",
+   "blank": "指令",
+   "src": "made"
+  }
+ ],
  "w|指名": [
   {
    "text": "演出家の指名で、拓也が主役に選ばれた。",
@@ -38121,6 +38521,22 @@
    "blank": "教育"
   }
  ],
+ "w|教養": [
+  {
+   "text": "悠斗は、料理だけでなく器や歴史の教養も大事だと考えている。",
+   "en": "Yuto thinks knowledge of tableware and history is important, not just cooking.",
+   "ko": "유토는 요리뿐 아니라 그릇이나 역사에 대한 교양도 중요하다고 생각해요.",
+   "blank": "教養",
+   "src": "made"
+  },
+  {
+   "text": "新郎の祖父は教養のある人で、乾杯の挨拶に短い漢詩を引用した。",
+   "en": "The groom's grandfather is a cultured man and quoted a short Chinese poem in his toast.",
+   "ko": "신랑 할아버지는 교양 있는 분이라 건배사에 짧은 한시를 인용했어요.",
+   "blank": "教養",
+   "src": "made"
+  }
+ ],
  "w|散歩": [
   {
    "text": "夕方に散歩する習慣だ。",
@@ -39160,6 +39576,22 @@
    "en": "Her new shoes arrived, so Aoi put them on right away and went out.",
    "ko": "새 신발이 도착해서 아오이는 바로 신고 나갔어요.",
    "blank": "早速",
+   "src": "made"
+  }
+ ],
+ "w|昇進": [
+  {
+   "text": "悠斗は、この春ついに副料理長に昇進した。",
+   "en": "This spring, Yuto was finally promoted to sous-chef.",
+   "ko": "유토는 이번 봄에 드디어 부주방장으로 승진했어요.",
+   "blank": "昇進",
+   "src": "made"
+  },
+  {
+   "text": "千尋の結婚式では、新郎の昇進のお祝いも一緒にされた。",
+   "en": "At Chihiro's wedding, the groom's promotion was celebrated too.",
+   "ko": "지히로의 결혼식에서는 신랑의 승진 축하도 함께 했어요.",
+   "blank": "昇進",
    "src": "made"
   }
  ],
@@ -41415,6 +41847,22 @@
    "src": "made"
   }
  ],
+ "w|検定": [
+  {
+   "text": "悠斗は、ふぐを扱うための検定に合格した。",
+   "en": "Yuto passed the certification exam for handling blowfish.",
+   "ko": "유토는 복어를 다루기 위한 검정에 합격했어요.",
+   "blank": "検定",
+   "src": "made"
+  },
+  {
+   "text": "千尋の友人は、ブライダルの検定を受けてプランナーになった。",
+   "en": "Chihiro's friend took a bridal certification exam and became a wedding planner.",
+   "ko": "지히로의 친구는 웨딩 검정을 받고 플래너가 됐어요.",
+   "blank": "検定",
+   "src": "made"
+  }
+ ],
  "w|検察": [
   {
    "text": "模擬裁判の授業で、健太は生徒を検察と弁護の二つに分けた。",
@@ -42114,6 +42562,22 @@
    "en": "It was pointed out that the article lacked the views of the opposing side.",
    "ko": "그 기사에는 반대하는 쪽 의견이 빠져 있다는 지적을 받았어요.",
    "blank": "欠け",
+   "src": "made"
+  }
+ ],
+ "w|欠点": [
+  {
+   "text": "悠斗の欠点は、味見をせずに皿を出してしまうところだ。",
+   "en": "Yuto's flaw is that he sometimes sends out a plate without tasting it.",
+   "ko": "유토의 결점은 맛을 보지 않고 접시를 내보내는 거예요.",
+   "blank": "欠点",
+   "src": "made"
+  },
+  {
+   "text": "欠点も含めて好きになったと、新郎はスピーチで千尋に言った。",
+   "en": "In his speech, the groom told Chihiro he had come to love her, flaws and all.",
+   "ko": "신랑은 스피치에서 결점까지 포함해서 좋아하게 됐다고 지히로에게 말했어요.",
+   "blank": "欠点",
    "src": "made"
   }
  ],
@@ -46715,6 +47179,22 @@
    "src": "made"
   }
  ],
+ "w|理念": [
+  {
+   "text": "「地元の野菜を大切に」というのが、この店の理念だ。",
+   "en": "\"Value local vegetables\" is this restaurant's philosophy.",
+   "ko": "\"지역 채소를 소중히\"가 이 가게의 이념이에요.",
+   "blank": "理念",
+   "src": "made"
+  },
+  {
+   "text": "式場の理念は、二人らしさを大切にすることだそうだ。",
+   "en": "The venue's philosophy is apparently to value what makes each couple unique.",
+   "ko": "식장의 이념은 두 사람다움을 소중히 하는 거래요.",
+   "blank": "理念",
+   "src": "made"
+  }
+ ],
  "w|理想": [
   {
    "text": "理想に近いね。",
@@ -47381,6 +47861,22 @@
    "en": "The image is grainy.",
    "ko": "이미지가 거칠어.",
    "blank": "画像"
+  }
+ ],
+ "w|画質": [
+  {
+   "text": "厨房のモニターは画質が悪くて、注文の文字が読みにくい。",
+   "en": "The kitchen monitor has poor image quality, so the orders are hard to read.",
+   "ko": "주방 모니터는 화질이 나빠서 주문 글자가 잘 안 보여요.",
+   "blank": "画質",
+   "src": "made"
+  },
+  {
+   "text": "当日の写真は画質がよく、千尋は大きく印刷して飾った。",
+   "en": "The photos from the day had great image quality, so Chihiro printed them large and put them up.",
+   "ko": "당일 사진은 화질이 좋아서 지히로는 크게 인쇄해서 걸었어요.",
+   "blank": "画質",
+   "src": "made"
   }
  ],
  "w|画面": [
@@ -48296,6 +48792,22 @@
    "en": "The cheering section got most excited during the relay at the sports festival.",
    "ko": "체육대회 계주 때 응원석이 가장 뜨거웠어요.",
    "blank": "盛り上がった",
+   "src": "made"
+  }
+ ],
+ "w|監査": [
+  {
+   "text": "保健所の監査の日、悠斗は冷蔵庫の中を朝から点検した。",
+   "en": "On the day of the health inspection, Yuto checked the inside of the fridge from early morning.",
+   "ko": "보건소 감사 날 유토는 아침부터 냉장고 안을 점검했어요.",
+   "blank": "監査",
+   "src": "made"
+  },
+  {
+   "text": "千尋は会社で監査の仕事をしていて、結婚式の予算も細かく管理した。",
+   "en": "Chihiro works in auditing at her company and managed the wedding budget closely too.",
+   "ko": "지히로는 회사에서 감사 일을 해서 결혼식 예산도 꼼꼼히 관리했어요.",
+   "blank": "監査",
    "src": "made"
   }
  ],
@@ -49731,6 +50243,22 @@
    "en": "The view count went up.",
    "ko": "시청 횟수가 늘었어.",
    "blank": "視聴"
+  }
+ ],
+ "w|視野": [
+  {
+   "text": "料理長は、悠斗に海外でも働いて視野を広げるよう勧めた。",
+   "en": "The head chef encouraged Yuto to broaden his horizons by working abroad too.",
+   "ko": "주방장은 유토에게 해외에서도 일하며 시야를 넓히라고 권했어요.",
+   "blank": "視野",
+   "src": "made"
+  },
+  {
+   "text": "ベールで視野が狭くなり、千尋は段差に気をつけて歩いた。",
+   "en": "The veil narrowed Chihiro's field of vision, so she walked carefully around the step.",
+   "ko": "베일 때문에 시야가 좁아져서 지히로는 턱을 조심하며 걸었어요.",
+   "blank": "視野",
+   "src": "made"
   }
  ],
  "w|禁止": [
@@ -57887,6 +58415,22 @@
    "blank": "負担"
   }
  ],
+ "w|負荷": [
+  {
+   "text": "夏の厨房は暑く、体に大きな負荷がかかる。",
+   "en": "The kitchen is hot in summer and puts a heavy strain on the body.",
+   "ko": "여름 주방은 더워서 몸에 큰 부담이 가요.",
+   "blank": "負荷",
+   "src": "made"
+  },
+  {
+   "text": "式の準備は、思った以上に心に負荷がかかった。",
+   "en": "Preparing for the wedding put more strain on Chihiro's mind than she expected.",
+   "ko": "식 준비는 생각보다 마음에 부담이 됐어요.",
+   "blank": "負荷",
+   "src": "made"
+  }
+ ],
  "w|財務": [
   {
    "text": "誠の同期は、財務の部署で予算の管理をしている。",
@@ -58571,6 +59115,22 @@
    "en": "Startup is slow.",
    "ko": "실행이 느리네.",
    "blank": "起動"
+  }
+ ],
+ "w|起業": [
+  {
+   "text": "悠斗は、いつか起業して自分の店を持つつもりだ。",
+   "en": "Yuto plans to start his own business someday and have his own restaurant.",
+   "ko": "유토는 언젠가 창업해서 자기 가게를 가질 생각이에요.",
+   "blank": "起業",
+   "src": "made"
+  },
+  {
+   "text": "新郎は来年、友人と一緒に起業するつもりだ。",
+   "en": "The groom plans to start a business with a friend next year.",
+   "ko": "신랑은 내년에 친구와 함께 창업할 생각이에요.",
+   "blank": "起業",
+   "src": "made"
   }
  ],
  "w|起訴": [
@@ -59345,6 +59905,22 @@
    "src": "made"
   }
  ],
+ "w|巡る": [
+  {
+   "text": "悠斗は休みの日に、各地の市場を巡って食材を探している。",
+   "en": "On his days off, Yuto goes around markets in various places looking for ingredients.",
+   "ko": "유토는 쉬는 날에 각지 시장을 돌며 식재료를 찾아요.",
+   "blank": "巡っ",
+   "src": "made"
+  },
+  {
+   "text": "新婚旅行で、千尋たちはヨーロッパの古い町を巡る予定だ。",
+   "en": "On their honeymoon, Chihiro and her husband plan to tour old European towns.",
+   "ko": "신혼여행에서 지히로 부부는 유럽의 오래된 마을을 돌 예정이에요.",
+   "blank": "巡る",
+   "src": "made"
+  }
+ ],
  "w|迎え": [
   {
    "text": "トムがオンボロの古い車で娘を学校に迎えに行くと、彼女は他人のふりをした。",
@@ -59596,6 +60172,22 @@
    "en": "Aoi still sometimes remembers the alley where she and Misaki used to chase stray cats.",
    "ko": "아오이는 예전에 둘이서 길고양이를 쫓아다니던 골목을 지금도 가끔 떠올려요.",
    "blank": "追いかけた",
+   "src": "made"
+  }
+ ],
+ "w|追い詰める": [
+  {
+   "text": "注文が一気に入り、悠斗は時間に追い詰められた。",
+   "en": "A flood of orders came in at once, and Yuto was pressed for time.",
+   "ko": "주문이 한꺼번에 들어와서 유토는 시간에 쫓겼어요.",
+   "blank": "追い詰め",
+   "src": "made"
+  },
+  {
+   "text": "準備に追われて、千尋は気持ちまで追い詰められてしまった。",
+   "en": "Swamped with preparations, Chihiro ended up feeling cornered.",
+   "ko": "준비에 쫓겨 지히로는 마음까지 궁지에 몰렸어요.",
+   "blank": "追い詰め",
    "src": "made"
   }
  ],
@@ -61103,6 +61695,38 @@
    "src": "made"
   }
  ],
+ "w|遠隔": [
+  {
+   "text": "オーブンの温度は、スマホから遠隔で調整できる。",
+   "en": "The oven temperature can be adjusted remotely from a smartphone.",
+   "ko": "오븐 온도는 스마트폰으로 원격 조정할 수 있어요.",
+   "blank": "遠隔",
+   "src": "made"
+  },
+  {
+   "text": "海外にいる祖母は、遠隔で結婚式を見守った。",
+   "en": "Chihiro's grandmother, who lives abroad, watched the wedding remotely.",
+   "ko": "해외에 있는 할머니는 원격으로 결혼식을 지켜봤어요.",
+   "blank": "遠隔",
+   "src": "made"
+  }
+ ],
+ "w|適する": [
+  {
+   "text": "この魚は、煮るより焼くほうに適している。",
+   "en": "This fish is better suited to grilling than simmering.",
+   "ko": "이 생선은 조리는 것보다 굽는 데 적합해요.",
+   "blank": "適し",
+   "src": "made"
+  },
+  {
+   "text": "庭の広い式場は、写真撮影に適していた。",
+   "en": "A venue with a large garden was well suited to taking photos.",
+   "ko": "정원이 넓은 식장은 사진 촬영에 적합했어요.",
+   "blank": "適し",
+   "src": "made"
+  }
+ ],
  "w|適切": [
   {
    "text": "魚は適切な温度で保存しないと、すぐに味が落ちる。",
@@ -61520,6 +62144,22 @@
    "en": "Junior high students on their way home from club activities got on carrying big bags.",
    "ko": "동아리 활동을 마친 중학생들이 큰 가방을 안고 탔어요.",
    "blank": "部活",
+   "src": "made"
+  }
+ ],
+ "w|部署": [
+  {
+   "text": "会社の食堂から、悠斗はホテルの別の部署に異動になった。",
+   "en": "Yuto was transferred from the company cafeteria to another department at the hotel.",
+   "ko": "유토는 회사 식당에서 호텔의 다른 부서로 이동했어요.",
+   "blank": "部署",
+   "src": "made"
+  },
+  {
+   "text": "千尋の会社の同じ部署の仲間が、余興で歌ってくれた。",
+   "en": "Coworkers from Chihiro's department sang as entertainment.",
+   "ko": "지히로 회사의 같은 부서 동료들이 여흥으로 노래를 불러 줬어요.",
+   "blank": "部署",
    "src": "made"
   }
  ],

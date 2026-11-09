@@ -4227,6 +4227,22 @@
    "blank": "amarillo"
   }
  ],
+ "w|amarrar": [
+  {
+   "text": "Pablo ayudó a amarrar una lancha que se había soltado en el puerto.",
+   "en": "Pablo helped tie up a boat that had come loose in the harbour.",
+   "ko": "파블로는 항구에서 풀려 버린 보트를 묶는 걸 도왔어요.",
+   "blank": "amarrar",
+   "src": "made"
+  },
+  {
+   "text": "Elena usó una cuerda para amarrar la cómoda al techo del coche.",
+   "en": "Elena used a rope to tie the chest of drawers to the roof of the car.",
+   "ko": "엘레나는 밧줄로 서랍장을 차 지붕에 묶었어요.",
+   "blank": "amarrar",
+   "src": "made"
+  }
+ ],
  "w|amateur": [
   {
    "text": "Antes de entrar en el periódico, Diego era fotógrafo amateur.",
@@ -4623,6 +4639,22 @@
    "en": "I need to carefully analyze the proposal.",
    "ko": "그 제안을 잘 분석해 봐야 해.",
    "blank": "analizar"
+  }
+ ],
+ "w|anarquista": [
+  {
+   "text": "Pablo encontró en el sótano unos carteles anarquistas de una manifestación muy antigua.",
+   "en": "Pablo found some anarchist posters from a very old demonstration in the basement.",
+   "ko": "파블로는 지하실에서 아주 오래된 시위의 무정부주의 포스터를 발견했어요.",
+   "blank": "anarquistas",
+   "src": "made"
+  },
+  {
+   "text": "Elena vio un puesto con revistas anarquistas de hace cien años.",
+   "en": "Elena saw a stall with anarchist magazines from a hundred years ago.",
+   "ko": "엘레나는 백 년 전 무정부주의 잡지를 파는 가게를 봤어요.",
+   "blank": "anarquistas",
+   "src": "made"
   }
  ],
  "w|ancestro": [
@@ -7581,6 +7613,22 @@
    "blank": "aspecto"
   }
  ],
+ "w|áspero": [
+  {
+   "text": "El nuevo jefe tiene un trato áspero, pero Pablo sabe que es buena persona.",
+   "en": "The new boss has a gruff manner, but Pablo knows he's a good person.",
+   "ko": "새 상사는 말투가 퉁명스럽지만 파블로는 그가 좋은 사람이라는 걸 알아요.",
+   "blank": "áspero",
+   "src": "made"
+  },
+  {
+   "text": "La tela del sillón era demasiado áspera, así que Elena no lo compró.",
+   "en": "The armchair fabric was too rough, so Elena didn't buy it.",
+   "ko": "안락의자 천이 너무 거칠어서 엘레나는 사지 않았어요.",
+   "blank": "áspera",
+   "src": "made"
+  }
+ ],
  "w|aspirante": [
   {
    "text": "Diego tuvo que entrevistar a cada aspirante a la alcaldía en una sola semana.",
@@ -7965,6 +8013,22 @@
    "en": "Stay alert to the traffic signs.",
    "ko": "교통 표지판에 주의를 기울여.",
    "blank": "atento"
+  }
+ ],
+ "w|ateo": [
+  {
+   "text": "En el juicio, el testigo dijo que era ateo y prometió decir la verdad, y Pablo tomó nota.",
+   "en": "At the trial, the witness said he was an atheist and promised to tell the truth, and Pablo took notes.",
+   "ko": "재판에서 증인이 무신론자라며 진실만 말하겠다고 약속하자 파블로는 기록했어요.",
+   "blank": "ateo",
+   "src": "made"
+  },
+  {
+   "text": "El vendedor de libros, que se declaraba ateo, tenía una colección enorme de libros religiosos, y a Elena le hizo gracia.",
+   "en": "The bookseller, who called himself an atheist, had a huge collection of religious books, and Elena found it funny.",
+   "ko": "스스로 무신론자라는 책 장수가 종교 서적을 엄청나게 모아 둔 게 엘레나는 재미있었어요.",
+   "blank": "ateo",
+   "src": "made"
   }
  ],
  "w|aterrador": [
@@ -9645,6 +9709,22 @@
    "src": "made"
   }
  ],
+ "w|barbaridad": [
+  {
+   "text": "Aparcar en la acera de la comisaría es una barbaridad, le dijo Pablo al conductor.",
+   "en": "Parking on the pavement outside the police station is outrageous, Pablo told the driver.",
+   "ko": "경찰서 앞 인도에 주차하는 건 말도 안 된다고 파블로가 운전자에게 말했어요.",
+   "blank": "barbaridad",
+   "src": "made"
+  },
+  {
+   "text": "Elena pensó que pedir tanto por una silla rota era una barbaridad.",
+   "en": "Elena thought asking so much for a broken chair was outrageous.",
+   "ko": "엘레나는 부서진 의자 하나에 그렇게 많이 받는 건 말도 안 된다고 생각했어요.",
+   "blank": "barbaridad",
+   "src": "made"
+  }
+ ],
  "w|bárbaro": [
   {
    "text": "Ese acto fue totalmente bárbaro.",
@@ -10185,6 +10265,22 @@
    "blank": "bendición"
   }
  ],
+ "w|beneficencia": [
+  {
+   "text": "Cada diciembre, Pablo organiza en la comisaría una recogida de juguetes para una asociación de beneficencia.",
+   "en": "Every December, Pablo organises a toy collection at the police station for a charity.",
+   "ko": "파블로는 매년 십이월 경찰서에서 자선 단체를 위한 장난감 모으기를 열어요.",
+   "blank": "beneficencia",
+   "src": "made"
+  },
+  {
+   "text": "Elena dona parte de lo que gana en el rastro a una organización de beneficencia.",
+   "en": "Elena donates part of what she earns at the flea market to a charity organisation.",
+   "ko": "엘레나는 벼룩시장에서 번 돈의 일부를 자선 단체에 기부해요.",
+   "blank": "beneficencia",
+   "src": "made"
+  }
+ ],
  "w|beneficiar": [
   {
    "text": "Diego explicó que el acuerdo podía beneficiar a las dos partes.",
@@ -10301,6 +10397,22 @@
    "en": "The Bible is on the nightstand.",
    "ko": "성경이 침대 옆 탁자 위에 있어.",
    "blank": "Biblia"
+  }
+ ],
+ "w|bíblico": [
+  {
+   "text": "El comisario contó una historia de tono casi bíblico sobre una inundación, y Pablo escuchó con atención.",
+   "en": "The chief told a story with an almost biblical tone about a flood, and Pablo listened carefully.",
+   "ko": "서장이 홍수에 관한 거의 성경 같은 이야기를 들려주자 파블로는 귀 기울여 들었어요.",
+   "blank": "bíblico",
+   "src": "made"
+  },
+  {
+   "text": "Elena compró un grabado con una escena bíblica para la casa de su madre.",
+   "en": "Elena bought an engraving with a biblical scene for her mother's house.",
+   "ko": "엘레나는 엄마 집에 걸 성경 장면 판화를 샀어요.",
+   "blank": "bíblica",
+   "src": "made"
   }
  ],
  "w|biblioteca": [
@@ -11563,6 +11675,22 @@
    "en": "There was a brutal clash at the border.",
    "ko": "국경에서 잔혹한 충돌이 있었어.",
    "blank": "brutal"
+  }
+ ],
+ "w|brutalidad": [
+  {
+   "text": "En el curso de formación, Pablo estudió casos históricos de brutalidad policial para no repetirlos.",
+   "en": "On the training course, Pablo studied historical cases of police brutality so as not to repeat them.",
+   "ko": "파블로는 연수 과정에서 같은 일을 되풀이하지 않으려고 과거의 경찰 폭력 사례를 공부했어요.",
+   "blank": "brutalidad",
+   "src": "made"
+  },
+  {
+   "text": "Elena hojeó un libro de historia sobre la brutalidad de las guerras medievales.",
+   "en": "Elena leafed through a history book about the brutality of medieval wars.",
+   "ko": "엘레나는 중세 전쟁의 잔혹함을 다룬 역사책을 훑어봤어요.",
+   "blank": "brutalidad",
+   "src": "made"
   }
  ],
  "w|brutalmente": [
@@ -13279,6 +13407,22 @@
    "src": "made"
   }
  ],
+ "w|caníbal": [
+  {
+   "text": "En la sala de descanso, Pablo leía una novela de aventuras sobre una isla con un caníbal.",
+   "en": "In the break room, Pablo was reading an adventure novel about an island with a cannibal.",
+   "ko": "파블로는 휴게실에서 식인종이 나오는 섬 모험 소설을 읽고 있었어요.",
+   "blank": "caníbal",
+   "src": "made"
+  },
+  {
+   "text": "Elena encontró un cómic viejo sobre un caníbal que vivía en la selva.",
+   "en": "Elena found an old comic about a cannibal who lived in the jungle.",
+   "ko": "엘레나는 정글에 사는 식인종이 나오는 오래된 만화책을 찾았어요.",
+   "blank": "caníbal",
+   "src": "made"
+  }
+ ],
  "w|cañón": [
   {
    "text": "El cañón del río es impresionante.",
@@ -13893,6 +14037,22 @@
    "en": "She's in charge of the store.",
    "ko": "그 가게를 맡고 있어.",
    "blank": "cargo"
+  }
+ ],
+ "w|caricatura": [
+  {
+   "text": "En la comisaría, alguien había colgado una caricatura del comisario, y Pablo no pudo evitar reírse.",
+   "en": "At the police station, someone had pinned up a caricature of the chief, and Pablo couldn't help laughing.",
+   "ko": "경찰서에 누군가 서장 캐리커처를 붙여 놔서 파블로는 웃음을 참을 수 없었어요.",
+   "blank": "caricatura",
+   "src": "made"
+  },
+  {
+   "text": "En el rastro, Elena compró una caricatura antigua de un torero por muy poco dinero.",
+   "en": "At the flea market, Elena bought an old caricature of a bullfighter for very little money.",
+   "ko": "엘레나는 벼룩시장에서 투우사를 그린 오래된 캐리커처를 아주 싸게 샀어요.",
+   "blank": "caricatura",
+   "src": "made"
   }
  ],
  "w|caridad": [
@@ -18413,6 +18573,22 @@
    "src": "made"
   }
  ],
+ "w|compresión": [
+  {
+   "text": "El informático le explicó a Pablo que la compresión del vídeo había borrado algunos detalles.",
+   "en": "The IT technician explained to Pablo that the video compression had erased some details.",
+   "ko": "전산 담당자는 파블로에게 영상 압축 때문에 몇몇 세부가 지워졌다고 설명했어요.",
+   "blank": "compresión",
+   "src": "made"
+  },
+  {
+   "text": "Elena compró unas medias de compresión casi nuevas para su abuela.",
+   "en": "Elena bought some almost new compression stockings for her grandmother.",
+   "ko": "엘레나는 할머니께 드릴 거의 새것인 압박 스타킹을 샀어요.",
+   "blank": "compresión",
+   "src": "made"
+  }
+ ],
  "w|comprobar": [
   {
    "text": "Voy a comprobar la reserva.",
@@ -18857,6 +19033,22 @@
    "en": "The report's conclusion was very clear.",
    "ko": "보고서의 결론이 아주 명확했어.",
    "blank": "conclusión"
+  }
+ ],
+ "w|concluyente": [
+  {
+   "text": "La prueba de las huellas no fue concluyente, así que Pablo siguió investigando.",
+   "en": "The fingerprint test wasn't conclusive, so Pablo kept investigating.",
+   "ko": "지문 검사 결과가 확실하지 않아서 파블로는 계속 조사했어요.",
+   "blank": "concluyente",
+   "src": "made"
+  },
+  {
+   "text": "El vendedor no tenía ninguna prueba concluyente de que el jarrón fuera antiguo, y Elena dudó.",
+   "en": "The seller had no conclusive proof that the vase was antique, and Elena hesitated.",
+   "ko": "상인에게 그 꽃병이 골동품이라는 확실한 증거가 없어서 엘레나는 망설였어요.",
+   "blank": "concluyente",
+   "src": "made"
   }
  ],
  "w|concordar": [
@@ -19606,6 +19798,22 @@
    "en": "Between customers, Marta reads a novel about the conquest of a distant kingdom.",
    "ko": "마르타는 손님이 없을 때 먼 왕국을 정복하는 이야기의 소설을 읽어요.",
    "blank": "conquista",
+   "src": "made"
+  }
+ ],
+ "w|conquistador": [
+  {
+   "text": "En el pasillo de la comisaría hay un cuadro de un conquistador que nadie sabe quién colgó.",
+   "en": "In the police station corridor there's a painting of a conqueror that nobody knows who hung.",
+   "ko": "경찰서 복도에는 누가 걸었는지 아무도 모르는 정복자 그림이 있어요.",
+   "blank": "conquistador",
+   "src": "made"
+  },
+  {
+   "text": "Elena compró un libro sobre la vida de un conquistador para su padre.",
+   "en": "Elena bought a book about the life of a conqueror for her father.",
+   "ko": "엘레나는 아빠에게 드리려고 한 정복자의 삶에 관한 책을 샀어요.",
+   "blank": "conquistador",
    "src": "made"
   }
  ],
@@ -26209,6 +26417,22 @@
    "blank": "destino"
   }
  ],
+ "w|destreza": [
+  {
+   "text": "Pablo aparca la patrulla con una destreza que sorprende a los nuevos.",
+   "en": "Pablo parks the patrol car with a skill that surprises the new officers.",
+   "ko": "파블로는 신입들이 놀랄 만큼 능숙하게 순찰차를 주차해요.",
+   "blank": "destreza",
+   "src": "made"
+  },
+  {
+   "text": "Elena regatea con una destreza que aprendió de su abuela.",
+   "en": "Elena haggles with a skill she learned from her grandmother.",
+   "ko": "엘레나는 할머니에게 배운 솜씨로 흥정해요.",
+   "blank": "destreza",
+   "src": "made"
+  }
+ ],
  "w|destripador": [
   {
    "text": "En la biblioteca municipal, Raúl encontró una novela antigua sobre un destripador en la niebla de Londres.",
@@ -31669,6 +31893,22 @@
    "blank": "envolver"
   }
  ],
+ "w|épico": [
+  {
+   "text": "La búsqueda del perro perdido se convirtió en una aventura épica para Pablo y su compañera.",
+   "en": "The search for the lost dog turned into an epic adventure for Pablo and his partner.",
+   "ko": "잃어버린 개를 찾는 일은 파블로와 동료에게 대단한 모험이 됐어요.",
+   "blank": "épica",
+   "src": "made"
+  },
+  {
+   "text": "Encontrar aparcamiento cerca del rastro fue una batalla épica para Elena.",
+   "en": "Finding parking near the flea market was an epic battle for Elena.",
+   "ko": "벼룩시장 근처에서 주차할 곳을 찾는 건 엘레나에게 대단한 전쟁이었어요.",
+   "blank": "épica",
+   "src": "made"
+  }
+ ],
  "w|epidemia": [
   {
    "text": "Durante la epidemia de gripe, Javier se quedaba en la farmacia hasta la noche.",
@@ -32074,6 +32314,22 @@
    "en": "Carmen screamed when she saw a beetle inside the flour sack.",
    "ko": "카르멘은 밀가루 포대 안에서 딱정벌레를 보고 소리를 질렀어요.",
    "blank": "escarabajo",
+   "src": "made"
+  }
+ ],
+ "w|escasez": [
+  {
+   "text": "Por la escasez de personal, Pablo tuvo que hacer doble turno toda la semana.",
+   "en": "Because of the staff shortage, Pablo had to work double shifts all week.",
+   "ko": "인력이 부족해서 파블로는 일주일 내내 두 번씩 근무해야 했어요.",
+   "blank": "escasez",
+   "src": "made"
+  },
+  {
+   "text": "Con la escasez de muebles baratos, el rastro estaba lleno de gente, y Elena tuvo que madrugar.",
+   "en": "With the shortage of cheap furniture, the flea market was packed, and Elena had to get up early.",
+   "ko": "싼 가구가 부족해서 벼룩시장이 붐볐고 엘레나는 일찍 일어나야 했어요.",
+   "blank": "escasez",
    "src": "made"
   }
  ],
@@ -33651,6 +33907,22 @@
    "src": "made"
   }
  ],
+ "w|estatuto": [
+  {
+   "text": "Pablo tuvo que leer el estatuto de la asociación de vecinos para resolver la denuncia.",
+   "en": "Pablo had to read the residents' association statute to settle the complaint.",
+   "ko": "파블로는 그 신고를 해결하려고 주민 협회 규약을 읽어야 했어요.",
+   "blank": "estatuto",
+   "src": "made"
+  },
+  {
+   "text": "El estatuto del mercado prohíbe vender comida casera, y Elena tuvo que guardar sus galletas.",
+   "en": "The market's rules forbid selling homemade food, and Elena had to put away her biscuits.",
+   "ko": "시장 규약이 집에서 만든 음식 판매를 금지해서 엘레나는 쿠키를 치워야 했어요.",
+   "blank": "estatuto",
+   "src": "made"
+  }
+ ],
  "w|este": [
   {
    "text": "Me gusta este lugar.",
@@ -33736,6 +34008,38 @@
    "en": "For Marta, driving on roads she doesn't know is exciting.",
    "ko": "마르타에게는 모르는 길을 달리는 게 신나는 일이에요.",
    "blank": "estimulante",
+   "src": "made"
+  }
+ ],
+ "w|estimular": [
+  {
+   "text": "Pablo da charlas en los colegios para estimular el interés de los niños por la seguridad vial.",
+   "en": "Pablo gives talks at schools to stimulate children's interest in road safety.",
+   "ko": "파블로는 아이들이 교통안전에 관심을 갖도록 학교에서 강연을 해요.",
+   "blank": "estimular",
+   "src": "made"
+  },
+  {
+   "text": "Elena pone música en su puesto para estimular a la gente a acercarse.",
+   "en": "Elena plays music at her stall to encourage people to come over.",
+   "ko": "엘레나는 사람들이 다가오도록 가게에서 음악을 틀어요.",
+   "blank": "estimular",
+   "src": "made"
+  }
+ ],
+ "w|estímulo": [
+  {
+   "text": "Las felicitaciones de los vecinos fueron un estímulo para Pablo después de una semana difícil.",
+   "en": "The neighbours' congratulations were an encouragement for Pablo after a difficult week.",
+   "ko": "이웃들의 칭찬은 힘든 한 주를 보낸 파블로에게 힘이 됐어요.",
+   "blank": "estímulo",
+   "src": "made"
+  },
+  {
+   "text": "Las ventas del primer día fueron un buen estímulo para Elena.",
+   "en": "The first day's sales were a good boost for Elena.",
+   "ko": "첫날 매출은 엘레나에게 좋은 자극이 됐어요.",
+   "blank": "estímulo",
    "src": "made"
   }
  ],
@@ -37779,6 +38083,22 @@
    "src": "made"
   }
  ],
+ "w|fortalecer": [
+  {
+   "text": "El comisario quiere fortalecer la relación entre los agentes y los vecinos, y Pablo está de acuerdo.",
+   "en": "The chief wants to strengthen the relationship between officers and residents, and Pablo agrees.",
+   "ko": "서장은 경찰과 주민의 관계를 다지고 싶어 하고 파블로도 같은 생각이에요.",
+   "blank": "fortalecer",
+   "src": "made"
+  },
+  {
+   "text": "Elena compró unas escuadras para fortalecer las patas de la mesa vieja.",
+   "en": "Elena bought some brackets to strengthen the legs of the old table.",
+   "ko": "엘레나는 낡은 탁자 다리를 튼튼하게 하려고 꺾쇠를 샀어요.",
+   "blank": "fortalecer",
+   "src": "made"
+  }
+ ],
  "w|fortaleza": [
   {
    "text": "Visitaron una fortaleza antigua en la costa.",
@@ -38535,6 +38855,22 @@
    "en": "That key serves no function.",
    "ko": "그 키는 아무 기능도 없어.",
    "blank": "función"
+  }
+ ],
+ "w|funcional": [
+  {
+   "text": "La comisaría nueva es muy funcional, aunque Pablo echa de menos el edificio viejo.",
+   "en": "The new police station is very functional, although Pablo misses the old building.",
+   "ko": "새 경찰서는 아주 실용적이지만 파블로는 옛 건물이 그리워요.",
+   "blank": "funcional",
+   "src": "made"
+  },
+  {
+   "text": "Elena prefiere los muebles funcionales a los muy decorados.",
+   "en": "Elena prefers functional furniture to very ornate pieces.",
+   "ko": "엘레나는 장식이 많은 가구보다 실용적인 가구를 좋아해요.",
+   "blank": "funcionales",
+   "src": "made"
   }
  ],
  "w|funcionamiento": [
@@ -42877,6 +43213,22 @@
    "blank": "ideal"
   }
  ],
+ "w|idear": [
+  {
+   "text": "Pablo tuvo que idear un plan para vigilar el mercado sin asustar a la gente.",
+   "en": "Pablo had to come up with a plan to watch the market without scaring people.",
+   "ko": "파블로는 사람들을 놀라게 하지 않고 시장을 지킬 방법을 생각해 내야 했어요.",
+   "blank": "idear",
+   "src": "made"
+  },
+  {
+   "text": "Elena tuvo que idear una forma de llevar la lámpara en el autobús sin romperla.",
+   "en": "Elena had to work out a way to carry the lamp on the bus without breaking it.",
+   "ko": "엘레나는 램프를 깨뜨리지 않고 버스에 싣고 갈 방법을 궁리해야 했어요.",
+   "blank": "idear",
+   "src": "made"
+  }
+ ],
  "w|idéntico": [
   {
    "text": "Andrés tiene un hermano gemelo idéntico que vive en Canadá.",
@@ -44805,6 +45157,22 @@
    "blank": "informe"
   }
  ],
+ "w|infracción": [
+  {
+   "text": "El conductor cometió una infracción leve, y Pablo solo le puso una multa pequeña.",
+   "en": "The driver committed a minor offence, and Pablo only gave him a small fine.",
+   "ko": "운전자가 가벼운 위반을 해서 파블로는 작은 벌금만 매겼어요.",
+   "blank": "infracción",
+   "src": "made"
+  },
+  {
+   "text": "Montar el puesto fuera de la zona marcada es una infracción, le recordó el guardia a Elena.",
+   "en": "Setting up the stall outside the marked area is an offence, the guard reminded Elena.",
+   "ko": "표시된 구역 밖에 가게를 차리는 건 위반이라고 경비원이 엘레나에게 다시 알려 줬어요.",
+   "blank": "infracción",
+   "src": "made"
+  }
+ ],
  "w|ingeniería": [
   {
    "text": "El hermano mayor de Lucas estudia ingeniería en la universidad.",
@@ -45243,6 +45611,22 @@
    "src": "made"
   }
  ],
+ "w|inmóvil": [
+  {
+   "text": "El gato de la comisaría se quedó inmóvil delante del ordenador de Pablo toda la mañana.",
+   "en": "The police station cat stayed motionless in front of Pablo's computer all morning.",
+   "ko": "경찰서 고양이는 오전 내내 파블로의 컴퓨터 앞에서 꼼짝도 하지 않았어요.",
+   "blank": "inmóvil",
+   "src": "made"
+  },
+  {
+   "text": "Un artista callejero se quedó inmóvil como una estatua junto al puesto de Elena.",
+   "en": "A street artist stood motionless like a statue next to Elena's stall.",
+   "ko": "거리 예술가가 엘레나의 가게 옆에서 동상처럼 꼼짝하지 않고 서 있었어요.",
+   "blank": "inmóvil",
+   "src": "made"
+  }
+ ],
  "w|inmune": [
   {
    "text": "Javier bromea con que ya es inmune a todos los resfriados de los clientes.",
@@ -45348,6 +45732,22 @@
    "en": "The snake looked dangerous, but it was harmless.",
    "ko": "그 뱀은 위험해 보였지만 해가 없었어요.",
    "blank": "inofensiva",
+   "src": "made"
+  }
+ ],
+ "w|inolvidable": [
+  {
+   "text": "El día que Pablo recibió la medalla fue inolvidable para toda su familia.",
+   "en": "The day Pablo received the medal was unforgettable for his whole family.",
+   "ko": "파블로가 훈장을 받은 날은 온 가족에게 잊을 수 없는 날이었어요.",
+   "blank": "inolvidable",
+   "src": "made"
+  },
+  {
+   "text": "Elena guarda un recuerdo inolvidable de su primer domingo vendiendo en el rastro.",
+   "en": "Elena has an unforgettable memory of her first Sunday selling at the flea market.",
+   "ko": "엘레나는 벼룩시장에서 처음 장사한 일요일을 잊지 못해요.",
+   "blank": "inolvidable",
    "src": "made"
   }
  ],
@@ -45654,6 +46054,22 @@
    "en": "In the end, Elena decided to stay one more week by the sea.",
    "ko": "결국 엘레나는 바닷가에 한 주 더 머물기로 했어요.",
    "blank": "instancia",
+   "src": "made"
+  }
+ ],
+ "w|instantánea": [
+  {
+   "text": "En el expediente había una instantánea del coche robado, y Pablo la reconoció enseguida.",
+   "en": "In the file there was a snapshot of the stolen car, and Pablo recognised it at once.",
+   "ko": "서류철에 도난 차량의 스냅 사진이 있었는데 파블로는 금방 알아봤어요.",
+   "blank": "instantánea",
+   "src": "made"
+  },
+  {
+   "text": "Elena le hizo una instantánea al puesto de lámparas antes de que lo desmontaran.",
+   "en": "Elena took a snapshot of the lamp stall before they took it down.",
+   "ko": "엘레나는 램프 가게가 철거되기 전에 스냅 사진을 한 장 찍었어요.",
+   "blank": "instantánea",
    "src": "made"
   }
  ],
@@ -46769,6 +47185,22 @@
    "blank": "invitaron"
   }
  ],
+ "w|invocar": [
+  {
+   "text": "El abogado intentó invocar un artículo de la ley, pero Pablo ya conocía ese truco.",
+   "en": "The lawyer tried to invoke an article of the law, but Pablo already knew that trick.",
+   "ko": "변호사는 법 조항 하나를 내세우려 했지만 파블로는 이미 그 수법을 알고 있었어요.",
+   "blank": "invocar",
+   "src": "made"
+  },
+  {
+   "text": "Un vendedor decía que su espejo antiguo servía para invocar a los espíritus, y Elena se rio.",
+   "en": "A seller claimed his antique mirror could be used to summon spirits, and Elena laughed.",
+   "ko": "한 상인이 자기 골동품 거울로 영혼을 불러낼 수 있다고 하자 엘레나는 웃었어요.",
+   "blank": "invocar",
+   "src": "made"
+  }
+ ],
  "w|involucrar": [
   {
    "text": "No quiero involucrar a nadie más.",
@@ -46781,6 +47213,22 @@
    "en": "They involved him without asking permission.",
    "ko": "허락도 없이 그를 끌어들였어.",
    "blank": "involucraron"
+  }
+ ],
+ "w|involuntario": [
+  {
+   "text": "Pablo explicó en el informe que el choque fue un error involuntario del conductor.",
+   "en": "Pablo explained in the report that the crash was an unintentional mistake by the driver.",
+   "ko": "파블로는 보고서에 그 사고가 운전자의 의도치 않은 실수였다고 적었어요.",
+   "blank": "involuntario",
+   "src": "made"
+  },
+  {
+   "text": "Elena soltó un grito involuntario al ver el precio del espejo.",
+   "en": "Elena let out an involuntary cry when she saw the price of the mirror.",
+   "ko": "엘레나는 거울 가격을 보고 저도 모르게 소리를 질렀어요.",
+   "blank": "involuntario",
+   "src": "made"
   }
  ],
  "w|inyección": [
@@ -46839,6 +47287,22 @@
    "en": "Anger doesn't solve any problem.",
    "ko": "분노는 어떤 문제도 해결하지 못해.",
    "blank": "ira"
+  }
+ ],
+ "w|iraní": [
+  {
+   "text": "Un turista denunció el robo de una alfombra iraní de su coche, y Pablo tomó la declaración.",
+   "en": "A tourist reported the theft of a Persian rug from his car, and Pablo took the statement.",
+   "ko": "한 관광객이 차에서 이란산 카펫을 도난당했다고 신고해서 파블로가 진술을 받았어요.",
+   "blank": "iraní",
+   "src": "made"
+  },
+  {
+   "text": "Elena se enamoró de una alfombra iraní de colores rojos y azules.",
+   "en": "Elena fell in love with a Persian rug in reds and blues.",
+   "ko": "엘레나는 빨강과 파랑이 어우러진 이란산 카펫에 반했어요.",
+   "blank": "iraní",
+   "src": "made"
   }
  ],
  "w|irlandés": [
@@ -51611,6 +52075,22 @@
    "blank": "marca"
   }
  ],
+ "w|marcado": [
+  {
+   "text": "El sospechoso hablaba con un acento marcado, y Pablo lo apuntó en el informe.",
+   "en": "The suspect spoke with a strong accent, and Pablo noted it in the report.",
+   "ko": "용의자가 억양이 뚜렷해서 파블로는 그걸 보고서에 적었어요.",
+   "blank": "marcado",
+   "src": "made"
+  },
+  {
+   "text": "El vendedor de cerámica tenía un carácter marcado, pero Elena consiguió un buen precio.",
+   "en": "The pottery seller had a strong personality, but Elena got a good price.",
+   "ko": "도자기 상인은 성격이 강했지만 엘레나는 좋은 값에 샀어요.",
+   "blank": "marcado",
+   "src": "made"
+  }
+ ],
  "w|marcador": [
   {
    "text": "Mateo escribe sus notas con un marcador rojo en la pizarra de la oficina.",
@@ -52777,6 +53257,22 @@
    "en": "He lost his memory after the blow.",
    "ko": "충격 후에 기억을 잃었어.",
    "blank": "memoria"
+  }
+ ],
+ "w|memorial": [
+  {
+   "text": "Frente a la comisaría hay un memorial con los nombres de los agentes que murieron en servicio, y Pablo deja flores cada año.",
+   "en": "Opposite the police station there's a memorial with the names of officers who died on duty, and Pablo leaves flowers every year.",
+   "ko": "경찰서 앞에는 순직한 경찰관들의 이름이 새겨진 추모비가 있어서 파블로는 해마다 꽃을 놓아요.",
+   "blank": "memorial",
+   "src": "made"
+  },
+  {
+   "text": "Junto al rastro hay un pequeño memorial a los trabajadores del antiguo puerto, y Elena se paró a leerlo.",
+   "en": "Next to the flea market there's a small memorial to the workers of the old port, and Elena stopped to read it.",
+   "ko": "벼룩시장 옆에 옛 항구 노동자들을 기리는 작은 기념비가 있어서 엘레나는 멈춰서 읽었어요.",
+   "blank": "memorial",
+   "src": "made"
   }
  ],
  "w|mención": [
@@ -54258,6 +54754,22 @@
    "en": "The princess in the legend preferred to live in a modest house.",
    "ko": "전설 속 공주는 소박한 집에서 사는 걸 더 좋아했어요.",
    "blank": "modesta",
+   "src": "made"
+  }
+ ],
+ "w|modificación": [
+  {
+   "text": "El comisario anunció una modificación en los turnos de noche, y Pablo protestó un poco.",
+   "en": "The chief announced a change to the night shifts, and Pablo grumbled a bit.",
+   "ko": "서장이 야간 근무 변경을 발표하자 파블로는 조금 투덜거렸어요.",
+   "blank": "modificación",
+   "src": "made"
+  },
+  {
+   "text": "El vendedor le dijo a Elena que la silla no tenía ninguna modificación desde que se fabricó.",
+   "en": "The seller told Elena that the chair hadn't had any modification since it was made.",
+   "ko": "상인은 엘레나에게 그 의자는 만들어진 뒤로 한 번도 고친 적이 없다고 말했어요.",
+   "blank": "modificación",
    "src": "made"
   }
  ],
@@ -59545,6 +60057,22 @@
    "src": "made"
   }
  ],
+ "w|panfleto": [
+  {
+   "text": "Pablo encontró un panfleto debajo de la puerta de la comisaría y lo leyó en voz alta.",
+   "en": "Pablo found a pamphlet under the police station door and read it aloud.",
+   "ko": "파블로는 경찰서 문 아래에서 전단지를 발견하고 소리 내어 읽었어요.",
+   "blank": "panfleto",
+   "src": "made"
+  },
+  {
+   "text": "Elena recibió un panfleto sobre un concierto gratis en el parque.",
+   "en": "Elena got a leaflet about a free concert in the park.",
+   "ko": "엘레나는 공원 무료 콘서트 전단지를 받았어요.",
+   "blank": "panfleto",
+   "src": "made"
+  }
+ ],
  "w|pánico": [
   {
    "text": "Cundió el pánico cuando falló la luz.",
@@ -60685,6 +61213,22 @@
    "blank": "patético"
   }
  ],
+ "w|patinaje": [
+  {
+   "text": "El fin de semana, Pablo lleva a sus hijos a la pista de patinaje del barrio.",
+   "en": "At the weekend, Pablo takes his children to the neighbourhood skating rink.",
+   "ko": "주말에 파블로는 아이들을 동네 스케이트장에 데려가요.",
+   "blank": "patinaje",
+   "src": "made"
+  },
+  {
+   "text": "Elena encontró unos patines de su infancia y recordó sus clases de patinaje.",
+   "en": "Elena found some skates like the ones from her childhood and remembered her skating lessons.",
+   "ko": "엘레나는 어릴 때 타던 것 같은 스케이트를 보고 스케이트 수업을 떠올렸어요.",
+   "blank": "patinaje",
+   "src": "made"
+  }
+ ],
  "w|patinar": [
   {
    "text": "La hija de Marina se cayó al patinar y se hizo daño en la rodilla.",
@@ -61338,6 +61882,22 @@
    "en": "As they entered the tunnel, Sofía felt the cold begin to seep into the carriage.",
    "ko": "터널에 들어서자 소피아는 냉기가 객차 안으로 스며드는 걸 느꼈어요.",
    "blank": "penetrar",
+   "src": "made"
+  }
+ ],
+ "w|penitencia": [
+  {
+   "text": "El comisario bromeó con que el papeleo era la penitencia de Pablo por llegar tarde.",
+   "en": "The chief joked that the paperwork was Pablo's penance for arriving late.",
+   "ko": "서장은 서류 작업이 늦게 온 파블로의 벌이라고 농담했어요.",
+   "blank": "penitencia",
+   "src": "made"
+  },
+  {
+   "text": "Levantarse a las cinco cada domingo es una penitencia para Elena, pero le encanta el rastro.",
+   "en": "Getting up at five every Sunday is a penance for Elena, but she loves the flea market.",
+   "ko": "매주 일요일 다섯 시에 일어나는 건 엘레나에게 고행이지만 벼룩시장이 너무 좋아요.",
+   "blank": "penitencia",
    "src": "made"
   }
  ],
@@ -63555,6 +64115,22 @@
    "en": "The company policy changed.",
    "ko": "회사 정책이 바뀌었어.",
    "blank": "política"
+  }
+ ],
+ "w|políticamente": [
+  {
+   "text": "El comisario pidió a Pablo que redactara el comunicado de forma políticamente neutral.",
+   "en": "The chief asked Pablo to write the statement in a politically neutral way.",
+   "ko": "서장은 파블로에게 정치적으로 중립적인 방식으로 발표문을 쓰라고 했어요.",
+   "blank": "políticamente",
+   "src": "made"
+  },
+  {
+   "text": "El vendedor de libros le dijo a Elena que esos chistes no eran políticamente correctos.",
+   "en": "The bookseller told Elena that those jokes weren't politically correct.",
+   "ko": "책 장수는 엘레나에게 그 농담들은 정치적으로 올바르지 않다고 말했어요.",
+   "blank": "políticamente",
+   "src": "made"
   }
  ],
  "w|político": [
@@ -68643,6 +69219,22 @@
    "src": "made"
   }
  ],
+ "w|recital": [
+  {
+   "text": "Pablo salió antes de la comisaría para llegar al recital de piano de su hija.",
+   "en": "Pablo left the police station early to get to his daughter's piano recital.",
+   "ko": "파블로는 딸의 피아노 연주회에 가려고 경찰서에서 일찍 나왔어요.",
+   "blank": "recital",
+   "src": "made"
+  },
+  {
+   "text": "Elena encontró un disco con la grabación de un recital de guitarra de los años sesenta.",
+   "en": "Elena found a record with a recording of a guitar recital from the sixties.",
+   "ko": "엘레나는 육십 년대 기타 연주회 녹음이 담긴 음반을 찾았어요.",
+   "blank": "recital",
+   "src": "made"
+  }
+ ],
  "w|recitar": [
   {
    "text": "Javier puede recitar de memoria los nombres de cien medicamentos.",
@@ -68718,6 +69310,22 @@
    "en": "Elena wants to recruit an assistant who knows about electronics.",
    "ko": "엘레나는 전자 기기를 아는 조수를 구하고 싶어 해요.",
    "blank": "reclutar",
+   "src": "made"
+  }
+ ],
+ "w|recobrar": [
+  {
+   "text": "La señora del bolso robado tardó un rato en recobrar la calma, y Pablo le trajo un vaso de agua.",
+   "en": "The lady whose bag was stolen took a while to recover her calm, and Pablo brought her a glass of water.",
+   "ko": "가방을 도난당한 아주머니는 진정하는 데 시간이 걸려서 파블로가 물 한 잔을 가져다드렸어요.",
+   "blank": "recobrar",
+   "src": "made"
+  },
+  {
+   "text": "Elena consiguió recobrar el dinero de una radio que no funcionaba.",
+   "en": "Elena managed to get back the money for a radio that didn't work.",
+   "ko": "엘레나는 작동하지 않는 라디오 값을 돌려받았어요.",
+   "blank": "recobrar",
    "src": "made"
   }
  ],
@@ -71366,6 +71974,22 @@
    "en": "In a church along the way, Marta saw an old painting of the Resurrection.",
    "ko": "마르타는 길가 교회에서 부활을 그린 오래된 그림을 봤어요.",
    "blank": "resurrección",
+   "src": "made"
+  }
+ ],
+ "w|retar": [
+  {
+   "text": "Un compañero quiso retar a Pablo a una carrera en la pista de atletismo.",
+   "en": "A colleague wanted to challenge Pablo to a race on the running track.",
+   "ko": "동료 한 명이 육상 트랙에서 파블로에게 달리기 시합을 하자고 도전했어요.",
+   "blank": "retar",
+   "src": "made"
+  },
+  {
+   "text": "El vendedor de al lado quiso retar a Elena a vender más que él antes del mediodía.",
+   "en": "The seller next door wanted to challenge Elena to sell more than him before noon.",
+   "ko": "옆 가게 상인이 정오 전에 누가 더 많이 파나 엘레나에게 내기를 걸었어요.",
+   "blank": "retar",
    "src": "made"
   }
  ],
@@ -75752,6 +76376,22 @@
    "en": "With her first role, Ana suffered from impostor syndrome.",
    "ko": "첫 배역을 맡았을 때 아나는 가면 증후군에 시달렸어요.",
    "blank": "síndrome",
+   "src": "made"
+  }
+ ],
+ "w|singular": [
+  {
+   "text": "Pablo tiene un talento singular para recordar caras.",
+   "en": "Pablo has a remarkable talent for remembering faces.",
+   "ko": "파블로는 얼굴을 기억하는 데 남다른 재능이 있어요.",
+   "blank": "singular",
+   "src": "made"
+  },
+  {
+   "text": "Elena encontró un reloj de bolsillo de forma singular, con los números al revés.",
+   "en": "Elena found a pocket watch of an unusual shape, with the numbers backwards.",
+   "ko": "엘레나는 숫자가 거꾸로 적힌 독특한 모양의 회중시계를 찾았어요.",
+   "blank": "singular",
    "src": "made"
   }
  ],
