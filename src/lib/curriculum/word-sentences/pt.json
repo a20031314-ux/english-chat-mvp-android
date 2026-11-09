@@ -1433,6 +1433,22 @@
    "src": "made"
   }
  ],
+ "w|acolher": [
+  {
+   "text": "O Pedro decidiu acolher o gato de rua, e a irmã achou que era dela.",
+   "en": "Pedro decided to take in the stray cat, and his sister thought it was hers.",
+   "ko": "페드루가 길고양이를 들이기로 했는데 누나는 자기 고양이인 줄 알았어요.",
+   "blank": "acolher",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz gosta de acolher os turistas perdidos na trilha.",
+   "en": "Beatriz likes to welcome tourists who get lost on the trail.",
+   "ko": "베아트리스는 산길에서 길 잃은 관광객들을 맞아 주길 좋아해요.",
+   "blank": "acolher",
+   "src": "made"
+  }
+ ],
  "w|acomodar": [
   {
    "text": "O Pedro reclamou que a redação é pequena demais para acomodar a equipe nova.",
@@ -1931,6 +1947,22 @@
    "en": "I hate goodbyes.",
    "ko": "작별 인사는 싫어.",
    "blank": "adeus"
+  }
+ ],
+ "w|adiamento": [
+  {
+   "text": "O Pedro avisou do adiamento do jantar, mas a mensagem não chegou à irmã.",
+   "en": "Pedro sent word that dinner was postponed, but the message didn't reach his sister.",
+   "ko": "페드루가 저녁 약속이 미뤄졌다고 알렸는데 그 문자가 누나에게 안 갔어요.",
+   "blank": "adiamento",
+   "src": "made"
+  },
+  {
+   "text": "A chuva causou o adiamento da festa junina da vila, para tristeza da Beatriz.",
+   "en": "The rain caused the village June festival to be postponed, to Beatriz's sadness.",
+   "ko": "비 때문에 마을 유월 축제가 미뤄져서 베아트리스가 아쉬워했어요.",
+   "blank": "adiamento",
+   "src": "made"
   }
  ],
  "w|adiantado": [
@@ -3208,6 +3240,22 @@
    "en": "Rita buys flour from a cooperative tied to family farming.",
    "ko": "리타는 가족농과 연계된 협동조합에서 밀가루를 사요.",
    "blank": "agricultura",
+   "src": "made"
+  }
+ ],
+ "w|agrotóxico": [
+  {
+   "text": "O Pedro achou que a irmã comprou fruta com agrotóxico, mas era orgânica.",
+   "en": "Pedro thought his sister bought fruit with pesticide, but it was organic.",
+   "ko": "페드루는 누나가 농약 친 과일을 산 줄 알았는데 유기농이었어요.",
+   "blank": "agrotóxico",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz não usa agrotóxico na horta e combate as pragas com cinza.",
+   "en": "Beatriz doesn't use pesticide in her garden and fights pests with ash.",
+   "ko": "베아트리스는 텃밭에 농약을 쓰지 않고 재로 벌레를 막아요.",
+   "blank": "agrotóxico",
    "src": "made"
   }
  ],
@@ -11087,6 +11135,22 @@
    "src": "made"
   }
  ],
+ "w|autoestima": [
+  {
+   "text": "O comentário do Pedro sobre o corte de cabelo abalou a autoestima da irmã.",
+   "en": "Pedro's comment about the haircut shook his sister's self-esteem.",
+   "ko": "머리 모양에 대한 페드루의 한마디가 누나의 자존감을 흔들었어요.",
+   "blank": "autoestima",
+   "src": "made"
+  },
+  {
+   "text": "O grupo de dança da vila melhorou a autoestima da Beatriz.",
+   "en": "The village dance group boosted Beatriz's self-esteem.",
+   "ko": "마을 춤 모임 덕분에 베아트리스의 자존감이 높아졌어요.",
+   "blank": "autoestima",
+   "src": "made"
+  }
+ ],
  "w|autógrafo": [
   {
    "text": "O Miguel pegou o autógrafo de um ex-jogador que estava na prefeitura.",
@@ -13227,6 +13291,22 @@
    "blank": "bebê"
   }
  ],
+ "w|bebedeira": [
+  {
+   "text": "A briga começou porque a irmã achou que o Pedro chegou tarde depois de uma bebedeira.",
+   "en": "The fight started because his sister thought Pedro came home late after a drinking binge.",
+   "ko": "누나가 페드루가 술판을 벌이고 늦게 들어온 줄 알아서 싸움이 시작됐어요.",
+   "blank": "bebedeira",
+   "src": "made"
+  },
+  {
+   "text": "Na festa da colheita, a Beatriz cuidou de um primo depois da bebedeira.",
+   "en": "At the harvest festival, Beatriz looked after a cousin after his drinking binge.",
+   "ko": "추수 축제에서 베아트리스는 술에 잔뜩 취한 사촌을 돌봤어요.",
+   "blank": "bebedeira",
+   "src": "made"
+  }
+ ],
  "w|beber": [
   {
    "text": "Quero beber alguma coisa.",
@@ -13377,6 +13457,22 @@
    "src": "made"
   }
  ],
+ "w|beliche": [
+  {
+   "text": "Quando crianças, o Pedro e o irmão dividiam um beliche e brigavam pela cama de cima.",
+   "en": "As kids, Pedro and his brother shared a bunk bed and fought over the top bunk.",
+   "ko": "어릴 때 페드루와 동생은 이층 침대를 같이 쓰며 위 칸을 두고 다퉜어요.",
+   "blank": "beliche",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz montou um beliche no sótão para os netos que vêm no inverno.",
+   "en": "Beatriz set up a bunk bed in the attic for the grandchildren who come in winter.",
+   "ko": "베아트리스는 겨울에 오는 손주들을 위해 다락에 이층 침대를 놓았어요.",
+   "blank": "beliche",
+   "src": "made"
+  }
+ ],
  "w|belo": [
   {
    "text": "O parque é belo de manhã.",
@@ -13403,6 +13499,22 @@
    "en": "That's fine like that.",
    "ko": "그렇게 해도 괜찮아.",
    "blank": "bem"
+  }
+ ],
+ "w|bem-estar": [
+  {
+   "text": "O Pedro só queria o bem-estar da irmã quando escondeu a notícia.",
+   "en": "Pedro only wanted his sister's well-being when he hid the news.",
+   "ko": "페드루는 누나가 잘 지내길 바라서 그 소식을 숨겼을 뿐이에요.",
+   "blank": "bem-estar",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz montou um espaço de bem-estar com ioga e chá na vila.",
+   "en": "Beatriz set up a wellness space with yoga and tea in the village.",
+   "ko": "베아트리스는 마을에 요가와 차를 즐기는 쉼터를 열었어요.",
+   "blank": "bem-estar",
+   "src": "made"
   }
  ],
  "w|bênção": [
@@ -22531,6 +22643,22 @@
    "src": "made"
   }
  ],
+ "w|cólera": [
+  {
+   "text": "A irmã do Pedro gritou com cólera ao achar o diário dela aberto na mesa.",
+   "en": "Pedro's sister shouted in anger when she found her diary open on the table.",
+   "ko": "페드루의 누나는 자기 일기장이 탁자 위에 펼쳐져 있는 걸 보고 화가 나서 소리쳤어요.",
+   "blank": "cólera",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz leu que a cólera matou muita gente na vila no século dezenove.",
+   "en": "Beatriz read that cholera killed many people in the village in the nineteenth century.",
+   "ko": "베아트리스는 십구 세기에 콜레라로 마을 사람이 많이 죽었다는 글을 읽었어요.",
+   "blank": "cólera",
+   "src": "made"
+  }
+ ],
  "w|colesterol": [
   {
    "text": "A dentista disse ao Bruno que doce em excesso também aumenta o colesterol.",
@@ -25649,6 +25777,22 @@
    "src": "made"
   }
  ],
+ "w|conservação": [
+  {
+   "text": "A irmã do Pedro ficou brava porque ele jogou fora o pote de conservação de pimenta.",
+   "en": "Pedro's sister got mad because he threw away the jar of preserved peppers.",
+   "ko": "페드루가 고추 절임 병을 버려서 누나가 화를 냈어요.",
+   "blank": "conservação",
+   "src": "made"
+  },
+  {
+   "text": "A igreja da vila passou por obras de conservação, e a Beatriz ajudou a pintar.",
+   "en": "The village church underwent conservation work, and Beatriz helped paint.",
+   "ko": "마을 교회가 보수 공사를 해서 베아트리스가 칠하는 걸 도왔어요.",
+   "blank": "conservação",
+   "src": "made"
+  }
+ ],
  "w|conservador": [
   {
    "text": "O dono do jornal tem um gosto conservador para a capa, e o Gabriel queria algo mais ousado.",
@@ -26155,6 +26299,22 @@
    "src": "made"
   }
  ],
+ "w|consumismo": [
+  {
+   "text": "A irmã acusou o Pedro de consumismo por causa das caixas de compras na porta.",
+   "en": "His sister accused Pedro of consumerism because of the shopping boxes at the door.",
+   "ko": "문 앞에 쌓인 택배 상자 때문에 누나는 페드루가 소비에 빠졌다고 나무랐어요.",
+   "blank": "consumismo",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz se mudou para a vila para fugir do consumismo da cidade grande.",
+   "en": "Beatriz moved to the village to escape the consumerism of the big city.",
+   "ko": "베아트리스는 대도시의 소비주의에서 벗어나려고 마을로 이사했어요.",
+   "blank": "consumismo",
+   "src": "made"
+  }
+ ],
  "w|consumo": [
   {
    "text": "O Pedro reduziu o consumo de açúcar desde que começou a treinar.",
@@ -26528,6 +26688,22 @@
    "en": "The two friends' old dream was to visit every continent together.",
    "ko": "둘의 오래된 꿈은 함께 모든 대륙에 가 보는 거였어요.",
    "blank": "continente",
+   "src": "made"
+  }
+ ],
+ "w|continuamente": [
+  {
+   "text": "O irmão mais novo do Pedro mandava mensagem continuamente para saber se tinham feito as pazes.",
+   "en": "Pedro's younger brother kept texting to find out if they had made up.",
+   "ko": "페드루의 동생은 둘이 화해했는지 알려고 계속 문자를 보냈어요.",
+   "blank": "continuamente",
+   "src": "made"
+  },
+  {
+   "text": "A neblina desce continuamente pela serra, e a Beatriz acende o fogão a lenha.",
+   "en": "The mist keeps rolling down the mountains, and Beatriz lights the wood stove.",
+   "ko": "안개가 산에서 쉼 없이 내려와서 베아트리스는 장작 난로에 불을 지펴요.",
+   "blank": "continuamente",
    "src": "made"
   }
  ],
@@ -38741,6 +38917,22 @@
    "src": "made"
   }
  ],
+ "w|empolgação": [
+  {
+   "text": "A empolgação do Pedro com a viagem acabou quando a irmã cancelou.",
+   "en": "Pedro's excitement about the trip ended when his sister canceled.",
+   "ko": "누나가 취소하자 여행에 들떠 있던 페드루의 기분이 꺾였어요.",
+   "blank": "empolgação",
+   "src": "made"
+  },
+  {
+   "text": "A empolgação das crianças com a primeira neve contagiou a Beatriz.",
+   "en": "The children's excitement about the first snow rubbed off on Beatriz.",
+   "ko": "첫눈에 들뜬 아이들 덕분에 베아트리스도 신이 났어요.",
+   "blank": "empolgação",
+   "src": "made"
+  }
+ ],
  "w|empolgado": [
   {
    "text": "A Clara estava empolgada para contar uma novidade, mas o João nem quis ouvir.",
@@ -42010,6 +42202,22 @@
    "en": "After the coding marathon, Sofia was exhausted and slept on the sofa.",
    "ko": "밤샘 코딩을 마친 소피아는 녹초가 돼서 소파에서 잠들었어요.",
    "blank": "esgotada",
+   "src": "made"
+  }
+ ],
+ "w|esgotamento": [
+  {
+   "text": "O Pedro escondeu da irmã o esgotamento que sentia no trabalho.",
+   "en": "Pedro hid from his sister the burnout he was feeling at work.",
+   "ko": "페드루는 일 때문에 지쳐 있다는 걸 누나에게 숨겼어요.",
+   "blank": "esgotamento",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz chegou à vila em esgotamento total depois de anos no banco.",
+   "en": "Beatriz arrived in the village completely burned out after years at the bank.",
+   "ko": "베아트리스는 은행에서 몇 년을 일하고 완전히 지친 채 마을에 왔어요.",
+   "blank": "esgotamento",
    "src": "made"
   }
  ],
@@ -45875,6 +46083,22 @@
    "ko": "우리 아빠는 가끔 해외에 가세요.",
    "blank": "exterior",
    "src": "tatoeba:4290235/KimiP en:251692/CK"
+  }
+ ],
+ "w|exterminador": [
+  {
+   "text": "O Pedro chamou um exterminador de cupins sem avisar a irmã, e ela se assustou.",
+   "en": "Pedro called a termite exterminator without telling his sister, and she got scared.",
+   "ko": "페드루가 누나에게 말도 없이 흰개미 방제 업자를 불러서 누나가 깜짝 놀랐어요.",
+   "blank": "exterminador",
+   "src": "made"
+  },
+  {
+   "text": "O gato da Beatriz é o melhor exterminador de ratos da vila.",
+   "en": "Beatriz's cat is the best rat catcher in the village.",
+   "ko": "베아트리스의 고양이는 마을 최고의 쥐잡이예요.",
+   "blank": "exterminador",
+   "src": "made"
   }
  ],
  "w|exterminar": [
@@ -50328,6 +50552,22 @@
    "en": "To prepare for the role, the actor began frequenting a fishermen's bar.",
    "ko": "배역을 준비하려고 그 배우는 어부들이 가는 술집에 드나들기 시작했어요.",
    "blank": "frequentar",
+   "src": "made"
+  }
+ ],
+ "w|frequente": [
+  {
+   "text": "As brigas entre o Pedro e a irmã são frequentes, mas duram pouco.",
+   "en": "The fights between Pedro and his sister are frequent, but short-lived.",
+   "ko": "페드루와 누나는 자주 다투지만 금방 풀려요.",
+   "blank": "frequentes",
+   "src": "made"
+  },
+  {
+   "text": "A falta de luz é frequente na vila da Beatriz durante as tempestades.",
+   "en": "Power outages are frequent in Beatriz's village during storms.",
+   "ko": "폭풍이 오면 베아트리스네 마을은 정전이 잦아요.",
+   "blank": "frequente",
    "src": "made"
   }
  ],
@@ -56333,6 +56573,22 @@
    "src": "made"
   }
  ],
+ "w|impaciência": [
+  {
+   "text": "A impaciência do Pedro piorou o mal-entendido com a irmã.",
+   "en": "Pedro's impatience made the misunderstanding with his sister worse.",
+   "ko": "페드루가 조급하게 굴어서 누나와의 오해가 더 커졌어요.",
+   "blank": "impaciência",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz aprendeu a controlar a impaciência esperando o único ônibus do dia.",
+   "en": "Beatriz learned to control her impatience waiting for the only bus of the day.",
+   "ko": "베아트리스는 하루 한 대뿐인 버스를 기다리며 조급함을 다스리는 법을 배웠어요.",
+   "blank": "impaciência",
+   "src": "made"
+  }
+ ],
  "w|impaciente": [
   {
    "text": "Quando a linha para, o Pedro fica impaciente e começa a andar de um lado para o outro.",
@@ -58203,6 +58459,22 @@
    "src": "made"
   }
  ],
+ "w|inflação": [
+  {
+   "text": "O Pedro e a irmã discutiram sobre quem deve pagar mais com a inflação.",
+   "en": "Pedro and his sister argued about who should pay more with inflation.",
+   "ko": "페드루와 누나는 물가가 오른 만큼 누가 더 내야 하는지 다퉜어요.",
+   "blank": "inflação",
+   "src": "made"
+  },
+  {
+   "text": "Com a inflação, a Beatriz passou a plantar mais na horta.",
+   "en": "With inflation, Beatriz started growing more in her vegetable garden.",
+   "ko": "물가가 오르자 베아트리스는 텃밭에 더 많이 심기 시작했어요.",
+   "blank": "inflação",
+   "src": "made"
+  }
+ ],
  "w|influência": [
   {
    "text": "Não dirija sob influência do álcool.",
@@ -58374,6 +58646,22 @@
    "en": "Thinking the sea was calm just from its color was naive of Mariana.",
    "ko": "색깔만 보고 바다가 잔잔하다고 생각한 건 마리아나가 순진했어요.",
    "blank": "ingênuo",
+   "src": "made"
+  }
+ ],
+ "w|ingerir": [
+  {
+   "text": "A irmã achou que o Pedro tinha comido o bolo, mas ele não costuma ingerir açúcar.",
+   "en": "His sister thought Pedro had eaten the cake, but he doesn't usually consume sugar.",
+   "ko": "누나는 페드루가 케이크를 먹은 줄 알았지만 그는 원래 설탕을 잘 안 먹어요.",
+   "blank": "ingerir",
+   "src": "made"
+  },
+  {
+   "text": "O médico da vila mandou a Beatriz ingerir mais água no verão.",
+   "en": "The village doctor told Beatriz to drink more water in summer.",
+   "ko": "마을 의사는 베아트리스에게 여름엔 물을 더 마시라고 했어요.",
+   "blank": "ingerir",
    "src": "made"
   }
  ],
@@ -61217,6 +61505,22 @@
    "ko": "우리한테 정원만 있다면!",
    "blank": "jardim",
    "src": "tatoeba:405319/brauliobezerra en:23576/adamtrousers"
+  }
+ ],
+ "w|jardinagem": [
+  {
+   "text": "O Pedro cuidou da jardinagem da irmã enquanto ela viajava, mas regou a planta errada.",
+   "en": "Pedro did his sister's gardening while she was traveling, but watered the wrong plant.",
+   "ko": "페드루는 누나가 여행하는 동안 정원을 돌봤는데 엉뚱한 화분에 물을 줬어요.",
+   "blank": "jardinagem",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz ensina jardinagem às crianças da escola da vila.",
+   "en": "Beatriz teaches gardening to the children at the village school.",
+   "ko": "베아트리스는 마을 학교 아이들에게 정원 가꾸기를 가르쳐요.",
+   "blank": "jardinagem",
+   "src": "made"
   }
  ],
  "w|jardineiro": [
@@ -64289,6 +64593,22 @@
    "src": "tatoeba:7910984/arivkai en:7241755/OsoHombre"
   }
  ],
+ "w|lisonjeado": [
+  {
+   "text": "O Pedro ficou lisonjeado quando a irmã pediu conselho a ele, e não ao pai.",
+   "en": "Pedro was flattered when his sister asked him for advice instead of their father.",
+   "ko": "누나가 아빠 대신 자기에게 조언을 구하자 페드루는 우쭐했어요.",
+   "blank": "lisonjeado",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz ficou lisonjeada quando a vila pediu a receita do bolo dela.",
+   "en": "Beatriz was flattered when the village asked for her cake recipe.",
+   "ko": "마을 사람들이 케이크 요리법을 물어 오자 베아트리스는 으쓱했어요.",
+   "blank": "lisonjeada",
+   "src": "made"
+  }
+ ],
  "w|lisonjear": [
   {
    "text": "O João não quis lisonjear o chefe, mas elogiou a apresentação dele.",
@@ -66405,6 +66725,22 @@
    "src": "made"
   }
  ],
+ "w|manicure": [
+  {
+   "text": "A irmã do Pedro achou que ele tinha esquecido a hora da manicure dela.",
+   "en": "Pedro's sister thought he had forgotten her manicure appointment.",
+   "ko": "페드루의 누나는 그가 자기 매니큐어 예약을 잊은 줄 알았어요.",
+   "blank": "manicure",
+   "src": "made"
+  },
+  {
+   "text": "A única manicure da vila atende na sala da casa da Beatriz às sextas.",
+   "en": "The village's only manicurist works in Beatriz's living room on Fridays.",
+   "ko": "마을에 하나뿐인 네일 관리사는 금요일마다 베아트리스네 거실에서 손님을 받아요.",
+   "blank": "manicure",
+   "src": "made"
+  }
+ ],
  "w|manifestação": [
   {
    "text": "Uma manifestação na praça atrasou a chegada do público ao teatro.",
@@ -66592,6 +66928,22 @@
    "en": "The concert time was kept despite the rain.",
    "ko": "비가 왔지만 공연 시간은 그대로였어요.",
    "blank": "mantido",
+   "src": "made"
+  }
+ ],
+ "w|mantimentos": [
+  {
+   "text": "O Pedro comprou os mantimentos da semana, mas a irmã tinha comprado tudo também.",
+   "en": "Pedro bought the week's groceries, but his sister had bought everything too.",
+   "ko": "페드루가 일주일 치 장을 봤는데 누나도 똑같이 다 사 왔어요.",
+   "blank": "mantimentos",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz desce à cidade uma vez por mês para comprar mantimentos.",
+   "en": "Beatriz goes down to town once a month to buy provisions.",
+   "ko": "베아트리스는 한 달에 한 번 시내로 내려가 식료품을 사요.",
+   "blank": "mantimentos",
    "src": "made"
   }
  ],
@@ -73201,6 +73553,22 @@
    "blank": "Nosso"
   }
  ],
+ "w|nostalgia": [
+  {
+   "text": "Depois da briga, o Pedro sentiu nostalgia da época em que os irmãos dividiam o quarto.",
+   "en": "After the fight, Pedro felt nostalgic for the time when the siblings shared a room.",
+   "ko": "싸운 뒤 페드루는 남매가 한방을 쓰던 시절이 그리워졌어요.",
+   "blank": "nostalgia",
+   "src": "made"
+  },
+  {
+   "text": "O cheiro de pinheiro traz à Beatriz uma nostalgia boa.",
+   "en": "The smell of pine brings Beatriz a pleasant nostalgia.",
+   "ko": "소나무 향을 맡으면 베아트리스는 기분 좋은 향수에 젖어요.",
+   "blank": "nostalgia",
+   "src": "made"
+  }
+ ],
  "w|nota": [
   {
    "text": "Será que eu tirei uma boa nota?",
@@ -73665,6 +74033,22 @@
    "en": "I never eat that.",
    "ko": "나는 그건 절대 안 먹어.",
    "blank": "nunca"
+  }
+ ],
+ "w|núpcias": [
+  {
+   "text": "A irmã do Pedro achou que ele não ia às núpcias dela, mas era só um mal-entendido.",
+   "en": "Pedro's sister thought he wasn't coming to her wedding, but it was just a misunderstanding.",
+   "ko": "페드루의 누나는 그가 결혼식에 안 오는 줄 알았지만 그냥 오해였어요.",
+   "blank": "núpcias",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz guarda o vestido que a avó usou nas núpcias, celebradas na igreja da vila.",
+   "en": "Beatriz keeps the dress her grandmother wore at her wedding, held in the village church.",
+   "ko": "베아트리스는 할머니가 마을 교회에서 혼례를 올릴 때 입은 드레스를 간직하고 있어요.",
+   "blank": "núpcias",
+   "src": "made"
   }
  ],
  "w|nutriente": [
@@ -76767,6 +77151,22 @@
    "src": "made"
   }
  ],
+ "w|papelão": [
+  {
+   "text": "O Pedro jogou fora uma caixa de papelão que a irmã guardava cheia de cartas.",
+   "en": "Pedro threw out a cardboard box his sister kept full of letters.",
+   "ko": "페드루가 누나가 편지를 가득 모아 둔 종이 상자를 버렸어요.",
+   "blank": "papelão",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz forrou o galinheiro com papelão para proteger os pintinhos do frio.",
+   "en": "Beatriz lined the henhouse with cardboard to protect the chicks from the cold.",
+   "ko": "베아트리스는 병아리들이 춥지 않게 닭장 바닥에 골판지를 깔았어요.",
+   "blank": "papelão",
+   "src": "made"
+  }
+ ],
  "w|papo": [
   {
    "text": "Sami estava batendo papo no meio da noite.",
@@ -77121,6 +77521,22 @@
    "blank": "parceiro"
   }
  ],
+ "w|parcela": [
+  {
+   "text": "A irmã do Pedro pagou uma parcela do sofá achando que ele tinha esquecido.",
+   "en": "Pedro's sister paid an installment on the sofa, thinking he had forgotten.",
+   "ko": "페드루의 누나는 그가 잊은 줄 알고 소파 할부금을 냈어요.",
+   "blank": "parcela",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz paga a geladeira nova em parcela pequena todo mês.",
+   "en": "Beatriz pays for the new fridge in small monthly installments.",
+   "ko": "베아트리스는 새 냉장고 값을 매달 조금씩 할부로 내요.",
+   "blank": "parcela",
+   "src": "made"
+  }
+ ],
  "w|parceria": [
   {
    "text": "A empresa do Gabriel fechou uma parceria com uma startup de logística.",
@@ -77197,6 +77613,22 @@
    "ko": "네 문제도 내 거랑 비슷하네.",
    "blank": "parecido",
    "src": "tatoeba:752778/brauliobezerra en:16930/CK"
+  }
+ ],
+ "w|paredão": [
+  {
+   "text": "A casa dos irmãos do Pedro fica atrás de um paredão de pedra.",
+   "en": "The house where Pedro and his siblings live is behind a big stone wall.",
+   "ko": "페드루 남매가 사는 집은 커다란 돌담 뒤에 있어요.",
+   "blank": "paredão",
+   "src": "made"
+  },
+  {
+   "text": "A vila da Beatriz fica ao pé de um paredão de rocha.",
+   "en": "Beatriz's village sits at the foot of a huge rock wall.",
+   "ko": "베아트리스의 마을은 거대한 바위 절벽 아래에 있어요.",
+   "blank": "paredão",
+   "src": "made"
   }
  ],
  "w|parede": [
@@ -83629,6 +84061,22 @@
    "en": "The gift got here today.",
    "ko": "선물이 오늘 도착했어.",
    "blank": "presente"
+  }
+ ],
+ "w|preservação": [
+  {
+   "text": "O Pedro e a irmã discordam sobre a preservação da casa antiga dos avós.",
+   "en": "Pedro and his sister disagree about preserving their grandparents' old house.",
+   "ko": "페드루와 누나는 조부모님의 옛집을 보존하는 문제로 의견이 달라요.",
+   "blank": "preservação",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz participa de um grupo pela preservação das nascentes da serra.",
+   "en": "Beatriz is part of a group working to preserve the mountain springs.",
+   "ko": "베아트리스는 산의 샘을 보존하는 모임에 참여해요.",
+   "blank": "preservação",
+   "src": "made"
   }
  ],
  "w|preservar": [
@@ -91129,6 +91577,22 @@
    "src": "made"
   }
  ],
+ "w|residir": [
+  {
+   "text": "O Pedro e a irmã vão residir juntos até ela terminar a faculdade.",
+   "en": "Pedro and his sister will live together until she finishes college.",
+   "ko": "페드루와 누나는 누나가 대학을 마칠 때까지 같이 살 거예요.",
+   "blank": "residir",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz decidiu residir na vila depois de se aposentar.",
+   "en": "Beatriz decided to live in the village after retiring.",
+   "ko": "베아트리스는 은퇴한 뒤 마을에 살기로 했어요.",
+   "blank": "residir",
+   "src": "made"
+  }
+ ],
  "w|resíduo": [
   {
    "text": "O Miguel ajudou a recolher resíduo de plástico na areia.",
@@ -94593,6 +95057,22 @@
    "en": "Bless you, what a loud sneeze.",
    "ko": "아이고, 재채기 세다.",
    "blank": "Saúde"
+  }
+ ],
+ "w|saúde mental": [
+  {
+   "text": "Depois da briga, o Pedro e a irmã conversaram sobre saúde mental.",
+   "en": "After the fight, Pedro and his sister talked about mental health.",
+   "ko": "싸운 뒤 페드루와 누나는 정신 건강에 대해 이야기를 나눴어요.",
+   "blank": "saúde mental",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz diz que o silêncio da serra fez bem à saúde mental dela.",
+   "en": "Beatriz says the quiet of the mountains has been good for her mental health.",
+   "ko": "베아트리스는 산의 고요함이 정신 건강에 좋았다고 해요.",
+   "blank": "saúde mental",
+   "src": "made"
   }
  ],
  "w|sauna": [
@@ -98943,6 +99423,22 @@
    "src": "tatoeba:3660134/ajdavidl en:2736016/Zaghawa"
   }
  ],
+ "w|suculento": [
+  {
+   "text": "Para fazer as pazes, o Pedro preparou um frango suculento para a irmã.",
+   "en": "To make peace, Pedro made a juicy chicken for his sister.",
+   "ko": "화해하려고 페드루는 누나에게 촉촉한 닭 요리를 해 줬어요.",
+   "blank": "suculento",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz colheu um pêssego suculento no pomar do vizinho.",
+   "en": "Beatriz picked a juicy peach in the neighbor's orchard.",
+   "ko": "베아트리스는 이웃 과수원에서 즙이 많은 복숭아를 땄어요.",
+   "blank": "suculento",
+   "src": "made"
+  }
+ ],
  "w|sudeste": [
   {
    "text": "A empresa do Tiago tem muitos clientes no sudeste de Minas Gerais.",
@@ -101653,6 +102149,22 @@
    "ko": "넥타이가 제 양복이랑 안 어울려요.",
    "blank": "terno",
    "src": "tatoeba:1301836/alexmarcelo en:60725/CK"
+  }
+ ],
+ "w|ternura": [
+  {
+   "text": "O Pedro olhou a irmã com ternura quando ela pediu desculpas.",
+   "en": "Pedro looked at his sister tenderly when she apologized.",
+   "ko": "누나가 사과하자 페드루는 다정한 눈으로 바라봤어요.",
+   "blank": "ternura",
+   "src": "made"
+  },
+  {
+   "text": "A Beatriz fala com ternura dos invernos da infância na serra.",
+   "en": "Beatriz speaks tenderly of the winters of her childhood in the mountains.",
+   "ko": "베아트리스는 산에서 보낸 어린 시절 겨울을 다정하게 이야기해요.",
+   "blank": "ternura",
+   "src": "made"
   }
  ],
  "w|terra": [
@@ -108558,6 +109070,22 @@
    "en": "Mariana's inn has a balcony facing the sea.",
    "ko": "마리아나가 묵는 민박에는 바다를 향한 발코니가 있어요.",
    "blank": "virada",
+   "src": "made"
+  }
+ ],
+ "w|viral": [
+  {
+   "text": "O Pedro faltou ao almoço por causa de uma infecção viral, e a irmã achou que era desculpa.",
+   "en": "Pedro missed lunch because of a viral infection, and his sister thought it was an excuse.",
+   "ko": "페드루가 바이러스 감염으로 점심 모임에 빠졌는데 누나는 핑계라고 생각했어요.",
+   "blank": "viral",
+   "src": "made"
+  },
+  {
+   "text": "Uma gripe viral passou por toda a vila, e a Beatriz fez sopa para os vizinhos.",
+   "en": "A viral flu went through the whole village, and Beatriz made soup for the neighbors.",
+   "ko": "바이러스성 독감이 온 마을을 돌자 베아트리스는 이웃들에게 수프를 끓여 줬어요.",
+   "blank": "viral",
    "src": "made"
   }
  ],

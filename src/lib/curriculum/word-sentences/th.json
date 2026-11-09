@@ -1753,6 +1753,22 @@
    "src": "made"
   }
  ],
+ "w|กลางคน": [
+  {
+   "text": "หัวหน้าทีมเป็นผู้ชายวัยกลางคนที่พูดน้อยแต่ใจดี",
+   "en": "The team leader is a middle-aged man who doesn't say much but is kind.",
+   "ko": "팀장은 말수는 적지만 친절한 중년 남자예요.",
+   "blank": "กลางคน",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าหลักของแอปเป็นคนวัยกลางคนที่อยากเริ่มออกกำลัง",
+   "en": "The app's main users are middle-aged people who want to start exercising.",
+   "ko": "이 앱의 주 사용자는 운동을 시작하려는 중년층이에요.",
+   "blank": "กลางคน",
+   "src": "made"
+  }
+ ],
  "w|กลางคืน": [
   {
    "text": "กลางคืนเงียบดี",
@@ -6559,6 +6575,22 @@
    "blank": "ขยำ"
   }
  ],
+ "w|ขรึม": [
+  {
+   "text": "ตอนแรกอนันต์คิดว่าพรเป็นคนขรึม แต่จริงแล้วตลกมาก",
+   "en": "At first Anan thought Phon was the serious type, but she's actually really funny.",
+   "ko": "처음에 아난은 폰이 무뚝뚝한 사람인 줄 알았지만 사실은 아주 재밌어요.",
+   "blank": "ขรึม",
+   "src": "made"
+  },
+  {
+   "text": "นักลงทุนคนนั้นหน้าขรึมตลอดการนำเสนอของปราณี",
+   "en": "That investor kept a stern face throughout Pranee's pitch.",
+   "ko": "그 투자자는 프라니가 발표하는 내내 굳은 표정이었어요.",
+   "blank": "ขรึม",
+   "src": "made"
+  }
+ ],
  "w|ขรุขระ": [
   {
    "text": "ถนนสายนี้ขรุขระมาก",
@@ -10137,6 +10169,22 @@
    "blank": "ค้นพบ"
   }
  ],
+ "w|คนรวย": [
+  {
+   "text": "พรไม่ได้เป็นคนรวยแต่ชอบเลี้ยงขนมเพื่อนร่วมงาน",
+   "en": "Phon isn't rich, but she likes treating her coworkers to snacks.",
+   "ko": "폰은 부자는 아니지만 동료들에게 간식 사는 걸 좋아해요.",
+   "blank": "คนรวย",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีไม่ได้ทำแอปนี้ให้คนรวย แต่ให้ทุกคนใช้ฟรี",
+   "en": "Pranee didn't make this app for rich people but for everyone to use for free.",
+   "ko": "프라니는 이 앱을 부자들을 위해서가 아니라 모두가 무료로 쓰라고 만들었어요.",
+   "blank": "คนรวย",
+   "src": "made"
+  }
+ ],
  "w|คนรัก": [
   {
    "text": "เธอคือคนรักของฉัน",
@@ -10299,6 +10347,22 @@
    "en": "I want to date someone sincere.",
    "ko": "진심인 사람과 사귀고 싶어.",
    "blank": "คบ"
+  }
+ ],
+ "w|คบหา": [
+  {
+   "text": "พรบอกว่าจะคบหาใครก็ดูที่ความจริงใจก่อน",
+   "en": "Phon says that whoever she befriends, she looks at their sincerity first.",
+   "ko": "폰은 누구를 사귀든 먼저 진심을 본다고 해요.",
+   "blank": "คบหา",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีคบหากับคนในวงการมานานจนได้หุ้นส่วนที่ดี",
+   "en": "Pranee has kept up friendships in the industry for years, which brought her good partners.",
+   "ko": "프라니는 업계 사람들과 오래 친분을 쌓아 좋은 동업자를 얻었어요.",
+   "blank": "คบหา",
+   "src": "made"
   }
  ],
  "w|คม": [
@@ -17979,6 +18043,38 @@
    "src": "made"
   }
  ],
+ "w|จวน": [
+  {
+   "text": "จวนจะเลิกงานแล้ว พรยังนั่งแก้รายงานไม่เสร็จ",
+   "en": "It's nearly quitting time, and Phon still hasn't finished revising the report.",
+   "ko": "퇴근 시간이 다 됐는데 폰은 아직 보고서 수정을 못 끝냈어요.",
+   "blank": "จวน",
+   "src": "made"
+  },
+  {
+   "text": "จวนถึงวันเปิดตัวแอป ทั้งทีมนอนที่ออฟฟิศกันหลายคืน",
+   "en": "With the app launch nearly here, the whole team slept at the office for several nights.",
+   "ko": "앱 출시일이 다가오자 팀 전원이 며칠 밤을 사무실에서 잤어요.",
+   "blank": "จวน",
+   "src": "made"
+  }
+ ],
+ "w|จ่อ": [
+  {
+   "text": "งานใหม่จ่อคิวรออยู่เต็มโต๊ะของพร",
+   "en": "New tasks were lined up and waiting all over Phon's desk.",
+   "ko": "폰의 책상에는 새 업무가 줄줄이 기다리고 있었어요.",
+   "blank": "จ่อ",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทใหญ่สองแห่งจ่อจะซื้อสตาร์ทอัพของปราณี",
+   "en": "Two big companies are poised to buy Pranee's startup.",
+   "ko": "대기업 두 곳이 프라니의 스타트업 인수를 앞두고 있어요.",
+   "blank": "จ่อ",
+   "src": "made"
+  }
+ ],
  "w|จอง": [
   {
    "text": "จองโต๊ะไว้แล้ว",
@@ -19940,6 +20036,22 @@
    "en": "Even after winning a prize, Suda is as modest as ever.",
    "ko": "상을 받았어도 수다는 여전히 겸손해요.",
    "blank": "เจียม",
+   "src": "made"
+  }
+ ],
+ "w|เจียระไน": [
+  {
+   "text": "พ่อของพรมีอาชีพเจียระไนพลอยที่จันทบุรี",
+   "en": "Phon's father cuts and polishes gemstones for a living in Chanthaburi.",
+   "ko": "폰의 아버지는 짠타부리에서 보석을 연마하는 일을 해요.",
+   "blank": "เจียระไน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกว่าไอเดียดิบต้องเจียระไนหลายรอบก่อนจะกลายเป็นสินค้า",
+   "en": "Pranee says a raw idea has to be polished many times before it becomes a product.",
+   "ko": "프라니는 날것의 아이디어는 여러 번 다듬어야 제품이 된다고 말해요.",
+   "blank": "เจียระไน",
    "src": "made"
   }
  ],
@@ -22121,6 +22233,22 @@
    "src": "made"
   }
  ],
+ "w|ชาวเขา": [
+  {
+   "text": "พรเคยเป็นครูอาสาสอนหนังสือเด็กชาวเขาที่ดอยสูง",
+   "en": "Phon used to be a volunteer teacher for hill tribe children high in the mountains.",
+   "ko": "폰은 높은 산에서 고산족 아이들을 가르치는 자원봉사 교사였어요.",
+   "blank": "ชาวเขา",
+   "src": "made"
+  },
+  {
+   "text": "แอปร้านค้าของปราณีช่วยชาวเขาขายผ้าทอได้ทั่วประเทศ",
+   "en": "Pranee's shopping app helps hill tribe people sell their woven fabric nationwide.",
+   "ko": "프라니의 쇼핑 앱은 고산족이 직물을 전국에 팔 수 있게 도와줘요.",
+   "blank": "ชาวเขา",
+   "src": "made"
+  }
+ ],
  "w|ชาวต่างชาติ": [
   {
    "text": "ชาวต่างชาติถามทางไปวัด",
@@ -22798,6 +22926,22 @@
    "en": "Pranee packed kitchen things, such as plates, bowls and pots, in separate boxes.",
    "ko": "쁘라니는 접시, 그릇, 냄비 같은 부엌 살림을 따로 상자에 담았어요.",
    "blank": "เช่น",
+   "src": "made"
+  }
+ ],
+ "w|เช่นเคย": [
+  {
+   "text": "เช้านี้อนันต์ซื้อกาแฟเผื่อพรเช่นเคย",
+   "en": "This morning Anan bought a coffee for Phon too, as usual.",
+   "ko": "오늘 아침에도 아난은 늘 그렇듯 폰 몫까지 커피를 샀어요.",
+   "blank": "เช่นเคย",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเปิดประชุมเช้าวันจันทร์ด้วยมุกตลกเช่นเคย",
+   "en": "Pranee opened the Monday morning meeting with a joke, as always.",
+   "ko": "프라니는 늘 그렇듯 월요일 아침 회의를 농담으로 시작했어요.",
+   "blank": "เช่นเคย",
    "src": "made"
   }
  ],
@@ -25933,6 +26077,22 @@
    "blank": "ดู"
   }
  ],
+ "w|ดูๆ": [
+  {
+   "text": "ดูๆ ไปพรก็คล้ายน้องสาวของอนันต์อยู่เหมือนกัน",
+   "en": "The more you look, the more Phon resembles Anan's younger sister.",
+   "ko": "보면 볼수록 폰은 아난의 여동생을 꽤 닮았어요.",
+   "blank": "ดูๆ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีดูๆ แล้วคิดว่าแบบหน้าจอใหม่ยังรกเกินไป",
+   "en": "Looking it over, Pranee thinks the new screen design is still too cluttered.",
+   "ko": "프라니는 이리저리 살펴보고 새 화면 디자인이 아직 너무 복잡하다고 생각해요.",
+   "blank": "ดูๆ",
+   "src": "made"
+  }
+ ],
  "w|ดูงาน": [
   {
    "text": "ชัยได้ไปดูงานที่สำนักข่าวต่างประเทศเป็นเวลาหนึ่งเดือน",
@@ -26137,6 +26297,22 @@
    "en": "The girl helps mom clear the table.",
    "ko": "여자아이가 엄마를 도와 상을 치워.",
    "blank": "เด็กหญิง"
+  }
+ ],
+ "w|เด็กหนุ่ม": [
+  {
+   "text": "เด็กหนุ่มฝ่ายไอทีมาช่วยตั้งคอมพิวเตอร์ให้พร",
+   "en": "A young guy from IT came to set up Phon's computer.",
+   "ko": "IT팀 청년이 와서 폰의 컴퓨터를 설치해 줬어요.",
+   "blank": "เด็กหนุ่ม",
+   "src": "made"
+  },
+  {
+   "text": "เด็กหนุ่มอายุสิบเจ็ดส่งโค้ดแก้บั๊กมาให้ทีมปราณี",
+   "en": "A seventeen-year-old boy sent Pranee's team some code that fixed a bug.",
+   "ko": "열일곱 살 소년이 프라니 팀에 버그 수정 코드를 보내왔어요.",
+   "blank": "เด็กหนุ่ม",
+   "src": "made"
   }
  ],
  "w|เด็ด": [
@@ -27997,6 +28173,22 @@
    "blank": "ต่อ"
   }
  ],
+ "w|ตอก": [
+  {
+   "text": "อนันต์ช่วยพรตอกตะปูแขวนปฏิทินที่ผนังข้างโต๊ะ",
+   "en": "Anan helped Phon hammer in a nail to hang a calendar on the wall by her desk.",
+   "ko": "아난은 폰의 책상 옆 벽에 달력을 걸 수 있게 못을 박아 줬어요.",
+   "blank": "ตอก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีตอกตะปูติดป้ายชื่อบริษัทที่ประตูห้องเช่าเล็ก",
+   "en": "Pranee nailed the company name sign to the door of the small rented room.",
+   "ko": "프라니는 작은 임대 사무실 문에 회사 간판을 못으로 박았어요.",
+   "blank": "ตอก",
+   "src": "made"
+  }
+ ],
  "w|ตอกย้ำ": [
   {
    "text": "ผลสอบครั้งนี้ตอกย้ำว่าเด็ก ๆ ต้องฝึกอ่านมากขึ้น",
@@ -28055,6 +28247,22 @@
    "en": "Do you need anything else?",
    "ko": "뭐 더 필요해?",
    "blank": "ต้องการ"
+  }
+ ],
+ "w|ต้องโทษ": [
+  {
+   "text": "ข่าวในโทรศัพท์ของอนันต์บอกว่าอดีตนักการเมืองคนหนึ่งต้องโทษจำคุก",
+   "en": "The news on Anan's phone said a former politician has been sentenced to prison.",
+   "ko": "아난의 휴대폰 뉴스에는 한 전직 정치인이 징역형을 받았다고 나왔어요.",
+   "blank": "ต้องโทษ",
+   "src": "made"
+  },
+  {
+   "text": "คนร้ายที่แฮ็กระบบบริษัทของปราณีต้องโทษจำคุกสามปี",
+   "en": "The criminal who hacked into Pranee's company system was sentenced to three years in prison.",
+   "ko": "프라니 회사 시스템을 해킹한 범인은 징역 삼 년을 선고받았어요.",
+   "blank": "ต้องโทษ",
+   "src": "made"
   }
  ],
  "w|ต่อต้าน": [
@@ -34337,6 +34545,22 @@
    "blank": "ทำใจ"
   }
  ],
+ "w|ทำดี": [
+  {
+   "text": "หัวหน้าชมว่าพรทำดีมากสำหรับสัปดาห์แรก",
+   "en": "The boss praised Phon for doing very well for her first week.",
+   "ko": "팀장은 첫 주치고 폰이 아주 잘했다고 칭찬했어요.",
+   "blank": "ทำดี",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเชื่อว่าบริษัทที่ทำดีกับพนักงานจะรักษาคนเก่งไว้ได้",
+   "en": "Pranee believes a company that treats its staff well can hold on to talented people.",
+   "ko": "프라니는 직원에게 잘해 주는 회사가 인재를 지킬 수 있다고 믿어요.",
+   "blank": "ทำดี",
+   "src": "made"
+  }
+ ],
  "w|ทำดีที่สุด": [
   {
    "text": "ประยุทธบอกช่างว่าจะทำดีที่สุดเพื่อรักษาลายไม้แกะสลักเดิมไว้",
@@ -37343,6 +37567,22 @@
    "blank": "น้องสาว"
   }
  ],
+ "w|น้องใหม่": [
+  {
+   "text": "พรเป็นน้องใหม่ที่ปรับตัวเร็วที่สุดในรอบหลายปี",
+   "en": "Phon is the fastest-adapting newcomer in years.",
+   "ko": "폰은 몇 년 만에 가장 빨리 적응한 신입이에요.",
+   "blank": "น้องใหม่",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีให้น้องใหม่ทุกคนลองแก้บั๊กเล็กในวันแรก",
+   "en": "Pranee has every newcomer try fixing a small bug on their first day.",
+   "ko": "프라니는 신입마다 첫날 작은 버그를 고쳐 보게 해요.",
+   "blank": "น้องใหม่",
+   "src": "made"
+  }
+ ],
  "w|นอน": [
   {
    "text": "ขอนอนก่อน",
@@ -37771,6 +38011,22 @@
    "src": "made"
   }
  ],
+ "w|นักปราชญ์": [
+  {
+   "text": "อนันต์แซวว่าพรพูดจาคมคายเหมือนนักปราชญ์",
+   "en": "Anan joked that Phon speaks as sharply as a sage.",
+   "ko": "아난은 폰이 현자처럼 말을 날카롭게 한다고 농담했어요.",
+   "blank": "นักปราชญ์",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีชอบอ่านคำคมของนักปราชญ์โบราณก่อนเริ่มงาน",
+   "en": "Pranee likes reading the sayings of ancient sages before she starts work.",
+   "ko": "프라니는 일을 시작하기 전에 옛 현자들의 명언을 즐겨 읽어요.",
+   "blank": "นักปราชญ์",
+   "src": "made"
+  }
+ ],
  "w|นักรบ": [
   {
    "text": "นักเรียนชั้นห้าเล่นละครเรื่องนักรบโบราณในวันภาษาไทย",
@@ -37828,6 +38084,22 @@
    "en": "Wanna is preparing slides to present the app to investors next week.",
    "ko": "완나는 다음 주 투자자들에게 앱을 소개할 슬라이드를 준비하고 있어요.",
    "blank": "นักลงทุน",
+   "src": "made"
+  }
+ ],
+ "w|นักเลง": [
+  {
+   "text": "สมัยเรียน อนันต์เคยโดนนักเลงหน้าโรงเรียนรีดไถเงิน",
+   "en": "Back in his school days, Anan was shaken down for money by thugs outside the school.",
+   "ko": "학창 시절 아난은 학교 앞 깡패들에게 돈을 뜯긴 적이 있어요.",
+   "blank": "นักเลง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเขียนโค้ดเก่งแต่พูดจาห้าวเหมือนนักเลง",
+   "en": "Pranee is a great coder but talks as tough as a street thug.",
+   "ko": "프라니는 코딩을 잘하지만 말투는 깡패처럼 거칠어요.",
+   "blank": "นักเลง",
    "src": "made"
   }
  ],
@@ -38759,6 +39031,22 @@
    "en": "This habit is rather annoying.",
    "ko": "이 습관은 꽤 성가셔.",
    "blank": "น่ารำคาญ"
+  }
+ ],
+ "w|นารี": [
+  {
+   "text": "ทุกคนเรียกพรว่านารีขี่ม้าขาวที่มาช่วยแก้งานด่วน",
+   "en": "Everyone calls Phon the lady on a white horse who rode in to rescue the urgent project.",
+   "ko": "모두 폰을 급한 일을 해결하러 온 백마 탄 여인이라고 불러요.",
+   "blank": "นารี",
+   "src": "made"
+  },
+  {
+   "text": "นักลงทุนชมว่าปราณีเป็นนารีเหล็กแห่งวงการเทค",
+   "en": "Investors praise Pranee as the iron lady of the tech world.",
+   "ko": "투자자들은 프라니를 기술 업계의 철의 여인이라고 칭찬해요.",
+   "blank": "นารี",
+   "src": "made"
   }
  ],
  "w|น่าละอาย": [
@@ -42683,6 +42971,22 @@
    "src": "made"
   }
  ],
+ "w|บุตรบุญธรรม": [
+  {
+   "text": "พรเป็นบุตรบุญธรรมของครูคนหนึ่งที่รับมาเลี้ยงตั้งแต่ยังเล็ก",
+   "en": "Phon is the adopted daughter of a teacher who took her in when she was small.",
+   "ko": "폰은 어릴 때 자신을 데려다 키운 선생님의 입양 딸이에요.",
+   "blank": "บุตรบุญธรรม",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ก่อตั้งร่วมของปราณีเป็นบุตรบุญธรรมของครอบครัวชาวสวน",
+   "en": "Pranee's cofounder is the adopted son of a family of orchard farmers.",
+   "ko": "프라니의 공동 창업자는 과수원 농가에 입양된 아들이에요.",
+   "blank": "บุตรบุญธรรม",
+   "src": "made"
+  }
+ ],
  "w|บุรุษ": [
   {
    "text": "ในการ์ดเชิญเขียนว่าให้บุรุษแต่งกายด้วยชุดสูทสีเข้ม",
@@ -44032,6 +44336,22 @@
    "en": "Malee measures the oil temperature with a mercury thermometer.",
    "ko": "말리는 수은 온도계로 기름 온도를 재요.",
    "blank": "ปรอท",
+   "src": "made"
+  }
+ ],
+ "w|ประกบ": [
+  {
+   "text": "หัวหน้าให้อนันต์ประกบพรสอนงานตลอดเดือนแรก",
+   "en": "The boss had Anan stick close to Phon and train her through her first month.",
+   "ko": "팀장은 첫 달 내내 아난에게 폰 옆에 붙어 일을 가르치라고 했어요.",
+   "blank": "ประกบ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีจับวิศวกรสองคนประกบกันเขียนโค้ดเป็นคู่",
+   "en": "Pranee paired up two engineers to write code together.",
+   "ko": "프라니는 엔지니어 두 명을 짝지어 함께 코드를 짜게 했어요.",
+   "blank": "ประกบ",
    "src": "made"
   }
  ],
@@ -48461,6 +48781,22 @@
    "src": "made"
   }
  ],
+ "w|ผละ": [
+  {
+   "text": "พรผละจากหน้าจอไปยืดเส้นยืดสายทุกชั่วโมง",
+   "en": "Every hour Phon steps away from her screen to stretch.",
+   "ko": "폰은 매시간 화면에서 떨어져 스트레칭을 해요.",
+   "blank": "ผละ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีผละจากโต๊ะไปรับโทรศัพท์จากนักลงทุนทันที",
+   "en": "Pranee left her desk right away to take a call from an investor.",
+   "ko": "프라니는 투자자 전화를 받으려고 곧바로 자리를 떴어요.",
+   "blank": "ผละ",
+   "src": "made"
+  }
+ ],
  "w|ผลัก": [
   {
    "text": "อย่าผลักกันนะ",
@@ -51791,6 +52127,22 @@
    "src": "made"
   }
  ],
+ "w|พระภิกษุ": [
+  {
+   "text": "พี่ชายของพรบวชเป็นพระภิกษุมาห้าปีแล้ว",
+   "en": "Phon's older brother has been a Buddhist monk for five years.",
+   "ko": "폰의 오빠는 출가해 스님이 된 지 오 년 됐어요.",
+   "blank": "พระภิกษุ",
+   "src": "made"
+  },
+  {
+   "text": "แอปนั่งสมาธิของปราณีมีเสียงพระภิกษุนำสวดมนต์",
+   "en": "Pranee's meditation app has recordings of a monk leading chants.",
+   "ko": "프라니의 명상 앱에는 스님이 독경을 이끄는 소리가 있어요.",
+   "blank": "พระภิกษุ",
+   "src": "made"
+  }
+ ],
  "w|พระมหากษัตริย์": [
   {
    "text": "ห้องโถงศาลากลางมีภาพพระมหากษัตริย์ในอดีตแขวนไว้หลายภาพ",
@@ -51942,6 +52294,22 @@
    "en": "Somsak didn't want to separate the kitten from its mother, so he adopted both.",
    "ko": "솜싹은 새끼 고양이를 어미와 떼어 놓기 싫어서 둘 다 데려다 키웠어요.",
    "blank": "พราก",
+   "src": "made"
+  }
+ ],
+ "w|พราน": [
+  {
+   "text": "คุณปู่ของพรเคยเป็นพรานล่าสัตว์ในป่าทางเหนือ",
+   "en": "Phon's grandfather used to be a hunter in the northern forests.",
+   "ko": "폰의 할아버지는 북쪽 숲에서 사냥꾼으로 일했어요.",
+   "blank": "พราน",
+   "src": "made"
+  },
+  {
+   "text": "เกมใหม่ของทีมปราณีให้ผู้เล่นเป็นพรานออกล่าสมบัติในป่า",
+   "en": "The new game from Pranee's team lets players be hunters searching for treasure in the jungle.",
+   "ko": "프라니 팀의 새 게임에서 플레이어는 숲에서 보물을 찾는 사냥꾼이 돼요.",
+   "blank": "พราน",
    "src": "made"
   }
  ],
@@ -53213,6 +53581,22 @@
    "blank": "พี่"
   }
  ],
+ "w|พี่เขย": [
+  {
+   "text": "อนันต์ขอลางานครึ่งวันไปช่วยพี่เขยขนของย้ายบ้าน",
+   "en": "Anan took half a day off to help his brother-in-law move house.",
+   "ko": "아난은 매형 이사를 도우러 반차를 냈어요.",
+   "blank": "พี่เขย",
+   "src": "made"
+  },
+  {
+   "text": "พี่เขยของปราณีช่วยออกแบบโลโก้ให้บริษัทฟรี",
+   "en": "Pranee's brother-in-law designed the company logo for free.",
+   "ko": "프라니의 형부가 회사 로고를 무료로 디자인해 줬어요.",
+   "blank": "พี่เขย",
+   "src": "made"
+  }
+ ],
  "w|พี่ชาย": [
   {
    "text": "พี่ชายกลับบ้านดึก",
@@ -53256,6 +53640,22 @@
    "en": "The family in line in front of Wanna brought a nanny to help look after their three children.",
    "ko": "완나 앞에 줄 선 가족은 아이 셋을 돌볼 보모를 데려왔어요.",
    "blank": "พี่เลี้ยง",
+   "src": "made"
+  }
+ ],
+ "w|พี่สะใภ้": [
+  {
+   "text": "อนันต์เพิ่งรู้ว่าเพื่อนร่วมงานคนใหม่เป็นพี่สะใภ้ของเพื่อนสนิท",
+   "en": "Anan has just found out that his new coworker is his best friend's sister-in-law.",
+   "ko": "아난은 새 동료가 절친의 형수라는 걸 막 알았어요.",
+   "blank": "พี่สะใภ้",
+   "src": "made"
+  },
+  {
+   "text": "พี่สะใภ้ของปราณีเป็นนักลงทุนคนแรกของบริษัท",
+   "en": "Pranee's sister-in-law was the company's first investor.",
+   "ko": "프라니의 새언니는 회사의 첫 투자자였어요.",
+   "blank": "พี่สะใภ้",
    "src": "made"
   }
  ],
@@ -53815,6 +54215,22 @@
    "src": "made"
   }
  ],
+ "w|เพศชาย": [
+  {
+   "text": "แบบฟอร์มพนักงานใหม่ให้ติ๊กช่องเพศชายหรือเพศหญิง",
+   "en": "The new-employee form asks you to tick the box for male or female.",
+   "ko": "신입 사원 서류에는 남성이나 여성 칸에 체크하게 돼 있어요.",
+   "blank": "เพศชาย",
+   "src": "made"
+  },
+  {
+   "text": "ข้อมูลบอกว่าผู้ใช้เพศชายเปิดแอปตอนกลางคืนมากกว่า",
+   "en": "The data shows that male users open the app more at night.",
+   "ko": "데이터를 보면 남성 사용자가 밤에 앱을 더 많이 열어요.",
+   "blank": "เพศชาย",
+   "src": "made"
+  }
+ ],
  "w|เพศสัมพันธ์": [
   {
    "text": "ห้องสมุดจัดหนังสือความรู้เรื่องเพศสัมพันธ์และสุขภาพไว้ในมุมวัยรุ่น",
@@ -53828,6 +54244,22 @@
    "en": "The company held training for all staff on harassment and consent before sexual relations.",
    "ko": "회사는 모든 직원에게 성희롱과 성관계 전 동의에 관한 교육을 했어요.",
    "blank": "เพศสัมพันธ์",
+   "src": "made"
+  }
+ ],
+ "w|เพศหญิง": [
+  {
+   "text": "แบบฟอร์มพนักงานใหม่ให้ติ๊กช่องเพศชายหรือเพศหญิง",
+   "en": "The new-employee form asks you to tick the box for male or female.",
+   "ko": "신입 사원 서류에는 남성이나 여성 칸에 체크하게 돼 있어요.",
+   "blank": "เพศหญิง",
+   "src": "made"
+  },
+  {
+   "text": "ทีมของปราณีมีวิศวกรเพศหญิงเกินครึ่ง",
+   "en": "More than half of the engineers on Pranee's team are women.",
+   "ko": "프라니 팀 엔지니어의 절반 이상이 여성이에요.",
+   "blank": "เพศหญิง",
    "src": "made"
   }
  ],
@@ -57737,6 +58169,22 @@
    "src": "made"
   }
  ],
+ "w|มือปืน": [
+  {
+   "text": "อนันต์กับพรคุยกันเรื่องหนังที่มีมือปืนรับจ้างเป็นพระเอก",
+   "en": "Anan and Phon talked about a movie whose hero is a hired gunman.",
+   "ko": "아난과 폰은 청부 총잡이가 주인공인 영화에 대해 이야기했어요.",
+   "blank": "มือปืน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเลิกพัฒนาเกมมือปืนเพราะอยากทำเกมสำหรับเด็ก",
+   "en": "Pranee stopped developing gunslinger games because she wanted to make games for kids.",
+   "ko": "프라니는 아이들을 위한 게임을 만들고 싶어서 총잡이 게임 개발을 그만뒀어요.",
+   "blank": "มือปืน",
+   "src": "made"
+  }
+ ],
  "w|มือสมัครเล่น": [
   {
    "text": "นักดนตรีมือสมัครเล่นมาเล่นในงานเทศกาลของเมือง",
@@ -59387,6 +59835,22 @@
    "blank": "ยอดเยี่ยม"
   }
  ],
+ "w|ยอดรัก": [
+  {
+   "text": "พรโทรหาสามีแล้วเรียกว่ายอดรักจนอนันต์อมยิ้ม",
+   "en": "Phon called her husband \"my darling\" on the phone, which made Anan smile.",
+   "ko": "폰이 남편에게 전화해 '자기야'라고 불러서 아난은 미소를 지었어요.",
+   "blank": "ยอดรัก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีตั้งชื่อเซิร์ฟเวอร์ตัวแรกว่ายอดรักเพราะไม่เคยล่มเลย",
+   "en": "Pranee named the first server \"Darling\" because it has never once crashed.",
+   "ko": "프라니는 한 번도 다운된 적 없는 첫 서버에 '내 사랑'이라는 이름을 붙였어요.",
+   "blank": "ยอดรัก",
+   "src": "made"
+  }
+ ],
  "w|ย้อน": [
   {
    "text": "ชัยต้องย้อนไปดูเอกสารเก่าเมื่อสิบปีก่อนเพื่อหาโฉนดที่ดิน",
@@ -60150,6 +60614,22 @@
    "en": "Wanna ordered a mildly spicy seafood salad because she can't handle much spice.",
    "ko": "완나는 매운 걸 잘 못 먹어서 덜 매운 해산물 얌을 시켰어요.",
    "blank": "ยำ",
+   "src": "made"
+  }
+ ],
+ "w|ย่ำ": [
+  {
+   "text": "ฝนตกหนัก อนันต์กับพรต้องย่ำน้ำขังไปขึ้นรถไฟฟ้า",
+   "en": "It rained hard, so Anan and Phon had to slosh through puddles to catch the skytrain.",
+   "ko": "비가 많이 와서 아난과 폰은 고인 물을 밟으며 전철을 타러 가야 했어요.",
+   "blank": "ย่ำ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีย่ำโคลนเข้าไปคุยกับเกษตรกรที่ใช้แอปของบริษัท",
+   "en": "Pranee trudged through the mud to talk with farmers who use the company's app.",
+   "ko": "프라니는 진흙을 밟고 들어가 회사 앱을 쓰는 농부들과 이야기했어요.",
+   "blank": "ย่ำ",
    "src": "made"
   }
  ],
@@ -63754,6 +64234,22 @@
    "en": "The night before the app launch, the office was as quiet as if no one were there.",
    "ko": "앱 출시 전날 밤 사무실은 아무도 없는 것처럼 조용했어요.",
    "blank": "ราวกับ",
+   "src": "made"
+  }
+ ],
+ "w|ราวกับว่า": [
+  {
+   "text": "พรคุยกับทุกคนราวกับว่ารู้จักกันมานาน",
+   "en": "Phon chats with everyone as if they had known each other for years.",
+   "ko": "폰은 모두와 오래 알고 지낸 사이처럼 이야기해요.",
+   "blank": "ราวกับว่า",
+   "src": "made"
+  },
+  {
+   "text": "ยอดดาวน์โหลดพุ่งขึ้นราวกับว่าทั้งประเทศรอแอปนี้อยู่",
+   "en": "Downloads shot up as if the whole country had been waiting for this app.",
+   "ko": "다운로드 수가 마치 온 나라가 이 앱을 기다린 것처럼 치솟았어요.",
+   "blank": "ราวกับว่า",
    "src": "made"
   }
  ],
@@ -70797,6 +71293,22 @@
    "src": "made"
   }
  ],
+ "w|วีรบุรุษ": [
+  {
+   "text": "อนันต์กลายเป็นวีรบุรุษของแผนกเพราะซ่อมเครื่องถ่ายเอกสารได้",
+   "en": "Anan became the department's hero because he managed to fix the photocopier.",
+   "ko": "아난은 복사기를 고쳐서 부서의 영웅이 됐어요.",
+   "blank": "วีรบุรุษ",
+   "src": "made"
+  },
+  {
+   "text": "โปรแกรมเมอร์ที่แก้ระบบล่มตอนตีสามกลายเป็นวีรบุรุษของทีมปราณี",
+   "en": "The programmer who fixed the outage at three in the morning became the hero of Pranee's team.",
+   "ko": "새벽 세 시에 시스템 장애를 고친 프로그래머는 프라니 팀의 영웅이 됐어요.",
+   "blank": "วีรบุรุษ",
+   "src": "made"
+  }
+ ],
  "w|วี่แวว": [
   {
    "text": "ผ่านไปสามวันแล้ว รถของวิชัยก็ยังไม่มีวี่แววว่าจะเจอ",
@@ -75991,6 +76503,22 @@
    "src": "made"
   }
  ],
+ "w|สายเลือด": [
+  {
+   "text": "พรบอกอนันต์ว่าการทำอาหารอยู่ในสายเลือดของครอบครัว",
+   "en": "Phon told Anan that cooking runs in her family's blood.",
+   "ko": "폰은 요리가 집안 내력이라고 아난에게 말했어요.",
+   "blank": "สายเลือด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกว่าการเขียนโค้ดไม่ได้อยู่ในสายเลือด แต่มาจากการฝึกทุกวัน",
+   "en": "Pranee says coding isn't in her blood; it comes from practicing every day.",
+   "ko": "프라니는 코딩 실력이 타고난 게 아니라 매일 연습한 결과라고 말해요.",
+   "blank": "สายเลือด",
+   "src": "made"
+  }
+ ],
  "w|สายสืบ": [
   {
    "text": "สายสืบโทรมาบอกวิชัยว่าเห็นรถคันที่ถูกขโมยจอดอยู่ท้ายซอย",
@@ -79447,6 +79975,22 @@
    "blank": "หน้าอก"
   }
  ],
+ "w|หนำซ้ำ": [
+  {
+   "text": "วันแรกพรหลงทางในตึก หนำซ้ำลิฟต์ยังเสียอีก",
+   "en": "On her first day Phon got lost in the building, and to top it off the elevator was broken.",
+   "ko": "첫날 폰은 건물에서 길을 잃었는데, 게다가 엘리베이터까지 고장 났어요.",
+   "blank": "หนำซ้ำ",
+   "src": "made"
+  },
+  {
+   "text": "แอปเวอร์ชันแรกช้ามาก หนำซ้ำยังแบตหมดเร็วอีก",
+   "en": "The first version of the app was very slow, and on top of that it drained the battery fast.",
+   "ko": "앱 첫 버전은 아주 느렸고, 게다가 배터리도 빨리 닳았어요.",
+   "blank": "หนำซ้ำ",
+   "src": "made"
+  }
+ ],
  "w|หนี": [
   {
    "text": "หนีไปไหนมา",
@@ -81335,6 +81879,22 @@
    "blank": "ห่วงใย"
   }
  ],
+ "w|หวด": [
+  {
+   "text": "เย็นวันศุกร์อนันต์ชวนพรไปหวดลูกแบดมินตันกับทีม",
+   "en": "On Friday evening Anan invited Phon to go and smash some shuttlecocks with the team.",
+   "ko": "금요일 저녁 아난은 팀과 배드민턴 치러 가자고 폰을 불렀어요.",
+   "blank": "หวด",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงพักเที่ยง ปราณีชอบหวดลูกปิงปองกับทีม",
+   "en": "At lunch break, Pranee loves smashing ping-pong balls with the team.",
+   "ko": "점심시간에 프라니는 팀원들과 탁구 치는 걸 좋아해요.",
+   "blank": "หวด",
+   "src": "made"
+  }
+ ],
  "w|หวน": [
   {
    "text": "เพลงเก่าที่ดีเจเปิดทำให้สมชายหวนนึกถึงวันรับปริญญา",
@@ -82079,6 +82639,22 @@
    "en": "Don't scratch your head at the table.",
    "ko": "식탁에서 머리 긁지 마.",
    "blank": "หัว"
+  }
+ ],
+ "w|หัวขโมย": [
+  {
+   "text": "เพื่อนร่วมงานใหม่เล่าให้อนันต์ฟังว่าเคยไล่จับหัวขโมยที่ลานจอดรถ",
+   "en": "The new coworker told Anan she once chased a thief in the parking lot.",
+   "ko": "새 동료는 주차장에서 도둑을 쫓아간 적이 있다고 아난에게 이야기했어요.",
+   "blank": "หัวขโมย",
+   "src": "made"
+  },
+  {
+   "text": "หัวขโมยงัดเข้าออฟฟิศสตาร์ทอัพของปราณีแล้วยกโน้ตบุ๊กไปสามเครื่อง",
+   "en": "A thief broke into Pranee's startup office and made off with three laptops.",
+   "ko": "도둑이 프라니의 스타트업 사무실에 침입해 노트북 세 대를 들고 갔어요.",
+   "blank": "หัวขโมย",
+   "src": "made"
   }
  ],
  "w|หัวข้อ": [
@@ -85863,6 +86439,22 @@
    "src": "made"
   }
  ],
+ "w|อัธยาศัย": [
+  {
+   "text": "พรมีอัธยาศัยดีจนทุกคนในแผนกชอบ",
+   "en": "Phon is so friendly that everyone in the department likes her.",
+   "ko": "폰은 성격이 싹싹해서 부서 사람들이 다 좋아해요.",
+   "blank": "อัธยาศัย",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีชอบรับคนที่มีอัธยาศัยดีมากกว่าคนที่เก่งแต่หยิ่ง",
+   "en": "Pranee would rather hire friendly people than talented but arrogant ones.",
+   "ko": "프라니는 실력은 좋지만 거만한 사람보다 성격 좋은 사람을 뽑는 걸 좋아해요.",
+   "blank": "อัธยาศัย",
+   "src": "made"
+  }
+ ],
  "w|อัน": [
   {
    "text": "อันไหนดีกว่า",
@@ -87547,6 +88139,22 @@
    "src": "made"
   }
  ],
+ "w|อุปนิสัย": [
+  {
+   "text": "อุปนิสัยตรงต่อเวลาของพรทำให้หัวหน้าประทับใจ",
+   "en": "Phon's punctual nature impressed the boss.",
+   "ko": "폰의 시간을 잘 지키는 성품이 팀장에게 좋은 인상을 줬어요.",
+   "blank": "อุปนิสัย",
+   "src": "made"
+  },
+  {
+   "text": "แอปของปราณีวิเคราะห์อุปนิสัยการใช้เงินของผู้ใช้",
+   "en": "Pranee's app analyzes users' spending habits.",
+   "ko": "프라니의 앱은 사용자의 소비 습관을 분석해요.",
+   "blank": "อุปนิสัย",
+   "src": "made"
+  }
+ ],
  "w|อุปโภค": [
   {
    "text": "ป้ายในห้องน้ำห้องสมุดบอกว่าน้ำก๊อกใช้อุปโภคได้ แต่ไม่ควรดื่ม",
@@ -87988,6 +88596,22 @@
    "en": "Suda is afraid the moving company will take advantage of her on the fees.",
    "ko": "수다는 이삿짐 업체가 요금으로 바가지를 씌울까 봐 걱정해요.",
    "blank": "เอาเปรียบ",
+   "src": "made"
+  }
+ ],
+ "w|เอาอย่าง": [
+  {
+   "text": "พนักงานคนอื่นเริ่มเอาอย่างพรที่จดทุกอย่างลงสมุด",
+   "en": "Other staff have started following Phon's example of writing everything down in a notebook.",
+   "ko": "다른 직원들도 모든 걸 수첩에 적는 폰을 따라 하기 시작했어요.",
+   "blank": "เอาอย่าง",
+   "src": "made"
+  },
+  {
+   "text": "สตาร์ทอัพหลายแห่งเริ่มเอาอย่างระบบทำงานสี่วันของปราณี",
+   "en": "Several startups have started copying Pranee's four-day work week.",
+   "ko": "여러 스타트업이 프라니의 주 사일 근무제를 따라 하기 시작했어요.",
+   "blank": "เอาอย่าง",
    "src": "made"
   }
  ],
