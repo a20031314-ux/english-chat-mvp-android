@@ -8,7 +8,7 @@
  * Run: node --experimental-strip-types scripts/word-sentences.ts [언어…] [--limit N]     (API — ANTHROPIC_API_KEY·OPENAI_API_KEY)
  *      node --experimental-strip-types scripts/word-sentences.ts --check                (언어마다 빈도 목록 대비 모자란 낱말 수)
  *      node --experimental-strip-types scripts/word-sentences.ts --todo <언어> [--limit N]   (모자란 낱말 목록: 순위·낱말·품사·단계, 빈도 순)
- *      node --experimental-strip-types scripts/word-sentences.ts --merge <언어> <파일.json>  (API 없이 — Cursor 등이 쓴 문장을 같은 검사로 걸러 넣음, src "cursor")
+ *      node --experimental-strip-types scripts/word-sentences.ts --merge <언어> <파일.json> [--src made]  (API 없이 — Cursor 등이 쓴 문장을 같은 검사로 걸러 넣음, src 기본 "cursor", 채팅이 쓰면 made. 한 파일 안에서는 한 문장을 낱말 여럿이 나눠 씀)
  * 이미 2개가 있는 낱말은 건너뛴다.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -34,6 +34,9 @@ const args = process.argv.slice(2);
 const checkOnly = args.includes("--check");
 const todoAt = args.indexOf("--todo");
 const mergeAt = args.indexOf("--merge");
+const srcAt = args.indexOf("--src");
+/** merge로 넣는 줄의 출처 표시: cursor(기본) · made(채팅에서 직접 씀). */
+const mergeSrc = srcAt >= 0 && /^[a-z]+$/.test(args[srcAt + 1] ?? "") ? args[srcAt + 1] : "cursor";
 const limitAt = args.indexOf("--limit");
 const limit = limitAt >= 0 ? Number(args[limitAt + 1]) : Infinity;
 const only = args.filter((arg, i) => LANGS.includes(arg) && (limitAt < 0 || i !== limitAt + 1));
@@ -229,6 +232,7 @@ async function merge(language: string, file: string) {
   const raw = JSON.parse(readFileSync(file, "utf8")) as Row[] | { sentences?: Row[] };
   const rows = Array.isArray(raw) ? raw : raw.sentences ?? [];
   const why = new Map<string, number>();
+  const mine = new Set<string>();
   let added = 0;
   for (const row of rows) {
     const hit = row.w ? byWord.get(row.w.normalize("NFC").trim()) : undefined;
@@ -241,13 +245,17 @@ async function merge(language: string, file: string) {
       why.set("이미 둘", (why.get("이미 둘") ?? 0) + 1);
       continue;
     }
+    // 같은 파일 안에서는 한 문장을 낱말 여럿이 나눠 써도 된다(이야기 → 문장 나눔, 한 문장은 낱말 셋까지는 나누는 쪽이 정함).
+    const shared = norm(row.text ?? "");
+    if (mine.has(shared)) taken.delete(shared);
     const sentence = accept(language, hit.stage, hit.word, row, taken);
+    if (typeof sentence !== "string") mine.add(shared);
     if (typeof sentence === "string") {
       why.set(sentence, (why.get(sentence) ?? 0) + 1);
       console.log(`뺌 ${sentence}: ${row.w} | ${row.text ?? ""} [${row.blank ?? ""}]`);
       continue;
     }
-    book[key] = [...(book[key] ?? []), { ...sentence, src: "cursor" }];
+    book[key] = [...(book[key] ?? []), { ...sentence, src: mergeSrc }];
     added += 1;
   }
   writeBook(language, book);
