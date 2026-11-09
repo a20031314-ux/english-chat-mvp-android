@@ -5,8 +5,10 @@
  * 결과: src/lib/curriculum/word-sentences/<언어>.json
  *   { "w|name": [{ "text", "en", "ko", "blank" }, ...2] }
  *
- * Run: node --experimental-strip-types scripts/word-sentences.ts [언어…] [--limit N]
- *      node --experimental-strip-types scripts/word-sentences.ts --check
+ * Run: node --experimental-strip-types scripts/word-sentences.ts [언어…] [--limit N]     (API — ANTHROPIC_API_KEY·OPENAI_API_KEY)
+ *      node --experimental-strip-types scripts/word-sentences.ts --check                (언어마다 빈도 목록 대비 모자란 낱말 수)
+ *      node --experimental-strip-types scripts/word-sentences.ts --todo <언어> [--limit N]   (모자란 낱말 목록: 순위·낱말·품사·단계, 빈도 순)
+ *      node --experimental-strip-types scripts/word-sentences.ts --merge <언어> <파일.json>  (API 없이 — Cursor 등이 쓴 문장을 같은 검사로 걸러 넣음, src "cursor")
  * 이미 2개가 있는 낱말은 건너뛴다.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -24,12 +26,14 @@ const NAMES: Record<string, string> = {
   pt: "Portuguese", ru: "Russian", ar: "Arabic", id: "Indonesian", vi: "Vietnamese", th: "Thai", hi: "Hindi",
 };
 
-type Sentence = { text: string; en: string; ko: string; blank: string };
+type Sentence = { text: string; en: string; ko: string; blank: string; src?: string };
 type Book = Record<string, Sentence[]>;
 type Row = Sentence & { w?: string };
 
 const args = process.argv.slice(2);
 const checkOnly = args.includes("--check");
+const todoAt = args.indexOf("--todo");
+const mergeAt = args.indexOf("--merge");
 const limitAt = args.indexOf("--limit");
 const limit = limitAt >= 0 ? Number(args[limitAt + 1]) : Infinity;
 const only = args.filter((arg, i) => LANGS.includes(arg) && (limitAt < 0 || i !== limitAt + 1));
@@ -187,20 +191,67 @@ async function fillBatch(language: string, words: { word: BankWord; stage: numbe
   if (pending.size) console.log(`${language} 묶음 남음 ${pending.size}${last ? ` (${last})` : ""}`);
 }
 
-function report() {
+async function report() {
   let words = 0;
   let sentences = 0;
   let short = 0;
   for (const language of langs) {
     const book = readBook(language);
-    const ready = Object.values(book).filter((list) => list.length >= NEED);
-    const n = ready.reduce((sum, list) => sum + list.length, 0);
-    words += ready.length;
+    const bank = await loadBank(language);
+    const ready = bank.filter((word) => (book[wordKey(word.w)]?.length ?? 0) >= NEED).length;
+    const n = Object.values(book).reduce((sum, list) => sum + list.length, 0);
+    words += ready;
     sentences += n;
-    short += Object.values(book).filter((list) => list.length < NEED).length;
-    console.log(`${language}: 낱말 ${ready.length} · 문장 ${n} · 모자람 ${Object.values(book).length - ready.length}`);
+    short += bank.length - ready;
+    console.log(`${language}: 낱말 ${ready}/${bank.length} · 문장 ${n} · 모자람 ${bank.length - ready}`);
   }
   console.log(`합 낱말 ${words} · 문장 ${sentences} · 모자람 ${short}`);
+}
+
+/** 모자란 낱말(빈도 순): 순위·낱말·품사·단계 — Cursor가 이 목록대로 문장을 쓴다. */
+async function todoList(language: string, max: number) {
+  const bank = await loadBank(language);
+  const book = readBook(language);
+  const rows = bank
+    .map((word, index) => ({ word, index, stage: stageOfRank(language, index) }))
+    .filter((item) => (book[wordKey(item.word.w)]?.length ?? 0) < NEED)
+    .slice(0, max);
+  for (const row of rows) console.log(`${row.index}\t${row.word.w}\t${row.word.pos}\tstage ${row.stage}`);
+}
+
+/** API 없이 쓴 문장을 같은 검사(accept)로 걸러 넣는다. 파일 = {"sentences":[{w,text,en,ko,blank}]} 또는 그 배열. */
+async function merge(language: string, file: string) {
+  const bank = await loadBank(language);
+  const byWord = new Map(bank.map((word, index) => [word.w, { word, stage: stageOfRank(language, index) }]));
+  const book = readBook(language);
+  const taken = new Set<string>();
+  for (const list of Object.values(book)) for (const sentence of list) taken.add(norm(sentence.text));
+  const raw = JSON.parse(readFileSync(file, "utf8")) as Row[] | { sentences?: Row[] };
+  const rows = Array.isArray(raw) ? raw : raw.sentences ?? [];
+  const why = new Map<string, number>();
+  let added = 0;
+  for (const row of rows) {
+    const hit = row.w ? byWord.get(row.w.normalize("NFC").trim()) : undefined;
+    if (!hit) {
+      why.set("목록에 없는 낱말", (why.get("목록에 없는 낱말") ?? 0) + 1);
+      continue;
+    }
+    const key = wordKey(hit.word.w);
+    if ((book[key]?.length ?? 0) >= NEED) {
+      why.set("이미 둘", (why.get("이미 둘") ?? 0) + 1);
+      continue;
+    }
+    const sentence = accept(language, hit.stage, hit.word, row, taken);
+    if (typeof sentence === "string") {
+      why.set(sentence, (why.get(sentence) ?? 0) + 1);
+      console.log(`뺌 ${sentence}: ${row.w} | ${row.text ?? ""} [${row.blank ?? ""}]`);
+      continue;
+    }
+    book[key] = [...(book[key] ?? []), { ...sentence, src: "cursor" }];
+    added += 1;
+  }
+  writeBook(language, book);
+  console.log(`${language}: 넣음 ${added} · 뺌 ${[...why].map(([reason, n]) => `${reason} ${n}`).join(", ") || "0"}`);
 }
 
 async function pool<T>(list: T[], size: number, run: (item: T) => Promise<void>) {
@@ -216,8 +267,13 @@ async function pool<T>(list: T[], size: number, run: (item: T) => Promise<void>)
   );
 }
 
-if (checkOnly) {
-  report();
+if (todoAt >= 0) {
+  await todoList(args[todoAt + 1] ?? "", Number.isFinite(limit) ? limit : 200);
+} else if (mergeAt >= 0) {
+  await merge(args[mergeAt + 1] ?? "", args[mergeAt + 2] ?? "");
+  await report();
+} else if (checkOnly) {
+  await report();
 } else {
   let made = 0;
   for (const language of langs) {
@@ -245,5 +301,5 @@ if (checkOnly) {
     console.log(`${language} 끝`);
     if (made >= limit) break;
   }
-  report();
+  await report();
 }
