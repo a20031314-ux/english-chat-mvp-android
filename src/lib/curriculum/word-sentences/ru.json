@@ -1713,6 +1713,22 @@
    "src": "tatoeba:10144735/marafon en:9735644/DJ_Saidez"
   }
  ],
+ "w|благородный": [
+  {
+   "text": "Павел считает, что помогать младшим — благородное дело.",
+   "en": "Pavel thinks helping younger kids is a noble thing to do.",
+   "ko": "파벨은 동생들을 돕는 게 훌륭한 일이라고 생각해요.",
+   "blank": "благородное",
+   "src": "made"
+  },
+  {
+   "text": "Каждый вечер Елена отдаёт оставшийся хлеб в приют — это благородный жест.",
+   "en": "Every evening Elena gives the leftover bread to a shelter — a noble gesture.",
+   "ko": "엘레나는 매일 저녁 남은 빵을 보호소에 기부하는데, 참 훌륭한 일이에요.",
+   "blank": "благородный",
+   "src": "made"
+  }
+ ],
  "w|благословить": [
   {
    "text": "Перед открытием нового моста священник пришёл благословить его, и Алексей стоял рядом.",
@@ -1726,6 +1742,22 @@
    "en": "The old teacher gave Natalia her blessing for her first solo concert.",
    "ko": "노선생님은 나탈리야의 첫 독주회를 축복해 줬어요.",
    "blank": "благословила",
+   "src": "made"
+  }
+ ],
+ "w|блестящий": [
+  {
+   "text": "Учительница назвала доклад Павла блестящим.",
+   "en": "The teacher called Pavel's report brilliant.",
+   "ko": "선생님은 파벨의 발표가 훌륭했다고 했어요.",
+   "blank": "блестящим",
+   "src": "made"
+  },
+  {
+   "text": "Елена смазала пироги яйцом, и корочка стала блестящей.",
+   "en": "Elena brushed the pies with egg, and the crust became shiny.",
+   "ko": "엘레나가 파이에 달걀물을 바르자 껍질이 반질반질해졌어요.",
+   "blank": "блестящей",
    "src": "made"
   }
  ],
@@ -2027,6 +2059,22 @@
    "src": "tatoeba:7145383/marafon en:3724401/CM"
   }
  ],
+ "w|болтовня": [
+  {
+   "text": "Из-за болтовни на уроке Павла пересадили на первую парту.",
+   "en": "Because of chatting in class, Pavel was moved to the front desk.",
+   "ko": "수업 중에 떠든 탓에 파벨은 맨 앞자리로 옮겨졌어요.",
+   "blank": "болтовни",
+   "src": "made"
+  },
+  {
+   "text": "Утренняя болтовня покупателей за кофе помогает Елене проснуться.",
+   "en": "The customers' morning chatter over coffee helps Elena wake up.",
+   "ko": "아침에 커피를 마시는 손님들의 수다 덕분에 엘레나는 잠이 깨요.",
+   "blank": "болтовня",
+   "src": "made"
+  }
+ ],
  "w|боль": [
   {
    "text": "Боль прошла.",
@@ -2299,6 +2347,22 @@
    "en": "I'm younger than my brother.",
    "ko": "나는 형보다 어려.",
    "blank": "брата"
+  }
+ ],
+ "w|братство": [
+  {
+   "text": "Павел и его друзья по команде называют свою дружбу настоящим братством.",
+   "en": "Pavel and his teammates call their friendship a real brotherhood.",
+   "ko": "파벨과 팀 친구들은 자기들의 우정을 진짜 형제애라고 불러요.",
+   "blank": "братством",
+   "src": "made"
+  },
+  {
+   "text": "Пекари из соседних районов называют свою дружбу с Еленой братством хлеба.",
+   "en": "Bakers from the neighbouring districts call their friendship with Elena the brotherhood of bread.",
+   "ko": "이웃 동네 제빵사들은 엘레나와의 우정을 빵의 형제애라고 불러요.",
+   "blank": "братством",
+   "src": "made"
   }
  ],
  "w|брать": [
@@ -3693,6 +3757,22 @@
    "ko": "방금 또 폭발음을 들었어요.",
    "blank": "взрыв",
    "src": "tatoeba:5304259/marafon en:5304227/CK"
+  }
+ ],
+ "w|взрывчатка": [
+  {
+   "text": "В фильме, который смотрел класс Павла, сапёры искали взрывчатку под мостом.",
+   "en": "In the film Pavel's class watched, sappers were looking for explosives under a bridge.",
+   "ko": "파벨네 반이 본 영화에서 공병들은 다리 밑의 폭약을 찾고 있었어요.",
+   "blank": "взрывчатку",
+   "src": "made"
+  },
+  {
+   "text": "По телевизору в пекарне Елены показывали новости о том, как в карьере работает взрывчатка.",
+   "en": "The TV in Elena's bakery showed news about how explosives are used in a quarry.",
+   "ko": "엘레나네 빵집 텔레비전에서 채석장에서 폭약을 어떻게 쓰는지 뉴스가 나왔어요.",
+   "blank": "взрывчатка",
+   "src": "made"
   }
  ],
  "w|взять": [
@@ -6603,6 +6683,22 @@
    "src": "made"
   }
  ],
+ "w|выпасть": [
+  {
+   "text": "У Павла выпал молочный зуб прямо на уроке математики.",
+   "en": "Pavel's baby tooth fell out right in the middle of maths class.",
+   "ko": "파벨은 수학 시간에 유치가 빠졌어요.",
+   "blank": "выпал",
+   "src": "made"
+  },
+  {
+   "text": "Из рук Елены выпал поднос с булочками, но ни одна не испачкалась.",
+   "en": "A tray of buns fell out of Elena's hands, but not a single one got dirty.",
+   "ko": "엘레나 손에서 빵 쟁반이 떨어졌는데 하나도 더러워지지 않았어요.",
+   "blank": "выпал",
+   "src": "made"
+  }
+ ],
  "w|выпивка": [
   {
    "text": "У тебя закончилась выпивка.",
@@ -8761,6 +8857,22 @@
    "src": "tatoeba:2468238/paul_lingvo en:2166205/faraway9911"
   }
  ],
+ "w|дарить": [
+  {
+   "text": "На последний звонок Павел решил дарить учителям цветы от всего класса.",
+   "en": "For the last bell ceremony Pavel decided to give the teachers flowers from the whole class.",
+   "ko": "졸업식 날 파벨은 반 전체 이름으로 선생님들께 꽃을 드리기로 했어요.",
+   "blank": "дарить",
+   "src": "made"
+  },
+  {
+   "text": "Елена любит дарить детям по печенью, когда они приходят с родителями.",
+   "en": "Elena loves giving the children a biscuit each when they come with their parents.",
+   "ko": "엘레나는 부모와 함께 온 아이들에게 쿠키를 하나씩 주는 걸 좋아해요.",
+   "blank": "дарить",
+   "src": "made"
+  }
+ ],
  "w|дата": [
   {
    "text": "Ты знаешь, почему важна эта дата?",
@@ -10729,6 +10841,22 @@
    "src": "tatoeba:13737126/marafon en:13737122/rul"
   }
  ],
+ "w|драма": [
+  {
+   "text": "Для театрального кружка Павел выбрал драму о двух братьях.",
+   "en": "For the drama club Pavel chose a drama about two brothers.",
+   "ko": "연극 동아리를 위해 파벨은 두 형제에 관한 드라마를 골랐어요.",
+   "blank": "драму",
+   "src": "made"
+  },
+  {
+   "text": "Когда сгорел первый торт к свадьбе, для Елены это была настоящая драма.",
+   "en": "When the first wedding cake burned, it was a real drama for Elena.",
+   "ko": "첫 웨딩 케이크가 타 버렸을 때 엘레나에게는 진짜 큰일이었어요.",
+   "blank": "драма",
+   "src": "made"
+  }
+ ],
  "w|драться": [
   {
    "text": "Ты действительно хочешь драться?",
@@ -11605,6 +11733,22 @@
    "src": "tatoeba:13592468/marafon en:6133797/carlosalberto"
   }
  ],
+ "w|жестокость": [
+  {
+   "text": "В романе, который Павел читал по программе, автор осуждает жестокость войны.",
+   "en": "In the novel Pavel read for the curriculum, the author condemns the cruelty of war.",
+   "ko": "파벨이 교과 과정으로 읽은 소설에서 작가는 전쟁의 잔혹함을 비판해요.",
+   "blank": "жестокость",
+   "src": "made"
+  },
+  {
+   "text": "Елена была потрясена жестокостью мальчишек, которые дразнили бездомного пса у пекарни.",
+   "en": "Elena was shocked by the cruelty of the boys who were teasing a stray dog outside the bakery.",
+   "ko": "엘레나는 빵집 앞에서 떠돌이 개를 괴롭히는 소년들의 잔인함에 충격을 받았어요.",
+   "blank": "жестокостью",
+   "src": "made"
+  }
+ ],
  "w|живой": [
   {
    "text": "Кактус ещё живой, не выбрасывай.",
@@ -12359,6 +12503,22 @@
    "src": "made"
   }
  ],
+ "w|задеть": [
+  {
+   "text": "Шутка одноклассника задела Павла, но он промолчал.",
+   "en": "A classmate's joke hurt Pavel's feelings, but he kept quiet.",
+   "ko": "반 친구의 농담에 파벨은 마음이 상했지만 아무 말도 하지 않았어요.",
+   "blank": "задела",
+   "src": "made"
+  },
+  {
+   "text": "Елена задела локтем банку с мукой, и вся кухня стала белой.",
+   "en": "Elena knocked the flour jar with her elbow, and the whole kitchen turned white.",
+   "ko": "엘레나가 팔꿈치로 밀가루 통을 건드리는 바람에 부엌이 온통 하얘졌어요.",
+   "blank": "задела",
+   "src": "made"
+  }
+ ],
  "w|задний": [
   {
    "text": "Она дала задний ход в последний момент.",
@@ -12778,6 +12938,22 @@
    "en": "The cat loves climbing into boxes.",
    "ko": "고양이는 상자 속에 들어가는 걸 좋아해요.",
    "blank": "залезать",
+   "src": "made"
+  }
+ ],
+ "w|залезть": [
+  {
+   "text": "Мяч застрял на дереве, и Павлу пришлось залезть за ним.",
+   "en": "The ball got stuck in a tree, and Pavel had to climb up for it.",
+   "ko": "공이 나무에 걸려서 파벨이 올라가 꺼내야 했어요.",
+   "blank": "залезть",
+   "src": "made"
+  },
+  {
+   "text": "Кот соседей умудрился залезть в пекарню Елены через окно.",
+   "en": "The neighbours' cat managed to climb into Elena's bakery through the window.",
+   "ko": "이웃집 고양이가 창문으로 엘레나의 빵집에 기어들어 왔어요.",
+   "blank": "залезть",
    "src": "made"
   }
  ],
@@ -15493,6 +15669,22 @@
    "src": "tatoeba:423679/Hellerick en:72089"
   }
  ],
+ "w|испанский": [
+  {
+   "text": "Павел начал учить испанский язык в кружке после уроков.",
+   "en": "Pavel started learning Spanish in an after-school club.",
+   "ko": "파벨은 방과 후 동아리에서 스페인어를 배우기 시작했어요.",
+   "blank": "испанский",
+   "src": "made"
+  },
+  {
+   "text": "По пятницам Елена печёт испанский хлеб с оливками.",
+   "en": "On Fridays Elena bakes Spanish bread with olives.",
+   "ko": "엘레나는 금요일마다 올리브를 넣은 스페인식 빵을 구워요.",
+   "blank": "испанский",
+   "src": "made"
+  }
+ ],
  "w|исполниться": [
   {
    "text": "В день, когда Андрею исполнилось сорок, отель прислал в номер торт.",
@@ -15619,6 +15811,22 @@
    "src": "tatoeba:10739786/Ooneykcall en:10739769/terrywallwork"
   }
  ],
+ "w|испытать": [
+  {
+   "text": "Перед выступлением Павел испытал настоящий страх сцены.",
+   "en": "Before his performance Pavel experienced real stage fright.",
+   "ko": "발표 전에 파벨은 진짜 무대 공포를 느꼈어요.",
+   "blank": "испытал",
+   "src": "made"
+  },
+  {
+   "text": "Елена решила испытать новую печь на ржаном хлебе.",
+   "en": "Elena decided to test the new oven on rye bread.",
+   "ko": "엘레나는 새 오븐을 호밀빵으로 시험해 보기로 했어요.",
+   "blank": "испытать",
+   "src": "made"
+  }
+ ],
  "w|испытывать": [
   {
    "text": "Андрей признаётся, что испытывает лёгкую зависть к другу, который живёт у моря.",
@@ -15711,6 +15919,22 @@
    "ko": "제보자를 밝힐 수 없어요.",
    "blank": "источник",
    "src": "tatoeba:6036010/odexed en:1954799/CK"
+  }
+ ],
+ "w|исход": [
+  {
+   "text": "Гол Павла в последнюю минуту решил исход матча.",
+   "en": "Pavel's last-minute goal decided the outcome of the match.",
+   "ko": "경기 결과는 파벨이 마지막 순간에 넣은 골로 갈렸어요.",
+   "blank": "исход",
+   "src": "made"
+  },
+  {
+   "text": "Елена волновалась за исход конкурса пекарей до самого объявления.",
+   "en": "Elena was nervous about the outcome of the bakers' competition right up to the announcement.",
+   "ko": "엘레나는 발표 직전까지 제빵 대회 결과가 걱정됐어요.",
+   "blank": "исход",
+   "src": "made"
   }
  ],
  "w|исчезать": [
@@ -16485,6 +16709,22 @@
    "src": "tatoeba:5132587/odexed en:1474133/CK"
   }
  ],
+ "w|кинуть": [
+  {
+   "text": "Павел кинул рюкзак на парту и побежал в столовую.",
+   "en": "Pavel tossed his backpack onto the desk and ran to the canteen.",
+   "ko": "파벨은 가방을 책상에 던져 놓고 식당으로 뛰어갔어요.",
+   "blank": "кинул",
+   "src": "made"
+  },
+  {
+   "text": "Елена кинула горсть изюма в тесто для кулича.",
+   "en": "Elena threw a handful of raisins into the Easter cake dough.",
+   "ko": "엘레나는 부활절 빵 반죽에 건포도를 한 줌 넣었어요.",
+   "blank": "кинула",
+   "src": "made"
+  }
+ ],
  "w|кислород": [
   {
    "text": "Кислород необходим земным организмам.",
@@ -17059,6 +17299,22 @@
    "src": "made"
   }
  ],
+ "w|колония": [
+  {
+   "text": "На истории Павел узнал, как жили люди в первых колониях Америки.",
+   "en": "In history Pavel learned how people lived in the first colonies of America.",
+   "ko": "역사 시간에 파벨은 아메리카 첫 식민지 사람들이 어떻게 살았는지 배웠어요.",
+   "blank": "колониях",
+   "src": "made"
+  },
+  {
+   "text": "На подоконнике у Елены живёт целая колония кактусов.",
+   "en": "A whole colony of cacti lives on Elena's windowsill.",
+   "ko": "엘레나네 창턱에는 선인장이 한가득 모여 살아요.",
+   "blank": "колония",
+   "src": "made"
+  }
+ ],
  "w|кольцо": [
   {
    "text": "Почему ты не носишь обручальное кольцо?",
@@ -17119,6 +17375,22 @@
    "ko": "나는 네 지휘관이 아니야.",
    "blank": "командир",
    "src": "tatoeba:6884560/odexed en:5162667/AlanF_US"
+  }
+ ],
+ "w|командование": [
+  {
+   "text": "На военно-исторической игре Павел отвечал за командование своим отрядом.",
+   "en": "In the military history game Pavel was in charge of commanding his squad.",
+   "ko": "역사 전투 놀이에서 파벨은 자기 분대 지휘를 맡았어요.",
+   "blank": "командование",
+   "src": "made"
+  },
+  {
+   "text": "Елена вспоминает бабушку, которая пекла хлеб для командования полка во время войны.",
+   "en": "Elena remembers her grandmother, who baked bread for the regiment's command during the war.",
+   "ko": "엘레나는 전쟁 때 연대 지휘부에 빵을 구워 주던 할머니를 떠올려요.",
+   "blank": "командования",
+   "src": "made"
   }
  ],
  "w|комиссар": [
@@ -20063,6 +20335,22 @@
    "src": "made"
   }
  ],
+ "w|манера": [
+  {
+   "text": "У нового учителя истории спокойная манера говорить, и Павел слушает его с удовольствием.",
+   "en": "The new history teacher has a calm way of speaking, and Pavel enjoys listening to him.",
+   "ko": "새 역사 선생님은 말투가 차분해서 파벨은 즐겁게 들어요.",
+   "blank": "манера",
+   "src": "made"
+  },
+  {
+   "text": "Покупателям нравится манера Елены разговаривать с каждым, как со старым знакомым.",
+   "en": "Customers like Elena's manner of talking to everyone like an old friend.",
+   "ko": "손님들은 엘레나가 누구에게나 오랜 친구처럼 말하는 태도를 좋아해요.",
+   "blank": "манера",
+   "src": "made"
+  }
+ ],
  "w|март": [
   {
    "text": "Для меня март - самый важный месяц года.",
@@ -21217,6 +21505,22 @@
    "en": "That gentleman has already left.",
    "ko": "그 분은 이미 가셨어.",
    "blank": "мистер"
+  }
+ ],
+ "w|мишень": [
+  {
+   "text": "На уроке ОБЖ Павел стрелял в мишень из пневматической винтовки.",
+   "en": "In the safety class Pavel shot at a target with an air rifle.",
+   "ko": "안전 교육 시간에 파벨은 공기총으로 과녁을 쐈어요.",
+   "blank": "мишень",
+   "src": "made"
+  },
+  {
+   "text": "Новая пекарня Елены стала мишенью для критики местного блогера.",
+   "en": "Elena's new bakery became a target for a local blogger's criticism.",
+   "ko": "엘레나의 새 빵집은 동네 블로거의 비판 대상이 됐어요.",
+   "blank": "мишенью",
+   "src": "made"
   }
  ],
  "w|младший": [
@@ -27915,6 +28219,22 @@
    "src": "tatoeba:8055326/marafon en:1954762/CK"
   }
  ],
+ "w|освободиться": [
+  {
+   "text": "Павел освободился после уроков пораньше и пошёл на тренировку.",
+   "en": "Pavel got free a bit earlier after school and went to training.",
+   "ko": "파벨은 수업이 일찍 끝나서 훈련하러 갔어요.",
+   "blank": "освободился",
+   "src": "made"
+  },
+  {
+   "text": "Елена освободилась только к обеду, когда продала весь утренний хлеб.",
+   "en": "Elena only got free by lunchtime, when she'd sold all the morning bread.",
+   "ko": "엘레나는 아침 빵을 다 팔고 나서야 점심때쯤 한숨 돌렸어요.",
+   "blank": "освободилась",
+   "src": "made"
+  }
+ ],
  "w|освобождение": [
   {
    "text": "Смерть - единственное освобождение?",
@@ -32735,6 +33055,22 @@
    "src": "made"
   }
  ],
+ "w|подразумевать": [
+  {
+   "text": "Павел не сразу понял, что подразумевает учительница под словом «свободная тема».",
+   "en": "Pavel didn't immediately understand what the teacher meant by \"free topic\".",
+   "ko": "파벨은 선생님이 말한 \"자유 주제\"가 무슨 뜻인지 바로 이해하지 못했어요.",
+   "blank": "подразумевает",
+   "src": "made"
+  },
+  {
+   "text": "Когда покупатель просит «что-нибудь к чаю», Елена знает, что он подразумевает пирожные.",
+   "en": "When a customer asks for \"something to go with tea\", Elena knows he means pastries.",
+   "ko": "손님이 \"차랑 먹을 것\"을 달라고 하면 엘레나는 케이크를 말하는 걸 알아요.",
+   "blank": "подразумевает",
+   "src": "made"
+  }
+ ],
  "w|подробность": [
   {
    "text": "Расскажи мне каждую подробность.",
@@ -34383,6 +34719,22 @@
    "src": "made"
   }
  ],
+ "w|помеха": [
+  {
+   "text": "Шум ремонта за окном стал помехой для контрольной у Павла в классе.",
+   "en": "The noise of repairs outside the window disrupted the test in Pavel's class.",
+   "ko": "창밖 공사 소음 때문에 파벨네 반 시험이 방해를 받았어요.",
+   "blank": "помехой",
+   "src": "made"
+  },
+  {
+   "text": "Ремонт дороги стал серьёзной помехой для покупателей, и Елена начала доставку.",
+   "en": "The roadworks became a serious obstacle for customers, so Elena started deliveries.",
+   "ko": "도로 공사가 손님들에게 큰 불편이 되자 엘레나는 배달을 시작했어요.",
+   "blank": "помехой",
+   "src": "made"
+  }
+ ],
  "w|помешать": [
   {
    "text": "Вы не можете помешать мне думать об этом.",
@@ -35786,6 +36138,22 @@
    "en": "Let's go have dinner at the new café.",
    "ko": "새로 생긴 카페에 저녁 먹으러 가자.",
    "blank": "поужинать",
+   "src": "made"
+  }
+ ],
+ "w|похититель": [
+  {
+   "text": "В школьном спектакле Павел играл похитителя волшебной лампы.",
+   "en": "In the school play Pavel played the thief who stole a magic lamp.",
+   "ko": "학교 연극에서 파벨은 요술 램프를 훔쳐 가는 도둑 역을 맡았어요.",
+   "blank": "похитителя",
+   "src": "made"
+  },
+  {
+   "text": "Елена смеялась, что ворона у пекарни — главный похититель её крошек.",
+   "en": "Elena laughed that the crow outside the bakery is the main thief of her crumbs.",
+   "ko": "엘레나는 빵집 앞 까마귀가 빵 부스러기를 훔쳐 가는 최고의 도둑이라며 웃었어요.",
+   "blank": "похититель",
    "src": "made"
   }
  ],
@@ -37219,6 +37587,22 @@
    "src": "made"
   }
  ],
+ "w|привлекать": [
+  {
+   "text": "Школьная газета, которую ведёт Павел, привлекает всё больше читателей.",
+   "en": "The school newspaper Pavel runs is attracting more and more readers.",
+   "ko": "파벨이 맡은 학교 신문은 독자가 점점 늘고 있어요.",
+   "blank": "привлекает",
+   "src": "made"
+  },
+  {
+   "text": "Запах свежего хлеба привлекает в пекарню Елены прохожих с самого утра.",
+   "en": "The smell of fresh bread draws passers-by into Elena's bakery from early morning.",
+   "ko": "갓 구운 빵 냄새가 아침부터 행인들을 엘레나의 빵집으로 끌어들여요.",
+   "blank": "привлекает",
+   "src": "made"
+  }
+ ],
  "w|привлечь": [
   {
    "text": "Я просто хотел привлечь твоё внимание.",
@@ -37670,6 +38054,22 @@
    "en": "The train manager didn't give orders but politely asked Natalia to change seats.",
    "ko": "열차장은 명령하지 않고 나탈리야에게 자리를 옮겨 달라고 정중하게 부탁했어요.",
    "blank": "приказывать",
+   "src": "made"
+  }
+ ],
+ "w|прикасаться": [
+  {
+   "text": "В музее учитель попросил Павла не прикасаться к экспонатам руками.",
+   "en": "At the museum the teacher asked Pavel not to touch the exhibits with his hands.",
+   "ko": "박물관에서 선생님은 파벨에게 전시품을 손으로 만지지 말라고 했어요.",
+   "blank": "прикасаться",
+   "src": "made"
+  },
+  {
+   "text": "Елена учит учеников не прикасаться к горячим противням без рукавиц.",
+   "en": "Elena teaches her trainees not to touch hot baking trays without oven gloves.",
+   "ko": "엘레나는 수습생들에게 뜨거운 오븐 판을 장갑 없이 만지지 말라고 가르쳐요.",
+   "blank": "прикасаться",
    "src": "made"
   }
  ],
@@ -39049,6 +39449,22 @@
    "src": "tatoeba:10155228/Wezel en:10153374/CK"
   }
  ],
+ "w|пропадать": [
+  {
+   "text": "Ручки у Павла постоянно пропадают из пенала.",
+   "en": "Pavel's pens keep disappearing from his pencil case.",
+   "ko": "파벨의 필통에서는 펜이 자꾸 없어져요.",
+   "blank": "пропадают",
+   "src": "made"
+  },
+  {
+   "text": "Корица у Елены быстро пропадает с полок, потому что все берут булочки с ней.",
+   "en": "Elena's cinnamon disappears from the shelves quickly because everyone buys the buns with it.",
+   "ko": "엘레나네 계피빵은 모두 사 가서 진열대에서 금방 사라져요.",
+   "blank": "пропадает",
+   "src": "made"
+  }
+ ],
  "w|пропасть": [
   {
    "text": "Куда пропал мой ключ?",
@@ -40044,6 +40460,22 @@
    "en": "The old server in the corner of Maria's office was covered with a thick layer of dust.",
    "ko": "마리아 사무실 구석의 낡은 서버에 먼지가 두껍게 쌓였어요.",
    "blank": "пыли",
+   "src": "made"
+  }
+ ],
+ "w|пытать": [
+  {
+   "text": "Павел шутит, что учитель любит пытать класс вопросами в последнюю минуту урока.",
+   "en": "Pavel jokes that the teacher loves to grill the class with questions in the last minute of the lesson.",
+   "ko": "파벨은 선생님이 수업 끝나기 직전에 질문으로 반을 괴롭히는 걸 좋아한다고 농담해요.",
+   "blank": "пытать",
+   "src": "made"
+  },
+  {
+   "text": "Покупатели пытают Елену, в чём секрет её ржаного хлеба, но она молчит.",
+   "en": "Customers pester Elena about the secret of her rye bread, but she keeps quiet.",
+   "ko": "손님들이 호밀빵의 비결을 꼬치꼬치 캐묻지만 엘레나는 말하지 않아요.",
+   "blank": "пытают",
    "src": "made"
   }
  ],
@@ -42099,6 +42531,22 @@
    "src": "made"
   }
  ],
+ "w|ритуал": [
+  {
+   "text": "Перед каждой контрольной у Павла свой ритуал: он съедает шоколадку.",
+   "en": "Before every test Pavel has his own ritual: he eats a chocolate bar.",
+   "ko": "파벨은 시험 전마다 초콜릿 하나를 먹는 자기만의 의식이 있어요.",
+   "blank": "ритуал",
+   "src": "made"
+  },
+  {
+   "text": "Каждое утро у Елены один и тот же ритуал: чашка чая и первая буханка из печи.",
+   "en": "Every morning Elena has the same ritual: a cup of tea and the first loaf from the oven.",
+   "ko": "엘레나는 매일 아침 차 한 잔과 오븐에서 나온 첫 빵으로 하루를 시작하는 의식이 있어요.",
+   "blank": "ритуал",
+   "src": "made"
+  }
+ ],
  "w|робот": [
   {
    "text": "Никита шутит, что скоро овощи будет резать робот.",
@@ -42443,6 +42891,22 @@
    "en": "Pay in rubles.",
    "ko": "루블로 내.",
    "blank": "рублями"
+  }
+ ],
+ "w|ругаться": [
+  {
+   "text": "Учительница попросила Павла и его соседа не ругаться на уроке.",
+   "en": "The teacher asked Pavel and his deskmate not to squabble during the lesson.",
+   "ko": "선생님은 파벨과 짝꿍에게 수업 중에 다투지 말라고 했어요.",
+   "blank": "ругаться",
+   "src": "made"
+  },
+  {
+   "text": "Поставщики муки опоздали, и Елене пришлось с ними ругаться по телефону.",
+   "en": "The flour suppliers were late, and Elena had to argue with them on the phone.",
+   "ko": "밀가루 납품업자가 늦어서 엘레나는 전화로 그들과 언성을 높여야 했어요.",
+   "blank": "ругаться",
+   "src": "made"
   }
  ],
  "w|ружье": [
@@ -44651,6 +45115,22 @@
    "blank": "следую"
   }
  ],
+ "w|следствие": [
+  {
+   "text": "Павел понял, что плохая оценка — прямое следствие того, что он не повторил тему.",
+   "en": "Pavel realised that the bad mark was a direct consequence of not revising the topic.",
+   "ko": "파벨은 나쁜 점수가 복습을 안 한 직접적인 결과라는 걸 깨달았어요.",
+   "blank": "следствие",
+   "src": "made"
+  },
+  {
+   "text": "Очередь у пекарни Елены — следствие того, что о ней написали в городской газете.",
+   "en": "The queue outside Elena's bakery is a result of an article about it in the city newspaper.",
+   "ko": "엘레나네 빵집 앞의 줄은 시 신문에 기사가 난 덕분이에요.",
+   "blank": "следствие",
+   "src": "made"
+  }
+ ],
  "w|следующий": [
   {
    "text": "Кто следующий?",
@@ -45899,6 +46379,22 @@
    "src": "tatoeba:1779340/soweli_Elepanto en:1688750/Amastan"
   }
  ],
+ "w|содержание": [
+  {
+   "text": "Учитель сказал Павлу, что содержание сочинения важнее красивого почерка.",
+   "en": "The teacher told Pavel that the content of the essay matters more than nice handwriting.",
+   "ko": "선생님은 파벨에게 글씨보다 글 내용이 더 중요하다고 했어요.",
+   "blank": "содержание",
+   "src": "made"
+  },
+  {
+   "text": "Елена проверяет содержание сахара в каждом новом рецепте.",
+   "en": "Elena checks the sugar content in every new recipe.",
+   "ko": "엘레나는 새 조리법마다 설탕 함량을 확인해요.",
+   "blank": "содержание",
+   "src": "made"
+  }
+ ],
  "w|содержать": [
   {
    "text": "Школа Алексея содержит маленькую теплицу, где ученики выращивают помидоры.",
@@ -46229,6 +46725,22 @@
    "en": "There's a typo in the message.",
    "ko": "메시지에 오타가 있어.",
    "blank": "сообщении"
+  }
+ ],
+ "w|сообщество": [
+  {
+   "text": "Павел создал в сети сообщество для учеников, которые любят астрономию.",
+   "en": "Pavel created an online community for students who love astronomy.",
+   "ko": "파벨은 천문학을 좋아하는 학생들을 위해 온라인 모임을 만들었어요.",
+   "blank": "сообщество",
+   "src": "made"
+  },
+  {
+   "text": "Пекарня Елены стала местом, где собирается всё местное сообщество.",
+   "en": "Elena's bakery has become a place where the whole local community gathers.",
+   "ko": "엘레나의 빵집은 동네 사람들이 다 모이는 곳이 됐어요.",
+   "blank": "сообщество",
+   "src": "made"
   }
  ],
  "w|сообщить": [
@@ -46657,6 +47169,22 @@
    "ko": "유럽 연합에는 어떤 나라들이 있어요?",
    "blank": "союз",
    "src": "tatoeba:11159498/marafon en:13715831/zogwarg"
+  }
+ ],
+ "w|союзник": [
+  {
+   "text": "На истории Павел выяснил, какие страны были союзниками во Второй мировой войне.",
+   "en": "In history Pavel found out which countries were allies in the Second World War.",
+   "ko": "역사 시간에 파벨은 제이차 세계대전에서 어느 나라들이 동맹이었는지 알아봤어요.",
+   "blank": "союзниками",
+   "src": "made"
+  },
+  {
+   "text": "Соседний фермер — верный союзник Елены, он привозит ей самые свежие яйца.",
+   "en": "The farmer next door is Elena's loyal ally — he brings her the freshest eggs.",
+   "ko": "이웃 농부는 엘레나의 든든한 동지라서 가장 신선한 달걀을 가져다줘요.",
+   "blank": "союзник",
+   "src": "made"
   }
  ],
  "w|спальня": [
@@ -47877,6 +48405,22 @@
    "blank": "стоит"
   }
  ],
+ "w|стойка": [
+  {
+   "text": "В школьной столовой Павел встал у стойки с булочками.",
+   "en": "In the school canteen Pavel stood by the counter with the buns.",
+   "ko": "학교 식당에서 파벨은 빵이 놓인 카운터 앞에 섰어요.",
+   "blank": "стойки",
+   "src": "made"
+  },
+  {
+   "text": "Елена поставила у окна высокую стойку, чтобы покупатели могли пить кофе стоя.",
+   "en": "Elena put a high counter by the window so customers could drink coffee standing up.",
+   "ko": "엘레나는 손님들이 서서 커피를 마실 수 있게 창가에 높은 바를 놓았어요.",
+   "blank": "стойку",
+   "src": "made"
+  }
+ ],
  "w|стол": [
   {
    "text": "Стол у окна занят.",
@@ -48719,6 +49263,38 @@
    "en": "They exist only on paper.",
    "ko": "그것들은 서류에만 있어.",
    "blank": "существуют"
+  }
+ ],
+ "w|сущность": [
+  {
+   "text": "Учительница попросила Павла объяснить своими словами сущность закона Ньютона.",
+   "en": "The teacher asked Pavel to explain the essence of Newton's law in his own words.",
+   "ko": "선생님은 파벨에게 뉴턴 법칙의 핵심을 자기 말로 설명해 보라고 했어요.",
+   "blank": "сущность",
+   "src": "made"
+  },
+  {
+   "text": "Елена говорит, что сущность хорошего хлеба — время и терпение.",
+   "en": "Elena says the essence of good bread is time and patience.",
+   "ko": "엘레나는 좋은 빵의 본질은 시간과 인내라고 말해요.",
+   "blank": "сущность",
+   "src": "made"
+  }
+ ],
+ "w|сфера": [
+  {
+   "text": "Павел пока не решил, в какой сфере хочет работать после школы.",
+   "en": "Pavel hasn't yet decided what field he wants to work in after school.",
+   "ko": "파벨은 졸업 후 어떤 분야에서 일할지 아직 정하지 못했어요.",
+   "blank": "сфере",
+   "src": "made"
+  },
+  {
+   "text": "До пекарни Елена десять лет работала в сфере банковских услуг.",
+   "en": "Before the bakery Elena worked in banking for ten years.",
+   "ko": "빵집을 열기 전에 엘레나는 십 년 동안 은행 쪽에서 일했어요.",
+   "blank": "сфере",
+   "src": "made"
   }
  ],
  "w|схватить": [
@@ -49839,6 +50415,22 @@
    "ko": "낮에는 뭐 하세요?",
    "blank": "течение",
    "src": "tatoeba:13556429/marafon en:13752929/frpzzd"
+  }
+ ],
+ "w|течь": [
+  {
+   "text": "В кабинете химии потёк кран, и Павел позвал завхоза.",
+   "en": "The tap in the chemistry room started leaking, and Pavel called the caretaker.",
+   "ko": "화학실 수도꼭지에서 물이 새서 파벨이 관리인을 불렀어요.",
+   "blank": "потёк",
+   "src": "made"
+  },
+  {
+   "text": "Растопленный шоколад начал течь по краям торта, и Елена быстро подставила тарелку.",
+   "en": "The melted chocolate started running down the sides of the cake, and Elena quickly put a plate underneath.",
+   "ko": "녹은 초콜릿이 케이크 옆으로 흘러내리기 시작해서 엘레나가 얼른 접시를 받쳤어요.",
+   "blank": "течь",
+   "src": "made"
   }
  ],
  "w|тип": [
@@ -52203,6 +52795,22 @@
    "src": "tatoeba:1568938/Biga en:256885/CK"
   }
  ],
+ "w|уничтожение": [
+  {
+   "text": "В учебнике Павел прочитал об уничтожении древней библиотеки при пожаре.",
+   "en": "In the textbook Pavel read about the destruction of an ancient library in a fire.",
+   "ko": "파벨은 교과서에서 고대 도서관이 불에 타 없어진 이야기를 읽었어요.",
+   "blank": "уничтожении",
+   "src": "made"
+  },
+  {
+   "text": "Елена считает, что выбрасывать хлеб — это уничтожение чужого труда.",
+   "en": "Elena believes that throwing away bread is destroying other people's work.",
+   "ko": "엘레나는 빵을 버리는 건 남의 수고를 없애는 일이라고 생각해요.",
+   "blank": "уничтожение",
+   "src": "made"
+  }
+ ],
  "w|уничтожить": [
   {
    "text": "Мы должны уничтожить улики.",
@@ -53198,6 +53806,22 @@
    "en": "Natalia's daughter came to the pool in a swimsuit with fairy wings.",
    "ko": "나탈리야의 딸은 요정 날개가 달린 수영복을 입고 수영장에 왔어요.",
    "blank": "феи",
+   "src": "made"
+  }
+ ],
+ "w|фигура": [
+  {
+   "text": "На геометрии Павел никак не мог найти площадь сложной фигуры.",
+   "en": "In geometry Pavel just couldn't find the area of a complex figure.",
+   "ko": "기하 시간에 파벨은 복잡한 도형의 넓이를 도무지 구하지 못했어요.",
+   "blank": "фигуры",
+   "src": "made"
+  },
+  {
+   "text": "Елена вылепила из теста фигуру зайца для детского праздника.",
+   "en": "Elena shaped a hare figure out of dough for a children's party.",
+   "ko": "엘레나는 어린이 파티를 위해 반죽으로 토끼 모양을 빚었어요.",
+   "blank": "фигуру",
    "src": "made"
   }
  ],
@@ -54385,6 +55009,22 @@
    "en": "Wait an hour.",
    "ko": "한 시간만 기다려.",
    "blank": "час"
+  }
+ ],
+ "w|частица": [
+  {
+   "text": "На физике Павлу объяснили, из каких частиц состоит атом.",
+   "en": "In physics Pavel had it explained to him what particles an atom is made of.",
+   "ko": "물리 시간에 파벨은 원자가 어떤 입자로 이루어졌는지 배웠어요.",
+   "blank": "частиц",
+   "src": "made"
+  },
+  {
+   "text": "В каждом пироге Елены есть частица её души.",
+   "en": "There's a piece of Elena's soul in every one of her pies.",
+   "ko": "엘레나의 파이마다 그녀의 마음이 조금씩 담겨 있어요.",
+   "blank": "частица",
+   "src": "made"
   }
  ],
  "w|частично": [
