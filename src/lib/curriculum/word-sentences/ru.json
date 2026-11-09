@@ -499,6 +499,22 @@
    "src": "tatoeba:4777743/odexed en:3371537/sugirajj"
   }
  ],
+ "w|апельсин": [
+  {
+   "text": "Иван заказал свежевыжатый сок из апельсина.",
+   "en": "Ivan ordered freshly squeezed orange juice.",
+   "ko": "이반은 갓 짠 오렌지 주스를 시켰어요.",
+   "blank": "апельсина",
+   "src": "made"
+  },
+  {
+   "text": "В кадре Анна медленно чистила апельсин и смотрела в окно.",
+   "en": "In the shot Anna slowly peeled an orange and looked out of the window.",
+   "ko": "장면에서 안나는 천천히 오렌지를 까며 창밖을 봤어요.",
+   "blank": "апельсин",
+   "src": "made"
+  }
+ ],
  "w|аппарат": [
   {
    "text": "На кухне поставили новый кофейный аппарат, и все повара выстроились в очередь.",
@@ -561,6 +577,22 @@
    "ko": "제일 가까운 약국이 어디예요?",
    "blank": "аптека",
    "src": "tatoeba:2076254/marafon en:27254/CK"
+  }
+ ],
+ "w|аренда": [
+  {
+   "text": "Продавец рассказал Дмитрию, что аренда места на рынке подорожала.",
+   "en": "The seller told Dmitry that the rent for a stall at the market had gone up.",
+   "ko": "상인은 드미트리에게 시장 자리 임대료가 올랐다고 말했어요.",
+   "blank": "аренда",
+   "src": "made"
+  },
+  {
+   "text": "Самой большой статьёй расходов у Ольги в поездке была аренда машины.",
+   "en": "The biggest expense on Olga's trip was the car rental.",
+   "ko": "올가의 여행에서 가장 큰 지출은 렌터카 비용이었어요.",
+   "blank": "аренда",
+   "src": "made"
   }
  ],
  "w|арест": [
@@ -749,6 +781,22 @@
    "ko": "왕실 무도회 초대장이에요.",
    "blank": "бал",
    "src": "tatoeba:13948263/Wezel en:7563786/Hybrid"
+  }
+ ],
+ "w|банан": [
+  {
+   "text": "На десерт сыну Ивана принесли блинчики с бананом.",
+   "en": "For dessert Ivan's son was brought pancakes with banana.",
+   "ko": "디저트로 이반의 아들에게 바나나 팬케이크가 나왔어요.",
+   "blank": "бананом",
+   "src": "made"
+  },
+  {
+   "text": "Между сценами Анна съела банан, чтобы не упасть от усталости.",
+   "en": "Between scenes Anna ate a banana so as not to collapse from tiredness.",
+   "ko": "장면 사이에 안나는 지치지 않으려고 바나나를 먹었어요.",
+   "blank": "банан",
+   "src": "made"
   }
  ],
  "w|банда": [
@@ -1983,6 +2031,22 @@
    "src": "tatoeba:2932238/alik_farber en:2932152/AlanF_US"
   }
  ],
+ "w|браслет": [
+  {
+   "text": "Для сестры Дмитрий купил серебряный браслет с бирюзой.",
+   "en": "Dmitry bought his sister a silver bracelet with turquoise.",
+   "ko": "드미트리는 여동생에게 줄 터키석 은팔찌를 샀어요.",
+   "blank": "браслет",
+   "src": "made"
+  },
+  {
+   "text": "На заправке Ольга купила дешёвый браслет из ракушек.",
+   "en": "At the petrol station Olga bought a cheap shell bracelet.",
+   "ko": "주유소에서 올가는 조개껍데기로 만든 싼 팔찌를 샀어요.",
+   "blank": "браслет",
+   "src": "made"
+  }
+ ],
  "w|брат": [
   {
    "text": "Брат забрал ключи.",
@@ -2055,6 +2119,22 @@
    "en": "He quit smoking in the spring.",
    "ko": "그는 봄에 담배를 끊었어.",
    "blank": "бросил"
+  }
+ ],
+ "w|брюки": [
+  {
+   "text": "Дмитрий примерил старые вельветовые брюки прямо у прилавка.",
+   "en": "Dmitry tried on old corduroy trousers right at the stall.",
+   "ko": "드미트리는 가판대 앞에서 낡은 코듀로이 바지를 입어 봤어요.",
+   "blank": "брюки",
+   "src": "made"
+  },
+  {
+   "text": "Ольга испачкала брюки, когда меняла колесо.",
+   "en": "Olga got her trousers dirty when she was changing the tyre.",
+   "ko": "올가는 타이어를 갈다가 바지를 더럽혔어요.",
+   "blank": "брюки",
+   "src": "made"
   }
  ],
  "w|будто": [
@@ -3401,6 +3481,22 @@
    "src": "made"
   }
  ],
+ "w|вилка": [
+  {
+   "text": "Дочь Ивана уронила вилку, и официант сразу принёс новую.",
+   "en": "Ivan's daughter dropped her fork, and the waiter immediately brought a new one.",
+   "ko": "이반의 딸이 포크를 떨어뜨리자 종업원이 바로 새것을 가져왔어요.",
+   "blank": "вилку",
+   "src": "made"
+  },
+  {
+   "text": "По сценарию героиня Анны в гневе бросает вилку на стол.",
+   "en": "In the script Anna's character throws her fork on the table in anger.",
+   "ko": "대본에서 안나가 맡은 인물은 화가 나서 포크를 식탁에 던져요.",
+   "blank": "вилку",
+   "src": "made"
+  }
+ ],
  "w|вина": [
   {
    "text": "Сколько вина ты хочешь, чтобы я купил?",
@@ -3538,6 +3634,22 @@
    "en": "The vice president of the sponsoring bank came to Anna's premiere.",
    "ko": "후원 은행 부사장이 안나의 초연에 왔어요.",
    "blank": "вице-президент",
+   "src": "made"
+  }
+ ],
+ "w|вклад": [
+  {
+   "text": "Дмитрий шутит, что его коллекция пластинок — лучший вклад в будущее.",
+   "en": "Dmitry jokes that his record collection is his best investment in the future.",
+   "ko": "드미트리는 음반 수집이 미래를 위한 최고의 투자라고 농담해요.",
+   "blank": "вклад",
+   "src": "made"
+  },
+  {
+   "text": "На путешествие Ольга потратила часть денег со своего вклада.",
+   "en": "Olga spent part of the money from her savings deposit on the trip.",
+   "ko": "올가는 예금 일부를 여행에 썼어요.",
+   "blank": "вклада",
    "src": "made"
   }
  ],
@@ -4675,6 +4787,22 @@
    "ko": "시내 한가운데에 아주 멋진 공원이 있어요.",
    "blank": "восхитительный",
    "src": "tatoeba:4283703/odexed en:2399370/MethodGT"
+  }
+ ],
+ "w|восьмой": [
+  {
+   "text": "Дмитрий купил восьмой том старой энциклопедии.",
+   "en": "Dmitry bought the eighth volume of an old encyclopedia.",
+   "ko": "드미트리는 낡은 백과사전 제팔 권을 샀어요.",
+   "blank": "восьмой",
+   "src": "made"
+  },
+  {
+   "text": "К восьмому часу за рулём у Ольги заболела спина.",
+   "en": "By the eighth hour behind the wheel Olga's back began to ache.",
+   "ko": "운전한 지 여덟 시간째에 올가는 허리가 아팠어요.",
+   "blank": "восьмому",
+   "src": "made"
   }
  ],
  "w|вот": [
@@ -5993,6 +6121,22 @@
    "src": "tatoeba:4577444/marafon en:47720/CM"
   }
  ],
+ "w|выставить": [
+  {
+   "text": "Дмитрий решил выставить свои старые журналы на продажу в следующие выходные.",
+   "en": "Dmitry decided to put his old magazines up for sale next weekend.",
+   "ko": "드미트리는 다음 주말에 오래된 잡지를 팔려고 내놓기로 했어요.",
+   "blank": "выставить",
+   "src": "made"
+  },
+  {
+   "text": "Хозяин мотеля попросил Ольгу выставить мусор за дверь.",
+   "en": "The motel owner asked Olga to put the rubbish outside the door.",
+   "ko": "모텔 주인이 올가에게 쓰레기를 문밖에 내놓아 달라고 했어요.",
+   "blank": "выставить",
+   "src": "made"
+  }
+ ],
  "w|выстрел": [
   {
    "text": "В котором часу вы услышали выстрел?",
@@ -6617,6 +6761,22 @@
    "src": "made"
   }
  ],
+ "w|говядина": [
+  {
+   "text": "Иван всегда берёт тушёную говядину с картошкой.",
+   "en": "Ivan always gets braised beef with potatoes.",
+   "ko": "이반은 늘 감자를 곁들인 소고기 찜을 먹어요.",
+   "blank": "говядину",
+   "src": "made"
+  },
+  {
+   "text": "Для обеда съёмочной группы Анны повар приготовил говядину с овощами.",
+   "en": "For the lunch of Anna's film crew the cook made beef with vegetables.",
+   "ko": "요리사가 안나의 촬영팀 점심으로 채소를 곁들인 소고기를 만들었어요.",
+   "blank": "говядину",
+   "src": "made"
+  }
+ ],
  "w|год": [
   {
    "text": "С Новым годом!",
@@ -6659,6 +6819,22 @@
    "en": "Don't lose heart.",
    "ko": "풀 죽지 마.",
    "blank": "голову"
+  }
+ ],
+ "w|голод": [
+  {
+   "text": "К обеду Иван почувствовал такой голод, что заказал две порции.",
+   "en": "By lunchtime Ivan felt so hungry that he ordered two portions.",
+   "ko": "점심때가 되자 이반은 너무 배가 고파서 두 그릇을 시켰어요.",
+   "blank": "голод",
+   "src": "made"
+  },
+  {
+   "text": "Анна играла женщину, пережившую голод в военные годы.",
+   "en": "Anna played a woman who had survived famine during the war years.",
+   "ko": "안나는 전쟁 시기 기근을 겪은 여자를 연기했어요.",
+   "blank": "голод",
+   "src": "made"
   }
  ],
  "w|голодный": [
@@ -7779,6 +7955,22 @@
    "blank": "дверь"
   }
  ],
+ "w|двести": [
+  {
+   "text": "Ужин на всю семью обошёлся Ивану почти в двести евро.",
+   "en": "Dinner for the whole family cost Ivan almost two hundred euros.",
+   "ko": "가족 저녁 식사에 이반은 거의 이백 유로를 썼어요.",
+   "blank": "двести",
+   "src": "made"
+  },
+  {
+   "text": "В массовке вместе с Анной снимались почти двести человек.",
+   "en": "Almost two hundred people were filmed with Anna as extras.",
+   "ko": "엑스트라로 거의 이백 명이 안나와 함께 촬영했어요.",
+   "blank": "двести",
+   "src": "made"
+  }
+ ],
  "w|двигатель": [
   {
    "text": "Это правда, что ты сам собрал двигатель?",
@@ -7978,6 +8170,22 @@
    "en": "Olga wears jersey number nineteen.",
    "ko": "올가는 열아홉 번 유니폼을 입어요.",
    "blank": "девятнадцать",
+   "src": "made"
+  }
+ ],
+ "w|девятый": [
+  {
+   "text": "К девятому прилавку Дмитрий уже устал торговаться.",
+   "en": "By the ninth stall Dmitry was already tired of haggling.",
+   "ko": "아홉 번째 가판대쯤에서 드미트리는 흥정하는 데 지쳤어요.",
+   "blank": "девятому",
+   "src": "made"
+  },
+  {
+   "text": "Ольга остановилась на девятом километре, чтобы сфотографировать озеро.",
+   "en": "Olga stopped at the ninth kilometre to photograph the lake.",
+   "ko": "올가는 구 킬로미터 지점에서 호수 사진을 찍으려고 멈췄어요.",
+   "blank": "девятом",
    "src": "made"
   }
  ],
@@ -8303,6 +8511,22 @@
    "blank": "держусь"
   }
  ],
+ "w|десерт": [
+  {
+   "text": "Дети Ивана всегда сначала выбирают десерт, а потом уже основное блюдо.",
+   "en": "Ivan's children always choose dessert first and only then the main course.",
+   "ko": "이반의 아이들은 늘 디저트부터 고르고 그다음에 메인 요리를 골라요.",
+   "blank": "десерт",
+   "src": "made"
+  },
+  {
+   "text": "Для сцены в кафе Анне принесли десерт из пластика.",
+   "en": "For the café scene Anna was brought a plastic dessert.",
+   "ko": "카페 장면을 위해 안나에게 플라스틱 디저트를 가져다줬어요.",
+   "blank": "десерт",
+   "src": "made"
+  }
+ ],
  "w|десятка": [
   {
    "text": "Термометр за окном у Сергея показывает уже минус десятку.",
@@ -8316,6 +8540,22 @@
    "en": "Almost all ten from Maria's old class came to the reunion.",
    "ko": "마리아의 옛 반 열 명이 거의 다 모임에 왔어요.",
    "blank": "десятка",
+   "src": "made"
+  }
+ ],
+ "w|десятый": [
+  {
+   "text": "Только у десятого продавца Дмитрий нашёл нужную пластинку.",
+   "en": "Only at the tenth seller did Dmitry find the record he needed.",
+   "ko": "열 번째 상인에게서야 드미트리는 찾던 음반을 구했어요.",
+   "blank": "десятого",
+   "src": "made"
+  },
+  {
+   "text": "В десятом городе на маршруте Ольга решила остаться на два дня.",
+   "en": "In the tenth town on the route Olga decided to stay for two days.",
+   "ko": "경로상 열 번째 도시에서 올가는 이틀 묵기로 했어요.",
+   "blank": "десятом",
    "src": "made"
   }
  ],
@@ -9323,6 +9563,22 @@
    "src": "tatoeba:4194190/Lenin_1917 en:3541785/CK"
   }
  ],
+ "w|достойный": [
+  {
+   "text": "Иван считает, что это самый достойный семейный ресторан в районе.",
+   "en": "Ivan thinks this is the most decent family restaurant in the area.",
+   "ko": "이반은 이곳이 동네에서 가장 괜찮은 가족 식당이라고 생각해요.",
+   "blank": "достойный",
+   "src": "made"
+  },
+  {
+   "text": "Критики назвали игру Анны достойной премии.",
+   "en": "Critics called Anna's performance worthy of an award.",
+   "ko": "평론가들은 안나의 연기가 상을 받을 만하다고 했어요.",
+   "blank": "достойной",
+   "src": "made"
+  }
+ ],
  "w|доступ": [
   {
    "text": "Как мне получить доступ к принтеру?",
@@ -9367,6 +9623,22 @@
    "en": "I'm reading my daughter a story.",
    "ko": "딸에게 동화를 읽어 주고 있어.",
    "blank": "дочери"
+  }
+ ],
+ "w|драгоценность": [
+  {
+   "text": "Продавец уверял Дмитрия, что эта брошь — настоящая фамильная драгоценность.",
+   "en": "The seller assured Dmitry that this brooch was a real family heirloom.",
+   "ko": "상인은 드미트리에게 이 브로치가 진짜 집안 보물이라고 장담했어요.",
+   "blank": "драгоценность",
+   "src": "made"
+  },
+  {
+   "text": "Ольга прятала единственную драгоценность, бабушкино кольцо, в бардачке.",
+   "en": "Olga hid her only piece of jewellery, her grandmother's ring, in the glove box.",
+   "ko": "올가는 하나뿐인 보석인 할머니 반지를 조수석 수납함에 숨겨 뒀어요.",
+   "blank": "драгоценность",
+   "src": "made"
   }
  ],
  "w|драка": [
@@ -10473,6 +10745,22 @@
    "src": "made"
   }
  ],
+ "w|завершить": [
+  {
+   "text": "Дмитрий решил завершить прогулку по рынку чашкой кофе.",
+   "en": "Dmitry decided to finish his walk around the market with a cup of coffee.",
+   "ko": "드미트리는 시장 구경을 커피 한 잔으로 마무리하기로 했어요.",
+   "blank": "завершить",
+   "src": "made"
+  },
+  {
+   "text": "Ольга хотела завершить поездку у маяка на краю мыса.",
+   "en": "Olga wanted to end the trip at the lighthouse at the tip of the cape.",
+   "ko": "올가는 곶 끝 등대에서 여행을 마무리하고 싶었어요.",
+   "blank": "завершить",
+   "src": "made"
+  }
+ ],
  "w|завести": [
   {
    "text": "Ты хочешь жениться и завести детей?",
@@ -10599,6 +10887,22 @@
    "src": "tatoeba:2860702/marafon en:71925/CN"
   }
  ],
+ "w|завтракать": [
+  {
+   "text": "По выходным Иван с детьми завтракает блинами в соседнем кафе.",
+   "en": "At weekends Ivan and the children have pancakes for breakfast at the café next door.",
+   "ko": "주말마다 이반은 아이들과 옆 카페에서 팬케이크로 아침을 먹어요.",
+   "blank": "завтракает",
+   "src": "made"
+  },
+  {
+   "text": "В день съёмок Анна не успела завтракать и пила только кофе.",
+   "en": "On the shooting day Anna had no time for breakfast and only drank coffee.",
+   "ko": "촬영 날 안나는 아침 먹을 시간이 없어서 커피만 마셨어요.",
+   "blank": "завтракать",
+   "src": "made"
+  }
+ ],
  "w|завтрашний": [
   {
    "text": "Сергей проверил завтрашний прогноз и решил взять зонт.",
@@ -10612,6 +10916,22 @@
    "en": "The friends agreed to spend the next day together out of town.",
    "ko": "친구들은 내일 하루를 교외에서 함께 보내기로 했어요.",
    "blank": "завтрашний",
+   "src": "made"
+  }
+ ],
+ "w|загадка": [
+  {
+   "text": "Для Ивана остаётся загадкой, как повар делает такой нежный соус.",
+   "en": "It remains a mystery to Ivan how the chef makes such a delicate sauce.",
+   "ko": "요리사가 어떻게 이렇게 부드러운 소스를 만드는지 이반에게는 수수께끼예요.",
+   "blank": "загадкой",
+   "src": "made"
+  },
+  {
+   "text": "В фильме Анна играет сыщицу, которая разгадывает загадку старого дома.",
+   "en": "In the film Anna plays a detective who solves the mystery of an old house.",
+   "ko": "영화에서 안나는 오래된 집의 수수께끼를 푸는 탐정을 연기해요.",
+   "blank": "загадку",
    "src": "made"
   }
  ],
@@ -11021,6 +11341,22 @@
    "en": "When does the film end?",
    "ko": "영화 언제 끝나?",
    "blank": "закончится"
+  }
+ ],
+ "w|закрываться": [
+  {
+   "text": "Рынок закрывается в два часа, поэтому Дмитрий приходит пораньше.",
+   "en": "The market closes at two, so Dmitry comes early.",
+   "ko": "시장이 두 시에 문을 닫아서 드미트리는 일찍 와요.",
+   "blank": "закрывается",
+   "src": "made"
+  },
+  {
+   "text": "Ольга торопилась, потому что заправка закрывалась в десять.",
+   "en": "Olga was in a hurry because the petrol station closed at ten.",
+   "ko": "주유소가 열 시에 문을 닫아서 올가는 서둘렀어요.",
+   "blank": "закрывалась",
+   "src": "made"
   }
  ],
  "w|закрытый": [
@@ -11599,6 +11935,22 @@
    "src": "made"
   }
  ],
+ "w|запросто": [
+  {
+   "text": "Иван запросто съедает две порции пельменей.",
+   "en": "Ivan easily eats two portions of dumplings.",
+   "ko": "이반은 만두 두 그릇을 거뜬히 먹어요.",
+   "blank": "запросто",
+   "src": "made"
+  },
+  {
+   "text": "Анна запросто плачет в кадре без всяких капель.",
+   "en": "Anna can easily cry on camera without any drops.",
+   "ko": "안나는 안약 없이도 장면에서 쉽게 울어요.",
+   "blank": "запросто",
+   "src": "made"
+  }
+ ],
  "w|запустить": [
   {
    "text": "В мэрии решили запустить сайт для жалоб жителей, и проект поручили Алексею.",
@@ -11802,6 +12154,22 @@
    "en": "I'm afraid of getting stuck in the elevator.",
    "ko": "엘리베이터에 갇힐까 봐 무서워요.",
    "blank": "застрять",
+   "src": "made"
+  }
+ ],
+ "w|засунуть": [
+  {
+   "text": "Сын Ивана засунул салфетку в стакан с соком.",
+   "en": "Ivan's son stuffed a napkin into the glass of juice.",
+   "ko": "이반의 아들이 주스 잔에 냅킨을 쑤셔 넣었어요.",
+   "blank": "засунул",
+   "src": "made"
+  },
+  {
+   "text": "В кадре Анна должна была засунуть письмо под дверь.",
+   "en": "In the shot Anna had to slip a letter under the door.",
+   "ko": "장면에서 안나는 편지를 문 밑으로 밀어 넣어야 했어요.",
+   "blank": "засунуть",
    "src": "made"
   }
  ],
@@ -13105,6 +13473,22 @@
    "src": "made"
   }
  ],
+ "w|имущество": [
+  {
+   "text": "Продавец признался Дмитрию, что распродаёт имущество покойной тёти.",
+   "en": "The seller admitted to Dmitry that he was selling off his late aunt's belongings.",
+   "ko": "상인은 드미트리에게 돌아가신 이모의 재산을 처분하는 중이라고 털어놓았어요.",
+   "blank": "имущество",
+   "src": "made"
+  },
+  {
+   "text": "Ольга застраховала машину и всё имущество в ней перед поездкой.",
+   "en": "Before the trip Olga insured the car and all the belongings in it.",
+   "ko": "여행 전에 올가는 차와 차 안의 모든 물건을 보험에 들었어요.",
+   "blank": "имущество",
+   "src": "made"
+  }
+ ],
  "w|имя": [
   {
    "text": "Повтори своё имя.",
@@ -14215,6 +14599,22 @@
    "src": "tatoeba:1077974/ae5s en:262238/CK"
   }
  ],
+ "w|каша": [
+  {
+   "text": "Утром в кафе Ивану подали гречневую кашу с маслом.",
+   "en": "In the morning at the café Ivan was served buckwheat porridge with butter.",
+   "ko": "아침에 식당에서 이반에게 버터를 넣은 메밀죽이 나왔어요.",
+   "blank": "кашу",
+   "src": "made"
+  },
+  {
+   "text": "В сцене завтрака Анна раз десять ела холодную кашу.",
+   "en": "In the breakfast scene Anna ate cold porridge about ten times.",
+   "ko": "아침 식사 장면에서 안나는 식은 죽을 열 번쯤 먹었어요.",
+   "blank": "кашу",
+   "src": "made"
+  }
+ ],
  "w|квартал": [
   {
    "text": "Склад, полный нелегальной пиротехники, взорвался и разрушил целый квартал.",
@@ -14659,6 +15059,22 @@
    "src": "made"
   }
  ],
+ "w|колбаса": [
+  {
+   "text": "Сын Ивана заказал пиццу с колбасой и сыром.",
+   "en": "Ivan's son ordered pizza with sausage and cheese.",
+   "ko": "이반의 아들은 소시지와 치즈를 얹은 피자를 시켰어요.",
+   "blank": "колбасой",
+   "src": "made"
+  },
+  {
+   "text": "На столе в кадре у Анны лежали хлеб и колбаса.",
+   "en": "On the table in Anna's shot lay bread and sausage.",
+   "ko": "안나가 나오는 장면 식탁 위에는 빵과 소시지가 놓여 있었어요.",
+   "blank": "колбаса",
+   "src": "made"
+  }
+ ],
  "w|колено": [
   {
    "text": "Я упал с велосипеда и ободрал колено.",
@@ -15095,6 +15511,22 @@
    "ko": "자제력을 잃기 시작했어요.",
    "blank": "контроль",
    "src": "tatoeba:645294/nami en:64775"
+  }
+ ],
+ "w|конфета": [
+  {
+   "text": "Официантка принесла детям Ивана по конфете вместе со счётом.",
+   "en": "The waitress brought Ivan's children a sweet each along with the bill.",
+   "ko": "종업원이 계산서와 함께 이반의 아이들에게 사탕을 하나씩 가져다줬어요.",
+   "blank": "конфете",
+   "src": "made"
+  },
+  {
+   "text": "В кармане костюма Анна нашла старую конфету.",
+   "en": "In the costume's pocket Anna found an old sweet.",
+   "ko": "안나는 의상 주머니에서 오래된 사탕을 찾았어요.",
+   "blank": "конфету",
+   "src": "made"
   }
  ],
  "w|конфликт": [
@@ -16185,6 +16617,22 @@
    "blank": "курс"
   }
  ],
+ "w|куртка": [
+  {
+   "text": "Дмитрий купил кожаную куртку, которой лет сорок.",
+   "en": "Dmitry bought a leather jacket that is about forty years old.",
+   "ko": "드미트리는 사십 년쯤 된 가죽 재킷을 샀어요.",
+   "blank": "куртку",
+   "src": "made"
+  },
+  {
+   "text": "На перевале Ольге понадобилась непромокаемая куртка.",
+   "en": "On the mountain pass Olga needed a waterproof jacket.",
+   "ko": "고개에서 올가는 방수 재킷이 필요했어요.",
+   "blank": "куртка",
+   "src": "made"
+  }
+ ],
  "w|кусок": [
   {
    "text": "Ты собираешься есть этот кусок пирога?",
@@ -16871,6 +17319,22 @@
    "src": "tatoeba:5608662/marafon en:5600183/CK"
   }
  ],
+ "w|ложка": [
+  {
+   "text": "Иван попросил ещё одну ложку для супа.",
+   "en": "Ivan asked for another spoon for the soup.",
+   "ko": "이반은 수프용 숟가락을 하나 더 달라고 했어요.",
+   "blank": "ложку",
+   "src": "made"
+  },
+  {
+   "text": "Анна размешивала чай серебряной ложкой, пока камера снимала крупный план.",
+   "en": "Anna stirred her tea with a silver spoon while the camera filmed a close-up.",
+   "ko": "카메라가 클로즈업을 찍는 동안 안나는 은숟가락으로 차를 저었어요.",
+   "blank": "ложкой",
+   "src": "made"
+  }
+ ],
  "w|ложь": [
   {
    "text": "Какую самую страшную ложь ты когда-либо говорил?",
@@ -17481,6 +17945,22 @@
    "ko": "이 순간이 영원했으면 좋겠어요.",
    "blank": "мгновение",
    "src": "tatoeba:13731681/marafon en:13731508/glossboss"
+  }
+ ],
+ "w|медаль": [
+  {
+   "text": "В коробке с мелочами Дмитрий нашёл военную медаль.",
+   "en": "In a box of odds and ends Dmitry found a military medal.",
+   "ko": "드미트리는 잡동사니 상자에서 훈장을 찾았어요.",
+   "blank": "медаль",
+   "src": "made"
+  },
+  {
+   "text": "В придорожном музее Ольга видела медаль известного гонщика.",
+   "en": "In a roadside museum Olga saw a famous racing driver's medal.",
+   "ko": "길가 박물관에서 올가는 유명한 레이서의 메달을 봤어요.",
+   "blank": "медаль",
+   "src": "made"
   }
  ],
  "w|медведь": [
@@ -18643,6 +19123,22 @@
    "ko": "바다가 좋아, 산이 좋아?",
    "blank": "море",
    "src": "tatoeba:2037564/Balamax en:22253/CK"
+  }
+ ],
+ "w|морковь": [
+  {
+   "text": "Младший сын Ивана опять оставил на тарелке всю морковь.",
+   "en": "Ivan's youngest son again left all the carrots on his plate.",
+   "ko": "이반의 막내아들은 또 접시에 당근을 다 남겼어요.",
+   "blank": "морковь",
+   "src": "made"
+  },
+  {
+   "text": "По сценарию Анна чистит морковь и разговаривает с соседкой.",
+   "en": "According to the script Anna peels carrots and talks to her neighbour.",
+   "ko": "대본대로 안나는 당근을 깎으며 이웃과 이야기해요.",
+   "blank": "морковь",
+   "src": "made"
   }
  ],
  "w|мороженое": [
@@ -20111,6 +20607,22 @@
    "src": "made"
   }
  ],
+ "w|наряд": [
+  {
+   "text": "Дмитрий подобрал жене на рынке вечерний наряд в стиле шестидесятых.",
+   "en": "At the market Dmitry picked out a sixties-style evening outfit for his wife.",
+   "ko": "드미트리는 시장에서 아내에게 육십 년대풍 저녁 옷을 골라 줬어요.",
+   "blank": "наряд",
+   "src": "made"
+  },
+  {
+   "text": "Для свадьбы подруги Ольга везла в багажнике праздничный наряд.",
+   "en": "Olga carried a party outfit in the boot for her friend's wedding.",
+   "ko": "친구 결혼식에 입으려고 올가는 트렁크에 파티 옷을 싣고 갔어요.",
+   "blank": "наряд",
+   "src": "made"
+  }
+ ],
  "w|население": [
   {
    "text": "Решение суда касалось всего населения посёлка.",
@@ -20599,6 +21111,22 @@
    "src": "tatoeba:2059417/Balamax en:258758/CK"
   }
  ],
+ "w|неверный": [
+  {
+   "text": "Официант принёс Ивану неверный счёт, и пришлось его пересчитывать.",
+   "en": "The waiter brought Ivan the wrong bill, and it had to be recalculated.",
+   "ko": "종업원이 이반에게 잘못된 계산서를 가져와서 다시 계산해야 했어요.",
+   "blank": "неверный",
+   "src": "made"
+  },
+  {
+   "text": "Ассистент дал Анне неверный текст, и сцену пришлось переснимать.",
+   "en": "The assistant gave Anna the wrong lines, and the scene had to be reshot.",
+   "ko": "조수가 안나에게 잘못된 대사를 줘서 장면을 다시 찍어야 했어요.",
+   "blank": "неверный",
+   "src": "made"
+  }
+ ],
  "w|невероятный": [
   {
    "text": "Какой невероятный объём работы он проделал!",
@@ -20707,6 +21235,22 @@
    "ko": "톰은 생각이 좁아요.",
    "blank": "недалёкий",
    "src": "tatoeba:4894231/odexed en:3484033/CK"
+  }
+ ],
+ "w|недвижимость": [
+  {
+   "text": "Сосед по прилавку рассказал Дмитрию, что вложил все деньги в недвижимость.",
+   "en": "The man at the next stall told Dmitry he had put all his money into property.",
+   "ko": "옆 가판대 주인은 드미트리에게 돈을 다 부동산에 넣었다고 말했어요.",
+   "blank": "недвижимость",
+   "src": "made"
+  },
+  {
+   "text": "По дороге Ольга проезжала посёлок, где недвижимость продают очень дёшево.",
+   "en": "On the way Olga drove through a village where property is sold very cheaply.",
+   "ko": "가는 길에 올가는 부동산이 아주 싸게 팔리는 마을을 지났어요.",
+   "blank": "недвижимость",
+   "src": "made"
   }
  ],
  "w|неделя": [
@@ -21961,6 +22505,22 @@
    "blank": "носи"
   }
  ],
+ "w|носок": [
+  {
+   "text": "Дмитрий долго искал пару к шерстяному носку, но так и не нашёл.",
+   "en": "Dmitry spent a long time looking for the pair to a wool sock but never found it.",
+   "ko": "드미트리는 털양말 짝을 오래 찾았지만 끝내 못 찾았어요.",
+   "blank": "носку",
+   "src": "made"
+  },
+  {
+   "text": "Ольга потеряла носок где-то в мотеле.",
+   "en": "Olga lost a sock somewhere in the motel.",
+   "ko": "올가는 모텔 어딘가에서 양말 한 짝을 잃어버렸어요.",
+   "blank": "носок",
+   "src": "made"
+  }
+ ],
  "w|ноутбук": [
   {
    "text": "У Павла сломался ноутбук прямо перед презентацией.",
@@ -22233,6 +22793,22 @@
    "ko": "왜 아직 저녁을 안 했어?",
    "blank": "обед",
    "src": "tatoeba:3981965/odexed en:3738682/CK"
+  }
+ ],
+ "w|обедать": [
+  {
+   "text": "Иван обычно обедает в кафе напротив офиса.",
+   "en": "Ivan usually has lunch at the café opposite the office.",
+   "ko": "이반은 보통 사무실 맞은편 카페에서 점심을 먹어요.",
+   "blank": "обедает",
+   "src": "made"
+  },
+  {
+   "text": "На площадке Анна обедала прямо в гримёрке.",
+   "en": "On set Anna had lunch right in the dressing room.",
+   "ko": "촬영장에서 안나는 분장실에서 점심을 먹었어요.",
+   "blank": "обедала",
+   "src": "made"
   }
  ],
  "w|обеспечить": [
@@ -22581,6 +23157,22 @@
    "ko": "학위는 어디서 받으셨어요?",
    "blank": "образование",
    "src": "tatoeba:3066907/odexed en:2892807/CK"
+  }
+ ],
+ "w|обратить": [
+  {
+   "text": "Жена попросила Ивана обратить внимание на детское меню.",
+   "en": "His wife asked Ivan to pay attention to the children's menu.",
+   "ko": "아내가 이반에게 어린이 메뉴를 잘 보라고 했어요.",
+   "blank": "обратить",
+   "src": "made"
+  },
+  {
+   "text": "Режиссёр попросил Анну обратить внимание на свет из окна.",
+   "en": "The director asked Anna to pay attention to the light from the window.",
+   "ko": "감독이 안나에게 창문으로 들어오는 빛에 주의하라고 했어요.",
+   "blank": "обратить",
+   "src": "made"
   }
  ],
  "w|обратиться": [
@@ -23033,6 +23625,22 @@
    "blank": "Огонь"
   }
  ],
+ "w|ограбить": [
+  {
+   "text": "Иван прочитал, что ночью в их районе пытались ограбить кафе.",
+   "en": "Ivan read that someone had tried to rob a café in their area at night.",
+   "ko": "이반은 밤에 동네 카페에 강도가 들려고 했다는 기사를 읽었어요.",
+   "blank": "ограбить",
+   "src": "made"
+  },
+  {
+   "text": "В фильме героиня Анны помогает бандитам ограбить банк.",
+   "en": "In the film Anna's character helps gangsters rob a bank.",
+   "ko": "영화에서 안나가 맡은 인물은 강도들이 은행을 터는 걸 도와요.",
+   "blank": "ограбить",
+   "src": "made"
+  }
+ ],
  "w|ограбление": [
   {
    "text": "Расскажи мне, как произошло ограбление.",
@@ -23061,6 +23669,22 @@
    "en": "The pizza is just huge.",
    "ko": "피자가 그냥 엄청 커.",
    "blank": "огромная"
+  }
+ ],
+ "w|огурец": [
+  {
+   "text": "Дочка Ивана любит хрустеть солёным огурцом.",
+   "en": "Ivan's daughter loves crunching on a pickled cucumber.",
+   "ko": "이반의 딸은 오이 피클을 아삭아삭 씹어 먹는 걸 좋아해요.",
+   "blank": "огурцом",
+   "src": "made"
+  },
+  {
+   "text": "Реквизитор дал Анне свежий огурец для кадра.",
+   "en": "The props manager gave Anna a fresh cucumber for the shot.",
+   "ko": "소품 담당자가 촬영용으로 안나에게 싱싱한 오이를 줬어요.",
+   "blank": "огурец",
+   "src": "made"
   }
  ],
  "w|одежда": [
@@ -23279,6 +23903,38 @@
    "ko": "작은 부탁 하나 들어줄래?",
    "blank": "одолжение",
    "src": "tatoeba:4094894/odexed en:3568475/CK"
+  }
+ ],
+ "w|одолжить": [
+  {
+   "text": "У Дмитрия не хватило наличных, и он попросил друга одолжить ему немного денег.",
+   "en": "Dmitry didn't have enough cash, so he asked a friend to lend him some money.",
+   "ko": "드미트리는 현금이 모자라서 친구에게 돈을 좀 빌려 달라고 했어요.",
+   "blank": "одолжить",
+   "src": "made"
+  },
+  {
+   "text": "Перед поездкой Ольга попросила у брата одолжить ей палатку.",
+   "en": "Before the trip Olga asked her brother to lend her a tent.",
+   "ko": "여행 전에 올가는 오빠에게 텐트를 빌려 달라고 했어요.",
+   "blank": "одолжить",
+   "src": "made"
+  }
+ ],
+ "w|ожерелье": [
+  {
+   "text": "Пожилая женщина продавала Дмитрию бабушкино ожерелье из янтаря.",
+   "en": "An elderly woman was selling Dmitry her grandmother's amber necklace.",
+   "ko": "나이 든 여자가 드미트리에게 할머니의 호박 목걸이를 팔려고 했어요.",
+   "blank": "ожерелье",
+   "src": "made"
+  },
+  {
+   "text": "В приморском городке Ольга купила маме ожерелье из жемчуга.",
+   "en": "In a seaside town Olga bought her mother a pearl necklace.",
+   "ko": "바닷가 마을에서 올가는 엄마에게 진주 목걸이를 사 드렸어요.",
+   "blank": "ожерелье",
+   "src": "made"
   }
  ],
  "w|ожидание": [
@@ -24027,6 +24683,22 @@
    "src": "made"
   }
  ],
+ "w|осмотр": [
+  {
+   "text": "Утром Иван ходил на медицинский осмотр, а потом поехал завтракать в кафе.",
+   "en": "In the morning Ivan went for a medical check-up and then went to have breakfast at a café.",
+   "ko": "아침에 이반은 건강 검진을 받고 카페에 아침을 먹으러 갔어요.",
+   "blank": "осмотр",
+   "src": "made"
+  },
+  {
+   "text": "Перед трюковой сценой Анна прошла медицинский осмотр.",
+   "en": "Before the stunt scene Anna had a medical check-up.",
+   "ko": "스턴트 장면 전에 안나는 건강 검진을 받았어요.",
+   "blank": "осмотр",
+   "src": "made"
+  }
+ ],
  "w|осмотреть": [
   {
    "text": "Я хочу тебя завтра ещё раз осмотреть.",
@@ -24088,6 +24760,22 @@
    "en": "Tatiana works in the main building of the hospital.",
    "ko": "타티야나는 병원 본관에서 일해요.",
    "blank": "основном",
+   "src": "made"
+  }
+ ],
+ "w|основываться": [
+  {
+   "text": "Дмитрий торгуется, основываясь на ценах, которые видел в интернете.",
+   "en": "Dmitry haggles based on the prices he saw online.",
+   "ko": "드미트리는 인터넷에서 본 가격을 근거로 흥정해요.",
+   "blank": "основываясь",
+   "src": "made"
+  },
+  {
+   "text": "Ольга выбирала дорогу, основываясь на советах местных жителей.",
+   "en": "Olga chose her route based on the advice of local people.",
+   "ko": "올가는 현지인들의 조언을 바탕으로 길을 골랐어요.",
+   "blank": "основываясь",
    "src": "made"
   }
  ],
@@ -24561,6 +25249,22 @@
    "ko": "우리는 경찰서로 가는 중이에요.",
    "blank": "отделение",
    "src": "tatoeba:7107398/wess en:5725872/CM"
+  }
+ ],
+ "w|отдельно": [
+  {
+   "text": "Продавец упаковал каждую чашку Дмитрия отдельно.",
+   "en": "The seller wrapped each of Dmitry's cups separately.",
+   "ko": "상인이 드미트리의 컵을 하나하나 따로 포장해 줬어요.",
+   "blank": "отдельно",
+   "src": "made"
+  },
+  {
+   "text": "В мотеле Ольге пришлось платить за завтрак отдельно.",
+   "en": "At the motel Olga had to pay for breakfast separately.",
+   "ko": "모텔에서 올가는 아침 식사를 따로 계산해야 했어요.",
+   "blank": "отдельно",
+   "src": "made"
   }
  ],
  "w|отдохнуть": [
@@ -25611,6 +26315,22 @@
    "src": "made"
   }
  ],
+ "w|очки": [
+  {
+   "text": "Дмитрий купил очки в роговой оправе за сущие копейки.",
+   "en": "Dmitry bought horn-rimmed glasses for next to nothing.",
+   "ko": "드미트리는 뿔테 안경을 헐값에 샀어요.",
+   "blank": "очки",
+   "src": "made"
+  },
+  {
+   "text": "Ольга не может вести машину без солнечных очков.",
+   "en": "Olga can't drive without sunglasses.",
+   "ko": "올가는 선글라스 없이는 운전을 못 해요.",
+   "blank": "очков",
+   "src": "made"
+  }
+ ],
  "w|очнуться": [
   {
    "text": "Когда он смог очнуться, рядом никого не было.",
@@ -26279,6 +26999,22 @@
    "src": "tatoeba:7965177/soweli_Elepanto en:7965175/CK"
   }
  ],
+ "w|перекусить": [
+  {
+   "text": "По дороге с работы Иван зашёл в семейное кафе перекусить.",
+   "en": "On the way home from work Ivan stopped at a family café for a bite to eat.",
+   "ko": "퇴근길에 이반은 간단히 먹으려고 가족 식당에 들렀어요.",
+   "blank": "перекусить",
+   "src": "made"
+  },
+  {
+   "text": "Между дублями Анна успела только перекусить бутербродом.",
+   "en": "Between takes Anna only had time for a quick sandwich.",
+   "ko": "촬영 사이에 안나는 샌드위치로 겨우 요기만 했어요.",
+   "blank": "перекусить",
+   "src": "made"
+  }
+ ],
  "w|перемена": [
   {
    "text": "С приходом нового начальника в отделении наступила перемена к лучшему.",
@@ -26563,6 +27299,22 @@
    "src": "tatoeba:7809059/marafon en:7772497/sharris123"
   }
  ],
+ "w|пиджак": [
+  {
+   "text": "На барахолке Дмитрий нашёл твидовый пиджак почти даром.",
+   "en": "At the flea market Dmitry found a tweed jacket for next to nothing.",
+   "ko": "벼룩시장에서 드미트리는 트위드 재킷을 거의 공짜로 샀어요.",
+   "blank": "пиджак",
+   "src": "made"
+  },
+  {
+   "text": "Вечером в горах Ольга накинула на плечи тёплый пиджак.",
+   "en": "In the evening in the mountains Olga threw a warm jacket over her shoulders.",
+   "ko": "저녁에 산에서 올가는 따뜻한 재킷을 어깨에 걸쳤어요.",
+   "blank": "пиджак",
+   "src": "made"
+  }
+ ],
  "w|пилот": [
   {
    "text": "Сосед Андрея работает пилотом и почти не бывает дома.",
@@ -26791,6 +27543,22 @@
    "ko": "저는 미리 계획 세우는 걸 안 좋아해요.",
    "blank": "планировать",
    "src": "tatoeba:9212949/marafon en:9207471/CK"
+  }
+ ],
+ "w|плата": [
+  {
+   "text": "Дмитрий удивился, что плата за вход на рынок совсем небольшая.",
+   "en": "Dmitry was surprised that the entrance fee to the market was quite small.",
+   "ko": "드미트리는 시장 입장료가 아주 싸다는 데 놀랐어요.",
+   "blank": "плата",
+   "src": "made"
+  },
+  {
+   "text": "За проезд по платной трассе с Ольги взяли небольшую плату.",
+   "en": "Olga was charged a small fee for driving on the toll road.",
+   "ko": "유료 도로를 지나며 올가는 통행료를 조금 냈어요.",
+   "blank": "плату",
+   "src": "made"
   }
  ],
  "w|платить": [
@@ -27137,6 +27905,22 @@
    "ko": "내가 뭐라고 했어야 했다고 생각해?",
    "blank": "по-твоему",
    "src": "tatoeba:5199375/marafon en:3191820/CK"
+  }
+ ],
+ "w|по-французски": [
+  {
+   "text": "Шеф-повар поздоровался с Иваном по-французски.",
+   "en": "The head chef greeted Ivan in French.",
+   "ko": "주방장이 이반에게 프랑스어로 인사했어요.",
+   "blank": "по-французски",
+   "src": "made"
+  },
+  {
+   "text": "Для роли Анне пришлось научиться говорить по-французски.",
+   "en": "For the role Anna had to learn to speak French.",
+   "ko": "배역을 위해 안나는 프랑스어를 배워야 했어요.",
+   "blank": "по-французски",
+   "src": "made"
   }
  ],
  "w|побег": [
@@ -27487,6 +28271,22 @@
    "src": "tatoeba:13896849/marafon en:20178/CC"
   }
  ],
+ "w|повлиять": [
+  {
+   "text": "Дождь мог повлиять на торговлю, но Дмитрий всё равно пришёл.",
+   "en": "The rain could have affected trading, but Dmitry came anyway.",
+   "ko": "비 때문에 장사가 안될 수도 있었지만 드미트리는 그래도 왔어요.",
+   "blank": "повлиять",
+   "src": "made"
+  },
+  {
+   "text": "Плохая погода могла повлиять на планы Ольги, но небо прояснилось.",
+   "en": "Bad weather could have affected Olga's plans, but the sky cleared.",
+   "ko": "궂은 날씨가 올가의 계획에 영향을 줄 수도 있었지만 하늘이 갰어요.",
+   "blank": "повлиять",
+   "src": "made"
+  }
+ ],
  "w|повод": [
   {
    "text": "Нет никакого повода злиться.",
@@ -27703,6 +28503,22 @@
    "blank": "под"
   }
  ],
+ "w|подавать": [
+  {
+   "text": "У входа на рынок Дмитрию подавали горячий чай из термоса.",
+   "en": "At the market entrance Dmitry was served hot tea from a thermos.",
+   "ko": "시장 입구에서 드미트리에게 보온병에 든 뜨거운 차를 줬어요.",
+   "blank": "подавали",
+   "src": "made"
+  },
+  {
+   "text": "В придорожном кафе Ольге подавали уху и свежий хлеб.",
+   "en": "At a roadside café Olga was served fish soup and fresh bread.",
+   "ko": "길가 식당에서 올가에게 생선 수프와 갓 구운 빵이 나왔어요.",
+   "blank": "подавали",
+   "src": "made"
+  }
+ ],
  "w|подарить": [
   {
    "text": "Что мне подарить ей на день рождения?",
@@ -27909,6 +28725,22 @@
    "src": "tatoeba:6594148/marafon en:2013975/CK"
   }
  ],
+ "w|подержать": [
+  {
+   "text": "Иван попросил сына подержать меню, пока сам искал очки.",
+   "en": "Ivan asked his son to hold the menu while he looked for his glasses.",
+   "ko": "이반은 안경을 찾는 동안 아들에게 메뉴판을 들고 있으라고 했어요.",
+   "blank": "подержать",
+   "src": "made"
+  },
+  {
+   "text": "Оператор попросил Анну подержать фонарь чуть выше.",
+   "en": "The camera operator asked Anna to hold the lamp a little higher.",
+   "ko": "촬영 감독이 안나에게 등불을 조금 더 높이 들어 달라고 했어요.",
+   "blank": "подержать",
+   "src": "made"
+  }
+ ],
  "w|подкрепление": [
   {
    "text": "Я привел подкрепление.",
@@ -28062,6 +28894,22 @@
    "en": "The referee suspected that Olga had stepped on the line.",
    "ko": "심판은 올가가 선을 밟았다고 의심했어요.",
    "blank": "подозрение",
+   "src": "made"
+  }
+ ],
+ "w|подозрительно": [
+  {
+   "text": "Суп показался Ивану подозрительно солёным.",
+   "en": "The soup seemed suspiciously salty to Ivan.",
+   "ko": "이반에게 수프가 이상하게 짰어요.",
+   "blank": "подозрительно",
+   "src": "made"
+  },
+  {
+   "text": "Охранник площадки подозрительно посмотрел на пропуск Анны.",
+   "en": "The set's security guard looked suspiciously at Anna's pass.",
+   "ko": "촬영장 경비원이 안나의 출입증을 수상쩍게 쳐다봤어요.",
+   "blank": "подозрительно",
    "src": "made"
   }
  ],
@@ -28671,6 +29519,22 @@
    "src": "made"
   }
  ],
+ "w|поздравить": [
+  {
+   "text": "Знакомый продавец поздравил Дмитрия с днём рождения и сделал скидку.",
+   "en": "A seller he knew wished Dmitry a happy birthday and gave him a discount.",
+   "ko": "아는 상인이 드미트리의 생일을 축하하며 값을 깎아 줬어요.",
+   "blank": "поздравил",
+   "src": "made"
+  },
+  {
+   "text": "Друзья позвонили Ольге, чтобы поздравить её с повышением.",
+   "en": "Friends called Olga to congratulate her on her promotion.",
+   "ko": "친구들이 올가에게 승진을 축하하려고 전화했어요.",
+   "blank": "поздравить",
+   "src": "made"
+  }
+ ],
  "w|поздравление": [
   {
    "text": "Спасибо за тёплое поздравление!",
@@ -29075,6 +29939,22 @@
    "ko": "새 컴퓨터 살 생각이야?",
    "blank": "покупать",
    "src": "tatoeba:8807487/sharptoothed en:2640688/CK"
+  }
+ ],
+ "w|покупка": [
+  {
+   "text": "Самой удачной покупкой Дмитрий считает старый проигрыватель.",
+   "en": "Dmitry considers an old record player his best purchase.",
+   "ko": "드미트리는 낡은 전축을 제일 잘 산 물건으로 꼽아요.",
+   "blank": "покупкой",
+   "src": "made"
+  },
+  {
+   "text": "Ольга сложила покупки с рынка на заднее сиденье.",
+   "en": "Olga put her purchases from the market on the back seat.",
+   "ko": "올가는 시장에서 산 물건을 뒷좌석에 실었어요.",
+   "blank": "покупки",
+   "src": "made"
   }
  ],
  "w|пол": [
@@ -29551,6 +30431,22 @@
    "src": "made"
   }
  ],
+ "w|помидор": [
+  {
+   "text": "Иван попросил салат без помидоров.",
+   "en": "Ivan asked for a salad without tomatoes.",
+   "ko": "이반은 토마토를 빼고 샐러드를 달라고 했어요.",
+   "blank": "помидоров",
+   "src": "made"
+  },
+  {
+   "text": "В сцене на рынке Анна должна была выбирать помидоры.",
+   "en": "In the market scene Anna had to pick tomatoes.",
+   "ko": "시장 장면에서 안나는 토마토를 골라야 했어요.",
+   "blank": "помидоры",
+   "src": "made"
+  }
+ ],
  "w|помимо": [
   {
    "text": "Какие виды спорта тебе нравятся помимо футбола?",
@@ -29785,6 +30681,22 @@
    "en": "Don't take this the wrong way.",
    "ko": "오해하지 마.",
    "blank": "Пойми"
+  }
+ ],
+ "w|пообедать": [
+  {
+   "text": "В воскресенье Иван пригласил родителей пообедать в любимом ресторане.",
+   "en": "On Sunday Ivan invited his parents to have lunch at their favourite restaurant.",
+   "ko": "일요일에 이반은 부모님을 단골 식당에 점심 식사하러 모셨어요.",
+   "blank": "пообедать",
+   "src": "made"
+  },
+  {
+   "text": "Режиссёр пригласил Анну пообедать и обсудить следующую сцену.",
+   "en": "The director invited Anna to have lunch and discuss the next scene.",
+   "ko": "감독이 다음 장면을 의논하자며 안나에게 점심을 같이 먹자고 했어요.",
+   "blank": "пообедать",
+   "src": "made"
   }
  ],
  "w|пообещать": [
@@ -30779,6 +31691,22 @@
    "blank": "похожая"
   }
  ],
+ "w|похоронить": [
+  {
+   "text": "За обедом Иван рассказал детям, где похоронили их прадеда.",
+   "en": "Over lunch Ivan told the children where their great-grandfather was buried.",
+   "ko": "점심을 먹으며 이반은 아이들에게 증조할아버지가 어디 묻혔는지 이야기해 줬어요.",
+   "blank": "похоронили",
+   "src": "made"
+  },
+  {
+   "text": "По сюжету героиня Анны находит место, где похоронили её деда.",
+   "en": "In the story Anna's character finds the place where her grandfather was buried.",
+   "ko": "줄거리에서 안나가 맡은 인물은 할아버지가 묻힌 곳을 찾아내요.",
+   "blank": "похоронили",
+   "src": "made"
+  }
+ ],
  "w|похороны": [
   {
    "text": "Я жалею, что не пошёл на его похороны.",
@@ -31431,6 +32359,22 @@
    "src": "made"
   }
  ],
+ "w|предположительно": [
+  {
+   "text": "Новый ресторан, куда пошёл Иван, откроется предположительно в мае.",
+   "en": "The new restaurant Ivan went to will open presumably in May.",
+   "ko": "이반이 가 본 새 식당은 아마 오월에 정식 개업할 거예요.",
+   "blank": "предположительно",
+   "src": "made"
+  },
+  {
+   "text": "Фильм с Анной выйдет на экраны предположительно следующей весной.",
+   "en": "The film with Anna will presumably be released next spring.",
+   "ko": "안나가 나오는 영화는 아마 내년 봄에 개봉할 거예요.",
+   "blank": "предположительно",
+   "src": "made"
+  }
+ ],
  "w|предположить": [
   {
    "text": "Я и предположить не мог.",
@@ -31817,6 +32761,22 @@
    "ko": "민주주의에서는 언론이 독립적이어야 해요.",
    "blank": "пресса",
    "src": "tatoeba:1496402/Evgeniy en:1499310/CM"
+  }
+ ],
+ "w|престарелый": [
+  {
+   "text": "Дмитрий купил книги у престарелого профессора, который разбирал библиотеку.",
+   "en": "Dmitry bought books from an elderly professor who was clearing out his library.",
+   "ko": "드미트리는 서재를 정리하던 나이 든 교수에게서 책을 샀어요.",
+   "blank": "престарелого",
+   "src": "made"
+  },
+  {
+   "text": "По дороге Ольга подвезла престарелую пару до соседнего села.",
+   "en": "On the way Olga gave an elderly couple a lift to the next village.",
+   "ko": "가는 길에 올가는 노부부를 옆 마을까지 태워 줬어요.",
+   "blank": "престарелую",
+   "src": "made"
   }
  ],
  "w|преступление": [
@@ -32941,6 +33901,22 @@
    "ko": "해칠 생각은 없어요.",
    "blank": "причинить",
    "src": "tatoeba:14032481/marafon en:3313047/CK"
+  }
+ ],
+ "w|причинять": [
+  {
+   "text": "Дмитрий старается не спорить с продавцами, чтобы не причинять им неудобств.",
+   "en": "Dmitry tries not to argue with sellers so as not to cause them any trouble.",
+   "ko": "드미트리는 상인들을 곤란하게 하지 않으려고 따지지 않으려 해요.",
+   "blank": "причинять",
+   "src": "made"
+  },
+  {
+   "text": "Новые ботинки причиняли Ольге боль на каждой стоянке.",
+   "en": "The new boots hurt Olga at every stop.",
+   "ko": "새 신발 때문에 올가는 쉴 때마다 발이 아팠어요.",
+   "blank": "причиняли",
+   "src": "made"
   }
  ],
  "w|приют": [
@@ -35833,6 +36809,22 @@
    "src": "made"
   }
  ],
+ "w|ремень": [
+  {
+   "text": "Дмитрий выбрал широкий ремень с медной пряжкой.",
+   "en": "Dmitry chose a wide belt with a brass buckle.",
+   "ko": "드미트리는 놋쇠 버클이 달린 넓은 허리띠를 골랐어요.",
+   "blank": "ремень",
+   "src": "made"
+  },
+  {
+   "text": "Ольга проверила, крепко ли пристёгнут ремень безопасности у сына.",
+   "en": "Olga checked whether her son's seat belt was fastened securely.",
+   "ko": "올가는 아들의 안전벨트가 잘 채워졌는지 확인했어요.",
+   "blank": "ремень",
+   "src": "made"
+  }
+ ],
  "w|ремонт": [
   {
    "text": "Летом в школе шёл ремонт спортивного зала.",
@@ -35969,6 +36961,22 @@
    "en": "Decide today.",
    "ko": "오늘 정해.",
    "blank": "Реши"
+  }
+ ],
+ "w|рис": [
+  {
+   "text": "Иван заказал курицу с рисом и овощами.",
+   "en": "Ivan ordered chicken with rice and vegetables.",
+   "ko": "이반은 닭고기에 밥과 채소를 곁들여 시켰어요.",
+   "blank": "рисом",
+   "src": "made"
+  },
+  {
+   "text": "Для съёмочной группы Анны на обед привезли рис с овощами.",
+   "en": "Rice with vegetables was brought for lunch for Anna's film crew.",
+   "ko": "안나의 촬영팀 점심으로 채소 볶음밥이 왔어요.",
+   "blank": "рис",
+   "src": "made"
   }
  ],
  "w|риск": [
@@ -36555,6 +37563,22 @@
    "src": "tatoeba:4537303/phoenix3000 en:4536791/CK"
   }
  ],
+ "w|рюкзак": [
+  {
+   "text": "Все находки Дмитрий сложил в большой рюкзак.",
+   "en": "Dmitry put all his finds into a big backpack.",
+   "ko": "드미트리는 찾은 물건을 모두 큰 배낭에 담았어요.",
+   "blank": "рюкзак",
+   "src": "made"
+  },
+  {
+   "text": "Ольга всегда возит в машине рюкзак с аптечкой.",
+   "en": "Olga always carries a backpack with a first-aid kit in the car.",
+   "ko": "올가는 늘 차에 구급상자가 든 배낭을 싣고 다녀요.",
+   "blank": "рюкзак",
+   "src": "made"
+  }
+ ],
  "w|ряд": [
   {
    "text": "Дмитрий написал целый ряд статей о городском транспорте.",
@@ -36951,6 +37975,22 @@
    "src": "made"
   }
  ],
+ "w|свинина": [
+  {
+   "text": "В этом кафе Иван впервые попробовал свинину в кисло-сладком соусе.",
+   "en": "At this café Ivan first tried pork in sweet and sour sauce.",
+   "ko": "이 식당에서 이반은 탕수 소스 돼지고기를 처음 먹어 봤어요.",
+   "blank": "свинину",
+   "src": "made"
+  },
+  {
+   "text": "Анна не ест свинину, поэтому реквизитор заменил её курицей.",
+   "en": "Anna doesn't eat pork, so the props manager replaced it with chicken.",
+   "ko": "안나가 돼지고기를 먹지 않아서 소품 담당자가 닭고기로 바꿨어요.",
+   "blank": "свинину",
+   "src": "made"
+  }
+ ],
  "w|свинья": [
   {
    "text": "Том говорит, что я ем как свинья.",
@@ -36964,6 +38004,22 @@
    "en": "Grandma has a pig and two goats on her farm.",
    "ko": "할머니 농장에는 돼지 한 마리랑 염소 두 마리가 있어요.",
    "blank": "свинья",
+   "src": "made"
+  }
+ ],
+ "w|свитер": [
+  {
+   "text": "Бабушка на рынке вязала свитер и продавала носки собственной работы.",
+   "en": "A grandmother at the market was knitting a sweater and selling socks she had made herself.",
+   "ko": "시장의 할머니는 스웨터를 뜨면서 직접 만든 양말을 팔고 있었어요.",
+   "blank": "свитер",
+   "src": "made"
+  },
+  {
+   "text": "Ночью у костра Ольга надела толстый свитер.",
+   "en": "At night by the campfire Olga put on a thick sweater.",
+   "ko": "밤에 모닥불 앞에서 올가는 두꺼운 스웨터를 입었어요.",
+   "blank": "свитер",
    "src": "made"
   }
  ],
@@ -37255,6 +38311,22 @@
    "ko": "오늘 저녁에 아이 봐줄 사람 좀 구해 줄래?",
    "blank": "сегодняшний",
    "src": "tatoeba:13494186/marafon en:8946240/CK"
+  }
+ ],
+ "w|седьмой": [
+  {
+   "text": "Дмитрий ходит на этот рынок уже седьмой год подряд.",
+   "en": "Dmitry has been going to this market for the seventh year in a row.",
+   "ko": "드미트리는 이 시장에 벌써 칠 년째 다니고 있어요.",
+   "blank": "седьмой",
+   "src": "made"
+  },
+  {
+   "text": "На седьмой день пути Ольга наконец увидела море.",
+   "en": "On the seventh day of the journey Olga finally saw the sea.",
+   "ko": "여행 칠 일째에 올가는 마침내 바다를 봤어요.",
+   "blank": "седьмой",
+   "src": "made"
   }
  ],
  "w|сезон": [
@@ -38742,6 +39814,22 @@
    "en": "Svetlana sells a nut mix by weight.",
    "ko": "스베틀라나는 견과류 믹스를 무게로 달아 팔아요.",
    "blank": "смесь",
+   "src": "made"
+  }
+ ],
+ "w|сметана": [
+  {
+   "text": "Иван попросил побольше сметаны к борщу.",
+   "en": "Ivan asked for more sour cream with his borscht.",
+   "ko": "이반은 보르시에 스메타나를 넉넉히 달라고 했어요.",
+   "blank": "сметаны",
+   "src": "made"
+  },
+  {
+   "text": "В деревенской сцене Анна ела блины со сметаной.",
+   "en": "In the village scene Anna ate pancakes with sour cream.",
+   "ko": "시골 장면에서 안나는 스메타나를 얹은 팬케이크를 먹었어요.",
+   "blank": "сметаной",
    "src": "made"
   }
  ],
@@ -41175,6 +42263,22 @@
    "src": "made"
   }
  ],
+ "w|стоимость": [
+  {
+   "text": "Дмитрий спросил, какая стоимость у старых часов.",
+   "en": "Dmitry asked what the price of the old watch was.",
+   "ko": "드미트리는 낡은 시계 값이 얼마냐고 물었어요.",
+   "blank": "стоимость",
+   "src": "made"
+  },
+  {
+   "text": "Ольгу удивила стоимость бензина в горах.",
+   "en": "Olga was surprised by the price of petrol in the mountains.",
+   "ko": "올가는 산속 기름값에 놀랐어요.",
+   "blank": "стоимость",
+   "src": "made"
+  }
+ ],
  "w|стоить": [
   {
    "text": "Это дорого стоит.",
@@ -42379,6 +43483,22 @@
    "src": "tatoeba:2468241/paul_lingvo en:1951449/CK"
   }
  ],
+ "w|тарелка": [
+  {
+   "text": "Иван с детьми заказал одну большую тарелку пельменей на всех.",
+   "en": "Ivan and his children ordered one big plate of dumplings for everyone.",
+   "ko": "이반은 아이들과 함께 만두 한 접시를 크게 시켜 나눠 먹었어요.",
+   "blank": "тарелку",
+   "src": "made"
+  },
+  {
+   "text": "В сцене ссоры Анна должна была разбить тарелку.",
+   "en": "In the quarrel scene Anna had to break a plate.",
+   "ko": "다투는 장면에서 안나는 접시를 깨야 했어요.",
+   "blank": "тарелку",
+   "src": "made"
+  }
+ ],
  "w|тащить": [
   {
    "text": "Михаил тащил по коридору тяжёлую коробку с делами.",
@@ -42799,6 +43919,22 @@
    "ko": "코로나 검사 받아 봤어요?",
    "blank": "тест",
    "src": "tatoeba:8637199/Balamax en:8620991/Amastan"
+  }
+ ],
+ "w|тесто": [
+  {
+   "text": "Через стекло дети Ивана смотрели, как повар раскатывает тесто.",
+   "en": "Through the glass Ivan's children watched the cook roll out the dough.",
+   "ko": "이반의 아이들은 유리창 너머로 요리사가 반죽을 미는 걸 지켜봤어요.",
+   "blank": "тесто",
+   "src": "made"
+  },
+  {
+   "text": "Героиня Анны месит тесто и поёт старую песню.",
+   "en": "Anna's character kneads dough and sings an old song.",
+   "ko": "안나가 맡은 인물은 반죽을 치대며 옛 노래를 불러요.",
+   "blank": "тесто",
+   "src": "made"
   }
  ],
  "w|тетрадь": [
@@ -43331,6 +44467,22 @@
    "src": "tatoeba:4384804/marafon en:11042105/sundown"
   }
  ],
+ "w|трата": [
+  {
+   "text": "Жена Дмитрия считает его походы на барахолку лишней тратой.",
+   "en": "Dmitry's wife considers his trips to the flea market a waste of money.",
+   "ko": "드미트리의 아내는 그의 벼룩시장 나들이를 쓸데없는 지출로 여겨요.",
+   "blank": "тратой",
+   "src": "made"
+  },
+  {
+   "text": "Ольга записывала в блокнот каждую трату за дорогу.",
+   "en": "Olga wrote every expense of the trip in a notebook.",
+   "ko": "올가는 여행 중 쓴 돈을 하나하나 수첩에 적었어요.",
+   "blank": "трату",
+   "src": "made"
+  }
+ ],
  "w|тратить": [
   {
    "text": "Не учи меня, как тратить мои деньги!",
@@ -43485,6 +44637,22 @@
    "ko": "삼십 유로만 빌려줄 수 있어?",
    "blank": "тридцать",
    "src": "tatoeba:12674259/Wezel en:12463504/CK"
+  }
+ ],
+ "w|трижды": [
+  {
+   "text": "Дмитрий трижды возвращался к одной и той же лампе, пока не купил её.",
+   "en": "Dmitry went back to the same lamp three times before he bought it.",
+   "ko": "드미트리는 같은 램프로 세 번이나 돌아가서 결국 샀어요.",
+   "blank": "трижды",
+   "src": "made"
+  },
+  {
+   "text": "Ольга трижды проехала мимо нужного поворота.",
+   "en": "Olga drove past the right turning three times.",
+   "ko": "올가는 가야 할 갈림길을 세 번이나 지나쳤어요.",
+   "blank": "трижды",
+   "src": "made"
   }
  ],
  "w|тринадцать": [
@@ -44585,6 +45753,22 @@
    "src": "made"
   }
  ],
+ "w|удивлять": [
+  {
+   "text": "Ивана до сих пор удивляют цены в этом ресторане — очень дёшево.",
+   "en": "The prices at this restaurant still surprise Ivan: it's very cheap.",
+   "ko": "이반은 이 식당 가격에 아직도 놀라요. 아주 싸거든요.",
+   "blank": "удивляют",
+   "src": "made"
+  },
+  {
+   "text": "Режиссёра каждый раз удивляет, как Анна быстро учит текст.",
+   "en": "The director is surprised every time by how quickly Anna learns her lines.",
+   "ko": "감독은 안나가 대사를 빨리 외우는 데 매번 놀라요.",
+   "blank": "удивляет",
+   "src": "made"
+  }
+ ],
  "w|удобный": [
   {
    "text": "Этот стул очень удобный, но мне не нравится цвет.",
@@ -44731,6 +45915,22 @@
    "en": "Stay for dinner.",
    "ko": "저녁은 먹고 가.",
    "blank": "ужин"
+  }
+ ],
+ "w|ужинать": [
+  {
+   "text": "По пятницам Иван с семьёй ужинает в ресторане у дома.",
+   "en": "On Fridays Ivan and his family have dinner at the restaurant near their home.",
+   "ko": "금요일마다 이반은 가족과 집 근처 식당에서 저녁을 먹어요.",
+   "blank": "ужинает",
+   "src": "made"
+  },
+  {
+   "text": "После съёмок Анна не стала ужинать и сразу легла спать.",
+   "en": "After the shoot Anna didn't have dinner and went straight to bed.",
+   "ko": "촬영이 끝난 뒤 안나는 저녁도 안 먹고 바로 잤어요.",
+   "blank": "ужинать",
+   "src": "made"
   }
  ],
  "w|узкий": [
@@ -46747,6 +47947,22 @@
    "src": "tatoeba:1593167/Biga en:953866/CK"
   }
  ],
+ "w|целовать": [
+  {
+   "text": "Уходя из кафе, Иван поцеловал жену и поехал на работу.",
+   "en": "Leaving the café, Ivan kissed his wife and went to work.",
+   "ko": "카페를 나서며 이반은 아내에게 입맞추고 출근했어요.",
+   "blank": "поцеловал",
+   "src": "made"
+  },
+  {
+   "text": "В финальной сцене Анна должна целовать партнёра под дождём.",
+   "en": "In the final scene Anna has to kiss her co-star in the rain.",
+   "ko": "마지막 장면에서 안나는 빗속에서 상대 배우와 입맞춰야 해요.",
+   "blank": "целовать",
+   "src": "made"
+  }
+ ],
  "w|целый": [
   {
    "text": "Я ждал целый день.",
@@ -46805,6 +48021,22 @@
    "ko": "가장 중요한 건 서로를 아끼는 거예요.",
    "blank": "ценить",
    "src": "tatoeba:13266750/Ooneykcall en:13027772/Nuel"
+  }
+ ],
+ "w|ценность": [
+  {
+   "text": "Для Дмитрия ценность вещи не в цене, а в её истории.",
+   "en": "For Dmitry the value of a thing is not in its price but in its story.",
+   "ko": "드미트리에게 물건의 가치는 가격이 아니라 그 이야기에 있어요.",
+   "blank": "ценность",
+   "src": "made"
+  },
+  {
+   "text": "Ольга поняла главную ценность поездки — время наедине с собой.",
+   "en": "Olga understood the main value of the trip: time alone with herself.",
+   "ko": "올가는 이번 여행의 가장 큰 가치가 혼자만의 시간이라는 걸 깨달았어요.",
+   "blank": "ценность",
+   "src": "made"
   }
  ],
  "w|цент": [
@@ -46945,6 +48177,22 @@
    "en": "Wait an hour.",
    "ko": "한 시간만 기다려.",
    "blank": "час"
+  }
+ ],
+ "w|частично": [
+  {
+   "text": "Старый шкаф, который купил Дмитрий, был частично изъеден жуками.",
+   "en": "The old wardrobe Dmitry bought had been partly eaten by beetles.",
+   "ko": "드미트리가 산 낡은 옷장은 일부가 벌레 먹어 있었어요.",
+   "blank": "частично",
+   "src": "made"
+  },
+  {
+   "text": "Дорога к озеру была частично размыта, и Ольга поехала в объезд.",
+   "en": "The road to the lake was partly washed out, so Olga took a detour.",
+   "ko": "호수로 가는 길이 일부 유실돼서 올가는 돌아서 갔어요.",
+   "blank": "частично",
+   "src": "made"
   }
  ],
  "w|частный": [
@@ -48087,6 +49335,22 @@
    "src": "tatoeba:13405297/marafon en:13405304/frpzzd"
   }
  ],
+ "w|штраф": [
+  {
+   "text": "Дмитрий получил штраф за то, что оставил машину у рынка под знаком.",
+   "en": "Dmitry got a fine for leaving his car near the market under a sign.",
+   "ko": "드미트리는 시장 근처 표지판 아래 차를 세웠다가 벌금을 냈어요.",
+   "blank": "штраф",
+   "src": "made"
+  },
+  {
+   "text": "За превышение скорости Ольге выписали штраф.",
+   "en": "Olga was given a fine for speeding.",
+   "ko": "과속으로 올가에게 벌금 딱지가 나왔어요.",
+   "blank": "штраф",
+   "src": "made"
+  }
+ ],
  "w|штука": [
   {
    "text": "Где эта штука?",
@@ -48487,6 +49751,22 @@
    "en": "I'm paying for dinner today.",
    "ko": "오늘 저녁은 내가 낼게.",
    "blank": "я"
+  }
+ ],
+ "w|яблоко": [
+  {
+   "text": "Повар испёк для Ивана пирог с яблоком и корицей.",
+   "en": "The cook baked Ivan a pie with apple and cinnamon.",
+   "ko": "요리사가 이반을 위해 사과와 계피를 넣은 파이를 구웠어요.",
+   "blank": "яблоком",
+   "src": "made"
+  },
+  {
+   "text": "В последнем кадре Анна откусывает красное яблоко.",
+   "en": "In the last shot Anna bites into a red apple.",
+   "ko": "마지막 장면에서 안나는 빨간 사과를 한 입 베어 물어요.",
+   "blank": "яблоко",
+   "src": "made"
   }
  ],
  "w|явиться": [
