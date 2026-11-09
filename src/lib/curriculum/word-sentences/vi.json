@@ -1011,6 +1011,22 @@
    "src": "made"
   }
  ],
+ "w|bãi nhiệm": [
+  {
+   "text": "Hướng dẫn viên giải thích cho Tuấn rằng dân làng từng có quyền bãi nhiệm người họ đã bầu ra.",
+   "en": "The guide explains to Tuấn that villagers once had the right to recall the person they had elected.",
+   "ko": "가이드는 뚜언에게 마을 사람들이 뽑은 사람을 소환할 권리가 있었다고 설명해요.",
+   "blank": "bãi nhiệm",
+   "src": "made"
+  },
+  {
+   "text": "Mai đọc kỹ điều lệ để biết cổ đông có quyền bãi nhiệm thành viên hội đồng hay không.",
+   "en": "Mai reads the charter carefully to see whether shareholders can remove board members.",
+   "ko": "마이는 주주가 이사를 해임할 권리가 있는지 알려고 정관을 꼼꼼히 읽어요.",
+   "blank": "bãi nhiệm",
+   "src": "made"
+  }
+ ],
  "w|bài tập": [
   {
    "text": "Bài tập hôm nay nhiều quá.",
@@ -1287,6 +1303,22 @@
    "src": "made"
   }
  ],
+ "w|ban hành": [
+  {
+   "text": "Tuấn chụp lại trang đầu của bộ luật được ban hành cách đây hai trăm năm.",
+   "en": "Tuấn takes a photo of the first page of a law code issued two hundred years ago.",
+   "ko": "뚜언은 이백 년 전에 반포된 법전의 첫 장을 사진으로 찍어요.",
+   "blank": "ban hành",
+   "src": "made"
+  },
+  {
+   "text": "Quy định mới về dữ liệu cá nhân vừa được ban hành, nên Mai phải sửa lại hệ thống.",
+   "en": "New rules on personal data have just been issued, so Mai has to rework the system.",
+   "ko": "개인정보에 관한 새 규정이 막 공포돼서 마이는 시스템을 다시 고쳐야 해요.",
+   "blank": "ban hành",
+   "src": "made"
+  }
+ ],
  "w|bàn học": [
   {
    "text": "Sách vở để đầy trên bàn học.",
@@ -1389,6 +1421,22 @@
    "en": "She just broke up with her boyfriend.",
    "ko": "그녀는 방금 남자친구랑 헤어졌어.",
    "blank": "bạn trai"
+  }
+ ],
+ "w|bàn ủi": [
+  {
+   "text": "Cô hướng dẫn viên chỉ cho Tuấn chiếc bàn ủi than bằng gang của các bà ngày xưa.",
+   "en": "The guide shows Tuấn the cast-iron charcoal iron that grandmothers used in the old days.",
+   "ko": "가이드는 뚜언에게 옛날 할머니들이 쓰던 무쇠 숯다리미를 보여 줘요.",
+   "blank": "bàn ủi",
+   "src": "made"
+  },
+  {
+   "text": "Sáng nay Mai phải mượn bàn ủi của bạn cùng phòng trước buổi gặp khách.",
+   "en": "This morning Mai has to borrow her roommate's iron before meeting a client.",
+   "ko": "오늘 아침 마이는 고객을 만나기 전에 룸메이트의 다리미를 빌려야 해요.",
+   "blank": "bàn ủi",
+   "src": "made"
   }
  ],
  "w|băng": [
@@ -1551,6 +1599,22 @@
    "ko": "디저트로 케이크 먹고 싶어요.",
    "blank": "bánh ngọt",
    "src": "tatoeba:3484769/tucm en:39476/CK"
+  }
+ ],
+ "w|bánh xèo": [
+  {
+   "text": "Quán ăn trong bảo tàng có món bánh xèo vỏ giòn mà Tuấn rất thích.",
+   "en": "The museum restaurant serves crispy bánh xèo pancakes that Tuấn really likes.",
+   "ko": "박물관 식당에는 뚜언이 아주 좋아하는 바삭한 반쎄오가 있어요.",
+   "blank": "bánh xèo",
+   "src": "made"
+  },
+  {
+   "text": "Để mừng bản cập nhật mới, Mai mời cả nhóm đi ăn bánh xèo.",
+   "en": "To celebrate the new update, Mai treats the whole team to bánh xèo.",
+   "ko": "새 업데이트를 축하하려고 마이는 팀원 모두에게 반쎄오를 사요.",
+   "blank": "bánh xèo",
+   "src": "made"
   }
  ],
  "w|báo": [
@@ -1905,6 +1969,22 @@
    "blank": "bắt cóc"
   }
  ],
+ "w|bất công": [
+  {
+   "text": "Tuấn hiểu thêm về những bất công mà người nông dân xưa phải chịu.",
+   "en": "Tuấn understands more about the injustices that farmers of the past had to endure.",
+   "ko": "뚜언은 옛 농민들이 겪어야 했던 불공정에 대해 더 알게 돼요.",
+   "blank": "bất công",
+   "src": "made"
+  },
+  {
+   "text": "Mai cho rằng trả lương quá thấp cho thực tập sinh là một sự bất công.",
+   "en": "Mai thinks paying interns too little is an injustice.",
+   "ko": "마이는 인턴에게 월급을 너무 적게 주는 건 부당한 일이라고 생각해요.",
+   "blank": "bất công",
+   "src": "made"
+  }
+ ],
  "w|bất cứ": [
   {
    "text": "Bất cứ lúc nào cũng được.",
@@ -1945,6 +2025,22 @@
    "en": "They were arrested for disturbing the peace.",
    "ko": "그들은 질서 문란으로 체포됐어.",
    "blank": "bắt giữ"
+  }
+ ],
+ "w|bất hợp pháp": [
+  {
+   "text": "Hướng dẫn viên kể cho Tuấn về những cổ vật từng bị đưa ra nước ngoài bất hợp pháp.",
+   "en": "The guide tells Tuấn about antiquities that were once taken abroad illegally.",
+   "ko": "가이드는 뚜언에게 불법으로 해외에 반출됐던 유물들 이야기를 해 줘요.",
+   "blank": "bất hợp pháp",
+   "src": "made"
+  },
+  {
+   "text": "Mai phát hiện một ứng dụng khác sao chép mã của công ty một cách bất hợp pháp.",
+   "en": "Mai discovers another app illegally copying the company's code.",
+   "ko": "마이는 다른 앱이 회사 코드를 불법으로 베낀 걸 알아내요.",
+   "blank": "bất hợp pháp",
+   "src": "made"
   }
  ],
  "w|bất kỳ": [
@@ -2038,6 +2134,22 @@
    "en": "The nurses in the ward elected Hương as head nurse.",
    "ko": "병동 간호사들이 흐엉을 수간호사로 뽑았어요.",
    "blank": "bầu",
+   "src": "made"
+  }
+ ],
+ "w|bầu cử": [
+  {
+   "text": "Tuấn xem những thùng phiếu gỗ từng dùng trong các cuộc bầu cử ngày trước.",
+   "en": "Tuấn looks at the wooden ballot boxes once used in past elections.",
+   "ko": "뚜언은 예전 선거에서 쓰던 나무 투표함들을 봐요.",
+   "blank": "bầu cử",
+   "src": "made"
+  },
+  {
+   "text": "Nhóm của Mai đang viết một ứng dụng giúp người dân tra cứu thông tin bầu cử.",
+   "en": "Mai's team is writing an app that helps people look up election information.",
+   "ko": "마이의 팀은 사람들이 선거 정보를 찾아볼 수 있는 앱을 만들고 있어요.",
+   "blank": "bầu cử",
    "src": "made"
   }
  ],
@@ -2705,6 +2817,22 @@
    "blank": "Biết ơn"
   }
  ],
+ "w|biệt thự": [
+  {
+   "text": "Tuấn được biết bảo tàng từng là biệt thự của một gia đình thương nhân.",
+   "en": "Tuấn learns that the museum was once the villa of a merchant family.",
+   "ko": "뚜언은 박물관이 한때 어느 상인 집안의 저택이었다는 걸 알게 돼요.",
+   "blank": "biệt thự",
+   "src": "made"
+  },
+  {
+   "text": "Công ty của Mai thuê tầng trệt một biệt thự cũ làm văn phòng.",
+   "en": "Mai's company rents the ground floor of an old villa as its office.",
+   "ko": "마이의 회사는 오래된 저택의 일층을 사무실로 빌려 써요.",
+   "blank": "biệt thự",
+   "src": "made"
+  }
+ ],
  "w|biểu diễn": [
   {
    "text": "Tối nay câu lạc bộ âm nhạc sẽ biểu diễn trong hội trường.",
@@ -3025,6 +3153,22 @@
    "en": "Mom and Dad are really worried already.",
    "ko": "부모님께서 많이 걱정하고 계셔.",
    "blank": "Bố mẹ"
+  }
+ ],
+ "w|bổ nhiệm": [
+  {
+   "text": "Tuấn dừng lại khá lâu trước bản quyết định bổ nhiệm một viên quan từ thế kỷ trước.",
+   "en": "Tuấn stops for a long time in front of a decree appointing an official from the last century.",
+   "ko": "뚜언은 지난 세기의 한 관리를 임명한 문서 앞에 꽤 오래 멈춰 서요.",
+   "blank": "bổ nhiệm",
+   "src": "made"
+  },
+  {
+   "text": "Hội đồng quản trị vừa bổ nhiệm Mai làm giám đốc công nghệ.",
+   "en": "The board has just appointed Mai as chief technology officer.",
+   "ko": "이사회가 방금 마이를 최고기술책임자로 임명했어요.",
+   "blank": "bổ nhiệm",
+   "src": "made"
   }
  ],
  "w|bỏ phiếu": [
@@ -3931,6 +4075,22 @@
    "src": "made"
   }
  ],
+ "w|búp bê": [
+  {
+   "text": "Trong góc dành cho trẻ em, Tuấn thấy những con búp bê vải do các bà mẹ tự khâu.",
+   "en": "In the children's corner, Tuấn sees cloth dolls that mothers sewed by hand.",
+   "ko": "어린이 코너에서 뚜언은 엄마들이 손수 꿰맨 헝겊 인형들을 봐요.",
+   "blank": "búp bê",
+   "src": "made"
+  },
+  {
+   "text": "Hôm thứ bảy, con gái của Mai ôm búp bê theo mẹ lên văn phòng.",
+   "en": "On Saturday, Mai's daughter brings her doll along to the office with her mom.",
+   "ko": "토요일에 마이의 딸이 인형을 안고 엄마를 따라 사무실에 와요.",
+   "blank": "búp bê",
+   "src": "made"
+  }
+ ],
  "w|bút": [
   {
    "text": "Tôi có thể mượn bút của bạn được không?",
@@ -4205,6 +4365,22 @@
    "en": "Is there some other way?",
    "ko": "다른 방법은 없어?",
    "blank": "cách"
+  }
+ ],
+ "w|cách chức": [
+  {
+   "text": "Tuấn đọc chuyện một viên quan bị cách chức vì nhận hối lộ.",
+   "en": "Tuấn reads the story of an official who was dismissed for taking bribes.",
+   "ko": "뚜언은 뇌물을 받아 파면된 어느 관리의 이야기를 읽어요.",
+   "blank": "cách chức",
+   "src": "made"
+  },
+  {
+   "text": "Mai kể rằng người sáng lập cũ bị cách chức vì dùng sai tiền của công ty.",
+   "en": "Mai says the former founder was dismissed for misusing company money.",
+   "ko": "마이는 예전 창업자가 회사 돈을 잘못 써서 해임됐다고 말해요.",
+   "blank": "cách chức",
+   "src": "made"
   }
  ],
  "w|cách giải quyết": [
@@ -6767,6 +6943,22 @@
    "src": "made"
   }
  ],
+ "w|chính đảng": [
+  {
+   "text": "Tuấn ghé phòng cuối, nơi kể về sự ra đời của các chính đảng trên thế giới.",
+   "en": "Tuấn stops by the last room, which tells how political parties around the world came into being.",
+   "ko": "뚜언은 세계 여러 정당이 생겨난 이야기를 다루는 마지막 방에 들러요.",
+   "blank": "chính đảng",
+   "src": "made"
+  },
+  {
+   "text": "Mai quyết định không nhận quảng cáo từ bất kỳ chính đảng nào.",
+   "en": "Mai decides not to accept ads from any political party.",
+   "ko": "마이는 어떤 정당의 광고도 받지 않기로 해요.",
+   "blank": "chính đảng",
+   "src": "made"
+  }
+ ],
  "w|chính mình": [
   {
    "text": "Hãy tin vào chính mình.",
@@ -7313,6 +7505,22 @@
    "src": "made"
   }
  ],
+ "w|chợt": [
+  {
+   "text": "Đang đứng trước tủ kính, Tuấn chợt nhớ ra mình quên tắt chuông điện thoại.",
+   "en": "Standing in front of a display case, Tuấn suddenly remembers he forgot to silence his phone.",
+   "ko": "진열장 앞에 서 있다가 뚜언은 휴대폰 벨소리를 안 끈 게 문득 생각나요.",
+   "blank": "chợt",
+   "src": "made"
+  },
+  {
+   "text": "Đang họp, Mai chợt nghĩ ra cách sửa lỗi đăng nhập.",
+   "en": "In the middle of a meeting, Mai suddenly thinks of a way to fix the login bug.",
+   "ko": "회의 중에 마이는 로그인 오류를 고칠 방법이 문득 떠올라요.",
+   "blank": "chợt",
+   "src": "made"
+  }
+ ],
  "w|chú": [
   {
    "text": "Chú uống nước đã ạ.",
@@ -7385,6 +7593,22 @@
    "src": "made"
   }
  ],
+ "w|chủ nghĩa": [
+  {
+   "text": "Tuấn nghe giảng về chủ nghĩa nhân văn trong hội họa thời Phục Hưng.",
+   "en": "Tuấn listens to a talk about humanism in Renaissance painting.",
+   "ko": "뚜언은 르네상스 회화 속 인문주의에 대한 강연을 들어요.",
+   "blank": "chủ nghĩa",
+   "src": "made"
+  },
+  {
+   "text": "Mai hay đùa rằng sếp mình theo chủ nghĩa hoàn hảo, sửa mãi một nút bấm.",
+   "en": "Mai often jokes that her boss is a perfectionist who keeps fiddling with a single button.",
+   "ko": "마이는 상사가 완벽주의라 버튼 하나를 계속 고친다고 자주 농담해요.",
+   "blank": "chủ nghĩa",
+   "src": "made"
+  }
+ ],
  "w|chủ nhà": [
   {
    "text": "Chủ nhà sẽ đến xem phòng chiều nay.",
@@ -7411,6 +7635,22 @@
    "en": "Can we meet on Sunday?",
    "ko": "일요일에 만날 수 있을까?",
    "blank": "chủ nhật"
+  }
+ ],
+ "w|chủ trọ": [
+  {
+   "text": "Tuấn bật cười trước tờ giấy chủ trọ dán trên cửa căn phòng thuê được dựng lại.",
+   "en": "Tuấn laughs at the landlord's note taped to the door of the recreated rented room.",
+   "ko": "뚜언은 재현해 놓은 셋방 문에 집주인이 붙인 쪽지를 보고 웃음을 터뜨려요.",
+   "blank": "chủ trọ",
+   "src": "made"
+  },
+  {
+   "text": "Hồi mới khởi nghiệp, Mai từng nợ tiền nhà và phải xin chủ trọ cho trả chậm.",
+   "en": "When she first started the business, Mai once fell behind on rent and had to ask the landlord to let her pay late.",
+   "ko": "막 창업했을 때 마이는 방세가 밀려서 집주인에게 늦게 내게 해 달라고 부탁해야 했어요.",
+   "blank": "chủ trọ",
+   "src": "made"
   }
  ],
  "w|chú ý": [
@@ -8637,6 +8877,22 @@
    "src": "made"
   }
  ],
+ "w|cơm rang": [
+  {
+   "text": "Trưa đó Tuấn ăn vội đĩa cơm rang rồi quay lại xem tiếp.",
+   "en": "That noon Tuấn quickly eats a plate of fried rice and goes back to keep looking.",
+   "ko": "그날 점심 뚜언은 볶음밥 한 접시를 급히 먹고 다시 관람하러 가요.",
+   "blank": "cơm rang",
+   "src": "made"
+  },
+  {
+   "text": "Tối nào làm muộn, cả nhóm của Mai cũng gọi cơm rang về ăn.",
+   "en": "Every night they work late, Mai's team orders fried rice.",
+   "ko": "늦게까지 일하는 날이면 마이의 팀은 늘 볶음밥을 시켜 먹어요.",
+   "blank": "cơm rang",
+   "src": "made"
+  }
+ ],
  "w|con": [
   {
    "text": "Nhà nuôi một con mèo.",
@@ -8963,6 +9219,22 @@
    "src": "made"
   }
  ],
+ "w|công lý": [
+  {
+   "text": "Tuấn ngắm bức tượng nữ thần công lý cầm cán cân.",
+   "en": "Tuấn gazes at the statue of the goddess of justice holding the scales.",
+   "ko": "뚜언은 저울을 든 정의의 여신상을 바라봐요.",
+   "blank": "công lý",
+   "src": "made"
+  },
+  {
+   "text": "Khi thắng vụ kiện bản quyền, Mai nói cuối cùng công lý cũng đã được thực hiện.",
+   "en": "When she wins the copyright case, Mai says justice has finally been done.",
+   "ko": "저작권 소송에서 이기자 마이는 마침내 정의가 실현됐다고 말해요.",
+   "blank": "công lý",
+   "src": "made"
+  }
+ ],
  "w|công nghệ": [
   {
    "text": "Nhà hàng dùng công nghệ nấu chậm để giữ nguyên vị của thịt.",
@@ -9201,6 +9473,22 @@
    "en": "Specifically, I want to change the meeting schedule.",
    "ko": "구체적으로는 회의 일정을 바꾸고 싶어.",
    "blank": "Cụ thể"
+  }
+ ],
+ "w|cử tri": [
+  {
+   "text": "Tuấn chăm chú nhìn tấm ảnh hàng dài cử tri chờ trước điểm bỏ phiếu.",
+   "en": "Tuấn stares at a photo of a long line of voters waiting outside a polling station.",
+   "ko": "뚜언은 투표소 앞에 길게 늘어선 유권자들의 사진을 유심히 봐요.",
+   "blank": "cử tri",
+   "src": "made"
+  },
+  {
+   "text": "Mai muốn mỗi cử tri chỉ mất vài giây để tìm ra điểm bỏ phiếu gần nhà.",
+   "en": "Mai wants every voter to need only a few seconds to find the polling station near home.",
+   "ko": "마이는 유권자 누구나 몇 초 만에 집 근처 투표소를 찾게 하고 싶어요.",
+   "blank": "cử tri",
+   "src": "made"
   }
  ],
  "w|cư xử": [
@@ -10077,6 +10365,22 @@
    "blank": "đài"
   }
  ],
+ "w|đại biểu": [
+  {
+   "text": "Tuấn tìm thấy tên ông nội trong danh sách đại biểu dự một hội nghị năm xưa.",
+   "en": "Tuấn finds his grandfather's name on the list of delegates to a conference long ago.",
+   "ko": "뚜언은 옛날 어느 회의의 대표 명단에서 할아버지 이름을 찾아요.",
+   "blank": "đại biểu",
+   "src": "made"
+  },
+  {
+   "text": "Mai được mời làm đại biểu tại một hội nghị về khởi nghiệp trẻ.",
+   "en": "Mai is invited to be a delegate at a conference on young startups.",
+   "ko": "마이는 청년 창업 회의에 대표로 초대받아요.",
+   "blank": "đại biểu",
+   "src": "made"
+  }
+ ],
  "w|đại diện": [
   {
    "text": "Góc nhìn của bác tôi đại diện cho thế hệ của bác ấy.",
@@ -10227,6 +10531,22 @@
    "blank": "đám cưới"
   }
  ],
+ "w|đậm đà": [
+  {
+   "text": "Tuấn thấy bát canh chua ở quán bảo tàng nấu khá đậm đà.",
+   "en": "Tuấn finds the sour soup at the museum restaurant quite rich in flavor.",
+   "ko": "뚜언은 박물관 식당의 새콤한 국이 꽤 맛이 깊다고 느껴요.",
+   "blank": "đậm đà",
+   "src": "made"
+  },
+  {
+   "text": "Mai khen bát phở gần công ty có nước dùng đậm đà.",
+   "en": "Mai praises the pho near the office for its rich broth.",
+   "ko": "마이는 회사 근처 쌀국숫집 국물이 진하다고 칭찬해요.",
+   "blank": "đậm đà",
+   "src": "made"
+  }
+ ],
  "w|đám đông": [
   {
    "text": "Dù ở trong đám đông, tôi cảm thấy vô cùng cô đơn và buồn.",
@@ -10357,6 +10677,22 @@
    "en": "A few women sat chatting happily.",
    "ko": "여자 몇이 즐겁게 수다 떨고 있어.",
    "blank": "đàn bà"
+  }
+ ],
+ "w|dân chủ": [
+  {
+   "text": "Tuấn thích nhất triển lãm về nền dân chủ ở các thành bang Hy Lạp cổ đại.",
+   "en": "Tuấn likes the exhibition on democracy in the ancient Greek city-states the most.",
+   "ko": "뚜언은 고대 그리스 도시 국가의 민주주의 전시가 제일 좋아요.",
+   "blank": "dân chủ",
+   "src": "made"
+  },
+  {
+   "text": "Mai muốn giữ không khí dân chủ trong nhóm, ai cũng được nói ý kiến.",
+   "en": "Mai wants to keep a democratic atmosphere in the team, where everyone gets to speak up.",
+   "ko": "마이는 누구나 의견을 말할 수 있는 민주적인 분위기를 팀에 지키고 싶어요.",
+   "blank": "dân chủ",
+   "src": "made"
   }
  ],
  "w|dần dần": [
@@ -10491,6 +10827,22 @@
    "en": "Black coffee is a bit bitter for me.",
    "ko": "아메리카노는 나한테 좀 써.",
    "blank": "đắng"
+  }
+ ],
+ "w|đảng": [
+  {
+   "text": "Tuấn đọc rằng nhóm thanh niên ấy về sau lập ra một đảng nhỏ ở địa phương.",
+   "en": "Tuấn reads that the group of young people later founded a small local party.",
+   "ko": "뚜언은 그 청년 모임이 나중에 작은 지역 정당을 세웠다는 걸 읽어요.",
+   "blank": "đảng",
+   "src": "made"
+  },
+  {
+   "text": "Mai giữ ứng dụng trung lập, không đứng về phía đảng nào.",
+   "en": "Mai keeps the app neutral, not siding with any party.",
+   "ko": "마이는 앱을 중립으로 유지하고 어느 당 편도 들지 않아요.",
+   "blank": "đảng",
+   "src": "made"
   }
  ],
  "w|đăng ký": [
@@ -13017,6 +13369,22 @@
    "blank": "đồ ăn"
   }
  ],
+ "w|đồ ăn vặt": [
+  {
+   "text": "Bảo tàng không cho mang đồ ăn vặt vào khu trưng bày, nên Tuấn gửi túi bánh ở quầy.",
+   "en": "The museum doesn't allow snacks in the exhibition area, so Tuấn leaves his bag of cakes at the counter.",
+   "ko": "박물관은 전시 구역에 간식을 못 가지고 들어가게 해서 뚜언은 과자 봉지를 카운터에 맡겨요.",
+   "blank": "đồ ăn vặt",
+   "src": "made"
+  },
+  {
+   "text": "Mai lo việc mua đồ ăn vặt cho cả văn phòng mỗi tuần.",
+   "en": "Mai takes care of buying snacks for the whole office every week.",
+   "ko": "마이는 매주 사무실 전체가 먹을 간식 사는 일을 맡아요.",
+   "blank": "đồ ăn vặt",
+   "src": "made"
+  }
+ ],
  "w|đồ chơi": [
   {
    "text": "Đồ chơi này làm bé cười rất vui.",
@@ -14205,6 +14573,22 @@
    "ko": "일기 예보에 따르면 내일 눈이 와요.",
    "blank": "dự báo",
    "src": "tatoeba:5404971/Vienna en:5401525/CK"
+  }
+ ],
+ "w|đu đủ": [
+  {
+   "text": "Ở quán cà phê của bảo tàng, Tuấn gọi một ly sinh tố đu đủ.",
+   "en": "At the museum café, Tuấn orders a papaya smoothie.",
+   "ko": "박물관 카페에서 뚜언은 파파야 스무디 한 잔을 시켜요.",
+   "blank": "đu đủ",
+   "src": "made"
+  },
+  {
+   "text": "Mai mang một quả đu đủ chín từ quê lên chia cho cả nhóm.",
+   "en": "Mai brings a ripe papaya from her hometown to share with the whole team.",
+   "ko": "마이는 고향에서 잘 익은 파파야 하나를 가져와 팀원들과 나눠 먹어요.",
+   "blank": "đu đủ",
+   "src": "made"
   }
  ],
  "w|du học": [
@@ -16615,6 +16999,22 @@
    "src": "tatoeba:1550532/trieuho en:887234/CK"
   }
  ],
+ "w|giòn": [
+  {
+   "text": "Quán ăn trong bảo tàng có món bánh xèo vỏ giòn mà Tuấn rất thích.",
+   "en": "The museum restaurant serves crispy bánh xèo pancakes that Tuấn really likes.",
+   "ko": "박물관 식당에는 뚜언이 아주 좋아하는 바삭한 반쎄오가 있어요.",
+   "blank": "giòn",
+   "src": "made"
+  },
+  {
+   "text": "Mai vừa gõ code vừa nhai bánh quy giòn rụm.",
+   "en": "Mai types code while munching on crunchy biscuits.",
+   "ko": "마이는 바삭바삭한 쿠키를 씹으며 코드를 쳐요.",
+   "blank": "giòn",
+   "src": "made"
+  }
+ ],
  "w|giỡn": [
   {
    "text": "Trong giờ ra chơi, Minh hay giỡn với bạn bè ở sân trường.",
@@ -17983,6 +18383,22 @@
    "blank": "hết"
   }
  ],
+ "w|hết pin": [
+  {
+   "text": "Giữa buổi tham quan, điện thoại của Tuấn hết pin nên anh không chụp ảnh được nữa.",
+   "en": "Halfway through the visit, Tuấn's phone runs out of battery, so he can't take photos anymore.",
+   "ko": "관람 도중에 뚜언의 휴대폰 배터리가 다 돼서 더 이상 사진을 못 찍어요.",
+   "blank": "hết pin",
+   "src": "made"
+  },
+  {
+   "text": "Laptop của Mai hết pin ngay giữa buổi thuyết trình với nhà đầu tư.",
+   "en": "Mai's laptop runs out of battery right in the middle of the pitch to investors.",
+   "ko": "투자자 발표 한가운데서 마이의 노트북 배터리가 다 돼요.",
+   "blank": "hết pin",
+   "src": "made"
+  }
+ ],
  "w|hết sức": [
   {
    "text": "Quang hết sức cẩn thận khi đi qua cây cầu tre.",
@@ -19259,6 +19675,22 @@
    "en": "This contract is valid until year-end.",
    "ko": "이 계약은 연말까지 유효해.",
    "blank": "Hợp đồng"
+  }
+ ],
+ "w|hợp pháp": [
+  {
+   "text": "Tuấn được nghe rằng bảo tàng mua lại bộ sưu tập này một cách hợp pháp từ một nhà sưu tầm.",
+   "en": "Tuấn hears that the museum bought this collection legally from a collector.",
+   "ko": "뚜언은 박물관이 이 소장품을 한 수집가에게서 합법적으로 사들였다고 들어요.",
+   "blank": "hợp pháp",
+   "src": "made"
+  },
+  {
+   "text": "Mai muốn chắc rằng mọi dữ liệu công ty thu thập đều hợp pháp.",
+   "en": "Mai wants to be sure all the data the company collects is legal.",
+   "ko": "마이는 회사가 모으는 데이터가 모두 합법적인지 확실히 하고 싶어요.",
+   "blank": "hợp pháp",
+   "src": "made"
   }
  ],
  "w|hộp thư": [
@@ -23307,6 +23739,22 @@
    "blank": "lo sợ"
   }
  ],
+ "w|lò sưởi": [
+  {
+   "text": "Tuấn ngạc nhiên vì căn phòng trưng bày có cả một chiếc lò sưởi bằng đá.",
+   "en": "Tuấn is surprised that the exhibition room even has a stone fireplace.",
+   "ko": "뚜언은 전시실에 돌 벽난로까지 있어서 놀라요.",
+   "blank": "lò sưởi",
+   "src": "made"
+  },
+  {
+   "text": "Trong chuyến công tác mùa đông, Mai ngồi sửa bài thuyết trình bên lò sưởi của khách sạn.",
+   "en": "On a winter business trip, Mai sits by the hotel fireplace revising her presentation.",
+   "ko": "겨울 출장 중에 마이는 호텔 벽난로 옆에 앉아 발표 자료를 고쳐요.",
+   "blank": "lò sưởi",
+   "src": "made"
+  }
+ ],
  "w|lò vi sóng": [
   {
    "text": "Chúng tôi không có lò vi sóng.",
@@ -25445,6 +25893,22 @@
    "src": "made"
   }
  ],
+ "w|máy hút bụi": [
+  {
+   "text": "Ở phòng trưng bày đồ gia dụng, Tuấn thấy một chiếc máy hút bụi đời đầu to như cái tủ.",
+   "en": "In the household goods room, Tuấn sees an early vacuum cleaner as big as a cupboard.",
+   "ko": "생활용품 전시실에서 뚜언은 옷장만큼 큰 초창기 진공청소기를 봐요.",
+   "blank": "máy hút bụi",
+   "src": "made"
+  },
+  {
+   "text": "Công ty của Mai đang làm phần mềm điều khiển máy hút bụi tự động.",
+   "en": "Mai's company is building software to control robot vacuum cleaners.",
+   "ko": "마이의 회사는 로봇 청소기를 조종하는 소프트웨어를 만들고 있어요.",
+   "blank": "máy hút bụi",
+   "src": "made"
+  }
+ ],
  "w|mấy lần": [
   {
    "text": "Mình gọi mấy lần mà không ai nghe.",
@@ -25745,6 +26209,22 @@
    "ko": "도시에서 여러 해 산 뒤 그는 뿌리를 찾아 시골로 옮기기로 했어요.",
    "blank": "miền",
    "src": "tatoeba:13881429/leucammieuvu en:13879322/Nuel"
+  }
+ ],
+ "w|miễn nhiệm": [
+  {
+   "text": "Tuấn đọc thấy vị quan ấy được miễn nhiệm sau hai năm vì sức khỏe yếu.",
+   "en": "Tuấn reads that the official was relieved of his post after two years because of poor health.",
+   "ko": "뚜언은 그 관리가 건강이 나빠 이 년 뒤에 해임됐다는 걸 읽어요.",
+   "blank": "miễn nhiệm",
+   "src": "made"
+  },
+  {
+   "text": "Sau khi giám đốc tài chính bị miễn nhiệm, Mai tạm lo luôn phần sổ sách.",
+   "en": "After the finance director is removed from his post, Mai temporarily handles the books too.",
+   "ko": "재무 이사가 해임된 뒤 마이가 장부 일까지 임시로 맡아요.",
+   "blank": "miễn nhiệm",
+   "src": "made"
   }
  ],
  "w|miễn phí": [
@@ -27855,6 +28335,22 @@
    "en": "She deposits money in the bank every month.",
    "ko": "그녀는 매달 은행에 돈을 넣어.",
    "blank": "ngân hàng"
+  }
+ ],
+ "w|ngăn nắp": [
+  {
+   "text": "Tuấn khen các hiện vật được xếp rất ngăn nắp theo từng thời kỳ.",
+   "en": "Tuấn praises how neatly the artifacts are arranged by period.",
+   "ko": "뚜언은 유물들이 시대별로 아주 가지런히 놓여 있다고 칭찬해요.",
+   "blank": "ngăn nắp",
+   "src": "made"
+  },
+  {
+   "text": "Bàn làm việc của Mai lúc nào cũng ngăn nắp, khác hẳn đám lập trình viên.",
+   "en": "Mai's desk is always tidy, completely unlike the programmers'.",
+   "ko": "마이의 책상은 늘 정돈돼 있어서 개발자들 책상과는 딴판이에요.",
+   "blank": "ngăn nắp",
+   "src": "made"
   }
  ],
  "w|ngân sách": [
@@ -30014,6 +30510,22 @@
    "en": "When they said goodbye, the old neighbour told Lan to be sure to visit.",
    "ko": "헤어질 때 옛 이웃 할머니는 란에게 꼭 놀러 오라고 당부했어요.",
    "blank": "nhắn nhủ",
+   "src": "made"
+  }
+ ],
+ "w|nhân quyền": [
+  {
+   "text": "Tuấn đứng lặng trước góc trưng bày về lịch sử nhân quyền.",
+   "en": "Tuấn stands silently in front of the exhibit on the history of human rights.",
+   "ko": "뚜언은 인권의 역사를 다룬 전시 앞에 말없이 서 있어요.",
+   "blank": "nhân quyền",
+   "src": "made"
+  },
+  {
+   "text": "Một tổ chức nhân quyền liên hệ với Mai để hợp tác làm công cụ báo cáo.",
+   "en": "A human rights organization contacts Mai to work together on a reporting tool.",
+   "ko": "한 인권 단체가 신고 도구를 함께 만들자고 마이에게 연락해요.",
+   "blank": "nhân quyền",
    "src": "made"
   }
  ],
@@ -32563,6 +33075,22 @@
    "src": "made"
   }
  ],
+ "w|pháp lý": [
+  {
+   "text": "Tuấn nhìn bản văn tự bán đất, một giấy tờ có giá trị pháp lý thời đó.",
+   "en": "Tuấn looks at a land sale deed, a legally valid document at the time.",
+   "ko": "뚜언은 그 시절 법적 효력이 있던 토지 매매 문서를 봐요.",
+   "blank": "pháp lý",
+   "src": "made"
+  },
+  {
+   "text": "Trước khi ký hợp đồng, Mai nhờ luật sư xem lại các rủi ro pháp lý.",
+   "en": "Before signing the contract, Mai asks a lawyer to review the legal risks.",
+   "ko": "계약서에 서명하기 전에 마이는 변호사에게 법적 위험을 검토해 달라고 해요.",
+   "blank": "pháp lý",
+   "src": "made"
+  }
+ ],
  "w|phạt": [
   {
    "text": "Anh ta bị phạt tiền vì đỗ xe trái phép.",
@@ -34255,6 +34783,22 @@
    "ko": "이 책 값 냈어?",
    "blank": "quyển",
    "src": "tatoeba:3109176/trieuho en:237586/CK"
+  }
+ ],
+ "w|quyền con người": [
+  {
+   "text": "Tuấn chép lại câu trích dẫn về quyền con người trên bức tường cuối hành lang.",
+   "en": "Tuấn copies down the quote about human rights on the wall at the end of the hallway.",
+   "ko": "뚜언은 복도 끝 벽에 적힌 인간의 권리에 관한 인용문을 옮겨 적어요.",
+   "blank": "quyền con người",
+   "src": "made"
+  },
+  {
+   "text": "Mai nói rằng quyền riêng tư cũng là một phần của quyền con người.",
+   "en": "Mai says privacy is also part of human rights.",
+   "ko": "마이는 사생활 보호도 인간의 권리의 일부라고 말해요.",
+   "blank": "quyền con người",
+   "src": "made"
   }
  ],
  "w|quyền lợi": [
@@ -36719,6 +37263,22 @@
    "blank": "sửa chữa"
   }
  ],
+ "w|sửa đổi": [
+  {
+   "text": "Tuấn thấy bản thảo luật có nhiều chỗ được sửa đổi bằng mực đỏ.",
+   "en": "Tuấn sees that the draft law has many parts amended in red ink.",
+   "ko": "뚜언은 법 초안에 빨간 잉크로 고친 곳이 많은 걸 봐요.",
+   "blank": "sửa đổi",
+   "src": "made"
+  },
+  {
+   "text": "Luật sư khuyên Mai sửa đổi điều khoản sử dụng trước khi ra mắt.",
+   "en": "The lawyer advises Mai to amend the terms of use before launch.",
+   "ko": "변호사는 출시 전에 이용 약관을 고치라고 마이에게 조언해요.",
+   "blank": "sửa đổi",
+   "src": "made"
+  }
+ ],
  "w|sửa lỗi": [
   {
    "text": "Anh kỹ sư thức khuya để sửa lỗi trong chương trình điều khiển máy.",
@@ -37039,6 +37599,22 @@
    "en": "Come on, let's head back. It's late.",
    "ko": "그만 돌아가자. 늦었어.",
    "blank": "ta"
+  }
+ ],
+ "w|tã": [
+  {
+   "text": "Tuấn đọc trên tấm bảng rằng ngày xưa người ta dùng tã vải rồi giặt đi giặt lại.",
+   "en": "Tuấn reads on the sign that in the past people used cloth diapers and washed them over and over.",
+   "ko": "뚜언은 옛날에는 천 기저귀를 쓰고 빨고 또 빨았다는 안내판을 읽어요.",
+   "blank": "tã",
+   "src": "made"
+  },
+  {
+   "text": "Đồng nghiệp của Mai vừa có con nên hay tranh thủ giờ nghỉ đặt mua tã trên mạng.",
+   "en": "Mai's colleague just had a baby, so he often orders diapers online during breaks.",
+   "ko": "마이의 동료는 아이가 막 태어나서 쉬는 시간에 틈틈이 인터넷으로 기저귀를 주문해요.",
+   "blank": "tã",
+   "src": "made"
   }
  ],
  "w|tác động": [
@@ -39033,6 +39609,22 @@
    "blank": "thí dụ"
   }
  ],
+ "w|thi hành": [
+  {
+   "text": "Tuấn đọc về những người lính được giao thi hành lệnh của nhà vua.",
+   "en": "Tuấn reads about the soldiers tasked with carrying out the king's orders.",
+   "ko": "뚜언은 왕의 명령을 집행하는 일을 맡은 병사들에 대해 읽어요.",
+   "blank": "thi hành",
+   "src": "made"
+  },
+  {
+   "text": "Mai giải thích rằng công ty buộc phải thi hành phán quyết của tòa và gỡ tính năng đó.",
+   "en": "Mai explains that the company has to comply with the court ruling and remove that feature.",
+   "ko": "마이는 회사가 법원 판결을 이행해 그 기능을 내려야 한다고 설명해요.",
+   "blank": "thi hành",
+   "src": "made"
+  }
+ ],
  "w|thị thực": [
   {
    "text": "Tôi có bắt buộc phải lấy thị thực?",
@@ -40325,6 +40917,22 @@
    "en": "Do you really want to go home?",
    "ko": "정말 집에 가고 싶어?",
    "blank": "thực sự"
+  }
+ ],
+ "w|thực thi": [
+  {
+   "text": "Hướng dẫn viên nói với Tuấn rằng luật ấy có nhưng gần như không được thực thi.",
+   "en": "The guide tells Tuấn that the law existed but was almost never enforced.",
+   "ko": "가이드는 뚜언에게 그 법이 있긴 했지만 거의 시행되지 않았다고 말해요.",
+   "blank": "thực thi",
+   "src": "made"
+  },
+  {
+   "text": "Mai mất cả tuần để thực thi chính sách bảo mật mới trên toàn hệ thống.",
+   "en": "It takes Mai a whole week to enforce the new security policy across the system.",
+   "ko": "마이는 새 보안 정책을 시스템 전체에 적용하는 데 일주일이 걸려요.",
+   "blank": "thực thi",
+   "src": "made"
   }
  ],
  "w|thực vật": [
@@ -43753,6 +44361,22 @@
    "blank": "Tự do"
   }
  ],
+ "w|tự do ngôn luận": [
+  {
+   "text": "Một bức tranh biếm họa cũ khiến Tuấn suy nghĩ nhiều về tự do ngôn luận.",
+   "en": "An old cartoon makes Tuấn think a lot about freedom of speech.",
+   "ko": "오래된 풍자 만화 한 장이 뚜언에게 표현의 자유에 대해 많이 생각하게 해요.",
+   "blank": "tự do ngôn luận",
+   "src": "made"
+  },
+  {
+   "text": "Mai tin vào tự do ngôn luận nhưng vẫn xóa những bình luận xúc phạm người khác.",
+   "en": "Mai believes in freedom of speech but still deletes comments that insult others.",
+   "ko": "마이는 표현의 자유를 믿지만 남을 모욕하는 댓글은 지워요.",
+   "blank": "tự do ngôn luận",
+   "src": "made"
+  }
+ ],
  "w|tự động": [
   {
    "text": "Cửa này mở tự động.",
@@ -44642,6 +45266,22 @@
    "en": "The hospital director is running for city council this year.",
    "ko": "병원장은 올해 시의회 선거에 출마해요.",
    "blank": "ứng cử",
+   "src": "made"
+  }
+ ],
+ "w|ứng cử viên": [
+  {
+   "text": "Tuấn đọc những tờ truyền đơn cũ giới thiệu các ứng cử viên trong làng.",
+   "en": "Tuấn reads old leaflets introducing the village candidates.",
+   "ko": "뚜언은 마을 후보들을 소개하는 옛 전단지를 읽어요.",
+   "blank": "ứng cử viên",
+   "src": "made"
+  },
+  {
+   "text": "Trang thông tin của Mai đăng hồ sơ của mọi ứng cử viên theo cùng một mẫu.",
+   "en": "Mai's site posts every candidate's profile in the same format.",
+   "ko": "마이의 정보 사이트는 모든 후보의 프로필을 같은 양식으로 올려요.",
+   "blank": "ứng cử viên",
    "src": "made"
   }
  ],
