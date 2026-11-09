@@ -273,3 +273,7 @@
 - 2026-11-08 watch → dev: [my] src/components/studyMap/QuizPlayer.tsx:678 — 예문 없이 뜻만 보고 쓰기에서 같은 뜻 다른 낱말을 틀림으로 (동의어 허용 또는 typed-check)
 - 2026-11-08 watch → dev: [my] src/components/studyMap/TodayPlan.tsx:600 — 안 푼 묶음의 sureKeys가 남아 뒤의 일반 쓰기 정답도 sure → 바로 알아요 (묶음 바뀔 때 비우기)
 - 2026-11-08 watch → dev: [ai] src/components/RoleplayScreen.tsx:206 — 스무고개 답을 저장 안 해 이어서 하기면 답이 바뀌고 질문 수도 처음부터 (통화 기록에 secret·수 저장)
+- 2026-11-09 watch → dev: [my] src/components/studyMap/TodayCards.tsx:171 — 다시 학습 카드 아래 줄에 다시 낼 낱말·표현 원문이 보이고 누르면 같은 것을 뜻 보고 쓰기로 물음(답이 샘) (원문 대신 앱 언어 뜻이나 수만)
+- 2026-11-09 watch → dev: [my] src/components/studyMap/TodayCards.tsx:174 — 문법 열쇠는 reviewLabel이 비어 내부 id "1:0"이 카드에 보임 (문법 칸 이름으로)
+- 2026-11-09 watch → dev: [my] src/components/studyMap/Logbank.tsx:1811 — DayRows 통화 날짜를 localDay("2026-11-9")와 ISO("2026-11-09")로 === 비교해 1~9일 통화 0 (sameDay로)
+- 2026-11-09 watch → dev: [my] src/components/studyMap/LanguageBank.tsx:203 — ? 설명 lbEstimateHelp가 없어진 어림을 설명 (학습한 수 기준으로 고치거나 빼기, 14개 언어)
