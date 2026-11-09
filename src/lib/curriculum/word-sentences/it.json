@@ -391,6 +391,22 @@
    "blank": "accento"
   }
  ],
+ "w|accertare": [
+  {
+   "text": "Prima di firmare, Simone vuole accertare che non ci siano spese arretrate.",
+   "en": "Before signing, Simone wants to make sure there are no outstanding charges.",
+   "ko": "서명하기 전에 시모네는 밀린 관리비가 없는지 확인하고 싶어 해요.",
+   "blank": "accertare",
+   "src": "made"
+  },
+  {
+   "text": "Anna vuole accertare che il pesce sia davvero fresco prima di comprarlo.",
+   "en": "Anna wants to make sure the fish is really fresh before buying it.",
+   "ko": "안나는 생선을 사기 전에 정말 신선한지 확인하고 싶어 해요.",
+   "blank": "accertare",
+   "src": "made"
+  }
+ ],
  "w|acceso": [
   {
    "text": "Tra i due avvocati è nato un confronto acceso, e Andrea ha smesso di scrivere.",
@@ -1233,6 +1249,22 @@
    "en": "We pay the rent at the start of the month.",
    "ko": "우리는 월초에 세를 내.",
    "blank": "affitto"
+  }
+ ],
+ "w|affogare": [
+  {
+   "text": "Simone ha annaffiato troppo e rischia di affogare le piante del balcone.",
+   "en": "Simone has overwatered and risks drowning his balcony plants.",
+   "ko": "시모네는 물을 너무 많이 줘서 발코니 화분을 물에 잠기게 할 지경이에요.",
+   "blank": "affogare",
+   "src": "made"
+  },
+  {
+   "text": "Anna dice ridendo che il cuoco vuole affogare la pasta nel sugo.",
+   "en": "Anna says laughing that the cook wants to drown the pasta in sauce.",
+   "ko": "요리사가 파스타를 소스에 빠뜨리려 한다고 안나가 웃으며 말해요.",
+   "blank": "affogare",
+   "src": "made"
   }
  ],
  "w|affondare": [
@@ -2121,6 +2153,22 @@
    "blank": "altrove"
   }
  ],
+ "w|altrui": [
+  {
+   "text": "Simone rispetta sempre gli spazi altrui nel garage.",
+   "en": "Simone always respects other people's spaces in the garage.",
+   "ko": "시모네는 차고에서 늘 남의 자리를 지켜요.",
+   "blank": "altrui",
+   "src": "made"
+  },
+  {
+   "text": "Anna insegna ai camerieri a non giudicare i gusti altrui.",
+   "en": "Anna teaches the waiters not to judge other people's tastes.",
+   "ko": "안나는 종업원들에게 남의 입맛을 판단하지 말라고 가르쳐요.",
+   "blank": "altrui",
+   "src": "made"
+  }
+ ],
  "w|alunno": [
   {
    "text": "Una classe di alunni delle elementari passa accanto a Paolo facendo chiasso.",
@@ -2445,6 +2493,22 @@
    "en": "It was a brief romance.",
    "ko": "짧은 연애였어.",
    "blank": "amore"
+  }
+ ],
+ "w|ampio": [
+  {
+   "text": "L'appartamento di Simone ha un balcone ampio dove mette le piante.",
+   "en": "Simone's flat has a wide balcony where he puts his plants.",
+   "ko": "시모네의 집에는 화분을 두는 넓은 발코니가 있어요.",
+   "blank": "ampio",
+   "src": "made"
+  },
+  {
+   "text": "La sala del ristorante di Anna è ampia e luminosa.",
+   "en": "The dining room of Anna's restaurant is spacious and bright.",
+   "ko": "안나네 식당 홀은 넓고 환해요.",
+   "blank": "ampia",
+   "src": "made"
   }
  ],
  "w|analisi": [
@@ -2828,6 +2892,22 @@
    "en": "At dinner Francesca tells everyone that one of her ancestors was a baker.",
    "ko": "저녁 식사 때 프란체스카는 조상 중 한 분이 제빵사였다고 이야기해요.",
    "blank": "antenato",
+   "src": "made"
+  }
+ ],
+ "w|anticipare": [
+  {
+   "text": "Quest'anno l'amministratore vuole anticipare la riunione di condominio, e Simone è contento.",
+   "en": "This year the manager wants to bring the building meeting forward, and Simone is pleased.",
+   "ko": "올해는 관리인이 입주자 회의를 앞당기려 해서 시모네가 반겨요.",
+   "blank": "anticipare",
+   "src": "made"
+  },
+  {
+   "text": "Per il pranzo di Natale Anna deve anticipare l'ordine delle verdure.",
+   "en": "For Christmas lunch Anna has to place the vegetable order early.",
+   "ko": "성탄절 점심 때문에 안나는 채소 주문을 앞당겨야 해요.",
+   "blank": "anticipare",
    "src": "made"
   }
  ],
@@ -3793,6 +3873,22 @@
    "en": "The elevator is out of service today.",
    "ko": "오늘 엘리베이터가 고장이야.",
    "blank": "ascensore"
+  }
+ ],
+ "w|ascia": [
+  {
+   "text": "In cantina Simone trova una vecchia ascia del nonno.",
+   "en": "In the cellar Simone finds his grandfather's old axe.",
+   "ko": "지하 창고에서 시모네는 할아버지의 낡은 도끼를 찾아요.",
+   "blank": "ascia",
+   "src": "made"
+  },
+  {
+   "text": "Il papà di Anna usa l'ascia per spaccare la legna del forno.",
+   "en": "Anna's father uses an axe to chop wood for the oven.",
+   "ko": "안나의 아빠는 화덕용 나무를 도끼로 패요.",
+   "blank": "ascia",
+   "src": "made"
   }
  ],
  "w|asciugamano": [
@@ -5069,6 +5165,22 @@
    "en": "I'd like to have a dog.",
    "ko": "개를 키우고 싶어.",
    "blank": "avere"
+  }
+ ],
+ "w|avido": [
+  {
+   "text": "Il padrone di casa di Simone è avido e alza l'affitto ogni anno.",
+   "en": "Simone's landlord is greedy and raises the rent every year.",
+   "ko": "시모네의 집주인은 욕심이 많아서 해마다 월세를 올려요.",
+   "blank": "avido",
+   "src": "made"
+  },
+  {
+   "text": "Il fornitore è avido e vuole essere pagato in anticipo, si lamenta Anna.",
+   "en": "The supplier is greedy and wants to be paid in advance, Anna complains.",
+   "ko": "납품업자가 욕심이 많아서 선불을 원한다고 안나가 불평해요.",
+   "blank": "avido",
+   "src": "made"
   }
  ],
  "w|avvelenare": [
@@ -6739,6 +6851,22 @@
    "src": "made"
   }
  ],
+ "w|bolletta": [
+  {
+   "text": "Simone trova nella cassetta della posta la bolletta della luce.",
+   "en": "Simone finds the electricity bill in the letterbox.",
+   "ko": "시모네는 우편함에서 전기 요금 고지서를 찾아요.",
+   "blank": "bolletta",
+   "src": "made"
+  },
+  {
+   "text": "A fine mese Anna controlla la bolletta del gas del ristorante.",
+   "en": "At the end of the month Anna checks the restaurant's gas bill.",
+   "ko": "월말에 안나는 식당 가스 요금 고지서를 확인해요.",
+   "blank": "bolletta",
+   "src": "made"
+  }
+ ],
  "w|bomba": [
   {
    "text": "Hanno trovato una bomba inesplosa.",
@@ -7823,6 +7951,22 @@
    "en": "He deleted the message by mistake.",
    "ko": "실수로 메시지를 지웠어.",
    "blank": "cancellato"
+  }
+ ],
+ "w|cancello": [
+  {
+   "text": "Il cancello del condominio non si chiude bene, e Simone lo segnala all'amministratore.",
+   "en": "The building's gate doesn't close properly, and Simone reports it to the manager.",
+   "ko": "아파트 대문이 잘 안 닫혀서 시모네가 관리인에게 알려요.",
+   "blank": "cancello",
+   "src": "made"
+  },
+  {
+   "text": "Ogni mattina Anna apre il cancello del dehors alle undici.",
+   "en": "Every morning Anna opens the gate of the outdoor seating at eleven.",
+   "ko": "매일 아침 안나는 열한 시에 야외 좌석 문을 열어요.",
+   "blank": "cancello",
+   "src": "made"
   }
  ],
  "w|cancro": [
@@ -9209,6 +9353,22 @@
    "en": "The shop is right downtown.",
    "ko": "그 가게는 바로 시내에 있어.",
    "blank": "centro"
+  }
+ ],
+ "w|cera": [
+  {
+   "text": "La portinaia passa la cera sul pavimento dell'ingresso, e Simone cammina in punta di piedi.",
+   "en": "The concierge waxes the entrance floor, and Simone walks on tiptoe.",
+   "ko": "경비 아주머니가 현관 바닥에 왁스를 칠해서 시모네가 발끝으로 걸어요.",
+   "blank": "cera",
+   "src": "made"
+  },
+  {
+   "text": "Le candele di cera colano sulle tovaglie, e Anna sospira.",
+   "en": "The wax candles drip onto the tablecloths, and Anna sighs.",
+   "ko": "밀랍 초가 식탁보에 흘러내려서 안나가 한숨을 쉬어요.",
+   "blank": "cera",
+   "src": "made"
   }
  ],
  "w|cercare": [
@@ -11947,6 +12107,22 @@
    "en": "The concentrated juice should be diluted with water.",
    "ko": "농축 주스는 물로 희석해야 해.",
    "blank": "concentrato"
+  }
+ ],
+ "w|concepire": [
+  {
+   "text": "Simone non riesce a concepire come il vicino suoni la batteria a mezzanotte.",
+   "en": "Simone can't conceive how the neighbour plays the drums at midnight.",
+   "ko": "시모네는 이웃이 어떻게 한밤중에 드럼을 치는지 이해할 수가 없어요.",
+   "blank": "concepire",
+   "src": "made"
+  },
+  {
+   "text": "Il padre di Anna ha concepito il menù quarant'anni fa.",
+   "en": "Anna's father conceived the menu forty years ago.",
+   "ko": "안나의 아빠가 사십 년 전에 메뉴를 구상했어요.",
+   "blank": "concepito",
+   "src": "made"
   }
  ],
  "w|concerto": [
@@ -17515,6 +17691,22 @@
    "src": "made"
   }
  ],
+ "w|domicilio": [
+  {
+   "text": "Simone ordina la spesa con consegna a domicilio.",
+   "en": "Simone orders groceries with home delivery.",
+   "ko": "시모네는 장 본 것을 집으로 배달시켜요.",
+   "blank": "domicilio",
+   "src": "made"
+  },
+  {
+   "text": "Il sabato sera Anna porta le pizze a domicilio in motorino.",
+   "en": "On Saturday nights Anna delivers pizzas to people's homes by scooter.",
+   "ko": "토요일 밤이면 안나는 스쿠터로 피자를 집까지 배달해요.",
+   "blank": "domicilio",
+   "src": "made"
+  }
+ ],
  "w|dominare": [
   {
    "text": "Al torneo di tennis Stefano riesce a dominare il primo set.",
@@ -19411,6 +19603,22 @@
    "src": "made"
   }
  ],
+ "w|espandere": [
+  {
+   "text": "Simone vorrebbe espandere il balcone, ma il regolamento non lo permette.",
+   "en": "Simone would like to extend the balcony, but the rules don't allow it.",
+   "ko": "시모네는 발코니를 넓히고 싶지만 규약상 안 돼요.",
+   "blank": "espandere",
+   "src": "made"
+  },
+  {
+   "text": "La famiglia di Anna vuole espandere il ristorante nel negozio accanto.",
+   "en": "Anna's family wants to expand the restaurant into the shop next door.",
+   "ko": "안나네 가족은 옆 가게까지 식당을 넓히고 싶어 해요.",
+   "blank": "espandere",
+   "src": "made"
+  }
+ ],
  "w|esperienza": [
   {
    "text": "È stata un'esperienza indimenticabile.",
@@ -20987,6 +21195,22 @@
    "blank": "fiamma"
   }
  ],
+ "w|fiammifero": [
+  {
+   "text": "Senza luce, Simone accende un fiammifero per cercare la candela.",
+   "en": "With no power, Simone lights a match to look for a candle.",
+   "ko": "전기가 나가서 시모네는 초를 찾으려고 성냥을 켜요.",
+   "blank": "fiammifero",
+   "src": "made"
+  },
+  {
+   "text": "Anna dà a ogni tavolo una scatola di fiammiferi con il logo del ristorante.",
+   "en": "Anna gives each table a box of matches with the restaurant's logo.",
+   "ko": "안나는 테이블마다 식당 로고가 찍힌 성냥갑을 하나씩 놓아요.",
+   "blank": "fiammiferi",
+   "src": "made"
+  }
+ ],
  "w|fianco": [
   {
    "text": "Mi fa male il fianco destro.",
@@ -21869,6 +22093,22 @@
    "en": "We ended up at the back of the hall.",
    "ko": "우리는 홀 맨 뒤에 있었어.",
    "blank": "fondo"
+  }
+ ],
+ "w|fontana": [
+  {
+   "text": "Nel cortile del condominio c'è una piccola fontana dove Simone riempie l'annaffiatoio.",
+   "en": "In the building's courtyard there's a small fountain where Simone fills his watering can.",
+   "ko": "아파트 마당에는 작은 분수가 있어서 시모네가 거기서 물뿌리개를 채워요.",
+   "blank": "fontana",
+   "src": "made"
+  },
+  {
+   "text": "Davanti al ristorante di Anna c'è una fontana dove i bambini giocano.",
+   "en": "In front of Anna's restaurant there's a fountain where children play.",
+   "ko": "안나네 식당 앞에는 아이들이 노는 분수가 있어요.",
+   "blank": "fontana",
+   "src": "made"
   }
  ],
  "w|fonte": [
@@ -23911,6 +24151,22 @@
    "blank": "giù"
   }
  ],
+ "w|giubbotto": [
+  {
+   "text": "Nell'ascensore Simone incontra la vicina con un giubbotto rosso.",
+   "en": "In the lift Simone meets the neighbour in a red jacket.",
+   "ko": "엘리베이터에서 시모네는 빨간 점퍼를 입은 이웃을 만나요.",
+   "blank": "giubbotto",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente dimentica il giubbotto sulla sedia, e Anna lo mette da parte.",
+   "en": "A customer forgets his jacket on the chair, and Anna puts it aside.",
+   "ko": "손님이 의자에 점퍼를 두고 가서 안나가 따로 챙겨 둬요.",
+   "blank": "giubbotto",
+   "src": "made"
+  }
+ ],
  "w|giudicare": [
   {
    "text": "Non bisogna giudicare le persone troppo in fretta.",
@@ -24929,6 +25185,22 @@
    "blank": "guarire"
   }
  ],
+ "w|guasto": [
+  {
+   "text": "Per un guasto all'ascensore, Simone sale a piedi fino al sesto piano.",
+   "en": "Because of a lift breakdown, Simone walks up to the sixth floor.",
+   "ko": "엘리베이터 고장 때문에 시모네는 육 층까지 걸어 올라가요.",
+   "blank": "guasto",
+   "src": "made"
+  },
+  {
+   "text": "Un guasto al forno costringe Anna a togliere la pizza dal menù.",
+   "en": "A breakdown of the oven forces Anna to take pizza off the menu.",
+   "ko": "오븐 고장 때문에 안나는 메뉴에서 피자를 빼야 해요.",
+   "blank": "guasto",
+   "src": "made"
+  }
+ ],
  "w|guerra": [
   {
    "text": "Non voglio una guerra in casa.",
@@ -25171,6 +25443,22 @@
    "en": "He decided to ignore the criticism.",
    "ko": "그는 비판을 무시하기로 했어.",
    "blank": "ignorare"
+  }
+ ],
+ "w|ignoto": [
+  {
+   "text": "Un pacco da un mittente ignoto arriva per Simone.",
+   "en": "A parcel from an unknown sender arrives for Simone.",
+   "ko": "보낸 사람을 알 수 없는 소포가 시모네 앞으로 와요.",
+   "blank": "ignoto",
+   "src": "made"
+  },
+  {
+   "text": "Un critico ignoto ha scritto una bella recensione sul ristorante di Anna.",
+   "en": "An unknown critic wrote a nice review of Anna's restaurant.",
+   "ko": "이름 모를 평론가가 안나의 식당에 대해 좋은 평을 썼어요.",
+   "blank": "ignoto",
+   "src": "made"
   }
  ],
  "w|il": [
@@ -25456,6 +25744,22 @@
    "en": "An old classmate of Giulia's now works in real estate and talks only about houses.",
    "ko": "줄리아의 옛 친구는 이제 부동산 일을 해서 집 얘기만 해요.",
    "blank": "immobiliare",
+   "src": "made"
+  }
+ ],
+ "w|immondizia": [
+  {
+   "text": "Ogni sera Simone porta giù l'immondizia prima di cena.",
+   "en": "Every evening Simone takes the rubbish down before dinner.",
+   "ko": "매일 저녁 시모네는 저녁 먹기 전에 쓰레기를 내다 버려요.",
+   "blank": "immondizia",
+   "src": "made"
+  },
+  {
+   "text": "Anna divide l'immondizia in quattro bidoni diversi.",
+   "en": "Anna sorts the rubbish into four different bins.",
+   "ko": "안나는 쓰레기를 네 가지 통에 나눠 버려요.",
+   "blank": "immondizia",
    "src": "made"
   }
  ],
@@ -27051,6 +27355,22 @@
    "blank": "inglese"
   }
  ],
+ "w|ingrato": [
+  {
+   "text": "Il vicino, ingrato, non ringrazia Simone per avergli innaffiato le piante.",
+   "en": "The neighbour, ungrateful, doesn't thank Simone for watering his plants.",
+   "ko": "이웃은 고마운 줄도 모르고 화분에 물 준 시모네에게 인사도 안 해요.",
+   "blank": "ingrato",
+   "src": "made"
+  },
+  {
+   "text": "Anna non vuole sembrare ingrata, ma il regalo del fornitore non le piace.",
+   "en": "Anna doesn't want to seem ungrateful, but she doesn't like the supplier's gift.",
+   "ko": "안나는 배은망덕해 보이고 싶진 않지만 납품업자 선물이 마음에 안 들어요.",
+   "blank": "ingrata",
+   "src": "made"
+  }
+ ],
  "w|ingresso": [
   {
    "text": "L'ingresso del museo è gratuito oggi.",
@@ -27485,6 +27805,22 @@
    "src": "made"
   }
  ],
+ "w|installare": [
+  {
+   "text": "Il tecnico viene a installare la fibra nell'appartamento di Simone.",
+   "en": "The technician comes to install fibre in Simone's flat.",
+   "ko": "기사가 시모네 집에 광통신을 설치하러 와요.",
+   "blank": "installare",
+   "src": "made"
+  },
+  {
+   "text": "Anna vuole installare un sistema per prenotare i tavoli online.",
+   "en": "Anna wants to install a system to book tables online.",
+   "ko": "안나는 온라인 테이블 예약 시스템을 설치하고 싶어 해요.",
+   "blank": "installare",
+   "src": "made"
+  }
+ ],
  "w|insultare": [
   {
    "text": "Al ricevimento due cugini hanno cominciato a insultare l'arbitro di una partita alla tv.",
@@ -27837,6 +28173,22 @@
    "en": "I don't want to interrupt the meeting.",
    "ko": "회의를 방해하고 싶지 않아.",
    "blank": "interrompere"
+  }
+ ],
+ "w|interruttore": [
+  {
+   "text": "Simone cerca al buio l'interruttore delle scale.",
+   "en": "Simone feels in the dark for the stairwell light switch.",
+   "ko": "시모네는 어둠 속에서 계단 전등 스위치를 더듬어 찾아요.",
+   "blank": "interruttore",
+   "src": "made"
+  },
+  {
+   "text": "Anna gira l'interruttore e le lucine del giardino si accendono.",
+   "en": "Anna flips the switch and the garden fairy lights come on.",
+   "ko": "안나가 스위치를 켜자 정원의 작은 전구들이 켜져요.",
+   "blank": "interruttore",
+   "src": "made"
   }
  ],
  "w|intervenire": [
@@ -29179,6 +29531,22 @@
    "src": "made"
   }
  ],
+ "w|legna": [
+  {
+   "text": "Il vicino del piano terra tiene la legna per il camino in cortile, e Simone lo aiuta.",
+   "en": "The ground-floor neighbour keeps firewood for the fireplace in the courtyard, and Simone helps him.",
+   "ko": "일 층 이웃이 벽난로용 장작을 마당에 두는데 시모네가 거들어요.",
+   "blank": "legna",
+   "src": "made"
+  },
+  {
+   "text": "Il ristorante di Anna cuoce la pizza nel forno a legna.",
+   "en": "Anna's restaurant bakes pizza in a wood-fired oven.",
+   "ko": "안나네 식당은 장작 화덕에서 피자를 구워요.",
+   "blank": "legna",
+   "src": "made"
+  }
+ ],
  "w|legno": [
   {
    "text": "Il tavolo è fatto di legno massiccio.",
@@ -29518,6 +29886,22 @@
    "en": "Next to the pool there's a little bookshop where Elena buys her magazines.",
    "ko": "수영장 옆에는 작은 서점이 있어서 엘레나는 거기서 잡지를 사요.",
    "blank": "libreria",
+   "src": "made"
+  }
+ ],
+ "w|libretto": [
+  {
+   "text": "L'amministratore lascia a Simone il libretto della caldaia da firmare.",
+   "en": "The manager leaves Simone the boiler logbook to sign.",
+   "ko": "관리인이 시모네에게 보일러 점검 수첩에 서명하라고 두고 가요.",
+   "blank": "libretto",
+   "src": "made"
+  },
+  {
+   "text": "Anna tiene in cucina il libretto delle ricette della nonna.",
+   "en": "Anna keeps her grandmother's recipe booklet in the kitchen.",
+   "ko": "안나는 부엌에 할머니의 요리법 수첩을 둬요.",
+   "blank": "libretto",
    "src": "made"
   }
  ],
@@ -30639,6 +31023,22 @@
    "src": "made"
   }
  ],
+ "w|malgrado": [
+  {
+   "text": "Simone tiene la finestra aperta malgrado il rumore della strada.",
+   "en": "Simone keeps the window open despite the noise from the street.",
+   "ko": "시모네는 길거리 소음에도 창문을 열어 둬요.",
+   "blank": "malgrado",
+   "src": "made"
+  },
+  {
+   "text": "Il ristorante di Anna è sempre pieno malgrado i prezzi alti.",
+   "en": "Anna's restaurant is always full despite the high prices.",
+   "ko": "안나네 식당은 비싼 가격에도 늘 손님이 꽉 차요.",
+   "blank": "malgrado",
+   "src": "made"
+  }
+ ],
  "w|maligno": [
   {
    "text": "Davide pensa che il commento sulla collega sia stato maligno e lo dice apertamente.",
@@ -31321,6 +31721,22 @@
    "blank": "maschera"
   }
  ],
+ "w|mascherare": [
+  {
+   "text": "Simone appende un quadro per mascherare la crepa nel muro.",
+   "en": "Simone hangs a picture to hide the crack in the wall.",
+   "ko": "시모네는 벽의 금을 가리려고 그림을 걸어요.",
+   "blank": "mascherare",
+   "src": "made"
+  },
+  {
+   "text": "Il cuoco aggiunge il limone per mascherare il sapore troppo forte del pesce, nota Anna.",
+   "en": "The cook adds lemon to mask the fish's overly strong taste, Anna notices.",
+   "ko": "요리사가 생선의 너무 센 맛을 가리려고 레몬을 넣는 걸 안나가 알아채요.",
+   "blank": "mascherare",
+   "src": "made"
+  }
+ ],
  "w|maschile": [
   {
    "text": "Nel coro del quartiere manca una voce maschile, e Paolo ha deciso di provarci.",
@@ -31439,6 +31855,22 @@
    "en": "I study math every evening after dinner.",
    "ko": "저녁 먹고 매일 수학을 공부해.",
    "blank": "matematica"
+  }
+ ],
+ "w|materasso": [
+  {
+   "text": "Il vicino butta un vecchio materasso vicino ai bidoni, e Simone chiama il comune.",
+   "en": "The neighbour dumps an old mattress near the bins, and Simone calls the council.",
+   "ko": "이웃이 쓰레기통 옆에 낡은 매트리스를 버리자 시모네가 구청에 전화해요.",
+   "blank": "materasso",
+   "src": "made"
+  },
+  {
+   "text": "Anna dorme su un materasso nel retro quando il ristorante chiude tardi.",
+   "en": "Anna sleeps on a mattress in the back room when the restaurant closes late.",
+   "ko": "식당이 늦게 끝나면 안나는 뒷방 매트리스에서 자요.",
+   "blank": "materasso",
+   "src": "made"
   }
  ],
  "w|materia": [
@@ -35277,6 +35709,22 @@
    "src": "made"
   }
  ],
+ "w|offensivo": [
+  {
+   "text": "Qualcuno ha scritto una frase offensiva sul muro del portone, e Simone la cancella.",
+   "en": "Someone wrote an offensive line on the front door wall, and Simone wipes it off.",
+   "ko": "누군가 현관 벽에 모욕적인 말을 써 놔서 시모네가 지워요.",
+   "blank": "offensiva",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente lascia un commento offensivo online, e Anna risponde con calma.",
+   "en": "A customer leaves an offensive comment online, and Anna replies calmly.",
+   "ko": "손님이 온라인에 모욕적인 댓글을 남기자 안나가 차분하게 답해요.",
+   "blank": "offensivo",
+   "src": "made"
+  }
+ ],
  "w|offerta": [
   {
    "text": "C'è un'offerta speciale sul vino.",
@@ -37321,6 +37769,22 @@
    "blank": "parola"
   }
  ],
+ "w|parrucca": [
+  {
+   "text": "Simone trova sul pianerottolo una parrucca bionda dimenticata dopo la festa dei vicini.",
+   "en": "Simone finds a blonde wig on the landing, forgotten after the neighbours' party.",
+   "ko": "시모네는 이웃집 파티 뒤 계단참에 놓고 간 금발 가발을 발견해요.",
+   "blank": "parrucca",
+   "src": "made"
+  },
+  {
+   "text": "Alla festa di carnevale del ristorante, Anna serve ai tavoli con una parrucca rosa.",
+   "en": "At the restaurant's carnival party, Anna serves tables in a pink wig.",
+   "ko": "식당 카니발 파티에서 안나는 분홍 가발을 쓰고 서빙해요.",
+   "blank": "parrucca",
+   "src": "made"
+  }
+ ],
  "w|parte": [
   {
    "text": "Da parte mia, va bene.",
@@ -38449,6 +38913,22 @@
    "blank": "periodo"
   }
  ],
+ "w|perlomeno": [
+  {
+   "text": "Il riscaldamento non è perfetto, ma perlomeno Simone ha l'acqua calda.",
+   "en": "The heating isn't perfect, but at least Simone has hot water.",
+   "ko": "난방은 완벽하지 않지만 적어도 시모네 집엔 온수가 나와요.",
+   "blank": "perlomeno",
+   "src": "made"
+  },
+  {
+   "text": "Anna chiede al figlio di aiutare perlomeno la domenica.",
+   "en": "Anna asks her son to help at least on Sundays.",
+   "ko": "안나는 아들에게 적어도 일요일에는 도와 달라고 해요.",
+   "blank": "perlomeno",
+   "src": "made"
+  }
+ ],
  "w|permanente": [
   {
    "text": "Il vicino ha appeso un cartello permanente davanti al portone, sbuffa Paolo.",
@@ -39265,6 +39745,22 @@
    "src": "made"
   }
  ],
+ "w|pila": [
+  {
+   "text": "Simone cambia la pila del campanello che non suona più.",
+   "en": "Simone changes the battery in the doorbell that no longer rings.",
+   "ko": "시모네는 더 이상 울리지 않는 초인종의 건전지를 갈아요.",
+   "blank": "pila",
+   "src": "made"
+  },
+  {
+   "text": "In cucina c'è una pila di piatti sporchi che Anna deve lavare.",
+   "en": "In the kitchen there's a pile of dirty plates Anna has to wash.",
+   "ko": "부엌에 안나가 씻어야 할 더러운 접시가 쌓여 있어요.",
+   "blank": "pila",
+   "src": "made"
+  }
+ ],
  "w|pillola": [
   {
    "text": "Devo prendere questa pillola dopo pranzo.",
@@ -39483,6 +39979,22 @@
    "en": "This pizza has too much mozzarella.",
    "ko": "이 피자는 모차렐라가 너무 많아.",
    "blank": "pizza"
+  }
+ ],
+ "w|pizzicare": [
+  {
+   "text": "Il bambino del piano di sotto pizzica le corde della chitarra e Simone lo ascolta.",
+   "en": "The child downstairs plucks the guitar strings and Simone listens.",
+   "ko": "아래층 아이가 기타 줄을 튕기고 시모네는 그 소리를 들어요.",
+   "blank": "pizzica",
+   "src": "made"
+  },
+  {
+   "text": "La nonna di Anna pizzica le guance di ogni bambino che entra.",
+   "en": "Anna's grandmother pinches the cheeks of every child who comes in.",
+   "ko": "안나의 할머니는 들어오는 아이마다 볼을 꼬집어요.",
+   "blank": "pizzica",
+   "src": "made"
   }
  ],
  "w|plastica": [
@@ -39745,6 +40257,22 @@
    "en": "He wears the watch on his left wrist.",
    "ko": "왼손목에 시계를 차.",
    "blank": "polso"
+  }
+ ],
+ "w|poltrona": [
+  {
+   "text": "La sera Simone legge in poltrona con la finestra aperta.",
+   "en": "In the evening Simone reads in an armchair with the window open.",
+   "ko": "저녁이면 시모네는 창문을 열어 두고 안락의자에서 책을 읽어요.",
+   "blank": "poltrona",
+   "src": "made"
+  },
+  {
+   "text": "Il nonno di Anna ha una poltrona tutta sua vicino alla cassa.",
+   "en": "Anna's grandfather has his very own armchair near the till.",
+   "ko": "안나의 할아버지는 계산대 옆에 할아버지 전용 안락의자가 있어요.",
+   "blank": "poltrona",
+   "src": "made"
   }
  ],
  "w|polvere": [
@@ -41063,6 +41591,22 @@
    "en": "The main problem is time.",
    "ko": "주요 문제는 시간이야.",
    "blank": "principale"
+  }
+ ],
+ "w|principalmente": [
+  {
+   "text": "Nel condominio di Simone abitano principalmente studenti e anziani.",
+   "en": "In Simone's building it's mainly students and elderly people who live there.",
+   "ko": "시모네의 아파트에는 주로 학생과 노인이 살아요.",
+   "blank": "principalmente",
+   "src": "made"
+  },
+  {
+   "text": "A pranzo arrivano principalmente impiegati degli uffici vicini, dice Anna.",
+   "en": "At lunch it's mainly workers from nearby offices who come, Anna says.",
+   "ko": "점심에는 주로 근처 회사원들이 온다고 안나가 말해요.",
+   "blank": "principalmente",
+   "src": "made"
   }
  ],
  "w|principe": [
@@ -44372,6 +44916,22 @@
    "en": "To get the rent discount, Anna has to be a resident of the town.",
    "ko": "임대료 할인을 받으려면 안나는 그 시의 주민이어야 해요.",
    "blank": "residente",
+   "src": "made"
+  }
+ ],
+ "w|residenza": [
+  {
+   "text": "Simone deve cambiare la residenza al comune dopo il trasloco nel condominio.",
+   "en": "Simone has to change his registered address at the council after moving into the building.",
+   "ko": "시모네는 아파트로 이사한 뒤 구청에 주소를 옮겨야 해요.",
+   "blank": "residenza",
+   "src": "made"
+  },
+  {
+   "text": "Il ristorante di Anna sta al piano terra di un'antica residenza nobiliare.",
+   "en": "Anna's restaurant is on the ground floor of an old noble residence.",
+   "ko": "안나의 식당은 오래된 귀족 저택의 일 층에 있어요.",
+   "blank": "residenza",
    "src": "made"
   }
  ],
@@ -49571,6 +50131,22 @@
    "blank": "serata"
   }
  ],
+ "w|serbatoio": [
+  {
+   "text": "Sul tetto del condominio c'è un serbatoio d'acqua che Simone vede dal balcone.",
+   "en": "On the building's roof there's a water tank Simone can see from the balcony.",
+   "ko": "아파트 옥상에 물탱크가 있는데 시모네가 발코니에서 보여요.",
+   "blank": "serbatoio",
+   "src": "made"
+  },
+  {
+   "text": "Anna controlla il serbatoio del gas prima di accendere i fornelli.",
+   "en": "Anna checks the gas tank before lighting the stove.",
+   "ko": "안나는 화구를 켜기 전에 가스통을 확인해요.",
+   "blank": "serbatoio",
+   "src": "made"
+  }
+ ],
  "w|sereno": [
   {
    "text": "Il cielo è sereno dopo il temporale.",
@@ -52035,6 +52611,22 @@
    "blank": "spazio"
   }
  ],
+ "w|spazzare": [
+  {
+   "text": "Il sabato mattina Simone aiuta a spazzare il cortile.",
+   "en": "On Saturday morning Simone helps sweep the courtyard.",
+   "ko": "토요일 아침 시모네는 마당 쓰는 걸 도와요.",
+   "blank": "spazzare",
+   "src": "made"
+  },
+  {
+   "text": "Dopo la chiusura Anna deve spazzare tutta la sala.",
+   "en": "After closing Anna has to sweep the whole dining room.",
+   "ko": "문 닫은 뒤 안나는 홀 전체를 쓸어야 해요.",
+   "blank": "spazzare",
+   "src": "made"
+  }
+ ],
  "w|spazzatura": [
   {
    "text": "Butta la spazzatura prima di uscire.",
@@ -52239,6 +52831,22 @@
    "en": "Let's hope for the best.",
    "ko": "잘되기를 바라자.",
    "blank": "Speriamo"
+  }
+ ],
+ "w|sperimentare": [
+  {
+   "text": "Nel suo piccolo appartamento Simone ama sperimentare ricette nuove.",
+   "en": "In his small flat Simone loves experimenting with new recipes.",
+   "ko": "작은 집에서 시모네는 새 요리법을 시도해 보는 걸 좋아해요.",
+   "blank": "sperimentare",
+   "src": "made"
+  },
+  {
+   "text": "Il lunedì il cuoco e Anna provano a sperimentare piatti nuovi.",
+   "en": "On Mondays the cook and Anna try experimenting with new dishes.",
+   "ko": "월요일마다 요리사와 안나는 새 요리를 시험해 봐요.",
+   "blank": "sperimentare",
+   "src": "made"
   }
  ],
  "w|spesa": [
@@ -53282,6 +53890,22 @@
    "en": "Chiara found a book by a historian of medicine at the library.",
    "ko": "키아라는 도서관에서 의학사 연구자가 쓴 책을 찾았어요.",
    "blank": "storico",
+   "src": "made"
+  }
+ ],
+ "w|straccio": [
+  {
+   "text": "Dopo la pioggia Simone passa uno straccio sulle scale del condominio.",
+   "en": "After the rain Simone runs a cloth over the building's stairs.",
+   "ko": "비가 그친 뒤 시모네는 아파트 계단을 걸레로 닦아요.",
+   "blank": "straccio",
+   "src": "made"
+  },
+  {
+   "text": "Anna tiene sempre uno straccio pulito appeso al grembiule.",
+   "en": "Anna always keeps a clean cloth hanging from her apron.",
+   "ko": "안나는 늘 앞치마에 깨끗한 행주를 걸어 둬요.",
+   "blank": "straccio",
    "src": "made"
   }
  ],
@@ -57179,6 +57803,22 @@
    "en": "If not you, then who?",
    "ko": "네가 아니면 누가 해?",
    "blank": "tu"
+  }
+ ],
+ "w|tubo": [
+  {
+   "text": "Un tubo perde in bagno, e Simone chiama subito l'idraulico.",
+   "en": "A pipe is leaking in the bathroom, and Simone calls the plumber right away.",
+   "ko": "욕실 배관이 새서 시모네는 바로 배관공을 불러요.",
+   "blank": "tubo",
+   "src": "made"
+  },
+  {
+   "text": "Il cuoco ripara il tubo del lavandino mentre Anna apparecchia.",
+   "en": "The cook fixes the sink pipe while Anna sets the tables.",
+   "ko": "안나가 상을 차리는 동안 요리사가 개수대 배관을 고쳐요.",
+   "blank": "tubo",
+   "src": "made"
   }
  ],
  "w|tumore": [

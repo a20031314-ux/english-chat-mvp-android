@@ -733,6 +733,22 @@
    "src": "made"
   }
  ],
+ "w|أجيال": [
+  {
+   "text": "عاشت أجيال من عائلة حسن في هذا الشارع نفسه.",
+   "en": "Generations of Hassan's family have lived on this very street.",
+   "ko": "하산 집안의 여러 세대가 바로 이 거리에서 살았어요.",
+   "blank": "أجيال",
+   "src": "made"
+  },
+  {
+   "text": "تنقل هدى خبرة أجيال من الفلاحين إلى أولادها.",
+   "en": "Hoda passes the experience of generations of farmers on to her children.",
+   "ko": "후다는 여러 세대 농부들의 경험을 아이들에게 물려줘요.",
+   "blank": "أجيال",
+   "src": "made"
+  }
+ ],
  "w|أحاط": [
   {
    "text": "أحاط كريم المدير علما بتأخر الشحنة.",
@@ -3287,6 +3303,22 @@
    "blank": "أغلى"
   }
  ],
+ "w|أغنى": [
+  {
+   "text": "أغنى وصول الجيران الجدد حياة الحي بلغات وأطعمة جديدة.",
+   "en": "The arrival of the new neighbors enriched the neighborhood's life with new languages and food.",
+   "ko": "새 이웃들이 오면서 동네 생활이 새로운 말과 음식으로 풍성해졌어요.",
+   "blank": "أغنى",
+   "src": "made"
+  },
+  {
+   "text": "أغنى السماد الطبيعي تربة هدى بعد سنة واحدة.",
+   "en": "Natural compost enriched Hoda's soil after just one year.",
+   "ko": "천연 퇴비 덕에 후다의 흙이 한 해 만에 기름졌어요.",
+   "blank": "أغنى",
+   "src": "made"
+  }
+ ],
  "w|أغنية": [
   {
    "text": "سمعت أغنية جميلة صباح اليوم.",
@@ -3645,6 +3677,22 @@
    "en": "This is the maximum I can do now.",
    "ko": "지금 내가 할 수 있는 최대치야.",
    "blank": "أقصى"
+  }
+ ],
+ "w|أقفل": [
+  {
+   "text": "أقفل حسن باب العمارة الخارجي بعد أن خرج آخر الضيوف.",
+   "en": "Hassan locked the building's front door after the last guests left.",
+   "ko": "하산은 마지막 손님이 나간 뒤 건물 현관문을 잠갔어요.",
+   "blank": "أقفل",
+   "src": "made"
+  },
+  {
+   "text": "أقفلت هدى باب الحظيرة جيدا خوفا من الثعالب.",
+   "en": "Hoda locked the barn door well for fear of foxes.",
+   "ko": "후다는 여우가 무서워서 헛간 문을 단단히 잠갔어요.",
+   "blank": "أقفلت",
+   "src": "made"
   }
  ],
  "w|أقل": [
@@ -6263,6 +6311,22 @@
    "blank": "إغلاق"
   }
  ],
+ "w|إفراج": [
+  {
+   "text": "انتظر حسن أسبوعا حتى تم الإفراج عن الطرد في الجمارك.",
+   "en": "Hassan waited a week until the parcel was released at customs.",
+   "ko": "하산은 세관에서 소포가 풀려날 때까지 일주일을 기다렸어요.",
+   "blank": "الإفراج",
+   "src": "made"
+  },
+  {
+   "text": "انتظرت هدى الإفراج عن شحنة الأسمدة من الميناء.",
+   "en": "Hoda waited for the shipment of fertilizer to be released from the port.",
+   "ko": "후다는 항구에서 비료 화물이 풀려나기를 기다렸어요.",
+   "blank": "الإفراج",
+   "src": "made"
+  }
+ ],
  "w|إفطار": [
   {
    "text": "في رمضان، يتناول عمال الوردية المسائية الإفطار معا في ساحة المصنع.",
@@ -6803,6 +6867,22 @@
    "en": "We went back to the same problem again.",
    "ko": "다시 그 문제로 돌아갔어.",
    "blank": "إياها"
+  }
+ ],
+ "w|إيثار": [
+  {
+   "text": "أعطى حسن مكان سيارته لجارته المريضة بدافع الإيثار.",
+   "en": "Hassan gave his parking spot to his sick neighbor in an act of selflessness.",
+   "ko": "하산은 아픈 이웃에게 자기 주차 자리를 양보했어요.",
+   "blank": "الإيثار",
+   "src": "made"
+  },
+  {
+   "text": "علمت هدى أولادها الإيثار حين يقتسمون الفاكهة.",
+   "en": "Hoda taught her children selflessness when they share the fruit.",
+   "ko": "후다는 아이들이 과일을 나눌 때 양보하는 법을 가르쳤어요.",
+   "blank": "الإيثار",
+   "src": "made"
   }
  ],
  "w|إيثاري": [
@@ -12087,6 +12167,22 @@
    "src": "made"
   }
  ],
+ "w|انطواء": [
+  {
+   "text": "كسر حسن انطواء جاره الجديد بدعوة إلى الغداء.",
+   "en": "Hassan broke through his new neighbor's reserve with a lunch invitation.",
+   "ko": "하산은 점심 초대로 새 이웃의 내성적인 벽을 허물었어요.",
+   "blank": "انطواء",
+   "src": "made"
+  },
+  {
+   "text": "كان انطواء العامل الجديد يقلق هدى في أسبوعه الأول.",
+   "en": "The new worker's withdrawn manner worried Hoda in his first week.",
+   "ko": "새 일꾼이 첫 주에 혼자 지내는 모습이 후다를 걱정스럽게 했어요.",
+   "blank": "انطواء",
+   "src": "made"
+  }
+ ],
  "w|انعكس": [
   {
    "text": "انعكس تعب خالد على وجهه في نهاية اليوم.",
@@ -12115,6 +12211,22 @@
    "en": "The shop closed after midnight.",
    "ko": "가게가 자정 이후에 문을 닫았어.",
    "blank": "انغلق"
+  }
+ ],
+ "w|انفتاح": [
+  {
+   "text": "لاحظ حسن انفتاح الجيران الشباب على العادات الجديدة.",
+   "en": "Hassan noticed the young neighbors' openness to new customs.",
+   "ko": "하산은 젊은 이웃들이 새로운 풍습에 열려 있다는 걸 알아챘어요.",
+   "blank": "انفتاح",
+   "src": "made"
+  },
+  {
+   "text": "يعجب الزوار بانفتاح هدى على الأفكار الجديدة في الزراعة.",
+   "en": "Visitors admire Hoda's openness to new ideas in farming.",
+   "ko": "방문객들은 농사의 새로운 생각에 열린 후다의 태도에 감탄해요.",
+   "blank": "بانفتاح",
+   "src": "made"
   }
  ],
  "w|انفتح": [
@@ -12328,6 +12440,22 @@
    "en": "The old book's pages shriveled after they got wet.",
    "ko": "오래된 책의 종이가 젖은 뒤 쭈글쭈글해졌어요.",
    "blank": "انكمشت",
+   "src": "made"
+  }
+ ],
+ "w|انهار": [
+  {
+   "text": "انهار السور القديم بين حديقة حسن وحديقة جاره بعد المطر.",
+   "en": "The old wall between Hassan's garden and his neighbor's collapsed after the rain.",
+   "ko": "비가 온 뒤 하산의 정원과 이웃 정원 사이의 낡은 담이 무너졌어요.",
+   "blank": "انهار",
+   "src": "made"
+  },
+  {
+   "text": "انهار سقف الحظيرة القديم تحت ثقل الثلج في مزرعة هدى.",
+   "en": "The old barn roof on Hoda's farm collapsed under the weight of the snow.",
+   "ko": "후다 농장의 낡은 헛간 지붕이 눈 무게에 무너졌어요.",
+   "blank": "انهار",
    "src": "made"
   }
  ],
@@ -20757,6 +20885,22 @@
    "blank": "تهنئة"
   }
  ],
+ "w|تهور": [
+  {
+   "text": "غضب حسن من تهور الشاب الذي يقود بسرعة في الشارع.",
+   "en": "Hassan was angry at the recklessness of the young man who speeds down the street.",
+   "ko": "하산은 거리에서 과속하는 젊은이의 무모함에 화가 났어요.",
+   "blank": "تهور",
+   "src": "made"
+  },
+  {
+   "text": "حذرت هدى ابنها من التهور حين يقود الجرار.",
+   "en": "Hoda warned her son against recklessness when driving the tractor.",
+   "ko": "후다는 아들에게 트랙터를 몰 때 무모하게 굴지 말라고 했어요.",
+   "blank": "التهور",
+   "src": "made"
+  }
+ ],
  "w|تهوية": [
   {
    "text": "فتح علي النوافذ لأن تهوية القاعة كانت سيئة.",
@@ -24031,6 +24175,22 @@
    "blank": "جولة"
   }
  ],
+ "w|جوهر": [
+  {
+   "text": "قال حسن إن جوهر المشكلة بين الجيران هو موقف السيارات.",
+   "en": "Hassan said the heart of the problem between the neighbors is the parking.",
+   "ko": "하산은 이웃 간 문제의 핵심이 주차라고 말했어요.",
+   "blank": "جوهر",
+   "src": "made"
+  },
+  {
+   "text": "تقول هدى إن التربة الجيدة جوهر كل محصول ناجح.",
+   "en": "Hoda says good soil is the essence of every successful harvest.",
+   "ko": "후다는 좋은 흙이 모든 좋은 수확의 핵심이라고 말해요.",
+   "blank": "جوهر",
+   "src": "made"
+  }
+ ],
  "w|جوهري": [
   {
    "text": "قال الطبيب ليوسف إن تنظيف الأسنان مرتين يوميا أمر جوهري.",
@@ -24480,6 +24640,22 @@
    "en": "Huda kept her calm when the website went down on launch night.",
    "ko": "후다는 출시 날 밤 사이트가 멈췄을 때도 침착함을 잃지 않았어요.",
    "blank": "حافظت",
+   "src": "made"
+  }
+ ],
+ "w|حافل": [
+  {
+   "text": "كان أسبوع حسن حافلا باجتماعات لجنة الحي.",
+   "en": "Hassan's week was packed with neighborhood committee meetings.",
+   "ko": "하산의 한 주는 동네 위원회 회의로 꽉 찼어요.",
+   "blank": "حافلا",
+   "src": "made"
+  },
+  {
+   "text": "كان يوم الحصاد حافلا بالضحك والعمل في مزرعة هدى.",
+   "en": "Harvest day on Hoda's farm was full of laughter and work.",
+   "ko": "후다 농장의 수확 날은 웃음과 일로 가득했어요.",
+   "blank": "حافلا",
    "src": "made"
   }
  ],
@@ -24999,6 +25175,22 @@
    "en": "This is the speed limit on the road.",
    "ko": "이것이 도로의 속도 제한이에요.",
    "blank": "حد"
+  }
+ ],
+ "w|حداثي": [
+  {
+   "text": "بنى الجار الجديد بيتا حداثيا بجدران من الزجاج بجوار حسن.",
+   "en": "The new neighbor built a modernist glass-walled house next to Hassan.",
+   "ko": "새 이웃은 하산 옆에 유리 벽으로 된 현대식 집을 지었어요.",
+   "blank": "حداثيا",
+   "src": "made"
+  },
+  {
+   "text": "زار مهندس حداثي المزرعة واقترح على هدى بيتا زجاجيا ذكيا.",
+   "en": "A modern-minded engineer visited the farm and suggested a smart greenhouse to Hoda.",
+   "ko": "현대적인 기술자가 농장을 찾아와 후다에게 스마트 온실을 제안했어요.",
+   "blank": "حداثي",
+   "src": "made"
   }
  ],
  "w|حداد": [
@@ -30043,6 +30235,22 @@
    "src": "made"
   }
  ],
+ "w|دهاء": [
+  {
+   "text": "احتاج حسن إلى شيء من الدهاء ليقنع المالك بإصلاح السطح.",
+   "en": "Hassan needed some cunning to convince the owner to fix the roof.",
+   "ko": "하산은 집주인이 옥상을 고치게 하려고 꾀를 좀 써야 했어요.",
+   "blank": "الدهاء",
+   "src": "made"
+  },
+  {
+   "text": "باعت هدى محصولها بسعر جيد بفضل دهاء التاجر العجوز الذي نصحها.",
+   "en": "Hoda sold her crop at a good price thanks to the cunning of the old merchant who advised her.",
+   "ko": "후다는 조언해 준 나이 든 상인의 수완 덕에 수확물을 좋은 값에 팔았어요.",
+   "blank": "دهاء",
+   "src": "made"
+  }
+ ],
  "w|دهان": [
   {
    "text": "استأجرنا دهان ليجدد الغرفة.",
@@ -31766,6 +31974,22 @@
    "en": "Mona hung her robe on the coat rack by the door.",
    "ko": "모나는 문 옆 옷걸이에 겉옷을 걸었어요.",
    "blank": "رداءها",
+   "src": "made"
+  }
+ ],
+ "w|رذيلة": [
+  {
+   "text": "قال حسن مازحا إن النميمة رذيلة سكان الطابق الأول.",
+   "en": "Hassan joked that gossip is the vice of the first-floor residents.",
+   "ko": "하산은 농담으로 험담이 일 층 사람들의 나쁜 버릇이라고 했어요.",
+   "blank": "رذيلة",
+   "src": "made"
+  },
+  {
+   "text": "تعد هدى الإسراف في الماء رذيلة لا تغتفر في المزرعة.",
+   "en": "Hoda considers wasting water an unforgivable vice on the farm.",
+   "ko": "후다는 농장에서 물을 낭비하는 걸 용서할 수 없는 악덕으로 여겨요.",
+   "blank": "رذيلة",
    "src": "made"
   }
  ],
@@ -34527,6 +34751,22 @@
    "src": "made"
   }
  ],
+ "w|سخاء": [
+  {
+   "text": "تحدث الجيران عن سخاء حسن حين وزع خضار حديقته عليهم.",
+   "en": "The neighbors talked about Hassan's generosity when he shared his garden vegetables with them.",
+   "ko": "하산이 텃밭 채소를 나눠 주자 이웃들은 그의 너그러움을 이야기했어요.",
+   "blank": "سخاء",
+   "src": "made"
+  },
+  {
+   "text": "يعرف أهل القرية سخاء هدى في موسم الزيتون.",
+   "en": "The villagers know Hoda's generosity in olive season.",
+   "ko": "마을 사람들은 올리브철 후다의 인심을 잘 알아요.",
+   "blank": "سخاء",
+   "src": "made"
+  }
+ ],
  "w|سخافة": [
   {
    "text": "ضحك أحمد من سخافة النكتة التي قالها زميله.",
@@ -35610,6 +35850,22 @@
    "en": "Layla put an earphone in one ear to listen to music before the match.",
    "ko": "라일라는 경기 전에 한쪽 귀에 이어폰을 꽂고 음악을 들었어요.",
    "blank": "سماعة",
+   "src": "made"
+  }
+ ],
+ "w|سمة": [
+  {
+   "text": "الهدوء سمة واضحة في جار حسن الجديد.",
+   "en": "Calmness is a clear trait of Hassan's new neighbor.",
+   "ko": "차분함은 하산의 새 이웃이 가진 뚜렷한 특징이에요.",
+   "blank": "سمة",
+   "src": "made"
+  },
+  {
+   "text": "الصبر سمة كل فلاح ناجح كما تقول هدى.",
+   "en": "Patience is the trait of every successful farmer, as Hoda says.",
+   "ko": "후다 말로는 인내는 성공한 농부들의 특징이에요.",
+   "blank": "سمة",
    "src": "made"
   }
  ],
@@ -38364,6 +38620,22 @@
    "en": "Rana told the seller frankly that the price was too high.",
    "ko": "라나는 상인에게 값이 너무 비싸다고 솔직히 말했어요.",
    "blank": "صارحت",
+   "src": "made"
+  }
+ ],
+ "w|صارم": [
+  {
+   "text": "وضع مالك العمارة قواعد صارمة عن الضجيج بعد منتصف الليل.",
+   "en": "The building owner set strict rules about noise after midnight.",
+   "ko": "건물 주인은 자정 이후 소음에 대해 엄격한 규칙을 정했어요.",
+   "blank": "صارمة",
+   "src": "made"
+  },
+  {
+   "text": "تتبع هدى نظاما صارما في إطعام الدجاج كل صباح.",
+   "en": "Hoda follows a strict routine for feeding the chickens every morning.",
+   "ko": "후다는 매일 아침 닭 모이를 주는 일을 엄격하게 지켜요.",
+   "blank": "صارما",
    "src": "made"
   }
  ],
@@ -41613,6 +41885,22 @@
    "src": "made"
   }
  ],
+ "w|ظرافة": [
+  {
+   "text": "يحب الجيران ظرافة حسن ونكاته في المصعد.",
+   "en": "The neighbors love Hassan's wit and his jokes in the elevator.",
+   "ko": "이웃들은 하산의 재치와 엘리베이터 속 농담을 좋아해요.",
+   "blank": "ظرافة",
+   "src": "made"
+  },
+  {
+   "text": "تحكي هدى قصص المزرعة بظرافة تضحك الزوار.",
+   "en": "Hoda tells farm stories with a wit that makes the visitors laugh.",
+   "ko": "후다는 방문객이 웃을 만큼 재치 있게 농장 이야기를 해요.",
+   "blank": "بظرافة",
+   "src": "made"
+  }
+ ],
  "w|ظرف": [
   {
    "text": "تغير كل شيء بسبب ظرف طارئ.",
@@ -43159,6 +43447,22 @@
    "blank": "عزيز"
   }
  ],
+ "w|عزيمة": [
+  {
+   "text": "أعاد حسن طلاء مدخل العمارة بعزيمة لم يتوقعها أحد.",
+   "en": "Hassan repainted the building's entrance with a determination no one expected.",
+   "ko": "하산은 아무도 예상 못 한 의지로 건물 입구를 다시 칠했어요.",
+   "blank": "بعزيمة",
+   "src": "made"
+  },
+  {
+   "text": "أعادت هدى زراعة الحقل بعد الفيضان بعزيمة قوية.",
+   "en": "Hoda replanted the field after the flood with strong determination.",
+   "ko": "후다는 홍수 뒤 굳은 의지로 밭을 다시 일궜어요.",
+   "blank": "بعزيمة",
+   "src": "made"
+  }
+ ],
  "w|عسكر": [
   {
    "text": "عسكر علي وابن عمه ليلة قرب الوادي.",
@@ -44195,6 +44499,22 @@
    "blank": "عمة"
   }
  ],
+ "w|عمد": [
+  {
+   "text": "عمد حسن إلى طرق أبواب الجيران واحدا واحدا ليجمع التواقيع.",
+   "en": "Hassan set about knocking on the neighbors' doors one by one to collect signatures.",
+   "ko": "하산은 서명을 모으려고 이웃집 문을 하나하나 두드렸어요.",
+   "blank": "عمد",
+   "src": "made"
+  },
+  {
+   "text": "عمدت هدى إلى زراعة الأعشاب بين صفوف الطماطم.",
+   "en": "Hoda deliberately planted herbs between the rows of tomatoes.",
+   "ko": "후다는 일부러 토마토 줄 사이에 허브를 심었어요.",
+   "blank": "عمدت",
+   "src": "made"
+  }
+ ],
  "w|عمدا": [
   {
    "text": "لم يترك كريم الباب مفتوحا عمدا، بل نسي أن يغلقه.",
@@ -44486,6 +44806,22 @@
    "en": "Nour said the beautiful journey was worth the trouble of getting up early.",
    "ko": "누르는 그 멋진 여행이 일찍 일어나는 수고를 할 만했다고 말했어요.",
    "blank": "عناء",
+   "src": "made"
+  }
+ ],
+ "w|عناد": [
+  {
+   "text": "بقي الخلاف قائما بسبب عناد جار حسن.",
+   "en": "The dispute went on because of the stubbornness of Hassan's neighbor.",
+   "ko": "하산 이웃의 고집 때문에 다툼이 계속됐어요.",
+   "blank": "عناد",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت هدى من عناد الحمار الذي رفض أن يتحرك.",
+   "en": "Hoda laughed at the stubbornness of the donkey that refused to move.",
+   "ko": "후다는 꼼짝도 안 하는 당나귀의 고집에 웃었어요.",
+   "blank": "عناد",
    "src": "made"
   }
  ],
@@ -47067,6 +47403,22 @@
    "src": "made"
   }
  ],
+ "w|فضيلة": [
+  {
+   "text": "يرى حسن أن الصبر فضيلة لا غنى عنها بين الجيران.",
+   "en": "Hassan sees patience as an indispensable virtue between neighbors.",
+   "ko": "하산은 이웃 사이에 인내가 꼭 필요한 미덕이라고 봐요.",
+   "blank": "فضيلة",
+   "src": "made"
+  },
+  {
+   "text": "ترى هدى أن العمل الصادق فضيلة تتعلمها من الأرض.",
+   "en": "Hoda sees honest work as a virtue you learn from the land.",
+   "ko": "후다는 정직한 노동이 땅에서 배우는 미덕이라고 봐요.",
+   "blank": "فضيلة",
+   "src": "made"
+  }
+ ],
  "w|فطائر": [
   {
    "text": "تخبز زوجة يوسف فطائر السبانخ كل يوم جمعة.",
@@ -47095,6 +47447,22 @@
    "en": "White mushrooms are small in size.",
    "ko": "흰 버섯은 크기가 작다.",
    "blank": "الفطر"
+  }
+ ],
+ "w|فطنة": [
+  {
+   "text": "أنهى حسن الخلاف على الموقف بفطنة دون أن يغضب أحدا.",
+   "en": "Hassan ended the parking dispute shrewdly without upsetting anyone.",
+   "ko": "하산은 아무도 화나지 않게 재치 있게 주차 다툼을 끝냈어요.",
+   "blank": "بفطنة",
+   "src": "made"
+  },
+  {
+   "text": "تقرأ هدى السماء بفطنة وتعرف متى سيأتي المطر.",
+   "en": "Hoda reads the sky shrewdly and knows when the rain will come.",
+   "ko": "후다는 하늘을 눈치 빠르게 읽고 비가 언제 올지 알아요.",
+   "blank": "بفطنة",
+   "src": "made"
   }
  ],
  "w|فطور": [
@@ -48821,6 +49189,22 @@
    "en": "My grandmother lives in a quiet village.",
    "ko": "내 할머니는 조용한 마을에 살아.",
    "blank": "قرية"
+  }
+ ],
+ "w|قرين": [
+  {
+   "text": "لم يكن لحسن قرين في الحي يشاركه حب الشطرنج.",
+   "en": "Hassan had no match in the neighborhood who shared his love of chess.",
+   "ko": "동네에 하산만큼 체스를 좋아하는 짝이 없었어요.",
+   "blank": "قرين",
+   "src": "made"
+  },
+  {
+   "text": "تحب هدى أن تعمل مع قرينها في قطف التين.",
+   "en": "Hoda loves working with her husband picking figs.",
+   "ko": "후다는 남편과 함께 무화과 따는 걸 좋아해요.",
+   "blank": "قرينها",
+   "src": "made"
   }
  ],
  "w|قرينة": [
@@ -52041,6 +52425,22 @@
    "src": "made"
   }
  ],
+ "w|لباقة": [
+  {
+   "text": "طلب حسن من جاره بلباقة أن يخفض صوت التلفاز.",
+   "en": "Hassan tactfully asked his neighbor to turn down the TV.",
+   "ko": "하산은 이웃에게 정중하게 TV 소리를 줄여 달라고 했어요.",
+   "blank": "بلباقة",
+   "src": "made"
+  },
+  {
+   "text": "تتعامل هدى مع الزبائن الصعبين بلباقة وابتسامة.",
+   "en": "Hoda deals with difficult customers tactfully and with a smile.",
+   "ko": "후다는 까다로운 손님도 정중하게 웃으며 대해요.",
+   "blank": "بلباقة",
+   "src": "made"
+  }
+ ],
  "w|لبس": [
   {
    "text": "لبس قميصه الجديد اليوم.",
@@ -52953,6 +53353,22 @@
    "en": "I love hearing the dialect of people from the Levant.",
    "ko": "나는 샴 사람들의 방언을 듣는 것을 좋아해.",
    "blank": "لهجة"
+  }
+ ],
+ "w|لهو": [
+  {
+   "text": "يقضي أطفال الحي أوقات اللهو في ساحة العمارة تحت شباك حسن.",
+   "en": "The neighborhood kids spend their playtime in the courtyard under Hassan's window.",
+   "ko": "동네 아이들은 하산의 창문 아래 마당에서 놀며 시간을 보내요.",
+   "blank": "اللهو",
+   "src": "made"
+  },
+  {
+   "text": "لم يكن العمل في المزرعة لهوا بالنسبة إلى هدى، بل حياة كاملة.",
+   "en": "Farm work was no pastime for Hoda, but a whole life.",
+   "ko": "후다에게 농장 일은 놀이가 아니라 삶 그 자체였어요.",
+   "blank": "لهوا",
+   "src": "made"
   }
  ],
  "w|لو": [
@@ -54033,6 +54449,22 @@
    "en": "The beginner's course starts next week.",
    "ko": "초보자 과정은 다음 주에 시작해요.",
    "blank": "المبتدئين"
+  }
+ ],
+ "w|مبتكر": [
+  {
+   "text": "صنع حسن صندوق بريد مبتكرا يشبه بيتا صغيرا.",
+   "en": "Hassan made an inventive mailbox that looks like a little house.",
+   "ko": "하산은 작은 집처럼 생긴 기발한 우편함을 만들었어요.",
+   "blank": "مبتكرا",
+   "src": "made"
+  },
+  {
+   "text": "جربت هدى طريقة ري مبتكرة توفر نصف الماء.",
+   "en": "Hoda tried an innovative irrigation method that saves half the water.",
+   "ko": "후다는 물을 절반 아끼는 새로운 물 주기 방법을 써 봤어요.",
+   "blank": "مبتكرة",
+   "src": "made"
   }
  ],
  "w|مبدأ": [
@@ -55208,6 +55640,22 @@
    "en": "Fatima wrote a song about a poet madly in love who writes to his beloved every night.",
    "ko": "파티마는 밤마다 연인에게 편지를 쓰는 사랑에 빠진 시인에 관한 노래를 지었어요.",
    "blank": "متيم",
+   "src": "made"
+  }
+ ],
+ "w|مثابرة": [
+  {
+   "text": "نجح حسن بالمثابرة في إقناع البلدية بزرع أشجار في الشارع.",
+   "en": "Through persistence, Hassan succeeded in getting the municipality to plant trees on the street.",
+   "ko": "하산은 끈기 있게 설득해 시청이 거리에 나무를 심게 했어요.",
+   "blank": "بالمثابرة",
+   "src": "made"
+  },
+  {
+   "text": "تعلمت هدى أن المثابرة أهم من الحظ في الزراعة.",
+   "en": "Hoda learned that perseverance matters more than luck in farming.",
+   "ko": "후다는 농사에서는 운보다 꾸준함이 중요하다는 걸 배웠어요.",
+   "blank": "المثابرة",
    "src": "made"
   }
  ],
@@ -57025,6 +57473,22 @@
    "blank": "المرآة"
   }
  ],
+ "w|مرئي": [
+  {
+   "text": "كانت شرفة حسن مرئية من كل نوافذ العمارة.",
+   "en": "Hassan's balcony was visible from every window in the building.",
+   "ko": "하산의 발코니는 건물의 모든 창문에서 보였어요.",
+   "blank": "مرئية",
+   "src": "made"
+  },
+  {
+   "text": "بدأت آثار الجفاف مرئية على أوراق الزيتون في مزرعة هدى.",
+   "en": "Signs of drought began to be visible on the olive leaves on Hoda's farm.",
+   "ko": "후다의 농장 올리브 잎에 가뭄 흔적이 보이기 시작했어요.",
+   "blank": "مرئية",
+   "src": "made"
+  }
+ ],
  "w|مراجعة": [
   {
    "text": "أجرى المهندس مراجعة سريعة للأعمدة قبل وصول حسن.",
@@ -57613,6 +58077,22 @@
    "en": "I saw a traffic officer at the corner.",
    "ko": "모퉁이에 교통 경찰을 봤어.",
    "blank": "مرور"
+  }
+ ],
+ "w|مرونة": [
+  {
+   "text": "أبدى حسن مرونة في مواعيد تنظيف الدرج.",
+   "en": "Hassan showed flexibility about the stair-cleaning schedule.",
+   "ko": "하산은 계단 청소 시간에 대해 융통성을 보였어요.",
+   "blank": "مرونة",
+   "src": "made"
+  },
+  {
+   "text": "تحتاج الزراعة إلى مرونة كبيرة كما تعلمت هدى من تقلب الطقس.",
+   "en": "Farming needs great flexibility, as Hoda learned from the changing weather.",
+   "ko": "후다는 변덕스러운 날씨로 농사에는 큰 융통성이 필요하다는 걸 배웠어요.",
+   "blank": "مرونة",
+   "src": "made"
   }
  ],
  "w|مريب": [
@@ -61183,6 +61663,22 @@
    "blank": "مقلاة"
   }
  ],
+ "w|مقلد": [
+  {
+   "text": "اشترى حسن من السوق ساعة اتضح أنها مقلدة.",
+   "en": "Hassan bought a watch at the market that turned out to be a fake.",
+   "ko": "하산은 시장에서 시계를 샀는데 가짜로 밝혀졌어요.",
+   "blank": "مقلدة",
+   "src": "made"
+  },
+  {
+   "text": "رفضت هدى بذورا مقلدة عرضها عليها بائع متجول.",
+   "en": "Hoda refused counterfeit seeds a traveling seller offered her.",
+   "ko": "후다는 떠돌이 상인이 내민 가짜 씨앗을 거절했어요.",
+   "blank": "مقلدة",
+   "src": "made"
+  }
+ ],
  "w|مقلي": [
   {
    "text": "أحب البيض مقلي في الصباح.",
@@ -61431,6 +61927,22 @@
    "en": "The guests stayed with us for a whole week.",
    "ko": "손님들이 우리 집에 일주일 내내 머물렀다.",
    "blank": "مكث"
+  }
+ ],
+ "w|مكر": [
+  {
+   "text": "ضحك حسن من مكر القط الذي يسرق السمك من مطبخ الجيران.",
+   "en": "Hassan laughed at the slyness of the cat that steals fish from the neighbors' kitchen.",
+   "ko": "하산은 이웃 부엌에서 생선을 훔치는 고양이의 꾀에 웃었어요.",
+   "blank": "مكر",
+   "src": "made"
+  },
+  {
+   "text": "تقول هدى إن الثعلب يدخل الحظيرة بمكر لا يصدق.",
+   "en": "Hoda says the fox gets into the barn with unbelievable slyness.",
+   "ko": "후다는 여우가 믿기 힘들 만큼 교활하게 헛간에 들어온다고 해요.",
+   "blank": "بمكر",
+   "src": "made"
   }
  ],
  "w|مكسور": [
@@ -62693,6 +63205,22 @@
    "src": "made"
   }
  ],
+ "w|منصف": [
+  {
+   "text": "كان حل حسن منصفا للجيران كلهم.",
+   "en": "Hassan's solution was fair to all the neighbors.",
+   "ko": "하산의 해결책은 모든 이웃에게 공정했어요.",
+   "blank": "منصفا",
+   "src": "made"
+  },
+  {
+   "text": "تدفع هدى للعمال أجرا منصفا في موسم القطاف.",
+   "en": "Hoda pays the workers a fair wage in the harvest season.",
+   "ko": "후다는 수확철 일꾼들에게 공정한 품삯을 줘요.",
+   "blank": "منصفا",
+   "src": "made"
+  }
+ ],
  "w|منضدة": [
   {
    "text": "وضعت أم سامي إبريق الشاي على المنضدة في غرفة الجلوس.",
@@ -62823,6 +63351,22 @@
    "en": "The guard prevented the children from entering.",
    "ko": "경비원이 아이들의 입장을 막았어.",
    "blank": "منع"
+  }
+ ],
+ "w|منفذ": [
+  {
+   "text": "كان الدرج المنفذ الوحيد للعمارة حين تعطل المصعد.",
+   "en": "The stairs were the building's only way out when the elevator broke down.",
+   "ko": "엘리베이터가 고장 났을 때 계단이 건물의 유일한 출구였어요.",
+   "blank": "المنفذ",
+   "src": "made"
+  },
+  {
+   "text": "وجدت هدى منفذا لبيع الجبن في سوق المدينة.",
+   "en": "Hoda found an outlet to sell cheese in the city market.",
+   "ko": "후다는 도시 시장에서 치즈를 팔 판로를 찾았어요.",
+   "blank": "منفذا",
+   "src": "made"
   }
  ],
  "w|منفصل": [
@@ -64823,6 +65367,22 @@
    "blank": "ندوة"
   }
  ],
+ "w|نديم": [
+  {
+   "text": "صار جار حسن العجوز نديمه في سهرات الشاي على السطح.",
+   "en": "Hassan's elderly neighbor became his companion for evening tea on the roof.",
+   "ko": "하산의 나이 든 이웃은 옥상에서 저녁 차를 마시는 말동무가 됐어요.",
+   "blank": "نديمه",
+   "src": "made"
+  },
+  {
+   "text": "كان الكلب العجوز نديم هدى في ليالي الحراسة الطويلة.",
+   "en": "The old dog was Hoda's companion on long nights of keeping watch.",
+   "ko": "늙은 개는 길고 긴 밤에 망을 볼 때 후다의 말동무였어요.",
+   "blank": "نديم",
+   "src": "made"
+  }
+ ],
  "w|نرد": [
   {
    "text": "رميت نرد وحصلت على الرقم المناسب.",
@@ -64835,6 +65395,22 @@
    "en": "The game's dice got lost in the garden.",
    "ko": "게임 주사위가 정원에서 없어졌어.",
    "blank": "نرد"
+  }
+ ],
+ "w|نزاهة": [
+  {
+   "text": "اختار الجيران حسنا أمينا لصندوق الحي لنزاهته.",
+   "en": "The neighbors chose Hassan as treasurer of the neighborhood fund for his integrity.",
+   "ko": "이웃들은 하산이 정직해서 동네 기금 관리자로 뽑았어요.",
+   "blank": "لنزاهته",
+   "src": "made"
+  },
+  {
+   "text": "اشتهرت هدى في السوق بالنزاهة لأنها لا تغش في الميزان.",
+   "en": "Hoda became known in the market for honesty because she never cheats on the scale.",
+   "ko": "후다는 저울을 속이지 않아서 시장에서 정직하기로 유명해졌어요.",
+   "blank": "بالنزاهة",
+   "src": "made"
   }
  ],
  "w|نزح": [
@@ -65103,6 +65679,22 @@
    "src": "made"
   }
  ],
+ "w|نسيب": [
+  {
+   "text": "جاء نسيب حسن ليساعده في نقل الأثاث إلى الطابق الثالث.",
+   "en": "Hassan's in-law came to help him move the furniture to the third floor.",
+   "ko": "하산의 사돈이 가구를 삼 층으로 옮기는 걸 도와주러 왔어요.",
+   "blank": "نسيب",
+   "src": "made"
+  },
+  {
+   "text": "ساعد نسيب هدى في إصلاح السياج قبل الشتاء.",
+   "en": "Hoda's in-law helped repair the fence before winter.",
+   "ko": "후다의 사돈이 겨울 전에 울타리 고치는 걸 도왔어요.",
+   "blank": "نسيب",
+   "src": "made"
+  }
+ ],
  "w|نسيج": [
   {
    "text": "شرح كريم لطالبة طب كيف يلتئم النسيج بعد الجرح.",
@@ -65131,6 +65723,22 @@
    "en": "He grew up among his family and friends.",
    "ko": "그는 가족과 친구들 사이에서 자랐어.",
    "blank": "نشأ"
+  }
+ ],
+ "w|نشأة": [
+  {
+   "text": "يحكي حسن لأطفال الحي عن نشأة الشارع حين كان كله حقولا.",
+   "en": "Hassan tells the neighborhood kids about the street's origins when it was all fields.",
+   "ko": "하산은 동네 아이들에게 이 거리가 온통 밭이던 시절의 시작 이야기를 해 줘요.",
+   "blank": "نشأة",
+   "src": "made"
+  },
+  {
+   "text": "كانت نشأة هدى في المزرعة سببا في حبها للحيوانات.",
+   "en": "Hoda's upbringing on the farm was why she loves animals.",
+   "ko": "후다가 동물을 좋아하는 건 농장에서 자랐기 때문이에요.",
+   "blank": "نشأة",
+   "src": "made"
   }
  ],
  "w|نشاط": [
@@ -65725,6 +66333,22 @@
    "en": "This is mental fatigue, not physical.",
    "ko": "이건 마음이 피곤한 거야, 몸이 피곤한 게 아니야.",
    "blank": "نفسي"
+  }
+ ],
+ "w|نفسيا": [
+  {
+   "text": "تعب حسن نفسيا من الخلاف الطويل مع جاره.",
+   "en": "Hassan was worn out mentally by the long dispute with his neighbor.",
+   "ko": "하산은 이웃과의 긴 다툼으로 마음이 지쳤어요.",
+   "blank": "نفسيا",
+   "src": "made"
+  },
+  {
+   "text": "تقول هدى إن العمل في الأرض يريحها نفسيا.",
+   "en": "Hoda says working the land relaxes her mentally.",
+   "ko": "후다는 땅에서 일하면 마음이 편해진다고 말해요.",
+   "blank": "نفسيا",
+   "src": "made"
   }
  ],
  "w|نفط": [
@@ -67534,6 +68158,22 @@
    "en": "Nour is aware that too much sugar harms her customers' health.",
    "ko": "누르는 설탕을 많이 넣으면 손님들 건강에 해롭다는 걸 알고 있어요.",
    "blank": "واعية",
+   "src": "made"
+  }
+ ],
+ "w|وافد": [
+  {
+   "text": "رحب حسن بكل وافد جديد إلى العمارة بطبق من الحلوى.",
+   "en": "Hassan welcomed every newcomer to the building with a plate of sweets.",
+   "ko": "하산은 건물에 새로 오는 사람마다 과자 한 접시로 맞았어요.",
+   "blank": "وافد",
+   "src": "made"
+  },
+  {
+   "text": "علمت هدى كل وافد جديد إلى المزرعة كيف يحلب البقرة.",
+   "en": "Hoda taught every newcomer to the farm how to milk the cow.",
+   "ko": "후다는 농장에 새로 온 사람마다 소젖 짜는 법을 가르쳤어요.",
+   "blank": "وافد",
    "src": "made"
   }
  ],

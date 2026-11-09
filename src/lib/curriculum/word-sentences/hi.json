@@ -309,6 +309,22 @@
    "src": "made"
   }
  ],
+ "w|अग्रसर": [
+  {
+   "text": "अजय की नाटक मंडली अब बड़े शहरों की ओर अग्रसर है।",
+   "en": "Ajay's theatre group is now moving ahead towards big cities.",
+   "ko": "아자이의 극단은 이제 큰 도시로 나아가고 있어요.",
+   "blank": "अग्रसर",
+   "src": "made"
+  },
+  {
+   "text": "सीमा का गाँव अब सौर पंपों की ओर तेज़ी से अग्रसर है।",
+   "en": "Seema's village is now moving quickly towards solar pumps.",
+   "ko": "시마네 마을은 이제 태양광 펌프 쪽으로 빠르게 나아가고 있어요.",
+   "blank": "अग्रसर",
+   "src": "made"
+  }
+ ],
  "w|अंग्रेज़ी": [
   {
    "text": "वह बच्चों को अंग्रेज़ी पढ़ाती है।",
@@ -1293,6 +1309,22 @@
    "src": "made"
   }
  ],
+ "w|अनुचित": [
+  {
+   "text": "बीच शो में फ़ोन पर ज़ोर से बात करना अनुचित है।",
+   "en": "Talking loudly on the phone in the middle of a show is inappropriate.",
+   "ko": "공연 중에 큰 소리로 통화하는 건 부적절해요.",
+   "blank": "अनुचित",
+   "src": "made"
+  },
+  {
+   "text": "व्यापारी ने सब्ज़ियों का अनुचित दाम लगाया, तो सीमा ने बेचने से मना कर दिया।",
+   "en": "The trader quoted an unfair price for the vegetables, so Seema refused to sell.",
+   "ko": "상인이 채소값을 터무니없이 부르자 시마는 팔지 않았어요.",
+   "blank": "अनुचित",
+   "src": "made"
+  }
+ ],
  "w|अनुच्छेद": [
   {
    "text": "पहले अनुच्छेद को ध्यान से पढ़ो।",
@@ -1775,6 +1807,22 @@
    "src": "made"
   }
  ],
+ "w|अपार": [
+  {
+   "text": "पहले शो को दर्शकों का अपार प्यार मिला।",
+   "en": "The first show received immense love from the audience.",
+   "ko": "첫 공연은 관객들에게 엄청난 사랑을 받았어요.",
+   "blank": "अपार",
+   "src": "made"
+  },
+  {
+   "text": "अच्छी बारिश के बाद खेतों में अपार हरियाली छा गई।",
+   "en": "After good rain, boundless greenery spread over the fields.",
+   "ko": "비가 넉넉히 온 뒤 들판이 끝없이 푸르러졌어요.",
+   "blank": "अपार",
+   "src": "made"
+  }
+ ],
  "w|अपितु": [
   {
    "text": "अमित केवल किताबें नहीं देता, अपितु पढ़ने का तरीक़ा भी सिखाता है।",
@@ -1819,6 +1867,22 @@
    "en": "We will go traveling in April.",
    "ko": "우리는 사월에 여행 갈 거야.",
    "blank": "अप्रैल"
+  }
+ ],
+ "w|अफ़वाह": [
+  {
+   "text": "शो रद्द होने की अफ़वाह झूठी निकली।",
+   "en": "The rumour that the show was cancelled turned out to be false.",
+   "ko": "공연이 취소됐다는 소문은 거짓이었어요.",
+   "blank": "अफ़वाह",
+   "src": "made"
+  },
+  {
+   "text": "टिड्डियों के आने की अफ़वाह से पूरे गाँव में घबराहट फैल गई।",
+   "en": "A rumour that locusts were coming spread panic through the whole village.",
+   "ko": "메뚜기 떼가 온다는 소문에 온 마을이 술렁였어요.",
+   "blank": "अफ़वाह",
+   "src": "made"
   }
  ],
  "w|अफ़सर": [
@@ -2084,6 +2148,22 @@
    "en": "There is an old guava tree in the school courtyard.",
    "ko": "학교 마당에 오래된 구아바 나무가 한 그루 있어요.",
    "blank": "अमरूद",
+   "src": "made"
+  }
+ ],
+ "w|अमल": [
+  {
+   "text": "निर्देशक के सुझावों पर अमल करने से अजय का अभिनय निखर गया।",
+   "en": "Acting on the director's suggestions made Ajay's performance shine.",
+   "ko": "연출가의 조언을 따르자 아자이의 연기가 확 좋아졌어요.",
+   "blank": "अमल",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने कृषि अधिकारी की सलाह पर अमल किया और पैदावार बढ़ गई।",
+   "en": "Seema acted on the farm officer's advice and the yield went up.",
+   "ko": "시마가 농업 담당관의 조언을 따르자 수확이 늘었어요.",
+   "blank": "अमल",
    "src": "made"
   }
  ],
@@ -2533,6 +2613,22 @@
    "src": "made"
   }
  ],
+ "w|असल में": [
+  {
+   "text": "अजय मंच पर गंभीर दिखता है, पर असल में बड़ा मज़ाकिया है।",
+   "en": "Ajay looks serious on stage, but in reality he is very funny.",
+   "ko": "아자이는 무대에서 진지해 보이지만 실은 아주 재밌는 사람이에요.",
+   "blank": "असल में",
+   "src": "made"
+  },
+  {
+   "text": "सब सोचते थे कि फ़सल ख़राब है, पर असल में सिर्फ़ ऊपर के पत्ते सूखे थे।",
+   "en": "Everyone thought the crop was ruined, but in fact only the top leaves had dried.",
+   "ko": "다들 농사를 망친 줄 알았지만 사실은 위쪽 잎만 말랐어요.",
+   "blank": "असल में",
+   "src": "made"
+  }
+ ],
  "w|असली": [
   {
    "text": "यह सोना असली है।",
@@ -2560,6 +2656,22 @@
    "en": "Priya and her mother had a slight disagreement over the colour of the curtains.",
    "ko": "커튼 색을 두고 프리야와 엄마 사이에 약간의 의견 차이가 있었어요.",
    "blank": "असहमति",
+   "src": "made"
+  }
+ ],
+ "w|असहिष्णुता": [
+  {
+   "text": "यह नाटक समाज में बढ़ती असहिष्णुता पर सवाल उठाता है।",
+   "en": "This play raises questions about the growing intolerance in society.",
+   "ko": "이 연극은 사회에 커지는 불관용에 질문을 던져요.",
+   "blank": "असहिष्णुता",
+   "src": "made"
+  },
+  {
+   "text": "सीमा कहती है कि पानी के बँटवारे पर असहिष्णुता से गाँव में झगड़े बढ़ते हैं।",
+   "en": "Seema says intolerance over sharing water leads to more fights in the village.",
+   "ko": "시마는 물 나누기를 두고 서로 못 참으면 마을 싸움이 커진다고 말해요.",
+   "blank": "असहिष्णुता",
    "src": "made"
   }
  ],
@@ -5885,6 +5997,22 @@
    "src": "made"
   }
  ],
+ "w|उपयोगिता": [
+  {
+   "text": "निर्देशक ने समझाया कि मंच पर हर चीज़ की कोई उपयोगिता होनी चाहिए।",
+   "en": "The director explained that everything on stage should have some use.",
+   "ko": "연출가는 무대 위 모든 물건에 쓸모가 있어야 한다고 설명했어요.",
+   "blank": "उपयोगिता",
+   "src": "made"
+  },
+  {
+   "text": "ड्रिप सिंचाई की उपयोगिता देखकर पड़ोसियों ने भी उसे अपना लिया।",
+   "en": "Seeing how useful drip irrigation was, the neighbours adopted it too.",
+   "ko": "점적 관개가 쓸모 있는 걸 보고 이웃들도 따라 했어요.",
+   "blank": "उपयोगिता",
+   "src": "made"
+  }
+ ],
  "w|उपयोगी": [
   {
    "text": "यह ऐप बहुत उपयोगी है।",
@@ -6435,6 +6563,22 @@
    "en": "A sound of pots falling came from above.",
    "ko": "위에서 그릇 떨어지는 소리가 났어.",
    "blank": "ऊपर"
+  }
+ ],
+ "w|ऊपरी": [
+  {
+   "text": "थिएटर की ऊपरी बालकनी के टिकट सबसे सस्ते होते हैं।",
+   "en": "Tickets for the theatre's upper balcony are the cheapest.",
+   "ko": "극장 위층 발코니 표가 제일 싸요.",
+   "blank": "ऊपरी",
+   "src": "made"
+  },
+  {
+   "text": "खाद डालने से पहले सीमा ऊपरी मिट्टी हटाकर देखती है।",
+   "en": "Before adding fertiliser, Seema removes the topsoil to check.",
+   "ko": "거름을 주기 전에 시마는 겉흙을 걷어 살펴봐요.",
+   "blank": "ऊपरी",
+   "src": "made"
   }
  ],
  "w|ऊबड़ खाबड़": [
@@ -9763,6 +9907,22 @@
    "src": "made"
   }
  ],
+ "w|कुंडली": [
+  {
+   "text": "कॉमेडी नाटक में एक पंडित हर किसी की कुंडली देखने बैठ जाता है।",
+   "en": "In the comedy, a pandit sits down to read everyone's horoscope.",
+   "ko": "코미디 연극에서 점성가가 모두의 사주를 봐 주겠다고 앉아요.",
+   "blank": "कुंडली",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की माँ बुआई से पहले भी पंडित से शुभ दिन और कुंडली पूछती हैं।",
+   "en": "Seema's mother asks the pandit about auspicious days and the horoscope even before sowing.",
+   "ko": "시마의 어머니는 씨 뿌리기 전에도 점성가에게 길일과 사주를 물어요.",
+   "blank": "कुंडली",
+   "src": "made"
+  }
+ ],
  "w|कुंडी": [
   {
    "text": "मीना ने गुस्से में अपने कमरे की कुंडी अंदर से लगा ली।",
@@ -10775,6 +10935,22 @@
    "en": "The coach told the players a new strategy.",
    "ko": "코치가 선수들에게 새 전략을 알려 줬어.",
    "blank": "कोच"
+  }
+ ],
+ "w|कोचिंग": [
+  {
+   "text": "अजय शाम को बच्चों को अभिनय की कोचिंग देता है।",
+   "en": "In the evenings, Ajay gives children acting coaching.",
+   "ko": "아자이는 저녁마다 아이들에게 연기 지도를 해요.",
+   "blank": "कोचिंग",
+   "src": "made"
+  },
+  {
+   "text": "सीमा का बेटा शहर में इंजीनियरिंग की कोचिंग लेने जाता है।",
+   "en": "Seema's son goes to the city for engineering coaching.",
+   "ko": "시마의 아들은 도시로 공대 입시 학원에 다녀요.",
+   "blank": "कोचिंग",
+   "src": "made"
   }
  ],
  "w|कोट": [
@@ -14815,6 +14991,22 @@
    "blank": "घुस"
   }
  ],
+ "w|घुसपैठ": [
+  {
+   "text": "नए नाटक की कहानी सीमा पर घुसपैठ रोकने वाले एक सिपाही की है।",
+   "en": "The new play is the story of a soldier who stops infiltration at the border.",
+   "ko": "새 연극은 국경 침투를 막는 군인 이야기예요.",
+   "blank": "घुसपैठ",
+   "src": "made"
+  },
+  {
+   "text": "मक्के के खेत में जंगली सूअरों की घुसपैठ से सीमा परेशान है।",
+   "en": "Seema is troubled by wild boars getting into the maize field.",
+   "ko": "시마는 옥수수밭에 멧돼지가 들어오는 바람에 골치예요.",
+   "blank": "घुसपैठ",
+   "src": "made"
+  }
+ ],
  "w|घूमना": [
   {
    "text": "शाम को पार्क में घूमना अच्छा लगता है।",
@@ -17733,6 +17925,22 @@
    "blank": "जड़"
   }
  ],
+ "w|जड़ना": [
+  {
+   "text": "राजा के मुकुट में नकली हीरे जड़े गए थे।",
+   "en": "Fake diamonds had been set into the king's crown.",
+   "ko": "왕관에는 가짜 다이아몬드가 박혀 있었어요.",
+   "blank": "जड़े",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने अनाज के गोदाम पर मोटा ताला जड़ दिया।",
+   "en": "Seema clamped a heavy lock on the grain store.",
+   "ko": "시마는 곡식 창고에 커다란 자물쇠를 채웠어요.",
+   "blank": "जड़",
+   "src": "made"
+  }
+ ],
  "w|जताना": [
   {
    "text": "असहमति साफ़ जताना बेहतर है।",
@@ -19255,6 +19463,22 @@
    "blank": "जुनून"
   }
  ],
+ "w|जुर्म": [
+  {
+   "text": "नाटक का जासूस हर जुर्म का सुराग पलक झपकते ढूँढ लेता है।",
+   "en": "The detective in the play finds the clue to every crime in the blink of an eye.",
+   "ko": "연극 속 탐정은 모든 범죄의 단서를 눈 깜짝할 새 찾아내요.",
+   "blank": "जुर्म",
+   "src": "made"
+  },
+  {
+   "text": "सीमा जानती है कि बिना इजाज़त पेड़ काटना जुर्म है।",
+   "en": "Seema knows that cutting trees without permission is a crime.",
+   "ko": "시마는 허가 없이 나무를 베는 게 범죄라는 걸 알아요.",
+   "blank": "जुर्म",
+   "src": "made"
+  }
+ ],
  "w|जुर्माना": [
   {
    "text": "लाल बत्ती काटने पर जुर्माना लगा।",
@@ -19673,6 +19897,22 @@
    "en": "His knowledge goes beyond books.",
    "ko": "그의 지식은 책 너머에 있어.",
    "blank": "ज्ञान"
+  }
+ ],
+ "w|ज्ञानी": [
+  {
+   "text": "इस नाटक में अजय एक ज्ञानी साधु का किरदार निभा रहा है।",
+   "en": "In this play, Ajay is playing the role of a wise sage.",
+   "ko": "이 연극에서 아자이는 지혜로운 수행자 역을 맡고 있어요.",
+   "blank": "ज्ञानी",
+   "src": "made"
+  },
+  {
+   "text": "गाँव के ज्ञानी बुज़ुर्ग बादल देखकर बारिश का अंदाज़ा लगा लेते हैं।",
+   "en": "The wise elders of the village can guess the rain by looking at the clouds.",
+   "ko": "마을의 지혜로운 어르신들은 구름만 보고도 비를 짐작해요.",
+   "blank": "ज्ञानी",
+   "src": "made"
   }
  ],
  "w|ज्ञापन": [
@@ -20639,6 +20879,22 @@
    "en": "In the rain, traffic gets even worse.",
    "ko": "비 오면 교통이 더 나빠져.",
    "blank": "ट्रैफ़िक"
+  }
+ ],
+ "w|ट्रॉफ़ी": [
+  {
+   "text": "राज्य नाट्य प्रतियोगिता की ट्रॉफ़ी इस बार अजय की मंडली ने जीती।",
+   "en": "Ajay's group won the state drama competition trophy this time.",
+   "ko": "이번 주 연극 대회 트로피는 아자이의 극단이 받았어요.",
+   "blank": "ट्रॉफ़ी",
+   "src": "made"
+  },
+  {
+   "text": "ज़िला मेले में सबसे बड़े कद्दू के लिए सीमा को ट्रॉफ़ी मिली।",
+   "en": "At the district fair, Seema got a trophy for the biggest pumpkin.",
+   "ko": "군 축제에서 시마는 가장 큰 호박으로 트로피를 받았어요.",
+   "blank": "ट्रॉफ़ी",
+   "src": "made"
   }
  ],
  "w|ठगना": [
@@ -21653,6 +21909,22 @@
    "blank": "तंग"
   }
  ],
+ "w|तंज़": [
+  {
+   "text": "एक अख़बार ने नाटक पर तंज़ कसा कि इसमें सिर्फ़ भाषण है।",
+   "en": "A newspaper took a jab at the play, saying it was all speeches.",
+   "ko": "한 신문은 그 연극이 연설뿐이라고 비꼬았어요.",
+   "blank": "तंज़",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी ने तंज़ किया कि औरत खेती क्या संभालेगी, पर सीमा की फ़सल सबसे अच्छी निकली।",
+   "en": "A neighbour sneered that a woman couldn't manage a farm, but Seema's crop turned out the best.",
+   "ko": "이웃이 여자가 무슨 농사냐고 비꼬았지만 시마의 수확이 가장 좋았어요.",
+   "blank": "तंज़",
+   "src": "made"
+  }
+ ],
  "w|तट": [
   {
    "text": "हम नदी के तट पर बैठे।",
@@ -21665,6 +21937,22 @@
    "en": "The breeze was cool on the seashore.",
    "ko": "해안에서 바람이 시원했어.",
    "blank": "तट"
+  }
+ ],
+ "w|तटस्थ": [
+  {
+   "text": "झगड़े वाले दृश्य में अजय एक तटस्थ पड़ोसी बना है।",
+   "en": "In the quarrel scene, Ajay plays a neutral neighbour.",
+   "ko": "다툼 장면에서 아자이는 중립적인 이웃 역이에요.",
+   "blank": "तटस्थ",
+   "src": "made"
+  },
+  {
+   "text": "दो भाइयों के खेत के झगड़े में सीमा तटस्थ रही।",
+   "en": "In the two brothers' dispute over the field, Seema stayed neutral.",
+   "ko": "두 형제의 밭 다툼에서 시마는 중립을 지켰어요.",
+   "blank": "तटस्थ",
+   "src": "made"
   }
  ],
  "w|तड़पना": [
@@ -22703,6 +22991,22 @@
    "blank": "तीर्थ"
   }
  ],
+ "w|तीव्र": [
+  {
+   "text": "आख़िरी दृश्य में मंच पर तीव्र रोशनी पड़ती है।",
+   "en": "In the final scene, an intense light falls on the stage.",
+   "ko": "마지막 장면에서는 무대에 강한 조명이 비쳐요.",
+   "blank": "तीव्र",
+   "src": "made"
+  },
+  {
+   "text": "दोपहर की तीव्र धूप में सीमा पेड़ की छाँव में आराम करती है।",
+   "en": "In the fierce afternoon sun, Seema rests in the shade of a tree.",
+   "ko": "한낮 뙤약볕에는 시마가 나무 그늘에서 쉬어요.",
+   "blank": "तीव्र",
+   "src": "made"
+  }
+ ],
  "w|तीस": [
   {
    "text": "कक्षा में तीस छात्र बैठे हैं।",
@@ -23199,6 +23503,22 @@
    "en": "The village celebrated the festival with fanfare.",
    "ko": "마을에서 축제를 성대하게 했어.",
    "blank": "त्योहार"
+  }
+ ],
+ "w|त्रासदी": [
+  {
+   "text": "अजय को कॉमेडी से ज़्यादा त्रासदी वाले किरदार पसंद हैं।",
+   "en": "Ajay likes tragic roles more than comedy.",
+   "ko": "아자이는 코미디보다 비극적인 배역을 더 좋아해요.",
+   "blank": "त्रासदी",
+   "src": "made"
+  },
+  {
+   "text": "पिछले साल का सूखा पूरे इलाक़े के लिए एक त्रासदी था।",
+   "en": "Last year's drought was a tragedy for the whole area.",
+   "ko": "작년 가뭄은 그 지역 전체에 비극이었어요.",
+   "blank": "त्रासदी",
+   "src": "made"
   }
  ],
  "w|त्रिभुज": [
@@ -24427,6 +24747,22 @@
    "en": "Show the picture to everyone.",
    "ko": "사진을 모두에게 보여 줘.",
    "blank": "दिखा"
+  }
+ ],
+ "w|दिखावा": [
+  {
+   "text": "अजय को मंच पर दिखावा पसंद नहीं, वह सीधे-सादे अभिनय में यक़ीन रखता है।",
+   "en": "Ajay doesn't like showing off on stage; he believes in simple, honest acting.",
+   "ko": "아자이는 무대에서 과시하는 걸 싫어하고 담백한 연기를 믿어요.",
+   "blank": "दिखावा",
+   "src": "made"
+  },
+  {
+   "text": "सीमा कहती है कि खेती में दिखावा नहीं, मेहनत काम आती है।",
+   "en": "Seema says that in farming, hard work counts, not show.",
+   "ko": "시마는 농사에는 겉치레가 아니라 노력이 통한다고 말해요.",
+   "blank": "दिखावा",
+   "src": "made"
   }
  ],
  "w|दिन": [
@@ -26255,6 +26591,22 @@
    "src": "made"
   }
  ],
+ "w|ध्वस्त": [
+  {
+   "text": "युद्ध वाले दृश्य के लिए मंच पर ध्वस्त इमारत का सेट बनाया गया।",
+   "en": "For the war scene, a set of a ruined building was built on stage.",
+   "ko": "전쟁 장면을 위해 무대에 무너진 건물 세트를 만들었어요.",
+   "blank": "ध्वस्त",
+   "src": "made"
+  },
+  {
+   "text": "आँधी के बाद सीमा का पुराना मचान पूरी तरह ध्वस्त हो गया।",
+   "en": "After the storm, Seema's old watchtower was completely wrecked.",
+   "ko": "폭풍이 지나가자 시마의 낡은 망대가 완전히 무너졌어요.",
+   "blank": "ध्वस्त",
+   "src": "made"
+  }
+ ],
  "w|न": [
   {
    "text": "इतनी रात को अकेले न निकलना।",
@@ -27835,6 +28187,22 @@
    "en": "He fulfilled his responsibility.",
    "ko": "그는 자기 책임을 다했어.",
    "blank": "निभाई"
+  }
+ ],
+ "w|निमंत्रण": [
+  {
+   "text": "अजय ने अपने पुराने गुरु को पहले शो का निमंत्रण भेजा।",
+   "en": "Ajay sent his old teacher an invitation to the first show.",
+   "ko": "아자이는 옛 스승에게 첫 공연 초대장을 보냈어요.",
+   "blank": "निमंत्रण",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी की बेटी की शादी का निमंत्रण आया तो सीमा ने खेत का काम जल्दी निपटाया।",
+   "en": "When the invitation to the neighbour's daughter's wedding came, Seema finished the field work early.",
+   "ko": "이웃집 딸 결혼식 초대장이 오자 시마는 밭일을 서둘러 끝냈어요.",
+   "blank": "निमंत्रण",
+   "src": "made"
   }
  ],
  "w|निम्न": [
@@ -29843,6 +30211,22 @@
    "src": "made"
   }
  ],
+ "w|परत": [
+  {
+   "text": "पुराने मंच पर पेंट की कई परतें चढ़ चुकी थीं, तो अजय ने उसे घिसकर साफ़ किया।",
+   "en": "The old stage had many coats of paint, so Ajay sanded it clean.",
+   "ko": "낡은 무대에 페인트가 여러 겹 덮여 있어서 아자이가 문질러 벗겼어요.",
+   "blank": "परतें",
+   "src": "made"
+  },
+  {
+   "text": "जुताई के बाद मिट्टी की ऊपर वाली परत भुरभुरी हो जाती है।",
+   "en": "After ploughing, the top layer of soil becomes crumbly.",
+   "ko": "밭을 갈고 나면 흙 윗겹이 포슬포슬해져요.",
+   "blank": "परत",
+   "src": "made"
+  }
+ ],
  "w|परंतु": [
   {
    "text": "मैं आना चाहता था, परंतु समय नहीं मिला।",
@@ -30655,6 +31039,22 @@
    "src": "made"
   }
  ],
+ "w|पहल करना": [
+  {
+   "text": "गाँव में नाटक दिखाने के लिए अजय ने ख़ुद पहल की।",
+   "en": "Ajay himself took the initiative to stage plays in villages.",
+   "ko": "마을에서 연극을 보여 주자고 아자이가 먼저 나섰어요.",
+   "blank": "पहल की",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने ही गाँव में जैविक खेती की पहल की थी।",
+   "en": "It was Seema who took the lead on organic farming in the village.",
+   "ko": "마을에서 유기 농업을 처음 시작한 사람은 바로 시마였어요.",
+   "blank": "पहल की",
+   "src": "made"
+  }
+ ],
  "w|पहलवान": [
   {
    "text": "अखाड़े में पहलवान कसरत कर रहा था।",
@@ -31071,6 +31471,22 @@
    "en": "The pilot made a safe landing.",
    "ko": "조종사가 안전하게 착륙했어.",
    "blank": "पायलट"
+  }
+ ],
+ "w|पारदर्शिता": [
+  {
+   "text": "मंडली ने टिकट के पैसों के हिसाब में पूरी पारदर्शिता रखी।",
+   "en": "The group kept full transparency in the accounts of the ticket money.",
+   "ko": "극단은 표 판매 돈 계산을 완전히 투명하게 했어요.",
+   "blank": "पारदर्शिता",
+   "src": "made"
+  },
+  {
+   "text": "सहकारी समिति ने फ़सल के दाम तय करने में पारदर्शिता का वादा किया।",
+   "en": "The cooperative promised transparency in setting crop prices.",
+   "ko": "협동조합은 작물 가격을 정할 때 투명하게 하겠다고 약속했어요.",
+   "blank": "पारदर्शिता",
+   "src": "made"
   }
  ],
  "w|पारंपरिक": [
@@ -32905,6 +33321,22 @@
    "en": "Slow progress is happening on the project.",
    "ko": "프로젝트 진척이 더뎌.",
    "blank": "प्रगति"
+  }
+ ],
+ "w|प्रगतिशील": [
+  {
+   "text": "अजय की मंडली प्रगतिशील विचारों वाले नाटकों के लिए जानी जाती है।",
+   "en": "Ajay's group is known for plays with progressive ideas.",
+   "ko": "아자이의 극단은 진보적인 생각을 담은 연극으로 알려져 있어요.",
+   "blank": "प्रगतिशील",
+   "src": "made"
+  },
+  {
+   "text": "गाँव के प्रगतिशील किसानों ने मिलकर एक सहकारी समिति बनाई।",
+   "en": "The village's progressive farmers together formed a cooperative.",
+   "ko": "마을의 진보적인 농부들이 함께 협동조합을 만들었어요.",
+   "blank": "प्रगतिशील",
+   "src": "made"
   }
  ],
  "w|प्रचलित": [
@@ -35545,6 +35977,22 @@
    "src": "made"
   }
  ],
+ "w|बग़ावत": [
+  {
+   "text": "पहले अंक के अंत में सेनापति राजा के ख़िलाफ़ बग़ावत कर देता है।",
+   "en": "At the end of the first act, the general rebels against the king.",
+   "ko": "첫 막 끝에서 장군이 왕에게 반란을 일으켜요.",
+   "blank": "बग़ावत",
+   "src": "made"
+  },
+  {
+   "text": "कर्ज़ से तंग आकर किसानों ने साहूकार के ख़िलाफ़ बग़ावत की थी।",
+   "en": "Fed up with debt, the farmers had rebelled against the moneylender.",
+   "ko": "빚에 시달리던 농민들이 고리대금업자에게 반기를 들었었어요.",
+   "blank": "बग़ावत",
+   "src": "made"
+  }
+ ],
  "w|बगीचा": [
   {
    "text": "बिल्डिंग के पीछे एक छोटा सा बगीचा है जहाँ बुज़ुर्ग सुबह टहलते हैं।",
@@ -36805,6 +37253,22 @@
    "en": "Nobody accepted his excuse.",
    "ko": "그의 핑계를 아무도 안 믿었어.",
    "blank": "बहाना"
+  }
+ ],
+ "w|बहाना बनाना": [
+  {
+   "text": "रिहर्सल छोड़ने के लिए अजय ने सिरदर्द का बहाना बनाया।",
+   "en": "Ajay made up a headache as an excuse to skip rehearsal.",
+   "ko": "아자이는 연습을 빠지려고 두통 핑계를 댔어요.",
+   "blank": "बहाना बनाया",
+   "src": "made"
+  },
+  {
+   "text": "सीमा का बेटा खेत में काम से बचने के लिए रोज़ नया बहाना बनाता है।",
+   "en": "Seema's son makes up a new excuse every day to avoid work in the field.",
+   "ko": "시마의 아들은 밭일을 피하려고 날마다 새 핑계를 대요.",
+   "blank": "बहाना बनाता",
+   "src": "made"
   }
  ],
  "w|बहाल": [
@@ -38755,6 +39219,22 @@
    "blank": "बोली"
   }
  ],
+ "w|बौद्धिक": [
+  {
+   "text": "शो के बाद दर्शकों के साथ एक बौद्धिक चर्चा हुई।",
+   "en": "After the show there was an intellectual discussion with the audience.",
+   "ko": "공연이 끝나고 관객과 지적인 토론이 있었어요.",
+   "blank": "बौद्धिक",
+   "src": "made"
+  },
+  {
+   "text": "सीमा मानती है कि खेती में भी बौद्धिक मेहनत उतनी ही ज़रूरी है जितनी शारीरिक।",
+   "en": "Seema believes that farming needs mental effort just as much as physical.",
+   "ko": "시마는 농사에도 몸 쓰는 일만큼 머리 쓰는 일이 중요하다고 믿어요.",
+   "blank": "बौद्धिक",
+   "src": "made"
+  }
+ ],
  "w|ब्याज": [
   {
    "text": "बैंक ने क़र्ज़ पर ब्याज बढ़ा दिया।",
@@ -40600,6 +41080,22 @@
    "en": "At the Punjabi neighbor's house the thick buttermilk tastes like lassi.",
    "ko": "펀자브 출신 이웃네 진한 맛타는 라씨 같은 맛이 나요.",
    "blank": "मट्ठा",
+   "src": "made"
+  }
+ ],
+ "w|मठ": [
+  {
+   "text": "पहाड़ी मठ के आँगन में अजय की मंडली ने एक छोटा नाटक खेला।",
+   "en": "Ajay's group performed a short play in the courtyard of the hill monastery.",
+   "ko": "아자이의 극단은 산속 수도원 마당에서 짧은 연극을 했어요.",
+   "blank": "मठ",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के खेत के पास एक पुराना मठ है, जहाँ सुबह घंटियाँ बजती हैं।",
+   "en": "Near Seema's field is an old monastery where bells ring in the morning.",
+   "ko": "시마의 밭 근처에 오래된 수도원이 있어 아침마다 종이 울려요.",
+   "blank": "मठ",
    "src": "made"
   }
  ],
@@ -42767,6 +43263,22 @@
    "blank": "मुख्य"
   }
  ],
+ "w|मुख्य न्यायाधीश": [
+  {
+   "text": "अजय के नाटक में मुख्य न्यायाधीश का किरदार एक बुज़ुर्ग कलाकार ने निभाया।",
+   "en": "In Ajay's play, an elderly actor played the role of the chief justice.",
+   "ko": "아자이의 연극에서 대법원장 역은 나이 든 배우가 맡았어요.",
+   "blank": "मुख्य न्यायाधीश",
+   "src": "made"
+  },
+  {
+   "text": "रेडियो पर ख़बर थी कि मुख्य न्यायाधीश ने ज़मीन के मामलों पर नया आदेश दिया है।",
+   "en": "The radio news said the chief justice had issued a new order on land cases.",
+   "ko": "라디오에서 대법원장이 토지 사건에 새 명령을 내렸다는 소식이 나왔어요.",
+   "blank": "मुख्य न्यायाधीश",
+   "src": "made"
+  }
+ ],
  "w|मुख्यमंत्री": [
   {
    "text": "मुख्यमंत्री कल गाँव आ रहे हैं।",
@@ -44692,6 +45204,22 @@
    "en": "Seema wrapped the glassware in newspaper to protect it.",
    "ko": "시마는 유리그릇을 지키려고 신문지로 감쌌어요.",
    "blank": "रक्षा करने",
+   "src": "made"
+  }
+ ],
+ "w|रक्षाबंधन": [
+  {
+   "text": "रक्षाबंधन की छुट्टी पर थिएटर में ख़ास शो रखा गया।",
+   "en": "A special show was held at the theatre on the Raksha Bandhan holiday.",
+   "ko": "락샤 반단 휴일에 극장에서 특별 공연이 열렸어요.",
+   "blank": "रक्षाबंधन",
+   "src": "made"
+  },
+  {
+   "text": "रक्षाबंधन पर सीमा का भाई शहर से खेत देखने आया।",
+   "en": "On Raksha Bandhan, Seema's brother came from the city to see the farm.",
+   "ko": "락샤 반단에 시마의 남동생이 도시에서 농장을 보러 왔어요.",
+   "blank": "रक्षाबंधन",
    "src": "made"
   }
  ],
@@ -47953,6 +48481,22 @@
    "src": "made"
   }
  ],
+ "w|वायुसेना": [
+  {
+   "text": "अजय ने एक ऐसे पायलट का रोल किया जो वायुसेना से रिटायर हो चुका है।",
+   "en": "Ajay played a pilot who has retired from the air force.",
+   "ko": "아자이는 공군에서 은퇴한 조종사 역을 했어요.",
+   "blank": "वायुसेना",
+   "src": "made"
+  },
+  {
+   "text": "खेत के ऊपर से वायुसेना का एक विमान बहुत नीचे उड़ता हुआ गुज़रा।",
+   "en": "An air force plane passed very low over the field.",
+   "ko": "공군 비행기 한 대가 밭 위로 아주 낮게 날아갔어요.",
+   "blank": "वायुसेना",
+   "src": "made"
+  }
+ ],
  "w|वाला": [
   {
    "text": "दूध वाला अभी गली में है।",
@@ -48364,6 +48908,22 @@
    "en": "In summer, running ACs pushes electricity consumption way up.",
    "ko": "여름에는 에어컨 때문에 전기 소비가 크게 늘어요.",
    "blank": "विद्युत",
+   "src": "made"
+  }
+ ],
+ "w|विद्रोह": [
+  {
+   "text": "मंच पर किसानों के विद्रोह का दृश्य देखकर दर्शक खड़े हो गए।",
+   "en": "Seeing the scene of the farmers' revolt on stage, the audience stood up.",
+   "ko": "무대 위 농민 봉기 장면을 보고 관객들이 일어섰어요.",
+   "blank": "विद्रोह",
+   "src": "made"
+  },
+  {
+   "text": "दादाजी अंग्रेज़ों के ज़माने के किसान विद्रोह की कहानियाँ सुनाते हैं।",
+   "en": "Grandfather tells stories of the farmers' uprising from British times.",
+   "ko": "할아버지는 영국 시절 농민 봉기 이야기를 들려줘요.",
+   "blank": "विद्रोह",
    "src": "made"
   }
  ],
@@ -49173,6 +49733,22 @@
    "en": "Fill out the form on the website.",
    "ko": "웹사이트에서 양식을 작성해.",
    "blank": "वेबसाइट"
+  }
+ ],
+ "w|वैकल्पिक": [
+  {
+   "text": "बारिश की वजह से निर्देशक ने वैकल्पिक मंच के तौर पर स्कूल का हॉल चुना।",
+   "en": "Because of the rain, the director chose the school hall as an alternative stage.",
+   "ko": "비 때문에 연출가는 학교 강당을 대체 무대로 골랐어요.",
+   "blank": "वैकल्पिक",
+   "src": "made"
+  },
+  {
+   "text": "पानी कम होने पर सीमा गेहूँ की जगह वैकल्पिक फ़सल के रूप में बाजरा बोती है।",
+   "en": "When water is short, Seema sows millet as an alternative crop instead of wheat.",
+   "ko": "물이 부족하면 시마는 밀 대신 대체 작물로 기장을 심어요.",
+   "blank": "वैकल्पिक",
+   "src": "made"
   }
  ],
  "w|वैज्ञानिक": [
@@ -50460,6 +51036,22 @@
    "en": "As soon as the morning shift ends, the workers come to the shop for tea.",
    "ko": "아침 근무가 끝나자마자 노동자들이 가게에 차를 마시러 와요.",
    "blank": "शिफ़्ट",
+   "src": "made"
+  }
+ ],
+ "w|शिरकत": [
+  {
+   "text": "शहर के कई बड़े लेखकों ने उद्घाटन शो में शिरकत की।",
+   "en": "Many of the city's well-known writers attended the opening show.",
+   "ko": "도시의 이름난 작가 여럿이 개막 공연에 참석했어요.",
+   "blank": "शिरकत",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने ज़िले की किसान गोष्ठी में शिरकत की और अपने अनुभव बताए।",
+   "en": "Seema took part in the district farmers' meeting and shared her experiences.",
+   "ko": "시마는 군 농민 모임에 참석해서 자기 경험을 나눴어요.",
+   "blank": "शिरकत",
    "src": "made"
   }
  ],
@@ -54743,6 +55335,22 @@
    "src": "made"
   }
  ],
+ "w|सावधानी": [
+  {
+   "text": "तलवार वाले दृश्य में कलाकारों को बहुत सावधानी बरतनी पड़ती है।",
+   "en": "In the sword scene, the actors have to take great care.",
+   "ko": "칼싸움 장면에서는 배우들이 아주 조심해야 해요.",
+   "blank": "सावधानी",
+   "src": "made"
+  },
+  {
+   "text": "कीटनाशक छिड़कते समय सीमा पूरी सावधानी से मुँह ढक लेती है।",
+   "en": "When spraying pesticide, Seema carefully covers her mouth.",
+   "ko": "농약을 뿌릴 때 시마는 조심스럽게 입을 가려요.",
+   "blank": "सावधानी",
+   "src": "made"
+  }
+ ],
  "w|सावधानी से": [
   {
    "text": "काँच का गिलास सावधानी से उठाना।",
@@ -55112,6 +55720,22 @@
    "en": "Deepa feels there should be no politicking over science funding.",
    "ko": "디파는 과학 예산을 두고 정치 싸움을 해서는 안 된다고 생각해요.",
    "blank": "सियासत",
+   "src": "made"
+  }
+ ],
+ "w|सियासी": [
+  {
+   "text": "नाटक में सियासी चालों पर ख़ूब व्यंग्य किया गया है।",
+   "en": "The play pokes a lot of fun at political manoeuvres.",
+   "ko": "연극은 정치적 술수를 신랄하게 풍자해요.",
+   "blank": "सियासी",
+   "src": "made"
+  },
+  {
+   "text": "चौपाल पर सियासी बहस शुरू होते ही सीमा उठकर खेत चली गई।",
+   "en": "As soon as a political debate started at the village square, Seema got up and went to the field.",
+   "ko": "마을 사랑방에서 정치 논쟁이 시작되자 시마는 일어나 밭으로 갔어요.",
+   "blank": "सियासी",
    "src": "made"
   }
  ],
@@ -58557,6 +59181,22 @@
    "en": "Diamond is counted among the hardest stones.",
    "ko": "다이아몬드는 가장 단단한 돌로 쳐.",
    "blank": "हीरा"
+  }
+ ],
+ "w|हुकूमत": [
+  {
+   "text": "यह नाटक अंग्रेज़ी हुकूमत के दिनों की कहानी कहता है।",
+   "en": "This play tells a story from the days of British rule.",
+   "ko": "이 연극은 영국 통치 시절 이야기를 다뤄요.",
+   "blank": "हुकूमत",
+   "src": "made"
+  },
+  {
+   "text": "दादी कहती हैं कि हुकूमत कोई भी हो, किसान की मेहनत नहीं बदलती।",
+   "en": "Grandmother says that whoever is in power, the farmer's toil doesn't change.",
+   "ko": "할머니는 누가 다스리든 농부의 고생은 그대로라고 하세요.",
+   "blank": "हुकूमत",
+   "src": "made"
   }
  ],
  "w|हुनर": [
