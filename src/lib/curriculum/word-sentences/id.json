@@ -6025,6 +6025,22 @@
    "blank": "Berat"
   }
  ],
+ "w|berawak": [
+  {
+   "text": "Dapur rumah makan Fajar berawak lima juru masak.",
+   "en": "Fajar's restaurant kitchen is staffed by five cooks.",
+   "ko": "파자르네 식당 주방은 요리사 다섯 명이 맡고 있어요.",
+   "blank": "berawak",
+   "src": "made"
+  },
+  {
+   "text": "Pesawat penyemprot hama berawak dua orang terbang rendah di atas ladang Lestari.",
+   "en": "A two-person crop-spraying plane flew low over Lestari's fields.",
+   "ko": "두 명이 탄 방제 비행기가 레스타리의 밭 위를 낮게 날았어요.",
+   "blank": "berawak",
+   "src": "made"
+  }
+ ],
  "w|berawal": [
   {
    "text": "Kecintaan Eko pada laut berawal dari liburan masa kecil di desa nelayan ini.",
@@ -6438,6 +6454,22 @@
    "en": "After swimming, Wati chatted with the other mothers at the pool café.",
    "ko": "수영 후에 와티는 수영장 카페에서 다른 엄마들과 이야기를 나눴어요.",
    "blank": "berbincang",
+   "src": "made"
+  }
+ ],
+ "w|berbincang-bincang": [
+  {
+   "text": "Fajar suka berbincang-bincang dengan pelanggan tua yang datang setiap Jumat.",
+   "en": "Fajar likes chatting with the elderly customer who comes every Friday.",
+   "ko": "파자르는 금요일마다 오는 나이 든 손님과 이야기 나누는 걸 좋아해요.",
+   "blank": "berbincang-bincang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari berbincang-bincang dengan petani tetangga soal cuaca.",
+   "en": "Lestari chatted with the neighboring farmer about the weather.",
+   "ko": "레스타리는 이웃 농부와 날씨 이야기를 나눴어요.",
+   "blank": "berbincang-bincang",
    "src": "made"
   }
  ],
@@ -11481,6 +11513,22 @@
    "src": "made"
   }
  ],
+ "w|bersiaga": [
+  {
+   "text": "Para pelayan bersiaga menjelang rombongan bus tiba.",
+   "en": "The waiters were on standby as the busload of guests was about to arrive.",
+   "ko": "버스 단체 손님이 도착할 무렵 종업원들은 대기하고 있었어요.",
+   "blank": "bersiaga",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bersiaga di dekat kandang karena sapi akan melahirkan.",
+   "en": "Lestari is on standby near the barn because the cow is about to give birth.",
+   "ko": "소가 곧 새끼를 낳을 것 같아서 레스타리는 외양간 근처에서 대기하고 있어요.",
+   "blank": "bersiaga",
+   "src": "made"
+  }
+ ],
  "w|bersiap": [
   {
    "text": "Kita harus bersiap sekarang.",
@@ -11967,6 +12015,22 @@
    "en": "I don't want to fight.",
    "ko": "싸우고 싶지 않아.",
    "blank": "bertarung"
+  }
+ ],
+ "w|bertatap": [
+  {
+   "text": "Fajar baru pertama kali bertatap muka dengan pemasok daging itu.",
+   "en": "It was the first time Fajar met the meat supplier face to face.",
+   "ko": "파자르는 그 고기 납품업자와 처음으로 얼굴을 마주했어요.",
+   "blank": "bertatap",
+   "src": "made"
+  },
+  {
+   "text": "Lestari akhirnya bertatap muka dengan pembeli yang selama ini hanya memesan lewat telepon.",
+   "en": "Lestari finally met face to face with the buyer who had only ever ordered by phone.",
+   "ko": "레스타리는 그동안 전화로만 주문하던 손님과 마침내 얼굴을 마주했어요.",
+   "blank": "bertatap",
+   "src": "made"
   }
  ],
  "w|berteduh": [
@@ -14728,6 +14792,22 @@
    "en": "Dewi found a photo of her great-grandfather, who helped build the museum building.",
    "ko": "데위는 박물관 건물 짓는 데 참여한 증조할아버지의 사진을 찾았어요.",
    "blank": "buyut",
+   "src": "made"
+  }
+ ],
+ "w|cabai": [
+  {
+   "text": "Fajar menggiling cabai segar setiap pagi untuk sambal.",
+   "en": "Fajar grinds fresh chilies every morning for the sambal.",
+   "ko": "파자르는 매일 아침 삼발용 생고추를 갈아요.",
+   "blank": "cabai",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memanen cabai merah sebelum hujan turun.",
+   "en": "Lestari harvested the red chilies before the rain came.",
+   "ko": "레스타리는 비가 오기 전에 빨간 고추를 땄어요.",
+   "blank": "cabai",
    "src": "made"
   }
  ],
@@ -20589,6 +20669,22 @@
    "blank": "gaya"
   }
  ],
+ "w|gede": [
+  {
+   "text": "Kata para mahasiswa, porsi nasi di rumah makan Fajar gede banget.",
+   "en": "According to the college students, the rice portions at Fajar's place are huge.",
+   "ko": "대학생들 말로는 파자르네 식당 밥 양이 엄청 많대요.",
+   "blank": "gede",
+   "src": "made"
+  },
+  {
+   "text": "Labu yang dipanen Lestari tahun ini gede sekali.",
+   "en": "The pumpkins Lestari harvested this year are really big.",
+   "ko": "올해 레스타리가 수확한 호박은 엄청 커요.",
+   "blank": "gede",
+   "src": "made"
+  }
+ ],
  "w|gedung": [
   {
    "text": "Gedung itu sangat tinggi.",
@@ -22393,6 +22489,22 @@
    "en": "That loyal servant waited at the door.",
    "ko": "그 충실한 하인이 문에서 기다렸어.",
    "blank": "Hamba"
+  }
+ ],
+ "w|hambar": [
+  {
+   "text": "Seorang pelanggan bilang sup hari ini agak hambar.",
+   "en": "A customer said today's soup was a bit bland.",
+   "ko": "한 손님이 오늘 수프가 좀 싱겁다고 했어요.",
+   "blank": "hambar",
+   "src": "made"
+  },
+  {
+   "text": "Tomat yang dipetik terlalu muda rasanya hambar.",
+   "en": "Tomatoes picked too early taste bland.",
+   "ko": "너무 일찍 딴 토마토는 맛이 밍밍해요.",
+   "blank": "hambar",
+   "src": "made"
   }
  ],
  "w|hambatan": [
@@ -24731,6 +24843,22 @@
    "en": "Envy only drains your energy.",
    "ko": "질투심은 네 에너지만 소모해.",
    "blank": "iri"
+  }
+ ],
+ "w|irisan": [
+  {
+   "text": "Fajar menambahkan irisan bawang goreng di atas soto.",
+   "en": "Fajar adds slices of fried shallot on top of the soto.",
+   "ko": "파자르는 소토 위에 튀긴 샬롯 채를 얹어요.",
+   "blank": "irisan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menjemur irisan singkong di bawah matahari.",
+   "en": "Lestari dries cassava slices in the sun.",
+   "ko": "레스타리는 카사바 조각을 햇볕에 말려요.",
+   "blank": "irisan",
+   "src": "made"
   }
  ],
  "w|ironi": [
@@ -27853,6 +27981,22 @@
    "src": "made"
   }
  ],
+ "w|karbohidrat": [
+  {
+   "text": "Menu baru Fajar rendah karbohidrat untuk pelanggan yang sedang diet.",
+   "en": "Fajar's new menu is low in carbohydrates for customers on a diet.",
+   "ko": "파자르의 새 메뉴는 다이어트하는 손님을 위한 저탄수화물 음식이에요.",
+   "blank": "karbohidrat",
+   "src": "made"
+  },
+  {
+   "text": "Singkong dan ubi dari ladang Lestari kaya karbohidrat.",
+   "en": "The cassava and sweet potatoes from Lestari's fields are rich in carbohydrates.",
+   "ko": "레스타리 밭의 카사바와 고구마는 탄수화물이 풍부해요.",
+   "blank": "karbohidrat",
+   "src": "made"
+  }
+ ],
  "w|karbon": [
   {
    "text": "Guru Agus bilang hutan menyimpan banyak karbon dan membantu mendinginkan bumi.",
@@ -28324,6 +28468,22 @@
    "en": "At the bookstore, Wati looked for a novel in the literature category to read on rainy days.",
    "ko": "와티는 서점에서 비 오는 날 읽을 소설을 문학 분류에서 찾았어요.",
    "blank": "kategori",
+   "src": "made"
+  }
+ ],
+ "w|katering": [
+  {
+   "text": "Rumah makan Fajar juga menerima pesanan katering untuk arisan.",
+   "en": "Fajar's restaurant also takes catering orders for social gatherings.",
+   "ko": "파자르의 식당은 계모임용 출장 음식 주문도 받아요.",
+   "blank": "katering",
+   "src": "made"
+  },
+  {
+   "text": "Sayur organik dari kebun Lestari dikirim ke usaha katering di kota.",
+   "en": "Organic vegetables from Lestari's garden are sent to a catering business in the city.",
+   "ko": "레스타리 밭의 유기농 채소는 도시의 출장 음식 업체로 보내져요.",
+   "blank": "katering",
    "src": "made"
   }
  ],
@@ -29536,6 +29696,22 @@
    "en": "Siti asked the handyman about the depth of the well behind the house.",
    "ko": "시티는 일꾼에게 집 뒤 우물의 깊이를 물어봤어요.",
    "blank": "kedalaman",
+   "src": "made"
+  }
+ ],
+ "w|kedaluwarsa": [
+  {
+   "text": "Fajar membuang saus botolan yang sudah kedaluwarsa.",
+   "en": "Fajar threw out the bottled sauce that had expired.",
+   "ko": "파자르는 유통기한이 지난 병 소스를 버렸어요.",
+   "blank": "kedaluwarsa",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memeriksa pakan ayam agar tidak memakai yang sudah kedaluwarsa.",
+   "en": "Lestari checks the chicken feed so she doesn't use any that's expired.",
+   "ko": "레스타리는 기한 지난 사료를 쓰지 않으려고 닭 모이를 확인해요.",
+   "blank": "kedaluwarsa",
    "src": "made"
   }
  ],
@@ -33869,6 +34045,22 @@
    "src": "made"
   }
  ],
+ "w|ketiadaan": [
+  {
+   "text": "Fajar kesulitan karena ketiadaan tempat parkir di depan rumah makan.",
+   "en": "Fajar has trouble because there's no parking space in front of the restaurant.",
+   "ko": "식당 앞에 주차 공간이 없어서 파자르는 애를 먹어요.",
+   "blank": "ketiadaan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mengeluhkan ketiadaan saluran irigasi di desa.",
+   "en": "Lestari complains about the lack of irrigation channels in the village.",
+   "ko": "레스타리는 마을에 관개 수로가 없다고 불평해요.",
+   "blank": "ketiadaan",
+   "src": "made"
+  }
+ ],
  "w|ketidakadilan": [
   {
    "text": "Fajar menerima laporan warga tentang ketidakadilan dalam pembagian bantuan.",
@@ -37113,6 +37305,22 @@
    "blank": "Kurus"
   }
  ],
+ "w|kurva": [
+  {
+   "text": "Fajar melihat kurva penjualan naik setiap akhir pekan.",
+   "en": "Fajar sees the sales curve rise every weekend.",
+   "ko": "파자르는 주말마다 매출 곡선이 올라가는 걸 봐요.",
+   "blank": "kurva",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mencatat kurva pertumbuhan anak sapi di buku catatan.",
+   "en": "Lestari records the calf's growth curve in her notebook.",
+   "ko": "레스타리는 송아지의 성장 곡선을 공책에 기록해요.",
+   "blank": "kurva",
+   "src": "made"
+  }
+ ],
  "w|kusut": [
   {
    "text": "Dimas merapikan peta kuno yang kusut sebelum dipajang di vitrin.",
@@ -37504,6 +37712,22 @@
    "en": "According to the teacher, that rendang recipe came from the family of an admiral in Sumatra.",
    "ko": "선생님 말로는 그 른당 요리법은 수마트라의 한 제독 집안에서 전해졌대요.",
    "blank": "laksamana",
+   "src": "made"
+  }
+ ],
+ "w|lalai": [
+  {
+   "text": "Fajar menegur pegawai yang lalai mencuci tangan.",
+   "en": "Fajar reprimanded an employee who neglected to wash his hands.",
+   "ko": "파자르는 손 씻기를 소홀히 한 직원을 나무랐어요.",
+   "blank": "lalai",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menegur pekerja yang lalai menutup kandang kambing.",
+   "en": "Lestari told off a worker who forgot to close the goat pen.",
+   "ko": "레스타리는 염소 우리 문을 깜빡한 일꾼을 나무랐어요.",
+   "blank": "lalai",
    "src": "made"
   }
  ],
@@ -42901,6 +43125,22 @@
    "src": "made"
   }
  ],
+ "w|melonjak": [
+  {
+   "text": "Harga bawang melonjak, jadi Fajar pusing menghitung modal.",
+   "en": "The price of onions shot up, so Fajar is struggling to work out his costs.",
+   "ko": "양파값이 치솟아서 파자르는 원가 계산에 골치가 아파요.",
+   "blank": "melonjak",
+   "src": "made"
+  },
+  {
+   "text": "Harga pupuk melonjak menjelang musim tanam.",
+   "en": "Fertilizer prices shot up ahead of the planting season.",
+   "ko": "파종 철을 앞두고 비료값이 치솟았어요.",
+   "blank": "melonjak",
+   "src": "made"
+  }
+ ],
  "w|meluangkan": [
   {
    "text": "Pak Guru selalu meluangkan waktu untuk menjawab pertanyaan Rudi sepulang sekolah.",
@@ -43149,6 +43389,22 @@
    "en": "It's hard for him to forgive people.",
    "ko": "그는 사람을 잘 용서 못 해.",
    "blank": "memaafkan"
+  }
+ ],
+ "w|memabukkan": [
+  {
+   "text": "Aroma durian dari dapur sebelah terasa memabukkan bagi Fajar.",
+   "en": "The smell of durian from the kitchen next door is intoxicating to Fajar.",
+   "ko": "옆 주방에서 나는 두리안 냄새는 파자르를 취하게 해요.",
+   "blank": "memabukkan",
+   "src": "made"
+  },
+  {
+   "text": "Wangi bunga kopi yang mekar terasa memabukkan bagi Lestari.",
+   "en": "The scent of the blooming coffee flowers is intoxicating to Lestari.",
+   "ko": "활짝 핀 커피꽃 향기는 레스타리를 취하게 해요.",
+   "blank": "memabukkan",
+   "src": "made"
   }
  ],
  "w|memacu": [
@@ -47751,6 +48007,22 @@
    "src": "made"
   }
  ],
+ "w|memuncak": [
+  {
+   "text": "Kesibukan dapur memuncak saat jam makan siang hari Minggu.",
+   "en": "The kitchen rush peaks at Sunday lunchtime.",
+   "ko": "주방은 일요일 점심때 가장 바빠요.",
+   "blank": "memuncak",
+   "src": "made"
+  },
+  {
+   "text": "Kesibukan di peternakan memuncak saat musim panen tiba.",
+   "en": "Activity on the farm peaks when the harvest season arrives.",
+   "ko": "농장은 수확 철이 되면 가장 바빠요.",
+   "blank": "memuncak",
+   "src": "made"
+  }
+ ],
  "w|memunculkan": [
   {
    "text": "Kesalahan kecil Eko malah memunculkan resep baru yang laris.",
@@ -48932,6 +49204,22 @@
    "en": "Wati doesn't like it when her family interferes with her shopping choices.",
    "ko": "와티는 가족이 자기 쇼핑에 참견하는 걸 싫어해요.",
    "blank": "mencampuri",
+   "src": "made"
+  }
+ ],
+ "w|mencampurkan": [
+  {
+   "text": "Fajar mencampurkan kecap dan jeruk nipis untuk saus ikan bakar.",
+   "en": "Fajar mixes soy sauce and lime for the grilled fish sauce.",
+   "ko": "파자르는 생선구이 소스로 간장과 라임을 섞어요.",
+   "blank": "mencampurkan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mencampurkan pupuk kandang dengan tanah sebelum menanam.",
+   "en": "Lestari mixes manure into the soil before planting.",
+   "ko": "레스타리는 심기 전에 퇴비를 흙에 섞어요.",
+   "blank": "mencampurkan",
    "src": "made"
   }
  ],
@@ -50872,6 +51160,22 @@
    "en": "Wati's little brother likes sinking the rubber duck and then letting it go again.",
    "ko": "와티의 동생은 고무 오리를 물에 눌러 가라앉혔다가 다시 놓는 걸 좋아해요.",
    "blank": "menenggelamkan",
+   "src": "made"
+  }
+ ],
+ "w|menengok": [
+  {
+   "text": "Fajar menengok ke dapur untuk memeriksa pesanan yang terlambat.",
+   "en": "Fajar peeked into the kitchen to check on a late order.",
+   "ko": "파자르는 늦어진 주문을 확인하려고 주방을 들여다봤어요.",
+   "blank": "menengok",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menengok kandang ayam setiap tengah malam.",
+   "en": "Lestari checks on the chicken coop every midnight.",
+   "ko": "레스타리는 매일 한밤중에 닭장을 둘러봐요.",
+   "blank": "menengok",
    "src": "made"
   }
  ],
@@ -53807,6 +54111,22 @@
    "src": "made"
   }
  ],
+ "w|menggelapkan": [
+  {
+   "text": "Fajar memecat kasir yang ketahuan menggelapkan uang rumah makan.",
+   "en": "Fajar fired the cashier who was caught embezzling the restaurant's money.",
+   "ko": "파자르는 식당 돈을 빼돌리다 걸린 계산원을 해고했어요.",
+   "blank": "menggelapkan",
+   "src": "made"
+  },
+  {
+   "text": "Awan hitam mulai menggelapkan langit di atas ladang.",
+   "en": "Dark clouds began to darken the sky above the fields.",
+   "ko": "먹구름이 밭 위 하늘을 어둡게 덮기 시작했어요.",
+   "blank": "menggelapkan",
+   "src": "made"
+  }
+ ],
  "w|menggelar": [
   {
    "text": "Warga menggelar tikar di jalan untuk syukuran, dan Andi membawa nasi kuning.",
@@ -54751,6 +55071,22 @@
    "en": "A friend came to cheer her up after she was sad.",
    "ko": "슬플 때 친구가 와서 위로해 줬어.",
    "blank": "menghibur"
+  }
+ ],
+ "w|menghidangkan": [
+  {
+   "text": "Fajar menghidangkan es buah gratis untuk tamu yang berulang tahun.",
+   "en": "Fajar serves free fruit ice to guests celebrating their birthday.",
+   "ko": "파자르는 생일인 손님에게 과일 빙수를 공짜로 내줘요.",
+   "blank": "menghidangkan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menghidangkan ubi rebus untuk tamu dari kota.",
+   "en": "Lestari served boiled sweet potatoes to guests from the city.",
+   "ko": "레스타리는 도시에서 온 손님에게 삶은 고구마를 내놓았어요.",
+   "blank": "menghidangkan",
+   "src": "made"
   }
  ],
  "w|menghidupkan": [
@@ -59415,6 +59751,22 @@
    "blank": "menyembunyikan"
   }
  ],
+ "w|menyemir": [
+  {
+   "text": "Fajar menyemir sepatu sebelum menyambut tamu penting.",
+   "en": "Fajar polished his shoes before welcoming important guests.",
+   "ko": "파자르는 귀한 손님을 맞기 전에 구두를 닦았어요.",
+   "blank": "menyemir",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menyemir sepatu bot kulit sebelum pergi ke pameran ternak.",
+   "en": "Lestari polished her leather boots before going to the livestock show.",
+   "ko": "레스타리는 가축 품평회에 가기 전에 가죽 장화를 닦았어요.",
+   "blank": "menyemir",
+   "src": "made"
+  }
+ ],
  "w|menyemprot": [
   {
    "text": "Ombak besar menyemprot wajah Eko saat ia berdiri di ujung dermaga.",
@@ -63669,6 +64021,22 @@
    "blank": "nama"
   }
  ],
+ "w|nampan": [
+  {
+   "text": "Pelayan membawa nampan penuh minuman ke meja keluarga besar.",
+   "en": "The waiter carried a tray full of drinks to the big family's table.",
+   "ko": "종업원이 음료가 가득한 쟁반을 대가족 식탁으로 날랐어요.",
+   "blank": "nampan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membawa nampan berisi teh untuk para pekerja di sawah.",
+   "en": "Lestari brought a tray of tea for the workers in the rice field.",
+   "ko": "레스타리는 논에서 일하는 사람들에게 차를 쟁반에 담아 갖다줬어요.",
+   "blank": "nampan",
+   "src": "made"
+  }
+ ],
  "w|namun": [
   {
    "text": "Murah, namun berkualitas.",
@@ -65987,6 +66355,22 @@
    "blank": "Panggang"
   }
  ],
+ "w|panggangan": [
+  {
+   "text": "Asap ikan dari panggangan memenuhi dapur Fajar.",
+   "en": "Smoke from the fish on the grill filled Fajar's kitchen.",
+   "ko": "석쇠 위 생선 연기가 파자르의 주방을 가득 채웠어요.",
+   "blank": "panggangan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menaruh ikan dari kolam di atas panggangan.",
+   "en": "Lestari put fish from the pond on the grill.",
+   "ko": "레스타리는 연못에서 잡은 생선을 석쇠에 올렸어요.",
+   "blank": "panggangan",
+   "src": "made"
+  }
+ ],
  "w|panggilan": [
   {
    "text": "Ada panggilan masuk.",
@@ -66074,6 +66458,22 @@
    "en": "In his youth, Putri's grandfather was the personal cook of an army commander.",
    "ko": "푸트리의 할아버지는 젊었을 때 한 군 사령관의 전속 요리사였어요.",
    "blank": "panglima",
+   "src": "made"
+  }
+ ],
+ "w|pangsit": [
+  {
+   "text": "Setiap hari pangsit goreng buatan Fajar habis sebelum sore.",
+   "en": "Every day Fajar's fried wontons sell out before evening.",
+   "ko": "파자르가 만든 튀김 만두는 매일 저녁 전에 다 팔려요.",
+   "blank": "pangsit",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membuat pangsit isi sayur dari kebun sendiri.",
+   "en": "Lestari makes wontons filled with vegetables from her own garden.",
+   "ko": "레스타리는 직접 키운 채소로 속을 채운 만두를 빚어요.",
+   "blank": "pangsit",
    "src": "made"
   }
  ],
@@ -68154,6 +68554,22 @@
    "en": "Wati became the guide for new staff who hadn't yet memorized each floor.",
    "ko": "와티는 아직 층마다 위치를 모르는 신입 직원들의 안내자가 됐어요.",
    "blank": "pemandu",
+   "src": "made"
+  }
+ ],
+ "w|pemanggang": [
+  {
+   "text": "Fajar membeli pemanggang roti baru untuk menu sarapan.",
+   "en": "Fajar bought a new toaster for the breakfast menu.",
+   "ko": "파자르는 아침 메뉴용으로 새 토스터를 샀어요.",
+   "blank": "pemanggang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membakar jagung di pemanggang arang setelah panen.",
+   "en": "Lestari roasted corn on the charcoal grill after the harvest.",
+   "ko": "레스타리는 수확을 마치고 숯불 그릴에 옥수수를 구웠어요.",
+   "blank": "pemanggang",
    "src": "made"
   }
  ],
@@ -77651,6 +78067,22 @@
    "blank": "Pihak"
   }
  ],
+ "w|pijakan": [
+  {
+   "text": "Fajar memasang pijakan kecil di wastafel agar anak-anak bisa cuci tangan sendiri.",
+   "en": "Fajar put a small step at the sink so children can wash their hands themselves.",
+   "ko": "파자르는 아이들이 혼자 손을 씻을 수 있게 세면대에 작은 발판을 놓았어요.",
+   "blank": "pijakan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memasang batu pijakan di pematang yang licin.",
+   "en": "Lestari laid stepping stones on the slippery dike between the paddies.",
+   "ko": "레스타리는 미끄러운 논둑에 디딤돌을 놓았어요.",
+   "blank": "pijakan",
+   "src": "made"
+  }
+ ],
  "w|pikiran": [
   {
    "text": "Pikiran saya kacau.",
@@ -80797,6 +81229,22 @@
    "src": "made"
   }
  ],
+ "w|rebusan": [
+  {
+   "text": "Fajar memakai air rebusan tulang sebagai dasar kuah sop.",
+   "en": "Fajar uses bone stock as the base for the soup.",
+   "ko": "파자르는 뼈를 우린 물을 국물 밑국으로 써요.",
+   "blank": "rebusan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari meminum air rebusan jahe setelah kehujanan di ladang.",
+   "en": "Lestari drank ginger water after getting caught in the rain in the fields.",
+   "ko": "레스타리는 밭에서 비를 맞은 뒤 생강 달인 물을 마셨어요.",
+   "blank": "rebusan",
+   "src": "made"
+  }
+ ],
  "w|referensi": [
   {
    "text": "Dimas meminta surat referensi dari mandornya sebelum melamar ke tempat lain.",
@@ -81141,6 +81589,22 @@
    "src": "made"
   }
  ],
+ "w|remah": [
+  {
+   "text": "Fajar menyapu remah roti di bawah kursi anak-anak.",
+   "en": "Fajar swept up the bread crumbs under the children's chairs.",
+   "ko": "파자르는 아이들 의자 밑의 빵 부스러기를 쓸었어요.",
+   "blank": "remah",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menaburkan remah roti untuk anak-anak ayam.",
+   "en": "Lestari scatters bread crumbs for the chicks.",
+   "ko": "레스타리는 병아리들에게 빵 부스러기를 뿌려 줘요.",
+   "blank": "remah",
+   "src": "made"
+  }
+ ],
  "w|remaja": [
   {
    "text": "Remaja itu bergabung dengan klub seni.",
@@ -81258,6 +81722,22 @@
    "en": "Intan kept her heart rate within a safe range during the race.",
    "ko": "인탄은 경기 내내 심박수를 안전한 범위 안에서 유지했어요.",
    "blank": "rentang",
+   "src": "made"
+  }
+ ],
+ "w|renyah": [
+  {
+   "text": "Ayam goreng di rumah makan Fajar terkenal renyah.",
+   "en": "The fried chicken at Fajar's restaurant is famous for being crispy.",
+   "ko": "파자르네 식당 닭튀김은 바삭하기로 유명해요.",
+   "blank": "renyah",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memetik mentimun yang masih renyah di pagi hari.",
+   "en": "Lestari picks cucumbers in the morning while they're still crisp.",
+   "ko": "레스타리는 아침에 아삭한 오이를 따요.",
+   "blank": "renyah",
    "src": "made"
   }
  ],
@@ -83423,6 +83903,22 @@
    "blank": "sarapan"
   }
  ],
+ "w|sarden": [
+  {
+   "text": "Anak-anak suka nasi goreng sarden buatan Fajar.",
+   "en": "The kids love Fajar's sardine fried rice.",
+   "ko": "아이들은 파자르가 만든 정어리 볶음밥을 좋아해요.",
+   "blank": "sarden",
+   "src": "made"
+  },
+  {
+   "text": "Saat panen, Lestari dan para pekerja makan nasi dengan sarden kaleng.",
+   "en": "At harvest time, Lestari and the workers eat rice with canned sardines.",
+   "ko": "수확 철에 레스타리와 일꾼들은 정어리 통조림을 반찬으로 밥을 먹어요.",
+   "blank": "sarden",
+   "src": "made"
+  }
+ ],
  "w|sarjana": [
   {
    "text": "Fajar bekerja di dapur restoran setelah lulus sebagai sarjana tata boga.",
@@ -84239,6 +84735,22 @@
    "blank": "Sedangkan"
   }
  ],
+ "w|sedap": [
+  {
+   "text": "Aroma rendang yang sedap tercium sampai ke jalan.",
+   "en": "The delicious smell of rendang wafts all the way to the street.",
+   "ko": "른당의 맛있는 냄새가 길가까지 풍겨요.",
+   "blank": "sedap",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Lestari, bau tanah setelah hujan terasa sedap.",
+   "en": "To Lestari, the smell of earth after rain is lovely.",
+   "ko": "레스타리에게 비 온 뒤 흙냄새는 참 좋아요.",
+   "blank": "sedap",
+   "src": "made"
+  }
+ ],
  "w|sedemikian": [
   {
    "text": "Hujan turun sedemikian deras sehingga Budi tidak bisa ke ladang.",
@@ -84295,6 +84807,22 @@
    "en": "There's a small problem.",
    "ko": "작은 문제가 있어.",
    "blank": "sedikit"
+  }
+ ],
+ "w|sedotan": [
+  {
+   "text": "Fajar mengganti sedotan plastik dengan yang terbuat dari bambu.",
+   "en": "Fajar replaced plastic straws with ones made from bamboo.",
+   "ko": "파자르는 플라스틱 빨대를 대나무로 만든 것으로 바꿨어요.",
+   "blank": "sedotan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari minum air kelapa muda langsung dengan sedotan.",
+   "en": "Lestari drinks young coconut water straight with a straw.",
+   "ko": "레스타리는 어린 코코넛 물을 빨대로 바로 마셔요.",
+   "blank": "sedotan",
+   "src": "made"
   }
  ],
  "w|sedunia": [
@@ -85333,6 +85861,22 @@
    "en": "He waited inside the cell.",
    "ko": "그는 감방 안에서 기다렸어.",
    "blank": "sel"
+  }
+ ],
+ "w|selada": [
+  {
+   "text": "Fajar mencuci selada sebelum disajikan sebagai lalapan.",
+   "en": "Fajar washes the lettuce before serving it as a side of fresh greens.",
+   "ko": "파자르는 상추를 씻어서 생채소 곁들이로 내요.",
+   "blank": "selada",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menanam selada di bedengan dekat sumur.",
+   "en": "Lestari grows lettuce in the beds near the well.",
+   "ko": "레스타리는 우물 근처 두둑에 상추를 심어요.",
+   "blank": "selada",
+   "src": "made"
   }
  ],
  "w|selagi": [
@@ -87781,6 +88325,22 @@
    "src": "made"
   }
  ],
+ "w|seteguk": [
+  {
+   "text": "Fajar minum seteguk teh manis di sela kesibukan.",
+   "en": "Fajar took a sip of sweet tea in the middle of the rush.",
+   "ko": "파자르는 바쁜 와중에 단 차를 한 모금 마셨어요.",
+   "blank": "seteguk",
+   "src": "made"
+  },
+  {
+   "text": "Lestari minum seteguk air dari kendi lalu kembali mencangkul.",
+   "en": "Lestari took a gulp of water from the clay jug and went back to hoeing.",
+   "ko": "레스타리는 물병에서 물 한 모금을 마시고 다시 괭이질을 했어요.",
+   "blank": "seteguk",
+   "src": "made"
+  }
+ ],
  "w|setelah": [
   {
    "text": "Setelah makan, kami jalan-jalan.",
@@ -88424,6 +88984,22 @@
    "en": "Lestari was confused because there was a red cross mark on her old map.",
    "ko": "레스타리는 옛 지도에 빨간 X 표시가 있어서 어리둥절했어요.",
    "blank": "silang",
+   "src": "made"
+  }
+ ],
+ "w|silinder": [
+  {
+   "text": "Fajar menyimpan beras dalam wadah silinder besar dari baja.",
+   "en": "Fajar stores rice in a big steel cylinder container.",
+   "ko": "파자르는 쌀을 큰 강철 원통 용기에 보관해요.",
+   "blank": "silinder",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menyimpan gabah di lumbung berbentuk silinder.",
+   "en": "Lestari stores unhusked rice in a cylinder-shaped granary.",
+   "ko": "레스타리는 원통 모양 곳간에 벼를 보관해요.",
+   "blank": "silinder",
    "src": "made"
   }
  ],
@@ -90233,6 +90809,22 @@
    "en": "That oath must not be broken.",
    "ko": "그 맹세는 깨뜨리면 안 돼.",
    "blank": "Sumpah"
+  }
+ ],
+ "w|sumpit": [
+  {
+   "text": "Fajar menyediakan sumpit untuk pelanggan yang memesan mi.",
+   "en": "Fajar provides chopsticks for customers who order noodles.",
+   "ko": "파자르는 국수를 시키는 손님에게 젓가락을 내 줘요.",
+   "blank": "sumpit",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memakai sumpit bambu untuk memindahkan bibit yang kecil.",
+   "en": "Lestari uses bamboo chopsticks to move the tiny seedlings.",
+   "ko": "레스타리는 대나무 젓가락으로 작은 모종을 옮겨요.",
+   "blank": "sumpit",
+   "src": "made"
   }
  ],
  "w|sumsum": [
@@ -94029,6 +94621,22 @@
    "src": "made"
   }
  ],
+ "w|terdorong": [
+  {
+   "text": "Fajar terdorong membuka cabang baru karena rumah makan selalu penuh.",
+   "en": "Fajar felt driven to open a new branch because the restaurant is always full.",
+   "ko": "식당이 늘 꽉 차서 파자르는 새 지점을 열고 싶은 마음이 생겼어요.",
+   "blank": "terdorong",
+   "src": "made"
+  },
+  {
+   "text": "Lestari terdorong bertani organik setelah membaca tentang bahaya pestisida.",
+   "en": "Lestari was moved to farm organically after reading about the dangers of pesticides.",
+   "ko": "레스타리는 농약의 위험에 관한 글을 읽고 유기농을 하기로 마음먹었어요.",
+   "blank": "terdorong",
+   "src": "made"
+  }
+ ],
  "w|terekam": [
   {
    "text": "Pencurian vitamin di rak depan terekam kamera pengawas.",
@@ -97817,6 +98425,22 @@
    "blank": "tongkat"
   }
  ],
+ "w|tonik": [
+  {
+   "text": "Fajar menambahkan minuman tonik dengan jeruk nipis ke menu.",
+   "en": "Fajar added a tonic drink with lime to the menu.",
+   "ko": "파자르는 라임을 넣은 토닉 음료를 메뉴에 추가했어요.",
+   "blank": "tonik",
+   "src": "made"
+  },
+  {
+   "text": "Lestari memberi tonik khusus kepada ayam agar tidak mudah sakit.",
+   "en": "Lestari gives the chickens a special tonic so they don't get sick easily.",
+   "ko": "레스타리는 닭들이 쉽게 병들지 않게 특별 강장제를 먹여요.",
+   "blank": "tonik",
+   "src": "made"
+  }
+ ],
  "w|tontonan": [
   {
    "text": "Drama itu menjadi tontonan favorit keluarga selama libur sekolah.",
@@ -99906,6 +100530,22 @@
    "en": "Dewi read that the painter passed away before his last work was finished.",
    "ko": "데위는 그 화가가 마지막 작품을 끝내기 전에 세상을 떠났다는 글을 읽었어요.",
    "blank": "wafat",
+   "src": "made"
+  }
+ ],
+ "w|wafel": [
+  {
+   "text": "Untuk anak-anak, Fajar menambahkan menu wafel dengan es krim.",
+   "en": "For the kids, Fajar added waffles with ice cream to the menu.",
+   "ko": "파자르는 아이들을 위해 아이스크림 와플을 메뉴에 넣었어요.",
+   "blank": "wafel",
+   "src": "made"
+  },
+  {
+   "text": "Di pasar petani, Lestari menjual wafel dengan selai stroberi dari kebun sendiri.",
+   "en": "At the farmers' market, Lestari sells waffles with strawberry jam from her own garden.",
+   "ko": "레스타리는 농산물 장터에서 직접 키운 딸기로 만든 잼을 얹은 와플을 팔아요.",
+   "blank": "wafel",
    "src": "made"
   }
  ],

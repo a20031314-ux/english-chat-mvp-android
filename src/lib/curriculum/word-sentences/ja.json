@@ -13095,6 +13095,22 @@
    "blank": "もはや"
   }
  ],
+ "w|もやし": [
+  {
+   "text": "誠は、空港のラーメン屋でもやしを大盛りにしてもらった。",
+   "en": "At a ramen shop in the airport, Makoto asked for an extra-large serving of bean sprouts.",
+   "ko": "마코토는 공항 라멘집에서 숙주를 곱빼기로 담아 달라고 했어요.",
+   "blank": "もやし",
+   "src": "made"
+  },
+  {
+   "text": "練習ばかりの陽子は、もやしのように細いと母に心配されている。",
+   "en": "Yoko, who does nothing but practice, worries her mother by being as thin as a bean sprout.",
+   "ko": "연습만 하는 요코는 콩나물처럼 말랐다고 어머니가 걱정해요.",
+   "blank": "もやし",
+   "src": "made"
+  }
+ ],
  "w|もらう": [
   {
    "text": "これ、もらっていい？",
@@ -13748,6 +13764,22 @@
    "en": "Misaki wrapped the leftover rice in plastic wrap and froze it.",
    "ko": "미사키는 남은 밥을 랩으로 싸서 냉동했어요.",
    "blank": "ラップ",
+   "src": "made"
+  }
+ ],
+ "w|ラテン語": [
+  {
+   "text": "直樹は、古い建物の石に刻まれたラテン語の意味を調べた。",
+   "en": "Naoki looked up the meaning of the Latin carved into a stone on an old building.",
+   "ko": "나오키는 오래된 건물 돌에 새겨진 라틴어의 뜻을 찾아봤어요.",
+   "blank": "ラテン語",
+   "src": "made"
+  },
+  {
+   "text": "葵の売り場の香水には、ラテン語の名前がついている。",
+   "en": "The perfume in Aoi's section has a Latin name.",
+   "ko": "아오이네 매장 향수에는 라틴어 이름이 붙어 있어요.",
+   "blank": "ラテン語",
    "src": "made"
   }
  ],
@@ -15357,6 +15389,22 @@
    "src": "made"
   }
  ],
+ "w|上京": [
+  {
+   "text": "誠は、初めて上京する妹を空港まで迎えに行った。",
+   "en": "Makoto went to the airport to pick up his younger sister, who was coming to Tokyo for the first time.",
+   "ko": "마코토는 처음으로 도쿄에 올라오는 여동생을 공항까지 마중 나갔어요.",
+   "blank": "上京",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、音楽を学ぶために十八歳で上京した。",
+   "en": "Yoko moved to Tokyo at eighteen to study music.",
+   "ko": "요코는 음악을 배우려고 열여덟 살에 도쿄로 올라왔어요.",
+   "blank": "上京",
+   "src": "made"
+  }
+ ],
  "w|上位": [
   {
    "text": "上位に入ったよ。",
@@ -15898,6 +15946,22 @@
    "en": "Those observing the trial, please read the notes below.",
    "ko": "방청하시는 분은 아래 주의 사항을 읽어 주세요.",
    "blank": "下記",
+   "src": "made"
+  }
+ ],
+ "w|下車": [
+  {
+   "text": "誠は、空港行きのバスを間違って途中で下車してしまった。",
+   "en": "Makoto mistakenly got off the airport bus partway.",
+   "ko": "마코토는 공항행 버스에서 실수로 중간에 내려 버렸어요.",
+   "blank": "下車",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、音楽学校へ行く途中で下車して楽器店に寄った。",
+   "en": "Yoko got off the train on the way to the music school and stopped by an instrument shop.",
+   "ko": "요코는 음악 학교에 가는 길에 중간에 내려서 악기점에 들렀어요.",
+   "blank": "下車",
    "src": "made"
   }
  ],
@@ -17255,6 +17319,22 @@
    "src": "made"
   }
  ],
+ "w|中隊": [
+  {
+   "text": "誠の祖父は、昔この空港にあった部隊の中隊長だったそうだ。",
+   "en": "Makoto's grandfather was apparently a company commander in a unit that was once at this airport.",
+   "ko": "마코토의 할아버지는 옛날 이 공항에 있던 부대의 중대장이었대요.",
+   "blank": "中隊",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、昔の軍の中隊で使われていたラッパの曲を演奏した。",
+   "en": "Yoko played a bugle tune that was used in an old army company.",
+   "ko": "요코는 옛 군대 중대에서 쓰던 나팔 곡을 연주했어요.",
+   "blank": "中隊",
+   "src": "made"
+  }
+ ],
  "w|中高生": [
   {
    "text": "そのリュックは中高生に人気だと、亮の姪が教えてくれた。",
@@ -18002,6 +18082,22 @@
    "en": "Chihiro keeps extra food in the freezer in case of unexpected guests.",
    "ko": "지히로는 갑작스러운 손님에 대비해 예비 식재료를 얼려 둬요.",
    "blank": "予備",
+   "src": "made"
+  }
+ ],
+ "w|予備校": [
+  {
+   "text": "直樹の現場の隣には、大きな予備校がある。",
+   "en": "There is a big cram school next to Naoki's site.",
+   "ko": "나오키의 현장 옆에는 큰 입시 학원이 있어요.",
+   "blank": "予備校",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートの向かいには予備校があり、夕方は学生でにぎわう。",
+   "en": "There is a cram school across from Aoi's department store, and it is busy with students in the evening.",
+   "ko": "아오이네 백화점 맞은편에는 입시 학원이 있어서 저녁에는 학생들로 북적여요.",
+   "blank": "予備校",
    "src": "made"
   }
  ],
@@ -20584,6 +20680,22 @@
    "en": "At the end of the gathering, the organizer settled the bill.",
    "ko": "모임 끝에 총무가 계산을 마쳐 줬어요.",
    "blank": "会計",
+   "src": "made"
+  }
+ ],
+ "w|会計士": [
+  {
+   "text": "直樹の会社は、会計士に工事費の計算を確かめてもらった。",
+   "en": "Naoki's company had an accountant check the calculations of the construction costs.",
+   "ko": "나오키의 회사는 회계사에게 공사비 계산을 확인받았어요.",
+   "blank": "会計士",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートには、毎年会計士が監査に来る。",
+   "en": "An accountant comes to audit Aoi's department store every year.",
+   "ko": "아오이네 백화점에는 해마다 회계사가 감사하러 와요.",
+   "blank": "会計士",
    "src": "made"
   }
  ],
@@ -25583,6 +25695,22 @@
    "src": "made"
   }
  ],
+ "w|内外": [
+  {
+   "text": "連休の初日、空港の内外は旅行客でごった返していた。",
+   "en": "On the first day of the holiday, inside and outside the airport were packed with travelers.",
+   "ko": "연휴 첫날, 공항 안팎은 여행객으로 북적였어요.",
+   "blank": "内外",
+   "src": "made"
+  },
+  {
+   "text": "陽子の先生は、国の内外で活躍するピアニストだ。",
+   "en": "Yoko's teacher is a pianist active both at home and abroad.",
+   "ko": "요코의 선생님은 국내외에서 활약하는 피아니스트예요.",
+   "blank": "内外",
+   "src": "made"
+  }
+ ],
  "w|内定": [
   {
    "text": "誠の後輩は、大手の建設会社から内定をもらったそうだ。",
@@ -26136,6 +26264,22 @@
    "en": "The hotel tries to meet guests' requests as fully as it can.",
    "ko": "호텔은 손님 요청에 최대한 응하려고 노력해요.",
    "blank": "最大限",
+   "src": "made"
+  }
+ ],
+ "w|最寄り": [
+  {
+   "text": "誠の家の最寄り駅から、空港まで直通の電車が出ている。",
+   "en": "There's a direct train to the airport from the station nearest Makoto's house.",
+   "ko": "마코토네 집에서 가장 가까운 역에서 공항까지 직통 전철이 다녀요.",
+   "blank": "最寄り",
+   "src": "made"
+  },
+  {
+   "text": "陽子の音楽学校の最寄り駅には、各駅停車しか止まらない。",
+   "en": "Only local trains stop at the station nearest Yoko's music school.",
+   "ko": "요코의 음악 학교에서 가장 가까운 역에는 완행열차만 서요.",
+   "blank": "最寄り",
    "src": "made"
   }
  ],
@@ -27291,6 +27435,22 @@
    "blank": "出身"
   }
  ],
+ "w|出題": [
+  {
+   "text": "直樹は、資格試験でよく出題される問題を休憩中に解いた。",
+   "en": "During his break, Naoki worked through questions that often appear on the certification exam.",
+   "ko": "나오키는 자격시험에 자주 출제되는 문제를 쉬는 시간에 풀었어요.",
+   "blank": "出題",
+   "src": "made"
+  },
+  {
+   "text": "葵は、販売員の検定試験で出題された問題を同僚と解き合った。",
+   "en": "Aoi and her coworkers worked through questions from the sales clerk certification exam together.",
+   "ko": "아오이는 판매원 검정 시험에 출제된 문제를 동료와 함께 풀었어요.",
+   "blank": "出題",
+   "src": "made"
+  }
+ ],
  "w|出馬": [
   {
    "text": "館長が市長選に出馬するといううわさで、職員たちはざわついた。",
@@ -27964,6 +28124,22 @@
    "en": "Aoi's uncle works as a judge, making use of his scientific knowledge.",
    "ko": "아오이의 삼촌은 과학 지식을 살려 판사로 일하고 있어요.",
    "blank": "判事",
+   "src": "made"
+  }
+ ],
+ "w|判例": [
+  {
+   "text": "弁護士の誠は、飛行機の遅れをめぐる判例をラウンジで読んだ。",
+   "en": "Makoto, a lawyer, read case law about flight delays in the lounge.",
+   "ko": "변호사인 마코토는 비행기 지연을 둘러싼 판례를 라운지에서 읽었어요.",
+   "blank": "判例",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、曲の著作権をめぐる判例について授業で学んだ。",
+   "en": "In class, Yoko learned about case law concerning music copyright.",
+   "ko": "요코는 곡의 저작권을 둘러싼 판례에 대해 수업에서 배웠어요.",
+   "blank": "判例",
    "src": "made"
   }
  ],
@@ -28732,6 +28908,22 @@
    "en": "Keiko met the groom on the day her first-semester exams at university ended.",
    "ko": "게이코는 대학 전기 시험이 끝난 날 신랑을 만났어요.",
    "blank": "前期",
+   "src": "made"
+  }
+ ],
+ "w|前科": [
+  {
+   "text": "前科のある男が空港で捕まったというニュースを、誠はロビーのテレビで見た。",
+   "en": "Makoto saw news on the lobby TV that a man with a criminal record had been caught at an airport.",
+   "ko": "전과가 있는 남자가 공항에서 붙잡혔다는 뉴스를 마코토는 로비 텔레비전에서 봤어요.",
+   "blank": "前科",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、前科のある男が音楽で人生をやり直す映画の曲を弾いた。",
+   "en": "Yoko played the theme from a movie about a man with a criminal record who rebuilds his life through music.",
+   "ko": "요코는 전과가 있는 남자가 음악으로 인생을 다시 시작하는 영화의 곡을 연주했어요.",
+   "blank": "前科",
    "src": "made"
   }
  ],
@@ -30219,6 +30411,22 @@
    "src": "made"
   }
  ],
+ "w|包装": [
+  {
+   "text": "誠は、割れ物のお土産を丁寧に包装してもらった。",
+   "en": "Makoto had his fragile souvenirs carefully wrapped.",
+   "ko": "마코토는 깨지기 쉬운 기념품을 꼼꼼하게 포장해 달라고 했어요.",
+   "blank": "包装",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、先生への贈り物をきれいに包装してもらった。",
+   "en": "Yoko had the gift for her teacher beautifully wrapped.",
+   "ko": "요코는 선생님께 드릴 선물을 예쁘게 포장해 달라고 했어요.",
+   "blank": "包装",
+   "src": "made"
+  }
+ ],
  "w|化する": [
   {
    "text": "昼のピークの間、厨房はまさに戦場と化した。",
@@ -30309,6 +30517,22 @@
    "en": "The north wind is cold.",
    "ko": "북쪽 바람이 차가워.",
    "blank": "北"
+  }
+ ],
+ "w|北上": [
+  {
+   "text": "台風が北上してきたので、直樹の現場は作業を中止した。",
+   "en": "A typhoon was moving north, so work was stopped at Naoki's construction site.",
+   "ko": "태풍이 북상해 와서 나오키의 현장은 작업을 중단했어요.",
+   "blank": "北上",
+   "src": "made"
+  },
+  {
+   "text": "桜前線が北上するにつれ、葵のデパートでは春物がよく売れた。",
+   "en": "As the cherry blossom front moved north, spring goods sold well at Aoi's department store.",
+   "ko": "벚꽃 전선이 북상하면서 아오이의 백화점에서는 봄옷이 잘 팔렸어요.",
+   "blank": "北上",
+   "src": "made"
   }
  ],
  "w|北側": [
@@ -30915,6 +31139,22 @@
    "blank": "南"
   }
  ],
+ "w|南側": [
+  {
+   "text": "直樹の現場では、ビルの南側から足場を組み始めた。",
+   "en": "At Naoki's site, they started putting up scaffolding from the south side of the building.",
+   "ko": "나오키의 현장에서는 빌딩 남쪽부터 비계를 세우기 시작했어요.",
+   "blank": "南側",
+   "src": "made"
+  },
+  {
+   "text": "葵の売り場は、デパートの南側の入り口のそばにある。",
+   "en": "Aoi's section is near the south entrance of the department store.",
+   "ko": "아오이의 매장은 백화점 남쪽 입구 옆에 있어요.",
+   "blank": "南側",
+   "src": "made"
+  }
+ ],
  "w|南北": [
   {
    "text": "その島は南北に細長く、車なら一日でぐるりと回れる。",
@@ -30928,6 +31168,22 @@
    "en": "Keiko's town is divided into east and west by a river that flows north to south.",
    "ko": "게이코네 동네는 남북으로 흐르는 강으로 동서로 나뉘어 있어요.",
    "blank": "南北",
+   "src": "made"
+  }
+ ],
+ "w|南東": [
+  {
+   "text": "誠の乗った飛行機は、南東の方角へ飛び立った。",
+   "en": "Makoto's plane flew off toward the southeast.",
+   "ko": "마코토가 탄 비행기는 남동쪽으로 날아올랐어요.",
+   "blank": "南東",
+   "src": "made"
+  },
+  {
+   "text": "陽子の練習室は、学校の南東の角にある。",
+   "en": "Yoko's practice room is in the southeast corner of the school.",
+   "ko": "요코의 연습실은 학교 남동쪽 모퉁이에 있어요.",
+   "blank": "南東",
    "src": "made"
   }
  ],
@@ -32968,6 +33224,22 @@
    "en": "Mayu gathered word-of-mouth about the new shop by the station and wrote it up as an article.",
    "ko": "마유는 역 앞에 생긴 가게의 입소문을 모아 기사로 정리했어요.",
    "blank": "口コミ",
+   "src": "made"
+  }
+ ],
+ "w|口実": [
+  {
+   "text": "誠は、出張を口実にして、家族へのお土産をたくさん買った。",
+   "en": "Using the business trip as an excuse, Makoto bought lots of souvenirs for his family.",
+   "ko": "마코토는 출장을 핑계로 가족에게 줄 기념품을 잔뜩 샀어요.",
+   "blank": "口実",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、風邪を口実にレッスンを休んだことを後悔した。",
+   "en": "Yoko regretted skipping her lesson using a cold as an excuse.",
+   "ko": "요코는 감기를 핑계로 레슨을 빠진 걸 후회했어요.",
+   "blank": "口実",
    "src": "made"
   }
  ],
@@ -36355,6 +36627,22 @@
    "blank": "国"
   }
  ],
+ "w|国々": [
+  {
+   "text": "誠は、これまでに訪れた国々のスタンプをパスポートで数えた。",
+   "en": "Makoto counted the stamps in his passport from the countries he had visited.",
+   "ko": "마코토는 지금까지 가 본 나라들의 도장을 여권에서 세어 봤어요.",
+   "blank": "国々",
+   "src": "made"
+  },
+  {
+   "text": "陽子の学校には、さまざまな国々から生徒が集まっている。",
+   "en": "Students from many different countries come to Yoko's school.",
+   "ko": "요코의 학교에는 여러 나라에서 학생들이 모여 있어요.",
+   "blank": "国々",
+   "src": "made"
+  }
+ ],
  "w|国交": [
   {
    "text": "両国の国交を記念した特別展を、直樹が担当した。",
@@ -36695,6 +36983,22 @@
    "en": "It's become an international issue.",
    "ko": "국제 문제가 됐어.",
    "blank": "国際"
+  }
+ ],
+ "w|圏内": [
+  {
+   "text": "誠のいる空港は、台風の暴風圏内に入っていた。",
+   "en": "The airport where Makoto was had entered the storm zone of the typhoon.",
+   "ko": "마코토가 있는 공항은 태풍의 폭풍권에 들어가 있었어요.",
+   "blank": "圏内",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、コンクールで入賞圏内に入った。",
+   "en": "Yoko placed within prize range at the competition.",
+   "ko": "요코는 콩쿠르에서 입상권에 들었어요.",
+   "blank": "圏内",
+   "src": "made"
   }
  ],
  "w|土": [
@@ -37829,6 +38133,22 @@
    "blank": "塩"
   }
  ],
+ "w|塩分": [
+  {
+   "text": "その航空会社の機内食は塩分が控えめだと、誠は感じた。",
+   "en": "Makoto felt that the airline's in-flight meals were low in salt.",
+   "ko": "그 항공사 기내식은 염분이 적은 편이라고 마코토는 느꼈어요.",
+   "blank": "塩分",
+   "src": "made"
+  },
+  {
+   "text": "声楽を学ぶ陽子は、塩分の多い食事を控えている。",
+   "en": "Yoko, who studies voice, avoids salty food.",
+   "ko": "성악을 배우는 요코는 염분이 많은 음식을 삼가요.",
+   "blank": "塩分",
+   "src": "made"
+  }
+ ],
  "w|塾": [
   {
    "text": "最近塾の講師を始めた。主に数学と英語の個別指導をしている。",
@@ -38012,6 +38332,22 @@
    "en": "Because of the tax increase, the entry fee went up a little too.",
    "ko": "증세 여파로 대회 참가비도 조금 올랐어요.",
    "blank": "増税",
+   "src": "made"
+  }
+ ],
+ "w|増設": [
+  {
+   "text": "直樹たちは、駅にエレベーターを増設する工事をしている。",
+   "en": "Naoki and his crew are adding elevators to a station.",
+   "ko": "나오키네는 역에 엘리베이터를 증설하는 공사를 하고 있어요.",
+   "blank": "増設",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートは、いつも混雑するトイレを増設した。",
+   "en": "Aoi's department store added more restrooms because they were always crowded.",
+   "ko": "아오이의 백화점은 늘 붐비는 화장실을 증설했어요.",
+   "blank": "増設",
    "src": "made"
   }
  ],
@@ -39902,6 +40238,22 @@
    "en": "Misaki's shop has long stocked cheap goods for ordinary people.",
    "ko": "미사키의 가게는 옛날부터 서민용 싼 물건을 갖춰 두고 있어요.",
    "blank": "大衆",
+   "src": "made"
+  }
+ ],
+ "w|大豆": [
+  {
+   "text": "誠は、お土産に大豆を使ったお菓子を買った。",
+   "en": "Makoto bought sweets made with soybeans as a souvenir.",
+   "ko": "마코토는 기념품으로 콩으로 만든 과자를 샀어요.",
+   "blank": "大豆",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、のどのために大豆で作った食品をよく食べる。",
+   "en": "Yoko often eats foods made from soybeans for the sake of her throat.",
+   "ko": "요코는 목을 위해 콩으로 만든 음식을 자주 먹어요.",
+   "blank": "大豆",
    "src": "made"
   }
  ],
@@ -44933,6 +45285,22 @@
    "src": "made"
   }
  ],
+ "w|尽力": [
+  {
+   "text": "直樹たちの尽力で、橋は予定どおり完成した。",
+   "en": "Thanks to the efforts of Naoki and his crew, the bridge was finished on schedule.",
+   "ko": "나오키네의 노력으로 다리는 예정대로 완공됐어요.",
+   "blank": "尽力",
+   "src": "made"
+  },
+  {
+   "text": "葵の尽力で、地方の名産品を集めた催しが成功した。",
+   "en": "Thanks to Aoi's efforts, the event featuring regional specialties was a success.",
+   "ko": "아오이의 노력으로 지방 특산품을 모은 행사가 성공했어요.",
+   "blank": "尽力",
+   "src": "made"
+  }
+ ],
  "w|尾": [
   {
    "text": "会社の前の道で、健太は長い尾の白い猫に見送られた。",
@@ -45425,6 +45793,22 @@
    "src": "made"
   }
  ],
+ "w|工具": [
+  {
+   "text": "直樹は、仕事のあとに工具をきれいに手入れする。",
+   "en": "Naoki carefully cleans and maintains his tools after work.",
+   "ko": "나오키는 일이 끝나면 공구를 깨끗이 손질해요.",
+   "blank": "工具",
+   "src": "made"
+  },
+  {
+   "text": "葵は、父の日の贈り物に日曜大工用の工具のセットを勧めた。",
+   "en": "Aoi recommended a set of DIY tools as a Father's Day gift.",
+   "ko": "아오이는 아버지의 날 선물로 DIY용 공구 세트를 권했어요.",
+   "blank": "工具",
+   "src": "made"
+  }
+ ],
  "w|工場": [
   {
    "text": "工場を見学した。",
@@ -45839,6 +46223,38 @@
    "src": "made"
   }
  ],
+ "w|市街": [
+  {
+   "text": "飛行機の窓から、誠は夜の市街の明かりを見下ろした。",
+   "en": "From the airplane window, Makoto looked down at the city lights at night.",
+   "ko": "비행기 창문으로 마코토는 밤의 시가지 불빛을 내려다봤어요.",
+   "blank": "市街",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、市街の小さなホールで初めての独奏会を開いた。",
+   "en": "Yoko held her first solo recital at a small hall in the city.",
+   "ko": "요코는 시가지의 작은 홀에서 첫 독주회를 열었어요.",
+   "blank": "市街",
+   "src": "made"
+  }
+ ],
+ "w|市街地": [
+  {
+   "text": "誠の乗ったバスは、空港から市街地まで四十分かかった。",
+   "en": "The bus Makoto took from the airport to the city center took forty minutes.",
+   "ko": "마코토가 탄 버스는 공항에서 시내까지 사십 분 걸렸어요.",
+   "blank": "市街地",
+   "src": "made"
+  },
+  {
+   "text": "陽子の音楽学校は、市街地から少し離れた静かな場所にある。",
+   "en": "Yoko's music school is in a quiet place a little outside the city center.",
+   "ko": "요코의 음악 학교는 시내에서 조금 떨어진 조용한 곳에 있어요.",
+   "blank": "市街地",
+   "src": "made"
+  }
+ ],
  "w|市議会": [
   {
    "text": "拓也は、毎月市議会の傍聴に通っている。",
@@ -46035,6 +46451,22 @@
    "blank": "帰り"
   }
  ],
+ "w|帰り道": [
+  {
+   "text": "空港からの帰り道、誠は渋滞に巻き込まれた。",
+   "en": "On the way home from the airport, Makoto got stuck in a traffic jam.",
+   "ko": "공항에서 돌아오는 길에 마코토는 교통 체증에 갇혔어요.",
+   "blank": "帰り道",
+   "src": "made"
+  },
+  {
+   "text": "レッスンの帰り道、陽子は今日習った曲を口ずさんだ。",
+   "en": "On her way home from her lesson, Yoko hummed the piece she learned that day.",
+   "ko": "레슨을 마치고 돌아오는 길에 요코는 오늘 배운 곡을 흥얼거렸어요.",
+   "blank": "帰り道",
+   "src": "made"
+  }
+ ],
  "w|帰る": [
   {
    "text": "もう帰るね。",
@@ -46126,6 +46558,22 @@
    "en": "Everyone in the department welcomed the department head back from his overseas trip with applause.",
    "ko": "해외 출장에서 돌아온 부장님의 귀환을 부서 모두가 박수로 맞이했어요.",
    "blank": "帰還",
+   "src": "made"
+  }
+ ],
+ "w|常務": [
+  {
+   "text": "直樹の会社の常務が、現場の視察に来た。",
+   "en": "The managing director of Naoki's company came to inspect the site.",
+   "ko": "나오키 회사의 상무가 현장 시찰을 왔어요.",
+   "blank": "常務",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートの常務が、売り場を見回りに来た。",
+   "en": "The managing director of Aoi's department store came to look around the sales floor.",
+   "ko": "아오이네 백화점 상무가 매장을 둘러보러 왔어요.",
+   "blank": "常務",
    "src": "made"
   }
  ],
@@ -48771,6 +49219,22 @@
    "blank": "後"
   }
  ],
+ "w|後々": [
+  {
+   "text": "後々困らないように、誠は出張の領収書をしっかり保管した。",
+   "en": "So as not to have trouble later, Makoto kept his business trip receipts safe.",
+   "ko": "나중에 곤란하지 않도록 마코토는 출장 영수증을 잘 보관했어요.",
+   "blank": "後々",
+   "src": "made"
+  },
+  {
+   "text": "基礎をおろそかにすると後々困ると、陽子の先生は言う。",
+   "en": "Yoko's teacher says that if you neglect the basics, you'll have trouble later on.",
+   "ko": "기초를 소홀히 하면 나중에 곤란해진다고 요코의 선생님은 말해요.",
+   "blank": "後々",
+   "src": "made"
+  }
+ ],
  "w|後ろ": [
   {
    "text": "後ろを見て。",
@@ -49373,6 +49837,22 @@
    "blank": "心"
   }
  ],
+ "w|心中": [
+  {
+   "text": "誠は、待合室で江戸時代の心中を描いた小説を読んだ。",
+   "en": "In the waiting room, Makoto read a novel about a lovers' suicide in the Edo period.",
+   "ko": "마코토는 대합실에서 에도 시대의 동반 자살을 그린 소설을 읽었어요.",
+   "blank": "心中",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、心中を描いた古い芝居のための音楽を演奏した。",
+   "en": "Yoko performed music for an old play depicting a lovers' suicide.",
+   "ko": "요코는 동반 자살을 그린 옛 연극을 위한 음악을 연주했어요.",
+   "blank": "心中",
+   "src": "made"
+  }
+ ],
  "w|心地": [
   {
    "text": "悠斗は、新しいシャツの着心地がどうも落ち着かなかった。",
@@ -49418,6 +49898,22 @@
    "en": "Yoko learned the ins and outs of being an organizer from a senior.",
    "ko": "요코는 간사의 요령을 선배에게 배웠어요.",
    "blank": "心得",
+   "src": "made"
+  }
+ ],
+ "w|心情": [
+  {
+   "text": "立ち退く住民の心情を考えて、直樹は丁寧に説明した。",
+   "en": "Considering the feelings of the residents who had to move out, Naoki explained things carefully.",
+   "ko": "이사 가야 하는 주민들의 심정을 생각해서 나오키는 정중하게 설명했어요.",
+   "blank": "心情",
+   "src": "made"
+  },
+  {
+   "text": "贈り物を選ぶ客の心情を考えて、葵は丁寧に対応した。",
+   "en": "Thinking about how the customer choosing a gift felt, Aoi helped them with care.",
+   "ko": "선물을 고르는 손님의 심정을 헤아려 아오이는 정성껏 응대했어요.",
+   "blank": "心情",
    "src": "made"
   }
  ],
@@ -49978,6 +50474,22 @@
    "en": "Yoko took the plunge and made a small rest area at the back of the shop.",
    "ko": "요코는 큰맘 먹고 가게 안쪽에 작은 쉼터를 만들었어요.",
    "blank": "思い切っ",
+   "src": "made"
+  }
+ ],
+ "w|思い込み": [
+  {
+   "text": "出発は午後だという思い込みで、誠は危うく飛行機に乗り遅れるところだった。",
+   "en": "Makoto nearly missed his flight because he assumed it left in the afternoon.",
+   "ko": "출발이 오후라고 착각한 탓에 마코토는 하마터면 비행기를 놓칠 뻔했어요.",
+   "blank": "思い込み",
+   "src": "made"
+  },
+  {
+   "text": "「高い音は出せない」という思い込みを、陽子は先生に正された。",
+   "en": "Yoko's teacher corrected her belief that she couldn't hit high notes.",
+   "ko": "'높은 음은 못 낸다'는 생각을 요코는 선생님 덕분에 바로잡았어요.",
+   "blank": "思い込み",
    "src": "made"
   }
  ],
@@ -50885,6 +51397,22 @@
    "src": "made"
   }
  ],
+ "w|悲報": [
+  {
+   "text": "直樹は、昼休みに昔の親方の悲報を聞いた。",
+   "en": "During his lunch break, Naoki heard the sad news about his old master.",
+   "ko": "나오키는 점심시간에 옛 스승의 비보를 들었어요.",
+   "blank": "悲報",
+   "src": "made"
+  },
+  {
+   "text": "長年の常連客の悲報を聞き、葵は胸が痛んだ。",
+   "en": "Aoi's heart ached when she heard the sad news about a longtime regular customer.",
+   "ko": "오랜 단골손님의 비보를 듣고 아오이는 가슴이 아팠어요.",
+   "blank": "悲報",
+   "src": "made"
+  }
+ ],
  "w|悲惨": [
   {
    "text": "研修で見た事故の写真はあまりに悲惨で、亮は言葉を失った。",
@@ -50976,6 +51504,22 @@
    "en": "Misaki pours her passion into spreading the word about the village's rice.",
    "ko": "미사키는 마을 쌀을 알리는 데 열정을 쏟고 있어요.",
    "blank": "情熱",
+   "src": "made"
+  }
+ ],
+ "w|情緒": [
+  {
+   "text": "直樹の現場は、情緒ある古い町並みの中にある。",
+   "en": "Naoki's site is in the middle of a charming old townscape.",
+   "ko": "나오키의 현장은 정취 있는 옛 거리 한가운데 있어요.",
+   "blank": "情緒",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートの屋上には、昔の情緒が残る小さな遊園地がある。",
+   "en": "On the roof of Aoi's department store, there is a small amusement park with an old-fashioned charm.",
+   "ko": "아오이네 백화점 옥상에는 옛 정취가 남은 작은 놀이공원이 있어요.",
+   "blank": "情緒",
    "src": "made"
   }
  ],
@@ -51736,6 +52280,22 @@
    "en": "Chihiro even felt hatred toward the wild boars that wrecked her field.",
    "ko": "밭을 망치는 멧돼지에게 지히로는 증오마저 느꼈어요.",
    "blank": "憎しみ",
+   "src": "made"
+  }
+ ],
+ "w|憎悪": [
+  {
+   "text": "現場の塀に書かれた憎悪に満ちた落書きを、直樹は消した。",
+   "en": "Naoki erased the hateful graffiti scrawled on the site's fence.",
+   "ko": "현장 담장에 쓰인 증오로 가득한 낙서를 나오키는 지웠어요.",
+   "blank": "憎悪",
+   "src": "made"
+  },
+  {
+   "text": "葵は、ネットに書かれた憎悪に満ちた口コミに落ち込んだ。",
+   "en": "Aoi felt down after reading a hateful online review.",
+   "ko": "아오이는 인터넷에 올라온 증오로 가득한 후기에 우울해졌어요.",
+   "blank": "憎悪",
    "src": "made"
   }
  ],
@@ -52594,6 +53154,22 @@
    "en": "Before the performance, Yoko's palms were sweaty from nerves.",
    "ko": "본 공연 전에 요코는 긴장해서 손바닥에 땀이 나 있었어요.",
    "blank": "手のひら",
+   "src": "made"
+  }
+ ],
+ "w|手下": [
+  {
+   "text": "「俺は親方の手下みたいなものだ」と直樹は笑った。",
+   "en": "\"I'm basically the boss's henchman,\" Naoki laughed.",
+   "ko": "\"나는 반장님 졸개나 마찬가지야\"라고 나오키는 웃었어요.",
+   "blank": "手下",
+   "src": "made"
+  },
+  {
+   "text": "葵は、おもちゃ売り場に怪獣とその手下の人形を並べた。",
+   "en": "Aoi lined up dolls of a monster and its henchmen in the toy section.",
+   "ko": "아오이는 장난감 매장에 괴수와 그 부하 인형들을 진열했어요.",
+   "blank": "手下",
    "src": "made"
   }
  ],
@@ -54363,6 +54939,22 @@
    "src": "made"
   }
  ],
+ "w|指向": [
+  {
+   "text": "直樹は、現場の騒音を測るために指向性のマイクを使った。",
+   "en": "Naoki used a directional microphone to measure the noise at the site.",
+   "ko": "나오키는 현장 소음을 재려고 지향성 마이크를 썼어요.",
+   "blank": "指向",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートは、高級指向の客を主な対象にしている。",
+   "en": "Aoi's department store mainly targets customers with upscale tastes.",
+   "ko": "아오이의 백화점은 고급 지향 손님을 주로 겨냥해요.",
+   "blank": "指向",
+   "src": "made"
+  }
+ ],
  "w|指定": [
   {
    "text": "席を指定したよ。",
@@ -54494,6 +55086,22 @@
    "en": "Their mother's ring went missing, and Chihiro and her brother suspected each other.",
    "ko": "엄마 반지가 없어져서 지히로와 남동생은 서로를 의심했어요.",
    "blank": "指輪",
+   "src": "made"
+  }
+ ],
+ "w|指針": [
+  {
+   "text": "直樹の会社は、夏の現場のために熱中症対策の指針を作った。",
+   "en": "Naoki's company made guidelines for preventing heatstroke at summer sites.",
+   "ko": "나오키의 회사는 여름 현장을 위해 열사병 대책 지침을 만들었어요.",
+   "blank": "指針",
+   "src": "made"
+  },
+  {
+   "text": "葵の店には、接客の指針をまとめた小さな冊子がある。",
+   "en": "Aoi's store has a small booklet of customer service guidelines.",
+   "ko": "아오이네 가게에는 접객 지침을 정리한 작은 책자가 있어요.",
+   "blank": "指針",
    "src": "made"
   }
  ],
@@ -56288,6 +56896,22 @@
    "en": "Renovation spending was so large that the hotel can't hire more people this year.",
    "ko": "리모델링 지출이 커서 올해는 사람을 늘릴 수 없어요.",
    "blank": "支出",
+   "src": "made"
+  }
+ ],
+ "w|支局": [
+  {
+   "text": "直樹の会社は、新聞社の支局の建物を建てている。",
+   "en": "Naoki's company is constructing the building for a newspaper's branch office.",
+   "ko": "나오키의 회사는 신문사 지국 건물을 짓고 있어요.",
+   "blank": "支局",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートに、テレビ局の支局の記者が取材に来た。",
+   "en": "A reporter from a TV station's branch office came to cover Aoi's department store.",
+   "ko": "아오이의 백화점에 방송국 지국 기자가 취재하러 왔어요.",
+   "blank": "支局",
    "src": "made"
   }
  ],
@@ -58459,6 +59083,22 @@
    "src": "made"
   }
  ],
+ "w|新車": [
+  {
+   "text": "誠は、空港の駐車場に買ったばかりの新車を止めた。",
+   "en": "Makoto parked his brand-new car in the airport parking lot.",
+   "ko": "마코토는 공항 주차장에 막 산 새 차를 세웠어요.",
+   "blank": "新車",
+   "src": "made"
+  },
+  {
+   "text": "陽子のチェロは、先生の新車の後ろの席にぎりぎり入った。",
+   "en": "Yoko's cello barely fit in the back seat of her teacher's new car.",
+   "ko": "요코의 첼로는 선생님 새 차 뒷자리에 겨우 들어갔어요.",
+   "blank": "新車",
+   "src": "made"
+  }
+ ],
  "w|新鮮": [
   {
    "text": "子どもの素直な感想は、直樹にとっていつも新鮮だ。",
@@ -58502,6 +59142,22 @@
    "en": "Elderly people from the neighborhood also often come to Yoko's shop for advice.",
    "ko": "요코네 가게에는 동네 어르신분들도 자주 상담하러 와요.",
    "blank": "方々",
+   "src": "made"
+  }
+ ],
+ "w|方位": [
+  {
+   "text": "誠は、窓から見える山の方位をスマホで確かめた。",
+   "en": "Makoto checked on his phone which direction the mountain he could see from the window was in.",
+   "ko": "마코토는 창밖으로 보이는 산의 방위를 휴대폰으로 확인했어요.",
+   "blank": "方位",
+   "src": "made"
+  },
+  {
+   "text": "陽子の学校のホールは、音の響きを考えて方位まで決めて建てられた。",
+   "en": "The hall at Yoko's school was built with even its orientation chosen with acoustics in mind.",
+   "ko": "요코네 학교 홀은 소리 울림을 생각해서 방위까지 정해서 지어졌어요.",
+   "blank": "方位",
    "src": "made"
   }
  ],
@@ -59697,6 +60353,22 @@
    "src": "made"
   }
  ],
+ "w|昼飯": [
+  {
+   "text": "誠は、空港の食堂で手早く昼飯を済ませた。",
+   "en": "Makoto quickly had lunch at the airport cafeteria.",
+   "ko": "마코토는 공항 식당에서 재빨리 점심을 해결했어요.",
+   "blank": "昼飯",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、練習の合間におにぎりで昼飯を済ませた。",
+   "en": "Yoko had rice balls for lunch between practice sessions.",
+   "ko": "요코는 연습 틈틈이 주먹밥으로 점심을 때웠어요.",
+   "blank": "昼飯",
+   "src": "made"
+  }
+ ],
  "w|時": [
   {
    "text": "あの時は違った。",
@@ -60192,6 +60864,22 @@
    "en": "Aoi says that feeling better just from believing a medicine works is partly the power of suggestion.",
    "ko": "효과가 있다고 믿으면 정말 나아지는 건 암시의 힘도 있다고 아오이는 말해요.",
    "blank": "暗示",
+   "src": "made"
+  }
+ ],
+ "w|暗記": [
+  {
+   "text": "直樹は、現場の安全規則を全部暗記している。",
+   "en": "Naoki has memorized all the safety rules for the site.",
+   "ko": "나오키는 현장 안전 규칙을 전부 외우고 있어요.",
+   "blank": "暗記",
+   "src": "made"
+  },
+  {
+   "text": "葵は、売り場の商品の値段をほとんど暗記している。",
+   "en": "Aoi has memorized the prices of almost all the products in her section.",
+   "ko": "아오이는 매장 상품 가격을 거의 다 외우고 있어요.",
+   "blank": "暗記",
    "src": "made"
   }
  ],
@@ -60985,6 +61673,22 @@
    "src": "made"
   }
  ],
+ "w|有線": [
+  {
+   "text": "直樹の現場では、無線より有線の電話のほうが確実だ。",
+   "en": "At Naoki's site, wired phones are more reliable than radios.",
+   "ko": "나오키의 현장에서는 무선보다 유선 전화가 더 확실해요.",
+   "blank": "有線",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートの館内では、有線放送で静かな音楽が流れている。",
+   "en": "Quiet music plays through the cable broadcast system inside Aoi's department store.",
+   "ko": "아오이네 백화점 안에서는 유선 방송으로 잔잔한 음악이 흘러나와요.",
+   "blank": "有線",
+   "src": "made"
+  }
+ ],
  "w|有罪": [
   {
    "text": "昔の裁判の資料には、農民が有罪とされた記録が残っていた。",
@@ -61505,6 +62209,22 @@
    "en": "They showed up in person.",
    "ko": "본인이 왔어.",
    "blank": "本人"
+  }
+ ],
+ "w|本件": [
+  {
+   "text": "「本件については、明日の朝礼で説明します」と直樹は言った。",
+   "en": "\"I'll explain this matter at tomorrow's morning meeting,\" Naoki said.",
+   "ko": "\"이 건에 대해서는 내일 조회 때 설명하겠습니다\"라고 나오키는 말했어요.",
+   "blank": "本件",
+   "src": "made"
+  },
+  {
+   "text": "葵は、苦情の電話に「本件は私が責任を持って調べます」と答えた。",
+   "en": "On a complaint call, Aoi replied, \"I'll take responsibility for looking into this matter.\"",
+   "ko": "아오이는 항의 전화에 \"이 건은 제가 책임지고 알아보겠습니다\"라고 답했어요.",
+   "blank": "本件",
+   "src": "made"
   }
  ],
  "w|本体": [
@@ -62169,6 +62889,22 @@
    "blank": "東"
   }
  ],
+ "w|東口": [
+  {
+   "text": "誠は、空港へ行く前に駅の東口で友達と待ち合わせた。",
+   "en": "Before going to the airport, Makoto met a friend at the east exit of the station.",
+   "ko": "마코토는 공항에 가기 전에 역 동쪽 출구에서 친구와 만났어요.",
+   "blank": "東口",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、駅の東口を出て音楽学校へ向かう。",
+   "en": "Yoko leaves the station by the east exit and heads to the music school.",
+   "ko": "요코는 역 동쪽 출구로 나와 음악 학교로 향해요.",
+   "blank": "東口",
+   "src": "made"
+  }
+ ],
  "w|東洋": [
   {
    "text": "このホテルの内装は、東洋と西洋の様式が混ざっている。",
@@ -62494,6 +63230,22 @@
    "en": "Yumi is busy, so she orders frozen meals with well-balanced nutrition.",
    "ko": "바쁜 유미는 영양 균형이 좋은 냉동 도시락을 주문하고 있어요.",
    "blank": "栄養",
+   "src": "made"
+  }
+ ],
+ "w|校舎": [
+  {
+   "text": "直樹は、小学校の新しい校舎の工事を担当している。",
+   "en": "Naoki is in charge of building the new school building for an elementary school.",
+   "ko": "나오키는 초등학교 새 교사 공사를 맡고 있어요.",
+   "blank": "校舎",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートでは、古い校舎の木材で作った家具を販売している。",
+   "en": "Aoi's department store sells furniture made from the wood of an old school building.",
+   "ko": "아오이의 백화점에서는 오래된 학교 건물 목재로 만든 가구를 팔아요.",
+   "blank": "校舎",
    "src": "made"
   }
  ],
@@ -63655,6 +64407,22 @@
    "src": "made"
   }
  ],
+ "w|標識": [
+  {
+   "text": "直樹は、工事現場の入り口に「立入禁止」の標識を立てた。",
+   "en": "Naoki put up a \"No Entry\" sign at the entrance to the construction site.",
+   "ko": "나오키는 공사 현장 입구에 '출입 금지' 표지판을 세웠어요.",
+   "blank": "標識",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートでは、売り場の標識をいくつもの言語で書いた。",
+   "en": "At Aoi's department store, the signs for each section were written in several languages.",
+   "ko": "아오이의 백화점에서는 매장 표지판을 여러 언어로 썼어요.",
+   "blank": "標識",
+   "src": "made"
+  }
+ ],
  "w|標高": [
   {
    "text": "そのキャンプ場は、標高千メートルほどの高原にある。",
@@ -63882,6 +64650,22 @@
    "en": "To build drone software, the team bought several small aircraft.",
    "ko": "드론용 소프트웨어를 만들려고 팀은 작은 기체를 여러 대 샀어요.",
    "blank": "機体",
+   "src": "made"
+  }
+ ],
+ "w|機内": [
+  {
+   "text": "出張の機内で、直樹は図面を見直した。",
+   "en": "On the plane during a business trip, Naoki went over the blueprints again.",
+   "ko": "출장 가는 기내에서 나오키는 도면을 다시 살펴봤어요.",
+   "blank": "機内",
+   "src": "made"
+  },
+  {
+   "text": "葵は、機内で使える小さな枕を客に勧めた。",
+   "en": "Aoi recommended a small pillow for use on planes to a customer.",
+   "ko": "아오이는 기내에서 쓸 수 있는 작은 베개를 손님에게 권했어요.",
+   "blank": "機内",
    "src": "made"
   }
  ],
@@ -65669,6 +66453,22 @@
    "src": "made"
   }
  ],
+ "w|民家": [
+  {
+   "text": "直樹の現場は民家に囲まれているので、騒音に気を使う。",
+   "en": "Naoki's site is surrounded by houses, so he is careful about noise.",
+   "ko": "나오키의 현장은 민가에 둘러싸여 있어서 소음에 신경 써요.",
+   "blank": "民家",
+   "src": "made"
+  },
+  {
+   "text": "葵は、古い民家を改装したカフェの出店を担当した。",
+   "en": "Aoi was in charge of bringing in a café set up in a renovated old house.",
+   "ko": "아오이는 오래된 민가를 개조한 카페의 입점을 담당했어요.",
+   "blank": "民家",
+   "src": "made"
+  }
+ ],
  "w|民放": [
   {
    "text": "健太の学校の合唱コンクールが、地元の民放のニュースで紹介された。",
@@ -65802,6 +66602,22 @@
    "en": "Mayu felt sorry when she heard her friend's dog had died.",
    "ko": "친구의 반려견이 죽었다는 말을 듣고 마유는 안타깝게 여겼어요.",
    "blank": "気の毒",
+   "src": "made"
+  }
+ ],
+ "w|気まぐれ": [
+  {
+   "text": "気まぐれな空模様のせいで、直樹たちは作業の予定を何度も変えた。",
+   "en": "Because of the fickle weather, Naoki and his crew changed the work schedule many times.",
+   "ko": "변덕스러운 날씨 탓에 나오키네는 작업 일정을 몇 번이나 바꿨어요.",
+   "blank": "気まぐれ",
+   "src": "made"
+  },
+  {
+   "text": "葵は、客の気まぐれな注文にも笑顔で応じた。",
+   "en": "Aoi responded with a smile even to a customer's whimsical requests.",
+   "ko": "아오이는 손님의 변덕스러운 주문에도 웃는 얼굴로 응했어요.",
+   "blank": "気まぐれ",
    "src": "made"
   }
  ],
@@ -66033,6 +66849,22 @@
    "en": "Feel free to ask.",
    "ko": "편하게 상담해.",
    "blank": "気軽"
+  }
+ ],
+ "w|気遣い": [
+  {
+   "text": "客室乗務員の細やかな気遣いに、誠は感心した。",
+   "en": "Makoto was impressed by the flight attendant's thoughtful attention.",
+   "ko": "승무원의 세심한 배려에 마코토는 감탄했어요.",
+   "blank": "気遣い",
+   "src": "made"
+  },
+  {
+   "text": "伴奏者の気遣いのおかげで、陽子は落ち着いて歌えた。",
+   "en": "Thanks to her accompanist's consideration, Yoko was able to sing calmly.",
+   "ko": "반주자의 배려 덕분에 요코는 침착하게 노래할 수 있었어요.",
+   "blank": "気遣い",
+   "src": "made"
   }
  ],
  "w|気配": [
@@ -66637,6 +67469,22 @@
    "src": "made"
   }
  ],
+ "w|決心": [
+  {
+   "text": "直樹は、一人前の職人になろうと決心した。",
+   "en": "Naoki made up his mind to become a fully qualified craftsman.",
+   "ko": "나오키는 어엿한 기술자가 되자고 결심했어요.",
+   "blank": "決心",
+   "src": "made"
+  },
+  {
+   "text": "葵は、いつか売り場の責任者になろうと決心した。",
+   "en": "Aoi made up her mind to become a section manager someday.",
+   "ko": "아오이는 언젠가 매장 책임자가 되겠다고 결심했어요.",
+   "blank": "決心",
+   "src": "made"
+  }
+ ],
  "w|決意": [
   {
    "text": "健太は、一年で一人前になるという決意を日記に書いた。",
@@ -67014,6 +67862,22 @@
    "en": "The pharmacy chain Aoi works for has many stores along private railway lines.",
    "ko": "아오이가 일하는 약국 체인점은 사철 노선을 따라 많이 있어요.",
    "blank": "沿線",
+   "src": "made"
+  }
+ ],
+ "w|泊まり": [
+  {
+   "text": "早朝の便に乗るため、誠は空港近くのホテルに泊まりがけで行った。",
+   "en": "To catch an early-morning flight, Makoto went and stayed overnight at a hotel near the airport.",
+   "ko": "이른 아침 비행기를 타려고 마코토는 공항 근처 호텔에 하룻밤 묵으러 갔어요.",
+   "blank": "泊まり",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、泊まりの合宿で朝から晩まで練習した。",
+   "en": "At an overnight training camp, Yoko practiced from morning to night.",
+   "ko": "요코는 숙박 합숙에서 아침부터 밤까지 연습했어요.",
+   "blank": "泊まり",
    "src": "made"
   }
  ],
@@ -69273,6 +70137,22 @@
    "src": "made"
   }
  ],
+ "w|溶接": [
+  {
+   "text": "直樹は、鉄骨の溶接が得意だ。",
+   "en": "Naoki is good at welding steel frames.",
+   "ko": "나오키는 철골 용접을 잘해요.",
+   "blank": "溶接",
+   "src": "made"
+  },
+  {
+   "text": "葵は、溶接で作られた鉄のオブジェをショーウインドーに飾った。",
+   "en": "Aoi displayed a welded iron sculpture in the show window.",
+   "ko": "아오이는 용접으로 만든 철 오브제를 쇼윈도에 장식했어요.",
+   "blank": "溶接",
+   "src": "made"
+  }
+ ],
  "w|溺れる": [
   {
    "text": "小学生のころ、川で溺れかけた翔太を助けたのがその旧友だった。",
@@ -69334,6 +70214,22 @@
    "en": "Misaki wrote in her letter about the memory of skating on the winter lake with Yuki.",
    "ko": "미사키는 겨울 호수에서 유키와 스케이트를 탄 추억을 편지에 썼어요.",
    "blank": "滑った",
+   "src": "made"
+  }
+ ],
+ "w|滑走": [
+  {
+   "text": "着陸した飛行機が滑走路から誘導路に進入するのを、誠は窓から見ていた。",
+   "en": "Makoto watched from the window as the plane that had landed turned from the runway onto the taxiway.",
+   "ko": "착륙한 비행기가 활주로에서 유도로로 진입하는 걸 마코토는 창밖으로 봤어요.",
+   "blank": "滑走",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、飛行機が滑走路を走る音をもとに曲を作った。",
+   "en": "Yoko composed a piece based on the sound of a plane racing down the runway.",
+   "ko": "요코는 비행기가 활주로를 달리는 소리를 바탕으로 곡을 만들었어요.",
+   "blank": "滑走",
    "src": "made"
   }
  ],
@@ -71715,6 +72611,22 @@
    "blank": "特集"
   }
  ],
+ "w|牽引": [
+  {
+   "text": "故障したダンプカーを、直樹たちは別の車で牽引した。",
+   "en": "Naoki and his crew towed the broken-down dump truck with another vehicle.",
+   "ko": "고장 난 덤프트럭을 나오키네는 다른 차로 견인했어요.",
+   "blank": "牽引",
+   "src": "made"
+  },
+  {
+   "text": "葵の売り場は、デパート全体の売り上げを牽引している。",
+   "en": "Aoi's section is driving the sales of the whole department store.",
+   "ko": "아오이의 매장은 백화점 전체 매출을 이끌고 있어요.",
+   "blank": "牽引",
+   "src": "made"
+  }
+ ],
  "w|犠牲": [
   {
    "text": "大きな犠牲を払った。",
@@ -72895,6 +73807,22 @@
    "src": "made"
   }
  ],
+ "w|甘味": [
+  {
+   "text": "誠は、空港のカフェで和風の甘味を注文した。",
+   "en": "Makoto ordered a Japanese-style sweet at the airport café.",
+   "ko": "마코토는 공항 카페에서 일본식 디저트를 주문했어요.",
+   "blank": "甘味",
+   "src": "made"
+  },
+  {
+   "text": "発表会のあと、陽子は仲間と甘味処へ行った。",
+   "en": "After the recital, Yoko went to a Japanese sweets café with her friends.",
+   "ko": "발표회가 끝나고 요코는 친구들과 단팥죽 가게에 갔어요.",
+   "blank": "甘味",
+   "src": "made"
+  }
+ ],
  "w|生": [
   {
    "text": "生で食べる？",
@@ -73172,6 +74100,22 @@
    "en": "Sakura makes clothes for her dog by hand out of soft fabric.",
    "ko": "사쿠라는 개 옷을 부드러운 천으로 직접 만들어요.",
    "blank": "生地",
+   "src": "made"
+  }
+ ],
+ "w|生姜": [
+  {
+   "text": "誠は、乗り物酔いに効くという生姜のあめをなめた。",
+   "en": "Makoto sucked on a ginger candy said to help with motion sickness.",
+   "ko": "마코토는 멀미에 좋다는 생강 사탕을 먹었어요.",
+   "blank": "生姜",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、のどを守るために毎晩生姜湯を飲んでいる。",
+   "en": "Yoko drinks ginger tea every night to protect her throat.",
+   "ko": "요코는 목을 보호하려고 매일 밤 생강차를 마셔요.",
+   "blank": "生姜",
    "src": "made"
   }
  ],
@@ -73938,6 +74882,22 @@
    "en": "An exchange student doing a homestay will be staying in her son's room for a while.",
    "ko": "아들 방에 홈스테이 중인 유학생이 한동안 묵게 됐어요.",
    "blank": "留学生",
+   "src": "made"
+  }
+ ],
+ "w|留守": [
+  {
+   "text": "直樹は、留守の家のポストに工事のお知らせを入れた。",
+   "en": "Naoki put a construction notice in the mailbox of a house where no one was home.",
+   "ko": "나오키는 집을 비운 집의 우편함에 공사 안내문을 넣었어요.",
+   "blank": "留守",
+   "src": "made"
+  },
+  {
+   "text": "配達先が留守だったので、葵は日を改めることにした。",
+   "en": "No one was home at the delivery address, so Aoi decided to try another day.",
+   "ko": "배달할 집이 비어 있어서 아오이는 날을 바꾸기로 했어요.",
+   "blank": "留守",
    "src": "made"
   }
  ],
@@ -74768,6 +75728,22 @@
    "en": "The lead actor's hay fever flared up, and the shoot was pushed back a day.",
    "ko": "주연 배우의 꽃가루 알레르기가 도져서 촬영이 하루 미뤄졌어요.",
    "blank": "発症",
+   "src": "made"
+  }
+ ],
+ "w|発着": [
+  {
+   "text": "誠は、展望デッキで飛行機の発着をずっと眺めていた。",
+   "en": "Makoto watched planes taking off and landing from the observation deck for a long time.",
+   "ko": "마코토는 전망대에서 비행기 이착륙을 한참 바라봤어요.",
+   "blank": "発着",
+   "src": "made"
+  },
+  {
+   "text": "陽子の音楽学校は、バスの発着所のすぐ前にある。",
+   "en": "Yoko's music school is right in front of the bus terminal.",
+   "ko": "요코의 음악 학교는 버스 터미널 바로 앞에 있어요.",
+   "blank": "発着",
    "src": "made"
   }
  ],
@@ -77731,6 +78707,22 @@
    "src": "made"
   }
  ],
+ "w|社名": [
+  {
+   "text": "直樹の会社は、合併して社名が変わった。",
+   "en": "Naoki's company changed its name after a merger.",
+   "ko": "나오키의 회사는 합병하면서 회사 이름이 바뀌었어요.",
+   "blank": "社名",
+   "src": "made"
+  },
+  {
+   "text": "葵は、名刺に印刷された新しい社名にまだ慣れない。",
+   "en": "Aoi still isn't used to the new company name printed on her business cards.",
+   "ko": "아오이는 명함에 인쇄된 새 회사 이름이 아직 익숙하지 않아요.",
+   "blank": "社名",
+   "src": "made"
+  }
+ ],
  "w|社員": [
   {
    "text": "新しい社員が入った。",
@@ -77743,6 +78735,22 @@
    "en": "We're going on a company trip.",
    "ko": "사원 여행에 가.",
    "blank": "社員"
+  }
+ ],
+ "w|社団": [
+  {
+   "text": "直樹は、建設業の社団法人が開く講習会に参加した。",
+   "en": "Naoki attended a training session held by a construction industry association.",
+   "ko": "나오키는 건설업 사단법인이 여는 강습회에 참가했어요.",
+   "blank": "社団",
+   "src": "made"
+  },
+  {
+   "text": "葵は、ある社団法人が主催する接客コンテストに出場した。",
+   "en": "Aoi entered a customer service contest held by an association.",
+   "ko": "아오이는 어느 사단법인이 주최하는 접객 대회에 출전했어요.",
+   "blank": "社団",
+   "src": "made"
   }
  ],
  "w|社長": [
@@ -79824,6 +80832,22 @@
    "en": "Sakura's senior colleague underlined the important parts of the manual for her.",
    "ko": "선배는 매뉴얼의 중요한 부분에 줄을 그어 줬어요.",
    "blank": "箇所",
+   "src": "made"
+  }
+ ],
+ "w|管制": [
+  {
+   "text": "直樹の会社は、空港の管制塔の工事を請け負った。",
+   "en": "Naoki's company won the contract to build the airport control tower.",
+   "ko": "나오키의 회사는 공항 관제탑 공사를 맡았어요.",
+   "blank": "管制",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートの防災センターでは、館内の設備を一か所で管制している。",
+   "en": "At the disaster prevention center of Aoi's department store, the building's equipment is controlled from one place.",
+   "ko": "아오이네 백화점 방재 센터에서는 건물 안 설비를 한곳에서 관제해요.",
+   "blank": "管制",
    "src": "made"
   }
  ],
@@ -82253,6 +83277,22 @@
    "ko": "다 쓴 주사기를 안전하게 버리려고 캔에 넣었어요.",
    "blank": "缶",
    "src": "tatoeba:156605/Simplemind en:257929/CM"
+  }
+ ],
+ "w|缶詰": [
+  {
+   "text": "誠は、空港の売店で地元の魚の缶詰を買った。",
+   "en": "Makoto bought canned local fish at an airport shop.",
+   "ko": "마코토는 공항 매점에서 지역 생선 통조림을 샀어요.",
+   "blank": "缶詰",
+   "src": "made"
+  },
+  {
+   "text": "コンクールの前、陽子は練習室に缶詰になった。",
+   "en": "Before the competition, Yoko shut herself up in the practice room.",
+   "ko": "콩쿠르를 앞두고 요코는 연습실에 틀어박혔어요.",
+   "blank": "缶詰",
+   "src": "made"
   }
  ],
  "w|罪": [
@@ -85829,6 +86869,22 @@
    "blank": "薬"
   }
  ],
+ "w|薬剤": [
+  {
+   "text": "誠は、液体の薬剤を手荷物に入れてもいいか係員に尋ねた。",
+   "en": "Makoto asked a staff member whether he could put liquid medicine in his carry-on.",
+   "ko": "마코토는 액체 약제를 기내 수하물에 넣어도 되는지 직원에게 물었어요.",
+   "blank": "薬剤",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、のどの炎症を抑える薬剤を医師からもらった。",
+   "en": "Yoko got medicine from the doctor to reduce the inflammation in her throat.",
+   "ko": "요코는 목의 염증을 가라앉히는 약제를 의사에게서 받았어요.",
+   "blank": "薬剤",
+   "src": "made"
+  }
+ ],
  "w|薬剤師": [
   {
    "text": "人間の薬を犬に与える前に、薬剤師ではなく獣医に相談してほしいと悠斗は言う。",
@@ -85890,6 +86946,22 @@
    "en": "The drama Yumi watched was about detectives cracking down on drugs.",
    "ko": "유미가 본 드라마는 마약을 단속하는 형사 이야기였어요.",
    "blank": "薬物",
+   "src": "made"
+  }
+ ],
+ "w|蘇生": [
+  {
+   "text": "空港で倒れた人に係員が心肺蘇生をする場面に、誠は居合わせた。",
+   "en": "Makoto happened to be there when staff performed CPR on someone who collapsed at the airport.",
+   "ko": "공항에서 쓰러진 사람에게 직원이 심폐 소생술을 하는 현장에 마코토가 있었어요.",
+   "blank": "蘇生",
+   "src": "made"
+  },
+  {
+   "text": "陽子の音楽学校では、職員も生徒も心肺蘇生の講習を受けた。",
+   "en": "At Yoko's music school, both staff and students took a CPR course.",
+   "ko": "요코의 음악 학교에서는 직원도 학생도 심폐 소생술 강습을 받았어요.",
+   "blank": "蘇生",
    "src": "made"
   }
  ],
@@ -87435,6 +88507,22 @@
    "blank": "要求"
   }
  ],
+ "w|要約": [
+  {
+   "text": "直樹は、長い会議の内容を要約して職人たちに伝えた。",
+   "en": "Naoki summarized the long meeting and passed it on to the workers.",
+   "ko": "나오키는 긴 회의 내용을 요약해서 기술자들에게 전했어요.",
+   "blank": "要約",
+   "src": "made"
+  },
+  {
+   "text": "葵は、新商品の説明を一枚に要約して売り場に貼った。",
+   "en": "Aoi summarized the description of the new product on one sheet and posted it in her section.",
+   "ko": "아오이는 신상품 설명을 한 장으로 요약해서 매장에 붙였어요.",
+   "blank": "要約",
+   "src": "made"
+  }
+ ],
  "w|要素": [
   {
    "text": "大事な要素だね。",
@@ -87834,6 +88922,22 @@
    "en": "Sakura looked over her proposal once more before submitting it.",
    "ko": "사쿠라는 제출하기 전에 기획서를 한 번 더 검토했어요.",
    "blank": "見直した",
+   "src": "made"
+  }
+ ],
+ "w|見習い": [
+  {
+   "text": "直樹は、見習いの若者に安全帯の付け方を教えた。",
+   "en": "Naoki taught a young apprentice how to put on a safety harness.",
+   "ko": "나오키는 견습생 청년에게 안전벨트 매는 법을 가르쳤어요.",
+   "blank": "見習い",
+   "src": "made"
+  },
+  {
+   "text": "葵は、見習いの店員に贈り物の包み方を教えた。",
+   "en": "Aoi taught a trainee clerk how to wrap gifts.",
+   "ko": "아오이는 수습 점원에게 선물 포장하는 법을 가르쳤어요.",
+   "blank": "見習い",
    "src": "made"
   }
  ],
@@ -92913,6 +94017,22 @@
    "src": "made"
   }
  ],
+ "w|跡地": [
+  {
+   "text": "誠の町の新しい空港は、古い工場の跡地に建てられた。",
+   "en": "The new airport in Makoto's town was built on the site of an old factory.",
+   "ko": "마코토네 마을의 새 공항은 오래된 공장 터에 지어졌어요.",
+   "blank": "跡地",
+   "src": "made"
+  },
+  {
+   "text": "陽子の音楽学校は、昔の病院の跡地に建っている。",
+   "en": "Yoko's music school stands on the site of an old hospital.",
+   "ko": "요코의 음악 학교는 옛 병원 터에 세워져 있어요.",
+   "blank": "跡地",
+   "src": "made"
+  }
+ ],
  "w|路上": [
   {
    "text": "ホテルの前の路上に、観光バスが何台も止まっていた。",
@@ -92926,6 +94046,22 @@
    "en": "An app that finds street parking spaces is the company's main product.",
    "ko": "길가 주차 공간을 찾는 앱이 회사 주력 상품이에요.",
    "blank": "路上",
+   "src": "made"
+  }
+ ],
+ "w|路地": [
+  {
+   "text": "誠は、乗り継ぎの待ち時間に港町の路地を歩いた。",
+   "en": "During his layover, Makoto walked through the alleys of the port town.",
+   "ko": "마코토는 환승 대기 시간에 항구 마을 골목을 걸었어요.",
+   "blank": "路地",
+   "src": "made"
+  },
+  {
+   "text": "陽子の音楽学校は、細い路地の奥にある古い洋館だ。",
+   "en": "Yoko's music school is an old Western-style house at the end of a narrow alley.",
+   "ko": "요코의 음악 학교는 좁은 골목 안쪽에 있는 오래된 양옥이에요.",
+   "blank": "路地",
    "src": "made"
   }
  ],
@@ -93406,6 +94542,22 @@
    "en": "At the water station, the runner ahead stepped on a paper cup and fell.",
    "ko": "급수대에서 앞 선수가 종이컵을 밟고 넘어졌어요.",
    "blank": "転ん",
+   "src": "made"
+  }
+ ],
+ "w|転倒": [
+  {
+   "text": "誠は、空港の動く歩道で転倒しそうになった。",
+   "en": "Makoto almost fell on the moving walkway at the airport.",
+   "ko": "마코토는 공항 무빙워크에서 넘어질 뻔했어요.",
+   "blank": "転倒",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、舞台の階段で転倒しないよう気をつけた。",
+   "en": "Yoko was careful not to fall on the stairs to the stage.",
+   "ko": "요코는 무대 계단에서 넘어지지 않도록 조심했어요.",
+   "blank": "転倒",
    "src": "made"
   }
  ],
@@ -94685,6 +95837,22 @@
    "src": "made"
   }
  ],
+ "w|退去": [
+  {
+   "text": "古いアパートの住人の退去が終わり、直樹の解体工事が始まった。",
+   "en": "Once the residents of the old apartment building had moved out, Naoki's demolition work began.",
+   "ko": "낡은 아파트 주민들의 퇴거가 끝나서 나오키의 철거 공사가 시작됐어요.",
+   "blank": "退去",
+   "src": "made"
+  },
+  {
+   "text": "閉店時間になり、葵は残っている客に丁寧に退去をお願いした。",
+   "en": "At closing time, Aoi politely asked the remaining customers to leave.",
+   "ko": "폐점 시간이 되어 아오이는 남아 있는 손님들에게 정중하게 나가 달라고 부탁했어요.",
+   "blank": "退去",
+   "src": "made"
+  }
+ ],
  "w|退場": [
   {
    "text": "酔って騒いだ客は、店長に頼まれて店から退場した。",
@@ -95905,6 +97073,22 @@
    "blank": "進める"
   }
  ],
+ "w|進入": [
+  {
+   "text": "着陸した飛行機が滑走路から誘導路に進入するのを、誠は窓から見ていた。",
+   "en": "Makoto watched from the window as the plane that had landed turned from the runway onto the taxiway.",
+   "ko": "착륙한 비행기가 활주로에서 유도로로 진입하는 걸 마코토는 창밖으로 봤어요.",
+   "blank": "進入",
+   "src": "made"
+  },
+  {
+   "text": "陽子の学校の中庭は、車の進入が禁止されている。",
+   "en": "Cars are not allowed into the courtyard of Yoko's school.",
+   "ko": "요코네 학교 안뜰은 차량 진입이 금지되어 있어요.",
+   "blank": "進入",
+   "src": "made"
+  }
+ ],
  "w|進出": [
   {
    "text": "大手スーパーの進出について、市議会で議論された。",
@@ -96860,6 +98044,22 @@
    "en": "Offered vegetables by a villager, Misaki accepted them a bit hesitantly.",
    "ko": "마을 사람이 채소를 권하자 미사키는 사양하면서도 받았어요.",
    "blank": "遠慮",
+   "src": "made"
+  }
+ ],
+ "w|遠距離": [
+  {
+   "text": "直樹は、遠距離の現場に毎朝二時間かけて通っている。",
+   "en": "Naoki commutes two hours every morning to a distant site.",
+   "ko": "나오키는 먼 현장에 매일 아침 두 시간 걸려 출근해요.",
+   "blank": "遠距離",
+   "src": "made"
+  },
+  {
+   "text": "葵は、遠距離恋愛中の恋人への贈り物を選ぶ客の相談に乗った。",
+   "en": "Aoi helped a customer choose a gift for a partner in a long-distance relationship.",
+   "ko": "아오이는 장거리 연애 중인 연인에게 줄 선물을 고르는 손님의 상담을 해 줬어요.",
+   "blank": "遠距離",
    "src": "made"
   }
  ],
@@ -98851,6 +100051,22 @@
    "src": "made"
   }
  ],
+ "w|銭湯": [
+  {
+   "text": "仕事のあと、直樹は現場の仲間と銭湯で汗を流した。",
+   "en": "After work, Naoki washed off the sweat at a public bath with his coworkers from the site.",
+   "ko": "일이 끝나고 나오키는 현장 동료들과 대중목욕탕에서 땀을 씻어 냈어요.",
+   "blank": "銭湯",
+   "src": "made"
+  },
+  {
+   "text": "葵のデパートの催事で、昔の銭湯を再現した展示が人気だった。",
+   "en": "At an event at Aoi's department store, an exhibit recreating an old public bath was popular.",
+   "ko": "아오이네 백화점 행사에서 옛날 대중목욕탕을 재현한 전시가 인기였어요.",
+   "blank": "銭湯",
+   "src": "made"
+  }
+ ],
  "w|鋭い": [
   {
    "text": "カワセミの鋭いくちばしが、一瞬で魚をとらえた。",
@@ -98864,6 +100080,22 @@
    "en": "The old man next door has a sharp look, but he's very kind once you talk to him.",
    "ko": "옆집 할아버지는 눈매가 날카롭지만 이야기해 보면 아주 다정해요.",
    "blank": "鋭い",
+   "src": "made"
+  }
+ ],
+ "w|錯覚": [
+  {
+   "text": "高い足場の上に立つと、直樹はビルが揺れているような錯覚を覚えた。",
+   "en": "Standing on the high scaffolding, Naoki had the illusion that the building was swaying.",
+   "ko": "높은 비계 위에 서자 나오키는 빌딩이 흔들리는 듯한 착각이 들었어요.",
+   "blank": "錯覚",
+   "src": "made"
+  },
+  {
+   "text": "葵の売り場の鏡は、少しやせて見える錯覚を起こすと評判だ。",
+   "en": "The mirror in Aoi's section is known for creating the illusion of looking a bit slimmer.",
+   "ko": "아오이네 매장 거울은 조금 날씬해 보이는 착각을 일으킨다고 소문났어요.",
+   "blank": "錯覚",
    "src": "made"
   }
  ],
@@ -99064,6 +100296,22 @@
    "en": "Yoko's strength is that she can get along with anyone right away.",
    "ko": "요코의 장점은 누구와도 금방 친해질 수 있다는 거예요.",
    "blank": "長所",
+   "src": "made"
+  }
+ ],
+ "w|長文": [
+  {
+   "text": "直樹は、工事の遅れを謝る長文のメールを書いた。",
+   "en": "Naoki wrote a long email apologizing for the delay in construction.",
+   "ko": "나오키는 공사 지연을 사과하는 장문의 메일을 썼어요.",
+   "blank": "長文",
+   "src": "made"
+  },
+  {
+   "text": "葵のもとに、客から長文のお礼の手紙が届いた。",
+   "en": "Aoi received a long thank-you letter from a customer.",
+   "ko": "아오이에게 손님이 보낸 긴 감사 편지가 도착했어요.",
+   "blank": "長文",
    "src": "made"
   }
  ],
@@ -100943,6 +102191,22 @@
    "src": "made"
   }
  ],
+ "w|離陸": [
+  {
+   "text": "誠の乗った飛行機は、予定より遅れて離陸した。",
+   "en": "The plane Makoto was on took off later than scheduled.",
+   "ko": "마코토가 탄 비행기는 예정보다 늦게 이륙했어요.",
+   "blank": "離陸",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、コンクールに向かう飛行機が離陸すると楽譜を広げた。",
+   "en": "When the plane to the competition took off, Yoko spread out her sheet music.",
+   "ko": "요코는 콩쿠르에 가는 비행기가 이륙하자 악보를 펼쳤어요.",
+   "blank": "離陸",
+   "src": "made"
+  }
+ ],
  "w|難しい": [
   {
    "text": "これ、難しいね。",
@@ -102768,6 +104032,22 @@
    "en": "A kid who used to buy candy at this shop has since taken a big leap and become a famous athlete.",
    "ko": "예전에 이 가게에서 과자를 사던 아이가 지금은 크게 도약해서 유명한 선수가 됐어요.",
    "blank": "飛躍",
+   "src": "made"
+  }
+ ],
+ "w|食い物": [
+  {
+   "text": "「空港の食い物は高いな」と、誠は弁当を買いながらつぶやいた。",
+   "en": "\"Food at the airport sure is expensive,\" Makoto muttered as he bought a boxed lunch.",
+   "ko": "\"공항 먹을거리는 비싸네\"라고 마코토는 도시락을 사면서 중얼거렸어요.",
+   "blank": "食い物",
+   "src": "made"
+  },
+  {
+   "text": "陽子の先生は、「音楽は心の食い物だ」が口ぐせだ。",
+   "en": "Yoko's teacher always says, \"Music is food for the soul.\"",
+   "ko": "요코의 선생님은 \"음악은 마음의 양식이다\"가 입버릇이에요.",
+   "blank": "食い物",
    "src": "made"
   }
  ],

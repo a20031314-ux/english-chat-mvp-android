@@ -3867,6 +3867,22 @@
    "blank": "久"
   }
  ],
+ "w|久等": [
+  {
+   "text": "张伟赶到集合点，连声说：“让大家久等了！”",
+   "en": "Zhang Wei rushed to the meeting point and kept saying, \"Sorry to keep you all waiting!\"",
+   "ko": "장웨이는 집결지에 뛰어와서 \"오래 기다리셨죠!\" 하고 연신 말했어요.",
+   "blank": "久等",
+   "src": "made"
+  },
+  {
+   "text": "刘芳走进会议室，对客户说：“抱歉，让您久等了。”",
+   "en": "Liu Fang walked into the meeting room and said to the client, \"Sorry to keep you waiting.\"",
+   "ko": "류팡은 회의실에 들어가 고객에게 \"오래 기다리시게 해서 죄송해요\"라고 말했어요.",
+   "blank": "久等",
+   "src": "made"
+  }
+ ],
  "w|么": [
   {
    "text": "是么？",
@@ -5252,6 +5268,22 @@
    "en": "The professor's research is closely tied to the new energy industry.",
    "ko": "교수님의 연구는 신에너지 산업과 아주 밀접해요.",
    "blank": "产业",
+   "src": "made"
+  }
+ ],
+ "w|产卵": [
+  {
+   "text": "向导说，这条溪里的鱼每年春天都会游回来产卵。",
+   "en": "The guide said the fish in this stream swim back every spring to spawn.",
+   "ko": "가이드는 이 개울의 물고기가 해마다 봄이면 알을 낳으러 돌아온다고 했어요.",
+   "blank": "产卵",
+   "src": "made"
+  },
+  {
+   "text": "刘芳养在办公桌上的那缸小鱼昨天产卵了。",
+   "en": "The little fish Liu Fang keeps in a tank on her desk laid eggs yesterday.",
+   "ko": "류팡이 책상에서 키우는 작은 물고기들이 어제 알을 낳았어요.",
+   "blank": "产卵",
    "src": "made"
   }
  ],
@@ -7167,6 +7199,22 @@
    "src": "made"
   }
  ],
+ "w|企鹅": [
+  {
+   "text": "张伟的睡袋上印着企鹅，是女儿帮他挑的。",
+   "en": "Zhang Wei's sleeping bag has penguins on it; his daughter picked it out for him.",
+   "ko": "장웨이의 침낭에는 펭귄이 그려져 있는데 딸이 골라 준 거예요.",
+   "blank": "企鹅",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的鼠标垫上印着一只胖胖的企鹅。",
+   "en": "Liu Fang's mouse pad has a chubby penguin printed on it.",
+   "ko": "류팡의 마우스 패드에는 통통한 펭귄이 그려져 있어요.",
+   "blank": "企鹅",
+   "src": "made"
+  }
+ ],
  "w|休假": [
   {
    "text": "赵磊一年到头很少休假，摊位几乎天天开着。",
@@ -8167,6 +8215,22 @@
    "src": "made"
   }
  ],
+ "w|低估": [
+  {
+   "text": "张伟低估了山里夜晚的温度，冻得直发抖。",
+   "en": "Zhang Wei underestimated how cold the mountain nights would be and shivered all night.",
+   "ko": "장웨이는 산속 밤 기온을 얕봤다가 덜덜 떨었어요.",
+   "blank": "低估",
+   "src": "made"
+  },
+  {
+   "text": "刘芳低估了这个项目的难度。",
+   "en": "Liu Fang underestimated how hard this project would be.",
+   "ko": "류팡은 이 프로젝트의 난도를 얕봤어요.",
+   "blank": "低估",
+   "src": "made"
+  }
+ ],
  "w|低声": [
   {
    "text": "旁边的旅客一直在低声打电话。",
@@ -8646,6 +8710,22 @@
    "en": "We need to fight together.",
    "ko": "우리는 함께 싸워야 해요.",
    "blank": "作战",
+   "src": "made"
+  }
+ ],
+ "w|作物": [
+  {
+   "text": "营地周围都是农田，种着各种作物。",
+   "en": "The campsite is surrounded by farmland planted with all kinds of crops.",
+   "ko": "캠핑장 주변은 온통 밭이고 여러 가지 작물이 심겨 있어요.",
+   "blank": "作物",
+   "src": "made"
+  },
+  {
+   "text": "刘芳负责的软件能帮农民预测作物的产量。",
+   "en": "The software Liu Fang is in charge of helps farmers predict crop yields.",
+   "ko": "류팡이 맡은 소프트웨어는 농민들이 작물 수확량을 예측하도록 도와요.",
+   "blank": "作物",
    "src": "made"
   }
  ],
@@ -18465,6 +18545,22 @@
    "src": "made"
   }
  ],
+ "w|原有": [
+  {
+   "text": "营地保留了原有的树林，没有乱砍一棵。",
+   "en": "The campsite kept its original woods without cutting down a single tree.",
+   "ko": "캠핑장은 원래 있던 숲을 그대로 두고 나무 한 그루 함부로 베지 않았어요.",
+   "blank": "原有",
+   "src": "made"
+  },
+  {
+   "text": "新系统必须兼容公司原有的数据。",
+   "en": "The new system has to be compatible with the company's existing data.",
+   "ko": "새 시스템은 회사에 원래 있던 데이터와 호환돼야 해요.",
+   "blank": "原有",
+   "src": "made"
+  }
+ ],
  "w|原本": [
   {
    "text": "我原本想早点回家。",
@@ -26351,6 +26447,22 @@
    "src": "made"
   }
  ],
+ "w|坡": [
+  {
+   "text": "帐篷搭在坡上，张伟半夜老是往下滑。",
+   "en": "The tent was pitched on a slope, so Zhang Wei kept sliding down in the night.",
+   "ko": "텐트를 비탈에 쳐서 장웨이는 밤새 자꾸 아래로 미끄러졌어요.",
+   "blank": "坡",
+   "src": "made"
+  },
+  {
+   "text": "公司门口有一段坡，下雪天特别滑。",
+   "en": "There's a slope at the company entrance that gets very slippery when it snows.",
+   "ko": "회사 입구에 비탈길이 있어서 눈 오는 날엔 아주 미끄러워요.",
+   "blank": "坡",
+   "src": "made"
+  }
+ ],
  "w|坦克": [
   {
    "text": "王刚小时候最爱玩的玩具是一辆绿色的坦克。",
@@ -28696,6 +28808,22 @@
    "en": "Sun Yue interviewed a small shop that makes soap only from natural ingredients.",
    "ko": "쑨웨는 천연 재료로만 비누를 만드는 작은 가게를 취재했어요.",
    "blank": "天然",
+   "src": "made"
+  }
+ ],
+ "w|天然气": [
+  {
+   "text": "营地附近正在铺天然气管道，有一段山路封了。",
+   "en": "A natural gas pipeline is being laid near the campsite, so part of the mountain road is closed.",
+   "ko": "캠핑장 근처에 천연가스 관을 깔고 있어서 산길 일부가 막혔어요.",
+   "blank": "天然气",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的公司负责全市的天然气供应。",
+   "en": "Liu Fang's company supplies natural gas to the whole city.",
+   "ko": "류팡의 회사는 도시 전체의 천연가스 공급을 맡고 있어요.",
+   "blank": "天然气",
    "src": "made"
   }
  ],
@@ -31554,6 +31682,22 @@
    "en": "Wang Fang plans to improve the farm's irrigation system next year.",
    "ko": "왕팡은 내년에 농장 관개 시설을 손볼 생각이에요.",
    "blank": "完善",
+   "src": "made"
+  }
+ ],
+ "w|完好": [
+  {
+   "text": "暴雨过后，张伟的帐篷依然完好。",
+   "en": "After the downpour, Zhang Wei's tent was still in good shape.",
+   "ko": "폭우가 지나간 뒤에도 장웨이의 텐트는 멀쩡했어요.",
+   "blank": "完好",
+   "src": "made"
+  },
+  {
+   "text": "搬办公室的时候，所有电脑都完好无损。",
+   "en": "When they moved offices, all the computers came through undamaged.",
+   "ko": "사무실을 옮길 때 컴퓨터가 하나도 상하지 않았어요.",
+   "blank": "完好",
    "src": "made"
   }
  ],
@@ -38889,6 +39033,22 @@
    "src": "made"
   }
  ],
+ "w|征求": [
+  {
+   "text": "出发前，张伟征求了大家的意见，最后决定去湖边。",
+   "en": "Before setting off, Zhang Wei asked everyone's opinion and they decided on the lake.",
+   "ko": "출발 전에 장웨이는 모두의 의견을 물어보고 호숫가로 가기로 했어요.",
+   "blank": "征求",
+   "src": "made"
+  },
+  {
+   "text": "经理在会上征求大家对新方案的意见。",
+   "en": "At the meeting, the manager asked for everyone's views on the new plan.",
+   "ko": "매니저는 회의에서 새 방안에 대한 모두의 의견을 구했어요.",
+   "blank": "征求",
+   "src": "made"
+  }
+ ],
  "w|待": [
   {
    "text": "在这儿待着。",
@@ -44799,6 +44959,22 @@
    "src": "made"
   }
  ],
+ "w|披": [
+  {
+   "text": "山里晚上凉，张伟披上了一件厚外套。",
+   "en": "The mountains get cold at night, so Zhang Wei threw on a thick jacket.",
+   "ko": "산은 밤에 쌀쌀해서 장웨이는 두꺼운 외투를 걸쳤어요.",
+   "blank": "披",
+   "src": "made"
+  },
+  {
+   "text": "空调开得太冷，刘芳只好披上一件毛衣。",
+   "en": "The air conditioning was too cold, so Liu Fang draped a sweater over her shoulders.",
+   "ko": "에어컨이 너무 세서 류팡은 스웨터를 걸쳤어요.",
+   "blank": "披",
+   "src": "made"
+  }
+ ],
  "w|抬": [
   {
    "text": "赵磊和邻居一起把坏掉的水泵抬到了车上。",
@@ -47191,6 +47367,22 @@
    "blank": "揍"
   }
  ],
+ "w|描写": [
+  {
+   "text": "张伟在日记里仔细描写了营地的夜色。",
+   "en": "Zhang Wei described the campsite at night in detail in his diary.",
+   "ko": "장웨이는 일기에 캠핑장의 밤 풍경을 자세히 묘사했어요.",
+   "blank": "描写",
+   "src": "made"
+  },
+  {
+   "text": "午休时刘芳在看小说，书里描写的公司跟她们公司一模一样。",
+   "en": "At lunch Liu Fang was reading a novel, and the company it described was just like hers.",
+   "ko": "점심시간에 류팡이 소설을 읽는데, 책에서 묘사한 회사가 자기 회사랑 똑같았어요.",
+   "blank": "描写",
+   "src": "made"
+  }
+ ],
  "w|描绘": [
   {
    "text": "小明在作文里描绘了家乡春天的田野。",
@@ -48349,6 +48541,22 @@
    "en": "I've already paid the fee.",
    "ko": "나는 이미 비용을 냈어.",
    "blank": "支付"
+  }
+ ],
+ "w|支出": [
+  {
+   "text": "这次露营支出的费用由大家平摊。",
+   "en": "Everyone split the costs spent on this camping trip.",
+   "ko": "이번 캠핑에 쓴 비용은 다 같이 나눠 냈어요.",
+   "blank": "支出",
+   "src": "made"
+  },
+  {
+   "text": "财务让刘芳把这个月支出的每一笔都列出来。",
+   "en": "Finance asked Liu Fang to list every expense paid out this month.",
+   "ko": "재무팀은 류팡에게 이번 달에 나간 돈을 하나하나 적어 달라고 했어요.",
+   "blank": "支出",
+   "src": "made"
   }
  ],
  "w|支持": [
@@ -54617,6 +54825,22 @@
    "src": "made"
   }
  ],
+ "w|果实": [
+  {
+   "text": "林子里的树结满了红色的果实，张伟不敢随便吃。",
+   "en": "The trees in the woods were full of red fruit, but Zhang Wei didn't dare eat any.",
+   "ko": "숲속 나무에 빨간 열매가 가득 열렸지만 장웨이는 함부로 먹지 않았어요.",
+   "blank": "果实",
+   "src": "made"
+  },
+  {
+   "text": "项目顺利上线，刘芳说这是整个团队的劳动果实。",
+   "en": "The project launched smoothly, and Liu Fang said it was the fruit of the whole team's labor.",
+   "ko": "프로젝트가 무사히 출시되자 류팡은 이게 팀 전체의 노력의 결실이라고 했어요.",
+   "blank": "果实",
+   "src": "made"
+  }
+ ],
  "w|果然": [
   {
    "text": "果然是你。",
@@ -55535,6 +55759,22 @@
    "en": "We walked into the forest.",
    "ko": "우리는 숲으로 들어갔어.",
    "blank": "森林"
+  }
+ ],
+ "w|棵": [
+  {
+   "text": "张伟把吊床挂在两棵松树之间。",
+   "en": "Zhang Wei hung the hammock between two pine trees.",
+   "ko": "장웨이는 해먹을 소나무 두 그루 사이에 걸었어요.",
+   "blank": "棵",
+   "src": "made"
+  },
+  {
+   "text": "办公室门口摆着一棵发财树。",
+   "en": "There's a money tree by the office door.",
+   "ko": "사무실 입구에 파키라 한 그루가 놓여 있어요.",
+   "blank": "棵",
+   "src": "made"
   }
  ],
  "w|棺材": [
@@ -56949,6 +57189,22 @@
    "src": "made"
   }
  ],
+ "w|毒蛇": [
+  {
+   "text": "向导提醒张伟，草丛里可能有毒蛇。",
+   "en": "The guide warned Zhang Wei that there might be venomous snakes in the grass.",
+   "ko": "가이드는 장웨이에게 풀숲에 독사가 있을 수 있다고 주의를 줬어요.",
+   "blank": "毒蛇",
+   "src": "made"
+  },
+  {
+   "text": "午休时，刘芳看了一部关于毒蛇的纪录片。",
+   "en": "At lunch, Liu Fang watched a documentary about venomous snakes.",
+   "ko": "점심시간에 류팡은 독사에 관한 다큐멘터리를 봤어요.",
+   "blank": "毒蛇",
+   "src": "made"
+  }
+ ],
  "w|比": [
   {
    "text": "我比你高。",
@@ -57431,6 +57687,22 @@
    "src": "made"
   }
  ],
+ "w|气象": [
+  {
+   "text": "出发之前，张伟特意看了气象预报。",
+   "en": "Before leaving, Zhang Wei made a point of checking the weather forecast.",
+   "ko": "출발하기 전에 장웨이는 일부러 기상 예보를 봤어요.",
+   "blank": "气象",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在一家气象服务公司做数据分析。",
+   "en": "Liu Fang does data analysis at a weather services company.",
+   "ko": "류팡은 기상 서비스 회사에서 데이터 분석을 해요.",
+   "blank": "气象",
+   "src": "made"
+  }
+ ],
  "w|氧气": [
   {
    "text": "潜水教练让陈杰下水前检查好氧气瓶。",
@@ -57461,6 +57733,22 @@
    "blank": "水"
   }
  ],
+ "w|水上": [
+  {
+   "text": "湖边可以租水上自行车，张伟骑了一个小时。",
+   "en": "You can rent water bikes by the lake, and Zhang Wei rode one for an hour.",
+   "ko": "호숫가에서 수상 자전거를 빌릴 수 있어서 장웨이는 한 시간 동안 탔어요.",
+   "blank": "水上",
+   "src": "made"
+  },
+  {
+   "text": "公司团建去玩了水上项目，刘芳全身都湿透了。",
+   "en": "The company outing included water activities, and Liu Fang got soaked from head to toe.",
+   "ko": "회사 야유회에서 수상 놀이를 했는데 류팡은 온몸이 흠뻑 젖었어요.",
+   "blank": "水上",
+   "src": "made"
+  }
+ ],
  "w|水下": [
   {
    "text": "马林在水库边看到有人穿着潜水服，在水下检查大坝。",
@@ -57474,6 +57762,22 @@
    "en": "The company took on a project for a marine research institute, processing photos taken underwater.",
    "ko": "회사는 해양 연구소 프로젝트를 맡아 물속에서 찍은 사진을 처리해 줘요.",
    "blank": "水下",
+   "src": "made"
+  }
+ ],
+ "w|水域": [
+  {
+   "text": "这片水域禁止游泳，张伟只好在岸边钓鱼。",
+   "en": "Swimming is banned in these waters, so Zhang Wei had to fish from the bank.",
+   "ko": "이 수역은 수영 금지라서 장웨이는 물가에서 낚시만 했어요.",
+   "blank": "水域",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在写一份保护近海水域的项目报告。",
+   "en": "Liu Fang is writing a project report on protecting coastal waters.",
+   "ko": "류팡은 연안 수역 보호에 관한 프로젝트 보고서를 쓰고 있어요.",
+   "blank": "水域",
    "src": "made"
   }
  ],
@@ -57913,6 +58217,22 @@
    "en": "Camels are suited to the desert.",
    "ko": "낙타는 사막에 잘 맞아.",
    "blank": "沙漠"
+  }
+ ],
+ "w|沟": [
+  {
+   "text": "下雨之前，张伟在帐篷周围挖了一条小沟排水。",
+   "en": "Before the rain, Zhang Wei dug a small trench around the tent for drainage.",
+   "ko": "비가 오기 전에 장웨이는 텐트 둘레에 물 빠질 작은 도랑을 팠어요.",
+   "blank": "沟",
+   "src": "made"
+  },
+  {
+   "text": "公司楼前在修路，挖了一条很深的沟。",
+   "en": "They're doing roadwork in front of the office and have dug a deep ditch.",
+   "ko": "회사 건물 앞에서 도로 공사를 하느라 깊은 도랑을 팠어요.",
+   "blank": "沟",
+   "src": "made"
   }
  ],
  "w|沟通": [
@@ -58530,6 +58850,22 @@
    "en": "Sun Yue came back from the flood scene with mud all over her shoes.",
    "ko": "쑨웨는 홍수 현장에서 돌아왔는데 신발에 온통 진흙이었어요.",
    "blank": "泥",
+   "src": "made"
+  }
+ ],
+ "w|泥土": [
+  {
+   "text": "雨停以后，泥土散发出一股清香。",
+   "en": "After the rain stopped, the soil gave off a fresh smell.",
+   "ko": "비가 그친 뒤 흙에서 상쾌한 냄새가 났어요.",
+   "blank": "泥土",
+   "src": "made"
+  },
+  {
+   "text": "刘芳给绿萝换盆，弄得满桌都是泥土。",
+   "en": "Liu Fang repotted her pothos and got soil all over the desk.",
+   "ko": "류팡이 스킨답서스 화분을 갈다가 책상이 온통 흙투성이가 됐어요.",
+   "blank": "泥土",
    "src": "made"
   }
  ],
@@ -59181,6 +59517,22 @@
    "blank": "浪费"
   }
  ],
+ "w|浮": [
+  {
+   "text": "湖面上浮着几片落叶。",
+   "en": "A few fallen leaves floated on the lake.",
+   "ko": "호수 위에 낙엽 몇 장이 떠 있었어요.",
+   "blank": "浮",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的茶杯里浮着几片茶叶。",
+   "en": "A few tea leaves were floating in Liu Fang's cup.",
+   "ko": "류팡의 찻잔에 찻잎 몇 장이 떠 있었어요.",
+   "blank": "浮",
+   "src": "made"
+  }
+ ],
  "w|浴室": [
   {
    "text": "浴室在卧室旁边。",
@@ -59396,6 +59748,22 @@
    "en": "Xiaoxue recommends the seaweed salad to customers; it's tangy and whets the appetite.",
    "ko": "샤오쉐는 손님에게 해초 무침을 권해요. 새콤해서 입맛이 돌거든요.",
    "blank": "海藻",
+   "src": "made"
+  }
+ ],
+ "w|海豚": [
+  {
+   "text": "在海边露营时，张伟远远看见一群海豚跃出水面。",
+   "en": "While camping by the sea, Zhang Wei saw a pod of dolphins leap out of the water in the distance.",
+   "ko": "바닷가에서 캠핑할 때 장웨이는 멀리서 돌고래 무리가 물 위로 뛰어오르는 걸 봤어요.",
+   "blank": "海豚",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的电脑桌面是一张海豚的照片。",
+   "en": "Liu Fang's computer wallpaper is a photo of a dolphin.",
+   "ko": "류팡의 컴퓨터 배경 화면은 돌고래 사진이에요.",
+   "blank": "海豚",
    "src": "made"
   }
  ],
@@ -61137,6 +61505,22 @@
    "src": "made"
   }
  ],
+ "w|灰尘": [
+  {
+   "text": "车开在土路上，扬起了一路灰尘。",
+   "en": "The car kicked up dust all along the dirt road.",
+   "ko": "차가 흙길을 달리자 길 내내 먼지가 일었어요.",
+   "blank": "灰尘",
+   "src": "made"
+  },
+  {
+   "text": "很久没用的打印机上落满了灰尘。",
+   "en": "The printer that hadn't been used in ages was covered in dust.",
+   "ko": "오래 안 쓴 프린터에 먼지가 수북이 쌓였어요.",
+   "blank": "灰尘",
+   "src": "made"
+  }
+ ],
  "w|灰色": [
   {
    "text": "酒店房间的地毯是灰色的，看上去很素净。",
@@ -61836,6 +62220,22 @@
    "en": "One of Sun Yue's clients is a coal mining company that wants software to manage safety inspections.",
    "ko": "쑨웨의 고객 중에는 안전 점검을 소프트웨어로 관리하려는 탄광 회사도 있어요.",
    "blank": "煤",
+   "src": "made"
+  }
+ ],
+ "w|煤炭": [
+  {
+   "text": "当地人说，这一带以前靠挖煤炭过日子。",
+   "en": "The locals say this area used to make its living mining coal.",
+   "ko": "현지 사람들은 이 일대가 예전에 석탄을 캐서 먹고살았다고 해요.",
+   "blank": "煤炭",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的公司以前做煤炭贸易，后来转型了。",
+   "en": "Liu Fang's company used to trade coal before it changed direction.",
+   "ko": "류팡의 회사는 예전에 석탄 무역을 하다가 나중에 업종을 바꿨어요.",
+   "blank": "煤炭",
    "src": "made"
   }
  ],
@@ -66858,6 +67258,22 @@
    "en": "The homeroom teacher taught everyone how to view failure the right way.",
    "ko": "담임 선생님은 실패를 어떻게 바르게 받아들일지 가르쳐 줬어요.",
    "blank": "看待",
+   "src": "made"
+  }
+ ],
+ "w|看成": [
+  {
+   "text": "天太黑了，张伟把一根树枝看成了蛇。",
+   "en": "It was so dark that Zhang Wei mistook a branch for a snake.",
+   "ko": "너무 어두워서 장웨이는 나뭇가지를 뱀으로 잘못 봤어요.",
+   "blank": "看成",
+   "src": "made"
+  },
+  {
+   "text": "刘芳把开会时间看成了下午三点，差点迟到。",
+   "en": "Liu Fang misread the meeting time as three in the afternoon and was almost late.",
+   "ko": "류팡은 회의 시간을 오후 세 시로 잘못 봐서 하마터면 늦을 뻔했어요.",
+   "blank": "看成",
    "src": "made"
   }
  ],
@@ -74221,6 +74637,22 @@
    "src": "made"
   }
  ],
+ "w|耽搁": [
+  {
+   "text": "半路车子坏了，耽搁了两个多小时。",
+   "en": "The car broke down halfway, and they lost over two hours.",
+   "ko": "도중에 차가 고장 나서 두 시간 넘게 지체됐어요.",
+   "blank": "耽搁",
+   "src": "made"
+  },
+  {
+   "text": "系统出了故障，项目进度被耽搁了一周。",
+   "en": "The system broke down, and the project was delayed by a week.",
+   "ko": "시스템에 장애가 나서 프로젝트 일정이 일주일 늦어졌어요.",
+   "blank": "耽搁",
+   "src": "made"
+  }
+ ],
  "w|耽误": [
   {
    "text": "为了不耽误下午上班，黄涛中午就收摊了。",
@@ -74990,6 +75422,22 @@
    "en": "There's a cheerful chubby guy on the next team who brought Liu Fang snacks twice in one morning.",
    "ko": "옆 팀에 잘 웃는 통통한 친구가 있는데 오전에만 두 번이나 류팡에게 간식을 갖다줬어요.",
    "blank": "胖子",
+   "src": "made"
+  }
+ ],
+ "w|胜任": [
+  {
+   "text": "张伟爬了十几年山，完全能胜任这次领队。",
+   "en": "Zhang Wei has been hiking for over ten years and is fully capable of leading this trip.",
+   "ko": "장웨이는 십여 년 동안 산을 타서 이번 인솔을 충분히 해낼 수 있어요.",
+   "blank": "胜任",
+   "src": "made"
+  },
+  {
+   "text": "刘芳相信自己能胜任主管的工作。",
+   "en": "Liu Fang believes she's up to the job of supervisor.",
+   "ko": "류팡은 자신이 팀장 일을 감당할 수 있다고 믿어요.",
+   "blank": "胜任",
    "src": "made"
   }
  ],
@@ -76645,6 +77093,22 @@
    "src": "made"
   }
  ],
+ "w|花朵": [
+  {
+   "text": "草地上开满了各种颜色的小花朵。",
+   "en": "The meadow was full of little flowers of every color.",
+   "ko": "풀밭에 갖가지 색의 작은 꽃송이가 가득 피었어요.",
+   "blank": "花朵",
+   "src": "made"
+  },
+  {
+   "text": "同事送了刘芳一束花，花朵又大又鲜艳。",
+   "en": "A coworker gave Liu Fang a bouquet, and the blossoms were big and bright.",
+   "ko": "동료가 류팡에게 꽃다발을 줬는데 꽃송이가 크고 화사했어요.",
+   "blank": "花朵",
+   "src": "made"
+  }
+ ],
  "w|花生": [
   {
    "text": "赵磊卖的花生都是自家地里种的。",
@@ -77107,6 +77571,22 @@
    "src": "made"
   }
  ],
+ "w|菊花": [
+  {
+   "text": "路边的菊花开得正好，张伟拍了好几张照片。",
+   "en": "The chrysanthemums by the road were in full bloom, and Zhang Wei took several photos.",
+   "ko": "길가의 국화가 한창 피어서 장웨이는 사진을 여러 장 찍었어요.",
+   "blank": "菊花",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在办公桌上放了一盆菊花。",
+   "en": "Liu Fang put a pot of chrysanthemums on her desk.",
+   "ko": "류팡은 책상에 국화 화분을 하나 놓았어요.",
+   "blank": "菊花",
+   "src": "made"
+  }
+ ],
  "w|菜": [
   {
    "text": "这道菜很好吃。",
@@ -77547,6 +78027,22 @@
    "src": "made"
   }
  ],
+ "w|虫子": [
+  {
+   "text": "张伟一打开营灯，虫子全都飞了过来。",
+   "en": "As soon as Zhang Wei turned on the camp lamp, the bugs all flew over.",
+   "ko": "장웨이가 캠핑 등을 켜자마자 벌레들이 몽땅 날아들었어요.",
+   "blank": "虫子",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在办公室的绿植上发现了几只虫子。",
+   "en": "Liu Fang found a few bugs on the office plants.",
+   "ko": "류팡은 사무실 화분에서 벌레 몇 마리를 발견했어요.",
+   "blank": "虫子",
+   "src": "made"
+  }
+ ],
  "w|虽然": [
   {
    "text": "虽然累，可还好。",
@@ -77590,6 +78086,22 @@
    "en": "Wang Fang's freezer holds frozen shrimp, and nearby restaurants often come to stock up.",
    "ko": "왕팡의 냉동고에는 냉동 새우가 있어서 근처 식당들이 자주 사러 와요.",
    "blank": "虾",
+   "src": "made"
+  }
+ ],
+ "w|蚂蚁": [
+  {
+   "text": "张伟的面包掉在地上，没多久就爬满了蚂蚁。",
+   "en": "Zhang Wei's bread fell on the ground and was soon covered in ants.",
+   "ko": "장웨이의 빵이 땅에 떨어지자 금세 개미가 잔뜩 몰려들었어요.",
+   "blank": "蚂蚁",
+   "src": "made"
+  },
+  {
+   "text": "有人把零食放在桌上没收，结果招来了蚂蚁。",
+   "en": "Someone left snacks out on a desk, and it attracted ants.",
+   "ko": "누가 간식을 책상에 그냥 두는 바람에 개미가 꼬였어요.",
+   "blank": "蚂蚁",
    "src": "made"
   }
  ],
@@ -77666,6 +78178,22 @@
    "en": "The weather was pretty nice today, so Lin Jing went out for a walk at noon.",
    "ko": "오늘 날씨가 꽤 좋아서 린징은 점심때 한 바퀴 걷고 왔어요.",
    "blank": "蛮",
+   "src": "made"
+  }
+ ],
+ "w|蜂": [
+  {
+   "text": "张伟被一只蜂蜇了一下，手背马上肿了起来。",
+   "en": "Zhang Wei got stung by a bee, and the back of his hand swelled up right away.",
+   "ko": "장웨이는 벌에 쏘여서 손등이 금방 부어올랐어요.",
+   "blank": "蜂",
+   "src": "made"
+  },
+  {
+   "text": "窗户一开，一只蜂飞进了会议室，大家吓得直躲。",
+   "en": "When the window was opened, a bee flew into the meeting room and everyone ducked.",
+   "ko": "창문을 열자 벌 한 마리가 회의실로 날아들어 다들 놀라 피했어요.",
+   "blank": "蜂",
    "src": "made"
   }
  ],
@@ -89349,6 +89877,22 @@
    "src": "made"
   }
  ],
+ "w|闪烁": [
+  {
+   "text": "夜空里星星闪烁，张伟看得入了迷。",
+   "en": "Stars twinkled in the night sky, and Zhang Wei was spellbound.",
+   "ko": "밤하늘에 별이 반짝여서 장웨이는 넋을 잃고 바라봤어요.",
+   "blank": "闪烁",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的电脑屏幕一直闪烁，只好叫人来修。",
+   "en": "Liu Fang's computer screen kept flickering, so she had to call someone to fix it.",
+   "ko": "류팡의 컴퓨터 화면이 계속 깜빡여서 사람을 불러 고쳐야 했어요.",
+   "blank": "闪烁",
+   "src": "made"
+  }
+ ],
  "w|闪电": [
   {
    "text": "海面上空划过一道闪电，陈杰赶紧跑回了屋里。",
@@ -90641,6 +91185,22 @@
    "blank": "难以置信"
   }
  ],
+ "w|难免": [
+  {
+   "text": "第一次露营，难免会忘带一些东西。",
+   "en": "On your first camping trip, you're bound to forget a few things.",
+   "ko": "처음 캠핑을 가면 뭔가 빠뜨리기 마련이에요.",
+   "blank": "难免",
+   "src": "made"
+  },
+  {
+   "text": "工作量这么大，难免会出点小错。",
+   "en": "With a workload this big, small mistakes are inevitable.",
+   "ko": "일이 이렇게 많으면 작은 실수가 생기기 마련이에요.",
+   "blank": "难免",
+   "src": "made"
+  }
+ ],
  "w|难受": [
   {
    "text": "想到再也回不去小时候的那条街，张伟心里很难受。",
@@ -90702,6 +91262,22 @@
    "en": "Blue-eyed cats like this are rare; it was Liu Fang's first time seeing one too.",
    "ko": "이런 파란 눈 고양이는 드물어서 류팡도 처음 봤어요.",
    "blank": "难得",
+   "src": "made"
+  }
+ ],
+ "w|难忘": [
+  {
+   "text": "那晚在山顶看星星的情景，张伟至今难忘。",
+   "en": "Zhang Wei still can't forget that night watching the stars on the summit.",
+   "ko": "그날 밤 산꼭대기에서 별을 보던 장면을 장웨이는 아직도 잊지 못해요.",
+   "blank": "难忘",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，第一次拿到工资的那天很难忘。",
+   "en": "Liu Fang says the day she got her first paycheck was unforgettable.",
+   "ko": "류팡은 처음 월급을 받은 날을 잊을 수 없다고 해요.",
+   "blank": "难忘",
    "src": "made"
   }
  ],
@@ -91030,6 +91606,22 @@
    "en": "Yang Yang borrowed his sister's umbrella and then left it on the bus.",
    "ko": "양양은 누나 우산을 빌려 갔다가 버스에 두고 내렸어요.",
    "blank": "雨伞",
+   "src": "made"
+  }
+ ],
+ "w|雨水": [
+  {
+   "text": "张伟用桶接了点雨水，用来洗手洗碗。",
+   "en": "Zhang Wei caught some rainwater in a bucket to wash his hands and dishes.",
+   "ko": "장웨이는 양동이에 빗물을 받아 손과 그릇을 씻었어요.",
+   "blank": "雨水",
+   "src": "made"
+  },
+  {
+   "text": "屋顶漏了，雨水滴到了刘芳的键盘上。",
+   "en": "The roof leaked, and rainwater dripped onto Liu Fang's keyboard.",
+   "ko": "지붕이 새서 빗물이 류팡의 키보드에 떨어졌어요.",
+   "blank": "雨水",
    "src": "made"
   }
  ],
@@ -92337,6 +92929,22 @@
    "src": "made"
   }
  ],
+ "w|风声": [
+  {
+   "text": "夜里风声很大，张伟翻来覆去睡不着。",
+   "en": "The wind howled all night, and Zhang Wei tossed and turned.",
+   "ko": "밤에 바람 소리가 커서 장웨이는 뒤척이며 잠을 못 잤어요.",
+   "blank": "风声",
+   "src": "made"
+  },
+  {
+   "text": "公司要裁员的风声传开以后，大家都很紧张。",
+   "en": "Once rumors of layoffs spread, everyone got nervous.",
+   "ko": "회사가 감원한다는 소문이 돌자 다들 긴장했어요.",
+   "blank": "风声",
+   "src": "made"
+  }
+ ],
  "w|风景": [
   {
    "text": "顶楼房间的风景最好，能看到整片湖。",
@@ -93589,6 +94197,22 @@
    "blank": "鸟"
   }
  ],
+ "w|鸟儿": [
+  {
+   "text": "清晨，张伟被树上的鸟儿叫醒了。",
+   "en": "In the early morning, Zhang Wei was woken by the birds in the trees.",
+   "ko": "이른 아침, 장웨이는 나무 위 새소리에 잠이 깼어요.",
+   "blank": "鸟儿",
+   "src": "made"
+  },
+  {
+   "text": "刘芳办公室的窗外，常有鸟儿停在空调外机上。",
+   "en": "Outside Liu Fang's office window, birds often perch on the air conditioner unit.",
+   "ko": "류팡의 사무실 창밖에는 새들이 에어컨 실외기에 자주 앉아요.",
+   "blank": "鸟儿",
+   "src": "made"
+  }
+ ],
  "w|鸟类": [
   {
    "text": "陈杰说，这片湿地是很多鸟类过冬的地方。",
@@ -93680,6 +94304,22 @@
    "en": "A pigeon perches on Sun Yue's windowsill every day, and everyone calls it \"the intern.\"",
    "ko": "비둘기 한 마리가 매일 쑨웨의 창턱에 앉아서 모두 그 새를 \"인턴\"이라고 불러요.",
    "blank": "鸽子",
+   "src": "made"
+  }
+ ],
+ "w|鹅": [
+  {
+   "text": "营地旁边的农家养了一群鹅，见人就叫。",
+   "en": "The farmhouse next to the campsite keeps a flock of geese that honk at anyone they see.",
+   "ko": "캠핑장 옆 농가에서 거위를 여러 마리 키우는데 사람만 보면 꽥꽥거려요.",
+   "blank": "鹅",
+   "src": "made"
+  },
+  {
+   "text": "刘芳桌上摆着一只陶瓷鹅，是同事送的。",
+   "en": "A ceramic goose sits on Liu Fang's desk, a gift from a coworker.",
+   "ko": "류팡의 책상에는 도자기 거위가 놓여 있는데 동료가 준 거예요.",
+   "blank": "鹅",
    "src": "made"
   }
  ],
