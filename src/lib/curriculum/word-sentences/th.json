@@ -133,6 +133,22 @@
    "src": "made"
   }
  ],
+ "w|ก้น": [
+  {
+   "text": "เทรนเนอร์สอนเอกให้ย่อตัวลงจนก้นต่ำกว่าเข่า",
+   "en": "The trainer taught Ek to squat down until his bottom is lower than his knees.",
+   "ko": "트레이너는 에크에게 엉덩이가 무릎보다 낮아질 때까지 앉으라고 가르쳤어요.",
+   "blank": "ก้น",
+   "src": "made"
+  },
+  {
+   "text": "เด็กเชิญแหวนนั่งก้นจ้ำเบ้าลงบนพื้นแล้วหัวเราะ",
+   "en": "The ring bearer fell on his bottom on the floor and laughed.",
+   "ko": "반지를 든 아이가 바닥에 엉덩방아를 찧고 웃었어요.",
+   "blank": "ก้น",
+   "src": "made"
+  }
+ ],
  "w|กบ": [
   {
    "text": "กบร้องดังหลังฝน",
@@ -1171,6 +1187,22 @@
    "en": "Work by day, sleep at night.",
    "ko": "낮에 일하고 밤에 자.",
    "blank": "กลางวัน"
+  }
+ ],
+ "w|กล้ามเนื้อ": [
+  {
+   "text": "เอกยืดกล้ามเนื้อขาทุกครั้งก่อนยกน้ำหนัก",
+   "en": "Ek stretches his leg muscles every time before lifting weights.",
+   "ko": "에크는 무게를 들기 전에 매번 다리 근육을 스트레칭해요.",
+   "blank": "กล้ามเนื้อ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะยืนรับแขกนานจนกล้ามเนื้อหลังเริ่มตึง",
+   "en": "Piya stood greeting guests so long that his back muscles began to stiffen.",
+   "ko": "피야는 손님을 너무 오래 맞이해서 등 근육이 뻣뻣해지기 시작했어요.",
+   "blank": "กล้ามเนื้อ",
+   "src": "made"
   }
  ],
  "w|กลาย": [
@@ -7045,6 +7077,22 @@
    "src": "made"
   }
  ],
+ "w|ไขมัน": [
+  {
+   "text": "เอกตั้งเป้าลดไขมันหน้าท้องให้ได้ภายในสามเดือน",
+   "en": "Ek aims to lose belly fat within three months.",
+   "ko": "에크는 석 달 안에 뱃살 지방을 빼는 게 목표예요.",
+   "blank": "ไขมัน",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของปิยะสั่งให้ครัวลดไขมันในแกงเพราะแขกหลายคนเป็นผู้สูงอายุ",
+   "en": "Piya's mother asked the kitchen to cut the fat in the curry because many guests are elderly.",
+   "ko": "피야의 어머니는 어르신 하객이 많아서 주방에 카레 기름을 줄여 달라고 했어요.",
+   "blank": "ไขมัน",
+   "src": "made"
+  }
+ ],
  "w|ไข้เลือดออก": [
   {
    "text": "พยาบาลในคลินิกเล่าว่าเพิ่งหายจากไข้เลือดออกเมื่อเดือนก่อน",
@@ -7734,6 +7782,22 @@
    "en": "Please fill in all the information.",
    "ko": "정보를 빠짐없이 적어 주세요.",
    "blank": "ครบถ้วน",
+   "src": "made"
+  }
+ ],
+ "w|ครรภ์": [
+  {
+   "text": "ฟิตเนสของเอกมีคลาสโยคะสำหรับคุณแม่ที่ตั้งครรภ์",
+   "en": "Ek's gym has a yoga class for pregnant mothers.",
+   "ko": "에크의 헬스장에는 임신한 엄마들을 위한 요가 수업이 있어요.",
+   "blank": "ครรภ์",
+   "src": "made"
+  },
+  {
+   "text": "พี่สาวของปิยะกำลังตั้งครรภ์จึงนั่งพักอยู่ที่โต๊ะหน้า",
+   "en": "Piya's older sister is pregnant, so she sat resting at the front table.",
+   "ko": "피야의 누나는 임신 중이라 앞 테이블에 앉아 쉬었어요.",
+   "blank": "ครรภ์",
    "src": "made"
   }
  ],
@@ -11381,6 +11445,22 @@
    "src": "made"
   }
  ],
+ "w|คิดออก": [
+  {
+   "text": "เอกคิดออกแล้วว่าทำไมปวดหลัง เพราะยกของผิดท่ามาตลอด",
+   "en": "Ek figured out why his back hurt: he had been lifting with the wrong posture all along.",
+   "ko": "에크는 허리가 아픈 이유를 알아냈어요, 줄곧 잘못된 자세로 들었기 때문이에요.",
+   "blank": "คิดออก",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะคิดออกตอนท้ายว่าลืมขอบคุณคุณครูที่มางาน",
+   "en": "At the end Piya realized he'd forgotten to thank his teacher who came.",
+   "ko": "피야는 끝날 무렵에야 와 주신 선생님께 감사 인사를 깜빡한 게 생각났어요.",
+   "blank": "คิดออก",
+   "src": "made"
+  }
+ ],
  "w|คิว": [
   {
    "text": "วิชัยให้คนที่มาแจ้งความกดบัตรคิวแล้วนั่งรอ",
@@ -12828,6 +12908,22 @@
    "en": "Somsak was baffled that it was already November but still hot.",
    "ko": "솜삭은 벌써 십일월인데 아직도 더워서 어리둥절했어요.",
    "blank": "งง",
+   "src": "made"
+  }
+ ],
+ "w|งด": [
+  {
+   "text": "เอกงดของทอดทั้งเดือนก่อนแข่งเพาะกาย",
+   "en": "Ek gave up fried food for the whole month before the bodybuilding contest.",
+   "ko": "에크는 보디빌딩 대회 전에 한 달 내내 튀김을 끊었어요.",
+   "blank": "งด",
+   "src": "made"
+  },
+  {
+   "text": "งานแต่งของปิยะงดใช้จานพลาสติกเพื่อลดขยะ",
+   "en": "Piya's wedding skipped plastic plates to reduce waste.",
+   "ko": "피야의 결혼식은 쓰레기를 줄이려고 플라스틱 접시를 쓰지 않았어요.",
+   "blank": "งด",
    "src": "made"
   }
  ],
@@ -15691,6 +15787,22 @@
    "en": "The shirt tore at the sleeve because of a nail.",
    "ko": "못 때문에 소매가 찢어졌어.",
    "blank": "ฉีก"
+  }
+ ],
+ "w|ฉีด": [
+  {
+   "text": "เอกไปฉีดวัคซีนไข้หวัดใหญ่ก่อนเข้ายิมตอนเช้า",
+   "en": "Ek went to get a flu shot before going to the gym in the morning.",
+   "ko": "에크는 아침에 헬스장 가기 전에 독감 주사를 맞으러 갔어요.",
+   "blank": "ฉีด",
+   "src": "made"
+  },
+  {
+   "text": "ช่างแต่งหน้าฉีดสเปรย์ล็อกผมให้เจ้าสาวก่อนเดินเข้างาน",
+   "en": "The makeup artist sprayed hair spray on the bride before she walked in.",
+   "ko": "메이크업 아티스트는 신부가 입장하기 전에 머리에 고정 스프레이를 뿌렸어요.",
+   "blank": "ฉีด",
+   "src": "made"
   }
  ],
  "w|ฉีดยา": [
@@ -18853,6 +18965,22 @@
    "blank": "ด้วยกัน"
   }
  ],
+ "w|ด้วยตัวเอง": [
+  {
+   "text": "เอกจัดตารางฝึกด้วยตัวเองโดยไม่จ้างเทรนเนอร์",
+   "en": "Ek made his own training schedule without hiring a trainer.",
+   "ko": "에크는 트레이너 없이 직접 운동 계획을 짰어요.",
+   "blank": "ด้วยตัวเอง",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าสาวของปิยะทำของชำร่วยด้วยตัวเองทุกชิ้น",
+   "en": "Piya's bride made every wedding favor herself.",
+   "ko": "피야의 신부는 답례품을 하나하나 직접 만들었어요.",
+   "blank": "ด้วยตัวเอง",
+   "src": "made"
+  }
+ ],
  "w|ด้วยเหตุนี้": [
   {
    "text": "ฝนตกหนักทั้งคืน ด้วยเหตุนี้โรงเรียนของสมชายจึงประกาศหยุดเรียน",
@@ -18990,6 +19118,22 @@
    "en": "Malee taught her child to exchange baht for dollars in a board game.",
    "ko": "말리는 보드게임에서 아이에게 바트를 달러로 바꾸는 법을 가르쳤어요.",
    "blank": "ดอลลาร์",
+   "src": "made"
+  }
+ ],
+ "w|ดัก": [
+  {
+   "text": "เอกยืนดักรอเพื่อนที่ประตูยิมเพราะเพื่อนชอบแอบกลับก่อน",
+   "en": "Ek waited at the gym door to catch his friend, who likes to sneak off early.",
+   "ko": "친구가 몰래 먼저 가는 버릇이 있어서 에크는 헬스장 문 앞에서 지키고 기다렸어요.",
+   "blank": "ดัก",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนเจ้าสาวดักรอปิยะที่ประตูเพื่อเรียกค่าผ่านทางตามประเพณี",
+   "en": "The bridesmaids waited to block Piya at the door to ask for the traditional toll.",
+   "ko": "신부 친구들은 전통대로 통행료를 받으려고 문 앞에서 피야를 가로막고 기다렸어요.",
+   "blank": "ดัก",
    "src": "made"
   }
  ],
@@ -23425,6 +23569,22 @@
    "blank": "แตงกวา"
   }
  ],
+ "w|แต่งกาย": [
+  {
+   "text": "ยิมนี้ขอให้สมาชิกแต่งกายด้วยชุดกีฬาและรองเท้าผ้าใบ",
+   "en": "This gym asks members to dress in sportswear and sneakers.",
+   "ko": "이 헬스장은 회원들에게 운동복과 운동화를 입으라고 해요.",
+   "blank": "แต่งกาย",
+   "src": "made"
+  },
+  {
+   "text": "การ์ดเชิญขอให้แขกแต่งกายโทนสีพาสเทล",
+   "en": "The invitation asked guests to dress in pastel tones.",
+   "ko": "청첩장은 하객들에게 파스텔 톤으로 옷을 입어 달라고 했어요.",
+   "blank": "แต่งกาย",
+   "src": "made"
+  }
+ ],
  "w|แต่งงาน": [
   {
    "text": "ทั้งคู่แต่งงานแล้ว",
@@ -23896,6 +24056,22 @@
    "en": "Suda chose her words carefully when writing to an unhappy client.",
    "ko": "수다는 불만이 있는 고객에게 메일을 쓸 때 말을 신중하게 골랐어요.",
    "blank": "ถ้อยคำ",
+   "src": "made"
+  }
+ ],
+ "w|ถอยหลัง": [
+  {
+   "text": "ครูแอโรบิกให้ทุกคนก้าวถอยหลังสามก้าวแล้วปรบมือ",
+   "en": "The aerobics teacher had everyone step back three steps and clap.",
+   "ko": "에어로빅 선생님은 모두에게 세 걸음 뒤로 물러나서 박수를 치라고 했어요.",
+   "blank": "ถอยหลัง",
+   "src": "made"
+  },
+  {
+   "text": "ช่างภาพเดินถอยหลังจนเกือบชนโต๊ะเค้ก",
+   "en": "The photographer walked backward until he nearly bumped into the cake table.",
+   "ko": "사진작가는 뒷걸음질 치다가 케이크 테이블에 부딪힐 뻔했어요.",
+   "blank": "ถอยหลัง",
    "src": "made"
   }
  ],
@@ -26995,6 +27171,22 @@
    "blank": "ทุกวันนี้"
   }
  ],
+ "w|ทุกสิ่งทุกอย่าง": [
+  {
+   "text": "เอกบอกว่าทุกสิ่งทุกอย่างเริ่มจากการตื่นมาออกกำลังกายให้ได้",
+   "en": "Ek says everything starts with actually getting up to exercise.",
+   "ko": "에크는 모든 것이 일어나서 운동하는 데서 시작된다고 말해요.",
+   "blank": "ทุกสิ่งทุกอย่าง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะขอบคุณพ่อแม่ที่เตรียมทุกสิ่งทุกอย่างให้งานนี้",
+   "en": "Piya thanked his parents for preparing everything for this wedding.",
+   "ko": "피야는 이 결혼식을 위해 모든 것을 준비해 준 부모님께 감사했어요.",
+   "blank": "ทุกสิ่งทุกอย่าง",
+   "src": "made"
+  }
+ ],
  "w|ทุกอย่าง": [
   {
    "text": "ทุกอย่างจะดีขึ้นเอง",
@@ -27534,6 +27726,22 @@
    "en": "Suda compared wholesale prices from two suppliers before ordering drinking water.",
    "ko": "수다는 생수를 주문하기 전에 두 도매상의 가격을 비교했어요.",
    "blank": "เทียบ",
+   "src": "made"
+  }
+ ],
+ "w|เทียม": [
+  {
+   "text": "เพื่อนของเอกใส่ขาเทียมแต่ยังวิ่งได้เร็วกว่าหลายคนในยิม",
+   "en": "Ek's friend wears a prosthetic leg but still runs faster than many people at the gym.",
+   "ko": "에크의 친구는 의족을 하고도 헬스장의 많은 사람보다 빨리 달려요.",
+   "blank": "เทียม",
+   "src": "made"
+  },
+  {
+   "text": "ดอกไม้บนโต๊ะเป็นดอกไม้เทียมแต่ดูเหมือนจริงมาก",
+   "en": "The flowers on the tables are artificial but look very real.",
+   "ko": "테이블 위 꽃은 조화지만 진짜처럼 보여요.",
+   "blank": "เทียม",
    "src": "made"
   }
  ],
@@ -29027,6 +29235,22 @@
    "src": "made"
   }
  ],
+ "w|นัยน์ตา": [
+  {
+   "text": "เหงื่อไหลเข้านัยน์ตาเอกจนต้องหยุดวิ่งเช็ดหน้า",
+   "en": "Sweat ran into Ek's eyes so he had to stop running to wipe his face.",
+   "ko": "땀이 눈에 들어가서 에크는 달리기를 멈추고 얼굴을 닦아야 했어요.",
+   "blank": "นัยน์ตา",
+   "src": "made"
+  },
+  {
+   "text": "นัยน์ตาของแม่ปิยะมีน้ำตาคลอตอนลูกชายสวมแหวน",
+   "en": "Tears welled up in Piya's mother's eyes when her son put on the ring.",
+   "ko": "아들이 반지를 끼우자 피야 어머니의 눈에 눈물이 고였어요.",
+   "blank": "นัยน์ตา",
+   "src": "made"
+  }
+ ],
  "w|น่า": [
   {
    "text": "เรื่องนี้น่าสนใจมาก",
@@ -30022,6 +30246,22 @@
    "en": "The kids collect shells at low tide.",
    "ko": "아이들은 썰물 때 조개를 주워.",
    "blank": "น้ำลง",
+   "src": "made"
+  }
+ ],
+ "w|น้ำลาย": [
+  {
+   "text": "เอกวิ่งนานจนปากแห้งไม่มีน้ำลาย",
+   "en": "Ek ran so long that his mouth went dry with no saliva.",
+   "ko": "에크는 너무 오래 달려서 입이 바싹 말랐어요.",
+   "blank": "น้ำลาย",
+   "src": "made"
+  },
+  {
+   "text": "เด็กเชิญแหวนตื่นเต้นจนกลืนน้ำลายเสียงดัง",
+   "en": "The ring bearer was so nervous he swallowed loudly.",
+   "ko": "반지를 든 아이가 너무 긴장해서 침을 꿀꺽 삼켰어요.",
+   "blank": "น้ำลาย",
    "src": "made"
   }
  ],
@@ -31173,6 +31413,22 @@
    "src": "made"
   }
  ],
+ "w|บรรเทา": [
+  {
+   "text": "เอกใช้ถุงน้ำแข็งประคบเพื่อบรรเทาอาการปวดน่อง",
+   "en": "Ek uses an ice pack to relieve the pain in his calves.",
+   "ko": "에크는 종아리 통증을 덜려고 얼음팩으로 찜질해요.",
+   "blank": "บรรเทา",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าสาวกินยาแก้ปวดหัวเพื่อบรรเทาอาการตอนบ่าย",
+   "en": "The bride took a headache pill to ease the symptoms in the afternoon.",
+   "ko": "신부는 오후에 두통을 덜려고 진통제를 먹었어요.",
+   "blank": "บรรเทา",
+   "src": "made"
+  }
+ ],
  "w|บรรพบุรุษ": [
   {
    "text": "ก่อนงานเริ่ม ชัยไหว้บรรพบุรุษที่หิ้งพระในบ้าน",
@@ -31763,6 +32019,22 @@
    "src": "made"
   }
  ],
+ "w|บ่า": [
+  {
+   "text": "เอกพาดผ้าขนหนูไว้บนบ่าระหว่างพักเซต",
+   "en": "Ek drapes a towel over his shoulder between sets.",
+   "ko": "에크는 세트 사이 쉬는 동안 수건을 어깨에 걸쳐 둬요.",
+   "blank": "บ่า",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนเจ้าบ่าวยกปิยะขึ้นบ่าแล้วพาเดินรอบงาน",
+   "en": "The groomsmen lifted Piya onto their shoulders and carried him around the party.",
+   "ko": "신랑 친구들이 피야를 어깨에 태우고 피로연장을 한 바퀴 돌았어요.",
+   "blank": "บ่า",
+   "src": "made"
+  }
+ ],
  "w|บ้า": [
   {
    "text": "บ้าไปแล้วหรือไง",
@@ -32068,6 +32340,22 @@
    "en": "Villagers told Somsak that this hilltop temple was built thanks to the spiritual standing of a revered monk.",
    "ko": "마을 사람들은 이 산 위 절이 한 큰스님의 덕망으로 지어졌다고 솜싹에게 말해 줬어요.",
    "blank": "บารมี",
+   "src": "made"
+  }
+ ],
+ "w|บำบัด": [
+  {
+   "text": "หลังบาดเจ็บ เอกต้องไปบำบัดหัวเข่ากับนักกายภาพทุกสัปดาห์",
+   "en": "After his injury, Ek has to go for knee therapy with a physiotherapist every week.",
+   "ko": "부상 이후 에크는 매주 물리치료사에게 무릎 치료를 받으러 가야 해요.",
+   "blank": "บำบัด",
+   "src": "made"
+  },
+  {
+   "text": "เพลงช้าในงานแต่งช่วยบำบัดความเครียดของปิยะได้ดี",
+   "en": "The slow songs at the wedding helped ease Piya's stress.",
+   "ko": "결혼식의 잔잔한 노래가 피야의 스트레스를 잘 풀어 줬어요.",
+   "blank": "บำบัด",
    "src": "made"
   }
  ],
@@ -34465,6 +34753,22 @@
    "src": "made"
   }
  ],
+ "w|ปลอด": [
+  {
+   "text": "เอกเลือกยิมที่ปลอดควันบุหรี่และมีอากาศถ่ายเท",
+   "en": "Ek chose a gym that is smoke-free and well-ventilated.",
+   "ko": "에크는 담배 연기가 없고 환기가 잘되는 헬스장을 골랐어요.",
+   "blank": "ปลอด",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเลือกจัดงานกลางแจ้งในสวนที่ปลอดเสียงรถ",
+   "en": "Piya chose to hold the wedding outdoors in a garden free from traffic noise.",
+   "ko": "피야는 차 소리가 없는 정원에서 야외 결혼식을 하기로 했어요.",
+   "blank": "ปลอด",
+   "src": "made"
+  }
+ ],
  "w|ปลอดภัย": [
   {
    "text": "เดินทางปลอดภัยนะ",
@@ -34861,6 +35165,22 @@
    "en": "The doctor already checked my lungs.",
    "ko": "의사가 폐를 검사해 줬어.",
    "blank": "ปอด"
+  }
+ ],
+ "w|ป้อน": [
+  {
+   "text": "เอกป้อนข้อมูลน้ำหนักและส่วนสูงลงในแอปนับแคลอรี",
+   "en": "Ek entered his weight and height into the calorie-counting app.",
+   "ko": "에크는 칼로리 계산 앱에 몸무게와 키를 입력했어요.",
+   "blank": "ป้อน",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะกับเจ้าสาวป้อนเค้กให้กันท่ามกลางเสียงเชียร์",
+   "en": "Piya and his bride fed each other cake amid cheers.",
+   "ko": "피야와 신부는 환호 속에서 서로 케이크를 먹여 줬어요.",
+   "blank": "ป้อน",
+   "src": "made"
   }
  ],
  "w|ป้อม": [
@@ -36927,6 +37247,22 @@
    "en": "Put sunscreen on your skin.",
    "ko": "피부에 선크림 발라.",
    "blank": "ผิว"
+  }
+ ],
+ "w|ผิวหนัง": [
+  {
+   "text": "เอกทาครีมกันแดดก่อนวิ่งข้างนอกเพื่อปกป้องผิวหนัง",
+   "en": "Ek puts on sunscreen before running outside to protect his skin.",
+   "ko": "에크는 피부를 보호하려고 밖에서 달리기 전에 선크림을 발라요.",
+   "blank": "ผิวหนัง",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าสาวของปิยะไปทำทรีตเมนต์ผิวหนังก่อนวันงานหนึ่งสัปดาห์",
+   "en": "Piya's bride had a skin treatment a week before the wedding.",
+   "ko": "피야의 신부는 결혼식 일주일 전에 피부 관리를 받았어요.",
+   "blank": "ผิวหนัง",
+   "src": "made"
   }
  ],
  "w|ผี": [
@@ -40372,6 +40708,22 @@
    "en": "The company held training for all staff on harassment and consent before sexual relations.",
    "ko": "회사는 모든 직원에게 성희롱과 성관계 전 동의에 관한 교육을 했어요.",
    "blank": "เพศสัมพันธ์",
+   "src": "made"
+  }
+ ],
+ "w|เพาะ": [
+  {
+   "text": "เอกเพาะต้นอ่อนทานตะวันไว้กินเป็นอาหารคลีนหลังออกกำลังกาย",
+   "en": "Ek grows sunflower sprouts to eat as clean food after working out.",
+   "ko": "에크는 운동 후에 건강식으로 먹으려고 해바라기 새싹을 길러요.",
+   "blank": "เพาะ",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของปิยะเพาะต้นกุหลาบไว้หลายเดือนเพื่อใช้ตกแต่งงาน",
+   "en": "Piya's mother grew roses for months to decorate the wedding.",
+   "ko": "피야의 어머니는 결혼식 장식에 쓰려고 몇 달 동안 장미를 키웠어요.",
+   "blank": "เพาะ",
    "src": "made"
   }
  ],
@@ -45627,6 +45979,22 @@
    "blank": "เยี่ยมเยียน"
   }
  ],
+ "w|เยียวยา": [
+  {
+   "text": "การออกกำลังกายช่วยเยียวยาจิตใจของเอกหลังเลิกงานหนัก",
+   "en": "Exercise helps heal Ek's mind after a hard day at work.",
+   "ko": "운동은 고된 일을 마친 에크의 마음을 치유해 줘요.",
+   "blank": "เยียวยา",
+   "src": "made"
+  },
+  {
+   "text": "งานแต่งครั้งนี้ช่วยเยียวยาครอบครัวที่เพิ่งผ่านเรื่องเศร้ามา",
+   "en": "This wedding helped heal a family that had just been through sad times.",
+   "ko": "이번 결혼식은 얼마 전 슬픈 일을 겪은 가족을 위로해 주었어요.",
+   "blank": "เยียวยา",
+   "src": "made"
+  }
+ ],
  "w|เยือกเย็น": [
   {
    "text": "เขาเป็นคนเยือกเย็น",
@@ -46890,6 +47258,22 @@
    "en": "Wanna is acting team lead while the lead is on maternity leave.",
    "ko": "완나는 팀장이 출산 휴가 중인 동안 팀장 대행을 맡고 있어요.",
    "blank": "รักษาการ",
+   "src": "made"
+  }
+ ],
+ "w|รักษาตัว": [
+  {
+   "text": "เพื่อนร่วมยิมของเอกต้องรักษาตัวที่บ้านสองสัปดาห์หลังผ่าตัด",
+   "en": "Ek's gym buddy has to recover at home for two weeks after surgery.",
+   "ko": "에크의 헬스장 친구는 수술 후 두 주 동안 집에서 요양해야 해요.",
+   "blank": "รักษาตัว",
+   "src": "made"
+  },
+  {
+   "text": "ปู่ของปิยะยังรักษาตัวอยู่โรงพยาบาลจึงดูงานผ่านวิดีโอคอล",
+   "en": "Piya's grandfather is still being treated in hospital, so he watched the wedding by video call.",
+   "ko": "피야의 할아버지는 아직 병원에서 치료 중이라 영상 통화로 결혼식을 봤어요.",
+   "blank": "รักษาตัว",
    "src": "made"
   }
  ],
@@ -49113,6 +49497,22 @@
    "blank": "ลดราคา"
   }
  ],
+ "w|ล้น": [
+  {
+   "text": "ตอนเย็นคนล้นยิมจนเอกต้องรอคิวใช้เครื่อง",
+   "en": "In the evening the gym overflows with people, so Ek has to wait in line for the machines.",
+   "ko": "저녁이면 헬스장이 사람으로 넘쳐서 에크는 기구를 쓰려고 줄을 서야 해요.",
+   "blank": "ล้น",
+   "src": "made"
+  },
+  {
+   "text": "แขกมาเยอะจนโต๊ะอาหารล้นออกไปถึงลานจอดรถ",
+   "en": "So many guests came that the food tables spilled over into the parking lot.",
+   "ko": "하객이 너무 많이 와서 음식 테이블이 주차장까지 넘쳤어요.",
+   "blank": "ล้น",
+   "src": "made"
+  }
+ ],
  "w|ลบ": [
   {
    "text": "ช่วยลบข้อความเก่าให้หน่อย",
@@ -49932,6 +50332,22 @@
    "en": "Wanna writes the task priorities on the board every Monday morning.",
    "ko": "완나는 매주 월요일 아침 칠판에 업무 우선순위를 적어 둬요.",
    "blank": "ลำดับความสำคัญ",
+   "src": "made"
+  }
+ ],
+ "w|ลำตัว": [
+  {
+   "text": "ท่าแพลงก์ช่วยให้ลำตัวของเอกแข็งแรงขึ้น",
+   "en": "The plank helps make Ek's torso stronger.",
+   "ko": "플랭크는 에크의 몸통을 더 튼튼하게 해 줘요.",
+   "blank": "ลำตัว",
+   "src": "made"
+  },
+  {
+   "text": "ชุดเจ้าสาวรัดลำตัวพอดีจนช่างตัดชุดภูมิใจ",
+   "en": "The wedding dress fit the bride's torso so perfectly that the dressmaker was proud.",
+   "ko": "웨딩드레스가 신부의 몸통에 딱 맞아서 재단사가 뿌듯해했어요.",
+   "blank": "ลำตัว",
    "src": "made"
   }
  ],
@@ -51235,6 +51651,22 @@
    "en": "Dolphins play in the water near the boat.",
    "ko": "돌고래가 배 근처에서 물놀이해.",
    "blank": "โลมา"
+  }
+ ],
+ "w|โลหิต": [
+  {
+   "text": "ฟิตเนสจัดกิจกรรมบริจาคโลหิตร่วมกับโรงพยาบาลใกล้ๆ",
+   "en": "The gym held a blood donation event with a nearby hospital.",
+   "ko": "헬스장은 근처 병원과 함께 헌혈 행사를 열었어요.",
+   "blank": "โลหิต",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะกับเจ้าสาวเชิญแขกร่วมบริจาคโลหิตแทนการให้ของขวัญ",
+   "en": "Piya and his bride invited guests to donate blood instead of giving gifts.",
+   "ko": "피야와 신부는 하객들에게 선물 대신 헌혈에 참여해 달라고 했어요.",
+   "blank": "โลหิต",
+   "src": "made"
   }
  ],
  "w|ไล่": [
@@ -54307,6 +54739,22 @@
    "blank": "สบู่"
   }
  ],
+ "w|สปา": [
+  {
+   "text": "หลังซ้อมหนักทั้งสัปดาห์ เอกให้รางวัลตัวเองด้วยการไปนวดที่สปา",
+   "en": "After training hard all week, Ek rewarded himself with a massage at the spa.",
+   "ko": "일주일 내내 열심히 운동한 에크는 스파에서 마사지를 받으며 자신에게 상을 줬어요.",
+   "blank": "สปา",
+   "src": "made"
+  },
+  {
+   "text": "หลังงานแต่ง ปิยะกับเจ้าสาวไปพักผ่อนที่สปาริมทะเล",
+   "en": "After the wedding, Piya and his bride went to relax at a seaside spa.",
+   "ko": "결혼식이 끝나고 피야와 신부는 바닷가 스파로 쉬러 갔어요.",
+   "blank": "สปา",
+   "src": "made"
+  }
+ ],
  "w|สภา": [
   {
    "text": "ธนาค้นรายงานการประชุมสภาเก่า ๆ ในห้องเอกสาร",
@@ -54427,6 +54875,22 @@
    "en": "Papaya salad goes well with grilled chicken.",
    "ko": "솜땀은 닭구이와 잘 어울려.",
    "blank": "ส้มตำ"
+  }
+ ],
+ "w|สมทบ": [
+  {
+   "text": "สมาชิกยิมช่วยกันสมทบเงินซื้อเครื่องพายเรือเครื่องใหม่",
+   "en": "The gym members chipped in money to buy a new rowing machine.",
+   "ko": "헬스장 회원들은 돈을 보태 새 로잉 머신을 샀어요.",
+   "blank": "สมทบ",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนๆ สมทบเงินซื้อตู้เย็นเป็นของขวัญให้ปิยะ",
+   "en": "Friends pooled money to buy a fridge as a gift for Piya.",
+   "ko": "친구들은 돈을 보태 피야에게 냉장고를 선물했어요.",
+   "blank": "สมทบ",
+   "src": "made"
   }
  ],
  "w|สมบัติ": [
@@ -55715,6 +56179,22 @@
    "src": "made"
   }
  ],
+ "w|สักนิด": [
+  {
+   "text": "เทรนเนอร์บอกเอกให้ยกเข่าสูงขึ้นอีกสักนิด",
+   "en": "The trainer told Ek to raise his knees just a little higher.",
+   "ko": "트레이너는 에크에게 무릎을 조금만 더 높이 들라고 했어요.",
+   "blank": "สักนิด",
+   "src": "made"
+  },
+  {
+   "text": "ช่างภาพขอให้ปิยะเอียงหน้าไปทางเจ้าสาวอีกสักนิด",
+   "en": "The photographer asked Piya to tilt his face toward the bride just a little more.",
+   "ko": "사진작가는 피야에게 신부 쪽으로 얼굴을 조금만 더 기울여 달라고 했어요.",
+   "blank": "สักนิด",
+   "src": "made"
+  }
+ ],
  "w|สักวัน": [
   {
    "text": "วิชัยหวังว่าสักวันจะได้มีบ้านเล็กๆ ริมทะเล",
@@ -55833,6 +56313,22 @@
    "en": "Don't forget to order the birthday gift.",
    "ko": "생일 선물 주문하는 거 잊지 마.",
    "blank": "สั่งซื้อ"
+  }
+ ],
+ "w|สั่งสอน": [
+  {
+   "text": "โค้ชรุ่นเก่ามักสั่งสอนเอกเรื่องวินัยมากกว่าเรื่องท่าทาง",
+   "en": "The old-school coach often lectures Ek on discipline more than on form.",
+   "ko": "옛날식 코치는 자세보다 규율에 대해 에크를 더 자주 가르쳐요.",
+   "blank": "สั่งสอน",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ใหญ่ในงานสั่งสอนคู่บ่าวสาวให้อดทนต่อกัน",
+   "en": "The elders at the wedding advised the couple to be patient with each other.",
+   "ko": "결혼식 어르신들은 신랑 신부에게 서로 참고 살라고 일러 주었어요.",
+   "blank": "สั่งสอน",
+   "src": "made"
   }
  ],
  "w|สัญชาติ": [
@@ -58339,6 +58835,22 @@
    "src": "made"
   }
  ],
+ "w|ไส้": [
+  {
+   "text": "หมอบอกเอกว่าปวดท้องด้านขวาอาจเป็นไส้ติ่งอักเสบได้",
+   "en": "The doctor told Ek that pain on the right side of his belly could be appendicitis.",
+   "ko": "의사는 에크에게 오른쪽 배가 아프면 맹장염일 수 있다고 했어요.",
+   "blank": "ไส้",
+   "src": "made"
+  },
+  {
+   "text": "ในงานเลี้ยงมีไส้กรอกอีสานย่างให้แขกกินเล่น",
+   "en": "The reception had grilled Isan sausages for guests to snack on.",
+   "ko": "피로연에는 하객들이 집어 먹을 이산식 구운 소시지가 있었어요.",
+   "blank": "ไส้",
+   "src": "made"
+  }
+ ],
  "w|ไส้กรอก": [
   {
    "text": "ย่างไส้กรอกกินกับข้าว",
@@ -59837,6 +60349,22 @@
    "blank": "หลอดไฟ"
   }
  ],
+ "w|หลอดเลือด": [
+  {
+   "text": "หมอบอกเอกว่าการวิ่งช่วยให้หลอดเลือดแข็งแรง",
+   "en": "The doctor told Ek that running helps keep blood vessels healthy.",
+   "ko": "의사는 에크에게 달리기가 혈관을 튼튼하게 해 준다고 말했어요.",
+   "blank": "หลอดเลือด",
+   "src": "made"
+  },
+  {
+   "text": "คุณลุงของปิยะเพิ่งผ่าตัดหลอดเลือดหัวใจแต่ก็มาร่วมงานได้",
+   "en": "Piya's uncle just had heart blood vessel surgery but still made it to the wedding.",
+   "ko": "피야의 큰아버지는 얼마 전 심장 혈관 수술을 받았지만 결혼식에 올 수 있었어요.",
+   "blank": "หลอดเลือด",
+   "src": "made"
+  }
+ ],
  "w|หล่อน": [
   {
    "text": "ในนิยายที่ประยุทธอ่านตอนพักเที่ยง หล่อนเป็นนายกเทศมนตรีหญิงคนแรกของเมือง",
@@ -59997,6 +60525,22 @@
    "en": "Call after the meeting ends.",
    "ko": "회의가 끝난 뒤에 전화해.",
    "blank": "หลังจาก"
+  }
+ ],
+ "w|หลังจากที่": [
+  {
+   "text": "หลังจากที่เลิกกินน้ำหวาน เอกก็รู้สึกตัวเบาขึ้นมาก",
+   "en": "After he quit sugary drinks, Ek felt much lighter.",
+   "ko": "단 음료를 끊은 뒤로 에크는 몸이 훨씬 가벼워졌어요.",
+   "blank": "หลังจากที่",
+   "src": "made"
+  },
+  {
+   "text": "หลังจากที่รดน้ำสังข์เสร็จ แขกก็ไปถ่ายรูปกับคู่บ่าวสาว",
+   "en": "After the water-pouring blessing was done, the guests went to take photos with the couple.",
+   "ko": "물 붓기 의식이 끝난 뒤 하객들은 신랑 신부와 사진을 찍으러 갔어요.",
+   "blank": "หลังจากที่",
+   "src": "made"
   }
  ],
  "w|หลังจากนั้น": [
@@ -61071,6 +61615,38 @@
    "en": "I ran until I was out of breath.",
    "ko": "숨이 찰 때까지 달렸어.",
    "blank": "หายใจ"
+  }
+ ],
+ "w|หายใจเข้า": [
+  {
+   "text": "ครูโยคะบอกเอกให้หายใจเข้าลึกๆ แล้วค่อยๆ ยกแขน",
+   "en": "The yoga teacher told Ek to breathe in deeply and slowly raise his arms.",
+   "ko": "요가 선생님은 에크에게 숨을 깊이 들이쉬고 천천히 팔을 올리라고 했어요.",
+   "blank": "หายใจเข้า",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะหายใจเข้าลึกๆ ก่อนจะกล่าวขอบคุณแขกบนเวที",
+   "en": "Piya took a deep breath in before thanking the guests on stage.",
+   "ko": "피야는 무대에서 하객들에게 감사 인사를 하기 전에 숨을 깊이 들이쉬었어요.",
+   "blank": "หายใจเข้า",
+   "src": "made"
+  }
+ ],
+ "w|หายใจไม่ออก": [
+  {
+   "text": "เอกวิ่งบนลู่เร็วเกินไปจนแทบหายใจไม่ออก",
+   "en": "Ek ran on the treadmill so fast he could barely breathe.",
+   "ko": "에크는 러닝머신에서 너무 빨리 달려서 숨이 막힐 지경이었어요.",
+   "blank": "หายใจไม่ออก",
+   "src": "made"
+  },
+  {
+   "text": "ชุดสูทคับจนปิยะรู้สึกเหมือนหายใจไม่ออกตลอดงาน",
+   "en": "The suit was so tight that Piya felt like he couldn't breathe all through the wedding.",
+   "ko": "정장이 너무 꽉 껴서 피야는 결혼식 내내 숨이 막히는 것 같았어요.",
+   "blank": "หายใจไม่ออก",
+   "src": "made"
   }
  ],
  "w|หายตัว": [
@@ -62569,6 +63145,22 @@
    "blank": "อนาคต"
   }
  ],
+ "w|อนามัย": [
+  {
+   "text": "ฟิตเนสติดป้ายให้ทุกคนเช็ดเครื่องหลังใช้เพื่อสุขอนามัย",
+   "en": "The gym put up a sign asking everyone to wipe the machines after use for hygiene.",
+   "ko": "헬스장은 위생을 위해 기구를 쓴 뒤 닦으라는 안내문을 붙였어요.",
+   "blank": "อนามัย",
+   "src": "made"
+  },
+  {
+   "text": "ป้าของปิยะทำงานที่สถานีอนามัยประจำตำบล",
+   "en": "Piya's aunt works at the district health station.",
+   "ko": "피야의 이모는 면 보건소에서 일해요.",
+   "blank": "อนามัย",
+   "src": "made"
+  }
+ ],
  "w|อนึ่ง": [
   {
    "text": "บทบรรณาธิการปิดท้ายว่า อนึ่ง ทางสำนักข่าวขอขอบคุณผู้อ่านทุกท่าน",
@@ -63085,6 +63677,22 @@
    "blank": "อ้วน"
   }
  ],
+ "w|อวัยวะ": [
+  {
+   "text": "เทรนเนอร์อธิบายให้เอกฟังว่าการออกกำลังกายช่วยให้อวัยวะภายในทำงานดีขึ้น",
+   "en": "The trainer explained to Ek that exercise helps the internal organs work better.",
+   "ko": "트레이너는 에크에게 운동이 내장 기관이 더 잘 움직이도록 돕는다고 설명했어요.",
+   "blank": "อวัยวะ",
+   "src": "made"
+  },
+  {
+   "text": "หมอที่มางานแต่งของปิยะเล่าว่าหัวใจเป็นอวัยวะที่ทำงานหนักที่สุด",
+   "en": "The doctor at Piya's wedding said the heart is the hardest-working organ.",
+   "ko": "피야의 결혼식에 온 의사는 심장이 가장 열심히 일하는 장기라고 말했어요.",
+   "blank": "อวัยวะ",
+   "src": "made"
+  }
+ ],
  "w|อ้อ": [
   {
    "text": "อ้อ เธอพูดถูก",
@@ -63400,6 +64008,22 @@
    "en": "Wanna chose large lettering on the slides so people at the back could read it.",
    "ko": "완나는 뒷줄 사람도 읽을 수 있게 슬라이드 글자를 크게 골랐어요.",
    "blank": "อักษร",
+   "src": "made"
+  }
+ ],
+ "w|อักเสบ": [
+  {
+   "text": "ข้อศอกของเอกอักเสบเพราะยกดัมเบลหนักเกินไป",
+   "en": "Ek's elbow got inflamed because he lifted dumbbells that were too heavy.",
+   "ko": "에크는 너무 무거운 덤벨을 들어서 팔꿈치에 염증이 생겼어요.",
+   "blank": "อักเสบ",
+   "src": "made"
+  },
+  {
+   "text": "รองเท้าใหม่บีบจนนิ้วเท้าของปิยะอักเสบหลังงานเลี้ยง",
+   "en": "The new shoes pinched so much that Piya's toes got inflamed after the reception.",
+   "ko": "새 신발이 너무 꽉 껴서 피로연 뒤 피야의 발가락에 염증이 났어요.",
+   "blank": "อักเสบ",
    "src": "made"
   }
  ],
@@ -65421,6 +66045,22 @@
    "en": "Ice cream melts fast in the sun.",
    "ko": "아이스크림이 햇볕에 빨리 녹아.",
    "blank": "ไอศกรีม"
+  }
+ ],
+ "w|ฮอร์โมน": [
+  {
+   "text": "เทรนเนอร์เล่าว่าการนอนน้อยทำให้ฮอร์โมนเสียสมดุล",
+   "en": "The trainer said that too little sleep throws hormones out of balance.",
+   "ko": "트레이너는 잠이 부족하면 호르몬 균형이 깨진다고 말했어요.",
+   "blank": "ฮอร์โมน",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าสาวเล่าขำๆ ว่าตื่นเต้นจนฮอร์โมนพุ่งตั้งแต่เช้า",
+   "en": "The bride joked that she was so excited her hormones were surging from the morning.",
+   "ko": "신부는 아침부터 너무 설레서 호르몬이 솟구쳤다고 웃으며 말했어요.",
+   "blank": "ฮอร์โมน",
+   "src": "made"
   }
  ],
  "w|ฮัลโหล": [

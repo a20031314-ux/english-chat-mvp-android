@@ -503,6 +503,22 @@
    "blank": "أتعب"
   }
  ],
+ "w|أتلف": [
+  {
+   "text": "أتلف البرد محصول كريم في ليلة واحدة.",
+   "en": "The hail destroyed Karim's crop in a single night.",
+   "ko": "우박이 하룻밤 만에 카림의 농작물을 망쳐 놓았어요.",
+   "blank": "أتلف",
+   "src": "made"
+  },
+  {
+   "text": "انسكب الماء على الطاولة فأتلف رسم منى.",
+   "en": "Water spilled on the table and ruined Mona's drawing.",
+   "ko": "탁자에 물이 쏟아져서 모나의 그림이 망가졌어요.",
+   "blank": "فأتلف",
+   "src": "made"
+  }
+ ],
  "w|أتم": [
   {
    "text": "أتم الطفل بناء البرج.",
@@ -695,6 +711,38 @@
    "en": "I quickly answered the phone.",
    "ko": "나는 전화에 빨리 대답했어.",
    "blank": "أجبت"
+  }
+ ],
+ "w|أجاد": [
+  {
+   "text": "أجاد كريم صنع الجبن كما علمته جدته.",
+   "en": "Karim mastered making cheese the way his grandmother taught him.",
+   "ko": "카림은 할머니에게 배운 대로 치즈를 아주 잘 만들게 됐어요.",
+   "blank": "أجاد",
+   "src": "made"
+  },
+  {
+   "text": "أجادت منى رسم الوجوه بعد سنة من التدريب.",
+   "en": "Mona became skilled at drawing faces after a year of practice.",
+   "ko": "모나는 일 년을 연습한 끝에 얼굴을 잘 그리게 됐어요.",
+   "blank": "أجادت",
+   "src": "made"
+  }
+ ],
+ "w|أجاز": [
+  {
+   "text": "أجاز مجلس القرية لكريم بناء غرفة جديدة.",
+   "en": "The village council permitted Karim to build a new room.",
+   "ko": "마을 의회는 카림이 방 하나를 새로 짓도록 허가했어요.",
+   "blank": "أجاز",
+   "src": "made"
+  },
+  {
+   "text": "أجازت المعلمة لمنى أن تستعمل الألوان الزيتية.",
+   "en": "The teacher allowed Mona to use oil paints.",
+   "ko": "선생님은 모나에게 유화 물감을 써도 된다고 허락했어요.",
+   "blank": "أجازت",
+   "src": "made"
   }
  ],
  "w|أجبر": [
@@ -1373,6 +1421,22 @@
    "src": "made"
   }
  ],
+ "w|أخلى": [
+  {
+   "text": "أخلى الدفاع المدني بيت كريم خوفا من انهيار الصخور.",
+   "en": "Civil defense evacuated Karim's house for fear of a rockslide.",
+   "ko": "민방위가 낙석을 우려해 카림의 집 사람들을 대피시켰어요.",
+   "blank": "أخلى",
+   "src": "made"
+  },
+  {
+   "text": "أخلت منى الطاولة من الأوراق لتبدأ لوحة كبيرة.",
+   "en": "Mona cleared the table of papers to start a big painting.",
+   "ko": "모나는 큰 그림을 시작하려고 탁자 위 종이를 다 치웠어요.",
+   "blank": "أخلت",
+   "src": "made"
+  }
+ ],
  "w|أخمص": [
   {
    "text": "أظهرت الصورة أثر أخمص قدم حافية على الأرض الموحلة.",
@@ -1695,6 +1759,22 @@
    "en": "I washed my ear well in the morning.",
    "ko": "나는 아침에 귀를 잘 씻었다.",
    "blank": "أذني"
+  }
+ ],
+ "w|أذهل": [
+  {
+   "text": "أذهل منظر الثلج على القمم ضيوف كريم.",
+   "en": "The sight of snow on the peaks amazed Karim's guests.",
+   "ko": "봉우리에 쌓인 눈 풍경에 카림의 손님들은 넋을 잃었어요.",
+   "blank": "أذهل",
+   "src": "made"
+  },
+  {
+   "text": "أذهلت منى زملاءها بلوحة بالأبيض والأسود فقط.",
+   "en": "Mona amazed her classmates with a painting in only black and white.",
+   "ko": "모나는 흑백만으로 그린 그림으로 친구들을 놀라게 했어요.",
+   "blank": "أذهلت",
+   "src": "made"
   }
  ],
  "w|أذى": [
@@ -2125,6 +2205,22 @@
    "src": "made"
   }
  ],
+ "w|أروى": [
+  {
+   "text": "أروى كريم حقله من ماء النبع.",
+   "en": "Karim watered his field from the spring.",
+   "ko": "카림은 샘물로 밭에 물을 댔어요.",
+   "blank": "أروى",
+   "src": "made"
+  },
+  {
+   "text": "أروت منى نبتة المرسم قبل أن تغادر.",
+   "en": "Mona watered the studio plant before leaving.",
+   "ko": "모나는 나가기 전에 작업실 화분에 물을 줬어요.",
+   "blank": "أروت",
+   "src": "made"
+  }
+ ],
  "w|أريكة": [
   {
    "text": "وضعت وسائد ملونة على أريكة غرفة الجلوس.",
@@ -2415,6 +2511,22 @@
    "en": "Be faster with your work.",
    "ko": "일을 더 빨리 해.",
    "blank": "أسرع"
+  }
+ ],
+ "w|أسرف": [
+  {
+   "text": "أسرف كريم في إطعام الدجاج فسمنت كثيرا.",
+   "en": "Karim overfed the chickens and they got very fat.",
+   "ko": "카림이 닭에게 먹이를 너무 많이 줘서 닭들이 몹시 살쪘어요.",
+   "blank": "أسرف",
+   "src": "made"
+  },
+  {
+   "text": "أسرفت منى في استعمال الماء فتمزقت الورقة.",
+   "en": "Mona used too much water and the paper tore.",
+   "ko": "모나가 물을 너무 많이 써서 종이가 찢어졌어요.",
+   "blank": "أسرفت",
+   "src": "made"
   }
  ],
  "w|أسطوانة": [
@@ -4447,6 +4559,22 @@
    "blank": "ألف"
   }
  ],
+ "w|ألفان": [
+  {
+   "text": "في العيد زار القرية ألفان من أبنائها المغتربين، كما أخبرنا كريم.",
+   "en": "At the holiday two thousand of the village's emigrant sons visited, as Karim told us.",
+   "ko": "카림 말로는 명절에 타지로 나간 마을 사람 이천 명이 찾아왔대요.",
+   "blank": "ألفان",
+   "src": "made"
+  },
+  {
+   "text": "في مكتبة المرسم ألفان من كتب الفن، وقد قرأت منى بعضها.",
+   "en": "The studio library has two thousand art books, and Mona has read some of them.",
+   "ko": "작업실 서재에는 미술책이 이천 권 있는데 모나는 그중 몇 권을 읽었어요.",
+   "blank": "ألفان",
+   "src": "made"
+  }
+ ],
  "w|ألقى": [
   {
    "text": "ألقى الورقة في سلة المهملات.",
@@ -4488,6 +4616,22 @@
    "en": "Mariam asked the jewelry seller if the stone was a real diamond.",
    "ko": "마리암은 장신구 상인에게 그 돌이 진짜 다이아몬드냐고 물었어요.",
    "blank": "ألماسا",
+   "src": "made"
+  }
+ ],
+ "w|ألمنيوم": [
+  {
+   "text": "غير كريم سقف الحظيرة بألواح من الألمنيوم.",
+   "en": "Karim replaced the barn roof with aluminum sheets.",
+   "ko": "카림은 헛간 지붕을 알루미늄 판으로 바꿨어요.",
+   "blank": "الألمنيوم",
+   "src": "made"
+  },
+  {
+   "text": "صنعت منى تمثالا صغيرا من أسلاك الألمنيوم.",
+   "en": "Mona made a small sculpture out of aluminum wire.",
+   "ko": "모나는 알루미늄 철사로 작은 조각을 만들었어요.",
+   "blank": "الألمنيوم",
    "src": "made"
   }
  ],
@@ -5838,6 +5982,22 @@
    "en": "The birds' chirping woke Maryam on the first morning of spring.",
    "ko": "봄 첫날 아침 새소리에 마리암이 잠에서 깼어요.",
    "blank": "أيقظت",
+   "src": "made"
+  }
+ ],
+ "w|أيل": [
+  {
+   "text": "خرج أيل من الغابة وشرب من النهر أمام بيت كريم.",
+   "en": "A deer came out of the forest and drank from the river in front of Karim's house.",
+   "ko": "사슴 한 마리가 숲에서 나와 카림의 집 앞 강물을 마셨어요.",
+   "blank": "أيل",
+   "src": "made"
+  },
+  {
+   "text": "طلبت المعلمة من منى أن ترسم أيلا في غابة ثلجية.",
+   "en": "The teacher asked Mona to draw a deer in a snowy forest.",
+   "ko": "선생님은 모나에게 눈 덮인 숲속 사슴을 그려 보라고 했어요.",
+   "blank": "أيلا",
    "src": "made"
   }
  ],
@@ -7657,6 +7817,22 @@
    "src": "made"
   }
  ],
+ "w|إوزة": [
+  {
+   "text": "هربت إوزة من حظيرة كريم ووجدها عند الجسر.",
+   "en": "A goose escaped from Karim's barn and he found it by the bridge.",
+   "ko": "거위 한 마리가 카림의 헛간에서 달아났는데 다리 옆에서 찾았어요.",
+   "blank": "إوزة",
+   "src": "made"
+  },
+  {
+   "text": "رسمت منى إوزة تقود صغارها إلى البركة.",
+   "en": "Mona painted a goose leading its young to the pond.",
+   "ko": "모나는 새끼들을 연못으로 데려가는 거위를 그렸어요.",
+   "blank": "إوزة",
+   "src": "made"
+  }
+ ],
  "w|إياك": [
   {
    "text": "قال خالد لصاحب الكلب: إياك أن تعطيه الشوكولاتة.",
@@ -8397,6 +8573,22 @@
    "en": "Did you accuse him without proof?",
    "ko": "증거 없이 그를 고소했어?",
    "blank": "اتهمته"
+  }
+ ],
+ "w|اثنا": [
+  {
+   "text": "في حظيرة كريم اثنا عشر خروفا.",
+   "en": "There are twelve sheep in Karim's barn.",
+   "ko": "카림의 헛간에는 양이 열두 마리 있어요.",
+   "blank": "اثنا",
+   "src": "made"
+  },
+  {
+   "text": "في صف منى اثنا عشر طالبا من أعمار مختلفة.",
+   "en": "There are twelve students of different ages in Mona's class.",
+   "ko": "모나의 반에는 나이가 다양한 학생 열두 명이 있어요.",
+   "blank": "اثنا",
+   "src": "made"
   }
  ],
  "w|اثنان": [
@@ -15263,6 +15455,22 @@
    "blank": "بجدية"
   }
  ],
+ "w|بجعة": [
+  {
+   "text": "نزلت بجعة بيضاء على بحيرة الجبل فركض كريم ليصورها.",
+   "en": "A white swan landed on the mountain lake, and Karim ran to photograph it.",
+   "ko": "하얀 고니가 산속 호수에 내려앉자 카림은 사진을 찍으러 달려갔어요.",
+   "blank": "بجعة",
+   "src": "made"
+  },
+  {
+   "text": "تحب منى أن ترسم البجعة وهي تسبح بين أوراق اللوتس.",
+   "en": "Mona loves to paint the swan swimming among lotus leaves.",
+   "ko": "모나는 연잎 사이를 헤엄치는 고니를 그리길 좋아해요.",
+   "blank": "البجعة",
+   "src": "made"
+  }
+ ],
  "w|بجل": [
   {
    "text": "بجل سامي معلمه القديم الذي حضر العرس وقدمه للضيوف.",
@@ -15916,6 +16124,22 @@
    "en": "Nour found an old bag of bulgur in the storeroom and threw it out.",
    "ko": "누르는 창고에서 오래된 불구르 봉지를 찾아서 버렸어요.",
    "blank": "برغل",
+   "src": "made"
+  }
+ ],
+ "w|برغوث": [
+  {
+   "text": "حك كلب كريم أذنه طوال الليل بسبب برغوث.",
+   "en": "Karim's dog scratched its ear all night because of a flea.",
+   "ko": "카림의 개가 벼룩 때문에 밤새 귀를 긁었어요.",
+   "blank": "برغوث",
+   "src": "made"
+  },
+  {
+   "text": "رسمت منى برغوثا ضخما تحت المجهر كأنه وحش.",
+   "en": "Mona drew a huge flea under a microscope as if it were a monster.",
+   "ko": "모나는 현미경으로 본 벼룩을 괴물처럼 크게 그렸어요.",
+   "blank": "برغوثا",
    "src": "made"
   }
  ],
@@ -17248,6 +17472,22 @@
    "en": "The guide described the desert so eloquently that Rana fell silent for a long time.",
    "ko": "안내인이 사막을 어찌나 유려하게 묘사했는지 라나는 한참 말이 없었어요.",
    "blank": "ببلاغة",
+   "src": "made"
+  }
+ ],
+ "w|بلبل": [
+  {
+   "text": "استيقظ كريم على صوت بلبل يغني في شجرة الجوز.",
+   "en": "Karim woke up to the sound of a nightingale singing in the walnut tree.",
+   "ko": "카림은 호두나무에서 노래하는 나이팅게일 소리에 잠이 깼어요.",
+   "blank": "بلبل",
+   "src": "made"
+  },
+  {
+   "text": "سمت منى لوحتها الجديدة: بلبل على غصن الرمان.",
+   "en": "Mona named her new painting \"A Nightingale on a Pomegranate Branch.\"",
+   "ko": "모나는 새 그림에 '석류나무 가지 위의 나이팅게일'이라는 이름을 붙였어요.",
+   "blank": "بلبل",
    "src": "made"
   }
  ],
@@ -20595,6 +20835,22 @@
    "en": "I traveled for nine days straight.",
    "ko": "나는 아홉 날 연속으로 여행했어.",
    "blank": "تسعة"
+  }
+ ],
+ "w|تسعمائة": [
+  {
+   "text": "قال كريم إن الكنيسة القديمة بنيت قبل تسعمائة عام.",
+   "en": "Karim said the old church was built nine hundred years ago.",
+   "ko": "카림은 그 옛 교회가 구백 년 전에 지어졌다고 했어요.",
+   "blank": "تسعمائة",
+   "src": "made"
+  },
+  {
+   "text": "قالت المعلمة لمنى إن عمر هذه اللوحة يزيد على تسعمائة سنة.",
+   "en": "The teacher told Mona this painting is over nine hundred years old.",
+   "ko": "선생님은 모나에게 이 그림이 구백 년도 넘었다고 했어요.",
+   "blank": "تسعمائة",
+   "src": "made"
   }
  ],
  "w|تسعون": [
@@ -25267,6 +25523,22 @@
    "src": "made"
   }
  ],
+ "w|ثمانمائة": [
+  {
+   "text": "يملك كريم بستانا فيه ثمانمائة شجرة تفاح.",
+   "en": "Karim owns an orchard with eight hundred apple trees.",
+   "ko": "카림은 사과나무 팔백 그루가 있는 과수원을 가지고 있어요.",
+   "blank": "ثمانمائة",
+   "src": "made"
+  },
+  {
+   "text": "زار معرض منى ثمانمائة شخص في أسبوعه الأول.",
+   "en": "Eight hundred people visited Mona's exhibition in its first week.",
+   "ko": "모나의 전시회에는 첫 주에 팔백 명이 다녀갔어요.",
+   "blank": "ثمانمائة",
+   "src": "made"
+  }
+ ],
  "w|ثمانون": [
   {
    "text": "ثمانون صفحة يجب أن أقرأها.",
@@ -26327,6 +26599,22 @@
    "en": "My brother needs heart surgery.",
    "ko": "내 동생은 심장 수술이 필요해.",
    "blank": "جراحة"
+  }
+ ],
+ "w|جرادة": [
+  {
+   "text": "أمسك كريم جرادة خضراء وأراها لأخيه الصغير.",
+   "en": "Karim caught a green grasshopper and showed it to his little brother.",
+   "ko": "카림은 초록 메뚜기를 잡아서 남동생에게 보여 줬어요.",
+   "blank": "جرادة",
+   "src": "made"
+  },
+  {
+   "text": "أضافت منى جرادة صغيرة في زاوية لوحة الحقل.",
+   "en": "Mona added a small grasshopper in the corner of the field painting.",
+   "ko": "모나는 들판 그림 한구석에 작은 메뚜기를 그려 넣었어요.",
+   "blank": "جرادة",
+   "src": "made"
   }
  ],
  "w|جرب": [
@@ -29101,6 +29389,22 @@
    "blank": "الحرب"
   }
  ],
+ "w|حرباء": [
+  {
+   "text": "وجد كريم حرباء على غصن الزيتون وقد صار لونها أخضر.",
+   "en": "Karim found a chameleon on an olive branch that had turned green.",
+   "ko": "카림은 올리브 가지에서 초록색으로 변한 카멜레온을 찾았어요.",
+   "blank": "حرباء",
+   "src": "made"
+  },
+  {
+   "text": "استعملت منى ألوانا كثيرة لترسم حرباء تتغير مع الضوء.",
+   "en": "Mona used many colors to paint a chameleon that changes with the light.",
+   "ko": "모나는 빛에 따라 변하는 카멜레온을 그리려고 여러 색을 썼어요.",
+   "blank": "حرباء",
+   "src": "made"
+  }
+ ],
  "w|حرة": [
   {
    "text": "اشترت صاحبة الكلب له لعبة من السوق الحرة في المطار.",
@@ -30558,6 +30862,22 @@
    "en": "Huda entered the competitive arena with companies much bigger than hers.",
    "ko": "후다는 자기 회사보다 훨씬 큰 회사들과 경쟁 무대에 뛰어들었어요.",
    "blank": "حلبة",
+   "src": "made"
+  }
+ ],
+ "w|حلزون": [
+  {
+   "text": "بعد المطر امتلأ حقل كريم بالحلزون.",
+   "en": "After the rain Karim's field filled with snails.",
+   "ko": "비가 온 뒤 카림의 밭에 달팽이가 가득했어요.",
+   "blank": "بالحلزون",
+   "src": "made"
+  },
+  {
+   "text": "شكلت منى حلزونا من الطين وجففته في الشمس.",
+   "en": "Mona shaped a snail out of clay and dried it in the sun.",
+   "ko": "모나는 진흙으로 달팽이를 빚어서 햇볕에 말렸어요.",
+   "blank": "حلزونا",
    "src": "made"
   }
  ],
@@ -32693,6 +33013,22 @@
    "src": "made"
   }
  ],
+ "w|خفاش": [
+  {
+   "text": "يسكن خفاش صغير في سقف حظيرة كريم منذ الصيف.",
+   "en": "A little bat has lived in the roof of Karim's barn since summer.",
+   "ko": "작은 박쥐 한 마리가 여름부터 카림의 헛간 지붕에 살아요.",
+   "blank": "خفاش",
+   "src": "made"
+  },
+  {
+   "text": "صنعت منى خفاشا من الورق الأسود لمعرض الخريف.",
+   "en": "Mona made a bat out of black paper for the autumn exhibition.",
+   "ko": "모나는 가을 전시회에 낼 박쥐를 검은 종이로 만들었어요.",
+   "blank": "خفاشا",
+   "src": "made"
+  }
+ ],
  "w|خفض": [
   {
    "text": "خفض الصوت قليلاً من فضلك.",
@@ -33186,6 +33522,22 @@
    "en": "Sara wrapped tape around her injured little finger.",
    "ko": "사라는 다친 새끼손가락에 테이프를 감았어요.",
    "blank": "خنصرها",
+   "src": "made"
+  }
+ ],
+ "w|خنفساء": [
+  {
+   "text": "تسلقت خنفساء سوداء حذاء كريم عند باب البيت.",
+   "en": "A black beetle climbed onto Karim's shoe at the front door.",
+   "ko": "검은 딱정벌레가 현관에서 카림의 신발 위로 기어올랐어요.",
+   "blank": "خنفساء",
+   "src": "made"
+  },
+  {
+   "text": "رسمت منى خنفساء حمراء بنقاط سوداء على غلاف دفترها.",
+   "en": "Mona drew a red ladybug with black dots on her notebook cover.",
+   "ko": "모나는 공책 표지에 검은 점이 박힌 빨간 무당벌레를 그렸어요.",
+   "blank": "خنفساء",
    "src": "made"
   }
  ],
@@ -33748,6 +34100,22 @@
    "en": "At the finish line Rana talked with a diplomat who works at one of the embassies.",
    "ko": "라나는 결승선에서 한 대사관에서 일하는 외교관과 이야기를 나눴어요.",
    "blank": "دبلوماسي",
+   "src": "made"
+  }
+ ],
+ "w|دبور": [
+  {
+   "text": "لسع دبور كريم وهو يقطف التين.",
+   "en": "A wasp stung Karim while he was picking figs.",
+   "ko": "카림이 무화과를 따다가 말벌에 쏘였어요.",
+   "blank": "دبور",
+   "src": "made"
+  },
+  {
+   "text": "دخل دبور من النافذة فتوقف درس منى دقائق.",
+   "en": "A wasp came in through the window and Mona's lesson stopped for a few minutes.",
+   "ko": "말벌이 창문으로 들어와서 모나의 수업이 몇 분 멈췄어요.",
+   "blank": "دبور",
    "src": "made"
   }
  ],
@@ -34377,6 +34745,22 @@
    "en": "A dolphin is very smart and swims fast.",
    "ko": "돌고래는 아주 똑똑하고 빨리 헤엄쳐.",
    "blank": "دلفين"
+  }
+ ],
+ "w|دلك": [
+  {
+   "text": "دلك كريم قدمي أبيه المتعبتين بزيت الزيتون.",
+   "en": "Karim rubbed his father's tired feet with olive oil.",
+   "ko": "카림은 아버지의 지친 발을 올리브유로 문질러 드렸어요.",
+   "blank": "دلك",
+   "src": "made"
+  },
+  {
+   "text": "دلكت منى الورق بإصبعها لتمزج ألوان الباستيل.",
+   "en": "Mona rubbed the paper with her finger to blend the pastel colors.",
+   "ko": "모나는 손가락으로 종이를 문질러 파스텔 색을 섞었어요.",
+   "blank": "دلكت",
+   "src": "made"
   }
  ],
  "w|دلل": [
@@ -39587,6 +39971,22 @@
    "blank": "سبعة"
   }
  ],
+ "w|سبعمائة": [
+  {
+   "text": "ترتفع قرية كريم سبعمائة متر عن الوادي.",
+   "en": "Karim's village rises seven hundred meters above the valley.",
+   "ko": "카림의 마을은 골짜기보다 칠백 미터 높아요.",
+   "blank": "سبعمائة",
+   "src": "made"
+  },
+  {
+   "text": "اشترت منى ورقا للرسم بسبعمائة ليرة.",
+   "en": "Mona bought drawing paper for seven hundred lira.",
+   "ko": "모나는 도화지를 칠백 리라에 샀어요.",
+   "blank": "بسبعمائة",
+   "src": "made"
+  }
+ ],
  "w|سبعون": [
   {
    "text": "سبعون طائرًا حلّق في السماء.",
@@ -39727,6 +40127,22 @@
    "en": "My blue jacket is very comfortable.",
    "ko": "내 파란 자켓은 정말 편해.",
    "blank": "سترتي"
+  }
+ ],
+ "w|ستمائة": [
+  {
+   "text": "يعيش في قرية كريم نحو ستمائة شخص فقط.",
+   "en": "Only about six hundred people live in Karim's village.",
+   "ko": "카림의 마을에는 고작 육백 명쯤 살아요.",
+   "blank": "ستمائة",
+   "src": "made"
+  },
+  {
+   "text": "بيعت لوحة منى في المزاد بستمائة دينار.",
+   "en": "Mona's painting sold at auction for six hundred dinars.",
+   "ko": "모나의 그림은 경매에서 육백 디나르에 팔렸어요.",
+   "blank": "بستمائة",
+   "src": "made"
   }
  ],
  "w|ستون": [
@@ -40050,6 +40466,22 @@
    "en": "Layla tightened the stopper on the bottle of new olive oil.",
    "ko": "레일라는 햇올리브유 병의 마개를 꽉 닫았어요.",
    "blank": "السدادة",
+   "src": "made"
+  }
+ ],
+ "w|سدس": [
+  {
+   "text": "أعطى كريم أخاه سدس المحصول مقابل مساعدته.",
+   "en": "Karim gave his brother a sixth of the harvest in return for his help.",
+   "ko": "카림은 도와준 대가로 형에게 수확의 육분의 일을 줬어요.",
+   "blank": "سدس",
+   "src": "made"
+  },
+  {
+   "text": "قسمت منى اللوحة بحيث تأخذ السماء سدس المساحة فقط.",
+   "en": "Mona divided the canvas so the sky takes only a sixth of the space.",
+   "ko": "모나는 하늘이 화면의 육분의 일만 차지하도록 그림을 나눴어요.",
+   "blank": "سدس",
    "src": "made"
   }
  ],
@@ -44969,6 +45401,22 @@
    "blank": "صرخ"
   }
  ],
+ "w|صرصور": [
+  {
+   "text": "صرخت أم كريم حين خرج صرصور من تحت الفرن.",
+   "en": "Karim's mother screamed when a cockroach came out from under the oven.",
+   "ko": "오븐 밑에서 바퀴벌레가 나오자 카림의 어머니가 소리를 질렀어요.",
+   "blank": "صرصور",
+   "src": "made"
+  },
+  {
+   "text": "قفزت منى عن الكرسي حين رأت صرصورا قرب علب الألوان.",
+   "en": "Mona jumped off the chair when she saw a cockroach near the paint boxes.",
+   "ko": "모나는 물감 상자 옆 바퀴벌레를 보고 의자에서 펄쩍 뛰었어요.",
+   "blank": "صرصورا",
+   "src": "made"
+  }
+ ],
  "w|صرف": [
   {
    "text": "صرف كل أمواله في يوم واحد.",
@@ -46871,6 +47319,22 @@
    "en": "The table is round in shape.",
    "ko": "탁자가 둥근 모양이에요.",
    "blank": "الطاولة"
+  }
+ ],
+ "w|طاووس": [
+  {
+   "text": "يربي جار كريم طاووسا يفتح ذيله كل صباح.",
+   "en": "Karim's neighbor raises a peacock that spreads its tail every morning.",
+   "ko": "카림의 이웃은 아침마다 꼬리를 펼치는 공작을 길러요.",
+   "blank": "طاووسا",
+   "src": "made"
+  },
+  {
+   "text": "احتاجت منى إلى ساعتين لترسم ريش الطاووس.",
+   "en": "Mona needed two hours to paint the peacock's feathers.",
+   "ko": "모나는 공작 깃털을 그리는 데 두 시간이 걸렸어요.",
+   "blank": "الطاووس",
+   "src": "made"
   }
  ],
  "w|طب": [
@@ -48873,6 +49337,22 @@
    "en": "I love houses with an antique style.",
    "ko": "나는 고풍스러운 집을 좋아해.",
    "blank": "عتيق"
+  }
+ ],
+ "w|عثة": [
+  {
+   "text": "أكلت عثة الصوف المعطف الذي خبأه كريم في الخزانة.",
+   "en": "A clothes moth ate the coat Karim had stored in the wardrobe.",
+   "ko": "카림이 옷장에 넣어 둔 외투를 옷좀나방이 갉아 먹었어요.",
+   "blank": "عثة",
+   "src": "made"
+  },
+  {
+   "text": "حامت عثة حول مصباح المرسم بينما كانت منى ترسم.",
+   "en": "A moth hovered around the studio lamp while Mona was drawing.",
+   "ko": "모나가 그림을 그리는 동안 나방 한 마리가 작업실 등 주위를 맴돌았어요.",
+   "blank": "عثة",
+   "src": "made"
   }
  ],
  "w|عثر": [
@@ -54423,6 +54903,22 @@
    "blank": "فقط"
   }
  ],
+ "w|فقمة": [
+  {
+   "text": "لم ير كريم فقمة في حياته، فهو لم يغادر الجبل قط.",
+   "en": "Karim has never seen a seal in his life; he has never left the mountain.",
+   "ko": "카림은 산을 떠나 본 적이 없어서 바다표범을 한 번도 본 적이 없어요.",
+   "blank": "فقمة",
+   "src": "made"
+  },
+  {
+   "text": "رسمت منى فقمة نائمة على الجليد بالفحم.",
+   "en": "Mona drew a seal sleeping on the ice in charcoal.",
+   "ko": "모나는 얼음 위에서 자는 바다표범을 목탄으로 그렸어요.",
+   "blank": "فقمة",
+   "src": "made"
+  }
+ ],
  "w|فقه": [
   {
    "text": "رتب الأمين كتب الفقه على الرف الأعلى.",
@@ -57141,6 +57637,22 @@
    "src": "made"
   }
  ],
+ "w|قملة": [
+  {
+   "text": "وجدت المعلمة قملة في شعر ابن كريم، فغسلته أمه بشامبو خاص.",
+   "en": "The teacher found a louse in Karim's son's hair, so his mother washed it with a special shampoo.",
+   "ko": "선생님이 카림 아들의 머리에서 이를 발견해서 엄마가 특수 샴푸로 감겼어요.",
+   "blank": "قملة",
+   "src": "made"
+  },
+  {
+   "text": "ضحك الطلاب حين رسمت منى قملة تلبس قبعة.",
+   "en": "The students laughed when Mona drew a louse wearing a hat.",
+   "ko": "모나가 모자를 쓴 이를 그리자 학생들이 웃었어요.",
+   "blank": "قملة",
+   "src": "made"
+  }
+ ],
  "w|قميص": [
   {
    "text": "لبست قميص أزرق اليوم.",
@@ -57211,6 +57723,22 @@
    "en": "A bomb exploded at the airport.",
    "ko": "공항에서 폭탄이 터졌어.",
    "blank": "قنبلة"
+  }
+ ],
+ "w|قنديل": [
+  {
+   "text": "أشعل كريم القنديل لأن الكهرباء انقطعت عن القرية.",
+   "en": "Karim lit the lantern because the power went out in the village.",
+   "ko": "마을에 전기가 끊겨서 카림은 등잔에 불을 붙였어요.",
+   "blank": "القنديل",
+   "src": "made"
+  },
+  {
+   "text": "لونت منى قنديل البحر بالأزرق الشفاف.",
+   "en": "Mona colored the jellyfish in transparent blue.",
+   "ko": "모나는 해파리를 투명한 파란색으로 칠했어요.",
+   "blank": "قنديل",
+   "src": "made"
   }
  ],
  "w|قنصل": [
@@ -59251,6 +59779,22 @@
    "src": "made"
   }
  ],
+ "w|كناري": [
+  {
+   "text": "اشترى كريم لابنته عصفور كناري أصفر من سوق المدينة.",
+   "en": "Karim bought his daughter a yellow canary from the city market.",
+   "ko": "카림은 도시 시장에서 딸에게 노란 카나리아를 사 줬어요.",
+   "blank": "كناري",
+   "src": "made"
+  },
+  {
+   "text": "لم تجد منى لونا أصفر يشبه لون طائر الكناري.",
+   "en": "Mona couldn't find a yellow that resembled the color of a canary.",
+   "ko": "모나는 카나리아 색과 비슷한 노란색을 찾지 못했어요.",
+   "blank": "الكناري",
+   "src": "made"
+  }
+ ],
  "w|كنافة": [
   {
    "text": "لم يقاوم علي رائحة الكنافة الساخنة عند باب الحلواني.",
@@ -60838,6 +61382,22 @@
    "en": "Mariam sent her friend a sweet shot of a newborn baby smiling.",
    "ko": "마리암은 친구에게 웃는 신생아의 귀여운 사진을 보냈어요.",
    "blank": "لقطة",
+   "src": "made"
+  }
+ ],
+ "w|لقلق": [
+  {
+   "text": "يبني لقلق عشه كل ربيع على مئذنة القرية القديمة، كما يقول كريم.",
+   "en": "A stork builds its nest every spring on the old village minaret, as Karim says.",
+   "ko": "카림 말로는 황새가 봄마다 마을 옛 첨탑 위에 둥지를 튼대요.",
+   "blank": "لقلق",
+   "src": "made"
+  },
+  {
+   "text": "وقف لقلق بساق واحدة في لوحة منى الأخيرة.",
+   "en": "A stork stood on one leg in Mona's latest painting.",
+   "ko": "모나의 최근 그림에는 황새 한 마리가 한 다리로 서 있어요.",
+   "blank": "لقلق",
    "src": "made"
   }
  ],
@@ -64272,6 +64832,22 @@
    "en": "Sara came home exhausted after a whole day of cooking.",
    "ko": "사라는 하루 종일 요리하고 녹초가 되어 집에 돌아왔어요.",
    "blank": "مجهدة",
+   "src": "made"
+  }
+ ],
+ "w|مجهود": [
+  {
+   "text": "بذل كريم مجهودا كبيرا لإصلاح الطريق بعد الثلج.",
+   "en": "Karim put in a big effort to repair the road after the snow.",
+   "ko": "카림은 눈이 온 뒤 길을 고치느라 큰 힘을 들였어요.",
+   "blank": "مجهودا",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت المعلمة المجهود الذي بذلته منى في الظلال.",
+   "en": "The teacher noticed the effort Mona put into the shadows.",
+   "ko": "선생님은 모나가 그림자에 들인 노력을 알아봤어요.",
+   "blank": "المجهود",
    "src": "made"
   }
  ],
@@ -76561,6 +77137,22 @@
    "blank": "نعالي"
   }
  ],
+ "w|نعامة": [
+  {
+   "text": "ضحك أطفال القرية من صورة النعامة في كتاب كريم.",
+   "en": "The village children laughed at the picture of the ostrich in Karim's book.",
+   "ko": "마을 아이들은 카림의 책에 있는 타조 그림을 보고 웃었어요.",
+   "blank": "النعامة",
+   "src": "made"
+  },
+  {
+   "text": "جعلت منى رقبة النعامة طويلة جدا في رسمها.",
+   "en": "Mona made the ostrich's neck very long in her drawing.",
+   "ko": "모나는 그림 속 타조의 목을 아주 길게 그렸어요.",
+   "blank": "النعامة",
+   "src": "made"
+  }
+ ],
  "w|نعس": [
   {
    "text": "عندما يطول الحديث يبدأ النعس.",
@@ -77377,6 +77969,22 @@
    "en": "I turned off the lamp light before sleeping.",
    "ko": "자기 전에 램프 불을 껐어.",
    "blank": "نور"
+  }
+ ],
+ "w|نورس": [
+  {
+   "text": "قال كريم إن النورس لا يصل إلى قريتهم البعيدة عن البحر.",
+   "en": "Karim said seagulls don't reach their village, far from the sea.",
+   "ko": "카림은 바다에서 먼 자기 마을까지는 갈매기가 오지 않는다고 했어요.",
+   "blank": "النورس",
+   "src": "made"
+  },
+  {
+   "text": "رسمت منى نورسا يطير فوق قارب صيد.",
+   "en": "Mona drew a seagull flying over a fishing boat.",
+   "ko": "모나는 고깃배 위를 나는 갈매기를 그렸어요.",
+   "blank": "نورسا",
+   "src": "made"
   }
  ],
  "w|نوع": [
@@ -80147,6 +80755,22 @@
    "src": "made"
   }
  ],
+ "w|وعل": [
+  {
+   "text": "رأى كريم وعلا يقفز بين الصخور فوق القرية.",
+   "en": "Karim saw an ibex leaping among the rocks above the village.",
+   "ko": "카림은 마을 위 바위 사이를 뛰어다니는 산양을 봤어요.",
+   "blank": "وعلا",
+   "src": "made"
+  },
+  {
+   "text": "رسمت منى وعلا بقرنين طويلين على صخرة رمادية.",
+   "en": "Mona drew an ibex with two long horns on a gray rock.",
+   "ko": "모나는 회색 바위 위에 긴 뿔 두 개 달린 산양을 그렸어요.",
+   "blank": "وعلا",
+   "src": "made"
+  }
+ ],
  "w|وعي": [
   {
    "text": "الولد فقد وعيه بعد ما وقع.",
@@ -80871,6 +81495,22 @@
    "en": "Enough talking, let's work.",
    "ko": "말 그만하고 일하자.",
    "blank": "يكفي"
+  }
+ ],
+ "w|يمامة": [
+  {
+   "text": "تهدل يمامة على نافذة كريم كل فجر.",
+   "en": "A dove coos at Karim's window every dawn.",
+   "ko": "새벽마다 비둘기 한 마리가 카림의 창가에서 구구 울어요.",
+   "blank": "يمامة",
+   "src": "made"
+  },
+  {
+   "text": "أهدت منى أمها لوحة فيها يمامة بيضاء.",
+   "en": "Mona gave her mother a painting with a white dove in it.",
+   "ko": "모나는 하얀 비둘기가 있는 그림을 어머니께 선물했어요.",
+   "blank": "يمامة",
+   "src": "made"
   }
  ],
  "w|يمين": [
