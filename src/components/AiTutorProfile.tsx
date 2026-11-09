@@ -14,9 +14,7 @@ import { roomCopy } from "@/lib/rooms/copy";
 import { CALL_NOTES_EVENT, readCallNotes, type CallNote } from "@/lib/roleplay/callNotes";
 import { readCalls } from "@/lib/roleplay/callStore";
 import { readHomework, type Homework } from "@/lib/roleplay/replay";
-import { readLifeFacts, removeLifeFact, type LifeFact } from "@/lib/roleplay/lifeFacts";
-import { factAsMine, homeworkOf, lastMemoOf } from "@/lib/roleplay/tutorDesk";
-import { translateUtterance } from "@/lib/translateUtterance";
+import { homeworkOf, lastMemoOf } from "@/lib/roleplay/tutorDesk";
 
 /** 지금 앱 언어(AppHome이 저장) — 바뀌면 ui가 바뀌어 이 화면도 다시 그려져 새 값을 읽는다. */
 function appLocale(): string {
@@ -223,11 +221,11 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
 
 /**
  * 튜터 화면이 보는 "이 튜터 몫"(사용자 2026-11-09 "logbank와 겹치는 값은 표시하지 말고 저대로 만들어줘", 시안 https://claude.ai/artifact/MUsRq7Fg5e878sd8E9gMte):
- * 그 튜터가 낸 숙제 · 그 튜터의 마지막 메모 · 기억하는 나(언어마다 하나). 숫자는 Logbank 몫이라 없다. 이 폰 저장만 읽음(lib/roleplay/tutorDesk.ts).
+ * 그 튜터가 낸 숙제 · 그 튜터의 마지막 메모. 숫자는 Logbank 몫이라 없다. 튜터가 기억하는 삶(tutorLife.v1)은 화면에 띄우지 않는다 — 통화에서 튜터가 꺼내는 게 목적(사용자 2026-11-09). 이 폰 저장만 읽음(lib/roleplay/tutorDesk.ts).
  */
 export function useTutorDesk(language: string, gender: TutorGender) {
   const chosen = useTutorGender(language);
-  const [desk, setDesk] = useState<{ homework: Homework | null; memo: CallNote | null; facts: LifeFact[] }>({ homework: null, memo: null, facts: [] });
+  const [desk, setDesk] = useState<{ homework: Homework | null; memo: CallNote | null }>({ homework: null, memo: null });
   useEffect(() => {
     const load = () => {
       try {
@@ -236,10 +234,9 @@ export function useTutorDesk(language: string, gender: TutorGender) {
         setDesk({
           homework: homeworkOf(readHomework(globalThis.localStorage, language), notes, ids, gender, chosen),
           memo: lastMemoOf(notes, gender, chosen),
-          facts: [...readLifeFacts(language)].sort((a, b) => b.at - a.at),
         });
       } catch {
-        setDesk({ homework: null, memo: null, facts: [] });
+        setDesk({ homework: null, memo: null });
       }
     };
     load();
@@ -252,8 +249,7 @@ export function useTutorDesk(language: string, gender: TutorGender) {
       window.removeEventListener(CALL_NOTES_EVENT, load);
     };
   }, [language, gender, chosen]);
-  const forget = (text: string) => setDesk((now) => ({ ...now, facts: removeLifeFact(language, text).sort((a, b) => b.at - a.at) }));
-  return { ...desk, forget };
+  return desk;
 }
 
 /** 숙제 한 줄(TodayCards HomeworkRow와 같은 이름·같은 문 — openCall replay → 숙제 화면). */
@@ -281,57 +277,6 @@ export function TutorHomework({ ui, homework, className = "" }: { ui: UICopy; ho
 /** 숙제가 남은 튜터 얼굴 모서리 점. */
 export function HomeworkDot({ size = 12 }: { size?: number }) {
   return <span aria-hidden style={{ width: size, height: size }} className="absolute -end-0.5 -top-0.5 rounded-full border-2 border-surface bg-warn" />;
-}
-
-/** 기억하는 나는 영어 한 문장씩 저장된다(lifeFacts) — 앱 언어로 옮겨 이 폰에 둔다(tutorLifeShown.v1, 앱 언어를 바꾸면 그 언어로 다시). */
-const SHOWN_KEY = "tutorLifeShown.v1";
-function readShown(locale: string): Record<string, string> {
-  try {
-    const all = JSON.parse(globalThis.localStorage?.getItem(SHOWN_KEY) ?? "{}") as Record<string, Record<string, string>>;
-    return all[locale] ?? {};
-  } catch {
-    return {};
-  }
-}
-function keepShown(locale: string, text: string, shown: string) {
-  try {
-    const all = JSON.parse(globalThis.localStorage?.getItem(SHOWN_KEY) ?? "{}") as Record<string, Record<string, string>>;
-    const mine = { ...(all[locale] ?? {}), [text]: shown };
-    const keys = Object.keys(mine);
-    for (const key of keys.slice(0, Math.max(0, keys.length - 60))) delete mine[key];
-    globalThis.localStorage?.setItem(SHOWN_KEY, JSON.stringify({ [locale]: mine }));
-  } catch {
-    /* 이번 화면만 */
-  }
-}
-function useShownFacts(facts: readonly LifeFact[], locale: string): Record<string, string> {
-  // 새로 받은 것만 상태에, 받아 둔 것은 그릴 때 이 폰에서 읽는다.
-  const [fresh, setFresh] = useState<Record<string, string>>({});
-  useEffect(() => {
-    if (locale === "en") return;
-    const have = readShown(locale);
-    let live = true;
-    for (const fact of facts) {
-      if (have[fact.text]) continue;
-      translateUtterance({ text: factAsMine(fact.text), locale, targetLanguage: "en" })
-        .then((out) => {
-          if (!out || !live) return;
-          keepShown(locale, fact.text, out);
-          setFresh((now) => ({ ...now, [`${locale}\u0000${fact.text}`]: out }));
-        })
-        .catch(() => undefined);
-    }
-    return () => {
-      live = false;
-    };
-  }, [facts, locale]);
-  if (locale === "en") return {};
-  const shown = { ...readShown(locale) };
-  for (const [key, value] of Object.entries(fresh)) {
-    const [from, text] = key.split("\u0000");
-    if (from === locale && text) shown[text] = value;
-  }
-  return shown;
 }
 
 function shortDay(at: number, locale: string): string {
@@ -382,7 +327,7 @@ function CallDoors({ ui, onPick }: { ui: UICopy; onPick: (kind: CallKind) => voi
 
 /**
  * AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일").
- * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업(+ 게임 ›) → 숙제 → 튜터 메모 → 기억하는 나(× 지우기) → 아래 팔로우 · 메시지 · 통화 기록.
+ * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업(+ 게임 ›) → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
  */
 export function AiTutorSheet({
   ui,
@@ -406,7 +351,6 @@ export function AiTutorSheet({
   const t = roomCopy(locale);
   const following = useFollowedTutors(targetLanguage).includes(who);
   const desk = useTutorDesk(targetLanguage, who);
-  const shown = useShownFacts(desk.facts, locale);
   const go = (action: () => void) => () => {
     onClose();
     action();
@@ -438,29 +382,6 @@ export function AiTutorSheet({
           <p dir="auto" className="mt-1 whitespace-pre-line text-body leading-relaxed text-slate-200">
             {desk.memo.summary}
           </p>
-        </div>
-      ) : null}
-      {desk.facts.length ? (
-        <div data-tutor-remembers className="mt-3">
-          <p className="text-caption text-slate-400">{ui.tutorRemembers}</p>
-          <ul className="mt-2 flex flex-wrap gap-1.5">
-            {desk.facts.map((fact) => (
-              <li key={fact.text} className="inline-flex max-w-full items-center gap-0.5 rounded-full border border-line py-0.5 ps-3 pe-0.5 text-caption text-slate-200">
-                <span dir="auto" className="min-w-0 truncate">
-                  {shown[fact.text] ?? factAsMine(fact.text)}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => desk.forget(fact.text)}
-                  aria-label={ui.notebookDelete}
-                  title={ui.notebookDelete}
-                  className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-slate-500 hover:bg-white/10 hover:text-slate-200"
-                >
-                  ×
-                </button>
-              </li>
-            ))}
-          </ul>
         </div>
       ) : null}
       {/* 사람 프로필처럼: 팔로우(대화 탭에 그 튜터 줄) · 메시지(그 튜터와의 AI 대화) · 통화 기록 — 차단·신고는 기본 튜터라 없음. */}

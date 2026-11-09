@@ -1047,8 +1047,7 @@
     "flipHideWord": "単語を隠す",
     "flipHideExample": "例文を穴埋め",
     "flipReveal": "見る",
-    "flipDone": "{n}枚中{m}枚わかる",
-    "tutorRemembers": "チューターが覚えている私"
+    "flipDone": "{n}枚中{m}枚わかる"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -2098,8 +2097,7 @@
     "flipHideWord": "隐藏单词",
     "flipHideExample": "例句填空",
     "flipReveal": "显示",
-    "flipDone": "{n}张里会了{m}张",
-    "tutorRemembers": "导师记得的我"
+    "flipDone": "{n}张里会了{m}张"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -3152,8 +3150,7 @@
     "flipHideWord": "Ẩn từ",
     "flipHideExample": "Chỗ trống trong ví dụ",
     "flipReveal": "Xem",
-    "flipDone": "Biết {m}/{n} thẻ",
-    "tutorRemembers": "Gia sư nhớ gì về tôi"
+    "flipDone": "Biết {m}/{n} thẻ"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -4211,8 +4208,7 @@
     "flipHideWord": "Masquer le mot",
     "flipHideExample": "Trou dans l'exemple",
     "flipReveal": "Afficher",
-    "flipDone": "{m} sur {n} sus",
-    "tutorRemembers": "Ce que mon tuteur retient de moi"
+    "flipDone": "{m} sur {n} sus"
   },
   "it": {
     "archive": "Report",
@@ -5461,8 +5457,7 @@
     "flipHideWord": "Nascondi parola",
     "flipHideExample": "Spazio nell'esempio",
     "flipReveal": "Mostra",
-    "flipDone": "{m} su {n} conosciute",
-    "tutorRemembers": "Cosa ricorda di me il tutor"
+    "flipDone": "{m} su {n} conosciute"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -6523,8 +6518,7 @@
     "flipHideWord": "Ocultar palavra",
     "flipHideExample": "Lacuna no exemplo",
     "flipReveal": "Mostrar",
-    "flipDone": "{m} de {n} conhecidas",
-    "tutorRemembers": "O que meu tutor lembra de mim"
+    "flipDone": "{m} de {n} conhecidas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -7771,8 +7765,7 @@
     "flipHideWord": "Скрыть слово",
     "flipHideExample": "Пропуск в примере",
     "flipReveal": "Показать",
-    "flipDone": "Знаю {m} из {n}",
-    "tutorRemembers": "Что обо мне помнит репетитор"
+    "flipDone": "Знаю {m} из {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -8829,8 +8822,7 @@
     "flipHideWord": "Sembunyikan kata",
     "flipHideExample": "Rumpang di contoh",
     "flipReveal": "Lihat",
-    "flipDone": "Tahu {m} dari {n}",
-    "tutorRemembers": "Yang diingat tutor tentang saya"
+    "flipDone": "Tahu {m} dari {n}"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -9880,8 +9872,7 @@
     "flipHideWord": "إخفاء الكلمة",
     "flipHideExample": "فراغ في المثال",
     "flipReveal": "إظهار",
-    "flipDone": "تعرف {m} من {n}",
-    "tutorRemembers": "ما يتذكره معلّمي عني"
+    "flipDone": "تعرف {m} من {n}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -10931,8 +10922,7 @@
     "flipHideWord": "ซ่อนคำ",
     "flipHideExample": "เว้นช่องในตัวอย่าง",
     "flipReveal": "ดู",
-    "flipDone": "รู้แล้ว {m} จาก {n}",
-    "tutorRemembers": "สิ่งที่ติวเตอร์จำเกี่ยวกับฉัน"
+    "flipDone": "รู้แล้ว {m} จาก {n}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -11982,7 +11972,6 @@
     "flipHideWord": "शब्द छिपाएँ",
     "flipHideExample": "उदाहरण में खाली जगह",
     "flipReveal": "दिखाएँ",
-    "flipDone": "{n} में से {m} आते हैं",
-    "tutorRemembers": "ट्यूटर को मेरे बारे में क्या याद है"
+    "flipDone": "{n} में से {m} आते हैं"
   }
 }

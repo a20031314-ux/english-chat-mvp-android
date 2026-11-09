@@ -74,7 +74,6 @@ const en: Section[] = [
     title: "Information Stored on Your Device",
     body: [
       "Some information is kept only on your device and is not sent to us for storage: your chat history, saved call conversations (up to 20), saved videos and study sessions, your vocabulary, and your language and app settings.",
-      "What your AI tutor remembers about your life from past calls (short notes such as your job or plans) is also kept only on your device and is sent with your next call so the tutor can follow up. You can see and delete each note in the tutor's profile under \"What my tutor remembers\"; to show a note in your app language it is sent once for translation and not stored on our servers.",
       "You can remove it by deleting conversations in the app, clearing the app's data, or uninstalling the app.",
     ],
   },
@@ -220,7 +219,6 @@ const ko: Section[] = [
     title: "기기에만 저장되는 정보",
     body: [
       "채팅 기록, 저장된 통화 대화(최대 20개), 저장한 영상과 학습 기록, 단어장, 언어·앱 설정은 이용자의 기기에만 저장되며 서버에 보관하지 않습니다.",
-      "AI 튜터가 지난 통화에서 들은 이용자의 생활(하는 일·계획 같은 짧은 메모)도 기기에만 저장되며, 튜터가 이어서 말할 수 있도록 다음 통화에 함께 보냅니다. 튜터 프로필의 “튜터가 기억하는 나”에서 메모마다 보고 지울 수 있습니다. 앱 언어로 보여 주기 위해 한 번 번역을 거치며, 번역한 내용은 서버에 보관하지 않습니다.",
       "앱에서 대화를 삭제하거나, 앱 데이터를 지우거나, 앱을 삭제하면 지워집니다.",
     ],
   },
