@@ -22,7 +22,7 @@
 │          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank
-│              오늘(studyMap/TodayCards — 오늘 학습 n · 숙제 줄 · ▶ Quizbank 하나(curriculum/quizFocus.ts 신호, ✓ = todayCards.ts answeredToday ≥ 10) · 📞 수업(startCall lesson))
+│              오늘의 학습 n(studyMap/TodayCards — 제목에 숫자(Growth TodayTitle) · 숙제 줄 · ▶ Quizbank 하나(curriculum/quizFocus.ts 신호, ✓ = todayCards.ts answeredToday ≥ 10) · 📞 수업(startCall lesson))
 │                0단계면 오늘의 글자 묶음 → Languagebank 글자 칸(curriculum/lettersOpen.ts)
 │              📏 실력 확인(Logbank SkillChecks — 14일마다 ▶ 밝음 → FirstCheck recheck, 표 = 확인마다 🔤·💬·📐 + 🗣 말하기, curriculum/skillCheck.ts · skillCheck.v1 이 폰)
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 🔤 단어 · 📐 문법 · 💬 표현 · 🧩 문장구조 × 학습 · 활용, curriculum/growthView.ts)

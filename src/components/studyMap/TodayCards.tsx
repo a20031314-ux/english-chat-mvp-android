@@ -1,6 +1,6 @@
 "use client";
 
-import { TodayGrowth } from "@/components/studyMap/Growth";
+import { TodayGrowth, TodayTitle } from "@/components/studyMap/Growth";
 import { useEffect, useMemo, useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -61,7 +61,7 @@ function LettersToday({ ui, language, locale }: { ui: UICopy; language: string; 
   return (
     <section data-today-cards className="flex flex-col gap-2 rounded-xl border border-line p-3">
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-note font-semibold text-ink">{ui.lbToday}</h3>
+        <TodayTitle ui={ui} language={language} />
         {done ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
       </div>
       <TodayGrowth ui={ui} language={language} />
@@ -106,7 +106,7 @@ function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
   return (
     <section data-today-cards className="flex flex-col gap-2 rounded-xl border border-line p-3">
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-note font-semibold text-ink">{ui.lbToday}</h3>
+        <TodayTitle ui={ui} language={language} />
         {done ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
       </div>
       <TodayGrowth ui={ui} language={language} />
