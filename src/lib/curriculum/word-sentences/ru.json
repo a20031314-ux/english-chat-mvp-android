@@ -627,6 +627,22 @@
    "src": "made"
   }
  ],
+ "w|анонимный": [
+  {
+   "text": "Кто-то написал Дмитрию анонимную записку с жалобой на шум.",
+   "en": "Someone wrote Dmitry an anonymous note complaining about the noise.",
+   "ko": "누군가 소음 불만을 적은 익명의 쪽지를 드미트리에게 남겼어요.",
+   "blank": "анонимную",
+   "src": "made"
+  },
+  {
+   "text": "Ольга оставила железной дороге анонимный отзыв о грязном вагоне.",
+   "en": "Olga left the railway an anonymous review about the dirty carriage.",
+   "ko": "올가는 철도 회사에 더러운 객차에 대한 익명 후기를 남겼어요.",
+   "blank": "анонимный",
+   "src": "made"
+  }
+ ],
  "w|апельсин": [
   {
    "text": "Иван заказал свежевыжатый сок из апельсина.",
@@ -3125,6 +3141,22 @@
    "ko": "한 병밖에 안 남았어요.",
    "blank": "бутылка",
    "src": "tatoeba:11897671/Wezel en:11897308/CK"
+  }
+ ],
+ "w|бухгалтер": [
+  {
+   "text": "Дмитрий пошёл к бухгалтеру уточнить, почему зарплата пришла меньше.",
+   "en": "Dmitry went to the accountant to find out why his salary came in lower.",
+   "ko": "드미트리는 월급이 왜 적게 들어왔는지 경리 담당자에게 물으러 갔어요.",
+   "blank": "бухгалтеру",
+   "src": "made"
+  },
+  {
+   "text": "Соседка Ольги по купе работает бухгалтером и всю дорогу считала что-то в блокноте.",
+   "en": "Olga's compartment neighbour works as an accountant and spent the whole trip calculating something in a notebook.",
+   "ko": "올가와 같은 칸 여자는 회계사인데 가는 내내 수첩에 뭔가를 계산했어요.",
+   "blank": "бухгалтером",
+   "src": "made"
   }
  ],
  "w|бы": [
@@ -8545,6 +8577,22 @@
    "src": "tatoeba:8952643/Balamax en:5725301/CM"
   }
  ],
+ "w|генеральный": [
+  {
+   "text": "На собрании генеральный директор лично пожал Дмитрию руку.",
+   "en": "The general director personally shook Dmitry's hand at the meeting.",
+   "ko": "사장이 회의에서 직접 드미트리와 악수했어요.",
+   "blank": "генеральный",
+   "src": "made"
+  },
+  {
+   "text": "Ольга с удивлением узнала, что её попутчик — генеральный директор крупной фирмы.",
+   "en": "Olga was surprised to learn that her fellow passenger was the CEO of a large firm.",
+   "ko": "올가는 같은 칸 승객이 큰 회사 사장이라는 걸 알고 놀랐어요.",
+   "blank": "генеральный",
+   "src": "made"
+  }
+ ],
  "w|гениальный": [
   {
    "text": "Сергей считает, что тёплые носки — гениальное изобретение для холодных утр.",
@@ -11163,6 +11211,22 @@
    "src": "made"
   }
  ],
+ "w|дизайн": [
+  {
+   "text": "Дмитрий предложил изменить дизайн ручки, чтобы её было удобнее держать.",
+   "en": "Dmitry suggested changing the handle's design so it would be easier to hold.",
+   "ko": "드미트리는 손잡이 디자인을 바꿔서 잡기 편하게 하자고 제안했어요.",
+   "blank": "дизайн",
+   "src": "made"
+  },
+  {
+   "text": "Ольге понравился дизайн новых вагонов с большими окнами.",
+   "en": "Olga liked the design of the new carriages with large windows.",
+   "ko": "올가는 큰 창이 달린 새 객차 디자인이 마음에 들었어요.",
+   "blank": "дизайн",
+   "src": "made"
+  }
+ ],
  "w|дикий": [
   {
    "text": "Что за дикий способ вести дела!",
@@ -11805,6 +11869,22 @@
    "ko": "우리가 그랬다는 걸 어떻게 증명하실 거예요?",
    "blank": "доказывать",
    "src": "tatoeba:5989091/marafon en:5848617/CK"
+  }
+ ],
+ "w|докладывать": [
+  {
+   "text": "Каждое утро Дмитрий докладывает мастеру о состоянии линии.",
+   "en": "Every morning Dmitry reports to the foreman on the state of the line.",
+   "ko": "매일 아침 드미트리는 작업반장에게 라인 상태를 보고해요.",
+   "blank": "докладывает",
+   "src": "made"
+  },
+  {
+   "text": "Проводник каждые полчаса докладывает начальнику поезда, и Ольга слышит его рацию.",
+   "en": "The conductor reports to the train manager every half hour, and Olga hears his radio.",
+   "ko": "승무원이 삼십 분마다 열차장에게 보고하는데, 올가에게 무전 소리가 들려요.",
+   "blank": "докладывает",
+   "src": "made"
   }
  ],
  "w|доктор": [
@@ -13897,6 +13977,22 @@
    "blank": "забудь"
   }
  ],
+ "w|завалить": [
+  {
+   "text": "Перед праздниками заказчики могут завалить Дмитрия срочной работой.",
+   "en": "Before the holidays clients can bury Dmitry in urgent work.",
+   "ko": "명절 전이면 주문이 쏟아져서 드미트리에게 급한 일이 산더미처럼 쌓일 수 있어요.",
+   "blank": "завалить",
+   "src": "made"
+  },
+  {
+   "text": "Ночью снег мог завалить пути, но поезд Ольги прошёл вовремя.",
+   "en": "At night snow could have buried the tracks, but Olga's train got through on time.",
+   "ko": "밤에 눈이 선로를 덮을 수도 있었지만 올가의 기차는 제시간에 지나갔어요.",
+   "blank": "завалить",
+   "src": "made"
+  }
+ ],
  "w|заведение": [
   {
    "text": "Владелец ночного заведения пришёл в суд вместе с адвокатом.",
@@ -15265,6 +15361,22 @@
    "ko": "오늘 방송 녹화할 거야?",
    "blank": "записать",
    "src": "tatoeba:2743766/afyodor en:1624889/marcelostockle"
+  }
+ ],
+ "w|записаться": [
+  {
+   "text": "Дмитрий решил записаться на курсы сварщиков при заводе.",
+   "en": "Dmitry decided to sign up for the welding courses at the factory.",
+   "ko": "드미트리는 공장에서 운영하는 용접 과정에 등록하기로 했어요.",
+   "blank": "записаться",
+   "src": "made"
+  },
+  {
+   "text": "Ольга успела записаться на экскурсию по городу во время долгой стоянки.",
+   "en": "Olga managed to sign up for a city tour during the long stop.",
+   "ko": "올가는 오래 정차하는 동안 시내 관광을 신청했어요.",
+   "blank": "записаться",
+   "src": "made"
   }
  ],
  "w|записка": [
@@ -17131,6 +17243,22 @@
    "src": "tatoeba:2912335/Ooneykcall en:2912329/CK"
   }
  ],
+ "w|извлечь": [
+  {
+   "text": "Дмитрий сумел извлечь застрявший болт без поломки станка.",
+   "en": "Dmitry managed to extract the stuck bolt without breaking the machine.",
+   "ko": "드미트리는 기계를 망가뜨리지 않고 박힌 볼트를 빼냈어요.",
+   "blank": "извлечь",
+   "src": "made"
+  },
+  {
+   "text": "Ольга сумела извлечь пользу из долгой дороги и выучила сто новых слов.",
+   "en": "Olga managed to get some benefit out of the long trip and learned a hundred new words.",
+   "ko": "올가는 긴 여행을 잘 활용해서 새 낱말을 백 개나 외웠어요.",
+   "blank": "извлечь",
+   "src": "made"
+  }
+ ],
  "w|издеваться": [
   {
    "text": "Прекратите надо мной издеваться!",
@@ -17300,6 +17428,22 @@
    "en": "In the evenings Elena studies Spanish.",
    "ko": "엘레나는 저녁마다 스페인어를 공부해요.",
    "blank": "изучает",
+   "src": "made"
+  }
+ ],
+ "w|изучение": [
+  {
+   "text": "На изучение нового станка Дмитрию дали всего неделю.",
+   "en": "Dmitry was given only a week to learn the new machine.",
+   "ko": "드미트리에게 새 기계를 익힐 시간이 일주일밖에 주어지지 않았어요.",
+   "blank": "изучение",
+   "src": "made"
+  },
+  {
+   "text": "Ольга едет в Казань на конференцию по изучению древних языков.",
+   "en": "Olga is going to Kazan for a conference on the study of ancient languages.",
+   "ko": "올가는 고대 언어 연구 학회에 가려고 카잔행 기차를 타요.",
+   "blank": "изучению",
    "src": "made"
   }
  ],
@@ -19931,6 +20075,22 @@
    "en": "I work at this company.",
    "ko": "나는 이 회사에서 일해.",
    "blank": "компании"
+  }
+ ],
+ "w|компенсация": [
+  {
+   "text": "За работу в выходные Дмитрию положена денежная компенсация.",
+   "en": "Dmitry is entitled to monetary compensation for working on weekends.",
+   "ko": "드미트리는 주말 근무를 하면 금전 보상을 받아요.",
+   "blank": "компенсация",
+   "src": "made"
+  },
+  {
+   "text": "Поезд опоздал на пять часов, и Ольге выплатили компенсацию за билет.",
+   "en": "The train was five hours late, and Olga was paid compensation for the ticket.",
+   "ko": "기차가 다섯 시간 늦어서 올가는 표값을 보상받았어요.",
+   "blank": "компенсацию",
+   "src": "made"
   }
  ],
  "w|комплимент": [
@@ -25251,6 +25411,22 @@
    "src": "made"
   }
  ],
+ "w|мощь": [
+  {
+   "text": "Дмитрий восхищается мощью нового пресса.",
+   "en": "Dmitry admires the power of the new press.",
+   "ko": "드미트리는 새 프레스의 힘에 감탄해요.",
+   "blank": "мощью",
+   "src": "made"
+  },
+  {
+   "text": "Ольга почувствовала мощь локомотива, когда поезд пошёл в гору.",
+   "en": "Olga felt the power of the locomotive when the train went uphill.",
+   "ko": "기차가 오르막을 오를 때 올가는 기관차의 힘을 느꼈어요.",
+   "blank": "мощь",
+   "src": "made"
+  }
+ ],
  "w|муж": [
   {
    "text": "Муж задерживается на работе.",
@@ -26418,6 +26594,22 @@
    "en": "In the morning Svetlana painted a new sign on the shop window.",
    "ko": "아침에 스베틀라나는 진열창에 새 글씨를 썼어요.",
    "blank": "нанесла",
+   "src": "made"
+  }
+ ],
+ "w|нанимать": [
+  {
+   "text": "Завод Дмитрия собирается нанимать ещё двадцать рабочих.",
+   "en": "Dmitry's factory is going to hire twenty more workers.",
+   "ko": "드미트리의 공장은 노동자를 스무 명 더 뽑을 예정이에요.",
+   "blank": "нанимать",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик рассказал Ольге, что его фирма собирается нанимать переводчиков.",
+   "en": "A fellow passenger told Olga that his firm is going to hire translators.",
+   "ko": "같은 칸 승객은 자기 회사가 번역가를 뽑을 거라고 올가에게 말했어요.",
+   "blank": "нанимать",
    "src": "made"
   }
  ],
@@ -30245,6 +30437,22 @@
    "src": "tatoeba:12379684/xlenchik en:10115674/CK"
   }
  ],
+ "w|обсуждение": [
+  {
+   "text": "На собрании Дмитрий предложил отложить обсуждение нового графика.",
+   "en": "At the meeting Dmitry suggested postponing the discussion of the new schedule.",
+   "ko": "회의에서 드미트리는 새 근무표 논의를 미루자고 했어요.",
+   "blank": "обсуждение",
+   "src": "made"
+  },
+  {
+   "text": "В вагоне-ресторане Ольга случайно стала участницей обсуждения новых тарифов.",
+   "en": "In the dining car Olga accidentally became part of a discussion of the new fares.",
+   "ko": "식당칸에서 올가는 얼떨결에 새 요금에 관한 이야기에 끼게 됐어요.",
+   "blank": "обсуждения",
+   "src": "made"
+  }
+ ],
  "w|обувь": [
   {
    "text": "Не могли бы вы снять обувь, пожалуйста?",
@@ -33321,6 +33529,22 @@
    "src": "tatoeba:6594230/nina99nv en:1887882/CK"
   }
  ],
+ "w|оторвать": [
+  {
+   "text": "Дмитрию пришлось оторвать прилипшую плёнку от готовой детали.",
+   "en": "Dmitry had to tear the stuck film off the finished part.",
+   "ko": "드미트리는 완성된 부품에 달라붙은 비닐을 뜯어내야 했어요.",
+   "blank": "оторвать",
+   "src": "made"
+  },
+  {
+   "text": "Ольга не могла оторвать взгляд от озера за окном.",
+   "en": "Olga couldn't take her eyes off the lake outside the window.",
+   "ko": "올가는 창밖 호수에서 눈을 뗄 수가 없었어요.",
+   "blank": "оторвать",
+   "src": "made"
+  }
+ ],
  "w|отпечаток": [
   {
    "text": "Мокрая ваза оставила отпечаток на столе.",
@@ -34781,6 +35005,22 @@
    "blank": "перевод"
   }
  ],
+ "w|переводить": [
+  {
+   "text": "Дмитрий помогает переводить инструкции к немецким станкам.",
+   "en": "Dmitry helps translate the instructions for the German machines.",
+   "ko": "드미트리는 독일제 기계 설명서 번역을 도와요.",
+   "blank": "переводить",
+   "src": "made"
+  },
+  {
+   "text": "Ольга помогла иностранному туристу переводить объявления проводника.",
+   "en": "Olga helped a foreign tourist translate the conductor's announcements.",
+   "ko": "올가는 외국인 관광객이 승무원 안내 방송을 알아듣도록 통역해 줬어요.",
+   "blank": "переводить",
+   "src": "made"
+  }
+ ],
  "w|переводчик": [
   {
    "text": "Переводчик опаздывает.",
@@ -35155,6 +35395,22 @@
    "ko": "저희 직원들은 교육 수준이 아주 높아요.",
    "blank": "персонал",
    "src": "tatoeba:2568648/Lenin_1917 en:29169/CK"
+  }
+ ],
+ "w|перспектива": [
+  {
+   "text": "Дмитрий видит на заводе хорошие перспективы для молодых инженеров.",
+   "en": "Dmitry sees good prospects for young engineers at the factory.",
+   "ko": "드미트리는 공장에서 젊은 엔지니어들에게 좋은 전망이 있다고 봐요.",
+   "blank": "перспективы",
+   "src": "made"
+  },
+  {
+   "text": "Из окна поезда Ольге открылась красивая перспектива на горы.",
+   "en": "From the train window Olga had a beautiful view of the mountains.",
+   "ko": "기차 창밖으로 올가의 눈앞에 산 풍경이 멋지게 펼쳐졌어요.",
+   "blank": "перспектива",
+   "src": "made"
   }
  ],
  "w|перчатка": [
@@ -41207,6 +41463,22 @@
    "src": "made"
   }
  ],
+ "w|поэт": [
+  {
+   "text": "В заводской газете Дмитрий прочитал стихи, которые написал поэт из соседнего цеха.",
+   "en": "In the factory newspaper Dmitry read poems written by a poet from the next workshop.",
+   "ko": "드미트리는 공장 소식지에서 옆 작업장 시인이 쓴 시를 읽었어요.",
+   "blank": "поэт",
+   "src": "made"
+  },
+  {
+   "text": "Ольга всю дорогу читала сборник стихов, который подарил ей знакомый поэт.",
+   "en": "Olga read a collection of poems all the way that a poet she knows had given her.",
+   "ko": "올가는 아는 시인이 선물한 시집을 가는 내내 읽었어요.",
+   "blank": "поэт",
+   "src": "made"
+  }
+ ],
  "w|поэтому": [
   {
    "text": "Я устал, поэтому молчу.",
@@ -43289,6 +43561,22 @@
    "src": "made"
   }
  ],
+ "w|прикрывать": [
+  {
+   "text": "Дмитрий иногда прикрывает напарника, когда тот опаздывает.",
+   "en": "Dmitry sometimes covers for his partner when he's late.",
+   "ko": "드미트리는 동료가 늦으면 가끔 대신 둘러대 줘요.",
+   "blank": "прикрывает",
+   "src": "made"
+  },
+  {
+   "text": "Ольга прикрывала глаза шарфом, чтобы уснуть при свете.",
+   "en": "Olga covered her eyes with a scarf to fall asleep with the light on.",
+   "ko": "올가는 불이 켜진 채로 자려고 스카프로 눈을 가렸어요.",
+   "blank": "прикрывала",
+   "src": "made"
+  }
+ ],
  "w|прикрытие": [
   {
    "text": "Мафия использует законные деловые операции как прикрытие.",
@@ -43366,6 +43654,22 @@
    "en": "Natalia warned that the dog might have been poisoned by rat bait.",
    "ko": "나탈리야는 개가 쥐약 미끼를 먹고 중독됐을 수도 있다고 경고했어요.",
    "blank": "приманкой",
+   "src": "made"
+  }
+ ],
+ "w|применение": [
+  {
+   "text": "Дмитрий нашёл новое применение старым обрезкам металла.",
+   "en": "Dmitry found a new use for old metal scraps.",
+   "ko": "드미트리는 오래된 금속 자투리를 새로 쓸 방법을 찾았어요.",
+   "blank": "применение",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик объяснил Ольге практическое применение своей диссертации.",
+   "en": "A fellow passenger explained to Olga the practical application of his dissertation.",
+   "ko": "같은 칸 승객이 자기 학위 논문의 실제 쓰임새를 올가에게 설명해 줬어요.",
+   "blank": "применение",
    "src": "made"
   }
  ],
@@ -43553,6 +43857,22 @@
    "en": "I already took a shower.",
    "ko": "샤워는 이미 했어.",
    "blank": "принял"
+  }
+ ],
+ "w|приоритет": [
+  {
+   "text": "Для Дмитрия безопасность на работе — главный приоритет.",
+   "en": "For Dmitry safety at work is the top priority.",
+   "ko": "드미트리에게 작업 안전은 최우선이에요.",
+   "blank": "приоритет",
+   "src": "made"
+  },
+  {
+   "text": "В поездке у Ольги один приоритет — хорошо выспаться.",
+   "en": "On the trip Olga has one priority: getting a good sleep.",
+   "ko": "올가의 이번 여행 목표는 딱 하나, 푹 자는 거예요.",
+   "blank": "приоритет",
+   "src": "made"
   }
  ],
  "w|природа": [
@@ -45621,6 +45941,22 @@
    "src": "made"
   }
  ],
+ "w|проявлять": [
+  {
+   "text": "Мастер ценит, что Дмитрий проявляет терпение с новичками.",
+   "en": "The foreman values that Dmitry shows patience with newcomers.",
+   "ko": "작업반장은 드미트리가 신입들에게 인내심을 보이는 걸 높이 사요.",
+   "blank": "проявляет",
+   "src": "made"
+  },
+  {
+   "text": "Проводник проявлял заботу и приносил Ольге горячий чай.",
+   "en": "The conductor showed care and brought Olga hot tea.",
+   "ko": "승무원은 올가를 세심하게 챙기며 따뜻한 차를 가져다줬어요.",
+   "blank": "проявлял",
+   "src": "made"
+  }
+ ],
  "w|прояснить": [
   {
    "text": "Судья попросил прояснить точное местоположение машины в ту ночь.",
@@ -46559,6 +46895,22 @@
    "src": "tatoeba:10993339/marafon en:6346073/CK"
   }
  ],
+ "w|разбиться": [
+  {
+   "text": "Стеклянный датчик упал со стола и чуть не разбился у Дмитрия на глазах.",
+   "en": "The glass sensor fell off the table and nearly broke right before Dmitry's eyes.",
+   "ko": "유리 센서가 책상에서 떨어져 드미트리 눈앞에서 하마터면 깨질 뻔했어요.",
+   "blank": "разбился",
+   "src": "made"
+  },
+  {
+   "text": "У Ольги в сумке разбился флакон духов, и в купе запахло розой.",
+   "en": "A perfume bottle broke in Olga's bag, and the compartment smelled of roses.",
+   "ko": "올가의 가방 속 향수병이 깨져서 객실에 장미 향이 퍼졌어요.",
+   "blank": "разбился",
+   "src": "made"
+  }
+ ],
  "w|разбудить": [
   {
    "text": "Сосед попросил Никиту разбудить его утром на совместную пробежку.",
@@ -46948,6 +47300,22 @@
    "en": "Elena's department has to develop a sales plan for next year.",
    "ko": "옐레나의 부서는 내년 판매 계획을 세워야 해요.",
    "blank": "разработать",
+   "src": "made"
+  }
+ ],
+ "w|разработка": [
+  {
+   "text": "Дмитрия пригласили в отдел разработки новых моделей.",
+   "en": "Dmitry was invited to the department for developing new models.",
+   "ko": "드미트리는 신모델 개발 부서에 초대받았어요.",
+   "blank": "разработки",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик Ольги рассказал, что занимается разработкой мобильных игр.",
+   "en": "Olga's fellow passenger said he works on developing mobile games.",
+   "ko": "올가와 같은 칸 승객은 모바일 게임을 개발한다고 했어요.",
+   "blank": "разработкой",
    "src": "made"
   }
  ],
@@ -50355,6 +50723,22 @@
    "src": "tatoeba:11962510/marafon en:11962507/CK"
   }
  ],
+ "w|семестр": [
+  {
+   "text": "В этом семестре Дмитрий ходит на вечерние занятия после смены.",
+   "en": "This semester Dmitry goes to evening classes after his shift.",
+   "ko": "이번 학기에 드미트리는 교대 근무가 끝나면 저녁 수업을 들어요.",
+   "blank": "семестре",
+   "src": "made"
+  },
+  {
+   "text": "Ольга едет домой на каникулы после трудного семестра.",
+   "en": "Olga is going home for the holidays after a hard semester.",
+   "ko": "올가는 힘든 학기를 마치고 방학을 맞아 집에 가요.",
+   "blank": "семестра",
+   "src": "made"
+  }
+ ],
  "w|семнадцать": [
   {
    "text": "Дежурство Дмитрия закончилось только в семнадцать минут девятого.",
@@ -51095,6 +51479,22 @@
    "blank": "Сколько"
   }
  ],
+ "w|сконцентрироваться": [
+  {
+   "text": "В шумном цехе Дмитрию трудно сконцентрироваться на расчётах.",
+   "en": "In the noisy workshop it's hard for Dmitry to concentrate on calculations.",
+   "ko": "시끄러운 작업장에서 드미트리는 계산에 집중하기 어려워요.",
+   "blank": "сконцентрироваться",
+   "src": "made"
+  },
+  {
+   "text": "Ольга надела наушники, чтобы сконцентрироваться на книге.",
+   "en": "Olga put on headphones to concentrate on her book.",
+   "ko": "올가는 책에 집중하려고 헤드폰을 썼어요.",
+   "blank": "сконцентрироваться",
+   "src": "made"
+  }
+ ],
  "w|скорая": [
   {
    "text": "Тебе нужна скорая помощь?",
@@ -51586,6 +51986,22 @@
    "en": "Maria hopes that her relationships with her new colleagues will quickly take shape.",
    "ko": "마리야는 새 동료들과 금방 잘 지내게 되길 바라요.",
    "blank": "сложатся",
+   "src": "made"
+  }
+ ],
+ "w|сложность": [
+  {
+   "text": "Главная сложность для Дмитрия — ночные смены.",
+   "en": "The main difficulty for Dmitry is the night shifts.",
+   "ko": "드미트리에게 가장 힘든 건 야간 근무예요.",
+   "blank": "сложность",
+   "src": "made"
+  },
+  {
+   "text": "Главной сложностью поездки для Ольги оказались три пересадки.",
+   "en": "The main difficulty of the trip for Olga turned out to be three changes.",
+   "ko": "올가에게 이번 여행에서 가장 힘든 건 갈아타기 세 번이었어요.",
+   "blank": "сложностью",
    "src": "made"
   }
  ],
@@ -54719,6 +55135,22 @@
    "src": "made"
   }
  ],
+ "w|стандартный": [
+  {
+   "text": "Дмитрий заказал стандартный набор инструментов для новичков.",
+   "en": "Dmitry ordered a standard set of tools for the newcomers.",
+   "ko": "드미트리는 신입들을 위해 기본 공구 세트를 주문했어요.",
+   "blank": "стандартный",
+   "src": "made"
+  },
+  {
+   "text": "Ольга взяла стандартный набор с чаем и печеньем у проводника.",
+   "en": "Olga got the standard set with tea and biscuits from the conductor.",
+   "ko": "올가는 승무원에게서 차와 과자가 든 기본 세트를 받았어요.",
+   "blank": "стандартный",
+   "src": "made"
+  }
+ ],
  "w|становиться": [
   {
    "text": "На улице становится темно.",
@@ -54981,6 +55413,22 @@
    "ko": "저는 제 방식대로 일해요.",
    "blank": "стиль",
    "src": "tatoeba:3758084/odexed en:2266930/_undertoad"
+  }
+ ],
+ "w|стипендия": [
+  {
+   "text": "Завод платит Дмитрию стипендию, пока он учится в техникуме.",
+   "en": "The factory pays Dmitry a stipend while he studies at the technical college.",
+   "ko": "공장은 드미트리가 기술 학교에 다니는 동안 장학금을 줘요.",
+   "blank": "стипендию",
+   "src": "made"
+  },
+  {
+   "text": "Ольга потратила первую стипендию на билет в Санкт-Петербург.",
+   "en": "Olga spent her first scholarship payment on a ticket to St. Petersburg.",
+   "ko": "올가는 첫 장학금으로 상트페테르부르크행 기차표를 샀어요.",
+   "blank": "стипендию",
+   "src": "made"
   }
  ],
  "w|стирать": [
@@ -55353,6 +55801,22 @@
    "src": "made"
   }
  ],
+ "w|страховой": [
+  {
+   "text": "После травмы руки Дмитрий получил страховую выплату от завода.",
+   "en": "After his hand injury Dmitry received an insurance payment from the factory.",
+   "ko": "손을 다친 뒤 드미트리는 공장에서 보험금을 받았어요.",
+   "blank": "страховую",
+   "src": "made"
+  },
+  {
+   "text": "Перед поездкой Ольга оформила страховой полис на всю дорогу.",
+   "en": "Before the trip Olga took out an insurance policy for the whole journey.",
+   "ko": "여행 전에 올가는 가는 동안 쓸 보험을 들었어요.",
+   "blank": "страховой",
+   "src": "made"
+  }
+ ],
  "w|страшный": [
   {
    "text": "Фильм совсем не страшный.",
@@ -55523,6 +55987,22 @@
    "ko": "우리는 벽이 아니라 다리를 놓아야 해요.",
    "blank": "строить",
    "src": "tatoeba:9937718/Ooneykcall en:9937699/ddnktr"
+  }
+ ],
+ "w|структура": [
+  {
+   "text": "Новый директор полностью изменил структуру завода, и Дмитрий перешёл в другой отдел.",
+   "en": "The new director completely changed the factory's structure, and Dmitry moved to another department.",
+   "ko": "새 공장장이 공장 조직을 완전히 바꿔서 드미트리는 다른 부서로 옮겼어요.",
+   "blank": "структуру",
+   "src": "made"
+  },
+  {
+   "text": "Ольга долго разбиралась в структуре расписания пригородных поездов.",
+   "en": "Olga spent a long time figuring out the structure of the suburban train schedule.",
+   "ko": "올가는 교외 열차 시간표 구조를 한참 들여다봤어요.",
+   "blank": "структуре",
+   "src": "made"
   }
  ],
  "w|стрястись": [
@@ -56141,6 +56621,22 @@
    "en": "I'll go to the pharmacy.",
    "ko": "나 약국에 다녀올게.",
    "blank": "схожу"
+  }
+ ],
+ "w|сходиться": [
+  {
+   "text": "Мнения Дмитрия и мастера редко сходятся, но они уважают друг друга.",
+   "en": "Dmitry's and the foreman's opinions rarely coincide, but they respect each other.",
+   "ko": "드미트리와 작업반장은 의견이 잘 안 맞지만 서로 존중해요.",
+   "blank": "сходятся",
+   "src": "made"
+  },
+  {
+   "text": "Ольга заметила, что рельсы сходятся у горизонта в одну точку.",
+   "en": "Olga noticed that the rails converge at the horizon into one point.",
+   "ko": "올가는 레일이 지평선에서 한 점으로 모이는 걸 봤어요.",
+   "blank": "сходятся",
+   "src": "made"
   }
  ],
  "w|сцена": [
@@ -57572,6 +58068,22 @@
    "en": "Natalia put on a thin cap, and water still got into her ears.",
    "ko": "나탈리야는 얇은 수영모를 썼는데도 귀에 물이 들어갔어요.",
    "blank": "тонкую",
+   "src": "made"
+  }
+ ],
+ "w|торговать": [
+  {
+   "text": "Брат Дмитрия торгует запчастями, которые делает их завод.",
+   "en": "Dmitry's brother trades in spare parts made by their factory.",
+   "ko": "드미트리의 형은 그 공장에서 만든 부품을 팔아요.",
+   "blank": "торгует",
+   "src": "made"
+  },
+  {
+   "text": "На станциях бабушки торгуют пирожками, и Ольга всегда покупает пару.",
+   "en": "At the stations old women sell pirozhki, and Olga always buys a couple.",
+   "ko": "역마다 할머니들이 피로시키를 파는데, 올가는 늘 두어 개 사요.",
+   "blank": "торгуют",
    "src": "made"
   }
  ],
@@ -59963,6 +60475,38 @@
    "src": "tatoeba:1568938/Biga en:256885/CK"
   }
  ],
+ "w|уникальный": [
+  {
+   "text": "На заводе Дмитрия делают уникальные детали, которых нет больше нигде.",
+   "en": "Dmitry's factory makes unique parts that aren't made anywhere else.",
+   "ko": "드미트리의 공장에서는 다른 데서는 안 만드는 독특한 부품을 만들어요.",
+   "blank": "уникальные",
+   "src": "made"
+  },
+  {
+   "text": "Ольга считает, что маршрут через Байкал по-своему уникальный.",
+   "en": "Olga thinks the route past Baikal is unique in its own way.",
+   "ko": "올가는 바이칼을 지나는 노선이 나름대로 특별하다고 생각해요.",
+   "blank": "уникальный",
+   "src": "made"
+  }
+ ],
+ "w|уничтожать": [
+  {
+   "text": "Дмитрий следит, чтобы старые чертежи не уничтожали без разрешения.",
+   "en": "Dmitry makes sure the old blueprints aren't destroyed without permission.",
+   "ko": "드미트리는 옛 설계도가 허락 없이 폐기되지 않게 챙겨요.",
+   "blank": "уничтожали",
+   "src": "made"
+  },
+  {
+   "text": "В фильме, который Ольга смотрела в поезде, роботы уничтожали города.",
+   "en": "In the film Olga watched on the train, robots were destroying cities.",
+   "ko": "올가가 기차에서 본 영화에서는 로봇들이 도시를 파괴했어요.",
+   "blank": "уничтожали",
+   "src": "made"
+  }
+ ],
  "w|уничтожение": [
   {
    "text": "В учебнике Павел прочитал об уничтожении древней библиотеки при пожаре.",
@@ -61279,6 +61823,22 @@
    "src": "made"
   }
  ],
+ "w|финансы": [
+  {
+   "text": "После нового контракта финансы завода Дмитрия заметно улучшились.",
+   "en": "The finances of Dmitry's factory noticeably improved after the new contract.",
+   "ko": "새 계약 뒤 드미트리네 공장 재정이 눈에 띄게 나아졌어요.",
+   "blank": "финансы",
+   "src": "made"
+  },
+  {
+   "text": "Ольга заранее рассчитала финансы на всю поездку.",
+   "en": "Olga worked out the finances for the whole trip in advance.",
+   "ko": "올가는 여행 경비를 미리 다 계산해 뒀어요.",
+   "blank": "финансы",
+   "src": "made"
+  }
+ ],
  "w|фиолетовый": [
   {
    "text": "Мне нравится фиолетовый цвет.",
@@ -61405,6 +61965,22 @@
    "ko": "그 건물 모양이 마음에 들어요.",
    "blank": "форма",
    "src": "tatoeba:2970535/al_ex_an_der en:10727351/ddnktr"
+  }
+ ],
+ "w|формула": [
+  {
+   "text": "Дмитрий вывел простую формулу для расчёта расхода металла.",
+   "en": "Dmitry worked out a simple formula for calculating metal consumption.",
+   "ko": "드미트리는 금속 소모량을 계산하는 간단한 공식을 만들었어요.",
+   "blank": "формулу",
+   "src": "made"
+  },
+  {
+   "text": "Ольга в дороге повторяла химическую формулу к экзамену.",
+   "en": "Olga went over a chemical formula for her exam on the way.",
+   "ko": "올가는 기차에서 시험에 나올 화학식을 복습했어요.",
+   "blank": "формулу",
+   "src": "made"
   }
  ],
  "w|фото": [
@@ -61940,6 +62516,22 @@
    "en": "After swimming Natalia hurries to a church choir rehearsal.",
    "ko": "수영이 끝나면 나탈리야는 성가대 연습에 서둘러 가요.",
    "blank": "хора",
+   "src": "made"
+  }
+ ],
+ "w|хорошенький": [
+  {
+   "text": "Новая сотрудница в бухгалтерии показалась Дмитрию очень хорошенькой.",
+   "en": "Dmitry thought the new employee in accounting was very pretty.",
+   "ko": "드미트리는 경리부에 새로 온 직원이 무척 예쁘다고 생각했어요.",
+   "blank": "хорошенькой",
+   "src": "made"
+  },
+  {
+   "text": "Соседка по купе показала Ольге фото своей хорошенькой внучки.",
+   "en": "Olga's compartment neighbour showed her a photo of her pretty granddaughter.",
+   "ko": "같은 칸 할머니가 예쁜 손녀 사진을 올가에게 보여 줬어요.",
+   "blank": "хорошенькой",
    "src": "made"
   }
  ],
@@ -63133,6 +63725,38 @@
    "src": "tatoeba:5141393/marafon en:2952125/CK"
   }
  ],
+ "w|чрезвычайный": [
+  {
+   "text": "После аварии на линии на заводе ввели чрезвычайный режим, и Дмитрий остался до утра.",
+   "en": "After the accident on the line, the factory went into emergency mode, and Dmitry stayed until morning.",
+   "ko": "생산 라인 사고 뒤 공장에 비상 체제가 내려져서 드미트리는 아침까지 남았어요.",
+   "blank": "чрезвычайный",
+   "src": "made"
+  },
+  {
+   "text": "Поезд, в котором ехала Ольга, остановили из-за чрезвычайной ситуации на путях.",
+   "en": "The train Olga was on was stopped because of an emergency on the tracks.",
+   "ko": "올가가 탄 기차는 선로 비상 상황 때문에 멈춰 섰어요.",
+   "blank": "чрезвычайной",
+   "src": "made"
+  }
+ ],
+ "w|чтение": [
+  {
+   "text": "В обеденный перерыв Дмитрий любит чтение детективов.",
+   "en": "During the lunch break Dmitry loves reading detective novels.",
+   "ko": "점심시간에 드미트리는 추리 소설 읽기를 좋아해요.",
+   "blank": "чтение",
+   "src": "made"
+  },
+  {
+   "text": "Для Ольги долгая дорога — лучшее время для чтения.",
+   "en": "For Olga a long journey is the best time for reading.",
+   "ko": "올가에게 긴 기차 여행은 책 읽기에 가장 좋은 시간이에요.",
+   "blank": "чтения",
+   "src": "made"
+  }
+ ],
  "w|что": [
   {
    "text": "Что ты хочешь?",
@@ -64093,6 +64717,22 @@
    "ko": "이 일에서는 너도 나보다 나을 게 없어.",
    "blank": "эксперт",
    "src": "tatoeba:8505399/odexed en:70089/CK"
+  }
+ ],
+ "w|экспертиза": [
+  {
+   "text": "Бракованную деталь Дмитрий отправил на экспертизу в лабораторию.",
+   "en": "Dmitry sent the defective part to the laboratory for examination.",
+   "ko": "드미트리는 불량 부품을 실험실에 감정을 맡겼어요.",
+   "blank": "экспертизу",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик рассказал Ольге, что едет в Москву на экспертизу старинной иконы.",
+   "en": "A fellow passenger told Olga he was going to Moscow to have an old icon appraised.",
+   "ko": "같은 칸 승객은 오래된 성화를 감정받으러 모스크바에 간다고 올가에게 말했어요.",
+   "blank": "экспертизу",
+   "src": "made"
   }
  ],
  "w|электричество": [
