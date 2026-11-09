@@ -1305,6 +1305,22 @@
    "src": "made"
   }
  ],
+ "w|กระวนกระวาย": [
+  {
+   "text": "ก่อนเข้าห้องสัมภาษณ์ครั้งสุดท้าย อนันต์กระวนกระวายจนมือเย็น",
+   "en": "Before going into the final interview room, Anan was so anxious his hands went cold.",
+   "ko": "마지막 면접실에 들어가기 전 아난은 너무 초조해서 손이 차가워졌어요.",
+   "blank": "กระวนกระวาย",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีนั่งกระวนกระวายรอข่าวหลานชายที่หายตัวไป",
+   "en": "Pranee sat anxiously waiting for news of her missing grandson.",
+   "ko": "쁘라니는 사라진 손자 소식을 초조하게 기다렸어요.",
+   "blank": "กระวนกระวาย",
+   "src": "made"
+  }
+ ],
  "w|กระสอบ": [
   {
    "text": "งานกีฬาสีปีนี้มีการแข่งวิ่งกระสอบ",
@@ -5243,6 +5259,22 @@
    "src": "made"
   }
  ],
+ "w|กู้ภัย": [
+  {
+   "text": "เรือกู้ภัยลำแรกของจังหวัดตั้งอยู่กลางลานพิพิธภัณฑ์",
+   "en": "The province's first rescue boat stands in the middle of the museum courtyard.",
+   "ko": "도의 첫 구조선이 박물관 마당 한가운데 놓여 있어요.",
+   "blank": "กู้ภัย",
+   "src": "made"
+  },
+  {
+   "text": "อาสาสมัครกู้ภัยแวะมาซื้อผ้าพันแผลไปเติมในรถทุกสัปดาห์",
+   "en": "Rescue volunteers stop by every week to buy bandages to restock their vehicle.",
+   "ko": "구조 자원봉사자들이 매주 들러 차에 채울 붕대를 사 가요.",
+   "blank": "กู้ภัย",
+   "src": "made"
+  }
+ ],
  "w|กู้ยืม": [
   {
    "text": "เอกตามข่าวบริษัทที่กู้ยืมเงินจากธนาคารรัฐแล้วไม่ยอมจ่ายคืน",
@@ -7475,6 +7507,22 @@
    "src": "made"
   }
  ],
+ "w|ข้อคิดเห็น": [
+  {
+   "text": "กิตติเขียนข้อคิดเห็นลงสมุดเยี่ยมว่าอยากให้มีคำบรรยายภาษาอังกฤษ",
+   "en": "Kitti wrote a comment in the guestbook asking for English captions.",
+   "ko": "끼띠는 방명록에 영어 설명이 있었으면 좋겠다는 의견을 적었어요.",
+   "blank": "ข้อคิดเห็น",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาขอข้อคิดเห็นจากลูกค้าเรื่องเวลาเปิดปิดร้าน",
+   "en": "Wanna asked customers for their opinions on the shop's opening hours.",
+   "ko": "완나는 영업시간에 대해 손님들의 의견을 물었어요.",
+   "blank": "ข้อคิดเห็น",
+   "src": "made"
+  }
+ ],
  "w|ของ": [
   {
    "text": "นี่ของใคร",
@@ -8375,6 +8423,22 @@
    "src": "made"
   }
  ],
+ "w|ขัดเกลา": [
+  {
+   "text": "ภัณฑารักษ์ขัดเกลาคำบรรยายใต้ภาพให้อ่านง่ายขึ้น",
+   "en": "The curator polished the captions under the pictures to make them easier to read.",
+   "ko": "큐레이터는 그림 아래 설명문을 읽기 쉽게 다듬었어요.",
+   "blank": "ขัดเกลา",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาขัดเกลาภาษาในแผ่นพับให้คนแก่อ่านเข้าใจง่าย",
+   "en": "Wanna polished the wording of the leaflet so older people can understand it easily.",
+   "ko": "완나는 노인들이 쉽게 이해하도록 안내문 문장을 다듬었어요.",
+   "blank": "ขัดเกลา",
+   "src": "made"
+  }
+ ],
  "w|ขัดขวาง": [
   {
    "text": "รากต้นไทรใหญ่ขัดขวางการวางท่อระบายน้ำใหม่ของประยุทธ",
@@ -9133,6 +9197,22 @@
    "src": "made"
   }
  ],
+ "w|ข่าวคราว": [
+  {
+   "text": "จดหมายเก่าในตู้เล่าข่าวคราวของทหารที่ไปรบแดนไกล",
+   "en": "The old letters in the case tell news of soldiers fighting in faraway lands.",
+   "ko": "진열장의 옛 편지들은 먼 땅에서 싸우던 병사들의 소식을 전해요.",
+   "blank": "ข่าวคราว",
+   "src": "made"
+  },
+  {
+   "text": "คุณป้าแวะมาซื้อยาและถามข่าวคราวลูกสาวของวรรณา",
+   "en": "An auntie dropped by for medicine and asked after Wanna's daughter.",
+   "ko": "아주머니가 약을 사러 들러서 완나 딸의 안부를 물었어요.",
+   "blank": "ข่าวคราว",
+   "src": "made"
+  }
+ ],
  "w|ข่าวด่วน": [
   {
    "text": "ระหว่างพักครึ่ง ประยุทธเห็นข่าวด่วนเรื่องพายุในโทรศัพท์",
@@ -9487,6 +9567,22 @@
    "src": "made"
   }
  ],
+ "w|ขี่ม้า": [
+  {
+   "text": "เพื่อนร่วมโต๊ะของอนันต์ชอบขี่ม้าในวันหยุด",
+   "en": "Anan's deskmate likes horse riding at weekends.",
+   "ko": "아난의 옆자리 동료는 주말에 말 타는 걸 좋아해요.",
+   "blank": "ขี่ม้า",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจท่องเที่ยวขี่ม้าตรวจชายหาดทุกเช้า",
+   "en": "The tourist police patrol the beach on horseback every morning.",
+   "ko": "관광 경찰은 매일 아침 말을 타고 해변을 순찰해요.",
+   "blank": "ขี่ม้า",
+   "src": "made"
+  }
+ ],
  "w|ขี้เหร่": [
   {
    "text": "ปกหนังสือเล่มนี้ขี้เหร่ แต่เนื้อหาข้างในสนุกมาก",
@@ -9744,6 +9840,22 @@
    "en": "This stretch of beach is a national park zone, so taking shells home is forbidden.",
    "ko": "이 구역 해변은 국립공원이라 조개껍데기를 가져가면 안 돼요.",
    "blank": "เขต",
+   "src": "made"
+  }
+ ],
+ "w|เขตเลือกตั้ง": [
+  {
+   "text": "แผนที่บนผนังแสดงเขตเลือกตั้งแรกของจังหวัด",
+   "en": "The map on the wall shows the province's first electoral districts.",
+   "ko": "벽에 걸린 지도는 도의 첫 선거구를 보여 줘요.",
+   "blank": "เขตเลือกตั้ง",
+   "src": "made"
+  },
+  {
+   "text": "ร้านยาของวรรณาอยู่ในเขตเลือกตั้งเดียวกับโรงพยาบาลจังหวัด",
+   "en": "Wanna's pharmacy is in the same electoral district as the provincial hospital.",
+   "ko": "완나의 약국은 도립 병원과 같은 선거구에 있어요.",
+   "blank": "เขตเลือกตั้ง",
    "src": "made"
   }
  ],
@@ -10777,6 +10889,22 @@
    "en": "There's a lawsuit.",
    "ko": "소송 사건이 있어.",
    "blank": "คดี"
+  }
+ ],
+ "w|คดีความ": [
+  {
+   "text": "เอกสารคดีความเรื่องที่ดินอายุร้อยปีถูกนำมาจัดแสดง",
+   "en": "Century-old land lawsuit documents have been put on display.",
+   "ko": "백 년 된 토지 소송 문서가 전시됐어요.",
+   "blank": "คดีความ",
+   "src": "made"
+  },
+  {
+   "text": "ร้านยาเคยมีคดีความกับลูกค้าที่แพ้ยาจนต้องขึ้นศาล",
+   "en": "The pharmacy once had a legal case with a customer who had a drug allergy, and it went to court.",
+   "ko": "약국은 약 알레르기가 난 손님과 소송이 붙어 법정까지 간 적이 있어요.",
+   "blank": "คดีความ",
+   "src": "made"
   }
  ],
  "w|คดีอาญา": [
@@ -15079,6 +15207,22 @@
    "blank": "คะแนน"
   }
  ],
+ "w|คะแนนนิยม": [
+  {
+   "text": "ป้ายบอกว่ากษัตริย์องค์นี้มีคะแนนนิยมสูงในหมู่ราษฎรสมัยนั้น",
+   "en": "The sign says this king was very popular among the people of his time.",
+   "ko": "안내판에는 이 왕이 당대 백성들 사이에서 인기가 높았다고 적혀 있어요.",
+   "blank": "คะแนนนิยม",
+   "src": "made"
+  },
+  {
+   "text": "ผู้สมัครคนหนึ่งมาแจกใบปลิวหน้าร้านเพื่อเรียกคะแนนนิยม",
+   "en": "A candidate came to hand out flyers in front of the shop to win popularity.",
+   "ko": "한 후보가 지지를 얻으려고 약국 앞에서 전단을 나눠 줬어요.",
+   "blank": "คะแนนนิยม",
+   "src": "made"
+  }
+ ],
  "w|คะแนนเสียง": [
   {
    "text": "ช่วงนับคะแนนเสียงเลือกตั้ง วิชัยต้องเฝ้าหีบบัตรทั้งคืน",
@@ -17459,6 +17603,22 @@
    "src": "made"
   }
  ],
+ "w|เคร่งเครียด": [
+  {
+   "text": "บรรยากาศในห้องประชุมเช้าวันจันทร์เคร่งเครียดเพราะยอดขายตก",
+   "en": "The atmosphere in the Monday morning meeting was tense because sales had dropped.",
+   "ko": "매출이 떨어져서 월요일 아침 회의 분위기는 팽팽했어요.",
+   "blank": "เคร่งเครียด",
+   "src": "made"
+  },
+  {
+   "text": "สีหน้าของตำรวจเคร่งเครียดตอนรับแจ้งเรื่องเด็กหาย",
+   "en": "The officer's face grew tense when he took the report of a missing child.",
+   "ko": "아이 실종 신고를 받을 때 경찰의 표정이 굳어졌어요.",
+   "blank": "เคร่งเครียด",
+   "src": "made"
+  }
+ ],
  "w|เครดิต": [
   {
    "text": "แผงส่วนใหญ่ในตลาดนัดไม่รับบัตรเครดิต กิตติจึงพกเงินสด",
@@ -18028,6 +18188,22 @@
    "en": "Malee woke up to see frost coating the grass completely white.",
    "ko": "말리는 일어나서 서리가 풀잎을 하얗게 덮은 걸 봤어요.",
    "blank": "เคลือบ",
+   "src": "made"
+  }
+ ],
+ "w|เค้าโครง": [
+  {
+   "text": "กิตติร่างเค้าโครงนิทรรศการใหม่เรื่องอาหารพื้นบ้าน",
+   "en": "Kitti drafted the outline for a new exhibition on local food.",
+   "ko": "끼띠는 향토 음식에 관한 새 전시의 개요를 짰어요.",
+   "blank": "เค้าโครง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาวางเค้าโครงร้านใหม่ให้ชั้นยาเด็กอยู่ใกล้ประตู",
+   "en": "Wanna planned a new layout for the shop with the children's medicine near the door.",
+   "ko": "완나는 어린이 약 선반을 문 가까이 두는 새 배치를 짰어요.",
+   "blank": "เค้าโครง",
    "src": "made"
   }
  ],
@@ -18777,6 +18953,22 @@
    "blank": "งอ"
   }
  ],
+ "w|ง้อ": [
+  {
+   "text": "อนันต์ซื้อดอกไม้ไปง้อแฟนที่น้อยใจเพราะเขาลืมโทรหา",
+   "en": "Anan bought flowers to make up with his girlfriend, who was hurt that he forgot to call.",
+   "ko": "아난은 자기가 전화를 잊어서 서운해하는 여자 친구를 달래려고 꽃을 샀어요.",
+   "blank": "ง้อ",
+   "src": "made"
+  },
+  {
+   "text": "หลานชายมาง้อปราณีที่โรงพักหลังทะเลาะกันเรื่องรถ",
+   "en": "Her grandson came to the station to make up with Pranee after they fought about the car.",
+   "ko": "손자는 차 문제로 다툰 뒤 쁘라니를 달래러 경찰서에 왔어요.",
+   "blank": "ง้อ",
+   "src": "made"
+  }
+ ],
  "w|งอก": [
   {
    "text": "ผ่านไปสามวัน เมล็ดข้าวโพดที่วีระหว่านก็เริ่มงอก",
@@ -19296,6 +19488,22 @@
    "en": "Somsak asked to sit in a quiet corner because he needs to concentrate on writing code.",
    "ko": "솜삭은 코드를 짜는 데 집중해야 해서 조용한 구석 자리를 달라고 했어요.",
    "blank": "เงียบสงบ",
+   "src": "made"
+  }
+ ],
+ "w|เงียบเหงา": [
+  {
+   "text": "คืนแรกในหอพักใกล้ที่ทำงานเงียบเหงาจนอนันต์โทรหาแม่",
+   "en": "The first night in the dorm near work was so lonely and quiet that Anan called his mum.",
+   "ko": "회사 근처 숙소에서의 첫날 밤이 너무 적막해서 아난은 엄마에게 전화했어요.",
+   "blank": "เงียบเหงา",
+   "src": "made"
+  },
+  {
+   "text": "ตอนตีสามโรงพักเงียบเหงา มีแค่เสียงวิทยุสื่อสาร",
+   "en": "At three in the morning the station is deserted, with only the sound of the radio.",
+   "ko": "새벽 세 시 경찰서는 적막하고 무전기 소리만 들려요.",
+   "blank": "เงียบเหงา",
    "src": "made"
   }
  ],
@@ -20642,6 +20850,22 @@
    "en": "Napha read in the news that a landlord who cheated tenants of deposits was sentenced to prison.",
    "ko": "나파는 보증금을 떼먹은 집주인이 징역형을 받았다는 기사를 읽었어요.",
    "blank": "จำคุก",
+   "src": "made"
+  }
+ ],
+ "w|จำใจ": [
+  {
+   "text": "อนันต์จำใจกินอาหารเผ็ดที่เพื่อนร่วมงานสั่งมาเลี้ยงวันแรก",
+   "en": "Anan forced himself to eat the spicy food his coworkers ordered on his first day.",
+   "ko": "아난은 동료들이 첫날 시킨 매운 음식을 억지로 먹었어요.",
+   "blank": "จำใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีจำใจยอมความเพราะคนร้ายเป็นหลานของเพื่อนบ้าน",
+   "en": "Pranee reluctantly settled because the culprit was her neighbour's grandson.",
+   "ko": "범인이 이웃의 손자라서 쁘라니는 마지못해 합의했어요.",
+   "blank": "จำใจ",
    "src": "made"
   }
  ],
@@ -22537,6 +22761,22 @@
    "src": "made"
   }
  ],
+ "w|ฉงน": [
+  {
+   "text": "อนันต์ฉงนว่าทำไมทุกคนในแผนกใส่เสื้อสีเดียวกันในวันพุธ",
+   "en": "Anan was puzzled why everyone in the department wore the same colour on Wednesday.",
+   "ko": "아난은 왜 수요일마다 부서 사람들이 같은 색 옷을 입는지 의아했어요.",
+   "blank": "ฉงน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีฉงนว่าขโมยรู้รหัสตู้เซฟได้อย่างไร",
+   "en": "Pranee was baffled about how the thief knew the safe's combination.",
+   "ko": "쁘라니는 도둑이 금고 비밀번호를 어떻게 알았는지 의아했어요.",
+   "blank": "ฉงน",
+   "src": "made"
+  }
+ ],
  "w|ฉนวน": [
   {
    "text": "ห้องเก็บต้นฉบับโบราณบุฉนวนกันความชื้นไว้ทุกด้าน",
@@ -23679,6 +23919,22 @@
    "blank": "ชอบ"
   }
  ],
+ "w|ชอบกล": [
+  {
+   "text": "อนันต์รู้สึกชอบกลที่ไม่มีใครบอกว่าโต๊ะของเขาอยู่ตรงไหน",
+   "en": "Anan felt it was odd that no one told him where his desk was.",
+   "ko": "아난은 아무도 자기 자리를 알려 주지 않는 게 좀 이상했어요.",
+   "blank": "ชอบกล",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีรู้สึกชอบกลที่ประตูบ้านเปิดอยู่ทั้งที่เธอล็อกไว้",
+   "en": "Pranee felt something was off that her door was open even though she'd locked it.",
+   "ko": "쁘라니는 분명 잠갔는데 대문이 열려 있어서 뭔가 이상하다고 느꼈어요.",
+   "blank": "ชอบกล",
+   "src": "made"
+  }
+ ],
  "w|ชอบใจ": [
   {
    "text": "ฉันชอบใจของขวัญชิ้นนี้",
@@ -23880,6 +24136,22 @@
    "en": "The investor warned that if they dawdled, a rival would launch an app first.",
    "ko": "투자자는 꾸물거리면 경쟁사가 먼저 앱을 낸다고 경고했어요.",
    "blank": "ชักช้า",
+   "src": "made"
+  }
+ ],
+ "w|ชัง": [
+  {
+   "text": "อนันต์ชังการตื่นเช้า แต่วันแรกของงานใหม่เขาตื่นก่อนนาฬิกาปลุก",
+   "en": "Anan hates getting up early, but on the first day of his new job he woke before the alarm.",
+   "ko": "아난은 일찍 일어나는 걸 질색하지만 새 직장 첫날엔 알람보다 먼저 깼어요.",
+   "blank": "ชัง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกตำรวจว่าเธอชังคนที่ขโมยของจากคนแก่ที่สุด",
+   "en": "Pranee told the police that she hates nothing more than people who steal from the elderly.",
+   "ko": "쁘라니는 노인 물건을 훔치는 사람을 가장 증오한다고 경찰에게 말했어요.",
+   "blank": "ชัง",
    "src": "made"
   }
  ],
@@ -25605,6 +25877,22 @@
    "en": "Many ethnicities live together in this city.",
    "ko": "이 도시엔 여러 민족이 함께 살아.",
    "blank": "เชื้อชาติ"
+  }
+ ],
+ "w|เชือด": [
+  {
+   "text": "ภาพวาดเก่าแสดงชาวบ้านเชือดไก่ทำอาหารในงานบุญ",
+   "en": "An old painting shows villagers slaughtering chickens to cook at a merit festival.",
+   "ko": "옛 그림에는 공덕 축제에서 닭을 잡아 요리하는 주민들이 그려져 있어요.",
+   "blank": "เชือด",
+   "src": "made"
+  },
+  {
+   "text": "พ่อค้าข้างร้านโดนมีดบาดตอนเชือดปลา วรรณาเลยทำแผลให้",
+   "en": "The trader next door cut himself while gutting a fish, so Wanna dressed the wound.",
+   "ko": "옆 가게 상인이 생선을 손질하다 칼에 베여서 완나가 상처를 치료해 줬어요.",
+   "blank": "เชือด",
+   "src": "made"
   }
  ],
  "w|เชื่อได้": [
@@ -28525,6 +28813,22 @@
    "blank": "ดี"
   }
  ],
+ "w|ดีกรี": [
+  {
+   "text": "ป้ายบอกว่าเหล้าโรงโบราณในขวดนี้มีดีกรีสูงมาก",
+   "en": "The sign says the old distilled liquor in this bottle is very high-proof.",
+   "ko": "안내판에는 이 병에 든 옛 증류주가 도수가 아주 높다고 적혀 있어요.",
+   "blank": "ดีกรี",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเรียนจบด้วยดีกรีเภสัชศาสตร์จากมหาวิทยาลัยในเมือง",
+   "en": "Wanna graduated with a degree in pharmacy from a university in the city.",
+   "ko": "완나는 시내 대학에서 약학 학위를 받고 졸업했어요.",
+   "blank": "ดีกรี",
+   "src": "made"
+  }
+ ],
  "w|ดีขึ้น": [
   {
    "text": "หลังได้พักช่วงวันหยุด อาการปวดหลังของสมชายก็ดีขึ้น",
@@ -30611,6 +30915,22 @@
    "src": "made"
   }
  ],
+ "w|ตรวจตรา": [
+  {
+   "text": "หัวหน้าเดินตรวจตราโต๊ะทำงานทุกตัวก่อนพนักงานใหม่มาถึง",
+   "en": "The boss went round inspecting every desk before the new staff arrived.",
+   "ko": "상사는 신입이 오기 전에 책상을 하나하나 둘러봤어요.",
+   "blank": "ตรวจตรา",
+   "src": "made"
+  },
+  {
+   "text": "สารวัตรสั่งให้ลูกน้องออกตรวจตราตลาดนัดกลางคืน",
+   "en": "The inspector ordered his officers out to patrol the night market.",
+   "ko": "경감은 부하들에게 야시장을 순찰하라고 지시했어요.",
+   "blank": "ตรวจตรา",
+   "src": "made"
+  }
+ ],
  "w|ตรวจสอบ": [
   {
    "text": "ช่วยตรวจสอบตัวเลขนี้อีกที",
@@ -31251,6 +31571,22 @@
    "en": "I'm busy right now.",
    "ko": "지금은 바빠.",
    "blank": "ตอน"
+  }
+ ],
+ "w|ต้อน": [
+  {
+   "text": "หัวหน้าทีมต้อนพนักงานใหม่ทั้งหมดเข้าห้องประชุมเพื่อถ่ายรูป",
+   "en": "The team leader herded all the new staff into the meeting room for a photo.",
+   "ko": "팀장은 사진을 찍으려고 신입들을 회의실로 몰아넣었어요.",
+   "blank": "ต้อน",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจต้อนวัยรุ่นที่แข่งรถจนมุมที่ปลายซอย",
+   "en": "The police cornered the teenage street racers at the end of the lane.",
+   "ko": "경찰은 폭주하던 십 대들을 골목 끝으로 몰아세웠어요.",
+   "blank": "ต้อน",
+   "src": "made"
   }
  ],
  "w|ตอนกลางคืน": [
@@ -32082,6 +32418,22 @@
    "en": "Malee named her vegetable stall Grandma's Garden.",
    "ko": "말리는 채소 좌판 이름을 '할머니 텃밭'이라고 지었어요.",
    "blank": "ตั้งชื่อ",
+   "src": "made"
+  }
+ ],
+ "w|ตั้งต้น": [
+  {
+   "text": "อนันต์ถือว่าวันนี้เป็นการตั้งต้นชีวิตใหม่หลังย้ายเมือง",
+   "en": "Anan sees today as a fresh start in life after moving cities.",
+   "ko": "아난은 오늘을 이사 후 새 인생의 출발점으로 여겨요.",
+   "blank": "ตั้งต้น",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจบอกว่าจะตั้งต้นสืบจากกล้องวงจรปิดหน้าบ้านปราณี",
+   "en": "The police said they'd start the investigation from the CCTV in front of Pranee's house.",
+   "ko": "경찰은 쁘라니네 집 앞 CCTV부터 수사를 시작하겠다고 했어요.",
+   "blank": "ตั้งต้น",
    "src": "made"
   }
  ],
@@ -33079,6 +33431,22 @@
    "en": "The music is soft and low.",
    "ko": "음악이 작고 낮아.",
    "blank": "ต่ำ"
+  }
+ ],
+ "w|ต่ำกว่า": [
+  {
+   "text": "ห้องเก็บเอกสารต้องคุมอุณหภูมิให้ต่ำกว่ายี่สิบองศา",
+   "en": "The archive room must be kept below twenty degrees.",
+   "ko": "문서 보관실은 이십 도 아래로 온도를 유지해야 해요.",
+   "blank": "ต่ำกว่า",
+   "src": "made"
+  },
+  {
+   "text": "ยาบางชนิดต้องเก็บในอุณหภูมิต่ำกว่าห้องปกติ",
+   "en": "Some medicines must be stored below normal room temperature.",
+   "ko": "어떤 약은 실온보다 낮은 온도에 보관해야 해요.",
+   "blank": "ต่ำกว่า",
+   "src": "made"
   }
  ],
  "w|ตำนาน": [
@@ -34801,6 +35169,22 @@
    "blank": "ถ้วย"
   }
  ],
+ "w|ถวายพระพร": [
+  {
+   "text": "สมุดลงนามถวายพระพรเล่มเก่าถูกเก็บไว้ในห้องเอกสาร",
+   "en": "An old book of signed well-wishes to the king is kept in the documents room.",
+   "ko": "임금께 올린 축원 서명부 옛 책이 문서실에 보관돼 있어요.",
+   "blank": "ถวายพระพร",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเปิดทีวีในร้านดูพิธีถวายพระพรในวันเฉลิมพระชนมพรรษา",
+   "en": "Wanna turned on the TV in the shop to watch the birthday well-wishing ceremony.",
+   "ko": "완나는 약국 텔레비전으로 국왕 탄신일 축원 의식을 봤어요.",
+   "blank": "ถวายพระพร",
+   "src": "made"
+  }
+ ],
  "w|ถอด": [
   {
    "text": "ถอดรองเท้าก่อนเข้า",
@@ -35430,6 +35814,22 @@
    "en": "My heart is beating fast from excitement.",
    "ko": "설레서 심장이 빨리 뛰어.",
    "blank": "ถี่",
+   "src": "made"
+  }
+ ],
+ "w|ถี่ถ้วน": [
+  {
+   "text": "ฝ่ายบุคคลอธิบายสวัสดิการให้อนันต์ฟังอย่างถี่ถ้วน",
+   "en": "HR explained the benefits to Anan thoroughly.",
+   "ko": "인사팀은 아난에게 복리후생을 꼼꼼하게 설명했어요.",
+   "blank": "ถี่ถ้วน",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจจดบันทึกคำให้การของปราณีอย่างถี่ถ้วน",
+   "en": "The police took down Pranee's statement thoroughly.",
+   "ko": "경찰은 쁘라니의 진술을 꼼꼼하게 받아 적었어요.",
+   "blank": "ถี่ถ้วน",
    "src": "made"
   }
  ],
@@ -39748,6 +40148,22 @@
    "en": "Chan's grandmother still lights incense to the gods at the shrine before planting every year.",
    "ko": "짠의 할머니는 매년 모내기 전에 사당의 신께 향을 피워요.",
    "blank": "เทพเจ้า",
+   "src": "made"
+  }
+ ],
+ "w|เทพธิดา": [
+  {
+   "text": "รูปปั้นเทพธิดาถือดอกบัวตั้งอยู่หน้าทางเข้า",
+   "en": "A statue of a goddess holding a lotus stands at the entrance.",
+   "ko": "입구에는 연꽃을 든 여신상이 서 있어요.",
+   "blank": "เทพธิดา",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาววรรณาแต่งชุดเทพธิดาไปงานโรงเรียนแล้วแวะมาอวดแม่ที่ร้าน",
+   "en": "Wanna's daughter dressed as a goddess for a school event and dropped by the shop to show her mum.",
+   "ko": "완나의 딸은 학교 행사에 여신 옷을 입고 가다가 약국에 들러 엄마에게 자랑했어요.",
+   "blank": "เทพธิดา",
    "src": "made"
   }
  ],
@@ -47639,6 +48055,22 @@
    "src": "made"
   }
  ],
+ "w|เบ็ดเสร็จ": [
+  {
+   "text": "ผู้จัดการมีอำนาจเบ็ดเสร็จในการเลือกคนเข้าทีม",
+   "en": "The manager has absolute authority over choosing who joins the team.",
+   "ko": "매니저는 팀원 선발에 전권을 가지고 있어요.",
+   "blank": "เบ็ดเสร็จ",
+   "src": "made"
+  },
+  {
+   "text": "การปราบยาเสพติดต้องทำแบบเบ็ดเสร็จทั้งผู้ค้าและผู้เสพ",
+   "en": "The drug crackdown has to be total, covering both dealers and users.",
+   "ko": "마약 단속은 판매자와 사용자 모두를 아우르는 전면적인 방식이어야 해요.",
+   "blank": "เบ็ดเสร็จ",
+   "src": "made"
+  }
+ ],
  "w|เบรก": [
   {
    "text": "รถไฟเบรกแรงจนกาแฟของชัยหกเลอะโต๊ะ",
@@ -48866,6 +49298,22 @@
    "en": "That night two friends cleared up a grudge they had held since school.",
    "ko": "그날 밤 두 친구는 학창 시절부터 맺힌 응어리를 풀었어요.",
    "blank": "ปม",
+   "src": "made"
+  }
+ ],
+ "w|ปมด้อย": [
+  {
+   "text": "อนันต์มีปมด้อยเรื่องภาษาอังกฤษ จึงลงเรียนคอร์สตอนเย็น",
+   "en": "Anan has a complex about his English, so he signed up for an evening course.",
+   "ko": "아난은 영어에 열등감이 있어서 저녁 강좌에 등록했어요.",
+   "blank": "ปมด้อย",
+   "src": "made"
+  },
+  {
+   "text": "นักจิตวิทยาบอกว่าผู้ต้องหาอาจมีปมด้อยตั้งแต่เด็ก",
+   "en": "The psychologist said the suspect may have had an inferiority complex since childhood.",
+   "ko": "심리학자는 피의자가 어릴 때부터 열등감이 있었을 수 있다고 했어요.",
+   "blank": "ปมด้อย",
    "src": "made"
   }
  ],
@@ -50281,6 +50729,22 @@
    "src": "made"
   }
  ],
+ "w|ปรานี": [
+  {
+   "text": "ในเกมกระดานยามพัก หัวหน้าเล่นแบบไม่ปรานีพนักงานใหม่เลย",
+   "en": "At a board game during the break, the boss showed the new staff no mercy at all.",
+   "ko": "쉬는 시간 보드게임에서 상사는 신입들에게 전혀 봐주지 않았어요.",
+   "blank": "ปรานี",
+   "src": "made"
+  },
+  {
+   "text": "ผู้กำกับบอกว่ากฎหมายไม่ปรานีคนที่ทำร้ายเด็ก",
+   "en": "The superintendent said the law shows no mercy to those who harm children.",
+   "ko": "서장은 법이 아이를 해친 사람에게 자비를 베풀지 않는다고 했어요.",
+   "blank": "ปรานี",
+   "src": "made"
+  }
+ ],
  "w|ปราบ": [
   {
    "text": "ตำรวจออกมาปราบแผงขายของปลอมในตลาดนัดเมื่อสัปดาห์ก่อน",
@@ -50865,6 +51329,22 @@
    "src": "made"
   }
  ],
+ "w|ปลาบปลื้ม": [
+  {
+   "text": "แม่ของอนันต์ปลาบปลื้มจนน้ำตาซึมเมื่อเห็นลูกใส่ชุดพนักงาน",
+   "en": "Anan's mother was so moved she teared up when she saw him in his uniform.",
+   "ko": "아난의 어머니는 아들이 직원 유니폼을 입은 걸 보고 감격해 눈시울을 붉혔어요.",
+   "blank": "ปลาบปลื้ม",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีปลาบปลื้มที่ตำรวจตามสร้อยทองของแม่กลับมาได้",
+   "en": "Pranee was overjoyed that the police recovered her mother's gold necklace.",
+   "ko": "쁘라니는 경찰이 어머니의 금목걸이를 되찾아 줘서 감격했어요.",
+   "blank": "ปลาบปลื้ม",
+   "src": "made"
+  }
+ ],
  "w|ปลาเผา": [
   {
    "text": "ก่อนทำปลาเผา ครูให้กิตติยัดตะไคร้ใส่ท้องปลาก่อน",
@@ -51051,6 +51531,22 @@
    "src": "made"
   }
  ],
+ "w|ปวงชน": [
+  {
+   "text": "ป้ายบรรยายบอกว่ารัฐธรรมนูญฉบับแรกให้อำนาจแก่ปวงชน",
+   "en": "The caption says the first constitution gave power to the people.",
+   "ko": "설명판에는 첫 헌법이 국민에게 권력을 주었다고 적혀 있어요.",
+   "blank": "ปวงชน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเชื่อว่ายาพื้นฐานควรเข้าถึงได้สำหรับปวงชน",
+   "en": "Wanna believes basic medicines should be accessible to all the people.",
+   "ko": "완나는 기본 의약품은 모든 국민이 구할 수 있어야 한다고 믿어요.",
+   "blank": "ปวงชน",
+   "src": "made"
+  }
+ ],
  "w|ปวด": [
   {
    "text": "ปวดหลังหลังนั่งนาน",
@@ -51077,6 +51573,22 @@
    "en": "My stomachache is so bad I can't go to school.",
    "ko": "배가 아파서 학교에 못 가.",
    "blank": "ปวดท้อง"
+  }
+ ],
+ "w|ปวดร้าว": [
+  {
+   "text": "อนันต์เล่าถึงความปวดร้าวตอนถูกเลิกจ้างจากบริษัทเก่า",
+   "en": "Anan talked about the anguish of being laid off from his old company.",
+   "ko": "아난은 예전 회사에서 해고됐을 때의 쓰라림을 이야기했어요.",
+   "blank": "ปวดร้าว",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของผู้ต้องหาร้องไห้ด้วยความปวดร้าวหน้าห้องขัง",
+   "en": "The suspect's mother wept in anguish outside the cell.",
+   "ko": "피의자의 어머니는 유치장 앞에서 비통하게 울었어요.",
+   "blank": "ปวดร้าว",
+   "src": "made"
   }
  ],
  "w|ปวดหัว": [
@@ -52731,6 +53243,22 @@
    "src": "made"
   }
  ],
+ "w|เปลวไฟ": [
+  {
+   "text": "วิดีโอจำลองเปลวไฟที่เผาเมืองหลวงเก่าทำให้เด็กๆ ตกใจ",
+   "en": "The video recreating the flames that burned the old capital startled the children.",
+   "ko": "옛 수도를 태운 불길을 재현한 영상에 아이들이 깜짝 놀랐어요.",
+   "blank": "เปลวไฟ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าโดนเปลวไฟจากเตาแก๊สลวกแขนจึงมาซื้อยาทาแผลไฟไหม้",
+   "en": "A customer's arm was scorched by flames from a gas stove, so he came to buy burn ointment.",
+   "ko": "한 손님이 가스레인지 불길에 팔을 데어서 화상 연고를 사러 왔어요.",
+   "blank": "เปลวไฟ",
+   "src": "made"
+  }
+ ],
  "w|เปล่า": [
   {
    "text": "เปล่า ฉันไม่ได้ไป",
@@ -53064,6 +53592,22 @@
    "en": "Malee's running shoes got muddy after the dirt stretch at the tenth kilometer.",
    "ko": "말리의 러닝화는 십 킬로미터 지점 흙길을 지난 뒤 진흙투성이가 됐어요.",
    "blank": "เปื้อน",
+   "src": "made"
+  }
+ ],
+ "w|เปื่อย": [
+  {
+   "text": "ผ้าไหมโบราณในตู้นี้เปื่อยจนห้ามแตะเด็ดขาด",
+   "en": "The ancient silk in this case has rotted so much it must never be touched.",
+   "ko": "이 진열장의 옛 비단은 너무 삭아서 절대 만지면 안 돼요.",
+   "blank": "เปื่อย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าเอาแผลที่เท้าเปื่อยมาให้วรรณาดู",
+   "en": "A customer showed Wanna a sore on his foot that had turned soggy and raw.",
+   "ko": "한 손님이 짓무른 발 상처를 완나에게 보여 줬어요.",
+   "blank": "เปื่อย",
    "src": "made"
   }
  ],
@@ -54472,6 +55016,22 @@
    "en": "The passenger next to Fon has a bandage wrapped around his wrist.",
    "ko": "폰 옆 승객은 손목에 붕대를 감고 있어요.",
    "blank": "ผ้าพันแผล",
+   "src": "made"
+  }
+ ],
+ "w|ผาสุก": [
+  {
+   "text": "อนันต์อยากมีชีวิตผาสุกแบบพ่อแม่ที่ทำงานที่เดียวจนเกษียณ",
+   "en": "Anan wants a peaceful life like his parents, who worked at one place until retiring.",
+   "ko": "아난은 한 직장에서 은퇴까지 일한 부모님처럼 평온하게 살고 싶어요.",
+   "blank": "ผาสุก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีหวังให้ชุมชนกลับมาผาสุกเหมือนก่อนมีขโมยชุกชุม",
+   "en": "Pranee hopes the community will be peaceful again, as it was before thefts became rampant.",
+   "ko": "쁘라니는 도둑이 들끓기 전처럼 동네가 다시 평온해지길 바라요.",
+   "blank": "ผาสุก",
    "src": "made"
   }
  ],
@@ -57753,6 +58313,22 @@
    "src": "made"
   }
  ],
+ "w|พร่า": [
+  {
+   "text": "ภาพถ่ายเก่าใบนี้พร่าจนแทบมองไม่เห็นหน้าคน",
+   "en": "This old photo is so blurry you can barely see people's faces.",
+   "ko": "이 옛 사진은 너무 흐릿해서 사람 얼굴이 거의 안 보여요.",
+   "blank": "พร่า",
+   "src": "made"
+  },
+  {
+   "text": "คุณลุงบอกวรรณาว่าตาพร่ามองป้ายรถเมล์ไม่ชัด",
+   "en": "The old man told Wanna his eyes were blurry and he couldn't read the bus signs.",
+   "ko": "할아버지는 눈이 침침해서 버스 표지판이 잘 안 보인다고 완나에게 말했어요.",
+   "blank": "พร่า",
+   "src": "made"
+  }
+ ],
  "w|พราก": [
   {
    "text": "น้ำท่วมใหญ่ปีก่อนพรากบ้านของหลายครอบครัวไป",
@@ -58907,6 +59483,22 @@
    "src": "made"
   }
  ],
+ "w|พิกล": [
+  {
+   "text": "กิตติรู้สึกพิกลเมื่อเดินเข้าห้องมัมมี่ที่ไฟสลัว",
+   "en": "Kitti felt strange walking into the dimly lit mummy room.",
+   "ko": "끼띠는 불빛이 어두운 미라 전시실에 들어가자 기분이 묘했어요.",
+   "blank": "พิกล",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าบอกว่ากินยาแล้วรู้สึกพิกล ใจสั่นแปลกๆ",
+   "en": "A customer said he felt weird after taking the medicine, with an odd fluttering heart.",
+   "ko": "한 손님은 약을 먹고 나서 기분이 이상하고 가슴이 두근거린다고 했어요.",
+   "blank": "พิกล",
+   "src": "made"
+  }
+ ],
  "w|พิกัด": [
   {
    "text": "วิชัยส่งพิกัดโรงแรมให้เพื่อนทางแอปแชต",
@@ -58936,6 +59528,22 @@
    "en": "There's a ramp here for disabled people.",
    "ko": "여기에 장애인용 경사로가 있어.",
    "blank": "พิการ",
+   "src": "made"
+  }
+ ],
+ "w|พิเคราะห์": [
+  {
+   "text": "อนันต์อ่านสัญญาจ้างอย่างพิเคราะห์ก่อนลงชื่อ",
+   "en": "Anan read the employment contract carefully before signing.",
+   "ko": "아난은 서명하기 전에 고용 계약서를 꼼꼼히 따져 읽었어요.",
+   "blank": "พิเคราะห์",
+   "src": "made"
+  },
+  {
+   "text": "พนักงานสอบสวนพิเคราะห์หลักฐานทุกชิ้นก่อนตั้งข้อหา",
+   "en": "The investigator examined every piece of evidence before pressing charges.",
+   "ko": "수사관은 혐의를 두기 전에 증거를 하나하나 면밀히 살폈어요.",
+   "blank": "พิเคราะห์",
    "src": "made"
   }
  ],
@@ -58971,6 +59579,22 @@
    "src": "made"
   }
  ],
+ "w|พิชิต": [
+  {
+   "text": "อนันต์ตั้งเป้าว่าจะพิชิตยอดขายให้ได้ภายในสามเดือน",
+   "en": "Anan aims to conquer his sales target within three months.",
+   "ko": "아난은 석 달 안에 판매 목표를 정복하겠다고 마음먹었어요.",
+   "blank": "พิชิต",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายหน้าโรงพักมีรูปตำรวจที่เคยพิชิตยอดเขาเอเวอเรสต์",
+   "en": "The sign outside the police station shows an officer who once conquered Everest.",
+   "ko": "경찰서 앞 게시판에는 에베레스트를 정복한 경찰관 사진이 있어요.",
+   "blank": "พิชิต",
+   "src": "made"
+  }
+ ],
  "w|พิซซ่า": [
   {
    "text": "สั่งพิซซ่าชีสเยอะหน่อย",
@@ -58983,6 +59607,22 @@
    "en": "This pizza tray is still hot.",
    "ko": "이 피자 접시가 아직 뜨거워.",
    "blank": "พิซซ่า"
+  }
+ ],
+ "w|พิถีพิถัน": [
+  {
+   "text": "ช่างซ่อมภาพเขียนทำงานอย่างพิถีพิถันทีละเส้นพู่กัน",
+   "en": "The painting conservator works meticulously, one brushstroke at a time.",
+   "ko": "그림 복원가는 붓질 한 번 한 번 정성 들여 작업해요.",
+   "blank": "พิถีพิถัน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาจัดยาลงซองอย่างพิถีพิถันและเขียนวิธีกินชัดเจน",
+   "en": "Wanna packs medicine into sachets meticulously and writes the dosage clearly.",
+   "ko": "완나는 약을 꼼꼼하게 봉투에 담고 복용법을 또박또박 적어요.",
+   "blank": "พิถีพิถัน",
+   "src": "made"
   }
  ],
  "w|พิทักษ์": [
@@ -59774,6 +60414,22 @@
    "en": "Chan was speechless when she saw the fields of Mexican sunflowers blooming across the hills.",
    "ko": "짠은 산을 뒤덮은 멕시코 해바라기 꽃밭을 보고 말을 잇지 못했어요.",
    "blank": "พูดไม่ออก",
+   "src": "made"
+  }
+ ],
+ "w|พูดเล่น": [
+  {
+   "text": "กิตติพูดเล่นว่ารูปปั้นนักรบกำลังมองตามเขาทุกห้อง",
+   "en": "Kitti joked that the warrior statue was following him with its eyes in every room.",
+   "ko": "끼띠는 전사 조각상이 방마다 자기를 쳐다본다고 농담했어요.",
+   "blank": "พูดเล่น",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาพูดเล่นกับคุณยายว่ายาวิตามินกินแล้วจะสวยขึ้น",
+   "en": "Wanna joked with the old lady that the vitamins would make her prettier.",
+   "ko": "완나는 비타민을 먹으면 더 예뻐진다고 할머니에게 농담했어요.",
+   "blank": "พูดเล่น",
    "src": "made"
   }
  ],
@@ -61363,6 +62019,22 @@
    "src": "made"
   }
  ],
+ "w|ภวังค์": [
+  {
+   "text": "กิตติยืนดูภาพทะเลจนตกอยู่ในภวังค์",
+   "en": "Kitti stood looking at the seascape until he fell into a trance.",
+   "ko": "끼띠는 바다 그림을 바라보다 넋을 잃었어요.",
+   "blank": "ภวังค์",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเหม่อมองฝนนอกร้านจนตกอยู่ในภวังค์",
+   "en": "Wanna stared at the rain outside the shop until she drifted into a daydream.",
+   "ko": "완나는 가게 밖 비를 멍하니 바라보다 몽상에 빠졌어요.",
+   "blank": "ภวังค์",
+   "src": "made"
+  }
+ ],
  "w|ภักดี": [
   {
    "text": "สมชายเป็นแฟนบอลที่ภักดีต่อทีมโรงเรียนมาตลอด",
@@ -61468,6 +62140,22 @@
    "en": "The sea in southern Thailand is clearer than any Phon has seen before.",
    "ko": "태국 남부 바다는 폰이 본 어떤 바다보다 맑아요.",
    "blank": "ภาคใต้",
+   "src": "made"
+  }
+ ],
+ "w|ภาคภูมิ": [
+  {
+   "text": "อนันต์ภาคภูมิใจที่ได้ทำงานในบริษัทที่พ่อเคยฝันอยากเข้า",
+   "en": "Anan is proud to work at the company his father once dreamed of joining.",
+   "ko": "아난은 아버지가 꿈꾸던 회사에서 일하게 돼서 자랑스러워요.",
+   "blank": "ภาคภูมิ",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจหญิงคนนั้นภาคภูมิที่ช่วยเด็กหลงทางให้กลับบ้านได้",
+   "en": "That policewoman is proud to have helped a lost child get home.",
+   "ko": "그 여경은 길 잃은 아이를 집에 데려다준 걸 자랑스러워해요.",
+   "blank": "ภาคภูมิ",
    "src": "made"
   }
  ],
@@ -62447,6 +63135,22 @@
    "src": "made"
   }
  ],
+ "w|มโนภาพ": [
+  {
+   "text": "หุ่นจำลองช่วยให้เด็กสร้างมโนภาพของเมืองโบราณได้ง่ายขึ้น",
+   "en": "The scale model helps children picture the ancient city more easily.",
+   "ko": "모형 덕분에 아이들은 옛 도시를 더 쉽게 떠올릴 수 있어요.",
+   "blank": "มโนภาพ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณามีมโนภาพว่าวันหนึ่งร้านเล็กๆ นี้จะมีสาขาทั่วจังหวัด",
+   "en": "Wanna pictures this little shop one day having branches across the province.",
+   "ko": "완나는 이 작은 약국이 언젠가 도 전역에 지점을 둘 거라고 그려 봐요.",
+   "blank": "มโนภาพ",
+   "src": "made"
+  }
+ ],
  "w|มรณะ": [
   {
    "text": "ประวัติของกวีเอกบอกปีเกิดและปีมรณะไว้ท้ายเล่ม",
@@ -62859,6 +63563,22 @@
    "en": "I want to give flowers to my mother.",
    "ko": "엄마에게 꽃을 드리고 싶어.",
    "blank": "มอบ"
+  }
+ ],
+ "w|ม็อบ": [
+  {
+   "text": "ภาพถ่ายม็อบชาวนาเมื่อห้าสิบปีก่อนดึงดูดคนดูมากที่สุด",
+   "en": "The photo of a farmers' protest fifty years ago draws the most viewers.",
+   "ko": "오십 년 전 농민 시위 사진이 관람객을 가장 많이 끌어요.",
+   "blank": "ม็อบ",
+   "src": "made"
+  },
+  {
+   "text": "วันที่มีม็อบปิดถนน ร้านของวรรณาขายน้ำเกลือแร่หมด",
+   "en": "On the day protesters blocked the road, Wanna's shop sold out of oral rehydration salts.",
+   "ko": "시위대가 길을 막은 날 완나의 약국에서 전해질 음료가 다 팔렸어요.",
+   "blank": "ม็อบ",
+   "src": "made"
   }
  ],
  "w|มอบหมาย": [
@@ -65597,6 +66317,22 @@
    "src": "made"
   }
  ],
+ "w|ไมโครโฟน": [
+  {
+   "text": "ไมโครโฟนที่ใช้ประกาศข่าวทางวิทยุรุ่นแรกวางอยู่ในตู้กระจก",
+   "en": "The microphone used for the first radio news broadcasts sits in a glass case.",
+   "ko": "첫 라디오 뉴스 방송에 쓰인 마이크가 유리장 안에 있어요.",
+   "blank": "ไมโครโฟน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาพูดผ่านไมโครโฟนให้ความรู้เรื่องยาในงานชุมชน",
+   "en": "Wanna spoke into a microphone to educate people about medicines at a community event.",
+   "ko": "완나는 동네 행사에서 마이크로 약에 관한 지식을 전했어요.",
+   "blank": "ไมโครโฟน",
+   "src": "made"
+  }
+ ],
  "w|ไมโครเวฟ": [
   {
    "text": "อุ่นอาหารด้วยไมโครเวฟสักครู่",
@@ -66030,6 +66766,22 @@
    "en": "Pranee crouched down to talk with the sick child at eye level.",
    "ko": "쁘라니는 아픈 아이와 눈높이를 맞추려고 몸을 낮춰 이야기했어요.",
    "blank": "ย่อ",
+   "src": "made"
+  }
+ ],
+ "w|ย่อง": [
+  {
+   "text": "กิตติย่องเข้าห้องจัดแสดงเงียบๆ เพราะมีนักเรียนกำลังวาดรูป",
+   "en": "Kitti tiptoed into the gallery because students were drawing.",
+   "ko": "학생들이 그림을 그리고 있어서 끼띠는 전시실에 살금살금 들어갔어요.",
+   "blank": "ย่อง",
+   "src": "made"
+  },
+  {
+   "text": "แมวจรย่องเข้ามานอนใต้ชั้นวางยาทุกบ่าย",
+   "en": "A stray cat sneaks in to sleep under the medicine shelves every afternoon.",
+   "ko": "떠돌이 고양이가 매일 오후 살금살금 들어와 약 선반 밑에서 자요.",
+   "blank": "ย่อง",
    "src": "made"
   }
  ],
@@ -67271,6 +68023,22 @@
    "src": "made"
   }
  ],
+ "w|ยึดอำนาจ": [
+  {
+   "text": "ห้องประวัติศาสตร์การเมืองเล่าถึงครั้งที่ทหารยึดอำนาจในอดีต",
+   "en": "The political history room tells of times when the military seized power in the past.",
+   "ko": "정치사 전시실은 과거 군이 권력을 장악했던 일들을 다뤄요.",
+   "blank": "ยึดอำนาจ",
+   "src": "made"
+  },
+  {
+   "text": "ลุงลูกค้าประจำชอบเล่าเรื่องวันที่ทหารยึดอำนาจเมื่อหลายสิบปีก่อน",
+   "en": "A regular, an old man, likes recounting the day the military seized power decades ago.",
+   "ko": "단골 할아버지는 수십 년 전 군이 권력을 잡던 날 이야기를 즐겨 해요.",
+   "blank": "ยึดอำนาจ",
+   "src": "made"
+  }
+ ],
  "w|ยืด": [
   {
    "text": "ผ้ายืดได้เล็กน้อย",
@@ -67312,6 +68080,22 @@
    "en": "Piya doesn't like reading lengthy manuals; he'd rather watch a clip on how to use the machine.",
    "ko": "삐야는 긴 설명서 읽는 걸 싫어해서 영상으로 기계 사용법을 봐요.",
    "blank": "ยืดยาว",
+   "src": "made"
+  }
+ ],
+ "w|ยืดเยื้อ": [
+  {
+   "text": "การปฐมนิเทศยืดเยื้อจนอนันต์แอบหาวหลายครั้ง",
+   "en": "The orientation dragged on so long that Anan secretly yawned several times.",
+   "ko": "오리엔테이션이 길게 늘어져서 아난은 몇 번이나 몰래 하품했어요.",
+   "blank": "ยืดเยื้อ",
+   "src": "made"
+  },
+  {
+   "text": "ข้อพิพาทเรื่องรั้วบ้านระหว่างปราณีกับเพื่อนบ้านยืดเยื้อมาเป็นปี",
+   "en": "The fence dispute between Pranee and her neighbour has dragged on for a year.",
+   "ko": "쁘라니와 이웃의 울타리 분쟁은 일 년째 질질 끌고 있어요.",
+   "blank": "ยืดเยื้อ",
    "src": "made"
   }
  ],
@@ -67403,6 +68187,22 @@
    "en": "He confirmed he will arrive on time.",
    "ko": "그는 제시간에 온다고 확인했어.",
    "blank": "ยืนยัน"
+  }
+ ],
+ "w|ยืนหยัด": [
+  {
+   "text": "อนันต์ยืนหยัดว่าจะไม่ลาออกง่ายๆ เหมือนงานที่แล้ว",
+   "en": "Anan stood firm that he wouldn't quit easily like at his last job.",
+   "ko": "아난은 지난 직장처럼 쉽게 그만두지 않겠다고 굳게 다짐했어요.",
+   "blank": "ยืนหยัด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณียืนหยัดว่าเห็นรถคันนั้นฝ่าไฟแดงจริงๆ",
+   "en": "Pranee stood firm that she really saw that car run the red light.",
+   "ko": "쁘라니는 그 차가 정말 빨간불을 무시하고 지나가는 걸 봤다고 굽히지 않았어요.",
+   "blank": "ยืนหยัด",
+   "src": "made"
   }
  ],
  "w|ยืม": [
@@ -67521,6 +68321,22 @@
    "en": "This rule seems fair for everyone.",
    "ko": "이 규칙은 모두에게 공정해 보여.",
    "blank": "ยุติธรรม"
+  }
+ ],
+ "w|ยุทธวิธี": [
+  {
+   "text": "แผนที่ทหารแสดงยุทธวิธีที่ใช้ป้องกันเมืองเมื่อหลายร้อยปีก่อน",
+   "en": "A military map shows the tactics used to defend the city centuries ago.",
+   "ko": "군사 지도는 수백 년 전 도시를 지킨 전술을 보여 줘요.",
+   "blank": "ยุทธวิธี",
+   "src": "made"
+  },
+  {
+   "text": "ร้านใหญ่ใช้ยุทธวิธีลดราคาแรงจนร้านเล็กอย่างวรรณาสู้ลำบาก",
+   "en": "The big chains use aggressive discount tactics, so small shops like Wanna's struggle to compete.",
+   "ko": "대형 약국들이 파격 할인 전략을 써서 완나 같은 작은 약국은 버티기 힘들어요.",
+   "blank": "ยุทธวิธี",
+   "src": "made"
   }
  ],
  "w|ยุทธศาสตร์": [
@@ -68969,6 +69785,22 @@
    "en": "The coffee is still hot.",
    "ko": "커피가 아직 뜨거워.",
    "blank": "ร้อน"
+  }
+ ],
+ "w|ร้อนรน": [
+  {
+   "text": "อนันต์ร้อนรนเมื่อรถติดหนักทั้งที่ต้องเข้าประชุมเก้าโมง",
+   "en": "Anan grew restless when the traffic was terrible and he had a nine o'clock meeting.",
+   "ko": "아홉 시 회의가 있는데 차가 꽉 막히자 아난은 안절부절못했어요.",
+   "blank": "ร้อนรน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีร้อนรนอยากรู้ว่าตำรวจจับคนร้ายได้หรือยัง",
+   "en": "Pranee was itching to know whether the police had caught the culprit yet.",
+   "ko": "쁘라니는 경찰이 범인을 잡았는지 몹시 알고 싶어 안달이 났어요.",
+   "blank": "ร้อนรน",
+   "src": "made"
   }
  ],
  "w|รอบ": [
@@ -70909,6 +71741,22 @@
    "blank": "ราว"
   }
  ],
+ "w|ร้าว": [
+  {
+   "text": "ไหโบราณใบนี้ร้าวตั้งแต่ตอนขุดพบ แต่ยังจัดแสดงได้",
+   "en": "This ancient jar has been cracked since it was dug up, but it can still be displayed.",
+   "ko": "이 옛 항아리는 발굴 때부터 금이 갔지만 아직 전시할 수 있어요.",
+   "blank": "ร้าว",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกลูกค้าว่ากระดูกที่ร้าวต้องไปเอกซเรย์ที่โรงพยาบาล",
+   "en": "Wanna told the customer that a cracked bone needs an X-ray at the hospital.",
+   "ko": "완나는 금이 간 뼈는 병원에서 엑스레이를 찍어야 한다고 손님에게 말했어요.",
+   "blank": "ร้าว",
+   "src": "made"
+  }
+ ],
  "w|ราวๆ": [
   {
    "text": "ข่าวภาคค่ำต้องส่งต้นฉบับราวๆ ห้าโมงเย็น",
@@ -71888,6 +72736,22 @@
    "en": "The drumming from the village festival made Napha eager to go closer and watch.",
    "ko": "마을 잔치의 북소리에 나파는 가까이 가서 보고 싶어졌어요.",
    "blank": "เร้า",
+   "src": "made"
+  }
+ ],
+ "w|เร้าใจ": [
+  {
+   "text": "งานใหม่ของอนันต์เร้าใจกว่างานเก่าที่น่าเบื่อมาก",
+   "en": "Anan's new job is far more exciting than his very boring old one.",
+   "ko": "아난의 새 일은 지루했던 예전 일보다 훨씬 신나요.",
+   "blank": "เร้าใจ",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจหนุ่มเล่าเรื่องไล่จับคนร้ายที่เร้าใจเหมือนหนังแอ็กชัน",
+   "en": "The young officer told a story of chasing a culprit that was as thrilling as an action film.",
+   "ko": "젊은 경찰은 액션 영화처럼 짜릿한 범인 추격담을 들려줬어요.",
+   "blank": "เร้าใจ",
    "src": "made"
   }
  ],
@@ -73827,6 +74691,22 @@
    "src": "made"
   }
  ],
+ "w|ล่อลวง": [
+  {
+   "text": "นิทรรศการเตือนภัยออนไลน์สอนวิธีสังเกตคนที่ล่อลวงเด็ก",
+   "en": "The online-safety exhibition teaches how to spot people who lure children.",
+   "ko": "온라인 안전 전시는 아이들을 꾀어내는 사람을 알아보는 법을 가르쳐요.",
+   "blank": "ล่อลวง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเตือนลูกค้าว่าโฆษณายาลดน้ำหนักทางเน็ตบางอันล่อลวงให้ซื้อของปลอม",
+   "en": "Wanna warned customers that some online diet-pill ads lure people into buying fakes.",
+   "ko": "완나는 인터넷 다이어트약 광고 중에 가짜를 사게 꾀는 것도 있다고 손님들에게 경고했어요.",
+   "blank": "ล่อลวง",
+   "src": "made"
+  }
+ ],
  "w|ล้อเล่น": [
   {
    "text": "ชัยบอกลูกว่าบ้านข้างๆ จะขายแล้ว แต่ที่จริงแค่ล้อเล่น",
@@ -75450,6 +76330,22 @@
    "en": "Malee carries a beaded keyring that her first customer made for her.",
    "ko": "말리는 첫 고객이 만들어 준 구슬 열쇠고리를 들고 다녀요.",
    "blank": "ลูกปัด",
+   "src": "made"
+  }
+ ],
+ "w|ลูกโป่ง": [
+  {
+   "text": "ในวันเด็ก พิพิธภัณฑ์แจกลูกโป่งให้เด็กทุกคน",
+   "en": "On Children's Day the museum gives every child a balloon.",
+   "ko": "어린이날에 박물관은 아이들에게 풍선을 나눠 줘요.",
+   "blank": "ลูกโป่ง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กที่ไม่ร้องตอนทายาได้ลูกโป่งจากวรรณาเป็นรางวัล",
+   "en": "Children who don't cry when the ointment goes on get a balloon from Wanna as a reward.",
+   "ko": "약을 바를 때 울지 않은 아이는 완나에게서 상으로 풍선을 받아요.",
+   "blank": "ลูกโป่ง",
    "src": "made"
   }
  ],
@@ -77305,6 +78201,22 @@
    "src": "made"
   }
  ],
+ "w|วัตถุนิยม": [
+  {
+   "text": "นิทรรศการศิลปะร่วมสมัยวิจารณ์สังคมวัตถุนิยมผ่านกองถุงพลาสติก",
+   "en": "The contemporary art exhibition critiques materialistic society through a pile of plastic bags.",
+   "ko": "현대 미술전은 비닐봉지 더미로 물질 만능 사회를 비판해요.",
+   "blank": "วัตถุนิยม",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาไม่อยากให้ลูกเติบโตมาแบบวัตถุนิยม",
+   "en": "Wanna doesn't want her children to grow up materialistic.",
+   "ko": "완나는 아이들이 물질만능주의로 자라지 않길 바라요.",
+   "blank": "วัตถุนิยม",
+   "src": "made"
+  }
+ ],
  "w|วัตถุประสงค์": [
   {
    "text": "วัตถุประสงค์ของคอลัมน์นี้คือให้คนอ่านรู้สิทธิของตัวเอง",
@@ -78813,6 +79725,22 @@
    "src": "made"
   }
  ],
+ "w|วีรกรรม": [
+  {
+   "text": "ห้องนี้เล่าวีรกรรมของชาวบ้านที่ช่วยกันกั้นน้ำท่วมเมือง",
+   "en": "This room tells of the heroic deeds of villagers who held back the flood together.",
+   "ko": "이 전시실은 힘을 모아 도시의 홍수를 막은 주민들의 영웅담을 들려줘요.",
+   "blank": "วีรกรรม",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าเล่าวีรกรรมของวรรณาที่ช่วยคนเป็นลมหน้าร้านให้เพื่อนฟัง",
+   "en": "A customer told friends about Wanna's heroics in helping someone who fainted outside the shop.",
+   "ko": "한 손님은 완나가 가게 앞에서 쓰러진 사람을 구한 활약을 친구들에게 들려줬어요.",
+   "blank": "วีรกรรม",
+   "src": "made"
+  }
+ ],
  "w|วีรบุรุษ": [
   {
    "text": "อนันต์กลายเป็นวีรบุรุษของแผนกเพราะซ่อมเครื่องถ่ายเอกสารได้",
@@ -79650,6 +80578,22 @@
    "en": "After lab, Piya likes to rest at the pavilion by the pond in front of the faculty.",
    "ko": "실험이 끝나면 삐야는 학부 앞 연못가 정자에서 쉬는 걸 좋아해요.",
    "blank": "ศาลา",
+   "src": "made"
+  }
+ ],
+ "w|ศาสดา": [
+  {
+   "text": "ห้องปรัชญาตะวันออกมีภาพวาดศาสดาของลัทธิโบราณหลายลัทธิ",
+   "en": "The Eastern philosophy room has paintings of the founders of several ancient schools of thought.",
+   "ko": "동양 철학 전시실에는 여러 고대 사상의 교조 그림이 있어요.",
+   "blank": "ศาสดา",
+   "src": "made"
+  },
+  {
+   "text": "ในชั้นเรียนประวัติการแพทย์ วรรณาเคยเรียนว่าหมอโบราณบางคนได้รับความเคารพเหมือนศาสดา",
+   "en": "In a medical history class, Wanna learned that some ancient physicians were revered like prophets.",
+   "ko": "완나는 의학사 수업에서 어떤 옛 의사들은 선지자처럼 떠받들어졌다고 배웠어요.",
+   "blank": "ศาสดา",
    "src": "made"
   }
  ],
@@ -83691,6 +84635,22 @@
    "src": "made"
   }
  ],
+ "w|สังหรณ์": [
+  {
+   "text": "อนันต์สังหรณ์ใจว่างานนี้จะเปลี่ยนชีวิตเขา",
+   "en": "Anan has a hunch that this job will change his life.",
+   "ko": "아난은 이 일이 자기 인생을 바꿀 거라는 예감이 들었어요.",
+   "blank": "สังหรณ์",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีสังหรณ์ว่าจะมีเรื่องตั้งแต่เห็นชายแปลกหน้าวนรอบบ้าน",
+   "en": "Pranee had a feeling something would happen the moment she saw a stranger circling her house.",
+   "ko": "쁘라니는 낯선 남자가 집 주위를 맴도는 걸 본 순간부터 일이 생길 것 같은 예감이 들었어요.",
+   "blank": "สังหรณ์",
+   "src": "made"
+  }
+ ],
  "w|สังหาร": [
   {
    "text": "นิยายที่กิตติกำลังอ่านเล่าถึงนักสืบที่ตามหาคนสังหารเศรษฐีในคฤหาสน์",
@@ -84738,6 +85698,22 @@
    "en": "Chan read a home-repair manual but found very little useful content.",
    "ko": "짠은 집수리 안내서를 읽었지만 실제로 쓸 만한 내용은 거의 없었어요.",
    "blank": "สาระ",
+   "src": "made"
+  }
+ ],
+ "w|สารานุกรม": [
+  {
+   "text": "ห้องสมุดของพิพิธภัณฑ์มีสารานุกรมไทยฉบับพิมพ์ครั้งแรก",
+   "en": "The museum library has the first printed edition of the Thai encyclopedia.",
+   "ko": "박물관 도서실에는 태국 백과사전 초판이 있어요.",
+   "blank": "สารานุกรม",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเปิดสารานุกรมยาเล่มหนาเพื่อเช็กว่ายาสองตัวกินด้วยกันได้ไหม",
+   "en": "Wanna opened a thick drug encyclopedia to check whether two medicines can be taken together.",
+   "ko": "완나는 두 약을 같이 먹어도 되는지 두꺼운 약품 백과를 펼쳐 확인했어요.",
+   "blank": "สารานุกรม",
    "src": "made"
   }
  ],
@@ -85861,6 +86837,22 @@
    "en": "I'm glad I could help.",
    "ko": "도와줘서 마음이 뿌듯해.",
    "blank": "สุข"
+  }
+ ],
+ "w|สุขใจ": [
+  {
+   "text": "อนันต์สุขใจที่ได้ทำงานตรงกับสิ่งที่เรียนมา",
+   "en": "Anan is happy to have a job that matches what he studied.",
+   "ko": "아난은 전공을 살린 일을 하게 돼서 마음이 흐뭇해요.",
+   "blank": "สุขใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีสุขใจที่ได้กระเป๋าสตางค์คืนครบทุกบาท",
+   "en": "Pranee was delighted to get her wallet back with every baht in it.",
+   "ko": "쁘라니는 지갑을 한 푼도 빠짐없이 돌려받아 기뻤어요.",
+   "blank": "สุขใจ",
+   "src": "made"
   }
  ],
  "w|สุขภาพ": [
@@ -88383,6 +89375,22 @@
    "src": "made"
   }
  ],
+ "w|หน้าม้า": [
+  {
+   "text": "ป้ายในห้องเศรษฐกิจอธิบายว่าหน้าม้าช่วยพ่อค้าหลอกลูกค้าอย่างไร",
+   "en": "A sign in the economics room explains how shills helped traders fool customers.",
+   "ko": "경제 전시실 안내판은 바람잡이가 상인을 도와 손님을 속이는 방법을 설명해요.",
+   "blank": "หน้าม้า",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาจับได้ว่าคนรีวิวยาเสริมในเน็ตบางคนเป็นหน้าม้า",
+   "en": "Wanna realised some of the people reviewing supplements online were shills.",
+   "ko": "완나는 인터넷 영양제 후기를 쓴 사람 중 일부가 바람잡이라는 걸 알아챘어요.",
+   "blank": "หน้าม้า",
+   "src": "made"
+  }
+ ],
  "w|หน้าร้อน": [
   {
    "text": "หน้าร้อนนี้ไปทะเล",
@@ -88616,6 +89624,22 @@
    "en": "Volunteers wrapped foil blankets around runners who were shivering after the finish line.",
    "ko": "자원봉사자들은 결승선 뒤에서 떨고 있는 주자들에게 은박 담요를 둘러 줬어요.",
    "blank": "ห่ม",
+   "src": "made"
+  }
+ ],
+ "w|หมกมุ่น": [
+  {
+   "text": "อนันต์หมกมุ่นกับการจำชื่อเพื่อนร่วมงานจนลืมกินข้าวเที่ยง",
+   "en": "Anan was so absorbed in memorising coworkers' names that he forgot to eat lunch.",
+   "ko": "아난은 동료 이름 외우는 데 몰두하다가 점심을 잊었어요.",
+   "blank": "หมกมุ่น",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจบอกว่าคนร้ายหมกมุ่นกับการพนันจนก่อหนี้",
+   "en": "The police said the culprit was obsessed with gambling until he ran up debts.",
+   "ko": "경찰은 범인이 도박에 빠져 빚을 졌다고 했어요.",
+   "blank": "หมกมุ่น",
    "src": "made"
   }
  ],
@@ -89433,6 +90457,22 @@
    "blank": "หย่อน"
   }
  ],
+ "w|หย่อม": [
+  {
+   "text": "หลังพิพิธภัณฑ์มีหย่อมป่าเล็กๆ ให้คนนั่งพัก",
+   "en": "Behind the museum there's a little patch of woodland for people to rest in.",
+   "ko": "박물관 뒤에는 사람들이 쉴 수 있는 작은 숲 한 자락이 있어요.",
+   "blank": "หย่อม",
+   "src": "made"
+  },
+  {
+   "text": "ผื่นที่แขนลูกค้าขึ้นเป็นหย่อมๆ วรรณาจึงแนะนำให้ไปหาหมอผิวหนัง",
+   "en": "The rash on the customer's arm came up in patches, so Wanna advised seeing a dermatologist.",
+   "ko": "손님 팔에 발진이 군데군데 올라와서 완나는 피부과에 가 보라고 권했어요.",
+   "blank": "หย่อม",
+   "src": "made"
+  }
+ ],
  "w|หยั่ง": [
   {
    "text": "กิตติหยั่งความลึกของลำธารด้วยไม้ก่อนเดินข้าม",
@@ -89611,6 +90651,22 @@
    "en": "It's time for a break.",
    "ko": "쉴 시간이야.",
    "blank": "หยุดพัก"
+  }
+ ],
+ "w|หยุดยั้ง": [
+  {
+   "text": "ไม่มีอะไรหยุดยั้งความตั้งใจของอนันต์ได้ แม้แต่ฝนตกหนักตอนเช้า",
+   "en": "Nothing could stop Anan's determination, not even the heavy morning rain.",
+   "ko": "아침 폭우조차 아난의 의지를 꺾지 못했어요.",
+   "blank": "หยุดยั้ง",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจพยายามหยุดยั้งแก๊งหลอกลวงทางโทรศัพท์ที่ระบาดในเมือง",
+   "en": "The police are trying to stop the phone-scam gangs spreading through the city.",
+   "ko": "경찰은 도시에 퍼진 전화 사기단을 막으려고 애쓰고 있어요.",
+   "blank": "หยุดยั้ง",
+   "src": "made"
   }
  ],
  "w|หรอก": [
@@ -89978,6 +91034,22 @@
    "en": "Piya's uncle just had heart blood vessel surgery but still made it to the wedding.",
    "ko": "피야의 큰아버지는 얼마 전 심장 혈관 수술을 받았지만 결혼식에 올 수 있었어요.",
    "blank": "หลอดเลือด",
+   "src": "made"
+  }
+ ],
+ "w|หลอน": [
+  {
+   "text": "คำพูดแรงๆ ของหัวหน้าเก่ายังคอยหลอนอนันต์อยู่",
+   "en": "His old boss's harsh words still haunt Anan.",
+   "ko": "예전 상사의 거친 말이 아직도 아난을 괴롭혀요.",
+   "blank": "หลอน",
+   "src": "made"
+  },
+  {
+   "text": "ภาพคนร้ายสวมหมวกไหมพรมยังหลอนปราณีทุกคืน",
+   "en": "The image of the culprit in a balaclava still haunts Pranee every night.",
+   "ko": "털모자를 쓴 범인의 모습이 아직도 매일 밤 쁘라니를 괴롭혀요.",
+   "blank": "หลอน",
    "src": "made"
   }
  ],
@@ -90567,6 +91639,22 @@
    "blank": "ห่วงใย"
   }
  ],
+ "w|หวงแหน": [
+  {
+   "text": "อนันต์หวงแหนปากกาที่พ่อให้ไว้ใช้เซ็นสัญญาฉบับแรก",
+   "en": "Anan treasures the pen his father gave him to sign his first contract.",
+   "ko": "아난은 첫 계약서에 서명하라고 아버지가 준 펜을 소중히 아껴요.",
+   "blank": "หวงแหน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีหวงแหนแหวนวงนั้นเพราะเป็นของขวัญแต่งงาน",
+   "en": "Pranee cherishes that ring because it was a wedding gift.",
+   "ko": "쁘라니는 그 반지가 결혼 선물이라 몹시 아껴요.",
+   "blank": "หวงแหน",
+   "src": "made"
+  }
+ ],
  "w|หวด": [
   {
    "text": "เย็นวันศุกร์อนันต์ชวนพรไปหวดลูกแบดมินตันกับทีม",
@@ -90748,6 +91836,22 @@
    "en": "Pranee saw the bride's hands trembling with nerves before the ceremony began.",
    "ko": "쁘라니는 식이 시작되기 전 신부의 손이 떨리는 걸 봤어요.",
    "blank": "หวั่นไหว",
+   "src": "made"
+  }
+ ],
+ "w|หวาด": [
+  {
+   "text": "อนันต์หวาดว่าจะทำเอกสารสำคัญหายในวันแรก",
+   "en": "Anan dreaded losing an important document on his first day.",
+   "ko": "아난은 첫날 중요한 서류를 잃어버릴까 봐 겁이 났어요.",
+   "blank": "หวาด",
+   "src": "made"
+  },
+  {
+   "text": "หลังถูกกระชากกระเป๋า ปราณีหวาดทุกครั้งที่มีมอเตอร์ไซค์ขับผ่าน",
+   "en": "Since her bag was snatched, Pranee is frightened every time a motorbike passes.",
+   "ko": "가방을 날치기당한 뒤로 쁘라니는 오토바이가 지나갈 때마다 겁이 나요.",
+   "blank": "หวาด",
    "src": "made"
   }
  ],
@@ -91767,6 +92871,22 @@
    "blank": "ห้างสรรพสินค้า"
   }
  ],
+ "w|ห่างเหิน": [
+  {
+   "text": "พอย้ายมาทำงานไกล อนันต์ก็ห่างเหินกับเพื่อนเก่า",
+   "en": "After moving away for work, Anan drifted apart from his old friends.",
+   "ko": "멀리 일하러 온 뒤 아난은 옛 친구들과 멀어졌어요.",
+   "blank": "ห่างเหิน",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจบอกว่าคนร้ายห่างเหินจากครอบครัวมาหลายปี",
+   "en": "The police said the culprit had been estranged from his family for years.",
+   "ko": "경찰은 범인이 몇 년째 가족과 소원하게 지냈다고 했어요.",
+   "blank": "ห่างเหิน",
+   "src": "made"
+  }
+ ],
  "w|หางาน": [
   {
    "text": "ตอนเรียนจบใหม่ๆ ชัยหางานอยู่เกือบปีกว่าจะได้งานที่โรงงานนี้",
@@ -92527,6 +93647,22 @@
    "en": "Tell me the reason.",
    "ko": "이유 좀 말해 줘.",
    "blank": "เหตุผล"
+  }
+ ],
+ "w|เหตุร้าย": [
+  {
+   "text": "หลังเกิดเหตุร้ายที่ห้างใกล้ๆ พิพิธภัณฑ์ก็ตรวจกระเป๋าเข้มขึ้น",
+   "en": "After an incident at a nearby mall, the museum tightened bag checks.",
+   "ko": "근처 쇼핑몰에서 사건이 난 뒤 박물관은 가방 검사를 강화했어요.",
+   "blank": "เหตุร้าย",
+   "src": "made"
+  },
+  {
+   "text": "ร้านยาของวรรณาติดกล้องวงจรปิดเพิ่มหลังเกิดเหตุร้ายในซอย",
+   "en": "Wanna's pharmacy added CCTV after an incident in the lane.",
+   "ko": "골목에서 사건이 난 뒤 완나의 약국은 CCTV를 더 달았어요.",
+   "blank": "เหตุร้าย",
+   "src": "made"
   }
  ],
  "w|เห็น": [
@@ -93660,6 +94796,22 @@
    "en": "Wanna ordered three dozen antique-patterned tiles to lay in the kitchen.",
    "ko": "완나는 부엌에 깔려고 옛 무늬 타일 세 다스를 주문했어요.",
    "blank": "โหล",
+   "src": "made"
+  }
+ ],
+ "w|โหวต": [
+  {
+   "text": "ผู้เข้าชมโหวตเลือกภาพที่ชอบที่สุดผ่านจอหน้าทางออก",
+   "en": "Visitors vote for their favourite picture on a screen by the exit.",
+   "ko": "관람객들은 출구 앞 화면에서 가장 좋아하는 그림에 투표해요.",
+   "blank": "โหวต",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าโหวตให้ร้านของวรรณาเป็นร้านยาที่ใจดีที่สุดในย่าน",
+   "en": "Customers voted Wanna's shop the friendliest pharmacy in the area.",
+   "ko": "손님들은 완나의 약국을 동네에서 가장 친절한 약국으로 뽑았어요.",
+   "blank": "โหวต",
    "src": "made"
   }
  ],
@@ -95243,6 +96395,22 @@
    "blank": "อ่อน"
   }
  ],
+ "w|อ่อนใจ": [
+  {
+   "text": "หัวหน้าอ่อนใจที่ระบบคอมพิวเตอร์ล่มในวันที่มีคนใหม่มาเยอะ",
+   "en": "The boss was exasperated that the computer system crashed on a day with so many new people.",
+   "ko": "신입이 많이 온 날 전산이 다운돼서 상사는 맥이 빠졌어요.",
+   "blank": "อ่อนใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีอ่อนใจที่ต้องมาแจ้งความเรื่องเดิมเป็นครั้งที่สาม",
+   "en": "Pranee was weary of having to report the same thing for the third time.",
+   "ko": "쁘라니는 같은 일로 세 번째 신고하러 와야 해서 맥이 빠졌어요.",
+   "blank": "อ่อนใจ",
+   "src": "made"
+  }
+ ],
  "w|ออนซ์": [
   {
    "text": "ตำรวจยึดทองคำได้หลายออนซ์จากกระเป๋าผู้ต้องสงสัย",
@@ -95574,6 +96742,22 @@
    "en": "Somsak interviewed a child genius who got into university at age thirteen.",
    "ko": "솜삭은 열세 살에 대학에 합격한 천재 아이를 인터뷰했어요.",
    "blank": "อัจฉริยะ",
+   "src": "made"
+  }
+ ],
+ "w|อัญเชิญ": [
+  {
+   "text": "บริษัทอัญเชิญพระพุทธรูปมาประดิษฐานในห้องโถงเพื่อความเป็นสิริมงคล",
+   "en": "The company enshrined a Buddha image in the lobby for good fortune.",
+   "ko": "회사는 복을 빌며 로비에 불상을 모셨어요.",
+   "blank": "อัญเชิญ",
+   "src": "made"
+  },
+  {
+   "text": "โรงพักจัดพิธีอัญเชิญศาลพระภูมิใหม่ในวันเปิดอาคาร",
+   "en": "The police station held a ceremony to install a new spirit house on the building's opening day.",
+   "ko": "경찰서는 청사 개관일에 새 토지신 사당을 모시는 의식을 열었어요.",
+   "blank": "อัญเชิญ",
    "src": "made"
   }
  ],
@@ -95975,6 +97159,22 @@
    "blank": "อาคาร"
   }
  ],
+ "w|อาฆาต": [
+  {
+   "text": "อนันต์ดูละครหลังเลิกงานเรื่องลูกน้องที่อาฆาตหัวหน้า",
+   "en": "After work Anan watched a drama about an employee bent on revenge against his boss.",
+   "ko": "아난은 퇴근 후 상사에게 앙심을 품은 부하 직원 이야기 드라마를 봤어요.",
+   "blank": "อาฆาต",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจสงสัยว่าคนร้ายอาฆาตเจ้าของร้านเพราะเคยถูกไล่ออก",
+   "en": "The police suspect the culprit bore a grudge against the shop owner for firing him.",
+   "ko": "경찰은 범인이 해고당한 앙심으로 가게 주인에게 원한을 품었다고 의심해요.",
+   "blank": "อาฆาต",
+   "src": "made"
+  }
+ ],
  "w|อ่าง": [
   {
    "text": "ล้างจานในอ่างให้สะอาด",
@@ -96307,6 +97507,22 @@
    "src": "made"
   }
  ],
+ "w|อานุภาพ": [
+  {
+   "text": "ห้องอาวุธโบราณบรรยายถึงอานุภาพของปืนใหญ่สมัยก่อน",
+   "en": "The ancient weapons room describes the power of cannons in the old days.",
+   "ko": "옛 무기 전시실은 예전 대포의 위력을 설명해요.",
+   "blank": "อานุภาพ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาอธิบายว่ายาปฏิชีวนะมีอานุภาพมาก แต่ต้องกินให้ครบ",
+   "en": "Wanna explained that antibiotics are very powerful but must be taken to the end of the course.",
+   "ko": "완나는 항생제가 아주 강력하지만 끝까지 다 먹어야 한다고 설명했어요.",
+   "blank": "อานุภาพ",
+   "src": "made"
+  }
+ ],
  "w|อาบ": [
   {
    "text": "แสงเช้าอาบชั้นหนังสือฝั่งตะวันออกจนเป็นสีทอง",
@@ -96349,6 +97565,22 @@
    "en": "Don't be shy — just say it.",
    "ko": "부끄러워 말고 말해 봐.",
    "blank": "อาย"
+  }
+ ],
+ "w|อายัด": [
+  {
+   "text": "ศาลสั่งอายัดรูปปั้นทองคำไว้ระหว่างพิสูจน์ว่าใครเป็นเจ้าของ",
+   "en": "The court ordered the golden statue held while ownership is determined.",
+   "ko": "법원은 소유자를 가리는 동안 금 조각상을 압류하라고 명령했어요.",
+   "blank": "อายัด",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่อายัดยาแก้ไอล็อตหนึ่งที่ร้านเพราะฉลากผิด",
+   "en": "Officials seized a batch of cough medicine at the shop because of a wrong label.",
+   "ko": "단속 공무원은 라벨이 잘못된 기침약 한 묶음을 약국에서 압류했어요.",
+   "blank": "อายัด",
+   "src": "made"
   }
  ],
  "w|อายุ": [
@@ -96440,6 +97672,22 @@
    "en": "Piya is interested in how ancient civilizations used herbs to treat illness.",
    "ko": "삐야는 고대 문명이 약초로 병을 어떻게 고쳤는지 관심이 있어요.",
    "blank": "อารยธรรม",
+   "src": "made"
+  }
+ ],
+ "w|อาละวาด": [
+  {
+   "text": "เครื่องพิมพ์อาละวาดกระดาษติดตั้งแต่เช้าวันแรกของอนันต์",
+   "en": "The printer went berserk, jamming paper from the morning of Anan's first day.",
+   "ko": "아난의 첫날 아침부터 프린터가 말썽을 부리며 종이가 걸렸어요.",
+   "blank": "อาละวาด",
+   "src": "made"
+  },
+  {
+   "text": "ชายเมาคนหนึ่งอาละวาดในห้องรอจนตำรวจต้องเข้าไปห้าม",
+   "en": "A drunk man went on a rampage in the waiting room until the police stepped in.",
+   "ko": "술 취한 남자가 대기실에서 난동을 부려서 경찰이 말려야 했어요.",
+   "blank": "อาละวาด",
    "src": "made"
   }
  ],
@@ -98613,6 +99861,22 @@
    "en": "Sigh, the work still isn't done.",
    "ko": "후, 일이 아직 안 끝났어.",
    "blank": "เฮ้อ"
+  }
+ ],
+ "w|เฮฮา": [
+  {
+   "text": "ทีมใหม่ของอนันต์เฮฮาจนเขาหายตื่นเต้น",
+   "en": "Anan's new team is so jolly that his nerves disappeared.",
+   "ko": "아난의 새 팀이 워낙 유쾌해서 긴장이 다 풀렸어요.",
+   "blank": "เฮฮา",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจในโรงพักนี้เฮฮาเป็นกันเอง ปราณีเลยไม่กลัว",
+   "en": "The officers at this station are cheerful and friendly, so Pranee wasn't scared.",
+   "ko": "이 경찰서 경찰들은 유쾌하고 친근해서 쁘라니는 겁나지 않았어요.",
+   "blank": "เฮฮา",
+   "src": "made"
   }
  ],
  "w|แฮม": [
