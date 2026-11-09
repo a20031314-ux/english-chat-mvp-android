@@ -5469,6 +5469,22 @@
    "src": "made"
   }
  ],
+ "w|优先": [
+  {
+   "text": "会员可以优先购票，周强一大早就抢到了好位置。",
+   "en": "Members get priority on tickets, so Zhou Qiang grabbed good seats first thing in the morning.",
+   "ko": "회원은 먼저 표를 살 수 있어서 저우창은 아침 일찍 좋은 자리를 잡았어요.",
+   "blank": "优先",
+   "src": "made"
+  },
+  {
+   "text": "诊所会优先照顾牙疼得厉害的病人。",
+   "en": "The clinic gives priority to patients with severe toothaches.",
+   "ko": "치과는 이가 심하게 아픈 환자를 먼저 봐 줘요.",
+   "blank": "优先",
+   "src": "made"
+  }
+ ],
  "w|优势": [
   {
    "text": "小明个子高，打篮球很有优势。",
@@ -8711,6 +8727,22 @@
    "src": "made"
   }
  ],
+ "w|八卦": [
+  {
+   "text": "中场休息时，周强听到后排观众在聊明星的八卦。",
+   "en": "During intermission, Zhou Qiang heard people in the back row gossiping about celebrities.",
+   "ko": "중간 휴식 때 저우창은 뒷줄 관객들이 연예인 가십을 이야기하는 걸 들었어요.",
+   "blank": "八卦",
+   "src": "made"
+  },
+  {
+   "text": "前台的两个护士一有空就聊同事的八卦。",
+   "en": "The two nurses at the front desk gossip about coworkers whenever they have a free moment.",
+   "ko": "접수대의 두 간호사는 틈만 나면 동료들 뒷이야기를 해요.",
+   "blank": "八卦",
+   "src": "made"
+  }
+ ],
  "w|公主": [
   {
    "text": "小公主醒了。",
@@ -11031,6 +11063,22 @@
    "src": "made"
   }
  ],
+ "w|刑事": [
+  {
+   "text": "这部话剧改编自一个真实的刑事案件。",
+   "en": "This play is adapted from a real criminal case.",
+   "ko": "이 연극은 실제 형사 사건을 각색한 거예요.",
+   "blank": "刑事",
+   "src": "made"
+  },
+  {
+   "text": "王芳的表哥是刑事律师，常来这家诊所洗牙。",
+   "en": "Wang Fang's cousin is a criminal lawyer and often comes to this clinic for cleanings.",
+   "ko": "왕팡의 사촌 오빠는 형사 변호사인데 이 치과에 자주 스케일링하러 와요.",
+   "blank": "刑事",
+   "src": "made"
+  }
+ ],
  "w|列为": [
   {
    "text": "老朋友说，他们小时候常去的那座老桥已经被列为文物了。",
@@ -12059,6 +12107,22 @@
    "blank": "办法"
   }
  ],
+ "w|功劳": [
+  {
+   "text": "导演说，这次演出成功是全体演员的功劳。",
+   "en": "The director said the success of this show was thanks to the whole cast.",
+   "ko": "연출가는 이번 공연의 성공이 배우 모두의 공로라고 했어요.",
+   "blank": "功劳",
+   "src": "made"
+  },
+  {
+   "text": "王芳的牙能保住，主要是那位老牙医的功劳。",
+   "en": "That Wang Fang's tooth could be saved was mainly thanks to the old dentist.",
+   "ko": "왕팡의 이를 살린 건 주로 그 나이 든 의사의 공로예요.",
+   "blank": "功劳",
+   "src": "made"
+  }
+ ],
  "w|功夫": [
   {
    "text": "体育课上，一位老师给大家表演了中国功夫。",
@@ -12625,6 +12689,22 @@
    "src": "made"
   }
  ],
+ "w|匕首": [
+  {
+   "text": "道具组做的匕首是塑料的，看起来却很逼真。",
+   "en": "The prop team's dagger was plastic but looked very real.",
+   "ko": "소품팀이 만든 단검은 플라스틱이었지만 진짜처럼 보였어요.",
+   "blank": "匕首",
+   "src": "made"
+  },
+  {
+   "text": "候诊时，王芳在杂志上读了一篇关于古代匕首的文章。",
+   "en": "While waiting, Wang Fang read a magazine article about ancient daggers.",
+   "ko": "진료를 기다리며 왕팡은 잡지에서 고대 단검에 관한 글을 읽었어요.",
+   "blank": "匕首",
+   "src": "made"
+  }
+ ],
  "w|化学": [
   {
    "text": "一家化学工厂发生泄漏，周强连夜赶到了现场。",
@@ -12852,6 +12932,22 @@
    "en": "The delivery van was ten minutes late, and Sun Yue waited at the door the whole time.",
    "ko": "배달 차가 십 분 늦게 와서 쑨웨는 내내 문 앞에서 기다렸어요.",
    "blank": "十分钟",
+   "src": "made"
+  }
+ ],
+ "w|十字架": [
+  {
+   "text": "舞台背景的教堂顶上立着一个木头十字架。",
+   "en": "A wooden cross stands on top of the church in the stage backdrop.",
+   "ko": "무대 배경의 교회 꼭대기에 나무 십자가가 서 있어요.",
+   "blank": "十字架",
+   "src": "made"
+  },
+  {
+   "text": "从牙科的窗户能看到对面教堂顶上的十字架。",
+   "en": "From the dentist's window you can see the cross atop the church opposite.",
+   "ko": "치과 창문으로 맞은편 교회 꼭대기의 십자가가 보여요.",
+   "blank": "十字架",
    "src": "made"
   }
  ],
@@ -13367,6 +13463,22 @@
    "src": "made"
   }
  ],
+ "w|卧底": [
+  {
+   "text": "周强最喜欢的角色是一个混进黑帮的警察卧底。",
+   "en": "Zhou Qiang's favorite character is an undercover cop who infiltrates a gang.",
+   "ko": "저우창이 제일 좋아하는 배역은 갱단에 잠입한 경찰 스파이예요.",
+   "blank": "卧底",
+   "src": "made"
+  },
+  {
+   "text": "王芳在候诊室看的电视剧里，主角是一名缉毒卧底。",
+   "en": "In the TV drama Wang Fang watched in the waiting room, the hero was an undercover narcotics agent.",
+   "ko": "왕팡이 대기실에서 본 드라마의 주인공은 마약 수사 잠입 요원이었어요.",
+   "blank": "卧底",
+   "src": "made"
+  }
+ ],
  "w|卫星": [
   {
    "text": "晚上在河边露营时，王刚看到一颗卫星从头顶慢慢划过。",
@@ -13619,6 +13731,22 @@
    "en": "Don't put pressure on me.",
    "ko": "압박 주지 마.",
    "blank": "压力"
+  }
+ ],
+ "w|压迫": [
+  {
+   "text": "这出历史剧讲的是农民不再忍受地主压迫的故事。",
+   "en": "This historical play is about peasants who will no longer endure oppression by the landlords.",
+   "ko": "이 역사극은 농민들이 더 이상 지주의 억압을 참지 않는 이야기예요.",
+   "blank": "压迫",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，智齿长歪了会压迫旁边的牙齿。",
+   "en": "The dentist said a crooked wisdom tooth can press on the neighboring teeth.",
+   "ko": "의사는 사랑니가 비뚤게 나면 옆 이를 누를 수 있다고 했어요.",
+   "blank": "压迫",
+   "src": "made"
   }
  ],
  "w|厌倦": [
@@ -14897,6 +15025,22 @@
    "src": "made"
   }
  ],
+ "w|口号": [
+  {
+   "text": "剧中工人们举着牌子，一起喊着口号走过舞台。",
+   "en": "In the play, workers carried signs and chanted slogans together as they crossed the stage.",
+   "ko": "극 중 노동자들이 팻말을 들고 함께 구호를 외치며 무대를 지나갔어요.",
+   "blank": "口号",
+   "src": "made"
+  },
+  {
+   "text": "诊所墙上写着一句口号：“每天刷牙两次。”",
+   "en": "A slogan on the clinic wall says: \"Brush twice a day.\"",
+   "ko": "치과 벽에 \"하루 두 번 양치하기\"라는 구호가 쓰여 있어요.",
+   "blank": "口号",
+   "src": "made"
+  }
+ ],
  "w|口味": [
   {
    "text": "为了照顾不同客人的口味，婚宴准备了辣的和不辣的菜。",
@@ -16033,6 +16177,22 @@
    "en": "The result is equally bad.",
    "ko": "결과도 똑같이 나빠.",
    "blank": "同样"
+  }
+ ],
+ "w|同盟": [
+  {
+   "text": "在这部古装剧里，两个国家结成了同盟。",
+   "en": "In this period drama, two kingdoms formed an alliance.",
+   "ko": "이 사극에서 두 나라는 동맹을 맺었어요.",
+   "blank": "同盟",
+   "src": "made"
+  },
+  {
+   "text": "几家小诊所结成同盟，一起进货，好降低成本。",
+   "en": "Several small clinics formed an alliance to buy supplies together and cut costs.",
+   "ko": "작은 치과 몇 곳이 연합을 맺고 같이 물건을 들여와 비용을 줄였어요.",
+   "blank": "同盟",
+   "src": "made"
   }
  ],
  "w|同胞": [
@@ -18006,6 +18166,22 @@
    "en": "Ms Wang, the voice teacher, is kind and often teaches poor students for free.",
    "ko": "성악을 가르치는 왕 선생님은 착해서 형편이 어려운 학생들을 자주 무료로 가르쳐요.",
    "blank": "善良",
+   "src": "made"
+  }
+ ],
+ "w|喇叭": [
+  {
+   "text": "剧院门口的喇叭不停地提醒观众关掉手机。",
+   "en": "The loudspeaker at the theater entrance kept reminding people to turn off their phones.",
+   "ko": "극장 입구 스피커가 관객들에게 휴대폰을 끄라고 계속 알렸어요.",
+   "blank": "喇叭",
+   "src": "made"
+  },
+  {
+   "text": "诊所外面卖水果的小贩用喇叭不停地吆喝。",
+   "en": "The fruit vendor outside the clinic kept hawking through a loudspeaker.",
+   "ko": "치과 밖 과일 장수가 확성기로 계속 손님을 불렀어요.",
+   "blank": "喇叭",
    "src": "made"
   }
  ],
@@ -20299,6 +20475,22 @@
    "en": "Please speak louder.",
    "ko": "좀 더 크게 말해 줘.",
    "blank": "声"
+  }
+ ],
+ "w|声响": [
+  {
+   "text": "剧院里突然传来一阵奇怪的声响，演员们都停了下来。",
+   "en": "A strange noise suddenly came from inside the theater, and the actors all stopped.",
+   "ko": "극장 안에서 갑자기 이상한 소리가 나서 배우들이 모두 멈췄어요.",
+   "blank": "声响",
+   "src": "made"
+  },
+  {
+   "text": "钻牙的声响让王芳浑身紧张。",
+   "en": "The sound of the dental drill made Wang Fang tense all over.",
+   "ko": "이 가는 소리에 왕팡은 온몸이 긴장됐어요.",
+   "blank": "声响",
+   "src": "made"
   }
  ],
  "w|声明": [
@@ -22869,6 +23061,22 @@
    "blank": "妈妈"
   }
  ],
+ "w|妥协": [
+  {
+   "text": "导演和编剧争了半天，最后都做了一点妥协。",
+   "en": "The director and the playwright argued for ages, and in the end both compromised a little.",
+   "ko": "연출가와 작가는 한참 다투다가 결국 둘 다 조금씩 양보했어요.",
+   "blank": "妥协",
+   "src": "made"
+  },
+  {
+   "text": "牙医想拔牙，王芳想保住它，两人最后妥协，先补一补再说。",
+   "en": "The dentist wanted to pull the tooth and Wang Fang wanted to keep it, so they compromised on filling it first.",
+   "ko": "의사는 이를 뽑자고 하고 왕팡은 살리고 싶어서 둘은 일단 때우기로 타협했어요.",
+   "blank": "妥协",
+   "src": "made"
+  }
+ ],
  "w|妨碍": [
   {
    "text": "摄影师提醒客人站到两边，不要妨碍新人走红毯。",
@@ -24433,6 +24641,22 @@
    "en": "You're being too polite.",
    "ko": "너무 겸손하시네요.",
    "blank": "客气"
+  }
+ ],
+ "w|客观": [
+  {
+   "text": "周强想写一篇客观的剧评，不只说好话。",
+   "en": "Zhou Qiang wants to write an objective review, not just praise.",
+   "ko": "저우창은 칭찬만 하지 않는 객관적인 연극 평을 쓰고 싶어요.",
+   "blank": "客观",
+   "src": "made"
+  },
+  {
+   "text": "牙医很客观地告诉王芳，这颗牙已经保不住了。",
+   "en": "The dentist told Wang Fang objectively that the tooth couldn't be saved.",
+   "ko": "의사는 왕팡에게 이 이는 더 이상 살릴 수 없다고 객관적으로 말했어요.",
+   "blank": "客观",
+   "src": "made"
   }
  ],
  "w|宣传": [
@@ -26827,6 +27051,22 @@
    "blank": "差点"
   }
  ],
+ "w|差距": [
+  {
+   "text": "周强发现，排练和正式演出之间的差距还挺大。",
+   "en": "Zhou Qiang noticed there was quite a gap between the rehearsal and the real performance.",
+   "ko": "저우창은 리허설과 실제 공연 사이에 차이가 꽤 크다는 걸 알았어요.",
+   "blank": "差距",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，城乡孩子的口腔健康还有不小的差距。",
+   "en": "The dentist said there's still a considerable gap in oral health between urban and rural children.",
+   "ko": "의사는 도시와 시골 아이들의 구강 건강에 아직 꽤 차이가 있다고 했어요.",
+   "blank": "差距",
+   "src": "made"
+  }
+ ],
  "w|已": [
   {
    "text": "我已到了。",
@@ -27214,6 +27454,22 @@
    "en": "Watching movies and making dumplings at home over the holiday is a common way for many families to spend it.",
    "ko": "연휴에 집에서 영화 보고 만두 빚는 건 많은 가정의 흔한 방식이에요.",
    "blank": "常见",
+   "src": "made"
+  }
+ ],
+ "w|常规": [
+  {
+   "text": "这位导演不按常规出牌，让观众也上台参与表演。",
+   "en": "This director doesn't follow convention and even lets audience members join the performance.",
+   "ko": "이 연출가는 관례를 따르지 않고 관객도 무대에 올라 공연에 참여하게 해요.",
+   "blank": "常规",
+   "src": "made"
+  },
+  {
+   "text": "洗牙是每半年做一次的常规检查。",
+   "en": "A cleaning is a routine checkup done every six months.",
+   "ko": "스케일링은 반년마다 하는 정기 검진이에요.",
+   "blank": "常规",
    "src": "made"
   }
  ],
@@ -33299,6 +33555,22 @@
    "blank": "找到"
   }
  ],
+ "w|找回": [
+  {
+   "text": "周强在座位底下找回了自己丢的手机。",
+   "en": "Zhou Qiang found the phone he had lost under his seat.",
+   "ko": "저우창은 잃어버린 휴대폰을 좌석 아래에서 찾았어요.",
+   "blank": "找回",
+   "src": "made"
+  },
+  {
+   "text": "做完牙齿美白后，王芳找回了笑的自信。",
+   "en": "After getting her teeth whitened, Wang Fang regained the confidence to smile.",
+   "ko": "치아 미백을 하고 나서 왕팡은 웃는 자신감을 되찾았어요.",
+   "blank": "找回",
+   "src": "made"
+  }
+ ],
  "w|承受": [
   {
    "text": "他承受了很大的压力。",
@@ -33435,6 +33707,22 @@
    "blank": "把"
   }
  ],
+ "w|把戏": [
+  {
+   "text": "魔术师在台上表演了一个小把戏，孩子们看得目瞪口呆。",
+   "en": "The magician performed a little trick on stage, and the kids watched open-mouthed.",
+   "ko": "마술사가 무대에서 작은 마술을 보여 주자 아이들이 입을 딱 벌리고 봤어요.",
+   "blank": "把戏",
+   "src": "made"
+  },
+  {
+   "text": "为了让孩子张嘴，牙医变了个小把戏，从耳朵后面拿出一枚硬币。",
+   "en": "To get the child to open his mouth, the dentist did a little trick and pulled a coin from behind his ear.",
+   "ko": "아이가 입을 벌리게 하려고 의사는 귀 뒤에서 동전을 꺼내는 작은 마술을 했어요.",
+   "blank": "把戏",
+   "src": "made"
+  }
+ ],
  "w|把握": [
   {
    "text": "张伟紧紧把握住求婚的机会，终于娶到了心爱的人。",
@@ -33448,6 +33736,22 @@
    "en": "This surgery is very difficult, and even Liu Fang isn't fully confident.",
    "ko": "이 수술은 아주 어려워서 류팡도 확신이 서지 않아요.",
    "blank": "把握",
+   "src": "made"
+  }
+ ],
+ "w|抑制": [
+  {
+   "text": "看到演员忘词，周强拼命抑制住想笑的冲动。",
+   "en": "Seeing the actor forget his lines, Zhou Qiang tried hard to hold back the urge to laugh.",
+   "ko": "배우가 대사를 잊은 걸 보고 저우창은 웃음을 꾹 참았어요.",
+   "blank": "抑制",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，这种牙膏能抑制口腔里的细菌生长。",
+   "en": "The dentist said this toothpaste can inhibit bacterial growth in the mouth.",
+   "ko": "치과 의사는 이 치약이 입안 세균 번식을 억제할 수 있다고 했어요.",
+   "blank": "抑制",
    "src": "made"
   }
  ],
@@ -34851,6 +35155,22 @@
    "src": "made"
   }
  ],
+ "w|捐": [
+  {
+   "text": "周强把这场慈善演出的门票钱全部捐给了儿童医院。",
+   "en": "Zhou Qiang donated all the ticket money from the charity show to a children's hospital.",
+   "ko": "저우창은 자선 공연 티켓 수익을 전부 어린이 병원에 기부했어요.",
+   "blank": "捐",
+   "src": "made"
+  },
+  {
+   "text": "诊所每年都给山区学校捐一批牙刷。",
+   "en": "The clinic donates a batch of toothbrushes to mountain schools every year.",
+   "ko": "치과는 해마다 산간 학교에 칫솔을 기부해요.",
+   "blank": "捐",
+   "src": "made"
+  }
+ ],
  "w|损失": [
   {
    "text": "公司遭受了损失。",
@@ -35465,6 +35785,22 @@
    "src": "made"
   }
  ],
+ "w|掩盖": [
+  {
+   "text": "音乐声刚好掩盖了后台搬道具的声音。",
+   "en": "The music happened to cover up the sound of props being moved backstage.",
+   "ko": "음악 소리가 마침 무대 뒤에서 소품 옮기는 소리를 가려 줬어요.",
+   "blank": "掩盖",
+   "src": "made"
+  },
+  {
+   "text": "王芳总是笑着说话，想掩盖自己牙齿不整齐。",
+   "en": "Wang Fang always smiles when she talks, trying to hide her uneven teeth.",
+   "ko": "왕팡은 고르지 않은 이를 감추려고 늘 웃으며 말해요.",
+   "blank": "掩盖",
+   "src": "made"
+  }
+ ],
  "w|措施": [
   {
    "text": "周强在文章里问，政府会采取什么措施来减少空气污染。",
@@ -36059,6 +36395,22 @@
    "src": "made"
   }
  ],
+ "w|摘": [
+  {
+   "text": "演出开始前，工作人员请观众摘下帽子。",
+   "en": "Before the show, the staff asked the audience to take off their hats.",
+   "ko": "공연 시작 전에 직원이 관객들에게 모자를 벗어 달라고 했어요.",
+   "blank": "摘",
+   "src": "made"
+  },
+  {
+   "text": "护士请王芳先摘掉眼镜，再躺到椅子上。",
+   "en": "The nurse asked Wang Fang to take off her glasses first and then lie down in the chair.",
+   "ko": "간호사가 왕팡에게 먼저 안경을 벗고 의자에 누우라고 했어요.",
+   "blank": "摘",
+   "src": "made"
+  }
+ ],
  "w|摧毁": [
   {
    "text": "风暴摧毁了房子。",
@@ -36393,6 +36745,22 @@
    "en": "I received the letter.",
    "ko": "편지를 받았어.",
    "blank": "收"
+  }
+ ],
+ "w|收下": [
+  {
+   "text": "演出结束后，女主角笑着收下了周强送的花。",
+   "en": "After the show, the leading actress smiled and accepted the flowers Zhou Qiang gave her.",
+   "ko": "공연이 끝난 뒤 여주인공은 웃으며 저우창이 준 꽃을 받았어요.",
+   "blank": "收下",
+   "src": "made"
+  },
+  {
+   "text": "王芳想送护士一盒巧克力，护士推了半天才收下。",
+   "en": "Wang Fang wanted to give the nurse a box of chocolates, and the nurse only accepted after refusing for a while.",
+   "ko": "왕팡이 간호사에게 초콜릿 한 상자를 주려 하자 간호사는 한참 사양하다 받았어요.",
+   "blank": "收下",
+   "src": "made"
   }
  ],
  "w|收入": [
@@ -38931,6 +39299,22 @@
    "en": "The results show he won.",
    "ko": "결과가 그가 이겼다고 나와.",
    "blank": "显示"
+  }
+ ],
+ "w|晃": [
+  {
+   "text": "舞台上的吊灯突然晃了几下，观众都吓了一跳。",
+   "en": "The chandelier above the stage suddenly swayed a few times, and the audience was startled.",
+   "ko": "무대 위 샹들리에가 갑자기 몇 번 흔들려서 관객들이 깜짝 놀랐어요.",
+   "blank": "晃",
+   "src": "made"
+  },
+  {
+   "text": "王芳的一颗牙有点晃，她赶紧约了牙医。",
+   "en": "One of Wang Fang's teeth was a bit loose, so she quickly made a dentist appointment.",
+   "ko": "왕팡은 이 하나가 좀 흔들려서 얼른 치과를 예약했어요.",
+   "blank": "晃",
+   "src": "made"
   }
  ],
  "w|晒": [
@@ -46771,6 +47155,22 @@
    "src": "made"
   }
  ],
+ "w|特性": [
+  {
+   "text": "导演说，每个角色都有自己的特性，演员要先读懂人物。",
+   "en": "The director said every role has its own traits, and actors must understand their characters first.",
+   "ko": "연출가는 배역마다 특성이 있어서 배우가 먼저 인물을 이해해야 한다고 했어요.",
+   "blank": "特性",
+   "src": "made"
+  },
+  {
+   "text": "牙医解释说，乳牙和恒牙的特性不太一样。",
+   "en": "The dentist explained that baby teeth and permanent teeth have somewhat different properties.",
+   "ko": "의사는 젖니와 영구치의 특성이 좀 다르다고 설명했어요.",
+   "blank": "特性",
+   "src": "made"
+  }
+ ],
  "w|特权": [
   {
    "text": "在图书馆里，教授和学生一样排队，没有什么特权。",
@@ -46859,6 +47259,22 @@
    "en": "He committed a serious crime.",
    "ko": "그는 큰 죄를 저질렀어.",
    "blank": "犯"
+  }
+ ],
+ "w|犯下": [
+  {
+   "text": "剧中的主人公年轻时犯下大错，后半生都在弥补。",
+   "en": "The protagonist made a big mistake when young and spent the rest of his life making up for it.",
+   "ko": "극의 주인공은 젊을 때 큰 잘못을 저지르고 남은 평생을 그걸 메우며 살았어요.",
+   "blank": "犯下",
+   "src": "made"
+  },
+  {
+   "text": "王芳在候诊室看的新闻说，那个男人对自己犯下的罪行供认不讳。",
+   "en": "The news Wang Fang watched in the waiting room said the man fully confessed to the crime he had committed.",
+   "ko": "왕팡이 대기실에서 본 뉴스에서 그 남자가 자기가 저지른 범죄를 모두 자백했다고 했어요.",
+   "blank": "犯下",
+   "src": "made"
   }
  ],
  "w|犯人": [
@@ -47225,6 +47641,22 @@
    "src": "made"
   }
  ],
+ "w|率领": [
+  {
+   "text": "剧里的将军率领士兵走上舞台，台下响起了掌声。",
+   "en": "The general in the play led his soldiers onto the stage, and applause broke out.",
+   "ko": "극 중 장군이 병사들을 이끌고 무대에 오르자 객석에서 박수가 터졌어요.",
+   "blank": "率领",
+   "src": "made"
+  },
+  {
+   "text": "诊所的院长曾率领医疗队去山区给孩子们看牙。",
+   "en": "The clinic's director once led a medical team to the mountains to check children's teeth.",
+   "ko": "치과 원장은 예전에 의료팀을 이끌고 산간 지역에 가서 아이들 이를 봐 줬어요.",
+   "blank": "率领",
+   "src": "made"
+  }
+ ],
  "w|王子": [
   {
    "text": "王子很英俊。",
@@ -47413,6 +47845,22 @@
    "en": "Reality is cruel.",
    "ko": "현실은 잔인해.",
    "blank": "现实"
+  }
+ ],
+ "w|现有": [
+  {
+   "text": "剧院打算在现有的座位后面再加两排。",
+   "en": "The theater plans to add two more rows behind the existing seats.",
+   "ko": "극장은 지금 있는 좌석 뒤에 두 줄을 더 놓을 계획이에요.",
+   "blank": "现有",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，用现有的技术，种一颗牙只要一个多小时。",
+   "en": "The dentist said that with current technology, an implant takes just over an hour.",
+   "ko": "의사는 지금 기술로는 임플란트 하나에 한 시간 남짓이면 된다고 했어요.",
+   "blank": "现有",
+   "src": "made"
   }
  ],
  "w|现象": [
@@ -49993,6 +50441,22 @@
    "blank": "真相"
   }
  ],
+ "w|真话": [
+  {
+   "text": "剧中的老人临终前，终于对儿子说了真话。",
+   "en": "Before dying, the old man in the play finally told his son the truth.",
+   "ko": "극 중 노인은 세상을 떠나기 전에 마침내 아들에게 진실을 말했어요.",
+   "blank": "真话",
+   "src": "made"
+  },
+  {
+   "text": "王芳说了真话，承认自己每天只刷一次牙。",
+   "en": "Wang Fang told the truth and admitted she only brushes once a day.",
+   "ko": "왕팡은 솔직하게 하루에 한 번만 양치한다고 털어놨어요.",
+   "blank": "真话",
+   "src": "made"
+  }
+ ],
  "w|眼": [
   {
    "text": "电视剧里警察拔出手枪的时候，小明正好抬头看了一眼。",
@@ -50132,6 +50596,22 @@
    "en": "Yang Yang stepped on his sister's glasses and broke them, and was too afraid to tell her.",
    "ko": "양양은 누나 안경을 밟아 망가뜨렸는데 누나가 화낼까 봐 말도 못 했어요.",
    "blank": "眼镜",
+   "src": "made"
+  }
+ ],
+ "w|睁": [
+  {
+   "text": "灯光太刺眼，周强过了好一会儿才睁开眼睛。",
+   "en": "The stage lights were so glaring that it took Zhou Qiang a while to open his eyes.",
+   "ko": "조명이 너무 눈부셔서 저우창은 한참 뒤에야 눈을 떴어요.",
+   "blank": "睁",
+   "src": "made"
+  },
+  {
+   "text": "治疗结束后，王芳才敢慢慢睁开眼睛。",
+   "en": "Only after the treatment was over did Wang Fang dare to slowly open her eyes.",
+   "ko": "치료가 끝난 뒤에야 왕팡은 천천히 눈을 떴어요.",
+   "blank": "睁",
    "src": "made"
   }
  ],
@@ -52155,6 +52635,22 @@
    "src": "made"
   }
  ],
+ "w|立法": [
+  {
+   "text": "这部剧讲一群议员怎样为保护儿童而立法。",
+   "en": "This play is about a group of lawmakers who pass legislation to protect children.",
+   "ko": "이 연극은 의원들이 아이들을 지키려고 법을 만드는 이야기예요.",
+   "blank": "立法",
+   "src": "made"
+  },
+  {
+   "text": "牙医协会呼吁政府立法，限制学校附近卖含糖饮料。",
+   "en": "The dental association urged the government to legislate limits on sugary drinks sold near schools.",
+   "ko": "치과 의사 협회는 학교 근처에서 단 음료 판매를 제한하는 법을 만들라고 정부에 촉구했어요.",
+   "blank": "立法",
+   "src": "made"
+  }
+ ],
  "w|站": [
   {
    "text": "你站这儿。",
@@ -53369,6 +53865,22 @@
    "src": "made"
   }
  ],
+ "w|纪律": [
+  {
+   "text": "剧团的纪律很严，迟到一次就要罚款。",
+   "en": "The troupe has strict discipline; being late even once means a fine.",
+   "ko": "극단은 규율이 엄해서 한 번만 늦어도 벌금을 내야 해요.",
+   "blank": "纪律",
+   "src": "made"
+  },
+  {
+   "text": "王芳的女儿在学校里很守纪律，可一到牙科就哭闹。",
+   "en": "Wang Fang's daughter is very well-disciplined at school, but cries and fusses as soon as she gets to the dentist.",
+   "ko": "왕팡의 딸은 학교에서 규율을 잘 지키지만 치과에만 가면 울고 떼를 써요.",
+   "blank": "纪律",
+   "src": "made"
+  }
+ ],
  "w|纪念": [
   {
    "text": "为了纪念建校六十周年，学校种了一排银杏树。",
@@ -53779,6 +54291,22 @@
    "en": "He finally agreed.",
    "ko": "그 사람이 드디어 승낙했어.",
    "blank": "终于"
+  }
+ ],
+ "w|终止": [
+  {
+   "text": "因为一位主演受伤，剧院只好终止了这轮演出。",
+   "en": "Because a lead actor was injured, the theater had to cancel the rest of this run.",
+   "ko": "주연 배우 한 명이 다쳐서 극장은 이번 공연을 중단할 수밖에 없었어요.",
+   "blank": "终止",
+   "src": "made"
+  },
+  {
+   "text": "王芳对新的治疗方案不满意，就终止了合同。",
+   "en": "Wang Fang wasn't happy with the new treatment plan, so she ended the contract.",
+   "ko": "왕팡은 새 치료 계획이 마음에 들지 않아서 계약을 해지했어요.",
+   "blank": "终止",
+   "src": "made"
   }
  ],
  "w|终结": [
@@ -54486,6 +55014,22 @@
    "en": "Once the new business district is built, this area will be even more prosperous.",
    "ko": "새 상업 지구가 다 지어지면 이 일대는 더 번화해질 거예요.",
    "blank": "繁荣",
+   "src": "made"
+  }
+ ],
+ "w|缩小": [
+  {
+   "text": "为了节省经费，剧团把舞台布景缩小了一半。",
+   "en": "To save money, the theater troupe cut the stage set down by half.",
+   "ko": "비용을 아끼려고 극단은 무대 세트를 절반으로 줄였어요.",
+   "blank": "缩小",
+   "src": "made"
+  },
+  {
+   "text": "吃了几天消炎药，王芳脸上的肿块缩小了不少。",
+   "en": "After a few days of anti-inflammatories, the swelling on Wang Fang's face went down a lot.",
+   "ko": "소염제를 며칠 먹자 왕팡 얼굴의 부기가 많이 줄었어요.",
+   "blank": "缩小",
    "src": "made"
   }
  ],
@@ -55649,6 +56193,22 @@
    "en": "I can't get in touch with him.",
    "ko": "그에게 연락이 안 돼.",
    "blank": "联络"
+  }
+ ],
+ "w|联赛": [
+  {
+   "text": "演出前，周强和朋友在大厅里聊起了昨晚的足球联赛。",
+   "en": "Before the show, Zhou Qiang and a friend chatted in the lobby about last night's soccer league match.",
+   "ko": "공연 전에 저우창과 친구는 로비에서 어젯밤 축구 리그 이야기를 했어요.",
+   "blank": "联赛",
+   "src": "made"
+  },
+  {
+   "text": "牙医是篮球迷，诊室里一直开着联赛的直播。",
+   "en": "The dentist is a basketball fan and always has the league games on in the exam room.",
+   "ko": "치과 의사는 농구 팬이라 진료실에 리그 중계를 늘 틀어 놔요.",
+   "blank": "联赛",
+   "src": "made"
   }
  ],
  "w|联邦": [
@@ -61317,6 +61877,22 @@
    "src": "made"
   }
  ],
+ "w|豪华": [
+  {
+   "text": "这家剧院的大厅非常豪华，墙上挂满了油画。",
+   "en": "This theater's lobby is very luxurious, with oil paintings all over the walls.",
+   "ko": "이 극장의 로비는 아주 호화롭고 벽에 유화가 가득 걸려 있어요.",
+   "blank": "豪华",
+   "src": "made"
+  },
+  {
+   "text": "这家牙科诊所装修得很豪华，看起来像酒店。",
+   "en": "This dental clinic is luxuriously decorated and looks like a hotel.",
+   "ko": "이 치과는 아주 호화롭게 꾸며서 호텔처럼 보여요.",
+   "blank": "豪华",
+   "src": "made"
+  }
+ ],
  "w|负担": [
   {
    "text": "酒店为员工负担一半的午餐费。",
@@ -63217,6 +63793,22 @@
    "src": "made"
   }
  ],
+ "w|轰炸": [
+  {
+   "text": "这部话剧讲的是一座城市在战争中被轰炸后的故事。",
+   "en": "This play tells the story of a city after it was bombed during the war.",
+   "ko": "이 연극은 전쟁 중 폭격을 당한 한 도시의 이야기예요.",
+   "blank": "轰炸",
+   "src": "made"
+  },
+  {
+   "text": "候诊室的电视在放一部老电影，里面飞机正在轰炸港口。",
+   "en": "The TV in the waiting room was showing an old movie in which planes were bombing a harbor.",
+   "ko": "대기실 TV에서 비행기가 항구를 폭격하는 옛날 영화가 나오고 있었어요.",
+   "blank": "轰炸",
+   "src": "made"
+  }
+ ],
  "w|轻": [
   {
    "text": "箱子很轻。",
@@ -64871,6 +65463,22 @@
    "src": "made"
   }
  ],
+ "w|选票": [
+  {
+   "text": "这部剧讲一个小镇村长为了选票四处讨好村民。",
+   "en": "The play is about a small-town village head who flatters everyone to win votes.",
+   "ko": "이 연극은 표를 얻으려고 여기저기 마을 사람들 비위를 맞추는 촌장 이야기예요.",
+   "blank": "选票",
+   "src": "made"
+  },
+  {
+   "text": "等候时，王芳和邻座聊起了社区选举，说自己已经投出了选票。",
+   "en": "While waiting, Wang Fang chatted with the person next to her about the community election and said she had already cast her vote.",
+   "ko": "기다리며 왕팡은 옆 사람과 동네 선거 얘기를 하며 이미 투표했다고 했어요.",
+   "blank": "选票",
+   "src": "made"
+  }
+ ],
  "w|透过": [
   {
    "text": "透过法庭的窗户，能看见门口站着很多记者。",
@@ -65356,6 +65964,22 @@
    "en": "Lin Jing said she inherited her talent for cooking from her grandmother.",
    "ko": "린징은 요리 솜씨를 외할머니에게서 물려받았다고 했어요.",
    "blank": "遗传",
+   "src": "made"
+  }
+ ],
+ "w|遗体": [
+  {
+   "text": "剧中，士兵们把将军的遗体运回了故乡。",
+   "en": "In the play, the soldiers carried the general's remains back to his hometown.",
+   "ko": "극 중 병사들은 장군의 유해를 고향으로 옮겼어요.",
+   "blank": "遗体",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，以前有些案子要靠牙齿来辨认遗体。",
+   "en": "The dentist said that in some past cases, bodies had to be identified by their teeth.",
+   "ko": "의사는 예전에는 이빨로 시신의 신원을 확인한 사건도 있었다고 했어요.",
+   "blank": "遗体",
    "src": "made"
   }
  ],
@@ -69820,6 +70444,22 @@
    "en": "The young man on the fifth floor is a chess master, and the building's old folks all love to play him.",
    "ko": "오 층 청년은 장기 고수라서 건물 어르신들이 다 그와 두고 싶어 해요.",
    "blank": "高手",
+   "src": "made"
+  }
+ ],
+ "w|高校": [
+  {
+   "text": "这个剧团的演员大多是从高校戏剧社出来的。",
+   "en": "Most of the actors in this troupe came from university drama clubs.",
+   "ko": "이 극단 배우들은 대부분 대학 연극 동아리 출신이에요.",
+   "blank": "高校",
+   "src": "made"
+  },
+  {
+   "text": "这位年轻的牙医是去年刚从高校毕业的。",
+   "en": "This young dentist just graduated from university last year.",
+   "ko": "이 젊은 치과 의사는 작년에 막 대학을 졸업했어요.",
+   "blank": "高校",
    "src": "made"
   }
  ],
