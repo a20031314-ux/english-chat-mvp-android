@@ -719,6 +719,22 @@
    "src": "tatoeba:7589124/Ricardo14 en:240794/CK"
   }
  ],
+ "w|achado": [
+  {
+   "text": "O Bruno encontrou um figurino antigo no porão, um verdadeiro achado.",
+   "en": "Bruno found an old costume in the basement, a real find.",
+   "ko": "브루누는 지하실에서 옛 의상을 찾았는데 정말 보물이었어요.",
+   "blank": "achado",
+   "src": "made"
+  },
+  {
+   "text": "O tênis que a Sofia achou em promoção foi um achado.",
+   "en": "The sneakers Sofia found on sale were a real find.",
+   "ko": "소피아가 할인 중에 찾은 운동화는 횡재였어요.",
+   "blank": "achado",
+   "src": "made"
+  }
+ ],
  "w|achar": [
   {
    "text": "Vou achar a chave.",
@@ -1445,6 +1461,22 @@
    "ko": "저는 아직 어른이 아니에요.",
    "blank": "adulto",
    "src": "tatoeba:6758210/Ricardo14 en:5858513/CK"
+  }
+ ],
+ "w|adversário": [
+  {
+   "text": "O ator que faz o adversário do Bruno é também o melhor amigo dele fora do palco.",
+   "en": "The actor who plays Bruno's rival is also his best friend offstage.",
+   "ko": "브루누의 적수를 연기하는 배우는 무대 밖에선 그의 가장 친한 친구예요.",
+   "blank": "adversário",
+   "src": "made"
+  },
+  {
+   "text": "A maior adversária da Sofia é uma vizinha que corre há vinte anos.",
+   "en": "Sofia's biggest rival is a neighbor who has been running for twenty years.",
+   "ko": "소피아의 가장 큰 적수는 이십 년째 달리는 이웃이에요.",
+   "blank": "adversária",
+   "src": "made"
   }
  ],
  "w|advogado": [
@@ -2855,6 +2887,22 @@
    "src": "made"
   }
  ],
+ "w|alteração": [
+  {
+   "text": "A última alteração no texto chegou ao Bruno na noite anterior ao ensaio geral.",
+   "en": "The last change to the script reached Bruno the night before the dress rehearsal.",
+   "ko": "대본의 마지막 수정본이 총연습 전날 밤에야 브루누에게 왔어요.",
+   "blank": "alteração",
+   "src": "made"
+  },
+  {
+   "text": "Uma alteração no percurso fez a Sofia correr por uma rua que não conhecia.",
+   "en": "A change in the route made Sofia run down a street she didn't know.",
+   "ko": "코스가 바뀌어서 소피아는 모르는 길을 달렸어요.",
+   "blank": "alteração",
+   "src": "made"
+  }
+ ],
  "w|alterar": [
   {
    "text": "A câmara votou para alterar o horário de funcionamento dos parques.",
@@ -3613,6 +3661,22 @@
    "en": "The ring got left in the bathroom.",
    "ko": "반지가 욕실에 있어.",
    "blank": "anel"
+  }
+ ],
+ "w|anfitrião": [
+  {
+   "text": "Depois da estreia, o diretor foi o anfitrião de um jantar para todo o elenco.",
+   "en": "After the premiere, the director hosted a dinner for the whole cast.",
+   "ko": "초연 뒤 연출가는 출연진 모두를 위한 저녁 자리를 마련했어요.",
+   "blank": "anfitrião",
+   "src": "made"
+  },
+  {
+   "text": "A cidade foi uma boa anfitriã e espalhou mesas de água por todo o percurso.",
+   "en": "The city was a good host and set up water tables along the whole route.",
+   "ko": "도시는 좋은 개최지답게 코스 곳곳에 급수대를 뒀어요.",
+   "blank": "anfitriã",
+   "src": "made"
   }
  ],
  "w|ângulo": [
@@ -5897,6 +5961,22 @@
    "blank": "assassino"
   }
  ],
+ "w|assédio": [
+  {
+   "text": "O elenco assinou uma carta contra o assédio nos bastidores do teatro.",
+   "en": "The cast signed a letter against harassment backstage in the theater.",
+   "ko": "출연진은 무대 뒤 괴롭힘에 반대하는 서한에 서명했어요.",
+   "blank": "assédio",
+   "src": "made"
+  },
+  {
+   "text": "A organização criou um canal para denunciar assédio contra corredoras.",
+   "en": "The organizers created a channel to report harassment against female runners.",
+   "ko": "주최 측은 여성 주자를 향한 괴롭힘을 신고하는 창구를 만들었어요.",
+   "blank": "assédio",
+   "src": "made"
+  }
+ ],
  "w|assegurar": [
   {
    "text": "Eu tentei assegurar que todos se divertissem.",
@@ -6299,6 +6379,22 @@
    "en": "Nobody answered at home.",
    "ko": "집에서는 아무도 안 받았어.",
    "blank": "atendeu"
+  }
+ ],
+ "w|atentado": [
+  {
+   "text": "A peça se passa logo depois de um atentado contra o rei, contado pelo narrador.",
+   "en": "The play takes place right after an attempt on the king's life, told by the narrator.",
+   "ko": "연극은 해설자가 들려주는 왕 암살 시도 직후를 배경으로 해요.",
+   "blank": "atentado",
+   "src": "made"
+  },
+  {
+   "text": "Depois do atentado numa maratona famosa no passado, a segurança das provas aumentou muito.",
+   "en": "After the attack at a famous marathon in the past, race security increased a lot.",
+   "ko": "예전 유명 마라톤에서 테러가 일어난 뒤로 대회 보안이 크게 강화됐어요.",
+   "blank": "atentado",
+   "src": "made"
   }
  ],
  "w|atento": [
@@ -9061,6 +9157,22 @@
    "blank": "bola"
   }
  ],
+ "w|boletim": [
+  {
+   "text": "O boletim do teatro informou que os ingressos esgotaram em uma hora.",
+   "en": "The theater bulletin reported that tickets sold out in an hour.",
+   "ko": "극장 소식지에 표가 한 시간 만에 매진됐다고 나왔어요.",
+   "blank": "boletim",
+   "src": "made"
+  },
+  {
+   "text": "O boletim do tempo previa calor forte para a manhã da prova.",
+   "en": "The weather report forecast strong heat for the morning of the race.",
+   "ko": "일기 예보는 대회 날 아침에 무더위를 예상했어요.",
+   "blank": "boletim",
+   "src": "made"
+  }
+ ],
  "w|bolha": [
   {
    "text": "O Pedro sente que o teatro é uma bolha onde o mundo lá fora não entra.",
@@ -9272,6 +9384,22 @@
    "en": "Ana's daughter brought a doll to keep her mother company in the room.",
    "ko": "아나의 딸은 병실에 있는 엄마 곁에 두라고 인형을 가져왔어요.",
    "blank": "boneco",
+   "src": "made"
+  }
+ ],
+ "w|bonitão": [
+  {
+   "text": "Na peça, o personagem do Bruno é um bonitão que todos acham vaidoso.",
+   "en": "In the play, Bruno's character is a handsome guy everyone thinks is vain.",
+   "ko": "연극에서 브루누가 맡은 인물은 모두가 허영심 많다고 여기는 미남이에요.",
+   "blank": "bonitão",
+   "src": "made"
+  },
+  {
+   "text": "Um corredor bonitão fantasiado de super-herói passou pela Sofia no quilômetro dez.",
+   "en": "A handsome runner dressed as a superhero passed Sofia at kilometer ten.",
+   "ko": "슈퍼히어로 복장을 한 잘생긴 주자가 십 킬로미터 지점에서 소피아를 앞질렀어요.",
+   "blank": "bonitão",
    "src": "made"
   }
  ],
@@ -13593,6 +13721,22 @@
    "src": "tatoeba:2779091/Ricardo14 en:2778432/CK"
   }
  ],
+ "w|cigano": [
+  {
+   "text": "No segundo ato, um grupo cigano chega à aldeia tocando violino.",
+   "en": "In the second act, a Romani group arrives in the village playing the violin.",
+   "ko": "이 막에서 집시 무리가 바이올린을 켜며 마을에 들어와요.",
+   "blank": "cigano",
+   "src": "made"
+  },
+  {
+   "text": "No percurso, uma banda tocava música cigana numa esquina do centro.",
+   "en": "Along the route, a band played Romani music on a downtown corner.",
+   "ko": "코스 중 시내 한 모퉁이에서 밴드가 집시 음악을 연주했어요.",
+   "blank": "cigana",
+   "src": "made"
+  }
+ ],
  "w|cigarro": [
   {
    "text": "Dê-me fogo para acender meu cigarro.",
@@ -15115,6 +15259,22 @@
    "blank": "companhia"
   }
  ],
+ "w|comparação": [
+  {
+   "text": "A comparação com a montagem antiga deixou o Bruno um pouco inseguro.",
+   "en": "The comparison with the old production left Bruno a little insecure.",
+   "ko": "옛 공연과 비교되자 브루누는 조금 자신이 없어졌어요.",
+   "blank": "comparação",
+   "src": "made"
+  },
+  {
+   "text": "O jornal publicou a lista de resultados com uma comparação entre este ano e o anterior.",
+   "en": "The paper published the results list with a comparison between this year and last.",
+   "ko": "신문은 올해와 작년을 비교한 결과표를 실었어요.",
+   "blank": "comparação",
+   "src": "made"
+  }
+ ],
  "w|comparar": [
   {
    "text": "Se você fosse me comparar a um animal, qual seria?",
@@ -15318,6 +15478,22 @@
    "en": "Let's not complicate things.",
    "ko": "일을 복잡하게 만들지 말자.",
    "blank": "complicar",
+   "src": "made"
+  }
+ ],
+ "w|componente": [
+  {
+   "text": "A música é um componente essencial da peça, segundo a diretora.",
+   "en": "Music is an essential component of the play, according to the director.",
+   "ko": "연출가에 따르면 음악은 이 연극의 핵심 요소예요.",
+   "blank": "componente",
+   "src": "made"
+  },
+  {
+   "text": "A hidratação é um componente básico do plano de corrida da Sofia.",
+   "en": "Hydration is a basic component of Sofia's race plan.",
+   "ko": "수분 보충은 소피아 레이스 계획의 기본 요소예요.",
+   "blank": "componente",
    "src": "made"
   }
  ],
@@ -16299,6 +16475,22 @@
    "src": "made"
   }
  ],
+ "w|confronto": [
+  {
+   "text": "O confronto final entre o Bruno e o vilão é a cena mais aplaudida.",
+   "en": "The final confrontation between Bruno and the villain is the most applauded scene.",
+   "ko": "브루누와 악당의 마지막 대결이 가장 큰 박수를 받는 장면이에요.",
+   "blank": "confronto",
+   "src": "made"
+  },
+  {
+   "text": "O confronto entre as duas favoritas só se decidiu nos últimos cem metros.",
+   "en": "The showdown between the two favorites was only decided in the last hundred meters.",
+   "ko": "우승 후보 둘의 대결은 마지막 백 미터에서야 갈렸어요.",
+   "blank": "confronto",
+   "src": "made"
+  }
+ ],
  "w|confundir": [
   {
    "text": "O João sempre acaba por confundir os nomes dos gêmeos do quarto andar.",
@@ -17058,6 +17250,22 @@
    "en": "Rita posted all the content from the trip on social media.",
    "ko": "히타는 여행 콘텐츠를 전부 SNS에 올렸어요.",
    "blank": "conteúdo",
+   "src": "made"
+  }
+ ],
+ "w|contexto": [
+  {
+   "text": "Para entender a peça, o Bruno estudou o contexto histórico da época.",
+   "en": "To understand the play, Bruno studied the historical context of the period.",
+   "ko": "작품을 이해하려고 브루누는 그 시대의 역사적 배경을 공부했어요.",
+   "blank": "contexto",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia entende o contexto do resultado: choveu muito e o asfalto estava escorregadio.",
+   "en": "Sofia understands the context of her result: it rained a lot and the asphalt was slippery.",
+   "ko": "소피아는 자기 기록이 나온 상황을 알아요. 비가 많이 와서 아스팔트가 미끄러웠거든요.",
+   "blank": "contexto",
    "src": "made"
   }
  ],
@@ -18792,6 +19000,22 @@
    "en": "Ana saw the suspect cross the avenue and ran after him.",
    "ko": "아나는 용의자가 대로를 건너는 걸 보고 뒤쫓아 갔어요.",
    "blank": "cruzar",
+   "src": "made"
+  }
+ ],
+ "w|cubano": [
+  {
+   "text": "A trilha sonora mistura samba e música cubana tocada ao vivo.",
+   "en": "The soundtrack mixes samba and Cuban music played live.",
+   "ko": "배경 음악은 삼바와 쿠바 음악을 섞어 라이브로 연주해요.",
+   "blank": "cubana",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia correu os últimos quilômetros ao lado de um atleta cubano muito simpático.",
+   "en": "Sofia ran the last kilometers next to a very friendly Cuban athlete.",
+   "ko": "소피아는 마지막 몇 킬로미터를 아주 친절한 쿠바 선수와 나란히 달렸어요.",
+   "blank": "cubano",
    "src": "made"
   }
  ],
@@ -25493,6 +25717,22 @@
    "src": "made"
   }
  ],
+ "w|enigma": [
+  {
+   "text": "O final da peça é um enigma que cada espectador interpreta de um jeito.",
+   "en": "The play's ending is a puzzle that each audience member interprets differently.",
+   "ko": "연극의 결말은 관객마다 다르게 해석하는 수수께끼예요.",
+   "blank": "enigma",
+   "src": "made"
+  },
+  {
+   "text": "Para a Sofia, a forma como os atletas de elite correm tão rápido ainda é um enigma.",
+   "en": "For Sofia, how the elite runners run so fast is still a mystery.",
+   "ko": "소피아에게 엘리트 선수들이 그렇게 빨리 달리는 건 아직 수수께끼예요.",
+   "blank": "enigma",
+   "src": "made"
+  }
+ ],
  "w|enlouquecer": [
   {
    "text": "Não vamos enlouquecer!",
@@ -29157,6 +29397,22 @@
    "blank": "explodir"
   }
  ],
+ "w|exploração": [
+  {
+   "text": "A peça critica a exploração dos trabalhadores numa mina do século passado.",
+   "en": "The play criticizes the exploitation of workers in a mine in the last century.",
+   "ko": "연극은 지난 세기 광산 노동자 착취를 비판해요.",
+   "blank": "exploração",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia leu sobre a exploração de trabalhadores nas fábricas de tênis e passou a pesquisar as marcas.",
+   "en": "Sofia read about worker exploitation in sneaker factories and started researching brands.",
+   "ko": "소피아는 운동화 공장 노동자 착취 기사를 읽고 브랜드를 따져 보기 시작했어요.",
+   "blank": "exploração",
+   "src": "made"
+  }
+ ],
  "w|explorar": [
   {
    "text": "Quando eram pequenos, o João e a Clara adoravam explorar o sótão da casa.",
@@ -31875,6 +32131,22 @@
    "ko": "그녀는 아직 문장을 못 만들어요.",
    "blank": "formar",
    "src": "tatoeba:2523900/paula_guisard en:309032"
+  }
+ ],
+ "w|formato": [
+  {
+   "text": "A diretora mudou o formato da peça para caber em uma hora.",
+   "en": "The director changed the play's format to fit into an hour.",
+   "ko": "연출가는 한 시간에 맞추려고 연극 형식을 바꿨어요.",
+   "blank": "formato",
+   "src": "made"
+  },
+  {
+   "text": "O formato da prova mudou e agora tem uma meia maratona junto.",
+   "en": "The race format changed and now includes a half marathon too.",
+   "ko": "대회 형식이 바뀌어서 이제 하프 마라톤도 함께 열려요.",
+   "blank": "formato",
+   "src": "made"
   }
  ],
  "w|formatura": [
@@ -35997,6 +36269,22 @@
    "src": "made"
   }
  ],
+ "w|imitação": [
+  {
+   "text": "O Bruno faz uma imitação perfeita do diretor nos intervalos.",
+   "en": "Bruno does a perfect impression of the director during breaks.",
+   "ko": "브루누는 쉬는 시간에 연출가 흉내를 완벽하게 내요.",
+   "blank": "imitação",
+   "src": "made"
+  },
+  {
+   "text": "Um torcedor fazia uma imitação engraçada de um narrador de futebol no microfone.",
+   "en": "A fan did a funny imitation of a soccer commentator on the microphone.",
+   "ko": "한 응원객이 마이크로 축구 해설자 흉내를 우스꽝스럽게 냈어요.",
+   "blank": "imitação",
+   "src": "made"
+  }
+ ],
  "w|imitar": [
   {
    "text": "Na festa da firma, o Rafael fez todo mundo rir ao imitar o chefe.",
@@ -38167,6 +38455,22 @@
    "src": "tatoeba:9090106/JGEN en:9054966/CK"
   }
  ],
+ "w|interpretação": [
+  {
+   "text": "O crítico elogiou a interpretação do Bruno no jornal de domingo.",
+   "en": "The critic praised Bruno's performance in the Sunday paper.",
+   "ko": "평론가는 일요일 신문에서 브루누의 연기를 칭찬했어요.",
+   "blank": "interpretação",
+   "src": "made"
+  },
+  {
+   "text": "Para a Sofia, cada interpretação dos números do relógio vira assunto com o treinador.",
+   "en": "For Sofia, every interpretation of her watch's numbers becomes a topic with her coach.",
+   "ko": "소피아는 시계 숫자를 어떻게 읽을지 하나하나 코치와 이야기해요.",
+   "blank": "interpretação",
+   "src": "made"
+  }
+ ],
  "w|interpretar": [
   {
    "text": "O Tiago aprendeu a interpretar as nuvens para saber se vai chover.",
@@ -38277,6 +38581,22 @@
    "ko": "쉬어야 해서 좀 쉬었어요.",
    "blank": "intervalo",
    "src": "tatoeba:11095028/MrJuice en:5666414/CK"
+  }
+ ],
+ "w|intervenção": [
+  {
+   "text": "Uma intervenção artística na fachada do teatro chamou a atenção da cidade.",
+   "en": "An art intervention on the theater's facade caught the city's attention.",
+   "ko": "극장 외벽의 예술 작업이 도시 사람들의 눈길을 끌었어요.",
+   "blank": "intervenção",
+   "src": "made"
+  },
+  {
+   "text": "A equipe médica fez uma intervenção rápida quando um corredor desmaiou.",
+   "en": "The medical team made a quick intervention when a runner fainted.",
+   "ko": "한 주자가 쓰러지자 의료진이 재빨리 조치했어요.",
+   "blank": "intervenção",
+   "src": "made"
   }
  ],
  "w|intestino": [
@@ -38847,6 +39167,22 @@
    "src": "made"
   }
  ],
+ "w|isolamento": [
+  {
+   "text": "A peça fala do isolamento de um rei que não confia em ninguém.",
+   "en": "The play is about the isolation of a king who trusts no one.",
+   "ko": "연극은 아무도 믿지 않는 왕의 고립을 다뤄요.",
+   "blank": "isolamento",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia correu sozinha durante meses, e esse isolamento a deixou mais forte.",
+   "en": "Sofia ran alone for months, and that isolation made her stronger.",
+   "ko": "소피아는 몇 달간 혼자 달렸고 그 고독이 그녀를 더 강하게 했어요.",
+   "blank": "isolamento",
+   "src": "made"
+  }
+ ],
  "w|isolar": [
   {
    "text": "A escola resolveu isolar a sala de música para o barulho não atrapalhar as aulas, e o Rafael ajudou a colar espuma.",
@@ -39056,6 +39392,22 @@
    "en": "Jazz plays at the club snack bar, and Carla likes to relax there after training.",
    "ko": "클럽 매점에는 재즈가 흘러서 카를라는 훈련 뒤 거기서 쉬는 걸 좋아해요.",
    "blank": "jazz",
+   "src": "made"
+  }
+ ],
+ "w|jeans": [
+  {
+   "text": "Nos ensaios, o Bruno usa jeans e camiseta, longe de qualquer coroa.",
+   "en": "At rehearsals, Bruno wears jeans and a T-shirt, far from any crown.",
+   "ko": "연습 때 브루누는 왕관과는 거리가 먼 청바지에 티셔츠 차림이에요.",
+   "blank": "jeans",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia correu de shorts, mas muita gente na largada estava de calça jeans.",
+   "en": "Sofia ran in shorts, but many people at the start were wearing jeans.",
+   "ko": "소피아는 반바지를 입고 달렸지만 출발선의 많은 사람들은 청바지 차림이었어요.",
+   "blank": "jeans",
    "src": "made"
   }
  ],
@@ -39653,6 +40005,22 @@
    "src": "tatoeba:1003391/alexmarcelo en:9446321/Nylez"
   }
  ],
+ "w|labirinto": [
+  {
+   "text": "Os corredores atrás do palco são um labirinto onde o Bruno já se perdeu.",
+   "en": "The corridors behind the stage are a maze where Bruno has gotten lost before.",
+   "ko": "무대 뒤 복도는 브루누가 길을 잃은 적도 있는 미로예요.",
+   "blank": "labirinto",
+   "src": "made"
+  },
+  {
+   "text": "O centro histórico parece um labirinto, mas as placas guiaram a Sofia até o fim.",
+   "en": "The historic center feels like a maze, but the signs guided Sofia to the end.",
+   "ko": "구시가지는 미로 같았지만 표지판이 소피아를 끝까지 안내했어요.",
+   "blank": "labirinto",
+   "src": "made"
+  }
+ ],
  "w|laboratório": [
   {
    "text": "O laboratório cheira a álcool.",
@@ -40077,6 +40445,22 @@
    "src": "made"
   }
  ],
+ "w|latim": [
+  {
+   "text": "Algumas falas da peça estão em latim, e o Bruno teve aulas para pronunciar bem.",
+   "en": "Some lines of the play are in Latin, and Bruno took lessons to pronounce them well.",
+   "ko": "연극 대사 일부가 라틴어라서 브루누는 발음 수업을 들었어요.",
+   "blank": "latim",
+   "src": "made"
+  },
+  {
+   "text": "O lema da maratona está escrito em latim na linha de chegada.",
+   "en": "The marathon's motto is written in Latin at the finish line.",
+   "ko": "마라톤 표어가 결승선에 라틴어로 쓰여 있어요.",
+   "blank": "latim",
+   "src": "made"
+  }
+ ],
  "w|lavagem": [
   {
    "text": "A lavagem das cortinas ficou para o fim de semana.",
@@ -40485,6 +40869,22 @@
    "src": "tatoeba:4689727/Ricardo14 en:255141/CK"
   }
  ],
+ "w|lente": [
+  {
+   "text": "O fotógrafo do teatro trocou a lente da câmera para pegar o palco inteiro.",
+   "en": "The theater photographer changed the camera lens to capture the whole stage.",
+   "ko": "극장 사진가는 무대 전체를 담으려고 카메라 렌즈를 바꿨어요.",
+   "blank": "lente",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia usa óculos escuros com lente especial para o sol forte.",
+   "en": "Sofia wears sunglasses with a special lens for strong sun.",
+   "ko": "소피아는 강한 햇빛용 특수 렌즈가 달린 선글라스를 써요.",
+   "blank": "lente",
+   "src": "made"
+  }
+ ],
  "w|lento": [
   {
    "text": "Por que o meu computador está lento?",
@@ -40663,6 +41063,22 @@
    "en": "I don't owe them anything.",
    "ko": "그들에게 빚진 거 없어.",
    "blank": "lhes"
+  }
+ ],
+ "w|liberação": [
+  {
+   "text": "A liberação do teatro pelos bombeiros saiu só dois dias antes da estreia.",
+   "en": "The fire department's clearance for the theater came only two days before the premiere.",
+   "ko": "소방서의 극장 사용 허가가 초연 이틀 전에야 났어요.",
+   "blank": "liberação",
+   "src": "made"
+  },
+  {
+   "text": "A prefeitura atrasou a liberação das ruas, e a largada ficou para mais tarde.",
+   "en": "The city hall delayed opening the streets, and the start was pushed back.",
+   "ko": "시청이 도로 개방을 늦춰서 출발이 미뤄졌어요.",
+   "blank": "liberação",
+   "src": "made"
   }
  ],
  "w|liberal": [
@@ -41423,6 +41839,22 @@
    "src": "made"
   }
  ],
+ "w|lote": [
+  {
+   "text": "A produção comprou um lote de cadeiras velhas para montar o cenário.",
+   "en": "The production bought a batch of old chairs to build the set.",
+   "ko": "제작진은 무대를 꾸미려고 낡은 의자를 한 묶음 샀어요.",
+   "blank": "lote",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia largou no segundo lote de corredores, junto com os amadores.",
+   "en": "Sofia started in the second wave of runners, along with the amateurs.",
+   "ko": "소피아는 아마추어들과 함께 두 번째 무리로 출발했어요.",
+   "blank": "lote",
+   "src": "made"
+  }
+ ],
  "w|loteria": [
   {
    "text": "O resultado da loteria saiu tarde, e o Gabriel teve que segurar a página.",
@@ -42159,6 +42591,22 @@
    "src": "made"
   }
  ],
+ "w|maleta": [
+  {
+   "text": "O Bruno carrega o texto numa maleta de couro que ganhou do pai.",
+   "en": "Bruno carries his script in a leather briefcase his father gave him.",
+   "ko": "브루누는 아버지에게 받은 가죽 가방에 대본을 넣고 다녀요.",
+   "blank": "maleta",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia guardou as chaves numa maleta pequena no guarda-volumes.",
+   "en": "Sofia left her keys in a small case at the bag check.",
+   "ko": "소피아는 짐 보관소의 작은 가방에 열쇠를 맡겼어요.",
+   "blank": "maleta",
+   "src": "made"
+  }
+ ],
  "w|maligno": [
   {
    "text": "Na palestra da farmácia, o médico explicou que um tumor maligno precisa de tratamento rápido.",
@@ -42370,6 +42818,22 @@
    "en": "Sofia's most loyal customer is crazy about crossword puzzles.",
    "ko": "소피아의 가장 단골손님은 낱말 맞추기 퍼즐에 푹 빠진 사람이에요.",
    "blank": "maníaco",
+   "src": "made"
+  }
+ ],
+ "w|manifestação": [
+  {
+   "text": "Uma manifestação na praça atrasou a chegada do público ao teatro.",
+   "en": "A demonstration in the square delayed the audience's arrival at the theater.",
+   "ko": "광장의 시위 때문에 관객들이 극장에 늦게 도착했어요.",
+   "blank": "manifestação",
+   "src": "made"
+  },
+  {
+   "text": "A organização desviou a rota por causa de uma manifestação perto da praça.",
+   "en": "The organizers diverted the route because of a demonstration near the square.",
+   "ko": "광장 근처 시위 때문에 주최 측이 코스를 돌렸어요.",
+   "blank": "manifestação",
    "src": "made"
   }
  ],
@@ -43561,6 +44025,22 @@
    "ko": "말 안 한 게 하나 있어요.",
    "blank": "mencionar",
    "src": "tatoeba:6128188/ianna en:3145311/Hybrid"
+  }
+ ],
+ "w|mendigo": [
+  {
+   "text": "O Bruno faz o papel de um mendigo que, no fim, descobre ser herdeiro do trono.",
+   "en": "Bruno plays a beggar who, in the end, discovers he's heir to the throne.",
+   "ko": "브루누는 결국 왕위 계승자로 밝혀지는 거지 역을 맡았어요.",
+   "blank": "mendigo",
+   "src": "made"
+  },
+  {
+   "text": "Um senhor que já foi mendigo hoje treina com a equipe da Sofia e é um exemplo para todos.",
+   "en": "A man who was once homeless now trains with Sofia's team and is an example to everyone.",
+   "ko": "한때 노숙인이었던 아저씨가 지금은 소피아 팀과 훈련하며 모두의 본보기가 됐어요.",
+   "blank": "mendigo",
+   "src": "made"
   }
  ],
  "w|menina": [
@@ -51145,6 +51625,22 @@
    "blank": "perna"
   }
  ],
+ "w|pérola": [
+  {
+   "text": "A rainha da peça usa um colar de pérola que pertencia à avó da figurinista.",
+   "en": "The queen in the play wears a pearl necklace that belonged to the costume designer's grandmother.",
+   "ko": "연극 속 왕비는 의상 디자이너 할머니의 진주 목걸이를 해요.",
+   "blank": "pérola",
+   "src": "made"
+  },
+  {
+   "text": "A medalha da maratona tem uma pérola falsa no centro.",
+   "en": "The marathon medal has a fake pearl in the center.",
+   "ko": "마라톤 메달 가운데에 가짜 진주가 박혀 있어요.",
+   "blank": "pérola",
+   "src": "made"
+  }
+ ],
  "w|perseguição": [
   {
    "text": "O filme que o Rafael viu na aula de cinema tinha uma perseguição de carro incrível.",
@@ -55523,6 +56019,22 @@
    "src": "made"
   }
  ],
+ "w|província": [
+  {
+   "text": "A companhia do Bruno vai levar a peça para cidades do interior da província.",
+   "en": "Bruno's company is going to take the play to towns in the countryside of the province.",
+   "ko": "브루누의 극단은 그 지방 시골 마을들로 순회공연을 갈 거예요.",
+   "blank": "província",
+   "src": "made"
+  },
+  {
+   "text": "Corredores de toda a província vieram para a maratona da capital.",
+   "en": "Runners from all over the province came to the capital's marathon.",
+   "ko": "그 지방 곳곳의 주자들이 수도 마라톤에 왔어요.",
+   "blank": "província",
+   "src": "made"
+  }
+ ],
  "w|próximo": [
   {
    "text": "O próximo sou eu.",
@@ -59207,6 +59719,22 @@
    "src": "made"
   }
  ],
+ "w|retardar": [
+  {
+   "text": "O diretor pediu ao Bruno para retardar a entrada em cena por alguns segundos.",
+   "en": "The director asked Bruno to delay his entrance by a few seconds.",
+   "ko": "연출가는 브루누에게 등장을 몇 초 늦추라고 했어요.",
+   "blank": "retardar",
+   "src": "made"
+  },
+  {
+   "text": "O treinador da Sofia diz que retardar o ritmo no começo ajuda a terminar bem.",
+   "en": "Sofia's coach says that slowing the pace at the start helps you finish strong.",
+   "ko": "소피아의 코치는 초반에 속도를 늦춰야 잘 끝낼 수 있다고 해요.",
+   "blank": "retardar",
+   "src": "made"
+  }
+ ],
  "w|retirado": [
   {
    "text": "O arquivo antigo fica num prédio retirado, longe do centro, e o Miguel teve que ir até lá.",
@@ -61325,6 +61853,22 @@
    "src": "made"
   }
  ],
+ "w|seda": [
+  {
+   "text": "O Bruno interpreta um rei que usa um manto de seda vermelha.",
+   "en": "Bruno plays a king who wears a red silk cloak.",
+   "ko": "브루누는 빨간 비단 망토를 두른 왕을 연기해요.",
+   "blank": "seda",
+   "src": "made"
+  },
+  {
+   "text": "A camiseta da prova é de um tecido leve que parece seda.",
+   "en": "The race shirt is made of a light fabric that feels like silk.",
+   "ko": "대회 티셔츠는 비단 같은 가벼운 천으로 만들었어요.",
+   "blank": "seda",
+   "src": "made"
+  }
+ ],
  "w|sede": [
   {
    "text": "Vocês estão com fome ou com sede?",
@@ -61339,6 +61883,22 @@
    "ko": "목 안 말라요?",
    "blank": "sede",
    "src": "tatoeba:1311443/alexmarcelo en:240641/CK"
+  }
+ ],
+ "w|seduzir": [
+  {
+   "text": "O vilão tenta seduzir a princesa com promessas de riqueza.",
+   "en": "The villain tries to seduce the princess with promises of wealth.",
+   "ko": "악당은 부와 권력을 약속하며 공주를 꾀려고 해요.",
+   "blank": "seduzir",
+   "src": "made"
+  },
+  {
+   "text": "A música alta dos fãs parecia seduzir a Sofia a acelerar demais.",
+   "en": "The fans' loud music seemed to tempt Sofia into speeding up too much.",
+   "ko": "응원단의 큰 음악이 소피아를 너무 빨리 달리도록 꾀는 것 같았어요.",
+   "blank": "seduzir",
+   "src": "made"
   }
  ],
  "w|segredo": [
@@ -61367,6 +61927,22 @@
    "en": "The noise was followed by a scream.",
    "ko": "소음 다음에 비명이 들렸어.",
    "blank": "seguido"
+  }
+ ],
+ "w|seguidor": [
+  {
+   "text": "O Bruno ganhou mais de mil seguidores depois de postar um vídeo dos bastidores.",
+   "en": "Bruno gained over a thousand followers after posting a backstage video.",
+   "ko": "브루누는 무대 뒤 영상을 올리고 팔로워가 천 명 넘게 늘었어요.",
+   "blank": "seguidores",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia compartilha os treinos na internet e já tem muitos seguidores.",
+   "en": "Sofia shares her workouts online and already has many followers.",
+   "ko": "소피아는 훈련을 인터넷에 올려서 벌써 팔로워가 많아요.",
+   "blank": "seguidores",
+   "src": "made"
   }
  ],
  "w|seguinte": [
@@ -68045,6 +68621,22 @@
    "src": "made"
   }
  ],
+ "w|triângulo": [
+  {
+   "text": "A história gira em torno de um triângulo amoroso entre o rei, a rainha e o poeta.",
+   "en": "The story revolves around a love triangle between the king, the queen and the poet.",
+   "ko": "이야기는 왕, 왕비, 시인의 삼각관계를 중심으로 돌아가요.",
+   "blank": "triângulo",
+   "src": "made"
+  },
+  {
+   "text": "A parte mais difícil do percurso forma um triângulo em volta do parque.",
+   "en": "The hardest part of the route forms a triangle around the park.",
+   "ko": "코스에서 가장 힘든 구간은 공원을 둘러싼 삼각형 모양이에요.",
+   "blank": "triângulo",
+   "src": "made"
+  }
+ ],
  "w|tribal": [
   {
    "text": "O Pedro encontrou um estudo sobre a arte tribal de povos antigos.",
@@ -70069,6 +70661,22 @@
    "src": "made"
   }
  ],
+ "w|véspera": [
+  {
+   "text": "Na véspera da estreia, o Bruno quase não dormiu de tanto nervoso.",
+   "en": "On the eve of the premiere, Bruno barely slept from nerves.",
+   "ko": "초연 전날 밤 브루누는 너무 긴장해서 거의 못 잤어요.",
+   "blank": "véspera",
+   "src": "made"
+  },
+  {
+   "text": "Na véspera da maratona, a Sofia comeu macarrão e dormiu cedo.",
+   "en": "On the eve of the marathon, Sofia ate pasta and went to bed early.",
+   "ko": "마라톤 전날 소피아는 파스타를 먹고 일찍 잤어요.",
+   "blank": "véspera",
+   "src": "made"
+  }
+ ],
  "w|vestido": [
   {
    "text": "O vestido novo ficou lindo.",
@@ -70142,6 +70750,22 @@
    "en": "Beatriz was taking her dog to the vet in the neighboring town.",
    "ko": "베아트리스는 개를 이웃 도시 수의사에게 데려가는 길이었어요.",
    "blank": "veterinário",
+   "src": "made"
+  }
+ ],
+ "w|veto": [
+  {
+   "text": "O dono do teatro tem direito de veto sobre o cartaz da peça.",
+   "en": "The theater owner has veto power over the play's poster.",
+   "ko": "극장 주인은 연극 포스터에 대한 거부권이 있어요.",
+   "blank": "veto",
+   "src": "made"
+  },
+  {
+   "text": "A federação usou o veto para impedir uma marca de bebida de patrocinar a prova.",
+   "en": "The federation used its veto to stop a drinks brand from sponsoring the race.",
+   "ko": "연맹은 거부권을 써서 음료 브랜드의 대회 후원을 막았어요.",
+   "blank": "veto",
    "src": "made"
   }
  ],
@@ -71033,6 +71657,22 @@
    "en": "This is for you all.",
    "ko": "이건 너희 거야.",
    "blank": "vocês"
+  }
+ ],
+ "w|volante": [
+  {
+   "text": "Numa cena cômica, o Bruno finge dirigir um carro segurando um volante de papelão.",
+   "en": "In a comic scene, Bruno pretends to drive a car holding a cardboard steering wheel.",
+   "ko": "코믹한 장면에서 브루누는 판지로 만든 운전대를 잡고 운전하는 척해요.",
+   "blank": "volante",
+   "src": "made"
+  },
+  {
+   "text": "O motorista do carro de apoio segurava o volante com uma mão e acenava com a outra.",
+   "en": "The support car driver held the wheel with one hand and waved with the other.",
+   "ko": "지원 차량 운전자는 한 손으로 운전대를 잡고 다른 손으로 손을 흔들었어요.",
+   "blank": "volante",
+   "src": "made"
   }
  ],
  "w|volta": [
