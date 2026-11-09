@@ -363,6 +363,22 @@
    "blank": "あの"
   }
  ],
+ "w|アパート": [
+  {
+   "text": "悠斗は、狭いアパートに入らなくなった本を売りに来た。",
+   "en": "Yuto came to sell the books that no longer fit in his small apartment.",
+   "ko": "유토는 좁은 아파트에 안 들어가게 된 책을 팔러 왔어요.",
+   "blank": "アパート",
+   "src": "made"
+  },
+  {
+   "text": "兄が一人でアパートに引っ越すと聞いて、千尋は寂しくなった。",
+   "en": "When Chihiro heard her brother was moving into an apartment alone, she felt lonely.",
+   "ko": "오빠가 혼자 아파트로 이사한다는 말을 듣고 지히로는 쓸쓸해졌어요.",
+   "blank": "アパート",
+   "src": "made"
+  }
+ ],
  "w|アピール": [
   {
    "text": "直樹は会議で、新しい企画の強みを上手にアピールした。",
@@ -1181,6 +1197,22 @@
    "blank": "うち"
   }
  ],
+ "w|うどん": [
+  {
+   "text": "亮の家では、大みそかの夜に年越しうどんを食べる。",
+   "en": "At Ryo's house, they eat New Year's Eve udon on the last night of the year.",
+   "ko": "료네 집에서는 섣달그믐 밤에 해넘이 우동을 먹어요.",
+   "blank": "うどん",
+   "src": "made"
+  },
+  {
+   "text": "真由は、薬局の向かいの店でうどんを食べるのが好きだ。",
+   "en": "Mayu likes eating udon at the shop across from the pharmacy.",
+   "ko": "마유는 약국 맞은편 가게에서 우동 먹는 걸 좋아해요.",
+   "blank": "うどん",
+   "src": "made"
+  }
+ ],
  "w|うまい": [
   {
    "text": "これ、うまいね。",
@@ -1675,6 +1707,22 @@
    "blank": "おやすみ"
   }
  ],
+ "w|およそ": [
+  {
+   "text": "実家までは、車でおよそ三時間かかる。",
+   "en": "It takes roughly three hours by car to Ryo's parents' house.",
+   "ko": "본가까지는 차로 대략 세 시간 걸려요.",
+   "blank": "およそ",
+   "src": "made"
+  },
+  {
+   "text": "この薬局には、一日におよそ百人のお客さんが来る。",
+   "en": "About a hundred customers come to this pharmacy a day.",
+   "ko": "이 약국에는 하루에 대략 백 명의 손님이 와요.",
+   "blank": "およそ",
+   "src": "made"
+  }
+ ],
  "w|オリジナル": [
   {
    "text": "オリジナルだよ。",
@@ -1715,6 +1763,22 @@
    "en": "I'm in my room.",
    "ko": "방에 있어.",
    "blank": "おる"
+  }
+ ],
+ "w|オレンジ": [
+  {
+   "text": "悠斗は、オレンジ色の古いランプに一目で引かれた。",
+   "en": "Yuto was drawn at first sight to an old orange lamp.",
+   "ko": "유토는 주황색 오래된 램프에 첫눈에 끌렸어요.",
+   "blank": "オレンジ",
+   "src": "made"
+  },
+  {
+   "text": "千尋のオレンジジュースを、弟が黙って飲んでしまった。",
+   "en": "Her younger brother drank Chihiro's orange juice without asking.",
+   "ko": "지히로의 오렌지 주스를 남동생이 말없이 마셔 버렸어요.",
+   "blank": "オレンジ",
+   "src": "made"
   }
  ],
  "w|オンライン": [
@@ -2773,6 +2837,22 @@
    "en": "This case is unusual.",
    "ko": "이 케이스 특이하다.",
    "blank": "ケース"
+  }
+ ],
+ "w|ケーブル": [
+  {
+   "text": "古いゲーム機には、ケーブルが全部そろっていた。",
+   "en": "The old game console came with all its cables.",
+   "ko": "오래된 게임기에는 케이블이 전부 갖춰져 있었어요.",
+   "blank": "ケーブル",
+   "src": "made"
+  },
+  {
+   "text": "充電のケーブルを勝手に使ったと、兄と弟がけんかしていた。",
+   "en": "The brothers were fighting over one using the charging cable without asking.",
+   "ko": "충전 케이블을 마음대로 썼다고 형과 남동생이 싸우고 있었어요.",
+   "blank": "ケーブル",
+   "src": "made"
   }
  ],
  "w|ゲーム": [
@@ -4049,6 +4129,22 @@
    "blank": "シャツ"
   }
  ],
+ "w|シャワー": [
+  {
+   "text": "悠斗が出品した中には、ほとんど使っていないシャワーの部品もあった。",
+   "en": "Among the things Yuto put up for sale were some shower parts he had hardly used.",
+   "ko": "유토가 내놓은 물건 중에는 거의 안 쓴 샤워 부품도 있었어요.",
+   "blank": "シャワー",
+   "src": "made"
+  },
+  {
+   "text": "兄がシャワーを長く使ったせいで、千尋はお湯が出なかった。",
+   "en": "Because her brother used the shower for so long, Chihiro got no hot water.",
+   "ko": "오빠가 샤워를 오래 해서 지히로는 뜨거운 물이 안 나왔어요.",
+   "blank": "シャワー",
+   "src": "made"
+  }
+ ],
  "w|ジャンプ": [
   {
    "text": "高くジャンプできた。",
@@ -4165,6 +4261,22 @@
    "src": "made"
   }
  ],
+ "w|ショッピング": [
+  {
+   "text": "悠斗は、デパートでのショッピングより掘り出し物探しのほうが好きだ。",
+   "en": "Yuto prefers hunting for bargains to shopping at department stores.",
+   "ko": "유토는 백화점 쇼핑보다 숨은 보물 찾기를 더 좋아해요.",
+   "blank": "ショッピング",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、姉とショッピングに行って仲直りした。",
+   "en": "Chihiro made up with her older sister by going shopping together.",
+   "ko": "지히로는 언니와 쇼핑하러 가서 화해했어요.",
+   "blank": "ショッピング",
+   "src": "made"
+  }
+ ],
  "w|ショップ": [
   {
    "text": "近くのショップに行こう。",
@@ -4251,6 +4363,38 @@
    "en": "I bought it at the supermarket.",
    "ko": "슈퍼에서 샀어.",
    "blank": "スーパー"
+  }
+ ],
+ "w|スイッチ": [
+  {
+   "text": "悠斗は、フリーマーケットで電源のスイッチが壊れたラジオを安く買った。",
+   "en": "At the flea market, Yuto bought a radio with a broken power switch for cheap.",
+   "ko": "유토는 벼룩시장에서 전원 스위치가 고장 난 라디오를 싸게 샀어요.",
+   "blank": "スイッチ",
+   "src": "made"
+  },
+  {
+   "text": "千尋が部屋の電気のスイッチを入れると、弟が怒った顔で立っていた。",
+   "en": "When Chihiro switched on the room light, her younger brother was standing there with an angry face.",
+   "ko": "지히로가 방 불 스위치를 켜자 남동생이 화난 얼굴로 서 있었어요.",
+   "blank": "スイッチ",
+   "src": "made"
+  }
+ ],
+ "w|スカート": [
+  {
+   "text": "隣のお店の女性は、手作りのスカートを並べていた。",
+   "en": "The woman at the next stall had homemade skirts on display.",
+   "ko": "옆 가게 여자는 직접 만든 치마를 늘어놓고 있었어요.",
+   "blank": "スカート",
+   "src": "made"
+  },
+  {
+   "text": "姉は、千尋のスカートを借りたことを忘れていた。",
+   "en": "Her older sister had forgotten that she borrowed Chihiro's skirt.",
+   "ko": "언니는 지히로의 치마를 빌린 걸 잊고 있었어요.",
+   "blank": "スカート",
+   "src": "made"
   }
  ],
  "w|スキル": [
@@ -5761,6 +5905,22 @@
    "blank": "チケット"
   }
  ],
+ "w|チップ": [
+  {
+   "text": "悠斗は、ホテルのバーで働いていた人からチップの習慣について聞いた。",
+   "en": "Yuto heard about tipping customs from someone who had worked at a hotel bar.",
+   "ko": "유토는 호텔 바에서 일했던 사람에게서 팁 문화에 대해 들었어요.",
+   "blank": "チップ",
+   "src": "made"
+  },
+  {
+   "text": "兄は、レストランでもらったチップを千尋に自慢した。",
+   "en": "Her brother bragged to Chihiro about the tip he got at the restaurant.",
+   "ko": "오빠는 레스토랑에서 받은 팁을 지히로에게 자랑했어요.",
+   "blank": "チップ",
+   "src": "made"
+  }
+ ],
  "w|チャット": [
   {
    "text": "詐欺グループは、アプリのチャットで連絡を取り合っていたらしい。",
@@ -5845,6 +6005,22 @@
    "en": "I just arrived.",
    "ko": "마침 도착했어.",
    "blank": "ちょうど"
+  }
+ ],
+ "w|チョコ": [
+  {
+   "text": "悠斗は、売り場の子どもにチョコを一つあげた。",
+   "en": "Yuto gave a piece of chocolate to a child at his stall.",
+   "ko": "유토는 가게에 온 아이에게 초콜릿을 하나 줬어요.",
+   "blank": "チョコ",
+   "src": "made"
+  },
+  {
+   "text": "冷蔵庫のチョコがなくなって、千尋は弟を疑った。",
+   "en": "The chocolate in the fridge disappeared, and Chihiro suspected her brother.",
+   "ko": "냉장고에 있던 초콜릿이 없어져서 지히로는 남동생을 의심했어요.",
+   "blank": "チョコ",
+   "src": "made"
   }
  ],
  "w|ちょっと": [
@@ -6017,6 +6193,22 @@
    "en": "Let's go on a date sometime.",
    "ko": "다음에 데이트하자.",
    "blank": "デート"
+  }
+ ],
+ "w|テープ": [
+  {
+   "text": "悠斗は、売り物の段ボールをテープでしっかり留めた。",
+   "en": "Yuto firmly sealed the cardboard boxes of goods with tape.",
+   "ko": "유토는 팔 물건이 든 상자를 테이프로 단단히 붙였어요.",
+   "blank": "テープ",
+   "src": "made"
+  },
+  {
+   "text": "弟は、大事なテープがなくなったと千尋を疑った。",
+   "en": "Her brother suspected Chihiro of taking his precious tape.",
+   "ko": "남동생은 소중한 테이프가 없어졌다며 지히로를 의심했어요.",
+   "blank": "テープ",
+   "src": "made"
   }
  ],
  "w|テーブル": [
@@ -7479,6 +7671,22 @@
    "src": "made"
   }
  ],
+ "w|バッテリー": [
+  {
+   "text": "悠斗のスマホのバッテリーが切れて、電子マネーが使えなくなった。",
+   "en": "Yuto's phone battery died, so he couldn't use electronic payment.",
+   "ko": "유토의 스마트폰 배터리가 나가서 전자 결제를 쓸 수 없게 됐어요.",
+   "blank": "バッテリー",
+   "src": "made"
+  },
+  {
+   "text": "兄のゲーム機のバッテリーが切れたのは、千尋のせいではなかった。",
+   "en": "It wasn't Chihiro's fault that her brother's game console battery ran out.",
+   "ko": "오빠 게임기 배터리가 나간 건 지히로 탓이 아니었어요.",
+   "blank": "バッテリー",
+   "src": "made"
+  }
+ ],
  "w|ハッピー": [
   {
    "text": "健太は「結婚おめでとう。ハッピーな毎日を」と手紙の最後に書いた。",
@@ -8329,6 +8537,22 @@
    "blank": "ベース"
   }
  ],
+ "w|ペース": [
+  {
+   "text": "亮は、自分のペースで少しずつ大掃除を進めた。",
+   "en": "Ryo worked through the big cleaning little by little at his own pace.",
+   "ko": "료는 자기 페이스대로 조금씩 대청소를 해 나갔어요.",
+   "blank": "ペース",
+   "src": "made"
+  },
+  {
+   "text": "このお客さんは、いつも同じペースで薬を取りに来る。",
+   "en": "This customer always comes to pick up medicine at the same pace.",
+   "ko": "이 손님은 늘 같은 간격으로 약을 받으러 와요.",
+   "blank": "ペース",
+   "src": "made"
+  }
+ ],
  "w|へえ": [
   {
    "text": "「へえ、この庁舎は昔、学校だったんですか」と見学者が驚いた。",
@@ -8387,6 +8611,38 @@
    "blank": "ペット"
   }
  ],
+ "w|ベル": [
+  {
+   "text": "大掃除の途中で玄関のベルが鳴り、亮は手袋のまま出た。",
+   "en": "The doorbell rang in the middle of the big year-end cleaning, and Ryo answered it still wearing gloves.",
+   "ko": "대청소 도중에 현관 벨이 울려서 료는 장갑을 낀 채 나갔어요.",
+   "blank": "ベル",
+   "src": "made"
+  },
+  {
+   "text": "薬局の入口のベルが鳴って、真由は顔を上げた。",
+   "en": "The bell at the pharmacy entrance rang, and Mayu looked up.",
+   "ko": "약국 입구 벨이 울려서 마유는 고개를 들었어요.",
+   "blank": "ベル",
+   "src": "made"
+  }
+ ],
+ "w|ベルト": [
+  {
+   "text": "悠斗は、革のベルトを五百円で手に入れた。",
+   "en": "Yuto got a leather belt for five hundred yen.",
+   "ko": "유토는 가죽 벨트를 오백 엔에 손에 넣었어요.",
+   "blank": "ベルト",
+   "src": "made"
+  },
+  {
+   "text": "弟が千尋のベルトを借りたまま、学校に行ってしまった。",
+   "en": "Her brother went off to school still wearing the belt he had borrowed from Chihiro.",
+   "ko": "남동생이 지히로의 벨트를 빌린 채 학교에 가 버렸어요.",
+   "blank": "ベルト",
+   "src": "made"
+  }
+ ],
  "w|ペン": [
   {
    "text": "大輔は冷蔵庫に貼ったメモに、赤いペンで日付を書いた。",
@@ -8400,6 +8656,22 @@
    "en": "Sakura dropped her pen and looked under the seat in front.",
    "ko": "사쿠라는 펜을 떨어뜨려서 앞 좌석 밑을 찾았어요.",
    "blank": "ペン",
+   "src": "made"
+  }
+ ],
+ "w|ボード": [
+  {
+   "text": "悠斗は、値段を書いた小さなボードを机の前に立てた。",
+   "en": "Yuto set up a small board with the prices written on it in front of his table.",
+   "ko": "유토는 가격을 적은 작은 보드를 탁자 앞에 세웠어요.",
+   "blank": "ボード",
+   "src": "made"
+  },
+  {
+   "text": "冷蔵庫の横のボードには、家族の予定が書いてある。",
+   "en": "The family's schedule is written on the board next to the fridge.",
+   "ko": "냉장고 옆 보드에는 가족 일정이 적혀 있어요.",
+   "blank": "ボード",
    "src": "made"
   }
  ],
@@ -8515,6 +8787,22 @@
    "en": "The boss is angry.",
    "ko": "보스가 화나 있어.",
    "blank": "ボス"
+  }
+ ],
+ "w|ポスター": [
+  {
+   "text": "古い映画のポスターを見つけて、悠斗は思わず手に取った。",
+   "en": "Yuto found an old movie poster and picked it up without thinking.",
+   "ko": "오래된 영화 포스터를 발견하고 유토는 저도 모르게 집어 들었어요.",
+   "blank": "ポスター",
+   "src": "made"
+  },
+  {
+   "text": "千尋の部屋の壁に貼ったポスターが、いつの間にかはがれていた。",
+   "en": "The poster on Chihiro's bedroom wall had come off without her noticing.",
+   "ko": "지히로 방 벽에 붙인 포스터가 어느새 떨어져 있었어요.",
+   "blank": "ポスター",
+   "src": "made"
   }
  ],
  "w|ポスト": [
@@ -10123,6 +10411,22 @@
    "blank": "リアル"
   }
  ],
+ "w|リアルタイム": [
+  {
+   "text": "亮は、年越しのカウントダウンをリアルタイムで配信で見た。",
+   "en": "Ryo watched the New Year's countdown live on a stream.",
+   "ko": "료는 새해 카운트다운을 실시간 방송으로 봤어요.",
+   "blank": "リアルタイム",
+   "src": "made"
+  },
+  {
+   "text": "薬の在庫は、本部のシステムでリアルタイムに分かる。",
+   "en": "The medicine inventory can be seen in real time on the head office system.",
+   "ko": "약 재고는 본부 시스템에서 실시간으로 알 수 있어요.",
+   "blank": "リアルタイム",
+   "src": "made"
+  }
+ ],
  "w|リスク": [
   {
    "text": "リスクを考えて。",
@@ -10334,6 +10638,22 @@
    "en": "On the train home, Sakura finished writing her business trip report.",
    "ko": "사쿠라는 돌아오는 열차에서 출장 보고서를 다 썼어요.",
    "blank": "レポート",
+   "src": "made"
+  }
+ ],
+ "w|レンタル": [
+  {
+   "text": "机とテントは、主催者からレンタルした。",
+   "en": "Yuto rented the table and tent from the organizers.",
+   "ko": "탁자와 천막은 주최 측에서 빌렸어요.",
+   "blank": "レンタル",
+   "src": "made"
+  },
+  {
+   "text": "週末、兄弟でレンタルした映画を見て笑い合った。",
+   "en": "On the weekend, the siblings watched a rented movie and laughed together.",
+   "ko": "주말에 형제들끼리 빌린 영화를 보며 같이 웃었어요.",
+   "blank": "レンタル",
    "src": "made"
   }
  ],
@@ -11083,6 +11403,22 @@
    "blank": "不便"
   }
  ],
+ "w|不動産": [
+  {
+   "text": "会場の入口には、地元の不動産会社のテントもあった。",
+   "en": "There was also a tent from a local real estate company at the venue entrance.",
+   "ko": "행사장 입구에는 지역 부동산 회사 천막도 있었어요.",
+   "blank": "不動産",
+   "src": "made"
+  },
+  {
+   "text": "千尋の兄は、不動産の会社で働き始めたばかりだ。",
+   "en": "Chihiro's older brother just started working at a real estate company.",
+   "ko": "지히로의 오빠는 부동산 회사에서 막 일하기 시작했어요.",
+   "blank": "不動産",
+   "src": "made"
+  }
+ ],
  "w|不可": [
   {
    "text": "この便では、液体の持ち込みは不可となっている。",
@@ -11477,6 +11813,22 @@
    "blank": "中"
   }
  ],
+ "w|中世": [
+  {
+   "text": "亮が読んでいる本によると、中世の人も新年を祝っていたらしい。",
+   "en": "According to the book Ryo is reading, people in the Middle Ages also celebrated the new year.",
+   "ko": "료가 읽고 있는 책에 따르면 중세 사람들도 새해를 축하했대요.",
+   "blank": "中世",
+   "src": "made"
+  },
+  {
+   "text": "真由は、中世の薬草について書かれた本を読んでいる。",
+   "en": "Mayu is reading a book about medicinal herbs in the Middle Ages.",
+   "ko": "마유는 중세의 약초에 관해 쓴 책을 읽고 있어요.",
+   "blank": "中世",
+   "src": "made"
+  }
+ ],
  "w|中古": [
   {
    "text": "あのカーディーラーはこの中古のトヨタが調子がいいなどと、まんまと一杯くわせやがった。",
@@ -11843,6 +12195,22 @@
    "ko": "가죽은 마르면서 단단해졌어요.",
    "blank": "乾く",
    "src": "tatoeba:85875 en:317837"
+  }
+ ],
+ "w|亀": [
+  {
+   "text": "隣のお店では、陶器の亀の置物が人気だった。",
+   "en": "At the next stall, ceramic turtle figurines were popular.",
+   "ko": "옆 가게에서는 도자기 거북이 장식품이 인기였어요.",
+   "blank": "亀",
+   "src": "made"
+  },
+  {
+   "text": "千尋の家では、亀を十年以上飼っている。",
+   "en": "Chihiro's family has kept a turtle for over ten years.",
+   "ko": "지히로네 집에서는 거북이를 십 년 넘게 키우고 있어요.",
+   "blank": "亀",
+   "src": "made"
   }
  ],
  "w|了解": [
@@ -12635,6 +13003,22 @@
    "blank": "今晩"
   }
  ],
+ "w|今更": [
+  {
+   "text": "大みそかになって、亮は今更年賀状を書き始めた。",
+   "en": "It was already New Year's Eve when Ryo finally started writing his New Year's cards.",
+   "ko": "섣달그믐이 돼서야 료는 이제 와서 연하장을 쓰기 시작했어요.",
+   "blank": "今更",
+   "src": "made"
+  },
+  {
+   "text": "今更ですが、この薬は食前と食後のどちらですか。",
+   "en": "Sorry to ask this so late, but is this medicine taken before or after meals?",
+   "ko": "이제 와서 묻는 건데, 이 약은 식전인가요 식후인가요?",
+   "blank": "今更",
+   "src": "made"
+  }
+ ],
  "w|今月": [
   {
    "text": "今月に入って、朝晩の空気が急に冷たくなった。",
@@ -12648,6 +13032,22 @@
    "en": "The race will be held at the end of this month.",
    "ko": "대회는 이번 달 말에 열려요.",
    "blank": "今月",
+   "src": "made"
+  }
+ ],
+ "w|今朝": [
+  {
+   "text": "亮は今朝早く起きて、門に松飾りを付けた。",
+   "en": "Ryo got up early this morning and put the pine decoration on the gate.",
+   "ko": "료는 오늘 아침 일찍 일어나서 대문에 소나무 장식을 달았어요.",
+   "blank": "今朝",
+   "src": "made"
+  },
+  {
+   "text": "今朝から喉が痛いというお客さんが、真由に相談した。",
+   "en": "A customer who said her throat had hurt since this morning asked Mayu for advice.",
+   "ko": "오늘 아침부터 목이 아프다는 손님이 마유에게 상담했어요.",
+   "blank": "今朝",
    "src": "made"
   }
  ],
@@ -15319,6 +15719,22 @@
    "src": "made"
   }
  ],
+ "w|入荷": [
+  {
+   "text": "次のフリーマーケットには、古着の入荷が増えるらしい。",
+   "en": "At the next flea market, more secondhand clothes are apparently coming in.",
+   "ko": "다음 벼룩시장에는 헌 옷 입고가 늘어난대요.",
+   "blank": "入荷",
+   "src": "made"
+  },
+  {
+   "text": "兄の店では、新しいゲームの入荷を待つ客が並んでいた。",
+   "en": "At her brother's shop, customers were lined up waiting for a new game to come in.",
+   "ko": "오빠 가게에서는 새 게임 입고를 기다리는 손님들이 줄 서 있었어요.",
+   "blank": "入荷",
+   "src": "made"
+  }
+ ],
  "w|入院": [
   {
    "text": "トレーナーは、昔けがで入院したことがあると翔太に話した。",
@@ -16629,6 +17045,22 @@
    "blank": "初めて"
   }
  ],
+ "w|初代": [
+  {
+   "text": "近所の神社の初代の神主は、亮の祖先だという。",
+   "en": "The first priest of the neighborhood shrine is said to have been Ryo's ancestor.",
+   "ko": "동네 신사의 초대 신관은 료의 조상이래요.",
+   "blank": "初代",
+   "src": "made"
+  },
+  {
+   "text": "この薬局の初代の店長は、真由の大学の先輩だった。",
+   "en": "The first manager of this pharmacy was Mayu's senior from university.",
+   "ko": "이 약국의 초대 점장은 마유의 대학 선배였어요.",
+   "blank": "初代",
+   "src": "made"
+  }
+ ],
  "w|初回": [
   {
    "text": "初回は無料だよ。",
@@ -17037,6 +17469,22 @@
    "ko": "유리컵에 뜨거운 물을 넣지 마세요. 깨질 수 있어요.",
    "blank": "割れる",
    "src": "tatoeba:10175907/small_snow en:10172690/AlanF_US"
+  }
+ ],
+ "w|割合": [
+  {
+   "text": "亮の家のおせちは、手作りと買ったものの割合が半々だ。",
+   "en": "The New Year's food at Ryo's house is half homemade and half store-bought.",
+   "ko": "료네 집 오세치는 직접 만든 것과 산 것의 비율이 반반이에요.",
+   "blank": "割合",
+   "src": "made"
+  },
+  {
+   "text": "冬は、風邪薬を買う人の割合がぐっと増える。",
+   "en": "In winter, the proportion of people buying cold medicine rises sharply.",
+   "ko": "겨울에는 감기약을 사는 사람의 비율이 확 늘어요.",
+   "blank": "割合",
+   "src": "made"
   }
  ],
  "w|割引": [
@@ -17833,6 +18281,22 @@
    "ko": "반년 뒤에 은행 대출을 받고 싶은데 지금부터 뭘 준비하면 될까요?",
    "blank": "半年",
    "src": "tatoeba:403779/blay_paul en:403780/blay_paul"
+  }
+ ],
+ "w|半端": [
+  {
+   "text": "半端な時間が空いたので、亮は近所を散歩した。",
+   "en": "Ryo had an awkward bit of free time, so he took a walk around the neighborhood.",
+   "ko": "애매한 시간이 비어서 료는 동네를 산책했어요.",
+   "blank": "半端",
+   "src": "made"
+  },
+  {
+   "text": "薬を半端に残すと、また症状が戻ることがある。",
+   "en": "If you leave the medicine half-finished, the symptoms can come back.",
+   "ko": "약을 어중간하게 남기면 증상이 다시 돌아올 수 있어요.",
+   "blank": "半端",
+   "src": "made"
   }
  ],
  "w|卒業": [
@@ -18763,6 +19227,22 @@
    "blank": "口"
   }
  ],
+ "w|口座": [
+  {
+   "text": "売上は、帰りに銀行の口座に入れておいた。",
+   "en": "Yuto deposited the proceeds into his bank account on the way home.",
+   "ko": "매출은 돌아가는 길에 은행 계좌에 넣어 뒀어요.",
+   "blank": "口座",
+   "src": "made"
+  },
+  {
+   "text": "兄は、千尋のお年玉を勝手に自分の口座に入れていたわけではなかった。",
+   "en": "It turned out her brother hadn't secretly put Chihiro's New Year's money into his own account.",
+   "ko": "오빠가 지히로의 세뱃돈을 몰래 자기 계좌에 넣은 건 아니었어요.",
+   "blank": "口座",
+   "src": "made"
+  }
+ ],
  "w|古い": [
   {
    "text": "古い写真だね。",
@@ -18849,6 +19329,22 @@
    "en": "On typhoon days I stay in.",
    "ko": "태풍 날에는 외출을 삼가.",
    "blank": "台風"
+  }
+ ],
+ "w|史上": [
+  {
+   "text": "今年の年末は、史上いちばん寒いと言われている。",
+   "en": "This year's year-end is said to be the coldest ever recorded.",
+   "ko": "올해 연말은 역대 가장 춥다고 해요.",
+   "blank": "史上",
+   "src": "made"
+  },
+  {
+   "text": "今年のインフルエンザは、史上最も早く流行し始めたという。",
+   "en": "This year's flu reportedly started spreading earlier than ever before.",
+   "ko": "올해 독감은 역대 가장 빨리 유행하기 시작했대요.",
+   "blank": "史上",
+   "src": "made"
   }
  ],
  "w|右": [
@@ -19603,6 +20099,22 @@
    "blank": "命令"
   }
  ],
+ "w|咲く": [
+  {
+   "text": "会場の庭の隅には、小さな白い花がたくさん咲いていた。",
+   "en": "Many small white flowers were blooming in the corner of the venue's garden.",
+   "ko": "행사장 마당 구석에는 작고 하얀 꽃이 많이 피어 있었어요.",
+   "blank": "咲いて",
+   "src": "made"
+  },
+  {
+   "text": "千尋が大切に育てた花が、やっと咲いた。",
+   "en": "The flowers Chihiro had carefully grown finally bloomed.",
+   "ko": "지히로가 소중히 키운 꽃이 드디어 피었어요.",
+   "blank": "咲いた",
+   "src": "made"
+  }
+ ],
  "w|哲学": [
   {
    "text": "社長はよく「仕事には自分の哲学が必要だ」と言う。",
@@ -19645,6 +20157,22 @@
    "en": "Did your order arrive?",
    "ko": "상품 도착했어?",
    "blank": "商品"
+  }
+ ],
+ "w|商店": [
+  {
+   "text": "会場の周りには、昔ながらの商店が並んでいる。",
+   "en": "Old-fashioned shops line the area around the venue.",
+   "ko": "행사장 주변에는 옛날식 상점들이 늘어서 있어요.",
+   "blank": "商店",
+   "src": "made"
+  },
+  {
+   "text": "祖父は昔、駅の近くで小さな商店を営んでいた。",
+   "en": "Their grandfather used to run a small shop near the station.",
+   "ko": "할아버지는 옛날에 역 근처에서 작은 상점을 하셨어요.",
+   "blank": "商店",
+   "src": "made"
   }
  ],
  "w|商業": [
@@ -20197,6 +20725,38 @@
    "blank": "土地"
   }
  ],
+ "w|土日": [
+  {
+   "text": "年末の土日は、どの店もすごく混んでいる。",
+   "en": "Every store is very crowded on the weekends at the end of the year.",
+   "ko": "연말 주말에는 어느 가게나 엄청 붐벼요.",
+   "blank": "土日",
+   "src": "made"
+  },
+  {
+   "text": "駅前の薬局は、土日も夜まで開いている。",
+   "en": "The pharmacy in front of the station is open until night on weekends too.",
+   "ko": "역 앞 약국은 주말에도 밤까지 열어요.",
+   "blank": "土日",
+   "src": "made"
+  }
+ ],
+ "w|土曜": [
+  {
+   "text": "亮は、土曜の午前中に家族でお墓参りに行った。",
+   "en": "Ryo went to visit the family grave on Saturday morning.",
+   "ko": "료는 토요일 오전에 가족과 성묘하러 갔어요.",
+   "blank": "土曜",
+   "src": "made"
+  },
+  {
+   "text": "真由は、毎週土曜の午後に休みをもらっている。",
+   "en": "Mayu gets every Saturday afternoon off.",
+   "ko": "마유는 매주 토요일 오후에 쉬어요.",
+   "blank": "土曜",
+   "src": "made"
+  }
+ ],
  "w|土曜日": [
   {
    "text": "亮は土曜日に、庭の落ち葉をまとめて掃いた。",
@@ -20240,6 +20800,22 @@
    "en": "Late in the game, Yumi withstood the opponent's intense pressure and kept the ball.",
    "ko": "경기 막판에 유미는 상대의 거센 압박을 견디며 공을 지켰어요.",
    "blank": "圧力",
+   "src": "made"
+  }
+ ],
+ "w|在庫": [
+  {
+   "text": "悠斗は、家に残った在庫を次回また売るつもりだ。",
+   "en": "Yuto plans to sell the leftover stock at home again next time.",
+   "ko": "유토는 집에 남은 재고를 다음에 또 팔 생각이에요.",
+   "blank": "在庫",
+   "src": "made"
+  },
+  {
+   "text": "兄によると、人気のおもちゃはもう在庫がないそうだ。",
+   "en": "According to her brother, the popular toy is already out of stock.",
+   "ko": "오빠 말로는 인기 장난감은 벌써 재고가 없대요.",
+   "blank": "在庫",
    "src": "made"
   }
  ],
@@ -20881,6 +21457,38 @@
    "en": "It's a product that sells surprisingly well.",
    "ko": "의외로 잘 팔리는 상품이야.",
    "blank": "売れる"
+  }
+ ],
+ "w|売上": [
+  {
+   "text": "悠斗のお店の売上は、思ったよりよかった。",
+   "en": "Sales at Yuto's stall were better than he expected.",
+   "ko": "유토 가게의 매출은 생각보다 좋았어요.",
+   "blank": "売上",
+   "src": "made"
+  },
+  {
+   "text": "兄の店は、今月の売上が過去最高だったらしい。",
+   "en": "Her brother's shop apparently had its best monthly sales ever this month.",
+   "ko": "오빠 가게는 이번 달 매출이 역대 최고였대요.",
+   "blank": "売上",
+   "src": "made"
+  }
+ ],
+ "w|売却": [
+  {
+   "text": "悠斗は、家の古い車の売却も考えている。",
+   "en": "Yuto is also thinking about selling his family's old car.",
+   "ko": "유토는 집의 오래된 차를 매각하는 것도 생각하고 있어요.",
+   "blank": "売却",
+   "src": "made"
+  },
+  {
+   "text": "両親が家の売却を決めたと、千尋は兄から聞いた。",
+   "en": "Chihiro heard from her brother that their parents had decided to sell the house.",
+   "ko": "부모님이 집을 매각하기로 했다고 지히로는 오빠한테 들었어요.",
+   "blank": "売却",
+   "src": "made"
   }
  ],
  "w|変": [
@@ -22977,6 +23585,22 @@
    "src": "made"
   }
  ],
+ "w|実在": [
+  {
+   "text": "亮が読んでいる歴史小説には、実在の人物がたくさん出てくる。",
+   "en": "Many real historical figures appear in the historical novel Ryo is reading.",
+   "ko": "료가 읽는 역사 소설에는 실존 인물이 많이 나와요.",
+   "blank": "実在",
+   "src": "made"
+  },
+  {
+   "text": "そのドラマの薬剤師は、実在のモデルがいるらしい。",
+   "en": "The pharmacist in that drama apparently has a real-life model.",
+   "ko": "그 드라마 속 약사는 실존 모델이 있대요.",
+   "blank": "実在",
+   "src": "made"
+  }
+ ],
  "w|実家": [
   {
    "text": "夏休みは実家に帰るよ。",
@@ -23282,6 +23906,22 @@
    "en": "Recovering data from a phone dropped in water is no easy task.",
    "ko": "물에 빠진 휴대폰의 데이터를 꺼내는 건 쉬운 일이 아니에요.",
    "blank": "容易",
+   "src": "made"
+  }
+ ],
+ "w|容量": [
+  {
+   "text": "スマホの容量がいっぱいで、亮は古い写真を整理した。",
+   "en": "Ryo's phone storage was full, so he cleaned out his old photos.",
+   "ko": "스마트폰 용량이 꽉 차서 료는 오래된 사진을 정리했어요.",
+   "blank": "容量",
+   "src": "made"
+  },
+  {
+   "text": "この目薬は、容量が多いほうが一回分の値段が安い。",
+   "en": "With these eye drops, the larger size is cheaper per use.",
+   "ko": "이 안약은 용량이 많은 쪽이 한 번당 값이 싸요.",
+   "blank": "容量",
    "src": "made"
   }
  ],
@@ -24417,6 +25057,22 @@
    "src": "made"
   }
  ],
+ "w|帽子": [
+  {
+   "text": "日差しが強いので、悠斗は麦わら帽子をかぶっていた。",
+   "en": "The sun was strong, so Yuto was wearing a straw hat.",
+   "ko": "햇볕이 강해서 유토는 밀짚모자를 쓰고 있었어요.",
+   "blank": "帽子",
+   "src": "made"
+  },
+  {
+   "text": "千尋の帽子をかぶって出かけたのは、実は姉だった。",
+   "en": "It was actually her older sister who had gone out wearing Chihiro's hat.",
+   "ko": "지히로의 모자를 쓰고 나간 건 사실 언니였어요.",
+   "blank": "帽子",
+   "src": "made"
+  }
+ ],
  "w|幅": [
   {
    "text": "道の幅が狭い。",
@@ -24558,6 +25214,22 @@
    "en": "An elderly couple living on their pension were slowly choosing vegetables.",
    "ko": "연금으로 사는 노부부가 천천히 채소를 고르고 있었어요.",
    "blank": "年金",
+   "src": "made"
+  }
+ ],
+ "w|年間": [
+  {
+   "text": "この神社には、年間で百万人以上が初詣に来るという。",
+   "en": "It is said that more than a million people come to this shrine each year for the first visit of the new year.",
+   "ko": "이 신사에는 일 년 동안 백만 명 넘게 새해 첫 참배를 하러 온대요.",
+   "blank": "年間",
+   "src": "made"
+  },
+  {
+   "text": "真由は、年間を通して花粉症の相談を受けている。",
+   "en": "Mayu gets asked about hay fever throughout the year.",
+   "ko": "마유는 일 년 내내 꽃가루 알레르기 상담을 받아요.",
+   "blank": "年間",
    "src": "made"
   }
  ],
@@ -24823,6 +25495,22 @@
    "en": "I'll sit in the front seat.",
    "ko": "앞자리에 앉을게.",
    "blank": "座る"
+  }
+ ],
+ "w|庭": [
+  {
+   "text": "このフリーマーケットは、古いお寺の広い庭で開かれる。",
+   "en": "This flea market is held in the large garden of an old temple.",
+   "ko": "이 벼룩시장은 오래된 절의 넓은 마당에서 열려요.",
+   "blank": "庭",
+   "src": "made"
+  },
+  {
+   "text": "兄と弟は、庭で口もきかずに別々に座っていた。",
+   "en": "The two brothers sat apart in the yard without speaking to each other.",
+   "ko": "형과 남동생은 마당에서 말도 안 하고 따로 앉아 있었어요.",
+   "blank": "庭",
+   "src": "made"
   }
  ],
  "w|廃棄": [
@@ -25804,6 +26492,22 @@
    "en": "Aoi is strict about washing her hands every day.",
    "ko": "아오이는 매일 손 씻기를 철저히 하고 있어요.",
    "blank": "徹底",
+   "src": "made"
+  }
+ ],
+ "w|徹底的": [
+  {
+   "text": "亮の母は、台所を徹底的に掃除しないと気が済まない。",
+   "en": "Ryo's mother isn't satisfied unless she cleans the kitchen thoroughly.",
+   "ko": "료의 어머니는 부엌을 철저하게 청소하지 않으면 직성이 안 풀려요.",
+   "blank": "徹底的",
+   "src": "made"
+  },
+  {
+   "text": "真由は、薬の飲み合わせを徹底的に確認する。",
+   "en": "Mayu thoroughly checks how medicines interact with each other.",
+   "ko": "마유는 약끼리의 궁합을 철저하게 확인해요.",
+   "blank": "徹底的",
    "src": "made"
   }
  ],
@@ -28113,6 +28817,22 @@
    "blank": "指示"
   }
  ],
+ "w|指輪": [
+  {
+   "text": "悠斗の隣で、若い女性が古い指輪をじっと見ていた。",
+   "en": "Next to Yuto, a young woman was staring at an old ring.",
+   "ko": "유토 옆에서 젊은 여자가 오래된 반지를 가만히 보고 있었어요.",
+   "blank": "指輪",
+   "src": "made"
+  },
+  {
+   "text": "母の指輪がなくなって、千尋と弟はお互いを疑った。",
+   "en": "Their mother's ring went missing, and Chihiro and her brother suspected each other.",
+   "ko": "엄마 반지가 없어져서 지히로와 남동생은 서로를 의심했어요.",
+   "blank": "指輪",
+   "src": "made"
+  }
+ ],
  "w|挑戦": [
   {
    "text": "新しい挑戦だね。",
@@ -28869,6 +29589,22 @@
    "en": "I tried reading the amendment bill.",
    "ko": "개정안을 읽어 봤어.",
    "blank": "改正"
+  }
+ ],
+ "w|改良": [
+  {
+   "text": "亮が買った新しい掃除機は、吸う力が改良されている。",
+   "en": "The new vacuum cleaner Ryo bought has improved suction.",
+   "ko": "료가 산 새 청소기는 흡입력이 개량되어 있어요.",
+   "blank": "改良",
+   "src": "made"
+  },
+  {
+   "text": "この塗り薬は、においが少なくなるように改良された。",
+   "en": "This ointment was improved so that it smells less.",
+   "ko": "이 연고는 냄새가 덜 나도록 개량됐어요.",
+   "blank": "改良",
+   "src": "made"
   }
  ],
  "w|改造": [
@@ -29877,6 +30613,22 @@
    "blank": "日常"
   }
  ],
+ "w|日時": [
+  {
+   "text": "亮は、親戚の集まりの日時を家族のグループに送った。",
+   "en": "Ryo sent the date and time of the family gathering to the family group chat.",
+   "ko": "료는 친척 모임 날짜와 시간을 가족 단톡방에 보냈어요.",
+   "blank": "日時",
+   "src": "made"
+  },
+  {
+   "text": "予防接種の日時は、薬局のカウンターで予約できる。",
+   "en": "You can book the date and time for vaccinations at the pharmacy counter.",
+   "ko": "예방 접종 일시는 약국 카운터에서 예약할 수 있어요.",
+   "blank": "日時",
+   "src": "made"
+  }
+ ],
  "w|日曜": [
   {
    "text": "日曜の朝、亮は衣替えをして冬物をしまった。",
@@ -29935,6 +30687,22 @@
    "en": "Speak in Japanese.",
    "ko": "일본어로 말해.",
    "blank": "日本語"
+  }
+ ],
+ "w|日程": [
+  {
+   "text": "正月休みの日程を決めるために、亮は姉に電話した。",
+   "en": "Ryo called his sister to decide on the schedule for the New Year's holiday.",
+   "ko": "설 연휴 일정을 정하려고 료는 누나에게 전화했어요.",
+   "blank": "日程",
+   "src": "made"
+  },
+  {
+   "text": "新しい薬の研修の日程が、メールで届いた。",
+   "en": "The schedule for the training on the new medicine arrived by email.",
+   "ko": "새 약 연수 일정이 메일로 왔어요.",
+   "blank": "日程",
+   "src": "made"
   }
  ],
  "w|日記": [
@@ -30167,6 +30935,22 @@
    "blank": "春"
   }
  ],
+ "w|昨年": [
+  {
+   "text": "昨年は忙しくて、亮は年賀状を一枚も出せなかった。",
+   "en": "Ryo was so busy last year that he couldn't send a single New Year's card.",
+   "ko": "작년에는 바빠서 료는 연하장을 한 장도 못 보냈어요.",
+   "blank": "昨年",
+   "src": "made"
+  },
+  {
+   "text": "真由がこの薬局で働き始めたのは昨年の春だ。",
+   "en": "Mayu started working at this pharmacy in the spring of last year.",
+   "ko": "마유가 이 약국에서 일하기 시작한 건 작년 봄이에요.",
+   "blank": "昨年",
+   "src": "made"
+  }
+ ],
  "w|昨日": [
   {
    "text": "昨日電話したよ。",
@@ -30209,6 +30993,22 @@
    "blank": "昼ご飯"
   }
  ],
+ "w|昼間": [
+  {
+   "text": "昼間のうちに、亮は買い物をすべて済ませた。",
+   "en": "Ryo finished all the shopping during the daytime.",
+   "ko": "낮 동안에 료는 장보기를 모두 끝냈어요.",
+   "blank": "昼間",
+   "src": "made"
+  },
+  {
+   "text": "昼間は眠くなるので、この薬は夜に飲んでください。",
+   "en": "This medicine causes drowsiness during the day, so please take it at night.",
+   "ko": "낮에는 졸려지니까 이 약은 밤에 드세요.",
+   "blank": "昼間",
+   "src": "made"
+  }
+ ],
  "w|時": [
   {
    "text": "あの時は違った。",
@@ -30249,6 +31049,22 @@
    "en": "I like that era.",
    "ko": "그 시대가 좋아.",
    "blank": "時代"
+  }
+ ],
+ "w|時刻": [
+  {
+   "text": "亮は、初日の出の時刻をネットで調べた。",
+   "en": "Ryo looked up online what time the first sunrise of the year would be.",
+   "ko": "료는 새해 첫 해돋이 시각을 인터넷으로 찾아봤어요.",
+   "blank": "時刻",
+   "src": "made"
+  },
+  {
+   "text": "薬を飲む時刻を忘れないよう、真由はアラームを勧めた。",
+   "en": "Mayu suggested setting an alarm so as not to forget the time to take the medicine.",
+   "ko": "약 먹는 시각을 잊지 않도록 마유는 알람을 권했어요.",
+   "blank": "時刻",
+   "src": "made"
   }
  ],
  "w|時期": [
@@ -30661,6 +31477,22 @@
    "en": "Write it here.",
    "ko": "여기다 써.",
    "blank": "書いて"
+  }
+ ],
+ "w|書店": [
+  {
+   "text": "悠斗は、売れ残った本をあとで古い書店に持っていくことにした。",
+   "en": "Yuto decided to take the unsold books to a used bookstore later.",
+   "ko": "유토는 안 팔린 책을 나중에 헌책방에 가져가기로 했어요.",
+   "blank": "書店",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、兄に頼まれた本を駅前の書店で探した。",
+   "en": "Chihiro looked for the book her brother had asked for at the bookstore in front of the station.",
+   "ko": "지히로는 오빠가 부탁한 책을 역 앞 서점에서 찾았어요.",
+   "blank": "書店",
+   "src": "made"
   }
  ],
  "w|書籍": [
@@ -31407,6 +32239,22 @@
    "blank": "株"
   }
  ],
+ "w|株式": [
+  {
+   "text": "主催しているのは、地元の小さな株式会社だそうだ。",
+   "en": "The organizer is apparently a small local company.",
+   "ko": "주최하는 곳은 지역의 작은 주식회사래요.",
+   "blank": "株式",
+   "src": "made"
+  },
+  {
+   "text": "父は、株式の話になると兄と意見が合わない。",
+   "en": "Their father never agrees with her brother when the topic of stocks comes up.",
+   "ko": "아버지는 주식 이야기만 나오면 오빠와 의견이 안 맞아요.",
+   "blank": "株式",
+   "src": "made"
+  }
+ ],
  "w|株式会社": [
   {
    "text": "直樹の名刺には、株式会社の名前が大きく印刷されている。",
@@ -31558,6 +32406,22 @@
    "en": "I knocked down the nuts with a long pole.",
    "ko": "긴 막대기로 나무 열매를 떨어뜨렸어요.",
    "blank": "棒",
+   "src": "made"
+  }
+ ],
+ "w|椅子": [
+  {
+   "text": "亮は、窓を拭くために椅子の上に乗った。",
+   "en": "Ryo stood on a chair to wipe the windows.",
+   "ko": "료는 창문을 닦으려고 의자 위에 올라갔어요.",
+   "blank": "椅子",
+   "src": "made"
+  },
+  {
+   "text": "待合室の椅子が足りなくて、立って待つ人もいた。",
+   "en": "There weren't enough chairs in the waiting area, so some people waited standing.",
+   "ko": "대기실 의자가 모자라서 서서 기다리는 사람도 있었어요.",
+   "blank": "椅子",
    "src": "made"
   }
  ],
@@ -33179,6 +34043,22 @@
    "blank": "氷"
   }
  ],
+ "w|永久": [
+  {
+   "text": "亮は、祖母からもらった手紙を永久に大事にするつもりだ。",
+   "en": "Ryo intends to treasure the letter he got from his grandmother forever.",
+   "ko": "료는 할머니한테 받은 편지를 영원히 소중히 할 생각이에요.",
+   "blank": "永久",
+   "src": "made"
+  },
+  {
+   "text": "この病気の薬は、一度飲めば永久に効くわけではない。",
+   "en": "The medicine for this illness doesn't work forever after just one dose.",
+   "ko": "이 병의 약은 한 번 먹으면 영원히 듣는 건 아니에요.",
+   "blank": "永久",
+   "src": "made"
+  }
+ ],
  "w|永遠": [
   {
    "text": "永遠の友情を願う。",
@@ -33191,6 +34071,22 @@
    "en": "If only this moment lasted forever.",
    "ko": "이 순간이 영원하면 좋겠어.",
    "blank": "永遠"
+  }
+ ],
+ "w|汁": [
+  {
+   "text": "屋台のおじさんが、しぼったばかりのレモンの汁を炭酸水に入れてくれた。",
+   "en": "The man at the food stall put freshly squeezed lemon juice into sparkling water for Yuto.",
+   "ko": "포장마차 아저씨가 막 짠 레몬즙을 탄산수에 넣어 줬어요.",
+   "blank": "汁",
+   "src": "made"
+  },
+  {
+   "text": "弟がこぼしたトマトの汁が、千尋のノートについていた。",
+   "en": "Tomato juice that her brother spilled had gotten on Chihiro's notebook.",
+   "ko": "남동생이 흘린 토마토 즙이 지히로의 공책에 묻어 있었어요.",
+   "blank": "汁",
+   "src": "made"
   }
  ],
  "w|求める": [
@@ -33250,6 +34146,22 @@
    "en": "Yumi threw her dirty uniform into the washing machine.",
    "ko": "유미는 더러운 유니폼을 세탁기에 던져 넣었어요.",
    "blank": "汚い",
+   "src": "made"
+  }
+ ],
+ "w|汚れ": [
+  {
+   "text": "悠斗は、売る前に食器の汚れをていねいに落とした。",
+   "en": "Yuto carefully cleaned the dirt off the dishes before selling them.",
+   "ko": "유토는 팔기 전에 그릇의 얼룩을 꼼꼼히 닦았어요.",
+   "blank": "汚れ",
+   "src": "made"
+  },
+  {
+   "text": "弟のシャツの汚れを見て、千尋はすぐに犯人が分かった。",
+   "en": "Seeing the stain on her brother's shirt, Chihiro immediately knew who the culprit was.",
+   "ko": "남동생 셔츠의 얼룩을 보고 지히로는 바로 범인을 알았어요.",
+   "blank": "汚れ",
    "src": "made"
   }
  ],
@@ -34249,6 +35161,22 @@
    "src": "made"
   }
  ],
+ "w|演じる": [
+  {
+   "text": "子ども会の劇で、亮の甥は鬼の役を演じた。",
+   "en": "In the children's club play, Ryo's nephew played the role of an ogre.",
+   "ko": "어린이회 연극에서 료의 조카는 도깨비 역을 연기했어요.",
+   "blank": "演じた",
+   "src": "made"
+  },
+  {
+   "text": "真由の弟は、劇団で医者の役を演じることになった。",
+   "en": "Mayu's younger brother is going to play a doctor in a theater company.",
+   "ko": "마유의 남동생은 극단에서 의사 역을 연기하게 됐어요.",
+   "blank": "演じる",
+   "src": "made"
+  }
+ ],
  "w|演ずる": [
   {
    "text": "週末には、俳優が昔の商人を演ずる寸劇がある。",
@@ -34484,6 +35412,22 @@
    "en": "On the way home, Misaki bought vegetables at an unmanned stand in front of the station.",
    "ko": "돌아오는 길에 역 앞 무인 판매소에서 채소를 샀어요.",
    "blank": "無人",
+   "src": "made"
+  }
+ ],
+ "w|無償": [
+  {
+   "text": "町内会では、正月飾りを無償で配っている。",
+   "en": "The neighborhood association is giving out New Year's decorations for free.",
+   "ko": "반상회에서는 설 장식을 무상으로 나눠 주고 있어요.",
+   "blank": "無償",
+   "src": "made"
+  },
+  {
+   "text": "この町では、子どもの予防接種を無償で受けられる。",
+   "en": "In this town, children can get vaccinated free of charge.",
+   "ko": "이 동네에서는 아이 예방 접종을 무상으로 받을 수 있어요.",
+   "blank": "無償",
    "src": "made"
   }
  ],
@@ -35177,6 +36121,22 @@
    "blank": "猫"
   }
  ],
+ "w|猿": [
+  {
+   "text": "来年は申年なので、亮は年賀状に猿の絵を描いた。",
+   "en": "Next year is the Year of the Monkey, so Ryo drew a monkey on his New Year's cards.",
+   "ko": "내년은 원숭이띠 해라서 료는 연하장에 원숭이 그림을 그렸어요.",
+   "blank": "猿",
+   "src": "made"
+  },
+  {
+   "text": "山の近くの薬局なので、たまに猿が駐車場に現れる。",
+   "en": "Since the pharmacy is near the mountains, monkeys sometimes appear in the parking lot.",
+   "ko": "산 근처 약국이라 가끔 원숭이가 주차장에 나타나요.",
+   "blank": "猿",
+   "src": "made"
+  }
+ ],
  "w|獲得": [
   {
    "text": "ポイントを獲得した。",
@@ -35389,6 +36349,22 @@
    "en": "It's tough as things stand.",
    "ko": "현재로서는 어렵네.",
    "blank": "現状"
+  }
+ ],
+ "w|現行": [
+  {
+   "text": "亮は、ごみの出し方の現行のルールを確認した。",
+   "en": "Ryo checked the current rules for taking out the trash.",
+   "ko": "료는 쓰레기 배출 현행 규칙을 확인했어요.",
+   "blank": "現行",
+   "src": "made"
+  },
+  {
+   "text": "現行の制度では、薬の説明は薬剤師がしなければならない。",
+   "en": "Under the current system, a pharmacist must explain the medicine.",
+   "ko": "현행 제도에서는 약 설명은 약사가 해야 해요.",
+   "blank": "現行",
+   "src": "made"
   }
  ],
  "w|現象": [
@@ -35713,6 +36689,22 @@
    "en": "My daily life changed.",
    "ko": "생활이 바뀌었어.",
    "blank": "生活"
+  }
+ ],
+ "w|生涯": [
+  {
+   "text": "亮の祖父は、生涯この町で餅屋を続けた。",
+   "en": "Ryo's grandfather ran a rice-cake shop in this town all his life.",
+   "ko": "료의 할아버지는 평생 이 동네에서 떡집을 했어요.",
+   "blank": "生涯",
+   "src": "made"
+  },
+  {
+   "text": "真由は、薬剤師として生涯学び続けたいと思っている。",
+   "en": "Mayu wants to keep learning throughout her life as a pharmacist.",
+   "ko": "마유는 약사로서 평생 계속 배우고 싶어요.",
+   "blank": "生涯",
+   "src": "made"
   }
  ],
  "w|生物": [
@@ -36783,6 +37775,22 @@
    "blank": "目的"
   }
  ],
+ "w|目立つ": [
+  {
+   "text": "玄関の大きな門松が、通りでいちばん目立っていた。",
+   "en": "The big pine decoration at the entrance stood out the most on the street.",
+   "ko": "현관의 큰 가도마쓰가 거리에서 가장 눈에 띄었어요.",
+   "blank": "目立って",
+   "src": "made"
+  },
+  {
+   "text": "大事な注意は、目立つように赤い字で書いてある。",
+   "en": "Important warnings are written in red so they stand out.",
+   "ko": "중요한 주의 사항은 눈에 띄도록 빨간 글씨로 적혀 있어요.",
+   "blank": "目立つ",
+   "src": "made"
+  }
+ ],
  "w|直す": [
   {
    "text": "自転車を直す時間がない。",
@@ -36959,6 +37967,22 @@
    "en": "Got something to talk about?",
    "ko": "잠깐 상담할 거 있어?",
    "blank": "相談"
+  }
+ ],
+ "w|看板": [
+  {
+   "text": "入口の看板には、雨でも開催と書いてあった。",
+   "en": "The sign at the entrance said the event would be held even in the rain.",
+   "ko": "입구 간판에는 비가 와도 열린다고 쓰여 있었어요.",
+   "blank": "看板",
+   "src": "made"
+  },
+  {
+   "text": "兄の働く店の看板を見て、千尋は少し誇らしくなった。",
+   "en": "Seeing the sign of the shop where her brother works, Chihiro felt a little proud.",
+   "ko": "오빠가 일하는 가게 간판을 보고 지히로는 조금 뿌듯해졌어요.",
+   "blank": "看板",
+   "src": "made"
   }
  ],
  "w|看護": [
@@ -37195,6 +38219,22 @@
    "en": "I'll change in the locker room.",
    "ko": "탈의실에서 갈아입을게.",
    "blank": "着替える"
+  }
+ ],
+ "w|着用": [
+  {
+   "text": "会場では、マスクの着用をお願いしますと放送が流れた。",
+   "en": "An announcement asked people at the venue to wear masks.",
+   "ko": "행사장에서는 마스크 착용을 부탁드린다는 방송이 나왔어요.",
+   "blank": "着用",
+   "src": "made"
+  },
+  {
+   "text": "兄は、制服の着用が必要なアルバイトを始めた。",
+   "en": "Her brother started a part-time job that requires wearing a uniform.",
+   "ko": "오빠는 유니폼 착용이 필요한 아르바이트를 시작했어요.",
+   "blank": "着用",
+   "src": "made"
   }
  ],
  "w|睡眠": [
@@ -37887,6 +38927,22 @@
    "blank": "税"
   }
  ],
+ "w|税金": [
+  {
+   "text": "悠斗は、フリーマーケットの稼ぎにも税金がかかるのか調べた。",
+   "en": "Yuto looked up whether flea market earnings are taxed too.",
+   "ko": "유토는 벼룩시장 수입에도 세금이 붙는지 알아봤어요.",
+   "blank": "税金",
+   "src": "made"
+  },
+  {
+   "text": "兄は、初めての給料から税金が引かれていて驚いた。",
+   "en": "Her brother was surprised to see taxes deducted from his first paycheck.",
+   "ko": "오빠는 첫 월급에서 세금이 빠져나간 걸 보고 놀랐어요.",
+   "blank": "税金",
+   "src": "made"
+  }
+ ],
  "w|種類": [
   {
    "text": "種類、多いね。",
@@ -37914,6 +38970,22 @@
    "en": "The defendant said he had lost all his earnings gambling.",
    "ko": "피고는 도박으로 번 돈을 전부 잃었다고 말했어요.",
    "blank": "稼ぎ",
+   "src": "made"
+  }
+ ],
+ "w|稼ぐ": [
+  {
+   "text": "悠斗はフリーマーケットで、一日で一万円を稼いだ。",
+   "en": "Yuto earned ten thousand yen in one day at the flea market.",
+   "ko": "유토는 벼룩시장에서 하루에 만 엔을 벌었어요.",
+   "blank": "稼いだ",
+   "src": "made"
+  },
+  {
+   "text": "兄はアルバイトで稼いだお金で、千尋に謝りのケーキを買った。",
+   "en": "With the money he earned from his part-time job, her brother bought Chihiro a cake to apologize.",
+   "ko": "오빠는 아르바이트로 번 돈으로 지히로에게 사과의 케이크를 샀어요.",
+   "blank": "稼いだ",
    "src": "made"
   }
  ],
@@ -40995,6 +42067,22 @@
    "blank": "虫"
   }
  ],
+ "w|融合": [
+  {
+   "text": "今年のおせちは、和食と洋食の融合をテーマにしてみた。",
+   "en": "This year's New Year's dishes tried a fusion of Japanese and Western food as a theme.",
+   "ko": "올해 오세치는 일식과 양식의 융합을 주제로 해 봤어요.",
+   "blank": "融合",
+   "src": "made"
+  },
+  {
+   "text": "この薬局は、漢方と西洋の薬の融合を目指している。",
+   "en": "This pharmacy aims to combine traditional herbal and Western medicine.",
+   "ko": "이 약국은 한방과 서양 약의 융합을 지향해요.",
+   "blank": "融合",
+   "src": "made"
+  }
+ ],
  "w|血": [
   {
    "text": "血が出てるよ。",
@@ -43735,6 +44823,22 @@
    "src": "made"
   }
  ],
+ "w|譲渡": [
+  {
+   "text": "このフリーマーケットでは、生き物の譲渡は禁止されている。",
+   "en": "At this flea market, giving away live animals is prohibited.",
+   "ko": "이 벼룩시장에서는 생물 양도가 금지되어 있어요.",
+   "blank": "譲渡",
+   "src": "made"
+  },
+  {
+   "text": "祖父の家の譲渡について、兄弟の意見が分かれた。",
+   "en": "The siblings disagreed about handing over their grandfather's house.",
+   "ko": "할아버지 집의 양도에 대해 형제들의 의견이 갈렸어요.",
+   "blank": "譲渡",
+   "src": "made"
+  }
+ ],
  "w|谷": [
   {
    "text": "深い谷を見下ろす。",
@@ -43747,6 +44851,22 @@
    "en": "I walk across the valley.",
    "ko": "계곡을 걸어서 건너.",
    "blank": "谷"
+  }
+ ],
+ "w|豆": [
+  {
+   "text": "おばあさんのお店では、手作りの煮た豆が瓶で売られていた。",
+   "en": "At an elderly woman's stall, homemade simmered beans were sold in jars.",
+   "ko": "할머니 가게에서는 직접 만든 콩조림을 병에 담아 팔고 있었어요.",
+   "blank": "豆",
+   "src": "made"
+  },
+  {
+   "text": "節分の夜、千尋は兄と豆をまきながら仲直りした。",
+   "en": "On the night of Setsubun, Chihiro made up with her brother while throwing beans.",
+   "ko": "세쓰분 밤에 지히로는 오빠와 콩을 뿌리며 화해했어요.",
+   "blank": "豆",
+   "src": "made"
   }
  ],
  "w|豊か": [
@@ -44119,6 +45239,22 @@
    "en": "It's fine even without a license.",
    "ko": "자격이 없어도 괜찮아.",
    "blank": "資格"
+  }
+ ],
+ "w|資源": [
+  {
+   "text": "フリーマーケットは、資源を無駄にしない良い方法だと悠斗は思う。",
+   "en": "Yuto thinks flea markets are a good way not to waste resources.",
+   "ko": "유토는 벼룩시장이 자원을 낭비하지 않는 좋은 방법이라고 생각해요.",
+   "blank": "資源",
+   "src": "made"
+  },
+  {
+   "text": "千尋の自由研究のテーマは、海の資源についてだった。",
+   "en": "The theme of Chihiro's independent research project was ocean resources.",
+   "ko": "지히로의 자유 연구 주제는 바다 자원에 관한 거였어요.",
+   "blank": "資源",
+   "src": "made"
   }
  ],
  "w|資産": [
@@ -45787,6 +46923,22 @@
    "blank": "遅い"
   }
  ],
+ "w|遅れ": [
+  {
+   "text": "雪のせいで新幹線に遅れが出て、亮の帰省は夜になった。",
+   "en": "The bullet train was delayed because of snow, so Ryo didn't get home until night.",
+   "ko": "눈 때문에 신칸센이 늦어져서 료의 귀성은 밤이 됐어요.",
+   "blank": "遅れ",
+   "src": "made"
+  },
+  {
+   "text": "薬の配送に遅れが出ていて、明日の入荷になるそうだ。",
+   "en": "There is a delay in medicine deliveries, so it will apparently arrive tomorrow.",
+   "ko": "약 배송이 늦어져서 내일 입고된대요.",
+   "blank": "遅れ",
+   "src": "made"
+  }
+ ],
  "w|遅れる": [
   {
    "text": "電車が遅れるよ。",
@@ -46795,6 +47947,22 @@
    "blank": "重要"
   }
  ],
+ "w|重量": [
+  {
+   "text": "宅配便の箱は、重量によって送料が変わる。",
+   "en": "The shipping fee for a delivery box changes depending on its weight.",
+   "ko": "택배 상자는 무게에 따라 배송비가 달라져요.",
+   "blank": "重量",
+   "src": "made"
+  },
+  {
+   "text": "子どもの薬の量は、体の重量に合わせて決める。",
+   "en": "The dose of a child's medicine is decided according to body weight.",
+   "ko": "아이 약의 양은 몸무게에 맞춰서 정해요.",
+   "blank": "重量",
+   "src": "made"
+  }
+ ],
  "w|野球": [
   {
    "text": "野球、見に行こう。",
@@ -46880,6 +48048,22 @@
    "en": "The fishmonger laughed and said you don't have to be rich to eat good fish.",
    "ko": "생선 가게 아저씨는 \"부자가 아니어도 맛있는 생선은 먹을 수 있어\"라며 웃었어요.",
    "blank": "金持ち",
+   "src": "made"
+  }
+ ],
+ "w|金曜": [
+  {
+   "text": "会社の仕事納めは、今年は金曜になった。",
+   "en": "The last workday at the company this year fell on a Friday.",
+   "ko": "회사 종무일은 올해는 금요일이 됐어요.",
+   "blank": "金曜",
+   "src": "made"
+  },
+  {
+   "text": "金曜の夕方は、薬を取りに来る人で混み合う。",
+   "en": "Friday evenings get crowded with people coming to pick up their medicine.",
+   "ko": "금요일 저녁에는 약을 받으러 오는 사람들로 붐벼요.",
+   "blank": "金曜",
    "src": "made"
   }
  ],
@@ -47059,6 +48243,22 @@
    "src": "made"
   }
  ],
+ "w|鍋": [
+  {
+   "text": "亮の母は、お正月の煮物を大きな鍋で作っている。",
+   "en": "Ryo's mother is making the New Year's simmered dishes in a big pot.",
+   "ko": "료의 어머니는 설 조림 요리를 큰 냄비로 만들고 있어요.",
+   "blank": "鍋",
+   "src": "made"
+  },
+  {
+   "text": "風邪の患者さんに、真由は鍋料理で体を温めるよう勧めた。",
+   "en": "Mayu recommended that the patient with a cold warm up with hot pot dishes.",
+   "ko": "감기 환자에게 마유는 전골 요리로 몸을 따뜻하게 하라고 권했어요.",
+   "blank": "鍋",
+   "src": "made"
+  }
+ ],
  "w|鍵": [
   {
    "text": "鍵を忘れた。",
@@ -47129,6 +48329,22 @@
    "en": "I wonder if I can meet the chief.",
    "ko": "장관을 만날 수 있을까.",
    "blank": "長官"
+  }
+ ],
+ "w|長年": [
+  {
+   "text": "長年使ったこたつを、亮はついに買い替えることにした。",
+   "en": "Ryo finally decided to replace the kotatsu he had used for many years.",
+   "ko": "오랫동안 쓴 고타쓰를 료는 드디어 새로 사기로 했어요.",
+   "blank": "長年",
+   "src": "made"
+  },
+  {
+   "text": "長年通ってくれるおばあさんが、真由にみかんをくれた。",
+   "en": "An elderly woman who has come to the pharmacy for many years gave Mayu some mandarins.",
+   "ko": "오랫동안 다닌 할머니가 마유에게 귤을 줬어요.",
+   "blank": "長年",
+   "src": "made"
   }
  ],
  "w|長期": [
@@ -47684,6 +48900,22 @@
    "en": "At the outdoor school camp, each group chose one leader.",
    "ko": "임간 학교에서는 조마다 대장을 한 명 정했어요.",
    "blank": "隊長",
+   "src": "made"
+  }
+ ],
+ "w|階段": [
+  {
+   "text": "亮は、二階へ続く階段の手すりもきれいに拭いた。",
+   "en": "Ryo also wiped the handrail of the stairs leading to the second floor clean.",
+   "ko": "료는 이 층으로 이어지는 계단 난간도 깨끗이 닦았어요.",
+   "blank": "階段",
+   "src": "made"
+  },
+  {
+   "text": "膝が痛いお客さんのために、真由は階段の手すりのある入口を案内した。",
+   "en": "For a customer with knee pain, Mayu pointed out the entrance with a handrail on the stairs.",
+   "ko": "무릎이 아픈 손님을 위해 마유는 계단 난간이 있는 입구를 안내했어요.",
+   "blank": "階段",
    "src": "made"
   }
  ],
@@ -48685,6 +49917,22 @@
    "src": "made"
   }
  ],
+ "w|顧客": [
+  {
+   "text": "毎月来るなじみの顧客が、悠斗の古本を全部買ってくれた。",
+   "en": "A regular customer who comes every month bought all of Yuto's used books.",
+   "ko": "매달 오는 단골 고객이 유토의 헌책을 전부 사 줬어요.",
+   "blank": "顧客",
+   "src": "made"
+  },
+  {
+   "text": "兄は、店の顧客の名前を全部覚えているらしい。",
+   "en": "Her brother apparently remembers the names of all the shop's customers.",
+   "ko": "오빠는 가게 고객 이름을 전부 외우고 있대요.",
+   "blank": "顧客",
+   "src": "made"
+  }
+ ],
  "w|風": [
   {
    "text": "風が冷たいね。",
@@ -48839,6 +50087,22 @@
    "en": "I check the food's expiration date.",
    "ko": "식품 유통기한을 봐.",
    "blank": "食品"
+  }
+ ],
+ "w|食堂": [
+  {
+   "text": "年末で忙しく、亮は会社の食堂で急いで昼ご飯を済ませた。",
+   "en": "Busy with the year-end rush, Ryo hurriedly ate lunch in the company cafeteria.",
+   "ko": "연말이라 바빠서 료는 회사 식당에서 서둘러 점심을 때웠어요.",
+   "blank": "食堂",
+   "src": "made"
+  },
+  {
+   "text": "真由は、病院の食堂で同僚と昼ご飯を食べた。",
+   "en": "Mayu ate lunch with a coworker in the hospital cafeteria.",
+   "ko": "마유는 병원 식당에서 동료와 점심을 먹었어요.",
+   "blank": "食堂",
+   "src": "made"
   }
  ],
  "w|飯": [
@@ -49394,6 +50658,22 @@
    "en": "The rapeseed flowers in the garden bloomed and turned everything yellow.",
    "ko": "마당의 유채꽃이 피어 온통 노랗게 물들었어요.",
    "blank": "黄色",
+   "src": "made"
+  }
+ ],
+ "w|黄金": [
+  {
+   "text": "夕方、黄金に光る夕日が会場を照らした。",
+   "en": "In the evening, the golden setting sun lit up the venue.",
+   "ko": "저녁에 황금빛으로 빛나는 석양이 행사장을 비췄어요.",
+   "blank": "黄金",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、兄からもらった黄金の色のキーホルダーを大事にしている。",
+   "en": "Chihiro treasures the gold-colored keychain her brother gave her.",
+   "ko": "지히로는 오빠한테 받은 황금색 열쇠고리를 소중히 여겨요.",
+   "blank": "黄金",
    "src": "made"
   }
  ],

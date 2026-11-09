@@ -2623,6 +2623,22 @@
    "blank": "Appunto"
   }
  ],
+ "w|aprile": [
+  {
+   "text": "Ad aprile Paolo ha finalmente tolto il dente del giudizio.",
+   "en": "In April Paolo finally had his wisdom tooth taken out.",
+   "ko": "사월에 파올로는 드디어 사랑니를 뽑았어요.",
+   "blank": "aprile",
+   "src": "made"
+  },
+  {
+   "text": "Ad aprile la fabbrica di Francesca ha ricevuto un grosso ordine dall'estero.",
+   "en": "In April Francesca's factory received a big order from abroad.",
+   "ko": "사월에 프란체스카의 공장은 해외에서 큰 주문을 받았어요.",
+   "blank": "aprile",
+   "src": "made"
+  }
+ ],
  "w|aprire": [
   {
    "text": "Apri la porta, sono io.",
@@ -7279,6 +7295,22 @@
    "blank": "cavare"
   }
  ],
+ "w|caviglia": [
+  {
+   "text": "Paolo zoppica perché si è storto la caviglia scendendo dall'autobus.",
+   "en": "Paolo is limping because he twisted his ankle getting off the bus.",
+   "ko": "파올로는 버스에서 내리다 발목을 삐어서 절뚝거려요.",
+   "blank": "caviglia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca indossa scarpe di sicurezza alte che proteggono anche la caviglia.",
+   "en": "Francesca wears high safety shoes that also protect her ankle.",
+   "ko": "프란체스카는 발목까지 보호해 주는 높은 안전화를 신어요.",
+   "blank": "caviglia",
+   "src": "made"
+  }
+ ],
  "w|cavo": [
   {
    "text": "Il tecnico ha passato un cavo nuovo dal tetto fino all'appartamento di Marco.",
@@ -7632,6 +7664,22 @@
    "en": "Giulia was certain she had turned off the gas, but she went back to check.",
    "ko": "줄리아는 가스를 잠갔다고 확신했지만 다시 확인하러 돌아갔어요.",
    "blank": "certezza",
+   "src": "made"
+  }
+ ],
+ "w|certificare": [
+  {
+   "text": "La segretaria dello studio può certificare che Paolo è stato dal dentista tutta la mattina.",
+   "en": "The practice secretary can certify that Paolo was at the dentist all morning.",
+   "ko": "치과 직원이 파올로가 오전 내내 치과에 있었다고 증명해 줄 수 있어요.",
+   "blank": "certificare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca deve certificare che ogni pezzo rispetta le norme europee.",
+   "en": "Francesca has to certify that every part meets European standards.",
+   "ko": "프란체스카는 모든 부품이 유럽 기준에 맞는지 인증해야 해요.",
+   "blank": "certificare",
    "src": "made"
   }
  ],
@@ -8749,6 +8797,22 @@
    "en": "The necklace broke during the party.",
    "ko": "목걸이가 파티 중에 끊어졌어.",
    "blank": "collana"
+  }
+ ],
+ "w|collaterale": [
+  {
+   "text": "Il dentista avverte Paolo che l'antibiotico può avere qualche effetto collaterale.",
+   "en": "The dentist warns Paolo that the antibiotic can have some side effects.",
+   "ko": "치과 의사는 파올로에게 항생제에 부작용이 좀 있을 수 있다고 알려 줘요.",
+   "blank": "collaterale",
+   "src": "made"
+  },
+  {
+   "text": "Il ritardo delle consegne ha avuto un danno collaterale sugli stipendi della squadra di Francesca.",
+   "en": "The delivery delay had a knock-on effect on the wages of Francesca's team.",
+   "ko": "배송 지연이 프란체스카 팀의 월급에 부수적인 피해를 줬어요.",
+   "blank": "collaterale",
+   "src": "made"
   }
  ],
  "w|collega": [
@@ -11251,6 +11315,22 @@
    "blank": "costo"
   }
  ],
+ "w|costola": [
+  {
+   "text": "Paolo arriva dal dentista con una costola incrinata dopo una caduta in bici.",
+   "en": "Paolo arrives at the dentist with a cracked rib after a bike fall.",
+   "ko": "파올로는 자전거에서 넘어져 갈비뼈에 금이 간 채로 치과에 와요.",
+   "blank": "costola",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha preso una botta alla costola contro un carrello.",
+   "en": "Francesca bumped her rib against a trolley.",
+   "ko": "프란체스카는 수레에 갈비뼈를 부딪혔어요.",
+   "blank": "costola",
+   "src": "made"
+  }
+ ],
  "w|costoso": [
   {
    "text": "Quel ristorante è troppo costoso per noi.",
@@ -11598,6 +11678,22 @@
    "en": "Giulia's mother didn't spare her some criticism about her choice of neighbourhood.",
    "ko": "줄리아의 엄마는 동네 고른 것을 두고 한마디 비판을 아끼지 않았어요.",
    "blank": "critica",
+   "src": "made"
+  }
+ ],
+ "w|critico": [
+  {
+   "text": "Il dentista dice a Paolo che i prossimi giorni sono critici per la guarigione.",
+   "en": "The dentist tells Paolo that the next few days are critical for healing.",
+   "ko": "치과 의사는 파올로에게 앞으로 며칠이 회복에 아주 중요하다고 말해요.",
+   "blank": "critici",
+   "src": "made"
+  },
+  {
+   "text": "Il periodo prima di Natale è sempre il più critico per la fabbrica di Francesca.",
+   "en": "The period before Christmas is always the most critical for Francesca's factory.",
+   "ko": "크리스마스 전 기간은 프란체스카의 공장에 늘 가장 고비예요.",
+   "blank": "critico",
    "src": "made"
   }
  ],
@@ -12841,6 +12937,22 @@
    "blank": "di"
   }
  ],
+ "w|diagnosi": [
+  {
+   "text": "Dopo la radiografia, la diagnosi per Paolo è chiara: una carie profonda.",
+   "en": "After the X-ray, Paolo's diagnosis is clear: a deep cavity.",
+   "ko": "엑스레이를 찍고 나니 파올로의 진단은 분명해요. 깊은 충치예요.",
+   "blank": "diagnosi",
+   "src": "made"
+  },
+  {
+   "text": "Il medico del lavoro ha fatto una diagnosi precisa del mal di schiena di Francesca.",
+   "en": "The occupational doctor made a precise diagnosis of Francesca's back pain.",
+   "ko": "산업 의학 의사가 프란체스카의 허리 통증을 정확히 진단했어요.",
+   "blank": "diagnosi",
+   "src": "made"
+  }
+ ],
  "w|diamante": [
   {
    "text": "L'anello ha un diamante al centro.",
@@ -13273,6 +13385,22 @@
    "en": "Every employee gets initial training.",
    "ko": "모든 직원이 초기 교육을 받아.",
    "blank": "dipendente"
+  }
+ ],
+ "w|dipendenza": [
+  {
+   "text": "Il dentista spiega a Paolo che lo zucchero crea una specie di dipendenza.",
+   "en": "The dentist explains to Paolo that sugar creates a kind of addiction.",
+   "ko": "치과 의사는 파올로에게 설탕이 일종의 중독을 만든다고 설명해요.",
+   "blank": "dipendenza",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha smesso di fumare e racconta che la dipendenza è stata dura da vincere.",
+   "en": "Francesca quit smoking and says the addiction was hard to beat.",
+   "ko": "프란체스카는 담배를 끊었는데 중독을 이기기가 힘들었다고 해요.",
+   "blank": "dipendenza",
+   "src": "made"
   }
  ],
  "w|dipendere": [
@@ -13847,6 +13975,22 @@
    "en": "I don't want to disturb her rest.",
    "ko": "그녀의 휴식을 방해하고 싶지 않아.",
    "blank": "disturbare"
+  }
+ ],
+ "w|disturbo": [
+  {
+   "text": "Paolo chiede scusa per il disturbo e telefona per anticipare la visita.",
+   "en": "Paolo apologizes for the bother and calls to move the visit earlier.",
+   "ko": "파올로는 번거롭게 해서 죄송하다고 하며 진료를 앞당기려고 전화해요.",
+   "blank": "disturbo",
+   "src": "made"
+  },
+  {
+   "text": "Il rumore continuo delle macchine è un vero disturbo per Francesca.",
+   "en": "The constant noise of the machines is a real nuisance for Francesca.",
+   "ko": "계속되는 기계 소음은 프란체스카에게 정말 골칫거리예요.",
+   "blank": "disturbo",
+   "src": "made"
   }
  ],
  "w|dito": [
@@ -15369,6 +15513,22 @@
    "src": "made"
   }
  ],
+ "w|epidemia": [
+  {
+   "text": "Nel libro di storia del figlio di Paolo c'è un capitolo su un'epidemia di peste.",
+   "en": "In Paolo's son's history book there's a chapter about a plague epidemic.",
+   "ko": "파올로 아들의 역사책에는 흑사병 유행에 관한 장이 있어요.",
+   "blank": "epidemia",
+   "src": "made"
+  },
+  {
+   "text": "Durante l'epidemia di influenza, metà della squadra di Francesca era a casa.",
+   "en": "During the flu epidemic, half of Francesca's team was at home.",
+   "ko": "독감이 유행할 때 프란체스카 팀의 절반이 집에 있었어요.",
+   "blank": "epidemia",
+   "src": "made"
+  }
+ ],
  "w|episodio": [
   {
    "text": "Ho visto l'ultimo episodio ieri sera.",
@@ -16461,6 +16621,22 @@
    "en": "The drug reduced the pain.",
    "ko": "약이 통증을 줄여 줬어.",
    "blank": "farmaco"
+  }
+ ],
+ "w|fasciare": [
+  {
+   "text": "L'assistente del dentista ha dovuto fasciare il dito di Paolo, che si era tagliato con la porta.",
+   "en": "The dentist's assistant had to bandage Paolo's finger, which he had cut on the door.",
+   "ko": "치과 보조원이 문에 베인 파올로의 손가락에 붕대를 감아 줘야 했어요.",
+   "blank": "fasciare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca sa fasciare una ferita perché ha fatto il corso di primo soccorso.",
+   "en": "Francesca knows how to bandage a wound because she took the first-aid course.",
+   "ko": "프란체스카는 응급처치 교육을 받아서 상처에 붕대를 감을 줄 알아요.",
+   "blank": "fasciare",
+   "src": "made"
   }
  ],
  "w|fascicolo": [
@@ -18039,6 +18215,22 @@
    "blank": "frattempo"
   }
  ],
+ "w|frattura": [
+  {
+   "text": "Mordendo un'oliva con il nocciolo, Paolo ha causato una piccola frattura al dente.",
+   "en": "Biting an olive with the pit in, Paolo caused a small fracture in his tooth.",
+   "ko": "씨가 든 올리브를 깨물다가 파올로는 이에 작은 금이 갔어요.",
+   "blank": "frattura",
+   "src": "made"
+  },
+  {
+   "text": "L'anno scorso un operaio ha avuto una frattura al polso, e Francesca ha cambiato le regole.",
+   "en": "Last year a worker fractured his wrist, and Francesca changed the rules.",
+   "ko": "작년에 한 노동자가 손목이 부러져서 프란체스카가 규칙을 바꿨어요.",
+   "blank": "frattura",
+   "src": "made"
+  }
+ ],
  "w|freccia": [
   {
    "text": "Sulla lavagna Stefano ha disegnato una freccia verso il piatto del giorno.",
@@ -18967,6 +19159,22 @@
    "blank": "gigante"
   }
  ],
+ "w|ginnastica": [
+  {
+   "text": "Paolo ha un dolore alla mascella e il dentista gli consiglia un po' di ginnastica facciale.",
+   "en": "Paolo has pain in his jaw and the dentist suggests some facial exercises.",
+   "ko": "파올로가 턱이 아파서 치과 의사가 얼굴 운동을 좀 하라고 권해요.",
+   "blank": "ginnastica",
+   "src": "made"
+  },
+  {
+   "text": "Ogni mattina in fabbrica Francesca e i colleghi fanno dieci minuti di ginnastica.",
+   "en": "Every morning at the factory Francesca and her colleagues do ten minutes of exercises.",
+   "ko": "매일 아침 공장에서 프란체스카와 동료들은 십 분 동안 체조를 해요.",
+   "blank": "ginnastica",
+   "src": "made"
+  }
+ ],
  "w|ginocchio": [
   {
    "text": "Mi fa male il ginocchio destro.",
@@ -19149,6 +19357,22 @@
    "blank": "giovanotto"
   }
  ],
+ "w|giovedì": [
+  {
+   "text": "Paolo ha chiesto un appuntamento per giovedì mattina, prima del lavoro.",
+   "en": "Paolo asked for an appointment on Thursday morning, before work.",
+   "ko": "파올로는 출근 전인 목요일 아침으로 예약을 잡았어요.",
+   "blank": "giovedì",
+   "src": "made"
+  },
+  {
+   "text": "Il giovedì Francesca fa il turno di notte con la sua squadra.",
+   "en": "On Thursdays Francesca works the night shift with her team.",
+   "ko": "목요일이면 프란체스카는 자기 팀과 야간 근무를 해요.",
+   "blank": "giovedì",
+   "src": "made"
+  }
+ ],
  "w|girare": [
   {
    "text": "Gira a sinistra al semaforo.",
@@ -19247,6 +19471,22 @@
    "en": "The court's ruling will come soon.",
    "ko": "법원의 판결이 곧 나올 거야.",
    "blank": "giudizio"
+  }
+ ],
+ "w|giugno": [
+  {
+   "text": "A giugno Paolo ha perso un'otturazione mangiando un torrone.",
+   "en": "In June Paolo lost a filling while eating nougat.",
+   "ko": "유월에 파올로는 누가를 먹다가 때운 게 빠졌어요.",
+   "blank": "giugno",
+   "src": "made"
+  },
+  {
+   "text": "A giugno in fabbrica fa così caldo che Francesca porta sempre una bottiglia d'acqua.",
+   "en": "In June it's so hot in the factory that Francesca always brings a bottle of water.",
+   "ko": "유월이면 공장이 너무 더워서 프란체스카는 늘 물병을 챙겨요.",
+   "blank": "giugno",
+   "src": "made"
   }
  ],
  "w|giungere": [
@@ -21245,6 +21485,22 @@
    "src": "made"
   }
  ],
+ "w|infermeria": [
+  {
+   "text": "Da ragazzo Paolo finiva spesso in infermeria per colpa del calcio.",
+   "en": "As a boy Paolo often ended up in the school infirmary because of football.",
+   "ko": "어릴 때 파올로는 축구 때문에 자주 양호실에 갔어요.",
+   "blank": "infermeria",
+   "src": "made"
+  },
+  {
+   "text": "Quando un operaio si taglia, Francesca lo accompagna in infermeria.",
+   "en": "When a worker cuts himself, Francesca takes him to the first-aid room.",
+   "ko": "노동자가 베이면 프란체스카가 의무실로 데려가요.",
+   "blank": "infermeria",
+   "src": "made"
+  }
+ ],
  "w|infermiera": [
   {
    "text": "L'infermiera ha controllato la mia pressione.",
@@ -21300,6 +21556,22 @@
    "en": "On her first day Sara found out that half the office was at home with a stomach bug.",
    "ko": "첫날 사라는 사무실 절반이 장염으로 집에 있다는 걸 알았어요.",
    "blank": "infezione",
+   "src": "made"
+  }
+ ],
+ "w|infine": [
+  {
+   "text": "Dopo un'ora sulla poltrona, Paolo può infine sciacquarsi la bocca.",
+   "en": "After an hour in the chair, Paolo can finally rinse his mouth.",
+   "ko": "의자에 한 시간을 앉아 있다가 파올로는 마침내 입을 헹굴 수 있어요.",
+   "blank": "infine",
+   "src": "made"
+  },
+  {
+   "text": "Francesca controlla i pezzi, li conta e infine li mette nelle scatole.",
+   "en": "Francesca checks the parts, counts them and finally puts them in the boxes.",
+   "ko": "프란체스카는 부품을 검사하고 세고 마지막으로 상자에 넣어요.",
+   "blank": "infine",
    "src": "made"
   }
  ],
@@ -21495,6 +21767,22 @@
    "en": "Wait for me at the theater entrance.",
    "ko": "극장 입구에서 기다려 줘.",
    "blank": "ingresso"
+  }
+ ],
+ "w|iniezione": [
+  {
+   "text": "Paolo ha paura dell'iniezione più che del trapano.",
+   "en": "Paolo is more afraid of the injection than of the drill.",
+   "ko": "파올로는 드릴보다 주사가 더 무서워요.",
+   "blank": "iniezione",
+   "src": "made"
+  },
+  {
+   "text": "Nel reparto di Francesca si fanno pezzi di plastica con lo stampaggio a iniezione.",
+   "en": "In Francesca's department they make plastic parts by injection moulding.",
+   "ko": "프란체스카의 부서에서는 사출 성형으로 플라스틱 부품을 만들어요.",
+   "blank": "iniezione",
+   "src": "made"
   }
  ],
  "w|iniziare": [
@@ -23313,6 +23601,22 @@
    "blank": "leone"
   }
  ],
+ "w|letale": [
+  {
+   "text": "Nella rivista della sala d'attesa, Paolo legge di un serpente dal veleno letale.",
+   "en": "In the waiting-room magazine, Paolo reads about a snake with lethal venom.",
+   "ko": "대기실 잡지에서 파올로는 치명적인 독을 가진 뱀에 관한 글을 읽어요.",
+   "blank": "letale",
+   "src": "made"
+  },
+  {
+   "text": "Un cartello avverte che il gas usato nel reparto può essere letale.",
+   "en": "A sign warns that the gas used in the department can be lethal.",
+   "ko": "표지판에 그 부서에서 쓰는 가스가 치명적일 수 있다고 경고해요.",
+   "blank": "letale",
+   "src": "made"
+  }
+ ],
  "w|lettera": [
   {
    "text": "Ho ricevuto una lettera da casa.",
@@ -23819,6 +24123,38 @@
    "blank": "luce"
   }
  ],
+ "w|lucido": [
+  {
+   "text": "Dopo lo sbiancamento i denti di Paolo sono bianchi e lucidi.",
+   "en": "After whitening Paolo's teeth are white and shiny.",
+   "ko": "미백 후에 파올로의 이는 하얗고 반짝여요.",
+   "blank": "lucidi",
+   "src": "made"
+  },
+  {
+   "text": "Francesca pulisce il pavimento del reparto finché non diventa lucido.",
+   "en": "Francesca cleans the department floor until it's shiny.",
+   "ko": "프란체스카는 부서 바닥이 반들반들해질 때까지 닦아요.",
+   "blank": "lucido",
+   "src": "made"
+  }
+ ],
+ "w|luglio": [
+  {
+   "text": "Paolo ha prenotato la pulizia dei denti per la fine di luglio.",
+   "en": "Paolo booked his teeth cleaning for the end of July.",
+   "ko": "파올로는 칠월 말로 치아 스케일링을 예약했어요.",
+   "blank": "luglio",
+   "src": "made"
+  },
+  {
+   "text": "In fabbrica Francesca lavora di più a luglio, prima della chiusura estiva.",
+   "en": "At the factory Francesca works more in July, before the summer shutdown.",
+   "ko": "공장에서 프란체스카는 여름 휴업 전인 칠월에 일이 더 많아요.",
+   "blank": "luglio",
+   "src": "made"
+  }
+ ],
  "w|lui": [
   {
    "text": "Dillo a lui, non a me.",
@@ -24091,6 +24427,22 @@
    "en": "I work in a warehouse outside the city.",
    "ko": "시외 창고에서 일해.",
    "blank": "magazzino"
+  }
+ ],
+ "w|maggio": [
+  {
+   "text": "Il dentista ha detto a Paolo di tornare a maggio per il controllo.",
+   "en": "The dentist told Paolo to come back in May for a check-up.",
+   "ko": "치과 의사가 파올로에게 오월에 검진받으러 다시 오라고 했어요.",
+   "blank": "maggio",
+   "src": "made"
+  },
+  {
+   "text": "La fabbrica dove lavora Francesca ha assunto venti operai a maggio.",
+   "en": "The factory where Francesca works hired twenty workers in May.",
+   "ko": "프란체스카가 일하는 공장은 오월에 노동자 스무 명을 뽑았어요.",
+   "blank": "maggio",
+   "src": "made"
   }
  ],
  "w|maggiore": [
@@ -24731,6 +25083,22 @@
    "src": "made"
   }
  ],
+ "w|martedì": [
+  {
+   "text": "Lo studio dentistico di Paolo è chiuso il martedì pomeriggio.",
+   "en": "Paolo's dental office is closed on Tuesday afternoons.",
+   "ko": "파올로의 치과는 화요일 오후에 문을 닫아요.",
+   "blank": "martedì",
+   "src": "made"
+  },
+  {
+   "text": "Ogni martedì Francesca controlla la sicurezza delle macchine del reparto.",
+   "en": "Every Tuesday Francesca checks the safety of the machines in her section.",
+   "ko": "매주 화요일 프란체스카는 자기 부서 기계의 안전을 점검해요.",
+   "blank": "martedì",
+   "src": "made"
+  }
+ ],
  "w|martello": [
   {
    "text": "Marco ha preso in prestito un martello dal vicino per appendere un quadro.",
@@ -25181,6 +25549,22 @@
    "en": "He lied even to his mother.",
    "ko": "어머니한테까지 거짓말을 했어.",
    "blank": "mentito"
+  }
+ ],
+ "w|mento": [
+  {
+   "text": "Il dentista chiede a Paolo di appoggiare il mento sul supporto della macchina.",
+   "en": "The dentist asks Paolo to rest his chin on the machine's support.",
+   "ko": "치과 의사가 파올로에게 기계 받침대에 턱을 올리라고 해요.",
+   "blank": "mento",
+   "src": "made"
+  },
+  {
+   "text": "Francesca porta una mascherina che le copre il naso e il mento.",
+   "en": "Francesca wears a mask that covers her nose and chin.",
+   "ko": "프란체스카는 코와 턱을 가리는 마스크를 써요.",
+   "blank": "mento",
+   "src": "made"
   }
  ],
  "w|mentre": [
@@ -27167,6 +27551,22 @@
    "blank": "nobile"
   }
  ],
+ "w|nodo": [
+  {
+   "text": "Paolo ha un nodo allo stomaco ogni volta che entra nello studio.",
+   "en": "Paolo gets a knot in his stomach every time he walks into the practice.",
+   "ko": "파올로는 치과에 들어갈 때마다 속이 조여 와요.",
+   "blank": "nodo",
+   "src": "made"
+  },
+  {
+   "text": "Francesca insegna ai nuovi operai a fare un nodo sicuro alle corde.",
+   "en": "Francesca teaches the new workers to tie a secure knot in the ropes.",
+   "ko": "프란체스카는 새 노동자들에게 밧줄을 안전하게 묶는 매듭을 가르쳐요.",
+   "blank": "nodo",
+   "src": "made"
+  }
+ ],
  "w|noi": [
   {
    "text": "Noi due bastiamo.",
@@ -28925,6 +29325,22 @@
    "blank": "otto"
   }
  ],
+ "w|ottobre": [
+  {
+   "text": "L'apparecchio per i denti della figlia di Paolo si toglie a ottobre.",
+   "en": "Paolo's daughter's braces come off in October.",
+   "ko": "파올로 딸의 치아 교정기는 시월에 빼요.",
+   "blank": "ottobre",
+   "src": "made"
+  },
+  {
+   "text": "La nuova linea di produzione partirà a ottobre, e Francesca ne sarà la responsabile.",
+   "en": "The new production line will start in October, and Francesca will be in charge of it.",
+   "ko": "새 생산 라인은 시월에 가동되고 프란체스카가 책임을 맡을 거예요.",
+   "blank": "ottobre",
+   "src": "made"
+  }
+ ],
  "w|ovest": [
   {
    "text": "Il vento viene da ovest oggi.",
@@ -29241,6 +29657,22 @@
    "en": "Pass me the ball, please.",
    "ko": "공 좀 패스해 줘.",
    "blank": "palla"
+  }
+ ],
+ "w|pallido": [
+  {
+   "text": "Quando vede l'ago, Paolo diventa pallido come un lenzuolo.",
+   "en": "When he sees the needle, Paolo goes as white as a sheet.",
+   "ko": "바늘을 보자 파올로는 얼굴이 하얗게 질려요.",
+   "blank": "pallido",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il turno di notte, Francesca è pallida e ha bisogno di dormire.",
+   "en": "After the night shift, Francesca is pale and needs to sleep.",
+   "ko": "야간 근무 후에 프란체스카는 창백하고 잠이 필요해요.",
+   "blank": "pallida",
+   "src": "made"
   }
  ],
  "w|pallone": [
@@ -31431,6 +31863,22 @@
    "en": "My uncle is a retired police officer.",
    "ko": "우리 삼촌은 은퇴한 경찰이야.",
    "blank": "poliziotto"
+  }
+ ],
+ "w|pollice": [
+  {
+   "text": "Mentre aspetta, Paolo scorre le notizie sul telefono con il pollice.",
+   "en": "While waiting, Paolo scrolls through the news on his phone with his thumb.",
+   "ko": "기다리는 동안 파올로는 엄지로 휴대폰 뉴스를 넘겨요.",
+   "blank": "pollice",
+   "src": "made"
+  },
+  {
+   "text": "Francesca si è schiacciata il pollice con la porta del magazzino.",
+   "en": "Francesca crushed her thumb in the warehouse door.",
+   "ko": "프란체스카는 창고 문에 엄지손가락이 끼었어요.",
+   "blank": "pollice",
+   "src": "made"
   }
  ],
  "w|pollo": [
@@ -34361,6 +34809,22 @@
    "src": "made"
   }
  ],
+ "w|raffreddore": [
+  {
+   "text": "Paolo ha spostato l'appuntamento perché ha un brutto raffreddore.",
+   "en": "Paolo moved his appointment because he has a bad cold.",
+   "ko": "파올로는 심한 감기에 걸려서 예약을 미뤘어요.",
+   "blank": "raffreddore",
+   "src": "made"
+  },
+  {
+   "text": "In fabbrica gira un raffreddore, e Francesca distribuisce fazzoletti a tutti.",
+   "en": "There's a cold going around the factory, and Francesca hands out tissues to everyone.",
+   "ko": "공장에 감기가 돌아서 프란체스카가 모두에게 휴지를 나눠 줘요.",
+   "blank": "raffreddore",
+   "src": "made"
+  }
+ ],
  "w|ragazza": [
   {
    "text": "La ragazza del bar sorride.",
@@ -34869,6 +35333,22 @@
    "blank": "recente"
   }
  ],
+ "w|recentemente": [
+  {
+   "text": "Paolo ha cambiato dentista recentemente, e si trova molto meglio.",
+   "en": "Paolo changed dentists recently, and he's much happier.",
+   "ko": "파올로는 최근에 치과를 바꿨는데 훨씬 마음에 들어요.",
+   "blank": "recentemente",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha seguito recentemente un corso di sicurezza sul lavoro.",
+   "en": "Francesca recently took a workplace safety course.",
+   "ko": "프란체스카는 최근에 산업 안전 교육을 받았어요.",
+   "blank": "recentemente",
+   "src": "made"
+  }
+ ],
  "w|recita": [
   {
    "text": "Alla fine della visita, un gruppo di bambini ha fatto una piccola recita per Matteo e gli altri.",
@@ -35195,6 +35675,22 @@
    "blank": "rendere"
   }
  ],
+ "w|rene": [
+  {
+   "text": "Il medico ha detto al padre di Paolo che un rene non funziona bene.",
+   "en": "The doctor told Paolo's father that one kidney isn't working well.",
+   "ko": "의사가 파올로의 아버지에게 콩팥 하나가 제대로 기능하지 않는다고 했어요.",
+   "blank": "rene",
+   "src": "made"
+  },
+  {
+   "text": "Il fratello di Francesca ha donato un rene alla madre.",
+   "en": "Francesca's brother donated a kidney to their mother.",
+   "ko": "프란체스카의 남동생은 어머니에게 콩팥 하나를 기증했어요.",
+   "blank": "rene",
+   "src": "made"
+  }
+ ],
  "w|reparto": [
   {
    "text": "Lavoro nel reparto vendite.",
@@ -35391,6 +35887,22 @@
    "en": "They invited the reverend to the ceremony.",
    "ko": "예식에 목사님을 초대했어.",
    "blank": "reverendo"
+  }
+ ],
+ "w|riabilitazione": [
+  {
+   "text": "Nella sala d'attesa Paolo parla con un uomo che fa riabilitazione dopo un incidente in moto.",
+   "en": "In the waiting room Paolo talks with a man doing rehabilitation after a motorbike accident.",
+   "ko": "대기실에서 파올로는 오토바이 사고 후 재활 중인 남자와 이야기해요.",
+   "blank": "riabilitazione",
+   "src": "made"
+  },
+  {
+   "text": "Un collega di Francesca è tornato al lavoro dopo tre mesi di riabilitazione alla schiena.",
+   "en": "A colleague of Francesca's came back to work after three months of back rehabilitation.",
+   "ko": "프란체스카의 동료가 석 달간 허리 재활을 마치고 일터로 돌아왔어요.",
+   "blank": "riabilitazione",
+   "src": "made"
   }
  ],
  "w|riavere": [
@@ -37517,6 +38029,22 @@
    "blank": "sangue"
   }
  ],
+ "w|sanguinare": [
+  {
+   "text": "Dopo la pulizia, le gengive di Paolo cominciano a sanguinare un po'.",
+   "en": "After the cleaning, Paolo's gums start to bleed a little.",
+   "ko": "스케일링 후에 파올로의 잇몸에서 피가 조금 나기 시작해요.",
+   "blank": "sanguinare",
+   "src": "made"
+  },
+  {
+   "text": "Una scheggia di metallo ha fatto sanguinare la mano di Francesca.",
+   "en": "A metal splinter made Francesca's hand bleed.",
+   "ko": "쇳조각 때문에 프란체스카의 손에서 피가 났어요.",
+   "blank": "sanguinare",
+   "src": "made"
+  }
+ ],
  "w|sano": [
   {
    "text": "Mangiare verdure è sano.",
@@ -37821,6 +38349,22 @@
    "en": "This shoe is tight on me.",
    "ko": "이 신발이 너무 꽉 껴.",
    "blank": "scarpa"
+  }
+ ],
+ "w|scatenare": [
+  {
+   "text": "Un dente sensibile può scatenare un dolore fortissimo quando Paolo beve qualcosa di freddo.",
+   "en": "A sensitive tooth can trigger very sharp pain when Paolo drinks something cold.",
+   "ko": "민감한 이 때문에 파올로는 찬 걸 마시면 엄청난 통증이 일어날 수 있어요.",
+   "blank": "scatenare",
+   "src": "made"
+  },
+  {
+   "text": "La notizia dei licenziamenti potrebbe scatenare uno sciopero nella fabbrica di Francesca.",
+   "en": "The news of the layoffs could trigger a strike at Francesca's factory.",
+   "ko": "해고 소식이 프란체스카의 공장에서 파업을 일으킬 수도 있어요.",
+   "blank": "scatenare",
+   "src": "made"
   }
  ],
  "w|scatola": [
@@ -40375,6 +40919,22 @@
    "blank": "smesso"
   }
  ],
+ "w|sobrio": [
+  {
+   "text": "Lo studio dove va Paolo è sobrio ed elegante, tutto bianco e grigio.",
+   "en": "The practice Paolo goes to is plain and elegant, all white and grey.",
+   "ko": "파올로가 다니는 치과는 하얗고 회색으로 단정하고 우아해요.",
+   "blank": "sobrio",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha uno stile sobrio: tuta blu, capelli raccolti e niente gioielli.",
+   "en": "Francesca has a simple style: blue overalls, hair tied back and no jewellery.",
+   "ko": "프란체스카는 수수한 차림이에요. 파란 작업복에 머리를 묶고 장신구는 안 해요.",
+   "blank": "sobrio",
+   "src": "made"
+  }
+ ],
  "w|soccorso": [
   {
    "text": "Hanno chiamato i soccorsi dopo l'incidente.",
@@ -40945,6 +41505,22 @@
    "en": "They survived the harsh winter.",
    "ko": "그들은 혹독한 겨울을 견뎌냈어.",
    "blank": "sopravvissuti"
+  }
+ ],
+ "w|sordo": [
+  {
+   "text": "Il dentista parla forte perché il paziente prima di Paolo è un po' sordo.",
+   "en": "The dentist talks loudly because the patient before Paolo is a bit deaf.",
+   "ko": "파올로 앞 환자가 귀가 좀 어두워서 치과 의사가 크게 말해요.",
+   "blank": "sordo",
+   "src": "made"
+  },
+  {
+   "text": "Senza le cuffie, Francesca sarebbe già mezza sorda per il rumore delle presse.",
+   "en": "Without ear protectors, Francesca would already be half deaf from the noise of the presses.",
+   "ko": "귀마개가 없었다면 프란체스카는 프레스 소음 때문에 벌써 귀가 반쯤 먹었을 거예요.",
+   "blank": "sorda",
+   "src": "made"
   }
  ],
  "w|sorella": [
@@ -42997,6 +43573,22 @@
    "blank": "sud"
   }
  ],
+ "w|sudare": [
+  {
+   "text": "Sulla poltrona del dentista Paolo comincia sempre a sudare.",
+   "en": "In the dentist's chair Paolo always starts sweating.",
+   "ko": "치과 의자에 앉으면 파올로는 늘 땀이 나기 시작해요.",
+   "blank": "sudare",
+   "src": "made"
+  },
+  {
+   "text": "Vicino ai forni Francesca comincia a sudare dopo pochi minuti.",
+   "en": "Near the furnaces Francesca starts sweating after a few minutes.",
+   "ko": "용광로 근처에서 프란체스카는 몇 분 만에 땀이 나기 시작해요.",
+   "blank": "sudare",
+   "src": "made"
+  }
+ ],
  "w|sufficiente": [
   {
    "text": "Il tempo non è sufficiente per finire.",
@@ -44015,6 +44607,22 @@
    "en": "Yesterday's thunderstorm was violent.",
    "ko": "어제 뇌우가 거셌어.",
    "blank": "temporale"
+  }
+ ],
+ "w|temporaneo": [
+  {
+   "text": "Per ora il dentista ha messo a Paolo una corona temporanea.",
+   "en": "For now the dentist has given Paolo a temporary crown.",
+   "ko": "지금은 치과 의사가 파올로에게 임시 크라운을 씌워 줬어요.",
+   "blank": "temporanea",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha un contratto temporaneo, ma spera di restare in fabbrica.",
+   "en": "Francesca has a temporary contract, but she hopes to stay at the factory.",
+   "ko": "프란체스카는 임시 계약직이지만 공장에 남고 싶어 해요.",
+   "blank": "temporaneo",
+   "src": "made"
   }
  ],
  "w|tenda": [
@@ -45161,6 +45769,22 @@
    "en": "I'm looking for a quiet spot.",
    "ko": "조용한 곳을 찾고 있어.",
    "blank": "tranquillo"
+  }
+ ],
+ "w|trapianto": [
+  {
+   "text": "La sorella di Paolo ha fatto un trapianto di capelli e ne parla a tutti.",
+   "en": "Paolo's sister had a hair transplant and talks about it to everyone.",
+   "ko": "파올로의 누나는 모발 이식을 받고 모두에게 그 얘기를 해요.",
+   "blank": "trapianto",
+   "src": "made"
+  },
+  {
+   "text": "Il marito di Francesca aspetta da un anno un trapianto di fegato.",
+   "en": "Francesca's husband has been waiting a year for a liver transplant.",
+   "ko": "프란체스카의 남편은 일 년째 간 이식을 기다리고 있어요.",
+   "blank": "trapianto",
+   "src": "made"
   }
  ],
  "w|trappola": [
@@ -47677,6 +48301,22 @@
    "en": "He turned the page and doesn't talk about it anymore.",
    "ko": "그는 넘기고 더 이상 말하지 않아.",
    "blank": "voltato"
+  }
+ ],
+ "w|volto": [
+  {
+   "text": "Con l'anestesia, Paolo non sente più metà del volto.",
+   "en": "With the anaesthetic, Paolo can't feel half his face anymore.",
+   "ko": "마취 때문에 파올로는 얼굴 반쪽에 감각이 없어요.",
+   "blank": "volto",
+   "src": "made"
+  },
+  {
+   "text": "Alla fine del turno Francesca ha il volto stanco ma soddisfatto.",
+   "en": "At the end of the shift Francesca's face is tired but satisfied.",
+   "ko": "근무가 끝나면 프란체스카의 얼굴은 지쳤지만 만족스러워 보여요.",
+   "blank": "volto",
+   "src": "made"
   }
  ],
  "w|volume": [

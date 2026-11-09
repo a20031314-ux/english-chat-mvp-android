@@ -41,6 +41,22 @@
    "blank": "अकेला"
   }
  ],
+ "w|अकेलापन": [
+  {
+   "text": "भाई से झगड़े के बाद मीना को हॉस्टल में अकेलापन खाने लगा।",
+   "en": "After the fight with her brother, loneliness began to eat at Meena in the hostel.",
+   "ko": "오빠와 다툰 뒤 미나는 기숙사에서 외로움에 시달렸어요.",
+   "blank": "अकेलापन",
+   "src": "made"
+  },
+  {
+   "text": "बड़े शहर में अंजलि का अकेलापन स्टोर की चहल-पहल में कुछ कम हो जाता है।",
+   "en": "In the big city Anjali's loneliness eases a little in the bustle of the store.",
+   "ko": "대도시에서 안잘리의 외로움은 백화점의 북적임 속에 조금 덜해져요.",
+   "blank": "अकेलापन",
+   "src": "made"
+  }
+ ],
  "w|अकेले": [
   {
    "text": "अकेले मत घूमना रात को।",
@@ -340,6 +356,22 @@
    "en": "Kavita kept getting calls on her phone from an unknown number.",
    "ko": "카비타 휴대폰으로 모르는 번호에서 계속 전화가 왔어요.",
    "blank": "अज्ञात",
+   "src": "made"
+  }
+ ],
+ "w|अटारी": [
+  {
+   "text": "बचपन में रवि और मीना अटारी पर छिपकर कहानियाँ पढ़ते थे।",
+   "en": "As kids Ravi and Meena used to hide in the attic and read stories.",
+   "ko": "어릴 때 라비와 미나는 다락방에 숨어 이야기책을 읽곤 했어요.",
+   "blank": "अटारी",
+   "src": "made"
+  },
+  {
+   "text": "पुरानी चीज़ों वाले हिस्से में अटारी की एक नक्काशीदार खिड़की बिक रही थी।",
+   "en": "In the antiques section a carved attic window was for sale.",
+   "ko": "골동품 코너에서 다락방 조각 창문이 팔리고 있었어요.",
+   "blank": "अटारी",
    "src": "made"
   }
  ],
@@ -643,6 +675,22 @@
    "en": "Blind faith sometimes causes harm.",
    "ko": "맹신은 때로 해를 끼쳐.",
    "blank": "अंधा"
+  }
+ ],
+ "w|अंधापन": [
+  {
+   "text": "स्वास्थ्य पन्ने पर लेख छपा कि समय पर इलाज से अंधापन रोका जा सकता है।",
+   "en": "An article on the health page said blindness can be prevented with timely treatment.",
+   "ko": "건강 면에 제때 치료하면 실명을 막을 수 있다는 기사가 실렸어요.",
+   "blank": "अंधापन",
+   "src": "made"
+  },
+  {
+   "text": "वेल्डिंग की चमक से अंधापन भी हो सकता है, इसलिए चश्मा ज़रूरी है।",
+   "en": "Welding glare can even cause blindness, so goggles are a must.",
+   "ko": "용접 불빛은 실명까지 일으킬 수 있어서 보안경이 꼭 필요해요.",
+   "blank": "अंधापन",
+   "src": "made"
   }
  ],
  "w|अधिक": [
@@ -1025,6 +1073,22 @@
    "blank": "अनुवाद"
   }
  ],
+ "w|अनुवादक": [
+  {
+   "text": "गलतफ़हमी तब हुई जब रवि ने मीना को एक अनुवादक से फ़ोन पर हँसते सुना।",
+   "en": "The misunderstanding began when Ravi heard Meena laughing on the phone with a translator.",
+   "ko": "오해는 라비가 미나가 번역가와 통화하며 웃는 걸 들으면서 시작됐어요.",
+   "blank": "अनुवादक",
+   "src": "made"
+  },
+  {
+   "text": "विदेशी पर्यटकों के लिए स्टोर ने एक अनुवादक रखा है।",
+   "en": "The store has hired an interpreter for foreign tourists.",
+   "ko": "백화점은 외국인 관광객을 위해 통역사를 두었어요.",
+   "blank": "अनुवादक",
+   "src": "made"
+  }
+ ],
  "w|अनेक": [
   {
    "text": "अनेक लोग कतार में खड़े थे।",
@@ -1277,6 +1341,22 @@
    "en": "The young actress won the award.",
    "ko": "젊은 여배우가 상을 받았어.",
    "blank": "अभिनेत्री"
+  }
+ ],
+ "w|अभिमान": [
+  {
+   "text": "रवि के अभिमान ने उसे पहले माफ़ी माँगने से रोक दिया।",
+   "en": "Ravi's pride stopped him from apologizing first.",
+   "ko": "라비는 자존심 때문에 먼저 사과하지 못했어요.",
+   "blank": "अभिमान",
+   "src": "made"
+  },
+  {
+   "text": "एक अमीर ग्राहक अभिमान से बोली कि उसे सबसे महँगी साड़ी चाहिए।",
+   "en": "A rich customer said haughtily that she wanted the most expensive sari.",
+   "ko": "한 부유한 손님이 거만하게 가장 비싼 사리를 달라고 했어요.",
+   "blank": "अभिमान",
+   "src": "made"
   }
  ],
  "w|अभियान": [
@@ -1673,6 +1753,22 @@
    "en": "A portion of the profit will go to charity.",
    "ko": "이익의 일부가 기부에 쓰일 거야.",
    "blank": "अंश"
+  }
+ ],
+ "w|अश्लील": [
+  {
+   "text": "पुलिस ने अश्लील सामग्री फैलाने वाली वेबसाइटों पर कार्रवाई की, यह ख़बर छोटी-सी छपी।",
+   "en": "The police took action against websites spreading obscene content; the story ran as a short item.",
+   "ko": "경찰이 음란물을 퍼뜨리는 웹사이트를 단속했다는 소식이 짧게 실렸어요.",
+   "blank": "अश्लील",
+   "src": "made"
+  },
+  {
+   "text": "साइट की दीवार पर किसी ने अश्लील बातें लिख दीं, तो कविता ने तुरंत पुतवा दीं।",
+   "en": "Someone wrote obscene words on the site wall, so Kavita had them painted over at once.",
+   "ko": "누가 현장 벽에 음란한 낙서를 하자 카비타가 바로 페인트로 덮었어요.",
+   "blank": "अश्लील",
+   "src": "made"
   }
  ],
  "w|असफल": [
@@ -2427,6 +2523,22 @@
    "blank": "आधारित"
   }
  ],
+ "w|आधिकारिक": [
+  {
+   "text": "सुनील ने कहा कि आधिकारिक बयान आने तक ख़बर नहीं छपेगी।",
+   "en": "Sunil said the story wouldn't run until an official statement came.",
+   "ko": "수닐은 공식 발표가 나오기 전까지 기사를 내지 않겠다고 했어요.",
+   "blank": "आधिकारिक",
+   "src": "made"
+  },
+  {
+   "text": "कविता को निर्माण की आधिकारिक मंज़ूरी पिछले हफ़्ते मिली।",
+   "en": "Kavita received official approval for the construction last week.",
+   "ko": "카비타는 지난주에 공사 공식 허가를 받았어요.",
+   "blank": "आधिकारिक",
+   "src": "made"
+  }
+ ],
  "w|आँधी": [
   {
    "text": "शाम को तेज़ आँधी चली।",
@@ -2481,6 +2593,22 @@
    "en": "A balance of modernity and tradition is needed.",
    "ko": "현대성과 전통의 균형이 필요해.",
    "blank": "आधुनिकता"
+  }
+ ],
+ "w|आध्यात्मिक": [
+  {
+   "text": "रविवार के पन्ने पर पहाड़ों की आध्यात्मिक यात्राओं पर एक लेख था।",
+   "en": "The Sunday page had an article on spiritual journeys in the mountains.",
+   "ko": "일요판에 산속 영적 여행에 관한 기사가 있었어요.",
+   "blank": "आध्यात्मिक",
+   "src": "made"
+  },
+  {
+   "text": "पहाड़ पर बन रहे आध्यात्मिक केंद्र का काम भी कविता की कंपनी के पास है।",
+   "en": "Kavita's company also has the job of building the spiritual center on the hill.",
+   "ko": "언덕 위에 짓는 명상 센터 공사도 카비타 회사가 맡고 있어요.",
+   "blank": "आध्यात्मिक",
+   "src": "made"
   }
  ],
  "w|आनंद": [
@@ -3109,6 +3237,22 @@
    "en": "Wiping the child's tears, mother smiled.",
    "ko": "아이 눈물을 닦아 주고 엄마가 웃었어.",
    "blank": "आँसू"
+  }
+ ],
+ "w|आस्तीन": [
+  {
+   "text": "रवि ने आस्तीन से आँसू पोंछे ताकि कोई देख न ले।",
+   "en": "Ravi wiped his tears with his sleeve so no one would see.",
+   "ko": "라비는 아무도 못 보게 소매로 눈물을 훔쳤어요.",
+   "blank": "आस्तीन",
+   "src": "made"
+  },
+  {
+   "text": "दर्ज़ी ने कुर्ते की आस्तीन दो इंच छोटी कर दी।",
+   "en": "The tailor shortened the kurta's sleeves by two inches.",
+   "ko": "재단사가 쿠르타 소매를 두 인치 줄여 줬어요.",
+   "blank": "आस्तीन",
+   "src": "made"
   }
  ],
  "w|आस्था": [
@@ -5667,6 +5811,22 @@
    "blank": "कथा"
   }
  ],
+ "w|कथित": [
+  {
+   "text": "सुनील ने सावधानी से लिखा कि यह कथित घोटाला अभी जाँच में है।",
+   "en": "Sunil carefully wrote that the alleged scam is still under investigation.",
+   "ko": "수닐은 그 의혹 사건이 아직 조사 중이라고 조심스럽게 썼어요.",
+   "blank": "कथित",
+   "src": "made"
+  },
+  {
+   "text": "कथित तौर पर पड़ोस की इमारत बिना अनुमति के बनी थी।",
+   "en": "The neighboring building was allegedly built without permission.",
+   "ko": "이웃 건물은 허가 없이 지어졌다는 의혹이 있었어요.",
+   "blank": "कथित",
+   "src": "made"
+  }
+ ],
  "w|कदम": [
   {
    "text": "सड़ी हुई सीढ़ी पर हर कदम संभलकर रखना पड़ता था।",
@@ -7539,6 +7699,22 @@
    "src": "made"
   }
  ],
+ "w|कुंडी": [
+  {
+   "text": "मीना ने गुस्से में अपने कमरे की कुंडी अंदर से लगा ली।",
+   "en": "In anger Meena latched her room door from inside.",
+   "ko": "미나는 화가 나서 방문 걸쇠를 안에서 걸어 잠갔어요.",
+   "blank": "कुंडी",
+   "src": "made"
+  },
+  {
+   "text": "हार्डवेयर काउंटर पर पीतल की कुंडी और ताले रखे थे।",
+   "en": "Brass latches and locks were on display at the hardware counter.",
+   "ko": "철물 코너에 놋쇠 걸쇠와 자물쇠가 놓여 있었어요.",
+   "blank": "कुंडी",
+   "src": "made"
+  }
+ ],
  "w|कुत्ता": [
   {
    "text": "पार्क में कुत्ता भौंक रहा था।",
@@ -7749,6 +7925,22 @@
    "en": "Please wait a minute.",
    "ko": "잠깐만 기다려 주세요.",
    "blank": "कृपया"
+  }
+ ],
+ "w|कृपा": [
+  {
+   "text": "दादी बोलीं कि भगवान की कृपा है जो दोनों फिर से हँस रहे हैं।",
+   "en": "Grandma said it was by God's grace that the two were laughing again.",
+   "ko": "할머니는 둘이 다시 웃는 게 다 신의 은총이라고 하셨어요.",
+   "blank": "कृपा",
+   "src": "made"
+  },
+  {
+   "text": "ग्राहक ने अंजलि से कहा कि आपकी बड़ी कृपा होगी अगर यह पैक कर दें।",
+   "en": "The customer told Anjali it would be very kind of her to pack it up.",
+   "ko": "손님은 안잘리에게 이걸 포장해 주시면 정말 고맙겠다고 했어요.",
+   "blank": "कृपा",
+   "src": "made"
   }
  ],
  "w|कृषि": [
@@ -8207,6 +8399,22 @@
    "blank": "कैलेंडर"
   }
  ],
+ "w|कैलोरी": [
+  {
+   "text": "रविवार के अंक में त्योहार की मिठाइयों की कैलोरी पर एक मज़ेदार लेख था।",
+   "en": "The Sunday edition had a fun piece on the calories in festival sweets.",
+   "ko": "일요판에 명절 과자의 칼로리에 관한 재미있는 기사가 있었어요.",
+   "blank": "कैलोरी",
+   "src": "made"
+  },
+  {
+   "text": "धूप में ईंट ढोने से इतनी कैलोरी जलती है कि मज़दूर दो बार खाना खाते हैं।",
+   "en": "Carrying bricks in the sun burns so many calories that the workers eat twice.",
+   "ko": "햇볕 아래 벽돌을 나르면 칼로리가 많이 타서 인부들은 밥을 두 번 먹어요.",
+   "blank": "कैलोरी",
+   "src": "made"
+  }
+ ],
  "w|कैंसर": [
   {
    "text": "कैंसर की जाँच समय पर करवा लो।",
@@ -8305,6 +8513,22 @@
    "en": "Don't miss an important call.",
    "ko": "중요한 전화를 놓치지 마.",
    "blank": "कॉल"
+  }
+ ],
+ "w|कॉलर": [
+  {
+   "text": "मीना ने भाई की कमीज़ का कॉलर ठीक करते हुए मुस्कुराकर बात शुरू की।",
+   "en": "Straightening her brother's shirt collar, Meena smiled and started talking.",
+   "ko": "미나는 오빠 셔츠 깃을 바로잡아 주며 웃으면서 말을 꺼냈어요.",
+   "blank": "कॉलर",
+   "src": "made"
+  },
+  {
+   "text": "ग्राहक ने कहा कि इस शर्ट का कॉलर गर्दन पर चुभता है।",
+   "en": "The customer said this shirt's collar scratches his neck.",
+   "ko": "손님은 이 셔츠 깃이 목을 찌른다고 했어요.",
+   "blank": "कॉलर",
+   "src": "made"
   }
  ],
  "w|कॉलेज": [
@@ -8423,6 +8647,22 @@
    "src": "made"
   }
  ],
+ "w|कोठी": [
+  {
+   "text": "दादाजी की पुरानी कोठी में तीनों भाई-बहन गर्मी की छुट्टियाँ बिताते थे।",
+   "en": "The three siblings used to spend their summer holidays at Grandpa's old mansion.",
+   "ko": "삼 남매는 할아버지의 오래된 저택에서 여름 방학을 보내곤 했어요.",
+   "blank": "कोठी",
+   "src": "made"
+  },
+  {
+   "text": "एक ग्राहक ने अपनी नई कोठी के लिए पूरे सोफ़ा सेट का ऑर्डर दिया।",
+   "en": "A customer ordered a full sofa set for his new bungalow.",
+   "ko": "한 손님이 새 저택에 둘 소파 세트를 통째로 주문했어요.",
+   "blank": "कोठी",
+   "src": "made"
+  }
+ ],
  "w|कोड": [
   {
    "text": "मशीन की स्क्रीन पर एक एरर कोड बार-बार आ रहा था।",
@@ -8509,6 +8749,22 @@
    "en": "This course lasts three months.",
    "ko": "이 코스는 석 달짜리야.",
    "blank": "कोर्स"
+  }
+ ],
+ "w|कोलेस्ट्रॉल": [
+  {
+   "text": "सुनील ने तले खाने और कोलेस्ट्रॉल पर विशेषज्ञ की राय छापी।",
+   "en": "Sunil printed an expert's opinion on fried food and cholesterol.",
+   "ko": "수닐은 튀긴 음식과 콜레스테롤에 대한 전문가 의견을 실었어요.",
+   "blank": "कोलेस्ट्रॉल",
+   "src": "made"
+  },
+  {
+   "text": "कंपनी के हेल्थ कैंप में सबका कोलेस्ट्रॉल भी जाँचा गया।",
+   "en": "At the company health camp everyone's cholesterol was checked too.",
+   "ko": "회사 건강 검진 때 모두의 콜레스테롤도 쟀어요.",
+   "blank": "कोलेस्ट्रॉल",
+   "src": "made"
   }
  ],
  "w|कोशिश": [
@@ -8729,6 +8985,22 @@
    "en": "The farmers' revolution is recorded in history.",
    "ko": "농민 혁명은 역사에 남아 있어.",
    "blank": "क्रांति"
+  }
+ ],
+ "w|क्रांतिकारी": [
+  {
+   "text": "अख़बार के संस्थापक आज़ादी की लड़ाई में क्रांतिकारी लेख लिखते थे।",
+   "en": "The paper's founder used to write revolutionary articles during the freedom struggle.",
+   "ko": "신문 창립자는 독립운동 시절 혁명적인 글을 썼어요.",
+   "blank": "क्रांतिकारी",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने ईंटों की जगह मिट्टी के ब्लॉक इस्तेमाल करने का क्रांतिकारी तरीका अपनाया।",
+   "en": "Kavita adopted the revolutionary method of using earth blocks instead of bricks.",
+   "ko": "카비타는 벽돌 대신 흙 블록을 쓰는 획기적인 방법을 도입했어요.",
+   "blank": "क्रांतिकारी",
+   "src": "made"
   }
  ],
  "w|क्रिकेट": [
@@ -9325,6 +9597,22 @@
    "blank": "खाए"
   }
  ],
+ "w|ख़ामोशी": [
+  {
+   "text": "खाने की मेज़ पर रवि और मीना के बीच अजीब-सी ख़ामोशी छाई रही।",
+   "en": "An awkward silence hung between Ravi and Meena at the dinner table.",
+   "ko": "저녁 식탁에서 라비와 미나 사이에 어색한 침묵이 흘렀어요.",
+   "blank": "ख़ामोशी",
+   "src": "made"
+  },
+  {
+   "text": "स्टोर बंद होने के बाद पूरे फ़्लोर पर अजीब-सी ख़ामोशी छा जाती है।",
+   "en": "After the store closes, an eerie silence settles over the whole floor.",
+   "ko": "백화점 문을 닫고 나면 층 전체에 묘한 고요가 내려앉아요.",
+   "blank": "ख़ामोशी",
+   "src": "made"
+  }
+ ],
  "w|ख़ाली": [
   {
    "text": "कमरा बिल्कुल ख़ाली है।",
@@ -9919,6 +10207,22 @@
    "en": "His dream is to become a doctor.",
    "ko": "그 사람 꿈은 의사가 되는 거야.",
    "blank": "ख़्वाब"
+  }
+ ],
+ "w|ख़्वाहिश": [
+  {
+   "text": "मीना की बस इतनी ख़्वाहिश थी कि रवि एक बार उसकी बात सुन ले।",
+   "en": "All Meena wished was for Ravi to listen to her just once.",
+   "ko": "미나의 바람은 라비가 한 번만이라도 자기 말을 들어 주는 것뿐이었어요.",
+   "blank": "ख़्वाहिश",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की ख़्वाहिश है कि एक दिन वह इस स्टोर की मैनेजर बने।",
+   "en": "Anjali's wish is to one day become manager of this store.",
+   "ko": "안잘리의 바람은 언젠가 이 백화점의 매니저가 되는 거예요.",
+   "blank": "ख़्वाहिश",
+   "src": "made"
   }
  ],
  "w|गंजा": [
@@ -11199,6 +11503,22 @@
    "blank": "गैर"
   }
  ],
+ "w|गैराज": [
+  {
+   "text": "रवि गुस्से में गैराज में जाकर अपनी साइकिल ठीक करने लगा।",
+   "en": "In anger Ravi went into the garage and started fixing his bicycle.",
+   "ko": "라비는 화가 나서 차고에 들어가 자전거를 고치기 시작했어요.",
+   "blank": "गैराज",
+   "src": "made"
+  },
+  {
+   "text": "स्टोर के गैराज में पार्किंग का पहला घंटा मुफ़्त है।",
+   "en": "The first hour of parking in the store's garage is free.",
+   "ko": "백화점 주차장은 첫 한 시간이 무료예요.",
+   "blank": "गैराज",
+   "src": "made"
+  }
+ ],
  "w|गैस": [
   {
    "text": "रसोई में गैस खत्म हो गई।",
@@ -11918,6 +12238,22 @@
    "en": "The municipal corporation has declared a holiday at the market on Sunday.",
    "ko": "시청은 일요일을 시장 휴일로 정했어요.",
    "blank": "घोषित",
+   "src": "made"
+  }
+ ],
+ "w|घोषित करना": [
+  {
+   "text": "चुनाव आयोग ने मतदान की तारीख़ घोषित की तो सुनील तुरंत लिखने बैठ गया।",
+   "en": "When the election commission announced the polling date, Sunil sat down to write right away.",
+   "ko": "선거관리위원회가 투표일을 발표하자 수닐은 바로 기사를 쓰기 시작했어요.",
+   "blank": "घोषित की",
+   "src": "made"
+  },
+  {
+   "text": "भारी बारिश के कारण कंपनी ने दो दिन काम बंद घोषित कर दिया।",
+   "en": "Due to heavy rain the company declared work suspended for two days.",
+   "ko": "폭우 때문에 회사는 이틀 동안 공사 중단을 발표했어요.",
+   "blank": "घोषित कर",
    "src": "made"
   }
  ],
@@ -13343,6 +13679,38 @@
    "blank": "चेक"
   }
  ],
+ "w|चेचक": [
+  {
+   "text": "अख़बार के इतिहास वाले पन्ने पर बताया गया कि चेचक का टीका कैसे गाँव-गाँव पहुँचा।",
+   "en": "The paper's history page described how the smallpox vaccine reached every village.",
+   "ko": "신문 역사 면에 천연두 백신이 어떻게 마을마다 퍼졌는지 실렸어요.",
+   "blank": "चेचक",
+   "src": "made"
+  },
+  {
+   "text": "पुराने अस्पताल की नींव खोदते समय चेचक वार्ड का एक पुराना बोर्ड मिला।",
+   "en": "While digging the old hospital's foundation, an old smallpox ward sign turned up.",
+   "ko": "옛 병원 터를 파다가 천연두 병동의 낡은 표지판이 나왔어요.",
+   "blank": "चेचक",
+   "src": "made"
+  }
+ ],
+ "w|चेतावनी": [
+  {
+   "text": "मौसम विभाग की भारी बारिश की चेतावनी पहले पन्ने पर छपी।",
+   "en": "The weather department's warning of heavy rain was printed on the front page.",
+   "ko": "기상청의 폭우 경보가 1면에 실렸어요.",
+   "blank": "चेतावनी",
+   "src": "made"
+  },
+  {
+   "text": "हेलमेट न पहनने वाले मज़दूर को कविता ने आख़िरी चेतावनी दी।",
+   "en": "Kavita gave a final warning to the worker who wasn't wearing a helmet.",
+   "ko": "카비타는 안전모를 안 쓴 인부에게 마지막 경고를 했어요.",
+   "blank": "चेतावनी",
+   "src": "made"
+  }
+ ],
  "w|चेहरा": [
   {
    "text": "धूप से उसका चेहरा लाल हो गया।",
@@ -13512,6 +13880,22 @@
    "en": "Priya bought a square table for the living room.",
    "ko": "프리야는 거실에 둘 네모난 탁자를 샀어요.",
    "blank": "चौकोर",
+   "src": "made"
+  }
+ ],
+ "w|चौखट": [
+  {
+   "text": "मीना देर तक दरवाज़े की चौखट पर खड़ी रवि का इंतज़ार करती रही।",
+   "en": "Meena stood in the doorway for a long time waiting for Ravi.",
+   "ko": "미나는 문간에 오래 서서 라비를 기다렸어요.",
+   "blank": "चौखट",
+   "src": "made"
+  },
+  {
+   "text": "फ़र्नीचर वाले हिस्से में सागौन की लकड़ी की चौखट सबको पसंद आई।",
+   "en": "In the furniture section everyone liked the teak door frame.",
+   "ko": "가구 코너에서 티크 나무 문틀이 다들 마음에 들어 했어요.",
+   "blank": "चौखट",
    "src": "made"
   }
  ],
@@ -14295,6 +14679,22 @@
    "blank": "जज"
   }
  ],
+ "w|जज़्बात": [
+  {
+   "text": "रवि अपने जज़्बात शब्दों में बयान करने में हमेशा कच्चा रहा है।",
+   "en": "Ravi has always been bad at putting his feelings into words.",
+   "ko": "라비는 늘 자기 감정을 말로 표현하는 데 서툴렀어요.",
+   "blank": "जज़्बात",
+   "src": "made"
+  },
+  {
+   "text": "मैनेजर ने कहा कि ग्राहकों के जज़्बात को समझना भी सेल्स का हिस्सा है।",
+   "en": "The manager said understanding customers' feelings is also part of sales.",
+   "ko": "매니저는 손님 마음을 헤아리는 것도 판매의 일부라고 했어요.",
+   "blank": "जज़्बात",
+   "src": "made"
+  }
+ ],
  "w|जड़": [
   {
    "text": "पेड़ की जड़ मिट्टी के नीचे छिपी है।",
@@ -14662,6 +15062,22 @@
    "en": "A big poster of the country's highest waterfall hangs on the wall.",
    "ko": "벽에는 나라에서 가장 높은 폭포의 큰 포스터가 붙어 있어요.",
    "blank": "जलप्रपात",
+   "src": "made"
+  }
+ ],
+ "w|जलमार्ग": [
+  {
+   "text": "सरकार नदी को जलमार्ग बनाने की योजना पर काम कर रही है, यह ख़बर पहले पन्ने पर थी।",
+   "en": "The news that the government is working on a plan to make the river a waterway was on the front page.",
+   "ko": "정부가 강을 수로로 만드는 계획을 추진한다는 소식이 1면에 실렸어요.",
+   "blank": "जलमार्ग",
+   "src": "made"
+  },
+  {
+   "text": "कविता की कंपनी नए जलमार्ग के किनारे घाट बना रही है।",
+   "en": "Kavita's company is building a jetty along the new waterway.",
+   "ko": "카비타의 회사는 새 수로를 따라 선착장을 짓고 있어요.",
+   "blank": "जलमार्ग",
    "src": "made"
   }
  ],
@@ -15185,6 +15601,22 @@
    "src": "made"
   }
  ],
+ "w|ज़िप": [
+  {
+   "text": "मीना के बैग की ज़िप अटक गई, तो रवि ने चुपचाप उसे ठीक कर दिया।",
+   "en": "Meena's bag zipper got stuck, so Ravi quietly fixed it.",
+   "ko": "미나의 가방 지퍼가 걸리자 라비가 말없이 고쳐 줬어요.",
+   "blank": "ज़िप",
+   "src": "made"
+  },
+  {
+   "text": "लौटाई गई जैकेट की ज़िप टूटी हुई निकली।",
+   "en": "The zipper on the returned jacket turned out to be broken.",
+   "ko": "반품된 재킷의 지퍼가 고장 나 있었어요.",
+   "blank": "ज़िप",
+   "src": "made"
+  }
+ ],
  "w|ज़िम्मेदार": [
   {
    "text": "हर नागरिक ज़िम्मेदार होना चाहिए।",
@@ -15285,6 +15717,22 @@
    "en": "Yes, tell me, what do you need?",
    "ko": "네, 말씀하세요. 뭐가 필요하세요?",
    "blank": "जी"
+  }
+ ],
+ "w|जी लगना": [
+  {
+   "text": "झगड़े के बाद रवि का किसी काम में जी नहीं लगा।",
+   "en": "After the fight Ravi couldn't put his heart into anything.",
+   "ko": "다툰 뒤 라비는 무슨 일에도 마음이 붙지 않았어요.",
+   "blank": "जी नहीं लगा",
+   "src": "made"
+  },
+  {
+   "text": "शुरू में अंजलि का कपड़ों वाले काउंटर पर जी नहीं लगता था।",
+   "en": "At first Anjali didn't enjoy working at the clothing counter.",
+   "ko": "처음에 안잘리는 의류 계산대 일에 마음이 붙지 않았어요.",
+   "blank": "जी नहीं लगता",
+   "src": "made"
   }
  ],
  "w|जी हाँ": [
@@ -17143,6 +17591,22 @@
    "src": "made"
   }
  ],
+ "w|डाइट": [
+  {
+   "text": "संपादक ने हँसकर कहा कि वह सोमवार से डाइट शुरू करेंगे।",
+   "en": "The editor laughed and said he'd start a diet from Monday.",
+   "ko": "편집장은 월요일부터 다이어트를 하겠다며 웃었어요.",
+   "blank": "डाइट",
+   "src": "made"
+  },
+  {
+   "text": "कविता का इंजीनियर साथी डाइट पर है, फिर भी समोसे देखकर रुक नहीं पाता।",
+   "en": "Kavita's engineer colleague is on a diet, yet he can't resist samosas.",
+   "ko": "카비타의 동료 엔지니어는 다이어트 중인데도 사모사만 보면 못 참아요.",
+   "blank": "डाइट",
+   "src": "made"
+  }
+ ],
  "w|डाक": [
   {
    "text": "पत्र डाक से भेजना सुरक्षित है।",
@@ -17452,6 +17916,22 @@
    "en": "The logo of Pooja's app is a blue dolphin.",
    "ko": "푸자 앱의 로고는 파란 돌고래예요.",
    "blank": "डॉल्फ़िन",
+   "src": "made"
+  }
+ ],
+ "w|डोरी": [
+  {
+   "text": "अमन ने पतंग की डोरी रवि के हाथ में थमा दी और दोनों छत पर चले गए।",
+   "en": "Aman handed the kite string to Ravi and the two went up to the roof.",
+   "ko": "아만이 연줄을 라비 손에 쥐여 주자 둘은 옥상으로 올라갔어요.",
+   "blank": "डोरी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने परदे की डोरी खींचकर दिखाया कि वह कितनी आसानी से खुलता है।",
+   "en": "Anjali pulled the curtain cord to show how easily it opened.",
+   "ko": "안잘리는 커튼 줄을 당겨 얼마나 쉽게 열리는지 보여 줬어요.",
+   "blank": "डोरी",
    "src": "made"
   }
  ],
@@ -18233,6 +18713,22 @@
    "en": "The whole family is in the picture.",
    "ko": "사진에 온 가족이 있어.",
    "blank": "तस्वीर"
+  }
+ ],
+ "w|तहख़ाना": [
+  {
+   "text": "घर का तहख़ाना पुराने बक्सों से भरा था, और चिट्ठियाँ उन्हीं में मिलीं।",
+   "en": "The house's basement was full of old boxes, and the letters turned up in them.",
+   "ko": "집 지하실은 오래된 상자로 가득했고, 편지는 그 안에서 나왔어요.",
+   "blank": "तहख़ाना",
+   "src": "made"
+  },
+  {
+   "text": "स्टोर का सामान नीचे वाले तहख़ाने में रखा जाता है।",
+   "en": "The store's stock is kept in the basement below.",
+   "ko": "백화점 물건은 아래층 지하 창고에 보관해요.",
+   "blank": "तहख़ाने",
+   "src": "made"
   }
  ],
  "w|तहत": [
@@ -19024,6 +19520,22 @@
    "en": "Seema first wiped the rain-soaked phone with a dry towel.",
    "ko": "시마는 비에 젖은 휴대폰을 먼저 마른 수건으로 닦았어요.",
    "blank": "तौलिये",
+   "src": "made"
+  }
+ ],
+ "w|त्याग": [
+  {
+   "text": "माँ ने बच्चों की पढ़ाई के लिए अपने कई सपनों का त्याग किया था।",
+   "en": "Mom had given up many of her dreams for the children's education.",
+   "ko": "엄마는 아이들 공부를 위해 많은 꿈을 포기했었어요.",
+   "blank": "त्याग",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने घरवालों की ख़ातिर अपनी पढ़ाई का त्याग करके नौकरी शुरू की।",
+   "en": "Anjali gave up her studies for her family's sake and started working.",
+   "ko": "안잘리는 가족을 위해 학업을 포기하고 일을 시작했어요.",
+   "blank": "त्याग",
    "src": "made"
   }
  ],
@@ -19857,6 +20369,22 @@
    "en": "Fresh yogurt is kept in the fridge.",
    "ko": "신선한 요거트가 냉장고에 있어.",
    "blank": "दही"
+  }
+ ],
+ "w|दाई": [
+  {
+   "text": "रवि और मीना दोनों का जन्म गाँव की एक ही दाई के हाथों हुआ था।",
+   "en": "Ravi and Meena were both delivered by the same village midwife.",
+   "ko": "라비와 미나는 둘 다 같은 마을 산파 손에서 태어났어요.",
+   "blank": "दाई",
+   "src": "made"
+  },
+  {
+   "text": "बच्चों वाले फ़्लोर पर एक दाई जुड़वाँ बच्चों को घुमा रही थी।",
+   "en": "On the children's floor a nanny was walking twin babies around.",
+   "ko": "아동층에서 보모 한 명이 쌍둥이를 데리고 돌아다니고 있었어요.",
+   "blank": "दाई",
+   "src": "made"
   }
  ],
  "w|दाढ़ी": [
@@ -23017,6 +23545,22 @@
    "blank": "निर्यात"
   }
  ],
+ "w|निर्वाचन": [
+  {
+   "text": "निर्वाचन क्षेत्र की हर गली में सुनील ने लोगों से उनकी राय पूछी।",
+   "en": "Sunil asked people for their views in every street of the constituency.",
+   "ko": "수닐은 선거구 골목마다 사람들에게 의견을 물었어요.",
+   "blank": "निर्वाचन",
+   "src": "made"
+  },
+  {
+   "text": "निर्वाचन के दिन साइट बंद रही ताकि सब वोट डाल सकें।",
+   "en": "On election day the site stayed closed so everyone could vote.",
+   "ko": "선거일에는 모두 투표할 수 있게 현장이 문을 닫았어요.",
+   "blank": "निर्वाचन",
+   "src": "made"
+  }
+ ],
  "w|निवेदन": [
   {
    "text": "मैं एक छोटा निवेदन रखना चाहता हूँ।",
@@ -23479,6 +24023,22 @@
    "src": "made"
   }
  ],
+ "w|नौका": [
+  {
+   "text": "बाढ़ की ख़बर लेने सुनील एक छोटी नौका में गाँव तक गया।",
+   "en": "Sunil went to the village in a small boat to cover the flood.",
+   "ko": "수닐은 홍수를 취재하러 작은 배를 타고 마을까지 갔어요.",
+   "blank": "नौका",
+   "src": "made"
+  },
+  {
+   "text": "नदी पार सामान ले जाने के लिए एक बड़ी नौका किराए पर ली गई।",
+   "en": "A big boat was hired to carry materials across the river.",
+   "ko": "강 건너로 자재를 옮기려고 큰 배를 한 척 빌렸어요.",
+   "blank": "नौका",
+   "src": "made"
+  }
+ ],
  "w|नौवाँ": [
   {
    "text": "नौवाँ गाना सबको सबसे पसंद आया।",
@@ -23685,6 +24245,22 @@
    "src": "made"
   }
  ],
+ "w|पगडंडी": [
+  {
+   "text": "पहाड़ी गाँव तक पहुँचने के लिए सुनील को एक पतली पगडंडी पर घंटों चलना पड़ा।",
+   "en": "To reach the hill village, Sunil had to walk for hours on a narrow trail.",
+   "ko": "산골 마을에 가려고 수닐은 좁은 오솔길을 몇 시간이나 걸어야 했어요.",
+   "blank": "पगडंडी",
+   "src": "made"
+  },
+  {
+   "text": "साइट तक ट्रक पहुँचें, इसके लिए खेतों की पगडंडी को चौड़ा किया गया।",
+   "en": "The path through the fields was widened so trucks could reach the site.",
+   "ko": "트럭이 현장까지 들어오게 밭 사이 오솔길을 넓혔어요.",
+   "blank": "पगडंडी",
+   "src": "made"
+  }
+ ],
  "w|पचपन": [
   {
    "text": "बाबा की उम्र पचपन साल हो गई।",
@@ -23812,6 +24388,22 @@
    "en": "He deeply regretted his mistake.",
    "ko": "그는 자기 실수를 무척 후회했어요.",
    "blank": "पछताया",
+   "src": "made"
+  }
+ ],
+ "w|पछतावा": [
+  {
+   "text": "रात भर रवि को अपने कड़वे शब्दों पर पछतावा होता रहा।",
+   "en": "All night Ravi kept regretting his bitter words.",
+   "ko": "라비는 밤새 자기가 한 모진 말을 후회했어요.",
+   "blank": "पछतावा",
+   "src": "made"
+  },
+  {
+   "text": "सेल में कोट न ख़रीदने का पछतावा अंजलि को अब तक है।",
+   "en": "Anjali still regrets not buying the coat during the sale.",
+   "ko": "안잘리는 세일 때 코트를 안 산 걸 아직도 후회해요.",
+   "blank": "पछतावा",
    "src": "made"
   }
  ],
@@ -25277,6 +25869,22 @@
    "blank": "पाठ्यक्रम"
   }
  ],
+ "w|पात्र": [
+  {
+   "text": "सुनील ने लिखा कि योजना के पात्र परिवारों को अभी तक पैसा नहीं मिला।",
+   "en": "Sunil wrote that the families eligible for the scheme still haven't received money.",
+   "ko": "수닐은 지원 대상 가정들이 아직 돈을 받지 못했다고 썼어요.",
+   "blank": "पात्र",
+   "src": "made"
+  },
+  {
+   "text": "बीमा योजना के पात्र मज़दूरों की सूची कविता ने ख़ुद बनाई।",
+   "en": "Kavita herself made the list of workers eligible for the insurance scheme.",
+   "ko": "카비타는 보험 대상 인부 명단을 직접 만들었어요.",
+   "blank": "पात्र",
+   "src": "made"
+  }
+ ],
  "w|पाना": [
   {
    "text": "मैं समय पर स्टेशन पहुँच पाया।",
@@ -25639,6 +26247,22 @@
    "src": "made"
   }
  ],
+ "w|पिकनिक": [
+  {
+   "text": "अख़बार के दफ़्तर की सालाना पिकनिक इस बार झील के किनारे हुई।",
+   "en": "The newspaper office's annual picnic was held by the lake this time.",
+   "ko": "신문사의 연례 소풍은 이번에 호숫가에서 열렸어요.",
+   "blank": "पिकनिक",
+   "src": "made"
+  },
+  {
+   "text": "छत की ढलाई पूरी होने पर कविता ने पूरी टीम को पिकनिक पर ले जाने का वादा किया।",
+   "en": "When the roof casting was done, Kavita promised to take the whole team on a picnic.",
+   "ko": "지붕 타설이 끝나자 카비타는 팀 전체를 소풍에 데려가겠다고 약속했어요.",
+   "blank": "पिकनिक",
+   "src": "made"
+  }
+ ],
  "w|पिघलना": [
   {
    "text": "धूप में बर्फ़ पिघल गई।",
@@ -25869,6 +26493,22 @@
    "en": "A yellow leaf was hanging on the tree.",
    "ko": "나무에 노란 잎이 매달려 있었어.",
    "blank": "पीला"
+  }
+ ],
+ "w|पीलिया": [
+  {
+   "text": "सुनील ने शहर में पीलिया के बढ़ते मामलों पर एक रिपोर्ट लिखी।",
+   "en": "Sunil wrote a report on the rising cases of jaundice in the city.",
+   "ko": "수닐은 도시에서 늘어나는 황달 환자에 대한 기사를 썼어요.",
+   "blank": "पीलिया",
+   "src": "made"
+  },
+  {
+   "text": "साइट के एक मज़दूर को पीलिया हुआ, तो कविता ने उसे छुट्टी दे दी।",
+   "en": "One of the site workers got jaundice, so Kavita gave him leave.",
+   "ko": "현장 인부 한 명이 황달에 걸리자 카비타가 휴가를 줬어요.",
+   "blank": "पीलिया",
+   "src": "made"
   }
  ],
  "w|पीसना": [
@@ -26881,6 +27521,22 @@
    "blank": "प्रकाश"
   }
  ],
+ "w|प्रकाशक": [
+  {
+   "text": "मीना की कहानियाँ छापने के लिए एक प्रकाशक ने हाँ कह दी थी।",
+   "en": "A publisher had agreed to print Meena's stories.",
+   "ko": "한 출판사가 미나의 이야기를 내 주겠다고 했어요.",
+   "blank": "प्रकाशक",
+   "src": "made"
+  },
+  {
+   "text": "किताबों वाले हिस्से में एक प्रकाशक अपनी नई किताबों का स्टॉल लगा रहा था।",
+   "en": "In the book section a publisher was setting up a stall of new books.",
+   "ko": "서적 코너에서 한 출판사가 신간 판매대를 차리고 있었어요.",
+   "blank": "प्रकाशक",
+   "src": "made"
+  }
+ ],
  "w|प्रकाशित": [
   {
    "text": "फ़ैक्टरी की सुरक्षा पर अमित का लेख कंपनी की पत्रिका में प्रकाशित हुआ।",
@@ -27056,6 +27712,22 @@
    "en": "The director recognised Priya's talent at the very first meeting.",
    "ko": "감독은 첫 만남에서 바로 프리야의 재능을 알아봤어요.",
    "blank": "प्रतिभा",
+   "src": "made"
+  }
+ ],
+ "w|प्रतिमा": [
+  {
+   "text": "चौराहे पर स्वतंत्रता सेनानी की प्रतिमा का अनावरण कल होगा।",
+   "en": "The statue of the freedom fighter at the crossroads will be unveiled tomorrow.",
+   "ko": "내일 사거리에서 독립투사 동상 제막식이 열려요.",
+   "blank": "प्रतिमा",
+   "src": "made"
+  },
+  {
+   "text": "पार्क के बीच लगने वाली प्रतिमा के लिए कविता ने मज़बूत चबूतरा बनवाया।",
+   "en": "Kavita had a strong platform built for the statue to be placed in the park.",
+   "ko": "카비타는 공원 가운데 세울 동상을 위해 튼튼한 받침대를 만들게 했어요.",
+   "blank": "प्रतिमा",
    "src": "made"
   }
  ],
@@ -27581,6 +28253,22 @@
    "blank": "प्रसाद"
   }
  ],
+ "w|प्रसारण": [
+  {
+   "text": "चुनाव नतीजों का सीधा प्रसारण अख़बार की वेबसाइट पर भी चला।",
+   "en": "The live broadcast of the election results also ran on the paper's website.",
+   "ko": "선거 결과 생중계가 신문사 웹사이트에서도 나왔어요.",
+   "blank": "प्रसारण",
+   "src": "made"
+  },
+  {
+   "text": "फ़्लाईओवर के उद्घाटन का प्रसारण स्थानीय चैनल पर हुआ।",
+   "en": "The flyover's inauguration was broadcast on a local channel.",
+   "ko": "고가도로 개통식이 지역 방송에서 중계됐어요.",
+   "blank": "प्रसारण",
+   "src": "made"
+  }
+ ],
  "w|प्रसिद्ध": [
   {
    "text": "यह शहर अपने मंदिरों के लिए प्रसिद्ध है।",
@@ -27857,6 +28545,22 @@
    "en": "The lover sent flowers.",
    "ko": "연인이 꽃을 보냈어.",
    "blank": "प्रेमी"
+  }
+ ],
+ "w|प्रेरणा": [
+  {
+   "text": "मीना कहती है कि बचपन में रवि की कहानियाँ ही उसकी प्रेरणा थीं।",
+   "en": "Meena says Ravi's stories were her inspiration as a child.",
+   "ko": "미나는 어릴 때 라비의 이야기가 자기에게 영감이었다고 해요.",
+   "blank": "प्रेरणा",
+   "src": "made"
+  },
+  {
+   "text": "स्टोर की सबसे पुरानी सेल्सवुमन अंजलि के लिए बड़ी प्रेरणा है।",
+   "en": "The store's longest-serving saleswoman is a big inspiration to Anjali.",
+   "ko": "백화점 최고참 여성 판매원은 안잘리에게 큰 귀감이에요.",
+   "blank": "प्रेरणा",
+   "src": "made"
   }
  ],
  "w|प्रेरित": [
@@ -28395,6 +29099,22 @@
    "src": "made"
   }
  ],
+ "w|फ़ीता": [
+  {
+   "text": "मीना ने राखी के तोहफ़े पर लाल फ़ीता बाँधा था।",
+   "en": "Meena had tied a red ribbon around the Rakhi gift.",
+   "ko": "미나는 라키 선물에 빨간 리본을 묶어 두었어요.",
+   "blank": "फ़ीता",
+   "src": "made"
+  },
+  {
+   "text": "ग्राहक के जूते का फ़ीता खुला देखकर अंजलि ने उसे टोका।",
+   "en": "Seeing the customer's shoelace undone, Anjali pointed it out.",
+   "ko": "손님 신발 끈이 풀린 걸 보고 안잘리가 알려 줬어요.",
+   "blank": "फ़ीता",
+   "src": "made"
+  }
+ ],
  "w|फ़ीस": [
   {
    "text": "स्कूल की फ़ीस इस महीने जमा करनी है।",
@@ -28407,6 +29127,22 @@
    "en": "The course fee seems a bit high.",
    "ko": "코스 수강료가 좀 비싸 보여.",
    "blank": "फ़ीस"
+  }
+ ],
+ "w|फ़ुटपाथ": [
+  {
+   "text": "अख़बार ने दुकानदारों के फ़ुटपाथ घेरने पर एक तस्वीर छापी।",
+   "en": "The paper printed a photo of shopkeepers taking over the footpath.",
+   "ko": "신문은 상인들이 인도를 차지한 사진을 실었어요.",
+   "blank": "फ़ुटपाथ",
+   "src": "made"
+  },
+  {
+   "text": "काम के दौरान पैदल चलने वालों के लिए कविता ने अलग फ़ुटपाथ बनवाया।",
+   "en": "During the work Kavita had a separate footpath made for pedestrians.",
+   "ko": "공사 기간에 카비타는 보행자를 위한 임시 인도를 따로 만들었어요.",
+   "blank": "फ़ुटपाथ",
+   "src": "made"
   }
  ],
  "w|फ़ुटबॉल": [
@@ -28781,6 +29517,22 @@
    "src": "made"
   }
  ],
+ "w|फ़्लाईओवर": [
+  {
+   "text": "सुनील ने लिखा कि नए फ़्लाईओवर से जाम कुछ कम हुआ है।",
+   "en": "Sunil wrote that the new flyover has eased traffic jams somewhat.",
+   "ko": "수닐은 새 고가도로로 교통 체증이 조금 줄었다고 썼어요.",
+   "blank": "फ़्लाईओवर",
+   "src": "made"
+  },
+  {
+   "text": "कविता इस साल शहर का सबसे लंबा फ़्लाईओवर बनवा रही है।",
+   "en": "This year Kavita is overseeing the city's longest flyover.",
+   "ko": "카비타는 올해 도시에서 가장 긴 고가도로 공사를 맡고 있어요.",
+   "blank": "फ़्लाईओवर",
+   "src": "made"
+  }
+ ],
  "w|फ्लास्क": [
   {
    "text": "शिफ़्टिंग के दिन राहुल ने चाय एक बड़े फ्लास्क में भरकर रख ली।",
@@ -28823,6 +29575,22 @@
    "en": "Children like goat milk.",
    "ko": "아이들은 염소 우유를 좋아해.",
    "blank": "बकरी"
+  }
+ ],
+ "w|बकवास": [
+  {
+   "text": "संपादक ने उस नेता के बयान को बकवास कहकर छापने से मना कर दिया।",
+   "en": "The editor called the politician's statement nonsense and refused to print it.",
+   "ko": "편집장은 그 정치인의 발언을 헛소리라며 싣지 않았어요.",
+   "blank": "बकवास",
+   "src": "made"
+  },
+  {
+   "text": "ठेकेदार ने कहा कि सुरक्षा जाल लगाना बकवास है, तो कविता ने उसे कड़ी फटकार लगाई।",
+   "en": "The contractor said putting up safety nets was nonsense, so Kavita gave him a sharp telling-off.",
+   "ko": "도급업자가 안전망 설치는 쓸데없다고 하자 카비타가 호되게 꾸짖었어요.",
+   "blank": "बकवास",
+   "src": "made"
   }
  ],
  "w|बगीचा": [
@@ -29401,6 +30169,22 @@
    "blank": "बदलवाना"
   }
  ],
+ "w|बदला": [
+  {
+   "text": "अमन ने हँसते हुए कहा कि यह चिट्ठी छिपाना पिछले हफ़्ते की शरारत का बदला था।",
+   "en": "Aman laughed and said hiding the letter was revenge for last week's prank.",
+   "ko": "아만은 편지를 숨긴 게 지난주 장난에 대한 복수였다며 웃었어요.",
+   "blank": "बदला",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने एक साड़ी के बदले दूसरी साड़ी लेने की अनुमति दे दी।",
+   "en": "Anjali allowed the customer to take another sari in exchange for one.",
+   "ko": "안잘리는 사리 한 벌을 다른 사리로 바꿔 가도록 해 줬어요.",
+   "blank": "बदले",
+   "src": "made"
+  }
+ ],
  "w|बदलाव": [
   {
    "text": "मौसम में अचानक बदलाव आ गया।",
@@ -29821,6 +30605,22 @@
    "src": "made"
   }
  ],
+ "w|बहरापन": [
+  {
+   "text": "सुनील ने एक डॉक्टर से बात की कि तेज़ शोर से बहरापन कैसे बढ़ता है।",
+   "en": "Sunil talked to a doctor about how loud noise increases deafness.",
+   "ko": "수닐은 큰 소음이 어떻게 청력 손실을 키우는지 의사와 이야기했어요.",
+   "blank": "बहरापन",
+   "src": "made"
+  },
+  {
+   "text": "मशीनों के शोर से बहरापन न हो, इसलिए कविता सबको ईयरप्लग देती है।",
+   "en": "Kavita gives everyone earplugs so the machines' noise doesn't cause hearing loss.",
+   "ko": "기계 소음으로 귀가 상하지 않게 카비타는 모두에게 귀마개를 나눠 줘요.",
+   "blank": "बहरापन",
+   "src": "made"
+  }
+ ],
  "w|बहस": [
   {
    "text": "कक्षा में लंबी बहस छिड़ गई।",
@@ -29875,6 +30675,22 @@
    "en": "She speaks very softly.",
    "ko": "그녀는 아주 나지막이 말해.",
    "blank": "बहुत"
+  }
+ ],
+ "w|बहुमत": [
+  {
+   "text": "सुनील ने लिखा कि किसी भी दल को साफ़ बहुमत नहीं मिला।",
+   "en": "Sunil wrote that no party won a clear majority.",
+   "ko": "수닐은 어느 정당도 확실한 과반을 얻지 못했다고 썼어요.",
+   "blank": "बहुमत",
+   "src": "made"
+  },
+  {
+   "text": "मज़दूरों ने बहुमत से तय किया कि रविवार को छुट्टी रहेगी।",
+   "en": "The workers decided by majority that Sunday would be a day off.",
+   "ko": "인부들은 다수결로 일요일은 쉬기로 정했어요.",
+   "blank": "बहुमत",
+   "src": "made"
   }
  ],
  "w|बहू": [
@@ -32249,6 +33065,22 @@
    "blank": "भालू"
   }
  ],
+ "w|भाव": [
+  {
+   "text": "रवि के चेहरे के भाव से साफ़ था कि वह शर्मिंदा है।",
+   "en": "It was clear from the look on Ravi's face that he was embarrassed.",
+   "ko": "라비의 표정을 보면 부끄러워하는 게 분명했어요.",
+   "blank": "भाव",
+   "src": "made"
+  },
+  {
+   "text": "त्योहार से पहले सोने का भाव बढ़ा तो गहनों वाले काउंटर पर भीड़ घट गई।",
+   "en": "When the price of gold rose before the festival, the crowd at the jewelry counter thinned.",
+   "ko": "명절 전에 금값이 오르자 보석 계산대의 손님이 줄었어요.",
+   "blank": "भाव",
+   "src": "made"
+  }
+ ],
  "w|भावना": [
   {
    "text": "उसकी भावना समझना ज़रूरी है।",
@@ -32740,6 +33572,22 @@
    "en": "Her eyebrows are thick.",
    "ko": "그녀는 눈썹이 짙어요.",
    "blank": "भौंहें",
+   "src": "made"
+  }
+ ],
+ "w|भ्रष्ट": [
+  {
+   "text": "सुनील की पड़ताल में एक भ्रष्ट अफ़सर का नाम सामने आया।",
+   "en": "Sunil's investigation brought a corrupt official's name to light.",
+   "ko": "수닐의 취재에서 부패한 공무원 한 명의 이름이 드러났어요.",
+   "blank": "भ्रष्ट",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने घटिया सीमेंट भेजने वाले भ्रष्ट सप्लायर का ठेका रद्द कर दिया।",
+   "en": "Kavita cancelled the contract of the corrupt supplier who sent poor cement.",
+   "ko": "카비타는 불량 시멘트를 보낸 부패한 납품업자와의 계약을 취소했어요.",
+   "blank": "भ्रष्ट",
    "src": "made"
   }
  ],
@@ -33439,6 +34287,54 @@
    "en": "I feel like going out.",
    "ko": "나는 밖에 나가고 싶어.",
    "blank": "मन"
+  }
+ ],
+ "w|मन करना": [
+  {
+   "text": "रात को रवि का मन कर रहा था कि मीना को फ़ोन कर ले।",
+   "en": "At night Ravi felt like calling Meena.",
+   "ko": "밤에 라비는 미나에게 전화하고 싶은 마음이 들었어요.",
+   "blank": "मन कर",
+   "src": "made"
+  },
+  {
+   "text": "लंच ब्रेक में अंजलि का मन किया कि फ़ूड कोर्ट से गोलगप्पे खाए।",
+   "en": "At lunch break Anjali felt like eating golgappe from the food court.",
+   "ko": "점심시간에 안잘리는 푸드코트에서 골갑빠를 먹고 싶었어요.",
+   "blank": "मन किया",
+   "src": "made"
+  }
+ ],
+ "w|मन लगाना": [
+  {
+   "text": "सुलह के बाद रवि फिर से मन लगाकर पढ़ाई करने लगा।",
+   "en": "After making up, Ravi started studying wholeheartedly again.",
+   "ko": "화해한 뒤 라비는 다시 마음을 다잡고 공부하기 시작했어요.",
+   "blank": "मन लगाकर",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि हर ग्राहक की बात मन लगाकर सुनती है।",
+   "en": "Anjali listens attentively to every customer.",
+   "ko": "안잘리는 손님 한 사람 한 사람의 말을 정성껏 들어요.",
+   "blank": "मन लगाकर",
+   "src": "made"
+  }
+ ],
+ "w|मन ही मन": [
+  {
+   "text": "मीना मन ही मन जानती थी कि भैया जल्द मान जाएँगे।",
+   "en": "Deep down Meena knew her brother would come round soon.",
+   "ko": "미나는 속으로 오빠가 곧 마음을 풀 거라는 걸 알고 있었어요.",
+   "blank": "मन ही मन",
+   "src": "made"
+  },
+  {
+   "text": "बदतमीज़ ग्राहक की बात सुनकर अंजलि मन ही मन गिनती गिनने लगी।",
+   "en": "Hearing the rude customer, Anjali started counting silently to herself.",
+   "ko": "무례한 손님의 말을 듣고 안잘리는 속으로 숫자를 세기 시작했어요.",
+   "blank": "मन ही मन",
+   "src": "made"
   }
  ],
  "w|मनवाना": [
@@ -35135,6 +36031,22 @@
    "blank": "मुँह"
   }
  ],
+ "w|मुँह दिखाई": [
+  {
+   "text": "संस्कृति वाले पन्ने पर दुल्हन की मुँह दिखाई की पुरानी रस्म पर लेख छपा।",
+   "en": "The culture page ran an article on the old custom of the bride's face-viewing ceremony.",
+   "ko": "문화면에 신부 얼굴 보기라는 옛 풍습에 관한 기사가 실렸어요.",
+   "blank": "मुँह दिखाई",
+   "src": "made"
+  },
+  {
+   "text": "मज़दूर रमेश की नई बहू की मुँह दिखाई में कविता भी शगुन लेकर गई।",
+   "en": "Kavita too went with a gift to the face-viewing ceremony of worker Ramesh's new daughter-in-law.",
+   "ko": "카비타도 인부 라메시네 새 며느리 얼굴 보기 잔치에 축의금을 들고 갔어요.",
+   "blank": "मुँह दिखाई",
+   "src": "made"
+  }
+ ],
  "w|मुहर": [
   {
    "text": "फ़ॉर्म पर स्कूल की मुहर लगानी होगी।",
@@ -35739,6 +36651,22 @@
    "en": "A thick coat helps in winter.",
    "ko": "두꺼운 코트는 겨울에 쓸모 있어.",
    "blank": "मोटा"
+  }
+ ],
+ "w|मोटापा": [
+  {
+   "text": "बच्चों में बढ़ता मोटापा इस हफ़्ते की मुख्य ख़बर बना।",
+   "en": "Rising obesity among children became this week's lead story.",
+   "ko": "아이들 사이에서 늘어나는 비만이 이번 주 머리기사가 됐어요.",
+   "blank": "मोटापा",
+   "src": "made"
+  },
+  {
+   "text": "ठेकेदार ने माना कि बैठे-बैठे काम करने से उसका मोटापा बढ़ गया है।",
+   "en": "The contractor admitted his weight had gone up from sitting at work all day.",
+   "ko": "도급업자는 앉아서만 일하다 보니 살이 쪘다고 털어놨어요.",
+   "blank": "मोटापा",
+   "src": "made"
   }
  ],
  "w|मोड़": [
@@ -37067,6 +37995,22 @@
    "en": "This road goes all the way to the market.",
    "ko": "이 길은 시장까지 이어져.",
    "blank": "रास्ता"
+  }
+ ],
+ "w|राहत": [
+  {
+   "text": "बात साफ़ होने पर माँ ने राहत की साँस ली।",
+   "en": "When things were cleared up, Mom breathed a sigh of relief.",
+   "ko": "오해가 풀리자 엄마는 안도의 한숨을 쉬었어요.",
+   "blank": "राहत",
+   "src": "made"
+  },
+  {
+   "text": "खोया हुआ बच्चा मिल गया तो उसकी माँ को बड़ी राहत मिली।",
+   "en": "When the lost child was found, his mother was hugely relieved.",
+   "ko": "잃어버린 아이를 찾자 엄마는 크게 안도했어요.",
+   "blank": "राहत",
+   "src": "made"
   }
  ],
  "w|रिक्शा": [
@@ -39081,6 +40025,22 @@
    "blank": "वाहन"
   }
  ],
+ "w|विकलांगता": [
+  {
+   "text": "सुनील ने विकलांगता के साथ जीने वाले एक धावक का इंटरव्यू किया।",
+   "en": "Sunil interviewed a runner living with a disability.",
+   "ko": "수닐은 장애를 안고 사는 한 달리기 선수를 인터뷰했어요.",
+   "blank": "विकलांगता",
+   "src": "made"
+  },
+  {
+   "text": "कविता ने नए भवन में विकलांगता वाले लोगों के लिए चौड़े रैंप बनवाए।",
+   "en": "Kavita had wide ramps built in the new building for people with disabilities.",
+   "ko": "카비타는 새 건물에 장애인을 위한 넓은 경사로를 만들게 했어요.",
+   "blank": "विकलांगता",
+   "src": "made"
+  }
+ ],
  "w|विकल्प": [
   {
    "text": "पास कोई और विकल्प नहीं बचा।",
@@ -39135,6 +40095,22 @@
    "en": "Think this over calmly.",
    "ko": "이 일은 차분히 생각해.",
    "blank": "विचार"
+  }
+ ],
+ "w|विचार करना": [
+  {
+   "text": "रवि ने शांति से विचार किया कि गलती असल में किसकी थी।",
+   "en": "Ravi calmly thought about whose mistake it really was.",
+   "ko": "라비는 차분하게 진짜 누구 잘못이었는지 생각해 봤어요.",
+   "blank": "विचार किया",
+   "src": "made"
+  },
+  {
+   "text": "मैनेजर ने कहा कि वह अंजलि के सुझाव पर विचार करेंगे।",
+   "en": "The manager said he would consider Anjali's suggestion.",
+   "ko": "매니저는 안잘리의 제안을 검토해 보겠다고 했어요.",
+   "blank": "विचार करेंगे",
+   "src": "made"
   }
  ],
  "w|विचारधारा": [
@@ -40005,6 +40981,22 @@
    "blank": "वैज्ञानिक"
   }
  ],
+ "w|वैद्य": [
+  {
+   "text": "दादी ने कहा कि गाँव के वैद्य जी भी मन का घाव नहीं भर सकते।",
+   "en": "Grandma said even the village healer can't mend a wounded heart.",
+   "ko": "할머니는 마을 한의사도 마음의 상처는 못 고친다고 했어요.",
+   "blank": "वैद्य",
+   "src": "made"
+  },
+  {
+   "text": "हर्बल वाले हिस्से में एक वैद्य ग्राहकों को मुफ़्त सलाह दे रहे थे।",
+   "en": "In the herbal section an Ayurvedic doctor was giving customers free advice.",
+   "ko": "허브 코너에서 아유르베다 의사가 손님들에게 무료 상담을 해 주고 있었어요.",
+   "blank": "वैद्य",
+   "src": "made"
+  }
+ ],
  "w|वैध": [
   {
    "text": "यह दस्तावेज़ पूरी तरह वैध है।",
@@ -40017,6 +41009,22 @@
    "en": "Only a valid ID card will be accepted.",
    "ko": "유효한 신분증만 받을 거야.",
    "blank": "वैध"
+  }
+ ],
+ "w|वैश्विक": [
+  {
+   "text": "अंतरराष्ट्रीय पन्ने पर वैश्विक मंदी की आशंका पर लेख था।",
+   "en": "The international page had an article on fears of a global recession.",
+   "ko": "국제면에 세계 경기 침체 우려에 관한 기사가 있었어요.",
+   "blank": "वैश्विक",
+   "src": "made"
+  },
+  {
+   "text": "वैश्विक बाज़ार में स्टील महँगा हुआ तो कविता का बजट बिगड़ गया।",
+   "en": "When steel got pricier on the global market, Kavita's budget went off track.",
+   "ko": "세계 시장에서 철강값이 오르자 카비타의 예산이 틀어졌어요.",
+   "blank": "वैश्विक",
+   "src": "made"
   }
  ],
  "w|वैसा": [
@@ -40435,6 +41443,22 @@
    "blank": "शराब"
   }
  ],
+ "w|शरारत": [
+  {
+   "text": "असल में चिट्ठी छिपाना छोटे भाई अमन की शरारत थी, मीना की नहीं।",
+   "en": "Actually, hiding the letter was little brother Aman's prank, not Meena's.",
+   "ko": "사실 편지를 숨긴 건 미나가 아니라 막냇동생 아만의 장난이었어요.",
+   "blank": "शरारत",
+   "src": "made"
+  },
+  {
+   "text": "खिलौनों वाले हिस्से में एक बच्चे की शरारत से सारे गुब्बारे उड़ गए।",
+   "en": "In the toy section a child's mischief sent all the balloons flying.",
+   "ko": "장난감 코너에서 한 아이의 장난으로 풍선이 전부 날아갔어요.",
+   "blank": "शरारत",
+   "src": "made"
+  }
+ ],
  "w|शरारती": [
   {
    "text": "क्लास का एक शरारती लड़का चुपके से मीठे में नमक डाल गया।",
@@ -40519,6 +41543,22 @@
    "en": "The team's loss is not shameful; it is a lesson.",
    "ko": "팀의 패배는 부끄러운 게 아니라 배움이야.",
    "blank": "शर्मनाक"
+  }
+ ],
+ "w|शर्मिंदगी": [
+  {
+   "text": "सबके सामने बहन पर चिल्लाने के बाद रवि को बहुत शर्मिंदगी महसूस हुई।",
+   "en": "After shouting at his sister in front of everyone, Ravi felt deeply ashamed.",
+   "ko": "모두 앞에서 여동생에게 소리친 뒤 라비는 몹시 부끄러웠어요.",
+   "blank": "शर्मिंदगी",
+   "src": "made"
+  },
+  {
+   "text": "गलत बिल बनने पर नई कैशियर अंजलि को बड़ी शर्मिंदगी हुई।",
+   "en": "When the bill came out wrong, the new cashier Anjali felt very embarrassed.",
+   "ko": "계산서가 잘못 나오자 새 계산원 안잘리는 몹시 창피했어요.",
+   "blank": "शर्मिंदगी",
+   "src": "made"
   }
  ],
  "w|शर्मिंदा": [
@@ -41057,6 +42097,22 @@
    "blank": "शुक्रिया"
   }
  ],
+ "w|शुगर": [
+  {
+   "text": "प्रेस में काम करने वाले पुराने टाइपिस्ट को शुगर की बीमारी है।",
+   "en": "The old typist who works at the press has diabetes.",
+   "ko": "신문사에서 일하는 고참 타자수는 당뇨가 있어요.",
+   "blank": "शुगर",
+   "src": "made"
+  },
+  {
+   "text": "साइट के चौकीदार की शुगर बढ़ गई, तो कविता ने उसे डॉक्टर के पास भेजा।",
+   "en": "The site watchman's blood sugar went up, so Kavita sent him to the doctor.",
+   "ko": "현장 경비원의 혈당이 올라서 카비타가 병원에 보냈어요.",
+   "blank": "शुगर",
+   "src": "made"
+  }
+ ],
  "w|शुद्ध": [
   {
    "text": "यह पानी शुद्ध है, पी सकते हो।",
@@ -41285,6 +42341,22 @@
    "en": "Please don't make noise.",
    "ko": "제발 소리 내지 마.",
    "blank": "शोर"
+  }
+ ],
+ "w|शोषण": [
+  {
+   "text": "सुनील ने ईंट-भट्ठों पर मज़दूरों के शोषण पर लंबी रिपोर्ट तैयार की।",
+   "en": "Sunil prepared a long report on the exploitation of workers at brick kilns.",
+   "ko": "수닐은 벽돌 공장 노동자 착취에 관한 긴 기사를 준비했어요.",
+   "blank": "शोषण",
+   "src": "made"
+  },
+  {
+   "text": "कविता की साइट पर किसी का शोषण न हो, इसलिए मज़दूरी हर हफ़्ते समय पर दी जाती है।",
+   "en": "So that no one is exploited on Kavita's site, wages are paid on time every week.",
+   "ko": "카비타의 현장에서는 누구도 착취당하지 않도록 임금을 매주 제때 줘요.",
+   "blank": "शोषण",
+   "src": "made"
   }
  ],
  "w|शौचालय": [
@@ -41915,6 +42987,22 @@
    "blank": "सत्रह"
   }
  ],
+ "w|सदन": [
+  {
+   "text": "विधानसभा सदन में हुई बहस की रिपोर्ट सुनील ने देर रात भेजी।",
+   "en": "Sunil sent in the report on the debate in the assembly house late at night.",
+   "ko": "수닐은 의회 본회의장 토론 기사를 밤늦게 보냈어요.",
+   "blank": "सदन",
+   "src": "made"
+  },
+  {
+   "text": "कविता की टीम ने विधानसभा के नए सदन की छत तैयार की।",
+   "en": "Kavita's team built the roof of the new assembly chamber.",
+   "ko": "카비타의 팀이 새 의회 본회의장 지붕을 완성했어요.",
+   "blank": "सदन",
+   "src": "made"
+  }
+ ],
  "w|सदस्य": [
   {
    "text": "हर सदस्य को वोट देने का अधिकार है।",
@@ -42537,6 +43625,22 @@
    "blank": "समय पर"
   }
  ],
+ "w|समर्थक": [
+  {
+   "text": "रैली में एक समर्थक ने सुनील से कहा कि उनका उम्मीदवार ज़रूर जीतेगा।",
+   "en": "At the rally a supporter told Sunil their candidate would definitely win.",
+   "ko": "집회에서 한 지지자가 수닐에게 자기 후보가 꼭 이길 거라고 말했어요.",
+   "blank": "समर्थक",
+   "src": "made"
+  },
+  {
+   "text": "पुल बनने के समर्थक गाँव वाले कविता को धन्यवाद देने आए।",
+   "en": "Villagers who supported the bridge came to thank Kavita.",
+   "ko": "다리 건설을 지지한 마을 사람들이 카비타에게 고맙다고 인사하러 왔어요.",
+   "blank": "समर्थक",
+   "src": "made"
+  }
+ ],
  "w|समर्थन": [
   {
    "text": "पूरे मोहल्ले ने उसका समर्थन किया।",
@@ -42564,6 +43668,22 @@
    "en": "In the meeting most people supported Deepa's suggestion.",
    "ko": "회의에서 대부분이 디파의 제안을 지지했어요.",
    "blank": "समर्थन किया",
+   "src": "made"
+  }
+ ],
+ "w|समर्पित": [
+  {
+   "text": "मीना अपने लेखन के प्रति पूरी तरह समर्पित है।",
+   "en": "Meena is completely dedicated to her writing.",
+   "ko": "미나는 글쓰기에 온전히 전념하고 있어요.",
+   "blank": "समर्पित",
+   "src": "made"
+  },
+  {
+   "text": "स्टोर के सबसे पुराने सेल्समैन ने चालीस साल यहीं समर्पित होकर काम किया है।",
+   "en": "The store's oldest salesman has worked here devotedly for forty years.",
+   "ko": "백화점의 최고참 판매원은 사십 년 동안 이곳에서 헌신적으로 일했어요.",
+   "blank": "समर्पित",
    "src": "made"
   }
  ],
@@ -43153,6 +44273,22 @@
    "blank": "सवा"
   }
  ],
+ "w|संवाद": [
+  {
+   "text": "संपादक का मानना है कि पाठकों से सीधा संवाद अख़बार की ताक़त है।",
+   "en": "The editor believes direct dialogue with readers is the paper's strength.",
+   "ko": "편집장은 독자와의 직접 소통이 신문의 힘이라고 생각해요.",
+   "blank": "संवाद",
+   "src": "made"
+  },
+  {
+   "text": "कविता हर सुबह मज़दूरों से खुला संवाद करती है।",
+   "en": "Kavita holds an open conversation with the workers every morning.",
+   "ko": "카비타는 매일 아침 인부들과 터놓고 이야기를 나눠요.",
+   "blank": "संवाद",
+   "src": "made"
+  }
+ ],
  "w|संवाददाता": [
   {
    "text": "अखबार का संवाददाता घटनास्थल पर पहुँचा।",
@@ -43253,6 +44389,22 @@
    "blank": "सवेरा"
   }
  ],
+ "w|संशोधन": [
+  {
+   "text": "पिछली ख़बर में ग़लत नाम छपा था, इसलिए आज संशोधन छापा गया।",
+   "en": "The previous story printed a wrong name, so a correction ran today.",
+   "ko": "지난 기사에 이름이 잘못 나가서 오늘 정정 기사가 실렸어요.",
+   "blank": "संशोधन",
+   "src": "made"
+  },
+  {
+   "text": "नक्शे में संशोधन के बाद सीढ़ियाँ दूसरी तरफ़ बनाई गईं।",
+   "en": "After a revision to the plan, the stairs were built on the other side.",
+   "ko": "도면을 수정한 뒤 계단을 반대쪽에 만들었어요.",
+   "blank": "संशोधन",
+   "src": "made"
+  }
+ ],
  "w|संसद": [
   {
    "text": "संसद में नया क़ानून पास हुआ।",
@@ -43265,6 +44417,22 @@
    "en": "They were listening to the parliamentary debate.",
    "ko": "그들은 의회 토론을 듣고 있었어.",
    "blank": "संसद"
+  }
+ ],
+ "w|संसदीय": [
+  {
+   "text": "सुनील पहली बार संसदीय समिति की बैठक कवर करने दिल्ली गया।",
+   "en": "Sunil went to Delhi to cover a parliamentary committee meeting for the first time.",
+   "ko": "수닐은 처음으로 국회 위원회 회의를 취재하러 델리에 갔어요.",
+   "blank": "संसदीय",
+   "src": "made"
+  },
+  {
+   "text": "संसदीय क्षेत्र के विकास फ़ंड से यह पुल बन रहा है।",
+   "en": "This bridge is being built with the parliamentary constituency's development fund.",
+   "ko": "이 다리는 국회의원 지역구 개발 기금으로 지어지고 있어요.",
+   "blank": "संसदीय",
+   "src": "made"
   }
  ],
  "w|संसार": [
@@ -44001,6 +45169,22 @@
    "blank": "सामान्य"
   }
  ],
+ "w|सामूहिक": [
+  {
+   "text": "संपादकीय में लिखा गया कि सफ़ाई सामूहिक ज़िम्मेदारी है।",
+   "en": "The editorial said cleanliness is a collective responsibility.",
+   "ko": "사설에는 청결이 공동의 책임이라고 적혀 있었어요.",
+   "blank": "सामूहिक",
+   "src": "made"
+  },
+  {
+   "text": "छत की ढलाई के दिन सबने सामूहिक भोज किया।",
+   "en": "On the day of the roof casting, everyone shared a communal meal.",
+   "ko": "지붕 타설 날에는 다 같이 모여 밥을 먹었어요.",
+   "blank": "सामूहिक",
+   "src": "made"
+  }
+ ],
  "w|सारस": [
   {
    "text": "नदी के दलदली किनारे पर एक लंबी गर्दन वाला सारस खड़ा था।",
@@ -44173,6 +45357,22 @@
    "blank": "सांसद"
   }
  ],
+ "w|सांस्कृतिक": [
+  {
+   "text": "शहर के सांस्कृतिक मेले की तस्वीरें बीच के पन्नों पर छपीं।",
+   "en": "Photos of the city's cultural fair were printed on the middle pages.",
+   "ko": "도시 문화 축제 사진이 가운데 지면에 실렸어요.",
+   "blank": "सांस्कृतिक",
+   "src": "made"
+  },
+  {
+   "text": "कविता की कंपनी शहर का नया सांस्कृतिक भवन बना रही है।",
+   "en": "Kavita's company is building the city's new cultural center.",
+   "ko": "카비타의 회사가 도시의 새 문화회관을 짓고 있어요.",
+   "blank": "सांस्कृतिक",
+   "src": "made"
+  }
+ ],
  "w|साहब": [
   {
    "text": "साहब अंदर आइए।",
@@ -44287,6 +45487,22 @@
    "en": "The phone signal is weak here.",
    "ko": "여기선 휴대전화 신호가 약해.",
    "blank": "सिग्नल"
+  }
+ ],
+ "w|सिटकनी": [
+  {
+   "text": "माँ ने बाहर से आवाज़ दी कि सिटकनी खोलो, खाना ठंडा हो रहा है।",
+   "en": "Mom called from outside to undo the bolt because the food was getting cold.",
+   "ko": "엄마가 밖에서 빗장 풀라고, 밥 식는다고 불렀어요.",
+   "blank": "सिटकनी",
+   "src": "made"
+  },
+  {
+   "text": "ट्रायल रूम की सिटकनी टूटी थी, तो अंजलि ने तुरंत शिकायत लिखी।",
+   "en": "The fitting room bolt was broken, so Anjali wrote up a complaint right away.",
+   "ko": "탈의실 빗장이 고장 나 있어서 안잘리는 바로 신고서를 썼어요.",
+   "blank": "सिटकनी",
+   "src": "made"
   }
  ],
  "w|सितंबर": [
@@ -44749,6 +45965,22 @@
    "en": "After fatigue, sleep is the greatest relief.",
    "ko": "피곤한 뒤엔 잠이 가장 큰 안식이야.",
    "blank": "सुकून"
+  }
+ ],
+ "w|सुख": [
+  {
+   "text": "माँ कहती हैं कि भाई-बहन साथ हों तो घर में सुख रहता है।",
+   "en": "Mom says that when brother and sister are together, there's happiness in the home.",
+   "ko": "엄마는 남매가 사이좋으면 집이 평안하다고 하세요.",
+   "blank": "सुख",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि कहती है कि ग्राहक की मुस्कान देखकर दिल को सुख मिलता है।",
+   "en": "Anjali says seeing a customer smile brings her heart joy.",
+   "ko": "안잘리는 손님이 웃는 걸 보면 마음이 기쁘다고 해요.",
+   "blank": "सुख",
+   "src": "made"
   }
  ],
  "w|सुखाना": [
@@ -45490,6 +46722,22 @@
    "en": "The dry soil soaked up all the water.",
    "ko": "마른 흙이 물을 다 빨아들였어요.",
    "blank": "सोख",
+   "src": "made"
+  }
+ ],
+ "w|सोच": [
+  {
+   "text": "मीना ने कहा कि रवि की सोच बहुत जल्दी नतीजे पर पहुँच जाती है।",
+   "en": "Meena said Ravi's thinking jumps to conclusions too fast.",
+   "ko": "미나는 라비가 너무 성급하게 결론을 내린다고 했어요.",
+   "blank": "सोच",
+   "src": "made"
+  },
+  {
+   "text": "मैनेजर को अंजलि की नई सोच पसंद आई और डिस्प्ले बदल दिया गया।",
+   "en": "The manager liked Anjali's fresh thinking and the display was changed.",
+   "ko": "매니저는 안잘리의 새로운 생각이 마음에 들어 진열을 바꿨어요.",
+   "blank": "सोच",
    "src": "made"
   }
  ],
@@ -46311,6 +47559,22 @@
    "blank": "हम"
   }
  ],
+ "w|हमदर्दी": [
+  {
+   "text": "रवि को अपनी बहन से हमदर्दी थी, पर वह कह नहीं पाया।",
+   "en": "Ravi felt sympathy for his sister, but he couldn't say it.",
+   "ko": "라비는 여동생이 안쓰러웠지만 말로 하지 못했어요.",
+   "blank": "हमदर्दी",
+   "src": "made"
+  },
+  {
+   "text": "थकी हुई बुज़ुर्ग ग्राहक से अंजलि ने हमदर्दी से बात की और उन्हें कुर्सी दी।",
+   "en": "Anjali spoke kindly to the tired elderly customer and offered her a chair.",
+   "ko": "안잘리는 지친 노인 손님에게 다정하게 말을 건네고 의자를 내드렸어요.",
+   "blank": "हमदर्दी",
+   "src": "made"
+  }
+ ],
  "w|हमला": [
   {
    "text": "रात को हमला हो गया।",
@@ -46753,6 +48017,22 @@
    "en": "He is not one to give up.",
    "ko": "그는 쉽게 포기하는 사람이 아니야.",
    "blank": "हार"
+  }
+ ],
+ "w|हार्दिक": [
+  {
+   "text": "सुलह के बाद रवि ने मीना को किताब छपने की हार्दिक बधाई दी।",
+   "en": "After making up, Ravi heartily congratulated Meena on her book being published.",
+   "ko": "화해한 뒤 라비는 미나에게 책 출간을 진심으로 축하했어요.",
+   "blank": "हार्दिक",
+   "src": "made"
+  },
+  {
+   "text": "स्टोर के बाहर लगे बोर्ड पर सभी ग्राहकों का हार्दिक स्वागत लिखा है।",
+   "en": "The board outside the store says a warm welcome to all customers.",
+   "ko": "백화점 밖 간판에는 모든 손님을 진심으로 환영한다고 적혀 있어요.",
+   "blank": "हार्दिक",
+   "src": "made"
   }
  ],
  "w|हालत": [

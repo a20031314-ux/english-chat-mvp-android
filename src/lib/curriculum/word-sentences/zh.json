@@ -449,6 +449,22 @@
    "blank": "三"
   }
  ],
+ "w|三明治": [
+  {
+   "text": "附近的上班族最爱买陈杰做的火腿三明治当早饭。",
+   "en": "Office workers nearby love buying Chen Jie's ham sandwiches for breakfast.",
+   "ko": "근처 직장인들은 천제가 만든 햄 샌드위치를 아침으로 사 가는 걸 제일 좋아해요.",
+   "blank": "三明治",
+   "src": "made"
+  },
+  {
+   "text": "小雪的妈妈每天早上给她做一个三明治带到学校。",
+   "en": "Xiaoxue's mom makes her a sandwich every morning to take to school.",
+   "ko": "샤오쉐의 엄마는 매일 아침 학교에 가져갈 샌드위치를 만들어 줘요.",
+   "blank": "三明治",
+   "src": "made"
+  }
+ ],
  "w|上": [
   {
    "text": "把灯关上。",
@@ -1030,6 +1046,22 @@
    "en": "The dark clouds grew thicker and thicker, and Lili felt today's outdoor shoot wasn't looking good.",
    "ko": "먹구름이 점점 짙어져서 리리는 오늘 야외 촬영이 좀 불길하다고 느꼈어요.",
    "blank": "不妙",
+   "src": "made"
+  }
+ ],
+ "w|不安": [
+  {
+   "text": "好几个月没收到回信，张伟心里有点不安。",
+   "en": "Not having received a reply for several months, Zhang Wei felt a little uneasy.",
+   "ko": "몇 달째 답장이 오지 않아서 장웨이는 마음이 좀 불안했어요.",
+   "blank": "不安",
+   "src": "made"
+  },
+  {
+   "text": "投资人迟迟没有回复，刘芳心里很不安。",
+   "en": "The investor still hadn't replied, and Liu Fang felt very anxious.",
+   "ko": "투자자가 계속 답이 없어서 류팡은 마음이 몹시 불안했어요.",
+   "blank": "不安",
    "src": "made"
   }
  ],
@@ -1997,6 +2029,22 @@
    "blank": "之外"
   }
  ],
+ "w|之所以": [
+  {
+   "text": "陈杰之所以起这么早，是因为面团需要好几个小时发酵。",
+   "en": "The reason Chen Jie gets up so early is that the dough needs several hours to rise.",
+   "ko": "천제가 이렇게 일찍 일어나는 건 반죽이 발효되는 데 몇 시간이 걸리기 때문이에요.",
+   "blank": "之所以",
+   "src": "made"
+  },
+  {
+   "text": "小雪之所以喜欢上物理，是因为新来的老师讲得特别有趣。",
+   "en": "The reason Xiaoxue came to like physics is that the new teacher makes it really interesting.",
+   "ko": "샤오쉐가 물리를 좋아하게 된 건 새로 온 선생님이 아주 재미있게 가르치기 때문이에요.",
+   "blank": "之所以",
+   "src": "made"
+  }
+ ],
  "w|之类": [
   {
    "text": "书本之类的东西。",
@@ -2596,6 +2644,22 @@
    "en": "Lin Jing chatted with an old teacher in the dining car the whole way.",
    "ko": "린징은 식당칸에서 나이 든 선생님과 가는 내내 이야기를 나눴어요.",
    "blank": "交谈",
+   "src": "made"
+  }
+ ],
+ "w|亦": [
+  {
+   "text": "张伟在信末写了一句：\"你是我的老同学，亦是我最好的朋友。\"",
+   "en": "At the end of the letter Zhang Wei wrote: \"You are my old classmate, and also my best friend.\"",
+   "ko": "장웨이는 편지 끝에 \"너는 내 옛 동창이자 가장 친한 친구야.\"라고 썼어요.",
+   "blank": "亦",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在产品介绍里写：本软件适合学生，亦适合上班族。",
+   "en": "Liu Fang wrote in the product description: this software suits students, and office workers as well.",
+   "ko": "류팡은 제품 소개에 \"이 앱은 학생에게도, 직장인에게도 알맞습니다.\"라고 썼어요.",
+   "blank": "亦",
    "src": "made"
   }
  ],
@@ -3933,6 +3997,22 @@
    "en": "But it's too expensive.",
    "ko": "근데 너무 비싸.",
    "blank": "但"
+  }
+ ],
+ "w|但愿": [
+  {
+   "text": "张伟在信封上写好地址，心想：但愿这封信能早点寄到。",
+   "en": "Zhang Wei wrote the address on the envelope and thought: I hope this letter arrives soon.",
+   "ko": "장웨이는 봉투에 주소를 쓰고, 이 편지가 빨리 도착하면 좋겠다고 생각했어요.",
+   "blank": "但愿",
+   "src": "made"
+  },
+  {
+   "text": "刘芳看着刚发布的新版本，心想但愿这次别再出错。",
+   "en": "Looking at the newly released version, Liu Fang hoped there wouldn't be any errors this time.",
+   "ko": "류팡은 막 나온 새 버전을 보며 이번에는 제발 오류가 없길 바랐어요.",
+   "blank": "但愿",
+   "src": "made"
   }
  ],
  "w|但是": [
@@ -6485,6 +6565,22 @@
    "src": "made"
   }
  ],
+ "w|冰淇淋": [
+  {
+   "text": "夏天到了，陈杰在店门口加了一个卖冰淇淋的小柜台。",
+   "en": "With summer here, Chen Jie added a small ice cream counter at the shop entrance.",
+   "ko": "여름이 되자 천제는 가게 입구에 아이스크림을 파는 작은 판매대를 놓았어요.",
+   "blank": "冰淇淋",
+   "src": "made"
+  },
+  {
+   "text": "运动会结束后，班长请大家每人吃了一支冰淇淋。",
+   "en": "After the sports day, the class monitor treated everyone to an ice cream.",
+   "ko": "운동회가 끝나고 반장이 모두에게 아이스크림을 하나씩 사 줬어요.",
+   "blank": "冰淇淋",
+   "src": "made"
+  }
+ ],
  "w|冲": [
   {
    "text": "他冲出了大门。",
@@ -6746,6 +6842,22 @@
    "en": "Li Na is attending a friend's wedding and came to the mall specially to pick out new shoes.",
    "ko": "리나는 친구 결혼식에 참석하려고 일부러 백화점에 와서 새 구두를 골랐어요.",
    "blank": "出席",
+   "src": "made"
+  }
+ ],
+ "w|出手": [
+  {
+   "text": "一位老板很大方，一出手就订了陈杰两百个月饼。",
+   "en": "One boss was very generous and ordered two hundred mooncakes from Chen Jie in one go.",
+   "ko": "한 사장님은 통이 커서 한 번에 천제에게 월병 이백 개를 주문했어요.",
+   "blank": "出手",
+   "src": "made"
+  },
+  {
+   "text": "两个男生在走廊里吵了起来，差点出手打人，小雪赶紧去叫老师。",
+   "en": "Two boys started arguing in the hallway and nearly came to blows, so Xiaoxue rushed to get a teacher.",
+   "ko": "남학생 둘이 복도에서 다투다 주먹이 나갈 뻔해서 샤오쉐는 얼른 선생님을 부르러 갔어요.",
+   "blank": "出手",
    "src": "made"
   }
  ],
@@ -7813,6 +7925,22 @@
    "blank": "勇气"
   }
  ],
+ "w|勒": [
+  {
+   "text": "陈杰把围裙的带子勒得太紧，干了一上午腰都疼了。",
+   "en": "Chen Jie tied his apron strings too tight, and his waist hurt after working all morning.",
+   "ko": "천제는 앞치마 끈을 너무 꽉 묶어서 오전 내내 일하고 나니 허리가 아팠어요.",
+   "blank": "勒",
+   "src": "made"
+  },
+  {
+   "text": "新校服的领子太紧，勒得小雪脖子很不舒服。",
+   "en": "The collar of the new school uniform is too tight and digs uncomfortably into Xiaoxue's neck.",
+   "ko": "새 교복 깃이 너무 꽉 껴서 샤오쉐는 목이 조여 불편해요.",
+   "blank": "勒",
+   "src": "made"
+  }
+ ],
  "w|包": [
   {
    "text": "包放哪儿了？",
@@ -8004,6 +8132,22 @@
    "en": "Sun Yue was so excited to get her race bib that she was still looking at the route map past midnight.",
    "ko": "쑨웨는 배번을 받고 너무 들떠서 자정이 넘도록 코스 지도를 봤어요.",
    "blank": "午夜",
+   "src": "made"
+  }
+ ],
+ "w|午饭": [
+  {
+   "text": "店里太忙，陈杰常常下午两点多才顾得上吃午饭。",
+   "en": "The shop is so busy that Chen Jie often doesn't get to eat lunch until after two in the afternoon.",
+   "ko": "가게가 너무 바빠서 천제는 오후 두 시가 넘어서야 점심을 먹을 때가 많아요.",
+   "blank": "午饭",
+   "src": "made"
+  },
+  {
+   "text": "小雪和好朋友每天中午一起去食堂吃午饭。",
+   "en": "Xiaoxue and her best friend go to the cafeteria for lunch together every day.",
+   "ko": "샤오쉐는 단짝과 매일 점심때 함께 식당에 가서 점심을 먹어요.",
+   "blank": "午饭",
    "src": "made"
   }
  ],
@@ -8469,6 +8613,22 @@
    "blank": "压力"
   }
  ],
+ "w|厌倦": [
+  {
+   "text": "张伟说他已经厌倦了城里忙碌的生活。",
+   "en": "Zhang Wei said he's grown tired of busy city life.",
+   "ko": "장웨이는 도시의 바쁜 생활에 이미 싫증이 났다고 했어요.",
+   "blank": "厌倦",
+   "src": "made"
+  },
+  {
+   "text": "刘芳厌倦了在大公司里开没完没了的会，才决定自己创业。",
+   "en": "Liu Fang got tired of endless meetings at a big company, which is why she decided to start her own business.",
+   "ko": "류팡은 대기업에서 끝없이 회의하는 데 질려서 직접 창업하기로 했어요.",
+   "blank": "厌倦",
+   "src": "made"
+  }
+ ],
  "w|厕所": [
   {
    "text": "厕所在哪里？",
@@ -8555,6 +8715,22 @@
    "en": "I forgive you.",
    "ko": "나 너 용서했어.",
    "blank": "原谅"
+  }
+ ],
+ "w|厨师": [
+  {
+   "text": "陈杰小时候就想当厨师，后来却爱上了做面包。",
+   "en": "Chen Jie wanted to be a chef as a kid, but later fell in love with baking bread.",
+   "ko": "천제는 어릴 때 요리사가 되고 싶었지만 나중에 빵 만들기에 빠졌어요.",
+   "blank": "厨师",
+   "src": "made"
+  },
+  {
+   "text": "学校食堂新来了一位厨师，小雪说饭菜好吃多了。",
+   "en": "A new cook started at the school cafeteria, and Xiaoxue says the food is much better.",
+   "ko": "학교 식당에 새 요리사가 와서 샤오쉐는 밥이 훨씬 맛있어졌다고 해요.",
+   "blank": "厨师",
+   "src": "made"
   }
  ],
  "w|厨房": [
@@ -9627,6 +9803,22 @@
    "src": "made"
   }
  ],
+ "w|可笑": [
+  {
+   "text": "张伟在信里写道，现在回想起来，当年为了一块橡皮吵架真是可笑。",
+   "en": "Zhang Wei wrote in his letter that, looking back now, fighting over an eraser back then was really ridiculous.",
+   "ko": "장웨이는 편지에, 지금 돌이켜 보면 그때 지우개 하나 때문에 싸운 게 정말 우스웠다고 썼어요.",
+   "blank": "可笑",
+   "src": "made"
+  },
+  {
+   "text": "刘芳觉得竞争对手的广告说得太夸张，简直有点可笑。",
+   "en": "Liu Fang thinks the competitor's ads are so exaggerated they're almost laughable.",
+   "ko": "류팡은 경쟁사 광고가 너무 과장돼서 좀 우습다고 생각해요.",
+   "blank": "可笑",
+   "src": "made"
+  }
+ ],
  "w|可能": [
   {
    "text": "可能吧。",
@@ -10007,6 +10199,22 @@
    "en": "I have no prejudice against homosexuality.",
    "ko": "난 동성애에 편견이 없어.",
    "blank": "同性恋"
+  }
+ ],
+ "w|同情": [
+  {
+   "text": "读到老朋友丢了工作的消息，张伟很同情，也想帮点忙。",
+   "en": "Reading that his old friend had lost his job, Zhang Wei felt sympathy and wanted to help.",
+   "ko": "옛 친구가 일자리를 잃었다는 소식을 읽고 장웨이는 안타까워하며 돕고 싶어 했어요.",
+   "blank": "同情",
+   "src": "made"
+  },
+  {
+   "text": "刘芳很同情那个熬夜改代码的实习生，就让他早点回家休息。",
+   "en": "Liu Fang felt sorry for the intern who'd stayed up fixing code, so she sent him home early to rest.",
+   "ko": "류팡은 밤새 코드를 고친 인턴이 안쓰러워서 일찍 집에 가서 쉬라고 했어요.",
+   "blank": "同情",
+   "src": "made"
   }
  ],
  "w|同意": [
@@ -10601,6 +10809,22 @@
    "blank": "呢"
   }
  ],
+ "w|呦": [
+  {
+   "text": "老朋友回信的第一句就是：\"呦，你还记得我啊！\"",
+   "en": "The first line of his old friend's reply was: \"Oh, so you still remember me!\"",
+   "ko": "옛 친구의 답장 첫 줄은 \"어머, 아직 나를 기억하는구나!\"였어요.",
+   "blank": "呦",
+   "src": "made"
+  },
+  {
+   "text": "\"呦，刘芳，你今天来得这么早！\"小陈笑着说。",
+   "en": "\"Oh, Liu Fang, you're here so early today!\" Xiao Chen said with a smile.",
+   "ko": "\"어, 류팡, 오늘 엄청 일찍 왔네!\" 샤오천이 웃으며 말했어요.",
+   "blank": "呦",
+   "src": "made"
+  }
+ ],
  "w|周围": [
   {
    "text": "看看周围。",
@@ -10627,6 +10851,22 @@
    "en": "We're hiking this weekend.",
    "ko": "이번 주말에 등산 가.",
    "blank": "周末"
+  }
+ ],
+ "w|味": [
+  {
+   "text": "陈杰这周推出了一款抹茶味的小面包。",
+   "en": "This week Chen Jie launched a small matcha-flavored bun.",
+   "ko": "천제는 이번 주에 말차 맛 작은 빵을 새로 내놓았어요.",
+   "blank": "味",
+   "src": "made"
+  },
+  {
+   "text": "小雪觉得食堂今天的汤一点味也没有。",
+   "en": "Xiaoxue thinks today's cafeteria soup has no flavor at all.",
+   "ko": "샤오쉐는 오늘 학교 식당 국이 아무 맛도 없다고 생각해요.",
+   "blank": "味",
+   "src": "made"
   }
  ],
  "w|味道": [
@@ -11055,6 +11295,22 @@
    "blank": "哭"
   }
  ],
+ "w|哭泣": [
+  {
+   "text": "读完老朋友写的那段往事，张伟一个人坐在灯下轻轻哭泣。",
+   "en": "After reading the old memory his friend wrote about, Zhang Wei sat alone under the lamp and wept quietly.",
+   "ko": "옛 친구가 쓴 옛이야기를 다 읽고 장웨이는 등불 아래 혼자 앉아 조용히 울었어요.",
+   "blank": "哭泣",
+   "src": "made"
+  },
+  {
+   "text": "第一次融资失败后，刘芳躲在楼梯间里哭泣了很久。",
+   "en": "After the first funding round failed, Liu Fang hid in the stairwell and cried for a long time.",
+   "ko": "첫 투자 유치에 실패한 뒤 류팡은 계단에 숨어 한참을 울었어요.",
+   "blank": "哭泣",
+   "src": "made"
+  }
+ ],
  "w|哼": [
   {
    "text": "哼，我不信。",
@@ -11329,6 +11585,22 @@
    "blank": "喝"
   }
  ],
+ "w|喝杯": [
+  {
+   "text": "忙完早上那一阵，陈杰总会坐下来喝杯咖啡。",
+   "en": "After the morning rush, Chen Jie always sits down to have a cup of coffee.",
+   "ko": "아침 바쁜 시간이 지나면 천제는 늘 앉아서 커피 한 잔을 마셔요.",
+   "blank": "喝杯",
+   "src": "made"
+  },
+  {
+   "text": "考完试，小雪约同学去奶茶店喝杯奶茶放松一下。",
+   "en": "After the exam, Xiaoxue invited her classmates to go have a cup of milk tea and relax.",
+   "ko": "시험이 끝나고 샤오쉐는 친구들에게 밀크티 한 잔 마시며 쉬자고 했어요.",
+   "blank": "喝杯",
+   "src": "made"
+  }
+ ],
  "w|喝酒": [
   {
    "text": "今晚去喝酒。",
@@ -11429,6 +11701,22 @@
    "blank": "嘛"
   }
  ],
+ "w|嘲笑": [
+  {
+   "text": "张伟在信里承认，当年他不该嘲笑老朋友的口音。",
+   "en": "Zhang Wei admitted in his letter that he shouldn't have mocked his old friend's accent back then.",
+   "ko": "장웨이는 편지에서 그때 옛 친구의 말투를 놀리지 말았어야 했다고 인정했어요.",
+   "blank": "嘲笑",
+   "src": "made"
+  },
+  {
+   "text": "起初有人嘲笑刘芳的想法不切实际。",
+   "en": "At first, some people mocked Liu Fang's idea as unrealistic.",
+   "ko": "처음에는 류팡의 생각이 비현실적이라고 비웃는 사람들도 있었어요.",
+   "blank": "嘲笑",
+   "src": "made"
+  }
+ ],
  "w|嘴": [
   {
    "text": "闭上你的嘴。",
@@ -11484,6 +11772,22 @@
    "en": "Lili gave her old teacher a tea set she picked out herself.",
    "ko": "리리는 담임 선생님께 직접 고른 다기 한 세트를 드렸어요.",
    "blank": "器",
+   "src": "made"
+  }
+ ],
+ "w|噩梦": [
+  {
+   "text": "张伟告诉老朋友，他昨晚做了个噩梦，梦见自己又回到了考场。",
+   "en": "Zhang Wei told his old friend he had a nightmare last night and dreamed he was back in an exam hall.",
+   "ko": "장웨이는 옛 친구에게 어젯밤 악몽을 꿨는데 다시 시험장에 있는 꿈이었다고 했어요.",
+   "blank": "噩梦",
+   "src": "made"
+  },
+  {
+   "text": "上线前一晚服务器突然出问题，对刘芳来说简直是一场噩梦。",
+   "en": "The server suddenly broke down the night before launch, which was a real nightmare for Liu Fang.",
+   "ko": "출시 전날 밤 서버가 갑자기 고장 나서 류팡에게는 그야말로 악몽이었어요.",
+   "blank": "噩梦",
    "src": "made"
   }
  ],
@@ -11745,6 +12049,22 @@
    "en": "This matter is difficult.",
    "ko": "이 일은 어려워.",
    "blank": "困难"
+  }
+ ],
+ "w|固定": [
+  {
+   "text": "张伟和老朋友约好每个月固定写一封信。",
+   "en": "Zhang Wei and his old friend agreed to write one letter every month without fail.",
+   "ko": "장웨이와 옛 친구는 매달 정해 놓고 편지를 한 통씩 쓰기로 약속했어요.",
+   "blank": "固定",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的团队没有固定的上班时间，只要按时完成任务就行。",
+   "en": "Liu Fang's team has no fixed working hours; you just need to finish tasks on time.",
+   "ko": "류팡의 팀은 출근 시간이 정해져 있지 않고, 제때 일을 끝내기만 하면 돼요.",
+   "blank": "固定",
+   "src": "made"
   }
  ],
  "w|国会": [
@@ -12711,6 +13031,22 @@
    "blank": "复杂"
   }
  ],
+ "w|复活": [
+  {
+   "text": "陈杰笑着说，喂了一晚上，冰箱里的老面总算复活了。",
+   "en": "Chen Jie joked that after feeding it all night, the old starter in the fridge had come back to life.",
+   "ko": "천제는 밤새 먹이를 준 끝에 냉장고 속 묵은 반죽이 되살아났다며 웃었어요.",
+   "blank": "复活",
+   "src": "made"
+  },
+  {
+   "text": "历史课上，小雪第一次听说古人相信死去的人会复活。",
+   "en": "In history class, Xiaoxue first heard that people long ago believed the dead could come back to life.",
+   "ko": "역사 시간에 샤오쉐는 옛사람들이 죽은 사람이 되살아난다고 믿었다는 걸 처음 들었어요.",
+   "blank": "复活",
+   "src": "made"
+  }
+ ],
  "w|夏天": [
   {
    "text": "夏天太热了。",
@@ -13615,6 +13951,38 @@
    "blank": "头发"
   }
  ],
+ "w|夸张": [
+  {
+   "text": "有的店把蛋糕做得特别夸张，陈杰更喜欢简单好吃的。",
+   "en": "Some shops make really over-the-top cakes, but Chen Jie prefers simple, tasty ones.",
+   "ko": "어떤 가게는 케이크를 아주 요란하게 만들지만 천제는 단순하고 맛있는 걸 더 좋아해요.",
+   "blank": "夸张",
+   "src": "made"
+  },
+  {
+   "text": "同桌讲故事总是很夸张，小雪听了忍不住笑。",
+   "en": "Xiaoxue's deskmate always exaggerates when telling stories, and she can't help laughing.",
+   "ko": "짝꿍은 이야기를 할 때 늘 과장이 심해서 샤오쉐는 듣다가 웃음을 참지 못해요.",
+   "blank": "夸张",
+   "src": "made"
+  }
+ ],
+ "w|奇妙": [
+  {
+   "text": "张伟觉得很奇妙，隔了这么多年，两个人还能聊得这么好。",
+   "en": "Zhang Wei finds it wonderful that after so many years the two of them still get along so well.",
+   "ko": "장웨이는 이렇게 오랜 세월이 지났는데도 둘이 여전히 말이 잘 통하는 게 신기했어요.",
+   "blank": "奇妙",
+   "src": "made"
+  },
+  {
+   "text": "刘芳觉得创业就像一场奇妙的旅行，每天都有新发现。",
+   "en": "Liu Fang feels starting a business is like a wondrous journey, with new discoveries every day.",
+   "ko": "류팡은 창업이 매일 새로운 발견이 있는 신기한 여행 같다고 느껴요.",
+   "blank": "奇妙",
+   "src": "made"
+  }
+ ],
  "w|奇怪": [
   {
    "text": "真奇怪。",
@@ -13873,6 +14241,38 @@
    "en": "Go visit grandma.",
    "ko": "할머니 보러 가자.",
    "blank": "奶奶"
+  }
+ ],
+ "w|奶油": [
+  {
+   "text": "陈杰在蛋糕上挤了一圈白色的奶油。",
+   "en": "Chen Jie piped a ring of white cream onto the cake.",
+   "ko": "천제는 케이크 위에 하얀 생크림을 한 바퀴 짰어요.",
+   "blank": "奶油",
+   "src": "made"
+  },
+  {
+   "text": "小雪过生日，同学们把奶油抹在了她的脸上。",
+   "en": "On Xiaoxue's birthday, her classmates smeared cream on her face.",
+   "ko": "샤오쉐의 생일에 친구들이 그녀 얼굴에 생크림을 묻혔어요.",
+   "blank": "奶油",
+   "src": "made"
+  }
+ ],
+ "w|奶酪": [
+  {
+   "text": "陈杰新做的面包里夹了很多奶酪，一出炉就卖光了。",
+   "en": "Chen Jie's new bread is packed with cheese and sold out as soon as it came out of the oven.",
+   "ko": "천제가 새로 만든 빵에는 치즈가 듬뿍 들어 있어서 나오자마자 다 팔렸어요.",
+   "blank": "奶酪",
+   "src": "made"
+  },
+  {
+   "text": "英语课上，小雪学会了用英文说各种奶酪的名字。",
+   "en": "In English class, Xiaoxue learned to say the names of different cheeses in English.",
+   "ko": "영어 시간에 샤오쉐는 여러 치즈 이름을 영어로 말하는 법을 배웠어요.",
+   "blank": "奶酪",
+   "src": "made"
   }
  ],
  "w|她": [
@@ -15405,6 +15805,22 @@
    "blank": "害怕"
   }
  ],
+ "w|害羞": [
+  {
+   "text": "张伟上学时很害羞，一跟女生说话就脸红。",
+   "en": "Zhang Wei was very shy at school and blushed whenever he talked to girls.",
+   "ko": "장웨이는 학교 다닐 때 아주 수줍어서 여학생과 말만 하면 얼굴이 빨개졌어요.",
+   "blank": "害羞",
+   "src": "made"
+  },
+  {
+   "text": "新来的设计师有点害羞，开会时刘芳总是先请她发言。",
+   "en": "The new designer is a bit shy, so Liu Fang always invites her to speak first in meetings.",
+   "ko": "새로 온 디자이너가 좀 수줍음을 타서 류팡은 회의 때 늘 그녀에게 먼저 발언을 청해요.",
+   "blank": "害羞",
+   "src": "made"
+  }
+ ],
  "w|家": [
   {
    "text": "家离这儿不远。",
@@ -15502,6 +15918,22 @@
    "en": "The clerk got Li Na's clothes dirty and kept apologizing, and Li Na smiled and forgave her.",
    "ko": "직원이 리나 옷을 더럽히고 계속 사과하자 리나는 웃으며 용서해 줬어요.",
    "blank": "宽恕",
+   "src": "made"
+  }
+ ],
+ "w|寂寞": [
+  {
+   "text": "搬到新城市以后，张伟常常觉得寂寞，就给老朋友写信。",
+   "en": "After moving to a new city, Zhang Wei often felt lonely, so he wrote to his old friend.",
+   "ko": "새 도시로 이사한 뒤 장웨이는 자주 외로워서 옛 친구에게 편지를 썼어요.",
+   "blank": "寂寞",
+   "src": "made"
+  },
+  {
+   "text": "同事们都下班了，刘芳一个人在办公室加班，觉得有点寂寞。",
+   "en": "Everyone had gone home, and Liu Fang, working late alone in the office, felt a bit lonely.",
+   "ko": "동료들이 다 퇴근하고 류팡은 혼자 사무실에서 야근하며 좀 외로웠어요.",
+   "blank": "寂寞",
    "src": "made"
   }
  ],
@@ -18033,6 +18465,22 @@
    "blank": "开心"
   }
  ],
+ "w|开放": [
+  {
+   "text": "陈杰打算周末开放厨房，让孩子们来学做饼干。",
+   "en": "Chen Jie plans to open up the kitchen on weekends so kids can come learn to make cookies.",
+   "ko": "천제는 주말에 주방을 열어서 아이들이 쿠키 만들기를 배우게 할 생각이에요.",
+   "blank": "开放",
+   "src": "made"
+  },
+  {
+   "text": "学校图书馆周末也向学生开放，小雪常去那里看书。",
+   "en": "The school library is also open to students on weekends, and Xiaoxue often reads there.",
+   "ko": "학교 도서관은 주말에도 학생들에게 열려 있어서 샤오쉐는 자주 거기서 책을 읽어요.",
+   "blank": "开放",
+   "src": "made"
+  }
+ ],
  "w|开枪": [
   {
    "text": "别开枪！",
@@ -18601,6 +19049,22 @@
    "blank": "往"
   }
  ],
+ "w|征服": [
+  {
+   "text": "陈杰做的牛角包征服了整条街的老人和孩子。",
+   "en": "Chen Jie's croissants have won over the elderly and the kids on the whole street.",
+   "ko": "천제가 만든 크루아상은 온 동네 어르신과 아이들의 마음을 사로잡았어요.",
+   "blank": "征服",
+   "src": "made"
+  },
+  {
+   "text": "小雪终于征服了那道最难的数学题。",
+   "en": "Xiaoxue finally conquered that hardest math problem.",
+   "ko": "샤오쉐는 드디어 그 가장 어려운 수학 문제를 정복했어요.",
+   "blank": "征服",
+   "src": "made"
+  }
+ ],
  "w|待": [
   {
    "text": "在这儿待着。",
@@ -18729,6 +19193,22 @@
    "blank": "得到"
   }
  ],
+ "w|得知": [
+  {
+   "text": "得知老朋友要结婚了，张伟马上写信去问日子。",
+   "en": "Learning that his old friend was getting married, Zhang Wei immediately wrote to ask the date.",
+   "ko": "옛 친구가 결혼한다는 걸 알고 장웨이는 바로 편지로 날짜를 물었어요.",
+   "blank": "得知",
+   "src": "made"
+  },
+  {
+   "text": "刘芳得知产品上了应用商店的排行榜，高兴得跳了起来。",
+   "en": "When Liu Fang learned the product had made the app store charts, she jumped for joy.",
+   "ko": "류팡은 제품이 앱스토어 순위에 올랐다는 걸 알고 기뻐서 펄쩍 뛰었어요.",
+   "blank": "得知",
+   "src": "made"
+  }
+ ],
  "w|微笑": [
   {
    "text": "她给了我一个微笑。",
@@ -18769,6 +19249,22 @@
    "en": "Adjust your mood.",
    "ko": "기분을 다스려.",
    "blank": "心情"
+  }
+ ],
+ "w|心灵": [
+  {
+   "text": "张伟觉得，写信是一种让心灵安静下来的方式。",
+   "en": "Zhang Wei feels that writing letters is a way to calm the soul.",
+   "ko": "장웨이는 편지 쓰기가 마음을 차분하게 해 주는 방법이라고 생각해요.",
+   "blank": "心灵",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的团队在开发一款帮助人放松心灵的冥想软件。",
+   "en": "Liu Fang's team is developing a meditation app that helps people relax their minds.",
+   "ko": "류팡의 팀은 마음을 편하게 해 주는 명상 앱을 개발하고 있어요.",
+   "blank": "心灵",
+   "src": "made"
   }
  ],
  "w|心理": [
@@ -19307,6 +19803,22 @@
    "src": "made"
   }
  ],
+ "w|总算": [
+  {
+   "text": "等了整整一个月，张伟总算收到了回信。",
+   "en": "After waiting a whole month, Zhang Wei finally received a reply.",
+   "ko": "꼬박 한 달을 기다린 끝에 장웨이는 드디어 답장을 받았어요.",
+   "blank": "总算",
+   "src": "made"
+  },
+  {
+   "text": "改了整整一个星期，刘芳总算把这个错误修好了。",
+   "en": "After a whole week of work, Liu Fang finally fixed the bug.",
+   "ko": "꼬박 일주일을 고친 끝에 류팡은 드디어 그 오류를 해결했어요.",
+   "blank": "总算",
+   "src": "made"
+  }
+ ],
  "w|总统": [
   {
    "text": "总统发表讲话。",
@@ -19377,6 +19889,22 @@
    "en": "Don't watch horror movies.",
    "ko": "공포 영화 보지 마.",
    "blank": "恐怖"
+  }
+ ],
+ "w|恐怖分子": [
+  {
+   "text": "张伟和老朋友小时候最爱看一部警察抓恐怖分子的电影。",
+   "en": "As kids, Zhang Wei and his old friend loved a movie about police catching terrorists.",
+   "ko": "장웨이와 옛 친구는 어릴 때 경찰이 테러리스트를 잡는 영화를 제일 좋아했어요.",
+   "blank": "恐怖分子",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在新闻里看到，警方靠一款软件抓到了几个恐怖分子。",
+   "en": "Liu Fang saw on the news that police had caught several terrorists with the help of some software.",
+   "ko": "류팡은 경찰이 어떤 소프트웨어 덕분에 테러리스트 몇 명을 잡았다는 뉴스를 봤어요.",
+   "blank": "恐怖分子",
+   "src": "made"
   }
  ],
  "w|恐惧": [
@@ -19547,6 +20075,22 @@
    "en": "The situation has changed.",
    "ko": "상황이 바뀌었어.",
    "blank": "情况"
+  }
+ ],
+ "w|情感": [
+  {
+   "text": "张伟不太会表达情感，可是写信的时候话就多了。",
+   "en": "Zhang Wei isn't good at expressing his feelings, but when he writes letters he has a lot to say.",
+   "ko": "장웨이는 감정을 잘 표현하지 못하지만, 편지를 쓸 때는 할 말이 많아져요.",
+   "blank": "情感",
+   "src": "made"
+  },
+  {
+   "text": "刘芳想做一款能帮人记录情感变化的手机应用。",
+   "en": "Liu Fang wants to make a phone app that helps people track changes in their emotions.",
+   "ko": "류팡은 사람들이 감정 변화를 기록하도록 돕는 휴대폰 앱을 만들고 싶어요.",
+   "blank": "情感",
+   "src": "made"
   }
  ],
  "w|情报": [
@@ -21139,6 +21683,22 @@
    "src": "made"
   }
  ],
+ "w|承担": [
+  {
+   "text": "老朋友是家里老大，很早就承担起照顾弟弟妹妹的责任。",
+   "en": "His old friend is the eldest, and took on the responsibility of caring for his siblings early.",
+   "ko": "옛 친구는 집안의 맏이라서 일찍부터 동생들을 돌보는 책임을 맡았어요.",
+   "blank": "承担",
+   "src": "made"
+  },
+  {
+   "text": "作为创始人，刘芳必须承担所有的风险。",
+   "en": "As the founder, Liu Fang has to bear all the risk.",
+   "ko": "창업자로서 류팡은 모든 위험을 떠안아야 해요.",
+   "blank": "承担",
+   "src": "made"
+  }
+ ],
  "w|承认": [
   {
    "text": "承认错误。",
@@ -22291,6 +22851,22 @@
    "blank": "接受"
   }
  ],
+ "w|接吻": [
+  {
+   "text": "张伟笑着提起，上学时两人看到电影里接吻的镜头都会捂住眼睛。",
+   "en": "Zhang Wei laughed recalling how at school they'd both cover their eyes at kissing scenes in movies.",
+   "ko": "장웨이는 학교 때 둘이 영화에서 키스하는 장면이 나오면 눈을 가리곤 했다고 웃으며 말했어요.",
+   "blank": "接吻",
+   "src": "made"
+  },
+  {
+   "text": "刘芳给公司拍宣传片，导演想加一个情侣接吻的镜头，被她拒绝了。",
+   "en": "Shooting a promo video for her company, Liu Fang turned down the director's idea of adding a couple kissing.",
+   "ko": "류팡이 회사 홍보 영상을 찍을 때 감독이 연인이 키스하는 장면을 넣자고 했지만 그녀가 거절했어요.",
+   "blank": "接吻",
+   "src": "made"
+  }
+ ],
  "w|接电话": [
   {
    "text": "我在开会，不能接电话。",
@@ -22375,6 +22951,22 @@
    "en": "Don't push me.",
    "ko": "나를 밀지 마.",
    "blank": "推"
+  }
+ ],
+ "w|推荐": [
+  {
+   "text": "张伟在信里推荐了一本他最近很喜欢的小说。",
+   "en": "In his letter, Zhang Wei recommended a novel he's been enjoying lately.",
+   "ko": "장웨이는 편지에 요즘 아주 좋아하는 소설 한 권을 추천했어요.",
+   "blank": "推荐",
+   "src": "made"
+  },
+  {
+   "text": "一位老客户把刘芳的软件推荐给了好几家公司。",
+   "en": "A longtime client recommended Liu Fang's software to several companies.",
+   "ko": "오랜 고객 한 명이 류팡의 소프트웨어를 여러 회사에 추천해 줬어요.",
+   "blank": "推荐",
+   "src": "made"
   }
  ],
  "w|掩护": [
@@ -22629,6 +23221,22 @@
    "blank": "搞定"
   }
  ],
+ "w|搞笑": [
+  {
+   "text": "老朋友在回信里画了一幅很搞笑的小画，张伟看了乐了半天。",
+   "en": "His old friend drew a really funny little picture in the reply, and Zhang Wei laughed at it for ages.",
+   "ko": "옛 친구가 답장에 아주 웃긴 그림을 그려 줘서 장웨이는 한참 동안 웃었어요.",
+   "blank": "搞笑",
+   "src": "made"
+  },
+  {
+   "text": "程序员小陈在周会上放了一段搞笑视频，刘芳笑得停不下来。",
+   "en": "Programmer Xiao Chen played a funny video at the weekly meeting, and Liu Fang couldn't stop laughing.",
+   "ko": "프로그래머 샤오천이 주간 회의에서 웃긴 영상을 틀어서 류팡은 웃음을 멈출 수 없었어요.",
+   "blank": "搞笑",
+   "src": "made"
+  }
+ ],
  "w|搞错": [
   {
    "text": "对不起，我搞错了。",
@@ -22775,6 +23383,22 @@
    "blank": "摸"
   }
  ],
+ "w|撑": [
+  {
+   "text": "那天雨很大，张伟撑着伞去邮局寄信。",
+   "en": "It was pouring that day, and Zhang Wei went to the post office under an umbrella to mail the letter.",
+   "ko": "그날 비가 많이 와서 장웨이는 우산을 받쳐 들고 우체국에 편지를 부치러 갔어요.",
+   "blank": "撑",
+   "src": "made"
+  },
+  {
+   "text": "公司账上的钱只够撑三个月了，刘芳急着找投资。",
+   "en": "The company only has enough money to last three months, so Liu Fang is rushing to find investment.",
+   "ko": "회사 통장의 돈으로는 석 달밖에 못 버텨서 류팡은 급히 투자처를 찾고 있어요.",
+   "blank": "撑",
+   "src": "made"
+  }
+ ],
  "w|撒": [
   {
    "text": "下雪前，陈杰安排工人在市政府门口的台阶上撒盐。",
@@ -22832,6 +23456,22 @@
    "en": "We must withdraw before dark.",
    "ko": "어두워지기 전에 철수해야 해요.",
    "blank": "撤退",
+   "src": "made"
+  }
+ ],
+ "w|播放": [
+  {
+   "text": "张伟一边写信，一边播放他们上学时最爱听的老歌。",
+   "en": "While writing, Zhang Wei played the old songs they loved most in school.",
+   "ko": "장웨이는 편지를 쓰면서 학교 다닐 때 둘이 제일 좋아하던 옛 노래를 틀었어요.",
+   "blank": "播放",
+   "src": "made"
+  },
+  {
+   "text": "发布会一开始，大屏幕上播放了刘芳公司成立以来的照片。",
+   "en": "As the launch began, the big screen played photos from since Liu Fang's company was founded.",
+   "ko": "발표회가 시작되자 큰 화면에 류팡의 회사가 세워진 뒤로의 사진들이 나왔어요.",
+   "blank": "播放",
    "src": "made"
   }
  ],
@@ -23749,6 +24389,22 @@
    "blank": "新闻"
   }
  ],
+ "w|新鲜": [
+  {
+   "text": "陈杰每天早上五点前就到面包店，只用当天送来的新鲜面粉。",
+   "en": "Chen Jie gets to the bakery before dawn every morning and only uses flour delivered that day.",
+   "ko": "천제는 매일 새벽 빵집에 나와서 그날 들어온 신선한 밀가루만 써요.",
+   "blank": "新鲜",
+   "src": "made"
+  },
+  {
+   "text": "学校食堂的阿姨说，今天的蔬菜都很新鲜。",
+   "en": "The cafeteria lady said all of today's vegetables are very fresh.",
+   "ko": "학교 식당 아주머니는 오늘 채소가 다 아주 신선하다고 했어요.",
+   "blank": "新鲜",
+   "src": "made"
+  }
+ ],
  "w|方便": [
   {
    "text": "这样很方便。",
@@ -24637,6 +25293,22 @@
    "en": "Say good night to everyone.",
    "ko": "모두에게 잘 자라고 해.",
    "blank": "晚安"
+  }
+ ],
+ "w|晚饭": [
+  {
+   "text": "关门以后，陈杰常常拿剩下的面包回家当晚饭。",
+   "en": "After closing, Chen Jie often takes the leftover bread home for dinner.",
+   "ko": "문을 닫은 뒤 천제는 남은 빵을 집에 가져가서 저녁으로 먹을 때가 많아요.",
+   "blank": "晚饭",
+   "src": "made"
+  },
+  {
+   "text": "小雪写完作业才能吃晚饭，这是妈妈定的规矩。",
+   "en": "Xiaoxue can only eat dinner after finishing her homework; that's her mom's rule.",
+   "ko": "샤오쉐는 숙제를 다 해야 저녁을 먹을 수 있는데, 엄마가 정한 규칙이에요.",
+   "blank": "晚饭",
+   "src": "made"
   }
  ],
  "w|晚餐": [
@@ -25771,6 +26443,22 @@
    "blank": "查"
   }
  ],
+ "w|查出": [
+  {
+   "text": "陈杰查出面包发不起来的原因，原来是酵母放久了。",
+   "en": "Chen Jie found out why the bread wasn't rising: the yeast had been stored too long.",
+   "ko": "천제는 빵이 부풀지 않는 이유를 알아냈는데, 효모가 너무 오래된 거였어요.",
+   "blank": "查出",
+   "src": "made"
+  },
+  {
+   "text": "学校体检时，医生查出小雪有点近视。",
+   "en": "At the school checkup, the doctor found that Xiaoxue is a bit nearsighted.",
+   "ko": "학교 건강검진 때 의사가 샤오쉐에게 근시가 조금 있다는 걸 알아냈어요.",
+   "blank": "查出",
+   "src": "made"
+  }
+ ],
  "w|查看": [
   {
    "text": "考完试，小明马上登录学校网站查看成绩。",
@@ -26323,6 +27011,22 @@
    "blank": "欣赏"
   }
  ],
+ "w|欲望": [
+  {
+   "text": "张伟写道，年纪越大，买东西的欲望就越小。",
+   "en": "Zhang Wei wrote that the older he gets, the less desire he has to buy things.",
+   "ko": "장웨이는 나이가 들수록 물건을 사고 싶은 욕망이 줄어든다고 썼어요.",
+   "blank": "欲望",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，好的产品能激发用户想要分享的欲望。",
+   "en": "Liu Fang says a good product sparks users' desire to share it.",
+   "ko": "류팡은 좋은 제품은 사용자가 공유하고 싶은 욕구를 불러일으킨다고 말해요.",
+   "blank": "欲望",
+   "src": "made"
+  }
+ ],
  "w|欺负": [
   {
    "text": "赵磊小时候常被人欺负，是书陪他度过了那段日子。",
@@ -26675,6 +27379,22 @@
    "src": "made"
   }
  ],
+ "w|残酷": [
+  {
+   "text": "开面包店的竞争很残酷，这条街上去年就关了两家。",
+   "en": "Competition among bakeries is brutal; two on this street closed just last year.",
+   "ko": "빵집 경쟁은 치열해서 이 거리에서만 작년에 두 곳이 문을 닫았어요.",
+   "blank": "残酷",
+   "src": "made"
+  },
+  {
+   "text": "高考的竞争很残酷，小雪每天学到很晚。",
+   "en": "Competition for the college entrance exam is brutal, so Xiaoxue studies late every day.",
+   "ko": "대학 입시 경쟁이 치열해서 샤오쉐는 매일 늦게까지 공부해요.",
+   "blank": "残酷",
+   "src": "made"
+  }
+ ],
  "w|段": [
   {
    "text": "我在北京住过一段时间。",
@@ -26935,6 +27655,22 @@
    "blank": "气"
   }
  ],
+ "w|气味": [
+  {
+   "text": "一走进陈杰的面包店，就能闻到黄油和肉桂的气味。",
+   "en": "As soon as you step into Chen Jie's bakery, you can smell butter and cinnamon.",
+   "ko": "천제네 빵집에 들어서자마자 버터와 시나몬 냄새가 나요.",
+   "blank": "气味",
+   "src": "made"
+  },
+  {
+   "text": "实验室里有一股奇怪的气味，小雪赶紧打开了窗户。",
+   "en": "There was a strange smell in the lab, so Xiaoxue quickly opened the window.",
+   "ko": "실험실에 이상한 냄새가 나서 샤오쉐는 얼른 창문을 열었어요.",
+   "blank": "气味",
+   "src": "made"
+  }
+ ],
  "w|气氛": [
   {
    "text": "宣判前，法庭里的气氛紧张得让人喘不过气。",
@@ -26978,6 +27714,22 @@
    "en": "Liu Fang's English is good, so the manager put her in charge of contacting overseas clients.",
    "ko": "류팡은 영어 실력이 좋아서 매니저가 해외 고객 연락을 맡겼어요.",
    "blank": "水平",
+   "src": "made"
+  }
+ ],
+ "w|水果": [
+  {
+   "text": "陈杰最近在试着做加了各种水果的面包。",
+   "en": "Chen Jie has recently been trying out breads with all kinds of fruit in them.",
+   "ko": "천제는 요즘 여러 가지 과일을 넣은 빵을 시험 삼아 만들고 있어요.",
+   "blank": "水果",
+   "src": "made"
+  },
+  {
+   "text": "小雪的午餐盒里总有一些切好的水果。",
+   "en": "There's always some cut-up fruit in Xiaoxue's lunchbox.",
+   "ko": "샤오쉐의 도시락에는 늘 잘라 놓은 과일이 조금 들어 있어요.",
+   "blank": "水果",
    "src": "made"
   }
  ],
@@ -27038,6 +27790,22 @@
    "en": "At lunch colleagues chatted about who had been proposed to lately, and Liu Fang listened closely.",
    "ko": "점심때 동료들이 최근 누가 청혼을 받았는지 얘기하자 류팡은 열심히 들었어요.",
    "blank": "求婚",
+   "src": "made"
+  }
+ ],
+ "w|汉堡": [
+  {
+   "text": "隔壁汉堡店的老板说，陈杰烤的面包比他自己的好。",
+   "en": "The owner of the burger shop next door says Chen Jie's buns are better than his own.",
+   "ko": "옆집 햄버거 가게 사장님은 천제가 구운 빵이 자기 것보다 낫다고 해요.",
+   "blank": "汉堡",
+   "src": "made"
+  },
+  {
+   "text": "小雪的弟弟不爱吃食堂的饭，总想吃汉堡。",
+   "en": "Xiaoxue's little brother doesn't like cafeteria food and always wants burgers.",
+   "ko": "샤오쉐의 남동생은 학교 식당 밥을 싫어하고 늘 햄버거만 먹고 싶어 해요.",
+   "blank": "汉堡",
    "src": "made"
   }
  ],
@@ -27229,6 +27997,22 @@
    "src": "made"
   }
  ],
+ "w|油": [
+  {
+   "text": "陈杰做甜甜圈时，锅里的油要烧到刚刚好。",
+   "en": "When Chen Jie makes doughnuts, the oil in the pot has to be heated just right.",
+   "ko": "천제는 도넛을 만들 때 냄비 속 기름을 딱 알맞게 달궈야 해요.",
+   "blank": "油",
+   "src": "made"
+  },
+  {
+   "text": "做实验时，小雪往水里滴了几滴油，看它怎么浮起来。",
+   "en": "During the experiment, Xiaoxue dropped some oil into water to see how it floats.",
+   "ko": "실험할 때 샤오쉐는 물에 기름 몇 방울을 떨어뜨려 어떻게 뜨는지 봤어요.",
+   "blank": "油",
+   "src": "made"
+  }
+ ],
  "w|治疗": [
   {
    "text": "需要治疗。",
@@ -27241,6 +28025,22 @@
    "en": "Currently in treatment.",
    "ko": "치료 중이야.",
    "blank": "治疗"
+  }
+ ],
+ "w|沿着": [
+  {
+   "text": "张伟在信里写，他昨天又沿着那条小河走了一遍。",
+   "en": "Zhang Wei wrote that yesterday he walked along that little river again.",
+   "ko": "장웨이는 어제 그 작은 강을 따라 다시 걸었다고 편지에 썼어요.",
+   "blank": "沿着",
+   "src": "made"
+  },
+  {
+   "text": "每天下班，刘芳都会沿着江边走回家，顺便想想产品的事。",
+   "en": "Every day after work, Liu Fang walks home along the river, thinking about the product on the way.",
+   "ko": "류팡은 매일 퇴근하면 강변을 따라 걸어서 집에 가며 제품 생각을 해요.",
+   "blank": "沿着",
+   "src": "made"
   }
  ],
  "w|法官": [
@@ -28117,6 +28917,22 @@
    "blank": "激动"
   }
  ],
+ "w|激情": [
+  {
+   "text": "老朋友在回信里说，自己对画画还是充满激情。",
+   "en": "His old friend said in the reply that he is still full of passion for painting.",
+   "ko": "옛 친구는 답장에서 자기는 아직도 그림에 열정이 가득하다고 했어요.",
+   "blank": "激情",
+   "src": "made"
+  },
+  {
+   "text": "刘芳希望招到对技术有激情的年轻人。",
+   "en": "Liu Fang hopes to hire young people who are passionate about technology.",
+   "ko": "류팡은 기술에 열정이 있는 젊은이를 뽑고 싶어 해요.",
+   "blank": "激情",
+   "src": "made"
+  }
+ ],
  "w|火": [
   {
    "text": "小心别碰火。",
@@ -28207,6 +29023,22 @@
    "src": "made"
   }
  ],
+ "w|炒": [
+  {
+   "text": "陈杰先把核桃放在锅里炒香，再加进面团里。",
+   "en": "Chen Jie first toasts the walnuts in a pan until fragrant, then adds them to the dough.",
+   "ko": "천제는 호두를 먼저 팬에 볶아 고소하게 만든 다음 반죽에 넣어요.",
+   "blank": "炒",
+   "src": "made"
+  },
+  {
+   "text": "家政课上，老师教小雪她们怎么炒青菜。",
+   "en": "In home economics class, the teacher showed Xiaoxue and the others how to stir-fry greens.",
+   "ko": "가정 수업 시간에 선생님이 샤오쉐네 반에게 청경채 볶는 법을 가르쳐 줬어요.",
+   "blank": "炒",
+   "src": "made"
+  }
+ ],
  "w|炸弹": [
   {
    "text": "发现了一枚炸弹。",
@@ -28279,6 +29111,22 @@
    "src": "made"
   }
  ],
+ "w|烤": [
+  {
+   "text": "陈杰把面包放进炉子里烤了二十分钟。",
+   "en": "Chen Jie put the bread in the oven and baked it for twenty minutes.",
+   "ko": "천제는 빵을 오븐에 넣고 이십 분 동안 구웠어요.",
+   "blank": "烤",
+   "src": "made"
+  },
+  {
+   "text": "秋游那天，小雪和同学们在山脚下烤红薯。",
+   "en": "On the autumn outing, Xiaoxue and her classmates roasted sweet potatoes at the foot of the hill.",
+   "ko": "가을 소풍 날 샤오쉐는 친구들과 산기슭에서 고구마를 구웠어요.",
+   "blank": "烤",
+   "src": "made"
+  }
+ ],
  "w|烦": [
   {
    "text": "别烦我，我在工作。",
@@ -28292,6 +29140,22 @@
    "en": "Too many things lately; I'm really annoyed.",
    "ko": "요즘 일이 너무 많아서 짜증 나요.",
    "blank": "烦",
+   "src": "made"
+  }
+ ],
+ "w|烦恼": [
+  {
+   "text": "张伟最近很烦恼，不知道该不该换工作，就写信问老朋友。",
+   "en": "Zhang Wei has been troubled lately, unsure whether to change jobs, so he wrote to ask his old friend.",
+   "ko": "장웨이는 요즘 이직을 할지 말지 고민이 많아서 옛 친구에게 편지로 물었어요.",
+   "blank": "烦恼",
+   "src": "made"
+  },
+  {
+   "text": "产品总是出小毛病，刘芳为这件事烦恼了好几天。",
+   "en": "The product kept having small glitches, and Liu Fang was bothered by it for days.",
+   "ko": "제품에 자꾸 작은 문제가 생겨서 류팡은 며칠 동안 그 일로 골치를 앓았어요.",
+   "blank": "烦恼",
    "src": "made"
   }
  ],
@@ -28321,6 +29185,22 @@
    "en": "The water is too hot.",
    "ko": "물이 너무 뜨거워.",
    "blank": "热"
+  }
+ ],
+ "w|热情": [
+  {
+   "text": "张伟一直记得老朋友一家人的热情。",
+   "en": "Zhang Wei has always remembered the warmth of his old friend's family.",
+   "ko": "장웨이는 옛 친구네 가족의 따뜻한 환대를 늘 기억해요.",
+   "blank": "热情",
+   "src": "made"
+  },
+  {
+   "text": "刚开始创业的时候，刘芳和团队都充满了热情。",
+   "en": "When they first started the business, Liu Fang and her team were full of enthusiasm.",
+   "ko": "처음 창업했을 때 류팡과 팀원들은 모두 열정이 넘쳤어요.",
+   "blank": "热情",
+   "src": "made"
   }
  ],
  "w|然后": [
@@ -28393,6 +29273,22 @@
    "en": "The photo is here.",
    "ko": "사진은 여기 있어.",
    "blank": "照片"
+  }
+ ],
+ "w|照看": [
+  {
+   "text": "张伟问老朋友，出门那几天谁帮他照看那只老猫。",
+   "en": "Zhang Wei asked his old friend who would look after the old cat while he was away.",
+   "ko": "장웨이는 옛 친구에게 집을 비우는 동안 누가 그 늙은 고양이를 봐 주냐고 물었어요.",
+   "blank": "照看",
+   "src": "made"
+  },
+  {
+   "text": "刘芳加班的时候，妈妈帮她照看家里的小狗。",
+   "en": "When Liu Fang works late, her mother looks after her little dog.",
+   "ko": "류팡이 야근할 때는 엄마가 집에 있는 강아지를 돌봐 줘요.",
+   "blank": "照看",
+   "src": "made"
   }
  ],
  "w|照顾": [
@@ -29445,6 +30341,22 @@
    "en": "He calls me sweetheart.",
    "ko": "그는 날 자기야라고 불러.",
    "blank": "甜心"
+  }
+ ],
+ "w|甜蜜": [
+  {
+   "text": "一对新人请陈杰做婚礼蛋糕，希望看起来甜蜜又简单。",
+   "en": "A newlywed couple asked Chen Jie for a wedding cake that looks sweet and simple.",
+   "ko": "한 신혼부부가 천제에게 달콤하면서도 단순해 보이는 웨딩 케이크를 부탁했어요.",
+   "blank": "甜蜜",
+   "src": "made"
+  },
+  {
+   "text": "小雪觉得，和好朋友一起放学回家是最甜蜜的时光。",
+   "en": "Xiaoxue thinks walking home from school with her best friend is the sweetest time of day.",
+   "ko": "샤오쉐는 단짝과 같이 하교하는 시간이 가장 달콤한 때라고 생각해요.",
+   "blank": "甜蜜",
+   "src": "made"
   }
  ],
  "w|生": [
@@ -30505,6 +31417,22 @@
    "src": "made"
   }
  ],
+ "w|相互": [
+  {
+   "text": "陈杰和对面咖啡店的老板相互介绍客人，两家生意都好了。",
+   "en": "Chen Jie and the café owner across the street send customers to each other, and both businesses improved.",
+   "ko": "천제와 맞은편 카페 사장님은 서로 손님을 소개해 줘서 두 가게 모두 장사가 잘돼요.",
+   "blank": "相互",
+   "src": "made"
+  },
+  {
+   "text": "老师让小雪她们分成小组，相互检查作业。",
+   "en": "The teacher had Xiaoxue's class split into groups and check each other's homework.",
+   "ko": "선생님은 샤오쉐네 반을 조로 나눠 서로 숙제를 검사하게 했어요.",
+   "blank": "相互",
+   "src": "made"
+  }
+ ],
  "w|相信": [
   {
    "text": "我相信你。",
@@ -31495,6 +32423,38 @@
    "en": "Wish you success.",
    "ko": "성공을 기원해.",
    "blank": "祝"
+  }
+ ],
+ "w|祝福": [
+  {
+   "text": "张伟在信的最后祝福老朋友一家平安健康。",
+   "en": "At the end of the letter, Zhang Wei wished his old friend's family peace and good health.",
+   "ko": "장웨이는 편지 끝에 옛 친구네 가족이 평안하고 건강하길 빌었어요.",
+   "blank": "祝福",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的父母打来电话，祝福她的公司越办越好。",
+   "en": "Liu Fang's parents called to wish her company ever greater success.",
+   "ko": "류팡의 부모님이 전화해서 회사가 점점 더 잘되길 빌어 주셨어요.",
+   "blank": "祝福",
+   "src": "made"
+  }
+ ],
+ "w|祝贺": [
+  {
+   "text": "张伟写信祝贺老朋友的女儿考上了大学。",
+   "en": "Zhang Wei wrote to congratulate his old friend's daughter on getting into university.",
+   "ko": "장웨이는 옛 친구의 딸이 대학에 붙은 걸 축하하려고 편지를 썼어요.",
+   "blank": "祝贺",
+   "src": "made"
+  },
+  {
+   "text": "老同学听说刘芳拿到了投资，特地打电话来祝贺。",
+   "en": "When an old classmate heard Liu Fang had secured investment, she called specially to congratulate her.",
+   "ko": "옛 동창은 류팡이 투자를 받았다는 소식을 듣고 일부러 전화해서 축하해 줬어요.",
+   "blank": "祝贺",
+   "src": "made"
   }
  ],
  "w|神": [
@@ -32679,6 +33639,22 @@
    "src": "made"
   }
  ],
+ "w|糖果": [
+  {
+   "text": "陈杰在收银台旁边放了一小罐糖果，给来买面包的孩子。",
+   "en": "Chen Jie keeps a small jar of candy by the register for the children who come in.",
+   "ko": "천제는 계산대 옆에 빵 사러 오는 아이들을 위해 사탕 한 통을 두었어요.",
+   "blank": "糖果",
+   "src": "made"
+  },
+  {
+   "text": "儿童节那天，老师给小雪班上每个人发了一包糖果。",
+   "en": "On Children's Day, the teacher gave everyone in Xiaoxue's class a bag of candy.",
+   "ko": "어린이날에 선생님이 샤오쉐네 반 아이들에게 사탕을 한 봉지씩 나눠 줬어요.",
+   "blank": "糖果",
+   "src": "made"
+  }
+ ],
  "w|糟糕": [
   {
    "text": "糟糕，忘带钥匙了。",
@@ -32775,6 +33751,22 @@
    "en": "Let's cancel the date.",
    "ko": "데이트 취소하자.",
    "blank": "约会"
+  }
+ ],
+ "w|约定": [
+  {
+   "text": "陈杰和老顾客约定，每周六给她留一个全麦面包。",
+   "en": "Chen Jie agreed with a regular customer to save her a whole wheat loaf every Saturday.",
+   "ko": "천제는 단골손님과 매주 토요일마다 통밀빵 하나를 남겨 두기로 약속했어요.",
+   "blank": "约定",
+   "src": "made"
+  },
+  {
+   "text": "小雪和同桌约定，毕业以后也要常常见面。",
+   "en": "Xiaoxue and her deskmate promised to keep seeing each other after graduation.",
+   "ko": "샤오쉐는 짝꿍과 졸업한 뒤에도 자주 만나자고 약속했어요.",
+   "blank": "约定",
+   "src": "made"
   }
  ],
  "w|纪念": [
@@ -33288,6 +34280,22 @@
    "en": "Li Na dominated under the basket all game, grabbing over ten rebounds.",
    "ko": "리나는 골밑을 경기 내내 지배하며 리바운드를 열 개 넘게 잡았어요.",
    "blank": "统治",
+   "src": "made"
+  }
+ ],
+ "w|继承": [
+  {
+   "text": "老朋友继承了父亲的小书店，张伟一直想去看看。",
+   "en": "His old friend inherited his father's little bookshop, and Zhang Wei has always wanted to visit.",
+   "ko": "옛 친구가 아버지의 작은 서점을 물려받아서 장웨이는 늘 한번 가 보고 싶었어요.",
+   "blank": "继承",
+   "src": "made"
+  },
+  {
+   "text": "刘芳要求新版软件继承旧版简单好用的特点。",
+   "en": "Liu Fang wants the new version to keep the simple, easy-to-use qualities of the old one.",
+   "ko": "류팡은 새 버전이 옛 버전의 간단하고 쓰기 편한 장점을 이어받길 원해요.",
+   "blank": "继承",
    "src": "made"
   }
  ],
@@ -34207,6 +35215,22 @@
    "blank": "聚会"
   }
  ],
+ "w|聚集": [
+  {
+   "text": "每天傍晚打折的时候，很多人聚集在陈杰的店门口。",
+   "en": "Every evening at discount time, lots of people gather at the door of Chen Jie's shop.",
+   "ko": "매일 저녁 할인 시간이 되면 많은 사람들이 천제네 가게 앞에 모여요.",
+   "blank": "聚集",
+   "src": "made"
+  },
+  {
+   "text": "下课铃一响，同学们都聚集在操场上看小雪她们跳绳。",
+   "en": "As soon as the bell rang, the students gathered on the playground to watch Xiaoxue's group jump rope.",
+   "ko": "종이 울리자 학생들이 운동장에 모여 샤오쉐네가 줄넘기하는 걸 구경했어요.",
+   "blank": "聚集",
+   "src": "made"
+  }
+ ],
  "w|聪明": [
   {
    "text": "你真聪明。",
@@ -34471,6 +35495,22 @@
    "blank": "能量"
   }
  ],
+ "w|脆弱": [
+  {
+   "text": "张伟承认，那段时间他的心其实很脆弱。",
+   "en": "Zhang Wei admitted that his heart was actually very fragile during that time.",
+   "ko": "장웨이는 그 시절 자기 마음이 사실 아주 여렸다고 인정했어요.",
+   "blank": "脆弱",
+   "src": "made"
+  },
+  {
+   "text": "刘芳发现系统里有几个脆弱的地方，马上让工程师去修。",
+   "en": "Liu Fang found several weak spots in the system and immediately had the engineers fix them.",
+   "ko": "류팡은 시스템에서 취약한 곳 몇 군데를 발견하고 바로 엔지니어에게 고치게 했어요.",
+   "blank": "脆弱",
+   "src": "made"
+  }
+ ],
  "w|脏": [
   {
    "text": "有人还回来的书封面很脏，赵磊用湿巾擦了擦。",
@@ -34643,6 +35683,22 @@
    "blank": "自从"
   }
  ],
+ "w|自信": [
+  {
+   "text": "张伟说，小时候是老朋友让他变得更自信的。",
+   "en": "Zhang Wei said it was his old friend who made him more confident as a child.",
+   "ko": "장웨이는 어릴 때 자기를 더 자신감 있게 만들어 준 게 옛 친구였다고 했어요.",
+   "blank": "自信",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在台上介绍产品的时候显得非常自信。",
+   "en": "Liu Fang looked very confident presenting the product on stage.",
+   "ko": "류팡은 무대에서 제품을 소개할 때 아주 자신감 있어 보였어요.",
+   "blank": "自信",
+   "src": "made"
+  }
+ ],
  "w|自动": [
   {
    "text": "展厅的门是自动的，人一走近就打开。",
@@ -34742,6 +35798,22 @@
    "en": "Wang Fang thinks people who secretly copy customers' photos are very selfish.",
    "ko": "왕팡은 손님 사진을 몰래 복사해 가는 사람은 너무 이기적이라고 생각해요.",
    "blank": "自私",
+   "src": "made"
+  }
+ ],
+ "w|自豪": [
+  {
+   "text": "听说老朋友当上了医生，张伟替他感到很自豪。",
+   "en": "Hearing that his old friend had become a doctor, Zhang Wei felt very proud of him.",
+   "ko": "옛 친구가 의사가 됐다는 말을 듣고 장웨이는 친구가 정말 자랑스러웠어요.",
+   "blank": "自豪",
+   "src": "made"
+  },
+  {
+   "text": "看到注册用户突破一万，刘芳感到非常自豪。",
+   "en": "Seeing registered users pass ten thousand, Liu Fang felt very proud.",
+   "ko": "가입자가 만 명을 넘은 걸 보고 류팡은 정말 뿌듯했어요.",
+   "blank": "自豪",
    "src": "made"
   }
  ],
@@ -35197,6 +36269,22 @@
    "blank": "英雄"
   }
  ],
+ "w|苹果": [
+  {
+   "text": "陈杰今天做了一批苹果派，店里一下子香了起来。",
+   "en": "Chen Jie made a batch of apple pies today, and the whole shop instantly smelled wonderful.",
+   "ko": "천제가 오늘 애플파이를 한 판 만들자 가게 안이 금세 향긋해졌어요.",
+   "blank": "苹果",
+   "src": "made"
+  },
+  {
+   "text": "小雪每天都在书包里放一个苹果，课间的时候吃。",
+   "en": "Xiaoxue puts an apple in her schoolbag every day to eat between classes.",
+   "ko": "샤오쉐는 매일 책가방에 사과 하나를 넣어 두고 쉬는 시간에 먹어요.",
+   "blank": "苹果",
+   "src": "made"
+  }
+ ],
  "w|范围": [
   {
    "text": "超出了范围。",
@@ -35223,6 +36311,22 @@
    "en": "This tea smells nice.",
    "ko": "이 차는 향이 좋아.",
    "blank": "茶"
+  }
+ ],
+ "w|荒唐": [
+  {
+   "text": "有位客人要求陈杰用辣椒做蛋糕，陈杰觉得这个要求有点荒唐。",
+   "en": "A customer asked Chen Jie to make a cake with chili peppers, which Chen Jie found a bit absurd.",
+   "ko": "어떤 손님이 고추로 케이크를 만들어 달라고 해서 천제는 좀 황당하다고 생각했어요.",
+   "blank": "荒唐",
+   "src": "made"
+  },
+  {
+   "text": "小雪觉得考试前一天才发新书这件事太荒唐了。",
+   "en": "Xiaoxue thinks handing out new textbooks the day before the exam is ridiculous.",
+   "ko": "샤오쉐는 시험 전날에야 새 교과서를 나눠 준 게 너무 황당하다고 생각해요.",
+   "blank": "荒唐",
+   "src": "made"
   }
  ],
  "w|荒谬": [
@@ -36345,6 +37449,22 @@
    "en": "Do you have a plan?",
    "ko": "계획 있어?",
    "blank": "计划"
+  }
+ ],
+ "w|计算": [
+  {
+   "text": "陈杰每晚都会计算第二天要用多少面粉和黄油。",
+   "en": "Every night Chen Jie calculates how much flour and butter he'll need the next day.",
+   "ko": "천제는 매일 밤 다음 날 쓸 밀가루와 버터 양을 계산해요.",
+   "blank": "计算",
+   "src": "made"
+  },
+  {
+   "text": "数学课上，小雪只用心算，很快就把答案计算出来了。",
+   "en": "In math class, Xiaoxue worked out the answer quickly in her head.",
+   "ko": "수학 시간에 샤오쉐는 암산만으로 금방 답을 계산해 냈어요.",
+   "blank": "计算",
+   "src": "made"
   }
  ],
  "w|认为": [
@@ -39299,6 +40419,22 @@
    "src": "made"
   }
  ],
+ "w|迷失": [
+  {
+   "text": "陈杰说，开店这几年，他差点在忙碌中迷失了自己。",
+   "en": "Chen Jie says that in these years of running the shop, he nearly lost himself in the busyness.",
+   "ko": "천제는 가게를 하는 몇 년 동안 바쁜 생활 속에서 자신을 잃을 뻔했다고 해요.",
+   "blank": "迷失",
+   "src": "made"
+  },
+  {
+   "text": "第一次去新校区，小雪在楼里迷失了方向。",
+   "en": "The first time she went to the new campus, Xiaoxue lost her way in the building.",
+   "ko": "새 캠퍼스에 처음 갔을 때 샤오쉐는 건물 안에서 길을 잃었어요.",
+   "blank": "迷失",
+   "src": "made"
+  }
+ ],
  "w|迷路": [
   {
    "text": "机场太大了，赵磊找登机口的时候差点迷路。",
@@ -39503,6 +40639,22 @@
    "en": "Don't run; stay.",
    "ko": "도망가지 마, 남아.",
    "blank": "逃"
+  }
+ ],
+ "w|逃离": [
+  {
+   "text": "张伟说，有时候真想逃离城市，回小镇住几天。",
+   "en": "Zhang Wei said that sometimes he really wants to escape the city and stay in the small town for a few days.",
+   "ko": "장웨이는 가끔 정말 도시를 벗어나 작은 마을에서 며칠 지내고 싶다고 했어요.",
+   "blank": "逃离",
+   "src": "made"
+  },
+  {
+   "text": "不少年轻人逃离大公司，加入了刘芳的小团队。",
+   "en": "Many young people fled big companies to join Liu Fang's small team.",
+   "ko": "많은 젊은이들이 대기업을 떠나 류팡의 작은 팀에 합류했어요.",
+   "blank": "逃离",
+   "src": "made"
   }
  ],
  "w|逃脱": [
@@ -39882,6 +41034,22 @@
    "en": "Sun Yue's shop was hit by a burglar last month and lost a few cartons of cigarettes.",
    "ko": "쑨웨의 가게는 지난달 도둑이 들어서 담배 몇 보루를 잃어버렸어요.",
    "blank": "遭到",
+   "src": "made"
+  }
+ ],
+ "w|遭受": [
+  {
+   "text": "去年面粉涨价，陈杰的小店遭受了不小的损失。",
+   "en": "Flour prices went up last year, and Chen Jie's little shop suffered a sizable loss.",
+   "ko": "작년에 밀가루 값이 올라서 천제의 작은 가게는 적지 않은 손해를 봤어요.",
+   "blank": "遭受",
+   "src": "made"
+  },
+  {
+   "text": "历史老师讲到古代城市遭受大水的故事，小雪听得很认真。",
+   "en": "Xiaoxue listened closely as the history teacher told how an ancient city was hit by a great flood.",
+   "ko": "역사 선생님이 옛 도시가 큰 홍수를 겪은 이야기를 할 때 샤오쉐는 귀 기울여 들었어요.",
+   "blank": "遭受",
    "src": "made"
   }
  ],
@@ -41409,6 +42577,22 @@
    "blank": "难以置信"
   }
  ],
+ "w|难受": [
+  {
+   "text": "想到再也回不去小时候的那条街，张伟心里很难受。",
+   "en": "Thinking he can never go back to the street of his childhood, Zhang Wei felt awful.",
+   "ko": "어린 시절 그 거리로 다시는 돌아갈 수 없다는 생각에 장웨이는 마음이 아팠어요.",
+   "blank": "难受",
+   "src": "made"
+  },
+  {
+   "text": "不得不让两个员工离开，刘芳心里非常难受。",
+   "en": "Having to let two employees go made Liu Fang feel terrible.",
+   "ko": "직원 두 명을 내보내야 해서 류팡은 마음이 몹시 괴로웠어요.",
+   "blank": "难受",
+   "src": "made"
+  }
+ ],
  "w|难过": [
   {
    "text": "别太难过了。",
@@ -41925,6 +43109,22 @@
    "src": "made"
   }
  ],
+ "w|预备": [
+  {
+   "text": "张伟已经预备好了信封和邮票，就等着把信写完。",
+   "en": "Zhang Wei already has the envelope and stamp ready and is just waiting to finish the letter.",
+   "ko": "장웨이는 봉투와 우표를 이미 준비해 두고 편지를 다 쓰기만 기다려요.",
+   "blank": "预备",
+   "src": "made"
+  },
+  {
+   "text": "发布会前，刘芳让大家预备好演示用的手机和电脑。",
+   "en": "Before the launch event, Liu Fang had everyone get the demo phones and computers ready.",
+   "ko": "발표회 전에 류팡은 모두에게 시연용 휴대폰과 컴퓨터를 준비해 두라고 했어요.",
+   "blank": "预备",
+   "src": "made"
+  }
+ ],
  "w|领先": [
   {
    "text": "接力赛跑到最后一圈，小明的班一直领先。",
@@ -42139,6 +43339,22 @@
    "src": "made"
   }
  ],
+ "w|食品": [
+  {
+   "text": "卫生部门的人来检查，说陈杰店里的食品都很安全。",
+   "en": "Health inspectors came and said all the food in Chen Jie's shop was safe.",
+   "ko": "위생 담당자가 점검하러 와서 천제네 가게 식품은 모두 안전하다고 했어요.",
+   "blank": "食品",
+   "src": "made"
+  },
+  {
+   "text": "老师提醒小雪她们，少吃路边摊上的油炸食品。",
+   "en": "The teacher reminded Xiaoxue and her classmates to eat less fried street food.",
+   "ko": "선생님은 샤오쉐네 반에게 길거리 튀김 음식을 덜 먹으라고 당부했어요.",
+   "blank": "食品",
+   "src": "made"
+  }
+ ],
  "w|食物": [
   {
    "text": "食物不够了。",
@@ -42165,6 +43381,22 @@
    "en": "What are we having for dinner?",
    "ko": "오늘 저녁 뭐 먹어?",
    "blank": "饭"
+  }
+ ],
+ "w|饭店": [
+  {
+   "text": "陈杰以前在一家大饭店的厨房里做过三年面点。",
+   "en": "Chen Jie used to make pastries in the kitchen of a big hotel restaurant for three years.",
+   "ko": "천제는 예전에 큰 호텔 식당 주방에서 삼 년 동안 빵과 과자를 만들었어요.",
+   "blank": "饭店",
+   "src": "made"
+  },
+  {
+   "text": "小雪的班主任结婚，请全班同学去饭店吃喜酒。",
+   "en": "When Xiaoxue's homeroom teacher got married, she invited the whole class to the wedding banquet at a restaurant.",
+   "ko": "샤오쉐의 담임 선생님이 결혼해서 반 아이들을 모두 식당 피로연에 초대했어요.",
+   "blank": "饭店",
+   "src": "made"
   }
  ],
  "w|饮料": [
@@ -42229,6 +43461,22 @@
    "blank": "餐厅"
   }
  ],
+ "w|餐馆": [
+  {
+   "text": "街对面那家餐馆每天都从陈杰这里订面包。",
+   "en": "The restaurant across the street orders bread from Chen Jie every day.",
+   "ko": "길 건너 식당은 매일 천제네서 빵을 주문해요.",
+   "blank": "餐馆",
+   "src": "made"
+  },
+  {
+   "text": "放学后，小雪常和同学去学校门口的小餐馆吃面。",
+   "en": "After school, Xiaoxue often goes with classmates to the little restaurant at the school gate for noodles.",
+   "ko": "방과 후 샤오쉐는 친구들과 학교 앞 작은 식당에 가서 국수를 먹곤 해요.",
+   "blank": "餐馆",
+   "src": "made"
+  }
+ ],
  "w|饿": [
   {
    "text": "我好饿。",
@@ -42270,6 +43518,22 @@
    "en": "Yang Yang saw on the news that the prime minister visited a tech company.",
    "ko": "양양은 뉴스에서 총리가 한 기술 회사를 방문한 걸 봤어요.",
    "blank": "首相",
+   "src": "made"
+  }
+ ],
+ "w|香槟": [
+  {
+   "text": "面包店开业一周年那天，陈杰开了一瓶香槟请员工喝。",
+   "en": "On the bakery's first anniversary, Chen Jie opened a bottle of champagne for his staff.",
+   "ko": "빵집 개업 일 주년 날 천제는 샴페인 한 병을 따서 직원들에게 대접했어요.",
+   "blank": "香槟",
+   "src": "made"
+  },
+  {
+   "text": "毕业晚会上老师们举起香槟，祝小雪她们前途光明。",
+   "en": "At the graduation party the teachers raised champagne and wished Xiaoxue's class a bright future.",
+   "ko": "졸업 파티에서 선생님들은 샴페인을 들고 샤오쉐네 반의 밝은 앞날을 빌어 줬어요.",
+   "blank": "香槟",
    "src": "made"
   }
  ],
@@ -42609,6 +43873,22 @@
    "en": "Let's have chicken tonight.",
    "ko": "오늘 저녁에 닭 먹자.",
    "blank": "鸡"
+  }
+ ],
+ "w|鸡蛋": [
+  {
+   "text": "陈杰做蛋糕时，一次要打十几个鸡蛋。",
+   "en": "When Chen Jie makes a cake, he cracks more than a dozen eggs at once.",
+   "ko": "천제는 케이크를 만들 때 한 번에 달걀을 열 개 넘게 깨요.",
+   "blank": "鸡蛋",
+   "src": "made"
+  },
+  {
+   "text": "科学课上，小雪试着让一个生鸡蛋浮在盐水上。",
+   "en": "In science class, Xiaoxue tried to make a raw egg float in salt water.",
+   "ko": "과학 시간에 샤오쉐는 날달걀을 소금물에 띄워 보려고 했어요.",
+   "blank": "鸡蛋",
+   "src": "made"
   }
  ],
  "w|麻烦": [

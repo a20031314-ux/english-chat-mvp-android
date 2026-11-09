@@ -1259,6 +1259,22 @@
    "src": "made"
   }
  ],
+ "w|agressivo": [
+  {
+   "text": "A dentista disse ao Bruno que escovar de forma agressiva machuca a gengiva.",
+   "en": "The dentist told Bruno that brushing aggressively hurts the gums.",
+   "ko": "치과 의사는 브루누에게 세게 양치하면 잇몸이 상한다고 했어요.",
+   "blank": "agressiva",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia não gostou do tom agressivo do segurança com os turistas.",
+   "en": "Sofia didn't like the security guard's aggressive tone with the tourists.",
+   "ko": "소피아는 경비원이 관광객에게 쓰는 공격적인 말투가 싫었어요.",
+   "blank": "agressivo",
+   "src": "made"
+  }
+ ],
  "w|agricultor": [
   {
    "text": "O pai do Pedro era agricultor e vendia milho para a fábrica.",
@@ -1499,6 +1515,22 @@
    "ko": "이 마을에 외양간이 많아요?",
    "blank": "aldeia",
    "src": "tatoeba:3474543/Balamax en:3474525/Balamax"
+  }
+ ],
+ "w|alegar": [
+  {
+   "text": "O Bruno tentou alegar que escovava os dentes três vezes por dia, mas a dentista riu.",
+   "en": "Bruno tried to claim he brushed his teeth three times a day, but the dentist laughed.",
+   "ko": "브루누는 하루 세 번 양치한다고 우겼지만 치과 의사는 웃었어요.",
+   "blank": "alegar",
+   "src": "made"
+  },
+  {
+   "text": "O dono do quadro costuma alegar que a pintura vale uma fortuna.",
+   "en": "The painting's owner usually claims it's worth a fortune.",
+   "ko": "그림 주인은 그 그림이 엄청난 값어치가 있다고 주장하곤 해요.",
+   "blank": "alegar",
+   "src": "made"
   }
  ],
  "w|alegrar": [
@@ -6793,6 +6825,22 @@
    "src": "tatoeba:7536757/joao7889 en:2588681/Hybrid"
   }
  ],
+ "w|bunda": [
+  {
+   "text": "O Bruno ficou tanto tempo na cadeira do dentista que doeu a bunda.",
+   "en": "Bruno sat in the dentist's chair so long his butt hurt.",
+   "ko": "브루누는 치과 의자에 너무 오래 앉아 있어서 엉덩이가 아팠어요.",
+   "blank": "bunda",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia riu de uma estátua que mostrava a bunda de um anjo.",
+   "en": "Sofia laughed at a statue showing an angel's bottom.",
+   "ko": "소피아는 천사의 엉덩이가 드러난 조각상을 보고 웃었어요.",
+   "blank": "bunda",
+   "src": "made"
+  }
+ ],
  "w|buraco": [
   {
    "text": "Tem um buraco na meia.",
@@ -8913,6 +8961,22 @@
    "src": "made"
   }
  ],
+ "w|cerebral": [
+  {
+   "text": "A dentista explicou ao Bruno que a anestesia não tem efeito cerebral.",
+   "en": "The dentist explained to Bruno that the anesthetic has no effect on the brain.",
+   "ko": "치과 의사는 브루누에게 마취가 뇌에는 영향이 없다고 설명했어요.",
+   "blank": "cerebral",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia viu um modelo cerebral gigante na ala de ciência.",
+   "en": "Sofia saw a giant brain model in the science wing.",
+   "ko": "소피아는 과학관에서 거대한 뇌 모형을 봤어요.",
+   "blank": "cerebral",
+   "src": "made"
+  }
+ ],
  "w|cérebro": [
   {
    "text": "Meu cérebro deu um branco.",
@@ -10095,6 +10159,22 @@
    "src": "tatoeba:3248361/sergiomelo en:3244689/mervert1"
   }
  ],
+ "w|clínico": [
+  {
+   "text": "A dentista do Bruno também faz atendimento clínico num hospital.",
+   "en": "Bruno's dentist also does clinical work at a hospital.",
+   "ko": "브루누의 치과 의사는 병원에서 임상 진료도 해요.",
+   "blank": "clínico",
+   "src": "made"
+  },
+  {
+   "text": "O museu tem uma sala com instrumentos do primeiro hospital clínico da cidade.",
+   "en": "The museum has a room with instruments from the city's first clinical hospital.",
+   "ko": "박물관에는 도시 최초 임상 병원의 기구들이 있는 방이 있어요.",
+   "blank": "clínico",
+   "src": "made"
+  }
+ ],
  "w|clube": [
   {
    "text": "O clube abre cedo hoje.",
@@ -10185,6 +10265,22 @@
    "en": "She covered the cake with a cloth.",
    "ko": "그 여자가 천으로 케이크를 덮었어.",
    "blank": "cobriu"
+  }
+ ],
+ "w|cocaína": [
+  {
+   "text": "A dentista explicou que o uso de cocaína pode estragar os dentes.",
+   "en": "The dentist explained that cocaine use can ruin the teeth.",
+   "ko": "치과 의사는 코카인 사용이 이를 망가뜨릴 수 있다고 설명했어요.",
+   "blank": "cocaína",
+   "src": "made"
+  },
+  {
+   "text": "Uma sala do museu explica a história do comércio de cocaína no século passado.",
+   "en": "A museum room explains the history of the cocaine trade in the last century.",
+   "ko": "박물관의 한 전시실은 지난 세기 코카인 거래의 역사를 설명해요.",
+   "blank": "cocaína",
+   "src": "made"
   }
  ],
  "w|código": [
@@ -10630,6 +10726,22 @@
    "en": "In the historical novel Luísa brought, the queen decides to grant her loyal adviser a commandery.",
    "ko": "루이자가 가져간 역사 소설에서 여왕은 충실한 고문에게 영지를 내리기로 해요.",
    "blank": "comendar",
+   "src": "made"
+  }
+ ],
+ "w|comentar": [
+  {
+   "text": "O Bruno ouviu a dentista comentar que o tratamento ia ser rápido.",
+   "en": "Bruno heard the dentist remark that the treatment would be quick.",
+   "ko": "브루누는 치과 의사가 치료가 금방 끝날 거라고 말하는 걸 들었어요.",
+   "blank": "comentar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia gosta de comentar cada obra com a irmã.",
+   "en": "Sofia likes to discuss each work with her sister.",
+   "ko": "소피아는 작품마다 언니와 이야기 나누는 걸 좋아해요.",
+   "blank": "comentar",
    "src": "made"
   }
  ],
@@ -12689,6 +12801,22 @@
    "blank": "corrida"
   }
  ],
+ "w|corrigir": [
+  {
+   "text": "O aparelho vai corrigir a mordida do Bruno em alguns meses.",
+   "en": "The braces will fix Bruno's bite in a few months.",
+   "ko": "교정기가 몇 달 안에 브루누의 맞물림을 바로잡을 거예요.",
+   "blank": "corrigir",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia avisou o museu para corrigir um erro na placa da escultura.",
+   "en": "Sofia told the museum to correct a mistake on the sculpture's label.",
+   "ko": "소피아는 박물관에 조각 설명판의 오류를 고쳐 달라고 알렸어요.",
+   "blank": "corrigir",
+   "src": "made"
+  }
+ ],
  "w|cortar": [
   {
    "text": "Vou cortar o cabelo amanhã.",
@@ -12761,6 +12889,22 @@
    "en": "He turned his back.",
    "ko": "그 사람이 등을 돌렸어.",
    "blank": "costas"
+  }
+ ],
+ "w|costela": [
+  {
+   "text": "O Bruno contou à dentista que quebrou uma costela jogando futebol.",
+   "en": "Bruno told the dentist he broke a rib playing soccer.",
+   "ko": "브루누는 치과 의사에게 축구하다 갈비뼈가 부러졌다고 말했어요.",
+   "blank": "costela",
+   "src": "made"
+  },
+  {
+   "text": "O esqueleto do dinossauro tem uma costela quebrada que intriga os cientistas.",
+   "en": "The dinosaur skeleton has a broken rib that puzzles scientists.",
+   "ko": "공룡 뼈대에는 과학자들을 갸웃하게 하는 부러진 갈비뼈가 있어요.",
+   "blank": "costela",
+   "src": "made"
   }
  ],
  "w|costumar": [
@@ -13751,6 +13895,22 @@
    "en": "I want to dance until I drop.",
    "ko": "지칠 때까지 춤추고 싶어.",
    "blank": "dançar"
+  }
+ ],
+ "w|dançarino": [
+  {
+   "text": "O Bruno encontrou no consultório um dançarino que quebrou um dente no palco.",
+   "en": "At the office, Bruno met a dancer who broke a tooth on stage.",
+   "ko": "브루누는 치과에서 무대에서 이가 부러진 무용수를 만났어요.",
+   "blank": "dançarino",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia parou diante do retrato de um dançarino famoso do século passado.",
+   "en": "Sofia stopped in front of the portrait of a famous dancer from the last century.",
+   "ko": "소피아는 지난 세기 유명 무용수의 초상화 앞에 멈춰 섰어요.",
+   "blank": "dançarino",
+   "src": "made"
   }
  ],
  "w|dano": [
@@ -15271,6 +15431,22 @@
    "blank": "detalhe"
   }
  ],
+ "w|detectar": [
+  {
+   "text": "O raio-x ajudou a dentista a detectar uma cárie escondida no dente do Bruno.",
+   "en": "The X-ray helped the dentist detect a hidden cavity in Bruno's tooth.",
+   "ko": "엑스레이 덕분에 치과 의사가 브루누 이에 숨은 충치를 찾아냈어요.",
+   "blank": "detectar",
+   "src": "made"
+  },
+  {
+   "text": "Os sensores conseguem detectar quando alguém chega perto demais de um quadro.",
+   "en": "The sensors can detect when someone gets too close to a painting.",
+   "ko": "센서는 누군가 그림에 너무 가까이 가면 감지할 수 있어요.",
+   "blank": "detectar",
+   "src": "made"
+  }
+ ],
  "w|deter": [
   {
    "text": "O Rafael deteve o cachorro pela coleira antes que ele fugisse pela porta.",
@@ -15301,6 +15477,22 @@
    "ko": "그거 꼭 하기로 마음먹은 것 같네요.",
    "blank": "determinado",
    "src": "tatoeba:7959580/lucasmg123 en:6247433/CK"
+  }
+ ],
+ "w|determinar": [
+  {
+   "text": "O exame vai determinar se o Bruno precisa de canal.",
+   "en": "The exam will determine whether Bruno needs a root canal.",
+   "ko": "검사로 브루누에게 신경 치료가 필요한지 알 수 있을 거예요.",
+   "blank": "determinar",
+   "src": "made"
+  },
+  {
+   "text": "Os especialistas ainda tentam determinar a idade da múmia.",
+   "en": "The experts are still trying to determine the mummy's age.",
+   "ko": "전문가들은 아직 미라의 나이를 밝히려 애쓰고 있어요.",
+   "blank": "determinar",
+   "src": "made"
   }
  ],
  "w|detestar": [
@@ -16297,6 +16489,22 @@
    "src": "made"
   }
  ],
+ "w|divorciar": [
+  {
+   "text": "A dentista do Bruno contou que ia se divorciar e mudar de cidade.",
+   "en": "Bruno's dentist said she was going to get divorced and move to another city.",
+   "ko": "브루누의 치과 의사는 이혼하고 다른 도시로 이사 간다고 했어요.",
+   "blank": "divorciar",
+   "src": "made"
+  },
+  {
+   "text": "Segundo o guia, o pintor decidiu se divorciar depois daquela exposição.",
+   "en": "According to the guide, the painter decided to get divorced after that exhibition.",
+   "ko": "가이드에 따르면 그 화가는 그 전시 뒤에 이혼하기로 했대요.",
+   "blank": "divorciar",
+   "src": "made"
+  }
+ ],
  "w|divórcio": [
   {
    "text": "Ela disse a ele que queria o divórcio.",
@@ -16769,6 +16977,22 @@
    "en": "That drug wrecks you.",
    "ko": "그 약은 사람을 망쳐.",
    "blank": "droga"
+  }
+ ],
+ "w|drogar": [
+  {
+   "text": "No jornal da sala de espera, o Bruno leu sobre um homem preso por drogar a bebida de uma vítima.",
+   "en": "In the waiting-room newspaper, Bruno read about a man arrested for drugging a victim's drink.",
+   "ko": "브루누는 대기실 신문에서 피해자 음료에 약을 탄 남자가 체포됐다는 기사를 읽었어요.",
+   "blank": "drogar",
+   "src": "made"
+  },
+  {
+   "text": "No romance exposto na vitrine, a vilã tenta drogar o rei para roubar a coroa.",
+   "en": "In the novel displayed in the case, the villainess tries to drug the king to steal the crown.",
+   "ko": "진열장에 놓인 소설에서 악녀가 왕관을 훔치려고 왕에게 약을 먹이려 해요.",
+   "blank": "drogar",
+   "src": "made"
   }
  ],
  "w|duelo": [
@@ -17961,6 +18185,22 @@
    "src": "tatoeba:3703726/carlosalberto en:2264703/_undertoad"
   }
  ],
+ "w|enforcar": [
+  {
+   "text": "Na novela da sala de espera, o vilão ameaçava enforcar o herói, e o Bruno trocou de canal.",
+   "en": "In the soap opera in the waiting room, the villain threatened to hang the hero, and Bruno changed the channel.",
+   "ko": "대기실 드라마에서 악당이 주인공을 목매달겠다고 위협하자 브루누는 채널을 돌렸어요.",
+   "blank": "enforcar",
+   "src": "made"
+  },
+  {
+   "text": "O museu mostra a corda que o rei mandou usar para enforcar os rebeldes, segundo o guia.",
+   "en": "The museum shows the rope the king ordered used to hang the rebels, according to the guide.",
+   "ko": "가이드에 따르면 박물관에는 왕이 반란군을 목매달 때 쓰게 한 밧줄이 있어요.",
+   "blank": "enforcar",
+   "src": "made"
+  }
+ ],
  "w|enfrentar": [
   {
    "text": "Eu acho que é hora de eu enfrentar aquele problema.",
@@ -18493,6 +18733,22 @@
    "en": "I don't want to get mixed up in this.",
    "ko": "그 일에 엮이고 싶지 않아.",
    "blank": "envolvida"
+  }
+ ],
+ "w|enxergar": [
+  {
+   "text": "Sem os óculos, o Bruno não conseguia enxergar o formulário da recepção.",
+   "en": "Without his glasses, Bruno couldn't see the reception form.",
+   "ko": "안경이 없어서 브루누는 접수 양식을 볼 수가 없었어요.",
+   "blank": "enxergar",
+   "src": "made"
+  },
+  {
+   "text": "Com tanta gente na frente, a Sofia mal conseguia enxergar a estátua.",
+   "en": "With so many people in front, Sofia could barely see the statue.",
+   "ko": "앞에 사람이 너무 많아서 소피아는 조각상을 거의 볼 수 없었어요.",
+   "blank": "enxergar",
+   "src": "made"
   }
  ],
  "w|episódio": [
@@ -19417,6 +19673,22 @@
    "src": "made"
   }
  ],
+ "w|esquentar": [
+  {
+   "text": "A dentista pediu ao Bruno que não comesse nada muito quente nem tentasse esquentar a bochecha.",
+   "en": "The dentist asked Bruno not to eat anything too hot or try to warm his cheek.",
+   "ko": "치과 의사는 브루누에게 뜨거운 걸 먹거나 볼을 데우지 말라고 했어요.",
+   "blank": "esquentar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia comprou um café para esquentar as mãos depois da exposição ao ar livre.",
+   "en": "Sofia bought a coffee to warm her hands after the outdoor exhibition.",
+   "ko": "소피아는 야외 전시를 본 뒤 손을 녹이려고 커피를 샀어요.",
+   "blank": "esquentar",
+   "src": "made"
+  }
+ ],
  "w|esquerda": [
   {
    "text": "A loja fica à esquerda.",
@@ -19673,6 +19945,22 @@
    "ko": "아직도 배가 아파요.",
    "blank": "estômago",
    "src": "tatoeba:8598201/bill en:8561953/CK"
+  }
+ ],
+ "w|estourar": [
+  {
+   "text": "O Bruno mordeu uma pipoca e sentiu a obturação estourar.",
+   "en": "Bruno bit into some popcorn and felt the filling pop out.",
+   "ko": "브루누는 팝콘을 씹다가 때운 게 튀어 나가는 걸 느꼈어요.",
+   "blank": "estourar",
+   "src": "made"
+  },
+  {
+   "text": "Um menino deixou um balão estourar no meio da sala silenciosa.",
+   "en": "A boy let a balloon pop in the middle of the silent room.",
+   "ko": "한 남자아이가 조용한 전시실 한가운데서 풍선을 터뜨렸어요.",
+   "blank": "estourar",
+   "src": "made"
   }
  ],
  "w|estrada": [
@@ -20705,6 +20993,22 @@
    "ko": "우리 엄마는 공장에서 일해요.",
    "blank": "fábrica",
    "src": "tatoeba:5546019/bill en:1725262/belgavox"
+  }
+ ],
+ "w|fabuloso": [
+  {
+   "text": "O Bruno achou fabuloso o resultado da restauração.",
+   "en": "Bruno thought the result of the filling was fabulous.",
+   "ko": "브루누는 치아 수복 결과가 아주 멋지다고 생각했어요.",
+   "blank": "fabuloso",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia achou fabulosa a coleção de vestidos antigos.",
+   "en": "Sofia thought the collection of old dresses was fabulous.",
+   "ko": "소피아는 옛 드레스 컬렉션이 정말 멋지다고 생각했어요.",
+   "blank": "fabulosa",
+   "src": "made"
   }
  ],
  "w|faca": [
@@ -23425,6 +23729,22 @@
    "src": "tatoeba:2119445/MarlonX19 en:2117558/erikspen"
   }
  ],
+ "w|genético": [
+  {
+   "text": "A dentista disse que a gengiva fraca do Bruno pode ter causa genética.",
+   "en": "The dentist said Bruno's weak gums may have a genetic cause.",
+   "ko": "치과 의사는 브루누의 약한 잇몸이 유전 때문일 수 있다고 했어요.",
+   "blank": "genética",
+   "src": "made"
+  },
+  {
+   "text": "A exposição de ciência explica como a informação genética passa de pais para filhos.",
+   "en": "The science exhibit explains how genetic information passes from parents to children.",
+   "ko": "과학 전시는 유전 정보가 부모에게서 자녀에게 어떻게 전해지는지 설명해요.",
+   "blank": "genética",
+   "src": "made"
+  }
+ ],
  "w|genial": [
   {
    "text": "Maria é uma cientista genial.",
@@ -25953,6 +26273,22 @@
    "blank": "inocente"
   }
  ],
+ "w|insano": [
+  {
+   "text": "O Bruno achou insano pagar tanto por um clareamento.",
+   "en": "Bruno thought it was insane to pay so much for teeth whitening.",
+   "ko": "브루누는 치아 미백에 그렇게 많이 내는 게 미친 짓이라고 생각했어요.",
+   "blank": "insano",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia achou insana a fila para ver a pintura mais famosa.",
+   "en": "Sofia thought the line to see the most famous painting was insane.",
+   "ko": "소피아는 가장 유명한 그림을 보려는 줄이 말도 안 된다고 생각했어요.",
+   "blank": "insana",
+   "src": "made"
+  }
+ ],
  "w|inseto": [
   {
    "text": "Eu comi um inseto sem querer.",
@@ -28099,6 +28435,22 @@
    "src": "made"
   }
  ],
+ "w|lésbica": [
+  {
+   "text": "Na revista da sala de espera, o Bruno leu sobre uma atleta lésbica que ganhou uma medalha.",
+   "en": "In the waiting-room magazine, Bruno read about a lesbian athlete who won a medal.",
+   "ko": "브루누는 대기실 잡지에서 메달을 딴 레즈비언 선수 이야기를 읽었어요.",
+   "blank": "lésbica",
+   "src": "made"
+  },
+  {
+   "text": "A exposição de fotos contava a história de uma lésbica que fundou um jornal.",
+   "en": "The photo exhibition told the story of a lesbian who founded a newspaper.",
+   "ko": "사진전은 신문을 창간한 한 레즈비언의 이야기를 다뤘어요.",
+   "blank": "lésbica",
+   "src": "made"
+  }
+ ],
  "w|leste": [
   {
    "text": "Meu quarto fica virado para o leste.",
@@ -28935,6 +29287,22 @@
    "blank": "lugar"
   }
  ],
+ "w|lutador": [
+  {
+   "text": "Um lutador de boxe esperava a vez do Bruno com o protetor bucal na mão.",
+   "en": "A boxer was waiting before Bruno with his mouthguard in hand.",
+   "ko": "권투 선수가 마우스피스를 손에 들고 브루누 앞 순서를 기다렸어요.",
+   "blank": "lutador",
+   "src": "made"
+  },
+  {
+   "text": "Uma estátua de bronze mostra um lutador grego em pleno movimento.",
+   "en": "A bronze statue shows a Greek wrestler in full motion.",
+   "ko": "청동상은 한창 움직이는 그리스 레슬링 선수를 보여 줘요.",
+   "blank": "lutador",
+   "src": "made"
+  }
+ ],
  "w|lutar": [
   {
    "text": "Não quero lutar com você.",
@@ -29040,6 +29408,22 @@
    "en": "With no finished kitchen, Sofia ate instant noodles for dinner for a week.",
    "ko": "부엌이 안 끝나서 소피아는 일주일 동안 라면으로 저녁을 때웠어요.",
    "blank": "macarrão",
+   "src": "made"
+  }
+ ],
+ "w|macho": [
+  {
+   "text": "A dentista contou ao Bruno que o gato macho dela vive roendo fios.",
+   "en": "The dentist told Bruno that her male cat is always chewing wires.",
+   "ko": "치과 의사는 브루누에게 자기 수고양이가 늘 전선을 갉는다고 했어요.",
+   "blank": "macho",
+   "src": "made"
+  },
+  {
+   "text": "No museu de ciências naturais, a Sofia aprendeu que o leão macho tem juba.",
+   "en": "At the natural science museum, Sofia learned that the male lion has a mane.",
+   "ko": "자연사 박물관에서 소피아는 수사자에게 갈기가 있다는 걸 배웠어요.",
+   "blank": "macho",
    "src": "made"
   }
  ],
@@ -34735,6 +35119,22 @@
    "blank": "padre"
   }
  ],
+ "w|padrinho": [
+  {
+   "text": "O Bruno levou o padrinho dele ao dentista para fazer uma limpeza.",
+   "en": "Bruno took his godfather to the dentist for a cleaning.",
+   "ko": "브루누는 대부를 치과에 모시고 가서 스케일링을 받게 했어요.",
+   "blank": "padrinho",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia levou o afilhado ao museu, e o padrinho dele foi junto.",
+   "en": "Sofia took her godson to the museum, and his godfather came along.",
+   "ko": "소피아는 대자를 데리고 박물관에 갔고 그 아이의 대부도 같이 갔어요.",
+   "blank": "padrinho",
+   "src": "made"
+  }
+ ],
  "w|pagamento": [
   {
    "text": "Que opções de pagamento estão disponíveis?",
@@ -35211,6 +35611,22 @@
    "ko": "넌 내 친척이 아니야.",
    "blank": "parente",
    "src": "tatoeba:5022216/ianna en:11130642/carlosalberto"
+  }
+ ],
+ "w|parir": [
+  {
+   "text": "A recepcionista do dentista vai tirar licença porque está prestes a parir.",
+   "en": "The dentist's receptionist is taking leave because she's about to give birth.",
+   "ko": "치과 접수원은 곧 출산이라 휴가를 낼 거예요.",
+   "blank": "parir",
+   "src": "made"
+  },
+  {
+   "text": "Um painel do museu mostrava como as mulheres antigas costumavam parir em casa.",
+   "en": "A museum panel showed how women of the past used to give birth at home.",
+   "ko": "박물관 안내판에는 옛날 여성들이 집에서 어떻게 출산했는지 나와 있었어요.",
+   "blank": "parir",
+   "src": "made"
   }
  ],
  "w|parque": [
@@ -36935,6 +37351,22 @@
    "src": "made"
   }
  ],
+ "w|piscar": [
+  {
+   "text": "A luz forte fez o Bruno piscar várias vezes na cadeira.",
+   "en": "The bright light made Bruno blink several times in the chair.",
+   "ko": "강한 조명 때문에 브루누는 의자에서 여러 번 눈을 깜빡였어요.",
+   "blank": "piscar",
+   "src": "made"
+  },
+  {
+   "text": "As luzes da sala começaram a piscar avisando que o museu ia fechar.",
+   "en": "The room lights started blinking to warn that the museum was closing.",
+   "ko": "전시실 조명이 깜빡이며 박물관이 곧 문을 닫는다고 알렸어요.",
+   "blank": "piscar",
+   "src": "made"
+  }
+ ],
  "w|piscina": [
   {
    "text": "Eu reconheço aquela piscina!",
@@ -38262,6 +38694,22 @@
    "en": "Sofia's lazy brother promised to help and didn't show up.",
    "ko": "소피아의 게으른 남동생은 돕겠다고 해 놓고 오지 않았어요.",
    "blank": "preguiçoso",
+   "src": "made"
+  }
+ ],
+ "w|prejudicar": [
+  {
+   "text": "O açúcar em excesso pode prejudicar os dentes das crianças, explicou a dentista ao Bruno.",
+   "en": "Too much sugar can harm children's teeth, the dentist explained to Bruno.",
+   "ko": "설탕을 너무 많이 먹으면 아이들 이가 상할 수 있다고 치과 의사가 브루누에게 설명했어요.",
+   "blank": "prejudicar",
+   "src": "made"
+  },
+  {
+   "text": "O flash das câmeras pode prejudicar as pinturas antigas.",
+   "en": "Camera flash can damage old paintings.",
+   "ko": "카메라 플래시는 오래된 그림을 상하게 할 수 있어요.",
+   "blank": "prejudicar",
    "src": "made"
   }
  ],
@@ -39693,6 +40141,22 @@
    "src": "tatoeba:5909246/sergiomelo en:5905076/CK"
   }
  ],
+ "w|punho": [
+  {
+   "text": "De nervoso, o Bruno apertava o punho durante a anestesia.",
+   "en": "Out of nerves, Bruno clenched his fist during the anesthesia.",
+   "ko": "긴장한 브루누는 마취하는 동안 주먹을 꽉 쥐었어요.",
+   "blank": "punho",
+   "src": "made"
+  },
+  {
+   "text": "A estátua do herói segura uma espada no punho direito.",
+   "en": "The hero's statue holds a sword in its right fist.",
+   "ko": "영웅 동상은 오른 주먹에 칼을 쥐고 있어요.",
+   "blank": "punho",
+   "src": "made"
+  }
+ ],
  "w|punição": [
   {
    "text": "O treinador brincou que cada atraso do Lucas vale uma punição de flexões.",
@@ -40925,6 +41389,22 @@
    "ko": "처방전이 필요할까요?",
    "blank": "receita",
    "src": "tatoeba:8951457/jvlopes91 en:2715747/CM"
+  }
+ ],
+ "w|receita médica": [
+  {
+   "text": "A dentista deu ao Bruno uma receita médica para um anti-inflamatório.",
+   "en": "The dentist gave Bruno a prescription for an anti-inflammatory.",
+   "ko": "치과 의사는 브루누에게 소염제 처방전을 줬어요.",
+   "blank": "receita médica",
+   "src": "made"
+  },
+  {
+   "text": "No museu de história, a Sofia viu uma receita médica escrita à mão há duzentos anos.",
+   "en": "At the history museum, Sofia saw a handwritten prescription from two hundred years ago.",
+   "ko": "역사박물관에서 소피아는 이백 년 전 손으로 쓴 처방전을 봤어요.",
+   "blank": "receita médica",
+   "src": "made"
   }
  ],
  "w|recente": [
@@ -43553,6 +44033,22 @@
    "src": "tatoeba:341178/tinacalysto en:51417/qdii"
   }
  ],
+ "w|secar": [
+  {
+   "text": "A assistente usou um jato de ar para secar o dente do Bruno.",
+   "en": "The assistant used a jet of air to dry Bruno's tooth.",
+   "ko": "보조원은 바람을 쏘아 브루누의 이를 말렸어요.",
+   "blank": "secar",
+   "src": "made"
+  },
+  {
+   "text": "Os restauradores esperam a tinta secar antes de pendurar o quadro.",
+   "en": "The restorers wait for the paint to dry before hanging the painting.",
+   "ko": "복원가들은 물감이 마른 뒤에 그림을 걸어요.",
+   "blank": "secar",
+   "src": "made"
+  }
+ ],
  "w|seco": [
   {
    "text": "Eles estavam bebendo vinho branco seco.",
@@ -45047,6 +45543,22 @@
    "src": "tatoeba:1062571/brauliobezerra en:886248"
   }
  ],
+ "w|sóbrio": [
+  {
+   "text": "A dentista pediu que o Bruno viesse sóbrio, sem beber na véspera.",
+   "en": "The dentist asked Bruno to come sober, without drinking the night before.",
+   "ko": "치과 의사는 브루누에게 전날 술 마시지 말고 맨정신으로 오라고 했어요.",
+   "blank": "sóbrio",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia leu que o pintor passou os últimos anos sóbrio e muito produtivo.",
+   "en": "Sofia read that the painter spent his last years sober and very productive.",
+   "ko": "소피아는 그 화가가 말년을 술 없이 아주 왕성하게 보냈다는 걸 읽었어요.",
+   "blank": "sóbrio",
+   "src": "made"
+  }
+ ],
  "w|social": [
   {
    "text": "Minha irmã é envolvida em trabalho social.",
@@ -45245,6 +45757,22 @@
    "en": "I saw a soldier at the airport.",
    "ko": "공항에서 군인을 봤어.",
    "blank": "soldado"
+  }
+ ],
+ "w|sólido": [
+  {
+   "text": "Depois da extração, o Bruno só pôde comer alimento sólido no dia seguinte.",
+   "en": "After the extraction, Bruno could only eat solid food the next day.",
+   "ko": "이를 뽑은 뒤 브루누는 다음 날에야 딱딱한 음식을 먹을 수 있었어요.",
+   "blank": "sólido",
+   "src": "made"
+  },
+  {
+   "text": "A escultura foi feita de um bloco sólido de mármore.",
+   "en": "The sculpture was made from a solid block of marble.",
+   "ko": "그 조각은 통대리석 덩어리로 만들어졌어요.",
+   "blank": "sólido",
+   "src": "made"
   }
  ],
  "w|solitário": [
@@ -45601,6 +46129,22 @@
    "en": "The cat was left alone.",
    "ko": "고양이가 혼자 남았어.",
    "blank": "sozinho"
+  }
+ ],
+ "w|suar": [
+  {
+   "text": "O Bruno começou a suar frio quando ouviu o barulho da broca.",
+   "en": "Bruno broke into a cold sweat when he heard the drill.",
+   "ko": "드릴 소리를 듣자 브루누는 식은땀을 흘리기 시작했어요.",
+   "blank": "suar",
+   "src": "made"
+  },
+  {
+   "text": "Sem ar-condicionado, a Sofia começou a suar no salão das esculturas.",
+   "en": "With no air conditioning, Sofia started sweating in the sculpture hall.",
+   "ko": "에어컨이 없어서 소피아는 조각 전시실에서 땀을 흘리기 시작했어요.",
+   "blank": "suar",
+   "src": "made"
   }
  ],
  "w|suave": [
@@ -45984,6 +46528,22 @@
    "en": "Becoming a mother was my supreme moment of joy.",
    "ko": "엄마가 된 순간이 제 인생 최고의 기쁨이었어요.",
    "blank": "supremo",
+   "src": "made"
+  }
+ ],
+ "w|surdo": [
+  {
+   "text": "O avô do Bruno é meio surdo e não ouviu a dentista chamar.",
+   "en": "Bruno's grandfather is a bit deaf and didn't hear the dentist call.",
+   "ko": "브루누의 할아버지는 귀가 좀 어두워서 치과 의사가 부르는 걸 못 들으셨어요.",
+   "blank": "surdo",
+   "src": "made"
+  },
+  {
+   "text": "O museu oferece visitas em língua de sinais para o público surdo.",
+   "en": "The museum offers sign language tours for deaf visitors.",
+   "ko": "박물관은 청각 장애인 관람객을 위해 수어 투어를 해요.",
+   "blank": "surdo",
    "src": "made"
   }
  ],
@@ -47921,6 +48481,38 @@
    "src": "made"
   }
  ],
+ "w|tosse": [
+  {
+   "text": "O Bruno remarcou a consulta no dentista por causa de uma tosse forte.",
+   "en": "Bruno rescheduled his dentist appointment because of a bad cough.",
+   "ko": "브루누는 심한 기침 때문에 치과 예약을 미뤘어요.",
+   "blank": "tosse",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia tomou uma bala de mel para segurar a tosse durante a visita guiada.",
+   "en": "Sofia had a honey drop to hold back her cough during the guided tour.",
+   "ko": "소피아는 가이드 투어 동안 기침을 참으려고 꿀 사탕을 먹었어요.",
+   "blank": "tosse",
+   "src": "made"
+  }
+ ],
+ "w|tossir": [
+  {
+   "text": "Na sala de espera do dentista, uma criança não parava de tossir.",
+   "en": "In the dentist's waiting room, a child wouldn't stop coughing.",
+   "ko": "치과 대기실에서 한 아이가 기침을 멈추지 않았어요.",
+   "blank": "tossir",
+   "src": "made"
+  },
+  {
+   "text": "O guia pediu silêncio, mas um visitante começou a tossir na frente do quadro.",
+   "en": "The guide asked for silence, but a visitor started coughing in front of the painting.",
+   "ko": "가이드가 조용히 해 달라고 했지만 한 관람객이 그림 앞에서 기침을 시작했어요.",
+   "blank": "tossir",
+   "src": "made"
+  }
+ ],
  "w|total": [
   {
    "text": "Foi um apagão total.",
@@ -48895,6 +49487,22 @@
    "en": "Everything's fine over here.",
    "ko": "이쪽은 다 괜찮아.",
    "blank": "tudo bem"
+  }
+ ],
+ "w|tumor": [
+  {
+   "text": "Felizmente, o caroço na gengiva do Bruno não era um tumor.",
+   "en": "Fortunately, the lump on Bruno's gum wasn't a tumor.",
+   "ko": "다행히 브루누 잇몸의 혹은 종양이 아니었어요.",
+   "blank": "tumor",
+   "src": "made"
+  },
+  {
+   "text": "O museu de medicina mostra como os médicos antigos tratavam um tumor.",
+   "en": "The medicine museum shows how doctors of old treated a tumor.",
+   "ko": "의학 박물관은 옛 의사들이 종양을 어떻게 치료했는지 보여 줘요.",
+   "blank": "tumor",
+   "src": "made"
   }
  ],
  "w|túmulo": [
@@ -50139,6 +50747,22 @@
    "src": "made"
   }
  ],
+ "w|viciar": [
+  {
+   "text": "O Bruno largou o refrigerante porque tinha medo de se viciar em açúcar.",
+   "en": "Bruno gave up soda because he was afraid of getting hooked on sugar.",
+   "ko": "브루누는 설탕에 중독될까 봐 탄산음료를 끊었어요.",
+   "blank": "viciar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia brinca que o museu de arte moderna é feito para viciar visitantes.",
+   "en": "Sofia jokes that the modern art museum is made to get visitors hooked.",
+   "ko": "소피아는 현대 미술관이 관람객을 중독시키려고 만들어졌다고 농담해요.",
+   "blank": "viciar",
+   "src": "made"
+  }
+ ],
  "w|vida": [
   {
    "text": "Assim é a vida.",
@@ -50985,6 +51609,22 @@
    "ko": "핫초코 한 잔 만들었어요.",
    "blank": "xícara",
    "src": "tatoeba:6994898/Ricardo14 en:4296322/mervert1"
+  }
+ ],
+ "w|xixi": [
+  {
+   "text": "O filho do Bruno pediu para fazer xixi antes de entrar no consultório.",
+   "en": "Bruno's son asked to pee before going into the office.",
+   "ko": "브루누의 아들은 진료실에 들어가기 전에 쉬하고 싶다고 했어요.",
+   "blank": "xixi",
+   "src": "made"
+  },
+  {
+   "text": "O sobrinho da Sofia pediu para fazer xixi bem no meio da visita.",
+   "en": "Sofia's nephew asked to pee right in the middle of the visit.",
+   "ko": "소피아의 조카가 관람 도중에 쉬 마렵다고 했어요.",
+   "blank": "xixi",
+   "src": "made"
   }
  ],
  "w|zangado": [

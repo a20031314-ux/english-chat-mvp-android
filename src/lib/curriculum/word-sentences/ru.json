@@ -403,6 +403,22 @@
    "blank": "Алло"
   }
  ],
+ "w|алый": [
+  {
+   "text": "На ёлке у Павла висит алый шар, который остался ещё от бабушки.",
+   "en": "On Pavel's tree there is a scarlet bauble that was his grandmother's.",
+   "ko": "파벨의 트리에는 할머니 때부터 내려온 다홍색 장식볼이 걸려 있어요.",
+   "blank": "алый",
+   "src": "made"
+  },
+  {
+   "text": "После реакции раствор в пробирке у Елены стал алым.",
+   "en": "After the reaction the solution in Elena's test tube turned scarlet.",
+   "ko": "반응이 끝나자 옐레나의 시험관 속 용액이 다홍색이 됐어요.",
+   "blank": "алым",
+   "src": "made"
+  }
+ ],
  "w|альбом": [
   {
    "text": "Не покажешь мне свой альбом?",
@@ -877,6 +893,22 @@
    "ko": "친구들이랑 자주 바에 가요.",
    "blank": "бар",
    "src": "tatoeba:4489983/Wezel en:1173002/eastasiastudent"
+  }
+ ],
+ "w|бардак": [
+  {
+   "text": "После новогодней ночи у Павла дома остался ужасный бардак.",
+   "en": "After New Year's Eve there was a terrible mess left in Pavel's flat.",
+   "ko": "새해 전날 밤이 지나고 파벨의 집은 엉망진창이 됐어요.",
+   "blank": "бардак",
+   "src": "made"
+  },
+  {
+   "text": "Профессор попросил Елену убрать бардак на лабораторном столе.",
+   "en": "The professor asked Elena to clear up the mess on the lab bench.",
+   "ko": "교수님은 옐레나에게 실험대 위 어질러진 것을 치우라고 했어요.",
+   "blank": "бардак",
+   "src": "made"
   }
  ],
  "w|бассейн": [
@@ -1909,6 +1941,22 @@
    "src": "made"
   }
  ],
+ "w|больший": [
+  {
+   "text": "Андрей пишет, что мечтал о большем, чем просто сидеть в офисе.",
+   "en": "Andrei writes that he dreamed of more than just sitting in an office.",
+   "ko": "안드레이는 사무실에 앉아 있는 것보다 더 큰 걸 꿈꿨다고 써요.",
+   "blank": "большем",
+   "src": "made"
+  },
+  {
+   "text": "Ирина ждёт от своих учеников большего.",
+   "en": "Irina expects more from her pupils.",
+   "ko": "이리나는 학생들에게 더 많은 걸 기대해요.",
+   "blank": "большего",
+   "src": "made"
+  }
+ ],
  "w|большинство": [
   {
    "text": "Я не так богат, как думает большинство.",
@@ -2535,6 +2583,22 @@
    "ko": "뜨거운 목욕을 하니 그녀는 긴장이 풀렸어요.",
    "blank": "ванна",
    "src": "tatoeba:423203/Hellerick en:282092/CK"
+  }
+ ],
+ "w|ванная": [
+  {
+   "text": "Утром Павлу пришлось долго ждать, пока освободится ванная.",
+   "en": "In the morning Pavel had to wait a long time for the bathroom to be free.",
+   "ko": "아침에 파벨은 욕실이 빌 때까지 한참 기다려야 했어요.",
+   "blank": "ванная",
+   "src": "made"
+  },
+  {
+   "text": "Елена принесла в лабораторию мыло из ванной, чтобы проверить его состав.",
+   "en": "Elena brought soap from the bathroom to the lab to test its composition.",
+   "ko": "옐레나는 성분을 확인하려고 욕실 비누를 실험실에 가져왔어요.",
+   "blank": "ванной",
+   "src": "made"
   }
  ],
  "w|вариант": [
@@ -3341,6 +3405,22 @@
    "en": "Let me take a look.",
    "ko": "나도 좀 보게 해 줘.",
    "blank": "взглянуть"
+  }
+ ],
+ "w|вздумать": [
+  {
+   "text": "Пёс Павла вздумал залезть на диван прямо в грязных лапах.",
+   "en": "Pavel's dog took it into his head to climb onto the sofa with dirty paws.",
+   "ko": "파벨의 개가 더러운 발로 소파에 올라가려고 했어요.",
+   "blank": "вздумал",
+   "src": "made"
+  },
+  {
+   "text": "Стажёр вздумал смешать реактивы без разрешения, и Елена его остановила.",
+   "en": "The intern took it into his head to mix reagents without permission, and Elena stopped him.",
+   "ko": "인턴이 허락 없이 시약을 섞으려 하자 옐레나가 말렸어요.",
+   "blank": "вздумал",
+   "src": "made"
   }
  ],
  "w|вздыхать": [
@@ -4405,6 +4485,22 @@
    "blank": "Возможности"
   }
  ],
+ "w|возможный": [
+  {
+   "text": "Андрей спрашивает друга, возможный ли вариант встретиться летом на море.",
+   "en": "Andrei asks his friend whether meeting at the seaside in summer is a possible option.",
+   "ko": "안드레이는 친구에게 여름에 바닷가에서 만나는 게 가능하냐고 물어요.",
+   "blank": "возможный",
+   "src": "made"
+  },
+  {
+   "text": "Ирина попросила учеников найти все возможные решения задачи.",
+   "en": "Irina asked the pupils to find all possible solutions to the problem.",
+   "ko": "이리나는 학생들에게 문제의 가능한 풀이를 모두 찾으라고 했어요.",
+   "blank": "возможные",
+   "src": "made"
+  }
+ ],
  "w|возникнуть": [
   {
    "text": "Где, вы считаете, могут возникнуть проблемы?",
@@ -4711,6 +4807,22 @@
    "blank": "вообще"
   }
  ],
+ "w|вообще-то": [
+  {
+   "text": "Андрей признаётся другу, что вообще-то не любит писать письма.",
+   "en": "Andrei confesses to his friend that actually he doesn't like writing letters.",
+   "ko": "안드레이는 사실 편지 쓰는 걸 별로 안 좋아한다고 친구에게 털어놔요.",
+   "blank": "вообще-то",
+   "src": "made"
+  },
+  {
+   "text": "Ирина вообще-то хотела стать врачом, а не учителем.",
+   "en": "Irina actually wanted to become a doctor, not a teacher.",
+   "ko": "이리나는 사실 교사가 아니라 의사가 되고 싶었어요.",
+   "blank": "вообще-то",
+   "src": "made"
+  }
+ ],
  "w|вопрос": [
   {
    "text": "Можно вопрос?",
@@ -4739,6 +4851,22 @@
    "ko": "나보고 도둑이라는 거야?",
    "blank": "вор",
    "src": "tatoeba:5294677/marafon en:5294671/Hybrid"
+  }
+ ],
+ "w|ворота": [
+  {
+   "text": "Павел вышел открыть ворота, когда приехали родители.",
+   "en": "Pavel went out to open the gate when his parents arrived.",
+   "ko": "부모님이 오시자 파벨은 대문을 열러 나갔어요.",
+   "blank": "ворота",
+   "src": "made"
+  },
+  {
+   "text": "Охранник открыл Елене ворота института в шесть утра.",
+   "en": "The guard opened the institute gates for Elena at six in the morning.",
+   "ko": "경비원이 아침 여섯 시에 옐레나에게 연구소 정문을 열어 줬어요.",
+   "blank": "ворота",
+   "src": "made"
   }
  ],
  "w|восемнадцать": [
@@ -4899,6 +5027,22 @@
    "ko": "시내 한가운데에 아주 멋진 공원이 있어요.",
    "blank": "восхитительный",
    "src": "tatoeba:4283703/odexed en:2399370/MethodGT"
+  }
+ ],
+ "w|восхищаться": [
+  {
+   "text": "Андрей пишет, что до сих пор восхищается тем, как друг играл на гитаре.",
+   "en": "Andrei writes that he still admires how his friend used to play the guitar.",
+   "ko": "안드레이는 친구가 기타 치던 모습에 아직도 감탄한다고 써요.",
+   "blank": "восхищается",
+   "src": "made"
+  },
+  {
+   "text": "Ученики Ирины восхищаются её умением решать задачи в уме.",
+   "en": "Irina's pupils admire her ability to solve problems in her head.",
+   "ko": "이리나의 학생들은 이리나가 암산으로 문제를 푸는 실력에 감탄해요.",
+   "blank": "восхищаются",
+   "src": "made"
   }
  ],
  "w|восьмой": [
@@ -5776,6 +5920,22 @@
    "en": "I need to take the dog for a walk.",
    "ko": "개 산책시키러 나가야 해요.",
    "blank": "вывести",
+   "src": "made"
+  }
+ ],
+ "w|вывод": [
+  {
+   "text": "После долгих раздумий Андрей сделал вывод, что пора менять работу.",
+   "en": "After long reflection Andrei came to the conclusion that it was time to change jobs.",
+   "ko": "오랜 고민 끝에 안드레이는 직장을 옮길 때가 됐다고 결론을 내렸어요.",
+   "blank": "вывод",
+   "src": "made"
+  },
+  {
+   "text": "Ирина попросила учеников записать вывод в конце лабораторной работы.",
+   "en": "Irina asked the pupils to write down the conclusion at the end of the lab work.",
+   "ko": "이리나는 학생들에게 실험 끝에 결론을 적으라고 했어요.",
+   "blank": "вывод",
    "src": "made"
   }
  ],
@@ -7513,6 +7673,22 @@
    "ko": "허구와 현실의 경계가 흐려지기 시작해요.",
    "blank": "Граница",
    "src": "tatoeba:10184830/Wezel en:8688915/Hybrid"
+  }
+ ],
+ "w|грант": [
+  {
+   "text": "Андрей хвастается, что их лаборатория получила крупный грант.",
+   "en": "Andrei boasts that their lab received a large grant.",
+   "ko": "안드레이는 자기네 연구실이 큰 연구비를 받았다고 자랑해요.",
+   "blank": "грант",
+   "src": "made"
+  },
+  {
+   "text": "Школа Ирины выиграла грант на новый компьютерный класс.",
+   "en": "Irina's school won a grant for a new computer room.",
+   "ko": "이리나의 학교는 새 컴퓨터실을 위한 지원금을 따냈어요.",
+   "blank": "грант",
+   "src": "made"
   }
  ],
  "w|грань": [
@@ -9557,6 +9733,22 @@
    "src": "tatoeba:5672574/marafon en:20134/CK"
   }
  ],
+ "w|домик": [
+  {
+   "text": "Павел с сыном построили во дворе снежный домик.",
+   "en": "Pavel and his son built a little snow house in the yard.",
+   "ko": "파벨과 아들은 마당에 눈집을 지었어요.",
+   "blank": "домик",
+   "src": "made"
+  },
+  {
+   "text": "Летом Елена живёт в маленьком домике у биостанции.",
+   "en": "In summer Elena lives in a small cabin by the field station.",
+   "ko": "여름에 옐레나는 생물 연구소 옆 작은 오두막에서 지내요.",
+   "blank": "домике",
+   "src": "made"
+  }
+ ],
  "w|домой": [
   {
    "text": "Мне пора домой.",
@@ -9677,6 +9869,22 @@
    "en": "Honey, dinner is getting cold.",
    "ko": "자기야, 저녁 식어.",
    "blank": "Дорогая"
+  }
+ ],
+ "w|доска": [
+  {
+   "text": "Андрей вспоминает, как друг рисовал карикатуры на школьной доске.",
+   "en": "Andrei remembers how his friend drew caricatures on the school blackboard.",
+   "ko": "안드레이는 친구가 학교 칠판에 캐리커처를 그리던 걸 떠올려요.",
+   "blank": "доске",
+   "src": "made"
+  },
+  {
+   "text": "Ирина вызвала к доске ученика, который опоздал.",
+   "en": "Irina called the pupil who was late up to the board.",
+   "ko": "이리나는 지각한 학생을 칠판 앞으로 불러냈어요.",
+   "blank": "доске",
+   "src": "made"
   }
  ],
  "w|доставить": [
@@ -9895,6 +10103,22 @@
    "ko": "싸우는 법 가르쳐 줄래?",
    "blank": "драться",
    "src": "tatoeba:4704023/odexed en:3347393/CK"
+  }
+ ],
+ "w|древний": [
+  {
+   "text": "Павел читал детям книгу про древний Египет.",
+   "en": "Pavel read the children a book about ancient Egypt.",
+   "ko": "파벨은 아이들에게 고대 이집트에 관한 책을 읽어 줬어요.",
+   "blank": "древний",
+   "src": "made"
+  },
+  {
+   "text": "Елена изучает бактерии, найденные в древнем льду.",
+   "en": "Elena studies bacteria found in ancient ice.",
+   "ko": "옐레나는 아주 오래된 얼음에서 찾은 박테리아를 연구해요.",
+   "blank": "древнем",
+   "src": "made"
   }
  ],
  "w|друг": [
@@ -10751,6 +10975,22 @@
    "en": "I don't want a life like that.",
    "ko": "그런 삶은 원하지 않아.",
    "blank": "жизни"
+  }
+ ],
+ "w|жилье": [
+  {
+   "text": "Павел с женой долго копили на собственное жильё.",
+   "en": "Pavel and his wife saved for a long time for a home of their own.",
+   "ko": "파벨 부부는 내 집을 마련하려고 오랫동안 돈을 모았어요.",
+   "blank": "жильё",
+   "src": "made"
+  },
+  {
+   "text": "Институт предоставил Елене служебное жильё рядом с лабораторией.",
+   "en": "The institute provided Elena with staff housing near the lab.",
+   "ko": "연구소는 옐레나에게 실험실 근처 관사를 내줬어요.",
+   "blank": "жильё",
+   "src": "made"
   }
  ],
  "w|житель": [
@@ -12083,6 +12323,22 @@
    "src": "tatoeba:13435650/Wezel en:10921790/sundown"
   }
  ],
+ "w|запереть": [
+  {
+   "text": "Андрей вспоминает, как они случайно заперли учителя в кабинете.",
+   "en": "Andrei recalls how they accidentally locked the teacher in the classroom.",
+   "ko": "안드레이는 둘이 실수로 선생님을 교실에 가둔 일을 떠올려요.",
+   "blank": "заперли",
+   "src": "made"
+  },
+  {
+   "text": "Перед уходом Ирина заперла кабинет химии на ключ.",
+   "en": "Before leaving Irina locked the chemistry room.",
+   "ko": "퇴근하기 전에 이리나는 화학실 문을 잠갔어요.",
+   "blank": "заперла",
+   "src": "made"
+  }
+ ],
  "w|записать": [
   {
    "text": "Не мог бы ты записать ссылку на этот сайт?",
@@ -12268,6 +12524,22 @@
    "en": "Natalia asked the boy to start the metronome.",
    "ko": "나탈리야는 소년에게 메트로놈을 켜 달라고 했어요.",
    "blank": "запустить",
+   "src": "made"
+  }
+ ],
+ "w|запутаться": [
+  {
+   "text": "Павел так долго распутывал гирлянду, что сам в ней запутался.",
+   "en": "Pavel spent so long untangling the fairy lights that he got tangled up in them himself.",
+   "ko": "파벨은 전구 줄을 너무 오래 풀다가 자기가 줄에 엉켜 버렸어요.",
+   "blank": "запутался",
+   "src": "made"
+  },
+  {
+   "text": "Елена запуталась в расчётах и пересчитала всё заново.",
+   "en": "Elena got mixed up in her calculations and redid them all.",
+   "ko": "옐레나는 계산이 꼬여서 처음부터 다시 했어요.",
+   "blank": "запуталась",
    "src": "made"
   }
  ],
@@ -12489,6 +12761,22 @@
    "en": "Then we went home.",
    "ko": "그러고 나서 집에 갔어.",
    "blank": "Затем"
+  }
+ ],
+ "w|заткнуться": [
+  {
+   "text": "Андрей вспоминает, как в общаге друзья просили его заткнуться и дать им поспать.",
+   "en": "Andrei recalls how in the dorm his friends asked him to shut up and let them sleep.",
+   "ko": "안드레이는 기숙사에서 친구들이 잠 좀 자게 입 좀 다물라고 하던 걸 떠올려요.",
+   "blank": "заткнуться",
+   "src": "made"
+  },
+  {
+   "text": "Шумный ученик заткнулся, как только Ирина вошла в класс.",
+   "en": "The noisy pupil shut up as soon as Irina came into the classroom.",
+   "ko": "이리나가 교실에 들어오자마자 떠들던 학생이 입을 다물었어요.",
+   "blank": "заткнулся",
+   "src": "made"
   }
  ],
  "w|зато": [
@@ -12853,6 +13141,22 @@
    "ko": "딸 건강이 걱정이에요.",
    "blank": "здоровье",
    "src": "tatoeba:13262940/Ooneykcall en:8801058/deniko"
+  }
+ ],
+ "w|здравствуй": [
+  {
+   "text": "Андрей начал письмо так: «Ну, здравствуй, дружище!»",
+   "en": "Andrei began the letter like this: “Well, hello, old pal!”",
+   "ko": "안드레이는 편지를 이렇게 시작했어요. “그래, 잘 지냈나, 친구!”",
+   "blank": "здравствуй",
+   "src": "made"
+  },
+  {
+   "text": "Малыш из первого класса сказал Ирине «здравствуй» вместо «здравствуйте».",
+   "en": "A little first-grader said the informal hello to Irina instead of the polite one.",
+   "ko": "일 학년 꼬마가 이리나에게 존댓말 대신 반말로 인사했어요.",
+   "blank": "здравствуй",
+   "src": "made"
   }
  ],
  "w|здравствуйте": [
@@ -14041,6 +14345,22 @@
    "src": "made"
   }
  ],
+ "w|интересоваться": [
+  {
+   "text": "Андрей пишет, что в последнее время стал интересоваться историей.",
+   "en": "Andrei writes that lately he has become interested in history.",
+   "ko": "안드레이는 요즘 역사에 관심이 생겼다고 써요.",
+   "blank": "интересоваться",
+   "src": "made"
+  },
+  {
+   "text": "Ирина спросила родителей, чем интересуется их сын после школы.",
+   "en": "Irina asked the parents what their son is interested in after school.",
+   "ko": "이리나는 부모에게 아들이 방과 후에 무엇에 관심이 있는지 물었어요.",
+   "blank": "интересуется",
+   "src": "made"
+  }
+ ],
  "w|интернет": [
   {
    "text": "Почему у меня такой медленный интернет?",
@@ -14149,6 +14469,22 @@
    "src": "made"
   }
  ],
+ "w|исключить": [
+  {
+   "text": "Павел решил исключить из меню всё жареное.",
+   "en": "Pavel decided to cut everything fried from the menu.",
+   "ko": "파벨은 튀긴 음식을 모두 메뉴에서 빼기로 했어요.",
+   "blank": "исключить",
+   "src": "made"
+  },
+  {
+   "text": "Елена не может исключить, что образец был загрязнён.",
+   "en": "Elena can't rule out that the sample was contaminated.",
+   "ko": "옐레나는 시료가 오염됐을 가능성을 배제할 수 없어요.",
+   "blank": "исключить",
+   "src": "made"
+  }
+ ],
  "w|искренне": [
   {
    "text": "Я искренне не понимаю, что происходит.",
@@ -14227,6 +14563,22 @@
    "blank": "используй"
   }
  ],
+ "w|использоваться": [
+  {
+   "text": "Павел достал сервиз, который в семье использовался только по праздникам.",
+   "en": "Pavel took out the china set that the family used only on holidays.",
+   "ko": "파벨은 집안에서 명절에만 쓰던 식기 세트를 꺼냈어요.",
+   "blank": "использовался",
+   "src": "made"
+  },
+  {
+   "text": "Елена узнала, что этот прибор раньше использовался в больнице.",
+   "en": "Elena found out that this instrument used to be used in a hospital.",
+   "ko": "옐레나는 이 장비가 예전에 병원에서 쓰였다는 걸 알았어요.",
+   "blank": "использовался",
+   "src": "made"
+  }
+ ],
  "w|испортить": [
   {
    "text": "Ты пытаешься испортить мою репутацию?",
@@ -14289,6 +14641,22 @@
    "ko": "넌 분명히 시험을 통과할 거야.",
    "blank": "испытание",
    "src": "tatoeba:10739786/Ooneykcall en:10739769/terrywallwork"
+  }
+ ],
+ "w|испытывать": [
+  {
+   "text": "Андрей признаётся, что испытывает лёгкую зависть к другу, который живёт у моря.",
+   "en": "Andrei admits that he feels a little envy towards his friend who lives by the sea.",
+   "ko": "안드레이는 바닷가에 사는 친구가 조금 부럽다고 털어놔요.",
+   "blank": "испытывает",
+   "src": "made"
+  },
+  {
+   "text": "Перед открытым уроком Ирина всегда испытывает лёгкое волнение.",
+   "en": "Before an open lesson Irina always feels a little nervous.",
+   "ko": "공개 수업 전에 이리나는 늘 조금 긴장해요.",
+   "blank": "испытывает",
+   "src": "made"
   }
  ],
  "w|исследование": [
@@ -14491,6 +14859,22 @@
    "src": "tatoeba:5988554/odexed en:2387268/CK"
   }
  ],
+ "w|кадр": [
+  {
+   "text": "Андрей вложил в конверт старый кадр, где они вдвоём стоят на мосту.",
+   "en": "Andrei put an old shot in the envelope of the two of them standing on a bridge.",
+   "ko": "안드레이는 둘이 다리 위에 서 있는 옛날 사진 한 장을 봉투에 넣었어요.",
+   "blank": "кадр",
+   "src": "made"
+  },
+  {
+   "text": "Ирина показала классу кадр из старого фильма о войне.",
+   "en": "Irina showed the class a frame from an old war film.",
+   "ko": "이리나는 반 아이들에게 옛 전쟁 영화의 한 장면을 보여 줬어요.",
+   "blank": "кадр",
+   "src": "made"
+  }
+ ],
  "w|каждый": [
   {
    "text": "Каждый ошибается.",
@@ -14609,6 +14993,22 @@
    "ko": "그의 초대에 뭐라고 답했어요?",
    "blank": "Каков",
    "src": "tatoeba:4005394/odexed en:2909291/mervert1"
+  }
+ ],
+ "w|каковой": [
+  {
+   "text": "Андрей пошёл в армию простым солдатом, каковым и прослужил весь срок.",
+   "en": "Andrei went into the army as a private and remained one for his whole service.",
+   "ko": "안드레이는 일반 병사로 입대해 복무 기간 내내 그대로 지냈어요.",
+   "blank": "каковым",
+   "src": "made"
+  },
+  {
+   "text": "Ирину признали лучшим учителем района, каковым её давно считали ученики.",
+   "en": "Irina was named the best teacher in the district, which her pupils had long considered her.",
+   "ko": "이리나는 지역 최고의 교사로 뽑혔는데, 학생들도 오래전부터 그렇게 여겨 왔어요.",
+   "blank": "каковым",
+   "src": "made"
   }
  ],
  "w|какой": [
@@ -14837,6 +15237,22 @@
    "ko": "제일 좋아하는 그림이 뭐야?",
    "blank": "картина",
    "src": "tatoeba:8950261/marafon en:6381141/Hybrid"
+  }
+ ],
+ "w|картинка": [
+  {
+   "text": "Дочка Павла нарисовала картинку с ёлкой и подарила её бабушке.",
+   "en": "Pavel's daughter drew a picture with a Christmas tree and gave it to her grandmother.",
+   "ko": "파벨의 딸은 트리 그림을 그려서 할머니께 드렸어요.",
+   "blank": "картинку",
+   "src": "made"
+  },
+  {
+   "text": "Под микроскопом Елена увидела картинку, похожую на снежинку.",
+   "en": "Under the microscope Elena saw an image that looked like a snowflake.",
+   "ko": "옐레나는 현미경으로 눈송이 같은 모양을 봤어요.",
+   "blank": "картинку",
+   "src": "made"
   }
  ],
  "w|карточка": [
@@ -15289,6 +15705,22 @@
    "blank": "книгу"
   }
  ],
+ "w|книжка": [
+  {
+   "text": "Перед сном Павел читает дочке книжку со сказками.",
+   "en": "Before bed Pavel reads his daughter a book of fairy tales.",
+   "ko": "잠자기 전에 파벨은 딸에게 동화책을 읽어 줘요.",
+   "blank": "книжку",
+   "src": "made"
+  },
+  {
+   "text": "Все результаты Елена записывает в синюю записную книжку.",
+   "en": "Elena writes all her results in a blue notebook.",
+   "ko": "옐레나는 모든 결과를 파란 수첩에 적어요.",
+   "blank": "книжку",
+   "src": "made"
+  }
+ ],
  "w|кнопка": [
   {
    "text": "Почему эта кнопка ничего не делает?",
@@ -15317,6 +15749,22 @@
    "en": "Call when you arrive.",
    "ko": "도착하면 전화해.",
    "blank": "когда"
+  }
+ ],
+ "w|когда-либо": [
+  {
+   "text": "Павел спросил дочку, видела ли она когда-либо настоящий снегопад в горах.",
+   "en": "Pavel asked his daughter if she had ever seen a real snowfall in the mountains.",
+   "ko": "파벨은 딸에게 산에서 진짜 폭설을 본 적이 있냐고 물었어요.",
+   "blank": "когда-либо",
+   "src": "made"
+  },
+  {
+   "text": "Елена сомневается, что такой сплав когда-либо использовали на практике.",
+   "en": "Elena doubts that such an alloy has ever been used in practice.",
+   "ko": "옐레나는 그런 합금이 실제로 쓰인 적이 있는지 의심스러워해요.",
+   "blank": "когда-либо",
+   "src": "made"
   }
  ],
  "w|когда-нибудь": [
@@ -16245,6 +16693,22 @@
    "src": "made"
   }
  ],
+ "w|космический": [
+  {
+   "text": "Сын Павла собирает из конструктора космический корабль.",
+   "en": "Pavel's son is building a spaceship out of a construction set.",
+   "ko": "파벨의 아들은 블록으로 우주선을 만들고 있어요.",
+   "blank": "космический",
+   "src": "made"
+  },
+  {
+   "text": "Лаборатория Елены работает над космическим проектом.",
+   "en": "Elena's lab is working on a space project.",
+   "ko": "옐레나의 연구실은 우주 프로젝트를 진행하고 있어요.",
+   "blank": "космическим",
+   "src": "made"
+  }
+ ],
  "w|космос": [
   {
    "text": "Ты хочешь полететь в космос?",
@@ -16793,6 +17257,22 @@
    "src": "tatoeba:9876635/Ivanovb en:7716662/CK"
   }
  ],
+ "w|крупный": [
+  {
+   "text": "На праздник Павел испёк крупный яблочный пирог.",
+   "en": "For the holiday Pavel baked a large apple pie.",
+   "ko": "명절에 파벨은 큰 사과 파이를 구웠어요.",
+   "blank": "крупный",
+   "src": "made"
+  },
+  {
+   "text": "Елена получила крупный грант на исследование.",
+   "en": "Elena received a large grant for her research.",
+   "ko": "옐레나는 연구비를 크게 받았어요.",
+   "blank": "крупный",
+   "src": "made"
+  }
+ ],
  "w|крутой": [
   {
    "text": "Ну ты крутой!",
@@ -16986,6 +17466,22 @@
    "en": "At the finish Svetlana was met by her cousin with a poster.",
    "ko": "결승선에서 사촌 언니가 플래카드를 들고 스베틀라나를 맞았어요.",
    "blank": "кузина",
+   "src": "made"
+  }
+ ],
+ "w|кукла": [
+  {
+   "text": "Дочке Павла на праздник подарили большую куклу.",
+   "en": "Pavel's daughter was given a big doll for the holiday.",
+   "ko": "파벨의 딸은 명절 선물로 큰 인형을 받았어요.",
+   "blank": "куклу",
+   "src": "made"
+  },
+  {
+   "text": "Для эксперимента с ударами Елена использовала манекен, похожий на большую куклу.",
+   "en": "For the impact experiment Elena used a dummy that looked like a big doll.",
+   "ko": "옐레나는 충격 실험에 큰 인형처럼 생긴 마네킹을 썼어요.",
+   "blank": "куклу",
    "src": "made"
   }
  ],
@@ -18991,6 +19487,22 @@
    "blank": "миллион"
   }
  ],
+ "w|мило": [
+  {
+   "text": "Друг прислал Андрею мило подписанную открытку с котом.",
+   "en": "Andrei's friend sent him a sweetly signed postcard with a cat on it.",
+   "ko": "친구는 안드레이에게 귀엽게 글을 적은 고양이 엽서를 보냈어요.",
+   "blank": "мило",
+   "src": "made"
+  },
+  {
+   "text": "Первоклассники мило поздравили Ирину с днём рождения.",
+   "en": "The first-graders sweetly wished Irina a happy birthday.",
+   "ko": "일 학년 아이들이 이리나에게 귀엽게 생일 축하를 해 줬어요.",
+   "blank": "мило",
+   "src": "made"
+  }
+ ],
  "w|милость": [
   {
    "text": "Ему придется отдаться на милость суда.",
@@ -19145,6 +19657,22 @@
    "en": "One second, I'm coming.",
    "ko": "잠깐, 지금 가.",
    "blank": "Минуту"
+  }
+ ],
+ "w|минутка": [
+  {
+   "text": "Павел попросил сына подождать минутку, пока он допьёт кофе.",
+   "en": "Pavel asked his son to wait a minute while he finished his coffee.",
+   "ko": "파벨은 아들에게 커피를 다 마실 때까지 잠깐만 기다리라고 했어요.",
+   "blank": "минутку",
+   "src": "made"
+  },
+  {
+   "text": "Коллега заглянул к Елене на минутку обсудить график.",
+   "en": "A colleague dropped in on Elena for a minute to discuss the schedule.",
+   "ko": "동료가 일정을 의논하려고 잠깐 옐레나에게 들렀어요.",
+   "blank": "минутку",
+   "src": "made"
   }
  ],
  "w|мир": [
@@ -19325,6 +19853,22 @@
    "ko": "풀어야 할 문제가 산더미예요.",
    "blank": "множество",
    "src": "tatoeba:1415291/axxeny en:321422/CK"
+  }
+ ],
+ "w|мобильник": [
+  {
+   "text": "На каникулах Павел решил хотя бы день не брать в руки мобильник.",
+   "en": "On holiday Pavel decided not to pick up his mobile for at least a day.",
+   "ko": "연휴에 파벨은 하루만이라도 휴대폰을 손에 들지 않기로 했어요.",
+   "blank": "мобильник",
+   "src": "made"
+  },
+  {
+   "text": "Прямо посреди опыта у Елены зазвонил мобильник.",
+   "en": "Elena's mobile rang right in the middle of the experiment.",
+   "ko": "실험 한가운데에 옐레나의 휴대폰이 울렸어요.",
+   "blank": "мобильник",
+   "src": "made"
   }
  ],
  "w|мобильный": [
@@ -20007,6 +20551,22 @@
    "src": "tatoeba:1607593/Biga en:436813/lukaszpp"
   }
  ],
+ "w|наверно": [
+  {
+   "text": "Андрей пишет, что приедет, наверно, только весной.",
+   "en": "Andrei writes that he'll probably only come in the spring.",
+   "ko": "안드레이는 아마 봄에나 갈 수 있을 거라고 써요.",
+   "blank": "наверно",
+   "src": "made"
+  },
+  {
+   "text": "Ирина думает, что после каникул в класс придут, наверно, новые ученики.",
+   "en": "Irina thinks that after the holidays there will probably be new pupils in the class.",
+   "ko": "이리나는 방학이 끝나면 아마 새 학생들이 반에 올 거라고 생각해요.",
+   "blank": "наверно",
+   "src": "made"
+  }
+ ],
  "w|наверное": [
   {
    "text": "Он, наверное, спит.",
@@ -20303,6 +20863,22 @@
    "src": "tatoeba:9180570/marafon en:8472572/CK"
   }
  ],
+ "w|нажать": [
+  {
+   "text": "Павел забыл нажать кнопку, и пирог в духовке так и не начал печься.",
+   "en": "Pavel forgot to press the button, so the pie in the oven never started baking.",
+   "ko": "파벨이 버튼 누르는 걸 잊어서 오븐 속 파이는 전혀 구워지지 않았어요.",
+   "blank": "нажать",
+   "src": "made"
+  },
+  {
+   "text": "Чтобы запустить центрифугу, Елене нужно нажать зелёную кнопку.",
+   "en": "To start the centrifuge Elena needs to press the green button.",
+   "ko": "원심분리기를 돌리려면 옐레나는 초록 버튼을 눌러야 해요.",
+   "blank": "нажать",
+   "src": "made"
+  }
+ ],
  "w|назад": [
   {
    "text": "Отойди назад.",
@@ -20501,6 +21077,38 @@
    "blank": "наконец"
   }
  ],
+ "w|наконец-то": [
+  {
+   "text": "В праздники Павел наконец-то выспался.",
+   "en": "During the holidays Pavel finally got enough sleep.",
+   "ko": "연휴에 파벨은 드디어 실컷 잤어요.",
+   "blank": "наконец-то",
+   "src": "made"
+  },
+  {
+   "text": "После месяца неудач опыт у Елены наконец-то получился.",
+   "en": "After a month of failures Elena's experiment finally worked.",
+   "ko": "한 달 동안 실패한 끝에 옐레나의 실험이 드디어 성공했어요.",
+   "blank": "наконец-то",
+   "src": "made"
+  }
+ ],
+ "w|наладить": [
+  {
+   "text": "Павел наконец смог наладить старый проигрыватель.",
+   "en": "Pavel finally managed to fix the old record player.",
+   "ko": "파벨은 마침내 낡은 전축을 고쳤어요.",
+   "blank": "наладить",
+   "src": "made"
+  },
+  {
+   "text": "Техник помог Елене наладить новый микроскоп.",
+   "en": "A technician helped Elena set up the new microscope.",
+   "ko": "기술자가 옐레나를 도와 새 현미경을 맞춰 줬어요.",
+   "blank": "наладить",
+   "src": "made"
+  }
+ ],
  "w|налево": [
   {
    "text": "Мне повернуть налево, направо или ехать прямо?",
@@ -20578,6 +21186,22 @@
    "en": "Anna told the landlord of her intention to move out at the end of the month.",
    "ko": "안나는 집주인에게 월말에 나가겠다는 뜻을 알렸어요.",
    "blank": "намерении",
+   "src": "made"
+  }
+ ],
+ "w|намеренно": [
+  {
+   "text": "Павел намеренно оставил телефон в другой комнате, чтобы побыть с семьёй.",
+   "en": "Pavel deliberately left his phone in another room to spend time with his family.",
+   "ko": "파벨은 가족과 시간을 보내려고 일부러 휴대폰을 다른 방에 두었어요.",
+   "blank": "намеренно",
+   "src": "made"
+  },
+  {
+   "text": "Елена намеренно оставила одну пробирку без реактива для сравнения.",
+   "en": "Elena deliberately left one test tube without the reagent for comparison.",
+   "ko": "옐레나는 비교하려고 일부러 시험관 하나에는 시약을 넣지 않았어요.",
+   "blank": "намеренно",
    "src": "made"
   }
  ],
@@ -21181,6 +21805,22 @@
    "blank": "насколько"
   }
  ],
+ "w|насладиться": [
+  {
+   "text": "В письме другу Андрей признался, что наконец успел насладиться отпуском.",
+   "en": "In his letter to his friend Andrei admitted that he had finally managed to enjoy his holiday.",
+   "ko": "안드레이는 친구에게 쓴 편지에서 드디어 휴가를 만끽했다고 털어놨어요.",
+   "blank": "насладиться",
+   "src": "made"
+  },
+  {
+   "text": "После контрольной Ирина разрешила ученикам насладиться свободным уроком.",
+   "en": "After the test Irina let the pupils enjoy a free lesson.",
+   "ko": "시험이 끝나고 이리나는 학생들이 자유 시간을 즐기게 해 줬어요.",
+   "blank": "насладиться",
+   "src": "made"
+  }
+ ],
  "w|наслаждаться": [
   {
    "text": "Мне нравится наслаждаться жизнью.",
@@ -21397,6 +22037,22 @@
    "ko": "기타 치는 거 배워 보고 싶어?",
    "blank": "научиться",
    "src": "tatoeba:7457036/odexed en:6069113/CK"
+  }
+ ],
+ "w|научный": [
+  {
+   "text": "Андрей рассказывает другу, что опубликовал свою первую научную статью.",
+   "en": "Andrei tells his friend that he has published his first scientific paper.",
+   "ko": "안드레이는 친구에게 첫 학술 논문을 냈다고 이야기해요.",
+   "blank": "научную",
+   "src": "made"
+  },
+  {
+   "text": "Ирина ведёт в школе научный кружок для старшеклассников.",
+   "en": "Irina runs a science club for senior pupils at school.",
+   "ko": "이리나는 학교에서 고학년을 위한 과학 동아리를 맡고 있어요.",
+   "blank": "научный",
+   "src": "made"
   }
  ],
  "w|находить": [
@@ -22809,6 +23465,22 @@
    "src": "tatoeba:7577653/marafon en:6096875/CK"
   }
  ],
+ "w|ниоткуда": [
+  {
+   "text": "Котёнок появился у двери Павла будто ниоткуда.",
+   "en": "The kitten appeared at Pavel's door as if out of nowhere.",
+   "ko": "새끼 고양이가 어디선가 불쑥 파벨의 문 앞에 나타났어요.",
+   "blank": "ниоткуда",
+   "src": "made"
+  },
+  {
+   "text": "В образце Елены ниоткуда взялись странные кристаллы.",
+   "en": "Strange crystals appeared out of nowhere in Elena's sample.",
+   "ko": "옐레나의 시료에 어디서 왔는지 모를 이상한 결정이 생겼어요.",
+   "blank": "ниоткуда",
+   "src": "made"
+  }
+ ],
  "w|нисколько": [
   {
    "text": "Иван нисколько не удивился, что Ольга быстро нашла общий язык с отделом.",
@@ -22837,6 +23509,22 @@
    "en": "I didn't take anything.",
    "ko": "나는 아무것도 안 가져갔어.",
    "blank": "ничего"
+  }
+ ],
+ "w|ничто": [
+  {
+   "text": "Андрей уверен, что ничто не разрушит их старую дружбу.",
+   "en": "Andrei is sure that nothing will destroy their old friendship.",
+   "ko": "안드레이는 무엇도 둘의 오랜 우정을 무너뜨리지 못할 거라고 믿어요.",
+   "blank": "ничто",
+   "src": "made"
+  },
+  {
+   "text": "Ирина считает, что ничем нельзя заменить живое общение с учениками.",
+   "en": "Irina believes that nothing can replace live contact with pupils.",
+   "ko": "이리나는 학생들과 직접 소통하는 건 무엇으로도 대신할 수 없다고 생각해요.",
+   "blank": "ничем",
+   "src": "made"
   }
  ],
  "w|но": [
@@ -22941,6 +23629,22 @@
    "ko": "이 칼 마지막으로 간 게 언제야?",
    "blank": "нож",
    "src": "tatoeba:6143923/odexed en:1748039/Amastan"
+  }
+ ],
+ "w|ножницы": [
+  {
+   "text": "Павел никак не мог найти ножницы, чтобы разрезать ленту на подарке.",
+   "en": "Pavel just couldn't find the scissors to cut the ribbon on the present.",
+   "ko": "파벨은 선물 리본을 자를 가위를 도무지 찾지 못했어요.",
+   "blank": "ножницы",
+   "src": "made"
+  },
+  {
+   "text": "Елена разрезала фильтровальную бумагу маленькими ножницами.",
+   "en": "Elena cut the filter paper with small scissors.",
+   "ko": "옐레나는 작은 가위로 거름종이를 잘랐어요.",
+   "blank": "ножницами",
+   "src": "made"
   }
  ],
  "w|ноль": [
@@ -23199,6 +23903,22 @@
    "en": "You need to get some sleep.",
    "ko": "너는 좀 자야 해.",
    "blank": "нужно"
+  }
+ ],
+ "w|нужный": [
+  {
+   "text": "Андрей долго не мог подобрать нужные слова для первого письма.",
+   "en": "Andrei couldn't find the right words for the first letter for a long time.",
+   "ko": "안드레이는 첫 편지에 쓸 알맞은 말을 오래도록 찾지 못했어요.",
+   "blank": "нужные",
+   "src": "made"
+  },
+  {
+   "text": "Ирина положила на каждую парту нужный учебник.",
+   "en": "Irina put the right textbook on each desk.",
+   "ko": "이리나는 책상마다 필요한 교과서를 올려 두었어요.",
+   "blank": "нужный",
+   "src": "made"
   }
  ],
  "w|няня": [
@@ -24357,6 +25077,22 @@
    "src": "made"
   }
  ],
+ "w|одеяло": [
+  {
+   "text": "В праздники Павел любит смотреть фильмы, завернувшись в тёплое одеяло.",
+   "en": "During the holidays Pavel likes to watch films wrapped in a warm blanket.",
+   "ko": "연휴에 파벨은 따뜻한 이불을 두르고 영화 보는 걸 좋아해요.",
+   "blank": "одеяло",
+   "src": "made"
+  },
+  {
+   "text": "Елена накрыла клетку с мышами тёмным одеялом.",
+   "en": "Elena covered the mouse cage with a dark blanket.",
+   "ko": "옐레나는 쥐 우리를 어두운 담요로 덮었어요.",
+   "blank": "одеялом",
+   "src": "made"
+  }
+ ],
  "w|один": [
   {
    "text": "Остался один билет.",
@@ -24401,6 +25137,22 @@
    "ko": "너랑 나는 머리 색이 같아.",
    "blank": "одинаковый",
    "src": "tatoeba:10830318/carlosalberto en:10830317/carlosalberto"
+  }
+ ],
+ "w|одиннадцать": [
+  {
+   "text": "Гости у Павла засиделись до одиннадцати вечера.",
+   "en": "Pavel's guests stayed until eleven in the evening.",
+   "ko": "파벨네 손님들은 밤 열한 시까지 머물렀어요.",
+   "blank": "одиннадцати",
+   "src": "made"
+  },
+  {
+   "text": "В команде Елены работают одиннадцать человек.",
+   "en": "There are eleven people on Elena's team.",
+   "ko": "옐레나의 팀에는 열한 명이 일해요.",
+   "blank": "одиннадцать",
+   "src": "made"
   }
  ],
  "w|одинокий": [
@@ -25765,6 +26517,22 @@
    "ko": "이 일의 책임이 당신에게 있어요?",
    "blank": "ответственность",
    "src": "tatoeba:6304651/marafon en:2951534/CK"
+  }
+ ],
+ "w|ответственный": [
+  {
+   "text": "На новой работе Андрея назначили ответственным за весь склад.",
+   "en": "At his new job Andrei was put in charge of the whole warehouse.",
+   "ko": "새 직장에서 안드레이는 창고 전체 책임자로 임명됐어요.",
+   "blank": "ответственным",
+   "src": "made"
+  },
+  {
+   "text": "Ирина назначила самого ответственного ученика старостой класса.",
+   "en": "Irina appointed the most responsible pupil as class monitor.",
+   "ko": "이리나는 가장 책임감 있는 학생을 반장으로 정했어요.",
+   "blank": "ответственного",
+   "src": "made"
   }
  ],
  "w|отвечать": [
@@ -29381,6 +30149,22 @@
    "src": "made"
   }
  ],
+ "w|подготовка": [
+  {
+   "text": "Андрей пишет, что подготовка к свадьбе брата отняла у него весь месяц.",
+   "en": "Andrei writes that preparing for his brother's wedding took up his whole month.",
+   "ko": "안드레이는 형의 결혼 준비로 한 달을 통째로 보냈다고 써요.",
+   "blank": "подготовка",
+   "src": "made"
+  },
+  {
+   "text": "У Ирины подготовка к выпускным экзаменам начинается уже в сентябре.",
+   "en": "Irina's preparation for the final exams starts as early as September.",
+   "ko": "이리나의 졸업 시험 준비는 벌써 구월에 시작돼요.",
+   "blank": "подготовка",
+   "src": "made"
+  }
+ ],
  "w|подделка": [
   {
    "text": "Эксперт объяснил Павлу, что рукопись на выставке — искусная подделка.",
@@ -29883,6 +30667,22 @@
    "blank": "подумаю"
   }
  ],
+ "w|подушка": [
+  {
+   "text": "Павел устроил себе на полу гнездо из подушек и пледов.",
+   "en": "Pavel made himself a nest of cushions and throws on the floor.",
+   "ko": "파벨은 바닥에 쿠션과 담요로 둥지를 만들었어요.",
+   "blank": "подушек",
+   "src": "made"
+  },
+  {
+   "text": "Елена положила хрупкий прибор на мягкую подушку.",
+   "en": "Elena placed the fragile instrument on a soft cushion.",
+   "ko": "옐레나는 깨지기 쉬운 기구를 푹신한 쿠션 위에 놓았어요.",
+   "blank": "подушку",
+   "src": "made"
+  }
+ ],
  "w|подход": [
   {
    "text": "Я не думал, что твой подход сработает.",
@@ -30257,6 +31057,22 @@
    "blank": "позвонил"
   }
  ],
+ "w|поздний": [
+  {
+   "text": "Павел с женой сели ужинать только поздним вечером.",
+   "en": "Pavel and his wife sat down to dinner only late in the evening.",
+   "ko": "파벨 부부는 늦은 저녁에야 저녁을 먹었어요.",
+   "blank": "поздним",
+   "src": "made"
+  },
+  {
+   "text": "На позднем этапе исследования Елена обнаружила ошибку в данных.",
+   "en": "At a late stage of the research Elena found an error in the data.",
+   "ko": "연구 후반 단계에서 옐레나는 데이터 오류를 발견했어요.",
+   "blank": "позднем",
+   "src": "made"
+  }
+ ],
  "w|поздно": [
   {
    "text": "Поздно включать музыку.",
@@ -30594,6 +31410,22 @@
    "en": "At the end of the day the vendors played poker on a crate, and Maria stopped to watch.",
    "ko": "하루가 끝날 무렵 상인들이 상자 위에서 포커를 쳐서 마리야는 넋을 놓고 봤어요.",
    "blank": "покер",
+   "src": "made"
+  }
+ ],
+ "w|покидать": [
+  {
+   "text": "Павел не любит покидать дом в праздники.",
+   "en": "Pavel doesn't like leaving the house during the holidays.",
+   "ko": "파벨은 연휴에 집을 떠나는 걸 싫어해요.",
+   "blank": "покидать",
+   "src": "made"
+  },
+  {
+   "text": "Елене не разрешают покидать лабораторию, пока идёт реакция.",
+   "en": "Elena isn't allowed to leave the lab while the reaction is running.",
+   "ko": "반응이 진행되는 동안 옐레나는 실험실을 떠나면 안 돼요.",
+   "blank": "покидать",
    "src": "made"
   }
  ],
@@ -31181,6 +32013,22 @@
    "ko": "사전 찾는 법 알아?",
    "blank": "пользоваться",
    "src": "tatoeba:2836232/sigavax en:16029/Swift"
+  }
+ ],
+ "w|полюбить": [
+  {
+   "text": "В новом городе Андрей не сразу, но всё-таки полюбил тихие улицы.",
+   "en": "In the new city Andrei grew to love the quiet streets, though not right away.",
+   "ko": "새 도시에서 안드레이는 바로는 아니었지만 결국 조용한 거리를 좋아하게 됐어요.",
+   "blank": "полюбил",
+   "src": "made"
+  },
+  {
+   "text": "Благодаря Ирине многие ученики полюбили химию.",
+   "en": "Thanks to Irina many pupils came to love chemistry.",
+   "ko": "이리나 덕분에 많은 학생이 화학을 좋아하게 됐어요.",
+   "blank": "полюбили",
+   "src": "made"
   }
  ],
  "w|поменять": [
@@ -32939,6 +33787,22 @@
    "src": "made"
   }
  ],
+ "w|практика": [
+  {
+   "text": "Андрей пишет, что летняя практика на заводе многому его научила.",
+   "en": "Andrei writes that the summer internship at the factory taught him a lot.",
+   "ko": "안드레이는 공장에서 한 여름 실습에서 많은 걸 배웠다고 써요.",
+   "blank": "практика",
+   "src": "made"
+  },
+  {
+   "text": "В этом году у Ирины на практике две студентки из педагогического.",
+   "en": "This year Irina has two student teachers from the teacher-training college doing their placement with her.",
+   "ko": "올해 이리나에게 사범대 학생 두 명이 교생 실습을 와 있어요.",
+   "blank": "практике",
+   "src": "made"
+  }
+ ],
  "w|практически": [
   {
    "text": "Я практически не говорю по-французски.",
@@ -33487,6 +34351,22 @@
    "en": "I used to live by the sea.",
    "ko": "예전에는 바닷가에 살았어.",
    "blank": "Прежде"
+  }
+ ],
+ "w|прежний": [
+  {
+   "text": "Павел вернул шкаф на прежнее место у окна.",
+   "en": "Pavel moved the wardrobe back to its old spot by the window.",
+   "ko": "파벨은 옷장을 창가 원래 자리로 되돌려 놓았어요.",
+   "blank": "прежнее",
+   "src": "made"
+  },
+  {
+   "text": "Елена сравнила новые результаты с прежними.",
+   "en": "Elena compared the new results with the previous ones.",
+   "ko": "옐레나는 새 결과를 이전 결과와 비교했어요.",
+   "blank": "прежними",
+   "src": "made"
   }
  ],
  "w|президент": [
@@ -35789,6 +36669,22 @@
    "src": "made"
   }
  ],
+ "w|профессиональный": [
+  {
+   "text": "Андрей купил профессиональный фотоаппарат и теперь снимает птиц.",
+   "en": "Andrei bought a professional camera and now photographs birds.",
+   "ko": "안드레이는 전문가용 카메라를 사서 요즘 새를 찍어요.",
+   "blank": "профессиональный",
+   "src": "made"
+  },
+  {
+   "text": "Ирина каждый год ездит на курсы профессионального развития.",
+   "en": "Irina goes to professional development courses every year.",
+   "ko": "이리나는 해마다 직무 연수를 다녀와요.",
+   "blank": "профессионального",
+   "src": "made"
+  }
+ ],
  "w|профессор": [
   {
    "text": "Профессор не мог понять, о чём я говорю.",
@@ -36999,6 +37895,22 @@
    "src": "made"
   }
  ],
+ "w|разочаровать": [
+  {
+   "text": "Андрей боится разочаровать друга, если не сможет приехать на юбилей.",
+   "en": "Andrei is afraid of disappointing his friend if he can't come to the anniversary.",
+   "ko": "안드레이는 기념일에 못 가면 친구를 실망시킬까 봐 걱정해요.",
+   "blank": "разочаровать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина не хотела разочаровать учеников и всё-таки поехала с ними в поход.",
+   "en": "Irina didn't want to disappoint the pupils, so she went on the hike with them after all.",
+   "ko": "이리나는 학생들을 실망시키고 싶지 않아서 결국 함께 소풍을 갔어요.",
+   "blank": "разочаровать",
+   "src": "made"
+  }
+ ],
  "w|разрешение": [
   {
    "text": "Кто дал тебе разрешение сюда приходить?",
@@ -37239,6 +38151,22 @@
    "src": "tatoeba:12398075/marafon en:3914551/CH"
   }
  ],
+ "w|ранний": [
+  {
+   "text": "Павел встал ранним утром, чтобы приготовить блины.",
+   "en": "Pavel got up early in the morning to make pancakes.",
+   "ko": "파벨은 블린을 만들려고 이른 아침에 일어났어요.",
+   "blank": "ранним",
+   "src": "made"
+  },
+  {
+   "text": "Елена приходит в лабораторию ранним утром, пока там тихо.",
+   "en": "Elena comes to the lab early in the morning while it's quiet.",
+   "ko": "옐레나는 조용한 이른 아침에 실험실에 와요.",
+   "blank": "ранним",
+   "src": "made"
+  }
+ ],
  "w|рано": [
   {
    "text": "Ещё рано.",
@@ -37471,6 +38399,22 @@
    "src": "tatoeba:5653596/marafon en:2255190/CK"
   }
  ],
+ "w|расстроить": [
+  {
+   "text": "Андрей боится, что его долгое молчание могло расстроить друга.",
+   "en": "Andrei is afraid his long silence might have upset his friend.",
+   "ko": "안드레이는 오랫동안 연락하지 않은 게 친구를 서운하게 했을까 봐 걱정해요.",
+   "blank": "расстроить",
+   "src": "made"
+  },
+  {
+   "text": "Плохая оценка за диктант сильно расстроила ученицу Ирины.",
+   "en": "The bad mark for the dictation really upset Irina's pupil.",
+   "ko": "받아쓰기 점수가 나빠서 이리나의 학생은 크게 속상해했어요.",
+   "blank": "расстроила",
+   "src": "made"
+  }
+ ],
  "w|расстройство": [
   {
    "text": "Павел с расстройством узнал, что нужная книга утеряна.",
@@ -37625,6 +38569,22 @@
    "en": "Our team won.",
    "ko": "우리 팀이 이겼어.",
    "blank": "ребята"
+  }
+ ],
+ "w|ревновать": [
+  {
+   "text": "Андрей шутит, что жена начинает ревновать его к их переписке.",
+   "en": "Andrei jokes that his wife is starting to get jealous of their correspondence.",
+   "ko": "안드레이는 아내가 둘의 편지에 질투하기 시작했다고 농담해요.",
+   "blank": "ревновать",
+   "src": "made"
+  },
+  {
+   "text": "Младший брат одной ученицы начал ревновать её к новой учительнице Ирине.",
+   "en": "One pupil's little brother started to get jealous of her new teacher Irina.",
+   "ko": "한 학생의 남동생이 새 선생님 이리나에게 누나를 빼앗길까 봐 샘을 내기 시작했어요.",
+   "blank": "ревновать",
+   "src": "made"
   }
  ],
  "w|редактировать": [
@@ -37971,6 +38931,22 @@
    "en": "I won't leave without a decision.",
    "ko": "결정 없이는 안 가.",
    "blank": "решения"
+  }
+ ],
+ "w|решётка": [
+  {
+   "text": "На даче Павел жарил шашлыки на старой решётке.",
+   "en": "At the dacha Pavel grilled kebabs on an old grill.",
+   "ko": "다차에서 파벨은 낡은 석쇠에 꼬치를 구웠어요.",
+   "blank": "решётке",
+   "src": "made"
+  },
+  {
+   "text": "Елена поставила колбу на металлическую решётку над горелкой.",
+   "en": "Elena put the flask on a metal grid above the burner.",
+   "ko": "옐레나는 플라스크를 버너 위 금속 받침에 올렸어요.",
+   "blank": "решётку",
+   "src": "made"
   }
  ],
  "w|решить": [
@@ -38987,6 +39963,22 @@
    "src": "made"
   }
  ],
+ "w|свеча": [
+  {
+   "text": "Павел зажёг на столе ароматную свечу.",
+   "en": "Pavel lit a scented candle on the table.",
+   "ko": "파벨은 식탁 위에 향초를 켰어요.",
+   "blank": "свечу",
+   "src": "made"
+  },
+  {
+   "text": "Когда в лаборатории отключили свет, Елена достала из ящика свечу.",
+   "en": "When the power went out in the lab, Elena took a candle from the drawer.",
+   "ko": "실험실 전기가 나가자 옐레나는 서랍에서 초를 꺼냈어요.",
+   "blank": "свечу",
+   "src": "made"
+  }
+ ],
  "w|свидание": [
   {
    "text": "У меня свидание.",
@@ -39477,6 +40469,22 @@
    "src": "tatoeba:3541761/Lenin_1917 en:23196/Swift"
   }
  ],
+ "w|сексуальный": [
+  {
+   "text": "Андрей с улыбкой пишет, что жена считает голос одного певца очень сексуальным.",
+   "en": "Andrei writes with a smile that his wife finds a certain singer's voice very sexy.",
+   "ko": "안드레이는 아내가 어떤 가수의 목소리를 무척 섹시하다고 여긴다며 웃으며 써요.",
+   "blank": "сексуальным",
+   "src": "made"
+  },
+  {
+   "text": "На биологии Ирина спокойно объяснила старшеклассникам тему сексуального здоровья.",
+   "en": "In biology Irina calmly explained the topic of sexual health to the senior pupils.",
+   "ko": "생물 시간에 이리나는 고학년 학생들에게 성 건강에 대해 차분하게 설명했어요.",
+   "blank": "сексуального",
+   "src": "made"
+  }
+ ],
  "w|секунда": [
   {
    "text": "Секунду, не клади трубку.",
@@ -39630,6 +40638,22 @@
    "en": "Thank you for the warm welcome!",
    "ko": "따뜻하게 맞아 주셔서 고마워요!",
    "blank": "сердечный",
+   "src": "made"
+  }
+ ],
+ "w|сердиться": [
+  {
+   "text": "Андрей просит друга не сердиться за то, что так долго не отвечал.",
+   "en": "Andrei asks his friend not to be angry that he took so long to reply.",
+   "ko": "안드레이는 답장이 늦어 미안하다며 화내지 말라고 부탁해요.",
+   "blank": "сердиться",
+   "src": "made"
+  },
+  {
+   "text": "Ирина никогда долго не сердится на учеников.",
+   "en": "Irina never stays angry with her pupils for long.",
+   "ko": "이리나는 학생들에게 절대 오래 화내지 않아요.",
+   "blank": "сердится",
    "src": "made"
   }
  ],
@@ -39877,6 +40901,22 @@
    "ko": "우리한테 신호 좀 줄 수 있어?",
    "blank": "сигнал",
    "src": "tatoeba:10314225/Kar1na en:9443652/CK"
+  }
+ ],
+ "w|сиденье": [
+  {
+   "text": "Павел поставил детское сиденье в машину, чтобы съездить с дочкой на ёлку.",
+   "en": "Pavel put a child seat in the car to take his daughter to the New Year show.",
+   "ko": "파벨은 딸과 새해 공연에 가려고 차에 카시트를 달았어요.",
+   "blank": "сиденье",
+   "src": "made"
+  },
+  {
+   "text": "У лабораторного стула Елены давно треснуло сиденье.",
+   "en": "The seat of Elena's lab stool cracked long ago.",
+   "ko": "옐레나의 실험실 의자는 앉는 부분이 오래전에 금이 갔어요.",
+   "blank": "сиденье",
+   "src": "made"
   }
  ],
  "w|сидеть": [
@@ -40227,6 +41267,22 @@
    "src": "tatoeba:3451885/odexed en:2397868/MethodGT"
   }
  ],
+ "w|скорый": [
+  {
+   "text": "Андрей закончил письмо словами о скорой встрече.",
+   "en": "Andrei ended the letter with words about meeting soon.",
+   "ko": "안드레이는 곧 만나자는 말로 편지를 끝맺었어요.",
+   "blank": "скорой",
+   "src": "made"
+  },
+  {
+   "text": "Ирина надеется в скором времени получить свой класс.",
+   "en": "Irina hopes to get her own class soon.",
+   "ko": "이리나는 머지않아 자기 반을 맡기를 바라요.",
+   "blank": "скором",
+   "src": "made"
+  }
+ ],
  "w|скрывать": [
   {
    "text": "Тебе нечего скрывать, не так ли?",
@@ -40241,6 +41297,22 @@
    "ko": "더 이상 너한테 이걸 숨길 수 없어.",
    "blank": "скрывать",
    "src": "tatoeba:4042258/marafon en:2490720/Hybrid"
+  }
+ ],
+ "w|скрываться": [
+  {
+   "text": "Кот Павла любит скрываться под кроватью, когда приходят гости.",
+   "en": "Pavel's cat likes to hide under the bed when guests come.",
+   "ko": "파벨의 고양이는 손님이 오면 침대 밑에 숨기를 좋아해요.",
+   "blank": "скрываться",
+   "src": "made"
+  },
+  {
+   "text": "Елена выяснила, что за простой ошибкой может скрываться серьёзная проблема.",
+   "en": "Elena found that a serious problem can be hiding behind a simple mistake.",
+   "ko": "옐레나는 단순한 실수 뒤에 심각한 문제가 숨어 있을 수 있다는 걸 알아냈어요.",
+   "blank": "скрываться",
+   "src": "made"
   }
  ],
  "w|скрыть": [
@@ -40811,6 +41883,22 @@
    "src": "made"
   }
  ],
+ "w|смелый": [
+  {
+   "text": "Андрей пишет, что уйти с надёжной работы было смелым решением.",
+   "en": "Andrei writes that leaving a secure job was a bold decision.",
+   "ko": "안드레이는 안정된 직장을 그만둔 게 대담한 결정이었다고 써요.",
+   "blank": "смелым",
+   "src": "made"
+  },
+  {
+   "text": "Ирина хвалит учеников за смелые ответы, даже если они неверные.",
+   "en": "Irina praises pupils for bold answers, even when they are wrong.",
+   "ko": "이리나는 틀리더라도 과감하게 답한 학생들을 칭찬해요.",
+   "blank": "смелые",
+   "src": "made"
+  }
+ ],
  "w|смена": [
   {
    "text": "Когда у тебя начинается ночная смена?",
@@ -40979,6 +42067,22 @@
    "en": "I'm looking out the window.",
    "ko": "나는 창밖을 보고 있어.",
    "blank": "смотрю"
+  }
+ ],
+ "w|смотреться": [
+  {
+   "text": "Новая скатерть отлично смотрится на столе у Павла.",
+   "en": "The new tablecloth looks great on Pavel's table.",
+   "ko": "새 식탁보가 파벨네 식탁에 아주 잘 어울려요.",
+   "blank": "смотрится",
+   "src": "made"
+  },
+  {
+   "text": "В белом халате Елена смотрится совсем как настоящий учёный.",
+   "en": "In her white coat Elena looks every bit a real scientist.",
+   "ko": "흰 가운을 입은 옐레나는 영락없는 과학자처럼 보여요.",
+   "blank": "смотрится",
+   "src": "made"
   }
  ],
  "w|смочь": [
@@ -41315,6 +42419,22 @@
    "ko": "그 일이 언제 있었는지 알아?",
    "blank": "событие",
    "src": "tatoeba:675592/shanghainese en:69973/CM"
+  }
+ ],
+ "w|совершать": [
+  {
+   "text": "Каждое утро Павел совершает прогулку вокруг пруда.",
+   "en": "Every morning Pavel takes a walk around the pond.",
+   "ko": "매일 아침 파벨은 연못 주위를 산책해요.",
+   "blank": "совершает",
+   "src": "made"
+  },
+  {
+   "text": "Елена надеется когда-нибудь совершать открытия, о которых пишут в учебниках.",
+   "en": "Elena hopes to one day make discoveries that textbooks write about.",
+   "ko": "옐레나는 언젠가 교과서에 실릴 발견을 하고 싶어 해요.",
+   "blank": "совершать",
+   "src": "made"
   }
  ],
  "w|совершенно": [
@@ -42018,6 +43138,22 @@
    "en": "Irina repaired her neighbor's phone for free.",
    "ko": "이리나는 이웃 아주머니의 휴대폰을 무료로 고쳐 줬어요.",
    "blank": "соседке",
+   "src": "made"
+  }
+ ],
+ "w|соседство": [
+  {
+   "text": "Павел ценит хорошее соседство и всегда угощает соседей пирогами.",
+   "en": "Pavel values good neighbourly relations and always treats the neighbours to pies.",
+   "ko": "파벨은 이웃과 사이좋게 지내는 걸 중요하게 여겨서 늘 이웃에게 파이를 나눠 줘요.",
+   "blank": "соседство",
+   "src": "made"
+  },
+  {
+   "text": "Елена изучает, как соседство некоторых бактерий влияет на их рост.",
+   "en": "Elena studies how living side by side affects the growth of certain bacteria.",
+   "ko": "옐레나는 어떤 박테리아들이 이웃해 있을 때 성장에 어떤 영향을 주는지 연구해요.",
+   "blank": "соседство",
    "src": "made"
   }
  ],
@@ -43335,6 +44471,22 @@
    "src": "made"
   }
  ],
+ "w|стесняться": [
+  {
+   "text": "Андрей признаётся, что в детстве очень стеснялся говорить по телефону.",
+   "en": "Andrei admits that as a child he was very shy about talking on the phone.",
+   "ko": "안드레이는 어릴 때 전화 통화를 무척 쑥스러워했다고 털어놔요.",
+   "blank": "стеснялся",
+   "src": "made"
+  },
+  {
+   "text": "Новенькая ученица Ирины пока стесняется отвечать у доски.",
+   "en": "Irina's new pupil is still too shy to answer at the board.",
+   "ko": "이리나 반에 새로 온 학생은 아직 칠판 앞에서 대답하기를 부끄러워해요.",
+   "blank": "стесняется",
+   "src": "made"
+  }
+ ],
  "w|стиль": [
   {
    "text": "Мне нравится его стиль и прическа.",
@@ -43472,6 +44624,22 @@
    "en": "In the vestibule Natalia ran into her former classmate by chance.",
    "ko": "나탈리야는 연결 통로에서 우연히 옛 동창과 마주쳤어요.",
    "blank": "столкнулась",
+   "src": "made"
+  }
+ ],
+ "w|столовая": [
+  {
+   "text": "В праздники вся семья Павла собирается в столовой за большим столом.",
+   "en": "During the holidays Pavel's whole family gathers at the big table in the dining room.",
+   "ko": "연휴에 파벨의 가족은 모두 식당방의 큰 식탁에 모여요.",
+   "blank": "столовой",
+   "src": "made"
+  },
+  {
+   "text": "В обед Елена с коллегами ходит в институтскую столовую.",
+   "en": "At lunchtime Elena and her colleagues go to the institute canteen.",
+   "ko": "점심때 옐레나는 동료들과 연구소 구내식당에 가요.",
+   "blank": "столовую",
    "src": "made"
   }
  ],
@@ -44361,6 +45529,22 @@
    "src": "made"
   }
  ],
+ "w|съёмка": [
+  {
+   "text": "Андрей рассказывает, что однажды попал на съёмку настоящего фильма.",
+   "en": "Andrei tells how he once ended up on the set of a real film.",
+   "ko": "안드레이는 한번은 진짜 영화 촬영장에 가 봤다고 이야기해요.",
+   "blank": "съёмку",
+   "src": "made"
+  },
+  {
+   "text": "На съёмке школьного фильма Ирина отвечала за костюмы.",
+   "en": "During the filming of the school film Irina was in charge of the costumes.",
+   "ko": "학교 영화 촬영에서 이리나는 의상을 맡았어요.",
+   "blank": "съёмке",
+   "src": "made"
+  }
+ ],
  "w|съесть": [
   {
    "text": "Что ты хочешь съесть на этих выходных?",
@@ -44589,6 +45773,22 @@
    "en": "Don't forget the hat either.",
    "ko": "모자도 잊지 마.",
    "blank": "также"
+  }
+ ],
+ "w|таковой": [
+  {
+   "text": "У Андрея давно не было отпуска как такового.",
+   "en": "Andrei hasn't had a proper holiday as such for a long time.",
+   "ko": "안드레이는 제대로 된 휴가라는 걸 오랫동안 못 가졌어요.",
+   "blank": "такового",
+   "src": "made"
+  },
+  {
+   "text": "Ирина просит учеников подчёркивать ошибки, если они найдут таковые.",
+   "en": "Irina asks the pupils to underline any mistakes if they find such.",
+   "ko": "이리나는 학생들에게 틀린 곳이 있으면 밑줄을 치라고 해요.",
+   "blank": "таковые",
+   "src": "made"
   }
  ],
  "w|такой": [
@@ -45460,6 +46660,22 @@
    "en": "After the miss, the coach spoke to Olga in a sharp tone.",
    "ko": "슛을 놓치자 코치는 올가에게 날카로운 말투로 말했어요.",
    "blank": "тоном",
+   "src": "made"
+  }
+ ],
+ "w|торговый": [
+  {
+   "text": "Андрей пишет, что открыл небольшую лавку в торговом центре.",
+   "en": "Andrei writes that he has opened a small shop in a shopping centre.",
+   "ko": "안드레이는 쇼핑센터에 작은 가게를 열었다고 써요.",
+   "blank": "торговом",
+   "src": "made"
+  },
+  {
+   "text": "На экскурсии Ирина рассказала детям о старом торговом пути через их город.",
+   "en": "On the excursion Irina told the children about the old trade route through their town.",
+   "ko": "견학에서 이리나는 아이들에게 마을을 지나던 옛 무역로에 대해 이야기했어요.",
+   "blank": "торговом",
    "src": "made"
   }
  ],
@@ -46951,6 +48167,22 @@
    "ko": "넌 내 인생에서 가장 멋진 사람이야.",
    "blank": "удивительный",
    "src": "tatoeba:10674036/odexed en:3000338/Ricardo14"
+  }
+ ],
+ "w|удивить": [
+  {
+   "text": "Новость о свадьбе друга совсем не удивила Андрея.",
+   "en": "The news of his friend's wedding didn't surprise Andrei at all.",
+   "ko": "친구가 결혼한다는 소식에 안드레이는 전혀 놀라지 않았어요.",
+   "blank": "удивила",
+   "src": "made"
+  },
+  {
+   "text": "Тихий ученик удивил Ирину блестящим сочинением.",
+   "en": "A quiet pupil surprised Irina with a brilliant essay.",
+   "ko": "조용한 학생이 훌륭한 글을 써서 이리나를 놀라게 했어요.",
+   "blank": "удивил",
+   "src": "made"
   }
  ],
  "w|удивлённый": [
@@ -49195,6 +50427,22 @@
    "src": "made"
   }
  ],
+ "w|целоваться": [
+  {
+   "text": "Андрей вспоминает, как в школе они впервые увидели целующуюся пару в кино и смеялись.",
+   "en": "Andrei remembers how at school they first saw a couple kissing at the cinema and laughed.",
+   "ko": "안드레이는 학창 시절 극장에서 처음 키스하는 연인을 보고 웃었던 일을 떠올려요.",
+   "blank": "целующуюся",
+   "src": "made"
+  },
+  {
+   "text": "На школьной дискотеке Ирина заметила, как двое старшеклассников целовались за колонной.",
+   "en": "At the school disco Irina noticed two senior pupils kissing behind a column.",
+   "ko": "학교 댄스파티에서 이리나는 고학년 두 명이 기둥 뒤에서 입 맞추는 걸 봤어요.",
+   "blank": "целовались",
+   "src": "made"
+  }
+ ],
  "w|целый": [
   {
    "text": "Я ждал целый день.",
@@ -49671,6 +50919,38 @@
    "en": "A black cat ran across the road.",
    "ko": "검은 고양이가 길을 가로질렀어.",
    "blank": "Чёрная"
+  }
+ ],
+ "w|черта": [
+  {
+   "text": "Андрей пишет, что упрямство — главная черта его характера.",
+   "en": "Andrei writes that stubbornness is the main trait of his character.",
+   "ko": "안드레이는 고집이 자기 성격의 가장 큰 특징이라고 써요.",
+   "blank": "черта",
+   "src": "made"
+  },
+  {
+   "text": "Ирина попросила детей провести черту под последним примером.",
+   "en": "Irina asked the children to draw a line under the last example.",
+   "ko": "이리나는 아이들에게 마지막 예제 밑에 줄을 그으라고 했어요.",
+   "blank": "черту",
+   "src": "made"
+  }
+ ],
+ "w|чертовски": [
+  {
+   "text": "Андрей пишет, что чертовски соскучился по их долгим разговорам.",
+   "en": "Andrei writes that he misses their long conversations like hell.",
+   "ko": "안드레이는 둘이 나누던 긴 대화가 정말 지독하게 그립다고 써요.",
+   "blank": "чертовски",
+   "src": "made"
+  },
+  {
+   "text": "После шести уроков подряд Ирина была чертовски уставшей.",
+   "en": "After six lessons in a row Irina was terribly tired.",
+   "ko": "여섯 시간 연속 수업을 하고 나니 이리나는 녹초가 됐어요.",
+   "blank": "чертовски",
+   "src": "made"
   }
  ],
  "w|честность": [
