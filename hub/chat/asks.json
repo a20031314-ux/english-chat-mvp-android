@@ -1590,6 +1590,32 @@
       "base": "HEAD~1",
       "head": "d04ba27",
       "status": "open"
+    },
+    {
+      "id": "a261110-2-4",
+      "at": "2026-11-10 00:43",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "오늘의 학습을 Logbank에서 My 맨 위 계정 카드 아래로 옮김 — 줄: ▶ Quizbank · 숙제 · 📞 수업 · 📏 실력 확인(14일이 된 날만), ✓만·숫자 없음. Logbank는 기록만(실력 확인은 표만). 문구 lbToday 지움(제목 notebookToday). 숙제 줄·수업 문이 그 탭에서 맞게 열리는지",
+      "files": [
+        "src/components/RoleplayScreen.tsx",
+        "src/components/roleplay/CallReplay.tsx"
+      ],
+      "features": [
+        "자유대화",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘의 학습",
+        "Quizbank",
+        "Languagebank",
+        "소재 수업"
+      ],
+      "base": "HEAD",
+      "head": "ab2c778",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -1824,10 +1850,24 @@
       "asks": [
         "a261110-2-3"
       ]
+    },
+    {
+      "at": "2026-11-10 00:43",
+      "from": "2",
+      "base": "HEAD",
+      "head": "ab2c778",
+      "what": "오늘의 학습을 Logbank에서 My 맨 위 계정 카드 아래로 옮김 — 줄: ▶ Quizbank · 숙제 · 📞 수업 · 📏 실력 확인(14일이 된 날만), ✓만·숫자 없음. Logbank는 기록만(실력 확인은 표만). 문구 lbToday 지움(제목 notebookToday). 숙제 줄·수업 문이 그 탭에서 맞게 열리는지",
+      "tabs": [
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261110-2-4"
+      ]
     }
   ],
   "seq": {
-    "261110-2": 3,
+    "261110-2": 4,
     "261110-1": 3
   }
 }

@@ -4,17 +4,15 @@
  * "늘었어요" 화면 조각(2026-11-07 사용자 "포인트 말고 학습한 단어 N개 식으로" · "틀렸던 문장 > 이후 활용한 문장" ·
  * "구사 문장의 길이·단어 수준·대화 소재를 실제 대화로 — 예전엔 이 정도, 지금은" → "진행해줘").
  *
- * - TodayTitle · TodayGrowth: Logbank 오늘 칸 제목 "오늘의 학습 n"과 그 아래 활용 · 다시 맞힘(오늘 것, 0이면 안 보임).
  * - PairList: 틀린 문장(날짜, 줄 그음 + 바른 꼴) → 다른 날 맞게 쓴 내 문장.
  * - CallGrowthPairs: 통화 끝 화면 — 이번 통화에서 예전에 고쳐진 것을 맞게 쓴 짝.
  * - TalkCompare: 같은 종류 질문에 한 대답 짝 · 처음 3통 vs 최근 3통 많이 나아진 칸 셋 · 처음 써 본 문법·표현(자유대화).
  * 재료는 이 폰뿐(장부 logbank.v1 · growthLines.v1 · callNotes.v1 · talkAnswers.v1 · talkFirstUse.v1). 모델 없음.
  */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
-import { growthPairs, progressIn, type GrowthPair } from "@/lib/curriculum/growthView";
+import { growthPairs, type GrowthPair } from "@/lib/curriculum/growthView";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { CALL_NOTES_EVENT, readCallNotes } from "@/lib/roleplay/callNotes";
 import { bestAnswerPair, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
@@ -39,61 +37,7 @@ function useTick(events: readonly string[], language: string): number {
   return tick;
 }
 
-const LEDGER_EVENTS = [LEDGER_EVENT] as const;
 const LINE_EVENTS = [GROWTH_LINES_EVENT] as const;
-
-/** 오늘 숫자(장부, 퀴즈·대화 사건이 들어오면 다시 셈) — Logbank 오늘 칸 제목과 아래 한 줄이 같이 씀. */
-function useTodayProgress(language: string) {
-  const tick = useTick(LEDGER_EVENTS, language);
-  const [today] = useState(() => dayOfSeconds(Math.floor(Date.now() / 1000)));
-  return useMemo(() => {
-    void tick;
-    return progressIn(readLedger(language), (t) => dayOfSeconds(t) === today);
-  }, [tick, language, today]);
-}
-
-/** Logbank 오늘 칸 제목 "오늘의 학습 n"(그날 퀴즈로 답한 서로 다른 것의 수, 0이면 숫자 없음 — 사용자 2026-11-10 "첫머리는 오늘의 학습으로 제목이랑 통합"). */
-export function TodayTitle({ ui, language }: { ui: UICopy; language: string }) {
-  const n = useTodayProgress(language).studied.length;
-  return <h3 data-today-title={n} className="text-note font-semibold text-ink">{ui.lbToday.replace("{n}", n ? String(n) : "").trim()}</h3>;
-}
-
-/** 제목 아래 한 줄 — 활용·다시 맞힘(오늘 것, 0이면 안 보임). 숫자가 늘면 그 칸이 잠깐 커지고 밝아짐. */
-export function TodayGrowth({ ui, language }: { ui: UICopy; language: string }) {
-  const counts = useTodayProgress(language);
-  const parts = [
-    // Logbank "배운 것" 표의 칸 이름 그대로 — 같은 숫자의 오늘 몫.
-    { id: "used", icon: "", label: ui.growUsed, n: counts.used.length },
-    { id: "recovered", icon: "↺", label: ui.growRecovered, n: counts.recovered.length },
-  ];
-  const seen = useRef<Record<string, number> | null>(null);
-  const [lit, setLit] = useState<Set<string>>(new Set());
-  useEffect(() => {
-    const now = Object.fromEntries(parts.map((one) => [one.id, one.n]));
-    const before = seen.current;
-    seen.current = now;
-    if (!before) return;
-    const grew = new Set(parts.filter((one) => one.n > (before[one.id] ?? 0)).map((one) => one.id));
-    if (!grew.size) return;
-    setLit(grew);
-    const timer = window.setTimeout(() => setLit(new Set()), 900);
-    return () => window.clearTimeout(timer);
-    // parts는 counts에서 — counts가 바뀔 때만.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [counts]);
-  const shown = parts.filter((one) => one.n > 0);
-  if (!shown.length) return null;
-  return (
-    <p data-today-growth className="flex flex-wrap gap-x-3 gap-y-0.5 text-caption tabular-nums text-slate-300">
-      {shown.map((one) => (
-        <span key={one.id} data-today-part={one.id} className={`inline-block origin-left transition-all duration-300 ${lit.has(one.id) ? "scale-110 text-good" : ""}`}>
-          {one.icon ? <span aria-hidden>{one.icon} </span> : null}
-          {one.label} <span className={`font-semibold ${lit.has(one.id) ? "text-good" : "text-ink"}`}>{one.n}</span>
-        </span>
-      ))}
-    </p>
-  );
-}
 
 /** 고쳐 씀 짝(이 폰). inTime = 쓴 줄 시각(초)으로 거름. */
 export function useGrowthPairs(language: string, inTime: (t: number) => boolean): GrowthPair[] {

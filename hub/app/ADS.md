@@ -61,7 +61,7 @@
 | `homeworkEnd` | 수업 통화 숙제(퀴즈·대화)의 남은 반쪽을 끝까지 하고 닫을 때(숙제를 다 끝낸 자리) — 한쪽만 했을 때·통화 끝 화면 안 장면은 없음(2026-11-09) | AI 통화 (어디서나 뜨는 층 CallHost `call` · `roleplay/CallReplay.tsx` ／ My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `quizBreak` | Quizbank 칸 안에서 이어 푸는 퀴즈(InlineQuiz)가 10문제를 넘긴 뒤 다음 묶음으로 넘어갈 때 — 문제 도중·답 보기 중에는 없음(2026-11-01) | My 탭 `my` · `studyMap/InlineQuiz.tsx` |
 | `roomLeave` | 공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외 | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
-| `skillCheckEnd` | Logbank 📏 실력 확인(14일마다)의 결과(지난번 → 이번)를 보고 닫기를 누를 때 — 시험 도중·▶를 누를 때·처음 측정은 없음(2026-11-09) | My 탭 `my` · `studyMap/Logbank.tsx` |
+| `skillCheckEnd` | 오늘의 학습 📏 실력 확인 줄(14일마다)의 결과(지난번 → 이번)를 보고 닫기를 누를 때 — 시험 도중·줄을 누를 때·처음 측정은 없음(2026-11-10) | My 탭 `my` · `studyMap/TodayCards.tsx` |
 | `videoLeave` | 영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때 | 영상 학습 탭 `video` · `videoLearning/VideoLearningTab.tsx` |
 
 모든 전면 광고는 서로 3분(설정 `interstitialMinGapSeconds`) 안에 다시 뜨지 않고, 미리 받아 둔 광고가 있을 때만 뜬다.

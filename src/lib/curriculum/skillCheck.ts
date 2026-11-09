@@ -19,6 +19,8 @@ const KEEP = 24;
 export type SkillCheck = { at: number; b: number; expression: number; grammar: number; first?: boolean };
 
 const keyOf = (language: string) => `skillCheck.v1.${language}`;
+/** 실력 확인을 하나 남기면 — 오늘의 학습 줄(✓)과 Logbank 기록 표가 다시 읽는다. */
+export const SKILL_CHECK_EVENT = "lb-skill-check";
 
 function valid(one: unknown): one is SkillCheck {
   const v = one as SkillCheck;
@@ -38,6 +40,7 @@ export function saveRecheck(language: string, one: SkillCheck): void {
   try {
     const list = [...readRechecks(language), { at: one.at, b: one.b, expression: one.expression, grammar: one.grammar }].sort((a, b) => a.at - b.at);
     globalThis.localStorage?.setItem(keyOf(language), JSON.stringify(list.slice(-KEEP)));
+    globalThis.dispatchEvent?.(new CustomEvent(SKILL_CHECK_EVENT, { detail: { language } }));
   } catch {
     // 이번에만.
   }

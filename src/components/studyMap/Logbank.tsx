@@ -1,11 +1,9 @@
 "use client";
 
-import { TodayCards } from "@/components/studyMap/TodayCards";
 import { bankTone } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { maybeShowInterstitial } from "@/lib/ads";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
 import { clearQuizDay, dayValue, readQuizDays, type QuizDays } from "@/lib/curriculum/quizDays";
@@ -36,9 +34,8 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
 import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
-import { FirstCheck } from "@/components/studyMap/FirstCheck";
 import { readFirstCheck, wordsAbout } from "@/lib/curriculum/firstCheck";
-import { checkHistory, checkRows, readRechecks, recheckDue, type CheckRow } from "@/lib/curriculum/skillCheck";
+import { checkHistory, checkRows, readRechecks, SKILL_CHECK_EVENT, type CheckRow } from "@/lib/curriculum/skillCheck";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
@@ -324,7 +321,6 @@ export function Logbank({
   const keyLabel = (key: string) => reviewLabel(language, key) || key.slice(2);
   return (
     <div data-logbank className="flex flex-col gap-3">
-      <TodayCards ui={ui} language={language} locale={locale} />
       <SkillChecks ui={ui} locale={locale} language={language} ledger={ledger} />
       {head}
       <section data-log-period={kind} className="flex flex-col gap-3 rounded-xl border border-line p-3">
@@ -1490,14 +1486,17 @@ function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amou
  */
 function SkillChecks({ ui, locale, language, ledger }: { ui: UICopy; locale: string; language: string; ledger: readonly LogEvent[] }) {
   const [tick, setTick] = useState(0);
-  const [open, setOpen] = useState(false);
-  const [now] = useState(() => Date.now());
+  // 실력 확인은 My 맨 위 오늘의 학습 줄에서(TodayCards) — 여기는 기록 표만, 새 확인이 남으면 다시 읽음.
+  useEffect(() => {
+    const on = () => setTick((n) => n + 1);
+    window.addEventListener(SKILL_CHECK_EVENT, on);
+    return () => window.removeEventListener(SKILL_CHECK_EVENT, on);
+  }, []);
   const history = useMemo(() => {
     void tick;
     return checkHistory(readFirstCheck(language), readRechecks(language));
   }, [language, tick]);
   const rows = useMemo(() => checkRows(history, ledger).slice(0, 6), [history, ledger]);
-  const due = recheckDue(history, now);
   const date = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" });
@@ -1517,21 +1516,10 @@ function SkillChecks({ ui, locale, language, ledger }: { ui: UICopy; locale: str
     { icon: "📐", label: ui.partGrammar, pick: (one) => one.grammar, text: (one) => String(one.grammar) },
     { icon: "🗣", label: ui.selfFocusSpeaking, pick: (one) => one.talk, text: (one) => String(one.talk) },
   ];
+  if (!rows.length) return null;
   return (
-    <section data-skill-checks={due ? "due" : "ok"} className="flex flex-col gap-2 rounded-xl border border-line p-3">
-      <div className="flex items-center justify-between gap-2">
-        <h3 className="text-note font-semibold text-ink">📏 {ui.skillCheckTitle}</h3>
-        <button
-          type="button"
-          data-skill-check-start
-          onClick={() => setOpen(true)}
-          aria-label={ui.skillCheckTitle}
-          title={ui.skillCheckTitle}
-          className={due ? "tb-btn rounded-full px-4 py-1 text-caption font-semibold" : "rounded-full border border-line px-3 py-1 text-caption text-slate-400 hover:bg-white/10"}
-        >
-          ▶
-        </button>
-      </div>
+    <section data-skill-checks className="flex flex-col gap-2 rounded-xl border border-line p-3">
+      <h3 className="text-note font-semibold text-ink">📏 {ui.skillCheckTitle}</h3>
       {rows.length ? (
         <table data-skill-check-table className="w-full text-note tabular-nums">
           <thead>
@@ -1557,27 +1545,6 @@ function SkillChecks({ ui, locale, language, ledger }: { ui: UICopy; locale: str
             ))}
           </tbody>
         </table>
-      ) : null}
-      {open ? (
-        <FullScreenLayer>
-          <div className="contents" onClick={(event) => event.stopPropagation()}>
-            <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-6 pt-[max(1rem,env(safe-area-inset-top))]">
-              <FirstCheck
-                ui={ui}
-                locale={locale}
-                language={language}
-                recheck={{ last: history[history.length - 1] ?? null }}
-                onSkip={() => setOpen(false)}
-                onDone={() => {
-                  setOpen(false);
-                  setTick((n) => n + 1);
-                  // 결과를 보고 닫을 때 전면 한 번(시험 끝 — 콘텐츠 사이 논리적 쉼). 시험 도중·▶를 누를 때는 없음.
-                  void maybeShowInterstitial("skillCheckEnd");
-                }}
-              />
-            </div>
-          </div>
-        </FullScreenLayer>
       ) : null}
     </section>
   );
