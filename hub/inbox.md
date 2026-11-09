@@ -277,3 +277,6 @@
 - 2026-11-09 watch → dev: [my] src/components/studyMap/TodayCards.tsx:174 — 문법 열쇠는 reviewLabel이 비어 내부 id "1:0"이 카드에 보임 (문법 칸 이름으로)
 - 2026-11-09 watch → dev: [my] src/components/studyMap/Logbank.tsx:1811 — DayRows 통화 날짜를 localDay("2026-11-9")와 ISO("2026-11-09")로 === 비교해 1~9일 통화 0 (sameDay로)
 - 2026-11-09 watch → dev: [my] src/components/studyMap/LanguageBank.tsx:203 — ? 설명 lbEstimateHelp가 없어진 어림을 설명 (학습한 수 기준으로 고치거나 빼기, 14개 언어)
+- 2026-11-09 watch → dev: [my] src/lib/curriculum/quiz.ts:1378 — 뜻 고르기 오답 후보에서 shaped(others)가 near·samePos보다 앞 (shaped(near) → shaped(samePos) → near → samePos → shaped(others) → others 순서로)
+- 2026-11-09 watch → dev: [my] src/components/studyMap/TodayPlan.tsx:499 — studyTally 지운 뒤 몸통 빈 useEffect 남음 (지우기)
+- 2026-11-09 watch → dev: [ai] src/components/roleplay/CallRecap.tsx:32 — "✓ 복습" 뺀 뒤 saved prop을 안 씀 (prop과 넘기는 쪽 정리)
