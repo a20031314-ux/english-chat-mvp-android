@@ -11,7 +11,7 @@
  *      node --experimental-strip-types scripts/word-sentences.ts --merge <언어> <파일.json> [--src made]  (API 없이 — Cursor 등이 쓴 문장을 같은 검사로 걸러 넣음, src 기본 "cursor", 채팅이 쓰면 made. 한 파일 안에서는 한 문장을 낱말 여럿이 나눠 씀)
  * 이미 2개가 있는 낱말은 건너뛴다.
  */
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { renameSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { pieceAt, pieceTwice } from "../src/lib/curriculum/quiz.ts";
 import { loadBank, stageOfRank, wordKey, type BankWord } from "../src/lib/curriculum/vocabBank.ts";
@@ -65,7 +65,11 @@ function readBook(language: string): Book {
 function writeBook(language: string, book: Book) {
   mkdirSync(DIR, { recursive: true });
   const ordered = Object.fromEntries(Object.entries(book).sort(([a], [b]) => a.localeCompare(b)));
-  writeFileSync(path.join(DIR, `${language}.json`), `${JSON.stringify(ordered, null, 1)}\n`);
+  // 임시 파일에 쓰고 이름 바꾸기 — 여러 언어를 동시에 merge해도 다른 쪽이 반쯤 쓴 파일을 읽지 않게.
+  const file = path.join(DIR, `${language}.json`);
+  const temp = `${file}.${process.pid}.tmp`;
+  writeFileSync(temp, `${JSON.stringify(ordered, null, 1)}\n`);
+  renameSync(temp, file);
 }
 
 function inScript(language: string, text: string): boolean {
