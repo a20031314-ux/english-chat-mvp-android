@@ -2081,6 +2081,22 @@
    "blank": "강당"
   }
  ],
+ "w|강대국": [
+  {
+   "text": "무대 위 지도에는 강대국들이 작은 나라를 나눠 갖는 모습이 그려져 있었어요.",
+   "en": "The map on stage showed great powers carving up a small country among themselves.",
+   "ko": "무대 위 지도에는 강대국들이 작은 나라를 나눠 갖는 모습이 그려져 있었어요.",
+   "blank": "강대국들이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 기차에서 강대국 사이에 낀 작은 나라의 역사를 다룬 책을 읽었어요.",
+   "en": "On the train, Mikyung read a book about the history of a small country caught between great powers.",
+   "ko": "미경은 기차에서 강대국 사이에 낀 작은 나라의 역사를 다룬 책을 읽었어요.",
+   "blank": "강대국",
+   "src": "made"
+  }
+ ],
  "w|강도": [
   {
    "text": "뉴스에서 강도 사건이 보도됐어.",
@@ -2465,6 +2481,22 @@
    "en": "We're pouring effort into new product development.",
    "ko": "신제품 개발에 힘을 쏟아.",
    "blank": "개발에"
+  }
+ ],
+ "w|개발도상국": [
+  {
+   "text": "성호는 개발도상국의 공장에서 일하는 소녀를 주인공으로 한 극을 썼어요.",
+   "en": "Seongho wrote a play whose heroine is a girl working in a factory in a developing country.",
+   "ko": "성호는 개발도상국의 공장에서 일하는 소녀를 주인공으로 한 극을 썼어요.",
+   "blank": "개발도상국의",
+   "src": "made"
+  },
+  {
+   "text": "창밖으로 보이는 새 철도는 개발도상국을 돕는 사업으로 지어졌대요.",
+   "en": "The new railway visible out the window was reportedly built through a project to help developing countries.",
+   "ko": "창밖으로 보이는 새 철도는 개발도상국을 돕는 사업으로 지어졌대요.",
+   "blank": "개발도상국을",
+   "src": "made"
   }
  ],
  "w|개발자": [
@@ -8205,6 +8237,22 @@
    "blank": "관리했어"
   }
  ],
+ "w|관세": [
+  {
+   "text": "성호는 무대 의상 천을 해외에서 들여오느라 관세를 꽤 냈어요.",
+   "en": "Seongho paid quite a bit in customs duties to import fabric for the stage costumes.",
+   "ko": "성호는 무대 의상 천을 해외에서 들여오느라 관세를 꽤 냈어요.",
+   "blank": "관세를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 해외에서 산 기념품에 관세가 붙을까 봐 영수증을 챙겨 뒀어요.",
+   "en": "Mikyung kept the receipts in case customs duties were charged on the souvenirs she bought abroad.",
+   "ko": "미경은 해외에서 산 기념품에 관세가 붙을까 봐 영수증을 챙겨 뒀어요.",
+   "blank": "관세가",
+   "src": "made"
+  }
+ ],
  "w|관습": [
   {
    "text": "경민은 회사의 낡은 관습이 바뀌어야 한다는 사설을 썼어요.",
@@ -9581,6 +9629,22 @@
    "blank": "국민의"
   }
  ],
+ "w|국방": [
+  {
+   "text": "성호는 장군 역을 맡은 배우에게 국방의 무게를 짊어진 사람처럼 걸으라고 했어요.",
+   "en": "Seongho told the actor playing the general to walk like someone carrying the weight of national defense.",
+   "ko": "성호는 장군 역을 맡은 배우에게 국방의 무게를 짊어진 사람처럼 걸으라고 했어요.",
+   "blank": "국방의",
+   "src": "made"
+  },
+  {
+   "text": "미경의 옆자리에는 휴가를 나온 군인이 앉아 국방 관련 책을 읽고 있었어요.",
+   "en": "In the seat next to Mikyung sat a soldier on leave reading a book about national defense.",
+   "ko": "미경의 옆자리에는 휴가를 나온 군인이 앉아 국방 관련 책을 읽고 있었어요.",
+   "blank": "국방",
+   "src": "made"
+  }
+ ],
  "w|국수": [
   {
    "text": "국수를 찬물에 헹궜어.",
@@ -9637,6 +9701,22 @@
    "blank": "국적을"
   }
  ],
+ "w|국정": [
+  {
+   "text": "성호가 연출한 연극은 국정을 맡은 왕이 백성의 말을 듣지 않아 무너지는 이야기예요.",
+   "en": "The play Seongho directed is about a king in charge of state affairs who falls because he won't listen to his people.",
+   "ko": "성호가 연출한 연극은 국정을 맡은 왕이 백성의 말을 듣지 않아 무너지는 이야기예요.",
+   "blank": "국정을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 기차에서 국정 감사 소식을 다룬 신문을 읽었어요.",
+   "en": "On the train, Mikyung read a newspaper covering the parliamentary audit of state affairs.",
+   "ko": "미경은 기차에서 국정 감사 소식을 다룬 신문을 읽었어요.",
+   "blank": "국정",
+   "src": "made"
+  }
+ ],
  "w|국제": [
   {
    "text": "원자재 가격이 올라 상품의 국제 경쟁력이 떨어지면 수출이 어려워진다.",
@@ -9650,6 +9730,22 @@
    "en": "This year Minsu's school is holding an international exchange event for the first time.",
    "ko": "민수네 학교는 올해 처음으로 국제 교류 행사를 열어요.",
    "blank": "국제",
+   "src": "made"
+  }
+ ],
+ "w|국제기구": [
+  {
+   "text": "성호는 국제기구에서 일하는 친구에게 대본 속 회의 장면이 현실적인지 물었어요.",
+   "en": "Seongho asked a friend who works at an international organization whether the meeting scene in the script was realistic.",
+   "ko": "성호는 국제기구에서 일하는 친구에게 대본 속 회의 장면이 현실적인지 물었어요.",
+   "blank": "국제기구에서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 국제기구 회의가 열리는 도시로 출장을 가는 길이에요.",
+   "en": "Mikyung is on a business trip to a city where an international organization's meeting is being held.",
+   "ko": "미경은 국제기구 회의가 열리는 도시로 출장을 가는 길이에요.",
+   "blank": "국제기구",
    "src": "made"
   }
  ],
@@ -15331,6 +15427,22 @@
    "src": "made"
   }
  ],
+ "w|난민촌": [
+  {
+   "text": "성호는 무대를 난민촌 천막처럼 꾸미려고 낡은 천을 잔뜩 모았어요.",
+   "en": "Seongho gathered loads of old cloth to make the stage look like tents in a refugee camp.",
+   "ko": "성호는 무대를 난민촌 천막처럼 꾸미려고 낡은 천을 잔뜩 모았어요.",
+   "blank": "난민촌",
+   "src": "made"
+  },
+  {
+   "text": "미경의 옆자리 대학생은 난민촌에서 아이들을 가르치는 봉사를 하러 간대요.",
+   "en": "The university student next to Mikyung says she's going to volunteer teaching children at a refugee camp.",
+   "ko": "미경의 옆자리 대학생은 난민촌에서 아이들을 가르치는 봉사를 하러 간대요.",
+   "blank": "난민촌에서",
+   "src": "made"
+  }
+ ],
  "w|난방": [
   {
    "text": "밤에 난방을 약하게 틀어.",
@@ -16257,6 +16369,22 @@
    "en": "I'll get back to you around the day after tomorrow.",
    "ko": "내일모레쯤 다시 연락할게.",
    "blank": "내일모레쯤"
+  }
+ ],
+ "w|내전": [
+  {
+   "text": "성호는 내전을 겪은 배우에게 직접 이야기를 듣고 대본을 고쳤어요.",
+   "en": "Seongho revised the script after hearing directly from an actor who had lived through a civil war.",
+   "ko": "성호는 내전을 겪은 배우에게 직접 이야기를 듣고 대본을 고쳤어요.",
+   "blank": "내전을",
+   "src": "made"
+  },
+  {
+   "text": "미경의 맞은편 승객은 내전을 피해 이 나라에 와서 기차 기관사가 됐대요.",
+   "en": "The passenger across from Mikyung says he came to this country fleeing a civil war and became a train driver.",
+   "ko": "미경의 맞은편 승객은 내전을 피해 이 나라에 와서 기차 기관사가 됐대요.",
+   "blank": "내전을",
+   "src": "made"
   }
  ],
  "w|내지": [
@@ -22223,6 +22351,22 @@
    "en": "Remember Independence Day.",
    "ko": "독립 기념일을 기억해.",
    "blank": "독립"
+  }
+ ],
+ "w|독립국": [
+  {
+   "text": "연극의 마지막 장면에서 배우들은 새 독립국의 국기를 함께 들어 올렸어요.",
+   "en": "In the final scene, the actors raised the flag of the newly independent nation together.",
+   "ko": "연극의 마지막 장면에서 배우들은 새 독립국의 국기를 함께 들어 올렸어요.",
+   "blank": "독립국의",
+   "src": "made"
+  },
+  {
+   "text": "미경은 이 나라가 독립국이 된 지 백 년이 넘었다는 안내 방송을 들었어요.",
+   "en": "Mikyung heard an announcement that it had been over a hundred years since this country became independent.",
+   "ko": "미경은 이 나라가 독립국이 된 지 백 년이 넘었다는 안내 방송을 들었어요.",
+   "blank": "독립국이",
+   "src": "made"
   }
  ],
  "w|독립적": [
@@ -32843,6 +32987,22 @@
    "blank": "발표가"
   }
  ],
+ "w|발표되다": [
+  {
+   "text": "올해 연극상 후보가 발표되자 성호의 극단 사무실에 축하 전화가 이어졌어요.",
+   "en": "When this year's theater award nominees were announced, congratulatory calls poured into Seongho's troupe office.",
+   "ko": "올해 연극상 후보가 발표되자 성호의 극단 사무실에 축하 전화가 이어졌어요.",
+   "blank": "발표되자",
+   "src": "made"
+  },
+  {
+   "text": "기차가 늦어진 이유가 발표되자 승객들이 한숨을 쉬었어요.",
+   "en": "When the reason for the train delay was announced, the passengers sighed.",
+   "ko": "기차가 늦어진 이유가 발표되자 승객들이 한숨을 쉬었어요.",
+   "blank": "발표되자",
+   "src": "made"
+  }
+ ],
  "w|발표자료": [
   {
    "text": "태윤은 내일 회의에서 쓸 발표자료를 준비하고 있어요.",
@@ -35503,6 +35663,22 @@
    "src": "made"
   }
  ],
+ "w|보장하다": [
+  {
+   "text": "성호는 배우들에게 공연이 없는 날에도 기본 출연료를 보장했어요.",
+   "en": "Seongho guaranteed the actors a base fee even on days without a performance.",
+   "ko": "성호는 배우들에게 공연이 없는 날에도 기본 출연료를 보장했어요.",
+   "blank": "보장했어요",
+   "src": "made"
+  },
+  {
+   "text": "철도 회사는 늦게 도착한 승객에게 요금의 절반을 돌려주는 걸 보장해요.",
+   "en": "The railway company guarantees half the fare back to passengers who arrive late.",
+   "ko": "철도 회사는 늦게 도착한 승객에게 요금의 절반을 돌려주는 걸 보장해요.",
+   "blank": "보장해요",
+   "src": "made"
+  }
+ ],
  "w|보조": [
   {
    "text": "성호는 신입 시절 선배 기자의 취재 보조를 맡았어요.",
@@ -37083,6 +37259,38 @@
    "en": "I took a deep breath to calm my anger.",
    "ko": "분노를 가라앉히려고 심호흡했어.",
    "blank": "분노를"
+  }
+ ],
+ "w|분단": [
+  {
+   "text": "성호는 분단 때문에 헤어진 형제를 다룬 연극으로 상을 받았어요.",
+   "en": "Seongho won an award for a play about brothers separated by the division of the country.",
+   "ko": "성호는 분단 때문에 헤어진 형제를 다룬 연극으로 상을 받았어요.",
+   "blank": "분단",
+   "src": "made"
+  },
+  {
+   "text": "미경은 분단 전에는 이 철길이 북쪽 끝까지 이어졌다는 이야기를 듣고 놀랐어요.",
+   "en": "Mikyung was surprised to hear that before the division, this railway ran all the way to the northern end.",
+   "ko": "미경은 분단 전에는 이 철길이 북쪽 끝까지 이어졌다는 이야기를 듣고 놀랐어요.",
+   "blank": "분단",
+   "src": "made"
+  }
+ ],
+ "w|분담하다": [
+  {
+   "text": "성호의 극단은 무대 제작비를 다른 극단과 반씩 분담했어요.",
+   "en": "Seongho's troupe split the stage production costs half-and-half with another troupe.",
+   "ko": "성호의 극단은 무대 제작비를 다른 극단과 반씩 분담했어요.",
+   "blank": "분담했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경과 친구는 기차표 값과 숙소비를 반씩 분담했어요.",
+   "en": "Mikyung and her friend split the train fare and lodging costs half-and-half.",
+   "ko": "미경과 친구는 기차표 값과 숙소비를 반씩 분담했어요.",
+   "blank": "분담했어요",
+   "src": "made"
   }
  ],
  "w|분량": [
@@ -43637,6 +43845,22 @@
    "src": "made"
   }
  ],
+ "w|선진국": [
+  {
+   "text": "성호는 선진국 관객들이 이 연극을 보며 무엇을 느낄지 궁금했어요.",
+   "en": "Seongho wondered what audiences in developed countries would feel watching this play.",
+   "ko": "성호는 선진국 관객들이 이 연극을 보며 무엇을 느낄지 궁금했어요.",
+   "blank": "선진국",
+   "src": "made"
+  },
+  {
+   "text": "미경은 선진국일수록 기차가 더 잘 발달했다는 말이 꼭 맞지는 않다고 생각해요.",
+   "en": "Mikyung doesn't think it's necessarily true that the more developed a country, the better its trains.",
+   "ko": "미경은 선진국일수록 기차가 더 잘 발달했다는 말이 꼭 맞지는 않다고 생각해요.",
+   "blank": "선진국일수록",
+   "src": "made"
+  }
+ ],
  "w|선택되다": [
   {
    "text": "대표로 선택됐어.",
@@ -43738,6 +43962,22 @@
    "en": "Before stacking the cake, Daeun drew the shape on paper like a blueprint.",
    "ko": "다은은 케이크를 쌓기 전에 종이에 설계도처럼 모양을 그렸어요.",
    "blank": "설계도처럼",
+   "src": "made"
+  }
+ ],
+ "w|설계하다": [
+  {
+   "text": "성호는 무대가 천천히 돌아가도록 직접 설계했어요.",
+   "en": "Seongho designed the stage himself so it would rotate slowly.",
+   "ko": "성호는 무대가 천천히 돌아가도록 직접 설계했어요.",
+   "blank": "설계했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 이 다리를 설계한 사람이 백 년 전의 젊은 기술자였다는 걸 알고 감탄했어요.",
+   "en": "Mikyung marveled to learn that the person who designed this bridge was a young engineer a century ago.",
+   "ko": "미경은 이 다리를 설계한 사람이 백 년 전의 젊은 기술자였다는 걸 알고 감탄했어요.",
+   "blank": "설계한",
    "src": "made"
   }
  ],
@@ -48585,6 +48825,22 @@
    "src": "made"
   }
  ],
+ "w|시사하다": [
+  {
+   "text": "성호의 연극은 옛날이야기지만 지금 사회에 시사하는 바가 커요.",
+   "en": "Seongho's play is an old tale, but it has a lot to say about today's society.",
+   "ko": "성호의 연극은 옛날이야기지만 지금 사회에 시사하는 바가 커요.",
+   "blank": "시사하는",
+   "src": "made"
+  },
+  {
+   "text": "미경은 텅 빈 시골 역들이 지방 인구 감소를 시사한다고 생각했어요.",
+   "en": "Mikyung thought the empty rural stations hinted at the decline in the regional population.",
+   "ko": "미경은 텅 빈 시골 역들이 지방 인구 감소를 시사한다고 생각했어요.",
+   "blank": "시사한다고",
+   "src": "made"
+  }
+ ],
  "w|시상식": [
   {
    "text": "경민은 올해 언론상 시상식에서 상을 받았어요.",
@@ -49104,6 +49360,22 @@
    "en": "There was a big botanical garden right next to Yuna's hotel.",
    "ko": "유나가 묵은 호텔 바로 옆에 커다란 식물원이 있었어요.",
    "blank": "식물원이",
+   "src": "made"
+  }
+ ],
+ "w|식민지": [
+  {
+   "text": "성호의 새 연극은 식민지 시대에 신문을 몰래 찍던 청년들의 이야기예요.",
+   "en": "Seongho's new play is about young people who secretly printed newspapers during the colonial era.",
+   "ko": "성호의 새 연극은 식민지 시대에 신문을 몰래 찍던 청년들의 이야기예요.",
+   "blank": "식민지",
+   "src": "made"
+  },
+  {
+   "text": "미경이 지나는 기차역은 식민지 시절에 지어진 건물이라 문화재로 지정됐어요.",
+   "en": "The station Mikyung passes through was built in the colonial era, so it's designated a cultural heritage site.",
+   "ko": "미경이 지나는 기차역은 식민지 시절에 지어진 건물이라 문화재로 지정됐어요.",
+   "blank": "식민지",
    "src": "made"
   }
  ],
@@ -52749,6 +53021,22 @@
    "src": "made"
   }
  ],
+ "w|안보": [
+  {
+   "text": "이 연극에서 성호는 안보를 핑계로 자유를 빼앗는 정부를 비판해요.",
+   "en": "In this play, Seongho criticizes a government that takes away freedom in the name of security.",
+   "ko": "이 연극에서 성호는 안보를 핑계로 자유를 빼앗는 정부를 비판해요.",
+   "blank": "안보를",
+   "src": "made"
+  },
+  {
+   "text": "국경 근처를 지나는 기차라서 미경은 안보 검문 때문에 신분증을 보여 줘야 했어요.",
+   "en": "The train passed near the border, so Mikyung had to show her ID at a security checkpoint.",
+   "ko": "국경 근처를 지나는 기차라서 미경은 안보 검문 때문에 신분증을 보여 줘야 했어요.",
+   "blank": "안보",
+   "src": "made"
+  }
+ ],
  "w|안심": [
   {
    "text": "형이 화가 풀린 걸 보고 경민은 그제야 안심이 됐어요.",
@@ -53859,6 +54147,22 @@
    "en": "I've known the neighborhood pharmacist for a long time.",
    "ko": "동네 약사와 오래 알고 지내.",
    "blank": "약사와"
+  }
+ ],
+ "w|약소국": [
+  {
+   "text": "성호는 약소국 외교관의 외로운 싸움을 그린 장면에서 조명을 아주 어둡게 했어요.",
+   "en": "Seongho made the lighting very dark for the scene depicting a small nation's diplomat fighting alone.",
+   "ko": "성호는 약소국 외교관의 외로운 싸움을 그린 장면에서 조명을 아주 어둡게 했어요.",
+   "blank": "약소국",
+   "src": "made"
+  },
+  {
+   "text": "미경은 약소국이 살아남은 지혜를 다룬 다큐멘터리를 휴대폰으로 봤어요.",
+   "en": "Mikyung watched a documentary on her phone about how small nations survived through wisdom.",
+   "ko": "미경은 약소국이 살아남은 지혜를 다룬 다큐멘터리를 휴대폰으로 봤어요.",
+   "blank": "약소국이",
+   "src": "made"
   }
  ],
  "w|약속": [
@@ -62475,6 +62779,22 @@
    "blank": "유아가"
   }
  ],
+ "w|유엔": [
+  {
+   "text": "연극 속 유엔 회의 장면에서 배우들은 각자 다른 나라 대표를 맡았어요.",
+   "en": "In the play's UN meeting scene, the actors each played a delegate from a different country.",
+   "ko": "연극 속 유엔 회의 장면에서 배우들은 각자 다른 나라 대표를 맡았어요.",
+   "blank": "유엔",
+   "src": "made"
+  },
+  {
+   "text": "미경은 유엔에서 일하는 게 어릴 때 꿈이었다고 옆자리 승객에게 말했어요.",
+   "en": "Mikyung told the passenger next to her that working at the UN had been her childhood dream.",
+   "ko": "미경은 유엔에서 일하는 게 어릴 때 꿈이었다고 옆자리 승객에게 말했어요.",
+   "blank": "유엔에서",
+   "src": "made"
+  }
+ ],
  "w|유연성": [
   {
    "text": "재원은 근무 시간에 유연성을 주자 직원들의 만족도가 올라갔다고 보고했어요.",
@@ -65700,6 +66020,22 @@
    "en": "Jiyoung has kept up her relationship with the director she met on this film for ten years.",
    "ko": "지영은 이 영화로 만난 감독과 십 년째 인연을 이어 가고 있어요.",
    "blank": "인연을",
+   "src": "made"
+  }
+ ],
+ "w|인용하다": [
+  {
+   "text": "성호는 연극 첫 대사로 오래된 시 한 구절을 인용했어요.",
+   "en": "Seongho quoted a line from an old poem as the play's first line.",
+   "ko": "성호는 연극 첫 대사로 오래된 시 한 구절을 인용했어요.",
+   "blank": "인용했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 여행 블로그에 기차 안내서의 문장을 인용해서 글을 썼어요.",
+   "en": "Mikyung wrote a travel blog post quoting a passage from the train guidebook.",
+   "ko": "미경은 여행 블로그에 기차 안내서의 문장을 인용해서 글을 썼어요.",
+   "blank": "인용해서",
    "src": "made"
   }
  ],
@@ -70007,6 +70343,22 @@
    "src": "krdict"
   }
  ],
+ "w|저항군": [
+  {
+   "text": "성호는 저항군 대장 역을 맡을 배우를 찾느라 오디션을 세 번이나 열었어요.",
+   "en": "Seongho held auditions three times looking for an actor to play the resistance leader.",
+   "ko": "성호는 저항군 대장 역을 맡을 배우를 찾느라 오디션을 세 번이나 열었어요.",
+   "blank": "저항군",
+   "src": "made"
+  },
+  {
+   "text": "미경은 이 산속 터널이 옛날 저항군의 은신처였다는 설명을 들었어요.",
+   "en": "Mikyung heard that this mountain tunnel had once been a hideout for the resistance.",
+   "ko": "미경은 이 산속 터널이 옛날 저항군의 은신처였다는 설명을 들었어요.",
+   "blank": "저항군의",
+   "src": "made"
+  }
+ ],
  "w|저항하다": [
   {
    "text": "역사 시간에 동민은 백성들이 부당한 세금에 저항한 이야기를 배웠어요.",
@@ -71483,6 +71835,22 @@
    "src": "made"
   }
  ],
+ "w|점령": [
+  {
+   "text": "성호는 점령 기간 동안 극장을 지킨 노배우의 실화를 무대에 옮겼어요.",
+   "en": "Seongho brought to the stage the true story of an old actor who kept a theater going during the occupation.",
+   "ko": "성호는 점령 기간 동안 극장을 지킨 노배우의 실화를 무대에 옮겼어요.",
+   "blank": "점령",
+   "src": "made"
+  },
+  {
+   "text": "미경은 점령 시절에 폭파됐다가 다시 지은 다리를 기차 창밖으로 봤어요.",
+   "en": "Out the train window, Mikyung saw a bridge that was blown up during the occupation and rebuilt.",
+   "ko": "미경은 점령 시절에 폭파됐다가 다시 지은 다리를 기차 창밖으로 봤어요.",
+   "blank": "점령",
+   "src": "made"
+  }
+ ],
  "w|점수": [
   {
    "text": "점수가 기대보다 낮아.",
@@ -72415,6 +72783,22 @@
    "blank": "정직하게"
   }
  ],
+ "w|정착하다": [
+  {
+   "text": "성호는 서울을 떠나 작은 바닷가 마을에 정착해서 극장을 열었어요.",
+   "en": "Seongho left Seoul, settled in a small seaside village, and opened a theater.",
+   "ko": "성호는 서울을 떠나 작은 바닷가 마을에 정착해서 극장을 열었어요.",
+   "blank": "정착해서",
+   "src": "made"
+  },
+  {
+   "text": "미경의 사촌은 이 기찻길 끝에 있는 작은 마을에 정착했어요.",
+   "en": "Mikyung's cousin settled in a small village at the end of this railway line.",
+   "ko": "미경의 사촌은 이 기찻길 끝에 있는 작은 마을에 정착했어요.",
+   "blank": "정착했어요",
+   "src": "made"
+  }
+ ],
  "w|정찰": [
   {
    "text": "역사 시간에 태윤은 옛날 군대의 정찰 방법에 대해 배웠어요.",
@@ -72986,6 +73370,22 @@
    "en": "Sohee's time had been stuck in the same place for years, so she changed her training method.",
    "ko": "소희는 몇 년째 기록이 제자리라서 훈련 방법을 바꿨어요.",
    "blank": "제자리라서",
+   "src": "made"
+  }
+ ],
+ "w|제재": [
+  {
+   "text": "성호의 극단은 경제 제재로 굶주리는 작은 나라 사람들의 이야기를 무대에 올렸어요.",
+   "en": "Seongho's troupe staged the story of people in a small country starving under economic sanctions.",
+   "ko": "성호의 극단은 경제 제재로 굶주리는 작은 나라 사람들의 이야기를 무대에 올렸어요.",
+   "blank": "제재로",
+   "src": "made"
+  },
+  {
+   "text": "기차 안 뉴스 화면에는 새 무역 제재가 시작됐다는 소식이 나왔어요.",
+   "en": "The news screen on the train showed that new trade sanctions had begun.",
+   "ko": "기차 안 뉴스 화면에는 새 무역 제재가 시작됐다는 소식이 나왔어요.",
+   "blank": "제재가",
    "src": "made"
   }
  ],
@@ -73577,6 +73977,22 @@
    "en": "I ended up organizing the event.",
    "ko": "행사 조직을 맡게 됐어.",
    "blank": "조직을"
+  }
+ ],
+ "w|조직하다": [
+  {
+   "text": "성호는 마을 청소년들을 모아 작은 연극 동아리를 조직했어요.",
+   "en": "Seongho gathered the village teenagers and organized a small drama club.",
+   "ko": "성호는 마을 청소년들을 모아 작은 연극 동아리를 조직했어요.",
+   "blank": "조직했어요",
+   "src": "made"
+  },
+  {
+   "text": "미경은 회사 동료들과 함께 가는 기차 여행을 직접 조직했어요.",
+   "en": "Mikyung organized a train trip with her coworkers herself.",
+   "ko": "미경은 회사 동료들과 함께 가는 기차 여행을 직접 조직했어요.",
+   "blank": "조직했어요",
+   "src": "made"
   }
  ],
  "w|조치": [
@@ -76419,6 +76835,22 @@
    "src": "made"
   }
  ],
+ "w|지속되다": [
+  {
+   "text": "관객의 박수가 오 분 넘게 지속되자 성호는 무대에 올라가 인사했어요.",
+   "en": "When the audience's applause went on for more than five minutes, Seongho went on stage to bow.",
+   "ko": "관객의 박수가 오 분 넘게 지속되자 성호는 무대에 올라가 인사했어요.",
+   "blank": "지속되자",
+   "src": "made"
+  },
+  {
+   "text": "폭설이 지속되자 미경이 탄 기차는 중간역에서 두 시간을 멈췄어요.",
+   "en": "As the heavy snow continued, Mikyung's train stopped at a station along the way for two hours.",
+   "ko": "폭설이 지속되자 미경이 탄 기차는 중간역에서 두 시간을 멈췄어요.",
+   "blank": "지속되자",
+   "src": "made"
+  }
+ ],
  "w|지속성": [
   {
    "text": "재원은 한 번 하고 끝나는 행사보다 지속성이 있는 사업에 예산을 쓰고 싶어 해요.",
@@ -76448,6 +76880,22 @@
    "en": "Seoyeon explained again to the elderly man that he must take his blood pressure medicine continuously.",
    "ko": "서연은 혈압약을 지속적으로 먹어야 한다고 할아버지께 다시 설명했어요.",
    "blank": "지속적으로",
+   "src": "made"
+  }
+ ],
+ "w|지속하다": [
+  {
+   "text": "성호는 관객이 적어도 이 공연을 끝까지 지속하겠다고 말했어요.",
+   "en": "Seongho said he would keep this show running to the end even with few audience members.",
+   "ko": "성호는 관객이 적어도 이 공연을 끝까지 지속하겠다고 말했어요.",
+   "blank": "지속하겠다고",
+   "src": "made"
+  },
+  {
+   "text": "미경은 바쁜 일이 끝나도 한 달에 한 번 기차 여행을 지속할 생각이에요.",
+   "en": "Mikyung plans to keep up one train trip a month even after the busy period ends.",
+   "ko": "미경은 바쁜 일이 끝나도 한 달에 한 번 기차 여행을 지속할 생각이에요.",
+   "blank": "지속할",
    "src": "made"
   }
  ],
@@ -77268,6 +77716,22 @@
    "en": "Haeun got a medical certificate from the hospital to submit with her full-marathon entry.",
    "ko": "하은은 풀코스 참가 신청서에 낼 진단서를 병원에서 받아 왔어요.",
    "blank": "진단서를",
+   "src": "made"
+  }
+ ],
+ "w|진단하다": [
+  {
+   "text": "성호는 요즘 연극계가 젊은 관객을 잃고 있다고 진단했어요.",
+   "en": "Seongho diagnosed that the theater world is losing young audiences these days.",
+   "ko": "성호는 요즘 연극계가 젊은 관객을 잃고 있다고 진단했어요.",
+   "blank": "진단했어요",
+   "src": "made"
+  },
+  {
+   "text": "정비사는 기차 브레이크에 문제가 있다고 진단했어요.",
+   "en": "The mechanic diagnosed a problem with the train's brakes.",
+   "ko": "정비사는 기차 브레이크에 문제가 있다고 진단했어요.",
+   "blank": "진단했어요",
    "src": "made"
   }
  ],
@@ -78827,6 +79291,22 @@
    "text": "미경은 공사 전에 안전을 위해 전기를 차단했어요.",
    "en": "For safety, Migyeong cut off the electricity before the work.",
    "ko": "미경은 공사 전에 안전을 위해 전기를 차단했어요.",
+   "blank": "차단했어요",
+   "src": "made"
+  }
+ ],
+ "w|차단하다": [
+  {
+   "text": "성호는 공연 중 휴대폰 소리를 막으려고 극장 안 전파를 차단했어요.",
+   "en": "Seongho blocked the signal inside the theater to stop phones ringing during the show.",
+   "ko": "성호는 공연 중 휴대폰 소리를 막으려고 극장 안 전파를 차단했어요.",
+   "blank": "차단했어요",
+   "src": "made"
+  },
+  {
+   "text": "산사태 때문에 철도청은 다음 역까지 가는 선로를 차단했어요.",
+   "en": "Because of a landslide, the railway authority closed off the track to the next station.",
+   "ko": "산사태 때문에 철도청은 다음 역까지 가는 선로를 차단했어요.",
    "blank": "차단했어요",
    "src": "made"
   }
@@ -80891,6 +81371,22 @@
    "src": "made"
   }
  ],
+ "w|체험하다": [
+  {
+   "text": "성호의 극장에서는 아이들이 무대 뒤를 직접 체험하는 시간을 마련했어요.",
+   "en": "Seongho's theater set aside time for children to experience backstage firsthand.",
+   "ko": "성호의 극장에서는 아이들이 무대 뒤를 직접 체험하는 시간을 마련했어요.",
+   "blank": "체험하는",
+   "src": "made"
+  },
+  {
+   "text": "미경은 옛날 증기 기관차를 직접 체험하는 관광 열차를 예약했어요.",
+   "en": "Mikyung booked a tourist train where you can experience an old steam locomotive firsthand.",
+   "ko": "미경은 옛날 증기 기관차를 직접 체험하는 관광 열차를 예약했어요.",
+   "blank": "체험하는",
+   "src": "made"
+  }
+ ],
  "w|쳐다보다": [
   {
    "text": "갑자기 뒤를 쳐다봤어.",
@@ -81745,6 +82241,22 @@
    "en": "My friend recommended that book.",
    "ko": "친구가 그 책을 추천했어.",
    "blank": "추천했어"
+  }
+ ],
+ "w|추출하다": [
+  {
+   "text": "성호는 할머니의 일기에서 인상적인 문장들을 추출해 대사로 썼어요.",
+   "en": "Seongho extracted striking sentences from his grandmother's diary and used them as lines.",
+   "ko": "성호는 할머니의 일기에서 인상적인 문장들을 추출해 대사로 썼어요.",
+   "blank": "추출해",
+   "src": "made"
+  },
+  {
+   "text": "미경은 여행 사진 수천 장 중에서 가장 좋은 열 장을 추출해 앨범을 만들었어요.",
+   "en": "Mikyung picked out the best ten from thousands of travel photos and made an album.",
+   "ko": "미경은 여행 사진 수천 장 중에서 가장 좋은 열 장을 추출해 앨범을 만들었어요.",
+   "blank": "추출해",
+   "src": "made"
   }
  ],
  "w|추측": [
@@ -83061,6 +83573,22 @@
    "en": "This bed is too hard.",
    "ko": "이 침대 너무 딱딱해.",
    "blank": "침대"
+  }
+ ],
+ "w|침략": [
+  {
+   "text": "이 연극은 침략을 앞둔 마을 사람들의 하룻밤을 그려요.",
+   "en": "This play depicts one night in the lives of villagers on the eve of an invasion.",
+   "ko": "이 연극은 침략을 앞둔 마을 사람들의 하룻밤을 그려요.",
+   "blank": "침략을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 이 도시가 침략을 여러 번 견딘 성벽으로 유명하다는 걸 안내서에서 읽었어요.",
+   "en": "Mikyung read in the guidebook that this city is famous for walls that withstood invasion many times.",
+   "ko": "미경은 이 도시가 침략을 여러 번 견딘 성벽으로 유명하다는 걸 안내서에서 읽었어요.",
+   "blank": "침략을",
+   "src": "made"
   }
  ],
  "w|침묵": [
@@ -86425,6 +86953,22 @@
    "blank": "판사의"
   }
  ],
+ "w|판정하다": [
+  {
+   "text": "심사위원들은 성호의 극단을 올해 최고의 극단으로 판정했어요.",
+   "en": "The judges ruled Seongho's troupe the best troupe of the year.",
+   "ko": "심사위원들은 성호의 극단을 올해 최고의 극단으로 판정했어요.",
+   "blank": "판정했어요",
+   "src": "made"
+  },
+  {
+   "text": "역무원은 미경의 표가 날짜가 지나서 쓸 수 없다고 판정했어요.",
+   "en": "The station attendant ruled that Mikyung's ticket couldn't be used because its date had passed.",
+   "ko": "역무원은 미경의 표가 날짜가 지나서 쓸 수 없다고 판정했어요.",
+   "blank": "판정했어요",
+   "src": "made"
+  }
+ ],
  "w|팔": [
   {
    "text": "팔 번이 내 자리야.",
@@ -86841,6 +87385,22 @@
    "en": "I moved it to a convenient spot.",
    "ko": "편리한 위치로 옮겼어.",
    "blank": "편리한"
+  }
+ ],
+ "w|편성하다": [
+  {
+   "text": "성호는 다음 시즌 공연 일정을 주말 위주로 편성했어요.",
+   "en": "Seongho arranged next season's performance schedule mainly around weekends.",
+   "ko": "성호는 다음 시즌 공연 일정을 주말 위주로 편성했어요.",
+   "blank": "편성했어요",
+   "src": "made"
+  },
+  {
+   "text": "철도 회사는 연휴에 맞춰 임시 열차를 열 편 더 편성했어요.",
+   "en": "The railway company scheduled ten additional special trains for the holiday.",
+   "ko": "철도 회사는 연휴에 맞춰 임시 열차를 열 편 더 편성했어요.",
+   "blank": "편성했어요",
+   "src": "made"
   }
  ],
  "w|편식하다": [
@@ -88211,6 +88771,38 @@
    "blank": "피곤해서"
   }
  ],
+ "w|피난": [
+  {
+   "text": "성호의 할머니는 전쟁 때 피난 가던 길에서 본 공연을 평생 잊지 못하셨어요.",
+   "en": "Seongho's grandmother never forgot a performance she saw on the road while fleeing during the war.",
+   "ko": "성호의 할머니는 전쟁 때 피난 가던 길에서 본 공연을 평생 잊지 못하셨어요.",
+   "blank": "피난",
+   "src": "made"
+  },
+  {
+   "text": "미경의 아버지는 어릴 때 이 기차를 타고 남쪽으로 피난을 왔다고 하셨어요.",
+   "en": "Mikyung's father said he came south on this train as a child, fleeing the war.",
+   "ko": "미경의 아버지는 어릴 때 이 기차를 타고 남쪽으로 피난을 왔다고 하셨어요.",
+   "blank": "피난을",
+   "src": "made"
+  }
+ ],
+ "w|피난민": [
+  {
+   "text": "연극 속 피난민들은 기차역에서 가족의 이름을 부르며 헤매요.",
+   "en": "The refugees in the play wander the train station calling out their families' names.",
+   "ko": "연극 속 피난민들은 기차역에서 가족의 이름을 부르며 헤매요.",
+   "blank": "피난민들은",
+   "src": "made"
+  },
+  {
+   "text": "역 박물관에는 피난민으로 가득 찬 기차 지붕 사진이 걸려 있었어요.",
+   "en": "In the station museum hung a photo of a train roof packed with refugees.",
+   "ko": "역 박물관에는 피난민으로 가득 찬 기차 지붕 사진이 걸려 있었어요.",
+   "blank": "피난민으로",
+   "src": "made"
+  }
+ ],
  "w|피다": [
   {
    "text": "봄이 되자 진달래가 흐드러지게 피었다.",
@@ -89026,6 +89618,22 @@
    "en": "The entry fees for this marathon go toward school fees for students in need, so Mikyung gladly signed up.",
    "ko": "이 마라톤의 참가비는 형편이 어려운 학생들의 학비로 쓰여서 미경이 기꺼이 신청했어요.",
    "blank": "학비로",
+   "src": "made"
+  }
+ ],
+ "w|학살": [
+  {
+   "text": "성호는 학살 장면을 직접 보여 주지 않고 빈 의자로만 표현했어요.",
+   "en": "Seongho didn't show the massacre directly and represented it only with empty chairs.",
+   "ko": "성호는 학살 장면을 직접 보여 주지 않고 빈 의자로만 표현했어요.",
+   "blank": "학살",
+   "src": "made"
+  },
+  {
+   "text": "기차가 멈춘 작은 역에는 옛 학살 희생자를 기리는 비석이 서 있었어요.",
+   "en": "At the small station where the train stopped stood a memorial to victims of a past massacre.",
+   "ko": "기차가 멈춘 작은 역에는 옛 학살 희생자를 기리는 비석이 서 있었어요.",
+   "blank": "학살",
    "src": "made"
   }
  ],
@@ -91595,6 +92203,22 @@
    "src": "made"
   }
  ],
+ "w|협약": [
+  {
+   "text": "성호는 두 나라가 평화 협약을 맺는 장면을 연극의 마지막에 넣었어요.",
+   "en": "Seongho put a scene where two countries sign a peace agreement at the end of the play.",
+   "ko": "성호는 두 나라가 평화 협약을 맺는 장면을 연극의 마지막에 넣었어요.",
+   "blank": "협약을",
+   "src": "made"
+  },
+  {
+   "text": "미경이 탄 국제 열차는 이웃 나라들이 맺은 철도 협약 덕분에 생겼어요.",
+   "en": "The international train Mikyung rode came about thanks to a railway agreement between neighboring countries.",
+   "ko": "미경이 탄 국제 열차는 이웃 나라들이 맺은 철도 협약 덕분에 생겼어요.",
+   "blank": "협약",
+   "src": "made"
+  }
+ ],
  "w|협정": [
   {
    "text": "사회 시간에 성호는 두 나라가 맺은 무역 협정에 대해 발표했어요.",
@@ -94009,6 +94633,22 @@
    "en": "I have to work even on the holiday.",
    "ko": "휴일에도 일을 해야 해.",
    "blank": "휴일에도"
+  }
+ ],
+ "w|휴전": [
+  {
+   "text": "연극 이 막에서는 휴전 소식을 들은 병사들이 서로 끌어안아요.",
+   "en": "In the second act, soldiers who hear news of the ceasefire embrace each other.",
+   "ko": "연극 이 막에서는 휴전 소식을 들은 병사들이 서로 끌어안아요.",
+   "blank": "휴전",
+   "src": "made"
+  },
+  {
+   "text": "미경은 휴전 협정이 맺어진 마을까지 가는 관광 열차를 타 보고 싶었어요.",
+   "en": "Mikyung wanted to ride the tourist train to the village where the ceasefire was signed.",
+   "ko": "미경은 휴전 협정이 맺어진 마을까지 가는 관광 열차를 타 보고 싶었어요.",
+   "blank": "휴전",
+   "src": "made"
   }
  ],
  "w|휴지": [
