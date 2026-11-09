@@ -1231,6 +1231,22 @@
    "src": "made"
   }
  ],
+ "w|กลั้น": [
+  {
+   "text": "กิตติกลั้นหัวเราะไม่ไหวเมื่อเห็นรูปตัวเองสมัยมัธยม",
+   "en": "Kitti couldn't hold back his laughter when he saw his high school photo.",
+   "ko": "끼띠는 고등학교 시절 자기 사진을 보고 웃음을 참지 못했어요.",
+   "blank": "กลั้น",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ชมหลายคนกลั้นน้ำตาไว้ไม่อยู่ในฉากจบ",
+   "en": "Many in the audience couldn't hold back their tears in the final scene.",
+   "ko": "많은 관객이 마지막 장면에서 눈물을 참지 못했어요.",
+   "blank": "กลั้น",
+   "src": "made"
+  }
+ ],
  "w|กลับ": [
   {
    "text": "กลับบ้านกัน",
@@ -3251,6 +3267,22 @@
    "src": "made"
   }
  ],
+ "w|ก้าวร้าว": [
+  {
+   "text": "กิตติขอโทษครูที่สมัยเด็กเคยพูดจาก้าวร้าว",
+   "en": "Kitti apologized to the teacher for speaking aggressively as a kid.",
+   "ko": "끼띠는 어릴 때 공격적으로 말했던 것을 선생님께 사과했어요.",
+   "blank": "ก้าวร้าว",
+   "src": "made"
+  },
+  {
+   "text": "ตัวละครพ่อในเรื่องมีนิสัยก้าวร้าวจนลูกๆ กลัว",
+   "en": "The father character in the play is so aggressive that his children are afraid.",
+   "ko": "극 중 아버지 캐릭터는 성격이 공격적이어서 아이들이 무서워해요.",
+   "blank": "ก้าวร้าว",
+   "src": "made"
+  }
+ ],
  "w|ก้าวหน้า": [
   {
    "text": "อนันต์อยากทำงานในบริษัทที่มีโอกาสก้าวหน้า",
@@ -4645,6 +4677,22 @@
    "blank": "แกะ"
   }
  ],
+ "w|โกง": [
+  {
+   "text": "กิตติแซวเพื่อนว่าเคยโกงข้อสอบด้วยการแอบดูโพยในกระเป๋าดินสอ",
+   "en": "Kitti teased his friend about once cheating on a test by peeking at notes in his pencil case.",
+   "ko": "끼띠는 친구가 필통 속 커닝 페이퍼를 훔쳐보며 시험에서 부정행위를 했던 걸 놀렸어요.",
+   "blank": "โกง",
+   "src": "made"
+  },
+  {
+   "text": "ละครเรื่องนี้เล่าถึงนักการเมืองที่โกงเงินชาวบ้าน",
+   "en": "This play is about a politician who cheats villagers out of their money.",
+   "ko": "이 연극은 마을 사람들의 돈을 사기 친 정치인 이야기예요.",
+   "blank": "โกง",
+   "src": "made"
+  }
+ ],
  "w|โกน": [
   {
    "text": "พ่อโกนหนวดทุกเช้า",
@@ -5350,6 +5398,22 @@
    "en": "Wanna said a big tree fell across the road in front of her house after the storm.",
    "ko": "완나는 폭풍 뒤 큰 나무가 집 앞 길을 막고 쓰러졌다고 했어요.",
    "blank": "ขวาง",
+   "src": "made"
+  }
+ ],
+ "w|ขว้าง": [
+  {
+   "text": "กิตติขว้างลูกบอลกระดาษใส่เพื่อนเหมือนสมัยนั่งหลังห้อง",
+   "en": "Kitti threw a paper ball at his friend like back when they sat at the back of the class.",
+   "ko": "끼띠는 교실 뒷자리에 앉던 시절처럼 친구에게 종이 공을 던졌어요.",
+   "blank": "ขว้าง",
+   "src": "made"
+  },
+  {
+   "text": "ในฉากทะเลาะ นักแสดงชายขว้างจานพลาสติกลงพื้นจนผู้ชมสะดุ้ง",
+   "en": "In the fight scene, the actor hurled a plastic plate to the floor and startled the audience.",
+   "ko": "싸움 장면에서 남자 배우가 플라스틱 접시를 바닥에 내던져 관객들이 깜짝 놀랐어요.",
+   "blank": "ขว้าง",
    "src": "made"
   }
  ],
@@ -7091,6 +7155,22 @@
    "src": "made"
   }
  ],
+ "w|เข็น": [
+  {
+   "text": "เพื่อนช่วยเข็นวีลแชร์ของครูประจำชั้นเข้ามาในงาน",
+   "en": "A friend helped push the homeroom teacher's wheelchair into the party.",
+   "ko": "친구가 담임 선생님의 휠체어를 밀어 행사장으로 모셔 왔어요.",
+   "blank": "เข็น",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานเข็นฉากต้นไม้ใหญ่ออกไปหลังเวทีระหว่างพักครึ่ง",
+   "en": "During intermission, the crew wheeled the big tree set backstage.",
+   "ko": "중간 휴식 시간에 스태프들이 큰 나무 세트를 무대 뒤로 밀고 갔어요.",
+   "blank": "เข็น",
+   "src": "made"
+  }
+ ],
  "w|เข็ม": [
   {
    "text": "กลัวเข็มมากเลย",
@@ -7296,6 +7376,22 @@
    "en": "A customer mistakenly thought Wanna's shop opens on Mondays and found the door shut.",
    "ko": "손님은 완나네 가게가 월요일에 연다고 잘못 알고 왔다가 닫힌 문을 봤어요.",
    "blank": "เข้าใจผิด",
+   "src": "made"
+  }
+ ],
+ "w|เข้าด้วยกัน": [
+  {
+   "text": "งานเลี้ยงรุ่นดึงเพื่อนเก่าที่ไม่ได้คุยกันนานกลับเข้าด้วยกันอีกครั้ง",
+   "en": "The reunion brought old friends who hadn't talked in ages back together again.",
+   "ko": "동창회는 오랫동안 연락 없던 옛 친구들을 다시 한데 모았어요.",
+   "blank": "เข้าด้วยกัน",
+   "src": "made"
+  },
+  {
+   "text": "ผู้กำกับเอาสองฉากสั้นมารวมเข้าด้วยกันให้กลายเป็นฉากเดียว",
+   "en": "The director merged two short scenes together into one.",
+   "ko": "감독은 짧은 두 장면을 하나로 합쳤어요.",
+   "blank": "เข้าด้วยกัน",
    "src": "made"
   }
  ],
@@ -9272,6 +9368,22 @@
    "en": "This message is written ambiguously.",
    "ko": "이 글은 모호하게 쓰여 있어.",
    "blank": "คลุมเครือ",
+   "src": "made"
+  }
+ ],
+ "w|ควง": [
+  {
+   "text": "กิตติควงภรรยามางานเลี้ยงรุ่นเป็นครั้งแรก",
+   "en": "Kitti brought his wife along to the reunion for the first time.",
+   "ko": "끼띠는 처음으로 아내와 함께 동창회에 왔어요.",
+   "blank": "ควง",
+   "src": "made"
+  },
+  {
+   "text": "นักแสดงควงดาบไม้อย่างคล่องแคล่วในฉากต่อสู้",
+   "en": "The actor twirled a wooden sword skillfully in the fight scene.",
+   "ko": "배우는 싸움 장면에서 나무 칼을 능숙하게 돌렸어요.",
+   "blank": "ควง",
    "src": "made"
   }
  ],
@@ -11259,6 +11371,22 @@
    "blank": "ควาย"
   }
  ],
+ "w|คว่ำ": [
+  {
+   "text": "แก้วน้ำแข็งบนโต๊ะคว่ำเพราะกิตติหัวเราะจนแขนปัดโดน",
+   "en": "The glass of ice on the table tipped over because Kitti laughed so hard his arm knocked it.",
+   "ko": "끼띠가 너무 웃다가 팔로 쳐서 테이블 위 얼음 컵이 엎어졌어요.",
+   "blank": "คว่ำ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาคว่ำหน้ากากไว้บนโต๊ะแต่งหน้าก่อนออกไปทักทายแขก",
+   "en": "Wanna laid the mask face-down on the makeup table before going out to greet guests.",
+   "ko": "완나는 손님을 맞으러 나가기 전에 가면을 분장대 위에 엎어 두었어요.",
+   "blank": "คว่ำ",
+   "src": "made"
+  }
+ ],
  "w|คอ": [
   {
    "text": "คอฉันแห้งจัง",
@@ -12998,6 +13126,22 @@
    "en": "Wanna thinks repairing the original wooden windows is better value than switching to aluminum.",
    "ko": "완나는 원래 나무 창문을 고치는 게 알루미늄으로 바꾸는 것보다 낫다고 생각해요.",
    "blank": "คุ้ม",
+   "src": "made"
+  }
+ ],
+ "w|คุ้มกัน": [
+  {
+   "text": "เพื่อนที่เป็นทหารเล่าว่าเคยได้รับหน้าที่คุ้มกันแขกคนสำคัญ",
+   "en": "A friend who is a soldier said he was once assigned to escort an important guest.",
+   "ko": "군인인 친구는 중요한 손님을 호위하는 임무를 맡은 적이 있다고 했어요.",
+   "blank": "คุ้มกัน",
+   "src": "made"
+  },
+  {
+   "text": "มีเจ้าหน้าที่คุ้มกันดาราดังตั้งแต่ลงจากรถจนถึงหลังเวที",
+   "en": "Staff escorted the famous star from the car all the way backstage.",
+   "ko": "경호원들이 유명 배우를 차에서 내릴 때부터 무대 뒤까지 호위했어요.",
+   "blank": "คุ้มกัน",
    "src": "made"
   }
  ],
@@ -17639,6 +17783,22 @@
    "en": "Could you open the window?",
    "ko": "창문 좀 열어 줘.",
    "blank": "ช่วย"
+  }
+ ],
+ "w|ช่วยกัน": [
+  {
+   "text": "ทุกคนช่วยกันเก็บโต๊ะหลังงานเลิก",
+   "en": "Everyone helped clear the tables after the party ended.",
+   "ko": "행사가 끝난 뒤 모두 함께 테이블을 치웠어요.",
+   "blank": "ช่วยกัน",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานช่วยกันทาสีฉากใหม่ทั้งคืน",
+   "en": "The crew worked together all night to repaint the set.",
+   "ko": "스태프들은 밤새 함께 세트를 새로 칠했어요.",
+   "blank": "ช่วยกัน",
+   "src": "made"
   }
  ],
  "w|ช่วยชีวิต": [
@@ -25349,6 +25509,22 @@
    "blank": "ตึก"
   }
  ],
+ "w|ตึง": [
+  {
+   "text": "บรรยากาศตึงไปพักหนึ่งเมื่อมีคนพูดถึงแฟนเก่าของกิตติ",
+   "en": "The mood got tense for a moment when someone mentioned Kitti's ex.",
+   "ko": "누군가 끼띠의 옛 애인 얘기를 꺼내자 분위기가 잠시 팽팽해졌어요.",
+   "blank": "ตึง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาดึงเชือกม่านให้ตึงก่อนเปิดการแสดง",
+   "en": "Wanna pulled the curtain rope tight before the show began.",
+   "ko": "완나는 공연을 시작하기 전에 커튼 줄을 팽팽하게 당겼어요.",
+   "blank": "ตึง",
+   "src": "made"
+  }
+ ],
  "w|ตื่น": [
   {
    "text": "เพิ่งตื่น",
@@ -25893,6 +26069,22 @@
    "src": "made"
   }
  ],
+ "w|แตกแยก": [
+  {
+   "text": "กลุ่มเพื่อนเกือบแตกแยกเพราะทะเลาะกันเรื่องเงินตอนเรียนจบ",
+   "en": "The group of friends nearly split apart because they argued about money when they graduated.",
+   "ko": "친구 무리는 졸업할 때 돈 문제로 싸워서 거의 갈라질 뻔했어요.",
+   "blank": "แตกแยก",
+   "src": "made"
+  },
+  {
+   "text": "ละครเรื่องใหม่เล่าถึงครอบครัวที่แตกแยกหลังพ่อเสียชีวิต",
+   "en": "The new play is about a family that falls apart after the father dies.",
+   "ko": "새 연극은 아버지가 돌아가신 뒤 뿔뿔이 흩어진 가족 이야기예요.",
+   "blank": "แตกแยก",
+   "src": "made"
+  }
+ ],
  "w|แต่ก่อน": [
   {
    "text": "แต่ก่อนฉันกลัวความมืด",
@@ -26203,6 +26395,22 @@
    "blank": "โต้เถียง"
   }
  ],
+ "w|โต้แย้ง": [
+  {
+   "text": "กิตติกับเพื่อนโต้แย้งกันอย่างสนุกว่าใครเปลี่ยนไปมากที่สุด",
+   "en": "Kitti and his friends argued playfully about who had changed the most.",
+   "ko": "끼띠와 친구들은 누가 제일 많이 변했는지 재미있게 옥신각신했어요.",
+   "blank": "โต้แย้ง",
+   "src": "made"
+  },
+  {
+   "text": "ผู้กำกับรับฟังเมื่อวรรณาโต้แย้งว่าฉากนี้ยาวเกินไป",
+   "en": "The director listened when Wanna argued that this scene was too long.",
+   "ko": "완나가 이 장면이 너무 길다고 반박하자 감독은 귀를 기울였어요.",
+   "blank": "โต้แย้ง",
+   "src": "made"
+  }
+ ],
  "w|โต๊ะ": [
   {
    "text": "วางของบนโต๊ะได้",
@@ -26336,6 +26544,22 @@
    "en": "Chan wants to move the shop onto the main road so more people see it.",
    "ko": "짠은 사람들 눈에 더 잘 띄게 가게를 큰길가로 옮기고 싶어 해요.",
    "blank": "ถนนใหญ่",
+   "src": "made"
+  }
+ ],
+ "w|ถนอม": [
+  {
+   "text": "กิตติถนอมรูปถ่ายรุ่นใบเก่าไว้ในกรอบอย่างดี",
+   "en": "Kitti carefully preserved the old class photo in a frame.",
+   "ko": "끼띠는 오래된 단체 사진을 액자에 넣어 소중히 간직했어요.",
+   "blank": "ถนอม",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาถนอมเสียงด้วยการดื่มน้ำอุ่นก่อนขึ้นเวที",
+   "en": "Wanna takes care of her voice by drinking warm water before going on stage.",
+   "ko": "완나는 무대에 오르기 전에 따뜻한 물을 마시며 목을 아껴요.",
+   "blank": "ถนอม",
    "src": "made"
   }
  ],
@@ -32597,6 +32821,22 @@
    "blank": "น่าประทับใจ"
   }
  ],
+ "w|น่าแปลก": [
+  {
+   "text": "น่าแปลกที่ครูประจำชั้นยังจำชื่อเล่นของกิตติได้",
+   "en": "Surprisingly, the homeroom teacher still remembered Kitti's nickname.",
+   "ko": "신기하게도 담임 선생님은 아직 끼띠의 별명을 기억했어요.",
+   "blank": "น่าแปลก",
+   "src": "made"
+  },
+  {
+   "text": "น่าแปลกที่คืนนี้ผู้ชมเงียบกริบตลอดทั้งองก์แรก",
+   "en": "Oddly, the audience was dead silent through the whole first act tonight.",
+   "ko": "이상하게도 오늘 밤 관객들은 일 막 내내 쥐 죽은 듯 조용했어요.",
+   "blank": "น่าแปลก",
+   "src": "made"
+  }
+ ],
  "w|นามธรรม": [
   {
    "text": "อนันต์บอกว่าความยุติธรรมเป็นสิ่งนามธรรมที่ต้องทำให้จับต้องได้ในศาล",
@@ -35221,6 +35461,22 @@
    "blank": "บะหมี่"
   }
  ],
+ "w|บังเกิด": [
+  {
+   "text": "มิตรภาพที่บังเกิดในวัยเรียนยังคงอยู่จนถึงวันนี้",
+   "en": "The friendship that was born in their school days still lasts today.",
+   "ko": "학창 시절에 생겨난 우정은 오늘날까지 이어지고 있어요.",
+   "blank": "บังเกิด",
+   "src": "made"
+  },
+  {
+   "text": "ความเงียบบังเกิดขึ้นทั่วโรงละครเมื่อนักแสดงนำก้าวออกมา",
+   "en": "Silence fell over the theater when the lead actor stepped out.",
+   "ko": "주연 배우가 걸어 나오자 극장 전체에 정적이 감돌았어요.",
+   "blank": "บังเกิด",
+   "src": "made"
+  }
+ ],
  "w|บังคับ": [
   {
    "text": "อย่าบังคับให้เขาพูด",
@@ -37473,6 +37729,22 @@
    "src": "made"
   }
  ],
+ "w|ประณีต": [
+  {
+   "text": "กิตติชมว่าการ์ดเชิญงานเลี้ยงรุ่นทำมาอย่างประณีตมาก",
+   "en": "Kitti praised the reunion invitation card for being made so carefully.",
+   "ko": "끼띠는 동창회 초대장이 아주 정성스럽게 만들어졌다고 칭찬했어요.",
+   "blank": "ประณีต",
+   "src": "made"
+  },
+  {
+   "text": "ชุดไทยของนางเอกปักลายด้วยมืออย่างประณีต",
+   "en": "The lead actress's Thai costume is finely embroidered by hand.",
+   "ko": "여주인공의 태국 전통 의상은 손으로 정교하게 수놓아져 있어요.",
+   "blank": "ประณีต",
+   "src": "made"
+  }
+ ],
  "w|ประดับ": [
   {
    "text": "ผนังห้องพิจารณาคดีที่อนันต์ว่าความประดับด้วยตราครุฑสีทอง",
@@ -39293,6 +39565,22 @@
    "src": "made"
   }
  ],
+ "w|ปานกลาง": [
+  {
+   "text": "ร้านที่ใช้จัดงานเลี้ยงรุ่นราคาปานกลาง ไม่แพงเกินไปสำหรับทุกคน",
+   "en": "The restaurant for the reunion was moderately priced, not too expensive for anyone.",
+   "ko": "동창회 식당은 가격이 적당해서 누구에게도 너무 비싸지 않았어요.",
+   "blank": "ปานกลาง",
+   "src": "made"
+  },
+  {
+   "text": "โรงละครเล็กๆ ของวรรณาจุคนได้ปานกลาง ประมาณสองร้อยที่นั่ง",
+   "en": "Wanna's small theater holds a moderate number of people, about two hundred seats.",
+   "ko": "완나의 작은 극장은 이백 석 정도로 중간 규모예요.",
+   "blank": "ปานกลาง",
+   "src": "made"
+  }
+ ],
  "w|ป่าไม้": [
   {
    "text": "กรมป่าไม้เปิดให้กางเต็นท์ได้เฉพาะช่วงหน้าหนาว",
@@ -40013,6 +40301,22 @@
    "blank": "เปรียบเทียบ"
   }
  ],
+ "w|เปรียบเสมือน": [
+  {
+   "text": "สำหรับกิตติ เพื่อนกลุ่มนี้เปรียบเสมือนพี่น้องในครอบครัว",
+   "en": "For Kitti, this group of friends is like brothers and sisters.",
+   "ko": "끼띠에게 이 친구들은 가족 같은 형제자매나 다름없어요.",
+   "blank": "เปรียบเสมือน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกว่าเวทีเปรียบเสมือนบ้านหลังที่สองของตัวเอง",
+   "en": "Wanna says the stage is like her second home.",
+   "ko": "완나는 무대가 자신에게 두 번째 집과 같다고 말해요.",
+   "blank": "เปรียบเสมือน",
+   "src": "made"
+  }
+ ],
  "w|เปรี้ยว": [
   {
    "text": "มะม่วงนี้เปรี้ยวดี",
@@ -40520,6 +40824,22 @@
    "en": "This room is airy and cool.",
    "ko": "이 방은 탁 트이고 시원해.",
    "blank": "โปร่ง",
+   "src": "made"
+  }
+ ],
+ "w|โปร่งใส": [
+  {
+   "text": "เหรัญญิกรุ่นแจ้งค่าใช้จ่ายทุกบาทในกลุ่มอย่างโปร่งใส",
+   "en": "The class treasurer reported every baht of expenses in the group transparently.",
+   "ko": "동기 회계 담당은 모든 지출을 단톡방에 투명하게 알렸어요.",
+   "blank": "โปร่งใส",
+   "src": "made"
+  },
+  {
+   "text": "นักออกแบบใช้ผ้าโปร่งใสแขวนกลางเวทีให้ดูเหมือนหมอก",
+   "en": "The designer hung transparent fabric in the middle of the stage to look like fog.",
+   "ko": "디자이너는 투명한 천을 무대 가운데 걸어 안개처럼 보이게 했어요.",
+   "blank": "โปร่งใส",
    "src": "made"
   }
  ],
@@ -41139,6 +41459,22 @@
    "en": "Pad thai with fresh shrimp is delicious.",
    "ko": "생새우 넣은 팟타이가 맛있어.",
    "blank": "ผัดไทย"
+  }
+ ],
+ "w|ผัน": [
+  {
+   "text": "เพื่อนที่เคยเป็นวิศวกรผันตัวไปทำสวนผลไม้ที่บ้านเกิด",
+   "en": "A friend who used to be an engineer switched careers to run a fruit orchard in his hometown.",
+   "ko": "엔지니어였던 친구는 고향에서 과수원을 하는 쪽으로 진로를 바꿨어요.",
+   "blank": "ผัน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเคยเป็นครู ก่อนผันตัวมาเป็นนักแสดงละครเวที",
+   "en": "Wanna used to be a teacher before turning to stage acting.",
+   "ko": "완나는 교사였다가 연극배우로 진로를 바꿨어요.",
+   "blank": "ผัน",
+   "src": "made"
   }
  ],
  "w|ผับ": [
@@ -44011,6 +44347,22 @@
    "blank": "พลังงาน"
   }
  ],
+ "w|พลัน": [
+  {
+   "text": "พอเพลงเก่าดังขึ้น กิตติก็พลันนึกถึงวันรับปริญญา",
+   "en": "As soon as the old song started, Kitti suddenly remembered graduation day.",
+   "ko": "옛 노래가 흘러나오자 끼띠는 문득 졸업식 날이 떠올랐어요.",
+   "blank": "พลัน",
+   "src": "made"
+  },
+  {
+   "text": "ไฟบนเวทีพลันดับลงกลางฉากรัก ผู้ชมทั้งโรงเงียบ",
+   "en": "The stage lights suddenly went out in the middle of the love scene, and the whole house fell silent.",
+   "ko": "사랑 장면 도중에 무대 조명이 갑자기 꺼지자 극장 전체가 조용해졌어요.",
+   "blank": "พลัน",
+   "src": "made"
+  }
+ ],
  "w|พลาด": [
   {
    "text": "ฉันพลาดรถเมล์ไปห้านาที",
@@ -44586,6 +44938,22 @@
    "en": "The chamber of commerce and a trade association bought out an entire special performance.",
    "ko": "상공회의소와 무역 협회가 특별 공연 표를 통째로 샀어요.",
    "blank": "พาณิชย์",
+   "src": "made"
+  }
+ ],
+ "w|พาด": [
+  {
+   "text": "กิตติพาดแขนบนไหล่เพื่อนตอนถ่ายรูปหมู่",
+   "en": "Kitti draped his arm over his friend's shoulder for the group photo.",
+   "ko": "끼띠는 단체 사진을 찍을 때 친구 어깨에 팔을 걸쳤어요.",
+   "blank": "พาด",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาพาดเสื้อคลุมไว้บนพนักเก้าอี้หลังเวที",
+   "en": "Wanna draped her coat over the back of a chair backstage.",
+   "ko": "완나는 무대 뒤 의자 등받이에 외투를 걸쳐 두었어요.",
+   "blank": "พาด",
    "src": "made"
   }
  ],
@@ -46109,6 +46477,22 @@
    "en": "The sky is nice and clear today.",
    "ko": "오늘 하늘이 맑아.",
    "blank": "ฟ้า"
+  }
+ ],
+ "w|ฟาด": [
+  {
+   "text": "กิตติฟาดหลังเพื่อนเบาๆ แล้วหัวเราะเมื่อเห็นหน้ากัน",
+   "en": "Kitti gave his friend a light slap on the back and laughed when they saw each other.",
+   "ko": "끼띠는 친구를 보자마자 등을 가볍게 툭 치고 웃었어요.",
+   "blank": "ฟาด",
+   "src": "made"
+  },
+  {
+   "text": "ฝนฟาดหลังคาโรงละครดังจนนักแสดงต้องตะโกนบท",
+   "en": "Rain lashed the theater roof so loudly that the actors had to shout their lines.",
+   "ko": "비가 극장 지붕을 세차게 때려서 배우들은 대사를 소리쳐야 했어요.",
+   "blank": "ฟาด",
+   "src": "made"
   }
  ],
  "w|ฟ้าผ่า": [
@@ -48636,6 +49020,22 @@
    "en": "Pranee reminded her child to stay alert while driving on slippery roads after the rain.",
    "ko": "쁘라니는 아이에게 비 온 뒤 미끄러운 길에서 운전할 때 정신 바짝 차리라고 일렀어요.",
    "blank": "มีสติ",
+   "src": "made"
+  }
+ ],
+ "w|มีสิทธิ์": [
+  {
+   "text": "สมาชิกทุกคนในกลุ่มไลน์รุ่นมีสิทธิ์โหวตว่าจะจัดงานที่ไหน",
+   "en": "Every member of the class chat group has the right to vote on where to hold the party.",
+   "ko": "동기 단톡방의 모든 멤버는 행사 장소를 투표할 권리가 있어요.",
+   "blank": "มีสิทธิ์",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ที่ซื้อบัตรแถวหน้ามีสิทธิ์ถ่ายรูปกับนักแสดงหลังจบการแสดง",
+   "en": "Those who bought front-row tickets are entitled to take photos with the actors after the show.",
+   "ko": "앞줄 표를 산 사람은 공연이 끝난 뒤 배우들과 사진을 찍을 수 있어요.",
+   "blank": "มีสิทธิ์",
    "src": "made"
   }
  ],
@@ -51431,6 +51831,22 @@
    "blank": "แยก"
   }
  ],
+ "w|แยกกัน": [
+  {
+   "text": "หลังเรียนจบ ทุกคนก็แยกกันไปทำงานคนละจังหวัด",
+   "en": "After graduating, everyone went their separate ways to work in different provinces.",
+   "ko": "졸업 후에 모두 흩어져서 각자 다른 지방에서 일하게 됐어요.",
+   "blank": "แยกกัน",
+   "src": "made"
+  },
+  {
+   "text": "วรรณากับนักแสดงคนอื่นแยกกันซ้อมบทก่อนมาซ้อมรวมบนเวที",
+   "en": "Wanna and the other actors rehearsed their lines separately before a full rehearsal on stage.",
+   "ko": "완나와 다른 배우들은 무대에서 함께 연습하기 전에 따로 대사를 연습했어요.",
+   "blank": "แยกกัน",
+   "src": "made"
+  }
+ ],
  "w|แยกแยะ": [
   {
    "text": "สมชายพยายามแยกแยะว่างานไหนด่วนจริงและงานไหนรอได้",
@@ -51881,6 +52297,22 @@
    "en": "I'd be glad to join the trip.",
    "ko": "여행에 함께해서 기뻐.",
    "blank": "ร่วม"
+  }
+ ],
+ "w|ร่วมกัน": [
+  {
+   "text": "กิตติกับเพื่อนร่วมกันออกเงินซื้อของขวัญให้ครูที่เกษียณ",
+   "en": "Kitti and his friends chipped in together to buy a gift for their retired teacher.",
+   "ko": "끼띠와 친구들은 함께 돈을 모아 은퇴한 선생님께 선물을 샀어요.",
+   "blank": "ร่วมกัน",
+   "src": "made"
+  },
+  {
+   "text": "นักแสดงทุกคนร่วมกันร้องเพลงปิดท้ายการแสดง",
+   "en": "All the actors sang together to close the show.",
+   "ko": "배우 모두가 함께 노래를 부르며 공연을 마무리했어요.",
+   "blank": "ร่วมกัน",
+   "src": "made"
   }
  ],
  "w|รวมตัว": [
@@ -54263,6 +54695,22 @@
    "blank": "รู้สึก"
   }
  ],
+ "w|เร่": [
+  {
+   "text": "สมัยเรียน กิตติกับเพื่อนเคยเร่ขายขนมในงานวัดทุกปี",
+   "en": "Back in school, Kitti and his friends used to go around selling snacks at the temple fair every year.",
+   "ko": "학창 시절에 끼띠와 친구들은 해마다 절 축제에서 과자를 팔러 돌아다녔어요.",
+   "blank": "เร่",
+   "src": "made"
+  },
+  {
+   "text": "นักแสดงคณะละครเร่ที่วรรณาชอบเดินทางเล่นไปตามต่างจังหวัด",
+   "en": "The actors of the traveling troupe Wanna likes tour the provinces.",
+   "ko": "완나가 좋아하는 유랑 극단 배우들은 지방을 돌며 공연해요.",
+   "blank": "เร่",
+   "src": "made"
+  }
+ ],
  "w|เร่ง": [
   {
    "text": "คนขับรถไฟเร่งความเร็วหลังพ้นช่วงสะพาน",
@@ -55373,6 +55821,22 @@
    "en": "Don't give up even if the plan fails.",
    "ko": "계획이 실패해도 포기하지 마.",
    "blank": "ล้มเหลว"
+  }
+ ],
+ "w|ลวง": [
+  {
+   "text": "เพื่อนวางแผนลวงกิตติให้มาที่ร้านเพื่อเซอร์ไพรส์วันเกิด",
+   "en": "His friends planned to lure Kitti to the restaurant for a birthday surprise.",
+   "ko": "친구들은 생일 깜짝 파티를 하려고 끼띠를 가게로 꾀어낼 계획을 세웠어요.",
+   "blank": "ลวง",
+   "src": "made"
+  },
+  {
+   "text": "ฉากหลังวาดภาพลวงตาให้ดูเหมือนป่าลึก",
+   "en": "The backdrop was painted as an optical illusion to look like a deep forest.",
+   "ko": "배경은 깊은 숲처럼 보이도록 착시 그림으로 그려졌어요.",
+   "blank": "ลวง",
+   "src": "made"
   }
  ],
  "w|ล่วงหน้า": [
@@ -56587,6 +57051,22 @@
    "en": "The patient opened their eyes and smiled at the nurse.",
    "ko": "환자가 눈을 뜨고 간호사에게 미소 지었어.",
    "blank": "ลืมตา"
+  }
+ ],
+ "w|ลือ": [
+  {
+   "text": "เพื่อนในรุ่นลือกันว่าโต้งย้ายไปทำงานต่างประเทศแล้ว",
+   "en": "People in the class were rumoring that Tong had moved abroad for work.",
+   "ko": "동기들 사이에서는 똥이 외국으로 일하러 갔다는 소문이 돌았어요.",
+   "blank": "ลือ",
+   "src": "made"
+  },
+  {
+   "text": "ใครๆ ก็ลือว่าโรงละครเก่าหลังนี้มีผีอยู่หลังเวที",
+   "en": "Everyone says there's a ghost backstage in this old theater.",
+   "ko": "다들 이 오래된 극장 무대 뒤에 귀신이 있다고 소문내요.",
+   "blank": "ลือ",
+   "src": "made"
   }
  ],
  "w|ลุก": [
@@ -62509,6 +62989,22 @@
    "src": "made"
   }
  ],
+ "w|สะบัด": [
+  {
+   "text": "เพื่อนสาวสะบัดผมแล้วโพสท่าถ่ายรูปเหมือนสมัยวัยรุ่น",
+   "en": "A female friend flipped her hair and posed for a photo like in her teens.",
+   "ko": "여자 동창은 십 대 때처럼 머리를 휙 넘기고 사진 포즈를 잡았어요.",
+   "blank": "สะบัด",
+   "src": "made"
+  },
+  {
+   "text": "นักรำสะบัดชายผ้าไปตามจังหวะกลอง",
+   "en": "The dancer flicked the end of her cloth to the beat of the drum.",
+   "ko": "무용수는 북 장단에 맞춰 천자락을 휙휙 흔들었어요.",
+   "blank": "สะบัด",
+   "src": "made"
+  }
+ ],
  "w|สะพาน": [
   {
    "text": "ข้ามสะพานแล้วเลี้ยวขวา",
@@ -62609,6 +63105,22 @@
    "en": "Wait and see for a while first.",
    "ko": "잠깐 두고 보자.",
    "blank": "สัก"
+  }
+ ],
+ "w|สักครั้ง": [
+  {
+   "text": "กิตติอยากให้ทุกคนมาเจอกันครบสักครั้งก่อนแก่กว่านี้",
+   "en": "Kitti wants everyone to meet all together at least once before they get older.",
+   "ko": "끼띠는 더 나이 들기 전에 한 번쯤 모두가 다 모이길 바라요.",
+   "blank": "สักครั้ง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาฝันว่าจะได้เล่นละครเวทีที่กรุงเทพฯ สักครั้งในชีวิต",
+   "en": "Wanna dreams of performing on stage in Bangkok at least once in her life.",
+   "ko": "완나는 평생에 한 번쯤 방콕 무대에서 연기해 보는 게 꿈이에요.",
+   "blank": "สักครั้ง",
+   "src": "made"
   }
  ],
  "w|สักครู่": [
@@ -62792,6 +63304,22 @@
    "en": "The elders at the wedding advised the couple to be patient with each other.",
    "ko": "결혼식 어르신들은 신랑 신부에게 서로 참고 살라고 일러 주었어요.",
    "blank": "สั่งสอน",
+   "src": "made"
+  }
+ ],
+ "w|สังหาร": [
+  {
+   "text": "นิยายที่กิตติกำลังอ่านเล่าถึงนักสืบที่ตามหาคนสังหารเศรษฐีในคฤหาสน์",
+   "en": "The novel Kitti is reading is about a detective hunting for the person who killed a rich man in a mansion.",
+   "ko": "끼띠가 읽고 있는 소설은 저택에서 부자를 살해한 사람을 쫓는 탐정 이야기예요.",
+   "blank": "สังหาร",
+   "src": "made"
+  },
+  {
+   "text": "ในฉากสุดท้าย ตัวร้ายถูกสังหารกลางเวที",
+   "en": "In the final scene, the villain is killed in the middle of the stage.",
+   "ko": "마지막 장면에서 악당은 무대 한가운데에서 살해당해요.",
+   "blank": "สังหาร",
    "src": "made"
   }
  ],
@@ -63245,6 +63773,22 @@
    "en": "Don't swear oaths over small matters.",
    "ko": "사소한 일로 맹세하지 마.",
    "blank": "สาบาน"
+  }
+ ],
+ "w|สาป": [
+  {
+   "text": "ตอนค่ายลูกเสือ กิตติเคยเล่านิทานเรื่องเจ้าชายถูกแม่มดสาปให้เพื่อนฟัง",
+   "en": "At scout camp, Kitti once told his friends the tale of a prince cursed by a witch.",
+   "ko": "보이스카우트 캠프에서 끼띠는 마녀의 저주를 받은 왕자 이야기를 친구들에게 들려준 적이 있어요.",
+   "blank": "สาป",
+   "src": "made"
+  },
+  {
+   "text": "นางเอกในเรื่องถูกแม่มดสาปให้หลับไปร้อยปี",
+   "en": "The heroine of the story is cursed by a witch to sleep for a hundred years.",
+   "ko": "이야기 속 여주인공은 마녀의 저주로 백 년 동안 잠들어요.",
+   "blank": "สาป",
+   "src": "made"
   }
  ],
  "w|สาม": [
@@ -64207,6 +64751,22 @@
    "src": "made"
   }
  ],
+ "w|สืบเนื่อง": [
+  {
+   "text": "งานเลี้ยงครั้งนี้สืบเนื่องมาจากรูปเก่าที่เพื่อนโพสต์ในกลุ่ม",
+   "en": "This party came about because of an old photo a friend posted in the group.",
+   "ko": "이번 모임은 친구가 단톡방에 올린 옛날 사진에서 비롯됐어요.",
+   "blank": "สืบเนื่อง",
+   "src": "made"
+  },
+  {
+   "text": "ละครภาคนี้สืบเนื่องจากเรื่องเมื่อปีที่แล้ว",
+   "en": "This part of the play continues from last year's story.",
+   "ko": "이번 편 연극은 작년 이야기에서 이어져요.",
+   "blank": "สืบเนื่อง",
+   "src": "made"
+  }
+ ],
  "w|สืบสวน": [
   {
    "text": "ตำรวจเข้ามาสืบสวนเรื่องวัสดุก่อสร้างที่ถูกขโมยไปเมื่อคืน",
@@ -64642,6 +65202,22 @@
    "en": "The market set up a rest bench at the entrance for elderly customers.",
    "ko": "시장은 입구에 나이 든 손님을 위한 쉼터 의자를 놓았어요.",
    "blank": "สูงอายุ",
+   "src": "made"
+  }
+ ],
+ "w|สูญ": [
+  {
+   "text": "เพื่อนคนหนึ่งเล่าว่าเงินเก็บที่เอาไปลงทุนสูญไปเกือบหมด",
+   "en": "One friend said almost all the savings he had invested were lost.",
+   "ko": "한 친구는 투자한 저축이 거의 다 날아갔다고 했어요.",
+   "blank": "สูญ",
+   "src": "made"
+  },
+  {
+   "text": "บทละครต้นฉบับสูญไปตอนน้ำท่วมโกดังเมื่อหลายปีก่อน",
+   "en": "The original script was lost when the warehouse flooded years ago.",
+   "ko": "원본 대본은 몇 년 전 창고가 물에 잠겼을 때 사라졌어요.",
+   "blank": "สูญ",
    "src": "made"
   }
  ],
@@ -67643,6 +68219,22 @@
    "blank": "หลับตา"
   }
  ],
+ "w|หลาก": [
+  {
+   "text": "แต่ละคนใส่เสื้อหลากสีมาถ่ายรูปรวมกัน",
+   "en": "Everyone wore shirts of many colors to take a group photo.",
+   "ko": "다들 알록달록한 옷을 입고 와서 단체 사진을 찍었어요.",
+   "blank": "หลาก",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ชมคืนนี้มีหลากวัย ตั้งแต่เด็กนักเรียนจนถึงคนแก่",
+   "en": "Tonight's audience was of all ages, from schoolchildren to the elderly.",
+   "ko": "오늘 밤 관객은 학생부터 노인까지 연령대가 다양했어요.",
+   "blank": "หลาก",
+   "src": "made"
+  }
+ ],
  "w|หลากหลาย": [
   {
    "text": "เมนูที่นี่หลากหลายมาก",
@@ -69355,6 +69947,22 @@
    "src": "made"
   }
  ],
+ "w|เห็นชัด": [
+  {
+   "text": "ใครๆ ก็เห็นชัดว่ากิตติยังแอบชอบเพื่อนสาวคนเดิมอยู่",
+   "en": "Everyone could clearly see that Kitti still secretly liked the same girl.",
+   "ko": "끼띠가 아직도 그 여자 동창을 몰래 좋아한다는 걸 누구나 뚜렷이 알 수 있었어요.",
+   "blank": "เห็นชัด",
+   "src": "made"
+  },
+  {
+   "text": "จากที่นั่งแถวหน้า แม่ของวรรณาเห็นชัดทุกสีหน้าของลูกสาว",
+   "en": "From the front row, Wanna's mother could clearly see every expression on her daughter's face.",
+   "ko": "앞줄에서 완나의 어머니는 딸의 표정 하나하나를 뚜렷이 볼 수 있었어요.",
+   "blank": "เห็นชัด",
+   "src": "made"
+  }
+ ],
  "w|เห็นด้วย": [
   {
    "text": "แม่เห็นด้วยกับวิชัยที่จะเพิ่มเมนูมังสวิรัติ",
@@ -69861,6 +70469,22 @@
    "en": "I caught a glimpse of him standing in the corner.",
    "ko": "그가 모퉁이에 서 있는 걸 흘깃 봤어.",
    "blank": "เหลือบ"
+  }
+ ],
+ "w|แห่": [
+  {
+   "text": "ตอนเรียน กิตติกับเพื่อนเคยแห่กันไปดูคอนเสิร์ตหน้าโรงเรียน",
+   "en": "In school, Kitti and his friends used to flock to concerts in front of the school.",
+   "ko": "학창 시절 끼띠와 친구들은 학교 앞 콘서트에 우르르 몰려가곤 했어요.",
+   "blank": "แห่",
+   "src": "made"
+  },
+  {
+   "text": "แฟนละครแห่มาต่อคิวซื้อบัตรตั้งแต่เช้า",
+   "en": "Theater fans flocked to line up for tickets from early morning.",
+   "ko": "연극 팬들이 아침부터 표를 사려고 몰려와 줄을 섰어요.",
+   "blank": "แห่",
+   "src": "made"
   }
  ],
  "w|แห่ง": [

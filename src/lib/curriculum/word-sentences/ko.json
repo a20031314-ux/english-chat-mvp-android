@@ -2249,6 +2249,22 @@
    "blank": "강의"
   }
  ],
+ "w|강자": [
+  {
+   "text": "현우가 읽은 소설은 강자에게 맞서는 평범한 마을 사람들 이야기예요.",
+   "en": "The novel Hyunwoo read is about ordinary villagers standing up to the powerful.",
+   "ko": "현우가 읽은 소설은 강자에게 맞서는 평범한 마을 사람들 이야기예요.",
+   "blank": "강자에게",
+   "src": "made"
+  },
+  {
+   "text": "수진의 친구는 학교 다닐 때 강자 앞에서도 할 말은 하는 아이였어요.",
+   "en": "Back in school, Sujin's friend was a kid who spoke her mind even to the powerful.",
+   "ko": "수진의 친구는 학교 다닐 때 강자 앞에서도 할 말은 하는 아이였어요.",
+   "blank": "강자",
+   "src": "made"
+  }
+ ],
  "w|강점": [
   {
    "text": "말하기가 내 강점이야.",
@@ -6411,6 +6427,38 @@
    "en": "I walked a silent forest path.",
    "ko": "고요한 숲길을 걸었어.",
    "blank": "고요한"
+  }
+ ],
+ "w|고용": [
+  {
+   "text": "현우는 도서관 취업 상담실에서 고용 계약서 읽는 법을 배웠어요.",
+   "en": "At the library's job counseling office, Hyunwoo learned how to read an employment contract.",
+   "ko": "현우는 도서관 취업 상담실에서 고용 계약서 읽는 법을 배웠어요.",
+   "blank": "고용",
+   "src": "made"
+  },
+  {
+   "text": "수진의 친구는 장애인 고용을 늘리는 회사에 들어갔어요.",
+   "en": "Sujin's friend joined a company that is increasing employment of people with disabilities.",
+   "ko": "수진의 친구는 장애인 고용을 늘리는 회사에 들어갔어요.",
+   "blank": "고용을",
+   "src": "made"
+  }
+ ],
+ "w|고용주": [
+  {
+   "text": "현우는 고용주와 직원의 권리를 정리한 안내서를 빌렸어요.",
+   "en": "Hyunwoo borrowed a guide outlining the rights of employers and employees.",
+   "ko": "현우는 고용주와 직원의 권리를 정리한 안내서를 빌렸어요.",
+   "blank": "고용주와",
+   "src": "made"
+  },
+  {
+   "text": "카페를 연 동창은 좋은 고용주가 되는 게 생각보다 어렵다고 했어요.",
+   "en": "A classmate who opened a café said being a good employer is harder than she thought.",
+   "ko": "카페를 연 동창은 좋은 고용주가 되는 게 생각보다 어렵다고 했어요.",
+   "blank": "고용주가",
+   "src": "made"
   }
  ],
  "w|고용하다": [
@@ -12747,6 +12795,22 @@
    "blank": "기도했어"
   }
  ],
+ "w|기득권": [
+  {
+   "text": "현우는 조선 시대 양반의 기득권에 관한 논문을 찾고 있어요.",
+   "en": "Hyunwoo is looking for papers on the vested interests of the Joseon-era aristocracy.",
+   "ko": "현우는 조선 시대 양반의 기득권에 관한 논문을 찾고 있어요.",
+   "blank": "기득권에",
+   "src": "made"
+  },
+  {
+   "text": "동창들은 대기업이 기득권을 지키려 한다는 기사로 한참 토론했어요.",
+   "en": "The classmates debated for a long time over an article about big companies trying to protect their vested interests.",
+   "ko": "동창들은 대기업이 기득권을 지키려 한다는 기사로 한참 토론했어요.",
+   "blank": "기득권을",
+   "src": "made"
+  }
+ ],
  "w|기록": [
   {
    "text": "회의 기록을 남겨 줘.",
@@ -17227,6 +17291,22 @@
    "blank": "노동자들이"
   }
  ],
+ "w|노동조합": [
+  {
+   "text": "현우는 근대 노동조합의 탄생에 관한 자료를 찾았어요.",
+   "en": "Hyunwoo found materials on the birth of modern labor unions.",
+   "ko": "현우는 근대 노동조합의 탄생에 관한 자료를 찾았어요.",
+   "blank": "노동조합의",
+   "src": "made"
+  },
+  {
+   "text": "수진의 친구는 회사 노동조합 위원장으로 뽑혔대요.",
+   "en": "Sujin's friend was apparently elected head of her company's labor union.",
+   "ko": "수진의 친구는 회사 노동조합 위원장으로 뽑혔대요.",
+   "blank": "노동조합",
+   "src": "made"
+  }
+ ],
  "w|노란색": [
   {
    "text": "노란색 우산 챙겼어.",
@@ -17353,6 +17433,22 @@
    "ko": "민준이는 평소 원수처럼 여기는 지수를 노리면서 지나쳤다.",
    "blank": "노리면서",
    "src": "krdict"
+  }
+ ],
+ "w|노사": [
+  {
+   "text": "현우는 노사 갈등의 해결 사례를 모은 책을 참고했어요.",
+   "en": "Hyunwoo referred to a book collecting cases of resolved labor-management disputes.",
+   "ko": "현우는 노사 갈등의 해결 사례를 모은 책을 참고했어요.",
+   "blank": "노사",
+   "src": "made"
+  },
+  {
+   "text": "회사 인사팀에서 일하는 동창은 노사 협상 때문에 늦게 왔어요.",
+   "en": "A classmate who works in HR came late because of labor-management negotiations.",
+   "ko": "회사 인사팀에서 일하는 동창은 노사 협상 때문에 늦게 왔어요.",
+   "blank": "노사",
+   "src": "made"
   }
  ],
  "w|노선": [
@@ -18991,6 +19087,22 @@
    "en": "It just takes a little time.",
    "ko": "다만 시간이 조금 걸려.",
    "blank": "다만"
+  }
+ ],
+ "w|다문화": [
+  {
+   "text": "도서관은 다문화 가정 아이들을 위해 여러 나라 그림책을 갖췄어요.",
+   "en": "The library stocked picture books from many countries for children from multicultural families.",
+   "ko": "도서관은 다문화 가정 아이들을 위해 여러 나라 그림책을 갖췄어요.",
+   "blank": "다문화",
+   "src": "made"
+  },
+  {
+   "text": "수진은 다문화 가정 아이들에게 한국어를 가르치는 친구를 응원했어요.",
+   "en": "Sujin cheered on a friend who teaches Korean to kids from multicultural families.",
+   "ko": "수진은 다문화 가정 아이들에게 한국어를 가르치는 친구를 응원했어요.",
+   "blank": "다문화",
+   "src": "made"
   }
  ],
  "w|다물다": [
@@ -27623,6 +27735,22 @@
    "en": "I cut the mango and put it on a plate.",
    "ko": "망고를 잘라서 접시에 담았어.",
    "blank": "망고를"
+  }
+ ],
+ "w|망명": [
+  {
+   "text": "현우는 도서관에서 망명 작가들의 회고록을 찾아 읽었어요.",
+   "en": "At the library, Hyunwoo looked up and read memoirs by writers in exile.",
+   "ko": "현우는 도서관에서 망명 작가들의 회고록을 찾아 읽었어요.",
+   "blank": "망명",
+   "src": "made"
+  },
+  {
+   "text": "동창회에서 수진은 해외로 망명했던 작가 이야기를 꺼낸 친구 덕분에 책을 한 권 샀어요.",
+   "en": "At the reunion, a friend brought up a writer who had gone into exile abroad, so Sujin bought one of his books.",
+   "ko": "동창회에서 수진은 해외로 망명했던 작가 이야기를 꺼낸 친구 덕분에 책을 한 권 샀어요.",
+   "blank": "망명했던",
+   "src": "made"
   }
  ],
  "w|망설이다": [
@@ -39831,6 +39959,22 @@
    "src": "made"
   }
  ],
+ "w|빈부격차": [
+  {
+   "text": "현우는 빈부격차를 주제로 발표를 준비하려고 통계 자료를 모았어요.",
+   "en": "Hyunwoo gathered statistics to prepare a presentation on the wealth gap.",
+   "ko": "현우는 빈부격차를 주제로 발표를 준비하려고 통계 자료를 모았어요.",
+   "blank": "빈부격차를",
+   "src": "made"
+  },
+  {
+   "text": "동창들은 학교 다닐 때보다 빈부격차가 더 커졌다고 느꼈어요.",
+   "en": "The classmates felt the gap between rich and poor had grown bigger than when they were in school.",
+   "ko": "동창들은 학교 다닐 때보다 빈부격차가 더 커졌다고 느꼈어요.",
+   "blank": "빈부격차가",
+   "src": "made"
+  }
+ ],
  "w|빈혈": [
   {
    "text": "민수는 빈혈이 있는 환자는 수술 전에 꼭 밥을 먹고 오라고 해요.",
@@ -42665,6 +42809,22 @@
    "src": "krdict"
   }
  ],
+ "w|상류층": [
+  {
+   "text": "현우는 영국 상류층의 예절을 다룬 소설에 푹 빠졌어요.",
+   "en": "Hyunwoo got absorbed in a novel about the manners of the British upper class.",
+   "ko": "현우는 영국 상류층의 예절을 다룬 소설에 푹 빠졌어요.",
+   "blank": "상류층의",
+   "src": "made"
+  },
+  {
+   "text": "수진은 상류층 결혼식에 다녀온 친구의 이야기를 신기하게 들었어요.",
+   "en": "Sujin listened with fascination to a friend who'd been to an upper-class wedding.",
+   "ko": "수진은 상류층 결혼식에 다녀온 친구의 이야기를 신기하게 들었어요.",
+   "blank": "상류층",
+   "src": "made"
+  }
+ ],
  "w|상반기": [
   {
    "text": "준호는 새해 상반기 안에 자격증을 따기로 마음먹었어요.",
@@ -44153,6 +44313,22 @@
    "src": "made"
   }
  ],
+ "w|서민": [
+  {
+   "text": "현우는 옛날 서민들이 먹던 음식을 다룬 책을 재미있게 읽었어요.",
+   "en": "Hyunwoo enjoyed reading a book about the food common people used to eat.",
+   "ko": "현우는 옛날 서민들이 먹던 음식을 다룬 책을 재미있게 읽었어요.",
+   "blank": "서민들이",
+   "src": "made"
+  },
+  {
+   "text": "수진의 동창은 서민 동네에서 작은 분식집을 하고 있어요.",
+   "en": "Sujin's classmate runs a small snack bar in a working-class neighborhood.",
+   "ko": "수진의 동창은 서민 동네에서 작은 분식집을 하고 있어요.",
+   "blank": "서민",
+   "src": "made"
+  }
+ ],
  "w|서버": [
   {
    "text": "도서관 서버가 점검 중이라 대출이 잠깐 멈췄어요.",
@@ -45587,6 +45763,22 @@
    "blank": "성질이"
   }
  ],
+ "w|성차별": [
+  {
+   "text": "현우는 직장 내 성차별에 관한 연구 보고서를 복사했어요.",
+   "en": "Hyunwoo photocopied a research report on gender discrimination in the workplace.",
+   "ko": "현우는 직장 내 성차별에 관한 연구 보고서를 복사했어요.",
+   "blank": "성차별에",
+   "src": "made"
+  },
+  {
+   "text": "수진과 친구들은 예전 학교의 교복 규정이 성차별이었다고 입을 모았어요.",
+   "en": "Sujin and her friends agreed that their old school's uniform rules were sexist.",
+   "ko": "수진과 친구들은 예전 학교의 교복 규정이 성차별이었다고 입을 모았어요.",
+   "blank": "성차별이었다고",
+   "src": "made"
+  }
+ ],
  "w|성취감": [
   {
    "text": "재원은 마라톤을 완주했을 때의 성취감을 친구에게 자랑했어요.",
@@ -46557,6 +46749,22 @@
    "ko": "소송에서 진 민준이는 거액의 보상금을 물어 주게 되었다.",
    "blank": "소송에서",
    "src": "krdict"
+  }
+ ],
+ "w|소수자": [
+  {
+   "text": "현우는 사회적 소수자의 목소리를 담은 수필집을 추천받았어요.",
+   "en": "Hyunwoo got a recommendation for an essay collection featuring the voices of social minorities.",
+   "ko": "현우는 사회적 소수자의 목소리를 담은 수필집을 추천받았어요.",
+   "blank": "소수자의",
+   "src": "made"
+  },
+  {
+   "text": "수진의 친구는 장애인 같은 소수자의 권리를 지키는 단체에서 일하고 있어요.",
+   "en": "Sujin's friend works at an organization that protects the rights of minorities such as people with disabilities.",
+   "ko": "수진의 친구는 장애인 같은 소수자의 권리를 지키는 단체에서 일하고 있어요.",
+   "blank": "소수자의",
+   "src": "made"
   }
  ],
  "w|소스": [
@@ -51559,6 +51767,22 @@
    "blank": "실업을"
   }
  ],
+ "w|실업률": [
+  {
+   "text": "현우는 청년 실업률 통계를 찾으러 정기 간행물실에 갔어요.",
+   "en": "Hyunwoo went to the periodicals room to find youth unemployment statistics.",
+   "ko": "현우는 청년 실업률 통계를 찾으러 정기 간행물실에 갔어요.",
+   "blank": "실업률",
+   "src": "made"
+  },
+  {
+   "text": "취업 준비 중인 동창은 실업률 뉴스를 볼 때마다 마음이 무겁대요.",
+   "en": "A classmate looking for work says her heart sinks every time she sees news on the unemployment rate.",
+   "ko": "취업 준비 중인 동창은 실업률 뉴스를 볼 때마다 마음이 무겁대요.",
+   "blank": "실업률",
+   "src": "made"
+  }
+ ],
  "w|실업자": [
   {
    "text": "사장님은 한때 실업자였던 시절을 떠올리며 직원들을 챙겨요.",
@@ -55249,6 +55473,22 @@
    "blank": "약속해"
   }
  ],
+ "w|약자": [
+  {
+   "text": "도서관 입구에는 휠체어를 탄 이용자 같은 약자를 위한 경사로가 있어요.",
+   "en": "The library entrance has a ramp for vulnerable users, like people in wheelchairs.",
+   "ko": "도서관 입구에는 휠체어를 탄 이용자 같은 약자를 위한 경사로가 있어요.",
+   "blank": "약자를",
+   "src": "made"
+  },
+  {
+   "text": "변호사가 된 동창은 사회적 약자를 돕는 일을 하고 싶다고 했어요.",
+   "en": "A classmate who became a lawyer said she wants to help the socially vulnerable.",
+   "ko": "변호사가 된 동창은 사회적 약자를 돕는 일을 하고 싶다고 했어요.",
+   "blank": "약자를",
+   "src": "made"
+  }
+ ],
  "w|약점": [
   {
    "text": "내 약점을 잘 알고 있어.",
@@ -55367,6 +55607,22 @@
    "blank": "양고기를"
   }
  ],
+ "w|양극화": [
+  {
+   "text": "도서관 신간 코너에 소득 양극화를 다룬 책이 새로 들어왔어요.",
+   "en": "A new book on income polarization arrived in the library's new releases section.",
+   "ko": "도서관 신간 코너에 소득 양극화를 다룬 책이 새로 들어왔어요.",
+   "blank": "양극화를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 집값 양극화 때문에 동네마다 분위기가 다르다고 했어요.",
+   "en": "Sujin said each neighborhood feels different because of the polarization in housing prices.",
+   "ko": "수진은 집값 양극화 때문에 동네마다 분위기가 다르다고 했어요.",
+   "blank": "양극화",
+   "src": "made"
+  }
+ ],
  "w|양념": [
   {
    "text": "고기 양념이 잘 배었어.",
@@ -55468,6 +55724,22 @@
    "en": "On Adoption Day, Haeun met three families of adoptive parents.",
    "ko": "하은은 입양 가족의 날을 맞아 양부모 세 가족을 만났어요.",
    "blank": "양부모",
+   "src": "made"
+  }
+ ],
+ "w|양성평등": [
+  {
+   "text": "도서관에서 양성평등을 주제로 한 강연이 열렸어요.",
+   "en": "A lecture on gender equality was held at the library.",
+   "ko": "도서관에서 양성평등을 주제로 한 강연이 열렸어요.",
+   "blank": "양성평등을",
+   "src": "made"
+  },
+  {
+   "text": "동창회 총무를 남녀 번갈아 맡자는 말에 수진은 양성평등이라며 웃었어요.",
+   "en": "When someone suggested men and women take turns as reunion treasurer, Sujin laughed and called it gender equality.",
+   "ko": "동창회 총무를 남녀 번갈아 맡자는 말에 수진은 양성평등이라며 웃었어요.",
+   "blank": "양성평등이라며",
    "src": "made"
   }
  ],
@@ -66679,6 +66951,22 @@
    "blank": "이제야"
   }
  ],
+ "w|이주": [
+  {
+   "text": "도서관 지역 자료실에는 이 동네로 온 사람들의 이주 기록이 모여 있어요.",
+   "en": "The library's local archive holds migration records of people who came to this neighborhood.",
+   "ko": "도서관 지역 자료실에는 이 동네로 온 사람들의 이주 기록이 모여 있어요.",
+   "blank": "이주",
+   "src": "made"
+  },
+  {
+   "text": "수진의 동창은 캐나다 이주를 준비하고 있다고 했어요.",
+   "en": "Sujin's classmate said she's preparing to move to Canada.",
+   "ko": "수진의 동창은 캐나다 이주를 준비하고 있다고 했어요.",
+   "blank": "이주를",
+   "src": "made"
+  }
+ ],
  "w|이주하다": [
   {
    "text": "민수의 운동 친구는 시골로 이주해서 이제 민수는 혼자 운동해요.",
@@ -67425,6 +67713,22 @@
    "en": "You must not discriminate based on race.",
    "ko": "인종을 이유로 차별하면 안 돼.",
    "blank": "인종을"
+  }
+ ],
+ "w|인종차별": [
+  {
+   "text": "현우는 인종차별의 역사를 다룬 다큐멘터리를 도서관 시청각실에서 봤어요.",
+   "en": "Hyunwoo watched a documentary on the history of racial discrimination in the library's media room.",
+   "ko": "현우는 인종차별의 역사를 다룬 다큐멘터리를 도서관 시청각실에서 봤어요.",
+   "blank": "인종차별의",
+   "src": "made"
+  },
+  {
+   "text": "외국에서 유학한 동창은 그곳에서 겪은 인종차별 경험을 담담하게 말했어요.",
+   "en": "A classmate who studied abroad calmly talked about the racial discrimination she experienced there.",
+   "ko": "외국에서 유학한 동창은 그곳에서 겪은 인종차별 경험을 담담하게 말했어요.",
+   "blank": "인종차별",
+   "src": "made"
   }
  ],
  "w|인지": [
@@ -73205,6 +73509,22 @@
    "src": "made"
   }
  ],
+ "w|절약되다": [
+  {
+   "text": "도서관에 전자책이 늘어서 종이가 많이 절약됐어요.",
+   "en": "With more e-books at the library, a lot of paper was saved.",
+   "ko": "도서관에 전자책이 늘어서 종이가 많이 절약됐어요.",
+   "blank": "절약됐어요",
+   "src": "made"
+  },
+  {
+   "text": "동창회를 학교 강당에서 하니까 장소 대여비가 절약됐어요.",
+   "en": "Holding the reunion in the school auditorium saved them the venue rental fee.",
+   "ko": "동창회를 학교 강당에서 하니까 장소 대여비가 절약됐어요.",
+   "blank": "절약됐어요",
+   "src": "made"
+  }
+ ],
  "w|절약하다": [
   {
    "text": "전기를 꾸준히 절약해.",
@@ -73352,6 +73672,22 @@
    "en": "Out the train window, Mikyung saw a bridge that was blown up during the occupation and rebuilt.",
    "ko": "미경은 점령 시절에 폭파됐다가 다시 지은 다리를 기차 창밖으로 봤어요.",
    "blank": "점령",
+   "src": "made"
+  }
+ ],
+ "w|점령하다": [
+  {
+   "text": "현우는 몽골군이 넓은 땅을 점령한 과정을 지도로 공부했어요.",
+   "en": "Hyunwoo studied with maps how the Mongol army occupied vast lands.",
+   "ko": "현우는 몽골군이 넓은 땅을 점령한 과정을 지도로 공부했어요.",
+   "blank": "점령한",
+   "src": "made"
+  },
+  {
+   "text": "남자 동창들이 노래방 마이크를 점령해서 수진은 한 곡도 못 불렀어요.",
+   "en": "The male classmates took over the karaoke mic, so Sujin couldn't sing a single song.",
+   "ko": "남자 동창들이 노래방 마이크를 점령해서 수진은 한 곡도 못 불렀어요.",
+   "blank": "점령해서",
    "src": "made"
   }
  ],
@@ -74001,6 +74337,22 @@
    "src": "made"
   }
  ],
+ "w|정복하다": [
+  {
+   "text": "현우는 높은 산을 정복한 등산가들의 기록을 읽었어요.",
+   "en": "Hyunwoo read accounts by mountaineers who conquered high peaks.",
+   "ko": "현우는 높은 산을 정복한 등산가들의 기록을 읽었어요.",
+   "blank": "정복한",
+   "src": "made"
+  },
+  {
+   "text": "수진의 친구는 히말라야 봉우리를 정복한 사진을 자랑했어요.",
+   "en": "Sujin's friend showed off photos of conquering a Himalayan peak.",
+   "ko": "수진의 친구는 히말라야 봉우리를 정복한 사진을 자랑했어요.",
+   "blank": "정복한",
+   "src": "made"
+  }
+ ],
  "w|정부": [
   {
    "text": "정부 발표 봤어?",
@@ -74301,6 +74653,22 @@
    "en": "Please tell me honestly.",
    "ko": "정직하게 말해 줘.",
    "blank": "정직하게"
+  }
+ ],
+ "w|정착": [
+  {
+   "text": "현우는 개척 시대 사람들의 정착 과정을 다룬 책을 빌렸어요.",
+   "en": "Hyunwoo borrowed a book about how pioneer-era people settled.",
+   "ko": "현우는 개척 시대 사람들의 정착 과정을 다룬 책을 빌렸어요.",
+   "blank": "정착",
+   "src": "made"
+  },
+  {
+   "text": "제주도에 정착한 동창이 귤을 한 상자씩 들고 왔어요.",
+   "en": "A classmate who settled on Jeju Island brought a box of tangerines for each of them.",
+   "ko": "제주도에 정착한 동창이 귤을 한 상자씩 들고 왔어요.",
+   "blank": "정착한",
+   "src": "made"
   }
  ],
  "w|정착하다": [
@@ -74893,6 +75261,22 @@
    "src": "made"
   }
  ],
+ "w|제작하다": [
+  {
+   "text": "도서관은 지역 역사를 소개하는 짧은 영상을 제작했어요.",
+   "en": "The library produced a short video introducing local history.",
+   "ko": "도서관은 지역 역사를 소개하는 짧은 영상을 제작했어요.",
+   "blank": "제작했어요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 졸업 앨범 사진으로 짧은 추억 영상을 제작했어요.",
+   "en": "Sujin made a short memory video using graduation album photos.",
+   "ko": "수진은 졸업 앨범 사진으로 짧은 추억 영상을 제작했어요.",
+   "blank": "제작했어요",
+   "src": "made"
+  }
+ ],
  "w|제재": [
   {
    "text": "성호의 극단은 경제 제재로 굶주리는 작은 나라 사람들의 이야기를 무대에 올렸어요.",
@@ -75421,6 +75805,22 @@
    "blank": "조용히"
   }
  ],
+ "w|조작하다": [
+  {
+   "text": "현우는 새 대출 기계를 조작하는 법을 사서에게 배웠어요.",
+   "en": "Hyunwoo learned from a librarian how to operate the new checkout machine.",
+   "ko": "현우는 새 대출 기계를 조작하는 법을 사서에게 배웠어요.",
+   "blank": "조작하는",
+   "src": "made"
+  },
+  {
+   "text": "게임 회사에 다니는 동창은 수진에게 휴대폰 게임 조작하는 법을 알려 줬어요.",
+   "en": "A classmate who works at a game company showed Sujin how to control a mobile game.",
+   "ko": "게임 회사에 다니는 동창은 수진에게 휴대폰 게임 조작하는 법을 알려 줬어요.",
+   "blank": "조작하는",
+   "src": "made"
+  }
+ ],
  "w|조절하다": [
   {
    "text": "태윤은 발표할 때 목소리 크기를 잘 조절해서 칭찬을 받았어요.",
@@ -75917,6 +76317,22 @@
    "src": "made"
   }
  ],
+ "w|종사하다": [
+  {
+   "text": "현우의 이모는 삼십 년 동안 도서관 일에 종사했어요.",
+   "en": "Hyunwoo's aunt worked in the library field for thirty years.",
+   "ko": "현우의 이모는 삼십 년 동안 도서관 일에 종사했어요.",
+   "blank": "종사했어요",
+   "src": "made"
+  },
+  {
+   "text": "수진의 동창 중에는 의료계에 종사하는 친구가 많아요.",
+   "en": "Many of Sujin's classmates work in the medical field.",
+   "ko": "수진의 동창 중에는 의료계에 종사하는 친구가 많아요.",
+   "blank": "종사하는",
+   "src": "made"
+  }
+ ],
  "w|종아리": [
   {
    "text": "현우는 쪼그려 앉아 타일을 붙이다가 종아리에 쥐가 났어요.",
@@ -76034,6 +76450,22 @@
    "en": "Mikyung put a cushion on the old tractor seat.",
    "ko": "미경은 낡은 트랙터 좌석에 방석을 깔았어요.",
    "blank": "좌석에",
+   "src": "made"
+  }
+ ],
+ "w|좌우하다": [
+  {
+   "text": "어릴 때 읽은 책 한 권이 현우의 진로를 좌우했어요.",
+   "en": "A single book Hyunwoo read as a child shaped his career path.",
+   "ko": "어릴 때 읽은 책 한 권이 현우의 진로를 좌우했어요.",
+   "blank": "좌우했어요",
+   "src": "made"
+  },
+  {
+   "text": "날씨가 동창회 야외 행사의 분위기를 좌우했어요.",
+   "en": "The weather determined the mood of the reunion's outdoor event.",
+   "ko": "날씨가 동창회 야외 행사의 분위기를 좌우했어요.",
+   "blank": "좌우했어요",
    "src": "made"
   }
  ],
@@ -77271,6 +77703,22 @@
    "src": "made"
   }
  ],
+ "w|중산층": [
+  {
+   "text": "그 사회학 책은 중산층이 줄어드는 이유를 설명해요.",
+   "en": "That sociology book explains why the middle class is shrinking.",
+   "ko": "그 사회학 책은 중산층이 줄어드는 이유를 설명해요.",
+   "blank": "중산층이",
+   "src": "made"
+  },
+  {
+   "text": "친구들은 요즘 중산층으로 살기도 쉽지 않다며 한숨을 쉬었어요.",
+   "en": "The friends sighed, saying it's not easy even to live as middle class these days.",
+   "ko": "친구들은 요즘 중산층으로 살기도 쉽지 않다며 한숨을 쉬었어요.",
+   "blank": "중산층으로",
+   "src": "made"
+  }
+ ],
  "w|중소기업": [
   {
    "text": "성호는 중소기업 협력사들과 매일 아침 회의를 해요.",
@@ -77284,6 +77732,22 @@
    "en": "The small company Mikyung works for pays its employees' marathon entry fees.",
    "ko": "미경이 다니는 중소기업은 직원들의 마라톤 참가비를 대 줘요.",
    "blank": "중소기업은",
+   "src": "made"
+  }
+ ],
+ "w|중시하다": [
+  {
+   "text": "이 도서관은 조용한 분위기를 무엇보다 중시해요.",
+   "en": "This library values a quiet atmosphere above all else.",
+   "ko": "이 도서관은 조용한 분위기를 무엇보다 중시해요.",
+   "blank": "중시해요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 친구 사이에도 약속을 중시하는 편이에요.",
+   "en": "Sujin tends to value keeping promises, even between friends.",
+   "ko": "수진은 친구 사이에도 약속을 중시하는 편이에요.",
+   "blank": "중시하는",
    "src": "made"
   }
  ],
@@ -77747,6 +78211,22 @@
    "en": "The witness who appeared in court looked nervous.",
    "ko": "법정에 출석한 증인이 긴장한 표정이었어.",
    "blank": "증인이"
+  }
+ ],
+ "w|증진하다": [
+  {
+   "text": "도서관은 주민들의 독서 습관을 증진하려고 독서 모임을 만들었어요.",
+   "en": "The library started a book club to promote residents' reading habits.",
+   "ko": "도서관은 주민들의 독서 습관을 증진하려고 독서 모임을 만들었어요.",
+   "blank": "증진하려고",
+   "src": "made"
+  },
+  {
+   "text": "동창회는 친구들끼리의 우정을 증진하는 자리예요.",
+   "en": "The reunion is an occasion to strengthen friendships.",
+   "ko": "동창회는 친구들끼리의 우정을 증진하는 자리예요.",
+   "blank": "증진하는",
+   "src": "made"
   }
  ],
  "w|증후군": [
@@ -78581,6 +79061,22 @@
    "blank": "지원이"
   }
  ],
+ "w|지원되다": [
+  {
+   "text": "도서관 회원에게는 온라인 강의 이용권이 무료로 지원돼요.",
+   "en": "Library members get online course access free of charge.",
+   "ko": "도서관 회원에게는 온라인 강의 이용권이 무료로 지원돼요.",
+   "blank": "지원돼요",
+   "src": "made"
+  },
+  {
+   "text": "학교 측에서 동창회 행사 비용 일부가 지원됐어요.",
+   "en": "Part of the reunion event cost was funded by the school.",
+   "ko": "학교 측에서 동창회 행사 비용 일부가 지원됐어요.",
+   "blank": "지원됐어요",
+   "src": "made"
+  }
+ ],
  "w|지원서": [
   {
    "text": "재원은 처음 이 식당에 낸 지원서를 아직도 기억해요.",
@@ -79411,6 +79907,22 @@
    "blank": "진심으로"
   }
  ],
+ "w|진압하다": [
+  {
+   "text": "현우는 군대가 반란을 진압한 사건을 역사책에서 찾아봤어요.",
+   "en": "Hyunwoo looked up in a history book the incident where the army suppressed a rebellion.",
+   "ko": "현우는 군대가 반란을 진압한 사건을 역사책에서 찾아봤어요.",
+   "blank": "진압한",
+   "src": "made"
+  },
+  {
+   "text": "소방관이 된 동창은 지난달 큰 산불을 진압한 이야기를 들려줬어요.",
+   "en": "A classmate who became a firefighter told the story of putting out a big forest fire last month.",
+   "ko": "소방관이 된 동창은 지난달 큰 산불을 진압한 이야기를 들려줬어요.",
+   "blank": "진압한",
+   "src": "made"
+  }
+ ],
  "w|진열대": [
   {
    "text": "태윤은 아침마다 진열대의 물건을 앞으로 당겨서 가지런히 놓아요.",
@@ -80156,6 +80668,22 @@
    "en": "The old man who's a regular at Sohee's shop always insists on the newspaper from the same spot.",
    "ko": "소희네 가게 단골 할아버지는 늘 같은 자리의 신문에만 집착하세요.",
    "blank": "집착하세요",
+   "src": "made"
+  }
+ ],
+ "w|집필하다": [
+  {
+   "text": "그 작가는 이 도서관 열람실에서 첫 소설을 집필했어요.",
+   "en": "That author wrote her first novel in this library's reading room.",
+   "ko": "그 작가는 이 도서관 열람실에서 첫 소설을 집필했어요.",
+   "blank": "집필했어요",
+   "src": "made"
+  },
+  {
+   "text": "수진의 친구는 요즘 요리책을 집필하고 있다고 했어요.",
+   "en": "Sujin's friend said she's writing a cookbook these days.",
+   "ko": "수진의 친구는 요즘 요리책을 집필하고 있다고 했어요.",
+   "blank": "집필하고",
    "src": "made"
   }
  ],
@@ -81130,6 +81658,22 @@
    "en": "Mikyung watched the landing of the drone that had been spraying pesticide.",
    "ko": "미경은 농약을 뿌리던 드론의 착륙을 지켜봤어요.",
    "blank": "착륙을",
+   "src": "made"
+  }
+ ],
+ "w|착수하다": [
+  {
+   "text": "도서관은 오래된 신문을 디지털로 옮기는 작업에 착수했어요.",
+   "en": "The library began work on digitizing old newspapers.",
+   "ko": "도서관은 오래된 신문을 디지털로 옮기는 작업에 착수했어요.",
+   "blank": "착수했어요",
+   "src": "made"
+  },
+  {
+   "text": "동창들은 은사님 댁을 함께 찾아가는 계획에 착수했어요.",
+   "en": "The classmates set to work on a plan to visit their old teacher's home together.",
+   "ko": "동창들은 은사님 댁을 함께 찾아가는 계획에 착수했어요.",
+   "blank": "착수했어요",
    "src": "made"
   }
  ],
@@ -82421,6 +82965,22 @@
    "blank": "철학"
   }
  ],
+ "w|철회하다": [
+  {
+   "text": "도서관은 주민들의 반대로 휴관 계획을 철회했어요.",
+   "en": "Because residents objected, the library withdrew its plan to close.",
+   "ko": "도서관은 주민들의 반대로 휴관 계획을 철회했어요.",
+   "blank": "철회했어요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 친구들이 반대해서 회비를 올리자는 제안을 철회했어요.",
+   "en": "Because her friends objected, Sujin withdrew her proposal to raise the dues.",
+   "ko": "수진은 친구들이 반대해서 회비를 올리자는 제안을 철회했어요.",
+   "blank": "철회했어요",
+   "src": "made"
+  }
+ ],
  "w|첨단": [
   {
    "text": "성호네 학교에 첨단 장비를 갖춘 과학실이 새로 생겼어요.",
@@ -82450,6 +83010,22 @@
    "en": "Sujin sent a photo of her baby as an attachment in her reply email.",
    "ko": "수진은 답장 메일에 첨부 파일로 아기 사진을 보냈어요.",
    "blank": "첨부",
+   "src": "made"
+  }
+ ],
+ "w|첨부하다": [
+  {
+   "text": "현우는 희망 도서 신청서에 책 표지 사진을 첨부했어요.",
+   "en": "Hyunwoo attached a photo of the book cover to his book request form.",
+   "ko": "현우는 희망 도서 신청서에 책 표지 사진을 첨부했어요.",
+   "blank": "첨부했어요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 동창회 안내 메일에 약도 파일을 첨부했어요.",
+   "en": "Sujin attached a map file to the reunion notice email.",
+   "ko": "수진은 동창회 안내 메일에 약도 파일을 첨부했어요.",
+   "blank": "첨부했어요",
    "src": "made"
   }
  ],
@@ -82710,6 +83286,22 @@
    "en": "Seoyeon has a small build, so she always shortens the sleeves when she buys winter clothes.",
    "ko": "서연은 체격이 작아서 겨울옷을 사면 늘 소매를 줄여요.",
    "blank": "체격이",
+   "src": "made"
+  }
+ ],
+ "w|체결하다": [
+  {
+   "text": "도서관은 근처 대학과 자료 공유 협약을 체결했어요.",
+   "en": "The library signed a resource-sharing agreement with a nearby university.",
+   "ko": "도서관은 근처 대학과 자료 공유 협약을 체결했어요.",
+   "blank": "체결했어요",
+   "src": "made"
+  },
+  {
+   "text": "무역 회사에 다니는 동창은 해외 업체와 큰 계약을 체결했다고 자랑했어요.",
+   "en": "A classmate at a trading company boasted about signing a big contract with an overseas firm.",
+   "ko": "무역 회사에 다니는 동창은 해외 업체와 큰 계약을 체결했다고 자랑했어요.",
+   "blank": "체결했다고",
    "src": "made"
   }
  ],
@@ -87873,6 +88465,22 @@
    "src": "made"
   }
  ],
+ "w|특권층": [
+  {
+   "text": "그 역사책은 옛 특권층이 누리던 생활을 자세히 보여 줘요.",
+   "en": "That history book shows in detail the life the privileged class once enjoyed.",
+   "ko": "그 역사책은 옛 특권층이 누리던 생활을 자세히 보여 줘요.",
+   "blank": "특권층이",
+   "src": "made"
+  },
+  {
+   "text": "수진은 드라마 속 특권층의 생활이 현실과 너무 다르다고 말했어요.",
+   "en": "Sujin said the lives of the privileged in dramas are too different from reality.",
+   "ko": "수진은 드라마 속 특권층의 생활이 현실과 너무 다르다고 말했어요.",
+   "blank": "특권층의",
+   "src": "made"
+  }
+ ],
  "w|특기": [
   {
    "text": "현우의 특기는 낡은 가구를 새것처럼 고치는 거예요.",
@@ -90455,6 +91063,22 @@
    "blank": "피가"
   }
  ],
+ "w|피고용인": [
+  {
+   "text": "그 법률 책에는 피고용인이 받을 수 있는 휴가 일수가 나와 있어요.",
+   "en": "That law book lists how many days of leave an employee can get.",
+   "ko": "그 법률 책에는 피고용인이 받을 수 있는 휴가 일수가 나와 있어요.",
+   "blank": "피고용인이",
+   "src": "made"
+  },
+  {
+   "text": "수진은 피고용인 입장에서는 휴가가 제일 중요하다고 말했어요.",
+   "en": "Sujin said that from an employee's point of view, vacation matters most.",
+   "ko": "수진은 피고용인 입장에서는 휴가가 제일 중요하다고 말했어요.",
+   "blank": "피고용인",
+   "src": "made"
+  }
+ ],
  "w|피곤": [
   {
    "text": "하루 종일 일하니 피곤해.",
@@ -91178,6 +91802,22 @@
    "en": "A tiny screw had come loose, and that's why the button wouldn't press.",
    "ko": "하찮은 나사 하나가 빠져서 버튼이 안 눌렸던 거예요.",
    "blank": "하찮은",
+   "src": "made"
+  }
+ ],
+ "w|하층민": [
+  {
+   "text": "현우는 중세 하층민의 삶을 그린 역사 소설을 빌렸어요.",
+   "en": "Hyunwoo borrowed a historical novel depicting the lives of the medieval lower classes.",
+   "ko": "현우는 중세 하층민의 삶을 그린 역사 소설을 빌렸어요.",
+   "blank": "하층민의",
+   "src": "made"
+  },
+  {
+   "text": "역사 선생님이 된 동창은 신분제 시대 하층민의 삶을 가르치는 게 어렵다고 했어요.",
+   "en": "A classmate who became a history teacher said it's hard to teach about the lives of the lower classes under the caste system.",
+   "ko": "역사 선생님이 된 동창은 신분제 시대 하층민의 삶을 가르치는 게 어렵다고 했어요.",
+   "blank": "하층민의",
    "src": "made"
   }
  ],

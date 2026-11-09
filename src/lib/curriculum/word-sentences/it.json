@@ -3211,6 +3211,22 @@
    "blank": "ambulanza"
   }
  ],
+ "w|ambulatorio": [
+  {
+   "text": "Paolo manda il bambino con la febbre alta all'ambulatorio di fronte.",
+   "en": "Paolo sends the child with a high fever to the clinic across the street.",
+   "ko": "파올로는 고열이 있는 아이를 길 건너 진료소로 보내요.",
+   "blank": "ambulatorio",
+   "src": "made"
+  },
+  {
+   "text": "Al piano terra c'era l'ambulatorio del vecchio medico del paese, racconta Francesca.",
+   "en": "On the ground floor there used to be the old village doctor's surgery, Francesca says.",
+   "ko": "1층에는 옛날 마을 의사의 진료소가 있었다고 프란체스카가 말해요.",
+   "blank": "ambulatorio",
+   "src": "made"
+  }
+ ],
  "w|americano": [
   {
    "text": "Il film americano mi è piaciuto.",
@@ -3696,6 +3712,22 @@
    "en": "After reading about her nephew, Martina knows that local anesthesia doesn't hurt.",
    "ko": "조카 이야기를 듣고 나서 마르티나는 국소 마취가 아프지 않다는 걸 알아요.",
    "blank": "anestesia",
+   "src": "made"
+  }
+ ],
+ "w|anfetamina": [
+  {
+   "text": "Paolo spiega a un giornalista che l'anfetamina si vende solo con ricetta speciale.",
+   "en": "Paolo explains to a journalist that amphetamine is sold only with a special prescription.",
+   "ko": "파올로는 기자에게 암페타민은 특별 처방전으로만 판다고 설명해요.",
+   "blank": "anfetamina",
+   "src": "made"
+  },
+  {
+   "text": "In un vecchio giornale Francesca legge un articolo sui pericoli dell'anfetamina.",
+   "en": "In an old newspaper Francesca reads an article on the dangers of amphetamine.",
+   "ko": "프란체스카는 옛 신문에서 암페타민의 위험에 관한 기사를 읽어요.",
+   "blank": "anfetamina",
    "src": "made"
   }
  ],
@@ -14545,6 +14577,22 @@
    "blank": "clinica"
   }
  ],
+ "w|clinico": [
+  {
+   "text": "Prima di consigliare il farmaco, Paolo legge con attenzione il quadro clinico.",
+   "en": "Before recommending the medicine, Paolo reads the clinical picture carefully.",
+   "ko": "파올로는 약을 권하기 전에 임상 소견을 꼼꼼히 읽어요.",
+   "blank": "clinico",
+   "src": "made"
+  },
+  {
+   "text": "Con occhio clinico, l'architetto esamina le crepe nella casa di Francesca.",
+   "en": "With a clinical eye, the architect examines the cracks in Francesca's house.",
+   "ko": "건축가는 냉철한 눈으로 프란체스카네 집 균열을 살펴봐요.",
+   "blank": "clinico",
+   "src": "made"
+  }
+ ],
  "w|club": [
   {
    "text": "Siamo iscritti allo stesso club sportivo.",
@@ -15121,6 +15169,22 @@
    "en": "Wear a scarf around your neck.",
    "ko": "목에 스카프를 둘러.",
    "blank": "collo"
+  }
+ ],
+ "w|collocare": [
+  {
+   "text": "Paolo deve collocare i nuovi prodotti vicino alla cassa.",
+   "en": "Paolo has to place the new products near the till.",
+   "ko": "파올로는 새 제품을 계산대 근처에 진열해야 해요.",
+   "blank": "collocare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca non sa dove collocare il pianoforte della nonna.",
+   "en": "Francesca doesn't know where to put her grandmother's piano.",
+   "ko": "프란체스카는 할머니의 피아노를 어디에 둘지 몰라요.",
+   "blank": "collocare",
+   "src": "made"
   }
  ],
  "w|colloquio": [
@@ -18191,6 +18255,22 @@
    "blank": "controllo"
   }
  ],
+ "w|contusione": [
+  {
+   "text": "Per la contusione al ginocchio, Paolo consiglia una pomata all'arnica.",
+   "en": "For the bruise on the knee, Paolo recommends an arnica ointment.",
+   "ko": "무릎 타박상에 파올로는 아르니카 연고를 권해요.",
+   "blank": "contusione",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha una contusione sul braccio dopo aver spostato un vecchio armadio.",
+   "en": "Francesca has a bruise on her arm after moving an old wardrobe.",
+   "ko": "프란체스카는 낡은 옷장을 옮기다가 팔에 멍이 들었어요.",
+   "blank": "contusione",
+   "src": "made"
+  }
+ ],
  "w|convenire": [
   {
    "text": "Ci conviene partire presto.",
@@ -19871,6 +19951,22 @@
    "src": "made"
   }
  ],
+ "w|cronico": [
+  {
+   "text": "Paolo conosce bene il signore con la tosse cronica.",
+   "en": "Paolo knows the man with the chronic cough well.",
+   "ko": "파올로는 만성 기침이 있는 그 남성을 잘 알아요.",
+   "blank": "cronica",
+   "src": "made"
+  },
+  {
+   "text": "Il ritardo dei lavori è ormai un problema cronico per Francesca.",
+   "en": "Delays in the work are now a chronic problem for Francesca.",
+   "ko": "공사 지연은 이제 프란체스카에게 고질적인 문제예요.",
+   "blank": "cronico",
+   "src": "made"
+  }
+ ],
  "w|crosta": [
   {
    "text": "A pranzo Stefano lascia sempre la crosta della pizza.",
@@ -21283,6 +21379,22 @@
    "src": "made"
   }
  ],
+ "w|dentale": [
+  {
+   "text": "In farmacia Paolo vende anche filo dentale e spazzolini.",
+   "en": "At the pharmacy Paolo also sells dental floss and toothbrushes.",
+   "ko": "파올로는 약국에서 치실과 칫솔도 팔아요.",
+   "blank": "dentale",
+   "src": "made"
+  },
+  {
+   "text": "Il muratore di Francesca deve saltare un giorno per un controllo dentale.",
+   "en": "Francesca's builder has to miss a day for a dental check-up.",
+   "ko": "프란체스카네 미장공은 치과 검진 때문에 하루 빠져야 해요.",
+   "blank": "dentale",
+   "src": "made"
+  }
+ ],
  "w|dente": [
   {
    "text": "Mi fa male un dente da ieri.",
@@ -22455,6 +22567,22 @@
    "blank": "digitale"
   }
  ],
+ "w|dignitoso": [
+  {
+   "text": "Paolo vuole che anche i clienti poveri ricevano un'assistenza dignitosa.",
+   "en": "Paolo wants even poor customers to receive decent care.",
+   "ko": "파올로는 가난한 손님들도 제대로 된 도움을 받기를 원해요.",
+   "blank": "dignitosa",
+   "src": "made"
+  },
+  {
+   "text": "Con poco budget Francesca vuole comunque un risultato dignitoso.",
+   "en": "With a small budget Francesca still wants a decent result.",
+   "ko": "예산은 적지만 프란체스카는 그래도 번듯한 결과를 원해요.",
+   "blank": "dignitoso",
+   "src": "made"
+  }
+ ],
  "w|dilettante": [
   {
    "text": "Davide ammette che in Excel è ancora un dilettante.",
@@ -23602,6 +23730,22 @@
    "en": "Sara helps the dog stretch out its leg on the examination table.",
    "ko": "사라는 개가 진료대 위에서 다리를 펴도록 도와줘요.",
    "blank": "distendere",
+   "src": "made"
+  }
+ ],
+ "w|disteso": [
+  {
+   "text": "Dopo le ferie Paolo torna in farmacia con il viso disteso.",
+   "en": "After the holidays Paolo comes back to the pharmacy looking relaxed.",
+   "ko": "휴가를 다녀온 파올로는 편안한 얼굴로 약국에 돌아와요.",
+   "blank": "disteso",
+   "src": "made"
+  },
+  {
+   "text": "A lavori finiti, Francesca si gode un pomeriggio disteso in giardino.",
+   "en": "With the work finished, Francesca enjoys a relaxed afternoon in the garden.",
+   "ko": "공사가 끝나자 프란체스카는 정원에서 느긋한 오후를 즐겨요.",
+   "blank": "disteso",
    "src": "made"
   }
  ],
@@ -26217,6 +26361,22 @@
    "src": "made"
   }
  ],
+ "w|epico": [
+  {
+   "text": "La giornata dell'influenza per Paolo è stata epica: duecento clienti.",
+   "en": "For Paolo, flu day was epic: two hundred customers.",
+   "ko": "독감이 돈 날은 파올로에게 엄청났어요. 손님이 이백 명이었거든요.",
+   "blank": "epica",
+   "src": "made"
+  },
+  {
+   "text": "Togliere la vecchia carta da parati è stata un'impresa epica per Francesca.",
+   "en": "Removing the old wallpaper was an epic undertaking for Francesca.",
+   "ko": "낡은 벽지를 뜯어내는 건 프란체스카에게 대단한 대업이었어요.",
+   "blank": "epica",
+   "src": "made"
+  }
+ ],
  "w|epidemia": [
   {
    "text": "Nel libro di storia del figlio di Paolo c'è un capitolo su un'epidemia di peste.",
@@ -28272,6 +28432,22 @@
    "en": "At an old mill along the road Laura buys chestnut flour.",
    "ko": "길가의 오래된 방앗간에서 라우라는 밤 가루를 사요.",
    "blank": "farina",
+   "src": "made"
+  }
+ ],
+ "w|farmaceutico": [
+  {
+   "text": "Paolo lavorava per un'azienda farmaceutica prima di aprire la sua farmacia.",
+   "en": "Paolo worked for a pharmaceutical company before opening his own pharmacy.",
+   "ko": "파올로는 약국을 열기 전에 제약 회사에서 일했어요.",
+   "blank": "farmaceutica",
+   "src": "made"
+  },
+  {
+   "text": "In soffitta Francesca trova vecchi flaconi farmaceutici di vetro blu.",
+   "en": "In the attic Francesca finds old blue glass pharmacy bottles.",
+   "ko": "프란체스카는 다락방에서 파란 유리로 된 옛 약병들을 찾아요.",
+   "blank": "farmaceutici",
    "src": "made"
   }
  ],
@@ -33645,6 +33821,22 @@
    "src": "made"
   }
  ],
+ "w|gonfiore": [
+  {
+   "text": "Per ridurre il gonfiore della caviglia, Paolo consiglia ghiaccio e riposo.",
+   "en": "To reduce the swelling in the ankle, Paolo recommends ice and rest.",
+   "ko": "파올로는 발목 부기를 빼려면 얼음찜질과 휴식을 하라고 해요.",
+   "blank": "gonfiore",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha un gonfiore al pollice dopo una martellata sbagliata.",
+   "en": "Francesca has a swollen thumb after a misplaced hammer blow.",
+   "ko": "망치질을 잘못해서 프란체스카의 엄지가 부었어요.",
+   "blank": "gonfiore",
+   "src": "made"
+  }
+ ],
  "w|gonna": [
   {
    "text": "Luca ha comprato una gonna a fiori per la sua ragazza.",
@@ -35411,6 +35603,22 @@
    "src": "made"
   }
  ],
+ "w|immunitario": [
+  {
+   "text": "In inverno Paolo vende vitamine per rinforzare il sistema immunitario.",
+   "en": "In winter Paolo sells vitamins to strengthen the immune system.",
+   "ko": "겨울에 파올로는 면역 체계를 강화하는 비타민을 팔아요.",
+   "blank": "immunitario",
+   "src": "made"
+  },
+  {
+   "text": "Francesca dice che lavorare all'aria aperta fa bene al sistema immunitario.",
+   "en": "Francesca says working in the open air is good for the immune system.",
+   "ko": "프란체스카는 밖에서 일하는 게 면역 체계에 좋다고 말해요.",
+   "blank": "immunitario",
+   "src": "made"
+  }
+ ],
  "w|impalare": [
   {
    "text": "Nel romanzo storico che legge Luca, il tiranno minaccia di impalare i ribelli.",
@@ -35439,6 +35647,22 @@
    "en": "There's always something to learn.",
    "ko": "배울 점은 항상 있어.",
    "blank": "imparare"
+  }
+ ],
+ "w|imparziale": [
+  {
+   "text": "Paolo cerca di dare un parere imparziale tra due marche di vitamine.",
+   "en": "Paolo tries to give an impartial opinion between two brands of vitamins.",
+   "ko": "파올로는 두 비타민 상표 사이에서 공정하게 의견을 주려고 해요.",
+   "blank": "imparziale",
+   "src": "made"
+  },
+  {
+   "text": "Francesca chiede a un perito imparziale di valutare i danni.",
+   "en": "Francesca asks an impartial surveyor to assess the damage.",
+   "ko": "프란체스카는 공정한 감정인에게 피해를 평가해 달라고 해요.",
+   "blank": "imparziale",
+   "src": "made"
   }
  ],
  "w|impatto": [
@@ -35617,6 +35841,22 @@
    "en": "That book tells of the fall of the empire.",
    "ko": "그 책은 제국의 몰락을 다뤄.",
    "blank": "impero"
+  }
+ ],
+ "w|impertinente": [
+  {
+   "text": "Un ragazzo impertinente salta la fila, e Paolo lo rimanda in fondo.",
+   "en": "A cheeky boy jumps the queue, and Paolo sends him to the back.",
+   "ko": "건방진 소년이 줄을 새치기하자 파올로는 맨 뒤로 보내요.",
+   "blank": "impertinente",
+   "src": "made"
+  },
+  {
+   "text": "Il vicino fa domande impertinenti sui soldi spesi da Francesca.",
+   "en": "The neighbour asks cheeky questions about the money Francesca has spent.",
+   "ko": "이웃은 프란체스카가 쓴 돈에 대해 무례한 질문을 해요.",
+   "blank": "impertinenti",
+   "src": "made"
   }
  ],
  "w|impianto": [
@@ -36512,6 +36752,22 @@
    "en": "Anna complains about the incompetent plumber who broke another pipe.",
    "ko": "안나는 파이프를 또 망가뜨린 무능한 배관공에 대해 불평해요.",
    "blank": "incompetente",
+   "src": "made"
+  }
+ ],
+ "w|incompleto": [
+  {
+   "text": "Paolo restituisce una ricetta incompleta perché manca la firma del medico.",
+   "en": "Paolo hands back an incomplete prescription because the doctor's signature is missing.",
+   "ko": "의사 서명이 빠진 불완전한 처방전이라 파올로는 돌려줘요.",
+   "blank": "incompleta",
+   "src": "made"
+  },
+  {
+   "text": "Il bagno è ancora incompleto, ma Francesca ci si trasferisce lo stesso.",
+   "en": "The bathroom is still unfinished, but Francesca moves in anyway.",
+   "ko": "욕실은 아직 미완성이지만 프란체스카는 그래도 이사해요.",
+   "blank": "incompleto",
    "src": "made"
   }
  ],
@@ -37535,6 +37791,22 @@
    "blank": "informazione"
   }
  ],
+ "w|infortunio": [
+  {
+   "text": "Dopo un infortunio in palestra, un ragazzo chiede a Paolo una fascia elastica.",
+   "en": "After an injury at the gym, a young man asks Paolo for an elastic bandage.",
+   "ko": "체육관에서 다친 한 청년이 파올로에게 탄력 붕대를 달라고 해요.",
+   "blank": "infortunio",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha assicurato gli operai contro ogni infortunio sul lavoro.",
+   "en": "Francesca has insured the workers against any accident on the job.",
+   "ko": "프란체스카는 일꾼들에게 산재 보험을 들어 줬어요.",
+   "blank": "infortunio",
+   "src": "made"
+  }
+ ],
  "w|infrangere": [
   {
    "text": "Un piatto si è infranto sul pavimento proprio mentre Stefano impiattava.",
@@ -37658,6 +37930,22 @@
    "en": "According to Giulia the new bridge over the stream is a masterpiece of engineering.",
    "ko": "줄리아는 계곡 위 새 다리가 공학의 걸작이라고 생각해요.",
    "blank": "ingegneria",
+   "src": "made"
+  }
+ ],
+ "w|ingegnoso": [
+  {
+   "text": "Paolo ha trovato un sistema ingegnoso per ordinare le scatole sugli scaffali.",
+   "en": "Paolo has found an ingenious system for arranging the boxes on the shelves.",
+   "ko": "파올로는 선반의 상자를 정리하는 기발한 방법을 찾아냈어요.",
+   "blank": "ingegnoso",
+   "src": "made"
+  },
+  {
+   "text": "Il falegname ha un'idea ingegnosa per salvare le travi di Francesca.",
+   "en": "The carpenter has an ingenious idea for saving Francesca's beams.",
+   "ko": "목수에게 프란체스카네 들보를 살릴 기발한 생각이 있어요.",
+   "blank": "ingegnosa",
    "src": "made"
   }
  ],
@@ -38411,6 +38699,22 @@
    "en": "It was nice, all in all.",
    "ko": "뭐, 전반적으로 좋았어.",
    "blank": "insomma"
+  }
+ ],
+ "w|insonnia": [
+  {
+   "text": "Molti clienti chiedono a Paolo una tisana contro l'insonnia.",
+   "en": "Many customers ask Paolo for a herbal tea for insomnia.",
+   "ko": "많은 손님들이 파올로에게 불면증에 좋은 허브차를 찾아요.",
+   "blank": "insonnia",
+   "src": "made"
+  },
+  {
+   "text": "Il pensiero dei costi provoca a Francesca qualche notte di insonnia.",
+   "en": "Thinking about the costs gives Francesca a few sleepless nights.",
+   "ko": "비용 생각에 프란체스카는 며칠 밤 잠을 못 이뤄요.",
+   "blank": "insonnia",
+   "src": "made"
   }
  ],
  "w|insopportabile": [
@@ -44652,6 +44956,22 @@
    "en": "Chiara confesses that her novel is mediocre and she won't send it to any publisher.",
    "ko": "키아라는 자기 소설이 그저 그래서 어느 출판사에도 보내지 않겠다고 털어놓아요.",
    "blank": "mediocre",
+   "src": "made"
+  }
+ ],
+ "w|meditare": [
+  {
+   "text": "Prima di cambiare fornitore, Paolo ha bisogno di meditare a lungo.",
+   "en": "Before changing suppliers, Paolo needs to think it over for a long time.",
+   "ko": "파올로는 거래처를 바꾸기 전에 오래 곰곰이 생각해야 해요.",
+   "blank": "meditare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca si siede in giardino a meditare su come sistemare la cucina.",
+   "en": "Francesca sits in the garden to ponder how to arrange the kitchen.",
+   "ko": "프란체스카는 정원에 앉아 부엌을 어떻게 꾸밀지 곰곰이 생각해요.",
+   "blank": "meditare",
    "src": "made"
   }
  ],
@@ -51657,6 +51977,22 @@
    "src": "made"
   }
  ],
+ "w|palpebra": [
+  {
+   "text": "Un cliente ha la palpebra gonfia e Paolo gli consiglia di andare dal medico.",
+   "en": "A customer has a swollen eyelid and Paolo advises him to see a doctor.",
+   "ko": "한 손님의 눈꺼풀이 부어서 파올로는 병원에 가 보라고 해요.",
+   "blank": "palpebra",
+   "src": "made"
+  },
+  {
+   "text": "Un granello di calce è finito sotto la palpebra di Francesca.",
+   "en": "A grain of lime got stuck under Francesca's eyelid.",
+   "ko": "석회 알갱이가 프란체스카의 눈꺼풀 아래로 들어갔어요.",
+   "blank": "palpebra",
+   "src": "made"
+  }
+ ],
  "w|palude": [
   {
    "text": "Andrea indossa gli stivali alti per attraversare la palude.",
@@ -52823,6 +53159,22 @@
    "src": "made"
   }
  ],
+ "w|pastiglia": [
+  {
+   "text": "Paolo ricorda al signore di prendere una pastiglia dopo ogni pasto.",
+   "en": "Paolo reminds the man to take a tablet after every meal.",
+   "ko": "파올로는 그 남성에게 식사 후마다 알약 하나를 먹으라고 다시 말해요.",
+   "blank": "pastiglia",
+   "src": "made"
+  },
+  {
+   "text": "Dopo una giornata di lavori, Francesca prende una pastiglia per il mal di testa.",
+   "en": "After a day of renovation, Francesca takes a tablet for her headache.",
+   "ko": "하루 종일 공사를 하고 나서 프란체스카는 두통약 한 알을 먹어요.",
+   "blank": "pastiglia",
+   "src": "made"
+  }
+ ],
  "w|pasto": [
   {
    "text": "Il pasto principale è la cena.",
@@ -52921,6 +53273,22 @@
    "en": "It looks pathetic to pretend you know nothing.",
    "ko": "아무것도 모르는 척하는 건 한심해 보여.",
    "blank": "patetico"
+  }
+ ],
+ "w|patologia": [
+  {
+   "text": "Paolo spiega che per una patologia così serve la ricetta del medico.",
+   "en": "Paolo explains that for a condition like that you need a doctor's prescription.",
+   "ko": "그런 질환에는 의사 처방전이 필요하다고 파올로가 설명해요.",
+   "blank": "patologia",
+   "src": "made"
+  },
+  {
+   "text": "Il tecnico dice a Francesca che la casa soffre di una vecchia patologia: l'umidità.",
+   "en": "The technician tells Francesca that the house suffers from an old ailment: damp.",
+   "ko": "기술자는 프란체스카에게 그 집이 습기라는 오래된 병을 앓고 있다고 말해요.",
+   "blank": "patologia",
+   "src": "made"
   }
  ],
  "w|patria": [
@@ -55655,6 +56023,22 @@
    "blank": "pollo"
   }
  ],
+ "w|polmonare": [
+  {
+   "text": "Paolo prepara uno spray per un'anziana con un'infezione polmonare.",
+   "en": "Paolo prepares an inhaler for an elderly woman with a lung infection.",
+   "ko": "파올로는 폐 감염이 있는 할머니를 위해 흡입기를 준비해요.",
+   "blank": "polmonare",
+   "src": "made"
+  },
+  {
+   "text": "Per la muffa sui muri, Francesca teme per la salute polmonare dei figli.",
+   "en": "Because of the mould on the walls, Francesca worries about her children's lung health.",
+   "ko": "벽 곰팡이 때문에 프란체스카는 아이들의 폐 건강이 걱정돼요.",
+   "blank": "polmonare",
+   "src": "made"
+  }
+ ],
  "w|polmone": [
   {
    "text": "Il medico ha controllato il polmone destro.",
@@ -57264,6 +57648,22 @@
    "en": "The summer festival brings prestige to Giulia's town.",
    "ko": "여름 축제는 줄리아의 마을에 명성을 안겨 줘요.",
    "blank": "prestigio",
+   "src": "made"
+  }
+ ],
+ "w|prestigioso": [
+  {
+   "text": "Paolo si è laureato in un'università prestigiosa, ma preferisce la farmacia di paese.",
+   "en": "Paolo graduated from a prestigious university, but he prefers the village pharmacy.",
+   "ko": "파올로는 명문 대학을 나왔지만 동네 약국을 더 좋아해요.",
+   "blank": "prestigiosa",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha affidato il progetto a uno studio di architettura molto prestigioso.",
+   "en": "Francesca entrusted the project to a very prestigious architecture firm.",
+   "ko": "프란체스카는 아주 이름난 건축 사무소에 설계를 맡겼어요.",
+   "blank": "prestigioso",
    "src": "made"
   }
  ],
@@ -58965,6 +59365,22 @@
    "src": "made"
   }
  ],
+ "w|prurito": [
+  {
+   "text": "Una signora chiede a Paolo qualcosa contro il prurito delle punture di zanzara.",
+   "en": "A woman asks Paolo for something for the itching from mosquito bites.",
+   "ko": "한 여성이 모기 물린 데 가려움에 좋은 걸 파올로에게 물어요.",
+   "blank": "prurito",
+   "src": "made"
+  },
+  {
+   "text": "La polvere della vecchia casa dà a Francesca un forte prurito al naso.",
+   "en": "The dust in the old house gives Francesca a bad itch in her nose.",
+   "ko": "낡은 집 먼지 때문에 프란체스카는 코가 몹시 간지러워요.",
+   "blank": "prurito",
+   "src": "made"
+  }
+ ],
  "w|psichiatra": [
   {
    "text": "La sorella di Matteo fa la psichiatra e gli chiede spesso dei suoi animali.",
@@ -58978,6 +59394,22 @@
    "en": "Sara manages the schedule of a well-known psychiatrist in town.",
    "ko": "사라는 시내에서 유명한 정신과 의사의 일정을 관리해요.",
    "blank": "psichiatra",
+   "src": "made"
+  }
+ ],
+ "w|psichico": [
+  {
+   "text": "Paolo sa che lo stress può avere effetti sul benessere psichico.",
+   "en": "Paolo knows that stress can affect psychological well-being.",
+   "ko": "파올로는 스트레스가 정신 건강에 영향을 줄 수 있다는 걸 알아요.",
+   "blank": "psichico",
+   "src": "made"
+  },
+  {
+   "text": "Il trasloco ha messo alla prova l'equilibrio psichico di Francesca.",
+   "en": "The move has put Francesca's mental balance to the test.",
+   "ko": "이사가 프란체스카의 정신적 균형을 시험했어요.",
+   "blank": "psichico",
    "src": "made"
   }
  ],
@@ -60262,6 +60694,22 @@
    "en": "Anna uses an old X-ray of a hand as a model for her drawing.",
    "ko": "안나는 오래된 손 엑스레이를 그림 본으로 써요.",
    "blank": "radiografia",
+   "src": "made"
+  }
+ ],
+ "w|rado": [
+  {
+   "text": "Paolo nota che i capelli del vecchio cliente sono sempre più radi.",
+   "en": "Paolo notices that his old customer's hair is getting thinner and thinner.",
+   "ko": "파올로는 단골 할아버지의 머리숱이 점점 줄어드는 걸 알아채요.",
+   "blank": "radi",
+   "src": "made"
+  },
+  {
+   "text": "Gli alberi del giardino di Francesca sono radi e un po' malati.",
+   "en": "The trees in Francesca's garden are sparse and a bit sickly.",
+   "ko": "프란체스카네 정원 나무들은 듬성듬성하고 좀 병들었어요.",
+   "blank": "radi",
    "src": "made"
   }
  ],
@@ -62353,6 +62801,22 @@
    "src": "made"
   }
  ],
+ "w|rianimazione": [
+  {
+   "text": "Paolo ha seguito un corso di rianimazione per le emergenze in farmacia.",
+   "en": "Paolo took a resuscitation course for emergencies in the pharmacy.",
+   "ko": "파올로는 약국 응급 상황에 대비해 심폐소생술 강좌를 들었어요.",
+   "blank": "rianimazione",
+   "src": "made"
+  },
+  {
+   "text": "Francesca scherza che la vecchia casa ha bisogno di una rianimazione completa.",
+   "en": "Francesca jokes that the old house needs a full resuscitation.",
+   "ko": "프란체스카는 낡은 집에 완전한 심폐소생술이 필요하다고 농담해요.",
+   "blank": "rianimazione",
+   "src": "made"
+  }
+ ],
  "w|riaprire": [
   {
    "text": "Andrea non deve riaprire il forno finché il soufflé non è pronto.",
@@ -62993,6 +63457,22 @@
    "en": "Stop making a fool of yourself in public.",
    "ko": "사람들 앞에서 우스꽝스러운 짓 그만해.",
    "blank": "ridicolo"
+  }
+ ],
+ "w|ridire": [
+  {
+   "text": "Sui consigli di Paolo nessun cliente ha mai avuto da ridire.",
+   "en": "No customer has ever found fault with Paolo's advice.",
+   "ko": "파올로의 조언에 이의를 단 손님은 한 명도 없어요.",
+   "blank": "ridire",
+   "src": "made"
+  },
+  {
+   "text": "La suocera di Francesca trova sempre qualcosa da ridire sui colori.",
+   "en": "Francesca's mother-in-law always finds something to criticize about the colours.",
+   "ko": "프란체스카의 시어머니는 색깔에 늘 트집을 잡아요.",
+   "blank": "ridire",
+   "src": "made"
   }
  ],
  "w|ridotto": [
@@ -63922,6 +64402,22 @@
    "en": "For Christmas lunch, Elena's hotel serves a turkey stuffed with chestnuts.",
    "ko": "엘레나네 호텔은 크리스마스 점심에 밤을 채운 칠면조를 내요.",
    "blank": "ripieno",
+   "src": "made"
+  }
+ ],
+ "w|riporre": [
+  {
+   "text": "A fine giornata Paolo deve riporre i farmaci nel frigorifero.",
+   "en": "At the end of the day Paolo has to put the medicines back in the fridge.",
+   "ko": "하루가 끝나면 파올로는 약을 냉장고에 다시 넣어 둬야 해요.",
+   "blank": "riporre",
+   "src": "made"
+  },
+  {
+   "text": "Francesca decide di riporre gli attrezzi in cantina ogni sera.",
+   "en": "Francesca decides to put the tools away in the cellar every evening.",
+   "ko": "프란체스카는 매일 저녁 공구를 지하실에 치워 두기로 해요.",
+   "blank": "riporre",
    "src": "made"
   }
  ],
@@ -67084,6 +67580,22 @@
    "en": "Martina gets a splinter in her finger touching the damaged desk.",
    "ko": "마르티나는 낡은 책상을 만지다가 손가락에 가시가 박혀요.",
    "blank": "scheggia",
+   "src": "made"
+  }
+ ],
+ "w|scheletro": [
+  {
+   "text": "Nel retro della farmacia di Paolo c'è uno scheletro di plastica per spiegare le ossa.",
+   "en": "In the back of Paolo's pharmacy there's a plastic skeleton for explaining the bones.",
+   "ko": "파올로네 약국 안쪽에는 뼈를 설명하는 플라스틱 골격 모형이 있어요.",
+   "blank": "scheletro",
+   "src": "made"
+  },
+  {
+   "text": "Dei muri vecchi resta solo lo scheletro, ma Francesca è ottimista.",
+   "en": "Only the skeleton of the old walls remains, but Francesca is optimistic.",
+   "ko": "낡은 벽은 뼈대만 남았지만 프란체스카는 낙관적이에요.",
+   "blank": "scheletro",
    "src": "made"
   }
  ],
@@ -70459,6 +70971,22 @@
    "src": "made"
   }
  ],
+ "w|simbolico": [
+  {
+   "text": "Per le famiglie in difficoltà Paolo chiede solo un prezzo simbolico.",
+   "en": "For struggling families Paolo charges only a token price.",
+   "ko": "파올로는 어려운 가정에는 상징적인 값만 받아요.",
+   "blank": "simbolico",
+   "src": "made"
+  },
+  {
+   "text": "Il vecchio proprietario ha venduto la casa a Francesca per una cifra quasi simbolica.",
+   "en": "The old owner sold the house to Francesca for an almost token sum.",
+   "ko": "옛 주인은 거의 상징적인 금액으로 프란체스카에게 집을 팔았어요.",
+   "blank": "simbolica",
+   "src": "made"
+  }
+ ],
  "w|simbolo": [
   {
    "text": "La colomba è un simbolo di pace.",
@@ -71516,6 +72044,22 @@
    "en": "Chiara paid a tidy sum for the ticket, but the train is very comfortable.",
    "ko": "키아라는 표값으로 꽤 큰돈을 냈지만 기차가 아주 편해요.",
    "blank": "somma",
+   "src": "made"
+  }
+ ],
+ "w|sommerso": [
+  {
+   "text": "Paolo è sommerso di richieste di mascherine all'inizio dell'inverno.",
+   "en": "Paolo is swamped with requests for masks at the start of winter.",
+   "ko": "겨울이 시작되면 파올로는 마스크 문의에 파묻혀요.",
+   "blank": "sommerso",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il temporale, la cantina di Francesca è rimasta sommersa per due giorni.",
+   "en": "After the storm, Francesca's cellar stayed flooded for two days.",
+   "ko": "폭풍우 뒤 프란체스카네 지하실은 이틀 동안 물에 잠겨 있었어요.",
+   "blank": "sommersa",
    "src": "made"
   }
  ],
@@ -73277,6 +73821,22 @@
    "src": "made"
   }
  ],
+ "w|spinale": [
+  {
+   "text": "Paolo spiega a un cliente che il midollo spinale passa dentro la colonna vertebrale.",
+   "en": "Paolo explains to a customer that the spinal cord runs inside the spine.",
+   "ko": "파올로는 척수가 척추 안을 지나간다고 손님에게 설명해요.",
+   "blank": "spinale",
+   "src": "made"
+  },
+  {
+   "text": "Il medico avverte Francesca: sollevare pesi così può causare problemi alla colonna spinale.",
+   "en": "The doctor warns Francesca: lifting weights like that can cause spinal problems.",
+   "ko": "의사는 그렇게 무거운 걸 들면 척추에 문제가 생길 수 있다고 프란체스카에게 경고해요.",
+   "blank": "spinale",
+   "src": "made"
+  }
+ ],
  "w|spingere": [
   {
    "text": "Non spingere, c'è gente davanti.",
@@ -74054,6 +74614,22 @@
    "en": "Carrying boxes up and down the stairs ends up tiring out even Sara.",
    "ko": "계단으로 상자를 오르내리다 보니 사라마저 지쳐 버려요.",
    "blank": "stancare",
+   "src": "made"
+  }
+ ],
+ "w|stanchezza": [
+  {
+   "text": "Contro la stanchezza di primavera Paolo consiglia magnesio e potassio.",
+   "en": "For spring tiredness Paolo recommends magnesium and potassium.",
+   "ko": "봄철 피로에 파올로는 마그네슘과 칼륨을 권해요.",
+   "blank": "stanchezza",
+   "src": "made"
+  },
+  {
+   "text": "La sera Francesca crolla dalla stanchezza sul divano coperto di teli.",
+   "en": "In the evening Francesca collapses from exhaustion on the sofa covered with dust sheets.",
+   "ko": "저녁이면 프란체스카는 천을 덮어 둔 소파에 지쳐 쓰러져요.",
+   "blank": "stanchezza",
    "src": "made"
   }
  ],
@@ -77183,6 +77759,22 @@
    "src": "made"
   }
  ],
+ "w|tendine": [
+  {
+   "text": "Un maratoneta chiede a Paolo una crema per il tendine d'Achille.",
+   "en": "A marathon runner asks Paolo for a cream for his Achilles tendon.",
+   "ko": "한 마라톤 선수가 파올로에게 아킬레스건에 바를 크림을 달라고 해요.",
+   "blank": "tendine",
+   "src": "made"
+  },
+  {
+   "text": "Francesca si è infiammata un tendine a forza di dipingere il soffitto.",
+   "en": "Francesca has inflamed a tendon from painting the ceiling so much.",
+   "ko": "천장을 계속 칠하다가 프란체스카는 힘줄에 염증이 생겼어요.",
+   "blank": "tendine",
+   "src": "made"
+  }
+ ],
  "w|tenente": [
   {
    "text": "Il tenente ha dato l'ordine di partire.",
@@ -79199,6 +79791,22 @@
    "src": "made"
   }
  ],
+ "w|trasfusione": [
+  {
+   "text": "Paolo spiega a uno studente come funziona una trasfusione di sangue.",
+   "en": "Paolo explains to a student how a blood transfusion works.",
+   "ko": "파올로는 학생에게 수혈이 어떻게 이루어지는지 설명해요.",
+   "blank": "trasfusione",
+   "src": "made"
+  },
+  {
+   "text": "Il conto della banca ha bisogno di una trasfusione di soldi, scherza Francesca.",
+   "en": "Her bank account needs a transfusion of money, Francesca jokes.",
+   "ko": "은행 계좌에 돈을 수혈해야 한다고 프란체스카가 농담해요.",
+   "blank": "trasfusione",
+   "src": "made"
+  }
+ ],
  "w|traslocare": [
   {
    "text": "Simone deve traslocare al quarto piano entro la fine del mese.",
@@ -79410,6 +80018,22 @@
    "en": "The May hailstorm was traumatic for Elena's plants.",
    "ko": "오월 우박은 엘레나의 식물들에게 큰 타격이었어요.",
    "blank": "traumatica",
+   "src": "made"
+  }
+ ],
+ "w|travolgere": [
+  {
+   "text": "Il lavoro della stagione influenzale rischia di travolgere Paolo.",
+   "en": "The workload of flu season threatens to overwhelm Paolo.",
+   "ko": "독감철 일이 파올로를 덮칠 지경이에요.",
+   "blank": "travolgere",
+   "src": "made"
+  },
+  {
+   "text": "Le spese impreviste rischiano di travolgere Francesca.",
+   "en": "The unexpected expenses threaten to overwhelm Francesca.",
+   "ko": "예상 못 한 지출이 프란체스카를 덮칠 지경이에요.",
+   "blank": "travolgere",
    "src": "made"
   }
  ],
@@ -81985,6 +82609,22 @@
    "en": "Run toward the exit.",
    "ko": "출구 쪽으로 뛰어.",
    "blank": "verso"
+  }
+ ],
+ "w|vertebra": [
+  {
+   "text": "Il signor Bruno si è incrinato una vertebra e Paolo gli consiglia un busto.",
+   "en": "Mr Bruno has cracked a vertebra and Paolo recommends a brace.",
+   "ko": "브루노 씨가 척추뼈에 금이 가서 파올로는 보조기를 권해요.",
+   "blank": "vertebra",
+   "src": "made"
+  },
+  {
+   "text": "Sollevando un sacco di cemento, Francesca ha sentito una fitta a una vertebra.",
+   "en": "Lifting a bag of cement, Francesca felt a sharp pain in a vertebra.",
+   "ko": "시멘트 포대를 들다가 프란체스카는 척추뼈 하나에 찌릿한 통증을 느꼈어요.",
+   "blank": "vertebra",
+   "src": "made"
   }
  ],
  "w|verticale": [

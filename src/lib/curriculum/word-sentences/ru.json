@@ -7259,6 +7259,22 @@
    "src": "made"
   }
  ],
+ "w|возбуждать": [
+  {
+   "text": "Такие заголовки только возбуждают ненужные споры, предупредил Сергея редактор.",
+   "en": "Headlines like that only stir up needless arguments, the editor warned Sergei.",
+   "ko": "그런 제목은 쓸데없는 논쟁만 부추긴다고 편집장이 세르게이에게 경고했어요.",
+   "blank": "возбуждают",
+   "src": "made"
+  },
+  {
+   "text": "Запах жареных сосисок возбуждает аппетит даже у Марии, которая не любит мясо.",
+   "en": "The smell of grilled sausages whets the appetite even of Maria, who doesn't like meat.",
+   "ko": "구운 소시지 냄새는 고기를 좋아하지 않는 마리아의 입맛까지 돋워요.",
+   "blank": "возбуждает",
+   "src": "made"
+  }
+ ],
  "w|возвращать": [
   {
    "text": "Иван не забывает возвращать чужие инструменты на место.",
@@ -7303,6 +7319,22 @@
    "ko": "그녀는 늦게 들어온 딸을 혼냈어요.",
    "blank": "возвращение",
    "src": "tatoeba:2832665/odexed en:313125/CK"
+  }
+ ],
+ "w|возглавить": [
+  {
+   "text": "Сергею предложили возглавить отдел новостей.",
+   "en": "Sergei was offered the chance to head the news department.",
+   "ko": "세르게이는 뉴스 부서를 이끌어 달라는 제안을 받았어요.",
+   "blank": "возглавить",
+   "src": "made"
+  },
+  {
+   "text": "Когда проводник заболел, группу пришлось возглавить Марии.",
+   "en": "When the guide fell ill, Maria had to lead the group.",
+   "ko": "안내인이 아프자 마리아가 일행을 이끌어야 했어요.",
+   "blank": "возглавить",
+   "src": "made"
   }
  ],
  "w|воздействие": [
@@ -8999,6 +9031,22 @@
    "src": "made"
   }
  ],
+ "w|вслед": [
+  {
+   "text": "Сергей крикнул вслед уходящему фотографу, что тот забыл объектив.",
+   "en": "Sergei shouted after the departing photographer that he had forgotten his lens.",
+   "ko": "세르게이는 떠나는 사진기자 뒤에 대고 렌즈를 두고 갔다고 소리쳤어요.",
+   "blank": "вслед",
+   "src": "made"
+  },
+  {
+   "text": "Мария долго махала вслед лодке, пока та не скрылась за островом.",
+   "en": "Maria waved after the boat for a long time until it disappeared behind the island.",
+   "ko": "마리아는 배가 섬 뒤로 사라질 때까지 한참 손을 흔들었어요.",
+   "blank": "вслед",
+   "src": "made"
+  }
+ ],
  "w|вслух": [
   {
    "text": "Хочешь, чтоб я прочитал тебе это вслух?",
@@ -10281,6 +10329,38 @@
    "blank": "выпил"
   }
  ],
+ "w|выплата": [
+  {
+   "text": "Сергей ждёт выплату гонорара за большой репортаж.",
+   "en": "Sergei is waiting for the fee payment for a big report.",
+   "ko": "세르게이는 큰 보도 기사에 대한 원고료 지급을 기다리고 있어요.",
+   "blank": "выплату",
+   "src": "made"
+  },
+  {
+   "text": "Мария потратила на снаряжение первую выплату с новой работы.",
+   "en": "Maria spent her first paycheck from the new job on gear.",
+   "ko": "마리아는 새 직장에서 받은 첫 급여를 캠핑 장비에 썼어요.",
+   "blank": "выплату",
+   "src": "made"
+  }
+ ],
+ "w|выполнение": [
+  {
+   "text": "Редактор следит за выполнением плана, а Сергей отвечает за спортивные новости.",
+   "en": "The editor oversees the fulfillment of the plan, and Sergei is in charge of sports news.",
+   "ko": "편집장은 계획 이행을 챙기고 세르게이는 스포츠 뉴스를 맡아요.",
+   "blank": "выполнением",
+   "src": "made"
+  },
+  {
+   "text": "Мария раздала всем задания и проследила за их выполнением.",
+   "en": "Maria handed out tasks to everyone and made sure they were carried out.",
+   "ko": "마리아는 모두에게 할 일을 나눠 주고 제대로 하는지 챙겼어요.",
+   "blank": "выполнением",
+   "src": "made"
+  }
+ ],
  "w|выполнить": [
   {
    "text": "Мне не выполнить эту работу без тебя.",
@@ -10694,6 +10774,22 @@
    "en": "A photo exhibition opened in the pool lobby, and Natalia found herself in it.",
    "ko": "수영장 로비에 사진 전시회가 열렸는데 나탈리야는 거기서 자기 사진을 찾았어요.",
    "blank": "выставка",
+   "src": "made"
+  }
+ ],
+ "w|выставлять": [
+  {
+   "text": "Сергей не любит выставлять своё имя на первой полосе.",
+   "en": "Sergei doesn't like to put his name on the front page.",
+   "ko": "세르게이는 자기 이름을 1면에 내세우는 걸 좋아하지 않아요.",
+   "blank": "выставлять",
+   "src": "made"
+  },
+  {
+   "text": "Мария попросила друзей не выставлять еду на ночь из-за медведей.",
+   "en": "Maria asked her friends not to leave food out overnight because of bears.",
+   "ko": "마리아는 곰 때문에 밤에 음식을 밖에 내놓지 말라고 친구들에게 부탁했어요.",
+   "blank": "выставлять",
    "src": "made"
   }
  ],
@@ -13853,6 +13949,22 @@
    "src": "tatoeba:9038781/carlosalberto en:9038734/carlosalberto"
   }
  ],
+ "w|дежурство": [
+  {
+   "text": "В выходные у Сергея ночное дежурство в редакции.",
+   "en": "Sergei has the night shift at the newsroom this weekend.",
+   "ko": "세르게이는 주말에 편집국에서 야간 당직을 서요.",
+   "blank": "дежурство",
+   "src": "made"
+  },
+  {
+   "text": "Ночное дежурство у костра досталось Марии и её брату.",
+   "en": "Maria and her brother got the night watch by the campfire.",
+   "ko": "모닥불 옆 밤 당번은 마리아와 마리아의 남동생 몫이 됐어요.",
+   "blank": "дежурство",
+   "src": "made"
+  }
+ ],
  "w|действие": [
   {
    "text": "Действие имело место в горной деревне.",
@@ -14539,6 +14651,22 @@
    "src": "made"
   }
  ],
+ "w|дизайнер": [
+  {
+   "text": "Сергей попросил дизайнера сделать обложку ярче.",
+   "en": "Sergei asked the designer to make the cover brighter.",
+   "ko": "세르게이는 디자이너에게 표지를 더 밝게 만들어 달라고 했어요.",
+   "blank": "дизайнера",
+   "src": "made"
+  },
+  {
+   "text": "Подруга Марии работает дизайнером и даже палатку ставит красиво.",
+   "en": "Maria's friend works as a designer and even pitches a tent beautifully.",
+   "ko": "마리아의 친구는 디자이너인데 텐트도 예쁘게 쳐요.",
+   "blank": "дизайнером",
+   "src": "made"
+  }
+ ],
  "w|дикий": [
   {
    "text": "Что за дикий способ вести дела!",
@@ -14648,6 +14776,22 @@
    "en": "Natalya runs along the embankment every morning, and her favorite distance ends at the hotel.",
    "ko": "나탈리야는 아침마다 강변을 달리는데, 좋아하는 코스는 호텔 앞에서 끝나요.",
    "blank": "дистанция",
+   "src": "made"
+  }
+ ],
+ "w|дисциплина": [
+  {
+   "text": "В редакции строгая дисциплина: Сергей сдаёт тексты точно в срок.",
+   "en": "The newsroom has strict discipline: Sergei hands in his texts exactly on time.",
+   "ko": "편집국은 규율이 엄격해서 세르게이는 글을 정확히 마감에 맞춰 내요.",
+   "blank": "дисциплина",
+   "src": "made"
+  },
+  {
+   "text": "В лагере у Марии своя дисциплина: подъём на рассвете и никакого мусора.",
+   "en": "Maria's camp has its own discipline: up at dawn and no litter.",
+   "ko": "마리아의 캠프에는 나름의 규칙이 있어요. 새벽에 일어나고 쓰레기는 절대 안 돼요.",
+   "blank": "дисциплина",
    "src": "made"
   }
  ],
@@ -16089,6 +16233,22 @@
    "ko": "네 신상 파일을 봤어.",
    "blank": "досье",
    "src": "tatoeba:3800641/odexed en:2360307/CK"
+  }
+ ],
+ "w|дотла": [
+  {
+   "text": "Сергей написал репортаж о складе, который сгорел дотла за одну ночь.",
+   "en": "Sergei wrote a report about a warehouse that burned to the ground in one night.",
+   "ko": "세르게이는 하룻밤 사이에 다 타 버린 창고에 관한 기사를 썼어요.",
+   "blank": "дотла",
+   "src": "made"
+  },
+  {
+   "text": "Мария всегда заливает костёр водой, чтобы лес не сгорел дотла.",
+   "en": "Maria always douses the fire with water so the forest doesn't burn to the ground.",
+   "ko": "마리아는 숲이 다 타 버리지 않게 늘 모닥불에 물을 부어요.",
+   "blank": "дотла",
+   "src": "made"
   }
  ],
  "w|доход": [
@@ -18439,6 +18599,22 @@
    "src": "made"
   }
  ],
+ "w|загадать": [
+  {
+   "text": "Коллеги предложили Сергею загадать желание, когда газета вышла в тысячный раз.",
+   "en": "His colleagues suggested Sergei make a wish when the paper came out for the thousandth time.",
+   "ko": "신문이 천 번째로 나온 날 동료들은 세르게이에게 소원을 빌어 보라고 했어요.",
+   "blank": "загадать",
+   "src": "made"
+  },
+  {
+   "text": "У костра Мария предложила загадать друг другу загадки.",
+   "en": "By the campfire Maria suggested they ask each other riddles.",
+   "ko": "모닥불 가에서 마리아는 서로 수수께끼를 내 보자고 했어요.",
+   "blank": "загадать",
+   "src": "made"
+  }
+ ],
  "w|загадка": [
   {
    "text": "Для Ивана остаётся загадкой, как повар делает такой нежный соус.",
@@ -18548,6 +18724,22 @@
    "en": "Tatiana cut out a headline about her village from the district newspaper.",
    "ko": "타티야나는 지역 신문에서 자기 마을에 관한 제목을 오려 냈어요.",
    "blank": "заголовок",
+   "src": "made"
+  }
+ ],
+ "w|загрузить": [
+  {
+   "text": "Сергей не успел загрузить фотографии на сайт до полуночи.",
+   "en": "Sergei didn't manage to upload the photos to the website before midnight.",
+   "ko": "세르게이는 자정 전에 사진을 사이트에 올리지 못했어요.",
+   "blank": "загрузить",
+   "src": "made"
+  },
+  {
+   "text": "Мария помогла загрузить рюкзаки и палатки в багажник.",
+   "en": "Maria helped load the backpacks and tents into the trunk.",
+   "ko": "마리아는 배낭과 텐트를 트렁크에 싣는 걸 도왔어요.",
+   "blank": "загрузить",
    "src": "made"
   }
  ],
@@ -21059,6 +21251,22 @@
    "src": "tatoeba:443776/Hellerick en:28867/CK"
   }
  ],
+ "w|защищаться": [
+  {
+   "text": "Чиновнику пришлось защищаться от неудобных вопросов Сергея.",
+   "en": "The official had to defend himself against Sergei's awkward questions.",
+   "ko": "그 공무원은 세르게이의 곤란한 질문에 방어해야 했어요.",
+   "blank": "защищаться",
+   "src": "made"
+  },
+  {
+   "text": "От комаров Марии пришлось защищаться дымом от костра.",
+   "en": "Maria had to protect herself from the mosquitoes with smoke from the fire.",
+   "ko": "마리아는 모닥불 연기로 모기를 막아야 했어요.",
+   "blank": "защищаться",
+   "src": "made"
+  }
+ ],
  "w|заявить": [
   {
    "text": "Мне следовало заявить об этом в полицию.",
@@ -23133,6 +23341,22 @@
    "src": "made"
   }
  ],
+ "w|инициатива": [
+  {
+   "text": "Сергей проявил инициативу и сам поехал на место аварии.",
+   "en": "Sergei showed initiative and went to the scene of the accident himself.",
+   "ko": "세르게이는 스스로 나서서 사고 현장에 직접 갔어요.",
+   "blank": "инициативу",
+   "src": "made"
+  },
+  {
+   "text": "Поход к водопаду был инициативой Марии, и никто не пожалел.",
+   "en": "The hike to the waterfall was Maria's initiative, and nobody regretted it.",
+   "ko": "폭포까지 가자고 한 건 마리아였는데 아무도 후회하지 않았어요.",
+   "blank": "инициативой",
+   "src": "made"
+  }
+ ],
  "w|иногда": [
   {
    "text": "Иногда лучше промолчать.",
@@ -24871,6 +25095,22 @@
    "src": "made"
   }
  ],
+ "w|категория": [
+  {
+   "text": "Репортаж Сергея номинировали на премию в категории «Лучшее расследование».",
+   "en": "Sergei's report was nominated for an award in the \"Best Investigation\" category.",
+   "ko": "세르게이의 보도는 '최우수 탐사 보도' 부문 상 후보에 올랐어요.",
+   "blank": "категории",
+   "src": "made"
+  },
+  {
+   "text": "Мария выбрала палатку лёгкой категории, чтобы не тащить лишний вес.",
+   "en": "Maria chose a tent in the lightweight category so as not to haul extra weight.",
+   "ko": "마리아는 쓸데없는 무게를 지고 가지 않으려고 경량급 텐트를 골랐어요.",
+   "blank": "категории",
+   "src": "made"
+  }
+ ],
  "w|катиться": [
   {
    "text": "Алексей пишет, что жизнь катится своим чередом.",
@@ -24995,6 +25235,22 @@
    "en": "I live in this apartment.",
    "ko": "나는 이 아파트에 살아.",
    "blank": "квартире"
+  }
+ ],
+ "w|кейс": [
+  {
+   "text": "Сергей носит ноутбук и диктофон в старом металлическом кейсе.",
+   "en": "Sergei carries his laptop and voice recorder in an old metal case.",
+   "ko": "세르게이는 노트북과 녹음기를 낡은 금속 케이스에 넣어 다녀요.",
+   "blank": "кейсе",
+   "src": "made"
+  },
+  {
+   "text": "Мария сложила рыболовные крючки в маленький пластиковый кейс.",
+   "en": "Maria put the fishing hooks into a small plastic case.",
+   "ko": "마리아는 낚싯바늘을 작은 플라스틱 케이스에 넣었어요.",
+   "blank": "кейс",
+   "src": "made"
   }
  ],
  "w|кекс": [
@@ -26870,6 +27126,22 @@
    "en": "Elena didn't want a conflict and silently gave up the lower berth.",
    "ko": "옐레나는 다투기 싫어서 아래 칸을 말없이 양보했어요.",
    "blank": "конфликта",
+   "src": "made"
+  }
+ ],
+ "w|концепция": [
+  {
+   "text": "Главный редактор одобрил концепцию нового выпуска, который предложил Сергей.",
+   "en": "The editor-in-chief approved the concept for the new issue that Sergei proposed.",
+   "ko": "편집장은 세르게이가 제안한 새 호의 기획안을 승인했어요.",
+   "blank": "концепцию",
+   "src": "made"
+  },
+  {
+   "text": "Мария объяснила друзьям свою концепцию похода: без телефонов и интернета.",
+   "en": "Maria explained her concept for the trip to her friends: no phones and no internet.",
+   "ko": "마리아는 친구들에게 휴대폰도 인터넷도 없는 캠핑이라는 자기 구상을 설명했어요.",
+   "blank": "концепцию",
    "src": "made"
   }
  ],
@@ -42187,6 +42459,22 @@
    "src": "made"
   }
  ],
+ "w|осесть": [
+  {
+   "text": "После ремонта в редакции на столе у Сергея осела белая пыль.",
+   "en": "After the renovation in the newsroom, white dust settled on Sergei's desk.",
+   "ko": "편집국 공사가 끝난 뒤 세르게이의 책상에 하얀 먼지가 내려앉았어요.",
+   "blank": "осела",
+   "src": "made"
+  },
+  {
+   "text": "После дождя в котелке у Марии осел песок.",
+   "en": "After the rain, sand settled at the bottom of Maria's pot.",
+   "ko": "비가 온 뒤 마리아의 냄비 바닥에 모래가 가라앉았어요.",
+   "blank": "осел",
+   "src": "made"
+  }
+ ],
  "w|осколок": [
   {
    "text": "Алексей порезал ногу об осколок стекла на берегу.",
@@ -42856,6 +43144,22 @@
    "en": "Tatiana wants to thank everyone who helped with the preparations.",
    "ko": "타티야나는 준비를 도와준 모든 사람에게 보답하고 싶어요.",
    "blank": "отблагодарить",
+   "src": "made"
+  }
+ ],
+ "w|отбор": [
+  {
+   "text": "Сергей прошёл строгий отбор и попал на стажировку в столичную редакцию.",
+   "en": "Sergei passed a strict selection and got an internship at a newsroom in the capital.",
+   "ko": "세르게이는 까다로운 선발을 거쳐 수도의 편집국 인턴이 됐어요.",
+   "blank": "отбор",
+   "src": "made"
+  },
+  {
+   "text": "Для похода в горы Мария устроила отбор: только те, кто выдержит долгий подъём.",
+   "en": "For the mountain hike Maria held a selection: only those who could handle the long climb.",
+   "ko": "마리아는 산행에 앞서 긴 오르막을 견딜 사람만 뽑았어요.",
+   "blank": "отбор",
    "src": "made"
   }
  ],
@@ -43641,6 +43945,22 @@
    "ko": "회의 취소하고 싶어?",
    "blank": "отменить",
    "src": "tatoeba:9099554/marafon en:2016588/CK"
+  }
+ ],
+ "w|отменять": [
+  {
+   "text": "Сергей не любит отменять встречи, даже если очень устал.",
+   "en": "Sergei doesn't like to cancel meetings, even when he's very tired.",
+   "ko": "세르게이는 아무리 피곤해도 약속을 취소하는 걸 싫어해요.",
+   "blank": "отменять",
+   "src": "made"
+  },
+  {
+   "text": "Мария не любит отменять походы из-за погоды и берёт дождевик.",
+   "en": "Maria doesn't like to call off trips because of the weather, so she takes a raincoat.",
+   "ko": "마리아는 날씨 때문에 캠핑을 취소하는 걸 싫어해서 비옷을 챙겨요.",
+   "blank": "отменять",
+   "src": "made"
   }
  ],
  "w|отменяться": [
@@ -45958,6 +46278,22 @@
    "en": "The chef asked Svetlana to pass the plates around.",
    "ko": "셰프는 스베틀라나에게 접시를 돌려 달라고 했어요.",
    "blank": "передавать",
+   "src": "made"
+  }
+ ],
+ "w|передатчик": [
+  {
+   "text": "Во время прямого эфира у Сергея сломался передатчик, и пришлось звонить в студию.",
+   "en": "During the live broadcast Sergei's transmitter broke, and he had to call the studio.",
+   "ko": "생방송 중에 세르게이의 송신기가 고장 나서 스튜디오에 전화를 걸어야 했어요.",
+   "blank": "передатчик",
+   "src": "made"
+  },
+  {
+   "text": "На всякий случай Мария взяла в поход маленький передатчик.",
+   "en": "Just in case, Maria took a small transmitter on the trip.",
+   "ko": "마리아는 혹시 몰라 작은 송신기를 캠핑에 챙겨 갔어요.",
+   "blank": "передатчик",
    "src": "made"
   }
  ],
@@ -52201,6 +52537,22 @@
    "src": "made"
   }
  ],
+ "w|поправить": [
+  {
+   "text": "Перед эфиром Сергей поправил галстук и глубоко вдохнул.",
+   "en": "Before going on air Sergei straightened his tie and took a deep breath.",
+   "ko": "세르게이는 방송 전에 넥타이를 바로잡고 숨을 깊이 들이쉬었어요.",
+   "blank": "поправил",
+   "src": "made"
+  },
+  {
+   "text": "Мария поправила колышки, чтобы палатку не сдуло ветром.",
+   "en": "Maria adjusted the tent pegs so the wind wouldn't blow the tent away.",
+   "ko": "마리아는 바람에 텐트가 날아가지 않게 말뚝을 바로잡았어요.",
+   "blank": "поправила",
+   "src": "made"
+  }
+ ],
  "w|поправиться": [
   {
    "text": "Никита бросил сладкое, потому что боялся снова поправиться.",
@@ -55691,6 +56043,22 @@
    "src": "made"
   }
  ],
+ "w|преподаватель": [
+  {
+   "text": "Для статьи об экзаменах Сергей взял интервью у преподавателя физики.",
+   "en": "For an article about exams Sergei interviewed a physics teacher.",
+   "ko": "세르게이는 시험에 관한 기사를 쓰려고 물리 선생님을 인터뷰했어요.",
+   "blank": "преподавателя",
+   "src": "made"
+  },
+  {
+   "text": "С Марией в поход пошёл её бывший преподаватель географии.",
+   "en": "Maria's former geography teacher came on the trip with her.",
+   "ko": "마리아의 예전 지리 선생님도 캠핑에 같이 갔어요.",
+   "blank": "преподаватель",
+   "src": "made"
+  }
+ ],
  "w|преподавать": [
   {
    "text": "По вечерам Павел ездит в техникум преподавать слесарное дело.",
@@ -56950,6 +57318,22 @@
    "en": "In the series Natalia was watching, the villain never managed to finish off the hero.",
    "ko": "나탈리야가 보던 드라마에서 악당은 끝내 주인공을 해치우지 못했어요.",
    "blank": "прикончить",
+   "src": "made"
+  }
+ ],
+ "w|прикосновение": [
+  {
+   "text": "От лёгкого прикосновения к экрану у Сергея открылась вся статья.",
+   "en": "With a light touch on the screen, Sergei's whole article opened.",
+   "ko": "화면을 살짝 건드리자 세르게이의 기사 전체가 열렸어요.",
+   "blank": "прикосновения",
+   "src": "made"
+  },
+  {
+   "text": "Мария вздрогнула от холодного прикосновения мокрой ветки.",
+   "en": "Maria flinched at the cold touch of a wet branch.",
+   "ko": "마리아는 젖은 나뭇가지가 차갑게 닿자 움찔했어요.",
+   "blank": "прикосновения",
    "src": "made"
   }
  ],
@@ -61481,6 +61865,22 @@
    "blank": "разговор"
   }
  ],
+ "w|раздел": [
+  {
+   "text": "Сергей ведёт в газете раздел о городской жизни.",
+   "en": "Sergei runs the city life section of the newspaper.",
+   "ko": "세르게이는 신문에서 도시 생활 면을 맡고 있어요.",
+   "blank": "раздел",
+   "src": "made"
+  },
+  {
+   "text": "В путеводителе Мария нашла раздел о лучших стоянках у озера.",
+   "en": "In the guidebook Maria found a section on the best campsites by the lake.",
+   "ko": "마리아는 여행 안내서에서 호숫가 최고의 캠핑 장소를 다룬 부분을 찾았어요.",
+   "blank": "раздел",
+   "src": "made"
+  }
+ ],
  "w|разделить": [
   {
    "text": "Почему бы тебе не разделить её со мной?",
@@ -63036,6 +63436,22 @@
    "en": "The coach is teaching Natalia to react faster to the starting signal.",
    "ko": "코치는 나탈리야에게 출발 신호에 더 빨리 반응하는 법을 가르쳐요.",
    "blank": "реагировать",
+   "src": "made"
+  }
+ ],
+ "w|реактор": [
+  {
+   "text": "Сергей пишет большую статью о том, как работает ядерный реактор.",
+   "en": "Sergei is writing a big article about how a nuclear reactor works.",
+   "ko": "세르게이는 원자로가 어떻게 작동하는지에 관한 긴 기사를 쓰고 있어요.",
+   "blank": "реактор",
+   "src": "made"
+  },
+  {
+   "text": "Вдали от лагеря Мария увидела трубы старого реактора, закрытого много лет назад.",
+   "en": "Far from the camp Maria saw the stacks of an old reactor that was shut down many years ago.",
+   "ko": "마리아는 캠프에서 멀리 떨어진 곳에 오래전에 문을 닫은 원자로의 굴뚝을 봤어요.",
+   "blank": "реактора",
    "src": "made"
   }
  ],
@@ -68007,6 +68423,22 @@
    "blank": "слишком"
   }
  ],
+ "w|слияние": [
+  {
+   "text": "После слияния двух газет у Сергея стало намного больше работы.",
+   "en": "After the merger of the two newspapers Sergei had much more work.",
+   "ko": "두 신문사가 합병한 뒤로 세르게이의 일이 훨씬 많아졌어요.",
+   "blank": "слияния",
+   "src": "made"
+  },
+  {
+   "text": "Мария разбила лагерь там, где происходит слияние двух рек.",
+   "en": "Maria set up camp where two rivers merge.",
+   "ko": "마리아는 두 강이 합쳐지는 곳에 캠프를 쳤어요.",
+   "blank": "слияние",
+   "src": "made"
+  }
+ ],
  "w|словечко": [
   {
    "text": "Гид то и дело вставлял какое-то учёное словечко, и Павел переспрашивал.",
@@ -70229,6 +70661,22 @@
    "src": "made"
   }
  ],
+ "w|сосать": [
+  {
+   "text": "Когда Сергей думает над заголовком, он сосёт карандаш.",
+   "en": "When Sergei is thinking over a headline, he sucks on a pencil.",
+   "ko": "세르게이는 제목을 고민할 때 연필을 빨아요.",
+   "blank": "сосёт",
+   "src": "made"
+  },
+  {
+   "text": "Младший брат Марии всю дорогу сосал леденцы.",
+   "en": "Maria's little brother sucked on lollipops the whole way.",
+   "ko": "마리아의 남동생은 가는 내내 사탕을 빨았어요.",
+   "blank": "сосал",
+   "src": "made"
+  }
+ ],
  "w|сосед": [
   {
    "text": "Как тебе твой новый сосед по комнате?",
@@ -71836,6 +72284,22 @@
    "en": "The upstairs neighbours often quarrel, and Maria turns her music up.",
    "ko": "윗집 사람들이 자주 다퉈서 마리아는 음악 소리를 키워요.",
    "blank": "ссорятся",
+   "src": "made"
+  }
+ ],
+ "w|ссылка": [
+  {
+   "text": "В конце статьи Сергей всегда даёт ссылку на источник.",
+   "en": "At the end of an article Sergei always gives a link to the source.",
+   "ko": "세르게이는 기사 끝에 항상 출처 링크를 달아요.",
+   "blank": "ссылку",
+   "src": "made"
+  },
+  {
+   "text": "Мария отправила друзьям ссылку на карту с маршрутом.",
+   "en": "Maria sent her friends a link to the route map.",
+   "ko": "마리아는 친구들에게 경로 지도 링크를 보냈어요.",
+   "blank": "ссылку",
    "src": "made"
   }
  ],
@@ -73603,6 +74067,22 @@
    "src": "made"
   }
  ],
+ "w|сунуть": [
+  {
+   "text": "Уходя на интервью, Сергей сунул в карман запасной блокнот.",
+   "en": "On his way to the interview, Sergei shoved a spare notebook into his pocket.",
+   "ko": "세르게이는 인터뷰하러 나가면서 여분의 수첩을 주머니에 쑤셔 넣었어요.",
+   "blank": "сунул",
+   "src": "made"
+  },
+  {
+   "text": "Мария сунула мокрые носки поближе к огню.",
+   "en": "Maria shoved her wet socks closer to the fire.",
+   "ko": "마리아는 젖은 양말을 불 가까이에 쑥 들이밀었어요.",
+   "blank": "сунула",
+   "src": "made"
+  }
+ ],
  "w|суп": [
   {
    "text": "Ты когда-нибудь пробовал такой вкусный суп?",
@@ -74307,6 +74787,22 @@
    "src": "made"
   }
  ],
+ "w|табличка": [
+  {
+   "text": "На двери кабинета Сергея висит табличка с его именем.",
+   "en": "A nameplate with his name hangs on the door of Sergei's office.",
+   "ko": "세르게이 사무실 문에는 이름이 적힌 명패가 걸려 있어요.",
+   "blank": "табличка",
+   "src": "made"
+  },
+  {
+   "text": "У входа в заповедник Мария прочитала табличку с правилами.",
+   "en": "At the entrance to the nature reserve Maria read the sign with the rules.",
+   "ko": "마리아는 보호구역 입구에서 규칙이 적힌 안내판을 읽었어요.",
+   "blank": "табличку",
+   "src": "made"
+  }
+ ],
  "w|таинственный": [
   {
    "text": "В коридоре отеля Сергей слышал таинственный шорох по ночам.",
@@ -74949,6 +75445,22 @@
    "blank": "Тело"
   }
  ],
+ "w|телохранитель": [
+  {
+   "text": "На пресс-конференции телохранитель министра не пустил Сергея к трибуне.",
+   "en": "At the press conference the minister's bodyguard didn't let Sergei near the podium.",
+   "ko": "기자회견에서 장관의 경호원이 세르게이를 연단 쪽으로 못 가게 막았어요.",
+   "blank": "телохранитель",
+   "src": "made"
+  },
+  {
+   "text": "Мария шутит, что её собака в походе — лучший телохранитель.",
+   "en": "Maria jokes that her dog is the best bodyguard on a camping trip.",
+   "ko": "마리아는 캠핑에서는 자기 개가 최고의 경호원이라고 농담해요.",
+   "blank": "телохранитель",
+   "src": "made"
+  }
+ ],
  "w|тема": [
   {
    "text": "Давай сменим тему.",
@@ -75374,6 +75886,22 @@
    "en": "Technically he's right, but it isn't fair.",
    "ko": "엄밀히 따지면 그 말이 맞지만 공정하지는 않아요.",
    "blank": "Технически",
+   "src": "made"
+  }
+ ],
+ "w|технический": [
+  {
+   "text": "Из-за технического сбоя Сергей не смог вовремя отправить статью.",
+   "en": "Because of a technical glitch Sergei couldn't send the article on time.",
+   "ko": "기술적인 문제 때문에 세르게이는 기사를 제때 보내지 못했어요.",
+   "blank": "технического",
+   "src": "made"
+  },
+  {
+   "text": "В походе Мария отвечает за весь технический инвентарь: фонари, горелку и аптечку.",
+   "en": "On the trip Maria is in charge of all the technical gear: flashlights, burner and first-aid kit.",
+   "ko": "캠핑에서 마리아는 손전등, 버너, 구급상자 같은 장비를 전부 맡아요.",
+   "blank": "технический",
    "src": "made"
   }
  ],
@@ -77509,6 +78037,22 @@
    "src": "tatoeba:3556380/Lenin_1917 en:1454263/raghebaraby"
   }
  ],
+ "w|уведомление": [
+  {
+   "text": "На телефон Сергея пришло уведомление о срочной новости.",
+   "en": "A breaking news notification came to Sergei's phone.",
+   "ko": "세르게이의 휴대폰에 속보 알림이 왔어요.",
+   "blank": "уведомление",
+   "src": "made"
+  },
+  {
+   "text": "Перед выездом Мария получила уведомление о штормовом ветре.",
+   "en": "Before leaving, Maria received a warning notification about gale-force winds.",
+   "ko": "마리아는 출발 전에 강풍 경보 알림을 받았어요.",
+   "blank": "уведомление",
+   "src": "made"
+  }
+ ],
  "w|увезти": [
   {
    "text": "Сергей попросил портье увезти лишний багаж в камеру хранения.",
@@ -77692,6 +78236,22 @@
    "en": "Elena took the place of a colleague whose dismissal came as a surprise to everyone.",
    "ko": "옐레나는 갑자기 해고돼 모두를 놀라게 한 동료의 자리로 왔어요.",
    "blank": "увольнение",
+   "src": "made"
+  }
+ ],
+ "w|увольнять": [
+  {
+   "text": "Сергей боится, что после реформы редакция начнёт увольнять журналистов.",
+   "en": "Sergei fears that after the reorganization the newsroom will start laying off journalists.",
+   "ko": "세르게이는 개편 뒤에 편집국이 기자들을 해고하기 시작할까 봐 걱정해요.",
+   "blank": "увольнять",
+   "src": "made"
+  },
+  {
+   "text": "Мария рассказала у костра, что её начальник любит увольнять людей по пятницам.",
+   "en": "At the campfire Maria said that her boss likes to fire people on Fridays.",
+   "ko": "마리아는 모닥불 가에서 자기 상사가 금요일마다 사람을 해고하길 좋아한다고 얘기했어요.",
+   "blank": "увольнять",
    "src": "made"
   }
  ],
@@ -78867,6 +79427,22 @@
    "src": "made"
   }
  ],
+ "w|уменьшить": [
+  {
+   "text": "Редактор попросил Сергея уменьшить текст вдвое.",
+   "en": "The editor asked Sergei to cut the text in half.",
+   "ko": "편집장은 세르게이에게 글을 절반으로 줄여 달라고 했어요.",
+   "blank": "уменьшить",
+   "src": "made"
+  },
+  {
+   "text": "Мария решила уменьшить огонь, чтобы каша не пригорела.",
+   "en": "Maria decided to turn down the flame so the porridge wouldn't burn.",
+   "ko": "마리아는 죽이 눌어붙지 않게 불을 줄이기로 했어요.",
+   "blank": "уменьшить",
+   "src": "made"
+  }
+ ],
  "w|умереть": [
   {
    "text": "Я чуть не умер со смеху.",
@@ -79481,6 +80057,22 @@
    "ko": "노력을 기울여야 해요.",
    "blank": "усилие",
    "src": "tatoeba:4893882/odexed en:687950/lukaszpp"
+  }
+ ],
+ "w|ускорить": [
+  {
+   "text": "Чтобы ускорить работу, Сергей разделил статью с коллегой.",
+   "en": "To speed up the work, Sergei split the article with a colleague.",
+   "ko": "세르게이는 일을 빨리 끝내려고 기사를 동료와 나눠 썼어요.",
+   "blank": "ускорить",
+   "src": "made"
+  },
+  {
+   "text": "Увидев тучи, Мария решила ускорить шаг.",
+   "en": "Seeing the clouds, Maria decided to quicken her pace.",
+   "ko": "먹구름을 보고 마리아는 걸음을 서두르기로 했어요.",
+   "blank": "ускорить",
+   "src": "made"
   }
  ],
  "w|условие": [
@@ -84281,6 +84873,22 @@
    "blank": "школы"
   }
  ],
+ "w|школьник": [
+  {
+   "text": "Один школьник написал Сергею письмо о проблемах своего двора.",
+   "en": "A schoolboy wrote Sergei a letter about the problems in his neighborhood.",
+   "ko": "한 학생이 세르게이에게 자기 동네 문제에 관한 편지를 보냈어요.",
+   "blank": "школьник",
+   "src": "made"
+  },
+  {
+   "text": "Мария брала в походы племянника, когда тот был ещё школьником.",
+   "en": "Maria took her nephew on camping trips when he was still a schoolboy.",
+   "ko": "마리아는 조카가 아직 학생이었을 때 캠핑에 데리고 다녔어요.",
+   "blank": "школьником",
+   "src": "made"
+  }
+ ],
  "w|школьный": [
   {
    "text": "Андрей узнал в соседе своего старого школьного друга.",
@@ -84673,6 +85281,22 @@
    "blank": "Шутки"
   }
  ],
+ "w|щедро": [
+  {
+   "text": "Владелец газеты щедро наградил Сергея за громкое расследование.",
+   "en": "The owner of the paper generously rewarded Sergei for a sensational investigation.",
+   "ko": "신문사 사장은 큰 화제가 된 탐사 보도로 세르게이에게 넉넉히 보상했어요.",
+   "blank": "щедро",
+   "src": "made"
+  },
+  {
+   "text": "Мария щедро угостила соседей по стоянке своей ухой.",
+   "en": "Maria generously treated the neighboring campers to her fish soup.",
+   "ko": "마리아는 옆 캠핑객들에게 자기가 끓인 생선 수프를 넉넉히 나눠 줬어요.",
+   "blank": "щедро",
+   "src": "made"
+  }
+ ],
  "w|щедрый": [
   {
    "text": "Дмитрий оказался щедрым соседом и отдал свою дрель насовсем.",
@@ -84813,6 +85437,22 @@
    "ko": "이 시험 붙은 사람 알아?",
    "blank": "экзамен",
    "src": "tatoeba:4244691/Selena777 en:4243633/Lebad"
+  }
+ ],
+ "w|экземпляр": [
+  {
+   "text": "Сергей отложил себе экземпляр газеты со своей первой статьёй.",
+   "en": "Sergei set aside a copy of the paper with his first article.",
+   "ko": "세르게이는 자기 첫 기사가 실린 신문 한 부를 챙겨 두었어요.",
+   "blank": "экземпляр",
+   "src": "made"
+  },
+  {
+   "text": "Мария сфотографировала редкий экземпляр орхидеи прямо у тропы.",
+   "en": "Maria photographed a rare specimen of orchid right by the trail.",
+   "ko": "마리아는 산길 바로 옆에서 희귀한 난초 한 그루를 사진에 담았어요.",
+   "blank": "экземпляр",
+   "src": "made"
   }
  ],
  "w|экипаж": [

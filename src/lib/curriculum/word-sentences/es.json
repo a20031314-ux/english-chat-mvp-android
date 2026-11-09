@@ -4091,6 +4091,22 @@
    "blank": "alfa"
   }
  ],
+ "w|alfabeto": [
+  {
+   "text": "Sergio ordena los botes de especias siguiendo el alfabeto para encontrarlos rápido.",
+   "en": "Sergio arranges the spices in alphabetical order to find them quickly.",
+   "ko": "세르히오는 향신료를 빨리 찾으려고 알파벳 순서로 정리해요.",
+   "blank": "alfabeto",
+   "src": "made"
+  },
+  {
+   "text": "Lola enseña el alfabeto a su hijo con los nombres de los animales de la granja.",
+   "en": "Lola teaches her son the alphabet using the names of the farm animals.",
+   "ko": "롤라는 농장 동물 이름으로 아들에게 알파벳을 가르쳐요.",
+   "blank": "alfabeto",
+   "src": "made"
+  }
+ ],
  "w|alfiler": [
   {
    "text": "Al quitar el papel pintado, Diego se pinchó con un alfiler olvidado en la pared.",
@@ -9403,6 +9419,22 @@
    "src": "made"
   }
  ],
+ "w|astillero": [
+  {
+   "text": "El padre de Sergio trabajaba en un astillero y le enseñó a madrugar.",
+   "en": "Sergio's father worked in a shipyard and taught him to get up early.",
+   "ko": "세르히오의 아버지는 조선소에서 일했고 세르히오에게 일찍 일어나는 법을 가르쳤어요.",
+   "blank": "astillero",
+   "src": "made"
+  },
+  {
+   "text": "El hermano de Lola trabaja en un astillero de la costa y viene a la granja en verano.",
+   "en": "Lola's brother works in a shipyard on the coast and comes to the farm in summer.",
+   "ko": "롤라의 오빠는 해안 조선소에서 일하고 여름이면 농장에 와요.",
+   "blank": "astillero",
+   "src": "made"
+  }
+ ],
  "w|astronauta": [
   {
    "text": "El astronauta saludó desde la estación.",
@@ -9415,6 +9447,22 @@
    "en": "She wants to be an astronaut when she grows up.",
    "ko": "크면 우주비행사가 되고 싶어 해.",
    "blank": "astronauta"
+  }
+ ],
+ "w|astrónomo": [
+  {
+   "text": "Una noche cenó en el restaurante un astrónomo que habló a Sergio de las estrellas.",
+   "en": "One night an astronomer dined at the restaurant and talked to Sergio about the stars.",
+   "ko": "어느 날 밤 천문학자가 식당에서 저녁을 먹으며 세르히오에게 별 이야기를 해 줬어요.",
+   "blank": "astrónomo",
+   "src": "made"
+  },
+  {
+   "text": "Por la noche, un astrónomo aficionado monta su telescopio en el prado de Lola.",
+   "en": "At night an amateur astronomer sets up his telescope in Lola's meadow.",
+   "ko": "밤이면 아마추어 천문학자가 롤라의 풀밭에 망원경을 세워요.",
+   "blank": "astrónomo",
+   "src": "made"
   }
  ],
  "w|astucia": [
@@ -10681,6 +10729,22 @@
    "en": "The project is advancing faster than expected.",
    "ko": "프로젝트가 예상보다 빨리 진행돼.",
    "blank": "avanza"
+  }
+ ],
+ "w|avaricia": [
+  {
+   "text": "A Sergio le pareció pura avaricia que el dueño anterior cobrara el pan aparte.",
+   "en": "Sergio thought it was greedy that the previous owner charged for bread separately.",
+   "ko": "세르히오는 전 주인이 빵값을 따로 받은 게 욕심이라고 생각했어요.",
+   "blank": "avaricia",
+   "src": "made"
+  },
+  {
+   "text": "Según Lola, la avaricia de algunos compradores hace que los ganaderos ganen muy poco.",
+   "en": "According to Lola, the greed of some buyers means livestock farmers earn very little.",
+   "ko": "롤라 말로는 일부 구매자의 욕심 때문에 축산 농가는 버는 게 아주 적어요.",
+   "blank": "avaricia",
+   "src": "made"
   }
  ],
  "w|ave": [
@@ -15765,6 +15829,22 @@
    "src": "made"
   }
  ],
+ "w|calzado": [
+  {
+   "text": "En la cocina, Sergio solo usa calzado antideslizante para no caerse.",
+   "en": "In the kitchen, Sergio only wears non-slip footwear so he doesn't fall.",
+   "ko": "세르히오는 주방에서 넘어지지 않으려고 미끄럼 방지 신발만 신어요.",
+   "blank": "calzado",
+   "src": "made"
+  },
+  {
+   "text": "En la granja, Lola necesita un calzado fuerte para pisar el barro.",
+   "en": "On the farm, Lola needs sturdy footwear to walk in the mud.",
+   "ko": "농장에서 롤라는 진흙을 밟을 튼튼한 신발이 필요해요.",
+   "blank": "calzado",
+   "src": "made"
+  }
+ ],
  "w|calzón": [
   {
    "text": "La hermana de Andrés encontró en la maleta un calzón de baño con la etiqueta puesta.",
@@ -15851,6 +15931,22 @@
    "en": "He works as a waiter on weekends.",
    "ko": "주말에 웨이터로 일해.",
    "blank": "camarero"
+  }
+ ],
+ "w|camarógrafo": [
+  {
+   "text": "Un camarógrafo vino a grabar a Sergio para un programa de cocina.",
+   "en": "A cameraman came to film Sergio for a cooking show.",
+   "ko": "요리 프로그램 촬영 기사가 세르히오를 찍으러 왔어요.",
+   "blank": "camarógrafo",
+   "src": "made"
+  },
+  {
+   "text": "Un camarógrafo de la televisión local grabó a Lola ordeñando las vacas.",
+   "en": "A local TV cameraman filmed Lola milking the cows.",
+   "ko": "지역 방송 촬영 기사가 소젖을 짜는 롤라를 찍었어요.",
+   "blank": "camarógrafo",
+   "src": "made"
   }
  ],
  "w|camarón": [
@@ -20759,6 +20855,22 @@
    "en": "I dealt with a difficult customer.",
    "ko": "까다로운 손님을 응대했어.",
    "blank": "cliente"
+  }
+ ],
+ "w|clientela": [
+  {
+   "text": "La clientela del barrio vuelve cada semana por el guiso de Sergio.",
+   "en": "The neighbourhood's regular customers come back every week for Sergio's stew.",
+   "ko": "동네 단골손님들은 세르히오의 스튜를 먹으러 매주 다시 와요.",
+   "blank": "clientela",
+   "src": "made"
+  },
+  {
+   "text": "La clientela de Lola compra huevos directamente en la puerta de la granja.",
+   "en": "Lola's customers buy eggs directly at the farm gate.",
+   "ko": "롤라의 손님들은 농장 문 앞에서 바로 달걀을 사 가요.",
+   "blank": "clientela",
+   "src": "made"
   }
  ],
  "w|clima": [
@@ -28641,6 +28753,22 @@
    "blank": "cumplido"
   }
  ],
+ "w|cumplimiento": [
+  {
+   "text": "Los inspectores revisaron el cumplimiento de las normas de higiene en la cocina de Sergio.",
+   "en": "The inspectors checked compliance with hygiene rules in Sergio's kitchen.",
+   "ko": "점검관들이 세르히오의 주방이 위생 규정을 지키는지 확인했어요.",
+   "blank": "cumplimiento",
+   "src": "made"
+  },
+  {
+   "text": "Lola vigila el cumplimiento de las normas de bienestar animal en la granja.",
+   "en": "Lola makes sure the animal welfare rules are followed on the farm.",
+   "ko": "롤라는 농장에서 동물 복지 규정이 지켜지는지 살펴요.",
+   "blank": "cumplimiento",
+   "src": "made"
+  }
+ ],
  "w|cumplir": [
   {
    "text": "Voy a cumplir mi promesa.",
@@ -31679,6 +31807,22 @@
    "src": "made"
   }
  ],
+ "w|desempeño": [
+  {
+   "text": "El jefe de cocina valoró muy bien el desempeño de Sergio en su primer año.",
+   "en": "The head chef rated Sergio's performance very highly in his first year.",
+   "ko": "주방장은 세르히오의 첫해 업무 성과를 아주 높게 평가했어요.",
+   "blank": "desempeño",
+   "src": "made"
+  },
+  {
+   "text": "Lola revisa el desempeño de cada trabajador al final de la cosecha.",
+   "en": "Lola reviews each worker's performance at the end of the harvest.",
+   "ko": "롤라는 수확이 끝나면 일꾼마다 일한 성과를 살펴봐요.",
+   "blank": "desempeño",
+   "src": "made"
+  }
+ ],
  "w|desempleado": [
   {
    "text": "Diego contrató a un chico desempleado del barrio como friegaplatos.",
@@ -31982,6 +32126,22 @@
    "en": "The team decided to appoint Sofía as head of the new product.",
    "ko": "팀은 소피아를 새 제품 책임자로 지명하기로 했어요.",
    "blank": "designar",
+   "src": "made"
+  }
+ ],
+ "w|desilusionar": [
+  {
+   "text": "Un plato frío puede desilusionar al cliente más fiel, dice Sergio a su equipo.",
+   "en": "A cold dish can disappoint even the most loyal customer, Sergio tells his team.",
+   "ko": "식은 요리는 가장 충실한 손님도 실망시킬 수 있다고 세르히오는 팀에게 말해요.",
+   "blank": "desilusionar",
+   "src": "made"
+  },
+  {
+   "text": "La mala cosecha de este año no consiguió desilusionar a Lola.",
+   "en": "This year's poor harvest didn't manage to discourage Lola.",
+   "ko": "올해 흉년도 롤라를 실망시키지는 못했어요.",
+   "blank": "desilusionar",
    "src": "made"
   }
  ],
@@ -33675,6 +33835,22 @@
    "src": "made"
   }
  ],
+ "w|dimisión": [
+  {
+   "text": "Un camarero presentó su dimisión y Sergio tuvo que cubrir el turno de la cena.",
+   "en": "A waiter handed in his resignation and Sergio had to cover the dinner shift.",
+   "ko": "웨이터 한 명이 사표를 내서 세르히오가 저녁 근무를 메워야 했어요.",
+   "blank": "dimisión",
+   "src": "made"
+  },
+  {
+   "text": "Uno de los subordinados de Lola presentó su dimisión para irse a la ciudad.",
+   "en": "One of Lola's subordinates handed in his resignation to move to the city.",
+   "ko": "롤라 밑에서 일하던 사람 하나가 도시로 가려고 그만두겠다고 했어요.",
+   "blank": "dimisión",
+   "src": "made"
+  }
+ ],
  "w|dimitir": [
   {
    "text": "El director decidió dimitir después del escándalo, y Diego se enteró por la prensa.",
@@ -34975,6 +35151,22 @@
    "src": "made"
   }
  ],
+ "w|documentar": [
+  {
+   "text": "Sergio tuvo que documentar la temperatura de las neveras cada mañana.",
+   "en": "Sergio had to record the fridge temperatures every morning.",
+   "ko": "세르히오는 매일 아침 냉장고 온도를 기록해야 했어요.",
+   "blank": "documentar",
+   "src": "made"
+  },
+  {
+   "text": "Una veterinaria pidió a Lola documentar con fotos el crecimiento de los terneros.",
+   "en": "A vet asked Lola to document the calves' growth with photos.",
+   "ko": "수의사가 롤라에게 송아지가 자라는 모습을 사진으로 기록해 달라고 했어요.",
+   "blank": "documentar",
+   "src": "made"
+  }
+ ],
  "w|documento": [
   {
    "text": "Firma este documento antes de irte.",
@@ -35997,6 +36189,22 @@
    "en": "That building was built recently.",
    "ko": "그 건물은 최근에 지었어.",
    "blank": "edificio"
+  }
+ ],
+ "w|editar": [
+  {
+   "text": "Después de la grabación, una productora se quedó a editar el vídeo con Sergio.",
+   "en": "After the shoot, a producer stayed to edit the video with Sergio.",
+   "ko": "촬영이 끝난 뒤 한 프로듀서가 남아서 세르히오와 영상을 편집했어요.",
+   "blank": "editar",
+   "src": "made"
+  },
+  {
+   "text": "La sobrina de Lola le ayuda a editar los vídeos de la granja para internet.",
+   "en": "Lola's niece helps her edit the farm videos for the internet.",
+   "ko": "롤라의 조카가 인터넷에 올릴 농장 영상 편집을 도와줘요.",
+   "blank": "editar",
+   "src": "made"
   }
  ],
  "w|editor": [
@@ -39581,6 +39789,22 @@
    "en": "The dog got out of the yard.",
    "ko": "개가 마당에서 도망쳤어.",
    "blank": "escapó"
+  }
+ ],
+ "w|escaparate": [
+  {
+   "text": "Tras la reforma, Sergio colocó la carta en el escaparate para que la vieran los peatones.",
+   "en": "After the renovation, Sergio put the menu in the window so passers-by could see it.",
+   "ko": "리모델링 뒤 세르히오는 지나가는 사람들이 볼 수 있게 메뉴판을 진열창에 붙였어요.",
+   "blank": "escaparate",
+   "src": "made"
+  },
+  {
+   "text": "En el escaparate de la tienda del pueblo están los quesos de Lola.",
+   "en": "Lola's cheeses are in the window of the village shop.",
+   "ko": "마을 가게 진열창에 롤라의 치즈가 놓여 있어요.",
+   "blank": "escaparate",
+   "src": "made"
   }
  ],
  "w|escapatoria": [
@@ -43419,6 +43643,22 @@
    "blank": "explosivo"
   }
  ],
+ "w|explotación": [
+  {
+   "text": "Sergio denunció la explotación de los ayudantes en su antiguo trabajo.",
+   "en": "Sergio reported the exploitation of the assistants at his old job.",
+   "ko": "세르히오는 전 직장에서 보조 요리사들이 착취당한 걸 고발했어요.",
+   "blank": "explotación",
+   "src": "made"
+  },
+  {
+   "text": "Lola lleva la explotación ganadera que heredó de sus padres.",
+   "en": "Lola runs the livestock farm she inherited from her parents.",
+   "ko": "롤라는 부모님께 물려받은 축산 농장을 운영해요.",
+   "blank": "explotación",
+   "src": "made"
+  }
+ ],
  "w|explotar": [
   {
    "text": "El globo puede explotar si lo inflas demasiado.",
@@ -43911,6 +44151,22 @@
    "en": "We visited the factory during the tour.",
    "ko": "투어 중에 공장을 방문했어.",
    "blank": "fábrica"
+  }
+ ],
+ "w|fabricación": [
+  {
+   "text": "Sergio visitó una planta de fabricación de pasta para conocer el proceso.",
+   "en": "Sergio visited a pasta manufacturing plant to learn about the process.",
+   "ko": "세르히오는 제조 과정을 알아보려고 파스타 공장을 방문했어요.",
+   "blank": "fabricación",
+   "src": "made"
+  },
+  {
+   "text": "En la granja de Lola, la fabricación del queso sigue siendo artesanal.",
+   "en": "On Lola's farm, the cheese is still made by hand.",
+   "ko": "롤라의 농장에서는 치즈를 여전히 손으로 만들어요.",
+   "blank": "fabricación",
+   "src": "made"
   }
  ],
  "w|fabricante": [
@@ -46800,6 +47056,22 @@
    "en": "Lola frankly told the guitarist that she didn't like the new song.",
    "ko": "롤라는 기타리스트에게 새 노래가 마음에 안 든다고 솔직하게 말했어요.",
    "blank": "franqueza",
+   "src": "made"
+  }
+ ],
+ "w|franquicia": [
+  {
+   "text": "El restaurante de Sergio forma parte de una franquicia, pero la cocina tiene su propio estilo.",
+   "en": "Sergio's restaurant is part of a franchise, but the kitchen has its own style.",
+   "ko": "세르히오의 식당은 프랜차이즈지만 주방에는 나름의 스타일이 있어요.",
+   "blank": "franquicia",
+   "src": "made"
+  },
+  {
+   "text": "Los dueños de una franquicia de hamburguesas querían comprarle carne a Lola.",
+   "en": "The owners of a burger franchise wanted to buy meat from Lola.",
+   "ko": "햄버거 프랜차이즈 업주들이 롤라에게서 고기를 사고 싶어 했어요.",
+   "blank": "franquicia",
    "src": "made"
   }
  ],
@@ -53335,6 +53607,22 @@
    "blank": "imperio"
   }
  ],
+ "w|impermeable": [
+  {
+   "text": "Cuando llueve, Sergio llega con un impermeable amarillo y botas de goma.",
+   "en": "When it rains, Sergio arrives in a yellow raincoat and rubber boots.",
+   "ko": "비가 오면 세르히오는 노란 비옷에 고무장화를 신고 와요.",
+   "blank": "impermeable",
+   "src": "made"
+  },
+  {
+   "text": "Lola nunca sale al campo en otoño sin su impermeable verde.",
+   "en": "Lola never goes out to the fields in autumn without her green raincoat.",
+   "ko": "롤라는 가을에 초록색 비옷 없이 밭에 나가는 법이 없어요.",
+   "blank": "impermeable",
+   "src": "made"
+  }
+ ],
  "w|implacable": [
   {
    "text": "Andrés describe al rey del retrato como un enemigo implacable.",
@@ -54037,6 +54325,22 @@
    "src": "made"
   }
  ],
+ "w|incomodar": [
+  {
+   "text": "A Sergio le incomoda que los clientes entren en la cocina sin permiso.",
+   "en": "It makes Sergio uncomfortable when customers come into the kitchen without permission.",
+   "ko": "세르히오는 손님이 허락 없이 주방에 들어오면 불편해해요.",
+   "blank": "incomoda",
+   "src": "made"
+  },
+  {
+   "text": "Los turistas que hacen ruido de noche suelen incomodar a Lola y a los animales.",
+   "en": "Tourists making noise at night tend to bother Lola and the animals.",
+   "ko": "밤에 시끄럽게 구는 관광객들은 롤라와 동물들을 불편하게 하곤 해요.",
+   "blank": "incomodar",
+   "src": "made"
+  }
+ ],
  "w|incómodo": [
   {
    "text": "El asiento del tren es muy incómodo.",
@@ -54232,6 +54536,22 @@
    "en": "Lola paid an outrageous price for the ticket, but she didn't regret it.",
    "ko": "롤라는 표값으로 터무니없는 돈을 냈지만 후회하지 않았어요.",
    "blank": "indecente",
+   "src": "made"
+  }
+ ],
+ "w|indeciso": [
+  {
+   "text": "Sergio estaba indeciso entre el pescado y la carne para el menú del domingo.",
+   "en": "Sergio was undecided between fish and meat for the Sunday menu.",
+   "ko": "세르히오는 일요일 메뉴로 생선과 고기 중에 정하지 못했어요.",
+   "blank": "indeciso",
+   "src": "made"
+  },
+  {
+   "text": "Lola está indecisa entre plantar maíz o girasoles este año.",
+   "en": "Lola is undecided between planting maize or sunflowers this year.",
+   "ko": "롤라는 올해 옥수수를 심을지 해바라기를 심을지 정하지 못했어요.",
+   "blank": "indecisa",
    "src": "made"
   }
  ],
@@ -55625,6 +55945,22 @@
    "src": "made"
   }
  ],
+ "w|innovador": [
+  {
+   "text": "Sergio presentó un postre innovador hecho con algas y chocolate.",
+   "en": "Sergio presented an innovative dessert made with seaweed and chocolate.",
+   "ko": "세르히오는 해초와 초콜릿으로 만든 혁신적인 디저트를 선보였어요.",
+   "blank": "innovador",
+   "src": "made"
+  },
+  {
+   "text": "Lola instaló un sistema de riego innovador que ahorra mucha agua.",
+   "en": "Lola installed an innovative irrigation system that saves a lot of water.",
+   "ko": "롤라는 물을 많이 아끼는 혁신적인 관개 시설을 설치했어요.",
+   "blank": "innovador",
+   "src": "made"
+  }
+ ],
  "w|inocencia": [
   {
    "text": "Los niños miran a Andrés con inocencia y curiosidad.",
@@ -55748,6 +56084,22 @@
    "en": "Marta noticed a guest was restless and kept checking his watch while waiting for the taxi.",
    "ko": "마르타는 한 손님이 택시를 기다리며 초조하게 계속 시계를 보는 걸 알아챘어요.",
    "blank": "inquieto",
+   "src": "made"
+  }
+ ],
+ "w|inquietud": [
+  {
+   "text": "Sergio no ocultó su inquietud cuando faltó el pescado el sábado por la noche.",
+   "en": "Sergio didn't hide his worry when they ran out of fish on Saturday night.",
+   "ko": "토요일 밤에 생선이 떨어지자 세르히오는 걱정을 감추지 못했어요.",
+   "blank": "inquietud",
+   "src": "made"
+  },
+  {
+   "text": "Con la sequía, la inquietud de Lola crece cada día que no llueve.",
+   "en": "With the drought, Lola's worry grows every day it doesn't rain.",
+   "ko": "가뭄이 들자 비가 안 오는 날마다 롤라의 걱정이 커져요.",
+   "blank": "inquietud",
    "src": "made"
   }
  ],
@@ -60089,6 +60441,22 @@
    "src": "made"
   }
  ],
+ "w|leñador": [
+  {
+   "text": "La leña del horno de Sergio la corta un leñador del pueblo vecino.",
+   "en": "The wood for Sergio's oven is cut by a woodcutter from the next village.",
+   "ko": "세르히오의 오븐에 쓰는 장작은 이웃 마을 나무꾼이 패요.",
+   "blank": "leñador",
+   "src": "made"
+  },
+  {
+   "text": "Cada invierno, un leñador ayuda a Lola a cortar los árboles secos de la finca.",
+   "en": "Every winter, a woodcutter helps Lola cut down the dead trees on the farm.",
+   "ko": "겨울마다 나무꾼이 롤라를 도와 농장의 마른 나무를 베요.",
+   "blank": "leñador",
+   "src": "made"
+  }
+ ],
  "w|lencería": [
   {
    "text": "En la tienda de la esquina venden lencería y toallas, y Raúl compró allí un pareo.",
@@ -61642,6 +62010,22 @@
    "en": "Laura's plan was logical and easy to follow.",
    "ko": "라우라의 계획은 논리적이고 따라 하기 쉬웠어요.",
    "blank": "lógico",
+   "src": "made"
+  }
+ ],
+ "w|logotipo": [
+  {
+   "text": "El nuevo logotipo del restaurante lleva una cuchara de madera, idea de Sergio.",
+   "en": "The restaurant's new logo has a wooden spoon on it, Sergio's idea.",
+   "ko": "식당의 새 로고에는 나무 숟가락이 들어가는데, 세르히오의 아이디어예요.",
+   "blank": "logotipo",
+   "src": "made"
+  },
+  {
+   "text": "El logotipo de la granja de Lola es una gallina con sombrero.",
+   "en": "The logo of Lola's farm is a hen wearing a hat.",
+   "ko": "롤라 농장의 로고는 모자를 쓴 암탉이에요.",
+   "blank": "logotipo",
    "src": "made"
   }
  ],
@@ -66033,6 +66417,22 @@
    "blank": "mierda"
   }
  ],
+ "w|miga": [
+  {
+   "text": "Sergio quita la miga del pan para hacer las tostadas más crujientes.",
+   "en": "Sergio removes the soft part of the bread to make the toast crunchier.",
+   "ko": "세르히오는 토스트를 더 바삭하게 하려고 빵 속살을 떼어 내요.",
+   "blank": "miga",
+   "src": "made"
+  },
+  {
+   "text": "Lola echa las migas del pan a las gallinas después del desayuno.",
+   "en": "Lola throws the breadcrumbs to the hens after breakfast.",
+   "ko": "롤라는 아침을 먹고 나서 빵 부스러기를 닭들에게 던져 줘요.",
+   "blank": "migas",
+   "src": "made"
+  }
+ ],
  "w|migraña": [
   {
    "text": "Cuando tiene migraña, Mateo no puede ni pensar en ir al gimnasio.",
@@ -69931,6 +70331,22 @@
    "blank": "Noté"
   }
  ],
+ "w|notario": [
+  {
+   "text": "Para comprar el local, Sergio tuvo que firmar ante un notario.",
+   "en": "To buy the premises, Sergio had to sign in front of a notary.",
+   "ko": "가게를 사려고 세르히오는 공증인 앞에서 서명해야 했어요.",
+   "blank": "notario",
+   "src": "made"
+  },
+  {
+   "text": "Cuando murió su padre, Lola fue al notario para poner la finca a su nombre.",
+   "en": "When her father died, Lola went to the notary to put the farm in her name.",
+   "ko": "아버지가 돌아가시자 롤라는 농장을 자기 이름으로 하려고 공증인에게 갔어요.",
+   "blank": "notario",
+   "src": "made"
+  }
+ ],
  "w|noticia": [
   {
    "text": "Traigo una buena noticia para ti.",
@@ -70815,6 +71231,22 @@
    "en": "Don't let this opportunity pass.",
    "ko": "이번 기회를 놓치지 마.",
    "blank": "ocasión"
+  }
+ ],
+ "w|ocasional": [
+  {
+   "text": "Además del restaurante, Sergio hace algún trabajo ocasional de catering para bodas.",
+   "en": "Besides the restaurant, Sergio does occasional catering work for weddings.",
+   "ko": "세르히오는 식당 일 말고도 가끔 결혼식 출장 요리를 해요.",
+   "blank": "ocasional",
+   "src": "made"
+  },
+  {
+   "text": "Lola contrata ayuda ocasional en la época de la vendimia.",
+   "en": "Lola hires occasional help during the grape harvest.",
+   "ko": "롤라는 포도 수확 철에 가끔 일손을 써요.",
+   "blank": "ocasional",
+   "src": "made"
   }
  ],
  "w|ocasionalmente": [
@@ -74825,6 +75257,22 @@
    "src": "made"
   }
  ],
+ "w|pedal": [
+  {
+   "text": "Sergio monta en bici al trabajo, pero ayer se le rompió un pedal por el camino.",
+   "en": "Sergio cycles to work, but yesterday a pedal broke on the way.",
+   "ko": "세르히오는 자전거로 출근하는데, 어제 가는 길에 페달 하나가 부러졌어요.",
+   "blank": "pedal",
+   "src": "made"
+  },
+  {
+   "text": "Para ir al pueblo, Lola usa una bici vieja con un pedal que chirría.",
+   "en": "To go to the village, Lola uses an old bike with a squeaky pedal.",
+   "ko": "롤라는 마을에 갈 때 페달이 삐걱거리는 낡은 자전거를 타요.",
+   "blank": "pedal",
+   "src": "made"
+  }
+ ],
  "w|pedazo": [
   {
    "text": "Dame un pedazo de pan.",
@@ -75636,6 +76084,22 @@
    "en": "Elena says she isn't looking for perfection, just affection.",
    "ko": "엘레나는 완벽이 아니라 다정함을 바란다고 말해요.",
    "blank": "perfección",
+   "src": "made"
+  }
+ ],
+ "w|perfeccionar": [
+  {
+   "text": "Sergio lleva años intentando perfeccionar la receta de la salsa de la casa.",
+   "en": "Sergio has spent years trying to perfect the house sauce recipe.",
+   "ko": "세르히오는 몇 년째 가게 특제 소스 요리법을 다듬고 있어요.",
+   "blank": "perfeccionar",
+   "src": "made"
+  },
+  {
+   "text": "Lola quiere perfeccionar su queso de cabra antes de llevarlo a la feria.",
+   "en": "Lola wants to perfect her goat's cheese before taking it to the fair.",
+   "ko": "롤라는 염소 치즈를 장터에 내기 전에 더 완벽하게 다듬고 싶어 해요.",
+   "blank": "perfeccionar",
    "src": "made"
   }
  ],
@@ -80847,6 +81311,22 @@
    "src": "made"
   }
  ],
+ "w|promotor": [
+  {
+   "text": "El promotor del festival gastronómico invitó a Sergio a cocinar en directo.",
+   "en": "The food festival promoter invited Sergio to cook live.",
+   "ko": "미식 축제 주최자가 세르히오를 라이브 요리에 초대했어요.",
+   "blank": "promotor",
+   "src": "made"
+  },
+  {
+   "text": "Un promotor inmobiliario quiso comprar las tierras, pero Lola se negó.",
+   "en": "A property developer wanted to buy the land, but Lola refused.",
+   "ko": "부동산 개발업자가 땅을 사려고 했지만 롤라는 거절했어요.",
+   "blank": "promotor",
+   "src": "made"
+  }
+ ],
  "w|promover": [
   {
    "text": "Hugo quiere promover el uso del casco incluso entre los visitantes.",
@@ -81421,6 +81901,22 @@
    "src": "made"
   }
  ],
+ "w|provisional": [
+  {
+   "text": "Mientras arreglan el horno, Sergio usa una cocina provisional en el patio.",
+   "en": "While they fix the oven, Sergio is using a temporary kitchen in the yard.",
+   "ko": "오븐을 고치는 동안 세르히오는 마당에 임시 주방을 써요.",
+   "blank": "provisional",
+   "src": "made"
+  },
+  {
+   "text": "Tras la tormenta, Lola puso una valla provisional para que no se escaparan las cabras.",
+   "en": "After the storm, Lola put up a temporary fence so the goats wouldn't escape.",
+   "ko": "폭풍이 지나간 뒤 롤라는 염소가 달아나지 않게 임시 울타리를 쳤어요.",
+   "blank": "provisional",
+   "src": "made"
+  }
+ ],
  "w|provocar": [
   {
    "text": "No intentes provocar una pelea.",
@@ -81755,6 +82251,22 @@
    "en": "That misleading advertising annoys a lot of people.",
    "ko": "그 속이려는 광고가 많은 사람을 짜증 나게 해.",
    "blank": "publicidad"
+  }
+ ],
+ "w|publicista": [
+  {
+   "text": "La publicista del restaurante le pidió a Sergio un plato nuevo para la campaña.",
+   "en": "The restaurant's publicist asked Sergio for a new dish for the campaign.",
+   "ko": "식당 홍보 담당자가 세르히오에게 캠페인에 쓸 새 요리를 부탁했어요.",
+   "blank": "publicista",
+   "src": "made"
+  },
+  {
+   "text": "Lola pidió a una publicista que le diseñara etiquetas para los tarros de miel.",
+   "en": "Lola asked a publicist to design labels for the honey jars.",
+   "ko": "롤라는 홍보 전문가에게 꿀단지 라벨을 디자인해 달라고 했어요.",
+   "blank": "publicista",
+   "src": "made"
   }
  ],
  "w|publicitario": [
@@ -83683,6 +84195,22 @@
    "en": "I really don't like it.",
    "ko": "진짜 마음에 안 들어.",
    "blank": "Realmente"
+  }
+ ],
+ "w|rebaja": [
+  {
+   "text": "Sergio aprovechó la rebaja de la tienda de cocina para comprar cuchillos nuevos.",
+   "en": "Sergio took advantage of the kitchen shop's sale to buy new knives.",
+   "ko": "세르히오는 주방용품점 할인을 틈타 새 칼을 샀어요.",
+   "blank": "rebaja",
+   "src": "made"
+  },
+  {
+   "text": "Lola compró pienso en rebaja y llenó todo el granero.",
+   "en": "Lola bought animal feed on sale and filled the whole barn.",
+   "ko": "롤라는 할인하는 사료를 사서 곡물 창고를 가득 채웠어요.",
+   "blank": "rebaja",
+   "src": "made"
   }
  ],
  "w|rebaño": [
@@ -93845,6 +94373,38 @@
    "blank": "submarino"
   }
  ],
+ "w|subordinado": [
+  {
+   "text": "Un subordinado de Sergio quemó el arroz y Sergio le enseñó a controlar el fuego.",
+   "en": "One of Sergio's subordinates burned the rice and Sergio showed him how to control the heat.",
+   "ko": "세르히오 밑에서 일하는 직원이 밥을 태워서 세르히오가 불 조절하는 법을 가르쳐 줬어요.",
+   "blank": "subordinado",
+   "src": "made"
+  },
+  {
+   "text": "Uno de los subordinados de Lola presentó su dimisión para irse a la ciudad.",
+   "en": "One of Lola's subordinates handed in his resignation to move to the city.",
+   "ko": "롤라 밑에서 일하던 사람 하나가 도시로 가려고 그만두겠다고 했어요.",
+   "blank": "subordinados",
+   "src": "made"
+  }
+ ],
+ "w|subsidio": [
+  {
+   "text": "El ayuntamiento le concedió a Sergio un subsidio para modernizar la cocina.",
+   "en": "The town council granted Sergio a subsidy to modernise the kitchen.",
+   "ko": "시청이 세르히오에게 주방 현대화 보조금을 줬어요.",
+   "blank": "subsidio",
+   "src": "made"
+  },
+  {
+   "text": "Lola recibe un subsidio por cuidar las razas autóctonas de ovejas.",
+   "en": "Lola receives a subsidy for looking after native sheep breeds.",
+   "ko": "롤라는 토종 양 품종을 키우는 대가로 보조금을 받아요.",
+   "blank": "subsidio",
+   "src": "made"
+  }
+ ],
  "w|subterráneo": [
   {
    "text": "Visitaron una cueva con un río subterráneo.",
@@ -95214,6 +95774,22 @@
    "en": "At the office, Sofía wrote the day's tasks on the corkboard.",
    "ko": "사무실에서 소피아는 그날 할 일을 코르크 게시판에 적었어요.",
    "blank": "tablero",
+   "src": "made"
+  }
+ ],
+ "w|tableta": [
+  {
+   "text": "Sergio usa una tableta para revisar los pedidos de la tarde.",
+   "en": "Sergio uses a tablet to check the afternoon orders.",
+   "ko": "세르히오는 태블릿으로 오후 주문을 확인해요.",
+   "blank": "tableta",
+   "src": "made"
+  },
+  {
+   "text": "Lola anota en una tableta cuánta leche da cada vaca.",
+   "en": "Lola notes on a tablet how much milk each cow gives.",
+   "ko": "롤라는 소마다 우유가 얼마나 나오는지 태블릿에 적어요.",
+   "blank": "tableta",
    "src": "made"
   }
  ],
@@ -98773,6 +99349,38 @@
    "src": "made"
   }
  ],
+ "w|trámite": [
+  {
+   "text": "Antes de abrir, Sergio pasó semanas con el trámite de la licencia sanitaria.",
+   "en": "Before opening, Sergio spent weeks on the paperwork for the health licence.",
+   "ko": "개업 전에 세르히오는 위생 허가 절차를 밟느라 몇 주를 보냈어요.",
+   "blank": "trámite",
+   "src": "made"
+  },
+  {
+   "text": "Para vender el queso, Lola tuvo que hacer un trámite largo en el ayuntamiento.",
+   "en": "To sell the cheese, Lola had to go through a long procedure at the town hall.",
+   "ko": "치즈를 팔려고 롤라는 시청에서 긴 절차를 밟아야 했어요.",
+   "blank": "trámite",
+   "src": "made"
+  }
+ ],
+ "w|tramo": [
+  {
+   "text": "El último tramo del camino al restaurante es una cuesta, y Sergio llega sin aliento.",
+   "en": "The last stretch of the way to the restaurant is uphill, and Sergio arrives out of breath.",
+   "ko": "식당까지 가는 길의 마지막 구간이 오르막이라 세르히오는 숨이 차서 도착해요.",
+   "blank": "tramo",
+   "src": "made"
+  },
+  {
+   "text": "El tramo de camino que llega a la granja de Lola se llena de barro cuando llueve.",
+   "en": "The stretch of road that leads to Lola's farm fills with mud when it rains.",
+   "ko": "롤라의 농장으로 가는 길 구간은 비가 오면 진흙투성이가 돼요.",
+   "blank": "tramo",
+   "src": "made"
+  }
+ ],
  "w|trampa": [
   {
    "text": "Cuidado, eso es una trampa.",
@@ -99823,6 +100431,22 @@
    "en": "The whole crew received new training.",
    "ko": "승무원 전체가 새 교육을 받았어.",
    "blank": "tripulación"
+  }
+ ],
+ "w|tripulante": [
+  {
+   "text": "Un tripulante de un barco de pesca le trae a Sergio el marisco más fresco.",
+   "en": "A crew member on a fishing boat brings Sergio the freshest seafood.",
+   "ko": "어선 선원 한 명이 세르히오에게 가장 신선한 해산물을 가져다줘요.",
+   "blank": "tripulante",
+   "src": "made"
+  },
+  {
+   "text": "Lola alquila una cabaña a un tripulante de avión que viene a descansar entre viajes.",
+   "en": "Lola rents a cabin to a flight crew member who comes to rest between trips.",
+   "ko": "롤라는 비행 사이에 쉬러 오는 항공 승무원에게 오두막을 빌려줘요.",
+   "blank": "tripulante",
+   "src": "made"
   }
  ],
  "w|triste": [
@@ -102336,6 +102960,22 @@
    "en": "With her first factory salary, Paula set up a walk-in closet in her bedroom.",
    "ko": "파울라는 공장에서 받은 첫 월급으로 침실에 드레스룸을 꾸몄어요.",
    "blank": "vestidor",
+   "src": "made"
+  }
+ ],
+ "w|vestimenta": [
+  {
+   "text": "La vestimenta de Sergio en la cocina es siempre blanca y limpia.",
+   "en": "Sergio's clothing in the kitchen is always white and clean.",
+   "ko": "주방에서 세르히오의 옷차림은 늘 하얗고 깨끗해요.",
+   "blank": "vestimenta",
+   "src": "made"
+  },
+  {
+   "text": "Para la fiesta del pueblo, Lola se puso la vestimenta tradicional de su abuela.",
+   "en": "For the village festival, Lola put on her grandmother's traditional dress.",
+   "ko": "마을 축제 때 롤라는 할머니의 전통 옷을 입었어요.",
+   "blank": "vestimenta",
    "src": "made"
   }
  ],
