@@ -523,6 +523,22 @@
    "blank": "あるいは"
   }
  ],
+ "w|アルコール": [
+  {
+   "text": "歯医者は、今夜はアルコールを控えるように翔太に言った。",
+   "en": "The dentist told Shota to avoid alcohol tonight.",
+   "ko": "치과 의사는 오늘 밤은 술을 삼가라고 쇼타에게 말했어요.",
+   "blank": "アルコール",
+   "src": "made"
+  },
+  {
+   "text": "由美はお酒に弱く、アルコールの少ない飲み物を選ぶ。",
+   "en": "Yumi can't hold her liquor, so she chooses drinks with little alcohol.",
+   "ko": "유미는 술이 약해서 알코올이 적은 음료를 골라요.",
+   "blank": "アルコール",
+   "src": "made"
+  }
+ ],
  "w|アルバイト": [
   {
    "text": "学生のアルバイトが、写真の整理を手伝ってくれた。",
@@ -1909,6 +1925,22 @@
    "blank": "お客様"
   }
  ],
+ "w|お弁当": [
+  {
+   "text": "翔太は、歯医者の後でお弁当を食べられるか心配だった。",
+   "en": "Shota was worried whether he could eat his boxed lunch after the dentist.",
+   "ko": "쇼타는 치과 다녀와서 도시락을 먹을 수 있을지 걱정이었어요.",
+   "blank": "お弁当",
+   "src": "made"
+  },
+  {
+   "text": "由美は、前の晩の残りでお弁当を詰めた。",
+   "en": "Yumi packed her boxed lunch with leftovers from the night before.",
+   "ko": "유미는 전날 저녁 남은 반찬으로 도시락을 쌌어요.",
+   "blank": "お弁当",
+   "src": "made"
+  }
+ ],
  "w|お母さん": [
   {
    "text": "お母さんが夕飯を作る。",
@@ -2885,6 +2917,22 @@
    "blank": "ゲーム"
   }
  ],
+ "w|ケア": [
+  {
+   "text": "翔太は、歯ぐきのケアに柔らかい歯ブラシを選んだ。",
+   "en": "Shota chose a soft toothbrush for gum care.",
+   "ko": "쇼타는 잇몸 관리를 위해 부드러운 칫솔을 골랐어요.",
+   "blank": "ケア",
+   "src": "made"
+  },
+  {
+   "text": "夜、由美は時間をかけて肌のケアをした。",
+   "en": "At night, Yumi took her time with her skincare.",
+   "ko": "밤에 유미는 시간을 들여 피부 관리를 했어요.",
+   "blank": "ケア",
+   "src": "made"
+  }
+ ],
  "w|ゲスト": [
   {
    "text": "ゲストが来たよ。",
@@ -3819,6 +3867,22 @@
    "blank": "さて"
   }
  ],
+ "w|サプリ": [
+  {
+   "text": "翔太は、歯にいいと聞いてカルシウムのサプリを飲み始めた。",
+   "en": "Hearing it's good for teeth, Shota started taking calcium supplements.",
+   "ko": "쇼타는 이에 좋다는 말을 듣고 칼슘 영양제를 먹기 시작했어요.",
+   "blank": "サプリ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、朝ごはんの後にビタミンのサプリを飲む。",
+   "en": "Yumi takes a vitamin supplement after breakfast.",
+   "ko": "유미는 아침 식사 후에 비타민 영양제를 먹어요.",
+   "blank": "サプリ",
+   "src": "made"
+  }
+ ],
  "w|サポート": [
   {
    "text": "サポート、ありがとう。",
@@ -4379,6 +4443,22 @@
    "en": "I bought it at the supermarket.",
    "ko": "슈퍼에서 샀어.",
    "blank": "スーパー"
+  }
+ ],
+ "w|スープ": [
+  {
+   "text": "歯を抜いた日、翔太は温かいスープだけを飲んだ。",
+   "en": "On the day his tooth was pulled, Shota had only warm soup.",
+   "ko": "이를 뺀 날 쇼타는 따뜻한 수프만 마셨어요.",
+   "blank": "スープ",
+   "src": "made"
+  },
+  {
+   "text": "寒い夜、由美はかぼちゃのスープを作った。",
+   "en": "On a cold night, Yumi made pumpkin soup.",
+   "ko": "추운 밤, 유미는 단호박 수프를 만들었어요.",
+   "blank": "スープ",
+   "src": "made"
   }
  ],
  "w|スイッチ": [
@@ -6393,6 +6473,22 @@
    "blank": "テスト"
   }
  ],
+ "w|デッキ": [
+  {
+   "text": "翔太が座ったのは、窓際のデッキのような明るい待合スペースだった。",
+   "en": "Shota sat in a bright waiting area by the window, like a deck.",
+   "ko": "쇼타가 앉은 곳은 창가의 데크 같은 밝은 대기 공간이었어요.",
+   "blank": "デッキ",
+   "src": "made"
+  },
+  {
+   "text": "天気がいいので、由美はベランダのデッキでコーヒーを飲んだ。",
+   "en": "The weather was nice, so Yumi drank coffee on the balcony deck.",
+   "ko": "날씨가 좋아서 유미는 베란다 데크에서 커피를 마셨어요.",
+   "blank": "デッキ",
+   "src": "made"
+  }
+ ],
  "w|テニス": [
   {
    "text": "翔太は、テニスのために足腰を鍛えようとジムに通い始めた。",
@@ -6623,6 +6719,22 @@
    "en": "Please, dig in.",
    "ko": "드세요.",
    "blank": "どうぞ"
+  }
+ ],
+ "w|ドクター": [
+  {
+   "text": "翔太の歯を診たのは、白髪の優しいドクターだった。",
+   "en": "The one who examined Shota's teeth was a kind, gray-haired doctor.",
+   "ko": "쇼타의 이를 진찰한 사람은 백발의 다정한 의사 선생님이었어요.",
+   "blank": "ドクター",
+   "src": "made"
+  },
+  {
+   "text": "由美が見ている海外ドラマでは、主人公がドクターと呼ばれている。",
+   "en": "In the foreign drama Yumi is watching, the main character is called \"Doctor.\"",
+   "ko": "유미가 보는 외국 드라마에서는 주인공이 닥터라고 불려요.",
+   "blank": "ドクター",
+   "src": "made"
   }
  ],
  "w|どこ": [
@@ -6941,6 +7053,22 @@
    "blank": "どれ"
   }
  ],
+ "w|トレーニング": [
+  {
+   "text": "翔太は、ジムでのトレーニングで歯を食いしばる癖がある。",
+   "en": "Shota has a habit of clenching his teeth during training at the gym.",
+   "ko": "쇼타는 헬스장에서 운동할 때 이를 악무는 버릇이 있어요.",
+   "blank": "トレーニング",
+   "src": "made"
+  },
+  {
+   "text": "仕事帰りに、由美は家で軽いトレーニングをした。",
+   "en": "After work, Yumi did some light training at home.",
+   "ko": "퇴근 후 유미는 집에서 가벼운 운동을 했어요.",
+   "blank": "トレーニング",
+   "src": "made"
+  }
+ ],
  "w|ドレス": [
   {
    "text": "お客さま、そちらのドレスはすとんとしたシルエットがとても上品で素敵なんです。",
@@ -7213,6 +7341,22 @@
    "en": "We'll meet the needs.",
    "ko": "니즈에 응할게.",
    "blank": "ニーズ"
+  }
+ ],
+ "w|ニキビ": [
+  {
+   "text": "高校生の翔太の弟は、ニキビを気にしてマスクを外さなかった。",
+   "en": "Shota's younger brother, a high schooler, didn't take off his mask because he was self-conscious about his pimples.",
+   "ko": "고등학생인 쇼타의 동생은 여드름이 신경 쓰여서 마스크를 벗지 않았어요.",
+   "blank": "ニキビ",
+   "src": "made"
+  },
+  {
+   "text": "由美の額に、久しぶりにニキビができた。",
+   "en": "Yumi got a pimple on her forehead for the first time in a while.",
+   "ko": "유미 이마에 오랜만에 여드름이 났어요.",
+   "blank": "ニキビ",
+   "src": "made"
   }
  ],
  "w|にぎやか": [
@@ -9059,6 +9203,22 @@
    "blank": "まあ"
   }
  ],
+ "w|マイク": [
+  {
+   "text": "受付の人が、マイクで翔太の名前を呼んだ。",
+   "en": "The receptionist called Shota's name over the microphone.",
+   "ko": "접수 직원이 마이크로 쇼타의 이름을 불렀어요.",
+   "blank": "マイク",
+   "src": "made"
+  },
+  {
+   "text": "オンライン会議の前に、由美はマイクの音を確かめた。",
+   "en": "Before the online meeting, Yumi checked her microphone.",
+   "ko": "온라인 회의 전에 유미는 마이크 소리를 확인했어요.",
+   "blank": "マイク",
+   "src": "made"
+  }
+ ],
  "w|マイナス": [
   {
    "text": "今朝の気温はマイナスまで下がり、窓が凍っていた。",
@@ -9311,6 +9471,22 @@
    "en": "There is still plenty ahead.",
    "ko": "아직 이제부터야.",
    "blank": "まだまだ"
+  }
+ ],
+ "w|マッサージ": [
+  {
+   "text": "歯医者は、あごの疲れをとるマッサージのやり方を見せてくれた。",
+   "en": "The dentist showed Shota how to massage his jaw to relieve fatigue.",
+   "ko": "치과 의사는 턱 피로를 푸는 마사지 방법을 보여 줬어요.",
+   "blank": "マッサージ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、月に一度だけ足のマッサージに行く。",
+   "en": "Yumi goes for a foot massage only once a month.",
+   "ko": "유미는 한 달에 한 번만 발 마사지를 받으러 가요.",
+   "blank": "マッサージ",
+   "src": "made"
   }
  ],
  "w|マップ": [
@@ -10467,6 +10643,22 @@
    "blank": "ランク"
   }
  ],
+ "w|ランチ": [
+  {
+   "text": "治療が終わったら、翔太は同僚とランチに行く予定だ。",
+   "en": "After his treatment, Shota plans to go to lunch with a coworker.",
+   "ko": "치료가 끝나면 쇼타는 동료와 점심을 먹으러 갈 예정이에요.",
+   "blank": "ランチ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、会社の近くの新しいカフェでランチを食べた。",
+   "en": "Yumi had lunch at a new café near her office.",
+   "ko": "유미는 회사 근처 새 카페에서 점심을 먹었어요.",
+   "blank": "ランチ",
+   "src": "made"
+  }
+ ],
  "w|リーグ": [
   {
    "text": "リーグ戦が始まる。",
@@ -10693,6 +10885,22 @@
    "en": "The race was intense.",
    "ko": "레이스가 치열했어.",
    "blank": "レース"
+  }
+ ],
+ "w|レシピ": [
+  {
+   "text": "歯科衛生士は、歯にやさしいおやつのレシピを翔太に教えてくれた。",
+   "en": "The dental hygienist taught Shota a recipe for a tooth-friendly snack.",
+   "ko": "치위생사는 이에 좋은 간식 레시피를 쇼타에게 알려 줬어요.",
+   "blank": "レシピ",
+   "src": "made"
+  },
+  {
+   "text": "由美は、祖母から教わったレシピで煮物を作った。",
+   "en": "Yumi made a simmered dish with a recipe she learned from her grandmother.",
+   "ko": "유미는 할머니께 배운 레시피로 조림을 만들었어요.",
+   "blank": "レシピ",
+   "src": "made"
   }
  ],
  "w|レストラン": [
@@ -12075,6 +12283,22 @@
    "blank": "中止"
   }
  ],
+ "w|中毒": [
+  {
+   "text": "翔太はコーヒー中毒で、歯の着色を気にしている。",
+   "en": "Shota is addicted to coffee and worries about stained teeth.",
+   "ko": "쇼타는 커피 중독이라 치아 착색을 신경 써요.",
+   "blank": "中毒",
+   "src": "made"
+  },
+  {
+   "text": "由美は、スマホ中毒にならないよう寝る前は電源を切る。",
+   "en": "So as not to become addicted to her phone, Yumi turns it off before bed.",
+   "ko": "유미는 스마트폰 중독이 되지 않으려고 자기 전에 전원을 꺼요.",
+   "blank": "中毒",
+   "src": "made"
+  }
+ ],
  "w|中継": [
   {
    "text": "試合の中継を見る。",
@@ -12522,6 +12746,22 @@
    "en": "Yumi's son never skips practice because he's competing in the swimming heats.",
    "ko": "유미의 아들은 수영 예선에 나가려고 연습을 빠지지 않아요.",
    "blank": "予選",
+   "src": "made"
+  }
+ ],
+ "w|予防": [
+  {
+   "text": "虫歯の予防には、毎日の歯みがきが一番大切だ。",
+   "en": "Daily brushing is the most important thing for preventing cavities.",
+   "ko": "충치 예방에는 매일 이 닦기가 가장 중요해요.",
+   "blank": "予防",
+   "src": "made"
+  },
+  {
+   "text": "風邪の予防のため、由美は帰るとすぐ手を洗う。",
+   "en": "To prevent colds, Yumi washes her hands as soon as she gets home.",
+   "ko": "감기 예방을 위해 유미는 집에 오자마자 손을 씻어요.",
+   "blank": "予防",
    "src": "made"
   }
  ],
@@ -14263,6 +14503,22 @@
    "ko": "몸 상태가 안 좋아서 아쉽지만 그렇게 무거운 상자는 못 날라요.",
    "blank": "体調",
    "src": "tatoeba:772976/marloncori en:11339744/stephenmk"
+  }
+ ],
+ "w|体質": [
+  {
+   "text": "翔太は、虫歯になりやすい体質だと言われた。",
+   "en": "Shota was told he has a constitution prone to cavities.",
+   "ko": "쇼타는 충치가 잘 생기는 체질이라는 말을 들었어요.",
+   "blank": "体質",
+   "src": "made"
+  },
+  {
+   "text": "由美は冷えやすい体質なので、夏でも靴下をはく。",
+   "en": "Yumi tends to get cold easily, so she wears socks even in summer.",
+   "ko": "유미는 몸이 잘 차가워지는 체질이라 여름에도 양말을 신어요.",
+   "blank": "体質",
+   "src": "made"
   }
  ],
  "w|体重": [
@@ -16941,6 +17197,22 @@
    "en": "The appearance of a rare bird is unusual.",
    "ko": "희귀 새의 출현은 드물어.",
    "blank": "出現"
+  }
+ ],
+ "w|出産": [
+  {
+   "text": "妊娠中の女性は、出産の前に歯の治療を済ませるといいそうだ。",
+   "en": "Pregnant women are said to do well to finish dental treatment before giving birth.",
+   "ko": "임신 중인 여성은 출산 전에 치과 치료를 마치는 게 좋대요.",
+   "blank": "出産",
+   "src": "made"
+  },
+  {
+   "text": "由美の姉から、無事に出産したと連絡が来た。",
+   "en": "Yumi's older sister sent word that she had given birth safely.",
+   "ko": "유미 언니에게서 무사히 출산했다는 연락이 왔어요.",
+   "blank": "出産",
+   "src": "made"
   }
  ],
  "w|出番": [
@@ -24437,6 +24709,22 @@
    "src": "tatoeba:167679/bunbuku en:246821/CK"
   }
  ],
+ "w|寿命": [
+  {
+   "text": "歯を大切にすると、寿命も延びるという研究があるそうだ。",
+   "en": "There is apparently research showing that taking care of your teeth extends your lifespan.",
+   "ko": "이를 잘 관리하면 수명도 늘어난다는 연구가 있대요.",
+   "blank": "寿命",
+   "src": "made"
+  },
+  {
+   "text": "由美のスマホは電池の寿命が近く、すぐに充電が切れる。",
+   "en": "Yumi's phone battery is near the end of its life and dies quickly.",
+   "ko": "유미의 스마트폰은 배터리 수명이 다 돼 가서 금방 꺼져요.",
+   "blank": "寿命",
+   "src": "made"
+  }
+ ],
  "w|専用": [
   {
    "text": "これは専用だよ。",
@@ -29785,6 +30073,22 @@
    "blank": "携帯"
   }
  ],
+ "w|摂取": [
+  {
+   "text": "砂糖の摂取を減らすように、歯医者は翔太にすすめた。",
+   "en": "The dentist advised Shota to cut down his sugar intake.",
+   "ko": "치과 의사는 쇼타에게 설탕 섭취를 줄이라고 권했어요.",
+   "blank": "摂取",
+   "src": "made"
+  },
+  {
+   "text": "由美は、野菜からビタミンを摂取するように気をつけている。",
+   "en": "Yumi makes a point of getting vitamins from vegetables.",
+   "ko": "유미는 채소로 비타민을 섭취하도록 신경 써요.",
+   "blank": "摂取",
+   "src": "made"
+  }
+ ],
  "w|撤退": [
   {
    "text": "その航空会社は、この空港からの撤退を決めたそうだ。",
@@ -30244,6 +30548,22 @@
    "en": "Keiko rescued a kitten that couldn't get down from a tree.",
    "ko": "게이코는 나무에서 못 내려오는 새끼 고양이를 구했어요.",
    "blank": "救った",
+   "src": "made"
+  }
+ ],
+ "w|救急": [
+  {
+   "text": "隣の病院の前に、救急車が静かに止まった。",
+   "en": "An ambulance quietly stopped in front of the hospital next door.",
+   "ko": "옆 병원 앞에 구급차가 조용히 멈췄어요.",
+   "blank": "救急",
+   "src": "made"
+  },
+  {
+   "text": "由美の会社では、全員が救急の講習を受けた。",
+   "en": "At Yumi's company, everyone took a first-aid course.",
+   "ko": "유미의 회사에서는 전원이 응급 처치 강습을 받았어요.",
+   "blank": "救急",
    "src": "made"
   }
  ],
@@ -32389,6 +32709,22 @@
    "blank": "本部"
   }
  ],
+ "w|机": [
+  {
+   "text": "診察室の机の上には、歯の模型が並んでいた。",
+   "en": "Models of teeth were lined up on the desk in the exam room.",
+   "ko": "진료실 책상 위에는 치아 모형이 늘어서 있었어요.",
+   "blank": "机",
+   "src": "made"
+  },
+  {
+   "text": "由美の机の上は、いつも書類でいっぱいだ。",
+   "en": "Yumi's desk is always covered with papers.",
+   "ko": "유미의 책상 위는 늘 서류로 가득해요.",
+   "blank": "机",
+   "src": "made"
+  }
+ ],
  "w|材料": [
   {
    "text": "石油が化学製品の材料として用いられるようになったのはごく最近のことである。",
@@ -32668,6 +33004,22 @@
    "en": "The supplier for Aoi's shop is a small local corporation.",
    "ko": "아오이네 가게에 물건을 대는 곳은 지역의 작은 주식회사예요.",
    "blank": "株式会社",
+   "src": "made"
+  }
+ ],
+ "w|根": [
+  {
+   "text": "歯医者は、翔太の奥歯の根が少し弱っていると言った。",
+   "en": "The dentist said the root of Shota's back tooth was a little weak.",
+   "ko": "치과 의사는 쇼타의 어금니 뿌리가 조금 약해졌다고 했어요.",
+   "blank": "根",
+   "src": "made"
+  },
+  {
+   "text": "由美は、庭の雑草を根から丁寧に抜いた。",
+   "en": "Yumi carefully pulled the weeds in the garden out by the roots.",
+   "ko": "유미는 마당 잡초를 뿌리째 꼼꼼히 뽑았어요.",
+   "blank": "根",
    "src": "made"
   }
  ],
@@ -33931,6 +34283,22 @@
    "src": "made"
   }
  ],
+ "w|死者": [
+  {
+   "text": "待合室の新聞には、地震の死者の数が大きく載っていた。",
+   "en": "The newspaper in the waiting room prominently reported the death toll of the earthquake.",
+   "ko": "대기실 신문에는 지진 사망자 수가 크게 실려 있었어요.",
+   "blank": "死者",
+   "src": "made"
+  },
+  {
+   "text": "朝のニュースで、由美は大雨による死者が出たことを知った。",
+   "en": "On the morning news, Yumi learned that the heavy rain had caused deaths.",
+   "ko": "아침 뉴스에서 유미는 폭우로 사망자가 나왔다는 것을 알았어요.",
+   "blank": "死者",
+   "src": "made"
+  }
+ ],
  "w|残す": [
   {
    "text": "メモを残すよ。",
@@ -34433,6 +34801,22 @@
    "blank": "水"
   }
  ],
+ "w|水分": [
+  {
+   "text": "治療の後は、口の中が乾くので水分をよくとってください。",
+   "en": "After treatment your mouth gets dry, so drink plenty of fluids.",
+   "ko": "치료 후에는 입안이 마르니까 수분을 충분히 섭취하세요.",
+   "blank": "水分",
+   "src": "made"
+  },
+  {
+   "text": "暑い日は、由美はこまめに水分をとるようにしている。",
+   "en": "On hot days, Yumi makes sure to drink fluids often.",
+   "ko": "더운 날에는 유미는 수시로 수분을 섭취하려고 해요.",
+   "blank": "水分",
+   "src": "made"
+  }
+ ],
  "w|水曜日": [
   {
    "text": "水曜日で大丈夫？",
@@ -34610,6 +34994,22 @@
    "en": "My shoes get dirty on rainy days.",
    "ko": "비 오는 날은 신발이 더러워져요.",
    "blank": "汚れる",
+   "src": "made"
+  }
+ ],
+ "w|汚染": [
+  {
+   "text": "待合室のテレビでは、川の汚染についてのニュースが流れていた。",
+   "en": "The TV in the waiting room was showing news about river pollution.",
+   "ko": "대기실 TV에서는 강 오염에 관한 뉴스가 나오고 있었어요.",
+   "blank": "汚染",
+   "src": "made"
+  },
+  {
+   "text": "由美は、海の汚染を減らすためにマイボトルを使っている。",
+   "en": "Yumi uses her own bottle to reduce ocean pollution.",
+   "ko": "유미는 바다 오염을 줄이려고 개인 물병을 써요.",
+   "blank": "汚染",
    "src": "made"
   }
  ],
@@ -35531,6 +35931,22 @@
    "ko": "기적이 울리고 배는 천천히 항구를 떠났어요.",
    "blank": "港",
    "src": "tatoeba:183119 en:20241/fishda"
+  }
+ ],
+ "w|湖": [
+  {
+   "text": "歯医者の待合室には、湖の大きな写真が飾ってあった。",
+   "en": "A large photo of a lake hung in the dentist's waiting room.",
+   "ko": "치과 대기실에는 호수의 큰 사진이 걸려 있었어요.",
+   "blank": "湖",
+   "src": "made"
+  },
+  {
+   "text": "休日の朝、由美は近くの湖のまわりを散歩した。",
+   "en": "On her day off, Yumi took a walk around the nearby lake.",
+   "ko": "휴일 아침 유미는 근처 호수 주변을 산책했어요.",
+   "blank": "湖",
+   "src": "made"
   }
  ],
  "w|湯": [
@@ -37127,6 +37543,22 @@
    "blank": "生命"
   }
  ],
+ "w|生存": [
+  {
+   "text": "待合室の本には、歯のない動物の生存の工夫が書いてあった。",
+   "en": "A book in the waiting room described how animals without teeth manage to survive.",
+   "ko": "대기실 책에는 이가 없는 동물이 살아남는 방법이 쓰여 있었어요.",
+   "blank": "生存",
+   "src": "made"
+  },
+  {
+   "text": "由美が読んでいる小説は、雪山での生存をめぐる話だ。",
+   "en": "The novel Yumi is reading is about survival on a snowy mountain.",
+   "ko": "유미가 읽고 있는 소설은 눈 덮인 산에서의 생존을 둘러싼 이야기예요.",
+   "blank": "生存",
+   "src": "made"
+  }
+ ],
  "w|生徒": [
   {
    "text": "生徒が集まってるよ。",
@@ -37215,6 +37647,22 @@
    "en": "I found a rare creature.",
    "ko": "희귀한 생물을 찾았어.",
    "blank": "生物"
+  }
+ ],
+ "w|生理": [
+  {
+   "text": "歯医者は、生理のときは歯ぐきが腫れやすいと女性の患者に説明した。",
+   "en": "The dentist explained to a female patient that gums swell easily during her period.",
+   "ko": "치과 의사는 생리 때는 잇몸이 붓기 쉽다고 여성 환자에게 설명했어요.",
+   "blank": "生理",
+   "src": "made"
+  },
+  {
+   "text": "生理の痛みがひどい日、由美は会社を休んだ。",
+   "en": "On a day of bad period pain, Yumi took the day off work.",
+   "ko": "생리통이 심한 날 유미는 회사를 쉬었어요.",
+   "blank": "生理",
+   "src": "made"
   }
  ],
  "w|生産": [
@@ -37493,6 +37941,22 @@
    "blank": "画面"
   }
  ],
+ "w|畑": [
+  {
+   "text": "歯医者の裏には、先生が趣味で作っている畑がある。",
+   "en": "Behind the dental office is a field the dentist grows as a hobby.",
+   "ko": "치과 뒤에는 원장님이 취미로 가꾸는 밭이 있어요.",
+   "blank": "畑",
+   "src": "made"
+  },
+  {
+   "text": "由美の父は、週末になると畑でトマトを育てている。",
+   "en": "On weekends, Yumi's father grows tomatoes in the field.",
+   "ko": "유미의 아버지는 주말이면 밭에서 토마토를 길러요.",
+   "blank": "畑",
+   "src": "made"
+  }
+ ],
  "w|留学": [
   {
    "text": "大輔の弟は、来月から一年間留学する。",
@@ -37669,6 +38133,22 @@
    "blank": "疲れない"
   }
  ],
+ "w|疾患": [
+  {
+   "text": "歯周病は、ほかの疾患にもつながることがあるそうだ。",
+   "en": "Gum disease can apparently lead to other illnesses as well.",
+   "ko": "잇몸병은 다른 질환으로도 이어질 수 있대요.",
+   "blank": "疾患",
+   "src": "made"
+  },
+  {
+   "text": "由美の祖父は、心臓の疾患で定期的に病院に通っている。",
+   "en": "Yumi's grandfather regularly visits the hospital for a heart condition.",
+   "ko": "유미 할아버지는 심장 질환으로 정기적으로 병원에 다녀요.",
+   "blank": "疾患",
+   "src": "made"
+  }
+ ],
  "w|病気": [
   {
    "text": "病気で休んだ。",
@@ -37739,6 +38219,22 @@
    "en": "There's a bit of pain.",
    "ko": "약간 통증이 있어.",
    "blank": "痛み"
+  }
+ ],
+ "w|療法": [
+  {
+   "text": "この歯医者では、歯ぎしりに新しい療法を試している。",
+   "en": "This dentist is trying a new therapy for teeth grinding.",
+   "ko": "이 치과에서는 이갈이에 새로운 요법을 시도하고 있어요.",
+   "blank": "療法",
+   "src": "made"
+  },
+  {
+   "text": "由美は、肩こりに効くという温熱療法を試してみた。",
+   "en": "Yumi tried a heat therapy said to work for stiff shoulders.",
+   "ko": "유미는 어깨 결림에 좋다는 온열 요법을 시도해 봤어요.",
+   "blank": "療法",
+   "src": "made"
   }
  ],
  "w|癒し": [
@@ -38171,6 +38667,38 @@
    "src": "tatoeba:11388983/bunbuku en:1898395/CK"
   }
  ],
+ "w|皮膚": [
+  {
+   "text": "歯医者は、口のまわりの皮膚が乾燥していると翔太に教えた。",
+   "en": "The dentist told Shota the skin around his mouth was dry.",
+   "ko": "치과 의사는 입 주변 피부가 건조하다고 쇼타에게 알려 줬어요.",
+   "blank": "皮膚",
+   "src": "made"
+  },
+  {
+   "text": "冬になると、由美の手の皮膚はすぐ荒れる。",
+   "en": "In winter, the skin on Yumi's hands gets rough quickly.",
+   "ko": "겨울이 되면 유미의 손 피부는 금방 거칠어져요.",
+   "blank": "皮膚",
+   "src": "made"
+  }
+ ],
+ "w|皿": [
+  {
+   "text": "歯医者は、外した銀の詰め物を小さな皿に置いた。",
+   "en": "The dentist put the removed silver filling on a small dish.",
+   "ko": "치과 의사는 빼낸 은 충전재를 작은 접시에 놓았어요.",
+   "blank": "皿",
+   "src": "made"
+  },
+  {
+   "text": "夕食の後、由美は家族の皿をまとめて洗った。",
+   "en": "After dinner, Yumi washed the family's dishes all together.",
+   "ko": "저녁 식사 후 유미는 가족 접시를 한꺼번에 설거지했어요.",
+   "blank": "皿",
+   "src": "made"
+  }
+ ],
  "w|盛り上がる": [
   {
    "text": "新年会では、社長のものまねで会場がとても盛り上がった。",
@@ -38316,6 +38844,22 @@
    "en": "Misaki made a village map from a child's point of view.",
    "ko": "미사키는 아이 눈높이로 마을 안내도를 만들었어요.",
    "blank": "目線",
+   "src": "made"
+  }
+ ],
+ "w|目覚める": [
+  {
+   "text": "麻酔が切れて目覚めると、翔太の口の中はまだしびれていた。",
+   "en": "When Shota came to after the anesthetic wore off, his mouth was still numb.",
+   "ko": "마취가 풀려 깨어나 보니 쇼타의 입안은 아직 얼얼했어요.",
+   "blank": "目覚める",
+   "src": "made"
+  },
+  {
+   "text": "由美は、毎朝鳥の声で自然に目覚める。",
+   "en": "Yumi wakes up naturally to birdsong every morning.",
+   "ko": "유미는 매일 아침 새소리에 자연스럽게 눈을 떠요.",
+   "blank": "目覚める",
    "src": "made"
   }
  ],
@@ -39999,6 +40543,22 @@
    "blank": "箱"
   }
  ],
+ "w|箸": [
+  {
+   "text": "治療の後、翔太は箸を持っても口がうまく開かなかった。",
+   "en": "After the treatment, Shota couldn't open his mouth well even holding chopsticks.",
+   "ko": "치료 후 쇼타는 젓가락을 들어도 입이 잘 벌어지지 않았어요.",
+   "blank": "箸",
+   "src": "made"
+  },
+  {
+   "text": "由美は、お気に入りの木の箸を毎日使っている。",
+   "en": "Yumi uses her favorite wooden chopsticks every day.",
+   "ko": "유미는 좋아하는 나무 젓가락을 매일 써요.",
+   "blank": "箸",
+   "src": "made"
+  }
+ ],
  "w|範囲": [
   {
    "text": "この範囲でいい？",
@@ -40751,6 +41311,22 @@
    "en": "Keep it like this.",
    "ko": "이 상태를 유지해.",
    "blank": "維持"
+  }
+ ],
+ "w|網": [
+  {
+   "text": "翔太はよく焼き網で餅を焼いて、歯に詰め物がくっついてしまう。",
+   "en": "Shota often grills rice cakes on a grill net, and they stick to his fillings.",
+   "ko": "쇼타는 석쇠에 떡을 자주 구워 먹다가 이에 때운 것이 들러붙어요.",
+   "blank": "網",
+   "src": "made"
+  },
+  {
+   "text": "由美は、窓の網が破れているのに気づいた。",
+   "en": "Yumi noticed the window screen was torn.",
+   "ko": "유미는 창문 방충망이 찢어진 것을 알아챘어요.",
+   "blank": "網",
+   "src": "made"
   }
  ],
  "w|緊張": [
@@ -41645,6 +42221,22 @@
    "en": "Use what you're good at.",
    "ko": "능력을 살려.",
    "blank": "能力"
+  }
+ ],
+ "w|脂肪": [
+  {
+   "text": "甘い飲み物は、虫歯だけでなく脂肪も増やすと歯医者が言った。",
+   "en": "The dentist said sweet drinks increase not just cavities but also fat.",
+   "ko": "단 음료는 충치뿐 아니라 지방도 늘린다고 치과 의사가 말했어요.",
+   "blank": "脂肪",
+   "src": "made"
+  },
+  {
+   "text": "由美は、お腹の脂肪が気になって夜食をやめた。",
+   "en": "Worried about belly fat, Yumi stopped eating late-night snacks.",
+   "ko": "유미는 뱃살이 신경 쓰여서 야식을 끊었어요.",
+   "blank": "脂肪",
+   "src": "made"
   }
  ],
  "w|脅威": [
@@ -42579,6 +43171,22 @@
    "en": "This medicine works.",
    "ko": "이 약 잘 들어.",
    "blank": "薬"
+  }
+ ],
+ "w|薬物": [
+  {
+   "text": "待合室のポスターは、違法な薬物の危険を伝えていた。",
+   "en": "A poster in the waiting room warned of the dangers of illegal drugs.",
+   "ko": "대기실 포스터는 불법 약물의 위험을 알리고 있었어요.",
+   "blank": "薬物",
+   "src": "made"
+  },
+  {
+   "text": "由美が見たドラマは、薬物の取り締まりをする刑事の話だった。",
+   "en": "The drama Yumi watched was about detectives cracking down on drugs.",
+   "ko": "유미가 본 드라마는 마약을 단속하는 형사 이야기였어요.",
+   "blank": "薬物",
+   "src": "made"
   }
  ],
  "w|虐殺": [
@@ -45537,6 +46145,22 @@
    "blank": "負ける"
   }
  ],
+ "w|負傷": [
+  {
+   "text": "サッカーの試合で歯を負傷した少年が、翔太の次に呼ばれた。",
+   "en": "A boy who injured his teeth in a soccer match was called after Shota.",
+   "ko": "축구 시합에서 이를 다친 소년이 쇼타 다음으로 불렸어요.",
+   "blank": "負傷",
+   "src": "made"
+  },
+  {
+   "text": "ニュースによると、事故で三人が負傷したそうだ。",
+   "en": "According to the news, three people were injured in the accident.",
+   "ko": "뉴스에 따르면 사고로 세 명이 다쳤대요.",
+   "blank": "負傷",
+   "src": "made"
+  }
+ ],
  "w|負担": [
   {
    "text": "負担が大きいよ。",
@@ -48109,6 +48733,22 @@
    "en": "I inherited my parents' genes.",
    "ko": "부모 유전자를 물려받았어.",
    "blank": "遺伝子"
+  }
+ ],
+ "w|遺体": [
+  {
+   "text": "歯の記録は、事故で見つかった遺体の身元確認にも使われるという。",
+   "en": "Dental records are said to be used even to identify bodies found after accidents.",
+   "ko": "치아 기록은 사고로 발견된 시신의 신원 확인에도 쓰인대요.",
+   "blank": "遺体",
+   "src": "made"
+  },
+  {
+   "text": "由美が読んだ推理小説は、古い別荘で遺体が見つかる場面から始まる。",
+   "en": "The mystery novel Yumi read begins with a body being found in an old villa.",
+   "ko": "유미가 읽은 추리 소설은 오래된 별장에서 시신이 발견되는 장면으로 시작해요.",
+   "blank": "遺体",
+   "src": "made"
   }
  ],
  "w|遺産": [
