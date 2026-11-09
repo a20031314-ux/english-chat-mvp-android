@@ -285,6 +285,22 @@
    "blank": "一旦"
   }
  ],
+ "w|一早": [
+  {
+   "text": "大年初一，王刚一早就起来给爷爷奶奶拜年。",
+   "en": "On New Year's Day, Wang Gang got up early in the morning to give his grandparents New Year's greetings.",
+   "ko": "설날 아침 왕강은 일찍 일어나 할아버지 할머니께 세배했어요.",
+   "blank": "一早",
+   "src": "made"
+  },
+  {
+   "text": "搬家那天，李娜一早就起来等搬家公司。",
+   "en": "On moving day, Li Na got up early in the morning to wait for the movers.",
+   "ko": "이삿날 리나는 아침 일찍 일어나 이삿짐센터를 기다렸어요.",
+   "blank": "一早",
+   "src": "made"
+  }
+ ],
  "w|一时": [
   {
    "text": "亲戚们一下子问了好多问题，王刚一时不知道该怎么回答。",
@@ -3113,6 +3129,22 @@
    "blank": "之间"
   }
  ],
+ "w|之际": [
+  {
+   "text": "在新年来临之际，王刚给老朋友们发了祝福短信。",
+   "en": "As the New Year approached, Wang Gang sent greeting messages to his old friends.",
+   "ko": "새해를 맞으며 왕강은 옛 친구들에게 축하 문자를 보냈어요.",
+   "blank": "之际",
+   "src": "made"
+  },
+  {
+   "text": "在离开老房子之际，李娜拍了好多照片留作纪念。",
+   "en": "As she was leaving the old flat, Li Na took lots of photos as keepsakes.",
+   "ko": "옛집을 떠나며 리나는 기념으로 사진을 많이 찍었어요.",
+   "blank": "之际",
+   "src": "made"
+  }
+ ],
  "w|乐园": [
   {
    "text": "对爱书的王刚来说，图书馆就是他的乐园。",
@@ -3669,6 +3701,22 @@
    "src": "made"
   }
  ],
+ "w|事后": [
+  {
+   "text": "王刚把红包忘在出租车上了，事后才想起来。",
+   "en": "Wang Gang left the red envelopes in the taxi and only remembered afterward.",
+   "ko": "왕강은 세뱃돈 봉투를 택시에 두고 내려서 나중에야 생각났어요.",
+   "blank": "事后",
+   "src": "made"
+  },
+  {
+   "text": "搬家时摔碎了一个花瓶，李娜事后才发现。",
+   "en": "A vase was broken during the move, and Li Na only discovered it afterward.",
+   "ko": "이사할 때 꽃병 하나가 깨졌는데 리나는 나중에야 알았어요.",
+   "blank": "事后",
+   "src": "made"
+  }
+ ],
  "w|事实": [
   {
    "text": "这是事实。",
@@ -3823,6 +3871,22 @@
    "en": "See you in five minutes.",
    "ko": "오 분 뒤에 보자.",
    "blank": "五"
+  }
+ ],
+ "w|五月": [
+  {
+   "text": "王刚说，今年五月他要带爸妈出去旅游。",
+   "en": "Wang Gang said he'll take his parents on a trip this May.",
+   "ko": "왕강은 올해 오월에 부모님을 모시고 여행을 가겠다고 했어요.",
+   "blank": "五月",
+   "src": "made"
+  },
+  {
+   "text": "李娜是去年五月签的合同，今年终于搬进了新家。",
+   "en": "Li Na signed the contract last May and finally moved into the new home this year.",
+   "ko": "리나는 작년 오월에 계약해서 올해 드디어 새집에 들어갔어요.",
+   "blank": "五月",
+   "src": "made"
   }
  ],
  "w|些": [
@@ -4674,6 +4738,22 @@
    "en": "Li Na thought that from now on, the train is the more comfortable way to travel far.",
    "ko": "리나는 앞으로 먼 길은 기차가 편하겠다고 생각했어요.",
    "blank": "今后",
+   "src": "made"
+  }
+ ],
+ "w|今夜": [
+  {
+   "text": "妈妈说，今夜谁都不许早睡，一起守岁。",
+   "en": "Mom said nobody is allowed to go to bed early tonight; they'll all stay up together to see in the New Year.",
+   "ko": "엄마는 오늘 밤 아무도 일찍 자면 안 되고 다 같이 밤을 새우자고 했어요.",
+   "blank": "今夜",
+   "src": "made"
+  },
+  {
+   "text": "李娜说，今夜是她在新家睡的第一个晚上。",
+   "en": "Li Na said tonight is her first night sleeping in the new home.",
+   "ko": "리나는 오늘 밤이 새집에서 자는 첫날밤이라고 했어요.",
+   "blank": "今夜",
    "src": "made"
   }
  ],
@@ -8519,6 +8599,22 @@
    "blank": "先"
   }
  ],
+ "w|先前": [
+  {
+   "text": "王刚发现，家里的年夜饭比先前丰盛多了。",
+   "en": "Wang Gang noticed the family's New Year's Eve dinner was much more lavish than before.",
+   "ko": "왕강은 집 설 전날 저녁상이 예전보다 훨씬 푸짐해졌다는 걸 알았어요.",
+   "blank": "先前",
+   "src": "made"
+  },
+  {
+   "text": "新家比先前那套房子大了一倍，阳光也更好。",
+   "en": "The new home is twice as big as the previous flat and gets more sun.",
+   "ko": "새집은 전에 살던 집보다 두 배 넓고 햇빛도 더 잘 들어요.",
+   "blank": "先前",
+   "src": "made"
+  }
+ ],
  "w|先后": [
   {
    "text": "院子里的几棵树先后落光了叶子。",
@@ -9012,6 +9108,22 @@
    "en": "The two nurses at the front desk gossip about coworkers whenever they have a free moment.",
    "ko": "접수대의 두 간호사는 틈만 나면 동료들 뒷이야기를 해요.",
    "blank": "八卦",
+   "src": "made"
+  }
+ ],
+ "w|八月": [
+  {
+   "text": "王刚的表妹八月要结婚，大家过年时一直在聊这件事。",
+   "en": "Wang Gang's cousin is getting married in August, and everyone talked about it all through New Year.",
+   "ko": "왕강의 사촌 여동생이 팔월에 결혼해서 설 내내 다들 그 얘기를 했어요.",
+   "blank": "八月",
+   "src": "made"
+  },
+  {
+   "text": "李娜打算八月再请朋友们来新家吃饭。",
+   "en": "Li Na plans to invite her friends over to the new home for dinner in August.",
+   "ko": "리나는 팔월에 친구들을 새집에 초대해 밥을 먹을 계획이에요.",
+   "blank": "八月",
    "src": "made"
   }
  ],
@@ -10341,6 +10453,22 @@
    "src": "made"
   }
  ],
+ "w|冬季": [
+  {
+   "text": "北方的冬季很冷，可过年的时候家里总是暖洋洋的。",
+   "en": "Winter in the north is cold, but at New Year the house is always warm and cozy.",
+   "ko": "북쪽 겨울은 춥지만 설에는 집 안이 늘 따뜻해요.",
+   "blank": "冬季",
+   "src": "made"
+  },
+  {
+   "text": "李娜特意选在冬季搬家，因为这时候搬家公司比较便宜。",
+   "en": "Li Na deliberately chose to move in winter, because movers are cheaper then.",
+   "ko": "리나는 이때 이삿짐센터가 싸서 일부러 겨울에 이사했어요.",
+   "blank": "冬季",
+   "src": "made"
+  }
+ ],
  "w|冰": [
   {
    "text": "冬天河面结了一层厚厚的冰，王刚小心地走了过去。",
@@ -11594,6 +11722,22 @@
    "en": "Li Na's daughter just started middle school this year and helps mind the stall on weekends.",
    "ko": "리나의 딸은 올해 막 중학교에 들어가서 주말에 가게 보는 걸 도와요.",
    "blank": "初中",
+   "src": "made"
+  }
+ ],
+ "w|初期": [
+  {
+   "text": "腊月初期，妈妈就开始腌腊肉、做香肠了。",
+   "en": "At the start of the twelfth lunar month, Mom already began curing pork and making sausages.",
+   "ko": "음력 섣달 초부터 엄마는 고기를 절이고 소시지를 만들기 시작했어요.",
+   "blank": "初期",
+   "src": "made"
+  },
+  {
+   "text": "住进新家初期，李娜常常找不到东西放在哪儿。",
+   "en": "In the early days at the new place, Li Na often couldn't find where she'd put things.",
+   "ko": "새집에 들어간 초기에 리나는 물건을 어디 뒀는지 자주 못 찾았어요.",
+   "blank": "初期",
    "src": "made"
   }
  ],
@@ -17641,6 +17785,22 @@
    "src": "made"
   }
  ],
+ "w|周一": [
+  {
+   "text": "王刚周一请了假，提前回老家帮忙大扫除。",
+   "en": "Wang Gang took Monday off to go home early and help with the big cleaning.",
+   "ko": "왕강은 월요일에 휴가를 내고 미리 고향에 가서 대청소를 도왔어요.",
+   "blank": "周一",
+   "src": "made"
+  },
+  {
+   "text": "李娜周一要上班，所以打算周末把家具都装好。",
+   "en": "Li Na has to work on Monday, so she plans to assemble all the furniture over the weekend.",
+   "ko": "리나는 월요일에 출근해야 해서 주말에 가구를 다 조립할 생각이에요.",
+   "blank": "周一",
+   "src": "made"
+  }
+ ],
  "w|周五": [
   {
    "text": "天气预报说，周五开始降温。",
@@ -17685,6 +17845,38 @@
    "en": "It's quiet around here.",
    "ko": "주변이 아주 조용해.",
    "blank": "周围"
+  }
+ ],
+ "w|周年": [
+  {
+   "text": "今年是爸妈结婚三十周年，王刚准备了一个惊喜。",
+   "en": "This year is his parents' thirtieth wedding anniversary, and Wang Gang has prepared a surprise.",
+   "ko": "올해는 부모님 결혼 삼십 주년이라 왕강은 깜짝 선물을 준비했어요.",
+   "blank": "周年",
+   "src": "made"
+  },
+  {
+   "text": "搬进新家那天，正好是李娜工作五周年。",
+   "en": "The day Li Na moved into her new home happened to be her fifth anniversary at work.",
+   "ko": "리나가 새집에 들어간 날은 마침 입사 오 주년이었어요.",
+   "blank": "周年",
+   "src": "made"
+  }
+ ],
+ "w|周日": [
+  {
+   "text": "王刚和妈妈约好这个周日一起去买年货。",
+   "en": "Wang Gang and his mom agreed to go shopping for New Year goods this Sunday.",
+   "ko": "왕강은 엄마와 이번 일요일에 같이 설 장을 보러 가기로 했어요.",
+   "blank": "周日",
+   "src": "made"
+  },
+  {
+   "text": "搬家公司说，这个周日只能下午来。",
+   "en": "The moving company said they can only come on Sunday afternoon this week.",
+   "ko": "이삿짐센터는 이번 일요일엔 오후에만 올 수 있다고 했어요.",
+   "blank": "周日",
+   "src": "made"
   }
  ],
  "w|周末": [
@@ -17773,6 +17965,22 @@
    "en": "Please call a doctor.",
    "ko": "의사를 불러 주세요.",
    "blank": "呼叫"
+  }
+ ],
+ "w|呼吁": [
+  {
+   "text": "社区呼吁居民过年少放鞭炮，注意防火。",
+   "en": "The community urged residents to set off fewer firecrackers over New Year and be careful about fire.",
+   "ko": "동네에서는 주민들에게 설에 폭죽을 적게 터뜨리고 불조심하라고 당부했어요.",
+   "blank": "呼吁",
+   "src": "made"
+  },
+  {
+   "text": "物业呼吁新住户不要把装修垃圾堆在楼道里。",
+   "en": "The management urged new residents not to pile renovation debris in the stairwell.",
+   "ko": "관리사무소는 새 입주민들에게 공사 쓰레기를 계단에 쌓지 말라고 당부했어요.",
+   "blank": "呼吁",
+   "src": "made"
   }
  ],
  "w|呼吸": [
@@ -18084,6 +18292,22 @@
    "en": "He laughed out loud after hearing it.",
    "ko": "그는 듣고 나서 하하 크게 웃었어요.",
    "blank": "哈哈",
+   "src": "made"
+  }
+ ],
+ "w|响起": [
+  {
+   "text": "零点的钟声响起，全家一起举杯庆祝。",
+   "en": "As the midnight bell rang, the whole family raised their glasses to celebrate.",
+   "ko": "자정 종소리가 울리자 온 가족이 함께 잔을 들어 축하했어요.",
+   "blank": "响起",
+   "src": "made"
+  },
+  {
+   "text": "刚搬进去，门铃就响起来了，原来是邻居送来了水果。",
+   "en": "No sooner had she moved in than the doorbell rang; it was a neighbor bringing fruit.",
+   "ko": "이사하자마자 초인종이 울렸는데 이웃이 과일을 가져온 거였어요.",
+   "blank": "响起",
    "src": "made"
   }
  ],
@@ -21285,6 +21509,22 @@
    "blank": "夏天"
   }
  ],
+ "w|夏季": [
+  {
+   "text": "王刚的妹妹说，她更喜欢夏季，因为不用穿厚衣服。",
+   "en": "Wang Gang's sister said she prefers summer because you don't need heavy clothes.",
+   "ko": "왕강의 여동생은 두꺼운 옷을 안 입어도 돼서 여름을 더 좋아한다고 했어요.",
+   "blank": "夏季",
+   "src": "made"
+  },
+  {
+   "text": "搬家公司说，夏季是他们最忙的时候，要提前预约。",
+   "en": "The movers said summer is their busiest season, so you have to book ahead.",
+   "ko": "이삿짐센터는 여름이 제일 바쁜 때라 미리 예약해야 한다고 했어요.",
+   "blank": "夏季",
+   "src": "made"
+  }
+ ],
  "w|外": [
   {
    "text": "请到外面等。",
@@ -23535,6 +23775,22 @@
    "en": "That's how it is.",
    "ko": "상황이 이래.",
    "blank": "如"
+  }
+ ],
+ "w|如下": [
+  {
+   "text": "妈妈列的年货清单如下：对联、糖果、瓜子和一条大鱼。",
+   "en": "Mom's New Year shopping list is as follows: couplets, candy, sunflower seeds, and a big fish.",
+   "ko": "엄마가 적은 설 장보기 목록은 다음과 같아요. 춘련, 사탕, 해바라기씨, 큰 생선 한 마리.",
+   "blank": "如下",
+   "src": "made"
+  },
+  {
+   "text": "李娜给搬家师傅留的注意事项如下：玻璃柜要轻拿轻放。",
+   "en": "The note Li Na left for the movers was as follows: handle the glass cabinet gently.",
+   "ko": "리나가 이삿짐 기사님께 남긴 주의 사항은 다음과 같아요. 유리장은 살살 옮겨 주세요.",
+   "blank": "如下",
+   "src": "made"
   }
  ],
  "w|如今": [
@@ -28875,6 +29131,22 @@
    "src": "made"
   }
  ],
+ "w|广大": [
+  {
+   "text": "春晚的主持人祝广大观众新年快乐。",
+   "en": "The Spring Festival Gala hosts wished the viewing public a happy New Year.",
+   "ko": "춘절 특집 방송 진행자가 시청자 여러분께 새해 인사를 했어요.",
+   "blank": "广大",
+   "src": "made"
+  },
+  {
+   "text": "这个新小区面向广大年轻人，房租不算太高。",
+   "en": "This new complex is aimed at young people in general, and the rent isn't too high.",
+   "ko": "이 새 단지는 많은 젊은이를 대상으로 해서 월세가 그리 비싸지 않아요.",
+   "blank": "广大",
+   "src": "made"
+  }
+ ],
  "w|广播": [
   {
    "text": "每天中午学校都会广播一会儿新闻和音乐。",
@@ -28980,6 +29252,22 @@
    "en": "The guide said anyone heading into the mountains should tell their family their route in advance.",
    "ko": "가이드는 산에 들어가는 사람은 미리 가족에게 자기 경로를 알려야 한다고 했어요.",
    "blank": "应当",
+   "src": "made"
+  }
+ ],
+ "w|应得": [
+  {
+   "text": "王刚说，辛苦了一年，这个假期是自己应得的。",
+   "en": "Wang Gang said that after a hard year, this holiday is what he deserves.",
+   "ko": "왕강은 일 년 내내 고생했으니 이번 휴가는 받을 만하다고 했어요.",
+   "blank": "应得",
+   "src": "made"
+  },
+  {
+   "text": "押金是李娜应得的，房东却一直拖着不退。",
+   "en": "The deposit was rightfully Li Na's, but the landlord kept putting off returning it.",
+   "ko": "보증금은 리나가 받아야 할 돈인데 집주인은 계속 돌려주지 않고 미뤘어요.",
+   "blank": "应得",
    "src": "made"
   }
  ],
@@ -30457,6 +30745,22 @@
    "blank": "往"
   }
  ],
+ "w|往后": [
+  {
+   "text": "爸爸说，往后每年过年都要拍一张全家福。",
+   "en": "Dad said that from now on they'll take a family photo every New Year.",
+   "ko": "아빠는 앞으로 해마다 설에 가족사진을 찍자고 했어요.",
+   "blank": "往后",
+   "src": "made"
+  },
+  {
+   "text": "李娜对自己说，往后再也不随便买没用的东西了。",
+   "en": "Li Na told herself that from now on she'd never buy useless things on a whim again.",
+   "ko": "리나는 앞으로 다시는 쓸데없는 물건을 함부로 사지 않겠다고 다짐했어요.",
+   "blank": "往后",
+   "src": "made"
+  }
+ ],
  "w|往往": [
   {
    "text": "刚开始健身的人往往练得太猛，第二天就起不来了。",
@@ -31001,6 +31305,22 @@
    "en": "She is enduring the pain.",
    "ko": "그녀는 통증을 견디고 있어.",
    "blank": "忍受"
+  }
+ ],
+ "w|忍耐": [
+  {
+   "text": "厨房里的油烟很呛，王刚忍耐着把最后一条鱼炸完。",
+   "en": "The kitchen smoke was choking, but Wang Gang put up with it and finished frying the last fish.",
+   "ko": "부엌 연기가 매웠지만 왕강은 참고 마지막 생선까지 튀겼어요.",
+   "blank": "忍耐",
+   "src": "made"
+  },
+  {
+   "text": "楼上还在装修，李娜只好忍耐着每天的电钻声。",
+   "en": "The flat upstairs was still being renovated, so Li Na had to put up with the drilling every day.",
+   "ko": "위층이 아직 공사 중이라 리나는 매일 드릴 소리를 참아야 했어요.",
+   "blank": "忍耐",
+   "src": "made"
   }
  ],
  "w|志愿": [
@@ -31643,6 +31963,22 @@
    "en": "Anyway, let's go home first.",
    "ko": "아무튼 먼저 집에 가자.",
    "blank": "总之"
+  }
+ ],
+ "w|总共": [
+  {
+   "text": "今年过年，家里总共来了二十多个亲戚。",
+   "en": "This New Year, more than twenty relatives came to the house in total.",
+   "ko": "올 설에는 집에 친척이 모두 스무 명 넘게 왔어요.",
+   "blank": "总共",
+   "src": "made"
+  },
+  {
+   "text": "这次搬家总共花了李娜两千多块钱。",
+   "en": "This move cost Li Na over two thousand yuan in total.",
+   "ko": "이번 이사에 리나는 모두 이천 위안 넘게 썼어요.",
+   "blank": "总共",
+   "src": "made"
   }
  ],
  "w|总是": [
@@ -37435,6 +37771,22 @@
    "src": "made"
   }
  ],
+ "w|摔倒": [
+  {
+   "text": "地上结了冰，王刚扶着奶奶，怕她摔倒。",
+   "en": "The ground was icy, so Wang Gang held Grandma's arm in case she fell.",
+   "ko": "바닥이 얼어서 왕강은 할머니가 넘어지실까 봐 부축해 드렸어요.",
+   "blank": "摔倒",
+   "src": "made"
+  },
+  {
+   "text": "搬箱子时，李娜被地上的电线绊了一下，差点摔倒。",
+   "en": "While carrying boxes, Li Na tripped on a cable on the floor and nearly fell.",
+   "ko": "상자를 옮기다가 리나는 바닥 전선에 걸려 넘어질 뻔했어요.",
+   "blank": "摔倒",
+   "src": "made"
+  }
+ ],
  "w|摘": [
   {
    "text": "演出开始前，工作人员请观众摘下帽子。",
@@ -39677,6 +40029,22 @@
    "src": "made"
   }
  ],
+ "w|日益": [
+  {
+   "text": "城里的年味日益淡了，王刚更怀念小时候的春节。",
+   "en": "New Year spirit in the city grows fainter by the day, so Wang Gang misses the festivals of his childhood more.",
+   "ko": "도시의 설 분위기가 날로 옅어져서 왕강은 어릴 때 춘절이 더 그리워요.",
+   "blank": "日益",
+   "src": "made"
+  },
+  {
+   "text": "城里房价日益上涨，李娜庆幸自己早点买了房。",
+   "en": "With city housing prices rising day by day, Li Na is glad she bought early.",
+   "ko": "도시 집값이 나날이 올라서 리나는 일찍 집을 산 게 다행이라고 생각해요.",
+   "blank": "日益",
+   "src": "made"
+  }
+ ],
  "w|日记": [
   {
    "text": "王刚翻到小时候的日记，里面写着盼过年的心情。",
@@ -39790,6 +40158,22 @@
    "en": "By the time Li Na arrived, the team leader had long since set up her work email.",
    "ko": "리나가 회사에 도착했을 때 팀장은 벌써 업무 메일 계정을 만들어 놓았어요.",
    "blank": "早已",
+   "src": "made"
+  }
+ ],
+ "w|早晚": [
+  {
+   "text": "妈妈说，春联早晚都得贴，不如今天就贴上。",
+   "en": "Mom said the couplets have to go up sooner or later, so they might as well put them up today.",
+   "ko": "엄마는 춘련은 언젠가 붙여야 하니 오늘 붙이자고 했어요.",
+   "blank": "早晚",
+   "src": "made"
+  },
+  {
+   "text": "李娜知道这间小屋早晚要搬，所以一直没买大件家具。",
+   "en": "Li Na knew she'd have to move out of the little flat sooner or later, so she never bought big furniture.",
+   "ko": "리나는 이 작은 집에서 언젠가 이사해야 한다는 걸 알아서 큰 가구를 사지 않았어요.",
+   "blank": "早晚",
    "src": "made"
   }
  ],
@@ -40317,6 +40701,22 @@
    "en": "Yesterday was too busy.",
    "ko": "어제 너무 바빴어.",
    "blank": "昨天"
+  }
+ ],
+ "w|昨日": [
+  {
+   "text": "王刚昨日刚到家，今天就被妈妈派去买鞭炮。",
+   "en": "Wang Gang only got home yesterday, and today Mom already sent him out to buy firecrackers.",
+   "ko": "왕강은 어제 막 집에 왔는데 오늘 벌써 엄마 심부름으로 폭죽을 사러 갔어요.",
+   "blank": "昨日",
+   "src": "made"
+  },
+  {
+   "text": "李娜昨日刚拿到新房的钥匙，今天就去量了窗户。",
+   "en": "Li Na got the keys to the new place only yesterday, and today she went to measure the windows.",
+   "ko": "리나는 어제 새집 열쇠를 받고 오늘 바로 창문 치수를 재러 갔어요.",
+   "blank": "昨日",
+   "src": "made"
   }
  ],
  "w|昨晚": [
@@ -41493,6 +41893,22 @@
    "blank": "期间"
   }
  ],
+ "w|期限": [
+  {
+   "text": "公司要求年底前交报告，王刚只好赶在期限前写完。",
+   "en": "The company wanted the report before year's end, so Wang Gang had to finish it before the deadline.",
+   "ko": "회사에서 연말 전에 보고서를 내라고 해서 왕강은 기한 전에 서둘러 끝냈어요.",
+   "blank": "期限",
+   "src": "made"
+  },
+  {
+   "text": "房东给的期限是月底，李娜必须在那之前搬走。",
+   "en": "The landlord's deadline was the end of the month, and Li Na had to move out before then.",
+   "ko": "집주인이 준 기한은 월말이라 리나는 그 전에 나가야 했어요.",
+   "blank": "期限",
+   "src": "made"
+  }
+ ],
  "w|木头": [
   {
    "text": "海浪把一块木头冲到了沙滩上，上面长满了贝壳。",
@@ -42374,6 +42790,22 @@
    "en": "This hotel's winters and summers are two extremes: almost empty in winter, full every day in summer.",
    "ko": "이 호텔의 겨울과 여름은 극과 극이라, 겨울엔 손님이 거의 없고 여름엔 매일 만실이에요.",
    "blank": "极端",
+   "src": "made"
+  }
+ ],
+ "w|极限": [
+  {
+   "text": "连着打扫了三天，王刚觉得自己已经到了极限。",
+   "en": "After three straight days of cleaning, Wang Gang felt he had hit his limit.",
+   "ko": "사흘 내내 청소하고 나니 왕강은 한계에 다다른 것 같았어요.",
+   "blank": "极限",
+   "src": "made"
+  },
+  {
+   "text": "一个人搬了二十箱书上楼，李娜觉得体力到了极限。",
+   "en": "After carrying twenty boxes of books upstairs alone, Li Na felt she'd reached her physical limit.",
+   "ko": "혼자 책 스무 상자를 위층으로 나르고 나니 리나는 체력이 한계에 다다른 것 같았어요.",
+   "blank": "极限",
    "src": "made"
   }
  ],
@@ -43883,6 +44315,22 @@
    "src": "made"
   }
  ],
+ "w|此后": [
+  {
+   "text": "三年前王刚在外地过了一个冷清的年，此后他每年都赶回家。",
+   "en": "Three years ago Wang Gang spent a lonely New Year away from home, and since then he has rushed back every year.",
+   "ko": "3년 전 왕강은 타지에서 쓸쓸한 설을 보냈고, 그 뒤로는 해마다 서둘러 집에 가요.",
+   "blank": "此后",
+   "src": "made"
+  },
+  {
+   "text": "李娜去年搬到了这个小区，此后上班只要十分钟。",
+   "en": "Li Na moved to this neighborhood last year, and since then getting to work takes only ten minutes.",
+   "ko": "리나는 이 동네로 이사 온 뒤로 출근이 십 분이면 돼요.",
+   "blank": "此后",
+   "src": "made"
+  }
+ ],
  "w|此外": [
   {
    "text": "这里东西便宜，此外，还能认识很多有趣的人。",
@@ -44292,6 +44740,38 @@
    "en": "During the tour, Yang Yang practices her voice for two hours a day.",
    "ko": "투어 기간에 양양은 날마다 두 시간씩 발성 연습을 해요.",
    "blank": "每日",
+   "src": "made"
+  }
+ ],
+ "w|每晚": [
+  {
+   "text": "过年前一个星期，王刚每晚都陪爸爸包饺子。",
+   "en": "For the week before New Year, Wang Gang made dumplings with his dad every night.",
+   "ko": "설 전 일주일 동안 왕강은 매일 밤 아빠와 만두를 빚었어요.",
+   "blank": "每晚",
+   "src": "made"
+  },
+  {
+   "text": "搬家前那几天，李娜每晚都打包到半夜。",
+   "en": "For the few days before the move, Li Na packed until midnight every night.",
+   "ko": "이사 전 며칠 동안 리나는 매일 밤 자정까지 짐을 쌌어요.",
+   "blank": "每晚",
+   "src": "made"
+  }
+ ],
+ "w|每月": [
+  {
+   "text": "王刚每月都存一点钱，就为了过年给爸妈买礼物。",
+   "en": "Wang Gang saves a little money every month just to buy his parents gifts for New Year.",
+   "ko": "왕강은 설에 부모님 선물을 사려고 매달 조금씩 돈을 모아요.",
+   "blank": "每月",
+   "src": "made"
+  },
+  {
+   "text": "新房子的物业费每月三百块，比李娜想的便宜。",
+   "en": "The new building's management fee is three hundred yuan a month, cheaper than Li Na expected.",
+   "ko": "새집 관리비는 매달 삼백 위안으로 리나 생각보다 쌌어요.",
+   "blank": "每月",
    "src": "made"
   }
  ],
@@ -44850,6 +45330,22 @@
    "en": "Wang Fang made up her mind never to let her dumplings burst while boiling again.",
    "ko": "왕팡은 다시는 만두를 삶다가 터뜨리지 않겠다고 굳게 다짐했어요.",
    "blank": "永不",
+   "src": "made"
+  }
+ ],
+ "w|永久": [
+  {
+   "text": "爷爷说，一家人能团聚，比什么永久的财富都珍贵。",
+   "en": "Grandpa said that the family being together is more precious than any lasting fortune.",
+   "ko": "할아버지는 가족이 함께 모이는 게 어떤 영원한 재산보다 소중하다고 했어요.",
+   "blank": "永久",
+   "src": "made"
+  },
+  {
+   "text": "李娜给新家的大门换了一把永久不会生锈的锁。",
+   "en": "Li Na fitted the new front door with a lock that will never rust.",
+   "ko": "리나는 새집 현관에 영원히 녹슬지 않는 자물쇠를 달았어요.",
+   "blank": "永久",
    "src": "made"
   }
  ],
@@ -45538,6 +46034,22 @@
    "en": "Sun Yue came back from the flood scene with mud all over her shoes.",
    "ko": "쑨웨는 홍수 현장에서 돌아왔는데 신발에 온통 진흙이었어요.",
    "blank": "泥",
+   "src": "made"
+  }
+ ],
+ "w|注入": [
+  {
+   "text": "新装的灯笼给老房子注入了不少节日气氛。",
+   "en": "The newly hung lanterns brought a lot of festive atmosphere to the old house.",
+   "ko": "새로 단 등롱이 낡은 집에 명절 분위기를 많이 불어넣었어요.",
+   "blank": "注入",
+   "src": "made"
+  },
+  {
+   "text": "李娜在新家摆了几盆绿植，给房间注入了一点生气。",
+   "en": "Li Na put a few potted plants in the new home, giving the rooms a bit of life.",
+   "ko": "리나는 새집에 화분 몇 개를 놓아 방에 생기를 불어넣었어요.",
+   "blank": "注入",
    "src": "made"
   }
  ],
@@ -47893,6 +48405,22 @@
    "blank": "熟悉"
   }
  ],
+ "w|熬": [
+  {
+   "text": "除夕晚上，王刚和弟弟熬到半夜才去睡觉。",
+   "en": "On New Year's Eve, Wang Gang and his brother stayed up until midnight before going to bed.",
+   "ko": "섣달그믐 밤에 왕강과 남동생은 자정까지 버티다가 잤어요.",
+   "blank": "熬",
+   "src": "made"
+  },
+  {
+   "text": "搬完家，李娜熬了一锅粥，请帮忙的朋友们吃。",
+   "en": "After the move, Li Na cooked a pot of congee for the friends who helped.",
+   "ko": "이사를 마치고 리나는 죽을 한 솥 끓여 도와준 친구들에게 대접했어요.",
+   "blank": "熬",
+   "src": "made"
+  }
+ ],
  "w|燃料": [
   {
    "text": "科学课上，小明学到了汽车用的燃料是从石油里提炼的。",
@@ -49822,6 +50350,22 @@
    "en": "This new machine is mainly used for heart examinations.",
    "ko": "이 새 기계는 주로 심장 검사에 쓰여요.",
    "blank": "用于",
+   "src": "made"
+  }
+ ],
+ "w|用作": [
+  {
+   "text": "家里的小书房过年时被用作客房，给姑姑一家住。",
+   "en": "The little study is used as a guest room over New Year for Wang Gang's aunt's family.",
+   "ko": "집의 작은 서재는 설에 고모네가 묵는 손님방으로 쓰여요.",
+   "blank": "用作",
+   "src": "made"
+  },
+  {
+   "text": "新家的小阳台可以用作书房，李娜很满意。",
+   "en": "The new home's little balcony can be used as a study, which pleases Li Na.",
+   "ko": "새집의 작은 발코니는 서재로 쓸 수 있어서 리나는 아주 만족해요.",
+   "blank": "用作",
    "src": "made"
   }
  ],
@@ -51767,6 +52311,22 @@
    "en": "I agree with your view.",
    "ko": "네 견해에 동의해.",
    "blank": "看法"
+  }
+ ],
+ "w|看清": [
+  {
+   "text": "灯太暗了，王刚眯着眼睛才看清红包上的字。",
+   "en": "The light was too dim, and Wang Gang had to squint to make out the characters on the red envelope.",
+   "ko": "불이 너무 어두워서 왕강은 눈을 가늘게 뜨고서야 세뱃돈 봉투 글씨를 알아봤어요.",
+   "blank": "看清",
+   "src": "made"
+  },
+  {
+   "text": "箱子上的字写得太潦草，李娜看了半天也没看清。",
+   "en": "The writing on the box was so messy that Li Na looked at it for ages without making it out.",
+   "ko": "상자에 쓴 글씨가 너무 흘려 써서 리나는 한참 봐도 못 알아봤어요.",
+   "blank": "看清",
+   "src": "made"
   }
  ],
  "w|看见": [
@@ -55295,6 +55855,22 @@
    "en": "I can't get into the system.",
    "ko": "시스템에 못 들어가.",
    "blank": "系统"
+  }
+ ],
+ "w|纠正": [
+  {
+   "text": "王刚写春联时写错了一个字，爷爷耐心地帮他纠正。",
+   "en": "Wang Gang wrote a character wrong on the couplet, and Grandpa patiently corrected it for him.",
+   "ko": "왕강이 춘련을 쓰다 한 글자를 틀리자 할아버지가 참을성 있게 고쳐 줬어요.",
+   "blank": "纠正",
+   "src": "made"
+  },
+  {
+   "text": "搬家师傅把书架放反了，李娜赶紧纠正过来。",
+   "en": "The movers put the bookshelf the wrong way round, and Li Na quickly had it corrected.",
+   "ko": "이삿짐 기사님이 책장을 거꾸로 놓아서 리나가 얼른 바로잡았어요.",
+   "blank": "纠正",
+   "src": "made"
   }
  ],
  "w|红": [
@@ -64553,6 +65129,22 @@
    "src": "made"
   }
  ],
+ "w|起初": [
+  {
+   "text": "起初王刚不想回家，后来还是被妈妈一个电话叫了回来。",
+   "en": "At first Wang Gang didn't want to go home, but in the end one call from his mom brought him back.",
+   "ko": "처음엔 왕강이 집에 가기 싫었는데 결국 엄마 전화 한 통에 돌아왔어요.",
+   "blank": "起初",
+   "src": "made"
+  },
+  {
+   "text": "起初李娜担心新邻居不好相处，后来发现大家都很热情。",
+   "en": "At first Li Na worried the new neighbors would be hard to get along with, but they turned out to be very friendly.",
+   "ko": "처음엔 리나가 새 이웃과 잘 지낼 수 있을까 걱정했는데 다들 아주 친절했어요.",
+   "blank": "起初",
+   "src": "made"
+  }
+ ],
  "w|起床": [
   {
    "text": "该起床了。",
@@ -66215,6 +66807,22 @@
    "src": "made"
   }
  ],
+ "w|运送": [
+  {
+   "text": "快递公司过年前忙着给各地运送年货。",
+   "en": "Before New Year, delivery companies are busy shipping holiday goods everywhere.",
+   "ko": "설 전에 택배 회사들은 각지로 명절 선물을 실어 나르느라 바빠요.",
+   "blank": "运送",
+   "src": "made"
+  },
+  {
+   "text": "搬家公司用两辆卡车运送了李娜所有的家当。",
+   "en": "The moving company used two trucks to transport all of Li Na's belongings.",
+   "ko": "이삿짐센터는 트럭 두 대로 리나의 살림을 전부 실어 날랐어요.",
+   "blank": "运送",
+   "src": "made"
+  }
+ ],
  "w|近": [
   {
    "text": "学校离这儿很近。",
@@ -66849,6 +67457,22 @@
    "en": "He's often late.",
    "ko": "그는 자주 지각해.",
    "blank": "迟到"
+  }
+ ],
+ "w|迟早": [
+  {
+   "text": "奶奶说，家里的旧沙发迟早要换，过年正好买新的。",
+   "en": "Grandma said the old sofa has to be replaced sooner or later, and New Year is the perfect time.",
+   "ko": "할머니는 낡은 소파를 언젠가는 바꿔야 하니 설에 새로 사자고 했어요.",
+   "blank": "迟早",
+   "src": "made"
+  },
+  {
+   "text": "李娜心想，这些旧东西迟早要扔，干脆搬家前就处理掉。",
+   "en": "Li Na figured these old things would get thrown out sooner or later, so she got rid of them before the move.",
+   "ko": "리나는 이 낡은 물건들은 언젠가 버릴 테니 이사 전에 아예 정리하기로 했어요.",
+   "blank": "迟早",
+   "src": "made"
   }
  ],
  "w|迫使": [
@@ -72727,6 +73351,22 @@
    "en": "The Black player is outstanding.",
    "ko": "그 흑인 선수는 뛰어나.",
    "blank": "黑人"
+  }
+ ],
+ "w|黑夜": [
+  {
+   "text": "除夕的黑夜被满天烟花照得通亮。",
+   "en": "The dark night of New Year's Eve was lit up by fireworks filling the sky.",
+   "ko": "섣달그믐의 어두운 밤이 하늘 가득한 불꽃으로 환하게 밝았어요.",
+   "blank": "黑夜",
+   "src": "made"
+  },
+  {
+   "text": "新家还没装灯，一到黑夜屋里就伸手不见五指。",
+   "en": "The new place had no lights yet, so once night fell it was pitch dark inside.",
+   "ko": "새집에 아직 등을 안 달아서 밤이 되면 집 안이 칠흑같이 어두웠어요.",
+   "blank": "黑夜",
+   "src": "made"
   }
  ],
  "w|黑暗": [

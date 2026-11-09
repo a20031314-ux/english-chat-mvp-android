@@ -4101,6 +4101,22 @@
    "blank": "こと"
   }
  ],
+ "w|こなす": [
+  {
+   "text": "健太は荷ほどきと役所の手続きを、一日でこなした。",
+   "en": "Kenta got through the unpacking and the paperwork at city hall in a single day.",
+   "ko": "겐타는 짐 풀기와 구청 수속을 하루 만에 해냈어요.",
+   "blank": "こなし",
+   "src": "made"
+  },
+  {
+   "text": "美咲は一人で、大量の仕込みを手早くこなした。",
+   "en": "Misaki quickly handled a large amount of prep on her own.",
+   "ko": "미사키는 혼자서 많은 양의 밑준비를 재빨리 해냈어요.",
+   "blank": "こなし",
+   "src": "made"
+  }
+ ],
  "w|この": [
   {
    "text": "この本、おもしろい。",
@@ -7729,6 +7745,22 @@
    "src": "made"
   }
  ],
+ "w|ティッシュ": [
+  {
+   "text": "段ボールを開けたら、まずティッシュの箱を探した。",
+   "en": "After opening the boxes, the first thing I looked for was the tissues.",
+   "ko": "상자를 열자마자 먼저 티슈 상자를 찾았어요.",
+   "blank": "ティッシュ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は玉ねぎを切りながら、ティッシュで目元を押さえた。",
+   "en": "While chopping onions, Misaki dabbed her eyes with a tissue.",
+   "ko": "미사키는 양파를 썰면서 티슈로 눈가를 눌렀어요.",
+   "blank": "ティッシュ",
+   "src": "made"
+  }
+ ],
  "w|ディレクター": [
   {
    "text": "テレビ番組のディレクターが、現場の撮影をしたいと連絡してきた。",
@@ -9015,6 +9047,22 @@
    "en": "It was on the news.",
    "ko": "뉴스에 나왔더라.",
    "blank": "ニュース"
+  }
+ ],
+ "w|ぬいぐるみ": [
+  {
+   "text": "娘はお気に入りのぬいぐるみを、自分で新しい部屋まで抱えていった。",
+   "en": "The daughter carried her favorite stuffed animal to her new room herself.",
+   "ko": "딸은 제일 좋아하는 인형을 직접 안고 새 방까지 갔어요.",
+   "blank": "ぬいぐるみ",
+   "src": "made"
+  },
+  {
+   "text": "子ども連れのお客さんが、ぬいぐるみを席に忘れていった。",
+   "en": "A customer with a child left a stuffed animal behind at the table.",
+   "ko": "아이를 데리고 온 손님이 인형을 자리에 두고 갔어요.",
+   "blank": "ぬいぐるみ",
+   "src": "made"
   }
  ],
  "w|ねえ": [
@@ -13345,6 +13393,22 @@
    "src": "made"
   }
  ],
+ "w|レンジ": [
+  {
+   "text": "電子レンジは重いので、健太は友達と二人で運んだ。",
+   "en": "The microwave was heavy, so Kenta carried it with a friend.",
+   "ko": "전자레인지가 무거워서 겐타는 친구와 둘이서 옮겼어요.",
+   "blank": "レンジ",
+   "src": "made"
+  },
+  {
+   "text": "厨房のレンジは業務用で、家庭用よりずっと火力が強い。",
+   "en": "The kitchen range is commercial-grade and much hotter than a home one.",
+   "ko": "주방 레인지는 업소용이라 가정용보다 화력이 훨씬 세요.",
+   "blank": "レンジ",
+   "src": "made"
+  }
+ ],
  "w|レンズ": [
   {
    "text": "誠は、隣の人に壊れたカメラのレンズを直してもらった。",
@@ -13673,6 +13737,22 @@
    "en": "We need fixed rules.",
    "ko": "일정한 규칙이 필요해.",
    "blank": "一定"
+  }
+ ],
+ "w|一家": [
+  {
+   "text": "隣に住む田中さん一家が、引っ越しの挨拶に来てくれた。",
+   "en": "The Tanaka family next door came by to greet us after the move.",
+   "ko": "옆집 다나카 씨 가족이 이사 인사를 하러 와 주었어요.",
+   "blank": "一家",
+   "src": "made"
+  },
+  {
+   "text": "今夜は常連の山本さん一家が、娘さんの誕生日祝いで予約している。",
+   "en": "Tonight the Yamamoto family, who are regulars, have a reservation for their daughter's birthday.",
+   "ko": "오늘 밤은 단골인 야마모토 씨 가족이 딸 생일 축하로 예약해 두었어요.",
+   "blank": "一家",
+   "src": "made"
   }
  ],
  "w|一応": [
@@ -20049,6 +20129,22 @@
    "src": "made"
   }
  ],
+ "w|個室": [
+  {
+   "text": "新しい家は狭いが、子どもたちにそれぞれ個室を用意できた。",
+   "en": "The new house is small, but each of the children could have a private room.",
+   "ko": "새 집은 좁지만 아이들에게 각자 방을 마련해 줄 수 있었어요.",
+   "blank": "個室",
+   "src": "made"
+  },
+  {
+   "text": "奥の個室には、大人数の宴会の予約が入っていた。",
+   "en": "The private room at the back was booked for a large party.",
+   "ko": "안쪽 룸에는 단체 연회 예약이 들어와 있었어요.",
+   "blank": "個室",
+   "src": "made"
+  }
+ ],
  "w|個性": [
   {
    "text": "新しく来た佐藤さんは、服装にも話し方にも個性がある。",
@@ -20247,6 +20343,22 @@
    "en": "Pause for a moment.",
    "ko": "일시 정지해.",
    "blank": "停止"
+  }
+ ],
+ "w|停電": [
+  {
+   "text": "引っ越した初日の夜、町全体が停電して真っ暗になった。",
+   "en": "On the first night after the move, the whole town lost power and went pitch dark.",
+   "ko": "이사한 첫날 밤, 동네 전체가 정전돼서 캄캄해졌어요.",
+   "blank": "停電",
+   "src": "made"
+  },
+  {
+   "text": "ランチの最中に停電が起き、ガスの火だけで料理を続けた。",
+   "en": "The power went out in the middle of lunch, and they kept cooking with just the gas burners.",
+   "ko": "점심 영업 중에 정전이 나서 가스 불만으로 요리를 계속했어요.",
+   "blank": "停電",
+   "src": "made"
   }
  ],
  "w|健全": [
@@ -27105,6 +27217,22 @@
    "src": "made"
   }
  ],
+ "w|収納": [
+  {
+   "text": "新しい家は収納が多いので、物がすっきり片付いた。",
+   "en": "The new house has plenty of storage, so everything got neatly put away.",
+   "ko": "새 집은 수납공간이 많아서 물건이 깔끔하게 정리됐어요.",
+   "blank": "収納",
+   "src": "made"
+  },
+  {
+   "text": "厨房は狭いので、鍋の収納にいつも苦労している。",
+   "en": "The kitchen is cramped, so storing the pots is always a struggle.",
+   "ko": "주방이 좁아서 냄비 수납에 늘 애를 먹어요.",
+   "blank": "収納",
+   "src": "made"
+  }
+ ],
  "w|収録": [
   {
    "text": "今日は収録がある。",
@@ -29923,6 +30051,22 @@
    "en": "The seats are assigned.",
    "ko": "자리가 고정돼 있어.",
    "blank": "固定"
+  }
+ ],
+ "w|固有": [
+  {
+   "text": "古い家には、その家固有のにおいがあると健太は思う。",
+   "en": "Kenta thinks every old house has a smell all its own.",
+   "ko": "겐타는 오래된 집에는 그 집만의 고유한 냄새가 있다고 생각해요.",
+   "blank": "固有",
+   "src": "made"
+  },
+  {
+   "text": "この地方固有の野菜を使った料理が、店の看板メニューだ。",
+   "en": "The restaurant's signature dish uses vegetables native to this region.",
+   "ko": "이 지방 고유의 채소를 쓴 요리가 가게 간판 메뉴예요.",
+   "blank": "固有",
+   "src": "made"
   }
  ],
  "w|国": [
@@ -34977,6 +35121,22 @@
    "src": "made"
   }
  ],
+ "w|実体": [
+  {
+   "text": "前の住人が言っていた夜の物音の実体は、ただの水道管の音だった。",
+   "en": "The nighttime noise the previous tenant mentioned turned out to be just the water pipes.",
+   "ko": "전 주인이 말했던 밤의 소리의 정체는 그냥 수도관 소리였어요.",
+   "blank": "実体",
+   "src": "made"
+  },
+  {
+   "text": "秘伝のたれと呼ばれているが、その実体は醤油とみりんと砂糖だけだ。",
+   "en": "It's called a secret sauce, but in reality it's just soy sauce, mirin and sugar.",
+   "ko": "비법 양념이라고 불리지만 그 실체는 간장과 미림과 설탕뿐이에요.",
+   "blank": "実体",
+   "src": "made"
+  }
+ ],
  "w|実写": [
   {
    "text": "直樹は、アニメの実写版より原作のほうが好きだ。",
@@ -35371,6 +35531,22 @@
    "blank": "宣言"
   }
  ],
+ "w|室内": [
+  {
+   "text": "新居は日当たりがよく、室内がとても明るい。",
+   "en": "The new home gets plenty of sun, and it's very bright inside.",
+   "ko": "새 집은 볕이 잘 들어서 실내가 아주 밝아요.",
+   "blank": "室内",
+   "src": "made"
+  },
+  {
+   "text": "厨房は火を使うので、夏は室内の温度がかなり上がる。",
+   "en": "The kitchen uses open flames, so the temperature inside gets quite high in summer.",
+   "ko": "주방은 불을 쓰니까 여름에는 실내 온도가 꽤 올라가요.",
+   "blank": "室内",
+   "src": "made"
+  }
+ ],
  "w|宮殿": [
   {
    "text": "直樹は、ヨーロッパの宮殿を再現した模型に見入った。",
@@ -35417,6 +35593,38 @@
    "blank": "家"
   }
  ],
+ "w|家事": [
+  {
+   "text": "引っ越してから、健太は家事を妻と分担することにした。",
+   "en": "After moving, Kenta decided to split the housework with his wife.",
+   "ko": "이사하고 나서 겐타는 집안일을 아내와 나눠 하기로 했어요.",
+   "blank": "家事",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、料理は好きだけどほかの家事は苦手だと笑った。",
+   "en": "Misaki laughed that she loves cooking but is bad at other housework.",
+   "ko": "미사키는 요리는 좋아하지만 다른 집안일은 서툴다며 웃었어요.",
+   "blank": "家事",
+   "src": "made"
+  }
+ ],
+ "w|家具": [
+  {
+   "text": "大きな家具は業者に頼んで運んでもらった。",
+   "en": "We had movers carry the big furniture.",
+   "ko": "큰 가구는 업체에 맡겨서 옮겼어요.",
+   "blank": "家具",
+   "src": "made"
+  },
+  {
+   "text": "改装に合わせて、客席の家具をすべて木製に替えた。",
+   "en": "With the remodel, all the dining room furniture was replaced with wooden pieces.",
+   "ko": "리모델링에 맞춰 객석 가구를 모두 나무로 바꿨어요.",
+   "blank": "家具",
+   "src": "made"
+  }
+ ],
  "w|家庭": [
   {
    "text": "家庭が大事だよ。",
@@ -35443,6 +35651,38 @@
    "en": "Did you tell your family?",
    "ko": "가족한테는 말했어?",
    "blank": "家族"
+  }
+ ],
+ "w|家賃": [
+  {
+   "text": "前の部屋より家賃は少し高いが、駅に近い。",
+   "en": "The rent is a bit higher than the last place, but it's close to the station.",
+   "ko": "전에 살던 방보다 월세는 조금 비싸지만 역에서 가까워요.",
+   "blank": "家賃",
+   "src": "made"
+  },
+  {
+   "text": "駅前に店を出すと、家賃だけで売り上げの多くが消えてしまう。",
+   "en": "If you open a restaurant near the station, rent alone eats up much of your sales.",
+   "ko": "역 앞에 가게를 내면 월세만으로 매출의 상당 부분이 사라져요.",
+   "blank": "家賃",
+   "src": "made"
+  }
+ ],
+ "w|容器": [
+  {
+   "text": "調味料はふた付きの容器に移してから段ボールに入れた。",
+   "en": "The seasonings were moved into lidded containers before going into the boxes.",
+   "ko": "양념은 뚜껑 달린 용기에 옮긴 뒤 상자에 넣었어요.",
+   "blank": "容器",
+   "src": "made"
+  },
+  {
+   "text": "テイクアウト用の容器が足りなくなり、美咲は急いで注文した。",
+   "en": "The takeout containers ran low, so Misaki hurried to order more.",
+   "ko": "포장 용기가 모자라서 미사키는 서둘러 주문했어요.",
+   "blank": "容器",
+   "src": "made"
   }
  ],
  "w|容姿": [
@@ -36581,6 +36821,22 @@
    "src": "made"
   }
  ],
+ "w|居住": [
+  {
+   "text": "このマンションには、居住者専用の駐車場がある。",
+   "en": "This apartment building has a parking lot only for residents.",
+   "ko": "이 아파트에는 거주자 전용 주차장이 있어요.",
+   "blank": "居住",
+   "src": "made"
+  },
+  {
+   "text": "店の二階は、オーナーの居住スペースになっている。",
+   "en": "The second floor of the restaurant is the owner's living space.",
+   "ko": "가게 이층은 주인의 거주 공간이에요.",
+   "blank": "居住",
+   "src": "made"
+  }
+ ],
  "w|居場所": [
   {
    "text": "健太は、教室に居場所がないと感じる生徒のために図書室を開放している。",
@@ -36641,6 +36897,22 @@
    "en": "Your feelings got through.",
    "ko": "마음이 전해졌어.",
    "blank": "届いた"
+  }
+ ],
+ "w|屋上": [
+  {
+   "text": "このマンションの屋上からは、遠くの山がよく見える。",
+   "en": "You can see the distant mountains well from the roof of this building.",
+   "ko": "이 아파트 옥상에서는 먼 산이 잘 보여요.",
+   "blank": "屋上",
+   "src": "made"
+  },
+  {
+   "text": "休憩時間になると、美咲は店の屋上でコーヒーを飲む。",
+   "en": "On her break, Misaki drinks coffee on the restaurant's roof.",
+   "ko": "쉬는 시간이 되면 미사키는 가게 옥상에서 커피를 마셔요.",
+   "blank": "屋上",
+   "src": "made"
   }
  ],
  "w|屋根": [
@@ -38395,6 +38667,22 @@
    "en": "You need a lawyer.",
    "ko": "변호사가 필요해.",
    "blank": "弁護士"
+  }
+ ],
+ "w|引き出し": [
+  {
+   "text": "机の引き出しの中から、昔の写真がたくさん出てきた。",
+   "en": "Lots of old photos turned up in the desk drawer.",
+   "ko": "책상 서랍 안에서 옛날 사진이 잔뜩 나왔어요.",
+   "blank": "引き出し",
+   "src": "made"
+  },
+  {
+   "text": "美咲は調理台の引き出しから、新しい包丁を取り出した。",
+   "en": "Misaki took a new knife out of the drawer under the counter.",
+   "ko": "미사키는 조리대 서랍에서 새 칼을 꺼냈어요.",
+   "blank": "引き出し",
+   "src": "made"
   }
  ],
  "w|引き受ける": [
@@ -40849,6 +41137,22 @@
    "blank": "患者"
   }
  ],
+ "w|悩ます": [
+  {
+   "text": "隣の工事の騒音が、毎朝健太を悩ましている。",
+   "en": "The construction noise next door bothers Kenta every morning.",
+   "ko": "옆집 공사 소음이 매일 아침 겐타를 괴롭히고 있어요.",
+   "blank": "悩まし",
+   "src": "made"
+  },
+  {
+   "text": "食材の値上がりが、店長の頭を悩ましている。",
+   "en": "Rising ingredient prices are giving the manager a headache.",
+   "ko": "식재료 값 인상이 점장의 골치를 썩이고 있어요.",
+   "blank": "悩まし",
+   "src": "made"
+  }
+ ],
  "w|悩み": [
   {
    "text": "悩みを聞いてくれた。",
@@ -41485,6 +41789,22 @@
    "en": "I'm nothing but grateful.",
    "ko": "감사할 뿐이야.",
    "blank": "感謝"
+  }
+ ],
+ "w|態勢": [
+  {
+   "text": "引っ越し業者は、朝早くから作業の態勢を整えて待っていた。",
+   "en": "The movers were ready and waiting to start work early in the morning.",
+   "ko": "이삿짐 업체는 아침 일찍부터 작업 태세를 갖추고 기다리고 있었어요.",
+   "blank": "態勢",
+   "src": "made"
+  },
+  {
+   "text": "年末の忙しさに備えて、厨房は万全の態勢を整えた。",
+   "en": "The kitchen got fully prepared for the year-end rush.",
+   "ko": "연말의 바쁜 시기에 대비해 주방은 만반의 태세를 갖췄어요.",
+   "blank": "態勢",
+   "src": "made"
   }
  ],
  "w|態度": [
@@ -42209,6 +42529,22 @@
    "en": "Want me to help with the bags?",
    "ko": "짐 도와줄게?",
    "blank": "手伝おう"
+  }
+ ],
+ "w|手作り": [
+  {
+   "text": "健太の母が、手作りのカーテンを送ってくれた。",
+   "en": "Kenta's mother sent him handmade curtains.",
+   "ko": "겐타의 어머니가 손수 만든 커튼을 보내 주었어요.",
+   "blank": "手作り",
+   "src": "made"
+  },
+  {
+   "text": "この店のドレッシングは、毎朝美咲が手作りしている。",
+   "en": "Misaki makes this restaurant's dressing by hand every morning.",
+   "ko": "이 가게 드레싱은 매일 아침 미사키가 직접 만들어요.",
+   "blank": "手作り",
+   "src": "made"
   }
  ],
  "w|手元": [
@@ -45179,6 +45515,22 @@
    "src": "made"
   }
  ],
+ "w|改修": [
+  {
+   "text": "入居前に、大家さんが浴室の改修をしてくれた。",
+   "en": "Before we moved in, the landlord renovated the bathroom.",
+   "ko": "입주 전에 집주인이 욕실을 보수해 주었어요.",
+   "blank": "改修",
+   "src": "made"
+  },
+  {
+   "text": "厨房の改修工事のため、店は来週しばらく休む。",
+   "en": "The restaurant will close for a while next week for kitchen renovation work.",
+   "ko": "주방 보수 공사 때문에 가게는 다음 주에 한동안 쉬어요.",
+   "blank": "改修",
+   "src": "made"
+  }
+ ],
  "w|改名": [
   {
    "text": "会社が改名してから、悠斗は名刺を全部作り直した。",
@@ -45703,6 +46055,22 @@
    "src": "made"
   }
  ],
+ "w|敗れる": [
+  {
+   "text": "第一希望の部屋は抽選に敗れ、今の家に決まった。",
+   "en": "We lost the lottery for our first-choice apartment and ended up in this house.",
+   "ko": "첫 번째로 원했던 방은 추첨에서 떨어져서 지금 집으로 정해졌어요.",
+   "blank": "敗れ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は料理コンテストの決勝で敗れたが、審査員にほめられた。",
+   "en": "Misaki lost in the final of the cooking contest, but the judges praised her.",
+   "ko": "미사키는 요리 대회 결승에서 졌지만 심사위원에게 칭찬받았어요.",
+   "blank": "敗れ",
+   "src": "made"
+  }
+ ],
  "w|敗北": [
   {
    "text": "決勝での敗北に、サッカー部の健太は悔し涙を流した。",
@@ -46120,6 +46488,22 @@
    "en": "The managers of the two rival teams unusually appeared side by side at the press conference.",
    "ko": "적대하는 두 팀의 감독이 이례적으로 나란히 회견에 나왔어요.",
    "blank": "敵対",
+   "src": "made"
+  }
+ ],
+ "w|敷地": [
+  {
+   "text": "新しい家の敷地には、小さな庭と物置があった。",
+   "en": "The grounds of the new house had a small garden and a shed.",
+   "ko": "새 집 부지에는 작은 마당과 창고가 있었어요.",
+   "blank": "敷地",
+   "src": "made"
+  },
+  {
+   "text": "店の敷地の裏に、ハーブを育てる小さな畑がある。",
+   "en": "Behind the restaurant's lot is a small plot for growing herbs.",
+   "ko": "가게 부지 뒤쪽에 허브를 기르는 작은 밭이 있어요.",
+   "blank": "敷地",
    "src": "made"
   }
  ],
@@ -47471,6 +47855,22 @@
    "en": "What'll we have for lunch?",
    "ko": "점심은 뭐 할래?",
    "blank": "昼ご飯"
+  }
+ ],
+ "w|昼寝": [
+  {
+   "text": "荷物を全部運び終えると、健太は床の上で昼寝をしてしまった。",
+   "en": "Once all the boxes were moved, Kenta ended up napping on the floor.",
+   "ko": "짐을 다 옮기고 나자 겐타는 바닥에서 낮잠을 자 버렸어요.",
+   "blank": "昼寝",
+   "src": "made"
+  },
+  {
+   "text": "ランチとディナーの間に、美咲は休憩室で少し昼寝をする。",
+   "en": "Between lunch and dinner, Misaki takes a short nap in the break room.",
+   "ko": "점심과 저녁 영업 사이에 미사키는 휴게실에서 잠깐 낮잠을 자요.",
+   "blank": "昼寝",
+   "src": "made"
   }
  ],
  "w|昼間": [
@@ -54061,6 +54461,22 @@
    "blank": "深い"
   }
  ],
+ "w|深め": [
+  {
+   "text": "本棚は深めのものを選んだので、大きな本も入る。",
+   "en": "I chose a fairly deep bookshelf, so even large books fit.",
+   "ko": "책장은 조금 깊은 걸 골라서 큰 책도 들어가요.",
+   "blank": "深め",
+   "src": "made"
+  },
+  {
+   "text": "パスタをゆでるときは、深めの鍋にたっぷりの湯を沸かす。",
+   "en": "When boiling pasta, bring plenty of water to a boil in a deep pot.",
+   "ko": "파스타를 삶을 때는 깊은 냄비에 물을 넉넉히 끓여요.",
+   "blank": "深め",
+   "src": "made"
+  }
+ ],
  "w|深刻": [
   {
    "text": "本の盗難は、小さな図書館にとって深刻な問題だ。",
@@ -55599,6 +56015,22 @@
    "src": "made"
   }
  ],
+ "w|無難": [
+  {
+   "text": "迷った末に、カーテンの色は無難なベージュにした。",
+   "en": "After some hesitation, I went with a safe beige for the curtains.",
+   "ko": "고민 끝에 커튼 색은 무난한 베이지로 했어요.",
+   "blank": "無難",
+   "src": "made"
+  },
+  {
+   "text": "初めてのお客さんには、無難な定番メニューを勧めることが多い。",
+   "en": "For first-time customers, we often recommend a safe classic dish.",
+   "ko": "처음 온 손님에게는 무난한 기본 메뉴를 권할 때가 많아요.",
+   "blank": "無難",
+   "src": "made"
+  }
+ ],
  "w|無駄": [
   {
    "text": "無駄な時間だった。",
@@ -56100,6 +56532,22 @@
    "en": "Misaki's mother is someone who thinks positively about everything.",
    "ko": "미사키의 엄마는 무슨 일이든 긍정적으로 생각하는 사람이에요.",
    "blank": "物事",
+   "src": "made"
+  }
+ ],
+ "w|物件": [
+  {
+   "text": "健太はいくつもの物件を見て、やっとこの家に決めた。",
+   "en": "Kenta looked at many properties before finally choosing this house.",
+   "ko": "겐타는 매물을 여러 개 보고 나서야 이 집으로 정했어요.",
+   "blank": "物件",
+   "src": "made"
+  },
+  {
+   "text": "オーナーは、二号店にちょうどいい物件を探している。",
+   "en": "The owner is looking for a good property for a second location.",
+   "ko": "주인은 이호점에 딱 맞는 매물을 찾고 있어요.",
+   "blank": "物件",
    "src": "made"
   }
  ],
@@ -56683,6 +57131,22 @@
    "blank": "狼"
   }
  ],
+ "w|猛烈": [
+  {
+   "text": "引っ越しの日は猛烈な暑さで、みんな汗だくになった。",
+   "en": "It was ferociously hot on moving day, and everyone was drenched in sweat.",
+   "ko": "이삿날은 엄청나게 더워서 모두 땀범벅이 됐어요.",
+   "blank": "猛烈",
+   "src": "made"
+  },
+  {
+   "text": "金曜の夜は注文が猛烈に入り、厨房は戦場のようになった。",
+   "en": "Orders poured in furiously on Friday night, and the kitchen became a battlefield.",
+   "ko": "금요일 밤에는 주문이 엄청나게 밀려들어 주방이 전쟁터 같았어요.",
+   "blank": "猛烈",
+   "src": "made"
+  }
+ ],
  "w|猫": [
   {
    "text": "猫が膝に乗ってきた。",
@@ -56858,6 +57322,22 @@
    "en": "Sakura laughed and said curry is the classic camping dish.",
    "ko": "카레는 캠핑 요리의 정석이라고 사쿠라는 웃었어요.",
    "blank": "王道",
+   "src": "made"
+  }
+ ],
+ "w|玩具": [
+  {
+   "text": "使わなくなった子どもの玩具は、近所の保育園に寄付した。",
+   "en": "The children's toys they no longer used were donated to a nearby daycare.",
+   "ko": "안 쓰게 된 아이 장난감은 근처 어린이집에 기부했어요.",
+   "blank": "玩具",
+   "src": "made"
+  },
+  {
+   "text": "お子様ランチには、小さな玩具がおまけで付いてくる。",
+   "en": "The kids' meal comes with a small toy as a bonus.",
+   "ko": "어린이 런치에는 작은 장난감이 덤으로 딸려 나와요.",
+   "blank": "玩具",
    "src": "made"
   }
  ],
@@ -58067,6 +58547,22 @@
    "blank": "異なる"
   }
  ],
+ "w|異例": [
+  {
+   "text": "繁忙期なのに予約がすぐ取れたのは異例だと、業者に言われた。",
+   "en": "The movers said it was unusual to get a booking so quickly in the busy season.",
+   "ko": "성수기인데 예약이 바로 잡힌 건 이례적이라고 업체가 말했어요.",
+   "blank": "異例",
+   "src": "made"
+  },
+  {
+   "text": "開店してすぐ雑誌に載るのは異例だと、オーナーは喜んだ。",
+   "en": "The owner was delighted, saying it was unusual to be in a magazine right after opening.",
+   "ko": "개업하자마자 잡지에 실리는 건 이례적이라며 주인이 기뻐했어요.",
+   "blank": "異例",
+   "src": "made"
+  }
+ ],
  "w|異常": [
   {
    "text": "気温が異常だ。",
@@ -58334,6 +58830,22 @@
    "en": "What symptoms do you have?",
    "ko": "어떤 증상이 있으세요?",
    "blank": "症状",
+   "src": "made"
+  }
+ ],
+ "w|痕跡": [
+  {
+   "text": "壁には、前の住人が絵を掛けていた痕跡が残っていた。",
+   "en": "There were traces on the wall where the previous tenant had hung pictures.",
+   "ko": "벽에는 전 주인이 그림을 걸어 두었던 흔적이 남아 있었어요.",
+   "blank": "痕跡",
+   "src": "made"
+  },
+  {
+   "text": "床に残った油の痕跡を、閉店後に美咲が念入りに拭いた。",
+   "en": "After closing, Misaki carefully wiped up the traces of oil left on the floor.",
+   "ko": "바닥에 남은 기름 흔적을 문 닫은 뒤 미사키가 꼼꼼히 닦았어요.",
+   "blank": "痕跡",
    "src": "made"
   }
  ],
@@ -59834,6 +60346,22 @@
    "en": "In the town where Aoi lives, many people in the prefecture commute by car.",
    "ko": "아오이가 사는 동네에서는 현민 대부분이 차로 출퇴근해요.",
    "blank": "県民",
+   "src": "made"
+  }
+ ],
+ "w|真っ白": [
+  {
+   "text": "新しい部屋の壁は塗り直されて真っ白だった。",
+   "en": "The walls of the new room had been repainted pure white.",
+   "ko": "새 방 벽은 새로 칠해져서 새하얬어요.",
+   "blank": "真っ白",
+   "src": "made"
+  },
+  {
+   "text": "美咲のコックコートは、毎日洗っているので真っ白だ。",
+   "en": "Misaki's chef's jacket is spotless white because she washes it every day.",
+   "ko": "미사키의 조리복은 매일 빨아서 새하얘요.",
+   "blank": "真っ白",
    "src": "made"
   }
  ],
@@ -62802,6 +63330,22 @@
    "en": "When the test paper went in, the liquid separated into two layers, red and white.",
    "ko": "시험지를 넣자 액체가 붉은색과 흰색 두 층으로 나뉘었어요.",
    "blank": "紅白",
+   "src": "made"
+  }
+ ],
+ "w|納める": [
+  {
+   "text": "健太は古い食器を、新しい棚にきれいに納めた。",
+   "en": "Kenta neatly put the old dishes away in the new cupboard.",
+   "ko": "겐타는 오래된 그릇을 새 찬장에 깔끔하게 넣었어요.",
+   "blank": "納め",
+   "src": "made"
+  },
+  {
+   "text": "八百屋さんは、注文された野菜を毎朝開店前に店に納める。",
+   "en": "The greengrocer delivers the ordered vegetables to the restaurant every morning before opening.",
+   "ko": "채소 가게는 주문받은 채소를 매일 아침 개점 전에 가게에 납품해요.",
+   "blank": "納める",
    "src": "made"
   }
  ],
@@ -67803,6 +68347,22 @@
    "blank": "装置"
   }
  ],
+ "w|装飾": [
+  {
+   "text": "健太は壁の装飾をあまり増やさず、シンプルな部屋にしたい。",
+   "en": "Kenta wants to keep wall decorations to a minimum and have a simple room.",
+   "ko": "겐타는 벽 장식을 많이 늘리지 않고 심플한 방으로 하고 싶어요.",
+   "blank": "装飾",
+   "src": "made"
+  },
+  {
+   "text": "店内の装飾は、季節ごとにオーナーが変えている。",
+   "en": "The owner changes the restaurant's decorations every season.",
+   "ko": "가게 안 장식은 계절마다 주인이 바꿔요.",
+   "blank": "装飾",
+   "src": "made"
+  }
+ ],
  "w|裏": [
   {
    "text": "裏を見て。",
@@ -69529,6 +70089,22 @@
    "en": "I train every day.",
    "ko": "매일 훈련하고 있어.",
    "blank": "訓練"
+  }
+ ],
+ "w|記す": [
+  {
+   "text": "段ボールの側面に、中身と運ぶ部屋の名前を記した。",
+   "en": "I wrote the contents and the destination room on the side of each box.",
+   "ko": "상자 옆면에 내용물과 옮길 방 이름을 적었어요.",
+   "blank": "記し",
+   "src": "made"
+  },
+  {
+   "text": "美咲はノートに、新しいソースの分量を細かく記した。",
+   "en": "Misaki wrote down the measurements for the new sauce in detail in her notebook.",
+   "ko": "미사키는 노트에 새 소스의 분량을 자세히 적었어요.",
+   "blank": "記し",
+   "src": "made"
   }
  ],
  "w|記事": [
@@ -72762,6 +73338,22 @@
    "en": "Sakura accidentally stepped on the palette that had fallen on the floor.",
    "ko": "사쿠라는 바닥에 떨어진 팔레트를 실수로 밟아 버렸어요.",
    "blank": "踏ん",
+   "src": "made"
+  }
+ ],
+ "w|蹴る": [
+  {
+   "text": "健太は段ボールにつまずいて、思わず箱を蹴ってしまった。",
+   "en": "Kenta tripped over a box and kicked it without meaning to.",
+   "ko": "겐타는 상자에 걸려 넘어질 뻔해서 저도 모르게 상자를 차 버렸어요.",
+   "blank": "蹴っ",
+   "src": "made"
+  },
+  {
+   "text": "両手がふさがっていたので、美咲は足で冷蔵庫の扉を蹴って閉めた。",
+   "en": "Her hands were full, so Misaki kicked the fridge door shut.",
+   "ko": "두 손이 꽉 차 있어서 미사키는 발로 냉장고 문을 차서 닫았어요.",
+   "blank": "蹴っ",
    "src": "made"
   }
  ],
@@ -78487,6 +79079,22 @@
    "src": "made"
   }
  ],
+ "w|隙間": [
+  {
+   "text": "窓の隙間から風が入るので、テープでふさいだ。",
+   "en": "Wind was coming in through a gap in the window, so I sealed it with tape.",
+   "ko": "창문 틈으로 바람이 들어와서 테이프로 막았어요.",
+   "blank": "隙間",
+   "src": "made"
+  },
+  {
+   "text": "美咲は冷蔵庫と壁の隙間に落ちたスプーンを、長い菜箸で拾った。",
+   "en": "Misaki fished out a spoon that fell between the fridge and the wall with long cooking chopsticks.",
+   "ko": "미사키는 냉장고와 벽 틈에 떨어진 숟가락을 긴 조리용 젓가락으로 집었어요.",
+   "blank": "隙間",
+   "src": "made"
+  }
+ ],
  "w|障害": [
   {
    "text": "障害が出て止まった。",
@@ -78752,6 +79360,22 @@
    "en": "While waiting for the dish to bake, Aoi chatted with the person next to her.",
    "ko": "요리가 구워지는 동안 아오이는 옆 사람과 수다를 떨었어요.",
    "blank": "雑談",
+   "src": "made"
+  }
+ ],
+ "w|離す": [
+  {
+   "text": "重いテレビを運ぶ間、健太は一度も手を離さなかった。",
+   "en": "Kenta never let go while carrying the heavy TV.",
+   "ko": "무거운 텔레비전을 옮기는 동안 겐타는 한 번도 손을 놓지 않았어요.",
+   "blank": "離さ",
+   "src": "made"
+  },
+  {
+   "text": "揚げ物をしている間は、鍋から目を離さないようにしている。",
+   "en": "While deep-frying, I make sure not to take my eyes off the pot.",
+   "ko": "튀김을 하는 동안에는 냄비에서 눈을 떼지 않으려고 해요.",
+   "blank": "離さ",
    "src": "made"
   }
  ],
@@ -80497,6 +81121,22 @@
    "en": "I get bored easily.",
    "ko": "쉽게 질리는 성격이야.",
    "blank": "飽きる"
+  }
+ ],
+ "w|飾り": [
+  {
+   "text": "健太は玄関の飾りを一つずつ新聞紙で包んだ。",
+   "en": "Kenta wrapped the entrance decorations in newspaper one by one.",
+   "ko": "겐타는 현관 장식을 하나씩 신문지로 쌌어요.",
+   "blank": "飾り",
+   "src": "made"
+  },
+  {
+   "text": "美咲はケーキの上に、ミントの葉を飾りとして載せた。",
+   "en": "Misaki put a mint leaf on the cake as a garnish.",
+   "ko": "미사키는 케이크 위에 민트 잎을 장식으로 올렸어요.",
+   "blank": "飾り",
+   "src": "made"
   }
  ],
  "w|飾る": [
