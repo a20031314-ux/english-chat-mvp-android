@@ -1705,6 +1705,22 @@
    "src": "made"
   }
  ],
+ "w|กลางๆ": [
+  {
+   "text": "ธนาเลือกเสื้อสีกลางๆ มาใส่เพื่อไม่ให้ดูเด่นเกินไป",
+   "en": "Thana picked a shirt in a neutral color so he wouldn't stand out too much.",
+   "ko": "타나는 너무 튀지 않게 무난한 색 셔츠를 골라 입었어요.",
+   "blank": "กลางๆ",
+   "src": "made"
+  },
+  {
+   "text": "เสียงร้องของสุดาอยู่ในช่วงกลางๆ จึงร้องได้หลายเพลง",
+   "en": "Suda's voice sits in the middle range, so she can sing lots of songs.",
+   "ko": "수다의 목소리는 중간 음역대라 여러 노래를 부를 수 있어요.",
+   "blank": "กลางๆ",
+   "src": "made"
+  }
+ ],
  "w|กลางคืน": [
   {
    "text": "กลางคืนเงียบดี",
@@ -1824,6 +1840,22 @@
    "en": "The guide on the train talked about the history of the iron bridge the train was about to cross.",
    "ko": "기차 가이드는 곧 건널 철교의 역사를 이야기했어요.",
    "blank": "กล่าวถึง",
+   "src": "made"
+  }
+ ],
+ "w|กล่าวโทษ": [
+  {
+   "text": "ธนาตั้งใจว่าถ้างานพลาดจะไม่กล่าวโทษคนอื่น",
+   "en": "Thana made up his mind not to blame others if the work went wrong.",
+   "ko": "타나는 일이 잘못돼도 남 탓을 하지 않겠다고 마음먹었어요.",
+   "blank": "กล่าวโทษ",
+   "src": "made"
+  },
+  {
+   "text": "มือกลองกล่าวโทษสุดาว่าเล่นเร็วเกินจนวงหลุดจังหวะ",
+   "en": "The drummer blamed Suda for playing too fast and throwing the band off the beat.",
+   "ko": "드러머는 수다가 너무 빨리 쳐서 밴드 박자가 틀어졌다고 탓했어요.",
+   "blank": "กล่าวโทษ",
    "src": "made"
   }
  ],
@@ -3923,6 +3955,22 @@
    "src": "made"
   }
  ],
+ "w|การให้อภัย": [
+  {
+   "text": "ธนาเรียนรู้ว่าการให้อภัยตัวเองสำคัญเมื่อทำพลาด",
+   "en": "Thana learned that forgiving yourself matters when you make a mistake.",
+   "ko": "타나는 실수했을 때 자신을 용서하는 게 중요하다는 걸 배웠어요.",
+   "blank": "การให้อภัย",
+   "src": "made"
+  },
+  {
+   "text": "เพลงที่สุดาแต่งล่าสุดพูดถึงการให้อภัยคนที่เคยทำร้ายเรา",
+   "en": "The latest song Suda wrote is about forgiving people who once hurt us.",
+   "ko": "수다가 최근에 쓴 노래는 우리에게 상처 준 사람을 용서하는 이야기예요.",
+   "blank": "การให้อภัย",
+   "src": "made"
+  }
+ ],
  "w|การออกเสียง": [
   {
    "text": "ก่อนนำเสนองาน สมชายฝึกการออกเสียงชื่อสินค้าใหม่หลายครั้ง",
@@ -4921,6 +4969,22 @@
    "blank": "เกลียด"
   }
  ],
+ "w|เกลียดชัง": [
+  {
+   "text": "ธนาตั้งใจว่าจะไม่เก็บความเกลียดชังต่อหัวหน้าคนเก่าไว้",
+   "en": "Thana decided not to hold on to his hatred of his former boss.",
+   "ko": "타나는 예전 상사에 대한 미움을 품지 않기로 했어요.",
+   "blank": "เกลียดชัง",
+   "src": "made"
+  },
+  {
+   "text": "ละครเพลงของโรงเรียนเล่าเรื่องสองตระกูลที่เกลียดชังกัน",
+   "en": "The school musical tells the story of two families who hate each other.",
+   "ko": "학교 뮤지컬은 서로 미워하는 두 집안 이야기예요.",
+   "blank": "เกลียดชัง",
+   "src": "made"
+  }
+ ],
  "w|เกลียว": [
   {
    "text": "กิตติชี้ให้ดูลายเกลียวบนหม้อดินเผาโบราณ",
@@ -5685,6 +5749,22 @@
    "blank": "แกะ"
   }
  ],
+ "w|แกะสลัก": [
+  {
+   "text": "ที่ล็อบบี้มีช้างไม้แกะสลักตัวใหญ่ตั้งอยู่",
+   "en": "A large carved wooden elephant stands in the lobby.",
+   "ko": "로비에는 나무로 조각한 큰 코끼리가 서 있어요.",
+   "blank": "แกะสลัก",
+   "src": "made"
+  },
+  {
+   "text": "ซอที่สุดาใช้มีหัวแกะสลักเป็นรูปพญานาค",
+   "en": "The fiddle Suda plays has a head carved in the shape of a naga.",
+   "ko": "수다가 쓰는 현악기는 머리 부분이 나가 모양으로 조각돼 있어요.",
+   "blank": "แกะสลัก",
+   "src": "made"
+  }
+ ],
  "w|โกง": [
   {
    "text": "กิตติแซวเพื่อนว่าเคยโกงข้อสอบด้วยการแอบดูโพยในกระเป๋าดินสอ",
@@ -6095,6 +6175,22 @@
    "blank": "ขนมปัง"
   }
  ],
+ "w|ขนลุก": [
+  {
+   "text": "ธนาขนลุกตอนประธานบริษัทเรียกชื่อพนักงานใหม่ต่อหน้าทุกคน",
+   "en": "Thana got goosebumps when the company president called out the new employees' names in front of everyone.",
+   "ko": "회장이 모두 앞에서 신입 사원 이름을 부를 때 타나는 소름이 돋았어요.",
+   "blank": "ขนลุก",
+   "src": "made"
+  },
+  {
+   "text": "ทุกคนขนลุกเมื่อสุดาร้องโน้ตสูงสุดท้ายได้ไม่เพี้ยน",
+   "en": "Everyone got goosebumps when Suda hit the final high note perfectly in tune.",
+   "ko": "수다가 마지막 고음을 정확하게 내자 모두 소름이 돋았어요.",
+   "blank": "ขนลุก",
+   "src": "made"
+  }
+ ],
  "w|ขนส่ง": [
   {
    "text": "ตู้ท้ายขบวนใช้ขนส่งพัสดุไปส่งตามสถานีต่างๆ",
@@ -6232,6 +6328,22 @@
    "en": "Piya restrained himself from ordering yet another new pair of shoes this month.",
    "ko": "삐야는 이번 달에 새 신발을 또 주문하고 싶은 마음을 꾹 눌렀어요.",
    "blank": "ข่ม",
+   "src": "made"
+  }
+ ],
+ "w|ขมขื่น": [
+  {
+   "text": "ธนายังจำความขมขื่นตอนถูกเลิกจ้างจากที่เก่าได้",
+   "en": "Thana still remembers the bitterness of being laid off from his last job.",
+   "ko": "타나는 예전 직장에서 해고당했던 쓰라림을 아직 기억해요.",
+   "blank": "ขมขื่น",
+   "src": "made"
+  },
+  {
+   "text": "เพลงบลูส์เพลงนี้เล่าถึงความรักที่จบอย่างขมขื่น",
+   "en": "This blues song is about a love that ended bitterly.",
+   "ko": "이 블루스 곡은 씁쓸하게 끝난 사랑 이야기예요.",
+   "blank": "ขมขื่น",
    "src": "made"
   }
  ],
@@ -8643,6 +8755,22 @@
    "blank": "ขู่"
   }
  ],
+ "w|เข็ด": [
+  {
+   "text": "ธนาเข็ดแล้วกับการมาสาย เลยออกจากบ้านตั้งแต่ตีห้า",
+   "en": "Thana had learned his lesson about being late, so he left home at five in the morning.",
+   "ko": "타나는 지각에 한 번 데어서 새벽 다섯 시에 집을 나섰어요.",
+   "blank": "เข็ด",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเข็ดกับการขึ้นเวทีโดยไม่ซ้อมตั้งแต่ครั้งนั้น",
+   "en": "Ever since that time, Suda has learned her lesson about going on stage without practicing.",
+   "ko": "그때 이후로 수다는 연습 없이 무대에 오르는 일에 데었어요.",
+   "blank": "เข็ด",
+   "src": "made"
+  }
+ ],
  "w|เขต": [
   {
    "text": "พอเข้าเขตจังหวัดลำปาง ชัยก็เห็นภูเขาอยู่สองข้างทาง",
@@ -10805,6 +10933,22 @@
    "src": "made"
   }
  ],
+ "w|คล่องตัว": [
+  {
+   "text": "ทีมของธนาเล็กแต่คล่องตัว ตัดสินใจได้เร็ว",
+   "en": "Thana's team is small but agile, so it makes decisions quickly.",
+   "ko": "타나의 팀은 작지만 기민해서 결정이 빨라요.",
+   "blank": "คล่องตัว",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเลือกเล่นอูคูเลเล่เพราะเล็กและพกพาได้คล่องตัว",
+   "en": "Suda chose the ukulele because it's small and easy to carry around.",
+   "ko": "수다는 작고 들고 다니기 편해서 우쿨렐레를 골랐어요.",
+   "blank": "คล่องตัว",
+   "src": "made"
+  }
+ ],
  "w|คลอด": [
   {
    "text": "ภรรยาของเอกเพิ่งคลอด เพื่อนที่คลินิกเลยซื้อของขวัญให้ทารกแรกเกิด",
@@ -11318,6 +11462,22 @@
    "en": "Suda jumped and grabbed the rebound over a taller player.",
    "ko": "수다는 점프해서 자기보다 키 큰 선수 위로 리바운드를 잡아냈어요.",
    "blank": "คว้า",
+   "src": "made"
+  }
+ ],
+ "w|ความกดดัน": [
+  {
+   "text": "งานแรกมีความกดดันสูงเพราะต้องส่งภายในวันศุกร์",
+   "en": "The first assignment came with a lot of pressure because it was due by Friday.",
+   "ko": "첫 업무는 금요일까지 내야 해서 압박이 컸어요.",
+   "blank": "ความกดดัน",
+   "src": "made"
+  },
+  {
+   "text": "สุดารับมือกับความกดดันก่อนสอบปฏิบัติด้วยการหายใจลึก",
+   "en": "Suda copes with the pressure before her practical exam by breathing deeply.",
+   "ko": "수다는 실기 시험 전 압박감을 깊은 호흡으로 이겨내요.",
+   "blank": "ความกดดัน",
    "src": "made"
   }
  ],
@@ -12633,6 +12793,22 @@
    "en": "I can't describe this feeling.",
    "ko": "이 기분은 말로 못 하겠어.",
    "blank": "ความรู้สึก"
+  }
+ ],
+ "w|ความรู้สึกผิด": [
+  {
+   "text": "ธนามีความรู้สึกผิดที่ต้องทิ้งลูกไว้กับยายตั้งแต่เช้า",
+   "en": "Thana felt guilty about having to leave his child with grandma from early morning.",
+   "ko": "타나는 아침부터 아이를 할머니에게 맡겨야 해서 죄책감이 들었어요.",
+   "blank": "ความรู้สึกผิด",
+   "src": "made"
+  },
+  {
+   "text": "สุดามีความรู้สึกผิดที่โดดซ้อมไปดูหนังกับเพื่อน",
+   "en": "Suda felt guilty for skipping rehearsal to go to the movies with friends.",
+   "ko": "수다는 연습을 빼먹고 친구들과 영화를 보러 가서 죄책감이 들었어요.",
+   "blank": "ความรู้สึกผิด",
+   "src": "made"
   }
  ],
  "w|ความเร็ว": [
@@ -16841,6 +17017,22 @@
    "blank": "งอ"
   }
  ],
+ "w|งอกงาม": [
+  {
+   "text": "ต้นไม้ในกระถางบนโต๊ะธนางอกงามดีเพราะได้แดดจากหน้าต่าง",
+   "en": "The potted plant on Thana's desk is thriving because it gets sun from the window.",
+   "ko": "타나 책상 위 화분은 창으로 햇빛을 받아 잘 자라요.",
+   "blank": "งอกงาม",
+   "src": "made"
+  },
+  {
+   "text": "ฝีมือของสุดางอกงามขึ้นทุกปีที่เรียนที่นี่",
+   "en": "Suda's skill has flourished with every year she has studied here.",
+   "ko": "수다의 실력은 이곳에서 배운 해마다 무르익었어요.",
+   "blank": "งอกงาม",
+   "src": "made"
+  }
+ ],
  "w|งอน": [
   {
    "text": "แฟนสาวงอนเพราะอนันต์ลืมโทรไปเล่าเรื่องวันแรก",
@@ -17030,6 +17222,22 @@
    "en": "Chan felt stupid for forgetting her homework book even though she'd finished it.",
    "ko": "짠은 숙제를 다 해 놓고도 공책을 깜빡해서 바보 같다고 느꼈어요.",
    "blank": "งี่เง่า",
+   "src": "made"
+  }
+ ],
+ "w|งุนงง": [
+  {
+   "text": "ธนางุนงงกับรหัสย่อที่ทุกคนในทีมใช้กัน",
+   "en": "Thana was baffled by the abbreviations everyone on the team used.",
+   "ko": "타나는 팀원들이 쓰는 약어에 어리둥절했어요.",
+   "blank": "งุนงง",
+   "src": "made"
+  },
+  {
+   "text": "สุดางุนงงกับโน้ตที่ครูเขียนด้วยลายมือหวัด",
+   "en": "Suda was puzzled by the notes the teacher had scrawled by hand.",
+   "ko": "수다는 선생님이 휘갈겨 쓴 악보에 어리둥절했어요.",
+   "blank": "งุนงง",
    "src": "made"
   }
  ],
@@ -19639,6 +19847,22 @@
    "src": "made"
   }
  ],
+ "w|เจียม": [
+  {
+   "text": "ธนาเจียมตัวไม่ออกความเห็นมากในประชุมแรก",
+   "en": "Thana kept a low profile and didn't offer many opinions at his first meeting.",
+   "ko": "타나는 첫 회의에서 겸손하게 의견을 많이 내지 않았어요.",
+   "blank": "เจียม",
+   "src": "made"
+  },
+  {
+   "text": "แม้จะได้รางวัล สุดาก็ยังเจียมตัวเหมือนเดิม",
+   "en": "Even after winning a prize, Suda is as modest as ever.",
+   "ko": "상을 받았어도 수다는 여전히 겸손해요.",
+   "blank": "เจียม",
+   "src": "made"
+  }
+ ],
  "w|แจก": [
   {
    "text": "สมชายแจกกระดาษคำตอบให้นักเรียนทีละแถว",
@@ -19698,6 +19922,22 @@
    "en": "Suda put plastic flowers in a vase next to the cash register.",
    "ko": "수다는 플라스틱 꽃을 꽂은 꽃병을 계산대 옆에 놓았어요.",
    "blank": "แจกัน",
+   "src": "made"
+  }
+ ],
+ "w|แจง": [
+  {
+   "text": "หัวหน้าแจงงานให้ธนาฟังตั้งแต่ชั่วโมงแรก",
+   "en": "The boss walked Thana through the work from the very first hour.",
+   "ko": "팀장은 첫 시간부터 타나에게 업무를 설명해 줬어요.",
+   "blank": "แจง",
+   "src": "made"
+  },
+  {
+   "text": "ครูแจงตารางซ้อมให้นักเรียนฟังในคาบแรก",
+   "en": "The teacher went over the rehearsal schedule with the students in the first class.",
+   "ko": "선생님은 첫 수업에서 학생들에게 연습 일정을 설명했어요.",
+   "blank": "แจง",
    "src": "made"
   }
  ],
@@ -19938,6 +20178,22 @@
    "en": "The text on the old sign had faded so much that Wanna could barely read it.",
    "ko": "낡은 안내판의 글이 너무 흐려져서 완나는 거의 읽을 수 없었어요.",
    "blank": "ใจความ",
+   "src": "made"
+  }
+ ],
+ "w|ใจคอ": [
+  {
+   "text": "ธนาใจคอไม่ดีตอนรอผลประเมินช่วงทดลองงาน",
+   "en": "Thana felt uneasy while waiting for his probation review.",
+   "ko": "타나는 수습 평가 결과를 기다리며 마음이 조마조마했어요.",
+   "blank": "ใจคอ",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนประกาศผลการแข่งขัน สุดาใจคอไม่อยู่กับเนื้อกับตัว",
+   "en": "Before the competition results were announced, Suda was a nervous wreck.",
+   "ko": "대회 결과 발표 전 수다는 안절부절못했어요.",
+   "blank": "ใจคอ",
    "src": "made"
   }
  ],
@@ -27233,6 +27489,22 @@
    "src": "made"
   }
  ],
+ "w|ตระเวน": [
+  {
+   "text": "ธนาตระเวนทักทายทุกแผนกในตึกจนเหนื่อย",
+   "en": "Thana went around greeting every department in the building until he was worn out.",
+   "ko": "타나는 건물의 모든 부서를 돌며 인사하느라 지쳤어요.",
+   "blank": "ตระเวน",
+   "src": "made"
+  },
+  {
+   "text": "วงของโรงเรียนดนตรีตระเวนเล่นตามงานวัดช่วงปิดเทอม",
+   "en": "The music school's band tours temple fairs during the school break.",
+   "ko": "음악 학교 밴드는 방학 동안 절 축제를 돌며 공연해요.",
+   "blank": "ตระเวน",
+   "src": "made"
+  }
+ ],
  "w|ตระหนก": [
   {
    "text": "วีระตระหนกเมื่อมาลีไม่รับโทรศัพท์ทั้งคืน",
@@ -33693,6 +33965,22 @@
    "src": "made"
   }
  ],
+ "w|ทารุณ": [
+  {
+   "text": "ธนาเล่าว่าหัวหน้าที่ทำงานเก่าใช้คำพูดทารุณกับลูกน้อง",
+   "en": "Thana says the boss at his old job spoke cruelly to his staff.",
+   "ko": "타나는 예전 직장 상사가 부하들에게 잔인한 말을 했다고 말해요.",
+   "blank": "ทารุณ",
+   "src": "made"
+  },
+  {
+   "text": "เพลงที่สุดาฝึกร้องเล่าถึงชีวิตทาสที่ถูกปฏิบัติอย่างทารุณ",
+   "en": "The song Suda is practicing tells of slaves who were treated cruelly.",
+   "ko": "수다가 연습하는 노래는 잔인한 대우를 받은 노예들의 삶을 이야기해요.",
+   "blank": "ทารุณ",
+   "src": "made"
+  }
+ ],
  "w|ท่าเรือ": [
   {
    "text": "เรือออกจากท่าเรือเช้ามืด",
@@ -36875,6 +37163,22 @@
    "blank": "นอนหลับ"
   }
  ],
+ "w|น้อม": [
+  {
+   "text": "ธนาน้อมรับคำติชมจากหัวหน้าด้วยความเต็มใจ",
+   "en": "Thana humbly and willingly accepted his boss's feedback.",
+   "ko": "타나는 팀장의 조언을 기꺼이 겸허하게 받아들였어요.",
+   "blank": "น้อม",
+   "src": "made"
+  },
+  {
+   "text": "สุดาก้มตัวน้อมไหว้ครูก่อนเริ่มเรียน",
+   "en": "Suda bowed low and respectfully greeted her teacher before class began.",
+   "ko": "수다는 수업 전에 몸을 숙여 선생님께 공손히 인사했어요.",
+   "blank": "น้อม",
+   "src": "made"
+  }
+ ],
  "w|น้อย": [
   {
    "text": "เงินน้อยจัง",
@@ -37672,6 +37976,22 @@
    "en": "In the rainy season the garden is full of snails, which Somsak's wife finds disgusting.",
    "ko": "우기에는 정원에 달팽이가 가득해서 솜삭의 아내는 징그럽다고 해요.",
    "blank": "น่าขยะแขยง",
+   "src": "made"
+  }
+ ],
+ "w|น่าขายหน้า": [
+  {
+   "text": "ธนาเรียกชื่อหัวหน้าผิดต่อหน้าลูกค้า น่าขายหน้าที่สุด",
+   "en": "Thana called his boss by the wrong name in front of a client, which was mortifying.",
+   "ko": "타나는 고객 앞에서 팀장 이름을 틀리게 불렀어요, 정말 창피했어요.",
+   "blank": "น่าขายหน้า",
+   "src": "made"
+  },
+  {
+   "text": "สุดากดโน้ตผิดตอนเปิดเพลงเลยรู้สึกน่าขายหน้า",
+   "en": "Suda hit a wrong note at the start of the piece and felt embarrassed.",
+   "ko": "수다는 곡 첫머리에 음을 틀려서 창피했어요.",
+   "blank": "น่าขายหน้า",
    "src": "made"
   }
  ],
@@ -44933,6 +45253,22 @@
    "src": "made"
   }
  ],
+ "w|ปลง": [
+  {
+   "text": "ธนาปลงได้ว่างานแรกไม่จำเป็นต้องสมบูรณ์แบบ",
+   "en": "Thana came to accept that his first job didn't have to be perfect.",
+   "ko": "타나는 첫 업무가 완벽할 필요는 없다고 마음을 내려놓았어요.",
+   "blank": "ปลง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาปลงแล้วว่านิ้วสั้นของตัวเองเล่นคอร์ดนี้ได้ยาก",
+   "en": "Suda has made peace with the fact that her short fingers struggle with this chord.",
+   "ko": "수다는 자기 손가락이 짧아 이 코드가 어렵다는 걸 받아들였어요.",
+   "blank": "ปลง",
+   "src": "made"
+  }
+ ],
  "w|ปลด": [
   {
    "text": "พอหน้าร้อนมาถึง ธนาก็ปลดผ้าห่มหนาออกจากเตียง",
@@ -51855,6 +52191,22 @@
    "blank": "พ่อสามี"
   }
  ],
+ "w|พอเหมาะ": [
+  {
+   "text": "ห้องทำงานใหม่ของธนามีขนาดพอเหมาะ ไม่คับไม่กว้างเกินไป",
+   "en": "Thana's new office is just the right size, neither cramped nor too big.",
+   "ko": "타나의 새 사무실은 비좁지도 너무 넓지도 않은 딱 알맞은 크기예요.",
+   "blank": "พอเหมาะ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาปรับเก้าอี้เปียโนให้สูงพอเหมาะกับแขน",
+   "en": "Suda adjusted the piano bench to just the right height for her arms.",
+   "ko": "수다는 피아노 의자를 팔에 딱 맞는 높이로 조절했어요.",
+   "blank": "พอเหมาะ",
+   "src": "made"
+  }
+ ],
  "w|พะแนง": [
   {
    "text": "วิชัยชิมพะแนงหมูแล้วบอกว่าเค็มไปนิด",
@@ -54119,6 +54471,22 @@
    "src": "made"
   }
  ],
+ "w|ฟุ้งซ่าน": [
+  {
+   "text": "คืนก่อนเริ่มงาน ธนาฟุ้งซ่านจนนอนไม่หลับ",
+   "en": "The night before starting work, Thana's mind was racing so much that he couldn't sleep.",
+   "ko": "출근 전날 밤 타나는 잡생각이 많아 잠을 못 잤어요.",
+   "blank": "ฟุ้งซ่าน",
+   "src": "made"
+  },
+  {
+   "text": "เมื่อใจฟุ้งซ่าน สุดาจะเล่นสเกลช้าเพื่อให้สมาธิกลับมา",
+   "en": "When her mind wanders, Suda plays slow scales to get her focus back.",
+   "ko": "수다는 마음이 산만할 때 천천히 음계를 연주해서 집중력을 되찾아요.",
+   "blank": "ฟุ้งซ่าน",
+   "src": "made"
+  }
+ ],
  "w|ฟุตบอล": [
   {
    "text": "ดูฟุตบอลด้วยกันไหม",
@@ -55068,6 +55436,22 @@
    "en": "Malee invited monks to bless the new office in the morning.",
    "ko": "말리는 아침에 새 사무실 개소 공덕을 위해 스님들을 모셨어요.",
    "blank": "ภิกษุ",
+   "src": "made"
+  }
+ ],
+ "w|ภิรมย์": [
+  {
+   "text": "ธนาเดินออกจากออฟฟิศด้วยใจภิรมย์หลังวันแรกผ่านไปด้วยดี",
+   "en": "Thana walked out of the office in high spirits after his first day went well.",
+   "ko": "첫날이 잘 지나가자 타나는 기쁜 마음으로 사무실을 나섰어요.",
+   "blank": "ภิรมย์",
+   "src": "made"
+  },
+  {
+   "text": "ผู้ปกครองนั่งฟังวงดนตรีของลูกอย่างภิรมย์",
+   "en": "The parents sat listening happily to their children's band.",
+   "ko": "학부모들은 아이들의 연주를 흐뭇하게 들었어요.",
+   "blank": "ภิรมย์",
    "src": "made"
   }
  ],
@@ -63113,6 +63497,22 @@
    "src": "made"
   }
  ],
+ "w|ริษยา": [
+  {
+   "text": "ธนาไม่ริษยาเพื่อนที่ได้ตำแหน่งดีกว่า",
+   "en": "Thana doesn't envy his friend who got a better position.",
+   "ko": "타나는 더 좋은 자리를 얻은 친구를 시기하지 않아요.",
+   "blank": "ริษยา",
+   "src": "made"
+  },
+  {
+   "text": "นักเรียนบางคนริษยาสุดาที่ได้ทุนไปเรียนต่อ",
+   "en": "Some students envied Suda for getting a scholarship to study further.",
+   "ko": "몇몇 학생은 장학금을 받아 진학하게 된 수다를 시기했어요.",
+   "blank": "ริษยา",
+   "src": "made"
+  }
+ ],
  "w|รีด": [
   {
    "text": "ระหว่างช่างทำงาน ภรรยาของประยุทธนั่งรีดเสื้อผ้าอยู่ในห้องที่ยังไม่โดนรื้อ",
@@ -63186,6 +63586,22 @@
    "en": "With only a few seconds left, Suda didn't hesitate and shot right away from beyond the three-point line.",
    "ko": "몇 초밖에 안 남아서 수다는 지체 없이 바로 3점 라인 밖에서 슛을 던졌어요.",
    "blank": "รีรอ",
+   "src": "made"
+  }
+ ],
+ "w|รื่นเริง": [
+  {
+   "text": "บรรยากาศงานเลี้ยงต้อนรับพนักงานใหม่รื่นเริงกว่าที่ธนาคิด",
+   "en": "The welcome party for new staff was more cheerful than Thana had expected.",
+   "ko": "신입 환영회 분위기는 타나가 생각한 것보다 즐거웠어요.",
+   "blank": "รื่นเริง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาชอบแต่งเพลงจังหวะรื่นเริงสำหรับเด็ก",
+   "en": "Suda likes writing cheerful, upbeat songs for children.",
+   "ko": "수다는 아이들을 위한 신나는 노래를 짓기를 좋아해요.",
+   "blank": "รื่นเริง",
    "src": "made"
   }
  ],
@@ -64377,6 +64793,22 @@
    "src": "made"
   }
  ],
+ "w|แรงบันดาลใจ": [
+  {
+   "text": "เรื่องราวของผู้ก่อตั้งบริษัทให้แรงบันดาลใจกับธนามาก",
+   "en": "The company founder's story gave Thana a lot of inspiration.",
+   "ko": "회사 창업자의 이야기는 타나에게 큰 영감을 줬어요.",
+   "blank": "แรงบันดาลใจ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาได้แรงบันดาลใจแต่งเพลงจากเสียงฝนบนหลังคา",
+   "en": "Suda got the inspiration for a song from the sound of rain on the roof.",
+   "ko": "수다는 지붕 위 빗소리에서 곡을 쓸 영감을 얻었어요.",
+   "blank": "แรงบันดาลใจ",
+   "src": "made"
+  }
+ ],
  "w|แรงผลักดัน": [
   {
    "text": "ความรักในประวัติศาสตร์คือแรงผลักดันให้กิตติทำงานนี้",
@@ -64969,6 +65401,22 @@
    "blank": "ลดราคา"
   }
  ],
+ "w|ลดลง": [
+  {
+   "text": "พอได้คุยกับเพื่อนร่วมงาน ความตื่นเต้นของธนาก็ลดลง",
+   "en": "Once he had chatted with his coworkers, Thana's nerves eased.",
+   "ko": "동료들과 이야기하자 타나의 긴장이 줄었어요.",
+   "blank": "ลดลง",
+   "src": "made"
+  },
+  {
+   "text": "จำนวนนักเรียนเครื่องเป่าลดลงเรื่อยมาในช่วงหลัง",
+   "en": "The number of wind instrument students has kept falling lately.",
+   "ko": "요즘 관악기 수강생 수가 계속 줄고 있어요.",
+   "blank": "ลดลง",
+   "src": "made"
+  }
+ ],
  "w|ล้น": [
   {
    "text": "ตอนเย็นคนล้นยิมจนเอกต้องรอคิวใช้เครื่อง",
@@ -65043,6 +65491,22 @@
    "blank": "ล้ม"
   }
  ],
+ "w|ล่มสลาย": [
+  {
+   "text": "ธนาเคยทำงานที่บริษัทเก่าจนบริษัทล่มสลาย",
+   "en": "Thana worked at his old company right up until it collapsed.",
+   "ko": "타나는 예전 회사가 무너질 때까지 그곳에서 일했어요.",
+   "blank": "ล่มสลาย",
+   "src": "made"
+  },
+  {
+   "text": "ครูเล่าว่าวงดนตรีดังในอดีตล่มสลายเพราะสมาชิกทะเลาะกัน",
+   "en": "The teacher said a once-famous band fell apart because its members fought.",
+   "ko": "선생님은 예전에 유명했던 밴드가 멤버들 싸움으로 해체됐다고 했어요.",
+   "blank": "ล่มสลาย",
+   "src": "made"
+  }
+ ],
  "w|ลมหายใจ": [
   {
    "text": "หายใจลึกๆ ช้าๆ ด้วยลมหายใจ",
@@ -65100,6 +65564,22 @@
    "en": "Time has gone by, and the cat that once came for shots as a kitten is now old.",
    "ko": "세월이 흘러 아기 때 예방 주사를 맞으러 오던 고양이도 이제 늙었어요.",
    "blank": "ล่วง",
+   "src": "made"
+  }
+ ],
+ "w|ล้วง": [
+  {
+   "text": "ธนาล้วงกระเป๋าหาบัตรพนักงานอยู่นานที่ประตู",
+   "en": "Thana dug around in his pocket for his staff card at the door for ages.",
+   "ko": "타나는 문 앞에서 사원증을 찾느라 한참 주머니를 뒤졌어요.",
+   "blank": "ล้วง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาล้วงหาปิ๊กกีตาร์ในกระเป๋าเสื้อ",
+   "en": "Suda felt around in her shirt pocket for a guitar pick.",
+   "ko": "수다는 셔츠 주머니에서 기타 피크를 더듬어 찾았어요.",
+   "blank": "ล้วง",
    "src": "made"
   }
  ],
@@ -65558,6 +66038,22 @@
    "en": "Volunteers sprayed a fine mist on the runners at the water station to cool them down.",
    "ko": "자원봉사자들이 급수대에서 주자들에게 물안개를 뿌려 더위를 식혀 줬어요.",
    "blank": "ละออง",
+   "src": "made"
+  }
+ ],
+ "w|ละอาย": [
+  {
+   "text": "ธนาละอายที่จำชื่อเพื่อนร่วมงานไม่ได้สักคน",
+   "en": "Thana was ashamed that he couldn't remember a single coworker's name.",
+   "ko": "타나는 동료 이름을 하나도 기억하지 못해 부끄러웠어요.",
+   "blank": "ละอาย",
+   "src": "made"
+  },
+  {
+   "text": "สุดาละอายใจที่ลืมเนื้อเพลงต่อหน้าครู",
+   "en": "Suda felt ashamed for forgetting the lyrics in front of her teacher.",
+   "ko": "수다는 선생님 앞에서 가사를 잊어 부끄러웠어요.",
+   "blank": "ละอาย",
    "src": "made"
   }
  ],
@@ -71389,6 +71885,22 @@
    "src": "made"
   }
  ],
+ "w|สติแตก": [
+  {
+   "text": "ระบบล่มกลางวัน แต่ธนาไม่สติแตกและค่อยแก้ทีละขั้น",
+   "en": "The system crashed at midday, but Thana didn't panic and fixed it step by step.",
+   "ko": "낮에 시스템이 멈췄지만 타나는 당황하지 않고 하나씩 고쳤어요.",
+   "blank": "สติแตก",
+   "src": "made"
+  },
+  {
+   "text": "นักเรียนใหม่เกือบสติแตกตอนสายไวโอลินขาดกลางเวที",
+   "en": "A new student nearly lost it when a violin string snapped on stage.",
+   "ko": "신입생은 무대에서 바이올린 줄이 끊어지자 거의 패닉에 빠질 뻔했어요.",
+   "blank": "สติแตก",
+   "src": "made"
+  }
+ ],
  "w|สติปัญญา": [
   {
    "text": "บทละครเรื่องใหม่เล่าถึงเด็กยากจนที่ใช้สติปัญญาเอาชนะเศรษฐีขี้โกง",
@@ -72090,6 +72602,22 @@
    "en": "Friends pooled money to buy a fridge as a gift for Piya.",
    "ko": "친구들은 돈을 보태 피야에게 냉장고를 선물했어요.",
    "blank": "สมทบ",
+   "src": "made"
+  }
+ ],
+ "w|สมน้ำหน้า": [
+  {
+   "text": "ธนาหัวเราะตัวเองว่าสมน้ำหน้าที่ไม่ยอมตั้งนาฬิกาปลุก",
+   "en": "Thana laughed at himself, saying it served him right for not setting an alarm.",
+   "ko": "타나는 알람을 안 맞춘 게 자업자득이라며 스스로 웃었어요.",
+   "blank": "สมน้ำหน้า",
+   "src": "made"
+  },
+  {
+   "text": "มือกลองที่ชอบแกล้งคนอื่นทำไม้กลองหัก เพื่อนในวงพากันว่าสมน้ำหน้า",
+   "en": "The drummer who loves teasing others broke his drumstick, and his bandmates all said it served him right.",
+   "ko": "남을 잘 놀리는 드러머가 드럼 스틱을 부러뜨리자 밴드 친구들은 꼴좋다고 했어요.",
+   "blank": "สมน้ำหน้า",
    "src": "made"
   }
  ],
@@ -73645,6 +74173,22 @@
    "src": "made"
   }
  ],
+ "w|สะเทือนใจ": [
+  {
+   "text": "คำกล่าวลาของพนักงานเกษียณในงานเลี้ยงทำให้ธนาสะเทือนใจ",
+   "en": "The farewell speech of a retiring employee at the party moved Thana deeply.",
+   "ko": "송별회에서 퇴직하는 직원의 작별 인사에 타나는 가슴이 뭉클했어요.",
+   "blank": "สะเทือนใจ",
+   "src": "made"
+  },
+  {
+   "text": "คอนเสิร์ตการกุศลของนักเรียนจบลงด้วยเพลงที่สะเทือนใจผู้ชม",
+   "en": "The students' charity concert ended with a song that moved the audience.",
+   "ko": "학생들의 자선 음악회는 관객의 마음을 울리는 노래로 끝났어요.",
+   "blank": "สะเทือนใจ",
+   "src": "made"
+  }
+ ],
  "w|สะบัด": [
   {
    "text": "เพื่อนสาวสะบัดผมแล้วโพสท่าถ่ายรูปเหมือนสมัยวัยรุ่น",
@@ -73746,6 +74290,22 @@
    "en": "The kids go to school neatly dressed.",
    "ko": "아이들이 깔끔하게 차려입고 학교에 가.",
    "blank": "สะอาดสะอ้าน",
+   "src": "made"
+  }
+ ],
+ "w|สะอื้น": [
+  {
+   "text": "พนักงานฝึกงานคนหนึ่งสะอื้นหลังโดนตำหนิ ธนาจึงยื่นทิชชูให้",
+   "en": "An intern was sobbing after being scolded, so Thana handed her a tissue.",
+   "ko": "한 인턴이 꾸중을 듣고 흐느끼자 타나가 휴지를 건넸어요.",
+   "blank": "สะอื้น",
+   "src": "made"
+  },
+  {
+   "text": "สุดาสะอื้นหลังเวทีเพราะดีใจที่สอบผ่าน",
+   "en": "Suda sobbed backstage out of joy at passing the exam.",
+   "ko": "수다는 시험에 붙어 기뻐서 무대 뒤에서 흐느꼈어요.",
+   "blank": "สะอื้น",
    "src": "made"
   }
  ],
@@ -77739,6 +78299,22 @@
    "blank": "หด"
   }
  ],
+ "w|หดหู่": [
+  {
+   "text": "ธนารู้สึกหดหู่นิดหน่อยตอนเห็นโต๊ะว่างของคนที่เพิ่งลาออก",
+   "en": "Thana felt a little down when he saw the empty desk of someone who had just quit.",
+   "ko": "타나는 막 그만둔 사람의 빈 책상을 보고 조금 우울해졌어요.",
+   "blank": "หดหู่",
+   "src": "made"
+  },
+  {
+   "text": "เพลงในคีย์ไมเนอร์ทำให้ห้องซ้อมดูหดหู่",
+   "en": "The minor-key piece made the practice room feel gloomy.",
+   "ko": "단조 곡 때문에 연습실 분위기가 우울해졌어요.",
+   "blank": "หดหู่",
+   "src": "made"
+  }
+ ],
  "w|หน": [
   {
    "text": "ชายคนนี้มาแจ้งความเรื่องเดิมกับวิชัยหลายหนแล้ว",
@@ -79393,6 +79969,22 @@
    "blank": "หลง"
   }
  ],
+ "w|หลงตัวเอง": [
+  {
+   "text": "รุ่นพี่คนหนึ่งดูหลงตัวเองจนธนาไม่กล้าถาม",
+   "en": "One senior coworker seemed so full of himself that Thana didn't dare ask him anything.",
+   "ko": "한 선배가 너무 잘난 척해서 타나는 감히 물어보지 못했어요.",
+   "blank": "หลงตัวเอง",
+   "src": "made"
+  },
+  {
+   "text": "นักเปียโนหลงตัวเองคนหนึ่งไม่ยอมฟังคำแนะนำของครู",
+   "en": "A conceited pianist refused to listen to the teacher's advice.",
+   "ko": "잘난 척하는 피아니스트 하나가 선생님 조언을 듣지 않았어요.",
+   "blank": "หลงตัวเอง",
+   "src": "made"
+  }
+ ],
  "w|หลงทาง": [
   {
    "text": "เราหลงทางในตรอกแคบๆ",
@@ -80935,6 +81527,22 @@
    "en": "Don't laugh so loud.",
    "ko": "그렇게 크게 웃지 마.",
    "blank": "หัวเราะ"
+  }
+ ],
+ "w|หัวล้าน": [
+  {
+   "text": "ผู้จัดการฝ่ายบุคคลหัวล้านแต่ยิ้มใจดีมาก",
+   "en": "The HR manager is bald but has a very kind smile.",
+   "ko": "인사부장은 대머리지만 아주 다정하게 웃어요.",
+   "blank": "หัวล้าน",
+   "src": "made"
+  },
+  {
+   "text": "ครูสอนไวโอลินหัวล้านแต่ไว้หนวดยาว",
+   "en": "The violin teacher is bald but wears a long mustache.",
+   "ko": "바이올린 선생님은 대머리지만 콧수염을 길게 길렀어요.",
+   "blank": "หัวล้าน",
+   "src": "made"
   }
  ],
  "w|หัวเสีย": [
@@ -83273,6 +83881,22 @@
    "src": "made"
   }
  ],
+ "w|อนิจจา": [
+  {
+   "text": "อนิจจา ธนาเพิ่งรู้ว่าลืมกล่องข้าวไว้บนรถเมล์",
+   "en": "Alas, Thana has just realized he left his lunchbox on the bus.",
+   "ko": "아이고, 타나는 도시락을 버스에 두고 내린 걸 이제야 알았어요.",
+   "blank": "อนิจจา",
+   "src": "made"
+  },
+  {
+   "text": "อนิจจา สายกีตาร์ของสุดาขาดก่อนขึ้นแสดงแค่ห้านาที",
+   "en": "Alas, Suda's guitar string broke just five minutes before she went on.",
+   "ko": "아이고, 공연 오 분 전에 수다의 기타 줄이 끊어졌어요.",
+   "blank": "อนิจจา",
+   "src": "made"
+  }
+ ],
  "w|อนึ่ง": [
   {
    "text": "บทบรรณาธิการปิดท้ายว่า อนึ่ง ทางสำนักข่าวขอขอบคุณผู้อ่านทุกท่าน",
@@ -85320,6 +85944,22 @@
    "en": "Piya is interested in how ancient civilizations used herbs to treat illness.",
    "ko": "삐야는 고대 문명이 약초로 병을 어떻게 고쳤는지 관심이 있어요.",
    "blank": "อารยธรรม",
+   "src": "made"
+  }
+ ],
+ "w|อาลัย": [
+  {
+   "text": "ทั้งออฟฟิศยังอาลัยรุ่นพี่ที่เพิ่งย้ายไปสาขาอื่น",
+   "en": "The whole office still misses the senior colleague who just moved to another branch.",
+   "ko": "사무실 사람들은 다른 지점으로 막 옮긴 선배를 아직도 그리워해요.",
+   "blank": "อาลัย",
+   "src": "made"
+  },
+  {
+   "text": "นักเรียนทุกคนเล่นเพลงอาลัยครูใหญ่ผู้ก่อตั้งโรงเรียน",
+   "en": "All the students played a song in memory of the principal who founded the school.",
+   "ko": "학생들 모두가 학교를 세운 교장 선생님을 추모하는 곡을 연주했어요.",
+   "blank": "อาลัย",
    "src": "made"
   }
  ],

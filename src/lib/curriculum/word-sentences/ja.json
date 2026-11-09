@@ -14541,6 +14541,22 @@
    "blank": "一切"
   }
  ],
+ "w|一同": [
+  {
+   "text": "「社員一同、心から歓迎します」と言って、拓也は新しい同僚に花を渡した。",
+   "en": "Saying, \"All of us here welcome you from the bottom of our hearts,\" Takuya handed flowers to his new coworker.",
+   "ko": "\"전 직원 일동, 진심으로 환영합니다\"라고 하며 다쿠야는 새 동료에게 꽃을 건넸어요.",
+   "blank": "一同",
+   "src": "made"
+  },
+  {
+   "text": "恵子たち生徒一同は、先生の誕生日に花を贈った。",
+   "en": "Keiko and all the other students gave the teacher flowers for her birthday.",
+   "ko": "게이코를 비롯한 학생 일동은 선생님 생신에 꽃을 드렸어요.",
+   "blank": "一同",
+   "src": "made"
+  }
+ ],
  "w|一員": [
   {
    "text": "これで亮も、家族の一員になったようなものだと新郎の母は笑った。",
@@ -18933,6 +18949,22 @@
    "src": "made"
   }
  ],
+ "w|人柄": [
+  {
+   "text": "新しい同僚の穏やかな人柄に、拓也はすぐ好感を持った。",
+   "en": "Takuya quickly took a liking to his new coworker's gentle personality.",
+   "ko": "새 동료의 온화한 인품에 다쿠야는 금방 호감을 느꼈어요.",
+   "blank": "人柄",
+   "src": "made"
+  },
+  {
+   "text": "恵子の先生は、明るい人柄で生徒たちに慕われている。",
+   "en": "Keiko's teacher is adored by the students for her cheerful personality.",
+   "ko": "게이코의 선생님은 밝은 인품으로 학생들에게 사랑받아요.",
+   "blank": "人柄",
+   "src": "made"
+  }
+ ],
  "w|人格": [
   {
    "text": "佐藤さんの人格を疑う人は、職場に一人もいない。",
@@ -20869,6 +20901,22 @@
    "blank": "低下"
   }
  ],
+ "w|低温": [
+  {
+   "text": "大輔は、とった魚を低温で保存した。",
+   "en": "Daisuke stored the fish he caught at a low temperature.",
+   "ko": "다이스케는 잡은 생선을 저온으로 보관했어요.",
+   "blank": "低温",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、低温を保てる箱に弁当を入れて車に積んだ。",
+   "en": "Sakura put her lunch in a box that keeps things cold and loaded it into the car.",
+   "ko": "사쿠라는 저온을 유지하는 상자에 도시락을 넣어 차에 실었어요.",
+   "blank": "低温",
+   "src": "made"
+  }
+ ],
  "w|低迷": [
   {
    "text": "検挙率の低迷を受けて、署には新しい捜査班が作られた。",
@@ -21783,6 +21831,22 @@
    "en": "Mind if I use this?",
    "ko": "이거 사용해도 돼?",
    "blank": "使用"
+  }
+ ],
+ "w|使者": [
+  {
+   "text": "拓也は、本社から来た新しい同僚を「本社からの使者」と呼んでからかった。",
+   "en": "Takuya teased his new coworker from the head office by calling him \"the envoy from headquarters.\"",
+   "ko": "다쿠야는 본사에서 온 새 동료를 '본사에서 온 사자'라고 부르며 놀렸어요.",
+   "blank": "使者",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、昔の絵巻物に描かれた使者の行列を描き写した。",
+   "en": "Keiko copied a procession of envoys depicted in an old picture scroll.",
+   "ko": "게이코는 옛 두루마리 그림에 그려진 사신 행렬을 베껴 그렸어요.",
+   "blank": "使者",
+   "src": "made"
   }
  ],
  "w|例": [
@@ -24276,6 +24340,22 @@
    "en": "Yoko felt honored that her former teacher remembered her name.",
    "ko": "은사님이 이름을 기억해 주셔서 요코는 영광이라고 생각했어요.",
    "blank": "光栄",
+   "src": "made"
+  }
+ ],
+ "w|光線": [
+  {
+   "text": "夕方、雲の切れ間から海に光線が差し込むのを大輔は見た。",
+   "en": "In the evening, Daisuke saw rays of light shining through a gap in the clouds onto the sea.",
+   "ko": "저녁 무렵 다이스케는 구름 사이로 바다에 빛줄기가 비치는 걸 봤어요.",
+   "blank": "光線",
+   "src": "made"
+  },
+  {
+   "text": "トンネルを出ると、まぶしい光線がさくらの目に飛び込んできた。",
+   "en": "When she came out of the tunnel, dazzling rays of light hit Sakura's eyes.",
+   "ko": "터널을 빠져나오자 눈부신 빛줄기가 사쿠라의 눈에 들어왔어요.",
+   "blank": "光線",
    "src": "made"
   }
  ],
@@ -30155,6 +30235,22 @@
    "src": "made"
   }
  ],
+ "w|化合": [
+  {
+   "text": "大輔は、塩がナトリウムと塩素の化合物だと授業で習った。",
+   "en": "Daisuke learned in class that salt is a compound of sodium and chlorine.",
+   "ko": "다이스케는 소금이 나트륨과 염소의 화합물이라고 수업에서 배웠어요.",
+   "blank": "化合",
+   "src": "made"
+  },
+  {
+   "text": "温泉の成分は硫黄と水素の化合物だと、さくらは説明書きで読んだ。",
+   "en": "Sakura read on a sign that the hot spring contains a compound of sulfur and hydrogen.",
+   "ko": "온천 성분은 황과 수소의 화합물이라고 사쿠라는 안내문에서 읽었어요.",
+   "blank": "化合",
+   "src": "made"
+  }
+ ],
  "w|化学": [
   {
    "text": "化学の授業が好き。",
@@ -31021,6 +31117,22 @@
    "src": "made"
   }
  ],
+ "w|単身": [
+  {
+   "text": "拓也の新しい同僚は、家族を残して単身赴任で来た。",
+   "en": "Takuya's new coworker came on a job transfer, leaving his family behind.",
+   "ko": "다쿠야의 새 동료는 가족을 두고 홀로 부임해 왔어요.",
+   "blank": "単身",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、絵を学ぶために単身で海を渡った先生の話を聞いた。",
+   "en": "Keiko heard about how her teacher went overseas alone to study painting.",
+   "ko": "게이코는 그림을 배우려고 홀로 바다를 건넌 선생님 이야기를 들었어요.",
+   "blank": "単身",
+   "src": "made"
+  }
+ ],
  "w|博士": [
   {
    "text": "彼は博士だよ。",
@@ -31466,6 +31578,22 @@
    "en": "Keiko's wedding favors were soaps made only from natural ingredients.",
    "ko": "게이코의 답례품은 천연 원료로만 만든 비누였어요.",
    "blank": "原料",
+   "src": "made"
+  }
+ ],
+ "w|原油": [
+  {
+   "text": "沖で原油が流れ出し、大輔たちは浜の清掃に参加した。",
+   "en": "Crude oil spilled offshore, and Daisuke and others joined the beach cleanup.",
+   "ko": "앞바다에서 원유가 유출되어 다이스케와 사람들은 해변 청소에 나섰어요.",
+   "blank": "原油",
+   "src": "made"
+  },
+  {
+   "text": "原油の値上がりで、さくらはガソリン代を気にしながら走った。",
+   "en": "With crude oil prices rising, Sakura drove while worrying about the cost of gas.",
+   "ko": "원유값이 올라서 사쿠라는 기름값을 신경 쓰며 달렸어요.",
+   "blank": "原油",
    "src": "made"
   }
  ],
@@ -34427,6 +34555,22 @@
    "blank": "君"
   }
  ],
+ "w|君主": [
+  {
+   "text": "拓也の新しい同僚は歴史好きで、昔の君主の話になると止まらない。",
+   "en": "Takuya's new coworker loves history and can't stop once he starts talking about old monarchs.",
+   "ko": "다쿠야의 새 동료는 역사를 좋아해서 옛 군주 이야기만 나오면 멈추지 않아요.",
+   "blank": "君主",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、美術館で見た昔の君主の肖像画を教室で描いてみた。",
+   "en": "In class, Keiko tried painting a portrait of an old monarch she had seen at the museum.",
+   "ko": "게이코는 미술관에서 본 옛 군주의 초상화를 교실에서 그려 봤어요.",
+   "blank": "君主",
+   "src": "made"
+  }
+ ],
  "w|否定": [
   {
    "text": "事実を否定しないで。",
@@ -34560,6 +34704,22 @@
    "en": "In her school days, Misaki played flute in the wind band.",
    "ko": "미사키는 학창 시절에 취주악부에서 플루트를 불었어요.",
    "blank": "吹奏楽",
+   "src": "made"
+  }
+ ],
+ "w|吹雪": [
+  {
+   "text": "冬の港町は吹雪になり、大輔は一日中外に出られなかった。",
+   "en": "A blizzard hit the port town in winter, and Daisuke couldn't go out all day.",
+   "ko": "겨울 항구 마을에 눈보라가 몰아쳐서 다이스케는 하루 종일 밖에 나가지 못했어요.",
+   "blank": "吹雪",
+   "src": "made"
+  },
+  {
+   "text": "峠で吹雪になり、さくらは車を止めて天気が落ち着くのを待った。",
+   "en": "A blizzard hit at the mountain pass, so Sakura stopped her car and waited for the weather to settle.",
+   "ko": "고개에서 눈보라가 몰아쳐서 사쿠라는 차를 세우고 날씨가 잠잠해지길 기다렸어요.",
+   "blank": "吹雪",
    "src": "made"
   }
  ],
@@ -34843,6 +35003,22 @@
    "src": "made"
   }
  ],
+ "w|味付け": [
+  {
+   "text": "大輔は、とれたての魚を塩だけで味付けして焼いた。",
+   "en": "Daisuke seasoned freshly caught fish with nothing but salt and grilled it.",
+   "ko": "다이스케는 갓 잡은 생선을 소금으로만 간해서 구웠어요.",
+   "blank": "味付け",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、道の駅で甘い味付けの焼きそばを食べた。",
+   "en": "At a roadside station, Sakura ate fried noodles with a sweet seasoning.",
+   "ko": "사쿠라는 휴게소에서 달달하게 간을 한 야키소바를 먹었어요.",
+   "blank": "味付け",
+   "src": "made"
+  }
+ ],
  "w|味噌": [
   {
    "text": "翔太は、旧友の母が送ってくれた手作りの味噌の礼を手紙に書いた。",
@@ -35024,6 +35200,22 @@
    "en": "Misaki wrote to Yuki that she had named her new cat \"Momo.\"",
    "ko": "미사키는 새로 기른 고양이에게 '모모'라고 이름 지었다고 유키에게 썼어요.",
    "blank": "命名",
+   "src": "made"
+  }
+ ],
+ "w|和菓子": [
+  {
+   "text": "拓也の新しい同僚が、あいさつに和菓子を配った。",
+   "en": "Takuya's new coworker handed out Japanese sweets as a greeting.",
+   "ko": "다쿠야의 새 동료가 인사로 화과자를 돌렸어요.",
+   "blank": "和菓子",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、季節の和菓子を水彩で描いた。",
+   "en": "Keiko painted seasonal Japanese sweets in watercolor.",
+   "ko": "게이코는 계절 화과자를 수채화로 그렸어요.",
+   "blank": "和菓子",
    "src": "made"
   }
  ],
@@ -36847,6 +37039,22 @@
    "blank": "地下鉄"
   }
  ],
+ "w|地中": [
+  {
+   "text": "大輔は、浜の近くの畑の地中から弥生時代の土器を掘り出した。",
+   "en": "Daisuke dug up Yayoi-period pottery from the ground in a field near the beach.",
+   "ko": "다이스케는 바닷가 근처 밭의 땅속에서 야요이 시대 토기를 파냈어요.",
+   "blank": "地中",
+   "src": "made"
+  },
+  {
+   "text": "地中から湧き出す温泉に、さくらは足をつけた。",
+   "en": "Sakura dipped her feet into a hot spring bubbling up from underground.",
+   "ko": "땅속에서 솟아나는 온천에 사쿠라는 발을 담갔어요.",
+   "blank": "地中",
+   "src": "made"
+  }
+ ],
  "w|地位": [
   {
    "text": "亮はいつか、工場で責任のある地位に就きたいと思っている。",
@@ -38141,6 +38349,22 @@
    "blank": "変わる"
   }
  ],
+ "w|変人": [
+  {
+   "text": "拓也の新しい同僚は少し変人だと言われるが、仕事はとても丁寧だ。",
+   "en": "People say Takuya's new coworker is a bit of an oddball, but his work is very careful.",
+   "ko": "다쿠야의 새 동료는 좀 괴짜라는 말을 듣지만 일은 아주 꼼꼼해요.",
+   "blank": "変人",
+   "src": "made"
+  },
+  {
+   "text": "恵子の教室には、ちょっと変人だが才能のある画家が来る。",
+   "en": "A somewhat eccentric but talented painter comes to Keiko's class.",
+   "ko": "게이코의 교실에는 좀 괴짜지만 재능 있는 화가가 와요.",
+   "blank": "変人",
+   "src": "made"
+  }
+ ],
  "w|変動": [
   {
    "text": "野菜の値段は天気によって変動するので、悠斗は毎朝値札を書き直す。",
@@ -39399,6 +39623,22 @@
    "src": "made"
   }
  ],
+ "w|大家": [
+  {
+   "text": "引っ越した部屋の大家さんがとても親切だと、新しい同僚は拓也に話した。",
+   "en": "The new coworker told Takuya that the landlord of the apartment he had moved into was very kind.",
+   "ko": "이사한 집 집주인이 아주 친절하다고 새 동료는 다쿠야에게 말했어요.",
+   "blank": "大家",
+   "src": "made"
+  },
+  {
+   "text": "恵子の絵画教室は、大家さんの好意で古い蔵を借りている。",
+   "en": "Thanks to the landlord's goodwill, Keiko's art class rents an old storehouse.",
+   "ko": "게이코의 그림 교실은 집주인의 호의로 오래된 창고를 빌려 쓰고 있어요.",
+   "blank": "大家",
+   "src": "made"
+  }
+ ],
  "w|大将": [
   {
    "text": "戦国時代の大将がかぶった兜は、子どもたちに一番人気の展示だ。",
@@ -39428,6 +39668,22 @@
    "en": "The man running alongside Misaki was said to be a captain in the Self-Defense Forces.",
    "ko": "미사키와 나란히 달리던 사람은 자위대 대위라는 남자였어요.",
    "blank": "大尉",
+   "src": "made"
+  }
+ ],
+ "w|大工": [
+  {
+   "text": "拓也の新しい同僚は、前は大工として働いていた。",
+   "en": "Takuya's new coworker used to work as a carpenter.",
+   "ko": "다쿠야의 새 동료는 전에 목수로 일했어요.",
+   "blank": "大工",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、教室のイーゼルを近所の大工さんに直してもらった。",
+   "en": "Keiko had a carpenter in the neighborhood fix the easel in the classroom.",
+   "ko": "게이코는 교실 이젤을 동네 목수에게 고쳐 달라고 했어요.",
+   "blank": "大工",
    "src": "made"
   }
  ],
@@ -39803,6 +40059,22 @@
    "en": "That's a godsend.",
    "ko": "하늘의 도움이야.",
    "blank": "天"
+  }
+ ],
+ "w|天ぷら": [
+  {
+   "text": "歓迎会で、拓也は新しい同僚と天ぷらの店に行った。",
+   "en": "For the welcome party, Takuya went to a tempura restaurant with his new coworker.",
+   "ko": "환영회 때 다쿠야는 새 동료와 튀김집에 갔어요.",
+   "blank": "天ぷら",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、教室の仲間と天ぷらを食べながら絵の話をした。",
+   "en": "Keiko talked about painting with her classmates over tempura.",
+   "ko": "게이코는 교실 친구들과 튀김을 먹으며 그림 이야기를 했어요.",
+   "blank": "天ぷら",
+   "src": "made"
   }
  ],
  "w|天下": [
@@ -40293,6 +40565,22 @@
    "src": "made"
   }
  ],
+ "w|奏者": [
+  {
+   "text": "拓也の新しい同僚は、休日にはバイオリンの奏者として活動している。",
+   "en": "On his days off, Takuya's new coworker performs as a violinist.",
+   "ko": "다쿠야의 새 동료는 쉬는 날에 바이올린 연주자로 활동해요.",
+   "blank": "奏者",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、チェロ奏者が演奏する姿を描いた。",
+   "en": "Keiko painted a cellist playing.",
+   "ko": "게이코는 첼로 연주자가 연주하는 모습을 그렸어요.",
+   "blank": "奏者",
+   "src": "made"
+  }
+ ],
  "w|契約": [
   {
    "text": "契約、更新した？",
@@ -40517,6 +40805,22 @@
    "en": "The women's one is this way.",
    "ko": "여성용은 이쪽이야.",
    "blank": "女性"
+  }
+ ],
+ "w|女房": [
+  {
+   "text": "「うちの女房は料理がうまい」と、年上の新しい同僚は拓也に自慢した。",
+   "en": "\"My wife is a great cook,\" the older new coworker bragged to Takuya.",
+   "ko": "\"우리 마누라는 요리를 잘해\"라고 나이 많은 새 동료가 다쿠야에게 자랑했어요.",
+   "blank": "女房",
+   "src": "made"
+  },
+  {
+   "text": "恵子の先生は、「女房が一番の批評家だ」と笑う。",
+   "en": "Keiko's teacher laughs, \"My wife is my toughest critic.\"",
+   "ko": "게이코의 선생님은 \"마누라가 최고의 비평가야\"라며 웃어요.",
+   "blank": "女房",
+   "src": "made"
   }
  ],
  "w|女王": [
@@ -41338,6 +41642,22 @@
    "en": "The tea set Chihiro ordered is still made by the craftsman's descendants.",
    "ko": "지히로가 주문한 다기는 장인의 자손이 지금도 만들고 있는 거예요.",
    "blank": "子孫",
+   "src": "made"
+  }
+ ],
+ "w|子守": [
+  {
+   "text": "拓也の新しい同僚は、週末は年の離れた弟の子守をしている。",
+   "en": "On weekends, Takuya's new coworker babysits his much younger brother.",
+   "ko": "다쿠야의 새 동료는 주말에 나이 차이가 많이 나는 남동생을 돌봐요.",
+   "blank": "子守",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、教室に通うあいだ、母に娘の子守を頼んでいる。",
+   "en": "Keiko asks her mother to babysit her daughter while she goes to class.",
+   "ko": "게이코는 교실에 다니는 동안 어머니에게 딸을 봐 달라고 부탁해요.",
+   "blank": "子守",
    "src": "made"
   }
  ],
@@ -42969,6 +43289,22 @@
    "src": "made"
   }
  ],
+ "w|家屋": [
+  {
+   "text": "拓也の新しい同僚は、以前は古い家屋を調べる仕事をしていた。",
+   "en": "Takuya's new coworker used to work surveying old houses.",
+   "ko": "다쿠야의 새 동료는 예전에 오래된 가옥을 조사하는 일을 했어요.",
+   "blank": "家屋",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、古い家屋が並ぶ町並みをスケッチした。",
+   "en": "Keiko sketched a street lined with old houses.",
+   "ko": "게이코는 오래된 가옥이 늘어선 거리를 스케치했어요.",
+   "blank": "家屋",
+   "src": "made"
+  }
+ ],
  "w|家庭": [
   {
    "text": "家庭が大事だよ。",
@@ -43267,6 +43603,22 @@
    "src": "made"
   }
  ],
+ "w|寄生虫": [
+  {
+   "text": "生の魚には寄生虫がいることがあると、大輔は漁師に注意された。",
+   "en": "A fisherman warned Daisuke that raw fish sometimes has parasites.",
+   "ko": "날생선에는 기생충이 있을 수 있다고 다이스케는 어부에게 주의를 들었어요.",
+   "blank": "寄生虫",
+   "src": "made"
+  },
+  {
+   "text": "山の湧き水には寄生虫がいることもあると聞き、さくらは飲むのをやめた。",
+   "en": "Hearing that mountain spring water can have parasites, Sakura decided not to drink it.",
+   "ko": "산의 샘물에는 기생충이 있을 수도 있다는 말을 듣고 사쿠라는 마시지 않았어요.",
+   "blank": "寄生虫",
+   "src": "made"
+  }
+ ],
  "w|密か": [
   {
    "text": "翔太は、いつか海外支局で働くことを密かに夢見ている。",
@@ -43498,6 +43850,22 @@
    "en": "Mayu started a series documenting the repair of an old temple.",
    "ko": "마유는 오래된 사원 수리를 기록하는 연재를 시작했어요.",
    "blank": "寺院",
+   "src": "made"
+  }
+ ],
+ "w|対人": [
+  {
+   "text": "拓也の新しい同僚は、対人関係を築くのが上手だ。",
+   "en": "Takuya's new coworker is good at building relationships with people.",
+   "ko": "다쿠야의 새 동료는 대인 관계를 잘 쌓아요.",
+   "blank": "対人",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、対人関係に疲れたときに絵を描く。",
+   "en": "Keiko paints when she gets tired of dealing with people.",
+   "ko": "게이코는 대인 관계에 지칠 때 그림을 그려요.",
+   "blank": "対人",
    "src": "made"
   }
  ],
@@ -47397,6 +47765,22 @@
    "src": "made"
   }
  ],
+ "w|弥生": [
+  {
+   "text": "大輔は、浜の近くの畑の地中から弥生時代の土器を掘り出した。",
+   "en": "Daisuke dug up Yayoi-period pottery from the ground in a field near the beach.",
+   "ko": "다이스케는 바닷가 근처 밭의 땅속에서 야요이 시대 토기를 파냈어요.",
+   "blank": "弥生",
+   "src": "made"
+  },
+  {
+   "text": "弥生の空の下、さくらは桜並木の道を走った。",
+   "en": "Under the March sky, Sakura drove down a road lined with cherry trees.",
+   "ko": "삼월 하늘 아래 사쿠라는 벚나무 가로수 길을 달렸어요.",
+   "blank": "弥生",
+   "src": "made"
+  }
+ ],
  "w|弱い": [
   {
    "text": "僕は寒さに弱い。",
@@ -50991,6 +51375,22 @@
    "src": "made"
   }
  ],
+ "w|愛称": [
+  {
+   "text": "拓也は、新しい同僚に「ゆうちゃん」という愛称をつけた。",
+   "en": "Takuya gave his new coworker the nickname \"Yu-chan.\"",
+   "ko": "다쿠야는 새 동료에게 '유짱'이라는 애칭을 붙여 줬어요.",
+   "blank": "愛称",
+   "src": "made"
+  },
+  {
+   "text": "教室の仲間は、恵子を「けいちゃん」という愛称で呼ぶ。",
+   "en": "Keiko's classmates call her by the nickname \"Kei-chan.\"",
+   "ko": "교실 친구들은 게이코를 '케이짱'이라는 애칭으로 불러요.",
+   "blank": "愛称",
+   "src": "made"
+  }
+ ],
  "w|感じ": [
   {
    "text": "いい感じだね。",
@@ -52121,6 +52521,22 @@
    "src": "made"
   }
  ],
+ "w|扇風機": [
+  {
+   "text": "拓也は、暑がりの新しい同僚に小さな扇風機を貸した。",
+   "en": "Takuya lent a small fan to his new coworker, who feels the heat easily.",
+   "ko": "다쿠야는 더위를 잘 타는 새 동료에게 작은 선풍기를 빌려줬어요.",
+   "blank": "扇風機",
+   "src": "made"
+  },
+  {
+   "text": "夏の教室では古い扇風機が回っていて、恵子の画用紙がめくれた。",
+   "en": "In the summer classroom, an old fan was running and Keiko's drawing paper flapped up.",
+   "ko": "여름 교실에서는 낡은 선풍기가 돌고 있어서 게이코의 도화지가 들춰졌어요.",
+   "blank": "扇風機",
+   "src": "made"
+  }
+ ],
  "w|扉": [
   {
    "text": "扉をゆっくり開ける。",
@@ -53169,6 +53585,22 @@
    "blank": "抜ける"
   }
  ],
+ "w|抜け出す": [
+  {
+   "text": "大輔は、こっそり家を抜け出して夜の海を見に行った。",
+   "en": "Daisuke sneaked out of the house to go see the sea at night.",
+   "ko": "다이스케는 몰래 집을 빠져나가 밤바다를 보러 갔어요.",
+   "blank": "抜け出して",
+   "src": "made"
+  },
+  {
+   "text": "渋滞を抜け出すと、さくらの車は海沿いの道に出た。",
+   "en": "After getting out of the traffic jam, Sakura's car came out onto the coastal road.",
+   "ko": "정체를 빠져나오자 사쿠라의 차는 해안 도로로 나왔어요.",
+   "blank": "抜け出す",
+   "src": "made"
+  }
+ ],
  "w|抜粋": [
   {
    "text": "悠斗は、長い報告書の要点を抜粋して上司に送った。",
@@ -53258,6 +53690,22 @@
    "en": "Misaki gently held the baby her friend had brought along.",
    "ko": "미사키는 친구가 데려온 아기를 살며시 안았어요.",
    "blank": "抱い",
+   "src": "made"
+  }
+ ],
+ "w|抱っこ": [
+  {
+   "text": "会社のイベントで、拓也は新しい同僚の赤ちゃんを抱っこした。",
+   "en": "At a company event, Takuya held his new coworker's baby.",
+   "ko": "회사 행사에서 다쿠야는 새 동료의 아기를 안아 줬어요.",
+   "blank": "抱っこ",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、子どもを抱っこする母親の姿を描いた。",
+   "en": "Keiko painted a mother holding her child.",
+   "ko": "게이코는 아이를 안은 엄마의 모습을 그렸어요.",
+   "blank": "抱っこ",
    "src": "made"
   }
  ],
@@ -54379,6 +54827,22 @@
    "src": "made"
   }
  ],
+ "w|捕食": [
+  {
+   "text": "大輔は、カモメが小魚を捕食する様子をじっと見ていた。",
+   "en": "Daisuke watched intently as the seagulls preyed on small fish.",
+   "ko": "다이스케는 갈매기가 작은 물고기를 잡아먹는 모습을 가만히 지켜봤어요.",
+   "blank": "捕食",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、ドライブ中にタカが野ネズミを捕食する瞬間を見た。",
+   "en": "While driving, Sakura saw the moment a hawk caught a field mouse.",
+   "ko": "사쿠라는 드라이브하다가 매가 들쥐를 잡아먹는 순간을 봤어요.",
+   "blank": "捕食",
+   "src": "made"
+  }
+ ],
  "w|捜査": [
   {
    "text": "警察が捜査中だ。",
@@ -54437,6 +54901,22 @@
    "en": "I already threw it out.",
    "ko": "벌써 버렸어.",
    "blank": "捨てた"
+  }
+ ],
+ "w|据える": [
+  {
+   "text": "大輔は、浜辺に三脚を据えて朝日を撮った。",
+   "en": "Daisuke set up a tripod on the beach and photographed the morning sun.",
+   "ko": "다이스케는 바닷가에 삼각대를 세우고 아침 해를 찍었어요.",
+   "blank": "据えて",
+   "src": "made"
+  },
+  {
+   "text": "旅の目的を温泉巡りに据えて、さくらは計画を立てた。",
+   "en": "Sakura made her plans with hot spring hopping as the main goal of the trip.",
+   "ko": "여행 목적을 온천 순례로 정하고 사쿠라는 계획을 세웠어요.",
+   "blank": "据えて",
+   "src": "made"
   }
  ],
  "w|掃除": [
@@ -55947,6 +56427,22 @@
    "en": "They dominate the market.",
    "ko": "시장을 지배하고 있어.",
    "blank": "支配"
+  }
+ ],
+ "w|支配人": [
+  {
+   "text": "拓也の新しい同僚は、前はホテルの支配人だった。",
+   "en": "Takuya's new coworker used to be a hotel manager.",
+   "ko": "다쿠야의 새 동료는 전에 호텔 지배인이었어요.",
+   "blank": "支配人",
+   "src": "made"
+  },
+  {
+   "text": "ホテルの支配人が、恵子の絵をロビーに飾りたいと言った。",
+   "en": "A hotel manager said he wanted to hang Keiko's painting in the lobby.",
+   "ko": "호텔 지배인이 게이코의 그림을 로비에 걸고 싶다고 했어요.",
+   "blank": "支配人",
+   "src": "made"
   }
  ],
  "w|支障": [
@@ -57563,6 +58059,22 @@
    "src": "made"
   }
  ],
+ "w|断り": [
+  {
+   "text": "大輔は、船を借りるときに持ち主に断りを入れた。",
+   "en": "Daisuke asked the owner's permission before borrowing the boat.",
+   "ko": "다이스케는 배를 빌릴 때 주인에게 미리 양해를 구했어요.",
+   "blank": "断り",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、空き地に車を止める前に持ち主の家に断りに行った。",
+   "en": "Before parking in a vacant lot, Sakura went to the owner's house to ask permission.",
+   "ko": "사쿠라는 공터에 차를 세우기 전에 주인집에 양해를 구하러 갔어요.",
+   "blank": "断り",
+   "src": "made"
+  }
+ ],
  "w|断る": [
   {
    "text": "誘いを断るのが苦手だ。",
@@ -58715,6 +59227,22 @@
    "src": "made"
   }
  ],
+ "w|昆布": [
+  {
+   "text": "新しい同僚の実家は昆布の産地で、拓也にお土産をくれた。",
+   "en": "The new coworker's hometown is known for kelp, and he gave Takuya some as a souvenir.",
+   "ko": "새 동료의 고향은 다시마 산지라서 다쿠야에게 기념품을 줬어요.",
+   "blank": "昆布",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、浜で拾った昆布の形がおもしろくて絵に描いた。",
+   "en": "Keiko found the shape of some kelp she picked up on the beach interesting and drew it.",
+   "ko": "게이코는 바닷가에서 주운 다시마 모양이 재미있어서 그림으로 그렸어요.",
+   "blank": "昆布",
+   "src": "made"
+  }
+ ],
  "w|昆虫": [
   {
    "text": "誠は、子どもたちと森で昆虫の観察会を開いた。",
@@ -59587,6 +60115,22 @@
    "en": "It's a warm room.",
    "ko": "따뜻한 방이야.",
    "blank": "暖かい"
+  }
+ ],
+ "w|暖房": [
+  {
+   "text": "新しい同僚の席が暖房の真下だったので、拓也は席を替わってあげた。",
+   "en": "The new coworker's desk was right under the heater, so Takuya swapped seats with him.",
+   "ko": "새 동료의 자리가 난방기 바로 아래라서 다쿠야는 자리를 바꿔 줬어요.",
+   "blank": "暖房",
+   "src": "made"
+  },
+  {
+   "text": "絵画教室の暖房が壊れていて、恵子はコートを着たまま描いた。",
+   "en": "The heating in the art class was broken, so Keiko painted with her coat on.",
+   "ko": "그림 교실 난방이 고장 나서 게이코는 코트를 입은 채로 그렸어요.",
+   "blank": "暖房",
+   "src": "made"
   }
  ],
  "w|暗い": [
@@ -60809,6 +61353,22 @@
    "src": "made"
   }
  ],
+ "w|未亡人": [
+  {
+   "text": "拓也の新しい同僚の祖母は若くして未亡人になり、一人で店を守ってきた。",
+   "en": "The grandmother of Takuya's new coworker was widowed young and kept her shop going on her own.",
+   "ko": "다쿠야 새 동료의 할머니는 젊어서 남편을 여의고 혼자 가게를 지켜 왔어요.",
+   "blank": "未亡人",
+   "src": "made"
+  },
+  {
+   "text": "恵子の教室に通う未亡人の女性は、夫と旅した景色を描き続けている。",
+   "en": "A widow who attends Keiko's class keeps painting the scenery from trips she took with her husband.",
+   "ko": "게이코의 교실에 다니는 미망인은 남편과 여행했던 풍경을 계속 그리고 있어요.",
+   "blank": "未亡人",
+   "src": "made"
+  }
+ ],
  "w|未定": [
   {
    "text": "直樹の会社では、次期社長が誰になるかまだ未定らしい。",
@@ -61393,6 +61953,22 @@
    "en": "It's a small village.",
    "ko": "작은 마을이야.",
    "blank": "村"
+  }
+ ],
+ "w|村人": [
+  {
+   "text": "拓也の新しい同僚は、村人がみんな顔見知りという小さな村の出身だ。",
+   "en": "Takuya's new coworker comes from a small village where all the villagers know each other.",
+   "ko": "다쿠야의 새 동료는 마을 사람들이 다 아는 사이인 작은 마을 출신이에요.",
+   "blank": "村人",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、昔の村人の暮らしを描いた古い絵を参考にした。",
+   "en": "Keiko used an old painting of villagers' lives long ago as a reference.",
+   "ko": "게이코는 옛날 마을 사람들의 생활을 그린 오래된 그림을 참고했어요.",
+   "blank": "村人",
+   "src": "made"
   }
  ],
  "w|条件": [
@@ -63246,6 +63822,22 @@
    "en": "A team spanning several departments was formed, and Mayu became its coordinator.",
    "ko": "부서를 넘나드는 팀이 만들어져서 마유가 조정 역할을 맡았어요.",
    "blank": "横断",
+   "src": "made"
+  }
+ ],
+ "w|樹木": [
+  {
+   "text": "大輔の町の海岸沿いの樹木は、潮風で同じ方向に傾いている。",
+   "en": "The trees along the coast of Daisuke's town all lean the same way from the sea wind.",
+   "ko": "다이스케네 마을 해안가의 나무들은 바닷바람 때문에 같은 방향으로 기울어 있어요.",
+   "blank": "樹木",
+   "src": "made"
+  },
+  {
+   "text": "さくらが走る高原の道は、高い樹木に囲まれていた。",
+   "en": "The highland road Sakura drove along was surrounded by tall trees.",
+   "ko": "사쿠라가 달린 고원 길은 키 큰 나무들로 둘러싸여 있었어요.",
+   "blank": "樹木",
    "src": "made"
   }
  ],
@@ -66269,6 +66861,22 @@
    "src": "made"
   }
  ],
+ "w|沸騰": [
+  {
+   "text": "大輔は、浜辺で湯を沸騰させてカップ麺を作った。",
+   "en": "Daisuke boiled water on the beach and made cup noodles.",
+   "ko": "다이스케는 바닷가에서 물을 끓여 컵라면을 만들었어요.",
+   "blank": "沸騰",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、キャンプ場でコーヒー用のお湯を沸騰させた。",
+   "en": "At the campground, Sakura boiled water for coffee.",
+   "ko": "사쿠라는 캠핑장에서 커피용 물을 끓였어요.",
+   "blank": "沸騰",
+   "src": "made"
+  }
+ ],
  "w|油": [
   {
    "text": "料理に油を少し使う。",
@@ -66549,6 +67157,22 @@
    "blank": "波"
   }
  ],
+ "w|波動": [
+  {
+   "text": "寄せては返す波を見ながら、大輔は物理で習った波動の話を思い出した。",
+   "en": "Watching the waves come and go, Daisuke recalled what he had learned about wave motion in physics.",
+   "ko": "밀려왔다 밀려가는 파도를 보며 다이스케는 물리 시간에 배운 파동 이야기를 떠올렸어요.",
+   "blank": "波動",
+   "src": "made"
+  },
+  {
+   "text": "さくらの友人は、山の神社で「いい波動を感じる」と言った。",
+   "en": "Sakura's friend said at a mountain shrine, \"I feel good vibes here.\"",
+   "ko": "사쿠라의 친구는 산속 신사에서 \"좋은 기운이 느껴져\"라고 말했어요.",
+   "blank": "波動",
+   "src": "made"
+  }
+ ],
  "w|泣く": [
   {
    "text": "映画で泣くことが多い。",
@@ -66743,6 +67367,22 @@
    "en": "Can I wash this?",
    "ko": "이 옷 빨 수 있어?",
    "blank": "洗える"
+  }
+ ],
+ "w|洗剤": [
+  {
+   "text": "給湯室の洗剤が切れていることに、新しい同僚がいち早く気づいた。",
+   "en": "The new coworker was the first to notice that the dish soap in the kitchenette had run out.",
+   "ko": "탕비실 세제가 떨어진 걸 새 동료가 제일 먼저 알아챘어요.",
+   "blank": "洗剤",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、筆についた油絵の具を専用の洗剤で落とした。",
+   "en": "Keiko washed the oil paint off her brushes with a special cleaner.",
+   "ko": "게이코는 붓에 묻은 유화 물감을 전용 세제로 닦아 냈어요.",
+   "blank": "洗剤",
+   "src": "made"
   }
  ],
  "w|洗浄": [
@@ -67194,6 +67834,22 @@
    "en": "The new engineer is still inexperienced but learns very fast.",
    "ko": "신입 엔지니어는 아직 경험이 얕지만 배우는 게 아주 빨라요.",
    "blank": "浅い",
+   "src": "made"
+  }
+ ],
+ "w|浪人": [
+  {
+   "text": "新しい同僚は、大学に入る前に一年浪人したと拓也に話した。",
+   "en": "The new coworker told Takuya he had spent a year retaking entrance exams before getting into university.",
+   "ko": "새 동료는 대학에 들어가기 전에 일 년 재수했다고 다쿠야에게 말했어요.",
+   "blank": "浪人",
+   "src": "made"
+  },
+  {
+   "text": "恵子の教室には、美大を目指して浪人している若者もいる。",
+   "en": "Keiko's class also has young people retaking exams to get into art school.",
+   "ko": "게이코의 교실에는 미대를 목표로 재수하는 젊은이도 있어요.",
+   "blank": "浪人",
    "src": "made"
   }
  ],
@@ -69309,6 +69965,22 @@
    "blank": "災害"
   }
  ],
+ "w|炊飯": [
+  {
+   "text": "拓也の会社の給湯室には、炊飯器が置いてある。",
+   "en": "There is a rice cooker in the kitchenette at Takuya's office.",
+   "ko": "다쿠야네 회사 탕비실에는 전기밥솥이 놓여 있어요.",
+   "blank": "炊飯",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、教室に行く前に炊飯のタイマーをセットした。",
+   "en": "Keiko set the rice cooker timer before going to class.",
+   "ko": "게이코는 교실에 가기 전에 밥솥 예약을 맞춰 놓았어요.",
+   "blank": "炊飯",
+   "src": "made"
+  }
+ ],
  "w|炎": [
   {
    "text": "炎が上がっている。",
@@ -69430,6 +70102,22 @@
    "en": "Before the race, Yoko checked her shoelaces and race bib.",
    "ko": "레이스 전에 요코는 신발 끈과 번호표를 점검했어요.",
    "blank": "点検",
+   "src": "made"
+  }
+ ],
+ "w|点灯": [
+  {
+   "text": "拓也は新しい同僚に、コピー機の赤いランプが点灯したら紙を足すよう教えた。",
+   "en": "Takuya told his new coworker to add paper when the red light on the copier comes on.",
+   "ko": "다쿠야는 새 동료에게 복사기의 빨간 램프가 켜지면 종이를 채우라고 가르쳐 줬어요.",
+   "blank": "点灯",
+   "src": "made"
+  },
+  {
+   "text": "照明が点灯すると、恵子の目の前のモデルの影がくっきり見えた。",
+   "en": "When the lights came on, the model's shadow in front of Keiko became sharp and clear.",
+   "ko": "조명이 켜지자 게이코 앞에 있는 모델의 그림자가 또렷하게 보였어요.",
+   "blank": "点灯",
    "src": "made"
   }
  ],
@@ -69917,6 +70605,22 @@
    "src": "made"
   }
  ],
+ "w|焼き鳥": [
+  {
+   "text": "仕事帰りに、拓也は新しい同僚と焼き鳥を食べに行った。",
+   "en": "After work, Takuya went out for yakitori with his new coworker.",
+   "ko": "퇴근길에 다쿠야는 새 동료와 닭꼬치를 먹으러 갔어요.",
+   "blank": "焼き鳥",
+   "src": "made"
+  },
+  {
+   "text": "展示会のあと、恵子は教室の仲間と焼き鳥屋で打ち上げをした。",
+   "en": "After the exhibition, Keiko celebrated with her classmates at a yakitori restaurant.",
+   "ko": "전시회가 끝나고 게이코는 교실 친구들과 꼬치구이집에서 뒤풀이를 했어요.",
+   "blank": "焼き鳥",
+   "src": "made"
+  }
+ ],
  "w|焼く": [
   {
    "text": "パンを焼くにおいがする。",
@@ -70008,6 +70712,22 @@
    "en": "Small lights were shining on the jewels inside the glass case.",
    "ko": "작은 조명이 유리 진열장 안의 보석을 비추고 있었어요.",
    "blank": "照らし",
+   "src": "made"
+  }
+ ],
+ "w|照射": [
+  {
+   "text": "夏の浜辺は紫外線の照射が強いので、大輔は日焼け止めを塗った。",
+   "en": "Ultraviolet radiation is strong on the summer beach, so Daisuke put on sunscreen.",
+   "ko": "여름 바닷가는 자외선 조사가 강해서 다이스케는 선크림을 발랐어요.",
+   "blank": "照射",
+   "src": "made"
+  },
+  {
+   "text": "高原では紫外線の照射が強いので、さくらは帽子をかぶった。",
+   "en": "Ultraviolet radiation is strong in the highlands, so Sakura wore a hat.",
+   "ko": "고원에서는 자외선 조사가 강해서 사쿠라는 모자를 썼어요.",
+   "blank": "照射",
    "src": "made"
   }
  ],
@@ -70333,6 +71053,22 @@
    "en": "Dad's already asleep.",
    "ko": "아버지는 벌써 잤어.",
    "blank": "父"
+  }
+ ],
+ "w|父さん": [
+  {
+   "text": "お父さんと同じ会社で働くのが夢だったと、新しい同僚は拓也に言った。",
+   "en": "The new coworker told Takuya it had been his dream to work at the same company as his father.",
+   "ko": "아버지와 같은 회사에서 일하는 게 꿈이었다고 새 동료는 다쿠야에게 말했어요.",
+   "blank": "父さん",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、教室でお父さんの似顔絵を描いて誕生日に贈った。",
+   "en": "Keiko drew a portrait of her father in class and gave it to him for his birthday.",
+   "ko": "게이코는 교실에서 아버지 초상화를 그려서 생신에 드렸어요.",
+   "blank": "父さん",
+   "src": "made"
   }
  ],
  "w|父親": [
@@ -71307,6 +72043,22 @@
    "blank": "狼"
   }
  ],
+ "w|猛暑": [
+  {
+   "text": "猛暑の日、大輔は朝から海に入った。",
+   "en": "On a sweltering day, Daisuke went into the sea first thing in the morning.",
+   "ko": "폭염인 날, 다이스케는 아침부터 바다에 들어갔어요.",
+   "blank": "猛暑",
+   "src": "made"
+  },
+  {
+   "text": "猛暑の中、さくらの車のエアコンが故障した。",
+   "en": "In the scorching heat, the air conditioner in Sakura's car broke down.",
+   "ko": "폭염 속에서 사쿠라의 차 에어컨이 고장 났어요.",
+   "blank": "猛暑",
+   "src": "made"
+  }
+ ],
  "w|猛烈": [
   {
    "text": "引っ越しの日は猛烈な暑さで、みんな汗だくになった。",
@@ -71475,6 +72227,22 @@
    "blank": "玉"
   }
  ],
+ "w|玉ねぎ": [
+  {
+   "text": "拓也は、新しい同僚から玉ねぎをたっぷり使ったカレーの作り方を教わった。",
+   "en": "Takuya learned from his new coworker how to make curry with lots of onions.",
+   "ko": "다쿠야는 새 동료에게서 양파를 듬뿍 넣은 카레 만드는 법을 배웠어요.",
+   "blank": "玉ねぎ",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、絵画教室で玉ねぎの静物画を描いた。",
+   "en": "At her art class, Keiko painted a still life of onions.",
+   "ko": "게이코는 그림 교실에서 양파 정물화를 그렸어요.",
+   "blank": "玉ねぎ",
+   "src": "made"
+  }
+ ],
  "w|王": [
   {
    "text": "王が倒れたよ。",
@@ -71563,6 +72331,22 @@
    "en": "That's treatment fit for a prince.",
    "ko": "왕자 같은 대접이네.",
    "blank": "王子"
+  }
+ ],
+ "w|王家": [
+  {
+   "text": "拓也の新しい同僚は、昔の王家を描いたドラマにはまっている。",
+   "en": "Takuya's new coworker is hooked on a drama about a royal family of long ago.",
+   "ko": "다쿠야의 새 동료는 옛 왕가를 그린 드라마에 푹 빠져 있어요.",
+   "blank": "王家",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、王家に伝わる宝石を写真を見ながら描いた。",
+   "en": "Keiko painted a jewel handed down in a royal family while looking at a photo.",
+   "ko": "게이코는 왕가에 전해 내려오는 보석을 사진을 보며 그렸어요.",
+   "blank": "王家",
+   "src": "made"
   }
  ],
  "w|王座": [
@@ -72169,6 +72953,22 @@
    "en": "I want to live my own way.",
    "ko": "내 식대로 살고 싶어.",
    "blank": "生きたい"
+  }
+ ],
+ "w|生き延びる": [
+  {
+   "text": "漂流した漁師が三日間生き延びたというニュースを、大輔は読んだ。",
+   "en": "Daisuke read the news that a fisherman lost at sea had survived for three days.",
+   "ko": "표류한 어부가 사흘 동안 살아남았다는 뉴스를 다이스케는 읽었어요.",
+   "blank": "生き延びた",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、山で遭難して生き延びた人の話をラジオで聞いた。",
+   "en": "Sakura heard on the radio about a person who got lost in the mountains and survived.",
+   "ko": "사쿠라는 산에서 조난당했다가 살아남은 사람 이야기를 라디오에서 들었어요.",
+   "blank": "生き延びた",
+   "src": "made"
   }
  ],
  "w|生き方": [
@@ -74491,6 +75291,22 @@
    "src": "made"
   }
  ],
+ "w|皇太子": [
+  {
+   "text": "拓也の新しい同僚は、大学で昔の皇太子の教育について研究していた。",
+   "en": "At university, Takuya's new coworker researched how crown princes were educated in the past.",
+   "ko": "다쿠야의 새 동료는 대학에서 옛날 황태자의 교육에 대해 연구했어요.",
+   "blank": "皇太子",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、歴史の本に載っていた皇太子の絵を参考に衣装を描いた。",
+   "en": "Keiko drew costumes using a picture of a crown prince from a history book as a reference.",
+   "ko": "게이코는 역사책에 실린 황태자 그림을 참고해서 의상을 그렸어요.",
+   "blank": "皇太子",
+   "src": "made"
+  }
+ ],
  "w|皇室": [
   {
    "text": "健太は、社会の授業で皇室の歴史について発表した。",
@@ -75328,6 +76144,22 @@
    "en": "The teacher taught how to make chanko stew, the hot pot eaten at sumo stables.",
    "ko": "선생님은 스모 도장에서 먹는 찬코나베 만드는 법을 가르쳐 줬어요.",
    "blank": "相撲",
+   "src": "made"
+  }
+ ],
+ "w|相方": [
+  {
+   "text": "拓也は、新しい同僚と営業の相方を組むことになった。",
+   "en": "Takuya was paired with his new coworker as a sales partner.",
+   "ko": "다쿠야는 새 동료와 영업 짝꿍이 되었어요.",
+   "blank": "相方",
+   "src": "made"
+  },
+  {
+   "text": "恵子の教室での相方は、同い年の主婦だ。",
+   "en": "Keiko's partner in class is a housewife the same age as her.",
+   "ko": "게이코의 교실 짝꿍은 동갑인 주부예요.",
+   "blank": "相方",
    "src": "made"
   }
  ],
@@ -76399,6 +77231,22 @@
    "src": "made"
   }
  ],
+ "w|石炭": [
+  {
+   "text": "昔、大輔の町の港からは石炭が積み出されていた。",
+   "en": "Long ago, coal was shipped out from the harbor of Daisuke's town.",
+   "ko": "옛날에 다이스케네 마을 항구에서는 석탄을 실어 날랐어요.",
+   "blank": "石炭",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、昔の石炭の町に残る炭鉱の跡を訪ねた。",
+   "en": "Sakura visited the remains of a mine in an old coal town.",
+   "ko": "사쿠라는 옛 석탄 마을에 남은 탄광 터를 찾아갔어요.",
+   "blank": "石炭",
+   "src": "made"
+  }
+ ],
  "w|石鹸": [
   {
    "text": "石鹸で手を洗った。",
@@ -76626,6 +77474,22 @@
    "en": "The editor often tells Sakura her writing is stiff.",
    "ko": "사쿠라의 글은 딱딱하다고 데스크에게 자주 들어요.",
    "blank": "硬い",
+   "src": "made"
+  }
+ ],
+ "w|磁気": [
+  {
+   "text": "ウミガメは地球の磁気を頼りに海を渡ると、大輔は知った。",
+   "en": "Daisuke learned that sea turtles cross the ocean by relying on the Earth's magnetism.",
+   "ko": "바다거북은 지구의 자기를 따라 바다를 건넌다는 걸 다이스케는 알게 됐어요.",
+   "blank": "磁気",
+   "src": "made"
+  },
+  {
+   "text": "方位磁石が磁気の影響で狂い、さくらは道に迷いかけた。",
+   "en": "Her compass went haywire because of magnetic interference, and Sakura nearly got lost.",
+   "ko": "나침반이 자기의 영향으로 고장 나서 사쿠라는 길을 잃을 뻔했어요.",
+   "blank": "磁気",
    "src": "made"
   }
  ],
@@ -79097,6 +79961,22 @@
    "blank": "米"
   }
  ],
+ "w|粉砕": [
+  {
+   "text": "大輔は、集めた貝殻を粉砕して庭にまいた。",
+   "en": "Daisuke crushed the shells he had collected and scattered them in the garden.",
+   "ko": "다이스케는 모은 조개껍데기를 잘게 부숴서 마당에 뿌렸어요.",
+   "blank": "粉砕",
+   "src": "made"
+  },
+  {
+   "text": "工事現場で岩を粉砕する音が、さくらの車の中まで響いた。",
+   "en": "The sound of rocks being crushed at a construction site echoed all the way into Sakura's car.",
+   "ko": "공사 현장에서 바위를 부수는 소리가 사쿠라의 차 안까지 울렸어요.",
+   "blank": "粉砕",
+   "src": "made"
+  }
+ ],
  "w|粒子": [
   {
    "text": "森の空気には、目に見えない花粉の粒子がたくさん漂っている。",
@@ -80525,6 +81405,22 @@
    "src": "made"
   }
  ],
+ "w|絶大": [
+  {
+   "text": "大輔の町の海鮮丼は、観光客に絶大な人気がある。",
+   "en": "The seafood rice bowl in Daisuke's town is enormously popular with tourists.",
+   "ko": "다이스케네 마을의 해산물 덮밥은 관광객에게 엄청난 인기가 있어요.",
+   "blank": "絶大",
+   "src": "made"
+  },
+  {
+   "text": "さくらの旅の動画は、若い人から絶大な支持を得ている。",
+   "en": "Sakura's travel videos have enormous support from young people.",
+   "ko": "사쿠라의 여행 영상은 젊은 사람들에게서 엄청난 지지를 얻고 있어요.",
+   "blank": "絶大",
+   "src": "made"
+  }
+ ],
  "w|絶妙": [
   {
    "text": "健太の作るおにぎりは、塩加減が絶妙だと評判だ。",
@@ -80841,6 +81737,22 @@
    "en": "I went to a general hospital.",
    "ko": "종합병원에 갔어.",
    "blank": "総合"
+  }
+ ],
+ "w|総括": [
+  {
+   "text": "大輔は、夏の海の家の営業を総括する報告書を書いた。",
+   "en": "Daisuke wrote a report summing up the summer's business at the beach hut.",
+   "ko": "다이스케는 여름 해변 매점 영업을 총괄하는 보고서를 썼어요.",
+   "blank": "総括",
+   "src": "made"
+  },
+  {
+   "text": "帰宅後、さくらは今回の旅の費用を総括した。",
+   "en": "After getting home, Sakura went over the overall costs of the trip.",
+   "ko": "집에 돌아와서 사쿠라는 이번 여행 비용을 총정리했어요.",
+   "blank": "総括",
+   "src": "made"
   }
  ],
  "w|総理": [
@@ -82073,6 +82985,22 @@
    "blank": "聴く"
   }
  ],
+ "w|聴ける": [
+  {
+   "text": "大輔の家からは、一晩中波の音が聴ける。",
+   "en": "From Daisuke's house, you can hear the sound of the waves all night long.",
+   "ko": "다이스케네 집에서는 밤새 파도 소리를 들을 수 있어요.",
+   "blank": "聴ける",
+   "src": "made"
+  },
+  {
+   "text": "さくらの車では、好きな音楽をスマホから聴ける。",
+   "en": "In Sakura's car, she can listen to her favorite music from her phone.",
+   "ko": "사쿠라의 차에서는 좋아하는 음악을 휴대폰으로 들을 수 있어요.",
+   "blank": "聴ける",
+   "src": "made"
+  }
+ ],
  "w|聴取": [
   {
    "text": "目撃者の事情聴取は、午後までかかった。",
@@ -82282,6 +83210,22 @@
    "en": "The role is a heavy drinker, but Aoi, mindful of her liver, drank tea during filming.",
    "ko": "술이 센 역이지만 아오이는 간을 생각해서 촬영 때는 차를 마셨어요.",
    "blank": "肝臓",
+   "src": "made"
+  }
+ ],
+ "w|肥料": [
+  {
+   "text": "大輔の祖父は、浜に打ち上げられた海藻を畑の肥料にしている。",
+   "en": "Daisuke's grandfather uses seaweed washed up on the beach as fertilizer for his field.",
+   "ko": "다이스케의 할아버지는 바닷가에 밀려온 해초를 밭 거름으로 써요.",
+   "blank": "肥料",
+   "src": "made"
+  },
+  {
+   "text": "道の駅で、さくらは家庭菜園用の肥料を買った。",
+   "en": "At the roadside station, Sakura bought fertilizer for her home garden.",
+   "ko": "휴게소에서 사쿠라는 텃밭용 비료를 샀어요.",
+   "blank": "肥料",
    "src": "made"
   }
  ],
@@ -83845,6 +84789,22 @@
    "src": "made"
   }
  ],
+ "w|花束": [
+  {
+   "text": "大輔は、海辺の小さな店で母に花束を買った。",
+   "en": "Daisuke bought a bouquet for his mother at a small shop by the sea.",
+   "ko": "다이스케는 바닷가 작은 가게에서 어머니께 드릴 꽃다발을 샀어요.",
+   "blank": "花束",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、旅先で会う祖母のために花束を用意した。",
+   "en": "Sakura prepared a bouquet for her grandmother, whom she would see on her trip.",
+   "ko": "사쿠라는 여행지에서 만날 할머니를 위해 꽃다발을 준비했어요.",
+   "blank": "花束",
+   "src": "made"
+  }
+ ],
  "w|花火": [
   {
    "text": "旅の途中、大輔は小さな町の花火大会に偶然出会った。",
@@ -83979,6 +84939,22 @@
    "en": "It reminds me of when I was young.",
    "ko": "젊었을 때가 생각나.",
    "blank": "若い"
+  }
+ ],
+ "w|若しくは": [
+  {
+   "text": "「支払いは現金若しくはカードでお願いします」と大輔は客に言った。",
+   "en": "Daisuke told the customer, \"Please pay by cash or card.\"",
+   "ko": "\"결제는 현금 또는 카드로 부탁드립니다\"라고 다이스케는 손님에게 말했어요.",
+   "blank": "若しくは",
+   "src": "made"
+  },
+  {
+   "text": "次の町までは、高速道路若しくは海沿いの道で行けるとさくらは調べた。",
+   "en": "Sakura found that she could get to the next town by the expressway or by the coastal road.",
+   "ko": "다음 마을까지는 고속도로 또는 해안 도로로 갈 수 있다고 사쿠라는 알아봤어요.",
+   "blank": "若しくは",
+   "src": "made"
   }
  ],
  "w|若干": [
@@ -84430,6 +85406,22 @@
    "en": "Sakura learned from a notice in the waiting room that chocolate snacks are dangerous for dogs.",
    "ko": "초콜릿 과자는 개에게 위험하다는 걸 사쿠라는 대기실 안내문을 보고 알았어요.",
    "blank": "菓子",
+   "src": "made"
+  }
+ ],
+ "w|華やか": [
+  {
+   "text": "夏祭りの夜、大輔の港町は華やかな花火に包まれた。",
+   "en": "On the night of the summer festival, Daisuke's port town was wrapped in brilliant fireworks.",
+   "ko": "여름 축제 밤, 다이스케네 항구 마을은 화려한 불꽃에 휩싸였어요.",
+   "blank": "華やか",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、ネオンが華やかな夜の街を車で通り抜けた。",
+   "en": "Sakura drove through the city at night, bright with neon lights.",
+   "ko": "사쿠라는 네온이 화려한 밤거리를 차로 지나갔어요.",
+   "blank": "華やか",
    "src": "made"
   }
  ],
@@ -85068,6 +86060,22 @@
    "en": "Aoi held a hand warmer so the veins in her hands wouldn't stand out from the cold.",
    "ko": "추위로 손 혈관이 도드라지지 않게 아오이는 핫팩을 쥐고 있었어요.",
    "blank": "血管",
+   "src": "made"
+  }
+ ],
+ "w|血統": [
+  {
+   "text": "新しい同僚の犬は血統書付きで、拓也も写真を見せてもらった。",
+   "en": "The new coworker's dog has a pedigree, and Takuya got to see photos of it.",
+   "ko": "새 동료의 개는 혈통서가 있는 개라서 다쿠야도 사진을 구경했어요.",
+   "blank": "血統",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、血統のよい馬を描くために牧場を訪れた。",
+   "en": "Keiko visited a ranch to paint a thoroughbred horse.",
+   "ko": "게이코는 혈통 좋은 말을 그리려고 목장을 찾아갔어요.",
+   "blank": "血統",
    "src": "made"
   }
  ],
@@ -86842,6 +87850,22 @@
    "en": "Misaki made jelly by hand to bring when visiting her grandmother in the hospital.",
    "ko": "미사키는 입원 중인 할머니 병문안 선물로 젤리를 직접 만들었어요.",
    "blank": "見舞い",
+   "src": "made"
+  }
+ ],
+ "w|見落とし": [
+  {
+   "text": "大輔は、船の点検で見落としがないか何度も確かめた。",
+   "en": "Daisuke checked over and over that nothing had been missed in the boat inspection.",
+   "ko": "다이스케는 배 점검에서 놓친 게 없는지 몇 번이나 확인했어요.",
+   "blank": "見落とし",
+   "src": "made"
+  },
+  {
+   "text": "標識の見落としで、さくらは降りるはずの出口を通り過ぎてしまった。",
+   "en": "Because she missed a sign, Sakura drove past the exit she was supposed to take.",
+   "ko": "표지판을 놓쳐서 사쿠라는 나가야 할 출구를 지나쳐 버렸어요.",
+   "blank": "見落とし",
    "src": "made"
   }
  ],
@@ -88703,6 +89727,22 @@
    "src": "made"
   }
  ],
+ "w|詰め込む": [
+  {
+   "text": "大輔は、クーラーボックスに冷たい飲み物を詰め込んだ。",
+   "en": "Daisuke stuffed the cooler full of cold drinks.",
+   "ko": "다이스케는 아이스박스에 시원한 음료를 꽉 채워 넣었어요.",
+   "blank": "詰め込んだ",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、小さな車に一週間分の荷物を詰め込んだ。",
+   "en": "Sakura crammed a week's worth of luggage into her small car.",
+   "ko": "사쿠라는 작은 차에 일주일 치 짐을 꽉꽉 채워 넣었어요.",
+   "blank": "詰め込んだ",
+   "src": "made"
+  }
+ ],
  "w|話": [
   {
    "text": "話があるんだ。",
@@ -90229,6 +91269,22 @@
    "blank": "谷"
   }
  ],
+ "w|谷間": [
+  {
+   "text": "大輔の町は、海に向かって開けた山の谷間にある。",
+   "en": "Daisuke's town lies in a valley between mountains that opens onto the sea.",
+   "ko": "다이스케네 마을은 바다 쪽으로 트인 산골짜기에 있어요.",
+   "blank": "谷間",
+   "src": "made"
+  },
+  {
+   "text": "さくらの車は、深い谷間の道を慎重に進んだ。",
+   "en": "Sakura's car moved carefully along the road through the deep valley.",
+   "ko": "사쿠라의 차는 깊은 골짜기 길을 조심스럽게 나아갔어요.",
+   "blank": "谷間",
+   "src": "made"
+  }
+ ],
  "w|豆": [
   {
    "text": "おばあさんのお店では、手作りの煮た豆が瓶で売られていた。",
@@ -90242,6 +91298,22 @@
    "en": "On the night of Setsubun, Chihiro made up with her brother while throwing beans.",
    "ko": "세쓰분 밤에 지히로는 오빠와 콩을 뿌리며 화해했어요.",
    "blank": "豆",
+   "src": "made"
+  }
+ ],
+ "w|豆乳": [
+  {
+   "text": "拓也は、新しい同僚のために冷蔵庫に豆乳を買っておいた。",
+   "en": "Takuya bought some soy milk and put it in the fridge for his new coworker.",
+   "ko": "다쿠야는 새 동료를 위해 냉장고에 두유를 사 놓았어요.",
+   "blank": "豆乳",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、休憩時間に豆乳のラテを飲んだ。",
+   "en": "Keiko drank a soy latte during the break.",
+   "ko": "게이코는 쉬는 시간에 두유 라테를 마셨어요.",
+   "blank": "豆乳",
    "src": "made"
   }
  ],
@@ -90305,6 +91377,22 @@
    "en": "A pig is squealing.",
    "ko": "돼지가 울고 있어.",
    "blank": "豚"
+  }
+ ],
+ "w|豚肉": [
+  {
+   "text": "拓也の新しい同僚は、昼はいつも豚肉の生姜焼き弁当を食べている。",
+   "en": "Takuya's new coworker always eats a ginger pork lunch box at noon.",
+   "ko": "다쿠야의 새 동료는 점심에 늘 돼지고기 생강구이 도시락을 먹어요.",
+   "blank": "豚肉",
+   "src": "made"
+  },
+  {
+   "text": "恵子の先生は、昼食にいつも豚肉のサンドイッチを持ってくる。",
+   "en": "Keiko's teacher always brings a pork sandwich for lunch.",
+   "ko": "게이코의 선생님은 점심으로 늘 돼지고기 샌드위치를 가져와요.",
+   "blank": "豚肉",
+   "src": "made"
   }
  ],
  "w|象徴": [
@@ -91047,6 +92135,22 @@
    "blank": "資産"
   }
  ],
+ "w|資質": [
+  {
+   "text": "新しい同僚にはリーダーの資質があると、部長は拓也に言った。",
+   "en": "The department manager told Takuya that the new coworker has the makings of a leader.",
+   "ko": "새 동료에게는 리더의 자질이 있다고 부장은 다쿠야에게 말했어요.",
+   "blank": "資質",
+   "src": "made"
+  },
+  {
+   "text": "先生は、恵子には色を見る資質があると言った。",
+   "en": "The teacher said Keiko has a natural eye for color.",
+   "ko": "선생님은 게이코에게 색을 보는 자질이 있다고 말했어요.",
+   "blank": "資質",
+   "src": "made"
+  }
+ ],
  "w|資金": [
   {
    "text": "資金が足りない。",
@@ -91744,6 +92848,22 @@
    "en": "Cables got tangled at her feet, and Sakura almost tripped.",
    "ko": "케이블이 발밑에서 엉켜서 사쿠라는 하마터면 넘어질 뻔했어요.",
    "blank": "足元",
+   "src": "made"
+  }
+ ],
+ "w|足跡": [
+  {
+   "text": "朝の砂浜には、大輔の足跡だけが続いていた。",
+   "en": "On the morning beach, only Daisuke's footprints stretched along the sand.",
+   "ko": "아침 모래사장에는 다이스케의 발자국만 이어져 있었어요.",
+   "blank": "足跡",
+   "src": "made"
+  },
+  {
+   "text": "さくらが車を止めた雪の駐車場には、動物の足跡が続いていた。",
+   "en": "Animal tracks ran across the snowy parking lot where Sakura stopped her car.",
+   "ko": "사쿠라가 차를 세운 눈 덮인 주차장에는 동물 발자국이 이어져 있었어요.",
+   "blank": "足跡",
    "src": "made"
   }
  ],
@@ -96881,6 +98001,22 @@
    "src": "made"
   }
  ],
+ "w|酔っ払い": [
+  {
+   "text": "歓迎会の帰り、拓也は駅で酔っ払いに絡まれた新しい同僚を助けた。",
+   "en": "On the way home from the welcome party, Takuya helped his new coworker who was being hassled by a drunk at the station.",
+   "ko": "환영회에서 돌아오는 길에 다쿠야는 역에서 취객에게 시비를 당한 새 동료를 도와줬어요.",
+   "blank": "酔っ払い",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、古い絵本に出てくる陽気な酔っ払いの絵を模写した。",
+   "en": "Keiko copied a picture of a cheerful drunk from an old picture book.",
+   "ko": "게이코는 옛 그림책에 나오는 유쾌한 술주정뱅이 그림을 따라 그렸어요.",
+   "blank": "酔っ払い",
+   "src": "made"
+  }
+ ],
  "w|酔っ払う": [
   {
    "text": "二次会で、大輔の上司はすっかり酔っ払ってしまった。",
@@ -97114,6 +98250,22 @@
    "en": "One of Mayu's cows came down with a serious illness, and the vet came every day.",
    "ko": "마유의 소가 심한 병에 걸려서 수의사가 매일 왔어요.",
    "blank": "重度",
+   "src": "made"
+  }
+ ],
+ "w|重点": [
+  {
+   "text": "大輔の町は、海岸の清掃に重点を置いている。",
+   "en": "Daisuke's town places a priority on keeping the coast clean.",
+   "ko": "다이스케네 마을은 해안 청소에 중점을 두고 있어요.",
+   "blank": "重点",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、旅では安全運転に重点を置いている。",
+   "en": "When traveling, Sakura puts priority on safe driving.",
+   "ko": "사쿠라는 여행할 때 안전 운전에 중점을 둬요.",
+   "blank": "重点",
    "src": "made"
   }
  ],
@@ -97516,6 +98668,22 @@
    "en": "On weekends I go fishing with my dad.",
    "ko": "주말에는 아빠와 낚시하러 가요.",
    "blank": "釣り",
+   "src": "made"
+  }
+ ],
+ "w|釣る": [
+  {
+   "text": "大輔は、防波堤でアジをたくさん釣った。",
+   "en": "Daisuke caught a lot of horse mackerel from the breakwater.",
+   "ko": "다이스케는 방파제에서 전갱이를 많이 낚았어요.",
+   "blank": "釣った",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、川沿いのキャンプ場でニジマスを釣った。",
+   "en": "Sakura caught a rainbow trout at a riverside campground.",
+   "ko": "사쿠라는 강가 캠핑장에서 무지개송어를 낚았어요.",
+   "blank": "釣った",
    "src": "made"
   }
  ],
@@ -99303,6 +100471,22 @@
    "src": "made"
   }
  ],
+ "w|隕石": [
+  {
+   "text": "大輔は、浜辺で隕石のような黒い石を拾った。",
+   "en": "Daisuke picked up a black stone on the beach that looked like a meteorite.",
+   "ko": "다이스케는 바닷가에서 운석 같은 검은 돌을 주웠어요.",
+   "blank": "隕石",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、隕石が落ちた跡だという大きなくぼ地を見に行った。",
+   "en": "Sakura went to see a big hollow said to be where a meteorite fell.",
+   "ko": "사쿠라는 운석이 떨어진 자리라는 커다란 움푹한 땅을 보러 갔어요.",
+   "blank": "隕石",
+   "src": "made"
+  }
+ ],
  "w|隙間": [
   {
    "text": "窓の隙間から風が入るので、テープでふさいだ。",
@@ -100015,6 +101199,22 @@
    "blank": "電源"
   }
  ],
+ "w|電磁": [
+  {
+   "text": "大輔は、灯台の近くで電磁波を測る研究者に出会った。",
+   "en": "Near the lighthouse, Daisuke met a researcher measuring electromagnetic waves.",
+   "ko": "다이스케는 등대 근처에서 전자파를 측정하는 연구자를 만났어요.",
+   "blank": "電磁",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、電磁調理器が使えるキャンプ場を選んだ。",
+   "en": "Sakura chose a campground where induction cookers could be used.",
+   "ko": "사쿠라는 인덕션을 쓸 수 있는 캠핑장을 골랐어요.",
+   "blank": "電磁",
+   "src": "made"
+  }
+ ],
  "w|電話": [
   {
    "text": "あとで電話するね。",
@@ -100579,6 +101779,22 @@
    "en": "The music is too loud.",
    "ko": "음악이 너무 시끄러워.",
    "blank": "音楽"
+  }
+ ],
+ "w|音波": [
+  {
+   "text": "イルカは音波で仲間と連絡を取り合うと、大輔はガイドから聞いた。",
+   "en": "Daisuke heard from the guide that dolphins communicate with each other using sound waves.",
+   "ko": "돌고래는 음파로 동료와 연락을 주고받는다고 다이스케는 가이드에게 들었어요.",
+   "blank": "音波",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、コウモリが音波を使って暗闇を飛ぶ仕組みを科学館で知った。",
+   "en": "At a science museum, Sakura learned how bats use sound waves to fly in the dark.",
+   "ko": "사쿠라는 박쥐가 음파를 이용해 어둠 속을 나는 원리를 과학관에서 알게 됐어요.",
+   "blank": "音波",
+   "src": "made"
   }
  ],
  "w|音源": [
@@ -101641,6 +102857,22 @@
    "blank": "食品"
   }
  ],
+ "w|食器": [
+  {
+   "text": "拓也は、新しい同僚と一緒に昼休みの食器を洗った。",
+   "en": "Takuya washed the dishes from lunch together with his new coworker.",
+   "ko": "다쿠야는 새 동료와 함께 점심시간에 쓴 식기를 씻었어요.",
+   "blank": "食器",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、陶芸の授業で自分の食器を作った。",
+   "en": "Keiko made her own tableware in a pottery class.",
+   "ko": "게이코는 도예 수업에서 자기 식기를 만들었어요.",
+   "blank": "食器",
+   "src": "made"
+  }
+ ],
  "w|食堂": [
   {
    "text": "年末で忙しく、亮は会社の食堂で急いで昼ご飯を済ませた。",
@@ -101718,6 +102950,22 @@
    "en": "All the guests' food allergies were checked in advance.",
    "ko": "하객의 식품 알레르기는 미리 다 확인해 두었어요.",
    "blank": "食物",
+   "src": "made"
+  }
+ ],
+ "w|食糧": [
+  {
+   "text": "大輔の住む島では、嵐の前に食糧を多めに買っておく。",
+   "en": "On the island where Daisuke lives, people stock up on food before a storm.",
+   "ko": "다이스케가 사는 섬에서는 폭풍이 오기 전에 식량을 넉넉히 사 둬요.",
+   "blank": "食糧",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、山道に入る前に車に食糧と水を積んだ。",
+   "en": "Before heading onto the mountain road, Sakura loaded food and water into the car.",
+   "ko": "사쿠라는 산길에 들어서기 전에 차에 식량과 물을 실었어요.",
+   "blank": "食糧",
    "src": "made"
   }
  ],
@@ -101968,6 +103216,22 @@
    "en": "When she was young, Keiko attended a nursing training school.",
    "ko": "게이코는 젊었을 때 간호사 양성 학교에 다녔어요.",
    "blank": "養成",
+   "src": "made"
+  }
+ ],
+ "w|養殖": [
+  {
+   "text": "大輔の家は、代々カキの養殖をしている。",
+   "en": "Daisuke's family has farmed oysters for generations.",
+   "ko": "다이스케네 집은 대대로 굴 양식을 해요.",
+   "blank": "養殖",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、海沿いの道の途中で真珠の養殖場を見学した。",
+   "en": "Along the coastal road, Sakura toured a pearl farm.",
+   "ko": "사쿠라는 해안 도로를 가다가 진주 양식장을 견학했어요.",
+   "blank": "養殖",
    "src": "made"
   }
  ],
@@ -103012,6 +104276,22 @@
    "en": "In the mountain village where Chihiro lives, the temple bell rings every morning.",
    "ko": "지히로가 사는 산골 마을에서는 아침이 되면 절의 종이 울려요.",
    "blank": "鳴る",
+   "src": "made"
+  }
+ ],
+ "w|鶏肉": [
+  {
+   "text": "拓也は新しい同僚に、鶏肉の料理がおいしい定食屋を教えた。",
+   "en": "Takuya told his new coworker about a diner with delicious chicken dishes.",
+   "ko": "다쿠야는 새 동료에게 닭고기 요리가 맛있는 밥집을 알려 줬어요.",
+   "blank": "鶏肉",
+   "src": "made"
+  },
+  {
+   "text": "教室の帰り、恵子はスーパーで特売の鶏肉を買った。",
+   "en": "On her way home from class, Keiko bought chicken on sale at the supermarket.",
+   "ko": "교실에서 돌아오는 길에 게이코는 마트에서 특가 닭고기를 샀어요.",
+   "blank": "鶏肉",
    "src": "made"
   }
  ],
