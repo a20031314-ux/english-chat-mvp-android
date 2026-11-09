@@ -8775,6 +8775,22 @@
    "src": "made"
   }
  ],
+ "w|إفلات": [
+  {
+   "text": "ضحك يوسف وهو يرى الأطفال يتعمدون إفلات البالونات في سماء العرس.",
+   "en": "Yusuf laughed watching the children deliberately let go of the balloons into the wedding sky.",
+   "ko": "아이들이 일부러 풍선을 놓아 하늘로 날려 보내자 유수프가 웃었어요.",
+   "blank": "إفلات",
+   "src": "made"
+  },
+  {
+   "text": "خافت سارة من إفلات طائرتها الورقية في ريح الخريف.",
+   "en": "Sara was afraid of losing hold of her kite in the autumn wind.",
+   "ko": "사라는 가을바람에 연줄을 놓칠까 봐 걱정했어요.",
+   "blank": "إفلات",
+   "src": "made"
+  }
+ ],
  "w|إفلاس": [
   {
    "text": "خشي عمر إفلاس الشركة بعد خسارة أكبر عميل.",
@@ -8803,6 +8819,22 @@
    "en": "Do you need a long stay here?",
    "ko": "여기 오래 머물 필요가 있니?",
    "blank": "إقامة"
+  }
+ ],
+ "w|إقرار": [
+  {
+   "text": "وقع يوسف إقرار الزواج أمام الشهود.",
+   "en": "Yusuf signed the marriage declaration in front of the witnesses.",
+   "ko": "유수프는 증인들 앞에서 혼인 서약서에 서명했어요.",
+   "blank": "إقرار",
+   "src": "made"
+  },
+  {
+   "text": "أعطت سارة المعلمة إقرارا بموافقتها على رحلة ابنتها الربيعية.",
+   "en": "Sara gave the teacher a signed consent for her daughter's spring trip.",
+   "ko": "사라는 딸의 봄 소풍 동의서를 선생님께 냈어요.",
+   "blank": "إقرارا",
+   "src": "made"
   }
  ],
  "w|إقطاع": [
@@ -9385,6 +9417,22 @@
    "src": "made"
   }
  ],
+ "w|إهمال": [
+  {
+   "text": "تأخر الطعام بسبب إهمال أحد العمال، فغضب يوسف.",
+   "en": "The food was late because of one worker's negligence, and Yusuf got angry.",
+   "ko": "직원 하나가 소홀해서 음식이 늦게 나오자 유수프가 화를 냈어요.",
+   "blank": "إهمال",
+   "src": "made"
+  },
+  {
+   "text": "ذبلت ورود سارة بسبب الإهمال في الصيف.",
+   "en": "Sara's roses withered from neglect in the summer.",
+   "ko": "사라의 장미는 여름에 돌보지 않아 시들었어요.",
+   "blank": "الإهمال",
+   "src": "made"
+  }
+ ],
  "w|إوزة": [
   {
    "text": "هربت إوزة من حظيرة كريم ووجدها عند الجسر.",
@@ -9921,6 +9969,22 @@
    "en": "Can you invent something new?",
    "ko": "새로운 것을 발명할 수 있니?",
    "blank": "تبتكر"
+  }
+ ],
+ "w|ابتلع": [
+  {
+   "text": "ابتلع يوسف ريقه قبل أن يلقي كلمته.",
+   "en": "Yusuf swallowed hard before giving his speech.",
+   "ko": "유수프는 축사를 하기 전에 침을 꿀꺽 삼켰어요.",
+   "blank": "ابتلع",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت سارة أن الأرض العطشى ابتلعت ماء المطر الأول بسرعة.",
+   "en": "Sara noticed the thirsty earth swallowed the first rain quickly.",
+   "ko": "사라는 메마른 땅이 첫비를 금세 빨아들이는 걸 봤어요.",
+   "blank": "ابتلعت",
+   "src": "made"
   }
  ],
  "w|ابتهاج": [
@@ -13729,6 +13793,22 @@
    "en": "He listened carefully to the instructions.",
    "ko": "그는 지시를 잘 들었다.",
    "blank": "استمع"
+  }
+ ],
+ "w|استنتاج": [
+  {
+   "text": "توصل يوسف إلى استنتاج بسيط: القاعة أصغر من عدد الضيوف.",
+   "en": "Yusuf came to a simple conclusion: the hall was too small for the number of guests.",
+   "ko": "유수프는 예식장이 하객 수에 비해 작다는 간단한 결론을 내렸어요.",
+   "blank": "استنتاج",
+   "src": "made"
+  },
+  {
+   "text": "كان استنتاج سارة أن الشتاء هذا العام سيكون طويلا.",
+   "en": "Sara's conclusion was that winter this year would be long.",
+   "ko": "사라는 올겨울이 길 거라고 결론 내렸어요.",
+   "blank": "استنتاج",
+   "src": "made"
   }
  ],
  "w|استنتج": [
@@ -17719,6 +17799,22 @@
    "src": "made"
   }
  ],
+ "w|انعكاس": [
+  {
+   "text": "رأى يوسف انعكاس الأضواء على مياه المسبح في حفل العرس.",
+   "en": "Yusuf saw the reflection of the lights on the pool water at the wedding party.",
+   "ko": "유수프는 결혼식 파티에서 수영장 물에 비친 불빛을 봤어요.",
+   "blank": "انعكاس",
+   "src": "made"
+  },
+  {
+   "text": "تحب سارة انعكاس أوراق الخريف على سطح البحيرة.",
+   "en": "Sara loves the reflection of autumn leaves on the lake's surface.",
+   "ko": "사라는 호수 위에 비친 가을 단풍을 좋아해요.",
+   "blank": "انعكاس",
+   "src": "made"
+  }
+ ],
  "w|انعكس": [
   {
    "text": "انعكس تعب خالد على وجهه في نهاية اليوم.",
@@ -19071,6 +19167,22 @@
    "blank": "بالنسبة"
   }
  ],
+ "w|بالوعة": [
+  {
+   "text": "انسدت بالوعة الحمام في قاعة العرس، فاتصل يوسف بالسباك.",
+   "en": "The bathroom drain in the wedding hall got blocked, so Yusuf called the plumber.",
+   "ko": "예식장 화장실 하수구가 막혀서 유수프가 배관공을 불렀어요.",
+   "blank": "بالوعة",
+   "src": "made"
+  },
+  {
+   "text": "سدت أوراق الخريف بالوعة الشارع أمام بيت سارة.",
+   "en": "Autumn leaves blocked the street drain in front of Sara's house.",
+   "ko": "가을 낙엽이 사라네 집 앞 하수구를 막았어요.",
+   "blank": "بالوعة",
+   "src": "made"
+  }
+ ],
  "w|باليه": [
   {
    "text": "قدمت أخت العروس رقصة باليه قصيرة أدهشت سامي.",
@@ -19589,6 +19701,22 @@
    "en": "The child seemed very happy.",
    "ko": "아이가 아주 행복해 보였어.",
    "blank": "بدا"
+  }
+ ],
+ "w|بدائي": [
+  {
+   "text": "استعمل الطباخ فرنا بدائيا لخبز خبز العرس، فأعجب يوسف.",
+   "en": "The cook used a primitive oven to bake the wedding bread, and Yusuf liked it.",
+   "ko": "요리사가 원시적인 화덕으로 결혼식 빵을 구워서 유수프가 좋아했어요.",
+   "blank": "بدائيا",
+   "src": "made"
+  },
+  {
+   "text": "صنعت سارة مدفأة بدائية من الحجارة في الحديقة.",
+   "en": "Sara made a primitive stone fireplace in the garden.",
+   "ko": "사라는 정원에 돌로 투박한 화덕을 만들었어요.",
+   "blank": "بدائية",
+   "src": "made"
   }
  ],
  "w|بداية": [
@@ -21602,6 +21730,22 @@
    "en": "Fatima replaced the old plastic covers with paper ones.",
    "ko": "파티마는 오래된 비닐 커버를 종이 커버로 바꿨어요.",
    "blank": "البلاستيك",
+   "src": "made"
+  }
+ ],
+ "w|بلاستيكي": [
+  {
+   "text": "رفض يوسف الأطباق البلاستيكية في العرس.",
+   "en": "Yusuf refused plastic plates at the wedding.",
+   "ko": "유수프는 결혼식에 플라스틱 접시를 쓰지 않겠다고 했어요.",
+   "blank": "البلاستيكية",
+   "src": "made"
+  },
+  {
+   "text": "غطت سارة نباتاتها بغطاء بلاستيكي من الصقيع.",
+   "en": "Sara covered her plants with a plastic sheet against the frost.",
+   "ko": "사라는 서리를 막으려고 식물을 비닐로 덮었어요.",
+   "blank": "بلاستيكي",
    "src": "made"
   }
  ],
@@ -26313,6 +26457,22 @@
    "blank": "تسبب"
   }
  ],
+ "w|تستر": [
+  {
+   "text": "كشف يوسف تستر أخيه على خطة المفاجأة.",
+   "en": "Yusuf uncovered his brother's covering up of the surprise plan.",
+   "ko": "유수프는 형이 깜짝 계획을 숨기고 있었다는 걸 알아챘어요.",
+   "blank": "تستر",
+   "src": "made"
+  },
+  {
+   "text": "قرأت سارة خبرا عن تستر مسؤول على قطع أشجار الغابة.",
+   "en": "Sara read a news item about an official covering up the cutting of forest trees.",
+   "ko": "사라는 한 공무원이 숲 벌목을 눈감아 줬다는 기사를 읽었어요.",
+   "blank": "تستر",
+   "src": "made"
+  }
+ ],
  "w|تسجيل": [
   {
    "text": "لدي تسجيل صوتي للمحاضرة.",
@@ -26754,6 +26914,22 @@
    "en": "The little girl clung to Huda's hand when she got lost from her mother.",
    "ko": "엄마를 잃은 여자아이가 후다의 손을 꼭 붙잡았어요.",
    "blank": "تشبثت",
+   "src": "made"
+  }
+ ],
+ "w|تشتت": [
+  {
+   "text": "تشتت انتباه يوسف بسبب كثرة الضيوف.",
+   "en": "Yusuf's attention was scattered because of the many guests.",
+   "ko": "하객이 너무 많아서 유수프는 정신이 없었어요.",
+   "blank": "تشتت",
+   "src": "made"
+  },
+  {
+   "text": "تشتتت الغيوم فظهرت الشمس على حديقة سارة.",
+   "en": "The clouds scattered and the sun came out over Sara's garden.",
+   "ko": "구름이 흩어지자 사라네 정원에 해가 났어요.",
+   "blank": "تشتتت",
    "src": "made"
   }
  ],
@@ -27331,6 +27507,22 @@
    "src": "made"
   }
  ],
+ "w|تضارب": [
+  {
+   "text": "حدث تضارب في مواعيد الحفلتين، فاختار يوسف عرس أخيه.",
+   "en": "The two parties clashed in timing, so Yusuf chose his brother's wedding.",
+   "ko": "두 잔치 날짜가 겹쳐서 유수프는 형 결혼식을 택했어요.",
+   "blank": "تضارب",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت سارة تضاربا في توقعات الطقس عن موعد الثلج.",
+   "en": "Sara noticed conflicting weather forecasts about when the snow would come.",
+   "ko": "사라는 첫눈 날짜를 두고 일기 예보가 서로 엇갈린다는 걸 알았어요.",
+   "blank": "تضاربا",
+   "src": "made"
+  }
+ ],
  "w|تضاريس": [
   {
    "text": "تتغير تضاريس الشاطئ بعد كل عاصفة شتوية.",
@@ -27623,6 +27815,22 @@
    "en": "The development of technology is very fast these days.",
    "ko": "요즘 기술의 발전이 아주 빨라.",
    "blank": "تطور"
+  }
+ ],
+ "w|تطوع": [
+  {
+   "text": "تطوع أصدقاء يوسف لتزيين القاعة.",
+   "en": "Yusuf's friends volunteered to decorate the hall.",
+   "ko": "유수프의 친구들이 예식장 장식을 자원했어요.",
+   "blank": "تطوع",
+   "src": "made"
+  },
+  {
+   "text": "تطوعت سارة لتنظيف الحديقة العامة في الربيع.",
+   "en": "Sara volunteered to clean the public park in spring.",
+   "ko": "사라는 봄에 공원 청소에 자원했어요.",
+   "blank": "تطوعت",
+   "src": "made"
   }
  ],
  "w|تطوعي": [
@@ -31751,6 +31959,22 @@
    "src": "made"
   }
  ],
+ "w|توسل": [
+  {
+   "text": "توسل ابن أخي يوسف إليه أن يرقص معه.",
+   "en": "Yusuf's nephew begged him to dance with him.",
+   "ko": "유수프의 조카가 같이 춤추자고 졸랐어요.",
+   "blank": "توسل",
+   "src": "made"
+  },
+  {
+   "text": "توسلت سارة إلى أمها أن تسمح لها باللعب في الثلج.",
+   "en": "Sara begged her mother to let her play in the snow.",
+   "ko": "사라는 엄마에게 눈밭에서 놀게 해 달라고 졸랐어요.",
+   "blank": "توسلت",
+   "src": "made"
+  }
+ ],
  "w|توسيع": [
   {
    "text": "تناقش الإدارة توسيع قسم سامي ليشمل الأخبار الرياضية.",
@@ -33381,6 +33605,22 @@
    "src": "made"
   }
  ],
+ "w|جاموس": [
+  {
+   "text": "قدم والد العروس لحم جاموس للضيوف، كما حكى يوسف.",
+   "en": "The bride's father served buffalo meat to the guests, as Yusuf recounted.",
+   "ko": "유수프 말로는 신부 아버지가 하객들에게 물소 고기를 대접했대요.",
+   "blank": "جاموس",
+   "src": "made"
+  },
+  {
+   "text": "رأت سارة جاموسا يستحم في النهر في يوم صيفي حار.",
+   "en": "Sara saw a buffalo bathing in the river on a hot summer day.",
+   "ko": "사라는 더운 여름날 강에서 목욕하는 물소를 봤어요.",
+   "blank": "جاموسا",
+   "src": "made"
+  }
+ ],
  "w|جانب": [
   {
    "text": "جلست إلى جانب صديقي.",
@@ -34026,6 +34266,22 @@
    "en": "Nour says this bread has old roots in her village.",
    "ko": "누르는 이 빵이 자기 마을에서 오래전부터 내려온 것이라고 해요.",
    "blank": "جذورا",
+   "src": "made"
+  }
+ ],
+ "w|جر": [
+  {
+   "text": "جر يوسف عروسه إلى حلبة الرقص.",
+   "en": "Yusuf pulled his bride onto the dance floor.",
+   "ko": "유수프는 신부를 무대로 끌고 나갔어요.",
+   "blank": "جر",
+   "src": "made"
+  },
+  {
+   "text": "جر السيل أغصانا كثيرة إلى حديقة سارة.",
+   "en": "The flood dragged many branches into Sara's garden.",
+   "ko": "급류가 나뭇가지를 잔뜩 사라네 정원으로 끌고 왔어요.",
+   "blank": "جر",
    "src": "made"
   }
  ],
@@ -36167,6 +36423,22 @@
    "en": "My brother works as a guard at the school.",
    "ko": "내 동생은 학교에서 경비원으로 일해요.",
    "blank": "حارس"
+  }
+ ],
+ "w|حازم": [
+  {
+   "text": "كان يوسف حازما مع الأطفال الذين ركضوا بين الطاولات.",
+   "en": "Yusuf was firm with the children who ran between the tables.",
+   "ko": "유수프는 테이블 사이를 뛰어다니는 아이들에게 단호했어요.",
+   "blank": "حازما",
+   "src": "made"
+  },
+  {
+   "text": "اتخذت سارة قرارا حازما بأن تمشي كل صباح مهما كان الطقس.",
+   "en": "Sara made a firm decision to walk every morning whatever the weather.",
+   "ko": "사라는 날씨와 상관없이 매일 아침 걷기로 단단히 마음먹었어요.",
+   "blank": "حازما",
+   "src": "made"
   }
  ],
  "w|حاسب": [
@@ -41281,6 +41553,22 @@
    "en": "I got a discount at the end of the season.",
    "ko": "시즌이 끝날 때 할인을 받았어.",
    "blank": "خصم"
+  }
+ ],
+ "w|خصوبة": [
+  {
+   "text": "تحدث عم يوسف في العرس عن خصوبة أرض العائلة.",
+   "en": "At the wedding Yusuf's uncle talked about how fertile the family land is.",
+   "ko": "유수프의 삼촌은 결혼식에서 집안 땅이 기름지다는 얘기를 했어요.",
+   "blank": "خصوبة",
+   "src": "made"
+  },
+  {
+   "text": "تقول سارة إن خصوبة الأرض تزداد بعد أمطار الشتاء.",
+   "en": "Sara says the soil gets more fertile after the winter rains.",
+   "ko": "사라는 겨울비가 내린 뒤 땅이 더 기름져진다고 말해요.",
+   "blank": "خصوبة",
+   "src": "made"
   }
  ],
  "w|خصوصا": [
@@ -49453,6 +49741,22 @@
    "src": "made"
   }
  ],
+ "w|سائر": [
+  {
+   "text": "رقص يوسف مع سائر الضيوف حتى الصباح.",
+   "en": "Yusuf danced with all the rest of the guests until morning.",
+   "ko": "유수프는 다른 하객들과 아침까지 춤을 췄어요.",
+   "blank": "سائر",
+   "src": "made"
+  },
+  {
+   "text": "تحب سارة الخريف أكثر من سائر الفصول.",
+   "en": "Sara loves autumn more than all the other seasons.",
+   "ko": "사라는 다른 어떤 계절보다 가을을 좋아해요.",
+   "blank": "سائر",
+   "src": "made"
+  }
+ ],
  "w|سائق": [
   {
    "text": "السائق يقود الحافلة.",
@@ -49699,6 +50003,22 @@
    "en": "A thief stole my phone yesterday.",
    "ko": "도둑이 어제 내 핸드폰을 훔쳤어.",
    "blank": "سارق"
+  }
+ ],
+ "w|ساري": [
+  {
+   "text": "تأكد يوسف أن جواز سفره ساري المفعول قبل شهر العسل.",
+   "en": "Yusuf made sure his passport was valid before the honeymoon.",
+   "ko": "유수프는 신혼여행 전에 여권이 유효한지 확인했어요.",
+   "blank": "ساري",
+   "src": "made"
+  },
+  {
+   "text": "ما زال اشتراك سارة في المسبح ساريا حتى نهاية الصيف.",
+   "en": "Sara's pool membership is still valid until the end of summer.",
+   "ko": "사라의 수영장 회원권은 여름이 끝날 때까지 유효해요.",
+   "blank": "ساريا",
+   "src": "made"
   }
  ],
  "w|ساطع": [
@@ -51323,6 +51643,22 @@
    "src": "made"
   }
  ],
+ "w|سعى": [
+  {
+   "text": "سعى يوسف إلى أن يكون كل شيء مثاليا في العرس.",
+   "en": "Yusuf strove for everything to be perfect at the wedding.",
+   "ko": "유수프는 결혼식에서 모든 게 완벽하도록 애썼어요.",
+   "blank": "سعى",
+   "src": "made"
+  },
+  {
+   "text": "تسعى سارة إلى زراعة حديقتها قبل الربيع.",
+   "en": "Sara is trying to plant her garden before spring.",
+   "ko": "사라는 봄이 오기 전에 정원을 가꾸려고 애쓰고 있어요.",
+   "blank": "تسعى",
+   "src": "made"
+  }
+ ],
  "w|سعيد": [
   {
    "text": "كان أبي سعيد بالخبر.",
@@ -52016,6 +52352,22 @@
    "en": "The cook served the crew grilled salmon, and Huda asked for a second plate.",
    "ko": "요리사가 스태프에게 연어구이를 내놓자 후다가 한 접시 더 달라고 했어요.",
    "blank": "السلمون",
+   "src": "made"
+  }
+ ],
+ "w|سلمي": [
+  {
+   "text": "انتهى الخلاف على مكان العرس بشكل سلمي، فارتاح يوسف.",
+   "en": "The disagreement over the wedding venue ended peacefully, and Yusuf was relieved.",
+   "ko": "결혼식 장소를 둘러싼 의견 차이가 원만하게 풀려서 유수프는 안도했어요.",
+   "blank": "سلمي",
+   "src": "made"
+  },
+  {
+   "text": "شاركت سارة في مسيرة سلمية من أجل حماية الغابة.",
+   "en": "Sara took part in a peaceful march to protect the forest.",
+   "ko": "사라는 숲을 지키자는 평화 행진에 참여했어요.",
+   "blank": "سلمية",
    "src": "made"
   }
  ],
@@ -58641,6 +58993,22 @@
    "src": "made"
   }
  ],
+ "w|ضريح": [
+  {
+   "text": "زار يوسف ضريح جده صباح يوم العرس.",
+   "en": "Yusuf visited his grandfather's tomb on the morning of the wedding.",
+   "ko": "유수프는 결혼식 날 아침 할아버지 묘소에 다녀왔어요.",
+   "blank": "ضريح",
+   "src": "made"
+  },
+  {
+   "text": "زارت سارة في الربيع ضريحا قديما على التل.",
+   "en": "In spring Sara visited an old shrine on the hill.",
+   "ko": "사라는 봄에 언덕 위 오래된 묘소를 찾아갔어요.",
+   "blank": "ضريحا",
+   "src": "made"
+  }
+ ],
  "w|ضرير": [
   {
    "text": "ساعد يوسف رجلا ضريرا على الوصول إلى عيادة العيون.",
@@ -61427,6 +61795,22 @@
    "blank": "عالمي"
   }
  ],
+ "w|عالميا": [
+  {
+   "text": "عزفت في عرس يوسف فرقة معروفة عالميا.",
+   "en": "A world-famous band played at Yusuf's wedding.",
+   "ko": "유수프의 결혼식에서 세계적으로 유명한 밴드가 연주했어요.",
+   "blank": "عالميا",
+   "src": "made"
+  },
+  {
+   "text": "قرأت سارة أن درجات الحرارة ترتفع عالميا كل عام.",
+   "en": "Sara read that temperatures are rising globally every year.",
+   "ko": "사라는 해마다 전 세계 기온이 오른다는 글을 읽었어요.",
+   "blank": "عالميا",
+   "src": "made"
+  }
+ ],
  "w|عالمية": [
   {
    "text": "الماركة عالمية بس تقليدها كتير.",
@@ -63493,6 +63877,22 @@
    "blank": "عفا"
   }
  ],
+ "w|عفريت": [
+  {
+   "text": "سمى يوسف ابن أخيه الشقي عفريتا لأنه لم يهدأ طوال العرس.",
+   "en": "Yusuf called his naughty nephew a little devil because he didn't calm down all through the wedding.",
+   "ko": "유수프는 결혼식 내내 가만있지 않는 조카를 꼬마 도깨비라고 불렀어요.",
+   "blank": "عفريتا",
+   "src": "made"
+  },
+  {
+   "text": "حكت جدة سارة لها حكاية عن عفريت يسكن البئر في الشتاء.",
+   "en": "Sara's grandmother told her a tale about a demon that lives in the well in winter.",
+   "ko": "사라의 할머니는 겨울이면 우물에 산다는 도깨비 이야기를 들려줬어요.",
+   "blank": "عفريت",
+   "src": "made"
+  }
+ ],
  "w|عفن": [
   {
    "text": "وجد حسن العفن على ستائر المخزن بعد الشتاء الرطب.",
@@ -65173,6 +65573,22 @@
    "en": "I flirted with her with my looks all evening.",
    "ko": "내내 그녀를 눈빛으로 유혹했어.",
    "blank": "غازلتها"
+  }
+ ],
+ "w|غازي": [
+  {
+   "text": "قدم النادل ليوسف مشروبا غازيا باردا.",
+   "en": "The waiter served Yusuf a cold soft drink.",
+   "ko": "종업원이 유수프에게 시원한 탄산음료를 줬어요.",
+   "blank": "غازيا",
+   "src": "made"
+  },
+  {
+   "text": "أشعلت سارة المدفأة الغازية مع أول برد.",
+   "en": "Sara turned on the gas heater with the first cold.",
+   "ko": "사라는 첫 추위가 오자 가스난로를 켰어요.",
+   "blank": "الغازية",
+   "src": "made"
   }
  ],
  "w|غاضب": [
@@ -72005,6 +72421,22 @@
    "src": "made"
   }
  ],
+ "w|قمل": [
+  {
+   "text": "اكتشف يوسف قملا في شعر ابنه قبل العرس بيوم.",
+   "en": "Yusuf found lice in his son's hair the day before the wedding.",
+   "ko": "유수프는 결혼식 전날 아들 머리에서 이를 발견했어요.",
+   "blank": "قملا",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت سارة أن القمل ينتشر بين الأطفال مع بداية الخريف.",
+   "en": "Sara noticed that lice spread among children at the start of autumn.",
+   "ko": "사라는 가을이 시작되면 아이들 사이에 이가 퍼진다는 걸 알아챘어요.",
+   "blank": "القمل",
+   "src": "made"
+  }
+ ],
  "w|قملة": [
   {
    "text": "وجدت المعلمة قملة في شعر ابن كريم، فغسلته أمه بشامبو خاص.",
@@ -73411,6 +73843,22 @@
    "src": "made"
   }
  ],
+ "w|كتمان": [
+  {
+   "text": "طلب يوسف من أخيه كتمان خبر الخطبة حتى العرس.",
+   "en": "Yusuf asked his brother to keep the engagement news secret until the wedding.",
+   "ko": "유수프는 형에게 결혼식 전까지 약혼 소식을 비밀로 해 달라고 했어요.",
+   "blank": "كتمان",
+   "src": "made"
+  },
+  {
+   "text": "لم تستطع سارة كتمان فرحتها بأول ثلج.",
+   "en": "Sara couldn't hide her joy at the first snow.",
+   "ko": "사라는 첫눈이 와서 기쁜 마음을 감추지 못했어요.",
+   "blank": "كتمان",
+   "src": "made"
+  }
+ ],
  "w|كتوم": [
   {
    "text": "يوسف كتوم، فلم يعرف أحد بخطبته إلا قبلها بيوم.",
@@ -74020,6 +74468,22 @@
    "en": "Rana cooked stuffed cabbage for her family on Friday.",
    "ko": "라나는 금요일에 가족을 위해 양배추 쌈 요리를 만들었어요.",
    "blank": "الكرنب",
+   "src": "made"
+  }
+ ],
+ "w|كرنفال": [
+  {
+   "text": "تحول عرس يوسف إلى كرنفال من الألوان والموسيقى.",
+   "en": "Yusuf's wedding turned into a carnival of colors and music.",
+   "ko": "유수프의 결혼식은 색과 음악이 넘치는 축제가 됐어요.",
+   "blank": "كرنفال",
+   "src": "made"
+  },
+  {
+   "text": "تخرج سارة كل ربيع إلى كرنفال الزهور في مدينتها.",
+   "en": "Every spring Sara goes out to the flower carnival in her city.",
+   "ko": "사라는 봄마다 동네 꽃 축제에 가요.",
+   "blank": "كرنفال",
    "src": "made"
   }
  ],
@@ -79461,6 +79925,22 @@
    "src": "made"
   }
  ],
+ "w|متحكم": [
+  {
+   "text": "بدا يوسف متحكما في أعصابه رغم الفوضى.",
+   "en": "Yusuf seemed in control of his nerves despite the chaos.",
+   "ko": "정신없는 와중에도 유수프는 침착해 보였어요.",
+   "blank": "متحكما",
+   "src": "made"
+  },
+  {
+   "text": "تحاول سارة أن تبقى متحكمة في مزاجها حين يطول الشتاء.",
+   "en": "Sara tries to stay in control of her mood when winter drags on.",
+   "ko": "사라는 겨울이 길어지면 기분을 다스리려고 애써요.",
+   "blank": "متحكمة",
+   "src": "made"
+  }
+ ],
  "w|متحمس": [
   {
    "text": "أنا متحمس للمباراة غداً.",
@@ -81069,6 +81549,22 @@
    "src": "made"
   }
  ],
+ "w|مجاعة": [
+  {
+   "text": "ذكر جد يوسف في كلمته أيام المجاعة التي عاشتها القرية قديما.",
+   "en": "In his speech Yusuf's grandfather recalled the days of famine the village lived through long ago.",
+   "ko": "유수프의 할아버지는 축사에서 옛날 마을이 겪은 기근 이야기를 꺼냈어요.",
+   "blank": "المجاعة",
+   "src": "made"
+  },
+  {
+   "text": "قرأت سارة أن شتاء قاسيا سبب مجاعة في بلاد بعيدة قبل قرون.",
+   "en": "Sara read that a harsh winter caused a famine in distant lands centuries ago.",
+   "ko": "사라는 몇백 년 전 혹독한 겨울이 먼 나라에 기근을 불렀다는 글을 읽었어요.",
+   "blank": "مجاعة",
+   "src": "made"
+  }
+ ],
  "w|مجال": [
   {
    "text": "هو خبير في مجال الطب.",
@@ -82079,6 +82575,22 @@
    "src": "made"
   }
  ],
+ "w|محصول": [
+  {
+   "text": "قدم والد العروس لضيوف يوسف سلالا من محصول حقله.",
+   "en": "The bride's father gave Yusuf's guests baskets of his field's harvest.",
+   "ko": "신부 아버지는 유수프의 하객들에게 자기 밭에서 거둔 농산물을 바구니에 담아 줬어요.",
+   "blank": "محصول",
+   "src": "made"
+  },
+  {
+   "text": "جمعت سارة محصول التفاح في أول الخريف.",
+   "en": "Sara gathered the apple harvest at the start of autumn.",
+   "ko": "사라는 초가을에 사과를 수확했어요.",
+   "blank": "محصول",
+   "src": "made"
+  }
+ ],
  "w|محضر": [
   {
    "text": "كتب كريم محضر الاجتماع وأرسله إلى المدير.",
@@ -82852,6 +83364,22 @@
    "en": "Fatima studied the floor plan of the flat to decide where to put the bed.",
    "ko": "파티마는 침대를 어디에 둘지 정하려고 집 평면도를 살펴봤어요.",
    "blank": "مخطط",
+   "src": "made"
+  }
+ ],
+ "w|مخفر": [
+  {
+   "text": "ضاعت سيارة يوسف ليلة العرس فذهب إلى مخفر الشرطة.",
+   "en": "Yusuf's car went missing on the wedding night, so he went to the police station.",
+   "ko": "결혼식 날 밤 유수프의 차가 없어져서 파출소에 갔어요.",
+   "blank": "مخفر",
+   "src": "made"
+  },
+  {
+   "text": "أبلغت سارة مخفر الشرطة عن شجرة سقطت في العاصفة.",
+   "en": "Sara reported a tree that fell in the storm to the police station.",
+   "ko": "사라는 폭풍에 쓰러진 나무를 파출소에 신고했어요.",
+   "blank": "مخفر",
    "src": "made"
   }
  ],
@@ -85375,6 +85903,22 @@
    "blank": "مساواة"
   }
  ],
+ "w|مساومة": [
+  {
+   "text": "دخل يوسف في مساومة طويلة مع صاحب القاعة.",
+   "en": "Yusuf got into long haggling with the hall owner.",
+   "ko": "유수프는 예식장 주인과 한참 값을 흥정했어요.",
+   "blank": "مساومة",
+   "src": "made"
+  },
+  {
+   "text": "اشترت سارة الفحم للشتاء بعد مساومة مع البائع.",
+   "en": "Sara bought coal for the winter after haggling with the seller.",
+   "ko": "사라는 상인과 흥정한 끝에 겨울에 쓸 석탄을 샀어요.",
+   "blank": "مساومة",
+   "src": "made"
+  }
+ ],
  "w|مسبح": [
   {
    "text": "ملأ سامي المسبح الصغير بالماء ليلعب فيه أبناء أخيه.",
@@ -86303,6 +86847,22 @@
    "en": "You are not allowed to enter now.",
    "ko": "지금 입장할 수 없어.",
    "blank": "مسموح"
+  }
+ ],
+ "w|مسموع": [
+  {
+   "text": "كان صوت يوسف غير مسموع وسط الموسيقى.",
+   "en": "Yusuf's voice couldn't be heard over the music.",
+   "ko": "음악 소리에 묻혀 유수프의 목소리가 들리지 않았어요.",
+   "blank": "مسموع",
+   "src": "made"
+  },
+  {
+   "text": "صار صوت الطيور مسموعا من جديد في حديقة سارة مع الربيع.",
+   "en": "Birdsong could be heard again in Sara's garden with the spring.",
+   "ko": "봄이 오자 사라네 정원에서 다시 새소리가 들렸어요.",
+   "blank": "مسموعا",
+   "src": "made"
   }
  ],
  "w|مسمى": [
@@ -96861,6 +97421,22 @@
    "src": "made"
   }
  ],
+ "w|نسب": [
+  {
+   "text": "نسب يوسف نجاح العرس إلى جهود أمه.",
+   "en": "Yusuf credited the wedding's success to his mother's efforts.",
+   "ko": "유수프는 결혼식이 잘된 게 어머니 덕분이라고 했어요.",
+   "blank": "نسب",
+   "src": "made"
+  },
+  {
+   "text": "تنسب سارة تعبها في الربيع إلى حبوب اللقاح.",
+   "en": "Sara attributes her tiredness in spring to pollen.",
+   "ko": "사라는 봄에 피곤한 게 꽃가루 때문이라고 생각해요.",
+   "blank": "تنسب",
+   "src": "made"
+  }
+ ],
  "w|نسبة": [
   {
    "text": "نسبة النجاح هذا العام مرتفعة.",
@@ -98461,6 +99037,22 @@
    "en": "The coffee flavor is very strong.",
    "ko": "커피 향이 매우 강하다.",
    "blank": "نكهة"
+  }
+ ],
+ "w|نما": [
+  {
+   "text": "نما حب يوسف لعروسه منذ أيام الجامعة.",
+   "en": "Yusuf's love for his bride grew from their university days.",
+   "ko": "유수프의 신부에 대한 사랑은 대학 시절부터 자랐어요.",
+   "blank": "نما",
+   "src": "made"
+  },
+  {
+   "text": "نما العشب بسرعة في حديقة سارة مع الربيع.",
+   "en": "The grass grew fast in Sara's garden with the spring.",
+   "ko": "봄이 오자 사라네 정원에 풀이 쑥쑥 자랐어요.",
+   "blank": "نما",
+   "src": "made"
   }
  ],
  "w|نمر": [
@@ -100765,6 +101357,22 @@
    "src": "made"
   }
  ],
+ "w|واقعيا": [
+  {
+   "text": "يرى يوسف أن العرس في الحديقة غير ممكن واقعيا في الشتاء.",
+   "en": "Yusuf thinks a garden wedding is not realistically possible in winter.",
+   "ko": "유수프는 겨울에 정원 결혼식은 현실적으로 어렵다고 봐요.",
+   "blank": "واقعيا",
+   "src": "made"
+  },
+  {
+   "text": "تعرف سارة أنه لا يمكن واقعيا أن تزرع الطماطم في الشتاء.",
+   "en": "Sara knows that realistically she can't grow tomatoes in winter.",
+   "ko": "사라는 겨울에 토마토를 키우는 건 현실적으로 불가능하다는 걸 알아요.",
+   "blank": "واقعيا",
+   "src": "made"
+  }
+ ],
  "w|واقف": [
   {
    "text": "هو واقف بجانب الباب.",
@@ -100897,6 +101505,22 @@
    "en": "My mother scolded my brother when he broke the window.",
    "ko": "엄마가 동생이 창문을 깼을 때 혼냈어요.",
    "blank": "وبخت"
+  }
+ ],
+ "w|وتد": [
+  {
+   "text": "دق يوسف وتدا في الأرض ليثبت خيمة العرس.",
+   "en": "Yusuf hammered a stake into the ground to secure the wedding tent.",
+   "ko": "유수프는 결혼식 천막을 고정하려고 땅에 말뚝을 박았어요.",
+   "blank": "وتدا",
+   "src": "made"
+  },
+  {
+   "text": "اقتلعت ريح الخريف وتد السياج في حديقة سارة.",
+   "en": "The autumn wind pulled up the fence stake in Sara's garden.",
+   "ko": "가을바람이 사라네 정원 울타리 말뚝을 뽑아 버렸어요.",
+   "blank": "وتد",
+   "src": "made"
   }
  ],
  "w|وتر": [
@@ -102375,6 +102999,22 @@
    "en": "The dog is a very loyal animal to its owner.",
    "ko": "개는 주인에게 정말 وفي한 동물이야.",
    "blank": "وفي"
+  }
+ ],
+ "w|وفير": [
+  {
+   "text": "كان الطعام وفيرا في عرس يوسف.",
+   "en": "Food was plentiful at Yusuf's wedding.",
+   "ko": "유수프의 결혼식에는 음식이 넉넉했어요.",
+   "blank": "وفيرا",
+   "src": "made"
+  },
+  {
+   "text": "جاء المطر وفيرا هذا الشتاء، ففرحت سارة.",
+   "en": "The rain was abundant this winter, and Sara was happy.",
+   "ko": "올겨울 비가 넉넉히 와서 사라는 기뻤어요.",
+   "blank": "وفيرا",
+   "src": "made"
   }
  ],
  "w|وقاحة": [

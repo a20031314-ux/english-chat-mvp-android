@@ -1381,6 +1381,22 @@
    "blank": "いろんな"
   }
  ],
+ "w|いわば": [
+  {
+   "text": "健太にとって部活の仲間は、いわば第二の家族だ。",
+   "en": "For Kenta, his club teammates are, so to speak, a second family.",
+   "ko": "겐타에게 동아리 친구들은 말하자면 두 번째 가족이에요.",
+   "blank": "いわば",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社のアプリは、いわば家計簿と日記を合わせたようなものだ。",
+   "en": "Misaki's company's app is, so to speak, a household budget book and a diary rolled into one.",
+   "ko": "미사키 회사의 앱은 말하자면 가계부와 일기를 합친 것 같은 거예요.",
+   "blank": "いわば",
+   "src": "made"
+  }
+ ],
  "w|いわゆる": [
   {
    "text": "いわゆる定番メニューだ。",
@@ -4927,6 +4943,22 @@
    "blank": "さっき"
   }
  ],
+ "w|ざっくり": [
+  {
+   "text": "健太の担任は、明日の遠足の流れをざっくり説明した。",
+   "en": "Kenta's homeroom teacher gave a rough outline of tomorrow's field trip.",
+   "ko": "겐타의 담임 선생님은 내일 소풍 일정을 대충 설명했어요.",
+   "blank": "ざっくり",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、新しい機能の開発費をざっくり見積もった。",
+   "en": "Misaki made a rough estimate of the development cost for the new feature.",
+   "ko": "미사키는 새 기능의 개발비를 대충 어림했어요.",
+   "blank": "ざっくり",
+   "src": "made"
+  }
+ ],
  "w|さっさと": [
   {
    "text": "さっさと支度して。",
@@ -5046,6 +5078,22 @@
    "en": "Her seat was near the back, but Mayu didn't mind much.",
    "ko": "자리가 뒤쪽이었지만 마유는 그다지 신경 쓰이지 않았어요.",
    "blank": "さほど",
+   "src": "made"
+  }
+ ],
+ "w|サボる": [
+  {
+   "text": "健太は掃除当番をサボって、先生に叱られた。",
+   "en": "Kenta skipped his cleaning duty and got scolded by the teacher.",
+   "ko": "겐타는 청소 당번을 땡땡이쳐서 선생님한테 혼났어요.",
+   "blank": "サボって",
+   "src": "made"
+  },
+  {
+   "text": "美咲のチームは、テストを書くのをサボったせいでリリース直前にバグに追われた。",
+   "en": "Because Misaki's team slacked off on writing tests, they were chasing bugs right before release.",
+   "ko": "미사키의 팀은 테스트 작성을 게을리한 탓에 출시 직전에 버그에 쫓겼어요.",
+   "blank": "サボった",
    "src": "made"
   }
  ],
@@ -6401,6 +6449,22 @@
    "en": "I cleaned yesterday.",
    "ko": "어제 청소했어.",
    "blank": "した"
+  }
+ ],
+ "w|ずるい": [
+  {
+   "text": "「テスト前だけノートを借りに来るなんてずるい」と健太は言った。",
+   "en": "\"It's not fair to come borrow my notes only before tests,\" Kenta said.",
+   "ko": "\"시험 전에만 노트를 빌리러 오다니 치사해\"라고 겐타가 말했어요.",
+   "blank": "ずるい",
+   "src": "made"
+  },
+  {
+   "text": "他社のデザインをそのまま真似するのはずるいと、美咲は思った。",
+   "en": "Misaki thought it was unfair to copy another company's design as is.",
+   "ko": "다른 회사 디자인을 그대로 베끼는 건 치사하다고 미사키는 생각했어요.",
+   "blank": "ずるい",
+   "src": "made"
   }
  ],
  "w|すると": [
@@ -15611,6 +15675,22 @@
    "src": "made"
   }
  ],
+ "w|不動": [
+  {
+   "text": "健太は野球部で、不動の四番打者だ。",
+   "en": "Kenta is the unshakable cleanup hitter on the baseball team.",
+   "ko": "겐타는 야구부에서 흔들림 없는 4번 타자예요.",
+   "blank": "不動",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社のアプリは、家計簿アプリの分野で不動の地位を築いた。",
+   "en": "Misaki's company's app has built an unshakable position in the budgeting app market.",
+   "ko": "미사키 회사의 앱은 가계부 앱 분야에서 확고한 위치를 쌓았어요.",
+   "blank": "不動",
+   "src": "made"
+  }
+ ],
  "w|不動産": [
   {
    "text": "会場の入口には、地元の不動産会社のテントもあった。",
@@ -17301,6 +17381,22 @@
    "src": "made"
   }
  ],
+ "w|乱闘": [
+  {
+   "text": "健太は、ゆうべのプロ野球で起きた乱闘の話を教室でしていた。",
+   "en": "Kenta was talking in class about the brawl that broke out at last night's pro baseball game.",
+   "ko": "겐타는 어젯밤 프로야구에서 일어난 난투 이야기를 교실에서 하고 있었어요.",
+   "blank": "乱闘",
+   "src": "made"
+  },
+  {
+   "text": "ゲームの乱闘シーンを作るのに、美咲のチームは何か月もかけた。",
+   "en": "Misaki's team spent months creating the brawl scenes in the game.",
+   "ko": "게임의 난투 장면을 만드는 데 미사키의 팀은 몇 달이나 들였어요.",
+   "blank": "乱闘",
+   "src": "made"
+  }
+ ],
  "w|乾く": [
   {
    "text": "空気が乾くと、喉も渇いて咳が出る。",
@@ -17960,6 +18056,22 @@
    "en": "Chihiro chose new crops while exchanging views with veteran farmers.",
    "ko": "지히로는 베테랑 농부와 의견을 나누며 새 작물을 골랐어요.",
    "blank": "交え",
+   "src": "made"
+  }
+ ],
+ "w|交わす": [
+  {
+   "text": "卒業式の日、健太は担任の先生と固い握手を交わした。",
+   "en": "On graduation day, Kenta exchanged a firm handshake with his homeroom teacher.",
+   "ko": "졸업식 날 겐타는 담임 선생님과 굳게 악수를 나눴어요.",
+   "blank": "交わした",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、投資家と正式に契約書を交わした。",
+   "en": "Misaki formally exchanged contracts with the investor.",
+   "ko": "미사키는 투자자와 정식으로 계약서를 주고받았어요.",
+   "blank": "交わした",
    "src": "made"
   }
  ],
@@ -21921,6 +22033,22 @@
    "src": "made"
   }
  ],
+ "w|個展": [
+  {
+   "text": "美術の先生が、駅前のギャラリーで個展を開いた。",
+   "en": "The art teacher held a solo exhibition at a gallery near the station.",
+   "ko": "미술 선생님이 역 앞 갤러리에서 개인전을 열었어요.",
+   "blank": "個展",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社は、写真家の個展をオンラインで見られるサービスを始めた。",
+   "en": "Misaki's company launched a service for viewing photographers' solo exhibitions online.",
+   "ko": "미사키의 회사는 사진작가의 개인전을 온라인으로 볼 수 있는 서비스를 시작했어요.",
+   "blank": "個展",
+   "src": "made"
+  }
+ ],
  "w|個性": [
   {
    "text": "新しく来た佐藤さんは、服装にも話し方にも個性がある。",
@@ -24571,6 +24699,22 @@
    "blank": "内部"
   }
  ],
+ "w|内野": [
+  {
+   "text": "健太は、ショートとして内野を守っている。",
+   "en": "Kenta plays shortstop, defending the infield.",
+   "ko": "겐타는 유격수로 내야를 지키고 있어요.",
+   "blank": "内野",
+   "src": "made"
+  },
+  {
+   "text": "週末になると、美咲は会社の草野球チームで内野を守っている。",
+   "en": "On weekends, Misaki plays in the infield for her company's amateur baseball team.",
+   "ko": "주말이 되면 미사키는 회사 동네 야구팀에서 내야를 지켜요.",
+   "blank": "内野",
+   "src": "made"
+  }
+ ],
  "w|内閣": [
   {
    "text": "内閣が発表した。",
@@ -26590,6 +26734,22 @@
    "en": "Yoko wrote a song about first love and sang it at the recital.",
    "ko": "요코는 첫사랑을 주제로 한 노래를 만들어 발표회에서 불렀어요.",
    "blank": "初恋",
+   "src": "made"
+  }
+ ],
+ "w|初戦": [
+  {
+   "text": "健太のチームは、夏の大会の初戦で負けてしまった。",
+   "en": "Kenta's team lost in the first round of the summer tournament.",
+   "ko": "겐타네 팀은 여름 대회 첫 경기에서 지고 말았어요.",
+   "blank": "初戦",
+   "src": "made"
+  },
+  {
+   "text": "社内のプログラミング大会で、美咲のチームは初戦で敗れた。",
+   "en": "At the in-house programming contest, Misaki's team lost in the first round.",
+   "ko": "사내 프로그래밍 대회에서 미사키의 팀은 첫판에서 졌어요.",
+   "blank": "初戦",
    "src": "made"
   }
  ],
@@ -29211,6 +29371,22 @@
    "src": "made"
   }
  ],
+ "w|半減": [
+  {
+   "text": "雨のせいで、文化祭に来た客は去年より半減した。",
+   "en": "Because of the rain, visitors to the school festival were down by half from last year.",
+   "ko": "비 때문에 학교 축제에 온 손님이 작년보다 반으로 줄었어요.",
+   "blank": "半減",
+   "src": "made"
+  },
+  {
+   "text": "新しいサーバーに移してから、美咲の会社の運用コストは半減した。",
+   "en": "Since moving to new servers, Misaki's company's operating costs have been cut in half.",
+   "ko": "새 서버로 옮긴 뒤로 미사키 회사의 운영비는 반으로 줄었어요.",
+   "blank": "半減",
+   "src": "made"
+  }
+ ],
  "w|半端": [
   {
    "text": "半端な時間が空いたので、亮は近所を散歩した。",
@@ -30070,6 +30246,22 @@
    "en": "Misaki keeps only carefully chosen clothes for each season in her closet.",
    "ko": "미사키는 계절마다 엄선한 옷만 옷장에 남겨 둬요.",
    "blank": "厳選",
+   "src": "made"
+  }
+ ],
+ "w|厳重": [
+  {
+   "text": "試験の問題用紙は、職員室の金庫に厳重に保管されている。",
+   "en": "The exam papers are kept under strict security in the staff room safe.",
+   "ko": "시험 문제지는 교무실 금고에 엄중하게 보관되어 있어요.",
+   "blank": "厳重",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社では、顧客のデータを厳重に暗号化して保存している。",
+   "en": "Misaki's company stores customer data under strict encryption.",
+   "ko": "미사키의 회사에서는 고객 데이터를 엄중하게 암호화해서 저장해요.",
+   "blank": "厳重",
    "src": "made"
   }
  ],
@@ -32343,6 +32535,22 @@
    "blank": "名前"
   }
  ],
+ "w|名声": [
+  {
+   "text": "健太の学校の吹奏楽部は、全国大会での優勝で名声を得た。",
+   "en": "The brass band at Kenta's school gained fame by winning the national competition.",
+   "ko": "겐타네 학교 취주악부는 전국 대회 우승으로 명성을 얻었어요.",
+   "blank": "名声",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、名声よりも使いやすいアプリを作ることを大事にしている。",
+   "en": "Misaki values making easy-to-use apps more than fame.",
+   "ko": "미사키는 명성보다 쓰기 편한 앱을 만드는 걸 중요하게 여겨요.",
+   "blank": "名声",
+   "src": "made"
+  }
+ ],
  "w|名所": [
   {
    "text": "拓也は、地元の人に教えてもらった紅葉の名所に立ち寄った。",
@@ -33849,6 +34057,22 @@
    "en": "Check the pickup day.",
    "ko": "수거일을 확인해.",
    "blank": "回収"
+  }
+ ],
+ "w|回帰": [
+  {
+   "text": "健太の学校の合唱部は、原点回帰して発声練習からやり直した。",
+   "en": "The choir club at Kenta's school went back to basics and started over with vocal exercises.",
+   "ko": "겐타네 학교 합창부는 초심으로 돌아가 발성 연습부터 다시 했어요.",
+   "blank": "回帰",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、リリース前に必ず回帰テストを行う。",
+   "en": "Misaki always runs regression tests before a release.",
+   "ko": "미사키는 출시 전에 꼭 회귀 테스트를 해요.",
+   "blank": "回帰",
+   "src": "made"
   }
  ],
  "w|回復": [
@@ -36889,6 +37113,22 @@
    "blank": "大きな"
   }
  ],
+ "w|大きめ": [
+  {
+   "text": "健太は、背が伸びることを考えて大きめの制服を買ってもらった。",
+   "en": "Kenta's parents bought him a slightly bigger uniform, expecting him to grow taller.",
+   "ko": "겐타는 키가 클 것을 생각해서 조금 큰 교복을 샀어요.",
+   "blank": "大きめ",
+   "src": "made"
+  },
+  {
+   "text": "お年寄りでも押しやすいように、美咲は画面のボタンを大きめに作り直した。",
+   "en": "Misaki remade the buttons on the screen a little bigger so that elderly people could press them easily.",
+   "ko": "노인도 누르기 쉽도록 미사키는 화면 버튼을 조금 크게 다시 만들었어요.",
+   "blank": "大きめ",
+   "src": "made"
+  }
+ ],
  "w|大した": [
   {
    "text": "直樹は「大した物じゃないよ」と言ったが、その壺は実はとても貴重だった。",
@@ -37271,6 +37511,22 @@
    "src": "made"
   }
  ],
+ "w|大差": [
+  {
+   "text": "健太のクラスは、リレーで大差をつけて優勝した。",
+   "en": "Kenta's class won the relay by a wide margin.",
+   "ko": "겐타네 반은 계주에서 큰 차이로 우승했어요.",
+   "blank": "大差",
+   "src": "made"
+  },
+  {
+   "text": "美咲が出した二つのデザイン案の人気に、大差はなかった。",
+   "en": "There was no big difference in popularity between Misaki's two design proposals.",
+   "ko": "미사키가 낸 두 디자인 안의 인기에는 큰 차이가 없었어요.",
+   "blank": "大差",
+   "src": "made"
+  }
+ ],
  "w|大幅": [
   {
    "text": "大幅な値上げをＯＰＥＣのせいにしようとしたってそうはいかない。とても納得できないね。",
@@ -37378,6 +37634,22 @@
    "en": "A big-name runner from overseas has been invited to this year's race.",
    "ko": "올해 대회에는 해외 거물 선수가 초대되었어요.",
    "blank": "大物",
+   "src": "made"
+  }
+ ],
+ "w|大砲": [
+  {
+   "text": "歴史の授業で、健太は城に残る古い大砲の写真を見た。",
+   "en": "In history class, Kenta looked at a photo of an old cannon left at a castle.",
+   "ko": "역사 시간에 겐타는 성에 남아 있는 오래된 대포 사진을 봤어요.",
+   "blank": "大砲",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社のゲームには、大砲で城を攻める場面がある。",
+   "en": "Misaki's company's game has a scene where you attack a castle with cannons.",
+   "ko": "미사키 회사의 게임에는 대포로 성을 공격하는 장면이 있어요.",
+   "blank": "大砲",
    "src": "made"
   }
  ],
@@ -40161,6 +40433,22 @@
    "src": "made"
   }
  ],
+ "w|実名": [
+  {
+   "text": "学校のホームページには、生徒の実名を載せない決まりがある。",
+   "en": "There is a rule against posting students' real names on the school website.",
+   "ko": "학교 홈페이지에는 학생의 실명을 올리지 않는 규칙이 있어요.",
+   "blank": "実名",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社のSNSアプリは、実名での登録が必要だ。",
+   "en": "Misaki's company's social media app requires registration under your real name.",
+   "ko": "미사키 회사의 SNS 앱은 실명으로 가입해야 해요.",
+   "blank": "実名",
+   "src": "made"
+  }
+ ],
  "w|実在": [
   {
    "text": "亮が読んでいる歴史小説には、実在の人物がたくさん出てくる。",
@@ -40370,6 +40658,22 @@
    "en": "The study demonstrated that hill training improves endurance.",
    "ko": "그 연구는 언덕 훈련이 지구력을 높인다는 것을 실증했어요.",
    "blank": "実証",
+   "src": "made"
+  }
+ ],
+ "w|実話": [
+  {
+   "text": "国語の先生が読んでくれた話は、実話に基づいていた。",
+   "en": "The story the Japanese teacher read to the class was based on a true story.",
+   "ko": "국어 선생님이 읽어 준 이야기는 실화를 바탕으로 한 것이었어요.",
+   "blank": "実話",
+   "src": "made"
+  },
+  {
+   "text": "美咲が会社を立ち上げるまでの実話が、雑誌の記事になった。",
+   "en": "The true story of how Misaki founded her company became a magazine article.",
+   "ko": "미사키가 회사를 세우기까지의 실화가 잡지 기사가 됐어요.",
+   "blank": "実話",
    "src": "made"
   }
  ],
@@ -42117,6 +42421,22 @@
    "src": "made"
   }
  ],
+ "w|局面": [
+  {
+   "text": "将棋部の健太は、難しい局面で長いあいだ考え込んだ。",
+   "en": "Kenta from the shogi club thought for a long time at a difficult point in the game.",
+   "ko": "장기부인 겐타는 어려운 국면에서 오랫동안 생각에 잠겼어요.",
+   "blank": "局面",
+   "src": "made"
+  },
+  {
+   "text": "資金が尽きかけ、美咲の会社は厳しい局面を迎えた。",
+   "en": "With funds running out, Misaki's company faced a difficult situation.",
+   "ko": "자금이 바닥나 가면서 미사키의 회사는 어려운 국면을 맞았어요.",
+   "blank": "局面",
+   "src": "made"
+  }
+ ],
  "w|居住": [
   {
    "text": "このマンションには、居住者専用の駐車場がある。",
@@ -43059,6 +43379,22 @@
    "en": "Your sash is loose.",
    "ko": "띠가 헐거워.",
    "blank": "帯"
+  }
+ ],
+ "w|帯びる": [
+  {
+   "text": "放課後の校舎は、夕日で赤みを帯びて見えた。",
+   "en": "After school, the school building looked tinged with red in the setting sun.",
+   "ko": "방과 후 학교 건물은 노을에 붉은빛을 띠어 보였어요.",
+   "blank": "帯びて",
+   "src": "made"
+  },
+  {
+   "text": "投資が決まり、美咲の新しいサービスの計画は現実味を帯びてきた。",
+   "en": "With the investment secured, Misaki's plans for the new service started to look realistic.",
+   "ko": "투자가 정해지자 미사키의 새 서비스 계획은 현실성을 띠기 시작했어요.",
+   "blank": "帯びて",
+   "src": "made"
   }
  ],
  "w|帰り": [
@@ -47665,6 +48001,22 @@
    "src": "made"
   }
  ],
+ "w|惨事": [
+  {
+   "text": "理科の実験で薬品を間違え、あやうく大惨事になるところだった。",
+   "en": "Someone mixed up the chemicals in the science experiment, and it nearly turned into a disaster.",
+   "ko": "과학 실험에서 약품을 잘못 써서 하마터면 큰 참사가 날 뻔했어요.",
+   "blank": "惨事",
+   "src": "made"
+  },
+  {
+   "text": "バックアップがなかったら、データがすべて消える惨事になっていた。",
+   "en": "Without a backup, it would have been a disaster with all the data lost.",
+   "ko": "백업이 없었다면 데이터가 전부 사라지는 참사가 될 뻔했어요.",
+   "blank": "惨事",
+   "src": "made"
+  }
+ ],
  "w|想像": [
   {
    "text": "想像以上だったよ。",
@@ -48404,6 +48756,22 @@
    "en": "The villagers' concern is that the number of young people keeps falling.",
    "ko": "마을 사람들의 걱정은 젊은 사람이 점점 줄고 있다는 거예요.",
    "blank": "懸念",
+   "src": "made"
+  }
+ ],
+ "w|懸賞": [
+  {
+   "text": "健太は、雑誌の懸賞に応募して図書カードを当てた。",
+   "en": "Kenta entered a magazine sweepstakes and won a book gift card.",
+   "ko": "겐타는 잡지 경품에 응모해서 도서 상품권에 당첨됐어요.",
+   "blank": "懸賞",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、アプリの登録者を増やすために懸賞キャンペーンを行った。",
+   "en": "Misaki ran a prize campaign to increase the number of app users.",
+   "ko": "미사키는 앱 가입자를 늘리려고 경품 캠페인을 했어요.",
+   "blank": "懸賞",
    "src": "made"
   }
  ],
@@ -49576,6 +49944,22 @@
    "en": "Watching the baseball broadcast, Keiko's husband sighed at his favorite team's batting lineup.",
    "ko": "게이코의 남편은 야구 중계를 보면서 응원하는 팀 타선에 한숨을 쉬었어요.",
    "blank": "打線",
+   "src": "made"
+  }
+ ],
+ "w|打者": [
+  {
+   "text": "健太は野球部で、不動の四番打者だ。",
+   "en": "Kenta is the unshakable cleanup hitter on the baseball team.",
+   "ko": "겐타는 야구부에서 흔들림 없는 4번 타자예요.",
+   "blank": "打者",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社は、野球の打者のフォームを分析するアプリを開発中だ。",
+   "en": "Misaki's company is developing an app that analyzes baseball batters' swings.",
+   "ko": "미사키의 회사는 야구 타자의 폼을 분석하는 앱을 개발하고 있어요.",
+   "blank": "打者",
    "src": "made"
   }
  ],
@@ -52393,6 +52777,22 @@
    "src": "made"
   }
  ],
+ "w|撤廃": [
+  {
+   "text": "健太の学校では、去年から髪型の校則が撤廃された。",
+   "en": "At Kenta's school, the rules on hairstyles were abolished last year.",
+   "ko": "겐타네 학교에서는 작년부터 머리 모양 교칙이 폐지됐어요.",
+   "blank": "撤廃",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社は、服装の決まりを撤廃した。",
+   "en": "Misaki's company abolished its dress code.",
+   "ko": "미사키의 회사는 복장 규정을 없앴어요.",
+   "blank": "撤廃",
+   "src": "made"
+  }
+ ],
  "w|撤退": [
   {
    "text": "その航空会社は、この空港からの撤退を決めたそうだ。",
@@ -53177,6 +53577,22 @@
    "blank": "政治"
   }
  ],
+ "w|政界": [
+  {
+   "text": "健太の学校の卒業生には、政界で活躍している人もいる。",
+   "en": "Some graduates of Kenta's school are active in politics.",
+   "ko": "겐타네 학교 졸업생 중에는 정계에서 활약하는 사람도 있어요.",
+   "blank": "政界",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社のアプリが話題になり、政界からも注目された。",
+   "en": "Misaki's company's app became a hot topic and even drew attention from the political world.",
+   "ko": "미사키 회사의 앱이 화제가 되어 정계에서도 주목받았어요.",
+   "blank": "政界",
+   "src": "made"
+  }
+ ],
  "w|政策": [
   {
    "text": "新しい政策が出た。",
@@ -53284,6 +53700,22 @@
    "en": "Keiko rescued a kitten that couldn't get down from a tree.",
    "ko": "게이코는 나무에서 못 내려오는 새끼 고양이를 구했어요.",
    "blank": "救った",
+   "src": "made"
+  }
+ ],
+ "w|救世主": [
+  {
+   "text": "延長戦で決勝点を決めた健太は、チームの救世主と呼ばれた。",
+   "en": "Kenta, who scored the winning run in extra innings, was called the team's savior.",
+   "ko": "연장전에서 결승점을 낸 겐타는 팀의 구세주라고 불렸어요.",
+   "blank": "救世主",
+   "src": "made"
+  },
+  {
+   "text": "経験豊富なエンジニアの加入は、人手不足の美咲のチームにとって救世主だった。",
+   "en": "An experienced engineer joining was a savior for Misaki's understaffed team.",
+   "ko": "경험 많은 엔지니어의 합류는 일손이 모자란 미사키의 팀에게 구세주였어요.",
+   "blank": "救世主",
    "src": "made"
   }
  ],
@@ -56211,6 +56643,22 @@
    "src": "made"
   }
  ],
+ "w|暫定": [
+  {
+   "text": "体育祭の途中で、健太のいる赤組が暫定一位に立った。",
+   "en": "Partway through sports day, Kenta's red team took the provisional lead.",
+   "ko": "체육대회 도중에 겐타가 있는 홍팀이 잠정 1위에 올랐어요.",
+   "blank": "暫定",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、本番の前に暫定版のアプリを社員に配った。",
+   "en": "Misaki distributed a provisional version of the app to employees before the official launch.",
+   "ko": "미사키는 정식 출시 전에 잠정판 앱을 직원들에게 나눠 줬어요.",
+   "blank": "暫定",
+   "src": "made"
+  }
+ ],
  "w|暮らし": [
   {
    "text": "田舎の暮らしが好き。",
@@ -56792,6 +57240,22 @@
    "en": "Misaki suggested to Yuki that they hold a class reunion with whoever wanted to help.",
    "ko": "미사키는 뜻있는 사람끼리 동창회를 열자고 유키에게 제안했어요.",
    "blank": "有志",
+   "src": "made"
+  }
+ ],
+ "w|有意義": [
+  {
+   "text": "健太は、夏休みを有意義に過ごしたと作文に書いた。",
+   "en": "Kenta wrote in his essay that he had spent his summer vacation meaningfully.",
+   "ko": "겐타는 여름방학을 알차게 보냈다고 작문에 썼어요.",
+   "blank": "有意義",
+   "src": "made"
+  },
+  {
+   "text": "ユーザーと直接話した時間は、美咲にとってとても有意義だった。",
+   "en": "The time spent talking directly with users was very worthwhile for Misaki.",
+   "ko": "사용자와 직접 이야기한 시간은 미사키에게 아주 뜻깊었어요.",
+   "blank": "有意義",
    "src": "made"
   }
  ],
@@ -61333,6 +61797,22 @@
    "src": "made"
   }
  ],
+ "w|民放": [
+  {
+   "text": "健太の学校の合唱コンクールが、地元の民放のニュースで紹介された。",
+   "en": "The choir contest at Kenta's school was featured on a local commercial TV news program.",
+   "ko": "겐타네 학교 합창 대회가 지역 민영 방송 뉴스에 소개됐어요.",
+   "blank": "民放",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社のアプリが、民放の情報番組で紹介された。",
+   "en": "Misaki's company's app was featured on a commercial TV information program.",
+   "ko": "미사키 회사의 앱이 민영 방송 정보 프로그램에 소개됐어요.",
+   "blank": "民放",
+   "src": "made"
+  }
+ ],
  "w|民族": [
   {
    "text": "どのくらいの数の民族がアメリカの人口を構成しているか正確にはだれもわかりません。",
@@ -62808,6 +63288,22 @@
    "en": "Unsure what to wear, Chihiro took out all the clothes in her closet.",
    "ko": "뭘 입고 갈지 고민돼서 치히로는 옷장의 옷을 다 꺼냈어요.",
    "blank": "洋服",
+   "src": "made"
+  }
+ ],
+ "w|洋楽": [
+  {
+   "text": "健太は、英語の勉強のために洋楽の歌詞を訳している。",
+   "en": "Kenta translates the lyrics of Western songs to study English.",
+   "ko": "겐타는 영어 공부를 위해 팝송 가사를 번역하고 있어요.",
+   "blank": "洋楽",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、洋楽を聞きながらコードを書くのが好きだ。",
+   "en": "Misaki likes writing code while listening to Western music.",
+   "ko": "미사키는 팝송을 들으면서 코드 짜는 걸 좋아해요.",
+   "blank": "洋楽",
    "src": "made"
   }
  ],
@@ -68833,6 +69329,22 @@
    "src": "made"
   }
  ],
+ "w|異様": [
+  {
+   "text": "期末テストの朝、教室は異様なほど静かだった。",
+   "en": "On the morning of the final exam, the classroom was eerily quiet.",
+   "ko": "기말고사 날 아침, 교실은 이상할 정도로 조용했어요.",
+   "blank": "異様",
+   "src": "made"
+  },
+  {
+   "text": "発表の前夜、美咲のオフィスには異様な緊張感が漂っていた。",
+   "en": "The night before the launch, an unusual tension hung in Misaki's office.",
+   "ko": "발표 전날 밤, 미사키의 사무실에는 이상한 긴장감이 감돌았어요.",
+   "blank": "異様",
+   "src": "made"
+  }
+ ],
  "w|異端": [
   {
    "text": "拓也の弁論は、法廷では異端だと言われることもある。",
@@ -70957,6 +71469,22 @@
    "src": "made"
   }
  ],
+ "w|真っ暗": [
+  {
+   "text": "部活が終わって校門を出ると、外はもう真っ暗だった。",
+   "en": "When Kenta left the school gate after club practice, it was already pitch dark outside.",
+   "ko": "동아리 활동이 끝나고 교문을 나서니 밖은 벌써 캄캄했어요.",
+   "blank": "真っ暗",
+   "src": "made"
+  },
+  {
+   "text": "停電でオフィスが真っ暗になり、美咲たちは作業を止めた。",
+   "en": "The power went out and the office went pitch dark, so Misaki and the others stopped working.",
+   "ko": "정전으로 사무실이 캄캄해져서 미사키네는 작업을 멈췄어요.",
+   "blank": "真っ暗",
+   "src": "made"
+  }
+ ],
  "w|真っ白": [
   {
    "text": "新しい部屋の壁は塗り直されて真っ白だった。",
@@ -71201,6 +71729,22 @@
    "ko": "곤히 자는 딸의 얼굴을 보면 내일도 힘내야겠다고 생각해요.",
    "blank": "眠る",
    "src": "tatoeba:1106176/mookeee en:1869498/JunjouLover"
+  }
+ ],
+ "w|眠れる": [
+  {
+   "text": "修学旅行の前の晩、健太はわくわくして眠れなかった。",
+   "en": "The night before the school trip, Kenta was so excited he couldn't sleep.",
+   "ko": "수학여행 전날 밤, 겐타는 설레서 잠을 못 잤어요.",
+   "blank": "眠れなかった",
+   "src": "made"
+  },
+  {
+   "text": "リリース前日、美咲は不安で眠れない夜を過ごした。",
+   "en": "The day before the release, Misaki spent a sleepless night from anxiety.",
+   "ko": "출시 전날 미사키는 불안해서 잠 못 드는 밤을 보냈어요.",
+   "blank": "眠れない",
+   "src": "made"
   }
  ],
  "w|眺める": [
@@ -73781,6 +74325,22 @@
    "en": "I'm in a weak position.",
    "ko": "입장이 약해.",
    "blank": "立場"
+  }
+ ],
+ "w|立法": [
+  {
+   "text": "社会科の授業で、健太は立法と行政の違いを学んだ。",
+   "en": "In social studies class, Kenta learned the difference between the legislature and the executive.",
+   "ko": "사회 시간에 겐타는 입법과 행정의 차이를 배웠어요.",
+   "blank": "立法",
+   "src": "made"
+  },
+  {
+   "text": "個人情報をめぐる立法の動きを、美咲は注意深く見ている。",
+   "en": "Misaki is closely watching legislative moves concerning personal information.",
+   "ko": "개인정보를 둘러싼 입법 움직임을 미사키는 주의 깊게 지켜보고 있어요.",
+   "blank": "立法",
+   "src": "made"
   }
  ],
  "w|立派": [
@@ -78417,6 +78977,22 @@
    "blank": "舞台"
   }
  ],
+ "w|舞踏": [
+  {
+   "text": "文化祭で、健太のクラスは昔の舞踏会を再現した。",
+   "en": "At the school festival, Kenta's class recreated an old-fashioned ball.",
+   "ko": "학교 축제에서 겐타네 반은 옛날 무도회를 재현했어요.",
+   "blank": "舞踏",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社は、舞踏の公演を予約できるアプリを作った。",
+   "en": "Misaki's company made an app for booking dance performances.",
+   "ko": "미사키의 회사는 무용 공연을 예약할 수 있는 앱을 만들었어요.",
+   "blank": "舞踏",
+   "src": "made"
+  }
+ ],
  "w|航海": [
   {
    "text": "ロビーには、昔の帆船の航海を描いた大きな絵が飾ってある。",
@@ -79919,6 +80495,22 @@
    "en": "I like this town.",
    "ko": "이 거리가 좋아.",
    "blank": "街"
+  }
+ ],
+ "w|街頭": [
+  {
+   "text": "生徒会のみんなは、駅前の街頭で募金を呼びかけた。",
+   "en": "The student council members called for donations on the street in front of the station.",
+   "ko": "학생회 사람들은 역 앞 길거리에서 모금을 호소했어요.",
+   "blank": "街頭",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、街頭で通行人にアプリの感想を聞いて回った。",
+   "en": "Misaki went around asking passersby on the street what they thought of the app.",
+   "ko": "미사키는 거리에서 행인들에게 앱에 대한 소감을 물으며 다녔어요.",
+   "blank": "街頭",
+   "src": "made"
   }
  ],
  "w|衛星": [
@@ -87973,6 +88565,22 @@
    "src": "made"
   }
  ],
+ "w|逃避": [
+  {
+   "text": "テスト勉強がいやで、健太は部屋の掃除という現実逃避を始めた。",
+   "en": "Not wanting to study for the test, Kenta escaped reality by cleaning his room.",
+   "ko": "시험공부가 싫어서 겐타는 방 청소라는 현실 도피를 시작했어요.",
+   "blank": "逃避",
+   "src": "made"
+  },
+  {
+   "text": "仕事に追われると、美咲はときどきゲームに逃避したくなる。",
+   "en": "When she's swamped with work, Misaki sometimes wants to escape into games.",
+   "ko": "일에 쫓기면 미사키는 가끔 게임으로 도피하고 싶어져요.",
+   "blank": "逃避",
+   "src": "made"
+  }
+ ],
  "w|逆": [
   {
    "text": "逆だよ、それ。",
@@ -90437,6 +91045,22 @@
    "src": "made"
   }
  ],
+ "w|部外": [
+  {
+   "text": "体育館の更衣室は、部外者の立ち入りが禁止されている。",
+   "en": "Outsiders are not allowed in the gym locker rooms.",
+   "ko": "체육관 탈의실은 외부인 출입이 금지되어 있어요.",
+   "blank": "部外",
+   "src": "made"
+  },
+  {
+   "text": "美咲の会社で開発中の新機能は、部外秘になっている。",
+   "en": "The new feature being developed at Misaki's company is confidential.",
+   "ko": "미사키의 회사에서 개발 중인 새 기능은 대외비예요.",
+   "blank": "部外",
+   "src": "made"
+  }
+ ],
  "w|部屋": [
   {
    "text": "部屋、汚いよ。",
@@ -90586,6 +91210,22 @@
    "en": "For customers far away, the shop mails assortments of baked goods.",
    "ko": "먼 곳의 손님에게는 구움 과자 세트를 우편으로 보내요.",
    "blank": "郵送",
+   "src": "made"
+  }
+ ],
+ "w|郷土": [
+  {
+   "text": "健太は、社会の自由研究で郷土の歴史を調べた。",
+   "en": "For his social studies project, Kenta researched the history of his hometown.",
+   "ko": "겐타는 사회 자유 연구로 고향의 역사를 조사했어요.",
+   "blank": "郷土",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、各地の郷土料理を紹介するアプリを企画した。",
+   "en": "Misaki planned an app that introduces local dishes from around the country.",
+   "ko": "미사키는 각 지역의 향토 요리를 소개하는 앱을 기획했어요.",
+   "blank": "郷土",
    "src": "made"
   }
  ],
