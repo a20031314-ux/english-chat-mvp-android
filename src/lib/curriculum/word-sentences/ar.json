@@ -1923,6 +1923,22 @@
    "src": "made"
   }
  ],
+ "w|أذاب": [
+  {
+   "text": "أذاب الطباخ الزبدة على النار قبل أن يضيف الثوم.",
+   "en": "The cook melted the butter on the stove before adding the garlic.",
+   "ko": "요리사는 마늘을 넣기 전에 불에 버터를 녹였어요.",
+   "blank": "أذاب",
+   "src": "made"
+  },
+  {
+   "text": "أذابت شمس الظهيرة الثلج المتراكم على شرفة رنا.",
+   "en": "The midday sun melted the snow piled up on Rana's balcony.",
+   "ko": "한낮의 해가 라나네 발코니에 쌓인 눈을 녹였어요.",
+   "blank": "أذابت",
+   "src": "made"
+  }
+ ],
  "w|أذاع": [
   {
    "text": "أذاعت المحطة المحلية تحذيرا من الأمواج العالية، فلم يسبح عمر.",
@@ -2965,6 +2981,22 @@
    "en": "Each teacher has a special teaching style.",
    "ko": "각 선생님은 특별한 교수법이 있다.",
    "blank": "أسلوب"
+  }
+ ],
+ "w|أسند": [
+  {
+   "text": "أسند سامي ظهره إلى الكرسي بعد وجبة طويلة مع عائلته.",
+   "en": "Sami leaned his back against the chair after a long meal with his family.",
+   "ko": "사미는 가족과 긴 식사를 마치고 의자에 등을 기댔어요.",
+   "blank": "أسند",
+   "src": "made"
+  },
+  {
+   "text": "أسند سكان العمارة إلى رنا مهمة جمع رسوم التنظيف.",
+   "en": "The building's residents entrusted Rana with collecting the cleaning fees.",
+   "ko": "건물 주민들은 라나에게 청소비 걷는 일을 맡겼어요.",
+   "blank": "أسند",
+   "src": "made"
   }
  ],
  "w|أسهل": [
@@ -4092,6 +4124,22 @@
    "en": "Layla came to the aid of a shepherd who fell off a rock and broke his leg.",
    "ko": "라일라는 바위에서 떨어져 다리가 부러진 양치기를 구했어요.",
    "blank": "أغاثت",
+   "src": "made"
+  }
+ ],
+ "w|أغاظ": [
+  {
+   "text": "أغاظ سامي أخاه حين أكل آخر قطعة بطاطا من صحنه.",
+   "en": "Sami annoyed his brother when he ate the last piece of potato from his plate.",
+   "ko": "사미가 동생 접시에서 마지막 감자 한 조각을 먹어서 동생을 약 올렸어요.",
+   "blank": "أغاظ",
+   "src": "made"
+  },
+  {
+   "text": "أغاظ صوت الحفر في الشقة المجاورة رنا طوال الصباح.",
+   "en": "The drilling noise in the next apartment annoyed Rana all morning.",
+   "ko": "옆집 드릴 소리가 오전 내내 라나를 짜증 나게 했어요.",
+   "blank": "أغاظ",
    "src": "made"
   }
  ],
@@ -21067,6 +21115,22 @@
    "blank": "بوب"
   }
  ],
+ "w|بودرة": [
+  {
+   "text": "رش الطباخ بودرة السكر على الفطائر قبل تقديمها.",
+   "en": "The cook sprinkled powdered sugar on the pastries before serving them.",
+   "ko": "요리사는 파이를 내기 전에 슈거 파우더를 뿌렸어요.",
+   "blank": "بودرة",
+   "src": "made"
+  },
+  {
+   "text": "نسيت رنا بودرة الخبز فلم ينتفخ الكعك.",
+   "en": "Rana forgot the baking powder, so the cake didn't rise.",
+   "ko": "라나가 베이킹파우더를 깜빡해서 케이크가 부풀지 않았어요.",
+   "blank": "بودرة",
+   "src": "made"
+  }
+ ],
  "w|بورصة": [
   {
    "text": "يتابع حسن أخبار البورصة كل صباح للصفحة الاقتصادية.",
@@ -22043,6 +22107,22 @@
    "src": "made"
   }
  ],
+ "w|تبرير": [
+  {
+   "text": "لم يجد النادل تبريرا لتأخر الطعام ساعة كاملة.",
+   "en": "The waiter couldn't find an excuse for the food being a whole hour late.",
+   "ko": "종업원은 음식이 한 시간이나 늦은 것에 대해 변명할 말을 찾지 못했어요.",
+   "blank": "تبريرا",
+   "src": "made"
+  },
+  {
+   "text": "قدم حارس العمارة تبريرا غريبا لانقطاع الماء.",
+   "en": "The building's caretaker gave a strange excuse for the water cut.",
+   "ko": "건물 관리인은 단수에 대해 이상한 변명을 했어요.",
+   "blank": "تبريرا",
+   "src": "made"
+  }
+ ],
  "w|تبع": [
   {
    "text": "تبع الكلب صاحبه في كل مكان.",
@@ -22227,6 +22307,22 @@
    "en": "Tracking the car was difficult.",
    "ko": "차를 추적하는 게 힘들었어.",
    "blank": "تتبع"
+  }
+ ],
+ "w|تتبيلة": [
+  {
+   "text": "سأل سامي الطباخ عن سر تتبيلة الدجاج.",
+   "en": "Sami asked the cook about the secret of the chicken marinade.",
+   "ko": "사미는 요리사에게 닭고기 양념의 비결을 물었어요.",
+   "blank": "تتبيلة",
+   "src": "made"
+  },
+  {
+   "text": "نقعت رنا السمك في تتبيلة من الليمون والثوم.",
+   "en": "Rana soaked the fish in a lemon and garlic marinade.",
+   "ko": "라나는 생선을 레몬과 마늘 양념에 재웠어요.",
+   "blank": "تتبيلة",
+   "src": "made"
   }
  ],
  "w|تثاءب": [
@@ -24990,6 +25086,22 @@
    "en": "Network interference made the remote meeting stop twice.",
    "ko": "네트워크 장애 때문에 원격 회의가 두 번 끊겼어요.",
    "blank": "تشويش",
+   "src": "made"
+  }
+ ],
+ "w|تصادم": [
+  {
+   "text": "تصادم نادلان عند باب المطبخ فسقطت الصحون على الأرض أمام سامي.",
+   "en": "Two waiters collided at the kitchen door and the plates fell on the floor in front of Sami.",
+   "ko": "종업원 둘이 주방 문 앞에서 부딪쳐서 사미 앞에서 접시가 바닥에 떨어졌어요.",
+   "blank": "تصادم",
+   "src": "made"
+  },
+  {
+   "text": "تصادمت عربتا تسوق في مدخل العمارة حين خرجت رنا مسرعة.",
+   "en": "Two shopping carts collided in the building entrance when Rana rushed out.",
+   "ko": "라나가 서둘러 나가다가 건물 입구에서 쇼핑 카트 두 대가 부딪쳤어요.",
+   "blank": "تصادمت",
    "src": "made"
   }
  ],
@@ -29384,6 +29496,22 @@
    "en": "Rana has been in charge of the perfume department since last month.",
    "ko": "라나는 지난달부터 향수 코너를 맡고 있어요.",
    "blank": "تولت",
+   "src": "made"
+  }
+ ],
+ "w|تونة": [
+  {
+   "text": "طلبت زوجة سامي سلطة تونة خفيفة.",
+   "en": "Sami's wife ordered a light tuna salad.",
+   "ko": "사미의 아내는 가벼운 참치 샐러드를 시켰어요.",
+   "blank": "تونة",
+   "src": "made"
+  },
+  {
+   "text": "فتحت رنا علبة تونة وأطعمت منها قطة العمارة.",
+   "en": "Rana opened a can of tuna and fed some to the building's cat.",
+   "ko": "라나는 참치 캔을 따서 건물 고양이에게 조금 줬어요.",
+   "blank": "تونة",
    "src": "made"
   }
  ],
@@ -35009,6 +35137,22 @@
    "blank": "حشرة"
   }
  ],
+ "w|حشوة": [
+  {
+   "text": "أحب سامي حشوة الفطائر بالسبانخ والجبن.",
+   "en": "Sami loved the spinach and cheese filling of the pastries.",
+   "ko": "사미는 시금치와 치즈가 든 파이 속이 좋았어요.",
+   "blank": "حشوة",
+   "src": "made"
+  },
+  {
+   "text": "جربت رنا حشوة جديدة للكوسا من الأرز واللحم.",
+   "en": "Rana tried a new rice and meat filling for the zucchini.",
+   "ko": "라나는 쌀과 고기로 애호박 속을 새로 만들어 봤어요.",
+   "blank": "حشوة",
+   "src": "made"
+  }
+ ],
  "w|حشيش": [
   {
    "text": "أكل الأرنب كثيرا من الحشيش الرطب فأصيب بألم في بطنه.",
@@ -40127,6 +40271,22 @@
    "src": "made"
   }
  ],
+ "w|دسم": [
+  {
+   "text": "كان الطبق دسما جدا فلم يكمله سامي.",
+   "en": "The dish was very greasy, so Sami didn't finish it.",
+   "ko": "요리가 너무 기름져서 사미는 다 먹지 못했어요.",
+   "blank": "دسما",
+   "src": "made"
+  },
+  {
+   "text": "تتجنب رنا الطعام الدسم منذ أن نصحها الطبيب.",
+   "en": "Rana has avoided fatty food since the doctor advised her.",
+   "ko": "라나는 의사의 조언을 들은 뒤로 기름진 음식을 피해요.",
+   "blank": "الدسم",
+   "src": "made"
+  }
+ ],
  "w|دش": [
   {
    "text": "أخذت دش سريع بعد العودة من العمل.",
@@ -41221,6 +41381,22 @@
    "en": "Children study information about the religion of Islam at school.",
    "ko": "아이들은 학교에서 이슬람 종교에 대한 정보를 배운다.",
    "blank": "دين"
+  }
+ ],
+ "w|ديناصور": [
+  {
+   "text": "طلب ابن سامي طبق الأطفال لأن عليه صورة ديناصور كبير.",
+   "en": "Sami's son ordered the kids' plate because it had a picture of a big dinosaur on it.",
+   "ko": "사미의 아들은 큰 공룡 그림이 그려져 있어서 어린이 메뉴를 시켰어요.",
+   "blank": "ديناصور",
+   "src": "made"
+  },
+  {
+   "text": "علقت رنا ملصق ديناصور أخضر على باب غرفة ابنها.",
+   "en": "Rana stuck a green dinosaur sticker on her son's bedroom door.",
+   "ko": "라나는 아들 방문에 초록색 공룡 스티커를 붙였어요.",
+   "blank": "ديناصور",
+   "src": "made"
   }
  ],
  "w|ديني": [
@@ -42645,6 +42821,22 @@
    "blank": "رتب"
   }
  ],
+ "w|رتق": [
+  {
+   "text": "رتقت أم سامي ثقبا في مفرش الطاولة قبل وصول الضيوف.",
+   "en": "Sami's mother mended a hole in the tablecloth before the guests arrived.",
+   "ko": "사미의 어머니는 손님들이 오기 전에 식탁보의 구멍을 꿰맸어요.",
+   "blank": "رتقت",
+   "src": "made"
+  },
+  {
+   "text": "رتقت رنا جوارب ابنها وهي تشاهد التلفاز.",
+   "en": "Rana darned her son's socks while watching TV.",
+   "ko": "라나는 텔레비전을 보면서 아들 양말을 꿰맸어요.",
+   "blank": "رتقت",
+   "src": "made"
+  }
+ ],
  "w|رتيب": [
   {
    "text": "صار عمل أحمد في البيت القديم رتيبا: كشط ودهان كل يوم.",
@@ -43819,6 +44011,22 @@
    "blank": "رقته"
   }
  ],
+ "w|رقد": [
+  {
+   "text": "رقد الطفل الصغير في حضن أمه بعد العشاء في المطعم.",
+   "en": "The little child lay asleep in his mother's lap after dinner at the restaurant.",
+   "ko": "꼬마는 식당에서 저녁을 먹고 엄마 품에 누워 잠들었어요.",
+   "blank": "رقد",
+   "src": "made"
+  },
+  {
+   "text": "رقدت جدة رنا في الفراش أسبوعا بسبب الزكام.",
+   "en": "Rana's grandmother lay in bed for a week with a cold.",
+   "ko": "라나의 할머니는 감기로 일주일 동안 누워 계셨어요.",
+   "blank": "رقدت",
+   "src": "made"
+  }
+ ],
  "w|رقص": [
   {
    "text": "رقص الجميع في الحفلة.",
@@ -44269,6 +44477,22 @@
    "en": "Everyone celebrates the arrival of Ramadan.",
    "ko": "모두가 라마단의 시작을 축하해요.",
    "blank": "رمضان"
+  }
+ ],
+ "w|رمق": [
+  {
+   "text": "رمق سامي صحن الحلوى على الطاولة المجاورة بنظرة طويلة.",
+   "en": "Sami cast a long look at the dessert plate on the next table.",
+   "ko": "사미는 옆 테이블의 디저트 접시를 한참 바라봤어요.",
+   "blank": "رمق",
+   "src": "made"
+  },
+  {
+   "text": "رمقت رنا الجار الذي ترك أكياس القمامة على الدرج بنظرة غاضبة.",
+   "en": "Rana gave an angry look to the neighbor who left trash bags on the stairs.",
+   "ko": "라나는 계단에 쓰레기봉투를 둔 이웃을 화난 눈으로 쳐다봤어요.",
+   "blank": "رمقت",
+   "src": "made"
   }
  ],
  "w|رمل": [
@@ -45397,6 +45621,22 @@
    "en": "I attended my friend's wedding in a big hall.",
    "ko": "나는 커다란 홀에서 친구의 결혼식에 참석했다.",
    "blank": "زفاف"
+  }
+ ],
+ "w|زفر": [
+  {
+   "text": "زفر سامي بارتياح حين وصل الطعام أخيرا.",
+   "en": "Sami let out a sigh of relief when the food finally arrived.",
+   "ko": "음식이 드디어 나오자 사미는 안도의 한숨을 내쉬었어요.",
+   "blank": "زفر",
+   "src": "made"
+  },
+  {
+   "text": "زفرت رنا بتعب بعد أن صعدت الدرج إلى الطابق السادس.",
+   "en": "Rana sighed wearily after climbing the stairs to the sixth floor.",
+   "ko": "라나는 육 층까지 계단을 올라간 뒤 지쳐서 한숨을 쉬었어요.",
+   "blank": "زفرت",
+   "src": "made"
   }
  ],
  "w|زقاق": [
@@ -48429,6 +48669,22 @@
    "src": "made"
   }
  ],
+ "w|سمبوسة": [
+  {
+   "text": "أكلت ابنة سامي سمبوسة بالجبن قبل وصول الطبق الرئيسي.",
+   "en": "Sami's daughter ate a cheese samosa before the main dish arrived.",
+   "ko": "사미의 딸은 메인 요리가 나오기 전에 치즈 삼부사를 먹었어요.",
+   "blank": "سمبوسة",
+   "src": "made"
+  },
+  {
+   "text": "وزعت رنا السمبوسة على الجيران في رمضان.",
+   "en": "Rana handed out samosas to the neighbors during Ramadan.",
+   "ko": "라나는 라마단에 이웃들에게 삼부사를 나눠 줬어요.",
+   "blank": "السمبوسة",
+   "src": "made"
+  }
+ ],
  "w|سمة": [
   {
    "text": "الهدوء سمة واضحة في جار حسن الجديد.",
@@ -48662,6 +48918,22 @@
    "en": "Huda leaned her back against a tree trunk to rest.",
    "ko": "후다는 쉬려고 나무 줄기에 등을 기댔어요.",
    "blank": "سندت",
+   "src": "made"
+  }
+ ],
+ "w|سندويش": [
+  {
+   "text": "طلب سامي سندويش دجاج لابنه الصغير.",
+   "en": "Sami ordered a chicken sandwich for his little son.",
+   "ko": "사미는 어린 아들을 위해 치킨 샌드위치를 시켰어요.",
+   "blank": "سندويش",
+   "src": "made"
+  },
+  {
+   "text": "أعدت رنا سندويش جبن لابنها قبل أن ينزل إلى الحافلة.",
+   "en": "Rana made a cheese sandwich for her son before he went down to the bus.",
+   "ko": "라나는 아들이 버스 타러 내려가기 전에 치즈 샌드위치를 만들어 줬어요.",
+   "blank": "سندويش",
    "src": "made"
   }
  ],
@@ -51617,6 +51889,22 @@
    "blank": "شهريا"
   }
  ],
+ "w|شهق": [
+  {
+   "text": "شهق ابن سامي حين رأى حجم البيتزا.",
+   "en": "Sami's son gasped when he saw the size of the pizza.",
+   "ko": "사미의 아들은 피자 크기를 보고 깜짝 놀라 숨을 들이켰어요.",
+   "blank": "شهق",
+   "src": "made"
+  },
+  {
+   "text": "شهقت رنا عندما رأت الماء يتسرب من سقف المطبخ.",
+   "en": "Rana gasped when she saw water leaking from the kitchen ceiling.",
+   "ko": "라나는 부엌 천장에서 물이 새는 걸 보고 숨을 헉 들이켰어요.",
+   "blank": "شهقت",
+   "src": "made"
+  }
+ ],
  "w|شهم": [
   {
    "text": "ساعد زميل شهم حسنا في حمل صناديقه إلى المكتب.",
@@ -51645,6 +51933,22 @@
    "en": "The desire for money can sometimes corrupt a person.",
    "ko": "돈에 대한 욕망은 때때로 사람을 망칠 수 있다.",
    "blank": "شهوة"
+  }
+ ],
+ "w|شهي": [
+  {
+   "text": "طلب سامي طبقا شهيا من المشاوي للعائلة كلها.",
+   "en": "Sami ordered a delicious plate of grilled meat for the whole family.",
+   "ko": "사미는 온 가족을 위해 맛있는 구이 한 접시를 시켰어요.",
+   "blank": "شهيا",
+   "src": "made"
+  },
+  {
+   "text": "فاحت من شقة الجيران رائحة شهية جعلت رنا تشعر بالجوع.",
+   "en": "A delicious smell came from the neighbors' apartment and made Rana feel hungry.",
+   "ko": "이웃집에서 맛있는 냄새가 풍겨 와서 라나는 배가 고파졌어요.",
+   "blank": "شهية",
+   "src": "made"
   }
  ],
  "w|شهية": [
@@ -53154,6 +53458,22 @@
    "en": "From her window Sara can see a willow tree in the building's courtyard.",
    "ko": "사라는 창문으로 아파트 마당에 있는 버드나무를 볼 수 있어요.",
    "blank": "صفصاف",
+   "src": "made"
+  }
+ ],
+ "w|صفع": [
+  {
+   "text": "صفع الهواء البارد وجه سامي حين فتح باب المطعم.",
+   "en": "The cold air slapped Sami's face when he opened the restaurant door.",
+   "ko": "사미가 식당 문을 열자 찬 바람이 얼굴을 때렸어요.",
+   "blank": "صفع",
+   "src": "made"
+  },
+  {
+   "text": "صفعت الريح باب الشرفة بقوة فاستيقظت رنا.",
+   "en": "The wind slammed the balcony door hard and Rana woke up.",
+   "ko": "바람이 발코니 문을 세게 때려서 라나가 잠에서 깼어요.",
+   "blank": "صفعت",
    "src": "made"
   }
  ],
@@ -55305,6 +55625,22 @@
    "blank": "طبيب"
   }
  ],
+ "w|طبيخ": [
+  {
+   "text": "يذكر طبيخ هذا المطعم سامي ببيت أمه.",
+   "en": "The home cooking at this restaurant reminds Sami of his mother's house.",
+   "ko": "이 식당 음식은 사미에게 어머니 집을 떠올리게 해요.",
+   "blank": "طبيخ",
+   "src": "made"
+  },
+  {
+   "text": "تقول رنا إن رائحة الطبيخ تفوح من كل الشقق وقت الغداء.",
+   "en": "Rana says the smell of cooking wafts from every apartment at lunchtime.",
+   "ko": "라나는 점심때면 집집마다 음식 냄새가 풍긴다고 말해요.",
+   "blank": "الطبيخ",
+   "src": "made"
+  }
+ ],
  "w|طبيعة": [
   {
    "text": "طبيعة بلدي جميلة جداً.",
@@ -55455,6 +55791,22 @@
    "en": "The employee was suddenly dismissed.",
    "ko": "직원이 갑자기 해고됐어.",
    "blank": "طرد"
+  }
+ ],
+ "w|طرز": [
+  {
+   "text": "طرزت جدة سامي مفارش الطاولات في المطعم بيدها.",
+   "en": "Sami's grandmother embroidered the restaurant's tablecloths by hand.",
+   "ko": "사미의 할머니가 식당 식탁보에 손수 수를 놓았어요.",
+   "blank": "طرزت",
+   "src": "made"
+  },
+  {
+   "text": "طرزت رنا وسادة صغيرة هدية لجارتها العجوز.",
+   "en": "Rana embroidered a small cushion as a gift for her elderly neighbor.",
+   "ko": "라나는 나이 든 이웃에게 줄 작은 쿠션에 수를 놓았어요.",
+   "blank": "طرزت",
+   "src": "made"
   }
  ],
  "w|طرف": [
@@ -57483,6 +57835,38 @@
    "en": "This animal is very strange in its appearance.",
    "ko": "이 동물은 생김새가 아주 이상해.",
    "blank": "عجيب"
+  }
+ ],
+ "w|عجين": [
+  {
+   "text": "يفرد الطباخ العجين أمام الزبائن ليصنع الخبز.",
+   "en": "The cook rolls out the dough in front of the customers to make bread.",
+   "ko": "요리사는 손님들 앞에서 반죽을 펴서 빵을 만들어요.",
+   "blank": "العجين",
+   "src": "made"
+  },
+  {
+   "text": "تركت رنا العجين يختمر قرب النافذة المشمسة.",
+   "en": "Rana left the dough to rise near the sunny window.",
+   "ko": "라나는 햇빛 드는 창가에 반죽을 두어 부풀게 했어요.",
+   "blank": "العجين",
+   "src": "made"
+  }
+ ],
+ "w|عجينة": [
+  {
+   "text": "تعلم ابن سامي من الطباخ كيف يشكل عجينة البيتزا.",
+   "en": "Sami's son learned from the cook how to shape pizza dough.",
+   "ko": "사미의 아들은 요리사에게 피자 반죽 모양 잡는 법을 배웠어요.",
+   "blank": "عجينة",
+   "src": "made"
+  },
+  {
+   "text": "ترك ابن رنا عجينة اللعب على الدرج فلصقت بحذاء الجار.",
+   "en": "Rana's son left his play dough on the stairs and it stuck to the neighbor's shoe.",
+   "ko": "라나의 아들이 계단에 놀이 점토를 두고 가서 이웃 신발에 붙었어요.",
+   "blank": "عجينة",
+   "src": "made"
   }
  ],
  "w|عد": [
@@ -62195,6 +62579,22 @@
    "blank": "فتاة"
   }
  ],
+ "w|فتات": [
+  {
+   "text": "نظف النادل فتات الخبز عن الطاولة بعد أن غادرت عائلة سامي.",
+   "en": "The waiter cleaned the bread crumbs off the table after Sami's family left.",
+   "ko": "사미 가족이 떠난 뒤 종업원이 식탁의 빵 부스러기를 치웠어요.",
+   "blank": "فتات",
+   "src": "made"
+  },
+  {
+   "text": "رمت رنا فتات الخبز للعصافير على الشرفة.",
+   "en": "Rana threw bread crumbs to the sparrows on the balcony.",
+   "ko": "라나는 발코니에서 참새들에게 빵 부스러기를 던져 줬어요.",
+   "blank": "فتات",
+   "src": "made"
+  }
+ ],
  "w|فتة": [
   {
    "text": "أكل علي صحن فتة بالحمص في مطعم صغير داخل السوق.",
@@ -64829,6 +65229,22 @@
    "en": "What did the teacher say in class today?",
    "ko": "오늘 수업에서 선생님이 뭐라고 하셨어?",
    "blank": "قال"
+  }
+ ],
+ "w|قالب": [
+  {
+   "text": "أحضر النادل قالب حلوى لعيد ميلاد ابنة سامي.",
+   "en": "The waiter brought a cake for Sami's daughter's birthday.",
+   "ko": "종업원이 사미 딸의 생일 케이크를 가져왔어요.",
+   "blank": "قالب",
+   "src": "made"
+  },
+  {
+   "text": "خبزت رنا قالب كعك وأخذته إلى جارتها الجديدة.",
+   "en": "Rana baked a cake and took it to her new neighbor.",
+   "ko": "라나는 케이크를 구워 새 이웃에게 가져갔어요.",
+   "blank": "قالب",
+   "src": "made"
   }
  ],
  "w|قام": [
@@ -67775,6 +68191,22 @@
    "blank": "كافحت"
   }
  ],
+ "w|كاكاو": [
+  {
+   "text": "طلب ابن سامي كوب كاكاو ساخن بعد الطعام.",
+   "en": "Sami's son ordered a cup of hot cocoa after the meal.",
+   "ko": "사미의 아들은 식사 후에 따뜻한 코코아 한 잔을 시켰어요.",
+   "blank": "كاكاو",
+   "src": "made"
+  },
+  {
+   "text": "نفد الكاكاو من مطبخ رنا فاستعارت بعضه من جارتها.",
+   "en": "Rana's kitchen ran out of cocoa, so she borrowed some from her neighbor.",
+   "ko": "라나네 부엌에 코코아가 떨어져서 이웃에게 조금 빌렸어요.",
+   "blank": "الكاكاو",
+   "src": "made"
+  }
+ ],
  "w|كامل": [
   {
    "text": "قرأت الكتاب كامل في يوم واحد.",
@@ -68709,6 +69141,22 @@
    "en": "I feel proud because of my father's generosity.",
    "ko": "아버지의 관대함 때문에 나는 자랑스럽다.",
    "blank": "كرم"
+  }
+ ],
+ "w|كرنب": [
+  {
+   "text": "قدم المطعم سلطة كرنب بالليمون مع المشاوي.",
+   "en": "The restaurant served a lemon cabbage salad with the grilled meat.",
+   "ko": "식당은 구이와 함께 레몬 양배추 샐러드를 내왔어요.",
+   "blank": "كرنب",
+   "src": "made"
+  },
+  {
+   "text": "طبخت رنا محشي الكرنب لعائلتها يوم الجمعة.",
+   "en": "Rana cooked stuffed cabbage for her family on Friday.",
+   "ko": "라나는 금요일에 가족을 위해 양배추 쌈 요리를 만들었어요.",
+   "blank": "الكرنب",
+   "src": "made"
   }
  ],
  "w|كره": [
@@ -71169,6 +71617,22 @@
    "blank": "لطف"
   }
  ],
+ "w|لطم": [
+  {
+   "text": "لطم الطفل الطاولة بيده الصغيرة فانسكب العصير على ثوب سامي.",
+   "en": "The child slapped the table with his little hand and the juice spilled on Sami's clothes.",
+   "ko": "아이가 작은 손으로 식탁을 내리쳐서 주스가 사미 옷에 쏟아졌어요.",
+   "blank": "لطم",
+   "src": "made"
+  },
+  {
+   "text": "لطمت جارة رنا وجهها حين رأت الماء يغرق شقتها.",
+   "en": "Rana's neighbor struck her own face when she saw water flooding her apartment.",
+   "ko": "라나의 이웃은 물이 집을 덮친 걸 보고 얼굴을 감싸 쥐며 탄식했어요.",
+   "blank": "لطمت",
+   "src": "made"
+  }
+ ],
  "w|لطيف": [
   {
    "text": "هذا الطفل لطيف جدا.",
@@ -72141,6 +72605,22 @@
    "en": "Lemon juice is very refreshing.",
    "ko": "레몬 주스가 정말 상쾌해.",
    "blank": "ليمون"
+  }
+ ],
+ "w|ليمونادة": [
+  {
+   "text": "طلب أطفال سامي ليمونادة بالنعناع مع الغداء.",
+   "en": "Sami's children ordered mint lemonade with lunch.",
+   "ko": "사미의 아이들은 점심과 함께 민트 레모네이드를 시켰어요.",
+   "blank": "ليمونادة",
+   "src": "made"
+  },
+  {
+   "text": "قدمت رنا كأس ليمونادة باردة للعامل الذي أصلح المصعد.",
+   "en": "Rana offered a glass of cold lemonade to the worker who fixed the elevator.",
+   "ko": "라나는 엘리베이터를 고친 기사에게 시원한 레모네이드 한 잔을 대접했어요.",
+   "blank": "ليمونادة",
+   "src": "made"
   }
  ],
  "w|لين": [
@@ -75551,6 +76031,22 @@
    "src": "made"
   }
  ],
+ "w|مجفف": [
+  {
+   "text": "يزين الطباخ الحلوى بالمشمش المجفف.",
+   "en": "The cook decorates the dessert with dried apricots.",
+   "ko": "요리사는 디저트를 말린 살구로 장식해요.",
+   "blank": "المجفف",
+   "src": "made"
+  },
+  {
+   "text": "أهدت جارة رنا لها كيسا من التين المجفف من قريتها.",
+   "en": "Rana's neighbor gave her a bag of dried figs from her village.",
+   "ko": "라나의 이웃은 고향 마을에서 가져온 말린 무화과 한 봉지를 라나에게 선물했어요.",
+   "blank": "المجفف",
+   "src": "made"
+  }
+ ],
  "w|مجلة": [
   {
    "text": "أحب قراءة مجلة العلوم كل شهر.",
@@ -75591,6 +76087,22 @@
    "en": "The student council will organize a party soon.",
    "ko": "학생회가 곧 파티를 열 거예요.",
    "blank": "مجلس"
+  }
+ ],
+ "w|مجمد": [
+  {
+   "text": "أكد صاحب المطعم لسامي أن السمك طازج وليس مجمدا.",
+   "en": "The restaurant owner assured Sami that the fish was fresh, not frozen.",
+   "ko": "식당 주인은 사미에게 생선이 냉동이 아니라 신선하다고 장담했어요.",
+   "blank": "مجمدا",
+   "src": "made"
+  },
+  {
+   "text": "أخرجت رنا الدجاج المجمد من الثلاجة صباحا.",
+   "en": "Rana took the frozen chicken out of the freezer in the morning.",
+   "ko": "라나는 아침에 냉동 닭고기를 냉동실에서 꺼냈어요.",
+   "blank": "المجمد",
+   "src": "made"
   }
  ],
  "w|مجمع": [
@@ -76979,6 +77491,22 @@
    "en": "I am looking for a loyal partner in my life.",
    "ko": "인생에서 مخلص한 동반자를 찾고 있어.",
    "blank": "مخلص"
+  }
+ ],
+ "w|مخلل": [
+  {
+   "text": "قدم النادل لسامي صحنا صغيرا من الخيار المخلل مع الخبز.",
+   "en": "The waiter served Sami a small plate of pickled cucumbers with the bread.",
+   "ko": "종업원이 사미에게 빵과 함께 오이 피클 한 접시를 내왔어요.",
+   "blank": "المخلل",
+   "src": "made"
+  },
+  {
+   "text": "فتحت رنا مرطبان لفت مخلل أهدته إياها جارتها.",
+   "en": "Rana opened a jar of pickled turnips that her neighbor had given her.",
+   "ko": "라나는 이웃이 선물한 순무 절임 병을 열었어요.",
+   "blank": "مخلل",
+   "src": "made"
   }
  ],
  "w|مخلوق": [
@@ -83519,6 +84047,22 @@
    "blank": "المقبل"
   }
  ],
+ "w|مقبلات": [
+  {
+   "text": "طلب سامي مقبلات كثيرة حتى امتلأت الطاولة.",
+   "en": "Sami ordered so many appetizers that the table filled up.",
+   "ko": "사미가 전채 요리를 너무 많이 시켜서 식탁이 꽉 찼어요.",
+   "blank": "مقبلات",
+   "src": "made"
+  },
+  {
+   "text": "حضرت رنا مقبلات بسيطة لاجتماع الجيران على السطح.",
+   "en": "Rana prepared simple appetizers for the neighbors' gathering on the roof.",
+   "ko": "라나는 옥상 이웃 모임을 위해 간단한 전채 요리를 준비했어요.",
+   "blank": "مقبلات",
+   "src": "made"
+  }
+ ],
  "w|مقبول": [
   {
    "text": "عرضك مقبول وسنبدأ العمل قريبًا.",
@@ -85663,6 +86207,22 @@
    "src": "made"
   }
  ],
+ "w|مناقيش": [
+  {
+   "text": "يقدم المطعم مناقيش الزعتر صباح كل جمعة.",
+   "en": "The restaurant serves za'atar manakish every Friday morning.",
+   "ko": "그 식당은 금요일 아침마다 자타르 마나키시를 내요.",
+   "blank": "مناقيش",
+   "src": "made"
+  },
+  {
+   "text": "اشترت رنا مناقيش ساخنة من الفرن أسفل العمارة.",
+   "en": "Rana bought hot manakish from the bakery at the bottom of the building.",
+   "ko": "라나는 건물 아래 빵집에서 따끈한 마나키시를 샀어요.",
+   "blank": "مناقيش",
+   "src": "made"
+  }
+ ],
  "w|مناوبة": [
   {
    "text": "بدأ أحمد مناوبة الليل في غرفة الأخبار عند العاشرة.",
@@ -85676,6 +86236,22 @@
    "en": "Mariam wrote her letter at night after a long shift at the bakery.",
    "ko": "마리암은 빵집에서 긴 근무를 마치고 밤에 편지를 썼어요.",
    "blank": "مناوبة",
+   "src": "made"
+  }
+ ],
+ "w|مناورة": [
+  {
+   "text": "احتاج سامي إلى مناورة طويلة ليركن سيارته أمام المطعم.",
+   "en": "Sami needed a long maneuver to park his car in front of the restaurant.",
+   "ko": "사미는 식당 앞에 차를 대려고 한참 이리저리 움직여야 했어요.",
+   "blank": "مناورة",
+   "src": "made"
+  },
+  {
+   "text": "نجحت رنا في إدخال الكنبة إلى المصعد بعد مناورة صعبة.",
+   "en": "Rana managed to get the sofa into the elevator after a difficult maneuver.",
+   "ko": "라나는 힘들게 이리저리 돌린 끝에 소파를 엘리베이터에 넣었어요.",
+   "blank": "مناورة",
    "src": "made"
   }
  ],
@@ -90959,6 +91535,22 @@
    "blank": "نقر"
   }
  ],
+ "w|نقش": [
+  {
+   "text": "نقش صاحب المطعم اسم العائلة على لوح خشبي فوق الباب.",
+   "en": "The restaurant owner carved the family name on a wooden board above the door.",
+   "ko": "식당 주인은 문 위 나무판에 가족 이름을 새겼어요.",
+   "blank": "نقش",
+   "src": "made"
+  },
+  {
+   "text": "نقشت رنا الحرف الأول من اسمها على صندوق البريد.",
+   "en": "Rana engraved the first letter of her name on the mailbox.",
+   "ko": "라나는 우편함에 자기 이름 첫 글자를 새겼어요.",
+   "blank": "نقشت",
+   "src": "made"
+  }
+ ],
  "w|نقص": [
   {
    "text": "نقص الماء في الزجاجة.",
@@ -91137,6 +91729,22 @@
    "en": "The police captain led the investigation.",
    "ko": "경찰 대위가 수사를 지휘했어요.",
    "blank": "نقيب"
+  }
+ ],
+ "w|نقيع": [
+  {
+   "text": "شرب سامي كوبا من نقيع الكركديه البارد.",
+   "en": "Sami drank a glass of cold hibiscus infusion.",
+   "ko": "사미는 차가운 히비스커스 차 한 잔을 마셨어요.",
+   "blank": "نقيع",
+   "src": "made"
+  },
+  {
+   "text": "تشرب رنا نقيع البابونج كل ليلة قبل النوم.",
+   "en": "Rana drinks chamomile infusion every night before bed.",
+   "ko": "라나는 매일 밤 자기 전에 캐모마일 차를 마셔요.",
+   "blank": "نقيع",
+   "src": "made"
   }
  ],
  "w|نكتة": [
@@ -92315,6 +92923,22 @@
    "en": "I learned a lot from yesterday's defeat.",
    "ko": "어제의 패배에서 많은 것을 배웠어.",
    "blank": "هزيمة"
+  }
+ ],
+ "w|هش": [
+  {
+   "text": "كان خبز المطعم هشا وساخنا كما يحبه سامي.",
+   "en": "The restaurant's bread was crisp and hot, just how Sami likes it.",
+   "ko": "식당 빵은 사미가 좋아하는 대로 바삭하고 따뜻했어요.",
+   "blank": "هشا",
+   "src": "made"
+  },
+  {
+   "text": "صنعت رنا بسكويتا هشا لأطفال العمارة.",
+   "en": "Rana made crumbly biscuits for the children in the building.",
+   "ko": "라나는 건물 아이들을 위해 바삭한 비스킷을 만들었어요.",
+   "blank": "هشا",
+   "src": "made"
   }
  ],
  "w|هشاشة": [
@@ -95422,6 +96046,22 @@
    "en": "A small yacht passed slowly on the wide river while Nour watched from the bank.",
    "ko": "작은 요트가 넓은 강을 천천히 지나갔고 누르는 강가에서 지켜봤어요.",
    "blank": "يخت",
+   "src": "made"
+  }
+ ],
+ "w|يخنة": [
+  {
+   "text": "كانت يخنة اللحم أشهى طبق تذوقه سامي في ذلك المطعم.",
+   "en": "The meat stew was the tastiest dish Sami tried at that restaurant.",
+   "ko": "고기 스튜는 사미가 그 식당에서 먹어 본 가장 맛있는 요리였어요.",
+   "blank": "يخنة",
+   "src": "made"
+  },
+  {
+   "text": "طبخت رنا يخنة خضار وأرسلت منها صحنا لجارها المريض.",
+   "en": "Rana cooked a vegetable stew and sent a plate of it to her sick neighbor.",
+   "ko": "라나는 채소 스튜를 끓여서 아픈 이웃에게 한 접시 보냈어요.",
+   "blank": "يخنة",
    "src": "made"
   }
  ],

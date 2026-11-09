@@ -707,6 +707,22 @@
    "src": "tatoeba:7882124/marafon en:2751512/sundown"
   }
  ],
+ "w|альтернатива": [
+  {
+   "text": "Для гостей, которые не едят мясо, Сергей придумал вкусную альтернативу котлетам.",
+   "en": "For guests who don't eat meat, Sergei came up with a tasty alternative to cutlets.",
+   "ko": "세르게이는 고기를 안 먹는 손님을 위해 커틀릿 대신 맛있는 대안을 생각해 냈어요.",
+   "blank": "альтернативу",
+   "src": "made"
+  },
+  {
+   "text": "Для Марии барахолка — хорошая альтернатива дорогим магазинам.",
+   "en": "For Maria the flea market is a good alternative to expensive shops.",
+   "ko": "마리야에게 벼룩시장은 비싼 가게를 대신할 좋은 곳이에요.",
+   "blank": "альтернатива",
+   "src": "made"
+  }
+ ],
  "w|альянс": [
   {
    "text": "Иван написал реферат о военном альянсе европейских стран.",
@@ -2723,6 +2739,22 @@
    "src": "made"
   }
  ],
+ "w|биология": [
+  {
+   "text": "Сергей вспоминает школьную биологию, когда разделывает рыбу.",
+   "en": "Sergei remembers school biology when he guts a fish.",
+   "ko": "세르게이는 생선을 손질할 때 학교에서 배운 생물학이 떠올라요.",
+   "blank": "биологию",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила старинный атлас по биологии с рисунками жуков.",
+   "en": "Maria bought an antique biology atlas with drawings of beetles.",
+   "ko": "마리야는 딱정벌레 그림이 든 옛 생물학 도감을 샀어요.",
+   "blank": "биологии",
+   "src": "made"
+  }
+ ],
  "w|битва": [
   {
    "text": "Битва была выиграна ценой многих жизней.",
@@ -3196,6 +3228,22 @@
    "en": "The pool Natalia goes to was built in the new block of the sports centre.",
    "ko": "나탈리야가 다니는 수영장은 스포츠 센터 신관 동에 지어졌어요.",
    "blank": "блоке",
+   "src": "made"
+  }
+ ],
+ "w|блокнот": [
+  {
+   "text": "Сергей записывает новые рецепты в потрёпанный блокнот.",
+   "en": "Sergei writes his new recipes down in a battered notebook.",
+   "ko": "세르게이는 새 조리법을 낡은 수첩에 적어요.",
+   "blank": "блокнот",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила кожаный блокнот с пожелтевшими страницами.",
+   "en": "Maria bought a leather notebook with yellowed pages.",
+   "ko": "마리야는 누렇게 바랜 종이가 든 가죽 수첩을 샀어요.",
+   "blank": "блокнот",
    "src": "made"
   }
  ],
@@ -3699,6 +3747,22 @@
    "src": "tatoeba:3367006/odexed en:3201671/CK"
   }
  ],
+ "w|бонус": [
+  {
+   "text": "За удачный месяц Сергей получил хороший бонус.",
+   "en": "Sergei got a nice bonus for a good month.",
+   "ko": "세르게이는 실적이 좋은 달이라 두둑한 보너스를 받았어요.",
+   "blank": "бонус",
+   "src": "made"
+  },
+  {
+   "text": "К чашкам продавец дал Марии бонус — блюдце с золотой каймой.",
+   "en": "With the cups the seller gave Maria a bonus: a saucer with a gold rim.",
+   "ko": "상인은 찻잔에 금테 두른 받침 접시를 덤으로 얹어 마리야에게 줬어요.",
+   "blank": "бонус",
+   "src": "made"
+  }
+ ],
  "w|борода": [
   {
    "text": "Никите пришлось подстричь бороду, чтобы стоматологу было удобнее работать.",
@@ -4137,6 +4201,22 @@
    "ko": "돈을 낭비할 생각은 없어요.",
    "blank": "бросать",
    "src": "tatoeba:12488570/marafon en:253281/CK"
+  }
+ ],
+ "w|бросаться": [
+  {
+   "text": "Когда приходит большой заказ, Сергей бросается к плите без лишних слов.",
+   "en": "When a big order comes in, Sergei rushes to the stove without a word.",
+   "ko": "큰 주문이 들어오면 세르게이는 군말 없이 화구로 달려가요.",
+   "blank": "бросается",
+   "src": "made"
+  },
+  {
+   "text": "Мария не бросается на первую понравившуюся вещь, а сначала обходит все ряды.",
+   "en": "Maria doesn't jump at the first thing she likes but walks round all the rows first.",
+   "ko": "마리야는 처음 마음에 든 물건에 바로 달려들지 않고 먼저 모든 줄을 둘러봐요.",
+   "blank": "бросается",
+   "src": "made"
   }
  ],
  "w|бросить": [
@@ -4868,6 +4948,22 @@
    "en": "To register for the marathon Svetlana had to enter her passport number.",
    "ko": "마라톤 등록하려고 스베틀라나는 여권 번호를 입력해야 했어요.",
    "blank": "ввести",
+   "src": "made"
+  }
+ ],
+ "w|вводить": [
+  {
+   "text": "Каждую весну Сергей вводит в меню новые блюда.",
+   "en": "Every spring Sergei introduces new dishes to the menu.",
+   "ko": "세르게이는 봄마다 메뉴에 새 요리를 넣어요.",
+   "blank": "вводит",
+   "src": "made"
+  },
+  {
+   "text": "Мария аккуратно вводит в телефон название каждой находки, чтобы проверить цену.",
+   "en": "Maria carefully types the name of each find into her phone to check the price.",
+   "ko": "마리야는 값을 확인하려고 찾은 물건 이름을 하나하나 휴대폰에 입력해요.",
+   "blank": "вводит",
    "src": "made"
   }
  ],
@@ -7827,6 +7923,22 @@
    "ko": "너 나이에 맞게 보여?",
    "blank": "возраст",
    "src": "tatoeba:5480736/marafon en:953204/CK"
+  }
+ ],
+ "w|возрождение": [
+  {
+   "text": "Сергей мечтает о возрождении старинных рецептов своей бабушки.",
+   "en": "Sergei dreams of reviving his grandmother's old recipes.",
+   "ko": "세르게이는 할머니의 옛 조리법을 되살리기를 꿈꿔요.",
+   "blank": "возрождении",
+   "src": "made"
+  },
+  {
+   "text": "Мария радуется возрождению моды на винтаж.",
+   "en": "Maria is glad about the revival of vintage fashion.",
+   "ko": "마리야는 빈티지 유행이 다시 살아나서 기뻐요.",
+   "blank": "возрождению",
+   "src": "made"
   }
  ],
  "w|воин": [
@@ -11049,6 +11161,22 @@
    "src": "made"
   }
  ],
+ "w|высказаться": [
+  {
+   "text": "На планёрке Сергей решился высказаться о новом меню.",
+   "en": "At the team meeting Sergei plucked up the courage to speak his mind about the new menu.",
+   "ko": "회의에서 세르게이는 용기를 내 새 메뉴에 대해 의견을 말했어요.",
+   "blank": "высказаться",
+   "src": "made"
+  },
+  {
+   "text": "Продавец дал Марии высказаться и только потом назвал свою цену.",
+   "en": "The seller let Maria have her say and only then named his price.",
+   "ko": "상인은 마리야가 할 말을 다 하게 두고 나서야 값을 불렀어요.",
+   "blank": "высказаться",
+   "src": "made"
+  }
+ ],
  "w|выслать": [
   {
    "text": "Театр обещал выслать Андрею билеты по почте.",
@@ -12283,6 +12411,22 @@
    "src": "made"
   }
  ],
+ "w|гнить": [
+  {
+   "text": "Сергей выбрасывает помидоры, которые начали гнить.",
+   "en": "Sergei throws out the tomatoes that have started to rot.",
+   "ko": "세르게이는 썩기 시작한 토마토를 버려요.",
+   "blank": "гнить",
+   "src": "made"
+  },
+  {
+   "text": "Деревянный сундук у Марии на балконе начал гнить от сырости.",
+   "en": "The wooden chest on Maria's balcony has started to rot from the damp.",
+   "ko": "마리야네 발코니에 둔 나무 궤짝이 습기 때문에 썩기 시작했어요.",
+   "blank": "гнить",
+   "src": "made"
+  }
+ ],
  "w|гном": [
   {
    "text": "Полицейский рассказал Сергею, что вчера у кого-то украли садового гнома прямо с клумбы.",
@@ -13208,6 +13352,22 @@
    "en": "Olga's neighbor works in civil aviation and often buys motion sickness pills.",
    "ko": "올가의 이웃은 민간 항공사에서 일해서 멀미약을 자주 사요.",
    "blank": "гражданской",
+   "src": "made"
+  }
+ ],
+ "w|грандиозный": [
+  {
+   "text": "Сергей готовит грандиозный банкет на двести гостей.",
+   "en": "Sergei is preparing a grand banquet for two hundred guests.",
+   "ko": "세르게이는 손님 이백 명을 위한 성대한 연회를 준비하고 있어요.",
+   "blank": "грандиозный",
+   "src": "made"
+  },
+  {
+   "text": "В воскресенье на рынке был грандиозный выбор старой посуды, и Мария растерялась.",
+   "en": "On Sunday the market had a huge choice of old crockery, and Maria didn't know where to start.",
+   "ko": "일요일에 시장에 옛 그릇이 엄청나게 많아서 마리야는 어쩔 줄 몰랐어요.",
+   "blank": "грандиозный",
    "src": "made"
   }
  ],
@@ -15416,6 +15576,22 @@
    "en": "The hard drive is almost full.",
    "ko": "하드디스크가 거의 꽉 찼어요.",
    "blank": "диск",
+   "src": "made"
+  }
+ ],
+ "w|диспетчер": [
+  {
+   "text": "Сергею каждые десять минут звонит диспетчер службы доставки.",
+   "en": "The delivery service dispatcher calls Sergei every ten minutes.",
+   "ko": "배달 업체 배차 담당자가 십 분마다 세르게이에게 전화해요.",
+   "blank": "диспетчер",
+   "src": "made"
+  },
+  {
+   "text": "Продавец часов рассказал Марии, что тридцать лет работал диспетчером в аэропорту.",
+   "en": "The watch seller told Maria he had worked as an air traffic controller for thirty years.",
+   "ko": "시계 장수는 공항에서 관제사로 삼십 년 일했다고 마리야에게 말했어요.",
+   "blank": "диспетчером",
    "src": "made"
   }
  ],
@@ -18481,6 +18657,22 @@
    "ko": "너한테 맞는 수호 동물은 뭐야?",
    "blank": "животное",
    "src": "tatoeba:5488683/odexed en:4892604/Hybrid"
+  }
+ ],
+ "w|живьём": [
+  {
+   "text": "Сергей так и не привык варить раков живьём.",
+   "en": "Sergei has never got used to boiling crayfish alive.",
+   "ko": "세르게이는 가재를 산 채로 삶는 데 끝내 익숙해지지 않았어요.",
+   "blank": "живьём",
+   "src": "made"
+  },
+  {
+   "text": "Мария впервые услышала живьём, как играет настоящий граммофон.",
+   "en": "Maria heard a real gramophone play live for the first time.",
+   "ko": "마리야는 진짜 축음기 소리를 처음으로 직접 들었어요.",
+   "blank": "живьём",
+   "src": "made"
   }
  ],
  "w|жидкость": [
@@ -26469,6 +26661,22 @@
    "src": "made"
   }
  ],
+ "w|кидать": [
+  {
+   "text": "Сергей ловко кидает тесто для пиццы в воздух.",
+   "en": "Sergei deftly tosses pizza dough into the air.",
+   "ko": "세르게이는 피자 반죽을 공중으로 능숙하게 던져요.",
+   "blank": "кидает",
+   "src": "made"
+  },
+  {
+   "text": "У входа на рынок Мария кидает мелочь в банку уличного музыканта.",
+   "en": "At the market entrance Maria tosses some change into the street musician's jar.",
+   "ko": "시장 입구에서 마리야는 거리 악사의 깡통에 잔돈을 던져 넣어요.",
+   "blank": "кидает",
+   "src": "made"
+  }
+ ],
  "w|киллер": [
   {
    "text": "На соседнем заседании судили киллера, и у зала толпились журналисты, заметил Алексей.",
@@ -27571,6 +27779,22 @@
    "src": "made"
   }
  ],
+ "w|колонка": [
+  {
+   "text": "Сергей включил на кухне колонку, и все резали лук под музыку.",
+   "en": "Sergei turned on the speaker in the kitchen, and everyone chopped onions to music.",
+   "ko": "세르게이가 주방에서 스피커를 켜자 다들 음악에 맞춰 양파를 썰었어요.",
+   "blank": "колонку",
+   "src": "made"
+  },
+  {
+   "text": "Мария нашла на барахолке винтажную колонку и сразу подключила её к телефону.",
+   "en": "Maria found a vintage speaker at the flea market and immediately connected it to her phone.",
+   "ko": "마리야는 벼룩시장에서 빈티지 스피커를 찾아 바로 휴대폰에 연결했어요.",
+   "blank": "колонку",
+   "src": "made"
+  }
+ ],
  "w|кольцо": [
   {
    "text": "Почему ты не носишь обручальное кольцо?",
@@ -28327,6 +28551,22 @@
    "ko": "자제력을 잃기 시작했어요.",
    "blank": "контроль",
    "src": "tatoeba:645294/nami en:64775"
+  }
+ ],
+ "w|конференц-зал": [
+  {
+   "text": "Сергей готовил кофе-брейк для участников семинара в конференц-зале отеля.",
+   "en": "Sergei prepared the coffee break for seminar participants in the hotel's conference room.",
+   "ko": "세르게이는 호텔 회의실에서 열린 세미나 참가자들의 다과를 준비했어요.",
+   "blank": "конференц-зале",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила кресла, которые раньше стояли в конференц-зале какого-то завода.",
+   "en": "Maria bought armchairs that used to stand in some factory's conference room.",
+   "ko": "마리야는 예전에 어느 공장 회의실에 있던 안락의자를 샀어요.",
+   "blank": "конференц-зале",
+   "src": "made"
   }
  ],
  "w|конференция": [
@@ -32121,6 +32361,22 @@
    "en": "I'll stop at the store for bread.",
    "ko": "빵 사러 가게에 들를게.",
    "blank": "магазин"
+  }
+ ],
+ "w|магистр": [
+  {
+   "text": "Сергей получил степень магистра экономики, но выбрал работу на кухне.",
+   "en": "Sergei earned a master's degree in economics but chose to work in a kitchen.",
+   "ko": "세르게이는 경제학 석사 학위를 받았지만 주방 일을 택했어요.",
+   "blank": "магистра",
+   "src": "made"
+  },
+  {
+   "text": "Продавец книг оказался магистром истории, и Мария проговорила с ним полчаса.",
+   "en": "The book seller turned out to have a master's in history, and Maria talked with him for half an hour.",
+   "ko": "책 장수가 역사학 석사여서 마리야는 그와 삼십 분이나 이야기했어요.",
+   "blank": "магистром",
+   "src": "made"
   }
  ],
  "w|магический": [
@@ -36393,6 +36649,22 @@
    "en": "What did they name the baby?",
    "ko": "아기 이름을 뭐라고 지었어?",
    "blank": "назвали"
+  }
+ ],
+ "w|назначать": [
+  {
+   "text": "Шеф назначает Сергея старшим на вечерние смены.",
+   "en": "The chef puts Sergei in charge of the evening shifts.",
+   "ko": "주방장은 저녁 근무 책임자로 세르게이를 정해요.",
+   "blank": "назначает",
+   "src": "made"
+  },
+  {
+   "text": "Цены на свои вещи Мария назначает сама.",
+   "en": "Maria sets the prices for her things herself.",
+   "ko": "마리야는 자기 물건값을 직접 정해요.",
+   "blank": "назначает",
+   "src": "made"
   }
  ],
  "w|назначение": [
@@ -44079,6 +44351,22 @@
    "src": "tatoeba:4762919/odexed en:680886/Source_VOA"
   }
  ],
+ "w|опытный": [
+  {
+   "text": "Сергей много лет учился у опытного шеф-повара.",
+   "en": "Sergei spent many years learning from an experienced head chef.",
+   "ko": "세르게이는 오랫동안 경험 많은 주방장에게 배웠어요.",
+   "blank": "опытного",
+   "src": "made"
+  },
+  {
+   "text": "Мария торгуется как опытный коллекционер.",
+   "en": "Maria haggles like an experienced collector.",
+   "ko": "마리야는 노련한 수집가처럼 흥정해요.",
+   "blank": "опытный",
+   "src": "made"
+  }
+ ],
  "w|опять": [
   {
    "text": "Опять дождь.",
@@ -45429,6 +45717,22 @@
    "src": "made"
   }
  ],
+ "w|отгул": [
+  {
+   "text": "Сергей взял отгул, чтобы погулять на свадьбе брата.",
+   "en": "Sergei took a day off to celebrate at his brother's wedding.",
+   "ko": "세르게이는 형 결혼식에 가려고 하루 쉬었어요.",
+   "blank": "отгул",
+   "src": "made"
+  },
+  {
+   "text": "Мария взяла отгул в пятницу, чтобы первой прийти на барахолку.",
+   "en": "Maria took Friday off so she could be first at the flea market.",
+   "ko": "마리야는 벼룩시장에 제일 먼저 가려고 금요일에 쉬었어요.",
+   "blank": "отгул",
+   "src": "made"
+  }
+ ],
  "w|отдавать": [
   {
    "text": "Вы не можете отдавать здесь приказы.",
@@ -45899,6 +46203,22 @@
    "en": "How do you know the address?",
    "ko": "주소를 어떻게 알아?",
    "blank": "Откуда"
+  }
+ ],
+ "w|откуда-то": [
+  {
+   "text": "На кухне откуда-то запахло горелым, и Сергей кинулся к духовке.",
+   "en": "There was a smell of burning from somewhere in the kitchen, and Sergei dashed to the oven.",
+   "ko": "주방 어디선가 탄내가 나서 세르게이는 오븐으로 달려갔어요.",
+   "blank": "откуда-то",
+   "src": "made"
+  },
+  {
+   "text": "Мария услышала, как откуда-то из глубины рынка играет патефон.",
+   "en": "Maria heard a gramophone playing from somewhere deep in the market.",
+   "ko": "마리야는 시장 안쪽 어딘가에서 축음기 소리가 나는 걸 들었어요.",
+   "blank": "откуда-то",
+   "src": "made"
   }
  ],
  "w|отличаться": [
@@ -48193,6 +48513,22 @@
    "src": "made"
   }
  ],
+ "w|певец": [
+  {
+   "text": "В ресторан пришёл известный певец, и Сергей лично приготовил ему десерт.",
+   "en": "A famous singer came to the restaurant, and Sergei made his dessert personally.",
+   "ko": "유명한 가수가 식당에 와서 세르게이가 직접 디저트를 만들어 줬어요.",
+   "blank": "певец",
+   "src": "made"
+  },
+  {
+   "text": "Мария нашла пластинку певца, которого обожала её бабушка.",
+   "en": "Maria found a record by a singer her grandmother adored.",
+   "ko": "마리야는 할머니가 무척 좋아하던 가수의 레코드판을 찾았어요.",
+   "blank": "певца",
+   "src": "made"
+  }
+ ],
  "w|певица": [
   {
    "text": "Для певицы, которая выступала в зале, Иван приготовил тёплый чай с мёдом.",
@@ -50448,6 +50784,22 @@
    "en": "For the role Anna had to learn to speak French.",
    "ko": "배역을 위해 안나는 프랑스어를 배워야 했어요.",
    "blank": "по-французски",
+   "src": "made"
+  }
+ ],
+ "w|по-хорошему": [
+  {
+   "text": "Сергею по-хорошему надо отдохнуть, но смена ещё не кончилась.",
+   "en": "By rights Sergei ought to rest, but his shift isn't over yet.",
+   "ko": "세르게이는 사실 좀 쉬어야 하는데 근무가 아직 안 끝났어요.",
+   "blank": "по-хорошему",
+   "src": "made"
+  },
+  {
+   "text": "Мария по-хорошему попросила продавца уступить, и тот согласился.",
+   "en": "Maria nicely asked the seller to come down on the price, and he agreed.",
+   "ko": "마리야가 좋게 깎아 달라고 하자 상인이 받아들였어요.",
+   "blank": "по-хорошему",
    "src": "made"
   }
  ],
@@ -53921,6 +54273,22 @@
    "src": "tatoeba:4283541/sharptoothed en:326454/CK"
   }
  ],
+ "w|полезть": [
+  {
+   "text": "Сергей полез на верхнюю полку за большой кастрюлей.",
+   "en": "Sergei climbed up to the top shelf for the big pot.",
+   "ko": "세르게이는 큰 냄비를 꺼내려고 맨 위 선반으로 올라갔어요.",
+   "blank": "полез",
+   "src": "made"
+  },
+  {
+   "text": "Мария полезла в ящик с открытками и нашла там старые марки.",
+   "en": "Maria rummaged in the box of postcards and found some old stamps there.",
+   "ko": "마리야는 엽서 상자를 뒤지다가 옛 우표를 찾았어요.",
+   "blank": "полезла",
+   "src": "made"
+  }
+ ],
  "w|полёт": [
   {
    "text": "Михаил выбрал поезд, потому что полёт кажется ему слишком скучным.",
@@ -55032,6 +55400,22 @@
    "en": "At the conference Maria managed to talk with several investors.",
    "ko": "마리아는 콘퍼런스에서 투자자 몇 명과 이야기를 나눌 수 있었어요.",
    "blank": "пообщаться",
+   "src": "made"
+  }
+ ],
+ "w|попадание": [
+  {
+   "text": "Сергей метко бросил полотенце на крючок: точное попадание!",
+   "en": "Sergei threw the towel neatly onto the hook: a direct hit!",
+   "ko": "세르게이가 행주를 고리에 정확히 던졌어요. 명중이에요!",
+   "blank": "попадание",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила шляпку точно под цвет пальто — полное попадание.",
+   "en": "Maria bought a hat exactly the colour of her coat: a perfect match.",
+   "ko": "마리야는 코트와 색이 꼭 맞는 모자를 샀어요. 완벽하게 들어맞았어요.",
+   "blank": "попадание",
    "src": "made"
   }
  ],
@@ -56401,6 +56785,22 @@
    "en": "She got into the institute.",
    "ko": "그녀는 대학에 붙었어.",
    "blank": "поступила"
+  }
+ ],
+ "w|поступление": [
+  {
+   "text": "Сергей с утра ждёт поступления свежей рыбы.",
+   "en": "Sergei has been waiting since morning for the delivery of fresh fish.",
+   "ko": "세르게이는 아침부터 신선한 생선이 들어오기를 기다려요.",
+   "blank": "поступления",
+   "src": "made"
+  },
+  {
+   "text": "Продавец пообещал Марии новое поступление винтажных платьев к выходным.",
+   "en": "The seller promised Maria a new delivery of vintage dresses by the weekend.",
+   "ko": "상인은 주말까지 빈티지 원피스가 새로 들어온다고 마리야에게 약속했어요.",
+   "blank": "поступление",
+   "src": "made"
   }
  ],
  "w|поступок": [
@@ -58792,6 +59192,22 @@
    "en": "Elena used to want to teach at a school, but changed her mind.",
    "ko": "옐레나는 원래 학교에서 가르치고 싶었지만 마음을 바꿨어요.",
    "blank": "преподавать",
+   "src": "made"
+  }
+ ],
+ "w|преподать": [
+  {
+   "text": "Шеф решил преподать Сергею урок и заставил переделать соус с нуля.",
+   "en": "The chef decided to teach Sergei a lesson and made him redo the sauce from scratch.",
+   "ko": "주방장은 세르게이에게 본때를 보여 주려고 소스를 처음부터 다시 만들게 했어요.",
+   "blank": "преподать",
+   "src": "made"
+  },
+  {
+   "text": "Пожилой антиквар преподал Марии урок: смотреть надо на клеймо, а не на блеск.",
+   "en": "The elderly antique dealer taught Maria a lesson: look at the hallmark, not the shine.",
+   "ko": "나이 든 골동품상은 반짝임이 아니라 각인을 봐야 한다고 마리야에게 가르쳐 줬어요.",
+   "blank": "преподал",
    "src": "made"
   }
  ],
@@ -61793,6 +62209,22 @@
    "src": "made"
   }
  ],
+ "w|продвижение": [
+  {
+   "text": "Сергей мечтает о продвижении до должности су-шефа.",
+   "en": "Sergei dreams of promotion to sous-chef.",
+   "ko": "세르게이는 부주방장으로 승진하기를 꿈꿔요.",
+   "blank": "продвижении",
+   "src": "made"
+  },
+  {
+   "text": "Мария сама занимается продвижением своего маленького прилавка в соцсетях.",
+   "en": "Maria promotes her little stall on social media herself.",
+   "ko": "마리야는 자기 작은 가판대를 직접 소셜 미디어에서 홍보해요.",
+   "blank": "продвижением",
+   "src": "made"
+  }
+ ],
  "w|продвинуться": [
   {
    "text": "За первый час поезд почти не продвинулся из-за снега, и Павел нервничал.",
@@ -63552,6 +63984,22 @@
    "en": "While Tatiana was waiting for the courier, the children played hide-and-seek all over the flat.",
    "ko": "타티야나가 택배를 기다리는 동안 아이들은 집 안 곳곳에서 숨바꼭질을 했어요.",
    "blank": "прятки",
+   "src": "made"
+  }
+ ],
+ "w|псевдоним": [
+  {
+   "text": "Сергей ведёт кулинарный блог под псевдонимом.",
+   "en": "Sergei runs a cooking blog under a pseudonym.",
+   "ko": "세르게이는 가명으로 요리 블로그를 운영해요.",
+   "blank": "псевдонимом",
+   "src": "made"
+  },
+  {
+   "text": "Мария узнала, что автор купленного детектива писал под псевдонимом.",
+   "en": "Maria found out that the author of the detective novel she bought wrote under a pseudonym.",
+   "ko": "마리야는 산 추리 소설의 작가가 필명으로 글을 썼다는 걸 알게 됐어요.",
+   "blank": "псевдонимом",
    "src": "made"
   }
  ],
@@ -69087,6 +69535,22 @@
    "src": "tatoeba:8572160/marafon en:6870356/CC"
   }
  ],
+ "w|сбой": [
+  {
+   "text": "Из-за сбоя в системе заказы не доходили до Сергея на кухню.",
+   "en": "Because of a system glitch, orders weren't reaching Sergei in the kitchen.",
+   "ko": "시스템 오류 때문에 주문이 주방의 세르게이에게 전달되지 않았어요.",
+   "blank": "сбоя",
+   "src": "made"
+  },
+  {
+   "text": "Из-за сбоя терминала Марии пришлось расплатиться наличными.",
+   "en": "Because the card terminal failed, Maria had to pay in cash.",
+   "ko": "단말기 오류 때문에 마리야는 현금으로 계산해야 했어요.",
+   "blank": "сбоя",
+   "src": "made"
+  }
+ ],
  "w|сбор": [
   {
    "text": "Класс Алексея объявил сбор старых книг для сельской библиотеки.",
@@ -69304,6 +69768,22 @@
    "en": "An old lamp shines over the shop entrance all night.",
    "ko": "가게 입구 위에는 낡은 등이 밤새 켜져 있어요.",
    "blank": "светит",
+   "src": "made"
+  }
+ ],
+ "w|светиться": [
+  {
+   "text": "Глаза Сергея светились от гордости, когда гости хвалили утку.",
+   "en": "Sergei's eyes shone with pride when the guests praised the duck.",
+   "ko": "손님들이 오리 요리를 칭찬하자 세르게이의 눈이 자부심으로 빛났어요.",
+   "blank": "светились",
+   "src": "made"
+  },
+  {
+   "text": "Старая лампа, которую купила Мария, светится тёплым жёлтым светом.",
+   "en": "The old lamp Maria bought glows with a warm yellow light.",
+   "ko": "마리야가 산 옛 램프는 따뜻한 노란빛으로 빛나요.",
+   "blank": "светится",
    "src": "made"
   }
  ],
@@ -71049,6 +71529,22 @@
    "src": "made"
   }
  ],
+ "w|скакать": [
+  {
+   "text": "Масло на сковороде так скакало, что Сергей обжёг руку.",
+   "en": "The oil in the pan was jumping so much that Sergei burned his hand.",
+   "ko": "팬의 기름이 너무 튀어서 세르게이는 손을 데었어요.",
+   "blank": "скакало",
+   "src": "made"
+  },
+  {
+   "text": "Мимо прилавка Марии скакал мальчишка на деревянной лошадке.",
+   "en": "A little boy on a wooden hobby horse was galloping past Maria's stall.",
+   "ko": "마리야의 가판대 앞으로 꼬마가 나무 말을 타고 깡충깡충 지나갔어요.",
+   "blank": "скакал",
+   "src": "made"
+  }
+ ],
  "w|скала": [
   {
    "text": "Козы Андрея любят забираться на скалу за пастбищем.",
@@ -72670,6 +73166,22 @@
    "en": "Olga jokes that the heavy cello case looks like an artillery shell.",
    "ko": "올가는 무거운 첼로 케이스가 포탄 같다고 농담해요.",
    "blank": "снаряд",
+   "src": "made"
+  }
+ ],
+ "w|снаряжение": [
+  {
+   "text": "Сергей надел всё снаряжение повара: фартук, колпак и перчатки.",
+   "en": "Sergei put on all his cook's gear: apron, hat and gloves.",
+   "ko": "세르게이는 앞치마, 조리모, 장갑까지 요리사 장비를 다 갖췄어요.",
+   "blank": "снаряжение",
+   "src": "made"
+  },
+  {
+   "text": "Мария нашла на рынке почти новое туристическое снаряжение для сына.",
+   "en": "Maria found almost-new camping gear for her son at the market.",
+   "ko": "마리야는 시장에서 아들에게 줄 거의 새것 같은 캠핑 장비를 찾았어요.",
+   "blank": "снаряжение",
    "src": "made"
   }
  ],
@@ -75475,6 +75987,22 @@
    "blank": "спрашивают"
   }
  ],
+ "w|спрос": [
+  {
+   "text": "Летом на холодные супы большой спрос, и Сергей варит окрошку целыми кастрюлями.",
+   "en": "In summer there's high demand for cold soups, and Sergei makes okroshka by the potful.",
+   "ko": "여름에는 차가운 수프를 찾는 사람이 많아서 세르게이는 오크로시카를 냄비째로 만들어요.",
+   "blank": "спрос",
+   "src": "made"
+  },
+  {
+   "text": "Мария заметила, что на старые пластинки сейчас большой спрос.",
+   "en": "Maria noticed that old records are in high demand right now.",
+   "ko": "마리야는 요즘 옛날 레코드판을 찾는 사람이 많다는 걸 알아챘어요.",
+   "blank": "спрос",
+   "src": "made"
+  }
+ ],
  "w|спросить": [
   {
    "text": "Спроси дорогу у прохожего.",
@@ -77315,6 +77843,22 @@
    "ko": "우리는 벽이 아니라 다리를 놓아야 해요.",
    "blank": "строить",
    "src": "tatoeba:9937718/Ooneykcall en:9937699/ddnktr"
+  }
+ ],
+ "w|строка": [
+  {
+   "text": "Сергей вычеркнул из меню строку с устрицами.",
+   "en": "Sergei crossed out the line with oysters from the menu.",
+   "ko": "세르게이는 메뉴판에서 굴 요리 줄을 지웠어요.",
+   "blank": "строку",
+   "src": "made"
+  },
+  {
+   "text": "На обороте открытки Мария прочитала строку из давнего письма.",
+   "en": "On the back of the postcard Maria read a line from a long-ago letter.",
+   "ko": "마리야는 엽서 뒷면에서 오래전 편지의 한 줄을 읽었어요.",
+   "blank": "строку",
+   "src": "made"
   }
  ],
  "w|структура": [
@@ -83995,6 +84539,22 @@
    "src": "made"
   }
  ],
+ "w|уравнение": [
+  {
+   "text": "Сергей шутит, что рассчитать заказ продуктов сложнее, чем решить уравнение.",
+   "en": "Sergei jokes that working out the food order is harder than solving an equation.",
+   "ko": "세르게이는 식재료 주문량 계산이 방정식 풀기보다 어렵다고 농담해요.",
+   "blank": "уравнение",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила старый задачник по алгебре, где кто-то карандашом решил каждое уравнение.",
+   "en": "Maria bought an old algebra workbook in which someone had solved every equation in pencil.",
+   "ko": "마리야는 누군가 연필로 방정식을 하나하나 다 풀어 놓은 옛 대수 문제집을 샀어요.",
+   "blank": "уравнение",
+   "src": "made"
+  }
+ ],
  "w|ураган": [
   {
    "text": "Прошлой осенью ураган повалил у Михаила старую сосну.",
@@ -84107,6 +84667,22 @@
    "src": "made"
   }
  ],
+ "w|усвоить": [
+  {
+   "text": "Сергей быстро усвоил главное правило кухни: нож всегда должен быть острым.",
+   "en": "Sergei quickly learned the kitchen's main rule: a knife must always be sharp.",
+   "ko": "세르게이는 칼은 늘 날카로워야 한다는 주방의 첫 규칙을 금방 익혔어요.",
+   "blank": "усвоил",
+   "src": "made"
+  },
+  {
+   "text": "Мария давно усвоила, что торговаться надо с улыбкой.",
+   "en": "Maria learned long ago that you should haggle with a smile.",
+   "ko": "마리야는 흥정은 웃으면서 해야 한다는 걸 오래전에 익혔어요.",
+   "blank": "усвоила",
+   "src": "made"
+  }
+ ],
  "w|усердно": [
   {
    "text": "Горничная усердно убирала номер, пока Андрей сидел на террасе.",
@@ -84137,6 +84713,22 @@
    "ko": "노력을 기울여야 해요.",
    "blank": "усилие",
    "src": "tatoeba:4893882/odexed en:687950/lukaszpp"
+  }
+ ],
+ "w|ускользнуть": [
+  {
+   "text": "Сергей хотел ускользнуть на перерыв, но шеф его окликнул.",
+   "en": "Sergei wanted to slip out for a break, but the chef called him back.",
+   "ko": "세르게이는 몰래 쉬러 빠져나가려 했지만 주방장이 불러 세웠어요.",
+   "blank": "ускользнуть",
+   "src": "made"
+  },
+  {
+   "text": "Редкая брошь ускользнула от Марии: её купили прямо перед ней.",
+   "en": "The rare brooch slipped through Maria's fingers: someone bought it right in front of her.",
+   "ko": "희귀한 브로치를 바로 앞사람이 사 가서 마리야는 놓치고 말았어요.",
+   "blank": "ускользнула",
+   "src": "made"
   }
  ],
  "w|ускорить": [
@@ -85262,6 +85854,22 @@
    "en": "Maria believes that the main factor in an article's success is honesty.",
    "ko": "마리야는 좋은 기사의 가장 큰 요인은 정직함이라고 생각해요.",
    "blank": "фактор",
+   "src": "made"
+  }
+ ],
+ "w|факультет": [
+  {
+   "text": "Сергей бросил юридический факультет, чтобы стать поваром.",
+   "en": "Sergei dropped out of law school to become a cook.",
+   "ko": "세르게이는 요리사가 되려고 법학과를 그만뒀어요.",
+   "blank": "факультет",
+   "src": "made"
+  },
+  {
+   "text": "Мария наткнулась на старый альбом выпускников исторического факультета.",
+   "en": "Maria came across an old yearbook from the history department.",
+   "ko": "마리야는 사학과 옛 졸업 앨범을 우연히 발견했어요.",
+   "blank": "факультета",
    "src": "made"
   }
  ],
@@ -87129,6 +87737,22 @@
    "ko": "그녀가 무슨 색을 좋아할 것 같아?",
    "blank": "цвет",
    "src": "tatoeba:4758327/odexed en:311850/CH"
+  }
+ ],
+ "w|цветной": [
+  {
+   "text": "Сергей раскладывает продукты по цветным контейнерам.",
+   "en": "Sergei sorts the ingredients into colour-coded containers.",
+   "ko": "세르게이는 재료를 색깔별 통에 나눠 담아요.",
+   "blank": "цветным",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила коробку цветных стеклянных бусин.",
+   "en": "Maria bought a box of coloured glass beads.",
+   "ko": "마리야는 색색의 유리구슬 한 상자를 샀어요.",
+   "blank": "цветных",
+   "src": "made"
   }
  ],
  "w|цветок": [
@@ -89145,6 +89769,22 @@
    "ko": "그 가게는 와인 종류가 다양해요.",
    "blank": "широкий",
    "src": "tatoeba:2204426/Lenin_1917 en:44887"
+  }
+ ],
+ "w|шкала": [
+  {
+   "text": "Сергей оценивает остроту соусов по собственной шкале от мягкого до огненного.",
+   "en": "Sergei rates the heat of sauces on his own scale from mild to fiery.",
+   "ko": "세르게이는 소스의 매운 정도를 순한 맛부터 불맛까지 자기만의 척도로 매겨요.",
+   "blank": "шкале",
+   "src": "made"
+  },
+  {
+   "text": "Мария купила старый термометр со шкалой в латунной рамке.",
+   "en": "Maria bought an old thermometer with a scale in a brass frame.",
+   "ko": "마리야는 놋쇠 테두리에 눈금이 있는 옛 온도계를 샀어요.",
+   "blank": "шкалой",
+   "src": "made"
   }
  ],
  "w|шкаф": [
