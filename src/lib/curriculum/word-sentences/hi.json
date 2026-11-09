@@ -27,6 +27,22 @@
    "blank": "अंकल"
   }
  ],
+ "w|अंकुरित": [
+  {
+   "text": "सेहत का ध्यान रखने वाले ग्राहक अजय से अंकुरित मूँग माँगते हैं।",
+   "en": "Health-conscious customers ask Ajay for sprouted mung beans.",
+   "ko": "건강을 챙기는 손님들은 아자이에게 싹 틔운 녹두를 찾아요.",
+   "blank": "अंकुरित",
+   "src": "made"
+  },
+  {
+   "text": "सीमा सुबह की सैर के बाद पड़ोसन के साथ अंकुरित चने की चाट खाती है।",
+   "en": "After her morning walk Seema eats sprouted chickpea chaat with her neighbor.",
+   "ko": "시마는 아침 산책 뒤 이웃 아주머니와 싹 틔운 병아리콩 차트를 먹어요.",
+   "blank": "अंकुरित",
+   "src": "made"
+  }
+ ],
  "w|अकेला": [
   {
    "text": "मैं रात को अकेला घर नहीं जाना चाहता।",
@@ -5351,6 +5367,22 @@
    "src": "made"
   }
  ],
+ "w|ओट्स": [
+  {
+   "text": "आजकल बाज़ार में ओट्स के डिब्बे भी ख़ूब बिकने लगे हैं।",
+   "en": "These days boxes of oats have started selling well in the market too.",
+   "ko": "요즘은 시장에서 오트밀 상자도 잘 팔리기 시작했어요.",
+   "blank": "ओट्स",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन की बेटी नाश्ते में दूध के साथ ओट्स खाती है।",
+   "en": "The neighbor's daughter eats oats with milk for breakfast.",
+   "ko": "이웃집 딸은 아침에 우유에 오트밀을 말아 먹어요.",
+   "blank": "ओट्स",
+   "src": "made"
+  }
+ ],
  "w|ओढ़ना": [
   {
    "text": "सर्दी में कंबल ओढ़ना ज़रूरी है।",
@@ -5783,6 +5815,22 @@
    "src": "made"
   }
  ],
+ "w|कढ़ी": [
+  {
+   "text": "बाज़ार के ढाबे पर गुरुवार को पकौड़े वाली कढ़ी बनती है।",
+   "en": "At the market dhaba, kadhi with pakoras is made on Thursdays.",
+   "ko": "시장 다바에서는 목요일마다 파코라를 넣은 카디를 만들어요.",
+   "blank": "कढ़ी",
+   "src": "made"
+  },
+  {
+   "text": "बदले में सीमा ने अपने हाथ की बनी कढ़ी भिजवा दी।",
+   "en": "In return Seema sent over some kadhi she'd made herself.",
+   "ko": "답례로 시마는 직접 만든 카디를 보냈어요.",
+   "blank": "कढ़ी",
+   "src": "made"
+  }
+ ],
  "w|कतार": [
   {
    "text": "टिकट लेने के लिए लंबी कतार लगी है।",
@@ -5968,6 +6016,22 @@
    "en": "In winter Seema keeps a blanket over her chair at the shop.",
    "ko": "겨울이면 시마는 가게 의자 위에 담요를 덮어 둬요.",
    "blank": "कंबल",
+   "src": "made"
+  }
+ ],
+ "w|कबाब": [
+  {
+   "text": "शाम को मीट मार्केट के पास कबाब की ख़ुशबू दूर तक फैल जाती है।",
+   "en": "In the evening the smell of kebabs spreads far near the meat market.",
+   "ko": "저녁이면 고기 시장 근처에 케밥 냄새가 멀리까지 퍼져요.",
+   "blank": "कबाब",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोस के ख़ान साहब ईद पर सबको शामी कबाब खिलाते हैं।",
+   "en": "Khan sahib next door treats everyone to shami kebabs on Eid.",
+   "ko": "이웃의 칸 씨는 이드 때 모두에게 샤미 케밥을 대접해요.",
+   "blank": "कबाब",
    "src": "made"
   }
  ],
@@ -7593,6 +7657,22 @@
    "blank": "कीमत"
   }
  ],
+ "w|कीमा": [
+  {
+   "text": "क़साई ने अजय के लिए आधा किलो कीमा तैयार किया।",
+   "en": "The butcher got half a kilo of mince ready for Ajay.",
+   "ko": "정육점 주인이 아자이에게 다진 고기 반 킬로를 준비해 줬어요.",
+   "blank": "कीमा",
+   "src": "made"
+  },
+  {
+   "text": "ख़ान साहब की बीवी ने सीमा को मटर-कीमा बनाना सिखाया।",
+   "en": "Khan sahib's wife taught Seema how to make peas-and-mince.",
+   "ko": "칸 씨의 아내가 시마에게 완두콩 다진 고기 요리를 가르쳐 줬어요.",
+   "blank": "कीमा",
+   "src": "made"
+  }
+ ],
  "w|कील": [
   {
    "text": "दरवाज़े की चौखट से एक जंग लगी कील बाहर निकली हुई थी।",
@@ -7834,6 +7914,22 @@
    "en": "When she couldn't find a trolley, Neha called a porter to carry her luggage.",
    "ko": "카트를 못 찾아서 네하는 짐꾼을 불렀어요.",
    "blank": "कुली",
+   "src": "made"
+  }
+ ],
+ "w|कुल्फ़ी": [
+  {
+   "text": "गर्मी में अजय बाज़ार से लौटते हुए मटके वाली कुल्फ़ी ज़रूर खाता है।",
+   "en": "In summer Ajay always has kulfi from the clay pot on his way back from the market.",
+   "ko": "여름이면 아자이는 시장에서 돌아오는 길에 꼭 항아리 쿨피를 먹어요.",
+   "blank": "कुल्फ़ी",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी की रात गली में कुल्फ़ी वाले की घंटी सुनकर सारे बच्चे दौड़ पड़े।",
+   "en": "On a summer night all the kids ran out on hearing the kulfi seller's bell in the lane.",
+   "ko": "여름밤 골목에 쿨피 장수 종소리가 들리자 아이들이 모두 뛰어나왔어요.",
+   "blank": "कुल्फ़ी",
    "src": "made"
   }
  ],
@@ -8693,6 +8789,22 @@
    "blank": "कोने"
   }
  ],
+ "w|कोफ़्ता": [
+  {
+   "text": "ढाबे का मलाई कोफ़्ता अजय को सबसे ज़्यादा पसंद है।",
+   "en": "Ajay likes the dhaba's malai kofta best.",
+   "ko": "아자이는 다바의 말라이 코프타를 제일 좋아해요.",
+   "blank": "कोफ़्ता",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की लौकी का कोफ़्ता पूरी गली में मशहूर है।",
+   "en": "Seema's bottle gourd kofta is famous in the whole lane.",
+   "ko": "시마의 조롱박 코프타는 골목 전체에서 유명해요.",
+   "blank": "कोफ़्ता",
+   "src": "made"
+  }
+ ],
  "w|कोयल": [
   {
    "text": "सुबह-सुबह आम के पेड़ से कोयल की मीठी आवाज़ आ रही थी।",
@@ -8764,6 +8876,22 @@
    "en": "At the company health camp everyone's cholesterol was checked too.",
    "ko": "회사 건강 검진 때 모두의 콜레스테롤도 쟀어요.",
    "blank": "कोलेस्ट्रॉल",
+   "src": "made"
+  }
+ ],
+ "w|कोल्ड ड्रिंक": [
+  {
+   "text": "दुकानदार ने ग्राहकों के लिए फ़्रिज में कोल्ड ड्रिंक की बोतलें भर रखी थीं।",
+   "en": "The shopkeeper had filled the fridge with soft drink bottles for customers.",
+   "ko": "가게 주인은 손님용으로 냉장고에 탄산음료 병을 채워 두었어요.",
+   "blank": "कोल्ड ड्रिंक",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोस की बर्थडे पार्टी में बच्चों ने केक के साथ कोल्ड ड्रिंक पी।",
+   "en": "At the neighborhood birthday party the kids had soft drinks with cake.",
+   "ko": "동네 생일 파티에서 아이들은 케이크에 탄산음료를 마셨어요.",
+   "blank": "कोल्ड ड्रिंक",
    "src": "made"
   }
  ],
@@ -10303,6 +10431,22 @@
    "blank": "गणित"
   }
  ],
+ "w|गंतव्य": [
+  {
+   "text": "ट्रक ड्राइवर ने कहा कि उसका गंतव्य दिल्ली की आज़ादपुर मंडी है।",
+   "en": "The truck driver said his destination was Delhi's Azadpur market.",
+   "ko": "트럭 기사는 목적지가 델리 아자드푸르 시장이라고 했어요.",
+   "blank": "गंतव्य",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने पूछा कि छुट्टियों में आपका गंतव्य कौन-सा शहर है।",
+   "en": "Seema asked which city their destination was for the holidays.",
+   "ko": "시마는 휴가 때 목적지가 어느 도시냐고 물었어요.",
+   "blank": "गंतव्य",
+   "src": "made"
+  }
+ ],
  "w|गति": [
   {
    "text": "गाड़ी की गति धीमी रखो।",
@@ -10755,6 +10899,22 @@
    "blank": "गाजर"
   }
  ],
+ "w|गाजर हलवा": [
+  {
+   "text": "सर्दियों में बाज़ार की लाल गाजर देखकर अजय को माँ का गाजर हलवा याद आ गया।",
+   "en": "Seeing the red carrots in the winter market reminded Ajay of his mother's carrot halwa.",
+   "ko": "겨울 시장의 빨간 당근을 보자 아자이는 어머니의 당근 할와가 생각났어요.",
+   "blank": "गाजर हलवा",
+   "src": "made"
+  },
+  {
+   "text": "ठंड की शाम सीमा ने पड़ोसियों को गरमा-गरम गाजर हलवा खिलाया।",
+   "en": "On a cold evening Seema served the neighbors piping-hot carrot halwa.",
+   "ko": "추운 저녁 시마는 이웃들에게 따끈한 당근 할와를 대접했어요.",
+   "blank": "गाजर हलवा",
+   "src": "made"
+  }
+ ],
  "w|गाड़ना": [
   {
    "text": "बाग़ में पौधा गाड़ दो।",
@@ -11067,6 +11227,22 @@
    "en": "Spending the night alone can be scary.",
    "ko": "밤을 혼자 보내는 건 무서울 수 있어.",
    "blank": "गुज़ारना"
+  }
+ ],
+ "w|गुझिया": [
+  {
+   "text": "होली से पहले हलवाई की दुकान पर मालपुआ और गुझिया की भीड़ लगी थी।",
+   "en": "Before Holi there was a rush for malpua and gujiya at the sweet shop.",
+   "ko": "홀리 전에 과자 가게에 말푸아와 구지야를 사려는 사람이 몰렸어요.",
+   "blank": "गुझिया",
+   "src": "made"
+  },
+  {
+   "text": "होली पर सीमा और पड़ोसन ने मिलकर ढेर सारी गुझिया बनाईं।",
+   "en": "For Holi Seema and her neighbor made a big batch of gujiya together.",
+   "ko": "홀리 때 시마와 이웃 아주머니는 함께 구지야를 잔뜩 만들었어요.",
+   "blank": "गुझिया",
+   "src": "made"
   }
  ],
  "w|गुड़": [
@@ -13679,6 +13855,38 @@
    "blank": "चेक"
   }
  ],
+ "w|चेकआउट": [
+  {
+   "text": "चेकआउट के बाद व्यापारी सीधे मंडी में माल ख़रीदने चले गए।",
+   "en": "After checkout the traders went straight to the market to buy goods.",
+   "ko": "체크아웃한 뒤 상인들은 곧장 시장으로 물건을 사러 갔어요.",
+   "blank": "चेकआउट",
+   "src": "made"
+  },
+  {
+   "text": "होटल का चेकआउट देर से हुआ, इसलिए पड़ोसी की ट्रेन छूट गई।",
+   "en": "The hotel checkout ran late, so the neighbor missed his train.",
+   "ko": "호텔 체크아웃이 늦어져서 이웃은 기차를 놓쳤어요.",
+   "blank": "चेकआउट",
+   "src": "made"
+  }
+ ],
+ "w|चेकइन": [
+  {
+   "text": "लॉज के मैनेजर ने कहा कि बारह बजे से पहले चेकइन नहीं हो सकता।",
+   "en": "The lodge manager said check-in isn't possible before twelve.",
+   "ko": "여관 지배인은 열두 시 전에는 체크인이 안 된다고 했어요.",
+   "blank": "चेकइन",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी ने बताया कि होटल में चेकइन के समय पहचान पत्र माँगा गया।",
+   "en": "The neighbor said an ID card was asked for at hotel check-in.",
+   "ko": "이웃은 호텔 체크인 때 신분증을 요구받았다고 했어요.",
+   "blank": "चेकइन",
+   "src": "made"
+  }
+ ],
  "w|चेचक": [
   {
    "text": "अख़बार के इतिहास वाले पन्ने पर बताया गया कि चेचक का टीका कैसे गाँव-गाँव पहुँचा।",
@@ -14133,6 +14341,22 @@
    "en": "The bus will reach the station at six.",
    "ko": "버스는 여섯 시에 역에 도착해.",
    "blank": "छह"
+  }
+ ],
+ "w|छाछ": [
+  {
+   "text": "दोपहर की धूप में अजय ने मसाले वाली छाछ का गिलास पिया।",
+   "en": "In the afternoon sun Ajay drank a glass of spiced buttermilk.",
+   "ko": "한낮 땡볕에 아자이는 향신료를 넣은 버터밀크 한 잔을 마셨어요.",
+   "blank": "छाछ",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन के घर दोपहर के खाने के बाद सबको छाछ मिलती है।",
+   "en": "At the neighbor's house everyone gets buttermilk after lunch.",
+   "ko": "이웃 아주머니 집에서는 점심 뒤에 모두 버터밀크를 마셔요.",
+   "blank": "छाछ",
+   "src": "made"
   }
  ],
  "w|छाँटना": [
@@ -17291,6 +17515,22 @@
    "blank": "ठंडा"
   }
  ],
+ "w|ठंडाई": [
+  {
+   "text": "होली के दिन बाज़ार में बादाम वाली ठंडाई मुफ़्त बाँटी गई।",
+   "en": "On Holi, almond thandai was handed out free in the market.",
+   "ko": "홀리 날 시장에서 아몬드 탄다이를 무료로 나눠 줬어요.",
+   "blank": "ठंडाई",
+   "src": "made"
+  },
+  {
+   "text": "शिवरात्रि पर गली के मंदिर में सबके लिए ठंडाई बनी।",
+   "en": "On Shivratri thandai was made for everyone at the lane's temple.",
+   "ko": "시바라트리 날 골목 사원에서 모두를 위해 탄다이를 만들었어요.",
+   "blank": "ठंडाई",
+   "src": "made"
+  }
+ ],
  "w|ठहरना": [
   {
    "text": "यहाँ थोड़ी देर ठहरना होगा।",
@@ -17711,6 +17951,22 @@
    "en": "A branch broke in the storm.",
    "ko": "폭풍에 가지 하나가 부러졌어.",
    "blank": "डाली"
+  }
+ ],
+ "w|डिक्की": [
+  {
+   "text": "अजय ने आलू-प्याज़ के थैले कार की डिक्की में रख दिए।",
+   "en": "Ajay put the bags of potatoes and onions in the car's boot.",
+   "ko": "아자이는 감자와 양파 자루를 차 트렁크에 실었어요.",
+   "blank": "डिक्की",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन ने सीमा की डिक्की में अपना भारी गमला रखवाया।",
+   "en": "The neighbor lady had her heavy flowerpot put in Seema's car boot.",
+   "ko": "이웃 아주머니가 무거운 화분을 시마의 차 트렁크에 실었어요.",
+   "blank": "डिक्की",
+   "src": "made"
   }
  ],
  "w|डिग्री": [
@@ -20214,6 +20470,22 @@
    "en": "A student was writing a report on the swampy forests of the Sundarbans.",
    "ko": "한 학생이 순다르반스의 늪지 숲에 관한 보고서를 쓰고 있었어요.",
    "blank": "दलदल",
+   "src": "made"
+  }
+ ],
+ "w|दलिया": [
+  {
+   "text": "अनाज की दुकान पर गेहूँ का दलिया खुला भी मिलता है।",
+   "en": "At the grain shop broken wheat is also sold loose.",
+   "ko": "곡물 가게에서는 빻은 밀을 낱개로도 팔아요.",
+   "blank": "दलिया",
+   "src": "made"
+  },
+  {
+   "text": "बीमार पड़ोसी के लिए सीमा ने मूँग दाल का हल्का दलिया बनाया।",
+   "en": "Seema made light mung dal porridge for the sick neighbor.",
+   "ko": "시마는 아픈 이웃을 위해 녹두로 묽은 죽을 쑤었어요.",
+   "blank": "दलिया",
    "src": "made"
   }
  ],
@@ -23175,6 +23447,22 @@
    "blank": "निकाल"
   }
  ],
+ "w|निकास": [
+  {
+   "text": "मंडी की पार्किंग का निकास इतना तंग है कि अजय की गाड़ी अक्सर वहाँ फँस जाती है।",
+   "en": "The market parking exit is so narrow that Ajay's car often gets stuck there.",
+   "ko": "시장 주차장 출구가 너무 좁아서 아자이의 차가 자주 거기서 막혀요.",
+   "blank": "निकास",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की सोसाइटी में आग लगने पर निकास का रास्ता सबको दिखाया गया।",
+   "en": "In Seema's housing society everyone was shown the exit route in case of fire.",
+   "ko": "시마네 아파트 단지에서는 불이 날 때를 대비해 모두에게 비상구를 알려 줬어요.",
+   "blank": "निकास",
+   "src": "made"
+  }
+ ],
  "w|निगम": [
   {
    "text": "नगर निगम के ख़िलाफ़ सड़क के गड्ढों का मुक़दमा चल रहा है।",
@@ -25715,6 +26003,22 @@
    "blank": "पहाड़ी"
   }
  ],
+ "w|पहिया": [
+  {
+   "text": "ठेले का एक पहिया टूटा तो सारे टमाटर सड़क पर बिखर गए।",
+   "en": "When one wheel of the cart broke, all the tomatoes scattered on the road.",
+   "ko": "수레 바퀴 하나가 부러지자 토마토가 길바닥에 다 흩어졌어요.",
+   "blank": "पहिया",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोस के बच्चे की साइकिल का पहिया सीमा के पति ने ठीक कर दिया।",
+   "en": "Seema's husband fixed the wheel of the neighbor kid's bicycle.",
+   "ko": "시마의 남편이 이웃 아이의 자전거 바퀴를 고쳐 줬어요.",
+   "blank": "पहिया",
+   "src": "made"
+  }
+ ],
  "w|पहुँचना": [
   {
    "text": "हम स्टेशन देर से पहुँचे।",
@@ -26171,6 +26475,22 @@
    "en": "Frost can ruin the crops.",
    "ko": "서리 때문에 농작물이 망가질 수 있어.",
    "blank": "पाला"
+  }
+ ],
+ "w|पाव": [
+  {
+   "text": "बेकरी वाले ने सुबह-सुबह ताज़ा पाव निकालकर टोकरी में सजाया।",
+   "en": "Early in the morning the baker took out fresh bread rolls and arranged them in a basket.",
+   "ko": "빵집 주인은 이른 아침 갓 구운 빵을 꺼내 바구니에 담았어요.",
+   "blank": "पाव",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन ने सीमा को मक्खन में सेंका हुआ पाव चखाया।",
+   "en": "The neighbor lady gave Seema a taste of bread roll toasted in butter.",
+   "ko": "이웃 아주머니가 시마에게 버터에 구운 빵을 맛보게 했어요.",
+   "blank": "पाव",
+   "src": "made"
   }
  ],
  "w|पास": [
@@ -28327,6 +28647,22 @@
    "blank": "प्रस्तुति"
   }
  ],
+ "w|प्रस्थान": [
+  {
+   "text": "बस अड्डे के बोर्ड पर लिखा था कि अगली बस का प्रस्थान दस मिनट में है।",
+   "en": "The bus stand board said the next bus departs in ten minutes.",
+   "ko": "버스 정류장 게시판에 다음 버스가 십 분 뒤 출발한다고 적혀 있었어요.",
+   "blank": "प्रस्थान",
+   "src": "made"
+  },
+  {
+   "text": "तीर्थयात्रा पर प्रस्थान से पहले बुज़ुर्ग पड़ोसी ने सबको चाय पर बुलाया।",
+   "en": "Before departing on pilgrimage, the elderly neighbor invited everyone for tea.",
+   "ko": "성지 순례를 떠나기 전에 노인 이웃이 모두를 차 마시러 불렀어요.",
+   "blank": "प्रस्थान",
+   "src": "made"
+  }
+ ],
  "w|प्राकृतिक": [
   {
    "text": "यहाँ प्राकृतिक सुंदरता मन मोह लेती है।",
@@ -28948,6 +29284,22 @@
    "en": "The coach said not to waste time on idle talk and to pick up the ball.",
    "ko": "코치는 쓸데없는 말로 시간 낭비하지 말고 공을 잡으라고 했어요.",
    "blank": "फ़ालतू",
+   "src": "made"
+  }
+ ],
+ "w|फ़ालूदा": [
+  {
+   "text": "कुल्फ़ी वाले के पास गुलाब के शरबत वाला फ़ालूदा भी मिलता है।",
+   "en": "The kulfi seller also has falooda with rose syrup.",
+   "ko": "쿨피 가게에는 장미 시럽을 넣은 팔루다도 있어요.",
+   "blank": "फ़ालूदा",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने पड़ोस की सहेलियों के साथ बैठकर फ़ालूदा खाया।",
+   "en": "Seema sat with her friends from the neighborhood and had falooda.",
+   "ko": "시마는 동네 친구들과 앉아서 팔루다를 먹었어요.",
+   "blank": "फ़ालूदा",
    "src": "made"
   }
  ],
@@ -30415,6 +30767,22 @@
    "en": "Put the new utensils in the cupboard.",
    "ko": "새 그릇은 찬장에 넣어 둬.",
    "blank": "बर्तन"
+  }
+ ],
+ "w|बर्थ": [
+  {
+   "text": "मसाले वाला बताता है कि वह ट्रेन की ऊपर वाली बर्थ पर सोकर केरल से इलायची लाता है।",
+   "en": "The spice seller says he brings cardamom from Kerala sleeping on the upper berth of the train.",
+   "ko": "향신료 상인은 기차 위층 침대칸에서 자면서 케랄라에서 카다멈을 가져온다고 해요.",
+   "blank": "बर्थ",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की पड़ोसन ने बताया कि ट्रेन में उसे नीचे वाली बर्थ मिली थी।",
+   "en": "Seema's neighbor said she'd got the lower berth on the train.",
+   "ko": "시마의 이웃은 기차에서 아래 침대칸을 받았다고 했어요.",
+   "blank": "बर्थ",
+   "src": "made"
   }
  ],
  "w|बर्फ़": [
@@ -32963,6 +33331,22 @@
    "src": "made"
   }
  ],
+ "w|भाजी": [
+  {
+   "text": "ठेले वाले की भाजी में मक्खन इतना था कि अजय ने दो प्लेट खा लीं।",
+   "en": "There was so much butter in the cart's bhaji that Ajay ate two plates.",
+   "ko": "노점 바지에 버터가 듬뿍 들어 있어서 아자이는 두 접시나 먹었어요.",
+   "blank": "भाजी",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन ने आलू-मेथी की भाजी की कटोरी सीमा के घर भेजी।",
+   "en": "The neighbor sent a bowl of potato-fenugreek bhaji to Seema's house.",
+   "ko": "이웃 아주머니가 감자 호로파 바지 한 그릇을 시마네 집에 보냈어요.",
+   "blank": "भाजी",
+   "src": "made"
+  }
+ ],
  "w|भांजी": [
   {
    "text": "मेरी भांजी गाना बहुत अच्छा गाती है।",
@@ -34057,6 +34441,22 @@
    "en": "We bought fresh peas from the market.",
    "ko": "시장에서 신선한 완두콩을 사 왔어.",
    "blank": "मटर"
+  }
+ ],
+ "w|मट्ठा": [
+  {
+   "text": "गाँव से आई औरत मटके में मट्ठा बेच रही थी।",
+   "en": "A woman from the village was selling buttermilk from a clay pot.",
+   "ko": "마을에서 온 여인이 항아리에 담은 맛타를 팔고 있었어요.",
+   "blank": "मट्ठा",
+   "src": "made"
+  },
+  {
+   "text": "पंजाबी पड़ोसी के घर गाढ़ा मट्ठा लस्सी जैसा लगता है।",
+   "en": "At the Punjabi neighbor's house the thick buttermilk tastes like lassi.",
+   "ko": "펀자브 출신 이웃네 진한 맛타는 라씨 같은 맛이 나요.",
+   "blank": "मट्ठा",
+   "src": "made"
   }
  ],
  "w|मंडल": [
@@ -35274,6 +35674,22 @@
    "en": "The shop owner is very kind.",
    "ko": "가게 여주인은 아주 친절해요.",
    "blank": "मालकिन",
+   "src": "made"
+  }
+ ],
+ "w|मालपुआ": [
+  {
+   "text": "होली से पहले हलवाई की दुकान पर मालपुआ और गुझिया की भीड़ लगी थी।",
+   "en": "Before Holi there was a rush for malpua and gujiya at the sweet shop.",
+   "ko": "홀리 전에 과자 가게에 말푸아와 구지야를 사려는 사람이 몰렸어요.",
+   "blank": "मालपुआ",
+   "src": "made"
+  },
+  {
+   "text": "सावन में पड़ोसन ने चाशनी में डूबा मालपुआ भेजा।",
+   "en": "In the monsoon month the neighbor sent malpua soaked in syrup.",
+   "ko": "장마철에 이웃 아주머니가 시럽에 적신 말푸아를 보냈어요.",
+   "blank": "मालपुआ",
    "src": "made"
   }
  ],
@@ -37525,6 +37941,22 @@
    "blank": "रफ़्तार"
   }
  ],
+ "w|रबड़ी": [
+  {
+   "text": "हलवाई कड़ाही में दूध घंटों औटाकर रबड़ी बनाता है।",
+   "en": "The sweet-maker simmers milk in a wok for hours to make rabri.",
+   "ko": "과자 장인은 냄비에 우유를 몇 시간 졸여 라브리를 만들어요.",
+   "blank": "रबड़ी",
+   "src": "made"
+  },
+  {
+   "text": "बुज़ुर्ग पड़ोसन जलेबी के साथ ठंडी रबड़ी बड़े शौक से खाती हैं।",
+   "en": "The elderly neighbor lady loves eating cold rabri with jalebi.",
+   "ko": "나이 든 이웃 아주머니는 잘레비에 차가운 라브리를 곁들여 즐겨 드세요.",
+   "blank": "रबड़ी",
+   "src": "made"
+  }
+ ],
  "w|रबर": [
   {
    "text": "पेंसिल की गलती रबर से मिटा दो।",
@@ -37537,6 +37969,22 @@
    "en": "There is rubber on the shoe sole.",
    "ko": "신발 밑창에 고무가 붙어 있어.",
    "blank": "रबर"
+  }
+ ],
+ "w|रवानगी": [
+  {
+   "text": "मंडी से सब्ज़ी के ट्रकों की रवानगी सुबह चार बजे शुरू हो जाती है।",
+   "en": "The vegetable trucks start leaving the market at four in the morning.",
+   "ko": "시장에서 채소 트럭들은 새벽 네 시에 출발하기 시작해요.",
+   "blank": "रवानगी",
+   "src": "made"
+  },
+  {
+   "text": "बेटी की ससुराल रवानगी के समय पड़ोसन की आँखें भर आईं।",
+   "en": "When her daughter left for her in-laws', the neighbor's eyes filled with tears.",
+   "ko": "딸이 시댁으로 떠날 때 이웃 아주머니의 눈시울이 붉어졌어요.",
+   "blank": "रवानगी",
+   "src": "made"
   }
  ],
  "w|रविवार": [
@@ -37565,6 +38013,22 @@
    "en": "The story has both fun and flavor.",
    "ko": "이야기에 재미와 맛이 둘 다 있어.",
    "blank": "रस"
+  }
+ ],
+ "w|रसगुल्ला": [
+  {
+   "text": "मिठाई की दुकान पर अजय ने मेहमानों के लिए रसगुल्ले का डिब्बा लिया।",
+   "en": "At the sweet shop Ajay bought a box of rasgullas for the guests.",
+   "ko": "아자이는 과자 가게에서 손님들에게 줄 라스굴라 한 상자를 샀어요.",
+   "blank": "रसगुल्ले",
+   "src": "made"
+  },
+  {
+   "text": "बंगाली पड़ोसी ने अपने हाथ का बना रसगुल्ला सबको चखाया।",
+   "en": "The Bengali neighbor let everyone taste a rasgulla he'd made himself.",
+   "ko": "벵골 출신 이웃이 직접 만든 라스굴라를 모두에게 맛보게 했어요.",
+   "blank": "रसगुल्ला",
+   "src": "made"
   }
  ],
  "w|रसीद": [
@@ -38111,6 +38575,22 @@
    "en": "The honest officer refused the bribe.",
    "ko": "정직한 직원이 뇌물을 거절했어.",
    "blank": "रिश्वत"
+  }
+ ],
+ "w|रिसॉर्ट": [
+  {
+   "text": "पहाड़ वाले रिसॉर्ट का रसोइया हर हफ़्ते अजय की दुकान से मसाले ले जाता है।",
+   "en": "The cook from the hill resort takes spices from Ajay's shop every week.",
+   "ko": "산속 리조트 요리사는 매주 아자이 가게에서 향신료를 사 가요.",
+   "blank": "रिसॉर्ट",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसन ने सालगिरह पर किसी रिसॉर्ट में दो दिन बिताए।",
+   "en": "The neighbor lady spent two days at a resort for her anniversary.",
+   "ko": "이웃 아주머니는 결혼기념일에 리조트에서 이틀을 보냈어요.",
+   "blank": "रिसॉर्ट",
+   "src": "made"
   }
  ],
  "w|रीढ़": [
@@ -39423,6 +39903,22 @@
    "blank": "लैपटॉप"
   }
  ],
+ "w|लॉज": [
+  {
+   "text": "बाहर से आए व्यापारी बाज़ार के पास वाले सस्ते लॉज में ठहरते हैं।",
+   "en": "Traders from out of town stay at the cheap lodge near the market.",
+   "ko": "외지에서 온 상인들은 시장 근처 싼 여관에 묵어요.",
+   "blank": "लॉज",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी का भाई शहर आया तो पास के लॉज में ठहरा।",
+   "en": "When the neighbor's brother came to town, he stayed at a nearby lodge.",
+   "ko": "이웃의 형이 도시에 왔을 때 근처 여관에 묵었어요.",
+   "blank": "लॉज",
+   "src": "made"
+  }
+ ],
  "w|लोक": [
   {
    "text": "यह लोक कथा बहुत पुरानी है।",
@@ -39698,6 +40194,22 @@
    "en": "Neha, the bright girl from the village, received a scholarship from a city college.",
    "ko": "마을의 똑똑한 소녀 네하는 도시 대학에서 장학금을 받았어요.",
    "blank": "वज़ीफ़ा",
+   "src": "made"
+  }
+ ],
+ "w|वड़ा": [
+  {
+   "text": "अजय ने नाश्ते में बाज़ार के कोने वाली दुकान से गरम वड़ा खाया।",
+   "en": "For breakfast Ajay ate a hot vada from the shop on the market corner.",
+   "ko": "아자이는 아침으로 시장 모퉁이 가게에서 뜨거운 바다를 먹었어요.",
+   "blank": "वड़ा",
+   "src": "made"
+  },
+  {
+   "text": "बरसात की शाम सीमा ने पड़ोसियों के लिए दही वड़ा बनाया।",
+   "en": "On a rainy evening Seema made dahi vada for the neighbors.",
+   "ko": "비 오는 저녁 시마는 이웃들을 위해 다히 바다를 만들었어요.",
+   "blank": "वड़ा",
    "src": "made"
   }
  ],
@@ -42373,6 +42885,22 @@
    "blank": "शौचालय"
   }
  ],
+ "w|श्रीखंड": [
+  {
+   "text": "डेयरी वाले ने बताया कि आज केसर वाला श्रीखंड ख़त्म हो गया।",
+   "en": "The dairy man said the saffron shrikhand had run out today.",
+   "ko": "유제품 가게 주인은 오늘 사프란 슈리칸드가 다 팔렸다고 했어요.",
+   "blank": "श्रीखंड",
+   "src": "made"
+  },
+  {
+   "text": "मराठी पड़ोसन ने गुड़ी पड़वा पर सीमा को घर का बना श्रीखंड दिया।",
+   "en": "The Marathi neighbor gave Seema homemade shrikhand on Gudi Padwa.",
+   "ko": "마라티 이웃은 구디 파드와 날 시마에게 집에서 만든 슈리칸드를 줬어요.",
+   "blank": "श्रीखंड",
+   "src": "made"
+  }
+ ],
  "w|श्रेणी": [
   {
    "text": "यह किताब बच्चों की श्रेणी में है।",
@@ -43625,6 +44153,22 @@
    "blank": "समय पर"
   }
  ],
+ "w|समय सारणी": [
+  {
+   "text": "अजय ने मंडी के गेट पर लगी बसों की समय सारणी देखी।",
+   "en": "Ajay looked at the bus timetable posted at the market gate.",
+   "ko": "아자이는 시장 입구에 붙은 버스 시간표를 봤어요.",
+   "blank": "समय सारणी",
+   "src": "made"
+  },
+  {
+   "text": "सोसाइटी के नोटिस बोर्ड पर कचरा गाड़ी की समय सारणी लगी है।",
+   "en": "The garbage truck timetable is up on the society's notice board.",
+   "ko": "단지 게시판에 쓰레기차 시간표가 붙어 있어요.",
+   "blank": "समय सारणी",
+   "src": "made"
+  }
+ ],
  "w|समर्थक": [
   {
    "text": "रैली में एक समर्थक ने सुनील से कहा कि उनका उम्मीदवार ज़रूर जीतेगा।",
@@ -44105,6 +44649,22 @@
    "en": "I added mustard oil to the vegetables.",
    "ko": "야채에 겨자 기름을 넣었어.",
    "blank": "सरसों"
+  }
+ ],
+ "w|सराय": [
+  {
+   "text": "पुराने बाज़ार के बीच मुग़ल ज़माने की एक सराय अब भी खड़ी है।",
+   "en": "A Mughal-era inn still stands in the middle of the old market.",
+   "ko": "옛 시장 한가운데 무굴 시대 여인숙이 아직 서 있어요.",
+   "blank": "सराय",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के पड़ोसी हाईवे पर एक छोटी सराय चलाते थे।",
+   "en": "Seema's neighbors used to run a small roadside inn on the highway.",
+   "ko": "시마의 이웃은 고속도로 변에서 작은 여인숙을 했었어요.",
+   "blank": "सराय",
+   "src": "made"
   }
  ],
  "w|सर्कुलर": [
@@ -45819,6 +46379,22 @@
    "blank": "सीट"
   }
  ],
+ "w|सीटबेल्ट": [
+  {
+   "text": "सब्ज़ी लेने निकले अजय ने कार में बैठते ही सीटबेल्ट लगाई।",
+   "en": "Heading out to buy vegetables, Ajay put on his seatbelt as soon as he sat in the car.",
+   "ko": "채소를 사러 나선 아자이는 차에 타자마자 안전벨트를 맸어요.",
+   "blank": "सीटबेल्ट",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी के बेटे को सीमा ने सिखाया कि गाड़ी में बैठते ही सीटबेल्ट लगानी चाहिए।",
+   "en": "Seema taught the neighbor's son that you should put on the seatbelt as soon as you get in a car.",
+   "ko": "시마는 이웃집 아들에게 차에 타면 바로 안전벨트를 매야 한다고 가르쳤어요.",
+   "blank": "सीटबेल्ट",
+   "src": "made"
+  }
+ ],
  "w|सीढ़ी": [
   {
    "text": "पुरानी सीढ़ी बहुत संकरी है।",
@@ -46607,6 +47183,22 @@
    "blank": "सेल"
   }
  ],
+ "w|सेवइयाँ": [
+  {
+   "text": "ईद से पहले बाज़ार में बारीक सेवइयाँ हर दुकान पर बिक रही थीं।",
+   "en": "Before Eid fine vermicelli was being sold in every shop in the market.",
+   "ko": "이드 전에 시장의 가게마다 가는 국수가 팔리고 있었어요.",
+   "blank": "सेवइयाँ",
+   "src": "made"
+  },
+  {
+   "text": "ईद की सुबह ख़ान साहब के घर से मीठी सेवइयाँ आईं।",
+   "en": "On Eid morning sweet vermicelli came over from Khan sahib's house.",
+   "ko": "이드 아침 칸 씨네서 달콤한 국수가 왔어요.",
+   "blank": "सेवइयाँ",
+   "src": "made"
+  }
+ ],
  "w|सेवा": [
   {
    "text": "जी, क्या सेवा करूँ?",
@@ -46753,6 +47345,22 @@
    "en": "He kept thinking late into the night.",
    "ko": "그는 밤늦도록 생각했어.",
    "blank": "सोचा"
+  }
+ ],
+ "w|सोडा": [
+  {
+   "text": "नींबू वाला गिलास में नमक डालकर ऊपर से सोडा भरता है।",
+   "en": "The lime seller puts salt in the glass and tops it up with soda.",
+   "ko": "레몬 장수는 잔에 소금을 넣고 위에 소다를 부어요.",
+   "blank": "सोडा",
+   "src": "made"
+  },
+  {
+   "text": "पेट ख़राब होने पर पड़ोसी ने नींबू-सोडा पीने की सलाह दी।",
+   "en": "When Seema had an upset stomach, the neighbor advised drinking lime soda.",
+   "ko": "배탈이 나자 이웃은 레몬 소다를 마셔 보라고 했어요.",
+   "blank": "सोडा",
+   "src": "made"
   }
  ],
  "w|सोता": [
@@ -47111,6 +47719,22 @@
    "en": "Please speak cleanly and clearly.",
    "ko": "또박또박 분명하게 말해 줘.",
    "blank": "स्पष्ट"
+  }
+ ],
+ "w|स्लीपर": [
+  {
+   "text": "फल वाला रात की ट्रेन के स्लीपर डिब्बे में आम की पेटियाँ लाता है।",
+   "en": "The fruit seller brings crates of mangoes in the sleeper coach of the night train.",
+   "ko": "과일 장수는 밤기차 침대칸에 망고 상자를 싣고 와요.",
+   "blank": "स्लीपर",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी ने हँसकर कहा कि एसी नहीं, स्लीपर में सफ़र का मज़ा ही अलग है।",
+   "en": "The neighbor laughed that traveling in sleeper class, not AC, is a different joy.",
+   "ko": "이웃은 에어컨 칸 말고 일반 침대칸으로 가는 맛이 따로 있다며 웃었어요.",
+   "blank": "स्लीपर",
+   "src": "made"
   }
  ],
  "w|स्लेटी": [
@@ -48511,6 +49135,22 @@
    "en": "His hockey team became the champion.",
    "ko": "그의 하키 팀이 챔피언이 됐어.",
    "blank": "हॉकी"
+  }
+ ],
+ "w|हॉर्न": [
+  {
+   "text": "भीड़ भरे बाज़ार में अजय को बार-बार हॉर्न बजाना पड़ा।",
+   "en": "In the crowded market Ajay had to honk again and again.",
+   "ko": "북적이는 시장에서 아자이는 몇 번이고 경적을 울려야 했어요.",
+   "blank": "हॉर्न",
+   "src": "made"
+  },
+  {
+   "text": "ऊपर वाले शर्मा जी आधी रात को हॉर्न बजाते हैं, इस पर सीमा नाराज़ है।",
+   "en": "Seema is annoyed that Mr Sharma upstairs honks his horn at midnight.",
+   "ko": "시마는 위층 샤르마 씨가 한밤중에 경적을 울려서 화가 나 있어요.",
+   "blank": "हॉर्न",
+   "src": "made"
   }
  ],
  "w|होटल": [

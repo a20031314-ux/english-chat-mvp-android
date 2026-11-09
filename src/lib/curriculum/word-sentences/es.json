@@ -739,6 +739,22 @@
    "blank": "aclarar"
   }
  ],
+ "w|acogida": [
+  {
+   "text": "La hermana de Andrés le dio una acogida fría cuando él llegó con flores.",
+   "en": "Andrés's sister gave him a cold welcome when he arrived with flowers.",
+   "ko": "안드레스가 꽃을 들고 왔을 때 누나는 그를 차갑게 맞았어요.",
+   "blank": "acogida",
+   "src": "made"
+  },
+  {
+   "text": "Los vecinos de Carmen le dieron una acogida muy cariñosa.",
+   "en": "Carmen's neighbors gave her a very warm welcome.",
+   "ko": "카르멘의 이웃들은 그녀를 아주 따뜻하게 맞아 줬어요.",
+   "blank": "acogida",
+   "src": "made"
+  }
+ ],
  "w|acompañante": [
   {
    "text": "Lucas viajó en la furgoneta con un acompañante.",
@@ -2521,6 +2537,22 @@
    "blank": "alarma"
   }
  ],
+ "w|alba": [
+  {
+   "text": "Andrés no pudo dormir y vio el alba desde la ventana pensando en la pelea.",
+   "en": "Andrés couldn't sleep and watched the dawn from the window, thinking about the fight.",
+   "ko": "안드레스는 잠을 못 이루고 싸움을 생각하며 창밖으로 새벽을 바라봤어요.",
+   "blank": "alba",
+   "src": "made"
+  },
+  {
+   "text": "El camión de la mudanza llegó al alba y despertó a los vecinos de Carmen.",
+   "en": "The moving truck arrived at dawn and woke up Carmen's neighbors.",
+   "ko": "이삿짐 트럭이 새벽에 도착해서 카르멘의 이웃들을 깨웠어요.",
+   "blank": "alba",
+   "src": "made"
+  }
+ ],
  "w|alboroto": [
   {
    "text": "Cuando llegó la ambulancia, hubo un alboroto en la sala de espera.",
@@ -2675,6 +2707,22 @@
    "en": "He felt great joy when he saw them.",
    "ko": "그들을 보고 큰 기쁨을 느꼈어.",
    "blank": "alegría"
+  }
+ ],
+ "w|alejado": [
+  {
+   "text": "Andrés y su hermana viven en barrios muy alejados y se ven poco.",
+   "en": "Andrés and his sister live in neighborhoods far apart and rarely see each other.",
+   "ko": "안드레스와 누나는 멀리 떨어진 동네에 살아서 잘 못 만나요.",
+   "blank": "alejados",
+   "src": "made"
+  },
+  {
+   "text": "La casa nueva de Carmen está alejada del centro, pero es muy tranquila.",
+   "en": "Carmen's new house is far from the center, but it's very quiet.",
+   "ko": "카르멘의 새집은 시내에서 멀지만 아주 조용해요.",
+   "blank": "alejada",
+   "src": "made"
   }
  ],
  "w|alejar": [
@@ -4637,6 +4685,22 @@
    "en": "I don't remember that actress's last name.",
    "ko": "그 여배우의 성이 기억나지 않아.",
    "blank": "apellido"
+  }
+ ],
+ "w|apenar": [
+  {
+   "text": "A Andrés le apenó mucho ver a su hermana tan triste.",
+   "en": "It saddened Andrés a lot to see his sister so sad.",
+   "ko": "누나가 그렇게 슬퍼하는 걸 보니 안드레스는 무척 마음이 아팠어요.",
+   "blank": "apenó",
+   "src": "made"
+  },
+  {
+   "text": "Dejar el barrio de toda la vida le apenaba a Carmen más de lo que pensaba.",
+   "en": "Leaving her lifelong neighborhood saddened Carmen more than she expected.",
+   "ko": "평생 살던 동네를 떠나는 건 카르멘이 생각한 것보다 더 서운했어요.",
+   "blank": "apenaba",
+   "src": "made"
   }
  ],
  "w|apenas": [
@@ -8043,6 +8107,22 @@
    "blank": "bárbaro"
   }
  ],
+ "w|barca": [
+  {
+   "text": "El plan secreto de Andrés era alquilar una barca en el lago donde veraneaban de niños.",
+   "en": "Andrés's secret plan was to rent a boat on the lake where they spent summers as children.",
+   "ko": "안드레스의 비밀 계획은 어릴 적 여름을 보낸 호수에서 배를 빌리는 거였어요.",
+   "blank": "barca",
+   "src": "made"
+  },
+  {
+   "text": "Desde la ventana nueva, Carmen ve una barca de pescadores en el puerto.",
+   "en": "From her new window, Carmen sees a fishing boat in the harbor.",
+   "ko": "카르멘은 새 창문으로 항구에 있는 고깃배를 봐요.",
+   "blank": "barca",
+   "src": "made"
+  }
+ ],
  "w|barco": [
   {
    "text": "El barco zarpó al amanecer.",
@@ -9183,6 +9263,22 @@
    "blank": "bombero"
   }
  ],
+ "w|bombón": [
+  {
+   "text": "Andrés dejó un bombón en la almohada de su hermana con una nota.",
+   "en": "Andrés left a chocolate on his sister's pillow with a note.",
+   "ko": "안드레스는 누나 베개 위에 쪽지와 함께 초콜릿 하나를 놓아 두었어요.",
+   "blank": "bombón",
+   "src": "made"
+  },
+  {
+   "text": "Carmen le regaló una caja de bombones al vecino que le ayudó con el sofá.",
+   "en": "Carmen gave a box of chocolates to the neighbor who helped her with the sofa.",
+   "ko": "카르멘은 소파 옮기는 걸 도와준 이웃에게 초콜릿 한 상자를 선물했어요.",
+   "blank": "bombones",
+   "src": "made"
+  }
+ ],
  "w|bondad": [
   {
    "text": "Agradeció la bondad de sus vecinos.",
@@ -10039,6 +10135,22 @@
    "src": "made"
   }
  ],
+ "w|cacahuete": [
+  {
+   "text": "Mientras esperaban, Andrés pelaba un cacahuete tras otro sin decir nada.",
+   "en": "While they waited, Andrés shelled one peanut after another without saying anything.",
+   "ko": "기다리는 동안 안드레스는 아무 말 없이 땅콩을 하나하나 깠어요.",
+   "blank": "cacahuete",
+   "src": "made"
+  },
+  {
+   "text": "Entre las cajas, Carmen encontró un cacahuete que la había seguido desde la casa vieja.",
+   "en": "Among the boxes, Carmen found a peanut that had followed her from the old house.",
+   "ko": "카르멘은 상자들 사이에서 옛집에서부터 따라온 땅콩 하나를 발견했어요.",
+   "blank": "cacahuete",
+   "src": "made"
+  }
+ ],
  "w|cacería": [
   {
    "text": "En el pueblo de Andrés está prohibida la cacería durante la primavera.",
@@ -10530,6 +10642,22 @@
    "en": "The referee at Nuria's final was a bald man with a red whistle.",
    "ko": "누리아가 뛴 결승전 심판은 빨간 호루라기를 문 대머리 아저씨였어요.",
    "blank": "calvo",
+   "src": "made"
+  }
+ ],
+ "w|calzón": [
+  {
+   "text": "La hermana de Andrés encontró en la maleta un calzón de baño con la etiqueta puesta.",
+   "en": "Andrés's sister found a pair of swimming trunks in the suitcase with the tag still on.",
+   "ko": "안드레스의 누나는 여행 가방에서 태그도 안 뗀 수영복 바지를 발견했어요.",
+   "blank": "calzón",
+   "src": "made"
+  },
+  {
+   "text": "Al vaciar el armario, Carmen encontró un calzón viejo de su abuelo.",
+   "en": "While emptying the wardrobe, Carmen found an old pair of her grandfather's underpants.",
+   "ko": "옷장을 비우다가 카르멘은 할아버지의 낡은 속바지를 발견했어요.",
+   "blank": "calzón",
    "src": "made"
   }
  ],
@@ -11285,6 +11413,22 @@
    "blank": "capítulo"
   }
  ],
+ "w|capricho": [
+  {
+   "text": "La hermana de Andrés pensó que el viaje a la playa era solo un capricho suyo.",
+   "en": "Andrés's sister thought the trip to the beach was just a whim of his.",
+   "ko": "안드레스의 누나는 바닷가 여행이 그의 변덕일 뿐이라고 생각했어요.",
+   "blank": "capricho",
+   "src": "made"
+  },
+  {
+   "text": "Comprar un sofá nuevo fue un capricho que Carmen no pudo evitar.",
+   "en": "Buying a new sofa was a whim Carmen couldn't resist.",
+   "ko": "새 소파를 산 건 카르멘이 참지 못한 충동구매였어요.",
+   "blank": "capricho",
+   "src": "made"
+  }
+ ],
  "w|cápsula": [
   {
    "text": "La nieta de Carlos enterró una cápsula del tiempo en el jardín.",
@@ -11693,6 +11837,22 @@
    "en": "The ticket turned out more expensive than expected.",
    "ko": "표가 생각보다 더 비쌌어.",
    "blank": "caro"
+  }
+ ],
+ "w|carpa": [
+  {
+   "text": "De niños, Andrés y su hermana montaban una carpa en el jardín cada verano.",
+   "en": "As children, Andrés and his sister put up a tent in the garden every summer.",
+   "ko": "어릴 때 안드레스와 누나는 여름마다 마당에 텐트를 쳤어요.",
+   "blank": "carpa",
+   "src": "made"
+  },
+  {
+   "text": "Mientras pintaban la casa, Carmen guardó los muebles bajo una carpa en el jardín.",
+   "en": "While the house was being painted, Carmen stored the furniture under a tent in the garden.",
+   "ko": "집에 페인트칠하는 동안 카르멘은 가구를 마당 천막 밑에 두었어요.",
+   "blank": "carpa",
+   "src": "made"
   }
  ],
  "w|carrera": [
@@ -16189,6 +16349,22 @@
    "blank": "conflicto"
   }
  ],
+ "w|conformarse": [
+  {
+   "text": "Andrés no quiso conformarse con una disculpa por mensaje y fue a verla.",
+   "en": "Andrés didn't want to settle for an apology by text and went to see her.",
+   "ko": "안드레스는 문자로 사과하는 걸로 만족하지 않고 누나를 찾아갔어요.",
+   "blank": "conformarse",
+   "src": "made"
+  },
+  {
+   "text": "El piso nuevo es pequeño, pero Carmen sabe conformarse con lo necesario.",
+   "en": "The new flat is small, but Carmen knows how to make do with what she needs.",
+   "ko": "새집은 작지만 카르멘은 필요한 것만으로 만족할 줄 알아요.",
+   "blank": "conformarse",
+   "src": "made"
+  }
+ ],
  "w|conforme": [
   {
    "text": "Andrés se quedó conforme con el precio que le ofrecieron por el queso.",
@@ -16804,6 +16980,22 @@
    "en": "Seafood should be eaten the same day it's bought.",
    "ko": "해산물은 산 날 바로 먹어야 해요.",
    "blank": "consumirlo",
+   "src": "made"
+  }
+ ],
+ "w|consumo": [
+  {
+   "text": "La hermana de Andrés se quejó del consumo de luz cuando él jugaba toda la noche.",
+   "en": "Andrés's sister complained about the electricity usage when he played all night.",
+   "ko": "안드레스의 누나는 그가 밤새 게임할 때 전기 사용량이 많다고 불평했어요.",
+   "blank": "consumo",
+   "src": "made"
+  },
+  {
+   "text": "En la casa nueva, Carmen revisó el contador de agua para ver el consumo.",
+   "en": "In the new house, Carmen checked the water meter to see the usage.",
+   "ko": "새집에서 카르멘은 수도 계량기로 사용량을 확인했어요.",
+   "blank": "consumo",
    "src": "made"
   }
  ],
@@ -17619,6 +17811,22 @@
    "en": "He means it from the heart.",
    "ko": "진심으로 하는 말이야.",
    "blank": "corazón"
+  }
+ ],
+ "w|corazonada": [
+  {
+   "text": "Andrés tuvo la corazonada de que su hermana había leído mal su mensaje.",
+   "en": "Andrés had a hunch that his sister had misread his message.",
+   "ko": "안드레스는 누나가 자기 메시지를 잘못 읽었을 거라는 느낌이 들었어요.",
+   "blank": "corazonada",
+   "src": "made"
+  },
+  {
+   "text": "Carmen tuvo una corazonada al ver el piso y lo alquiló ese mismo día.",
+   "en": "Carmen had a hunch when she saw the flat and rented it that same day.",
+   "ko": "카르멘은 집을 보자마자 느낌이 와서 그날 바로 계약했어요.",
+   "blank": "corazonada",
+   "src": "made"
   }
  ],
  "w|corbata": [
@@ -22355,6 +22563,22 @@
    "blank": "devolvió"
   }
  ],
+ "w|devorar": [
+  {
+   "text": "Después de la discusión, Andrés se puso a devorar una bolsa de patatas fritas.",
+   "en": "After the argument, Andrés started devouring a bag of crisps.",
+   "ko": "말다툼 뒤에 안드레스는 감자칩 한 봉지를 먹어 치우기 시작했어요.",
+   "blank": "devorar",
+   "src": "made"
+  },
+  {
+   "text": "Tras cargar cajas todo el día, Carmen y sus amigos se pusieron a devorar pizzas.",
+   "en": "After carrying boxes all day, Carmen and her friends set about devouring pizzas.",
+   "ko": "하루 종일 상자를 나른 뒤 카르멘과 친구들은 피자를 허겁지겁 먹었어요.",
+   "blank": "devorar",
+   "src": "made"
+  }
+ ],
  "w|devoto": [
   {
    "text": "El abuelo de Pablo, muy devoto, le regaló una medalla por su graduación.",
@@ -24291,6 +24515,22 @@
    "en": "That duke title is ancient.",
    "ko": "그 공작 작위는 오래됐어.",
    "blank": "duque"
+  }
+ ],
+ "w|duquesa": [
+  {
+   "text": "De pequeña, la hermana de Andrés se disfrazaba siempre de duquesa.",
+   "en": "As a little girl, Andrés's sister always dressed up as a duchess.",
+   "ko": "안드레스의 누나는 어릴 때 늘 공작부인 분장을 했어요.",
+   "blank": "duquesa",
+   "src": "made"
+  },
+  {
+   "text": "Entre los trastos del desván, Carmen encontró el retrato de una duquesa.",
+   "en": "Among the junk in the attic, Carmen found a portrait of a duchess.",
+   "ko": "다락방 잡동사니 사이에서 카르멘은 공작부인 초상화를 발견했어요.",
+   "blank": "duquesa",
+   "src": "made"
   }
  ],
  "w|durante": [
@@ -29583,6 +29823,22 @@
    "blank": "expulsar"
   }
  ],
+ "w|exquisito": [
+  {
+   "text": "La hermana de Andrés reconoció que el guiso estaba exquisito.",
+   "en": "Andrés's sister admitted that the stew was delicious.",
+   "ko": "안드레스의 누나는 스튜가 정말 맛있다고 인정했어요.",
+   "blank": "exquisito",
+   "src": "made"
+  },
+  {
+   "text": "La vecina nueva le llevó a Carmen un pastel exquisito de bienvenida.",
+   "en": "The new neighbor brought Carmen a delicious welcome cake.",
+   "ko": "새 이웃이 카르멘에게 아주 맛있는 환영 케이크를 가져다줬어요.",
+   "blank": "exquisito",
+   "src": "made"
+  }
+ ],
  "w|éxtasis": [
   {
    "text": "Raúl leyó con éxtasis el último capítulo de la novela.",
@@ -30311,6 +30567,22 @@
    "en": "The documentary about the sea is fascinating.",
    "ko": "바다에 관한 다큐멘터리가 아주 흥미로워.",
    "blank": "fascinante"
+  }
+ ],
+ "w|fascinar": [
+  {
+   "text": "A Andrés siempre le han fascinado las historias que cuenta su hermana.",
+   "en": "Andrés has always been fascinated by the stories his sister tells.",
+   "ko": "안드레스는 누나가 들려주는 이야기에 늘 푹 빠졌어요.",
+   "blank": "fascinado",
+   "src": "made"
+  },
+  {
+   "text": "A Carmen le fascinan las casas antiguas con techos altos.",
+   "en": "Carmen is fascinated by old houses with high ceilings.",
+   "ko": "카르멘은 천장 높은 옛집에 푹 빠져 있어요.",
+   "blank": "fascinan",
+   "src": "made"
   }
  ],
  "w|fase": [
@@ -31435,6 +31707,22 @@
    "en": "There's something odd at the bottom of the drawer.",
    "ko": "서랍 밑에 이상한 게 있어.",
    "blank": "fondo"
+  }
+ ],
+ "w|forastero": [
+  {
+   "text": "Andrés se sintió como un forastero en su propia casa durante esos días.",
+   "en": "Andrés felt like a stranger in his own home during those days.",
+   "ko": "그 며칠 동안 안드레스는 자기 집에서 이방인이 된 것 같았어요.",
+   "blank": "forastero",
+   "src": "made"
+  },
+  {
+   "text": "En el pueblo nuevo, a Carmen la miraban como a una forastera.",
+   "en": "In the new village, people looked at Carmen like a stranger.",
+   "ko": "새 마을에서 사람들은 카르멘을 낯선 사람 보듯 봤어요.",
+   "blank": "forastera",
+   "src": "made"
   }
  ],
  "w|forense": [
@@ -35591,6 +35879,22 @@
    "blank": "hospital"
   }
  ],
+ "w|hospitalidad": [
+  {
+   "text": "La madre de Andrés, famosa por su hospitalidad, invitó a los dos hermanos a cenar.",
+   "en": "Andrés's mother, famous for her hospitality, invited both siblings to dinner.",
+   "ko": "손님 대접 잘하기로 유명한 안드레스의 엄마가 두 남매를 저녁 식사에 불렀어요.",
+   "blank": "hospitalidad",
+   "src": "made"
+  },
+  {
+   "text": "Carmen agradeció la hospitalidad de su prima mientras esperaba las llaves.",
+   "en": "Carmen was grateful for her cousin's hospitality while she waited for the keys.",
+   "ko": "카르멘은 열쇠를 기다리는 동안 사촌의 환대에 고마워했어요.",
+   "blank": "hospitalidad",
+   "src": "made"
+  }
+ ],
  "w|hostil": [
   {
    "text": "Al principio el ambiente era hostil, pero ahora es muy agradable.",
@@ -36473,6 +36777,22 @@
    "en": "It's not impossible to achieve it.",
    "ko": "그걸 이루는 게 불가능하진 않아.",
    "blank": "imposible"
+  }
+ ],
+ "w|impostor": [
+  {
+   "text": "Su hermana le llamó impostor porque Andrés firmó la tarjeta con el nombre de los dos.",
+   "en": "His sister called Andrés an impostor because he signed the card with both their names.",
+   "ko": "안드레스가 둘의 이름으로 카드에 서명하자 누나는 그를 사기꾼이라고 불렀어요.",
+   "blank": "impostor",
+   "src": "made"
+  },
+  {
+   "text": "Carmen vio en una película a un impostor que se hacía pasar por agente inmobiliario.",
+   "en": "Carmen saw a film about an impostor who pretended to be an estate agent.",
+   "ko": "카르멘은 부동산 중개인 행세를 하는 사기꾼이 나오는 영화를 봤어요.",
+   "blank": "impostor",
+   "src": "made"
   }
  ],
  "w|impresión": [
@@ -38671,6 +38991,22 @@
    "src": "made"
   }
  ],
+ "w|intuición": [
+  {
+   "text": "Por intuición, la madre de Andrés supo enseguida que algo pasaba.",
+   "en": "By intuition, Andrés's mother knew right away that something was wrong.",
+   "ko": "안드레스의 엄마는 직감으로 무슨 일이 있다는 걸 바로 알았어요.",
+   "blank": "intuición",
+   "src": "made"
+  },
+  {
+   "text": "Carmen se fio de su intuición y eligió el barrio sin conocerlo.",
+   "en": "Carmen trusted her intuition and picked the neighborhood without knowing it.",
+   "ko": "카르멘은 직감을 믿고 잘 모르는 동네를 골랐어요.",
+   "blank": "intuición",
+   "src": "made"
+  }
+ ],
  "w|inusual": [
   {
    "text": "Hubo un silencio inusual en la clase.",
@@ -39076,6 +39412,22 @@
    "en": "Paula admitted that when she was young she was a bit irresponsible with money.",
    "ko": "파울라는 젊었을 때 돈 문제에 좀 무책임했다고 인정했어요.",
    "blank": "irresponsable",
+   "src": "made"
+  }
+ ],
+ "w|irritar": [
+  {
+   "text": "A Andrés le suele irritar que su hermana no conteste los mensajes.",
+   "en": "It usually irritates Andrés when his sister doesn't answer messages.",
+   "ko": "안드레스는 누나가 메시지에 답하지 않으면 보통 짜증이 나요.",
+   "blank": "irritar",
+   "src": "made"
+  },
+  {
+   "text": "El ruido del taladro del vecino empezó a irritar a Carmen el primer domingo.",
+   "en": "The neighbor's drill noise started to irritate Carmen on the first Sunday.",
+   "ko": "첫 일요일부터 이웃의 드릴 소리가 카르멘의 신경을 건드리기 시작했어요.",
+   "blank": "irritar",
    "src": "made"
   }
  ],
@@ -42117,6 +42469,22 @@
    "blank": "lunes"
   }
  ],
+ "w|luto": [
+  {
+   "text": "Cuando murió el abuelo, Andrés y su hermana guardaron luto juntos.",
+   "en": "When their grandfather died, Andrés and his sister mourned together.",
+   "ko": "할아버지가 돌아가셨을 때 안드레스와 누나는 함께 상을 치렀어요.",
+   "blank": "luto",
+   "src": "made"
+  },
+  {
+   "text": "La familia de la casa vecina estaba de luto y Carmen hizo la mudanza en silencio.",
+   "en": "The family next door was in mourning and Carmen did the move quietly.",
+   "ko": "옆집 가족이 상중이라서 카르멘은 조용히 이사했어요.",
+   "blank": "luto",
+   "src": "made"
+  }
+ ],
  "w|luz": [
   {
    "text": "Apaga la luz al salir.",
@@ -42476,6 +42844,22 @@
    "en": "The cameras traveled in the car's trunk.",
    "ko": "카메라들은 자동차 트렁크에 실려 갔어요.",
    "blank": "maletero",
+   "src": "made"
+  }
+ ],
+ "w|malgastar": [
+  {
+   "text": "La hermana de Andrés le acusó de malgastar el dinero del regalo de mamá.",
+   "en": "Andrés's sister accused him of wasting the money for Mom's present.",
+   "ko": "안드레스의 누나는 그가 엄마 선물 살 돈을 낭비했다고 탓했어요.",
+   "blank": "malgastar",
+   "src": "made"
+  },
+  {
+   "text": "Carmen no quiso malgastar dinero en cajas y pidió algunas al supermercado.",
+   "en": "Carmen didn't want to waste money on boxes and asked the supermarket for some.",
+   "ko": "카르멘은 상자에 돈을 낭비하기 싫어서 슈퍼마켓에서 몇 개 얻어 왔어요.",
+   "blank": "malgastar",
    "src": "made"
   }
  ],
@@ -44411,6 +44795,22 @@
    "src": "made"
   }
  ],
+ "w|mermelada": [
+  {
+   "text": "Andrés untó mermelada de fresa en las tostadas, como le gusta a su hermana.",
+   "en": "Andrés spread strawberry jam on the toast, the way his sister likes it.",
+   "ko": "안드레스는 누나가 좋아하는 대로 토스트에 딸기잼을 발랐어요.",
+   "blank": "mermelada",
+   "src": "made"
+  },
+  {
+   "text": "Carmen guardó los tarros de mermelada de su madre en la despensa nueva.",
+   "en": "Carmen stored her mother's jars of jam in the new pantry.",
+   "ko": "카르멘은 엄마가 만든 잼 병들을 새 식료품 창고에 넣었어요.",
+   "blank": "mermelada",
+   "src": "made"
+  }
+ ],
  "w|mero": [
   {
    "text": "Diego insistió en que aquello fue un mero error administrativo.",
@@ -44453,6 +44853,22 @@
    "en": "We reserved a table outside.",
    "ko": "밖에 자리를 예약했어.",
    "blank": "mesa"
+  }
+ ],
+ "w|mesero": [
+  {
+   "text": "En el restaurante, el mesero notó la tensión entre Andrés y su hermana.",
+   "en": "At the restaurant, the waiter noticed the tension between Andrés and his sister.",
+   "ko": "식당에서 웨이터는 안드레스와 누나 사이의 긴장감을 눈치챘어요.",
+   "blank": "mesero",
+   "src": "made"
+  },
+  {
+   "text": "Carmen trabajó de mesera para pagar el depósito del piso.",
+   "en": "Carmen worked as a waitress to pay the deposit on the flat.",
+   "ko": "카르멘은 집 보증금을 내려고 웨이트리스로 일했어요.",
+   "blank": "mesera",
+   "src": "made"
   }
  ],
  "w|meta": [
@@ -45739,6 +46155,22 @@
    "blank": "motel"
   }
  ],
+ "w|motivación": [
+  {
+   "text": "La motivación de Andrés era solo darle una sorpresa a su hermana.",
+   "en": "Andrés's motivation was just to give his sister a surprise.",
+   "ko": "안드레스의 의도는 그저 누나를 깜짝 놀라게 하는 거였어요.",
+   "blank": "motivación",
+   "src": "made"
+  },
+  {
+   "text": "La principal motivación de Carmen para mudarse fue estar cerca del trabajo.",
+   "en": "Carmen's main motivation for moving was to be close to work.",
+   "ko": "카르멘이 이사한 가장 큰 이유는 직장 가까이 사는 거였어요.",
+   "blank": "motivación",
+   "src": "made"
+  }
+ ],
  "w|motivar": [
   {
    "text": "Ver el amanecer desde la montaña sirvió para motivar a Mateo a seguir caminando.",
@@ -46685,6 +47117,22 @@
    "en": "We saw a spaceship.",
    "ko": "우주선을 봤어.",
    "blank": "nave"
+  }
+ ],
+ "w|navegación": [
+  {
+   "text": "Andrés tenía preparado un curso de navegación a vela como sorpresa para su hermana.",
+   "en": "Andrés had a sailing course lined up as a surprise for his sister.",
+   "ko": "안드레스는 누나를 깜짝 놀래 주려고 요트 항해 강좌를 준비해 뒀어요.",
+   "blank": "navegación",
+   "src": "made"
+  },
+  {
+   "text": "Carmen usó la aplicación de navegación para llegar a su nueva calle.",
+   "en": "Carmen used the navigation app to get to her new street.",
+   "ko": "카르멘은 내비게이션 앱으로 새 동네 거리를 찾아갔어요.",
+   "blank": "navegación",
+   "src": "made"
   }
  ],
  "w|navegar": [
@@ -48329,6 +48777,22 @@
    "blank": "ofende"
   }
  ],
+ "w|ofensa": [
+  {
+   "text": "Andrés no quería ofender, pero su hermana se tomó el chiste como una ofensa.",
+   "en": "Andrés didn't mean to offend, but his sister took the joke as an insult.",
+   "ko": "안드레스는 기분 상하게 할 생각이 없었지만 누나는 그 농담을 모욕으로 받아들였어요.",
+   "blank": "ofensa",
+   "src": "made"
+  },
+  {
+   "text": "Carmen pidió perdón al vecino por la ofensa de aparcar el camión en su puerta.",
+   "en": "Carmen apologized to the neighbor for the offense of parking the truck at his door.",
+   "ko": "카르멘은 트럭을 이웃집 문 앞에 세운 실례를 사과했어요.",
+   "blank": "ofensa",
+   "src": "made"
+  }
+ ],
  "w|ofensiva": [
   {
    "text": "Sergio escribió una crónica sobre la ofensiva del ejército en una guerra del siglo pasado.",
@@ -49085,6 +49549,22 @@
    "en": "He feels proud of his son.",
    "ko": "아들을 자랑스러워해.",
    "blank": "orgulloso"
+  }
+ ],
+ "w|orientación": [
+  {
+   "text": "Andrés perdió la orientación en el bosque cuando fue a buscar a su hermana.",
+   "en": "Andrés lost his bearings in the woods when he went to look for his sister.",
+   "ko": "안드레스는 누나를 찾으러 숲에 갔다가 방향을 잃었어요.",
+   "blank": "orientación",
+   "src": "made"
+  },
+  {
+   "text": "Carmen eligió el piso por su orientación al sur, que le da sol todo el día.",
+   "en": "Carmen chose the flat for its south-facing orientation, which gets sun all day.",
+   "ko": "카르멘은 하루 종일 해가 드는 남향이라서 그 집을 골랐어요.",
+   "blank": "orientación",
+   "src": "made"
   }
  ],
  "w|oriental": [
@@ -50341,6 +50821,22 @@
    "blank": "parque"
   }
  ],
+ "w|parrilla": [
+  {
+   "text": "El domingo, Andrés preparó costillas a la parrilla para toda la familia.",
+   "en": "On Sunday, Andrés grilled ribs for the whole family.",
+   "ko": "일요일에 안드레스는 온 가족을 위해 갈비를 그릴에 구웠어요.",
+   "blank": "parrilla",
+   "src": "made"
+  },
+  {
+   "text": "El jardín de la casa nueva tiene una parrilla donde Carmen ya hizo la primera barbacoa.",
+   "en": "The new house's garden has a grill where Carmen already had her first barbecue.",
+   "ko": "새집 마당에는 그릴이 있어서 카르멘은 벌써 첫 바비큐를 했어요.",
+   "blank": "parrilla",
+   "src": "made"
+  }
+ ],
  "w|parte": [
   {
    "text": "La mejor parte es el final.",
@@ -51473,6 +51969,22 @@
    "en": "She was little back then.",
    "ko": "그때는 어렸어.",
    "blank": "pequeña"
+  }
+ ],
+ "w|percepción": [
+  {
+   "text": "La percepción que tenía Andrés de la pelea era muy distinta a la de su hermana.",
+   "en": "Andrés's perception of the fight was very different from his sister's.",
+   "ko": "싸움에 대한 안드레스의 생각은 누나와 아주 달랐어요.",
+   "blank": "percepción",
+   "src": "made"
+  },
+  {
+   "text": "La percepción del espacio cambió cuando Carmen pintó las paredes de blanco.",
+   "en": "The sense of space changed when Carmen painted the walls white.",
+   "ko": "카르멘이 벽을 흰색으로 칠하자 공간이 달라 보였어요.",
+   "blank": "percepción",
+   "src": "made"
   }
  ],
  "w|percibir": [
@@ -56637,6 +57149,22 @@
    "src": "made"
   }
  ],
+ "w|ración": [
+  {
+   "text": "Andrés le sirvió a su hermana una ración doble de postre.",
+   "en": "Andrés served his sister a double portion of dessert.",
+   "ko": "안드레스는 누나에게 디저트를 두 배로 덜어 줬어요.",
+   "blank": "ración",
+   "src": "made"
+  },
+  {
+   "text": "Para los que ayudaron, Carmen preparó una ración de tortilla para cada uno.",
+   "en": "For those who helped, Carmen made a portion of Spanish omelette for each person.",
+   "ko": "카르멘은 도와준 사람들에게 토르티야를 한 접시씩 만들어 줬어요.",
+   "blank": "ración",
+   "src": "made"
+  }
+ ],
  "w|racional": [
   {
    "text": "Hugo intenta ser racional y no entrenar cuando está lesionado.",
@@ -58667,6 +59195,22 @@
    "en": "Suddenly it started to rain.",
    "ko": "갑자기 비가 오기 시작했어.",
    "blank": "repente"
+  }
+ ],
+ "w|repentinamente": [
+  {
+   "text": "Andrés se calló repentinamente cuando vio llorar a su hermana.",
+   "en": "Andrés suddenly went quiet when he saw his sister cry.",
+   "ko": "누나가 우는 걸 보자 안드레스는 갑자기 입을 다물었어요.",
+   "blank": "repentinamente",
+   "src": "made"
+  },
+  {
+   "text": "La caja de los platos se rompió repentinamente en la escalera, pero Carmen la salvó.",
+   "en": "The box of plates suddenly gave way on the stairs, but Carmen saved it.",
+   "ko": "계단에서 접시 상자가 갑자기 터졌지만 카르멘이 붙잡았어요.",
+   "blank": "repentinamente",
+   "src": "made"
   }
  ],
  "w|repentino": [
@@ -61635,6 +62179,22 @@
    "src": "made"
   }
  ],
+ "w|sediento": [
+  {
+   "text": "Después de gritar tanto, Andrés estaba sediento y se bebió dos vasos de agua.",
+   "en": "After shouting so much, Andrés was thirsty and drank two glasses of water.",
+   "ko": "그렇게 소리를 지르고 나니 안드레스는 목이 말라 물을 두 잔 마셨어요.",
+   "blank": "sediento",
+   "src": "made"
+  },
+  {
+   "text": "Los amigos de Carmen terminaron sedientos después de subir las cajas al cuarto piso.",
+   "en": "Carmen's friends ended up thirsty after carrying the boxes up to the fourth floor.",
+   "ko": "카르멘의 친구들은 상자를 4층까지 옮기고 나서 목이 바짝 말랐어요.",
+   "blank": "sedientos",
+   "src": "made"
+  }
+ ],
  "w|seducir": [
   {
    "text": "En la telenovela, un médico intenta seducir a una enfermera.",
@@ -62176,6 +62736,22 @@
    "en": "Hiring a moving company was the most sensible thing Paula did.",
    "ko": "이삿짐센터를 부른 건 파울라가 한 일 중 가장 현명한 선택이었어요.",
    "blank": "sensato",
+   "src": "made"
+  }
+ ],
+ "w|sensibilidad": [
+  {
+   "text": "La hermana de Andrés tiene una sensibilidad especial para notar cuándo él miente.",
+   "en": "Andrés's sister has a special sensitivity for noticing when he lies.",
+   "ko": "안드레스의 누나는 그가 거짓말할 때 알아채는 감각이 남달라요.",
+   "blank": "sensibilidad",
+   "src": "made"
+  },
+  {
+   "text": "Carmen envolvió las copas con mucha sensibilidad, una por una.",
+   "en": "Carmen wrapped the glasses very carefully, one by one.",
+   "ko": "카르멘은 유리잔을 하나하나 아주 섬세하게 포장했어요.",
+   "blank": "sensibilidad",
    "src": "made"
   }
  ],
@@ -65521,6 +66097,22 @@
    "blank": "tarea"
   }
  ],
+ "w|tarifa": [
+  {
+   "text": "Todo empezó porque Andrés cambió la tarifa del móvil familiar sin avisar.",
+   "en": "It all started because Andrés changed the family phone plan without telling anyone.",
+   "ko": "안드레스가 말도 없이 가족 휴대폰 요금제를 바꾼 게 모든 일의 시작이었어요.",
+   "blank": "tarifa",
+   "src": "made"
+  },
+  {
+   "text": "La empresa de mudanzas le cobró a Carmen una tarifa extra por el piano.",
+   "en": "The moving company charged Carmen an extra fee for the piano.",
+   "ko": "이삿짐 업체는 카르멘에게 피아노 때문에 추가 요금을 받았어요.",
+   "blank": "tarifa",
+   "src": "made"
+  }
+ ],
  "w|tarjeta": [
   {
    "text": "Pagué con la tarjeta de crédito.",
@@ -66136,6 +66728,22 @@
    "en": "Elena resisted the temptation to throw out the old doors.",
    "ko": "엘레나는 오래된 문을 버리고 싶은 유혹을 참았어요.",
    "blank": "tentación",
+   "src": "made"
+  }
+ ],
+ "w|tentar": [
+  {
+   "text": "Andrés estuvo a punto de contarle la sorpresa, pero no quiso tentar a la suerte.",
+   "en": "Andrés was about to tell her about the surprise, but he didn't want to tempt fate.",
+   "ko": "안드레스는 깜짝 선물 얘기를 할 뻔했지만 괜히 일을 그르치고 싶지 않았어요.",
+   "blank": "tentar",
+   "src": "made"
+  },
+  {
+   "text": "Las rebajas de muebles llegaron a tentar a Carmen, pero no compró nada.",
+   "en": "The furniture sales did tempt Carmen, but she didn't buy anything.",
+   "ko": "가구 할인에 카르멘은 혹했지만 아무것도 사지 않았어요.",
+   "blank": "tentar",
    "src": "made"
   }
  ],
@@ -69215,6 +69823,22 @@
    "blank": "vacía"
   }
  ],
+ "w|vacuno": [
+  {
+   "text": "Para hacer las paces, Andrés cocinó un guiso de carne de vacuno como el de su abuela.",
+   "en": "To make peace, Andrés cooked a beef stew like his grandmother's.",
+   "ko": "화해하려고 안드레스는 할머니가 해 주던 소고기 스튜를 만들었어요.",
+   "blank": "vacuno",
+   "src": "made"
+  },
+  {
+   "text": "La primera noche en la casa nueva, Carmen pidió hamburguesas de ganado vacuno.",
+   "en": "The first night in the new house, Carmen ordered beef burgers.",
+   "ko": "새집에서의 첫날 밤 카르멘은 소고기 햄버거를 시켰어요.",
+   "blank": "vacuno",
+   "src": "made"
+  }
+ ],
  "w|vagabundo": [
   {
    "text": "Un vagabundo dormía cerca del parque.",
@@ -71566,6 +72190,22 @@
    "en": "Every morning, Lola's hotel offers yoga classes on the terrace.",
    "ko": "롤라의 호텔은 매일 아침 테라스에서 요가 수업을 열어요.",
    "blank": "yoga",
+   "src": "made"
+  }
+ ],
+ "w|yogur": [
+  {
+   "text": "A la mañana siguiente, la hermana de Andrés le dejó un yogur con una carita sonriente.",
+   "en": "The next morning, Andrés's sister left him a yogurt with a smiley face.",
+   "ko": "다음 날 아침 안드레스의 누나는 웃는 얼굴을 그린 요구르트를 남겨 뒀어요.",
+   "blank": "yogur",
+   "src": "made"
+  },
+  {
+   "text": "La nevera nueva de Carmen estaba vacía, salvo por un yogur caducado.",
+   "en": "Carmen's new fridge was empty except for an expired yogurt.",
+   "ko": "카르멘의 새 냉장고는 유통기한 지난 요구르트 하나 말고는 텅 비어 있었어요.",
+   "blank": "yogur",
    "src": "made"
   }
  ],
