@@ -5613,6 +5613,22 @@
    "src": "tatoeba:5830943/bill en:5829231/CK"
   }
  ],
+ "w|apostador": [
+  {
+   "text": "O personagem do Bruno é um apostador que perde tudo nas corridas de cavalo.",
+   "en": "Bruno's character is a gambler who loses everything at the horse races.",
+   "ko": "브루누가 맡은 인물은 경마로 전부 잃는 도박꾼이에요.",
+   "blank": "apostador",
+   "src": "made"
+  },
+  {
+   "text": "O tio da Sofia é apostador e sempre aposta quando vai chover.",
+   "en": "Sofia's uncle is a gambler and always bets on when it will rain.",
+   "ko": "소피아의 삼촌은 내기를 좋아해서 늘 비 올 날을 두고 내기를 해요.",
+   "blank": "apostador",
+   "src": "made"
+  }
+ ],
  "w|apostar": [
   {
    "text": "Não vou apostar nisso.",
@@ -7505,6 +7521,22 @@
    "src": "made"
   }
  ],
+ "w|assombrado": [
+  {
+   "text": "Os técnicos juram que o velho teatro é assombrado pelo fantasma de uma atriz.",
+   "en": "The technicians swear the old theater is haunted by the ghost of an actress.",
+   "ko": "기술진은 오래된 극장에 한 여배우의 유령이 나온다고 장담해요.",
+   "blank": "assombrado",
+   "src": "made"
+  },
+  {
+   "text": "Com a neblina de inverno, o parque parece um bosque assombrado.",
+   "en": "With the winter fog, the park looks like a haunted forest.",
+   "ko": "겨울 안개 때문에 공원이 유령 나오는 숲 같아요.",
+   "blank": "assombrado",
+   "src": "made"
+  }
+ ],
  "w|assombrar": [
   {
    "text": "A Júlia confessou que o mal-entendido ia assombrar as noites dela se não conversassem.",
@@ -7850,6 +7882,22 @@
    "en": "In the past, just the smell of the clinic was enough to terrify Sofia.",
    "ko": "예전에는 치과 냄새만 맡아도 소피아는 겁에 질렸어요.",
    "blank": "aterrorizar",
+   "src": "made"
+  }
+ ],
+ "w|atestar": [
+  {
+   "text": "O engenheiro veio atestar que o palco aguenta o peso do cenário novo.",
+   "en": "The engineer came to certify that the stage can bear the weight of the new set.",
+   "ko": "엔지니어가 와서 무대가 새 세트 무게를 견딘다고 확인해 줬어요.",
+   "blank": "atestar",
+   "src": "made"
+  },
+  {
+   "text": "As flores do ipê vieram atestar que a primavera tinha chegado de vez.",
+   "en": "The ipê blossoms came to confirm that spring had arrived for good.",
+   "ko": "이페 나무 꽃이 피면서 봄이 완전히 왔다는 걸 알려 줬어요.",
+   "blank": "atestar",
    "src": "made"
   }
  ],
@@ -12041,6 +12089,22 @@
    "src": "made"
   }
  ],
+ "w|brutalidade": [
+  {
+   "text": "A peça histórica retrata a brutalidade da escravidão sem cenas explícitas.",
+   "en": "The historical play portrays the brutality of slavery without explicit scenes.",
+   "ko": "그 역사극은 노골적인 장면 없이 노예제의 잔혹함을 그려요.",
+   "blank": "brutalidade",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia se assustou com a brutalidade da tempestade que derrubou a árvore da rua.",
+   "en": "Sofia was startled by the violence of the storm that knocked down the tree on her street.",
+   "ko": "소피아는 길가 나무를 쓰러뜨린 폭풍의 거셈에 놀랐어요.",
+   "blank": "brutalidade",
+   "src": "made"
+  }
+ ],
  "w|bruto": [
   {
    "text": "O Bruno trouxe um cristal bruto para mostrar na aula de ciências.",
@@ -13775,6 +13839,22 @@
    "ko": "건강이 제 유일한 재산이에요.",
    "blank": "capital",
    "src": "tatoeba:376136/brauliobezerra en:238928"
+  }
+ ],
+ "w|capitalista": [
+  {
+   "text": "A peça critica com humor a sociedade capitalista do século passado.",
+   "en": "The play humorously criticizes the capitalist society of the last century.",
+   "ko": "그 연극은 지난 세기 자본주의 사회를 유머러스하게 비판해요.",
+   "blank": "capitalista",
+   "src": "made"
+  },
+  {
+   "text": "O professor da Sofia explicou como o turismo de inverno virou um negócio capitalista.",
+   "en": "Sofia's teacher explained how winter tourism became a capitalist business.",
+   "ko": "소피아의 선생님은 겨울 관광이 어떻게 자본주의 사업이 됐는지 설명했어요.",
+   "blank": "capitalista",
+   "src": "made"
   }
  ],
  "w|capitão": [
@@ -20027,6 +20107,22 @@
    "src": "made"
   }
  ],
+ "w|congregação": [
+  {
+   "text": "Uma congregação de freiras assistiu à matinê de domingo.",
+   "en": "A congregation of nuns attended the Sunday matinee.",
+   "ko": "수녀회 수녀들이 일요일 낮 공연을 봤어요.",
+   "blank": "congregação",
+   "src": "made"
+  },
+  {
+   "text": "A congregação da igreja organiza uma campanha do agasalho todo inverno.",
+   "en": "The church congregation organizes a coat drive every winter.",
+   "ko": "교회 신자들은 겨울마다 옷 나눔 행사를 열어요.",
+   "blank": "congregação",
+   "src": "made"
+  }
+ ],
  "w|congressista": [
   {
    "text": "Um congressista visitou a biblioteca do Pedro e prometeu verba para livros novos.",
@@ -20885,6 +20981,22 @@
    "src": "made"
   }
  ],
+ "w|contido": [
+  {
+   "text": "A atuação contida da atriz emocionou a plateia inteira.",
+   "en": "The actress's restrained performance moved the entire audience.",
+   "ko": "여배우의 절제된 연기가 관객 모두를 감동시켰어요.",
+   "blank": "contida",
+   "src": "made"
+  },
+  {
+   "text": "O frio de maio ainda é contido, mas a Sofia já tirou os casacos do armário.",
+   "en": "The May cold is still mild, but Sofia has already taken the coats out of the closet.",
+   "ko": "오월 추위는 아직 약하지만 소피아는 벌써 외투를 꺼냈어요.",
+   "blank": "contido",
+   "src": "made"
+  }
+ ],
  "w|contigo": [
   {
    "text": "Saio contigo agora.",
@@ -21640,6 +21752,38 @@
    "en": "Inês started learning the Korean language and sends Clara a note with new letters.",
    "ko": "이네스는 한국어를 배우기 시작해서 클라라에게 새 글자로 쪽지를 보내요.",
    "blank": "coreana",
+   "src": "made"
+  }
+ ],
+ "w|coreografia": [
+  {
+   "text": "A coreografia do musical exige que o Bruno dance e cante ao mesmo tempo.",
+   "en": "The musical's choreography requires Bruno to dance and sing at the same time.",
+   "ko": "뮤지컬 안무 때문에 브루누는 춤추면서 동시에 노래해야 해요.",
+   "blank": "coreografia",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia montou uma coreografia simples para a apresentação de primavera da escola.",
+   "en": "Sofia put together a simple choreography for the school's spring show.",
+   "ko": "소피아는 학교 봄 발표회를 위해 간단한 안무를 짰어요.",
+   "blank": "coreografia",
+   "src": "made"
+  }
+ ],
+ "w|coringa": [
+  {
+   "text": "O Bruno é o coringa do elenco e substitui qualquer ator que fique doente.",
+   "en": "Bruno is the cast's wild card and fills in for any actor who gets sick.",
+   "ko": "브루누는 극단의 만능 대타라서 아픈 배우가 생기면 누구든 대신해요.",
+   "blank": "coringa",
+   "src": "made"
+  },
+  {
+   "text": "Nas noites frias, a família da Sofia joga cartas e o coringa vale o dobro.",
+   "en": "On cold nights, Sofia's family plays cards and the joker is worth double.",
+   "ko": "추운 밤이면 소피아네 가족은 카드놀이를 하는데 조커는 두 배 점수예요.",
+   "blank": "coringa",
    "src": "made"
   }
  ],
@@ -24509,6 +24653,22 @@
    "src": "tatoeba:8864176/JGEN en:8860426/AlanF_US"
   }
  ],
+ "w|delinquente": [
+  {
+   "text": "O Bruno faz o papel de um jovem delinquente que muda de vida no último ato.",
+   "en": "Bruno plays a young delinquent who turns his life around in the last act.",
+   "ko": "브루누는 마지막 막에서 새 삶을 사는 비행 청소년 역을 맡았어요.",
+   "blank": "delinquente",
+   "src": "made"
+  },
+  {
+   "text": "No jornal, a Sofia leu que um delinquente foi preso por roubar casas de veraneio no inverno.",
+   "en": "In the newspaper, Sofia read that a delinquent was arrested for robbing vacation homes in winter.",
+   "ko": "소피아는 신문에서 겨울철 별장을 털던 범죄자가 잡혔다는 기사를 읽었어요.",
+   "blank": "delinquente",
+   "src": "made"
+  }
+ ],
  "w|delito": [
   {
    "text": "O Rafael explicou ao cliente que o delito prescreveu há anos.",
@@ -25626,6 +25786,22 @@
    "en": "Inês read the product description and saw that the cookie contained milk.",
    "ko": "이네스는 상품 설명을 읽고 과자에 우유가 들었다는 걸 알았어요.",
    "blank": "descrição",
+   "src": "made"
+  }
+ ],
+ "w|descuidar": [
+  {
+   "text": "O Bruno lembra aos atores que não podem descuidar da voz antes da estreia.",
+   "en": "Bruno reminds the actors they can't neglect their voices before opening night.",
+   "ko": "브루누는 배우들에게 첫 공연 전에 목 관리를 소홀히 하면 안 된다고 일러요.",
+   "blank": "descuidar",
+   "src": "made"
+  },
+  {
+   "text": "Com o tempo seco, a Sofia não pode descuidar da hidratação da pele.",
+   "en": "With the dry weather, Sofia can't neglect moisturizing her skin.",
+   "ko": "날씨가 건조해서 소피아는 피부 보습에 소홀하면 안 돼요.",
+   "blank": "descuidar",
    "src": "made"
   }
  ],
@@ -27981,6 +28157,22 @@
    "blank": "distância"
   }
  ],
+ "w|distanciar": [
+  {
+   "text": "O ator principal tentou se distanciar do personagem depois de cada sessão.",
+   "en": "The lead actor tried to distance himself from the character after each performance.",
+   "ko": "주연 배우는 공연이 끝날 때마다 배역에서 벗어나려고 애썼어요.",
+   "blank": "distanciar",
+   "src": "made"
+  },
+  {
+   "text": "No inverno, a Sofia costuma se distanciar um pouco dos amigos e ficar mais em casa.",
+   "en": "In winter, Sofia tends to drift a little away from her friends and stay home more.",
+   "ko": "겨울이면 소피아는 친구들과 조금 멀어지고 집에 더 머무는 편이에요.",
+   "blank": "distanciar",
+   "src": "made"
+  }
+ ],
  "w|distante": [
   {
    "text": "Nós vimos a luz de um farol distante.",
@@ -28249,6 +28441,22 @@
    "en": "What a fun outing.",
    "ko": "정말 재미있는 나들이였어.",
    "blank": "divertido"
+  }
+ ],
+ "w|divertimento": [
+  {
+   "text": "Para o Bruno, o teatro é trabalho, mas também é puro divertimento.",
+   "en": "For Bruno, theater is work, but it's also pure fun.",
+   "ko": "브루누에게 연극은 일이지만 순수한 즐거움이기도 해요.",
+   "blank": "divertimento",
+   "src": "made"
+  },
+  {
+   "text": "No verão, o maior divertimento da Sofia é tomar sorvete na praça.",
+   "en": "In summer, Sofia's greatest amusement is having ice cream in the square.",
+   "ko": "여름에 소피아의 가장 큰 즐거움은 광장에서 아이스크림을 먹는 거예요.",
+   "blank": "divertimento",
+   "src": "made"
   }
  ],
  "w|divertir": [
@@ -29573,6 +29781,22 @@
    "src": "made"
   }
  ],
+ "w|elaborar": [
+  {
+   "text": "A companhia levou meses para elaborar o roteiro da nova peça.",
+   "en": "The company took months to develop the script for the new play.",
+   "ko": "극단은 새 연극 대본을 만드는 데 몇 달이 걸렸어요.",
+   "blank": "elaborar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia gosta de elaborar um cardápio diferente para cada estação.",
+   "en": "Sofia likes to put together a different menu for each season.",
+   "ko": "소피아는 계절마다 다른 식단을 짜는 걸 좋아해요.",
+   "blank": "elaborar",
+   "src": "made"
+  }
+ ],
  "w|ele": [
   {
    "text": "Ele chega tarde.",
@@ -29617,6 +29841,22 @@
    "ko": "그녀는 똑똑하고 늘 세련됐어요.",
    "blank": "elegante",
    "src": "tatoeba:13860603/carlosalberto en:13860607/carlosalberto"
+  }
+ ],
+ "w|eleger": [
+  {
+   "text": "Os atores da companhia vão eleger um novo representante no fim do mês.",
+   "en": "The company's actors are going to elect a new representative at the end of the month.",
+   "ko": "극단 배우들은 이달 말에 새 대표를 뽑을 거예요.",
+   "blank": "eleger",
+   "src": "made"
+  },
+  {
+   "text": "O bairro da Sofia vai eleger a rainha da festa junina este ano.",
+   "en": "Sofia's neighborhood is going to elect the queen of the June festival this year.",
+   "ko": "소피아네 동네는 올해 유월 축제의 여왕을 뽑을 거예요.",
+   "blank": "eleger",
+   "src": "made"
   }
  ],
  "w|eleição": [
@@ -30162,6 +30402,22 @@
    "en": "The oldest investor acts as a gray eminence in the startup's decisions.",
    "ko": "가장 나이 많은 투자자가 스타트업 결정의 숨은 실세 노릇을 해요.",
    "blank": "eminência",
+   "src": "made"
+  }
+ ],
+ "w|emissão": [
+  {
+   "text": "A bilheteria atrasou a emissão dos ingressos por causa de uma falha no sistema.",
+   "en": "The box office delayed issuing tickets because of a system failure.",
+   "ko": "매표소는 시스템 오류로 표 발권이 늦어졌어요.",
+   "blank": "emissão",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia leu que a emissão de gases aumenta no inverno por causa do aquecimento das casas.",
+   "en": "Sofia read that gas emissions rise in winter because of home heating.",
+   "ko": "소피아는 겨울에 집 난방 때문에 가스 배출이 늘어난다는 글을 읽었어요.",
+   "blank": "emissão",
    "src": "made"
   }
  ],
@@ -34277,6 +34533,22 @@
    "src": "made"
   }
  ],
+ "w|estreitar": [
+  {
+   "text": "O Bruno quer estreitar os laços entre o teatro e as escolas do bairro.",
+   "en": "Bruno wants to strengthen ties between the theater and the neighborhood schools.",
+   "ko": "브루누는 극장과 동네 학교들의 관계를 더 가깝게 하고 싶어 해요.",
+   "blank": "estreitar",
+   "src": "made"
+  },
+  {
+   "text": "Quando esfria, a Sofia aproveita as noites longas para estreitar a amizade com os vizinhos.",
+   "en": "When it gets cold, Sofia makes use of the long nights to grow closer to her neighbors.",
+   "ko": "날이 추워지면 소피아는 긴 밤을 이용해 이웃들과 더 친해져요.",
+   "blank": "estreitar",
+   "src": "made"
+  }
+ ],
  "w|estreito": [
   {
    "text": "O Lucas subiu uma escada estreita até a sala de audiências.",
@@ -35024,6 +35296,22 @@
    "en": "The photographer has an exceptional eye for spontaneous moments.",
    "ko": "사진작가는 자연스러운 순간을 잡아내는 눈이 뛰어나요.",
    "blank": "excepcional",
+   "src": "made"
+  }
+ ],
+ "w|excessivo": [
+  {
+   "text": "A crítica achou o cenário bonito, mas a fumaça no palco um pouco excessiva.",
+   "en": "The critic found the set beautiful, but the smoke on stage a bit excessive.",
+   "ko": "평론가는 무대는 예뻤지만 연기 효과가 좀 과했다고 봤어요.",
+   "blank": "excessiva",
+   "src": "made"
+  },
+  {
+   "text": "O calor excessivo de janeiro fez a Sofia trocar as corridas para a noite.",
+   "en": "The excessive heat of January made Sofia switch her runs to the evening.",
+   "ko": "일월의 지나친 더위 때문에 소피아는 달리기를 저녁으로 옮겼어요.",
+   "blank": "excessivo",
    "src": "made"
   }
  ],
@@ -37373,6 +37661,22 @@
    "src": "tatoeba:1112728/alexmarcelo en:1112727/CN"
   }
  ],
+ "w|feminista": [
+  {
+   "text": "A diretora montou uma leitura feminista de uma peça clássica.",
+   "en": "The director staged a feminist reading of a classic play.",
+   "ko": "연출가는 고전 희곡을 페미니즘 시각으로 다시 무대에 올렸어요.",
+   "blank": "feminista",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia participou de uma roda de conversa feminista na feira de primavera.",
+   "en": "Sofia joined a feminist discussion circle at the spring fair.",
+   "ko": "소피아는 봄 장터에서 열린 페미니즘 토론 모임에 참여했어요.",
+   "blank": "feminista",
+   "src": "made"
+  }
+ ],
  "w|fender": [
   {
    "text": "O casco do cavalo começou a fender, e o Miguel chamou o ferrador.",
@@ -37779,6 +38083,22 @@
    "ko": "그 그림이 흥미로웠어요.",
    "blank": "figura",
    "src": "tatoeba:381729/brauliobezerra en:48979/CK"
+  }
+ ],
+ "w|figurino": [
+  {
+   "text": "A costureira passou a noite ajustando o figurino do Bruno.",
+   "en": "The seamstress spent the night adjusting Bruno's costume.",
+   "ko": "재봉사는 밤새 브루누의 의상을 고쳤어요.",
+   "blank": "figurino",
+   "src": "made"
+  },
+  {
+   "text": "Na troca de estação, a Sofia sempre muda o figurino e aposenta os vestidos de verão.",
+   "en": "At the change of season, Sofia always changes her look and retires her summer dresses.",
+   "ko": "계절이 바뀌면 소피아는 늘 옷차림을 바꾸고 여름 원피스를 넣어 둬요.",
+   "blank": "figurino",
+   "src": "made"
   }
  ],
  "w|fila": [
@@ -39641,6 +39961,22 @@
    "src": "made"
   }
  ],
+ "w|frontal": [
+  {
+   "text": "O Bruno prefere sentar na fila frontal para ver as expressões dos atores.",
+   "en": "Bruno prefers sitting in the front row to see the actors' expressions.",
+   "ko": "브루누는 배우들 표정을 보려고 맨 앞줄에 앉는 걸 좋아해요.",
+   "blank": "frontal",
+   "src": "made"
+  },
+  {
+   "text": "O vento frontal de inverno faz a Sofia andar inclinada na ciclovia.",
+   "en": "The winter headwind makes Sofia ride hunched over on the bike path.",
+   "ko": "겨울 맞바람 때문에 소피아는 자전거 길에서 몸을 숙이고 달려요.",
+   "blank": "frontal",
+   "src": "made"
+  }
+ ],
  "w|fronteira": [
   {
    "text": "Nós moramos perto da fronteira.",
@@ -41290,6 +41626,22 @@
    "en": "After lunch, Rita took a turn around the desks to see how the work was going.",
    "ko": "점심 뒤 히타는 일이 어떻게 되는지 보려고 책상들을 한 바퀴 돌았어요.",
    "blank": "giro",
+   "src": "made"
+  }
+ ],
+ "w|gladiador": [
+  {
+   "text": "Na comédia romana, o Bruno faz um gladiador que tem medo de sangue.",
+   "en": "In the Roman comedy, Bruno plays a gladiator who is afraid of blood.",
+   "ko": "로마 배경 코미디에서 브루누는 피를 무서워하는 검투사를 연기해요.",
+   "blank": "gladiador",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia assistiu a um filme de gladiador numa tarde chuvosa de outono.",
+   "en": "Sofia watched a gladiator movie on a rainy fall afternoon.",
+   "ko": "소피아는 비 오는 가을 오후에 검투사 영화를 봤어요.",
+   "blank": "gladiador",
    "src": "made"
   }
  ],
@@ -46257,6 +46609,22 @@
    "src": "made"
   }
  ],
+ "w|instruir": [
+  {
+   "text": "O diretor pediu ao Bruno que ajudasse a instruir os atores novos sobre as marcações do palco.",
+   "en": "The director asked Bruno to help instruct the new actors on their stage marks.",
+   "ko": "연출가는 브루누에게 신입 배우들에게 무대 동선을 가르쳐 달라고 했어요.",
+   "blank": "instruir",
+   "src": "made"
+  },
+  {
+   "text": "Todo outono, a Sofia gosta de instruir as crianças do bairro a plantar bulbos de flores.",
+   "en": "Every fall, Sofia likes to teach the neighborhood kids how to plant flower bulbs.",
+   "ko": "가을마다 소피아는 동네 아이들에게 꽃 구근 심는 법을 가르쳐 주는 걸 좋아해요.",
+   "blank": "instruir",
+   "src": "made"
+  }
+ ],
  "w|instrumento": [
   {
    "text": "Eu queria saber tocar algum instrumento.",
@@ -48737,6 +49105,22 @@
    "ko": "제인은 머리에 노란 리본을 달고 있었어요.",
    "blank": "laço",
    "src": "tatoeba:987636/alexmarcelo en:53719/CN"
+  }
+ ],
+ "w|lacuna": [
+  {
+   "text": "O ator esqueceu a fala e deixou uma lacuna constrangedora no diálogo.",
+   "en": "The actor forgot his line and left an awkward gap in the dialogue.",
+   "ko": "배우가 대사를 잊어서 대화 중에 어색한 공백이 생겼어요.",
+   "blank": "lacuna",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia aproveitou as férias de julho para preencher uma lacuna na leitura.",
+   "en": "Sofia used the July holidays to fill a gap in her reading.",
+   "ko": "소피아는 칠월 방학을 이용해 밀린 독서를 채웠어요.",
+   "blank": "lacuna",
+   "src": "made"
   }
  ],
  "w|lado": [
@@ -55463,6 +55847,22 @@
    "src": "made"
   }
  ],
+ "w|mosteiro": [
+  {
+   "text": "O cenário do segundo ato reproduz o claustro de um mosteiro medieval.",
+   "en": "The second act's set reproduces the cloister of a medieval monastery.",
+   "ko": "이 막 무대는 중세 수도원의 회랑을 재현해요.",
+   "blank": "mosteiro",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia passou um fim de semana de outono num mosteiro nas montanhas.",
+   "en": "Sofia spent a fall weekend at a monastery in the mountains.",
+   "ko": "소피아는 산속 수도원에서 가을 주말을 보냈어요.",
+   "blank": "mosteiro",
+   "src": "made"
+  }
+ ],
  "w|mostrar": [
   {
    "text": "Deixa eu te mostrar uma coisa.",
@@ -57022,6 +57422,22 @@
    "en": "Carla's uncle was watching the fight on TV and shouted when the knockout came.",
    "ko": "카를라의 삼촌은 TV로 경기를 보다가 케이오가 나오자 소리를 질렀어요.",
    "blank": "nocaute",
+   "src": "made"
+  }
+ ],
+ "w|nocautear": [
+  {
+   "text": "Na peça sobre boxe, o Bruno precisa fingir nocautear o rival sem encostar nele.",
+   "en": "In the boxing play, Bruno has to pretend to knock out his rival without touching him.",
+   "ko": "권투 연극에서 브루누는 상대를 건드리지 않고 녹아웃시키는 척해야 해요.",
+   "blank": "nocautear",
+   "src": "made"
+  },
+  {
+   "text": "O calor de fevereiro parece nocautear a Sofia logo depois do almoço.",
+   "en": "The February heat seems to knock Sofia out right after lunch.",
+   "ko": "이월 더위에 소피아는 점심만 먹으면 녹초가 되는 것 같아요.",
+   "blank": "nocautear",
    "src": "made"
   }
  ],
@@ -62457,6 +62873,22 @@
    "src": "made"
   }
  ],
+ "w|persuadir": [
+  {
+   "text": "O Bruno conseguiu persuadir o patrocinador a bancar mais uma temporada.",
+   "en": "Bruno managed to persuade the sponsor to fund one more season.",
+   "ko": "브루누는 후원사를 설득해 한 시즌을 더 지원받았어요.",
+   "blank": "persuadir",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia tentou persuadir o marido a viajar para a serra no inverno.",
+   "en": "Sofia tried to persuade her husband to travel to the mountains in winter.",
+   "ko": "소피아는 남편에게 겨울에 산으로 여행 가자고 설득해 봤어요.",
+   "blank": "persuadir",
+   "src": "made"
+  }
+ ],
  "w|pertence": [
   {
    "text": "Na mudança, o Bruno perdeu uma caixa com pertences de infância.",
@@ -64177,6 +64609,22 @@
    "src": "tatoeba:6472355/heo598 en:2129937/freddy1"
   }
  ],
+ "w|pontapé": [
+  {
+   "text": "Na cena da briga, o vilão finge dar um pontapé no herói.",
+   "en": "In the fight scene, the villain pretends to kick the hero.",
+   "ko": "싸움 장면에서 악당은 주인공을 걷어차는 척해요.",
+   "blank": "pontapé",
+   "src": "made"
+  },
+  {
+   "text": "Na praia, um menino deu um pontapé na bola e acertou o guarda-sol da Sofia.",
+   "en": "At the beach, a boy kicked the ball and hit Sofia's umbrella.",
+   "ko": "바닷가에서 한 남자아이가 공을 걷어차서 소피아의 파라솔을 맞혔어요.",
+   "blank": "pontapé",
+   "src": "made"
+  }
+ ],
  "w|ponte": [
   {
    "text": "Nós ainda estamos muito longe da ponte.",
@@ -64269,6 +64717,22 @@
    "ko": "그냥 인기 있고 싶었어요.",
    "blank": "popular",
    "src": "tatoeba:7705829/Ricardo14 en:4471293/Hybrid"
+  }
+ ],
+ "w|popularidade": [
+  {
+   "text": "A popularidade da peça cresceu depois de uma reportagem na televisão.",
+   "en": "The play's popularity grew after a television report.",
+   "ko": "텔레비전 보도가 나간 뒤 그 연극의 인기가 높아졌어요.",
+   "blank": "popularidade",
+   "src": "made"
+  },
+  {
+   "text": "A popularidade das roupas de lã volta todo ano quando esfria.",
+   "en": "The popularity of woolen clothes comes back every year when it gets cold.",
+   "ko": "날이 추워지면 해마다 털옷 인기가 돌아와요.",
+   "blank": "popularidade",
+   "src": "made"
   }
  ],
  "w|pôquer": [
@@ -65977,6 +66441,22 @@
    "src": "tatoeba:8154604/ritualesatanum en:3820137/CK"
   }
  ],
+ "w|prestígio": [
+  {
+   "text": "Trabalhar com aquela diretora deu muito prestígio ao Bruno.",
+   "en": "Working with that director gave Bruno a lot of prestige.",
+   "ko": "그 연출가와 일하면서 브루누는 이름값이 많이 올랐어요.",
+   "blank": "prestígio",
+   "src": "made"
+  },
+  {
+   "text": "O festival de inverno da cidade ganhou prestígio entre os músicos.",
+   "en": "The city's winter festival gained prestige among musicians.",
+   "ko": "그 도시의 겨울 축제는 음악가들 사이에서 명성을 얻었어요.",
+   "blank": "prestígio",
+   "src": "made"
+  }
+ ],
  "w|presumir": [
   {
    "text": "O Miguel presumiu que a venda abria no feriado, mas estava fechada.",
@@ -66479,6 +66959,22 @@
    "src": "tatoeba:4838335/bill en:3378688/CK"
   }
  ],
+ "w|processado": [
+  {
+   "text": "O teatro foi processado por um vizinho que reclamava do barulho dos ensaios.",
+   "en": "The theater was sued by a neighbor who complained about the rehearsal noise.",
+   "ko": "극장은 연습 소음에 불만을 품은 이웃에게 고소당했어요.",
+   "blank": "processado",
+   "src": "made"
+  },
+  {
+   "text": "No inverno, a Sofia evita comida processada e faz mais sopas em casa.",
+   "en": "In winter, Sofia avoids processed food and makes more soups at home.",
+   "ko": "겨울에 소피아는 가공식품을 피하고 집에서 수프를 더 많이 끓여요.",
+   "blank": "processada",
+   "src": "made"
+  }
+ ],
  "w|processar": [
   {
    "text": "O sistema demorou para processar o pagamento e o Tiago pediu paciência ao cliente.",
@@ -66914,6 +67410,22 @@
    "en": "Luísa dreams of designing train stations when she finishes architecture.",
    "ko": "루이자는 건축 공부를 마치면 기차역을 설계하는 게 꿈이에요.",
    "blank": "projetar",
+   "src": "made"
+  }
+ ],
+ "w|projétil": [
+  {
+   "text": "Na cena de guerra, o efeito de luz imita o voo de um projétil sobre o palco.",
+   "en": "In the war scene, the lighting effect imitates a projectile flying over the stage.",
+   "ko": "전쟁 장면에서 조명 효과가 무대 위로 날아가는 포탄을 흉내 내요.",
+   "blank": "projétil",
+   "src": "made"
+  },
+  {
+   "text": "Na tempestade de verão, o granizo caía como um projétil no telhado da Sofia.",
+   "en": "In the summer storm, the hail fell like a projectile on Sofia's roof.",
+   "ko": "여름 폭풍 때 우박이 포탄처럼 소피아네 지붕에 떨어졌어요.",
+   "blank": "projétil",
    "src": "made"
   }
  ],
@@ -67647,6 +68159,22 @@
    "en": "The next person can come in.",
    "ko": "다음 사람 들어와도 돼.",
    "blank": "próximo"
+  }
+ ],
+ "w|prudente": [
+  {
+   "text": "Foi prudente ensaiar a cena do fogo com os bombeiros por perto.",
+   "en": "It was prudent to rehearse the fire scene with firefighters nearby.",
+   "ko": "소방관을 곁에 두고 불 장면을 연습한 건 신중한 판단이었어요.",
+   "blank": "prudente",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia acha prudente levar um guarda-chuva na bolsa durante a primavera.",
+   "en": "Sofia thinks it's prudent to carry an umbrella in her bag during spring.",
+   "ko": "소피아는 봄에는 가방에 우산을 넣고 다니는 게 현명하다고 생각해요.",
+   "blank": "prudente",
+   "src": "made"
   }
  ],
  "w|psicologia": [
@@ -69257,6 +69785,22 @@
    "src": "made"
   }
  ],
+ "w|rapto": [
+  {
+   "text": "A trama da ópera gira em torno do rapto de uma princesa.",
+   "en": "The opera's plot revolves around the kidnapping of a princess.",
+   "ko": "그 오페라 줄거리는 공주 납치 사건을 중심으로 펼쳐져요.",
+   "blank": "rapto",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia está lendo um romance histórico sobre o rapto de uma noiva num inverno rigoroso.",
+   "en": "Sofia is reading a historical novel about the abduction of a bride in a harsh winter.",
+   "ko": "소피아는 혹독한 겨울에 신부가 납치된 이야기를 다룬 역사 소설을 읽고 있어요.",
+   "blank": "rapto",
+   "src": "made"
+  }
+ ],
  "w|raramente": [
   {
    "text": "O Tiago raramente fica doente no verão.",
@@ -70472,6 +71016,22 @@
    "en": "With quick reflexes, Inês caught the bowl before it hit the floor.",
    "ko": "이네스는 재빠른 반사 신경으로 바닥에 떨어지기 전에 그릇을 잡았어요.",
    "blank": "reflexo",
+   "src": "made"
+  }
+ ],
+ "w|reforçar": [
+  {
+   "text": "A produção decidiu reforçar a segurança na noite de estreia.",
+   "en": "The production decided to reinforce security on opening night.",
+   "ko": "제작진은 첫 공연 날 경비를 강화하기로 했어요.",
+   "blank": "reforçar",
+   "src": "made"
+  },
+  {
+   "text": "Antes das chuvas de verão, a Sofia chamou alguém para reforçar o telhado.",
+   "en": "Before the summer rains, Sofia called someone to reinforce the roof.",
+   "ko": "여름 장마 전에 소피아는 지붕을 보강하려고 사람을 불렀어요.",
+   "blank": "reforçar",
    "src": "made"
   }
  ],
@@ -73766,6 +74326,22 @@
    "en": "The pharmacist put Rita's medicine in a paper bag.",
    "ko": "약사는 히타의 약을 종이 봉투에 넣었어요.",
    "blank": "sacola",
+   "src": "made"
+  }
+ ],
+ "w|sacramento": [
+  {
+   "text": "A peça mostra uma família portuguesa no dia do sacramento da primeira comunhão.",
+   "en": "The play shows a Portuguese family on the day of the first communion sacrament.",
+   "ko": "그 연극은 첫영성체 성사 날의 포르투갈 가족을 보여 줘요.",
+   "blank": "sacramento",
+   "src": "made"
+  },
+  {
+   "text": "A sobrinha da Sofia vai receber o sacramento do batismo na primavera.",
+   "en": "Sofia's niece is going to receive the sacrament of baptism in the spring.",
+   "ko": "소피아의 조카는 봄에 세례 성사를 받을 거예요.",
+   "blank": "sacramento",
    "src": "made"
   }
  ],
@@ -77809,6 +78385,22 @@
    "src": "made"
   }
  ],
+ "w|submeter": [
+  {
+   "text": "O Bruno resolveu submeter o texto dele a um concurso de dramaturgia.",
+   "en": "Bruno decided to submit his script to a playwriting competition.",
+   "ko": "브루누는 자기 희곡을 극작 공모전에 내기로 했어요.",
+   "blank": "submeter",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia não quer submeter as plantas ao sol forte do meio-dia no verão.",
+   "en": "Sofia doesn't want to subject her plants to the strong midday sun in summer.",
+   "ko": "소피아는 여름 한낮의 강한 햇볕에 식물을 내놓고 싶지 않아요.",
+   "blank": "submeter",
+   "src": "made"
+  }
+ ],
  "w|submundo": [
   {
    "text": "O Pedro adora romances policiais sobre o submundo das grandes cidades.",
@@ -78231,6 +78823,22 @@
    "en": "The bedroom faces south.",
    "ko": "침실은 남향이야.",
    "blank": "sul"
+  }
+ ],
+ "w|sulista": [
+  {
+   "text": "O Bruno ensaiou muito o sotaque sulista do fazendeiro que interpreta.",
+   "en": "Bruno rehearsed a lot to get the southern accent of the farmer he plays.",
+   "ko": "브루누는 자기가 맡은 농장주의 남부 억양을 많이 연습했어요.",
+   "blank": "sulista",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia sente falta do inverno sulista, com geada nos campos.",
+   "en": "Sofia misses the southern winter, with frost in the fields.",
+   "ko": "소피아는 들판에 서리가 내리는 남부의 겨울이 그리워요.",
+   "blank": "sulista",
+   "src": "made"
   }
  ],
  "w|sumir": [
@@ -81561,6 +82169,22 @@
    "blank": "trabalho"
   }
  ],
+ "w|tração": [
+  {
+   "text": "O cenário gira sobre trilhos, puxado por um sistema de tração escondido no porão.",
+   "en": "The set turns on rails, pulled by a traction system hidden under the stage.",
+   "ko": "무대 세트는 지하에 숨긴 견인 장치에 끌려 레일 위를 돌아요.",
+   "blank": "tração",
+   "src": "made"
+  },
+  {
+   "text": "Com a neve na estrada, o carro precisou de correntes para ganhar tração.",
+   "en": "With snow on the road, the car needed chains to get traction.",
+   "ko": "길에 눈이 쌓여서 차에 체인을 감아야 접지력이 생겼어요.",
+   "blank": "tração",
+   "src": "made"
+  }
+ ],
  "w|traçar": [
   {
    "text": "O investigador ajudou o Lucas a traçar o caminho que o ladrão fez.",
@@ -83987,6 +84611,22 @@
    "ko": "강당에 빈자리가 하나도 없었어요.",
    "blank": "vago",
    "src": "tatoeba:1319776/alexmaur en:33674/CM"
+  }
+ ],
+ "w|vaidade": [
+  {
+   "text": "A peça é uma comédia sobre a vaidade de um ator famoso que envelhece.",
+   "en": "The play is a comedy about the vanity of a famous actor who is growing old.",
+   "ko": "그 연극은 나이 들어 가는 유명 배우의 허영심을 다룬 코미디예요.",
+   "blank": "vaidade",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia admite que comprar um casaco novo todo inverno é pura vaidade.",
+   "en": "Sofia admits that buying a new coat every winter is pure vanity.",
+   "ko": "소피아는 겨울마다 새 외투를 사는 게 순전히 허영이라고 인정해요.",
+   "blank": "vaidade",
+   "src": "made"
   }
  ],
  "w|vale": [

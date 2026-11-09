@@ -677,6 +677,22 @@
    "blank": "가슴"
   }
  ],
+ "w|가습기": [
+  {
+   "text": "새 집이 건조해서 태윤은 침실에 가습기를 들여놓았어요.",
+   "en": "The new place was dry, so Taeyoon put a humidifier in the bedroom.",
+   "ko": "새 집이 건조해서 태윤은 침실에 가습기를 들여놓았어요.",
+   "blank": "가습기를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 산장 방이 건조해서 젖은 수건을 가습기 대신 걸어 뒀어요.",
+   "en": "The lodge room was dry, so Yuna hung a wet towel instead of using a humidifier.",
+   "ko": "유나는 산장 방이 건조해서 젖은 수건을 가습기 대신 걸어 뒀어요.",
+   "blank": "가습기",
+   "src": "made"
+  }
+ ],
  "w|가엾다": [
   {
    "text": "비를 쫄딱 맞고 들어온 동생이 가엾어서 경민은 화가 다 풀렸어요.",
@@ -5503,6 +5519,22 @@
    "blank": "계란"
   }
  ],
+ "w|계량기": [
+  {
+   "text": "이사 나가는 날 태윤은 가스 계량기 숫자를 사진으로 찍어 뒀어요.",
+   "en": "On the day he moved out, Taeyoon took a photo of the numbers on the gas meter.",
+   "ko": "이사 나가는 날 태윤은 가스 계량기 숫자를 사진으로 찍어 뒀어요.",
+   "blank": "계량기",
+   "src": "made"
+  },
+  {
+   "text": "관리소 직원은 강물 높이를 재는 계량기를 매일 확인해요.",
+   "en": "The ranger checks the gauge measuring the river level every day.",
+   "ko": "관리소 직원은 강물 높이를 재는 계량기를 매일 확인해요.",
+   "blank": "계량기를",
+   "src": "made"
+  }
+ ],
  "w|계산": [
   {
    "text": "식사 후에 계산을 먼저 했어.",
@@ -6739,6 +6771,22 @@
    "src": "made"
   }
  ],
+ "w|고층": [
+  {
+   "text": "태윤은 고층 아파트에서 강이 보이는 집을 골랐어요.",
+   "en": "Taeyoon picked a place in a high-rise apartment with a river view.",
+   "ko": "태윤은 고층 아파트에서 강이 보이는 집을 골랐어요.",
+   "blank": "고층",
+   "src": "made"
+  },
+  {
+   "text": "산꼭대기에서 보니 멀리 도시의 고층 건물들이 작게 보였어요.",
+   "en": "From the mountaintop, the city's high-rise buildings looked tiny in the distance.",
+   "ko": "산꼭대기에서 보니 멀리 도시의 고층 건물들이 작게 보였어요.",
+   "blank": "고층",
+   "src": "made"
+  }
+ ],
  "w|고치다": [
   {
    "text": "시계 좀 고쳐 줘.",
@@ -7341,6 +7389,22 @@
    "en": "I'm going to get some air.",
    "ko": "공기 좀 쐬고 올게.",
    "blank": "공기"
+  }
+ ],
+ "w|공기청정기": [
+  {
+   "text": "태윤은 이삿짐 먼지 때문에 공기청정기를 하루 종일 틀었어요.",
+   "en": "Because of the dust from moving, Taeyoon ran the air purifier all day.",
+   "ko": "태윤은 이삿짐 먼지 때문에 공기청정기를 하루 종일 틀었어요.",
+   "blank": "공기청정기를",
+   "src": "made"
+  },
+  {
+   "text": "숲에서 하룻밤 자고 온 유나는 도시에서는 공기청정기 없이 못 산다며 웃었어요.",
+   "en": "After a night in the forest, Yuna laughed that she can't live in the city without an air purifier.",
+   "ko": "숲에서 하룻밤 자고 온 유나는 도시에서는 공기청정기 없이 못 산다며 웃었어요.",
+   "blank": "공기청정기",
+   "src": "made"
   }
  ],
  "w|공동": [
@@ -12513,6 +12577,38 @@
    "blank": "금지했어"
   }
  ],
+ "w|급격히": [
+  {
+   "text": "요 몇 년 사이 이 동네 집값이 급격히 올랐어요.",
+   "en": "Housing prices in this neighborhood have risen sharply in the past few years.",
+   "ko": "요 몇 년 사이 이 동네 집값이 급격히 올랐어요.",
+   "blank": "급격히",
+   "src": "made"
+  },
+  {
+   "text": "산속에서는 해가 지면 기온이 급격히 떨어져요.",
+   "en": "In the mountains, the temperature drops sharply after sunset.",
+   "ko": "산속에서는 해가 지면 기온이 급격히 떨어져요.",
+   "blank": "급격히",
+   "src": "made"
+  }
+ ],
+ "w|급속히": [
+  {
+   "text": "새 아파트 단지가 들어서면서 동네가 급속히 변했어요.",
+   "en": "The neighborhood changed rapidly as a new apartment complex went up.",
+   "ko": "새 아파트 단지가 들어서면서 동네가 급속히 변했어요.",
+   "blank": "급속히",
+   "src": "made"
+  },
+  {
+   "text": "외래 식물이 강가에 급속히 퍼지고 있다고 유나가 걱정했어요.",
+   "en": "Yuna worried that a foreign plant was spreading rapidly along the riverbank.",
+   "ko": "외래 식물이 강가에 급속히 퍼지고 있다고 유나가 걱정했어요.",
+   "blank": "급속히",
+   "src": "made"
+  }
+ ],
  "w|급여": [
   {
    "text": "성호는 급여가 들어오자마자 부모님께 용돈을 보냈어요.",
@@ -15889,6 +15985,22 @@
    "blank": "난방비가"
   }
  ],
+ "w|난방비": [
+  {
+   "text": "태윤은 새 집 난방비가 생각보다 적게 나와서 놀랐어요.",
+   "en": "Taeyoon was surprised that the heating bill at the new place came out lower than expected.",
+   "ko": "태윤은 새 집 난방비가 생각보다 적게 나와서 놀랐어요.",
+   "blank": "난방비가",
+   "src": "made"
+  },
+  {
+   "text": "산장은 겨울 난방비를 아끼려고 장작 난로를 써요.",
+   "en": "The mountain lodge uses a wood stove to save on winter heating costs.",
+   "ko": "산장은 겨울 난방비를 아끼려고 장작 난로를 써요.",
+   "blank": "난방비를",
+   "src": "made"
+  }
+ ],
  "w|난장판": [
   {
    "text": "선생님이 잠깐 나가신 사이에 교실이 난장판이 됐어요.",
@@ -16297,6 +16409,22 @@
    "en": "My husband did the dishes.",
    "ko": "남편이 설거지해 줬어.",
    "blank": "남편이"
+  }
+ ],
+ "w|남향": [
+  {
+   "text": "태윤은 남향이라서 겨울에도 따뜻한 집을 골랐어요.",
+   "en": "Taeyoon chose a south-facing home that stays warm even in winter.",
+   "ko": "태윤은 남향이라서 겨울에도 따뜻한 집을 골랐어요.",
+   "blank": "남향이라서",
+   "src": "made"
+  },
+  {
+   "text": "유나는 남향 비탈에 꽃이 먼저 핀다는 걸 알아챘어요.",
+   "en": "Yuna noticed that flowers bloom first on south-facing slopes.",
+   "ko": "유나는 남향 비탈에 꽃이 먼저 핀다는 걸 알아챘어요.",
+   "blank": "남향",
+   "src": "made"
   }
  ],
  "w|납득하다": [
@@ -16969,6 +17097,22 @@
    "en": "I took a sip of the cold noodle broth.",
    "ko": "냉면 육수를 한 모금 마셨어.",
    "blank": "냉면"
+  }
+ ],
+ "w|냉방": [
+  {
+   "text": "태윤은 여름에 에어컨 냉방을 너무 세게 틀지 않으려고 해요.",
+   "en": "In summer, Taeyoon tries not to run the air conditioning too strong.",
+   "ko": "태윤은 여름에 에어컨 냉방을 너무 세게 틀지 않으려고 해요.",
+   "blank": "냉방을",
+   "src": "made"
+  },
+  {
+   "text": "숲속은 그늘이 깊어서 냉방이 필요 없을 만큼 시원해요.",
+   "en": "The forest shade is so deep it's cool enough not to need air conditioning.",
+   "ko": "숲속은 그늘이 깊어서 냉방이 필요 없을 만큼 시원해요.",
+   "blank": "냉방이",
+   "src": "made"
   }
  ],
  "w|냉장고": [
@@ -18655,6 +18799,22 @@
    "src": "made"
   }
  ],
+ "w|누전": [
+  {
+   "text": "전기 기사는 오래된 콘센트에서 누전이 있다고 했어요.",
+   "en": "The electrician said there was a short circuit in an old outlet.",
+   "ko": "전기 기사는 오래된 콘센트에서 누전이 있다고 했어요.",
+   "blank": "누전이",
+   "src": "made"
+  },
+  {
+   "text": "산장 주인은 비 오는 날 누전이 될까 봐 바깥 전등을 껐어요.",
+   "en": "The lodge owner turned off the outside lights on rainy days, worried about a short circuit.",
+   "ko": "산장 주인은 비 오는 날 누전이 될까 봐 바깥 전등을 껐어요.",
+   "blank": "누전이",
+   "src": "made"
+  }
+ ],
  "w|눈": [
   {
    "text": "눈 비벼서 충혈됐어.",
@@ -19769,6 +19929,22 @@
    "blank": "단서를"
   }
  ],
+ "w|단수": [
+  {
+   "text": "공사 때문에 이삿날 오후에 아파트 전체가 단수가 됐어요.",
+   "en": "Because of construction, the whole apartment had its water cut off on the afternoon of moving day.",
+   "ko": "공사 때문에 이삿날 오후에 아파트 전체가 단수가 됐어요.",
+   "blank": "단수가",
+   "src": "made"
+  },
+  {
+   "text": "마을에 단수 안내 방송이 나와서 유나는 계곡물을 길어 왔어요.",
+   "en": "An announcement about a water outage came on in the village, so Yuna fetched water from the stream.",
+   "ko": "마을에 단수 안내 방송이 나와서 유나는 계곡물을 길어 왔어요.",
+   "blank": "단수",
+   "src": "made"
+  }
+ ],
  "w|단순": [
   {
    "text": "연출가는 이번 무대를 일부러 단순 구조로 꾸몄어요.",
@@ -19842,6 +20018,38 @@
    "en": "Seoyeon wrote that the happiest day of their school years was by far the school trip.",
    "ko": "서연은 학창 시절 가장 즐거웠던 날은 단연 수학여행이었다고 썼어요.",
    "blank": "단연",
+   "src": "made"
+  }
+ ],
+ "w|단연코": [
+  {
+   "text": "태윤은 이번 이사가 지금까지 중에 단연코 제일 힘들었다고 말했어요.",
+   "en": "Taeyoon said this move was by far the hardest one so far.",
+   "ko": "태윤은 이번 이사가 지금까지 중에 단연코 제일 힘들었다고 말했어요.",
+   "blank": "단연코",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이 숲이 지금까지 가 본 곳 중에 단연코 가장 아름답다고 말했어요.",
+   "en": "Yuna said this forest was by far the most beautiful place she had ever been.",
+   "ko": "유나는 이 숲이 지금까지 가 본 곳 중에 단연코 가장 아름답다고 말했어요.",
+   "blank": "단연코",
+   "src": "made"
+  }
+ ],
+ "w|단열": [
+  {
+   "text": "옛날 집은 단열이 잘 안 돼서 겨울마다 추웠어요.",
+   "en": "The old house wasn't well insulated, so it was cold every winter.",
+   "ko": "옛날 집은 단열이 잘 안 돼서 겨울마다 추웠어요.",
+   "blank": "단열이",
+   "src": "made"
+  },
+  {
+   "text": "유나는 산장 벽이 얇아서 단열이 안 된다고 불평했어요.",
+   "en": "Yuna complained that the mountain lodge walls were thin and not insulated.",
+   "ko": "유나는 산장 벽이 얇아서 단열이 안 된다고 불평했어요.",
+   "blank": "단열이",
    "src": "made"
   }
  ],
@@ -19946,6 +20154,22 @@
    "en": "Seoyeon took out her winter coat and found that a button had fallen off.",
    "ko": "서연은 겨울 코트를 꺼냈다가 단추가 떨어진 걸 발견했어요.",
    "blank": "단추가",
+   "src": "made"
+  }
+ ],
+ "w|단층": [
+  {
+   "text": "태윤의 부모님은 계단이 없는 단층 주택으로 이사하셨어요.",
+   "en": "Taeyoon's parents moved to a single-story house with no stairs.",
+   "ko": "태윤의 부모님은 계단이 없는 단층 주택으로 이사하셨어요.",
+   "blank": "단층",
+   "src": "made"
+  },
+  {
+   "text": "숲 입구에는 작은 단층 건물로 된 안내소가 있어요.",
+   "en": "At the forest entrance there's an information center in a small single-story building.",
+   "ko": "숲 입구에는 작은 단층 건물로 된 안내소가 있어요.",
+   "blank": "단층",
    "src": "made"
   }
  ],
@@ -23029,6 +23253,22 @@
    "src": "made"
   }
  ],
+ "w|도통": [
+  {
+   "text": "새 보일러는 버튼이 너무 많아서 태윤은 도통 쓰는 법을 모르겠대요.",
+   "en": "The new boiler has too many buttons, so Taeyoon says he has no idea how to use it.",
+   "ko": "새 보일러는 버튼이 너무 많아서 태윤은 도통 쓰는 법을 모르겠대요.",
+   "blank": "도통",
+   "src": "made"
+  },
+  {
+   "text": "유나는 갈림길에서 어느 쪽이 강으로 가는 길인지 도통 알 수가 없었어요.",
+   "en": "At the fork, Yuna couldn't tell at all which way led to the river.",
+   "ko": "유나는 갈림길에서 어느 쪽이 강으로 가는 길인지 도통 알 수가 없었어요.",
+   "blank": "도통",
+   "src": "made"
+  }
+ ],
  "w|독감": [
   {
    "text": "겨울마다 독감이 유행해.",
@@ -24115,6 +24355,22 @@
    "en": "Two of them already got on.",
    "ko": "두 명은 이미 탔어.",
    "blank": "두"
+  }
+ ],
+ "w|두꺼비집": [
+  {
+   "text": "전기가 나가자 태윤은 현관 옆 두꺼비집을 열어 봤어요.",
+   "en": "When the power went out, Taeyoon opened the fuse box next to the front door.",
+   "ko": "전기가 나가자 태윤은 현관 옆 두꺼비집을 열어 봤어요.",
+   "blank": "두꺼비집을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 산장에 불이 나가자 주인에게 두꺼비집 위치를 물었어요.",
+   "en": "When the lights went out at the mountain lodge, Yuna asked the owner where the fuse box was.",
+   "ko": "유나는 산장에 불이 나가자 주인에게 두꺼비집 위치를 물었어요.",
+   "blank": "두꺼비집",
+   "src": "made"
   }
  ],
  "w|두껍다": [
@@ -28797,6 +29053,22 @@
    "src": "made"
   }
  ],
+ "w|머지않아": [
+  {
+   "text": "태윤은 머지않아 지하철역이 집 앞에 생긴다는 소식에 기뻤어요.",
+   "en": "Taeyoon was happy to hear a subway station would soon open in front of his home.",
+   "ko": "태윤은 머지않아 지하철역이 집 앞에 생긴다는 소식에 기뻤어요.",
+   "blank": "머지않아",
+   "src": "made"
+  },
+  {
+   "text": "나뭇잎 색을 보니 머지않아 단풍이 들 것 같아요.",
+   "en": "Judging by the leaves, it looks like autumn colors will come soon.",
+   "ko": "나뭇잎 색을 보니 머지않아 단풍이 들 것 같아요.",
+   "blank": "머지않아",
+   "src": "made"
+  }
+ ],
  "w|먹다": [
   {
    "text": "점심 아직 안 먹었어요.",
@@ -29286,6 +29558,22 @@
    "en": "Since running regularly, Haeun's immunity has improved and she rarely catches colds.",
    "ko": "하은은 꾸준히 달린 뒤로 면역력이 좋아져서 감기에 잘 안 걸려요.",
    "blank": "면역력이",
+   "src": "made"
+  }
+ ],
+ "w|면적": [
+  {
+   "text": "부동산 중개인은 거실 면적이 예전 집보다 넓다고 말했어요.",
+   "en": "The real estate agent said the living room area was bigger than the old home's.",
+   "ko": "부동산 중개인은 거실 면적이 예전 집보다 넓다고 말했어요.",
+   "blank": "면적이",
+   "src": "made"
+  },
+  {
+   "text": "이 숲의 면적은 축구장 수백 개와 맞먹어요.",
+   "en": "The area of this forest is equal to hundreds of soccer fields.",
+   "ko": "이 숲의 면적은 축구장 수백 개와 맞먹어요.",
+   "blank": "면적은",
    "src": "made"
   }
  ],
@@ -32911,6 +33199,22 @@
    "en": "The snack is so crispy crumbs fall off.",
    "ko": "과자가 바삭하다 못해 부스러기가 떨어져.",
    "blank": "바삭하다"
+  }
+ ],
+ "w|바야흐로": [
+  {
+   "text": "이삿짐을 다 풀고 나니 바야흐로 새 생활이 시작된 느낌이었어요.",
+   "en": "After unpacking everything, it felt like a new life was at last beginning.",
+   "ko": "이삿짐을 다 풀고 나니 바야흐로 새 생활이 시작된 느낌이었어요.",
+   "blank": "바야흐로",
+   "src": "made"
+  },
+  {
+   "text": "강가에 진달래가 피자 유나는 바야흐로 봄이 왔다고 느꼈어요.",
+   "en": "When azaleas bloomed by the river, Yuna felt that spring had finally arrived.",
+   "ko": "강가에 진달래가 피자 유나는 바야흐로 봄이 왔다고 느꼈어요.",
+   "blank": "바야흐로",
+   "src": "made"
   }
  ],
  "w|바위": [
@@ -43643,6 +43947,22 @@
    "blank": "새로"
   }
  ],
+ "w|새로이": [
+  {
+   "text": "태윤은 이사 온 집 현관에 새로이 번호 키를 달았어요.",
+   "en": "Taeyoon newly installed a keypad lock on the front door of his new home.",
+   "ko": "태윤은 이사 온 집 현관에 새로이 번호 키를 달았어요.",
+   "blank": "새로이",
+   "src": "made"
+  },
+  {
+   "text": "산불이 났던 자리에 어린 나무들이 새로이 자라고 있어요.",
+   "en": "Young trees are newly growing where the forest fire had been.",
+   "ko": "산불이 났던 자리에 어린 나무들이 새로이 자라고 있어요.",
+   "blank": "새로이",
+   "src": "made"
+  }
+ ],
  "w|새롭다": [
   {
    "text": "여기 살아 보니 새롭네.",
@@ -48267,6 +48587,22 @@
    "en": "Capital traffic was more complicated than I thought.",
    "ko": "수도 교통이 생각보다 복잡하더라.",
    "blank": "수도"
+  }
+ ],
+ "w|수도관": [
+  {
+   "text": "이사 오기 전에 집주인이 낡은 수도관을 새것으로 갈았어요.",
+   "en": "Before Taeyoon moved in, the landlord replaced the old water pipes with new ones.",
+   "ko": "이사 오기 전에 집주인이 낡은 수도관을 새것으로 갈았어요.",
+   "blank": "수도관을",
+   "src": "made"
+  },
+  {
+   "text": "겨울에 산장 수도관이 얼어서 터진 적이 있대요.",
+   "en": "They say the lodge's water pipes once froze and burst in winter.",
+   "ko": "겨울에 산장 수도관이 얼어서 터진 적이 있대요.",
+   "blank": "수도관이",
+   "src": "made"
   }
  ],
  "w|수도꼭지": [
@@ -60037,6 +60373,22 @@
    "src": "made"
   }
  ],
+ "w|영구히": [
+  {
+   "text": "태윤은 이 동네에서 영구히 살 생각은 없다고 했어요.",
+   "en": "Taeyoon said he has no plans to live in this neighborhood permanently.",
+   "ko": "태윤은 이 동네에서 영구히 살 생각은 없다고 했어요.",
+   "blank": "영구히",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이 숲이 영구히 보호 구역으로 남기를 바라요.",
+   "en": "Yuna hopes this forest will remain a protected area forever.",
+   "ko": "유나는 이 숲이 영구히 보호 구역으로 남기를 바라요.",
+   "blank": "영구히",
+   "src": "made"
+  }
+ ],
  "w|영리하다": [
   {
    "text": "민준이는 아주 영리한 학생이라 무엇이든 한 번 설명해 주면 바로 이해한다.",
@@ -63796,6 +64148,22 @@
    "en": "Mikyung fixed the customer's phone settings via remote access.",
    "ko": "미경은 원격 접속으로 손님의 휴대폰 설정을 고쳐 줬어요.",
    "blank": "원격",
+   "src": "made"
+  }
+ ],
+ "w|원두막": [
+  {
+   "text": "태윤의 부모님은 시골집 마당에 원두막을 새로 지으셨어요.",
+   "en": "Taeyoon's parents built a new raised pavilion in the yard of their country house.",
+   "ko": "태윤의 부모님은 시골집 마당에 원두막을 새로 지으셨어요.",
+   "blank": "원두막을",
+   "src": "made"
+  },
+  {
+   "text": "유나는 강가 원두막에 앉아 참외를 먹었어요.",
+   "en": "Yuna sat in a raised pavilion by the river and ate a Korean melon.",
+   "ko": "유나는 강가 원두막에 앉아 참외를 먹었어요.",
+   "blank": "원두막에",
    "src": "made"
   }
  ],
@@ -68825,6 +69193,22 @@
    "src": "made"
   }
  ],
+ "w|일시적으로": [
+  {
+   "text": "이삿날 엘리베이터가 일시적으로 멈춰서 짐을 계단으로 날랐어요.",
+   "en": "On moving day the elevator stopped temporarily, so they carried things up the stairs.",
+   "ko": "이삿날 엘리베이터가 일시적으로 멈춰서 짐을 계단으로 날랐어요.",
+   "blank": "일시적으로",
+   "src": "made"
+  },
+  {
+   "text": "산사태 위험 때문에 등산로가 일시적으로 닫혔어요.",
+   "en": "The hiking trail was temporarily closed because of the risk of landslides.",
+   "ko": "산사태 위험 때문에 등산로가 일시적으로 닫혔어요.",
+   "blank": "일시적으로",
+   "src": "made"
+  }
+ ],
  "w|일식": [
   {
    "text": "준호의 누나는 초밥이 나오는 일식 코스를 주문했어요.",
@@ -68941,6 +69325,22 @@
    "blank": "일자리"
   }
  ],
+ "w|일절": [
+  {
+   "text": "태윤은 이웃의 사생활에는 일절 관심을 두지 않아요.",
+   "en": "Taeyoon takes no interest whatsoever in his neighbors' private lives.",
+   "ko": "태윤은 이웃의 사생활에는 일절 관심을 두지 않아요.",
+   "blank": "일절",
+   "src": "made"
+  },
+  {
+   "text": "이 계곡에서는 취사가 일절 금지돼 있어요.",
+   "en": "Cooking is strictly prohibited in this valley.",
+   "ko": "이 계곡에서는 취사가 일절 금지돼 있어요.",
+   "blank": "일절",
+   "src": "made"
+  }
+ ],
  "w|일정": [
   {
    "text": "일정을 다시 짜자.",
@@ -69043,6 +69443,22 @@
    "en": "That person was famous early on.",
    "ko": "그분은 일찍이 유명했어.",
    "blank": "일찍이"
+  }
+ ],
+ "w|일체": [
+  {
+   "text": "이삿짐센터는 포장 비용이 일체 포함된 가격이라고 했어요.",
+   "en": "The moving company said the price included all packing costs.",
+   "ko": "이삿짐센터는 포장 비용이 일체 포함된 가격이라고 했어요.",
+   "blank": "일체",
+   "src": "made"
+  },
+  {
+   "text": "숲 체험 프로그램 비용은 일체 군청이 부담해요.",
+   "en": "All costs of the forest experience program are covered by the county office.",
+   "ko": "숲 체험 프로그램 비용은 일체 군청이 부담해요.",
+   "blank": "일체",
+   "src": "made"
   }
  ],
  "w|일출": [
@@ -71213,6 +71629,22 @@
    "src": "made"
   }
  ],
+ "w|잠정적으로": [
+  {
+   "text": "태윤은 새 집 공사가 끝날 때까지 잠정적으로 친구 집에 머물기로 했어요.",
+   "en": "Taeyoon decided to stay at a friend's place provisionally until work on the new house was done.",
+   "ko": "태윤은 새 집 공사가 끝날 때까지 잠정적으로 친구 집에 머물기로 했어요.",
+   "blank": "잠정적으로",
+   "src": "made"
+  },
+  {
+   "text": "공원 관리소는 강가 캠핑을 잠정적으로 금지했어요.",
+   "en": "The park office provisionally banned camping by the river.",
+   "ko": "공원 관리소는 강가 캠핑을 잠정적으로 금지했어요.",
+   "blank": "잠정적으로",
+   "src": "made"
+  }
+ ],
  "w|잡곡": [
   {
    "text": "시장 쌀가게에는 여러 가지 잡곡이 자루에 담겨 있어요.",
@@ -72820,6 +73252,22 @@
    "en": "Over dinner, the family talked about a news story on the low birth rate.",
    "ko": "가족들은 저녁을 먹으며 저출산에 관한 뉴스를 두고 이야기를 나눴어요.",
    "blank": "저출산에",
+   "src": "made"
+  }
+ ],
+ "w|저층": [
+  {
+   "text": "태윤은 물건을 옮기기 편하게 저층으로 이사하고 싶어 했어요.",
+   "en": "Taeyoon wanted to move to a low floor so it would be easier to carry things.",
+   "ko": "태윤은 물건을 옮기기 편하게 저층으로 이사하고 싶어 했어요.",
+   "blank": "저층으로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 강 건너 저층 아파트 단지에 살아요.",
+   "en": "Yuna lives in a low-rise apartment complex across the river.",
+   "ko": "유나는 강 건너 저층 아파트 단지에 살아요.",
+   "blank": "저층",
    "src": "made"
   }
  ],
@@ -75607,6 +76055,22 @@
    "src": "made"
   }
  ],
+ "w|정화조": [
+  {
+   "text": "시골집으로 이사한 태윤의 부모님은 정화조 청소 날짜를 달력에 적어 두셨어요.",
+   "en": "Taeyoon's parents, who moved to a country house, wrote the septic tank cleaning date on the calendar.",
+   "ko": "시골집으로 이사한 태윤의 부모님은 정화조 청소 날짜를 달력에 적어 두셨어요.",
+   "blank": "정화조",
+   "src": "made"
+  },
+  {
+   "text": "강가 캠핑장 정화조가 넘쳐서 한동안 문을 닫았어요.",
+   "en": "The riverside campsite's septic tank overflowed, so it closed for a while.",
+   "ko": "강가 캠핑장 정화조가 넘쳐서 한동안 문을 닫았어요.",
+   "blank": "정화조가",
+   "src": "made"
+  }
+ ],
  "w|정확하다": [
   {
    "text": "네 말이 정확해.",
@@ -75858,6 +76322,22 @@
    "en": "Daeun postponed her weekend experiment because of her grandfather's memorial rite.",
    "ko": "다은은 할아버지 제사 때문에 주말 실험을 미뤘어요.",
    "blank": "제사",
+   "src": "made"
+  }
+ ],
+ "w|제습기": [
+  {
+   "text": "반지하 창고가 눅눅해서 태윤은 제습기를 샀어요.",
+   "en": "The semi-basement storage room was damp, so Taeyoon bought a dehumidifier.",
+   "ko": "반지하 창고가 눅눅해서 태윤은 제습기를 샀어요.",
+   "blank": "제습기를",
+   "src": "made"
+  },
+  {
+   "text": "장마철이라 산장 주인이 방마다 제습기를 틀어 놓았어요.",
+   "en": "It was the rainy season, so the lodge owner ran a dehumidifier in every room.",
+   "ko": "장마철이라 산장 주인이 방마다 제습기를 틀어 놓았어요.",
+   "blank": "제습기를",
    "src": "made"
   }
  ],
@@ -79683,6 +80163,22 @@
    "src": "made"
   }
  ],
+ "w|지속적으로": [
+  {
+   "text": "윗집에서 지속적으로 물이 새서 태윤은 관리실에 연락했어요.",
+   "en": "Water kept leaking from upstairs, so Taeyoon contacted the management office.",
+   "ko": "윗집에서 지속적으로 물이 새서 태윤은 관리실에 연락했어요.",
+   "blank": "지속적으로",
+   "src": "made"
+  },
+  {
+   "text": "유나는 숲속 새들의 수를 지속적으로 기록하고 있어요.",
+   "en": "Yuna keeps steady records of the number of birds in the forest.",
+   "ko": "유나는 숲속 새들의 수를 지속적으로 기록하고 있어요.",
+   "blank": "지속적으로",
+   "src": "made"
+  }
+ ],
  "w|지속하다": [
   {
    "text": "성호는 관객이 적어도 이 공연을 끝까지 지속하겠다고 말했어요.",
@@ -80827,6 +81323,22 @@
    "en": "I took a deep breath and calmed down.",
    "ko": "심호흡하고 진정했어.",
    "blank": "진정했어"
+  }
+ ],
+ "w|진즉": [
+  {
+   "text": "낡은 소파는 진즉 버렸어야 했다고 태윤이 웃었어요.",
+   "en": "Taeyoon laughed that he should have thrown out the old sofa long ago.",
+   "ko": "낡은 소파는 진즉 버렸어야 했다고 태윤이 웃었어요.",
+   "blank": "진즉",
+   "src": "made"
+  },
+  {
+   "text": "유나는 이렇게 좋은 숲을 진즉 와 볼 걸 그랬다고 했어요.",
+   "en": "Yuna said she should have come to such a nice forest long ago.",
+   "ko": "유나는 이렇게 좋은 숲을 진즉 와 볼 걸 그랬다고 했어요.",
+   "blank": "진즉",
+   "src": "made"
   }
  ],
  "w|진지하다": [
@@ -82175,6 +82687,22 @@
    "src": "made"
   }
  ],
+ "w|차단기": [
+  {
+   "text": "전자레인지와 드라이어를 같이 켰더니 차단기가 내려갔어요.",
+   "en": "When Taeyoon turned on the microwave and hair dryer together, the circuit breaker tripped.",
+   "ko": "전자레인지와 드라이어를 같이 켰더니 차단기가 내려갔어요.",
+   "blank": "차단기가",
+   "src": "made"
+  },
+  {
+   "text": "천둥이 치자 산장의 차단기가 내려가서 방이 깜깜해졌어요.",
+   "en": "When thunder struck, the lodge's circuit breaker tripped and the room went dark.",
+   "ko": "천둥이 치자 산장의 차단기가 내려가서 방이 깜깜해졌어요.",
+   "blank": "차단기가",
+   "src": "made"
+  }
+ ],
  "w|차단하다": [
   {
    "text": "성호는 공연 중 휴대폰 소리를 막으려고 극장 안 전파를 차단했어요.",
@@ -83153,6 +83681,22 @@
    "en": "I fell asleep with the lights on.",
    "ko": "불 켠 채 잠들었어.",
    "blank": "채"
+  }
+ ],
+ "w|채광": [
+  {
+   "text": "창이 큰 집이라서 채광이 좋아 낮에는 불을 켤 필요가 없어요.",
+   "en": "The house has big windows and gets lots of sunlight, so there's no need to turn on lights during the day.",
+   "ko": "창이 큰 집이라서 채광이 좋아 낮에는 불을 켤 필요가 없어요.",
+   "blank": "채광이",
+   "src": "made"
+  },
+  {
+   "text": "숲속 오두막은 나무 그늘 때문에 채광이 좋지 않았어요.",
+   "en": "The forest cabin didn't get much light because of the shade of the trees.",
+   "ko": "숲속 오두막은 나무 그늘 때문에 채광이 좋지 않았어요.",
+   "blank": "채광이",
+   "src": "made"
   }
  ],
  "w|채소": [
@@ -91013,6 +91557,22 @@
    "blank": "평소"
   }
  ],
+ "w|평수": [
+  {
+   "text": "태윤은 가구를 고르기 전에 새 집 평수를 다시 확인했어요.",
+   "en": "Taeyoon checked the size of the new place again before choosing furniture.",
+   "ko": "태윤은 가구를 고르기 전에 새 집 평수를 다시 확인했어요.",
+   "blank": "평수를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 숲속 오두막이 평수는 작아도 아늑하다고 느꼈어요.",
+   "en": "Yuna felt the forest cabin was cozy even though it was small in floor space.",
+   "ko": "유나는 숲속 오두막이 평수는 작아도 아늑하다고 느꼈어요.",
+   "blank": "평수는",
+   "src": "made"
+  }
+ ],
  "w|평야": [
   {
    "text": "동민은 언덕 위에서 황금빛으로 물든 평야를 내려다봤어요.",
@@ -92784,6 +93344,22 @@
    "en": "It rained so much that the drain in front of the station overflowed.",
    "ko": "비가 너무 많이 와서 역 앞 하수구가 넘쳤어요.",
    "blank": "하수구가",
+   "src": "made"
+  }
+ ],
+ "w|하수도": [
+  {
+   "text": "태윤은 욕실에서 하수도 냄새가 올라와서 배수구 덮개를 바꿨어요.",
+   "en": "A sewer smell was coming up in the bathroom, so Taeyoon replaced the drain cover.",
+   "ko": "태윤은 욕실에서 하수도 냄새가 올라와서 배수구 덮개를 바꿨어요.",
+   "blank": "하수도",
+   "src": "made"
+  },
+  {
+   "text": "유나는 마을 하수도가 강으로 흘러드는지 조사했어요.",
+   "en": "Yuna investigated whether the village sewer flowed into the river.",
+   "ko": "유나는 마을 하수도가 강으로 흘러드는지 조사했어요.",
+   "blank": "하수도가",
    "src": "made"
   }
  ],
@@ -95591,6 +96167,22 @@
    "blank": "현재"
   }
  ],
+ "w|현저히": [
+  {
+   "text": "새 집은 회사와 가까워서 태윤의 출퇴근 시간이 현저히 줄었어요.",
+   "en": "The new place is close to work, so Taeyoon's commute time dropped markedly.",
+   "ko": "새 집은 회사와 가까워서 태윤의 출퇴근 시간이 현저히 줄었어요.",
+   "blank": "현저히",
+   "src": "made"
+  },
+  {
+   "text": "가뭄 때문에 올해 강물이 현저히 줄었어요.",
+   "en": "Because of the drought, the river has dropped markedly this year.",
+   "ko": "가뭄 때문에 올해 강물이 현저히 줄었어요.",
+   "blank": "현저히",
+   "src": "made"
+  }
+ ],
  "w|현지": [
   {
    "text": "공사장이 있는 사막 현지에서 일하는 인부들에게 생수가 조달되었다.",
@@ -97093,6 +97685,22 @@
    "blank": "확실히"
   }
  ],
+ "w|확연히": [
+  {
+   "text": "짐을 빼고 나니 방이 확연히 넓어 보였어요.",
+   "en": "Once the boxes were out, the room looked clearly bigger.",
+   "ko": "짐을 빼고 나니 방이 확연히 넓어 보였어요.",
+   "blank": "확연히",
+   "src": "made"
+  },
+  {
+   "text": "비가 그친 뒤 강물 소리가 확연히 커졌어요.",
+   "en": "After the rain stopped, the sound of the river became distinctly louder.",
+   "ko": "비가 그친 뒤 강물 소리가 확연히 커졌어요.",
+   "blank": "확연히",
+   "src": "made"
+  }
+ ],
  "w|확인": [
   {
    "text": "예약 확인을 문자로 받았어.",
@@ -97196,6 +97804,22 @@
    "en": "Worried about environmental pollution, Sohee packs bread in paper bags instead of plastic ones.",
    "ko": "소희는 환경오염이 걱정돼서 비닐봉지 대신 종이봉투에 빵을 담아요.",
    "blank": "환경오염이",
+   "src": "made"
+  }
+ ],
+ "w|환기": [
+  {
+   "text": "페인트 냄새 때문에 태윤은 이틀 동안 창문을 열어 환기를 했어요.",
+   "en": "Because of the paint smell, Taeyoon kept the windows open for two days to air the place out.",
+   "ko": "페인트 냄새 때문에 태윤은 이틀 동안 창문을 열어 환기를 했어요.",
+   "blank": "환기를",
+   "src": "made"
+  },
+  {
+   "text": "유나는 캠핑 텐트 안이 답답해서 문을 열고 환기를 했어요.",
+   "en": "The inside of the camping tent was stuffy, so Yuna opened the door to air it out.",
+   "ko": "유나는 캠핑 텐트 안이 답답해서 문을 열고 환기를 했어요.",
+   "blank": "환기를",
    "src": "made"
   }
  ],
@@ -97332,6 +97956,22 @@
    "en": "The seasons were changing and the sea wind was cold, so Haeun's throat got scratchy.",
    "ko": "환절기라 바닷바람이 차가워서 하은은 목이 칼칼해졌어요.",
    "blank": "환절기라",
+   "src": "made"
+  }
+ ],
+ "w|환풍기": [
+  {
+   "text": "화장실 환풍기가 시끄러워서 태윤은 새것으로 바꿨어요.",
+   "en": "The bathroom exhaust fan was noisy, so Taeyoon replaced it.",
+   "ko": "화장실 환풍기가 시끄러워서 태윤은 새것으로 바꿨어요.",
+   "blank": "환풍기가",
+   "src": "made"
+  },
+  {
+   "text": "산장 부엌의 낡은 환풍기에서 덜컹거리는 소리가 났어요.",
+   "en": "The old exhaust fan in the lodge kitchen made a rattling noise.",
+   "ko": "산장 부엌의 낡은 환풍기에서 덜컹거리는 소리가 났어요.",
+   "blank": "환풍기에서",
    "src": "made"
   }
  ],

@@ -1401,6 +1401,22 @@
    "src": "made"
   }
  ],
+ "w|anonim": [
+  {
+   "text": "Budi menerima surat anonim yang memuji panen cabai di ladang.",
+   "en": "Budi received an anonymous letter praising the chili harvest in his field.",
+   "ko": "부디는 밭의 고추 수확을 칭찬하는 익명의 편지를 받았어요.",
+   "blank": "anonim",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pengulas anonim menulis pujian untuk masakan Siti.",
+   "en": "An anonymous reviewer wrote praise for Siti's cooking.",
+   "ko": "익명의 평론가가 시티의 요리를 칭찬하는 글을 썼어요.",
+   "blank": "anonim",
+   "src": "made"
+  }
+ ],
  "w|antara": [
   {
    "text": "Duduklah antara kami.",
@@ -2589,6 +2605,22 @@
    "en": "The ship held on through a great storm.",
    "ko": "배가 큰 폭풍 속에서 버텼어.",
    "blank": "badai"
+  }
+ ],
+ "w|badak": [
+  {
+   "text": "Anak Budi bertanya apakah badak pernah hidup di hutan dekat desa mereka.",
+   "en": "Budi's child asked whether rhinos had ever lived in the forest near their village.",
+   "ko": "부디의 아이는 마을 근처 숲에 코뿔소가 산 적이 있냐고 물었어요.",
+   "blank": "badak",
+   "src": "made"
+  },
+  {
+   "text": "Di dinding dapur ada kalender bergambar badak bercula satu yang dipasang Siti.",
+   "en": "On the kitchen wall there is a calendar with a picture of a one-horned rhino that Siti put up.",
+   "ko": "주방 벽에는 시티가 걸어 둔 외뿔코뿔소 그림 달력이 있어요.",
+   "blank": "badak",
+   "src": "made"
   }
  ],
  "w|badan": [
@@ -3791,6 +3823,22 @@
    "blank": "Batu"
   }
  ],
+ "w|batuan": [
+  {
+   "text": "Di pinggir ladang Budi ada lapisan batuan kapur yang keras.",
+   "en": "At the edge of Budi's field there is a layer of hard limestone rock.",
+   "ko": "부디의 밭 가장자리에는 단단한 석회암 층이 있어요.",
+   "blank": "batuan",
+   "src": "made"
+  },
+  {
+   "text": "Siti memanggang roti pipih di atas lempengan batuan vulkanik yang panas.",
+   "en": "Siti bakes flatbread on a hot slab of volcanic rock.",
+   "ko": "시티는 뜨거운 화산암 판 위에서 납작한 빵을 구워요.",
+   "blank": "batuan",
+   "src": "made"
+  }
+ ],
  "w|batuk": [
   {
    "text": "Pasien di kursi sebelah terus batuk selama diperiksa.",
@@ -4233,6 +4281,22 @@
    "en": "The recent heat has been really annoying.",
    "ko": "요즘 더위가 정말 거슬려.",
    "blank": "belakangan"
+  }
+ ],
+ "w|belalang": [
+  {
+   "text": "Budi mengusir kawanan belalang yang mulai memakan daun padi.",
+   "en": "Budi chased away a swarm of grasshoppers that had started eating the rice leaves.",
+   "ko": "부디는 벼 잎을 먹기 시작한 메뚜기 떼를 쫓아냈어요.",
+   "blank": "belalang",
+   "src": "made"
+  },
+  {
+   "text": "Koki tamu itu menawarkan belalang goreng sebagai camilan, dan Siti berani mencobanya.",
+   "en": "The guest chef offered fried grasshoppers as a snack, and Siti dared to try them.",
+   "ko": "그 초청 셰프가 메뚜기 튀김을 간식으로 내놓았고, 시티는 용감하게 먹어 봤어요.",
+   "blank": "belalang",
+   "src": "made"
   }
  ],
  "w|belanja": [
@@ -4863,6 +4927,22 @@
    "en": "That desk looks really messy.",
    "ko": "그 책상이 정말 지저분해 보여.",
    "blank": "berantakan"
+  }
+ ],
+ "w|berantem": [
+  {
+   "text": "Dua ekor kambing Budi berantem lagi di dekat pagar.",
+   "en": "Two of Budi's goats were fighting again near the fence.",
+   "ko": "부디네 염소 두 마리가 울타리 옆에서 또 싸웠어요.",
+   "blank": "berantem",
+   "src": "made"
+  },
+  {
+   "text": "Dua juru masak berantem soal resep sambal, lalu Siti menengahi mereka.",
+   "en": "Two cooks squabbled over a sambal recipe, and then Siti stepped in between them.",
+   "ko": "요리사 두 명이 삼발 조리법을 두고 다퉈서 시티가 말렸어요.",
+   "blank": "berantem",
+   "src": "made"
   }
  ],
  "w|berapa": [
@@ -11905,6 +11985,22 @@
    "src": "made"
   }
  ],
+ "w|cakrawala": [
+  {
+   "text": "Dari atas bukit, Budi bisa melihat cakrawala yang memerah saat senja.",
+   "en": "From the top of the hill, Budi can see the horizon turning red at dusk.",
+   "ko": "언덕 위에서 부디는 해 질 녘 붉게 물드는 지평선을 볼 수 있어요.",
+   "blank": "cakrawala",
+   "src": "made"
+  },
+  {
+   "text": "Siti ingin memperluas cakrawala rasa para pelanggan dengan menu baru.",
+   "en": "Siti wants to broaden her customers' taste horizons with a new menu.",
+   "ko": "시티는 새 메뉴로 손님들의 입맛의 폭을 넓히고 싶어 해요.",
+   "blank": "cakrawala",
+   "src": "made"
+  }
+ ],
  "w|calon": [
   {
    "text": "Calon ketua menyampaikan visi dengan jelas.",
@@ -17045,6 +17141,22 @@
    "src": "made"
   }
  ],
+ "w|geologi": [
+  {
+   "text": "Seorang mahasiswa geologi datang meneliti tanah di ladang Budi.",
+   "en": "A geology student came to study the soil in Budi's field.",
+   "ko": "지질학과 학생 한 명이 부디의 밭 흙을 조사하러 왔어요.",
+   "blank": "geologi",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pelanggan tetap yang dosen geologi selalu memesan sup buatan Siti.",
+   "en": "A regular customer who is a geology lecturer always orders Siti's soup.",
+   "ko": "지질학 강사인 단골손님은 늘 시티가 만든 수프를 주문해요.",
+   "blank": "geologi",
+   "src": "made"
+  }
+ ],
  "w|gerak": [
   {
    "text": "Saat senam pagi, Budi selalu salah mengikuti gerak instruktur.",
@@ -20467,6 +20579,22 @@
    "blank": "Jangan"
   }
  ],
+ "w|janggal": [
+  {
+   "text": "Budi merasa ada yang janggal karena anjing terus menggonggong ke arah gudang.",
+   "en": "Budi felt something was off because the dog kept barking toward the shed.",
+   "ko": "개가 계속 창고 쪽으로 짖어서 부디는 뭔가 이상하다고 느꼈어요.",
+   "blank": "janggal",
+   "src": "made"
+  },
+  {
+   "text": "Siti mencium bau janggal dari kulkas dan langsung memeriksa isinya.",
+   "en": "Siti smelled something odd from the fridge and checked its contents right away.",
+   "ko": "시티는 냉장고에서 이상한 냄새가 나서 바로 안을 확인했어요.",
+   "blank": "janggal",
+   "src": "made"
+  }
+ ],
  "w|jangka": [
   {
    "text": "Pemerintah desa membuat rencana jangka panjang untuk menghadapi kekeringan.",
@@ -21911,6 +22039,22 @@
    "en": "He doesn't want to lose.",
    "ko": "그는 지고 싶지 않아.",
    "blank": "kalah"
+  }
+ ],
+ "w|kalajengking": [
+  {
+   "text": "Budi menemukan kalajengking di bawah tumpukan kayu bakar.",
+   "en": "Budi found a scorpion under the pile of firewood.",
+   "ko": "부디는 장작더미 밑에서 전갈을 발견했어요.",
+   "blank": "kalajengking",
+   "src": "made"
+  },
+  {
+   "text": "Siti pernah mencicipi sate kalajengking di sebuah pasar malam.",
+   "en": "Siti once tasted scorpion skewers at a night market.",
+   "ko": "시티는 야시장에서 전갈 꼬치를 맛본 적이 있어요.",
+   "blank": "kalajengking",
+   "src": "made"
   }
  ],
  "w|kalangan": [
@@ -25291,6 +25435,22 @@
    "blank": "kelompok"
   }
  ],
+ "w|kelopak": [
+  {
+   "text": "Angin kencang merontokkan kelopak bunga labu di kebun Budi.",
+   "en": "The strong wind knocked the petals off the pumpkin flowers in Budi's garden.",
+   "ko": "거센 바람에 부디네 밭의 호박꽃 꽃잎이 떨어졌어요.",
+   "blank": "kelopak",
+   "src": "made"
+  },
+  {
+   "text": "Siti menghias kue dengan kelopak bunga mawar yang bisa dimakan.",
+   "en": "Siti decorated the cake with edible rose petals.",
+   "ko": "시티는 먹을 수 있는 장미 꽃잎으로 케이크를 장식했어요.",
+   "blank": "kelopak",
+   "src": "made"
+  }
+ ],
  "w|keluar": [
   {
    "text": "Ayo keluar.",
@@ -26180,6 +26340,22 @@
    "en": "Rina smiled with satisfaction after managing to stand up on the surfboard.",
    "ko": "리나는 서핑보드 위에 서는 데 성공하고 만족스럽게 웃었어요.",
    "blank": "kepuasan",
+   "src": "made"
+  }
+ ],
+ "w|kepunahan": [
+  {
+   "text": "Budi pernah membaca bahwa banyak jenis lebah liar terancam kepunahan.",
+   "en": "Budi once read that many kinds of wild bees are threatened with extinction.",
+   "ko": "부디는 많은 종류의 야생벌이 멸종 위기에 있다는 글을 읽은 적이 있어요.",
+   "blank": "kepunahan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menolak memasak sirip hiu karena ikan itu terancam kepunahan.",
+   "en": "Siti refuses to cook shark fin because the fish is threatened with extinction.",
+   "ko": "시티는 상어가 멸종 위기라서 상어 지느러미 요리를 거절해요.",
+   "blank": "kepunahan",
    "src": "made"
   }
  ],
@@ -27701,6 +27877,22 @@
    "blank": "kimia"
   }
  ],
+ "w|kincir": [
+  {
+   "text": "Budi membuat kincir angin dari bambu untuk mengusir burung.",
+   "en": "Budi made a bamboo windmill to scare away the birds.",
+   "ko": "부디는 새를 쫓으려고 대나무로 바람개비를 만들었어요.",
+   "blank": "kincir",
+   "src": "made"
+  },
+  {
+   "text": "Tepung yang dipakai Siti digiling di kincir air milik keluarga petani.",
+   "en": "The flour Siti uses is ground at a water mill owned by a farming family.",
+   "ko": "시티가 쓰는 밀가루는 한 농가의 물레방아에서 빻아요.",
+   "blank": "kincir",
+   "src": "made"
+  }
+ ],
  "w|kinerja": [
   {
    "text": "Agus menilai kinerja tim baru cukup baik untuk bulan pertama.",
@@ -29120,6 +29312,22 @@
    "en": "The organizers gave the night marathon a cosmic theme, complete with star lights.",
    "ko": "주최 측은 그 야간 마라톤을 별 조명까지 단 우주 테마로 꾸몄어요.",
    "blank": "kosmik",
+   "src": "made"
+  }
+ ],
+ "w|kosmos": [
+  {
+   "text": "Malam di desa terasa sunyi, dan Budi suka membaca buku tentang kosmos sambil berbaring di teras.",
+   "en": "Nights in the village are quiet, and Budi likes reading books about the cosmos while lying on the porch.",
+   "ko": "마을의 밤은 고요하고, 부디는 테라스에 누워 우주에 관한 책 읽는 걸 좋아해요.",
+   "blank": "kosmos",
+   "src": "made"
+  },
+  {
+   "text": "Saat istirahat, Siti dan seorang pelayan mengobrol tentang film dokumenter soal kosmos.",
+   "en": "On their break, Siti and a waiter chatted about a documentary on the cosmos.",
+   "ko": "쉬는 시간에 시티는 종업원과 우주에 관한 다큐멘터리 이야기를 나눴어요.",
+   "blank": "kosmos",
    "src": "made"
   }
  ],
@@ -32815,6 +33023,22 @@
    "blank": "mama"
   }
  ],
+ "w|mamalia": [
+  {
+   "text": "Kelelawar yang tinggal di lumbung Budi termasuk mamalia.",
+   "en": "The bats living in Budi's barn are mammals.",
+   "ko": "부디네 곳간에 사는 박쥐는 포유류예요.",
+   "blank": "mamalia",
+   "src": "made"
+  },
+  {
+   "text": "Siti menjelaskan kepada pelayan baru bahwa paus adalah mamalia, bukan ikan.",
+   "en": "Siti explained to the new waiter that whales are mammals, not fish.",
+   "ko": "시티는 새 종업원에게 고래가 물고기가 아니라 포유류라고 설명했어요.",
+   "blank": "mamalia",
+   "src": "made"
+  }
+ ],
  "w|mampir": [
   {
    "text": "Mampir sebentar ke rumah nenek, yuk.",
@@ -34723,6 +34947,22 @@
    "src": "made"
   }
  ],
+ "w|melulu": [
+  {
+   "text": "Istri Budi mengeluh karena Budi mengurus sapi melulu.",
+   "en": "Budi's wife complains because Budi does nothing but look after the cows.",
+   "ko": "부디의 아내는 부디가 맨날 소만 돌본다고 투덜대요.",
+   "blank": "melulu",
+   "src": "made"
+  },
+  {
+   "text": "Pelanggan itu memesan nasi goreng melulu setiap kali datang ke restoran Siti.",
+   "en": "That customer orders nothing but fried rice every time he comes to Siti's restaurant.",
+   "ko": "그 손님은 시티의 식당에 올 때마다 맨날 볶음밥만 시켜요.",
+   "blank": "melulu",
+   "src": "made"
+  }
+ ],
  "w|melumpuhkan": [
   {
    "text": "Banjir besar tahun lalu sempat melumpuhkan jalan utama ke desa Budi.",
@@ -35828,6 +36068,22 @@
    "en": "The charcoal in Dewi's grill was glowing and ready to use.",
    "ko": "데위의 그릴 숯이 벌겋게 달아올라 쓸 준비가 됐어요.",
    "blank": "membara",
+   "src": "made"
+  }
+ ],
+ "w|membasahi": [
+  {
+   "text": "Embun pagi membasahi sepatu Budi saat dia melintasi rumput.",
+   "en": "The morning dew soaked Budi's shoes as he crossed the grass.",
+   "ko": "풀밭을 지나는 동안 아침 이슬에 부디의 신발이 젖었어요.",
+   "blank": "membasahi",
+   "src": "made"
+  },
+  {
+   "text": "Keringat membasahi dahi Siti di depan wajan yang panas.",
+   "en": "Sweat soaked Siti's forehead in front of the hot wok.",
+   "ko": "뜨거운 웍 앞에서 시티의 이마가 땀에 젖었어요.",
+   "blank": "membasahi",
    "src": "made"
   }
  ],
@@ -37279,6 +37535,22 @@
    "en": "He booked a room at that hotel.",
    "ko": "그는 그 호텔에 방을 예약했어.",
    "blank": "memesan"
+  }
+ ],
+ "w|memetakan": [
+  {
+   "text": "Petugas desa membantu Budi memetakan batas tanah warisan keluarga.",
+   "en": "A village official helped Budi map the boundaries of the family's inherited land.",
+   "ko": "마을 직원이 부디를 도와 집안에서 물려받은 땅의 경계를 지도로 그렸어요.",
+   "blank": "memetakan",
+   "src": "made"
+  },
+  {
+   "text": "Siti memetakan alur kerja dapur agar para koki tidak saling bertabrakan.",
+   "en": "Siti mapped out the kitchen workflow so the cooks wouldn't bump into each other.",
+   "ko": "시티는 요리사들이 서로 부딪치지 않게 주방 동선을 정리했어요.",
+   "blank": "memetakan",
+   "src": "made"
   }
  ],
  "w|memetik": [
@@ -39835,6 +40107,22 @@
    "blank": "mencintai"
   }
  ],
+ "w|mencipta": [
+  {
+   "text": "Budi senang mencipta alat-alat sederhana dari bahan bekas.",
+   "en": "Budi enjoys creating simple tools from scrap materials.",
+   "ko": "부디는 버려진 재료로 간단한 도구를 만들어 내는 걸 좋아해요.",
+   "blank": "mencipta",
+   "src": "made"
+  },
+  {
+   "text": "Siti suka mencipta resep baru dari bahan sisa.",
+   "en": "Siti likes creating new recipes from leftover ingredients.",
+   "ko": "시티는 남은 재료로 새 조리법을 만들어 내는 걸 좋아해요.",
+   "blank": "mencipta",
+   "src": "made"
+  }
+ ],
  "w|menciptakan": [
   {
    "text": "Dia suka menciptakan lagu.",
@@ -40365,6 +40653,22 @@
    "en": "Approaching her takes courage.",
    "ko": "그녀에게 다가가려면 용기가 필요해.",
    "blank": "Mendekati"
+  }
+ ],
+ "w|mendekatkan": [
+  {
+   "text": "Budi mendekatkan ember air ke anak sapi yang kehausan.",
+   "en": "Budi moved the bucket of water closer to the thirsty calf.",
+   "ko": "부디는 목마른 송아지 쪽으로 물통을 가까이 놓아 줬어요.",
+   "blank": "mendekatkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mendekatkan hidung ke panci untuk mencium aroma kaldu.",
+   "en": "Siti brought her nose close to the pot to smell the broth.",
+   "ko": "시티는 육수 냄새를 맡으려고 냄비에 코를 가까이 댔어요.",
+   "blank": "mendekatkan",
+   "src": "made"
   }
  ],
  "w|mendekorasi": [
@@ -41356,6 +41660,22 @@
    "en": "Ayu set a one-month warranty for every battery replacement.",
    "ko": "아유는 배터리 교체마다 한 달 보증을 정해 뒀어요.",
    "blank": "menetapkan",
+   "src": "made"
+  }
+ ],
+ "w|menetas": [
+  {
+   "text": "Telur ayam di kandang Budi akhirnya menetas pagi ini.",
+   "en": "The chicken eggs in Budi's coop finally hatched this morning.",
+   "ko": "부디네 닭장의 달걀이 오늘 아침 드디어 부화했어요.",
+   "blank": "menetas",
+   "src": "made"
+  },
+  {
+   "text": "Siti bercanda kepada pelayan bahwa telur dari supermarket tidak akan pernah menetas.",
+   "en": "Siti joked to the waiter that eggs from the supermarket would never hatch.",
+   "ko": "시티는 종업원에게 마트 달걀은 절대 부화하지 않는다고 농담했어요.",
+   "blank": "menetas",
    "src": "made"
   }
  ],
@@ -43125,6 +43445,22 @@
    "en": "The story he told was so terrifying.",
    "ko": "그가 한 이야기는 정말 무시무시했어.",
    "blank": "Mengerikan"
+  }
+ ],
+ "w|mengering": [
+  {
+   "text": "Kalau hujan tidak turun minggu ini, kolam ikan Budi bisa mengering.",
+   "en": "If it doesn't rain this week, Budi's fish pond could dry up.",
+   "ko": "이번 주에 비가 안 오면 부디의 물고기 연못이 마를 수도 있어요.",
+   "blank": "mengering",
+   "src": "made"
+  },
+  {
+   "text": "Siti menutup adonan dengan kain basah agar tidak mengering.",
+   "en": "Siti covered the dough with a damp cloth so it wouldn't dry out.",
+   "ko": "시티는 반죽이 마르지 않게 젖은 천으로 덮었어요.",
+   "blank": "mengering",
+   "src": "made"
   }
  ],
  "w|mengeringkan": [
@@ -48603,6 +48939,22 @@
    "src": "made"
   }
  ],
+ "w|menyertakan": [
+  {
+   "text": "Saat menjual beras, Budi selalu menyertakan nota yang rapi.",
+   "en": "When he sells rice, Budi always includes a neat receipt.",
+   "ko": "부디는 쌀을 팔 때 항상 깔끔한 영수증을 같이 넣어요.",
+   "blank": "menyertakan",
+   "src": "made"
+  },
+  {
+   "text": "Siti selalu menyertakan daftar bahan dalam setiap resep yang dia bagikan.",
+   "en": "Siti always includes a list of ingredients in every recipe she shares.",
+   "ko": "시티는 나눠 주는 조리법마다 꼭 재료 목록을 같이 적어요.",
+   "blank": "menyertakan",
+   "src": "made"
+  }
+ ],
  "w|menyerupai": [
   {
    "text": "Dari jauh, gedung apartemen itu menyerupai kotak korek api raksasa.",
@@ -50255,6 +50607,22 @@
    "src": "made"
   }
  ],
+ "w|mewarnai": [
+  {
+   "text": "Bunga matahari mewarnai ladang Budi dengan kuning cerah.",
+   "en": "Sunflowers color Budi's field bright yellow.",
+   "ko": "해바라기가 부디의 밭을 밝은 노란색으로 물들여요.",
+   "blank": "mewarnai",
+   "src": "made"
+  },
+  {
+   "text": "Siti mewarnai adonan kue lapis dengan daun suji.",
+   "en": "Siti colors the layer cake batter with suji leaves.",
+   "ko": "시티는 수지 잎으로 층층 케이크 반죽에 색을 내요.",
+   "blank": "mewarnai",
+   "src": "made"
+  }
+ ],
  "w|mewawancarai": [
   {
    "text": "Wartawan lokal mewawancarai Bayu tentang kondisi kerja di pabrik.",
@@ -50565,6 +50933,22 @@
    "en": "The stories are so similar.",
    "ko": "이야기가 아주 비슷해.",
    "blank": "mirip"
+  }
+ ],
+ "w|misalkan": [
+  {
+   "text": "Budi berpikir, misalkan panen gagal, dia masih punya sedikit tabungan.",
+   "en": "Budi thought that, suppose the harvest failed, he would still have a little savings.",
+   "ko": "부디는 만약 수확을 망치더라도 아직 저축이 조금 있다고 생각했어요.",
+   "blank": "misalkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti bertanya kepada koki baru, misalkan santan habis, apa penggantinya?",
+   "en": "Siti asked the new cook: suppose the coconut milk runs out, what's the substitute?",
+   "ko": "시티는 새 요리사에게 코코넛 밀크가 떨어지면 뭘로 대신하냐고 물었어요.",
+   "blank": "misalkan",
+   "src": "made"
   }
  ],
  "w|misalnya": [
@@ -53569,6 +53953,22 @@
    "src": "made"
   }
  ],
+ "w|pamit": [
+  {
+   "text": "Sebelum berangkat ke kota, Budi pamit kepada para tetangga.",
+   "en": "Before leaving for the city, Budi said goodbye to the neighbors.",
+   "ko": "도시로 떠나기 전에 부디는 이웃들에게 작별 인사를 했어요.",
+   "blank": "pamit",
+   "src": "made"
+  },
+  {
+   "text": "Pelayan muda itu pamit pulang lebih awal kepada Siti karena ibunya sakit.",
+   "en": "The young waiter asked Siti's leave to go home early because his mother was ill.",
+   "ko": "젊은 종업원은 어머니가 아파서 시티에게 일찍 들어가겠다고 인사했어요.",
+   "blank": "pamit",
+   "src": "made"
+  }
+ ],
  "w|pamrih": [
   {
    "text": "Para relawan museum bekerja tanpa pamrih setiap akhir pekan.",
@@ -53611,6 +54011,22 @@
    "en": "The coffee is still hot.",
    "ko": "커피가 아직 뜨거워.",
    "blank": "panas"
+  }
+ ],
+ "w|pancaran": [
+  {
+   "text": "Budi menikmati pancaran matahari pagi di atas pematang.",
+   "en": "Budi enjoyed the glow of the morning sun on the paddy dike.",
+   "ko": "부디는 논두렁 위에서 아침 햇살을 즐겼어요.",
+   "blank": "pancaran",
+   "src": "made"
+  },
+  {
+   "text": "Siti menghindari pancaran uap panas dari panci presto.",
+   "en": "Siti avoided the jet of hot steam from the pressure cooker.",
+   "ko": "시티는 압력솥에서 뿜어 나오는 뜨거운 김을 피했어요.",
+   "blank": "pancaran",
+   "src": "made"
   }
  ],
  "w|panci": [
@@ -55450,6 +55866,22 @@
    "en": "Wati became the guide for new staff who hadn't yet memorized each floor.",
    "ko": "와티는 아직 층마다 위치를 모르는 신입 직원들의 안내자가 됐어요.",
    "blank": "pemandu",
+   "src": "made"
+  }
+ ],
+ "w|pemangsa": [
+  {
+   "text": "Budi memasang jaring agar ayam-ayamnya aman dari pemangsa.",
+   "en": "Budi put up a net so his chickens would be safe from predators.",
+   "ko": "부디는 닭들이 포식자에게서 안전하도록 그물을 쳤어요.",
+   "blank": "pemangsa",
+   "src": "made"
+  },
+  {
+   "text": "Kucing dapur itu pemangsa tikus yang andal, jadi Siti membiarkannya tinggal.",
+   "en": "That kitchen cat is a reliable hunter of mice, so Siti lets it stay.",
+   "ko": "그 주방 고양이는 쥐를 잘 잡아서 시티가 그냥 지내게 둬요.",
+   "blank": "pemangsa",
    "src": "made"
   }
  ],
@@ -63053,6 +63485,22 @@
    "blank": "Pintu"
   }
  ],
+ "w|pinus": [
+  {
+   "text": "Di batas ladang, Budi menanam deretan pohon pinus sebagai penahan angin.",
+   "en": "At the edge of the field, Budi planted a row of pine trees as a windbreak.",
+   "ko": "부디는 밭 경계에 바람막이로 소나무를 줄지어 심었어요.",
+   "blank": "pinus",
+   "src": "made"
+  },
+  {
+   "text": "Siti menambahkan kacang pinus panggang ke dalam salad.",
+   "en": "Siti added toasted pine nuts to the salad.",
+   "ko": "시티는 구운 잣을 샐러드에 넣었어요.",
+   "blank": "pinus",
+   "src": "made"
+  }
+ ],
  "w|pion": [
   {
    "text": "Fajar merasa dirinya hanya pion kecil dalam permainan politik di balai kota.",
@@ -64543,6 +64991,22 @@
    "src": "made"
   }
  ],
+ "w|pusaran": [
+  {
+   "text": "Budi melihat pusaran air kecil di saluran irigasi.",
+   "en": "Budi saw a small whirlpool in the irrigation channel.",
+   "ko": "부디는 수로에서 작은 소용돌이를 봤어요.",
+   "blank": "pusaran",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengaduk adonan sampai terbentuk pusaran di tengah mangkuk.",
+   "en": "Siti stirred the batter until a swirl formed in the middle of the bowl.",
+   "ko": "시티는 그릇 가운데에 소용돌이가 생길 때까지 반죽을 저었어요.",
+   "blank": "pusaran",
+   "src": "made"
+  }
+ ],
  "w|pusat": [
   {
    "text": "Toko itu di pusat kota.",
@@ -64733,6 +65197,22 @@
    "en": "The radio is still broken.",
    "ko": "라디오가 아직 고장이야.",
    "blank": "Radio"
+  }
+ ],
+ "w|radioaktif": [
+  {
+   "text": "Budi menonton berita tentang limbah radioaktif yang mencemari sungai di negeri lain.",
+   "en": "Budi watched news about radioactive waste polluting a river in another country.",
+   "ko": "부디는 다른 나라 강을 오염시킨 방사성 폐기물에 관한 뉴스를 봤어요.",
+   "blank": "radioaktif",
+   "src": "made"
+  },
+  {
+   "text": "Siti membaca berita tentang ikan laut yang diuji agar bebas dari zat radioaktif.",
+   "en": "Siti read news about sea fish being tested to make sure they are free of radioactive substances.",
+   "ko": "시티는 바닷물고기에 방사성 물질이 없는지 검사한다는 뉴스를 읽었어요.",
+   "blank": "radioaktif",
+   "src": "made"
   }
  ],
  "w|raga": [
@@ -67603,6 +68083,22 @@
    "src": "made"
   }
  ],
+ "w|sawah": [
+  {
+   "text": "Setiap pagi Budi berjalan ke sawah sebelum matahari tinggi.",
+   "en": "Every morning Budi walks to the rice field before the sun is high.",
+   "ko": "부디는 매일 아침 해가 높이 뜨기 전에 논으로 걸어가요.",
+   "blank": "sawah",
+   "src": "made"
+  },
+  {
+   "text": "Beras yang dimasak Siti dikirim langsung dari sawah di desa.",
+   "en": "The rice Siti cooks is sent straight from paddy fields in the village.",
+   "ko": "시티가 짓는 쌀은 시골 논에서 바로 보내져요.",
+   "blank": "sawah",
+   "src": "made"
+  }
+ ],
  "w|saya": [
   {
    "text": "Saya mau tanya.",
@@ -68143,6 +68639,22 @@
    "blank": "Sedangkan"
   }
  ],
+ "w|sedemikian": [
+  {
+   "text": "Hujan turun sedemikian deras sehingga Budi tidak bisa ke ladang.",
+   "en": "The rain fell so heavily that Budi couldn't go to the field.",
+   "ko": "비가 너무 세게 와서 부디는 밭에 갈 수 없었어요.",
+   "blank": "sedemikian",
+   "src": "made"
+  },
+  {
+   "text": "Siti menata hidangan sedemikian rupa sehingga terlihat seperti lukisan.",
+   "en": "Siti arranged the dish in such a way that it looked like a painting.",
+   "ko": "시티는 요리를 그림처럼 보이도록 담았어요.",
+   "blank": "sedemikian",
+   "src": "made"
+  }
+ ],
  "w|sederhana": [
   {
    "text": "Hidupnya sederhana.",
@@ -68627,6 +69139,22 @@
    "en": "Honestly he really deserved to win more.",
    "ko": "솔직히 그가 이기는 게 더 맞아.",
    "blank": "Sejujurnya"
+  }
+ ],
+ "w|sejuk": [
+  {
+   "text": "Udara pagi di kebun Budi terasa sejuk dan segar.",
+   "en": "The morning air in Budi's garden feels cool and fresh.",
+   "ko": "부디의 밭에 부는 아침 공기는 시원하고 상쾌해요.",
+   "blank": "sejuk",
+   "src": "made"
+  },
+  {
+   "text": "Siti menyimpan bawang di ruang yang sejuk dan gelap.",
+   "en": "Siti keeps the onions in a cool, dark room.",
+   "ko": "시티는 양파를 서늘하고 어두운 곳에 보관해요.",
+   "blank": "sejuk",
+   "src": "made"
   }
  ],
  "w|sejumlah": [
@@ -69939,6 +70467,22 @@
    "en": "You deliberately hid that news.",
    "ko": "네가 일부러 그 소식을 숨긴 거야.",
    "blank": "Sengaja"
+  }
+ ],
+ "w|sengatan": [
+  {
+   "text": "Tangan Budi bengkak karena sengatan lebah di kebun.",
+   "en": "Budi's hand swelled up from a bee sting in the garden.",
+   "ko": "부디의 손이 밭에서 벌에 쏘여 부었어요.",
+   "blank": "sengatan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang pelayan terkena sengatan tawon di dekat tong sampah, jadi Siti memberinya es batu.",
+   "en": "A waiter got stung by a wasp near the trash bin, so Siti gave him ice.",
+   "ko": "종업원 한 명이 쓰레기통 근처에서 말벌에 쏘여서 시티가 얼음을 줬어요.",
+   "blank": "sengatan",
+   "src": "made"
   }
  ],
  "w|sengit": [
@@ -71321,6 +71865,22 @@
    "blank": "setuju"
   }
  ],
+ "w|setumpuk": [
+  {
+   "text": "Budi membawa setumpuk jerami ke kandang sapi.",
+   "en": "Budi carried a pile of straw to the cow shed.",
+   "ko": "부디는 짚 한 더미를 외양간으로 날랐어요.",
+   "blank": "setumpuk",
+   "src": "made"
+  },
+  {
+   "text": "Ada setumpuk piring kotor di bak cuci ketika Siti datang.",
+   "en": "There was a pile of dirty plates in the sink when Siti arrived.",
+   "ko": "시티가 왔을 때 개수대에 더러운 접시가 한 무더기 쌓여 있었어요.",
+   "blank": "setumpuk",
+   "src": "made"
+  }
+ ],
  "w|seukuran": [
   {
    "text": "Barang bukti itu disimpan dalam kotak seukuran kardus sepatu.",
@@ -72683,6 +73243,22 @@
    "blank": "strategi"
   }
  ],
+ "w|strategis": [
+  {
+   "text": "Lahan Budi berada di tempat yang strategis, dekat jalan menuju pasar.",
+   "en": "Budi's land is in a strategic spot, near the road to the market.",
+   "ko": "부디의 땅은 시장으로 가는 길 근처, 좋은 자리에 있어요.",
+   "blank": "strategis",
+   "src": "made"
+  },
+  {
+   "text": "Siti menaruh rak bumbu di posisi strategis dekat kompor.",
+   "en": "Siti put the spice rack in a strategic spot near the stove.",
+   "ko": "시티는 양념 선반을 가스레인지 옆 딱 좋은 자리에 뒀어요.",
+   "blank": "strategis",
+   "src": "made"
+  }
+ ],
  "w|stres": [
   {
    "text": "Stres kerja membuatnya sulit fokus.",
@@ -72844,6 +73420,22 @@
    "en": "The builders had started working at Putri's house since dawn.",
    "ko": "인부들은 새벽부터 푸트리네 집에서 일을 시작했어요.",
    "blank": "subuh",
+   "src": "made"
+  }
+ ],
+ "w|subur": [
+  {
+   "text": "Ladang Budi tetap subur berkat pupuk kandang dari sapinya.",
+   "en": "Budi's field stays fertile thanks to manure from his cows.",
+   "ko": "부디의 밭은 소똥 거름 덕분에 계속 비옥해요.",
+   "blank": "subur",
+   "src": "made"
+  },
+  {
+   "text": "Sayuran di dapur Siti datang dari petani di lembah yang subur.",
+   "en": "The vegetables in Siti's kitchen come from farmers in a fertile valley.",
+   "ko": "시티의 주방 채소는 비옥한 골짜기의 농부들에게서 와요.",
+   "blank": "subur",
    "src": "made"
   }
  ],
@@ -73320,6 +73912,22 @@
    "en": "Siti said the evening sky at the end of the dry season was almost heavenly in color.",
    "ko": "시티는 건기 끝 무렵 저녁 하늘빛이 거의 천상의 색이라고 했어요.",
    "blank": "surgawi",
+   "src": "made"
+  }
+ ],
+ "w|surut": [
+  {
+   "text": "Setelah banjir surut, Budi memeriksa tanaman jagung di ladang.",
+   "en": "After the flood receded, Budi checked the corn plants in the field.",
+   "ko": "홍수가 빠진 뒤 부디는 밭의 옥수수를 살펴봤어요.",
+   "blank": "surut",
+   "src": "made"
+  },
+  {
+   "text": "Setelah jam makan siang, pesanan mulai surut dan Siti bisa duduk sebentar.",
+   "en": "After lunchtime, the orders start to die down and Siti can sit for a moment.",
+   "ko": "점심시간이 지나면 주문이 줄어들어서 시티는 잠깐 앉을 수 있어요.",
+   "blank": "surut",
    "src": "made"
   }
  ],
@@ -79113,6 +79721,22 @@
    "src": "made"
   }
  ],
+ "w|topan": [
+  {
+   "text": "Ramalan cuaca menyebutkan topan akan lewat dekat pantai, jadi Budi mengikat atap kandang.",
+   "en": "The forecast said a typhoon would pass near the coast, so Budi tied down the shed roof.",
+   "ko": "일기 예보에서 태풍이 해안 근처를 지난다고 해서 부디는 우리 지붕을 묶었어요.",
+   "blank": "topan",
+   "src": "made"
+  },
+  {
+   "text": "Karena ada topan, kiriman ikan untuk dapur Siti terlambat dua hari.",
+   "en": "Because of a typhoon, the fish delivery for Siti's kitchen was two days late.",
+   "ko": "태풍 때문에 시티의 주방에 올 생선 배송이 이틀 늦었어요.",
+   "blank": "topan",
+   "src": "made"
+  }
+ ],
  "w|topeng": [
   {
    "text": "Topeng itu menutupi seluruh wajahnya.",
@@ -79389,6 +80013,22 @@
    "en": "There is a simple trick to open that lock.",
    "ko": "그 자물쇠를 여는 간단한 요령이 있어.",
    "blank": "trik"
+  }
+ ],
+ "w|tropis": [
+  {
+   "text": "Budi menanam buah-buahan tropis seperti nanas dan pepaya.",
+   "en": "Budi grows tropical fruits like pineapple and papaya.",
+   "ko": "부디는 파인애플과 파파야 같은 열대 과일을 심어요.",
+   "blank": "tropis",
+   "src": "made"
+  },
+  {
+   "text": "Siti membuat es campur dengan aneka buah tropis.",
+   "en": "Siti made es campur with all kinds of tropical fruit.",
+   "ko": "시티는 여러 열대 과일로 에스 짬뿌르를 만들었어요.",
+   "blank": "tropis",
+   "src": "made"
   }
  ],
  "w|trotoar": [

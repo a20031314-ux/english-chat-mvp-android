@@ -1059,6 +1059,22 @@
    "blank": "अतिरिक्त"
   }
  ],
+ "w|अतिशयोक्ति": [
+  {
+   "text": "संपादक ने करण की हेडलाइन को अतिशयोक्ति बताकर बदलवा दिया।",
+   "en": "The editor called Karan's headline an exaggeration and had it changed.",
+   "ko": "편집장은 카란의 헤드라인이 과장이라며 바꾸게 했어요.",
+   "blank": "अतिशयोक्ति",
+   "src": "made"
+  },
+  {
+   "text": "विज्ञापन में \"जादुई क्रीम\" लिखा था, पर दीपा जानती थी कि यह अतिशयोक्ति है।",
+   "en": "The ad said \"magic cream\", but Deepa knew it was an exaggeration.",
+   "ko": "광고엔 \"마법의 크림\"이라고 쓰여 있었지만 디파는 그게 과장인 걸 알았어요.",
+   "blank": "अतिशयोक्ति",
+   "src": "made"
+  }
+ ],
  "w|अतीत": [
   {
    "text": "अतीत को बार-बार याद मत करो।",
@@ -1194,6 +1210,22 @@
    "en": "Anjali's waiters treat customers with great courtesy.",
    "ko": "안잘리네 종업원들은 손님을 아주 정중하게 대해요.",
    "blank": "अदब",
+   "src": "made"
+  }
+ ],
+ "w|अदम्य": [
+  {
+   "text": "करण ने एक ऐसी खिलाड़ी पर लेख लिखा, जिसके अदम्य साहस ने सबको हैरान कर दिया।",
+   "en": "Karan wrote an article about a player whose indomitable courage astonished everyone.",
+   "ko": "카란은 불굴의 용기로 모두를 놀라게 한 선수에 대한 기사를 썼어요.",
+   "blank": "अदम्य",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने एक पर्वतारोही की किताब ऑर्डर की, जिसकी अदम्य इच्छाशक्ति की चर्चा हर जगह है।",
+   "en": "Deepa ordered a book by a mountaineer whose indomitable willpower is talked about everywhere.",
+   "ko": "디파는 불굴의 의지로 이름난 산악인의 책을 주문했어요.",
+   "blank": "अदम्य",
    "src": "made"
   }
  ],
@@ -2074,6 +2106,22 @@
    "en": "Because of the rain, whether customers will come tonight is uncertain.",
    "ko": "비 때문에 오늘 밤 손님이 올지 불확실해요.",
    "blank": "अनिश्चित",
+   "src": "made"
+  }
+ ],
+ "w|अनुकरण": [
+  {
+   "text": "करण कहता है कि दूसरों की नक़ल नहीं, अच्छी पत्रकारिता का अनुकरण करना चाहिए।",
+   "en": "Karan says one should emulate good journalism, not copy others.",
+   "ko": "카란은 남을 베끼지 말고 좋은 저널리즘을 본받아야 한다고 해요.",
+   "blank": "अनुकरण",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की छोटी बहन हर चीज़ में दीपा का अनुकरण करती है, यहाँ तक कि ऑनलाइन ख़रीदारी में भी।",
+   "en": "Deepa's younger sister imitates Deepa in everything, even in online shopping.",
+   "ko": "디파의 여동생은 뭐든 디파를 따라 해요. 온라인 쇼핑까지도요.",
+   "blank": "अनुकरण",
    "src": "made"
   }
  ],
@@ -3861,6 +3909,22 @@
    "src": "made"
   }
  ],
+ "w|अल्पमत": [
+  {
+   "text": "करण ने बताया कि नगर परिषद में सत्ताधारी दल अब अल्पमत में है।",
+   "en": "Karan reported that the ruling group in the city council is now in the minority.",
+   "ko": "카란은 시의회 여당이 이제 소수가 됐다고 보도했어요.",
+   "blank": "अल्पमत",
+   "src": "made"
+  },
+  {
+   "text": "घर की बैठक में दीपा अल्पमत में थी, इसलिए नया सोफ़ा नहीं मँगाया गया।",
+   "en": "Deepa was in the minority at the family meeting, so the new sofa wasn't ordered.",
+   "ko": "가족회의에서 디파가 소수파라서 새 소파는 주문하지 못했어요.",
+   "blank": "अल्पमत",
+   "src": "made"
+  }
+ ],
  "w|अल्पसंख्यक": [
   {
    "text": "अमित एक संस्था में काम करता है जो भाषाई अल्पसंख्यक समुदायों के बच्चों को पढ़ाती है।",
@@ -4245,6 +4309,22 @@
    "en": "Finishing the work by tomorrow is impossible.",
    "ko": "내일까지 일을 끝내는 건 불가능해.",
    "blank": "असंभव"
+  }
+ ],
+ "w|असभ्य": [
+  {
+   "text": "एक पाठक ने फ़ोन पर करण से बेहद असभ्य भाषा में बात की।",
+   "en": "A reader spoke to Karan on the phone in extremely rude language.",
+   "ko": "한 독자가 전화로 카란에게 몹시 무례한 말을 했어요.",
+   "blank": "असभ्य",
+   "src": "made"
+  },
+  {
+   "text": "कस्टमर केयर वाले का असभ्य व्यवहार देखकर दीपा ने शिकायत दर्ज की।",
+   "en": "Seeing the customer care agent's rude behaviour, Deepa filed a complaint.",
+   "ko": "고객센터 직원이 무례하게 굴자 디파는 민원을 넣었어요.",
+   "blank": "असभ्य",
+   "src": "made"
   }
  ],
  "w|असमर्थ": [
@@ -5482,6 +5562,22 @@
    "en": "Lying in the sun, Shalini was reading a famous sailor's autobiography.",
    "ko": "샬리니는 햇볕에 누워 유명한 선원의 자서전을 읽고 있었어요.",
    "blank": "आत्मकथा",
+   "src": "made"
+  }
+ ],
+ "w|आत्मज्ञान": [
+  {
+   "text": "करण ने एक संन्यासी का इंटरव्यू लिया, जो कहते हैं कि आत्मज्ञान ही असली धन है।",
+   "en": "Karan interviewed a monk who says self-knowledge is the real wealth.",
+   "ko": "카란은 자기 성찰이 진짜 재산이라고 말하는 수행자를 인터뷰했어요.",
+   "blank": "आत्मज्ञान",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने आत्मज्ञान पर एक पुरानी किताब का नया संस्करण ऑर्डर किया।",
+   "en": "Deepa ordered a new edition of an old book on self-realisation.",
+   "ko": "디파는 자기 깨달음에 관한 옛 책의 새 판을 주문했어요.",
+   "blank": "आत्मज्ञान",
    "src": "made"
   }
  ],
@@ -6809,6 +6905,22 @@
    "blank": "आविष्कार"
   }
  ],
+ "w|आवृत्ति": [
+  {
+   "text": "करण ने जाँच की कि शहर में सड़क हादसों की आवृत्ति क्यों बढ़ रही है।",
+   "en": "Karan investigated why the frequency of road accidents in the city is rising.",
+   "ko": "카란은 도시에서 교통사고 빈도가 왜 늘어나는지 취재했어요.",
+   "blank": "आवृत्ति",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने देखा कि त्योहारों में सेल की आवृत्ति बहुत बढ़ जाती है।",
+   "en": "Deepa noticed that the frequency of sales goes up a lot during festivals.",
+   "ko": "디파는 명절이면 세일이 훨씬 잦아진다는 걸 알았어요.",
+   "blank": "आवृत्ति",
+   "src": "made"
+  }
+ ],
  "w|आवेदन": [
   {
    "text": "नौकरी के लिए आवेदन भर दो।",
@@ -7076,6 +7188,22 @@
    "en": "Meena, back from meeting the fallen soldier's family, quietly shed tears.",
    "ko": "순직한 군인의 가족을 만나고 돌아온 미나는 조용히 눈물을 흘렸어요.",
    "blank": "आँसू बहाए",
+   "src": "made"
+  }
+ ],
+ "w|आस्तिक": [
+  {
+   "text": "करण ख़ुद आस्तिक है, पर अपने लेखों में वह हर राय को जगह देता है।",
+   "en": "Karan himself is a believer, but in his articles he gives space to every opinion.",
+   "ko": "카란 자신은 신앙이 있지만 기사에서는 모든 의견을 다뤄요.",
+   "blank": "आस्तिक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की माँ आस्तिक हैं और रोज़ पूजा के लिए फूल ऑनलाइन मँगाती हैं।",
+   "en": "Deepa's mother is devout and orders flowers online for daily worship.",
+   "ko": "디파의 어머니는 신앙심이 깊어서 매일 기도용 꽃을 온라인으로 주문하세요.",
+   "blank": "आस्तिक",
    "src": "made"
   }
  ],
@@ -9825,6 +9953,22 @@
    "blank": "उफ़"
   }
  ],
+ "w|उबरना": [
+  {
+   "text": "बाढ़ से उबरने के बाद गाँव कैसे बसा, इस पर करण ने लंबी रिपोर्ट लिखी।",
+   "en": "Karan wrote a long report on how the village rebuilt after recovering from the flood.",
+   "ko": "카란은 마을이 홍수에서 회복한 뒤 어떻게 다시 일어섰는지 긴 기사를 썼어요.",
+   "blank": "उबरने",
+   "src": "made"
+  },
+  {
+   "text": "बीमारी से उबरकर दीपा ने सबसे पहले अपने लिए नई साड़ी ऑर्डर की।",
+   "en": "After recovering from her illness, the first thing Deepa did was order a new sari for herself.",
+   "ko": "병에서 회복한 디파가 맨 먼저 한 일은 자기 사리를 새로 주문한 거였어요.",
+   "blank": "उबरकर",
+   "src": "made"
+  }
+ ],
  "w|उबलना": [
   {
    "text": "बर्तन में पानी उबलना शुरू हो गया।",
@@ -10580,6 +10724,22 @@
    "en": "The only drawback of the new house is that the market is a little far.",
    "ko": "새집의 단 하나 아쉬운 점은 시장이 좀 멀다는 거예요.",
    "blank": "एकमात्र",
+   "src": "made"
+  }
+ ],
+ "w|एकरूपता": [
+  {
+   "text": "संपादक ने कहा कि सभी पन्नों के डिज़ाइन में एकरूपता होनी चाहिए।",
+   "en": "The editor said there should be uniformity in the design of all pages.",
+   "ko": "편집장은 모든 지면 디자인이 통일돼야 한다고 했어요.",
+   "blank": "एकरूपता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने स्कूल की यूनिफ़ॉर्म ऑनलाइन मँगाई, पर रंग में एकरूपता नहीं थी।",
+   "en": "Deepa ordered the school uniform online, but there was no uniformity in the colour.",
+   "ko": "디파는 교복을 온라인으로 주문했는데 색깔이 제각각이었어요.",
+   "blank": "एकरूपता",
    "src": "made"
   }
  ],
@@ -13700,6 +13860,22 @@
    "en": "Priya laughingly says she's a real coward when it comes to cold.",
    "ko": "프리야는 추위 앞에선 완전 겁쟁이라며 웃어요.",
    "blank": "कायर",
+   "src": "made"
+  }
+ ],
+ "w|कायाकल्प": [
+  {
+   "text": "नए संपादक के आने से अख़बार का पूरा कायाकल्प हो गया।",
+   "en": "With the new editor's arrival, the newspaper underwent a complete makeover.",
+   "ko": "새 편집장이 오면서 신문이 완전히 탈바꿈했어요.",
+   "blank": "कायाकल्प",
+   "src": "made"
+  },
+  {
+   "text": "ऑनलाइन मँगाए परदों और गद्दों से दीपा के कमरे का कायाकल्प हो गया।",
+   "en": "The curtains and cushions Deepa ordered online transformed her room.",
+   "ko": "온라인으로 산 커튼과 쿠션으로 디파의 방이 확 바뀌었어요.",
+   "blank": "कायाकल्प",
    "src": "made"
   }
  ],
@@ -24277,6 +24453,22 @@
    "src": "made"
   }
  ],
+ "w|छुआछूत": [
+  {
+   "text": "करण ने इतिहास के पन्ने में छुआछूत के ख़िलाफ़ हुए आंदोलनों पर लेख लिखा।",
+   "en": "Karan wrote an article in the history page about movements against untouchability.",
+   "ko": "카란은 역사면에 불가촉 차별 반대 운동에 관한 글을 썼어요.",
+   "blank": "छुआछूत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की दादी बताती हैं कि उनके बचपन में गाँव में छुआछूत आम बात थी।",
+   "en": "Deepa's grandmother says untouchability was common in the village in her childhood.",
+   "ko": "디파의 할머니는 어릴 적 마을에서 불가촉 차별이 흔했다고 말씀하세요.",
+   "blank": "छुआछूत",
+   "src": "made"
+  }
+ ],
  "w|छुटकारा": [
   {
    "text": "शहर की भागदौड़ से छुटकारा पाकर अमित गाँव में बस गया।",
@@ -24939,6 +25131,38 @@
    "blank": "जनसंख्या"
   }
  ],
+ "w|जनसुनवाई": [
+  {
+   "text": "करण पानी की समस्या पर ज़िला कलेक्टर की जनसुनवाई कवर करने गया।",
+   "en": "Karan went to cover the district collector's public hearing on the water problem.",
+   "ko": "카란은 물 문제에 관한 군수의 공청회를 취재하러 갔어요.",
+   "blank": "जनसुनवाई",
+   "src": "made"
+  },
+  {
+   "text": "उपभोक्ता अदालत की जनसुनवाई में दीपा ने नक़ली सामान की शिकायत रखी।",
+   "en": "At the consumer court's public hearing, Deepa raised a complaint about counterfeit goods.",
+   "ko": "소비자 법원 공청회에서 디파는 가짜 물건에 대해 민원을 냈어요.",
+   "blank": "जनसुनवाई",
+   "src": "made"
+  }
+ ],
+ "w|जनसेवा": [
+  {
+   "text": "करण ने एक बुज़ुर्ग डॉक्टर पर लिखा, जिन्होंने पूरी ज़िंदगी जनसेवा में लगा दी।",
+   "en": "Karan wrote about an elderly doctor who devoted his whole life to public service.",
+   "ko": "카란은 평생을 공공 봉사에 바친 노의사에 대해 썼어요.",
+   "blank": "जनसेवा",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के पिता रिटायर होकर जनसेवा करते हैं और बुज़ुर्गों की दवाइयाँ ऑनलाइन मँगा देते हैं।",
+   "en": "Deepa's father does public service after retiring and orders medicines online for the elderly.",
+   "ko": "디파 아버지는 은퇴 후 봉사하시며 어르신들 약을 온라인으로 주문해 주세요.",
+   "blank": "जनसेवा",
+   "src": "made"
+  }
+ ],
  "w|जनहित": [
   {
    "text": "अमित ने जनहित में पुस्तकालय रविवार को भी खोलने का फ़ैसला किया।",
@@ -25016,6 +25240,22 @@
    "en": "As soon as he entered the sweet shop, Kavita's son felt he had come to paradise.",
    "ko": "과자 가게에 들어서자마자 카비타의 아들은 천국에 온 것 같았어요.",
    "blank": "जन्नत",
+   "src": "made"
+  }
+ ],
+ "w|जन्मजात": [
+  {
+   "text": "करण की वरिष्ठ कहती हैं कि अच्छी ख़बर सूँघने की करण में जन्मजात क्षमता है।",
+   "en": "Karan's senior says Karan has an innate ability to sniff out a good story.",
+   "ko": "카란의 선배는 카란에게 좋은 기사거리를 알아채는 타고난 감각이 있다고 해요.",
+   "blank": "जन्मजात",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की बेटी में चित्र बनाने की जन्मजात कला है, इसलिए दीपा ने उसके लिए रंग मँगाए।",
+   "en": "Deepa's daughter has an inborn talent for drawing, so Deepa ordered paints for her.",
+   "ko": "디파의 딸은 그림에 타고난 재주가 있어서 디파가 물감을 주문해 줬어요.",
+   "blank": "जन्मजात",
    "src": "made"
   }
  ],
@@ -29677,6 +29917,22 @@
    "blank": "ढोना"
   }
  ],
+ "w|ढोलक": [
+  {
+   "text": "करण ने लोक कलाकारों पर लेख लिखा, जो पीढ़ियों से ढोलक बनाते आ रहे हैं।",
+   "en": "Karan wrote an article on folk artisans who have been making dholaks for generations.",
+   "ko": "카란은 대대로 돌락 북을 만들어 온 민속 장인들에 대한 기사를 썼어요.",
+   "blank": "ढोलक",
+   "src": "made"
+  },
+  {
+   "text": "शादी के संगीत के लिए दीपा ने ऑनलाइन एक ढोलक मँगाई।",
+   "en": "Deepa ordered a dholak online for the wedding sangeet.",
+   "ko": "디파는 결혼식 노래 잔치에 쓸 돌락 북을 온라인으로 샀어요.",
+   "blank": "ढोलक",
+   "src": "made"
+  }
+ ],
  "w|तक": [
   {
    "text": "मैं रात तक यहीं हूँ।",
@@ -31425,6 +31681,22 @@
    "blank": "तीन"
   }
  ],
+ "w|तीरंदाज़ी": [
+  {
+   "text": "करण ने एक आदिवासी लड़की पर लिखा, जिसने तीरंदाज़ी में राज्य का पदक जीता।",
+   "en": "Karan wrote about a tribal girl who won a state medal in archery.",
+   "ko": "카란은 양궁에서 주 대회 메달을 딴 원주민 소녀에 대해 썼어요.",
+   "blank": "तीरंदाज़ी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बेटे के लिए तीरंदाज़ी का धनुष-बाण ऑर्डर किया।",
+   "en": "Deepa ordered an archery bow and arrows for her son.",
+   "ko": "디파는 아들에게 양궁 활과 화살을 주문해 줬어요.",
+   "blank": "तीरंदाज़ी",
+   "src": "made"
+  }
+ ],
  "w|तीर्थ": [
   {
    "text": "हरिद्वार एक प्रसिद्ध तीर्थ है।",
@@ -31765,6 +32037,22 @@
    "en": "I am thirteen years old.",
    "ko": "내 나이는 열셋이야.",
    "blank": "तेरह"
+  }
+ ],
+ "w|तेरहवीं": [
+  {
+   "text": "एक पाठक ने चिट्ठी में लिखा कि तेरहवीं के भोज पर बहुत पैसा ख़र्च होता है।",
+   "en": "A reader wrote in a letter that a lot of money is spent on the thirteenth-day funeral feast.",
+   "ko": "한 독자는 장례 열사흘째 잔치에 돈이 너무 많이 든다고 편지에 썼어요.",
+   "blank": "तेरहवीं",
+   "src": "made"
+  },
+  {
+   "text": "दादाजी की तेरहवीं के लिए दीपा ने बर्तन और चादरें ऑनलाइन मँगवाईं।",
+   "en": "For grandfather's thirteenth-day rites, Deepa ordered utensils and sheets online.",
+   "ko": "할아버지 장례 열사흘째 의식에 쓸 그릇과 천을 디파가 온라인으로 주문했어요.",
+   "blank": "तेरहवीं",
+   "src": "made"
   }
  ],
  "w|तेरा": [
@@ -33205,6 +33493,22 @@
    "en": "Keep the right documents with you for travel.",
    "ko": "여행할 때 필요한 서류를 챙겨.",
    "blank": "दस्तावेज़"
+  }
+ ],
+ "w|दस्तूर": [
+  {
+   "text": "अख़बार में दस्तूर है कि नया रिपोर्टर पहला महीना अपराध की ख़बरें कवर करे।",
+   "en": "It's the custom at the paper that a new reporter covers crime news for the first month.",
+   "ko": "신문사에는 신입 기자가 첫 달에 사건 기사를 맡는 관례가 있어요.",
+   "blank": "दस्तूर",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के घर का दस्तूर है कि नई चीज़ आते ही सबसे पहले दादी को दिखाई जाए।",
+   "en": "It's the custom in Deepa's home that any new thing is first shown to grandmother.",
+   "ko": "디파네 집엔 새 물건이 오면 할머니께 먼저 보여 드리는 관습이 있어요.",
+   "blank": "दस्तूर",
+   "src": "made"
   }
  ],
  "w|दहलना": [
@@ -35745,6 +36049,22 @@
    "blank": "धार्मिक"
   }
  ],
+ "w|धावक": [
+  {
+   "text": "करण ने एक नंगे पैर दौड़ने वाले धावक की कहानी पहले पन्ने पर छापी।",
+   "en": "Karan printed the story of a barefoot runner on the front page.",
+   "ko": "카란은 맨발로 달리는 육상 선수 이야기를 1면에 실었어요.",
+   "blank": "धावक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का भाई धावक है, इसलिए दीपा ने उसके लिए हल्के जूते मँगाए।",
+   "en": "Deepa's brother is a runner, so Deepa ordered light shoes for him.",
+   "ko": "디파의 남동생이 육상 선수라서 디파는 가벼운 운동화를 주문해 줬어요.",
+   "blank": "धावक",
+   "src": "made"
+  }
+ ],
  "w|धीमा": [
   {
    "text": "ट्रैफ़िक में गाड़ी बहुत धीमा चल रही है।",
@@ -37851,6 +38171,22 @@
    "src": "made"
   }
  ],
+ "w|निकम्मा": [
+  {
+   "text": "एक पाठक ने चिट्ठी में नगर निगम को निकम्मा कहा, जिसे करण ने छाप दिया।",
+   "en": "A reader called the municipality useless in a letter, which Karan printed.",
+   "ko": "한 독자가 편지에서 시청을 무능하다고 했고 카란은 그걸 실었어요.",
+   "blank": "निकम्मा",
+   "src": "made"
+  },
+  {
+   "text": "दो बार ख़राब फ़ोन आने पर दीपा ने कहा कि यह डिलीवरी वाला सिस्टम ही निकम्मा है।",
+   "en": "After a faulty phone arrived twice, Deepa said this delivery system itself is useless.",
+   "ko": "고장 난 휴대폰이 두 번이나 오자 디파는 이 배송 체계 자체가 형편없다고 했어요.",
+   "blank": "निकम्मा",
+   "src": "made"
+  }
+ ],
  "w|निकलना": [
   {
    "text": "धूप बादलों से निकल आई।",
@@ -39075,6 +39411,22 @@
    "src": "made"
   }
  ],
+ "w|निशानेबाज़ी": [
+  {
+   "text": "करण ने बताया कि निशानेबाज़ी में शहर के तीन खिलाड़ी राष्ट्रीय टीम में चुने गए।",
+   "en": "Karan reported that three players from the city were selected for the national team in shooting.",
+   "ko": "카란은 사격에서 도시 출신 선수 세 명이 국가대표로 뽑혔다고 보도했어요.",
+   "blank": "निशानेबाज़ी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के पति को निशानेबाज़ी का शौक है, पर वह सिर्फ़ खिलौने वाली बंदूक़ ऑनलाइन ख़रीदते हैं।",
+   "en": "Deepa's husband is fond of shooting, but he only buys toy guns online.",
+   "ko": "디파 남편은 사격을 좋아하지만 온라인에선 장난감 총만 사요.",
+   "blank": "निशानेबाज़ी",
+   "src": "made"
+  }
+ ],
  "w|निःशुल्क": [
   {
    "text": "जिम में नए सदस्यों के लिए पहला सत्र निःशुल्क होता है।",
@@ -39923,6 +40275,22 @@
    "src": "made"
   }
  ],
+ "w|न्यायसंगत": [
+  {
+   "text": "करण ने संपादकीय में लिखा कि किसानों की माँग पूरी तरह न्यायसंगत है।",
+   "en": "Karan wrote in the editorial that the farmers' demand is entirely just.",
+   "ko": "카란은 사설에 농민들의 요구가 전적으로 정당하다고 썼어요.",
+   "blank": "न्यायसंगत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को लगा कि टूटे सामान के बदले पूरा पैसा माँगना न्यायसंगत है।",
+   "en": "Deepa felt it was fair to ask for a full refund for the broken item.",
+   "ko": "디파는 깨진 물건에 대해 전액 환불을 요구하는 게 정당하다고 생각했어요.",
+   "blank": "न्यायसंगत",
+   "src": "made"
+  }
+ ],
  "w|न्यायाधीश": [
   {
    "text": "विकास अदालत से ख़बर लाया कि न्यायाधीश ने फ़ैसला अगले हफ़्ते तक टाल दिया है।",
@@ -40102,6 +40470,22 @@
    "en": "In the quarrel Pooja took the shopkeeper's side, because the customer was the one in the wrong.",
    "ko": "다툼에서 푸자는 가게 주인 편을 들었어요. 잘못한 건 손님이었거든요.",
    "blank": "पक्ष",
+   "src": "made"
+  }
+ ],
+ "w|पक्षपाती": [
+  {
+   "text": "कुछ पाठकों ने करण के लेख को पक्षपाती बताया, तो उसने दोनों पक्षों की राय छापी।",
+   "en": "When some readers called Karan's article biased, he printed both sides' views.",
+   "ko": "몇몇 독자가 카란 기사가 한쪽에 치우쳤다고 하자 그는 양쪽 의견을 다 실었어요.",
+   "blank": "पक्षपाती",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को लगा कि शॉपिंग साइट की रेटिंग पक्षपाती है, क्योंकि सारे रिव्यू एक जैसे थे।",
+   "en": "Deepa felt the shopping site's ratings were biased, since all the reviews were alike.",
+   "ko": "리뷰가 다 똑같아서 디파는 쇼핑몰 평점이 편향됐다고 느꼈어요.",
+   "blank": "पक्षपाती",
    "src": "made"
   }
  ],
@@ -45587,6 +45971,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिभावान": [
+  {
+   "text": "करण ने गाँव के एक प्रतिभावान चित्रकार पर पूरा पन्ना छापा।",
+   "en": "Karan printed a full page about a talented painter from a village.",
+   "ko": "카란은 한 시골 출신 재능 있는 화가에 대해 한 면을 통째로 실었어요.",
+   "blank": "प्रतिभावान",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने एक प्रतिभावान कारीगर के हाथ से बने गहने ऑनलाइन ख़रीदे।",
+   "en": "Deepa bought handmade jewellery by a talented craftsman online.",
+   "ko": "디파는 솜씨 좋은 장인이 만든 장신구를 온라인으로 샀어요.",
+   "blank": "प्रतिभावान",
+   "src": "made"
+  }
+ ],
  "w|प्रतिभाशाली": [
   {
    "text": "रोहन ने याद किया कि दोस्त स्कूल का सबसे प्रतिभाशाली गायक था।",
@@ -47086,6 +47486,22 @@
    "en": "At Anjali's restaurant, food is cooked from grandmother's authentic recipes.",
    "ko": "안잘리 식당에서는 할머니의 정통 레시피로 음식을 만들어요.",
    "blank": "प्रामाणिक",
+   "src": "made"
+  }
+ ],
+ "w|प्रामाणिकता": [
+  {
+   "text": "ख़बर छापने से पहले करण हर फ़ोटो की प्रामाणिकता जाँचता है।",
+   "en": "Before printing a story, Karan checks the authenticity of every photo.",
+   "ko": "카란은 기사를 내기 전에 사진마다 진위를 확인해요.",
+   "blank": "प्रामाणिकता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने महँगी घड़ी की प्रामाणिकता जाँचने के लिए उसका सीरियल नंबर मिलाया।",
+   "en": "Deepa matched the serial number of the expensive watch to verify its authenticity.",
+   "ko": "디파는 비싼 시계가 진품인지 확인하려고 일련번호를 대조했어요.",
+   "blank": "प्रामाणिकता",
    "src": "made"
   }
  ],
@@ -55029,6 +55445,22 @@
    "src": "made"
   }
  ],
+ "w|मजबूरन": [
+  {
+   "text": "काग़ज़ महँगा होने से अख़बार को मजबूरन पन्ने कम करने पड़े।",
+   "en": "With paper getting expensive, the newspaper was forced to cut pages.",
+   "ko": "종이값이 올라서 신문은 어쩔 수 없이 지면을 줄여야 했어요.",
+   "blank": "मजबूरन",
+   "src": "made"
+  },
+  {
+   "text": "डिलीवरी देर से आने वाली थी, तो दीपा को मजबूरन पास की दुकान से दूध लेना पड़ा।",
+   "en": "The delivery was going to be late, so Deepa was forced to buy milk from the nearby shop.",
+   "ko": "배송이 늦는다고 해서 디파는 어쩔 수 없이 근처 가게에서 우유를 샀어요.",
+   "blank": "मजबूरन",
+   "src": "made"
+  }
+ ],
  "w|मज़हब": [
   {
    "text": "मास्टरजी कहते हैं कि दोस्ती में मज़हब कभी दीवार नहीं बनना चाहिए।",
@@ -55042,6 +55474,22 @@
    "en": "Priya was happy to see that people of every religion live together in the new neighbourhood.",
    "ko": "새 동네에서 모든 종교의 사람들이 어울려 사는 걸 보고 프리야는 기뻤어요.",
    "blank": "मज़हब",
+   "src": "made"
+  }
+ ],
+ "w|मज़हबी": [
+  {
+   "text": "करण के अख़बार में एक मज़हबी विद्वान हर शुक्रवार नैतिकता पर कॉलम लिखते हैं।",
+   "en": "In Karan's paper, a religious scholar writes a column on ethics every Friday.",
+   "ko": "카란의 신문에는 한 종교 학자가 금요일마다 윤리에 관한 칼럼을 써요.",
+   "blank": "मज़हबी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने अपनी सास के लिए मज़हबी किताबों का एक सेट ऑर्डर किया।",
+   "en": "Deepa ordered a set of religious books for her mother-in-law.",
+   "ko": "디파는 시어머니께 드릴 종교 서적 세트를 주문했어요.",
+   "blank": "मज़हबी",
    "src": "made"
   }
  ],
@@ -58317,6 +58765,22 @@
    "src": "made"
   }
  ],
+ "w|मुंडन": [
+  {
+   "text": "करण अपने भतीजे के मुंडन के लिए एक दिन की छुट्टी लेकर गाँव गया।",
+   "en": "Karan took a day off and went to the village for his nephew's head-shaving ceremony.",
+   "ko": "카란은 조카의 삭발 의식 때문에 하루 휴가를 내고 시골에 갔어요.",
+   "blank": "मुंडन",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बेटे के मुंडन के लिए मेहमानों के तोहफ़े ऑनलाइन मँगाए।",
+   "en": "Deepa ordered gifts for the guests online for her son's head-shaving ceremony.",
+   "ko": "디파는 아들 삭발 의식에 올 손님들 선물을 온라인으로 주문했어요.",
+   "blank": "मुंडन",
+   "src": "made"
+  }
+ ],
  "w|मुड़ना": [
   {
    "text": "कोने पर बाईं ओर मुड़ना है।",
@@ -60859,6 +61323,22 @@
    "blank": "रंगीन"
   }
  ],
+ "w|रंगीला": [
+  {
+   "text": "करण के अख़बार का रविवार वाला अंक रंगीला और चित्रों से भरा होता है।",
+   "en": "The Sunday edition of Karan's paper is colourful and full of pictures.",
+   "ko": "카란 신문의 일요판은 알록달록하고 사진이 가득해요.",
+   "blank": "रंगीला",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने होली के लिए एक रंगीला कुर्ता ऑर्डर किया।",
+   "en": "Deepa ordered a colourful kurta for Holi.",
+   "ko": "디파는 홀리 때 입을 알록달록한 쿠르타를 주문했어요.",
+   "blank": "रंगीला",
+   "src": "made"
+  }
+ ],
  "w|रचना": [
   {
    "text": "उसकी रचना कक्षा में पढ़ी गई।",
@@ -61451,6 +61931,22 @@
    "blank": "राजकुमारी"
   }
  ],
+ "w|राजकोषीय": [
+  {
+   "text": "करण ने सरकार के राजकोषीय घाटे पर अर्थशास्त्रियों की राय छापी।",
+   "en": "Karan printed economists' views on the government's fiscal deficit.",
+   "ko": "카란은 정부 재정 적자에 대한 경제학자들의 의견을 실었어요.",
+   "blank": "राजकोषीय",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने टीवी पर सुना कि नई राजकोषीय नीति से ऑनलाइन सामान पर कर बदल सकता है।",
+   "en": "Deepa heard on TV that the new fiscal policy may change the tax on online goods.",
+   "ko": "디파는 새 재정 정책으로 온라인 상품 세금이 바뀔 수 있다는 소식을 TV에서 들었어요.",
+   "blank": "राजकोषीय",
+   "src": "made"
+  }
+ ],
  "w|राजदूत": [
   {
    "text": "विदेश पन्ने के लिए करण ने एक राजदूत से बातचीत की।",
@@ -62039,6 +62535,22 @@
    "blank": "रिवाज़"
   }
  ],
+ "w|रिवायत": [
+  {
+   "text": "करण ने लखनऊ की तहज़ीब और पुरानी रिवायत पर एक ख़ास अंक निकाला।",
+   "en": "Karan brought out a special issue on Lucknow's culture and old traditions.",
+   "ko": "카란은 러크나우의 예법과 오랜 전통을 다룬 특집호를 냈어요.",
+   "blank": "रिवायत",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के ससुराल की रिवायत है कि ईद पर सबको नए कपड़े मिलें।",
+   "en": "It's a tradition in Deepa's in-laws' family that everyone gets new clothes on Eid.",
+   "ko": "디파 시댁에는 이드 때 모두 새 옷을 받는 전통이 있어요.",
+   "blank": "रिवायत",
+   "src": "made"
+  }
+ ],
  "w|रिश्ता": [
   {
    "text": "परिवार का रिश्ता अनमोल है।",
@@ -62249,6 +62761,22 @@
    "src": "made"
   }
  ],
+ "w|रूढ़िवादी": [
+  {
+   "text": "करण ने लिखा कि गाँव के एक रूढ़िवादी ने भी बेटी को कॉलेज भेजने का समर्थन किया।",
+   "en": "Karan wrote that even a traditionalist in the village supported sending his daughter to college.",
+   "ko": "카란은 마을의 한 보수적인 어른도 딸을 대학에 보내는 걸 지지했다고 썼어요.",
+   "blank": "रूढ़िवादी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के ससुर पक्के रूढ़िवादी हैं, पर अब वे भी ऑनलाइन दवाइयाँ मँगाते हैं।",
+   "en": "Deepa's father-in-law is a staunch traditionalist, but now even he orders medicines online.",
+   "ko": "디파의 시아버지는 골수 보수파지만 이제 약은 온라인으로 주문하세요.",
+   "blank": "रूढ़िवादी",
+   "src": "made"
+  }
+ ],
  "w|रूप": [
   {
    "text": "बातचीत ने अचानक नया रूप ले लिया।",
@@ -62379,6 +62907,22 @@
    "en": "Sand has filled up inside the shoes.",
    "ko": "신발 안에 모래가 가득 찼어.",
    "blank": "रेत"
+  }
+ ],
+ "w|रेफ़री": [
+  {
+   "text": "करण ने फ़ुटबॉल मैच में रेफ़री के एक विवादित फ़ैसले पर रिपोर्ट लिखी।",
+   "en": "Karan wrote a report on a controversial referee decision in a football match.",
+   "ko": "카란은 축구 경기에서 나온 심판의 논란 많은 판정에 대해 기사를 썼어요.",
+   "blank": "रेफ़री",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के बेटे ने स्कूल के मैच के लिए रेफ़री वाली सीटी ऑनलाइन मँगाई।",
+   "en": "Deepa's son ordered a referee whistle online for the school match.",
+   "ko": "디파 아들은 학교 경기에 쓸 심판 호루라기를 온라인으로 주문했어요.",
+   "blank": "रेफ़री",
+   "src": "made"
   }
  ],
  "w|रेल": [
@@ -62859,6 +63403,22 @@
    "en": "He comes here almost every day.",
    "ko": "그는 거의 매일 여기 와.",
    "blank": "लगभग"
+  }
+ ],
+ "w|लगवाना": [
+  {
+   "text": "करण ने दफ़्तर में नया प्रिंटर लगवाया, ताकि प्रूफ़ जल्दी निकलें।",
+   "en": "Karan had a new printer installed in the office so proofs come out faster.",
+   "ko": "카란은 교정쇄가 빨리 나오게 사무실에 새 프린터를 들여놨어요.",
+   "blank": "लगवाया",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने ऑनलाइन ऑर्डर किया हुआ पंखा मिस्त्री से लगवाया।",
+   "en": "Deepa had the fan she ordered online installed by a mechanic.",
+   "ko": "디파는 온라인으로 산 선풍기를 수리공을 불러 달았어요.",
+   "blank": "लगवाया",
+   "src": "made"
   }
  ],
  "w|लगातार": [
@@ -67251,6 +67811,22 @@
    "src": "made"
   }
  ],
+ "w|वैश्वीकरण": [
+  {
+   "text": "करण ने वैश्वीकरण के बाद छोटे बुनकरों की हालत पर एक शृंखला शुरू की।",
+   "en": "Karan started a series on the condition of small weavers after globalisation.",
+   "ko": "카란은 세계화 이후 작은 직조공들의 처지에 관한 연재를 시작했어요.",
+   "blank": "वैश्वीकरण",
+   "src": "made"
+  },
+  {
+   "text": "वैश्वीकरण की वजह से दीपा को दूसरे देशों की चीज़ें भी घर बैठे मिल जाती हैं।",
+   "en": "Because of globalisation, Deepa gets goods from other countries delivered at home too.",
+   "ko": "세계화 덕분에 디파는 다른 나라 물건도 집에서 받아요.",
+   "blank": "वैश्वीकरण",
+   "src": "made"
+  }
+ ],
  "w|वैसा": [
   {
    "text": "वैसा कपड़ा फिर से दिखाना।",
@@ -69919,6 +70495,22 @@
    "src": "made"
   }
  ],
+ "w|संकुचित": [
+  {
+   "text": "करण ने लिखा कि संकुचित सोच से समाज आगे नहीं बढ़ता।",
+   "en": "Karan wrote that society doesn't move forward with narrow thinking.",
+   "ko": "카란은 편협한 생각으로는 사회가 나아가지 못한다고 썼어요.",
+   "blank": "संकुचित",
+   "src": "made"
+  },
+  {
+   "text": "दीपा को डिब्बा खोलते ही पता चल गया कि ऊनी स्वेटर धुलकर संकुचित हो गया था।",
+   "en": "As soon as she opened the box, Deepa realised the wool sweater had shrunk in the wash.",
+   "ko": "상자를 열자마자 디파는 울 스웨터가 빨래하다 줄어든 걸 알았어요.",
+   "blank": "संकुचित",
+   "src": "made"
+  }
+ ],
  "w|संकेत": [
   {
    "text": "ट्रैफ़िक संकेत लाल हो गया।",
@@ -70512,6 +71104,22 @@
    "en": "Seema is always careful about expiry dates.",
    "ko": "시마는 유통기한을 늘 꼼꼼히 챙겨요.",
    "blank": "सजग",
+   "src": "made"
+  }
+ ],
+ "w|सजदा": [
+  {
+   "text": "ईद पर करण के अख़बार ने मस्जिद में सजदा करते लोगों की तस्वीर छापी।",
+   "en": "On Eid, Karan's paper printed a photo of people prostrating in prayer at a mosque.",
+   "ko": "이드 때 카란의 신문은 모스크에서 엎드려 기도하는 사람들 사진을 실었어요.",
+   "blank": "सजदा",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के ससुर सजदा करने के लिए एक नरम जानमाज़ चाहते थे, तो दीपा ने ऑनलाइन मँगा दी।",
+   "en": "Deepa's father-in-law wanted a soft prayer mat for prostrating, so Deepa ordered one online.",
+   "ko": "시아버지가 엎드려 기도할 푹신한 기도 매트를 원하셔서 디파가 온라인으로 주문해 드렸어요.",
+   "blank": "सजदा",
    "src": "made"
   }
  ],
@@ -71196,6 +71804,22 @@
    "en": "The prize-giving ceremony was held in the evening.",
    "ko": "시상식은 저녁에 열렸어요.",
    "blank": "संध्या",
+   "src": "made"
+  }
+ ],
+ "w|सनकी": [
+  {
+   "text": "अख़बार के सनकी फ़ोटोग्राफ़र को अच्छी फ़ोटो के लिए घंटों पेड़ पर बैठना पसंद है।",
+   "en": "The paper's eccentric photographer likes sitting in a tree for hours for a good photo.",
+   "ko": "신문사의 괴짜 사진기자는 좋은 사진을 위해 몇 시간씩 나무 위에 앉아 있곤 해요.",
+   "blank": "सनकी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा का एक सनकी पड़ोसी हर डिलीवरी वाले से उसका नाम लिखवाता है।",
+   "en": "One of Deepa's eccentric neighbours makes every delivery person write down their name.",
+   "ko": "디파의 괴짜 이웃 한 명은 배달원마다 이름을 적게 해요.",
+   "blank": "सनकी",
    "src": "made"
   }
  ],
@@ -72601,6 +73225,22 @@
    "en": "He turned shy at being honored like that.",
    "ko": "그런 예우를 받고 그는 쑥스러워했어.",
    "blank": "सम्मान"
+  }
+ ],
+ "w|सम्मानजनक": [
+  {
+   "text": "करण चाहता है कि सफ़ाई कर्मचारियों को सम्मानजनक वेतन मिले।",
+   "en": "Karan wants sanitation workers to get a respectable wage.",
+   "ko": "카란은 청소 노동자들이 제대로 된 임금을 받기를 바라요.",
+   "blank": "सम्मानजनक",
+   "src": "made"
+  },
+  {
+   "text": "कंपनी ने ग़लत सामान के लिए दीपा से माफ़ी माँगी और सम्मानजनक मुआवज़ा दिया।",
+   "en": "The company apologised to Deepa for the wrong item and gave fair compensation.",
+   "ko": "회사는 잘못 온 물건에 대해 디파에게 사과하고 적절한 보상을 해 줬어요.",
+   "blank": "सम्मानजनक",
+   "src": "made"
   }
  ],
  "w|सम्मानित": [
