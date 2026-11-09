@@ -1375,6 +1375,22 @@
    "blank": "Actuó"
   }
  ],
+ "w|acuático": [
+  {
+   "text": "Mateo fotografía las plantas acuáticas que crecen en el remanso del río.",
+   "en": "Mateo photographs the aquatic plants growing in the still pool of the river.",
+   "ko": "마테오는 강이 고인 곳에서 자라는 수생 식물을 사진 찍어요.",
+   "blank": "acuáticas",
+   "src": "made"
+  },
+  {
+   "text": "Cada verano, Lucía se apunta a un deporte acuático nuevo: este año, el paddle surf.",
+   "en": "Every summer, Lucía signs up for a new water sport: this year, paddleboarding.",
+   "ko": "루시아는 여름마다 새로운 수상 스포츠를 배워요. 올해는 패들보드예요.",
+   "blank": "acuático",
+   "src": "made"
+  }
+ ],
  "w|acudir": [
   {
    "text": "Debes acudir al médico si te duele.",
@@ -1929,6 +1945,22 @@
    "en": "I love walking along the beach.",
    "ko": "난 해변을 걷는 걸 정말 좋아해.",
    "blank": "adoro"
+  }
+ ],
+ "w|adorno": [
+  {
+   "text": "Mateo recogió piñas en el bosque para hacer un adorno para la puerta de casa.",
+   "en": "Mateo collected pine cones in the forest to make a decoration for his front door.",
+   "ko": "마테오는 현관문 장식을 만들려고 숲에서 솔방울을 주웠어요.",
+   "blank": "adorno",
+   "src": "made"
+  },
+  {
+   "text": "Cuando llega diciembre, Lucía saca del armario cada adorno de Navidad.",
+   "en": "When December comes, Lucía takes every Christmas decoration out of the cupboard.",
+   "ko": "십이월이 되면 루시아는 장에서 크리스마스 장식을 하나하나 꺼내요.",
+   "blank": "adorno",
+   "src": "made"
   }
  ],
  "w|adquirir": [
@@ -6527,6 +6559,22 @@
    "blank": "archivo"
   }
  ],
+ "w|arcilla": [
+  {
+   "text": "Mateo cogió un poco de arcilla de la orilla para hacer un cuenco.",
+   "en": "Mateo took some clay from the bank to make a bowl.",
+   "ko": "마테오는 그릇을 만들려고 강가에서 진흙을 조금 퍼 왔어요.",
+   "blank": "arcilla",
+   "src": "made"
+  },
+  {
+   "text": "En invierno, Lucía va a un taller de cerámica y trabaja la arcilla junto a la estufa.",
+   "en": "In winter, Lucía goes to a pottery workshop and works the clay next to the stove.",
+   "ko": "겨울에 루시아는 도자기 공방에 다니며 난로 옆에서 점토를 빚어요.",
+   "blank": "arcilla",
+   "src": "made"
+  }
+ ],
  "w|arco": [
   {
    "text": "Tendió el arco antes de soltar la cuerda.",
@@ -6959,6 +7007,22 @@
    "en": "We reached an agreement right at the end.",
    "ko": "맨 마지막에 합의에 도달했어.",
    "blank": "arreglo"
+  }
+ ],
+ "w|arrepentimiento": [
+  {
+   "text": "Mateo sintió cierto arrepentimiento por no haber traído la cámara aquel día.",
+   "en": "Mateo felt some regret for not having brought his camera that day.",
+   "ko": "마테오는 그날 카메라를 안 가져온 게 좀 후회됐어요.",
+   "blank": "arrepentimiento",
+   "src": "made"
+  },
+  {
+   "text": "Lucía habla sin arrepentimiento de aquel verano en que lo dejó todo para viajar.",
+   "en": "Lucía talks without regret about that summer when she left everything to travel.",
+   "ko": "루시아는 모든 걸 두고 여행을 떠났던 그 여름을 후회 없이 이야기해요.",
+   "blank": "arrepentimiento",
+   "src": "made"
   }
  ],
  "w|arrepentirse": [
@@ -10069,6 +10133,22 @@
    "en": "The loaf of bread is still warm.",
    "ko": "빵 한 덩어리가 아직 따뜻해.",
    "blank": "barra"
+  }
+ ],
+ "w|barrer": [
+  {
+   "text": "Antes de irse, Mateo tuvo que barrer las hojas que habían entrado en la cabaña.",
+   "en": "Before leaving, Mateo had to sweep the leaves that had blown into the cabin.",
+   "ko": "떠나기 전에 마테오는 오두막에 들어온 낙엽을 쓸어야 했어요.",
+   "blank": "barrer",
+   "src": "made"
+  },
+  {
+   "text": "En otoño, Lucía tiene que barrer el patio casi todos los días.",
+   "en": "In autumn, Lucía has to sweep the patio almost every day.",
+   "ko": "가을이면 루시아는 거의 매일 마당을 쓸어야 해요.",
+   "blank": "barrer",
+   "src": "made"
   }
  ],
  "w|barrera": [
@@ -16031,6 +16111,22 @@
    "src": "made"
   }
  ],
+ "w|cerilla": [
+  {
+   "text": "Mateo encendió el fuego con una sola cerilla, como le enseñó su abuelo.",
+   "en": "Mateo lit the fire with a single match, as his grandfather taught him.",
+   "ko": "마테오는 할아버지에게 배운 대로 성냥 하나로 불을 붙였어요.",
+   "blank": "cerilla",
+   "src": "made"
+  },
+  {
+   "text": "En otoño, Lucía enciende la chimenea con una cerilla larga.",
+   "en": "In autumn, Lucía lights the fireplace with a long match.",
+   "ko": "가을이면 루시아는 긴 성냥으로 벽난로에 불을 붙여요.",
+   "blank": "cerilla",
+   "src": "made"
+  }
+ ],
  "w|cero": [
   {
    "text": "La temperatura bajó a cero por la noche.",
@@ -16457,6 +16553,22 @@
    "blank": "chimenea"
   }
  ],
+ "w|chimpancé": [
+  {
+   "text": "En el centro de rescate cerca del bosque, Mateo conoció a un chimpancé que había vivido en un circo.",
+   "en": "At the rescue centre near the forest, Mateo met a chimpanzee that had lived in a circus.",
+   "ko": "숲 근처 구조 센터에서 마테오는 서커스에서 살던 침팬지를 만났어요.",
+   "blank": "chimpancé",
+   "src": "made"
+  },
+  {
+   "text": "En el zoo, Lucía vio a un chimpancé tapándose con una manta en pleno invierno.",
+   "en": "At the zoo, Lucía saw a chimpanzee covering itself with a blanket in the middle of winter.",
+   "ko": "동물원에서 루시아는 한겨울에 담요를 덮고 있는 침팬지를 봤어요.",
+   "blank": "chimpancé",
+   "src": "made"
+  }
+ ],
  "w|chino": [
   {
    "text": "Estoy aprendiendo chino este año.",
@@ -16563,6 +16675,22 @@
    "src": "made"
   }
  ],
+ "w|chivo": [
+  {
+   "text": "Un chivo se escapó del corral y Mateo lo encontró comiendo hierba junto al río.",
+   "en": "A young goat escaped from the pen and Mateo found it eating grass by the river.",
+   "ko": "새끼 염소가 우리에서 도망쳤는데 마테오가 강가에서 풀을 뜯고 있는 걸 찾았어요.",
+   "blank": "chivo",
+   "src": "made"
+  },
+  {
+   "text": "En primavera nació un chivo en la granja del tío de Lucía.",
+   "en": "In spring a kid goat was born on Lucía's uncle's farm.",
+   "ko": "봄에 루시아 삼촌 농장에서 새끼 염소가 태어났어요.",
+   "blank": "chivo",
+   "src": "made"
+  }
+ ],
  "w|chocar": [
   {
    "text": "Dos coches pueden chocar en esa curva.",
@@ -16619,6 +16747,22 @@
    "en": "The culture shock was stronger than expected.",
    "ko": "문화 충격이 예상보다 컸어.",
    "blank": "choque"
+  }
+ ],
+ "w|chorro": [
+  {
+   "text": "Mateo llenó la cantimplora en el chorro de agua fresca que sale de la roca.",
+   "en": "Mateo filled his canteen at the jet of cool water coming out of the rock.",
+   "ko": "마테오는 바위에서 솟는 시원한 물줄기에 물통을 채웠어요.",
+   "blank": "chorro",
+   "src": "made"
+  },
+  {
+   "text": "Con el deshielo, el chorro de la fuente de la plaza vuelve a funcionar y Lucía se alegra.",
+   "en": "With the thaw, the jet of the fountain in the square works again and Lucía is glad.",
+   "ko": "눈이 녹자 광장 분수의 물줄기가 다시 나와서 루시아는 기뻐요.",
+   "blank": "chorro",
+   "src": "made"
   }
  ],
  "w|chupar": [
@@ -17548,6 +17692,22 @@
    "en": "Nuria admits that not calling her friend for so many years was pure cowardice.",
    "ko": "누리아는 그 오랜 세월 친구에게 연락하지 않은 건 순전히 비겁해서였다고 인정해요.",
    "blank": "cobardía",
+   "src": "made"
+  }
+ ],
+ "w|cobertizo": [
+  {
+   "text": "Mateo guarda la leña en un cobertizo junto a la cabaña.",
+   "en": "Mateo keeps the firewood in a shed next to the cabin.",
+   "ko": "마테오는 오두막 옆 헛간에 장작을 보관해요.",
+   "blank": "cobertizo",
+   "src": "made"
+  },
+  {
+   "text": "En primavera, Lucía saca la bicicleta del cobertizo y le infla las ruedas.",
+   "en": "In spring, Lucía takes the bike out of the shed and pumps up the tyres.",
+   "ko": "봄이 되면 루시아는 헛간에서 자전거를 꺼내 바퀴에 바람을 넣어요.",
+   "blank": "cobertizo",
    "src": "made"
   }
  ],
@@ -22641,6 +22801,22 @@
    "blank": "cuesta"
   }
  ],
+ "w|costero": [
+  {
+   "text": "Mateo sigue el río hasta el pueblo costero donde desemboca en el mar.",
+   "en": "Mateo follows the river down to the coastal village where it flows into the sea.",
+   "ko": "마테오는 강을 따라 바다로 흘러드는 해안 마을까지 가요.",
+   "blank": "costero",
+   "src": "made"
+  },
+  {
+   "text": "En verano, Lucía alquila una casita en un pueblo costero del norte.",
+   "en": "In summer, Lucía rents a little house in a coastal village in the north.",
+   "ko": "여름이면 루시아는 북쪽 해안 마을에 작은 집을 빌려요.",
+   "blank": "costero",
+   "src": "made"
+  }
+ ],
  "w|costilla": [
   {
    "text": "Se rompió una costilla en el partido.",
@@ -25879,6 +26055,22 @@
    "en": "You have a right to an explanation.",
    "ko": "설명을 들을 권리가 있어.",
    "blank": "derecho"
+  }
+ ],
+ "w|deriva": [
+  {
+   "text": "Mateo vio una canoa vacía a la deriva y avisó a los guardas.",
+   "en": "Mateo saw an empty canoe drifting and alerted the rangers.",
+   "ko": "마테오는 빈 카누가 떠내려가는 걸 보고 감시원에게 알렸어요.",
+   "blank": "deriva",
+   "src": "made"
+  },
+  {
+   "text": "Al terminar el verano, Lucía siente que su vida va un poco a la deriva.",
+   "en": "When summer ends, Lucía feels her life is drifting a bit.",
+   "ko": "여름이 끝나면 루시아는 삶이 조금 표류하는 것 같은 기분이 들어요.",
+   "blank": "deriva",
+   "src": "made"
   }
  ],
  "w|derramar": [
@@ -32851,6 +33043,22 @@
    "src": "made"
   }
  ],
+ "w|entrante": [
+  {
+   "text": "Mateo piensa volver al río el mes entrante, cuando baje el agua.",
+   "en": "Mateo plans to come back to the river next month, when the water goes down.",
+   "ko": "마테오는 물이 빠지는 다음 달에 강에 다시 오려고 해요.",
+   "blank": "entrante",
+   "src": "made"
+  },
+  {
+   "text": "Lucía ya ha comprado los bulbos para plantarlos la primavera entrante.",
+   "en": "Lucía has already bought the bulbs to plant them next spring.",
+   "ko": "루시아는 다음 봄에 심으려고 벌써 구근을 샀어요.",
+   "blank": "entrante",
+   "src": "made"
+  }
+ ],
  "w|entrar": [
   {
    "text": "Entra, está abierto.",
@@ -33871,6 +34079,22 @@
    "src": "made"
   }
  ],
+ "w|escotilla": [
+  {
+   "text": "Mateo abrió la escotilla de la vieja barca para sacar el agua que había entrado.",
+   "en": "Mateo opened the hatch of the old boat to bail out the water that had got in.",
+   "ko": "마테오는 낡은 배의 해치를 열어 들어온 물을 퍼냈어요.",
+   "blank": "escotilla",
+   "src": "made"
+  },
+  {
+   "text": "En el ferri, Lucía subió por la escotilla a cubierta para ver cómo cambiaba el color del mar en otoño.",
+   "en": "On the ferry, Lucía climbed up through the hatch to the deck to see how the sea's colour changed in autumn.",
+   "ko": "페리에서 루시아는 해치로 갑판에 올라가 가을 바다 색이 바뀌는 걸 봤어요.",
+   "blank": "escotilla",
+   "src": "made"
+  }
+ ],
  "w|escribir": [
   {
    "text": "Escríbeme cuando llegues.",
@@ -34272,6 +34496,22 @@
    "en": "When she opened the folder, Lucía dropped the sheet music and had to spread it all over the table to sort it.",
    "ko": "폴더를 열다 악보를 떨어뜨려서 루시아는 정리하려고 탁자에 다 펼쳐 놓아야 했어요.",
    "blank": "esparcir",
+   "src": "made"
+  }
+ ],
+ "w|especia": [
+  {
+   "text": "Mateo cocinó la trucha en la hoguera con sal y una especia que llevaba en un frasquito.",
+   "en": "Mateo cooked the trout over the campfire with salt and a spice he carried in a little jar.",
+   "ko": "마테오는 작은 병에 담아 온 향신료와 소금으로 모닥불에 송어를 구웠어요.",
+   "blank": "especia",
+   "src": "made"
+  },
+  {
+   "text": "En invierno, Lucía le pone canela y alguna especia más al vino caliente.",
+   "en": "In winter, Lucía puts cinnamon and some other spice in the mulled wine.",
+   "ko": "겨울이면 루시아는 따뜻한 와인에 계피와 다른 향신료를 넣어요.",
+   "blank": "especia",
    "src": "made"
   }
  ],
@@ -34704,6 +34944,22 @@
    "en": "The new coworker talked about the company's former splendour, when it had offices all over the country, and Carmen listened with interest.",
    "ko": "새 동료가 전국에 사무실이 있던 회사의 옛 영광을 이야기하자 카르멘은 흥미롭게 들었어요.",
    "blank": "esplendor",
+   "src": "made"
+  }
+ ],
+ "w|esponja": [
+  {
+   "text": "Mateo lleva una esponja en la mochila para limpiar el barro de las botas.",
+   "en": "Mateo carries a sponge in his backpack to clean the mud off his boots.",
+   "ko": "마테오는 장화에 묻은 진흙을 닦으려고 배낭에 스펀지를 넣고 다녀요.",
+   "blank": "esponja",
+   "src": "made"
+  },
+  {
+   "text": "Con la primera helada, Lucía encontró la esponja del fregadero dura como una piedra.",
+   "en": "With the first frost, Lucía found the sink sponge as hard as a stone.",
+   "ko": "첫서리가 내리자 루시아는 개수대 스펀지가 돌처럼 딱딱한 걸 발견했어요.",
+   "blank": "esponja",
    "src": "made"
   }
  ],
@@ -36295,6 +36551,22 @@
    "en": "They must examine the documents carefully.",
    "ko": "서류를 주의 깊게 검토해야 해.",
    "blank": "examinar"
+  }
+ ],
+ "w|excavación": [
+  {
+   "text": "Cerca del río hay una excavación de restos romanos y Mateo se acercó a mirar.",
+   "en": "Near the river there's a dig of Roman remains and Mateo went over to look.",
+   "ko": "강 근처에 로마 유적 발굴 현장이 있어서 마테오가 구경하러 갔어요.",
+   "blank": "excavación",
+   "src": "made"
+  },
+  {
+   "text": "Las lluvias de otoño pararon la excavación del nuevo metro, y Lucía sigue yendo en autobús.",
+   "en": "The autumn rains stopped the digging for the new metro line, and Lucía still goes by bus.",
+   "ko": "가을비 때문에 새 지하철 공사가 멈춰서 루시아는 여전히 버스를 타요.",
+   "blank": "excavación",
+   "src": "made"
   }
  ],
  "w|excavar": [
@@ -38541,6 +38813,22 @@
    "blank": "fiel"
   }
  ],
+ "w|fiera": [
+  {
+   "text": "El perro de Mateo se convierte en una fiera cuando ve un conejo.",
+   "en": "Mateo's dog turns into a wild beast when it sees a rabbit.",
+   "ko": "마테오의 개는 토끼만 보면 맹수로 변해요.",
+   "blank": "fiera",
+   "src": "made"
+  },
+  {
+   "text": "Cuando hace calor, Lucía se pone hecha una fiera si alguien cierra la ventana.",
+   "en": "When it's hot, Lucía gets furious if anyone closes the window.",
+   "ko": "더울 때 누가 창문을 닫으면 루시아는 불같이 화를 내요.",
+   "blank": "fiera",
+   "src": "made"
+  }
+ ],
  "w|fiesta": [
   {
    "text": "Esta noche hay fiesta en casa de Ana.",
@@ -39231,6 +39519,22 @@
    "en": "The company has a fleet of new trucks.",
    "ko": "그 회사는 새 트럭 함대를 갖고 있어.",
    "blank": "flota"
+  }
+ ],
+ "w|flotante": [
+  {
+   "text": "Mateo cruzó el río por un puente flotante hecho de troncos.",
+   "en": "Mateo crossed the river on a floating bridge made of logs.",
+   "ko": "마테오는 통나무로 만든 부교로 강을 건넜어요.",
+   "blank": "flotante",
+   "src": "made"
+  },
+  {
+   "text": "En verano, Lucía se tumba en una colchoneta flotante y se olvida del mundo.",
+   "en": "In summer, Lucía lies on an inflatable floating mattress and forgets about the world.",
+   "ko": "여름이면 루시아는 물에 뜨는 매트에 누워 세상을 잊어요.",
+   "blank": "flotante",
+   "src": "made"
   }
  ],
  "w|flotar": [
@@ -41105,6 +41409,22 @@
    "en": "I saw a black cat on the roof.",
    "ko": "지붕 위에서 검은 고양이를 봤어.",
    "blank": "gato"
+  }
+ ],
+ "w|gaviota": [
+  {
+   "text": "Una gaviota subió por el río desde el mar y Mateo se quedó sorprendido.",
+   "en": "A seagull came up the river from the sea and Mateo was surprised.",
+   "ko": "갈매기 한 마리가 바다에서 강을 거슬러 올라와서 마테오는 놀랐어요.",
+   "blank": "gaviota",
+   "src": "made"
+  },
+  {
+   "text": "En invierno, una gaviota se posa cada mañana en el balcón de Lucía.",
+   "en": "In winter, a seagull lands on Lucía's balcony every morning.",
+   "ko": "겨울이면 갈매기 한 마리가 아침마다 루시아의 발코니에 내려앉아요.",
+   "blank": "gaviota",
+   "src": "made"
   }
  ],
  "w|gay": [
@@ -43331,6 +43651,22 @@
    "en": "There was a mild nosebleed.",
    "ko": "가벼운 코피가 났어.",
    "blank": "hemorragia"
+  }
+ ],
+ "w|heno": [
+  {
+   "text": "Mateo durmió sobre un montón de heno en el granero del pueblo.",
+   "en": "Mateo slept on a pile of hay in the village barn.",
+   "ko": "마테오는 마을 헛간의 건초 더미 위에서 잤어요.",
+   "blank": "heno",
+   "src": "made"
+  },
+  {
+   "text": "A Lucía le encanta el olor a heno recién cortado de principios de verano.",
+   "en": "Lucía loves the smell of freshly cut hay at the start of summer.",
+   "ko": "루시아는 초여름에 갓 벤 건초 냄새를 정말 좋아해요.",
+   "blank": "heno",
+   "src": "made"
   }
  ],
  "w|heredar": [
@@ -48319,6 +48655,22 @@
    "blank": "interior"
   }
  ],
+ "w|interminable": [
+  {
+   "text": "La subida por el bosque se le hizo interminable a Mateo con la mochila tan pesada.",
+   "en": "The climb through the forest felt endless to Mateo with such a heavy backpack.",
+   "ko": "배낭이 너무 무거워서 마테오에게는 숲길 오르막이 끝도 없이 느껴졌어요.",
+   "blank": "interminable",
+   "src": "made"
+  },
+  {
+   "text": "A Lucía el invierno pasado le pareció interminable, con tantos días grises.",
+   "en": "To Lucía, last winter seemed endless, with so many grey days.",
+   "ko": "루시아에게 지난겨울은 흐린 날이 너무 많아 끝이 없는 것 같았어요.",
+   "blank": "interminable",
+   "src": "made"
+  }
+ ],
  "w|internacional": [
   {
    "text": "Firmamos un acuerdo internacional hoy.",
@@ -49483,6 +49835,22 @@
    "blank": "izquierdo"
   }
  ],
+ "w|jabalí": [
+  {
+   "text": "Un jabalí cruzó el camino delante de Mateo y se metió en el bosque.",
+   "en": "A wild boar crossed the path in front of Mateo and went into the forest.",
+   "ko": "멧돼지 한 마리가 마테오 앞을 가로질러 숲으로 들어갔어요.",
+   "blank": "jabalí",
+   "src": "made"
+  },
+  {
+   "text": "En otoño, los cazadores del pueblo de Lucía salen a buscar jabalí.",
+   "en": "In autumn, the hunters in Lucía's village go out looking for wild boar.",
+   "ko": "가을이면 루시아네 마을 사냥꾼들이 멧돼지를 잡으러 나가요.",
+   "blank": "jabalí",
+   "src": "made"
+  }
+ ],
  "w|jabón": [
   {
    "text": "Pablo le llevó jabón y un cepillo nuevo a su habitación.",
@@ -49795,6 +50163,22 @@
    "en": "She kept the jewel in a small box.",
    "ko": "그녀는 보석을 작은 상자에 보관했어.",
    "blank": "joya"
+  }
+ ],
+ "w|joyería": [
+  {
+   "text": "Mateo encontró una pepita brillante en el río y la llevó a la joyería del pueblo.",
+   "en": "Mateo found a shiny nugget in the river and took it to the village jeweller's.",
+   "ko": "마테오는 강에서 반짝이는 알갱이를 찾아 마을 보석상에 가져갔어요.",
+   "blank": "joyería",
+   "src": "made"
+  },
+  {
+   "text": "En la joyería de su barrio, Lucía compró unos pendientes con forma de hoja de otoño.",
+   "en": "At the jeweller's in her neighbourhood, Lucía bought some earrings shaped like autumn leaves.",
+   "ko": "루시아는 동네 보석 가게에서 가을 잎 모양 귀걸이를 샀어요.",
+   "blank": "joyería",
+   "src": "made"
   }
  ],
  "w|jubilación": [
@@ -55253,6 +55637,22 @@
    "src": "made"
   }
  ],
+ "w|medusa": [
+  {
+   "text": "Mateo se sorprendió al ver una medusa de agua dulce en el embalse.",
+   "en": "Mateo was surprised to see a freshwater jellyfish in the reservoir.",
+   "ko": "마테오는 저수지에서 민물 해파리를 보고 놀랐어요.",
+   "blank": "medusa",
+   "src": "made"
+  },
+  {
+   "text": "En agosto, a Lucía le picó una medusa y desde entonces mira bien el agua antes de bañarse.",
+   "en": "In August, Lucía was stung by a jellyfish and since then she checks the water before swimming.",
+   "ko": "팔월에 루시아는 해파리에 쏘인 뒤로 수영하기 전에 물을 잘 살펴봐요.",
+   "blank": "medusa",
+   "src": "made"
+  }
+ ],
  "w|mejilla": [
   {
    "text": "Un beso en la mejilla bastó como saludo.",
@@ -58283,6 +58683,22 @@
    "en": "The Muslim community organized a fair.",
    "ko": "무슬림 공동체가 장터를 열었어.",
    "blank": "musulmana"
+  }
+ ],
+ "w|mutación": [
+  {
+   "text": "Un biólogo le contó a Mateo que el color raro de esa rana se debe a una mutación.",
+   "en": "A biologist told Mateo that the strange colour of that frog is due to a mutation.",
+   "ko": "한 생물학자가 마테오에게 그 개구리의 이상한 색은 돌연변이 때문이라고 알려 줬어요.",
+   "blank": "mutación",
+   "src": "made"
+  },
+  {
+   "text": "Lucía leyó que una pequeña mutación hace que algunos árboles no pierdan las hojas en otoño.",
+   "en": "Lucía read that a small mutation makes some trees keep their leaves in autumn.",
+   "ko": "루시아는 작은 돌연변이 때문에 가을에도 잎이 지지 않는 나무가 있다는 걸 읽었어요.",
+   "blank": "mutación",
+   "src": "made"
   }
  ],
  "w|mutante": [
@@ -61712,6 +62128,22 @@
    "en": "Elena used to play in the city orchestra.",
    "ko": "엘레나는 예전에 시립 오케스트라에서 연주했어요.",
    "blank": "orquesta",
+   "src": "made"
+  }
+ ],
+ "w|orquídea": [
+  {
+   "text": "Mateo encontró una orquídea salvaje escondida entre el musgo del bosque.",
+   "en": "Mateo found a wild orchid hidden among the forest moss.",
+   "ko": "마테오는 숲속 이끼 사이에 숨은 야생 난초를 발견했어요.",
+   "blank": "orquídea",
+   "src": "made"
+  },
+  {
+   "text": "La orquídea de Lucía florece cada invierno junto a la ventana de la cocina.",
+   "en": "Lucía's orchid blooms every winter by the kitchen window.",
+   "ko": "루시아의 난초는 겨울마다 부엌 창가에서 꽃을 피워요.",
+   "blank": "orquídea",
    "src": "made"
   }
  ],
@@ -66947,6 +67379,22 @@
    "src": "made"
   }
  ],
+ "w|portador": [
+  {
+   "text": "Las garrapatas del bosque pueden ser portadoras de enfermedades, así que Mateo se revisa al volver.",
+   "en": "The forest ticks can be carriers of diseases, so Mateo checks himself when he gets back.",
+   "ko": "숲속 진드기는 병을 옮길 수 있어서 마테오는 돌아오면 몸을 살펴봐요.",
+   "blank": "portadoras",
+   "src": "made"
+  },
+  {
+   "text": "El médico le dijo a Lucía que es portadora de la alergia al polen, como su padre.",
+   "en": "The doctor told Lucía she carries the pollen allergy, like her father.",
+   "ko": "의사는 루시아가 아빠처럼 꽃가루 알레르기 체질이라고 말했어요.",
+   "blank": "portadora",
+   "src": "made"
+  }
+ ],
  "w|portal": [
   {
    "text": "El portal de la casa es de madera.",
@@ -69132,6 +69580,22 @@
    "en": "The marathon in Paula's city wants to promote sport among older women.",
    "ko": "파울라네 도시 마라톤은 나이 든 여성들의 운동 참여를 늘리고 싶어 해요.",
    "blank": "promover",
+   "src": "made"
+  }
+ ],
+ "w|pronóstico": [
+  {
+   "text": "Mateo miró el pronóstico antes de salir y vio que llovería por la tarde.",
+   "en": "Mateo checked the forecast before leaving and saw it would rain in the afternoon.",
+   "ko": "마테오는 나가기 전에 일기 예보를 보고 오후에 비가 온다는 걸 알았어요.",
+   "blank": "pronóstico",
+   "src": "made"
+  },
+  {
+   "text": "Según el pronóstico, este año el otoño llegará tarde, y Lucía ya tiene ganas de chaqueta.",
+   "en": "According to the forecast, autumn will come late this year, and Lucía is already longing for a jacket.",
+   "ko": "일기 예보에 따르면 올해는 가을이 늦게 온다는데 루시아는 벌써 재킷이 입고 싶어요.",
+   "blank": "pronóstico",
    "src": "made"
   }
  ],
@@ -72819,6 +73283,22 @@
    "blank": "regalo"
   }
  ],
+ "w|regar": [
+  {
+   "text": "Mateo usa el agua del río para regar el pequeño huerto de la cabaña.",
+   "en": "Mateo uses river water to water the cabin's small vegetable garden.",
+   "ko": "마테오는 강물로 오두막의 작은 텃밭에 물을 줘요.",
+   "blank": "regar",
+   "src": "made"
+  },
+  {
+   "text": "En pleno agosto, Lucía tiene que regar las macetas dos veces al día.",
+   "en": "In the middle of August, Lucía has to water the pots twice a day.",
+   "ko": "한창 팔월이면 루시아는 화분에 하루 두 번 물을 줘야 해요.",
+   "blank": "regar",
+   "src": "made"
+  }
+ ],
  "w|regazo": [
   {
    "text": "En la sala de espera, una niña se durmió en el regazo de su madre mientras Sergio esperaba su turno.",
@@ -74015,6 +74495,22 @@
    "en": "This symbol represents hope.",
    "ko": "이 상징은 희망을 나타내.",
    "blank": "representa"
+  }
+ ],
+ "w|reproducción": [
+  {
+   "text": "Mateo explica a los niños que el río es el lugar de reproducción de los salmones.",
+   "en": "Mateo explains to the children that the river is where salmon breed.",
+   "ko": "마테오는 아이들에게 이 강이 연어가 번식하는 곳이라고 설명해요.",
+   "blank": "reproducción",
+   "src": "made"
+  },
+  {
+   "text": "Lucía leyó que la primavera es la época de reproducción de muchos pájaros.",
+   "en": "Lucía read that spring is the breeding season for many birds.",
+   "ko": "루시아는 봄이 많은 새들의 번식기라는 걸 읽었어요.",
+   "blank": "reproducción",
+   "src": "made"
   }
  ],
  "w|reproducir": [
@@ -76283,6 +76779,22 @@
    "src": "made"
   }
  ],
+ "w|rural": [
+  {
+   "text": "Mateo dejó la ciudad por una vida rural junto al río.",
+   "en": "Mateo left the city for a rural life by the river.",
+   "ko": "마테오는 도시를 떠나 강가에서 시골 생활을 해요.",
+   "blank": "rural",
+   "src": "made"
+  },
+  {
+   "text": "Lucía pasa la vendimia de septiembre en una casa rural con su familia.",
+   "en": "Lucía spends the September grape harvest at a country house with her family.",
+   "ko": "루시아는 구월 포도 수확철을 가족과 시골집에서 보내요.",
+   "blank": "rural",
+   "src": "made"
+  }
+ ],
  "w|rusia": [
   {
    "text": "Viajó a Rusia el invierno pasado.",
@@ -76484,6 +76996,22 @@
    "en": "The bread Lucía bakes in the wood oven is very tasty.",
    "ko": "루시아가 장작 화덕에서 굽는 빵은 정말 맛있어요.",
    "blank": "sabroso",
+   "src": "made"
+  }
+ ],
+ "w|sabueso": [
+  {
+   "text": "El sabueso de Mateo sigue el rastro de un zorro por todo el bosque.",
+   "en": "Mateo's hound follows a fox's trail all through the forest.",
+   "ko": "마테오의 사냥개는 숲 곳곳으로 여우 냄새를 따라가요.",
+   "blank": "sabueso",
+   "src": "made"
+  },
+  {
+   "text": "En la temporada de caza, el sabueso del vecino de Lucía no para de ladrar.",
+   "en": "During the hunting season, Lucía's neighbour's hound never stops barking.",
+   "ko": "사냥철이 되면 루시아 이웃집 사냥개가 쉬지 않고 짖어요.",
+   "blank": "sabueso",
    "src": "made"
   }
  ],
@@ -79069,6 +79597,22 @@
    "src": "made"
   }
  ],
+ "w|silvestre": [
+  {
+   "text": "Mateo recoge fresas silvestres en el bosque para el desayuno.",
+   "en": "Mateo picks wild strawberries in the forest for breakfast.",
+   "ko": "마테오는 아침으로 먹으려고 숲에서 산딸기를 따요.",
+   "blank": "silvestres",
+   "src": "made"
+  },
+  {
+   "text": "En primavera el campo se llena de flores silvestres y Lucía hace ramos para la mesa.",
+   "en": "In spring the countryside fills with wild flowers and Lucía makes bouquets for the table.",
+   "ko": "봄이면 들판이 들꽃으로 가득해서 루시아는 식탁에 놓을 꽃다발을 만들어요.",
+   "blank": "silvestres",
+   "src": "made"
+  }
+ ],
  "w|simbólico": [
   {
    "text": "Cuando se jubiló el fundador, Hugo le dio un regalo simbólico: la primera pieza que salió de la fábrica.",
@@ -80291,6 +80835,22 @@
    "blank": "soplar"
   }
  ],
+ "w|soplo": [
+  {
+   "text": "Un soplo de viento apagó la vela y Mateo se quedó a oscuras en la tienda.",
+   "en": "A gust of wind blew out the candle and Mateo was left in the dark in the tent.",
+   "ko": "바람 한 줄기에 촛불이 꺼져서 마테오는 텐트 안에서 어둠 속에 남았어요.",
+   "blank": "soplo",
+   "src": "made"
+  },
+  {
+   "text": "Un soplo de aire frío por la mañana le avisa a Lucía de que ya llega el otoño.",
+   "en": "A breath of cold air in the morning tells Lucía that autumn is on its way.",
+   "ko": "아침의 찬바람 한 줄기가 루시아에게 가을이 오고 있다고 알려 줘요.",
+   "blank": "soplo",
+   "src": "made"
+  }
+ ],
  "w|soplón": [
   {
    "text": "El loro de la clínica es un soplón: repite todo lo que dice Andrés por teléfono.",
@@ -81305,6 +81865,22 @@
    "en": "The superior quality is worth it.",
    "ko": "더 좋은 품질은 그만한 가치가 있어.",
    "blank": "superior"
+  }
+ ],
+ "w|superioridad": [
+  {
+   "text": "El salmón demuestra su superioridad nadando contra la corriente, le dice Mateo a su sobrino.",
+   "en": "The salmon shows its superiority by swimming against the current, Mateo tells his nephew.",
+   "ko": "연어는 물살을 거슬러 헤엄치며 우월함을 보여 준다고 마테오가 조카에게 말해요.",
+   "blank": "superioridad",
+   "src": "made"
+  },
+  {
+   "text": "Lucía defiende con cierta superioridad que la primavera es la mejor estación del año.",
+   "en": "Lucía argues with a certain air of superiority that spring is the best season of the year.",
+   "ko": "루시아는 봄이 일 년 중 최고의 계절이라고 다소 우쭐하게 주장해요.",
+   "blank": "superioridad",
+   "src": "made"
   }
  ],
  "w|supermercado": [
@@ -83678,6 +84254,22 @@
    "en": "Paula's mother is still at the helm of the business even though she's seventy.",
    "ko": "파울라의 어머니는 벌써 일흔이지만 여전히 가게를 이끌고 있어요.",
    "blank": "timón",
+   "src": "made"
+  }
+ ],
+ "w|tiniebla": [
+  {
+   "text": "Cuando cayó la noche, Mateo tuvo que volver entre tinieblas con una linterna sin pilas.",
+   "en": "When night fell, Mateo had to walk back in the darkness with a torch with no batteries.",
+   "ko": "밤이 되자 마테오는 배터리 없는 손전등을 들고 어둠 속을 걸어 돌아와야 했어요.",
+   "blank": "tinieblas",
+   "src": "made"
+  },
+  {
+   "text": "En diciembre, a las cinco ya hay tinieblas y Lucía echa de menos la luz del verano.",
+   "en": "In December, by five it's already dark and Lucía misses the summer light.",
+   "ko": "십이월이면 다섯 시에 벌써 어둠이 내려서 루시아는 여름 햇살이 그리워요.",
+   "blank": "tinieblas",
    "src": "made"
   }
  ],
@@ -87549,6 +88141,22 @@
    "blank": "ventana"
   }
  ],
+ "w|ventilación": [
+  {
+   "text": "La tienda de campaña de Mateo tiene buena ventilación y no se empaña por dentro.",
+   "en": "Mateo's tent has good ventilation and doesn't fog up inside.",
+   "ko": "마테오의 텐트는 환기가 잘돼서 안에 김이 서리지 않아요.",
+   "blank": "ventilación",
+   "src": "made"
+  },
+  {
+   "text": "Lucía abre las ventanas cada mañana porque en invierno el piso necesita ventilación.",
+   "en": "Lucía opens the windows every morning because in winter the flat needs ventilation.",
+   "ko": "겨울에는 집에 환기가 필요해서 루시아는 아침마다 창문을 열어요.",
+   "blank": "ventilación",
+   "src": "made"
+  }
+ ],
  "w|ver": [
   {
    "text": "Quiero ver esa película.",
@@ -88689,6 +89297,22 @@
    "blank": "Visitamos"
   }
  ],
+ "w|víspera": [
+  {
+   "text": "La víspera de la excursión, Mateo preparó la caña y los anzuelos.",
+   "en": "The day before the trip, Mateo got his rod and hooks ready.",
+   "ko": "나들이 전날 마테오는 낚싯대와 낚싯바늘을 챙겼어요.",
+   "blank": "víspera",
+   "src": "made"
+  },
+  {
+   "text": "La víspera del primer día de verano, Lucía cena siempre en la playa con sus amigas.",
+   "en": "On the eve of the first day of summer, Lucía always has dinner on the beach with her friends.",
+   "ko": "여름 첫날 전야에 루시아는 늘 친구들과 해변에서 저녁을 먹어요.",
+   "blank": "víspera",
+   "src": "made"
+  }
+ ],
  "w|vista": [
   {
    "text": "La vista desde aquí es linda.",
@@ -89360,6 +89984,22 @@
    "en": "Marco rented a yacht with his friends to tour the coast.",
    "ko": "마르코는 친구들과 요트를 빌려 해안을 돌았어요.",
    "blank": "yate",
+   "src": "made"
+  }
+ ],
+ "w|yegua": [
+  {
+   "text": "Una yegua blanca bebía en la orilla cuando Mateo llegó al río.",
+   "en": "A white mare was drinking on the bank when Mateo reached the river.",
+   "ko": "마테오가 강에 도착했을 때 하얀 암말이 강가에서 물을 마시고 있었어요.",
+   "blank": "yegua",
+   "src": "made"
+  },
+  {
+   "text": "En primavera, la yegua de la granja de Lucía tuvo un potro.",
+   "en": "In spring, the mare on Lucía's farm had a foal.",
+   "ko": "봄에 루시아네 농장 암말이 망아지를 낳았어요.",
+   "blank": "yegua",
    "src": "made"
   }
  ],
