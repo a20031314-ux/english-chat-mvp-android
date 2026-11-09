@@ -1367,6 +1367,22 @@
    "blank": "กันยายน"
   }
  ],
+ "w|กันและกัน": [
+  {
+   "text": "ยายบอกว่าพี่น้องต้องเชื่อใจกันและกันให้มากกว่านี้",
+   "en": "Grandma said siblings must trust each other more than this.",
+   "ko": "할머니는 형제자매는 서로를 이보다 더 믿어야 한다고 했어요.",
+   "blank": "กันและกัน",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนบ้านแถวนั้นช่วยกันและกันขนของหนีน้ำ",
+   "en": "The neighbours around there helped each other move their things away from the flood.",
+   "ko": "그 동네 이웃들은 서로 도와 물을 피해 짐을 옮겼어요.",
+   "blank": "กันและกัน",
+   "src": "made"
+  }
+ ],
  "w|กับ": [
   {
    "text": "คุยกับแม่",
@@ -3335,6 +3351,22 @@
    "blank": "ไกล"
   }
  ],
+ "w|ขณะ": [
+  {
+   "text": "ขณะที่เอกกำลังจะต่อว่า น้องก็เดินเอาค้อนมาคืนพอดี",
+   "en": "Just as Ek was about to scold her, his sister walked in to return the hammer.",
+   "ko": "엑이 막 따지려는 순간 동생이 마침 망치를 돌려주러 왔어요.",
+   "blank": "ขณะ",
+   "src": "made"
+  },
+  {
+   "text": "ขณะที่ฝนกำลังเก็บผ้า ฟ้าก็ร้องดังสนั่น",
+   "en": "While Fon was taking in the washing, thunder roared loudly.",
+   "ko": "폰이 빨래를 걷는 사이 천둥이 크게 울렸어요.",
+   "blank": "ขณะ",
+   "src": "made"
+  }
+ ],
  "w|ขณะที่": [
   {
    "text": "ขณะที่กินอย่าคุย",
@@ -5287,6 +5319,22 @@
    "en": "The fever still hasn't gone down.",
    "ko": "열이 아직도 안 떨어져.",
    "blank": "ไข้"
+  }
+ ],
+ "w|ไขควง": [
+  {
+   "text": "ไขควงอันเล็กของเอกหายไปตั้งแต่ตอนที่น้องซ่อมพัดลม",
+   "en": "Ek's small screwdriver went missing when his sister fixed the fan.",
+   "ko": "엑의 작은 드라이버는 동생이 선풍기를 고친 뒤로 사라졌어요.",
+   "blank": "ไขควง",
+   "src": "made"
+  },
+  {
+   "text": "ฝนเอาไขควงขันน็อตหน้าต่างให้แน่นก่อนพายุเข้า",
+   "en": "Fon tightened the window screws with a screwdriver before the storm hit.",
+   "ko": "폰은 폭풍이 오기 전에 드라이버로 창문 나사를 단단히 조였어요.",
+   "blank": "ไขควง",
+   "src": "made"
   }
  ],
  "w|ไข่เจียว": [
@@ -7865,6 +7913,22 @@
    "src": "made"
   }
  ],
+ "w|ค้อน": [
+  {
+   "text": "เอกหาค้อนในกล่องเครื่องมือไม่เจอ เลยคิดว่าน้องสาวเอาไปใช้แล้วไม่คืน",
+   "en": "Ek couldn't find the hammer in the toolbox, so he thought his younger sister had borrowed it and not returned it.",
+   "ko": "엑은 공구함에서 망치를 못 찾자 여동생이 가져가서 돌려주지 않은 줄 알았어요.",
+   "blank": "ค้อน",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนหน้าฝน ฝนใช้ค้อนตอกตะปูซ่อมหลังคาที่รั่ว",
+   "en": "Before the rainy season, Fon used a hammer to nail down the leaking roof.",
+   "ko": "우기가 오기 전에 폰은 망치로 못을 박아 새는 지붕을 고쳤어요.",
+   "blank": "ค้อน",
+   "src": "made"
+  }
+ ],
  "w|ค่อนข้าง": [
   {
    "text": "ค่อนข้างยากเลย",
@@ -8081,6 +8145,22 @@
    "blank": "คับ"
   }
  ],
+ "w|ค่า": [
+  {
+   "text": "เอกกับน้องเถียงกันว่าเดือนนี้ใครควรจ่ายค่าไฟ",
+   "en": "Ek and his sister argued about who should pay the electricity bill this month.",
+   "ko": "엑과 동생은 이번 달 전기 요금을 누가 내야 하는지 다퉜어요.",
+   "blank": "ค่า",
+   "src": "made"
+  },
+  {
+   "text": "หน้าร้อนแอร์ทำงานหนัก ค่าไฟบ้านฝนเลยขึ้นเกือบเท่าตัว",
+   "en": "In the hot season the air conditioner works hard, so Fon's electricity bill nearly doubles.",
+   "ko": "더운 철에는 에어컨을 많이 틀어서 폰네 전기 요금이 거의 두 배로 올라요.",
+   "blank": "ค่า",
+   "src": "made"
+  }
+ ],
  "w|ค้า": [
   {
    "text": "อนันต์สัมภาษณ์แม่ค้าที่ค้าผ้าไหมในตลาดมาสามสิบปี",
@@ -8109,6 +8189,22 @@
    "en": "I bumped my chin on the table—ouch.",
    "ko": "턱이 테이블에 부딪혀 아파.",
    "blank": "คาง"
+  }
+ ],
+ "w|ค้าง": [
+  {
+   "text": "น้องสาวของเอกไปค้างบ้านเพื่อนสองคืนเพราะยังไม่อยากเจอหน้าพี่",
+   "en": "Ek's sister stayed over at a friend's for two nights because she didn't want to see her brother yet.",
+   "ko": "엑의 여동생은 아직 오빠 얼굴을 보기 싫어서 친구 집에서 이틀 밤을 묵었어요.",
+   "blank": "ค้าง",
+   "src": "made"
+  },
+  {
+   "text": "น้ำค้างเกาะบนใบหญ้าตอนเช้าหน้าหนาว",
+   "en": "In the cool-season mornings, dew clings to the blades of grass.",
+   "ko": "겨울 아침이면 풀잎에 이슬이 맺혀 있어요.",
+   "blank": "ค้าง",
+   "src": "made"
   }
  ],
  "w|ค้างคาว": [
@@ -10927,6 +11023,38 @@
    "src": "made"
   }
  ],
+ "w|จิต": [
+  {
+   "text": "แม่บอกว่าเรื่องเล็กแค่นี้ไม่ควรเอามาใส่ใจจนเสียสุขภาพจิต",
+   "en": "Mum said such a small thing shouldn't be taken to heart enough to harm your mental health.",
+   "ko": "어머니는 이런 작은 일로 정신 건강을 해치면 안 된다고 했어요.",
+   "blank": "จิต",
+   "src": "made"
+  },
+  {
+   "text": "ฝนเชื่อว่าการเดินเล่นในสวนตอนเช้าช่วยให้จิตสงบ",
+   "en": "Fon believes a morning walk in the garden helps calm the mind.",
+   "ko": "폰은 아침에 정원을 산책하면 마음이 고요해진다고 믿어요.",
+   "blank": "จิต",
+   "src": "made"
+  }
+ ],
+ "w|จิตใจ": [
+  {
+   "text": "ยายสอนว่าพี่น้องต้องมีจิตใจกว้างและรู้จักให้อภัย",
+   "en": "Grandma taught that siblings must be big-hearted and know how to forgive.",
+   "ko": "할머니는 형제자매는 마음이 넓고 용서할 줄 알아야 한다고 가르쳤어요.",
+   "blank": "จิตใจ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนบอกว่าฟ้าครึ้มนานๆ ทำให้จิตใจหม่นหมองไปด้วย",
+   "en": "Fon says long overcast spells make her spirits gloomy too.",
+   "ko": "폰은 오래 흐린 날씨가 마음까지 우울하게 만든다고 해요.",
+   "blank": "จิตใจ",
+   "src": "made"
+  }
+ ],
  "w|จิตรกร": [
   {
    "text": "ภาพที่แขวนอยู่หน้าห้องสมชายเป็นผลงานของจิตรกรท้องถิ่น",
@@ -13337,6 +13465,22 @@
    "src": "made"
   }
  ],
+ "w|เชือก": [
+  {
+   "text": "เอกหยิบเชือกมาผูกกล่องของที่จะส่งไปให้พี่ชาย",
+   "en": "Ek took some rope to tie up the box he was sending to his older brother.",
+   "ko": "엑은 형에게 보낼 상자를 묶으려고 밧줄을 꺼냈어요.",
+   "blank": "เชือก",
+   "src": "made"
+  },
+  {
+   "text": "ฝนขึงเชือกตากผ้าในบ้านเพราะฝนตกทั้งสัปดาห์",
+   "en": "Fon strung a clothesline indoors because it rained all week.",
+   "ko": "일주일 내내 비가 와서 폰은 집 안에 빨랫줄을 맸어요.",
+   "blank": "เชือก",
+   "src": "made"
+  }
+ ],
  "w|เชื่องช้า": [
   {
    "text": "เต่าเดินเชื่องช้า",
@@ -13571,6 +13715,22 @@
    "blank": "ใช้จ่าย"
   }
  ],
+ "w|ใช้ได้": [
+  {
+   "text": "เอกชิมแกงที่น้องทำแล้วบอกว่ารสชาติใช้ได้เลย",
+   "en": "Ek tasted the curry his sister made and said it was pretty good.",
+   "ko": "엑은 동생이 만든 커리를 맛보고 꽤 괜찮다고 했어요.",
+   "blank": "ใช้ได้",
+   "src": "made"
+  },
+  {
+   "text": "เสื้อกันฝนตัวเก่าของฝนยังใช้ได้ดีอยู่",
+   "en": "Fon's old raincoat still works fine.",
+   "ko": "폰의 낡은 비옷은 아직 쓸 만해요.",
+   "blank": "ใช้ได้",
+   "src": "made"
+  }
+ ],
  "w|ใช่ไหม": [
   {
    "text": "ครูชิมน้ำซุปแล้วถามว่า กิตติใส่น้ำปลาเยอะไปใช่ไหม",
@@ -13747,6 +13907,22 @@
    "en": "This bottle of sauce is empty.",
    "ko": "이 소스 병이 다 떨어졌어.",
    "blank": "ซอส"
+  }
+ ],
+ "w|ซอสมะเขือเทศ": [
+  {
+   "text": "เอกโกรธที่น้องบีบซอสมะเขือเทศจนหมดขวดไม่เหลือให้เขา",
+   "en": "Ek got angry that his sister squeezed out the whole bottle of ketchup, leaving none for him.",
+   "ko": "엑은 동생이 케첩을 한 병 다 짜 먹고 자기 몫을 안 남겨서 화가 났어요.",
+   "blank": "ซอสมะเขือเทศ",
+   "src": "made"
+  },
+  {
+   "text": "วันฝนตกฝนทอดเฟรนช์ฟรายส์กินกับซอสมะเขือเทศดูหนังอยู่บ้าน",
+   "en": "On rainy days Fon fries French fries to eat with ketchup while watching films at home.",
+   "ko": "비 오는 날 폰은 감자튀김을 튀겨 케첩에 찍어 먹으며 집에서 영화를 봐요.",
+   "blank": "ซอสมะเขือเทศ",
+   "src": "made"
   }
  ],
  "w|ซัก": [
@@ -15161,6 +15337,22 @@
    "en": "The soup is boiling hard on the stove.",
    "ko": "스토브 위에서 수프가 팔팔 끓어.",
    "blank": "เดือด"
+  }
+ ],
+ "w|เดือดร้อน": [
+  {
+   "text": "เอกไม่อยากให้พ่อแม่เดือดร้อนเพราะเรื่องของลูกสองคน",
+   "en": "Ek doesn't want his parents to be troubled by their two children's issues.",
+   "ko": "엑은 두 자식 문제로 부모님이 곤란해지는 걸 원하지 않아요.",
+   "blank": "เดือดร้อน",
+   "src": "made"
+  },
+  {
+   "text": "ปีที่ฝนแล้งหนัก ชาวสวนแถวบ้านฝนเดือดร้อนกันหมด",
+   "en": "In the year of severe drought, the orchard growers near Fon's house all suffered.",
+   "ko": "심한 가뭄이 든 해에는 폰네 집 근처 과수원 농가들이 모두 곤란을 겪었어요.",
+   "blank": "เดือดร้อน",
+   "src": "made"
   }
  ],
  "w|เดือน": [
@@ -18285,6 +18477,22 @@
    "blank": "ถอน"
   }
  ],
+ "w|ถอนหายใจ": [
+  {
+   "text": "เอกถอนหายใจยาวแล้วเดินไปเคาะประตูห้องน้อง",
+   "en": "Ek let out a long sigh and went to knock on his sister's door.",
+   "ko": "엑은 길게 한숨을 쉬고 동생 방문을 두드리러 갔어요.",
+   "blank": "ถอนหายใจ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนถอนหายใจเมื่อเห็นว่าดอกไม้ที่ปลูกไว้เหี่ยวเพราะแดดจัด",
+   "en": "Fon sighed when she saw the flowers she'd planted had wilted in the fierce sun.",
+   "ko": "폰은 심어 둔 꽃이 뙤약볕에 시든 걸 보고 한숨을 쉬었어요.",
+   "blank": "ถอนหายใจ",
+   "src": "made"
+  }
+ ],
  "w|ถ่อมตัว": [
   {
    "text": "แม้เก่งมากเขาก็ถ่อมตัวเสมอ",
@@ -18668,6 +18876,22 @@
    "en": "Malee slept in a sleeping bag on the storeroom floor because filming ran until three a.m.",
    "ko": "촬영이 새벽 세 시까지 이어져서 말리는 창고 바닥에서 침낭 속에 잤어요.",
    "blank": "ถุงนอน",
+   "src": "made"
+  }
+ ],
+ "w|ถุงมือ": [
+  {
+   "text": "เอกสวมถุงมือก่อนขนกิ่งไม้ที่ตัดแล้วไปทิ้ง",
+   "en": "Ek put on gloves before carrying away the cut branches.",
+   "ko": "엑은 잘라 낸 나뭇가지를 내다 버리기 전에 장갑을 꼈어요.",
+   "blank": "ถุงมือ",
+   "src": "made"
+  },
+  {
+   "text": "พอเข้าหน้าหนาว ฝนก็หยิบถุงมือไหมพรมออกมาใส่ตอนเช้า",
+   "en": "When winter comes, Fon takes out her wool gloves to wear in the mornings.",
+   "ko": "겨울이 되면 폰은 아침마다 털장갑을 꺼내 껴요.",
+   "blank": "ถุงมือ",
    "src": "made"
   }
  ],
@@ -19097,6 +19321,22 @@
    "en": "A soldier is standing guard.",
    "ko": "군인이 지키고 서 있어.",
    "blank": "ทหาร"
+  }
+ ],
+ "w|ทอง": [
+  {
+   "text": "น้องสาวคิดว่าเอกเอาสร้อยทองของยายไปจำนำ",
+   "en": "Ek's sister thought he had pawned Grandma's gold necklace.",
+   "ko": "엑의 여동생은 오빠가 할머니의 금목걸이를 전당포에 맡긴 줄 알았어요.",
+   "blank": "ทอง",
+   "src": "made"
+  },
+  {
+   "text": "ใบไม้ปลายฝนเปลี่ยนเป็นสีทองทั่วทั้งสวน",
+   "en": "At the end of the rains, the leaves turn gold throughout the garden.",
+   "ko": "우기가 끝날 무렵이면 정원 곳곳의 잎이 금빛으로 변해요.",
+   "blank": "ทอง",
+   "src": "made"
   }
  ],
  "w|ท่อง": [
@@ -19857,6 +20097,22 @@
    "blank": "ท่าน"
   }
  ],
+ "w|ท่ามกลาง": [
+  {
+   "text": "ท่ามกลางญาติที่มากินข้าววันอาทิตย์ เอกกล่าวขอโทษน้องต่อหน้าทุกคน",
+   "en": "Among the relatives at Sunday lunch, Ek apologised to his sister in front of everyone.",
+   "ko": "일요일 점심에 모인 친척들 가운데서 엑은 모두 앞에서 동생에게 사과했어요.",
+   "blank": "ท่ามกลาง",
+   "src": "made"
+  },
+  {
+   "text": "ท่ามกลางสายลมหนาว ฝนนั่งจิบชาร้อนที่ระเบียง",
+   "en": "Amid the cold breeze, Fon sat sipping hot tea on the balcony.",
+   "ko": "찬 바람 속에서 폰은 발코니에 앉아 뜨거운 차를 홀짝였어요.",
+   "blank": "ท่ามกลาง",
+   "src": "made"
+  }
+ ],
  "w|ทาย": [
   {
    "text": "ทายซิว่าในกล่องมีอะไร",
@@ -20339,6 +20595,22 @@
    "blank": "ที่ชาร์จ"
   }
  ],
+ "w|ที่ดิน": [
+  {
+   "text": "พ่อแม่แบ่งที่ดินหลังบ้านให้สองพี่น้องคนละครึ่ง",
+   "en": "Their parents split the land behind the house half and half between the two siblings.",
+   "ko": "부모님은 집 뒤 땅을 두 남매에게 반씩 나눠 줬어요.",
+   "blank": "ที่ดิน",
+   "src": "made"
+  },
+  {
+   "text": "ที่ดินของครอบครัวฝนน้ำท่วมทุกปีช่วงปลายฝน",
+   "en": "The family's land floods every year at the end of the rainy season.",
+   "ko": "폰네 가족의 땅은 해마다 우기 끝 무렵 물에 잠겨요.",
+   "blank": "ที่ดิน",
+   "src": "made"
+  }
+ ],
  "w|ทีเดียว": [
   {
    "text": "กินให้หมดทีเดียวเลย",
@@ -20427,6 +20699,22 @@
    "en": "Sit here.",
    "ko": "여기 앉아.",
    "blank": "ที่นี่"
+  }
+ ],
+ "w|ที่ผ่านมา": [
+  {
+   "text": "เอกนึกถึงเรื่องสนุกๆ ที่ผ่านมากับน้องแล้วก็หายโกรธ",
+   "en": "Ek thought back on the fun times he'd had with his sister and stopped being angry.",
+   "ko": "엑은 지난날 동생과의 즐거운 일을 떠올리고 화가 풀렸어요.",
+   "blank": "ที่ผ่านมา",
+   "src": "made"
+  },
+  {
+   "text": "หน้าหนาวที่ผ่านมาอากาศไม่เย็นอย่างที่ฝนหวังไว้",
+   "en": "This past cool season wasn't as cold as Fon had hoped.",
+   "ko": "지난 겨울은 폰이 바랐던 만큼 춥지 않았어요.",
+   "blank": "ที่ผ่านมา",
+   "src": "made"
   }
  ],
  "w|ที่พัก": [
@@ -20679,6 +20967,22 @@
    "en": "It rains every single day.",
    "ko": "매일 비가 와.",
    "blank": "ทุก"
+  }
+ ],
+ "w|ทุกข์": [
+  {
+   "text": "เอกไม่อยากให้เรื่องเข้าใจผิดกลายเป็นความทุกข์ของแม่",
+   "en": "Ek doesn't want the misunderstanding to become a source of grief for Mum.",
+   "ko": "엑은 오해가 어머니의 괴로움이 되는 걸 원하지 않아요.",
+   "blank": "ทุกข์",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนาแถวบ้านฝนเป็นทุกข์เพราะฝนไม่ตกตามฤดู",
+   "en": "The rice farmers near Fon's house are distressed because the rain isn't coming on time.",
+   "ko": "폰네 집 근처 농부들은 비가 제철에 오지 않아 괴로워해요.",
+   "blank": "ทุกข์",
+   "src": "made"
   }
  ],
  "w|ทุกคน": [
@@ -23047,6 +23351,22 @@
    "blank": "น้ำส้ม"
   }
  ],
+ "w|น้ำส้มสายชู": [
+  {
+   "text": "น้องสาวราดน้ำส้มสายชูล้างคราบบนกระจกห้องน้ำ",
+   "en": "Ek's sister poured vinegar to clean the stains on the bathroom mirror.",
+   "ko": "엑의 여동생은 식초를 부어 욕실 거울의 얼룩을 닦았어요.",
+   "blank": "น้ำส้มสายชู",
+   "src": "made"
+  },
+  {
+   "text": "ฝนดองผักกาดกับน้ำส้มสายชูไว้กินช่วงหน้าหนาว",
+   "en": "Fon pickles mustard greens in vinegar to eat during the cool season.",
+   "ko": "폰은 겨울철에 먹으려고 갓을 식초에 절여 둬요.",
+   "blank": "น้ำส้มสายชู",
+   "src": "made"
+  }
+ ],
  "w|น้ำเสียง": [
   {
    "text": "เจ้าสาวกล่าวขอบคุณแขกด้วยน้ำเสียงสั่นเครือ",
@@ -24401,6 +24721,22 @@
    "en": "The wound hasn't healed well yet.",
    "ko": "상처가 아직 덜 나았어.",
    "blank": "บาดแผล"
+  }
+ ],
+ "w|บาท": [
+  {
+   "text": "น้องสาวบอกว่ายังติดเงินเอกอยู่ห้าร้อยบาท",
+   "en": "Ek's sister said she still owes him five hundred baht.",
+   "ko": "엑의 여동생은 아직 오빠에게 오백 바트를 빚졌다고 했어요.",
+   "blank": "บาท",
+   "src": "made"
+  },
+  {
+   "text": "ฝนซื้อร่มคันใหม่ที่ตลาดในราคาแค่ร้อยกว่าบาท",
+   "en": "Fon bought a new umbrella at the market for just over a hundred baht.",
+   "ko": "폰은 시장에서 새 우산을 백 바트 조금 넘게 주고 샀어요.",
+   "blank": "บาท",
+   "src": "made"
   }
  ],
  "w|บาทหลวง": [
@@ -26041,6 +26377,22 @@
    "src": "made"
   }
  ],
+ "w|ปรารถนา": [
+  {
+   "text": "แม่ปรารถนาให้ลูกทั้งสองดูแลกันไปจนแก่",
+   "en": "Mum wishes for her two children to look after each other into old age.",
+   "ko": "어머니는 두 자식이 늙을 때까지 서로 돌봐 주길 바라요.",
+   "blank": "ปรารถนา",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนาปรารถนาให้ฝนมาตรงเวลาเพื่อจะได้ดำนา",
+   "en": "The farmers long for the rain to come on time so they can plant rice.",
+   "ko": "농부들은 모내기를 할 수 있도록 비가 제때 오기를 바라요.",
+   "blank": "ปรารถนา",
+   "src": "made"
+  }
+ ],
  "w|ปราศจาก": [
   {
    "text": "ตู้นอนชั้นหนึ่งสะอาดและปราศจากเสียงรบกวน",
@@ -26540,6 +26892,22 @@
    "en": "Don't step on the coral.",
    "ko": "산호를 밟지 마.",
    "blank": "ปะการัง",
+   "src": "made"
+  }
+ ],
+ "w|ปัก": [
+  {
+   "text": "น้องสาวนั่งปักชื่อเอกลงบนผ้าเช็ดหน้าเป็นของขอโทษ",
+   "en": "Ek's sister sat embroidering his name onto a handkerchief as an apology gift.",
+   "ko": "엑의 여동생은 사과 선물로 손수건에 오빠 이름을 수놓았어요.",
+   "blank": "ปัก",
+   "src": "made"
+  },
+  {
+   "text": "ฝนปักกล้าพริกลงแปลงหลังฝนแรกของปี",
+   "en": "Fon planted chilli seedlings in the bed after the first rain of the year.",
+   "ko": "폰은 그해 첫비가 온 뒤 고추 모종을 밭에 꽂아 심었어요.",
+   "blank": "ปัก",
    "src": "made"
   }
  ],
@@ -28091,6 +28459,22 @@
    "src": "made"
   }
  ],
+ "w|ผ้าพันคอ": [
+  {
+   "text": "ผ้าพันคอที่เอกนึกว่าน้องขโมยไป จริงๆ แม่เอาไปซักไว้",
+   "en": "The scarf Ek thought his sister had taken was actually washed by Mum.",
+   "ko": "엑이 동생이 가져간 줄 알았던 목도리는 사실 어머니가 빨아 둔 거였어요.",
+   "blank": "ผ้าพันคอ",
+   "src": "made"
+  },
+  {
+   "text": "ลมหนาวพัดมาแล้ว ฝนเลยหยิบผ้าพันคอสีแดงมาพันคอ",
+   "en": "The cold wind has arrived, so Fon wrapped her red scarf around her neck.",
+   "ko": "찬 바람이 불어와서 폰은 빨간 목도리를 둘렀어요.",
+   "blank": "ผ้าพันคอ",
+   "src": "made"
+  }
+ ],
  "w|ผ้าพันแผล": [
   {
    "text": "เอกเปลี่ยนผ้าพันแผลที่ขาหมาจรตัวนั้นทุกเช้า",
@@ -28248,6 +28632,22 @@
    "en": "Suda walked through the grass in the field and got a red rash on her legs.",
    "ko": "수다는 밭의 풀숲을 걷다가 다리에 빨간 발진이 났어요.",
    "blank": "ผื่น",
+   "src": "made"
+  }
+ ],
+ "w|ผูกพัน": [
+  {
+   "text": "แม้จะทะเลาะกันบ่อย เอกก็ผูกพันกับน้องสาวมากกว่าใคร",
+   "en": "Even though they argue often, Ek is closer to his sister than to anyone.",
+   "ko": "자주 다투긴 해도 엑은 누구보다 여동생과 정이 깊어요.",
+   "blank": "ผูกพัน",
+   "src": "made"
+  },
+  {
+   "text": "ฝนผูกพันกับต้นมะขามหน้าบ้านที่ยายปลูกไว้",
+   "en": "Fon feels attached to the tamarind tree in front of the house that her grandmother planted.",
+   "ko": "폰은 할머니가 심은 집 앞 타마린드 나무에 정이 들었어요.",
+   "blank": "ผูกพัน",
    "src": "made"
   }
  ],
@@ -32707,6 +33107,22 @@
    "blank": "ม่าน"
   }
  ],
+ "w|มายองเนส": [
+  {
+   "text": "แม่ทำสลัดผักราดมายองเนสมาให้สองพี่น้องกินคืนดีกัน",
+   "en": "Mum made a vegetable salad with mayonnaise for the two siblings to eat and make up.",
+   "ko": "어머니는 두 남매가 화해하라고 마요네즈를 뿌린 채소 샐러드를 만들어 줬어요.",
+   "blank": "มายองเนส",
+   "src": "made"
+  },
+  {
+   "text": "หน้าร้อนฝนชอบทำแซนด์วิชทูน่ากับมายองเนสไปปิกนิก",
+   "en": "In the hot season Fon likes to make tuna mayonnaise sandwiches for picnics.",
+   "ko": "더운 철이면 폰은 참치 마요네즈 샌드위치를 만들어 소풍을 가요.",
+   "blank": "มายองเนส",
+   "src": "made"
+  }
+ ],
  "w|มารดา": [
   {
    "text": "มารดาของประยุทธร้องไห้ด้วยความดีใจตอนรดน้ำสังข์",
@@ -35525,6 +35941,22 @@
    "blank": "รอยแผล"
   }
  ],
+ "w|รอยยิ้ม": [
+  {
+   "text": "พอเข้าใจกันแล้ว รอยยิ้มของน้องก็กลับมาอีกครั้ง",
+   "en": "Once they understood each other, his sister's smile came back again.",
+   "ko": "서로 오해가 풀리자 동생의 미소가 다시 돌아왔어요.",
+   "blank": "รอยยิ้ม",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ วิ่งเล่นน้ำฝนด้วยรอยยิ้มเต็มหน้า",
+   "en": "The kids ran around playing in the rain with big smiles on their faces.",
+   "ko": "아이들은 얼굴 가득 웃음을 띠고 빗속을 뛰어다니며 놀았어요.",
+   "blank": "รอยยิ้ม",
+   "src": "made"
+  }
+ ],
  "w|ร้อยละ": [
   {
    "text": "ผลสำรวจพบว่าร้อยละสี่สิบของผู้ใช้ห้องสมุดเป็นนักศึกษา",
@@ -35671,6 +36103,22 @@
    "en": "This room lacks a bit of order.",
    "ko": "이 방은 질서가 좀 부족해.",
    "blank": "ระเบียบ"
+  }
+ ],
+ "w|ระยะ": [
+  {
+   "text": "ระยะหลังเอกกับน้องไม่ค่อยได้คุยกันเพราะงานยุ่ง",
+   "en": "Lately Ek and his sister haven't talked much because they're busy with work.",
+   "ko": "요즘 엑과 동생은 일이 바빠서 이야기를 별로 못 했어요.",
+   "blank": "ระยะ",
+   "src": "made"
+  },
+  {
+   "text": "ในระยะเปลี่ยนฤดู ฝนมักเป็นหวัดง่ายกว่าปกติ",
+   "en": "During the change of seasons, Fon tends to catch colds more easily than usual.",
+   "ko": "환절기에는 폰이 평소보다 감기에 잘 걸려요.",
+   "blank": "ระยะ",
+   "src": "made"
   }
  ],
  "w|ระยะทาง": [
@@ -36573,6 +37021,22 @@
    "blank": "รู้จัก"
   }
  ],
+ "w|รู้ตัว": [
+  {
+   "text": "เอกเพิ่งรู้ตัวว่าตัวเองเป็นฝ่ายเข้าใจผิดมาตลอด",
+   "en": "Ek only just realised he'd been the one misunderstanding all along.",
+   "ko": "엑은 그동안 오해한 쪽이 자기였다는 걸 이제야 깨달았어요.",
+   "blank": "รู้ตัว",
+   "src": "made"
+  },
+  {
+   "text": "ฝนนั่งดูฟ้าเพลินจนไม่รู้ตัวว่าเลยเวลานัดแล้ว",
+   "en": "Fon was so absorbed watching the sky that she didn't notice she'd missed her appointment.",
+   "ko": "폰은 하늘을 넋 놓고 보다가 약속 시간이 지난 줄도 몰랐어요.",
+   "blank": "รู้ตัว",
+   "src": "made"
+  }
+ ],
  "w|รูป": [
   {
    "text": "ขอดูรูปหน่อย",
@@ -37031,6 +37495,22 @@
    "en": "Try it for the first time first.",
    "ko": "일단 처음 한 번 해 봐.",
    "blank": "แรก"
+  }
+ ],
+ "w|แรง": [
+  {
+   "text": "เอกออกแรงยกตู้เย็นให้น้องคนเดียว แม้ยังงอนกันอยู่",
+   "en": "Ek put his strength into lifting the fridge for his sister by himself, even though they were still sulking.",
+   "ko": "엑은 아직 서로 삐쳐 있었지만 혼자 힘을 써서 동생 냉장고를 들어 줬어요.",
+   "blank": "แรง",
+   "src": "made"
+  },
+  {
+   "text": "แรงลมจากพายุพัดหลังคาโรงจอดรถของฝนปลิวไป",
+   "en": "The force of the storm's wind blew off Fon's carport roof.",
+   "ko": "폭풍의 바람 힘에 폰네 차고 지붕이 날아갔어요.",
+   "blank": "แรง",
+   "src": "made"
   }
  ],
  "w|แรงงาน": [
@@ -37547,6 +38027,22 @@
    "en": "Please tell me in advance.",
    "ko": "미리 알려 줘.",
    "blank": "ล่วงหน้า"
+  }
+ ],
+ "w|ลวด": [
+  {
+   "text": "น้องสาวใช้ลวดดัดเป็นที่แขวนต้นไม้หน้าบ้าน",
+   "en": "Ek's younger sister bent wire into a hanger for the plants in front of the house.",
+   "ko": "엑의 여동생은 철사를 구부려 집 앞 화분 걸이를 만들었어요.",
+   "blank": "ลวด",
+   "src": "made"
+  },
+  {
+   "text": "ฝนพันลวดรอบกิ่งกุหลาบให้ตั้งตรงหลังลมแรง",
+   "en": "Fon wrapped wire around the rose stems to keep them upright after the strong wind.",
+   "ko": "폰은 강한 바람이 지나간 뒤 장미 줄기가 바로 서도록 철사를 감았어요.",
+   "blank": "ลวด",
+   "src": "made"
   }
  ],
  "w|ลวดลาย": [
@@ -38124,6 +38620,22 @@
    "en": "The kids caught fish in the stream.",
    "ko": "아이들이 시내에서 물고기를 잡았어.",
    "blank": "ลำธาร",
+   "src": "made"
+  }
+ ],
+ "w|ลำบาก": [
+  {
+   "text": "ช่วงที่พ่อป่วย เอกกับน้องผ่านเรื่องลำบากมาด้วยกัน",
+   "en": "When Dad was ill, Ek and his sister went through hard times together.",
+   "ko": "아버지가 아팠을 때 엑과 동생은 힘든 시기를 함께 견뎠어요.",
+   "blank": "ลำบาก",
+   "src": "made"
+  },
+  {
+   "text": "หน้าน้ำหลาก คนในหมู่บ้านเดินทางลำบากมาก",
+   "en": "During the flood season, getting around is very hard for the villagers.",
+   "ko": "물이 불어나는 철에는 마을 사람들이 오가기가 아주 힘들어요.",
+   "blank": "ลำบาก",
    "src": "made"
   }
  ],
@@ -39038,6 +39550,22 @@
    "en": "The officers at the station threw a small party for Porn, who had just been promoted.",
    "ko": "경찰서 동료들은 막 승진한 폰을 위해 작은 파티를 열었어요.",
    "blank": "เลื่อนตำแหน่ง",
+   "src": "made"
+  }
+ ],
+ "w|เลื่อย": [
+  {
+   "text": "พ่อเก็บเลื่อยไว้บนชั้นสูงเพื่อไม่ให้หลานหยิบไปเล่น",
+   "en": "Dad keeps the saw on a high shelf so the grandkids can't take it to play with.",
+   "ko": "아버지는 손주들이 갖고 놀지 못하게 톱을 높은 선반에 둬요.",
+   "blank": "เลื่อย",
+   "src": "made"
+  },
+  {
+   "text": "พ่อของฝนใช้เลื่อยตัดกิ่งมะม่วงที่ยื่นไปทับสายไฟ",
+   "en": "Fon's father used a saw to cut the mango branch hanging over the power line.",
+   "ko": "폰의 아버지는 톱으로 전깃줄 위로 뻗은 망고 가지를 잘랐어요.",
+   "blank": "เลื่อย",
    "src": "made"
   }
  ],
@@ -40957,6 +41485,22 @@
    "src": "made"
   }
  ],
+ "w|สติ": [
+  {
+   "text": "เอกพยายามตั้งสติก่อนพูด เพราะไม่อยากทะเลาะกันอีก",
+   "en": "Ek tried to calm himself before speaking because he didn't want another fight.",
+   "ko": "엑은 또 싸우기 싫어서 말하기 전에 정신을 가다듬으려고 했어요.",
+   "blank": "สติ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนหกล้มบนพื้นลื่นแต่ยังมีสติพอจะโทรเรียกแม่",
+   "en": "Fon slipped on the wet floor but was still conscious enough to call her mother.",
+   "ko": "폰은 미끄러운 바닥에서 넘어졌지만 정신이 있어서 어머니에게 전화했어요.",
+   "blank": "สติ",
+   "src": "made"
+  }
+ ],
  "w|สไตล์": [
   {
    "text": "ชอบสไตล์การแต่งตัวของเธอ",
@@ -41178,6 +41722,22 @@
    "en": "I mow the lawn every Saturday.",
    "ko": "나는 토요일마다 잔디를 깎아.",
    "blank": "สนามหญ้า",
+   "src": "made"
+  }
+ ],
+ "w|สนิท": [
+  {
+   "text": "ตอนเด็กเอกกับน้องสาวสนิทกันมากจนนอนห้องเดียวกัน",
+   "en": "As kids, Ek and his sister were so close they slept in the same room.",
+   "ko": "어릴 때 엑과 여동생은 아주 친해서 한방에서 잤어요.",
+   "blank": "สนิท",
+   "src": "made"
+  },
+  {
+   "text": "ฝนสนิทกับป้าข้างบ้านที่แบ่งมะม่วงให้ทุกหน้าร้อน",
+   "en": "Fon is close to the auntie next door who shares mangoes with her each hot season.",
+   "ko": "폰은 더운 철마다 망고를 나눠 주는 옆집 아주머니와 친해요.",
+   "blank": "สนิท",
    "src": "made"
   }
  ],
@@ -41469,6 +42029,22 @@
    "en": "He is still a member of the book club.",
    "ko": "그는 여전히 독서 동아리 회원이야.",
    "blank": "สมาชิก"
+  }
+ ],
+ "w|สมาธิ": [
+  {
+   "text": "เสียงน้องเปิดเพลงดังทำให้เอกไม่มีสมาธิทำงาน",
+   "en": "His sister playing loud music made Ek unable to concentrate on his work.",
+   "ko": "동생이 음악을 크게 틀어서 엑은 일에 집중할 수 없었어요.",
+   "blank": "สมาธิ",
+   "src": "made"
+  },
+  {
+   "text": "เสียงฝนพรำช่วยให้ฝนมีสมาธิอ่านหนังสือได้นาน",
+   "en": "The sound of drizzle helps Fon concentrate on reading for a long time.",
+   "ko": "보슬비 소리 덕분에 폰은 오래 집중해서 책을 읽을 수 있어요.",
+   "blank": "สมาธิ",
+   "src": "made"
   }
  ],
  "w|สมาร์ทโฟน": [
@@ -43215,6 +43791,22 @@
    "blank": "สี่แยก"
   }
  ],
+ "w|สีหน้า": [
+  {
+   "text": "ดูจากสีหน้าของน้อง เอกรู้ทันทีว่าพูดแรงเกินไป",
+   "en": "From his sister's expression, Ek knew at once he'd spoken too harshly.",
+   "ko": "동생 표정을 보고 엑은 자기가 말을 너무 심하게 했다는 걸 바로 알았어요.",
+   "blank": "สีหน้า",
+   "src": "made"
+  },
+  {
+   "text": "ฝนอ่านสีหน้าแม่ออกว่ากังวลเรื่องน้ำท่วม",
+   "en": "Fon could read from her mother's face that she was worried about the flood.",
+   "ko": "폰은 어머니 표정에서 홍수 걱정을 읽어 낼 수 있었어요.",
+   "blank": "สีหน้า",
+   "src": "made"
+  }
+ ],
  "w|สี่เหลี่ยม": [
   {
    "text": "ร้านจัดโต๊ะสี่เหลี่ยมยาวให้ทุกคนนั่งหน้ากันได้",
@@ -44123,6 +44715,22 @@
    "blank": "แสดง"
   }
  ],
+ "w|แสดงออก": [
+  {
+   "text": "เอกไม่ค่อยแสดงออกว่ารักน้อง แต่ซื้อขนมมาฝากเสมอ",
+   "en": "Ek doesn't really show that he loves his sister, but always brings her snacks.",
+   "ko": "엑은 동생을 아끼는 티를 잘 안 내지만 늘 간식을 사다 줘요.",
+   "blank": "แสดงออก",
+   "src": "made"
+  },
+  {
+   "text": "ฝนชอบแสดงออกผ่านภาพวาดสีน้ำรูปท้องฟ้าแต่ละฤดู",
+   "en": "Fon likes to express herself through watercolours of the sky in each season.",
+   "ko": "폰은 계절마다 하늘을 담은 수채화로 자신을 표현하길 좋아해요.",
+   "blank": "แสดงออก",
+   "src": "made"
+  }
+ ],
  "w|แสตมป์": [
   {
    "text": "สมชายติดแสตมป์บนจดหมายแล้วฝากรุ่นน้องไปส่งที่ไปรษณีย์",
@@ -44487,6 +45095,22 @@
    "en": "Wash your face before bed.",
    "ko": "자기 전에 세수해.",
    "blank": "หน้า"
+  }
+ ],
+ "w|หน้ากาก": [
+  {
+   "text": "น้องสาวของเอกใส่หน้ากากกันฝุ่นตอนทาสีรั้วใหม่",
+   "en": "Ek's sister wore a dust mask while repainting the fence.",
+   "ko": "엑의 여동생은 울타리를 새로 칠할 때 방진 마스크를 썼어요.",
+   "blank": "หน้ากาก",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงปลายหน้าแล้งมีหมอกควันเยอะ ฝนต้องใส่หน้ากากออกจากบ้าน",
+   "en": "At the end of the dry season there's a lot of haze, so Fon has to wear a mask outside.",
+   "ko": "건기 끝 무렵엔 연무가 심해서 폰은 마스크를 쓰고 나가야 해요.",
+   "blank": "หน้ากาก",
+   "src": "made"
   }
  ],
  "w|หน้าจอ": [
@@ -49831,6 +50455,22 @@
    "en": "I'll take this one.",
    "ko": "이걸로 할게.",
    "blank": "เอา"
+  }
+ ],
+ "w|เอาจริง": [
+  {
+   "text": "น้องสาวรู้ว่าเอกเอาจริงตอนเขาเรียกชื่อเต็มของเธอ",
+   "en": "Ek's sister knows he means business when he calls her by her full name.",
+   "ko": "엑의 여동생은 오빠가 자기 이름을 다 부르면 진지하다는 걸 알아요.",
+   "blank": "เอาจริง",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้ฝนเอาจริงเรื่องปลูกผักสวนครัวก่อนหน้าฝนจะมา",
+   "en": "This year Fon is serious about planting a vegetable garden before the rains come.",
+   "ko": "올해 폰은 우기 전에 텃밭 가꾸기를 제대로 해 보려 해요.",
+   "blank": "เอาจริง",
+   "src": "made"
   }
  ],
  "w|เอาชนะ": [
