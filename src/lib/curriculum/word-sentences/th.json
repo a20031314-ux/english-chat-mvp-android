@@ -1161,6 +1161,22 @@
    "blank": "การค้า"
   }
  ],
+ "w|การจอง": [
+  {
+   "text": "รีสอร์ตบนดอยโทรมาบอกว่าการจองห้องของประยุทธมีปัญหา",
+   "en": "The resort on the mountain called to say there was a problem with Prayut's room booking.",
+   "ko": "산 위 리조트에서 쁘라윳의 객실 예약에 문제가 있다고 전화가 왔어요.",
+   "blank": "การจอง",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงนี้ร้านของจันทร์รับซ่อมผ่านการจองออนไลน์เท่านั้น",
+   "en": "These days Chan's shop only takes repairs through online booking.",
+   "ko": "요즘 짠의 가게는 온라인 예약으로만 수리를 받아요.",
+   "blank": "การจอง",
+   "src": "made"
+  }
+ ],
  "w|การชุมนุม": [
   {
    "text": "ตำรวจดูแลความปลอดภัยในการชุมนุม",
@@ -2709,6 +2725,22 @@
    "blank": "ขอโทษ"
   }
  ],
+ "w|ขอบ": [
+  {
+   "text": "ทางขึ้นดอยแคบมาก ล้อรถเกือบตกขอบถนน",
+   "en": "The road up the mountain is very narrow, and the wheels nearly went off the edge.",
+   "ko": "산으로 오르는 길이 너무 좁아서 바퀴가 길 가장자리 밖으로 빠질 뻔했어요.",
+   "blank": "ขอบ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ใช้เครื่องเป่าลมร้อนตามขอบจอเพื่อให้กาวนิ่มก่อนแกะ",
+   "en": "Chan runs a heat gun along the edge of the screen to soften the glue before prying it off.",
+   "ko": "짠은 화면을 떼기 전에 접착제가 부드러워지도록 화면 가장자리를 따라 열풍기를 대요.",
+   "blank": "ขอบ",
+   "src": "made"
+  }
+ ],
  "w|ขอบเขต": [
   {
    "text": "เพื่อนคุยกันเรื่องงานแบบไม่มีขอบเขต จนเกือบลืมกินข้าว",
@@ -3373,6 +3405,22 @@
    "en": "He is wearing a brown leather belt.",
    "ko": "그는 갈색 가죽 벨트를 찼어.",
    "blank": "เข็มขัด"
+  }
+ ],
+ "w|เข็มขัดนิรภัย": [
+  {
+   "text": "ประยุทธเตือนเพื่อนที่นั่งข้างหลังให้คาดเข็มขัดนิรภัยด้วย",
+   "en": "Prayut reminded the friends in the back seat to fasten their seatbelts too.",
+   "ko": "쁘라윳은 뒷자리 친구들에게도 안전벨트를 매라고 했어요.",
+   "blank": "เข็มขัดนิรภัย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าเล่าว่ามือถือหล่นจากตักตอนปลดเข็มขัดนิรภัย",
+   "en": "The customer said the phone fell off her lap when she unbuckled her seatbelt.",
+   "ko": "손님은 안전벨트를 풀다가 휴대폰이 무릎에서 떨어졌다고 했어요.",
+   "blank": "เข็มขัดนิรภัย",
+   "src": "made"
   }
  ],
  "w|เข้มงวด": [
@@ -6755,6 +6803,22 @@
    "blank": "เครื่องสำอาง"
   }
  ],
+ "w|เครื่องหมาย": [
+  {
+   "text": "ประยุทธเห็นเครื่องหมายห้ามแซงก่อนเข้าโค้งอันตราย",
+   "en": "Prayut saw a no-overtaking sign before a dangerous curve.",
+   "ko": "쁘라윳은 위험한 커브에 들어가기 전에 추월 금지 표지를 봤어요.",
+   "blank": "เครื่องหมาย",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ทำเครื่องหมายด้วยปากกาบนกล่องอะไหล่ที่ใช้แล้ว",
+   "en": "Chan marks the used parts boxes with a pen.",
+   "ko": "짠은 다 쓴 부품 상자에 펜으로 표시를 해 둬요.",
+   "blank": "เครื่องหมาย",
+   "src": "made"
+  }
+ ],
  "w|เคลื่อน": [
   {
    "text": "รถคันนั้นเคลื่อนช้าๆ ในรถติด",
@@ -8741,6 +8805,22 @@
    "en": "The family celebrates New Year together.",
    "ko": "가족이 함께 새해를 축하해.",
    "blank": "ฉลอง"
+  }
+ ],
+ "w|ฉลาก": [
+  {
+   "text": "ประยุทธอ่านฉลากบนขวดน้ำผึ้งป่าก่อนซื้อเป็นของฝาก",
+   "en": "Prayut read the label on the bottle of wild honey before buying it as a souvenir.",
+   "ko": "쁘라윳은 선물로 사기 전에 야생 꿀병의 라벨을 읽었어요.",
+   "blank": "ฉลาก",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ดูฉลากใต้แบตว่าเป็นของแท้หรือของปลอม",
+   "en": "Chan checks the label under the battery to see whether it's genuine or fake.",
+   "ko": "짠은 배터리 밑의 라벨을 보고 정품인지 가품인지 확인해요.",
+   "blank": "ฉลาก",
+   "src": "made"
   }
  ],
  "w|ฉลาด": [
@@ -10923,6 +11003,22 @@
    "blank": "ด่า"
   }
  ],
+ "w|ด่าน": [
+  {
+   "text": "ตำรวจที่ด่านตรวจขอดูใบขับขี่ของประยุทธ",
+   "en": "The police at the checkpoint asked to see Prayut's driver's license.",
+   "ko": "검문소 경찰이 쁘라윳의 운전면허증을 보여 달라고 했어요.",
+   "blank": "ด่าน",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าเล่าให้จันทร์ฟังว่าทำมือถือหล่นตอนลงจากรถที่ด่านเก็บเงิน",
+   "en": "A customer told Chan she dropped her phone getting out of the car at the toll booth.",
+   "ko": "손님은 짠에게 요금소에서 차에서 내리다가 휴대폰을 떨어뜨렸다고 이야기했어요.",
+   "blank": "ด่าน",
+   "src": "made"
+  }
+ ],
  "w|ด้าน": [
   {
    "text": "อยู่อีกด้านนึง",
@@ -10935,6 +11031,54 @@
    "en": "It's windy on this side.",
    "ko": "이쪽은 바람이 세.",
    "blank": "ด้าน"
+  }
+ ],
+ "w|ด้านข้าง": [
+  {
+   "text": "มีรถกระบะเฉี่ยวด้านข้างรถของประยุทธเป็นรอยยาว",
+   "en": "A pickup truck scraped the side of Prayut's car, leaving a long scratch.",
+   "ko": "픽업트럭이 쁘라윳 차의 옆면을 스쳐서 긴 자국이 났어요.",
+   "blank": "ด้านข้าง",
+   "src": "made"
+  },
+  {
+   "text": "ปุ่มเปิดเครื่องด้านข้างกดไม่ลง ลูกค้าเลยเอามาให้จันทร์ดู",
+   "en": "The power button on the side won't press down, so the customer brought it to Chan.",
+   "ko": "옆면의 전원 버튼이 눌리지 않아서 손님이 짠에게 가져왔어요.",
+   "blank": "ด้านข้าง",
+   "src": "made"
+  }
+ ],
+ "w|ด้านบน": [
+  {
+   "text": "ประยุทธมัดกระเป๋าไว้ด้านบนหลังคารถเพราะท้ายรถเต็ม",
+   "en": "Prayut tied the bags on top of the car roof because the trunk was full.",
+   "ko": "트렁크가 꽉 차서 쁘라윳은 가방을 차 지붕 위에 묶었어요.",
+   "blank": "ด้านบน",
+   "src": "made"
+  },
+  {
+   "text": "ลำโพงด้านบนของมือถือเครื่องนี้มีฝุ่นอุดจนเสียงเบา",
+   "en": "The top speaker of this phone is clogged with dust, so the sound is quiet.",
+   "ko": "이 휴대폰의 위쪽 스피커가 먼지로 막혀서 소리가 작아요.",
+   "blank": "ด้านบน",
+   "src": "made"
+  }
+ ],
+ "w|ด้านล่าง": [
+  {
+   "text": "ประยุทธได้ยินเสียงอะไรครูดอยู่ด้านล่างของรถ",
+   "en": "Prayut heard something scraping underneath the car.",
+   "ko": "쁘라윳은 차 아래쪽에서 뭔가 긁히는 소리를 들었어요.",
+   "blank": "ด้านล่าง",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ใช้แปรงเล็ก ๆ ปัดฝุ่นในช่องชาร์จด้านล่างของเครื่อง",
+   "en": "Chan uses a small brush to clean the dust out of the charging port on the bottom of the phone.",
+   "ko": "짠은 작은 솔로 휴대폰 아래쪽 충전 단자의 먼지를 털어 내요.",
+   "blank": "ด้านล่าง",
+   "src": "made"
   }
  ],
  "w|ด้านหน้า": [
@@ -11999,6 +12143,38 @@
    "en": "We're checking the system now.",
    "ko": "지금 시스템을 점검 중이야.",
    "blank": "ตรวจสอบ"
+  }
+ ],
+ "w|ตรอก": [
+  {
+   "text": "ร้านกาแฟที่ประยุทธตามหาซ่อนอยู่ในตรอกเล็ก ๆ หลังตลาด",
+   "en": "The café Prayut was looking for is tucked away in a small alley behind the market.",
+   "ko": "쁘라윳이 찾던 카페는 시장 뒤 작은 골목에 숨어 있었어요.",
+   "blank": "ตรอก",
+   "src": "made"
+  },
+  {
+   "text": "ร้านอะไหล่ที่จันทร์ไปซื้อประจำอยู่ในตรอกแคบ ๆ ย่านคลองถม",
+   "en": "The parts shop Chan regularly buys from is in a narrow alley in the Khlong Thom area.",
+   "ko": "짠이 늘 가는 부품 가게는 크롱톰 동네 좁은 골목에 있어요.",
+   "blank": "ตรอก",
+   "src": "made"
+  }
+ ],
+ "w|ตรา": [
+  {
+   "text": "เสื้อยืดที่ประยุทธซื้อมีตราของอุทยานแห่งชาติอยู่ตรงหน้าอก",
+   "en": "The T-shirt Prayut bought has the national park's emblem on the chest.",
+   "ko": "쁘라윳이 산 티셔츠 가슴에는 국립공원 문장이 있어요.",
+   "blank": "ตรา",
+   "src": "made"
+  },
+  {
+   "text": "ใบรับประกันของร้านจันทร์มีตราร้านประทับไว้ทุกใบ",
+   "en": "Every warranty card from Chan's shop is stamped with the shop's seal.",
+   "ko": "짠 가게의 보증서에는 모두 가게 도장이 찍혀 있어요.",
+   "blank": "ตรา",
+   "src": "made"
   }
  ],
  "w|ตรุษจีน": [
@@ -13827,6 +14003,22 @@
    "blank": "ถนน"
   }
  ],
+ "w|ถนนใหญ่": [
+  {
+   "text": "ประยุทธเลี่ยงถนนใหญ่แล้วขับไปตามทางเลียบนาข้าวแทน",
+   "en": "Prayut avoided the main road and drove along the rice-field route instead.",
+   "ko": "쁘라윳은 큰길을 피하고 대신 논을 따라 난 길로 달렸어요.",
+   "blank": "ถนนใหญ่",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อยากย้ายร้านไปอยู่ริมถนนใหญ่ให้คนเห็นมากขึ้น",
+   "en": "Chan wants to move the shop onto the main road so more people see it.",
+   "ko": "짠은 사람들 눈에 더 잘 띄게 가게를 큰길가로 옮기고 싶어 해요.",
+   "blank": "ถนนใหญ่",
+   "src": "made"
+  }
+ ],
  "w|ถนัด": [
   {
    "text": "อนันต์ถนัดอธิบายให้เด็กฟังมากกว่าผู้ใหญ่",
@@ -14433,6 +14625,22 @@
    "blank": "ทราย"
   }
  ],
+ "w|ทริป": [
+  {
+   "text": "ประยุทธวางแผนทริปขับรถเที่ยวภาคเหนือกับเพื่อนสนิทมาหลายเดือน",
+   "en": "Prayut spent months planning a road trip through the north with his close friends.",
+   "ko": "쁘라윳은 친한 친구들과 북부로 떠나는 자동차 여행을 몇 달 동안 계획했어요.",
+   "blank": "ทริป",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าคนหนึ่งทำมือถือตกน้ำระหว่างทริปไปทะเล เลยมาหาจันทร์",
+   "en": "A customer dropped her phone in the water during a beach trip, so she came to Chan.",
+   "ko": "한 손님이 바닷가 여행 중에 휴대폰을 물에 빠뜨려서 짠을 찾아왔어요.",
+   "blank": "ทริป",
+   "src": "made"
+  }
+ ],
  "w|ทฤษฎี": [
   {
    "text": "ในห้องวิทยาศาสตร์ มีจอแสดงทฤษฎีการเกิดดาวเคราะห์ให้เด็ก ๆ ดู",
@@ -15019,6 +15227,54 @@
    "blank": "ทางด่วน"
   }
  ],
+ "w|ทางเดิน": [
+  {
+   "text": "ประยุทธจอดรถแล้วเดินตามทางเดินในป่าไปดูน้ำตก",
+   "en": "Prayut parked the car and followed the forest path to see the waterfall.",
+   "ko": "쁘라윳은 차를 세우고 숲길을 따라 폭포를 보러 걸어갔어요.",
+   "blank": "ทางเดิน",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของจันทร์อยู่ติดทางเดินในห้าง คนเลยเดินผ่านทั้งวัน",
+   "en": "Chan's shop is right by the mall walkway, so people walk past all day.",
+   "ko": "짠의 가게는 쇼핑몰 통로 바로 옆이라 하루 종일 사람들이 지나다녀요.",
+   "blank": "ทางเดิน",
+   "src": "made"
+  }
+ ],
+ "w|ทางเท้า": [
+  {
+   "text": "ประยุทธเดินเล่นบนทางเท้าริมแม่น้ำหลังกินข้าวเย็น",
+   "en": "Prayut took a walk on the riverside walkway after dinner.",
+   "ko": "쁘라윳은 저녁을 먹고 강변 보도를 따라 산책했어요.",
+   "blank": "ทางเท้า",
+   "src": "made"
+  },
+  {
+   "text": "มือถือของลูกค้าตกกระแทกทางเท้าจนกล้องหลังแตก",
+   "en": "The customer's phone fell onto the pavement and the rear camera cracked.",
+   "ko": "손님의 휴대폰이 보도에 떨어져서 후면 카메라가 깨졌어요.",
+   "blank": "ทางเท้า",
+   "src": "made"
+  }
+ ],
+ "w|ทางม้าลาย": [
+  {
+   "text": "ประยุทธหยุดรถให้เด็กนักเรียนข้ามทางม้าลายหน้าโรงเรียน",
+   "en": "Prayut stopped the car to let schoolchildren cross the zebra crossing in front of the school.",
+   "ko": "쁘라윳은 학교 앞 횡단보도를 건너는 학생들을 위해 차를 멈췄어요.",
+   "blank": "ทางม้าลาย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าบอกว่าเดินข้ามทางม้าลายอยู่ดี ๆ มือถือก็หลุดมือ",
+   "en": "The customer said she was just walking across the zebra crossing when the phone slipped out of her hand.",
+   "ko": "손님은 횡단보도를 건너던 중에 갑자기 휴대폰이 손에서 미끄러졌다고 했어요.",
+   "blank": "ทางม้าลาย",
+   "src": "made"
+  }
+ ],
  "w|ทางเลือก": [
   {
    "text": "ยังมีทางเลือกอื่นอีก",
@@ -15502,6 +15758,22 @@
    "en": "We bought a new mattress.",
    "ko": "우리는 새 매트리스를 샀어.",
    "blank": "ที่นอน",
+   "src": "made"
+  }
+ ],
+ "w|ที่นั่ง": [
+  {
+   "text": "ประยุทธปรับที่นั่งคนขับให้สบายก่อนขับทางไกล",
+   "en": "Prayut adjusted the driver's seat to be comfortable before the long drive.",
+   "ko": "쁘라윳은 장거리 운전 전에 운전석을 편하게 조절했어요.",
+   "blank": "ที่นั่ง",
+   "src": "made"
+  },
+  {
+   "text": "ในร้านของจันทร์มีที่นั่งให้ลูกค้ารอแค่สองตัว",
+   "en": "Chan's shop only has two seats for waiting customers.",
+   "ko": "짠의 가게에는 손님이 기다릴 자리가 두 개밖에 없어요.",
+   "blank": "ที่นั่ง",
    "src": "made"
   }
  ],
@@ -16013,6 +16285,22 @@
    "en": "On the holiday I want to travel abroad.",
    "ko": "휴일에 해외여행 가고 싶어.",
    "blank": "เที่ยว"
+  }
+ ],
+ "w|เที่ยวบิน": [
+  {
+   "text": "เพื่อนคนหนึ่งเปลี่ยนใจไม่ขับรถไปด้วย แต่จองเที่ยวบินไปเจอกันที่เชียงราย",
+   "en": "One friend changed his mind about driving and booked a flight to meet them in Chiang Rai.",
+   "ko": "친구 한 명은 마음을 바꿔 차로 가지 않고 치앙라이에서 만나려고 항공편을 예약했어요.",
+   "blank": "เที่ยวบิน",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้ารีบมาเอามือถือคืนก่อนเที่ยวบินตอนบ่ายสาม",
+   "en": "The customer hurried to pick up the phone before her three o'clock flight.",
+   "ko": "손님은 오후 세 시 비행기를 타기 전에 서둘러 휴대폰을 찾으러 왔어요.",
+   "blank": "เที่ยวบิน",
+   "src": "made"
   }
  ],
  "w|แท้": [
@@ -17433,6 +17721,22 @@
    "blank": "น้ำมัน"
   }
  ],
+ "w|น้ำมันรถ": [
+  {
+   "text": "ราคาน้ำมันรถขึ้นอีกแล้ว ค่าเดินทางทริปนี้เลยแพงกว่าที่คิด",
+   "en": "Fuel prices went up again, so this trip cost more than expected.",
+   "ko": "기름값이 또 올라서 이번 여행 경비가 생각보다 많이 들었어요.",
+   "blank": "น้ำมันรถ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าบ่นว่าช่วงนี้ค่าน้ำมันรถแพง เลยต้องประหยัดค่าซ่อมมือถือ",
+   "en": "The customer complained that fuel costs are high these days, so she has to save on phone repairs.",
+   "ko": "손님은 요즘 기름값이 비싸서 휴대폰 수리비를 아껴야 한다고 투덜댔어요.",
+   "blank": "น้ำมันรถ",
+   "src": "made"
+  }
+ ],
  "w|น้ำยาล้างจาน": [
   {
    "text": "น้ำยาล้างจานใกล้หมดแล้ว",
@@ -17835,6 +18139,22 @@
    "en": "This cut of beef is tender.",
    "ko": "이 소고기 부위가 부드러워.",
    "blank": "เนื้อวัว"
+  }
+ ],
+ "w|เนื้อสัมผัส": [
+  {
+   "text": "ขนมจีนน้ำเงี้ยวร้านนี้เส้นมีเนื้อสัมผัสนุ่มกว่าที่กรุงเทพฯ",
+   "en": "The noodles at this khanom jeen nam ngiao shop have a softer texture than in Bangkok.",
+   "ko": "이 가게 카놈찐 남응이아우는 면의 식감이 방콕보다 부드러워요.",
+   "blank": "เนื้อสัมผัส",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าชอบเคสหนังเพราะเนื้อสัมผัสนุ่มมือ",
+   "en": "The customer likes the leather case because it has a soft feel.",
+   "ko": "손님은 가죽 케이스의 감촉이 부드러워서 좋아해요.",
+   "blank": "เนื้อสัมผัส",
+   "src": "made"
   }
  ],
  "w|เนื้อหา": [
@@ -20263,6 +20583,22 @@
    "blank": "ปั๊ม"
   }
  ],
+ "w|ปั๊มน้ำมัน": [
+  {
+   "text": "ประยุทธแวะปั๊มน้ำมันเพื่อเข้าห้องน้ำและซื้อกาแฟ",
+   "en": "Prayut stopped at a gas station to use the restroom and buy coffee.",
+   "ko": "쁘라윳은 화장실에 가고 커피를 사려고 주유소에 들렀어요.",
+   "blank": "ปั๊มน้ำมัน",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนเปิดร้านเอง จันทร์เคยทำงานเป็นแคชเชียร์ที่ปั๊มน้ำมัน",
+   "en": "Before opening her own shop, Chan used to work as a cashier at a gas station.",
+   "ko": "짠은 자기 가게를 열기 전에 주유소에서 계산원으로 일했어요.",
+   "blank": "ปั๊มน้ำมัน",
+   "src": "made"
+  }
+ ],
  "w|ปัสสาวะ": [
   {
    "text": "ตรวจปัสสาวะที่โรงพยาบาล",
@@ -20345,6 +20681,38 @@
    "en": "Wait for the bus at the stop in front of the mall.",
    "ko": "백화점 앞 정류장에서 버스를 기다려.",
    "blank": "ป้าย"
+  }
+ ],
+ "w|ป้ายชื่อ": [
+  {
+   "text": "ประยุทธเขียนป้ายชื่อติดกระเป๋าทุกใบกันสับสนตอนเช็กอิน",
+   "en": "Prayut wrote name tags for every bag to avoid mix-ups at check-in.",
+   "ko": "쁘라윳은 체크인할 때 헷갈리지 않게 가방마다 이름표를 써 붙였어요.",
+   "blank": "ป้ายชื่อ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ติดป้ายชื่อลูกค้าไว้บนมือถือทุกเครื่องที่รับซ่อม",
+   "en": "Chan attaches a customer name tag to every phone she takes in for repair.",
+   "ko": "짠은 수리받은 모든 휴대폰에 손님 이름표를 붙여 둬요.",
+   "blank": "ป้ายชื่อ",
+   "src": "made"
+  }
+ ],
+ "w|ป้ายรถเมล์": [
+  {
+   "text": "ประยุทธจอดรถให้เพื่อนลงตรงป้ายรถเมล์หน้าตลาด",
+   "en": "Prayut stopped to let his friend out at the bus stop in front of the market.",
+   "ko": "쁘라윳은 시장 앞 버스 정류장에서 친구를 내려 줬어요.",
+   "blank": "ป้ายรถเมล์",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของจันทร์อยู่ตรงข้ามป้ายรถเมล์ หาง่ายมาก",
+   "en": "Chan's shop is opposite the bus stop, so it's very easy to find.",
+   "ko": "짠의 가게는 버스 정류장 맞은편이라 찾기가 아주 쉬워요.",
+   "blank": "ป้ายรถเมล์",
+   "src": "made"
   }
  ],
  "w|ปาร์ตี้": [
@@ -21905,6 +22273,22 @@
    "blank": "แผนก"
   }
  ],
+ "w|แผนกต้อนรับ": [
+  {
+   "text": "พนักงานที่แผนกต้อนรับแนะนำร้านข้าวซอยอร่อยให้ประยุทธ",
+   "en": "The staff at the front desk recommended a tasty khao soi place to Prayut.",
+   "ko": "프런트 직원이 쁘라윳에게 맛있는 카오소이 가게를 추천해 줬어요.",
+   "blank": "แผนกต้อนรับ",
+   "src": "made"
+  },
+  {
+   "text": "โรงแรมใกล้ร้านส่งวิทยุสื่อสารของแผนกต้อนรับมาให้จันทร์ซ่อม",
+   "en": "A hotel near the shop sent its front desk's walkie-talkie for Chan to repair.",
+   "ko": "가게 근처 호텔이 프런트의 무전기를 짠에게 수리를 맡겼어요.",
+   "blank": "แผนกต้อนรับ",
+   "src": "made"
+  }
+ ],
  "w|แผ่นดินไหว": [
   {
    "text": "เกิดแผ่นดินไหวเมื่อเช้า",
@@ -23175,6 +23559,22 @@
    "src": "made"
   }
  ],
+ "w|พื้นผิว": [
+  {
+   "text": "ถนนบนดอยเป็นพื้นผิวขรุขระ ประยุทธเลยขับช้า ๆ",
+   "en": "The mountain road has a rough surface, so Prayut drove slowly.",
+   "ko": "산길은 노면이 울퉁불퉁해서 쁘라윳은 천천히 운전했어요.",
+   "blank": "พื้นผิว",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์เช็ดพื้นผิวหน้าจอให้สะอาดก่อนติดฟิล์มกันรอย",
+   "en": "Chan wipes the screen surface clean before applying the screen protector.",
+   "ko": "짠은 보호 필름을 붙이기 전에 화면 표면을 깨끗이 닦아요.",
+   "blank": "พื้นผิว",
+   "src": "made"
+  }
+ ],
  "w|พุทธ": [
   {
    "text": "ครอบครัวฉันนับถือพุทธ",
@@ -23683,6 +24083,22 @@
    "en": "This football match is exciting.",
    "ko": "이번 축구 경기가 정말 흥미진진해.",
    "blank": "ฟุตบอล"
+  }
+ ],
+ "w|ฟุตบาท": [
+  {
+   "text": "ในตัวเมืองเก่า ร้านค้าตั้งของล้นออกมาบนฟุตบาทจนคนต้องเดินลงถนน",
+   "en": "In the old town, shops spill their goods onto the sidewalk so people have to walk in the road.",
+   "ko": "구시가지에서는 가게들이 물건을 인도까지 늘어놓아서 사람들이 차도로 걸어야 해요.",
+   "blank": "ฟุตบาท",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ตั้งป้ายโฆษณาไว้บนฟุตบาทหน้าร้านทุกเช้า",
+   "en": "Chan puts an advertising sign out on the sidewalk in front of the shop every morning.",
+   "ko": "짠은 매일 아침 가게 앞 인도에 광고판을 세워 둬요.",
+   "blank": "ฟุตบาท",
+   "src": "made"
   }
  ],
  "w|ฟุ่มเฟือย": [
@@ -25159,6 +25575,22 @@
    "src": "made"
   }
  ],
+ "w|มุม": [
+  {
+   "text": "ประยุทธจอดรถตรงมุมถนนแล้วเดินไปซื้อน้ำ",
+   "en": "Prayut parked on the street corner and walked over to buy water.",
+   "ko": "쁘라윳은 길모퉁이에 차를 세우고 물을 사러 걸어갔어요.",
+   "blank": "มุม",
+   "src": "made"
+  },
+  {
+   "text": "มือถือตกกระแทกพื้นตรงมุมจอ รอยร้าวเลยลามไปทั้งแผ่น",
+   "en": "The phone hit the ground on the corner of the screen, and the crack spread across the whole panel.",
+   "ko": "휴대폰 화면 모서리가 바닥에 부딪혀서 금이 화면 전체로 퍼졌어요.",
+   "blank": "มุม",
+   "src": "made"
+  }
+ ],
  "w|มุมมอง": [
   {
    "text": "ลองดูจากมุมมองอื่น",
@@ -26035,6 +26467,22 @@
    "en": "I like eating grilled meat with friends.",
    "ko": "친구들이랑 고기 구워 먹는 걸 좋아해.",
    "blank": "ย่าง"
+  }
+ ],
+ "w|ยางรถ": [
+  {
+   "text": "ยางรถรั่วกลางทางขึ้นเขา ประยุทธต้องเปลี่ยนเองกลางแดด",
+   "en": "A tire went flat on the way up the mountain, and Prayut had to change it himself in the sun.",
+   "ko": "산길을 오르다 타이어에 바람이 빠져서 쁘라윳은 땡볕 아래서 직접 갈아야 했어요.",
+   "blank": "ยางรถ",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของจันทร์อยู่ติดกับร้านปะยางรถ เลยได้ยินเสียงสูบลมทั้งวัน",
+   "en": "Chan's shop is next to a tire repair shop, so she hears the air pump all day.",
+   "ko": "짠의 가게는 타이어 수리점 옆이라 하루 종일 공기 넣는 소리가 들려요.",
+   "blank": "ยางรถ",
+   "src": "made"
   }
  ],
  "w|ยางลบ": [
@@ -27945,6 +28393,38 @@
    "blank": "รูปถ่าย"
   }
  ],
+ "w|รูปแบบ": [
+  {
+   "text": "บ้านไม้ในหมู่บ้านนี้สร้างตามรูปแบบล้านนาโบราณ",
+   "en": "The wooden houses in this village are built in the old Lanna style.",
+   "ko": "이 마을의 목조 가옥은 옛 란나 양식으로 지어졌어요.",
+   "blank": "รูปแบบ",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์มีเคสมือถือหลายรูปแบบให้ลูกค้าเลือก",
+   "en": "Chan has phone cases in many styles for customers to choose from.",
+   "ko": "짠은 손님이 고를 수 있게 여러 디자인의 휴대폰 케이스를 갖추고 있어요.",
+   "blank": "รูปแบบ",
+   "src": "made"
+  }
+ ],
+ "w|รูปร่าง": [
+  {
+   "text": "ภูเขาลูกนั้นมีรูปร่างเหมือนช้างนอนหมอบ",
+   "en": "That mountain is shaped like an elephant lying down.",
+   "ko": "저 산은 엎드린 코끼리 같은 모양이에요.",
+   "blank": "รูปร่าง",
+   "src": "made"
+  },
+  {
+   "text": "มือถือรุ่นใหม่มีรูปร่างบางจนจันทร์ต้องแกะฝาหลังอย่างระวัง",
+   "en": "New phones are so thin in shape that Chan has to open the back cover carefully.",
+   "ko": "새 휴대폰은 모양이 얇아서 짠은 뒷면 덮개를 조심스럽게 열어야 해요.",
+   "blank": "รูปร่าง",
+   "src": "made"
+  }
+ ],
  "w|รู้สึก": [
   {
    "text": "รู้สึกยังไงบ้าง",
@@ -28557,6 +29037,22 @@
    "blank": "ล่วงหน้า"
   }
  ],
+ "w|ลวดลาย": [
+  {
+   "text": "ประยุทธซื้อผ้าซิ่นลวดลายสวยฝากแม่จากตลาดชาวเขา",
+   "en": "Prayut bought a beautifully patterned sarong at the hill-tribe market for his mother.",
+   "ko": "쁘라윳은 산악 민족 시장에서 어머니께 드릴 무늬가 예쁜 치마천을 샀어요.",
+   "blank": "ลวดลาย",
+   "src": "made"
+  },
+  {
+   "text": "เด็กสาวคนหนึ่งเลือกเคสลวดลายดอกไม้สีชมพู",
+   "en": "A young girl chose a case with a pink flower pattern.",
+   "ko": "한 여자아이가 분홍 꽃무늬 케이스를 골랐어요.",
+   "blank": "ลวดลาย",
+   "src": "made"
+  }
+ ],
  "w|ลอก": [
   {
    "text": "หัวหน้าเตือนว่าห้ามลอกข้อความจากเว็บไซต์อื่นมาใส่ในรายงาน",
@@ -28613,6 +29109,22 @@
    "en": "She checks the lottery with excitement.",
    "ko": "그녀는 설레며 로또를 확인해.",
    "blank": "ลอตเตอรี่"
+  }
+ ],
+ "w|ล็อบบี้": [
+  {
+   "text": "ประยุทธนั่งรอเพื่อนในล็อบบี้โรงแรมก่อนออกเดินทางต่อ",
+   "en": "Prayut waited for his friends in the hotel lobby before setting off again.",
+   "ko": "쁘라윳은 다시 출발하기 전에 호텔 로비에서 친구들을 기다렸어요.",
+   "blank": "ล็อบบี้",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของจันทร์อยู่ชั้นล่างของห้าง ใกล้ล็อบบี้ทางเข้า",
+   "en": "Chan's shop is on the ground floor of the mall, near the entrance lobby.",
+   "ko": "짠의 가게는 쇼핑몰 1층 입구 로비 근처에 있어요.",
+   "blank": "ล็อบบี้",
+   "src": "made"
   }
  ],
  "w|ลอย": [
@@ -29907,6 +30419,22 @@
    "src": "made"
   }
  ],
+ "w|วงเวียน": [
+  {
+   "text": "ประยุทธขับวนรอบวงเวียนสองรอบเพราะหาทางออกไม่เจอ",
+   "en": "Prayut drove around the roundabout twice because he couldn't find the exit.",
+   "ko": "쁘라윳은 출구를 못 찾아서 로터리를 두 바퀴 돌았어요.",
+   "blank": "วงเวียน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์บอกทางลูกค้าว่าร้านอยู่ถัดจากวงเวียนไปไม่ไกล",
+   "en": "Chan told the customer that the shop is a short way past the roundabout.",
+   "ko": "짠은 손님에게 가게가 로터리를 지나 조금만 가면 있다고 길을 알려 줬어요.",
+   "blank": "วงเวียน",
+   "src": "made"
+  }
+ ],
  "w|วรรณคดี": [
   {
    "text": "วรรณคดีไทยมีเรื่องเล่าสวยงาม",
@@ -30239,6 +30767,22 @@
    "en": "I want a long holiday.",
    "ko": "긴 휴일이 있었으면 좋겠어.",
    "blank": "วันหยุด"
+  }
+ ],
+ "w|วันหยุดพักร้อน": [
+  {
+   "text": "ประยุทธเก็บวันหยุดพักร้อนไว้ทั้งปีเพื่อขับรถเที่ยวครั้งนี้",
+   "en": "Prayut saved up his vacation days all year for this road trip.",
+   "ko": "쁘라윳은 이번 자동차 여행을 위해 일 년 내내 휴가를 아껴 두었어요.",
+   "blank": "วันหยุดพักร้อน",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์ปิดร้านซ่อมมือถือสามวันเพราะลาวันหยุดพักร้อนไปเยี่ยมแม่",
+   "en": "Chan closed her phone repair shop for three days to take vacation and visit her mother.",
+   "ko": "짠은 휴가를 내고 어머니를 뵈러 가느라 휴대폰 수리점을 사흘 닫았어요.",
+   "blank": "วันหยุดพักร้อน",
+   "src": "made"
   }
  ],
  "w|วันอังคาร": [
@@ -30891,6 +31435,22 @@
    "blank": "ศุกร์"
   }
  ],
+ "w|ศุลกากร": [
+  {
+   "text": "ตอนขับรถข้ามไปลาว ประยุทธต้องแจ้งของที่ด่านศุลกากร",
+   "en": "When driving across into Laos, Prayut had to declare his goods at customs.",
+   "ko": "라오스로 차를 몰고 넘어갈 때 쁘라윳은 세관에서 물건을 신고해야 했어요.",
+   "blank": "ศุลกากร",
+   "src": "made"
+  },
+  {
+   "text": "อะไหล่ที่จันทร์สั่งจากต่างประเทศติดอยู่ที่ศุลกากรเกือบอาทิตย์",
+   "en": "The parts Chan ordered from abroad were stuck at customs for almost a week.",
+   "ko": "짠이 해외에서 주문한 부품이 세관에 일주일 가까이 묶여 있었어요.",
+   "blank": "ศุลกากร",
+   "src": "made"
+  }
+ ],
  "w|ศูนย์": [
   {
    "text": "คะแนนได้ศูนย์",
@@ -30903,6 +31463,22 @@
    "en": "Start over from zero.",
    "ko": "처음부터 다시 시작해.",
    "blank": "ศูนย์"
+  }
+ ],
+ "w|ศูนย์กลาง": [
+  {
+   "text": "ประยุทธพักที่โรงแรมใกล้ศูนย์กลางเมืองเพื่อให้เดินไปไหนก็ง่าย",
+   "en": "Prayut stayed at a hotel near the city center so it was easy to walk anywhere.",
+   "ko": "쁘라윳은 어디든 걸어가기 쉽게 시내 중심가 근처 호텔에 묵었어요.",
+   "blank": "ศูนย์กลาง",
+   "src": "made"
+  },
+  {
+   "text": "ห้างที่จันทร์เปิดร้านเป็นศูนย์กลางมือถือที่ใหญ่ที่สุดในเมือง",
+   "en": "The mall where Chan has her shop is the biggest mobile phone hub in town.",
+   "ko": "짠이 가게를 연 쇼핑몰은 시내에서 가장 큰 휴대폰 상가예요.",
+   "blank": "ศูนย์กลาง",
+   "src": "made"
   }
  ],
  "w|เศรษฐกิจ": [
@@ -32107,6 +32683,22 @@
    "blank": "สะพาน"
   }
  ],
+ "w|สะพานลอย": [
+  {
+   "text": "ประยุทธจอดรถแล้วเดินขึ้นสะพานลอยไปถ่ายรูปถนนยามค่ำคืน",
+   "en": "Prayut parked and climbed the pedestrian bridge to take photos of the street at night.",
+   "ko": "쁘라윳은 차를 세우고 육교에 올라가 밤거리 사진을 찍었어요.",
+   "blank": "สะพานลอย",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าบอกว่าทำมือถือหล่นจากบันไดสะพานลอยหน้าห้าง",
+   "en": "The customer said she dropped her phone from the steps of the footbridge in front of the mall.",
+   "ko": "손님은 쇼핑몰 앞 육교 계단에서 휴대폰을 떨어뜨렸다고 했어요.",
+   "blank": "สะพานลอย",
+   "src": "made"
+  }
+ ],
  "w|สะโพก": [
   {
    "text": "ปวดสะโพกตอนนั่งนาน",
@@ -32275,6 +32867,22 @@
    "en": "The employment contract expires at year end.",
    "ko": "근로계약이 올해 말에 끝나.",
    "blank": "สัญญาจ้าง"
+  }
+ ],
+ "w|สัญลักษณ์": [
+  {
+   "text": "ไฟรูปเครื่องยนต์บนหน้าปัดเป็นสัญลักษณ์ว่าต้องรีบเอารถไปเช็ก",
+   "en": "The engine-shaped light on the dashboard is a symbol that the car needs a check-up soon.",
+   "ko": "계기판의 엔진 모양 불빛은 차를 빨리 점검받아야 한다는 표시예요.",
+   "blank": "สัญลักษณ์",
+   "src": "made"
+  },
+  {
+   "text": "จันทร์อธิบายว่าสัญลักษณ์รูปแบตสีแดงแปลว่าแบตใกล้หมด",
+   "en": "Chan explained that the red battery symbol means the battery is almost dead.",
+   "ko": "짠은 빨간 배터리 기호가 배터리가 거의 다 됐다는 뜻이라고 설명했어요.",
+   "blank": "สัญลักษณ์",
+   "src": "made"
   }
  ],
  "w|สัตว์": [
@@ -34195,6 +34803,22 @@
    "en": "This hat is cheap.",
    "ko": "이 모자는 싸.",
    "blank": "หมวก"
+  }
+ ],
+ "w|หมวกกันน็อก": [
+  {
+   "text": "ประยุทธเช่ามอเตอร์ไซค์ขึ้นดอยและไม่ลืมใส่หมวกกันน็อก",
+   "en": "Prayut rented a motorbike to ride up the mountain and didn't forget to wear a helmet.",
+   "ko": "쁘라윳은 산에 오르려고 오토바이를 빌렸고 헬멧 쓰는 것도 잊지 않았어요.",
+   "blank": "หมวกกันน็อก",
+   "src": "made"
+  },
+  {
+   "text": "ไรเดอร์คนหนึ่งถอดหมวกกันน็อกแล้วยื่นมือถือจอแตกให้จันทร์",
+   "en": "A delivery rider took off his helmet and handed Chan a phone with a cracked screen.",
+   "ko": "배달 기사가 헬멧을 벗고 액정이 깨진 휴대폰을 짠에게 내밀었어요.",
+   "blank": "หมวกกันน็อก",
+   "src": "made"
   }
  ],
  "w|หมอ": [
@@ -38197,6 +38821,22 @@
    "en": "Oops, I spilled the water.",
    "ko": "어이쿠, 물을 엎질렀어.",
    "blank": "อุ๊ย"
+  }
+ ],
+ "w|อู่": [
+  {
+   "text": "เครื่องยนต์มีเสียงแปลก ๆ ประยุทธจึงพารถเข้าอู่ในอำเภอถัดไป",
+   "en": "The engine made strange noises, so Prayut took the car to a garage in the next district.",
+   "ko": "엔진에서 이상한 소리가 나서 쁘라윳은 다음 군의 정비소에 차를 맡겼어요.",
+   "blank": "อู่",
+   "src": "made"
+  },
+  {
+   "text": "ช่างในอู่ซ่อมรถข้างร้านเอามือถือมาให้จันทร์เปลี่ยนแบตบ่อย ๆ",
+   "en": "The mechanics at the auto garage next door often bring their phones to Chan for battery replacements.",
+   "ko": "옆 자동차 정비소 기사들은 배터리를 갈려고 휴대폰을 자주 짠에게 가져와요.",
+   "blank": "อู่",
+   "src": "made"
   }
  ],
  "w|อูฐ": [
