@@ -15,6 +15,8 @@ import { BANK_CHUNK, posGroup, wordKey } from "@/lib/curriculum/vocabBank";
 import { grownItems, growBank } from "@/lib/curriculum/qbank";
 import { cachedGlosses, fetchWordChunk } from "@/lib/curriculum/useWordBank";
 import { glossFor } from "@/lib/curriculum/stageScripts";
+import { studyWith, talkCounts } from "@/lib/curriculum/wordUse";
+import { openLesson } from "@/lib/appIntents";
 
 /**
  * Quizbank 어휘 탭의 단어 사전(2026-11-04). 빈도 목록을 단어·뜻으로 찾고, 항목은 품사·단계·짧은 뜻·예문 둘.
@@ -36,20 +38,26 @@ function grownLines(language: string, word: string, locale: string, have: readon
  * word = 이 낱말 화면으로 바로 열기(Languagebank 묶음에서 누른 낱말). onIndex = 낱말 화면 ‹ 를 눌렀을 때 바깥(색인)으로.
  */
 /**
- * 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 아는 정도 표시(학습 · n번 학습 · 자주 씀).
+ * 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 두 숫자 — 퀴즈(학습 · n번 학습, 답한 날 수)와
+ * 대화(대화에서 n번 씀, curriculum/wordUse.ts talkCounts)를 따로(2026-11-09 사용자 "문제풀이와 대화에서 사용한 수치를 분리").
  * 어림값은 사전에 붙이지 않는다. 열어 본 것은 장부에 찾아봄으로만.
  */
-function cardStatus(language: string, word: string): KnowTag | null {
+type CardUse = { tag: KnowTag | null; talk: number };
+function cardStatus(language: string, word: string): CardUse {
   const key = wordKey(word);
-  return knowTag(readLedger(language).filter((event) => event.k === key), key, (t) => dayOfSeconds(t));
+  const mine = readLedger(language).filter((event) => event.k === key);
+  return { tag: knowTag(mine, key, (t) => dayOfSeconds(t)), talk: talkCounts(mine).get(key) ?? 0 };
 }
 
-/** 사전 낱말 화면 구석 표시 = 있었던 일만(2026-11-09 사용자 "옛 상태 이름 다 삭제" — 체크 셋 ✓·◐·n일 뒤 대신): 학습 · n번 학습 · 자주 씀. */
-function StatusMark({ ui, status }: { ui: UICopy; status: KnowTag }) {
-  const label = `${knowTagLabel(ui, status)}${status.miss ? " ✗" : ""}`;
+function StatusMark({ ui, status }: { ui: UICopy; status: CardUse }) {
+  const quiz = status.tag ? `${knowTagLabel(ui, status.tag)}${status.tag.miss ? " ✗" : ""}` : "";
+  const talk = status.talk ? ui.tlUsedN.replace("{n}", String(status.talk)) : "";
+  if (!quiz && !talk) return null;
   return (
-    <span data-card-status={status.kind} className="ms-auto shrink-0 text-meta text-slate-400">
-      {label}
+    <span data-card-status={status.tag?.kind ?? "talk"} className="ms-auto shrink-0 text-meta text-slate-400">
+      {quiz}
+      {quiz && talk ? " · " : ""}
+      {talk ? <span data-card-talk className="text-info">{talk}</span> : null}
     </span>
   );
 }
@@ -63,7 +71,7 @@ function blankIn(text: string, word: string): string | null {
   return at < 0 ? null : `${text.slice(0, at)}＿＿＿${text.slice(at + word.length)}`;
 }
 
-export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, search = true, mask }: { ui: UICopy; language: string; locale: string; word?: string | null; onIndex?: () => void; onPick?: (word: string) => void; search?: boolean; mask?: CardMask }) {
+export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, search = true, mask, above = false }: { ui: UICopy; language: string; locale: string; word?: string | null; onIndex?: () => void; onPick?: (word: string) => void; search?: boolean; mask?: CardMask; /** 시트 안(z-90·z-130) — 같이 배우기 수업을 맨 위 층(z-130)으로, 기본 수업 층(z-70)은 시트 뒤에 숨는다. */ above?: boolean }) {
   const tone = useBankTone();
   const open = true;
   const [entries, setEntries] = useState<DictEntry[] | null>(null);
@@ -263,6 +271,16 @@ export function DictionaryBody({ ui, language, locale, word, onIndex, onPick, se
                       </div>
                     );
                   })()}
+                  {anyVeil ? null : (
+                    <StudyWithRow
+                      above={above}
+                      ui={ui}
+                      language={language}
+                      locale={locale}
+                      word={picked.word}
+                      lines={[picked.line, picked.line2?.text, ...made.map((one) => one.text), ...(senses[picked.word] ?? []).map((sense) => sense.example)].filter((one): one is string => Boolean(one))}
+                    />
+                  )}
                   </div>
                 </div>
               ) : (
@@ -306,12 +324,47 @@ export function DictionarySheet({ ui, language, locale, word, title, onClose, ab
             </button>
           </div>
           {word ? (
-            <DictionaryBody ui={ui} language={language} locale={locale} word={pick} onIndex={() => setPick(undefined)} onPick={setPick} />
+            <DictionaryBody ui={ui} language={language} locale={locale} word={pick} onIndex={() => setPick(undefined)} onPick={setPick} above />
           ) : (
-            <DictionaryBody ui={ui} language={language} locale={locale} />
+            <DictionaryBody ui={ui} language={language} locale={locale} above />
           )}
         </div>
       </div>
     </BodyLayer>
+  );
+}
+
+/**
+ * 같이 배우기(2026-11-09 사용자 "자주 쓰는 단어를 바탕으로 추천카드"): 이 낱말이 든 표현 · 예문에 든 문장구조·문법 — 퀴즈로 덜 다진 것 먼저, 최대 셋.
+ * 누르면 그 수업(openLesson). 고르기는 curriculum/wordUse.ts studyWith(모델 없음). 없으면 안 보임.
+ */
+function StudyWithRow({ ui, language, locale, word, lines, above }: { ui: UICopy; language: string; locale: string; word: string; lines: readonly string[]; above: boolean }) {
+  const key = lines.join("\n");
+  const list = useMemo(
+    () => studyWith({ language, locale, word, lines, events: readLedger(language), dayOf: (t) => dayOfSeconds(t) }),
+    // 낱말·예문이 바뀔 때만.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [language, locale, word, key],
+  );
+  if (!list.length) return null;
+  return (
+    <div data-study-with className="mt-3">
+      <p className="text-meta text-slate-500">{ui.lbStudyWith}</p>
+      <div className="mt-1.5 flex flex-wrap gap-1.5">
+        {list.map((one) => (
+          <button
+            key={one.key}
+            type="button"
+            dir="auto"
+            data-study-with-key={one.key}
+            onClick={() => openLesson({ language, key: one.key, ...(above ? { above: true } : {}) })}
+            className="rounded-lg border border-line px-2.5 py-1 text-start text-note text-ink hover:bg-white/5"
+          >
+            <span aria-hidden className="me-1">{one.key.startsWith("e|") ? "💬" : one.key.startsWith("g|") ? "📐" : "🧩"}</span>
+            {one.label}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }

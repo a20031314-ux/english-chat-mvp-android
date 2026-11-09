@@ -30,7 +30,7 @@
 │              날마다 한 줄 → 그날 = 학습 타임라인(DayTimeline → 학습 시간 → 카드 CardTimeline, curriculum/studyTimeline.ts) · ⏱ 학습 시간 막대
 │              재료: 이 폰 사건 장부 logbank.v1.<언어>(curriculum/logLedger.ts) + 수업 결과 + 통화 카드 + 서버 /api/notebook logItems
 │          [Quizbank 초록] studyMap/Quizbank → InlineQuiz → QuizPlayer — 한 흐름(hub/app/QUIZ.md), 답 뒤 아는 정도 표시(Growth CardProgressDots)·📕 문
-│          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 종류 → 묶음 → 단어 화면 · 표현·문법 → openLesson
+│          [Languagebank 노랑] studyMap/LanguageBank — 찾기(Dictionary DictionaryBody) · 자주 쓴 말(대화 수) · 종류 → 묶음([학습 | 대화] 순서) → 단어 화면(학습 · 대화 수 따로, 같이 배우기 칩 → openLesson, curriculum/wordUse.ts) · 표현·문법 → openLesson
 │              · 묶음 ▶ 넘겨 보기(BankFlip) · 글자가 다른 언어면 첫 줄 글자·소리 칸(ScriptPractice LettersRow·LettersBank)
 │          칸 머리 ?(Logbank·Quizbank) → studyMap/BankHelp(lib/guide/banks.ts)
 │

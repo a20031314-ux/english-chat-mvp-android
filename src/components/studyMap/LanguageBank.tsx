@@ -12,6 +12,7 @@ import { LETTERS_OPEN_EVENT, takeLettersOpen } from "@/lib/curriculum/lettersOpe
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { knowTag, type KnowTag } from "@/lib/curriculum/studyTimeline";
+import { oftenUsed, talkCounts } from "@/lib/curriculum/wordUse";
 
 /**
  * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/work/drafts/languagebank-2026-11-03.md,
@@ -24,6 +25,7 @@ import { knowTag, type KnowTag } from "@/lib/curriculum/studyTimeline";
  * - 종류 화면: 줄(단어 = 주제 | 품사, 표현·문법 = 난이도) × 열(난이도), 칸 = 비율·개수, 누르면 아래 묶음.
  * - 묶음: 칩(진하기 = 어림), 낱말 → 사전 낱말 화면, 표현·문법 → 그 수업(openLesson, studyMap/LessonHost).
  * 학습한 단어 표시는 여기 없음(사용자 2026-11-06 — 낱말 화면과 Logbank에만).
+ * 자주 쓴 말(2026-11-09): 전체보기 맨 위에 대화에서 많이 쓴 낱말·표현 줄(숫자 = 대화 수, wordUse.ts), 묶음 순서 [학습 | 대화] — 칠하기·학습한 수는 퀴즈 그대로.
  * 2026-11-09(사용자 "옛 상태의 데이터, 이름들은 다 삭제"): 칠하기·숫자는 학습한 것만(studyTimeline.ts knowTag — 학습 · n번 학습 · 자주 씀), 어림·체크 셋·내 것 곡선은 뺌. 아래는 그 전.
  * 2026-11-07(사용자 "데이터상 맞지 않는 것들도"): 표현·문법은 낱말 어림을 빌리지 않고 체크 셋(사건 장부 — 앎 1 · 적용이 힘듦 ½ · 처음 봄 0)으로.
  * 예전엔 낱말 경계를 표현·문법에도 씌워 세 종류 %가 늘 같았다(체감 점검 11-07). 낱말만 어림(~).
@@ -93,6 +95,8 @@ export function LanguageBank({
   const [view, setView] = useState<View>({ kind: null, axis: "topic", row: null, lv: null });
   const [help, setHelp] = useState(false);
   const [flip, setFlip] = useState<string[] | null>(null);
+  // 묶음 순서: 학습(난이도 순 그대로) | 대화(대화에서 쓴 수 많은 것부터) — 숫자는 섞지 않는다(2026-11-09).
+  const [order, setOrder] = useState<"quiz" | "talk">("quiz");
   useEffect(() => {
     let live = true;
     void loadBank(language).then((list) => {
@@ -124,6 +128,9 @@ export function LanguageBank({
     }
     return out;
   }, [ledger]);
+  // 대화에서 쓴 수(curriculum/wordUse.ts) — 퀴즈 칠하기와 따로, 자주 쓴 말 줄·대화 순서에만.
+  const talks = useMemo(() => talkCounts(ledger), [ledger]);
+  const often = useMemo(() => oftenUsed(ledger, 8), [ledger]);
   const valueOf = (one: Item) => {
     const tag = tags.get(one.key);
     return !tag ? 0 : Math.min(1, 0.4 + 0.2 * (tag.n - 1));
@@ -173,7 +180,12 @@ export function LanguageBank({
   if (lettersView && letters) crumbs.push({ label: ui.notebookScript, go: () => undefined });
   else if (view.kind) crumbs.push({ label: kindName[view.kind], go: () => setView({ ...view, row: null, lv: null }) });
   const kind = view.kind;
-  const bundle = kind && (view.row || view.lv) ? items[kind].filter((one) => (!view.row || rowOf(kind, one) === view.row) && (!view.lv || one.lv === view.lv)).sort((a, b) => a.rank - b.rank) : null;
+  const bundle =
+    kind && (view.row || view.lv)
+      ? items[kind]
+          .filter((one) => (!view.row || rowOf(kind, one) === view.row) && (!view.lv || one.lv === view.lv))
+          .sort((a, b) => (order === "talk" ? (talks.get(b.key) ?? 0) - (talks.get(a.key) ?? 0) : 0) || a.rank - b.rank)
+      : null;
   if (kind && bundle) {
     const rowLabel = view.row ? (kind === "word" ? (view.axis === "pos" ? posName[view.row] : topicName[view.row]) ?? view.row : "") : "";
     crumbs.push({ label: [view.lv ? ui.dictionaryStage.replace("{n}", lvName(view.lv)) : "", rowLabel].filter(Boolean).join(" · "), go: () => undefined });
@@ -209,6 +221,26 @@ export function LanguageBank({
           {lettersView && letters ? <div data-lb-letters>{letters.body}</div> : null}
           {!lettersView && letters && !kind ? letters.row(() => setLettersView(true)) : null}
           {lettersView ? null : !words ? <p className="py-6 text-center text-meta text-slate-500">…</p> : null}
+          {!lettersView && words && !kind && often.length ? (
+            <section data-lb-often className="rounded-2xl border border-line bg-surface p-3">
+              <p className="text-note font-semibold text-info">{ui.lbOftenUsed}</p>
+              <div className="mt-2 flex flex-wrap gap-1.5">
+                {often.map((one) => (
+                  <button
+                    key={one.key}
+                    type="button"
+                    dir="auto"
+                    data-lb-often-key={one.key}
+                    onClick={() => (one.key.startsWith("w|") ? setWord(one.key.slice(2)) : openLesson({ language, key: one.key }))}
+                    className="flex items-baseline gap-1.5 rounded-lg border border-line px-2.5 py-1 text-note text-ink hover:bg-white/5"
+                  >
+                    {one.key.slice(2)}
+                    <span className="text-meta tabular-nums text-info">{one.n}</span>
+                  </button>
+                ))}
+              </div>
+            </section>
+          ) : null}
           {!lettersView && words && !kind
             ? (["word", "expr", "gram"] as const).map((k) => {
                 const all = items[k];
@@ -309,6 +341,20 @@ export function LanguageBank({
                     <p className="flex-1 text-meta text-slate-400">
                       {pct(bundle)}
                     </p>
+                    <div className="flex gap-1" role="group">
+                      {(["quiz", "talk"] as const).map((one) => (
+                        <button
+                          key={one}
+                          type="button"
+                          data-lb-order={one}
+                          aria-pressed={order === one}
+                          onClick={() => setOrder(one)}
+                          className={`rounded-lg border px-2 py-0.5 text-meta ${order === one ? "border-status-learned/50 bg-status-learned/10 font-semibold text-status-learned" : "border-line text-slate-400"}`}
+                        >
+                          {one === "quiz" ? ui.lbFresh : ui.homeTabTalk}
+                        </button>
+                      ))}
+                    </div>
                     {/* 넘겨 보기(2026-11-08): 단어 묶음만 — 표현·문법은 수업으로 연다. */}
                     {kind === "word" ? (
                       <button type="button" data-lb-flip aria-label={ui.flipStart} title={ui.flipStart} onClick={() => setFlip(bundle.map((one) => one.word ?? one.name))} className="flex h-8 w-8 items-center justify-center rounded-full bg-white/90 text-note text-slate-900">
@@ -318,8 +364,9 @@ export function LanguageBank({
                   </div>
                   <div className="mt-2 flex flex-wrap gap-1.5">
                     {bundle.slice(0, 200).map((one) => (
-                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(valueOf(one))}>
+                      <button key={one.key} type="button" dir="auto" onClick={() => openItem(kind, one)} className="flex items-baseline gap-1.5 rounded-lg border border-line px-2.5 py-1 text-note text-ink" style={tint(valueOf(one))}>
                         {one.name}
+                        {order === "talk" && talks.get(one.key) ? <span className="text-meta tabular-nums text-info">{talks.get(one.key)}</span> : null}
                       </button>
                     ))}
                   </div>
