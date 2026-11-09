@@ -2893,6 +2893,22 @@
    "blank": "antenne"
   }
  ],
+ "w|antibiotique": [
+  {
+   "text": "La sœur de Hugo prend un antibiotique, d'où sa mauvaise humeur au téléphone.",
+   "en": "Hugo's sister is on an antibiotic, which explains her bad mood on the phone.",
+   "ko": "위고의 누나는 항생제를 먹고 있어서 전화로 기분이 안 좋았던 거예요.",
+   "blank": "antibiotique",
+   "src": "made"
+  },
+  {
+   "text": "Le chef explique à Léa que le vinaigre agit presque comme un antibiotique naturel.",
+   "en": "The chef explains to Léa that vinegar acts almost like a natural antibiotic.",
+   "ko": "셰프는 레아에게 식초가 거의 천연 항생제처럼 작용한다고 설명해요.",
+   "blank": "antibiotique",
+   "src": "made"
+  }
+ ],
  "w|antidote": [
   {
    "text": "Louis garde toujours un antidote contre le venin de vipère dans le frigo.",
@@ -2941,6 +2957,22 @@
    "src": "made"
   }
  ],
+ "w|anxieux": [
+  {
+   "text": "Avant d'appeler sa sœur, Hugo est si anxieux qu'il fait les cent pas.",
+   "en": "Before calling his sister, Hugo is so anxious that he paces up and down.",
+   "ko": "누나에게 전화하기 전에 위고는 너무 불안해서 왔다 갔다 해요.",
+   "blank": "anxieux",
+   "src": "made"
+  },
+  {
+   "text": "Léa est anxieuse avant l'examen final de pâtisserie.",
+   "en": "Léa is anxious before the final pastry exam.",
+   "ko": "레아는 제과 기말 시험을 앞두고 불안해요.",
+   "blank": "anxieuse",
+   "src": "made"
+  }
+ ],
  "w|août": [
   {
    "text": "Tout ferme au mois d'août.",
@@ -2953,6 +2985,22 @@
    "en": "We'll see each other in August, promise.",
    "ko": "팔월에 보자, 약속이야.",
    "blank": "août"
+  }
+ ],
+ "w|apaiser": [
+  {
+   "text": "Une tasse de chocolat chaud suffit à apaiser Hugo après la dispute.",
+   "en": "A cup of hot chocolate is enough to calm Hugo after the argument.",
+   "ko": "다툼 후 위고는 핫초코 한 잔으로 마음을 가라앉혀요.",
+   "blank": "apaiser",
+   "src": "made"
+  },
+  {
+   "text": "Le parfum du pain chaud suffit à apaiser Léa après une longue journée.",
+   "en": "The smell of warm bread is enough to soothe Léa after a long day.",
+   "ko": "긴 하루 끝에 따뜻한 빵 냄새만으로도 레아는 마음이 편안해져요.",
+   "blank": "apaiser",
+   "src": "made"
   }
  ],
  "w|apercevoir": [
@@ -6467,6 +6515,22 @@
    "src": "made"
   }
  ],
+ "w|béguin": [
+  {
+   "text": "Hugo a découvert que sa sœur avait le béguin pour son meilleur ami.",
+   "en": "Hugo found out that his sister had a crush on his best friend.",
+   "ko": "위고는 누나가 자기 단짝 친구에게 반했다는 걸 알았어요.",
+   "blank": "béguin",
+   "src": "made"
+  },
+  {
+   "text": "Les autres élèves devinent vite que Léa a le béguin pour le jeune assistant.",
+   "en": "The other students quickly guess that Léa has a crush on the young assistant.",
+   "ko": "다른 학생들은 레아가 젊은 조교에게 반했다는 걸 금방 눈치채요.",
+   "blank": "béguin",
+   "src": "made"
+  }
+ ],
  "w|beignet": [
   {
    "text": "Pendant le carnaval, Antoine fait frire des centaines de beignets.",
@@ -9358,6 +9422,22 @@
    "en": "For Léa, punctuality is a cardinal rule of reception work.",
    "ko": "레아에게 시간 엄수는 손님맞이의 기본 원칙이에요.",
    "blank": "cardinale",
+   "src": "made"
+  }
+ ],
+ "w|caresse": [
+  {
+   "text": "Hugo se rappelle la caresse de sa sœur sur ses cheveux quand il était malade.",
+   "en": "Hugo remembers his sister stroking his hair when he was ill.",
+   "ko": "위고는 아팠을 때 누나가 머리를 쓰다듬어 주던 걸 기억해요.",
+   "blank": "caresse",
+   "src": "made"
+  },
+  {
+   "text": "Le chef donne une petite caresse au chien de l'école qui attend sous la table.",
+   "en": "The chef gives a little stroke to the school dog waiting under the table.",
+   "ko": "셰프는 탁자 밑에서 기다리는 학교 강아지를 살짝 쓰다듬어요.",
+   "blank": "caresse",
    "src": "made"
   }
  ],
@@ -14761,6 +14841,22 @@
    "src": "made"
   }
  ],
+ "w|considération": [
+  {
+   "text": "Hugo n'a pas pris en considération les soucis de sa sœur au travail.",
+   "en": "Hugo didn't take his sister's worries at work into account.",
+   "ko": "위고는 누나의 직장 고민을 고려하지 않았어요.",
+   "blank": "considération",
+   "src": "made"
+  },
+  {
+   "text": "Le chef traite chaque élève avec beaucoup de considération, et Léa l'apprécie.",
+   "en": "The chef treats every student with great respect, and Léa appreciates it.",
+   "ko": "셰프는 학생 한 명 한 명을 존중으로 대해서 레아는 그 점이 좋아요.",
+   "blank": "considération",
+   "src": "made"
+  }
+ ],
  "w|considérer": [
   {
    "text": "On doit considérer toutes les options avant de décider.",
@@ -14788,6 +14884,38 @@
    "en": "According to Chloé, the repair just involves replacing the charging port.",
    "ko": "클로에 말로는 수리는 충전 단자만 바꾸면 돼요.",
    "blank": "consiste",
+   "src": "made"
+  }
+ ],
+ "w|consoler": [
+  {
+   "text": "Quand leur chat est mort, c'est Hugo qui a su consoler sa sœur.",
+   "en": "When their cat died, it was Hugo who knew how to comfort his sister.",
+   "ko": "고양이가 죽었을 때 누나를 달래 준 건 위고였어요.",
+   "blank": "consoler",
+   "src": "made"
+  },
+  {
+   "text": "Léa essaie de consoler sa voisine dont la crème a tourné.",
+   "en": "Léa tries to comfort the woman next to her whose cream has curdled.",
+   "ko": "레아는 크림이 상해 버린 옆자리 사람을 달래 줘요.",
+   "blank": "consoler",
+   "src": "made"
+  }
+ ],
+ "w|consommer": [
+  {
+   "text": "La sœur de Hugo lui reproche de trop consommer de vêtements neufs.",
+   "en": "Hugo's sister criticizes him for buying too many new clothes.",
+   "ko": "위고의 누나는 그가 새 옷을 너무 많이 산다고 나무라요.",
+   "blank": "consommer",
+   "src": "made"
+  },
+  {
+   "text": "Le chef apprend à Léa à consommer moins de beurre sans perdre le goût.",
+   "en": "The chef teaches Léa to use less butter without losing flavor.",
+   "ko": "셰프는 레아에게 맛을 잃지 않으면서 버터를 덜 쓰는 법을 가르쳐요.",
+   "blank": "consommer",
    "src": "made"
   }
  ],
@@ -14969,6 +15097,22 @@
    "en": "I will contact customer service tomorrow.",
    "ko": "내가 내일 고객센터에 연락할게.",
    "blank": "contacter"
+  }
+ ],
+ "w|contagieux": [
+  {
+   "text": "Le rire de la sœur de Hugo est si contagieux qu'il oublie vite sa colère.",
+   "en": "Hugo's sister's laugh is so contagious that he quickly forgets his anger.",
+   "ko": "누나의 웃음이 워낙 전염성이 있어서 위고는 금방 화를 잊어요.",
+   "blank": "contagieux",
+   "src": "made"
+  },
+  {
+   "text": "Léa a un rhume contagieux, alors elle porte un masque pendant le cours.",
+   "en": "Léa has a contagious cold, so she wears a mask during class.",
+   "ko": "레아는 옮기 쉬운 감기에 걸려서 수업 내내 마스크를 써요.",
+   "blank": "contagieux",
+   "src": "made"
   }
  ],
  "w|contaminer": [
@@ -15162,6 +15306,22 @@
    "en": "The postman is annoyed because the road to Sarah's village is closed again.",
    "ko": "사라네 마을로 가는 길이 또 막혀서 집배원은 언짢아요.",
    "blank": "contrarié",
+   "src": "made"
+  }
+ ],
+ "w|contrarier": [
+  {
+   "text": "Hugo ne voulait pas contrarier sa sœur en refusant son invitation.",
+   "en": "Hugo didn't want to upset his sister by turning down her invitation.",
+   "ko": "위고는 누나의 초대를 거절해서 누나를 속상하게 하고 싶지 않았어요.",
+   "blank": "contrarier",
+   "src": "made"
+  },
+  {
+   "text": "Léa n'ose pas contrarier le chef en ajoutant du sucre dans la sauce.",
+   "en": "Léa doesn't dare annoy the chef by adding sugar to the sauce.",
+   "ko": "레아는 소스에 설탕을 넣어 셰프 기분을 상하게 할 엄두가 안 나요.",
+   "blank": "contrarier",
    "src": "made"
   }
  ],
@@ -15814,6 +15974,22 @@
    "en": "Manon reads an article on corruption in public contracts along the coast.",
    "ko": "마농은 해안 지역 공공 계약 비리에 관한 기사를 읽어요.",
    "blank": "corruption",
+   "src": "made"
+  }
+ ],
+ "w|corvée": [
+  {
+   "text": "La dispute a commencé quand Hugo a oublié sa corvée de vaisselle chez leurs parents.",
+   "en": "The argument started when Hugo forgot his dishwashing chore at their parents' house.",
+   "ko": "위고가 부모님 댁에서 설거지 당번을 잊으면서 다툼이 시작됐어요.",
+   "blank": "corvée",
+   "src": "made"
+  },
+  {
+   "text": "Pour Léa, éplucher les oignons reste une vraie corvée.",
+   "en": "For Léa, peeling onions is still a real chore.",
+   "ko": "레아에게 양파 껍질 벗기기는 여전히 진짜 귀찮은 일이에요.",
+   "blank": "corvée",
    "src": "made"
   }
  ],
@@ -17152,6 +17328,22 @@
    "en": "Today's model is a former cook posing in his chef's hat.",
    "ko": "오늘의 모델은 요리사 모자를 쓰고 포즈를 취한 전직 요리사예요.",
    "blank": "cuisinier",
+   "src": "made"
+  }
+ ],
+ "w|cuisinière": [
+  {
+   "text": "La sœur de Hugo a gardé la vieille cuisinière en fonte de leur grand-mère.",
+   "en": "Hugo's sister kept their grandmother's old cast-iron stove.",
+   "ko": "위고의 누나는 할머니의 오래된 무쇠 화덕을 간직했어요.",
+   "blank": "cuisinière",
+   "src": "made"
+  },
+  {
+   "text": "Léa doit apprendre à régler la cuisinière à gaz de l'atelier.",
+   "en": "Léa has to learn how to adjust the workshop's gas stove.",
+   "ko": "레아는 실습실 가스레인지 다루는 법을 배워야 해요.",
+   "blank": "cuisinière",
    "src": "made"
   }
  ],
@@ -19245,6 +19437,22 @@
    "blank": "dépression"
   }
  ],
+ "w|déprimant": [
+  {
+   "text": "Le dimanche sans nouvelles de sa sœur est déprimant pour Hugo.",
+   "en": "The Sunday without news from his sister is depressing for Hugo.",
+   "ko": "누나에게서 연락이 없는 일요일이 위고에게는 우울해요.",
+   "blank": "déprimant",
+   "src": "made"
+  },
+  {
+   "text": "Un soufflé qui retombe, c'est déprimant, avoue Léa en riant.",
+   "en": "A soufflé that collapses is depressing, Léa admits with a laugh.",
+   "ko": "꺼져 버린 수플레는 우울하다고 레아가 웃으며 털어놓아요.",
+   "blank": "déprimant",
+   "src": "made"
+  }
+ ],
  "w|déprimé": [
   {
    "text": "Nicolas confie à Paul qu'il s'est senti déprimé après la fermeture de son atelier.",
@@ -19389,6 +19597,22 @@
    "en": "I leave as soon as you are ready.",
    "ko": "네가 준비되면 나는 바로 떠나.",
    "blank": "dès"
+  }
+ ],
+ "w|désaccord": [
+  {
+   "text": "Le désaccord entre Hugo et sa sœur porte sur la vente de la maison familiale.",
+   "en": "The disagreement between Hugo and his sister is about selling the family house.",
+   "ko": "위고와 누나의 의견 차이는 가족의 집을 파는 문제에 있어요.",
+   "blank": "désaccord",
+   "src": "made"
+  },
+  {
+   "text": "Léa et sa voisine de table ont un petit désaccord sur la cuisson des pâtes.",
+   "en": "Léa and the woman next to her have a small disagreement about cooking pasta.",
+   "ko": "레아와 옆자리 사람은 파스타 삶는 법을 두고 조금 의견이 달라요.",
+   "blank": "désaccord",
+   "src": "made"
   }
  ],
  "w|désactiver": [
@@ -19947,6 +20171,22 @@
    "blank": "détester"
   }
  ],
+ "w|détour": [
+  {
+   "text": "Pour éviter sa sœur, Hugo fait un long détour par le parc.",
+   "en": "To avoid his sister, Hugo takes a long detour through the park.",
+   "ko": "누나를 피하려고 위고는 공원으로 멀리 돌아가요.",
+   "blank": "détour",
+   "src": "made"
+  },
+  {
+   "text": "En rentrant du cours, Léa fait un détour par le marché pour acheter des herbes.",
+   "en": "On her way home from class, Léa makes a detour through the market to buy herbs.",
+   "ko": "수업이 끝나고 레아는 허브를 사러 시장에 들렀다 가요.",
+   "blank": "détour",
+   "src": "made"
+  }
+ ],
  "w|détourner": [
   {
    "text": "Le chef demande à Lucas de détourner la file des camions vers l'autre quai.",
@@ -20238,6 +20478,22 @@
    "en": "Inès called in a repairman to diagnose the corner shop's fridge.",
    "ko": "이네스는 가게 냉장고를 점검받으려고 수리 기사를 불렀어요.",
    "blank": "diagnostic",
+   "src": "made"
+  }
+ ],
+ "w|dialogue": [
+  {
+   "text": "Leur mère pousse Hugo à renouer le dialogue avec sa sœur.",
+   "en": "Their mother urges Hugo to start talking with his sister again.",
+   "ko": "어머니는 위고에게 누나와 다시 대화를 나누라고 권해요.",
+   "blank": "dialogue",
+   "src": "made"
+  },
+  {
+   "text": "Le cours commence toujours par un dialogue entre le chef et les élèves sur leurs goûts.",
+   "en": "The class always begins with a conversation between the chef and the students about their tastes.",
+   "ko": "수업은 늘 셰프와 학생들이 입맛에 대해 이야기를 나누는 것으로 시작해요.",
+   "blank": "dialogue",
    "src": "made"
   }
  ],
@@ -21555,6 +21811,22 @@
    "blank": "dormir"
   }
  ],
+ "w|dortoir": [
+  {
+   "text": "Hugo se souvient du dortoir de la colonie où il partageait tout avec sa sœur.",
+   "en": "Hugo remembers the summer camp dormitory where he shared everything with his sister.",
+   "ko": "위고는 누나와 뭐든 나눠 쓰던 캠프 기숙사를 떠올려요.",
+   "blank": "dortoir",
+   "src": "made"
+  },
+  {
+   "text": "Léa apprend à cuisiner pour les jeunes du dortoir où elle est surveillante.",
+   "en": "Léa is learning to cook for the young people in the dormitory where she's a supervisor.",
+   "ko": "레아는 사감으로 일하는 기숙사 학생들을 위해 요리를 배워요.",
+   "blank": "dortoir",
+   "src": "made"
+  }
+ ],
  "w|dos": [
   {
    "text": "J’ai mal au dos ce matin.",
@@ -22619,6 +22891,22 @@
    "blank": "éducation"
   }
  ],
+ "w|éduquer": [
+  {
+   "text": "Hugo reproche à sa sœur de vouloir éduquer ses enfants à sa place.",
+   "en": "Hugo accuses his sister of wanting to raise his children for him.",
+   "ko": "위고는 누나가 자기 대신 자기 아이들을 가르치려 한다고 나무라요.",
+   "blank": "éduquer",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de Léa veut éduquer le palais de ses élèves aux épices.",
+   "en": "Léa's chef wants to train his students' palates to spices.",
+   "ko": "레아의 셰프는 학생들의 입맛을 향신료에 길들이고 싶어 해요.",
+   "blank": "éduquer",
+   "src": "made"
+  }
+ ],
  "w|effacer": [
   {
    "text": "Tu peux effacer le tableau après le cours ?",
@@ -22894,6 +23182,22 @@
    "en": "When the snow melts, the sewer on Léa's street often overflows.",
    "ko": "눈이 녹을 때면 레아네 거리 하수구가 자주 넘쳐요.",
    "blank": "égout",
+   "src": "made"
+  }
+ ],
+ "w|élan": [
+  {
+   "text": "Dans un élan de tendresse, Hugo prend sa sœur dans ses bras.",
+   "en": "In a burst of tenderness, Hugo hugs his sister.",
+   "ko": "위고는 다정한 마음이 북받쳐 누나를 안아요.",
+   "blank": "élan",
+   "src": "made"
+  },
+  {
+   "text": "Après ce cours, Léa a pris l'élan nécessaire pour ouvrir son propre café.",
+   "en": "After this class, Léa found the drive she needed to open her own café.",
+   "ko": "이 수업 뒤에 레아는 자기 카페를 열 힘을 얻었어요.",
+   "blank": "élan",
    "src": "made"
   }
  ],
@@ -23183,6 +23487,22 @@
    "en": "An awkward silence followed.",
    "ko": "어색한 침묵이 이어졌어.",
    "blank": "embarrassant"
+  }
+ ],
+ "w|embarrassé": [
+  {
+   "text": "Hugo, très embarrassé, ne sait pas comment s'excuser auprès de sa sœur.",
+   "en": "Hugo, very embarrassed, doesn't know how to apologize to his sister.",
+   "ko": "위고는 민망해서 누나에게 어떻게 사과해야 할지 몰라요.",
+   "blank": "embarrassé",
+   "src": "made"
+  },
+  {
+   "text": "Léa est un peu embarrassée quand le chef lit sa recette à voix haute.",
+   "en": "Léa is a little embarrassed when the chef reads her recipe aloud.",
+   "ko": "셰프가 레아의 요리법을 소리 내어 읽자 레아는 조금 쑥스러워요.",
+   "blank": "embarrassée",
+   "src": "made"
   }
  ],
  "w|embaucher": [
@@ -23551,6 +23871,22 @@
    "en": "Can you lend me ten euros?",
    "ko": "나한테 십 유로를 emprunter 해줄 수 있어?",
    "blank": "emprunter"
+  }
+ ],
+ "w|ému": [
+  {
+   "text": "Quand sa sœur lui ouvre enfin la porte, Hugo est très ému.",
+   "en": "When his sister finally opens the door to him, Hugo is very moved.",
+   "ko": "누나가 마침내 문을 열어 주자 위고는 크게 감동해요.",
+   "blank": "ému",
+   "src": "made"
+  },
+  {
+   "text": "Léa est émue quand sa mère goûte le gâteau qu'elle a appris à faire.",
+   "en": "Léa is moved when her mother tastes the cake she learned to make.",
+   "ko": "어머니가 자기가 배운 케이크를 맛볼 때 레아는 뭉클해요.",
+   "blank": "émue",
+   "src": "made"
   }
  ],
  "w|en": [
@@ -24226,6 +24562,22 @@
    "en": "In Manon's crime novel, an investigator arrives in a small port in the middle of winter.",
    "ko": "마농이 읽는 추리 소설에서 한 수사관이 한겨울 작은 항구에 도착해요.",
    "blank": "enquêteur",
+   "src": "made"
+  }
+ ],
+ "w|enragé": [
+  {
+   "text": "Hugo a reçu un message enragé de sa sœur à minuit.",
+   "en": "Hugo got a furious message from his sister at midnight.",
+   "ko": "위고는 자정에 누나에게서 화가 잔뜩 난 메시지를 받았어요.",
+   "blank": "enragé",
+   "src": "made"
+  },
+  {
+   "text": "Léa rit en voyant le chef faire semblant d'être enragé devant une soupe trop salée.",
+   "en": "Léa laughs as the chef pretends to be furious at an over-salted soup.",
+   "ko": "셰프가 너무 짠 수프 앞에서 화난 척하는 걸 보고 레아가 웃어요.",
+   "blank": "enragé",
    "src": "made"
   }
  ],
@@ -26335,6 +26687,15 @@
    "blank": "excitante"
   }
  ],
+ "w|excitation": [
+  {
+   "text": "Léa sent l'excitation monter quand le chef goûte son plat.",
+   "en": "Léa feels the excitement rising when the chef tastes her dish.",
+   "ko": "셰프가 자기 요리를 맛볼 때 레아는 가슴이 두근거려요.",
+   "blank": "excitation",
+   "src": "made"
+  }
+ ],
  "w|excité": [
   {
    "text": "Je suis très excité pour le concert ce soir.",
@@ -27475,6 +27836,22 @@
    "en": "After exercising, he is tired.",
    "ko": "운동 후에 그는 피곤해.",
    "blank": "fatigué"
+  }
+ ],
+ "w|fatiguer": [
+  {
+   "text": "Les reproches de sa sœur finissent par fatiguer Hugo.",
+   "en": "His sister's reproaches end up wearing Hugo out.",
+   "ko": "누나의 잔소리에 위고는 결국 지쳐요.",
+   "blank": "fatiguer",
+   "src": "made"
+  },
+  {
+   "text": "Pétrir la pâte à pain finit par fatiguer les bras de Léa.",
+   "en": "Kneading the bread dough ends up tiring Léa's arms.",
+   "ko": "빵 반죽을 치대다 보면 레아의 팔이 지쳐요.",
+   "blank": "fatiguer",
+   "src": "made"
   }
  ],
  "w|faucon": [
@@ -30175,6 +30552,22 @@
    "blank": "galaxie"
   }
  ],
+ "w|galère": [
+  {
+   "text": "Trouver un cadeau d'excuse pour sa sœur est une vraie galère pour Hugo.",
+   "en": "Finding an apology gift for his sister is a real hassle for Hugo.",
+   "ko": "누나에게 줄 사과 선물을 찾는 게 위고에게는 정말 고역이에요.",
+   "blank": "galère",
+   "src": "made"
+  },
+  {
+   "text": "Réussir la mayonnaise à la main a été une galère pour Léa.",
+   "en": "Getting mayonnaise right by hand was a struggle for Léa.",
+   "ko": "손으로 마요네즈를 만드는 건 레아에게 고생이었어요.",
+   "blank": "galère",
+   "src": "made"
+  }
+ ],
  "w|galerie": [
   {
    "text": "La galerie présente de jeunes artistes.",
@@ -30655,6 +31048,22 @@
    "en": "Thank you for your generous gesture.",
    "ko": "네 관대한 행동에 고마워.",
    "blank": "généreux"
+  }
+ ],
+ "w|générosité": [
+  {
+   "text": "Hugo avait pris la générosité de sa sœur pour de la pitié.",
+   "en": "Hugo had mistaken his sister's generosity for pity.",
+   "ko": "위고는 누나의 너그러움을 동정으로 오해했어요.",
+   "blank": "générosité",
+   "src": "made"
+  },
+  {
+   "text": "Léa remercie le chef pour sa générosité : il partage tous ses secrets.",
+   "en": "Léa thanks the chef for his generosity: he shares all his secrets.",
+   "ko": "레아는 비법을 다 알려 주는 셰프의 너그러움에 고마워해요.",
+   "blank": "générosité",
+   "src": "made"
   }
  ],
  "w|génétique": [
@@ -32275,6 +32684,22 @@
    "blank": "haricot"
   }
  ],
+ "w|harmonie": [
+  {
+   "text": "Hugo et sa sœur vivaient en parfaite harmonie avant cette histoire d'héritage.",
+   "en": "Hugo and his sister lived in perfect harmony before this inheritance business.",
+   "ko": "위고와 누나는 이 유산 문제 전에는 완벽하게 사이좋게 지냈어요.",
+   "blank": "harmonie",
+   "src": "made"
+  },
+  {
+   "text": "Le chef montre à Léa comment trouver l'harmonie entre le sucré et l'acide.",
+   "en": "The chef shows Léa how to find the balance between sweet and sour.",
+   "ko": "셰프는 레아에게 단맛과 신맛의 조화를 찾는 법을 보여 줘요.",
+   "blank": "harmonie",
+   "src": "made"
+  }
+ ],
  "w|hasard": [
   {
    "text": "C'est le pur hasard si on s'est rencontrés.",
@@ -33107,6 +33532,22 @@
    "src": "made"
   }
  ],
+ "w|humiliant": [
+  {
+   "text": "Hugo a trouvé humiliant que sa sœur raconte son échec à tout le monde.",
+   "en": "Hugo found it humiliating that his sister told everyone about his failure.",
+   "ko": "위고는 누나가 자기 실패를 모두에게 말한 게 창피했어요.",
+   "blank": "humiliant",
+   "src": "made"
+  },
+  {
+   "text": "Léa a trouvé humiliant de brûler la tarte devant tout le groupe.",
+   "en": "Léa found it humiliating to burn the tart in front of the whole group.",
+   "ko": "레아는 모두 앞에서 타르트를 태운 게 창피했어요.",
+   "blank": "humiliant",
+   "src": "made"
+  }
+ ],
  "w|humiliation": [
   {
    "text": "La sœur de Julien a vécu le fou rire de la famille comme une humiliation.",
@@ -33228,6 +33669,22 @@
    "en": "Léa's doctors put forward a hypothesis to explain the fever.",
    "ko": "레아네 의사들은 열의 원인을 설명할 가설을 내놓아요.",
    "blank": "hypothèse",
+   "src": "made"
+  }
+ ],
+ "w|hystérique": [
+  {
+   "text": "Hugo a entendu un rire hystérique dans la cuisine et a cru que sa sœur se moquait de lui.",
+   "en": "Hugo heard hysterical laughter in the kitchen and thought his sister was mocking him.",
+   "ko": "위고는 부엌에서 들린 자지러지는 웃음소리를 듣고 누나가 자기를 비웃는 줄 알았어요.",
+   "blank": "hystérique",
+   "src": "made"
+  },
+  {
+   "text": "Quand la poêle prend feu, une élève devient hystérique, mais Léa garde son calme.",
+   "en": "When the pan catches fire, a student becomes hysterical, but Léa stays calm.",
+   "ko": "프라이팬에 불이 붙자 한 학생은 패닉에 빠지지만 레아는 침착해요.",
+   "blank": "hystérique",
    "src": "made"
   }
  ],
@@ -37549,6 +38006,22 @@
    "src": "made"
   }
  ],
+ "w|lasser": [
+  {
+   "text": "Les silences de sa sœur commencent à lasser Hugo.",
+   "en": "His sister's silences are starting to wear on Hugo.",
+   "ko": "누나의 침묵에 위고는 지쳐 가요.",
+   "blank": "lasser",
+   "src": "made"
+  },
+  {
+   "text": "Léa ne risque pas de se lasser des recettes de pâtes.",
+   "en": "Léa is not likely to tire of pasta recipes.",
+   "ko": "레아는 파스타 요리법에 질릴 일이 없어요.",
+   "blank": "lasser",
+   "src": "made"
+  }
+ ],
  "w|latin": [
   {
    "text": "Hugo a appris quelques expressions latines pour ses chroniques.",
@@ -38145,6 +38618,22 @@
    "blank": "ligne"
   }
  ],
+ "w|lignée": [
+  {
+   "text": "Hugo et sa sœur ont hérité de l'entêtement de toute une lignée de paysans.",
+   "en": "Hugo and his sister inherited the stubbornness of a whole line of farmers.",
+   "ko": "위고와 누나는 농부 집안 대대로 내려온 고집을 물려받았어요.",
+   "blank": "lignée",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de Léa vient d'une longue lignée de pâtissiers.",
+   "en": "Léa's chef comes from a long line of pastry chefs.",
+   "ko": "레아의 셰프는 대대로 제과사 집안 출신이에요.",
+   "blank": "lignée",
+   "src": "made"
+  }
+ ],
  "w|ligue": [
   {
    "text": "Il joue dans une ligue amateur le week-end.",
@@ -38669,6 +39158,22 @@
    "en": "This lot contains several surprises.",
    "ko": "이 묶음에는 여러 놀라움이 들어있어.",
    "blank": "lot"
+  }
+ ],
+ "w|loterie": [
+  {
+   "text": "Hugo croit que sa sœur a gagné à la loterie et qu'elle ne lui a rien dit.",
+   "en": "Hugo thinks his sister won the lottery and didn't tell him.",
+   "ko": "위고는 누나가 복권에 당첨됐는데 자기한테 말하지 않았다고 생각해요.",
+   "blank": "loterie",
+   "src": "made"
+  },
+  {
+   "text": "Léa a gagné son cours de cuisine grâce à une loterie au supermarché.",
+   "en": "Léa won her cooking class through a supermarket lottery.",
+   "ko": "레아는 슈퍼마켓 경품 추첨으로 요리 수업을 따냈어요.",
+   "blank": "loterie",
+   "src": "made"
   }
  ],
  "w|louche": [
@@ -41126,6 +41631,22 @@
    "en": "Sarah misunderstood the painter's intention when she read the painting's title.",
    "ko": "사라는 그림 제목을 읽고 화가의 의도를 잘못 이해했어요.",
    "blank": "méprise",
+   "src": "made"
+  }
+ ],
+ "w|mépris": [
+  {
+   "text": "Hugo a cru voir du mépris dans le regard de sa sœur, mais elle était juste fatiguée.",
+   "en": "Hugo thought he saw contempt in his sister's eyes, but she was just tired.",
+   "ko": "위고는 누나 눈빛에서 경멸을 봤다고 생각했지만 누나는 그냥 피곤했던 거예요.",
+   "blank": "mépris",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de Léa n'a aucun mépris pour la cuisine simple de tous les jours.",
+   "en": "Léa's chef has no contempt for simple everyday cooking.",
+   "ko": "레아의 셰프는 소박한 집밥을 전혀 깔보지 않아요.",
+   "blank": "mépris",
    "src": "made"
   }
  ],
@@ -44763,6 +45284,22 @@
    "src": "made"
   }
  ],
+ "w|offense": [
+  {
+   "text": "La sœur de Hugo n'avait aucune intention de lui faire une offense.",
+   "en": "Hugo's sister had no intention of offending him.",
+   "ko": "위고의 누나는 그를 모욕할 생각이 전혀 없었어요.",
+   "blank": "offense",
+   "src": "made"
+  },
+  {
+   "text": "Pour le chef, mettre du ketchup sur ses pâtes est une offense, et Léa le taquine.",
+   "en": "To the chef, putting ketchup on his pasta is an insult, and Léa teases him about it.",
+   "ko": "셰프에게 파스타에 케첩을 뿌리는 건 모욕이라서 레아가 그걸로 놀려요.",
+   "blank": "offense",
+   "src": "made"
+  }
+ ],
  "w|offensé": [
   {
    "text": "La cheffe a eu l'air offensée quand Thomas l'a appelée « madame ».",
@@ -45472,6 +46009,22 @@
    "en": "Sarah's friend now works for a nature conservation organisation.",
    "ko": "사라의 친구는 이제 자연 보호 단체에서 일해요.",
    "blank": "organisme",
+   "src": "made"
+  }
+ ],
+ "w|orgueil": [
+  {
+   "text": "Par orgueil, Hugo refuse d'appeler sa sœur le premier.",
+   "en": "Out of pride, Hugo refuses to call his sister first.",
+   "ko": "위고는 자존심 때문에 먼저 누나에게 전화하지 않아요.",
+   "blank": "orgueil",
+   "src": "made"
+  },
+  {
+   "text": "Le chef parle de son orgueil de cuisinier, mais Léa le trouve très humble.",
+   "en": "The chef talks about his pride as a cook, but Léa finds him very humble.",
+   "ko": "셰프는 요리사의 자존심을 이야기하지만 레아는 그가 아주 겸손하다고 생각해요.",
+   "blank": "orgueil",
    "src": "made"
   }
  ],
@@ -50957,6 +51510,22 @@
    "en": "That’s her all-time favorite movie.",
    "ko": "그건 그녀가 가장 좋아하는 영화야.",
    "blank": "préféré"
+  }
+ ],
+ "w|préférence": [
+  {
+   "text": "Hugo pense que leurs parents ont une préférence pour sa sœur.",
+   "en": "Hugo thinks their parents favor his sister.",
+   "ko": "위고는 부모님이 누나를 더 좋아한다고 생각해요.",
+   "blank": "préférence",
+   "src": "made"
+  },
+  {
+   "text": "Léa a une préférence pour les desserts aux fruits rouges.",
+   "en": "Léa has a preference for red-fruit desserts.",
+   "ko": "레아는 베리류 디저트를 더 좋아해요.",
+   "blank": "préférence",
+   "src": "made"
   }
  ],
  "w|préférer": [
@@ -57733,6 +58302,22 @@
    "blank": "ridicule"
   }
  ],
+ "w|ridiculiser": [
+  {
+   "text": "Hugo pense que sa sœur a voulu le ridiculiser devant leurs cousins.",
+   "en": "Hugo thinks his sister wanted to make fun of him in front of their cousins.",
+   "ko": "위고는 누나가 사촌들 앞에서 자기를 놀림거리로 만들려 했다고 생각해요.",
+   "blank": "ridiculiser",
+   "src": "made"
+  },
+  {
+   "text": "Le chef de Léa ne cherche jamais à ridiculiser un élève qui rate sa sauce.",
+   "en": "Léa's chef never tries to make fun of a student who ruins their sauce.",
+   "ko": "레아의 셰프는 소스를 망친 학생을 절대 놀리지 않아요.",
+   "blank": "ridiculiser",
+   "src": "made"
+  }
+ ],
  "w|rien": [
   {
    "text": "Je n’ai rien à dire.",
@@ -64059,6 +64644,22 @@
    "blank": "sympa"
   }
  ],
+ "w|sympathie": [
+  {
+   "text": "Le beau-frère de Hugo a toujours eu de la sympathie pour lui.",
+   "en": "Hugo's brother-in-law has always had a soft spot for him.",
+   "ko": "위고의 매형은 늘 위고에게 호감을 가져 왔어요.",
+   "blank": "sympathie",
+   "src": "made"
+  },
+  {
+   "text": "Léa a tout de suite eu de la sympathie pour la vieille dame à côté d'elle.",
+   "en": "Léa immediately took a liking to the old lady next to her.",
+   "ko": "레아는 옆자리 할머니에게 바로 호감이 갔어요.",
+   "blank": "sympathie",
+   "src": "made"
+  }
+ ],
  "w|sympathique": [
   {
    "text": "La greffière est très sympathique et aide toujours Antoine à trouver la bonne salle.",
@@ -67951,6 +68552,22 @@
    "blank": "vache"
   }
  ],
+ "w|vagabond": [
+  {
+   "text": "La sœur de Hugo l'appelle son petit vagabond, car il change de ville chaque année.",
+   "en": "Hugo's sister calls him her little wanderer, because he moves to a new town every year.",
+   "ko": "위고가 해마다 도시를 옮겨 다녀서 누나는 그를 꼬마 방랑자라고 불러요.",
+   "blank": "vagabond",
+   "src": "made"
+  },
+  {
+   "text": "Léa apporte les restes du cours à un vagabond assis près de l'école.",
+   "en": "Léa brings the leftovers from class to a homeless man sitting near the school.",
+   "ko": "레아는 수업에서 남은 음식을 학교 근처에 앉아 있는 떠돌이에게 가져다줘요.",
+   "blank": "vagabond",
+   "src": "made"
+  }
+ ],
  "w|vague": [
   {
    "text": "Une grande vague s'est écrasée sur la plage.",
@@ -69427,6 +70044,22 @@
    "en": "Shut the window, the wind is blasting in.",
    "ko": "바람 들어오니까 유리창 닫아.",
    "blank": "vitre"
+  }
+ ],
+ "w|vitrine": [
+  {
+   "text": "Hugo voit dans une vitrine le cadeau que sa sœur voulait depuis longtemps.",
+   "en": "Hugo sees in a shop window the gift his sister had wanted for a long time.",
+   "ko": "위고는 누나가 오래전부터 갖고 싶어 하던 선물을 진열장에서 봐요.",
+   "blank": "vitrine",
+   "src": "made"
+  },
+  {
+   "text": "Les gâteaux du cours sont exposés dans la vitrine de l'école, et Léa en est fière.",
+   "en": "The class's cakes are displayed in the school's window, and Léa is proud of it.",
+   "ko": "수업에서 만든 케이크가 학교 진열장에 놓여서 레아는 뿌듯해요.",
+   "blank": "vitrine",
+   "src": "made"
   }
  ],
  "w|vivant": [

@@ -3847,6 +3847,22 @@
    "blank": "alternativa"
   }
  ],
+ "w|alternativo": [
+  {
+   "text": "Como la calle estaba cortada, Hugo buscó un acceso alternativo para los camiones.",
+   "en": "Since the street was closed, Hugo looked for an alternative access for the lorries.",
+   "ko": "길이 막혀서 우고는 트럭이 들어올 다른 길을 찾았어요.",
+   "blank": "alternativo",
+   "src": "made"
+  },
+  {
+   "text": "Como el maratón se suspendió, Paula organizó una carrera alternativa con sus amigas.",
+   "en": "Since the marathon was cancelled, Paula organised an alternative race with her friends.",
+   "ko": "마라톤이 취소돼서 파울라는 친구들과 대신 달리기를 열었어요.",
+   "blank": "alternativa",
+   "src": "made"
+  }
+ ],
  "w|alteza": [
   {
    "text": "La alteza real saludó desde el balcón.",
@@ -4401,6 +4417,22 @@
    "en": "We need a deeper analysis.",
    "ko": "더 깊은 분석이 필요해.",
    "blank": "análisis"
+  }
+ ],
+ "w|analista": [
+  {
+   "text": "Un analista de la empresa revisó los costes de la obra con Hugo.",
+   "en": "A company analyst reviewed the site costs with Hugo.",
+   "ko": "회사 분석가가 우고와 함께 공사 비용을 검토했어요.",
+   "blank": "analista",
+   "src": "made"
+  },
+  {
+   "text": "Paula trabaja como analista de datos y por las tardes entrena para el maratón.",
+   "en": "Paula works as a data analyst and trains for the marathon in the evenings.",
+   "ko": "파울라는 데이터 분석가로 일하고 저녁마다 마라톤 훈련을 해요.",
+   "blank": "analista",
+   "src": "made"
   }
  ],
  "w|analizar": [
@@ -5163,6 +5195,22 @@
    "src": "made"
   }
  ],
+ "w|aparente": [
+  {
+   "text": "A pesar de su aparente calma, Hugo estaba nervioso el día de la inspección.",
+   "en": "Despite his apparent calm, Hugo was nervous on inspection day.",
+   "ko": "우고는 겉으로는 침착해 보였지만 점검 날에는 긴장했어요.",
+   "blank": "aparente",
+   "src": "made"
+  },
+  {
+   "text": "Paula llegó a la meta con una aparente facilidad que sorprendió a todos.",
+   "en": "Paula reached the finish with an apparent ease that surprised everyone.",
+   "ko": "파울라가 겉보기엔 너무 쉽게 결승선에 들어와서 모두가 놀랐어요.",
+   "blank": "aparente",
+   "src": "made"
+  }
+ ],
  "w|aparentemente": [
   {
    "text": "Aparentemente, el tren llegará tarde.",
@@ -5534,6 +5582,22 @@
    "en": "When the booking system went down, Nuria's reception looked like the apocalypse.",
    "ko": "예약 시스템이 다운되자 누리아의 프런트는 아수라장이 됐어요.",
    "blank": "apocalipsis",
+   "src": "made"
+  }
+ ],
+ "w|apoderarse": [
+  {
+   "text": "Hugo cerró la obra con candado para que nadie pudiera apoderarse de las herramientas.",
+   "en": "Hugo padlocked the site so nobody could make off with the tools.",
+   "ko": "우고는 아무도 공구를 가져가지 못하게 공사장에 자물쇠를 채웠어요.",
+   "blank": "apoderarse",
+   "src": "made"
+  },
+  {
+   "text": "Paula sintió que el cansancio iba a apoderarse de sus piernas en el último tramo.",
+   "en": "Paula felt that exhaustion was about to take over her legs in the final stretch.",
+   "ko": "파울라는 마지막 구간에서 다리에 힘이 빠질 것 같았어요.",
+   "blank": "apoderarse",
    "src": "made"
   }
  ],
@@ -6453,6 +6517,22 @@
    "blank": "arrastrar"
   }
  ],
+ "w|arrastre": [
+  {
+   "text": "El arrastre de las vigas por el barro dejó surcos en la entrada de la obra.",
+   "en": "Dragging the beams through the mud left ruts at the site entrance.",
+   "ko": "들보를 진흙 위로 끌고 가서 공사장 입구에 바퀴 자국이 남았어요.",
+   "blank": "arrastre",
+   "src": "made"
+  },
+  {
+   "text": "Paula notaba el arrastre de los pies al final, de puro cansancio.",
+   "en": "Paula noticed herself dragging her feet at the end, from sheer tiredness.",
+   "ko": "파울라는 끝에 가서 너무 지쳐 발이 질질 끌리는 걸 느꼈어요.",
+   "blank": "arrastre",
+   "src": "made"
+  }
+ ],
  "w|arrebatar": [
   {
    "text": "En el partido, un chico intentó arrebatar el balón a Diego con una falta.",
@@ -7113,6 +7193,22 @@
    "en": "This seat is taken.",
    "ko": "이 자리는 이미 있어.",
    "blank": "asiento"
+  }
+ ],
+ "w|asignación": [
+  {
+   "text": "Hugo se quejó de que la asignación de presupuesto para seguridad era demasiado baja.",
+   "en": "Hugo complained that the budget allocation for safety was too low.",
+   "ko": "우고는 안전 예산 배정이 너무 적다고 불평했어요.",
+   "blank": "asignación",
+   "src": "made"
+  },
+  {
+   "text": "Los padres de Paula le dan una pequeña asignación mensual para la inscripción en carreras.",
+   "en": "Paula's parents give her a small monthly allowance for race entries.",
+   "ko": "파울라의 부모님은 대회 참가비로 매달 용돈을 조금 줘요.",
+   "blank": "asignación",
+   "src": "made"
   }
  ],
  "w|asignar": [
@@ -8353,6 +8449,22 @@
    "blank": "autorizar"
   }
  ],
+ "w|auxiliar": [
+  {
+   "text": "En la obra de Hugo hay un generador auxiliar por si se va la luz.",
+   "en": "There is a backup generator on Hugo's site in case the power goes out.",
+   "ko": "우고의 공사장에는 정전에 대비한 보조 발전기가 있어요.",
+   "blank": "auxiliar",
+   "src": "made"
+  },
+  {
+   "text": "En el maratón, Paula trabajó de voluntaria auxiliar en la meta.",
+   "en": "At the marathon, Paula worked as an assistant volunteer at the finish line.",
+   "ko": "파울라는 마라톤에서 결승선 보조 자원봉사자로 일했어요.",
+   "blank": "auxiliar",
+   "src": "made"
+  }
+ ],
  "w|auxilio": [
   {
    "text": "Gritó auxilio cuando vio el accidente.",
@@ -8825,6 +8937,22 @@
    "blank": "bala"
   }
  ],
+ "w|balance": [
+  {
+   "text": "Al final del mes, Hugo hizo un balance de los materiales que quedaban en el almacén.",
+   "en": "At the end of the month, Hugo took stock of the materials left in the store.",
+   "ko": "월말에 우고는 창고에 남은 자재를 결산했어요.",
+   "blank": "balance",
+   "src": "made"
+  },
+  {
+   "text": "Después de la carrera, Paula hizo balance de los meses de entrenamiento.",
+   "en": "After the race, Paula reflected on her months of training.",
+   "ko": "파울라는 경주가 끝난 뒤 몇 달간의 훈련을 돌아봤어요.",
+   "blank": "balance",
+   "src": "made"
+  }
+ ],
  "w|balazo": [
   {
    "text": "En la armadura expuesta se ve todavía la marca de un balazo, explicó Andrés.",
@@ -8991,6 +9119,22 @@
    "en": "Banking hours change in summer.",
    "ko": "은행 영업시간이 여름에 바뀌어.",
    "blank": "bancario"
+  }
+ ],
+ "w|bancarrota": [
+  {
+   "text": "La empresa que antes llevaba la obra se declaró en bancarrota y Hugo tuvo que terminarla.",
+   "en": "The company that ran the site before went bankrupt and Hugo had to finish it.",
+   "ko": "전에 공사를 맡던 회사가 파산해서 우고가 마무리해야 했어요.",
+   "blank": "bancarrota",
+   "src": "made"
+  },
+  {
+   "text": "El club de atletismo de Paula estuvo a punto de caer en bancarrota.",
+   "en": "Paula's athletics club was on the verge of bankruptcy.",
+   "ko": "파울라의 육상 클럽은 하마터면 파산할 뻔했어요.",
+   "blank": "bancarrota",
+   "src": "made"
   }
  ],
  "w|banco": [
@@ -13361,6 +13505,22 @@
    "blank": "carne"
   }
  ],
+ "w|carné": [
+  {
+   "text": "Hugo se sacó el carné de operador de grúa el año pasado.",
+   "en": "Hugo got his crane operator licence last year.",
+   "ko": "우고는 작년에 크레인 기사 자격증을 땄어요.",
+   "blank": "carné",
+   "src": "made"
+  },
+  {
+   "text": "Para recoger el dorsal, Paula tuvo que enseñar el carné de identidad.",
+   "en": "To collect her race number, Paula had to show her ID card.",
+   "ko": "파울라는 번호표를 받으려고 신분증을 보여 줘야 했어요.",
+   "blank": "carné",
+   "src": "made"
+  }
+ ],
  "w|carnicero": [
   {
    "text": "El carnicero del barrio siempre le guarda a Rosa el mejor trozo.",
@@ -13420,6 +13580,22 @@
    "en": "Sofía keeps Marta's letters in a cardboard folder with her name on it.",
    "ko": "소피아는 마르타의 편지를 이름이 적힌 종이 폴더에 보관해요.",
    "blank": "carpeta",
+   "src": "made"
+  }
+ ],
+ "w|carpintero": [
+  {
+   "text": "Hugo llamó a un carpintero para montar las puertas del edificio nuevo.",
+   "en": "Hugo called a carpenter to fit the doors in the new building.",
+   "ko": "우고는 새 건물에 문을 달려고 목수를 불렀어요.",
+   "blank": "carpintero",
+   "src": "made"
+  },
+  {
+   "text": "El padre de Paula es carpintero y le hizo una estantería para sus medallas.",
+   "en": "Paula's father is a carpenter and made her a shelf for her medals.",
+   "ko": "파울라의 아버지는 목수라서 메달을 올려 둘 선반을 만들어 줬어요.",
+   "blank": "carpintero",
    "src": "made"
   }
  ],
@@ -13897,6 +14073,22 @@
    "en": "It was pure chance that we arrived together.",
    "ko": "같이 도착한 건 순전히 우연이었어.",
    "blank": "casualidad"
+  }
+ ],
+ "w|casualmente": [
+  {
+   "text": "Hugo se encontró casualmente con su antiguo profesor de dibujo técnico en la obra.",
+   "en": "Hugo ran into his old technical drawing teacher on the site by chance.",
+   "ko": "우고는 공사장에서 우연히 옛 제도 선생님을 만났어요.",
+   "blank": "casualmente",
+   "src": "made"
+  },
+  {
+   "text": "Paula conoció casualmente a su pareja en un grupo de entrenamiento.",
+   "en": "Paula met her partner by chance in a training group.",
+   "ko": "파울라는 훈련 모임에서 우연히 지금의 연인을 만났어요.",
+   "blank": "casualmente",
+   "src": "made"
   }
  ],
  "w|catástrofe": [
@@ -17241,6 +17433,22 @@
    "blank": "competir"
   }
  ],
+ "w|competitivo": [
+  {
+   "text": "El sector de la construcción es muy competitivo, y Hugo lo sabe bien.",
+   "en": "The construction sector is very competitive, and Hugo knows it well.",
+   "ko": "건설업은 경쟁이 아주 치열한데 우고도 그걸 잘 알아요.",
+   "blank": "competitivo",
+   "src": "made"
+  },
+  {
+   "text": "Paula no es muy competitiva; corre sobre todo para divertirse.",
+   "en": "Paula isn't very competitive; she mainly runs for fun.",
+   "ko": "파울라는 경쟁심이 별로 없어요. 주로 즐기려고 달려요.",
+   "blank": "competitiva",
+   "src": "made"
+  }
+ ],
  "w|complacer": [
   {
    "text": "Siempre intenta complacer a sus padres.",
@@ -19713,6 +19921,22 @@
    "en": "Where's the remote control?",
    "ko": "리모컨 어디 있어?",
    "blank": "control"
+  }
+ ],
+ "w|controlador": [
+  {
+   "text": "Hugo cambió el controlador de la grúa porque fallaba con la lluvia.",
+   "en": "Hugo replaced the crane's controller because it failed in the rain.",
+   "ko": "우고는 비만 오면 고장 나는 크레인 제어기를 바꿨어요.",
+   "blank": "controlador",
+   "src": "made"
+  },
+  {
+   "text": "En la salida, un controlador revisaba que todos los corredores llevaran el chip.",
+   "en": "At the start, a marshal checked that all the runners had their chip.",
+   "ko": "출발선에서 한 진행 요원이 모든 선수가 칩을 달았는지 확인했어요.",
+   "blank": "controlador",
+   "src": "made"
   }
  ],
  "w|controlar": [
@@ -31839,6 +32063,22 @@
    "src": "made"
   }
  ],
+ "w|esquema": [
+  {
+   "text": "Hugo dibujó un esquema rápido para explicar a los obreros dónde iba cada viga.",
+   "en": "Hugo drew a quick diagram to explain to the workers where each beam went.",
+   "ko": "우고는 들보가 어디에 들어가는지 인부들에게 설명하려고 간단한 도면을 그렸어요.",
+   "blank": "esquema",
+   "src": "made"
+  },
+  {
+   "text": "Paula se dibujó en la mano un esquema del recorrido con las cuestas.",
+   "en": "Paula drew a sketch of the route with the hills on her hand.",
+   "ko": "파울라는 손등에 오르막이 표시된 코스 약도를 그렸어요.",
+   "blank": "esquema",
+   "src": "made"
+  }
+ ],
  "w|esquí": [
   {
    "text": "Javier organizó una excursión de esquí para los empleados municipales.",
@@ -32417,6 +32657,22 @@
    "en": "We need a clear strategy to sell more.",
    "ko": "더 많이 팔려면 분명한 전략이 필요해.",
    "blank": "estrategia"
+  }
+ ],
+ "w|estratégico": [
+  {
+   "text": "La grúa de Hugo está en un punto estratégico para llegar a todo el edificio.",
+   "en": "Hugo's crane is in a strategic spot to reach the whole building.",
+   "ko": "우고의 크레인은 건물 전체에 닿을 수 있는 전략적인 자리에 있어요.",
+   "blank": "estratégico",
+   "src": "made"
+  },
+  {
+   "text": "Su entrenador le preparó a Paula un plan estratégico para no gastar energía al principio.",
+   "en": "Her coach prepared a strategic plan for Paula so she wouldn't waste energy at the start.",
+   "ko": "코치는 파울라가 초반에 힘을 빼지 않도록 전략적인 계획을 짜 줬어요.",
+   "blank": "estratégico",
+   "src": "made"
   }
  ],
  "w|estrechar": [
@@ -33309,6 +33565,22 @@
    "src": "made"
   }
  ],
+ "w|exclusivamente": [
+  {
+   "text": "La cantera de al lado trabaja exclusivamente para la obra de Hugo.",
+   "en": "The quarry next door works exclusively for Hugo's site.",
+   "ko": "옆 채석장은 오로지 우고의 공사장에만 납품해요.",
+   "blank": "exclusivamente",
+   "src": "made"
+  },
+  {
+   "text": "Durante la semana anterior, Paula comió casi exclusivamente pasta y arroz.",
+   "en": "During the week before, Paula ate almost exclusively pasta and rice.",
+   "ko": "파울라는 대회 전 일주일 동안 거의 파스타와 밥만 먹었어요.",
+   "blank": "exclusivamente",
+   "src": "made"
+  }
+ ],
  "w|exclusivo": [
   {
    "text": "Mateo se apuntó a un taller exclusivo con un chef muy conocido.",
@@ -33595,6 +33867,22 @@
    "en": "I have no experience in that.",
    "ko": "그 쪽 경험이 없어.",
    "blank": "experiencia"
+  }
+ ],
+ "w|experimental": [
+  {
+   "text": "En la obra de Hugo prueban un hormigón experimental que se seca más rápido.",
+   "en": "On Hugo's site they're testing an experimental concrete that dries faster.",
+   "ko": "우고의 공사장에서는 더 빨리 굳는 실험용 콘크리트를 시험하고 있어요.",
+   "blank": "experimental",
+   "src": "made"
+  },
+  {
+   "text": "Paula probó unas zapatillas experimentales con una suela muy ligera.",
+   "en": "Paula tried out some experimental trainers with a very light sole.",
+   "ko": "파울라는 밑창이 아주 가벼운 시험용 운동화를 신어 봤어요.",
+   "blank": "experimentales",
+   "src": "made"
   }
  ],
  "w|experimentar": [
@@ -34783,6 +35071,22 @@
    "en": "Can you do me a favor?",
    "ko": "부탁 하나 해도 될까?",
    "blank": "favor"
+  }
+ ],
+ "w|favorable": [
+  {
+   "text": "El informe del geólogo fue favorable y Hugo pudo empezar a construir.",
+   "en": "The geologist's report was favourable and Hugo was able to start building.",
+   "ko": "지질학자의 보고서가 긍정적이어서 우고는 공사를 시작할 수 있었어요.",
+   "blank": "favorable",
+   "src": "made"
+  },
+  {
+   "text": "El viento favorable de la segunda mitad ayudó a Paula a bajar su marca.",
+   "en": "The favourable wind in the second half helped Paula lower her time.",
+   "ko": "후반의 순풍 덕분에 파울라는 기록을 단축했어요.",
+   "blank": "favorable",
+   "src": "made"
   }
  ],
  "w|favorecer": [
@@ -40177,6 +40481,22 @@
    "src": "made"
   }
  ],
+ "w|hipótesis": [
+  {
+   "text": "La hipótesis de Hugo era que la grieta venía de una tubería rota.",
+   "en": "Hugo's hypothesis was that the crack came from a broken pipe.",
+   "ko": "우고의 가설은 균열이 깨진 배관 때문이라는 거였어요.",
+   "blank": "hipótesis",
+   "src": "made"
+  },
+  {
+   "text": "La hipótesis de Paula es que se cansó tanto por no desayunar bien.",
+   "en": "Paula's theory is that she got so tired because she didn't eat a proper breakfast.",
+   "ko": "파울라는 아침을 제대로 안 먹어서 그렇게 지쳤다고 생각해요.",
+   "blank": "hipótesis",
+   "src": "made"
+  }
+ ],
  "w|histérico": [
   {
    "text": "Pablo se rió al recordar a Andrés histérico el día del examen final.",
@@ -41017,6 +41337,22 @@
    "en": "The damp soil helps the plants.",
    "ko": "축축한 흙이 식물에 좋아.",
    "blank": "húmedo"
+  }
+ ],
+ "w|humildad": [
+  {
+   "text": "Hugo habla con humildad de su trabajo, aunque ha levantado medio barrio.",
+   "en": "Hugo talks about his work with humility, even though he has built half the neighbourhood.",
+   "ko": "우고는 동네 절반을 지었는데도 자기 일에 대해 겸손하게 말해요.",
+   "blank": "humildad",
+   "src": "made"
+  },
+  {
+   "text": "Paula recibió la medalla con humildad y les dio las gracias a los voluntarios.",
+   "en": "Paula received the medal with humility and thanked the volunteers.",
+   "ko": "파울라는 겸손하게 메달을 받고 자원봉사자들에게 고맙다고 했어요.",
+   "blank": "humildad",
+   "src": "made"
   }
  ],
  "w|humilde": [
@@ -43133,6 +43469,22 @@
    "blank": "inglés"
   }
  ],
+ "w|ingrato": [
+  {
+   "text": "Hugo dice que su oficio es ingrato: nadie se fija en los cimientos.",
+   "en": "Hugo says his trade is thankless: nobody notices the foundations.",
+   "ko": "우고는 자기 일이 생색이 안 난다고 해요. 아무도 기초 공사는 눈여겨보지 않거든요.",
+   "blank": "ingrato",
+   "src": "made"
+  },
+  {
+   "text": "Paula dice que correr es un deporte ingrato los primeros meses.",
+   "en": "Paula says running is a thankless sport for the first few months.",
+   "ko": "파울라는 달리기가 처음 몇 달은 보람 없는 운동이라고 해요.",
+   "blank": "ingrato",
+   "src": "made"
+  }
+ ],
  "w|ingrediente": [
   {
    "text": "En el supermercado no tenían el ingrediente que Pablo buscaba.",
@@ -43559,6 +43911,22 @@
    "src": "made"
   }
  ],
+ "w|inscripción": [
+  {
+   "text": "Hugo encontró una inscripción antigua en una piedra al derribar el muro.",
+   "en": "Hugo found an old inscription on a stone when he knocked down the wall.",
+   "ko": "우고는 담을 허물다가 돌에 새겨진 오래된 글귀를 발견했어요.",
+   "blank": "inscripción",
+   "src": "made"
+  },
+  {
+   "text": "Paula hizo la inscripción en el maratón el primer día que abrieron el plazo.",
+   "en": "Paula signed up for the marathon on the first day registration opened.",
+   "ko": "파울라는 신청 기간 첫날 마라톤에 등록했어요.",
+   "blank": "inscripción",
+   "src": "made"
+  }
+ ],
  "w|insecto": [
   {
    "text": "Hay un insecto en la cocina otra vez.",
@@ -43710,6 +44078,22 @@
    "en": "After a quick inspection, Elena saw that the problem was the battery.",
    "ko": "잠깐 살펴본 뒤 엘레나는 배터리가 문제라는 걸 알았어요.",
    "blank": "inspección",
+   "src": "made"
+  }
+ ],
+ "w|inspeccionar": [
+  {
+   "text": "Una técnica del ayuntamiento vino a inspeccionar los andamios de Hugo.",
+   "en": "A council inspector came to inspect Hugo's scaffolding.",
+   "ko": "시청 담당자가 우고의 비계를 점검하러 왔어요.",
+   "blank": "inspeccionar",
+   "src": "made"
+  },
+  {
+   "text": "La médica vino a inspeccionar el tobillo de Paula después de la caída.",
+   "en": "The doctor came to examine Paula's ankle after the fall.",
+   "ko": "넘어진 뒤 의사가 파울라의 발목을 살펴보러 왔어요.",
+   "blank": "inspeccionar",
    "src": "made"
   }
  ],
@@ -47725,6 +48109,22 @@
    "en": "I don't want any more trouble at home.",
    "ko": "집에서 더 이상 소란은 싫어.",
    "blank": "lío"
+  }
+ ],
+ "w|liquidar": [
+  {
+   "text": "La constructora de Hugo tuvo que liquidar las deudas con los proveedores antes de empezar la obra.",
+   "en": "Hugo's construction company had to settle its debts with suppliers before starting the work.",
+   "ko": "우고의 건설사는 공사를 시작하기 전에 납품업체 빚을 청산해야 했어요.",
+   "blank": "liquidar",
+   "src": "made"
+  },
+  {
+   "text": "Paula vendió su bicicleta vieja para liquidar el préstamo de las zapatillas nuevas.",
+   "en": "Paula sold her old bike to pay off the loan for her new trainers.",
+   "ko": "파울라는 새 운동화 할부를 갚으려고 옛 자전거를 팔았어요.",
+   "blank": "liquidar",
+   "src": "made"
   }
  ],
  "w|líquido": [
@@ -54681,6 +55081,22 @@
    "src": "made"
   }
  ],
+ "w|notificar": [
+  {
+   "text": "Hugo tuvo que notificar el accidente al servicio de prevención esa misma tarde.",
+   "en": "Hugo had to report the accident to the safety department that same afternoon.",
+   "ko": "우고는 그날 오후에 바로 안전 부서에 사고를 신고해야 했어요.",
+   "blank": "notificar",
+   "src": "made"
+  },
+  {
+   "text": "La organización tuvo que notificar a Paula un cambio de última hora en el recorrido.",
+   "en": "The organisers had to notify Paula of a last-minute change to the route.",
+   "ko": "주최 측은 파울라에게 코스가 막판에 바뀌었다고 알려야 했어요.",
+   "blank": "notificar",
+   "src": "made"
+  }
+ ],
  "w|novato": [
   {
    "text": "El novato cometió un error leve.",
@@ -59463,6 +59879,22 @@
    "blank": "período"
   }
  ],
+ "w|perjudicar": [
+  {
+   "text": "Hugo no quería perjudicar a los vecinos, así que no usaba la taladradora antes de las nueve.",
+   "en": "Hugo didn't want to disturb the neighbours, so he didn't use the drill before nine.",
+   "ko": "우고는 이웃에게 피해를 주고 싶지 않아서 아홉 시 전에는 드릴을 쓰지 않았어요.",
+   "blank": "perjudicar",
+   "src": "made"
+  },
+  {
+   "text": "El médico le advirtió a Paula que correr con fiebre podía perjudicar su corazón.",
+   "en": "The doctor warned Paula that running with a fever could harm her heart.",
+   "ko": "의사는 파울라에게 열이 있을 때 달리면 심장에 해로울 수 있다고 경고했어요.",
+   "blank": "perjudicar",
+   "src": "made"
+  }
+ ],
  "w|perla": [
   {
    "text": "Encontró una perla dentro de la ostra.",
@@ -63471,6 +63903,22 @@
    "src": "made"
   }
  ],
+ "w|promover": [
+  {
+   "text": "Hugo quiere promover el uso del casco incluso entre los visitantes.",
+   "en": "Hugo wants to promote wearing helmets even among visitors.",
+   "ko": "우고는 방문객들도 안전모를 쓰도록 장려하고 싶어 해요.",
+   "blank": "promover",
+   "src": "made"
+  },
+  {
+   "text": "El maratón de la ciudad de Paula quiere promover el deporte entre las mujeres mayores.",
+   "en": "The marathon in Paula's city wants to promote sport among older women.",
+   "ko": "파울라네 도시 마라톤은 나이 든 여성들의 운동 참여를 늘리고 싶어 해요.",
+   "blank": "promover",
+   "src": "made"
+  }
+ ],
  "w|pronto": [
   {
    "text": "Vuelvo pronto.",
@@ -64222,6 +64670,22 @@
    "en": "A man who claimed to have psychic powers offered to help the police.",
    "ko": "초능력이 있다는 한 남자가 경찰에 도움을 주겠다고 나섰어요.",
    "blank": "psíquicos",
+   "src": "made"
+  }
+ ],
+ "w|publicación": [
+  {
+   "text": "Hugo esperaba la publicación de la licencia en el boletín oficial para empezar a excavar.",
+   "en": "Hugo was waiting for the licence to be published in the official gazette to start digging.",
+   "ko": "우고는 땅을 파기 시작하려고 관보에 허가가 게재되기를 기다렸어요.",
+   "blank": "publicación",
+   "src": "made"
+  },
+  {
+   "text": "La publicación de los resultados en la web tardó horas y Paula no paraba de mirar el móvil.",
+   "en": "The results took hours to be published online and Paula kept checking her phone.",
+   "ko": "결과가 웹에 올라오기까지 몇 시간이 걸려서 파울라는 계속 휴대폰을 봤어요.",
+   "blank": "publicación",
    "src": "made"
   }
  ],
@@ -65923,6 +66387,22 @@
    "src": "made"
   }
  ],
+ "w|recaudar": [
+  {
+   "text": "Los obreros de Hugo organizaron una comida para recaudar dinero para un compañero herido.",
+   "en": "Hugo's workers organised a lunch to raise money for an injured colleague.",
+   "ko": "우고의 인부들은 다친 동료를 위해 돈을 모으려고 점심 모임을 열었어요.",
+   "blank": "recaudar",
+   "src": "made"
+  },
+  {
+   "text": "Paula corrió el maratón para recaudar fondos para el hospital infantil.",
+   "en": "Paula ran the marathon to raise funds for the children's hospital.",
+   "ko": "파울라는 어린이 병원 기금을 모으려고 마라톤을 뛰었어요.",
+   "blank": "recaudar",
+   "src": "made"
+  }
+ ],
  "w|recepción": [
   {
    "text": "Deja las llaves en la recepción.",
@@ -66365,6 +66845,22 @@
    "en": "We took a short walk through the neighborhood.",
    "ko": "동네를 짧게 둘러봤어.",
    "blank": "recorrido"
+  }
+ ],
+ "w|recortar": [
+  {
+   "text": "La empresa le pidió a Hugo recortar gastos sin tocar la seguridad.",
+   "en": "The company asked Hugo to cut costs without touching safety.",
+   "ko": "회사는 우고에게 안전은 건드리지 말고 비용을 줄이라고 했어요.",
+   "blank": "recortar",
+   "src": "made"
+  },
+  {
+   "text": "Paula quiere recortar diez minutos a su tiempo del año pasado.",
+   "en": "Paula wants to cut ten minutes off last year's time.",
+   "ko": "파울라는 작년 기록에서 십 분을 줄이고 싶어 해요.",
+   "blank": "recortar",
+   "src": "made"
   }
  ],
  "w|recorte": [
@@ -67496,6 +67992,22 @@
    "en": "Nuria doesn't hold a grudge against anyone.",
    "ko": "누리아는 누구에게도 앙심을 품지 않아요.",
    "blank": "rencor",
+   "src": "made"
+  }
+ ],
+ "w|rendimiento": [
+  {
+   "text": "Con el calor de agosto, el rendimiento del equipo de Hugo baja mucho por la tarde.",
+   "en": "In the August heat, the output of Hugo's team drops a lot in the afternoon.",
+   "ko": "팔월 더위에는 오후가 되면 우고 팀의 작업 능률이 크게 떨어져요.",
+   "blank": "rendimiento",
+   "src": "made"
+  },
+  {
+   "text": "Paula mejoró su rendimiento cuando empezó a dormir ocho horas.",
+   "en": "Paula improved her performance when she started sleeping eight hours.",
+   "ko": "파울라는 여덟 시간씩 자기 시작하면서 기록이 좋아졌어요.",
+   "blank": "rendimiento",
    "src": "made"
   }
  ],
@@ -68985,6 +69497,22 @@
    "en": "I spoke with the reverend after mass.",
    "ko": "미사 후에 목사님과 이야기했어.",
    "blank": "reverendo"
+  }
+ ],
+ "w|revertir": [
+  {
+   "text": "Hugo tuvo que revertir un cambio en los planos porque no cumplía la normativa.",
+   "en": "Hugo had to reverse a change in the plans because it didn't meet regulations.",
+   "ko": "우고는 규정에 맞지 않아서 설계 변경을 되돌려야 했어요.",
+   "blank": "revertir",
+   "src": "made"
+  },
+  {
+   "text": "Paula consiguió revertir la situación y adelantó a tres corredoras en la recta final.",
+   "en": "Paula managed to turn things around and overtook three runners in the final straight.",
+   "ko": "파울라는 상황을 뒤집고 마지막 직선 구간에서 세 명을 앞질렀어요.",
+   "blank": "revertir",
+   "src": "made"
   }
  ],
  "w|revés": [
@@ -70866,6 +71394,22 @@
    "en": "The children started raiding the dessert table before Lola could stop them.",
    "ko": "아이들이 디저트 테이블을 털기 시작했는데 롤라가 막을 틈도 없었어요.",
    "blank": "saquear",
+   "src": "made"
+  }
+ ],
+ "w|sarcástico": [
+  {
+   "text": "Un albañil le hizo un comentario sarcástico a Hugo sobre los retrasos.",
+   "en": "A bricklayer made a sarcastic comment to Hugo about the delays.",
+   "ko": "벽돌공 하나가 공사 지연을 두고 우고에게 비꼬는 말을 했어요.",
+   "blank": "sarcástico",
+   "src": "made"
+  },
+  {
+   "text": "El hermano de Paula le preguntó en tono sarcástico si había parado a tomar un café.",
+   "en": "Paula's brother asked her in a sarcastic tone whether she'd stopped for a coffee.",
+   "ko": "파울라의 오빠는 비꼬는 투로 중간에 커피라도 마셨냐고 물었어요.",
+   "blank": "sarcástico",
    "src": "made"
   }
  ],
@@ -74749,6 +75293,22 @@
    "src": "made"
   }
  ],
+ "w|superintendente": [
+  {
+   "text": "El superintendente de obra le pidió a Hugo un informe diario.",
+   "en": "The site superintendent asked Hugo for a daily report.",
+   "ko": "현장 소장은 우고에게 일일 보고서를 달라고 했어요.",
+   "blank": "superintendente",
+   "src": "made"
+  },
+  {
+   "text": "El superintendente del parque le dio permiso a Paula para entrenar antes del amanecer.",
+   "en": "The park superintendent gave Paula permission to train before dawn.",
+   "ko": "공원 관리 책임자가 파울라에게 해 뜨기 전에 훈련해도 된다고 허락했어요.",
+   "blank": "superintendente",
+   "src": "made"
+  }
+ ],
  "w|superior": [
   {
    "text": "Vive en el piso superior del edificio.",
@@ -74792,6 +75352,22 @@
    "en": "Carmen laughs at her colleague's superstition: he never works on Tuesday the thirteenth.",
    "ko": "카르멘은 십삼일이 화요일이면 절대 일하지 않는 동료의 미신을 비웃어요.",
    "blank": "superstición",
+   "src": "made"
+  }
+ ],
+ "w|supervisar": [
+  {
+   "text": "Hugo se encarga de supervisar a los albañiles en la tercera planta.",
+   "en": "Hugo is in charge of supervising the bricklayers on the third floor.",
+   "ko": "우고는 삼 층에서 벽돌공들을 감독하는 일을 맡고 있어요.",
+   "blank": "supervisar",
+   "src": "made"
+  },
+  {
+   "text": "Paula ayudó a supervisar el puesto de avituallamiento del kilómetro treinta.",
+   "en": "Paula helped supervise the refreshment station at kilometre thirty.",
+   "ko": "파울라는 삼십 킬로미터 지점의 급수대 관리를 도왔어요.",
+   "blank": "supervisar",
    "src": "made"
   }
  ],
@@ -76111,6 +76687,22 @@
    "en": "He's afraid of losing his job.",
    "ko": "직장 잃을까 봐 두려워해.",
    "blank": "Teme"
+  }
+ ],
+ "w|temerario": [
+  {
+   "text": "Hugo regañó a un aprendiz temerario que subió al tejado sin arnés.",
+   "en": "Hugo told off a reckless apprentice who climbed onto the roof without a harness.",
+   "ko": "우고는 안전벨트 없이 지붕에 올라간 겁 없는 견습생을 꾸짖었어요.",
+   "blank": "temerario",
+   "src": "made"
+  },
+  {
+   "text": "Salir tan rápido en un maratón le pareció a Paula una decisión temeraria.",
+   "en": "Paula thought starting so fast in a marathon was a reckless decision.",
+   "ko": "파울라는 마라톤에서 그렇게 빨리 출발하는 건 무모하다고 생각했어요.",
+   "blank": "temeraria",
+   "src": "made"
   }
  ],
  "w|temor": [
@@ -79795,6 +80387,22 @@
    "blank": "vacaciones"
   }
  ],
+ "w|vacante": [
+  {
+   "text": "Hugo publicó una vacante de electricista para la obra del colegio.",
+   "en": "Hugo posted a vacancy for an electrician on the school site.",
+   "ko": "우고는 학교 공사 현장의 전기 기사 자리 공고를 냈어요.",
+   "blank": "vacante",
+   "src": "made"
+  },
+  {
+   "text": "Paula consiguió una plaza vacante en el maratón porque otra corredora se lesionó.",
+   "en": "Paula got a vacant place in the marathon because another runner was injured.",
+   "ko": "다른 선수가 다쳐서 파울라가 마라톤 빈자리를 얻었어요.",
+   "blank": "vacante",
+   "src": "made"
+  }
+ ],
  "w|vaciar": [
   {
    "text": "Hay que vaciar la caja antes de mudarnos.",
@@ -80151,6 +80759,22 @@
    "en": "He bought a cowboy hat at the market.",
    "ko": "시장에서 카우보이 모자를 샀어.",
    "blank": "vaquero"
+  }
+ ],
+ "w|variable": [
+  {
+   "text": "El tiempo en la montaña es muy variable y a Hugo le cuesta planificar la obra.",
+   "en": "The weather in the mountains is very changeable and Hugo finds it hard to plan the work.",
+   "ko": "산 날씨가 워낙 변덕스러워서 우고는 공사 계획을 세우기 힘들어요.",
+   "blank": "variable",
+   "src": "made"
+  },
+  {
+   "text": "El ritmo de Paula fue bastante variable por culpa del viento.",
+   "en": "Paula's pace was quite uneven because of the wind.",
+   "ko": "바람 때문에 파울라의 속도는 꽤 들쭉날쭉했어요.",
+   "blank": "variable",
+   "src": "made"
   }
  ],
  "w|variar": [
@@ -81015,6 +81639,22 @@
    "en": "We found another way to solve it.",
    "ko": "그걸 해결할 다른 방법을 찾았어.",
    "blank": "vía"
+  }
+ ],
+ "w|viable": [
+  {
+   "text": "Hugo estudió si era viable añadir un piso más al edificio.",
+   "en": "Hugo looked into whether it was viable to add another floor to the building.",
+   "ko": "우고는 건물에 한 층을 더 올리는 게 가능한지 검토했어요.",
+   "blank": "viable",
+   "src": "made"
+  },
+  {
+   "text": "El médico le dijo a Paula que correr con esa lesión no era viable.",
+   "en": "The doctor told Paula that running with that injury wasn't feasible.",
+   "ko": "의사는 파울라에게 그 부상으로 달리는 건 무리라고 했어요.",
+   "blank": "viable",
+   "src": "made"
   }
  ],
  "w|viajar": [

@@ -625,6 +625,22 @@
    "blank": "가을이"
   }
  ],
+ "w|가입하다": [
+  {
+   "text": "민수는 올해 시장 상인회에 가입했어요.",
+   "en": "Minsu joined the market merchants' association this year.",
+   "ko": "민수는 올해 시장 상인회에 가입했어요.",
+   "blank": "가입했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 작년에 동네 달리기 동호회에 가입했어요.",
+   "en": "Jiyoung joined a local running club last year.",
+   "ko": "지영은 작년에 동네 달리기 동호회에 가입했어요.",
+   "blank": "가입했어요",
+   "src": "made"
+  }
+ ],
  "w|가장": [
   {
    "text": "이게 가장 좋아요.",
@@ -1091,6 +1107,22 @@
    "en": "The rib marinade is sweet and rich.",
    "ko": "갈비 양념이 달콤하고 진해.",
    "blank": "갈비"
+  }
+ ],
+ "w|갈비탕": [
+  {
+   "text": "민수는 갈비탕에 넣을 갈비를 정육점에서 골라 왔어요.",
+   "en": "Minsu picked out the short ribs for the galbi soup at the butcher's.",
+   "ko": "민수는 갈비탕에 넣을 갈비를 정육점에서 골라 왔어요.",
+   "blank": "갈비탕에",
+   "src": "made"
+  },
+  {
+   "text": "지영은 결승선 근처 식당에서 갈비탕을 시켰어요.",
+   "en": "Jiyoung ordered galbi soup at a restaurant near the finish line.",
+   "ko": "지영은 결승선 근처 식당에서 갈비탕을 시켰어요.",
+   "blank": "갈비탕을",
+   "src": "made"
   }
  ],
  "w|갈수록": [
@@ -2674,6 +2706,22 @@
    "en": "Yuna said a handwritten letter is better than a lavish gift.",
    "ko": "유나는 거창한 선물보다 손으로 쓴 편지가 더 좋다고 했어요.",
    "blank": "거창한",
+   "src": "made"
+  }
+ ],
+ "w|거치다": [
+  {
+   "text": "시장에서 파는 채소는 여러 상인의 손을 거쳐 들어와요.",
+   "en": "The vegetables sold at the market come in after passing through several merchants' hands.",
+   "ko": "시장에서 파는 채소는 여러 상인의 손을 거쳐 들어와요.",
+   "blank": "거쳐",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 코스는 시청을 거쳐 강변으로 이어져요.",
+   "en": "The marathon course passes city hall and continues to the riverside.",
+   "ko": "마라톤 코스는 시청을 거쳐 강변으로 이어져요.",
+   "blank": "거쳐",
    "src": "made"
   }
  ],
@@ -7023,6 +7071,22 @@
    "src": "made"
   }
  ],
+ "w|교체하다": [
+  {
+   "text": "민수는 오래된 가게 간판을 새것으로 교체했어요.",
+   "en": "Minsu replaced the old shop sign with a new one.",
+   "ko": "민수는 오래된 가게 간판을 새것으로 교체했어요.",
+   "blank": "교체했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 대회 한 달 전에 낡은 운동화를 새것으로 교체했어요.",
+   "en": "A month before the race, Jiyoung replaced her worn-out running shoes with new ones.",
+   "ko": "지영은 대회 한 달 전에 낡은 운동화를 새것으로 교체했어요.",
+   "blank": "교체했어요",
+   "src": "made"
+  }
+ ],
  "w|교통": [
   {
    "text": "교통이 막혀서 늦었어.",
@@ -7565,6 +7629,22 @@
    "en": "This is my first time in the country.",
    "ko": "국내는 처음이야.",
    "blank": "국내는"
+  }
+ ],
+ "w|국물": [
+  {
+   "text": "민수네 국밥은 국물이 진해서 손님들이 좋아해요.",
+   "en": "Customers love Minsu's rice soup because the broth is rich.",
+   "ko": "민수네 국밥은 국물이 진해서 손님들이 좋아해요.",
+   "blank": "국물이",
+   "src": "made"
+  },
+  {
+   "text": "땀을 많이 흘린 지영은 짭짤한 국물이 당겼어요.",
+   "en": "Having sweated a lot, Jiyoung craved a salty broth.",
+   "ko": "땀을 많이 흘린 지영은 짭짤한 국물이 당겼어요.",
+   "blank": "국물이",
+   "src": "made"
   }
  ],
  "w|국민": [
@@ -10781,6 +10861,22 @@
    "en": "Rice and kimchi alone are enough.",
    "ko": "밥이랑 김치만 있어도 돼.",
    "blank": "김치만"
+  }
+ ],
+ "w|김치찌개": [
+  {
+   "text": "민수네 가게에서 제일 잘 팔리는 건 김치찌개예요.",
+   "en": "The best seller at Minsu's restaurant is kimchi stew.",
+   "ko": "민수네 가게에서 제일 잘 팔리는 건 김치찌개예요.",
+   "blank": "김치찌개예요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 대회 전날 맵지 않게 끓인 김치찌개로 저녁을 먹었어요.",
+   "en": "The night before the race, Jiyoung had a mildly seasoned kimchi stew for dinner.",
+   "ko": "지영은 대회 전날 맵지 않게 끓인 김치찌개로 저녁을 먹었어요.",
+   "blank": "김치찌개로",
+   "src": "made"
   }
  ],
  "w|깊다": [
@@ -17009,6 +17105,38 @@
    "src": "made"
   }
  ],
+ "w|대체하다": [
+  {
+   "text": "배추값이 너무 올라서 민수는 김치 대신 깍두기로 대체했어요.",
+   "en": "Napa cabbage got so expensive that Minsu substituted radish kimchi instead.",
+   "ko": "배추값이 너무 올라서 민수는 김치 대신 깍두기로 대체했어요.",
+   "blank": "대체했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 무릎이 아파서 달리기 훈련 일부를 수영으로 대체했어요.",
+   "en": "Because her knee hurt, Jiyoung replaced part of her running training with swimming.",
+   "ko": "지영은 무릎이 아파서 달리기 훈련 일부를 수영으로 대체했어요.",
+   "blank": "대체했어요",
+   "src": "made"
+  }
+ ],
+ "w|대추": [
+  {
+   "text": "민수는 삼계탕에 넣을 대추와 마늘을 따로 샀어요.",
+   "en": "Minsu separately bought jujubes and garlic to put in the ginseng chicken soup.",
+   "ko": "민수는 삼계탕에 넣을 대추와 마늘을 따로 샀어요.",
+   "blank": "대추와",
+   "src": "made"
+  },
+  {
+   "text": "할머니는 지영에게 피로 회복에 좋다며 대추를 넣은 차를 끓여 주셨어요.",
+   "en": "Grandma made Jiyoung jujube tea, saying it's good for recovering from fatigue.",
+   "ko": "할머니는 지영에게 피로 회복에 좋다며 대추를 넣은 차를 끓여 주셨어요.",
+   "blank": "대추를",
+   "src": "made"
+  }
+ ],
  "w|대출": [
   {
    "text": "집 대출을 알아보는 중이야.",
@@ -18901,6 +19029,22 @@
    "en": "Rice tastes good with just soybean paste.",
    "ko": "된장만 있으면 밥이 맛있어.",
    "blank": "된장만"
+  }
+ ],
+ "w|된장찌개": [
+  {
+   "text": "민수는 시장에서 산 두부로 된장찌개를 끓였어요.",
+   "en": "Minsu made soybean paste stew with tofu he bought at the market.",
+   "ko": "민수는 시장에서 산 두부로 된장찌개를 끓였어요.",
+   "blank": "된장찌개를",
+   "src": "made"
+  },
+  {
+   "text": "완주하고 집에 오니 엄마가 된장찌개를 끓여 놓으셨어요.",
+   "en": "When Jiyoung got home after finishing, her mom had made soybean paste stew.",
+   "ko": "완주하고 집에 오니 엄마가 된장찌개를 끓여 놓으셨어요.",
+   "blank": "된장찌개를",
+   "src": "made"
   }
  ],
  "w|두": [
@@ -21823,6 +21967,22 @@
    "blank": "많았어요"
   }
  ],
+ "w|많아지다": [
+  {
+   "text": "날씨가 추워지자 시장에 국밥집 손님이 많아졌어요.",
+   "en": "As the weather got cold, the soup restaurants in the market got more customers.",
+   "ko": "날씨가 추워지자 시장에 국밥집 손님이 많아졌어요.",
+   "blank": "많아졌어요",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 대회 참가자가 해마다 많아지고 있어요.",
+   "en": "The number of marathon participants is growing every year.",
+   "ko": "마라톤 대회 참가자가 해마다 많아지고 있어요.",
+   "blank": "많아지고",
+   "src": "made"
+  }
+ ],
  "w|많이": [
   {
    "text": "많이 먹었어요.",
@@ -23579,6 +23739,22 @@
    "ko": "배가 많이 고픈 승규는 상 위에 차려진 음식을 모조리 먹어 치웠다.",
    "blank": "모조리",
    "src": "krdict"
+  }
+ ],
+ "w|모집하다": [
+  {
+   "text": "민수는 주말에 일할 아르바이트생을 모집하고 있어요.",
+   "en": "Minsu is recruiting part-timers to work on weekends.",
+   "ko": "민수는 주말에 일할 아르바이트생을 모집하고 있어요.",
+   "blank": "모집하고",
+   "src": "made"
+  },
+  {
+   "text": "대회 측은 물을 나눠 줄 자원봉사자를 모집했어요.",
+   "en": "The race organizers recruited volunteers to hand out water.",
+   "ko": "대회 측은 물을 나눠 줄 자원봉사자를 모집했어요.",
+   "blank": "모집했어요",
+   "src": "made"
   }
  ],
  "w|모호하다": [
@@ -25501,6 +25677,22 @@
    "blank": "미역을"
   }
  ],
+ "w|미역국": [
+  {
+   "text": "민수는 엄마 생신이라 시장에서 미역을 사서 미역국을 끓였어요.",
+   "en": "It was his mom's birthday, so Minsu bought seaweed at the market and made seaweed soup.",
+   "ko": "민수는 엄마 생신이라 시장에서 미역을 사서 미역국을 끓였어요.",
+   "blank": "미역국을",
+   "src": "made"
+  },
+  {
+   "text": "마라톤 날이 생일이라 지영은 아침에 미역국을 먹고 나갔어요.",
+   "en": "The marathon fell on her birthday, so Jiyoung had seaweed soup before heading out.",
+   "ko": "마라톤 날이 생일이라 지영은 아침에 미역국을 먹고 나갔어요.",
+   "blank": "미역국을",
+   "src": "made"
+  }
+ ],
  "w|미용실": [
   {
    "text": "내일 미용실에 예약했어.",
@@ -26587,6 +26779,22 @@
    "en": "I voted for the class president.",
    "ko": "나는 반장을 뽑았어.",
    "blank": "반장을"
+  }
+ ],
+ "w|반죽": [
+  {
+   "text": "옆 가게 할머니는 칼국수 반죽을 손으로 직접 밀어요.",
+   "en": "The grandmother at the shop next door rolls out the knife-cut noodle dough by hand.",
+   "ko": "옆 가게 할머니는 칼국수 반죽을 손으로 직접 밀어요.",
+   "blank": "반죽을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 대회 전날 동생과 함께 만두 반죽을 치대고 만두를 빚었어요.",
+   "en": "The day before the race, Jiyoung kneaded dumpling dough and made dumplings with her younger sibling.",
+   "ko": "지영은 대회 전날 동생과 함께 만두 반죽을 치대고 만두를 빚었어요.",
+   "blank": "반죽을",
+   "src": "made"
   }
  ],
  "w|반지": [
@@ -28339,6 +28547,22 @@
    "src": "made"
   }
  ],
+ "w|변경하다": [
+  {
+   "text": "민수는 손님이 줄자 가게 문 여는 시간을 변경했어요.",
+   "en": "When customers dropped off, Minsu changed his shop's opening hours.",
+   "ko": "민수는 손님이 줄자 가게 문 여는 시간을 변경했어요.",
+   "blank": "변경했어요",
+   "src": "made"
+  },
+  {
+   "text": "비 예보 때문에 주최 측이 출발 시간을 변경했어요.",
+   "en": "Because of the rain forecast, the organizers changed the start time.",
+   "ko": "비 예보 때문에 주최 측이 출발 시간을 변경했어요.",
+   "blank": "변경했어요",
+   "src": "made"
+  }
+ ],
  "w|변기": [
   {
    "text": "현우는 변기가 막혀서 관리실에 전화했어요.",
@@ -28503,6 +28727,22 @@
    "en": "I'm adapting to the change.",
    "ko": "변화에 적응하는 중이야.",
    "blank": "변화에"
+  }
+ ],
+ "w|변화하다": [
+  {
+   "text": "민수는 시장이 지난 이십 년 동안 많이 변화했다고 말했어요.",
+   "en": "Minsu said the market has changed a lot over the past twenty years.",
+   "ko": "민수는 시장이 지난 이십 년 동안 많이 변화했다고 말했어요.",
+   "blank": "변화했다고",
+   "src": "made"
+  },
+  {
+   "text": "꾸준히 달린 덕분에 지영의 체력이 눈에 띄게 변화했어요.",
+   "en": "Thanks to running regularly, Jiyoung's stamina changed noticeably.",
+   "ko": "꾸준히 달린 덕분에 지영의 체력이 눈에 띄게 변화했어요.",
+   "blank": "변화했어요",
+   "src": "made"
   }
  ],
  "w|별": [
@@ -28964,6 +29204,22 @@
    "en": "Migyeong finally found a technician to take on the roof repair.",
    "ko": "미경은 지붕 보수를 맡길 기술자를 겨우 찾았어요.",
    "blank": "보수를",
+   "src": "made"
+  }
+ ],
+ "w|보쌈": [
+  {
+   "text": "민수는 김장하는 날 이웃들과 보쌈을 나눠 먹었어요.",
+   "en": "On kimchi-making day, Minsu shared boiled pork wraps with his neighbors.",
+   "ko": "민수는 김장하는 날 이웃들과 보쌈을 나눠 먹었어요.",
+   "blank": "보쌈을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 기름기가 적은 보쌈이 운동 후에 먹기 좋다고 했어요.",
+   "en": "Jiyoung said boiled pork, being less greasy, is good to eat after exercise.",
+   "ko": "지영은 기름기가 적은 보쌈이 운동 후에 먹기 좋다고 했어요.",
+   "blank": "보쌈이",
    "src": "made"
   }
  ],
@@ -29622,6 +29878,22 @@
    "en": "Yuna said it was unfair to be charged for a minibar she hadn't used.",
    "ko": "유나는 쓰지도 않은 미니바 요금이 청구돼서 부당하다고 말했어요.",
    "blank": "부당하다고",
+   "src": "made"
+  }
+ ],
+ "w|부대찌개": [
+  {
+   "text": "민수는 햄과 소시지를 듬뿍 넣은 부대찌개를 새 메뉴로 내놨어요.",
+   "en": "Minsu put out army stew loaded with ham and sausage as a new menu item.",
+   "ko": "민수는 햄과 소시지를 듬뿍 넣은 부대찌개를 새 메뉴로 내놨어요.",
+   "blank": "부대찌개를",
+   "src": "made"
+  },
+  {
+   "text": "동호회 사람들은 대회가 끝나고 부대찌개 집에 모였어요.",
+   "en": "The club members gathered at an army stew restaurant after the race.",
+   "ko": "동호회 사람들은 대회가 끝나고 부대찌개 집에 모였어요.",
+   "blank": "부대찌개",
    "src": "made"
   }
  ],
@@ -33654,6 +33926,22 @@
    "blank": "살이야"
   }
  ],
+ "w|살구": [
+  {
+   "text": "민수는 과일가게에서 잘 익은 살구를 한 바구니 샀어요.",
+   "en": "Minsu bought a basket of ripe apricots at the fruit stand.",
+   "ko": "민수는 과일가게에서 잘 익은 살구를 한 바구니 샀어요.",
+   "blank": "살구를",
+   "src": "made"
+  },
+  {
+   "text": "급수대 옆에서 자원봉사자들이 말린 살구를 나눠 줬어요.",
+   "en": "Next to the water station, volunteers handed out dried apricots.",
+   "ko": "급수대 옆에서 자원봉사자들이 말린 살구를 나눠 줬어요.",
+   "blank": "살구를",
+   "src": "made"
+  }
+ ],
  "w|살다": [
   {
    "text": "이 동네에서 살아요.",
@@ -33960,6 +34248,22 @@
    "en": "The pork belly grilled to a nice brown.",
    "ko": "삼겹살이 노릇하게 구워졌어.",
    "blank": "삼겹살이"
+  }
+ ],
+ "w|삼계탕": [
+  {
+   "text": "복날이 되자 시장 닭집 앞에 삼계탕 재료를 사려는 줄이 길게 섰어요.",
+   "en": "On the hottest day of summer, a long line formed at the market chicken shop to buy ingredients for ginseng chicken soup.",
+   "ko": "복날이 되자 시장 닭집 앞에 삼계탕 재료를 사려는 줄이 길게 섰어요.",
+   "blank": "삼계탕",
+   "src": "made"
+  },
+  {
+   "text": "지영은 여름 대회를 앞두고 기운을 내려고 삼계탕을 먹었어요.",
+   "en": "Ahead of the summer race, Jiyoung ate ginseng chicken soup to build up her energy.",
+   "ko": "지영은 여름 대회를 앞두고 기운을 내려고 삼계탕을 먹었어요.",
+   "blank": "삼계탕을",
+   "src": "made"
   }
  ],
  "w|삼다": [
@@ -34892,6 +35196,22 @@
    "blank": "생선"
   }
  ],
+ "w|생선회": [
+  {
+   "text": "민수는 생선회를 떠 주는 아저씨의 손놀림에 감탄했어요.",
+   "en": "Minsu marveled at the hand skills of the man slicing raw fish.",
+   "ko": "민수는 생선회를 떠 주는 아저씨의 손놀림에 감탄했어요.",
+   "blank": "생선회를",
+   "src": "made"
+  },
+  {
+   "text": "코치는 대회 전에는 생선회 같은 날음식을 피하라고 했어요.",
+   "en": "The coach told them to avoid raw food like sliced raw fish before the race.",
+   "ko": "코치는 대회 전에는 생선회 같은 날음식을 피하라고 했어요.",
+   "blank": "생선회",
+   "src": "made"
+  }
+ ],
  "w|생소하다": [
   {
    "text": "동민은 친구가 하는 일이 너무 생소해서 몇 번이나 되물었어요.",
@@ -35746,6 +36066,22 @@
    "ko": "토론자는 자신의 주장을 논리적으로 설득했지만 청중들의 호응은 얻지 못했다.",
    "blank": "설득했지만",
    "src": "krdict"
+  }
+ ],
+ "w|설렁탕": [
+  {
+   "text": "민수는 새벽부터 사골을 고아 설렁탕을 준비해요.",
+   "en": "Minsu simmers ox bones from dawn to make seolleongtang.",
+   "ko": "민수는 새벽부터 사골을 고아 설렁탕을 준비해요.",
+   "blank": "설렁탕을",
+   "src": "made"
+  },
+  {
+   "text": "대회 다음 날 아침, 지영은 아빠와 설렁탕을 먹으러 갔어요.",
+   "en": "The morning after the race, Jiyoung went to eat seolleongtang with her dad.",
+   "ko": "대회 다음 날 아침, 지영은 아빠와 설렁탕을 먹으러 갔어요.",
+   "blank": "설렁탕을",
+   "src": "made"
   }
  ],
  "w|설레다": [
@@ -38510,6 +38846,22 @@
    "en": "For a second I didn't know what to do.",
    "ko": "순간 어떻게 해야 할지 몰랐어.",
    "blank": "순간"
+  }
+ ],
+ "w|순두부찌개": [
+  {
+   "text": "시장 골목 끝 식당은 순두부찌개가 맵기로 유명해요.",
+   "en": "The restaurant at the end of the market alley is famous for its spicy soft tofu stew.",
+   "ko": "시장 골목 끝 식당은 순두부찌개가 맵기로 유명해요.",
+   "blank": "순두부찌개가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 대회 아침에 소화가 잘되는 순두부찌개를 조금 먹었어요.",
+   "en": "On race morning, Jiyoung ate a little soft tofu stew, which is easy to digest.",
+   "ko": "지영은 대회 아침에 소화가 잘되는 순두부찌개를 조금 먹었어요.",
+   "blank": "순두부찌개를",
+   "src": "made"
   }
  ],
  "w|순서": [
@@ -48504,6 +48856,22 @@
    "src": "made"
   }
  ],
+ "w|완료하다": [
+  {
+   "text": "민수는 가게 내부 공사를 연말 전에 완료했어요.",
+   "en": "Minsu completed the shop's interior renovation before the end of the year.",
+   "ko": "민수는 가게 내부 공사를 연말 전에 완료했어요.",
+   "blank": "완료했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 드디어 처음으로 풀코스를 완료했어요.",
+   "en": "Jiyoung finally completed a full course for the first time.",
+   "ko": "지영은 드디어 처음으로 풀코스를 완료했어요.",
+   "blank": "완료했어요",
+   "src": "made"
+  }
+ ],
  "w|완벽하다": [
   {
    "text": "준비가 거의 완벽해.",
@@ -51142,6 +51510,22 @@
    "src": "made"
   }
  ],
+ "w|육수": [
+  {
+   "text": "민수는 멸치와 다시마로 육수를 우려요.",
+   "en": "Minsu makes stock by steeping anchovies and kelp.",
+   "ko": "민수는 멸치와 다시마로 육수를 우려요.",
+   "blank": "육수를",
+   "src": "made"
+  },
+  {
+   "text": "지영의 엄마는 진한 사골 육수로 떡국을 끓여 주셨어요.",
+   "en": "Jiyoung's mom made rice cake soup with rich bone stock.",
+   "ko": "지영의 엄마는 진한 사골 육수로 떡국을 끓여 주셨어요.",
+   "blank": "육수로",
+   "src": "made"
+  }
+ ],
  "w|육체": [
   {
    "text": "체육 선생님은 건강한 정신은 건강한 육체에서 나온다고 하셨어요.",
@@ -52538,6 +52922,22 @@
    "blank": "이별"
   }
  ],
+ "w|이별하다": [
+  {
+   "text": "민수는 삼십 년 단골손님과 이별하던 날을 잊지 못해요.",
+   "en": "Minsu can't forget the day he said goodbye to a customer who'd been coming for thirty years.",
+   "ko": "민수는 삼십 년 단골손님과 이별하던 날을 잊지 못해요.",
+   "blank": "이별하던",
+   "src": "made"
+  },
+  {
+   "text": "지영은 오래 사귄 사람과 이별하고 나서 달리기를 시작했어요.",
+   "en": "Jiyoung started running after breaking up with someone she'd dated for a long time.",
+   "ko": "지영은 오래 사귄 사람과 이별하고 나서 달리기를 시작했어요.",
+   "blank": "이별하고",
+   "src": "made"
+  }
+ ],
  "w|이봐": [
   {
    "text": "이봐, 잠깐만.",
@@ -52758,6 +53158,22 @@
    "en": "Let's talk slowly later.",
    "ko": "나중에 천천히 이야기하자.",
    "blank": "이야기하자"
+  }
+ ],
+ "w|이어가다": [
+  {
+   "text": "민수는 할머니가 하시던 국밥집을 이어가고 있어요.",
+   "en": "Minsu is carrying on the soup restaurant his grandmother used to run.",
+   "ko": "민수는 할머니가 하시던 국밥집을 이어가고 있어요.",
+   "blank": "이어가고",
+   "src": "made"
+  },
+  {
+   "text": "지영은 다리가 아팠지만 끝까지 달리기를 이어갔어요.",
+   "en": "Jiyoung's legs hurt, but she kept running to the end.",
+   "ko": "지영은 다리가 아팠지만 끝까지 달리기를 이어갔어요.",
+   "blank": "이어갔어요",
+   "src": "made"
   }
  ],
  "w|이어지다": [
@@ -55686,6 +56102,22 @@
    "src": "made"
   }
  ],
+ "w|잡곡": [
+  {
+   "text": "시장 쌀가게에는 여러 가지 잡곡이 자루에 담겨 있어요.",
+   "en": "At the market rice shop, various mixed grains are kept in sacks.",
+   "ko": "시장 쌀가게에는 여러 가지 잡곡이 자루에 담겨 있어요.",
+   "blank": "잡곡이",
+   "src": "made"
+  },
+  {
+   "text": "지영은 잡곡을 섞은 밥이 오래 달릴 힘을 준다고 믿어요.",
+   "en": "Jiyoung believes rice mixed with grains gives her the strength to run long.",
+   "ko": "지영은 잡곡을 섞은 밥이 오래 달릴 힘을 준다고 믿어요.",
+   "blank": "잡곡을",
+   "src": "made"
+  }
+ ],
  "w|잡다": [
   {
    "text": "손 꼭 잡아요.",
@@ -57076,6 +57508,22 @@
    "blank": "적어도"
   }
  ],
+ "w|적어지다": [
+  {
+   "text": "대형 마트가 생긴 뒤로 시장을 찾는 젊은 사람이 적어졌어요.",
+   "en": "Since the big supermarket opened, fewer young people come to the market.",
+   "ko": "대형 마트가 생긴 뒤로 시장을 찾는 젊은 사람이 적어졌어요.",
+   "blank": "적어졌어요",
+   "src": "made"
+  },
+  {
+   "text": "반환점을 지나자 지영의 주변에 달리는 사람이 적어졌어요.",
+   "en": "After passing the turnaround point, there were fewer runners around Jiyoung.",
+   "ko": "반환점을 지나자 지영의 주변에 달리는 사람이 적어졌어요.",
+   "blank": "적어졌어요",
+   "src": "made"
+  }
+ ],
  "w|적응": [
   {
    "text": "태윤은 새 도서관의 복잡한 배치에 적응하는 데 일주일이 걸렸어요.",
@@ -57166,6 +57614,22 @@
    "en": "I read the notes before the meeting.",
    "ko": "회의 전엔 자료 봤어.",
    "blank": "전엔"
+  }
+ ],
+ "w|전골": [
+  {
+   "text": "민수는 겨울이면 버섯 전골을 끓여 손님상에 올려요.",
+   "en": "In winter, Minsu cooks mushroom hot pot and serves it to customers.",
+   "ko": "민수는 겨울이면 버섯 전골을 끓여 손님상에 올려요.",
+   "blank": "전골을",
+   "src": "made"
+  },
+  {
+   "text": "코치는 완주 기념으로 동호회 사람들에게 소고기 전골을 사 줬어요.",
+   "en": "The coach treated the club members to beef hot pot to celebrate finishing.",
+   "ko": "코치는 완주 기념으로 동호회 사람들에게 소고기 전골을 사 줬어요.",
+   "blank": "전골을",
+   "src": "made"
   }
  ],
  "w|전공": [
@@ -59728,6 +60192,22 @@
    "blank": "조퇴하려면"
   }
  ],
+ "w|족발": [
+  {
+   "text": "시장 족발 가게는 저녁마다 포장 손님으로 붐벼요.",
+   "en": "The pork trotter shop in the market is crowded with takeout customers every evening.",
+   "ko": "시장 족발 가게는 저녁마다 포장 손님으로 붐벼요.",
+   "blank": "족발",
+   "src": "made"
+  },
+  {
+   "text": "동호회 회장은 완주한 사람들에게 족발을 배달시켜 줬어요.",
+   "en": "The club president had pork trotters delivered for everyone who finished.",
+   "ko": "동호회 회장은 완주한 사람들에게 족발을 배달시켜 줬어요.",
+   "blank": "족발을",
+   "src": "made"
+  }
+ ],
  "w|존경": [
   {
    "text": "스승에 대한 존경이 커져.",
@@ -61021,6 +61501,22 @@
    "en": "Middle-aged members make up the largest group in Seoyeon's swim class.",
    "ko": "서연의 수영반에는 중년 회원들이 제일 많아요.",
    "blank": "중년",
+   "src": "made"
+  }
+ ],
+ "w|중단하다": [
+  {
+   "text": "민수는 재료값이 너무 올라서 점심 할인을 잠시 중단했어요.",
+   "en": "Ingredient prices rose so much that Minsu temporarily stopped the lunch discount.",
+   "ko": "민수는 재료값이 너무 올라서 점심 할인을 잠시 중단했어요.",
+   "blank": "중단했어요",
+   "src": "made"
+  },
+  {
+   "text": "폭우가 쏟아지자 주최 측은 경기를 잠시 중단했어요.",
+   "en": "When heavy rain poured down, the organizers suspended the race for a while.",
+   "ko": "폭우가 쏟아지자 주최 측은 경기를 잠시 중단했어요.",
+   "blank": "중단했어요",
    "src": "made"
   }
  ],
@@ -65560,6 +66056,22 @@
    "blank": "초록색이"
   }
  ],
+ "w|초밥": [
+  {
+   "text": "수산시장 안 작은 가게에서 민수는 초밥을 처음 먹어 봤어요.",
+   "en": "At a small shop inside the fish market, Minsu tried sushi for the first time.",
+   "ko": "수산시장 안 작은 가게에서 민수는 초밥을 처음 먹어 봤어요.",
+   "blank": "초밥을",
+   "src": "made"
+  },
+  {
+   "text": "지영은 완주를 축하하며 친구들과 초밥을 먹으러 갔어요.",
+   "en": "Jiyoung went out for sushi with her friends to celebrate finishing.",
+   "ko": "지영은 완주를 축하하며 친구들과 초밥을 먹으러 갔어요.",
+   "blank": "초밥을",
+   "src": "made"
+  }
+ ],
  "w|초원": [
   {
    "text": "강을 건너자 넓은 초원이 동민의 눈앞에 펼쳐졌어요.",
@@ -65620,6 +66132,22 @@
    "en": "I stayed put with a restless heart.",
    "ko": "초조한 마음으로 자리를 지켰어.",
    "blank": "초조한"
+  }
+ ],
+ "w|초청하다": [
+  {
+   "text": "상인회는 시장 축제에 지역 가수를 초청했어요.",
+   "en": "The merchants' association invited a local singer to the market festival.",
+   "ko": "상인회는 시장 축제에 지역 가수를 초청했어요.",
+   "blank": "초청했어요",
+   "src": "made"
+  },
+  {
+   "text": "올해 대회에는 유명한 육상 선수를 초청했다고 해요.",
+   "en": "They say a famous track athlete was invited to this year's race.",
+   "ko": "올해 대회에는 유명한 육상 선수를 초청했다고 해요.",
+   "blank": "초청했다고",
+   "src": "made"
   }
  ],
  "w|초콜릿": [
@@ -67334,6 +67862,22 @@
    "blank": "카드를"
   }
  ],
+ "w|카레": [
+  {
+   "text": "민수는 남은 채소를 다 넣고 카레를 만들었어요.",
+   "en": "Minsu threw in all the leftover vegetables and made curry.",
+   "ko": "민수는 남은 채소를 다 넣고 카레를 만들었어요.",
+   "blank": "카레를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 대회 전날 밤 밥 대신 카레를 먹고 일찍 잤어요.",
+   "en": "The night before the race, Jiyoung had curry instead of plain rice and went to bed early.",
+   "ko": "지영은 대회 전날 밤 밥 대신 카레를 먹고 일찍 잤어요.",
+   "blank": "카레를",
+   "src": "made"
+  }
+ ],
  "w|카메라": [
   {
    "text": "카메라를 챙겼어.",
@@ -68026,6 +68570,22 @@
    "blank": "키웠네"
   }
  ],
+ "w|키위": [
+  {
+   "text": "과일가게 사장님은 키위가 아직 덜 익었다며 며칠 두라고 했어요.",
+   "en": "The fruit stand owner said the kiwis weren't ripe yet and told him to leave them a few days.",
+   "ko": "과일가게 사장님은 키위가 아직 덜 익었다며 며칠 두라고 했어요.",
+   "blank": "키위가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 달리기 전에 키위 하나를 먹고 출발선에 섰어요.",
+   "en": "Jiyoung ate a kiwi before running and stood at the starting line.",
+   "ko": "지영은 달리기 전에 키위 하나를 먹고 출발선에 섰어요.",
+   "blank": "키위",
+   "src": "made"
+  }
+ ],
  "w|타격": [
   {
    "text": "주전 선수가 다쳐서 현우네 반 축구팀은 큰 타격을 입었어요.",
@@ -68224,6 +68784,22 @@
    "src": "made"
   }
  ],
+ "w|탈퇴하다": [
+  {
+   "text": "건너편 가게 사장님은 의견이 안 맞아서 상인회를 탈퇴했어요.",
+   "en": "The owner of the shop across the street left the merchants' association because of disagreements.",
+   "ko": "건너편 가게 사장님은 의견이 안 맞아서 상인회를 탈퇴했어요.",
+   "blank": "탈퇴했어요",
+   "src": "made"
+  },
+  {
+   "text": "지영의 친구는 연습 시간이 맞지 않아 동호회를 탈퇴했어요.",
+   "en": "Jiyoung's friend left the club because the practice times didn't work for her.",
+   "ko": "지영의 친구는 연습 시간이 맞지 않아 동호회를 탈퇴했어요.",
+   "blank": "탈퇴했어요",
+   "src": "made"
+  }
+ ],
  "w|탐사": [
   {
    "text": "과학 동아리는 학교 뒷산으로 곤충 탐사를 떠났어요.",
@@ -68281,6 +68857,22 @@
    "en": "Even when things go wrong, Daeun looks for a solution first instead of blaming her coworkers.",
    "ko": "다은은 일이 꼬여도 동료를 탓하는 대신 해결책부터 찾아요.",
    "blank": "탓하는",
+   "src": "made"
+  }
+ ],
+ "w|탕": [
+  {
+   "text": "민수네 가게는 찌개보다 탕 종류가 더 인기가 많아요.",
+   "en": "At Minsu's restaurant, the hearty soups are more popular than the stews.",
+   "ko": "민수네 가게는 찌개보다 탕 종류가 더 인기가 많아요.",
+   "blank": "탕",
+   "src": "made"
+  },
+  {
+   "text": "지영은 추운 날 달리고 나면 뜨끈한 탕 한 그릇이 생각나요.",
+   "en": "After running on a cold day, Jiyoung craves a bowl of hot soup.",
+   "ko": "지영은 추운 날 달리고 나면 뜨끈한 탕 한 그릇이 생각나요.",
+   "blank": "탕",
    "src": "made"
   }
  ],
@@ -73540,6 +74132,22 @@
    "src": "krdict"
   }
  ],
+ "w|현미": [
+  {
+   "text": "민수는 건강을 생각해서 흰쌀 대신 현미를 사 갔어요.",
+   "en": "Thinking of his health, Minsu bought brown rice instead of white rice.",
+   "ko": "민수는 건강을 생각해서 흰쌀 대신 현미를 사 갔어요.",
+   "blank": "현미를",
+   "src": "made"
+  },
+  {
+   "text": "지영은 훈련 기간에 현미로 지은 밥을 주로 먹어요.",
+   "en": "During training, Jiyoung mostly eats rice cooked from brown rice.",
+   "ko": "지영은 훈련 기간에 현미로 지은 밥을 주로 먹어요.",
+   "blank": "현미로",
+   "src": "made"
+  }
+ ],
  "w|현상": [
   {
    "text": "계속된 가뭄으로 곳곳에서 물 부족 현상이 발생하였다.",
@@ -73825,6 +74433,22 @@
    "en": "The parents cooperated actively in preparing the recital.",
    "ko": "발표회 준비에 학부모들이 적극적인 협조를 해 주셨어요.",
    "blank": "협조를",
+   "src": "made"
+  }
+ ],
+ "w|협조하다": [
+  {
+   "text": "상인들은 시장 주차장 공사에 협조하기로 했어요.",
+   "en": "The merchants agreed to cooperate with the market parking lot construction.",
+   "ko": "상인들은 시장 주차장 공사에 협조하기로 했어요.",
+   "blank": "협조하기로",
+   "src": "made"
+  },
+  {
+   "text": "경찰은 대회가 안전하게 열리도록 교통 통제에 협조했어요.",
+   "en": "The police cooperated with traffic control so the race could be held safely.",
+   "ko": "경찰은 대회가 안전하게 열리도록 교통 통제에 협조했어요.",
+   "blank": "협조했어요",
    "src": "made"
   }
  ],
@@ -74366,6 +74990,22 @@
    "en": "I drank black tea with milk.",
    "ko": "홍차에 우유를 넣어 마셨어.",
    "blank": "홍차에"
+  }
+ ],
+ "w|홍합": [
+  {
+   "text": "민수는 싱싱한 홍합을 한 봉지 사서 국을 끓였어요.",
+   "en": "Minsu bought a bag of fresh mussels and made soup.",
+   "ko": "민수는 싱싱한 홍합을 한 봉지 사서 국을 끓였어요.",
+   "blank": "홍합을",
+   "src": "made"
+  },
+  {
+   "text": "바닷가 마라톤이 끝나자 주최 측이 홍합 국을 나눠 줬어요.",
+   "en": "After the seaside marathon, the organizers handed out mussel soup.",
+   "ko": "바닷가 마라톤이 끝나자 주최 측이 홍합 국을 나눠 줬어요.",
+   "blank": "홍합",
+   "src": "made"
   }
  ],
  "w|화": [

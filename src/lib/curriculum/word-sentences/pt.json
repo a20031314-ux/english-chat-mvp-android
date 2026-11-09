@@ -2799,6 +2799,22 @@
    "src": "tatoeba:1180581/alexmarcelo en:1179035"
   }
  ],
+ "w|ambicioso": [
+  {
+   "text": "O Gabriel é um repórter ambicioso e quer cobrir a próxima Copa.",
+   "en": "Gabriel is an ambitious reporter and wants to cover the next World Cup.",
+   "ko": "가브리에우는 야심 찬 기자라서 다음 월드컵을 취재하고 싶어 해요.",
+   "blank": "ambicioso",
+   "src": "made"
+  },
+  {
+   "text": "O plano da Luísa era ambicioso: arrumar a casa toda em três dias de folga.",
+   "en": "Luísa's plan was ambitious: tidy the whole house in three days off.",
+   "ko": "루이자의 계획은 야심 찼어요. 쉬는 사흘 동안 집 전체를 정리하는 거였죠.",
+   "blank": "ambicioso",
+   "src": "made"
+  }
+ ],
  "w|ambiente": [
   {
    "text": "O homem é um produto de seu ambiente.",
@@ -3073,6 +3089,22 @@
    "ko": "분석 결과가 어땠어요?",
    "blank": "análise",
    "src": "tatoeba:11541561/carlosalberto en:11541555/carlosalberto"
+  }
+ ],
+ "w|andamento": [
+  {
+   "text": "O chefe perguntou ao Gabriel sobre o andamento da investigação.",
+   "en": "The boss asked Gabriel about the progress of the investigation.",
+   "ko": "상사가 가브리에우에게 취재가 어떻게 되어 가는지 물었어요.",
+   "blank": "andamento",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa deixou a roupa em andamento na máquina e foi ver o filme.",
+   "en": "Luísa left the laundry running in the machine and went to watch the movie.",
+   "ko": "루이자는 세탁기를 돌려 놓고 영화를 보러 갔어요.",
+   "blank": "andamento",
+   "src": "made"
   }
  ],
  "w|andar": [
@@ -3713,6 +3745,22 @@
    "src": "tatoeba:3448046/Ricardo14 en:3327798/CK"
   }
  ],
+ "w|aperto": [
+  {
+   "text": "Na hora do fechamento, o Gabriel sempre passa um aperto para terminar o texto.",
+   "en": "At closing time, Gabriel always has a tight squeeze to finish his piece.",
+   "ko": "마감 때마다 가브리에우는 기사를 끝내느라 진땀을 빼요.",
+   "blank": "aperto",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa deu um aperto de mão no vizinho que trouxe pão quentinho.",
+   "en": "Luísa shook hands with the neighbor who brought warm bread.",
+   "ko": "루이자는 따끈한 빵을 가져온 이웃과 악수했어요.",
+   "blank": "aperto",
+   "src": "made"
+  }
+ ],
  "w|apesar": [
   {
    "text": "Fui trabalhar apesar da gripe.",
@@ -3788,6 +3836,22 @@
    "en": "Beatriz forgot to apply the discount code before paying.",
    "ko": "베아트리스는 결제 전에 할인 코드를 적용하는 걸 잊었어요.",
    "blank": "aplicar",
+   "src": "made"
+  }
+ ],
+ "w|apocalipse": [
+  {
+   "text": "Na redação, todos brincam que o fechamento de sexta parece o apocalipse, e o Gabriel concorda.",
+   "en": "In the newsroom, everyone jokes that Friday's deadline feels like the apocalypse, and Gabriel agrees.",
+   "ko": "편집국에서는 금요일 마감이 종말 같다고들 농담하고, 가브리에우도 맞장구쳐요.",
+   "blank": "apocalipse",
+   "src": "made"
+  },
+  {
+   "text": "Depois do almoço, a cozinha da Luísa parecia o apocalipse.",
+   "en": "After lunch, Luísa's kitchen looked like the apocalypse.",
+   "ko": "점심 뒤 루이자의 부엌은 난장판이었어요.",
+   "blank": "apocalipse",
    "src": "made"
   }
  ],
@@ -4313,6 +4377,22 @@
    "ko": "발가락 사이로 모래가 느껴졌어요.",
    "blank": "areia",
    "src": "tatoeba:4719318/anthrax26 en:3579650/Hybrid"
+  }
+ ],
+ "w|arena": [
+  {
+   "text": "A arena ficou lotada no show, e o Gabriel escreveu a matéria da plateia.",
+   "en": "The arena was packed for the concert, and Gabriel wrote the story from the audience.",
+   "ko": "공연장이 꽉 찼고, 가브리에우는 관객석에서 기사를 썼어요.",
+   "blank": "arena",
+   "src": "made"
+  },
+  {
+   "text": "A família da Luísa assistiu a um show numa arena pela televisão.",
+   "en": "Luísa's family watched a concert in an arena on television.",
+   "ko": "루이자네 가족은 경기장에서 열린 공연을 텔레비전으로 봤어요.",
+   "blank": "arena",
+   "src": "made"
   }
  ],
  "w|argumento": [
@@ -5166,6 +5246,22 @@
    "en": "The residents' association welcomed Mariana with a cake.",
    "ko": "주민회는 케이크로 마리아나를 환영했어요.",
    "blank": "associação",
+   "src": "made"
+  }
+ ],
+ "w|associar": [
+  {
+   "text": "O Gabriel tomou cuidado para não associar o nome da vítima ao caso.",
+   "en": "Gabriel was careful not to link the victim's name to the case.",
+   "ko": "가브리에우는 피해자 이름이 사건과 엮이지 않게 조심했어요.",
+   "blank": "associar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa sempre vai associar o cheiro de bolo de fubá aos feriados na casa da avó.",
+   "en": "Luísa will always associate the smell of cornmeal cake with holidays at her grandmother's house.",
+   "ko": "루이자에게 옥수수 케이크 냄새는 언제나 할머니 댁에서 보낸 휴일을 떠올리게 해요.",
+   "blank": "associar",
    "src": "made"
   }
  ],
@@ -6592,6 +6688,22 @@
    "en": "Beatriz returned the bucket because it arrived cracked.",
    "ko": "양동이가 금이 간 채 와서 베아트리스는 반품했어요.",
    "blank": "balde",
+   "src": "made"
+  }
+ ],
+ "w|balé": [
+  {
+   "text": "O Gabriel nunca tinha visto um balé antes de cobrir a estreia no teatro.",
+   "en": "Gabriel had never seen a ballet before covering the premiere at the theater.",
+   "ko": "가브리에우는 극장 초연을 취재하기 전에는 발레를 본 적이 없었어요.",
+   "blank": "balé",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa e a filha assistiram a um balé clássico na televisão.",
+   "en": "Luísa and her daughter watched a classical ballet on television.",
+   "ko": "루이자와 딸은 텔레비전으로 고전 발레를 봤어요.",
+   "blank": "balé",
    "src": "made"
   }
  ],
@@ -10561,6 +10673,22 @@
    "blank": "causa"
   }
  ],
+ "w|causado": [
+  {
+   "text": "O Gabriel investigou o incêndio causado por um curto-circuito no mercado.",
+   "en": "Gabriel investigated the fire caused by a short circuit at the market.",
+   "ko": "가브리에우는 시장에서 누전으로 난 화재를 취재했어요.",
+   "blank": "causado",
+   "src": "made"
+  },
+  {
+   "text": "O estrago causado pela chuva no quintal deu trabalho para a Luísa no feriado.",
+   "en": "The damage caused by the rain in the backyard kept Luísa busy over the holiday.",
+   "ko": "비 때문에 마당이 망가져서 루이자는 휴일 내내 바빴어요.",
+   "blank": "causado",
+   "src": "made"
+  }
+ ],
  "w|causar": [
   {
    "text": "Evita causar briga.",
@@ -12459,6 +12587,22 @@
    "en": "I ran into him at the club.",
    "ko": "클럽에서 그 사람을 만났어.",
    "blank": "clube"
+  }
+ ],
+ "w|coberto": [
+  {
+   "text": "A mesa do Gabriel vive coberta de papéis e xícaras de café.",
+   "en": "Gabriel's desk is always covered with papers and coffee cups.",
+   "ko": "가브리에우의 책상은 늘 서류와 커피잔으로 덮여 있어요.",
+   "blank": "coberta",
+   "src": "made"
+  },
+  {
+   "text": "O sofá da Luísa ficou coberto de mantas e almofadas para a maratona de filmes.",
+   "en": "Luísa's sofa was covered with blankets and cushions for the movie marathon.",
+   "ko": "영화 몰아보기를 하려고 루이자의 소파는 담요와 쿠션으로 덮였어요.",
+   "blank": "coberto",
+   "src": "made"
   }
  ],
  "w|cobertor": [
@@ -14641,6 +14785,22 @@
    "src": "tatoeba:1792387/alexmarcelo en:1789088/Spamster"
   }
  ],
+ "w|conservador": [
+  {
+   "text": "O dono do jornal tem um gosto conservador para a capa, e o Gabriel queria algo mais ousado.",
+   "en": "The newspaper owner has conservative taste for the cover, and Gabriel wanted something bolder.",
+   "ko": "신문사 사장은 표지에 보수적인 취향이라서, 가브리에우는 좀 더 과감한 걸 원했어요.",
+   "blank": "conservador",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa tem um gosto conservador para decoração e sempre usa os mesmos enfeites.",
+   "en": "Luísa has conservative taste in decoration and always uses the same ornaments.",
+   "ko": "루이자는 장식 취향이 보수적이라 늘 같은 장식을 써요.",
+   "blank": "conservador",
+   "src": "made"
+  }
+ ],
  "w|consideração": [
   {
    "text": "O Lucas mostrou consideração pelo colega novo e o chamou para o grupo de estudo.",
@@ -15207,6 +15367,22 @@
    "src": "made"
   }
  ],
+ "w|convento": [
+  {
+   "text": "O Gabriel visitou um convento antigo que virou centro cultural.",
+   "en": "Gabriel visited an old convent that became a cultural center.",
+   "ko": "가브리에우는 문화 센터로 바뀐 옛 수녀원을 찾아갔어요.",
+   "blank": "convento",
+   "src": "made"
+  },
+  {
+   "text": "A tia da Luísa trouxe doces feitos no convento da cidade dela.",
+   "en": "Luísa's aunt brought sweets made at the convent in her town.",
+   "ko": "루이자의 이모가 자기 동네 수녀원에서 만든 과자를 가져왔어요.",
+   "blank": "convento",
+   "src": "made"
+  }
+ ],
  "w|conversa": [
   {
    "text": "A conversa rendeu ontem.",
@@ -15588,6 +15764,22 @@
    "en": "Sofia left a huge corporation and now works close to home.",
    "ko": "소피아는 큰 기업을 그만두고 이제 집 근처에서 일해요.",
    "blank": "corporação",
+   "src": "made"
+  }
+ ],
+ "w|correção": [
+  {
+   "text": "No dia seguinte, o jornal publicou uma correção sobre a idade do entrevistado do Gabriel.",
+   "en": "The next day, the newspaper published a correction about the age of Gabriel's interviewee.",
+   "ko": "다음 날 신문은 가브리에우가 인터뷰한 사람의 나이에 대한 정정 기사를 실었어요.",
+   "blank": "correção",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa ajudou o filho na correção da redação da escola.",
+   "en": "Luísa helped her son correct his school essay.",
+   "ko": "루이자는 아들의 학교 작문 고치는 걸 도와줬어요.",
+   "blank": "correção",
    "src": "made"
   }
  ],
@@ -16101,6 +16293,22 @@
    "ko": "외상으로도 팔아요?",
    "blank": "crédito",
    "src": "tatoeba:2782540/carlosalberto en:2780818/sharptoothed"
+  }
+ ],
+ "w|credo": [
+  {
+   "text": "A festa do bairro reuniu gente de todo credo, contou o Gabriel na matéria.",
+   "en": "The neighborhood party brought together people of every creed, Gabriel wrote in the story.",
+   "ko": "동네 잔치에는 온갖 신앙을 가진 사람들이 모였다고 가브리에우가 기사에 썼어요.",
+   "blank": "credo",
+   "src": "made"
+  },
+  {
+   "text": "Ao ver a bagunça da sala, a Luísa soltou um credo bem alto.",
+   "en": "Seeing the mess in the living room, Luísa let out a loud \"good grief\".",
+   "ko": "거실이 엉망인 걸 보고 루이자는 \"세상에!\" 하고 크게 외쳤어요.",
+   "blank": "credo",
+   "src": "made"
   }
  ],
  "w|creme": [
@@ -17752,6 +17960,22 @@
    "en": "Carla voted at the club's general meeting and said that was real democracy.",
    "ko": "카를라는 클럽 총회에서 투표하고 이게 바로 민주주의라고 말했어요.",
    "blank": "democracia",
+   "src": "made"
+  }
+ ],
+ "w|democrata": [
+  {
+   "text": "Na entrevista, o velho professor se disse um democrata de coração, e o Gabriel anotou a frase.",
+   "en": "In the interview, the old professor called himself a democrat at heart, and Gabriel noted down the line.",
+   "ko": "인터뷰에서 노교수는 자신이 뼛속까지 민주주의자라고 했고, 가브리에우는 그 말을 받아 적었어요.",
+   "blank": "democrata",
+   "src": "made"
+  },
+  {
+   "text": "Na hora de escolher o filme, a Luísa virou democrata e fez uma votação.",
+   "en": "When it came to choosing the movie, Luísa turned democrat and held a vote.",
+   "ko": "영화를 고를 때 루이자는 민주적으로 투표를 하자고 했어요.",
+   "blank": "democrata",
    "src": "made"
   }
  ],
@@ -20327,6 +20551,22 @@
    "ko": "네 아내가 이혼하자고 할 거야.",
    "blank": "divórcio",
    "src": "tatoeba:2067212/alexmarcelo en:1839660/CK"
+  }
+ ],
+ "w|divulgar": [
+  {
+   "text": "O jornal decidiu divulgar a matéria do Gabriel também no site.",
+   "en": "The newspaper decided to publish Gabriel's story on the website too.",
+   "ko": "신문사는 가브리에우의 기사를 웹사이트에도 내기로 했어요.",
+   "blank": "divulgar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa prometeu não divulgar as fotos engraçadas do feriado no grupo da família.",
+   "en": "Luísa promised not to share the funny holiday photos in the family group.",
+   "ko": "루이자는 휴일의 웃긴 사진을 가족 단톡방에 올리지 않겠다고 약속했어요.",
+   "blank": "divulgar",
+   "src": "made"
   }
  ],
  "w|dizer": [
@@ -23569,6 +23809,22 @@
    "src": "tatoeba:4704388/Ricardo14 en:3680430/Katubeltza"
   }
  ],
+ "w|escultura": [
+  {
+   "text": "O Gabriel fotografou a nova escultura de bronze instalada na praça.",
+   "en": "Gabriel photographed the new bronze sculpture installed in the square.",
+   "ko": "가브리에우는 광장에 새로 세운 청동 조각을 찍었어요.",
+   "blank": "escultura",
+   "src": "made"
+  },
+  {
+   "text": "As crianças fizeram uma escultura de massinha e deram de presente para a Luísa.",
+   "en": "The kids made a play-dough sculpture and gave it to Luísa as a present.",
+   "ko": "아이들이 찰흙으로 조각을 만들어 루이자에게 선물했어요.",
+   "blank": "escultura",
+   "src": "made"
+  }
+ ],
  "w|escuridão": [
   {
    "text": "Eu odeio a escuridão.",
@@ -24122,6 +24378,22 @@
    "en": "Carla tried not to sneeze during her classmate's flute solo.",
    "ko": "카를라는 친구의 플루트 독주 중에 재채기를 참으려고 애썼어요.",
    "blank": "espirrar",
+   "src": "made"
+  }
+ ],
+ "w|esplêndido": [
+  {
+   "text": "O editor disse ao Gabriel que a foto da capa ficou esplêndida.",
+   "en": "The editor told Gabriel that the cover photo turned out splendid.",
+   "ko": "편집장은 가브리에우에게 표지 사진이 훌륭하게 나왔다고 했어요.",
+   "blank": "esplêndida",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa preparou um almoço esplêndido para o feriado em casa.",
+   "en": "Luísa made a splendid lunch for the holiday at home.",
+   "ko": "루이자는 집에서 보내는 휴일에 근사한 점심을 차렸어요.",
+   "blank": "esplêndido",
    "src": "made"
   }
  ],
@@ -25575,6 +25847,22 @@
    "en": "It was a good experience.",
    "ko": "좋은 경험이었어.",
    "blank": "experiência"
+  }
+ ],
+ "w|experiente": [
+  {
+   "text": "Uma jornalista experiente revisa os textos do Gabriel antes de publicar.",
+   "en": "An experienced journalist reviews Gabriel's pieces before publishing.",
+   "ko": "노련한 기자가 가브리에우의 기사를 게재 전에 검토해요.",
+   "blank": "experiente",
+   "src": "made"
+  },
+  {
+   "text": "A avó, cozinheira experiente, ensinou a Luísa a fazer pão de queijo.",
+   "en": "Grandma, an experienced cook, taught Luísa how to make cheese bread.",
+   "ko": "노련한 요리사인 할머니가 루이자에게 치즈빵 만드는 법을 가르쳐 줬어요.",
+   "blank": "experiente",
+   "src": "made"
   }
  ],
  "w|experimentar": [
@@ -28819,6 +29107,22 @@
    "src": "made"
   }
  ],
+ "w|furar": [
+  {
+   "text": "Um prego fez o pneu da moto do Gabriel furar a caminho da redação.",
+   "en": "A nail made the tire of Gabriel's motorcycle go flat on the way to the newsroom.",
+   "ko": "편집국 가는 길에 못 때문에 가브리에우의 오토바이 타이어가 펑크 났어요.",
+   "blank": "furar",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Luísa usou um prego para furar a parede e pendurar a rede.",
+   "en": "Luísa's brother used a nail to make a hole in the wall and hang the hammock.",
+   "ko": "루이자의 남동생은 못으로 벽에 구멍을 내서 해먹을 걸었어요.",
+   "blank": "furar",
+   "src": "made"
+  }
+ ],
  "w|furioso": [
   {
    "text": "Embora ele tenha se desculpado, eu ainda estou furioso.",
@@ -28833,6 +29137,22 @@
    "ko": "화가 났어요.",
    "blank": "furioso",
    "src": "tatoeba:4972464/Ricardo14 en:2245795/CK"
+  }
+ ],
+ "w|furo": [
+  {
+   "text": "O Gabriel deu um furo de reportagem e o jornal saiu na frente de todo mundo.",
+   "en": "Gabriel got a scoop and the newspaper beat everyone to it.",
+   "ko": "가브리에우가 특종을 잡아서 신문이 누구보다 먼저 보도했어요.",
+   "blank": "furo",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa achou um furo na meia favorita e resolveu costurar no feriado.",
+   "en": "Luísa found a hole in her favorite sock and decided to sew it over the holiday.",
+   "ko": "루이자는 아끼는 양말에 구멍이 난 걸 보고 휴일에 꿰매기로 했어요.",
+   "blank": "furo",
+   "src": "made"
   }
  ],
  "w|fusão": [
@@ -32675,6 +32995,22 @@
    "src": "made"
   }
  ],
+ "w|injustiça": [
+  {
+   "text": "O Gabriel escreveu sobre a injustiça sofrida por um porteiro acusado sem provas.",
+   "en": "Gabriel wrote about the injustice suffered by a doorman accused without evidence.",
+   "ko": "가브리에우는 증거 없이 누명을 쓴 경비원이 겪은 부당함에 대해 썼어요.",
+   "blank": "injustiça",
+   "src": "made"
+  },
+  {
+   "text": "O filho da Luísa reclamou da injustiça de lavar a louça duas vezes seguidas.",
+   "en": "Luísa's son complained about the injustice of washing the dishes twice in a row.",
+   "ko": "루이자의 아들은 두 번 연속 설거지하는 건 불공평하다고 투덜댔어요.",
+   "blank": "injustiça",
+   "src": "made"
+  }
+ ],
  "w|injusto": [
   {
    "text": "O Rafael acha que estacionamento gratuito para vereadores é um privilégio injusto.",
@@ -35411,6 +35747,22 @@
    "src": "made"
   }
  ],
+ "w|letal": [
+  {
+   "text": "A reportagem do Gabriel explicava por que aquele cruzamento era tão letal para pedestres.",
+   "en": "Gabriel's report explained why that intersection was so deadly for pedestrians.",
+   "ko": "가브리에우의 기사는 그 교차로가 왜 보행자에게 그토록 치명적인지 설명했어요.",
+   "blank": "letal",
+   "src": "made"
+  },
+  {
+   "text": "O vilão do filme que a Luísa viu usava um veneno letal, e as crianças gritaram de susto.",
+   "en": "The villain in the film Luísa watched used a lethal poison, and the children screamed in fright.",
+   "ko": "루이자가 본 영화 속 악당이 치명적인 독을 써서 아이들이 놀라 소리쳤어요.",
+   "blank": "letal",
+   "src": "made"
+  }
+ ],
  "w|letra": [
   {
    "text": "Minha irmã tem uma letra muito bonita.",
@@ -36293,6 +36645,22 @@
    "en": "Save me a seat.",
    "ko": "자리 하나 맡아 줘.",
    "blank": "lugar"
+  }
+ ],
+ "w|lunático": [
+  {
+   "text": "Um leitor ligou para o jornal com uma teoria meio lunática sobre discos voadores, e o Gabriel ouviu tudo.",
+   "en": "A reader called the newspaper with a somewhat crazy theory about flying saucers, and Gabriel listened to all of it.",
+   "ko": "한 독자가 비행접시에 관한 좀 엉뚱한 이론을 들고 신문사에 전화했고, 가브리에우는 다 들어 줬어요.",
+   "blank": "lunática",
+   "src": "made"
+  },
+  {
+   "text": "O tio da Luísa contou uma história lunática sobre um jacaré no quintal, e todos riram.",
+   "en": "Luísa's uncle told a crazy story about an alligator in the backyard, and everyone laughed.",
+   "ko": "루이자의 삼촌이 마당에 악어가 있었다는 황당한 이야기를 해서 다들 웃었어요.",
+   "blank": "lunática",
+   "src": "made"
   }
  ],
  "w|lutador": [
@@ -38079,6 +38447,22 @@
    "blank": "melhorar"
   }
  ],
+ "w|melodia": [
+  {
+   "text": "Uma melodia antiga tocava no rádio da redação enquanto o Gabriel escrevia.",
+   "en": "An old melody was playing on the newsroom radio while Gabriel was writing.",
+   "ko": "가브리에우가 기사를 쓰는 동안 편집국 라디오에서 옛 선율이 흘렀어요.",
+   "blank": "melodia",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa cantarolou a melodia de uma canção de infância enquanto lavava a louça.",
+   "en": "Luísa hummed the melody of a childhood song while washing the dishes.",
+   "ko": "루이자는 설거지를 하며 어릴 적 노래의 가락을 흥얼거렸어요.",
+   "blank": "melodia",
+   "src": "made"
+  }
+ ],
  "w|membro": [
   {
    "text": "Ela é membro da banda.",
@@ -39800,6 +40184,22 @@
    "en": "The park goes silent after the first snow, and Rita loves that silence.",
    "ko": "첫눈이 오면 공원이 조용해지고, 히타는 그 고요함을 좋아해요.",
    "blank": "mudo",
+   "src": "made"
+  }
+ ],
+ "w|muitíssimo": [
+  {
+   "text": "O Gabriel ficou muitíssimo feliz quando a matéria dele virou manchete.",
+   "en": "Gabriel was extremely happy when his story became the headline.",
+   "ko": "자기 기사가 머리기사가 되자 가브리에우는 무척 기뻤어요.",
+   "blank": "muitíssimo",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa gostou muitíssimo de ficar de pijama até o meio-dia.",
+   "en": "Luísa enjoyed staying in pajamas until noon very much.",
+   "ko": "루이자는 정오까지 잠옷 차림으로 있는 게 무척 좋았어요.",
+   "blank": "muitíssimo",
    "src": "made"
   }
  ],
@@ -41739,6 +42139,22 @@
    "src": "tatoeba:3179645/carlosalberto en:12763941/AlanF_US"
   }
  ],
+ "w|ocorrido": [
+  {
+   "text": "O Gabriel ligou para a polícia para confirmar o ocorrido na estação.",
+   "en": "Gabriel called the police to confirm what happened at the station.",
+   "ko": "가브리에우는 역에서 있었던 일을 확인하려고 경찰에 전화했어요.",
+   "blank": "ocorrido",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa riu muito ao lembrar o ocorrido no último feriado, quando o bolo caiu no chão.",
+   "en": "Luísa laughed a lot remembering what happened last holiday, when the cake fell on the floor.",
+   "ko": "루이자는 지난 휴일에 케이크가 바닥에 떨어졌던 일을 떠올리며 한참 웃었어요.",
+   "blank": "ocorrido",
+   "src": "made"
+  }
+ ],
  "w|óculos": [
   {
    "text": "O que vocês fizeram com os meus óculos?",
@@ -42263,6 +42679,22 @@
    "blank": "oportunidade"
   }
  ],
+ "w|oposição": [
+  {
+   "text": "O Gabriel ouviu tanto o governo quanto a oposição antes de escrever.",
+   "en": "Gabriel listened to both the government and the opposition before writing.",
+   "ko": "가브리에우는 기사를 쓰기 전에 정부와 야당 양쪽 이야기를 다 들었어요.",
+   "blank": "oposição",
+   "src": "made"
+  },
+  {
+   "text": "A ideia de pedir pizza encontrou oposição da avó, que queria cozinhar.",
+   "en": "The idea of ordering pizza met with opposition from Grandma, who wanted to cook.",
+   "ko": "피자를 시키자는 의견에 요리하고 싶었던 할머니가 반대했어요.",
+   "blank": "oposição",
+   "src": "made"
+  }
+ ],
  "w|oposto": [
   {
    "text": "O Pedro e a colega fazem personagens de temperamento oposto.",
@@ -42559,6 +42991,22 @@
    "ko": "제 문장은 제가 직접 쓴 거예요.",
    "blank": "original",
    "src": "tatoeba:8821107/carlosalberto en:8821122/carlosalberto"
+  }
+ ],
+ "w|orquestra": [
+  {
+   "text": "A orquestra da cidade fez um concerto gratuito, e o Gabriel cobriu o evento.",
+   "en": "The city orchestra gave a free concert, and Gabriel covered the event.",
+   "ko": "시립 관현악단이 무료 공연을 했고, 가브리에우가 취재했어요.",
+   "blank": "orquestra",
+   "src": "made"
+  },
+  {
+   "text": "A filha da Luísa toca violino na orquestra da escola e ensaiou na sala.",
+   "en": "Luísa's daughter plays violin in the school orchestra and practiced in the living room.",
+   "ko": "루이자의 딸은 학교 오케스트라에서 바이올린을 켜고 거실에서 연습했어요.",
+   "blank": "orquestra",
+   "src": "made"
   }
  ],
  "w|osso": [
@@ -43498,6 +43946,22 @@
    "en": "A museum panel showed how women of the past used to give birth at home.",
    "ko": "박물관 안내판에는 옛날 여성들이 집에서 어떻게 출산했는지 나와 있었어요.",
    "blank": "parir",
+   "src": "made"
+  }
+ ],
+ "w|parlamento": [
+  {
+   "text": "O Gabriel passou a tarde no parlamento esperando o resultado da votação.",
+   "en": "Gabriel spent the afternoon at the parliament waiting for the vote result.",
+   "ko": "가브리에우는 투표 결과를 기다리며 오후 내내 의회에 있었어요.",
+   "blank": "parlamento",
+   "src": "made"
+  },
+  {
+   "text": "O pai da Luísa dormiu no sofá vendo um debate do parlamento.",
+   "en": "Luísa's father fell asleep on the sofa watching a parliamentary debate.",
+   "ko": "루이자의 아버지는 의회 토론을 보다가 소파에서 잠들었어요.",
+   "blank": "parlamento",
    "src": "made"
   }
  ],
@@ -45131,6 +45595,22 @@
    "src": "tatoeba:4927607/yinp en:4925816/CK"
   }
  ],
+ "w|petição": [
+  {
+   "text": "Os moradores entregaram uma petição pedindo mais ônibus, e o Gabriel noticiou.",
+   "en": "The residents handed in a petition asking for more buses, and Gabriel reported it.",
+   "ko": "주민들이 버스를 늘려 달라는 청원서를 냈고, 가브리에우가 보도했어요.",
+   "blank": "petição",
+   "src": "made"
+  },
+  {
+   "text": "As crianças fizeram uma petição de brincadeira pedindo à Luísa mais um dia de folga.",
+   "en": "The kids made a joke petition asking Luísa for one more day off.",
+   "ko": "아이들은 루이자에게 하루 더 쉬자고 장난스러운 청원서를 만들었어요.",
+   "blank": "petição",
+   "src": "made"
+  }
+ ],
  "w|petróleo": [
   {
    "text": "Nós não estamos com pouco petróleo neste país.",
@@ -45935,6 +46415,22 @@
    "en": "The politician canceled the visit.",
    "ko": "그 정치인이 방문을 취소했어.",
    "blank": "político"
+  }
+ ],
+ "w|polonês": [
+  {
+   "text": "O Gabriel entrevistou um pianista polonês que veio tocar no teatro municipal.",
+   "en": "Gabriel interviewed a Polish pianist who came to play at the municipal theater.",
+   "ko": "가브리에우는 시립 극장에서 공연하러 온 폴란드 피아니스트를 인터뷰했어요.",
+   "blank": "polonês",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa assou uma torta de maçã polonesa com a receita de uma amiga.",
+   "en": "Luísa baked a Polish apple pie with a friend's recipe.",
+   "ko": "루이자는 친구에게 받은 조리법으로 폴란드식 사과 파이를 구웠어요.",
+   "blank": "polonesa",
+   "src": "made"
   }
  ],
  "w|poluição": [
@@ -48967,6 +49463,22 @@
    "src": "tatoeba:713596/marcusps en:30372/CK"
   }
  ],
+ "w|qualificar": [
+  {
+   "text": "Para qualificar a vaga de editor, o Gabriel precisa de mais alguns anos de casa.",
+   "en": "To qualify for the editor's position, Gabriel needs a few more years at the paper.",
+   "ko": "편집자 자리에 오르려면 가브리에우는 몇 년 더 경력을 쌓아야 해요.",
+   "blank": "qualificar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa não sabe como qualificar o bolo do filho: queimado ou bem tostado?",
+   "en": "Luísa doesn't know how to describe her son's cake: burnt or well toasted?",
+   "ko": "루이자는 아들이 만든 케이크를 뭐라고 해야 할지 몰라요. 탄 걸까, 잘 구운 걸까?",
+   "blank": "qualificar",
+   "src": "made"
+  }
+ ],
  "w|qualquer": [
   {
    "text": "Qualquer coisa, me chama.",
@@ -51225,6 +51737,22 @@
    "blank": "repetiu"
   }
  ],
+ "w|reportagem": [
+  {
+   "text": "A reportagem do Gabriel sobre as enchentes ganhou um prêmio regional.",
+   "en": "Gabriel's report on the floods won a regional award.",
+   "ko": "홍수에 관한 가브리에우의 기사가 지역 상을 받았어요.",
+   "blank": "reportagem",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa leu uma reportagem longa sobre jardins enquanto tomava café.",
+   "en": "Luísa read a long feature about gardens while having coffee.",
+   "ko": "루이자는 커피를 마시며 정원에 관한 긴 기사를 읽었어요.",
+   "blank": "reportagem",
+   "src": "made"
+  }
+ ],
  "w|reportar": [
   {
    "text": "O Bruno precisa reportar ao gerente qualquer falta de ingrediente.",
@@ -52175,6 +52703,22 @@
    "src": "made"
   }
  ],
+ "w|ringue": [
+  {
+   "text": "Para a matéria de esportes, o Gabriel subiu no ringue com um lutador de boxe.",
+   "en": "For the sports story, Gabriel got into the ring with a boxer.",
+   "ko": "스포츠 기사를 위해 가브리에우는 권투 선수와 링에 올랐어요.",
+   "blank": "ringue",
+   "src": "made"
+  },
+  {
+   "text": "As crianças da Luísa transformaram a sala num ringue de luta de travesseiros.",
+   "en": "Luísa's kids turned the living room into a pillow-fight ring.",
+   "ko": "루이자의 아이들은 거실을 베개 싸움 링으로 만들었어요.",
+   "blank": "ringue",
+   "src": "made"
+  }
+ ],
  "w|rio": [
   {
    "text": "O rio passa atrás de casa.",
@@ -52809,6 +53353,22 @@
    "ko": "수박 맛을 좋아해요.",
    "blank": "sabor",
    "src": "tatoeba:5101930/bill en:712124/Ronaldonl"
+  }
+ ],
+ "w|sacanagem": [
+  {
+   "text": "Alguém apagou o arquivo do Gabriel minutos antes do fechamento, que sacanagem!",
+   "en": "Someone deleted Gabriel's file minutes before deadline, what a dirty trick!",
+   "ko": "누군가 마감 몇 분 전에 가브리에우의 파일을 지웠어요, 정말 너무해요!",
+   "blank": "sacanagem",
+   "src": "made"
+  },
+  {
+   "text": "O irmão comeu o último pedaço de pudim, e a Luísa gritou que era sacanagem.",
+   "en": "Her brother ate the last piece of pudding, and Luísa shouted that it wasn't fair.",
+   "ko": "남동생이 마지막 푸딩 조각을 먹자 루이자는 반칙이라고 소리쳤어요.",
+   "blank": "sacanagem",
+   "src": "made"
   }
  ],
  "w|sacar": [
@@ -53739,6 +54299,22 @@
    "blank": "seis"
   }
  ],
+ "w|selar": [
+  {
+   "text": "O Gabriel ajudou a selar os envelopes com os prêmios do concurso de leitores.",
+   "en": "Gabriel helped seal the envelopes with the prizes for the readers' contest.",
+   "ko": "가브리에우는 독자 공모전 상품이 든 봉투를 봉하는 걸 도왔어요.",
+   "blank": "selar",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa ajudou a selar os potes de geleia que a família fez juntos.",
+   "en": "Luísa helped seal the jars of jam the family made together.",
+   "ko": "루이자는 가족이 함께 만든 잼 병을 밀봉하는 걸 도왔어요.",
+   "blank": "selar",
+   "src": "made"
+  }
+ ],
  "w|seleção": [
   {
    "text": "O João passou na seleção para o time de vôlei da escola.",
@@ -54277,6 +54853,22 @@
    "ko": "그녀를 너무 사랑해서 떠날 수 없어요.",
    "blank": "separar",
    "src": "tatoeba:974335/alexmarcelo en:436785/lukaszpp"
+  }
+ ],
+ "w|sepultura": [
+  {
+   "text": "O Gabriel escreveu sobre a sepultura de um poeta esquecido no cemitério da cidade.",
+   "en": "Gabriel wrote about the grave of a forgotten poet in the city cemetery.",
+   "ko": "가브리에우는 시립 묘지에 있는 잊힌 시인의 무덤에 대해 썼어요.",
+   "blank": "sepultura",
+   "src": "made"
+  },
+  {
+   "text": "No feriado de Finados, a Luísa levou flores à sepultura do avô.",
+   "en": "On the Day of the Dead holiday, Luísa took flowers to her grandfather's grave.",
+   "ko": "위령의 날 휴일에 루이자는 할아버지 산소에 꽃을 가져갔어요.",
+   "blank": "sepultura",
+   "src": "made"
   }
  ],
  "w|sequer": [
@@ -56791,6 +57383,22 @@
    "src": "made"
   }
  ],
+ "w|tampouco": [
+  {
+   "text": "O prefeito não quis comentar, e o secretário tampouco atendeu o Gabriel.",
+   "en": "The mayor didn't want to comment, and the secretary didn't take Gabriel's call either.",
+   "ko": "시장은 논평을 거부했고, 비서도 가브리에우의 전화를 받지 않았어요.",
+   "blank": "tampouco",
+   "src": "made"
+  },
+  {
+   "text": "A Luísa não quis sair de casa no feriado, e o marido tampouco.",
+   "en": "Luísa didn't want to leave the house on the holiday, and neither did her husband.",
+   "ko": "루이자는 휴일에 나가고 싶지 않았고, 남편도 마찬가지였어요.",
+   "blank": "tampouco",
+   "src": "made"
+  }
+ ],
  "w|tanque": [
   {
    "text": "O tanque de gasolina está quase vazio.",
@@ -59269,6 +59877,22 @@
    "ko": "우리는 대중교통을 이용해요.",
    "blank": "transporte",
    "src": "tatoeba:6472345/heo598 en:6472238/mojeanin"
+  }
+ ],
+ "w|trapacear": [
+  {
+   "text": "O Gabriel descobriu que um time tentou trapacear no campeonato da cidade.",
+   "en": "Gabriel found out that a team tried to cheat in the city championship.",
+   "ko": "가브리에우는 한 팀이 시 대회에서 속임수를 쓰려 했다는 걸 알아냈어요.",
+   "blank": "trapacear",
+   "src": "made"
+  },
+  {
+   "text": "No jogo de tabuleiro, o primo da Luísa tentou trapacear e foi pego.",
+   "en": "In the board game, Luísa's cousin tried to cheat and got caught.",
+   "ko": "보드게임에서 루이자의 사촌이 속임수를 쓰려다 들켰어요.",
+   "blank": "trapacear",
+   "src": "made"
   }
  ],
  "w|trás": [
@@ -61911,6 +62535,22 @@
    "en": "I want to visit the old downtown.",
    "ko": "옛 시내를 가 보고 싶어.",
    "blank": "visitar"
+  }
+ ],
+ "w|visível": [
+  {
+   "text": "O erro na manchete era bem visível, e o Gabriel pediu para corrigir antes da impressão.",
+   "en": "The mistake in the headline was very visible, and Gabriel asked to fix it before printing.",
+   "ko": "제목의 실수가 눈에 확 띄어서 가브리에우는 인쇄 전에 고쳐 달라고 했어요.",
+   "blank": "visível",
+   "src": "made"
+  },
+  {
+   "text": "Da janela da Luísa, a lua estava bem visível na noite do feriado.",
+   "en": "From Luísa's window, the moon was clearly visible on the night of the holiday.",
+   "ko": "휴일 밤 루이자의 창문으로 달이 또렷하게 보였어요.",
+   "blank": "visível",
+   "src": "made"
   }
  ],
  "w|visto": [
