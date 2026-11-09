@@ -8541,6 +8541,22 @@
    "blank": "استغلت"
   }
  ],
+ "w|استغنى": [
+  {
+   "text": "لم يعد يوسف يستغني عن النظارة بعد العملية.",
+   "en": "Since the operation Yusuf can no longer do without his glasses.",
+   "ko": "수술 뒤로 유수프는 안경 없이는 지낼 수 없게 됐어요.",
+   "blank": "يستغني",
+   "src": "made"
+  },
+  {
+   "text": "لا تستغني سارة عن السكين الحادة في المطبخ.",
+   "en": "Sara can't do without a sharp knife in the kitchen.",
+   "ko": "사라는 부엌에서 잘 드는 칼이 꼭 있어야 해요.",
+   "blank": "تستغني",
+   "src": "made"
+  }
+ ],
  "w|استفاد": [
   {
    "text": "استفاد الطلاب من الدرس الجديد.",
@@ -8655,6 +8671,54 @@
    "en": "The family finally settled in a new house.",
    "ko": "가족이 마침내 새 집에 정착했어.",
    "blank": "استقرت"
+  }
+ ],
+ "w|استقطب": [
+  {
+   "text": "استقطب المستشفى الجديد أطباء من مدن كثيرة، ومنهم الدكتور يوسف.",
+   "en": "The new hospital attracted doctors from many cities, including Dr. Yusuf.",
+   "ko": "새 병원은 여러 도시에서 의사들을 끌어모았는데, 유수프 선생님도 그중 한 명이었어요.",
+   "blank": "استقطب",
+   "src": "made"
+  },
+  {
+   "text": "استقطبت دورة الطبخ التي تقدمها سارة طلابا من أعمار مختلفة.",
+   "en": "The cooking course Sara teaches drew students of different ages.",
+   "ko": "사라가 여는 요리 강좌에는 여러 나이대의 수강생이 모였어요.",
+   "blank": "استقطبت",
+   "src": "made"
+  }
+ ],
+ "w|استكشف": [
+  {
+   "text": "استكشف يوسف ممرات المستشفى في يومه الأول حتى لا يضيع.",
+   "en": "Yusuf explored the hospital corridors on his first day so he wouldn't get lost.",
+   "ko": "유수프는 길을 잃지 않으려고 첫날 병원 복도를 둘러봤어요.",
+   "blank": "استكشف",
+   "src": "made"
+  },
+  {
+   "text": "استكشفت سارة مع طلابها نكهات التوابل في السوق القديم.",
+   "en": "Sara explored the flavors of spices in the old market with her students.",
+   "ko": "사라는 학생들과 함께 옛 시장에서 향신료 맛을 탐험했어요.",
+   "blank": "استكشفت",
+   "src": "made"
+  }
+ ],
+ "w|استلزم": [
+  {
+   "text": "استلزم علاج يوسف البقاء في المستشفى أسبوعا كاملا.",
+   "en": "Yusuf's treatment required staying in the hospital for a whole week.",
+   "ko": "유수프는 치료 때문에 일주일 내내 입원해 있어야 했어요.",
+   "blank": "استلزم",
+   "src": "made"
+  },
+  {
+   "text": "استلزمت وصفة سارة ثلاث ساعات من الطهي البطيء.",
+   "en": "Sara's recipe required three hours of slow cooking.",
+   "ko": "사라의 요리법은 세 시간 동안 천천히 익혀야 했어요.",
+   "blank": "استلزمت",
+   "src": "made"
   }
  ],
  "w|استلقى": [
@@ -8783,6 +8847,54 @@
    "en": "I quickly concluded the result.",
    "ko": "나는 결과를 빠르게 도출했어.",
    "blank": "استنتجت"
+  }
+ ],
+ "w|استند": [
+  {
+   "text": "استند يوسف إلى ذراع الممرضة وهو يمشي في الممر.",
+   "en": "Yusuf leaned on the nurse's arm as he walked down the corridor.",
+   "ko": "유수프는 복도를 걸으며 간호사의 팔에 기댔어요.",
+   "blank": "استند",
+   "src": "made"
+  },
+  {
+   "text": "تستند سارة في وصفاتها إلى ما تعلمته من جدتها.",
+   "en": "Sara bases her recipes on what she learned from her grandmother.",
+   "ko": "사라의 요리법은 할머니에게 배운 것에 바탕을 둬요.",
+   "blank": "تستند",
+   "src": "made"
+  }
+ ],
+ "w|استنكر": [
+  {
+   "text": "استنكر يوسف طول الانتظار في قسم الطوارئ.",
+   "en": "Yusuf complained about the long wait in the emergency department.",
+   "ko": "유수프는 응급실에서 너무 오래 기다리게 한다고 항의했어요.",
+   "blank": "استنكر",
+   "src": "made"
+  },
+  {
+   "text": "استنكرت سارة رمي الخبز الزائد في القمامة.",
+   "en": "Sara disapproved of throwing leftover bread in the trash.",
+   "ko": "사라는 남은 빵을 쓰레기통에 버리는 걸 못마땅해했어요.",
+   "blank": "استنكرت",
+   "src": "made"
+  }
+ ],
+ "w|استهدف": [
+  {
+   "text": "يستهدف الدواء الجديد الالتهاب مباشرة، كما شرح الطبيب ليوسف.",
+   "en": "The new medicine targets the inflammation directly, as the doctor explained to Yusuf.",
+   "ko": "의사는 유수프에게 새 약이 염증을 바로 겨냥한다고 설명했어요.",
+   "blank": "يستهدف",
+   "src": "made"
+  },
+  {
+   "text": "تستهدف دورة سارة المبتدئين الذين لم يطبخوا من قبل.",
+   "en": "Sara's course is aimed at beginners who have never cooked before.",
+   "ko": "사라의 강좌는 요리를 해 본 적 없는 초보자를 대상으로 해요.",
+   "blank": "تستهدف",
+   "src": "made"
   }
  ],
  "w|استهلك": [
@@ -8915,6 +9027,22 @@
    "blank": "اشتاق"
   }
  ],
+ "w|اشتبه": [
+  {
+   "text": "اشتبه الطبيب في أن يوسف مصاب بفقر الدم، فطلب تحليلا.",
+   "en": "The doctor suspected Yusuf had anemia and ordered a test.",
+   "ko": "의사는 유수프가 빈혈인 것 같아서 검사를 지시했어요.",
+   "blank": "اشتبه",
+   "src": "made"
+  },
+  {
+   "text": "اشتبهت سارة في أن الحليب فاسد، فشمته قبل أن تستعمله.",
+   "en": "Sara suspected the milk had gone bad, so she smelled it before using it.",
+   "ko": "사라는 우유가 상했나 싶어서 쓰기 전에 냄새를 맡아 봤어요.",
+   "blank": "اشتبهت",
+   "src": "made"
+  }
+ ],
  "w|اشتراكي": [
   {
    "text": "وجد سامي في الأرشيف أعدادا من صحيفة اشتراكية صدرت في القرن الماضي.",
@@ -9044,6 +9172,22 @@
    "en": "Nour felt disgusted by the smell of garbage in the street.",
    "ko": "누르는 길거리 쓰레기 냄새에 속이 메스꺼웠어요.",
    "blank": "بالاشمئزاز",
+   "src": "made"
+  }
+ ],
+ "w|اصطاد": [
+  {
+   "text": "روى يوسف للممرضة كيف اصطاد سمكة كبيرة قبل أن يمرض.",
+   "en": "Yusuf told the nurse how he had caught a big fish before he got sick.",
+   "ko": "유수프는 아프기 전에 큰 물고기를 잡은 이야기를 간호사에게 들려줬어요.",
+   "blank": "اصطاد",
+   "src": "made"
+  },
+  {
+   "text": "اصطاد زوج سارة السمك الذي طبخته في الحصة.",
+   "en": "Sara's husband caught the fish she cooked in class.",
+   "ko": "사라가 수업에서 요리한 생선은 남편이 직접 잡아 온 거예요.",
+   "blank": "اصطاد",
    "src": "made"
   }
  ],
@@ -9182,6 +9326,22 @@
    "en": "Mariam noted in the file that the patient had been assaulted in the street.",
    "ko": "마리암은 환자가 길에서 폭행을 당했다고 기록에 적었어요.",
    "blank": "لاعتداء",
+   "src": "made"
+  }
+ ],
+ "w|اعتدى": [
+  {
+   "text": "أخبر الحارس يوسف أن رجلا اعتدى على ممرض في الليل وأن الشرطة جاءت.",
+   "en": "The guard told Yusuf that a man had assaulted a nurse during the night and the police came.",
+   "ko": "경비원은 유수프에게 밤에 한 남자가 간호사를 폭행해서 경찰이 왔다고 말했어요.",
+   "blank": "اعتدى",
+   "src": "made"
+  },
+  {
+   "text": "قرأت سارة خبرا عن لص اعتدى على صاحب مطعم ثم قبضت عليه الشرطة.",
+   "en": "Sara read a news story about a thief who attacked a restaurant owner and was then caught by the police.",
+   "ko": "사라는 식당 주인을 폭행한 도둑이 경찰에 잡혔다는 기사를 읽었어요.",
+   "blank": "اعتدى",
    "src": "made"
   }
  ],
@@ -9393,6 +9553,22 @@
    "src": "made"
   }
  ],
+ "w|اعتنق": [
+  {
+   "text": "اعتنق يوسف عادات صحية جديدة بعد خروجه من المستشفى.",
+   "en": "Yusuf adopted new healthy habits after leaving the hospital.",
+   "ko": "유수프는 퇴원한 뒤 건강한 습관을 새로 들였어요.",
+   "blank": "اعتنق",
+   "src": "made"
+  },
+  {
+   "text": "اعتنقت سارة فكرة الطبخ بلا هدر منذ سنوات.",
+   "en": "Sara embraced the idea of zero-waste cooking years ago.",
+   "ko": "사라는 몇 년 전부터 버리는 것 없는 요리를 실천해 왔어요.",
+   "blank": "اعتنقت",
+   "src": "made"
+  }
+ ],
  "w|اعتنى": [
   {
    "text": "أنا اعتنى بالنباتات في حديقتي.",
@@ -9419,6 +9595,22 @@
    "en": "Wash before prayer.",
    "ko": "기도 전에 씻으세요.",
    "blank": "اغتسل"
+  }
+ ],
+ "w|اغتنم": [
+  {
+   "text": "اغتنم يوسف زيارة الطبيب ليسأله عن نظامه الغذائي.",
+   "en": "Yusuf took the opportunity of the doctor's visit to ask about his diet.",
+   "ko": "유수프는 의사가 회진 온 김에 식단에 대해 물어봤어요.",
+   "blank": "اغتنم",
+   "src": "made"
+  },
+  {
+   "text": "اغتنمت سارة موسم الطماطم لتعلم طلابها صنع الصلصة.",
+   "en": "Sara made the most of tomato season to teach her students to make sauce.",
+   "ko": "사라는 토마토 철을 놓치지 않고 학생들에게 소스 만드는 법을 가르쳤어요.",
+   "blank": "اغتنمت",
+   "src": "made"
   }
  ],
  "w|اغتيال": [
@@ -9450,6 +9642,22 @@
    "en": "Thursday morning's newspaper editorial was about the heat wave, and Maryam read all of it.",
    "ko": "목요일 아침 신문 사설이 폭염에 관한 거라 마리암은 끝까지 다 읽었어요.",
    "blank": "افتتاحية",
+   "src": "made"
+  }
+ ],
+ "w|افتتح": [
+  {
+   "text": "افتتح المستشفى جناحا جديدا للأطفال، ونقل إليه يوسف ابنه.",
+   "en": "The hospital opened a new children's wing, and Yusuf had his son moved there.",
+   "ko": "병원이 새 소아 병동을 열어서 유수프는 아들을 그리로 옮겼어요.",
+   "blank": "افتتح",
+   "src": "made"
+  },
+  {
+   "text": "افتتحت سارة الحصة بتذوق أنواع مختلفة من زيت الزيتون.",
+   "en": "Sara opened the class with a tasting of different olive oils.",
+   "ko": "사라는 여러 가지 올리브유를 맛보는 것으로 수업을 시작했어요.",
+   "blank": "افتتحت",
    "src": "made"
   }
  ],
@@ -9495,6 +9703,22 @@
    "en": "I miss my friend when he travels far away.",
    "ko": "친구가 멀리 여행 가면 보고 싶어.",
    "blank": "افتقد"
+  }
+ ],
+ "w|اقتبس": [
+  {
+   "text": "اقتبس يوسف جملة من كتاب طبي في رسالته إلى الإدارة.",
+   "en": "Yusuf quoted a sentence from a medical book in his letter to the management.",
+   "ko": "유수프는 병원 측에 보내는 편지에 의학책 한 구절을 인용했어요.",
+   "blank": "اقتبس",
+   "src": "made"
+  },
+  {
+   "text": "اقتبست سارة الوصفة من كتاب طبخ قديم وغيرت فيها قليلا.",
+   "en": "Sara took the recipe from an old cookbook and changed it a little.",
+   "ko": "사라는 옛 요리책에서 요리법을 가져와 조금 바꿨어요.",
+   "blank": "اقتبست",
+   "src": "made"
   }
  ],
  "w|اقتحام": [
@@ -9854,6 +10078,22 @@
    "en": "Sarah wolfed down her sandwich because the lunch break was short.",
    "ko": "점심시간이 짧아서 사라는 샌드위치를 허겁지겁 먹었어요.",
    "blank": "التهمت",
+   "src": "made"
+  }
+ ],
+ "w|التواء": [
+  {
+   "text": "لف الممرض كاحل يوسف بضماد بسبب التواء خفيف.",
+   "en": "The nurse wrapped Yusuf's ankle in a bandage because of a mild sprain.",
+   "ko": "간호사는 가볍게 삔 유수프의 발목에 붕대를 감아 줬어요.",
+   "blank": "التواء",
+   "src": "made"
+  },
+  {
+   "text": "حملت سارة كيس الطحين الثقيل فأصيبت بالتواء في معصمها.",
+   "en": "Sara lifted the heavy bag of flour and sprained her wrist.",
+   "ko": "사라는 무거운 밀가루 포대를 들다가 손목을 삐었어요.",
+   "blank": "بالتواء",
    "src": "made"
   }
  ],
@@ -10321,6 +10561,22 @@
    "en": "I will wait here until you return.",
    "ko": "네가 돌아올 때까지 여기서 기다릴게요.",
    "blank": "انتظر"
+  }
+ ],
+ "w|انتفاخ": [
+  {
+   "text": "لاحظ يوسف انتفاخا في قدمه بعد الجلوس طويلا.",
+   "en": "Yusuf noticed swelling in his foot after sitting for a long time.",
+   "ko": "유수프는 오래 앉아 있다가 발이 부은 걸 알아챘어요.",
+   "blank": "انتفاخا",
+   "src": "made"
+  },
+  {
+   "text": "تنقع سارة الفاصولياء طوال الليل لتخفف الانتفاخ بعد الأكل.",
+   "en": "Sara soaks the beans overnight to reduce bloating after eating.",
+   "ko": "사라는 먹고 나서 배가 더부룩하지 않도록 콩을 밤새 불려요.",
+   "blank": "الانتفاخ",
+   "src": "made"
   }
  ],
  "w|انتفاضة": [
@@ -19419,6 +19675,22 @@
    "blank": "جاء"
   }
  ],
+ "w|جائحة": [
+  {
+   "text": "يتذكر يوسف أيام الجائحة حين كانت الممرات مزدحمة.",
+   "en": "Yusuf remembers the days of the pandemic when the corridors were crowded.",
+   "ko": "유수프는 복도가 붐비던 팬데믹 시절을 기억해요.",
+   "blank": "الجائحة",
+   "src": "made"
+  },
+  {
+   "text": "بدأت سارة تعليم الطبخ عبر الإنترنت خلال جائحة كورونا.",
+   "en": "Sara started teaching cooking online during the coronavirus pandemic.",
+   "ko": "사라는 코로나 팬데믹 때 온라인으로 요리를 가르치기 시작했어요.",
+   "blank": "جائحة",
+   "src": "made"
+  }
+ ],
  "w|جائزة": [
   {
    "text": "أخذ جائزة عالرسم بالمدرسة.",
@@ -23469,6 +23741,22 @@
    "src": "made"
   }
  ],
+ "w|حكة": [
+  {
+   "text": "أعطت الممرضة يوسف مرهما يخفف الحكة.",
+   "en": "The nurse gave Yusuf an ointment to relieve the itching.",
+   "ko": "간호사는 유수프에게 가려움을 덜어 주는 연고를 줬어요.",
+   "blank": "الحكة",
+   "src": "made"
+  },
+  {
+   "text": "لبست سارة قفازات لأن عصير الفلفل الحار يسبب لها حكة.",
+   "en": "Sara wore gloves because hot pepper juice makes her itch.",
+   "ko": "사라는 매운 고추즙이 닿으면 가려워서 장갑을 꼈어요.",
+   "blank": "حكة",
+   "src": "made"
+  }
+ ],
  "w|حكم": [
   {
    "text": "صرخ الجمهور على الحكم بعد القرار.",
@@ -24587,6 +24875,22 @@
    "blank": "خامس"
   }
  ],
+ "w|خامل": [
+  {
+   "text": "ظل يوسف خاملا في السرير يومين بسبب الدواء.",
+   "en": "Yusuf stayed sluggish in bed for two days because of the medicine.",
+   "ko": "유수프는 약 때문에 이틀 동안 침대에서 기운 없이 지냈어요.",
+   "blank": "خاملا",
+   "src": "made"
+  },
+  {
+   "text": "حذرت سارة طلابها من أن الخميرة الخاملة لا ترفع العجين.",
+   "en": "Sara warned her students that inactive yeast won't make the dough rise.",
+   "ko": "사라는 학생들에게 활성이 없는 이스트로는 반죽이 부풀지 않는다고 일러 줬어요.",
+   "blank": "الخاملة",
+   "src": "made"
+  }
+ ],
  "w|خان": [
   {
    "text": "خان صديقه ولم يلتزم بالوعد.",
@@ -24842,6 +25146,22 @@
    "en": "Fatima laughed when she saw her friend's old car had become scrap.",
    "ko": "파티마는 친구의 낡은 차가 고철이 된 걸 보고 웃었어요.",
    "blank": "خردة",
+   "src": "made"
+  }
+ ],
+ "w|خرس": [
+  {
+   "text": "أصاب يوسف خرس مؤقت من شدة الصدمة حين سمع الخبر.",
+   "en": "Yusuf was struck temporarily speechless by the shock when he heard the news.",
+   "ko": "유수프는 그 소식을 듣고 충격이 너무 커서 한동안 말을 잃었어요.",
+   "blank": "خرس",
+   "src": "made"
+  },
+  {
+   "text": "أصاب الطلاب خرس مفاجئ حين رأوا كعكة سارة الضخمة.",
+   "en": "The students fell suddenly silent when they saw Sara's huge cake.",
+   "ko": "사라의 커다란 케이크를 보자 학생들이 갑자기 말을 잃었어요.",
+   "blank": "خرس",
    "src": "made"
   }
  ],
@@ -26487,6 +26807,22 @@
    "en": "Children raise their hands during prayer.",
    "ko": "아이들은 기도할 때 손을 들어요.",
    "blank": "دعاء"
+  }
+ ],
+ "w|دعابة": [
+  {
+   "text": "خففت دعابة الممرض من خوف يوسف قبل العملية.",
+   "en": "The nurse's joking eased Yusuf's fear before the operation.",
+   "ko": "간호사의 농담 덕분에 유수프는 수술 전에 덜 무서웠어요.",
+   "blank": "دعابة",
+   "src": "made"
+  },
+  {
+   "text": "تشرح سارة الوصفات بروح الدعابة، فيضحك الطلاب كثيرا.",
+   "en": "Sara explains recipes with a sense of humor, so the students laugh a lot.",
+   "ko": "사라는 유머를 섞어 요리법을 설명해서 학생들이 많이 웃어요.",
+   "blank": "الدعابة",
+   "src": "made"
   }
  ],
  "w|دعاية": [
@@ -28667,6 +29003,22 @@
    "en": "Parental approval is a reason for happiness.",
    "ko": "부모님의 만족은 행복의 이유다.",
    "blank": "رضا"
+  }
+ ],
+ "w|رضة": [
+  {
+   "text": "قال الطبيب إن الرضة في ركبة يوسف ستزول خلال أيام.",
+   "en": "The doctor said the bruise on Yusuf's knee would go away within days.",
+   "ko": "의사는 유수프의 무릎 타박상이 며칠이면 낫는다고 했어요.",
+   "blank": "الرضة",
+   "src": "made"
+  },
+  {
+   "text": "سقطت مقلاة على يد سارة فتركت رضة صغيرة.",
+   "en": "A frying pan fell on Sara's hand and left a small bruise.",
+   "ko": "프라이팬이 사라의 손에 떨어져 작은 멍이 들었어요.",
+   "blank": "رضة",
+   "src": "made"
   }
  ],
  "w|رضع": [
@@ -31531,6 +31883,22 @@
    "blank": "سقف"
   }
  ],
+ "w|سقم": [
+  {
+   "text": "قال يوسف لزائره إن السقم لم يمنعه من القراءة.",
+   "en": "Yusuf told his visitor that illness hadn't stopped him from reading.",
+   "ko": "유수프는 병문안 온 사람에게 병 때문에 책 읽기를 그만두진 않았다고 말했어요.",
+   "blank": "السقم",
+   "src": "made"
+  },
+  {
+   "text": "تؤمن سارة بأن الطعام الطيب يطرد السقم من الجسد.",
+   "en": "Sara believes that good food drives illness out of the body.",
+   "ko": "사라는 좋은 음식이 몸에서 병을 몰아낸다고 믿어요.",
+   "blank": "السقم",
+   "src": "made"
+  }
+ ],
  "w|سقوط": [
   {
    "text": "سمع حسن صوت سقوط شيء ثقيل في شقة جاره فطرق الباب.",
@@ -32837,6 +33205,22 @@
    "en": "The poet recited his poem at the event.",
    "ko": "시인은 행사에서 시를 읽었어.",
    "blank": "الشاعر"
+  }
+ ],
+ "w|شاف": [
+  {
+   "text": "قال الطبيب ليوسف إن الراحة علاج شاف لمثل هذا الإرهاق.",
+   "en": "The doctor told Yusuf that rest is a healing cure for this kind of exhaustion.",
+   "ko": "의사는 유수프에게 이런 피로에는 쉬는 게 가장 잘 듣는 약이라고 했어요.",
+   "blank": "شاف",
+   "src": "made"
+  },
+  {
+   "text": "تقول سارة إن حساء الدجاج دواء شاف في أيام البرد.",
+   "en": "Sara says chicken soup is a healing remedy on cold days.",
+   "ko": "사라는 추운 날엔 닭고기 수프가 몸을 낫게 하는 약이라고 말해요.",
+   "blank": "شاف",
+   "src": "made"
   }
  ],
  "w|شال": [
@@ -36145,6 +36529,22 @@
    "src": "made"
   }
  ],
+ "w|ضرير": [
+  {
+   "text": "ساعد يوسف رجلا ضريرا على الوصول إلى عيادة العيون.",
+   "en": "Yusuf helped a blind man get to the eye clinic.",
+   "ko": "유수프는 앞을 못 보는 남자가 안과에 갈 수 있게 도와줬어요.",
+   "blank": "ضريرا",
+   "src": "made"
+  },
+  {
+   "text": "علمت سارة طالبا ضريرا كيف يعرف نضج الخبز من رائحته.",
+   "en": "Sara taught a blind student how to tell when bread is done by its smell.",
+   "ko": "사라는 앞을 못 보는 학생에게 냄새로 빵이 다 구워졌는지 아는 법을 가르쳤어요.",
+   "blank": "ضريرا",
+   "src": "made"
+  }
+ ],
  "w|ضعف": [
   {
    "text": "الكثير من السكر يسبب ضعف الصحة.",
@@ -37084,6 +37484,22 @@
    "en": "Mariam spent her childhood in a small hotel her grandfather owned.",
    "ko": "마리암은 할아버지가 운영하던 작은 호텔에서 어린 시절을 보냈어요.",
    "blank": "طفولتها",
+   "src": "made"
+  }
+ ],
+ "w|طفيل": [
+  {
+   "text": "كشف التحليل عن طفيل في أمعاء يوسف، فوصف له الطبيب دواء.",
+   "en": "The test revealed a parasite in Yusuf's intestines, so the doctor prescribed medicine.",
+   "ko": "검사에서 유수프의 장에 기생충이 발견돼서 의사가 약을 처방했어요.",
+   "blank": "طفيل",
+   "src": "made"
+  },
+  {
+   "text": "شرحت سارة أن طهي اللحم جيدا يقتل أي طفيل فيه.",
+   "en": "Sara explained that cooking meat thoroughly kills any parasite in it.",
+   "ko": "사라는 고기를 충분히 익히면 기생충이 다 죽는다고 설명했어요.",
+   "blank": "طفيل",
    "src": "made"
   }
  ],
@@ -39221,6 +39637,22 @@
    "en": "Every member has an important role.",
    "ko": "모든 회원은 중요한 역할이 있어.",
    "blank": "عضو"
+  }
+ ],
+ "w|عطاس": [
+  {
+   "text": "أصيب يوسف بنوبة عطاس حين فتح نافذة الغرفة.",
+   "en": "Yusuf had a sneezing fit when he opened the room window.",
+   "ko": "유수프는 병실 창문을 열자 재채기가 연달아 나왔어요.",
+   "blank": "عطاس",
+   "src": "made"
+  },
+  {
+   "text": "سببت رائحة الفلفل الأسود عطاسا لأحد الطلاب، فضحكت سارة.",
+   "en": "The smell of black pepper made one of the students sneeze, and Sara laughed.",
+   "ko": "후추 냄새에 한 학생이 재채기를 해서 사라가 웃었어요.",
+   "blank": "عطاسا",
+   "src": "made"
   }
  ],
  "w|عطر": [
@@ -45549,6 +45981,22 @@
    "blank": "كثيرا"
   }
  ],
+ "w|كحة": [
+  {
+   "text": "أزعجت يوسف كحة جاره في الغرفة طوال الليل.",
+   "en": "His roommate's cough bothered Yusuf all night.",
+   "ko": "같은 병실 환자의 기침 때문에 유수프는 밤새 시달렸어요.",
+   "blank": "كحة",
+   "src": "made"
+  },
+  {
+   "text": "أصابت سارة كحة خفيفة من دخان الفلفل المحمص.",
+   "en": "The smoke from the roasted peppers gave Sara a slight cough.",
+   "ko": "사라는 고추 볶는 연기에 가볍게 기침을 했어요.",
+   "blank": "كحة",
+   "src": "made"
+  }
+ ],
  "w|كحول": [
   {
    "text": "شرب كحول ممنوع في هذه الدولة.",
@@ -46005,6 +46453,22 @@
    "en": "Was the food enough for everyone?",
    "ko": "모두에게 음식이 충분했니?",
    "blank": "كفى"
+  }
+ ],
+ "w|كفيف": [
+  {
+   "text": "في غرفة يوسف مريض كفيف يستمع إلى الراديو طوال اليوم.",
+   "en": "In Yusuf's room there's a blind patient who listens to the radio all day.",
+   "ko": "유수프의 병실에는 하루 종일 라디오를 듣는 시각장애 환자가 있어요.",
+   "blank": "كفيف",
+   "src": "made"
+  },
+  {
+   "text": "انضم إلى دورة سارة شاب كفيف يميز التوابل بأنفه.",
+   "en": "A blind young man who can tell spices apart by smell joined Sara's course.",
+   "ko": "냄새로 향신료를 구별하는 시각장애 청년이 사라의 강좌에 들어왔어요.",
+   "blank": "كفيف",
+   "src": "made"
   }
  ],
  "w|كل": [
@@ -46493,6 +46957,22 @@
    "en": "Do you wish to travel to another planet?",
    "ko": "다른 행성에 가보고 싶니?",
    "blank": "كوكب"
+  }
+ ],
+ "w|كوليسترول": [
+  {
+   "text": "طلب الطبيب من يوسف أن يقلل الدهون لأن الكوليسترول عنده مرتفع.",
+   "en": "The doctor asked Yusuf to cut down on fat because his cholesterol is high.",
+   "ko": "의사는 유수프의 콜레스테롤이 높아서 기름진 음식을 줄이라고 했어요.",
+   "blank": "الكوليسترول",
+   "src": "made"
+  },
+  {
+   "text": "تستعمل سارة زيت الزيتون بدل الزبدة لتقليل الكوليسترول.",
+   "en": "Sara uses olive oil instead of butter to lower cholesterol.",
+   "ko": "사라는 콜레스테롤을 줄이려고 버터 대신 올리브유를 써요.",
+   "blank": "الكوليسترول",
+   "src": "made"
   }
  ],
  "w|كون": [
@@ -49283,6 +49763,22 @@
    "blank": "متضايق"
   }
  ],
+ "w|متعاف": [
+  {
+   "text": "زار يوسف جناح المرضى المتعافين ليشجع صديقه.",
+   "en": "Yusuf visited the ward of recovering patients to cheer up his friend.",
+   "ko": "유수프는 친구를 응원하러 회복 환자 병동에 들렀어요.",
+   "blank": "المتعافين",
+   "src": "made"
+  },
+  {
+   "text": "أعدت سارة وجبة خفيفة لطالب متعاف من عملية في المعدة.",
+   "en": "Sara prepared a light meal for a student recovering from stomach surgery.",
+   "ko": "사라는 위 수술에서 회복 중인 학생을 위해 가벼운 식사를 준비했어요.",
+   "blank": "متعاف",
+   "src": "made"
+  }
+ ],
  "w|متعب": [
   {
    "text": "أنا متعب جداً بعد الركض.",
@@ -49857,6 +50353,22 @@
    "en": "They said the idea is very crazy.",
    "ko": "그들은 그 생각이 아주 미쳤다고 했어.",
    "blank": "مجنون"
+  }
+ ],
+ "w|مجهد": [
+  {
+   "text": "كان يوسف مجهدا بعد ليلة طويلة من الفحوصات.",
+   "en": "Yusuf was worn out after a long night of tests.",
+   "ko": "유수프는 밤새 검사를 받고 나서 녹초가 됐어요.",
+   "blank": "مجهدا",
+   "src": "made"
+  },
+  {
+   "text": "عادت سارة إلى البيت مجهدة بعد يوم كامل من الطبخ.",
+   "en": "Sara came home exhausted after a whole day of cooking.",
+   "ko": "사라는 하루 종일 요리하고 녹초가 되어 집에 돌아왔어요.",
+   "blank": "مجهدة",
+   "src": "made"
   }
  ],
  "w|مجهول": [
@@ -51897,6 +52409,22 @@
    "en": "The child is annoying today.",
    "ko": "오늘 아이가 시끄러워요.",
    "blank": "مزعج"
+  }
+ ],
+ "w|مزمن": [
+  {
+   "text": "يعاني يوسف من ألم مزمن في الظهر منذ سنوات.",
+   "en": "Yusuf has suffered from chronic back pain for years.",
+   "ko": "유수프는 몇 년째 만성 허리 통증을 앓고 있어요.",
+   "blank": "مزمن",
+   "src": "made"
+  },
+  {
+   "text": "تقدم سارة وصفات خاصة لمن يعانون من مرض مزمن مثل السكري.",
+   "en": "Sara offers special recipes for people with a chronic illness such as diabetes.",
+   "ko": "사라는 당뇨 같은 만성 질환이 있는 사람을 위한 요리법을 따로 알려 줘요.",
+   "blank": "مزمن",
+   "src": "made"
   }
  ],
  "w|مزيج": [
@@ -54021,6 +54549,22 @@
    "blank": "معقد"
   }
  ],
+ "w|معقم": [
+  {
+   "text": "غسل يوسف الجرح بماء معقم كما علمته الممرضة.",
+   "en": "Yusuf washed the wound with sterile water as the nurse had taught him.",
+   "ko": "유수프는 간호사가 알려 준 대로 멸균수로 상처를 씻었어요.",
+   "blank": "معقم",
+   "src": "made"
+  },
+  {
+   "text": "تحفظ سارة المربى في برطمانات معقمة.",
+   "en": "Sara keeps the jam in sterilized jars.",
+   "ko": "사라는 잼을 소독한 병에 담아 보관해요.",
+   "blank": "معقمة",
+   "src": "made"
+  }
+ ],
  "w|معقول": [
   {
    "text": "هذا السعر معقول مقارنة بالجودة.",
@@ -54253,6 +54797,22 @@
    "en": "The kitchen sink was filled with dirty dishes.",
    "ko": "부엌 싱크대가 더러운 접시로 가득 찼어.",
    "blank": "مغسلة"
+  }
+ ],
+ "w|مغص": [
+  {
+   "text": "وصل يوسف إلى الطوارئ وهو يشكو من مغص شديد.",
+   "en": "Yusuf arrived at the emergency room complaining of severe stomach cramps.",
+   "ko": "유수프는 심한 복통을 호소하며 응급실에 왔어요.",
+   "blank": "مغص",
+   "src": "made"
+  },
+  {
+   "text": "تضيف سارة الكمون إلى العدس لأنه يمنع المغص.",
+   "en": "Sara adds cumin to lentils because it prevents stomach cramps.",
+   "ko": "사라는 렌틸콩에 쿠민을 넣어요. 배앓이를 막아 주거든요.",
+   "blank": "المغص",
+   "src": "made"
   }
  ],
  "w|مغطى": [
@@ -55619,6 +56179,22 @@
    "blank": "مليار"
   }
  ],
+ "w|مليارات": [
+  {
+   "text": "قرأ يوسف أن الدولة تنفق مليارات على بناء مستشفيات جديدة.",
+   "en": "Yusuf read that the state spends billions on building new hospitals.",
+   "ko": "유수프는 나라가 새 병원을 짓는 데 수십억을 쓴다는 기사를 읽었어요.",
+   "blank": "مليارات",
+   "src": "made"
+  },
+  {
+   "text": "قالت سارة إن الناس ينفقون مليارات كل سنة على الوجبات السريعة.",
+   "en": "Sara said people spend billions every year on fast food.",
+   "ko": "사라는 사람들이 해마다 패스트푸드에 수십억을 쓴다고 말했어요.",
+   "blank": "مليارات",
+   "src": "made"
+  }
+ ],
  "w|مليون": [
   {
    "text": "هو عنده مليون سبب ليبتسم.",
@@ -55885,6 +56461,22 @@
    "en": "She is grateful for your kind words.",
    "ko": "그녀는 너의 친절한 말에 감사해.",
    "blank": "ممنون"
+  }
+ ],
+ "w|مميت": [
+  {
+   "text": "شرح الطبيب ليوسف أن هذا الفيروس قد يكون مميتا لكبار السن.",
+   "en": "The doctor explained to Yusuf that this virus can be deadly for the elderly.",
+   "ko": "의사는 유수프에게 이 바이러스가 노인에게는 치명적일 수 있다고 설명했어요.",
+   "blank": "مميتا",
+   "src": "made"
+  },
+  {
+   "text": "نبهت سارة إلى أن بعض الفطر البري مميت إذا أكل.",
+   "en": "Sara pointed out that some wild mushrooms are deadly if eaten.",
+   "ko": "사라는 어떤 야생 버섯은 먹으면 치명적이라고 주의를 줬어요.",
+   "blank": "مميت",
+   "src": "made"
   }
  ],
  "w|مميز": [
@@ -57227,6 +57819,22 @@
    "en": "Everyone has their own unique feature.",
    "ko": "모든 사람은 자신만의 고유한 특징을 가지고 있다.",
    "blank": "ميزة"
+  }
+ ],
+ "w|ميكروب": [
+  {
+   "text": "قال الطبيب إن الميكروب لا ينتقل باللمس، فاطمأن يوسف.",
+   "en": "The doctor said the germ isn't passed on by touch, and Yusuf felt reassured.",
+   "ko": "의사가 그 세균은 접촉으로 옮지 않는다고 해서 유수프는 마음을 놓았어요.",
+   "blank": "الميكروب",
+   "src": "made"
+  },
+  {
+   "text": "تغسل سارة الخضار جيدا حتى لا يبقى عليها أي ميكروب.",
+   "en": "Sara washes the vegetables well so no germ is left on them.",
+   "ko": "사라는 세균이 남지 않도록 채소를 꼼꼼히 씻어요.",
+   "blank": "ميكروب",
+   "src": "made"
   }
  ],
  "w|ميل": [
@@ -60127,6 +60735,22 @@
    "blank": "هزم"
   }
  ],
+ "w|هزيل": [
+  {
+   "text": "بدا يوسف هزيلا بعد أسبوعين من الحمى.",
+   "en": "Yusuf looked thin and frail after two weeks of fever.",
+   "ko": "유수프는 이 주 동안 열이 난 뒤 몹시 야위어 보였어요.",
+   "blank": "هزيلا",
+   "src": "made"
+  },
+  {
+   "text": "قالت سارة إن الدجاجة الهزيلة لا تصلح للشواء.",
+   "en": "Sara said a scrawny chicken isn't good for roasting.",
+   "ko": "사라는 비쩍 마른 닭은 구이에 맞지 않는다고 했어요.",
+   "blank": "الهزيلة",
+   "src": "made"
+  }
+ ],
  "w|هزيمة": [
   {
    "text": "شعرنا بالحزن بعد هزيمة الفريق.",
@@ -60803,6 +61427,22 @@
    "en": "Wow, your food is really tasty!",
    "ko": "와, 네 음식 진짜 맛있다!",
    "blank": "واو"
+  }
+ ],
+ "w|وباء": [
+  {
+   "text": "علق المستشفى لوحة عن تاريخ الوباء الذي ضرب المدينة قبل قرن.",
+   "en": "The hospital put up a board about the epidemic that hit the city a century ago.",
+   "ko": "병원은 백 년 전 도시를 휩쓴 전염병의 역사를 담은 안내판을 걸었어요.",
+   "blank": "الوباء",
+   "src": "made"
+  },
+  {
+   "text": "تحدثت سارة عن أطباق ولدت في زمن وباء قديم حين كان الطعام قليلا.",
+   "en": "Sara talked about dishes born during an old epidemic when food was scarce.",
+   "ko": "사라는 먹을 것이 귀했던 옛 전염병 시절에 생겨난 음식들을 이야기했어요.",
+   "blank": "وباء",
+   "src": "made"
   }
  ],
  "w|وبخ": [

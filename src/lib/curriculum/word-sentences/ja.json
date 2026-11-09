@@ -2951,6 +2951,22 @@
    "blank": "クラブ"
   }
  ],
+ "w|クリーム": [
+  {
+   "text": "亮はコーヒーにクリームを少し入れて飲んだ。",
+   "en": "Ryo put a little cream in his coffee and drank it.",
+   "ko": "료는 커피에 크림을 조금 넣어 마셨어요.",
+   "blank": "クリーム",
+   "src": "made"
+  },
+  {
+   "text": "近所のパン屋で、真由はクリームパンを買ってみた。",
+   "en": "Mayu tried buying a cream bun at the bakery in her new neighborhood.",
+   "ko": "마유는 동네 빵집에서 크림빵을 사 봤어요.",
+   "blank": "クリーム",
+   "src": "made"
+  }
+ ],
  "w|グリーン": [
   {
    "text": "グリーンの服が似合う。",
@@ -3035,6 +3051,22 @@
    "en": "We're in the same group.",
    "ko": "같은 그룹이야.",
    "blank": "グループ"
+  }
+ ],
+ "w|グルメ": [
+  {
+   "text": "亮の同僚はグルメで、おいしい店をたくさん知っている。",
+   "en": "Ryo's coworker is a gourmet and knows lots of good restaurants.",
+   "ko": "료의 동료는 미식가라서 맛있는 가게를 많이 알아요.",
+   "blank": "グルメ",
+   "src": "made"
+  },
+  {
+   "text": "新しい町は、地元のグルメを楽しめる店が多いと評判だ。",
+   "en": "The new town is known for having many places to enjoy local food.",
+   "ko": "새 동네는 지역 맛집이 많기로 소문났어요.",
+   "blank": "グルメ",
+   "src": "made"
   }
  ],
  "w|くれる": [
@@ -7393,6 +7425,22 @@
    "blank": "とりあえず"
   }
  ],
+ "w|ドリンク": [
+  {
+   "text": "自動販売機のドリンクが値上がりしていて、亮は少し驚いた。",
+   "en": "Ryo was a little surprised that the vending machine drinks had gone up in price.",
+   "ko": "자판기 음료가 값이 올라서 료는 조금 놀랐어요.",
+   "blank": "ドリンク",
+   "src": "made"
+  },
+  {
+   "text": "作業を手伝ってくれた友達に、真由は冷たいドリンクを配った。",
+   "en": "Mayu handed out cold drinks to the friends who helped with the work.",
+   "ko": "마유는 일을 도와준 친구들에게 차가운 음료를 나눠 줬어요.",
+   "blank": "ドリンク",
+   "src": "made"
+  }
+ ],
  "w|ドル": [
   {
    "text": "ドルで払うよ。",
@@ -7539,6 +7587,22 @@
    "en": "We're out of bread.",
    "ko": "빵 다 떨어졌어.",
    "blank": "ない"
+  }
+ ],
+ "w|ナイフ": [
+  {
+   "text": "亮は夕食のために、よく切れるナイフでトマトを切った。",
+   "en": "Ryo cut tomatoes for dinner with a sharp knife.",
+   "ko": "료는 저녁을 만들려고 잘 드는 칼로 토마토를 썰었어요.",
+   "blank": "ナイフ",
+   "src": "made"
+  },
+  {
+   "text": "真由は、テープを切るナイフをどの箱に入れたか忘れてしまった。",
+   "en": "Mayu forgot which box she had put the knife for cutting tape in.",
+   "ko": "마유는 테이프 자르는 칼을 어느 상자에 넣었는지 잊어버렸어요.",
+   "blank": "ナイフ",
+   "src": "made"
   }
  ],
  "w|なお": [
@@ -8177,6 +8241,22 @@
    "blank": "パス"
   }
  ],
+ "w|パスタ": [
+  {
+   "text": "昼ご飯に、亮は会社の近くの店でパスタを食べた。",
+   "en": "For lunch, Ryo had pasta at a place near the office.",
+   "ko": "료는 점심으로 회사 근처 가게에서 파스타를 먹었어요.",
+   "blank": "パスタ",
+   "src": "made"
+  },
+  {
+   "text": "片付けで疲れた真由は、夕食に簡単なパスタを作った。",
+   "en": "Tired from unpacking, Mayu made simple pasta for dinner.",
+   "ko": "정리하느라 지친 마유는 저녁으로 간단한 파스타를 만들었어요.",
+   "blank": "パスタ",
+   "src": "made"
+  }
+ ],
  "w|パスワード": [
   {
    "text": "パスワードを忘れて、拓也は朝から社内システムに入れなかった。",
@@ -8206,6 +8286,22 @@
    "en": "After closing, Aoi checks the sales on her computer.",
    "ko": "아오이는 가게 문을 닫은 뒤 컴퓨터로 매출을 확인해요.",
    "blank": "パソコン",
+   "src": "made"
+  }
+ ],
+ "w|バター": [
+  {
+   "text": "朝食のトーストに、亮はバターを薄く塗った。",
+   "en": "Ryo spread a thin layer of butter on his breakfast toast.",
+   "ko": "료는 아침 토스트에 버터를 얇게 발랐어요.",
+   "blank": "バター",
+   "src": "made"
+  },
+  {
+   "text": "新しい冷蔵庫に、真由はまず牛乳とバターを入れた。",
+   "en": "Mayu first put milk and butter into the new fridge.",
+   "ko": "마유는 새 냉장고에 먼저 우유와 버터를 넣었어요.",
+   "blank": "バター",
    "src": "made"
   }
  ],
@@ -10753,6 +10849,22 @@
    "blank": "モンスター"
   }
  ],
+ "w|やがて": [
+  {
+   "text": "夕方になると雨が降り出し、やがて雷も鳴り始めた。",
+   "en": "In the evening it started to rain, and before long thunder began to rumble too.",
+   "ko": "저녁이 되자 비가 내리기 시작했고, 이윽고 천둥도 치기 시작했어요.",
+   "blank": "やがて",
+   "src": "made"
+  },
+  {
+   "text": "最初は不安だった真由も、やがて新しい町に慣れていった。",
+   "en": "Mayu was anxious at first, but in time she got used to the new town.",
+   "ko": "처음엔 불안했던 마유도 이윽고 새 동네에 익숙해졌어요.",
+   "blank": "やがて",
+   "src": "made"
+  }
+ ],
  "w|やたら": [
   {
    "text": "佐藤さんは、なぜかやたらとコピー機に詳しい。",
@@ -11383,6 +11495,22 @@
    "src": "made"
   }
  ],
+ "w|リラックス": [
+  {
+   "text": "仕事の後、亮はぬるめのお風呂でリラックスした。",
+   "en": "After work, Ryo relaxed in a lukewarm bath.",
+   "ko": "퇴근 후 료는 미지근한 욕조에서 긴장을 풀었어요.",
+   "blank": "リラックス",
+   "src": "made"
+  },
+  {
+   "text": "片付けが終わると、真由は新しいソファでやっとリラックスできた。",
+   "en": "When the unpacking was done, Mayu could finally relax on her new sofa.",
+   "ko": "정리가 끝나자 마유는 새 소파에서 드디어 쉴 수 있었어요.",
+   "blank": "リラックス",
+   "src": "made"
+  }
+ ],
  "w|リリース": [
   {
    "text": "新作がリリースされた。",
@@ -11735,6 +11863,22 @@
    "en": "It's a dish that goes with wine.",
    "ko": "와인에 맞는 요리야.",
    "blank": "ワイン"
+  }
+ ],
+ "w|ワクチン": [
+  {
+   "text": "亮は仕事帰りに、近所の病院でワクチンを打ってもらった。",
+   "en": "On his way home from work, Ryo got a vaccine at a nearby clinic.",
+   "ko": "료는 퇴근길에 근처 병원에서 백신을 맞았어요.",
+   "blank": "ワクチン",
+   "src": "made"
+  },
+  {
+   "text": "引っ越し先の役所で、子どものワクチンの案内をもらった。",
+   "en": "At the office in the new town, they got information about vaccines for children.",
+   "ko": "이사 간 동네 관공서에서 아이 백신 안내를 받았어요.",
+   "blank": "ワクチン",
+   "src": "made"
   }
  ],
  "w|ワクワク": [
@@ -12693,6 +12837,22 @@
    "en": "We're from different generations.",
    "ko": "세대가 달라.",
    "blank": "世代"
+  }
+ ],
+ "w|世帯": [
+  {
+   "text": "亮の住むマンションには、百以上の世帯が暮らしている。",
+   "en": "More than a hundred households live in Ryo's apartment building.",
+   "ko": "료가 사는 아파트에는 백 세대 넘게 살고 있어요.",
+   "blank": "世帯",
+   "src": "made"
+  },
+  {
+   "text": "真由のマンションは単身者向けで、家族の世帯は少ない。",
+   "en": "Mayu's building is for single people, so there are few family households.",
+   "ko": "마유의 아파트는 혼자 사는 사람용이라 가족 세대는 적어요.",
+   "blank": "世帯",
+   "src": "made"
   }
  ],
  "w|世界": [
@@ -14807,6 +14967,22 @@
    "blank": "休日"
   }
  ],
+ "w|休暇": [
+  {
+   "text": "亮の上司は、来週から一週間の休暇を取るそうだ。",
+   "en": "Ryo's boss is apparently taking a week's vacation starting next week.",
+   "ko": "료의 상사는 다음 주부터 일주일 휴가를 낸대요.",
+   "blank": "休暇",
+   "src": "made"
+  },
+  {
+   "text": "真由は引っ越しのために、会社から三日間の休暇をもらった。",
+   "en": "Mayu got three days off from work for the move.",
+   "ko": "마유는 이사를 위해 회사에서 사흘 휴가를 받았어요.",
+   "blank": "休暇",
+   "src": "made"
+  }
+ ],
  "w|会う": [
   {
    "text": "明日会える？",
@@ -15787,6 +15963,22 @@
    "src": "made"
   }
  ],
+ "w|保健": [
+  {
+   "text": "会社の保健師さんに、亮は最近の睡眠について相談した。",
+   "en": "Ryo talked to the company's health nurse about his recent sleep.",
+   "ko": "료는 회사 보건 간호사에게 요즘 수면에 대해 상담했어요.",
+   "blank": "保健",
+   "src": "made"
+  },
+  {
+   "text": "転入届を出すと、役所で保健センターの案内も渡された。",
+   "en": "When she filed her change of address, the office also gave her information about the health center.",
+   "ko": "전입 신고를 하자 관공서에서 보건소 안내도 받았어요.",
+   "blank": "保健",
+   "src": "made"
+  }
+ ],
  "w|保存": [
   {
    "text": "保存した？",
@@ -15830,6 +16022,22 @@
    "en": "During surgery, the patient's body temperature must be kept constant.",
    "ko": "수술하는 동안 환자의 체온을 일정하게 유지해야 해요.",
    "blank": "保持",
+   "src": "made"
+  }
+ ],
+ "w|保有": [
+  {
+   "text": "亮の会社は、駅前にビルを二つ保有している。",
+   "en": "Ryo's company owns two buildings in front of the station.",
+   "ko": "료의 회사는 역 앞에 빌딩을 두 채 보유하고 있어요.",
+   "blank": "保有",
+   "src": "made"
+  },
+  {
+   "text": "大家さんは、この辺りにアパートをいくつも保有しているそうだ。",
+   "en": "The landlord apparently owns several apartment buildings around here.",
+   "ko": "집주인은 이 근처에 아파트를 여러 채 보유하고 있대요.",
+   "blank": "保有",
    "src": "made"
   }
  ],
@@ -17568,6 +17776,22 @@
    "en": "Someday I want to go on an adventure around the world.",
    "ko": "언젠가 세계 일주 모험을 떠나고 싶어요.",
    "blank": "冒険",
+   "src": "made"
+  }
+ ],
+ "w|冒頭": [
+  {
+   "text": "会議の冒頭で、部長が新しいプロジェクトについて話した。",
+   "en": "At the start of the meeting, the department head talked about the new project.",
+   "ko": "회의 첫머리에 부장님이 새 프로젝트에 대해 이야기했어요.",
+   "blank": "冒頭",
+   "src": "made"
+  },
+  {
+   "text": "賃貸契約書の冒頭には、家賃と契約期間が書いてあった。",
+   "en": "The rent and the lease period were written at the top of the rental contract.",
+   "ko": "임대 계약서 첫머리에는 월세와 계약 기간이 적혀 있었어요.",
+   "blank": "冒頭",
    "src": "made"
   }
  ],
@@ -19376,6 +19600,22 @@
    "en": "This app runs slowly.",
    "ko": "이 앱은 동작이 느려요.",
    "blank": "動作",
+   "src": "made"
+  }
+ ],
+ "w|動機": [
+  {
+   "text": "同僚に転職の動機を聞かれて、亮はうまく答えられなかった。",
+   "en": "When a coworker asked his motive for changing jobs, Ryo couldn't answer well.",
+   "ko": "동료가 이직 동기를 묻자 료는 제대로 대답하지 못했어요.",
+   "blank": "動機",
+   "src": "made"
+  },
+  {
+   "text": "真由が引っ越しを決めた動機は、職場に近いことだった。",
+   "en": "Mayu's reason for deciding to move was being close to work.",
+   "ko": "마유가 이사를 결심한 동기는 직장과 가깝다는 것이었어요.",
+   "blank": "動機",
    "src": "made"
   }
  ],
@@ -21369,6 +21609,22 @@
    "src": "made"
   }
  ],
+ "w|同行": [
+  {
+   "text": "部長の出張に、亮も同行することになった。",
+   "en": "It was decided that Ryo would accompany the department head on his business trip.",
+   "ko": "부장님 출장에 료도 동행하게 됐어요.",
+   "blank": "同行",
+   "src": "made"
+  },
+  {
+   "text": "部屋の内見には、不動産屋の担当者が同行してくれた。",
+   "en": "An agent from the real estate office came along for the apartment viewing.",
+   "ko": "집 보러 갈 때 부동산 담당자가 동행해 줬어요.",
+   "blank": "同行",
+   "src": "made"
+  }
+ ],
  "w|名前": [
   {
    "text": "名前なんだっけ。",
@@ -22563,6 +22819,22 @@
    "src": "made"
   }
  ],
+ "w|在住": [
+  {
+   "text": "亮の同僚は、大阪在住の友達とよく電話している。",
+   "en": "Ryo's coworker often talks on the phone with a friend who lives in Osaka.",
+   "ko": "료의 동료는 오사카에 사는 친구와 자주 통화해요.",
+   "blank": "在住",
+   "src": "made"
+  },
+  {
+   "text": "新しいマンションには、外国人の在住者も多い。",
+   "en": "Many foreign residents live in the new apartment building too.",
+   "ko": "새 아파트에는 외국인 거주자도 많아요.",
+   "blank": "在住",
+   "src": "made"
+  }
+ ],
  "w|在庫": [
   {
    "text": "悠斗は、家に残った在庫を次回また売るつもりだ。",
@@ -22709,6 +22981,22 @@
    "en": "I bought it at a local shop.",
    "ko": "지역 가게에서 샀어.",
    "blank": "地域"
+  }
+ ],
+ "w|地帯": [
+  {
+   "text": "天気予報によると、山沿いの地帯では雪が降るらしい。",
+   "en": "According to the forecast, it will snow in the areas along the mountains.",
+   "ko": "일기예보에 따르면 산간 지대에는 눈이 온대요.",
+   "blank": "地帯",
+   "src": "made"
+  },
+  {
+   "text": "この辺りは雪の多い地帯なので、真由は冬用のタイヤを買った。",
+   "en": "This area gets a lot of snow, so Mayu bought winter tires.",
+   "ko": "이 근처는 눈이 많은 지대라서 마유는 겨울용 타이어를 샀어요.",
+   "blank": "地帯",
+   "src": "made"
   }
  ],
  "w|地方": [
@@ -27089,6 +27377,22 @@
    "blank": "帰ってて"
   }
  ],
+ "w|帰国": [
+  {
+   "text": "亮の友達が留学先から帰国し、今夜一緒に飲む約束をした。",
+   "en": "Ryo's friend came back from studying abroad, and they made plans to drink together tonight.",
+   "ko": "료의 친구가 유학지에서 귀국해서 오늘 밤 같이 한잔하기로 했어요.",
+   "blank": "帰国",
+   "src": "made"
+  },
+  {
+   "text": "真由の隣の部屋には、海外から帰国したばかりの家族が住んでいる。",
+   "en": "A family that just returned from abroad lives in the room next to Mayu's.",
+   "ko": "마유의 옆방에는 해외에서 막 귀국한 가족이 살아요.",
+   "blank": "帰国",
+   "src": "made"
+  }
+ ],
  "w|帰宅": [
   {
    "text": "初日は緊張で疲れて、健太は帰宅するとすぐ横になった。",
@@ -28309,6 +28613,22 @@
    "en": "My boyfriend is kind, which helps.",
    "ko": "남자친구가 상냥해서 다행이야.",
    "blank": "彼氏"
+  }
+ ],
+ "w|往復": [
+  {
+   "text": "亮は会社と家を往復するだけの毎日に、少し飽きている。",
+   "en": "Ryo is a little tired of days spent just going back and forth between work and home.",
+   "ko": "료는 회사와 집을 왕복하기만 하는 매일에 조금 질렸어요.",
+   "blank": "往復",
+   "src": "made"
+  },
+  {
+   "text": "実家と新居を何度も往復して、真由は荷物を運んだ。",
+   "en": "Mayu carried her things by going back and forth between her parents' home and her new place many times.",
+   "ko": "마유는 본가와 새집을 몇 번이나 왕복하며 짐을 날랐어요.",
+   "blank": "往復",
+   "src": "made"
   }
  ],
  "w|待つ": [
@@ -30069,6 +30389,22 @@
    "blank": "戦争"
   }
  ],
+ "w|戦前": [
+  {
+   "text": "亮の祖母は、戦前の町の写真を大切にしまっている。",
+   "en": "Ryo's grandmother carefully keeps photos of the town from before the war.",
+   "ko": "료의 할머니는 전쟁 전 마을 사진을 소중히 간직하고 있어요.",
+   "blank": "戦前",
+   "src": "made"
+  },
+  {
+   "text": "新しい家の近くには、戦前に建てられた古い蔵が残っている。",
+   "en": "Near the new house, an old storehouse built before the war still stands.",
+   "ko": "새집 근처에는 전쟁 전에 지어진 오래된 창고가 남아 있어요.",
+   "blank": "戦前",
+   "src": "made"
+  }
+ ],
  "w|戦国": [
   {
    "text": "城下町の祭りでは、戦国時代の武将の行列が人気だ。",
@@ -30305,6 +30641,22 @@
    "en": "Want me to help with the bags?",
    "ko": "짐 도와줄게?",
    "blank": "手伝おう"
+  }
+ ],
+ "w|手前": [
+  {
+   "text": "亮はいつも、会社の一つ手前の駅で降りて歩く。",
+   "en": "Ryo always gets off one station before his office and walks.",
+   "ko": "료는 늘 회사 한 정거장 전 역에서 내려서 걸어요.",
+   "blank": "手前",
+   "src": "made"
+  },
+  {
+   "text": "真由の新しいアパートは、商店街の少し手前にある。",
+   "en": "Mayu's new apartment is just before the shopping street.",
+   "ko": "마유의 새 아파트는 상점가 조금 앞에 있어요.",
+   "blank": "手前",
+   "src": "made"
   }
  ],
  "w|手段": [
@@ -31645,6 +31997,22 @@
    "src": "made"
   }
  ],
+ "w|損傷": [
+  {
+   "text": "台風で駅の屋根が損傷し、朝の電車が遅れた。",
+   "en": "The station roof was damaged by the typhoon, and the morning trains were delayed.",
+   "ko": "태풍으로 역 지붕이 손상돼서 아침 전철이 늦어졌어요.",
+   "blank": "損傷",
+   "src": "made"
+  },
+  {
+   "text": "運ぶ途中で、たんすの角に小さな損傷ができてしまった。",
+   "en": "While it was being carried, the corner of the chest of drawers got slightly damaged.",
+   "ko": "나르는 도중에 서랍장 모서리가 조금 손상돼 버렸어요.",
+   "blank": "損傷",
+   "src": "made"
+  }
+ ],
  "w|損失": [
   {
    "text": "注文のミスで、会社に大きな損失が出てしまった。",
@@ -32212,6 +32580,22 @@
    "en": "Keiko rescued a kitten that couldn't get down from a tree.",
    "ko": "게이코는 나무에서 못 내려오는 새끼 고양이를 구했어요.",
    "blank": "救った",
+   "src": "made"
+  }
+ ],
+ "w|救助": [
+  {
+   "text": "テレビで、山で迷った人の救助の様子が流れていた。",
+   "en": "The TV was showing the rescue of a person who got lost in the mountains.",
+   "ko": "텔레비전에서 산에서 길을 잃은 사람을 구조하는 모습이 나오고 있었어요.",
+   "blank": "救助",
+   "src": "made"
+  },
+  {
+   "text": "引っ越し先の町では、毎年秋に救助訓練が行われるそうだ。",
+   "en": "In the town she moved to, a rescue drill is apparently held every autumn.",
+   "ko": "이사 간 동네에서는 매년 가을에 구조 훈련을 한대요.",
+   "blank": "救助",
    "src": "made"
   }
  ],
@@ -34469,6 +34853,22 @@
    "blank": "本部"
   }
  ],
+ "w|本音": [
+  {
+   "text": "亮は飲み会で、仕事についての本音をつい話してしまった。",
+   "en": "At the drinking party, Ryo ended up saying what he really thought about his job.",
+   "ko": "료는 회식 자리에서 일에 대한 속마음을 그만 말해 버렸어요.",
+   "blank": "本音",
+   "src": "made"
+  },
+  {
+   "text": "母に「寂しくない？」と聞かれ、真由は本音を言えずに笑った。",
+   "en": "When her mother asked if she was lonely, Mayu just laughed without saying how she really felt.",
+   "ko": "엄마가 \"안 외로워?\" 하고 묻자 마유는 속마음을 말하지 못하고 웃었어요.",
+   "blank": "本音",
+   "src": "made"
+  }
+ ],
  "w|机": [
   {
    "text": "診察室の机の上には、歯の模型が並んでいた。",
@@ -34644,6 +35044,22 @@
    "en": "Keiko decided to fix up this house to keep her promise to her grandfather.",
    "ko": "게이코는 할아버지와의 약속을 지키려고 이 집을 고치기로 했어요.",
    "blank": "果たす",
+   "src": "made"
+  }
+ ],
+ "w|果て": [
+  {
+   "text": "寝る前に、亮は宇宙の果てについての本を少し読んだ。",
+   "en": "Before bed, Ryo read a little of a book about the edge of the universe.",
+   "ko": "자기 전에 료는 우주의 끝에 관한 책을 조금 읽었어요.",
+   "blank": "果て",
+   "src": "made"
+  },
+  {
+   "text": "地の果てに行くわけではないのに、真由は遠くへの引っ越しが不安だった。",
+   "en": "Even though she wasn't going to the ends of the earth, Mayu felt uneasy about moving far away.",
+   "ko": "땅끝으로 가는 것도 아닌데 마유는 먼 곳으로 이사하는 게 불안했어요.",
+   "blank": "果て",
    "src": "made"
   }
  ],
@@ -35465,6 +35881,22 @@
    "en": "I replaced the old equipment.",
    "ko": "낡은 기기를 교체했어.",
    "blank": "機器"
+  }
+ ],
+ "w|機嫌": [
+  {
+   "text": "今朝の課長は機嫌がよく、亮にコーヒーをおごってくれた。",
+   "en": "The section chief was in a good mood this morning and treated Ryo to coffee.",
+   "ko": "오늘 아침 과장님은 기분이 좋아서 료에게 커피를 사 줬어요.",
+   "blank": "機嫌",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しを手伝った弟は、ピザをもらって機嫌を直した。",
+   "en": "Her brother, who helped with the move, cheered up after getting pizza.",
+   "ko": "이사를 도운 남동생은 피자를 받고 기분이 풀렸어요.",
+   "blank": "機嫌",
+   "src": "made"
   }
  ],
  "w|機械": [
@@ -41407,6 +41839,22 @@
    "blank": "石"
   }
  ],
+ "w|石油": [
+  {
+   "text": "ニュースでは、石油の値段がまた上がったと伝えていた。",
+   "en": "The news reported that oil prices had gone up again.",
+   "ko": "뉴스에서는 석유 가격이 또 올랐다고 전했어요.",
+   "blank": "石油",
+   "src": "made"
+  },
+  {
+   "text": "新しい部屋の暖房は、石油ストーブではなくエアコンだった。",
+   "en": "The heating in the new room was an air conditioner, not a kerosene heater.",
+   "ko": "새 방의 난방은 석유 난로가 아니라 에어컨이었어요.",
+   "blank": "石油",
+   "src": "made"
+  }
+ ],
  "w|石鹸": [
   {
    "text": "石鹸で手を洗った。",
@@ -43363,6 +43811,22 @@
    "blank": "続けて"
   }
  ],
+ "w|続編": [
+  {
+   "text": "亮は、昨日見た映画の続編が来月公開されると知って喜んだ。",
+   "en": "Ryo was happy to learn that the sequel to the movie he saw yesterday comes out next month.",
+   "ko": "료는 어제 본 영화의 속편이 다음 달에 개봉한다는 걸 알고 기뻐했어요.",
+   "blank": "続編",
+   "src": "made"
+  },
+  {
+   "text": "真由は荷造りの合間に、好きな小説の続編を読み始めてしまった。",
+   "en": "In the middle of packing, Mayu ended up starting to read the sequel to her favorite novel.",
+   "ko": "마유는 짐을 싸다가 좋아하는 소설의 속편을 읽기 시작해 버렸어요.",
+   "blank": "続編",
+   "src": "made"
+  }
+ ],
  "w|維持": [
   {
    "text": "体重を維持したい。",
@@ -45099,6 +45563,22 @@
    "blank": "若者"
   }
  ],
+ "w|苦しい": [
+  {
+   "text": "朝の満員電車は、息をするのも苦しいほど混んでいた。",
+   "en": "The packed morning train was so crowded it was hard even to breathe.",
+   "ko": "아침 만원 전철은 숨쉬기도 괴로울 만큼 붐볐어요.",
+   "blank": "苦しい",
+   "src": "made"
+  },
+  {
+   "text": "段ボールを何箱も運んで、真由は息が苦しいほど疲れた。",
+   "en": "After carrying box after box, Mayu was so tired she could hardly breathe.",
+   "ko": "상자를 몇 개나 나르고 나니 마유는 숨이 찰 만큼 지쳤어요.",
+   "blank": "苦しい",
+   "src": "made"
+  }
+ ],
  "w|苦労": [
   {
    "text": "苦労が報われた気がする。",
@@ -45330,6 +45810,22 @@
    "en": "The drama Yumi watched was about detectives cracking down on drugs.",
    "ko": "유미가 본 드라마는 마약을 단속하는 형사 이야기였어요.",
    "blank": "薬物",
+   "src": "made"
+  }
+ ],
+ "w|虐待": [
+  {
+   "text": "亮は昼休みに、動物の虐待を扱ったニュース記事を読んだ。",
+   "en": "At lunch, Ryo read a news article about animal abuse.",
+   "ko": "료는 점심시간에 동물 학대를 다룬 뉴스 기사를 읽었어요.",
+   "blank": "虐待",
+   "src": "made"
+  },
+  {
+   "text": "新しい町の市役所には、児童虐待の相談窓口の案内が貼ってあった。",
+   "en": "At the new town's city hall, there was a notice for the child abuse help desk.",
+   "ko": "새 동네 시청에는 아동 학대 상담 창구 안내가 붙어 있었어요.",
+   "blank": "虐待",
    "src": "made"
   }
  ],
@@ -46075,6 +46571,22 @@
    "en": "The station is the west exit.",
    "ko": "역은 서쪽 출구야.",
    "blank": "西"
+  }
+ ],
+ "w|西洋": [
+  {
+   "text": "亮の家の近くに、西洋風の小さなレストランができた。",
+   "en": "A small Western-style restaurant opened near Ryo's home.",
+   "ko": "료의 집 근처에 서양풍의 작은 레스토랑이 생겼어요.",
+   "blank": "西洋",
+   "src": "made"
+  },
+  {
+   "text": "新しい部屋には、西洋のアンティーク家具がよく似合う。",
+   "en": "Western antique furniture suits the new room well.",
+   "ko": "새 방에는 서양 앤티크 가구가 잘 어울려요.",
+   "blank": "西洋",
+   "src": "made"
   }
  ],
  "w|要る": [
@@ -47243,6 +47755,22 @@
    "blank": "診断"
   }
  ],
+ "w|証券": [
+  {
+   "text": "亮の父は、退職金の一部で証券を買ったらしい。",
+   "en": "Ryo's father apparently bought securities with part of his retirement money.",
+   "ko": "료의 아버지는 퇴직금 일부로 증권을 샀대요.",
+   "blank": "証券",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しの書類の中から、祖父の古い証券が出てきた。",
+   "en": "Her grandfather's old securities turned up among the moving papers.",
+   "ko": "이삿짐 서류 속에서 할아버지의 오래된 증권이 나왔어요.",
+   "blank": "証券",
+   "src": "made"
+  }
+ ],
  "w|証拠": [
   {
    "text": "証拠を見つけた。",
@@ -47624,6 +48152,22 @@
    "en": "With construction in front of the shop, a worker was directing pedestrians.",
    "ko": "가게 앞 공사 때문에 작업자가 보행자를 안내하고 있었어요.",
    "blank": "誘導",
+   "src": "made"
+  }
+ ],
+ "w|誘惑": [
+  {
+   "text": "ケーキ屋の前を通るたびに、亮は甘い誘惑に負けそうになる。",
+   "en": "Every time he passes the cake shop, Ryo almost gives in to sweet temptation.",
+   "ko": "케이크 가게 앞을 지날 때마다 료는 달콤한 유혹에 넘어갈 뻔해요.",
+   "blank": "誘惑",
+   "src": "made"
+  },
+  {
+   "text": "片付けの途中、真由は昼寝したいという誘惑に何度も負けそうになった。",
+   "en": "While unpacking, Mayu nearly gave in to the temptation to nap several times.",
+   "ko": "정리하던 중에 마유는 낮잠 자고 싶은 유혹에 몇 번이나 넘어갈 뻔했어요.",
+   "blank": "誘惑",
    "src": "made"
   }
  ],
@@ -48242,6 +48786,22 @@
    "en": "On the night of Setsubun, Chihiro made up with her brother while throwing beans.",
    "ko": "세쓰분 밤에 지히로는 오빠와 콩을 뿌리며 화해했어요.",
    "blank": "豆",
+   "src": "made"
+  }
+ ],
+ "w|豆腐": [
+  {
+   "text": "夕食は、亮の好きな豆腐の味噌汁だった。",
+   "en": "Dinner was miso soup with tofu, which Ryo loves.",
+   "ko": "저녁은 료가 좋아하는 두부 된장국이었어요.",
+   "blank": "豆腐",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しの夜、真由は豆腐と野菜で簡単な鍋を作った。",
+   "en": "On the night of the move, Mayu made a simple hot pot with tofu and vegetables.",
+   "ko": "이사한 날 밤, 마유는 두부와 채소로 간단한 전골을 만들었어요.",
+   "blank": "豆腐",
    "src": "made"
   }
  ],
@@ -49203,6 +49763,22 @@
    "en": "The vehicle needs inspection.",
    "ko": "차량 점검이 필요해.",
    "blank": "車両"
+  }
+ ],
+ "w|車内": [
+  {
+   "text": "帰りの電車の車内は、いつもより静かだった。",
+   "en": "Inside the train on the way home, it was quieter than usual.",
+   "ko": "돌아오는 전철 안은 평소보다 조용했어요.",
+   "blank": "車内",
+   "src": "made"
+  },
+  {
+   "text": "真由はトラックの車内で、業者さんと新しい町の話をした。",
+   "en": "Inside the truck, Mayu chatted with the mover about the new town.",
+   "ko": "마유는 트럭 안에서 업체 직원과 새 동네 이야기를 했어요.",
+   "blank": "車内",
+   "src": "made"
   }
  ],
  "w|軍": [
@@ -50193,6 +50769,22 @@
    "blank": "連中"
   }
  ],
+ "w|連休": [
+  {
+   "text": "次の連休は、亮は家でのんびり過ごすつもりだ。",
+   "en": "Ryo plans to take it easy at home over the next long weekend.",
+   "ko": "다음 연휴에 료는 집에서 느긋하게 지낼 생각이에요.",
+   "blank": "連休",
+   "src": "made"
+  },
+  {
+   "text": "真由は連休を使って、新しい部屋への引っ越しを済ませた。",
+   "en": "Mayu used the long weekend to finish moving into her new place.",
+   "ko": "마유는 연휴를 이용해서 새 방으로 이사를 마쳤어요.",
+   "blank": "連休",
+   "src": "made"
+  }
+ ],
  "w|連合": [
   {
    "text": "論理または常識によればロシアと欧州連合とアメリカが共に行動しなければならない。",
@@ -50860,6 +51452,22 @@
    "en": "Sakura greeted even the department manager seated far away in a loud voice.",
    "ko": "사쿠라는 멀리 앉은 부장님께도 큰 소리로 인사했어요.",
    "blank": "遠く",
+   "src": "made"
+  }
+ ],
+ "w|遠征": [
+  {
+   "text": "亮の弟は、サッカー部の遠征で週末は家にいない。",
+   "en": "Ryo's younger brother is away this weekend on an away trip with the soccer club.",
+   "ko": "료의 남동생은 축구부 원정 때문에 주말에 집에 없어요.",
+   "blank": "遠征",
+   "src": "made"
+  },
+  {
+   "text": "高校時代の真由は、陸上部の遠征でこの町に来たことがあった。",
+   "en": "In high school, Mayu had come to this town on a track team trip.",
+   "ko": "고등학교 때 마유는 육상부 원정으로 이 동네에 온 적이 있었어요.",
+   "blank": "遠征",
    "src": "made"
   }
  ],
@@ -51559,6 +52167,22 @@
    "en": "I like baseball.",
    "ko": "야구를 좋아해.",
    "blank": "野球"
+  }
+ ],
+ "w|野生": [
+  {
+   "text": "公園の池に野生のカモが来ていて、亮はしばらく眺めた。",
+   "en": "Wild ducks had come to the pond in the park, and Ryo watched them for a while.",
+   "ko": "공원 연못에 야생 오리가 와 있어서 료는 한동안 바라봤어요.",
+   "blank": "野生",
+   "src": "made"
+  },
+  {
+   "text": "新しい家の裏山には、野生のタヌキが住んでいるらしい。",
+   "en": "Apparently wild raccoon dogs live on the hill behind the new house.",
+   "ko": "새집 뒷산에는 야생 너구리가 산대요.",
+   "blank": "野生",
+   "src": "made"
   }
  ],
  "w|野菜": [
@@ -53512,6 +54136,22 @@
    "en": "In the safety inspection results, Chihiro's site ranked first in the whole company.",
    "ko": "안전 점검 결과 치히로의 현장 순위는 회사 전체에서 일등이었어요.",
    "blank": "順位",
+   "src": "made"
+  }
+ ],
+ "w|順番": [
+  {
+   "text": "銀行の窓口で、亮は自分の順番が来るのをじっと待った。",
+   "en": "At the bank counter, Ryo waited patiently for his turn.",
+   "ko": "은행 창구에서 료는 자기 차례가 오기를 가만히 기다렸어요.",
+   "blank": "順番",
+   "src": "made"
+  },
+  {
+   "text": "引っ越し業者は、大きい家具から順番にトラックに積んでいった。",
+   "en": "The movers loaded the truck in order, starting with the big furniture.",
+   "ko": "이삿짐 업체는 큰 가구부터 순서대로 트럭에 실었어요.",
+   "blank": "順番",
    "src": "made"
   }
  ],

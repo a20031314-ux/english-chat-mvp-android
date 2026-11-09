@@ -511,6 +511,22 @@
    "src": "made"
   }
  ],
+ "w|acariciar": [
+  {
+   "text": "En la granja escuela, Pablo pudo acariciar a un cordero recién nacido.",
+   "en": "At the school farm, Pablo got to stroke a newborn lamb.",
+   "ko": "농장 체험 학교에서 파블로는 갓 태어난 새끼 양을 쓰다듬었어요.",
+   "blank": "acariciar",
+   "src": "made"
+  },
+  {
+   "text": "Mientras dibujaba, Elena se paró a acariciar al gato del profesor.",
+   "en": "While drawing, Elena stopped to stroke the teacher's cat.",
+   "ko": "그림을 그리다 말고 엘레나는 선생님의 고양이를 쓰다듬었어요.",
+   "blank": "acariciar",
+   "src": "made"
+  }
+ ],
  "w|acaso": [
   {
    "text": "¿Acaso no me escuchaste?",
@@ -1895,6 +1911,22 @@
    "blank": "aficionado"
   }
  ],
+ "w|afirmación": [
+  {
+   "text": "La profesora pidió a Pablo que demostrara su afirmación con datos.",
+   "en": "The teacher asked Pablo to back up his statement with data.",
+   "ko": "선생님은 파블로에게 그 주장을 자료로 증명해 보라고 하셨어요.",
+   "blank": "afirmación",
+   "src": "made"
+  },
+  {
+   "text": "El profesor discrepó de la afirmación de Elena de que el negro no es un color.",
+   "en": "The teacher disagreed with Elena's claim that black isn't a colour.",
+   "ko": "선생님은 검정이 색이 아니라는 엘레나의 주장에 동의하지 않았어요.",
+   "blank": "afirmación",
+   "src": "made"
+  }
+ ],
  "w|afirmar": [
   {
    "text": "Puede afirmar que vio todo con claridad.",
@@ -2695,6 +2727,22 @@
    "blank": "álbum"
   }
  ],
+ "w|alcaide": [
+  {
+   "text": "En la obra de teatro escolar, Pablo hizo de alcaide de una cárcel muy antigua.",
+   "en": "In the school play, Pablo played the warden of a very old prison.",
+   "ko": "학교 연극에서 파블로는 아주 오래된 감옥의 소장 역을 맡았어요.",
+   "blank": "alcaide",
+   "src": "made"
+  },
+  {
+   "text": "En un libro de ilustraciones, Elena vio a un alcaide con un manojo enorme de llaves.",
+   "en": "In an illustrated book, Elena saw a prison warden with a huge bunch of keys.",
+   "ko": "삽화책에서 엘레나는 커다란 열쇠 꾸러미를 든 교도소장을 봤어요.",
+   "blank": "alcaide",
+   "src": "made"
+  }
+ ],
  "w|alcalde": [
   {
    "text": "El alcalde inauguró el nuevo parque.",
@@ -2793,6 +2841,22 @@
    "en": "The village holds a festival every autumn.",
    "ko": "그 마을은 가을마다 축제를 열어.",
    "blank": "aldea"
+  }
+ ],
+ "w|alegar": [
+  {
+   "text": "Pablo intentó alegar que el perro se había comido sus deberes.",
+   "en": "Pablo tried to claim that the dog had eaten his homework.",
+   "ko": "파블로는 개가 숙제를 먹어 버렸다고 주장하려 했어요.",
+   "blank": "alegar",
+   "src": "made"
+  },
+  {
+   "text": "Elena suele alegar que el arte no se puede evaluar con una nota.",
+   "en": "Elena usually argues that art can't be assessed with a mark.",
+   "ko": "엘레나는 예술은 점수로 평가할 수 없다고 주장하곤 해요.",
+   "blank": "alegar",
+   "src": "made"
   }
  ],
  "w|alegrar": [
@@ -5121,6 +5185,22 @@
    "src": "made"
   }
  ],
+ "w|aportar": [
+  {
+   "text": "En el trabajo en grupo, Pablo quiso aportar ideas nuevas para la maqueta.",
+   "en": "In the group project, Pablo wanted to contribute new ideas for the model.",
+   "ko": "모둠 과제에서 파블로는 모형에 새로운 아이디어를 보태고 싶었어요.",
+   "blank": "aportar",
+   "src": "made"
+  },
+  {
+   "text": "Cada alumno debe aportar un objeto de casa para el bodegón, y Elena trajo una tetera.",
+   "en": "Each student must bring an object from home for the still life, and Elena brought a teapot.",
+   "ko": "학생마다 정물화용 물건을 하나씩 가져와야 해서 엘레나는 찻주전자를 가져왔어요.",
+   "blank": "aportar",
+   "src": "made"
+  }
+ ],
  "w|apostar": [
   {
    "text": "No quiero apostar dinero en ese juego.",
@@ -5773,6 +5853,22 @@
    "src": "made"
   }
  ],
+ "w|armamento": [
+  {
+   "text": "En historia, Pablo leyó cómo cambió el armamento de los soldados entre dos siglos.",
+   "en": "In history, Pablo read how soldiers' weaponry changed between two centuries.",
+   "ko": "역사 시간에 파블로는 두 세기 사이 군인들의 무기가 어떻게 바뀌었는지 읽었어요.",
+   "blank": "armamento",
+   "src": "made"
+  },
+  {
+   "text": "Elena dibujó con detalle el armamento de un caballero medieval para su cómic.",
+   "en": "Elena drew a medieval knight's weaponry in detail for her comic.",
+   "ko": "엘레나는 만화에 쓰려고 중세 기사의 무기를 자세히 그렸어요.",
+   "blank": "armamento",
+   "src": "made"
+  }
+ ],
  "w|armar": [
   {
    "text": "Voy a armar el mueble esta tarde.",
@@ -6055,6 +6151,22 @@
    "src": "made"
   }
  ],
+ "w|arrogancia": [
+  {
+   "text": "La arrogancia del capitán del equipo molestaba a Pablo y a los demás.",
+   "en": "The team captain's arrogance bothered Pablo and the others.",
+   "ko": "팀 주장의 거만함이 파블로와 다른 아이들을 거슬리게 했어요.",
+   "blank": "arrogancia",
+   "src": "made"
+  },
+  {
+   "text": "Un compañero criticó el dibujo de Elena con mucha arrogancia.",
+   "en": "A classmate criticised Elena's drawing with a lot of arrogance.",
+   "ko": "한 친구가 아주 거만하게 엘레나의 그림을 비평했어요.",
+   "blank": "arrogancia",
+   "src": "made"
+  }
+ ],
  "w|arrogante": [
   {
    "text": "Su tono arrogante molestó al equipo.",
@@ -6125,6 +6237,22 @@
    "en": "He ruined his suit with the wine.",
    "ko": "와인으로 양복을 망쳤어.",
    "blank": "Arruinó"
+  }
+ ],
+ "w|arsenal": [
+  {
+   "text": "Pablo tiene un arsenal de bolígrafos de colores para subrayar los apuntes.",
+   "en": "Pablo has an arsenal of coloured pens for underlining his notes.",
+   "ko": "파블로는 필기에 밑줄 긋는 색깔 펜을 잔뜩 갖고 있어요.",
+   "blank": "arsenal",
+   "src": "made"
+  },
+  {
+   "text": "Elena guarda en una caja un arsenal de pinceles de todos los tamaños.",
+   "en": "Elena keeps an arsenal of brushes of every size in a box.",
+   "ko": "엘레나는 크기별 붓을 상자 가득 모아 두었어요.",
+   "blank": "arsenal",
+   "src": "made"
   }
  ],
  "w|arte": [
@@ -11337,6 +11465,22 @@
    "src": "made"
   }
  ],
+ "w|camerino": [
+  {
+   "text": "Antes de la función escolar, Pablo se maquilló en el camerino junto al gimnasio.",
+   "en": "Before the school show, Pablo put on make-up in the dressing room next to the gym.",
+   "ko": "학교 공연 전에 파블로는 체육관 옆 분장실에서 화장을 했어요.",
+   "blank": "camerino",
+   "src": "made"
+  },
+  {
+   "text": "Elena pintó los espejos del camerino del teatro municipal.",
+   "en": "Elena painted the mirrors in the dressing room of the municipal theatre.",
+   "ko": "엘레나는 시립 극장 분장실의 거울을 칠했어요.",
+   "blank": "camerino",
+   "src": "made"
+  }
+ ],
  "w|camilla": [
   {
    "text": "Nico y su ayudante llevaron al perro herido en una camilla.",
@@ -14501,6 +14645,22 @@
    "blank": "cita"
   }
  ],
+ "w|citación": [
+  {
+   "text": "Los padres de Pablo recibieron una citación del colegio para hablar de sus notas.",
+   "en": "Pablo's parents received a summons from the school to talk about his marks.",
+   "ko": "파블로의 부모님은 성적 문제로 학교에서 면담 요청을 받았어요.",
+   "blank": "citación",
+   "src": "made"
+  },
+  {
+   "text": "Elena recibió una citación para recoger su premio de pintura en el ayuntamiento.",
+   "en": "Elena received a summons to collect her painting prize at the town hall.",
+   "ko": "엘레나는 시청에 와서 그림상을 받으라는 통지를 받았어요.",
+   "blank": "citación",
+   "src": "made"
+  }
+ ],
  "w|citar": [
   {
    "text": "Debes citar la fuente en tu ensayo.",
@@ -16221,6 +16381,22 @@
    "blank": "comprendo"
   }
  ],
+ "w|comprensible": [
+  {
+   "text": "Es comprensible que Pablo esté nervioso antes de su primer examen oral.",
+   "en": "It's understandable that Pablo is nervous before his first oral exam.",
+   "ko": "첫 구술시험을 앞두고 파블로가 긴장하는 건 이해할 만해요.",
+   "blank": "comprensible",
+   "src": "made"
+  },
+  {
+   "text": "El profesor dio una explicación muy comprensible y Elena por fin entendió la perspectiva.",
+   "en": "The teacher gave a very clear explanation and Elena finally understood perspective.",
+   "ko": "선생님이 아주 이해하기 쉽게 설명해 주셔서 엘레나는 마침내 원근법을 이해했어요.",
+   "blank": "comprensible",
+   "src": "made"
+  }
+ ],
  "w|comprensión": [
   {
    "text": "Andrés respondió con mucha comprensión a las disculpas de Pablo.",
@@ -17055,6 +17231,22 @@
    "blank": "Confirmó"
   }
  ],
+ "w|confiscar": [
+  {
+   "text": "La profesora tuvo que confiscar el móvil de Pablo porque sonó en pleno examen.",
+   "en": "The teacher had to confiscate Pablo's phone because it rang in the middle of the exam.",
+   "ko": "시험 중에 휴대폰이 울려서 선생님이 파블로의 휴대폰을 압수했어요.",
+   "blank": "confiscar",
+   "src": "made"
+  },
+  {
+   "text": "El guardia del museo tuvo que confiscar el spray de pintura que llevaba un chico del grupo de Elena.",
+   "en": "The museum guard had to confiscate the spray paint a boy in Elena's group was carrying.",
+   "ko": "박물관 경비원은 엘레나네 모둠 남자아이가 갖고 있던 스프레이 페인트를 압수해야 했어요.",
+   "blank": "confiscar",
+   "src": "made"
+  }
+ ],
  "w|conflicto": [
   {
    "text": "Hubo un conflicto entre los vecinos.",
@@ -17185,6 +17377,22 @@
    "en": "She traveled to a medical conference in Madrid.",
    "ko": "마드리드 의사 학회에 참석하러 갔어.",
    "blank": "congreso"
+  }
+ ],
+ "w|conjetura": [
+  {
+   "text": "Lo de que el examen sería fácil era solo una conjetura de Pablo.",
+   "en": "The idea that the exam would be easy was just a guess on Pablo's part.",
+   "ko": "시험이 쉬울 거라는 건 파블로의 추측일 뿐이었어요.",
+   "blank": "conjetura",
+   "src": "made"
+  },
+  {
+   "text": "Elena hizo una conjetura sobre quién había pintado el cuadro sin firma.",
+   "en": "Elena made a guess about who had painted the unsigned painting.",
+   "ko": "엘레나는 서명 없는 그림을 누가 그렸는지 추측했어요.",
+   "blank": "conjetura",
+   "src": "made"
   }
  ],
  "w|conjunto": [
@@ -21139,6 +21347,22 @@
    "src": "made"
   }
  ],
+ "w|decorado": [
+  {
+   "text": "Pablo pintó el decorado del castillo para la obra de fin de curso.",
+   "en": "Pablo painted the castle scenery for the end-of-year play.",
+   "ko": "파블로는 학년 말 연극의 성 무대 배경을 그렸어요.",
+   "blank": "decorado",
+   "src": "made"
+  },
+  {
+   "text": "Elena ayudó a montar el decorado para la exposición de fin de curso.",
+   "en": "Elena helped set up the backdrop for the end-of-year exhibition.",
+   "ko": "엘레나는 학년 말 전시회 무대 장치 설치를 도왔어요.",
+   "blank": "decorado",
+   "src": "made"
+  }
+ ],
  "w|dedicar": [
   {
    "text": "Quiere dedicar más tiempo a su familia.",
@@ -23853,6 +24077,22 @@
    "blank": "digno"
   }
  ],
+ "w|dilema": [
+  {
+   "text": "Pablo tenía un dilema: ir al cumpleaños de su amigo o estudiar para el examen.",
+   "en": "Pablo had a dilemma: go to his friend's birthday or study for the exam.",
+   "ko": "파블로는 친구 생일 파티에 갈지 시험공부를 할지 고민이었어요.",
+   "blank": "dilema",
+   "src": "made"
+  },
+  {
+   "text": "Elena tenía un dilema con el cuadro: seguir pintando o dejarlo así.",
+   "en": "Elena had a dilemma with the painting: keep going or leave it as it was.",
+   "ko": "엘레나는 그림을 계속 그릴지 이대로 둘지 고민했어요.",
+   "blank": "dilema",
+   "src": "made"
+  }
+ ],
  "w|diligencia": [
   {
    "text": "Hugo hizo con diligencia todos los trámites del cambio de domicilio.",
@@ -24381,6 +24621,22 @@
    "en": "The shot came from far away.",
    "ko": "총소리는 멀리서 났어.",
    "blank": "disparo"
+  }
+ ],
+ "w|dispersar": [
+  {
+   "text": "Cuando sonó la alarma de incendios, la profesora ayudó a dispersar a la clase de Pablo por el patio.",
+   "en": "When the fire alarm went off, the teacher helped spread Pablo's class out across the playground.",
+   "ko": "화재경보가 울리자 선생님은 파블로네 반을 운동장 곳곳으로 흩어지게 했어요.",
+   "blank": "dispersar",
+   "src": "made"
+  },
+  {
+   "text": "Elena sopló sobre la tinta para dispersar las gotas y crear ramas.",
+   "en": "Elena blew on the ink to scatter the drops and create branches.",
+   "ko": "엘레나는 잉크를 불어서 방울을 퍼뜨려 나뭇가지 모양을 만들었어요.",
+   "blank": "dispersar",
+   "src": "made"
   }
  ],
  "w|disponer": [
@@ -26063,6 +26319,22 @@
    "blank": "elección"
   }
  ],
+ "w|electoral": [
+  {
+   "text": "Pablo hizo un cartel electoral muy llamativo para ser delegado de clase.",
+   "en": "Pablo made a very eye-catching election poster to become class representative.",
+   "ko": "파블로는 반장 선거에 나가려고 아주 눈에 띄는 선거 포스터를 만들었어요.",
+   "blank": "electoral",
+   "src": "made"
+  },
+  {
+   "text": "Elena diseñó el logotipo de la campaña electoral de una amiga para el consejo escolar.",
+   "en": "Elena designed the logo for a friend's election campaign for the school council.",
+   "ko": "엘레나는 학생회에 나가는 친구의 선거 운동 로고를 디자인했어요.",
+   "blank": "electoral",
+   "src": "made"
+  }
+ ],
  "w|electricidad": [
   {
    "text": "Se cortó la electricidad en todo el barrio.",
@@ -26633,6 +26905,22 @@
    "blank": "emperador"
   }
  ],
+ "w|emperatriz": [
+  {
+   "text": "En historia, Pablo hizo una presentación sobre una emperatriz del imperio bizantino.",
+   "en": "In history, Pablo gave a presentation about an empress of the Byzantine Empire.",
+   "ko": "역사 시간에 파블로는 비잔틴 제국의 한 황후에 대해 발표했어요.",
+   "blank": "emperatriz",
+   "src": "made"
+  },
+  {
+   "text": "Elena copió el retrato de una emperatriz con un vestido lleno de perlas.",
+   "en": "Elena copied the portrait of an empress in a dress covered with pearls.",
+   "ko": "엘레나는 진주로 뒤덮인 드레스를 입은 황후의 초상화를 모사했어요.",
+   "blank": "emperatriz",
+   "src": "made"
+  }
+ ],
  "w|empezar": [
   {
    "text": "Empieza sin mí.",
@@ -26732,6 +27020,22 @@
    "en": "With one last push, Paula and her brother got the sofa through the door.",
    "ko": "마지막으로 힘껏 밀어서 파울라와 오빠는 소파를 문 안으로 넣었어요.",
    "blank": "empuje",
+   "src": "made"
+  }
+ ],
+ "w|empujón": [
+  {
+   "text": "En la fila del comedor, alguien le dio un empujón a Pablo y se le cayó la bandeja.",
+   "en": "In the canteen queue, someone gave Pablo a shove and he dropped his tray.",
+   "ko": "급식 줄에서 누가 파블로를 밀치는 바람에 쟁반을 떨어뜨렸어요.",
+   "blank": "empujón",
+   "src": "made"
+  },
+  {
+   "text": "Sin querer, Elena le dio un empujón al caballete y el lienzo cayó al suelo.",
+   "en": "Without meaning to, Elena knocked the easel and the canvas fell to the floor.",
+   "ko": "엘레나가 실수로 이젤을 밀치는 바람에 캔버스가 바닥에 떨어졌어요.",
+   "blank": "empujón",
    "src": "made"
   }
  ],
@@ -27295,6 +27599,22 @@
    "en": "They congratulated her after the award.",
    "ko": "상을 받은 뒤 축하를 받았어.",
    "blank": "enhorabuena"
+  }
+ ],
+ "w|enigma": [
+  {
+   "text": "Para Pablo, el álgebra sigue siendo un enigma por mucho que estudie.",
+   "en": "For Pablo, algebra is still a mystery however much he studies.",
+   "ko": "파블로에게 대수학은 아무리 공부해도 여전히 수수께끼예요.",
+   "blank": "enigma",
+   "src": "made"
+  },
+  {
+   "text": "La sonrisa del retrato que copia Elena sigue siendo un enigma.",
+   "en": "The smile in the portrait Elena is copying remains an enigma.",
+   "ko": "엘레나가 모사하는 초상화의 미소는 여전히 수수께끼예요.",
+   "blank": "enigma",
+   "src": "made"
   }
  ],
  "w|enlace": [
@@ -28054,6 +28374,22 @@
    "en": "In literature, Lucía's teacher explained the erotic language of an old poem.",
    "ko": "문학 시간에 루시아의 선생님은 옛 시에 나오는 관능적인 표현을 설명했어요.",
    "blank": "erótico",
+   "src": "made"
+  }
+ ],
+ "w|erróneo": [
+  {
+   "text": "El cálculo de Pablo era erróneo porque olvidó un decimal.",
+   "en": "Pablo's calculation was wrong because he forgot a decimal.",
+   "ko": "파블로는 소수점 하나를 빠뜨려서 계산이 틀렸어요.",
+   "blank": "erróneo",
+   "src": "made"
+  },
+  {
+   "text": "Al mezclar los colores, Elena se dio cuenta de que había elegido un tono erróneo para el cielo.",
+   "en": "When mixing the colours, Elena realised she had chosen the wrong shade for the sky.",
+   "ko": "색을 섞다가 엘레나는 하늘 색을 잘못 골랐다는 걸 알았어요.",
+   "blank": "erróneo",
    "src": "made"
   }
  ],
@@ -29215,6 +29551,22 @@
    "src": "made"
   }
  ],
+ "w|esquiar": [
+  {
+   "text": "En el viaje de fin de curso, Pablo aprendió a esquiar en la montaña.",
+   "en": "On the end-of-year trip, Pablo learned to ski in the mountains.",
+   "ko": "학년 말 여행에서 파블로는 산에서 스키 타는 법을 배웠어요.",
+   "blank": "esquiar",
+   "src": "made"
+  },
+  {
+   "text": "Elena pintó a su hermano a punto de esquiar por una pista nevada.",
+   "en": "Elena painted her brother about to ski down a snowy slope.",
+   "ko": "엘레나는 눈 덮인 슬로프를 막 내려가려는 남동생을 그렸어요.",
+   "blank": "esquiar",
+   "src": "made"
+  }
+ ],
  "w|esquina": [
   {
    "text": "Te espero en la esquina de siempre.",
@@ -29227,6 +29579,22 @@
    "en": "The pharmacy is on that corner.",
    "ko": "약국은 저 모퉁이에 있어.",
    "blank": "esquina"
+  }
+ ],
+ "w|esquivar": [
+  {
+   "text": "En el juego del pañuelo, Pablo consiguió esquivar a todos y llegó el primero.",
+   "en": "In the handkerchief game, Pablo managed to dodge everyone and got there first.",
+   "ko": "손수건 놀이에서 파블로는 모두를 피해 가장 먼저 도착했어요.",
+   "blank": "esquivar",
+   "src": "made"
+  },
+  {
+   "text": "Elena intenta esquivar los charcos de pintura que hay en el suelo del taller.",
+   "en": "Elena tries to avoid the puddles of paint on the studio floor.",
+   "ko": "엘레나는 작업실 바닥의 물감 웅덩이를 피해 다니려고 해요.",
+   "blank": "esquivar",
+   "src": "made"
   }
  ],
  "w|estable": [
@@ -31689,6 +32057,22 @@
    "en": "Your idea sounds fantastic.",
    "ko": "네 아이디어가 환상적으로 들려.",
    "blank": "fantástica"
+  }
+ ],
+ "w|faraón": [
+  {
+   "text": "Pablo se disfrazó de faraón para la fiesta de historia antigua.",
+   "en": "Pablo dressed up as a pharaoh for the ancient history party.",
+   "ko": "파블로는 고대사 파티에서 파라오 분장을 했어요.",
+   "blank": "faraón",
+   "src": "made"
+  },
+  {
+   "text": "En el museo, Elena dibujó la máscara dorada de un faraón.",
+   "en": "At the museum, Elena drew the golden mask of a pharaoh.",
+   "ko": "박물관에서 엘레나는 파라오의 황금 가면을 그렸어요.",
+   "blank": "faraón",
+   "src": "made"
   }
  ],
  "w|farmacéutico": [
@@ -35609,6 +35993,22 @@
    "src": "made"
   }
  ],
+ "w|gruñón": [
+  {
+   "text": "El conserje parece gruñón, pero a Pablo siempre le guarda la pelota perdida.",
+   "en": "The caretaker seems grumpy, but he always keeps Pablo's lost ball for him.",
+   "ko": "관리인 아저씨는 툴툴대는 것 같아도 파블로가 잃어버린 공은 늘 챙겨 주세요.",
+   "blank": "gruñón",
+   "src": "made"
+  },
+  {
+   "text": "El modelo de la clase de Elena es un señor gruñón que se queja del frío.",
+   "en": "The model in Elena's class is a grumpy man who complains about the cold.",
+   "ko": "엘레나네 수업의 모델은 춥다고 투덜대는 할아버지예요.",
+   "blank": "gruñón",
+   "src": "made"
+  }
+ ],
  "w|grupo": [
   {
    "text": "Nuestro grupo se reúne los viernes.",
@@ -37199,6 +37599,22 @@
    "blank": "horario"
   }
  ],
+ "w|horca": [
+  {
+   "text": "Pablo jugó al ahorcado en la pizarra y dibujó una horca muy pequeña.",
+   "en": "Pablo played hangman on the board and drew a very small gallows.",
+   "ko": "파블로는 칠판에서 행맨 게임을 하며 아주 작은 교수대를 그렸어요.",
+   "blank": "horca",
+   "src": "made"
+  },
+  {
+   "text": "En el museo, Elena estudió un grabado antiguo con una horca al fondo de la plaza.",
+   "en": "At the museum, Elena studied an old engraving with a gallows at the back of the square.",
+   "ko": "박물관에서 엘레나는 광장 뒤편에 교수대가 있는 옛 판화를 살펴봤어요.",
+   "blank": "horca",
+   "src": "made"
+  }
+ ],
  "w|horizonte": [
   {
    "text": "Por la tarde, Andrés mira cómo el sol se esconde detrás del horizonte.",
@@ -38047,6 +38463,22 @@
    "blank": "Imagina"
   }
  ],
+ "w|imaginario": [
+  {
+   "text": "De pequeño, Pablo tenía un amigo imaginario que se sentaba a su lado en clase.",
+   "en": "As a small child, Pablo had an imaginary friend who sat next to him in class.",
+   "ko": "어릴 때 파블로에게는 수업 시간에 옆자리에 앉는 상상 속 친구가 있었어요.",
+   "blank": "imaginario",
+   "src": "made"
+  },
+  {
+   "text": "Elena pintó un paisaje imaginario con montañas flotantes.",
+   "en": "Elena painted an imaginary landscape with floating mountains.",
+   "ko": "엘레나는 떠다니는 산이 있는 상상 속 풍경을 그렸어요.",
+   "blank": "imaginario",
+   "src": "made"
+  }
+ ],
  "w|imbécil": [
   {
    "text": "No seas imbécil y pide ayuda.",
@@ -38106,6 +38538,22 @@
    "en": "Elena was impatient to see the kitchen finished.",
    "ko": "엘레나는 완성된 부엌을 빨리 보고 싶어 조바심이 났어요.",
    "blank": "impaciente",
+   "src": "made"
+  }
+ ],
+ "w|impactar": [
+  {
+   "text": "La charla de la exalumna llegó a impactar tanto a Pablo que decidió estudiar medicina.",
+   "en": "The former pupil's talk had such an impact on Pablo that he decided to study medicine.",
+   "ko": "졸업생 선배의 강연에 크게 감동받아 파블로는 의대에 가기로 했어요.",
+   "blank": "impactar",
+   "src": "made"
+  },
+  {
+   "text": "El primer cuadro abstracto que vio llegó a impactar a Elena para siempre.",
+   "en": "The first abstract painting she saw made a lasting impression on Elena.",
+   "ko": "처음 본 추상화는 엘레나에게 평생 남을 충격을 줬어요.",
+   "blank": "impactar",
    "src": "made"
   }
  ],
@@ -38328,6 +38776,22 @@
    "en": "Carmen saw a film about an impostor who pretended to be an estate agent.",
    "ko": "카르멘은 부동산 중개인 행세를 하는 사기꾼이 나오는 영화를 봤어요.",
    "blank": "impostor",
+   "src": "made"
+  }
+ ],
+ "w|impredecible": [
+  {
+   "text": "El tiempo en la excursión de Pablo fue impredecible: sol, lluvia y granizo en una tarde.",
+   "en": "The weather on Pablo's trip was unpredictable: sun, rain and hail in one afternoon.",
+   "ko": "파블로의 견학 날 날씨는 종잡을 수 없었어요. 한나절에 해, 비, 우박이 다 왔어요.",
+   "blank": "impredecible",
+   "src": "made"
+  },
+  {
+   "text": "El resultado del esmalte en el horno es impredecible, y eso a Elena le encanta.",
+   "en": "The result of the glaze in the kiln is unpredictable, and Elena loves that.",
+   "ko": "가마에서 유약이 어떻게 나올지 예측할 수 없는데 엘레나는 그게 좋아요.",
+   "blank": "impredecible",
    "src": "made"
   }
  ],
@@ -40741,6 +41205,22 @@
    "en": "They fear an insect invasion this summer.",
    "ko": "올여름 벌레 침입을 두려워해.",
    "blank": "invasión"
+  }
+ ],
+ "w|invasor": [
+  {
+   "text": "En el juego de estrategia del club, Pablo hacía de invasor y perdió en tres turnos.",
+   "en": "In the club's strategy game, Pablo played the invader and lost in three turns.",
+   "ko": "동아리 전략 게임에서 파블로는 침략자 역을 맡았다가 세 턴 만에 졌어요.",
+   "blank": "invasor",
+   "src": "made"
+  },
+  {
+   "text": "En su mural, Elena pintó al invasor de la leyenda del pueblo como un dragón de colores.",
+   "en": "In her mural, Elena painted the invader from the village legend as a colourful dragon.",
+   "ko": "엘레나는 벽화에서 마을 전설 속 침략자를 알록달록한 용으로 그렸어요.",
+   "blank": "invasor",
+   "src": "made"
   }
  ],
  "w|invencible": [
@@ -45983,6 +46463,22 @@
    "blank": "mayoría"
   }
  ],
+ "w|mayormente": [
+  {
+   "text": "Los alumnos de la clase de Pablo vienen mayormente del mismo barrio.",
+   "en": "The pupils in Pablo's class come mostly from the same neighbourhood.",
+   "ko": "파블로네 반 학생들은 대부분 같은 동네에서 와요.",
+   "blank": "mayormente",
+   "src": "made"
+  },
+  {
+   "text": "En la clase de Elena se trabaja mayormente con acuarela y carboncillo.",
+   "en": "In Elena's class they work mostly with watercolour and charcoal.",
+   "ko": "엘레나의 수업에서는 주로 수채화와 목탄으로 작업해요.",
+   "blank": "mayormente",
+   "src": "made"
+  }
+ ],
  "w|me": [
   {
    "text": "Esto me duele.",
@@ -48983,6 +49479,22 @@
    "blank": "nariz"
   }
  ],
+ "w|narrador": [
+  {
+   "text": "En la obra de teatro, Pablo es el narrador y abre cada escena.",
+   "en": "In the play, Pablo is the narrator and opens every scene.",
+   "ko": "연극에서 파블로는 해설자로 매 장면을 열어요.",
+   "blank": "narrador",
+   "src": "made"
+  },
+  {
+   "text": "En el cómic que dibuja Elena, el narrador es un gato que habla.",
+   "en": "In the comic Elena is drawing, the narrator is a talking cat.",
+   "ko": "엘레나가 그리는 만화에서 해설자는 말하는 고양이예요.",
+   "blank": "narrador",
+   "src": "made"
+  }
+ ],
  "w|natal": [
   {
    "text": "El camping está a pocos kilómetros del pueblo natal de Mateo.",
@@ -49231,6 +49743,22 @@
    "en": "Do you need help with that?",
    "ko": "그거 도움이 필요해?",
    "blank": "Necesitas"
+  }
+ ],
+ "w|negación": [
+  {
+   "text": "La negación de Pablo no convenció a nadie: tenía las manos llenas de tiza.",
+   "en": "Pablo's denial convinced nobody: his hands were covered in chalk.",
+   "ko": "파블로가 부인했지만 손이 분필 범벅이라 아무도 믿지 않았어요.",
+   "blank": "negación",
+   "src": "made"
+  },
+  {
+   "text": "El cuadro de Elena es la negación del realismo: todo está hecho de manchas.",
+   "en": "Elena's painting is the negation of realism: everything is made of blotches.",
+   "ko": "엘레나의 그림은 사실주의를 거부해요. 모든 게 얼룩으로 되어 있어요.",
+   "blank": "negación",
+   "src": "made"
   }
  ],
  "w|negado": [
@@ -50607,6 +51135,22 @@
    "blank": "occidental"
   }
  ],
+ "w|occidente": [
+  {
+   "text": "En filosofía, Pablo comparó cómo se piensa la libertad en occidente y en otras culturas.",
+   "en": "In philosophy, Pablo compared how freedom is thought of in the West and in other cultures.",
+   "ko": "철학 시간에 파블로는 서양과 다른 문화에서 자유를 어떻게 생각하는지 비교했어요.",
+   "blank": "occidente",
+   "src": "made"
+  },
+  {
+   "text": "El profesor explicó a Elena cómo llegó la perspectiva a la pintura de occidente.",
+   "en": "The teacher explained to Elena how perspective came to Western painting.",
+   "ko": "선생님은 엘레나에게 원근법이 서양 회화에 어떻게 들어왔는지 설명해 주셨어요.",
+   "blank": "occidente",
+   "src": "made"
+  }
+ ],
  "w|océano": [
   {
    "text": "Cruzamos el océano en un barco lento.",
@@ -50779,6 +51323,22 @@
    "en": "Hatred solves nothing.",
    "ko": "증오는 아무것도 해결 안 해.",
    "blank": "odio"
+  }
+ ],
+ "w|odioso": [
+  {
+   "text": "A Pablo le parece odioso tener que levantarse a las siete los lunes.",
+   "en": "Pablo finds it hateful having to get up at seven on Mondays.",
+   "ko": "파블로는 월요일마다 일곱 시에 일어나야 하는 게 정말 싫어요.",
+   "blank": "odioso",
+   "src": "made"
+  },
+  {
+   "text": "El olor del aguarrás le parece odioso a Elena, pero lo soporta por el óleo.",
+   "en": "Elena finds the smell of turpentine hateful, but puts up with it for oil painting.",
+   "ko": "엘레나는 테레빈유 냄새가 질색이지만 유화를 위해 참아요.",
+   "blank": "odioso",
+   "src": "made"
   }
  ],
  "w|oeste": [
@@ -52962,6 +53522,22 @@
    "en": "The new house's garden has a grill where Carmen already had her first barbecue.",
    "ko": "새집 마당에는 그릴이 있어서 카르멘은 벌써 첫 바비큐를 했어요.",
    "blank": "parrilla",
+   "src": "made"
+  }
+ ],
+ "w|parroquia": [
+  {
+   "text": "Pablo canta en el coro de la parroquia y ensaya después de clase.",
+   "en": "Pablo sings in the parish choir and rehearses after school.",
+   "ko": "파블로는 성당 성가대에서 노래하고 방과 후에 연습해요.",
+   "blank": "parroquia",
+   "src": "made"
+  },
+  {
+   "text": "La clase de arte de Elena se da en un salón de la parroquia del barrio.",
+   "en": "Elena's art class is held in a hall belonging to the local parish.",
+   "ko": "엘레나의 미술 수업은 동네 성당 강당에서 열려요.",
+   "blank": "parroquia",
    "src": "made"
   }
  ],
@@ -57653,6 +58229,22 @@
    "en": "I've got a problem with the car.",
    "ko": "차에 문제가 있어.",
    "blank": "problema"
+  }
+ ],
+ "w|problemático": [
+  {
+   "text": "El año pasado, Pablo tenía fama de alumno problemático, pero ha cambiado mucho.",
+   "en": "Last year Pablo had a reputation as a troublesome pupil, but he has changed a lot.",
+   "ko": "작년에 파블로는 문제아로 통했지만 많이 달라졌어요.",
+   "blank": "problemático",
+   "src": "made"
+  },
+  {
+   "text": "Las manos siempre son la parte más problemática del retrato para Elena.",
+   "en": "Hands are always the most troublesome part of a portrait for Elena.",
+   "ko": "엘레나에게 초상화에서 가장 까다로운 부분은 늘 손이에요.",
+   "blank": "problemática",
+   "src": "made"
   }
  ],
  "w|proceder": [
@@ -65575,6 +66167,22 @@
    "en": "That sentence sums up the whole idea.",
    "ko": "그 문장이 전체 생각을 요약해.",
    "blank": "sentencia"
+  }
+ ],
+ "w|sentenciar": [
+  {
+   "text": "En el juicio simulado, Pablo tuvo que sentenciar al acusado como juez.",
+   "en": "In the mock trial, Pablo had to sentence the defendant as the judge.",
+   "ko": "모의재판에서 파블로는 판사로서 피고에게 형을 선고해야 했어요.",
+   "blank": "sentenciar",
+   "src": "made"
+  },
+  {
+   "text": "El profesor bromeó con sentenciar a Elena a lavar todos los pinceles por llegar tarde.",
+   "en": "The teacher joked about sentencing Elena to wash all the brushes for being late.",
+   "ko": "선생님은 늦게 온 벌로 엘레나에게 붓을 다 빨게 하겠다고 농담하셨어요.",
+   "blank": "sentenciar",
+   "src": "made"
   }
  ],
  "w|sentido": [
@@ -74543,6 +75151,22 @@
    "blank": "violento"
   }
  ],
+ "w|violeta": [
+  {
+   "text": "Pablo forró sus cuadernos con papel violeta para distinguirlos.",
+   "en": "Pablo covered his notebooks with violet paper to tell them apart.",
+   "ko": "파블로는 공책을 구분하려고 보라색 종이로 쌌어요.",
+   "blank": "violeta",
+   "src": "made"
+  },
+  {
+   "text": "Elena pintó un atardecer con nubes violetas y naranjas.",
+   "en": "Elena painted a sunset with violet and orange clouds.",
+   "ko": "엘레나는 보랏빛과 주황빛 구름이 있는 노을을 그렸어요.",
+   "blank": "violetas",
+   "src": "made"
+  }
+ ],
  "w|violín": [
   {
    "text": "Para relajarse, Marina toca el violín por las noches.",
@@ -74847,6 +75471,22 @@
    "en": "I live near the park.",
    "ko": "공원 근처에 살아.",
    "blank": "Vivo"
+  }
+ ],
+ "w|vocal": [
+  {
+   "text": "La profesora de lengua le explicó a Pablo dónde lleva tilde cada vocal.",
+   "en": "The language teacher explained to Pablo where each vowel takes an accent.",
+   "ko": "국어 선생님은 파블로에게 모음마다 강세 표시가 어디에 붙는지 설명해 주셨어요.",
+   "blank": "vocal",
+   "src": "made"
+  },
+  {
+   "text": "El cartel que diseñó Elena usa una letra distinta para cada vocal.",
+   "en": "The poster Elena designed uses a different typeface for each vowel.",
+   "ko": "엘레나가 디자인한 포스터는 모음마다 다른 글꼴을 써요.",
+   "blank": "vocal",
+   "src": "made"
   }
  ],
  "w|vodka": [

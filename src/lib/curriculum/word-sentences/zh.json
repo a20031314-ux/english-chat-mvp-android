@@ -221,6 +221,22 @@
    "blank": "一旦"
   }
  ],
+ "w|一时": [
+  {
+   "text": "亲戚们一下子问了好多问题，王刚一时不知道该怎么回答。",
+   "en": "The relatives asked so many questions at once that Wang Gang was momentarily at a loss for how to answer.",
+   "ko": "친척들이 한꺼번에 질문을 많이 해서 왕강은 잠시 뭐라고 대답해야 할지 몰랐어요.",
+   "blank": "一时",
+   "src": "made"
+  },
+  {
+   "text": "同事们的名字太多，李娜一时记不住。",
+   "en": "There were so many colleagues' names that Li Na couldn't remember them all right away.",
+   "ko": "동료들 이름이 너무 많아서 리나는 한꺼번에 다 기억하지 못했어요.",
+   "blank": "一时",
+   "src": "made"
+  }
+ ],
  "w|一样": [
   {
    "text": "都一样。",
@@ -1009,6 +1025,22 @@
    "blank": "不同"
   }
  ],
+ "w|不在乎": [
+  {
+   "text": "王刚的弟弟不在乎压岁钱多少，只想快点放烟花。",
+   "en": "Wang Gang's little brother doesn't care how much red envelope money he gets; he just wants to set off fireworks.",
+   "ko": "왕강의 남동생은 세뱃돈이 얼마인지는 신경 안 쓰고 빨리 불꽃놀이만 하고 싶어 해요.",
+   "blank": "不在乎",
+   "src": "made"
+  },
+  {
+   "text": "旁边的老员工好像不在乎谁坐在哪儿，一直戴着耳机工作。",
+   "en": "The veteran employee next to her didn't seem to care who sat where and kept working with headphones on.",
+   "ko": "옆자리 고참 직원은 누가 어디 앉든 신경 안 쓰는지 계속 이어폰을 끼고 일했어요.",
+   "blank": "不在乎",
+   "src": "made"
+  }
+ ],
  "w|不够": [
   {
    "text": "时间不够。",
@@ -1519,6 +1551,22 @@
    "blank": "两"
   }
  ],
+ "w|严格": [
+  {
+   "text": "王刚的爸爸对年夜饭的规矩很严格，大家必须等爷爷先动筷子。",
+   "en": "Wang Gang's dad is strict about New Year's Eve dinner rules; everyone must wait for grandpa to pick up his chopsticks first.",
+   "ko": "왕강의 아빠는 섣달그믐 저녁 예절에 엄격해서 모두 할아버지가 먼저 젓가락을 드실 때까지 기다려야 해요.",
+   "blank": "严格",
+   "src": "made"
+  },
+  {
+   "text": "这家公司的考勤很严格，迟到一分钟也会被记下来。",
+   "en": "This company is strict about attendance; even a minute late gets recorded.",
+   "ko": "이 회사는 근태 관리가 엄격해서 일 분만 늦어도 기록돼요.",
+   "blank": "严格",
+   "src": "made"
+  }
+ ],
  "w|严肃": [
   {
    "text": "护林员很严肃地告诉王刚，山里绝对不能抽烟。",
@@ -1729,6 +1777,22 @@
    "src": "made"
   }
  ],
+ "w|临时": [
+  {
+   "text": "亲戚来得太多，王刚只好在客厅搭了一张临时的床。",
+   "en": "So many relatives came that Wang Gang had to set up a makeshift bed in the living room.",
+   "ko": "친척이 너무 많이 와서 왕강은 거실에 임시 침대를 하나 놓을 수밖에 없었어요.",
+   "blank": "临时",
+   "src": "made"
+  },
+  {
+   "text": "李娜的工位还没准备好，只好先坐在一张临时的桌子旁边。",
+   "en": "Li Na's workstation wasn't ready yet, so she had to sit at a temporary desk for now.",
+   "ko": "리나의 자리가 아직 준비되지 않아서 우선 임시 책상에 앉을 수밖에 없었어요.",
+   "blank": "临时",
+   "src": "made"
+  }
+ ],
  "w|为": [
   {
    "text": "为你好。",
@@ -1856,6 +1920,22 @@
    "en": "The village committee director rode his motorbike door to door telling everyone to get vaccinated.",
    "ko": "마을 위원회 주임이 오토바이를 타고 집집마다 다니며 백신 맞으라고 알렸어요.",
    "blank": "主任",
+   "src": "made"
+  }
+ ],
+ "w|主动": [
+  {
+   "text": "今年王刚主动揽下了洗碗的活，妈妈高兴极了。",
+   "en": "This year Wang Gang volunteered to do all the dishes, and his mom was thrilled.",
+   "ko": "올해 왕강이 먼저 나서서 설거지를 맡자 엄마가 무척 기뻐했어요.",
+   "blank": "主动",
+   "src": "made"
+  },
+  {
+   "text": "李娜正在找会议室，这时一位同事主动走过来给她带路。",
+   "en": "Li Na was looking for the meeting room when a colleague came over and offered to show her the way.",
+   "ko": "리나가 회의실을 찾고 있는데 그때 한 동료가 먼저 다가와 길을 안내해 줬어요.",
+   "blank": "主动",
    "src": "made"
   }
  ],
@@ -2283,6 +2363,22 @@
    "en": "Earlier is fine too.",
    "ko": "좀 이른 것도 괜찮아.",
    "blank": "也好"
+  }
+ ],
+ "w|也就是说": [
+  {
+   "text": "妈妈说初五才开市，也就是说王刚得提前把东西买好。",
+   "en": "Mom said the shops don't reopen until the fifth day, which means Wang Gang has to buy everything in advance.",
+   "ko": "엄마가 초닷새에야 가게가 문을 연다고 했으니, 그러니까 왕강은 미리 물건을 다 사 둬야 해요.",
+   "blank": "也就是说",
+   "src": "made"
+  },
+  {
+   "text": "经理说试用期是三个月，也就是说李娜年底才能转正。",
+   "en": "The manager said the probation period is three months, which means Li Na won't become permanent until year's end.",
+   "ko": "매니저가 수습 기간이 석 달이라고 했으니, 다시 말해 리나는 연말에야 정규직이 돼요.",
+   "blank": "也就是说",
+   "src": "made"
   }
  ],
  "w|也许": [
@@ -5169,6 +5265,22 @@
    "blank": "假如"
   }
  ],
+ "w|假期": [
+  {
+   "text": "公司今年的春节假期有八天，王刚早早就买好了票。",
+   "en": "The company's Spring Festival holiday is eight days this year, and Wang Gang bought his ticket early.",
+   "ko": "회사의 올해 설 연휴가 팔 일이라서 왕강은 일찌감치 표를 사 뒀어요.",
+   "blank": "假期",
+   "src": "made"
+  },
+  {
+   "text": "人事部的人说，新员工满半年才有带薪假期。",
+   "en": "HR said new employees only get paid leave after six months.",
+   "ko": "인사팀 직원은 신입 사원은 반년이 지나야 유급 휴가가 있다고 했어요.",
+   "blank": "假期",
+   "src": "made"
+  }
+ ],
  "w|假装": [
   {
    "text": "别假装听不见。",
@@ -6695,6 +6807,22 @@
    "src": "made"
   }
  ],
+ "w|最初": [
+  {
+   "text": "王刚说，最初他只想简单吃顿饭，结果越准备越多。",
+   "en": "Wang Gang said that at first he only wanted a simple meal, but the more he prepared, the more there was.",
+   "ko": "왕강은 처음에는 그냥 간단히 밥 한 끼 먹으려고 했는데 준비할수록 일이 많아졌다고 했어요.",
+   "blank": "最初",
+   "src": "made"
+  },
+  {
+   "text": "李娜最初投简历的时候，没想到真能进这家公司。",
+   "en": "When Li Na first sent in her résumé, she never expected she'd actually get into this company.",
+   "ko": "리나는 처음 이력서를 낼 때 정말 이 회사에 들어올 줄은 몰랐어요.",
+   "blank": "最初",
+   "src": "made"
+  }
+ ],
  "w|最后": [
   {
    "text": "这是最后了。",
@@ -7647,6 +7775,22 @@
    "blank": "刚才"
   }
  ],
+ "w|创作": [
+  {
+   "text": "王刚的表妹喜欢画画，今年自己创作了一副春联。",
+   "en": "Wang Gang's younger cousin likes drawing and created her own pair of spring couplets this year.",
+   "ko": "왕강의 사촌 여동생은 그림을 좋아해서 올해 직접 춘련을 지었어요.",
+   "blank": "创作",
+   "src": "made"
+  },
+  {
+   "text": "李娜在设计部门工作，以后主要负责广告的创作。",
+   "en": "Li Na works in the design department and will mainly be in charge of creating ads.",
+   "ko": "리나는 디자인 부서에서 일하며 앞으로 주로 광고 제작을 맡아요.",
+   "blank": "创作",
+   "src": "made"
+  }
+ ],
  "w|创造": [
   {
    "text": "一起创造未来。",
@@ -7859,6 +8003,22 @@
    "en": "This was handmade.",
    "ko": "이건 손으로 만든 거야.",
    "blank": "制作"
+  }
+ ],
+ "w|制定": [
+  {
+   "text": "王刚给自己制定了新年计划，第一条就是多陪家人。",
+   "en": "Wang Gang drew up New Year resolutions for himself, and the first was to spend more time with family.",
+   "ko": "왕강은 새해 계획을 세웠는데, 첫 번째가 가족과 더 많이 시간을 보내는 거였어요.",
+   "blank": "制定",
+   "src": "made"
+  },
+  {
+   "text": "组长帮李娜制定了一个月的学习计划。",
+   "en": "The team leader helped Li Na draw up a one-month learning plan.",
+   "ko": "팀장은 리나에게 한 달 학습 계획을 세워 줬어요.",
+   "blank": "制定",
+   "src": "made"
   }
  ],
  "w|制度": [
@@ -11065,6 +11225,22 @@
    "blank": "后悔"
   }
  ],
+ "w|后期": [
+  {
+   "text": "王刚说，年夜饭准备到后期，厨房里简直转不开身。",
+   "en": "Wang Gang said that in the later stage of preparing the New Year's Eve dinner, there was hardly room to turn around in the kitchen.",
+   "ko": "왕강은 섣달그믐 저녁 준비가 막바지에 이르자 부엌에서 몸을 돌릴 틈도 없었다고 했어요.",
+   "blank": "后期",
+   "src": "made"
+  },
+  {
+   "text": "组长说，项目到了后期会特别忙，让李娜做好心理准备。",
+   "en": "The team leader said the project gets especially busy in its later stage and told Li Na to brace herself.",
+   "ko": "팀장은 프로젝트 후반이 되면 특히 바쁘니 리나에게 마음의 준비를 하라고 했어요.",
+   "blank": "后期",
+   "src": "made"
+  }
+ ],
  "w|后来": [
   {
    "text": "后来怎么样了？",
@@ -11574,6 +11750,22 @@
    "en": "\"Oh, Liu Fang, you're here so early today!\" Xiao Chen said with a smile.",
    "ko": "\"어, 류팡, 오늘 엄청 일찍 왔네!\" 샤오천이 웃으며 말했어요.",
    "blank": "呦",
+   "src": "made"
+  }
+ ],
+ "w|周六": [
+  {
+   "text": "王刚打算周六去超市，把年货一次买齐。",
+   "en": "Wang Gang plans to go to the supermarket on Saturday and buy all the New Year goods in one go.",
+   "ko": "왕강은 토요일에 마트에 가서 설 장거리를 한 번에 다 살 계획이에요.",
+   "blank": "周六",
+   "src": "made"
+  },
+  {
+   "text": "李娜听说部门周六偶尔要加班，心里有点打鼓。",
+   "en": "Li Na heard the department sometimes works overtime on Saturdays and felt a bit uneasy.",
+   "ko": "리나는 부서가 가끔 토요일에도 야근한다는 말을 듣고 마음이 좀 조마조마했어요.",
+   "blank": "周六",
    "src": "made"
   }
  ],
@@ -16085,6 +16277,22 @@
    "src": "made"
   }
  ],
+ "w|季": [
+  {
+   "text": "冬季的菜市场一到年底就挤满了人，王刚排了半小时队才买到鱼。",
+   "en": "The winter market is packed at year's end, and Wang Gang queued half an hour just to buy fish.",
+   "ko": "겨울철 시장은 연말만 되면 사람으로 꽉 차서 왕강은 삼십 분이나 줄을 서서 겨우 생선을 샀어요.",
+   "blank": "季",
+   "src": "made"
+  },
+  {
+   "text": "经理说公司每季都会开一次总结会，让李娜提前准备。",
+   "en": "The manager said the company holds a review meeting every quarter and told Li Na to prepare in advance.",
+   "ko": "매니저는 회사가 분기마다 한 번 결산 회의를 한다며 리나에게 미리 준비하라고 했어요.",
+   "blank": "季",
+   "src": "made"
+  }
+ ],
  "w|孤单": [
   {
    "text": "庭审结束后，空荡荡的法庭里只剩马林一个人，显得有点孤单。",
@@ -16959,6 +17167,22 @@
    "en": "It's easy to say.",
    "ko": "말하기는 쉽지.",
    "blank": "容易"
+  }
+ ],
+ "w|宽": [
+  {
+   "text": "王刚家的饭桌不够宽，十几个人只好分两桌坐。",
+   "en": "Wang Gang's family table isn't wide enough, so a dozen-odd people had to sit at two tables.",
+   "ko": "왕강네 식탁이 넓지 않아서 열 몇 명이 두 상으로 나눠 앉아야 했어요.",
+   "blank": "宽",
+   "src": "made"
+  },
+  {
+   "text": "李娜的办公桌很宽，放两台显示器还有空余。",
+   "en": "Li Na's desk is wide, with room to spare even with two monitors on it.",
+   "ko": "리나의 책상은 넓어서 모니터 두 대를 놓아도 자리가 남아요.",
+   "blank": "宽",
+   "src": "made"
   }
  ],
  "w|宽恕": [
@@ -19056,6 +19280,22 @@
    "en": "Lili believes that on a film crew, leads and supporting actors deserve equal respect.",
    "ko": "리리는 촬영장에서 주연과 조연의 인격은 평등하다고 생각해요.",
    "blank": "平等",
+   "src": "made"
+  }
+ ],
+ "w|平衡": [
+  {
+   "text": "王刚觉得工作和家庭很难平衡，过年才终于能好好陪父母。",
+   "en": "Wang Gang finds it hard to balance work and family, and only at New Year can he really be with his parents.",
+   "ko": "왕강은 일과 가정의 균형을 맞추기 어렵다고 느껴서 설이 되어서야 부모님 곁에 제대로 있을 수 있어요.",
+   "blank": "平衡",
+   "src": "made"
+  },
+  {
+   "text": "李娜一手端着咖啡一手抱着文件，差点没保持住平衡。",
+   "en": "Li Na was holding coffee in one hand and files in the other, and nearly lost her balance.",
+   "ko": "리나는 한 손에 커피를, 한 손에 서류를 안고 있다가 하마터면 중심을 잃을 뻔했어요.",
+   "blank": "平衡",
    "src": "made"
   }
  ],
@@ -23589,6 +23829,22 @@
    "blank": "抽烟"
   }
  ],
+ "w|担任": [
+  {
+   "text": "今年家里的年夜饭由王刚担任主厨，他紧张了一整天。",
+   "en": "This year Wang Gang served as head chef for the family's New Year's Eve dinner, and he was nervous all day.",
+   "ko": "올해 집 섣달그믐 저녁은 왕강이 주방장을 맡아서 하루 종일 긴장했어요.",
+   "blank": "担任",
+   "src": "made"
+  },
+  {
+   "text": "李娜的组长以前在大公司担任过项目经理。",
+   "en": "Li Na's team leader used to serve as a project manager at a big company.",
+   "ko": "리나의 팀장은 예전에 큰 회사에서 프로젝트 매니저를 맡았었어요.",
+   "blank": "担任",
+   "src": "made"
+  }
+ ],
  "w|担心": [
   {
    "text": "别担心。",
@@ -23807,6 +24063,22 @@
    "blank": "拿"
   }
  ],
+ "w|拿出": [
+  {
+   "text": "王刚拿出手机，给全家人拍了一张合影。",
+   "en": "Wang Gang took out his phone and snapped a group photo of the whole family.",
+   "ko": "왕강은 휴대폰을 꺼내 온 가족 단체 사진을 찍었어요.",
+   "blank": "拿出",
+   "src": "made"
+  },
+  {
+   "text": "开会时，李娜拿出笔记本，把同事说的每一点都记下来。",
+   "en": "During the meeting, Li Na took out her notebook and wrote down every point her colleagues made.",
+   "ko": "회의 때 리나는 공책을 꺼내 동료들이 말한 걸 하나하나 적었어요.",
+   "blank": "拿出",
+   "src": "made"
+  }
+ ],
  "w|拿到": [
   {
    "text": "我拿到了。",
@@ -23875,6 +24147,22 @@
    "en": "He's pointing at the map.",
    "ko": "그는 지도를 가리키고 있어.",
    "blank": "指"
+  }
+ ],
+ "w|指出": [
+  {
+   "text": "爷爷指出王刚贴的福字太歪，让他重新贴一张。",
+   "en": "Grandpa pointed out that the \"fu\" character Wang Gang put up was too crooked and had him redo it.",
+   "ko": "할아버지는 왕강이 붙인 복 자가 너무 삐뚤어졌다고 지적하며 다시 붙이라고 했어요.",
+   "blank": "指出",
+   "src": "made"
+  },
+  {
+   "text": "组长看了李娜的报告，指出了几处格式上的问题。",
+   "en": "The team leader read Li Na's report and pointed out a few formatting issues.",
+   "ko": "팀장은 리나의 보고서를 보고 형식상의 문제 몇 군데를 지적했어요.",
+   "blank": "指出",
+   "src": "made"
   }
  ],
  "w|指导": [
@@ -25911,6 +26199,22 @@
    "src": "made"
   }
  ],
+ "w|新年": [
+  {
+   "text": "新年钟声响起的时候，王刚给远方的朋友发了祝福。",
+   "en": "When the New Year bells rang, Wang Gang sent good wishes to a friend far away.",
+   "ko": "새해 종소리가 울리자 왕강은 멀리 있는 친구에게 축하 메시지를 보냈어요.",
+   "blank": "新年",
+   "src": "made"
+  },
+  {
+   "text": "经理笑着说，李娜来得正好，新年的项目马上要开始。",
+   "en": "The manager said with a smile that Li Na came at just the right time, as the New Year projects were about to start.",
+   "ko": "매니저는 웃으며 리나가 딱 맞춰 왔다고, 새해 프로젝트가 곧 시작된다고 했어요.",
+   "blank": "新年",
+   "src": "made"
+  }
+ ],
  "w|新闻": [
   {
    "text": "看新闻了吗？",
@@ -26301,6 +26605,22 @@
    "src": "made"
   }
  ],
+ "w|日记": [
+  {
+   "text": "王刚翻到小时候的日记，里面写着盼过年的心情。",
+   "en": "Wang Gang came across his childhood diary, which described how much he longed for the New Year.",
+   "ko": "왕강은 어릴 때 쓴 일기를 찾았는데, 거기에 설을 기다리던 마음이 적혀 있었어요.",
+   "blank": "日记",
+   "src": "made"
+  },
+  {
+   "text": "下班回家后，李娜在日记里写下了第一天的感受。",
+   "en": "After getting home from work, Li Na wrote down her feelings about the first day in her diary.",
+   "ko": "퇴근하고 집에 와서 리나는 일기에 첫날 느낀 점을 적었어요.",
+   "blank": "日记",
+   "src": "made"
+  }
+ ],
  "w|旧": [
   {
    "text": "这件衣服太旧了。",
@@ -26383,6 +26703,22 @@
    "en": "He left a while ago.",
    "ko": "그 사람 진작 갔어.",
    "blank": "早就"
+  }
+ ],
+ "w|早已": [
+  {
+   "text": "王刚到家时，妈妈早已把他的房间收拾得干干净净。",
+   "en": "By the time Wang Gang got home, his mom had long since tidied his room spotless.",
+   "ko": "왕강이 집에 도착했을 때 엄마는 이미 오래전에 방을 깨끗이 치워 두었어요.",
+   "blank": "早已",
+   "src": "made"
+  },
+  {
+   "text": "李娜到公司时，组长早已把她的工作邮箱开通好了。",
+   "en": "By the time Li Na arrived, the team leader had long since set up her work email.",
+   "ko": "리나가 회사에 도착했을 때 팀장은 벌써 업무 메일 계정을 만들어 놓았어요.",
+   "blank": "早已",
+   "src": "made"
   }
  ],
  "w|早晨": [
@@ -26557,6 +26893,22 @@
    "blank": "明天"
   }
  ],
+ "w|明年": [
+  {
+   "text": "王刚跟妈妈说，明年过年想带女朋友一起回家。",
+   "en": "Wang Gang told his mom that next year he wants to bring his girlfriend home for the holiday.",
+   "ko": "왕강은 엄마에게 내년 설에는 여자 친구를 데리고 같이 집에 오고 싶다고 했어요.",
+   "blank": "明年",
+   "src": "made"
+  },
+  {
+   "text": "同事告诉李娜，明年公司可能会搬到新大楼。",
+   "en": "A colleague told Li Na the company might move to a new building next year.",
+   "ko": "동료는 리나에게 내년에 회사가 새 건물로 이사할 수도 있다고 알려 줬어요.",
+   "blank": "明年",
+   "src": "made"
+  }
+ ],
  "w|明早": [
   {
    "text": "听说明早会下霜，马林把阳台上的花搬进了屋。",
@@ -26689,6 +27041,38 @@
    "en": "This week is busy.",
    "ko": "이번 주 바빠.",
    "blank": "星期"
+  }
+ ],
+ "w|星期一": [
+  {
+   "text": "王刚请了假，星期一就要坐车回老家。",
+   "en": "Wang Gang took leave and will head back to his hometown on Monday.",
+   "ko": "왕강은 휴가를 내서 월요일에 차를 타고 고향에 내려가요.",
+   "blank": "星期一",
+   "src": "made"
+  },
+  {
+   "text": "李娜的第一天正好是星期一，早上的例会她一句话也没敢说。",
+   "en": "Li Na's first day happened to be a Monday, and she didn't dare say a word at the morning meeting.",
+   "ko": "리나의 첫 출근은 마침 월요일이었는데, 아침 회의에서 한마디도 못 했어요.",
+   "blank": "星期一",
+   "src": "made"
+  }
+ ],
+ "w|星期天": [
+  {
+   "text": "王刚和爸爸约好星期天一起贴春联。",
+   "en": "Wang Gang and his dad agreed to put up the spring couplets together on Sunday.",
+   "ko": "왕강은 아빠와 일요일에 같이 춘련을 붙이기로 했어요.",
+   "blank": "星期天",
+   "src": "made"
+  },
+  {
+   "text": "为了熟悉路线，李娜星期天特意坐地铁去公司走了一趟。",
+   "en": "To learn the route, Li Na made a special trip to the office by subway on Sunday.",
+   "ko": "길을 익히려고 리나는 일요일에 일부러 지하철을 타고 회사에 한 번 가 봤어요.",
+   "blank": "星期天",
+   "src": "made"
   }
  ],
  "w|星球": [
@@ -26877,6 +27261,22 @@
    "en": "Say good night to everyone.",
    "ko": "모두에게 잘 자라고 해.",
    "blank": "晚安"
+  }
+ ],
+ "w|晚点": [
+  {
+   "text": "王刚的火车晚点了两个钟头，到家时饺子都包好了。",
+   "en": "Wang Gang's train was two hours late, and by the time he got home the dumplings were all made.",
+   "ko": "왕강이 탄 기차가 두 시간 연착해서 집에 도착했을 때는 만두가 다 빚어져 있었어요.",
+   "blank": "晚点",
+   "src": "made"
+  },
+  {
+   "text": "李娜坐的地铁晚点了，她一路小跑才没迟到。",
+   "en": "Li Na's subway was delayed, and she only avoided being late by jogging the whole way.",
+   "ko": "리나가 탄 지하철이 늦게 와서 리나는 내내 종종걸음으로 뛰어서야 지각을 면했어요.",
+   "blank": "晚点",
+   "src": "made"
   }
  ],
  "w|晚饭": [
@@ -27141,6 +27541,22 @@
    "en": "There's a book on the table.",
    "ko": "책상 위에 책 있어.",
    "blank": "有"
+  }
+ ],
+ "w|有事": [
+  {
+   "text": "舅舅打电话说路上有事，要晚一点才能到王刚家。",
+   "en": "Wang Gang's uncle called to say something came up on the way and he'd arrive a bit late.",
+   "ko": "외삼촌이 오는 길에 일이 생겨서 왕강네 집에 좀 늦게 도착할 거라고 전화했어요.",
+   "blank": "有事",
+   "src": "made"
+  },
+  {
+   "text": "下午经理有事出去了，李娜只好先自己看资料。",
+   "en": "The manager had something to attend to and went out in the afternoon, so Li Na read the materials on her own.",
+   "ko": "오후에 매니저가 일이 있어 나가서 리나는 먼저 혼자 자료를 볼 수밖에 없었어요.",
+   "blank": "有事",
+   "src": "made"
   }
  ],
  "w|有些": [
@@ -28955,6 +29371,22 @@
    "blank": "此事"
   }
  ],
+ "w|此刻": [
+  {
+   "text": "全家人围坐在桌边，王刚觉得此刻什么烦恼都没有了。",
+   "en": "With the whole family around the table, Wang Gang felt that at this moment all his worries were gone.",
+   "ko": "온 가족이 식탁에 둘러앉자 왕강은 지금 이 순간 아무 걱정도 없다고 느꼈어요.",
+   "blank": "此刻",
+   "src": "made"
+  },
+  {
+   "text": "李娜推开办公室的门，此刻心跳得特别快。",
+   "en": "Li Na pushed open the office door, her heart racing at that moment.",
+   "ko": "리나는 사무실 문을 밀고 들어갔는데, 그 순간 심장이 무척 빨리 뛰었어요.",
+   "blank": "此刻",
+   "src": "made"
+  }
+ ],
  "w|此外": [
   {
    "text": "这里东西便宜，此外，还能认识很多有趣的人。",
@@ -28968,6 +29400,22 @@
    "en": "Yang Yang's sister helped revise his résumé; besides that, she taught him how to answer interview questions.",
    "ko": "누나는 양양의 이력서를 고쳐 줬고, 그 밖에도 면접 질문에 답하는 법을 가르쳐 줬어요.",
    "blank": "此外",
+   "src": "made"
+  }
+ ],
+ "w|此时": [
+  {
+   "text": "午夜的烟花一朵接一朵，此时整条街都亮了起来。",
+   "en": "Fireworks burst one after another at midnight, and at that moment the whole street lit up.",
+   "ko": "자정에 불꽃이 연달아 터지자 그때 거리 전체가 환해졌어요.",
+   "blank": "此时",
+   "src": "made"
+  },
+  {
+   "text": "轮到李娜做自我介绍，此时整个会议室都安静了下来。",
+   "en": "When it was Li Na's turn to introduce herself, the whole meeting room went quiet at that moment.",
+   "ko": "리나가 자기소개를 할 차례가 되자 그때 회의실 전체가 조용해졌어요.",
+   "blank": "此时",
    "src": "made"
   }
  ],
@@ -29205,6 +29653,38 @@
    "en": "There's news every day.",
    "ko": "매일 새 소식이 있어.",
    "blank": "每天"
+  }
+ ],
+ "w|每年": [
+  {
+   "text": "王刚家每年都要大扫除，连窗帘也要拆下来洗。",
+   "en": "Wang Gang's family does a big clean every year, even taking the curtains down to wash.",
+   "ko": "왕강네는 해마다 대청소를 하는데, 커튼까지 떼어서 빨아요.",
+   "blank": "每年",
+   "src": "made"
+  },
+  {
+   "text": "公司每年都会组织新员工去郊外团建。",
+   "en": "The company organizes an outing in the countryside for new employees every year.",
+   "ko": "회사는 해마다 신입 사원들을 데리고 교외로 단합 행사를 가요.",
+   "blank": "每年",
+   "src": "made"
+  }
+ ],
+ "w|每次": [
+  {
+   "text": "每次回家，奶奶都会塞给王刚一个大红包。",
+   "en": "Every time Wang Gang comes home, his grandma slips him a big red envelope.",
+   "ko": "집에 갈 때마다 할머니는 왕강에게 큰 세뱃돈 봉투를 쥐여 줘요.",
+   "blank": "每次",
+   "src": "made"
+  },
+  {
+   "text": "每次打印文件，李娜都要找同事帮忙连打印机。",
+   "en": "Every time she prints a document, Li Na has to ask a colleague for help connecting to the printer.",
+   "ko": "문서를 출력할 때마다 리나는 동료에게 프린터 연결을 도와 달라고 해야 해요.",
+   "blank": "每次",
+   "src": "made"
   }
  ],
  "w|毒品": [
@@ -31997,6 +32477,22 @@
    "blank": "环境"
   }
  ],
+ "w|现代": [
+  {
+   "text": "现代人过年喜欢发电子红包，王刚的奶奶却还是习惯给现金。",
+   "en": "People nowadays like sending digital red envelopes at New Year, but Wang Gang's grandma still prefers cash.",
+   "ko": "요즘 사람들은 설에 전자 세뱃돈을 보내길 좋아하지만 왕강의 할머니는 여전히 현금을 줘요.",
+   "blank": "现代",
+   "src": "made"
+  },
+  {
+   "text": "公司的大楼装修得很现代，李娜一进门就被吸引了。",
+   "en": "The company building is decorated in a very modern style, and Li Na was drawn in as soon as she walked through the door.",
+   "ko": "회사 건물이 아주 현대적으로 꾸며져 있어서 리나는 들어서자마자 마음이 끌렸어요.",
+   "blank": "现代",
+   "src": "made"
+  }
+ ],
  "w|现在": [
   {
    "text": "你现在忙吗？",
@@ -33817,6 +34313,22 @@
    "src": "made"
   }
  ],
+ "w|眼前": [
+  {
+   "text": "王刚看着眼前一大桌子菜，不知道先吃哪个好。",
+   "en": "Looking at the big table of dishes in front of him, Wang Gang didn't know what to eat first.",
+   "ko": "왕강은 눈앞의 한 상 가득한 음식을 보며 뭘 먼저 먹어야 할지 몰랐어요.",
+   "blank": "眼前",
+   "src": "made"
+  },
+  {
+   "text": "李娜盯着眼前一大堆资料，不知道从哪份看起。",
+   "en": "Li Na stared at the pile of documents in front of her, not knowing which one to read first.",
+   "ko": "리나는 눈앞의 산더미 같은 자료를 바라보며 어느 것부터 봐야 할지 몰랐어요.",
+   "blank": "眼前",
+   "src": "made"
+  }
+ ],
  "w|眼睛": [
   {
    "text": "眼睛疼。",
@@ -34771,6 +35283,22 @@
    "en": "Please respect private space.",
    "ko": "개인 공간을 존중해 주세요.",
    "blank": "私人"
+  }
+ ],
+ "w|秋天": [
+  {
+   "text": "秋天的时候，王刚的妈妈就开始晒腊肉，准备过年吃。",
+   "en": "Back in autumn, Wang Gang's mom started drying cured pork to eat at the New Year.",
+   "ko": "가을부터 왕강의 엄마는 설에 먹으려고 납육을 말리기 시작했어요.",
+   "blank": "秋天",
+   "src": "made"
+  },
+  {
+   "text": "李娜是秋天毕业的，找了两个月工作才拿到这个职位。",
+   "en": "Li Na graduated in the autumn and spent two months job hunting before landing this position.",
+   "ko": "리나는 가을에 졸업하고 두 달 동안 일자리를 찾다가 이 자리를 얻었어요.",
+   "blank": "秋天",
+   "src": "made"
   }
  ],
  "w|种": [
@@ -35847,6 +36375,22 @@
    "src": "made"
   }
  ],
+ "w|糟": [
+  {
+   "text": "王刚一着急把锅里的鱼烧糊了，心想这下可糟了。",
+   "en": "In his rush, Wang Gang burned the fish in the pot and thought, now this is bad.",
+   "ko": "왕강은 서두르다가 냄비 속 생선을 태워 버리고 이번엔 정말 망했다고 생각했어요.",
+   "blank": "糟",
+   "src": "made"
+  },
+  {
+   "text": "李娜发现自己把客户的名字写错了，觉得情况有点糟。",
+   "en": "Li Na realized she had written the client's name wrong and felt things were a bit of a mess.",
+   "ko": "리나는 고객 이름을 잘못 쓴 걸 알고 상황이 좀 안 좋다고 느꼈어요.",
+   "blank": "糟",
+   "src": "made"
+  }
+ ],
  "w|糟糕": [
   {
    "text": "糟糕，忘带钥匙了。",
@@ -36678,6 +37222,22 @@
    "en": "Wang Fang's classmate is an editor at a publisher and is helping the teacher put together a cookbook.",
    "ko": "왕팡의 수강생 친구는 출판사 편집자인데 선생님의 요리책 정리를 돕고 있어요.",
    "blank": "编辑",
+   "src": "made"
+  }
+ ],
+ "w|缺乏": [
+  {
+   "text": "王刚做菜缺乏经验，切的萝卜大小都不一样。",
+   "en": "Wang Gang lacks cooking experience, and the radish pieces he cut were all different sizes.",
+   "ko": "왕강은 요리 경험이 부족해서 썬 무 크기가 제각각이었어요.",
+   "blank": "缺乏",
+   "src": "made"
+  },
+  {
+   "text": "经理觉得李娜缺乏实际经验，但学东西很快。",
+   "en": "The manager thinks Li Na lacks hands-on experience but learns quickly.",
+   "ko": "매니저는 리나가 실무 경험은 부족하지만 배우는 게 빠르다고 생각해요.",
+   "blank": "缺乏",
    "src": "made"
   }
  ],
@@ -40395,6 +40955,22 @@
    "src": "tatoeba:4757238/ryanwoo en:4756241/cairnhead"
   }
  ],
+ "w|设置": [
+  {
+   "text": "王刚在手机上设置了闹钟，怕守岁的时候睡着。",
+   "en": "Wang Gang set an alarm on his phone, afraid he'd fall asleep while staying up on New Year's Eve.",
+   "ko": "왕강은 밤을 새우다 잠들까 봐 휴대폰에 알람을 맞춰 뒀어요.",
+   "blank": "设置",
+   "src": "made"
+  },
+  {
+   "text": "技术部的同事帮李娜设置了电脑的登录密码。",
+   "en": "A colleague from IT helped Li Na set up her computer's login password.",
+   "ko": "기술팀 동료가 리나의 컴퓨터 로그인 비밀번호를 설정해 줬어요.",
+   "blank": "设置",
+   "src": "made"
+  }
+ ],
  "w|设计": [
   {
    "text": "她负责设计封面。",
@@ -42979,6 +43555,22 @@
    "blank": "这儿"
   }
  ],
+ "w|这时": [
+  {
+   "text": "王刚正手忙脚乱，这时门铃响了，原来是姑姑来帮忙。",
+   "en": "Wang Gang was flustered when the doorbell rang; it turned out his aunt had come to help.",
+   "ko": "왕강이 허둥대고 있는데 그때 초인종이 울렸고, 알고 보니 고모가 도우러 온 거였어요.",
+   "blank": "这时",
+   "src": "made"
+  },
+  {
+   "text": "李娜正在找会议室，这时一位同事主动走过来给她带路。",
+   "en": "Li Na was looking for the meeting room when a colleague came over and offered to show her the way.",
+   "ko": "리나가 회의실을 찾고 있는데 그때 한 동료가 먼저 다가와 길을 안내해 줬어요.",
+   "blank": "这时",
+   "src": "made"
+  }
+ ],
  "w|这样": [
   {
    "text": "这样不行。",
@@ -44145,6 +44737,22 @@
    "blank": "那儿"
   }
  ],
+ "w|那天": [
+  {
+   "text": "除夕那天，王刚一大早就被鞭炮声吵醒了。",
+   "en": "On New Year's Eve, Wang Gang was woken early by firecrackers.",
+   "ko": "섣달그믐날 왕강은 아침 일찍 폭죽 소리에 잠이 깼어요.",
+   "blank": "那天",
+   "src": "made"
+  },
+  {
+   "text": "李娜记得很清楚，那天下着小雨，她穿着新买的衬衫。",
+   "en": "Li Na remembers clearly that it was drizzling that day and she was wearing a newly bought shirt.",
+   "ko": "리나는 그날 이슬비가 내렸고 새로 산 셔츠를 입었던 걸 또렷이 기억해요.",
+   "blank": "那天",
+   "src": "made"
+  }
+ ],
  "w|那时": [
   {
    "text": "那时我还小。",
@@ -45015,6 +45623,22 @@
    "blank": "长官"
   }
  ],
+ "w|长期": [
+  {
+   "text": "王刚在外地长期工作，一年只能回家这一次。",
+   "en": "Wang Gang works away from home long-term and can only come back this once a year.",
+   "ko": "왕강은 오랫동안 타지에서 일해서 일 년에 이번 한 번만 집에 올 수 있어요.",
+   "blank": "长期",
+   "src": "made"
+  },
+  {
+   "text": "李娜希望能在这里长期发展，不想再频繁换工作。",
+   "en": "Li Na hopes to build a long-term career here and doesn't want to keep changing jobs.",
+   "ko": "리나는 여기서 오래 커 나가고 싶어서 다시는 자주 직장을 옮기고 싶지 않아요.",
+   "blank": "长期",
+   "src": "made"
+  }
+ ],
  "w|门": [
   {
    "text": "把门关上。",
@@ -45395,6 +46019,22 @@
    "en": "I present myself to Your Majesty.",
    "ko": "폐하를 뵙습니다.",
    "blank": "陛下"
+  }
+ ],
+ "w|除": [
+  {
+   "text": "王刚家除饺子以外，还要做一条红烧鱼，图个年年有余。",
+   "en": "Besides dumplings, Wang Gang's family also makes a braised fish for the wish of abundance year after year.",
+   "ko": "왕강네는 만두 말고도 해마다 넉넉하라는 뜻으로 생선찜을 한 마리 만들어요.",
+   "blank": "除",
+   "src": "made"
+  },
+  {
+   "text": "除李娜之外，这个月部门还来了另外两个新人。",
+   "en": "Besides Li Na, two other new people joined the department this month.",
+   "ko": "리나 말고도 이번 달 부서에 신입이 두 명 더 왔어요.",
+   "blank": "除",
+   "src": "made"
   }
  ],
  "w|除了": [
