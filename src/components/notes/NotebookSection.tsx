@@ -208,8 +208,9 @@ function LayerJump({
           data-my-jump-to={one.id}
           aria-selected={active === one.id}
           aria-current={active === one.id ? "true" : undefined}
+          dir="auto"
           onClick={() => onJump(one.id)}
-          className={`min-w-0 flex-1 truncate rounded-full border px-3 py-1.5 text-caption font-semibold ${active === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : `${LAYER_TONE[one.id].dim} hover:bg-white/5`}`}
+          className={`min-w-0 flex-auto truncate rounded-full border px-2.5 py-1.5 text-caption font-semibold ${active === one.id ? `${LAYER_TONE[one.id].box} ${LAYER_TONE[one.id].title}` : `${LAYER_TONE[one.id].dim} hover:bg-white/5`}`}
         >
           {one.title}
         </button>

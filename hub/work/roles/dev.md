@@ -37,7 +37,7 @@
 - **앎·말하기 분리 남은 것:** 수업 통화를 장부 `call` 대신 학습으로 셀지(3번 탭 callHooks와 겹침), — 사용자 결정 대기(STATE). (말하기 숫자는 실력 확인 표 🗣로 보임.)
 - **Languagebank 같이 배우기 남은 것:** 유의어(데이터 없음 — 만들면 Cursor 에이전트로 고정 데이터), 활용형 맞추기(es comer처럼 틀 예문에 그 꼴이 없으면 칸이 안 보임), 사람 대화에서 맞게 쓴 말은 장부에 안 남아 대화 수에 안 듦(4번 탭과).
 - **섞어 말하기 통화(설계만):** `hub/work/drafts/call-mix-2026-11-08.md` — 정할 것 셋 사용자 대기.
-- **체감 점검 2026-11-09 남은 지적:** 쉬운 단어(`presumedWords` 순위 0부터·카드 없을 때 묶음 퀴즈로 빠짐), 뜻 없는 빈칸(`glossFirst`), 아랍어 칸 이름 잘림, U11 숙제 끝 화면 — 보고서 `hub/work/drafts/ux-check-2026-11-09.md`, 순서는 사용자.
+- **체감 점검 2026-11-09 남은 지적:** 쉬운 단어(`presumedWords` 순위 0부터·카드 없을 때 묶음 퀴즈로 빠짐), 뜻 없는 빈칸(`glossFirst`), U11 숙제 끝 화면 — 보고서 `hub/work/drafts/ux-check-2026-11-09.md`, 순서는 사용자.
 
 ## 참고
 - 로컬 확인: `npm run build:capacitor` 후 www를 띄우고 /api는 운영 서버로 프록시(`scripts/browser-language-pass.mjs`가 같은 방식).

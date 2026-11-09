@@ -502,6 +502,17 @@
         "a261109-2-3",
         "a261109-2-4"
       ]
+    },
+    {
+      "at": "2026-11-09 15:37",
+      "from": "2",
+      "base": "8de356764bd3c743f9ce8fd58393a63aec038e11",
+      "head": "1101cb9",
+      "what": "My 칸 이름 줄 폭(NotebookSection LayerJump)",
+      "tabs": [
+        "2"
+      ],
+      "asks": []
     }
   ],
   "seq": {
