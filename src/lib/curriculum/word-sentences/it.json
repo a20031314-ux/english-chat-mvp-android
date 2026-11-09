@@ -291,6 +291,22 @@
    "blank": "accettare"
   }
  ],
+ "w|acciaio": [
+  {
+   "text": "Il molo nuovo è fatto di acciaio e cemento, e Davide ci va a pescare ogni sera.",
+   "en": "The new pier is made of steel and concrete, and Davide goes fishing there every evening.",
+   "ko": "새 부두는 강철과 콘크리트로 만들어졌고 다비데는 매일 저녁 거기서 낚시를 해요.",
+   "blank": "acciaio",
+   "src": "made"
+  },
+  {
+   "text": "Per la cucina Elena ha scelto un lavello d'acciaio.",
+   "en": "For the kitchen Elena chose a steel sink.",
+   "ko": "엘레나는 부엌에 스테인리스 개수대를 골랐어요.",
+   "blank": "acciaio",
+   "src": "made"
+  }
+ ],
  "w|accomodare": [
   {
    "text": "Si accomodi pure, la sedia è libera.",
@@ -658,6 +674,22 @@
    "en": "Chiara is the most reliable nurse on the ward.",
    "ko": "키아라는 병동에서 가장 믿음직한 간호사예요.",
    "blank": "affidabile",
+   "src": "made"
+  }
+ ],
+ "w|affinché": [
+  {
+   "text": "Davide raccoglie la plastica sulla riva affinché le tartarughe non la mangino.",
+   "en": "Davide picks up plastic on the shore so that the turtles don't eat it.",
+   "ko": "다비데는 거북이가 먹지 않도록 물가의 플라스틱을 주워요.",
+   "blank": "affinché",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha isolato le finestre affinché la casa resti calda d'inverno.",
+   "en": "Elena insulated the windows so that the house stays warm in winter.",
+   "ko": "엘레나는 겨울에 집이 따뜻하도록 창문에 단열 처리를 했어요.",
+   "blank": "affinché",
    "src": "made"
   }
  ],
@@ -2001,6 +2033,22 @@
    "en": "I'm learning to appreciate the little things.",
    "ko": "작은 것들을 감사하는 법을 배워.",
    "blank": "apprezzare"
+  }
+ ],
+ "w|approccio": [
+  {
+   "text": "Davide ha un approccio tranquillo alla pesca: non gli importa se non prende nulla.",
+   "en": "Davide has a relaxed approach to fishing: he doesn't care if he catches nothing.",
+   "ko": "다비데는 낚시를 느긋하게 해요. 아무것도 못 잡아도 신경 쓰지 않아요.",
+   "blank": "approccio",
+   "src": "made"
+  },
+  {
+   "text": "Elena preferisce un approccio graduale: una stanza alla volta.",
+   "en": "Elena prefers a gradual approach: one room at a time.",
+   "ko": "엘레나는 한 번에 방 하나씩 차근차근하는 방식을 좋아해요.",
+   "blank": "approccio",
+   "src": "made"
   }
  ],
  "w|approvazione": [
@@ -5419,6 +5467,22 @@
    "blank": "cane"
   }
  ],
+ "w|canna": [
+  {
+   "text": "Davide ha portato la canna da pesca e ha aspettato per ore sul molo.",
+   "en": "Davide brought his fishing rod and waited for hours on the pier.",
+   "ko": "다비데는 낚싯대를 들고 부두에서 몇 시간을 기다렸어요.",
+   "blank": "canna",
+   "src": "made"
+  },
+  {
+   "text": "Lungo il fosso dietro la casa di Elena crescono canne altissime.",
+   "en": "Very tall reeds grow along the ditch behind Elena's house.",
+   "ko": "엘레나네 집 뒤 도랑을 따라 아주 높은 갈대가 자라요.",
+   "blank": "canne",
+   "src": "made"
+  }
+ ],
  "w|cannone": [
   {
    "text": "Il cannone del museo è molto antico.",
@@ -8027,6 +8091,22 @@
    "blank": "compagno"
   }
  ],
+ "w|comparire": [
+  {
+   "text": "All'improvviso un delfino è comparso accanto alla barca di Davide.",
+   "en": "Suddenly a dolphin appeared beside Davide's boat.",
+   "ko": "갑자기 돌고래 한 마리가 다비데의 배 옆에 나타났어요.",
+   "blank": "comparso",
+   "src": "made"
+  },
+  {
+   "text": "Togliendo la carta da parati, sono comparsi vecchi disegni sul muro, ed Elena li ha fotografati.",
+   "en": "When the wallpaper came off, old drawings appeared on the wall, and Elena photographed them.",
+   "ko": "벽지를 떼어 내자 벽에 옛 그림이 드러나서 엘레나가 사진을 찍었어요.",
+   "blank": "comparsi",
+   "src": "made"
+  }
+ ],
  "w|compassione": [
   {
    "text": "Simone ammira la compassione con cui Marco si prende cura del padre anziano.",
@@ -9241,6 +9321,22 @@
    "en": "The conversation got serious.",
    "ko": "대화가 진지해졌어.",
    "blank": "conversazione"
+  }
+ ],
+ "w|convincente": [
+  {
+   "text": "Davide ha trovato una spiegazione convincente per i segni sulla sabbia: un granchio.",
+   "en": "Davide found a convincing explanation for the marks in the sand: a crab.",
+   "ko": "다비데는 모래 위 자국에 대해 그럴듯한 설명을 찾았어요. 바로 게였어요.",
+   "blank": "convincente",
+   "src": "made"
+  },
+  {
+   "text": "Il preventivo dell'impresa era convincente, ed Elena ha firmato subito.",
+   "en": "The firm's quote was convincing, and Elena signed straight away.",
+   "ko": "업체 견적이 믿음직해서 엘레나는 바로 서명했어요.",
+   "blank": "convincente",
+   "src": "made"
   }
  ],
  "w|convincere": [
@@ -11503,6 +11599,22 @@
    "en": "I want to show that I'm right.",
    "ko": "내가 옳다는 걸 보여 주고 싶어.",
    "blank": "dimostrare"
+  }
+ ],
+ "w|dimostrazione": [
+  {
+   "text": "Il bagnino ha fatto ai bambini una dimostrazione di salvataggio, e Davide ha fatto da vittima.",
+   "en": "The lifeguard gave the children a rescue demonstration, and Davide played the victim.",
+   "ko": "안전요원이 아이들에게 구조 시범을 보였고 다비데가 구조받는 역할을 했어요.",
+   "blank": "dimostrazione",
+   "src": "made"
+  },
+  {
+   "text": "Il venditore ha fatto a Elena una dimostrazione della nuova pompa di calore.",
+   "en": "The salesman gave Elena a demonstration of the new heat pump.",
+   "ko": "판매원이 엘레나에게 새 히트 펌프를 시연해 보였어요.",
+   "blank": "dimostrazione",
+   "src": "made"
   }
  ],
  "w|dio": [
@@ -13963,6 +14075,22 @@
    "blank": "estraneo"
   }
  ],
+ "w|estrarre": [
+  {
+   "text": "Davide ha dovuto estrarre l'amo dalla bocca del pesce con le pinze.",
+   "en": "Davide had to pull the hook out of the fish's mouth with pliers.",
+   "ko": "다비데는 펜치로 물고기 입에서 낚싯바늘을 빼내야 했어요.",
+   "blank": "estrarre",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha dovuto estrarre decine di chiodi arrugginiti dalle travi.",
+   "en": "Elena had to pull dozens of rusty nails out of the beams.",
+   "ko": "엘레나는 들보에서 녹슨 못 수십 개를 빼내야 했어요.",
+   "blank": "estrarre",
+   "src": "made"
+  }
+ ],
  "w|estremamente": [
   {
    "text": "Il film era estremamente noioso.",
@@ -14329,6 +14457,22 @@
    "en": "That restaurant is famous for pizza.",
    "ko": "그 식당은 피자로 유명해.",
    "blank": "famoso"
+  }
+ ],
+ "w|fango": [
+  {
+   "text": "Dopo il temporale la strada per la spiaggia era piena di fango, e Davide è andato a piedi nudi.",
+   "en": "After the storm the road to the beach was full of mud, and Davide went barefoot.",
+   "ko": "폭풍우가 지나고 해변 가는 길이 진흙투성이라 다비데는 맨발로 걸었어요.",
+   "blank": "fango",
+   "src": "made"
+  },
+  {
+   "text": "Gli operai hanno lasciato fango dappertutto, ed Elena ha passato la serata a pulire.",
+   "en": "The workers left mud everywhere, and Elena spent the evening cleaning.",
+   "ko": "인부들이 사방에 진흙을 남겨서 엘레나는 저녁 내내 청소했어요.",
+   "blank": "fango",
+   "src": "made"
   }
  ],
  "w|fantasia": [
@@ -15673,6 +15817,22 @@
    "blank": "forza"
   }
  ],
+ "w|fossa": [
+  {
+   "text": "I bambini hanno scavato una fossa nella sabbia, e Davide ci è caduto dentro.",
+   "en": "The children dug a pit in the sand, and Davide fell into it.",
+   "ko": "아이들이 모래에 구덩이를 팠는데 다비데가 거기에 빠졌어요.",
+   "blank": "fossa",
+   "src": "made"
+  },
+  {
+   "text": "Per il nuovo albero Elena ha scavato una fossa profonda un metro.",
+   "en": "For the new tree Elena dug a hole a metre deep.",
+   "ko": "엘레나는 새 나무를 심으려고 1미터 깊이의 구덩이를 팠어요.",
+   "blank": "fossa",
+   "src": "made"
+  }
+ ],
  "w|foto": [
   {
    "text": "Questa foto è venuta bene.",
@@ -15745,6 +15905,22 @@
    "en": "There are no secrets between us.",
    "ko": "우리 사이엔 비밀이 없어.",
    "blank": "Fra"
+  }
+ ],
+ "w|fragile": [
+  {
+   "text": "Davide maneggia con cura la conchiglia, perché è molto fragile.",
+   "en": "Davide handles the shell carefully because it's very fragile.",
+   "ko": "조개껍데기가 아주 약해서 다비데는 조심스럽게 다뤄요.",
+   "blank": "fragile",
+   "src": "made"
+  },
+  {
+   "text": "Le vecchie piastrelle sono fragili, ed Elena le stacca una per una.",
+   "en": "The old tiles are fragile, and Elena removes them one by one.",
+   "ko": "오래된 타일이 잘 깨져서 엘레나는 하나씩 떼어 내요.",
+   "blank": "fragili",
+   "src": "made"
   }
  ],
  "w|fragola": [
@@ -16989,6 +17165,22 @@
    "en": "They reached an agreement after hours of discussion.",
    "ko": "몇 시간 논의 끝에 합의에 도달했어.",
    "blank": "giunti"
+  }
+ ],
+ "w|giungla": [
+  {
+   "text": "La pineta dietro la spiaggia è così fitta che Davide la chiama la giungla.",
+   "en": "The pine forest behind the beach is so dense that Davide calls it the jungle.",
+   "ko": "해변 뒤 소나무 숲이 너무 빽빽해서 다비데는 그곳을 정글이라고 불러요.",
+   "blank": "giungla",
+   "src": "made"
+  },
+  {
+   "text": "Quando Elena ha comprato la casa, il giardino era una vera giungla.",
+   "en": "When Elena bought the house, the garden was a real jungle.",
+   "ko": "엘레나가 집을 샀을 때 정원은 그야말로 정글이었어요.",
+   "blank": "giungla",
+   "src": "made"
   }
  ],
  "w|giuramento": [
@@ -19195,6 +19387,22 @@
    "en": "It was nice, all in all.",
    "ko": "뭐, 전반적으로 좋았어.",
    "blank": "insomma"
+  }
+ ],
+ "w|instabile": [
+  {
+   "text": "Il tempo è instabile, quindi Davide ha rimandato la gita all'isola.",
+   "en": "The weather is unsettled, so Davide has postponed the trip to the island.",
+   "ko": "날씨가 변덕스러워서 다비데는 섬 여행을 미뤘어요.",
+   "blank": "instabile",
+   "src": "made"
+  },
+  {
+   "text": "La scala per la soffitta era instabile, ed Elena l'ha fatta rifare.",
+   "en": "The ladder to the attic was unsteady, and Elena had it redone.",
+   "ko": "다락방 사다리가 흔들거려서 엘레나는 새로 만들었어요.",
+   "blank": "instabile",
+   "src": "made"
   }
  ],
  "w|intanto": [
@@ -21787,6 +21995,22 @@
    "blank": "marito"
   }
  ],
+ "w|marrone": [
+  {
+   "text": "Le alghe marroni coprono gli scogli dove Davide cerca le cozze.",
+   "en": "Brown seaweed covers the rocks where Davide looks for mussels.",
+   "ko": "다비데가 홍합을 찾는 바위는 갈색 해초로 덮여 있어요.",
+   "blank": "marroni",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha dipinto le persiane di un marrone scuro.",
+   "en": "Elena painted the shutters a dark brown.",
+   "ko": "엘레나는 덧창을 짙은 갈색으로 칠했어요.",
+   "blank": "marrone",
+   "src": "made"
+  }
+ ],
  "w|martello": [
   {
    "text": "Marco ha preso in prestito un martello dal vicino per appendere un quadro.",
@@ -22415,6 +22639,22 @@
    "en": "We're halfway along the route.",
    "ko": "길의 중간에 있어.",
    "blank": "metà"
+  }
+ ],
+ "w|metallo": [
+  {
+   "text": "Con il metal detector Davide ha trovato solo tappi di metallo e una vecchia moneta.",
+   "en": "With the metal detector Davide found only metal bottle caps and an old coin.",
+   "ko": "다비데는 금속 탐지기로 병뚜껑과 오래된 동전 하나만 찾았어요.",
+   "blank": "metallo",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha sostituito le vecchie maniglie di metallo con quelle di legno.",
+   "en": "Elena replaced the old metal handles with wooden ones.",
+   "ko": "엘레나는 낡은 금속 손잡이를 나무 손잡이로 바꿨어요.",
+   "blank": "metallo",
+   "src": "made"
   }
  ],
  "w|metodo": [
@@ -23975,6 +24215,22 @@
    "blank": "neve"
   }
  ],
+ "w|nido": [
+  {
+   "text": "Sotto il tetto della casa di Davide le rondini hanno fatto il nido.",
+   "en": "Under the roof of Davide's house the swallows have built their nest.",
+   "ko": "다비데네 집 처마 밑에 제비들이 둥지를 틀었어요.",
+   "blank": "nido",
+   "src": "made"
+  },
+  {
+   "text": "Nel camino Elena ha trovato un nido di uccelli abbandonato.",
+   "en": "In the chimney Elena found an abandoned bird's nest.",
+   "ko": "엘레나는 굴뚝에서 버려진 새 둥지를 발견했어요.",
+   "blank": "nido",
+   "src": "made"
+  }
+ ],
  "w|niente": [
   {
    "text": "Di niente, figurati.",
@@ -25429,6 +25685,22 @@
    "blank": "osato"
   }
  ],
+ "w|oscurità": [
+  {
+   "text": "Nell'oscurità della notte Davide vede le luci dei pescherecci all'orizzonte.",
+   "en": "In the darkness of the night Davide sees the lights of the fishing boats on the horizon.",
+   "ko": "밤의 어둠 속에서 다비데는 수평선 위 고깃배 불빛을 봐요.",
+   "blank": "oscurità",
+   "src": "made"
+  },
+  {
+   "text": "Senza corrente, Elena ha lavorato nell'oscurità con una torcia.",
+   "en": "Without electricity, Elena worked in the dark with a torch.",
+   "ko": "전기가 없어서 엘레나는 손전등을 들고 어둠 속에서 일했어요.",
+   "blank": "oscurità",
+   "src": "made"
+  }
+ ],
  "w|oscuro": [
   {
    "text": "Il corridoio era buio e oscuro.",
@@ -26647,6 +26919,22 @@
    "blank": "peccato"
   }
  ],
+ "w|pecora": [
+  {
+   "text": "Sulla collina dietro la spiaggia di Davide pascola una pecora con il suo agnello.",
+   "en": "On the hill behind Davide's beach a sheep grazes with her lamb.",
+   "ko": "다비데네 해변 뒤 언덕에서 양 한 마리가 새끼와 함께 풀을 뜯어요.",
+   "blank": "pecora",
+   "src": "made"
+  },
+  {
+   "text": "La vicina di Elena ha una pecora che entra sempre nel suo orto.",
+   "en": "Elena's neighbour has a sheep that always gets into her vegetable garden.",
+   "ko": "엘레나의 이웃에게는 늘 엘레나네 텃밭에 들어오는 양이 한 마리 있어요.",
+   "blank": "pecora",
+   "src": "made"
+  }
+ ],
  "w|peggio": [
   {
    "text": "La situazione sta andando peggio.",
@@ -27255,6 +27543,22 @@
    "blank": "pessimo"
   }
  ],
+ "w|petrolio": [
+  {
+   "text": "Anni fa una nave ha perso petrolio al largo, e Davide ha aiutato a pulire la spiaggia.",
+   "en": "Years ago a ship leaked oil offshore, and Davide helped clean the beach.",
+   "ko": "몇 년 전 배에서 기름이 유출됐을 때 다비데는 해변 청소를 도왔어요.",
+   "blank": "petrolio",
+   "src": "made"
+  },
+  {
+   "text": "La vecchia caldaia a petrolio consumava troppo, ed Elena l'ha cambiata.",
+   "en": "The old oil boiler used too much, and Elena replaced it.",
+   "ko": "낡은 기름 보일러가 너무 많이 먹어서 엘레나가 바꿨어요.",
+   "blank": "petrolio",
+   "src": "made"
+  }
+ ],
  "w|pettinare": [
   {
    "text": "Devo pettinare i capelli prima di uscire.",
@@ -27609,6 +27913,22 @@
    "en": "Bring the umbrella for the rain.",
    "ko": "비 때문에 우산을 챙겨.",
    "blank": "pioggia"
+  }
+ ],
+ "w|piovere": [
+  {
+   "text": "Ha cominciato a piovere proprio quando Davide aveva steso l'asciugamano sulla sabbia.",
+   "en": "It started raining just as Davide had spread his towel on the sand.",
+   "ko": "다비데가 모래 위에 수건을 깔자마자 비가 오기 시작했어요.",
+   "blank": "piovere",
+   "src": "made"
+  },
+  {
+   "text": "Quando piove, dal soffitto della cucina di Elena cade qualche goccia.",
+   "en": "When it rains, a few drops fall from Elena's kitchen ceiling.",
+   "ko": "비가 오면 엘레나네 부엌 천장에서 물이 몇 방울 떨어져요.",
+   "blank": "piove",
+   "src": "made"
   }
  ],
  "w|pirata": [
@@ -28311,6 +28631,22 @@
    "blank": "povera"
   }
  ],
+ "w|pozzo": [
+  {
+   "text": "Dietro la casa di Davide c'è un vecchio pozzo che non si usa più.",
+   "en": "Behind Davide's house there's an old well that's no longer used.",
+   "ko": "다비데네 집 뒤에는 더 이상 쓰지 않는 오래된 우물이 있어요.",
+   "blank": "pozzo",
+   "src": "made"
+  },
+  {
+   "text": "Elena vuole ripulire il pozzo in cortile e usarne l'acqua per l'orto.",
+   "en": "Elena wants to clean out the well in the courtyard and use its water for the vegetable garden.",
+   "ko": "엘레나는 마당 우물을 청소해서 그 물을 텃밭에 쓰고 싶어 해요.",
+   "blank": "pozzo",
+   "src": "made"
+  }
+ ],
  "w|pranzo": [
   {
    "text": "Il pranzo è pronto sul tavolo.",
@@ -28367,6 +28703,22 @@
    "blank": "precedente"
   }
  ],
+ "w|precisamente": [
+  {
+   "text": "Davide sa precisamente a che ora arriva l'alta marea.",
+   "en": "Davide knows precisely what time high tide comes in.",
+   "ko": "다비데는 밀물이 몇 시에 들어오는지 정확히 알아요.",
+   "blank": "precisamente",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha misurato precisamente ogni stanza prima di comprare il parquet.",
+   "en": "Elena measured each room precisely before buying the parquet.",
+   "ko": "엘레나는 마루를 사기 전에 방마다 정확하게 쟀어요.",
+   "blank": "precisamente",
+   "src": "made"
+  }
+ ],
  "w|precisione": [
   {
    "text": "Matteo ha suturato la ferita con grande precisione.",
@@ -28395,6 +28747,22 @@
    "en": "His calculation is always very precise.",
    "ko": "그의 계산은 항상 매우 정확해.",
    "blank": "preciso"
+  }
+ ],
+ "w|preda": [
+  {
+   "text": "Dalla barca Davide osserva un gabbiano che si tuffa sulla sua preda.",
+   "en": "From the boat Davide watches a gull diving onto its prey.",
+   "ko": "다비데는 배에서 갈매기가 먹이를 향해 내리꽂는 걸 지켜봐요.",
+   "blank": "preda",
+   "src": "made"
+  },
+  {
+   "text": "Il gatto di Elena porta in casa ogni piccola preda che cattura in giardino.",
+   "en": "Elena's cat brings into the house every bit of prey it catches in the garden.",
+   "ko": "엘레나의 고양이는 정원에서 잡은 작은 사냥감을 하나하나 집 안으로 물어 와요.",
+   "blank": "preda",
+   "src": "made"
   }
  ],
  "w|preferire": [
@@ -30511,6 +30879,22 @@
    "blank": "raggiunto"
   }
  ],
+ "w|ragionare": [
+  {
+   "text": "Prima di uscire con il mare mosso, Davide si ferma a ragionare sul rischio.",
+   "en": "Before going out in rough seas, Davide stops to think through the risk.",
+   "ko": "파도가 거칠 때 나가기 전에 다비데는 잠깐 멈춰서 위험을 따져 봐요.",
+   "blank": "ragionare",
+   "src": "made"
+  },
+  {
+   "text": "Elena e il muratore si sono seduti a ragionare su dove mettere il bagno.",
+   "en": "Elena and the bricklayer sat down to work out where to put the bathroom.",
+   "ko": "엘레나와 미장공은 앉아서 욕실을 어디에 둘지 궁리했어요.",
+   "blank": "ragionare",
+   "src": "made"
+  }
+ ],
  "w|ragione": [
   {
    "text": "Hai ragione tu.",
@@ -30727,6 +31111,22 @@
    "en": "That stamp is very rare and valuable.",
    "ko": "그 우표는 매우 희귀하고 비싸.",
    "blank": "raro"
+  }
+ ],
+ "w|ratto": [
+  {
+   "text": "Al porto Davide ha visto un ratto correre tra le reti dei pescatori.",
+   "en": "At the harbour Davide saw a rat running among the fishermen's nets.",
+   "ko": "다비데는 항구에서 어부들의 그물 사이로 쥐가 뛰어가는 걸 봤어요.",
+   "blank": "ratto",
+   "src": "made"
+  },
+  {
+   "text": "In cantina Elena ha sentito un rumore e ha temuto che fosse un ratto.",
+   "en": "In the cellar Elena heard a noise and feared it was a rat.",
+   "ko": "엘레나는 지하실에서 소리를 듣고 쥐일까 봐 겁이 났어요.",
+   "blank": "ratto",
+   "src": "made"
   }
  ],
  "w|razza": [
@@ -33205,6 +33605,22 @@
    "blank": "sapore"
   }
  ],
+ "w|satellite": [
+  {
+   "text": "Sdraiato sulla spiaggia, Davide ha visto passare un satellite tra le stelle.",
+   "en": "Lying on the beach, Davide saw a satellite pass among the stars.",
+   "ko": "해변에 누워 있던 다비데는 별들 사이로 인공위성이 지나가는 걸 봤어요.",
+   "blank": "satellite",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha montato una parabola per ricevere la TV via satellite.",
+   "en": "Elena installed a dish to get satellite TV.",
+   "ko": "엘레나는 위성 TV를 보려고 접시 안테나를 달았어요.",
+   "blank": "satellite",
+   "src": "made"
+  }
+ ],
  "w|sbagliare": [
   {
    "text": "Ho sbagliato numero, scusa.",
@@ -34655,6 +35071,22 @@
    "src": "made"
   }
  ],
+ "w|sentiero": [
+  {
+   "text": "Davide prende il sentiero lungo la scogliera per arrivare alla caletta.",
+   "en": "Davide takes the path along the cliff to reach the little cove.",
+   "ko": "다비데는 작은 만에 가려고 절벽을 따라 난 오솔길로 가요.",
+   "blank": "sentiero",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha disegnato un sentiero di pietre dal cancello alla porta.",
+   "en": "Elena laid out a stone path from the gate to the door.",
+   "ko": "엘레나는 대문에서 현관까지 돌길을 냈어요.",
+   "blank": "sentiero",
+   "src": "made"
+  }
+ ],
  "w|sentimento": [
   {
    "text": "Non riesco a nascondere questo sentimento.",
@@ -35113,6 +35545,22 @@
    "blank": "sforzo"
   }
  ],
+ "w|sfruttare": [
+  {
+   "text": "Davide vuole sfruttare il vento di oggi per uscire in barca a vela.",
+   "en": "Davide wants to make the most of today's wind to go out sailing.",
+   "ko": "다비데는 오늘 부는 바람을 이용해 요트를 타러 나가고 싶어 해요.",
+   "blank": "sfruttare",
+   "src": "made"
+  },
+  {
+   "text": "Elena vuole sfruttare il sottotetto per farne uno studio.",
+   "en": "Elena wants to make use of the loft space to turn it into a study.",
+   "ko": "엘레나는 다락 공간을 서재로 활용하고 싶어 해요.",
+   "blank": "sfruttare",
+   "src": "made"
+  }
+ ],
  "w|sfuggire": [
   {
    "text": "Il cane è riuscito a sfuggire al guinzaglio.",
@@ -35321,6 +35769,22 @@
    "en": "The silence of the night calms me.",
    "ko": "밤의 고요함이 나를 진정시켜.",
    "blank": "silenzio"
+  }
+ ],
+ "w|silenzioso": [
+  {
+   "text": "All'alba la spiaggia è silenziosa, ed è il momento preferito di Davide.",
+   "en": "At dawn the beach is silent, and it's Davide's favourite time.",
+   "ko": "새벽 해변은 고요해서 다비데가 가장 좋아하는 시간이에요.",
+   "blank": "silenziosa",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo frigorifero è silenzioso, ed Elena finalmente dorme bene.",
+   "en": "The new fridge is quiet, and Elena finally sleeps well.",
+   "ko": "새 냉장고가 조용해서 엘레나는 드디어 푹 자요.",
+   "blank": "silenzioso",
+   "src": "made"
   }
  ],
  "w|simbolo": [
@@ -35759,6 +36223,22 @@
    "en": "It's only a matter of time.",
    "ko": "그저 시간문제일 뿐이야.",
    "blank": "solamente"
+  }
+ ],
+ "w|solare": [
+  {
+   "text": "Davide si mette sempre la crema solare prima di uscire in barca.",
+   "en": "Davide always puts on sunscreen before going out in the boat.",
+   "ko": "다비데는 배 타러 나가기 전에 늘 선크림을 발라요.",
+   "blank": "solare",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha deciso di mettere i pannelli solari sul tetto della casa.",
+   "en": "Elena has decided to put solar panels on the roof of the house.",
+   "ko": "엘레나는 집 지붕에 태양광 패널을 달기로 했어요.",
+   "blank": "solari",
+   "src": "made"
   }
  ],
  "w|soldato": [
@@ -36795,6 +37275,22 @@
    "en": "I'm asking for a clear explanation of the problem.",
    "ko": "문제에 대한 명확한 설명을 요청해.",
    "blank": "spiegazione"
+  }
+ ],
+ "w|spina": [
+  {
+   "text": "Davide si è punto il piede con una spina di riccio di mare.",
+   "en": "Davide pricked his foot on a sea urchin spine.",
+   "ko": "다비데는 성게 가시에 발을 찔렸어요.",
+   "blank": "spina",
+   "src": "made"
+  },
+  {
+   "text": "Nel giardino abbandonato Elena si è graffiata con la spina di una rosa selvatica.",
+   "en": "In the overgrown garden Elena scratched herself on the thorn of a wild rose.",
+   "ko": "버려진 정원에서 엘레나는 들장미 가시에 긁혔어요.",
+   "blank": "spina",
+   "src": "made"
   }
  ],
  "w|spingere": [
@@ -37867,6 +38363,22 @@
    "blank": "suocera"
   }
  ],
+ "w|suolo": [
+  {
+   "text": "Sul suolo sabbioso vicino al mare crescono solo piante basse, spiega Davide al nipote.",
+   "en": "On the sandy soil near the sea only low plants grow, Davide explains to his nephew.",
+   "ko": "바닷가 모래땅에는 키 작은 식물만 자란다고 다비데가 조카에게 설명해요.",
+   "blank": "suolo",
+   "src": "made"
+  },
+  {
+   "text": "Il geometra ha detto a Elena che il suolo sotto la casa è solido.",
+   "en": "The surveyor told Elena that the ground under the house is solid.",
+   "ko": "측량 기사는 집 아래 땅이 단단하다고 엘레나에게 말했어요.",
+   "blank": "suolo",
+   "src": "made"
+  }
+ ],
  "w|suonare": [
   {
    "text": "Sai suonare la chitarra?",
@@ -38165,6 +38677,22 @@
    "blank": "talmente"
   }
  ],
+ "w|talpa": [
+  {
+   "text": "Nel giardino della casa al mare Davide ha trovato i buchi di una talpa.",
+   "en": "In the garden of the seaside house Davide found a mole's holes.",
+   "ko": "다비데는 바닷가 집 정원에서 두더지 구멍을 발견했어요.",
+   "blank": "talpa",
+   "src": "made"
+  },
+  {
+   "text": "Una talpa ha scavato gallerie sotto il prato appena seminato da Elena.",
+   "en": "A mole dug tunnels under the lawn Elena had just sown.",
+   "ko": "두더지가 엘레나가 막 씨를 뿌린 잔디밭 아래로 굴을 팠어요.",
+   "blank": "talpa",
+   "src": "made"
+  }
+ ],
  "w|tantissimo": [
   {
    "text": "Ti voglio tantissimo bene.",
@@ -38261,6 +38789,22 @@
    "en": "I have to pay the tax by Friday.",
    "ko": "금요일까지 세금을 내야 해.",
    "blank": "tassa"
+  }
+ ],
+ "w|tasso": [
+  {
+   "text": "Nelle dune vicino alla casa di Davide vive un tasso che esce solo di notte.",
+   "en": "In the dunes near Davide's house lives a badger that only comes out at night.",
+   "ko": "다비데네 집 근처 모래 언덕에는 밤에만 나오는 오소리가 살아요.",
+   "blank": "tasso",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha chiesto un mutuo, e il tasso d'interesse era più basso del previsto.",
+   "en": "Elena took out a mortgage, and the interest rate was lower than expected.",
+   "ko": "엘레나는 대출을 받았는데 금리가 예상보다 낮았어요.",
+   "blank": "tasso",
+   "src": "made"
   }
  ],
  "w|tata": [
@@ -38769,6 +39313,22 @@
    "blank": "terapia"
   }
  ],
+ "w|terminare": [
+  {
+   "text": "La stagione dei bagni termina a settembre, ma Davide nuota fino a ottobre.",
+   "en": "The swimming season ends in September, but Davide swims until October.",
+   "ko": "해수욕 철은 9월에 끝나지만 다비데는 10월까지 수영해요.",
+   "blank": "termina",
+   "src": "made"
+  },
+  {
+   "text": "Elena spera di terminare i lavori prima di Natale.",
+   "en": "Elena hopes to finish the work before Christmas.",
+   "ko": "엘레나는 크리스마스 전에 공사를 끝내고 싶어 해요.",
+   "blank": "terminare",
+   "src": "made"
+  }
+ ],
  "w|termine": [
   {
    "text": "Il termine scade domani mattina.",
@@ -39041,6 +39601,22 @@
    "blank": "Ti"
   }
  ],
+ "w|tigre": [
+  {
+   "text": "Il figlio di Davide ha costruito una tigre di sabbia con le strisce di alghe.",
+   "en": "Davide's son built a sand tiger with seaweed stripes.",
+   "ko": "다비데의 아들은 해초로 줄무늬를 넣은 모래 호랑이를 만들었어요.",
+   "blank": "tigre",
+   "src": "made"
+  },
+  {
+   "text": "In soffitta Elena ha trovato un vecchio tappeto con una tigre disegnata sopra.",
+   "en": "In the attic Elena found an old rug with a tiger on it.",
+   "ko": "엘레나는 다락방에서 호랑이 그림이 있는 낡은 양탄자를 찾았어요.",
+   "blank": "tigre",
+   "src": "made"
+  }
+ ],
  "w|timido": [
   {
    "text": "Da bambino era molto timido.",
@@ -39266,6 +39842,22 @@
    "en": "The greengrocer's son won a chess tournament, and Sara gave him an apple.",
    "ko": "과일 장수 아들이 체스 대회에서 우승해서 사라가 사과를 하나 선물했어요.",
    "blank": "torneo",
+   "src": "made"
+  }
+ ],
+ "w|toro": [
+  {
+   "text": "Alla festa del paese Davide ha visto un toro decorato con i fiori.",
+   "en": "At the village festival Davide saw a bull decorated with flowers.",
+   "ko": "마을 축제에서 다비데는 꽃으로 장식된 황소를 봤어요.",
+   "blank": "toro",
+   "src": "made"
+  },
+  {
+   "text": "Il contadino vicino ha prestato a Elena il trattore, ma l'ha avvertita di non avvicinarsi al toro.",
+   "en": "The farmer next door lent Elena his tractor, but warned her not to go near the bull.",
+   "ko": "이웃 농부는 엘레나에게 트랙터를 빌려주면서 황소 근처에는 가지 말라고 했어요.",
+   "blank": "toro",
    "src": "made"
   }
  ],
@@ -39581,6 +40173,22 @@
    "en": "They solved the problem through an agreement.",
    "ko": "합의를 통해 문제를 풀었어.",
    "blank": "tramite"
+  }
+ ],
+ "w|tramontare": [
+  {
+   "text": "Davide si siede sugli scogli a guardare il sole che tramonta dietro l'isola.",
+   "en": "Davide sits on the rocks to watch the sun setting behind the island.",
+   "ko": "다비데는 바위에 앉아 섬 뒤로 지는 해를 바라봐요.",
+   "blank": "tramonta",
+   "src": "made"
+  },
+  {
+   "text": "Elena lavora sul tetto finché il sole non tramonta.",
+   "en": "Elena works on the roof until the sun goes down.",
+   "ko": "엘레나는 해가 질 때까지 지붕에서 일해요.",
+   "blank": "tramonta",
+   "src": "made"
   }
  ],
  "w|tranne": [
@@ -41239,6 +41847,22 @@
    "blank": "Vero"
   }
  ],
+ "w|versare": [
+  {
+   "text": "Davide versa un po' d'acqua dolce sui piedi per togliere la sabbia.",
+   "en": "Davide pours a little fresh water over his feet to get the sand off.",
+   "ko": "다비데는 모래를 털어 내려고 발에 민물을 조금 부어요.",
+   "blank": "versa",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha versato il cemento nelle crepe del vecchio muro.",
+   "en": "Elena poured cement into the cracks in the old wall.",
+   "ko": "엘레나는 낡은 벽 틈에 시멘트를 부었어요.",
+   "blank": "versato",
+   "src": "made"
+  }
+ ],
  "w|versione": [
   {
    "text": "Preferisco la versione originale del film.",
@@ -42149,6 +42773,22 @@
    "en": "Let's avoid that area at night.",
    "ko": "밤에는 그 지역을 피하자.",
    "blank": "zona"
+  }
+ ],
+ "w|zoo": [
+  {
+   "text": "Nella città di mare di Davide c'è un piccolo zoo marino con le foche.",
+   "en": "In Davide's seaside town there's a small marine zoo with seals.",
+   "ko": "다비데가 사는 바닷가 마을에는 물개가 있는 작은 해양 동물원이 있어요.",
+   "blank": "zoo",
+   "src": "made"
+  },
+  {
+   "text": "Con tutti quegli animali in giardino, la casa di Elena sembra uno zoo.",
+   "en": "With all those animals in the garden, Elena's house looks like a zoo.",
+   "ko": "정원에 동물이 그렇게 많으니 엘레나네 집은 꼭 동물원 같아요.",
+   "blank": "zoo",
+   "src": "made"
   }
  ],
  "w|zucchero": [
