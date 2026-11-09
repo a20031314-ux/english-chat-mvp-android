@@ -20,8 +20,6 @@ import {
   withTopicMissions,
   type Mission,
 } from "./missions.ts";
-import { recommendedNext, recommendedOrder } from "./recommend.ts";
-import type { StudyMap } from "./map.ts";
 
 const DAY = 24 * 60 * 60 * 1000;
 
@@ -131,44 +129,6 @@ test("the one added for a mistake is practised first and counted until mastered"
   assert.ok(MAX_OPEN_WEAK > 1);
 });
 
-function mapOf(ids: string[]): StudyMap {
-  return {
-    v: 1,
-    id: "map1",
-    language: "ja",
-    uiLanguage: "ko",
-    goal: "g",
-    title: "t",
-    summary: "",
-    level: "beginner",
-    sectors: [],
-    topics: ids.map((id, index) => ({ id, sector: id[0] as "A", title: id, summary: "", order: index + 1, activities: [], links: [] })),
-    createdAt: "",
-  };
-}
-
-test("recommended order: mistakes first, then what was started, then the drawn order, finished last", () => {
-  const map = mapOf(["A1", "A2", "B1", "B2", "C1"]);
-  const order = recommendedOrder(
-    map,
-    { A1: "done", A2: "doing" },
-    {
-      A1: { mastered: 3, learned: 0, toLearn: 0 },
-      A2: { mastered: 1, learned: 1, toLearn: 1 },
-      B2: { mastered: 0, learned: 0, toLearn: 1, weak: 1 },
-    },
-  );
-  assert.deepEqual(order.map((r) => r.topic.id), ["B2", "A2", "B1", "C1", "A1"]);
-  assert.deepEqual(order.map((r) => r.reason), ["weak", "continue", "next", "next", "done"]);
-  assert.equal(order[0]!.place, 1);
-  assert.equal(recommendedNext(order)?.topic.id, "B2");
-  // A finished topic that got a mistake added comes back to the front.
-  const back = recommendedOrder(map, { A1: "done" }, { A1: { mastered: 3, learned: 0, toLearn: 1, weak: 1 } });
-  assert.equal(back[0]!.topic.id, "A1");
-  // With nothing recorded, the drawn order stands.
-  assert.deepEqual(recommendedOrder(map, {}, {}).map((r) => r.topic.id), ["A1", "A2", "B1", "B2", "C1"]);
-  assert.equal(recommendedNext(recommendedOrder(map, Object.fromEntries(map.topics.map((t) => [t.id, "done" as const])), {})), null);
-});
 
 test("the mark's label is in the app's language, not the English name handed over", async () => {
   const { focusFits, weakLabel } = await import("./weakPoints.ts");
@@ -191,21 +151,4 @@ test("the mark's label is in the app's language, not the English name handed ove
   );
   assert.equal(dropped?.focusFits, false);
   assert.equal(dropped?.mission.focus, undefined);
-});
-
-test("a pick goes first, counts as a pick and not as a weak spot, and puts its topic first", async () => {
-  const { pickMissionPrompt } = await import("./weakPoints.ts");
-  const pick = { task: "tp", answer: "ap", hints: ["h", "s…"] as [string, string], weak: "pick:wait it out", focus: "기다리기", picked: true };
-  const base = addWeakMission({ missions: [own("m1"), own("m2")], results: {} }, weak).topic;
-  const { topic } = addWeakMission(base, pick);
-  assert.deepEqual(practiceOrder(topic).map((m) => m.id), ["w2", "w1", "m1", "m2"]);
-  assert.equal(topicCounts(topic).picked, 1);
-  assert.equal(topicCounts(topic).weak, 1, "the pick is not counted as a mistake");
-  assert.equal(openWeakCount({ A: topic }), 1);
-  assert.equal(hasTopicMissions({ missions: [{ ...pick, id: "w1" }], results: {} }), false);
-  const map = mapOf(["A1", "B1", "C1"]);
-  const order = recommendedOrder(map, {}, { B1: { mastered: 0, learned: 0, toLearn: 1, weak: 1 }, C1: { mastered: 0, learned: 0, toLearn: 1, picked: 1 } });
-  assert.deepEqual(order.map((r) => r.topic.id), ["C1", "B1", "A1"]);
-  assert.equal(order[0]!.reason, "picked");
-  assert.match(pickMissionPrompt({ target: "Thai", uiName: "Korean", level: "beginner" }), /picked something/);
 });

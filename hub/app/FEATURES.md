@@ -116,11 +116,10 @@
 | 오늘의 팩 서버 | 옛 앱 2.48~2.75 오늘의 팩 | `app/api/pack/today/route.ts` · `app/api/pack/finish/route.ts` | 최소 지원 버전 2.76 이상 |
 | 목표 지도 서버 | 옛 앱 2.48~2.74 목표 지도·미션·노트 목차 | `app/api/curriculum/progress/route.ts` · `app/api/curriculum/missions/route.ts` · `app/api/notes/place/route.ts` | 최소 지원 버전 2.75 이상 |
 
-## 지울 것 (3) — 화면은 없어졌는데 코드가 남음
+## 지울 것 (2) — 화면은 없어졌는데 코드가 남음
 
 | 무엇 | 왜 남았나 | 남은 코드 |
 |---|---|---|
-| 정기 시험 재료·시험 | 시험 화면은 2026-11-09에 없어짐 — 남은 계산(curriculum/exam.ts)은 테스트만 씀 | `lib/curriculum/exam.ts` |
 | 오늘 할 것 계산 | Stagebank 오늘 할 것 목록 — 화면은 없어졌고 서버 다시 볼 것(review)·익힘 셈이 아직 이 파일을 씀 — 서버(scripts check)가 쓰는 reviewKeysOf 등만 남기고 나머지를 지운다 | `lib/curriculum/dailyPlan.ts` |
 | 아침 알림 | Stagebank ⚙에서 켜던 것 — 개편에 켜고 끌 곳이 없어 My를 열면 걸린 알림을 지움 — 되살리려면 사용자 결정 — 아니면 플러그인·코드 지움 | `lib/morningNotify.ts` · `lib/curriculum/morningDigest.ts` |
 

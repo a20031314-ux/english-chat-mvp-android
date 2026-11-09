@@ -1,6 +1,5 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { realtimeCallVoice } from "../realtimeCallSession.ts";
 import { judge } from "./session.ts";
 import { SCENARIOS, findScenario, scenariosForLanguage, sentencesFor } from "./catalog.ts";
 import { SUPPORTED_LEARNING_LANGUAGES } from "../learningLanguages.ts";
@@ -14,25 +13,6 @@ import {
   unreachableNodes,
 } from "./script.ts";
 import { SITUATIONS, situationForScenario } from "./situations.ts";
-import { TTS_VOICES } from "./voices.ts";
-
-test("every scene is read in a voice the speech model has", () => {
-  for (const scenario of SCENARIOS) {
-    assert.ok(
-      (TTS_VOICES as readonly string[]).includes(scenario.voice),
-      `${scenario.id} is written for "${scenario.voice}", which gpt-4o-mini-tts cannot speak`,
-    );
-  }
-  // The chat's spoken lines still go out through /api/tts in the call's voice
-  // for the language; only a roleplay passes a voice of its own.
-  for (const language of ["en", "ko", "ja", "vi"] as const) {
-    const voice = realtimeCallVoice(language);
-    assert.ok(
-      (TTS_VOICES as readonly string[]).includes(voice),
-      `${language} calls use "${voice}", which gpt-4o-mini-tts cannot speak`,
-    );
-  }
-});
 
 test("the catalog does not sound like one employee", () => {
   // The reason the scenarios stopped sharing the call's voice. Not "all

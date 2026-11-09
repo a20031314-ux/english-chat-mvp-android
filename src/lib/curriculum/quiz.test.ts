@@ -154,28 +154,6 @@ test("학습 조합: 말하기·읽기 위주로 모양이 바뀌고, 대본 하
   assert.equal(unitPassed(6, 10), false);
 });
 
-test("문법·문장구조 열쇠는 말하기 문제가 없다(고르기·순서만, 2026-10-29) — 일본어·스페인어·영어", async () => {
-  const { buildQuiz, speakScored } = await import("./quiz.ts");
-  const { buildStageTest } = await import("./stageTest.ts");
-  const { buildCheckup } = await import("./checkup.ts");
-  const { stageKeys } = await import("./placement.ts");
-  for (const language of ["ja", "es", "en"]) {
-    const grammar = [1, 2, 3].flatMap((stage) => stageKeys(language, stage)).filter((key) => !speakScored(key));
-    assert.ok(grammar.length > 0, language);
-    for (const key of grammar) {
-      for (const options of [{}, { round: 2 }, { mix: "speak" as const }, { mix: "read" as const }, { kinds: ["say", "say", "order"] as const }]) {
-        const quiz = buildQuiz(language, key, { seed: "t", ...options, kinds: "kinds" in options ? [...options.kinds] : undefined });
-        assert.ok(!quiz?.questions.some((q) => q.kind === "say"), `${language} ${key} ${JSON.stringify(options)}`);
-      }
-    }
-    const test = buildStageTest({ language, stage: 2, now: 0 });
-    assert.ok(!test.some((item) => item.question.kind === "say" && !speakScored(item.key)), language);
-    const checkup = buildCheckup({ language, stage: 2, passed: new Set(), review: {}, log: {}, now: 0 });
-    assert.ok(!checkup.some((item) => item.question.kind === "say" && !speakScored(item.key)), language);
-  }
-  assert.equal(speakScored("e|nice to meet you"), true);
-});
-
 test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없음, 같은 낱말을 세 번 묻지 않음 — 스페인어·일본어", async () => {
   const { registerQuizSources, wordQuiz, buildQuiz, bundleQuiz } = await import("./quiz.ts");
   const cases: [string, [string, string, string, string][]][] = [

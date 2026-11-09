@@ -564,11 +564,6 @@ export function listenFill(calls: readonly CallTurns[], prior: number, range0: n
 
 /* ───────── 계속 재기 ───────── */
 
-/** 답이 모자란 칸(아직 모름) — Quizbank·정기 시험이 다섯에 하나 섞어 낼 칸. */
-export function unmeasuredCells(result: FillResult, axes: readonly BankAxis[] = BANK_AXES): FillCell[] {
-  return axes.flatMap((axis) => result.axes[axis].cells.filter((cell) => cell.state === "unknown" && !cell.id.startsWith("stage:") && !cell.id.startsWith("miss:")));
-}
-
 /** 그 칸에 드는 열쇠(세부 칸 → 문제 고르기). */
 export function keysInCell(catalog: FillCatalog, axis: BankAxis, cellId: string): string[] {
   const items = axis.startsWith("vocab") ? catalog.vocab : catalog.sent;

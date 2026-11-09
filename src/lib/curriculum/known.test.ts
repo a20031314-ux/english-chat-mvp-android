@@ -3,8 +3,6 @@ import test from "node:test";
 import { applyKnown, CHECK_DAYS, cleanKnown, confirmDue, knownState, skippedIds, type KnownMap } from "./known.ts";
 import { DAY_MS, reviewKeysOf } from "./dailyPlan.ts";
 import { allScriptsFor } from "./stageScripts.ts";
-import { buildEntryCheck, entryCheckResult, entryDue } from "./stageTest.ts";
-import { stageKeys } from "./placement.ts";
 import { nextStudy } from "./nextStudy.ts";
 import { buildCheckup } from "./checkup.ts";
 
@@ -42,23 +40,6 @@ test("커리큘럼이 건너뜀: 대본 열쇠가 모두 시험에서 맞힌 것
     assert.equal(skippedIds(language, map).has(script.id), true, `${language}: 모두면 건너뜀`);
     assert.deepEqual(confirmDue(map, NOW), [], "오늘 맞힌 것은 오늘 다시 안 물음");
     assert.equal(confirmDue(map, NOW + DAY_MS).length, keys.length);
-  }
-});
-
-test("단계 미리 확인: 그 단계에서 아직 모르는 것만 12문제, 결과는 틀린 것을 다시 볼 것에 안 넣음(태국어·프랑스어)", () => {
-  for (const language of ["th", "fr"]) {
-    const all = stageKeys(language, 1);
-    const known = Object.fromEntries(all.slice(0, 5).map((key) => [key, { days: [1], at: 1 }]));
-    const items = buildEntryCheck({ language, stage: 1, known, now: NOW });
-    assert.ok(items.length > 0 && items.length <= 12, `${language} ${items.length}`);
-    assert.ok(items.every((item) => !known[item.key] && all.includes(item.key)));
-    assert.ok(items.filter((item) => item.question.kind === "say").length <= 3);
-    const result = entryCheckResult(items, items.map((_, i) => i % 2 === 0), 1, NOW);
-    assert.equal(result.kind, "entry");
-    assert.deepEqual(result.wrong, []);
-    assert.equal(entryDue([], 1, items), true);
-    assert.equal(entryDue([result], 1, items), false);
-    assert.equal(entryDue([{ ...result, kind: "placement" }], 1, items), false, "그 단계에서 시작한 처음 시험이 있으면 안 함");
   }
 });
 

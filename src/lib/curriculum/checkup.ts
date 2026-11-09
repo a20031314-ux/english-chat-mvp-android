@@ -49,11 +49,6 @@ export type CheckResult = {
   asked?: AskedItem[];
 };
 
-/** 큰 시험(처음 시험·단계 시험) — 실력 기록의 중심(2026-10-29 사용자 "시험을 중심으로 모으는 걸로"). */
-export function isBigTest(result: CheckResult): boolean {
-  return result.kind === "placement" || result.kind === "stage";
-}
-
 export type StageKey = "1" | "2" | "3" | "4" | "5";
 export const STAGE_KEYS: readonly StageKey[] = ["1", "2", "3", "4", "5"];
 /** 한 시험에서 한 칸(갈래·단계)에 낼 수 있는 최대 문제 수(서버가 숫자를 거를 때). */
@@ -278,11 +273,6 @@ export function cleanResult(raw: unknown, language: string, now = Date.now()): C
     return { at: now, stage, parts, origins, wrong, kind: "stage", stages: pick(value.stages, STAGE_KEYS), passed: value.passed === true };
   }
   return { at: now, stage, parts, origins, wrong };
-}
-
-/** 갈래 하나의 맞힌 몫(0~1), 낸 게 없으면 null. */
-export function rateOf(tally: Tally | undefined): number | null {
-  return tally && tally[1] > 0 ? tally[0] / tally[1] : null;
 }
 
 /**

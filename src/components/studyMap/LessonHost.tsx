@@ -18,7 +18,7 @@ import { glossFor } from "@/lib/curriculum/stageScripts";
 /**
  * Stagebank 소재 수업을 앱 어디서나 띄우는 층(2026-11-01 설계 "모를 때 이동해서 확인", hub/work/drafts/quiz-pages-2026-11-01.md 3절).
  * `openLesson` 신호(통화 정리·대본 틀린 줄·Logbank 칩·Quizbank 틀린 문제)를 받아 문장구조면 그 틀 수업, 표현·문법 칸이면 그 소재 수업을 연다.
- * 이렇게 들어와 연 소재는 정기 시험 재료로 모인다(curriculum/exam.ts "opened"). 화면은 FrameLesson 하나 — 설명은 Stagebank 한 곳.
+ * 화면은 FrameLesson 하나 — 설명은 한 곳.
  */
 export function LessonHost({ ui, locale }: { ui: UICopy; locale: string }) {
   const [open, setOpen] = useState<AppIntents["openLesson"] | null>(() => takeAppIntent("openLesson"));

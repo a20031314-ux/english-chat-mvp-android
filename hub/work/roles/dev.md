@@ -28,8 +28,9 @@
 
 - **2.80 자르기 전 — 설명이 지금 화면과 다름:** Logbank·Quizbank 칸 ?(`lib/guide/banks.ts`)·사용법 My 장(`lib/guide/overview.ts`·`content.ts`)이 예전 Stagebank·탭 Quizbank·육각형을 설명. 새 앱용 글을 따로 두고(옛 앱 2.79는 예전 글 그대로 받게 `?my=`처럼 나눔) 그림을 다시 찍는다 — 사용자 결정 대기(STATE). `whatsNew.ts` 94 항목도 없음.
 - **이름 정리 56묶음:** `hub/app/FEATURES.md` 끝 목록 — 같은 기능이면 한 키로, 다른 기능이면 이름을 바꾼다. 먼저 "알아요"(checkKnown·itemsMastered·knownTag·markKnown)·"복습"·"이어서 하기". 고치면 `node scripts/check-copy-keys.mjs --write`.
-- **지울 것 3:** `hub/app/FEATURES.md` "지울 것" — 정기 시험 계산(`curriculum/exam.ts`), Stagebank 오늘 할 것 계산(`curriculum/dailyPlan.ts` — 서버가 쓰는 함수만 남기고), 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
-- **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`stageTest.ts`·`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
+- **옛 코드 기준 245:** `node scripts/leftovers.mjs`(죽은 export·테스트만 쓰는 export가 대부분) — 탭별로 묶어 지우거나 사용자에게 묻고, 지우면 `--write`.
+- **지울 것 2:** `hub/app/FEATURES.md` "지울 것" — Stagebank 오늘 할 것 계산(`curriculum/dailyPlan.ts` — 서버가 쓰는 함수만 남기고), 아침 알림(`morningNotify.ts` — 되살릴지 사용자 결정 뒤).
+- **옛 앱 전용 서버·lib:** 최소 지원 버전을 2.80 이상으로 올리면 `hub/app/FEATURES.md` "옛 앱 전용"과 그 서버만 쓰는 lib(`checkup.ts`·`recall.ts`·`stageScripts` 대본 쪽 등)를 지운다.
 - **Languagebank ? 설명 `lbEstimateHelp`:** 없어진 단어 어림을 설명 — 지우거나 학습한 수 기준으로(14개 언어).
 - **My에서 찾기:** 문법·표현 열쇠가 없는 말은 사전 시트로 바뀜(2026-11-09) — 서버 `/api/notebook` locate가 고른 노트 칸(관용·세부)은 새 앱에서 안 씀. 옛 앱이 안 부르게 되면 locate 응답을 줄인다.
 - **실력 확인 남은 것:** 14일이 돼도 칸 ▶만 밝아짐(오늘 카드·알림 없음 — 원하면 오늘 카드 한 장), 결과로 단계를 올려 줄지(지금은 서버 단계 안 바꿈), 사용법 Logbank 칸 그림(2.80 자를 때).

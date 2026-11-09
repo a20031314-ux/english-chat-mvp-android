@@ -11,7 +11,7 @@
 import { allFramesFor } from "./frames.ts";
 import { ladderFor } from "./stages/index.ts";
 import { allScriptsFor, type ScriptGloss } from "./stageScripts.ts";
-import { diffSpan, nearOf, pieceAt, pieceOf, pieceTwice, plainMisses, rng, shuffled, typedRight, type QuizQuestion } from "./quiz.ts";
+import { diffSpan, pieceAt, pieceOf, pieceTwice, plainMisses, rng, shuffled, typedRight, type QuizQuestion } from "./quiz.ts";
 import { isSpaceless, segmentWords } from "../wordSegments.ts";
 
 export type MultiQuestion = Extract<QuizQuestion, { kind: "multi" }>;
@@ -72,16 +72,7 @@ function hitsOf(language: string, line: Line, stage: number): Hit[] {
   return kept;
 }
 
-/** 고르기 빈칸의 오답(그 조각의 헷갈리는 꼴, 문장에 이미 있는 말은 빼고). */
-function choicesOf(language: string, hit: Hit): string[] {
-  return [...new Set(nearOf(language, hit.key, hit.piece))].filter((one) => one && lower(one) !== lower(hit.piece) && !lower(one).includes(lower(hit.piece)) && !lower(hit.piece).includes(lower(one)));
-}
 
-/** 빈칸으로 칠 수 있는 조각(빈칸 쓰기와 같은 기준 — 짧고, 한자가 든 일본어·중국어는 빼고). */
-function typeable(language: string, piece: string): boolean {
-  if ((language === "ja" || language === "zh") && /\p{Script=Han}/u.test(piece)) return false;
-  return isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
-}
 
 export type MultiOptions = {
   stage: number;
@@ -119,28 +110,6 @@ function candidates(language: string, options: MultiOptions, usable: (hit: Hit) 
   const rank = (pick: Pick) => Math.min(...pick.hits.map((hit) => options.rank?.(hit.key) ?? 0));
   // 잊을 때가 가까운 소재가 든 문장 먼저, 같으면 소재가 많은 문장, 그다음 섞어서.
   return shuffled(picks, random).sort((a, b) => rank(a) - rank(b) || b.hits.length - a.hits.length);
-}
-
-/** 복합 빈칸 한 문제(없으면 null). */
-export function multiOf(language: string, options: MultiOptions): { question: MultiQuestion; keys: string[] } | null {
-  // 칠 수 있는 조각은 쓰기, 한자가 든 일본어·중국어 조각은 그 빈칸만 고르기(헷갈리는 오답 둘 이상일 때).
-  const pick = candidates(language, options, (hit) => typeable(language, hit.piece) || choicesOf(language, hit).length >= 2)[0];
-  if (!pick) return null;
-  const { line, hits } = pick;
-  const chunks: string[] = [];
-  let from = 0;
-  for (const hit of hits) {
-    chunks.push(line.text.slice(from, hit.at));
-    from = hit.at + hit.piece.length;
-  }
-  chunks.push(line.text.slice(from));
-  const random = rng(`${options.seed}|multi-options|${line.text}`);
-  const blanks = hits.map((hit) => {
-    const near = nearOf(language, hit.key, hit.piece).filter((one) => lower(one) !== lower(hit.piece));
-    const options = typeable(language, hit.piece) ? undefined : shuffled([hit.piece, ...shuffled(choicesOf(language, hit), random).slice(0, 2)], random);
-    return { key: hit.key, answer: hit.piece, ...(near.length ? { near } : {}), ...(options ? { options } : {}) };
-  });
-  return { question: { kind: "multi", text: line.text, chunks, blanks, gloss: line.gloss, from: line.from }, keys: hits.map((hit) => hit.key) };
 }
 
 /** 복합 틀린 곳 한 문제 — 문장구조 조각 둘 이상에 확실히 틀린 꼴이 있는 문장만(없으면 null). */

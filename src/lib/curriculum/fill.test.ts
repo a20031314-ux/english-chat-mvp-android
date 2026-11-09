@@ -11,7 +11,6 @@ import {
   missKindOf,
   talkFill,
   thetaForFill,
-  unmeasuredCells,
   type CallTurns,
   type FillEvent,
 } from "./fill.ts";
@@ -115,24 +114,6 @@ test("수렴: 시작 단계를 높게(4) 잘못 골라도 답이 쌓이면 참 �
   assert.equal(many.axes.vocabUse.fill, 0);
 });
 
-test("세부 칸: 동사만 늘 틀리면 품사 동사가 부족, 답이 적은 칸은 아직 모름", async () => {
-  const catalog = fillCatalog("es", await wordsOf("es"));
-  const easy = [...catalog.vocab.values()].filter((item) => item.d < 0.15);
-  const verbs = easy.filter((item) => item.cells.includes("pos:verb")).slice(0, 12);
-  const nouns = easy.filter((item) => item.cells.includes("pos:noun")).slice(0, 30);
-  const events: FillEvent[] = [
-    ...nouns.map((item, i) => ({ at: NOW - DAY + i, key: item.key, correct: true, source: "quiz" as const, use: true })),
-    ...verbs.map((item, i) => ({ at: NOW - DAY + 100 + i, key: item.key, correct: false, source: "quiz" as const, use: true, miss: "form" as const })),
-  ];
-  const result = computeFill({ catalog, check: null, stage: 2, events, calls: [], now: NOW });
-  const cells = result.axes.vocabUse.cells;
-  assert.equal(cells.find((cell) => cell.id === "pos:verb")?.state, "weak");
-  assert.notEqual(cells.find((cell) => cell.id === "pos:noun")?.state, "weak");
-  assert.ok(result.weak.some((cell) => cell.id === "pos:verb" && cell.axis === "vocabUse"));
-  assert.equal(cells.find((cell) => cell.id === "miss:form")?.value, 1);
-  assert.ok(unmeasuredCells(result).some((cell) => cell.id === "pos:adj"));
-});
-
 test("실전 대화: 막힘없이 0.7 + 이끌어 감 0.3, 쉬운 단계만이면 60%가 상한", () => {
   const easy: CallTurns[] = [{ at: NOW, stage: 1, turns: 200, smooth: 200, snag: 0, stuck: 0, lead: 100, follow: 0, min: 0 }];
   const hard: CallTurns[] = [{ at: NOW, stage: 5, turns: 200, smooth: 200, snag: 0, stuck: 0, lead: 100, follow: 0, min: 0 }];
@@ -190,26 +171,6 @@ test("지금 기록 → 증거: Quizbank 고르기/쓰기·익힘 날(겹치면 
   assert.ok(events.some((one) => one.key === "w|gracias" && one.source === "free"));
   assert.ok(!events.some((one) => one.key === "w|perro"), "복습에서 배운 것은 스스로 씀이 아님");
   assert.equal(callTurnsOf([{ day, at: NOW, seconds: 60, fixed: 0, redone: 0 }]).length, 0);
-});
-
-test("학습 방향: 부족한 칸 열쇠·아직 모름 칸 열쇠, 채우기 다섯에 하나 섞기", async () => {
-  const { fillDirection, mixProbes } = await import("./fillFocus.ts");
-  const catalog = fillCatalog("es", await wordsOf("es"));
-  const easy = [...catalog.vocab.values()].filter((item) => item.d < 0.15);
-  const verbs = easy.filter((item) => item.cells.includes("pos:verb")).slice(0, 12);
-  const nouns = easy.filter((item) => item.cells.includes("pos:noun")).slice(0, 30);
-  const events: FillEvent[] = [
-    ...nouns.map((item, i) => ({ at: NOW - DAY + i, key: item.key, correct: true, source: "quiz" as const, use: true })),
-    ...verbs.map((item, i) => ({ at: NOW - DAY + 100 + i, key: item.key, correct: false, source: "quiz" as const, use: true })),
-  ];
-  const result = computeFill({ catalog, check: null, stage: 2, events, calls: [], now: NOW });
-  const focus = fillDirection(result, catalog, events, 5, NOW);
-  // 1단계 사람에겐 1단계 소재만.
-  const low = fillDirection(result, catalog, events, 1, NOW);
-  assert.ok([...low.weak, ...low.probe].every((key) => ((catalog.vocab.get(key) ?? catalog.sent.get(key))?.stage ?? 1) <= 1), [...low.weak, ...low.probe].join());
-  assert.ok(focus.weak.length > 0 && focus.weak.every((key) => verbs.some((item) => item.key === key)), focus.weak.join());
-  assert.ok(focus.probe.length > 0);
-  assert.deepEqual(mixProbes(["a", "b", "c", "d", "e", "f"], ["P"]), ["a", "b", "c", "d", "P", "e", "f"]);
 });
 
 test("같은 날 틀렸다가 맞힌 열쇠는 맞힘이 나중(ja)", async () => {

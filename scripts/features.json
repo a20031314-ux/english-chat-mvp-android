@@ -51,7 +51,6 @@
     { "id": "pack-api", "area": "call", "name": "오늘의 팩 서버", "copy": null, "does": "옛 앱 2.48~2.75 오늘의 팩", "code": ["src/app/api/pack/today/route.ts", "src/app/api/pack/finish/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.76 이상" },
     { "id": "map-api", "area": "my", "name": "목표 지도 서버", "copy": null, "does": "옛 앱 2.48~2.74 목표 지도·미션·노트 목차", "code": ["src/app/api/curriculum/progress/route.ts", "src/app/api/curriculum/missions/route.ts", "src/app/api/notes/place/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.75 이상" },
 
-    { "id": "exam-pool", "area": "my", "name": "정기 시험 재료·시험", "copy": null, "does": "시험 화면은 2026-11-09에 없어짐 — 남은 계산(curriculum/exam.ts)은 테스트만 씀", "code": ["src/lib/curriculum/exam.ts"], "status": "remove" },
     { "id": "daily-plan", "area": "my", "name": "오늘 할 것 계산", "copy": null, "does": "Stagebank 오늘 할 것 목록 — 화면은 없어졌고 서버 다시 볼 것(review)·익힘 셈이 아직 이 파일을 씀", "code": ["src/lib/curriculum/dailyPlan.ts"], "status": "remove", "note": "서버(scripts check)가 쓰는 reviewKeysOf 등만 남기고 나머지를 지운다" },
     { "id": "morning", "area": "my", "name": "아침 알림", "copy": null, "does": "Stagebank ⚙에서 켜던 것 — 개편에 켜고 끌 곳이 없어 My를 열면 걸린 알림을 지움", "code": ["src/lib/morningNotify.ts", "src/lib/curriculum/morningDigest.ts"], "status": "remove", "note": "되살리려면 사용자 결정 — 아니면 플러그인·코드 지움" }
   ]

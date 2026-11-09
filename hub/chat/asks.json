@@ -207,6 +207,104 @@
       "base": "8bce8d8",
       "head": "55c16ce",
       "status": "open"
+    },
+    {
+      "id": "a261109-6",
+      "at": "2026-11-09 14:14",
+      "kind": "delete",
+      "from": "1",
+      "to": "user",
+      "what": "옛 My 계산(단계 시험·배치·정기 시험·대본 양·추천 등) — 화면은 지웠고 테스트만 씀",
+      "why": "개편 뒤 남은 옛 알고리즘 — 새 Quizbank와 따로 같은 일(shuffled 등)을 함",
+      "files": [
+        "src/lib/curriculum/placement.ts",
+        "src/lib/curriculum/stageTest.ts",
+        "src/lib/curriculum/exam.ts",
+        "src/lib/curriculum/scriptAmount.ts",
+        "src/lib/curriculum/studyMode.ts",
+        "src/lib/curriculum/recommend.ts",
+        "src/lib/curriculum/fillFocus.ts",
+        "src/lib/curriculum/wordbook.ts",
+        "src/lib/curriculum/cognates.ts",
+        "src/lib/curriculum/useStageReadings.ts",
+        "src/lib/notes/sentenceFits.ts",
+        "src/lib/notes/skeletonTotals.ts",
+        "src/lib/learner/suggest.ts",
+        "src/lib/server/curriculumModel.ts"
+      ],
+      "status": "지움",
+      "by": "user",
+      "note": "사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움",
+      "until": "",
+      "answeredAt": "2026-11-09 14:56"
+    },
+    {
+      "id": "a261109-7",
+      "at": "2026-11-09 14:14",
+      "kind": "delete",
+      "from": "1",
+      "to": "user",
+      "what": "옛 단계 만들기 엔진(curriculum/engine) — 테스트만 씀",
+      "why": "",
+      "files": [
+        "src/lib/curriculum/engine/adapters/studyMap.ts",
+        "src/lib/curriculum/engine/generate.ts",
+        "src/lib/curriculum/engine/graph.ts",
+        "src/lib/curriculum/engine/index.ts",
+        "src/lib/curriculum/engine/normalize.ts",
+        "src/lib/curriculum/engine/packs/course.ts",
+        "src/lib/curriculum/engine/packs/knowledge.ts",
+        "src/lib/curriculum/engine/packs/language.ts",
+        "src/lib/curriculum/engine/packs/project.ts",
+        "src/lib/curriculum/engine/prompt.ts",
+        "src/lib/curriculum/engine/types.ts"
+      ],
+      "status": "지움",
+      "by": "user",
+      "note": "사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움",
+      "until": "",
+      "answeredAt": "2026-11-09 14:56"
+    },
+    {
+      "id": "a261109-8",
+      "at": "2026-11-09 14:14",
+      "kind": "delete",
+      "from": "1",
+      "to": "user",
+      "what": "글자 안내 패널 데이터(characterGuide) — 패널은 지웠고 테스트만 씀",
+      "why": "",
+      "files": [
+        "src/lib/characterGuide/ar.ts",
+        "src/lib/characterGuide/index.ts",
+        "src/lib/characterGuide/ja.ts",
+        "src/lib/characterGuide/ko.ts",
+        "src/lib/characterGuide/ru.ts",
+        "src/lib/characterGuide/types.ts",
+        "src/lib/characterGuide/zh.ts"
+      ],
+      "status": "지움",
+      "by": "user",
+      "note": "사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움",
+      "until": "",
+      "answeredAt": "2026-11-09 14:56"
+    },
+    {
+      "id": "a261109-9",
+      "at": "2026-11-09 14:14",
+      "kind": "delete",
+      "from": "1",
+      "to": "user",
+      "what": "AI 통화 옛 조각(callLines·realtimeCallSession) — 테스트만 씀",
+      "why": "",
+      "files": [
+        "src/lib/callLines.ts",
+        "src/lib/realtimeCallSession.ts"
+      ],
+      "status": "지움",
+      "by": "user",
+      "note": "사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움",
+      "until": "",
+      "answeredAt": "2026-11-09 14:56"
     }
   ],
   "scopes": [
@@ -246,6 +344,6 @@
     }
   ],
   "seq": {
-    "261109": 5
+    "261109": 9
   }
 }
