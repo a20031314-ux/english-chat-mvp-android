@@ -343,6 +343,22 @@
    "src": "tatoeba:1056098/alexmarcelo en:300667"
   }
  ],
+ "w|absorver": [
+  {
+   "text": "A toalha nova do João consegue absorver a água rápido e seca no sol.",
+   "en": "João's new towel can absorb water quickly and dries in the sun.",
+   "ko": "주앙의 새 수건은 물을 빨리 흡수하고 햇볕에 잘 말라요.",
+   "blank": "absorver",
+   "src": "made"
+  },
+  {
+   "text": "A camiseta da Ana é feita para absorver o suor e secar rápido.",
+   "en": "Ana's shirt is made to absorb sweat and dry quickly.",
+   "ko": "아나의 셔츠는 땀을 흡수하고 빨리 마르게 만들어졌어요.",
+   "blank": "absorver",
+   "src": "made"
+  }
+ ],
  "w|absurdo": [
   {
    "text": "Isso é completa e totalmente um absurdo!",
@@ -2748,6 +2764,22 @@
    "en": "The syrup tasted so bitter that Rita made a face.",
    "ko": "시럽이 너무 써서 히타는 얼굴을 찡그렸어요.",
    "blank": "amargo",
+   "src": "made"
+  }
+ ],
+ "w|amarrado": [
+  {
+   "text": "O caiaque ficou amarrado na árvore, e o João dormiu tranquilo.",
+   "en": "The kayak stayed tied to the tree, and João slept peacefully.",
+   "ko": "카약을 나무에 묶어 두고 주앙은 편히 잤어요.",
+   "blank": "amarrado",
+   "src": "made"
+  },
+  {
+   "text": "O cadarço da Ana estava bem amarrado, com nó duplo.",
+   "en": "Ana's shoelace was tightly tied, with a double knot.",
+   "ko": "아나의 운동화 끈은 두 번 묶여서 단단했어요.",
+   "blank": "amarrado",
    "src": "made"
   }
  ],
@@ -7327,6 +7359,22 @@
    "src": "tatoeba:2462864/alexmarcelo en:2459483/sharptoothed"
   }
  ],
+ "w|batido": [
+  {
+   "text": "O caminho batido levou o João direto até a cachoeira.",
+   "en": "The beaten path led João straight to the waterfall.",
+   "ko": "다져진 길을 따라 주앙은 곧장 폭포에 닿았어요.",
+   "blank": "batido",
+   "src": "made"
+  },
+  {
+   "text": "O recorde pessoal da Ana foi batido por três minutos.",
+   "en": "Ana's personal record was beaten by three minutes.",
+   "ko": "아나는 개인 기록을 삼 분이나 앞당겼어요.",
+   "blank": "batido",
+   "src": "made"
+  }
+ ],
  "w|bêbado": [
   {
    "text": "Ele saiu bêbado do bar.",
@@ -7643,6 +7691,22 @@
    "ko": "자전거 여기 둬도 돼요?",
    "blank": "bicicleta",
    "src": "tatoeba:9370554/bill en:9360241/CK"
+  }
+ ],
+ "w|bico": [
+  {
+   "text": "Um tucano de bico laranja pousou na árvore em frente à barraca do João.",
+   "en": "A toucan with an orange beak landed in the tree in front of João's tent.",
+   "ko": "주황색 부리의 투칸이 주앙의 텐트 앞 나무에 앉았어요.",
+   "blank": "bico",
+   "src": "made"
+  },
+  {
+   "text": "A Ana levou um susto quando o tênis abriu no bico no meio da corrida.",
+   "en": "Ana got a fright when her sneaker split at the toe in the middle of the race.",
+   "ko": "달리는 도중에 운동화 앞코가 벌어져서 아나는 깜짝 놀랐어요.",
+   "blank": "bico",
+   "src": "made"
   }
  ],
  "w|bife": [
@@ -10461,6 +10525,22 @@
    "src": "made"
   }
  ],
+ "w|carvão": [
+  {
+   "text": "O João acendeu o carvão para o churrasco antes do pôr do sol.",
+   "en": "João lit the charcoal for the barbecue before sunset.",
+   "ko": "주앙은 해 지기 전에 바비큐용 숯에 불을 붙였어요.",
+   "blank": "carvão",
+   "src": "made"
+  },
+  {
+   "text": "Depois da maratona, a família da Ana fez um churrasco no carvão para comemorar.",
+   "en": "After the marathon, Ana's family had a charcoal barbecue to celebrate.",
+   "ko": "마라톤이 끝나고 아나의 가족은 숯불 바비큐로 축하했어요.",
+   "blank": "carvão",
+   "src": "made"
+  }
+ ],
  "w|casa": [
   {
    "text": "Já estou em casa.",
@@ -10579,6 +10659,22 @@
    "src": "made"
   }
  ],
+ "w|castanho": [
+  {
+   "text": "Um cavalo castanho pastava perto da barraca do João.",
+   "en": "A chestnut horse was grazing near João's tent.",
+   "ko": "밤색 말 한 마리가 주앙의 텐트 근처에서 풀을 뜯고 있었어요.",
+   "blank": "castanho",
+   "src": "made"
+  },
+  {
+   "text": "A Ana prendeu o cabelo castanho num rabo de cavalo antes da largada.",
+   "en": "Ana tied her brown hair in a ponytail before the start.",
+   "ko": "아나는 출발 전에 갈색 머리를 하나로 묶었어요.",
+   "blank": "castanho",
+   "src": "made"
+  }
+ ],
  "w|castelo": [
   {
    "text": "Nós vimos um castelo na nossa frente.",
@@ -10656,6 +10752,22 @@
    "en": "Ana filled fourteen boxes with clothes alone.",
    "ko": "아나는 옷만으로 상자 열네 개를 채웠어요.",
    "blank": "catorze",
+   "src": "made"
+  }
+ ],
+ "w|cauda": [
+  {
+   "text": "O João viu um esquilo de cauda peluda roubando pão da mochila.",
+   "en": "João saw a squirrel with a bushy tail stealing bread from the backpack.",
+   "ko": "주앙은 꼬리가 복슬복슬한 다람쥐가 배낭에서 빵을 훔치는 걸 봤어요.",
+   "blank": "cauda",
+   "src": "made"
+  },
+  {
+   "text": "Um corredor fantasiado de leão com cauda comprida passou a Ana no quilômetro dez.",
+   "en": "A runner dressed as a lion with a long tail passed Ana at kilometer ten.",
+   "ko": "꼬리가 긴 사자 옷을 입은 주자가 십 킬로미터 지점에서 아나를 앞질렀어요.",
+   "blank": "cauda",
    "src": "made"
   }
  ],
@@ -12928,6 +13040,22 @@
    "en": "Sofia's class painted a collective mural at the building entrance.",
    "ko": "소피아네 반은 건물 입구에 다 같이 벽화를 그렸어요.",
    "blank": "coletivo",
+   "src": "made"
+  }
+ ],
+ "w|colheita": [
+  {
+   "text": "O João acampou perto de uma fazenda em plena colheita de café.",
+   "en": "João camped near a farm in the middle of the coffee harvest.",
+   "ko": "주앙은 커피 수확이 한창인 농장 근처에서 야영했어요.",
+   "blank": "colheita",
+   "src": "made"
+  },
+  {
+   "text": "A medalha foi a colheita de meses de treino para a Ana.",
+   "en": "The medal was the harvest of months of training for Ana.",
+   "ko": "메달은 아나에게 몇 달 훈련의 결실이었어요.",
+   "blank": "colheita",
    "src": "made"
   }
  ],
@@ -15259,6 +15387,22 @@
    "src": "made"
   }
  ],
+ "w|controlado": [
+  {
+   "text": "O João fez um fogo pequeno e controlado, como o guarda pediu.",
+   "en": "João made a small, controlled fire, as the ranger asked.",
+   "ko": "주앙은 관리원 말대로 작고 조심스러운 불을 피웠어요.",
+   "blank": "controlado",
+   "src": "made"
+  },
+  {
+   "text": "A Ana manteve um ritmo controlado até o quilômetro trinta.",
+   "en": "Ana kept a controlled pace until kilometer thirty.",
+   "ko": "아나는 삼십 킬로미터까지 일정한 속도를 지켰어요.",
+   "blank": "controlado",
+   "src": "made"
+  }
+ ],
  "w|controlar": [
   {
    "text": "Controla o volume, vai.",
@@ -15657,6 +15801,22 @@
    "ko": "나는 용감해.",
    "blank": "corajoso",
    "src": "tatoeba:4810729/bill en:2202626/CK"
+  }
+ ],
+ "w|coral": [
+  {
+   "text": "O João mergulhou na praia perto do camping e viu um coral cheio de peixes.",
+   "en": "João dived at the beach near the campsite and saw a coral full of fish.",
+   "ko": "주앙은 야영장 근처 바다에서 잠수해 물고기가 가득한 산호를 봤어요.",
+   "blank": "coral",
+   "src": "made"
+  },
+  {
+   "text": "Um coral cantava na beira da pista para animar a Ana e os outros corredores.",
+   "en": "A choir was singing at the side of the course to cheer on Ana and the other runners.",
+   "ko": "합창단이 코스 옆에서 노래하며 아나와 다른 주자들을 응원했어요.",
+   "blank": "coral",
+   "src": "made"
   }
  ],
  "w|corda": [
@@ -17305,6 +17465,22 @@
    "src": "made"
   }
  ],
+ "w|danificar": [
+  {
+   "text": "O João tomou cuidado para não danificar as raízes ao montar a barraca.",
+   "en": "João was careful not to damage the roots when pitching the tent.",
+   "ko": "주앙은 텐트를 칠 때 나무뿌리가 상하지 않게 조심했어요.",
+   "blank": "danificar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana tomou cuidado para não danificar o chip de tempo preso no tênis.",
+   "en": "Ana was careful not to damage the timing chip attached to her sneaker.",
+   "ko": "아나는 운동화에 단 기록 칩이 망가지지 않게 조심했어요.",
+   "blank": "danificar",
+   "src": "made"
+  }
+ ],
  "w|dano": [
   {
    "text": "Você não consegue consertar o dano?",
@@ -18292,6 +18468,22 @@
    "en": "The intern spilled acid on the bench, and Inês cleaned it carefully.",
    "ko": "인턴이 실험대에 산을 쏟자 이네스가 조심스럽게 닦았어요.",
    "blank": "derramou",
+   "src": "made"
+  }
+ ],
+ "w|derreter": [
+  {
+   "text": "O chocolate começou a derreter na mochila do João por causa do sol.",
+   "en": "The chocolate started to melt in João's backpack because of the sun.",
+   "ko": "햇볕 때문에 주앙의 배낭 속 초콜릿이 녹기 시작했어요.",
+   "blank": "derreter",
+   "src": "made"
+  },
+  {
+   "text": "O sol forte fez o gelo do copo derreter antes de a Ana conseguir beber.",
+   "en": "The strong sun made the ice in the cup melt before Ana could drink.",
+   "ko": "햇볕이 너무 세서 아나가 마시기도 전에 컵 속 얼음이 녹았어요.",
+   "blank": "derreter",
    "src": "made"
   }
  ],
@@ -19869,6 +20061,22 @@
    "blank": "dinheiro"
   }
  ],
+ "w|dinossauro": [
+  {
+   "text": "Perto do acampamento, o João achou uma pegada que parecia de dinossauro, mas era só uma pedra.",
+   "en": "Near the campsite, João found a footprint that looked like a dinosaur's, but it was just a rock.",
+   "ko": "야영지 근처에서 주앙은 공룡 발자국 같은 걸 찾았는데 그냥 돌이었어요.",
+   "blank": "dinossauro",
+   "src": "made"
+  },
+  {
+   "text": "Na largada, a Ana viu um homem vestido de dinossauro e não parou de rir.",
+   "en": "At the start, Ana saw a man dressed as a dinosaur and couldn't stop laughing.",
+   "ko": "출발선에서 아나는 공룡 옷을 입은 남자를 보고 웃음이 멈추지 않았어요.",
+   "blank": "dinossauro",
+   "src": "made"
+  }
+ ],
  "w|diploma": [
   {
    "text": "O Miguel nunca teve diploma, mas sabe ler qualquer planta.",
@@ -20015,6 +20223,22 @@
    "ko": "이 앨범에서 제일 좋아하는 곡이에요.",
    "blank": "disco",
    "src": "tatoeba:1061482/alexmarcelo en:1059659"
+  }
+ ],
+ "w|discordar": [
+  {
+   "text": "O amigo queria voltar mais cedo, mas o João teve que discordar por causa da chuva na estrada.",
+   "en": "His friend wanted to go back earlier, but João had to disagree because of the rain on the road.",
+   "ko": "친구는 일찍 돌아가고 싶어 했지만 주앙은 길에 내린 비 때문에 반대할 수밖에 없었어요.",
+   "blank": "discordar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana costuma discordar de quem diz que maratona é só para atletas.",
+   "en": "Ana usually disagrees with people who say marathons are only for athletes.",
+   "ko": "아나는 마라톤이 선수들만 하는 거라는 말에 늘 반대해요.",
+   "blank": "discordar",
+   "src": "made"
   }
  ],
  "w|discreto": [
@@ -26181,6 +26405,22 @@
    "src": "tatoeba:6295070/carlosalberto en:2202822/CK"
   }
  ],
+ "w|extraterrestre": [
+  {
+   "text": "Vendo as estrelas, o João brincou que um extraterrestre podia estar acenando lá de cima.",
+   "en": "Looking at the stars, João joked that an alien could be waving from up there.",
+   "ko": "별을 보며 주앙은 외계인이 저 위에서 손을 흔들고 있을지도 모른다고 농담했어요.",
+   "blank": "extraterrestre",
+   "src": "made"
+  },
+  {
+   "text": "Um fã fantasiado de extraterrestre deu um copo de água para a Ana.",
+   "en": "A fan dressed as an alien gave Ana a cup of water.",
+   "ko": "외계인 분장을 한 팬이 아나에게 물 한 컵을 건넸어요.",
+   "blank": "extraterrestre",
+   "src": "made"
+  }
+ ],
  "w|extremamente": [
   {
    "text": "Nós devemos ser extremamente cautelosos.",
@@ -27149,6 +27389,22 @@
    "src": "made"
   }
  ],
+ "w|fera": [
+  {
+   "text": "Um barulho no mato assustou o João, mas não era nenhuma fera, só um tatu.",
+   "en": "A noise in the bushes scared João, but it was no wild beast, just an armadillo.",
+   "ko": "덤불 소리에 주앙은 놀랐지만 맹수가 아니라 아르마딜로였어요.",
+   "blank": "fera",
+   "src": "made"
+  },
+  {
+   "text": "Na reta final, a Ana virou uma fera e passou cinco pessoas.",
+   "en": "On the final stretch, Ana became a beast and passed five people.",
+   "ko": "마지막 직선 구간에서 아나는 맹수처럼 다섯 명을 제쳤어요.",
+   "blank": "fera",
+   "src": "made"
+  }
+ ],
  "w|feriado": [
   {
    "text": "O teatro do Pedro faz sessão extra em todo feriado.",
@@ -27831,6 +28087,22 @@
    "src": "made"
   }
  ],
+ "w|fixar": [
+  {
+   "text": "O vento estava forte, e o João teve que fixar a barraca com mais estacas.",
+   "en": "The wind was strong, and João had to secure the tent with more stakes.",
+   "ko": "바람이 세서 주앙은 말뚝을 더 박아 텐트를 고정해야 했어요.",
+   "blank": "fixar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana pediu ajuda para fixar o número na camiseta com alfinetes.",
+   "en": "Ana asked for help pinning the number to her shirt with safety pins.",
+   "ko": "아나는 셔츠에 번호표를 옷핀으로 다는 걸 도와 달라고 했어요.",
+   "blank": "fixar",
+   "src": "made"
+  }
+ ],
  "w|flecha": [
   {
    "text": "Na aula de educação física, o João aprendeu a atirar uma flecha com arco.",
@@ -27889,6 +28161,22 @@
    "en": "The forest went quiet.",
    "ko": "숲이 고요해졌어.",
    "blank": "floresta"
+  }
+ ],
+ "w|fluir": [
+  {
+   "text": "O João gosta de ouvir a água fluir entre as pedras antes de dormir.",
+   "en": "João likes to listen to the water flow between the rocks before sleeping.",
+   "ko": "주앙은 자기 전에 돌 사이로 물이 흐르는 소리를 듣는 걸 좋아해요.",
+   "blank": "fluir",
+   "src": "made"
+  },
+  {
+   "text": "Depois da metade, a Ana sentiu a corrida fluir sem esforço.",
+   "en": "After the halfway point, Ana felt the run flow effortlessly.",
+   "ko": "반환점을 지나자 아나는 달리기가 힘들이지 않고 술술 풀리는 걸 느꼈어요.",
+   "blank": "fluir",
+   "src": "made"
   }
  ],
  "w|flutuar": [
@@ -28431,6 +28719,22 @@
    "en": "The photo came out blurry.",
    "ko": "사진이 흔들려 나왔어.",
    "blank": "foto"
+  }
+ ],
+ "w|fotografar": [
+  {
+   "text": "O João acordou cedo para fotografar o nascer do sol no lago.",
+   "en": "João woke up early to photograph the sunrise at the lake.",
+   "ko": "주앙은 호수의 해돋이를 찍으려고 일찍 일어났어요.",
+   "blank": "fotografar",
+   "src": "made"
+  },
+  {
+   "text": "O namorado da Ana ficou na chegada para fotografar o momento.",
+   "en": "Ana's boyfriend stayed at the finish line to photograph the moment.",
+   "ko": "아나의 남자 친구는 그 순간을 찍으려고 결승선에 있었어요.",
+   "blank": "fotografar",
+   "src": "made"
   }
  ],
  "w|fotografia": [
@@ -29263,6 +29567,22 @@
    "ko": "저는 소를 키워요.",
    "blank": "gado",
    "src": "tatoeba:1227825/alexmarcelo en:19486/CK"
+  }
+ ],
+ "w|gaiola": [
+  {
+   "text": "O João guardou a comida numa gaiola de metal para os macacos não pegarem.",
+   "en": "João stored the food in a metal cage so the monkeys couldn't take it.",
+   "ko": "주앙은 원숭이들이 못 가져가게 음식을 철망 상자에 넣어 뒀어요.",
+   "blank": "gaiola",
+   "src": "made"
+  },
+  {
+   "text": "A Ana disse que, presa no trânsito antes da largada, se sentiu numa gaiola.",
+   "en": "Ana said that, stuck in traffic before the start, she felt like she was in a cage.",
+   "ko": "아나는 출발 전에 차가 막혀서 새장에 갇힌 기분이었다고 했어요.",
+   "blank": "gaiola",
+   "src": "made"
   }
  ],
  "w|galáxia": [
@@ -31059,6 +31379,22 @@
    "src": "made"
   }
  ],
+ "w|hipócrita": [
+  {
+   "text": "O João achou hipócrita o amigo que falava de natureza e deixava lixo na trilha.",
+   "en": "João thought it was hypocritical of his friend to talk about nature and leave trash on the trail.",
+   "ko": "주앙은 자연을 말하면서 산길에 쓰레기를 버리는 친구가 위선적이라고 생각했어요.",
+   "blank": "hipócrita",
+   "src": "made"
+  },
+  {
+   "text": "A Ana acha hipócrita quem critica os corredores lentos e nunca correu.",
+   "en": "Ana thinks it's hypocritical for people who never ran to criticize slow runners.",
+   "ko": "아나는 한 번도 안 뛰어 본 사람이 느린 주자를 흉보는 게 위선적이라고 생각해요.",
+   "blank": "hipócrita",
+   "src": "made"
+  }
+ ],
  "w|hipótese": [
   {
    "text": "A equipe do Rafael levantou a hipótese de um vazamento no cano principal.",
@@ -31623,6 +31959,22 @@
    "en": "What a stupid plan.",
    "ko": "정말 바보 같은 계획이야.",
    "blank": "idiota"
+  }
+ ],
+ "w|idiotice": [
+  {
+   "text": "Esquecer a lanterna em casa foi uma idiotice, admitiu o João rindo.",
+   "en": "Forgetting the flashlight at home was a stupid move, João admitted, laughing.",
+   "ko": "손전등을 집에 두고 온 건 바보짓이었다고 주앙이 웃으며 인정했어요.",
+   "blank": "idiotice",
+   "src": "made"
+  },
+  {
+   "text": "A Ana diz que correr sem tomar água seria uma idiotice.",
+   "en": "Ana says running without drinking water would be foolish.",
+   "ko": "아나는 물을 안 마시고 달리는 건 바보짓이라고 해요.",
+   "blank": "idiotice",
+   "src": "made"
   }
  ],
  "w|ídolo": [
@@ -34125,6 +34477,22 @@
    "en": "Where's your brother?",
    "ko": "형 어디 있어?",
    "blank": "irmão"
+  }
+ ],
+ "w|irrelevante": [
+  {
+   "text": "Na mata, o sinal do celular era irrelevante para o João, que só queria descansar.",
+   "en": "In the woods, the phone signal was irrelevant to João, who only wanted to rest.",
+   "ko": "숲에서 휴대폰 신호는 쉬고만 싶은 주앙에게 아무 상관이 없었어요.",
+   "blank": "irrelevante",
+   "src": "made"
+  },
+  {
+   "text": "Para a Ana, a posição final era irrelevante; o importante era terminar.",
+   "en": "For Ana, the final position was irrelevant; what mattered was finishing.",
+   "ko": "아나에게 최종 순위는 상관없었고 끝까지 달리는 게 중요했어요.",
+   "blank": "irrelevante",
+   "src": "made"
   }
  ],
  "w|irritado": [
@@ -37785,6 +38153,22 @@
    "src": "made"
   }
  ],
+ "w|maré": [
+  {
+   "text": "A maré subiu de noite e quase molhou a barraca do João.",
+   "en": "The tide came in at night and almost soaked João's tent.",
+   "ko": "밤에 밀물이 들어와 주앙의 텐트가 젖을 뻔했어요.",
+   "blank": "maré",
+   "src": "made"
+  },
+  {
+   "text": "A maré estava baixa quando a Ana correu pela orla.",
+   "en": "The tide was low when Ana ran along the seafront.",
+   "ko": "아나가 해변 길을 달릴 때 썰물이었어요.",
+   "blank": "maré",
+   "src": "made"
+  }
+ ],
  "w|margem": [
   {
    "text": "Da janela, o João viu a cidade na margem do rio antes do pouso.",
@@ -39577,6 +39961,22 @@
    "src": "tatoeba:11228769/carlosalberto en:11228741/carlosalberto"
   }
  ],
+ "w|modesto": [
+  {
+   "text": "A barraca do João é modesta, mas aguenta qualquer tempestade.",
+   "en": "João's tent is modest, but it can handle any storm.",
+   "ko": "주앙의 텐트는 소박하지만 어떤 폭풍도 견뎌요.",
+   "blank": "modesta",
+   "src": "made"
+  },
+  {
+   "text": "A Ana é modesta e diz que só terminou a prova por sorte.",
+   "en": "Ana is modest and says she only finished the race by luck.",
+   "ko": "아나는 겸손해서 운이 좋아 완주했을 뿐이라고 해요.",
+   "blank": "modesta",
+   "src": "made"
+  }
+ ],
  "w|modo": [
   {
    "text": "Desse modo não dá.",
@@ -40446,6 +40846,22 @@
    "en": "On the train, Luísa heard a musician playing guitar in the dining car.",
    "ko": "기차에서 루이자는 식당 칸에서 기타를 치는 음악가의 연주를 들었어요.",
    "blank": "músico",
+   "src": "made"
+  }
+ ],
+ "w|mutante": [
+  {
+   "text": "Na história de terror da fogueira, um mutante vivia na floresta, e o João fingiu ter medo.",
+   "en": "In the campfire horror story, a mutant lived in the forest, and João pretended to be scared.",
+   "ko": "모닥불 괴담에서 숲에 돌연변이가 산다고 하자 주앙은 무서운 척했어요.",
+   "blank": "mutante",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Ana se fantasiou de mutante de quadrinhos para torcer na calçada.",
+   "en": "Ana's brother dressed up as a comic-book mutant to cheer on the sidewalk.",
+   "ko": "아나의 오빠는 만화 속 돌연변이 분장을 하고 인도에서 응원했어요.",
+   "blank": "mutante",
    "src": "made"
   }
  ],
@@ -41753,6 +42169,22 @@
    "src": "tatoeba:869363/alexmarcelo en:22976/CN"
   }
  ],
+ "w|núcleo": [
+  {
+   "text": "Ao redor da fogueira, o primo do João explicou que o núcleo da Terra é muito quente.",
+   "en": "Around the campfire, João's cousin explained that the Earth's core is very hot.",
+   "ko": "모닥불 둘레에서 주앙의 사촌이 지구의 핵은 아주 뜨겁다고 설명했어요.",
+   "blank": "núcleo",
+   "src": "made"
+  },
+  {
+   "text": "A Ana treina com um núcleo de amigas que corre junto há anos.",
+   "en": "Ana trains with a core group of friends who have run together for years.",
+   "ko": "아나는 몇 년째 함께 달려 온 친구 모임과 훈련해요.",
+   "blank": "núcleo",
+   "src": "made"
+  }
+ ],
  "w|num": [
   {
    "text": "Mora num prédio antigo.",
@@ -42665,6 +43097,22 @@
    "blank": "opinião"
   }
  ],
+ "w|opor": [
+  {
+   "text": "Ninguém quis se opor quando o João sugeriu nadar na cachoeira.",
+   "en": "Nobody wanted to object when João suggested swimming at the waterfall.",
+   "ko": "주앙이 폭포에서 수영하자고 했을 때 아무도 반대하지 않았어요.",
+   "blank": "opor",
+   "src": "made"
+  },
+  {
+   "text": "A Ana não quis se opor à decisão do treinador de largar mais devagar.",
+   "en": "Ana didn't want to oppose the coach's decision to start more slowly.",
+   "ko": "아나는 천천히 출발하자는 코치의 결정에 반대하고 싶지 않았어요.",
+   "blank": "opor",
+   "src": "made"
+  }
+ ],
  "w|oportunidade": [
   {
    "text": "Espera a oportunidade certa.",
@@ -43525,6 +43973,22 @@
    "blank": "país"
   }
  ],
+ "w|paisagem": [
+  {
+   "text": "Do alto do morro, a paisagem deixou o João sem palavras.",
+   "en": "From the top of the hill, the landscape left João speechless.",
+   "ko": "언덕 꼭대기에서 본 풍경에 주앙은 말을 잃었어요.",
+   "blank": "paisagem",
+   "src": "made"
+  },
+  {
+   "text": "A paisagem à beira-mar ajudou a Ana a esquecer o cansaço.",
+   "en": "The seaside landscape helped Ana forget her tiredness.",
+   "ko": "바닷가 풍경 덕분에 아나는 피곤함을 잊었어요.",
+   "blank": "paisagem",
+   "src": "made"
+  }
+ ],
  "w|paixão": [
   {
    "text": "Aprender idiomas é a minha paixão.",
@@ -43681,6 +44145,22 @@
    "ko": "너무 당황했어요.",
    "blank": "pânico",
    "src": "tatoeba:4982796/alexmarcelo en:2111801/CK"
+  }
+ ],
+ "w|pântano": [
+  {
+   "text": "A trilha passava perto de um pântano, e o João ouviu sapos a noite toda.",
+   "en": "The trail passed near a swamp, and João heard frogs all night.",
+   "ko": "산길이 늪 근처를 지나서 주앙은 밤새 개구리 소리를 들었어요.",
+   "blank": "pântano",
+   "src": "made"
+  },
+  {
+   "text": "Uma parte do percurso da maratona passava por um pântano aterrado, e a Ana sentiu o cheiro.",
+   "en": "Part of the marathon route passed by a filled-in swamp, and Ana smelled it.",
+   "ko": "마라톤 코스 일부가 메운 늪 옆을 지나서 아나는 그 냄새를 맡았어요.",
+   "blank": "pântano",
+   "src": "made"
   }
  ],
  "w|pão": [
@@ -47437,6 +47917,22 @@
    "blank": "preço"
   }
  ],
+ "w|predador": [
+  {
+   "text": "O guia explicou ao João que a onça é o maior predador da região.",
+   "en": "The guide explained to João that the jaguar is the biggest predator in the region.",
+   "ko": "가이드는 주앙에게 재규어가 이 지역 최상위 포식자라고 설명했어요.",
+   "blank": "predador",
+   "src": "made"
+  },
+  {
+   "text": "A Ana diz que, na corrida, o pior predador é a própria cabeça mandando parar.",
+   "en": "Ana says that, in a race, the worst predator is your own head telling you to stop.",
+   "ko": "아나는 달리기에서 가장 무서운 적은 멈추라고 하는 자기 머리라고 해요.",
+   "blank": "predador",
+   "src": "made"
+  }
+ ],
  "w|prédio": [
   {
    "text": "Moro no prédio azul.",
@@ -47695,6 +48191,22 @@
    "en": "Let me get the coffee going.",
    "ko": "커피는 내가 준비할게.",
    "blank": "preparar"
+  }
+ ],
+ "w|presa": [
+  {
+   "text": "O João viu uma águia descer e levar a presa para o ninho.",
+   "en": "João saw an eagle swoop down and carry its prey to the nest.",
+   "ko": "주앙은 독수리가 내려와 먹이를 둥지로 물고 가는 걸 봤어요.",
+   "blank": "presa",
+   "src": "made"
+  },
+  {
+   "text": "A Ana se sentiu como uma presa fugindo quando o grupo de trás acelerou.",
+   "en": "Ana felt like prey running away when the group behind sped up.",
+   "ko": "뒤 무리가 속도를 올리자 아나는 쫓기는 먹잇감이 된 기분이었어요.",
+   "blank": "presa",
+   "src": "made"
   }
  ],
  "w|presar": [
@@ -54991,6 +55503,22 @@
    "src": "made"
   }
  ],
+ "w|serpente": [
+  {
+   "text": "Uma serpente verde atravessou a trilha, e o João esperou parado até ela sumir.",
+   "en": "A green snake crossed the trail, and João stood still until it disappeared.",
+   "ko": "초록 뱀이 산길을 가로지르자 주앙은 사라질 때까지 가만히 기다렸어요.",
+   "blank": "serpente",
+   "src": "made"
+  },
+  {
+   "text": "A fila de corredores parecia uma serpente enorme subindo a avenida, contou a Ana.",
+   "en": "The line of runners looked like a huge snake going up the avenue, Ana said.",
+   "ko": "주자들 줄이 큰길을 오르는 거대한 뱀 같았다고 아나가 말했어요.",
+   "blank": "serpente",
+   "src": "made"
+  }
+ ],
  "w|serviço": [
   {
    "text": "O serviço está lento hoje.",
@@ -56577,6 +57105,22 @@
    "src": "made"
   }
  ],
+ "w|substância": [
+  {
+   "text": "O guarda avisou o João para não tocar na substância grudenta das plantas.",
+   "en": "The ranger warned João not to touch the sticky substance on the plants.",
+   "ko": "관리원이 주앙에게 식물의 끈적한 물질을 만지지 말라고 했어요.",
+   "blank": "substância",
+   "src": "made"
+  },
+  {
+   "text": "A médica da prova explicou à Ana que nenhuma substância proibida pode ser usada.",
+   "en": "The race doctor explained to Ana that no banned substance can be used.",
+   "ko": "대회 의사는 아나에게 금지 약물은 하나도 쓰면 안 된다고 설명했어요.",
+   "blank": "substância",
+   "src": "made"
+  }
+ ],
  "w|substituir": [
   {
    "text": "O Miguel precisou substituir uma viga que estava rachada.",
@@ -57244,6 +57788,22 @@
    "en": "Ana will need crutches to support her body weight for a few weeks.",
    "ko": "아나는 몇 주 동안 몸무게를 지탱하려면 목발이 필요해요.",
    "blank": "sustentar",
+   "src": "made"
+  }
+ ],
+ "w|sutil": [
+  {
+   "text": "O João sentiu um cheiro sutil de chuva antes de as nuvens chegarem.",
+   "en": "João felt a subtle smell of rain before the clouds arrived.",
+   "ko": "구름이 몰려오기 전에 주앙은 은은한 비 냄새를 맡았어요.",
+   "blank": "sutil",
+   "src": "made"
+  },
+  {
+   "text": "O treinador fez um sinal sutil para a Ana aumentar o ritmo.",
+   "en": "The coach gave Ana a subtle signal to pick up the pace.",
+   "ko": "코치가 아나에게 속도를 올리라고 살짝 신호를 줬어요.",
+   "blank": "sutil",
    "src": "made"
   }
  ],
@@ -58291,6 +58851,22 @@
    "en": "He misses his homeland.",
    "ko": "그 사람은 고향이 그리워.",
    "blank": "terra"
+  }
+ ],
+ "w|terremoto": [
+  {
+   "text": "As rochas partidas do vale foram causadas por um terremoto antigo, contou o guia ao João.",
+   "en": "The broken rocks in the valley were caused by an ancient earthquake, the guide told João.",
+   "ko": "골짜기의 갈라진 바위들은 옛 지진 때문에 생긴 거라고 가이드가 주앙에게 말했어요.",
+   "blank": "terremoto",
+   "src": "made"
+  },
+  {
+   "text": "A Ana contou que, no fim da prova, as pernas tremiam como num terremoto.",
+   "en": "Ana said that, at the end of the race, her legs were shaking like in an earthquake.",
+   "ko": "아나는 경기 끝에 다리가 지진 난 것처럼 떨렸다고 했어요.",
+   "blank": "terremoto",
+   "src": "made"
   }
  ],
  "w|terreno": [
@@ -60455,6 +61031,22 @@
    "src": "made"
   }
  ],
+ "w|tropeçar": [
+  {
+   "text": "No escuro, o João acabou por tropeçar numa raiz e caiu na lama.",
+   "en": "In the dark, João ended up tripping on a root and fell in the mud.",
+   "ko": "어둠 속에서 주앙은 나무뿌리에 걸려 진흙에 넘어졌어요.",
+   "blank": "tropeçar",
+   "src": "made"
+  },
+  {
+   "text": "A Ana olhou para baixo nos últimos metros para não tropeçar nos copos jogados no chão.",
+   "en": "Ana looked down in the last meters so as not to trip on the cups thrown on the ground.",
+   "ko": "아나는 마지막 몇 미터에서 바닥에 버려진 컵에 걸리지 않으려고 아래를 봤어요.",
+   "blank": "tropeçar",
+   "src": "made"
+  }
+ ],
  "w|trovão": [
   {
    "text": "No meio da cerimônia, um trovão fez todos os convidados pularem.",
@@ -61277,6 +61869,38 @@
    "ko": "그 기술의 장점이 뭐예요?",
    "blank": "vantagem",
    "src": "tatoeba:2827912/MarlonX19 en:945535/spockofvulcan"
+  }
+ ],
+ "w|vapor": [
+  {
+   "text": "O vapor da chaleira subia no ar frio da manhã enquanto o João fazia café.",
+   "en": "The steam from the kettle rose in the cold morning air while João made coffee.",
+   "ko": "주앙이 커피를 끓이는 동안 주전자 김이 차가운 아침 공기로 피어올랐어요.",
+   "blank": "vapor",
+   "src": "made"
+  },
+  {
+   "text": "Depois da prova, a Ana relaxou numa sauna a vapor.",
+   "en": "After the race, Ana relaxed in a steam sauna.",
+   "ko": "경기 뒤 아나는 증기 사우나에서 몸을 풀었어요.",
+   "blank": "vapor",
+   "src": "made"
+  }
+ ],
+ "w|vara": [
+  {
+   "text": "O João passou a manhã no rio com uma vara de pescar e não pegou nada.",
+   "en": "João spent the morning at the river with a fishing rod and caught nothing.",
+   "ko": "주앙은 아침 내내 낚싯대를 들고 강에 있었지만 아무것도 못 잡았어요.",
+   "blank": "vara",
+   "src": "made"
+  },
+  {
+   "text": "Na chegada, a Ana passou por baixo de uma vara enfeitada com fitas coloridas.",
+   "en": "At the finish, Ana passed under a pole decorated with colorful ribbons.",
+   "ko": "결승선에서 아나는 색색의 리본으로 꾸민 장대 밑을 지나갔어요.",
+   "blank": "vara",
+   "src": "made"
   }
  ],
  "w|varanda": [
@@ -63209,6 +63833,22 @@
    "ko": "저는 제 익숙한 영역 안에 있는 게 좋아요.",
    "blank": "zona",
    "src": "tatoeba:8140383/lucasdcs en:2785722/robbieheslop"
+  }
+ ],
+ "w|zoológico": [
+  {
+   "text": "O João diz que preferia ver os bichos soltos na mata do que no zoológico.",
+   "en": "João says he'd rather see the animals free in the woods than at the zoo.",
+   "ko": "주앙은 동물원보다 숲에서 자유롭게 사는 동물을 보는 게 좋다고 해요.",
+   "blank": "zoológico",
+   "src": "made"
+  },
+  {
+   "text": "O percurso da maratona passa em frente ao zoológico, e a Ana ouviu os macacos.",
+   "en": "The marathon route passes in front of the zoo, and Ana heard the monkeys.",
+   "ko": "마라톤 코스가 동물원 앞을 지나서 아나는 원숭이 소리를 들었어요.",
+   "blank": "zoológico",
+   "src": "made"
   }
  ],
  "w|zumbir": [

@@ -3935,6 +3935,22 @@
    "blank": "alumno"
   }
  ],
+ "w|alzar": [
+  {
+   "text": "Raúl tuvo que alzar la voz para que lo oyeran al fondo de la sala.",
+   "en": "Raúl had to raise his voice to be heard at the back of the room.",
+   "ko": "라울은 강당 뒤쪽까지 들리게 목소리를 높여야 했어요.",
+   "blank": "alzar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria tuvo que alzar la bandeja por encima de la cabeza para pasar entre la gente.",
+   "en": "Nuria had to lift the tray above her head to get through the crowd.",
+   "ko": "누리아는 사람들 사이를 지나가려고 쟁반을 머리 위로 들어 올려야 했어요.",
+   "blank": "alzar",
+   "src": "made"
+  }
+ ],
  "w|amabilidad": [
   {
    "text": "Raúl agradeció la amabilidad del conserje, que le prestó un paraguas.",
@@ -6377,6 +6393,22 @@
    "blank": "armario"
   }
  ],
+ "w|armenio": [
+  {
+   "text": "Raúl probó un dulce armenio en la feria de las culturas del ayuntamiento.",
+   "en": "Raúl tried an Armenian sweet at the town hall's culture fair.",
+   "ko": "라울은 시청 문화 축제에서 아르메니아 과자를 맛봤어요.",
+   "blank": "armenio",
+   "src": "made"
+  },
+  {
+   "text": "Una clienta le enseñó a Nuria una receta armenia de pan plano.",
+   "en": "A customer showed Nuria an Armenian recipe for flatbread.",
+   "ko": "한 손님이 누리아에게 아르메니아식 납작빵 레시피를 알려 줬어요.",
+   "blank": "armenia",
+   "src": "made"
+  }
+ ],
  "w|armonía": [
   {
    "text": "La consulta de la dentista transmite armonía con su música suave y sus plantas.",
@@ -7549,6 +7581,22 @@
    "blank": "atado"
   }
  ],
+ "w|atadura": [
+  {
+   "text": "Raúl dice que, sin ataduras con ningún partido, puede escuchar mejor a todos.",
+   "en": "Raúl says that, with no ties to any party, he can listen better to everyone.",
+   "ko": "라울은 어느 정당에도 얽매이지 않아서 모두의 말을 더 잘 들을 수 있다고 해요.",
+   "blank": "ataduras",
+   "src": "made"
+  },
+  {
+   "text": "Nuria dejó su trabajo en la oficina para vivir sin ataduras y abrir su panadería.",
+   "en": "Nuria left her office job to live without ties and open her bakery.",
+   "ko": "누리아는 얽매이지 않고 살려고 회사를 그만두고 빵집을 열었어요.",
+   "blank": "ataduras",
+   "src": "made"
+  }
+ ],
  "w|atajo": [
   {
    "text": "Hugo tomó un atajo por el parque para llegar antes a la rueda de prensa.",
@@ -7694,6 +7742,22 @@
    "en": "Paula listened carefully to the story of her friend who lives abroad.",
    "ko": "파울라는 외국에 사는 친구의 이야기를 귀 기울여 들었어요.",
    "blank": "atentamente",
+   "src": "made"
+  }
+ ],
+ "w|atentar": [
+  {
+   "text": "Raúl explicó que el humo de la fábrica podía atentar contra la salud de los vecinos.",
+   "en": "Raúl explained that the smoke from the factory could endanger the residents' health.",
+   "ko": "라울은 공장 연기가 주민 건강을 해칠 수 있다고 설명했어요.",
+   "blank": "atentar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria cree que comer tanta bollería industrial puede atentar contra la salud de los niños.",
+   "en": "Nuria thinks eating so many factory-made pastries can harm children's health.",
+   "ko": "누리아는 공장 빵을 너무 많이 먹으면 아이들 건강을 해칠 수 있다고 생각해요.",
+   "blank": "atentar",
    "src": "made"
   }
  ],
@@ -8733,6 +8797,22 @@
    "blank": "azar"
   }
  ],
+ "w|azotar": [
+  {
+   "text": "Raúl organizó la ayuda a los vecinos cuando la tormenta empezó a azotar la costa.",
+   "en": "Raúl organised help for residents when the storm began to batter the coast.",
+   "ko": "폭풍이 해안을 덮치기 시작하자 라울은 주민 지원을 조직했어요.",
+   "blank": "azotar",
+   "src": "made"
+  },
+  {
+   "text": "El viento empezó a azotar el toldo de la panadería y Nuria lo recogió.",
+   "en": "The wind began to lash the bakery awning and Nuria rolled it up.",
+   "ko": "바람이 빵집 차양을 세게 때리기 시작해서 누리아가 걷었어요.",
+   "blank": "azotar",
+   "src": "made"
+  }
+ ],
  "w|azote": [
   {
    "text": "La sequía fue un azote para los agricultores del valle, Andrés incluido.",
@@ -9723,6 +9803,22 @@
    "src": "made"
   }
  ],
+ "w|bautizar": [
+  {
+   "text": "Raúl propuso bautizar la nueva plaza con el nombre de una maestra del pueblo.",
+   "en": "Raúl proposed naming the new square after a teacher from the town.",
+   "ko": "라울은 새 광장에 마을 선생님 이름을 붙이자고 제안했어요.",
+   "blank": "bautizar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria decidió bautizar su nuevo pan con el nombre de su abuela.",
+   "en": "Nuria decided to name her new bread after her grandmother.",
+   "ko": "누리아는 새로 만든 빵에 할머니 이름을 붙이기로 했어요.",
+   "blank": "bautizar",
+   "src": "made"
+  }
+ ],
  "w|bebé": [
   {
    "text": "El bebé ya se durmió.",
@@ -10606,6 +10702,22 @@
    "en": "Nuria saw in a documentary how a bomber left the city covered in smoke that winter.",
    "ko": "누리아는 다큐멘터리에서 그해 겨울 폭격기가 도시를 연기로 뒤덮는 장면을 봤어요.",
    "blank": "bombardero",
+   "src": "made"
+  }
+ ],
+ "w|bombear": [
+  {
+   "text": "Después de la inundación, Raúl pidió a los bomberos bombear el agua del sótano del ayuntamiento.",
+   "en": "After the flood, Raúl asked the firefighters to pump the water out of the town hall basement.",
+   "ko": "홍수가 난 뒤 라울은 소방관들에게 시청 지하의 물을 퍼내 달라고 했어요.",
+   "blank": "bombear",
+   "src": "made"
+  },
+  {
+   "text": "La máquina de café de Nuria hace ruido al bombear el agua.",
+   "en": "Nuria's coffee machine makes a noise when it pumps the water.",
+   "ko": "누리아의 커피 머신은 물을 끌어올릴 때 소리가 나요.",
+   "blank": "bombear",
    "src": "made"
   }
  ],
@@ -13045,6 +13157,22 @@
    "en": "Talk to the team captain.",
    "ko": "팀 주장한테 말해.",
    "blank": "capitán"
+  }
+ ],
+ "w|capitolio": [
+  {
+   "text": "En un viaje oficial, Raúl visitó el capitolio de una ciudad hermana.",
+   "en": "On an official trip, Raúl visited the capitol of a twin city.",
+   "ko": "라울은 공식 출장 중에 자매 도시의 의사당을 방문했어요.",
+   "blank": "capitolio",
+   "src": "made"
+  },
+  {
+   "text": "Nuria hizo una tarta con forma de capitolio para el aniversario de la ciudad.",
+   "en": "Nuria made a cake shaped like the capitol for the city's anniversary.",
+   "ko": "누리아는 도시 기념일에 의사당 모양 케이크를 만들었어요.",
+   "blank": "capitolio",
+   "src": "made"
   }
  ],
  "w|capítulo": [
@@ -16727,6 +16855,22 @@
    "blank": "collar"
   }
  ],
+ "w|colmo": [
+  {
+   "text": "Para Raúl, perder la llave del despacho el día del pleno fue el colmo.",
+   "en": "For Raúl, losing the office key on the day of the council meeting was the last straw.",
+   "ko": "라울에게 시의회 날 사무실 열쇠를 잃어버린 건 정말 최악이었어요.",
+   "blank": "colmo",
+   "src": "made"
+  },
+  {
+   "text": "Que se rompiera el horno el día de Reyes fue el colmo para Nuria.",
+   "en": "The oven breaking on Epiphany was the last straw for Nuria.",
+   "ko": "주현절에 오븐이 고장 난 건 누리아에게 정말 최악이었어요.",
+   "blank": "colmo",
+   "src": "made"
+  }
+ ],
  "w|colocar": [
   {
    "text": "Voy a colocar las sillas cerca de la ventana.",
@@ -18349,6 +18493,22 @@
    "blank": "condesa"
   }
  ],
+ "w|condescendiente": [
+  {
+   "text": "A Raúl le molestó el tono condescendiente del asesor con los vecinos mayores.",
+   "en": "Raúl was bothered by the adviser's condescending tone with the older residents.",
+   "ko": "라울은 고문이 나이 든 주민들에게 깔보는 말투로 대하는 게 거슬렸어요.",
+   "blank": "condescendiente",
+   "src": "made"
+  },
+  {
+   "text": "A Nuria no le gusta el cliente que le habla en tono condescendiente sobre el pan francés.",
+   "en": "Nuria doesn't like the customer who talks to her in a condescending tone about French bread.",
+   "ko": "누리아는 프랑스 빵 얘기를 하며 가르치려 드는 손님을 좋아하지 않아요.",
+   "blank": "condescendiente",
+   "src": "made"
+  }
+ ],
  "w|condición": [
   {
    "text": "La casa está en buena condición.",
@@ -19307,6 +19467,22 @@
    "blank": "consuelo"
   }
  ],
+ "w|cónsul": [
+  {
+   "text": "Raúl recibió al cónsul que venía a firmar un acuerdo cultural con la ciudad.",
+   "en": "Raúl welcomed the consul who came to sign a cultural agreement with the city.",
+   "ko": "라울은 시와 문화 협약을 맺으러 온 영사를 맞이했어요.",
+   "blank": "cónsul",
+   "src": "made"
+  },
+  {
+   "text": "Un cónsul jubilado compra cada domingo una barra en la panadería de Nuria.",
+   "en": "A retired consul buys a baguette at Nuria's bakery every Sunday.",
+   "ko": "은퇴한 영사 한 분이 일요일마다 누리아의 빵집에서 바게트를 사 가요.",
+   "blank": "cónsul",
+   "src": "made"
+  }
+ ],
  "w|consulta": [
   {
    "text": "Tengo una consulta médica mañana.",
@@ -19951,6 +20127,22 @@
    "en": "Control your speed on this curve.",
    "ko": "이 커브에서는 속도를 조절해.",
    "blank": "Controla"
+  }
+ ],
+ "w|contundente": [
+  {
+   "text": "Raúl dio una respuesta contundente a quienes decían que el parque no se iba a terminar.",
+   "en": "Raúl gave a firm reply to those who said the park would never be finished.",
+   "ko": "라울은 공원이 끝내 완공되지 않을 거라던 사람들에게 단호하게 답했어요.",
+   "blank": "contundente",
+   "src": "made"
+  },
+  {
+   "text": "El éxito de los cruasanes de Nuria es una prueba contundente de que la mantequilla buena importa.",
+   "en": "The success of Nuria's croissants is solid proof that good butter matters.",
+   "ko": "누리아의 크루아상이 잘 팔리는 건 좋은 버터가 중요하다는 확실한 증거예요.",
+   "blank": "contundente",
+   "src": "made"
   }
  ],
  "w|convencer": [
@@ -21027,6 +21219,22 @@
    "en": "They created a group for the trip.",
    "ko": "여행용 단톡을 만들었어.",
    "blank": "Crearon"
+  }
+ ],
+ "w|creatividad": [
+  {
+   "text": "La alcaldesa elogió la creatividad de Raúl para decorar la plaza en las fiestas.",
+   "en": "The mayor praised Raúl's creativity in decorating the square for the festival.",
+   "ko": "시장은 축제 때 광장을 꾸민 라울의 창의력을 칭찬했어요.",
+   "blank": "creatividad",
+   "src": "made"
+  },
+  {
+   "text": "Nuria pone mucha creatividad en las tartas de cumpleaños.",
+   "en": "Nuria puts a lot of creativity into birthday cakes.",
+   "ko": "누리아는 생일 케이크에 창의력을 많이 쏟아요.",
+   "blank": "creatividad",
+   "src": "made"
   }
  ],
  "w|creativo": [
@@ -24333,6 +24541,22 @@
    "blank": "desastre"
   }
  ],
+ "w|desastroso": [
+  {
+   "text": "La primera reunión de Raúl como concejal fue desastrosa: se le olvidó el discurso.",
+   "en": "Raúl's first meeting as a councillor was a disaster: he forgot his speech.",
+   "ko": "라울의 의원으로서 첫 회의는 엉망이었어요. 연설 내용을 잊어버렸거든요.",
+   "blank": "desastrosa",
+   "src": "made"
+  },
+  {
+   "text": "El primer intento de Nuria con el pan de centeno fue desastroso.",
+   "en": "Nuria's first attempt at rye bread was disastrous.",
+   "ko": "누리아가 처음 만든 호밀빵은 완전히 망쳤어요.",
+   "blank": "desastroso",
+   "src": "made"
+  }
+ ],
  "w|desatar": [
   {
    "text": "Nico desató al perro, que estaba atado a un árbol.",
@@ -25329,6 +25553,22 @@
    "blank": "destino"
   }
  ],
+ "w|destripador": [
+  {
+   "text": "En la biblioteca municipal, Raúl encontró una novela antigua sobre un destripador en la niebla de Londres.",
+   "en": "In the town library, Raúl found an old novel about a ripper in the London fog.",
+   "ko": "라울은 시립 도서관에서 런던 안개 속 연쇄 살인마를 다룬 오래된 소설을 찾았어요.",
+   "blank": "destripador",
+   "src": "made"
+  },
+  {
+   "text": "Nuria hizo galletas con forma de cuchillo para una fiesta de disfraces de destripador.",
+   "en": "Nuria made knife-shaped biscuits for a ripper-themed fancy dress party.",
+   "ko": "누리아는 살인마 분장 파티에 쓸 칼 모양 쿠키를 만들었어요.",
+   "blank": "destripador",
+   "src": "made"
+  }
+ ],
  "w|destrozar": [
   {
    "text": "No quiero destrozar tu confianza otra vez.",
@@ -26219,6 +26459,22 @@
    "src": "made"
   }
  ],
+ "w|dinámica": [
+  {
+   "text": "Raúl intentó cambiar la dinámica de las reuniones para que hablaran también los vecinos.",
+   "en": "Raúl tried to change the dynamic of the meetings so that residents could speak too.",
+   "ko": "라울은 주민들도 발언할 수 있도록 회의 방식을 바꾸려고 했어요.",
+   "blank": "dinámica",
+   "src": "made"
+  },
+  {
+   "text": "Nuria conoce bien la dinámica de la panadería: a las ocho llega todo el barrio.",
+   "en": "Nuria knows the bakery's rhythm well: at eight the whole neighbourhood turns up.",
+   "ko": "누리아는 빵집 흐름을 잘 알아요. 여덟 시면 동네 사람들이 다 와요.",
+   "blank": "dinámica",
+   "src": "made"
+  }
+ ],
  "w|dinamita": [
   {
    "text": "En la sala de historia de la minería, Sergio vio una caja vieja de dinamita vacía.",
@@ -26880,6 +27136,22 @@
    "en": "Nuria shot from a spot very far from the basket and still scored.",
    "ko": "누리아는 골대에서 아주 먼 곳에서 슛을 던졌는데도 골을 넣었어요.",
    "blank": "distante",
+   "src": "made"
+  }
+ ],
+ "w|distinción": [
+  {
+   "text": "El ayuntamiento le dio a Raúl una distinción por sus años de servicio.",
+   "en": "The town hall gave Raúl an award for his years of service.",
+   "ko": "시청은 라울에게 오랜 근무를 기리는 표창을 줬어요.",
+   "blank": "distinción",
+   "src": "made"
+  },
+  {
+   "text": "Nuria hace distinción entre el pan de molde y el pan de verdad.",
+   "en": "Nuria draws a distinction between sliced bread and real bread.",
+   "ko": "누리아는 식빵과 진짜 빵을 구별해요.",
+   "blank": "distinción",
    "src": "made"
   }
  ],
@@ -29069,6 +29341,22 @@
    "src": "made"
   }
  ],
+ "w|empatar": [
+  {
+   "text": "La votación de la propuesta de Raúl acabó por empatar y tuvo que repetirse.",
+   "en": "The vote on Raúl's proposal ended in a tie and had to be repeated.",
+   "ko": "라울의 안건 투표가 동점으로 끝나서 다시 해야 했어요.",
+   "blank": "empatar",
+   "src": "made"
+  },
+  {
+   "text": "En la radio de la panadería, Nuria oyó que su equipo había conseguido empatar en el último minuto.",
+   "en": "On the bakery radio, Nuria heard that her team had managed to equalise in the last minute.",
+   "ko": "누리아는 빵집 라디오로 응원하는 팀이 마지막 순간에 동점을 만들었다는 걸 들었어요.",
+   "blank": "empatar",
+   "src": "made"
+  }
+ ],
  "w|empate": [
   {
    "text": "El partido terminó en empate y Diego no pudo ocultar su decepción.",
@@ -30839,6 +31127,22 @@
    "blank": "error"
   }
  ],
+ "w|escabullirse": [
+  {
+   "text": "Raúl intentó escabullirse de la reunión aburrida, pero la alcaldesa lo vio.",
+   "en": "Raúl tried to slip out of the boring meeting, but the mayor saw him.",
+   "ko": "라울은 지루한 회의에서 몰래 빠져나가려 했지만 시장에게 들켰어요.",
+   "blank": "escabullirse",
+   "src": "made"
+  },
+  {
+   "text": "El gato del vecino intentó escabullirse dentro de la panadería de Nuria.",
+   "en": "The neighbour's cat tried to sneak into Nuria's bakery.",
+   "ko": "이웃집 고양이가 누리아의 빵집 안으로 몰래 들어오려고 했어요.",
+   "blank": "escabullirse",
+   "src": "made"
+  }
+ ],
  "w|escala": [
   {
    "text": "Subimos la escala del edificio despacio.",
@@ -32017,6 +32321,22 @@
    "blank": "esposa"
   }
  ],
+ "w|esposar": [
+  {
+   "text": "Raúl vio en las noticias cómo la policía iba a esposar a un ladrón de bicicletas.",
+   "en": "Raúl saw on the news the police about to handcuff a bicycle thief.",
+   "ko": "라울은 뉴스에서 경찰이 자전거 도둑에게 수갑을 채우려는 장면을 봤어요.",
+   "blank": "esposar",
+   "src": "made"
+  },
+  {
+   "text": "La hija de Nuria jugaba a esposar a su hermano con unas esposas de juguete.",
+   "en": "Nuria's daughter was playing at handcuffing her brother with toy handcuffs.",
+   "ko": "누리아의 딸은 장난감 수갑으로 남동생에게 수갑 채우는 놀이를 했어요.",
+   "blank": "esposar",
+   "src": "made"
+  }
+ ],
  "w|esposo": [
   {
    "text": "Mi esposo llega tarde hoy.",
@@ -32465,6 +32785,22 @@
    "en": "He stood still like a statue.",
    "ko": "동상처럼 가만히 서 있었어.",
    "blank": "estatua"
+  }
+ ],
+ "w|estatura": [
+  {
+   "text": "El retrato del primer alcalde muestra a un hombre de baja estatura, como Raúl.",
+   "en": "The portrait of the first mayor shows a short man, like Raúl.",
+   "ko": "초대 시장의 초상화 속 인물은 라울처럼 키가 작아요.",
+   "blank": "estatura",
+   "src": "made"
+  },
+  {
+   "text": "Nuria colocó los pasteles en la balda de abajo, a la estatura de los niños.",
+   "en": "Nuria put the cakes on the bottom shelf, at children's height.",
+   "ko": "누리아는 케이크를 아이들 키 높이인 아래 선반에 놓았어요.",
+   "blank": "estatura",
+   "src": "made"
   }
  ],
  "w|estatus": [
@@ -35277,6 +35613,22 @@
    "en": "The name has a feminine form in Spanish.",
    "ko": "그 이름은 스페인어에서 여성형이야.",
    "blank": "femenina"
+  }
+ ],
+ "w|feminista": [
+  {
+   "text": "Raúl apoyó la exposición sobre el movimiento feminista en la historia del pueblo.",
+   "en": "Raúl supported the exhibition about the feminist movement in the town's history.",
+   "ko": "라울은 마을 역사 속 여성 운동에 관한 전시를 지지했어요.",
+   "blank": "feminista",
+   "src": "made"
+  },
+  {
+   "text": "En el escaparate, Nuria colgó el cartel de una charla feminista en la biblioteca.",
+   "en": "In the shop window, Nuria hung a poster for a feminist talk at the library.",
+   "ko": "누리아는 진열창에 도서관에서 열리는 여성주의 강연 포스터를 붙였어요.",
+   "blank": "feminista",
+   "src": "made"
   }
  ],
  "w|fenomenal": [
@@ -42523,6 +42875,22 @@
    "blank": "incidente"
   }
  ],
+ "w|inclinación": [
+  {
+   "text": "Raúl revisó la inclinación de la rampa para que pudieran subir las sillas de ruedas.",
+   "en": "Raúl checked the slope of the ramp so that wheelchairs could get up it.",
+   "ko": "라울은 휠체어가 올라갈 수 있게 경사로의 기울기를 확인했어요.",
+   "blank": "inclinación",
+   "src": "made"
+  },
+  {
+   "text": "Nuria siempre tuvo inclinación por la repostería, desde que era pequeña.",
+   "en": "Nuria always had a leaning towards baking, ever since she was little.",
+   "ko": "누리아는 어릴 때부터 늘 제과에 관심이 있었어요.",
+   "blank": "inclinación",
+   "src": "made"
+  }
+ ],
  "w|inclinarse": [
   {
    "text": "Suele inclinarse hacia opiniones moderadas.",
@@ -43275,6 +43643,22 @@
    "src": "made"
   }
  ],
+ "w|influyente": [
+  {
+   "text": "Raúl se reunió con una empresaria muy influyente en el pueblo.",
+   "en": "Raúl met with a very influential businesswoman in the town.",
+   "ko": "라울은 마을에서 아주 영향력 있는 사업가를 만났어요.",
+   "blank": "influyente",
+   "src": "made"
+  },
+  {
+   "text": "Una crítica gastronómica muy influyente escribió sobre la panadería de Nuria.",
+   "en": "A very influential food critic wrote about Nuria's bakery.",
+   "ko": "아주 영향력 있는 음식 평론가가 누리아의 빵집에 대해 글을 썼어요.",
+   "blank": "influyente",
+   "src": "made"
+  }
+ ],
  "w|información": [
   {
    "text": "Necesito más información.",
@@ -43333,6 +43717,22 @@
    "en": "I'll let you know when I find out something.",
    "ko": "뭔가 알면 알려줄게.",
    "blank": "informar"
+  }
+ ],
+ "w|informativo": [
+  {
+   "text": "Raúl colgó un panel informativo sobre las obras en la puerta del ayuntamiento.",
+   "en": "Raúl put up an information board about the works on the town hall door.",
+   "ko": "라울은 시청 문에 공사 안내판을 붙였어요.",
+   "blank": "informativo",
+   "src": "made"
+  },
+  {
+   "text": "Nuria escucha un programa informativo de la radio mientras amasa.",
+   "en": "Nuria listens to a radio news programme while she kneads.",
+   "ko": "누리아는 반죽하면서 라디오 뉴스 프로그램을 들어요.",
+   "blank": "informativo",
+   "src": "made"
   }
  ],
  "w|informe": [
@@ -47877,6 +48277,22 @@
    "blank": "liga"
   }
  ],
+ "w|ligado": [
+  {
+   "text": "La historia de la familia de Raúl está muy ligada al ayuntamiento del pueblo.",
+   "en": "The history of Raúl's family is closely tied to the town hall.",
+   "ko": "라울 집안의 역사는 마을 시청과 깊이 연결돼 있어요.",
+   "blank": "ligada",
+   "src": "made"
+  },
+  {
+   "text": "Nuria siente que su vida está ligada al olor del pan recién hecho.",
+   "en": "Nuria feels her life is bound up with the smell of fresh bread.",
+   "ko": "누리아는 자기 삶이 갓 구운 빵 냄새와 이어져 있다고 느껴요.",
+   "blank": "ligada",
+   "src": "made"
+  }
+ ],
  "w|ligeramente": [
   {
    "text": "La pared quedó ligeramente torcida, y Pablo la volvió a levantar.",
@@ -49705,6 +50121,22 @@
    "src": "made"
   }
  ],
+ "w|manifestar": [
+  {
+   "text": "Raúl dejó que los vecinos se pudieran manifestar delante del ayuntamiento sin problemas.",
+   "en": "Raúl allowed the residents to demonstrate in front of the town hall without any trouble.",
+   "ko": "라울은 주민들이 시청 앞에서 문제없이 시위할 수 있게 했어요.",
+   "blank": "manifestar",
+   "src": "made"
+  },
+  {
+   "text": "Los clientes de Nuria quisieron manifestar su apoyo cuando subió el alquiler del local.",
+   "en": "Nuria's customers wanted to show their support when the shop's rent went up.",
+   "ko": "가게 임대료가 오르자 누리아의 손님들은 지지를 보여 주고 싶어 했어요.",
+   "blank": "manifestar",
+   "src": "made"
+  }
+ ],
  "w|manifiesto": [
   {
    "text": "Para la clase de arte, Raúl leyó el manifiesto de un grupo de pintores vanguardistas.",
@@ -51165,6 +51597,22 @@
    "src": "made"
   }
  ],
+ "w|memorable": [
+  {
+   "text": "La inauguración del nuevo puente fue una tarde memorable para Raúl.",
+   "en": "The opening of the new bridge was a memorable afternoon for Raúl.",
+   "ko": "새 다리 개통식은 라울에게 잊지 못할 오후였어요.",
+   "blank": "memorable",
+   "src": "made"
+  },
+  {
+   "text": "La tarta de boda que hizo Nuria fue memorable por su tamaño.",
+   "en": "The wedding cake Nuria made was memorable for its size.",
+   "ko": "누리아가 만든 웨딩 케이크는 크기 때문에 기억에 남았어요.",
+   "blank": "memorable",
+   "src": "made"
+  }
+ ],
  "w|memoria": [
   {
    "text": "Tengo mala memoria para nombres.",
@@ -51177,6 +51625,22 @@
    "en": "He lost his memory after the blow.",
    "ko": "충격 후에 기억을 잃었어.",
    "blank": "memoria"
+  }
+ ],
+ "w|mención": [
+  {
+   "text": "En su discurso, Raúl hizo una mención especial a los voluntarios de la inundación.",
+   "en": "In his speech, Raúl gave a special mention to the flood volunteers.",
+   "ko": "라울은 연설에서 홍수 때 도운 자원봉사자들을 특별히 언급했어요.",
+   "blank": "mención",
+   "src": "made"
+  },
+  {
+   "text": "La guía de la ciudad hace una mención a las empanadas de Nuria.",
+   "en": "The city guide gives a mention to Nuria's pasties.",
+   "ko": "도시 안내서에 누리아의 엠파나다가 언급돼 있어요.",
+   "blank": "mención",
+   "src": "made"
   }
  ],
  "w|mencionar": [
@@ -52162,6 +52626,22 @@
    "en": "A retired miner asked Elena to recover the photos of his grandchildren.",
    "ko": "은퇴한 광부 한 분이 손주 사진을 되살려 달라고 엘레나에게 부탁했어요.",
    "blank": "minero",
+   "src": "made"
+  }
+ ],
+ "w|miniatura": [
+  {
+   "text": "En la entrada del ayuntamiento hay una maqueta en miniatura del casco antiguo que cuida Raúl.",
+   "en": "At the town hall entrance there is a miniature model of the old town that Raúl looks after.",
+   "ko": "시청 입구에는 라울이 관리하는 구시가지 축소 모형이 있어요.",
+   "blank": "miniatura",
+   "src": "made"
+  },
+  {
+   "text": "Nuria hace pasteles en miniatura para las fiestas de cumpleaños de los niños.",
+   "en": "Nuria makes miniature cakes for children's birthday parties.",
+   "ko": "누리아는 아이들 생일 파티용 미니 케이크를 만들어요.",
+   "blank": "miniatura",
    "src": "made"
   }
  ],
@@ -53723,6 +54203,22 @@
    "src": "made"
   }
  ],
+ "w|murmurar": [
+  {
+   "text": "Mientras hablaba Raúl, varios concejales empezaron a murmurar al fondo.",
+   "en": "While Raúl was speaking, several councillors began to murmur at the back.",
+   "ko": "라울이 말하는 동안 뒤쪽에서 의원 몇 명이 수군거리기 시작했어요.",
+   "blank": "murmurar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria oyó a dos clientas murmurar sobre el precio del pan.",
+   "en": "Nuria heard two customers muttering about the price of bread.",
+   "ko": "누리아는 손님 두 명이 빵값을 두고 수군거리는 걸 들었어요.",
+   "blank": "murmurar",
+   "src": "made"
+  }
+ ],
  "w|muro": [
   {
    "text": "Pintaron el muro del patio de azul.",
@@ -54859,6 +55355,22 @@
    "en": "Write your name here.",
    "ko": "여기 이름 적어.",
    "blank": "nombre"
+  }
+ ],
+ "w|nominación": [
+  {
+   "text": "Raúl celebró la nominación de la biblioteca municipal a un premio regional.",
+   "en": "Raúl celebrated the municipal library's nomination for a regional award.",
+   "ko": "라울은 시립 도서관이 지역 상 후보에 오른 걸 축하했어요.",
+   "blank": "nominación",
+   "src": "made"
+  },
+  {
+   "text": "Nuria se enteró de su nominación al premio a la mejor panadería de la región.",
+   "en": "Nuria found out about her nomination for the region's best bakery award.",
+   "ko": "누리아는 지역 최고 빵집 상 후보에 올랐다는 소식을 들었어요.",
+   "blank": "nominación",
+   "src": "made"
   }
  ],
  "w|nominar": [
@@ -56611,6 +57123,22 @@
    "src": "made"
   }
  ],
+ "w|oprimir": [
+  {
+   "text": "Raúl tuvo que oprimir el botón rojo para pedir la palabra en el pleno.",
+   "en": "Raúl had to press the red button to ask to speak at the council meeting.",
+   "ko": "라울은 시의회에서 발언하려고 빨간 버튼을 눌러야 했어요.",
+   "blank": "oprimir",
+   "src": "made"
+  },
+  {
+   "text": "Nuria tuvo que oprimir la masa con las palmas para sacar el aire.",
+   "en": "Nuria had to press down on the dough with her palms to get the air out.",
+   "ko": "누리아는 반죽의 공기를 빼려고 손바닥으로 꾹꾹 눌러야 했어요.",
+   "blank": "oprimir",
+   "src": "made"
+  }
+ ],
  "w|optimista": [
   {
    "text": "A pesar de todo, el tono de la carta de Pablo era optimista.",
@@ -58261,6 +58789,22 @@
    "en": "There was a train stoppage this morning.",
    "ko": "오늘 아침에 열차 운행이 멈췄어.",
    "blank": "paro"
+  }
+ ],
+ "w|parpadear": [
+  {
+   "text": "Las luces del salón de plenos empezaron a parpadear en mitad del discurso de Raúl.",
+   "en": "The lights in the council chamber started to flicker in the middle of Raúl's speech.",
+   "ko": "라울이 연설하는 도중에 회의장 조명이 깜빡이기 시작했어요.",
+   "blank": "parpadear",
+   "src": "made"
+  },
+  {
+   "text": "La luz del horno empezó a parpadear y Nuria llamó al técnico.",
+   "en": "The oven light started to flicker and Nuria called the technician.",
+   "ko": "오븐 불빛이 깜빡이기 시작해서 누리아는 기사를 불렀어요.",
+   "blank": "parpadear",
+   "src": "made"
   }
  ],
  "w|parque": [
@@ -60873,6 +61417,22 @@
    "en": "They found a pirate ship in the museum.",
    "ko": "박물관에서 해적선을 발견했어.",
    "blank": "pirata"
+  }
+ ],
+ "w|pisada": [
+  {
+   "text": "Raúl vio una pisada de barro en la alfombra recién limpia del salón.",
+   "en": "Raúl saw a muddy footprint on the freshly cleaned carpet of the hall.",
+   "ko": "라울은 막 청소한 홀 카펫에 진흙 발자국이 찍힌 걸 봤어요.",
+   "blank": "pisada",
+   "src": "made"
+  },
+  {
+   "text": "Nuria vio la pisada de un gato en la harina que había caído al suelo.",
+   "en": "Nuria saw a cat's paw print in the flour that had fallen on the floor.",
+   "ko": "누리아는 바닥에 쏟아진 밀가루에서 고양이 발자국을 봤어요.",
+   "blank": "pisada",
+   "src": "made"
   }
  ],
  "w|pisar": [
@@ -67992,6 +68552,22 @@
    "en": "Nuria doesn't hold a grudge against anyone.",
    "ko": "누리아는 누구에게도 앙심을 품지 않아요.",
    "blank": "rencor",
+   "src": "made"
+  }
+ ],
+ "w|rendición": [
+  {
+   "text": "En el museo del ayuntamiento, Raúl explicó a unos alumnos un cuadro sobre la rendición de una ciudad antigua.",
+   "en": "In the town hall museum, Raúl explained to some pupils a painting about the surrender of an ancient city.",
+   "ko": "라울은 시청 박물관에서 학생들에게 옛 도시의 항복을 그린 그림을 설명했어요.",
+   "blank": "rendición",
+   "src": "made"
+  },
+  {
+   "text": "El vecino de Nuria anunció su rendición: no volvería a intentar hacer pan en casa.",
+   "en": "Nuria's neighbour announced his surrender: he would never again try to make bread at home.",
+   "ko": "누리아의 이웃은 항복을 선언했어요. 다시는 집에서 빵을 굽지 않겠대요.",
+   "blank": "rendición",
    "src": "made"
   }
  ],
@@ -76705,6 +77281,22 @@
    "src": "made"
   }
  ],
+ "w|temible": [
+  {
+   "text": "La oposición tiene una portavoz temible en los debates, y Raúl siempre se prepara a fondo.",
+   "en": "The opposition has a formidable spokeswoman in debates, and Raúl always prepares thoroughly.",
+   "ko": "야당에는 토론에서 무서운 대변인이 있어서 라울은 늘 철저히 준비해요.",
+   "blank": "temible",
+   "src": "made"
+  },
+  {
+   "text": "La cola de los sábados en la panadería de Nuria es temible.",
+   "en": "The Saturday queue at Nuria's bakery is fearsome.",
+   "ko": "토요일 누리아네 빵집 줄은 어마어마해요.",
+   "blank": "temible",
+   "src": "made"
+  }
+ ],
  "w|temor": [
   {
    "text": "Siente temor ante lo desconocido.",
@@ -80777,6 +81369,22 @@
    "src": "made"
   }
  ],
+ "w|variación": [
+  {
+   "text": "Raúl notó una pequeña variación en las cifras del presupuesto y pidió que lo revisaran.",
+   "en": "Raúl noticed a small variation in the budget figures and asked for it to be checked.",
+   "ko": "라울은 예산 수치에서 작은 차이를 발견하고 다시 확인해 달라고 했어요.",
+   "blank": "variación",
+   "src": "made"
+  },
+  {
+   "text": "Nuria prueba cada semana una variación de la receta de magdalenas.",
+   "en": "Nuria tries a variation of the muffin recipe every week.",
+   "ko": "누리아는 매주 머핀 레시피를 조금씩 바꿔 봐요.",
+   "blank": "variación",
+   "src": "made"
+  }
+ ],
  "w|variar": [
   {
    "text": "Hugo intenta variar un poco su forma de hablar en cada función.",
@@ -81781,6 +82389,22 @@
    "src": "made"
   }
  ],
+ "w|vicioso": [
+  {
+   "text": "Raúl advirtió que la falta de vivienda se había convertido en un círculo vicioso.",
+   "en": "Raúl warned that the housing shortage had turned into a vicious circle.",
+   "ko": "라울은 주택 부족이 악순환이 됐다고 경고했어요.",
+   "blank": "vicioso",
+   "src": "made"
+  },
+  {
+   "text": "Nuria reconoce que madrugar, tomar café y dormir mal la tenía metida en un círculo vicioso.",
+   "en": "Nuria admits that getting up early, drinking coffee and sleeping badly had her stuck in a vicious circle.",
+   "ko": "누리아는 새벽에 일어나고 커피 마시고 잠을 설치는 악순환에 빠져 있었다고 인정해요.",
+   "blank": "vicioso",
+   "src": "made"
+  }
+ ],
  "w|víctima": [
   {
    "text": "La víctima necesita ayuda.",
@@ -81937,6 +82561,22 @@
    "en": "The food from Vietnam is very aromatic.",
    "ko": "베트남 음식은 향이 아주 좋아.",
    "blank": "Vietnam"
+  }
+ ],
+ "w|vietnamita": [
+  {
+   "text": "En la feria de comida del ayuntamiento, a Raúl le encantó el puesto vietnamita.",
+   "en": "At the town hall food fair, Raúl loved the Vietnamese stall.",
+   "ko": "라울은 시청 음식 축제에서 베트남 음식 노점이 정말 마음에 들었어요.",
+   "blank": "vietnamita",
+   "src": "made"
+  },
+  {
+   "text": "Nuria aprendió a hacer un bocadillo vietnamita con pan crujiente.",
+   "en": "Nuria learned to make a Vietnamese sandwich with crusty bread.",
+   "ko": "누리아는 바삭한 빵으로 베트남식 샌드위치 만드는 법을 배웠어요.",
+   "blank": "vietnamita",
+   "src": "made"
   }
  ],
  "w|vigilancia": [
