@@ -1279,6 +1279,22 @@
    "blank": "aereo"
   }
  ],
+ "w|aeroplano": [
+  {
+   "text": "Gli zii di Matteo arrivano in aeroplano dalla Sicilia.",
+   "en": "Matteo's uncle and aunt arrive by plane from Sicily.",
+   "ko": "마테오의 삼촌 부부는 시칠리아에서 비행기를 타고 와요.",
+   "blank": "aeroplano",
+   "src": "made"
+  },
+  {
+   "text": "Un bambino nel reparto di Sara disegna un aeroplano su ogni foglio.",
+   "en": "A child on Sara's ward draws a plane on every sheet of paper.",
+   "ko": "사라의 병동에 있는 아이는 종이마다 비행기를 그려요.",
+   "blank": "aeroplano",
+   "src": "made"
+  }
+ ],
  "w|aeroporto": [
   {
    "text": "L'aeroporto è lontano dal centro.",
@@ -1411,6 +1427,22 @@
    "en": "The dog shows affection to everyone.",
    "ko": "그 개는 모두에게 애정을 보여.",
    "blank": "affetto"
+  }
+ ],
+ "w|affettuoso": [
+  {
+   "text": "La nonna di Matteo gli dà un abbraccio affettuoso prima della cerimonia.",
+   "en": "Matteo's grandmother gives him an affectionate hug before the ceremony.",
+   "ko": "할머니가 식 전에 마테오를 다정하게 안아 줘요.",
+   "blank": "affettuoso",
+   "src": "made"
+  },
+  {
+   "text": "Con i bambini malati Sara è sempre dolce e affettuosa.",
+   "en": "With sick children Sara is always sweet and affectionate.",
+   "ko": "아픈 아이들에게 사라는 늘 다정하고 상냥해요.",
+   "blank": "affettuosa",
+   "src": "made"
   }
  ],
  "w|affidabile": [
@@ -2148,6 +2180,22 @@
    "en": "Anna studies the effects of a food additive on cells.",
    "ko": "안나는 한 식품 첨가물이 세포에 미치는 영향을 연구해요.",
    "blank": "alimentare",
+   "src": "made"
+  }
+ ],
+ "w|alimento": [
+  {
+   "text": "Matteo chiede al catering di indicare ogni alimento che contiene glutine.",
+   "en": "Matteo asks the caterers to mark every food that contains gluten.",
+   "ko": "마테오는 출장 요리 업체에 글루텐이 든 음식을 모두 표시해 달라고 해요.",
+   "blank": "alimento",
+   "src": "made"
+  },
+  {
+   "text": "Sara spiega a un paziente quale alimento evitare dopo l'operazione.",
+   "en": "Sara explains to a patient which food to avoid after the operation.",
+   "ko": "사라는 환자에게 수술 후 피해야 할 음식을 설명해요.",
+   "blank": "alimento",
    "src": "made"
   }
  ],
@@ -7801,6 +7849,22 @@
    "blank": "bere"
   }
  ],
+ "w|berretto": [
+  {
+   "text": "Il nipotino di Matteo si rifiuta di togliersi il berretto in chiesa.",
+   "en": "Matteo's little nephew refuses to take off his cap in church.",
+   "ko": "마테오의 어린 조카는 성당에서 모자를 벗지 않겠다고 버텨요.",
+   "blank": "berretto",
+   "src": "made"
+  },
+  {
+   "text": "A una paziente anziana Sara porta un berretto di lana per la notte.",
+   "en": "Sara brings an elderly patient a woollen hat for the night.",
+   "ko": "사라는 나이 든 환자에게 밤에 쓸 털모자를 가져다줘요.",
+   "blank": "berretto",
+   "src": "made"
+  }
+ ],
  "w|bersaglio": [
   {
    "text": "Ha centrato il bersaglio al primo colpo.",
@@ -8800,6 +8864,22 @@
    "en": "For the end-of-course dinner Martina has a budget of fifty euros.",
    "ko": "수료 만찬에 마르티나가 쓸 수 있는 예산은 오십 유로예요.",
    "blank": "budget",
+   "src": "made"
+  }
+ ],
+ "w|budino": [
+  {
+   "text": "Al posto della torta, Matteo vuole un budino al cioccolato enorme.",
+   "en": "Instead of the cake, Matteo wants a huge chocolate pudding.",
+   "ko": "마테오는 케이크 대신 커다란 초콜릿 푸딩을 원해요.",
+   "blank": "budino",
+   "src": "made"
+  },
+  {
+   "text": "Per merenda Sara dà ai bambini del reparto un budino alla vaniglia.",
+   "en": "For a snack Sara gives the children on the ward a vanilla pudding.",
+   "ko": "간식으로 사라는 병동 아이들에게 바닐라 푸딩을 줘요.",
+   "blank": "budino",
    "src": "made"
   }
  ],
@@ -12779,6 +12859,22 @@
    "src": "made"
   }
  ],
+ "w|cognata": [
+  {
+   "text": "La cognata di Matteo ha organizzato tutti i fiori.",
+   "en": "Matteo's sister-in-law arranged all the flowers.",
+   "ko": "마테오의 처제가 꽃 장식을 전부 맡았어요.",
+   "blank": "cognata",
+   "src": "made"
+  },
+  {
+   "text": "La cognata di Sara è ricoverata due piani più su.",
+   "en": "Sara's sister-in-law is in hospital two floors up.",
+   "ko": "사라의 시누이가 두 층 위에 입원해 있어요.",
+   "blank": "cognata",
+   "src": "made"
+  }
+ ],
  "w|cognato": [
   {
    "text": "Mio cognato lavora in banca.",
@@ -13279,6 +13375,22 @@
    "en": "The knife is too sharp.",
    "ko": "칼이 너무 날카로워.",
    "blank": "coltello"
+  }
+ ],
+ "w|colto": [
+  {
+   "text": "Il prete che sposa Matteo è un uomo colto che cita Dante nell'omelia.",
+   "en": "The priest marrying Matteo is a cultured man who quotes Dante in the homily.",
+   "ko": "마테오의 혼배 미사를 집전하는 신부님은 강론에서 단테를 인용하는 교양 있는 분이에요.",
+   "blank": "colto",
+   "src": "made"
+  },
+  {
+   "text": "Il primario del reparto di Sara è un uomo colto che ama l'opera.",
+   "en": "The head of Sara's ward is a cultured man who loves opera.",
+   "ko": "사라네 병동 과장은 오페라를 좋아하는 교양 있는 사람이에요.",
+   "blank": "colto",
+   "src": "made"
   }
  ],
  "w|colui": [
@@ -16795,6 +16907,22 @@
    "blank": "costume"
   }
  ],
+ "w|cotone": [
+  {
+   "text": "La camicia di Matteo è di cotone bianco, stirata dalla mamma.",
+   "en": "Matteo's shirt is white cotton, ironed by his mum.",
+   "ko": "마테오의 셔츠는 엄마가 다려 준 흰 면 셔츠예요.",
+   "blank": "cotone",
+   "src": "made"
+  },
+  {
+   "text": "Sara pulisce la ferita con un batuffolo di cotone.",
+   "en": "Sara cleans the wound with a cotton ball.",
+   "ko": "사라는 솜뭉치로 상처를 닦아요.",
+   "blank": "cotone",
+   "src": "made"
+  }
+ ],
  "w|cotta": [
   {
    "text": "Ha una cotta per il nuovo collega.",
@@ -19907,6 +20035,22 @@
    "src": "made"
   }
  ],
+ "w|discendente": [
+  {
+   "text": "La sposa di Matteo è una discendente di una famiglia di pescatori.",
+   "en": "Matteo's bride is a descendant of a family of fishermen.",
+   "ko": "마테오의 신부는 어부 집안의 후손이에요.",
+   "blank": "discendente",
+   "src": "made"
+  },
+  {
+   "text": "Un paziente racconta a Sara di essere un discendente di Garibaldi.",
+   "en": "A patient tells Sara he's a descendant of Garibaldi.",
+   "ko": "한 환자가 자기가 가리발디의 후손이라고 사라에게 말해요.",
+   "blank": "discendente",
+   "src": "made"
+  }
+ ],
  "w|discendere": [
   {
    "text": "Paolo comincia a discendere il pendio con cautela, tenendosi ai rami.",
@@ -19965,6 +20109,22 @@
    "en": "Don't make such a long speech.",
    "ko": "그렇게 긴 말 하지 마.",
    "blank": "discorso"
+  }
+ ],
+ "w|discoteca": [
+  {
+   "text": "Dopo il ricevimento gli amici portano Matteo in discoteca.",
+   "en": "After the reception his friends take Matteo to a club.",
+   "ko": "피로연이 끝나고 친구들이 마테오를 클럽에 데려가요.",
+   "blank": "discoteca",
+   "src": "made"
+  },
+  {
+   "text": "Un ragazzo arriva al pronto soccorso di Sara dopo una caduta in discoteca.",
+   "en": "A young man arrives at Sara's A&E after a fall at a club.",
+   "ko": "한 청년이 클럽에서 넘어져 사라가 일하는 응급실에 와요.",
+   "blank": "discoteca",
+   "src": "made"
   }
  ],
  "w|discreto": [
@@ -21524,6 +21684,22 @@
    "en": "The castle above Laura's village was a duke's summer residence.",
    "ko": "라우라네 마을 위 성은 한 공작의 여름 별장이었어요.",
    "blank": "duca",
+   "src": "made"
+  }
+ ],
+ "w|duchessa": [
+  {
+   "text": "Gli amici di Matteo dicono che la sposa sembra una duchessa.",
+   "en": "Matteo's friends say the bride looks like a duchess.",
+   "ko": "마테오의 친구들은 신부가 공작부인 같다고 해요.",
+   "blank": "duchessa",
+   "src": "made"
+  },
+  {
+   "text": "In una commedia vista in televisione, Sara ride per una duchessa che finge di stare male.",
+   "en": "In a comedy on TV, Sara laughs at a duchess pretending to be ill.",
+   "ko": "TV 코미디에서 아픈 척하는 공작부인을 보고 사라가 웃어요.",
+   "blank": "duchessa",
    "src": "made"
   }
  ],
@@ -24795,6 +24971,22 @@
    "blank": "fedele"
   }
  ],
+ "w|fedeltà": [
+  {
+   "text": "Davanti al prete Matteo promette fedeltà per tutta la vita.",
+   "en": "Before the priest Matteo promises faithfulness for life.",
+   "ko": "신부님 앞에서 마테오는 평생 정절을 약속해요.",
+   "blank": "fedeltà",
+   "src": "made"
+  },
+  {
+   "text": "Il marito di una paziente le resta accanto ogni giorno, e Sara ammira la sua fedeltà.",
+   "en": "A patient's husband stays by her side every day, and Sara admires his devotion.",
+   "ko": "한 환자의 남편이 매일 곁을 지키자 사라는 그의 한결같음에 감탄해요.",
+   "blank": "fedeltà",
+   "src": "made"
+  }
+ ],
  "w|federale": [
   {
    "text": "La polizia federale sta indagando sul caso.",
@@ -24880,6 +25072,22 @@
    "en": "The campsite manager congratulated Giulia on how tidy her pitch was.",
    "ko": "캠핑장 관리인은 자리를 깔끔하게 정리한 줄리아를 칭찬했어요.",
    "blank": "felicitato",
+   "src": "made"
+  }
+ ],
+ "w|felpa": [
+  {
+   "text": "A fine serata Matteo si toglie la giacca e si mette una felpa.",
+   "en": "At the end of the evening Matteo takes off his jacket and puts on a sweatshirt.",
+   "ko": "밤이 깊어지자 마테오는 재킷을 벗고 맨투맨을 입어요.",
+   "blank": "felpa",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il turno di notte Sara si mette una felpa e torna a casa.",
+   "en": "After the night shift Sara puts on a sweatshirt and goes home.",
+   "ko": "야간 근무가 끝나면 사라는 맨투맨을 걸치고 집에 가요.",
+   "blank": "felpa",
    "src": "made"
   }
  ],
@@ -26873,6 +27081,22 @@
    "blank": "fratello"
   }
  ],
+ "w|fratellone": [
+  {
+   "text": "Il fratellone di Matteo gli sistema la cravatta prima di entrare in chiesa.",
+   "en": "Matteo's big brother straightens his tie before he goes into the church.",
+   "ko": "마테오의 큰형이 성당에 들어가기 전에 넥타이를 고쳐 매 줘요.",
+   "blank": "fratellone",
+   "src": "made"
+  },
+  {
+   "text": "Un bambino ricoverato chiede a Sara quando arriva il suo fratellone.",
+   "en": "A child in hospital asks Sara when his big brother is coming.",
+   "ko": "입원한 아이가 큰형은 언제 오냐고 사라에게 물어요.",
+   "blank": "fratellone",
+   "src": "made"
+  }
+ ],
  "w|frattempo": [
   {
    "text": "Nel frattempo preparo la cena.",
@@ -28007,6 +28231,22 @@
    "blank": "genere"
   }
  ],
+ "w|genero": [
+  {
+   "text": "Il suocero di Matteo dice a tutti che non poteva desiderare un genero migliore.",
+   "en": "Matteo's father-in-law tells everyone he couldn't wish for a better son-in-law.",
+   "ko": "마테오의 장인은 이보다 좋은 사위는 없다고 모두에게 말해요.",
+   "blank": "genero",
+   "src": "made"
+  },
+  {
+   "text": "Una paziente anziana chiede a Sara di chiamare il genero.",
+   "en": "An elderly patient asks Sara to call her son-in-law.",
+   "ko": "나이 든 환자가 사라에게 사위에게 전화해 달라고 해요.",
+   "blank": "genero",
+   "src": "made"
+  }
+ ],
  "w|generoso": [
   {
    "text": "È stato molto generoso con noi.",
@@ -28618,6 +28858,22 @@
    "en": "On Thursdays Francesca works the night shift with her team.",
    "ko": "목요일이면 프란체스카는 자기 팀과 야간 근무를 해요.",
    "blank": "giovedì",
+   "src": "made"
+  }
+ ],
+ "w|gioventù": [
+  {
+   "text": "Il nonno di Matteo racconta di quando, in gioventù, ballava fino all'alba.",
+   "en": "Matteo's grandfather tells of how, in his youth, he danced until dawn.",
+   "ko": "마테오의 할아버지는 젊은 시절 새벽까지 춤추던 이야기를 해요.",
+   "blank": "gioventù",
+   "src": "made"
+  },
+  {
+   "text": "Un vecchio medico dice a Sara che la gioventù di oggi lavora troppo.",
+   "en": "An old doctor tells Sara that today's young people work too much.",
+   "ko": "나이 든 의사는 요즘 젊은이들이 일을 너무 많이 한다고 사라에게 말해요.",
+   "blank": "gioventù",
    "src": "made"
   }
  ],
@@ -29879,6 +30135,22 @@
    "en": "Can you drive for a stretch?",
    "ko": "한동안 네가 운전할래?",
    "blank": "guidare"
+  }
+ ],
+ "w|guidatore": [
+  {
+   "text": "Matteo non beve per poter fare da guidatore ai nonni.",
+   "en": "Matteo doesn't drink so he can be the driver for his grandparents.",
+   "ko": "마테오는 조부모님을 모셔다드리려고 술을 마시지 않아요.",
+   "blank": "guidatore",
+   "src": "made"
+  },
+  {
+   "text": "Sara assiste il guidatore di un furgone ferito in un incidente.",
+   "en": "Sara cares for a van driver injured in an accident.",
+   "ko": "사라는 사고로 다친 승합차 운전자를 돌봐요.",
+   "blank": "guidatore",
+   "src": "made"
   }
  ],
  "w|guinzaglio": [
@@ -32995,6 +33267,22 @@
    "blank": "inserire"
   }
  ],
+ "w|inserviente": [
+  {
+   "text": "Dopo la festa Matteo lascia una mancia all'inserviente che ha pulito la sala.",
+   "en": "After the party Matteo leaves a tip for the attendant who cleaned the hall.",
+   "ko": "파티가 끝나고 마테오는 홀을 치운 직원에게 팁을 남겨요.",
+   "blank": "inserviente",
+   "src": "made"
+  },
+  {
+   "text": "Sara chiede all'inserviente di cambiare le lenzuola del letto tre.",
+   "en": "Sara asks the orderly to change the sheets on bed three.",
+   "ko": "사라는 병원 도우미에게 3번 침대 시트를 갈아 달라고 해요.",
+   "blank": "inserviente",
+   "src": "made"
+  }
+ ],
  "w|insetto": [
   {
    "text": "C'è un insetto sulla finestra.",
@@ -33997,6 +34285,38 @@
    "blank": "inviare"
   }
  ],
+ "w|invidia": [
+  {
+   "text": "Quando Matteo bacia la sposa, il suo ex compagno di classe diventa verde d'invidia.",
+   "en": "When Matteo kisses the bride, his former classmate turns green with envy.",
+   "ko": "마테오가 신부에게 입을 맞추자 옛 반 친구가 질투로 얼굴이 새파래져요.",
+   "blank": "invidia",
+   "src": "made"
+  },
+  {
+   "text": "Sara non prova invidia per i colleghi che guadagnano di più.",
+   "en": "Sara doesn't feel envy towards colleagues who earn more.",
+   "ko": "사라는 돈을 더 버는 동료들을 시기하지 않아요.",
+   "blank": "invidia",
+   "src": "made"
+  }
+ ],
+ "w|invidiare": [
+  {
+   "text": "Al matrimonio tutti gli amici single sembrano invidiare Matteo.",
+   "en": "At the wedding all the single friends seem to envy Matteo.",
+   "ko": "결혼식에서 싱글 친구들은 모두 마테오를 부러워하는 것 같아요.",
+   "blank": "invidiare",
+   "src": "made"
+  },
+  {
+   "text": "In ospedale Sara non riesce a invidiare chi va in vacanza: le piace il suo lavoro.",
+   "en": "At the hospital Sara can't envy people going on holiday: she loves her job.",
+   "ko": "병원에서 일하는 사라는 휴가 가는 사람들이 부럽지 않아요. 자기 일을 좋아하거든요.",
+   "blank": "invidiare",
+   "src": "made"
+  }
+ ],
  "w|invidioso": [
   {
    "text": "L'ex fidanzata di Matteo sembra un po' invidiosa della sposa.",
@@ -34605,6 +34925,22 @@
    "en": "The lab closes at six.",
    "ko": "실험실은 여섯 시에 닫아.",
    "blank": "laboratorio"
+  }
+ ],
+ "w|laccio": [
+  {
+   "text": "Prima della cerimonia a Matteo si rompe un laccio della scarpa.",
+   "en": "Before the ceremony one of Matteo's shoelaces breaks.",
+   "ko": "식 직전에 마테오의 구두끈이 하나 끊어져요.",
+   "blank": "laccio",
+   "src": "made"
+  },
+  {
+   "text": "Sara aiuta un vecchio signore ad allacciarsi il laccio delle scarpe.",
+   "en": "Sara helps an old gentleman tie his shoelace.",
+   "ko": "사라는 할아버지가 신발 끈 매는 걸 도와드려요.",
+   "blank": "laccio",
+   "src": "made"
   }
  ],
  "w|lacrima": [
@@ -35875,6 +36211,22 @@
    "en": "There's a speed limit here.",
    "ko": "여기 속도 제한이 있어.",
    "blank": "limite"
+  }
+ ],
+ "w|limonata": [
+  {
+   "text": "Per i bambini Matteo ha fatto preparare una caraffa di limonata.",
+   "en": "For the children Matteo has had a jug of lemonade prepared.",
+   "ko": "마테오는 아이들을 위해 레모네이드 한 주전자를 준비시켰어요.",
+   "blank": "limonata",
+   "src": "made"
+  },
+  {
+   "text": "Sara porta una limonata fresca al paziente con la febbre.",
+   "en": "Sara brings a cool lemonade to the patient with a fever.",
+   "ko": "사라는 열이 나는 환자에게 시원한 레모네이드를 가져다줘요.",
+   "blank": "limonata",
+   "src": "made"
   }
  ],
  "w|limone": [
@@ -37587,6 +37939,22 @@
    "blank": "marcato"
   }
  ],
+ "w|marchese": [
+  {
+   "text": "La villa del matrimonio di Matteo apparteneva a un marchese.",
+   "en": "The villa where Matteo gets married belonged to a marquis.",
+   "ko": "마테오가 결혼식을 올리는 별장은 한 후작의 것이었어요.",
+   "blank": "marchese",
+   "src": "made"
+  },
+  {
+   "text": "Il reparto dove lavora Sara porta il nome di un marchese che lo finanziò.",
+   "en": "The ward where Sara works is named after a marquis who funded it.",
+   "ko": "사라가 일하는 병동은 그곳에 기부한 후작의 이름을 따서 지었어요.",
+   "blank": "marchese",
+   "src": "made"
+  }
+ ],
  "w|marchio": [
   {
    "text": "Sulla radio d'epoca Luca ha riconosciuto il marchio di una fabbrica chiusa da anni.",
@@ -37945,6 +38313,22 @@
    "src": "made"
   }
  ],
+ "w|maschietto": [
+  {
+   "text": "Il maschietto che porta gli anelli è il figlio della sorella di Matteo.",
+   "en": "The little boy carrying the rings is the son of Matteo's sister.",
+   "ko": "반지를 들고 오는 남자아이는 마테오 누나의 아들이에요.",
+   "blank": "maschietto",
+   "src": "made"
+  },
+  {
+   "text": "Stanotte nel reparto di Sara è nato un maschietto di quattro chili.",
+   "en": "Last night on Sara's ward a baby boy weighing four kilos was born.",
+   "ko": "어젯밤 사라의 병동에서 4킬로그램짜리 남자아이가 태어났어요.",
+   "blank": "maschietto",
+   "src": "made"
+  }
+ ],
  "w|maschile": [
   {
    "text": "Nel coro del quartiere manca una voce maschile, e Paolo ha deciso di provarci.",
@@ -38189,6 +38573,22 @@
    "src": "made"
   }
  ],
+ "w|matrigna": [
+  {
+   "text": "La matrigna di Matteo piange più di tutti durante il sì.",
+   "en": "Matteo's stepmother cries more than anyone during the vows.",
+   "ko": "마테오의 새어머니가 혼인 서약 때 누구보다 많이 울어요.",
+   "blank": "matrigna",
+   "src": "made"
+  },
+  {
+   "text": "La matrigna di un bambino ricoverato porta a Sara dei biscotti.",
+   "en": "The stepmother of a child in hospital brings Sara some biscuits.",
+   "ko": "입원한 아이의 새엄마가 사라에게 과자를 가져다줘요.",
+   "blank": "matrigna",
+   "src": "made"
+  }
+ ],
  "w|matrimoniale": [
   {
    "text": "Simone segue un caso di truffa matrimoniale finito in tribunale.",
@@ -38290,6 +38690,22 @@
    "en": "The market is held under a brick arcade where Francesca shelters from the sun.",
    "ko": "시장은 벽돌 회랑 아래에서 열려서 프란체스카는 거기서 햇볕을 피해요.",
    "blank": "mattoni",
+   "src": "made"
+  }
+ ],
+ "w|mattutino": [
+  {
+   "text": "La cerimonia di Matteo è alle dieci, nella luce mattutina della chiesa.",
+   "en": "Matteo's ceremony is at ten, in the morning light of the church.",
+   "ko": "마테오의 결혼식은 열 시, 성당에 아침 햇살이 드는 시간이에요.",
+   "blank": "mattutina",
+   "src": "made"
+  },
+  {
+   "text": "Durante il giro mattutino Sara controlla la pressione di ogni paziente.",
+   "en": "During the morning round Sara checks every patient's blood pressure.",
+   "ko": "아침 회진 때 사라는 환자마다 혈압을 재요.",
+   "blank": "mattutino",
    "src": "made"
   }
  ],
@@ -42973,6 +43389,22 @@
    "blank": "onda"
   }
  ],
+ "w|onestà": [
+  {
+   "text": "Nel discorso il testimone loda l'onestà di Matteo.",
+   "en": "In his speech the best man praises Matteo's honesty.",
+   "ko": "들러리는 축사에서 마테오의 정직함을 칭찬해요.",
+   "blank": "onestà",
+   "src": "made"
+  },
+  {
+   "text": "I pazienti apprezzano l'onestà di Sara quando dà brutte notizie.",
+   "en": "Patients appreciate Sara's honesty when she gives bad news.",
+   "ko": "환자들은 나쁜 소식을 전할 때도 솔직한 사라를 고마워해요.",
+   "blank": "onestà",
+   "src": "made"
+  }
+ ],
  "w|onestamente": [
   {
    "text": "Onestamente non so cosa rispondere.",
@@ -44037,6 +44469,22 @@
    "src": "made"
   }
  ],
+ "w|ostrica": [
+  {
+   "text": "Al ricevimento di Matteo servono ostriche e prosecco.",
+   "en": "At Matteo's reception they serve oysters and prosecco.",
+   "ko": "마테오의 피로연에서는 굴과 프로세코가 나와요.",
+   "blank": "ostriche",
+   "src": "made"
+  },
+  {
+   "text": "Un paziente di Sara si è sentito male dopo aver mangiato ostriche crude.",
+   "en": "One of Sara's patients fell ill after eating raw oysters.",
+   "ko": "사라의 환자 한 명은 생굴을 먹고 탈이 났어요.",
+   "blank": "ostriche",
+   "src": "made"
+  }
+ ],
  "w|ottanta": [
   {
    "text": "La temperatura arriva a ottanta gradi.",
@@ -45053,6 +45501,22 @@
    "en": "I hung the painting on the living-room wall.",
    "ko": "거실 벽에 그림을 걸었어.",
    "blank": "parete"
+  }
+ ],
+ "w|pargolo": [
+  {
+   "text": "La sorella di Matteo arriva al matrimonio con il suo pargolo in braccio.",
+   "en": "Matteo's sister arrives at the wedding with her little one in her arms.",
+   "ko": "마테오의 누나는 아기를 안고 결혼식에 와요.",
+   "blank": "pargolo",
+   "src": "made"
+  },
+  {
+   "text": "Una mamma stanca chiede a Sara di tenere un attimo il suo pargolo.",
+   "en": "A tired mum asks Sara to hold her little one for a moment.",
+   "ko": "지친 엄마가 사라에게 잠깐 아기를 안아 달라고 부탁해요.",
+   "blank": "pargolo",
+   "src": "made"
   }
  ],
  "w|pari": [
@@ -47453,6 +47917,22 @@
    "src": "made"
   }
  ],
+ "w|pino": [
+  {
+   "text": "Le foto degli sposi le fanno sotto un grande pino, come vuole Matteo.",
+   "en": "The couple's photos are taken under a big pine tree, as Matteo wants.",
+   "ko": "마테오가 원하는 대로 신랑 신부 사진은 큰 소나무 아래에서 찍어요.",
+   "blank": "pino",
+   "src": "made"
+  },
+  {
+   "text": "Dalla finestra del reparto di Sara si vede un vecchio pino.",
+   "en": "From the window of Sara's ward you can see an old pine tree.",
+   "ko": "사라의 병동 창문으로 오래된 소나무가 보여요.",
+   "blank": "pino",
+   "src": "made"
+  }
+ ],
  "w|pinza": [
   {
    "text": "Per staccare i chiodi dal muro Marco usa una pinza.",
@@ -49169,6 +49649,22 @@
    "en": "The speech was well prepared.",
    "ko": "연설이 잘 준비되어 있었어.",
    "blank": "preparato"
+  }
+ ],
+ "w|prepotente": [
+  {
+   "text": "Il cugino di Matteo da piccolo era un prepotente, ma ora è gentilissimo.",
+   "en": "Matteo's cousin was a bully as a child, but now he's very kind.",
+   "ko": "마테오의 사촌은 어릴 때 골목대장이었지만 지금은 아주 친절해요.",
+   "blank": "prepotente",
+   "src": "made"
+  },
+  {
+   "text": "Sara chiama la sicurezza quando un prepotente alza la voce in sala d'attesa.",
+   "en": "Sara calls security when a bully raises his voice in the waiting room.",
+   "ko": "대기실에서 막무가내인 사람이 언성을 높이자 사라는 경비를 불러요.",
+   "blank": "prepotente",
+   "src": "made"
   }
  ],
  "w|presa": [
@@ -56097,6 +56593,22 @@
    "blank": "robot"
   }
  ],
+ "w|robusto": [
+  {
+   "text": "Il testimone di Matteo è un ragazzo robusto che solleva lo sposo da solo.",
+   "en": "Matteo's best man is a sturdy guy who lifts the groom on his own.",
+   "ko": "마테오의 들러리는 신랑을 혼자 번쩍 들어 올리는 건장한 남자예요.",
+   "blank": "robusto",
+   "src": "made"
+  },
+  {
+   "text": "Sara ha bisogno di un collega robusto per sollevare il paziente.",
+   "en": "Sara needs a strong colleague to lift the patient.",
+   "ko": "사라는 환자를 들어 올리려고 힘센 동료가 필요해요.",
+   "blank": "robusto",
+   "src": "made"
+  }
+ ],
  "w|roccia": [
   {
    "text": "Ci siamo seduti su una roccia liscia.",
@@ -57983,6 +58495,22 @@
    "blank": "schifoso"
   }
  ],
+ "w|schiuma": [
+  {
+   "text": "Quando apre lo spumante, la schiuma bagna tutta la giacca di Matteo.",
+   "en": "When he opens the sparkling wine, the foam soaks Matteo's whole jacket.",
+   "ko": "스파클링 와인을 따자 거품이 마테오의 재킷을 온통 적셔요.",
+   "blank": "schiuma",
+   "src": "made"
+  },
+  {
+   "text": "Sara si lava le mani con il sapone finché non fa schiuma.",
+   "en": "Sara washes her hands with soap until it lathers.",
+   "ko": "사라는 거품이 날 때까지 비누로 손을 씻어요.",
+   "blank": "schiuma",
+   "src": "made"
+  }
+ ],
  "w|schizzare": [
   {
    "text": "Simone versa il caffè troppo in fretta e fa schizzare macchie sulle bozze.",
@@ -58861,6 +59389,22 @@
    "en": "He is happy although he has many problems.",
    "ko": "그는 문제가 많지만 행복해.",
    "blank": "sebbene"
+  }
+ ],
+ "w|seccatura": [
+  {
+   "text": "Per Matteo scegliere i posti a tavola è stata una vera seccatura.",
+   "en": "For Matteo choosing the seating plan was a real nuisance.",
+   "ko": "마테오에게 좌석 배치를 정하는 건 정말 골치 아픈 일이었어요.",
+   "blank": "seccatura",
+   "src": "made"
+  },
+  {
+   "text": "Per Sara compilare tutti quei moduli è una seccatura.",
+   "en": "For Sara filling in all those forms is a nuisance.",
+   "ko": "사라에게 그 많은 서류를 채우는 건 성가신 일이에요.",
+   "blank": "seccatura",
+   "src": "made"
   }
  ],
  "w|secchio": [
@@ -61063,6 +61607,22 @@
    "blank": "smesso"
   }
  ],
+ "w|snob": [
+  {
+   "text": "La zia di Matteo è un po' snob e critica il menù.",
+   "en": "Matteo's aunt is a bit snobbish and criticises the menu.",
+   "ko": "마테오의 이모는 좀 잘난 척해서 메뉴를 흠잡아요.",
+   "blank": "snob",
+   "src": "made"
+  },
+  {
+   "text": "Un paziente snob si lamenta con Sara del caffè dell'ospedale.",
+   "en": "A snobbish patient complains to Sara about the hospital coffee.",
+   "ko": "잘난 척하는 환자가 병원 커피가 별로라고 사라에게 불평해요.",
+   "blank": "snob",
+   "src": "made"
+  }
+ ],
  "w|sobrio": [
   {
    "text": "Lo studio dove va Paolo è sobrio ed elegante, tutto bianco e grigio.",
@@ -62408,6 +62968,22 @@
    "en": "Francesca underestimated the shopping and now can't carry all the bags.",
    "ko": "프란체스카는 장 볼 양을 얕봤다가 이제 봉투를 다 들 수 없어요.",
    "blank": "sottovalutato",
+   "src": "made"
+  }
+ ],
+ "w|souvenir": [
+  {
+   "text": "Come bomboniera Matteo regala un piccolo souvenir della sua città.",
+   "en": "As a wedding favour Matteo gives a little souvenir of his town.",
+   "ko": "마테오는 답례품으로 고향 도시의 작은 기념품을 줘요.",
+   "blank": "souvenir",
+   "src": "made"
+  },
+  {
+   "text": "Un paziente regala a Sara un souvenir del suo ultimo viaggio.",
+   "en": "A patient gives Sara a souvenir from his last trip.",
+   "ko": "한 환자가 마지막 여행에서 사 온 기념품을 사라에게 선물해요.",
+   "blank": "souvenir",
    "src": "made"
   }
  ],
@@ -65793,6 +66369,22 @@
    "blank": "tanto"
   }
  ],
+ "w|tappa": [
+  {
+   "text": "La prima tappa del viaggio di nozze di Matteo è Lisbona.",
+   "en": "The first stop on Matteo's honeymoon is Lisbon.",
+   "ko": "마테오 신혼여행의 첫 번째 목적지는 리스본이에요.",
+   "blank": "tappa",
+   "src": "made"
+  },
+  {
+   "text": "Per Sara il bar del primo piano è una tappa fissa prima del turno.",
+   "en": "For Sara the first-floor café is a regular stop before her shift.",
+   "ko": "사라에게 1층 카페는 근무 전에 꼭 들르는 곳이에요.",
+   "blank": "tappa",
+   "src": "made"
+  }
+ ],
  "w|tappeto": [
   {
    "text": "Il tappeto rosso è davanti alla porta.",
@@ -65877,6 +66469,22 @@
    "en": "I have to pay the tax by Friday.",
    "ko": "금요일까지 세금을 내야 해.",
    "blank": "tassa"
+  }
+ ],
+ "w|tassista": [
+  {
+   "text": "Il tassista fa gli auguri a Matteo e alla sposa quando scendono.",
+   "en": "The taxi driver congratulates Matteo and the bride as they get out.",
+   "ko": "택시 기사는 내리는 마테오와 신부에게 축하 인사를 건네요.",
+   "blank": "tassista",
+   "src": "made"
+  },
+  {
+   "text": "Sara cura un tassista che si è fatto male alla schiena.",
+   "en": "Sara treats a taxi driver who has hurt his back.",
+   "ko": "사라는 허리를 다친 택시 기사를 치료해요.",
+   "blank": "tassista",
+   "src": "made"
   }
  ],
  "w|tasso": [
@@ -70231,6 +70839,22 @@
    "src": "made"
   }
  ],
+ "w|vecchietto": [
+  {
+   "text": "Un vecchietto del paese balla il valzer con la mamma di Matteo.",
+   "en": "An old man from the village dances the waltz with Matteo's mum.",
+   "ko": "동네 할아버지 한 분이 마테오의 엄마와 왈츠를 춰요.",
+   "blank": "vecchietto",
+   "src": "made"
+  },
+  {
+   "text": "Un vecchietto del letto quattro racconta barzellette a Sara.",
+   "en": "An old man in bed four tells Sara jokes.",
+   "ko": "4번 침대 할아버지가 사라에게 우스갯소리를 해요.",
+   "blank": "vecchietto",
+   "src": "made"
+  }
+ ],
  "w|vecchio": [
   {
    "text": "È un vecchio amico.",
@@ -71653,6 +72277,22 @@
    "en": "I feel alive here.",
    "ko": "여기서는 살아 있는 기분이야.",
    "blank": "vivo"
+  }
+ ],
+ "w|viziato": [
+  {
+   "text": "Il cugino più piccolo di Matteo è viziato e vuole subito la torta.",
+   "en": "Matteo's youngest cousin is spoiled and wants the cake right away.",
+   "ko": "마테오의 막내 사촌은 버릇이 없어서 케이크를 당장 달라고 해요.",
+   "blank": "viziato",
+   "src": "made"
+  },
+  {
+   "text": "Il bambino del letto due è un po' viziato e vuole solo Sara.",
+   "en": "The child in bed two is a bit spoiled and only wants Sara.",
+   "ko": "2번 침대 아이는 좀 응석받이라서 사라만 찾아요.",
+   "blank": "viziato",
+   "src": "made"
   }
  ],
  "w|vizio": [

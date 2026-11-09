@@ -43,6 +43,22 @@
    "src": "made"
   }
  ],
+ "w|absen": [
+  {
+   "text": "Fajar tidak pernah absen dari rapat redaksi pagi.",
+   "en": "Fajar has never missed the morning editorial meeting.",
+   "ko": "파자르는 아침 편집 회의에 한 번도 빠진 적이 없어요.",
+   "blank": "absen",
+   "src": "made"
+  },
+  {
+   "text": "Lestari sengaja absen dari kantor seminggu demi perjalanan ini.",
+   "en": "Lestari deliberately took a week off from the office for this trip.",
+   "ko": "레스타리는 이번 여행을 위해 일부러 일주일 동안 회사를 쉬었어요.",
+   "blank": "absen",
+   "src": "made"
+  }
+ ],
  "w|abu": [
   {
    "text": "Abu rokok berjatuhan di lantai.",
@@ -705,6 +721,22 @@
    "src": "made"
   }
  ],
+ "w|algoritma": [
+  {
+   "text": "Fajar mencoba memahami algoritma media sosial yang menentukan berita populer.",
+   "en": "Fajar is trying to understand the social media algorithms that decide which news is popular.",
+   "ko": "파자르는 인기 뉴스를 정하는 소셜 미디어 알고리즘을 이해하려고 해요.",
+   "blank": "algoritma",
+   "src": "made"
+  },
+  {
+   "text": "Lestari curiga algoritma aplikasi peta sengaja memilih jalan yang sepi.",
+   "en": "Lestari suspects the map app's algorithm deliberately picks quiet roads.",
+   "ko": "레스타리는 지도 앱 알고리즘이 일부러 한적한 길을 고르는 것 같다고 의심해요.",
+   "blank": "algoritma",
+   "src": "made"
+  }
+ ],
  "w|aliansi": [
   {
    "text": "Dimas membaca bahwa beberapa kerajaan dulu membentuk aliansi melawan penjajah.",
@@ -973,6 +1005,22 @@
    "en": "Don't yell at a little kid.",
    "ko": "어린아이한테 소리 지르지 마.",
    "blank": "anak"
+  }
+ ],
+ "w|analis": [
+  {
+   "text": "Fajar menelepon seorang analis ekonomi untuk mengomentari kenaikan harga cabai.",
+   "en": "Fajar called an economic analyst to comment on the rise in chili prices.",
+   "ko": "파자르는 고추값 상승에 대한 의견을 들으려고 경제 분석가에게 전화했어요.",
+   "blank": "analis",
+   "src": "made"
+  },
+  {
+   "text": "Teman seperjalanan Lestari adalah analis data yang sedang cuti panjang.",
+   "en": "Lestari's travel companion is a data analyst on long leave.",
+   "ko": "레스타리의 여행 동반자는 장기 휴가 중인 데이터 분석가예요.",
+   "blank": "analis",
+   "src": "made"
   }
  ],
  "w|ancaman": [
@@ -1365,6 +1413,22 @@
    "en": "The wind direction changed suddenly.",
    "ko": "바람 방향이 갑자기 바뀌었어.",
    "blank": "Arah"
+  }
+ ],
+ "w|arahan": [
+  {
+   "text": "Redaktur memberi Fajar arahan singkat sebelum rapat pagi dimulai.",
+   "en": "The editor gave Fajar brief instructions before the morning meeting started.",
+   "ko": "편집장은 아침 회의가 시작되기 전에 파자르에게 짧은 지시를 했어요.",
+   "blank": "arahan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mengikuti arahan petugas untuk mengambil jalan memutar.",
+   "en": "Lestari followed the officer's directions to take a detour.",
+   "ko": "레스타리는 담당자의 안내에 따라 우회로로 갔어요.",
+   "blank": "arahan",
+   "src": "made"
   }
  ],
  "w|area": [
@@ -4843,6 +4907,22 @@
    "src": "made"
   }
  ],
+ "w|berdampingan": [
+  {
+   "text": "Meja Fajar berdampingan dengan meja editor foto.",
+   "en": "Fajar's desk is right next to the photo editor's desk.",
+   "ko": "파자르의 책상은 사진 편집자 책상과 나란히 있어요.",
+   "blank": "berdampingan",
+   "src": "made"
+  },
+  {
+   "text": "Jalan desa itu berdampingan dengan rel kereta, jadi Lestari bisa melambai ke penumpang.",
+   "en": "The village road runs alongside the railway, so Lestari could wave to the passengers.",
+   "ko": "마을 길이 철로와 나란히 나 있어서 레스타리는 승객들에게 손을 흔들 수 있었어요.",
+   "blank": "berdampingan",
+   "src": "made"
+  }
+ ],
  "w|berdandan": [
   {
    "text": "Sebelum tampil di siaran langsung, Budi berdandan sebentar di toilet kantor.",
@@ -4945,6 +5025,22 @@
    "en": "Don't debate when emotions are high.",
    "ko": "감정이 격할 때는 논쟁하지 마.",
    "blank": "berdebat"
+  }
+ ],
+ "w|berdedikasi": [
+  {
+   "text": "Fajar mengagumi fotografer berdedikasi yang tetap bekerja saat hujan deras.",
+   "en": "Fajar admires the dedicated photographer who keeps working in heavy rain.",
+   "ko": "파자르는 폭우 속에서도 일하는 헌신적인 사진기자를 존경해요.",
+   "blank": "berdedikasi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bertemu guru berdedikasi yang mengajar di desa terpencil.",
+   "en": "Lestari met a dedicated teacher who teaches in a remote village.",
+   "ko": "레스타리는 외딴 마을에서 가르치는 헌신적인 선생님을 만났어요.",
+   "blank": "berdedikasi",
+   "src": "made"
   }
  ],
  "w|berdekatan": [
@@ -5111,6 +5207,22 @@
    "en": "Grieving together eases the pain.",
    "ko": "함께 슬퍼하면 아픔이 줄어들어.",
    "blank": "Berduka"
+  }
+ ],
+ "w|berdusta": [
+  {
+   "text": "Narasumber yang berdusta soal angka itu akhirnya ketahuan oleh Fajar.",
+   "en": "The source who lied about the figures was eventually caught out by Fajar.",
+   "ko": "숫자에 대해 거짓말한 취재원은 결국 파자르에게 들통났어요.",
+   "blank": "berdusta",
+   "src": "made"
+  },
+  {
+   "text": "Adik Lestari mengaku sudah ke toilet, padahal ternyata ia berdusta.",
+   "en": "Lestari's little brother claimed he'd already gone to the toilet, but it turned out he was lying.",
+   "ko": "레스타리의 동생은 화장실에 다녀왔다고 했지만 사실 거짓말이었어요.",
+   "blank": "berdusta",
+   "src": "made"
   }
  ],
  "w|bereaksi": [
@@ -6577,6 +6689,22 @@
    "src": "made"
   }
  ],
+ "w|berlarian": [
+  {
+   "text": "Fajar dan para wartawan lain berlarian ke ruang rapat saat kabar gempa masuk.",
+   "en": "Fajar and the other reporters ran to the meeting room when news of the earthquake came in.",
+   "ko": "지진 소식이 들어오자 파자르와 다른 기자들이 회의실로 뛰어갔어요.",
+   "blank": "berlarian",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak berlarian mengejar mobil Lestari sambil tertawa.",
+   "en": "Children ran after Lestari's car, laughing.",
+   "ko": "아이들이 웃으며 레스타리의 차를 쫓아 뛰어다녔어요.",
+   "blank": "berlarian",
+   "src": "made"
+  }
+ ],
  "w|berlatih": [
   {
    "text": "Mereka berlatih setiap sore.",
@@ -6829,6 +6957,22 @@
    "src": "made"
   }
  ],
+ "w|bermeditasi": [
+  {
+   "text": "Untuk meredakan stres, Fajar suka bermeditasi sebentar di atap kantor.",
+   "en": "To ease stress, Fajar likes to meditate for a while on the office roof.",
+   "ko": "스트레스를 풀려고 파자르는 사무실 옥상에서 잠깐 명상하는 걸 좋아해요.",
+   "blank": "bermeditasi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bermeditasi di tepi danau sambil menunggu matahari terbit.",
+   "en": "Lestari meditated by the lake while waiting for the sunrise.",
+   "ko": "레스타리는 해돋이를 기다리며 호숫가에서 명상했어요.",
+   "blank": "bermeditasi",
+   "src": "made"
+  }
+ ],
  "w|bermimpi": [
   {
    "text": "Semalam aku bermimpi tentang laut.",
@@ -6904,6 +7048,22 @@
    "en": "Lestari's love of running began with a small race at school.",
    "ko": "레스타리의 달리기 사랑은 학교의 작은 대회에서 시작됐어요.",
    "blank": "bermula",
+   "src": "made"
+  }
+ ],
+ "w|bermusuhan": [
+  {
+   "text": "Dua kubu yang bermusuhan itu sama-sama menolak diwawancarai Fajar.",
+   "en": "The two feuding camps both refused to be interviewed by Fajar.",
+   "ko": "서로 적대하는 두 진영 모두 파자르의 인터뷰를 거절했어요.",
+   "blank": "bermusuhan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mendengar bahwa dua desa yang dulu bermusuhan kini menggelar pasar bersama.",
+   "en": "Lestari heard that two villages that used to be hostile now hold a market together.",
+   "ko": "레스타리는 예전에 사이가 나빴던 두 마을이 이제 함께 장을 연다는 이야기를 들었어요.",
+   "blank": "bermusuhan",
    "src": "made"
   }
  ],
@@ -7148,6 +7308,22 @@
    "en": "One of the programmers argued that the app should have a dark mode.",
    "ko": "프로그래머 한 명은 앱에 다크 모드가 꼭 있어야 한다고 생각해요.",
    "blank": "berpendapat",
+   "src": "made"
+  }
+ ],
+ "w|berpendidikan": [
+  {
+   "text": "Fajar heran orang yang berpendidikan tinggi pun bisa percaya kabar bohong.",
+   "en": "Fajar was surprised that even highly educated people can believe fake news.",
+   "ko": "파자르는 고학력자도 가짜 뉴스를 믿을 수 있다는 게 놀라웠어요.",
+   "blank": "berpendidikan",
+   "src": "made"
+  },
+  {
+   "text": "Pemandu wisata yang berpendidikan itu menjelaskan sejarah candi kepada Lestari.",
+   "en": "The well-educated tour guide explained the history of the temple to Lestari.",
+   "ko": "교양 있는 관광 가이드가 레스타리에게 사원의 역사를 설명해 줬어요.",
+   "blank": "berpendidikan",
    "src": "made"
   }
  ],
@@ -8289,6 +8465,22 @@
    "blank": "Bertingkah"
   }
  ],
+ "w|bertobat": [
+  {
+   "text": "Fajar menulis profil mantan pencopet yang sudah bertobat dan kini membuka bengkel.",
+   "en": "Fajar wrote a profile of a former pickpocket who has reformed and now runs a repair shop.",
+   "ko": "파자르는 뉘우치고 지금은 정비소를 하는 전직 소매치기의 이야기를 썼어요.",
+   "blank": "bertobat",
+   "src": "made"
+  },
+  {
+   "text": "Sopir truk itu bercerita kepada Lestari bahwa ia sudah bertobat dan tidak lagi kebut-kebutan.",
+   "en": "The truck driver told Lestari he had mended his ways and no longer speeds recklessly.",
+   "ko": "트럭 기사는 레스타리에게 이제 마음을 고쳐먹고 더는 과속하지 않는다고 했어요.",
+   "blank": "bertobat",
+   "src": "made"
+  }
+ ],
  "w|bertopeng": [
   {
    "text": "Andi melampirkan foto mereka berdua bertopeng di pesta sekolah dulu.",
@@ -8938,6 +9130,22 @@
    "en": "Dewi looked for a phone booth at the station because her phone battery was dead.",
    "ko": "휴대폰 배터리가 다 돼서 데위는 역에서 공중전화 부스를 찾았어요.",
    "blank": "bilik",
+   "src": "made"
+  }
+ ],
+ "w|bimbingan": [
+  {
+   "text": "Fajar baru bekerja di ruang redaksi dan masih butuh banyak bimbingan dari redaktur senior.",
+   "en": "Fajar has just started in the newsroom and still needs a lot of guidance from the senior editors.",
+   "ko": "파자르는 편집국에서 막 일을 시작해서 아직 선배 편집자들의 지도가 많이 필요해요.",
+   "blank": "bimbingan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari belajar menyetir di bawah bimbingan pamannya sebelum perjalanan ini.",
+   "en": "Lestari learned to drive under her uncle's guidance before this trip.",
+   "ko": "레스타리는 이번 여행 전에 삼촌의 지도로 운전을 배웠어요.",
+   "blank": "bimbingan",
    "src": "made"
   }
  ],
@@ -11704,6 +11912,22 @@
    "en": "The new market building has an open design so the air can flow.",
    "ko": "새 시장 건물은 바람이 잘 통하게 트인 구조로 설계됐어요.",
    "blank": "desain",
+   "src": "made"
+  }
+ ],
+ "w|desainer": [
+  {
+   "text": "Seorang desainer muda membantu Fajar merapikan tata letak artikelnya.",
+   "en": "A young designer helped Fajar tidy up the layout of his article.",
+   "ko": "젊은 디자이너가 파자르의 기사 레이아웃 정리를 도와줬어요.",
+   "blank": "desainer",
+   "src": "made"
+  },
+  {
+   "text": "Di warung kopi, Lestari mengobrol dengan seorang desainer interior yang juga sedang berlibur.",
+   "en": "At a coffee stall, Lestari chatted with an interior designer who was also on holiday.",
+   "ko": "커피 노점에서 레스타리는 마찬가지로 휴가 중인 인테리어 디자이너와 이야기를 나눴어요.",
+   "blank": "desainer",
    "src": "made"
   }
  ],
@@ -14623,6 +14847,22 @@
    "src": "made"
   }
  ],
+ "w|giat": [
+  {
+   "text": "Fajar dikenal sebagai wartawan yang giat mencari sumber baru.",
+   "en": "Fajar is known as a reporter who works hard to find new sources.",
+   "ko": "파자르는 새 취재원을 부지런히 찾는 기자로 알려져 있어요.",
+   "blank": "giat",
+   "src": "made"
+  },
+  {
+   "text": "Lestari kagum melihat para petani yang giat bekerja sejak subuh.",
+   "en": "Lestari was impressed by the farmers working hard since dawn.",
+   "ko": "레스타리는 새벽부터 부지런히 일하는 농부들을 보고 감탄했어요.",
+   "blank": "giat",
+   "src": "made"
+  }
+ ],
  "w|gigi": [
   {
    "text": "Gigi saya sakit.",
@@ -14846,6 +15086,22 @@
    "en": "The women at the fish section like to swap gossip while waiting for customers.",
    "ko": "생선 구역 아주머니들은 손님을 기다리며 수다 떠는 걸 좋아해요.",
    "blank": "gosip",
+   "src": "made"
+  }
+ ],
+ "w|grafik": [
+  {
+   "text": "Fajar menambahkan grafik harga beras supaya pembaca cepat paham.",
+   "en": "Fajar added a chart of rice prices so readers would understand quickly.",
+   "ko": "파자르는 독자들이 빨리 이해하도록 쌀값 그래프를 넣었어요.",
+   "blank": "grafik",
+   "src": "made"
+  },
+  {
+   "text": "Lestari melihat grafik ketinggian jalan di aplikasi peta sebelum naik ke dataran tinggi.",
+   "en": "Lestari checked the road elevation chart in the map app before heading up to the highlands.",
+   "ko": "레스타리는 고원으로 올라가기 전에 지도 앱에서 도로 고도 그래프를 봤어요.",
+   "blank": "grafik",
    "src": "made"
   }
  ],
@@ -15153,6 +15409,22 @@
    "en": "After eating, we'll go.",
    "ko": "밥 먹고 나서 가자.",
    "blank": "Habis"
+  }
+ ],
+ "w|habis-habisan": [
+  {
+   "text": "Fajar dan seluruh tim bekerja habis-habisan menjelang tenggat malam itu.",
+   "en": "Fajar and the whole team worked flat out before that night's deadline.",
+   "ko": "파자르와 팀 모두가 그날 밤 마감을 앞두고 온 힘을 다해 일했어요.",
+   "blank": "habis-habisan",
+   "src": "made"
+  },
+  {
+   "text": "Mobil tua Lestari menanjak habis-habisan di jalan pegunungan.",
+   "en": "Lestari's old car climbed the mountain road with everything it had.",
+   "ko": "레스타리의 낡은 차는 산길을 젖 먹던 힘까지 다해 올라갔어요.",
+   "blank": "habis-habisan",
+   "src": "made"
   }
  ],
  "w|hadapan": [
@@ -16822,6 +17094,22 @@
    "en": "Intan sent full instructions to the new employee by email.",
    "ko": "인탄은 신입 사원에게 자세한 지시 사항을 이메일로 보냈어요.",
    "blank": "instruksi",
+   "src": "made"
+  }
+ ],
+ "w|instruktur": [
+  {
+   "text": "Fajar ikut kelas menulis cepat bersama instruktur dari kantor berita lain.",
+   "en": "Fajar took a fast-writing class with an instructor from another news agency.",
+   "ko": "파자르는 다른 통신사에서 온 강사와 함께 빨리 쓰기 수업을 들었어요.",
+   "blank": "instruktur",
+   "src": "made"
+  },
+  {
+   "text": "Lestari ikut kelas selancar singkat dengan instruktur lokal.",
+   "en": "Lestari took a short surfing class with a local instructor.",
+   "ko": "레스타리는 현지 강사와 함께 짧은 서핑 수업을 들었어요.",
+   "blank": "instruktur",
    "src": "made"
   }
  ],
@@ -20089,6 +20377,22 @@
    "en": "Repay others' kindness sincerely.",
    "ko": "다른 사람의 친절에 진심으로 보답해.",
    "blank": "kebaikan"
+  }
+ ],
+ "w|kebajikan": [
+  {
+   "text": "Fajar menulis kolom tentang kebajikan para relawan di kampungnya.",
+   "en": "Fajar wrote a column about the kindness of the volunteers in his neighborhood.",
+   "ko": "파자르는 동네 자원봉사자들의 선행에 대한 칼럼을 썼어요.",
+   "blank": "kebajikan",
+   "src": "made"
+  },
+  {
+   "text": "Nenek Lestari suka bercerita tentang kebajikan orang-orang desa zaman dulu.",
+   "en": "Lestari's grandmother likes to tell stories about the virtues of village folk in the old days.",
+   "ko": "레스타리의 할머니는 옛날 시골 사람들의 미덕에 대해 이야기하길 좋아해요.",
+   "blank": "kebajikan",
+   "src": "made"
   }
  ],
  "w|kebakaran": [
@@ -24073,6 +24377,22 @@
    "blank": "Kolam"
   }
  ],
+ "w|kolega": [
+  {
+   "text": "Fajar meminta kolega di bagian olahraga memeriksa ejaan nama pemain.",
+   "en": "Fajar asked a colleague in the sports section to check the spelling of the players' names.",
+   "ko": "파자르는 스포츠부 동료에게 선수 이름 철자를 확인해 달라고 했어요.",
+   "blank": "kolega",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mengirim foto pantai kepada seorang kolega di kantor.",
+   "en": "Lestari sent a photo of the beach to a colleague at the office.",
+   "ko": "레스타리는 회사 동료에게 해변 사진을 보냈어요.",
+   "blank": "kolega",
+   "src": "made"
+  }
+ ],
  "w|koleksi": [
   {
    "text": "Di ruang kapolsek terpajang koleksi topi polisi dari berbagai negara.",
@@ -24398,6 +24718,22 @@
    "en": "Rudi talked about his family problems, which turned out to be quite complicated.",
    "ko": "루디가 털어놓은 집안 문제는 꽤 복잡했어요.",
    "blank": "kompleks",
+   "src": "made"
+  }
+ ],
+ "w|komponen": [
+  {
+   "text": "Fajar menulis tentang pabrik yang kekurangan komponen elektronik.",
+   "en": "Fajar wrote about factories that are short of electronic components.",
+   "ko": "파자르는 전자 부품이 부족한 공장들에 대해 썼어요.",
+   "blank": "komponen",
+   "src": "made"
+  },
+  {
+   "text": "Bengkel kecil itu tidak punya komponen yang dibutuhkan mobil Lestari.",
+   "en": "The small repair shop didn't have the part Lestari's car needed.",
+   "ko": "그 작은 정비소에는 레스타리의 차에 필요한 부품이 없었어요.",
+   "blank": "komponen",
    "src": "made"
   }
  ],
@@ -29053,6 +29389,22 @@
    "src": "made"
   }
  ],
+ "w|mekanisme": [
+  {
+   "text": "Fajar menjelaskan mekanisme subsidi pupuk dengan bahasa sederhana.",
+   "en": "Fajar explained how the fertilizer subsidy mechanism works in simple language.",
+   "ko": "파자르는 비료 보조금 구조를 쉬운 말로 설명했어요.",
+   "blank": "mekanisme",
+   "src": "made"
+  },
+  {
+   "text": "Montir menjelaskan kepada Lestari mekanisme rem yang mulai aus.",
+   "en": "The mechanic explained to Lestari how the worn brake mechanism works.",
+   "ko": "정비사가 레스타리에게 닳기 시작한 브레이크 장치에 대해 설명했어요.",
+   "blank": "mekanisme",
+   "src": "made"
+  }
+ ],
  "w|mekar": [
   {
    "text": "Bunga teratai di rawa dekat sungai mekar setiap pagi.",
@@ -30823,6 +31175,22 @@
    "en": "Don't wake a baby who is sleeping.",
    "ko": "잠든 아기를 깨우지 마.",
    "blank": "membangunkan"
+  }
+ ],
+ "w|membanjiri": [
+  {
+   "text": "Komentar pembaca membanjiri kolom berita Fajar sejak siang.",
+   "en": "Readers' comments have been flooding Fajar's news column since midday.",
+   "ko": "낮부터 파자르의 기사에 독자 댓글이 쏟아졌어요.",
+   "blank": "membanjiri",
+   "src": "made"
+  },
+  {
+   "text": "Wisatawan sudah membanjiri pantai saat Lestari tiba sore itu.",
+   "en": "Tourists had already flooded the beach when Lestari arrived that afternoon.",
+   "ko": "레스타리가 그날 오후에 도착했을 때 해변엔 이미 관광객이 넘쳐났어요.",
+   "blank": "membanjiri",
+   "src": "made"
   }
  ],
  "w|membantah": [
@@ -34953,6 +35321,22 @@
    "src": "made"
   }
  ],
+ "w|mendesain": [
+  {
+   "text": "Tim grafis diminta mendesain halaman depan yang lebih segar untuk edisi Minggu.",
+   "en": "The graphics team was asked to design a fresher front page for the Sunday edition.",
+   "ko": "그래픽팀은 일요판을 위해 더 산뜻한 첫 면을 디자인해 달라는 요청을 받았어요.",
+   "blank": "mendesain",
+   "src": "made"
+  },
+  {
+   "text": "Sahabat Lestari yang suka menggambar mendesain stiker untuk mobil mereka.",
+   "en": "Lestari's best friend, who loves drawing, designed stickers for their car.",
+   "ko": "그림 그리기를 좋아하는 레스타리의 친구가 차에 붙일 스티커를 디자인했어요.",
+   "blank": "mendesain",
+   "src": "made"
+  }
+ ],
  "w|mendesak": [
   {
    "text": "Masalah ini mendesak dan perlu diselesaikan.",
@@ -35363,6 +35747,22 @@
    "en": "The bullet penetrated the target precisely.",
    "ko": "그 총알이 목표를 정확히 관통했어.",
    "blank": "menembus"
+  }
+ ],
+ "w|menempa": [
+  {
+   "text": "Redaktur bilang pengalaman di lapangan akan menempa Fajar jadi wartawan tangguh.",
+   "en": "The editor said field experience would forge Fajar into a tough reporter.",
+   "ko": "편집장은 현장 경험이 파자르를 강한 기자로 단련시킬 거라고 했어요.",
+   "blank": "menempa",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menonton seorang pandai besi menempa parang di sebuah desa kecil.",
+   "en": "Lestari watched a blacksmith forge a machete in a small village.",
+   "ko": "레스타리는 작은 마을에서 대장장이가 칼을 벼리는 모습을 구경했어요.",
+   "blank": "menempa",
+   "src": "made"
   }
  ],
  "w|menempati": [
@@ -39223,6 +39623,22 @@
    "en": "Saying that word made him nervous.",
    "ko": "그 말을 하니 그가 긴장했어.",
    "blank": "Mengucapkan"
+  }
+ ],
+ "w|mengudara": [
+  {
+   "text": "Wawancara Fajar dengan wali kota akan mengudara di radio besok pagi.",
+   "en": "Fajar's interview with the mayor will air on the radio tomorrow morning.",
+   "ko": "파자르의 시장 인터뷰는 내일 아침 라디오로 방송돼요.",
+   "blank": "mengudara",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mendengarkan acara radio lokal yang baru saja mengudara.",
+   "en": "Lestari listened to a local radio show that had just gone on air.",
+   "ko": "레스타리는 막 방송을 시작한 지역 라디오 프로그램을 들었어요.",
+   "blank": "mengudara",
+   "src": "made"
   }
  ],
  "w|menguji": [
@@ -43689,6 +44105,22 @@
    "blank": "mobil"
   }
  ],
+ "w|modal": [
+  {
+   "text": "Fajar menulis tentang pedagang kecil yang kesulitan mencari modal usaha.",
+   "en": "Fajar wrote about small traders who struggle to find business capital.",
+   "ko": "파자르는 사업 자금을 구하기 힘든 소상인들에 대해 기사를 썼어요.",
+   "blank": "modal",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mampir ke kedai milik anak muda yang mengumpulkan modal dari menjual kue.",
+   "en": "Lestari stopped by a shop run by a young man who raised capital by selling cakes.",
+   "ko": "레스타리는 과자를 팔아 자금을 모은 청년의 가게에 들렀어요.",
+   "blank": "modal",
+   "src": "made"
+  }
+ ],
  "w|mode": [
   {
    "text": "Andi lupa menyalakan mode senyap, jadi ponselnya berbunyi di tengah ujian.",
@@ -44366,6 +44798,22 @@
    "en": "The smartwatch measures Putri's pulse while she goes for her morning run.",
    "ko": "스마트워치가 푸트리가 아침 달리기를 하는 동안 맥박을 재요.",
    "blank": "nadi",
+   "src": "made"
+  }
+ ],
+ "w|nafkah": [
+  {
+   "text": "Fajar mewawancarai nelayan yang tetap mencari nafkah di tengah cuaca buruk.",
+   "en": "Fajar interviewed fishermen who keep earning a living despite the bad weather.",
+   "ko": "파자르는 궂은 날씨에도 생계를 꾸리는 어부들을 인터뷰했어요.",
+   "blank": "nafkah",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membeli keripik dari seorang ibu yang mencari nafkah di pinggir jalan.",
+   "en": "Lestari bought chips from a woman who makes her living by the roadside.",
+   "ko": "레스타리는 길가에서 생계를 꾸리는 아주머니에게서 칩을 샀어요.",
+   "blank": "nafkah",
    "src": "made"
   }
  ],
@@ -45242,6 +45690,22 @@
    "en": "The doctor found a small metal object in the child's stomach on the X-ray.",
    "ko": "의사는 엑스레이로 그 아이 배 속에서 작은 금속 물체를 찾았어요.",
    "blank": "objek",
+   "src": "made"
+  }
+ ],
+ "w|obligasi": [
+  {
+   "text": "Fajar menulis tentang harga obligasi negara yang naik minggu ini.",
+   "en": "Fajar wrote about government bond prices rising this week.",
+   "ko": "파자르는 이번 주에 오른 국채 가격에 대해 기사를 썼어요.",
+   "blank": "obligasi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari mendengarkan siniar tentang obligasi ritel sambil menyetir.",
+   "en": "Lestari listened to a podcast about retail bonds while driving.",
+   "ko": "레스타리는 운전하면서 개인용 채권에 관한 팟캐스트를 들었어요.",
+   "blank": "obligasi",
    "src": "made"
   }
  ],
@@ -47741,6 +48205,22 @@
    "src": "made"
   }
  ],
+ "w|pemasaran": [
+  {
+   "text": "Bagian pemasaran ingin artikel Fajar dipromosikan di media sosial.",
+   "en": "The marketing department wants Fajar's article promoted on social media.",
+   "ko": "마케팅 부서는 파자르의 기사를 소셜 미디어에서 홍보하고 싶어 해요.",
+   "blank": "pemasaran",
+   "src": "made"
+  },
+  {
+   "text": "Lestari melihat baliho pemasaran perumahan baru di sepanjang jalan tol.",
+   "en": "Lestari saw marketing billboards for new housing all along the toll road.",
+   "ko": "레스타리는 고속도로를 따라 새 주택단지 홍보 광고판을 봤어요.",
+   "blank": "pemasaran",
+   "src": "made"
+  }
+ ],
  "w|pembaca": [
   {
    "text": "Kisah cinta Fajar dimuat di blog yang punya banyak pembaca setia.",
@@ -48504,6 +48984,22 @@
    "en": "Ayu's sales went up after the drinks shelf was moved near the door.",
    "ko": "음료 진열대를 문 가까이 옮긴 뒤 아유의 매출이 올랐어요.",
    "blank": "pemindahan",
+   "src": "made"
+  }
+ ],
+ "w|pemindai": [
+  {
+   "text": "Mesin pemindai di kantor rusak, jadi Fajar memotret dokumen dengan ponsel.",
+   "en": "The office scanner was broken, so Fajar photographed the documents with his phone.",
+   "ko": "사무실 스캐너가 고장 나서 파자르는 휴대폰으로 문서를 찍었어요.",
+   "blank": "pemindai",
+   "src": "made"
+  },
+  {
+   "text": "Petugas gerbang tol memeriksa kartu Lestari dengan pemindai baru.",
+   "en": "The toll gate officer checked Lestari's card with a new scanner.",
+   "ko": "톨게이트 직원이 새 스캐너로 레스타리의 카드를 확인했어요.",
+   "blank": "pemindai",
    "src": "made"
   }
  ],
@@ -51437,6 +51933,22 @@
    "blank": "perangkat"
   }
  ],
+ "w|perantara": [
+  {
+   "text": "Seorang perantara menawarkan dokumen rahasia, tetapi Fajar menolaknya.",
+   "en": "A middleman offered secret documents, but Fajar turned him down.",
+   "ko": "한 중개인이 비밀 문서를 내밀었지만 파자르는 거절했어요.",
+   "blank": "perantara",
+   "src": "made"
+  },
+  {
+   "text": "Lestari menyewa vila melalui perantara yang ia temukan di grup daring.",
+   "en": "Lestari rented a villa through a middleman she found in an online group.",
+   "ko": "레스타리는 온라인 모임에서 찾은 중개인을 통해 빌라를 빌렸어요.",
+   "blank": "perantara",
+   "src": "made"
+  }
+ ],
  "w|perapian": [
   {
    "text": "Agus iri melihat unit penthouse yang punya perapian listrik.",
@@ -53005,6 +53517,22 @@
    "blank": "pertama-tama"
   }
  ],
+ "w|pertambangan": [
+  {
+   "text": "Fajar ditugaskan meliput dampak pertambangan pasir terhadap sungai.",
+   "en": "Fajar was assigned to cover the impact of sand mining on the river.",
+   "ko": "파자르는 모래 채굴이 강에 미치는 영향을 취재하라는 임무를 받았어요.",
+   "blank": "pertambangan",
+   "src": "made"
+  },
+  {
+   "text": "Lestari melewati bekas pertambangan timah yang kini menjadi danau biru.",
+   "en": "Lestari passed an old tin mine that has now become a blue lake.",
+   "ko": "레스타리는 지금은 파란 호수가 된 옛 주석 광산을 지나갔어요.",
+   "blank": "pertambangan",
+   "src": "made"
+  }
+ ],
  "w|pertanda": [
   {
    "text": "Awan gelap adalah pertanda hujan akan datang.",
@@ -53359,6 +53887,22 @@
    "en": "He wants to become an officer after graduating from the academy.",
    "ko": "그는 사관학교를 졸업한 뒤 장교가 되고 싶어해.",
    "blank": "perwira"
+  }
+ ],
+ "w|pesaing": [
+  {
+   "text": "Fajar kecewa karena koran pesaing sudah lebih dulu memuat berita yang sama.",
+   "en": "Fajar was disappointed because a rival paper had already run the same story.",
+   "ko": "경쟁 신문이 같은 기사를 먼저 실어서 파자르는 실망했어요.",
+   "blank": "pesaing",
+   "src": "made"
+  },
+  {
+   "text": "Penjual durian berbisik kepada Lestari bahwa pesaing di seberang jalan suka menaikkan harga.",
+   "en": "The durian seller whispered to Lestari that the competitor across the road likes to hike prices.",
+   "ko": "두리안 장수는 길 건너 경쟁 가게가 값을 올리곤 한다고 레스타리에게 속삭였어요.",
+   "blank": "pesaing",
+   "src": "made"
   }
  ],
  "w|pesan": [
@@ -54134,6 +54678,22 @@
    "en": "Wati keeps umbrellas and raincoats in the corner by the door.",
    "ko": "와티는 문 옆 구석에 우산과 비옷을 둬요.",
    "blank": "pojok",
+   "src": "made"
+  }
+ ],
+ "w|pokok": [
+  {
+   "text": "Redaktur meminta Fajar menulis ulang pokok berita dalam dua kalimat.",
+   "en": "The editor asked Fajar to rewrite the gist of the story in two sentences.",
+   "ko": "편집장은 파자르에게 기사의 요점을 두 문장으로 다시 쓰라고 했어요.",
+   "blank": "pokok",
+   "src": "made"
+  },
+  {
+   "text": "Lestari selalu mencari warung nasi karena nasi adalah makanan pokok keluarganya.",
+   "en": "Lestari always looks for a rice stall because rice is her family's staple food.",
+   "ko": "쌀밥이 가족의 주식이라서 레스타리는 늘 밥집을 찾아요.",
+   "blank": "pokok",
    "src": "made"
   }
  ],
@@ -55991,6 +56551,22 @@
    "en": "He helped his colleague.",
    "ko": "그는 동료를 도왔어.",
    "blank": "rekannya"
+  }
+ ],
+ "w|rekayasa": [
+  {
+   "text": "Seorang ahli rekayasa sipil menjelaskan kepada Fajar penyebab jembatan itu retak.",
+   "en": "A civil engineering expert explained to Fajar why the bridge cracked.",
+   "ko": "토목공학 전문가가 파자르에게 다리에 금이 간 이유를 설명했어요.",
+   "blank": "rekayasa",
+   "src": "made"
+  },
+  {
+   "text": "Lestari kagum melihat hasil rekayasa jalan layang yang berkelok di antara bukit.",
+   "en": "Lestari marveled at the engineering of the flyover winding between the hills.",
+   "ko": "레스타리는 언덕 사이로 굽이치는 고가도로의 공학 기술에 감탄했어요.",
+   "blank": "rekayasa",
+   "src": "made"
   }
  ],
  "w|rekening": [
@@ -61643,6 +62219,22 @@
    "blank": "Silakan"
   }
  ],
+ "w|silang": [
+  {
+   "text": "Fajar selalu melakukan pemeriksaan silang pada setiap angka sebelum artikel terbit.",
+   "en": "Fajar always cross-checks every figure before an article is published.",
+   "ko": "파자르는 기사가 나가기 전에 늘 모든 숫자를 교차 확인해요.",
+   "blank": "silang",
+   "src": "made"
+  },
+  {
+   "text": "Lestari bingung karena ada tanda silang merah di peta lama miliknya.",
+   "en": "Lestari was confused because there was a red cross mark on her old map.",
+   "ko": "레스타리는 옛 지도에 빨간 X 표시가 있어서 어리둥절했어요.",
+   "blank": "silang",
+   "src": "made"
+  }
+ ],
  "w|siluman": [
   {
    "text": "Cerita siluman membuat anak-anak takut.",
@@ -62429,6 +63021,22 @@
    "en": "We waited at the station for a long time.",
    "ko": "우리는 역에서 오랫동안 기다렸어.",
    "blank": "stasiun"
+  }
+ ],
+ "w|statistik": [
+  {
+   "text": "Fajar menemukan bahwa data statistik dari kantor pemerintah belum diperbarui.",
+   "en": "Fajar found that the statistical data from the government office hadn't been updated.",
+   "ko": "파자르는 정부 기관의 통계 자료가 아직 갱신되지 않았다는 걸 알게 됐어요.",
+   "blank": "statistik",
+   "src": "made"
+  },
+  {
+   "text": "Lestari membaca bahwa menurut statistik, jalur pantai paling ramai saat musim mudik.",
+   "en": "Lestari read that, according to statistics, the coastal route is busiest during the holiday exodus.",
+   "ko": "레스타리는 통계상 해안 도로가 귀성철에 가장 붐빈다는 글을 읽었어요.",
+   "blank": "statistik",
+   "src": "made"
   }
  ],
  "w|status": [
@@ -65723,6 +66331,22 @@
    "src": "made"
   }
  ],
+ "w|terinspirasi": [
+  {
+   "text": "Judul tulisan itu terinspirasi dari obrolan Fajar dengan tukang parkir.",
+   "en": "The headline was inspired by Fajar's chat with a parking attendant.",
+   "ko": "그 기사 제목은 파자르가 주차 요원과 나눈 대화에서 영감을 받았어요.",
+   "blank": "terinspirasi",
+   "src": "made"
+  },
+  {
+   "text": "Lestari terinspirasi oleh hamparan sawah dan mulai menulis puisi di mobil.",
+   "en": "Lestari was inspired by the stretch of rice fields and started writing a poem in the car.",
+   "ko": "레스타리는 펼쳐진 논에 영감을 받아 차 안에서 시를 쓰기 시작했어요.",
+   "blank": "terinspirasi",
+   "src": "made"
+  }
+ ],
  "w|terisi": [
   {
    "text": "Lembar jawaban Dimas sudah terisi semua sebelum waktu habis.",
@@ -66907,6 +67531,22 @@
    "en": "Only a little rice is left.",
    "ko": "밥이 조금만 남았어.",
    "blank": "Tersisa"
+  }
+ ],
+ "w|tertahan": [
+  {
+   "text": "Laporan Fajar sempat tertahan di meja redaktur karena butuh verifikasi.",
+   "en": "Fajar's report was held up on the editor's desk because it needed verification.",
+   "ko": "파자르의 기사는 검증이 필요해서 편집장 책상에 잠시 묶여 있었어요.",
+   "blank": "tertahan",
+   "src": "made"
+  },
+  {
+   "text": "Mobil Lestari tertahan berjam-jam karena ada longsor kecil di depan.",
+   "en": "Lestari's car was stuck for hours because of a small landslide ahead.",
+   "ko": "앞에 작은 산사태가 나서 레스타리의 차는 몇 시간 동안 멈춰 있었어요.",
+   "blank": "tertahan",
+   "src": "made"
   }
  ],
  "w|tertangkap": [

@@ -4277,6 +4277,22 @@
    "blank": "결혼했어"
   }
  ],
+ "w|겸손": [
+  {
+   "text": "준호는 벼가 익을수록 고개를 숙인다는 말로 겸손을 배웠어요.",
+   "en": "Junho learned humility from the saying that rice bows its head as it ripens.",
+   "ko": "준호는 벼가 익을수록 고개를 숙인다는 말로 겸손을 배웠어요.",
+   "blank": "겸손을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 손님이 물건을 칭찬해도 겸손을 잃지 않고 별거 아니라고 해요.",
+   "en": "Even when customers praise her goods, Haeun stays humble and says it's nothing special.",
+   "ko": "하은은 손님이 물건을 칭찬해도 겸손을 잃지 않고 별거 아니라고 해요.",
+   "blank": "겸손을",
+   "src": "made"
+  }
+ ],
  "w|겸손하다": [
   {
    "text": "재원의 친구는 상을 받고도 늘 겸손했어요.",
@@ -5668,6 +5684,22 @@
    "en": "The agency reported the scalpers who resold tickets at high prices to the police.",
    "ko": "소속사는 표를 비싸게 되판 암표상들을 경찰에 고발했어요.",
    "blank": "고발했어요",
+   "src": "made"
+  }
+ ],
+ "w|고백": [
+  {
+   "text": "준호는 첫눈 오는 날 고백을 하려고 한 달 전부터 준비했어요.",
+   "en": "Junho prepared for a month to confess his feelings on the day of the first snow.",
+   "ko": "준호는 첫눈 오는 날 고백을 하려고 한 달 전부터 준비했어요.",
+   "blank": "고백을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 중고 책 속에서 누군가 쓴 사랑 고백 편지를 발견했어요.",
+   "en": "Haeun found a love confession letter someone had written inside a used book.",
+   "ko": "하은은 중고 책 속에서 누군가 쓴 사랑 고백 편지를 발견했어요.",
+   "blank": "고백",
    "src": "made"
   }
  ],
@@ -12001,6 +12033,22 @@
    "src": "made"
   }
  ],
+ "w|기일": [
+  {
+   "text": "준호네 가족은 할아버지 기일이 되면 국화를 들고 산소에 가요.",
+   "en": "On his grandfather's memorial day, Junho's family goes to the grave with chrysanthemums.",
+   "ko": "준호네 가족은 할아버지 기일이 되면 국화를 들고 산소에 가요.",
+   "blank": "기일이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 할머니 기일에 쓸 놋그릇을 벼룩시장에서 찾았어요.",
+   "en": "Haeun found brass bowls at the flea market to use for her grandmother's memorial day.",
+   "ko": "하은은 할머니 기일에 쓸 놋그릇을 벼룩시장에서 찾았어요.",
+   "blank": "기일에",
+   "src": "made"
+  }
+ ],
  "w|기자": [
   {
    "text": "기자가 현장 취재를 위해 달려왔어.",
@@ -12088,6 +12136,22 @@
    "en": "This documentary film tells the stories of organ donors' families.",
    "ko": "이 다큐 영화는 장기 기증자 가족들의 이야기를 담았어요.",
    "blank": "기증자",
+   "src": "made"
+  }
+ ],
+ "w|기질": [
+  {
+   "text": "준호는 더위를 잘 타는 기질이라 여름이 오면 늘 기운이 없어요.",
+   "en": "Junho tends by nature to suffer in the heat, so he always feels drained when summer comes.",
+   "ko": "준호는 더위를 잘 타는 기질이라 여름이 오면 늘 기운이 없어요.",
+   "blank": "기질이라",
+   "src": "made"
+  },
+  {
+   "text": "하은은 물건을 쉽게 못 버리는 기질이라 벼룩시장에 내놓을 게 많아요.",
+   "en": "Haeun is the type who can't easily throw things away, so she has lots to sell at the flea market.",
+   "ko": "하은은 물건을 쉽게 못 버리는 기질이라 벼룩시장에 내놓을 게 많아요.",
+   "blank": "기질이라",
    "src": "made"
   }
  ],
@@ -13283,6 +13347,22 @@
    "blank": "꺼"
   }
  ],
+ "w|끈기": [
+  {
+   "text": "준호는 겨우내 끈기 있게 뛰어서 봄에 처음으로 마라톤을 완주했어요.",
+   "en": "Junho ran persistently all winter and finished his first marathon in spring.",
+   "ko": "준호는 겨우내 끈기 있게 뛰어서 봄에 처음으로 마라톤을 완주했어요.",
+   "blank": "끈기",
+   "src": "made"
+  },
+  {
+   "text": "하은은 끈기 있게 기다려서 원하던 옛날 카메라를 반값에 샀어요.",
+   "en": "Haeun waited patiently and bought the old camera she wanted at half price.",
+   "ko": "하은은 끈기 있게 기다려서 원하던 옛날 카메라를 반값에 샀어요.",
+   "blank": "끈기",
+   "src": "made"
+  }
+ ],
  "w|끈적하다": [
   {
    "text": "손에 꿀이 묻어 끈적해.",
@@ -13683,6 +13763,22 @@
    "blank": "나갈게"
   }
  ],
+ "w|나날": [
+  {
+   "text": "해가 짧아진 나날이 이어지자 준호는 아침 산책을 저녁으로 옮겼어요.",
+   "en": "As short days continued, Junho moved his morning walk to the evening.",
+   "ko": "해가 짧아진 나날이 이어지자 준호는 아침 산책을 저녁으로 옮겼어요.",
+   "blank": "나날이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 아무것도 안 팔리는 나날이 이어져도 자리를 지켰어요.",
+   "en": "Even when days of selling nothing went on, Haeun kept her spot.",
+   "ko": "하은은 아무것도 안 팔리는 나날이 이어져도 자리를 지켰어요.",
+   "blank": "나날이",
+   "src": "made"
+  }
+ ],
  "w|나누다": [
   {
    "text": "간식을 친구들과 나눴어.",
@@ -14033,6 +14129,22 @@
    "en": "The symptoms showed up again.",
    "ko": "증상이 또 나타났어요.",
    "blank": "나타났어요"
+  }
+ ],
+ "w|나흘": [
+  {
+   "text": "폭설로 길이 막혀서 준호는 산장에서 나흘을 지냈어요.",
+   "en": "Roads were blocked by heavy snow, so Junho spent four days at the mountain lodge.",
+   "ko": "폭설로 길이 막혀서 준호는 산장에서 나흘을 지냈어요.",
+   "blank": "나흘을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 벼룩시장에 내놓을 물건을 나흘 동안 닦고 정리했어요.",
+   "en": "Haeun spent four days cleaning and sorting the things to put out at the flea market.",
+   "ko": "하은은 벼룩시장에 내놓을 물건을 나흘 동안 닦고 정리했어요.",
+   "blank": "나흘",
+   "src": "made"
   }
  ],
  "w|낙관적": [
@@ -18437,6 +18549,22 @@
    "en": "It'll be better to answer honestly.",
    "ko": "솔직하게 답하는 게 나을 거야.",
    "blank": "답하는"
+  }
+ ],
+ "w|닷새": [
+  {
+   "text": "준호는 추석 연휴 닷새 동안 고향 집 마당의 감을 땄어요.",
+   "en": "Over the five-day Chuseok holiday, Junho picked persimmons in the yard of his family home.",
+   "ko": "준호는 추석 연휴 닷새 동안 고향 집 마당의 감을 땄어요.",
+   "blank": "닷새",
+   "src": "made"
+  },
+  {
+   "text": "이번 벼룩시장은 닷새 동안 공원에서 열려요.",
+   "en": "This flea market is held in the park for five days.",
+   "ko": "이번 벼룩시장은 닷새 동안 공원에서 열려요.",
+   "blank": "닷새",
+   "src": "made"
   }
  ],
  "w|당국": [
@@ -23785,6 +23913,22 @@
    "src": "made"
   }
  ],
+ "w|띠": [
+  {
+   "text": "준호는 새해가 되면 그해의 띠가 무엇인지부터 확인해요.",
+   "en": "When the new year comes, Junho first checks which zodiac animal the year belongs to.",
+   "ko": "준호는 새해가 되면 그해의 띠가 무엇인지부터 확인해요.",
+   "blank": "띠가",
+   "src": "made"
+  },
+  {
+   "text": "하은은 열두 띠 동물이 그려진 옛날 접시를 한 세트 샀어요.",
+   "en": "Haeun bought a set of old plates painted with the twelve zodiac animals.",
+   "ko": "하은은 열두 띠 동물이 그려진 옛날 접시를 한 세트 샀어요.",
+   "blank": "띠",
+   "src": "made"
+  }
+ ],
  "w|라면": [
   {
    "text": "라면은 밤에 먹으면 짜.",
@@ -24107,6 +24251,22 @@
    "en": "Today is the application deadline.",
    "ko": "오늘이 신청 마감이야.",
    "blank": "마감이야"
+  }
+ ],
+ "w|마감일": [
+  {
+   "text": "준호는 겨울 정원 공모전 마감일을 놓칠 뻔했어요.",
+   "en": "Junho almost missed the deadline for the winter garden contest.",
+   "ko": "준호는 겨울 정원 공모전 마감일을 놓칠 뻔했어요.",
+   "blank": "마감일을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 판매자 신청 마감일이 지난 줄 모르고 서류를 들고 갔어요.",
+   "en": "Haeun brought the forms without knowing the seller application deadline had passed.",
+   "ko": "하은은 판매자 신청 마감일이 지난 줄 모르고 서류를 들고 갔어요.",
+   "blank": "마감일이",
+   "src": "made"
   }
  ],
  "w|마구": [
@@ -25033,6 +25193,22 @@
    "en": "Talk is easy.",
    "ko": "말은 쉬운 거야.",
    "blank": "말은"
+  }
+ ],
+ "w|말기": [
+  {
+   "text": "준호는 고려 말기의 달력을 박물관에서 처음 봤어요.",
+   "en": "Junho saw a calendar from the late Goryeo period at a museum for the first time.",
+   "ko": "준호는 고려 말기의 달력을 박물관에서 처음 봤어요.",
+   "blank": "말기의",
+   "src": "made"
+  },
+  {
+   "text": "하은은 조선 말기에 찍힌 사진엽서를 비싸게 팔았어요.",
+   "en": "Haeun sold a picture postcard taken in the late Joseon period at a high price.",
+   "ko": "하은은 조선 말기에 찍힌 사진엽서를 비싸게 팔았어요.",
+   "blank": "말기에",
+   "src": "made"
   }
  ],
  "w|말다": [
@@ -32987,6 +33163,22 @@
    "src": "made"
   }
  ],
+ "w|보름": [
+  {
+   "text": "준호는 정월 보름에 부럼을 깨물며 한 해 건강을 빌었어요.",
+   "en": "On the first full moon of the lunar year, Junho cracked nuts and wished for a healthy year.",
+   "ko": "준호는 정월 보름에 부럼을 깨물며 한 해 건강을 빌었어요.",
+   "blank": "보름에",
+   "src": "made"
+  },
+  {
+   "text": "벼룩시장은 보름마다 한 번씩 하은네 동네 공터에서 열려요.",
+   "en": "The flea market is held once every fifteen days in the neighborhood lot where Haeun sells.",
+   "ko": "벼룩시장은 보름마다 한 번씩 하은네 동네 공터에서 열려요.",
+   "blank": "보름마다",
+   "src": "made"
+  }
+ ],
  "w|보름달": [
   {
    "text": "캠핑 둘째 날 밤에는 보름달이 떠서 랜턴이 필요 없었어요.",
@@ -33620,6 +33812,22 @@
    "en": "Mikyeong submitted a work to the staff art exhibition held in the headquarters lobby.",
    "ko": "미경은 본사 로비에서 열리는 직원 그림 전시회에 작품을 냈어요.",
    "blank": "본사",
+   "src": "made"
+  }
+ ],
+ "w|본성": [
+  {
+   "text": "봄볕이 따뜻해지면 사람은 누구나 밖에 나가고 싶어지는 게 본성이라고 준호는 말해요.",
+   "en": "Junho says it's human nature for anyone to want to go out when the spring sun gets warm.",
+   "ko": "봄볕이 따뜻해지면 사람은 누구나 밖에 나가고 싶어지는 게 본성이라고 준호는 말해요.",
+   "blank": "본성이라고",
+   "src": "made"
+  },
+  {
+   "text": "하은은 싼 물건만 보면 흥정부터 하고 싶어지는 게 사람의 본성 같다며 웃었어요.",
+   "en": "Haeun laughed, saying it seems to be human nature to want to haggle the moment you see cheap goods.",
+   "ko": "하은은 싼 물건만 보면 흥정부터 하고 싶어지는 게 사람의 본성 같다며 웃었어요.",
+   "blank": "본성",
    "src": "made"
   }
  ],
@@ -37969,6 +38177,22 @@
    "blank": "사촌"
   }
  ],
+ "w|사춘기": [
+  {
+   "text": "준호의 아들은 사춘기가 왔는지 요즘 말수가 부쩍 줄었어요.",
+   "en": "Junho's son has gotten much quieter lately, maybe because puberty has hit.",
+   "ko": "준호의 아들은 사춘기가 왔는지 요즘 말수가 부쩍 줄었어요.",
+   "blank": "사춘기가",
+   "src": "made"
+  },
+  {
+   "text": "사춘기 딸이 어릴 때 갖고 놀던 인형을 팔자고 해서 하은은 조금 서운했어요.",
+   "en": "Haeun felt a little hurt when her teenage daughter suggested selling the dolls she played with as a child.",
+   "ko": "사춘기 딸이 어릴 때 갖고 놀던 인형을 팔자고 해서 하은은 조금 서운했어요.",
+   "blank": "사춘기",
+   "src": "made"
+  }
+ ],
  "w|사치스럽다": [
   {
    "text": "차림이 사치스럽다 보니 부담스러워.",
@@ -39723,6 +39947,22 @@
    "blank": "생겼네"
   }
  ],
+ "w|생년월일": [
+  {
+   "text": "준호는 병원 접수처에서 생년월일을 적다가 자기 생일이 다음 주라는 걸 깨달았어요.",
+   "en": "While writing his date of birth at the hospital reception, Junho realized his birthday was next week.",
+   "ko": "준호는 병원 접수처에서 생년월일을 적다가 자기 생일이 다음 주라는 걸 깨달았어요.",
+   "blank": "생년월일을",
+   "src": "made"
+  },
+  {
+   "text": "하은은 벼룩시장 판매자 등록서에 생년월일을 적어 냈어요.",
+   "en": "Haeun wrote her date of birth on the flea market seller registration form.",
+   "ko": "하은은 벼룩시장 판매자 등록서에 생년월일을 적어 냈어요.",
+   "blank": "생년월일을",
+   "src": "made"
+  }
+ ],
  "w|생리": [
   {
    "text": "생리 전에 항상 피곤해져.",
@@ -39903,6 +40143,22 @@
    "en": "I twisted open the bottled water.",
    "ko": "생수 뚜껑을 돌려 열었어.",
    "blank": "생수"
+  }
+ ],
+ "w|생신": [
+  {
+   "text": "준호 아버지의 생신은 단풍이 한창인 시월이에요.",
+   "en": "Junho's father's birthday is in October, when the autumn leaves are at their peak.",
+   "ko": "준호 아버지의 생신은 단풍이 한창인 시월이에요.",
+   "blank": "생신은",
+   "src": "made"
+  },
+  {
+   "text": "하은은 어머니 생신 선물로 벼룩시장에서 자개 보석함을 골랐어요.",
+   "en": "Haeun picked a mother-of-pearl jewelry box at the flea market as a birthday gift for her mother.",
+   "ko": "하은은 어머니 생신 선물로 벼룩시장에서 자개 보석함을 골랐어요.",
+   "blank": "생신",
+   "src": "made"
   }
  ],
  "w|생애": [
@@ -41386,6 +41642,22 @@
    "en": "The moment Haeun received her first business cards felt almost sacred.",
    "ko": "하은에게 첫 명함을 받는 순간은 성스럽게까지 느껴졌어요.",
    "blank": "성스럽게까지",
+   "src": "made"
+  }
+ ],
+ "w|성실": [
+  {
+   "text": "준호의 할아버지는 철마다 밭을 갈며 성실 하나로 평생을 사셨어요.",
+   "en": "Junho's grandfather lived his whole life on diligence alone, tilling the field every season.",
+   "ko": "준호의 할아버지는 철마다 밭을 갈며 성실 하나로 평생을 사셨어요.",
+   "blank": "성실",
+   "src": "made"
+  },
+  {
+   "text": "하은은 매주 빠짐없이 자리를 펴는 옆 상인의 성실에 감탄했어요.",
+   "en": "Haeun admired the diligence of the vendor next to her, who sets up without fail every week.",
+   "ko": "하은은 매주 빠짐없이 자리를 펴는 옆 상인의 성실에 감탄했어요.",
+   "blank": "성실에",
    "src": "made"
   }
  ],
@@ -49845,6 +50117,22 @@
    "src": "krdict"
   }
  ],
+ "w|앞으로": [
+  {
+   "text": "준호는 앞으로 계절마다 같은 산에 올라 사진을 찍기로 했어요.",
+   "en": "Junho decided that from now on he'll climb the same mountain every season and take pictures.",
+   "ko": "준호는 앞으로 계절마다 같은 산에 올라 사진을 찍기로 했어요.",
+   "blank": "앞으로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 앞으로 쓰지 않는 물건은 바로바로 팔기로 했어요.",
+   "en": "Haeun decided that from now on she'll sell things she doesn't use right away.",
+   "ko": "하은은 앞으로 쓰지 않는 물건은 바로바로 팔기로 했어요.",
+   "blank": "앞으로",
+   "src": "made"
+  }
+ ],
  "w|앞쪽": [
   {
    "text": "앞쪽으로 좀 가 줘.",
@@ -53021,6 +53309,22 @@
    "blank": "역할을"
   }
  ],
+ "w|연간": [
+  {
+   "text": "준호는 연간 강수량 그래프를 보고 올해 장마가 유난히 길었다는 걸 알았어요.",
+   "en": "Looking at the annual rainfall graph, Junho saw that this year's rainy season was unusually long.",
+   "ko": "준호는 연간 강수량 그래프를 보고 올해 장마가 유난히 길었다는 걸 알았어요.",
+   "blank": "연간",
+   "src": "made"
+  },
+  {
+   "text": "하은은 벼룩시장 연간 회원권을 끊어서 자리 값을 아꼈어요.",
+   "en": "Haeun bought an annual flea market membership and saved on stall fees.",
+   "ko": "하은은 벼룩시장 연간 회원권을 끊어서 자리 값을 아꼈어요.",
+   "blank": "연간",
+   "src": "made"
+  }
+ ],
  "w|연결": [
   {
    "text": "인터넷 연결이 끊겼어.",
@@ -53451,6 +53755,22 @@
    "blank": "연설을"
   }
  ],
+ "w|연세": [
+  {
+   "text": "할머니는 연세가 많으셔서 준호는 환절기마다 안부 전화를 드려요.",
+   "en": "His grandmother is getting on in years, so Junho calls to check on her at every change of season.",
+   "ko": "할머니는 연세가 많으셔서 준호는 환절기마다 안부 전화를 드려요.",
+   "blank": "연세가",
+   "src": "made"
+  },
+  {
+   "text": "연세 지긋한 할아버지가 하은에게 옛날 라디오의 사연을 들려주셨어요.",
+   "en": "An elderly gentleman told Haeun the story behind an old radio.",
+   "ko": "연세 지긋한 할아버지가 하은에게 옛날 라디오의 사연을 들려주셨어요.",
+   "blank": "연세",
+   "src": "made"
+  }
+ ],
  "w|연속": [
   {
    "text": "태윤은 사흘 연속 도서관 문 닫을 때까지 있었어요.",
@@ -53853,6 +54173,22 @@
    "blank": "열정을"
   }
  ],
+ "w|열흘": [
+  {
+   "text": "매화가 피고 열흘쯤 지나면 준호네 마당에 벚꽃이 펴요.",
+   "en": "About ten days after the plum blossoms open, cherry blossoms bloom in Junho's yard.",
+   "ko": "매화가 피고 열흘쯤 지나면 준호네 마당에 벚꽃이 펴요.",
+   "blank": "열흘쯤",
+   "src": "made"
+  },
+  {
+   "text": "하은은 열흘 전에 판 책상을 다시 사고 싶다는 생각이 들었어요.",
+   "en": "Haeun found herself wanting to buy back the desk she sold ten days ago.",
+   "ko": "하은은 열흘 전에 판 책상을 다시 사고 싶다는 생각이 들었어요.",
+   "blank": "열흘",
+   "src": "made"
+  }
+ ],
  "w|염려하다": [
   {
    "text": "경민은 혼자 지내는 친구의 건강을 늘 염려해요.",
@@ -53923,6 +54259,22 @@
    "en": "I peeked a little through the crack in the door.",
    "ko": "문틈으로 살짝 엿봤어.",
    "blank": "엿봤어"
+  }
+ ],
+ "w|엿새": [
+  {
+   "text": "장맛비가 엿새나 이어지자 준호는 빨래를 말릴 데가 없었어요.",
+   "en": "The monsoon rain went on for six days, and Junho had nowhere to dry the laundry.",
+   "ko": "장맛비가 엿새나 이어지자 준호는 빨래를 말릴 데가 없었어요.",
+   "blank": "엿새나",
+   "src": "made"
+  },
+  {
+   "text": "하은이 산 오래된 시계는 엿새 만에 다시 멈췄어요.",
+   "en": "The old clock Haeun bought stopped again after six days.",
+   "ko": "하은이 산 오래된 시계는 엿새 만에 다시 멈췄어요.",
+   "blank": "엿새",
+   "src": "made"
   }
  ],
  "w|영감": [
@@ -57605,6 +57957,22 @@
    "src": "made"
   }
  ],
+ "w|월간": [
+  {
+   "text": "준호는 월간 등산 잡지에 실린 단풍 명소를 보고 주말 계획을 세웠어요.",
+   "en": "Junho made weekend plans after seeing the autumn-foliage spots in a monthly hiking magazine.",
+   "ko": "준호는 월간 등산 잡지에 실린 단풍 명소를 보고 주말 계획을 세웠어요.",
+   "blank": "월간",
+   "src": "made"
+  },
+  {
+   "text": "하은은 오래된 월간 잡지 묶음을 수집가에게 넘겼어요.",
+   "en": "Haeun handed over a bundle of old monthly magazines to a collector.",
+   "ko": "하은은 오래된 월간 잡지 묶음을 수집가에게 넘겼어요.",
+   "blank": "월간",
+   "src": "made"
+  }
+ ],
  "w|월급": [
   {
    "text": "월급 아직 안 들어왔어.",
@@ -58554,6 +58922,22 @@
    "en": "Jiyoung's mom made rice cake soup with rich bone stock.",
    "ko": "지영의 엄마는 진한 사골 육수로 떡국을 끓여 주셨어요.",
    "blank": "육수로",
+   "src": "made"
+  }
+ ],
+ "w|육아": [
+  {
+   "text": "준호는 육아 휴직을 내고 아이와 함께 사계절을 온전히 보냈어요.",
+   "en": "Junho took parental leave and spent all four seasons fully with his child.",
+   "ko": "준호는 육아 휴직을 내고 아이와 함께 사계절을 온전히 보냈어요.",
+   "blank": "육아",
+   "src": "made"
+  },
+  {
+   "text": "하은은 육아 용품을 깨끗하게 써서 벼룩시장에 다시 내놓아요.",
+   "en": "Haeun uses baby-care items carefully and puts them back up at the flea market.",
+   "ko": "하은은 육아 용품을 깨끗하게 써서 벼룩시장에 다시 내놓아요.",
+   "blank": "육아",
    "src": "made"
   }
  ],
@@ -59665,6 +60049,22 @@
    "blank": "이런"
   }
  ],
+ "w|이레": [
+  {
+   "text": "준호 할머니는 동지가 지나고 이레만 있으면 해가 길어진다고 하셨어요.",
+   "en": "Junho's grandmother said that seven days after the winter solstice the days get longer.",
+   "ko": "준호 할머니는 동지가 지나고 이레만 있으면 해가 길어진다고 하셨어요.",
+   "blank": "이레만",
+   "src": "made"
+  },
+  {
+   "text": "하은은 이레 내내 비가 와서 벼룩시장이 취소될까 봐 걱정했어요.",
+   "en": "It rained for seven straight days, so Haeun worried the flea market would be canceled.",
+   "ko": "하은은 이레 내내 비가 와서 벼룩시장이 취소될까 봐 걱정했어요.",
+   "blank": "이레",
+   "src": "made"
+  }
+ ],
  "w|이력서": [
   {
    "text": "이력서를 다시 손볼게.",
@@ -60645,6 +61045,22 @@
    "blank": "이쪽"
   }
  ],
+ "w|이튿날": [
+  {
+   "text": "첫눈이 온 이튿날 준호는 아이와 눈사람을 만들었어요.",
+   "en": "The day after the first snow, Junho made a snowman with his child.",
+   "ko": "첫눈이 온 이튿날 준호는 아이와 눈사람을 만들었어요.",
+   "blank": "이튿날",
+   "src": "made"
+  },
+  {
+   "text": "다 팔고 난 이튿날 하은은 텅 빈 창고를 보며 뿌듯해했어요.",
+   "en": "The day after selling everything, Haeun felt proud looking at the empty storage room.",
+   "ko": "다 팔고 난 이튿날 하은은 텅 빈 창고를 보며 뿌듯해했어요.",
+   "blank": "이튿날",
+   "src": "made"
+  }
+ ],
  "w|이틀": [
   {
    "text": "이틀 뒤에 결과 나온대.",
@@ -61379,6 +61795,22 @@
    "en": "Up to seven people can go in.",
    "ko": "일곱 명까지 들어갈 수 있어.",
    "blank": "일곱"
+  }
+ ],
+ "w|일과": [
+  {
+   "text": "겨울이 되면 준호의 일과는 눈 치우기로 시작돼요.",
+   "en": "In winter, Junho's daily routine starts with shoveling snow.",
+   "ko": "겨울이 되면 준호의 일과는 눈 치우기로 시작돼요.",
+   "blank": "일과는",
+   "src": "made"
+  },
+  {
+   "text": "토요일 하은의 일과는 새벽에 물건을 차에 싣는 걸로 시작해요.",
+   "en": "Haeun's Saturday routine starts with loading things into the car at dawn.",
+   "ko": "토요일 하은의 일과는 새벽에 물건을 차에 싣는 걸로 시작해요.",
+   "blank": "일과는",
+   "src": "made"
   }
  ],
  "w|일기예보": [
@@ -64681,6 +65113,22 @@
    "src": "made"
   }
  ],
+ "w|재혼": [
+  {
+   "text": "준호의 어머니는 작년 가을에 재혼을 하셨어요.",
+   "en": "Junho's mother remarried last autumn.",
+   "ko": "준호의 어머니는 작년 가을에 재혼을 하셨어요.",
+   "blank": "재혼을",
+   "src": "made"
+  },
+  {
+   "text": "단골 손님은 재혼 후 살림을 합치면서 남는 가구를 하은에게 내놓았어요.",
+   "en": "A regular, combining households after remarrying, brought her extra furniture to Haeun.",
+   "ko": "단골 손님은 재혼 후 살림을 합치면서 남는 가구를 하은에게 내놓았어요.",
+   "blank": "재혼",
+   "src": "made"
+  }
+ ],
  "w|재활용": [
   {
    "text": "민수는 이사하면서 나온 상자를 모두 재활용으로 내놓았어요.",
@@ -64694,6 +65142,22 @@
    "en": "Jiyoung joined a recycling craft class held at the library.",
    "ko": "지영은 도서관에서 열리는 재활용 공예 수업에 참여했어요.",
    "blank": "재활용",
+   "src": "made"
+  }
+ ],
+ "w|재회": [
+  {
+   "text": "벚꽃이 필 때 준호는 군대 동기들과 십 년 만의 재회를 했어요.",
+   "en": "When the cherry blossoms bloomed, Junho had a reunion with his army buddies after ten years.",
+   "ko": "벚꽃이 필 때 준호는 군대 동기들과 십 년 만의 재회를 했어요.",
+   "blank": "재회를",
+   "src": "made"
+  },
+  {
+   "text": "하은은 벼룩시장에서 초등학교 동창과 뜻밖의 재회를 했어요.",
+   "en": "Haeun had an unexpected reunion with an elementary school classmate at the flea market.",
+   "ko": "하은은 벼룩시장에서 초등학교 동창과 뜻밖의 재회를 했어요.",
+   "blank": "재회를",
    "src": "made"
   }
  ],
@@ -67262,6 +67726,22 @@
    "en": "The owner of the guesthouse welcomed Sohee politely.",
    "ko": "민박집 주인은 소희를 정중하게 맞이했어요.",
    "blank": "정중하게",
+   "src": "made"
+  }
+ ],
+ "w|정직": [
+  {
+   "text": "준호의 아버지는 정직이 장사의 기본이라며 무게를 속이지 않았어요.",
+   "en": "Junho's father never cheated on weight, saying honesty is the foundation of business.",
+   "ko": "준호의 아버지는 정직이 장사의 기본이라며 무게를 속이지 않았어요.",
+   "blank": "정직이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 흠집이 있다고 미리 말해 주는 정직 덕분에 단골이 많아요.",
+   "en": "Thanks to her honesty in pointing out scratches in advance, Haeun has many regulars.",
+   "ko": "하은은 흠집이 있다고 미리 말해 주는 정직 덕분에 단골이 많아요.",
+   "blank": "정직",
    "src": "made"
   }
  ],
@@ -69847,6 +70327,22 @@
    "src": "made"
   }
  ],
+ "w|중기": [
+  {
+   "text": "준호는 조선 중기 사람들이 계절을 어떻게 나눴는지 책에서 읽었어요.",
+   "en": "Junho read in a book how people in the mid-Joseon period divided the seasons.",
+   "ko": "준호는 조선 중기 사람들이 계절을 어떻게 나눴는지 책에서 읽었어요.",
+   "blank": "중기",
+   "src": "made"
+  },
+  {
+   "text": "하은의 가판대에는 조선 중기 것이라는 낡은 엽전이 하나 있어요.",
+   "en": "Haeun's stall has a worn old coin said to be from the mid-Joseon period.",
+   "ko": "하은의 가판대에는 조선 중기 것이라는 낡은 엽전이 하나 있어요.",
+   "blank": "중기",
+   "src": "made"
+  }
+ ],
  "w|중년": [
   {
    "text": "동민은 어느새 친구들과 중년의 고민을 나누고 있었어요.",
@@ -69924,6 +70420,22 @@
    "en": "Seoyeon's friend calls herself a swimming addict.",
    "ko": "서연의 친구는 스스로를 수영 중독자라고 불러요.",
    "blank": "중독자라고",
+   "src": "made"
+  }
+ ],
+ "w|중반": [
+  {
+   "text": "장마 중반이 되자 준호네 지하실에 물이 차기 시작했어요.",
+   "en": "By the middle of the rainy season, water started filling Junho's basement.",
+   "ko": "장마 중반이 되자 준호네 지하실에 물이 차기 시작했어요.",
+   "blank": "중반이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 삼십 대 중반에 처음 벼룩시장에 자리를 폈어요.",
+   "en": "Haeun first set up a stall at the flea market in her mid-thirties.",
+   "ko": "하은은 삼십 대 중반에 처음 벼룩시장에 자리를 폈어요.",
+   "blank": "중반에",
    "src": "made"
   }
  ],
@@ -73415,6 +73927,22 @@
    "blank": "찬성해서"
   }
  ],
+ "w|찰나": [
+  {
+   "text": "꽃잎이 떨어지는 찰나를 준호가 사진에 담았어요.",
+   "en": "Junho captured the instant a petal fell in a photo.",
+   "ko": "꽃잎이 떨어지는 찰나를 준호가 사진에 담았어요.",
+   "blank": "찰나를",
+   "src": "made"
+  },
+  {
+   "text": "하은이 한눈판 찰나에 누가 그 찻잔을 먼저 사 갔어요.",
+   "en": "In the instant Haeun looked away, someone bought that teacup first.",
+   "ko": "하은이 한눈판 찰나에 누가 그 찻잔을 먼저 사 갔어요.",
+   "blank": "찰나에",
+   "src": "made"
+  }
+ ],
  "w|참": [
   {
    "text": "참 웃기다.",
@@ -75069,6 +75597,22 @@
    "en": "Green suits you.",
    "ko": "초록색이 잘 어울려.",
    "blank": "초록색이"
+  }
+ ],
+ "w|초반": [
+  {
+   "text": "준호는 겨울 초반에는 눈이 반가웠지만 금방 지겨워졌어요.",
+   "en": "Junho was glad to see snow early in the winter, but soon got tired of it.",
+   "ko": "준호는 겨울 초반에는 눈이 반가웠지만 금방 지겨워졌어요.",
+   "blank": "초반에는",
+   "src": "made"
+  },
+  {
+   "text": "하은은 장사 초반에는 손님을 부르는 게 너무 쑥스러웠어요.",
+   "en": "When she first started selling, Haeun was too shy to call out to customers.",
+   "ko": "하은은 장사 초반에는 손님을 부르는 게 너무 쑥스러웠어요.",
+   "blank": "초반에는",
+   "src": "made"
   }
  ],
  "w|초밥": [
@@ -77997,6 +78541,22 @@
    "blank": "타올랐어"
   }
  ],
+ "w|타이머": [
+  {
+   "text": "준호는 화분에 물 주는 걸 잊지 않으려고 타이머를 맞춰 놔요.",
+   "en": "Junho sets a timer so he won't forget to water the plants.",
+   "ko": "준호는 화분에 물 주는 걸 잊지 않으려고 타이머를 맞춰 놔요.",
+   "blank": "타이머를",
+   "src": "made"
+  },
+  {
+   "text": "하은은 손님과 흥정할 때 휴대폰 타이머로 경매 놀이를 해요.",
+   "en": "When haggling with customers, Haeun plays an auction game using her phone timer.",
+   "ko": "하은은 손님과 흥정할 때 휴대폰 타이머로 경매 놀이를 해요.",
+   "blank": "타이머로",
+   "src": "made"
+  }
+ ],
  "w|타이밍": [
   {
    "text": "동민은 과장님 기분이 좋은 타이밍을 노려 휴가 신청서를 냈어요.",
@@ -80175,6 +80735,22 @@
    "blank": "팔월에"
   }
  ],
+ "w|팔자": [
+  {
+   "text": "준호는 겨울마다 감기에 걸리는 게 자기 팔자라며 웃었어요.",
+   "en": "Junho laughed, saying catching a cold every winter is just his fate.",
+   "ko": "준호는 겨울마다 감기에 걸리는 게 자기 팔자라며 웃었어요.",
+   "blank": "팔자라며",
+   "src": "made"
+  },
+  {
+   "text": "하은은 주말마다 남의 물건을 정리하는 게 자기 팔자인 것 같대요.",
+   "en": "Haeun says sorting through other people's things every weekend seems to be her lot in life.",
+   "ko": "하은은 주말마다 남의 물건을 정리하는 게 자기 팔자인 것 같대요.",
+   "blank": "팔자인",
+   "src": "made"
+  }
+ ],
  "w|팔찌": [
   {
    "text": "옆자리 동료가 동민에게 손목에 찬 팔찌가 멋있다고 했어요.",
@@ -82163,6 +82739,22 @@
    "en": "I was in meetings all day.",
    "ko": "하루 종일 회의였어.",
    "blank": "하루"
+  }
+ ],
+ "w|하루하루": [
+  {
+   "text": "준호는 봄이 오기를 기다리며 하루하루 달력에 표시를 해요.",
+   "en": "Waiting for spring, Junho marks the calendar day by day.",
+   "ko": "준호는 봄이 오기를 기다리며 하루하루 달력에 표시를 해요.",
+   "blank": "하루하루",
+   "src": "made"
+  },
+  {
+   "text": "하은의 가판대는 하루하루 조금씩 단골이 늘고 있어요.",
+   "en": "Haeun's stall is gaining regulars little by little, day by day.",
+   "ko": "하은의 가판대는 하루하루 조금씩 단골이 늘고 있어요.",
+   "blank": "하루하루",
+   "src": "made"
   }
  ],
  "w|하룻밤": [
@@ -84437,6 +85029,22 @@
    "blank": "헤어지자"
   }
  ],
+ "w|헤어짐": [
+  {
+   "text": "준호는 가을이 오면 대학 시절 여자 친구와의 헤어짐이 떠올라요.",
+   "en": "When autumn comes, Junho remembers his breakup with his college girlfriend.",
+   "ko": "준호는 가을이 오면 대학 시절 여자 친구와의 헤어짐이 떠올라요.",
+   "blank": "헤어짐이",
+   "src": "made"
+  },
+  {
+   "text": "하은은 오래 쓴 물건과의 헤어짐이 아쉬워서 머그잔을 다시 가방에 넣었어요.",
+   "en": "Sad to part with something she had used so long, Haeun put the mug back in her bag.",
+   "ko": "하은은 오래 쓴 물건과의 헤어짐이 아쉬워서 머그잔을 다시 가방에 넣었어요.",
+   "blank": "헤어짐이",
+   "src": "made"
+  }
+ ],
  "w|헤엄치다": [
   {
    "text": "강에서 천천히 헤엄쳤어.",
@@ -86555,6 +87163,22 @@
    "src": "made"
   }
  ],
+ "w|후반": [
+  {
+   "text": "준호는 여름휴가를 팔월 후반으로 잡았어요.",
+   "en": "Junho scheduled his summer vacation for late August.",
+   "ko": "준호는 여름휴가를 팔월 후반으로 잡았어요.",
+   "blank": "후반으로",
+   "src": "made"
+  },
+  {
+   "text": "하은은 이십 대 후반에 모은 레코드판을 이번에 다 정리했어요.",
+   "en": "Haeun cleared out all the records she collected in her late twenties this time.",
+   "ko": "하은은 이십 대 후반에 모은 레코드판을 이번에 다 정리했어요.",
+   "blank": "후반에",
+   "src": "made"
+  }
+ ],
  "w|후배": [
   {
    "text": "후배를 잘 챙겨 줘.",
@@ -86807,6 +87431,22 @@
    "en": "You must never steal other people's things.",
    "ko": "절대 남의 걸 훔치면 안 돼.",
    "blank": "훔치면"
+  }
+ ],
+ "w|훗날": [
+  {
+   "text": "준호는 훗날 아이가 크면 이 사진들을 보여 줄 생각이에요.",
+   "en": "Junho plans to show these photos to his child someday when they've grown up.",
+   "ko": "준호는 훗날 아이가 크면 이 사진들을 보여 줄 생각이에요.",
+   "blank": "훗날",
+   "src": "made"
+  },
+  {
+   "text": "하은은 훗날 작은 골동품 가게를 여는 게 꿈이에요.",
+   "en": "Haeun's dream is to open a small antique shop someday.",
+   "ko": "하은은 훗날 작은 골동품 가게를 여는 게 꿈이에요.",
+   "blank": "훗날",
+   "src": "made"
   }
  ],
  "w|훨씬": [
