@@ -77,6 +77,7 @@ export type TurnDiag = {
   textLength: number;
   audioUrl: string | null;
 };
+
 let lastDiag: TurnDiag | null = null;
 const diagListeners = new Set<(diag: TurnDiag) => void>();
 export function onTurnDiag(listener: (diag: TurnDiag) => void): () => void {
@@ -84,6 +85,7 @@ export function onTurnDiag(listener: (diag: TurnDiag) => void): () => void {
   if (lastDiag) listener(lastDiag);
   return () => void diagListeners.delete(listener);
 }
+
 function reportDiag(diag: TurnDiag) {
   if (lastDiag?.audioUrl && lastDiag.audioUrl !== diag.audioUrl) URL.revokeObjectURL(lastDiag.audioUrl);
   lastDiag = diag;
@@ -98,6 +100,7 @@ export type TutorDiag = {
   end: string;
   ms: number;
 };
+
 let lastTutor: TutorDiag | null = null;
 const tutorListeners = new Set<(diag: TutorDiag) => void>();
 export function onTutorDiag(listener: (diag: TutorDiag) => void): () => void {
@@ -105,6 +108,7 @@ export function onTutorDiag(listener: (diag: TutorDiag) => void): () => void {
   if (lastTutor) listener(lastTutor);
   return () => void tutorListeners.delete(listener);
 }
+
 export function reportTutorDiag(diag: TutorDiag) {
   if (!turnDiagnosticsEnabled()) return;
   lastTutor = diag;
@@ -199,6 +203,7 @@ export function unclearWords(text: string, max = 3): string[] {
     .map(([word]) => word.trim().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, ""))
     .filter(Boolean);
 }
+
 /**
  * 낱말 사이에 멈칫한 곳(서버 `pauses`, Scribe 낱말 시각 — 앞 낱말 끝과 이 낱말 시작 사이 0.7초 넘게, 2026-10-29 사용자 "망설인 부분을 디테일하게").
  * [그 뒤에 나온 낱말, 초]. 최근 몇 개만, 글로 찾는다.
@@ -206,10 +211,6 @@ export function unclearWords(text: string, max = 3): string[] {
 const pausesHeard: { text: string; pauses: [string, number][] }[] = [];
 export function pausesIn(text: string): [string, number][] {
   return pausesHeard.find((entry) => entry.text === text.trim())?.pauses ?? [];
-}
-/** 확신을 받아 온 말인지(받아쓰기가 Scribe가 아니면 없음 — 그때는 "완벽해요"를 낱말만으로). */
-export function hasClarity(text: string): boolean {
-  return clarityHeard.some((entry) => entry.text === text.trim());
 }
 
 async function transcribe(

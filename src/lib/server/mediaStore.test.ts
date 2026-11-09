@@ -2,24 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { claimMedia, readMediaMeta, sweepMedia, uploadMedia, type MediaMeta } from "./mediaStore.ts";
 import { kvListPush, kvSetJson } from "./kv.ts";
-import { cleanMediaRef, fitSize, isMediaId, mediaDailyLimit, newMediaId, previewText } from "../rooms/media.ts";
-
-test("사진 규칙: 크기 맞추기·id·하루 상한·미리보기", () => {
-  assert.deepEqual(fitSize(4000, 3000), { w: 1280, h: 960 });
-  assert.deepEqual(fitSize(800, 600), { w: 800, h: 600 });
-  assert.deepEqual(fitSize(1000, 5000), { w: 256, h: 1280 });
-  const id = newMediaId();
-  assert.ok(isMediaId(id), id);
-  assert.equal(isMediaId("m_../../etc"), false);
-  assert.equal(mediaDailyLimit(false), 10);
-  assert.equal(mediaDailyLimit(true), 50);
-  assert.deepEqual(cleanMediaRef({ id, w: 10.4, h: 20 }), { id, w: 10, h: 20 });
-  assert.equal(cleanMediaRef({ id: "x", w: 1, h: 1 }), null);
-  assert.equal(previewText("", true, "사진"), "📷 사진");
-  assert.equal(previewText("ดูนี่สิ", true, "รูป"), "📷 ดูนี่สิ");
-  assert.equal(previewText("hola", false, "foto"), "hola");
-});
-
+import { newMediaId } from "../rooms/media.ts";
 test("저장소 없으면 올리기는 UNAVAILABLE(검사도 안 부름)", async () => {
   const saved = process.env.BLOB_READ_WRITE_TOKEN;
   delete process.env.BLOB_READ_WRITE_TOKEN;

@@ -1,5 +1,4 @@
 import {
-  SUPPORTED_LEARNING_LANGUAGES,
   learningLanguageName,
   type LearningLanguageCode,
 } from "../learningLanguages.ts";
@@ -192,16 +191,4 @@ export function getLanguageProfile(language: string): LanguageProfile {
 
 export function languageDisplayName(language: string): string {
   return learningLanguageName(language);
-}
-
-/** True when every app learning language has a profile row (add-row-only contract). */
-export function languageProfileTableIsComplete(): boolean {
-  return SUPPORTED_LEARNING_LANGUAGES.every((lang) => Boolean(LANGUAGE_PROFILES[lang.code]));
-}
-
-export function profileHasDimension(
-  language: string,
-  dimension: AnalysisDimension,
-): boolean {
-  return getLanguageProfile(language).activeDimensions.includes(dimension);
 }

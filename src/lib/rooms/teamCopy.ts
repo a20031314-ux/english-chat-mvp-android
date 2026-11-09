@@ -639,9 +639,6 @@ const LOCALES: Record<string, TeamCopy> = {
   },
 };
 
-export const TEAM_COPY_LOCALES = ["ko", "en", ...Object.keys(LOCALES)];
-export const TEAM_COPY_KEYS = Object.keys(en) as (keyof TeamCopy)[];
-
 export function teamCopy(locale: string): TeamCopy {
   if (locale === "ko") return ko;
   return LOCALES[locale] ?? en;

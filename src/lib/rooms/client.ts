@@ -6,7 +6,6 @@ import type { LangMatch } from "./langMatch";
 import { apiUrl } from "@/lib/apiBase";
 import { noteSuspended } from "./suspended";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import { readCachedAccount } from "@/lib/account/session";
 import { noteLedger } from "@/lib/curriculum/logLedger";
 import { fixLedgerKeys } from "@/lib/roleplay/recap";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
@@ -20,43 +19,11 @@ import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howT
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
 const CODE_KEY = "roomsInviteCode";
-const NICK_KEY = "roomsNickname";
-
 export function readInviteCode(): string {
   try {
     return localStorage.getItem(CODE_KEY) ?? "";
   } catch {
     return "";
-  }
-}
-
-export function writeInviteCode(code: string): void {
-  try {
-    if (code) localStorage.setItem(CODE_KEY, code);
-    else localStorage.removeItem(CODE_KEY);
-  } catch {
-    // ignore
-  }
-}
-
-export function roomsUnlocked(): boolean {
-  return readInviteCode() !== "";
-}
-
-export function readNickname(): string {
-  try {
-    // 방에서 정한 이름이 없으면 프로필 닉네임으로.
-    return localStorage.getItem(NICK_KEY) ?? readCachedAccount()?.profile.nickname ?? "";
-  } catch {
-    return "";
-  }
-}
-
-export function writeNickname(nickname: string): void {
-  try {
-    localStorage.setItem(NICK_KEY, nickname);
-  } catch {
-    // ignore
   }
 }
 
@@ -689,9 +656,11 @@ async function board<T>(action: string, payload: Record<string, unknown>): Promi
 export function boardList(input: { language?: string; topic?: BoardTopic; offset?: number; match?: "both"; ui?: string }): Promise<{ posts: BoardPost[]; authors: BoardAuthor[]; next: number }> {
   return board("list", input);
 }
+
 export function boardOpen(postId: string): Promise<{ post: BoardPost; comments: BoardComment[]; authors: BoardAuthor[] }> {
   return board("open", { postId });
 }
+
 export function boardWrite(
   language: string,
   text: string,
@@ -700,26 +669,33 @@ export function boardWrite(
 ): Promise<{ post: BoardPost }> {
   return board("post", { language, text, ...(imageIds.length ? { imageIds } : {}), ...link });
 }
+
 /** 단체방 모집 글에서 참여하기(글쓴이 이름으로 초대되고 바로 참여). */
 export function boardJoinGroup(postId: string): Promise<{ group: BoardGroupView }> {
   return board("joinGroup", { postId });
 }
+
 export function boardEdit(postId: string, text: string): Promise<{ post: BoardPost }> {
   return board("edit", { postId, text });
 }
+
 /** 좋아요 켜기·끄기 → 지금 수와 내 상태. */
 export function boardLike(postId: string, on: boolean): Promise<{ like: { likes: number; liked: boolean } }> {
   return board("like", { postId, on });
 }
+
 export function boardDelete(postId: string): Promise<{ ok: true }> {
   return board("delete", { postId });
 }
+
 export function boardComment(postId: string, text: string, imageId?: string, replyTo?: string, icon?: { pack: string; id: string }): Promise<{ comment: BoardComment }> {
   return board("comment", { postId, text, ...(imageId ? { imageId } : {}), ...(replyTo ? { replyTo } : {}), ...(icon ? { icon } : {}) });
 }
+
 export function boardEditComment(postId: string, commentId: string, text: string): Promise<{ comment: BoardComment }> {
   return board("editComment", { postId, commentId, text });
 }
+
 export function boardDeleteComment(postId: string, commentId: string): Promise<{ ok: true }> {
   return board("deleteComment", { postId, commentId });
 }

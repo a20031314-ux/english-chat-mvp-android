@@ -60,6 +60,7 @@ const FN_TEXT: Partial<Record<FnGroup, string>> = {
   compare: "Ask something whose natural answer compares two things or describes what something is like.",
   mind: "Ask something whose natural answer says how they feel or what they think about something.",
 };
+
 const LEAD_TEXT = "Say something short of your own and stop without a question, leaving them room to take the conversation on.";
 const EASY_TEXT = "Ask a question they can answer by picking one of two options.";
 
@@ -155,13 +156,3 @@ export function afterTurn(state: TalkAimState, seen: TurnSeen): TalkAimState {
 }
 
 export type AimOutcome = { key: string; kind: AimKind; result: "used" | "wrong" | "none" };
-
-/** 통화가 끝나면: 실어 본 겨냥마다 결과. 한 번도 못 실은 겨냥은 빠진다. */
-export function aimResults(state: TalkAimState): AimOutcome[] {
-  return state.aims.flatMap((aim) => {
-    const run = state.runs[aim.key];
-    if (!run || run.tries === 0) return [];
-    const result = run.used > 0 ? "used" : run.wrong > 0 ? "wrong" : "none";
-    return [{ key: aim.key, kind: aim.kind, result }];
-  });
-}

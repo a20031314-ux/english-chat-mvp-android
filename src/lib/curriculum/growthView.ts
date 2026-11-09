@@ -66,11 +66,6 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
   return { studied: order(at.studied), fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
 }
 
-/** 그 시각(초)까지의 답으로 앎인 열쇠 수 — 학습 곡선 선(누적). */
-export function knownAt(events: readonly LogEvent[], until: number, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): number {
-  return progressIn(events.filter((event) => event.t <= until), () => false, dayOf).known.length;
-}
-
 /** 그 시각(초)까지 대화에서 맞게 쓴 열쇠 수(누적, 줄지 않음) — 학습 곡선 선(2026-11-07 밤 사용자 "1번으로" — 표 칸 활용과 같은 말). */
 export function usedAt(events: readonly LogEvent[], until: number): number {
   const keys = new Set<string>();

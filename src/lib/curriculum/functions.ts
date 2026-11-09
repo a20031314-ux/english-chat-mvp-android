@@ -123,7 +123,3 @@ export const FUNCTIONS: LanguageFunction[] = [
   f("debate", 5, "Debating a topic", "주제로 토론하기"),
   f("read-between", 5, "Reading what isn't said", "말 안 한 뜻 읽기"),
 ];
-
-export function functionById(id: string): LanguageFunction | null {
-  return FUNCTIONS.find((one) => one.id === id) ?? null;
-}

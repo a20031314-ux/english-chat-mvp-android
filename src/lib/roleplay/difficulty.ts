@@ -148,18 +148,3 @@ export function applyTurn(
 
   return { state: next, changed: false };
 }
-
-/**
- * Whether someone is stuck at the gentlest setting.
- *
- * The dial has run out but the turns have not improved, which is the case that
- * wants a person rather than a setting — the point to stop adjusting and let
- * the live tutor take over.
- */
-export function isFloored(state: DifficultyState): boolean {
-  return (
-    state.level === MIN_LEVEL &&
-    state.streakOf === "struggled" &&
-    state.streak >= STRUGGLES_BEFORE_EASIER
-  );
-}

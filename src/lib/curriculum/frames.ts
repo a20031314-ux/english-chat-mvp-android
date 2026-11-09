@@ -20,7 +20,7 @@ import { EN_FRAMES } from "./frames/en.ts";
 import { ZH_FRAMES } from "./frames/zh.ts";
 import { JA_FRAMES } from "./frames/ja.ts";
 import { KO_FRAMES } from "./frames/ko.ts";
-import { scriptsFor, swapName, usableName, type ScriptGloss, type StageScript, type StageScriptLine } from "./stageScripts.ts";
+import { type ScriptGloss, type StageScript } from "./stageScripts.ts";
 
 export type FrameExample = {
   /** 온전한 문장(학습 언어). */
@@ -83,74 +83,8 @@ export function frameById(language: string, id: string): Frame | null {
   return (ALL[language] ?? []).find((frame) => frame.id === id) ?? null;
 }
 
-const NAME_CUE = /\s*\(your name\)\s*$/;
-const NAME_CUE_KO = /\s*\(내 이름\)\s*$/;
-
-/** 예문이 학습자 이름 자리인지(뜻 "… (your name)"). */
-export function isNameExample(example: FrameExample): boolean {
-  return NAME_CUE.test(example.cue.en);
-}
-
-/**
- * 이름 자리 예문(뜻 "루카스 (your name)")을 사용자 닉네임으로 — 대본(personalize)처럼, 한국어는 뒤 조사(이에요/예요)까지 맞춘다.
- * 닉네임이 없거나 쓸 수 없으면 그대로.
- */
-export function personalizeFrame(frame: Frame, language: string, nickname: string | null | undefined): Frame {
-  const name = usableName(nickname);
-  if (!name || !frame.examples.some(isNameExample)) return frame;
-  return {
-    ...frame,
-    examples: frame.examples.map((example) => {
-      if (!isNameExample(example)) return example;
-      const en = example.cue.en.replace(NAME_CUE, "");
-      const ko = example.cue.ko?.replace(NAME_CUE_KO, "");
-      const text = swapName(example.text, [example.slot], name, language === "ko");
-      return {
-        text,
-        slot: name,
-        cue: { en: `${name} (your name)`, ...(example.cue.ko !== undefined ? { ko: `${name}(내 이름)` } : {}) },
-        gloss: {
-          en: swapName(example.gloss.en, [en], name, false),
-          ...(example.gloss.ko !== undefined ? { ko: ko ? swapName(example.gloss.ko, [ko], name, true) : example.gloss.ko } : {}),
-        },
-      };
-    }),
-  };
-}
-
-/** 틀 줄의 모양: 빈칸 자리를 지운 문장("写真を撮っ___"이 아니라 틀 그대로 + 빈칸 뜻). */
-export function blankOf(example: FrameExample): string {
-  return example.text.replace(example.slot, "＿＿＿");
-}
-
 export type FrameMode = "shadow" | "blank" | "own";
-
-/** 1~2단계는 따라 말하기·틀만, 3단계부터 "내 말로"(틀은 그대로, 빈칸은 내 이야기 — 틀을 맞게 썼는지 모델이 봄). */
-export function frameModes(stage: number): FrameMode[] {
-  return stage >= 3 ? ["shadow", "blank", "own"] : ["shadow", "blank"];
-}
-
-/** 대본 줄에 붙은 틀 태그(lines[].frames)가 이 틀을 가리키는지. */
-export function lineUsesFrame(line: StageScriptLine, frameId: string): boolean {
-  return line.who === "me" && Boolean(line.frames?.includes(frameId));
-}
-
 /** 이 대본의 내 줄이 쓰는 틀 id들(겹침 없이, 처음 나온 차례). */
 export function framesOfScript(script: StageScript): string[] {
   return [...new Set(script.lines.flatMap((line) => (line.who === "me" ? (line.frames ?? []) : [])))];
-}
-
-/**
- * 이 틀이 내 줄에 든 대본 — 같은 틀을 장면 속에서. 대본 줄의 틀 태그로 찾는다(2026-10-28 1단계 "틀을 뼈대로").
- * 그 단계 대본을 먼저, 앞 단계는 뒤에. 태그가 하나도 없는 언어(옛 데이터)만 틀 조각(core)으로 찾는다.
- */
-export function scriptsWithFrame(language: string, frame: Frame): StageScript[] {
-  const all: StageScript[] = [];
-  for (let stage = frame.stage; stage >= 1; stage -= 1) all.push(...scriptsFor(language, stage));
-  const tagged = all.some((script) => script.lines.some((line) => line.frames?.length));
-  return all.filter((script) =>
-    script.lines.some((line) =>
-      tagged ? lineUsesFrame(line, frame.id) : line.who === "me" && frame.core.some((core) => line.text.includes(core)),
-    ),
-  );
 }

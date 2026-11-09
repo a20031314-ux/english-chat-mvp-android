@@ -610,15 +610,3 @@ export function refineMeaningUnits(units: MeaningUnit[]): MeaningUnit[] {
   const split = units.flatMap((unit) => splitRunOnUnit(unit));
   return mergeFragmentUnits(split);
 }
-
-/** Exported for unit tests. */
-export const meaningUnitHeuristics = {
-  looksIncomplete,
-  looksContinuation,
-  looksOrphanFragment,
-  looksStandaloneReaction,
-  looksLowercaseContinuation,
-  looksFinishedThought,
-  endsWithOpenFunctionWord,
-  shouldMerge,
-};

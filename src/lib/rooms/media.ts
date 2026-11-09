@@ -53,19 +53,3 @@ export function fitSize(width: number, height: number, maxSide = MEDIA_MAX_SIDE)
   const ratio = maxSide / longest;
   return { w: Math.max(1, Math.round(width * ratio)), h: Math.max(1, Math.round(height * ratio)) };
 }
-
-/** 받은 MediaRef를 믿을 수 있는 모양으로(앱이 보낸 값은 서버가 다시 채운다). */
-export function cleanMediaRef(value: unknown): MediaRef | null {
-  const row = value as Partial<MediaRef> | null;
-  if (!row || !isMediaId(row.id)) return null;
-  const w = Number(row.w);
-  const h = Number(row.h);
-  if (!Number.isFinite(w) || !Number.isFinite(h) || w <= 0 || h <= 0 || w > 10_000 || h > 10_000) return null;
-  return { id: row.id, w: Math.round(w), h: Math.round(h) };
-}
-
-/** 목록 미리보기 줄: 글이 없으면 사진 표시만. */
-export function previewText(text: string, hasImage: boolean, photoLabel: string): string {
-  if (text.trim()) return hasImage ? `📷 ${text}` : text;
-  return hasImage ? `📷 ${photoLabel}` : "";
-}

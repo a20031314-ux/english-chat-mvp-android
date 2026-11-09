@@ -195,14 +195,6 @@ async function timedTextTracks(
   return [];
 }
 
-/** Public track list for a video (manual vs asr). */
-export async function listYouTubeCaptionTracks(
-  videoId: string,
-  cookie?: string,
-): Promise<CaptionTrack[]> {
-  return timedTextTracks(videoId, cookie);
-}
-
 function filterTracks(
   tracks: CaptionTrack[],
   options?: CaptionFetchOptions,

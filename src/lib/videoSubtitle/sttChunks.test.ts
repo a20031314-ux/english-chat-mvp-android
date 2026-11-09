@@ -1,12 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import {
-  mergeSttChunks,
-  regularizeSttSegments,
-  speechCoversDuration,
-  splitSpokenWords,
-  sttChunkStarts,
-} from "./sttChunks.ts";
+import { mergeSttChunks, regularizeSttSegments, speechCoversDuration, sttChunkStarts } from "./sttChunks.ts";
 
 test("sttChunkStarts uses one window for short audio", () => {
   assert.deepEqual(sttChunkStarts(40), [0]);
@@ -83,23 +77,6 @@ test("regularizeSttSegments keeps one sentence even if it is long", () => {
   ]);
   assert.equal(rows.length, 1);
   assert.match(rows[0]!.text, /came running/);
-});
-
-test("splitSpokenWords cuts fast speech on a new clause without a long pause", () => {
-  const rows = splitSpokenWords([
-    { word: "I", start: 0, end: 0.08 },
-    { word: "need", start: 0.1, end: 0.28 },
-    { word: "to", start: 0.3, end: 0.38 },
-    { word: "leave", start: 0.4, end: 0.62 },
-    { word: "now", start: 0.64, end: 0.9 },
-    { word: "We", start: 0.96, end: 1.08 },
-    { word: "can", start: 1.1, end: 1.22 },
-    { word: "talk", start: 1.24, end: 1.42 },
-    { word: "later", start: 1.44, end: 1.7 },
-  ]);
-  assert.equal(rows.length, 2);
-  assert.match(rows[0]!.text, /leave now/i);
-  assert.match(rows[1]!.text, /talk later/i);
 });
 
 test("regularizeSttSegments does not cut on a pause inside one thought", () => {

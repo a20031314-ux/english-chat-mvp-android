@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { AIM_TRIES, afterTurn, aimResults, beforeTurn, planAims, startAims, type TalkAimState } from "./talkAims.ts";
+import { AIM_TRIES, afterTurn, beforeTurn, planAims, startAims, type TalkAimState } from "./talkAims.ts";
 
 const fixes = [{ right: "Ayer fui al parque." }, { right: "昨日公園に行きました。", point: "목적어 뒤 を를 빠뜨림" }];
 
@@ -52,27 +52,6 @@ test("two short answers in a row bring a two-choice question, not checked afterw
   const step = beforeTurn(state);
   assert.match(step.aim ?? "", /two options/);
   assert.equal(beforeTurn(afterTurn(step.state, {})).aimCheck, null);
-});
-
-test("the aim is checked on the next turn; used twice ends it", () => {
-  let state = turns(startAims(planAims({ fixes, wantsLead: false, fnCounts: {} })), 2).state;
-  let step = beforeTurn(state);
-  const sent = step.aim;
-  state = afterTurn(step.state, { aim: "used" });
-  step = beforeTurn(state);
-  assert.equal(step.aimCheck, sent);
-  state = turns(step.state, 1).state;
-  step = beforeTurn(state);
-  assert.equal(step.aim, sent);
-  state = afterTurn(step.state, { aim: "used" });
-  const rest = turns(state, 6).aims;
-  assert.ok(rest.every((a) => a === null), "done after two uses");
-  assert.deepEqual(aimResults(turns(state, 1).state), [{ key: "fix:昨日公園に行きました。", kind: "fix", result: "used" }]);
-});
-
-test("an aim never landed is reported as none; one never sent is left out", () => {
-  const state = turns(startAims(planAims({ fixes, wantsLead: true, fnCounts: {} })), 5).state;
-  assert.deepEqual(aimResults(state), [{ key: "fix:昨日公園に行きました。", kind: "fix", result: "none" }, { key: "lead", kind: "lead", result: "none" }]);
 });
 
 test("an aim is always followed by a turn without one", () => {

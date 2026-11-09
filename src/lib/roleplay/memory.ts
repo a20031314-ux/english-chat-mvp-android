@@ -138,8 +138,3 @@ export function parseMemory(raw: string): FoldedMemory | null {
   const topics = readTopics(record.topics);
   return { notes, facts, ...(summary ? { summary } : {}), ...(topics.length ? { topics } : {}), ...(record.uses !== undefined ? { uses: record.uses } : {}), ...(record.asks !== undefined ? { asks: record.asks } : {}) };
 }
-
-/** The notes out of the model's answer, or null if there are none to use. */
-export function parseContext(raw: string): string | null {
-  return parseMemory(raw)?.notes || null;
-}

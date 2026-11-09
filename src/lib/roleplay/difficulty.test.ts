@@ -1,16 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  MAX_LEVEL,
-  MIN_LEVEL,
-  applyTurn,
-  isFloored,
-  readTurn,
-  settingsForLevel,
-  startingDifficulty,
-  type DifficultyState,
-  type TurnOutcome,
-} from "./difficulty.ts";
+import { MAX_LEVEL, MIN_LEVEL, applyTurn, readTurn, settingsForLevel, startingDifficulty, type DifficultyState, type TurnOutcome } from "./difficulty.ts";
 
 const good = (over: Partial<TurnOutcome> = {}): TurnOutcome => ({
   matched: true,
@@ -20,6 +10,7 @@ const good = (over: Partial<TurnOutcome> = {}): TurnOutcome => ({
   hesitationMs: 800,
   ...over,
 });
+
 const bad = (over: Partial<TurnOutcome> = {}): TurnOutcome =>
   good({ matched: false, ...over });
 
@@ -88,15 +79,6 @@ test("the level stops at both ends", () => {
 test("a long run of good turns does not overshoot the top", () => {
   const { state } = run(startingDifficulty(3), good(), 30);
   assert.equal(state.level, MAX_LEVEL);
-});
-
-test("struggling at the gentlest setting is reported rather than absorbed", () => {
-  // The dial has run out and the turns have not improved. That is the case for
-  // a person, not a setting.
-  const floored = run(startingDifficulty(MIN_LEVEL), bad(), 3).state;
-  assert.equal(isFloored(floored), true);
-  assert.equal(isFloored(startingDifficulty(MIN_LEVEL)), false);
-  assert.equal(isFloored(run(startingDifficulty(3), bad(), 2).state), false);
 });
 
 test("the gentlest setting is forgiving and the strictest is still not exact", () => {

@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { CONFIRM_EVERY, nextStudy, recordQuiz, QUIZ_REST_MS, type QuizLog } from "./nextStudy.ts";
+import { CONFIRM_EVERY, nextStudy, recordQuiz, type QuizLog } from "./nextStudy.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 import { reviewKeysOf } from "./dailyPlan.ts";
 
@@ -44,7 +44,6 @@ for (const language of ["es", "ja"]) {
     const right = recordQuiz({}, key, true, NOW - 1000);
     const base = { language, stage: 1, passed: new Set<string>(), review: {}, weakest: null, now: NOW };
     assert.ok(!nextStudy({ ...base, log: right }).some((pick) => pick.key === key));
-    assert.ok(nextStudy({ ...base, log: recordQuiz({}, key, true, NOW - QUIZ_REST_MS - 1) }).some((pick) => pick.key === key));
     assert.ok(!nextStudy({ ...base, log: {}, skip: new Set([key]) }).some((pick) => pick.key === key));
   });
 

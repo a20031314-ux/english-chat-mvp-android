@@ -63,8 +63,6 @@
 | 자라는 중 | `growth:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현별 자라는 기록(언어별) | `growthStore.ts` |
 | 자라는 중 | `selfcheck:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 스스로 확인 기록(언어별) | `selfCheckStore.ts` |
 | 자유 통화 | `rp:daily` | 학습자 한 명 | 계산((terms.callWindowDays + 1) * 2) | 해당 없음 | 오늘 쓴 자유 통화 분 | `entitlementStore.ts` |
-| 자유 통화 | `usage:calls` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 통화 횟수(평생) | `entitlementStore.ts` |
-| 자유 통화 | `usage:callsec` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 통화 초(월별) | `entitlementStore.ts` |
 | 자유 통화 | `usage:rptrial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 처음 20포인트 체험 쓴 양 | `entitlementStore.ts` |
 | 점검 | `simforget:v1` | 점검 | 2일 | 해당 없음 | 점검 데이터 지우기 하루 횟수 | `simData.ts` |
 | 지도 단계 | `scriptprog:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 글자·소리 기초에서 통과한 묶음(언어별) | `scriptProgressStore.ts` |
@@ -80,7 +78,6 @@
 | 통화·오늘의 팩(문장 은행) | `bank:written` | 모두 함께 | 90일 | 해당 없음 | 모델이 새로 쓴 대사 모음(나중에 은행 후보) | `entitlementStore.ts` |
 | 포인트 | `points:bought` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 산 포인트 | `entitlementStore.ts` |
 | 포인트 | `points:credited` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 이미 넣은 구매 거래(두 번 막기) | `entitlementStore.ts` |
-| 포인트 | `points:hold` | 학습자 한 명 | 6시간 | 해당 없음 | 통화 중 잡아 둔 포인트 | `entitlementStore.ts` |
 | 포인트 | `points:part` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 꺼내 두고 남은 포인트 조각(1/1000, 쓴 만큼 깎기) | `entitlementStore.ts` |
 | 포인트 | `points:rpcarry` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 남은 초 이월(월별) | `entitlementStore.ts` |
 | 포인트 | `points:rplast` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 마지막 통화 차감 | `entitlementStore.ts` |

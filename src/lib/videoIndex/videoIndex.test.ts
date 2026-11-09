@@ -1,13 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { findExpression, formsOf, matchVideos, wordsOf } from "./match.ts";
-import {
-  buildTranscriptRecord,
-  parseTranscriptRecord,
-  speechStats,
-  transcriptAsSttSegments,
-  type TranscriptRecord,
-} from "./transcript.ts";
+import { buildTranscriptRecord, parseTranscriptRecord, transcriptAsSttSegments, type TranscriptRecord } from "./transcript.ts";
 
 const SEGMENTS = [
   { startTime: 0, endTime: 3.2, text: "So we got to the cafe and it was packed." },
@@ -68,12 +62,6 @@ test("a record can be handed back to the pipeline as speech it already has", () 
     startTime: 3.4,
     endTime: 6,
   });
-});
-
-test("speech stats count words against time spoken", () => {
-  const stats = speechStats(record());
-  assert.equal(stats.words, 36);
-  assert.ok(stats.wordsPerMinute > 150 && stats.wordsPerMinute < 250);
 });
 
 test("words drop punctuation but keep apostrophes", () => {

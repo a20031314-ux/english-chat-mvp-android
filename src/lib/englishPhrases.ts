@@ -661,10 +661,6 @@ for (const phrase of ENGLISH_PHRASES) {
   if (words > maxPhraseWordCount) maxPhraseWordCount = words;
 }
 
-export function isKnownEnglishPhrase(text: string): boolean {
-  return PHRASE_BY_KEY.has(normalizePhraseKey(text));
-}
-
 export type EnglishLookupSegment = {
   kind: "phrase" | "word" | "text";
   value: string;

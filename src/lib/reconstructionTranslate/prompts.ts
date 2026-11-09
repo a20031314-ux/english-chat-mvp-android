@@ -176,13 +176,6 @@ Do not recap the speaker ("someone is talking about X", "~에 대해 이야기�
 Return ONLY JSON: {"translated":"..."}`;
 }
 
-export function firstInterpretationUser(ctx: TranslationContext): string {
-  return JSON.stringify({
-    text: ctx.sourceText,
-    context: contextBlock(ctx),
-  });
-}
-
 /**
  * Step 3 (optional): review the 2-pass line. Source is allowed here
  * so meaning drift can be caught — but the job is still "rewrite if

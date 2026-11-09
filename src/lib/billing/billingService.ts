@@ -265,18 +265,12 @@ export function resetBillingConfigure(): void {
   configurePromise = null;
 }
 
-
 /**
  * The RevenueCat subscriber id for this install, remembered once billing has
  * configured. The server uses it to ask RevenueCat what this user actually
  * bought, rather than believing a header, and counts usage against it.
  */
 let cachedAppUserId: string | null = null;
-
-export function revenueCatUserId(): string | null {
-  return cachedAppUserId;
-}
-
 /** Headers that tell the API who is asking. Safe to call before billing is ready. */
 export function entitlementHeaders(isPremium?: boolean): Record<string, string> {
   const headers: Record<string, string> = {};
@@ -543,11 +537,6 @@ export async function fetchMonthlyPriceLabel(): Promise<string | null> {
   } catch {
     return null;
   }
-}
-
-export async function findMonthlyPackage(): Promise<PurchasesPackage | null> {
-  const target = await findMonthlyPurchaseTarget();
-  return target?.kind === "package" ? target.value : null;
 }
 
 async function findMonthlyPurchaseTarget(

@@ -12,15 +12,11 @@
 import { allFramesFor } from "./frames.ts";
 import { ladderFor } from "./stages/index.ts";
 import { allScriptsFor } from "./stageScripts.ts";
-import { nearOf, pieceAt, pieceOf, rng, shuffled, type QuizQuestion } from "./quiz.ts";
-import { isSpaceless, segmentWords } from "../wordSegments.ts";
+import { pieceAt, pieceOf, type QuizQuestion } from "./quiz.ts";
+import { segmentWords } from "../wordSegments.ts";
 
 export type TalkLine = { who: "me" | "them"; text: string; gloss?: string; fixed?: boolean };
 export type TalkQuestion = Extract<QuizQuestion, { kind: "talk" }>;
-
-/** 빈칸 줄 앞에 보여 주는 줄 수. */
-export const TALK_BEFORE = 3;
-
 const lower = (text: string) => text.toLocaleLowerCase();
 
 /** 줄 다듬기: 마크다운 표시·줄바꿈을 걷고, 너무 길거나 빈 줄은 버림. */
@@ -55,20 +51,6 @@ export function hitsIn(language: string, text: string, stage: number): Hit[] {
   return hits;
 }
 
-function typeable(language: string, piece: string): boolean {
-  if ((language === "ja" || language === "zh") && /\p{Script=Han}/u.test(piece)) return false;
-  return isSpaceless(piece) ? [...piece].length <= 8 : segmentWords(piece, language).length <= 3 && piece.length <= 24;
-}
-
-/** 대화 조각 안에 그 조각이 또 있나(빈칸 줄의 그 자리 말고) — 있으면 답이 보임. */
-function shownElsewhere(lines: readonly TalkLine[], at: number, hit: Hit, language: string): boolean {
-  const target = lines[at]!.text;
-  const rest = target.slice(0, hit.at) + " ".repeat(hit.piece.length) + target.slice(hit.at + hit.piece.length);
-  const others = [...lines.filter((_, i) => i !== at).map((line) => line.text), rest];
-  if (isSpaceless(hit.piece)) return others.some((text) => text.includes(hit.piece));
-  return others.some((text) => pieceAt(lower(text), lower(hit.piece), language) >= 0);
-}
-
 export type TalkOptions = {
   stage: number;
   seed: string;
@@ -79,53 +61,6 @@ export type TalkOptions = {
   /** 이번에 이미 낸 줄. */
   avoid?: ReadonlySet<string>;
 };
-
-/** 대화 조각 빈칸 한 문제(없으면 null). conversations = 대화마다 줄(오래된 것 → 최근). */
-export function talkOf(language: string, conversations: readonly (readonly TalkLine[])[], options: TalkOptions): { question: TalkQuestion; key: string } | null {
-  const random = rng(`${options.seed}|talk`);
-  const picks: { conv: readonly TalkLine[]; at: number; hit: Hit; score: number }[] = [];
-  for (const conv of conversations) {
-    conv.forEach((line, at) => {
-      // 빈칸 줄: 튜터 줄, 또는 고친 꼴이 된 내 줄(그대로의 내 줄은 틀렸을 수 있어 비우지 않음).
-      if (line.who === "me" && !line.fixed) return;
-      if (!line.text || line.text.length > 140 || options.avoid?.has(line.text)) return;
-      const words = segmentWords(line.text, language);
-      if (words.length < 3 || words.length > 20) return;
-      for (const hit of hitsIn(language, line.text, options.stage)) {
-        if (!options.wants(hit.key)) continue;
-        const window = conv.slice(Math.max(0, at - TALK_BEFORE), at + 1);
-        if (shownElsewhere(window, window.length - 1, hit, language)) continue;
-        const near = nearOf(language, hit.key, hit.piece).filter((one) => lower(one) !== lower(hit.piece) && !lower(line.text).includes(lower(one)));
-        if (!typeable(language, hit.piece) && near.length < 2) continue;
-        picks.push({ conv, at, hit, score: options.rank?.(hit.key) ?? 0 });
-      }
-    });
-  }
-  if (!picks.length) return null;
-  // 먼저 낼 소재부터, 같으면 내가 틀렸던 줄(고친 꼴) 먼저, 그다음 섞어서.
-  const ordered = shuffled(picks, random).sort((a, b) => a.score - b.score || Number(Boolean(b.conv[b.at]!.fixed)) - Number(Boolean(a.conv[a.at]!.fixed)));
-  const pick = ordered[0]!;
-  const line = pick.conv[pick.at]!;
-  const lines = pick.conv.slice(Math.max(0, pick.at - TALK_BEFORE), pick.at + 1).map((one) => ({ who: one.who, text: one.text, ...(one.gloss ? { gloss: one.gloss } : {}) }));
-  const near = nearOf(language, pick.hit.key, pick.hit.piece).filter((one) => lower(one) !== lower(pick.hit.piece) && !lower(line.text).includes(lower(one)));
-  const choices = typeable(language, pick.hit.piece) ? undefined : shuffled([pick.hit.piece, ...shuffled(near, random).slice(0, 2)], random);
-  return {
-    key: pick.hit.key,
-    question: {
-      kind: "talk",
-      text: line.text,
-      lines,
-      at: lines.length - 1,
-      before: line.text.slice(0, pick.hit.at),
-      after: line.text.slice(pick.hit.at + pick.hit.piece.length),
-      answer: pick.hit.piece,
-      ...(near.length ? { near } : {}),
-      ...(choices ? { options: choices } : {}),
-      ...(line.fixed ? { mine: true } : {}),
-      from: "talk",
-    },
-  };
-}
 
 /**
  * 모두의 문제은행에 보내도 되는 튜터 줄인가(폰에서 먼저 거름 — 서버가 한 번 더 판정).
@@ -238,6 +173,7 @@ export function talkShareOn(): boolean {
     return false;
   }
 }
+
 export function setTalkShare(on: boolean): void {
   try {
     globalThis.localStorage?.setItem(TALK_SHARE_KEY, on ? "on" : "off");

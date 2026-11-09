@@ -139,13 +139,3 @@ export function recordCatalogTrial(videoId: string) {
   }
   return next;
 }
-
-/** @deprecated Use getImportPointsUsed. */
-export function getVideoPrepUsedSeconds() {
-  return getImportPointsUsed() * VIDEO_IMPORT_POINT_SECONDS;
-}
-
-/** @deprecated Use recordImportCharge. */
-export function recordVideoPrepSeconds(seconds: number) {
-  return recordImportCharge("", Math.ceil(seconds / VIDEO_IMPORT_POINT_SECONDS));
-}

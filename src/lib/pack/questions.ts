@@ -205,8 +205,3 @@ const BANKS: Record<string, PackBank> = { en: EN, ja: JA };
 export function packBankFor(language: string): PackBank | null {
   return BANKS[language] ?? null;
 }
-
-/** Languages a daily pack can be made in. */
-export function packLanguages(): string[] {
-  return Object.keys(BANKS);
-}

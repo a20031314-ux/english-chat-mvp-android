@@ -11,7 +11,6 @@ import type { MorningText } from "./curriculum/morningDigest";
 export type MorningSettings = { on: boolean; hour: number; minute: number; words: number };
 export const MORNING_WORDS = [3, 5, 10] as const;
 const KEY = "morningNotify.v1";
-const EVENT = "lb-morning";
 const CHANNEL = "morning";
 /** 7일 치 알림 id(다시 예약할 때 지운다). */
 const IDS = Array.from({ length: 7 }, (_, i) => 7101 + i);
@@ -27,33 +26,6 @@ export function readMorning(): MorningSettings {
     return { on: raw.on === true, hour, minute, words };
   } catch {
     return DEFAULT;
-  }
-}
-
-export function saveMorning(next: MorningSettings) {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(next));
-  } catch {
-    // 이번 실행에만.
-  }
-  window.dispatchEvent(new Event(EVENT));
-}
-
-export function onMorningChange(listener: () => void): () => void {
-  window.addEventListener(EVENT, listener);
-  return () => window.removeEventListener(EVENT, listener);
-}
-
-/** 켤 때 한 번: 알림 허용(안드로이드 13+·iOS). 거절이면 false. */
-export async function allowMorning(): Promise<boolean> {
-  if (!localNotificationsAvailable()) return false;
-  try {
-    const current = await LocalNotifications.checkPermissions();
-    if (current.display === "granted") return true;
-    const asked = await LocalNotifications.requestPermissions();
-    return asked.display === "granted";
-  } catch {
-    return false;
   }
 }
 

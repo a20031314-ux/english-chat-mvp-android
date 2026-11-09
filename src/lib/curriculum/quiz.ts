@@ -19,7 +19,7 @@ import { EXTRA_EXAMPLES, SHARED_EXAMPLES_OFF } from "./examples/index.ts";
 import { plainPinyin, readingOf, tonedPinyinMatch } from "./readings/index.ts";
 import { grownDecoys, grownItems } from "./qbank.ts";
 import { allFramesFor } from "./frames.ts";
-import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
+import { allScriptsFor, type ScriptGloss } from "./stageScripts.ts";
 import { segmentWords, isSpaceless } from "../wordSegments.ts";
 import { hasLatin, romajiToHiragana, sameKana } from "../romaji.ts";
 
@@ -94,8 +94,6 @@ export type QuizMix = "auto" | "speak" | "read";
 
 export type Quiz = { key: string; questions: QuizQuestion[] };
 export type SpotQuestion = Extract<QuizQuestion, { kind: "spot" }>;
-
-export const QUIZ_MINUTES = 2;
 export const QUIZ_SIZE = 3;
 
 /** 셋 중 둘 이상 맞으면 맞음(둘뿐이면 둘 다). */
@@ -643,6 +641,7 @@ const MARK_PAIRS: Record<string, readonly string[]> = {
   fr: ["à", "où", "là", "çà", "dû", "sûr"],
   pt: ["é", "está", "têm", "pôde", "pôr", "pára", "avô", "avó"],
 };
+
 export function meaningMark(answer: string, typed: string, language?: string): boolean {
   if (language === "es" && [...answer].some((ch, i) => (ch === "ñ" || ch === "Ñ") && typed.normalize("NFC")[i] !== ch)) return true;
   const pairs = MARK_PAIRS[language ?? ""];
@@ -1244,31 +1243,6 @@ function mixQuiz(language: string, key: string, sources: readonly QuizSource[], 
   return out;
 }
 
-/**
- * 대본 하나를 대화 대신 문제 묶음으로(학습 조합이 말하기 위주가 아닐 때, 2026-10-29): 대본 줄마다 그 조합의 모양 하나씩, 8문제까지.
- * 다 풀어 70% 넘게 맞히면 그 대본을 넘긴 것으로(화면이 /api/curriculum/scripts에 보냄 — 통과 기준 "모든 방식"과 같은 셈).
- */
-export function buildUnit(language: string, scriptId: string, mix: Exclude<QuizMix, "auto">, seed: string): QuizQuestion[] {
-  const script = allScriptsFor(language).find((one) => one.id === scriptId);
-  if (!script) return [];
-  const random = rng(`${scriptId}|${mix}|${seed}`);
-  const lines = script.lines.map((line) => ({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, who: line.who === "me" ? ("me" as const) : ("them" as const), piece: script.expressions.map((e) => pieceOf(line.text, e)).find(Boolean) ?? undefined }));
-  const kinds = MIX_KINDS[mix];
-  const out: QuizQuestion[] = [];
-  lines.forEach((source, i) => {
-    if (out.length >= 8) return;
-    const kind = kinds[i % kinds.length]!;
-    const made =
-      kind === "type" ? typeOf(language, source) ?? meaningOf(language, source, random)
-      : kind === "choose" ? (source.piece ? chooseOf(language, `e|${script.expressions.find((e) => pieceOf(source.text, e))}`, source, random) : null) ?? meaningOf(language, source, random)
-      : kind === "order" ? orderOf(language, source, random)
-      : kind === "meaning" ? meaningOf(language, source, random)
-      : source.who === "me" ? ({ kind: "say", text: source.text, gloss: source.gloss, from: source.from } as QuizQuestion) : meaningOf(language, source, random);
-    if (made) out.push(made);
-  });
-  return out;
-}
-
 /** 묶음을 넘겼나: 센 문제의 70% 이상. */
 export function unitPassed(correct: number, counted: number): boolean {
   return counted > 0 && correct / counted >= 0.7;
@@ -1282,25 +1256,6 @@ export function canQuiz(language: string, key: string): boolean {
 /** 조각 순서 문제의 맞는 문장 모양(띄어쓰기 없는 언어는 붙여서). */
 export function joinWords(words: readonly string[], spaced: boolean): string {
   return words.join(spaced ? " " : "");
-}
-
-
-/** 대본 🎤에서 같은 줄을 두 번 이상 틀리면 약한 곳으로 본다. */
-export const SCRIPT_MISSES = 2;
-
-/**
- * 대본에서 자꾸 틀린 내 줄 → 다시 볼 열쇠(그 줄의 문장구조 태그 + 그 줄에 든 핵심 표현). 학습 끝 체크에 "헷갈려요"로 미리 들어간다.
- * misses = 줄 번호 → 틀린 횟수(말이 들렸는데 맞지 않은 것만).
- */
-export function weakKeysOfScript(script: StageScript, misses: Readonly<Record<number, number>>): string[] {
-  const out = new Set<string>();
-  for (const [at, count] of Object.entries(misses)) {
-    const line = script.lines[Number(at)];
-    if (!line || line.who !== "me" || count < SCRIPT_MISSES) continue;
-    for (const frame of line.frames ?? []) out.add(`f|${frame}`);
-    for (const expression of script.expressions) if (pieceOf(line.text, expression)) out.add(`e|${expression}`);
-  }
-  return [...out];
 }
 
 /**
@@ -1389,7 +1344,6 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   return { kind: "meaning", text: source.text, options, answer: options.indexOf(right), gloss: source.gloss, from: key, mark: source.piece, card: face };
 }
 
-
 /* ───────── 맞나 틀리나(2026-11-08) ───────── */
 
 /** 맞힌 적 있는 말 가운데 이만큼을 "맞나 틀리나"로(나머지는 낱말 쓰기). */
@@ -1420,6 +1374,7 @@ const GENDER = new Map<string, Map<string, string>>();
 export function registerWordGender(language: string, book: Record<string, { g?: string }>): void {
   GENDER.set(language, new Map(Object.entries(book).filter(([, traits]) => traits.g).map(([word, traits]) => [word, traits.g!])));
 }
+
 export const wordGenderOf = (language: string, word: string): string | undefined => GENDER.get(language)?.get(word);
 
 /** 받침이 있는 말 뒤 · 없는 말 뒤 조사와 그 문법 칸. */
@@ -1431,6 +1386,7 @@ const ARTICLE_SWAP: Record<string, { m: string[]; f: string[]; key: string }> = 
   it: { m: ["il", "un", "i"], f: ["la", "una", "le"], key: "g|1:2" },
   pt: { m: ["o", "um", "os", "uns"], f: ["a", "uma", "as", "umas"], key: "g|1:2" },
 };
+
 /** 조사 짝(받침 있음, 없음) — 까닭 줄. */
 export const KO_PARTICLE_PAIRS: readonly (readonly [string, string])[] = KO_PARTICLES.map(([a, b]) => [a, b] as const);
 /** 틀린 문장을 띄어쓰기로 자른 낱말 가운데 끼운 말이 든 자리(누르기 찾기). 붙은 조사면 그 앞말 자리. */

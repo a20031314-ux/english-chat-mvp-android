@@ -60,6 +60,7 @@ const NUMBER_WORDS: Record<string, string[]> = {
   hi: ["शून्य", "एक", "दो", "तीन", "चार", "पाँच", "छह", "सात", "आठ", "नौ", "दस", "सौ", "हज़ार"],
   ko: ["영", "공", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구", "십", "백", "천"],
 };
+
 const DIGITS = /[\p{Nd}〇一二三四五六七八九十百千万๐-๙]/u;
 export function isNumberWord(language: string, word: string): boolean {
   if (/\p{Nd}/u.test(word)) return true;
@@ -330,14 +331,7 @@ export function applyCheck(choices: ScriptChoices, raw: string): ScriptChoices {
   }
   return out;
 }
-
-/** 이 줄의 문제: 서버 것 → 없으면 기기 규칙. */
-export function choiceForLine(language: string, script: StageScript, index: number, server?: ScriptChoices | null): LineChoice | null {
-  return server?.[index] ?? ruleChoice(language, script, index);
-}
-
 /* ---------- 통과 기준(사용자가 고름) ---------- */
 
 /** speak = 말하기로 맞힌 줄만 통과로 셈(기본), any = 고르기·맞추기로 맞힌 줄도. */
 export type PassRule = "speak" | "any";
-export const PASS_RULE_KEY = "scriptPassRule.v1";

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { ladderFor, stageById, stageProgress, stageScopeForPrompt, nextStage, STAGE_DONE_SHARE } from "./index.ts";
+import { ladderFor, stageById, stageProgress, stageScopeForPrompt, STAGE_DONE_SHARE } from "./index.ts";
 import { emptyLedger, ledgerKey, type Ledger, type LedgerItem } from "../../learner/ledger.ts";
 import { findConstruction } from "../../learner/constructions.ts";
 import { parseSelfCheck, pitchFor } from "../../learner/selfCheck.ts";
@@ -46,15 +46,6 @@ for (const language of ALL) {
     });
   });
 }
-
-test("범위가 없는 학습 언어는 null, 단계 id는 그 언어 것만", () => {
-  assert.equal(ladderFor("xx"), null);
-  assert.equal(stageById("xx-1"), null);
-  assert.equal(stageById("ja-9"), null);
-  assert.equal(stageById("ja-2")?.order, 2);
-  assert.equal(nextStage(stageById("ko-5")!), null);
-  assert.equal(nextStage(stageById("ko-4")!)?.id, "ko-5");
-});
 
 function ledgerWith(language: string, entries: Array<[string, LedgerItem["state"]]>): Ledger {
   const ledger = emptyLedger(language);
@@ -137,8 +128,8 @@ test("영어 학습·다른 앱 언어: 옮길 원문에 뜻풀이가 비지 않
   assert.equal(viewsFrom(ladderFor("en")!.stages, "en", "en")[0]!.dialogues[0]!.lines[0]!.gloss, "");
 });
 
-import { scriptFor, scriptProgress } from "../scripts/index.ts";
-import { looksLike, scriptTextsOf, scriptViewFrom, withScriptTexts } from "../../server/stageCopy.ts";
+import { scriptFor } from "../scripts/index.ts";
+import { looksLike } from "../../server/stageCopy.ts";
 
 for (const language of ALL) {
   test(`${language}: 글자·소리 기초 묶음`, () => {
@@ -169,20 +160,6 @@ test("일본어 글자 소리는 낱말이 아니라 그 글자 한 박자", () 
       assert.equal(item.say, item.char, item.char);
     }
   }
-});
-
-test("글자 기초 진행과 옮긴 글 순서", () => {
-  const course = scriptFor("ja")!;
-  const first = course.groups[0]!.id;
-  const progress = scriptProgress(course, { [first]: 1 });
-  assert.equal(progress.done, 1);
-  assert.equal(progress.next, course.groups[1]!.id);
-  assert.ok(!progress.finished);
-  const view = scriptViewFrom(course, "en");
-  const texts = scriptTextsOf(view);
-  const back = withScriptTexts(view, texts.map((t) => `#${t}`));
-  assert.equal(back!.groups[0]!.title, `#${view.groups[0]!.title}`);
-  assert.equal(withScriptTexts(view, texts.slice(1)), null);
 });
 
 test("옮긴 글 검사: 아랍어 앱에 스페인어로 옮긴 글은 버린다", () => {

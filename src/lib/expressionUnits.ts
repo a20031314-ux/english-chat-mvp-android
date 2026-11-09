@@ -1,7 +1,4 @@
-import {
-  isKnownEnglishPhrase,
-  segmentEnglishForLookup,
-} from "@/lib/englishPhrases";
+import { segmentEnglishForLookup } from "@/lib/englishPhrases";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
 import {
   isLearnableEnglishWord,
@@ -131,10 +128,6 @@ export function normalizeUnitTexts(raw: unknown, sentence: string): string[] {
   return out;
 }
 
-function overlap(a: ExpressionUnitSpan, b: ExpressionUnitSpan) {
-  return Math.max(0, Math.min(a.end, b.end) - Math.max(a.start, b.start));
-}
-
 function lettersOnly(value: string) {
   return normalizePiece(value)
     .toLowerCase()
@@ -159,111 +152,6 @@ function coversWholeSentence(sentence: string, text: string) {
   const a = lettersOnly(sentence);
   const b = lettersOnly(text);
   return Boolean(a && b && a === b);
-}
-
-/** True when snapping would swallow a word tap into a sentence-sized chunk. */
-export function isOversizedExpressionSnap(
-  sentence: string,
-  selected: string,
-  unitText: string,
-) {
-  if (
-    coversWholeSentence(sentence, unitText) &&
-    !coversWholeSentence(sentence, selected) &&
-    !isShortSaying(sentence)
-  ) {
-    return true;
-  }
-  const selectedCount = countWords(selected);
-  const unitCount = countWords(unitText);
-  if (
-    selectedCount <= 1 &&
-    unitCount >= 2 &&
-    isKnownEnglishPhrase(unitText)
-  ) {
-    return false;
-  }
-  if (selectedCount <= 1 && unitCount > 4) return true;
-  if (
-    selectedCount <= 1 &&
-    !/\s/.test(normalizePiece(selected)) &&
-    unitText.replace(/\s/g, "").length >=
-      Math.max(8, normalizePiece(selected).length * 4)
-  ) {
-    return !isKnownEnglishPhrase(unitText);
-  }
-  return false;
-}
-
-function acceptableSnap(
-  sentence: string,
-  selected: string,
-  unit: ExpressionUnitSpan,
-) {
-  return !isOversizedExpressionSnap(sentence, selected, unit.text);
-}
-
-/**
- * Snap a free selection onto the tightest meaningful unit that covers it.
- * Single-word taps stay words — phrase snap is only for multi-word drags.
- * Returns null when the tap did not land on a unit (e.g. a lone "the").
- */
-export function snapToExpressionUnit(
-  sentence: string,
-  selected: string,
-  unitTexts: string[],
-  hintStart?: number,
-): ExpressionUnitSpan | null {
-  const units = locateUnits(sentence, unitTexts);
-  if (units.length === 0) return null;
-
-  const hits = locatePiece(sentence, selected);
-  let selection = hits[0] ?? null;
-  if (hits.length > 1 && hintStart != null) {
-    selection = hits.reduce((best, span) =>
-      Math.abs(span.start - hintStart) < Math.abs(best.start - hintStart)
-        ? span
-        : best,
-    );
-  }
-  if (!selection && hintStart != null) {
-    selection = {
-      text: selected,
-      start: hintStart,
-      end: hintStart + selected.length,
-    };
-  }
-  if (!selection) return null;
-
-  // A single-word tap stays that word. Phrase snap is only for multi-word drags.
-  if (countWords(selected) <= 1 && !/\s/.test(normalizePiece(selected))) return null;
-
-  const containing = units.filter(
-    (unit) => unit.start <= selection.start && unit.end >= selection.end,
-  );
-  if (containing.length > 0) {
-    containing.sort(
-      (a, b) => a.end - a.start - (b.end - b.start) || a.start - b.start,
-    );
-    const best = containing.find((unit) =>
-      acceptableSnap(sentence, selected, unit),
-    );
-    if (best) return best;
-    return null;
-  }
-
-  const overlapping = units
-    .map((unit) => ({ unit, score: overlap(unit, selection) }))
-    .filter(
-      (item) =>
-        item.score > 0 && acceptableSnap(sentence, selected, item.unit),
-    )
-    .sort(
-      (a, b) =>
-        b.score - a.score ||
-        a.unit.end - a.unit.start - (b.unit.end - b.unit.start),
-    );
-  return overlapping[0]?.unit ?? null;
 }
 
 /**

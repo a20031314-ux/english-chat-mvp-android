@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { allScriptsFor } from "./stageScripts.ts";
-import { blankFor, fillBlank, choiceForLine, parseChoices, ruleChoice, choicesInput, WRONG_COUNT } from "./scriptChoice.ts";
+import { blankFor, fillBlank, ruleChoice, choicesInput, WRONG_COUNT } from "./scriptChoice.ts";
 
 const LANGS = ["ko", "ja", "es", "zh", "en", "id", "vi", "th", "fr", "it", "pt", "ru", "ar", "hi"];
 
@@ -45,28 +45,6 @@ test("고르기: 한국어 조사·어미, 일본어 조사(띄어쓰기 없음)
   }
   const es = allScriptsFor("es").flatMap((script) => script.lines.map((_, i) => ruleChoice("es", script, i))).filter(Boolean);
   assert.ok(es.some((choice) => choice!.wrong.some((option) => option.type === "grammar")));
-});
-
-test("모델 오답 검사: 빈칸이 줄에 없거나, 정답과 같거나, 너무 길면 버리고 모자란 쪽은 규칙으로 채움", () => {
-  const script = allScriptsFor("es").find((s) => choicesInput("es", s).length >= 2)!;
-  const [first, second] = choicesInput("es", script);
-  const raw = JSON.stringify({
-    lines: [
-      { i: first!.i, blank: first!.blank, wrong: [{ text: "x".repeat(200), type: "vocab" }, { text: first!.blank.toUpperCase(), type: "grammar" }, { text: "zzz", type: "grammar" }, { text: "qqq", type: "grammar" }] },
-      { i: second!.i, blank: "no está en la línea", wrong: [{ text: "a", type: "vocab" }, { text: "b", type: "grammar" }] },
-      { i: 0, blank: "x", wrong: [] },
-    ],
-  });
-  const parsed = parseChoices(raw, "es", script);
-  assert.ok(parsed[first!.i], "첫 줄은 남음");
-  const texts = parsed[first!.i]!.wrong.map((option) => option.text);
-  assert.ok(!texts.some((text) => text.length > 100), "너무 긴 것 뺌");
-  assert.ok(!texts.includes(first!.blank.toUpperCase()), "정답과 같은 것 뺌");
-  assert.equal(parsed[second!.i], undefined, "빈칸이 줄에 없으면 버림");
-  assert.deepEqual(parseChoices("not json", "es", script), {});
-  // 서버 것이 없으면 기기 규칙.
-  assert.deepEqual(choiceForLine("es", script, first!.i, null), ruleChoice("es", script, first!.i));
-  assert.deepEqual(choiceForLine("es", script, first!.i, parsed), parsed[first!.i]);
 });
 
 test("오답 확인: 원어민이 받아들일 오답은 빼고, 둘 아래로 줄면 그 줄은 뺌", async () => {

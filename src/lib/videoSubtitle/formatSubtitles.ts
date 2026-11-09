@@ -1,5 +1,5 @@
 import type { SubtitleDraft } from "./subtitleDraft";
-import type { NormalizedSegment, SubtitleSegment } from "./types";
+import type { SubtitleSegment } from "./types";
 
 const MAX_CHARS = 42;
 
@@ -117,44 +117,4 @@ export function formatSubtitleDrafts(drafts: SubtitleDraft[]): SubtitleSegment[]
     });
   }
   return cues;
-}
-
-/** Legacy path: one string per STT segment id. */
-export function formatSubtitles(input: {
-  segments: NormalizedSegment[];
-  translations: Map<string, string>;
-  literalMeanings?: Map<string, string>;
-}): SubtitleSegment[] {
-  const drafts: SubtitleDraft[] = input.segments.map((segment) => {
-    const natural = (input.translations.get(segment.id) || "").trim();
-    const meaning =
-      (input.literalMeanings?.get(segment.id) || natural).trim() || natural;
-    return {
-      id: segment.id,
-      segmentIds: [segment.id],
-      startTime: segment.startTime,
-      endTime: segment.endTime,
-      original: segment.normalizedText,
-      meaning,
-      tone: {
-        formality: "neutral",
-        politeness: "neutral",
-        intimacy: "neutral",
-        emotion: "neutral",
-        intensity: "medium",
-        confidence: "medium",
-        hesitation: "none",
-        humor: "none",
-        sarcasm: "none",
-        attitude: "neutral",
-      },
-      speakerStyle: "spoken",
-      naturalSubtitle: natural,
-      interpretationConfidence: 0.5,
-      literalMeaning: meaning,
-      confidence: segment.confidence,
-      uncertain: segment.uncertain,
-    };
-  });
-  return formatSubtitleDrafts(drafts);
 }

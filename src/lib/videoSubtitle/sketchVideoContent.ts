@@ -1,5 +1,4 @@
 import { completeChat } from "../server/llm.ts";
-import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type { NormalizedSegment, VideoContext } from "@/lib/videoSubtitle/types";
@@ -97,8 +96,4 @@ Return JSON:
     console.error("[video-sketch]", error);
     return fallback;
   }
-}
-
-export function assertOpenAI(): void {
-  if (!getOpenAIClient()) throw new VideoPipelineError("MISSING_OPENAI_KEY");
 }

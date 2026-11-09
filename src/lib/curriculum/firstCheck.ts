@@ -19,7 +19,6 @@ export const LETTER_MISS_MAX = 3;
 export const YN_REAL = 20;
 export const YN_FAKE = 4;
 export const YN_TOTAL = YN_REAL + YN_FAKE;
-export const MEANING_N = 5;
 /** 오르기 최대 문제 수(두 종류 합) — 단계마다 2~3문제라 예전 10에서 늘림. */
 export const CLIMB_MAX = 18;
 export const STAGES = 5;

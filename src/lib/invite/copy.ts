@@ -596,5 +596,4 @@ export function fillInvite(text: string, values: Record<string, string | number 
   return text.replace(/\{(\w+)\}/g, (whole, key: string) => (key in values ? String(values[key] ?? "") : whole));
 }
 
-export const INVITE_COPY_KEYS = Object.keys(en) as (keyof InviteCopy)[];
 export type { InviteCopy };

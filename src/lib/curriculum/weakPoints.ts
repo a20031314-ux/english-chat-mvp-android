@@ -278,11 +278,6 @@ export function openWeakCount(all: Record<string, TopicMissions>): number {
   return open;
 }
 
-/** The mark on an item added for a mistake: with what it practises when that was written in the app's language. */
-export function weakLabel(template: string, focus: string | undefined): string {
-  return focus ? template.replace("{focus}", focus) : template.replace(/\s*·\s*\{focus\}/, "").replace("{focus}", "").trim();
-}
-
 /**
  * A phrase — or a whole sentence — the learner chose to put on their map from
  * the sentence sheet, and what they asked about it if they asked. Same shape

@@ -4,21 +4,7 @@ import { findScenario, sentencesFor } from "./catalog.ts";
 import { afterSaying, currentInstruction, startSession } from "./session.ts";
 import type { SessionState } from "./session.ts";
 import type { TranscriptLine } from "./review.ts";
-import {
-  callSeconds,
-  MAX_SAVED_CONVERSATIONS,
-  isUnfinished,
-  normalizeSaved,
-  readSaved,
-  removeSaved,
-  resumableFor,
-  resumeFrom,
-  stateToResume,
-  titleFor,
-  upsertSaved,
-  writeSaved,
-  type SavedConversation,
-} from "./saved.ts";
+import { callSeconds, MAX_SAVED_CONVERSATIONS, isUnfinished, normalizeSaved, readSaved, removeSaved, resumeFrom, stateToResume, titleFor, upsertSaved, writeSaved, type SavedConversation } from "./saved.ts";
 
 const open = findScenario("open-talk-en")!;
 
@@ -75,18 +61,6 @@ test("finished and put down are different things", () => {
   assert.ok(!isUnfinished(conversation({ finishedAt: 3000 })));
   const ended: SessionState = { ...startSession(open), finished: true };
   assert.ok(!isUnfinished(conversation({ state: ended })));
-});
-
-test("the scene carries on with the most recent one it could", () => {
-  const list = [
-    conversation({ id: "old", updatedAt: 1 }),
-    conversation({ id: "new", updatedAt: 9 }),
-    conversation({ id: "done", updatedAt: 99, finishedAt: 100 }),
-    conversation({ id: "elsewhere", updatedAt: 999, scenarioId: "cafe-order" }),
-  ];
-  assert.equal(resumableFor(list, open.id)?.id, "new");
-  assert.equal(resumableFor(list, "cafe-order")?.id, "elsewhere");
-  assert.equal(resumableFor([], open.id), null);
 });
 
 test("resuming does not resume the middle of a turn", () => {

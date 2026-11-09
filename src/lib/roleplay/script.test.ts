@@ -12,7 +12,7 @@ import {
   sentenceIdsUsed,
   unreachableNodes,
 } from "./script.ts";
-import { SITUATIONS, situationForScenario } from "./situations.ts";
+import { SITUATIONS } from "./situations.ts";
 
 test("the catalog does not sound like one employee", () => {
   // The reason the scenarios stopped sharing the call's voice. Not "all
@@ -154,16 +154,6 @@ test("the situation list is briefs, and every field earns its place", () => {
       `${situation.id} does not say where it goes wrong`,
     );
     assert.ok(situation.tutorRole.length > 0, `${situation.id} has no role`);
-  }
-});
-
-test("every written scenario traces back to a situation on the list", () => {
-  // Otherwise the list stops describing what exists and starts being decoration.
-  for (const scenario of SCENARIOS) {
-    assert.ok(
-      situationForScenario(scenario.id),
-      `${scenario.id} is written but not on the situation list`,
-    );
   }
 });
 

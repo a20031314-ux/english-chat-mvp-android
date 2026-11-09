@@ -302,7 +302,7 @@ export function clickRangeForText(
   if (!needle) return { start: 0, end: words.length - 1 };
   const hay = sentence.toLowerCase();
   const want = needle.toLowerCase();
-  let index = hay.indexOf(want);
+  const index = hay.indexOf(want);
   if (index < 0) {
     if (hay.replace(/\s+/g, "").indexOf(want.replace(/\s+/g, "")) < 0) {
       return { start: 0, end: words.length - 1 };

@@ -6,8 +6,6 @@ import {
 import { listWordSpans } from "@/lib/textTokens";
 
 export const VOCABULARY_STORAGE_KEY = "vocabularyEntries";
-export const VOCABULARY_HIDE_GLOSS_KEY = "vocabularyHideGloss";
-
 export type VocabSense = {
   gloss: string;
   partOfSpeech?: string;
@@ -183,31 +181,6 @@ export function loadVocabulary(): VocabularyEntry[] {
 
 function isLearningLanguageCodeField(value: unknown): boolean {
   return coerceLanguageCode(value) === value;
-}
-
-export function filterVocabularyByLanguage(
-  entries: VocabularyEntry[],
-  languageCode: LearningLanguageCode,
-): VocabularyEntry[] {
-  return entries.filter((e) => e.languageCode === languageCode);
-}
-
-export function loadHideVocabGloss(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    return window.localStorage.getItem(VOCABULARY_HIDE_GLOSS_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-export function persistHideVocabGloss(hidden: boolean) {
-  if (typeof window === "undefined") return;
-  try {
-    window.localStorage.setItem(VOCABULARY_HIDE_GLOSS_KEY, hidden ? "1" : "0");
-  } catch {
-    // ignore quota / private mode
-  }
 }
 
 export function persistVocabulary(entries: VocabularyEntry[]) {
@@ -462,19 +435,6 @@ export function isLookupableEnglishWord(token: string): boolean {
   );
 }
 
-/**
- * Vocab preview should open only for content words or multi-word idioms/phrases —
- * not bare function words / contractions like "how's".
- */
-export function isVocabLookupEligible(token: string): boolean {
-  const cleaned = normalizeVocabHeadword(token);
-  if (!cleaned) return false;
-  if (/\s/.test(cleaned)) {
-    return isLookupableEnglishWord(cleaned);
-  }
-  return isLearnableEnglishWord(cleaned);
-}
-
 function normalizeVocabSpan(value: string) {
   return value
     .replace(/\s+/g, " ")
@@ -499,28 +459,6 @@ export function isSentenceVocabUnit(text: string, contextSentence?: string) {
   if (words.length >= 6) return true;
   if (words.length >= 4 && /[.!?。．！？…]$/u.test(cleaned)) return true;
   return false;
-}
-
-/** Pull learnable English word candidates from free text. */
-export function extractEnglishWords(texts: string[]): string[] {
-  const seen = new Set<string>();
-  const out: string[] = [];
-  const pattern = /[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)*/gu;
-
-  for (const text of texts) {
-    if (!text) continue;
-    const matches = text.match(pattern) ?? [];
-    for (const raw of matches) {
-      const cleaned = normalizeVocabHeadword(raw);
-      if (!isLearnableEnglishWord(cleaned)) continue;
-      const key = cleaned.toLowerCase();
-      if (seen.has(key)) continue;
-      seen.add(key);
-      out.push(cleaned);
-    }
-  }
-
-  return out;
 }
 
 export function saveVocabularyWords(

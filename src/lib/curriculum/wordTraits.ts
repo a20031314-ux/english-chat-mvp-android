@@ -31,6 +31,7 @@ export type WordTraits = {
   /** 로마자 읽기(th·hi·ar). */
   rom?: string;
 };
+
 export type TraitBook = Record<string, WordTraits>;
 
 // JSON 모양 그대로 받으면 타입이 너무 커서 unknown으로 받고 TraitBook으로 본다.
@@ -60,5 +61,3 @@ export function loadWordTraits(language: string): Promise<TraitBook | null> {
   cache.set(language, made);
   return made;
 }
-
-export const TRAIT_LANGUAGES = Object.keys(BOOKS);

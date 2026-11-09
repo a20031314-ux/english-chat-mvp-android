@@ -51,6 +51,7 @@ const isFixed = (line: TranscriptLine) => {
   const right = (line.meant || line.better || "").trim();
   return Boolean(right && right !== line.text.trim());
 };
+
 const spoken = (line: TranscriptLine) => Boolean(line.text.trim()) && line.text.trim() !== "…";
 
 /** 그 통화 처음 TALK_TURNS줄(내 줄)만. 받아쓰기가 비거나 "…"인 줄은 뺌. */
@@ -131,16 +132,6 @@ export function stageOfKey(key: string): number {
   const f = /^f\|[a-z-]+?-f(\d+)-/.exec(key);
   if (f) return Number(f[1]);
   return key.startsWith("e|") ? 1 : 0;
-}
-
-/** 보기 문장: 처음 줄 중 가장 긴 두 줄(낱말 수), 원래 차례대로. */
-export function sampleLines(language: string, lines: readonly TranscriptLine[]): string[] {
-  const mine = firstLines(lines).map((line, i) => ({ text: line.text.trim(), i, n: segmentWords(line.text, language).length }));
-  return mine
-    .sort((a, b) => b.n - a.n || a.i - b.i)
-    .slice(0, 2)
-    .sort((a, b) => a.i - b.i)
-    .map((one) => one.text);
 }
 
 export type TalkCall = { at: number; talk: Partial<TalkStats>; topics?: readonly string[] };

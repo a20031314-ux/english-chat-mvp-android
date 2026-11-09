@@ -1,12 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { parseSelfCheck, pitchFor, selfCheckMapRules } from "./selfCheck.ts";
+import { parseSelfCheck, pitchFor } from "./selfCheck.ts";
 import { buildBrief, SELF_UNTIL_TURNS } from "./brief.ts";
 import { nextSteps } from "./next.ts";
 import { emptyLedger } from "./ledger.ts";
 import { emptyWeakRecord } from "../curriculum/weakPoints.ts";
-import { mapSystemPrompt, PLAN_RULES } from "../curriculum/prompt.ts";
-
 const T0 = Date.UTC(2026, 9, 16, 12, 0, 0);
 
 test("a self-check keeps known ids, at most two focuses, and is null when empty", () => {
@@ -27,31 +25,6 @@ test("the hidden pitch: many gaps, or speaking and accuracy together, start lowe
   assert.equal(pitchFor({ gaps: ["speaking", "accuracy"], focus: [], at: T0 }), "beginner");
   assert.equal(pitchFor({ gaps: ["words", "listening", "natural"], focus: [], at: T0 }), "beginner");
   assert.equal(pitchFor({ gaps: ["natural"], focus: ["speaking"], at: T0 }), "intermediate");
-});
-
-test("the map is drawn by the self-check instead of the chosen plan", () => {
-  const rules = selfCheckMapRules({ gaps: ["listening"], focus: ["speaking"], use: "travel", at: T0 });
-  assert.match(rules, /fast speech/);
-  assert.match(rules, /roleplay call the first activity/);
-  assert.match(rules, /travelling/);
-  const prompt = mapSystemPrompt({
-    goal: "여행 · 말이 빠르면 못 알아들어요",
-    level: "beginner",
-    target: "Japanese",
-    uiName: "Korean",
-    library: [],
-    selfCheck: rules,
-    learner: {
-      level: null,
-      weak: [],
-      learning: [],
-      nextBandConstructions: [],
-      plan: { focus: "weak", method: "chat" },
-    },
-  });
-  assert.ok(prompt.includes(rules));
-  assert.ok(!prompt.includes(PLAN_RULES.FOCUS_RULE.weak), "the old plan is not read when the self-check speaks");
-  assert.ok(!prompt.includes(PLAN_RULES.METHOD_RULE.chat));
 });
 
 test("try this: the ticked gaps come after measured steps and before the map's situations", () => {

@@ -27,11 +27,6 @@ const SENTENCES: Record<string, () => Promise<{ default: SentenceBook }>> = {
 };
 
 const cache = new Map<string, Promise<SentenceBook | null>>();
-
-export function hasWordSentences(language: string): boolean {
-  return Boolean(SENTENCES[language]);
-}
-
 /** 그 언어의 사전 예문 전체(없거나 못 읽으면 null). 한 번 읽으면 기억. */
 export function loadWordSentences(language: string): Promise<SentenceBook | null> {
   const have = cache.get(language);

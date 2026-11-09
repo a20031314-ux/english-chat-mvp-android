@@ -99,14 +99,3 @@ export function checkLesson(lesson: FixedLesson, frame: Frame | undefined, tooEa
   }
   return out;
 }
-
-/** 파일 전체: 그 단계 틀이 하나도 빠지지 않았나 + 수업마다 검사. */
-export function checkFile(file: FixedLessonFile, frames: readonly Frame[], stage: number, tooEarly?: (text: string) => string[]): CheckIssue[] {
-  const byId = new Map(frames.map((one) => [one.id, one]));
-  const issues = file.lessons.flatMap((lesson) => checkLesson(lesson, byId.get(lesson.id), tooEarly));
-  const done = new Set(file.lessons.map((one) => one.id));
-  for (const frame of frames.filter((one) => one.stage === stage)) {
-    if (!done.has(frame.id)) issues.push({ id: frame.id, level: "error", what: "이 단계 틀인데 고정 수업이 없음" });
-  }
-  return issues;
-}

@@ -2,10 +2,7 @@
 
 import { useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { ledgerKey, type LedgerState, type LedgerTab, type Place } from "@/lib/learner/ledger";
-import { sendAppIntent } from "@/lib/appIntents";
-import { findScenes } from "@/lib/studyMapClient";
-import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
+import { type LedgerState, type LedgerTab, type Place } from "@/lib/learner/ledger";
 import {
   canGoToFirstMet,
   goToFirstMet,
@@ -34,6 +31,7 @@ const DOT: Record<LedgerState, string> = {
   learned: "bg-status-learned",
   met: "bg-white/40",
 };
+
 const JUST_NOW_MS = 15 * 60 * 1000;
 
 export function tabLabel(ui: UICopy, tab: LedgerTab): string {
@@ -158,87 +156,6 @@ function LinkCard({ ui, item, onClose }: { ui: UICopy; item: CompactItem; onClos
           </button>
         </div>
       ) : null}
-    </div>
-  );
-}
-
-/** How long ago, in the interface language. */
-export function agoLabel(locale: string, at: number, now = Date.now()): string {
-  const minutes = Math.round((at - now) / 60000);
-  const fmt = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
-  // Under a minute is "now" — as zero minutes some languages say "this minute".
-  if (Math.abs(minutes) < 1) return fmt.format(0, "second");
-  if (Math.abs(minutes) < 60) return fmt.format(minutes, "minute");
-  const hours = Math.round(minutes / 60);
-  if (Math.abs(hours) < 24) return fmt.format(hours, "hour");
-  return fmt.format(Math.round(hours / 24), "day");
-}
-
-/**
- * A saved word, connected: how far along it is and where it was last
- * produced, with a way to use it and a way to hear it said (the word list, D).
- */
-export function WordLedgerLine({
-  ui,
-  locale,
-  word,
-  language,
-  onLeave,
-}: {
-  ui: UICopy;
-  locale: string;
-  word: string;
-  language: string;
-  /** Called before going to another tab — a sheet this sits in closes. */
-  onLeave?: () => void;
-}) {
-  const items = useLedger(language);
-  const [searching, setSearching] = useState(false);
-  const [noScene, setNoScene] = useState(false);
-  const key = ledgerKey(word);
-  const item = items.find((row) => ledgerKey(row.text) === key);
-  const used = item?.lastOutput;
-  const where = used
-    ? used.where === "call"
-      ? ui.homeTabCall
-      : used.where === "chat"
-        ? ui.homeTabChat
-        : ui.homeTabMap
-    : "";
-  const findScene = async () => {
-    setSearching(true);
-    const matches = await findScenes(language, [word]);
-    setSearching(false);
-    const hit = matches?.[0]?.found?.[0]?.hits?.[0];
-    if (!matches?.[0] || !hit) {
-      setNoScene(true);
-      return;
-    }
-    onLeave?.();
-    sendAppIntent("openTab", { tab: "video" });
-    sendAppIntent("openVideo", { url: normalizeYouTubeWatchUrl(matches[0].videoId), startSeconds: hit.start });
-  };
-  return (
-    <div className="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1.5 text-[11px] text-slate-400">
-      {item ? (
-        <span className="flex items-center gap-1.5">
-          <span className={`h-1.5 w-1.5 rounded-full ${DOT[item.state]}`} />
-          {stateLabel(ui, item.state)}
-        </span>
-      ) : null}
-      <span>
-        {used ? ui.linkUsedIn.replace("{place}", where).replace("{ago}", agoLabel(locale, used.at)) : ui.linkNotUsed}
-      </span>
-      <span className="ms-auto flex gap-1.5">
-        <button
-          type="button"
-          onClick={() => void findScene()}
-          disabled={searching || noScene}
-          className="rounded-lg border border-white/15 px-2 py-0.5 text-[11px] text-slate-200 hover:bg-white/10 disabled:opacity-40"
-        >
-          {ui.linkFindScenes}
-        </button>
-      </span>
     </div>
   );
 }

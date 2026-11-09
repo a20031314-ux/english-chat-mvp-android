@@ -70,12 +70,3 @@ export function fillGuideLabels(text: string, ui: UICopy): string {
     typeof labels[key] === "string" ? (labels[key] as string) : "",
   );
 }
-
-/** 한 칸을 묶음에서 찾는다. */
-export function findGuideSection(data: GuideData | null, id: string) {
-  for (const chapter of data?.chapters ?? []) {
-    const section = chapter.sections.find((row) => row.id === id);
-    if (section) return { chapter, section };
-  }
-  return null;
-}

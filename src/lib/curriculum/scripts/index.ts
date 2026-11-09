@@ -36,6 +36,3 @@ export function scriptProgress(course: ScriptCourse, passed: Record<string, numb
   const next = course.groups.find((group) => !passed[group.id])?.id ?? null;
   return { done, total: course.groups.length, next, finished: done === course.groups.length };
 }
-
-/** 연습 통과 기준: 문제의 80% 이상. */
-export const SCRIPT_PASS_SHARE = 0.8;

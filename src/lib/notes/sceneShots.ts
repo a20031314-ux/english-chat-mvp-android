@@ -114,20 +114,6 @@ export function captureSceneSoon(language: string, wrong: string): void {
   window.setTimeout(() => void captureScene(language, wrong), 700);
 }
 
-/** 이 기기에 찍어 둔 그림(없으면 null). */
-export async function sceneShotFor(language: string, wrong: string): Promise<string | null> {
-  const db = await open();
-  if (!db) return null;
-  return new Promise((resolve) => {
-    const request = db.transaction(STORE, "readonly").objectStore(STORE).get(shotKeyOf(language, wrong));
-    request.onsuccess = () => {
-      const shot = request.result as Shot | undefined;
-      resolve(shot && Date.now() - shot.at < KEEP_MS ? shot.image : null);
-    };
-    request.onerror = () => resolve(null);
-  });
-}
-
 /**
  * 지금 어떤 화면 위인지(2026-10-24 "My에서 찾기"): 화면을 찍어도 되는 곳은 AI 대화·AI 통화·영상만.
  * 사람끼리 대화(1:1·단체방·Room)가 열려 있으면 남의 말·얼굴이 찍혀 찍지 않는다. 화면이 열릴 때 enterScene, 닫힐 때 그 반환값.
@@ -141,34 +127,4 @@ export function enterScene(kind: SceneKind): () => void {
     const at = scenes.lastIndexOf(kind);
     if (at >= 0) scenes.splice(at, 1);
   };
-}
-
-/** 가장 나중에 열린 화면(없으면 chat). 사람끼리 대화가 하나라도 열려 있으면 그쪽. */
-export function currentScene(): SceneKind {
-  const social = [...scenes].reverse().find((kind) => kind === "dm" || kind === "room");
-  return social ?? scenes.at(-1) ?? "chat";
-}
-
-/** 지금 화면을 찍어 바로 돌려준다(저장 안 함). 시트처럼 data-scene-skip이 붙은 층은 빼고. 사람끼리 대화면 null. */
-export async function snapScene(): Promise<string | null> {
-  if (typeof document === "undefined") return null;
-  const kind = currentScene();
-  if (kind === "dm" || kind === "room") return null;
-  try {
-    const { toJpeg } = await import("html-to-image");
-    const raw = await toJpeg(document.body, {
-      quality: 0.8,
-      pixelRatio: 1,
-      backgroundColor: "#050505",
-      skipFonts: true,
-      imagePlaceholder: TRANSPARENT_PIXEL,
-      filter: (node) =>
-        !(node instanceof HTMLIFrameElement) &&
-        !(node instanceof HTMLVideoElement) &&
-        !(node instanceof HTMLElement && (node.dataset.feedbackSkip === "1" || node.dataset.sceneSkip === "1")),
-    });
-    return (await shrink(raw)) || null;
-  } catch {
-    return null;
-  }
 }

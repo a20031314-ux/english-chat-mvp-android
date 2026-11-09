@@ -325,12 +325,6 @@ export function ledgerItems(ledger: Ledger, state?: LedgerState, limit = 200): L
     .slice(0, limit);
 }
 
-/** Phrases already in the ledger found in a line — for "you met this in…" (the next step). */
-export function ledgerMatches(ledger: Ledger, line: string): LedgerItem[] {
-  const lines = [{ start: 0, end: 0, text: line }];
-  return Object.values(ledger.items).filter((item) => findExpression(lines, item.text, ledger.language).length > 0);
-}
-
 export function parseLedger(value: unknown, language: string): Ledger | null {
   if (!value || typeof value !== "object") return null;
   const row = value as Partial<Ledger>;
@@ -359,15 +353,6 @@ export function phrasesToRecycle(ledger: Ledger, limit = 3, now = Date.now()): s
     .sort((a, b) => b.lastAt - a.lastAt)
     .slice(0, limit)
     .map((item) => item.text);
-}
-
-/** The few lines a tutor is given about them. Empty when there is nothing to bring back. */
-export function recyclePrompt(phrases: string[]): string {
-  if (phrases.length === 0) return "";
-  return `Phrases this learner has been learning but cannot yet produce on their own: ${phrases
-    .map((p) => `"${p}"`)
-    .join(", ")}.
-When the conversation gives a natural opening, use one of them in your own line — at most one per turn, only where a speaker would really say it, never forced, never pointed out. If none fits, do not use any.`;
 }
 
 /** The learner marked a phrase as known or not known. Met, at least; the state is not raised. */

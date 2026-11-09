@@ -116,16 +116,6 @@ export function explanationLanguageGuard(options: {
 - You may quote source-language words inside quotes, but the explanation itself must be ${interfaceName}.`;
 }
 
-const LATIN_SCRIPT_LEARNING = new Set([
-  "en",
-  "es",
-  "fr",
-  "it",
-  "pt",
-  "id",
-  "vi",
-]);
-
 function stripQuotedLearnerForms(text: string): string {
   return text
     .replace(/[「『][^」』]{0,80}[」』]/g, " ")
@@ -140,52 +130,6 @@ function stripQuotedLearnerForms(text: string): string {
 
 function languageBase(code: string | undefined): string {
   return (code ?? "").trim().toLowerCase().split(/[-_]/)[0] ?? "";
-}
-
-/**
- * True when learner-facing prose mixed in the learning language or English
- * metalanguage. Quoted source forms are ignored.
- */
-export function explanationLooksMixedLanguage(
-  text: string,
-  explanationLanguage: string,
-  learningLanguage?: string,
-): boolean {
-  const trimmed = text.trim();
-  if (!trimmed || /^skip$/i.test(trimmed)) return false;
-
-  const body = stripQuotedLearnerForms(trimmed);
-  const hangul = (body.match(/[\uac00-\ud7af]/g) || []).length;
-  const kana = (body.match(/[\u3040-\u30ff]/g) || []).length;
-  const kanji = (body.match(/[\u3400-\u9fff]/g) || []).length;
-  const latin = (body.match(/[A-Za-z]/g) || []).length;
-  const latinWords = body.match(/[A-Za-z]{3,}/g) ?? [];
-  const learning = languageBase(learningLanguage);
-
-  if (explanationLanguage === "ko") {
-    if (kana >= 8 && kana >= hangul) return true;
-    if (kana >= 12) return true;
-    if (hangul < 6 && kana + kanji >= 16) return true;
-    if (/です|ます|という|だった|ですね/.test(body)) return true;
-    if (/\b(SOV|SVO|VSO|OVS|OSV|VOS)\b/.test(body)) return true;
-    if (learning && !LATIN_SCRIPT_LEARNING.has(learning)) {
-      const romajiLike = latinWords.filter((word) => word.length >= 4);
-      if (romajiLike.length > 0) return true;
-    } else if (hangul < 6 && latin >= 20) {
-      return true;
-    }
-    return false;
-  }
-
-  if (explanationLanguage === "en") {
-    if (hangul >= 8) return true;
-    if (kana >= 8) return true;
-    return false;
-  }
-
-  if (kana >= 12 && kana > latin) return true;
-  if (hangul >= 12 && hangul > latin) return true;
-  return false;
 }
 
 /**
@@ -206,65 +150,4 @@ export function explanationInLearningLanguage(
     languageBase(interfaceLanguage),
   );
   return evidence.learning > evidence.ui;
-}
-
-/** Clamp model output to shared limits. */
-export function normalizeLanguageLearningAnalysis(
-  raw: Partial<LanguageLearningAnalysis> | null | undefined,
-): LanguageLearningAnalysis {
-  const expressions = Array.isArray(raw?.keyExpressions)
-    ? raw!.keyExpressions
-        .filter(
-          (e) =>
-            e &&
-            typeof e.text === "string" &&
-            e.text.trim() &&
-            typeof e.meaning === "string",
-        )
-        .slice(0, LANGUAGE_LEARNING_LIMITS.maxExpressions)
-        .map((e) => ({
-          text: e.text.trim(),
-          meaning: e.meaning.trim(),
-          note:
-            typeof e.note === "string" && e.note.trim()
-              ? e.note.trim()
-              : null,
-        }))
-    : [];
-
-  const vocabulary = Array.isArray(raw?.keyVocabulary)
-    ? raw!.keyVocabulary
-        .filter(
-          (v) =>
-            v &&
-            typeof v.text === "string" &&
-            v.text.trim() &&
-            typeof v.meaning === "string",
-        )
-        .slice(0, LANGUAGE_LEARNING_LIMITS.maxVocabulary)
-        .map((v) => ({
-          text: v.text.trim(),
-          meaning: v.meaning.trim(),
-          reading:
-            typeof v.reading === "string" && v.reading.trim()
-              ? v.reading.trim()
-              : null,
-        }))
-    : [];
-
-  return {
-    naturalMeaning:
-      typeof raw?.naturalMeaning === "string" ? raw.naturalMeaning.trim() : "",
-    keyExpressions: expressions,
-    keyVocabulary: vocabulary,
-    nuance:
-      typeof raw?.nuance === "string" && raw.nuance.trim()
-        ? raw.nuance.trim()
-        : null,
-    optionalLanguageNote:
-      typeof raw?.optionalLanguageNote === "string" &&
-      raw.optionalLanguageNote.trim()
-        ? raw.optionalLanguageNote.trim()
-        : null,
-  };
 }

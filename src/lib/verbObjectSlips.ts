@@ -84,5 +84,3 @@ export function explainVerbObjectSlips(slips: VerbObjectSlip[], interfaceLanguag
   const write = EXPLAIN[interfaceLanguage] ?? EXPLAIN.en;
   return slips.map(({ verb, person }) => write(verb, person)).join(" ");
 }
-
-export const VERB_OBJECT_EXPLAIN_LANGUAGES = Object.keys(EXPLAIN);

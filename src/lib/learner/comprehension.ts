@@ -191,29 +191,12 @@ export function applyLearnerLine(
   return changed ? { ...record, items, updatedAt: now } : record;
 }
 
-export function countByState(record: ComprehensionRecord): Record<ItemState, number> {
-  const out: Record<ItemState, number> = { stuck: 0, studied: 0, understood: 0, used: 0 };
-  for (const item of Object.values(record.items)) out[item.state] += 1;
-  return out;
-}
-
 /** Items in a state, most recent first. */
 export function itemsIn(record: ComprehensionRecord, state: ItemState, limit = 20): ComprehensionItem[] {
   return Object.values(record.items)
     .filter((item) => item.state === state)
     .sort((a, b) => b.lastAt - a.lastAt)
     .slice(0, limit);
-}
-
-/** What their questions have been about, most first. */
-export function askTopics(record: ComprehensionRecord): Array<[AskAbout, number]> {
-  const totals: Partial<Record<AskAbout, number>> = {};
-  for (const item of Object.values(record.items)) {
-    for (const [about, n] of Object.entries(item.about) as Array<[AskAbout, number]>) {
-      totals[about] = (totals[about] ?? 0) + n;
-    }
-  }
-  return (Object.entries(totals) as Array<[AskAbout, number]>).sort((a, b) => b[1] - a[1]);
 }
 
 export function parseComprehension(value: unknown, language: string): ComprehensionRecord {

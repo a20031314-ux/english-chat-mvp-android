@@ -13,25 +13,11 @@
  * 띠·육각형·꼭짓점 세부·2주 비교가 모두 여기 axisShown·bandPct·axisWeak·axisGain만 쓴다.
  * 답 8개 미만인 꼭짓점은 어림(priorFill)만 있는 것이라 숫자·▲·약함 점·나아진 점 어디에도 안 올린다.
  */
-import { AXES, STAGES, WEAK_MIN_N, type Axis, type AxisFill, type FillResult } from "./fill.ts";
+import { AXES, WEAK_MIN_N, type Axis, type AxisFill, type FillResult } from "./fill.ts";
 
 export type BandCellState = "none" | "thin" | "measured";
 export type BandCell = { stage: number; value: number; state: BandCellState };
 export type BandRow = { axis: Axis; cells: BandCell[]; pct: string | null; gain: number; weak: boolean };
-
-/** 묶음: 낱말(이해·활용) · 문장(이해·활용) · 듣기 · 실전 대화 — 묶음 사이에 틈을 둔다. */
-export const BAND_GROUPS: readonly (readonly Axis[])[] = [["vocabRead", "vocabUse"], ["sentRead", "sentUse"], ["listen"], ["talk"]];
-
-export function bandCells(axis: AxisFill): BandCell[] {
-  return Array.from({ length: STAGES }, (_, i) => {
-    const n = axis.stageN?.[i] ?? 0;
-    const value = Math.min(1, Math.max(0, axis.stages[i] ?? 0));
-    // 첫 측정으로만 채운 단계는 옅게(2026-11-07).
-    const state: BandCellState = n <= 0 ? (axis.presumed?.[i] ? "thin" : "none") : n < WEAK_MIN_N ? "thin" : "measured";
-    return { stage: i + 1, value: state === "none" ? 0 : value, state };
-  });
-}
-
 /** 그 꼭짓점을 숫자로 보여 줄 만큼 답했나. */
 export function axisShown(axis: AxisFill): boolean {
   // 첫 측정(24장 + 뜻 5 + 오르기)을 했으면 답이 적어도 숫자를 보인다 — 그 측정이 근거.
@@ -62,11 +48,4 @@ export function axisGain(now: AxisFill, before: AxisFill | null | undefined): nu
   if (!before || !axisShown(now) || !axisShown(before)) return 0;
   const gain = Math.round((now.fill - before.fill) * 100);
   return gain > 0 ? gain : 0;
-}
-
-export function bandRows(result: FillResult, before: FillResult | null = null): BandRow[] {
-  return AXES.map((axis) => {
-    const one = result.axes[axis];
-    return { axis, cells: bandCells(one), pct: bandPct(one), gain: axisGain(one, before?.axes[axis]), weak: axisWeak(result, axis) };
-  });
 }

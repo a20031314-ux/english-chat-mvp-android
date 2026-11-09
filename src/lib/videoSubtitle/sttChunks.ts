@@ -129,8 +129,6 @@ function dropBoundaryEchoes(segments: SttSegment[]): SttSegment[] {
   return out;
 }
 
-const SENTENCE_END = /[.!?…]["']?$/;
-const HARD_PAUSE_SECONDS = 0.48;
 const WORDS_PER_SECOND = 3.2;
 /**
  * Faster than anybody talks, which is how a collapsed stamp is recognised.
@@ -146,117 +144,6 @@ const WORDS_PER_SECOND = 3.2;
 const IMPOSSIBLE_WORDS_PER_SECOND = 9;
 const START_LEAD_SECONDS = 0.18;
 const MAX_PREV_TRIM_SECONDS = 0.4;
-const CUE_VERB =
-  /\b(am|is|are|was|were|be|been|'s|'re|'m|do|does|did|have|has|had|'ve|will|would|can|could|should|need|needs|needed|go|goes|went|get|got|know|think|want|said|say|make|made|take|see|come|came|tell|told|leave|left|call|talk|keep|try|ask|show|give|feel|look)\b/i;
-
-function median(values: number[]): number {
-  if (values.length === 0) return 0;
-  const sorted = [...values].sort((a, b) => a - b);
-  const mid = Math.floor(sorted.length / 2);
-  return sorted.length % 2 === 1
-    ? sorted[mid]!
-    : (sorted[mid - 1]! + sorted[mid]!) / 2;
-}
-
-function cueEndsOpen(text: string): boolean {
-  const last =
-    text
-      .trim()
-      .replace(/[.!?…]+$/g, "")
-      .split(/\s+/)
-      .pop() || "";
-  if (/^[a-z]+n't$/i.test(last)) return true;
-  return /^(a|an|the|to|of|for|with|and|or|but|as|by|from|at|in|on|my|your|our|their|his|her|its|this|these|those)$/i.test(
-    last,
-  );
-}
-
-function cueLooksFinished(text: string): boolean {
-  const trimmed = text.replace(/\s+/g, " ").trim();
-  if (!trimmed || cueEndsOpen(trimmed)) return false;
-  const words = trimmed.split(/\s+/).filter(Boolean).length;
-  if (SENTENCE_END.test(trimmed) && words >= 3) return true;
-  if (words >= 5 && CUE_VERB.test(trimmed)) return true;
-  return words >= 9;
-}
-
-function cueFromWords(
-  words: NonNullable<SttSegment["words"]>,
-  extra?: Partial<SttSegment>,
-): SttSegment | null {
-  const text = words
-    .map((word) => word.word)
-    .join(" ")
-    .replace(/\s+/g, " ")
-    .trim();
-  if (!text) return null;
-  const startTime = Math.max(0, words[0]!.start);
-  return {
-    id: extra?.id ?? `w-${Math.round(startTime * 1000)}`,
-    text,
-    startTime,
-    endTime: Math.max(startTime + 0.25, words[words.length - 1]!.end),
-    words,
-    confidence: extra?.confidence,
-    uncertain: extra?.uncertain,
-  };
-}
-
-/**
- * Legacy acoustic splitter. New cues go through flatten + sentenceFromWords.
- */
-export function splitSpokenWords(
-  words: NonNullable<SttSegment["words"]>,
-  extra?: Partial<SttSegment>,
-): SttSegment[] {
-  if (words.length === 0) return [];
-  const gaps: number[] = [];
-  for (let i = 1; i < words.length; i += 1) {
-    const gap = words[i]!.start - words[i - 1]!.end;
-    if (Number.isFinite(gap) && gap >= 0) gaps.push(gap);
-  }
-  const typicalGap = median(gaps) || 0.06;
-  const pauseThreshold = Math.max(0.18, Math.min(HARD_PAUSE_SECONDS, typicalGap * 4));
-
-  const groups: Array<NonNullable<SttSegment["words"]>> = [];
-  let current: NonNullable<SttSegment["words"]> = [];
-  for (const word of words) {
-    if (current.length === 0) {
-      current = [word];
-      continue;
-    }
-    const prev = current[current.length - 1]!;
-    const gap = word.start - prev.end;
-    const text = current
-      .map((item) => item.word)
-      .join(" ")
-      .replace(/\s+/g, " ")
-      .trim();
-    const nextToken = word.word.replace(/^[^a-zA-Z']+|[^a-zA-Z']+$/g, "");
-    const finished = cueLooksFinished(text) && !cueEndsOpen(text);
-    const punct = SENTENCE_END.test(prev.word.trim());
-    const pause = gap > pauseThreshold;
-    const duration = Math.max(0, word.start - current[0]!.start);
-    const capitalClause =
-      !cueEndsOpen(text) &&
-      current.length >= 4 &&
-      /^(I|We|You|They|He|She)$/.test(nextToken) &&
-      /^[A-Z]/.test(word.word.trim());
-    const tooLong = finished && (duration >= 5.2 || current.length >= 12);
-    const hardCap = current.length >= 16 || duration >= 8;
-    if (punct || pause || capitalClause || tooLong || hardCap) {
-      groups.push(current);
-      current = [word];
-      continue;
-    }
-    current.push(word);
-  }
-  if (current.length > 0) groups.push(current);
-  return groups
-    .map((group) => cueFromWords(group, extra))
-    .filter((row): row is SttSegment => Boolean(row));
-}
-
 function expectedSpeechSeconds(text: string): number {
   const words = text.split(/\s+/).filter(Boolean).length;
   return Math.min(16, Math.max(0.4, words / WORDS_PER_SECOND));

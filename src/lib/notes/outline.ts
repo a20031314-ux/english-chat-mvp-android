@@ -101,19 +101,3 @@ export const NOTE_TOPIC_IDS: string[] = NOTE_OUTLINE.flatMap((chapter) => chapte
 export function isNoteTopicId(value: unknown): value is string {
   return typeof value === "string" && NOTE_TOPIC_IDS.includes(value);
 }
-
-export function noteName(names: Names, locale: string): string {
-  return names[(NOTE_LOCALES as readonly string[]).includes(locale) ? (locale as NoteLocale) : "en"];
-}
-
-export function chapterOf(topicId: string): NoteChapter | null {
-  return NOTE_OUTLINE.find((chapter) => chapter.topics.some((topic) => topic.id === topicId)) ?? null;
-}
-
-export function topicById(topicId: string): NoteTopic | null {
-  for (const chapter of NOTE_OUTLINE) {
-    const topic = chapter.topics.find((row) => row.id === topicId);
-    if (topic) return topic;
-  }
-  return null;
-}

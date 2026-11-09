@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { explainFeelingSlips, FEELING_EXPLAIN_LANGUAGES, promoteFeelingSlip } from "./feelingAdjectives.ts";
+import { promoteFeelingSlip } from "./feelingAdjectives.ts";
 
 test("사람이 주어인 -ing를 natural이 -ed로 바꿨으면 corrected도", () => {
   const out = promoteFeelingSlip("I am so boring today, nothing to do", "I'm so bored today, there's nothing to do");
@@ -29,18 +29,4 @@ test("natural이 바꾸지 않았거나 자리가 다르면 그대로", () => {
 
 test("대문자로 시작한 낱말은 대문자로", () => {
   assert.equal(promoteFeelingSlip("I feel Tiring.", "I feel tired.")?.corrected, "I feel Tired.");
-});
-
-test("설명은 14개 앱 언어, 영어 낱말을 그대로 넣는다", () => {
-  assert.equal(FEELING_EXPLAIN_LANGUAGES.length, 14);
-  for (const ui of FEELING_EXPLAIN_LANGUAGES) {
-    const text = explainFeelingSlips([{ from: "boring", to: "bored" }], ui);
-    assert.match(text, /'boring'/, ui);
-    assert.match(text, /'bored'/, ui);
-  }
-  assert.match(explainFeelingSlips([{ from: "boring", to: "bored" }], "ko"), /내가 그렇게 느낄 때는 'bored' 꼴을/);
-  assert.match(explainFeelingSlips([{ from: "bored", to: "boring" }], "ja"), /感じさせるもの/);
-  assert.doesNotMatch(explainFeelingSlips([{ from: "boring", to: "bored" }], "ko"), /'[a-z]+'(는|은|를|을|이|가)/);
-  // 모르는 앱 언어는 영어
-  assert.match(explainFeelingSlips([{ from: "boring", to: "bored" }], "xx"), /person who feels/);
 });

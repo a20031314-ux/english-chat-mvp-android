@@ -47,6 +47,7 @@ const TEST_UNITS = {
   appOpen: "ca-app-pub-3940256099942544/9257395921",
   banner: "ca-app-pub-3940256099942544/9214589741",
 };
+
 // 시험 앱 껍데기(isRemoteShell)는 운영 웹을 불러 써서 이 값이 꺼진 채라, 거기서도 시험 광고로.
 const testAds = (): boolean => process.env.NEXT_PUBLIC_ADS_TEST?.trim() === "1" || isRemoteShell();
 
@@ -86,6 +87,7 @@ function writeLastShown(at: number) {
   }
   memoryLastShown = at;
 }
+
 let memoryLastShown = 0;
 
 /** 서버가 정한 광고 설정. 구독자·광고 꺼짐이면 enabled=false. */
@@ -386,11 +388,6 @@ export function topAdLayer(): number {
   return layerStack.length ? layerStack[layerStack.length - 1]! : 0;
 }
 
-/** 열린 층 수(오늘 할 것이 끝난 순간에 마지막 항목 화면이 떠 있는지 볼 때). */
-export function adLayerDepth(): number {
-  return layerStack.length;
-}
-
 export function subscribeAdLayers(listener: () => void): () => void {
   layerListeners.add(listener);
   return () => {
@@ -401,6 +398,7 @@ export function subscribeAdLayers(listener: () => void): () => void {
 function notifyLayers() {
   for (const listener of layerListeners) listener();
 }
+
 let bannerWanted = false;
 let bannerBottomMargin = 0;
 let typing = false;
@@ -658,14 +656,6 @@ export function attachNativeSlot(feedId: string, slotKey: string, element: HTMLE
       nativeDestroying = Promise.all([nativeDestroying, gone]);
     }
   };
-}
-
-/** 그 화면(탭)이 지금 보이는지. 숨으면 광고를 멈춘다(탭은 숨겨도 그려져 있어서). */
-export function setNativeFeedActive(feedId: string, active: boolean) {
-  const entry = nativeFeeds.get(feedId);
-  if (!entry) return;
-  entry.active = active;
-  syncNativeFeeds();
 }
 
 /** 그 자리에 광고가 들어왔는지(Loaded) — 들어온 자리만 바깥 여백(spaced)을 편다. */

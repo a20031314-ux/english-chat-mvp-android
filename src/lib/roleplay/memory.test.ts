@@ -2,18 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
 import { recordedLines, tutorSystemPrompt, type SpokenLine } from "./director.ts";
-import {
-  EMPTY_MEMORY,
-  FOLD_AT,
-  MAX_RAW_LINES,
-  RAW_LINES,
-  contextPrompt,
-  foldDue,
-  parseContext,
-  parseMemory,
-  rawLines,
-  type ConversationMemory,
-} from "./memory.ts";
+import { EMPTY_MEMORY, FOLD_AT, MAX_RAW_LINES, RAW_LINES, contextPrompt, foldDue, parseMemory, rawLines, type ConversationMemory } from "./memory.ts";
 
 function conversation(length: number): SpokenLine[] {
   return Array.from({ length }, (_, i) => ({
@@ -70,15 +59,6 @@ test("the fold is asked to rewrite the notes, not to start over", () => {
   assert.match(prompt, /Rewrite your notes to cover all of it/);
   assert.match(prompt, /Today is 2026-11-04/);
   assert.match(prompt, /"facts"/);
-});
-
-test("notes are read out of the answer, or not at all", () => {
-  assert.equal(parseContext('{"notes": " Works in design. "}'), "Works in design.");
-  assert.equal(parseContext('{"notes": ""}'), null);
-  assert.equal(parseContext("not json"), null);
-  const folded = parseMemory('{"notes": "Works in design.", "facts": ["Works in design.", "", 3, " Went to the gym the day before. "]}');
-  assert.deepEqual(folded, { notes: "Works in design.", facts: ["Works in design.", "Went to the gym the day before."] });
-  assert.equal(parseMemory('{"facts": ["Lives in Busan."]}')?.notes, "");
 });
 
 test("the notes reach the tutor at the tail of its brief, leaving the fixed part alone", () => {

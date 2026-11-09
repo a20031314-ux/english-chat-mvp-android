@@ -17,12 +17,7 @@ import type {
 import { parseYouTubeInput } from "@/lib/videoLearning";
 import { transcribeYouTubeCaptions } from "@/lib/videoSubtitle/youtubeCaptions";
 import { resolveYouTubeSource } from "@/lib/videoSubtitle/youtubePlayer";
-import {
-  FIRST_WINDOW_SECONDS,
-  neighborsAround,
-  processingWindows,
-  segmentsInWindow,
-} from "@/lib/videoSubtitle/windows";
+import { FIRST_WINDOW_SECONDS, processingWindows } from "@/lib/videoSubtitle/windows";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
 import {
   emptyViewerContext,
@@ -67,43 +62,6 @@ function usableSpeech(segments: SttSegment[]): SttSegment[] {
 
 function withoutWords(segments: NormalizedSegment[]): NormalizedSegment[] {
   return segments.map(({ words: _words, ...rest }) => rest);
-}
-
-async function buildFirstWindowCues(
-  segments: NormalizedSegment[],
-  locale: string,
-  context: PreparedTranscript["context"],
-  sceneContexts?: SceneContext[],
-  viewerContext?: ViewerContext,
-): Promise<{ cues: SubtitleSegment[]; viewerContext: ViewerContext }> {
-  const window = { start: 0, end: FIRST_WINDOW_SECONDS };
-  let currentSegments = segmentsInWindow(segments, window);
-  if (currentSegments.length === 0) {
-    currentSegments = segments.slice(0, 8);
-  }
-  if (currentSegments.length === 0) {
-    return {
-      cues: [],
-      viewerContext:
-        viewerContext ??
-        emptyViewerContext({
-          topic: context.topic,
-          summary: context.summary,
-        }),
-    };
-  }
-  const startIndex = segments.indexOf(currentSegments[0]!);
-  const endIndex = startIndex + currentSegments.length;
-  const { previous, next } = neighborsAround(segments, startIndex, endIndex);
-  return translateSubtitleWindow({
-    locale,
-    context,
-    currentSegments,
-    previousSegments: previous,
-    nextSegments: next,
-    sceneContexts,
-    viewerContext,
-  });
 }
 
 function asOfficialSegments(segments: SttSegment[]): NormalizedSegment[] {
@@ -431,25 +389,6 @@ export async function translateSubtitleWindow(
     };
   }
   return translateSubtitleWindowPipeline(input);
-}
-
-/** @deprecated unused after full-video prepare; kept for tests/helpers */
-export function segmentsForWindow(
-  segments: NormalizedSegment[],
-  start: number,
-  end: number,
-): NormalizedSegment[] {
-  return segmentsInWindow(segments, { start, end });
-}
-
-export function windowNeighbors(
-  segments: NormalizedSegment[],
-  current: NormalizedSegment[],
-): { previous: NormalizedSegment[]; next: NormalizedSegment[] } {
-  if (current.length === 0) return { previous: [], next: [] };
-  const startIndex = segments.indexOf(current[0]!);
-  const endIndex = startIndex + current.length;
-  return neighborsAround(segments, startIndex, endIndex);
 }
 
 export type { SceneContext };

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { connectionsOf, nextTopic, normalizeMap } from "./map.ts";
+import { normalizeMap } from "./map.ts";
 
 const base = {
   id: "m1",
@@ -74,22 +74,6 @@ test("topics in the wrong sector, malformed or repeated are dropped; too few is 
     topics: [topic("A1", 1), { ...topic("B1", 2), sector: "C" }, topic("A1", 3), topic("Q1", 4), topic("C1", 5)],
   };
   assert.equal(normalizeMap(raw, base), null);
-});
-
-test("connections read both ways, and continue picks the first unfinished", () => {
-  const raw = {
-    sectors,
-    topics: [
-      topic("A1", 1, { links: [{ to: "B1", why: "A1 needs B1" }] }),
-      topic("B1", 2), topic("C1", 3, { links: [{ to: "B1", why: "C1 feeds B1" }] }),
-      topic("D1", 4), topic("A2", 5), topic("B2", 6),
-    ],
-  };
-  const map = normalizeMap(raw, base)!.map;
-  const ofB1 = connectionsOf(map, "B1").map((c) => c.topic.id).sort();
-  assert.deepEqual(ofB1, ["A1", "C1"]);
-  assert.equal(nextTopic(map, { A1: "done", B1: "doing" })?.id, "B1");
-  assert.equal(nextTopic(map, Object.fromEntries(map.topics.map((t) => [t.id, "done" as const]))), null);
 });
 
 test("a video activity keeps what to listen for, split into phrases", async () => {

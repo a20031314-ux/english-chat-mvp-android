@@ -1,7 +1,4 @@
-import {
-  coerceLanguageCode,
-  type LearningLanguageCode,
-} from "@/lib/learningLanguages";
+import { type LearningLanguageCode } from "@/lib/learningLanguages";
 
 export type VideoSubtitle = {
   id: string;
@@ -103,8 +100,6 @@ export type VideoLearningSave = {
   createdAt: number;
 };
 
-export const VIDEO_LEARNING_SAVES_KEY = "videoLearningSaves";
-
 export function formatSubtitleTime(seconds: number): string {
   const total = Math.max(0, Math.floor(seconds));
   const minutes = Math.floor(total / 60);
@@ -142,24 +137,6 @@ export function parseYouTubeInput(raw: string):
   return { ok: true, videoId, url: normalizeYouTubeWatchUrl(videoId) };
 }
 
-export function cueHasUiLanguage(cue: VideoSubtitle): boolean {
-  const translation = cue.translation.trim();
-  if (!translation) return false;
-  if (translation === cue.original.trim()) return false;
-  return cue.translationStatus !== "english";
-}
-
-/** Opening spoken lines must have a learner-language gloss before playback. */
-export function openingCuesHaveUiLanguage(cues: VideoSubtitle[]): boolean {
-  const spoken = cues.filter((cue) => cue.original.trim());
-  if (spoken.length === 0) return false;
-  const firstStart = spoken[0]!.startTime;
-  const opening = spoken
-    .filter((cue) => cue.startTime <= firstStart + 12)
-    .slice(0, 8);
-  return opening.length > 0 && opening.every(cueHasUiLanguage);
-}
-
 export function findActiveSubtitle(
   currentTime: number,
   subtitles: VideoSubtitle[],
@@ -194,65 +171,4 @@ export function findActiveSubtitle(
     }
   }
   return best;
-}
-
-function asSave(raw: unknown): VideoLearningSave | null {
-  if (!raw || typeof raw !== "object") return null;
-  const o = raw as Record<string, unknown>;
-  if (typeof o.id !== "string" || !o.id) return null;
-  if (typeof o.original !== "string" || !o.original.trim()) return null;
-  if (typeof o.translation !== "string") return null;
-  if (typeof o.videoUrl !== "string") return null;
-  return {
-    id: o.id,
-    sourceType: "video",
-    original: o.original,
-    translation: o.translation,
-    explanation: typeof o.explanation === "string" ? o.explanation : "",
-    videoUrl: o.videoUrl,
-    timestamp: typeof o.timestamp === "number" ? o.timestamp : 0,
-    languageCode: coerceLanguageCode(o.languageCode),
-    createdAt: typeof o.createdAt === "number" ? o.createdAt : Date.now(),
-  };
-}
-
-export function loadVideoLearningSaves(): VideoLearningSave[] {
-  try {
-    const parsed = JSON.parse(
-      localStorage.getItem(VIDEO_LEARNING_SAVES_KEY) || "[]",
-    );
-    if (!Array.isArray(parsed)) return [];
-    return parsed
-      .map(asSave)
-      .filter((item): item is VideoLearningSave => item !== null);
-  } catch {
-    return [];
-  }
-}
-
-export function persistVideoLearningSaves(items: VideoLearningSave[]) {
-  localStorage.setItem(VIDEO_LEARNING_SAVES_KEY, JSON.stringify(items));
-}
-
-export function videoSaveKey(input: {
-  videoUrl: string;
-  original: string;
-  timestamp: number;
-}): string {
-  return `${input.videoUrl}|${input.original}|${Math.floor(input.timestamp)}`;
-}
-
-export function isVideoSubtitleSaved(
-  items: VideoLearningSave[],
-  input: { videoUrl: string; original: string; timestamp: number },
-): boolean {
-  const key = videoSaveKey(input);
-  return items.some(
-    (item) =>
-      videoSaveKey({
-        videoUrl: item.videoUrl,
-        original: item.original,
-        timestamp: item.timestamp,
-      }) === key,
-  );
 }

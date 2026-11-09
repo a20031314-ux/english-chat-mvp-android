@@ -80,13 +80,3 @@ export function removeDayResult(language: string, at: number, item: string): voi
 export function clearDayResults(language: string, day: string): void {
   save(language, readDayResults(language).filter((one) => one.day !== day));
 }
-
-/**
- * 그 수업·대본을 끝까지 한 마지막 결과(통과 못 했을 때 목록 카드에 n/m — 2026-11-02 사용자 "다른 학습 방식은 끝나도 완료 표시가 안 떠").
- * 문장구조·대본은 item(틀 id·대본 id), 표현·문법 칸은 key(e|·g|)로 찾는다.
- */
-export function lastResultFor(results: readonly DayResult[], id: string): DayResult | null {
-  let best: DayResult | null = null;
-  for (const one of results) if ((one.item === id || one.key === id) && (!best || one.at > best.at)) best = one;
-  return best;
-}

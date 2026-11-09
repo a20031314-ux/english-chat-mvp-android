@@ -106,10 +106,3 @@ export function recommendedChannelSeeds(
 ): RecommendedChannelSeed[] {
   return CHANNELS[language] ?? CHANNELS.en;
 }
-
-export function recommendedChannelSeed(
-  language: LearningLanguageCode,
-  id: string,
-): RecommendedChannelSeed | null {
-  return recommendedChannelSeeds(language).find((row) => row.id === id) ?? null;
-}

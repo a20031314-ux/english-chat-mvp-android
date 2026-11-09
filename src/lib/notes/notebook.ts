@@ -752,16 +752,6 @@ export function applyEdit(record: NotebookRecord, edit: NotebookEdit, now = Date
   }
 }
 
-/** 칸마다 카드 수(화면의 숫자 — 많은 칸이 "여기에 집중"). */
-export function cardCounts(record: NotebookRecord): Record<string, number> {
-  const counts: Record<string, number> = {};
-  for (const card of record.cards) {
-    const key = card.node ?? "";
-    counts[key] = (counts[key] ?? 0) + 1;
-  }
-  return counts;
-}
-
 /** 지금 단계: 지도의 단계 id(`ja-3`)에서, 없으면 1. */
 export function stageOrderOf(stageId: string | null | undefined): number {
   const match = typeof stageId === "string" ? /^[a-z]{2}-(\d)$/.exec(stageId) : null;

@@ -22,55 +22,11 @@ export const PRICE_SOURCE = {
   url: "https://developers.openai.com/api/docs/pricing",
   checkedOn: "2026-09-04",
 } as const;
-
-/** USD per 1M tokens, audio modality, gpt-realtime-2.1. */
-export const REALTIME_AUDIO_USD_PER_MTOK = { input: 32, output: 64 } as const;
-
 /**
  * USD per minute of the model that transcribes the learner (call learning, rooms).
  * 단가는 코드 기본 모델(`lib/aiDefaults.ts` SPEECH_DEFAULTS.turnTranscribe)에서 `modelPrices.ts`로 — 기본값을 바꾸면 따라온다(2026-10-22).
  */
 export const CALL_TRANSCRIBE_USD_PER_MINUTE = sttPerMinute(SPEECH_DEFAULTS.turnTranscribe, 0.003);
-
-/**
- * Audio tokens a minute of speech comes to.
- *
- * The weakest numbers here: OpenAI prices realtime audio per token and does not
- * publish a per-minute conversion, so these are third-party measurements. They
- * are the first thing to replace with something measured.
- */
-export const AUDIO_TOKENS_PER_MINUTE = { input: 600, output: 1200 } as const;
-
-/**
- * How much of a call minute the tutor is the one talking.
- *
- * Input audio is billed for the whole call — the microphone streams throughout
- * — while output is billed only for speech actually generated. Half is the
- * assumption for a conversation where neither side dominates.
- */
-export const TUTOR_SPEECH_SHARE = 0.5;
-
-/**
- * USD of model time in one minute of the realtime call.
- *
- * Retired as a way to spend a point: the call tab is call learning now
- * (RoleplayTab.tsx), and the realtime call route was deleted on 2026-10-20 (no
- * build since 2.48 opened it). Kept because this is what every point was
- * priced against until 2026-10-06 — a minute here is half
- * again what five minutes of call learning cost, so prices derived from it
- * were set against a bill nobody was running up.
- */
-export function callMinuteUsd(): number {
-  const input =
-    (AUDIO_TOKENS_PER_MINUTE.input * REALTIME_AUDIO_USD_PER_MTOK.input) / 1_000_000;
-  const output =
-    (AUDIO_TOKENS_PER_MINUTE.output *
-      TUTOR_SPEECH_SHARE *
-      REALTIME_AUDIO_USD_PER_MTOK.output) /
-    1_000_000;
-  return input + output + CALL_TRANSCRIBE_USD_PER_MINUTE;
-}
-
 /** USD per 1M tokens of the model the video subtitle passes use (code default of the "video" task, `lib/aiDefaults.ts`). */
 export const MINI_USD_PER_MTOK = textPrice(codeTextModel("video"), { input: 0.15, output: 0.6 });
 
@@ -317,25 +273,6 @@ export function bundleMargin(bundle: PointBundle): {
     costUsd,
     marginShare: netUsd === 0 ? 0 : (netUsd - costUsd) / netUsd,
   };
-}
-
-/**
- * The same arithmetic for the subscription's own monthly grant.
- *
- * Worth keeping next to the bundles because it is the thinnest number in the
- * whole scheme: a subscriber who spends the entire grant on calls leaves far
- * less behind than a bundle buyer does, and everything else they use that month
- * comes out of what is left.
- */
-export function grantMargin(
-  monthlyPriceKrw: number,
-  grantPoints: number,
-): ReturnType<typeof bundleMargin> {
-  return bundleMargin({
-    productId: "grant",
-    points: grantPoints,
-    priceKrw: monthlyPriceKrw,
-  });
 }
 
 /**

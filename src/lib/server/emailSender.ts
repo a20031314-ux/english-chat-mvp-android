@@ -47,10 +47,6 @@ export function letterFor(locale: string | null | undefined, code: string, minut
   return { subject: fill(letter.subject), body: fill(letter.body) };
 }
 
-export function supportedLetterLocales(): string[] {
-  return Object.keys(LETTERS);
-}
-
 export async function sendLoginCode(to: string, code: string, locale: string | null, minutes: number): Promise<boolean> {
   if (logOnly()) {
     console.log(`[account] (log only) code for ${to}: ${code}`);

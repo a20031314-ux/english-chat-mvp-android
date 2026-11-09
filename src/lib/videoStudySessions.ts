@@ -162,14 +162,6 @@ export function persistVideoStudySessions(items: VideoStudySession[]) {
   );
 }
 
-export function findVideoStudySession(
-  videoId: string,
-): VideoStudySession | null {
-  return (
-    loadVideoStudySessions().find((item) => item.videoId === videoId) ?? null
-  );
-}
-
 export function upsertVideoStudySession(input: {
   videoId: string;
   videoUrl: string;
@@ -239,8 +231,4 @@ export function deleteVideoStudySession(videoId: string) {
   persistVideoStudySessions(
     loadVideoStudySessions().filter((item) => item.videoId !== videoId),
   );
-}
-
-export function isVideoStudySessionSaved(videoId: string): boolean {
-  return Boolean(findVideoStudySession(videoId));
 }

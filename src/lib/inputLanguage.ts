@@ -152,29 +152,3 @@ export function languageEvidence(
   }
   return { learning: 0, ui: 0 };
 }
-
-export function resolveChatInputMode(
-  text: string,
-  options: {
-    chatEnabled: boolean;
-    askExpressionEnabled: boolean;
-    learningLanguage: string;
-    interfaceLanguage: string;
-  },
-): ChatInputMode {
-  const { chatEnabled, askExpressionEnabled } = options;
-
-  if (chatEnabled && !askExpressionEnabled) return "chat";
-  if (!chatEnabled && askExpressionEnabled) return "how_to_say";
-  if (!chatEnabled && !askExpressionEnabled) return "chat";
-
-  // Both modes on: a line in the learning language is practice; a line in
-  // the UI language is a request for how to say it.
-  return writtenInLearningLanguage(
-    text,
-    options.learningLanguage,
-    options.interfaceLanguage,
-  )
-    ? "chat"
-    : "how_to_say";
-}

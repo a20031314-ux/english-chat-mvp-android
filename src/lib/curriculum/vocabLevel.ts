@@ -34,10 +34,6 @@ export type Level = {
 
 /** 처음 섞어서 내는 새 낱말 수. */
 export const PROBE = 20;
-/** 새 낱말 몇 개마다 체크 줄. */
-export const FEEL_EVERY = 10;
-/** 어려워요일 때 새 낱말을 쉬는 틀린 낱말 수(보통은 circle.ts WRONG_PAUSE). */
-export const SLOW_PAUSE = 15;
 /** 단어 시험에 섞는 "아마 앎" 확인 수. */
 export const PRESUMED_IN_TEST = 2;
 
@@ -105,28 +101,6 @@ export function noteLevelBatch(level: Level, rank: number, correct: boolean, opt
   const { pend: _drop, ...rest } = base;
   void _drop;
   return { ...rest, b };
-}
-
-/** 사용자 체크(새 객체). newSeen = 지금까지 새 낱말 푼 수. */
-export function feelLevel(level: Level, feel: "easy" | "ok" | "hard", newSeen: number): Level {
-  if (feel === "easy") {
-    const easy = (level.easy ?? 0) + 1;
-    // 연달아 쉬워요면 더 크게(20 → 50 → 100…, 경계가 크면 그만큼).
-    const jump = Math.max([20, 50, 100][Math.min(easy, 3) - 1]!, Math.round(level.b * 0.3 * easy));
-    return { ...level, b: level.b + jump, n: Math.max(level.n, PROBE), easy, slow: false, feltAt: newSeen, run: 0 };
-  }
-  if (feel === "hard") return { ...level, b: Math.max(0, level.b - Math.max(20, Math.round(level.b * 0.3))), n: Math.max(level.n, PROBE), easy: 0, slow: true, feltAt: newSeen, run: 0 };
-  return { ...level, easy: 0, feltAt: newSeen };
-}
-
-/** ⚙ 단계 예시 줄에서 고름 — 경계를 그 구간 시작으로. */
-export function pickLevel(level: Level, start: number): Level {
-  return { ...level, b: start, n: Math.max(level.n, PROBE), picked: true, easy: 0, slow: false };
-}
-
-/** 체크 줄을 띄울 때인가. */
-export function feelDue(level: Level, newSeen: number): boolean {
-  return newSeen >= FEEL_EVERY && newSeen - (level.feltAt ?? 0) >= FEEL_EVERY;
 }
 
 /** 가늠 단계에서 n번째로 볼 구간(0 = 맨 앞 구간, 1~ = 단계 구간) — 낮은 구간을 더 자주. */

@@ -39,10 +39,6 @@ export function followedTutors(language: string | null | undefined): TutorGender
   return readAll()[getLearningLanguage(language).code] ?? EMPTY;
 }
 
-export function isFollowingTutor(language: string | null | undefined, gender: TutorGender): boolean {
-  return followedTutors(language).includes(gender);
-}
-
 export function setTutorFollow(language: string | null | undefined, gender: TutorGender, follow: boolean): void {
   const code = getLearningLanguage(language).code;
   const all = { ...readAll() };
@@ -74,9 +70,4 @@ export function useFollowedTutors(language: string | null | undefined): TutorGen
  */
 export function tutorChatRows(chosen: TutorGender, followed: readonly TutorGender[], talked: readonly TutorGender[] = []): TutorGender[] {
   return [...new Set([chosen, ...followed, ...talked])];
-}
-
-/** 테스트용: 기억해 둔 값을 비운다. */
-export function resetTutorFollowsForTest(): void {
-  memory = null;
 }

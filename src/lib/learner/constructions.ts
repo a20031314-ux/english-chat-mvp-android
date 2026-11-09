@@ -1,22 +1,3 @@
-/**
- * The sentence constructions a learner's English is followed on.
- *
- * A fixed list, not whatever a model calls a mistake today: progress means
- * comparing this week with last month, and that needs the same names both
- * times. Each has a band — roughly where in a course it is usually met — so the
- * bands a learner has made their own can be read as "this is your level now".
- *
- * The bands follow the usual A1–C1 ordering of grammar syllabi. They are a
- * ladder for the screen, not a certificate; the screen says so.
- *
- * English only for now. Other learning languages get their own list here, and
- * nothing that reads one changes.
- *
- * Plain module: the server, the screen and the tests read the same list.
- */
-
-import { translatedLabel } from "./constructionLabels.ts";
-
 export const BANDS = ["A1", "A2", "B1", "B2", "C1"] as const;
 export type Band = (typeof BANDS)[number];
 
@@ -84,9 +65,4 @@ export function constructionsFor(language: string): Construction[] {
 
 export function findConstruction(id: string): Construction | undefined {
   return BY_ID.get(id);
-}
-
-export function constructionLabel(construction: Construction, uiLanguage: string): string {
-  if (uiLanguage === "ko") return construction.ko;
-  return translatedLabel(construction.id, uiLanguage) ?? construction.en;
 }

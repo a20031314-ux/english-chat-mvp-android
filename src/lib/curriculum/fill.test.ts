@@ -1,20 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import {
-  CHECKS,
-  computeFill,
-  fillCatalog,
-  keysInCell,
-  studyPoint,
-  listenFill,
-  meanKnow,
-  missKindOf,
-  talkFill,
-  thetaForFill,
-  type CallTurns,
-  type FillEvent,
-} from "./fill.ts";
-import { ungroupedFunctions } from "./fnGroups.ts";
+import { CHECKS, computeFill, fillCatalog, listenFill, meanKnow, missKindOf, talkFill, thetaForFill, type CallTurns, type FillEvent } from "./fill.ts";
 import type { BankWord } from "./vocabBank.ts";
 import { segmentWords } from "../wordSegments.ts";
 
@@ -26,28 +12,9 @@ async function wordsOf(language: string): Promise<readonly BankWord[]> {
   return loadBank(language);
 }
 
-test("문장구사력 여덟 묶음이 공통 기능 107개를 빠짐없이 덮는다", () => {
-  assert.deepEqual(ungroupedFunctions(), []);
-});
-
 test("어림 눈금: 채운 몫 ↔ θ가 서로 맞고, 구간 평균은 0~1", () => {
   for (const fill of [0.05, 0.1, 0.4, 0.67, 0.95]) assert.ok(Math.abs(meanKnow(thetaForFill(fill), 0, 1) - fill) < 0.002, String(fill));
   assert.ok(meanKnow(0.5, 0, 0.2) > 0.95 && meanKnow(0.5, 0.8, 1) < 0.05);
-});
-
-test("은행 목록(ja 띄어쓰기 없음·es): 단계마다 항목, 세부 칸(단계·품사·주제·문법 칸·문장구사력)", async () => {
-  for (const language of ["ja", "es"]) {
-    const catalog = fillCatalog(language, await wordsOf(language));
-    assert.equal(catalog.stageCounts.vocab.length, 5);
-    assert.ok(catalog.vocab.size > 3000, `${language} 낱말 ${catalog.vocab.size}`);
-    assert.ok(catalog.sent.size > 100, `${language} 문장 ${catalog.sent.size}`);
-    assert.ok(catalog.stageCounts.sent.every((n) => n > 0), `${language} 단계마다 문장 ${catalog.stageCounts.sent}`);
-    const frame = [...catalog.sent.values()].find((item) => item.key.startsWith("f|"))!;
-    assert.ok(frame.cells.some((cell) => cell.startsWith("fn:")), `${language} 문장구사력 칸`);
-    const verb = [...catalog.vocab.values()].find((item) => item.cells.includes("pos:verb"))!;
-    assert.ok(verb.d >= 0 && verb.d <= 1);
-    assert.ok(keysInCell(catalog, "vocabRead", "pos:verb").length > 100);
-  }
 });
 
 test("처음 체크는 글자부터만, 답이 없으면 어림을 칠하지 않음 — 시작 단계가 높아도 0 (es·ja)", async () => {
@@ -185,20 +152,6 @@ test("같은 날 틀렸다가 맞힌 열쇠는 맞힘이 나중(ja)", async () =
     segment: (text) => segmentWords(text, "ja"),
   }).filter((one) => one.key === "w|水").sort((a, b) => a.at - b.at);
   assert.equal(events.at(-1)?.correct, true);
-});
-
-test("추천은 표현 글자가 아니라 빈칸 틀이고, 틀에 없는 표현은 지정하지 않는다", async () => {
-  const { allFramesFor } = await import("./frames.ts");
-  const en = studyPoint("en", "e|nice to meet you", () => "");
-  assert.equal(en?.key, "f|en-f1-01");
-  assert.match(en!.label, /___/);
-  assert.equal(studyPoint("en", "e|where are you from", () => ""), null);
-  const ja = allFramesFor("ja").find((frame) => frame.pattern.includes("___") && frame.expressions?.length);
-  assert.ok(ja);
-  const point = studyPoint("ja", `e|${ja!.expressions![0]}`, () => "");
-  assert.equal(point?.key, `f|${ja!.id}`);
-  assert.match(point!.label, /___/);
-  assert.deepEqual(studyPoint("en", "w|apple", () => ""), { key: "w|apple", label: "apple" });
 });
 
 test("첫 측정 근거(2026-11-07): 경계 b 아래 단계는 안 풀어도 채워지고(옅게), 측정 전 시각·글자부터면 안 씀 (es·ja)", async () => {

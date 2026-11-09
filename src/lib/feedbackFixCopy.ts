@@ -151,9 +151,6 @@ const LOCALES: Record<string, FixCopy> = {
   },
 };
 
-export const FIX_COPY_LOCALES = ["ko", "en", ...Object.keys(LOCALES)];
-export const FIX_COPY_KEYS = Object.keys(en) as (keyof FixCopy)[];
-
 export function fixCopy(locale: string): FixCopy {
   const base = (locale || "").toLowerCase().split(/[-_]/)[0];
   if (base === "ko") return ko;

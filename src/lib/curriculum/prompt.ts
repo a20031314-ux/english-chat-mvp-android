@@ -129,10 +129,6 @@ Return only a json object:
 export function mapUserMessage(input: MapRequest): string {
   return JSON.stringify({ goal: input.goal, level: input.level });
 }
-
-/** For tests: whether the chosen plan's lines are left out when a self-check speaks instead. */
-export const PLAN_RULES = { FOCUS_RULE, METHOD_RULE };
-
 /* ───────── 나눠 그리기(2026-10-23): 짜기 한 번 → 연습 채우기 여러 번 나란히 ─────────
  * 한 번에 다 쓰면 40~50초(재시도면 85초). 지도의 뼈대(제목·요약·칸·주제·순서)만 먼저 짜고,
  * 주제마다 연습·이어진 주제는 몇 개씩 나눠 나란히 채운다. 뼈대가 오면 화면에 바로 보인다.

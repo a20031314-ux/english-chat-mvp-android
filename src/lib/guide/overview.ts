@@ -24,12 +24,9 @@ const CARD_SHOTS: Record<string, [string, string]> = {
   people: ["people-lang", "board-topics"],
   rooms: ["r69-free", "rooms-room"],
 };
+
 const FLOW_SHOTS = ["bank-stage-today", "bank-keep-quiz", "talk-calls"];
-export const OVERVIEW_CHAPTERS = Object.keys(CARD_SHOTS);
-
 type Lines = { flow: [string, string, string]; cards: Record<keyof typeof CARD_SHOTS, [string, string]> };
-
-const P = "{ui:planTitle}";
 const K = "{ui:keepTitle}";
 const T = "{ui:homeTabTalk}";
 const M = "{ui:myProgressTitle}";
@@ -221,5 +218,3 @@ export function guideOverview(language: string): GuideOverview {
     ),
   };
 }
-
-export const OVERVIEW_LANGUAGES = Object.keys(TEXT);

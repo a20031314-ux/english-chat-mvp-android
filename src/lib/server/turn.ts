@@ -84,8 +84,3 @@ export async function iceServers(
     return { servers: STUN_ONLY, relay: false, turn: "error" };
   }
 }
-
-/** 테스트용. */
-export function resetTurnCache(): void {
-  cached = null;
-}

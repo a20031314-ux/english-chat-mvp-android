@@ -1,10 +1,6 @@
 import { asRecord, asString } from "../videoSubtitle/parseModelJson.ts";
 import { parseMeaningExtraction, parseTranslated } from "./parse.ts";
-import {
-  critiqueTranslationSystem,
-  extractMeaningSystem,
-  firstInterpretationSystem,
-} from "./prompts.ts";
+import { extractMeaningSystem, firstInterpretationSystem } from "./prompts.ts";
 import type {
   JsonCompleter,
   MeaningExtraction,
@@ -119,68 +115,6 @@ Return ONLY JSON:
       if (!id) continue;
       const translated = parseTranslated(rec);
       if (translated) out.set(id, translated);
-    }
-  }
-  return out;
-}
-
-/**
- * Critique-on pass for already-composed captions (2-pass / off).
- * Optional A/B only — production analysis uses firstInterpretationsForAnalysis.
- */
-export async function refineCaptionsForAnalysis(
-  ctx: Pick<TranslationContext, "sourceLang" | "targetLang">,
-  items: CaptionRefineItem[],
-  completeJson: JsonCompleter,
-): Promise<Map<string, { analysisTranslation: string; changed: boolean }>> {
-  const out = new Map<string, { analysisTranslation: string; changed: boolean }>();
-  if (items.length === 0) return out;
-
-  const system = `${critiqueTranslationSystem({
-    sourceText: "",
-    sourceLang: ctx.sourceLang,
-    targetLang: ctx.targetLang,
-    sourceType: "subtitle",
-  })}
-
-The on-screen caption already exists. You write a second rendering for LEARNING analysis only.
-Source wording is allowed here so you can restore joke, sarcasm, or force the caption softened.
-Do not treat the caption as a mistake. Do not write tutor notes.
-
-You review several captions. Keep each id.
-Return ONLY JSON:
-{"items":[{"id":"...","translated":"...","changed":false}]}`;
-
-  for (let i = 0; i < items.length; i += BATCH) {
-    const batch = items.slice(i, i + BATCH);
-    const raw = await completeJson(
-      system,
-      JSON.stringify({
-        items: batch.map((item) => ({
-          id: item.id,
-          sourceText: item.sourceText,
-          draft: item.caption,
-          coreMeaning: item.meaning.coreMeaning,
-          speakerIntent: item.meaning.speakerIntent,
-          formalityLevel: item.meaning.formalityLevel,
-          mustKeep: item.meaning.keyEntities,
-          speechTexture: item.meaning.speechTexture,
-        })),
-      }),
-    );
-    const row = asRecord(raw);
-    const rows = Array.isArray(row?.items) ? row.items : [];
-    for (const entry of rows) {
-      const rec = asRecord(entry);
-      const id = asString(rec?.id);
-      if (!id) continue;
-      const src = batch.find((item) => item.id === id);
-      const draft = src?.caption ?? "";
-      const translated = asString(rec?.translated) || draft;
-      const changed =
-        translated.replace(/\s+/g, " ").trim() !==
-        draft.replace(/\s+/g, " ").trim();
-      out.set(id, { analysisTranslation: translated, changed });
     }
   }
   return out;

@@ -31,13 +31,6 @@ export type AnalysisDimension =
 export type SourceContext = "videoLearning" | "webReading" | "ebook" | "chat";
 
 export type LearnerLevel = "beginner" | "intermediate" | "advanced";
-
-export const LEARNER_LEVELS: LearnerLevel[] = [
-  "beginner",
-  "intermediate",
-  "advanced",
-];
-
 export type RankedSalienceCandidate = SalienceCandidate & {
   salienceReason: string;
   charStart: number;

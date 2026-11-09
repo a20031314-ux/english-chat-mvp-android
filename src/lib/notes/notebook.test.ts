@@ -1,32 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  noteFitsUi,
-  placePrompt,
-  isNodeId,
-  phrasePrompt,
-  placePhrases,
-  readPhrasePlaces,
-  readPhraseAlso,
-  parseNotebook,
-  addCard,
-  addPending,
-  fileFix,
-  defaultPicked,
-  prunePending,
-  PENDING_KEEP_MS,
-  applyEdit,
-  cardCounts,
-  emptyNotebook,
-  grammarNodeId,
-  isRealFix,
-  parseEdit,
-  placeOptions,
-  readPlacement,
-  skeletonFor,
-  stageOrderOf,
-  type FixCard,
-} from "./notebook.ts";
+import { noteFitsUi, placePrompt, isNodeId, phrasePrompt, placePhrases, readPhrasePlaces, readPhraseAlso, parseNotebook, addCard, addPending, fileFix, defaultPicked, prunePending, PENDING_KEEP_MS, applyEdit, emptyNotebook, grammarNodeId, parseEdit, placeOptions, readPlacement, skeletonFor, stageOrderOf, type FixCard } from "./notebook.ts";
 
 const card = (over: Partial<FixCard> = {}): FixCard => ({
   id: "abc123def456",
@@ -76,20 +50,6 @@ test("모델 답 읽기: 모르는 칸은 자리 없음 + 제안, 설명이 없�
     note: "on 대신 at",
   });
   assert.deepEqual(readPlacement("not json", known, ""), { node: null, note: "" });
-});
-
-test("카드: 고친 데가 없으면 안 넣고, 같은 실수는 한 장(시각만 새로)", () => {
-  assert.equal(isRealFix("Hello.", "hello"), false);
-  assert.equal(isRealFix("私は学生", "私は学生です"), true, "띄어쓰기 없는 언어");
-  let book = addCard(emptyNotebook(), card());
-  assert.equal(book.cards.length, 1);
-  book = addCard(book, card({ id: "zzz999yyy888", at: 2000 }));
-  assert.equal(book.cards.length, 1);
-  assert.equal(book.cards[0]!.at, 2000);
-  book = addCard(book, card({ id: "qqq111www222", wrong: "Yo tiene hambre.", right: "Yo tengo hambre.", node: null, at: 3000 }));
-  assert.equal(book.cards.length, 2);
-  assert.equal(addCard(book, card({ id: "rrr333", wrong: "Hi!", right: "hi" })), book);
-  assert.deepEqual(cardCounts(book), { "g1-be-verb": 1, "": 1 });
 });
 
 test("편집: 옮기면 다시 안 옮기게 표시, 내가 만든 칸 지우면 카드는 자리 없음으로", () => {
@@ -222,7 +182,6 @@ test("요소 태그 읽기: 갈래는 아는 이름만, 함께 걸친 칸은 아
   const kept = addCard(emptyNotebook(), pend.pending[0]!);
   assert.deepEqual(kept.cards[0]?.parts, ["grammar"]);
 });
-
 
 test("틀 다시 연습: 교정 칸 고르기가 틀 id도 받고 카드에 남김", () => {
   const prompt = placePrompt({ target: "Japanese", uiName: "Korean", options: "g1-0 — grammar: x", frames: "ja-f1-05 — ___てください (asking)" });

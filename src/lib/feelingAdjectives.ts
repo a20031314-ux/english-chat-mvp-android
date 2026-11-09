@@ -138,5 +138,3 @@ export function explainFeelingSlips(slips: FeelingSlip[], interfaceLanguage: str
     .map(({ from, to }) => write(from, to, from.toLowerCase().endsWith("ing")))
     .join(" ");
 }
-
-export const FEELING_EXPLAIN_LANGUAGES = Object.keys(EXPLAIN);

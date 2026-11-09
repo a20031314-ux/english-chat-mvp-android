@@ -13,7 +13,6 @@ export type BankWord = { w: string; pos: string; reading?: string; topic?: strin
 // "band"(500개씩 많이 쓰는 순)는 2026-10-31에 "stage"(단계)로 바꿈 — 옛 설정의 band는 전체로 읽는다.
 export type VocabBy = "all" | "stage" | "pos" | "topic";
 export type VocabPick = { by: VocabBy; value: string };
-export const BAND_SIZE = 500;
 export const POS_GROUPS = ["noun", "verb", "adj", "adv", "function"] as const;
 export const TOPICS = ["people", "food", "home", "work", "health", "travel", "shopping", "time", "feelings", "actions", "describing", "nature", "society", "function"] as const;
 
@@ -61,6 +60,7 @@ export const STAGE_CUTS: Record<string, readonly number[]> = {
   zh: [500, 1000, 2000, 3600, 5400],
   ko: [500, 1000, 2000, 3100, 6000],
 };
+
 export const EXTENDED_STAGE = 6;
 
 export function stageCuts(language: string): readonly number[] {
@@ -104,20 +104,9 @@ const LOADERS: Record<string, () => Promise<{ WORDS: Rows }>> = {
   zh: () => import("./vocab/zh.ts"),
   // ADD-LOADERS
 };
+
 export const BANK_LANGS: readonly string[] = Object.keys(LOADERS);
 export const BANK_CHUNK = 50;
-/** 출처 표시(CC BY-SA 4.0). */
-export const BANK_SOURCES: Record<string, string> = {
-  en: "FrequencyWords (Hermit Dave, OpenSubtitles 2018), CC BY-SA 4.0",
-  es: "FrequencyWords (Hermit Dave, OpenSubtitles 2018), CC BY-SA 4.0",
-  ja: "wordfreq (Robyn Speer; SUBTLEX, OpenSubtitles, Wikipedia 등), CC BY-SA 4.0",
-  hi: "wordfreq (Robyn Speer), CC BY-SA 4.0",
-};
-/** 그 밖의 언어는 FrequencyWords(OpenSubtitles 2018). */
-export function bankSource(language: string): string {
-  return BANK_SOURCES[language] ?? "FrequencyWords (Hermit Dave, OpenSubtitles 2018), CC BY-SA 4.0";
-}
-
 export function hasBank(language: string): boolean {
   return BANK_LANGS.includes(language);
 }

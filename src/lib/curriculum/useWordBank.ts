@@ -156,28 +156,6 @@ async function fetchExtras(language: string, force = false): Promise<BankWord[] 
 }
 
 /**
- * 단어장에서 낱말 찾기(2026-10-31): 서버가 빈도 목록·더한 목록을 보고, 없으면 확인해 모두의 목록에 더한다.
- * 카드가 오면 바로 퀴즈 재료로 등록하고, 더한 목록을 다시 받게 표시한다. 돌려줌: 상태와 사전형.
- */
-export async function searchWord(language: string, ui: string, word: string): Promise<{ status: string; word?: string } | null> {
-  const body = await fetch(apiUrl("/api/curriculum/words"), {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ lang: language, ui, word }),
-  })
-    .then((response) => (response.ok ? (response.json() as Promise<{ status: string; word?: string; card?: Card & { pos?: string } }>) : null))
-    .catch(() => null);
-  if (!body) return null;
-  if (body.card) {
-    const card = body.card;
-    registerQuizSources(language, [{ key: wordKey(card.w), sources: sourcesOf(card, card.pos) }]);
-    glossOf.set(`${language}|${card.w}`, card.gloss);
-  }
-  if (body.status === "added") void fetchExtras(language, true);
-  return { status: body.status, ...(body.word ? { word: body.word } : {}) };
-}
-
-/**
  * 배울 수 있는 낱말 수(단계마다, 6 = 5단계 밖 확장) — 빈도 목록 + 사용자들이 찾아서 더한 낱말(curriculum/contentScope.ts).
  * 더한 낱말은 6시간마다 새로 받으니 은행이 늘면 숫자도 는다.
  */

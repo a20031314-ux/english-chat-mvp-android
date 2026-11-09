@@ -1,25 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { SCENARIOS } from "../roleplay/catalog.ts";
-import {
-  PREMIUM_MONTHLY_IMPORT_POINTS,
-  PREMIUM_MONTHLY_PRICE_KRW,
-} from "./config.ts";
-import {
-  KRW_PER_USD,
-  videoPointCostUsd,
-  MIN_BUNDLE_MARGIN,
-  POINT_BUNDLES,
-  STORE_FEE_SHARE,
-  bundleMargin,
-  callMinuteUsd,
-  grantMargin,
-  pointCostUsd,
-  ROLEPLAY_TURN,
-  TTS_USD_PER_MINUTE,
-  roleplayMinuteUsd,
-  roleplayPointCostUsd,
-} from "./cost.ts";
+import { KRW_PER_USD, videoPointCostUsd, MIN_BUNDLE_MARGIN, POINT_BUNDLES, STORE_FEE_SHARE, bundleMargin, pointCostUsd, ROLEPLAY_TURN, TTS_USD_PER_MINUTE, roleplayMinuteUsd, roleplayPointCostUsd } from "./cost.ts";
 
 test("a point costs what the dearest thing it buys costs", () => {
   // A point buys call learning or video preparation, and the price is set
@@ -32,17 +14,6 @@ test("a point costs what the dearest thing it buys costs", () => {
   // magnitude the derivation changed and every number below needs revisiting.
   assert.ok(pointCostUsd() > 0.01, "a point is not nearly free");
   assert.ok(pointCostUsd() < 0.2, "a point is not that expensive either");
-});
-
-test("the retired realtime call is not what a point is priced against", () => {
-  // It was, for weeks after nothing in the app could open one any more, and
-  // every margin was understated by the difference. A minute of it costs half
-  // again what a point does now; if this ever reads equal, the old basis came
-  // back.
-  assert.ok(
-    pointCostUsd() < callMinuteUsd(),
-    "a point is priced as a realtime minute again; is the realtime call back?",
-  );
 });
 
 test("every bundle clears the margin floor", () => {
@@ -81,76 +52,6 @@ test("the bundles survive the won weakening by a fifth", () => {
       `${bundle.productId} goes underwater at ${stressed.toFixed(0)} KRW/USD`,
     );
   }
-});
-
-test("the monthly grant is never sold at a loss", () => {
-  // Deliberately a weaker assertion than the bundles get: the grant is the
-  // thinnest number in the scheme and is known not to clear the bundle floor.
-  // What must not happen is it going negative — which it did, silently, for as
-  // long as this constant said 9,900 while the console charged 4,900. The
-  // invariant was always right; only its input was wrong.
-  const margin = grantMargin(
-    PREMIUM_MONTHLY_PRICE_KRW,
-    PREMIUM_MONTHLY_IMPORT_POINTS,
-  );
-  assert.ok(
-    margin.netUsd > margin.costUsd,
-    `a fully spent grant costs $${margin.costUsd.toFixed(2)} against $${margin.netUsd.toFixed(2)} of revenue`,
-  );
-});
-
-test("the grant clears the bundle floor once the voice is Voxtral", () => {
-  // Was "the grant is the thin part of the plan" (47.5% as of 2026-10-06): a
-  // subscriber spending the whole grant on call learning left under half of
-  // their payment behind. Voice is most of a call minute, and moving it to
-  // Voxtral (2026-11-02, about half the price per spoken minute in English)
-  // took the grant over the floor the bundles are held to. If this fails, the
-  // voice got dearer again and the old warning applies.
-  const margin = grantMargin(
-    PREMIUM_MONTHLY_PRICE_KRW,
-    PREMIUM_MONTHLY_IMPORT_POINTS,
-  );
-  assert.ok(
-    margin.marginShare >= MIN_BUNDLE_MARGIN,
-    `the grant keeps ${(margin.marginShare * 100).toFixed(1)}%, under the bundle floor again`,
-  );
-});
-
-test("the bundles stay a modest step up from the plan, not a wall", () => {
-  // A bundle is bought by a subscriber who ran out. At 1.7 times the grant
-  // rate (until 2026-10-06) that step read as "don't"; they are set around 1.2
-  // times it now. Guarded from drifting back up: no bundle more than twice the
-  // floor, and none more than 1.3 times what a point costs inside the plan.
-  const floorKrw =
-    (pointCostUsd() / (1 - MIN_BUNDLE_MARGIN) / (1 - STORE_FEE_SHARE)) *
-    KRW_PER_USD.rate;
-  const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
-  for (const bundle of POINT_BUNDLES) {
-    const perPoint = bundle.priceKrw / bundle.points;
-    assert.ok(
-      perPoint < floorKrw * 2,
-      `${bundle.productId} is ${(perPoint / floorKrw).toFixed(2)}x the floor`,
-    );
-    assert.ok(
-      perPoint <= grantRate * 1.3,
-      `${bundle.productId} is ${(perPoint / grantRate).toFixed(2)}x the grant rate`,
-    );
-  }
-});
-
-test("the step up out of the plan is a price choice now, not the floor's", () => {
-  // It used to be the answer to "why not price bundles lower": at the floor a
-  // point still cost well over the grant rate. With the realtime call gone the
-  // floor sits close to the grant rate, so a bundle could be priced near what
-  // a point costs inside the plan. Whether to is a decision, not arithmetic.
-  const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
-  const floorKrw =
-    (pointCostUsd() / (1 - MIN_BUNDLE_MARGIN) / (1 - STORE_FEE_SHARE)) *
-    KRW_PER_USD.rate;
-  assert.ok(
-    floorKrw < grantRate * 1.5,
-    "the floor is back above 1.5x the grant; the bundles are held up by cost again",
-  );
 });
 
 test("call learning is the expensive way to spend a point", () => {

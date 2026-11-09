@@ -49,46 +49,6 @@ export function cutOffsetFromRatio(sentence: string, ratio: number): number | nu
   return cut;
 }
 
-/**
- * Infer cut offset from the current DOM selection inside `sentence`.
- * Cut is placed after the selected span (selected text stays on the left).
- */
-export function cutOffsetFromSelection(sentence: string): number | null {
-  if (typeof window === "undefined") return null;
-  const sel = window.getSelection();
-  if (!sel || sel.rangeCount === 0 || sel.isCollapsed) return null;
-
-  const selected = normalizeCueText(sel.toString());
-  if (!selected) return null;
-
-  const text = normalizeCueText(sentence);
-  if (text.length < 2) return null;
-
-  // Prefer the occurrence that best matches the selection's place in the line.
-  let idx = text.indexOf(selected);
-  if (idx < 0) {
-    // Soften whitespace differences.
-    const soft = selected.replace(/\s+/g, "");
-    const compact = text.replace(/\s+/g, "");
-    const softIdx = compact.indexOf(soft);
-    if (softIdx < 0) return null;
-    // Map compact index back roughly via walking text.
-    let compactPos = 0;
-    let mapped = 0;
-    for (; mapped < text.length && compactPos < softIdx + soft.length; mapped += 1) {
-      if (!/\s/.test(text[mapped]!)) compactPos += 1;
-    }
-    idx = Math.max(0, mapped - soft.length);
-    const cut = snapCutOffset(text, mapped);
-    if (cut <= 0 || cut >= text.length) return null;
-    return cut;
-  }
-
-  const cut = snapCutOffset(text, idx + selected.length);
-  if (cut <= 0 || cut >= text.length) return null;
-  return cut;
-}
-
 function blankInterpretation(cue: VideoSubtitle, original: string): VideoSubtitle {
   return {
     ...cue,

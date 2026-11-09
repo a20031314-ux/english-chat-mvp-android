@@ -11,10 +11,9 @@ import { useSyncExternalStore } from "react";
 
 export type UpNext = { id: string; label: string; open: () => void };
 
-let queue: UpNext[] = [];
-let fallback: UpNext | null = null;
+const queue: UpNext[] = [];
+const fallback: UpNext | null = null;
 let offer: { own: string; at: number } | null = null;
-let signature = "";
 let leaving = false;
 let offerTimer: ReturnType<typeof setTimeout> | null = null;
 const listeners = new Set<() => void>();
@@ -23,26 +22,11 @@ const OFFER_MS = 15_000;
 const notify = () => {
   for (const listener of listeners) listener();
 };
+
 const subscribe = (listener: () => void) => {
   listeners.add(listener);
   return () => listeners.delete(listener);
 };
-
-/** 오늘 할 것의 남은 항목(차례대로). 이름·순서가 같으면 여는 함수만 바꾸고 알리지 않는다(다시 그리기 고리 막기). */
-export function publishUpNext(items: readonly UpNext[]): void {
-  queue = [...items];
-  const next = items.map((one) => `${one.id}\u0001${one.label}`).join("\u0002");
-  if (next === signature) return;
-  signature = next;
-  notify();
-}
-
-/** 오늘 할 것이 다 끝났을 때 갈 곳(Quizbank). */
-export function setUpNextFallback(next: UpNext | null): void {
-  const changed = (fallback?.label ?? "") !== (next?.label ?? "");
-  fallback = next;
-  if (changed) notify();
-}
 
 /** 지금 연 것(own)을 빼고 다음 추천 하나. */
 export function pickUpNext(own?: string): UpNext | null {
@@ -82,18 +66,11 @@ let version = 0;
 listeners.add(() => {
   version += 1;
 });
+
 const getVersion = () => version;
 
 /** 다음 추천(지금 연 것 빼고) — 바뀌면 다시 그린다. */
 export function useUpNext(own?: string): UpNext | null {
   useSyncExternalStore(subscribe, getVersion, getVersion);
   return pickUpNext(own);
-}
-
-/** 닫은 뒤 띄울 줄: 최근 15초 안에 닫은 수업이 있으면 그 수업을 뺀 다음 추천. */
-export function useUpNextOffer(): { next: UpNext; own: string; at: number } | null {
-  useSyncExternalStore(subscribe, getVersion, getVersion);
-  if (!offer) return null;
-  const next = pickUpNext(offer.own);
-  return next ? { next, own: offer.own, at: offer.at } : null;
 }

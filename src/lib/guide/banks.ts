@@ -20,6 +20,7 @@ const SHOTS: Record<BankId, string[]> = {
   keep: ["bank-keep-quiz", "bank-keep-answer", "bank-keep-answer", "bank-keep-settings"],
   log: ["bank-log-week", "bank-log-axis", "bank-log-day"],
 };
+
 const CLIPS: Partial<Record<BankId, string>> = { stage: "bank-stage", keep: "bank-keep" };
 
 /** 칸마다 핵심 → 세부 순서(can/how 몇 번째 줄을 어떤 그림과). 겹치는 줄은 뺌(stage how[2]는 can[2]와, keep how[0]은 can[0]과 같은 말). */
@@ -61,8 +62,6 @@ const G = "{ui:partGrammar}";
 const E = "{ui:partExpression}";
 const W = "{ui:weakTitle}";
 const N = "{ui:scriptNext}";
-const K = "{ui:keepTitle}";
-const SR = "{ui:skillRecord}";
 const C = "{ui:checkupTitle}";
 const WT = "{ui:wordTestTitle}";
 const VB = "{ui:vocabByStage} · {ui:vocabByPos} · {ui:vocabByTopic}";
@@ -265,8 +264,6 @@ const TEXT: Record<string, Lines> = {
     },
   },
 };
-
-export const BANK_LANGUAGES = Object.keys(TEXT);
 
 /** 그 앱 언어의 세 칸 설명(없는 언어는 영어). */
 export function bankGuides(language: string): Record<BankId, BankGuide> {

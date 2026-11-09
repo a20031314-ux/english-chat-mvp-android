@@ -94,15 +94,6 @@ export async function planInRevenueCat(appUserId: string): Promise<PlanTier | nu
   }
 }
 
-/** True or false when RevenueCat answered, null when we could not find out. */
-export async function isPremiumInRevenueCat(
-  appUserId: string,
-): Promise<boolean | null> {
-  const plan = await planInRevenueCat(appUserId);
-  return plan === null ? null : plan !== "free";
-}
-
-
 /**
  * Every one-time purchase RevenueCat has on record for this subscriber.
  *

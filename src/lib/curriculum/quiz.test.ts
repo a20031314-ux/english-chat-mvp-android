@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor } from "./stageScripts.ts";
-import { buildQuiz, canQuiz, nearOf, weakKeysOfScript, fixOf, joinWords, orderCorrect, quizPassed, quizSources, similarShape, wrongWords } from "./quiz.ts";
+import { buildQuiz, canQuiz, nearOf, fixOf, joinWords, orderCorrect, quizPassed, quizSources, similarShape, wrongWords } from "./quiz.ts";
 import { segmentWords } from "../wordSegments.ts";
 
 const fixed = () => 0.42;
@@ -84,16 +84,6 @@ test("퀴즈: 맞음 기준과 조각 잇기", () => {
   assert.equal(joinWords(["Voy", "al"], true), "Voy al");
 });
 
-test("대본에서 같은 줄을 두 번 틀리면 그 줄의 문장구조·표현이 약한 곳(ja·es)", () => {
-  for (const language of ["ja", "es"]) {
-    const script = allScriptsFor(language).find((s) => s.lines.some((l) => l.who === "me" && l.frames?.length))!;
-    const at = script.lines.findIndex((l) => l.who === "me" && l.frames?.length);
-    assert.deepEqual(weakKeysOfScript(script, { [at]: 1 }), [], "한 번은 실수");
-    const keys = weakKeysOfScript(script, { [at]: 2 });
-    for (const frame of script.lines[at]!.frames!) assert.ok(keys.includes(`f|${frame}`));
-  }
-});
-
 test("순서 조각: 일본어 활용은 한 조각, 긴 줄은 8조각 안팎으로 묶음(es)", async () => {
   const { orderTiles, tilesOf } = await import("./quiz.ts");
   assert.deepEqual(tilesOf("ブラジルから来ました。", "ja"), ["ブラジル", "から", "来ました"]);
@@ -131,27 +121,6 @@ test("문법 칸 퀴즈 재료: 그 문법을 쓰는 문장구조 예문 + 그 �
   assert.ok(sources.every((source) => Boolean(source.frame) && Boolean(source.piece)));
   const linked = new Set(allFramesFor("en").filter((frame) => frame.stage === 2 && (frame.grammar ?? []).includes(0)).map((frame) => frame.id));
   assert.ok(sources.every((source) => linked.has(source.frame!)));
-});
-
-test("학습 조합: 말하기·읽기 위주로 모양이 바뀌고, 대본 하나를 문제 묶음으로 — 듣고 고르기는 없음(일본어·스페인어·태국어)", async () => {
-  const { buildQuiz: build, buildUnit, unitPassed } = await import("./quiz.ts");
-  const { allScriptsFor } = await import("./stageScripts.ts");
-  for (const language of ["ja", "es", "th"]) {
-    const script = allScriptsFor(language).find((one) => one.stage === 1)!;
-    const key = `e|${script.expressions[0]}`;
-    const read = build(language, key, { mix: "read" });
-    assert.ok(read && read.questions.every((q) => q.kind !== "say"), `${language} read 말하기 없음`);
-    for (const mix of ["speak", "read"] as const) {
-      const unit = buildUnit(language, script.id, mix, "d1");
-      assert.ok(unit.length >= 3 && unit.length <= 8, `${language} ${mix} ${unit.length}`);
-      assert.ok(unit.every((q) => q.kind !== ("listen" as never)), `${language} ${mix} 듣기 없음`);
-      for (const q of unit) if (q.kind === "meaning") assert.equal(q.options.length, 3);
-      if (mix === "read") assert.ok(unit.every((q) => q.kind !== "say"));
-      assert.deepEqual(buildUnit(language, script.id, mix, "d1"), unit, "같은 날 같은 문제");
-    }
-  }
-  assert.equal(unitPassed(7, 10), true);
-  assert.equal(unitPassed(6, 10), false);
 });
 
 test("단어 퀴즈(w|): 예문 빈칸 하나 — 발음(말하기)·듣기 없음, 같은 낱말을 세 번 묻지 않음 — 스페인어·일본어", async () => {

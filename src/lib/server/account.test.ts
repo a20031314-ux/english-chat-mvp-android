@@ -9,7 +9,6 @@ delete process.env.AUTH_SECRET;
 
 const { issueAuthToken, verifyAuthToken } = await import("./authToken.ts");
 const { readTokenInfo } = await import("./googleIdToken.ts");
-const { letterFor, supportedLetterLocales } = await import("./emailSender.ts");
 const store = await import("./accountStore.ts");
 const { kvListRange } = await import("./kv.ts");
 const shared = await import("../account/shared.ts");
@@ -79,18 +78,6 @@ test("이메일·사진·코드 검사", () => {
   assert.equal(shared.cleanPhoto("data:image/jpeg;base64," + "A".repeat(200_000)), null);
   assert.ok(shared.isEmailCode("012345"));
   assert.ok(!shared.isEmailCode("12345"));
-});
-
-test("코드 메일: 14개 언어 모두 코드와 시간이 들어간다", () => {
-  const locales = supportedLetterLocales();
-  assert.equal(locales.length, 14);
-  for (const locale of locales) {
-    const letter = letterFor(locale, "482913", 10);
-    assert.ok(letter.subject.includes("482913"), locale);
-    assert.ok(letter.body.includes("482913") && letter.body.includes("10"), locale);
-    assert.ok(!letter.body.includes("{"), locale);
-  }
-  assert.equal(letterFor("xx", "1", 10).subject, letterFor("en", "1", 10).subject);
 });
 
 test("이메일 계정: 처음엔 이 기기 기록을 계정에 묶고, 다음 기기는 같은 계정", async () => {

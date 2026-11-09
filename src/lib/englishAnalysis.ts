@@ -8,7 +8,6 @@ import { ALL_ANALYSIS_DIMENSIONS } from "@/lib/salience/languageProfiles";
 import { legacyDimensionProse } from "@/lib/salience/dimensionLabels";
 import type { SentenceSpanAnalysis } from "@/lib/salience/sentenceSpanPrompt";
 import type { AnalysisDimension } from "@/lib/salience/types";
-import { listWordSpans } from "@/lib/textTokens";
 import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
 import { exampleMixesInterfaceLanguage } from "@/lib/exampleLanguage";
 
@@ -154,82 +153,6 @@ export type EnglishAnalysisTarget = {
 
 function asLine(value: unknown): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
-}
-
-export function parseEnglishIdiomNote(
-  raw: unknown,
-  contextSentence: string,
-): EnglishIdiomNote | undefined {
-  if (!raw || typeof raw !== "object") return undefined;
-  const o = raw as Record<string, unknown>;
-  const text = asLine(o.text);
-  const meaning = asLine(o.meaning);
-  if (!text || !meaning) return undefined;
-  const hay = contextSentence.toLowerCase();
-  if (!hay.includes(text.toLowerCase())) return undefined;
-  if (normalizeAnalysisSpan(text) === normalizeAnalysisSpan(contextSentence)) {
-    return undefined;
-  }
-  const withWords: string[] = [];
-  if (Array.isArray(o.withWords)) {
-    for (const item of o.withWords) {
-      const word = asLine(item);
-      if (!word) continue;
-      withWords.push(word);
-      if (withWords.length >= 8) break;
-    }
-  }
-  const tokens =
-    withWords.length >= 2 ? withWords : listWordSpans(text).map((word) => word.text);
-  if (tokens.length < 2) return undefined;
-  return { text, meaning, withWords: tokens };
-}
-
-export function parseEnglishGrammarNotes(
-  raw: unknown,
-  contextSentence: string,
-  targetLanguage?: string,
-): EnglishGrammarNote[] {
-  const items = Array.isArray(raw) ? raw : raw ? [raw] : [];
-  const out: EnglishGrammarNote[] = [];
-  const hay = contextSentence.toLowerCase();
-  for (const item of items) {
-    if (!item || typeof item !== "object") continue;
-    const o = item as Record<string, unknown>;
-    const name = asLine(o.name) || asLine(o.pattern) || asLine(o.title);
-    const general =
-      asLine(o.general) || asLine(o.usageExplanation) || asLine(o.explanation);
-    const inThisSentence =
-      asLine(o.inThisSentence) ||
-      asLine(o.howUsedHere) ||
-      asLine(o.contextExplanation);
-    if (!name || !general || !inThisSentence) continue;
-    const why = asLine(o.why) || asLine(o.whyThis) || asLine(o.marker);
-    const examples = asExamples(o.examples, 2, targetLanguage);
-    const inner: EnglishGrammarInner[] = [];
-    const innerRaw = Array.isArray(o.inner) ? o.inner : [];
-    for (const nested of innerRaw) {
-      if (!nested || typeof nested !== "object") continue;
-      const n = nested as Record<string, unknown>;
-      const text = asLine(n.text);
-      const innerName = asLine(n.name) || asLine(n.pattern);
-      const explanation = asLine(n.explanation) || asLine(n.meaning);
-      if (!text || !innerName || !explanation) continue;
-      if (!hay.includes(text.toLowerCase())) continue;
-      inner.push({ text, name: innerName, explanation });
-      if (inner.length >= 3) break;
-    }
-    out.push({
-      name,
-      general,
-      inThisSentence,
-      ...(why ? { why } : {}),
-      ...(examples.length ? { examples } : {}),
-      ...(inner.length ? { inner } : {}),
-    });
-    if (out.length >= 3) break;
-  }
-  return out;
 }
 
 function asExampleSource(o: Record<string, unknown>): string {
@@ -398,95 +321,5 @@ export function mapSentenceSpanToEnglishElement(
     ...(examples.length ? { examples } : {}),
     ...(dimensionResults ? { dimensionResults } : {}),
     ...(legacyGrammar ? { grammar: legacyGrammar } : {}),
-  };
-}
-
-export function normalizeEnglishElementAnalysis(
-  raw: unknown,
-  selectedText: string,
-  contextSentence: string,
-): EnglishElementAnalysis | null {
-  if (!raw || typeof raw !== "object") return null;
-  const o = raw as Record<string, unknown>;
-  const meaningInContext = asLine(o.meaningInContext);
-  const contextExplanation = asLine(o.contextExplanation);
-  const whyUsed = asLine(o.whyUsed);
-  const usageExplanation = asLine(o.usageExplanation);
-  const idiom = parseEnglishIdiomNote(o.idiom, contextSentence);
-  const grammar = parseEnglishGrammarNotes(
-    o.grammar ?? o.grammarNotes,
-    contextSentence,
-  );
-  const dimensionResults = parseDimensionResults(o);
-  if (
-    !meaningInContext &&
-    !contextExplanation &&
-    !whyUsed &&
-    !usageExplanation &&
-    !idiom &&
-    grammar.length === 0 &&
-    !dimensionResults
-  ) {
-    return null;
-  }
-
-  const otherUsages: EnglishOtherUsage[] = [];
-  if (Array.isArray(o.otherUsages)) {
-    for (const item of o.otherUsages) {
-      if (!item || typeof item !== "object") continue;
-      const u = item as Record<string, unknown>;
-      const pattern = asLine(u.pattern);
-      const meaning = asLine(u.meaning);
-      if (!pattern || !meaning) continue;
-      const examples = asExamples(u.examples);
-      otherUsages.push({
-        pattern,
-        meaning,
-        ...(examples.length ? { examples } : {}),
-      });
-      if (otherUsages.length >= 4) break;
-    }
-  }
-
-  const relatedConcepts: EnglishRelatedConcept[] = [];
-  if (Array.isArray(o.relatedConcepts)) {
-    for (const item of o.relatedConcepts) {
-      if (!item || typeof item !== "object") continue;
-      const r = item as Record<string, unknown>;
-      const label = asLine(r.label);
-      if (!label) continue;
-      const id = asLine(r.id);
-      const kind =
-        r.kind === "grammar" || r.kind === "expression" ? r.kind : undefined;
-      relatedConcepts.push({
-        label,
-        ...(id ? { id } : {}),
-        ...(kind ? { kind } : {}),
-      });
-      if (relatedConcepts.length >= 8) break;
-    }
-  }
-
-  const examples = asExamples(o.examples);
-  const title = asLine(o.title) || selectedText;
-  const pattern = asLine(o.pattern);
-  const reading = asLine(o.reading);
-
-  return {
-    selectedText: asLine(o.selectedText) || selectedText,
-    contextSentence: asLine(o.contextSentence) || contextSentence,
-    title,
-    ...(reading ? { reading } : {}),
-    ...(meaningInContext ? { meaningInContext } : {}),
-    ...(contextExplanation ? { contextExplanation } : {}),
-    ...(whyUsed ? { whyUsed } : {}),
-    ...(pattern ? { pattern } : {}),
-    ...(usageExplanation ? { usageExplanation } : {}),
-    ...(examples.length ? { examples } : {}),
-    ...(otherUsages.length ? { otherUsages } : {}),
-    ...(relatedConcepts.length ? { relatedConcepts } : {}),
-    ...(idiom ? { idiom } : {}),
-    ...(grammar.length ? { grammar } : {}),
-    ...(dimensionResults ? { dimensionResults } : {}),
   };
 }

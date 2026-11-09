@@ -145,12 +145,6 @@ export function persistReviewMap(map: ReviewMap) {
   localStorage.setItem(LEARNING_REVIEW_KEY, JSON.stringify(map));
 }
 
-export function setReviewLevel(cardId: number, level: ReviewLevel) {
-  const map = loadReviewMap();
-  map[String(cardId)] = level;
-  persistReviewMap(map);
-}
-
 export function removeReviewEntry(cardId: number) {
   const map = loadReviewMap();
   delete map[String(cardId)];

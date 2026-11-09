@@ -19,11 +19,6 @@ export function maxVideoPrepSeconds(_isPremium = true) {
   return MAX_VIDEO_PREP_SECONDS;
 }
 
-/** @deprecated Seconds equivalent of the monthly import allowance. */
-export function monthlyVideoPrepAllowanceSeconds(isPremium: boolean) {
-  return monthlyImportPoints(isPremium) * VIDEO_IMPORT_POINT_SECONDS;
-}
-
 export function videoPrepMinutes(seconds: number) {
   return Math.max(0, Math.round(seconds / 60));
 }
@@ -147,36 +142,4 @@ export function evaluateVideoAccess(input: {
   }
 
   return { ok: true, kind: "import", billablePoints: points };
-}
-
-/** Legacy helper used by older call sites that only knew duration. */
-export function evaluateVideoPrep(input: {
-  isPremium: boolean;
-  usedSeconds: number;
-  durationSeconds?: number | null;
-}):
-  | { ok: true; billableSeconds: number }
-  | { ok: false; reason: "quota" | "too_long"; maxSeconds: number } {
-  const usedPoints = Math.ceil(
-    Math.max(0, input.usedSeconds) / VIDEO_IMPORT_POINT_SECONDS,
-  );
-  const decision = evaluateVideoAccess({
-    isPremium: input.isPremium,
-    videoId: "",
-    language: "en",
-    durationSeconds: input.durationSeconds,
-    usedPoints,
-    billedVideoIds: [],
-    trialVideoIds: [],
-  });
-  if (!decision.ok) {
-    if (decision.reason === "too_long") {
-      return { ok: false, reason: "too_long", maxSeconds: decision.maxSeconds };
-    }
-    return { ok: false, reason: "quota", maxSeconds: decision.maxSeconds };
-  }
-  return {
-    ok: true,
-    billableSeconds: decision.billablePoints * VIDEO_IMPORT_POINT_SECONDS,
-  };
 }

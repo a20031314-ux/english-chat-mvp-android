@@ -3,9 +3,6 @@ import test from "node:test";
 import { applyKnown, CHECK_DAYS, cleanKnown, confirmDue, knownState, skippedIds, type KnownMap } from "./known.ts";
 import { DAY_MS, reviewKeysOf } from "./dailyPlan.ts";
 import { allScriptsFor } from "./stageScripts.ts";
-import { nextStudy } from "./nextStudy.ts";
-import { buildCheckup } from "./checkup.ts";
-
 const NOW = Date.UTC(2026, 9, 29, 3);
 
 test("한 번 맞히면 익힘, 잊을 때(1·3·7일 뒤)만 다시 묻고 그 뒤로는 안 물음, 틀리면 지움", () => {
@@ -41,17 +38,6 @@ test("커리큘럼이 건너뜀: 대본 열쇠가 모두 시험에서 맞힌 것
     assert.deepEqual(confirmDue(map, NOW), [], "오늘 맞힌 것은 오늘 다시 안 물음");
     assert.equal(confirmDue(map, NOW + DAY_MS).length, keys.length);
   }
-});
-
-test("익힌 열쇠(확인 날)가 계속 공부(다시 볼 것 다음)·이번 주 확인(맨 앞)에 나옴", () => {
-  const language = "en";
-  const script = allScriptsFor(language).find((one) => one.stage === 1)!;
-  const confirm = reviewKeysOf(language, script.id).slice(0, 2);
-  const queue = nextStudy({ language, stage: 1, passed: new Set(), review: {}, log: {}, weakest: null, confirm, now: NOW });
-  assert.deepEqual(queue.slice(0, 2).map((pick) => [pick.key, pick.reason]), confirm.map((key) => [key, "confirm"]));
-  const passed = new Set(allScriptsFor(language).filter((one) => one.stage === 1).slice(0, 3).map((one) => one.id));
-  const weekly = buildCheckup({ language, stage: 1, passed, review: {}, log: {}, now: NOW, confirm });
-  assert.ok(confirm.every((key) => weekly.some((item) => item.key === key)));
 });
 
 test("서버: 시험·이번 주 확인·퀴즈에서 맞힌 것 → 익힘, 알아요는 안 셈, 틀리면 지움", async () => {

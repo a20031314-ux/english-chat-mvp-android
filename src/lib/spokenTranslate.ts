@@ -3,13 +3,8 @@ import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
-import { interfaceLanguageName, learningLanguageName } from "@/lib/learningLanguages";
+import { learningLanguageName } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
-
-export function spokenTranslateTarget(locale: string): string {
-  return interfaceLanguageName(locale);
-}
-
 export type SpokenTranslateOptions = {
   /** @deprecated Prefer interfaceLanguage. */
   locale?: string;

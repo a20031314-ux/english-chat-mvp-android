@@ -229,25 +229,3 @@ export function normalizeMap(
     dropped,
   };
 }
-
-/** Every link touching a topic, either way, with the reason as written. */
-export function connectionsOf(map: StudyMap, topicId: string): { topic: MapTopic; why: string }[] {
-  const byId = new Map(map.topics.map((t) => [t.id, t]));
-  const out: { topic: MapTopic; why: string }[] = [];
-  const self = byId.get(topicId);
-  for (const link of self?.links ?? []) {
-    const other = byId.get(link.to);
-    if (other) out.push({ topic: other, why: link.why });
-  }
-  for (const other of map.topics) {
-    if (other.id === topicId) continue;
-    const back = other.links.find((l) => l.to === topicId);
-    if (back && !out.some((o) => o.topic.id === other.id)) out.push({ topic: other, why: back.why });
-  }
-  return out;
-}
-
-/** The first topic in order that is not done — what "continue" opens. */
-export function nextTopic(map: StudyMap, status: Record<string, TopicStatus>): MapTopic | null {
-  return map.topics.find((t) => status[t.id] !== "done") ?? null;
-}

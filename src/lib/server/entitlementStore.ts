@@ -11,19 +11,7 @@
  * old key simply stops being read and expires on its own.
  */
 
-import {
-  kvGetJson,
-  kvGetNumber,
-  kvGetNumbers,
-  kvIncrBy,
-  kvScanKeys,
-  kvSetJson,
-  kvSetJsonIfAbsent,
-  kvListPush,
-  kvListTrim,
-  kvGetJsonMany,
-  kvDelete,
-} from "./kv.ts";
+import { kvGetJson, kvGetNumber, kvIncrBy, kvScanKeys, kvSetJson, kvSetJsonIfAbsent, kvListPush, kvListTrim, kvGetJsonMany, kvDelete } from "./kv.ts";
 // Relative, not "@/": a script under scripts/ imports this directly and Node
 // cannot resolve the alias there (see modelCalls.ts, which was split out over
 // exactly this).
@@ -33,16 +21,7 @@ import {
   FREE_SCRIPTS_APP_CHAT_TRIAL,
   ROLEPLAY_POINT_SECONDS,
 } from "../billing/config.ts";
-import {
-  planCallBlock,
-  pointsForCallSeconds,
-  refundSplit,
-  splitSpend,
-  spentPoints,
-  totalPoints,
-  type PointBalance,
-  type PointSpend,
-} from "../billing/points.ts";
+import { splitSpend, totalPoints, type PointBalance, type PointSpend } from "../billing/points.ts";
 import { monthlyImportPoints } from "../billing/videoPrep.ts";
 import { callWindowStart, localDay, termsFor, type PlanTerms } from "../billing/plans.ts";
 import { isIdentified } from "./identity.ts";
@@ -90,16 +69,8 @@ function videoPrepKey(userId: string) {
   return `usage:video:${userId}:${monthKey()}`;
 }
 
-function callsKey(userId: string) {
-  return `usage:calls:${userId}`;
-}
-
 function catalogTrialKey(userId: string) {
   return `usage:trial:${userId}`;
-}
-
-function callSecondsKey(userId: string) {
-  return `usage:callsec:${userId}:${monthKey()}`;
 }
 
 function opKey(userId: string, op: string) {
@@ -162,17 +133,11 @@ const ROLEPLAY_SETTLE_GRACE_MS = 30 * 1000;
 
 /** No one's unused time grows past this, whatever goes wrong with settling. */
 const ROLEPLAY_CARRY_MAX_MS = 30 * 60 * 1000;
-
-function callHoldKey(userId: string, holdId: string) {
-  return `points:hold:${userId}:${holdId}`;
-}
-
 /**
  * Long enough that no real call outlives its own hold, short enough that
  * abandoned rows do not accumulate. A hold that expires unsettled simply stays
  * spent, which is the safe direction.
  */
-const HOLD_TTL_SECONDS = 6 * 60 * 60;
 
 /** 오늘(채팅 한도와 같은 날) 본 보상형 광고 수. */
 function adRewardKey(userId: string) {
@@ -207,10 +172,6 @@ export type HelpBucket = "help" | "caption";
 
 function helpKey(userId: string, bucket: HelpBucket) {
   return `usage:aihelp:${bucket}:${userId}:${dayKey()}`;
-}
-
-export async function getDailyHelp(userId: string, bucket: HelpBucket): Promise<number> {
-  return kvGetNumber(helpKey(userId, bucket));
 }
 
 /** 하나 더하고 새 합계. */
@@ -349,24 +310,6 @@ export async function getBilledImportVideoIds(
   return (await readVideoPrep(userId)).billedVideoIds;
 }
 
-export async function addMonthlyImportPoints(
-  userId: string,
-  points: number,
-  videoId?: string,
-): Promise<number> {
-  const billed = Math.max(0, Math.ceil(points));
-  const current = await readVideoPrep(userId);
-  const next: VideoPrepRecord = {
-    usedPoints: current.usedPoints + billed,
-    billedVideoIds:
-      videoId && !current.billedVideoIds.includes(videoId)
-        ? [...current.billedVideoIds, videoId]
-        : current.billedVideoIds,
-  };
-  await kvSetJson(videoPrepKey(userId), next, MONTHLY_TTL_SECONDS);
-  return next.usedPoints;
-}
-
 /**
  * Charge a video import, granted points first and then purchased ones.
  *
@@ -404,40 +347,6 @@ export async function getMonthlyVideoPrepUsed(
   userId: string,
 ): Promise<number> {
   return (await getMonthlyImportPointsUsed(userId)) * 180;
-}
-
-/** Lifetime, like the catalog trial, so this key carries no expiry either. */
-export async function getCallsStarted(userId: string): Promise<number> {
-  return kvGetNumber(callsKey(userId));
-}
-
-export async function incrementCallsStarted(userId: string): Promise<number> {
-  return kvIncrBy(callsKey(userId), 1);
-}
-
-/**
- * How many seconds of realtime audio a subscriber has spent this month.
- *
- * Counted, not enforced. Opening a call is the only lever the server holds, so
- * this exists to answer a question the counter above cannot: a started call and
- * a forty-minute call cost very different amounts, and premium currently has no
- * limit on either. Monthly, because that is the window a subscription is sold in.
- *
- * Read it as a floor. The number arrives from the client — the server never sees
- * a call end — so a killed app loses its report, and a hostile one could inflate
- * it. Good enough to price a plan, not good enough to bill against.
- */
-export async function getMonthlyCallSeconds(userId: string): Promise<number> {
-  return kvGetNumber(callSecondsKey(userId));
-}
-
-export async function addMonthlyCallSeconds(
-  userId: string,
-  seconds: number,
-): Promise<number> {
-  const rounded = Math.max(0, Math.round(seconds));
-  if (rounded === 0) return getMonthlyCallSeconds(userId);
-  return kvIncrBy(callSecondsKey(userId), rounded, MONTHLY_TTL_SECONDS);
 }
 
 /**
@@ -541,76 +450,6 @@ async function applySpend(userId: string, spend: PointSpend, sign: 1 | -1) {
   if (spend.fromPurchased !== 0) {
     await kvIncrBy(purchasedPointsKey(userId), -sign * spend.fromPurchased);
   }
-}
-
-type CallHold = {
-  spend: PointSpend;
-  seconds: number;
-  settled: boolean;
-};
-
-/**
- * Charge for a call before opening it, and say how long that buys.
- *
- * The charge has to come first because it cannot come later: once the handshake
- * is done the audio runs between the phone and OpenAI, and the server has no
- * session left to stop. So the whole block is taken here and the unused part is
- * returned when the call reports in. A call that never reports keeps its block,
- * which bounds what one silent call can cost.
- *
- * Returns null when the balance cannot open a call at all.
- */
-export async function openCallHold(
-  userId: string,
-  grant: number,
-): Promise<{ holdId: string; points: number; seconds: number } | null> {
-  const balance = await readPointBalance(userId, grant);
-  const block = planCallBlock(balance);
-  if (!block) return null;
-  const spend = splitSpend(balance, block.points);
-  if (!spend) return null;
-
-  const holdId = crypto.randomUUID();
-  // Written before the pots move, so a charge is never invisible: if a pot
-  // write fails after this, the hold still says what was meant to happen and
-  // reconciliation has something to find.
-  await kvSetJson(
-    callHoldKey(userId, holdId),
-    { spend, seconds: block.seconds, settled: false } satisfies CallHold,
-    HOLD_TTL_SECONDS,
-  );
-  await applySpend(userId, spend, 1);
-  return { holdId, points: block.points, seconds: block.seconds };
-}
-
-/**
- * Give back the part of a block the call did not use.
- *
- * Settling is one-shot: the row is marked before anything is returned, so a
- * report that arrives twice — a retry, a resent keepalive — cannot be refunded
- * twice. An unknown or already-settled hold returns null and changes nothing.
- */
-export async function settleCallHold(
-  userId: string,
-  holdId: string,
-  seconds: number,
-): Promise<{ refundedPoints: number } | null> {
-  const key = callHoldKey(userId, holdId);
-  const hold = await kvGetJson<CallHold>(key);
-  if (!hold || hold.settled || !hold.spend) return null;
-
-  await kvSetJson(key, { ...hold, settled: true }, HOLD_TTL_SECONDS);
-
-  // Never credit more than the block: a report claiming a shorter call than it
-  // was cannot conjure points, it can only decline to spend them.
-  const used = Math.min(
-    pointsForCallSeconds(seconds),
-    spentPoints(hold.spend),
-  );
-  const refund = refundSplit(hold.spend, used);
-  const refunded = spentPoints(refund);
-  if (refunded > 0) await applySpend(userId, refund, -1);
-  return { refundedPoints: refunded };
 }
 
 /**
@@ -773,22 +612,6 @@ export async function readWrittenLines(
   return out.sort((a, b) => b.said - a.said);
 }
 
-/** How often each of these has been said, and when it last was. */
-export async function readSentenceTally(
-  language: string,
-  ids: string[],
-): Promise<Record<string, { said: number; lastAt: number | null }>> {
-  const counts = await kvGetNumbers(ids.map((id) => sentenceSaidKey(language, id)));
-  const lasts = await Promise.all(
-    ids.map((id) => kvGetJson<{ at: number }>(sentenceLastKey(language, id))),
-  );
-  const out: Record<string, { said: number; lastAt: number | null }> = {};
-  ids.forEach((id, index) => {
-    out[id] = { said: counts[index] ?? 0, lastAt: lasts[index]?.at ?? null };
-  });
-  return out;
-}
-
 /**
  * 포인트를 쓴 만큼 소수로 깎는다(2026-10-23 사용자 결정 "A", hub/work/drafts/points-gauge-2026-10-23.md).
  *
@@ -872,11 +695,6 @@ export async function spendMilli(
   const delta = open * MILLI_PER_POINT - milli;
   if (delta !== 0) await kvIncrBy(pointPartKey(userId), delta);
   return { spentMilli: milli, spend };
-}
-
-/** 보여 줄 잔액(포인트, 소수 첫째 자리에서 버림 — 실제보다 많아 보이지 않게). */
-export function pointsForDisplay(milli: number): number {
-  return Math.floor(Math.max(0, milli) / 100) / 10;
 }
 
 type RoleplaySession = {

@@ -1,5 +1,4 @@
 import { completeChat } from "../server/llm.ts";
-import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { asNumber, asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type {
@@ -133,9 +132,4 @@ export async function analyzeScenesBatch(input: {
     );
   }
   return out;
-}
-
-/** Thrown only for missing key when caller wants hard fail — vision itself soft-fails. */
-export function requireOpenAI(): void {
-  if (!getOpenAIClient()) throw new VideoPipelineError("MISSING_OPENAI_KEY");
 }

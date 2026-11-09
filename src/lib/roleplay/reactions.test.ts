@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { sentencesFor } from "./catalog.ts";
 import type { Direction } from "./director.ts";
-import { findReaction, reactionIdsFor, reactionKey, sentencesOf, withBankReaction } from "./reactions.ts";
+import { findReaction, reactionKey, sentencesOf, withBankReaction } from "./reactions.ts";
 
 const en = sentencesFor("en");
 const ja = sentencesFor("ja");
@@ -127,20 +127,4 @@ test("recorded lines, scripted scenes and tips are left alone", () => {
   const helped = withBankReaction(stuck, openTalk("en", en));
   assert.equal(helped.direction.note, "tip");
   assert.deepEqual(helped.direction.react, { text: "Take your time.", translation: "천천히 하세요." });
-});
-
-test("every form names one reaction, and every reaction is in the bank", () => {
-  for (const [language, bank] of [["en", en], ["ja", ja]] as const) {
-    for (const id of reactionIdsFor(language)) {
-      const line = bank[id];
-      assert.ok(line, `${language} ${id} is in the bank`);
-      // A reaction does not ask — except surprise, which is said as a question.
-      if (id !== "talk.surprised") assert.ok(!/[?？]$/.test(line.text.trim()), `${language} ${id} asks`);
-    }
-    for (const [id, line] of Object.entries(bank)) {
-      if (!id.startsWith("talk.")) continue;
-      const found = findReaction(line.text, language, bank);
-      if (found) assert.equal(found.id, id, `${language} ${line.text}`);
-    }
-  }
 });

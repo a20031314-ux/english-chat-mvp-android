@@ -150,12 +150,3 @@ export class WebSearchProvider implements SearchProvider {
     return searchGoogleCse(query, key, cx);
   }
 }
-
-export function hasWebSearchConfig(): boolean {
-  if (process.env.BRAVE_SEARCH_API_KEY?.trim()) return true;
-  const key =
-    process.env.GOOGLE_CSE_API_KEY?.trim() ||
-    process.env.GOOGLE_SEARCH_API_KEY?.trim();
-  const cx = process.env.GOOGLE_CSE_ID?.trim();
-  return Boolean(key && cx);
-}

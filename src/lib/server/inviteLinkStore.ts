@@ -1,5 +1,5 @@
 import { randomInt } from "node:crypto";
-import { kvDelete, kvGetJson, kvIncrBy, kvGetNumber, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvIncrBy, kvSetJsonIfAbsent } from "./kv.ts";
 import { newJoinRecord } from "../invite/rewards.ts";
 
 /**
@@ -59,10 +59,6 @@ export async function noteJoined(inviter: string, invitee: string, inviteeCreate
   if (!(await kvSetJsonIfAbsent(joinedKey(invitee), newJoinRecord(inviter, inviteeCreatedAt, now), 400 * 24 * 60 * 60))) return false;
   await kvIncrBy(countKey(inviter), 1);
   return true;
-}
-
-export async function invitedCount(accountId: string): Promise<number> {
-  return kvGetNumber(countKey(accountId));
 }
 
 /** 계정을 지울 때: 내 코드(링크가 더는 열리지 않음)·누가 나를 데려왔는지·데려온 수. */

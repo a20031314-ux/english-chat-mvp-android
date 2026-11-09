@@ -14,8 +14,6 @@ import type { CallDay } from "../roleplay/callDays.ts";
 
 export type Basis = "time" | "grammar" | "vocab" | "expression";
 export type PartBasis = Exclude<Basis, "time">;
-export const BASES: Basis[] = ["time", "grammar", "vocab", "expression"];
-
 /** 시간을 따로 재지 않던 기록의 어림(분): 수업 하나·꺼내 쓰기·대본 내 줄 하나·퀴즈 한 문제. */
 export const ESTIMATE = { lesson: 4, recall: 3, scriptLine: 0.5, quizQuestion: 1 / 3 } as const;
 

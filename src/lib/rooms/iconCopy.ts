@@ -1062,9 +1062,6 @@ const LOCALES: Record<string, IconCopy> = {
   },
 };
 
-export const ICON_COPY_LOCALES = ["ko", "en", ...Object.keys(LOCALES)];
-export const ICON_COPY_KEYS = Object.keys(en) as (keyof IconCopy)[];
-
 export function iconCopy(locale: string): IconCopy {
   if (locale === "ko") return ko;
   return LOCALES[locale] ?? en;

@@ -757,6 +757,4 @@ export function roomCopy(locale: string): RoomCopy {
   return local ? ({ ...en, ...local } as RoomCopy) : en;
 }
 
-export const ROOM_COPY_KEYS = Object.keys(en) as (keyof RoomCopy)[];
-
 export type { RoomCopy };

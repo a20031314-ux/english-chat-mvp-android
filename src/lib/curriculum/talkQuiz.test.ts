@@ -1,9 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { callLines, chatLines, commonWords, shareable, talkOf, type TalkLine } from "./talkQuiz.ts";
-
-const all = () => true;
-
+import { callLines, chatLines, commonWords, shareable } from "./talkQuiz.ts";
 test("채팅 기록: 내 줄은 틀렸으면 고친 꼴로(fixed), 튜터 줄은 그대로, 내 말로 쓴 줄·표현 묻기는 뺌", () => {
   const lines = chatLines({
     messages: [
@@ -27,30 +24,6 @@ test("통화 기록: 튜터 줄은 번역을 뜻으로, 내 줄은 더 나은 �
     { who: "them", text: "¿Qué quieres tomar?", gloss: "뭐 마실래?" },
     { who: "me", text: "Quiero un café, por favor.", fixed: true },
   ]);
-});
-
-test("대화 조각 빈칸: 앞 줄과 함께, 마지막 줄의 소재 자리를 비우고 정답이 조각 어디에도 안 보임 (en · es · ja)", () => {
-  const cases: [string, TalkLine[]][] = [
-    ["en", [{ who: "them", text: "Hi! How was your day?" }, { who: "me", text: "It was busy." }, { who: "them", text: "I see. How about you, are you tired now?" }]],
-    ["es", [{ who: "them", text: "Hola, ¿qué tal?" }, { who: "me", text: "Bien, gracias." }, { who: "them", text: "Mucho gusto, me llamo Ana." }]],
-    ["ja", [{ who: "them", text: "こんにちは。" }, { who: "me", text: "こんにちは。" }, { who: "them", text: "すみません、わかりません。もう一度お願いします。" }]],
-  ];
-  for (const [language, conv] of cases) {
-    const made = talkOf(language, [conv], { stage: 3, seed: "t", wants: all });
-    assert.ok(made, language);
-    const q = made.question;
-    assert.equal(q.before + q.answer + q.after, q.text);
-    assert.equal(q.at, q.lines.length - 1);
-    const visible = [...q.lines.slice(0, -1).map((line) => line.text), q.before, q.after].join(" ").toLocaleLowerCase();
-    assert.ok(!visible.includes(q.answer.toLocaleLowerCase()), `${language} ${q.answer}`);
-  }
-});
-
-test("대화 조각: 그대로의 내 줄(틀렸을 수 있음)은 비우지 않고, 고친 꼴은 비움", () => {
-  const raw = talkOf("en", [[{ who: "them", text: "Hello there." }, { who: "me", text: "How about you, are you tired today?" }]], { stage: 3, seed: "t", wants: all });
-  assert.equal(raw, null);
-  const fixed = talkOf("en", [[{ who: "them", text: "Hello there." }, { who: "me", text: "How about you, are you tired today?", fixed: true }]], { stage: 3, seed: "t", wants: all });
-  assert.ok(fixed?.question.mine);
 });
 
 test("모두에게 보낼 튜터 줄: 흔한 낱말만, 숫자·이름·내 줄은 안 됨", () => {

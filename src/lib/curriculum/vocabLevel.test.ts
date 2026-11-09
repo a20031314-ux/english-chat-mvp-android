@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { emptyCircle, noteAnswer, newPaused, wordTest, type Circle } from "./circle.ts";
-import { BATCH, feelDue, feelLevel, noteLevel, noteLevelBatch, pickLevel, pickLevelWords, presumedWords, PROBE, startLevel, tooEarly, type Level } from "./vocabLevel.ts";
+import { BATCH, noteLevel, noteLevelBatch, pickLevelWords, presumedWords, PROBE, startLevel, tooEarly, type Level } from "./vocabLevel.ts";
 
 const cuts = [700, 1500, 2500, 3500, 5000];
 const ranked = Array.from({ length: 7000 }, (_, i) => `w|r${i}`);
@@ -42,27 +42,6 @@ test("모르는 사람도 아는 사람도 마흔 문제쯤이면 경계가 실�
     }
     assert.ok(level.b > truth / 3 && level.b < truth * 3, `실제 ${truth} → ${Math.round(level.b)}`);
   }
-});
-
-test("체크: 쉬워요는 연달아 누를수록 크게 오르고, 어려워요는 내리며 천천히(틀린 낱말 15개면 쉼)", () => {
-  const level: Level = { b: 1000, n: 30 };
-  const once = feelLevel(level, "easy", 10);
-  const twice = feelLevel(once, "easy", 20);
-  assert.ok(once.b > level.b && twice.b - once.b > once.b - level.b);
-  const hard = feelLevel(level, "hard", 10);
-  assert.ok(hard.b < level.b && hard.slow);
-  assert.equal(feelLevel(level, "ok", 10).b, level.b);
-  assert.equal(feelDue({ b: 0, n: 0, feltAt: 10 }, 15), false);
-  assert.equal(feelDue({ b: 0, n: 0, feltAt: 10 }, 20), true);
-  let circle: Circle = { ...emptyCircle(), lv: hard };
-  for (let i = 0; i < 15; i += 1) circle = noteAnswer(circle, `w|r${i}`, false, i);
-  assert.equal(newPaused(circle, all), true);
-});
-
-test("⚙ 단계 예시를 고르면 가늠을 건너뛰고 그 구간부터", () => {
-  const level = pickLevel(startLevel(1, cuts), 2500);
-  const picks = pickLevelWords(emptyCircle(), level, { n: 5, ranked, cuts, usable: all, known: none });
-  for (const key of picks) assert.ok(rankOf(key) >= 2400, key);
 });
 
 test("아직 이른 낱말: 틀린 낱말 더미·단어 시험에 안 넣고, 경계가 닿으면 다시 탭에", () => {

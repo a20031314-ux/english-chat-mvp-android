@@ -211,18 +211,6 @@ export function findReaction(
   return null;
 }
 
-/** The bank lines a language's reactions are said as. */
-export function reactionIdsFor(language: string): string[] {
-  return (REACTIONS[language as LearningLanguageCode] ?? []).flatMap((reaction) =>
-    "id" in reaction.line ? [reaction.line.id] : [],
-  );
-}
-
-/** Whether a language has any reactions to swap in. */
-export function hasReactions(language: string): boolean {
-  return (REACTIONS[language as LearningLanguageCode]?.length ?? 0) > 0;
-}
-
 /**
  * The answer with its opening reaction spoken from the bank.
  *

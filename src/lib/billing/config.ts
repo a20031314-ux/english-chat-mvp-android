@@ -57,21 +57,6 @@ export const PREMIUM_DAILY_MAP_LIMIT = 10;
  */
 export const FREE_DAILY_MISSION_SET_LIMIT = 20;
 export const PREMIUM_DAILY_MISSION_SET_LIMIT = 100;
-
-/**
- * What Play actually bills for `premium_monthly`.
- *
- * Kept in step with the Play Console by hand, which is exactly how it went
- * wrong once: this said 9,900 while the console charged 4,900, and every margin
- * derived from it was computed against a price nobody paid until the console
- * was corrected to match. Anything shown to a user should come from the store
- * product's own price string rather than from here, so that the next drift is
- * invisible to users even if it happens.
- *
- * See cost.ts for what this has to cover.
- */
-export const PREMIUM_MONTHLY_PRICE_KRW = 9900;
-
 /**
  * Internal meter only — not a Play IAP. Custom (user-imported) first prepares
  * round up to this many seconds per point. Library + replay are 0 points.
@@ -96,31 +81,6 @@ export const PREMIUM_MONTHLY_IMPORT_POINTS = 80;
 
 /** Longest custom/library video that can be prepared. Matches Whisper's 15 min cap. */
 export const MAX_VIDEO_PREP_SECONDS = 15 * 60;
-
-/**
- * What one point buys of the realtime call.
- *
- * A minute. The realtime call itself is gone (its route was deleted on
- * 2026-10-20 — no build since 2.48 opened it); the call tab is call learning
- * (ROLEPLAY_POINT_SECONDS). Kept because the point bundles in points.ts are
- * still sized against it.
- */
-export const POINT_CALL_SECONDS = 60;
-
-/**
- * How much a call takes up front, and so how long it is allowed to run.
- *
- * The server cannot end a call — after the handshake the audio runs between the
- * phone and OpenAI — so it charges for a block at the moment it opens one and
- * hands back what went unused. This number is therefore the most that a single
- * call can cost if the app never reports back: the ceiling on being lied to,
- * not just a convenient unit.
- *
- * Ten minutes is long enough that ordinary calls are one block, and short
- * enough that a lost report is a small loss.
- */
-export const CALL_BLOCK_POINTS = 10;
-
 /**
  * What one point buys of call learning.
  *
@@ -195,8 +155,3 @@ export const CATALOG_TRIAL_STORAGE_KEY = "ec_catalog_trial";
 
 /** @deprecated Kept so older localStorage rows can be migrated. */
 export const VIDEO_PREP_SECONDS_STORAGE_KEY = "ec_video_prep_seconds";
-export const FREE_MONTHLY_VIDEO_PREP_SECONDS = 0;
-export const PREMIUM_MONTHLY_VIDEO_PREP_SECONDS =
-  PREMIUM_MONTHLY_IMPORT_POINTS * VIDEO_IMPORT_POINT_SECONDS;
-export const FREE_MAX_VIDEO_PREP_SECONDS = MAX_VIDEO_PREP_SECONDS;
-export const PREMIUM_MAX_VIDEO_PREP_SECONDS = MAX_VIDEO_PREP_SECONDS;

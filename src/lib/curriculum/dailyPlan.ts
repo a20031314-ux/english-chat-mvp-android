@@ -12,8 +12,8 @@
  *   원래 대본 대신 짧은 퀴즈(문제를 못 만들면 원래 대본). 약한 곳은 분량의 절반까지 — 새 것도 매일 조금은.
  */
 import { framesOfScript, allFramesFor, type Frame } from "./frames.ts";
-import { allScriptsFor, isSituationScript, scriptForExpressions, type StageScript } from "./stageScripts.ts";
-import { canQuiz, QUIZ_MINUTES, type QuizCard } from "./quiz.ts";
+import { allScriptsFor, scriptForExpressions, type StageScript } from "./stageScripts.ts";
+import { type QuizCard } from "./quiz.ts";
 
 export type PlanOrder = "curriculum" | "record";
 export const PACES = [5, 10, 20] as const;
@@ -33,11 +33,6 @@ export type PlanItem = {
   then?: { id: string; stage: number };
 };
 
-/** 오늘 할 것 안의 채우기 퀴즈 수(분량 5·10·20분 → 1·2·4). */
-export function fillCount(pace: number): number {
-  return pace >= 20 ? 4 : pace >= 10 ? 2 : 1;
-}
-
 export type ReviewEntry = { due: number; step: number; at: number };
 export type ReviewMap = Record<string, ReviewEntry>;
 
@@ -48,41 +43,6 @@ export const REVIEW_LATER_MS = 7 * DAY_MS;
 /** 대본 하나에 드는 어림 분(줄마다 듣고 말하기 약 18초, 적어도 2분). 문장구조는 예문 넷 2분. */
 export function minutesOf(item: StageScript | Frame): number {
   return "lines" in item ? Math.max(2, Math.round((item.lines.length * 18) / 60)) : 2;
-}
-
-/** 꺼내 쓰기 칸 id(오늘 목록, 하루 한 칸). */
-export const RECALL_ITEM = "recall";
-
-/** 커리큘럼 순서: 틀이 있는 단계는 문장구조만(2026-10-30), 틀이 없는 단계는 상황 대본(상황 차례) → 표현·문법 대본. */
-export function curriculumItems(language: string, fromStage = 1): PlanItem[] {
-  const scripts = allScriptsFor(language);
-  const frames = allFramesFor(language);
-  const stages = [...new Set([...scripts.map((s) => s.stage), ...frames.map((f) => f.stage)])].sort((a, b) => a - b);
-  const out: PlanItem[] = [];
-  for (const stage of stages) {
-    if (stage < fromStage) continue;
-    const here = scripts.filter((s) => s.stage === stage);
-    const situations = here.filter(isSituationScript).sort((a, b) => (a.situation ?? 0) - (b.situation ?? 0));
-    const extras = here.filter((s) => !isSituationScript(s));
-    const stageFrames = frames.filter((f) => f.stage === stage);
-    if (!stageFrames.length) for (const script of [...situations, ...extras]) out.push({ id: script.id, kind: "script", stage, minutes: minutesOf(script) });
-    for (const frame of stageFrames) out.push({ id: frame.id, kind: "frame", stage, minutes: minutesOf(frame) });
-  }
-  return out;
-}
-
-/** 전체 커리큘럼(1단계부터)을 이 분량으로 마치는 데 드는 어림 일수 — 다시 볼 것 몫 20%를 얹는다. */
-export function daysToFinish(language: string, pace: number, fromStage = 1): number {
-  const total = curriculumItems(language, fromStage).reduce((sum, item) => sum + item.minutes, 0);
-  return total ? Math.ceil((total * 1.2) / Math.max(1, pace)) : 0;
-}
-
-/** 지금 단계부터 아직 안 한 것을 이 분량으로 마치는 어림 일수(n일 완성 — 고른 분량마다). */
-export function daysLeft(language: string, pace: number, passed: ReadonlySet<string>, fromStage = 1): number {
-  const total = curriculumItems(language, fromStage)
-    .filter((item) => !passed.has(item.id))
-    .reduce((sum, item) => sum + item.minutes, 0);
-  return total ? Math.ceil((total * 1.2) / Math.max(1, pace)) : 0;
 }
 
 /** 다시 볼 열쇠가 가리키는 것(표현 글자 또는 문장구조 틀). */
@@ -98,31 +58,6 @@ export function grammarKey(stage: number, index: number): string {
 }
 
 export type Learned = { frames: string[]; grammar: string[]; words: string[] };
-
-/**
- * 오늘 한 것으로 배운 것 정리(2026-10-28 사용자 "학습한 걸 문장구조, 문법, 단어로 정리"): 대본·문장구조 id → 세 갈래 열쇠.
- * 문장구조 = 문장구조 자체 + 대본 줄의 문장구조 태그, 문법 = 대본 grammar 태그, 단어 = 대본 핵심 표현.
- */
-export function learnedFrom(language: string, ids: readonly string[]): Learned {
-  const scripts = allScriptsFor(language);
-  const frames = allFramesFor(language);
-  const out = { frames: new Set<string>(), grammar: new Set<string>(), words: new Set<string>() };
-  for (const id of ids) {
-    const frame = frames.find((f) => f.id === id);
-    if (frame) {
-      out.frames.add(`f|${frame.id}`);
-      for (const index of frame.grammar ?? []) out.grammar.add(grammarKey(frame.stage, index));
-      continue;
-    }
-    const script = scripts.find((s) => s.id === id);
-    if (!script) continue;
-    for (const f of framesOfScript(script)) out.frames.add(`f|${f}`);
-    for (const index of script.grammar ?? []) out.grammar.add(grammarKey(script.stage, index));
-    for (const e of script.expressions) out.words.add(`e|${e}`);
-  }
-  return { frames: [...out.frames].slice(0, 12), grammar: [...out.grammar].slice(0, 12), words: [...out.words].slice(0, 16) };
-}
-
 /** 열쇠가 이 언어 커리큘럼에 있는 것인지(서버가 받은 열쇠를 거른다). */
 export function isCurriculumKey(language: string, key: string): boolean {
   if (key.length > 80) return false;
@@ -172,107 +107,3 @@ export function itemForKey(language: string, key: string): PlanItem | null {
   }
   return null;
 }
-
-export function todayPlan(input: {
-  language: string;
-  stage: number;
-  passed: ReadonlySet<string>;
-  review: ReviewMap;
-  pace: number;
-  order: PlanOrder;
-  /** 내 기록에 맞춰: 서버가 고른 오늘의 대본 id(scriptPick). */
-  recommended?: string | null;
-  /** 튜터가 같은 틀을 두 번 고친 것(/api/notebook redo) — 고친 줄로 퀴즈. */
-  redo?: readonly { frame: string; card: QuizCard }[];
-  /** 채우기(지속 학습, 2026-10-29 사용자 "지속학습에서 계속 던져주는 식"): 계속 공부가 고른 열쇠(아는지 확인·부족한 갈래·다지기) — FILL만큼 퀴즈로. */
-  fill?: readonly string[];
-  /** 대본 은행에서 고른 오늘의 장면(curriculum/scriptBank.ts) — 하루의 끝(설명·문제 다음 대화)에 한 칸, 2026-10-30. */
-  scene?: { id: string; stage: number } | null;
-  /**
-   * 내 기록에 맞춰일 때만: Logbank 육각형이 고른 이번 주 약점 열쇠(curriculum/fillFocus.ts — 부족한 세부 칸, 2026-11-02).
-   * 다시 볼 것 다음, 약한 곳 몫(분량의 절반) 안에서.
-   */
-  focus?: readonly string[];
-  now?: number;
-}): PlanItem[] {
-  const now = input.now ?? Date.now();
-  const out: PlanItem[] = [];
-  let used = 0;
-  const take = (item: PlanItem) => {
-    if (out.some((one) => one.id === item.id)) return false;
-    if (out.length && used + item.minutes > input.pace) return false;
-    out.push(item);
-    used += item.minutes;
-    return true;
-  };
-  // 약한 곳(날짜 된 다시 볼 것 → 틀린 틀 다시 연습)은 분량의 절반까지, 하나는 늘.
-  const weakBudget = Math.max(QUIZ_MINUTES, Math.floor(input.pace / 2));
-  const weak = (key: string, card?: QuizCard) => {
-    const practice = itemForKey(input.language, key);
-    if (!practice) return;
-    const item: PlanItem = canQuiz(input.language, key)
-      ? {
-          id: key,
-          kind: "quiz",
-          stage: practice.stage,
-          minutes: QUIZ_MINUTES,
-          ...(card ? { card } : { review: key }),
-          then: { id: practice.id, stage: practice.stage },
-        }
-      : card
-        ? { ...practice, review: undefined }
-        : practice;
-    if (out.length && used + item.minutes > weakBudget) return;
-    take(item);
-  };
-  const due = Object.entries(input.review)
-    .filter(([, entry]) => entry.due <= now)
-    .sort((a, b) => a[1].due - b[1].due);
-  for (const [key] of due) weak(key);
-  for (const redo of input.redo ?? []) {
-    const key = `f|${redo.frame}`;
-    if (!out.some((item) => item.id === key)) weak(key, redo.card);
-  }
-  if (input.order === "record") for (const key of input.focus ?? []) if (!out.some((item) => item.id === key)) weak(key);
-  // 채우기 자리는 미리 비워 둔다(새 대본이 분량을 다 채우지 않게).
-  const fillKeys = (input.fill ?? []).filter((key) => !out.some((item) => item.id === key) && canQuiz(input.language, key)).slice(0, fillCount(input.pace));
-  // 꺼내 쓰기 자리도 미리(틀이 있는 단계면 하루 한 칸) — 문장구조 다음에 둔다.
-  const recallItem: PlanItem | null = allFramesFor(input.language).some((f) => f.stage === input.stage) ? { id: RECALL_ITEM, kind: "recall", stage: input.stage, minutes: QUIZ_MINUTES } : null;
-  const freshPace = input.pace - fillKeys.length * QUIZ_MINUTES - (recallItem ? recallItem.minutes : 0);
-  // 분량이 꺼내 쓰기·채우기만으로 차도 새 것은 하나는(처음 것은 넘쳐도 하나는).
-  if (used < freshPace || !out.length) {
-    const fresh = curriculumItems(input.language, input.stage).filter((item) => !input.passed.has(item.id));
-    const takeFresh = (item: PlanItem) => {
-      if (out.some((one) => one.id === item.id)) return;
-      if (out.length && used + item.minutes > freshPace) return;
-      out.push(item);
-      used += item.minutes;
-    };
-    if (input.order === "record" && input.recommended) {
-      const first = fresh.find((item) => item.id === input.recommended);
-      if (first) takeFresh(first);
-    }
-    if (!out.length && fresh[0]) takeFresh(fresh[0]);
-    for (const item of fresh) {
-      if (used >= freshPace) break;
-      takeFresh(item);
-    }
-  }
-  if (recallItem) {
-    out.push(recallItem);
-    used += recallItem.minutes;
-  }
-  for (const key of fillKeys) {
-    const practice = itemForKey(input.language, key);
-    out.push({ id: key, kind: "quiz", stage: practice?.stage ?? input.stage, minutes: QUIZ_MINUTES, ...(practice ? { then: { id: practice.id, stage: practice.stage } } : {}) });
-    used += QUIZ_MINUTES;
-  }
-  if (input.scene && !out.some((item) => item.id === input.scene!.id)) {
-    out.push({ id: input.scene.id, kind: "script", stage: input.scene.stage, minutes: SCENE_MINUTES });
-    used += SCENE_MINUTES;
-  }
-  return out;
-}
-
-/** 은행 장면 한 칸(줄 8개, 내 줄 4개). */
-export const SCENE_MINUTES = 3;

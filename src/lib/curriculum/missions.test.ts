@@ -1,19 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  applyCheck,
-  applyUse,
-  dueMissions,
-  itemState,
-  markSeen,
-  topicCounts,
-  missionProgress,
-  nextMission,
-  normalizeCheck,
-  normalizeMissions,
-  statusFromMissions,
-  type TopicMissions,
-} from "./missions.ts";
+import { applyCheck, applyUse, dueMissions, itemState, markSeen, topicCounts, normalizeCheck, normalizeMissions, statusFromMissions, type TopicMissions } from "./missions.ts";
 
 const raw = (n: number, extra: Record<string, unknown> = {}) => ({
   missions: Array.from({ length: n }, (_, i) => ({
@@ -71,23 +58,6 @@ test("a check is read strictly and a correction equal to the answer is dropped",
 });
 
 const H = 60 * 60 * 1000;
-
-test("done with help is learned; done unaided the first time is mastered", () => {
-  let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
-  assert.deepEqual(missionProgress(state), { done: 0, total: 3 });
-  state = applyCheck(state, "m1", "miss", 0, 1, 0);
-  assert.equal(itemState(state, "m1", 0).state, "toLearn");
-  state = applyCheck(state, "m1", "close", 1, 2, 0);
-  state = applyCheck(state, "m2", "pass", 2, 1, 0);
-  state = applyCheck(state, "m3", "pass", 0, 1, 0);
-  assert.equal(itemState(state, "m1", 0).state, "learned");
-  assert.equal(itemState(state, "m2", 0).state, "learned");
-  assert.equal(itemState(state, "m3", 0).state, "mastered");
-  assert.deepEqual(missionProgress(state), { done: 3, total: 3 });
-  assert.equal(statusFromMissions(state), "doing");
-  assert.equal(nextMission(state), null);
-});
-
 test("a learned item is mastered by producing it unaided once some hours have passed", () => {
   let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
   state = applyCheck(state, "m1", "close", 0, 1, 0);

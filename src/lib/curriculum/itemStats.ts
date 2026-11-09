@@ -21,27 +21,6 @@ export const TOO_HARD = 0.15;
 export const TOO_EASY = 0.95;
 /** 한 번에 받는 문제 수(단계 시험 24 + 여유). */
 export const ASKED_MAX = 30;
-
-const RANK: Record<Difficulty, number> = { split: 0, unknown: 1, easy: 2, stuck: 3 };
-
-export function difficultyOf(stats: ItemStats | null | undefined, key: string): Difficulty {
-  const stat = stats?.[key];
-  if (!stat || stat[1] < STAT_MIN) return "unknown";
-  const rate = stat[0] / stat[1];
-  if (rate < TOO_HARD) return "stuck";
-  if (rate > TOO_EASY) return "easy";
-  return "split";
-}
-
-/** 실력을 가르는 문제가 앞으로(같은 무리 안에서는 원래 순서). 통계가 없으면 그대로. */
-export function byDifficulty(keys: readonly string[], stats: ItemStats | null | undefined): string[] {
-  if (!stats || !Object.keys(stats).length) return [...keys];
-  return keys
-    .map((key, index) => ({ key, index, rank: RANK[difficultyOf(stats, key)] }))
-    .sort((a, b) => a.rank - b.rank || a.index - b.index)
-    .map((one) => one.key);
-}
-
 /** 시험 답에서 통계로 보낼 것: 말하기·건너뛴 것은 빼고 첫 답만. */
 export function askedOf(items: readonly { key: string; question: Pick<QuizQuestion, "kind"> }[], answers: readonly (boolean | null)[]): AskedItem[] {
   const out: AskedItem[] = [];

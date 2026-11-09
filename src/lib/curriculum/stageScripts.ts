@@ -69,21 +69,9 @@ export type StageScript = {
 
 /** 말하기 넷(🎤) + 고르기·맞추기(2026-10-29, 마이크 없이 — curriculum/scriptChoice.ts). */
 export type ScriptMode = "type" | "shadow" | "hint" | "hide" | "own" | "choose" | "order";
-
-/** 마이크 없이 푸는 방식. */
-export function isTapMode(mode: ScriptMode): boolean {
-  return mode === "choose" || mode === "order";
-}
-
 const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH, fr: FR, it: IT, pt: PT, ru: RU, ar: AR, hi: HI };
 /** 대본 은행(학습 언어별 1~3단계, stageScripts/bank/) — scriptsFor(단계 목록·조건)에는 넣지 않는다. */
 const BANK: Partial<Record<string, StageScript[]>> = BANKS;
-
-/** 은행이 있는 학습 언어. */
-export function bankLanguages(): string[] {
-  return Object.keys(BANK);
-}
-
 /** 이 학습 언어의 은행 대본 중 이 단계 이하(2026-10-30 사용자 A "3단계면 1~3단계 범위"). */
 export function bankScriptsUpTo(language: string, stage: number): StageScript[] {
   return (BANK[language] ?? []).filter((script) => script.stage <= Math.max(1, stage));
@@ -133,73 +121,8 @@ export function registerScripts(language: string, scripts: unknown): boolean {
   return true;
 }
 
-/**
- * My 대본을 하는 방식 — 채팅처럼 내 줄을 직접 쓰기 하나(2026-11-01 사용자 "따라 말하기도 빼고 채팅으로 학습", 마이크·판단 모델 없음 — 원가 0).
- * 그날 앞서(같은 날 오전) 따라 말하기 하나였고, 예전 방식(따라 말하기·첫 글자만·가리기·내 말로·고르기·맞추기)은
- * 이 폰에 남은 지난 결과를 읽을 때만 쓰인다. 떠올려 말하기는 꺼내 쓰기·문장구조 수업 대화에, 말하는 대본은 통화 탭(다음 설계)에.
- */
-export function modesFor(stage: number): ScriptMode[] {
-  void stage;
-  return ["type"];
-}
-
-/**
- * 이 방식으로 맞힌 줄이 통과로 셈해지는지 — 따라 말하기는 2026-11-01부터 My 대본의 유일한 방식이라 통과로 센다(예전엔 연습만).
- * 고르기·맞추기는 사용자가 통과 기준을 "모든 방식"으로 둘 때만(rule any, 2026-10-29 사용자 "통과 기준도 정할 수 있도록").
- */
-export function countsForPass(stage: number, mode: ScriptMode, rule: "speak" | "any" = "speak"): boolean {
-  if (isTapMode(mode)) return rule === "any";
-  // 내 말로(뜻만 보고 말하기)는 어느 단계든 통과로 — 1~2단계 상황 대본에는 이 방식이 없고, 은행 대본은 이 방식뿐(2026-10-30).
-  if (mode === "type" || mode === "own" || mode === "shadow") return true;
-  return stage <= 2 ? mode === "hint" || mode === "hide" : mode === "hide";
-}
-
 /** 한 번 해 본 결과: 내 줄마다 맞았는지·어떤 방식이었는지·원문을 열어 봤는지. */
 export type LineRun = { clean: boolean; mode: ScriptMode; revealed: boolean };
-
-/** 통과 = 내 줄이 모두, 통과로 세는 방식으로, 원문을 열지 않고 맞았다. */
-export function runPasses(script: StageScript, runs: Record<number, LineRun>, rule: "speak" | "any" = "speak"): boolean {
-  return script.lines.every((line, i) => {
-    if (line.who !== "me") return true;
-    const run = runs[i];
-    return Boolean(run && run.clean && !run.revealed && countsForPass(script.stage, run.mode, rule));
-  });
-}
-
-/** 통과로 셈해지지 않은 내 줄 번호(틀림·원문 열어 봄·통과로 안 세는 방식) — 끝 화면 "통과까지 n줄"·"그 줄만 다시". */
-/**
- * 대본 진행(2026-10-29 사용자 "학습 진행률을 실시간으로, 끝내면 그 대본은 학습 완료라고 확실히"):
- * total = 내 줄 수, said = 말해 본 줄(방식 상관없이), passed = 통과로 셈해지는 줄(통과 기준 rule까지). 학습 완료 = said === total.
- */
-export function scriptProgress(script: StageScript, runs: Record<number, LineRun | undefined>, rule: "speak" | "any" = "speak"): { total: number; said: number; passed: number } {
-  let total = 0;
-  let said = 0;
-  let passed = 0;
-  script.lines.forEach((line, i) => {
-    if (line.who !== "me") return;
-    total += 1;
-    const run = runs[i];
-    if (!run) return;
-    said += 1;
-    if (run.clean && !run.revealed && countsForPass(script.stage, run.mode, rule)) passed += 1;
-  });
-  return { total, said, passed };
-}
-
-export function linesToRedo(script: StageScript, runs: Record<number, LineRun>, rule: "speak" | "any" = "speak"): number[] {
-  return script.lines.flatMap((line, i) => {
-    if (line.who !== "me") return [];
-    const run = runs[i];
-    return run && run.clean && !run.revealed && countsForPass(script.stage, run.mode, rule) ? [] : [i];
-  });
-}
-
-/** 상대 줄의 이번 판: 원래 줄 또는 alt 중 하나(pick = 0..n). */
-export function variantOf(line: StageScriptLine, pick: number): ScriptVariant {
-  const all: ScriptVariant[] = [{ text: line.text, gloss: line.gloss }, ...(line.alt ?? [])];
-  return all[Math.abs(pick) % all.length]!;
-}
-
 /** 대본에 넣어도 되는 닉네임인지(글자가 있고 짧은 것). 아니면 대본의 이름 그대로. */
 export function usableName(nickname: string | null | undefined): string | null {
   const name = (nickname ?? "").replace(/\s+/g, " ").trim();
@@ -273,23 +196,11 @@ export function personalize(script: StageScript, language: string, nickname: str
   };
 }
 
-/** 이름이 든 줄: 이름 낱말은 받아쓰기가 어떻게 적든(ミンジ·민지·Minji) 셈에서 뺀다. 나머지 낱말이 다 맞으면 맞음. */
-export function cleanBesidesName(outcomes: readonly { kind: string; word: string }[], name: string | null): boolean {
-  const parts = (name ?? "").split(/[\s\-·・]+/).filter(Boolean);
-  return outcomes.every((outcome) => outcome.kind === "kept" || (parts.length > 0 && parts.some((part) => outcome.word.includes(part))));
-}
-
 /**
  * 대본 줄의 목소리(roleplay/voices.ts): 앱이 쓴 줄이라 공유 캐시로 한 번 만들어 모두가 쓴다(2026-10-28 저가 구독 원가).
  * 상대와 나는 다른 목소리. 사용자 닉네임이 든 줄은 그 사람 것이라 공유하지 않는다(undefined = 개인 캐시).
  */
 export const SCRIPT_VOICES = { them: "coral", me: "ash" } as const;
-
-export function scriptVoice(who: StageScriptLine["who"], text: string, learnerName: string | null): string | undefined {
-  if (learnerName && text.includes(learnerName)) return undefined;
-  return SCRIPT_VOICES[who];
-}
-
 /** 앱 언어로 된 뜻. 한국어 앱은 ko(없으면 en), 나머지는 지금 en. */
 export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
   if (uiLanguage === "ko") return gloss.ko ?? gloss.en;
@@ -341,33 +252,9 @@ export function scriptTally(language: string, stage: number, passed: ReadonlySet
   };
 }
 
-/** 통과로 장부에 올릴 결과: 첫 글자 힌트를 본 줄이 있으면 도움 받음, 아니면 혼자. */
-export function passOutcome(runs: Record<number, LineRun>): "unaided" | "helped" {
-  return Object.values(runs).some((run) => run.mode === "hint") ? "helped" : "unaided";
-}
-
 /** 아직 배우지 않은 표현이 든 첫 대본(표현 갈래 연습 → 그 대본을 연다). */
 export function scriptForExpressions(language: string, stage: number, open: readonly string[]): StageScript | null {
   const wanted = new Set(open);
   const list = scriptsFor(language, stage);
   return list.find((script) => !isSituationScript(script) && script.expressions.some((e) => wanted.has(e))) ?? list.find((script) => script.expressions.some((e) => wanted.has(e))) ?? null;
-}
-
-/**
- * "첫 글자만": 낱말마다 첫 글자만 두고 나머지 글자는 _로(띄어쓰기·문장부호는 그대로).
- * 낱말 나누기는 Intl.Segmenter — 띄어쓰기 없는 말(ja·zh·th)도 낱말 덩어리마다 첫 글자가 남는다.
- */
-export function hintOf(text: string, language: string): string {
-  // 글자 단위는 소리 덩어리(grapheme)로 — 태국어·힌디어 모음 부호가 따로 남아 "ส_ั__" 같이 흩어지지 않게(2026-10-28).
-  const clusters = (word: string): string[] =>
-    typeof Intl !== "undefined" && "Segmenter" in Intl
-      ? [...new Intl.Segmenter(language, { granularity: "grapheme" }).segment(word)].map((part) => part.segment)
-      : [...word];
-  const mask = (word: string) => {
-    const chars = clusters(word);
-    return chars[0] + chars.slice(1).map((ch) => (/[\p{L}\p{N}]/u.test(ch) ? "_" : ch)).join("");
-  };
-  if (typeof Intl === "undefined" || !("Segmenter" in Intl)) return text.replace(/[\p{L}\p{N}]+/gu, mask);
-  const segmenter = new Intl.Segmenter(language, { granularity: "word" });
-  return [...segmenter.segment(text)].map((part) => (part.isWordLike ? mask(part.segment) : part.segment)).join("");
 }

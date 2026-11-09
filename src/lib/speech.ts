@@ -7,129 +7,12 @@ export function speechLangPrefix(lang: string): string {
   return normalizeSpeechLang(lang).slice(0, 2);
 }
 
-/**
- * Regional tags to try so we lock onto the learning language
- * instead of the document's English default.
- */
-export function speechLangCandidates(lang: string): string[] {
-  const prefix = speechLangPrefix(lang);
-  const extras: Record<string, string[]> = {
-    en: ["en-US", "en-GB", "en-AU", "en"],
-    es: ["es-ES", "es-MX", "es-US", "es-AR", "es"],
-    pt: ["pt-BR", "pt-PT", "pt"],
-    fr: ["fr-FR", "fr-CA", "fr"],
-    it: ["it-IT", "it"],
-    de: ["de-DE", "de"],
-    ja: ["ja-JP", "ja"],
-    ko: ["ko-KR", "ko"],
-    zh: ["zh-CN", "zh-TW", "zh-HK", "cmn-Hans-CN", "zh"],
-    ru: ["ru-RU", "ru"],
-    ar: ["ar-SA", "ar-EG", "ar"],
-    id: ["id-ID", "id"],
-    vi: ["vi-VN", "vi"],
-    th: ["th-TH", "th"],
-    hi: ["hi-IN", "hi"],
-  };
-  return [...new Set([lang, ...(extras[prefix] ?? [prefix])])];
-}
-
 export type SpeechVoiceLike = {
   lang?: string;
   name?: string;
   localService?: boolean;
   default?: boolean;
 };
-
-function voiceLang(voice: SpeechVoiceLike): string {
-  return normalizeSpeechLang(voice.lang || "");
-}
-
-const VOICE_NAME_HINTS: Record<string, string[]> = {
-  pt: ["portuguese", "português", "portugues", "brasil", "brazil", "portugal"],
-  es: ["spanish", "español", "espanol", "mexico", "argentin"],
-  fr: ["french", "français", "francais"],
-  it: ["italian", "italiano"],
-  de: ["german", "deutsch"],
-  ja: ["japanese", "日本語"],
-  ko: ["korean", "한국어", "hangul"],
-  zh: ["chinese", "中文", "pinyin", "mandarin", "cantonese"],
-  ru: ["russian", "русский"],
-  ar: ["arabic", "عربي", "العربية"],
-  id: ["indonesian", "indonesia"],
-  vi: ["vietnamese", "tiếng việt", "tieng viet"],
-  th: ["thai", "ไทย"],
-  hi: ["hindi", "हिन्दी", "हिंदी"],
-  en: ["english"],
-};
-
-function looksEnglishVoice(voice: SpeechVoiceLike): boolean {
-  const tag = voiceLang(voice);
-  const name = (voice.name || "").toLowerCase();
-  if (tag === "en" || tag.startsWith("en-")) return true;
-  return /\benglish\b|\ben-us\b|\ben-gb\b/.test(name);
-}
-
-function voiceNameMatches(voice: SpeechVoiceLike, prefix: string): boolean {
-  const name = (voice.name || "").toLowerCase();
-  return (VOICE_NAME_HINTS[prefix] ?? []).some((hint) => name.includes(hint));
-}
-
-function voiceMatchesPrefix(voice: SpeechVoiceLike, prefix: string): boolean {
-  const tag = voiceLang(voice);
-  const langHit = tag === prefix || tag.startsWith(`${prefix}-`);
-  const nameHit = voiceNameMatches(voice, prefix);
-  // English-tagged voices must not be used for other languages
-  // unless the name clearly says Portuguese/Spanish/etc.
-  if (prefix !== "en" && looksEnglishVoice(voice) && !nameHit) {
-    return false;
-  }
-  return langHit || nameHit;
-}
-
-/**
- * Pick a voice that actually speaks `lang`. Never returns an English voice
- * when the requested language is not English.
- */
-export function pickSpeechVoice<T extends SpeechVoiceLike>(
-  voices: readonly T[],
-  lang: string,
-): T | null {
-  const prefix = speechLangPrefix(lang);
-  if (!prefix) return null;
-  const candidates = voices.filter((voice) =>
-    voiceMatchesPrefix(voice, prefix),
-  );
-  if (candidates.length === 0) return null;
-
-  for (const tag of speechLangCandidates(lang).map(normalizeSpeechLang)) {
-    const exact = candidates.find((voice) => voiceLang(voice) === tag);
-    if (exact) return exact;
-    const starts = candidates.find((voice) =>
-      voiceLang(voice).startsWith(`${tag}-`),
-    );
-    if (starts) return starts;
-  }
-
-  return (
-    candidates.find((voice) => voice.localService) ??
-    candidates.find((voice) => voice.default) ??
-    candidates[0]
-  );
-}
-
-/** True when a local voice is safe to use for this learning language. */
-export function canUseLocalSpeechVoice(
-  voice: SpeechVoiceLike | null | undefined,
-  lang: string,
-): boolean {
-  if (!voice) return false;
-  const prefix = speechLangPrefix(lang);
-  if (prefix === "en") return true;
-  if (looksEnglishVoice(voice) && !voiceNameMatches(voice, prefix)) {
-    return false;
-  }
-  return voiceMatchesPrefix(voice, prefix);
-}
 
 const SPEECH_LANGUAGE_NAMES: Record<string, string> = {
   en: "English",
@@ -350,20 +233,4 @@ export function spokenFormForTts(text: string, lang: string): string {
   }
 
   return core || trimmed;
-}
-
-export function waitForSpeechVoices(): Promise<SpeechSynthesisVoice[]> {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-    return Promise.resolve([]);
-  }
-  const current = window.speechSynthesis.getVoices();
-  if (current.length > 0) return Promise.resolve(current);
-  return new Promise((resolve) => {
-    const finish = () => {
-      window.speechSynthesis.removeEventListener("voiceschanged", finish);
-      resolve(window.speechSynthesis.getVoices());
-    };
-    window.speechSynthesis.addEventListener("voiceschanged", finish);
-    window.setTimeout(finish, 700);
-  });
 }

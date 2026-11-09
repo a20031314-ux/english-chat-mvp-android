@@ -92,22 +92,3 @@ export function isUsableSpeechSegment(segment: {
   }
   return true;
 }
-
-export function filterSpeechSegments<
-  T extends {
-    text: string;
-    confidence?: number;
-    uncertain?: boolean;
-    noSpeechProb?: number;
-  },
->(segments: T[]): T[] {
-  return segments.filter(
-    (segment) =>
-      !looksLikeMusicBleed({
-        text: segment.text,
-        noSpeechProb: segment.noSpeechProb,
-        confidence: segment.confidence,
-        uncertain: segment.uncertain,
-      }),
-  );
-}

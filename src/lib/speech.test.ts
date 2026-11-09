@@ -1,44 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  canUseLocalSpeechVoice,
-  pickSpeechVoice,
-  isKanaMora,
-  spokenFormForTts,
-  speechLangCandidates,
-  ttsSpeechInstructions,
-} from "./speech.ts";
-
-test("pickSpeechVoice prefers a Spanish voice over English", () => {
-  const voices = [
-    { lang: "en-US", name: "Google US English" },
-    { lang: "es-MX", name: "Google español de México" },
-    { lang: "es-ES", name: "Google español" },
-  ];
-  const picked = pickSpeechVoice(voices, "es-ES");
-  assert.equal(picked?.lang, "es-ES");
-});
-
-test("pickSpeechVoice accepts underscore tags and pt-BR for Portuguese", () => {
-  const voices = [
-    { lang: "en-US", name: "English" },
-    { lang: "pt_BR", name: "Portuguese (Brazil)" },
-  ];
-  const picked = pickSpeechVoice(voices, "pt-PT");
-  assert.equal(picked?.lang, "pt_BR");
-});
-
-test("pickSpeechVoice does not fall back to English for Spanish", () => {
-  const voices = [{ lang: "en-US", name: "English" }];
-  assert.equal(pickSpeechVoice(voices, "es-ES"), null);
-});
-
-test("speechLangCandidates for Portuguese include Brazil", () => {
-  const tags = speechLangCandidates("pt-PT").map((tag) => tag.toLowerCase());
-  assert.ok(tags.includes("pt-br"));
-  assert.ok(tags.includes("pt-pt"));
-});
-
+import { isKanaMora, spokenFormForTts, ttsSpeechInstructions } from "./speech.ts";
 test("spokenFormForTts uses Spanish letter names", () => {
   assert.equal(spokenFormForTts("j", "es-ES"), "jota");
   assert.equal(spokenFormForTts("ñ", "es-ES"), "eñe");
@@ -55,24 +17,6 @@ test("spokenFormForTts reads Portuguese ne? as né, not letter names", () => {
   assert.equal(spokenFormForTts("ne?", "pt-PT"), "né");
   assert.equal(spokenFormForTts("né?", "pt-BR"), "né");
   assert.equal(spokenFormForTts("ne", "pt-PT"), "né");
-});
-
-test("pickSpeechVoice matches Portuguese by voice name", () => {
-  const voices = [
-    { lang: "en-US", name: "Microsoft David" },
-    { lang: "", name: "Microsoft Maria - Portuguese (Brazil)" },
-  ];
-  const picked = pickSpeechVoice(voices, "pt-PT");
-  assert.equal(picked?.name, "Microsoft Maria - Portuguese (Brazil)");
-});
-
-test("English-only voices are not used for Portuguese", () => {
-  const voices = [
-    { lang: "en-US", name: "Google US English" },
-    { lang: "en-GB", name: "Microsoft Hazel" },
-  ];
-  assert.equal(pickSpeechVoice(voices, "pt-PT"), null);
-  assert.equal(canUseLocalSpeechVoice(voices[0], "pt-PT"), false);
 });
 
 test("한 박자 가나인지", () => {

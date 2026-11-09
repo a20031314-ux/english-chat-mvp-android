@@ -1,17 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  FROM_MEMORY_MS,
-  applyHeard,
-  applyLearnerLine,
-  applyMeet,
-  applyMissionResult,
-  emptyLedger,
-  isLedgerText,
-  ledgerKey,
-  ledgerMatches,
-  summarize,
-} from "./ledger.ts";
+import { FROM_MEMORY_MS, applyHeard, applyLearnerLine, applyMeet, applyMissionResult, emptyLedger, isLedgerText, ledgerKey } from "./ledger.ts";
 
 const T0 = Date.UTC(2026, 9, 12, 9, 0, 0);
 const H = 60 * 60 * 1000;
@@ -62,36 +51,4 @@ test("heard twice without a look-up is marked, not mastered; a task is met; miss
   assert.equal(l.items[ledgerKey("nice to meet you")]!.firstMet.tab, "map");
   l = applyMissionResult(l, "nice to meet you", "unaided", "review", map, T0 + FROM_MEMORY_MS);
   assert.equal(l.items[ledgerKey("nice to meet you")]!.state, "mastered");
-});
-
-test("summary: counts, this week, retention, where learned things were first met, a row per week", () => {
-  let l = emptyLedger("es");
-  l = applyMeet(l, "me levanto", "lookup", { tab: "video" }, T0);
-  l = applyMeet(l, "tengo que", "save", { tab: "vocab" }, T0);
-  l = applyMeet(l, "qué tal", "lookup", { tab: "chat" }, T0);
-  l = applyLearnerLine(l, "Me levanto a las siete", "Me levanto a las siete", "chat", T0 + FROM_MEMORY_MS);
-  const s = summarize(l, T0 + FROM_MEMORY_MS + 1);
-  assert.deepEqual(s.counts, { met: 1, learned: 1, mastered: 1 });
-  assert.equal(s.masteredThisWeek, 1);
-  assert.equal(s.retention, 1);
-  assert.equal(s.bySource.video, 1);
-  assert.equal(s.bySource.vocab, 1);
-  assert.equal(s.bySource.chat, 0, "met only is not counted as learned from there");
-  assert.equal(s.weeks.length, 1);
-  assert.equal(s.weeks[0]!.mastered, 1);
-  const later = summarize(l, T0 + 40 * 24 * H);
-  assert.equal(later.retention, 0, "not used in the last 30 days");
-  assert.equal(ledgerMatches(l, "¿Qué tal estás?").length, 1);
-});
-
-test("what a tutor brings back: learned, not just looked up, not mastered", async () => {
-  const { phrasesToRecycle, recyclePrompt } = await import("./ledger.ts");
-  let l = emptyLedger("en");
-  l = applyMeet(l, "wait it out", "save", { tab: "vocab" }, T0);
-  l = applyMeet(l, "end up", "lookup", { tab: "video" }, T0);
-  l = applyMeet(l, "take a seat", "save", { tab: "vocab" }, T0 + 3 * H);
-  assert.deepEqual(phrasesToRecycle(l, 3, T0 + 3 * H + 1), ["wait it out"], "met only is not brought back; saved a minute ago is too fresh");
-  assert.equal(recyclePrompt([]), "");
-  assert.match(recyclePrompt(["wait it out"]), /"wait it out"/);
-  assert.match(recyclePrompt(["wait it out"]), /never forced/);
 });

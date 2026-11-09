@@ -6,16 +6,6 @@ import { localDay } from "./resume.ts";
 
 const KEY = "dailyPlan.practiced.v1";
 export const PRACTICED_EVENT = "lb-practiced";
-
-export function readPracticed(language: string, now = new Date()): Set<string> {
-  try {
-    const raw = JSON.parse(localStorage.getItem(KEY) ?? "null") as { day?: string; ids?: Record<string, string[]> } | null;
-    return new Set(raw?.day === localDay(now) ? (raw.ids?.[language] ?? []) : []);
-  } catch {
-    return new Set();
-  }
-}
-
 export function markPracticed(language: string, id: string, now = new Date()): void {
   try {
     const day = localDay(now);

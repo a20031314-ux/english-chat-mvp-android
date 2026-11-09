@@ -11,13 +11,10 @@
  * - 결과 → 학습: 틀린 열쇠는 다시 볼 것(헷갈려요처럼 2일 뒤), 약하게 나온 갈래는 계속 공부가 먼저(checkupWeakest).
  * 순수 모듈: 화면(studyMap/CheckupPlayer)·서버(/api/curriculum/scripts checkup)·테스트가 같이 쓴다.
  */
-import { byDifficulty, type AskedItem, type ItemStats } from "./itemStats.ts";
-import { isWordish, PART_IDS, type PartId } from "../notes/stageParts.ts";
-import { DAY_MS, isCurriculumKey, reviewKeysOf, type ReviewMap } from "./dailyPlan.ts";
-import type { QuizLog } from "./nextStudy.ts";
-import { buildQuiz, type QuizQuestion } from "./quiz.ts";
-import { allScriptsFor } from "./stageScripts.ts";
-
+import { type AskedItem } from "./itemStats.ts";
+import { PART_IDS, type PartId } from "../notes/stageParts.ts";
+import { DAY_MS, isCurriculumKey } from "./dailyPlan.ts";
+import { type QuizQuestion } from "./quiz.ts";
 export type CheckOrigin = "recent" | "old" | "ahead";
 export const CHECK_ORIGINS: readonly CheckOrigin[] = ["recent", "old", "ahead"];
 
@@ -53,168 +50,13 @@ export type StageKey = "1" | "2" | "3" | "4" | "5";
 export const STAGE_KEYS: readonly StageKey[] = ["1", "2", "3", "4", "5"];
 /** 한 시험에서 한 칸(갈래·단계)에 낼 수 있는 최대 문제 수(서버가 숫자를 거를 때). */
 const TALLY_MAX = 30;
-
-export const CHECKUP_SIZE = 12;
 export const CHECKUP_EVERY_MS = 7 * DAY_MS;
-/** 말하기 문제 수(대본 판단을 부르는 것은 이것뿐 — 원가). */
-export const CHECKUP_SAY = 3;
-/** 이 안에 배우거나 풀었으면 "최근". */
-export const RECENT_MS = 14 * DAY_MS;
 /** 서버가 남기는 결과 수. */
 export const CHECKUP_KEEP = 30;
-
-const QUOTA: Record<CheckOrigin, number> = { recent: 6, old: 4, ahead: 2 };
-
-function hash(text: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < text.length; i += 1) {
-    h ^= text.charCodeAt(i);
-    h = Math.imul(h, 16777619);
-  }
-  return h >>> 0;
-}
-
-function shuffled<T>(list: readonly T[], seed: string): T[] {
-  let a = hash(seed) || 1;
-  const random = () => {
-    a = (a + 0x6d2b79f5) | 0;
-    let t = Math.imul(a ^ (a >>> 15), 1 | a);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-  };
-  const out = [...list];
-  for (let i = out.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(random() * (i + 1));
-    [out[i], out[j]] = [out[j]!, out[i]!];
-  }
-  return out;
-}
-
 /** 확인할 때가 됐는지(처음이거나 마지막 확인에서 7일). */
 export function checkupDue(results: readonly CheckResult[], now = Date.now()): boolean {
   const last = results.reduce((max, result) => Math.max(max, result.at), 0);
   return now - last >= CHECKUP_EVERY_MS;
-}
-
-/** 이번 주 씨앗(같은 주에 다시 열어도 같은 문제). 월요일 시작, UTC 날 기준. */
-export function weekSeed(language: string, now = Date.now()): string {
-  const day = Math.floor(now / DAY_MS);
-  // 1970-01-01은 목요일 — +3이면 월요일 시작 주.
-  return `${language}|w${Math.floor((day + 3) / 7)}`;
-}
-
-/** 문제 하나가 어느 갈래를 보나: 말하기 = 발음, 문장구조·문법 = 문법, 표현은 낱말 하나면 어휘. */
-export function partOf(language: string, key: string, kind: QuizQuestion["kind"]): PartId {
-  if (kind === "say") return "pronunciation";
-  if (key.startsWith("f|") || key.startsWith("g|")) return "grammar";
-  return isWordish(key.slice(2), language) ? "vocab" : "expression";
-}
-
-/** 칸마다 열쇠 후보(겹치면 앞 칸). */
-export function checkupPools(input: {
-  language: string;
-  stage: number;
-  passed: ReadonlySet<string>;
-  review: ReviewMap;
-  log: QuizLog;
-  now: number;
-  /** 확인 중 열쇠(curriculum/known.ts) — 최근 칸에 넣는다. */
-  confirm?: readonly string[];
-}): Record<CheckOrigin, string[]> {
-  const { language, stage, passed, review, log, now } = input;
-  const scripts = allScriptsFor(language);
-  const recent = new Set<string>();
-  const old = new Set<string>();
-  const ahead = new Set<string>();
-  for (const [key, entry] of Object.entries(review)) (now - entry.at < RECENT_MS ? recent : old).add(key);
-  for (const [key, entry] of Object.entries(log)) (now - entry.at < RECENT_MS ? recent : old).add(key);
-  for (const key of input.confirm ?? []) recent.add(key);
-  for (const script of scripts) {
-    if (!passed.has(script.id)) continue;
-    const into = script.stage >= stage ? recent : old;
-    for (const key of reviewKeysOf(language, script.id)) into.add(key);
-  }
-  // 다음 단계(마지막 단계면 지금 단계의 아직 안 한 것) — 처음 보는 데서 되는지.
-  const next = stage < 5 ? scripts.filter((script) => script.stage === stage + 1) : scripts.filter((script) => script.stage === stage && !passed.has(script.id));
-  for (const script of next) for (const key of reviewKeysOf(language, script.id)) ahead.add(key);
-  for (const key of recent) old.delete(key);
-  for (const key of [...recent, ...old]) ahead.delete(key);
-  const ok = (key: string) => isCurriculumKey(language, key);
-  return { recent: [...recent].filter(ok), old: [...old].filter(ok), ahead: [...ahead].filter(ok) };
-}
-
-/**
- * 이번 주 확인 문제. 칸마다 정한 수를 뽑고(모자라면 다른 칸에서), 열쇠마다 퀴즈에서 한 문제 —
- * 말하기 CHECKUP_SAY까지(발음), 나머지는 고르기를 먼저, 없으면 순서. 같은 갈래가 몰리지 않게 문제를 섞는다.
- */
-export function buildCheckup(input: {
-  language: string;
-  stage: number;
-  passed: ReadonlySet<string>;
-  review: ReviewMap;
-  log: QuizLog;
-  now?: number;
-  seed?: string;
-  /** 모든 사용자의 문제 통계(curriculum/itemStats.ts) — 가르는 문제 먼저, 막힌 문제 뒤로. */
-  stats?: ItemStats | null;
-  /** 확인 중 열쇠(curriculum/known.ts) — 최근 칸 맨 앞에(시험에서 맞힌 것을 다른 날 한 번 더). */
-  confirm?: readonly string[];
-}): CheckItem[] {
-  const now = input.now ?? Date.now();
-  const seed = input.seed ?? weekSeed(input.language, now);
-  const pools = checkupPools({ ...input, now });
-  const items: CheckItem[] = [];
-  const used = new Set<string>();
-  let says = 0;
-  let alternate = 0;
-  // 열쇠 하나 → 문제 하나(못 만들면 건너뜀). 말하기는 4번째마다, 다음 단계 것엔 내지 않는다(처음 보는 문장을 뜻만 보고 말하기는 너무 어렵다).
-  const add = (key: string, origin: CheckOrigin): boolean => {
-    if (used.has(key)) return false;
-    used.add(key);
-    const quiz = buildQuiz(input.language, key, { seed });
-    if (!quiz) return false;
-    const pick = (kind: QuizQuestion["kind"]) => quiz.questions.find((q) => q.kind === kind);
-    const sayOk = says < CHECKUP_SAY && origin !== "ahead";
-    const wantSay = sayOk && items.length % 4 === 3;
-    const question =
-      (wantSay ? pick("say") : undefined) ??
-      (alternate % 2 === 0 ? (pick("choose") ?? pick("order")) : (pick("order") ?? pick("choose"))) ??
-      (sayOk ? pick("say") : undefined);
-    if (!question) return false;
-    if (question.kind === "say") says += 1;
-    else alternate += 1;
-    items.push({ key, part: partOf(input.language, key, question.kind), origin, question });
-    return true;
-  };
-  const lists = Object.fromEntries(CHECK_ORIGINS.map((origin) => [origin, byDifficulty(shuffled(pools[origin], `${seed}|${origin}`), input.stats)])) as Record<CheckOrigin, string[]>;
-  if (input.confirm?.length) {
-    const confirm = new Set(input.confirm);
-    lists.recent = [...lists.recent.filter((key) => confirm.has(key)), ...lists.recent.filter((key) => !confirm.has(key))];
-  }
-  for (const origin of CHECK_ORIGINS) {
-    let count = 0;
-    for (const key of lists[origin]) {
-      if (count >= QUOTA[origin] || items.length >= CHECKUP_SIZE) break;
-      if (add(key, origin)) count += 1;
-    }
-  }
-  // 모자라면 최근 → 오래전 → 다음 단계 순으로 채운다.
-  for (const origin of CHECK_ORIGINS) {
-    for (const key of lists[origin]) {
-      if (items.length >= CHECKUP_SIZE) break;
-      add(key, origin);
-    }
-  }
-  // 문제 순서: 칸이 몰리지 않게 섞되 말하기 자리는 그대로(4번째마다).
-  const says_ = items.filter((item) => item.question.kind === "say");
-  const rest = shuffled(items.filter((item) => item.question.kind !== "say"), `${seed}|order`);
-  const out: CheckItem[] = [];
-  while (rest.length || says_.length) {
-    if (out.length % 4 === 3 && says_.length) out.push(says_.shift()!);
-    else if (rest.length) out.push(rest.shift()!);
-    else out.push(says_.shift()!);
-  }
-  return out;
 }
 
 /** 답(첫 답만, 말하기를 못 한 것은 null)으로 결과를 만든다. */
@@ -291,9 +133,4 @@ export function checkupWeakest(results: readonly CheckResult[], now = Date.now()
     if (!worst || rate < worst.rate) worst = { part, rate };
   }
   return worst && worst.rate < 0.8 ? worst.part : null;
-}
-
-/** 확인을 낼 만큼 배운 게 있는지(배운 것 — 최근·오래전 — 이 절반 이상). 처음 쓰는 사람에게 다음 단계 문제만 내지 않게. */
-export function checkupReady(items: readonly CheckItem[]): boolean {
-  return items.filter((item) => item.origin !== "ahead").length >= CHECKUP_SIZE / 2;
 }

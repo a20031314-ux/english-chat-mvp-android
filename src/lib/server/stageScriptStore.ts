@@ -125,11 +125,6 @@ export async function recordAsked(userId: string, language: string, keys: readon
   return trimmedReview;
 }
 
-export async function readAsked(userId: string, language: string): Promise<Record<string, { n: number; at: number }>> {
-  const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
-  return record?.asked ?? {};
-}
-
 export async function readCheckups(userId: string, language: string): Promise<CheckResult[]> {
   const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
   return record?.checkups ?? [];

@@ -117,10 +117,6 @@ export function askPhrase(language: string): string {
   return ASK_PHRASES[language as LearningLanguageCode] ?? ASK_PHRASES.en;
 }
 
-export function allAskPhrases(): string[] {
-  return Object.values(ASK_PHRASES);
-}
-
 /** 글자(자소 묶음) 단위로 자른다 — 코드 단위로 자르면 결합 문자가 떨어져 나간다. */
 export function clipQuote(text: string, max = QUOTE_MAX_CHARS): string {
   const clean = text.replace(/\s+/g, " ").trim();

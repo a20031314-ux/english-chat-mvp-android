@@ -34,9 +34,6 @@ export type QuizLog = Record<string, { n: number; right: number; at: number; las
  * 연속 맞힘 1 → 1일, 2 → 3일, 3 → 7일, 4 → 14일, 5 → 30일, 6+ → 60일. 그 전에는 내지 않는다.
  */
 export const REST_DAYS = [0, 1, 3, 7, 14, 30, 60] as const;
-/** 첫 맞힘 뒤 쉬는 때(테스트·예전 이름). */
-export const QUIZ_REST_MS = REST_DAYS[1] * DAY_MS;
-
 export function streakOf(entry: QuizLog[string] | undefined): number {
   if (!entry?.last) return 0;
   return typeof entry.s === "number" && entry.s > 0 ? entry.s : 1;
@@ -48,6 +45,7 @@ export function restUntil(entry: QuizLog[string] | undefined): number {
   if (!entry || !s) return 0;
   return entry.at + REST_DAYS[Math.min(s, REST_DAYS.length - 1)]! * DAY_MS;
 }
+
 /** 이만큼 안에 푼 열쇠는 다음 것으로 내지 않고 뒤로. */
 export const RECENT_MS = 30 * 60 * 1000;
 /** 한 번에 내다보는 수(화면은 첫 것만 씀 — 테스트·다음 문제 미리 보기용). */

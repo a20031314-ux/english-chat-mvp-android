@@ -28,10 +28,6 @@ function sourceOf(card: Card, stage: number): QuizSource {
 
 /** 표현 뜻(앱 언어) — 카드가 온 것만. */
 const meaningOf = new Map<string, string>();
-export function expressionMeaning(language: string, expression: string): string {
-  return meaningOf.get(`${language}|${expression}`) ?? "";
-}
-
 export function useExpressionCards(language: string, ui: string, upTo: number) {
   const deck = useMemo(() => deckExpressions(language, Math.max(1, Math.min(5, upTo))), [language, upTo]);
   const [ready, setReady] = useState<Set<string>>(() => new Set());

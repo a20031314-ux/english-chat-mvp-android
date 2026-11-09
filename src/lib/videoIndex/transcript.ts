@@ -154,21 +154,3 @@ export function transcriptAsSttSegments(record: TranscriptRecord): Array<{
     endTime: line.end,
   }));
 }
-
-/** How fast and how long the speech runs — enough to judge it against a level. */
-export function speechStats(record: TranscriptRecord): {
-  words: number;
-  wordsPerMinute: number;
-  wordsPerLine: number;
-} {
-  const words = record.lines.reduce(
-    (sum, line) => sum + line.text.split(/\s+/).filter(Boolean).length,
-    0,
-  );
-  const spoken = record.lines.reduce((sum, line) => sum + Math.max(0, line.end - line.start), 0);
-  return {
-    words,
-    wordsPerMinute: spoken > 0 ? Math.round((words / spoken) * 60) : 0,
-    wordsPerLine: record.lines.length ? Math.round((words / record.lines.length) * 10) / 10 : 0,
-  };
-}

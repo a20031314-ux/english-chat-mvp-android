@@ -1,4 +1,3 @@
-import { INTEREST_IDS, MEET_MODES, MEET_TIMES, WORK_IDS } from "./profileFacts.ts";
 import { learningLanguageUiLabel } from "../learningLanguages.ts";
 
 /**
@@ -1217,9 +1216,6 @@ const LOCALES: Record<string, ProfileCopy> = {
   },
 };
 
-export const PROFILE_COPY_LOCALES = ["ko", "en", ...Object.keys(LOCALES)];
-export const PROFILE_COPY_KEYS = Object.keys(en) as (keyof ProfileCopy)[];
-
 export function profileCopy(locale: string): ProfileCopy {
   if (locale === "ko") return ko;
   return LOCALES[locale] ?? en;
@@ -1242,15 +1238,5 @@ export function chipLabel(t: ProfileCopy, prefix: "i" | "w" | "m" | "t" | "u" | 
   const key = `${prefix}_${id}` as keyof ProfileCopy;
   return (t[key] as string | undefined) ?? id;
 }
-
-/** 모든 칩 id에 이름이 있는지(테스트용). */
-export const CHIP_GROUPS = {
-  i: INTEREST_IDS,
-  w: WORK_IDS,
-  m: MEET_MODES,
-  t: MEET_TIMES,
-  u: ["daily", "travel", "work", "video"],
-  f: ["speaking", "listening", "writing", "words"],
-} as const;
 
 export type { ProfileCopy };

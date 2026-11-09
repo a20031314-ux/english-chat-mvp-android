@@ -59,6 +59,7 @@ const SLOT_TAGS: Record<string, { size: number; tags: Record<number, string> }> 
   pt: { size: 36, tags: { 0: "co", 1: "co", 2: "ar g", 3: "vp", 6: "vp", 8: "t", 9: "t", 10: "t", 11: "a", 15: "a", 16: "a t", 17: "s", 19: "cli", 20: "vp", 22: "s", 23: "s", 24: "s", 25: "vp", 28: "r", 30: "s", 34: "h" } },
   en: { size: 40, tags: { 0: "co vp", 1: "vp t", 2: "ar", 7: "t", 8: "a", 9: "t", 15: "a", 16: "a", 26: "s", 27: "s", 28: "t", 30: "s" } },
 };
+
 const SHORT: Record<string, Feature | "order"> = { ar: "article", g: "gender", c: "case", p: "particle", cl: "classifier", h: "honorific", vp: "verbPerson", t: "tense", a: "aspect", s: "subjunctive", co: "copula", cli: "clitic", r: "reflexive", ax: "auxChoice", af: "affix", o: "order" };
 
 /** 사다리 순서 번호(`grammarList` 차례, 0부터) → 특징·어순 칸인가. */
@@ -66,7 +67,6 @@ export function slotTags(language: string, index: number): { features: Feature[]
   const codes = (SLOT_TAGS[language]?.tags[index] ?? "").split(" ").filter(Boolean).map((code) => SHORT[code]).filter(Boolean);
   return { features: codes.filter((code): code is Feature => code !== "order"), order: codes.includes("order") };
 }
-export const slotTagSize = (language: string) => SLOT_TAGS[language]?.size ?? 0;
 
 /** 그 특징이 모국어(l1)에서 학습 언어(l2)로 갈 때: new 처음 보는 개념 · weaker 모국어엔 약하게만 · same 비슷하게 있음. */
 export type Transfer = "new" | "weaker" | "same";
@@ -93,20 +93,6 @@ export function slotWeight(l1: string, l2: string, index: number): number {
   const weights = features.map((feature) => transferOf(l1, l2, feature)).filter((one): one is Transfer => one !== null).map((one) => WEIGHT[one]);
   if (order && PROFILES[l1]!.order !== PROFILES[l2]!.order) weights.push(ORDER_WEIGHT);
   return weights.length ? Math.max(...weights) : 1;
-}
-
-/** 조합 한눈에: 학습 언어에 있고 모국어엔 없는 특징 · 약한 특징 · 같은 글자인가 · 같은 어순인가. */
-export function pairSummary(l1: string, l2: string): { fresh: Feature[]; weaker: Feature[]; sameScript: boolean; sameOrder: boolean } | null {
-  const a = PROFILES[l1];
-  const b = PROFILES[l2];
-  if (!a || !b) return null;
-  const features = Object.keys(b.has) as Feature[];
-  return {
-    fresh: features.filter((feature) => transferOf(l1, l2, feature) === "new"),
-    weaker: features.filter((feature) => transferOf(l1, l2, feature) === "weaker"),
-    sameScript: a.script === b.script || (a.script === "hanzi" && b.script === "kana"),
-    sameOrder: a.order === b.order,
-  };
 }
 
 /** 문법 열쇠("g|1:2") → 사다리 순서 번호(`grammarList` 차례). 없으면 -1. */

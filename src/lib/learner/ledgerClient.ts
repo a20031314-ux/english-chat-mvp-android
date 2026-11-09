@@ -115,14 +115,7 @@ export function linksShown(): boolean {
     return true;
   }
 }
-export function setLinksShown(on: boolean) {
-  try {
-    localStorage.setItem(SHOW_KEY, on ? "1" : "0");
-  } catch {
-    // Kept for this session only.
-  }
-  emit();
-}
+
 export function useLinksShown(): boolean {
   return useSyncExternalStore(
     (listener) => {

@@ -193,38 +193,3 @@ test("batch first reading uses the source line, not the caption", async () => {
     "내가 하고 싶은 말은 이게 꼭 나쁜 접근법은 아니라는 거야.",
   );
 });
-
-test("batch refine returns analysis lines without replacing the caption draft", async () => {
-  const { refineCaptionsForAnalysis } = await import("./refineCaptions.ts");
-  const refined = await refineCaptionsForAnalysis(
-    { sourceLang: "en", targetLang: "ko" },
-    [
-      {
-        id: "a",
-        sourceText: ctx.sourceText,
-        caption: "괜히 복잡해져서 비추예요.",
-        meaning: asMeaning({
-          coreMeaning: "Speaker advises against this option.",
-          speakerIntent: "advise",
-          formalityLevel: "casual",
-          speakerRelationship: "public explainer",
-          keyEntities: [],
-        }),
-      },
-    ],
-    async () => ({
-      items: [
-        {
-          id: "a",
-          translated: "제가 이걸 추천하지 않는 이유는 복잡해서예요.",
-          changed: true,
-        },
-      ],
-    }),
-  );
-  assert.equal(
-    refined.get("a")?.analysisTranslation,
-    "제가 이걸 추천하지 않는 이유는 복잡해서예요.",
-  );
-  assert.equal(refined.get("a")?.changed, true);
-});

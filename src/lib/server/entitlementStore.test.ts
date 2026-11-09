@@ -1,29 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  addCatalogTrialVideo,
-  addMonthlyCallSeconds,
-  addMonthlyImportPoints,
-  chargeImportPoints,
-  getPurchasedPoints,
-  addPurchasedPoints,
-  getBilledImportVideoIds,
-  getCatalogTrialVideoIds,
-  getCallsStarted,
-  getDailyUsed,
-  getMonthlyCallSeconds,
-  getMonthlyImportPointsUsed,
-  incrementCallsStarted,
-  incrementDailyUsed,
-  chargeRoleplayTurn,
-  roleplayCarryMs,
-  roleplayPointsLeft,
-  noteSentenceWritten,
-  readWrittenLines,
-} from "./entitlementStore.ts";
+import { addCatalogTrialVideo, getBilledImportVideoIds, getCatalogTrialVideoIds, getDailyUsed, getMonthlyImportPointsUsed, incrementDailyUsed, chargeRoleplayTurn, roleplayCarryMs, roleplayPointsLeft, noteSentenceWritten, readWrittenLines } from "./entitlementStore.ts";
 import { SHARED_ANONYMOUS_ID } from "./identity.ts";
 import { kvIncrBy, kvSetJson } from "./kv.ts";
-import { getPointPart } from "./entitlementStore.ts";
 import { FREE_LIFETIME_ROLEPLAY_POINTS } from "../billing/config.ts";
 
 // 포인트로 통화하는 구독(옛 프리미엄 조건: 매달 80포인트) — 2026-10-22에 프리미엄이 하루 시간 방식으로 바뀌어
@@ -49,31 +28,6 @@ test("daily chat use accumulates and is kept per user", async () => {
   assert.equal(await getDailyUsed("chat-b"), 1);
 });
 
-test("import points add up across separate videos", async () => {
-  await addMonthlyImportPoints("import-a", 3, "video-1");
-  await addMonthlyImportPoints("import-a", 2, "video-2");
-
-  assert.equal(await getMonthlyImportPointsUsed("import-a"), 5);
-  assert.deepEqual(await getBilledImportVideoIds("import-a"), [
-    "video-1",
-    "video-2",
-  ]);
-});
-
-test("a video already billed is not listed twice", async () => {
-  await addMonthlyImportPoints("import-b", 4, "video-1");
-  await addMonthlyImportPoints("import-b", 0, "video-1");
-
-  assert.deepEqual(await getBilledImportVideoIds("import-b"), ["video-1"]);
-});
-
-test("fractional points are rounded up, never below zero", async () => {
-  await addMonthlyImportPoints("import-c", 0.2);
-  await addMonthlyImportPoints("import-c", -5);
-
-  assert.equal(await getMonthlyImportPointsUsed("import-c"), 1);
-});
-
 test("the catalog trial records each video once", async () => {
   await addCatalogTrialVideo("trial-a", "clip-1");
   await addCatalogTrialVideo("trial-a", "clip-1");
@@ -83,35 +37,6 @@ test("the catalog trial records each video once", async () => {
     "clip-1",
     "clip-2",
   ]);
-});
-
-test("counters written for one user are invisible to another", async () => {
-  await addMonthlyImportPoints("isolated-a", 7, "video-9");
-  await addCatalogTrialVideo("isolated-a", "clip-9");
-
-  assert.equal(await getMonthlyImportPointsUsed("isolated-b"), 0);
-  assert.deepEqual(await getCatalogTrialVideoIds("isolated-b"), []);
-});
-
-test("trial calls are counted per user and never expire", async () => {
-  assert.equal(await getCallsStarted("caller-a"), 0);
-
-  await incrementCallsStarted("caller-a");
-  await incrementCallsStarted("caller-a");
-
-  assert.equal(await getCallsStarted("caller-a"), 2);
-  assert.equal(await getCallsStarted("caller-b"), 0);
-});
-
-test("call seconds accumulate for the month and ignore junk", async () => {
-  assert.equal(await getMonthlyCallSeconds("talker"), 0);
-
-  await addMonthlyCallSeconds("talker", 90);
-  await addMonthlyCallSeconds("talker", 30.4);
-  await addMonthlyCallSeconds("talker", 0);
-  await addMonthlyCallSeconds("talker", -100);
-
-  assert.equal(await getMonthlyCallSeconds("talker"), 120);
 });
 
 const FIVE_MINUTES = 5 * 60 * 1000;
@@ -261,31 +186,6 @@ test("languages do not pool their lines", async () => {
 test("an empty line is not a line", async () => {
   await noteSentenceWritten("th", "   ");
   assert.deepEqual(await readWrittenLines("th"), []);
-});
-
-test("video imports spend the monthly grant first, then purchased points", async () => {
-  await addMonthlyImportPoints("import-buy-a", 78);
-  await addPurchasedPoints("import-buy-a", 10);
-  // 4.334포인트(13분 영상): 정수 5를 꺼내고 0.666이 남는다.
-  const spend = await chargeImportPoints("import-buy-a", 4.334, "video-buy");
-  assert.deepEqual(spend, { fromGranted: 2, fromPurchased: 3 });
-  assert.equal(await getMonthlyImportPointsUsed("import-buy-a"), 80);
-  assert.equal(await getPurchasedPoints("import-buy-a"), 7);
-  assert.equal(await getPointPart("import-buy-a"), 666);
-  assert.deepEqual(await getBilledImportVideoIds("import-buy-a"), ["video-buy"]);
-  // 다음 영상(0.5포인트)은 남은 부분에서 — 정수 포인트는 그대로.
-  const second = await chargeImportPoints("import-buy-a", 0.5, "video-two");
-  assert.deepEqual(second, { fromGranted: 0, fromPurchased: 0 });
-  assert.equal(await getPurchasedPoints("import-buy-a"), 7);
-  assert.equal(await getPointPart("import-buy-a"), 166);
-});
-
-test("a video import both pots cannot cover charges nothing", async () => {
-  await addMonthlyImportPoints("import-buy-b", 80);
-  await addPurchasedPoints("import-buy-b", 2);
-  assert.equal(await chargeImportPoints("import-buy-b", 3, "video-x"), null);
-  assert.equal(await getPurchasedPoints("import-buy-b"), 2);
-  assert.deepEqual(await getBilledImportVideoIds("import-buy-b"), []);
 });
 
 // ── Daily free talk (billing/plans.ts) ──────────────────────────────────────

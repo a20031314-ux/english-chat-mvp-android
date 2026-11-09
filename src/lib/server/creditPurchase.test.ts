@@ -1,12 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { POINT_BUNDLES, pointsForProduct } from "../billing/cost.ts";
-import {
-  creditPurchaseOnce,
-  getPurchasedPoints,
-  openCallHold,
-  readPointBalance,
-} from "./entitlementStore.ts";
+import { creditPurchaseOnce, getPurchasedPoints } from "./entitlementStore.ts";
 
 /**
  * Runs against the in-memory fallback in kv.ts, like the call-hold tests. What
@@ -61,21 +56,5 @@ test("crediting the same transaction id for two people is not a clash", () => {
     assert.equal(await creditPurchaseOnce(first, "shared-txn", 60), true);
     assert.equal(await creditPurchaseOnce(second, "shared-txn", 60), true);
     assert.equal(await getPurchasedPoints(second), 60);
-  })();
-});
-
-test("bought points are spendable on a call", () => {
-  return (async () => {
-    // The end of the line this exists for: a purchase becomes a balance, and
-    // the balance opens a call for someone whose monthly grant is gone.
-    const userId = newUser();
-    await creditPurchaseOnce(userId, "txn-spend", 60);
-
-    const hold = await openCallHold(userId, 0);
-    assert.ok(hold, "a purchased balance should open a call with no grant left");
-    assert.equal(hold.points, 10);
-
-    const after = await readPointBalance(userId, 0);
-    assert.equal(after.purchased, 50);
   })();
 });

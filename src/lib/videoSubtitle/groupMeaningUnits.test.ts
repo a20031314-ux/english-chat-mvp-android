@@ -1,10 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  groupMeaningUnits,
-  meaningUnitHeuristics,
-  refineMeaningUnits,
-} from "./groupMeaningUnits.ts";
+import { groupMeaningUnits, refineMeaningUnits } from "./groupMeaningUnits.ts";
 import type { NormalizedSegment } from "./types.ts";
 import { splitReadable } from "./formatSubtitles.ts";
 import { SUBTITLE_NATURALIZATION_CASES } from "./subtitleNaturalizationCases.ts";
@@ -24,17 +20,6 @@ function seg(
   };
 }
 
-test("looksIncomplete detects mid-thought slices", () => {
-  assert.equal(
-    meaningUnitHeuristics.looksIncomplete("The reason I don't recommend this"),
-    true,
-  );
-  assert.equal(
-    meaningUnitHeuristics.looksIncomplete("I don't buy that."),
-    false,
-  );
-});
-
 test("groupMeaningUnits keeps unpunctuated lyric lines separate", () => {
   const units = groupMeaningUnits({
     currentSegments: [
@@ -46,19 +31,6 @@ test("groupMeaningUnits keeps unpunctuated lyric lines separate", () => {
   assert.equal(units.length, 3);
   assert.equal(units[0]!.original, "Never gonna give you up");
   assert.equal(units[1]!.original, "Never gonna let you down");
-});
-
-test("looksContinuation detects trailing clauses", () => {
-  assert.equal(
-    meaningUnitHeuristics.looksContinuation(
-      "is because you're basically adding",
-    ),
-    true,
-  );
-  assert.equal(
-    meaningUnitHeuristics.looksContinuation("I wouldn't go that far."),
-    false,
-  );
 });
 
 test("groupMeaningUnits merges dangling already + orphan Colored", () => {
@@ -92,43 +64,6 @@ test("groupMeaningUnits merges sentence-final noun after false period", () => {
   assert.deepEqual(units[0]!.segmentIds, ["a", "b"]);
   assert.match(units[0]!.original, /first\.? language/i);
   assert.equal(units[1]!.original, "And then he switched to English.");
-});
-
-test("looksIncomplete treats open noun phrase with period as unfinished", () => {
-  assert.equal(
-    meaningUnitHeuristics.looksIncomplete(
-      "He's French-Canadian, so he speaks French as a first.",
-    ),
-    true,
-  );
-  assert.equal(
-    meaningUnitHeuristics.looksIncomplete("I don't buy that."),
-    false,
-  );
-});
-
-test("groupMeaningUnits merges trailing didn't with following verb phrase", () => {
-  const units = groupMeaningUnits({
-    currentSegments: [
-      seg(
-        "a",
-        "Was the nicest guy in the world and he didn't",
-        50,
-        52,
-      ),
-      seg("b", "Murder us at the end of it.", 52, 54),
-      seg("c", "That's the story.", 54.5, 56),
-    ],
-  });
-  assert.equal(units.length, 2);
-  assert.deepEqual(units[0]!.segmentIds, ["a", "b"]);
-  assert.match(units[0]!.original, /didn't Murder/i);
-  assert.equal(
-    meaningUnitHeuristics.endsWithOpenFunctionWord(
-      "Was the nicest guy in the world and he didn't",
-    ),
-    true,
-  );
 });
 
 test("groupMeaningUnits merges open 'our.' with following noun phrase", () => {
@@ -196,18 +131,6 @@ test("groupMeaningUnits keeps standalone Yeah after finished sentence", () => {
     ],
   });
   assert.equal(units.length, 2);
-});
-
-test("looksOrphanFragment catches single-word STT crumbs", () => {
-  assert.equal(meaningUnitHeuristics.looksOrphanFragment("Colored."), true);
-  assert.equal(meaningUnitHeuristics.looksOrphanFragment("Yeah."), true);
-  assert.equal(meaningUnitHeuristics.looksOrphanFragment("language."), true);
-  assert.equal(
-    meaningUnitHeuristics.looksOrphanFragment(
-      "And I just remember looking over and they both came running",
-    ),
-    false,
-  );
 });
 
 test("groupMeaningUnits merges a split sentence into one unit", () => {

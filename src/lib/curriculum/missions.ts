@@ -354,11 +354,6 @@ export function topicCounts(state: TopicMissions | null | undefined, now = Date.
   return counts;
 }
 
-export function missionProgress(state: TopicMissions | null | undefined): { done: number; total: number } {
-  const counts = topicCounts(state);
-  return { done: counts.done, total: counts.total };
-}
-
 /** The topic as its items leave it: started once anything is done, done when all are mastered. */
 export function statusFromMissions(state: TopicMissions): "doing" | "done" {
   const counts = topicCounts(state);
@@ -368,24 +363,6 @@ export function statusFromMissions(state: TopicMissions): "doing" | "done" {
 /** Learned items ready to be produced from memory. */
 export function dueMissions(state: TopicMissions, now = Date.now()): Mission[] {
   return state.missions.filter((m) => itemState(state, m.id, now).due);
-}
-
-/**
- * The first mission not yet done, or null when all are. One added for a
- * recurring mistake goes first: it is why the map sent them here.
- */
-export function nextMission(state: TopicMissions): Mission | null {
-  return practiceOrder(state).find((m) => !state.results[m.id]) ?? null;
-}
-
-/** The order the task screen goes through, and numbers, a topic's missions in. */
-export function practiceOrder(state: TopicMissions): Mission[] {
-  // Their own picks first, then weak spots, then the topic's own missions.
-  return [
-    ...state.missions.filter((m) => m.picked),
-    ...state.missions.filter((m) => m.weak && !m.picked),
-    ...state.missions.filter((m) => !m.weak && !m.picked),
-  ];
 }
 
 /** Whether the topic's own missions have been written, beside any added for mistakes. */

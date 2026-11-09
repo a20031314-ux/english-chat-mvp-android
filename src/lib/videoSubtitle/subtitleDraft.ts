@@ -1,8 +1,5 @@
 import type { MeaningUnit } from "@/lib/videoSubtitle/groupMeaningUnits";
-import type {
-  ConversationContext,
-  SceneContext,
-} from "@/lib/videoSubtitle/sceneTypes";
+import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
 import type { VideoContext } from "@/lib/videoSubtitle/types";
 import { interfaceLanguageName } from "@/lib/learningLanguages";
 
@@ -128,30 +125,5 @@ export function scenePayload(scene?: SceneContext) {
     mood: scene.mood,
     visualCues: scene.visualCues ?? [],
     confidence: scene.confidence,
-  };
-}
-
-export function conversationPayload(conversation?: ConversationContext) {
-  if (!conversation) return undefined;
-  return {
-    topic: conversation.topic,
-    situation: conversation.situation,
-    participants: conversation.participants,
-    recentMeaning: conversation.recentMeaning,
-  };
-}
-
-export function unitPromptItem(
-  unit: MeaningUnit,
-  scene?: SceneContext,
-) {
-  return {
-    id: unit.id,
-    previous: unit.previousTexts,
-    current: unit.original,
-    next: unit.nextTexts,
-    voiceHints: unit.voiceHints ?? [],
-    /** Optional visual evidence — not authoritative. */
-    sceneContext: scenePayload(scene),
   };
 }

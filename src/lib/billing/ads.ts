@@ -12,10 +12,6 @@
  */
 
 import type { PlanTier } from "./plans.ts";
-
-/** AdMob 앱 ID(안드로이드). AndroidManifest.xml의 meta-data와 같아야 한다. */
-export const ADMOB_ANDROID_APP_ID = "ca-app-pub-8959652589063151~4979642668";
-
 /** 광고 단위(AdMob 콘솔에서 2026-10-20 만듦). 공개 값이라 코드에 둔다. */
 export const ADMOB_UNITS = {
   interstitial: "ca-app-pub-8959652589063151/2248687484",

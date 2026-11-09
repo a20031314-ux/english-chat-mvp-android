@@ -162,24 +162,6 @@ export function removeSaved(
 }
 
 /**
- * The conversation this scene would carry on with, if there is one.
- *
- * The most recent unfinished one for that scene. Older unfinished ones stay in
- * the list to be read; offering a choice of which to resume would be a second
- * screen to answer a question nobody asked.
- */
-export function resumableFor(
-  list: readonly SavedConversation[],
-  scenarioId: string,
-): SavedConversation | null {
-  return (
-    list
-      .filter((row) => row.scenarioId === scenarioId && isUnfinished(row))
-      .sort((a, b) => b.updatedAt - a.updatedAt)[0] ?? null
-  );
-}
-
-/**
  * What a saved conversation resumes into.
  *
  * The queue and the turn in flight are dropped. Both are the middle of a moment

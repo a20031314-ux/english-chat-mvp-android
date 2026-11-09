@@ -1,9 +1,3 @@
-/**
- * 공통 기능 107개(curriculum/functions.ts)를 여덟 묶음으로 — Logbank 육각형 문장 세부 칩 "문장구사력"의 칸
- * (2026-11-02 사용자 "문장구사력으로", hub/work/drafts/fill-gauge-2026-11-02.md 10절). 14개 언어 같은 표. 순수 모듈.
- */
-import { FUNCTIONS } from "./functions.ts";
-
 export const FN_GROUPS = ["self", "ask", "request", "time", "reason", "compare", "mind", "daily"] as const;
 export type FnGroup = (typeof FN_GROUPS)[number];
 
@@ -31,9 +25,4 @@ for (const group of FN_GROUPS) for (const id of TABLE[group]) BY_FN.set(id, grou
 
 export function fnGroupOf(fn: string | undefined): FnGroup | null {
   return fn ? (BY_FN.get(fn) ?? null) : null;
-}
-
-/** 표가 기능 목록을 빠짐없이 덮는지(테스트). */
-export function ungroupedFunctions(): string[] {
-  return FUNCTIONS.map((one) => one.id).filter((id) => !BY_FN.has(id));
 }

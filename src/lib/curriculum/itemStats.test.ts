@@ -1,17 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { askedOf, byDifficulty, cleanAsked, difficultyOf, statFields, statsFromFields, STAT_MIN, type ItemStats } from "./itemStats.ts";
-
-test("난이도: 충분히 풀린 것만 판단, 가르는 것 → 모름 → 쉬움 → 막힘 순(같은 무리는 원래 순서)", () => {
-  const stats: ItemStats = { "e|a": [1, STAT_MIN], "e|b": [STAT_MIN, STAT_MIN], "e|c": [10, STAT_MIN], "e|d": [0, STAT_MIN - 1], "e|e": [12, STAT_MIN] };
-  assert.equal(difficultyOf(stats, "e|a"), "stuck");
-  assert.equal(difficultyOf(stats, "e|b"), "easy");
-  assert.equal(difficultyOf(stats, "e|c"), "split");
-  assert.equal(difficultyOf(stats, "e|d"), "unknown");
-  assert.deepEqual(byDifficulty(["e|a", "e|b", "e|c", "e|d", "e|e", "e|z"], stats), ["e|c", "e|e", "e|d", "e|z", "e|b", "e|a"]);
-  assert.deepEqual(byDifficulty(["e|b", "e|a"], null), ["e|b", "e|a"]);
-});
-
+import { askedOf, cleanAsked, statFields, statsFromFields } from "./itemStats.ts";
 test("보낼 것: 말하기·건너뛴 것 빼고, 서버는 열쇠 모양·겹침·개수를 거름, 해시 칸 ↔ 통계", () => {
   const asked = askedOf(
     [

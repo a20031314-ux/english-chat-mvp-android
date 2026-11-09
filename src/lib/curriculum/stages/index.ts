@@ -38,11 +38,6 @@ export function stageById(id: string | null | undefined): Stage | null {
   return ladder?.stages.find((stage) => stage.id === id) ?? null;
 }
 
-/** 다음 단계(없으면 null). */
-export function nextStage(stage: Stage): Stage | null {
-  return stageById(`${stage.id.slice(0, 2)}-${stage.order + 1}`);
-}
-
 /** 지도 그리기·사람에게 보일 때 쓰는 앱 언어 글. ko·en 밖은 서버가 옮긴 글(stageCopy)을 따로 쓴다. */
 export function stageText(text: StageText, ui: string): string {
   return (ui === "ko" ? text.ko : undefined) ?? text.en;

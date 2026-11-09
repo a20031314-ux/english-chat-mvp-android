@@ -51,6 +51,7 @@ export type Check = (typeof CHECKS)[number];
 export const CHECK_PRIOR: Record<Check, { fill: number; range: number; stage: number }> = {
   letters: { fill: 0, range: 0.05, stage: 0 },
 };
+
 /** 체크가 없을 때 가장 낮은 시작 어림·범위(예전 초급 값). */
 export const BASE_PRIOR = { fill: 0.1, range: 0.2 } as const;
 export const PRIOR_SHARE: Record<Axis, number> = { vocabRead: 1, sentRead: 1, vocabUse: 0.6, sentUse: 0.6, listen: 0.5, talk: 0.5 };
@@ -139,9 +140,6 @@ export function fillCatalog(language: string, words: readonly BankWord[] | null)
 
 /** 항목 자리 눈금의 흐림(작을수록 경계가 또렷). 시뮬레이션(scripts/fill-sim.ts)으로 정함. */
 export const SIGMA = 0.1;
-/** 정보 셈에 쓰는 흐림 — 실제 답에는 실수·찍기·받아쓰기 탓이 섞여 SIGMA보다 넉넉히(수렴이 너무 빠르지 않게). */
-export const INFO_SIGMA = 0.28;
-
 const softplus = (x: number) => (x > 30 ? x : Math.log1p(Math.exp(x)));
 
 export function knowChance(theta: number, d: number, sigma = SIGMA): number {
@@ -186,11 +184,6 @@ export type FillEvent = {
   choose?: boolean;
   miss?: MissKind;
 };
-
-export function axisOf(family: Family, use: boolean): BankAxis {
-  return family === "vocab" ? (use ? "vocabUse" : "vocabRead") : use ? "sentUse" : "sentRead";
-}
-
 /* ───────── 통화(듣기·실전 대화) ───────── */
 
 /** 통화 하나의 차례 숫자(roleplay/callDays — 문장 없음). 모두 선택: 예전 통화엔 없다. */
@@ -217,6 +210,7 @@ export type CallTurns = {
   /** 해낸 일 묶음(감독 fn → fnGroups). */
   fn?: Partial<Record<FnGroup, number>>;
 };
+
 export { TALK_WHY, LEAD_HOW } from "../roleplay/turnTally.ts";
 
 /** 튜터 말 단계 무게(사용자 2026-11-02 "난이도도 봐줘") — 쉬운 대화만이면 60%가 상한. */
@@ -240,6 +234,7 @@ export type FillCell = {
   gap: number;
   state: CellState;
 };
+
 export type AxisFill = {
   axis: Axis;
   fill: number;
@@ -256,6 +251,7 @@ export type AxisFill = {
   presumed?: boolean[];
   cells: FillCell[];
 };
+
 export type FillResult = { axes: Record<Axis, AxisFill>; weak: FillCell[]; startStage: number };
 
 export const WEAK_MIN_N = 8;
@@ -560,37 +556,6 @@ export function listenFill(calls: readonly CallTurns[], prior: number, range0: n
   const cells: FillCell[] = stages.map((value, i) => ({ axis: "listen" as const, id: `band:${i + 1}`, value, n: asked[i]!, gap: 0, state: (asked[i]! < WEAK_MIN_N ? "unknown" : value < 0.6 ? "weak" : "ok") as CellState }));
   for (const cell of cells) if (cell.state === "weak") cell.gap = 0.6 - cell.value;
   return { axis: "listen", fill, low: clamp01(fill - half), high: clamp01(fill + half), converged: half <= CONVERGED_RANGE, n: total, stages, stageN: asked, cells: sortCells(cells) };
-}
-
-/* ───────── 계속 재기 ───────── */
-
-/** 그 칸에 드는 열쇠(세부 칸 → 문제 고르기). */
-export function keysInCell(catalog: FillCatalog, axis: BankAxis, cellId: string): string[] {
-  const items = axis.startsWith("vocab") ? catalog.vocab : catalog.sent;
-  const out: string[] = [];
-  for (const item of items.values()) if (item.cells.includes(cellId)) out.push(item.key);
-  return out;
-}
-
-/**
- * 그 열쇠를 열 학습. 표현 글자(e|)는 그 자체로 추천하지 않는다 — 읽으면 뜻이 보이고,
- * 안 푼 표현을 "공부하세요"로 두면 이미 아는 말이 걸린다. 표현을 틀린 기록이면 그 표현이 붙은 빈칸 틀로.
- * 빈칸이 없는 틀은 통째 문장이라 빼 둔다. 문법 칸은 이름, 낱말은 그 낱말.
- */
-export function studyPoint(language: string, key: string, grammarName: (stage: number, index: number) => string): { key: string; label: string } | null {
-  const framePoint = (frame: Frame | undefined) => (frame?.pattern.includes("___") ? { key: `f|${frame.id}`, label: frame.pattern } : null);
-  if (key.startsWith("e|")) {
-    const phrase = key.slice(2);
-    return framePoint(allFramesFor(language).find((one) => one.expressions?.some((text) => text.toLowerCase() === phrase.toLowerCase())));
-  }
-  if (key.startsWith("f|")) return framePoint(allFramesFor(language).find((one) => one.id === key.slice(2)));
-  if (key.startsWith("g|")) {
-    const [stage, index] = key.slice(2).split(":").map(Number);
-    const label = grammarName(stage, index);
-    return label ? { key, label } : null;
-  }
-  if (key.startsWith("w|")) return { key, label: key.slice(2) };
-  return null;
 }
 
 export { missKindOf } from "./missKind.ts";
