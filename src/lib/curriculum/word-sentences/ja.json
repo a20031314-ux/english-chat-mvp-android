@@ -1659,6 +1659,22 @@
    "blank": "エンジン"
   }
  ],
+ "w|オーダー": [
+  {
+   "text": "オーダーメイドのスーツが、驚くほど安い値段で出ていた。",
+   "en": "A tailor-made suit was on sale at a surprisingly low price.",
+   "ko": "맞춤 정장이 놀랄 만큼 싼 값에 나와 있었어요.",
+   "blank": "オーダー",
+   "src": "made"
+  },
+  {
+   "text": "打ち上げの店で、千尋はラストオーダーぎりぎりにデザートを頼んだ。",
+   "en": "At the after-party restaurant, Chihiro ordered dessert just before last orders.",
+   "ko": "뒤풀이 가게에서 치히로는 마지막 주문 직전에 디저트를 시켰어요.",
+   "blank": "オーダー",
+   "src": "made"
+  }
+ ],
  "w|オーナー": [
   {
    "text": "佐藤さんが前に働いていたカフェのオーナーが、店に誠を招いてくれた。",
@@ -5539,6 +5555,22 @@
    "en": "I told my own story.",
    "ko": "내 이야기를 했어.",
    "blank": "ストーリー"
+  }
+ ],
+ "w|ストア": [
+  {
+   "text": "隣のブースは、ネットストアでも同じ商品を売っているそうだ。",
+   "en": "The neighboring booth apparently sells the same goods in an online store too.",
+   "ko": "옆 부스는 인터넷 스토어에서도 같은 상품을 판대요.",
+   "blank": "ストア",
+   "src": "made"
+  },
+  {
+   "text": "限定グッズは、公式オンラインストアで後日発売される。",
+   "en": "Limited-edition goods will go on sale later at the official online store.",
+   "ko": "한정 굿즈는 공식 온라인 스토어에서 나중에 발매돼요.",
+   "blank": "ストア",
+   "src": "made"
   }
  ],
  "w|ストリート": [
@@ -12567,6 +12599,22 @@
    "blank": "レース"
   }
  ],
+ "w|レジ": [
+  {
+   "text": "フリーマーケットにはレジがないので、悠斗は小銭をたくさん用意した。",
+   "en": "There are no cash registers at the flea market, so Yuto prepared plenty of small change.",
+   "ko": "벼룩시장에는 계산대가 없어서 유토는 잔돈을 많이 준비했어요.",
+   "blank": "レジ",
+   "src": "made"
+  },
+  {
+   "text": "千尋はコンサートの物販で、長いレジの列に並んだ。",
+   "en": "At the concert merchandise stand, Chihiro waited in a long line for the register.",
+   "ko": "치히로는 콘서트 굿즈 판매처에서 긴 계산대 줄에 섰어요.",
+   "blank": "レジ",
+   "src": "made"
+  }
+ ],
  "w|レシピ": [
   {
    "text": "歯科衛生士は、歯にやさしいおやつのレシピを翔太に教えてくれた。",
@@ -13542,6 +13590,22 @@
    "en": "There were more people at the campsite than expected.",
    "ko": "캠핑장 이용자는 예상을 웃돌 만큼 많았어요.",
    "blank": "上回る",
+   "src": "made"
+  }
+ ],
+ "w|上場": [
+  {
+   "text": "株式上場を記念して作られたマグカップが、百円で売られていた。",
+   "en": "A mug made to commemorate a company's stock listing was being sold for a hundred yen.",
+   "ko": "주식 상장을 기념해서 만든 머그컵이 백 엔에 팔리고 있었어요.",
+   "blank": "上場",
+   "src": "made"
+  },
+  {
+   "text": "バンドの所属事務所は、来年の上場を目指しているらしい。",
+   "en": "The band's management agency is apparently aiming to go public next year.",
+   "ko": "밴드 소속사는 내년 상장을 목표로 하고 있대요.",
+   "blank": "上場",
    "src": "made"
   }
  ],
@@ -14597,6 +14661,22 @@
    "en": "That's an empty talk.",
    "ko": "알맹이 없는 이야기네.",
    "blank": "中身"
+  }
+ ],
+ "w|中途半端": [
+  {
+   "text": "値段を中途半端に下げても、なかなか客は来ない。",
+   "en": "Cutting prices only halfway doesn't really bring in customers.",
+   "ko": "가격을 어중간하게 내려도 손님은 좀처럼 안 와요.",
+   "blank": "中途半端",
+   "src": "made"
+  },
+  {
+   "text": "アンコールで中途半端に終わった曲を、バンドは最後にもう一度演奏した。",
+   "en": "At the very end, the band played again the song that had been cut short during the encore.",
+   "ko": "앙코르에서 어중간하게 끝난 곡을 밴드는 마지막에 다시 한 번 연주했어요.",
+   "blank": "中途半端",
+   "src": "made"
   }
  ],
  "w|中間": [
@@ -19845,6 +19925,22 @@
    "blank": "全部"
   }
  ],
+ "w|全開": [
+  {
+   "text": "昼過ぎには、悠斗の店は笑顔全開の客でにぎわった。",
+   "en": "By early afternoon, Yuto's stall was busy with customers beaming from ear to ear.",
+   "ko": "오후가 되자 유토의 가게는 활짝 웃는 손님들로 북적였어요.",
+   "blank": "全開",
+   "src": "made"
+  },
+  {
+   "text": "最後の曲では、ドラムの音量が全開になった。",
+   "en": "In the last song, the drums went full volume.",
+   "ko": "마지막 곡에서는 드럼 음량이 최대가 됐어요.",
+   "blank": "全開",
+   "src": "made"
+  }
+ ],
  "w|全面": [
   {
    "text": "来月から、一階の化粧品売り場が全面改装される。",
@@ -24787,6 +24883,22 @@
    "blank": "受け入れる"
   }
  ],
+ "w|受け取り": [
+  {
+   "text": "大きな家具は、後日の受け取りでもいいと悠斗は客に伝えた。",
+   "en": "Yuto told the customer that large furniture could be picked up at a later date.",
+   "ko": "큰 가구는 나중에 받아 가도 된다고 유토는 손님에게 전했어요.",
+   "blank": "受け取り",
+   "src": "made"
+  },
+  {
+   "text": "チケットの受け取りは、コンビニでもできる。",
+   "en": "Tickets can also be picked up at a convenience store.",
+   "ko": "티켓 수령은 편의점에서도 할 수 있어요.",
+   "blank": "受け取り",
+   "src": "made"
+  }
+ ],
  "w|受け取る": [
   {
    "text": "健太は担任の先生から通知表を受け取った。",
@@ -25150,6 +25262,22 @@
    "en": "The copy machine is on the right as you leave the kitchenette.",
    "ko": "복사기는 탕비실을 나와서 오른쪽에 있어요.",
    "blank": "右側",
+   "src": "made"
+  }
+ ],
+ "w|叶える": [
+  {
+   "text": "いつか自分の古着屋を開くという夢を、悠斗は叶えたいと思っている。",
+   "en": "Yuto wants to fulfill his dream of opening his own secondhand clothing shop someday.",
+   "ko": "언젠가 자기 헌옷 가게를 열겠다는 꿈을 유토는 이루고 싶어 해요.",
+   "blank": "叶え",
+   "src": "made"
+  },
+  {
+   "text": "ボーカルは、昔からの夢をこのステージで叶えたと話した。",
+   "en": "The vocalist said a long-held dream had come true on this stage.",
+   "ko": "보컬은 오래된 꿈을 이 무대에서 이뤘다고 말했어요.",
+   "blank": "叶えた",
    "src": "made"
   }
  ],
@@ -25702,6 +25830,22 @@
    "en": "An agent from the real estate office came along for the apartment viewing.",
    "ko": "집 보러 갈 때 부동산 담당자가 동행해 줬어요.",
    "blank": "同行",
+   "src": "made"
+  }
+ ],
+ "w|名乗る": [
+  {
+   "text": "向かいの店主は、自分を「骨董の鬼」と名乗っていた。",
+   "en": "The stall owner across the way called himself \"the antique fiend.\"",
+   "ko": "맞은편 주인은 자기를 \"골동품 귀신\"이라고 칭했어요.",
+   "blank": "名乗って",
+   "src": "made"
+  },
+  {
+   "text": "ギタリストが名乗ると、客席から大きな歓声が上がった。",
+   "en": "When the guitarist introduced himself, a big cheer rose from the audience.",
+   "ko": "기타리스트가 이름을 말하자 객석에서 큰 함성이 터졌어요.",
+   "blank": "名乗る",
    "src": "made"
   }
  ],
@@ -27096,6 +27240,22 @@
    "en": "In the fairy tale Aoi translated, the king divides his treasure among his three daughters.",
    "ko": "아오이가 번역한 동화에서는 국왕이 세 딸에게 보물을 나눠 줘요.",
    "blank": "国王",
+   "src": "made"
+  }
+ ],
+ "w|国産": [
+  {
+   "text": "ある女性は、国産の木で作られた古い椅子を探していた。",
+   "en": "One woman was looking for an old chair made of domestic wood.",
+   "ko": "어떤 여성은 국산 나무로 만든 오래된 의자를 찾고 있었어요.",
+   "blank": "国産",
+   "src": "made"
+  },
+  {
+   "text": "会場の売店では、国産の果物を使ったジュースが売られていた。",
+   "en": "The venue's kiosk sold juice made from domestic fruit.",
+   "ko": "공연장 매점에서는 국산 과일로 만든 주스를 팔고 있었어요.",
+   "blank": "国産",
    "src": "made"
   }
  ],
@@ -33599,6 +33759,22 @@
    "blank": "幅"
   }
  ],
+ "w|幅広い": [
+  {
+   "text": "このフリーマーケットには、幅広い年代の人が集まる。",
+   "en": "People of a wide range of ages come to this flea market.",
+   "ko": "이 벼룩시장에는 폭넓은 연령대 사람이 모여요.",
+   "blank": "幅広い",
+   "src": "made"
+  },
+  {
+   "text": "このバンドの曲は、幅広い世代に愛されている。",
+   "en": "This band's songs are loved by a wide range of generations.",
+   "ko": "이 밴드의 곡은 폭넓은 세대에게 사랑받아요.",
+   "blank": "幅広い",
+   "src": "made"
+  }
+ ],
  "w|干渉": [
   {
    "text": "ベテランの職人は、若手の仕事に必要以上の干渉をしない。",
@@ -35963,6 +36139,22 @@
    "en": "I can't remember the name.",
    "ko": "이름이 생각이 안 나.",
    "blank": "思い出せない"
+  }
+ ],
+ "w|思い込む": [
+  {
+   "text": "悠斗は本物の銀だと思い込んで、古いスプーンを買ってしまった。",
+   "en": "Yuto bought an old spoon, convinced it was real silver.",
+   "ko": "유토는 진짜 은이라고 믿어 버리고 낡은 숟가락을 사 버렸어요.",
+   "blank": "思い込んで",
+   "src": "made"
+  },
+  {
+   "text": "千尋は今日の公演が中止だと思い込んで、危うく行かないところだった。",
+   "en": "Chihiro wrongly assumed today's show was canceled and almost didn't go.",
+   "ko": "치히로는 오늘 공연이 취소됐다고 착각해서 하마터면 안 갈 뻔했어요.",
+   "blank": "思い込んで",
+   "src": "made"
   }
  ],
  "w|思う": [
@@ -40067,6 +40259,22 @@
    "src": "made"
   }
  ],
+ "w|支店": [
+  {
+   "text": "主催者は、駅前の銀行の支店の駐車場を借りて会場にした。",
+   "en": "The organizers borrowed the parking lot of a bank branch near the station as the venue.",
+   "ko": "주최자는 역 앞 은행 지점 주차장을 빌려 행사장으로 했어요.",
+   "blank": "支店",
+   "src": "made"
+  },
+  {
+   "text": "チケット代を払うため、千尋は会社の近くの銀行の支店に寄った。",
+   "en": "To pay for the ticket, Chihiro stopped by a bank branch near her office.",
+   "ko": "티켓값을 내려고 치히로는 회사 근처 은행 지점에 들렀어요.",
+   "blank": "支店",
+   "src": "made"
+  }
+ ],
  "w|支払い": [
   {
    "text": "レジで、悠斗はカードで支払いを済ませた。",
@@ -43425,6 +43633,22 @@
    "src": "made"
   }
  ],
+ "w|本店": [
+  {
+   "text": "悠斗が見つけた古い紙袋には、老舗和菓子屋の本店の住所が印刷されていた。",
+   "en": "The old paper bag Yuto found had the address of a long-established sweet shop's main store printed on it.",
+   "ko": "유토가 찾은 낡은 종이봉투에는 오래된 화과자 가게 본점 주소가 인쇄돼 있었어요.",
+   "blank": "本店",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、楽器店の本店で開かれたミニライブにも行ったことがある。",
+   "en": "Chihiro has also been to a mini live show held at a music store's flagship shop.",
+   "ko": "치히로는 악기점 본점에서 열린 미니 라이브에도 간 적이 있어요.",
+   "blank": "本店",
+   "src": "made"
+  }
+ ],
  "w|本当": [
   {
    "text": "本当に助かった。",
@@ -43757,6 +43981,22 @@
    "blank": "来年"
   }
  ],
+ "w|来店": [
+  {
+   "text": "ご来店ありがとうございます、と悠斗はふざけて客に言った。",
+   "en": "\"Thank you for visiting our store,\" Yuto joked to a customer.",
+   "ko": "\"방문해 주셔서 감사합니다\" 하고 유토는 장난스럽게 손님에게 말했어요.",
+   "blank": "来店",
+   "src": "made"
+  },
+  {
+   "text": "コンサートの帰り、千尋はバンドのコラボカフェに来店した。",
+   "en": "On the way home from the concert, Chihiro visited the band's collaboration café.",
+   "ko": "콘서트 끝나고 돌아가는 길에 치히로는 밴드 콜라보 카페에 들렀어요.",
+   "blank": "来店",
+   "src": "made"
+  }
+ ],
  "w|来月": [
   {
    "text": "来月会おう。",
@@ -44029,6 +44269,38 @@
    "en": "Stock prices are rising.",
    "ko": "주가가 오르고 있어.",
    "blank": "株"
+  }
+ ],
+ "w|株主": [
+  {
+   "text": "古本の山の中に、ある会社が株主に配った記念品のカタログがあった。",
+   "en": "In the pile of used books was a catalog of commemorative gifts a company had given to its shareholders.",
+   "ko": "헌책 더미 속에 어떤 회사가 주주에게 나눠 준 기념품 카탈로그가 있었어요.",
+   "blank": "株主",
+   "src": "made"
+  },
+  {
+   "text": "このホールは、地元企業の株主の支援で建てられたらしい。",
+   "en": "Apparently this hall was built with support from the shareholders of a local company.",
+   "ko": "이 홀은 지역 기업 주주들의 지원으로 지어졌대요.",
+   "blank": "株主",
+   "src": "made"
+  }
+ ],
+ "w|株価": [
+  {
+   "text": "株価の話ばかりする客に、悠斗は苦笑いしながら値札を見せた。",
+   "en": "Yuto smiled wryly and showed his price tags to a customer who talked only about stock prices.",
+   "ko": "주가 이야기만 하는 손님에게 유토는 쓴웃음을 지으며 가격표를 보여 줬어요.",
+   "blank": "株価",
+   "src": "made"
+  },
+  {
+   "text": "バンドの人気が出て、レコード会社の株価まで上がったとニュースで言っていた。",
+   "en": "The news said the band got so popular that even the record company's stock price went up.",
+   "ko": "밴드가 인기를 얻어서 레코드 회사 주가까지 올랐다고 뉴스에서 말했어요.",
+   "blank": "株価",
+   "src": "made"
   }
  ],
  "w|株式": [
@@ -46137,6 +46409,22 @@
    "src": "made"
   }
  ],
+ "w|比率": [
+  {
+   "text": "今日の売り上げは、服と雑貨の比率がちょうど半々だった。",
+   "en": "Today's sales were split exactly half and half between clothes and goods.",
+   "ko": "오늘 매출은 옷과 잡화 비율이 딱 반반이었어요.",
+   "blank": "比率",
+   "src": "made"
+  },
+  {
+   "text": "今回の観客は、男女の比率がほぼ同じだった。",
+   "en": "This time the audience had nearly equal ratios of men and women.",
+   "ko": "이번 관객은 남녀 비율이 거의 같았어요.",
+   "blank": "比率",
+   "src": "made"
+  }
+ ],
  "w|比較": [
   {
    "text": "値段を比較して。",
@@ -46861,6 +47149,22 @@
    "src": "made"
   }
  ],
+ "w|沈む": [
+  {
+   "text": "日が沈むころ、出店者たちは片付けを始めた。",
+   "en": "Around sunset, the stallholders started packing up.",
+   "ko": "해가 질 무렵 판매자들은 정리를 시작했어요.",
+   "blank": "沈む",
+   "src": "made"
+  },
+  {
+   "text": "静かなバラードが流れると、会場は深い感動に沈んだ。",
+   "en": "When the quiet ballad played, the hall sank into deep emotion.",
+   "ko": "조용한 발라드가 흐르자 공연장은 깊은 감동에 잠겼어요.",
+   "blank": "沈んだ",
+   "src": "made"
+  }
+ ],
  "w|沈黙": [
   {
    "text": "取り調べの間、男はずっと沈黙を続けた。",
@@ -47113,6 +47417,22 @@
    "en": "I swam yesterday.",
    "ko": "어제 수영했어.",
    "blank": "泳いだ"
+  }
+ ],
+ "w|洋服": [
+  {
+   "text": "悠斗の妹が着なくなった洋服は、すぐに売れていった。",
+   "en": "The clothes Yuto's younger sister no longer wears sold quickly.",
+   "ko": "유토 여동생이 안 입게 된 옷은 금방 팔려 나갔어요.",
+   "blank": "洋服",
+   "src": "made"
+  },
+  {
+   "text": "何を着ていくか迷って、千尋はクローゼットの洋服を全部出した。",
+   "en": "Unsure what to wear, Chihiro took out all the clothes in her closet.",
+   "ko": "뭘 입고 갈지 고민돼서 치히로는 옷장의 옷을 다 꺼냈어요.",
+   "blank": "洋服",
+   "src": "made"
   }
  ],
  "w|洗う": [
@@ -47437,6 +47757,22 @@
    "src": "made"
   }
  ],
+ "w|浴衣": [
+  {
+   "text": "夏祭りの前なので、浴衣を探す人がたくさん来た。",
+   "en": "Since it was before the summer festival, many people came looking for yukata.",
+   "ko": "여름 축제 전이라 유카타를 찾는 사람이 많이 왔어요.",
+   "blank": "浴衣",
+   "src": "made"
+  },
+  {
+   "text": "夏の野外ライブには、浴衣姿のファンも多かった。",
+   "en": "Many fans wore yukata to the summer outdoor show.",
+   "ko": "여름 야외 공연에는 유카타 차림의 팬도 많았어요.",
+   "blank": "浴衣",
+   "src": "made"
+  }
+ ],
  "w|海": [
   {
    "text": "海に行きたいな。",
@@ -47602,6 +47938,22 @@
    "en": "Short on members, the basketball club at the neighboring school ceased to exist.",
    "ko": "부원이 모자라서 옆 학교 농구부는 없어지고 말았어요.",
    "blank": "消滅",
+   "src": "made"
+  }
+ ],
+ "w|消耗": [
+  {
+   "text": "一日中立っていたので、悠斗は体力をかなり消耗した。",
+   "en": "Having stood all day, Yuto was quite worn out.",
+   "ko": "하루 종일 서 있어서 유토는 체력을 꽤 소모했어요.",
+   "blank": "消耗",
+   "src": "made"
+  },
+  {
+   "text": "三時間立ちっぱなしで、千尋はすっかり消耗していた。",
+   "en": "After standing for three hours straight, Chihiro was completely worn out.",
+   "ko": "세 시간 내내 서 있어서 치히로는 완전히 지쳐 있었어요.",
+   "blank": "消耗",
    "src": "made"
   }
  ],
@@ -48540,6 +48892,22 @@
    "en": "There was a fire in the building next to the pool, and Keiko and the others evacuated outside.",
    "ko": "수영장 옆 건물에서 화재가 나서 게이코네는 밖으로 대피했어요.",
    "blank": "火災",
+   "src": "made"
+  }
+ ],
+ "w|灰色": [
+  {
+   "text": "悠斗が買ったのは、灰色の毛糸で編まれたマフラーだった。",
+   "en": "What Yuto bought was a scarf knitted from gray yarn.",
+   "ko": "유토가 산 건 회색 털실로 뜬 목도리였어요.",
+   "blank": "灰色",
+   "src": "made"
+  },
+  {
+   "text": "開演前の空は灰色の雲に覆われていた。",
+   "en": "Before the show started, the sky was covered with gray clouds.",
+   "ko": "공연 시작 전 하늘은 회색 구름에 덮여 있었어요.",
+   "blank": "灰色",
    "src": "made"
   }
  ],
@@ -50648,6 +51016,22 @@
    "en": "Yoko had something to do after school, so she skipped club activities.",
    "ko": "요코는 방과 후에 볼일이 있어서 동아리 활동을 쉬었어요.",
    "blank": "用事",
+   "src": "made"
+  }
+ ],
+ "w|用品": [
+  {
+   "text": "悠斗の店には、使わなくなったキャンプ用品が並んでいる。",
+   "en": "Camping gear Yuto no longer uses is lined up at his stall.",
+   "ko": "유토의 가게에는 안 쓰게 된 캠핑 용품이 놓여 있어요.",
+   "blank": "用品",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ペンライトなどの応援用品をかばんに詰めた。",
+   "en": "Chihiro packed glow sticks and other cheering goods into her bag.",
+   "ko": "치히로는 펜라이트 같은 응원 용품을 가방에 챙겼어요.",
+   "blank": "用品",
    "src": "made"
   }
  ],
@@ -54627,6 +55011,22 @@
    "blank": "答えられない"
   }
  ],
+ "w|節約": [
+  {
+   "text": "古着を買うのは、節約にもなるし環境にもいい。",
+   "en": "Buying secondhand clothes saves money and is good for the environment.",
+   "ko": "헌 옷을 사는 건 절약도 되고 환경에도 좋아요.",
+   "blank": "節約",
+   "src": "made"
+  },
+  {
+   "text": "遠征費を貯めるため、千尋は毎日お弁当を作って節約している。",
+   "en": "To save for travel to shows, Chihiro packs her lunch every day to economize.",
+   "ko": "원정 비용을 모으려고 치히로는 매일 도시락을 싸서 절약해요.",
+   "blank": "節約",
+   "src": "made"
+  }
+ ],
  "w|箇所": [
   {
    "text": "大輔は、壁紙がはがれている箇所を見つけて報告した。",
@@ -55781,6 +56181,22 @@
    "en": "Will you renew the contract?",
    "ko": "계약을 지속할 거야?",
    "blank": "継続"
+  }
+ ],
+ "w|続々": [
+  {
+   "text": "開場と同時に、客が続々と入ってきた。",
+   "en": "As soon as it opened, customers poured in one after another.",
+   "ko": "개장하자마자 손님들이 속속 들어왔어요.",
+   "blank": "続々",
+   "src": "made"
+  },
+  {
+   "text": "開場時間になると、ファンが続々と集まってきた。",
+   "en": "When the doors opened, fans gathered one after another.",
+   "ko": "입장 시간이 되자 팬들이 속속 모여들었어요.",
+   "blank": "続々",
+   "src": "made"
   }
  ],
  "w|続く": [
@@ -58209,6 +58625,22 @@
    "blank": "荷物"
   }
  ],
+ "w|華麗": [
+  {
+   "text": "隣のおばあさんは、華麗な手つきで品物を包んだ。",
+   "en": "The elderly woman next door wrapped items with graceful hands.",
+   "ko": "옆 할머니는 화려한 손놀림으로 물건을 포장했어요.",
+   "blank": "華麗",
+   "src": "made"
+  },
+  {
+   "text": "ギタリストの華麗なソロに、千尋は息をのんだ。",
+   "en": "Chihiro held her breath at the guitarist's brilliant solo.",
+   "ko": "기타리스트의 화려한 솔로에 치히로는 숨을 삼켰어요.",
+   "blank": "華麗",
+   "src": "made"
+  }
+ ],
  "w|著作": [
   {
    "text": "彼の著作を読んだ。",
@@ -58221,6 +58653,22 @@
    "en": "Mind the copyright.",
    "ko": "저작권에 주의해.",
    "blank": "著作"
+  }
+ ],
+ "w|著名": [
+  {
+   "text": "著名な画家のサインが入った絵本が、段ボールの中から出てきた。",
+   "en": "A picture book signed by a famous artist turned up in a cardboard box.",
+   "ko": "유명한 화가 사인이 든 그림책이 상자 안에서 나왔어요.",
+   "blank": "著名",
+   "src": "made"
+  },
+  {
+   "text": "今夜のゲストは、著名なピアニストだった。",
+   "en": "Tonight's guest was a renowned pianist.",
+   "ko": "오늘 밤 게스트는 저명한 피아니스트였어요.",
+   "blank": "著名",
+   "src": "made"
   }
  ],
  "w|著書": [
@@ -58528,6 +58976,22 @@
    "en": "This pharmacy aims to combine traditional herbal and Western medicine.",
    "ko": "이 약국은 한방과 서양 약의 융합을 지향해요.",
    "blank": "融合",
+   "src": "made"
+  }
+ ],
+ "w|融資": [
+  {
+   "text": "隣の男性は、店を開くための融資を銀行に断られたと話していた。",
+   "en": "The man next door said the bank had turned down his loan to open a shop.",
+   "ko": "옆 남성은 가게를 열려고 은행에 대출을 거절당했다고 말했어요.",
+   "blank": "融資",
+   "src": "made"
+  },
+  {
+   "text": "新しいホールは、市からの融資を受けて建てられた。",
+   "en": "The new hall was built with a loan from the city.",
+   "ko": "새 홀은 시에서 융자를 받아 지어졌어요.",
+   "blank": "融資",
    "src": "made"
   }
  ],
@@ -60103,6 +60567,22 @@
    "src": "made"
   }
  ],
+ "w|解ける": [
+  {
+   "text": "古い知恵の輪がなかなか解けなくて、悠斗は夢中になった。",
+   "en": "Yuto got absorbed in an old wire puzzle he couldn't easily solve.",
+   "ko": "오래된 고리 퍼즐이 좀처럼 안 풀려서 유토는 푹 빠졌어요.",
+   "blank": "解け",
+   "src": "made"
+  },
+  {
+   "text": "演奏が始まると、千尋の緊張は少しずつ解けていった。",
+   "en": "Once the performance began, Chihiro's nerves gradually eased.",
+   "ko": "연주가 시작되자 치히로의 긴장은 조금씩 풀려 갔어요.",
+   "blank": "解けて",
+   "src": "made"
+  }
+ ],
  "w|解体": [
   {
    "text": "古いジムの建物は、来年解体されるそうだ。",
@@ -61293,6 +61773,22 @@
    "en": "Our understanding is off.",
    "ko": "인식이 어긋나 있네.",
    "blank": "認識"
+  }
+ ],
+ "w|誓う": [
+  {
+   "text": "次は朝一番に来ようと、悠斗は心に誓った。",
+   "en": "Yuto vowed to himself to come first thing in the morning next time.",
+   "ko": "다음엔 아침 일찍 오겠다고 유토는 마음속으로 맹세했어요.",
+   "blank": "誓った",
+   "src": "made"
+  },
+  {
+   "text": "次のツアーも必ず行くと、千尋は友達と誓い合った。",
+   "en": "Chihiro and her friend swore to each other that they'd definitely go to the next tour.",
+   "ko": "다음 투어도 꼭 가자고 치히로는 친구와 서로 맹세했어요.",
+   "blank": "誓い",
+   "src": "made"
   }
  ],
  "w|誕生": [
@@ -62623,6 +63119,22 @@
    "src": "made"
   }
  ],
+ "w|買取": [
+  {
+   "text": "売れ残ったものは、近くの店で買取をしてもらうつもりだ。",
+   "en": "Yuto plans to have the unsold items bought by a nearby shop.",
+   "ko": "팔다 남은 물건은 근처 가게에서 매입해 달라고 할 생각이에요.",
+   "blank": "買取",
+   "src": "made"
+  },
+  {
+   "text": "行けなくなったチケットの買取は、公式サイトでは受け付けていない。",
+   "en": "The official site doesn't buy back tickets for shows you can no longer attend.",
+   "ko": "못 가게 된 티켓 매입은 공식 사이트에서 받지 않아요.",
+   "blank": "買取",
+   "src": "made"
+  }
+ ],
  "w|貸す": [
   {
    "text": "私は誰にもこの時計を貸すつもりはありません。ましてや手放すつもりなど毛頭ありません。",
@@ -62682,6 +63194,22 @@
    "en": "Spices spread around the world through trade long ago.",
    "ko": "향신료는 옛날부터 무역으로 전 세계에 퍼졌어요.",
    "blank": "貿易",
+   "src": "made"
+  }
+ ],
+ "w|賃金": [
+  {
+   "text": "隣の出店者は、アルバイトの賃金が上がらないと愚痴をこぼしていた。",
+   "en": "The neighboring stallholder was complaining that wages for part-time work weren't going up.",
+   "ko": "옆 판매자는 아르바이트 임금이 오르지 않는다고 투덜댔어요.",
+   "blank": "賃金",
+   "src": "made"
+  },
+  {
+   "text": "会場スタッフの賃金は、終電を過ぎると割増になるそうだ。",
+   "en": "Venue staff wages apparently go up after the last train has left.",
+   "ko": "공연장 스태프 임금은 막차 시간이 지나면 할증된대요.",
+   "blank": "賃金",
    "src": "made"
   }
  ],
@@ -62819,6 +63347,22 @@
    "src": "made"
   }
  ],
+ "w|賞金": [
+  {
+   "text": "会場では、値切り大会の優勝者に賞金が出るらしい。",
+   "en": "Apparently there's prize money for the winner of the bargaining contest at the venue.",
+   "ko": "행사장에서는 흥정 대회 우승자에게 상금이 나온대요.",
+   "blank": "賞金",
+   "src": "made"
+  },
+  {
+   "text": "ボーカルは、昔のオーディションで得た賞金で初めてギターを買ったそうだ。",
+   "en": "The vocalist apparently bought a first guitar with prize money won at an audition long ago.",
+   "ko": "보컬은 옛날 오디션에서 받은 상금으로 처음 기타를 샀대요.",
+   "blank": "賞金",
+   "src": "made"
+  }
+ ],
  "w|賠償": [
   {
    "text": "公民の授業で、事故の賠償の仕組みを学んだ。",
@@ -62938,6 +63482,22 @@
    "en": "Yoko treated herself to the luxury of staying at a hotel with an ocean view.",
    "ko": "요코는 바다가 보이는 호텔에 묵는 사치를 부렸어요.",
    "blank": "贅沢",
+   "src": "made"
+  }
+ ],
+ "w|贈り物": [
+  {
+   "text": "悠斗は、母への贈り物にぴったりの小さな花瓶を見つけた。",
+   "en": "Yuto found a small vase perfect as a gift for his mother.",
+   "ko": "유토는 엄마에게 줄 선물로 딱 맞는 작은 꽃병을 찾았어요.",
+   "blank": "贈り物",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ファンからの贈り物を受け付けるボックスに手紙を入れた。",
+   "en": "Chihiro put a letter into the box for gifts from fans.",
+   "ko": "치히로는 팬 선물을 받는 상자에 편지를 넣었어요.",
+   "blank": "贈り物",
    "src": "made"
   }
  ],
@@ -63550,6 +64110,22 @@
    "en": "When he was young, Chihiro's grandfather built bridges in the army.",
    "ko": "치히로의 할아버지는 젊었을 때 군대에서 다리를 놓는 일을 했어요.",
    "blank": "軍隊",
+   "src": "made"
+  }
+ ],
+ "w|転売": [
+  {
+   "text": "このフリーマーケットでは、業者による転売は禁止されている。",
+   "en": "At this flea market, reselling by dealers is prohibited.",
+   "ko": "이 벼룩시장에서는 업자의 되팔기가 금지돼 있어요.",
+   "blank": "転売",
+   "src": "made"
+  },
+  {
+   "text": "チケットの転売を防ぐため、入場時に本人確認がある。",
+   "en": "To prevent ticket reselling, IDs are checked at the entrance.",
+   "ko": "티켓 되팔기를 막으려고 입장할 때 본인 확인을 해요.",
+   "blank": "転売",
    "src": "made"
   }
  ],
@@ -66991,6 +67567,22 @@
    "blank": "金融"
   }
  ],
+ "w|金銭": [
+  {
+   "text": "出店者同士の金銭のやり取りは、トラブルのもとになりやすい。",
+   "en": "Money dealings between stallholders easily lead to trouble.",
+   "ko": "판매자끼리의 금전 거래는 문제가 생기기 쉬워요.",
+   "blank": "金銭",
+   "src": "made"
+  },
+  {
+   "text": "会場内での金銭の貸し借りは、トラブルになるのでやめましょう。",
+   "en": "Please don't lend or borrow money inside the venue, as it causes trouble.",
+   "ko": "공연장 안에서 돈을 빌리고 빌려주는 건 문제가 되니 하지 맙시다.",
+   "blank": "金銭",
+   "src": "made"
+  }
+ ],
  "w|金額": [
   {
    "text": "悠斗はレシートの金額を見て、使いすぎたと反省した。",
@@ -67419,6 +68011,22 @@
    "blank": "開始"
   }
  ],
+ "w|開封": [
+  {
+   "text": "未開封のプラモデルは、マニアの間で人気がある。",
+   "en": "Unopened plastic models are popular among enthusiasts.",
+   "ko": "미개봉 프라모델은 마니아들 사이에서 인기가 있어요.",
+   "blank": "開封",
+   "src": "made"
+  },
+  {
+   "text": "届いたファンクラブの会報を、千尋はわくわくしながら開封した。",
+   "en": "Chihiro excitedly opened the fan club newsletter that had arrived.",
+   "ko": "도착한 팬클럽 회보를 치히로는 두근거리며 개봉했어요.",
+   "blank": "開封",
+   "src": "made"
+  }
+ ],
  "w|開幕": [
   {
    "text": "市民マラソンの開幕を前に、悠斗たちは準備に追われた。",
@@ -67555,6 +68163,22 @@
    "en": "I made the train!",
    "ko": "기차 탔어!",
    "blank": "間に合った"
+  }
+ ],
+ "w|間接": [
+  {
+   "text": "悠斗は友人を通して間接的に、この会場のことを知った。",
+   "en": "Yuto learned about this venue indirectly, through a friend.",
+   "ko": "유토는 친구를 통해 간접적으로 이 행사장을 알게 됐어요.",
+   "blank": "間接",
+   "src": "made"
+  },
+  {
+   "text": "間接照明だけのステージは、幻想的な雰囲気だった。",
+   "en": "The stage, lit only by indirect lighting, had a dreamlike atmosphere.",
+   "ko": "간접 조명만 있는 무대는 몽환적인 분위기였어요.",
+   "blank": "間接",
+   "src": "made"
   }
  ],
  "w|間違い": [
@@ -70277,6 +70901,22 @@
    "en": "The highway is jammed.",
    "ko": "고속도로가 막혀 있어.",
    "blank": "高速"
+  }
+ ],
+ "w|高額": [
+  {
+   "text": "悠斗は、高額な品だけは念のため箱に入れて足元に置いた。",
+   "en": "Just in case, Yuto put only the expensive items in a box at his feet.",
+   "ko": "유토는 비싼 물건만 만약을 위해 상자에 넣어 발밑에 뒀어요.",
+   "blank": "高額",
+   "src": "made"
+  },
+  {
+   "text": "一番前の席は、驚くほど高額だった。",
+   "en": "The front-row seats were surprisingly expensive.",
+   "ko": "맨 앞자리는 놀랄 만큼 비쌌어요.",
+   "blank": "高額",
+   "src": "made"
   }
  ],
  "w|高齢": [

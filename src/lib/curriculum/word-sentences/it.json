@@ -3233,6 +3233,22 @@
    "src": "made"
   }
  ],
+ "w|anormale": [
+  {
+   "text": "Paolo nota una crepa anormale sulla statua e avvisa il custode.",
+   "en": "Paolo notices an abnormal crack on the statue and alerts the guard.",
+   "ko": "파올로는 조각상에 생긴 이상한 금을 보고 경비원에게 알려요.",
+   "blank": "anormale",
+   "src": "made"
+  },
+  {
+   "text": "L'idraulico trova una pressione anormale nei tubi di Francesca.",
+   "en": "The plumber finds abnormal pressure in Francesca's pipes.",
+   "ko": "배관공이 프란체스카네 배관에서 비정상적인 압력을 발견해요.",
+   "blank": "anormale",
+   "src": "made"
+  }
+ ],
  "w|ansia": [
   {
    "text": "L'ansia prima dell'esame è normale.",
@@ -3975,6 +3991,22 @@
    "src": "made"
   }
  ],
+ "w|ardente": [
+  {
+   "text": "Paolo è un ardente appassionato di pittura fiamminga.",
+   "en": "Paolo is an ardent lover of Flemish painting.",
+   "ko": "파올로는 플랑드르 회화의 열렬한 애호가예요.",
+   "blank": "ardente",
+   "src": "made"
+  },
+  {
+   "text": "Francesca accende il camino e guarda le braci ardenti.",
+   "en": "Francesca lights the fireplace and watches the glowing embers.",
+   "ko": "프란체스카는 벽난로에 불을 피우고 이글거리는 숯불을 바라봐요.",
+   "blank": "ardenti",
+   "src": "made"
+  }
+ ],
  "w|area": [
   {
    "text": "Questa area è riservata ai soci.",
@@ -4539,6 +4571,22 @@
    "src": "made"
   }
  ],
+ "w|assalire": [
+  {
+   "text": "Davanti al quadro della battaglia, un dubbio improvviso assale Paolo sulla data.",
+   "en": "In front of the battle painting, a sudden doubt about the date seizes Paolo.",
+   "ko": "전투 그림 앞에서 파올로는 갑자기 날짜가 맞는지 의심이 들어요.",
+   "blank": "assale",
+   "src": "made"
+  },
+  {
+   "text": "Quando apre la cantina, un odore di muffa assale Francesca.",
+   "en": "When she opens the cellar, a smell of mould hits Francesca.",
+   "ko": "지하실 문을 열자 곰팡이 냄새가 프란체스카를 덮쳐요.",
+   "blank": "assale",
+   "src": "made"
+  }
+ ],
  "w|assalto": [
   {
    "text": "Nella sala storica Davide ha visto un dipinto sull'assalto al castello del paese.",
@@ -4689,6 +4737,22 @@
    "en": "I assure you everything will be fine.",
    "ko": "다 잘될 거라고 장담해.",
    "blank": "assicuro"
+  }
+ ],
+ "w|assicurativo": [
+  {
+   "text": "Per il prestito del quadro, il museo ha firmato un contratto assicurativo milionario, legge Paolo.",
+   "en": "For the loan of the painting, the museum signed a multi-million insurance contract, Paolo reads.",
+   "ko": "파올로는 그 그림을 빌려 오려고 박물관이 수백만 유로짜리 보험 계약을 맺었다는 글을 읽어요.",
+   "blank": "assicurativo",
+   "src": "made"
+  },
+  {
+   "text": "Francesca chiama l'agente assicurativo dopo l'infiltrazione d'acqua.",
+   "en": "Francesca calls the insurance agent after the water leak.",
+   "ko": "물이 샌 뒤 프란체스카는 보험 설계사에게 전화해요.",
+   "blank": "assicurativo",
+   "src": "made"
   }
  ],
  "w|assicurazione": [
@@ -5016,6 +5080,22 @@
    "en": "The guests wait in the villa's entrance hall, and Anna hands out the programmes.",
    "ko": "손님들이 저택 현관홀에서 기다리고, 안나는 순서지를 나눠 줘요.",
    "blank": "atrio",
+   "src": "made"
+  }
+ ],
+ "w|atroce": [
+  {
+   "text": "La guida descrive a Paolo le condizioni atroci delle prigioni di un tempo.",
+   "en": "The guide describes to Paolo the dreadful conditions of the old prisons.",
+   "ko": "가이드가 파올로에게 옛날 감옥의 끔찍한 환경을 설명해요.",
+   "blank": "atroci",
+   "src": "made"
+  },
+  {
+   "text": "Il colore scelto dal vecchio proprietario è atroce, secondo Francesca.",
+   "en": "The colour chosen by the old owner is dreadful, according to Francesca.",
+   "ko": "프란체스카가 보기에 예전 주인이 고른 색은 끔찍해요.",
+   "blank": "atroce",
    "src": "made"
   }
  ],
@@ -7743,6 +7823,22 @@
    "en": "The news was a bombshell.",
    "ko": "그 소식은 엄청난 충격이었어.",
    "blank": "bomba"
+  }
+ ],
+ "w|bombardamento": [
+  {
+   "text": "Una foto in bianco e nero mostra a Paolo la città dopo il bombardamento della guerra.",
+   "en": "A black-and-white photo shows Paolo the city after the wartime bombing.",
+   "ko": "흑백 사진 한 장이 파올로에게 전쟁 폭격 뒤의 도시를 보여 줘요.",
+   "blank": "bombardamento",
+   "src": "made"
+  },
+  {
+   "text": "I muri della casa di Francesca hanno resistito anche al bombardamento del quarantatré.",
+   "en": "The walls of Francesca's house even withstood the bombing of forty-three.",
+   "ko": "프란체스카네 집 벽은 사십삼 년 폭격도 견뎌 냈어요.",
+   "blank": "bombardamento",
+   "src": "made"
   }
  ],
  "w|bordello": [
@@ -12343,6 +12439,22 @@
    "blank": "colpevole"
   }
  ],
+ "w|colpevolezza": [
+  {
+   "text": "Un pannello spiega a Paolo come i giudici di allora decidevano la colpevolezza di un uomo.",
+   "en": "A panel explains to Paolo how judges back then decided a man's guilt.",
+   "ko": "안내판이 파올로에게 당시 판사들이 사람의 유죄를 어떻게 판단했는지 설명해요.",
+   "blank": "colpevolezza",
+   "src": "made"
+  },
+  {
+   "text": "In un romanzo trovato in soffitta Francesca legge un processo in cui la colpevolezza del maggiordomo resta un mistero.",
+   "en": "In a novel found in the attic Francesca reads about a trial where the butler's guilt remains a mystery.",
+   "ko": "다락방에서 찾은 소설에서 프란체스카는 집사의 유죄가 끝내 수수께끼로 남는 재판 이야기를 읽어요.",
+   "blank": "colpevolezza",
+   "src": "made"
+  }
+ ],
  "w|colpire": [
   {
    "text": "Mi ha colpito la sua onestà.",
@@ -14111,6 +14223,22 @@
    "src": "made"
   }
  ],
+ "w|consapevolezza": [
+  {
+   "text": "La mostra sul clima dà a Paolo una nuova consapevolezza dei suoi sprechi.",
+   "en": "The climate exhibition gives Paolo a new awareness of how much he wastes.",
+   "ko": "기후 전시를 보고 파올로는 자기가 얼마나 낭비하는지 새삼 깨달아요.",
+   "blank": "consapevolezza",
+   "src": "made"
+  },
+  {
+   "text": "I lavori hanno dato a Francesca la consapevolezza di quanto costa una casa.",
+   "en": "The renovation has made Francesca aware of how much a house costs.",
+   "ko": "공사를 하며 프란체스카는 집 한 채에 돈이 얼마나 드는지 깨달았어요.",
+   "blank": "consapevolezza",
+   "src": "made"
+  }
+ ],
  "w|consegna": [
   {
    "text": "La consegna arriverà entro due giorni.",
@@ -14364,6 +14492,22 @@
    "en": "In winter Chiara tries to use less gas by turning the heating down at night.",
    "ko": "겨울에 키아라는 밤에 난방을 낮춰서 가스를 덜 쓰려고 해요.",
    "blank": "consumare",
+   "src": "made"
+  }
+ ],
+ "w|consumo": [
+  {
+   "text": "Una sala interattiva mostra a Paolo quanto è cambiato il consumo di carne in cent'anni.",
+   "en": "An interactive room shows Paolo how much meat consumption has changed in a hundred years.",
+   "ko": "체험관이 파올로에게 백 년 동안 고기 소비가 얼마나 달라졌는지 보여 줘요.",
+   "blank": "consumo",
+   "src": "made"
+  },
+  {
+   "text": "Con la nuova caldaia Francesca riduce il consumo di gas.",
+   "en": "With the new boiler Francesca cuts her gas consumption.",
+   "ko": "새 보일러 덕분에 프란체스카는 가스 사용량을 줄여요.",
+   "blank": "consumo",
    "src": "made"
   }
  ],
@@ -16093,6 +16237,22 @@
    "en": "She wears a silver cross around her neck.",
    "ko": "목에 은 십자가를 걸고 있어.",
    "blank": "croce"
+  }
+ ],
+ "w|crociata": [
+  {
+   "text": "In una vetrina Paolo vede la spada di un cavaliere partito per la crociata.",
+   "en": "In a display case Paolo sees the sword of a knight who left for the crusade.",
+   "ko": "진열장에서 파올로는 십자군 원정을 떠난 기사의 칼을 봐요.",
+   "blank": "crociata",
+   "src": "made"
+  },
+  {
+   "text": "Per Francesca salvare le travi antiche è diventata una vera crociata.",
+   "en": "For Francesca saving the old beams has become a real crusade.",
+   "ko": "프란체스카에게 오래된 들보를 살리는 건 진짜 성전이 됐어요.",
+   "blank": "crociata",
+   "src": "made"
   }
  ],
  "w|crociera": [
@@ -18137,6 +18297,22 @@
    "src": "made"
   }
  ],
+ "w|diffuso": [
+  {
+   "text": "Una mappa mostra a Paolo quanto era diffuso il latino nel Medioevo.",
+   "en": "A map shows Paolo how widespread Latin was in the Middle Ages.",
+   "ko": "지도가 파올로에게 중세에 라틴어가 얼마나 널리 쓰였는지 보여 줘요.",
+   "blank": "diffuso",
+   "src": "made"
+  },
+  {
+   "text": "Nelle case di quella zona l'umidità è un problema diffuso, spiega Francesca.",
+   "en": "In the houses of that area damp is a widespread problem, Francesca explains.",
+   "ko": "그 동네 집들은 습기가 흔한 문제라고 프란체스카가 설명해요.",
+   "blank": "diffuso",
+   "src": "made"
+  }
+ ],
  "w|digitale": [
   {
    "text": "Preferisco la fotografia digitale.",
@@ -18563,6 +18739,22 @@
    "en": "The unease on the train was obvious.",
    "ko": "기차 안에서의 불편함이 분명했어.",
    "blank": "disagio"
+  }
+ ],
+ "w|disarmare": [
+  {
+   "text": "In un video Paolo vede i soldati disarmare le mine dopo la guerra.",
+   "en": "In a video Paolo sees soldiers disarming mines after the war.",
+   "ko": "영상에서 파올로는 전쟁 뒤 군인들이 지뢰를 해체하는 모습을 봐요.",
+   "blank": "disarmare",
+   "src": "made"
+  },
+  {
+   "text": "Il sorriso del vecchio vicino riesce a disarmare Francesca anche quando è arrabbiata.",
+   "en": "The old neighbour's smile manages to disarm Francesca even when she is angry.",
+   "ko": "이웃 할아버지의 미소는 화가 난 프란체스카도 누그러뜨려요.",
+   "blank": "disarmare",
+   "src": "made"
   }
  ],
  "w|disastro": [
@@ -19993,6 +20185,22 @@
    "src": "made"
   }
  ],
+ "w|dottorato": [
+  {
+   "text": "La guida del museo ha fatto un dottorato in storia dell'arte, scopre Paolo.",
+   "en": "The museum guide did a doctorate in art history, Paolo finds out.",
+   "ko": "파올로는 박물관 가이드가 미술사 박사 학위를 받았다는 걸 알게 돼요.",
+   "blank": "dottorato",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ristruttura la casa mentre finisce il dottorato in architettura.",
+   "en": "Francesca is renovating the house while she finishes her doctorate in architecture.",
+   "ko": "프란체스카는 건축학 박사 과정을 마무리하면서 집을 고쳐요.",
+   "blank": "dottorato",
+   "src": "made"
+  }
+ ],
  "w|dottore": [
   {
    "text": "Devo passare dal dottore.",
@@ -20735,6 +20943,22 @@
    "src": "made"
   }
  ],
+ "w|effrazione": [
+  {
+   "text": "Il custode racconta a Paolo di un'effrazione avvenuta di notte nell'ala egizia.",
+   "en": "The guard tells Paolo about a break-in that happened at night in the Egyptian wing.",
+   "ko": "경비원이 파올로에게 이집트관에서 밤에 일어난 침입 사건을 이야기해 줘요.",
+   "blank": "effrazione",
+   "src": "made"
+  },
+  {
+   "text": "Francesca mette una porta blindata dopo un tentativo di effrazione.",
+   "en": "Francesca puts in a reinforced door after an attempted break-in.",
+   "ko": "누군가 침입하려 한 뒤 프란체스카는 방범문을 달아요.",
+   "blank": "effrazione",
+   "src": "made"
+  }
+ ],
  "w|egli": [
   {
    "text": "Egli arriva sempre in orario.",
@@ -20931,6 +21155,22 @@
    "src": "made"
   }
  ],
+ "w|elettore": [
+  {
+   "text": "Nella sala della storia Paolo vede le schede usate da ogni elettore nel primo voto delle donne.",
+   "en": "In the history room Paolo sees the ballot papers used by each voter in the first vote for women.",
+   "ko": "역사관에서 파올로는 여성들이 처음 투표했을 때 유권자마다 쓴 투표용지를 봐요.",
+   "blank": "elettore",
+   "src": "made"
+  },
+  {
+   "text": "Nel cassetto Francesca trova il certificato di elettore del bisnonno.",
+   "en": "In the drawer Francesca finds her great-grandfather's voter certificate.",
+   "ko": "프란체스카는 서랍에서 증조할아버지의 유권자 증명서를 찾아요.",
+   "blank": "elettore",
+   "src": "made"
+  }
+ ],
  "w|elettrico": [
   {
    "text": "Abbiamo comprato un forno elettrico.",
@@ -20958,6 +21198,22 @@
    "en": "Chiara has the e-ticket on her phone, but the battery is almost dead.",
    "ko": "키아라는 휴대폰에 전자 승차권이 있는데 배터리가 거의 없어요.",
    "blank": "elettronico",
+   "src": "made"
+  }
+ ],
+ "w|elevare": [
+  {
+   "text": "Secondo Paolo la buona arte riesce a elevare lo spirito.",
+   "en": "According to Paolo good art can lift the spirit.",
+   "ko": "파올로는 좋은 예술이 마음을 고양시킨다고 생각해요.",
+   "blank": "elevare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca vuole elevare il soffitto del salotto per avere più luce.",
+   "en": "Francesca wants to raise the living-room ceiling to get more light.",
+   "ko": "프란체스카는 빛이 더 들도록 거실 천장을 높이고 싶어 해요.",
+   "blank": "elevare",
    "src": "made"
   }
  ],
@@ -22521,6 +22777,22 @@
    "blank": "Evita"
   }
  ],
+ "w|evoluto": [
+  {
+   "text": "La mostra spiega a Paolo come gli antichi Egizi avessero una medicina molto evoluta.",
+   "en": "The exhibition explains to Paolo how the ancient Egyptians had very advanced medicine.",
+   "ko": "전시가 파올로에게 고대 이집트인들의 의학이 얼마나 발달했는지 설명해요.",
+   "blank": "evoluta",
+   "src": "made"
+  },
+  {
+   "text": "Francesca installa un impianto elettrico evoluto che si comanda dal telefono.",
+   "en": "Francesca installs an advanced electrical system that is controlled from her phone.",
+   "ko": "프란체스카는 휴대폰으로 조종하는 최신 전기 설비를 설치해요.",
+   "blank": "evoluto",
+   "src": "made"
+  }
+ ],
  "w|evviva": [
   {
    "text": "Evviva, abbiamo vinto la partita!",
@@ -23125,6 +23397,22 @@
    "en": "It is worth the effort to climb up here.",
    "ko": "여기까지 올라온 보람이 있어.",
    "blank": "fatica"
+  }
+ ],
+ "w|faticoso": [
+  {
+   "text": "Girare tutto il museo in un giorno è faticoso anche per Paolo.",
+   "en": "Going round the whole museum in a day is tiring even for Paolo.",
+   "ko": "하루에 박물관 전체를 도는 건 파올로에게도 힘들어요.",
+   "blank": "faticoso",
+   "src": "made"
+  },
+  {
+   "text": "Togliere la vecchia carta da parati è un lavoro faticoso per Francesca.",
+   "en": "Stripping the old wallpaper is tiring work for Francesca.",
+   "ko": "낡은 벽지를 떼는 건 프란체스카에게 힘든 일이에요.",
+   "blank": "faticoso",
+   "src": "made"
   }
  ],
  "w|fatto": [
@@ -25201,6 +25489,22 @@
    "en": "There are no secrets between us.",
    "ko": "우리 사이엔 비밀이 없어.",
    "blank": "Fra"
+  }
+ ],
+ "w|fradicio": [
+  {
+   "text": "Paolo entra al museo fradicio di pioggia e lascia l'ombrello all'ingresso.",
+   "en": "Paolo enters the museum soaked with rain and leaves his umbrella at the entrance.",
+   "ko": "파올로는 비에 흠뻑 젖은 채 박물관에 들어가 입구에 우산을 맡겨요.",
+   "blank": "fradicio",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il temporale il pavimento della cantina di Francesca è fradicio.",
+   "en": "After the storm the floor of Francesca's cellar is soaking wet.",
+   "ko": "폭풍우 뒤 프란체스카네 지하실 바닥이 흠뻑 젖었어요.",
+   "blank": "fradicio",
+   "src": "made"
   }
  ],
  "w|fragile": [
@@ -29823,6 +30127,22 @@
    "src": "made"
   }
  ],
+ "w|incosciente": [
+  {
+   "text": "Un turista incosciente tocca il quadro e l'allarme fa sobbalzare Paolo.",
+   "en": "A reckless tourist touches the painting and the alarm makes Paolo jump.",
+   "ko": "무모한 관광객이 그림을 만지자 경보가 울려 파올로가 깜짝 놀라요.",
+   "blank": "incosciente",
+   "src": "made"
+  },
+  {
+   "text": "Il fratello di Francesca è incosciente e sale sul tetto senza corda.",
+   "en": "Francesca's brother is reckless and climbs onto the roof without a rope.",
+   "ko": "프란체스카의 남동생은 겁이 없어서 밧줄도 없이 지붕에 올라가요.",
+   "blank": "incosciente",
+   "src": "made"
+  }
+ ],
  "w|incredibile": [
   {
    "text": "È una storia incredibile.",
@@ -30809,6 +31129,22 @@
    "blank": "ingresso"
   }
  ],
+ "w|iniettare": [
+  {
+   "text": "Nella sala della medicina Paolo vede le prime siringhe usate per iniettare i vaccini.",
+   "en": "In the medicine room Paolo sees the first syringes used to inject vaccines.",
+   "ko": "의학 전시실에서 파올로는 백신을 주사하던 초기 주사기를 봐요.",
+   "blank": "iniettare",
+   "src": "made"
+  },
+  {
+   "text": "Il tecnico deve iniettare una resina speciale nelle crepe dei muri di Francesca.",
+   "en": "The technician has to inject a special resin into the cracks in Francesca's walls.",
+   "ko": "기술자가 프란체스카네 벽 틈에 특수 수지를 주입해야 해요.",
+   "blank": "iniettare",
+   "src": "made"
+  }
+ ],
  "w|iniezione": [
   {
    "text": "Paolo ha paura dell'iniezione più che del trapano.",
@@ -31493,6 +31829,22 @@
    "src": "made"
   }
  ],
+ "w|intercettazione": [
+  {
+   "text": "Nella mostra sulla guerra fredda Paolo ascolta un'intercettazione di due spie.",
+   "en": "In the Cold War exhibition Paolo listens to a wiretap of two spies.",
+   "ko": "냉전 전시에서 파올로는 두 스파이의 도청 녹음을 들어요.",
+   "blank": "intercettazione",
+   "src": "made"
+  },
+  {
+   "text": "In un film che Francesca guarda la sera, un'intercettazione svela il colpevole.",
+   "en": "In a film Francesca watches in the evening, a wiretap reveals the culprit.",
+   "ko": "프란체스카가 저녁에 보는 영화에서 도청 내용이 범인을 밝혀요.",
+   "blank": "intercettazione",
+   "src": "made"
+  }
+ ],
  "w|interessante": [
   {
    "text": "Il libro è davvero interessante.",
@@ -32125,6 +32477,22 @@
    "src": "made"
   }
  ],
+ "w|invincibile": [
+  {
+   "text": "La guida dice a Paolo che quell'esercito si credeva invincibile.",
+   "en": "The guide tells Paolo that army believed itself invincible.",
+   "ko": "가이드가 파올로에게 그 군대가 스스로 무적이라고 믿었다고 말해요.",
+   "blank": "invincibile",
+   "src": "made"
+  },
+  {
+   "text": "La muffa in bagno sembra invincibile, ma Francesca non si arrende.",
+   "en": "The mould in the bathroom seems invincible, but Francesca doesn't give up.",
+   "ko": "욕실 곰팡이는 무적 같지만 프란체스카는 포기하지 않아요.",
+   "blank": "invincibile",
+   "src": "made"
+  }
+ ],
  "w|invisibile": [
   {
    "text": "Nella foto la firma era quasi invisibile, ma Luca è riuscito a leggerla con la lente.",
@@ -32492,6 +32860,22 @@
    "en": "Anna finds inspiration for her ideas by walking during the lunch break.",
    "ko": "안나는 점심시간에 걸으면서 아이디어를 얻어요.",
    "blank": "ispirazione",
+   "src": "made"
+  }
+ ],
+ "w|israeliano": [
+  {
+   "text": "Accanto a Paolo un gruppo di studenti israeliani prende appunti davanti ai mosaici.",
+   "en": "Next to Paolo a group of Israeli students takes notes in front of the mosaics.",
+   "ko": "파올로 옆에서 이스라엘 학생들이 모자이크 앞에서 메모를 해요.",
+   "blank": "israeliani",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra delle piastrelle da un artigiano israeliano che vive in paese.",
+   "en": "Francesca buys some tiles from an Israeli craftsman who lives in the village.",
+   "ko": "프란체스카는 마을에 사는 이스라엘 출신 장인에게서 타일을 사요.",
+   "blank": "israeliano",
    "src": "made"
   }
  ],
@@ -33387,6 +33771,22 @@
    "blank": "leggero"
   }
  ],
+ "w|legione": [
+  {
+   "text": "Paolo ammira l'aquila di bronzo di una legione romana.",
+   "en": "Paolo admires the bronze eagle of a Roman legion.",
+   "ko": "파올로는 로마 군단의 청동 독수리를 감상해요.",
+   "blank": "legione",
+   "src": "made"
+  },
+  {
+   "text": "In cantina Francesca trova una legione di formiche dietro i barattoli.",
+   "en": "In the cellar Francesca finds a legion of ants behind the jars.",
+   "ko": "지하실에서 프란체스카는 병 뒤에 우글거리는 개미 떼를 발견해요.",
+   "blank": "legione",
+   "src": "made"
+  }
+ ],
  "w|legittimo": [
   {
    "text": "Il giudice ha stabilito chi fosse il legittimo proprietario della casa, e Andrea ha scritto la decisione.",
@@ -33685,6 +34085,22 @@
    "en": "What did you leave there?",
    "ko": "거기에 뭘 두고 왔어?",
    "blank": "lì"
+  }
+ ],
+ "w|liberale": [
+  {
+   "text": "La guida spiega a Paolo le idee liberali dei fondatori della città.",
+   "en": "The guide explains the liberal ideas of the city's founders to Paolo.",
+   "ko": "가이드가 파올로에게 도시 설립자들의 자유주의 사상을 설명해요.",
+   "blank": "liberali",
+   "src": "made"
+  },
+  {
+   "text": "Il nonno di Francesca era un medico liberale e la casa era piena di libri.",
+   "en": "Francesca's grandfather was a liberal doctor and the house was full of books.",
+   "ko": "프란체스카의 할아버지는 자유주의 의사였고 집에는 책이 가득했어요.",
+   "blank": "liberale",
+   "src": "made"
   }
  ],
  "w|liberare": [
@@ -34705,6 +35121,22 @@
    "src": "made"
   }
  ],
+ "w|mafioso": [
+  {
+   "text": "Una sala racconta a Paolo la storia dei giudici che hanno lottato contro i mafiosi.",
+   "en": "A room tells Paolo the story of the judges who fought against the mafiosi.",
+   "ko": "한 전시실이 파올로에게 마피아와 싸운 판사들의 이야기를 들려줘요.",
+   "blank": "mafiosi",
+   "src": "made"
+  },
+  {
+   "text": "In paese raccontano a Francesca che la casa era appartenuta a un mafioso arrestato negli anni Ottanta.",
+   "en": "In the village they tell Francesca the house had belonged to a mafioso arrested in the eighties.",
+   "ko": "마을 사람들이 프란체스카에게 그 집이 팔십 년대에 체포된 마피아 단원의 것이었다고 말해요.",
+   "blank": "mafioso",
+   "src": "made"
+  }
+ ],
  "w|magari": [
   {
    "text": "Magari vincessi un viaggio.",
@@ -35415,6 +35847,22 @@
    "en": "Wash your hands before dinner.",
    "ko": "저녁 먹기 전에 손 씻어.",
    "blank": "mani"
+  }
+ ],
+ "w|manoscritto": [
+  {
+   "text": "Dietro il vetro Paolo vede un manoscritto medievale con le lettere d'oro.",
+   "en": "Behind the glass Paolo sees a medieval manuscript with golden letters.",
+   "ko": "유리 너머로 파올로는 금박 글자가 있는 중세 필사본을 봐요.",
+   "blank": "manoscritto",
+   "src": "made"
+  },
+  {
+   "text": "Sotto le assi del pavimento Francesca scopre il manoscritto di un romanzo mai pubblicato.",
+   "en": "Under the floorboards Francesca discovers the manuscript of a novel that was never published.",
+   "ko": "마룻바닥 밑에서 프란체스카는 출간되지 않은 소설 원고를 발견해요.",
+   "blank": "manoscritto",
+   "src": "made"
   }
  ],
  "w|manovra": [
@@ -42191,6 +42639,22 @@
    "blank": "palco"
   }
  ],
+ "w|palcoscenico": [
+  {
+   "text": "Nel museo del teatro Paolo sale su un vero palcoscenico dell'Ottocento.",
+   "en": "In the theatre museum Paolo goes up onto a real nineteenth-century stage.",
+   "ko": "연극 박물관에서 파올로는 진짜 십구 세기 무대 위에 올라가요.",
+   "blank": "palcoscenico",
+   "src": "made"
+  },
+  {
+   "text": "In soffitta Francesca trova le tavole di un vecchio palcoscenico per marionette.",
+   "en": "In the attic Francesca finds the boards of an old puppet stage.",
+   "ko": "프란체스카는 다락방에서 낡은 인형극 무대 판자를 찾아요.",
+   "blank": "palcoscenico",
+   "src": "made"
+  }
+ ],
  "w|palestra": [
   {
    "text": "Vado in palestra tre volte a settimana.",
@@ -43412,6 +43876,22 @@
    "en": "Elena's neighbour has a sheep that always gets into her vegetable garden.",
    "ko": "엘레나의 이웃에게는 늘 엘레나네 텃밭에 들어오는 양이 한 마리 있어요.",
    "blank": "pecora",
+   "src": "made"
+  }
+ ],
+ "w|pedinare": [
+  {
+   "text": "Nel museo del cinema Paolo vede la scena di un detective che pedina un sospetto.",
+   "en": "In the film museum Paolo watches a scene of a detective tailing a suspect.",
+   "ko": "영화 박물관에서 파올로는 형사가 용의자를 미행하는 장면을 봐요.",
+   "blank": "pedina",
+   "src": "made"
+  },
+  {
+   "text": "Il gatto del vicino pedina Francesca per tutta la casa mentre lavora.",
+   "en": "The neighbour's cat follows Francesca all over the house while she works.",
+   "ko": "이웃집 고양이가 일하는 프란체스카를 집 안 곳곳 따라다녀요.",
+   "blank": "pedina",
    "src": "made"
   }
  ],
@@ -45193,6 +45673,22 @@
    "en": "We try to use less plastic at home.",
    "ko": "집에서는 플라스틱을 덜 쓰려고 해.",
    "blank": "plastica"
+  }
+ ],
+ "w|plausibile": [
+  {
+   "text": "La guida offre a Paolo una spiegazione plausibile del mistero della statua.",
+   "en": "The guide offers Paolo a plausible explanation of the statue's mystery.",
+   "ko": "가이드가 파올로에게 조각상의 수수께끼에 대해 그럴듯한 설명을 해 줘요.",
+   "blank": "plausibile",
+   "src": "made"
+  },
+  {
+   "text": "Il preventivo dell'impresa sembra plausibile, ma Francesca ne chiede un altro.",
+   "en": "The firm's estimate seems plausible, but Francesca asks for another one.",
+   "ko": "업체 견적이 그럴듯해 보이지만 프란체스카는 다른 견적도 받아 봐요.",
+   "blank": "plausibile",
+   "src": "made"
   }
  ],
  "w|plotone": [
@@ -47253,6 +47749,22 @@
    "en": "The safety procedure is mandatory.",
    "ko": "안전 절차는 필수야.",
    "blank": "procedura"
+  }
+ ],
+ "w|processare": [
+  {
+   "text": "Al museo Paolo legge che il ladro del quadro fu processato a Roma nel secolo scorso.",
+   "en": "At the museum Paolo reads that the painting's thief was tried in Rome last century.",
+   "ko": "박물관에서 파올로는 그 그림을 훔친 도둑이 지난 세기에 로마에서 재판을 받았다는 글을 읽어요.",
+   "blank": "processato",
+   "src": "made"
+  },
+  {
+   "text": "Nella vecchia casa Francesca trova un giornale che parla di un brigante processato in paese.",
+   "en": "In the old house Francesca finds a newspaper about a bandit who was tried in the village.",
+   "ko": "오래된 집에서 프란체스카는 마을에서 재판받은 산적에 관한 신문을 발견해요.",
+   "blank": "processato",
+   "src": "made"
   }
  ],
  "w|processo": [
@@ -50319,6 +50831,22 @@
    "src": "made"
   }
  ],
+ "w|regia": [
+  {
+   "text": "Il video sulla storia del museo ha una regia molto elegante, pensa Paolo.",
+   "en": "The video on the museum's history is very elegantly directed, Paolo thinks.",
+   "ko": "파올로는 박물관 역사 영상의 연출이 아주 세련됐다고 생각해요.",
+   "blank": "regia",
+   "src": "made"
+  },
+  {
+   "text": "Il cugino di Francesca lavora alla regia di un documentario sulla casa.",
+   "en": "Francesca's cousin is directing a documentary about the house.",
+   "ko": "프란체스카의 사촌이 그 집에 관한 다큐멘터리를 연출하고 있어요.",
+   "blank": "regia",
+   "src": "made"
+  }
+ ],
  "w|regime": [
   {
    "text": "Una sala racconta a Paolo la vita quotidiana sotto il regime di quegli anni.",
@@ -51621,6 +52149,22 @@
    "blank": "riflettere"
   }
  ],
+ "w|riformatorio": [
+  {
+   "text": "Una mostra racconta a Paolo la vita dei ragazzi chiusi in riformatorio nell'Ottocento.",
+   "en": "An exhibition tells Paolo about the life of boys locked in reform school in the nineteenth century.",
+   "ko": "한 전시가 파올로에게 십구 세기 소년원에 갇힌 아이들의 삶을 보여 줘요.",
+   "blank": "riformatorio",
+   "src": "made"
+  },
+  {
+   "text": "Il muratore di Francesca racconta che da ragazzo è stato in riformatorio e poi ha imparato il mestiere.",
+   "en": "Francesca's builder says he was in reform school as a boy and then learned the trade.",
+   "ko": "프란체스카의 미장이는 어릴 때 소년원에 있다가 그 뒤에 기술을 배웠다고 이야기해요.",
+   "blank": "riformatorio",
+   "src": "made"
+  }
+ ],
  "w|rifornimento": [
   {
    "text": "Il venerdì Marco fa rifornimento di farina e olio per tutto il fine settimana.",
@@ -51975,6 +52519,22 @@
    "en": "They traced the dog's owner.",
    "ko": "그들은 개의 주인을 찾아냈어.",
    "blank": "rintracciato"
+  }
+ ],
+ "w|rinuncia": [
+  {
+   "text": "Il biglietto per la mostra speciale costa troppo, ma la rinuncia pesa a Paolo.",
+   "en": "The ticket for the special exhibition costs too much, but giving it up is hard for Paolo.",
+   "ko": "특별전 표가 너무 비싸지만 파올로는 포기하기가 아쉬워요.",
+   "blank": "rinuncia",
+   "src": "made"
+  },
+  {
+   "text": "Per pagare il tetto Francesca fa una rinuncia: niente vacanze quest'anno.",
+   "en": "To pay for the roof Francesca makes a sacrifice: no holidays this year.",
+   "ko": "지붕 값을 내려고 프란체스카는 올해 휴가를 포기해요.",
+   "blank": "rinuncia",
+   "src": "made"
   }
  ],
  "w|rinunciare": [
@@ -55563,6 +56123,22 @@
    "blank": "scudo"
   }
  ],
+ "w|scultura": [
+  {
+   "text": "Paolo resta a lungo davanti a una scultura di marmo bianco.",
+   "en": "Paolo stands for a long time in front of a white marble sculpture.",
+   "ko": "파올로는 하얀 대리석 조각 앞에 오래 서 있어요.",
+   "blank": "scultura",
+   "src": "made"
+  },
+  {
+   "text": "Nel giardino di Francesca c'è una scultura di pietra coperta di muschio.",
+   "en": "In Francesca's garden there is a stone sculpture covered in moss.",
+   "ko": "프란체스카네 정원에는 이끼로 덮인 돌 조각상이 있어요.",
+   "blank": "scultura",
+   "src": "made"
+  }
+ ],
  "w|scuola": [
   {
    "text": "I ragazzi sono a scuola.",
@@ -56468,6 +57044,22 @@
    "en": "Giulia put together a sequence of old photos to project on the wall.",
    "ko": "줄리아는 벽에 비출 옛 사진들을 차례대로 엮었어요.",
    "blank": "sequenza",
+   "src": "made"
+  }
+ ],
+ "w|sequestrare": [
+  {
+   "text": "Un cartello dice a Paolo che la polizia aveva sequestrato quella statua a un trafficante.",
+   "en": "A sign tells Paolo that the police had seized that statue from a smuggler.",
+   "ko": "안내문에 따르면 그 조각상은 경찰이 밀매업자에게서 압수한 것이에요.",
+   "blank": "sequestrato",
+   "src": "made"
+  },
+  {
+   "text": "Il comune ha sequestrato il cantiere di Francesca perché mancava un permesso.",
+   "en": "The town has seized Francesca's building site because a permit was missing.",
+   "ko": "허가가 하나 빠져서 시청이 프란체스카의 공사 현장을 압류했어요.",
+   "blank": "sequestrato",
    "src": "made"
   }
  ],
@@ -64465,6 +65057,22 @@
    "src": "made"
   }
  ],
+ "w|tralasciare": [
+  {
+   "text": "Per stanchezza Paolo decide di tralasciare la sala delle monete.",
+   "en": "Out of tiredness Paolo decides to skip the coin room.",
+   "ko": "피곤해서 파올로는 동전 전시실은 건너뛰기로 해요.",
+   "blank": "tralasciare",
+   "src": "made"
+  },
+  {
+   "text": "Francesca non vuole tralasciare nessun dettaglio della vecchia facciata.",
+   "en": "Francesca doesn't want to overlook any detail of the old façade.",
+   "ko": "프란체스카는 옛 외벽의 어떤 부분도 놓치고 싶지 않아요.",
+   "blank": "tralasciare",
+   "src": "made"
+  }
+ ],
  "w|trama": [
   {
    "text": "Simone scrive la critica di un film con una trama molto confusa.",
@@ -65001,6 +65609,22 @@
    "en": "The court ruled in his favor.",
    "ko": "법원이 그에게 유리하게 판결했어.",
    "blank": "tribunale"
+  }
+ ],
+ "w|trionfo": [
+  {
+   "text": "Il grande quadro mostra a Paolo il trionfo di un generale romano.",
+   "en": "The large painting shows Paolo the triumph of a Roman general.",
+   "ko": "커다란 그림이 파올로에게 로마 장군의 개선 행렬을 보여 줘요.",
+   "blank": "trionfo",
+   "src": "made"
+  },
+  {
+   "text": "Per Francesca finire il bagno in tempo è un vero trionfo.",
+   "en": "For Francesca finishing the bathroom on time is a real triumph.",
+   "ko": "프란체스카에게 욕실을 제때 끝낸 건 대단한 승리예요.",
+   "blank": "trionfo",
+   "src": "made"
   }
  ],
  "w|triplo": [
@@ -68151,6 +68775,22 @@
    "en": "Have you already decided who to vote for?",
    "ko": "누구한테 투표할지 벌써 정했어?",
    "blank": "votare"
+  }
+ ],
+ "w|votazione": [
+  {
+   "text": "Il museo chiede a Paolo e agli altri visitatori una votazione per l'opera preferita.",
+   "en": "The museum asks Paolo and the other visitors to vote for their favourite work.",
+   "ko": "박물관이 파올로와 다른 관람객들에게 가장 좋아하는 작품을 투표하게 해요.",
+   "blank": "votazione",
+   "src": "made"
+  },
+  {
+   "text": "I condomini fanno una votazione per decidere se rifare il tetto di Francesca e dei vicini.",
+   "en": "The residents hold a vote to decide whether to redo the roof shared by Francesca and her neighbours.",
+   "ko": "주민들은 프란체스카와 이웃들이 함께 쓰는 지붕을 고칠지 투표로 정해요.",
+   "blank": "votazione",
+   "src": "made"
   }
  ],
  "w|voto": [

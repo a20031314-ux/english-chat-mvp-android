@@ -559,6 +559,22 @@
    "blank": "上"
   }
  ],
+ "w|上下": [
+  {
+   "text": "这次聚会全班上下一个都没少，小明特别高兴。",
+   "en": "Not a single person from the whole class was missing this time, and Xiaoming was thrilled.",
+   "ko": "이번 모임에는 반 전체가 한 명도 빠지지 않아서 샤오밍은 무척 기뻤어요.",
+   "blank": "上下",
+   "src": "made"
+  },
+  {
+   "text": "丽丽发现，这位病人的体温一直在三十八度上下。",
+   "en": "Lili noticed that this patient's temperature had been hovering around thirty-eight degrees.",
+   "ko": "리리는 이 환자의 체온이 계속 삼십팔 도 안팎이라는 걸 알아챘어요.",
+   "blank": "上下",
+   "src": "made"
+  }
+ ],
  "w|上升": [
   {
    "text": "飞机慢慢上升，赵磊看着窗外的城市越变越小。",
@@ -1347,6 +1363,22 @@
    "blank": "不得不"
   }
  ],
+ "w|不得了": [
+  {
+   "text": "听说老同学当上了教授，小明觉得真是不得了。",
+   "en": "Hearing that an old classmate had become a professor, Xiaoming thought it was amazing.",
+   "ko": "옛 친구가 교수가 됐다는 말에 샤오밍은 정말 대단하다고 생각했어요.",
+   "blank": "不得了",
+   "src": "made"
+  },
+  {
+   "text": "丽丽看了化验单吓了一跳，血糖高得不得了。",
+   "en": "Lili was startled when she saw the lab report: the blood sugar was extremely high.",
+   "ko": "리리는 검사지를 보고 깜짝 놀랐어요, 혈당이 엄청나게 높았거든요.",
+   "blank": "不得了",
+   "src": "made"
+  }
+ ],
  "w|不必": [
   {
    "text": "你不必担心。",
@@ -1449,6 +1481,22 @@
    "en": "You don't have to come.",
    "ko": "넌 안 와도 돼.",
    "blank": "不用"
+  }
+ ],
+ "w|不禁": [
+  {
+   "text": "看到老照片上的自己，小明不禁笑出了声。",
+   "en": "Seeing himself in the old photo, Xiaoming couldn't help laughing out loud.",
+   "ko": "옛 사진 속 자기 모습을 보고 샤오밍은 저도 모르게 소리 내어 웃었어요.",
+   "blank": "不禁",
+   "src": "made"
+  },
+  {
+   "text": "看着病人康复出院，丽丽不禁有些感动。",
+   "en": "Watching the patient recover and go home, Lili couldn't help feeling moved.",
+   "ko": "환자가 회복해서 퇴원하는 걸 보며 리리는 저도 모르게 조금 뭉클했어요.",
+   "blank": "不禁",
+   "src": "made"
   }
  ],
  "w|不管": [
@@ -1839,6 +1887,22 @@
    "en": "Don't lose your phone.",
    "ko": "휴대폰 잃어버리지 마.",
    "blank": "丢"
+  }
+ ],
+ "w|丢掉": [
+  {
+   "text": "小明说他搬了好几次家，却一直舍不得丢掉毕业纪念册。",
+   "en": "Xiaoming said he has moved several times but could never bear to throw away his yearbook.",
+   "ko": "샤오밍은 이사를 여러 번 했지만 졸업 앨범은 차마 버리지 못했다고 했어요.",
+   "blank": "丢掉",
+   "src": "made"
+  },
+  {
+   "text": "丽丽提醒家属，过期的药要丢掉，别再吃了。",
+   "en": "Lili reminded the family to throw away expired medicine and not take it anymore.",
+   "ko": "리리는 보호자에게 유통 기한이 지난 약은 버리고 더 먹지 말라고 일렀어요.",
+   "blank": "丢掉",
+   "src": "made"
   }
  ],
  "w|丢脸": [
@@ -2417,6 +2481,22 @@
    "src": "made"
   }
  ],
+ "w|主持人": [
+  {
+   "text": "这次聚会的主持人还是当年的文艺委员。",
+   "en": "The host of this reunion was once again the class's former arts officer.",
+   "ko": "이번 모임의 사회자도 그때의 문예부장이었어요.",
+   "blank": "主持人",
+   "src": "made"
+  },
+  {
+   "text": "电视台的主持人来医院采访丽丽。",
+   "en": "A TV host came to the hospital to interview Lili.",
+   "ko": "방송국 진행자가 리리를 인터뷰하러 병원에 왔어요.",
+   "blank": "主持人",
+   "src": "made"
+  }
+ ],
  "w|主管": [
   {
    "text": "后厨主管要求每个人上班都戴帽子。",
@@ -2445,6 +2525,22 @@
    "en": "He's mainly in charge of sales.",
    "ko": "그는 주로 판매를 담당해.",
    "blank": "主要"
+  }
+ ],
+ "w|主角": [
+  {
+   "text": "那晚的主角是刚从国外回来的阿杰。",
+   "en": "The star of the evening was Ajie, who had just come back from abroad.",
+   "ko": "그날 밤의 주인공은 막 외국에서 돌아온 아제였어요.",
+   "blank": "主角",
+   "src": "made"
+  },
+  {
+   "text": "在医院的新年晚会上，丽丽演了话剧的主角。",
+   "en": "At the hospital's New Year party, Lili played the lead in a play.",
+   "ko": "병원 신년 행사에서 리리는 연극의 주인공을 맡았어요.",
+   "blank": "主角",
+   "src": "made"
   }
  ],
  "w|主题": [
@@ -2933,6 +3029,22 @@
    "en": "This book is pretty good.",
    "ko": "이 책 괜찮네.",
    "blank": "书"
+  }
+ ],
+ "w|书记": [
+  {
+   "text": "当年的团支部书记现在在一家银行上班。",
+   "en": "The former youth league secretary of their class now works at a bank.",
+   "ko": "그때 반의 단지부 서기는 지금 은행에 다녀요.",
+   "blank": "书记",
+   "src": "made"
+  },
+  {
+   "text": "过年时，医院的书记来病房看望值班的丽丽。",
+   "en": "During the New Year, the hospital's secretary came to the ward to visit Lili on duty.",
+   "ko": "설에 병원 서기가 병동에 와서 당직 중인 리리를 격려했어요.",
+   "blank": "书记",
+   "src": "made"
   }
  ],
  "w|买": [
@@ -3792,6 +3904,22 @@
    "en": "Lin Jing says making products requires understanding human nature and knowing what users really find bothersome.",
    "ko": "린징은 제품을 만들려면 인간 본성을 알아야 사용자가 정말 귀찮아하는 걸 안다고 해요.",
    "blank": "人性",
+   "src": "made"
+  }
+ ],
+ "w|人手": [
+  {
+   "text": "布置场地的人手不够，小明叫来了两个老同学帮忙。",
+   "en": "There weren't enough hands to set up the venue, so Xiaoming called two old classmates to help.",
+   "ko": "장소를 꾸밀 일손이 모자라서 샤오밍은 옛 친구 두 명을 불러 도움을 받았어요.",
+   "blank": "人手",
+   "src": "made"
+  },
+  {
+   "text": "夜班人手紧张，丽丽要照顾十几个病人。",
+   "en": "The night shift is short-staffed, so Lili has to look after more than ten patients.",
+   "ko": "야간 근무는 일손이 모자라서 리리는 환자 열몇 명을 돌봐야 해요.",
+   "blank": "人手",
    "src": "made"
   }
  ],
@@ -5135,6 +5263,22 @@
    "src": "made"
   }
  ],
+ "w|传递": [
+  {
+   "text": "小明把一张旧合影在桌上传递了一圈，每个人都看得很开心。",
+   "en": "Xiaoming passed an old group photo around the table, and everyone enjoyed looking at it.",
+   "ko": "샤오밍이 옛 단체 사진을 테이블에 한 바퀴 돌렸더니 다들 즐겁게 봤어요.",
+   "blank": "传递",
+   "src": "made"
+  },
+  {
+   "text": "丽丽负责把检查结果及时传递给主治医生。",
+   "en": "Lili is in charge of getting test results to the attending doctor promptly.",
+   "ko": "리리는 검사 결과를 담당 의사에게 제때 전달하는 일을 맡고 있어요.",
+   "blank": "传递",
+   "src": "made"
+  }
+ ],
  "w|传闻": [
   {
    "text": "主编说，没有核实过的传闻，一个字都不能登。",
@@ -5219,6 +5363,22 @@
    "en": "What's your estimate?",
    "ko": "네 예상은 어때?",
    "blank": "估计"
+  }
+ ],
+ "w|伴侣": [
+  {
+   "text": "有几个同学带着伴侣来参加聚会。",
+   "en": "A few classmates brought their partners to the reunion.",
+   "ko": "몇몇 친구들은 배우자와 함께 모임에 왔어요.",
+   "blank": "伴侣",
+   "src": "made"
+  },
+  {
+   "text": "手术前，医生需要病人的伴侣在同意书上签字。",
+   "en": "Before surgery, the doctor needs the patient's partner to sign the consent form.",
+   "ko": "수술 전에 의사는 환자 배우자의 동의서 서명이 필요해요.",
+   "blank": "伴侣",
+   "src": "made"
   }
  ],
  "w|伸手": [
@@ -5915,6 +6075,22 @@
    "blank": "依然"
   }
  ],
+ "w|依赖": [
+  {
+   "text": "阿杰笑着承认，上学时他特别依赖小明的作业。",
+   "en": "Ajie admitted with a laugh that he relied heavily on Xiaoming's homework in school.",
+   "ko": "아제는 학교 다닐 때 샤오밍의 숙제에 엄청 의존했다고 웃으며 인정했어요.",
+   "blank": "依赖",
+   "src": "made"
+  },
+  {
+   "text": "有些病人太依赖止痛药，丽丽会耐心地劝他们。",
+   "en": "Some patients rely too much on painkillers, and Lili patiently talks them out of it.",
+   "ko": "진통제에 너무 의존하는 환자들도 있어서 리리는 참을성 있게 타일러요.",
+   "blank": "依赖",
+   "src": "made"
+  }
+ ],
  "w|依靠": [
   {
    "text": "刚毕业那几年，张伟主要依靠朋友们介绍工作才站稳脚跟。",
@@ -6052,6 +6228,22 @@
    "en": "The teacher believes having students explain problems to each other promotes their thinking.",
    "ko": "선생님은 학생끼리 문제를 설명해 주게 하면 생각하는 힘이 길러진다고 봐요.",
    "blank": "促进",
+   "src": "made"
+  }
+ ],
+ "w|俘虏": [
+  {
+   "text": "小时候玩打仗游戏，小明总是当俘虏的那一个。",
+   "en": "When they played war games as kids, Xiaoming was always the one who got taken prisoner.",
+   "ko": "어릴 때 전쟁놀이를 하면 샤오밍은 늘 포로 역할이었어요.",
+   "blank": "俘虏",
+   "src": "made"
+  },
+  {
+   "text": "一位老兵告诉丽丽，年轻时救过一名受伤的俘虏。",
+   "en": "An old soldier told Lili that as a young man he once saved a wounded prisoner of war.",
+   "ko": "한 노병은 젊었을 때 다친 포로를 구한 적이 있다고 리리에게 말했어요.",
+   "blank": "俘虏",
    "src": "made"
   }
  ],
@@ -6937,6 +7129,22 @@
    "en": "The body is very healthy.",
    "ko": "몸이 아주 건강해.",
    "blank": "健康"
+  }
+ ],
+ "w|偶像": [
+  {
+   "text": "小明说，篮球队长曾经是全年级男生的偶像。",
+   "en": "Xiaoming said the basketball captain used to be the idol of every boy in their grade.",
+   "ko": "샤오밍은 농구부 주장이 한때 학년 남학생 모두의 우상이었다고 했어요.",
+   "blank": "偶像",
+   "src": "made"
+  },
+  {
+   "text": "丽丽从小的偶像就是一位在战地救人的老护士。",
+   "en": "Lili's idol since childhood has been an old nurse who saved lives on the battlefield.",
+   "ko": "리리의 어릴 적 우상은 전쟁터에서 사람을 구한 늙은 간호사였어요.",
+   "blank": "偶像",
+   "src": "made"
   }
  ],
  "w|偶尔": [
@@ -8915,6 +9123,22 @@
    "blank": "冲"
   }
  ],
+ "w|冲击": [
+  {
+   "text": "网购的兴起冲击了小明家的小超市，同学们听了都很关心。",
+   "en": "The rise of online shopping hit Xiaoming's family's small store hard, and his classmates were concerned.",
+   "ko": "온라인 쇼핑이 늘면서 샤오밍네 작은 가게가 타격을 받았다는 말에 친구들이 다들 걱정했어요.",
+   "blank": "冲击",
+   "src": "made"
+  },
+  {
+   "text": "流感高峰冲击了整个急诊科，丽丽连着加了三天班。",
+   "en": "The flu peak hit the whole emergency department, and Lili worked overtime three days in a row.",
+   "ko": "독감 유행이 응급실 전체를 덮쳐서 리리는 사흘 연속 야근했어요.",
+   "blank": "冲击",
+   "src": "made"
+  }
+ ],
  "w|冲动": [
   {
    "text": "被告承认自己是一时冲动才动手的。",
@@ -9900,6 +10124,22 @@
    "en": "Sun Yue's newspaper launched its own video channel last year.",
    "ko": "쑨웨네 신문사는 작년에 자체 영상 채널을 만들었어요.",
    "blank": "创建",
+   "src": "made"
+  }
+ ],
+ "w|创新": [
+  {
+   "text": "做设计的阿芳说，她的公司一直鼓励员工创新。",
+   "en": "Afang, who works in design, said her company always encourages employees to innovate.",
+   "ko": "디자인 일을 하는 아팡은 회사가 늘 직원들에게 혁신을 장려한다고 했어요.",
+   "blank": "创新",
+   "src": "made"
+  },
+  {
+   "text": "护士长鼓励丽丽在护理方法上大胆创新。",
+   "en": "The head nurse encouraged Lili to boldly innovate in nursing methods.",
+   "ko": "수간호사는 리리에게 간호 방법을 과감하게 새로 시도해 보라고 격려했어요.",
+   "blank": "创新",
    "src": "made"
   }
  ],
@@ -10998,6 +11238,22 @@
    "en": "Xiaoxue is watching a period drama about two great powers fighting over the realm.",
    "ko": "샤오쉐는 두 큰 세력이 천하를 두고 다투는 이야기의 사극을 보고 있어요.",
    "blank": "势力",
+   "src": "made"
+  }
+ ],
+ "w|勇士": [
+  {
+   "text": "大家笑着说，小明当年敢在全校面前唱歌，真是个勇士。",
+   "en": "Everyone laughed that Xiaoming, who once dared to sing in front of the whole school, was a real hero.",
+   "ko": "다들 샤오밍이 그때 전교생 앞에서 노래할 용기를 냈으니 진짜 용사라며 웃었어요.",
+   "blank": "勇士",
+   "src": "made"
+  },
+  {
+   "text": "那个打针不哭的小男孩，被丽丽夸成了小勇士。",
+   "en": "Lili praised the little boy who didn't cry during his shot as a little warrior.",
+   "ko": "주사를 맞고도 울지 않은 남자아이를 리리는 꼬마 용사라고 칭찬했어요.",
+   "blank": "勇士",
    "src": "made"
   }
  ],
@@ -14257,6 +14513,22 @@
    "en": "The result is equally bad.",
    "ko": "결과도 똑같이 나빠.",
    "blank": "同样"
+  }
+ ],
+ "w|同胞": [
+  {
+   "text": "在海外工作的阿杰说，当地的同胞们常常一起过年。",
+   "en": "Ajie, who works overseas, said his compatriots there often celebrate the New Year together.",
+   "ko": "해외에서 일하는 아제는 그곳 동포들이 자주 함께 설을 쇤다고 했어요.",
+   "blank": "同胞",
+   "src": "made"
+  },
+  {
+   "text": "地震后，丽丽报名去灾区救治受伤的同胞。",
+   "en": "After the earthquake, Lili signed up to go treat injured compatriots in the disaster area.",
+   "ko": "지진이 난 뒤 리리는 피해 지역에 가서 다친 동포들을 치료하겠다고 지원했어요.",
+   "blank": "同胞",
+   "src": "made"
   }
  ],
  "w|同行": [
@@ -18273,6 +18545,22 @@
    "blank": "外套"
   }
  ],
+ "w|外婆": [
+  {
+   "text": "小明给大家带了外婆亲手做的腌菜。",
+   "en": "Xiaoming brought everyone pickles his grandma made by hand.",
+   "ko": "샤오밍은 외할머니가 손수 담근 장아찌를 모두에게 가져왔어요.",
+   "blank": "外婆",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的外婆住院时，总夸外孙女是最好的护士。",
+   "en": "When Lili's grandma was in hospital, she kept praising her granddaughter as the best nurse.",
+   "ko": "리리의 외할머니는 입원했을 때 손녀가 최고의 간호사라고 늘 자랑했어요.",
+   "blank": "外婆",
+   "src": "made"
+  }
+ ],
  "w|外星人": [
   {
    "text": "你相信有外星人吗？",
@@ -18507,6 +18795,22 @@
    "en": "I'm already an adult.",
    "ko": "나 이미 어른이야.",
    "blank": "大人"
+  }
+ ],
+ "w|大众": [
+  {
+   "text": "老同学阿杰现在做的是面向大众的科普视频。",
+   "en": "Their old classmate Ajie now makes popular-science videos for the general public.",
+   "ko": "옛 친구 아제는 지금 대중을 위한 과학 영상을 만들어요.",
+   "blank": "大众",
+   "src": "made"
+  },
+  {
+   "text": "医院办了健康讲座，向大众介绍怎么预防感冒。",
+   "en": "The hospital held a health talk explaining to the public how to prevent colds.",
+   "ko": "병원은 건강 강좌를 열어 대중에게 감기 예방법을 알려 줬어요.",
+   "blank": "大众",
+   "src": "made"
   }
  ],
  "w|大会": [
@@ -19455,6 +19759,22 @@
    "src": "made"
   }
  ],
+ "w|夺走": [
+  {
+   "text": "一场大火夺走了学校的老礼堂，小明一说起就很遗憾。",
+   "en": "A fire took away the school's old auditorium, and Xiaoming feels sad whenever he mentions it.",
+   "ko": "큰불이 학교의 옛 강당을 앗아가서 샤오밍은 그 얘기만 나오면 아쉬워해요.",
+   "blank": "夺走",
+   "src": "made"
+  },
+  {
+   "text": "医生说，这种病每年都会夺走不少人的生命。",
+   "en": "The doctor said this disease takes many lives every year.",
+   "ko": "의사는 이 병이 해마다 적지 않은 사람의 목숨을 앗아간다고 했어요.",
+   "blank": "夺走",
+   "src": "made"
+  }
+ ],
  "w|奇妙": [
   {
    "text": "张伟觉得很奇妙，隔了这么多年，两个人还能聊得这么好。",
@@ -19749,6 +20069,22 @@
    "en": "How many girls are in the class?",
    "ko": "반에 여학생이 몇 명이야?",
    "blank": "女生"
+  }
+ ],
+ "w|女神": [
+  {
+   "text": "当年班上的女神也来了，小明紧张得说不出话。",
+   "en": "The girl everyone adored back in class came too, and Xiaoming was too nervous to speak.",
+   "ko": "그때 반의 여신도 와서 샤오밍은 긴장해서 말도 못 했어요.",
+   "blank": "女神",
+   "src": "made"
+  },
+  {
+   "text": "儿科病房的孩子们都说丽丽是他们的女神。",
+   "en": "The children in the pediatric ward all say Lili is their goddess.",
+   "ko": "소아 병동 아이들은 모두 리리가 자기들의 여신이라고 해요.",
+   "blank": "女神",
+   "src": "made"
   }
  ],
  "w|奴隶": [
@@ -20648,6 +20984,22 @@
    "en": "Railway police were checking IDs in the carriage, reportedly looking for a fugitive suspect.",
    "ko": "철도 경찰이 객차에서 신분증을 확인했는데 도주한 용의자를 찾는다고 했어요.",
    "blank": "嫌犯",
+   "src": "made"
+  }
+ ],
+ "w|子女": [
+  {
+   "text": "聊到子女教育，大家的话一下子多了起来。",
+   "en": "When the talk turned to their children's education, everyone suddenly had a lot to say.",
+   "ko": "자녀 교육 얘기가 나오자 다들 갑자기 말이 많아졌어요.",
+   "blank": "子女",
+   "src": "made"
+  },
+  {
+   "text": "老人住院以后，子女轮流来医院陪护。",
+   "en": "After the old man was admitted, his children took turns staying with him at the hospital.",
+   "ko": "노인이 입원한 뒤 자녀들이 번갈아 병원에 와서 간병했어요.",
+   "blank": "子女",
    "src": "made"
   }
  ],
@@ -24928,6 +25280,22 @@
    "en": "Yang Yang's sister said she'd just gone to the shop to exchange it for another color for him.",
    "ko": "누나는 그냥 가게에 가서 양양 대신 색깔을 바꿔 왔을 뿐이라고 했어요.",
    "blank": "店里",
+   "src": "made"
+  }
+ ],
+ "w|庞大": [
+  {
+   "text": "阿杰现在管理着一个庞大的团队，小明听了很佩服。",
+   "en": "Ajie now manages a huge team, and Xiaoming was impressed to hear it.",
+   "ko": "아제가 지금 거대한 팀을 이끈다는 말에 샤오밍은 감탄했어요.",
+   "blank": "庞大",
+   "src": "made"
+  },
+  {
+   "text": "这家医院规模庞大，新来的病人常常迷路。",
+   "en": "This hospital is enormous, and new patients often get lost.",
+   "ko": "이 병원은 규모가 워낙 커서 처음 온 환자들이 자주 길을 잃어요.",
+   "blank": "庞大",
    "src": "made"
   }
  ],
@@ -31009,6 +31377,22 @@
    "src": "made"
   }
  ],
+ "w|捧": [
+  {
+   "text": "小明捧着一大束花，等着老同学们进门。",
+   "en": "Xiaoming held a big bouquet in both hands, waiting for his old classmates to come in.",
+   "ko": "샤오밍은 큰 꽃다발을 두 손으로 들고 옛 친구들이 들어오기를 기다렸어요.",
+   "blank": "捧",
+   "src": "made"
+  },
+  {
+   "text": "出院那天，病人家属捧着锦旗来感谢丽丽。",
+   "en": "On discharge day, the patient's family came holding a silk banner to thank Lili.",
+   "ko": "퇴원하는 날 환자 가족이 감사 깃발을 받쳐 들고 리리에게 고마움을 전하러 왔어요.",
+   "blank": "捧",
+   "src": "made"
+  }
+ ],
  "w|据": [
   {
    "text": "据班长说，下周的春游改到星期五了。",
@@ -33593,6 +33977,22 @@
    "blank": "旁边"
   }
  ],
+ "w|旅客": [
+  {
+   "text": "小明去火车站接外地来的同学，站台上挤满了旅客。",
+   "en": "Xiaoming went to the train station to pick up classmates from out of town, and the platform was packed with travelers.",
+   "ko": "샤오밍이 다른 지역에서 오는 친구들을 마중하러 기차역에 갔더니 승강장이 여행객으로 가득했어요.",
+   "blank": "旅客",
+   "src": "made"
+  },
+  {
+   "text": "机场送来一位突然晕倒的旅客，丽丽马上推来了轮椅。",
+   "en": "A passenger who suddenly fainted was brought in from the airport, and Lili quickly wheeled over a wheelchair.",
+   "ko": "공항에서 갑자기 쓰러진 여행객이 실려 오자 리리는 바로 휠체어를 밀고 왔어요.",
+   "blank": "旅客",
+   "src": "made"
+  }
+ ],
  "w|旅游": [
   {
    "text": "每年春天，来这座城市旅游的人特别多，赵磊也最忙。",
@@ -34697,6 +35097,22 @@
    "en": "Today is very ordinary.",
    "ko": "오늘은 아주 평범해.",
    "blank": "普通"
+  }
+ ],
+ "w|普通人": [
+  {
+   "text": "小明说自己毕业后就是个普通人，每天按时上下班。",
+   "en": "Xiaoming said he has been an ordinary guy since graduating, going to work and coming home on time.",
+   "ko": "샤오밍은 졸업 후 그냥 평범한 사람으로 매일 제시간에 출퇴근한다고 했어요.",
+   "blank": "普通人",
+   "src": "made"
+  },
+  {
+   "text": "丽丽常说，医生护士也是普通人，也会累。",
+   "en": "Lili often says doctors and nurses are ordinary people too, and they get tired as well.",
+   "ko": "리리는 의사와 간호사도 평범한 사람이라 지칠 때가 있다고 자주 말해요.",
+   "blank": "普通人",
+   "src": "made"
   }
  ],
  "w|普遍": [
@@ -37083,6 +37499,22 @@
    "src": "made"
   }
  ],
+ "w|模糊": [
+  {
+   "text": "有些同学的名字，小明已经记得很模糊了。",
+   "en": "Xiaoming only vaguely remembers some of his classmates' names now.",
+   "ko": "몇몇 친구들 이름은 샤오밍의 기억 속에서 이미 흐릿해졌어요.",
+   "blank": "模糊",
+   "src": "made"
+  },
+  {
+   "text": "病人说眼睛看东西有点模糊，丽丽马上叫了医生。",
+   "en": "The patient said his vision was a little blurry, and Lili called the doctor right away.",
+   "ko": "환자가 눈이 좀 흐릿하게 보인다고 하자 리리는 바로 의사를 불렀어요.",
+   "blank": "模糊",
+   "src": "made"
+  }
+ ],
  "w|橙子": [
   {
    "text": "楼下的小卖部今天橙子打折，黄涛买了一袋。",
@@ -37231,6 +37663,22 @@
    "en": "He was deceived.",
    "ko": "그는 속았어.",
    "blank": "欺骗"
+  }
+ ],
+ "w|歇": [
+  {
+   "text": "逛了一下午大家都累了，小明提议找个咖啡馆歇一会儿。",
+   "en": "After walking around all afternoon everyone was tired, so Xiaoming suggested resting at a café.",
+   "ko": "오후 내내 돌아다녀서 다들 지치자 샤오밍이 카페에서 좀 쉬자고 했어요.",
+   "blank": "歇",
+   "src": "made"
+  },
+  {
+   "text": "忙了一整夜，丽丽终于能坐下来歇口气。",
+   "en": "After a busy night, Lili could finally sit down and catch her breath.",
+   "ko": "밤새 바빴던 리리는 드디어 앉아서 한숨 돌릴 수 있었어요.",
+   "blank": "歇",
+   "src": "made"
   }
  ],
  "w|歌": [
@@ -43071,6 +43519,22 @@
    "blank": "留言"
   }
  ],
+ "w|畜生": [
+  {
+   "text": "小明说外公家养了很多畜生，每年春节他都去帮忙喂。",
+   "en": "Xiaoming said his grandpa keeps a lot of livestock, and every Spring Festival he helps feed them.",
+   "ko": "샤오밍은 외할아버지 댁에서 가축을 많이 길러서 해마다 설에 먹이 주는 걸 돕는다고 했어요.",
+   "blank": "畜生",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的病人是个农民，住院了还惦记着家里的畜生没人喂。",
+   "en": "Lili's patient is a farmer who, even in hospital, worries no one is feeding the animals at home.",
+   "ko": "리리의 환자는 농부인데 입원해서도 집에 가축 먹일 사람이 없다고 걱정해요.",
+   "blank": "畜生",
+   "src": "made"
+  }
+ ],
  "w|疑问": [
   {
    "text": "如果大家还有疑问，可以会后找马林单独聊。",
@@ -46875,6 +47339,22 @@
    "src": "made"
   }
  ],
+ "w|粉丝": [
+  {
+   "text": "小明一直是小雪的粉丝，她的每首歌都会听。",
+   "en": "Xiaoming has always been a fan of Xiaoxue and listens to every song she puts out.",
+   "ko": "샤오밍은 늘 샤오쉐의 팬이라서 그녀의 노래는 다 들어요.",
+   "blank": "粉丝",
+   "src": "made"
+  },
+  {
+   "text": "病房里的小女孩是一位歌手的粉丝，丽丽陪她听了一下午歌。",
+   "en": "The little girl in the ward is a fan of a singer, and Lili listened to songs with her all afternoon.",
+   "ko": "병실의 여자아이가 한 가수의 팬이라서 리리는 오후 내내 같이 노래를 들어 줬어요.",
+   "blank": "粉丝",
+   "src": "made"
+  }
+ ],
  "w|粮食": [
   {
    "text": "张伟的奶奶在婚礼上说，小时候家里连粮食都不够吃。",
@@ -47565,6 +48045,22 @@
    "src": "made"
   }
  ],
+ "w|经纪人": [
+  {
+   "text": "老同学小雪现在是歌手，连经纪人都陪她来了聚会。",
+   "en": "Their old classmate Xiaoxue is now a singer, and even her manager came to the reunion with her.",
+   "ko": "옛 친구 샤오쉐는 지금 가수라서 매니저까지 모임에 따라왔어요.",
+   "blank": "经纪人",
+   "src": "made"
+  },
+  {
+   "text": "一位明星住院时，经纪人天天守在病房门口。",
+   "en": "When a celebrity was hospitalized, the manager stood guard at the ward door every day.",
+   "ko": "한 연예인이 입원했을 때 매니저가 날마다 병실 문 앞을 지켰어요.",
+   "blank": "经纪人",
+   "src": "made"
+  }
+ ],
  "w|经营": [
   {
    "text": "这家饭店由老板一家人经营，已经开了十几年。",
@@ -47867,6 +48363,22 @@
    "src": "made"
   }
  ],
+ "w|统治者": [
+  {
+   "text": "小明开玩笑说，当年的班长简直是教室的统治者。",
+   "en": "Xiaoming joked that the class monitor back then was practically the ruler of the classroom.",
+   "ko": "샤오밍은 그때 반장이 거의 교실의 통치자였다고 농담했어요.",
+   "blank": "统治者",
+   "src": "made"
+  },
+  {
+   "text": "丽丽给病人读的历史书里，讲到一位古代统治者也得过这种病。",
+   "en": "The history book Lili read to a patient mentioned an ancient ruler who had the same illness.",
+   "ko": "리리가 환자에게 읽어 준 역사책에는 옛날 한 통치자도 이 병을 앓았다는 내용이 있었어요.",
+   "blank": "统治者",
+   "src": "made"
+  }
+ ],
  "w|统计": [
   {
    "text": "每天打烊后，张伟要统计一下哪些菜卖得最好。",
@@ -48022,6 +48534,22 @@
    "en": "Because of the rain, very few people came to buy groceries today.",
    "ko": "비가 와서 오늘은 장 보러 온 사람이 유난히 적어요.",
    "blank": "缘故",
+   "src": "made"
+  }
+ ],
+ "w|缝": [
+  {
+   "text": "当年小明的书包破了，是班长帮他缝好的。",
+   "en": "Back then, when Xiaoming's schoolbag tore, it was the class monitor who sewed it up.",
+   "ko": "그때 샤오밍의 책가방이 찢어졌을 때 반장이 꿰매 줬어요.",
+   "blank": "缝",
+   "src": "made"
+  },
+  {
+   "text": "急诊医生给摔伤的孩子缝了几针，丽丽在旁边帮忙。",
+   "en": "The ER doctor gave the child who fell a few stitches, and Lili helped beside him.",
+   "ko": "응급실 의사가 넘어져 다친 아이를 몇 바늘 꿰맸고 리리는 옆에서 도왔어요.",
+   "blank": "缝",
    "src": "made"
   }
  ],
@@ -48483,6 +49011,22 @@
    "src": "made"
   }
  ],
+ "w|老人家": [
+  {
+   "text": "聚会那天，小明顺路去看望了班主任，老人家身体还很硬朗。",
+   "en": "On the day of the reunion, Xiaoming dropped by to visit his old homeroom teacher, who is still in great shape.",
+   "ko": "모임 날 샤오밍은 가는 길에 담임 선생님을 찾아뵈었는데, 어르신은 아직 정정하셨어요.",
+   "blank": "老人家",
+   "src": "made"
+  },
+  {
+   "text": "丽丽扶着那位老人家慢慢走到窗边晒太阳。",
+   "en": "Lili helped the elderly gentleman walk slowly to the window to sit in the sun.",
+   "ko": "리리는 그 어르신을 부축해서 천천히 창가로 가 햇볕을 쬐게 해 드렸어요.",
+   "blank": "老人家",
+   "src": "made"
+  }
+ ],
  "w|老兄": [
   {
    "text": "老兄，别急。",
@@ -48655,6 +49199,22 @@
    "en": "Talk to Dad about it.",
    "ko": "아빠한테 말해 봐.",
    "blank": "老爸"
+  }
+ ],
+ "w|老百姓": [
+  {
+   "text": "当公务员的老同学说，最想为老百姓多办点实事。",
+   "en": "A classmate who became a civil servant said what he most wants is to get real things done for ordinary people.",
+   "ko": "공무원이 된 옛 친구는 서민들을 위해 실질적인 일을 더 하고 싶다고 했어요.",
+   "blank": "老百姓",
+   "src": "made"
+  },
+  {
+   "text": "这家社区医院收费低，很受老百姓欢迎。",
+   "en": "This community hospital charges little and is very popular with ordinary folks.",
+   "ko": "이 동네 병원은 진료비가 싸서 서민들에게 인기가 많아요.",
+   "blank": "老百姓",
+   "src": "made"
   }
  ],
  "w|老虎": [
@@ -49913,6 +50473,22 @@
    "src": "made"
   }
  ],
+ "w|自行": [
+  {
+   "text": "饭后大家自行安排，小明带几个人去唱歌了。",
+   "en": "After dinner everyone made their own plans, and Xiaoming took a few people to karaoke.",
+   "ko": "식사 후에는 각자 알아서 했고, 샤오밍은 몇 명을 데리고 노래방에 갔어요.",
+   "blank": "自行",
+   "src": "made"
+  },
+  {
+   "text": "医生交代过病人不能自行停药，丽丽每天都要提醒一遍。",
+   "en": "The doctor said patients must not stop their medicine on their own, so Lili reminds them every day.",
+   "ko": "의사가 환자가 마음대로 약을 끊으면 안 된다고 해서 리리는 매일 한 번씩 일러 줘요.",
+   "blank": "自行",
+   "src": "made"
+  }
+ ],
  "w|自行车": [
   {
    "text": "酒店给住客免费提供自行车，赵磊每天都要检查一遍。",
@@ -50048,6 +50624,22 @@
    "en": "That last turnover was almost fatal for the team.",
    "ko": "마지막 그 실책은 팀에게 거의 치명적이었어요.",
    "blank": "致命",
+   "src": "made"
+  }
+ ],
+ "w|舅舅": [
+  {
+   "text": "小明的舅舅开了一家饭馆，这次同学聚会就定在那里。",
+   "en": "Xiaoming's uncle runs a restaurant, so the class reunion was held there.",
+   "ko": "샤오밍의 외삼촌이 식당을 하셔서 이번 동창 모임은 거기로 정했어요.",
+   "blank": "舅舅",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的舅舅做了手术，正好住在她工作的医院。",
+   "en": "Lili's uncle had surgery and happens to be staying at the hospital where she works.",
+   "ko": "리리의 외삼촌이 수술을 받았는데 마침 리리가 일하는 병원에 입원했어요.",
+   "blank": "舅舅",
    "src": "made"
   }
  ],
@@ -53478,6 +54070,22 @@
    "en": "When Wang Fang studied abroad, she often missed her mom's cooking.",
    "ko": "왕팡은 외국에서 공부할 때 엄마가 해 준 음식이 자주 그리웠어요.",
    "blank": "读书",
+   "src": "made"
+  }
+ ],
+ "w|读者": [
+  {
+   "text": "小明写的那篇回忆母校的文章，在网上有不少读者。",
+   "en": "The piece Xiaoming wrote about his old school has quite a few readers online.",
+   "ko": "샤오밍이 쓴 모교 회고 글은 온라인에서 읽는 사람이 꽤 많아요.",
+   "blank": "读者",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在网上写护理小知识，很多读者留言感谢她。",
+   "en": "Lili posts nursing tips online, and many readers leave comments thanking her.",
+   "ko": "리리가 온라인에 간호 상식을 올리면 많은 독자가 고맙다는 댓글을 남겨요.",
+   "blank": "读者",
    "src": "made"
   }
  ],
@@ -56947,6 +57555,22 @@
    "src": "made"
   }
  ],
+ "w|适用": [
+  {
+   "text": "班长宣布，“迟到罚唱歌”的老规矩今天依然适用。",
+   "en": "The class monitor announced that the old “sing if you're late” rule still applies today.",
+   "ko": "반장은 \"늦으면 벌로 노래\"라는 옛 규칙이 오늘도 그대로 적용된다고 했어요.",
+   "blank": "适用",
+   "src": "made"
+  },
+  {
+   "text": "丽丽解释说，这种药不适用于孕妇。",
+   "en": "Lili explained that this medicine isn't suitable for pregnant women.",
+   "ko": "리리는 이 약이 임신부에게는 맞지 않는다고 설명했어요.",
+   "blank": "适用",
+   "src": "made"
+  }
+ ],
  "w|逃": [
   {
    "text": "他想逃出去。",
@@ -57093,6 +57717,22 @@
    "en": "This choice is hard.",
    "ko": "이 선택은 어려워.",
    "blank": "选择"
+  }
+ ],
+ "w|选民": [
+  {
+   "text": "当上村委会主任的同学说，选民的信任最重要。",
+   "en": "A classmate who became village committee head said the voters' trust matters most.",
+   "ko": "마을 위원회 주임이 된 친구는 유권자의 신뢰가 가장 중요하다고 했어요.",
+   "blank": "选民",
+   "src": "made"
+  },
+  {
+   "text": "电视里候选人正在向选民演讲，丽丽把音量调小了。",
+   "en": "On TV a candidate was giving a speech to voters, and Lili turned the volume down.",
+   "ko": "TV에서 후보가 유권자들에게 연설하고 있었고 리리는 소리를 줄였어요.",
+   "blank": "选民",
+   "src": "made"
   }
  ],
  "w|透过": [
