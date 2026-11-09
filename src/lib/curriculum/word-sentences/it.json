@@ -135,6 +135,22 @@
    "src": "made"
   }
  ],
+ "w|abbondante": [
+  {
+   "text": "Nella ricetta di Luca serve una dose abbondante di parmigiano.",
+   "en": "Luca's recipe calls for a generous amount of parmesan.",
+   "ko": "루카의 요리법에는 파르메산 치즈가 넉넉하게 들어가요.",
+   "blank": "abbondante",
+   "src": "made"
+  },
+  {
+   "text": "A casa di Chiara la cena è sempre abbondante.",
+   "en": "At Chiara's place dinner is always plentiful.",
+   "ko": "키아라네 집 저녁은 늘 푸짐해요.",
+   "blank": "abbondante",
+   "src": "made"
+  }
+ ],
  "w|abbracciare": [
   {
    "text": "Quando la vicina è tornata dall'ospedale, Paolo l'ha abbracciata forte.",
@@ -4229,6 +4245,22 @@
    "src": "made"
   }
  ],
+ "w|aperitivo": [
+  {
+   "text": "A fine corso Luca prepara un piccolo aperitivo per tutti i compagni.",
+   "en": "At the end of the course Luca prepares a little aperitif for all his classmates.",
+   "ko": "과정이 끝나면 루카는 반 친구들 모두를 위해 간단한 아페리티보를 준비해요.",
+   "blank": "aperitivo",
+   "src": "made"
+  },
+  {
+   "text": "Chiara aspetta gli amici in piazza con un aperitivo.",
+   "en": "Chiara waits for her friends in the square with an aperitif.",
+   "ko": "키아라는 아페리티보를 마시며 광장에서 친구들을 기다려요.",
+   "blank": "aperitivo",
+   "src": "made"
+  }
+ ],
  "w|aperto": [
   {
    "text": "Il bar è aperto fino a tardi.",
@@ -5723,6 +5755,22 @@
    "src": "made"
   }
  ],
+ "w|assaggio": [
+  {
+   "text": "L'insegnante offre a Luca un assaggio della sua salsa.",
+   "en": "The teacher offers Luca a taste of her sauce.",
+   "ko": "선생님은 루카에게 자기 소스를 맛보라고 조금 줘요.",
+   "blank": "assaggio",
+   "src": "made"
+  },
+  {
+   "text": "Chiara dà a ogni amico un assaggio del suo liquore fatto in casa.",
+   "en": "Chiara gives each friend a taste of her homemade liqueur.",
+   "ko": "키아라는 친구들에게 집에서 담근 술을 조금씩 맛보게 해요.",
+   "blank": "assaggio",
+   "src": "made"
+  }
+ ],
  "w|assalire": [
   {
    "text": "Davanti al quadro della battaglia, un dubbio improvviso assale Paolo sulla data.",
@@ -5890,6 +5938,22 @@
    "en": "Chiara's absence was really felt in Sunday's game.",
    "ko": "일요일 경기에서는 키아라의 빈자리가 크게 느껴졌어요.",
    "blank": "assenza",
+   "src": "made"
+  }
+ ],
+ "w|assetato": [
+  {
+   "text": "Dopo ore davanti ai fornelli Luca è assetato.",
+   "en": "After hours in front of the stove Luca is thirsty.",
+   "ko": "몇 시간 동안 불 앞에 있었더니 루카는 목이 말라요.",
+   "blank": "assetato",
+   "src": "made"
+  },
+  {
+   "text": "Dopo aver ballato tanto, Chiara è assetata.",
+   "en": "After dancing so much, Chiara is thirsty.",
+   "ko": "춤을 많이 췄더니 키아라는 목이 말라요.",
+   "blank": "assetata",
    "src": "made"
   }
  ],
@@ -16115,6 +16179,22 @@
    "blank": "comporta"
   }
  ],
+ "w|comportarsi": [
+  {
+   "text": "L'insegnante chiede a Luca di comportarsi bene con il coltello in mano.",
+   "en": "The teacher asks Luca to behave properly with a knife in his hand.",
+   "ko": "선생님은 루카에게 칼을 들고 있을 때 조심해서 행동하라고 해요.",
+   "blank": "comportarsi",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ricorda come Marco sapeva comportarsi da vero leader in classe.",
+   "en": "Chiara remembers how Marco knew how to act like a real leader in class.",
+   "ko": "키아라는 마르코가 반에서 진짜 리더처럼 행동하던 걸 떠올려요.",
+   "blank": "comportarsi",
+   "src": "made"
+  }
+ ],
  "w|composto": [
   {
    "text": "Dopo la palestra Stefano mangia un'insalata composta di riso, tonno e verdure.",
@@ -16577,6 +16657,22 @@
    "en": "I cannot condemn someone without proof.",
    "ko": "증거 없이 누군가를 단죄할 수 없어.",
    "blank": "condannare"
+  }
+ ],
+ "w|condimento": [
+  {
+   "text": "Luca prepara il condimento per l'insalata con olio e aceto.",
+   "en": "Luca makes the dressing for the salad with oil and vinegar.",
+   "ko": "루카는 기름과 식초로 샐러드 드레싱을 만들어요.",
+   "blank": "condimento",
+   "src": "made"
+  },
+  {
+   "text": "Un amico chiede a Chiara di passargli il condimento per l'insalata.",
+   "en": "A friend asks Chiara to pass him the salad dressing.",
+   "ko": "친구가 키아라에게 샐러드 드레싱을 건네 달라고 해요.",
+   "blank": "condimento",
+   "src": "made"
   }
  ],
  "w|condividere": [
@@ -19615,6 +19711,22 @@
    "src": "made"
   }
  ],
+ "w|crostata": [
+  {
+   "text": "Luca stende la pasta frolla per una crostata alle albicocche.",
+   "en": "Luca rolls out the shortcrust pastry for an apricot tart.",
+   "ko": "루카는 살구 타르트를 만들려고 쇼트크러스트 반죽을 밀어요.",
+   "blank": "crostata",
+   "src": "made"
+  },
+  {
+   "text": "Per la rimpatriata Chiara ha cotto una crostata alla marmellata.",
+   "en": "For the reunion Chiara baked a jam tart.",
+   "ko": "키아라는 동창 모임을 위해 잼 타르트를 구웠어요.",
+   "blank": "crostata",
+   "src": "made"
+  }
+ ],
  "w|cruciale": [
   {
    "text": "La testimonianza della vicina è cruciale per il processo, spiega Davide.",
@@ -19862,6 +19974,22 @@
    "en": "Laura is leaving for a cultural exchange with a foreign university.",
    "ko": "라우라는 외국 대학과의 문화 교류를 위해 떠나요.",
    "blank": "culturale",
+   "src": "made"
+  }
+ ],
+ "w|cuocere": [
+  {
+   "text": "Luca impara a cuocere il riso senza farlo scuocere.",
+   "en": "Luca learns to cook rice without overcooking it.",
+   "ko": "루카는 쌀이 퍼지지 않게 익히는 법을 배워요.",
+   "blank": "cuocere",
+   "src": "made"
+  },
+  {
+   "text": "Chiara lascia cuocere le lasagne mentre arrivano gli ospiti.",
+   "en": "Chiara leaves the lasagne to cook while the guests arrive.",
+   "ko": "키아라는 손님들이 오는 동안 라자냐를 익혀 둬요.",
+   "blank": "cuocere",
    "src": "made"
   }
  ],
@@ -22105,6 +22233,22 @@
    "src": "made"
   }
  ],
+ "w|digerire": [
+  {
+   "text": "Dopo tutti quegli assaggi Luca fatica a digerire.",
+   "en": "After all that tasting, Luca has trouble digesting.",
+   "ko": "그렇게 맛을 보고 나니 루카는 소화가 잘 안 돼요.",
+   "blank": "digerire",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ci mette un po' a digerire la notizia del matrimonio di Paolo.",
+   "en": "It takes Chiara a while to digest the news of Paolo's wedding.",
+   "ko": "키아라는 파올로의 결혼 소식을 받아들이는 데 시간이 좀 걸려요.",
+   "blank": "digerire",
+   "src": "made"
+  }
+ ],
  "w|digitale": [
   {
    "text": "Preferisco la fotografia digitale.",
@@ -24040,6 +24184,22 @@
    "en": "On Saturday nights Anna delivers pizzas to people's homes by scooter.",
    "ko": "토요일 밤이면 안나는 스쿠터로 피자를 집까지 배달해요.",
    "blank": "domicilio",
+   "src": "made"
+  }
+ ],
+ "w|dominante": [
+  {
+   "text": "Nel piatto di Luca il sapore dominante è quello del limone.",
+   "en": "In Luca's dish the dominant flavour is lemon.",
+   "ko": "루카의 요리에서 가장 두드러지는 맛은 레몬이에요.",
+   "blank": "dominante",
+   "src": "made"
+  },
+  {
+   "text": "Nel gruppo di Chiara, Giorgio era il carattere dominante.",
+   "en": "In Chiara's group, Giorgio was the dominant personality.",
+   "ko": "키아라네 무리에서는 조르조가 가장 주도적인 성격이었어요.",
+   "blank": "dominante",
    "src": "made"
   }
  ],
@@ -26193,6 +26353,22 @@
    "blank": "esatto"
   }
  ],
+ "w|esaudire": [
+  {
+   "text": "L'insegnante prova a esaudire la richiesta di Luca e insegna il tiramisù.",
+   "en": "The teacher tries to grant Luca's request and teaches tiramisu.",
+   "ko": "선생님은 루카의 부탁을 들어주려고 티라미수를 가르쳐요.",
+   "blank": "esaudire",
+   "src": "made"
+  },
+  {
+   "text": "Chiara spera di esaudire il desiderio di Anna: una foto di gruppo come ai vecchi tempi.",
+   "en": "Chiara hopes to grant Anna's wish: a group photo like in the old days.",
+   "ko": "키아라는 옛날처럼 단체 사진을 찍고 싶다는 안나의 소원을 들어주고 싶어해요.",
+   "blank": "esaudire",
+   "src": "made"
+  }
+ ],
  "w|esaurimento": [
   {
    "text": "Dopo mesi di lavoro senza pause, Paolo è ricoverato per esaurimento.",
@@ -27483,6 +27659,22 @@
    "blank": "facile"
   }
  ],
+ "w|facilitare": [
+  {
+   "text": "Un buon coltello può facilitare molto il lavoro di Luca.",
+   "en": "A good knife can make Luca's work much easier.",
+   "ko": "좋은 칼은 루카의 일을 훨씬 쉽게 해 줄 수 있어요.",
+   "blank": "facilitare",
+   "src": "made"
+  },
+  {
+   "text": "Un gruppo in chat ha aiutato a facilitare l'organizzazione della festa di Chiara.",
+   "en": "A group chat helped make organizing Chiara's party easier.",
+   "ko": "단체 채팅방 덕분에 키아라의 모임 준비가 수월해졌어요.",
+   "blank": "facilitare",
+   "src": "made"
+  }
+ ],
  "w|facilmente": [
   {
    "text": "Si stanca facilmente dopo pranzo.",
@@ -28004,6 +28196,22 @@
    "en": "Stripping the old wallpaper is tiring work for Francesca.",
    "ko": "낡은 벽지를 떼는 건 프란체스카에게 힘든 일이에요.",
    "blank": "faticoso",
+   "src": "made"
+  }
+ ],
+ "w|fattibile": [
+  {
+   "text": "Fare il pane in casa ogni giorno non è fattibile per Luca.",
+   "en": "Making bread at home every day isn't feasible for Luca.",
+   "ko": "루카에게 매일 집에서 빵을 굽는 건 현실적으로 어려워요.",
+   "blank": "fattibile",
+   "src": "made"
+  },
+  {
+   "text": "Un viaggio tutti insieme l'anno prossimo sembra fattibile, dice Chiara.",
+   "en": "A trip all together next year seems doable, says Chiara.",
+   "ko": "내년에 다 같이 여행 가는 건 해볼 만하다고 키아라가 말해요.",
+   "blank": "fattibile",
    "src": "made"
   }
  ],
@@ -30772,6 +30980,22 @@
    "en": "Today there's fried chicken in the canteen, and Martina is happy.",
    "ko": "오늘 급식에 치킨이 나와서 마르티나는 신나요.",
    "blank": "fritto",
+   "src": "made"
+  }
+ ],
+ "w|frizzante": [
+  {
+   "text": "Con il pesce Luca consiglia un vino bianco leggermente frizzante.",
+   "en": "With the fish Luca recommends a slightly sparkling white wine.",
+   "ko": "루카는 생선에 살짝 탄산이 있는 화이트와인을 권해요.",
+   "blank": "frizzante",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ordina un'acqua frizzante e una pizza margherita.",
+   "en": "Chiara orders a sparkling water and a margherita pizza.",
+   "ko": "키아라는 탄산수와 마르게리타 피자를 시켜요.",
+   "blank": "frizzante",
    "src": "made"
   }
  ],
@@ -33913,6 +34137,22 @@
    "src": "made"
   }
  ],
+ "w|gustare": [
+  {
+   "text": "Luca si siede finalmente a gustare il suo risotto.",
+   "en": "Luca finally sits down to savour his risotto.",
+   "ko": "루카는 드디어 앉아서 자기 리소토를 음미해요.",
+   "blank": "gustare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara vuole gustare ogni momento con i vecchi amici.",
+   "en": "Chiara wants to savour every moment with her old friends.",
+   "ko": "키아라는 옛 친구들과의 순간을 하나하나 만끽하고 싶어해요.",
+   "blank": "gustare",
+   "src": "made"
+  }
+ ],
  "w|gusto": [
   {
    "text": "Questo gelato ha un gusto incredibile.",
@@ -33925,6 +34165,22 @@
    "en": "We have the same taste in music.",
    "ko": "우린 음악 취향이 같아.",
    "blank": "gusto"
+  }
+ ],
+ "w|gustoso": [
+  {
+   "text": "Il sugo di Luca è venuto davvero gustoso.",
+   "en": "Luca's sauce turned out really tasty.",
+   "ko": "루카의 소스는 정말 맛있게 됐어요.",
+   "blank": "gustoso",
+   "src": "made"
+  },
+  {
+   "text": "Il tiramisù portato da Chiara è il dolce più gustoso della serata.",
+   "en": "The tiramisu Chiara brought is the tastiest dessert of the evening.",
+   "ko": "키아라가 가져온 티라미수가 그날 저녁 가장 맛있는 디저트예요.",
+   "blank": "gustoso",
+   "src": "made"
   }
  ],
  "w|hamburger": [
@@ -34528,6 +34784,22 @@
    "en": "Anna feels immense joy when the app passes a thousand users.",
    "ko": "앱 사용자가 천 명을 넘자 안나는 엄청난 기쁨을 느껴요.",
    "blank": "immensa",
+   "src": "made"
+  }
+ ],
+ "w|immergere": [
+  {
+   "text": "Luca deve immergere i pomodori nell'acqua bollente per pelarli.",
+   "en": "Luca has to dip the tomatoes in boiling water to peel them.",
+   "ko": "루카는 껍질을 벗기려고 토마토를 끓는 물에 담가야 해요.",
+   "blank": "immergere",
+   "src": "made"
+  },
+  {
+   "text": "Al lago Chiara e le amiche si fanno coraggio per immergere i piedi nell'acqua gelata.",
+   "en": "At the lake Chiara and her friends pluck up the courage to dip their feet in the icy water.",
+   "ko": "호숫가에서 키아라와 친구들은 용기를 내어 얼음장 같은 물에 발을 담가요.",
+   "blank": "immergere",
    "src": "made"
   }
  ],
@@ -36909,6 +37181,22 @@
    "src": "made"
   }
  ],
+ "w|inghiottire": [
+  {
+   "text": "Il peperoncino è così forte che Luca fa fatica a inghiottire.",
+   "en": "The chilli is so hot that Luca struggles to swallow.",
+   "ko": "고추가 너무 매워서 루카는 삼키기가 힘들어요.",
+   "blank": "inghiottire",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ride così tanto che quasi non riesce a inghiottire il vino.",
+   "en": "Chiara laughs so hard she can barely swallow her wine.",
+   "ko": "키아라는 너무 웃어서 와인을 삼키기도 힘들어요.",
+   "blank": "inghiottire",
+   "src": "made"
+  }
+ ],
  "w|ingiustizia": [
   {
    "text": "Luca scrive un tema su un'ingiustizia del passato che lo ha colpito.",
@@ -37736,6 +38024,22 @@
    "en": "After an hour in the water, Elena's make-up was still intact.",
    "ko": "물속에서 한 시간을 보냈는데도 엘레나의 화장은 그대로였어요.",
    "blank": "intatto",
+   "src": "made"
+  }
+ ],
+ "w|integrale": [
+  {
+   "text": "Per la pizza Luca mescola farina bianca e farina integrale.",
+   "en": "For the pizza Luca mixes white flour and wholemeal flour.",
+   "ko": "루카는 피자에 흰 밀가루와 통밀가루를 섞어요.",
+   "blank": "integrale",
+   "src": "made"
+  },
+  {
+   "text": "Per la cena Chiara compra un pane integrale al forno sotto casa.",
+   "en": "For dinner Chiara buys a wholemeal loaf at the bakery downstairs.",
+   "ko": "키아라는 저녁에 먹으려고 집 아래 빵집에서 통밀빵을 사요.",
+   "blank": "integrale",
    "src": "made"
   }
  ],
@@ -38777,6 +39081,22 @@
    "src": "made"
   }
  ],
+ "w|involtino": [
+  {
+   "text": "Luca riempie ogni involtino di prosciutto e formaggio.",
+   "en": "Luca fills each roll with ham and cheese.",
+   "ko": "루카는 말이 고기 하나하나에 햄과 치즈를 채워요.",
+   "blank": "involtino",
+   "src": "made"
+  },
+  {
+   "text": "La mamma di Chiara ha preparato un involtino per ogni ospite.",
+   "en": "Chiara's mum made a roll for each guest.",
+   "ko": "키아라의 엄마는 손님마다 말이 고기 하나씩을 준비했어요.",
+   "blank": "involtino",
+   "src": "made"
+  }
+ ],
  "w|io": [
   {
    "text": "Oggi pago io.",
@@ -39746,6 +40066,22 @@
    "en": "Martina recycles every can in the class's yellow bin.",
    "ko": "마르티나는 캔을 하나하나 교실의 노란 수거함에 버려요.",
    "blank": "lattina",
+   "src": "made"
+  }
+ ],
+ "w|lattuga": [
+  {
+   "text": "Luca lava la lattuga con cura, foglia per foglia.",
+   "en": "Luca washes the lettuce carefully, leaf by leaf.",
+   "ko": "루카는 상추를 한 잎씩 꼼꼼하게 씻어요.",
+   "blank": "lattuga",
+   "src": "made"
+  },
+  {
+   "text": "Nel panino di Chiara c'è solo una foglia di lattuga.",
+   "en": "There's only one lettuce leaf in Chiara's sandwich.",
+   "ko": "키아라의 샌드위치에는 상추 한 잎만 들어 있어요.",
+   "blank": "lattuga",
    "src": "made"
   }
  ],
@@ -42319,6 +42655,22 @@
    "blank": "Mandami"
   }
  ],
+ "w|mandarino": [
+  {
+   "text": "Luca grattugia la buccia di un mandarino sopra il dolce.",
+   "en": "Luca grates the peel of a mandarin over the dessert.",
+   "ko": "루카는 디저트 위에 귤껍질을 갈아 뿌려요.",
+   "blank": "mandarino",
+   "src": "made"
+  },
+  {
+   "text": "Chiara sbuccia un mandarino e lo divide con l'amica accanto.",
+   "en": "Chiara peels a mandarin and shares it with the friend next to her.",
+   "ko": "키아라는 귤을 까서 옆에 앉은 친구와 나눠 먹어요.",
+   "blank": "mandarino",
+   "src": "made"
+  }
+ ],
  "w|mandato": [
   {
    "text": "Il giudice ha firmato il mandato e Luca è partito subito per la perquisizione.",
@@ -44080,6 +44432,38 @@
    "en": "On Wednesdays Martina takes the class to the swimming pool.",
    "ko": "수요일마다 마르티나는 반 아이들을 수영장에 데려가요.",
    "blank": "mercoledì",
+   "src": "made"
+  }
+ ],
+ "w|merenda": [
+  {
+   "text": "Per la merenda dei bambini Luca prepara pane e marmellata.",
+   "en": "For the children's afternoon snack Luca makes bread and jam.",
+   "ko": "루카는 아이들 간식으로 잼 바른 빵을 준비해요.",
+   "blank": "merenda",
+   "src": "made"
+  },
+  {
+   "text": "Gli amici ridono ricordando come Chiara rubava la merenda dei compagni.",
+   "en": "The friends laugh remembering how Chiara used to steal her classmates' snacks.",
+   "ko": "친구들은 키아라가 반 친구들 간식을 훔쳐 먹던 걸 떠올리며 웃어요.",
+   "blank": "merenda",
+   "src": "made"
+  }
+ ],
+ "w|merendina": [
+  {
+   "text": "Luca vuole imparare a fare una merendina sana per i suoi figli.",
+   "en": "Luca wants to learn to make a healthy snack cake for his kids.",
+   "ko": "루카는 아이들에게 줄 건강한 간식 과자를 만드는 법을 배우고 싶어해요.",
+   "blank": "merendina",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ricorda la merendina che si dividevano a ricreazione.",
+   "en": "Chiara remembers the snack cake they used to share at break time.",
+   "ko": "키아라는 쉬는 시간에 나눠 먹던 간식 과자를 떠올려요.",
+   "blank": "merendina",
    "src": "made"
   }
  ],
@@ -47151,6 +47535,22 @@
    "blank": "nobile"
   }
  ],
+ "w|nocciola": [
+  {
+   "text": "Luca aggiunge una crema alla nocciola sopra i biscotti.",
+   "en": "Luca adds a hazelnut cream on top of the biscuits.",
+   "ko": "루카는 비스킷 위에 헤이즐넛 크림을 얹어요.",
+   "blank": "nocciola",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ordina un gelato alla nocciola per finire la serata.",
+   "en": "Chiara orders a hazelnut ice cream to finish the evening.",
+   "ko": "키아라는 저녁 마무리로 헤이즐넛 아이스크림을 시켜요.",
+   "blank": "nocciola",
+   "src": "made"
+  }
+ ],
  "w|nocciolina": [
   {
    "text": "Lo chef chiede se qualcuno è allergico, e Andrea dice di non poter mangiare nemmeno una nocciolina.",
@@ -49853,6 +50253,22 @@
    "src": "made"
   }
  ],
+ "w|ossia": [
+  {
+   "text": "Luca usa il lievito madre, ossia una pasta acida che si rinnova ogni giorno.",
+   "en": "Luca uses sourdough starter, that is, a sour dough that is refreshed every day.",
+   "ko": "루카는 천연 발효종, 즉 매일 새로 먹이를 주는 시큼한 반죽을 써요.",
+   "blank": "ossia",
+   "src": "made"
+  },
+  {
+   "text": "Chiara organizza la cena per il gruppo del liceo, ossia per dodici persone.",
+   "en": "Chiara is organizing the dinner for the high school group, that is, for twelve people.",
+   "ko": "키아라는 고등학교 친구들, 즉 열두 명을 위한 저녁을 준비해요.",
+   "blank": "ossia",
+   "src": "made"
+  }
+ ],
  "w|ossigeno": [
   {
    "text": "Il paziente ha bisogno di ossigeno.",
@@ -51579,6 +51995,22 @@
    "blank": "passione"
   }
  ],
+ "w|passivo": [
+  {
+   "text": "Luca non vuole restare passivo e si offre di impastare per primo.",
+   "en": "Luca doesn't want to stay passive and offers to knead first.",
+   "ko": "루카는 가만히 있고 싶지 않아서 먼저 반죽하겠다고 나서요.",
+   "blank": "passivo",
+   "src": "made"
+  },
+  {
+   "text": "Di solito Chiara ha un ruolo passivo, ma stasera è lei a fare il brindisi.",
+   "en": "Usually Chiara plays a passive role, but tonight she's the one making the toast.",
+   "ko": "평소 키아라는 소극적이지만 오늘 밤엔 직접 건배사를 해요.",
+   "blank": "passivo",
+   "src": "made"
+  }
+ ],
  "w|passo": [
   {
    "text": "Ho sentito un passo in corridoio.",
@@ -52263,6 +52695,22 @@
    "en": "The pen doesn't write well anymore.",
    "ko": "펜이 더 이상 잘 안 써져.",
    "blank": "penna"
+  }
+ ],
+ "w|penoso": [
+  {
+   "text": "Il primo tentativo di soufflé di Luca è stato penoso.",
+   "en": "Luca's first attempt at a soufflé was pitiful.",
+   "ko": "루카의 첫 수플레 도전은 처참했어요.",
+   "blank": "penoso",
+   "src": "made"
+  },
+  {
+   "text": "Il karaoke di fine serata è stato penoso, ma Chiara ha riso tantissimo.",
+   "en": "The end-of-night karaoke was painful, but Chiara laughed a lot.",
+   "ko": "마지막 노래방은 처참했지만 키아라는 엄청 웃었어요.",
+   "blank": "penoso",
+   "src": "made"
   }
  ],
  "w|pensare": [
@@ -54077,6 +54525,22 @@
    "blank": "pizza"
   }
  ],
+ "w|pizzeria": [
+  {
+   "text": "Luca sogna di aprire una pizzeria dopo il corso.",
+   "en": "Luca dreams of opening a pizzeria after the course.",
+   "ko": "루카는 과정을 마치면 피자 가게를 여는 게 꿈이에요.",
+   "blank": "pizzeria",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ha prenotato un tavolo lungo nella pizzeria dove andavano da ragazzi.",
+   "en": "Chiara booked a long table at the pizzeria they used to go to as teenagers.",
+   "ko": "키아라는 어릴 때 다니던 피자 가게에 긴 테이블을 예약했어요.",
+   "blank": "pizzeria",
+   "src": "made"
+  }
+ ],
  "w|pizzicare": [
   {
    "text": "Il bambino del piano di sotto pizzica le corde della chitarra e Simone lo ascolta.",
@@ -54466,6 +54930,22 @@
    "en": "At a diner Laura eats meatballs in tomato sauce.",
    "ko": "간이식당에서 라우라는 토마토소스 미트볼을 먹어요.",
    "blank": "polpette",
+   "src": "made"
+  }
+ ],
+ "w|polpettone": [
+  {
+   "text": "Oggi Luca impara la ricetta del polpettone della nonna.",
+   "en": "Today Luca learns grandma's meatloaf recipe.",
+   "ko": "오늘 루카는 할머니식 미트로프 요리법을 배워요.",
+   "blank": "polpettone",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ha cucinato il polpettone che tutti adoravano da ragazzi.",
+   "en": "Chiara cooked the meatloaf everyone loved as teenagers.",
+   "ko": "키아라는 다들 어릴 때 좋아하던 미트로프를 만들었어요.",
+   "blank": "polpettone",
    "src": "made"
   }
  ],
@@ -57061,6 +57541,22 @@
    "blank": "proiettile"
   }
  ],
+ "w|prolungare": [
+  {
+   "text": "Luca chiede all'insegnante di prolungare la lezione di mezz'ora.",
+   "en": "Luca asks the teacher to extend the lesson by half an hour.",
+   "ko": "루카는 선생님에게 수업을 삼십 분 늘려 달라고 해요.",
+   "blank": "prolungare",
+   "src": "made"
+  },
+  {
+   "text": "Gli amici di Chiara vorrebbero prolungare la serata fino all'alba.",
+   "en": "Chiara's friends would like to stretch the evening out until dawn.",
+   "ko": "키아라의 친구들은 저녁 모임을 새벽까지 이어 가고 싶어해요.",
+   "blank": "prolungare",
+   "src": "made"
+  }
+ ],
  "w|promessa": [
   {
    "text": "Hai fatto una promessa e devi mantenerla.",
@@ -57666,6 +58162,22 @@
    "en": "In the autumn fog Elena drives with great caution.",
    "ko": "가을 안개 속에서 엘레나는 아주 조심해서 운전해요.",
    "blank": "prudenza",
+   "src": "made"
+  }
+ ],
+ "w|prugna": [
+  {
+   "text": "Luca taglia una prugna a pezzetti per la torta.",
+   "en": "Luca cuts a plum into small pieces for the cake.",
+   "ko": "루카는 케이크에 넣으려고 자두 하나를 잘게 썰어요.",
+   "blank": "prugna",
+   "src": "made"
+  },
+  {
+   "text": "Un'amica ha portato a Chiara una marmellata di prugna fatta in casa.",
+   "en": "A friend brought Chiara some homemade plum jam.",
+   "ko": "친구가 키아라에게 집에서 만든 자두잼을 가져왔어요.",
+   "blank": "prugna",
    "src": "made"
   }
  ],
@@ -59609,6 +60121,22 @@
    "src": "made"
   }
  ],
+ "w|raviolo": [
+  {
+   "text": "Luca chiude ogni raviolo premendo i bordi con la forchetta.",
+   "en": "Luca seals each raviolo by pressing the edges with a fork.",
+   "ko": "루카는 포크로 가장자리를 눌러 라비올리를 하나하나 여며요.",
+   "blank": "raviolo",
+   "src": "made"
+  },
+  {
+   "text": "A cena Chiara lascia l'ultimo raviolo all'amico più affamato.",
+   "en": "At dinner Chiara leaves the last raviolo to her hungriest friend.",
+   "ko": "저녁 자리에서 키아라는 마지막 라비올리를 가장 배고픈 친구에게 양보해요.",
+   "blank": "raviolo",
+   "src": "made"
+  }
+ ],
  "w|razionale": [
   {
    "text": "La sposa è più razionale di Matteo e ha organizzato tutto con un foglio di calcolo.",
@@ -60398,6 +60926,22 @@
    "en": "Giulia regularly orders dog food from the same site.",
    "ko": "줄리아는 같은 사이트에서 개 사료를 정기적으로 주문해요.",
    "blank": "regolarmente",
+   "src": "made"
+  }
+ ],
+ "w|relativamente": [
+  {
+   "text": "Per Luca la pasta fresca è relativamente facile da fare.",
+   "en": "For Luca fresh pasta is relatively easy to make.",
+   "ko": "루카에게 생면은 비교적 만들기 쉬워요.",
+   "blank": "relativamente",
+   "src": "made"
+  },
+  {
+   "text": "Chiara trova un ristorante relativamente vicino a casa di tutti.",
+   "en": "Chiara finds a restaurant relatively close to everyone's home.",
+   "ko": "키아라는 모두의 집에서 비교적 가까운 식당을 찾아요.",
+   "blank": "relativamente",
    "src": "made"
   }
  ],
@@ -65067,6 +65611,22 @@
    "src": "made"
   }
  ],
+ "w|scaduto": [
+  {
+   "text": "Prima di cominciare, Luca butta via uno yogurt scaduto trovato nel frigo della scuola.",
+   "en": "Before starting, Luca throws away an expired yogurt he found in the school fridge.",
+   "ko": "시작하기 전에 루카는 학교 냉장고에서 찾은 유통기한 지난 요거트를 버려요.",
+   "blank": "scaduto",
+   "src": "made"
+  },
+  {
+   "text": "Chiara si accorge che il suo passaporto è scaduto proprio prima della rimpatriata.",
+   "en": "Chiara notices that her passport has expired just before the reunion.",
+   "ko": "키아라는 동창 모임 직전에 여권이 만료된 걸 알아채요.",
+   "blank": "scaduto",
+   "src": "made"
+  }
+ ],
  "w|scaffale": [
   {
    "text": "Simone monta uno scaffale nuovo per i libri in corridoio.",
@@ -65371,6 +65931,22 @@
    "en": "I received a box of chocolates.",
    "ko": "초콜릿 상자를 받았어.",
    "blank": "scatola"
+  }
+ ],
+ "w|scatoletta": [
+  {
+   "text": "Per la salsa Luca apre una scatoletta di acciughe.",
+   "en": "For the sauce Luca opens a small tin of anchovies.",
+   "ko": "루카는 소스를 만들려고 멸치 통조림 하나를 따요.",
+   "blank": "scatoletta",
+   "src": "made"
+  },
+  {
+   "text": "In campeggio, da ragazzi, Chiara e gli amici mangiavano tonno in scatoletta.",
+   "en": "Camping as teenagers, Chiara and her friends used to eat canned tuna.",
+   "ko": "어릴 적 캠핑에서 키아라와 친구들은 참치 통조림을 먹곤 했어요.",
+   "blank": "scatoletta",
+   "src": "made"
   }
  ],
  "w|scattare": [
@@ -70497,6 +71073,22 @@
    "blank": "sostanza"
   }
  ],
+ "w|sostanzialmente": [
+  {
+   "text": "La salsa di Luca è sostanzialmente pomodoro, aglio e basilico.",
+   "en": "Luca's sauce is basically tomato, garlic and basil.",
+   "ko": "루카의 소스는 사실상 토마토, 마늘, 바질이에요.",
+   "blank": "sostanzialmente",
+   "src": "made"
+  },
+  {
+   "text": "Chiara trova che gli amici siano sostanzialmente rimasti gli stessi.",
+   "en": "Chiara finds that her friends have basically stayed the same.",
+   "ko": "키아라는 친구들이 근본적으로 그대로라고 느껴요.",
+   "blank": "sostanzialmente",
+   "src": "made"
+  }
+ ],
  "w|sostegno": [
   {
    "text": "Grazie per il tuo sostegno costante.",
@@ -71977,6 +72569,22 @@
    "blank": "sprecare"
   }
  ],
+ "w|spreco": [
+  {
+   "text": "Buttare il pane vecchio per Luca è uno spreco.",
+   "en": "For Luca, throwing away old bread is a waste.",
+   "ko": "루카에게 오래된 빵을 버리는 건 낭비예요.",
+   "blank": "spreco",
+   "src": "made"
+  },
+  {
+   "text": "Chiara porta a casa gli avanzi per evitare lo spreco di cibo.",
+   "en": "Chiara takes the leftovers home to avoid wasting food.",
+   "ko": "키아라는 음식 낭비를 막으려고 남은 음식을 집에 가져가요.",
+   "blank": "spreco",
+   "src": "made"
+  }
+ ],
  "w|spregevole": [
   {
    "text": "Per Simone mentire ai lettori è un comportamento spregevole.",
@@ -72732,6 +73340,22 @@
    "en": "For Sara swimming in the open sea is more stimulating than the pool.",
    "ko": "사라에게는 바다 수영이 수영장보다 더 신나요.",
    "blank": "stimolante",
+   "src": "made"
+  }
+ ],
+ "w|stimolare": [
+  {
+   "text": "L'odore del pane caldo sembra stimolare l'appetito di Luca.",
+   "en": "The smell of warm bread seems to stimulate Luca's appetite.",
+   "ko": "따뜻한 빵 냄새가 루카의 입맛을 돋우는 것 같아요.",
+   "blank": "stimolare",
+   "src": "made"
+  },
+  {
+   "text": "Chiara fa domande per stimolare la conversazione tra i più timidi.",
+   "en": "Chiara asks questions to get the shyer ones talking.",
+   "ko": "키아라는 수줍은 친구들끼리 대화가 오가도록 질문을 던져요.",
+   "blank": "stimolare",
    "src": "made"
   }
  ],
@@ -79432,6 +80056,22 @@
    "en": "The weather for Sara's marathon is changeable, with possible rain in the afternoon.",
    "ko": "사라가 뛰는 마라톤 날 날씨는 변덕스러워서 오후에 비가 올 수도 있어요.",
    "blank": "variabile",
+   "src": "made"
+  }
+ ],
+ "w|varietà": [
+  {
+   "text": "Al mercato Luca scopre una varietà di pomodoro che non conosceva.",
+   "en": "At the market Luca discovers a variety of tomato he didn't know.",
+   "ko": "시장에서 루카는 몰랐던 토마토 품종을 발견해요.",
+   "blank": "varietà",
+   "src": "made"
+  },
+  {
+   "text": "Chiara ha scelto un locale con una grande varietà di piatti vegetariani.",
+   "en": "Chiara chose a place with a wide variety of vegetarian dishes.",
+   "ko": "키아라는 채식 요리가 아주 다양한 식당을 골랐어요.",
+   "blank": "varietà",
    "src": "made"
   }
  ],

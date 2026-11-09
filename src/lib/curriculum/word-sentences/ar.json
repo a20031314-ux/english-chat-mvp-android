@@ -7681,6 +7681,22 @@
    "src": "made"
   }
  ],
+ "w|إعدادية": [
+  {
+   "text": "كتب حسن عن نتائج امتحانات الإعدادية في المحافظة.",
+   "en": "Hassan wrote about the results of the middle school exams in the province.",
+   "ko": "하산은 그 지역 중학교 시험 결과를 기사로 썼어요.",
+   "blank": "الإعدادية",
+   "src": "made"
+  },
+  {
+   "text": "يشتري طلاب المدرسة الإعدادية الحلوى من هدى بعد الدوام.",
+   "en": "The middle school students buy candy from Huda after classes.",
+   "ko": "중학교 학생들이 수업이 끝나면 후다에게서 사탕을 사요.",
+   "blank": "الإعدادية",
+   "src": "made"
+  }
+ ],
  "w|إعدام": [
   {
    "text": "صدر حكم إعدام بحق المجرم.",
@@ -9977,6 +9993,22 @@
    "blank": "اخترع"
   }
  ],
+ "w|اختصار": [
+  {
+   "text": "يكره حسن الاختصار المبالغ فيه في عناوين الأخبار.",
+   "en": "Hassan hates excessive abbreviation in news headlines.",
+   "ko": "하산은 뉴스 제목을 지나치게 줄이는 걸 싫어해요.",
+   "blank": "الاختصار",
+   "src": "made"
+  },
+  {
+   "text": "تكتب هدى أسماء الزبائن في دفتر الديون باختصار.",
+   "en": "Huda writes customers' names in the debt book in abbreviated form.",
+   "ko": "후다는 외상 장부에 손님 이름을 줄여서 적어요.",
+   "blank": "باختصار",
+   "src": "made"
+  }
+ ],
  "w|اختصاص": [
   {
    "text": "سأل عمر المرشد عن الاختصاص الذي يناسبه في الجامعة.",
@@ -11949,6 +11981,22 @@
    "blank": "استلمت"
   }
  ],
+ "w|استمارة": [
+  {
+   "text": "ملأ حسن استمارة طلب بطاقة صحفية جديدة.",
+   "en": "Hassan filled out a form requesting a new press card.",
+   "ko": "하산은 새 기자증 신청서를 작성했어요.",
+   "blank": "استمارة",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت هدى جارتها العجوز في ملء استمارة المساعدة الاجتماعية.",
+   "en": "Huda helped her elderly neighbor fill out the social aid form.",
+   "ko": "후다는 나이 든 이웃이 사회 지원 신청서를 쓰는 걸 도왔어요.",
+   "blank": "استمارة",
+   "src": "made"
+  }
+ ],
  "w|استماع": [
   {
    "text": "أنا بحب استماع الموسيقى بالليل.",
@@ -12019,6 +12067,22 @@
    "en": "The continuation of rain caused floods.",
    "ko": "비가 계속 내려서 홍수가 났어.",
    "blank": "استمرار"
+  }
+ ],
+ "w|استمرارية": [
+  {
+   "text": "يخشى حسن على استمرارية الجريدة الورقية في السنوات القادمة.",
+   "en": "Hassan fears for the continuity of the print newspaper in the coming years.",
+   "ko": "하산은 앞으로 몇 년 동안 종이 신문이 이어질 수 있을지 걱정해요.",
+   "blank": "استمرارية",
+   "src": "made"
+  },
+  {
+   "text": "تريد هدى أن يدير ابنها الدكان من بعدها ليضمن استمراريته.",
+   "en": "Huda wants her son to run the shop after her to ensure its continuity.",
+   "ko": "후다는 가게가 계속 이어지도록 아들이 뒤를 이어 운영하길 바라요.",
+   "blank": "استمراريته",
+   "src": "made"
   }
  ],
  "w|استمع": [
@@ -19787,6 +19851,22 @@
    "blank": "بوب"
   }
  ],
+ "w|بورصة": [
+  {
+   "text": "يتابع حسن أخبار البورصة كل صباح للصفحة الاقتصادية.",
+   "en": "Hassan follows stock market news every morning for the economy page.",
+   "ko": "하산은 경제면을 위해 매일 아침 주식 시장 소식을 챙겨요.",
+   "blank": "البورصة",
+   "src": "made"
+  },
+  {
+   "text": "لا تفهم هدى شيئا في البورصة، فهي تضع مالها في الدكان.",
+   "en": "Huda understands nothing about the stock exchange; she puts her money into the shop.",
+   "ko": "후다는 주식 시장을 하나도 몰라서 돈을 가게에 넣어요.",
+   "blank": "البورصة",
+   "src": "made"
+  }
+ ],
  "w|بوضوح": [
   {
    "text": "تكلم بوضوح حتى يسمعك الجميع.",
@@ -22471,6 +22551,22 @@
    "blank": "تردد"
   }
  ],
+ "w|ترشيد": [
+  {
+   "text": "دعا رئيس التحرير إلى ترشيد استهلاك الورق في المكتب.",
+   "en": "The editor-in-chief called for rationalizing paper consumption in the office.",
+   "ko": "편집장은 사무실 종이 사용을 줄이자고 했어요.",
+   "blank": "ترشيد",
+   "src": "made"
+  },
+  {
+   "text": "علقت هدى ورقة عن ترشيد الماء قرب الحنفية.",
+   "en": "Huda hung a sheet about conserving water near the tap.",
+   "ko": "후다는 수도꼭지 옆에 물을 아껴 쓰자는 종이를 붙였어요.",
+   "blank": "ترشيد",
+   "src": "made"
+  }
+ ],
  "w|ترعرع": [
   {
    "text": "ترعرع الطفل في بيئة محبة.",
@@ -24133,6 +24229,22 @@
    "blank": "تعديل"
   }
  ],
+ "w|تعدين": [
+  {
+   "text": "زار حسن منجما في الجنوب ليكتب عن أثر التعدين على القرى.",
+   "en": "Hassan visited a mine in the south to write about the effect of mining on villages.",
+   "ko": "하산은 채굴이 마을에 미치는 영향을 쓰려고 남쪽 광산을 찾았어요.",
+   "blank": "التعدين",
+   "src": "made"
+  },
+  {
+   "text": "يعمل زوج هدى في شركة تعدين بعيدة ويعود آخر الأسبوع.",
+   "en": "Huda's husband works for a distant mining company and returns at the end of the week.",
+   "ko": "후다의 남편은 먼 곳의 광업 회사에서 일하고 주말에 돌아와요.",
+   "blank": "تعدين",
+   "src": "made"
+  }
+ ],
  "w|تعذيب": [
   {
    "text": "يحضر كريم دورة عن حقوق الإنسان ومنع التعذيب في السجون.",
@@ -24466,6 +24578,22 @@
    "en": "Mona sent a circular to the employees about the summer holiday.",
    "ko": "모나는 직원들에게 여름휴가에 관한 공지를 보냈어요.",
    "blank": "تعميما",
+   "src": "made"
+  }
+ ],
+ "w|تعهيد": [
+  {
+   "text": "قررت الجريدة تعهيد الطباعة إلى شركة خارجية لتوفير المال.",
+   "en": "The newspaper decided to outsource printing to an outside company to save money.",
+   "ko": "신문사는 돈을 아끼려고 인쇄를 외부 업체에 맡기기로 했어요.",
+   "blank": "تعهيد",
+   "src": "made"
+  },
+  {
+   "text": "قالت هدى إن تعهيد التوصيل لشركة أخرى كلفها كثيرا.",
+   "en": "Huda said outsourcing delivery to another company cost her a lot.",
+   "ko": "후다는 배달을 다른 회사에 맡겼더니 돈이 많이 들었다고 말했어요.",
+   "blank": "تعهيد",
    "src": "made"
   }
  ],
@@ -25275,6 +25403,22 @@
    "en": "Virtual reality technology is very fun.",
    "ko": "가상현실 기술은 정말 재미있어.",
    "blank": "تقنية"
+  }
+ ],
+ "w|تقنين": [
+  {
+   "text": "كتب حسن عن قرار تقنين الكهرباء في الصيف.",
+   "en": "Hassan wrote about the decision to ration electricity in summer.",
+   "ko": "하산은 여름철 전기 배급제 결정에 대해 썼어요.",
+   "blank": "تقنين",
+   "src": "made"
+  },
+  {
+   "text": "بسبب تقنين السكر، لا تبيع هدى أكثر من كيسين لكل زبون.",
+   "en": "Because of sugar rationing, Huda doesn't sell more than two bags per customer.",
+   "ko": "설탕 배급제 때문에 후다는 손님 한 명당 두 봉지까지만 팔아요.",
+   "blank": "تقنين",
+   "src": "made"
   }
  ],
  "w|تقويم": [
@@ -34123,6 +34267,22 @@
    "blank": "الحوض"
   }
  ],
+ "w|حوكمة": [
+  {
+   "text": "أعد حسن ملفا عن الحوكمة في الشركات العامة.",
+   "en": "Hassan prepared a dossier on governance in public companies.",
+   "ko": "하산은 공기업의 지배 구조에 관한 특집을 준비했어요.",
+   "blank": "الحوكمة",
+   "src": "made"
+  },
+  {
+   "text": "سمعت هدى في الراديو حديثا عن الحوكمة لم تفهم منه شيئا.",
+   "en": "Huda heard a talk about governance on the radio and understood nothing of it.",
+   "ko": "후다는 라디오에서 지배 구조에 관한 이야기를 들었지만 하나도 이해하지 못했어요.",
+   "blank": "الحوكمة",
+   "src": "made"
+  }
+ ],
  "w|حول": [
   {
    "text": "تحدثنا حول السفر والدراسة.",
@@ -35100,6 +35260,22 @@
    "en": "Huda laughs at a superstition the neighbors repeat about the shop's black cat.",
    "ko": "후다는 가게 검은 고양이를 두고 이웃들이 하는 미신에 웃어요.",
    "blank": "خرافة",
+   "src": "made"
+  }
+ ],
+ "w|خرامة": [
+  {
+   "text": "ثقب حسن الأوراق بالخرامة ووضعها في الملف.",
+   "en": "Hassan punched holes in the papers with the hole puncher and put them in the folder.",
+   "ko": "하산은 펀치로 종이에 구멍을 뚫어 파일에 넣었어요.",
+   "blank": "بالخرامة",
+   "src": "made"
+  },
+  {
+   "text": "سألت معلمة هدى إن كانت تبيع خرامة بثقبين.",
+   "en": "A teacher asked Huda if she sells a two-hole punch.",
+   "ko": "한 선생님이 후다에게 구멍 두 개짜리 펀치를 파느냐고 물었어요.",
+   "blank": "خرامة",
    "src": "made"
   }
  ],
@@ -37079,6 +37255,22 @@
    "src": "made"
   }
  ],
+ "w|دباسة": [
+  {
+   "text": "بحث حسن عن الدباسة ليجمع أوراق التقرير.",
+   "en": "Hassan looked for the stapler to put the report pages together.",
+   "ko": "하산은 보고서 종이를 묶으려고 스테이플러를 찾았어요.",
+   "blank": "الدباسة",
+   "src": "made"
+  },
+  {
+   "text": "اشترى طالب من هدى دباسة صغيرة ودفترا.",
+   "en": "A student bought a small stapler and a notebook from Huda.",
+   "ko": "한 학생이 후다에게서 작은 스테이플러와 공책을 샀어요.",
+   "blank": "دباسة",
+   "src": "made"
+  }
+ ],
  "w|دبر": [
   {
    "text": "دبر سامي مفاجأة للعروسين بأغنية سجلها أصدقاؤهما.",
@@ -37805,6 +37997,22 @@
    "en": "Doctor Ahmed is a famous physician.",
    "ko": "아흐마드 박사는 유명한 의사예요.",
    "blank": "دكتور"
+  }
+ ],
+ "w|دكتوراه": [
+  {
+   "text": "تحمل زميلة حسن شهادة دكتوراه في علم الاجتماع.",
+   "en": "Hassan's colleague holds a doctorate in sociology.",
+   "ko": "하산의 동료는 사회학 박사 학위를 가지고 있어요.",
+   "blank": "دكتوراه",
+   "src": "made"
+  },
+  {
+   "text": "يدرس ابن أخ هدى للحصول على الدكتوراه في الكيمياء.",
+   "en": "Huda's nephew is studying for a doctorate in chemistry.",
+   "ko": "후다의 조카는 화학 박사 학위를 따려고 공부해요.",
+   "blank": "الدكتوراه",
+   "src": "made"
   }
  ],
  "w|دل": [
@@ -44963,6 +45171,22 @@
    "blank": "سكر"
   }
  ],
+ "w|سكرتارية": [
+  {
+   "text": "ترك حسن رسالة عند السكرتارية ليتصل به رئيس التحرير.",
+   "en": "Hassan left a message with the secretariat for the editor-in-chief to call him.",
+   "ko": "하산은 편집장이 전화해 달라고 비서실에 메시지를 남겼어요.",
+   "blank": "السكرتارية",
+   "src": "made"
+  },
+  {
+   "text": "تعمل ابنة هدى في السكرتارية بشركة قريبة وتمر بها كل مساء.",
+   "en": "Huda's daughter works in the secretarial office of a nearby company and stops by every evening.",
+   "ko": "후다의 딸은 근처 회사 비서실에서 일하고 저녁마다 가게에 들러요.",
+   "blank": "السكرتارية",
+   "src": "made"
+  }
+ ],
  "w|سكرتير": [
   {
    "text": "أصبحت أختي سكرتير في شركة كبيرة.",
@@ -46211,6 +46435,22 @@
    "en": "My brother likes watching movies at a nearby سينما.",
    "ko": "내 동생은 근처 영화관에서 영화를 보는 것을 좋아해요.",
    "blank": "سينما"
+  }
+ ],
+ "w|سيولة": [
+  {
+   "text": "تعاني الجريدة من نقص في السيولة منذ تراجع الإعلانات.",
+   "en": "The newspaper has been suffering from a cash shortage since advertising declined.",
+   "ko": "신문사는 광고가 줄어든 뒤로 현금이 모자라 어려움을 겪고 있어요.",
+   "blank": "السيولة",
+   "src": "made"
+  },
+  {
+   "text": "تحتفظ هدى بقليل من السيولة في الصندوق لتعطي الباقي للزبائن.",
+   "en": "Huda keeps a little cash in the register to give change to customers.",
+   "ko": "후다는 손님에게 거스름돈을 주려고 계산대에 현금을 조금 둬요.",
+   "blank": "السيولة",
+   "src": "made"
   }
  ],
  "w|شأن": [
@@ -58521,6 +58761,22 @@
    "src": "made"
   }
  ],
+ "w|فاكس": [
+  {
+   "text": "ما زال في مكتب حسن جهاز فاكس قديم لا يستعمله أحد.",
+   "en": "There is still an old fax machine in Hassan's office that nobody uses.",
+   "ko": "하산의 사무실에는 아무도 쓰지 않는 낡은 팩스기가 아직 있어요.",
+   "blank": "فاكس",
+   "src": "made"
+  },
+  {
+   "text": "ترسل هدى طلبيات البضاعة بالفاكس لأن التاجر لا يستعمل الإنترنت.",
+   "en": "Huda sends goods orders by fax because the merchant doesn't use the internet.",
+   "ko": "도매상이 인터넷을 안 써서 후다는 물건 주문을 팩스로 보내요.",
+   "blank": "بالفاكس",
+   "src": "made"
+  }
+ ],
  "w|فاكهة": [
   {
    "text": "أكلت فاكهة بعد الغداء.",
@@ -61877,6 +62133,22 @@
    "blank": "قرض"
   }
  ],
+ "w|قرطاسية": [
+  {
+   "text": "طلب حسن من الإدارة شراء قرطاسية جديدة لمكتب التحرير.",
+   "en": "Hassan asked the administration to buy new stationery for the newsroom.",
+   "ko": "하산은 관리부에 편집국용 새 문구를 사 달라고 했어요.",
+   "blank": "قرطاسية",
+   "src": "made"
+  },
+  {
+   "text": "مع بداية المدارس، تبيع هدى الكثير من القرطاسية.",
+   "en": "With the start of school, Huda sells a lot of stationery.",
+   "ko": "개학이 되면 후다는 문구를 많이 팔아요.",
+   "blank": "القرطاسية",
+   "src": "made"
+  }
+ ],
  "w|قرع": [
   {
    "text": "قرع حسن الجرس ثلاث مرات قبل رفع الستار.",
@@ -63660,6 +63932,22 @@
    "en": "Fatima endured sore fingers in her first months with the guitar.",
    "ko": "파티마는 기타를 처음 배운 몇 달 동안 손가락 통증을 견뎠어요.",
    "blank": "كابدت",
+   "src": "made"
+  }
+ ],
+ "w|كابل": [
+  {
+   "text": "انقطع الإنترنت لأن عاملا قطع الكابل بالخطأ.",
+   "en": "The internet went down because a worker cut the cable by mistake.",
+   "ko": "일꾼이 실수로 케이블을 끊어서 인터넷이 끊겼어요.",
+   "blank": "الكابل",
+   "src": "made"
+  },
+  {
+   "text": "تبيع هدى كابل شحن للهواتف بجانب الصندوق.",
+   "en": "Huda sells a phone charging cable next to the register.",
+   "ko": "후다는 계산대 옆에서 휴대폰 충전 케이블을 팔아요.",
+   "blank": "كابل",
    "src": "made"
   }
  ],
@@ -71859,6 +72147,22 @@
    "src": "made"
   }
  ],
+ "w|محذوف": [
+  {
+   "text": "أعاد حسن إلى المقال سطرا محذوفا لأنه مهم للقارئ.",
+   "en": "Hassan put a deleted line back into the article because it is important for the reader.",
+   "ko": "하산은 독자에게 중요한 내용이라 삭제된 줄을 기사에 되살렸어요.",
+   "blank": "محذوفا",
+   "src": "made"
+  },
+  {
+   "text": "أعادت هدى إلى القائمة صنفا محذوفا لأن الزبائن طلبوه.",
+   "en": "Huda put a removed item back on the list because customers asked for it.",
+   "ko": "손님들이 찾아서 후다는 목록에서 뺐던 물건을 다시 넣었어요.",
+   "blank": "محذوفا",
+   "src": "made"
+  }
+ ],
  "w|محراب": [
   {
    "text": "شرح علي أن المحراب يدل على اتجاه القبلة في المسجد.",
@@ -72414,6 +72718,22 @@
    "en": "Layla wonders who the inventor was who made the first heater.",
    "ko": "라일라는 최초의 난로를 만든 발명가가 누구인지 궁금해요.",
    "blank": "المخترع",
+   "src": "made"
+  }
+ ],
+ "w|مختص": [
+  {
+   "text": "اتصل حسن بطبيب مختص ليشرح المرض الجديد للقراء.",
+   "en": "Hassan called a specialist doctor to explain the new disease to readers.",
+   "ko": "하산은 새 질병을 독자에게 설명해 줄 전문의에게 전화했어요.",
+   "blank": "مختص",
+   "src": "made"
+  },
+  {
+   "text": "جاء فني مختص لإصلاح براد هدى.",
+   "en": "A specialized technician came to fix Huda's fridge.",
+   "ko": "전문 기술자가 후다의 냉장고를 고치러 왔어요.",
+   "blank": "مختص",
    "src": "made"
   }
  ],
@@ -73797,6 +74117,22 @@
    "blank": "مرحى"
   }
  ],
+ "w|مرخص": [
+  {
+   "text": "لا يستعمل حسن إلا صورا من مصور مرخص له بالتصوير في المحكمة.",
+   "en": "Hassan only uses photos from a photographer licensed to shoot in court.",
+   "ko": "하산은 법원 촬영 허가를 받은 사진가의 사진만 써요.",
+   "blank": "مرخص",
+   "src": "made"
+  },
+  {
+   "text": "دكان هدى مرخص لبيع الأدوية البسيطة مثل مسكنات الصداع.",
+   "en": "Huda's shop is licensed to sell simple medicines like headache painkillers.",
+   "ko": "후다의 가게는 두통약 같은 간단한 약을 팔 허가를 받았어요.",
+   "blank": "مرخص",
+   "src": "made"
+  }
+ ],
  "w|مرشح": [
   {
    "text": "كل مرشح قدم برنامجه الانتخابي.",
@@ -74779,6 +75115,22 @@
    "src": "made"
   }
  ],
+ "w|مستحق": [
+  {
+   "text": "نال حسن جائزة الصحافة، وقال زملاؤه إنها جائزة مستحقة.",
+   "en": "Hassan won the journalism prize, and his colleagues said it was a well-deserved prize.",
+   "ko": "하산이 언론상을 받자 동료들은 받을 만한 상이라고 말했어요.",
+   "blank": "مستحقة",
+   "src": "made"
+  },
+  {
+   "text": "دفعت هدى الإيجار المستحق قبل نهاية الشهر.",
+   "en": "Huda paid the rent due before the end of the month.",
+   "ko": "후다는 월말 전에 밀린 집세를 냈어요.",
+   "blank": "المستحق",
+   "src": "made"
+  }
+ ],
  "w|مستحيل": [
   {
    "text": "قال الطبيب إن الشفاء مستحيل الآن.",
@@ -75071,6 +75423,22 @@
    "en": "The road here is straight and easy.",
    "ko": "여기 길은 곧고 쉬워.",
    "blank": "مستقيم"
+  }
+ ],
+ "w|مستلم": [
+  {
+   "text": "يسجل حسن كل بريد مستلم من القراء في دفتر خاص.",
+   "en": "Hassan records every piece of mail received from readers in a special notebook.",
+   "ko": "하산은 독자에게 받은 우편을 모두 따로 공책에 적어요.",
+   "blank": "مستلم",
+   "src": "made"
+  },
+  {
+   "text": "وقعت هدى على ورقة الطلب المستلم من الموزع.",
+   "en": "Huda signed the received order sheet from the distributor.",
+   "ko": "후다는 배급업자에게서 받은 주문서에 서명했어요.",
+   "blank": "المستلم",
+   "src": "made"
   }
  ],
  "w|مستمر": [
@@ -75505,6 +75873,22 @@
    "src": "made"
   }
  ],
+ "w|مسودة": [
+  {
+   "text": "قرأ حسن مسودة المقال ثلاث مرات قبل أن يرسلها إلى المطبعة.",
+   "en": "Hassan read the article draft three times before sending it to the printer.",
+   "ko": "하산은 기사 초안을 세 번 읽고 나서 인쇄소에 보냈어요.",
+   "blank": "مسودة",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت هدى ابنها في مسودة رسالة إلى البلدية.",
+   "en": "Huda helped her son with a draft letter to the municipality.",
+   "ko": "후다는 아들이 시청에 보낼 편지 초안을 쓰는 걸 도왔어요.",
+   "blank": "مسودة",
+   "src": "made"
+  }
+ ],
  "w|مسيء": [
   {
    "text": "أزال علي ملصقا مسيئا علقه أحدهم على باب المتحف.",
@@ -75887,6 +76271,22 @@
    "en": "The internet problem was solved.",
    "ko": "인터넷 문제가 해결됐어.",
    "blank": "مشكلة"
+  }
+ ],
+ "w|مشكوك": [
+  {
+   "text": "رفض حسن نشر الخبر لأن مصدره مشكوك فيه.",
+   "en": "Hassan refused to publish the story because its source is doubtful.",
+   "ko": "하산은 출처가 의심스러워서 그 기사를 싣지 않았어요.",
+   "blank": "مشكوك",
+   "src": "made"
+  },
+  {
+   "text": "نظرت هدى إلى الورقة النقدية بشك، فقد كانت مشكوكا في أمرها.",
+   "en": "Huda looked at the banknote suspiciously; it was of doubtful authenticity.",
+   "ko": "후다는 지폐가 미심쩍어서 의심스럽게 쳐다봤어요.",
+   "blank": "مشكوكا",
+   "src": "made"
   }
  ],
  "w|مشمس": [
@@ -76408,6 +76808,22 @@
    "en": "Mona put an antihistamine in her bag before the flight.",
    "ko": "모나는 비행 전에 가방에 알레르기약을 넣었어요.",
    "blank": "مضادا",
+   "src": "made"
+  }
+ ],
+ "w|مضاف": [
+  {
+   "text": "لاحظ حسن فقرة مضافة إلى المقال في آخر لحظة دون علمه.",
+   "en": "Hassan noticed a paragraph added to the article at the last moment without his knowledge.",
+   "ko": "하산은 자기도 모르게 마지막 순간에 기사에 덧붙여진 단락을 발견했어요.",
+   "blank": "مضافة",
+   "src": "made"
+  },
+  {
+   "text": "تبيع هدى عصيرا طبيعيا بلا سكر مضاف.",
+   "en": "Huda sells natural juice with no added sugar.",
+   "ko": "후다는 설탕을 넣지 않은 천연 주스를 팔아요.",
+   "blank": "مضاف",
    "src": "made"
   }
  ],
@@ -78773,6 +79189,22 @@
    "src": "made"
   }
  ],
+ "w|مقروء": [
+  {
+   "text": "يقول حسن إن المقال الجيد يجب أن يكون مقروءا لكل الناس.",
+   "en": "Hassan says a good article must be readable for everyone.",
+   "ko": "하산은 좋은 기사는 누구나 읽기 쉬워야 한다고 말해요.",
+   "blank": "مقروءا",
+   "src": "made"
+  },
+  {
+   "text": "لم يعد تاريخ الصلاحية على العلبة مقروءا، فرمتها هدى.",
+   "en": "The expiry date on the can was no longer legible, so Huda threw it away.",
+   "ko": "캔의 유통기한이 더는 읽히지 않아서 후다는 버렸어요.",
+   "blank": "مقروءا",
+   "src": "made"
+  }
+ ],
  "w|مقص": [
   {
    "text": "أحتاج مقص لقص الورق.",
@@ -79743,6 +80175,22 @@
    "src": "made"
   }
  ],
+ "w|ملتقى": [
+  {
+   "text": "حضر حسن ملتقى الصحفيين العرب في العاصمة.",
+   "en": "Hassan attended the forum of Arab journalists in the capital.",
+   "ko": "하산은 수도에서 열린 아랍 기자 모임에 참석했어요.",
+   "blank": "ملتقى",
+   "src": "made"
+  },
+  {
+   "text": "صار دكان هدى ملتقى لنساء الحي في الصباح.",
+   "en": "Huda's shop became a meeting place for the neighborhood women in the morning.",
+   "ko": "후다의 가게는 아침마다 동네 여자들이 모이는 곳이 됐어요.",
+   "blank": "ملتقى",
+   "src": "made"
+  }
+ ],
  "w|ملتو": [
   {
    "text": "صعد أحمد إلى القمة في درب ملتو بين الصخور.",
@@ -79832,6 +80280,22 @@
    "en": "Nour's company made noticeable progress in user numbers this month.",
    "ko": "누르의 회사는 이번 달 사용자 수가 눈에 띄게 늘었어요.",
    "blank": "ملحوظا",
+   "src": "made"
+  }
+ ],
+ "w|ملزم": [
+  {
+   "text": "قال حسن إن الصحفي ملزم بحماية مصادره.",
+   "en": "Hassan said a journalist is obligated to protect his sources.",
+   "ko": "하산은 기자는 취재원을 보호할 의무가 있다고 말했어요.",
+   "blank": "ملزم",
+   "src": "made"
+  },
+  {
+   "text": "هدى غير ملزمة بالبيع بالدين، لكنها تساعد الجيران.",
+   "en": "Huda isn't obliged to sell on credit, but she helps the neighbors.",
+   "ko": "후다는 외상을 줄 의무는 없지만 이웃을 도와요.",
+   "blank": "ملزمة",
    "src": "made"
   }
  ],
@@ -81015,6 +81479,22 @@
    "src": "made"
   }
  ],
+ "w|منسي": [
+  {
+   "text": "كتب حسن تحقيقا عن شاعر منسي عاش في الحي القديم.",
+   "en": "Hassan wrote an investigative piece about a forgotten poet who lived in the old quarter.",
+   "ko": "하산은 옛 동네에 살던 잊힌 시인에 관한 탐사 기사를 썼어요.",
+   "blank": "منسي",
+   "src": "made"
+  },
+  {
+   "text": "وجدت هدى في المخزن صندوقا منسيا من الحلوى القديمة.",
+   "en": "Huda found a forgotten box of old candy in the storeroom.",
+   "ko": "후다는 창고에서 잊혀 있던 옛날 사탕 상자를 찾았어요.",
+   "blank": "منسيا",
+   "src": "made"
+  }
+ ],
  "w|منشأة": [
   {
    "text": "زار مفتش البلدية المطعم ليتأكد أن المنشأة نظيفة.",
@@ -81523,6 +82003,22 @@
    "en": "The student reviewed the language curriculum before the exam.",
    "ko": "학생이 시험 전에 언어 과정을 복습했어.",
    "blank": "منهج"
+  }
+ ],
+ "w|منهجي": [
+  {
+   "text": "يتبع حسن أسلوبا منهجيا في التحقق من كل رقم قبل النشر.",
+   "en": "Hassan follows a methodical approach in verifying every figure before publishing.",
+   "ko": "하산은 기사를 내기 전에 모든 수치를 체계적으로 확인해요.",
+   "blank": "منهجيا",
+   "src": "made"
+  },
+  {
+   "text": "ترتب هدى الرفوف بشكل منهجي حسب نوع البضاعة.",
+   "en": "Huda arranges the shelves methodically by type of goods.",
+   "ko": "후다는 물건 종류별로 선반을 체계적으로 정리해요.",
+   "blank": "منهجي",
+   "src": "made"
   }
  ],
  "w|منهك": [
@@ -82113,6 +82609,38 @@
    "src": "made"
   }
  ],
+ "w|موحد": [
+  {
+   "text": "وضع حسن دليلا موحدا لكتابة الأسماء الأجنبية في الجريدة.",
+   "en": "Hassan set a unified guide for writing foreign names in the newspaper.",
+   "ko": "하산은 신문에서 외국 이름을 쓰는 통일된 지침을 만들었어요.",
+   "blank": "موحدا",
+   "src": "made"
+  },
+  {
+   "text": "تبيع هدى الخبز بسعر موحد لكل الزبائن.",
+   "en": "Huda sells bread at a uniform price to all customers.",
+   "ko": "후다는 모든 손님에게 빵을 같은 값에 팔아요.",
+   "blank": "موحد",
+   "src": "made"
+  }
+ ],
+ "w|موحش": [
+  {
+   "text": "كان مكتب التحرير موحشا في ليلة العيد بعد أن رحل الجميع.",
+   "en": "The newsroom was desolate on the night of the holiday after everyone had left.",
+   "ko": "명절 밤 모두 떠난 편집국은 쓸쓸했어요.",
+   "blank": "موحشا",
+   "src": "made"
+  },
+  {
+   "text": "يصبح الشارع موحشا بعد العاشرة، فتغلق هدى دكانها باكرا.",
+   "en": "The street becomes desolate after ten, so Huda closes her shop early.",
+   "ko": "열 시가 넘으면 거리가 썰렁해져서 후다는 가게를 일찍 닫아요.",
+   "blank": "موحشا",
+   "src": "made"
+  }
+ ],
  "w|مودة": [
   {
    "text": "الصداقة الحقيقية تقوم على مودة واحترام.",
@@ -82187,6 +82715,22 @@
    "en": "I bought bananas from the market.",
    "ko": "나는 시장에서 바나나를 샀어.",
    "blank": "موز"
+  }
+ ],
+ "w|موزع": [
+  {
+   "text": "اشتكى موزع الجريدة لحسن من تأخر الطبعة الصباحية.",
+   "en": "The newspaper distributor complained to Hassan about the delay of the morning edition.",
+   "ko": "신문 배급업자가 하산에게 아침판이 늦는다고 불평했어요.",
+   "blank": "موزع",
+   "src": "made"
+  },
+  {
+   "text": "يصل موزع الخبز إلى دكان هدى في السادسة صباحا.",
+   "en": "The bread distributor arrives at Huda's shop at six in the morning.",
+   "ko": "빵 배급업자는 아침 여섯 시에 후다의 가게에 도착해요.",
+   "blank": "موزع",
+   "src": "made"
   }
  ],
  "w|موسم": [
@@ -82698,6 +83242,22 @@
    "en": "Sara washes the vegetables well so no germ is left on them.",
    "ko": "사라는 세균이 남지 않도록 채소를 꼼꼼히 씻어요.",
    "blank": "ميكروب",
+   "src": "made"
+  }
+ ],
+ "w|ميكروفون": [
+  {
+   "text": "وضع حسن الميكروفون أمام الوزير وبدأ المقابلة.",
+   "en": "Hassan placed the microphone in front of the minister and began the interview.",
+   "ko": "하산은 장관 앞에 마이크를 놓고 인터뷰를 시작했어요.",
+   "blank": "الميكروفون",
+   "src": "made"
+  },
+  {
+   "text": "نادى بائع الخضار على الزبائن بميكروفون صغير أمام دكان هدى.",
+   "en": "The vegetable seller called out to customers with a small microphone in front of Huda's shop.",
+   "ko": "채소 장수가 후다의 가게 앞에서 작은 마이크로 손님을 불렀어요.",
+   "blank": "بميكروفون",
    "src": "made"
   }
  ],
@@ -83642,6 +84202,22 @@
    "en": "Nour helped her elderly neighbor carry his bags, which was a kind thing of her to do.",
    "ko": "누르는 나이 든 이웃의 짐을 들어 줬어요. 참 따뜻한 행동이었어요.",
    "blank": "نبيل",
+   "src": "made"
+  }
+ ],
+ "w|نبيه": [
+  {
+   "text": "المتدربة الجديدة نبيهة، فقد لاحظت خطأ في العنوان قبل حسن.",
+   "en": "The new trainee is sharp; she noticed a mistake in the headline before Hassan.",
+   "ko": "새 수습기자는 눈치가 빨라서 하산보다 먼저 제목의 실수를 알아챘어요.",
+   "blank": "نبيهة",
+   "src": "made"
+  },
+  {
+   "text": "ابن هدى ولد نبيه يحسب الباقي أسرع من الآلة.",
+   "en": "Huda's son is a clever boy who calculates the change faster than the machine.",
+   "ko": "후다의 아들은 영리해서 기계보다 잔돈을 빨리 계산해요.",
+   "blank": "نبيه",
    "src": "made"
   }
  ],
@@ -86357,6 +86933,22 @@
    "blank": "هام"
   }
  ],
+ "w|هامش": [
+  {
+   "text": "كتب حسن ملاحظاته في هامش الصفحة بقلم أحمر.",
+   "en": "Hassan wrote his notes in the page margin with a red pen.",
+   "ko": "하산은 빨간 펜으로 페이지 여백에 메모를 적었어요.",
+   "blank": "هامش",
+   "src": "made"
+  },
+  {
+   "text": "ربح هدى صغير، لأن هامش الربح في المواد الغذائية ضيق.",
+   "en": "Huda's profit is small because the profit margin on food items is narrow.",
+   "ko": "식료품은 이윤 폭이 좁아서 후다의 수익은 적어요.",
+   "blank": "هامش",
+   "src": "made"
+  }
+ ],
  "w|هامشي": [
   {
    "text": "بدا عطل المكيف أمرا هامشيا أمام جمال المنظر.",
@@ -88081,6 +88673,22 @@
    "blank": "وجود"
   }
  ],
+ "w|وجيز": [
+  {
+   "text": "طلب حسن من المراسل ملخصا وجيزا للخبر في سطرين.",
+   "en": "Hassan asked the reporter for a brief summary of the story in two lines.",
+   "ko": "하산은 기자에게 그 소식을 두 줄로 짧게 요약해 달라고 했어요.",
+   "blank": "وجيزا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت هدى على الباب إعلانا وجيزا: نعود بعد الصلاة.",
+   "en": "Huda wrote a brief notice on the door: back after prayer.",
+   "ko": "후다는 문에 \"기도 후 돌아옵니다\"라는 짧은 안내를 붙였어요.",
+   "blank": "وجيزا",
+   "src": "made"
+  }
+ ],
  "w|وجيه": [
   {
    "text": "والد الزميل الجديد وجيه معروف في الحي، كما عرف أحمد لاحقا.",
@@ -88201,6 +88809,22 @@
    "blank": "وحيد"
   }
  ],
+ "w|وخيم": [
+  {
+   "text": "حذر حسن من أن نشر الاسم الخطأ قد تكون له عواقب وخيمة.",
+   "en": "Hassan warned that publishing the wrong name could have dire consequences.",
+   "ko": "하산은 이름을 잘못 내면 심각한 결과가 올 수 있다고 경고했어요.",
+   "blank": "وخيمة",
+   "src": "made"
+  },
+  {
+   "text": "قالت هدى إن ترك الحليب خارج البراد خطأ وخيم في الصيف.",
+   "en": "Huda said leaving milk outside the fridge is a serious mistake in summer.",
+   "ko": "후다는 여름에 우유를 냉장고 밖에 두는 건 큰 실수라고 말했어요.",
+   "blank": "وخيم",
+   "src": "made"
+  }
+ ],
  "w|ود": [
   {
    "text": "أشعر ب ود كبير تجاهك.",
@@ -88284,6 +88908,22 @@
    "en": "Nour began her letter with a friendly greeting as if the years hadn't passed.",
    "ko": "누르는 세월이 흐르지 않은 것처럼 다정한 인사로 편지를 시작했어요.",
    "blank": "ودي",
+   "src": "made"
+  }
+ ],
+ "w|وديع": [
+  {
+   "text": "لحسن قطة وديعة تنام في مكتبه طوال الليل.",
+   "en": "Hassan has a gentle cat that sleeps in his office all night.",
+   "ko": "하산에게는 밤새 사무실에서 자는 순한 고양이가 있어요.",
+   "blank": "وديعة",
+   "src": "made"
+  },
+  {
+   "text": "يأتي إلى دكان هدى كلب وديع تطعمه بقايا الخبز.",
+   "en": "A gentle dog comes to Huda's shop, and she feeds it leftover bread.",
+   "ko": "후다의 가게에 순한 개가 오면 후다는 남은 빵을 줘요.",
+   "blank": "وديع",
    "src": "made"
   }
  ],
