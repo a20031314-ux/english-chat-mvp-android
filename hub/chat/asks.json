@@ -1,5 +1,166 @@
 {
-  "asks": [],
-  "scopes": [],
-  "seq": {}
+  "asks": [
+    {
+      "id": "a261109-1",
+      "at": "2026-11-09 14:35",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "실력 확인: firstCheck.ts startClimb에 시작 단계 인자(선택)를 더함 — studyPicture가 읽는 readFirstCheck·firstCheck.v1은 그대로. 통화 감독이 첫 측정 값만 보는데, 이제 실력 확인(skillCheck.v1)이 더 새 값을 가지니 그걸 쓸지 확인",
+      "files": [
+        "src/app/api/whats-new/route.ts",
+        "src/app/dev/call-preview/page.tsx",
+        "src/app/dev/roleplay-review/page.tsx",
+        "src/app/dev/update-notice/page.tsx",
+        "src/app/learning/LearningClient.tsx",
+        "src/components/LanguageSelector.tsx",
+        "src/components/LearningBookPanel.tsx",
+        "src/components/UpdateNotice.tsx",
+        "src/app/learning/page.tsx",
+        "src/components/LanguagePick.tsx",
+        "src/components/VocabPreviewProvider.tsx",
+        "src/components/AnalyzableEnglish.tsx",
+        "src/components/EnglishAnalysisViewer.tsx",
+        "src/components/FindInMy.tsx",
+        "src/components/EnglishAnalysisProvider.tsx",
+        "src/components/ExpressionInsightSheet.tsx",
+        "src/components/LearningReviewModal.tsx",
+        "src/components/ExpressionInsightProvider.tsx"
+      ],
+      "features": [
+        "처음 언어·튜터 고르기",
+        "AI 튜터 줄",
+        "튜터 프로필",
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "사람",
+        "Room",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘 카드",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "34e515a",
+      "head": "1b63757",
+      "status": "open"
+    },
+    {
+      "id": "a261109-2",
+      "at": "2026-11-09 14:35",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "실력 확인: firstCheck.ts startClimb에 시작 단계 인자(선택)를 더함 — studyPicture가 읽는 readFirstCheck·firstCheck.v1은 그대로. 통화 감독이 첫 측정 값만 보는데, 이제 실력 확인(skillCheck.v1)이 더 새 값을 가지니 그걸 쓸지 확인",
+      "files": [
+        "src/components/ChatWindow.tsx",
+        "src/components/roleplay/CallParts.tsx",
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx",
+        "src/components/RoleplayScreen.tsx",
+        "src/components/MessageBubble.tsx",
+        "src/components/videoLearning/StudyMaterialsList.tsx",
+        "src/components/CallHost.tsx",
+        "src/lib/pack/pack.ts",
+        "src/lib/server/ledgerStore.ts"
+      ],
+      "features": [
+        "처음 언어·튜터 고르기",
+        "AI 튜터 줄",
+        "튜터 프로필",
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "사람",
+        "Room",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘 카드",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "34e515a",
+      "head": "1b63757",
+      "status": "open"
+    },
+    {
+      "id": "a261109-3",
+      "at": "2026-11-09 14:35",
+      "kind": "apply",
+      "from": "2",
+      "to": "4",
+      "what": "실력 확인: firstCheck.ts startClimb에 시작 단계 인자(선택)를 더함 — studyPicture가 읽는 readFirstCheck·firstCheck.v1은 그대로. 통화 감독이 첫 측정 값만 보는데, 이제 실력 확인(skillCheck.v1)이 더 새 값을 가지니 그걸 쓸지 확인",
+      "files": [
+        "src/components/AiTutorProfile.tsx",
+        "src/components/rooms/RoomView.tsx",
+        "src/components/AiTutorRow.tsx",
+        "src/components/rooms/PeopleTab.tsx",
+        "src/components/rooms/RoomsScreen.tsx"
+      ],
+      "features": [
+        "처음 언어·튜터 고르기",
+        "AI 튜터 줄",
+        "튜터 프로필",
+        "AI 채팅",
+        "자유대화",
+        "통화 끝 화면",
+        "이렇게도 말할 수 있었어요",
+        "사람",
+        "Room",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘 카드",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "문장분석",
+        "My에서 찾기"
+      ],
+      "base": "34e515a",
+      "head": "1b63757",
+      "status": "open"
+    }
+  ],
+  "scopes": [
+    {
+      "at": "2026-11-09 14:35",
+      "from": "2",
+      "base": "34e515a",
+      "head": "1b63757",
+      "what": "실력 확인: firstCheck.ts startClimb에 시작 단계 인자(선택)를 더함 — studyPicture가 읽는 readFirstCheck·firstCheck.v1은 그대로. 통화 감독이 첫 측정 값만 보는데, 이제 실력 확인(skillCheck.v1)이 더 새 값을 가지니 그걸 쓸지 확인",
+      "tabs": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "asks": [
+        "a261109-1",
+        "a261109-2",
+        "a261109-3"
+      ]
+    }
+  ],
+  "seq": {
+    "261109": 3
+  }
 }
