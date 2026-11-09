@@ -175,6 +175,22 @@
    "blank": "âm nhạc"
   }
  ],
+ "w|ấm nước": [
+  {
+   "text": "Sáng nào Nam cũng đun một ấm nước để pha trà.",
+   "en": "Every morning Nam boils a kettle of water to make tea.",
+   "ko": "남은 매일 아침 차를 우리려고 주전자에 물을 끓여요.",
+   "blank": "ấm nước",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ Thảo treo ấm nước trên bếp lửa để pha trà cho khách.",
+   "en": "Thảo's mother hangs a kettle over the fire to make tea for guests.",
+   "ko": "타오의 어머니는 손님에게 차를 내려고 화로 위에 주전자를 걸어요.",
+   "blank": "ấm nước",
+   "src": "made"
+  }
+ ],
  "w|âm thanh": [
   {
    "text": "Âm thanh trong phòng họp hơi nhỏ.",
@@ -233,6 +249,22 @@
    "ko": "우리는 보통 젓가락으로 밥을 먹어요.",
    "blank": "ăn cơm",
    "src": "tatoeba:13381872/leucammieuvu en:11759965/CK"
+  }
+ ],
+ "w|ăn kiêng": [
+  {
+   "text": "Quán có thực đơn riêng cho khách đang ăn kiêng.",
+   "en": "The restaurant has a separate menu for customers who are on a diet.",
+   "ko": "가게에는 식단 조절 중인 손님을 위한 메뉴가 따로 있어요.",
+   "blank": "ăn kiêng",
+   "src": "made"
+  },
+  {
+   "text": "Đang ăn kiêng nên Mai từ chối miếng bánh kem của đồng nghiệp.",
+   "en": "Since she is on a diet, Mai turned down her coworker's slice of cream cake.",
+   "ko": "다이어트 중이라 마이는 동료가 준 생크림 케이크를 사양했어요.",
+   "blank": "ăn kiêng",
+   "src": "made"
   }
  ],
  "w|an ninh": [
@@ -379,6 +411,22 @@
    "en": "Today I just want to eat and drink freely.",
    "ko": "오늘은 그냥 편하게 먹고 마시고 싶어.",
    "blank": "ăn uống"
+  }
+ ],
+ "w|ăn vặt": [
+  {
+   "text": "Lũ trẻ tan học là ghé quán của Tuấn ăn vặt.",
+   "en": "As soon as school is out, the kids stop by Tuấn's restaurant for snacks.",
+   "ko": "아이들은 학교가 끝나면 뚜언네 가게에 들러 군것질을 해요.",
+   "blank": "ăn vặt",
+   "src": "made"
+  },
+  {
+   "text": "Phòng của Mai có cả một ngăn kéo đầy bánh kẹo để ăn vặt.",
+   "en": "Mai's team has a whole drawer full of sweets for snacking.",
+   "ko": "마이네 팀에는 군것질용 과자가 가득한 서랍이 하나 있어요.",
+   "blank": "ăn vặt",
+   "src": "made"
   }
  ],
  "w|ăn xin": [
@@ -1702,6 +1750,22 @@
    "en": "I like grilled corn.",
    "ko": "저는 구운 옥수수를 좋아해요.",
    "blank": "bắp",
+   "src": "made"
+  }
+ ],
+ "w|bắp cải": [
+  {
+   "text": "Món bắp cải cuộn thịt là món tủ của mẹ Tuấn.",
+   "en": "Meat-stuffed cabbage rolls are Tuấn's mother's signature dish.",
+   "ko": "고기를 넣은 양배추 말이는 뚜언 어머니의 장기 요리예요.",
+   "blank": "bắp cải",
+   "src": "made"
+  },
+  {
+   "text": "Bữa trưa ở căng tin hôm nay có canh bắp cải nấu tôm.",
+   "en": "Lunch at the cafeteria today includes cabbage and shrimp soup.",
+   "ko": "오늘 구내식당 점심에는 새우 양배추국이 나와요.",
+   "blank": "bắp cải",
    "src": "made"
   }
  ],
@@ -3213,6 +3277,22 @@
    "src": "made"
   }
  ],
+ "w|bột ngọt": [
+  {
+   "text": "Quán của Tuấn nấu không dùng bột ngọt mà vẫn đậm vị.",
+   "en": "Tuấn's restaurant cooks without MSG and the food is still flavorful.",
+   "ko": "뚜언네 가게는 조미료를 안 쓰는데도 맛이 진해요.",
+   "blank": "bột ngọt",
+   "src": "made"
+  },
+  {
+   "text": "Chị đầu bếp căng tin nói đã bớt bột ngọt trong các món canh.",
+   "en": "The cafeteria cook said she has cut back on MSG in the soups.",
+   "ko": "구내식당 조리사는 국에 조미료를 줄였다고 했어요.",
+   "blank": "bột ngọt",
+   "src": "made"
+  }
+ ],
  "w|bự": [
   {
    "text": "Ba mua cho Minh một cái cặp thật bự để đựng đủ sách.",
@@ -3226,6 +3306,22 @@
    "en": "The wardrobe was too big to fit through the lift door.",
    "ko": "옷장이 너무 커서 엘리베이터 문으로 안 들어갔어요.",
    "blank": "bự",
+   "src": "made"
+  }
+ ],
+ "w|búa": [
+  {
+   "text": "Nam mượn cây búa của bác hàng xóm để đóng đinh treo tranh.",
+   "en": "Nam borrowed the neighbor's hammer to nail up a picture.",
+   "ko": "남은 그림을 걸 못을 박으려고 이웃 아저씨의 망치를 빌렸어요.",
+   "blank": "búa",
+   "src": "made"
+  },
+  {
+   "text": "Bố Thảo dùng búa đóng lại hàng rào tre.",
+   "en": "Thảo's father used a hammer to fix the bamboo fence.",
+   "ko": "타오의 아버지는 망치로 대나무 울타리를 다시 박았어요.",
+   "blank": "búa",
    "src": "made"
   }
  ],
@@ -3608,6 +3704,22 @@
    "en": "Linh hung a bunch of ripe bananas right outside the shop.",
    "ko": "린은 잘 익은 바나나 한 송이를 가게 앞에 걸었어요.",
    "blank": "buồng",
+   "src": "made"
+  }
+ ],
+ "w|bướng": [
+  {
+   "text": "Thằng con trai của Nam bướng lắm, bảo mãi không chịu tắt tivi.",
+   "en": "Nam's son is very headstrong and won't turn off the TV no matter how often he's told.",
+   "ko": "남의 아들은 고집이 세서 몇 번을 말해도 TV를 안 꺼요.",
+   "blank": "bướng",
+   "src": "made"
+  },
+  {
+   "text": "Con dê của ông Páo bướng, kéo mãi không chịu về chuồng.",
+   "en": "Mr. Páo's goat is stubborn and won't go back into its pen no matter how hard you pull.",
+   "ko": "파오 할아버지의 염소는 고집이 세서 아무리 끌어도 우리로 안 들어가요.",
+   "blank": "bướng",
    "src": "made"
   }
  ],
@@ -4985,6 +5097,22 @@
    "blank": "câu nói"
   }
  ],
+ "w|cẩu thả": [
+  {
+   "text": "Thợ sửa ống nước làm ăn cẩu thả, nước lại rỉ ra sàn.",
+   "en": "The plumber did a sloppy job, and water leaked onto the floor again.",
+   "ko": "배관공이 대충 일을 해서 바닥으로 물이 또 샜어요.",
+   "blank": "cẩu thả",
+   "src": "made"
+  },
+  {
+   "text": "Người lái xe cẩu thả suýt lao xuống vực trên đường đèo.",
+   "en": "A careless driver nearly plunged into the ravine on the mountain road.",
+   "ko": "부주의한 운전자가 고갯길에서 낭떠러지로 떨어질 뻔했어요.",
+   "blank": "cẩu thả",
+   "src": "made"
+  }
+ ],
  "w|cầu thang": [
   {
    "text": "Đi cầu thang bộ cho khỏe hơn.",
@@ -5585,6 +5713,22 @@
    "blank": "cháu"
   }
  ],
+ "w|chậu": [
+  {
+   "text": "Ban công nhà bên trồng đủ thứ cây trong chậu.",
+   "en": "The balcony next door has all kinds of plants growing in pots.",
+   "ko": "옆집 발코니에는 화분에 온갖 식물이 자라요.",
+   "blank": "chậu",
+   "src": "made"
+  },
+  {
+   "text": "Trước nhà sàn, mẹ Thảo trồng vài chậu lan rừng.",
+   "en": "In front of the stilt house, Thảo's mother grows a few pots of wild orchids.",
+   "ko": "고상 가옥 앞에 타오의 어머니는 야생 난초 화분을 몇 개 키워요.",
+   "blank": "chậu",
+   "src": "made"
+  }
+ ],
  "w|cháu gái": [
   {
    "text": "Cháu gái bà mới vào lớp một.",
@@ -5793,6 +5937,22 @@
    "en": "Wash the bowls for me after the meal.",
    "ko": "밥 먹고 그릇 좀 닦아 줘.",
    "blank": "chén"
+  }
+ ],
+ "w|chéo": [
+  {
+   "text": "Hai tòa nhà đối diện nhau theo đường chéo qua sân chơi.",
+   "en": "The two buildings face each other diagonally across the playground.",
+   "ko": "두 건물은 놀이터를 사이에 두고 대각선으로 마주 보고 있어요.",
+   "blank": "chéo",
+   "src": "made"
+  },
+  {
+   "text": "Chiếc khăn của Thảo thêu hoa văn chéo màu đỏ.",
+   "en": "Thảo's scarf is embroidered with a red diagonal pattern.",
+   "ko": "타오의 스카프에는 빨간 사선 무늬가 수놓아져 있어요.",
+   "blank": "chéo",
+   "src": "made"
   }
  ],
  "w|chết": [
@@ -6193,6 +6353,22 @@
    "blank": "chín"
   }
  ],
+ "w|chín chắn": [
+  {
+   "text": "Bé Bi học lớp năm nhưng nói năng rất chín chắn.",
+   "en": "Little Bi is in fifth grade but speaks very maturely.",
+   "ko": "비는 오 학년인데 말하는 게 아주 의젓해요.",
+   "blank": "chín chắn",
+   "src": "made"
+  },
+  {
+   "text": "Mới mười lăm tuổi nhưng Thảo đã chín chắn như người lớn.",
+   "en": "Only fifteen, Thảo is already as mature as an adult.",
+   "ko": "겨우 열다섯 살이지만 타오는 벌써 어른처럼 성숙해요.",
+   "blank": "chín chắn",
+   "src": "made"
+  }
+ ],
  "w|chính": [
   {
    "text": "Chính cậu bảo mà.",
@@ -6570,6 +6746,22 @@
    "en": "He poked the anthill with a stick.",
    "ko": "그는 막대기로 개미집을 찔렀어요.",
    "blank": "chọc",
+   "src": "made"
+  }
+ ],
+ "w|chổi": [
+  {
+   "text": "Cô lao công cầm chổi quét cầu thang từ tầng trên xuống.",
+   "en": "The cleaning lady sweeps the stairs with a broom from the top floor down.",
+   "ko": "청소 아주머니는 빗자루를 들고 꼭대기 층부터 계단을 쓸어 내려와요.",
+   "blank": "chổi",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ Thảo bó những cây chổi đót để bán ở chợ phiên.",
+   "en": "Thảo's mother binds reed brooms to sell at the weekly market.",
+   "ko": "타오의 어머니는 장날에 팔려고 갈대 빗자루를 묶어요.",
+   "blank": "chổi",
    "src": "made"
   }
  ],
@@ -7021,6 +7213,22 @@
    "src": "made"
   }
  ],
+ "w|chùi": [
+  {
+   "text": "Cuối tuần, Nam chùi sạch cửa kính ban công.",
+   "en": "At the weekend, Nam wiped the balcony glass door clean.",
+   "ko": "주말에 남은 베란다 유리문을 깨끗이 닦았어요.",
+   "blank": "chùi",
+   "src": "made"
+  },
+  {
+   "text": "Bà của Thảo dùng tro bếp chùi nồi cho sáng bóng.",
+   "en": "Thảo's grandmother scours the pots with ashes until they shine.",
+   "ko": "타오의 할머니는 아궁이 재로 냄비를 반짝반짝하게 닦아요.",
+   "blank": "chùi",
+   "src": "made"
+  }
+ ],
  "w|chửi": [
   {
    "text": "Chửi người khác chỉ làm chuyện thêm tệ.",
@@ -7196,6 +7404,22 @@
    "en": "The little kid next to Trang is reading a comic about a horse in a stable.",
    "ko": "짱 옆에 앉은 아이는 마구간 속 말에 관한 만화를 보고 있어요.",
    "blank": "chuồng",
+   "src": "made"
+  }
+ ],
+ "w|chuông cửa": [
+  {
+   "text": "Bảy giờ sáng, chuông cửa nhà Nam đã reo inh ỏi.",
+   "en": "At seven in the morning, Nam's doorbell was already ringing loudly.",
+   "ko": "아침 일곱 시부터 남의 집 초인종이 요란하게 울렸어요.",
+   "blank": "chuông cửa",
+   "src": "made"
+  },
+  {
+   "text": "Nhà ở bản không ai lắp chuông cửa, khách đến chỉ cần gọi to.",
+   "en": "No houses in the village have doorbells; visitors just call out loudly.",
+   "ko": "마을 집들은 초인종이 없어서 손님은 크게 부르기만 하면 돼요.",
+   "blank": "chuông cửa",
    "src": "made"
   }
  ],
@@ -7917,6 +8141,22 @@
    "blank": "Cơm"
   }
  ],
+ "w|cơm chiên": [
+  {
+   "text": "Cơm thừa hôm qua, Tuấn làm thành cơm chiên trứng cho cả nhà.",
+   "en": "Tuấn turned yesterday's leftover rice into egg fried rice for the whole family.",
+   "ko": "뚜언은 어제 남은 밥으로 가족에게 달걀볶음밥을 만들어 줬어요.",
+   "blank": "cơm chiên",
+   "src": "made"
+  },
+  {
+   "text": "Cả nhóm gọi cơm chiên hải sản về văn phòng để chào mừng Mai.",
+   "en": "The whole team ordered seafood fried rice to the office to welcome Mai.",
+   "ko": "팀 전체가 마이를 환영하려고 해물볶음밥을 사무실로 시켰어요.",
+   "blank": "cơm chiên",
+   "src": "made"
+  }
+ ],
  "w|con": [
   {
    "text": "Nhà nuôi một con mèo.",
@@ -8603,6 +8843,22 @@
    "src": "made"
   }
  ],
+ "w|củi": [
+  {
+   "text": "Ở chung cư, nhà Nam chỉ nấu bếp ga chứ không đun củi.",
+   "en": "Living in an apartment, Nam's family cooks on a gas stove and doesn't burn firewood.",
+   "ko": "아파트라서 남의 집은 장작 대신 가스레인지로만 요리해요.",
+   "blank": "củi",
+   "src": "made"
+  },
+  {
+   "text": "Chiều nào Thảo cũng vào rừng nhặt củi.",
+   "en": "Every afternoon Thảo goes into the forest to gather firewood.",
+   "ko": "타오는 매일 오후 숲에 들어가 땔나무를 주워요.",
+   "blank": "củi",
+   "src": "made"
+  }
+ ],
  "w|cúm": [
   {
    "text": "Quanh đây có nhiều người bị bệnh cúm.",
@@ -9151,6 +9407,22 @@
    "en": "He especially likes milk tea.",
    "ko": "그는 밀크티를 특히 좋아해.",
    "blank": "đặc biệt"
+  }
+ ],
+ "w|dai": [
+  {
+   "text": "Miếng thịt bò Nam mua ở siêu thị dưới tầng trệt hơi dai.",
+   "en": "The beef Nam bought at the supermarket on the ground floor is a bit tough.",
+   "ko": "남이 1층 마트에서 산 소고기는 좀 질겨요.",
+   "blank": "dai",
+   "src": "made"
+  },
+  {
+   "text": "Thịt trâu gác bếp hơi dai nhưng càng nhai càng thấy ngon.",
+   "en": "Smoke-dried buffalo meat is a bit chewy, but the more you chew, the tastier it gets.",
+   "ko": "훈제 물소 고기는 좀 질기지만 씹을수록 맛있어요.",
+   "blank": "dai",
+   "src": "made"
   }
  ],
  "w|dài": [
@@ -11495,6 +11767,22 @@
    "src": "made"
   }
  ],
+ "w|diêm": [
+  {
+   "text": "Khi mất điện, Nam lục tủ tìm hộp diêm để thắp nến.",
+   "en": "When the power went out, Nam rummaged through the cupboard for a box of matches to light a candle.",
+   "ko": "정전이 되자 남은 초를 켜려고 찬장을 뒤져 성냥갑을 찾았어요.",
+   "blank": "diêm",
+   "src": "made"
+  },
+  {
+   "text": "Trời ẩm quá, Thảo quẹt mãi mà que diêm không cháy.",
+   "en": "It was so damp that Thảo struck the match again and again but it wouldn't light.",
+   "ko": "날이 너무 습해서 타오가 아무리 그어도 성냥이 안 켜졌어요.",
+   "blank": "diêm",
+   "src": "made"
+  }
+ ],
  "w|điểm": [
   {
    "text": "Điểm này rất quan trọng.",
@@ -11817,6 +12105,22 @@
    "src": "made"
   }
  ],
+ "w|dinh dưỡng": [
+  {
+   "text": "Vợ Tuấn rất chú ý đến dinh dưỡng trong suất cơm trẻ em.",
+   "en": "Tuấn's wife pays close attention to nutrition in the kids' meals.",
+   "ko": "뚜언의 아내는 어린이 식사의 영양에 아주 신경을 써요.",
+   "blank": "dinh dưỡng",
+   "src": "made"
+  },
+  {
+   "text": "Công ty thuê chuyên gia tư vấn dinh dưỡng cho nhân viên.",
+   "en": "The company hired an expert to give staff nutrition advice.",
+   "ko": "회사는 직원들에게 영양 상담을 해 줄 전문가를 불렀어요.",
+   "blank": "dinh dưỡng",
+   "src": "made"
+  }
+ ],
  "w|đính hôn": [
   {
    "text": "Tôi đã có nhẫn đính hôn rồi.",
@@ -12023,6 +12327,22 @@
    "blank": "đồ chơi"
   }
  ],
+ "w|đồ đạc": [
+  {
+   "text": "Ngày chuyển nhà, Nam thuê xe tải chở hết đồ đạc lên tầng tám.",
+   "en": "On moving day, Nam hired a truck to bring all his furniture up to the eighth floor.",
+   "ko": "이삿날 남은 트럭을 불러 가구를 모두 8층으로 옮겼어요.",
+   "blank": "đồ đạc",
+   "src": "made"
+  },
+  {
+   "text": "Nhà Thảo nghèo, đồ đạc chỉ có chiếc giường và cái chạn bát.",
+   "en": "Thảo's family is poor; their only furniture is a bed and a dish cupboard.",
+   "ko": "타오네는 가난해서 살림이라고는 침대와 그릇장뿐이에요.",
+   "blank": "đồ đạc",
+   "src": "made"
+  }
+ ],
  "w|đồ hộp": [
   {
    "text": "Cô giáo khuyên cả lớp hạn chế dùng đồ hộp và chọn rau tươi.",
@@ -12052,6 +12372,22 @@
    "en": "Underwear should be washed separately.",
    "ko": "속옷은 따로 빨아야 해요.",
    "blank": "Đồ lót",
+   "src": "made"
+  }
+ ],
+ "w|dở tệ": [
+  {
+   "text": "Có lần ông khách chê món canh của quán dở tệ.",
+   "en": "Once a customer complained that the restaurant's soup was terrible.",
+   "ko": "한번은 손님이 가게 국이 형편없다고 흉을 봤어요.",
+   "blank": "dở tệ",
+   "src": "made"
+  },
+  {
+   "text": "Ngày đầu đi làm, Mai thấy cà phê ở căng tin dở tệ.",
+   "en": "On her first day at work, Mai found the cafeteria coffee terrible.",
+   "ko": "출근 첫날 마이는 구내식당 커피가 형편없다고 느꼈어요.",
+   "blank": "dở tệ",
    "src": "made"
   }
  ],
@@ -13205,6 +13541,22 @@
    "blank": "Đứa"
   }
  ],
+ "w|dưa chuột": [
+  {
+   "text": "Món gỏi ở quán có thêm dưa chuột thái sợi cho mát.",
+   "en": "The restaurant's salad has shredded cucumber added for freshness.",
+   "ko": "가게 샐러드에는 시원하게 채 썬 오이가 들어가요.",
+   "blank": "dưa chuột",
+   "src": "made"
+  },
+  {
+   "text": "Mai đắp hai lát dưa chuột lên mắt sau một ngày nhìn màn hình.",
+   "en": "After a day of staring at the screen, Mai put two slices of cucumber on her eyes.",
+   "ko": "종일 화면을 본 뒤 마이는 눈에 오이 두 조각을 올렸어요.",
+   "blank": "dưa chuột",
+   "src": "made"
+  }
+ ],
  "w|dưa hấu": [
   {
    "text": "Dưa hấu không hạt có tồn tại không?",
@@ -13219,6 +13571,22 @@
    "ko": "저는 수박을 좋아해요.",
    "blank": "dưa hấu",
    "src": "tatoeba:490770/khungla en:402802/Hector005"
+  }
+ ],
+ "w|dưa leo": [
+  {
+   "text": "Đĩa cơm tấm nào cũng kèm vài lát dưa leo và cà chua.",
+   "en": "Every plate of broken rice comes with a few slices of cucumber and tomato.",
+   "ko": "껌땀 한 접시마다 오이와 토마토 몇 조각이 곁들여 나와요.",
+   "blank": "dưa leo",
+   "src": "made"
+  },
+  {
+   "text": "Hộp cơm của Mai có trứng chiên và dưa leo.",
+   "en": "Mai's lunch box has a fried egg and cucumber.",
+   "ko": "마이의 도시락에는 달걀부침과 오이가 들어 있어요.",
+   "blank": "dưa leo",
+   "src": "made"
   }
  ],
  "w|dựa vào": [
@@ -13881,6 +14249,22 @@
    "src": "made"
   }
  ],
+ "w|gạch": [
+  {
+   "text": "Ban quản lý cho lát lại gạch ở sảnh tầng một.",
+   "en": "The management board had the tiles in the ground-floor lobby relaid.",
+   "ko": "관리사무소가 1층 로비 타일을 새로 깔았어요.",
+   "blank": "gạch",
+   "src": "made"
+  },
+  {
+   "text": "Ngôi trường mới của bản được xây bằng gạch đỏ.",
+   "en": "The village's new school is built with red bricks.",
+   "ko": "마을의 새 학교는 붉은 벽돌로 지어졌어요.",
+   "blank": "gạch",
+   "src": "made"
+  }
+ ],
  "w|gài": [
   {
    "text": "Quang gài lại nút áo đầu bếp trước khi vào ca.",
@@ -13894,6 +14278,22 @@
    "en": "Hà clicked the SIM tray back in for the customer and switched the phone on to check.",
    "ko": "하는 손님 유심 트레이를 다시 끼우고 전원을 켜서 확인했어요.",
    "blank": "gài",
+   "src": "made"
+  }
+ ],
+ "w|gặm": [
+  {
+   "text": "Con chó của quán nằm dưới bàn gặm khúc xương.",
+   "en": "The restaurant's dog lies under the table gnawing on a bone.",
+   "ko": "가게 개가 식탁 밑에 누워 뼈다귀를 갉아 먹어요.",
+   "blank": "gặm",
+   "src": "made"
+  },
+  {
+   "text": "Ngồi chờ phỏng vấn, Mai lo lắng gặm móng tay.",
+   "en": "Waiting for the interview, Mai nervously bit her nails.",
+   "ko": "면접을 기다리며 마이는 초조하게 손톱을 물어뜯었어요.",
+   "blank": "gặm",
    "src": "made"
   }
  ],
@@ -14115,6 +14515,22 @@
    "en": "Meeting in person makes talking easier.",
    "ko": "직접 만나면 이야기하기가 더 편해.",
    "blank": "Gặp mặt"
+  }
+ ],
+ "w|gật đầu": [
+  {
+   "text": "Khi bác bảo vệ hỏi có phải nhà số mười không, Nam gật đầu.",
+   "en": "When the security guard asked if it was apartment ten, Nam nodded.",
+   "ko": "경비 아저씨가 10호냐고 묻자 남은 고개를 끄덕였어요.",
+   "blank": "gật đầu",
+   "src": "made"
+  },
+  {
+   "text": "Khi được hỏi có muốn xuống thị trấn học không, Thảo gật đầu ngay.",
+   "en": "When asked whether she wanted to go down to town to study, Thảo nodded at once.",
+   "ko": "읍내에 내려가 공부하고 싶냐는 물음에 타오는 바로 고개를 끄덕였어요.",
+   "blank": "gật đầu",
+   "src": "made"
   }
  ],
  "w|gấu": [
@@ -15133,6 +15549,22 @@
    "blank": "gió"
   }
  ],
+ "w|giò": [
+  {
+   "text": "Mẹ Tuấn tự tay gói giò lụa để bán dịp cuối năm.",
+   "en": "Tuấn's mother wraps the pork roll herself to sell at the end of the year.",
+   "ko": "뚜언의 어머니는 연말에 팔려고 베트남 햄을 손수 싸요.",
+   "blank": "giò",
+   "src": "made"
+  },
+  {
+   "text": "Bánh mì giò chả ở cổng công ty lúc nào cũng có người xếp hàng.",
+   "en": "There is always a line for the pork roll sandwiches at the company gate.",
+   "ko": "회사 정문 앞 햄 반미 가게에는 늘 줄이 서 있어요.",
+   "blank": "giò",
+   "src": "made"
+  }
+ ],
  "w|giơ": [
   {
    "text": "Bạn nào biết câu trả lời thì giơ tay lên nhé!",
@@ -15620,6 +16052,22 @@
    "en": "Hương arranged the medicine cabinet in the duty room very neatly.",
    "ko": "흐엉은 당직실 약장을 아주 깔끔하게 정리했어요.",
    "blank": "gọn gàng",
+   "src": "made"
+  }
+ ],
+ "w|gọn nhẹ": [
+  {
+   "text": "Nam chọn bộ bàn ghế gấp gọn nhẹ cho căn hộ nhỏ.",
+   "en": "Nam chose a compact, lightweight folding table and chairs for the small apartment.",
+   "ko": "남은 작은 집에 맞게 가볍고 간편한 접이식 탁자와 의자를 골랐어요.",
+   "blank": "gọn nhẹ",
+   "src": "made"
+  },
+  {
+   "text": "Khách leo núi nên mang hành lý gọn nhẹ.",
+   "en": "Hikers should carry light, compact luggage.",
+   "ko": "등산객은 짐을 가볍고 간단하게 챙기는 게 좋아요.",
+   "blank": "gọn nhẹ",
    "src": "made"
   }
  ],
@@ -16125,6 +16573,22 @@
    "blank": "hành động"
   }
  ],
+ "w|hành lang": [
+  {
+   "text": "Bọn trẻ trong tòa nhà hay chạy nhảy ngoài hành lang.",
+   "en": "The kids in the building often run around in the corridor.",
+   "ko": "건물 아이들은 복도에서 자주 뛰어다녀요.",
+   "blank": "hành lang",
+   "src": "made"
+  },
+  {
+   "text": "Nhà sàn của Thảo có một hành lang dài nhìn ra thung lũng.",
+   "en": "Thảo's stilt house has a long veranda looking out over the valley.",
+   "ko": "타오네 고상 가옥에는 골짜기가 내려다보이는 긴 복도가 있어요.",
+   "blank": "hành lang",
+   "src": "made"
+  }
+ ],
  "w|hành lý": [
   {
    "text": "Hành lý của anh nặng quá.",
@@ -16441,6 +16905,22 @@
    "blank": "Hiện đại"
   }
  ],
+ "w|hiền lành": [
+  {
+   "text": "Bác bảo vệ tòa nhà hiền lành, ai cũng quý.",
+   "en": "The building's security guard is gentle, and everyone likes him.",
+   "ko": "건물 경비 아저씨는 순해서 다들 좋아해요.",
+   "blank": "hiền lành",
+   "src": "made"
+  },
+  {
+   "text": "Con trâu nhà Thảo hiền lành, trẻ con cưỡi lên cũng được.",
+   "en": "Thảo's family buffalo is so gentle that even children can ride it.",
+   "ko": "타오네 물소는 순해서 아이들이 타도 괜찮아요.",
+   "blank": "hiền lành",
+   "src": "made"
+  }
+ ],
  "w|hiến pháp": [
   {
    "text": "Trong vở lịch sử, các nhân vật tranh luận về bản hiến pháp đầu tiên.",
@@ -16615,6 +17095,22 @@
    "en": "I think you forgot your wallet.",
    "ko": "너 지갑 깜빡한 것 같아.",
    "blank": "Hình như"
+  }
+ ],
+ "w|hình vuông": [
+  {
+   "text": "Phòng ngủ của Nam là một căn hình vuông nhỏ nhưng sáng.",
+   "en": "Nam's bedroom is a small square room, but it's bright.",
+   "ko": "남의 침실은 작은 정사각형 방이지만 밝아요.",
+   "blank": "hình vuông",
+   "src": "made"
+  },
+  {
+   "text": "Ruộng bậc thang dưới chân núi được chia thành từng ô hình vuông.",
+   "en": "The terraced fields at the foot of the mountain are divided into square plots.",
+   "ko": "산기슭의 계단식 논은 네모난 칸으로 나뉘어 있어요.",
+   "blank": "hình vuông",
+   "src": "made"
   }
  ],
  "w|hít": [
@@ -17951,6 +18447,22 @@
    "blank": "kế hoạch"
   }
  ],
+ "w|kệ sách": [
+  {
+   "text": "Nam tự lắp một chiếc kệ sách cạnh cửa sổ phòng khách.",
+   "en": "Nam assembled a bookshelf himself next to the living room window.",
+   "ko": "남은 거실 창가에 책장을 직접 조립해 놓았어요.",
+   "blank": "kệ sách",
+   "src": "made"
+  },
+  {
+   "text": "Thư viện của bản chỉ có một kệ sách do khách du lịch tặng.",
+   "en": "The village library has only one bookshelf donated by tourists.",
+   "ko": "마을 도서관에는 관광객이 기증한 책장 하나뿐이에요.",
+   "blank": "kệ sách",
+   "src": "made"
+  }
+ ],
  "w|kẻ thù": [
   {
    "text": "Trong phim anh hùng đối đầu kẻ thù cuối cùng.",
@@ -18054,6 +18566,22 @@
    "en": "The window of Lan's new flat looks out over a small canal.",
    "ko": "란의 새 아파트 창문은 작은 운하 쪽으로 나 있어요.",
    "blank": "kênh",
+   "src": "made"
+  }
+ ],
+ "w|keo": [
+  {
+   "text": "Nam dùng keo dán lại chiếc cốc bị vỡ quai.",
+   "en": "Nam used glue to stick the broken handle back onto the mug.",
+   "ko": "남은 접착제로 손잡이가 깨진 머그잔을 다시 붙였어요.",
+   "blank": "keo",
+   "src": "made"
+  },
+  {
+   "text": "Người thợ dùng keo gỗ để ghép lại chiếc bàn bị gãy chân.",
+   "en": "The craftsman used wood glue to put the table with the broken leg back together.",
+   "ko": "목수는 나무 접착제로 다리가 부러진 탁자를 붙였어요.",
+   "blank": "keo",
    "src": "made"
   }
  ],
@@ -18639,6 +19167,22 @@
    "en": "Tell me when you're done.",
    "ko": "끝나면 알려 줘.",
    "blank": "khi nào"
+  }
+ ],
+ "w|khiêm tốn": [
+  {
+   "text": "Cô giáo ở tầng ba sống rất khiêm tốn dù có học vị tiến sĩ.",
+   "en": "The teacher on the third floor lives very modestly even though she has a doctorate.",
+   "ko": "3층에 사는 선생님은 박사 학위가 있는데도 아주 겸손하게 살아요.",
+   "blank": "khiêm tốn",
+   "src": "made"
+  },
+  {
+   "text": "Thầy giáo ở bản sống khiêm tốn, ăn cùng dân, ở nhà sàn.",
+   "en": "The village teacher lives modestly, eating with the villagers and living in a stilt house.",
+   "ko": "마을 선생님은 주민들과 함께 먹고 고상 가옥에 살며 소박하게 지내요.",
+   "blank": "khiêm tốn",
+   "src": "made"
   }
  ],
  "w|khiến": [
@@ -19277,6 +19821,22 @@
    "src": "tatoeba:5767772/yippe en:2835585/CK"
   }
  ],
+ "w|khuấy": [
+  {
+   "text": "Tuấn khuấy đều nồi cháo để khỏi bị khê đáy.",
+   "en": "Tuấn stirs the pot of porridge evenly so the bottom doesn't burn.",
+   "ko": "뚜언은 바닥이 눌지 않게 죽 냄비를 고루 저어요.",
+   "blank": "khuấy",
+   "src": "made"
+  },
+  {
+   "text": "Mai khuấy cốc cà phê sữa rồi bước vào phòng họp.",
+   "en": "Mai stirred her cup of milk coffee and walked into the meeting room.",
+   "ko": "마이는 밀크커피를 저은 뒤 회의실로 들어갔어요.",
+   "blank": "khuấy",
+   "src": "made"
+  }
+ ],
  "w|khúc": [
   {
    "text": "Nam cắt con cá thành từng khúc vừa ăn.",
@@ -19477,6 +20037,22 @@
    "src": "made"
   }
  ],
+ "w|kích thước": [
+  {
+   "text": "Trước khi mua sofa, Nam đo kích thước phòng khách thật kỹ.",
+   "en": "Before buying a sofa, Nam measured the living room dimensions carefully.",
+   "ko": "소파를 사기 전에 남은 거실 크기를 꼼꼼히 쟀어요.",
+   "blank": "kích thước",
+   "src": "made"
+  },
+  {
+   "text": "Ở chợ phiên, giỏ mây được bán theo đủ loại kích thước.",
+   "en": "At the weekly market, rattan baskets are sold in all sizes.",
+   "ko": "장날 시장에서는 등나무 바구니를 여러 크기로 팔아요.",
+   "blank": "kích thước",
+   "src": "made"
+  }
+ ],
  "w|kiếm": [
   {
    "text": "Kiếm chỗ ngồi đã nào.",
@@ -19607,6 +20183,22 @@
    "en": "This style of shirt is selling well.",
    "ko": "이런 스타일 옷이 잘 팔려.",
    "blank": "kiểu"
+  }
+ ],
+ "w|kiêu ngạo": [
+  {
+   "text": "Ông chủ căn penthouse có vẻ kiêu ngạo, chẳng chào ai.",
+   "en": "The owner of the penthouse seems arrogant and doesn't greet anyone.",
+   "ko": "펜트하우스 주인은 거만해 보이고 아무에게도 인사를 안 해요.",
+   "blank": "kiêu ngạo",
+   "src": "made"
+  },
+  {
+   "text": "Anh khách du lịch kiêu ngạo chê đồ ăn của bản là quê mùa.",
+   "en": "The arrogant tourist sneered that the village food was rustic.",
+   "ko": "거만한 관광객은 마을 음식이 촌스럽다고 깎아내렸어요.",
+   "blank": "kiêu ngạo",
+   "src": "made"
   }
  ],
  "w|kín": [
@@ -21131,6 +21723,22 @@
    "src": "tatoeba:13841620/vexvine en:12115702/Amastan"
   }
  ],
+ "w|loa": [
+  {
+   "text": "Ban quản lý đọc thông báo cắt nước qua chiếc loa ở sảnh.",
+   "en": "The management board read out the water shut-off notice over the speaker in the lobby.",
+   "ko": "관리사무소가 로비 스피커로 단수 안내 방송을 했어요.",
+   "blank": "loa",
+   "src": "made"
+  },
+  {
+   "text": "Trưởng bản gọi mọi người đi họp qua chiếc loa ở đầu làng.",
+   "en": "The village chief called everyone to the meeting over the loudspeaker at the village entrance.",
+   "ko": "이장님이 마을 입구 확성기로 사람들을 회의에 불렀어요.",
+   "blank": "loa",
+   "src": "made"
+  }
+ ],
  "w|loài": [
   {
    "text": "Đây là loài chim quý hiếm.",
@@ -21835,6 +22443,22 @@
    "blank": "Lưỡi"
   }
  ],
+ "w|lượm": [
+  {
+   "text": "Thằng út nhà Tuấn lượm từng hạt lạc rơi trên sàn.",
+   "en": "Tuấn's youngest son picked up every peanut that fell on the floor.",
+   "ko": "뚜언네 막내아들은 바닥에 떨어진 땅콩을 하나하나 주웠어요.",
+   "blank": "lượm",
+   "src": "made"
+  },
+  {
+   "text": "Mai cúi xuống lượm mấy chiếc kẹp giấy rơi dưới gầm bàn.",
+   "en": "Mai bent down to pick up some paper clips that had fallen under the desk.",
+   "ko": "마이는 몸을 숙여 책상 밑에 떨어진 클립 몇 개를 주웠어요.",
+   "blank": "lượm",
+   "src": "made"
+  }
+ ],
  "w|luôn": [
   {
    "text": "Tớ luôn quên mang ô.",
@@ -22163,6 +22787,22 @@
    "en": "We'll figure it out tomorrow.",
    "ko": "내일 되면 이어서 생각하자.",
    "blank": "mai"
+  }
+ ],
+ "w|mài": [
+  {
+   "text": "Sáng nay, Tuấn mài lại con dao thái thịt.",
+   "en": "This morning, Tuấn sharpened the meat knife again.",
+   "ko": "오늘 아침 뚜언은 고기 써는 칼을 다시 갈았어요.",
+   "blank": "mài",
+   "src": "made"
+  },
+  {
+   "text": "Bác bảo vệ ngồi mài con dao gọt hoa quả ở phòng trực.",
+   "en": "The security guard sat sharpening his fruit knife in the guard room.",
+   "ko": "경비 아저씨가 경비실에 앉아 과도를 갈고 있었어요.",
+   "blank": "mài",
+   "src": "made"
   }
  ],
  "w|mãi": [
@@ -22633,6 +23273,22 @@
    "en": "Check the back of the shirt for stains.",
    "ko": "옷 뒷면에 얼룩 있는지 확인해.",
    "blank": "mặt sau"
+  }
+ ],
+ "w|mất sóng": [
+  {
+   "text": "Vào thang máy là điện thoại của Nam mất sóng ngay.",
+   "en": "As soon as he enters the elevator, Nam's phone loses signal.",
+   "ko": "엘리베이터에 타자마자 남의 휴대폰은 신호가 끊겨요.",
+   "blank": "mất sóng",
+   "src": "made"
+  },
+  {
+   "text": "Lên đến đỉnh đèo, điện thoại của Thảo mất sóng hoàn toàn.",
+   "en": "At the top of the mountain pass, Thảo's phone lost signal completely.",
+   "ko": "고개 꼭대기에 오르자 타오의 휴대폰은 신호가 완전히 끊겼어요.",
+   "blank": "mất sóng",
+   "src": "made"
   }
  ],
  "w|mất tích": [
@@ -23159,6 +23815,22 @@
    "blank": "mèo"
   }
  ],
+ "w|mẹo": [
+  {
+   "text": "Bà nội truyền cho Tuấn mẹo luộc gà cho da vàng óng.",
+   "en": "Grandma passed on to Tuấn the trick for boiling chicken so the skin turns golden.",
+   "ko": "할머니는 뚜언에게 닭을 삶아 껍질이 노랗게 윤이 나게 하는 요령을 알려 줬어요.",
+   "blank": "mẹo",
+   "src": "made"
+  },
+  {
+   "text": "Anh trưởng nhóm chia sẻ với Mai vài mẹo dùng máy in.",
+   "en": "The team leader shared a few printer tips with Mai.",
+   "ko": "팀장이 마이에게 프린터 쓰는 요령 몇 가지를 알려 줬어요.",
+   "blank": "mẹo",
+   "src": "made"
+  }
+ ],
  "w|mét": [
   {
    "text": "Sân bóng của trường dài khoảng tám mươi mét.",
@@ -23201,6 +23873,22 @@
    "en": "The noodles at the shop next door are delicious.",
    "ko": "옆 가게 국수가 정말 맛있어.",
    "blank": "Mì"
+  }
+ ],
+ "w|mì gói": [
+  {
+   "text": "Hồi mới mở quán, vợ chồng Tuấn ăn mì gói thay cơm suốt mấy tháng.",
+   "en": "When they first opened the restaurant, Tuấn and his wife ate instant noodles instead of meals for months.",
+   "ko": "가게를 처음 열었을 때 뚜언 부부는 몇 달 동안 밥 대신 라면을 먹었어요.",
+   "blank": "mì gói",
+   "src": "made"
+  },
+  {
+   "text": "Đến trưa, Mai vội vàng ăn tạm gói mì gói ở bàn làm việc.",
+   "en": "At noon, Mai hurriedly ate a pack of instant noodles at her desk.",
+   "ko": "점심때 마이는 책상에서 라면 한 봉지로 급히 끼니를 때웠어요.",
+   "blank": "mì gói",
+   "src": "made"
   }
  ],
  "w|mí mắt": [
@@ -24405,6 +25093,38 @@
    "blank": "Muỗng"
   }
  ],
+ "w|mứt": [
+  {
+   "text": "Dịp Tết, quán bày thêm khay mứt gừng mời khách.",
+   "en": "At Tết, the restaurant sets out an extra tray of candied ginger for guests.",
+   "ko": "설 무렵이면 가게는 손님 대접용 생강 정과 쟁반을 더 내놓아요.",
+   "blank": "mứt",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ gói cho Mai một hộp mứt dừa để mời đồng nghiệp.",
+   "en": "Mai's mother packed her a box of candied coconut to share with coworkers.",
+   "ko": "엄마는 마이가 동료들에게 나눠 주라고 코코넛 정과 한 통을 싸 줬어요.",
+   "blank": "mứt",
+   "src": "made"
+  }
+ ],
+ "w|mỳ": [
+  {
+   "text": "Món mỳ xào hải sản của quán bán chạy nhất vào buổi trưa.",
+   "en": "The restaurant's stir-fried seafood noodles sell best at lunchtime.",
+   "ko": "가게의 해물 볶음면은 점심때 제일 잘 팔려요.",
+   "blank": "mỳ",
+   "src": "made"
+  },
+  {
+   "text": "Căng tin công ty có mỳ Quảng vào thứ hai hằng tuần.",
+   "en": "The company cafeteria serves Quảng noodles every Monday.",
+   "ko": "회사 식당은 매주 월요일에 미꽝 국수가 나와요.",
+   "blank": "mỳ",
+   "src": "made"
+  }
+ ],
  "w|mỹ phẩm": [
   {
    "text": "Cô ấy mua mỹ phẩm ở cửa hàng này.",
@@ -25051,6 +25771,22 @@
    "blank": "Ngắm"
   }
  ],
+ "w|ngâm": [
+  {
+   "text": "Đậu xanh phải ngâm qua đêm cho mềm.",
+   "en": "The mung beans have to soak overnight to soften.",
+   "ko": "녹두는 밤새 불려야 부드러워져요.",
+   "blank": "ngâm",
+   "src": "made"
+  },
+  {
+   "text": "Về đến nhà, Mai ngâm chân vào nước ấm cho đỡ mỏi.",
+   "en": "Back home, Mai soaked her feet in warm water to ease the ache.",
+   "ko": "집에 오자마자 마이는 피로를 풀려고 따뜻한 물에 발을 담갔어요.",
+   "blank": "ngâm",
+   "src": "made"
+  }
+ ],
  "w|ngậm": [
   {
    "text": "Để khỏi cay mắt, Quang ngậm một ngụm nước khi thái hành.",
@@ -25267,6 +26003,22 @@
    "en": "At last the day off is here.",
    "ko": "드디어 휴일이야.",
    "blank": "ngày nghỉ"
+  }
+ ],
+ "w|ngây thơ": [
+  {
+   "text": "Con gái Nam ngây thơ hỏi vì sao thang máy biết đi lên.",
+   "en": "Nam's daughter innocently asked how the elevator knows to go up.",
+   "ko": "남의 딸은 엘리베이터가 어떻게 올라가는 줄 아느냐고 천진하게 물었어요.",
+   "blank": "ngây thơ",
+   "src": "made"
+  },
+  {
+   "text": "Lũ trẻ trong bản có đôi mắt ngây thơ và nụ cười hồn nhiên.",
+   "en": "The village children have innocent eyes and carefree smiles.",
+   "ko": "마을 아이들은 순진한 눈과 해맑은 웃음을 지녔어요.",
+   "blank": "ngây thơ",
+   "src": "made"
   }
  ],
  "w|ngày xưa": [
@@ -26207,6 +26959,22 @@
    "src": "tatoeba:11278037/chaule3 en:11278034/chaule3"
   }
  ],
+ "w|nguội": [
+  {
+   "text": "Khách về muộn, đồ ăn để phần đã nguội hết.",
+   "en": "The customer came late, and the food set aside for him had all gone cold.",
+   "ko": "손님이 늦게 와서 남겨 둔 음식이 다 식어 버렸어요.",
+   "blank": "nguội",
+   "src": "made"
+  },
+  {
+   "text": "Mải nghe hướng dẫn, Mai để cốc trà nguội ngắt.",
+   "en": "Absorbed in the instructions, Mai let her cup of tea go stone cold.",
+   "ko": "설명을 듣느라 정신이 팔려 마이의 차는 차갑게 식어 버렸어요.",
+   "blank": "nguội",
+   "src": "made"
+  }
+ ],
  "w|ngươi": [
   {
    "text": "Ngươi muốn gì?",
@@ -26561,6 +27329,22 @@
    "ko": "극장은 예전엔 화요일에 문을 열지 않았어요.",
    "blank": "Nhà hát",
    "src": "tatoeba:5147693/truongap en:1511686/marcelostockle"
+  }
+ ],
+ "w|nhà kho": [
+  {
+   "text": "Tầng hầm chung cư có một nhà kho nhỏ cho mỗi căn hộ.",
+   "en": "The apartment basement has a small storeroom for each unit.",
+   "ko": "아파트 지하에는 세대마다 작은 창고가 하나씩 있어요.",
+   "blank": "nhà kho",
+   "src": "made"
+  },
+  {
+   "text": "Sau vụ mùa, nhà kho của gia đình Thảo chứa đầy thóc.",
+   "en": "Thảo's family storehouse is full of rice after the harvest.",
+   "ko": "수확 후 타오네 창고는 벼로 가득 차요.",
+   "blank": "nhà kho",
+   "src": "made"
   }
  ],
  "w|nhà khoa học": [
@@ -27279,6 +28063,22 @@
    "blank": "nhau"
   }
  ],
+ "w|nhậu": [
+  {
+   "text": "Tối thứ bảy, mấy ông chú hàng xóm hay ngồi nhậu ở quán tới khuya.",
+   "en": "On Saturday evenings, the neighborhood uncles often sit drinking at the restaurant until late.",
+   "ko": "토요일 저녁이면 동네 아저씨들이 가게에서 늦게까지 술을 마셔요.",
+   "blank": "nhậu",
+   "src": "made"
+  },
+  {
+   "text": "Cuối ngày, cả phòng rủ Mai đi nhậu để làm quen.",
+   "en": "At the end of the day, the whole team invited Mai out drinking to get to know her.",
+   "ko": "퇴근 무렵 팀 사람들이 친해지자며 마이에게 술 한잔하러 가자고 했어요.",
+   "blank": "nhậu",
+   "src": "made"
+  }
+ ],
  "w|nhảy": [
   {
    "text": "Bọn trẻ nhảy quanh sân.",
@@ -27655,6 +28455,22 @@
    "en": "Which group are you in?",
    "ko": "어느 조야?",
    "blank": "nhóm"
+  }
+ ],
+ "w|nhọn": [
+  {
+   "text": "Tuấn dùng que tre nhọn xiên thịt nướng.",
+   "en": "Tuấn skewers the grilled meat with sharp bamboo sticks.",
+   "ko": "뚜언은 뾰족한 대나무 꼬치에 고기를 꿰어요.",
+   "blank": "nhọn",
+   "src": "made"
+  },
+  {
+   "text": "Mai gọt bút chì thật nhọn để ghi chép.",
+   "en": "Mai sharpened her pencil to a fine point to take notes.",
+   "ko": "마이는 필기하려고 연필을 뾰족하게 깎았어요.",
+   "blank": "nhọn",
+   "src": "made"
   }
  ],
  "w|nhốt": [
@@ -28403,6 +29219,22 @@
    "blank": "nước hoa"
   }
  ],
+ "w|nước lọc": [
+  {
+   "text": "Quán của Tuấn luôn mời khách nước lọc miễn phí.",
+   "en": "Tuấn's restaurant always offers customers free water.",
+   "ko": "뚜언네 가게는 손님에게 늘 물을 공짜로 줘요.",
+   "blank": "nước lọc",
+   "src": "made"
+  },
+  {
+   "text": "Trên bàn Mai lúc nào cũng có một chai nước lọc.",
+   "en": "There is always a bottle of water on Mai's desk.",
+   "ko": "마이의 책상 위에는 늘 생수 한 병이 있어요.",
+   "blank": "nước lọc",
+   "src": "made"
+  }
+ ],
  "w|nước mắm": [
   {
    "text": "Món này chấm với nước mắm ngon lắm.",
@@ -28457,6 +29289,22 @@
    "en": "Drinking too much soda isn't good for you.",
    "ko": "탄산음료를 많이 마시면 안 좋아.",
    "blank": "Nước ngọt"
+  }
+ ],
+ "w|nước sốt": [
+  {
+   "text": "Bí quyết của quán là nước sốt me do bà nội Tuấn pha.",
+   "en": "The restaurant's secret is the tamarind sauce made by Tuấn's grandmother.",
+   "ko": "가게의 비결은 뚜언 할머니가 만든 타마린드 소스예요.",
+   "blank": "nước sốt",
+   "src": "made"
+  },
+  {
+   "text": "Mai làm đổ nước sốt cà chua lên tập tài liệu.",
+   "en": "Mai spilled tomato sauce on the stack of documents.",
+   "ko": "마이는 서류 뭉치에 토마토소스를 쏟았어요.",
+   "blank": "nước sốt",
+   "src": "made"
   }
  ],
  "w|nước tương": [
@@ -29235,6 +30083,22 @@
    "src": "made"
   }
  ],
+ "w|phẳng": [
+  {
+   "text": "Tuấn dùng dao cán bột cho thật phẳng rồi mới cắt.",
+   "en": "Tuấn rolls the dough really flat with a rolling pin before cutting it.",
+   "ko": "뚜언은 밀대로 반죽을 아주 평평하게 민 다음에 잘라요.",
+   "blank": "phẳng",
+   "src": "made"
+  },
+  {
+   "text": "Tờ hợp đồng bị gấp, Mai lấy sách đè lên cho phẳng.",
+   "en": "The contract was folded, so Mai put a book on it to flatten it.",
+   "ko": "계약서가 접혀 있어서 마이는 책으로 눌러 평평하게 폈어요.",
+   "blank": "phẳng",
+   "src": "made"
+  }
+ ],
  "w|pháo": [
   {
    "text": "Bạn có nghe thấy tiếng pháo hoa không?",
@@ -29608,6 +30472,22 @@
    "en": "Smoking harms the lungs.",
    "ko": "담배는 폐를 망쳐요.",
    "blank": "phổi",
+   "src": "made"
+  }
+ ],
+ "w|phơi": [
+  {
+   "text": "Căn hộ của Nam không có ban công nên phải phơi đồ trong nhà.",
+   "en": "Nam's apartment has no balcony, so he has to dry clothes indoors.",
+   "ko": "남의 집은 발코니가 없어서 빨래를 집 안에 널어야 해요.",
+   "blank": "phơi",
+   "src": "made"
+  },
+  {
+   "text": "Mùa thu, dân bản phơi ngô vàng rực trước sân.",
+   "en": "In autumn, the villagers dry bright yellow corn in front of their houses.",
+   "ko": "가을이면 마을 사람들은 마당에 노란 옥수수를 널어 말려요.",
+   "blank": "phơi",
    "src": "made"
   }
  ],
@@ -30355,6 +31235,22 @@
    "src": "made"
   }
  ],
+ "w|quẳng": [
+  {
+   "text": "Đừng quẳng vỏ tôm vào bồn rửa kẻo tắc cống.",
+   "en": "Don't toss the shrimp shells into the sink or the drain will clog.",
+   "ko": "새우 껍질을 개수대에 던지지 마세요, 하수구가 막혀요.",
+   "blank": "quẳng",
+   "src": "made"
+  },
+  {
+   "text": "Anh đồng nghiệp quẳng cho Mai chùm chìa khóa tủ.",
+   "en": "A coworker tossed Mai the bunch of locker keys.",
+   "ko": "동료가 마이에게 사물함 열쇠 꾸러미를 휙 던져 줬어요.",
+   "blank": "quẳng",
+   "src": "made"
+  }
+ ],
  "w|quảng cáo": [
   {
    "text": "Tivi phát quảng cáo quá nhiều.",
@@ -30397,6 +31293,22 @@
    "en": "Is there a café around here?",
    "ko": "이 근처에 가게 있어?",
    "blank": "Quanh"
+  }
+ ],
+ "w|quát": [
+  {
+   "text": "Ông hàng xóm tầng trên hay quát con lúc nửa đêm.",
+   "en": "The neighbor upstairs often yells at his kids in the middle of the night.",
+   "ko": "위층 아저씨는 한밤중에 아이들에게 자주 고함을 질러요.",
+   "blank": "quát",
+   "src": "made"
+  },
+  {
+   "text": "Thấy con trâu phá nương ngô, ông Páo quát lớn.",
+   "en": "Seeing the buffalo trample the corn field, Mr. Páo shouted loudly.",
+   "ko": "물소가 옥수수밭을 망치는 걸 보고 파오 할아버지가 크게 소리쳤어요.",
+   "blank": "quát",
+   "src": "made"
   }
  ],
  "w|quạt": [
@@ -30913,6 +31825,22 @@
    "blank": "rách"
   }
  ],
+ "w|rạch": [
+  {
+   "text": "Tuấn rạch vài đường trên mình cá trước khi đem nướng.",
+   "en": "Tuấn made a few slits on the fish before grilling it.",
+   "ko": "뚜언은 생선을 굽기 전에 몸통에 칼집을 몇 군데 냈어요.",
+   "blank": "rạch",
+   "src": "made"
+  },
+  {
+   "text": "Mai cẩn thận dùng dao rọc giấy rạch thùng hàng mới.",
+   "en": "Mai carefully slit open the new box with a box cutter.",
+   "ko": "마이는 커터칼로 새 상자를 조심스럽게 그었어요.",
+   "blank": "rạch",
+   "src": "made"
+  }
+ ],
  "w|rải": [
   {
    "text": "Ở cảnh đám cưới, các diễn viên rải hoa giấy khắp sân khấu.",
@@ -31121,6 +32049,38 @@
    "en": "This is your private matter.",
    "ko": "이건 네 개인 일이야.",
    "blank": "riêng"
+  }
+ ],
+ "w|rìu": [
+  {
+   "text": "Trong phòng của Nam treo một cây rìu cũ làm vật trang trí.",
+   "en": "An old axe hangs in Nam's room as a decoration.",
+   "ko": "남의 방에는 낡은 도끼 하나가 장식으로 걸려 있어요.",
+   "blank": "rìu",
+   "src": "made"
+  },
+  {
+   "text": "Anh trai Thảo cầm rìu bổ củi sau nhà.",
+   "en": "Thảo's older brother takes an axe to chop wood behind the house.",
+   "ko": "타오의 오빠는 집 뒤에서 도끼로 장작을 패요.",
+   "blank": "rìu",
+   "src": "made"
+  }
+ ],
+ "w|rổ": [
+  {
+   "text": "Vợ Nam để rổ rau đã rửa trên bậu cửa cho ráo nước.",
+   "en": "Nam's wife put the basket of washed vegetables on the window sill to drain.",
+   "ko": "남의 아내는 씻은 채소 바구니를 창턱에 두고 물기를 뺐어요.",
+   "blank": "rổ",
+   "src": "made"
+  },
+  {
+   "text": "Thảo đeo rổ sau lưng lên nương hái chè.",
+   "en": "Thảo carries a basket on her back up to the hillside field to pick tea.",
+   "ko": "타오는 바구니를 등에 메고 산비탈 밭에 찻잎을 따러 가요.",
+   "blank": "rổ",
+   "src": "made"
   }
  ],
  "w|rõ": [
@@ -31429,6 +32389,22 @@
    "ko": "농부가 밭에 밀 씨를 뿌렸어요.",
    "blank": "ruộng",
    "src": "tatoeba:10043638/dotheduyet1999 en:1543165/Bah_Dure"
+  }
+ ],
+ "w|rương": [
+  {
+   "text": "Chiếc rương gỗ của ông nội được Nam đặt ở góc phòng ngủ.",
+   "en": "Nam placed his grandfather's wooden chest in the corner of the bedroom.",
+   "ko": "남은 할아버지의 나무 궤짝을 침실 구석에 두었어요.",
+   "blank": "rương",
+   "src": "made"
+  },
+  {
+   "text": "Bà của Thảo cất bộ váy thổ cẩm trong chiếc rương gỗ.",
+   "en": "Thảo's grandmother keeps her brocade skirt in a wooden chest.",
+   "ko": "타오의 할머니는 전통 비단 치마를 나무 궤짝에 보관해요.",
+   "blank": "rương",
+   "src": "made"
   }
  ],
  "w|ruột": [
@@ -32597,6 +33573,22 @@
    "blank": "sống"
   }
  ],
+ "w|sóng điện thoại": [
+  {
+   "text": "Ở tầng hầm gửi xe, sóng điện thoại rất yếu.",
+   "en": "In the basement parking garage, the phone signal is very weak.",
+   "ko": "지하 주차장에서는 휴대폰 신호가 아주 약해요.",
+   "blank": "sóng điện thoại",
+   "src": "made"
+  },
+  {
+   "text": "Phải lên tận đồi cao, Thảo mới bắt được sóng điện thoại.",
+   "en": "Thảo can only catch a phone signal by climbing all the way up the high hill.",
+   "ko": "높은 언덕까지 올라가야 타오는 휴대폰 신호를 잡을 수 있어요.",
+   "blank": "sóng điện thoại",
+   "src": "made"
+  }
+ ],
  "w|song song": [
   {
    "text": "Tòa đang xét song song hai vụ kiện của cùng một công ty.",
@@ -32948,6 +33940,22 @@
    "en": "The stream water is very clear and cool.",
    "ko": "시냇물이 아주 맑고 시원해요.",
    "blank": "suối",
+   "src": "made"
+  }
+ ],
+ "w|sưởi": [
+  {
+   "text": "Mùa đông, Nam bật máy sưởi suốt đêm cho con ngủ.",
+   "en": "In winter, Nam runs the heater all night for his child to sleep.",
+   "ko": "겨울이면 남은 아이가 잘 자도록 밤새 난방기를 틀어요.",
+   "blank": "sưởi",
+   "src": "made"
+  },
+  {
+   "text": "Tối lạnh, cả nhà Thảo ngồi sưởi quanh bếp lửa.",
+   "en": "On cold evenings, Thảo's whole family sits warming themselves around the fire.",
+   "ko": "추운 저녁이면 타오네 식구들은 화롯가에 둘러앉아 몸을 녹여요.",
+   "blank": "sưởi",
    "src": "made"
   }
  ],
@@ -34091,6 +35099,22 @@
    "blank": "Thăm"
   }
  ],
+ "w|thấm": [
+  {
+   "text": "Nước dùng thấm vào miếng đậu, ăn rất đậm đà.",
+   "en": "The broth soaks into the tofu, making it rich and flavorful.",
+   "ko": "국물이 두부에 배어서 맛이 아주 진해요.",
+   "blank": "thấm",
+   "src": "made"
+  },
+  {
+   "text": "Mồ hôi thấm ướt lưng áo Mai khi cô chạy lên tầng năm.",
+   "en": "Sweat soaked the back of Mai's shirt as she ran up to the fifth floor.",
+   "ko": "오 층까지 뛰어 올라가느라 마이의 셔츠 등이 땀에 젖었어요.",
+   "blank": "thấm",
+   "src": "made"
+  }
+ ],
  "w|thảm": [
   {
    "text": "Thảm mới làm phòng khách ấm cúng hơn.",
@@ -34485,6 +35509,22 @@
    "ko": "휴대폰 보호 필름을 떼야 할까요?",
    "blank": "tháo",
    "src": "tatoeba:11311434/chaule3 en:11311433/chaule3"
+  }
+ ],
+ "w|thạo": [
+  {
+   "text": "Sau mười năm đứng bếp, Tuấn đã rất thạo việc gói nem.",
+   "en": "After ten years in the kitchen, Tuấn has become very skilled at rolling spring rolls.",
+   "ko": "주방에서 십 년을 일하고 나니 뚜언은 짜조 마는 데 아주 능숙해졌어요.",
+   "blank": "thạo",
+   "src": "made"
+  },
+  {
+   "text": "Chị Hà rất thạo phần mềm kế toán nên kèm Mai cả buổi.",
+   "en": "Hà is very proficient with the accounting software, so she coached Mai all day.",
+   "ko": "하 언니는 회계 프로그램에 능숙해서 하루 종일 마이를 가르쳐 줬어요.",
+   "blank": "thạo",
+   "src": "made"
   }
  ],
  "w|thảo luận": [
@@ -35357,6 +36397,22 @@
    "blank": "Thoải mái"
   }
  ],
+ "w|thoáng": [
+  {
+   "text": "Căn hộ góc của Nam có hai mặt cửa sổ nên rất thoáng.",
+   "en": "Nam's corner apartment has windows on two sides, so it's very airy.",
+   "ko": "남의 모퉁이 집은 양쪽에 창문이 있어서 아주 통풍이 잘돼요.",
+   "blank": "thoáng",
+   "src": "made"
+  },
+  {
+   "text": "Nhà sàn của bà Páo cao và thoáng, mùa hè rất mát.",
+   "en": "Grandma Páo's stilt house is tall and airy, so it is very cool in summer.",
+   "ko": "파오 할머니의 고상 가옥은 높고 바람이 잘 통해서 여름에 아주 시원해요.",
+   "blank": "thoáng",
+   "src": "made"
+  }
+ ],
  "w|thoát": [
   {
    "text": "Mọi người chạy thoát khỏi đám cháy kịp thời.",
@@ -35532,6 +36588,22 @@
    "en": "Hà's phone repair shop is next to a fragrant coffee shop.",
    "ko": "하의 휴대폰 수리점은 향긋한 커피 가게 옆에 있어요.",
    "blank": "thơm",
+   "src": "made"
+  }
+ ],
+ "w|thơm ngon": [
+  {
+   "text": "Ai cũng khen bánh xèo ở quán của Tuấn thơm ngon.",
+   "en": "Everyone praises the delicious crispy pancakes at Tuấn's restaurant.",
+   "ko": "다들 뚜언네 가게 반쎄오가 맛있다고 칭찬해요.",
+   "blank": "thơm ngon",
+   "src": "made"
+  },
+  {
+   "text": "Bánh bông lan chị Lan mang đến thơm ngon đến mức hết veo.",
+   "en": "The sponge cake Lan brought was so delicious that it was gone in no time.",
+   "ko": "란 언니가 가져온 카스텔라가 너무 맛있어서 순식간에 없어졌어요.",
+   "blank": "thơm ngon",
    "src": "made"
   }
  ],
@@ -39357,6 +40429,22 @@
    "blank": "Tự nhiên"
   }
  ],
+ "w|tủ quần áo": [
+  {
+   "text": "Nam mua thêm một tủ quần áo vì đồ của vợ không còn chỗ để.",
+   "en": "Nam bought another wardrobe because there was no more room for his wife's clothes.",
+   "ko": "아내 옷을 둘 곳이 없어서 남은 옷장을 하나 더 샀어요.",
+   "blank": "tủ quần áo",
+   "src": "made"
+  },
+  {
+   "text": "Nhà sàn không có tủ quần áo, đồ được treo trên sào tre.",
+   "en": "The stilt house has no wardrobe; clothes are hung on bamboo poles.",
+   "ko": "고상 가옥에는 옷장이 없어서 옷을 대나무 장대에 걸어요.",
+   "blank": "tủ quần áo",
+   "src": "made"
+  }
+ ],
  "w|tự sát": [
   {
    "text": "Bộ phim đề cập đến chủ đề tự sát.",
@@ -39663,6 +40751,22 @@
    "blank": "tuổi già"
   }
  ],
+ "w|tươi ngon": [
+  {
+   "text": "Sáng nào Tuấn cũng ra chợ chọn hải sản tươi ngon.",
+   "en": "Every morning Tuấn goes to the market to pick out fresh, tasty seafood.",
+   "ko": "뚜언은 매일 아침 시장에 가서 싱싱한 해산물을 골라요.",
+   "blank": "tươi ngon",
+   "src": "made"
+  },
+  {
+   "text": "Chị trưởng phòng mang đến một giỏ trái cây tươi ngon để chào người mới.",
+   "en": "The department head brought a basket of fresh fruit to welcome the newcomer.",
+   "ko": "팀장님이 신입을 환영하려고 싱싱한 과일 바구니를 가져왔어요.",
+   "blank": "tươi ngon",
+   "src": "made"
+  }
+ ],
  "w|tuổi thơ": [
   {
    "text": "Tôi có một tuổi thơ hạnh phúc.",
@@ -39747,6 +40851,22 @@
    "en": "Don't worry too much about the future.",
    "ko": "미래에 대해 너무 걱정하지 마.",
    "blank": "tương lai"
+  }
+ ],
+ "w|tụt": [
+  {
+   "text": "Đông khách quá, Tuấn tụt mất hai cân chỉ trong tháng Tết.",
+   "en": "With so many customers, Tuấn dropped two kilos in the Tết month alone.",
+   "ko": "손님이 너무 많아서 뚜언은 설 한 달 동안 살이 이 킬로나 빠졌어요.",
+   "blank": "tụt",
+   "src": "made"
+  },
+  {
+   "text": "Đứng thuyết trình trước cả phòng, Mai thấy tim như tụt xuống.",
+   "en": "Standing to present in front of the whole team, Mai felt her heart sink.",
+   "ko": "팀 전체 앞에서 발표하려니 마이는 심장이 쿵 내려앉는 것 같았어요.",
+   "blank": "tụt",
+   "src": "made"
   }
  ],
  "w|tuy": [
@@ -39959,6 +41079,22 @@
    "src": "made"
   }
  ],
+ "w|ủi": [
+  {
+   "text": "Tối chủ nhật, Nam ủi sẵn áo sơ mi cho cả tuần.",
+   "en": "On Sunday evening, Nam irons his shirts for the whole week ahead.",
+   "ko": "일요일 저녁이면 남은 한 주 동안 입을 셔츠를 미리 다려 놓아요.",
+   "blank": "ủi",
+   "src": "made"
+  },
+  {
+   "text": "Nhà Thảo không có điện nên mẹ ủi áo bằng bàn là than.",
+   "en": "Thảo's house has no electricity, so her mother irons with a charcoal iron.",
+   "ko": "타오네는 전기가 없어서 어머니가 숯다리미로 옷을 다려요.",
+   "blank": "ủi",
+   "src": "made"
+  }
+ ],
  "w|ừm": [
   {
    "text": "Ừm, mình nghĩ vậy cũng được.",
@@ -40065,6 +41201,22 @@
    "blank": "ước mơ"
   }
  ],
+ "w|uốn": [
+  {
+   "text": "Chị bán hàng uốn cọng hành thành hình bông hoa để trang trí đĩa.",
+   "en": "The shop assistant bent a scallion stalk into a flower shape to decorate the plate.",
+   "ko": "가게 직원은 접시를 꾸미려고 파 줄기를 꽃 모양으로 구부렸어요.",
+   "blank": "uốn",
+   "src": "made"
+  },
+  {
+   "text": "Sáng nay, Mai dậy sớm uốn tóc cho buổi đi làm đầu tiên.",
+   "en": "This morning, Mai got up early to curl her hair for her first day of work.",
+   "ko": "오늘 아침 마이는 첫 출근을 위해 일찍 일어나 머리를 말았어요.",
+   "blank": "uốn",
+   "src": "made"
+  }
+ ],
  "w|uống": [
   {
    "text": "Uống nước đi, khát lắm rồi.",
@@ -40121,6 +41273,22 @@
    "blank": "Uống thuốc"
   }
  ],
+ "w|ướp": [
+  {
+   "text": "Tối hôm trước, Tuấn ướp sườn với sả và mật ong.",
+   "en": "The night before, Tuấn marinated the ribs with lemongrass and honey.",
+   "ko": "전날 밤 뚜언은 갈비를 레몬그라스와 꿀에 재워 두었어요.",
+   "blank": "ướp",
+   "src": "made"
+  },
+  {
+   "text": "Chị Lan trong phòng mời Mai món gà ướp mật ong tự làm.",
+   "en": "Lan from the team offered Mai some homemade honey-marinated chicken.",
+   "ko": "팀의 란 언니가 마이에게 직접 만든 꿀에 재운 닭고기를 권했어요.",
+   "blank": "ướp",
+   "src": "made"
+  }
+ ],
  "w|ướt": [
   {
    "text": "Áo mình bị ướt vì mưa bất ngờ.",
@@ -40148,6 +41316,22 @@
    "en": "Hà gives priority to repairs for elderly people and those in urgent need.",
    "ko": "하는 노인과 급한 사람의 휴대폰을 먼저 고쳐요.",
    "blank": "ưu tiên",
+   "src": "made"
+  }
+ ],
+ "w|vá": [
+  {
+   "text": "Mẹ Tuấn ngồi vá lại chiếc tạp dề bị rách.",
+   "en": "Tuấn's mother sat mending the torn apron.",
+   "ko": "뚜언의 어머니는 앉아서 찢어진 앞치마를 꿰맸어요.",
+   "blank": "vá",
+   "src": "made"
+  },
+  {
+   "text": "Anh kỹ thuật viên chỉ Mai cách vá lỗi trong phần mềm.",
+   "en": "The technician showed Mai how to patch a bug in the software.",
+   "ko": "기술자가 마이에게 프로그램 오류를 고치는 법을 알려 줬어요.",
+   "blank": "vá",
    "src": "made"
   }
  ],
@@ -40403,6 +41587,22 @@
    "blank": "Vàng"
   }
  ],
+ "w|văng": [
+  {
+   "text": "Dầu nóng văng lên tay Tuấn khi anh thả cá vào chảo.",
+   "en": "Hot oil spattered onto Tuấn's hand when he dropped the fish into the pan.",
+   "ko": "뚜언이 생선을 팬에 넣자 뜨거운 기름이 손에 튀었어요.",
+   "blank": "văng",
+   "src": "made"
+  },
+  {
+   "text": "Mai mở nắp chai nước ngọt, bọt văng cả lên áo.",
+   "en": "Mai opened the soda bottle and the fizz spattered all over her shirt.",
+   "ko": "마이가 탄산음료 뚜껑을 열자 거품이 셔츠에 다 튀었어요.",
+   "blank": "văng",
+   "src": "made"
+  }
+ ],
  "w|vắng": [
   {
    "text": "Lớp học hôm nay vắng khá nhiều bạn.",
@@ -40471,6 +41671,22 @@
    "en": "Come inside and have some water.",
    "ko": "집 안으로 들어와서 물 마셔.",
    "blank": "Vào trong"
+  }
+ ],
+ "w|vắt": [
+  {
+   "text": "Tuấn vắt chanh vào bát nước chấm rồi nếm thử.",
+   "en": "Tuấn squeezed lime into the dipping sauce bowl and tasted it.",
+   "ko": "뚜언은 소스 그릇에 라임을 짜 넣고 맛을 봤어요.",
+   "blank": "vắt",
+   "src": "made"
+  },
+  {
+   "text": "Mai vắt khăn ướt rồi lau sạch bàn làm việc mới.",
+   "en": "Mai wrung out a wet cloth and wiped her new desk clean.",
+   "ko": "마이는 젖은 걸레를 짜서 새 책상을 깨끗이 닦았어요.",
+   "blank": "vắt",
+   "src": "made"
   }
  ],
  "w|vặt": [
@@ -40946,6 +42162,22 @@
    "en": "The kids fed bread to the ducks at the lake.",
    "ko": "아이들이 호수에서 오리에게 빵을 줬어요.",
    "blank": "vịt",
+   "src": "made"
+  }
+ ],
+ "w|vò": [
+  {
+   "text": "Máy giặt hỏng, Nam đành vò tay đống áo trong chậu.",
+   "en": "The washing machine broke, so Nam had to scrub the clothes by hand in a basin.",
+   "ko": "세탁기가 고장 나서 남은 대야에 옷을 손으로 비벼 빨 수밖에 없었어요.",
+   "blank": "vò",
+   "src": "made"
+  },
+  {
+   "text": "Phụ nữ trong bản ra suối vò quần áo.",
+   "en": "The women of the village go down to the stream to scrub clothes.",
+   "ko": "마을 여자들은 개울에 나가 옷을 비벼 빨아요.",
+   "blank": "vò",
    "src": "made"
   }
  ],
@@ -41425,6 +42657,22 @@
    "src": "made"
   }
  ],
+ "w|vụng về": [
+  {
+   "text": "Cậu phục vụ mới còn vụng về, làm đổ cả bát canh.",
+   "en": "The new waiter is still clumsy and spilled a whole bowl of soup.",
+   "ko": "새로 온 종업원은 아직 서툴러서 국 한 그릇을 다 쏟았어요.",
+   "blank": "vụng về",
+   "src": "made"
+  },
+  {
+   "text": "Ngày đầu, Mai còn vụng về khi nghe điện thoại của khách.",
+   "en": "On her first day, Mai was still clumsy when answering customer calls.",
+   "ko": "첫날이라 마이는 고객 전화를 받는 게 아직 서툴렀어요.",
+   "blank": "vụng về",
+   "src": "made"
+  }
+ ],
  "w|vườn": [
   {
    "text": "Vườn sau nhà trồng đầy rau xanh.",
@@ -41779,6 +43027,22 @@
    "en": "The old vase looks ugly but it's precious.",
    "ko": "낡은 꽃병은 못생겨 보여도 소중해.",
    "blank": "xấu xí"
+  }
+ ],
+ "w|xay": [
+  {
+   "text": "Mỗi sáng, Tuấn tự xay thịt để làm chả.",
+   "en": "Every morning, Tuấn grinds the meat himself to make patties.",
+   "ko": "뚜언은 매일 아침 고기를 직접 갈아서 완자를 만들어요.",
+   "blank": "xay",
+   "src": "made"
+  },
+  {
+   "text": "Phòng nghỉ có máy xay sinh tố cho nhân viên dùng chung.",
+   "en": "The break room has a blender for staff to share.",
+   "ko": "휴게실에는 직원들이 같이 쓰는 믹서기가 있어요.",
+   "blank": "xay",
+   "src": "made"
   }
  ],
  "w|xây": [
@@ -42264,6 +43528,22 @@
    "en": "Reunited with her missing son, the mother was too moved to speak.",
    "ko": "실종된 아들을 다시 만난 엄마는 감격해서 말을 잇지 못했어요.",
    "blank": "xúc động",
+   "src": "made"
+  }
+ ],
+ "w|xúc xích": [
+  {
+   "text": "Bọn trẻ nhà Tuấn thích nhất món xúc xích nướng của bố.",
+   "en": "Tuấn's kids love their dad's grilled sausages the most.",
+   "ko": "뚜언네 아이들은 아빠가 구운 소시지를 제일 좋아해요.",
+   "blank": "xúc xích",
+   "src": "made"
+  },
+  {
+   "text": "Bữa trưa đầu tiên của Mai ở công ty là bánh mì xúc xích.",
+   "en": "Mai's first lunch at the company was a sausage sandwich.",
+   "ko": "회사에서 마이의 첫 점심은 소시지 반미였어요.",
+   "blank": "xúc xích",
    "src": "made"
   }
  ],
