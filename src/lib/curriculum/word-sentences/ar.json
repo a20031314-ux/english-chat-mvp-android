@@ -3291,6 +3291,22 @@
    "blank": "أمتعة"
   }
  ],
+ "w|أمثل": [
+  {
+   "text": "بحث أحمد وزميله عن الحل الأمثل لمشكلة التوصيل.",
+   "en": "Ahmed and his coworker looked for the optimal solution to the delivery problem.",
+   "ko": "아흐마드와 동료는 배송 문제의 최선의 해결책을 찾았어요.",
+   "blank": "الأمثل",
+   "src": "made"
+  },
+  {
+   "text": "ترى مريم أن الوقت الأمثل لتنظيف الغرف هو قبل الظهر.",
+   "en": "Mariam thinks the best time to clean the rooms is before noon.",
+   "ko": "마리암은 객실 청소에 가장 좋은 시간이 정오 전이라고 생각해요.",
+   "blank": "الأمثل",
+   "src": "made"
+  }
+ ],
  "w|أمر": [
   {
    "text": "هذا أمر مهم.",
@@ -5541,6 +5557,22 @@
    "blank": "إياها"
   }
  ],
+ "w|إيجابية": [
+  {
+   "text": "نقل الزميل الجديد إيجابية واضحة إلى فريق أحمد.",
+   "en": "The new coworker brought clear positivity to Ahmed's team.",
+   "ko": "새 동료는 아흐마드의 팀에 확실히 긍정적인 기운을 불어넣었어요.",
+   "blank": "إيجابية",
+   "src": "made"
+  },
+  {
+   "text": "تحرص مريم على أن تبدأ كل مناوبة بإيجابية.",
+   "en": "Mariam makes a point of starting every shift with positivity.",
+   "ko": "마리암은 근무를 늘 긍정적인 마음으로 시작하려고 해요.",
+   "blank": "بإيجابية",
+   "src": "made"
+  }
+ ],
  "w|إيجاد": [
   {
    "text": "إيجاد موقف بهالزحمة صعب.",
@@ -6247,6 +6279,22 @@
    "src": "made"
   }
  ],
+ "w|اختفاء": [
+  {
+   "text": "لاحظ أحمد اختفاء قلمه المفضل، ثم وجده في يد زميله.",
+   "en": "Ahmed noticed his favorite pen had disappeared, then found it in his coworker's hand.",
+   "ko": "아흐마드는 아끼는 펜이 없어진 걸 알았는데, 동료 손에 있었어요.",
+   "blank": "اختفاء",
+   "src": "made"
+  },
+  {
+   "text": "أبلغ نزيل مريم عن اختفاء ساعته من الغرفة، ثم وجدها في حقيبته.",
+   "en": "A guest reported to Mariam that his watch had disappeared from the room, then found it in his bag.",
+   "ko": "한 투숙객이 방에서 시계가 없어졌다고 마리암에게 알렸는데, 가방에서 찾았어요.",
+   "blank": "اختفاء",
+   "src": "made"
+  }
+ ],
  "w|اختفى": [
   {
    "text": "اختفى المفتاح من الطاولة فجأة.",
@@ -6433,6 +6481,22 @@
    "en": "The price of gold went up this month.",
    "ko": "이달에 금값이 올랐어.",
    "blank": "ارتفع"
+  }
+ ],
+ "w|ارتكب": [
+  {
+   "text": "ارتكب الزميل الجديد خطأ في الفاتورة، فساعده أحمد على تصحيحه.",
+   "en": "The new coworker made a mistake on the invoice, so Ahmed helped him correct it.",
+   "ko": "새 동료가 청구서에 실수를 해서 아흐마드가 고치는 걸 도와줬어요.",
+   "blank": "ارتكب",
+   "src": "made"
+  },
+  {
+   "text": "ارتكب نزيل مخالفة حين دخن في غرفته، فنبهته مريم.",
+   "en": "A guest committed a violation by smoking in his room, so Mariam warned him.",
+   "ko": "한 투숙객이 방에서 담배를 피워 규정을 어겨서 마리암이 주의를 줬어요.",
+   "blank": "ارتكب",
+   "src": "made"
   }
  ],
  "w|ارتياح": [
@@ -7257,6 +7321,22 @@
    "en": "Listening to the news started to bother me.",
    "ko": "뉴스 듣는 게 짜증나기 시작했어.",
    "blank": "استماع"
+  }
+ ],
+ "w|استمتاع": [
+  {
+   "text": "قال الزميل لأحمد إن الفريق الجيد هو سر الاستمتاع بالعمل.",
+   "en": "The coworker told Ahmed that a good team is the secret to enjoying work.",
+   "ko": "동료는 아흐마드에게 좋은 팀이 일을 즐기는 비결이라고 말했어요.",
+   "blank": "الاستمتاع",
+   "src": "made"
+  },
+  {
+   "text": "تتمنى مريم للنزلاء الاستمتاع بإقامتهم وهي تعطيهم المفاتيح.",
+   "en": "Mariam wishes the guests an enjoyable stay as she hands them the keys.",
+   "ko": "마리암은 열쇠를 건네며 투숙객들에게 즐거운 시간 보내라고 인사해요.",
+   "blank": "الاستمتاع",
+   "src": "made"
   }
  ],
  "w|استمتع": [
@@ -10647,6 +10727,22 @@
    "blank": "بشري"
   }
  ],
+ "w|بشع": [
+  {
+   "text": "ضحك أحمد وزميله من لون السجاد البشع في غرفة الاجتماعات.",
+   "en": "Ahmed and his coworker laughed at the ugly color of the carpet in the meeting room.",
+   "ko": "아흐마드와 동료는 회의실의 흉측한 카펫 색을 보고 웃었어요.",
+   "blank": "البشع",
+   "src": "made"
+  },
+  {
+   "text": "وجدت مريم بقعة بشعة على السجادة بعد حفلة الأمس.",
+   "en": "Mariam found a hideous stain on the carpet after yesterday's party.",
+   "ko": "어제 파티가 끝난 뒤 마리암은 카펫에 끔찍한 얼룩이 있는 걸 발견했어요.",
+   "blank": "بشعة",
+   "src": "made"
+  }
+ ],
  "w|بصدق": [
   {
    "text": "أحبك بصدق.",
@@ -11517,6 +11613,22 @@
    "en": "He slept as soon as he got home.",
    "ko": "그는 집에 도착하자마자 잠들었어.",
    "blank": "بمجرد"
+  }
+ ],
+ "w|بموجب": [
+  {
+   "text": "انضم الزميل إلى فريق أحمد بموجب عقد مدته سنة.",
+   "en": "The coworker joined Ahmed's team under a one-year contract.",
+   "ko": "그 동료는 일 년짜리 계약으로 아흐마드의 팀에 들어왔어요.",
+   "blank": "بموجب",
+   "src": "made"
+  },
+  {
+   "text": "يحق للنزيل بموجب سياسة الفندق أن يلغي الحجز مجانا قبل يوم.",
+   "en": "Under the hotel's policy, a guest may cancel the booking free of charge a day in advance.",
+   "ko": "호텔 규정에 따라 투숙객은 하루 전까지 무료로 예약을 취소할 수 있어요.",
+   "blank": "بموجب",
+   "src": "made"
   }
  ],
  "w|بناء": [
@@ -13329,6 +13441,22 @@
    "src": "made"
   }
  ],
+ "w|تربية": [
+  {
+   "text": "تحدث أحمد وزميله في الاستراحة عن تربية الأطفال.",
+   "en": "Ahmed and his coworker talked about raising children during the break.",
+   "ko": "아흐마드와 동료는 쉬는 시간에 아이 키우는 이야기를 했어요.",
+   "blank": "تربية",
+   "src": "made"
+  },
+  {
+   "text": "تعلمت مريم حسن التعامل من تربية أمها الصارمة.",
+   "en": "Mariam learned good manners from her mother's strict upbringing.",
+   "ko": "마리암은 엄마의 엄격한 가정교육 덕분에 사람 대하는 법을 배웠어요.",
+   "blank": "تربية",
+   "src": "made"
+  }
+ ],
  "w|ترتيب": [
   {
    "text": "هل يمكنك مساعدتي في ترتيب الغرفة الآن؟",
@@ -14839,6 +14967,22 @@
    "blank": "تفكيرك"
   }
  ],
+ "w|تفوق": [
+  {
+   "text": "تفوق الزميل الجديد على أحمد في مسابقة الشطرنج.",
+   "en": "The new coworker beat Ahmed in the chess competition.",
+   "ko": "새 동료가 체스 대회에서 아흐마드를 이겼어요.",
+   "blank": "تفوق",
+   "src": "made"
+  },
+  {
+   "text": "تفوقت مريم على كل زملائها في تقييم النزلاء هذا العام.",
+   "en": "Mariam outdid all her colleagues in guest ratings this year.",
+   "ko": "마리암은 올해 투숙객 평가에서 동료들을 모두 앞질렀어요.",
+   "blank": "تفوقت",
+   "src": "made"
+  }
+ ],
  "w|تقاتل": [
   {
    "text": "تقاتل قطان على بقايا السمك أمام باب المحل.",
@@ -15685,6 +15829,22 @@
    "blank": "تنزيل"
   }
  ],
+ "w|تنس": [
+  {
+   "text": "دعا أحمد زميله الجديد إلى مباراة تنس بعد العمل.",
+   "en": "Ahmed invited his new coworker to a tennis match after work.",
+   "ko": "아흐마드는 새 동료에게 퇴근 후 테니스를 치자고 했어요.",
+   "blank": "تنس",
+   "src": "made"
+  },
+  {
+   "text": "حجز نزيل ملعب التنس في الفندق باكرا، فجهزته مريم.",
+   "en": "A guest booked the hotel tennis court early, so Mariam got it ready.",
+   "ko": "한 투숙객이 호텔 테니스장을 일찍 예약해서 마리암이 준비해 뒀어요.",
+   "blank": "التنس",
+   "src": "made"
+  }
+ ],
  "w|تنصت": [
   {
    "text": "تدور مسرحية عمر الجديدة حول تنصت جار فضولي على جيرانه.",
@@ -15758,6 +15918,38 @@
    "en": "The manager asked Sarah to oversee the carrying out of the new plan.",
    "ko": "매니저는 사라에게 새 계획의 실행을 맡아 달라고 했어요.",
    "blank": "تنفيذ",
+   "src": "made"
+  }
+ ],
+ "w|تنقل": [
+  {
+   "text": "يتنقل زميل أحمد بين الفرعين بالدراجة كل يوم.",
+   "en": "Ahmed's coworker gets between the two branches by bicycle every day.",
+   "ko": "아흐마드의 동료는 매일 자전거로 두 지점을 오가요.",
+   "blank": "يتنقل",
+   "src": "made"
+  },
+  {
+   "text": "تتنقل مريم بين الطوابق طوال اليوم لتتأكد أن كل شيء بخير.",
+   "en": "Mariam moves between the floors all day to make sure everything is fine.",
+   "ko": "마리암은 다 괜찮은지 확인하려고 하루 종일 층을 오가요.",
+   "blank": "تتنقل",
+   "src": "made"
+  }
+ ],
+ "w|تنكر": [
+  {
+   "text": "تنكر أحمد في زي مهرج في حفلة الشركة، فلم يعرفه زميله.",
+   "en": "Ahmed dressed up as a clown at the company party, and his coworker didn't recognize him.",
+   "ko": "아흐마드가 회사 파티에서 광대로 분장해서 동료가 못 알아봤어요.",
+   "blank": "تنكر",
+   "src": "made"
+  },
+  {
+   "text": "نزل في الفندق مغن شهير تنكر بقبعة ونظارة حتى لا يعرفه أحد.",
+   "en": "A famous singer stayed at the hotel, disguised in a hat and glasses so nobody would recognize him.",
+   "ko": "유명한 가수가 아무도 못 알아보게 모자와 안경으로 변장하고 호텔에 묵었어요.",
+   "blank": "تنكر",
    "src": "made"
   }
  ],
@@ -17425,6 +17617,22 @@
    "blank": "جديا"
   }
  ],
+ "w|جدية": [
+  {
+   "text": "لاحظ أحمد جدية زميله الجديد في أول اجتماع.",
+   "en": "Ahmed noticed his new coworker's seriousness at the first meeting.",
+   "ko": "아흐마드는 첫 회의에서 새 동료가 진지하다는 걸 느꼈어요.",
+   "blank": "جدية",
+   "src": "made"
+  },
+  {
+   "text": "تتعامل مريم مع شكاوى النزلاء بجدية.",
+   "en": "Mariam deals with guests' complaints seriously.",
+   "ko": "마리암은 투숙객 불만을 진지하게 처리해요.",
+   "blank": "بجدية",
+   "src": "made"
+  }
+ ],
  "w|جديد": [
   {
    "text": "لدي هاتف جديد.",
@@ -17483,6 +17691,22 @@
    "en": "I found the root of the tree deep in the ground.",
    "ko": "나는 나무의 뿌리가 땅속 깊이 있는 것을 발견했다.",
    "blank": "جذر"
+  }
+ ],
+ "w|جرأة": [
+  {
+   "text": "أعجب أحمد بجرأة زميله الذي انتقد الخطة أمام المدير.",
+   "en": "Ahmed admired the boldness of his coworker who criticized the plan in front of the manager.",
+   "ko": "아흐마드는 사장 앞에서 계획을 비판한 동료의 대담함에 감탄했어요.",
+   "blank": "بجرأة",
+   "src": "made"
+  },
+  {
+   "text": "احتاجت مريم إلى جرأة كبيرة لتطلب من النزيل الصاخب أن يخفض صوته.",
+   "en": "Mariam needed a lot of nerve to ask the noisy guest to lower his voice.",
+   "ko": "시끄러운 투숙객에게 조용히 해 달라고 하는 데 마리암은 큰 용기가 필요했어요.",
+   "blank": "جرأة",
+   "src": "made"
   }
  ],
  "w|جراء": [
@@ -19969,6 +20193,22 @@
    "blank": "حزين"
   }
  ],
+ "w|حس": [
+  {
+   "text": "لزميل أحمد الجديد حس فكاهة جعل المكتب أخف.",
+   "en": "Ahmed's new coworker has a sense of humor that made the office lighter.",
+   "ko": "아흐마드의 새 동료는 유머 감각이 있어서 사무실 분위기가 가벼워졌어요.",
+   "blank": "حس",
+   "src": "made"
+  },
+  {
+   "text": "تملك مريم حسا عاليا بالمسؤولية تجاه النزلاء.",
+   "en": "Mariam has a strong sense of responsibility toward the guests.",
+   "ko": "마리암은 투숙객에 대한 책임감이 강해요.",
+   "blank": "حسا",
+   "src": "made"
+  }
+ ],
  "w|حساء": [
   {
    "text": "أعددت حساء ساخن للعشاء.",
@@ -20955,6 +21195,22 @@
    "blank": "حماس"
   }
  ],
+ "w|حماقة": [
+  {
+   "text": "اعترف أحمد بأن الرد على زميله الجديد بتلك الطريقة كان حماقة منه.",
+   "en": "Ahmed admitted that answering his new coworker that way had been foolish of him.",
+   "ko": "아흐마드는 새 동료에게 그렇게 대답한 게 어리석었다고 인정했어요.",
+   "blank": "حماقة",
+   "src": "made"
+  },
+  {
+   "text": "قالت مريم إن ترك حقيبة السفر في الممر حماقة يرتكبها كثير من النزلاء.",
+   "en": "Mariam said leaving a suitcase in the corridor is a foolish thing many guests do.",
+   "ko": "마리암은 복도에 여행 가방을 두는 건 많은 투숙객이 저지르는 어리석은 짓이라고 했어요.",
+   "blank": "حماقة",
+   "src": "made"
+  }
+ ],
  "w|حمام": [
   {
    "text": "أريد أن أذهب إلى الحمام.",
@@ -21679,6 +21935,22 @@
    "en": "The child was afraid of the dark at night.",
    "ko": "아이는 밤에 어둠을 무서워했다.",
    "blank": "خاف"
+  }
+ ],
+ "w|خافت": [
+  {
+   "text": "تحدث الزميل الجديد بصوت خافت لأن أحمد كان على الهاتف.",
+   "en": "The new coworker spoke in a low voice because Ahmed was on the phone.",
+   "ko": "아흐마드가 통화 중이라 새 동료는 작은 목소리로 말했어요.",
+   "blank": "خافت",
+   "src": "made"
+  },
+  {
+   "text": "يضفي الضوء الخافت في مطعم الفندق جوا هادئا.",
+   "en": "The dim light in the hotel restaurant gives it a calm atmosphere.",
+   "ko": "호텔 식당의 은은한 조명이 차분한 분위기를 만들어요.",
+   "blank": "الخافت",
+   "src": "made"
   }
  ],
  "w|خال": [
@@ -22668,6 +22940,22 @@
    "en": "Mona works in a lab that studies how a cell divides.",
    "ko": "모나는 세포가 어떻게 분열하는지 연구하는 실험실에서 일해요.",
    "blank": "الخلية",
+   "src": "made"
+  }
+ ],
+ "w|خليل": [
+  {
+   "text": "بعد سنة صار الزميل الجديد خليل أحمد الذي يأتمنه على أسراره.",
+   "en": "After a year, the new coworker became Ahmed's close friend whom he trusts with his secrets.",
+   "ko": "일 년 뒤 새 동료는 아흐마드가 비밀을 털어놓는 절친이 됐어요.",
+   "blank": "خليل",
+   "src": "made"
+  },
+  {
+   "text": "قرأت مريم في كتاب قديم قصيدة عن شاعر يرثي خليله.",
+   "en": "In an old book, Mariam read a poem about a poet mourning his close friend.",
+   "ko": "마리암은 오래된 책에서 친한 벗을 애도하는 시인의 시를 읽었어요.",
+   "blank": "خليله",
    "src": "made"
   }
  ],
@@ -26349,6 +26637,22 @@
    "blank": "زائد"
   }
  ],
+ "w|زائر": [
+  {
+   "text": "ظن أحمد في البداية أن الرجل الجديد زائر وليس موظفا.",
+   "en": "At first Ahmed thought the new man was a visitor, not an employee.",
+   "ko": "아흐마드는 처음에 새로 온 남자가 직원이 아니라 방문객인 줄 알았어요.",
+   "blank": "زائر",
+   "src": "made"
+  },
+  {
+   "text": "دخل زائر البهو يسأل عن صديق ينزل في الفندق.",
+   "en": "A visitor came into the lobby asking about a friend staying at the hotel.",
+   "ko": "한 방문객이 로비에 들어와 호텔에 묵는 친구를 찾았어요.",
+   "blank": "زائر",
+   "src": "made"
+  }
+ ],
  "w|زاد": [
   {
    "text": "زاد وزني في الشتاء.",
@@ -29223,6 +29527,22 @@
    "blank": "سيف"
   }
  ],
+ "w|سيناريو": [
+  {
+   "text": "ناقش أحمد مع زميله أسوأ سيناريو إذا تأخر المشروع.",
+   "en": "Ahmed discussed with his coworker the worst-case scenario if the project is delayed.",
+   "ko": "아흐마드는 프로젝트가 늦어질 경우 최악의 시나리오를 동료와 의논했어요.",
+   "blank": "سيناريو",
+   "src": "made"
+  },
+  {
+   "text": "تستعد مريم لكل سيناريو حين يصل وفد كبير.",
+   "en": "Mariam prepares for every scenario when a large delegation arrives.",
+   "ko": "마리암은 큰 단체가 올 때 모든 상황에 대비해요.",
+   "blank": "سيناريو",
+   "src": "made"
+  }
+ ],
  "w|سينما": [
   {
    "text": "ذهبت إلى سينما مع أصدقائي أمس.",
@@ -30619,6 +30939,22 @@
    "blank": "شمعة"
   }
  ],
+ "w|شمل": [
+  {
+   "text": "شمل التدريب الأول للزميل الجديد جولة في المصنع مع أحمد.",
+   "en": "The new coworker's first training included a tour of the factory with Ahmed.",
+   "ko": "새 동료의 첫 교육에는 아흐마드와 공장을 둘러보는 일정도 들어 있었어요.",
+   "blank": "شمل",
+   "src": "made"
+  },
+  {
+   "text": "يشمل سعر الغرفة الفطور ودخول النادي الرياضي، كما شرحت مريم.",
+   "en": "The room price includes breakfast and gym access, as Mariam explained.",
+   "ko": "마리암의 설명대로 객실 요금에는 조식과 헬스장 이용이 포함돼요.",
+   "blank": "يشمل",
+   "src": "made"
+  }
+ ],
  "w|شهادة": [
   {
    "text": "سأحصل على شهادة بعد التخرج.",
@@ -30945,6 +31281,22 @@
    "en": "This street is always noisy.",
    "ko": "이 거리는 항상 시끄러워요.",
    "blank": "صاخب"
+  }
+ ],
+ "w|صادف": [
+  {
+   "text": "صادف أحمد زميله الجديد في السوق يوم الجمعة.",
+   "en": "Ahmed ran into his new coworker at the market on Friday.",
+   "ko": "아흐마드는 금요일에 시장에서 새 동료와 우연히 마주쳤어요.",
+   "blank": "صادف",
+   "src": "made"
+  },
+  {
+   "text": "صادفت مريم في المصعد ممثلة كانت تراها في التلفاز.",
+   "en": "In the lift, Mariam came across an actress she used to see on TV.",
+   "ko": "마리암은 엘리베이터에서 텔레비전에서 보던 배우와 마주쳤어요.",
+   "blank": "صادفت",
+   "src": "made"
   }
  ],
  "w|صادق": [
@@ -31809,6 +32161,22 @@
    "en": "I want to design my house myself.",
    "ko": "나는 집을 직접 설계하고 싶어.",
    "blank": "أصمم"
+  }
+ ],
+ "w|صمود": [
+  {
+   "text": "أثنى أحمد على صمود زميله أمام ضغط العمل في أسبوعه الأول.",
+   "en": "Ahmed praised his coworker's resilience under work pressure in his first week.",
+   "ko": "아흐마드는 첫 주의 업무 압박을 버텨 낸 동료를 칭찬했어요.",
+   "blank": "صمود",
+   "src": "made"
+  },
+  {
+   "text": "أشاد النزلاء بصمود مريم في ليلة انقطاع الكهرباء.",
+   "en": "The guests praised Mariam's steadiness on the night of the power cut.",
+   "ko": "투숙객들은 정전된 밤에 침착하게 버텨 준 마리암을 칭찬했어요.",
+   "blank": "بصمود",
+   "src": "made"
   }
  ],
  "w|صناعة": [
@@ -33391,6 +33759,22 @@
    "blank": "طفلة"
   }
  ],
+ "w|طفولة": [
+  {
+   "text": "تبادل أحمد وزميله قصص الطفولة على الغداء.",
+   "en": "Ahmed and his coworker swapped childhood stories over lunch.",
+   "ko": "아흐마드와 동료는 점심을 먹으며 어린 시절 이야기를 주고받았어요.",
+   "blank": "الطفولة",
+   "src": "made"
+  },
+  {
+   "text": "قضت مريم طفولتها في فندق صغير يملكه جدها.",
+   "en": "Mariam spent her childhood in a small hotel her grandfather owned.",
+   "ko": "마리암은 할아버지가 운영하던 작은 호텔에서 어린 시절을 보냈어요.",
+   "blank": "طفولتها",
+   "src": "made"
+  }
+ ],
  "w|طقس": [
   {
    "text": "أحب طقس الشتاء البارد.",
@@ -33489,6 +33873,22 @@
    "en": "The carpenter carefully painted the chair.",
    "ko": "목수가 의자를 정성스럽게 칠했어.",
    "blank": "طلى"
+  }
+ ],
+ "w|طليق": [
+  {
+   "text": "تحدث الزميل الجديد مع أحمد بهدوء عن طليقته وعن ابنهما المشترك.",
+   "en": "The new coworker talked calmly with Ahmed about his ex-wife and their son.",
+   "ko": "새 동료는 아흐마드에게 전처와 둘 사이의 아들 이야기를 담담하게 했어요.",
+   "blank": "طليقته",
+   "src": "made"
+  },
+  {
+   "text": "حجزت نزيلة غرفة منفصلة لأن طليقها ينزل في الفندق نفسه.",
+   "en": "A guest booked a separate room because her ex-husband was staying at the same hotel.",
+   "ko": "한 투숙객은 전남편이 같은 호텔에 묵어서 따로 떨어진 방을 예약했어요.",
+   "blank": "طليقها",
+   "src": "made"
   }
  ],
  "w|طمأن": [
@@ -35453,6 +35853,22 @@
    "blank": "عطشان"
   }
  ],
+ "w|عطل": [
+  {
+   "text": "عطل انقطاع الكهرباء عمل أحمد وزميله ساعتين.",
+   "en": "The power cut held up Ahmed and his coworker's work for two hours.",
+   "ko": "정전 때문에 아흐마드와 동료는 두 시간 동안 일을 못 했어요.",
+   "blank": "عطل",
+   "src": "made"
+  },
+  {
+   "text": "عطلت عاصفة الثلج رحلات كثيرة، فامتلأ فندق مريم.",
+   "en": "The snowstorm disrupted many flights, so Mariam's hotel filled up.",
+   "ko": "눈보라로 비행기가 많이 결항돼서 마리암의 호텔이 꽉 찼어요.",
+   "blank": "عطلت",
+   "src": "made"
+  }
+ ],
  "w|عطلة": [
   {
    "text": "أنا في عطلة نهاية الأسبوع الآن.",
@@ -36230,6 +36646,22 @@
    "en": "Nour said the beautiful journey was worth the trouble of getting up early.",
    "ko": "누르는 그 멋진 여행이 일찍 일어나는 수고를 할 만했다고 말했어요.",
    "blank": "عناء",
+   "src": "made"
+  }
+ ],
+ "w|عناق": [
+  {
+   "text": "ودع أحمد زميله بعناق حين انتقل إلى فرع آخر.",
+   "en": "Ahmed said goodbye to his coworker with a hug when he moved to another branch.",
+   "ko": "동료가 다른 지점으로 옮길 때 아흐마드는 포옹하며 작별했어요.",
+   "blank": "بعناق",
+   "src": "made"
+  },
+  {
+   "text": "رأت مريم عناق أم وابنها في البهو بعد سنوات من الغياب.",
+   "en": "Mariam saw a mother and son embrace in the lobby after years apart.",
+   "ko": "마리암은 로비에서 몇 년 만에 만난 엄마와 아들이 껴안는 걸 봤어요.",
+   "blank": "عناق",
    "src": "made"
   }
  ],
@@ -39763,6 +40195,22 @@
    "blank": "قراءة"
   }
  ],
+ "w|قرابة": [
+  {
+   "text": "اكتشف أحمد أن بينه وبين زميله الجديد صلة قرابة بعيدة.",
+   "en": "Ahmed discovered that he and his new coworker are distantly related.",
+   "ko": "아흐마드는 새 동료와 먼 친척 사이라는 걸 알게 됐어요.",
+   "blank": "قرابة",
+   "src": "made"
+  },
+  {
+   "text": "يملك الفندق الذي تعمل فيه مريم أحد أبناء قرابتها.",
+   "en": "The hotel where Mariam works is owned by one of her relatives.",
+   "ko": "마리암이 일하는 호텔은 친척 중 한 명이 소유하고 있어요.",
+   "blank": "قرابتها",
+   "src": "made"
+  }
+ ],
  "w|قرار": [
   {
    "text": "قرار الفريق كان عادلا.",
@@ -42347,6 +42795,22 @@
    "blank": "كيمياء"
   }
  ],
+ "w|كيميائي": [
+  {
+   "text": "درس زميل أحمد الهندسة الكيميائية قبل أن يعمل في التسويق.",
+   "en": "Ahmed's coworker studied chemical engineering before working in marketing.",
+   "ko": "아흐마드의 동료는 마케팅 일을 하기 전에 화학공학을 공부했어요.",
+   "blank": "الكيميائية",
+   "src": "made"
+  },
+  {
+   "text": "اشتكت نزيلة من رائحة كيميائية قوية في حوض السباحة.",
+   "en": "A guest complained of a strong chemical smell at the swimming pool.",
+   "ko": "한 투숙객이 수영장의 독한 약품 냄새에 불평했어요.",
+   "blank": "كيميائية",
+   "src": "made"
+  }
+ ],
  "w|ل": [
   {
    "text": "ذهبت لشراء الخبز.",
@@ -43345,6 +43809,22 @@
    "blank": "تلمس"
   }
  ],
+ "w|لمسة": [
+  {
+   "text": "أضاف الزميل الجديد لمسة جميلة على تصميم أحمد.",
+   "en": "The new coworker added a nice touch to Ahmed's design.",
+   "ko": "새 동료는 아흐마드의 디자인에 멋진 손길을 더했어요.",
+   "blank": "لمسة",
+   "src": "made"
+  },
+  {
+   "text": "تضع مريم وردة على كل وسادة كلمسة ترحيب.",
+   "en": "Mariam puts a flower on every pillow as a welcoming touch.",
+   "ko": "마리암은 환영의 표시로 베개마다 꽃 한 송이를 놓아요.",
+   "blank": "كلمسة",
+   "src": "made"
+  }
+ ],
  "w|لمع": [
   {
    "text": "لمع النجم في السماء ليلاً.",
@@ -43891,6 +44371,22 @@
    "blank": "مؤلم"
   }
  ],
+ "w|مؤمن": [
+  {
+   "text": "زميل أحمد مؤمن بأن العمل الجماعي أهم من الموهبة.",
+   "en": "Ahmed's coworker firmly believes teamwork matters more than talent.",
+   "ko": "아흐마드의 동료는 팀워크가 재능보다 중요하다고 굳게 믿어요.",
+   "blank": "مؤمن",
+   "src": "made"
+  },
+  {
+   "text": "سألت نزيلة مؤمنة مريم عن اتجاه القبلة في الغرفة.",
+   "en": "A devout guest asked Mariam for the direction of prayer in the room.",
+   "ko": "신앙심 깊은 투숙객이 마리암에게 방에서 기도 방향을 물었어요.",
+   "blank": "مؤمنة",
+   "src": "made"
+  }
+ ],
  "w|مؤن": [
   {
    "text": "وزعت البلدية مؤنا على القرى المعزولة بالثلج، ورافق خالد الشاحنات.",
@@ -44249,6 +44745,22 @@
    "blank": "مباراة"
   }
  ],
+ "w|مبارك": [
+  {
+   "text": "قال أحمد لزميله: مبارك عليك المنصب الجديد!",
+   "en": "Ahmed said to his coworker, \"Congratulations on the new position!\"",
+   "ko": "아흐마드가 동료에게 말했어요. \"새 자리 축하해!\"",
+   "blank": "مبارك",
+   "src": "made"
+  },
+  {
+   "text": "قالت مريم للعروسين عند الاستقبال: مبارك، وأهلا بكما!",
+   "en": "Mariam said to the newlyweds at reception, \"Congratulations, and welcome!\"",
+   "ko": "마리암은 프런트에서 신혼부부에게 말했어요. \"축하드려요, 어서 오세요!\"",
+   "blank": "مبارك",
+   "src": "made"
+  }
+ ],
  "w|مباشر": [
   {
    "text": "هل تريد جواب مباشر أم تفضل الانتظار؟",
@@ -44447,6 +44959,22 @@
    "en": "Are you sure about the time?",
    "ko": "시간이 확실해?",
    "blank": "متأكد"
+  }
+ ],
+ "w|متأنق": [
+  {
+   "text": "جاء الزميل الجديد متأنقا في يومه الأول، فمازحه أحمد.",
+   "en": "The new coworker came smartly dressed on his first day, so Ahmed teased him.",
+   "ko": "새 동료가 첫날 잘 차려입고 오자 아흐마드가 농담을 건넸어요.",
+   "blank": "متأنقا",
+   "src": "made"
+  },
+  {
+   "text": "نزل رجل متأنق من سيارة سوداء، فأسرعت مريم لاستقباله.",
+   "en": "A smartly dressed man got out of a black car, and Mariam hurried to greet him.",
+   "ko": "말쑥하게 차려입은 남자가 검은 차에서 내리자 마리암이 서둘러 맞이했어요.",
+   "blank": "متأنق",
+   "src": "made"
   }
  ],
  "w|متابعة": [
@@ -46449,6 +46977,22 @@
    "src": "made"
   }
  ],
+ "w|مراقب": [
+  {
+   "text": "يعمل زميل أحمد الجديد مراقب جودة في قسم الإنتاج.",
+   "en": "Ahmed's new coworker works as a quality controller in the production department.",
+   "ko": "아흐마드의 새 동료는 생산부에서 품질 관리자로 일해요.",
+   "blank": "مراقب",
+   "src": "made"
+  },
+  {
+   "text": "زار مراقب من وزارة السياحة الفندق ليفحص الغرف.",
+   "en": "An inspector from the tourism ministry visited the hotel to check the rooms.",
+   "ko": "관광부 감독관이 객실을 점검하러 호텔에 왔어요.",
+   "blank": "مراقب",
+   "src": "made"
+  }
+ ],
  "w|مراقبة": [
   {
    "text": "مراقبة الطيور هواية ممتعة.",
@@ -46919,6 +47463,22 @@
    "en": "Today my mood is good and I feel happy.",
    "ko": "오늘 내 기분이 좋아서 행복하다.",
    "blank": "مزاجي"
+  }
+ ],
+ "w|مزاح": [
+  {
+   "text": "لم يفهم الزميل الجديد مزاح أحمد في البداية، ثم ضحك.",
+   "en": "The new coworker didn't get Ahmed's joking at first, then laughed.",
+   "ko": "새 동료는 처음엔 아흐마드의 농담을 못 알아듣다가 나중에 웃었어요.",
+   "blank": "مزاح",
+   "src": "made"
+  },
+  {
+   "text": "تحب مريم المزاح مع موظفي المطبخ في آخر الليل.",
+   "en": "Mariam likes joking with the kitchen staff late at night.",
+   "ko": "마리암은 밤늦게 주방 직원들과 농담하는 걸 좋아해요.",
+   "blank": "المزاح",
+   "src": "made"
   }
  ],
  "w|مزاد": [
@@ -48641,6 +49201,22 @@
    "blank": "مطلوب"
   }
  ],
+ "w|مطيع": [
+  {
+   "text": "قال أحمد إن الموظف المطيع ليس دائما أفضل موظف.",
+   "en": "Ahmed said the obedient employee isn't always the best employee.",
+   "ko": "아흐마드는 시키는 대로만 하는 직원이 늘 최고의 직원은 아니라고 말했어요.",
+   "blank": "المطيع",
+   "src": "made"
+  },
+  {
+   "text": "دخل نزيل مع كلب مطيع لم ينبح مرة واحدة.",
+   "en": "A guest came in with an obedient dog that didn't bark once.",
+   "ko": "한 투숙객이 한 번도 짖지 않는 순한 개를 데리고 들어왔어요.",
+   "blank": "مطيع",
+   "src": "made"
+  }
+ ],
  "w|مظهر": [
   {
    "text": "لا يحكم علي على الزبائن من مظهر ملابسهم.",
@@ -50321,6 +50897,22 @@
    "blank": "ملاك"
   }
  ],
+ "w|ملاكمة": [
+  {
+   "text": "قال الزميل الجديد لأحمد إنه مارس الملاكمة في الجامعة.",
+   "en": "The new coworker told Ahmed he did boxing at university.",
+   "ko": "새 동료는 아흐마드에게 대학 때 권투를 했다고 말했어요.",
+   "blank": "الملاكمة",
+   "src": "made"
+  },
+  {
+   "text": "نزل في الفندق فريق ملاكمة جاء لبطولة في المدينة.",
+   "en": "A boxing team came to stay at the hotel for a tournament in the city.",
+   "ko": "도시에서 열리는 대회 때문에 권투 팀이 호텔에 묵었어요.",
+   "blank": "ملاكمة",
+   "src": "made"
+  }
+ ],
  "w|ملايين": [
   {
    "text": "في ملايين الناس بالساحة اليوم.",
@@ -51849,6 +52441,22 @@
    "en": "Everyone has a special talent.",
    "ko": "모든 사람은 특별한 재능을 가지고 있다.",
    "blank": "موهبة"
+  }
+ ],
+ "w|موهوب": [
+  {
+   "text": "اكتشف أحمد أن زميله الجديد رسام موهوب.",
+   "en": "Ahmed discovered that his new coworker is a talented painter.",
+   "ko": "아흐마드는 새 동료가 재능 있는 화가라는 걸 알게 됐어요.",
+   "blank": "موهوب",
+   "src": "made"
+  },
+  {
+   "text": "يعزف في بهو الفندق كل مساء عازف بيانو موهوب.",
+   "en": "A talented pianist plays in the hotel lobby every evening.",
+   "ko": "매일 저녁 호텔 로비에서 재능 있는 피아니스트가 연주해요.",
+   "blank": "موهوب",
+   "src": "made"
   }
  ],
  "w|مياه": [
@@ -55393,6 +56001,22 @@
    "blank": "وجود"
   }
  ],
+ "w|وجيه": [
+  {
+   "text": "والد الزميل الجديد وجيه معروف في الحي، كما عرف أحمد لاحقا.",
+   "en": "The new coworker's father is a well-known notable in the neighborhood, as Ahmed later learned.",
+   "ko": "아흐마드가 나중에 알고 보니 새 동료의 아버지는 동네에서 이름난 유지였어요.",
+   "blank": "وجيه",
+   "src": "made"
+  },
+  {
+   "text": "استقبلت مريم وجيها من المدينة جاء لحضور عرس في الفندق.",
+   "en": "Mariam welcomed a notable from the city who came to attend a wedding at the hotel.",
+   "ko": "마리암은 호텔 결혼식에 온 도시의 유력 인사를 맞이했어요.",
+   "blank": "وجيها",
+   "src": "made"
+  }
+ ],
  "w|وحدة": [
   {
    "text": "أحاول التغلب على وحدة بزيارة الأصدقاء.",
@@ -56398,6 +57022,22 @@
    "en": "Fatima sang an old song about a lovesick lover waiting for his beloved by the sea.",
    "ko": "파티마는 바닷가에서 연인을 기다리는 상사병 걸린 남자에 관한 옛 노래를 불렀어요.",
    "blank": "ولهان",
+   "src": "made"
+  }
+ ],
+ "w|ولي": [
+  {
+   "text": "ترك الزميل الجديد العمل مبكرا لحضور اجتماع أولياء الأمور، وغطى أحمد مكانه.",
+   "en": "The new coworker left work early for a parents' meeting, and Ahmed covered for him.",
+   "ko": "새 동료가 학부모 회의에 가느라 일찍 퇴근해서 아흐마드가 대신 일을 봐 줬어요.",
+   "blank": "أولياء",
+   "src": "made"
+  },
+  {
+   "text": "طلبت مريم توقيع ولي أمر الفتاة قبل أن تسلمها مفتاح الغرفة.",
+   "en": "Mariam asked for the girl's guardian's signature before handing her the room key.",
+   "ko": "마리암은 방 열쇠를 주기 전에 그 소녀의 보호자 서명을 받았어요.",
+   "blank": "ولي",
    "src": "made"
   }
  ],
