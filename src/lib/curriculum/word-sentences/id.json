@@ -4289,6 +4289,22 @@
    "blank": "baterai"
   }
  ],
+ "w|batin": [
+  {
+   "text": "Dalam surat panjang itu, Budi menceritakan pergulatan batin selama merantau.",
+   "en": "In that long letter, Budi described his inner struggles while living away from home.",
+   "ko": "그 긴 편지에서 부디는 타지살이 동안 겪은 마음속 갈등을 털어놨어요.",
+   "blank": "batin",
+   "src": "made"
+  },
+  {
+   "text": "Siti merasa tertekan batin karena tetangga terus memutar musik keras.",
+   "en": "Siti feels mentally worn down because the neighbor keeps playing loud music.",
+   "ko": "이웃이 계속 음악을 크게 틀어서 시티는 속이 많이 상해요.",
+   "blank": "batin",
+   "src": "made"
+  }
+ ],
  "w|batu": [
   {
    "text": "Ada batu besar di jalan.",
@@ -7415,6 +7431,22 @@
    "src": "made"
   }
  ],
+ "w|berhitung": [
+  {
+   "text": "Budi bangga anak sulung sudah pandai berhitung.",
+   "en": "Budi is proud that his eldest child is already good at counting.",
+   "ko": "부디는 큰아이가 벌써 셈을 잘해서 뿌듯해요.",
+   "blank": "berhitung",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengajari anak tetangga berhitung dengan biji kacang.",
+   "en": "Siti teaches the neighbor's child to count using peanuts.",
+   "ko": "시티는 땅콩으로 이웃집 아이에게 셈을 가르쳐요.",
+   "blank": "berhitung",
+   "src": "made"
+  }
+ ],
  "w|berhubung": [
   {
    "text": "Rudi menutup dapur lebih awal berhubung tabung gas sudah habis.",
@@ -8245,6 +8277,22 @@
    "src": "made"
   }
  ],
+ "w|berkenan": [
+  {
+   "text": "Dalam surat itu, Budi bertanya apakah Rudi berkenan menjadi saksi pernikahan.",
+   "en": "In the letter, Budi asked whether Rudi would kindly be a witness at the wedding.",
+   "ko": "편지에서 부디는 루디에게 결혼식 증인을 맡아 줄 수 있는지 정중히 물었어요.",
+   "blank": "berkenan",
+   "src": "made"
+  },
+  {
+   "text": "Siti bertanya apakah Pak Darto berkenan mampir untuk makan malam.",
+   "en": "Siti asked whether Mr. Darto would care to drop by for dinner.",
+   "ko": "시티는 다르토 아저씨에게 저녁 드시러 들러 주실 수 있는지 여쭸어요.",
+   "blank": "berkenan",
+   "src": "made"
+  }
+ ],
  "w|berkencan": [
   {
    "text": "Mereka mulai berkencan musim panas lalu.",
@@ -8572,6 +8620,22 @@
    "en": "The villagers contributed by planting trees before the rainy season arrived.",
    "ko": "마을 사람들은 우기가 오기 전에 나무를 심는 데 힘을 보탰어요.",
    "blank": "berkontribusi",
+   "src": "made"
+  }
+ ],
+ "w|berkoordinasi": [
+  {
+   "text": "Budi ingin berkoordinasi dengan teman-teman lama untuk mengadakan reuni.",
+   "en": "Budi wants to coordinate with old friends to hold a reunion.",
+   "ko": "부디는 옛 친구들과 연락을 맞춰 동창회를 열고 싶어요.",
+   "blank": "berkoordinasi",
+   "src": "made"
+  },
+  {
+   "text": "Siti berkoordinasi dengan tetangga untuk jadwal ronda malam.",
+   "en": "Siti coordinates with the neighbors on the night patrol schedule.",
+   "ko": "시티는 야간 순찰 일정을 이웃들과 맞춰요.",
+   "blank": "berkoordinasi",
    "src": "made"
   }
  ],
@@ -8918,6 +8982,22 @@
    "en": "Many families buy swimsuits before going on holiday to Bali.",
    "ko": "많은 가족이 발리로 휴가 가기 전에 수영복을 사요.",
    "blank": "berlibur",
+   "src": "made"
+  }
+ ],
+ "w|berlima": [
+  {
+   "text": "Budi mengenang masa ketika geng kampung berlima naik sepeda ke pantai.",
+   "en": "Budi recalled the time the five members of the village gang biked to the beach.",
+   "ko": "부디는 동네 패거리 다섯이 자전거를 타고 바닷가에 가던 시절을 떠올렸어요.",
+   "blank": "berlima",
+   "src": "made"
+  },
+  {
+   "text": "Para ibu berlima memasak bersama di rumah Siti untuk acara gang.",
+   "en": "The five women cooked together at Siti's house for the alley event.",
+   "ko": "아주머니 다섯 명이 골목 행사를 위해 시티네 집에서 함께 요리했어요.",
+   "blank": "berlima",
    "src": "made"
   }
  ],
@@ -11513,6 +11593,22 @@
    "src": "made"
   }
  ],
+ "w|beruntun": [
+  {
+   "text": "Budi bercerita tentang tabrakan beruntun yang membuat Budi terlambat ke kantor.",
+   "en": "Budi told of a pile-up that made him late for work.",
+   "ko": "부디는 연쇄 추돌 사고 때문에 회사에 지각한 이야기를 했어요.",
+   "blank": "beruntun",
+   "src": "made"
+  },
+  {
+   "text": "Siti menerima keluhan beruntun dari tetangga soal anjing yang menggonggong.",
+   "en": "Siti received a string of complaints from neighbors about a barking dog.",
+   "ko": "시티는 개 짖는 소리 때문에 이웃들에게서 연달아 항의를 받았어요.",
+   "blank": "beruntun",
+   "src": "made"
+  }
+ ],
  "w|beruntung": [
   {
    "text": "Kamu beruntung sekali.",
@@ -12122,6 +12218,22 @@
    "en": "Dewi looked for a phone booth at the station because her phone battery was dead.",
    "ko": "휴대폰 배터리가 다 돼서 데위는 역에서 공중전화 부스를 찾았어요.",
    "blank": "bilik",
+   "src": "made"
+  }
+ ],
+ "w|bimbang": [
+  {
+   "text": "Budi mengaku bimbang antara pulang kampung atau tetap bekerja di kota.",
+   "en": "Budi admitted he was torn between going back to his hometown and staying to work in the city.",
+   "ko": "부디는 고향에 돌아갈지 도시에 남아 일할지 망설여진다고 털어놨어요.",
+   "blank": "bimbang",
+   "src": "made"
+  },
+  {
+   "text": "Siti bimbang apakah harus menegur tetangga yang membuang sampah sembarangan.",
+   "en": "Siti is unsure whether to confront the neighbor who litters carelessly.",
+   "ko": "시티는 쓰레기를 아무 데나 버리는 이웃에게 한마디 해야 할지 망설여요.",
+   "blank": "bimbang",
    "src": "made"
   }
  ],
@@ -12818,6 +12930,22 @@
    "en": "Intan laughed at her uncle's tall tale about a tiger he supposedly caught himself.",
    "ko": "인탄은 삼촌이 혼자 호랑이를 잡았다는 허풍을 듣고 웃었어요.",
    "blank": "bualan",
+   "src": "made"
+  }
+ ],
+ "w|buangan": [
+  {
+   "text": "Budi bercerita bahwa sungai dekat rumah kos kotor oleh air buangan pabrik.",
+   "en": "Budi said the river near his boarding house is polluted by factory wastewater.",
+   "ko": "부디는 하숙집 근처 강이 공장 폐수로 더럽다고 전했어요.",
+   "blank": "buangan",
+   "src": "made"
+  },
+  {
+   "text": "Siti memakai air buangan cucian beras untuk menyiram tanaman.",
+   "en": "Siti uses the leftover rice-washing water to water her plants.",
+   "ko": "시티는 쌀 씻고 남은 물로 화초에 물을 줘요.",
+   "blank": "buangan",
    "src": "made"
   }
  ],
@@ -13847,6 +13975,22 @@
    "blank": "cek"
   }
  ],
+ "w|cekikikan": [
+  {
+   "text": "Budi mengenang masa ketika Budi dan Rudi cekikikan di bangku belakang kelas.",
+   "en": "Budi remembered the days when he and Rudi giggled in the back row of the classroom.",
+   "ko": "부디는 루디와 교실 뒷자리에서 킥킥대던 시절을 떠올렸어요.",
+   "blank": "cekikikan",
+   "src": "made"
+  },
+  {
+   "text": "Anak-anak tetangga cekikikan di balik pagar setelah membunyikan bel.",
+   "en": "The neighbors' kids giggled behind the fence after ringing the doorbell.",
+   "ko": "이웃집 아이들이 초인종을 누르고 담 뒤에서 킥킥거렸어요.",
+   "blank": "cekikikan",
+   "src": "made"
+  }
+ ],
  "w|celah": [
   {
    "text": "Sinar matahari masuk lewat celah atap dan menyinari arca batu.",
@@ -13905,6 +14049,22 @@
    "en": "Don't be too anxious about the result.",
    "ko": "결과를 너무 걱정하지 마.",
    "blank": "cemas"
+  }
+ ],
+ "w|cemberut": [
+  {
+   "text": "Budi masih ingat Rudi cemberut seharian karena kalah main kelereng.",
+   "en": "Budi still remembers Rudi sulking all day after losing at marbles.",
+   "ko": "부디는 루디가 구슬치기에서 지고 하루 종일 뾰로통해 있던 걸 아직 기억해요.",
+   "blank": "cemberut",
+   "src": "made"
+  },
+  {
+   "text": "Anak Bu Ani cemberut karena tidak boleh main di rumah Siti.",
+   "en": "Mrs. Ani's child pouted because he wasn't allowed to play at Siti's house.",
+   "ko": "아니 아주머니네 아이는 시티네 집에서 못 놀게 해서 입이 삐죽 나왔어요.",
+   "blank": "cemberut",
+   "src": "made"
   }
  ],
  "w|cemburu": [
@@ -17457,6 +17617,22 @@
    "blank": "energi"
   }
  ],
+ "w|enggan": [
+  {
+   "text": "Budi sempat enggan menulis karena takut surat itu tidak dibalas.",
+   "en": "Budi was reluctant to write at first, afraid the letter wouldn't be answered.",
+   "ko": "부디는 답장이 안 올까 봐 처음엔 편지 쓰기를 망설였어요.",
+   "blank": "enggan",
+   "src": "made"
+  },
+  {
+   "text": "Tetangga baru itu enggan ikut kerja bakti.",
+   "en": "The new neighbor is reluctant to join the community clean-up.",
+   "ko": "새 이웃은 동네 대청소에 나오기를 꺼려요.",
+   "blank": "enggan",
+   "src": "made"
+  }
+ ],
  "w|engkau": [
   {
    "text": "Engkau selalu datang tepat waktu.",
@@ -19212,6 +19388,22 @@
    "en": "The elderly patient was shivering with cold in the waiting room.",
    "ko": "그 나이 든 환자는 대기실에서 추위에 떨고 있었어요.",
    "blank": "gemetar",
+   "src": "made"
+  }
+ ],
+ "w|gemetaran": [
+  {
+   "text": "Tangan Budi gemetaran saat menulis kabar duka itu.",
+   "en": "Budi's hands were trembling as he wrote that sad news.",
+   "ko": "그 슬픈 소식을 쓰는 동안 부디의 손이 떨렸어요.",
+   "blank": "gemetaran",
+   "src": "made"
+  },
+  {
+   "text": "Anak tetangga gemetaran kedinginan setelah kehujanan.",
+   "en": "The neighbor's child was shivering with cold after getting caught in the rain.",
+   "ko": "이웃집 아이가 비를 맞고 추워서 덜덜 떨었어요.",
+   "blank": "gemetaran",
    "src": "made"
   }
  ],
@@ -21236,6 +21428,22 @@
    "en": "Dewi has a funny theory about why Rudi always arrives late.",
    "ko": "데위는 루디가 왜 늘 늦게 오는지에 대해 재밌는 가설이 있어요.",
    "blank": "hipotesis",
+   "src": "made"
+  }
+ ],
+ "w|histeris": [
+  {
+   "text": "Budi mengenang Rudi yang pernah menjerit histeris saat melihat ular di kebun.",
+   "en": "Budi recalled how Rudi once screamed hysterically at the sight of a snake in the garden.",
+   "ko": "부디는 루디가 밭에서 뱀을 보고 기겁하며 비명을 질렀던 일을 떠올렸어요.",
+   "blank": "histeris",
+   "src": "made"
+  },
+  {
+   "text": "Bu Ani menjerit histeris ketika melihat tikus di dapur.",
+   "en": "Mrs. Ani screamed hysterically when she saw a rat in the kitchen.",
+   "ko": "아니 아주머니는 부엌에서 쥐를 보고 기겁하며 소리를 질렀어요.",
+   "blank": "histeris",
    "src": "made"
   }
  ],
@@ -27369,6 +27577,22 @@
    "blank": "kedua"
   }
  ],
+ "w|kedua-duanya": [
+  {
+   "text": "Budi mengirim foto dan kartu pos, berharap kedua-duanya sampai dengan selamat.",
+   "en": "Budi sent a photo and a postcard, hoping both would arrive safely.",
+   "ko": "부디는 사진과 엽서를 보내며 둘 다 무사히 도착하길 바랐어요.",
+   "blank": "kedua-duanya",
+   "src": "made"
+  },
+  {
+   "text": "Siti menawari kue dan teh, dan tetangga itu mengambil kedua-duanya.",
+   "en": "Siti offered cake and tea, and the neighbor took both.",
+   "ko": "시티가 과자와 차를 권하자 이웃은 둘 다 받았어요.",
+   "blank": "kedua-duanya",
+   "src": "made"
+  }
+ ],
  "w|kedudukan": [
   {
    "text": "Dalam drama itu, Eko memerankan menteri yang takut kehilangan kedudukan.",
@@ -28695,6 +28919,22 @@
    "src": "made"
   }
  ],
+ "w|kemalangan": [
+  {
+   "text": "Budi turut berduka atas kemalangan yang menimpa keluarga Rudi.",
+   "en": "Budi offered his condolences for the misfortune that befell Rudi's family.",
+   "ko": "부디는 루디 가족에게 닥친 불행에 깊은 위로를 전했어요.",
+   "blank": "kemalangan",
+   "src": "made"
+  },
+  {
+   "text": "Seluruh tetangga datang membantu saat kemalangan menimpa keluarga Bu Ani.",
+   "en": "All the neighbors came to help when misfortune struck Mrs. Ani's family.",
+   "ko": "아니 아주머니 가족에게 불행이 닥치자 온 이웃이 도우러 왔어요.",
+   "blank": "kemalangan",
+   "src": "made"
+  }
+ ],
  "w|kemampuan": [
   {
    "text": "Kemampuan dia meningkat cepat.",
@@ -29223,6 +29463,22 @@
    "blank": "kendaraan"
   }
  ],
+ "w|kengerian": [
+  {
+   "text": "Budi menggambarkan kengerian malam ketika gempa mengguncang kota.",
+   "en": "Budi described the horror of the night the earthquake shook the city.",
+   "ko": "부디는 지진이 도시를 뒤흔든 그날 밤의 공포를 묘사했어요.",
+   "blank": "kengerian",
+   "src": "made"
+  },
+  {
+   "text": "Siti tidak bisa melupakan kengerian malam ketika rumah di ujung gang terbakar.",
+   "en": "Siti can't forget the horror of the night the house at the end of the alley burned.",
+   "ko": "시티는 골목 끝 집에 불이 났던 밤의 끔찍함을 잊을 수 없어요.",
+   "blank": "kengerian",
+   "src": "made"
+  }
+ ],
  "w|kenikmatan": [
   {
    "text": "Rudi tidak bisa merasakan kenikmatan makan malam karena kakaknya duduk berjauhan.",
@@ -29683,6 +29939,22 @@
    "en": "The final decision has been made.",
    "ko": "최종 결정은 이미 났어.",
    "blank": "Keputusan"
+  }
+ ],
+ "w|keputusasaan": [
+  {
+   "text": "Budi tidak menyembunyikan keputusasaan saat usaha pertama bangkrut.",
+   "en": "Budi didn't hide his despair when his first business went bankrupt.",
+   "ko": "부디는 첫 사업이 망했을 때의 절망을 숨기지 않았어요.",
+   "blank": "keputusasaan",
+   "src": "made"
+  },
+  {
+   "text": "Siti melihat keputusasaan di wajah tetangga yang kehilangan pekerjaan.",
+   "en": "Siti saw despair on the face of the neighbor who had lost his job.",
+   "ko": "시티는 일자리를 잃은 이웃의 얼굴에서 절망을 봤어요.",
+   "blank": "keputusasaan",
+   "src": "made"
   }
  ],
  "w|kera": [
@@ -30773,6 +31045,22 @@
    "src": "made"
   }
  ],
+ "w|kesusahan": [
+  {
+   "text": "Budi menawarkan bantuan kalau Rudi sedang dalam kesusahan.",
+   "en": "Budi offered help in case Rudi was going through hard times.",
+   "ko": "부디는 루디가 어려운 처지라면 돕겠다고 했어요.",
+   "blank": "kesusahan",
+   "src": "made"
+  },
+  {
+   "text": "Tetangga di kampung itu selalu saling menolong saat ada yang kesusahan.",
+   "en": "The neighbors in that village always help each other when someone is in trouble.",
+   "ko": "그 동네 이웃들은 누가 어려움을 겪으면 늘 서로 도와요.",
+   "blank": "kesusahan",
+   "src": "made"
+  }
+ ],
  "w|ketagihan": [
   {
    "text": "Fajar mengingatkan pembeli agar tidak sampai ketagihan obat tidur.",
@@ -30829,6 +31117,22 @@
    "en": "Their training schedule is very tight.",
    "ko": "그들의 훈련 일정은 아주 빡빡해.",
    "blank": "ketat"
+  }
+ ],
+ "w|ketawa": [
+  {
+   "text": "Membaca surat dari Rudi, Budi ketawa sampai sakit perut.",
+   "en": "Reading the letter from Rudi, Budi laughed until his stomach hurt.",
+   "ko": "루디의 편지를 읽으며 부디는 배가 아플 만큼 웃었어요.",
+   "blank": "ketawa",
+   "src": "made"
+  },
+  {
+   "text": "Pak Darto ketawa keras setiap kali menonton bola bersama tetangga.",
+   "en": "Mr. Darto laughs loudly whenever he watches football with the neighbors.",
+   "ko": "다르토 아저씨는 이웃들과 축구를 볼 때마다 크게 웃어요.",
+   "blank": "ketawa",
+   "src": "made"
   }
  ],
  "w|ketegangan": [
@@ -31018,6 +31322,22 @@
    "en": "Lestari wrote about the injustice suffered by the workers at the factory near her home.",
    "ko": "레스타리는 집 근처 공장 노동자들이 겪는 부당함에 대해 썼어요.",
    "blank": "ketidakadilan",
+   "src": "made"
+  }
+ ],
+ "w|ketidaknyamanan": [
+  {
+   "text": "Budi menulis tentang ketidaknyamanan tinggal di kamar kos yang sempit.",
+   "en": "Budi wrote about the discomfort of living in a cramped rented room.",
+   "ko": "부디는 비좁은 하숙방에서 사는 불편함에 대해 썼어요.",
+   "blank": "ketidaknyamanan",
+   "src": "made"
+  },
+  {
+   "text": "Pak RT meminta maaf atas ketidaknyamanan selama perbaikan saluran air.",
+   "en": "The neighborhood head apologized for the inconvenience during the water pipe repairs.",
+   "ko": "반장님은 수도관 공사 동안의 불편에 대해 사과했어요.",
+   "blank": "ketidaknyamanan",
    "src": "made"
   }
  ],
@@ -31226,6 +31546,22 @@
    "en": "Siti feels that keeping in touch with old friends is a duty.",
    "ko": "시티는 옛 친구들과 연락을 이어 가는 게 일종의 의무라고 느껴요.",
    "blank": "kewajiban",
+   "src": "made"
+  }
+ ],
+ "w|kewalahan": [
+  {
+   "text": "Budi mengaku kewalahan mengurus bayi kembar.",
+   "en": "Budi admitted he is overwhelmed looking after twin babies.",
+   "ko": "부디는 쌍둥이 아기를 돌보느라 감당이 안 된다고 털어놨어요.",
+   "blank": "kewalahan",
+   "src": "made"
+  },
+  {
+   "text": "Siti kewalahan menerima kiriman makanan dari para tetangga saat pindahan.",
+   "en": "Siti was overwhelmed by all the food the neighbors sent over when she moved in.",
+   "ko": "이사 때 이웃들이 보내온 음식이 너무 많아서 시티는 감당하기 벅찼어요.",
+   "blank": "kewalahan",
    "src": "made"
   }
  ],
@@ -39993,6 +40329,22 @@
    "src": "made"
   }
  ],
+ "w|memangkas": [
+  {
+   "text": "Budi bilang perusahaan tempat Budi bekerja sedang memangkas jumlah karyawan.",
+   "en": "Budi says the company he works for is cutting staff numbers.",
+   "ko": "부디는 다니는 회사가 직원 수를 줄이고 있다고 했어요.",
+   "blank": "memangkas",
+   "src": "made"
+  },
+  {
+   "text": "Siti memangkas pagar tanaman yang menjorok ke halaman tetangga.",
+   "en": "Siti trimmed the hedge that was sticking out into the neighbor's yard.",
+   "ko": "시티는 이웃집 마당으로 삐져나온 생울타리를 다듬었어요.",
+   "blank": "memangkas",
+   "src": "made"
+  }
+ ],
  "w|memangsa": [
   {
    "text": "Di ruang rapat, Rina menonton video tentang singa yang memangsa rusa.",
@@ -41187,6 +41539,22 @@
    "en": "The parents blessed the child before leaving.",
    "ko": "부모님이 떠나기 전에 아이를 축복하셨어.",
    "blank": "memberkati"
+  }
+ ],
+ "w|memberlakukan": [
+  {
+   "text": "Kantor Budi mulai memberlakukan aturan kerja dari rumah.",
+   "en": "Budi's office has started enforcing a work-from-home policy.",
+   "ko": "부디의 회사는 재택근무 규정을 시행하기 시작했어요.",
+   "blank": "memberlakukan",
+   "src": "made"
+  },
+  {
+   "text": "Pengurus RT memberlakukan iuran keamanan baru mulai bulan depan.",
+   "en": "The neighborhood committee is putting a new security fee into effect starting next month.",
+   "ko": "반 운영진은 다음 달부터 새 경비비를 시행해요.",
+   "blank": "memberlakukan",
+   "src": "made"
   }
  ],
  "w|memberontak": [
@@ -42977,6 +43345,22 @@
    "src": "made"
   }
  ],
+ "w|mempergunakan": [
+  {
+   "text": "Budi mempergunakan waktu libur untuk menulis surat panjang.",
+   "en": "Budi used his day off to write a long letter.",
+   "ko": "부디는 쉬는 날을 이용해 긴 편지를 썼어요.",
+   "blank": "mempergunakan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mempergunakan halaman belakang untuk kebun bersama tetangga.",
+   "en": "Siti uses her backyard as a shared garden with the neighbors.",
+   "ko": "시티는 뒷마당을 이웃들과 함께 쓰는 텃밭으로 활용해요.",
+   "blank": "mempergunakan",
+   "src": "made"
+  }
+ ],
  "w|memperhatikan": [
   {
    "text": "Tolong memperhatikan jalan.",
@@ -43561,6 +43945,22 @@
    "en": "We have a new plan.",
    "ko": "우리 새 계획이 있어.",
    "blank": "mempunyai"
+  }
+ ],
+ "w|memuakkan": [
+  {
+   "text": "Budi menulis bahwa kemacetan ibu kota sungguh memuakkan.",
+   "en": "Budi wrote that the capital's traffic jams are truly sickening.",
+   "ko": "부디는 수도의 교통 체증이 정말 지긋지긋하다고 썼어요.",
+   "blank": "memuakkan",
+   "src": "made"
+  },
+  {
+   "text": "Bau sampah dari rumah kosong di ujung gang benar-benar memuakkan.",
+   "en": "The smell of garbage from the empty house at the end of the alley is truly disgusting.",
+   "ko": "골목 끝 빈집에서 나는 쓰레기 냄새가 정말 역겨워요.",
+   "blank": "memuakkan",
+   "src": "made"
   }
  ],
  "w|memuaskan": [
@@ -44945,6 +45345,22 @@
    "src": "made"
   }
  ],
+ "w|mencelupkan": [
+  {
+   "text": "Budi rindu mencelupkan pisang goreng ke kopi bersama Rudi di warung.",
+   "en": "Budi misses dipping fried bananas into coffee with Rudi at the food stall.",
+   "ko": "부디는 루디와 노점에서 바나나 튀김을 커피에 찍어 먹던 때가 그리워요.",
+   "blank": "mencelupkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mencelupkan kain ke pewarna batik bersama tetangga.",
+   "en": "Siti dipped cloth into batik dye together with the neighbors.",
+   "ko": "시티는 이웃들과 함께 천을 바틱 염료에 담갔어요.",
+   "blank": "mencelupkan",
+   "src": "made"
+  }
+ ],
  "w|mencemaskan": [
   {
    "text": "Kesehatan ibunya yang menurun sangat mencemaskan Rudi akhir-akhir ini.",
@@ -46188,6 +46604,22 @@
    "en": "Siti tries to enforce the no-eating rule in the reading room.",
    "ko": "시티는 열람실 음식 금지 규칙을 지키게 하려고 애써요.",
    "blank": "menegakkan",
+   "src": "made"
+  }
+ ],
+ "w|menegangkan": [
+  {
+   "text": "Budi menulis tentang wawancara kerja yang sangat menegangkan.",
+   "en": "Budi wrote about a very nerve-racking job interview.",
+   "ko": "부디는 몹시 긴장됐던 취업 면접 이야기를 썼어요.",
+   "blank": "menegangkan",
+   "src": "made"
+  },
+  {
+   "text": "Rapat RT soal parkir mobil berlangsung menegangkan.",
+   "en": "The neighborhood meeting about car parking was tense.",
+   "ko": "주차 문제를 다룬 반상회는 긴장감이 넘쳤어요.",
+   "blank": "menegangkan",
    "src": "made"
   }
  ],
@@ -48037,6 +48469,22 @@
    "en": "She's good at managing time.",
    "ko": "걔는 시간 관리를 잘해.",
    "blank": "mengatur"
+  }
+ ],
+ "w|mengaum": [
+  {
+   "text": "Budi menulis tentang singa yang mengaum keras saat Budi berkunjung ke kebun binatang.",
+   "en": "Budi wrote about a lion that roared loudly when he visited the zoo.",
+   "ko": "부디는 동물원에 갔을 때 사자가 크게 포효했던 이야기를 썼어요.",
+   "blank": "mengaum",
+   "src": "made"
+  },
+  {
+   "text": "Anak Pak Darto berpura-pura mengaum seperti harimau di depan rumah Siti.",
+   "en": "Mr. Darto's son pretended to roar like a tiger in front of Siti's house.",
+   "ko": "다르토 아저씨 아들이 시티네 집 앞에서 호랑이처럼 어흥 하는 흉내를 냈어요.",
+   "blank": "mengaum",
+   "src": "made"
   }
  ],
  "w|mengawal": [
@@ -50445,6 +50893,22 @@
    "blank": "mengikat"
   }
  ],
+ "w|mengikatkan": [
+  {
+   "text": "Budi mengikatkan pita merah pada bungkusan hadiah untuk Rudi.",
+   "en": "Budi tied a red ribbon onto the gift package for Rudi.",
+   "ko": "부디는 루디에게 보낼 선물 꾸러미에 빨간 리본을 묶었어요.",
+   "blank": "mengikatkan",
+   "src": "made"
+  },
+  {
+   "text": "Menjelang hari kemerdekaan, Siti mengikatkan bendera di tiang depan rumah.",
+   "en": "Ahead of Independence Day, Siti tied the flag to the pole in front of her house.",
+   "ko": "독립기념일을 앞두고 시티는 집 앞 깃대에 국기를 달았어요.",
+   "blank": "mengikatkan",
+   "src": "made"
+  }
+ ],
  "w|mengikuti": [
   {
    "text": "Aku akan mengikuti kelas itu.",
@@ -52075,6 +52539,22 @@
    "blank": "menilai"
   }
  ],
+ "w|menimbang": [
+  {
+   "text": "Budi masih menimbang tawaran kerja di luar pulau.",
+   "en": "Budi is still weighing a job offer on another island.",
+   "ko": "부디는 다른 섬에서 온 일자리 제안을 아직 저울질하고 있어요.",
+   "blank": "menimbang",
+   "src": "made"
+  },
+  {
+   "text": "Bu Ani menimbang beras titipan Siti di warung depan rumah.",
+   "en": "Mrs. Ani weighed the rice Siti had ordered at the shop in front of her house.",
+   "ko": "아니 아주머니는 집 앞 가게에서 시티가 부탁한 쌀의 무게를 달았어요.",
+   "blank": "menimbang",
+   "src": "made"
+  }
+ ],
  "w|menimbulkan": [
   {
    "text": "Kebisingan menimbulkan keluhan dari tetangga.",
@@ -53238,6 +53718,22 @@
    "en": "The ocean lovers' group is working to regrow the damaged coral reef.",
    "ko": "그 바다 애호가 모임은 망가진 산호초를 다시 키우려고 애쓰고 있어요.",
    "blank": "menumbuhkan",
+   "src": "made"
+  }
+ ],
+ "w|menumbuk": [
+  {
+   "text": "Budi teringat ibu Rudi yang dulu menumbuk padi di halaman rumah.",
+   "en": "Budi remembered Rudi's mother pounding rice in the front yard long ago.",
+   "ko": "부디는 루디 어머니가 예전에 마당에서 벼를 찧던 모습이 떠올랐어요.",
+   "blank": "menumbuk",
+   "src": "made"
+  },
+  {
+   "text": "Bu Ani menumbuk bumbu rendang di teras sambil mengobrol dengan Siti.",
+   "en": "Mrs. Ani pounded rendang spices on the porch while chatting with Siti.",
+   "ko": "아니 아주머니는 테라스에서 시티와 수다를 떨며 른당 양념을 빻았어요.",
+   "blank": "menumbuk",
    "src": "made"
   }
  ],
@@ -55581,6 +56077,22 @@
    "src": "made"
   }
  ],
+ "w|meramal": [
+  {
+   "text": "Budi ingat seorang nenek pernah meramal bahwa Rudi akan jadi orang kaya.",
+   "en": "Budi remembers an old woman once predicting that Rudi would become rich.",
+   "ko": "부디는 어떤 할머니가 루디는 부자가 될 거라고 점쳤던 걸 기억해요.",
+   "blank": "meramal",
+   "src": "made"
+  },
+  {
+   "text": "Bu Ani suka meramal cuaca hanya dengan melihat awan.",
+   "en": "Mrs. Ani likes to forecast the weather just by looking at the clouds.",
+   "ko": "아니 아주머니는 구름만 보고 날씨를 점치길 좋아해요.",
+   "blank": "meramal",
+   "src": "made"
+  }
+ ],
  "w|meramalkan": [
   {
    "text": "Pedagang buku itu meramalkan harga komik lama akan naik beberapa tahun lagi.",
@@ -55625,6 +56137,22 @@
    "en": "They will not rob other people.",
    "ko": "그들은 다른 사람을 강도질하지 않을 거야.",
    "blank": "merampok"
+  }
+ ],
+ "w|merana": [
+  {
+   "text": "Budi bercerita tentang pohon mangga di sekolah lama yang kini merana tak terurus.",
+   "en": "Budi wrote about the mango tree at their old school that now languishes uncared for.",
+   "ko": "부디는 옛 학교의 망고나무가 지금은 돌보는 이 없이 시들어 간다고 전했어요.",
+   "blank": "merana",
+   "src": "made"
+  },
+  {
+   "text": "Tanaman Siti merana karena tertutup bayangan pagar tetangga.",
+   "en": "Siti's plants are wilting because the neighbor's fence casts a shadow over them.",
+   "ko": "이웃집 담장 그늘에 가려서 시티의 화초가 시들시들해요.",
+   "blank": "merana",
+   "src": "made"
   }
  ],
  "w|merancang": [
@@ -68263,6 +68791,22 @@
    "src": "made"
   }
  ],
+ "w|percintaan": [
+  {
+   "text": "Budi bercerita tentang kisah percintaan yang gagal di kota rantau.",
+   "en": "Budi told of a failed romance in the city where he now lives.",
+   "ko": "부디는 타향에서 실패한 연애 이야기를 들려줬어요.",
+   "blank": "percintaan",
+   "src": "made"
+  },
+  {
+   "text": "Ibu-ibu di gang suka bergosip soal percintaan anak Pak Darto.",
+   "en": "The women in the alley love gossiping about Mr. Darto's son's love life.",
+   "ko": "골목 아주머니들은 다르토 아저씨 아들의 연애사를 수군거리길 좋아해요.",
+   "blank": "percintaan",
+   "src": "made"
+  }
+ ],
  "w|percobaan": [
   {
    "text": "Percobaan ilmiah itu berhasil dengan baik.",
@@ -73677,6 +74221,22 @@
    "src": "made"
   }
  ],
+ "w|refleksi": [
+  {
+   "text": "Surat terakhir Budi berisi refleksi tentang persahabatan yang bertahan puluhan tahun.",
+   "en": "Budi's latest letter contains reflections on a friendship that has lasted decades.",
+   "ko": "부디의 최근 편지에는 수십 년 이어진 우정에 대한 성찰이 담겨 있어요.",
+   "blank": "refleksi",
+   "src": "made"
+  },
+  {
+   "text": "Siti melihat refleksi lampu jalan di genangan depan rumah.",
+   "en": "Siti saw the reflection of the streetlight in the puddle in front of the house.",
+   "ko": "시티는 집 앞 물웅덩이에 비친 가로등 불빛을 봤어요.",
+   "blank": "refleksi",
+   "src": "made"
+  }
+ ],
  "w|regu": [
   {
    "text": "Eko masuk regu pramuka bersama tiga teman sekelasnya.",
@@ -74357,6 +74917,22 @@
    "src": "made"
   }
  ],
+ "w|riang": [
+  {
+   "text": "Surat Budi kali ini bernada riang karena baru naik jabatan.",
+   "en": "Budi's letter this time sounds cheerful because he just got a promotion.",
+   "ko": "이번 부디의 편지는 막 승진해서인지 밝은 분위기예요.",
+   "blank": "riang",
+   "src": "made"
+  },
+  {
+   "text": "Suara riang anak-anak tetangga terdengar setiap sore.",
+   "en": "The cheerful voices of the neighbors' children can be heard every afternoon.",
+   "ko": "매일 오후 이웃집 아이들의 즐거운 목소리가 들려요.",
+   "blank": "riang",
+   "src": "made"
+  }
+ ],
  "w|ribu": [
   {
    "text": "Ribuan penonton memenuhi stadion.",
@@ -74490,6 +75066,22 @@
    "en": "For Ayu, the biggest hurdle is drawing human hands.",
    "ko": "아유에게 가장 큰 고비는 사람 손을 그리는 거예요.",
    "blank": "rintangan",
+   "src": "made"
+  }
+ ],
+ "w|risau": [
+  {
+   "text": "Budi risau karena surat terakhir untuk Rudi belum juga dibalas.",
+   "en": "Budi is worried because his last letter to Rudi still hasn't been answered.",
+   "ko": "부디는 루디에게 보낸 마지막 편지에 아직 답이 없어서 걱정이에요.",
+   "blank": "risau",
+   "src": "made"
+  },
+  {
+   "text": "Siti risau karena tetangga sebelah belum pulang sejak kemarin.",
+   "en": "Siti is worried because the next-door neighbor hasn't come home since yesterday.",
+   "ko": "시티는 옆집 이웃이 어제부터 집에 안 들어와서 걱정이에요.",
+   "blank": "risau",
    "src": "made"
   }
  ],
@@ -75489,6 +76081,22 @@
    "en": "The news was broadcast on a national TV channel.",
    "ko": "그 뉴스는 전국 TV 채널에서 방송됐어.",
    "blank": "saluran"
+  }
+ ],
+ "w|salut": [
+  {
+   "text": "Budi salut pada Rudi yang berhasil membuka bengkel sendiri.",
+   "en": "Budi takes his hat off to Rudi for managing to open his own repair shop.",
+   "ko": "부디는 자기 정비소를 차린 루디가 정말 대단하다고 느꼈어요.",
+   "blank": "salut",
+   "src": "made"
+  },
+  {
+   "text": "Siti salut pada Bu Ani yang merawat ibu mertua dengan sabar.",
+   "en": "Siti admires Mrs. Ani for patiently caring for her mother-in-law.",
+   "ko": "시티는 시어머니를 묵묵히 모시는 아니 아주머니가 존경스러워요.",
+   "blank": "salut",
+   "src": "made"
   }
  ],
  "w|sama": [
@@ -82123,6 +82731,22 @@
    "blank": "Sudah"
   }
  ],
+ "w|sudi": [
+  {
+   "text": "Budi berharap Rudi masih sudi memaafkan kesalahan lama.",
+   "en": "Budi hopes Rudi is still willing to forgive an old mistake.",
+   "ko": "부디는 루디가 옛 잘못을 아직 용서해 줄 마음이 있기를 바라요.",
+   "blank": "sudi",
+   "src": "made"
+  },
+  {
+   "text": "Pak Darto tidak sudi meminjamkan tangga lagi setelah tangga itu rusak.",
+   "en": "Mr. Darto refuses to lend his ladder again after it got broken.",
+   "ko": "다르토 아저씨는 사다리가 망가진 뒤로 다시는 빌려주려 하지 않아요.",
+   "blank": "sudi",
+   "src": "made"
+  }
+ ],
  "w|sudut": [
   {
    "text": "Sudut ruangan itu gelap dan berdebu.",
@@ -82769,6 +83393,22 @@
    "en": "One more condition must be met.",
    "ko": "조건이 하나 더 채워져야 해.",
    "blank": "syarat"
+  }
+ ],
+ "w|syok": [
+  {
+   "text": "Budi syok membaca kabar bahwa sekolah lama akan dibongkar.",
+   "en": "Budi was shocked to read that their old school would be torn down.",
+   "ko": "부디는 옛 학교가 철거된다는 소식을 읽고 충격을 받았어요.",
+   "blank": "syok",
+   "src": "made"
+  },
+  {
+   "text": "Siti syok melihat pohon besar roboh menimpa pagar tetangga.",
+   "en": "Siti was shocked to see a big tree fall onto the neighbor's fence.",
+   "ko": "시티는 큰 나무가 이웃집 담장 위로 쓰러진 걸 보고 깜짝 놀랐어요.",
+   "blank": "syok",
+   "src": "made"
   }
  ],
  "w|syukurlah": [

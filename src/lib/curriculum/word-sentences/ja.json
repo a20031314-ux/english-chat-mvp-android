@@ -1259,6 +1259,22 @@
    "blank": "いや"
   }
  ],
+ "w|いやらしい": [
+  {
+   "text": "悠斗は、取引先のいやらしい値切り方にうんざりした。",
+   "en": "Yuto was fed up with the client's nasty way of haggling.",
+   "ko": "유토는 거래처의 치사한 가격 깎기에 질렸어요.",
+   "blank": "いやらしい",
+   "src": "made"
+  },
+  {
+   "text": "送料を最後にこっそり足すいやらしいサイトでは、千尋は買わない。",
+   "en": "Chihiro doesn't buy from sneaky sites that quietly add shipping fees at the end.",
+   "ko": "치히로는 배송비를 마지막에 슬쩍 붙이는 얄미운 사이트에서는 사지 않아요.",
+   "blank": "いやらしい",
+   "src": "made"
+  }
+ ],
  "w|いよいよ": [
   {
    "text": "梅雨が明けて、いよいよ夏本番だ。",
@@ -16469,6 +16485,22 @@
    "src": "made"
   }
  ],
+ "w|中堅": [
+  {
+   "text": "入社して十年がたち、悠斗はもう中堅社員だ。",
+   "en": "Ten years after joining, Yuto is now a mid-level employee.",
+   "ko": "입사한 지 십 년이 지나 유토는 이제 중견 사원이에요.",
+   "blank": "中堅",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、中堅メーカーの炊飯器を選んだ。",
+   "en": "Chihiro chose a rice cooker from a mid-sized manufacturer.",
+   "ko": "치히로는 중견 제조사의 밥솥을 골랐어요.",
+   "blank": "中堅",
+   "src": "made"
+  }
+ ],
  "w|中央": [
   {
    "text": "中央に置いて。",
@@ -20723,6 +20755,22 @@
    "blank": "作戦"
   }
  ],
+ "w|作文": [
+  {
+   "text": "悠斗は、昇進試験の作文にとても苦労した。",
+   "en": "Yuto had a very hard time with the essay for his promotion exam.",
+   "ko": "유토는 승진 시험의 작문 때문에 무척 고생했어요.",
+   "blank": "作文",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、娘の作文コンクールのために原稿用紙を注文した。",
+   "en": "Chihiro ordered manuscript paper for her daughter's essay contest.",
+   "ko": "치히로는 딸의 글짓기 대회를 위해 원고지를 주문했어요.",
+   "blank": "作文",
+   "src": "made"
+  }
+ ],
  "w|作曲": [
   {
    "text": "市の歌の作曲を、地元の音楽家に頼むことになった。",
@@ -21657,6 +21705,22 @@
    "blank": "信頼"
   }
  ],
+ "w|修了": [
+  {
+   "text": "悠斗は、会社の管理職研修を無事に修了した。",
+   "en": "Yuto successfully completed the company's management training.",
+   "ko": "유토는 회사 관리자 연수를 무사히 수료했어요.",
+   "blank": "修了",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、オンライン講座を修了した記念に新しい手帳を注文した。",
+   "en": "Chihiro ordered a new planner to mark finishing her online course.",
+   "ko": "치히로는 온라인 강좌를 수료한 기념으로 새 수첩을 주문했어요.",
+   "blank": "修了",
+   "src": "made"
+  }
+ ],
  "w|修学旅行": [
   {
    "text": "この町は、拓也が中学の修学旅行で来たことのある場所だった。",
@@ -22321,6 +22385,22 @@
    "en": "Let me borrow your umbrella.",
    "ko": "우산 빌려 줘.",
    "blank": "傘"
+  }
+ ],
+ "w|傘下": [
+  {
+   "text": "悠斗の会社は、去年大手グループの傘下に入った。",
+   "en": "Last year Yuto's company came under the umbrella of a large group.",
+   "ko": "유토의 회사는 작년에 대기업 그룹 산하로 들어갔어요.",
+   "blank": "傘下",
+   "src": "made"
+  },
+  {
+   "text": "千尋がよく使う通販サイトは、大手企業の傘下にある。",
+   "en": "The online shopping site Chihiro often uses is owned by a large company.",
+   "ko": "치히로가 자주 쓰는 쇼핑 사이트는 대기업 산하에 있어요.",
+   "blank": "傘下",
+   "src": "made"
   }
  ],
  "w|備え": [
@@ -24673,6 +24753,22 @@
    "blank": "最も"
   }
  ],
+ "w|最下位": [
+  {
+   "text": "先月、悠斗の営業成績はチームで最下位だった。",
+   "en": "Last month, Yuto's sales results were the lowest on the team.",
+   "ko": "지난달 유토의 영업 실적은 팀에서 꼴찌였어요.",
+   "blank": "最下位",
+   "src": "made"
+  },
+  {
+   "text": "千尋が買ったイヤホンは人気順位で最下位だったが、使い心地はよかった。",
+   "en": "The earphones Chihiro bought ranked last in popularity, but they were comfortable to use.",
+   "ko": "치히로가 산 이어폰은 인기 순위에서 꼴찌였지만 쓰기 편했어요.",
+   "blank": "最下位",
+   "src": "made"
+  }
+ ],
  "w|最中": [
   {
    "text": "会議の最中に、拓也のスマホが鳴ってしまった。",
@@ -26068,6 +26164,22 @@
    "en": "A crew member stood in for Aoi to check how the light was spread.",
    "ko": "조명 빛의 분포를 확인하려고 스태프가 아오이 대신 섰어요.",
    "blank": "分布",
+   "src": "made"
+  }
+ ],
+ "w|分担": [
+  {
+   "text": "悠斗のチームは、資料作りを細かく分担している。",
+   "en": "Yuto's team divides up the work of preparing documents in detail.",
+   "ko": "유토의 팀은 자료 만드는 일을 세세하게 나눠서 맡고 있어요.",
+   "blank": "分担",
+   "src": "made"
+  },
+  {
+   "text": "千尋の家では、日用品をネットで注文する係を家族で分担している。",
+   "en": "In Chihiro's family, everyone shares the job of ordering daily necessities online.",
+   "ko": "치히로네 집에서는 생활용품을 인터넷으로 주문하는 일을 가족이 나눠 맡고 있어요.",
+   "blank": "分担",
    "src": "made"
   }
  ],
@@ -34565,6 +34677,22 @@
    "src": "made"
   }
  ],
+ "w|土木": [
+  {
+   "text": "悠斗の会社は、土木工事の設計を請け負っている。",
+   "en": "Yuto's company is contracted to design civil engineering projects.",
+   "ko": "유토의 회사는 토목 공사 설계를 맡고 있어요.",
+   "blank": "土木",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、土木の仕事をしている兄のために丈夫な作業靴を注文した。",
+   "en": "Chihiro ordered sturdy work boots for her brother, who works in civil engineering.",
+   "ko": "치히로는 토목 일을 하는 오빠를 위해 튼튼한 작업화를 주문했어요.",
+   "blank": "土木",
+   "src": "made"
+  }
+ ],
  "w|土産": [
   {
    "text": "直樹は、修学旅行のお土産に地元のお菓子を買った。",
@@ -36574,6 +36702,22 @@
    "en": "Mayu got worried when she heard there had been frequent bear sightings back home recently.",
    "ko": "고향에서 요즘 곰 목격이 잦다는 말을 듣고 마유는 걱정이 됐어요.",
    "blank": "多発",
+   "src": "made"
+  }
+ ],
+ "w|多重": [
+  {
+   "text": "社内のシステムには多重の認証が必要で、悠斗はいつも手間取る。",
+   "en": "The company system requires multiple layers of authentication, so Yuto always struggles with it.",
+   "ko": "사내 시스템은 다중 인증이 필요해서 유토는 늘 애를 먹어요.",
+   "blank": "多重",
+   "src": "made"
+  },
+  {
+   "text": "サイトの不具合で注文が多重に登録され、千尋は店に問い合わせた。",
+   "en": "Due to a site glitch, Chihiro's order was registered multiple times, so she contacted the store.",
+   "ko": "사이트 오류로 주문이 여러 번 중복 등록돼서 치히로는 가게에 문의했어요.",
+   "blank": "多重",
    "src": "made"
   }
  ],
@@ -40629,6 +40773,22 @@
    "src": "made"
   }
  ],
+ "w|容認": [
+  {
+   "text": "悠斗の会社は、在宅勤務を週に二日まで容認している。",
+   "en": "Yuto's company allows working from home up to two days a week.",
+   "ko": "유토의 회사는 재택근무를 일주일에 이틀까지 허용하고 있어요.",
+   "blank": "容認",
+   "src": "made"
+  },
+  {
+   "text": "そのサイトは開封後の返品を容認していないと、千尋は知った。",
+   "en": "Chihiro found out that the site does not allow returns after opening.",
+   "ko": "치히로는 그 사이트가 개봉 후 반품을 허용하지 않는다는 걸 알았어요.",
+   "blank": "容認",
+   "src": "made"
+  }
+ ],
  "w|容赦": [
   {
    "text": "夏の日差しは容赦なく、店の前の打ち水もすぐに乾いた。",
@@ -43009,6 +43169,22 @@
    "src": "made"
   }
  ],
+ "w|常用": [
+  {
+   "text": "悠斗は、パソコン仕事で目が疲れるので目薬を常用している。",
+   "en": "Yuto's eyes get tired from computer work, so he uses eye drops regularly.",
+   "ko": "유토는 컴퓨터 일로 눈이 피곤해서 안약을 늘 써요.",
+   "blank": "常用",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、常用しているサプリメントを定期便で注文している。",
+   "en": "Chihiro orders the supplements she takes regularly by subscription.",
+   "ko": "치히로는 늘 먹는 영양제를 정기 배송으로 주문해요.",
+   "blank": "常用",
+   "src": "made"
+  }
+ ],
  "w|常識": [
   {
    "text": "ゴミを道に捨てないのは常識だと、警官は若者に言った。",
@@ -43220,6 +43396,22 @@
    "en": "Anyone can enter this race equally, regardless of age or gender.",
    "ko": "이 대회는 나이나 성별에 상관없이 평등하게 참가할 수 있어요.",
    "blank": "平等",
+   "src": "made"
+  }
+ ],
+ "w|平行": [
+  {
+   "text": "悠斗と部長の議論は、最後まで平行線をたどった。",
+   "en": "The discussion between Yuto and the department head never reached any agreement.",
+   "ko": "유토와 부장의 논의는 끝까지 평행선을 달렸어요.",
+   "blank": "平行",
+   "src": "made"
+  },
+  {
+   "text": "千尋が頼んだ本棚は板が平行になっておらず、組み立てに苦労した。",
+   "en": "The shelves on the bookcase Chihiro ordered weren't parallel, so she struggled to assemble it.",
+   "ko": "치히로가 주문한 책장은 판이 평행하지 않아서 조립하느라 애를 먹었어요.",
+   "blank": "平行",
    "src": "made"
   }
  ],
@@ -45260,6 +45452,22 @@
    "en": "Chihiro searched online for the same coat her favorite actor wore.",
    "ko": "지히로는 좋아하는 배우가 입었던 것과 같은 코트를 인터넷에서 찾았어요.",
    "blank": "役者",
+   "src": "made"
+  }
+ ],
+ "w|役職": [
+  {
+   "text": "悠斗は役職がついてから、会議に出る時間が増えた。",
+   "en": "Since Yuto got a managerial title, he spends more time in meetings.",
+   "ko": "유토는 직책을 맡은 뒤로 회의에 나가는 시간이 늘었어요.",
+   "blank": "役職",
+   "src": "made"
+  },
+  {
+   "text": "父の役職が上がったお祝いに、千尋はネットで万年筆を贈った。",
+   "en": "To celebrate her father's promotion, Chihiro sent him a fountain pen she bought online.",
+   "ko": "아버지가 직책이 오른 걸 축하하려고 치히로는 인터넷으로 만년필을 보냈어요.",
+   "blank": "役職",
    "src": "made"
   }
  ],
@@ -48837,6 +49045,22 @@
    "blank": "手"
   }
  ],
+ "w|手がける": [
+  {
+   "text": "悠斗が初めて手がけた企画が、社内で表彰された。",
+   "en": "The first project Yuto ever handled won an award within the company.",
+   "ko": "유토가 처음 맡은 기획이 사내에서 표창을 받았어요.",
+   "blank": "手がけた",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、好きなデザイナーが手がけた食器をネットで見つけた。",
+   "en": "Chihiro found tableware online made by a designer she likes.",
+   "ko": "치히로는 좋아하는 디자이너가 만든 식기를 인터넷에서 찾았어요.",
+   "blank": "手がけた",
+   "src": "made"
+  }
+ ],
  "w|手のひら": [
   {
    "text": "誠は、手のひらに乗るほど小さなカエルを見つけた。",
@@ -49761,6 +49985,22 @@
    "blank": "抜ける"
   }
  ],
+ "w|抜粋": [
+  {
+   "text": "悠斗は、長い報告書の要点を抜粋して上司に送った。",
+   "en": "Yuto pulled out the key points of a long report and sent them to his boss.",
+   "ko": "유토는 긴 보고서의 요점을 발췌해서 상사에게 보냈어요.",
+   "blank": "抜粋",
+   "src": "made"
+  },
+  {
+   "text": "千尋が見た商品ページには、購入者のレビューが抜粋して載っていた。",
+   "en": "The product page Chihiro looked at had excerpts from buyers' reviews.",
+   "ko": "치히로가 본 상품 페이지에는 구매자 후기가 발췌되어 실려 있었어요.",
+   "blank": "抜粋",
+   "src": "made"
+  }
+ ],
  "w|抜群": [
   {
    "text": "悠斗は文章のうまさは抜群だが、締め切りを守るのが苦手だ。",
@@ -50577,6 +50817,22 @@
    "blank": "指示"
   }
  ],
+ "w|指紋": [
+  {
+   "text": "悠斗の会社のドアは、指紋をかざすと開く。",
+   "en": "The door at Yuto's company opens when you scan your fingerprint.",
+   "ko": "유토 회사의 문은 지문을 대면 열려요.",
+   "blank": "指紋",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、届いたスマホケースについた指紋を拭き取った。",
+   "en": "Chihiro wiped the fingerprints off the phone case that had arrived.",
+   "ko": "치히로는 도착한 휴대폰 케이스에 묻은 지문을 닦아 냈어요.",
+   "blank": "指紋",
+   "src": "made"
+  }
+ ],
  "w|指輪": [
   {
    "text": "悠斗の隣で、若い女性が古い指輪をじっと見ていた。",
@@ -50712,6 +50968,22 @@
    "en": "Misaki once gave up on bread-making, but started again at this class.",
    "ko": "미사키는 한 번 빵 만들기에서 좌절했지만 이 교실에서 다시 시작했어요.",
    "blank": "挫折",
+   "src": "made"
+  }
+ ],
+ "w|振り回す": [
+  {
+   "text": "悠斗は、思いつきで指示を変える上司に振り回されている。",
+   "en": "Yuto is constantly jerked around by a boss who changes instructions on a whim.",
+   "ko": "유토는 즉흥적으로 지시를 바꾸는 상사에게 휘둘리고 있어요.",
+   "blank": "振り回されて",
+   "src": "made"
+  },
+  {
+   "text": "配達の時間が何度も変わり、千尋は一日中振り回された。",
+   "en": "The delivery time changed again and again, and Chihiro was jerked around all day.",
+   "ko": "배송 시간이 몇 번이나 바뀌어서 치히로는 하루 종일 휘둘렸어요.",
+   "blank": "振り回された",
    "src": "made"
   }
  ],
@@ -51245,6 +51517,22 @@
    "src": "made"
   }
  ],
+ "w|接点": [
+  {
+   "text": "悠斗は、これまで接点のなかった部署の人と組むことになった。",
+   "en": "Yuto ended up teaming with people from a department he'd had no contact with before.",
+   "ko": "유토는 그동안 접점이 없었던 부서 사람들과 짝을 이루게 됐어요.",
+   "blank": "接点",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ネット通販がきっかけで地方の農家との接点ができた。",
+   "en": "Online shopping gave Chihiro a connection with farmers in the countryside.",
+   "ko": "치히로는 인터넷 쇼핑을 계기로 지방 농가와 접점이 생겼어요.",
+   "blank": "接点",
+   "src": "made"
+  }
+ ],
  "w|接種": [
   {
    "text": "図書館の掲示板に、ワクチン接種の案内が貼ってあった。",
@@ -51645,6 +51933,22 @@
    "en": "The submission deadline is tomorrow.",
    "ko": "제출 기한은 내일이야.",
    "blank": "提出"
+  }
+ ],
+ "w|提唱": [
+  {
+   "text": "悠斗は、会議を半分の時間で終える方法を提唱した。",
+   "en": "Yuto proposed a way to finish meetings in half the time.",
+   "ko": "유토는 회의를 절반 시간에 끝내는 방법을 제창했어요.",
+   "blank": "提唱",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ある医師が提唱した健康法の本をネットで買った。",
+   "en": "Chihiro bought a book online about a health method advocated by a doctor.",
+   "ko": "치히로는 어느 의사가 제창한 건강법 책을 인터넷으로 샀어요.",
+   "blank": "提唱",
+   "src": "made"
   }
  ],
  "w|提携": [
@@ -53974,6 +54278,22 @@
    "en": "Aoi much prefers winter marathons to summer ones.",
    "ko": "아오이는 여름보다 겨울 마라톤이 단연 좋아요.",
    "blank": "断然",
+   "src": "made"
+  }
+ ],
+ "w|断片": [
+  {
+   "text": "悠斗は、会議の記憶の断片をつなぎ合わせて議事録を書いた。",
+   "en": "Yuto pieced together fragments of his memory of the meeting to write the minutes.",
+   "ko": "유토는 회의에 대한 기억의 조각을 이어 붙여 회의록을 썼어요.",
+   "blank": "断片",
+   "src": "made"
+  },
+  {
+   "text": "千尋に届いた箱には、割れた皿の断片が入っていた。",
+   "en": "The box Chihiro received contained fragments of a broken plate.",
+   "ko": "치히로에게 온 상자에는 깨진 접시 조각이 들어 있었어요.",
+   "blank": "断片",
    "src": "made"
   }
  ],
@@ -56679,6 +56999,22 @@
    "src": "made"
   }
  ],
+ "w|朗読": [
+  {
+   "text": "社内の朝礼で、悠斗は会社の理念を朗読させられた。",
+   "en": "At the company morning meeting, Yuto was made to read the company philosophy aloud.",
+   "ko": "사내 조회에서 유토는 회사 이념을 낭독하게 됐어요.",
+   "blank": "朗読",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、人気俳優が朗読するオーディオブックを購入した。",
+   "en": "Chihiro purchased an audiobook read aloud by a popular actor.",
+   "ko": "치히로는 인기 배우가 낭독하는 오디오북을 샀어요.",
+   "blank": "朗読",
+   "src": "made"
+  }
+ ],
  "w|望み": [
   {
    "text": "大きな仕事を任されるという望みは、思ったより早くかなった。",
@@ -56854,6 +57190,22 @@
    "en": "The shop's counter is made from reused old timber.",
    "ko": "가게 카운터는 오래된 목재를 재활용해서 만든 거예요.",
    "blank": "木材",
+   "src": "made"
+  }
+ ],
+ "w|木製": [
+  {
+   "text": "悠斗の机の上には、木製のペン立てが置いてある。",
+   "en": "There is a wooden pen holder on Yuto's desk.",
+   "ko": "유토의 책상 위에는 나무로 된 펜꽂이가 놓여 있어요.",
+   "blank": "木製",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ネットで木製のまな板を注文した。",
+   "en": "Chihiro ordered a wooden cutting board online.",
+   "ko": "치히로는 인터넷으로 나무 도마를 주문했어요.",
+   "blank": "木製",
    "src": "made"
   }
  ],
@@ -57054,6 +57406,22 @@
    "en": "The author in the textbook published books under a name different from his real name.",
    "ko": "교과서에 실린 작가는 본명과 다른 이름으로 책을 냈어요.",
    "blank": "本名",
+   "src": "made"
+  }
+ ],
+ "w|本命": [
+  {
+   "text": "三つの案のうち、悠斗の上司は最後の案を本命と考えている。",
+   "en": "Of the three proposals, Yuto's boss sees the last one as the favorite.",
+   "ko": "세 가지 안 중에서 유토의 상사는 마지막 안을 가장 유력하게 보고 있어요.",
+   "blank": "本命",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、いくつか比べたあとで本命のバッグをカートに入れた。",
+   "en": "After comparing a few, Chihiro put her top-choice bag in the cart.",
+   "ko": "치히로는 몇 개 비교해 본 뒤 가장 마음에 둔 가방을 장바구니에 넣었어요.",
+   "blank": "本命",
    "src": "made"
   }
  ],
@@ -60151,6 +60519,22 @@
    "src": "made"
   }
  ],
+ "w|歪む": [
+  {
+   "text": "古いモニターの画面が歪んで見え、悠斗は交換を頼んだ。",
+   "en": "The screen of the old monitor looked distorted, so Yuto asked for a replacement.",
+   "ko": "낡은 모니터 화면이 일그러져 보여서 유토는 교체를 요청했어요.",
+   "blank": "歪んで",
+   "src": "made"
+  },
+  {
+   "text": "届いた箱が歪んでいて、千尋は中身が心配になった。",
+   "en": "The box that arrived was dented out of shape, and Chihiro worried about what was inside.",
+   "ko": "도착한 상자가 찌그러져 있어서 치히로는 내용물이 걱정됐어요.",
+   "blank": "歪んで",
+   "src": "made"
+  }
+ ],
  "w|歯": [
   {
    "text": "歯が痛いよ。",
@@ -62799,6 +63183,22 @@
    "src": "made"
   }
  ],
+ "w|流用": [
+  {
+   "text": "別の部署の予算を流用することは、悠斗の会社では禁止されている。",
+   "en": "At Yuto's company, diverting another department's budget is prohibited.",
+   "ko": "다른 부서 예산을 돌려쓰는 것은 유토의 회사에서는 금지되어 있어요.",
+   "blank": "流用",
+   "src": "made"
+  },
+  {
+   "text": "千尋は前の注文の住所を流用して、うっかり実家に荷物を送ってしまった。",
+   "en": "Chihiro reused the address from a previous order and accidentally sent the package to her parents' home.",
+   "ko": "치히로는 지난 주문 주소를 그대로 가져다 써서 실수로 본가에 택배를 보내 버렸어요.",
+   "blank": "流用",
+   "src": "made"
+  }
+ ],
  "w|流行": [
   {
    "text": "この髪型が流行してる。",
@@ -63930,6 +64330,22 @@
    "en": "On humid days, bread dough tends to get sticky.",
    "ko": "습도가 높은 날은 빵 반죽이 끈적거리기 쉬워요.",
    "blank": "湿度",
+   "src": "made"
+  }
+ ],
+ "w|満々": [
+  {
+   "text": "新しい仕事を任された悠斗は、やる気満々だ。",
+   "en": "Yuto, who has been given a new job, is full of enthusiasm.",
+   "ko": "새 일을 맡은 유토는 의욕이 넘쳐요.",
+   "blank": "満々",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、自信満々で選んだワンピースが似合わずがっかりした。",
+   "en": "Chihiro was disappointed when the dress she had chosen so confidently didn't suit her.",
+   "ko": "치히로는 자신만만하게 고른 원피스가 어울리지 않아서 실망했어요.",
+   "blank": "満々",
    "src": "made"
   }
  ],
@@ -65215,6 +65631,22 @@
    "blank": "無線"
   }
  ],
+ "w|無縁": [
+  {
+   "text": "悠斗は、残業とは無縁の部署で働きたいと思っている。",
+   "en": "Yuto wants to work in a department that has nothing to do with overtime.",
+   "ko": "유토는 야근과는 거리가 먼 부서에서 일하고 싶어 해요.",
+   "blank": "無縁",
+   "src": "made"
+  },
+  {
+   "text": "ネット通販のおかげで、千尋は重い荷物を運ぶ苦労とは無縁になった。",
+   "en": "Thanks to online shopping, Chihiro no longer has to struggle carrying heavy bags.",
+   "ko": "인터넷 쇼핑 덕분에 치히로는 무거운 짐을 나르는 고생과는 거리가 멀어졌어요.",
+   "blank": "無縁",
+   "src": "made"
+  }
+ ],
  "w|無罪": [
   {
    "text": "模擬裁判で、健太は弁護士役として被告の無罪を主張した。",
@@ -65988,6 +66420,22 @@
    "en": "In the X-ray inspection, an unidentified object showed up in a bag.",
    "ko": "엑스선 검사에서 가방 안에 정체를 알 수 없는 물체가 비쳤어요.",
    "blank": "物体",
+   "src": "made"
+  }
+ ],
+ "w|物凄い": [
+  {
+   "text": "締め切り前の悠斗は、物凄い速さでキーボードを打つ。",
+   "en": "Before a deadline, Yuto types at an incredible speed.",
+   "ko": "마감 직전의 유토는 엄청난 속도로 키보드를 쳐요.",
+   "blank": "物凄い",
+   "src": "made"
+  },
+  {
+   "text": "セールの日はアクセスが物凄く多く、千尋はなかなか注文できなかった。",
+   "en": "On the sale day there was a huge amount of traffic, so Chihiro had trouble placing her order.",
+   "ko": "세일 날은 접속이 엄청나게 많아서 치히로는 좀처럼 주문을 못 했어요.",
+   "blank": "物凄く",
    "src": "made"
   }
  ],
@@ -68336,6 +68784,22 @@
    "en": "The owner was delighted, saying it was unusual to be in a magazine right after opening.",
    "ko": "개업하자마자 잡지에 실리는 건 이례적이라며 주인이 기뻐했어요.",
    "blank": "異例",
+   "src": "made"
+  }
+ ],
+ "w|異動": [
+  {
+   "text": "春の人事で、悠斗は営業部へ異動になった。",
+   "en": "In the spring personnel changes, Yuto was transferred to the sales department.",
+   "ko": "봄 인사에서 유토는 영업부로 이동하게 됐어요.",
+   "blank": "異動",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、異動先の寮で使う家具をネットで注文した。",
+   "en": "Chihiro ordered furniture online for the dormitory at her new post.",
+   "ko": "치히로는 발령받은 곳의 기숙사에서 쓸 가구를 인터넷으로 주문했어요.",
+   "blank": "異動",
    "src": "made"
   }
  ],
@@ -70813,6 +71277,22 @@
    "en": "You still have that on.",
    "ko": "아직 그거 입고 있잖아.",
    "blank": "着た"
+  }
+ ],
+ "w|着信": [
+  {
+   "text": "会議中に悠斗のスマホに着信があり、悠斗はあわてて音を消した。",
+   "en": "Yuto's phone rang during a meeting, and he hurriedly silenced it.",
+   "ko": "회의 중에 유토의 휴대폰에 전화가 와서 유토는 서둘러 소리를 껐어요.",
+   "blank": "着信",
+   "src": "made"
+  },
+  {
+   "text": "配達員からの着信に気づかず、千尋は荷物を受け取りそこねた。",
+   "en": "Chihiro didn't notice the call from the delivery person and missed her package.",
+   "ko": "치히로는 배달원의 전화를 못 알아채서 택배를 받지 못했어요.",
+   "blank": "着信",
+   "src": "made"
   }
  ],
  "w|着手": [
@@ -74261,6 +74741,22 @@
    "src": "made"
   }
  ],
+ "w|細工": [
+  {
+   "text": "悠斗は、資料の数字に細工がされていないか念入りに確かめた。",
+   "en": "Yuto carefully checked whether the figures in the documents had been tampered with.",
+   "ko": "유토는 자료의 숫자가 조작되지 않았는지 꼼꼼히 확인했어요.",
+   "blank": "細工",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、手の込んだ細工のあるガラスのコップを注文した。",
+   "en": "Chihiro ordered a glass with elaborate decorative work.",
+   "ko": "치히로는 정교한 세공이 들어간 유리컵을 주문했어요.",
+   "blank": "細工",
+   "src": "made"
+  }
+ ],
  "w|細胞": [
   {
    "text": "細胞が再生する。",
@@ -74557,6 +75053,22 @@
    "en": "Did you see the economy news?",
    "ko": "경제 뉴스 봤어?",
    "blank": "経済"
+  }
+ ],
+ "w|経理": [
+  {
+   "text": "悠斗は、出張の領収書をまとめて経理に提出した。",
+   "en": "Yuto gathered up his business trip receipts and submitted them to accounting.",
+   "ko": "유토는 출장 영수증을 모아서 경리에 제출했어요.",
+   "blank": "経理",
+   "src": "made"
+  },
+  {
+   "text": "千尋は経理の担当として、会社の備品をネットで注文している。",
+   "en": "As the person in charge of accounting, Chihiro orders the company's supplies online.",
+   "ko": "치히로는 경리 담당으로서 회사 비품을 인터넷으로 주문해요.",
+   "blank": "経理",
+   "src": "made"
   }
  ],
  "w|経由": [
@@ -76289,6 +76801,22 @@
    "ko": "정복당한 쪽이 늘 나쁜 거예요. 역사는 그들이 졌다는 것만 고려하니까요.",
    "blank": "考慮",
    "src": "tatoeba:982390/thyc244 en:974597/slivercat"
+  }
+ ],
+ "w|考案": [
+  {
+   "text": "悠斗が考案した勤怠管理の仕組みが、全社で採用された。",
+   "en": "The attendance management system Yuto devised was adopted company-wide.",
+   "ko": "유토가 고안한 근태 관리 방식이 전사에 채택됐어요.",
+   "blank": "考案",
+   "src": "made"
+  },
+  {
+   "text": "千尋が買った便利な収納箱は、ある主婦が考案したものだそうだ。",
+   "en": "The handy storage box Chihiro bought was apparently invented by a homemaker.",
+   "ko": "치히로가 산 편리한 수납 상자는 어느 주부가 고안한 거래요.",
+   "blank": "考案",
+   "src": "made"
   }
  ],
  "w|耐える": [
@@ -83049,6 +83577,22 @@
    "blank": "語る"
   }
  ],
+ "w|語学": [
+  {
+   "text": "海外との取引が増え、悠斗は語学の勉強を始めた。",
+   "en": "With more overseas business, Yuto began studying languages.",
+   "ko": "해외 거래가 늘어서 유토는 어학 공부를 시작했어요.",
+   "blank": "語学",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、語学の教材をネットでまとめて注文した。",
+   "en": "Chihiro ordered a bunch of language learning materials online at once.",
+   "ko": "치히로는 어학 교재를 인터넷으로 한꺼번에 주문했어요.",
+   "blank": "語学",
+   "src": "made"
+  }
+ ],
  "w|語尾": [
   {
    "text": "安全確認の合図は語尾まではっきり言うよう、誠は新人に注意した。",
@@ -86323,6 +86867,22 @@
    "src": "made"
   }
  ],
+ "w|辞退": [
+  {
+   "text": "悠斗は、体調を理由に海外出張を辞退した。",
+   "en": "Yuto declined the overseas business trip for health reasons.",
+   "ko": "유토는 건강을 이유로 해외 출장을 사양했어요.",
+   "blank": "辞退",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、抽選で当たった無料サンプルの受け取りを辞退した。",
+   "en": "Chihiro declined to receive the free sample she had won in a drawing.",
+   "ko": "치히로는 추첨으로 당첨된 무료 샘플 수령을 사양했어요.",
+   "blank": "辞退",
+   "src": "made"
+  }
+ ],
  "w|農場": [
   {
    "text": "この住宅地は、もともと広い農場だった場所に建てられている。",
@@ -88415,6 +88975,22 @@
    "src": "made"
   }
  ],
+ "w|進捗": [
+  {
+   "text": "悠斗は毎週金曜日に、仕事の進捗を上司に報告する。",
+   "en": "Every Friday, Yuto reports his progress to his boss.",
+   "ko": "유토는 매주 금요일에 업무 진척 상황을 상사에게 보고해요.",
+   "blank": "進捗",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、アプリで配送の進捗を何度も確かめた。",
+   "en": "Chihiro checked the delivery progress on the app again and again.",
+   "ko": "치히로는 앱으로 배송 진행 상황을 몇 번이나 확인했어요.",
+   "blank": "進捗",
+   "src": "made"
+  }
+ ],
  "w|進歩": [
   {
    "text": "先生は、直樹の英語の進歩を見て驚いていた。",
@@ -90183,6 +90759,22 @@
    "src": "made"
   }
  ],
+ "w|配属": [
+  {
+   "text": "悠斗のチームに、今年は新人が二人配属された。",
+   "en": "Two new employees were assigned to Yuto's team this year.",
+   "ko": "올해 유토의 팀에 신입 두 명이 배치됐어요.",
+   "blank": "配属",
+   "src": "made"
+  },
+  {
+   "text": "新しい部署に配属された千尋は、仕事用のかばんを通販で選んだ。",
+   "en": "Chihiro, newly assigned to a new department, picked out a work bag online.",
+   "ko": "새 부서에 배치된 치히로는 일할 때 쓸 가방을 통신 판매로 골랐어요.",
+   "blank": "配属",
+   "src": "made"
+  }
+ ],
  "w|配布": [
   {
    "text": "チラシの配布を手伝う。",
@@ -90397,6 +90989,22 @@
    "en": "The soy sauce smells good.",
    "ko": "간장 향이 좋아.",
    "blank": "醤油"
+  }
+ ],
+ "w|醸造": [
+  {
+   "text": "悠斗の会社は、地元の酒蔵の醸造の設備を新しくする仕事を受けた。",
+   "en": "Yuto's company took on a job to renew the brewing equipment of a local sake brewery.",
+   "ko": "유토의 회사는 지역 양조장의 양조 설비를 새로 바꾸는 일을 맡았어요.",
+   "blank": "醸造",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、小さな醸造所のクラフトビールをネットで取り寄せた。",
+   "en": "Chihiro ordered craft beer online from a small brewery.",
+   "ko": "치히로는 작은 양조장의 수제 맥주를 인터넷으로 주문해 받았어요.",
+   "blank": "醸造",
+   "src": "made"
   }
  ],
  "w|釈放": [
@@ -92175,6 +92783,22 @@
    "src": "made"
   }
  ],
+ "w|降板": [
+  {
+   "text": "司会役の同僚が体調を崩して降板し、悠斗が社内イベントの司会を代わった。",
+   "en": "The coworker set to host fell ill and stepped down, so Yuto took over as host of the company event.",
+   "ko": "사회를 맡은 동료가 몸이 안 좋아 하차해서 유토가 사내 행사 사회를 대신했어요.",
+   "blank": "降板",
+   "src": "made"
+  },
+  {
+   "text": "好きな俳優がドラマを降板すると知り、千尋はその俳優の写真集を急いで注文した。",
+   "en": "When Chihiro learned her favorite actor was leaving the drama, she hurried to order his photo book.",
+   "ko": "좋아하는 배우가 드라마에서 하차한다는 걸 알고 치히로는 그 배우의 사진집을 서둘러 주문했어요.",
+   "blank": "降板",
+   "src": "made"
+  }
+ ],
  "w|限り": [
   {
    "text": "できる限り早く行くよ。",
@@ -93778,6 +94402,22 @@
    "en": "At the cooking class, the teacher's favorite recordings play quietly.",
    "ko": "요리 교실에서는 선생님이 좋아하는 음원이 작게 흘러나와요.",
    "blank": "音源",
+   "src": "made"
+  }
+ ],
+ "w|音質": [
+  {
+   "text": "オンライン会議の音質が悪く、悠斗は何度も聞き返した。",
+   "en": "The sound quality of the online meeting was poor, so Yuto had to ask people to repeat themselves many times.",
+   "ko": "온라인 회의 음질이 나빠서 유토는 몇 번이나 되물었어요.",
+   "blank": "音質",
+   "src": "made"
+  },
+  {
+   "text": "安いスピーカーにしては音質がよく、千尋は満足した。",
+   "en": "The sound quality was good for such a cheap speaker, and Chihiro was satisfied.",
+   "ko": "싼 스피커치고는 음질이 좋아서 치히로는 만족했어요.",
+   "blank": "音質",
    "src": "made"
   }
  ],
