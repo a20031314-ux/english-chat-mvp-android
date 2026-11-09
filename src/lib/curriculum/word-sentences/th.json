@@ -439,6 +439,22 @@
    "src": "made"
   }
  ],
+ "w|กระชับ": [
+  {
+   "text": "กิตติได้เสื้อยีนส์ทรงกระชับที่ใส่แล้วพอดีตัวมาก",
+   "en": "Kitti got a fitted denim jacket that fits him perfectly.",
+   "ko": "끼띠는 입어 보니 몸에 꼭 맞는 슬림한 청재킷을 샀어요.",
+   "blank": "กระชับ",
+   "src": "made"
+  },
+  {
+   "text": "ช่างขันน็อตให้บานพับประตูกระชับ ประตูจะได้ไม่ส่งเสียง",
+   "en": "The builder tightened the screws so the door hinges were snug and the door wouldn't creak.",
+   "ko": "인부는 문이 삐걱대지 않게 경첩 나사를 단단히 조였어요.",
+   "blank": "กระชับ",
+   "src": "made"
+  }
+ ],
  "w|กระซิบ": [
   {
    "text": "เธอกระซิบอะไรกับฉันหน่อย",
@@ -854,6 +870,22 @@
    "en": "The boat drifted with the current.",
    "ko": "배가 물살을 따라 떠내려갔어.",
    "blank": "กระแสน้ำ",
+   "src": "made"
+  }
+ ],
+ "w|กรัม": [
+  {
+   "text": "แม่ค้าชั่งกาแฟคั่วให้กิตติสองร้อยห้าสิบกรัม",
+   "en": "The vendor weighed out two hundred fifty grams of roasted coffee for Kitti.",
+   "ko": "상인은 끼띠에게 볶은 커피를 이백오십 그램 달아 줬어요.",
+   "blank": "กรัม",
+   "src": "made"
+  },
+  {
+   "text": "ช่างผสมสีโดยใส่ผงสีห้าสิบกรัมต่อสีขาวหนึ่งถัง",
+   "en": "The painter mixed the color by adding fifty grams of pigment per bucket of white paint.",
+   "ko": "도장공은 흰 페인트 한 통에 안료 오십 그램을 넣어 색을 섞었어요.",
+   "blank": "กรัม",
    "src": "made"
   }
  ],
@@ -2539,6 +2571,22 @@
    "src": "made"
   }
  ],
+ "w|การบริการ": [
+  {
+   "text": "ลูกค้าชมว่าการบริการของแผงกิตติเป็นกันเองและซื่อตรง",
+   "en": "Customers praise the service at Kitti's stall as friendly and honest.",
+   "ko": "손님들은 끼띠네 가판대의 서비스가 친근하고 정직하다고 칭찬해요.",
+   "blank": "การบริการ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาประทับใจการบริการของร้านวัสดุที่ส่งของถึงบ้านฟรี",
+   "en": "Wanna was impressed by the hardware store's service delivering to her house for free.",
+   "ko": "완나는 집까지 무료로 배달해 주는 자재 가게의 서비스에 감동했어요.",
+   "blank": "การบริการ",
+   "src": "made"
+  }
+ ],
  "w|การบัญชี": [
   {
    "text": "กิตติขอให้ผู้เชี่ยวชาญการบัญชีช่วยอ่านงบของบริษัทนั้น",
@@ -3376,6 +3424,38 @@
    "en": "Somsak laughed that stopping to buy souvenirs at every shop is a craving he can't resist.",
    "ko": "솜싹은 가게마다 들러 기념품을 사는 건 참을 수 없는 욕심이라며 웃었어요.",
    "blank": "กิเลส",
+   "src": "made"
+  }
+ ],
+ "w|กิโล": [
+  {
+   "text": "ร้านผลไม้ท้ายตลาดขายมังคุดกิโลละห้าสิบบาท",
+   "en": "The fruit stand at the back of the market sells mangosteens for fifty baht a kilo.",
+   "ko": "시장 끝 과일 가게는 망고스틴을 킬로에 오십 바트에 팔아요.",
+   "blank": "กิโล",
+   "src": "made"
+  },
+  {
+   "text": "ร้านวัสดุขายปูนซีเมนต์ขาวกิโลละยี่สิบบาท",
+   "en": "The hardware store sells white cement for twenty baht a kilo.",
+   "ko": "자재 가게는 백시멘트를 킬로에 이십 바트에 팔아요.",
+   "blank": "กิโล",
+   "src": "made"
+  }
+ ],
+ "w|กิโลกรัม": [
+  {
+   "text": "ลังแผ่นเสียงที่กิตติแบกมาหนักเกือบยี่สิบกิโลกรัม",
+   "en": "The crate of records Kitti carried weighs almost twenty kilograms.",
+   "ko": "끼띠가 들고 온 레코드 상자는 거의 이십 킬로그램이나 나가요.",
+   "blank": "กิโลกรัม",
+   "src": "made"
+  },
+  {
+   "text": "ช่างขนทรายมาเทหน้าบ้านวรรณาเกือบห้าร้อยกิโลกรัม",
+   "en": "The builders dumped almost five hundred kilograms of sand in front of Wanna's house.",
+   "ko": "인부들은 완나네 집 앞에 모래를 거의 오백 킬로그램 쏟아 놓았어요.",
+   "blank": "กิโลกรัม",
    "src": "made"
   }
  ],
@@ -8353,6 +8433,22 @@
    "blank": "คริสต์มาส"
   }
  ],
+ "w|ครีม": [
+  {
+   "text": "แม่ค้าคนหนึ่งขายครีมกันแดดทำเองใส่ตลับไม้",
+   "en": "One vendor sells homemade sunscreen in wooden tins.",
+   "ko": "한 상인은 직접 만든 선크림을 나무 통에 담아 팔아요.",
+   "blank": "ครีม",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเลือกสีครีมทาผนังห้องนั่งเล่นให้ดูสว่างขึ้น",
+   "en": "Wanna chose cream paint for the living room walls to make it look brighter.",
+   "ko": "완나는 거실이 더 밝아 보이게 벽을 크림색으로 칠하기로 했어요.",
+   "blank": "ครีม",
+   "src": "made"
+  }
+ ],
  "w|ครึ่ง": [
   {
    "text": "กินไปได้ครึ่งแล้ว",
@@ -11203,6 +11299,22 @@
    "blank": "ค่าโดยสาร"
   }
  ],
+ "w|ค่าธรรมเนียม": [
+  {
+   "text": "กิตติต้องจ่ายค่าธรรมเนียมเช่าแผงให้ตลาดเดือนละสองพันบาท",
+   "en": "Kitti has to pay the market a stall rental fee of two thousand baht a month.",
+   "ko": "끼띠는 시장에 가판대 임대료로 한 달에 이천 바트를 내야 해요.",
+   "blank": "ค่าธรรมเนียม",
+   "src": "made"
+  },
+  {
+   "text": "การขออนุญาตต่อเติมบ้านมีค่าธรรมเนียมที่วรรณาไม่ได้คาดไว้",
+   "en": "The permit to extend the house came with a fee Wanna hadn't expected.",
+   "ko": "집 증축 허가 신청에는 완나가 예상하지 못한 수수료가 있었어요.",
+   "blank": "ค่าธรรมเนียม",
+   "src": "made"
+  }
+ ],
  "w|คาน": [
   {
    "text": "ภารโรงพบรอยร้าวที่คานเหนือห้องเรียนเก่า จึงรีบแจ้งสมชาย",
@@ -11947,6 +12059,22 @@
    "blank": "คืนนี้"
   }
  ],
+ "w|คืบหน้า": [
+  {
+   "text": "เพื่อนถามกิตติว่าแผนเปิดร้านออนไลน์คืบหน้าไปถึงไหนแล้ว",
+   "en": "A friend asked Kitti how far along his plan to open an online shop had gotten.",
+   "ko": "친구는 끼띠에게 온라인 가게를 열 계획이 어디까지 진행됐냐고 물었어요.",
+   "blank": "คืบหน้า",
+   "src": "made"
+  },
+  {
+   "text": "งานซ่อมหลังคาคืบหน้าช้าเพราะฝนตกเกือบทุกวัน",
+   "en": "The roof repairs are progressing slowly because it rains almost every day.",
+   "ko": "거의 매일 비가 와서 지붕 수리가 더디게 진행돼요.",
+   "blank": "คืบหน้า",
+   "src": "made"
+  }
+ ],
  "w|คุก": [
   {
    "text": "อย่าทำอะไรจนเข้าคุก",
@@ -12281,6 +12409,22 @@
    "src": "made"
   }
  ],
+ "w|คุ้ม": [
+  {
+   "text": "กิตติว่ากล้องฟิล์มตัวนี้ราคาคุ้มเพราะเลนส์ยังใสอยู่",
+   "en": "Kitti thinks this film camera is a good deal because the lens is still clear.",
+   "ko": "끼띠는 렌즈가 아직 맑아서 이 필름 카메라 가격이 괜찮다고 생각해요.",
+   "blank": "คุ้ม",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาว่าซ่อมหน้าต่างไม้เดิมคุ้มกว่าเปลี่ยนเป็นอะลูมิเนียม",
+   "en": "Wanna thinks repairing the original wooden windows is better value than switching to aluminum.",
+   "ko": "완나는 원래 나무 창문을 고치는 게 알루미늄으로 바꾸는 것보다 낫다고 생각해요.",
+   "blank": "คุ้ม",
+   "src": "made"
+  }
+ ],
  "w|คุ้มครอง": [
   {
    "text": "กฎหมายคุ้มครองสิทธิของผู้บริโภค",
@@ -12293,6 +12437,22 @@
    "en": "This insurance covers the damage.",
    "ko": "이 보험이 손해를 보장해.",
    "blank": "คุ้มครอง"
+  }
+ ],
+ "w|คุ้มค่า": [
+  {
+   "text": "กิตติบอกว่าตื่นตีห้ามาตลาดนัดก็คุ้มค่าเพราะได้ของดีก่อนใคร",
+   "en": "Kitti said waking up at five to come to the market is worth it because he gets the good stuff first.",
+   "ko": "끼띠는 새벽 다섯 시에 일어나 시장에 오는 게 좋은 물건을 먼저 차지할 수 있어서 그만한 가치가 있다고 했어요.",
+   "blank": "คุ้มค่า",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาบอกว่าเงินที่ลงไปกับการซ่อมบ้านเก่าคุ้มค่าทุกบาท",
+   "en": "Wanna said every baht spent fixing up the old house was worth it.",
+   "ko": "완나는 오래된 집을 고치는 데 쓴 돈이 한 푼도 아깝지 않다고 했어요.",
+   "blank": "คุ้มค่า",
+   "src": "made"
   }
  ],
  "w|คุย": [
@@ -12365,6 +12525,22 @@
    "en": "The partner always delivers on time.",
    "ko": "거래처가 항상 제시간에 보내.",
    "blank": "คู่ค้า"
+  }
+ ],
+ "w|คูณ": [
+  {
+   "text": "กิตติเอาราคาต่อชิ้นคูณจำนวนในกล่องเพื่อเสนอราคาส่งให้ลูกค้า",
+   "en": "Kitti multiplied the price per piece by the number in the box to quote the customer a bulk price.",
+   "ko": "끼띠는 손님에게 일괄 가격을 제시하려고 개당 가격에 상자 속 개수를 곱했어요.",
+   "blank": "คูณ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาวัดความกว้างคูณความยาวของห้องเพื่อคำนวณจำนวนกระเบื้อง",
+   "en": "Wanna multiplied the room's width by its length to calculate the number of tiles.",
+   "ko": "완나는 타일 개수를 계산하려고 방의 너비에 길이를 곱했어요.",
+   "blank": "คูณ",
+   "src": "made"
   }
  ],
  "w|คู่รัก": [
@@ -12512,6 +12688,22 @@
    "en": "This shop is strict about returns; you have to film a video while unboxing.",
    "ko": "이 가게는 반품이 까다로워서 상자를 열 때 영상을 찍어야 해요.",
    "blank": "เคร่งครัด",
+   "src": "made"
+  }
+ ],
+ "w|เครดิต": [
+  {
+   "text": "แผงส่วนใหญ่ในตลาดนัดไม่รับบัตรเครดิต กิตติจึงพกเงินสด",
+   "en": "Most stalls at the flea market don't take credit cards, so Kitti carries cash.",
+   "ko": "벼룩시장 가판대 대부분이 신용카드를 받지 않아서 끼띠는 현금을 챙겨요.",
+   "blank": "เครดิต",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาจ่ายค่าวัสดุด้วยบัตรเครดิตเพื่อสะสมแต้ม",
+   "en": "Wanna paid for the materials with her credit card to collect points.",
+   "ko": "완나는 포인트를 쌓으려고 자재비를 신용카드로 냈어요.",
+   "blank": "เครดิต",
    "src": "made"
   }
  ],
@@ -14815,6 +15007,22 @@
    "en": "Please check the quantity.",
    "ko": "수량을 확인해 줘.",
    "blank": "จำนวน"
+  }
+ ],
+ "w|จำนำ": [
+  {
+   "text": "ลุงคนหนึ่งเอานาฬิกาที่เคยจำนำไว้มาขายที่แผงของกิตติ",
+   "en": "An old man brought a watch he had once pawned to sell at Kitti's stall.",
+   "ko": "한 아저씨가 예전에 전당포에 맡겼던 시계를 끼띠의 가판대에 팔러 왔어요.",
+   "blank": "จำนำ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเคยต้องจำนำสร้อยทองเพื่อซื้อไม้มาซ่อมพื้น",
+   "en": "Wanna once had to pawn her gold necklace to buy wood to fix the floor.",
+   "ko": "완나는 바닥 수리할 나무를 사려고 금목걸이를 전당포에 맡긴 적이 있어요.",
+   "blank": "จำนำ",
+   "src": "made"
   }
  ],
  "w|จำแนก": [
@@ -19105,6 +19313,22 @@
    "blank": "ซื้อ"
   }
  ],
+ "w|ซื้อขาย": [
+  {
+   "text": "ตลาดนัดจตุจักรเป็นแหล่งซื้อขายของเก่าที่คนรู้จักกันดี",
+   "en": "Chatuchak market is a well-known place for buying and selling antiques.",
+   "ko": "짜뚜짝 시장은 골동품을 사고파는 곳으로 잘 알려져 있어요.",
+   "blank": "ซื้อขาย",
+   "src": "made"
+  },
+  {
+   "text": "ช่างไม้บอกวรรณาว่าไม้สักเก่ามีคนซื้อขายกันในราคาสูง",
+   "en": "The carpenter told Wanna that old teak is bought and sold at high prices.",
+   "ko": "목수는 완나에게 오래된 티크는 비싼 값에 거래된다고 했어요.",
+   "blank": "ซื้อขาย",
+   "src": "made"
+  }
+ ],
  "w|ซื่อสัตย์": [
   {
    "text": "พนักงานคนนี้ซื่อสัตย์มาก",
@@ -20754,6 +20978,22 @@
    "en": "Malee had the camera team hike into the forest to find a waterfall no one had filmed.",
    "ko": "말리는 카메라팀에게 아무도 찍은 적 없는 폭포를 찾으러 숲길을 걷게 했어요.",
    "blank": "เดินป่า",
+   "src": "made"
+  }
+ ],
+ "w|เดินหน้า": [
+  {
+   "text": "แม้ยอดขายจะตก กิตติก็ยังเดินหน้าเปิดแผงทุกสุดสัปดาห์",
+   "en": "Even though sales dropped, Kitti kept pressing on, opening his stall every weekend.",
+   "ko": "매출이 떨어졌지만 끼띠는 계속 주말마다 가판대를 열었어요.",
+   "blank": "เดินหน้า",
+   "src": "made"
+  },
+  {
+   "text": "แม้งบจะเกิน วรรณาก็ตัดสินใจเดินหน้าซ่อมห้องน้ำต่อ",
+   "en": "Even though she was over budget, Wanna decided to go ahead with repairing the bathroom.",
+   "ko": "예산을 넘었지만 완나는 화장실 수리를 계속 진행하기로 했어요.",
+   "blank": "เดินหน้า",
    "src": "made"
   }
  ],
@@ -23345,6 +23585,22 @@
    "en": "He actually wants to be alone instead.",
    "ko": "그는 오히려 혼자 있고 싶어 해.",
    "blank": "ต่างหาก"
+  }
+ ],
+ "w|ต้าน": [
+  {
+   "text": "กิตติกางร่มผ้าใบผืนใหญ่ไว้ต้านลมแรงที่พัดผ่านลานจอดรถ",
+   "en": "Kitti put up a large canvas umbrella to stand against the strong wind blowing across the parking lot.",
+   "ko": "끼띠는 주차장을 가로지르는 센 바람을 막으려고 큰 캔버스 파라솔을 펼쳤어요.",
+   "blank": "ต้าน",
+   "src": "made"
+  },
+  {
+   "text": "ช่างทาน้ำยากันปลวกให้ไม้ต้านความชื้นได้ดีขึ้น",
+   "en": "The builder applied anti-termite treatment so the wood resists moisture better.",
+   "ko": "인부는 나무가 습기를 더 잘 견디도록 흰개미 방지제를 발랐어요.",
+   "blank": "ต้าน",
+   "src": "made"
   }
  ],
  "w|ตาบอด": [
@@ -31867,6 +32123,22 @@
    "blank": "นึ่ง"
   }
  ],
+ "w|นุ่ง": [
+  {
+   "text": "ป้าขายผ้าถุงนุ่งผ้าซิ่นลายสวยมาขายของทุกเช้า",
+   "en": "The sarong-selling auntie wears a beautifully patterned tube skirt to sell every morning.",
+   "ko": "통치마 파는 아주머니는 매일 아침 무늬가 예쁜 씬 치마를 두르고 장사하러 와요.",
+   "blank": "นุ่ง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณานุ่งกางเกงเก่าขาดๆ ทุกครั้งที่ทาสีบ้าน",
+   "en": "Wanna wears old ripped pants every time she paints the house.",
+   "ko": "완나는 집에 페인트칠을 할 때마다 낡고 해진 바지를 입어요.",
+   "blank": "นุ่ง",
+   "src": "made"
+  }
+ ],
  "w|นุ่ม": [
   {
    "text": "หมอนใบนี้นุ่มมาก",
@@ -33939,6 +34211,22 @@
    "blank": "เบาหวาน"
   }
  ],
+ "w|เบิก": [
+  {
+   "text": "กิตติแวะตู้เอทีเอ็มเบิกเงินสดก่อนเดินเข้าตลาดนัด",
+   "en": "Kitti stopped at an ATM to withdraw cash before walking into the flea market.",
+   "ko": "끼띠는 벼룩시장에 들어가기 전에 ATM에 들러 현금을 인출했어요.",
+   "blank": "เบิก",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาต้องเบิกเงินออมมาจ่ายค่าเปลี่ยนหลังคา",
+   "en": "Wanna had to withdraw her savings to pay for a new roof.",
+   "ko": "완나는 지붕 교체 비용을 내려고 저축을 인출해야 했어요.",
+   "blank": "เบิก",
+   "src": "made"
+  }
+ ],
  "w|เบียร์": [
   {
    "text": "ดื่มเบียร์เย็นสักแก้ว",
@@ -35421,6 +35709,22 @@
    "src": "made"
   }
  ],
+ "w|ประมูล": [
+  {
+   "text": "ทุกเช้าวันอาทิตย์ ท้ายตลาดจะมีการประมูลพระเครื่องและของสะสม",
+   "en": "Every Sunday morning there's an auction of amulets and collectibles at the back of the market.",
+   "ko": "매주 일요일 아침이면 시장 끝에서 부적과 수집품 경매가 열려요.",
+   "blank": "ประมูล",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาประมูลโคมไฟทองเหลืองเก่าได้จากเว็บไซต์ของสะสม",
+   "en": "Wanna won an old brass lamp at auction on a collectibles website.",
+   "ko": "완나는 수집품 사이트 경매에서 오래된 황동 램프를 낙찰받았어요.",
+   "blank": "ประมูล",
+   "src": "made"
+  }
+ ],
  "w|ประเมิน": [
   {
    "text": "ครูจะประเมินผลงานของเรา",
@@ -35814,6 +36118,22 @@
    "en": "Young employees quitting quickly has become a phenomenon many companies face.",
    "ko": "젊은 직원들이 금방 그만두는 것은 많은 회사가 겪는 현상이 됐어요.",
    "blank": "ปรากฏการณ์",
+   "src": "made"
+  }
+ ],
+ "w|ปราบ": [
+  {
+   "text": "ตำรวจออกมาปราบแผงขายของปลอมในตลาดนัดเมื่อสัปดาห์ก่อน",
+   "en": "The police cracked down on stalls selling fake goods at the flea market last week.",
+   "ko": "지난주 경찰이 벼룩시장의 가짜 상품 가판대를 단속했어요.",
+   "blank": "ปราบ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาจ้างบริษัทมาปราบปลวกที่กินไม้ใต้บ้าน",
+   "en": "Wanna hired a company to get rid of the termites eating the wood under the house.",
+   "ko": "완나는 집 밑 나무를 갉아먹는 흰개미를 퇴치하려고 업체를 불렀어요.",
+   "blank": "ปราบ",
    "src": "made"
   }
  ],
@@ -36476,6 +36796,22 @@
    "en": "Piya and his bride fed each other cake amid cheers.",
    "ko": "피야와 신부는 환호 속에서 서로 케이크를 먹여 줬어요.",
    "blank": "ป้อน",
+   "src": "made"
+  }
+ ],
+ "w|ปอนด์": [
+  {
+   "text": "กิตติเจอธนบัตรอังกฤษใบละห้าปอนด์ปนอยู่ในกล่องเหรียญเก่า",
+   "en": "Kitti found a British five-pound note mixed in a box of old coins.",
+   "ko": "끼띠는 오래된 동전 상자 속에서 영국 오 파운드 지폐를 발견했어요.",
+   "blank": "ปอนด์",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาสั่งตะปูทองเหลืองเก่าจากเว็บของอังกฤษ ราคาสิบปอนด์",
+   "en": "Wanna ordered old brass nails from a British website for ten pounds.",
+   "ko": "완나는 영국 사이트에서 십 파운드짜리 오래된 황동 못을 주문했어요.",
+   "blank": "ปอนด์",
    "src": "made"
   }
  ],
@@ -37401,6 +37737,22 @@
    "en": "The lime juice is very sour.",
    "ko": "라임즙이 정말 셔.",
    "blank": "เปรี้ยว"
+  }
+ ],
+ "w|เปล่ง": [
+  {
+   "text": "พ่อค้าผลไม้เปล่งเสียงเรียกลูกค้าดังไปทั้งซอย",
+   "en": "The fruit seller called out to customers so loudly it echoed down the whole lane.",
+   "ko": "과일 장수는 골목 전체에 울리도록 큰 소리로 손님을 불렀어요.",
+   "blank": "เปล่ง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเปล่งเสียงร้องดีใจเมื่อเปิดผนังแล้วเจอลายไม้แกะสลักเดิม",
+   "en": "Wanna let out a cry of joy when she opened the wall and found the original wood carving.",
+   "ko": "완나는 벽을 열고 원래의 나무 조각 무늬를 발견하자 기쁨의 탄성을 질렀어요.",
+   "blank": "เปล่ง",
+   "src": "made"
   }
  ],
  "w|เปล่า": [
@@ -38959,6 +39311,22 @@
    "blank": "ผู้ใช้"
   }
  ],
+ "w|ผู้ซื้อ": [
+  {
+   "text": "ผู้ซื้อส่วนใหญ่ที่แผงของกิตติเป็นนักสะสมแผ่นเสียง",
+   "en": "Most of the buyers at Kitti's stall are record collectors.",
+   "ko": "끼띠의 가판대에 오는 구매자 대부분은 레코드 수집가예요.",
+   "blank": "ผู้ซื้อ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาขายบานประตูเก่าให้ผู้ซื้อที่สะสมของโบราณ",
+   "en": "Wanna sold the old door panels to a buyer who collects antiques.",
+   "ko": "완나는 오래된 문짝을 골동품 수집하는 구매자에게 팔았어요.",
+   "blank": "ผู้ซื้อ",
+   "src": "made"
+  }
+ ],
  "w|ผู้เฒ่า": [
   {
    "text": "ผู้เฒ่าในหมู่บ้านผูกข้อมือให้ชัยและเจ้าสาวเพื่อความเป็นสิริมงคล",
@@ -40077,6 +40445,22 @@
    "en": "I'm in the sales department.",
    "ko": "나는 영업 쪽에 있어.",
    "blank": "ฝ่าย"
+  }
+ ],
+ "w|ฝ้าย": [
+  {
+   "text": "กิตติเลือกเสื้อฝ้ายลายดอกมาสองตัวเพราะใส่สบายหน้าร้อน",
+   "en": "Kitti picked out two floral cotton shirts because they're comfortable in the hot season.",
+   "ko": "끼띠는 더운 계절에 입기 편해서 꽃무늬 면 셔츠 두 벌을 골랐어요.",
+   "blank": "ฝ้าย",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเย็บผ้าม่านฝ้ายสีขาวเองเพื่อให้เข้ากับบ้านไม้",
+   "en": "Wanna sewed white cotton curtains herself to match the wooden house.",
+   "ko": "완나는 목조 집에 어울리게 하얀 면 커튼을 직접 바느질했어요.",
+   "blank": "ฝ้าย",
+   "src": "made"
   }
  ],
  "w|ฝ่ายค้าน": [
@@ -41655,6 +42039,22 @@
    "src": "made"
   }
  ],
+ "w|พินิจ": [
+  {
+   "text": "กิตติพินิจตราประทับใต้ถ้วยชามอยู่นานก่อนจะยอมจ่ายเงิน",
+   "en": "Kitti examined the maker's mark under the bowl for a long time before agreeing to pay.",
+   "ko": "끼띠는 돈을 내기 전에 그릇 밑의 낙관을 한참 살펴봤어요.",
+   "blank": "พินิจ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาพินิจรอยร้าวบนผนังอย่างละเอียดก่อนเรียกวิศวกรมาดู",
+   "en": "Wanna examined the crack in the wall carefully before calling an engineer to look.",
+   "ko": "완나는 엔지니어를 부르기 전에 벽의 금을 꼼꼼히 살펴봤어요.",
+   "blank": "พินิจ",
+   "src": "made"
+  }
+ ],
  "w|พิพากษา": [
   {
    "text": "ศาลจะพิพากษาคดีลักทรัพย์ที่วิชัยทำสำนวนในเดือนหน้า",
@@ -43107,6 +43507,22 @@
    "src": "made"
   }
  ],
+ "w|แฟชั่น": [
+  {
+   "text": "แผงเสื้อผ้ามือสองของกิตติมีเสื้อแฟชั่นยุคเก้าศูนย์เยอะมาก",
+   "en": "Kitti's secondhand clothing stall has lots of nineties fashion.",
+   "ko": "끼띠의 중고 옷 가판대에는 구십 년대 패션 옷이 아주 많아요.",
+   "blank": "แฟชั่น",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาไม่สนแฟชั่นการตกแต่งบ้านสมัยนี้ อยากเก็บความเก่าไว้",
+   "en": "Wanna doesn't care for today's home decor fashion; she wants to keep the old feel.",
+   "ko": "완나는 요즘 인테리어 유행엔 관심 없고 옛 느낌을 지키고 싶어요.",
+   "blank": "แฟชั่น",
+   "src": "made"
+  }
+ ],
  "w|แฟน": [
   {
    "text": "แฟนรออยู่",
@@ -44016,6 +44432,22 @@
    "en": "Piya once went to collect medicinal plant samples in Sichuan province.",
    "ko": "삐야는 쓰촨성에 약초 시료를 채취하러 간 적이 있어요.",
    "blank": "มณฑล",
+   "src": "made"
+  }
+ ],
+ "w|มณี": [
+  {
+   "text": "ป้าแผงข้างๆ บอกกิตติว่าแหวนวงนี้ฝังมณีแท้จากจันทบุรี",
+   "en": "The auntie at the next stall told Kitti that this ring is set with a real gem from Chanthaburi.",
+   "ko": "옆 가판대 아주머니는 끼띠에게 이 반지에 짠타부리산 진짜 보석이 박혀 있다고 했어요.",
+   "blank": "มณี",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเจอกล่องเครื่องประดับฝังมณีของคุณยายใต้พื้นห้องนอน",
+   "en": "Wanna found her grandmother's jewelry box set with gems under the bedroom floor.",
+   "ko": "완나는 침실 바닥 밑에서 할머니의 보석 박힌 장신구 상자를 발견했어요.",
+   "blank": "มณี",
    "src": "made"
   }
  ],
@@ -48267,6 +48699,22 @@
    "src": "made"
   }
  ],
+ "w|รวมถึง": [
+  {
+   "text": "กิตติขายของเล่นสังกะสี รวมถึงตุ๊กตาไม้จากยุคก่อนสงคราม",
+   "en": "Kitti sells tin toys, including wooden dolls from before the war.",
+   "ko": "끼띠는 양철 장난감을 팔아요, 전쟁 이전의 나무 인형까지 포함해서요.",
+   "blank": "รวมถึง",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาต้องซ่อมหลายจุด รวมถึงท่อน้ำที่รั่วใต้ห้องครัว",
+   "en": "Wanna has to fix many spots, including the leaking pipe under the kitchen.",
+   "ko": "완나는 부엌 밑에서 새는 수도관을 포함해 여러 곳을 고쳐야 해요.",
+   "blank": "รวมถึง",
+   "src": "made"
+  }
+ ],
  "w|รวมทั้ง": [
   {
    "text": "ประยุทธต้องเตรียมห้องประชุม รวมทั้งน้ำดื่มสำหรับแขกทุกคน",
@@ -49841,6 +50289,22 @@
    "en": "This report is nicely detailed.",
    "ko": "이 보고서는 자세히 잘 됐어.",
    "blank": "รายงาน"
+  }
+ ],
+ "w|รายจ่าย": [
+  {
+   "text": "กิตติจดรายจ่ายทุกบาทที่ใช้ในตลาดนัดลงสมุดเล่มเล็ก",
+   "en": "Kitti writes down every baht he spends at the flea market in a little notebook.",
+   "ko": "끼띠는 벼룩시장에서 쓴 지출을 한 바트도 빠짐없이 작은 수첩에 적어요.",
+   "blank": "รายจ่าย",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาทำตารางรายจ่ายค่าซ่อมบ้านไว้ในโทรศัพท์",
+   "en": "Wanna keeps a spreadsheet of house repair expenses on her phone.",
+   "ko": "완나는 휴대폰에 집수리 지출 표를 만들어 두었어요.",
+   "blank": "รายจ่าย",
+   "src": "made"
   }
  ],
  "w|รายชื่อ": [
@@ -52443,6 +52907,22 @@
    "src": "made"
   }
  ],
+ "w|ลิตร": [
+  {
+   "text": "กิตติซื้อน้ำมะพร้าวขวดหนึ่งลิตรมาดื่มแก้ร้อนตอนเที่ยง",
+   "en": "Kitti bought a one-liter bottle of coconut water to drink against the heat at noon.",
+   "ko": "끼띠는 정오 더위를 식히려고 일 리터짜리 코코넛 워터를 샀어요.",
+   "blank": "ลิตร",
+   "src": "made"
+  },
+  {
+   "text": "ผนังห้องนอนใหญ่ใช้สีไปทั้งหมดเกือบสิบลิตร",
+   "en": "The master bedroom walls used up almost ten liters of paint.",
+   "ko": "안방 벽을 칠하는 데 페인트가 거의 십 리터나 들었어요.",
+   "blank": "ลิตร",
+   "src": "made"
+  }
+ ],
  "w|ลิ้น": [
   {
    "text": "เผ็ดจนลิ้นชา",
@@ -52979,6 +53459,22 @@
    "en": "This bag of candy is very sweet.",
    "ko": "이 봉지 사탕이 정말 달아.",
    "blank": "ลูกอม"
+  }
+ ],
+ "w|ลูบ": [
+  {
+   "text": "กิตติลูบปกหนังของสมุดเก่าเบาๆ ก่อนตัดสินใจซื้อ",
+   "en": "Kitti gently ran his hand over the leather cover of the old notebook before deciding to buy it.",
+   "ko": "끼띠는 사기로 결정하기 전에 오래된 공책의 가죽 표지를 살살 쓰다듬었어요.",
+   "blank": "ลูบ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาลูบราวบันไดที่ขัดใหม่แล้วยิ้มอย่างพอใจ",
+   "en": "Wanna ran her hand along the newly sanded banister and smiled with satisfaction.",
+   "ko": "완나는 새로 사포질한 계단 난간을 쓰다듬으며 흡족하게 웃었어요.",
+   "blank": "ลูบ",
+   "src": "made"
   }
  ],
  "w|เล็ก": [
@@ -55347,6 +55843,22 @@
    "blank": "เวียนหัว"
   }
  ],
+ "w|แวดล้อม": [
+  {
+   "text": "แผงของกิตติถูกแวดล้อมด้วยร้านอาหารจนมีคนเดินผ่านทั้งวัน",
+   "en": "Kitti's stall is surrounded by food stands, so people walk past all day.",
+   "ko": "끼띠의 가판대는 음식점들에 둘러싸여 있어서 하루 종일 사람들이 지나가요.",
+   "blank": "แวดล้อม",
+   "src": "made"
+  },
+  {
+   "text": "บ้านของวรรณาถูกแวดล้อมด้วยต้นมะม่วงที่คุณตาปลูกไว้",
+   "en": "Wanna's house is surrounded by mango trees her grandfather planted.",
+   "ko": "완나의 집은 할아버지가 심은 망고나무들에 둘러싸여 있어요.",
+   "blank": "แวดล้อม",
+   "src": "made"
+  }
+ ],
  "w|แวดวง": [
   {
    "text": "ประยุทธรู้จักคนในแวดวงละครเวทีเกือบทุกคน",
@@ -56381,6 +56893,22 @@
    "src": "made"
   }
  ],
+ "w|สตางค์": [
+  {
+   "text": "ลุงขายเหรียญบอกกิตติว่าเหรียญยี่สิบห้าสตางค์รุ่นเก่ามีคนตามหาเยอะ",
+   "en": "The coin seller told Kitti that old twenty-five-satang coins are much sought after.",
+   "ko": "동전 파는 아저씨는 끼띠에게 옛날 이십오 사땅 동전을 찾는 사람이 많다고 했어요.",
+   "blank": "สตางค์",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเจอเหรียญห้าสิบสตางค์เก่าๆ ตกอยู่ในร่องพื้นไม้",
+   "en": "Wanna found old fifty-satang coins stuck in the gaps of the wooden floor.",
+   "ko": "완나는 나무 바닥 틈에 떨어져 있던 옛날 오십 사땅 동전을 발견했어요.",
+   "blank": "สตางค์",
+   "src": "made"
+  }
+ ],
  "w|สติ": [
   {
    "text": "เอกพยายามตั้งสติก่อนพูด เพราะไม่อยากทะเลาะกันอีก",
@@ -57083,6 +57611,22 @@
    "src": "made"
   }
  ],
+ "w|สมมุติ": [
+  {
+   "text": "กิตติบอกลูกค้าว่าสมมุติซื้อสองชิ้นจะลดให้อีกร้อยบาท",
+   "en": "Kitti told the customer that, say, if she bought two pieces, he'd knock off another hundred baht.",
+   "ko": "끼띠는 손님에게 만약 두 개를 사면 백 바트를 더 깎아 주겠다고 했어요.",
+   "blank": "สมมุติ",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาลองคิดว่าสมมุติรื้อผนังนี้ออก ห้องครัวจะกว้างขึ้นแค่ไหน",
+   "en": "Wanna tried to imagine how much bigger the kitchen would be if, say, she took down this wall.",
+   "ko": "완나는 이 벽을 허문다고 치면 부엌이 얼마나 넓어질지 상상해 봤어요.",
+   "blank": "สมมุติ",
+   "src": "made"
+  }
+ ],
  "w|สมรรถภาพ": [
   {
    "text": "ห้องสมุดมีหนังสือเรื่องการฟื้นฟูสมรรถภาพผู้สูงอายุหลายเล่ม",
@@ -57157,6 +57701,22 @@
    "en": "I just signed up for membership.",
    "ko": "방금 회원 가입했어.",
    "blank": "สมัคร"
+  }
+ ],
+ "w|สมัครใจ": [
+  {
+   "text": "ทุกเดือนพ่อค้าในตลาดสมัครใจมาช่วยกันเก็บขยะหลังตลาดวาย",
+   "en": "Every month the market traders volunteer to help clean up the trash after the market closes.",
+   "ko": "매달 시장 상인들은 장이 끝난 뒤 자발적으로 함께 쓰레기를 치워요.",
+   "blank": "สมัครใจ",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนบ้านสมัครใจมาช่วยวรรณายกตู้ไม้ขึ้นชั้นสอง",
+   "en": "A neighbor volunteered to help Wanna carry the wooden cabinet up to the second floor.",
+   "ko": "이웃이 자진해서 완나를 도와 나무 장을 이 층으로 옮겼어요.",
+   "blank": "สมัครใจ",
+   "src": "made"
   }
  ],
  "w|สมัครสมาชิก": [
@@ -59985,6 +60545,22 @@
    "blank": "สุดสัปดาห์"
   }
  ],
+ "w|สุทธิ": [
+  {
+   "text": "หักค่าแผงแล้ว กิตติได้กำไรสุทธิวันนี้แค่ห้าร้อยบาท",
+   "en": "After deducting the stall fee, Kitti's net profit today was only five hundred baht.",
+   "ko": "가판대 비용을 빼고 나니 끼띠의 오늘 순이익은 오백 바트뿐이었어요.",
+   "blank": "สุทธิ",
+   "src": "made"
+  },
+  {
+   "text": "ช่างบอกวรรณาว่าพื้นที่สุทธิของห้องใต้หลังคาใช้วางเตียงได้พอดี",
+   "en": "The builder told Wanna the net floor area of the attic is just enough for a bed.",
+   "ko": "인부는 완나에게 다락방 실면적이 침대 하나 놓기에 딱 맞다고 했어요.",
+   "blank": "สุทธิ",
+   "src": "made"
+  }
+ ],
  "w|สุนัข": [
   {
    "text": "สุนัขของคุณกัดหรือไม่?",
@@ -61227,6 +61803,22 @@
    "src": "made"
   }
  ],
+ "w|หนวกหู": [
+  {
+   "text": "เสียงเพลงจากลำโพงแผงข้างๆ หนวกหูจนกิตติต้องตะโกนคุยกับลูกค้า",
+   "en": "The music from the next stall's speaker was so loud that Kitti had to shout to talk to customers.",
+   "ko": "옆 가판대 스피커 음악이 너무 시끄러워서 끼띠는 손님과 소리치며 말해야 했어요.",
+   "blank": "หนวกหู",
+   "src": "made"
+  },
+  {
+   "text": "เสียงเลื่อยไฟฟ้าหนวกหูจนวรรณาต้องใส่ที่อุดหู",
+   "en": "The power saw was so loud that Wanna had to wear earplugs.",
+   "ko": "전기톱 소리가 너무 시끄러워서 완나는 귀마개를 껴야 했어요.",
+   "blank": "หนวกหู",
+   "src": "made"
+  }
+ ],
  "w|หน่วย": [
   {
    "text": "หน่วยของเขาอยู่ชั้นสอง",
@@ -61283,6 +61875,22 @@
    "en": "Today's work is too heavy.",
    "ko": "오늘 일이 너무 무거워.",
    "blank": "หนัก"
+  }
+ ],
+ "w|หนักแน่น": [
+  {
+   "text": "กิตติตอบเสียงหนักแน่นว่าจะไม่ลดราคาพัดลมโบราณตัวนี้",
+   "en": "Kitti answered firmly that he would not lower the price of this antique fan.",
+   "ko": "끼띠는 이 골동품 선풍기는 값을 깎아 주지 않겠다고 단호하게 대답했어요.",
+   "blank": "หนักแน่น",
+   "src": "made"
+  },
+  {
+   "text": "เสาไม้ทั้งสี่ต้นยังหนักแน่นแม้บ้านจะอายุเกือบร้อยปี",
+   "en": "All four wooden pillars are still solid even though the house is almost a hundred years old.",
+   "ko": "집이 거의 백 년이 됐는데도 나무 기둥 네 개는 여전히 튼튼해요.",
+   "blank": "หนักแน่น",
+   "src": "made"
   }
  ],
  "w|หนัง": [
@@ -64609,6 +65217,22 @@
    "blank": "เหม็น"
   }
  ],
+ "w|เหมา": [
+  {
+   "text": "ตอนตลาดใกล้วาย กิตติเหมาหนังสือการ์ตูนเก่าทั้งลังไปในราคาเดียว",
+   "en": "As the market was closing, Kitti bought a whole crate of old comics for one price.",
+   "ko": "장이 끝나 갈 무렵 끼띠는 옛날 만화책 한 상자를 통째로 한 가격에 샀어요.",
+   "blank": "เหมา",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาเหมาช่างทาสีให้ทาทั้งบ้านในราคาเดียว",
+   "en": "Wanna hired the painter to paint the whole house for a single flat price.",
+   "ko": "완나는 도장공에게 집 전체 칠을 한 가격에 통째로 맡겼어요.",
+   "blank": "เหมา",
+   "src": "made"
+  }
+ ],
  "w|เหมาะ": [
   {
    "text": "ชุดนี้เหมาะกับเธอมาก",
@@ -65084,6 +65708,22 @@
    "en": "The pho shop Napha's team likes gives you a big plate of Thai basil.",
    "ko": "나파네 팀이 즐겨 가는 쌀국수집은 타이 바질을 큰 접시로 줘요.",
    "blank": "โหระพา",
+   "src": "made"
+  }
+ ],
+ "w|โหล": [
+  {
+   "text": "กิตติซื้อแก้วกาแฟลายวินเทจมาครึ่งโหลในราคาถูกมาก",
+   "en": "Kitti bought half a dozen vintage-pattern coffee mugs very cheaply.",
+   "ko": "끼띠는 빈티지 무늬 커피잔 반 다스를 아주 싸게 샀어요.",
+   "blank": "โหล",
+   "src": "made"
+  },
+  {
+   "text": "วรรณาสั่งกระเบื้องลายโบราณมาสามโหลเพื่อปูห้องครัว",
+   "en": "Wanna ordered three dozen antique-patterned tiles to lay in the kitchen.",
+   "ko": "완나는 부엌에 깔려고 옛 무늬 타일 세 다스를 주문했어요.",
+   "blank": "โหล",
    "src": "made"
   }
  ],
