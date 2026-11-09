@@ -1317,6 +1317,22 @@
    "src": "made"
   }
  ],
+ "w|antrean": [
+  {
+   "text": "Agus penasaran melihat antrean panjang di depan lapak piringan hitam.",
+   "en": "Agus was curious to see the long queue in front of the vinyl record stall.",
+   "ko": "아구스는 레코드판 노점 앞의 긴 줄을 보고 궁금해졌어요.",
+   "blank": "antrean",
+   "src": "made"
+  },
+  {
+   "text": "Menjelang musim liburan, antrean di toko kue langganan Wati memanjang.",
+   "en": "Before the holiday season, the queue at Wati's favorite bakery gets longer.",
+   "ko": "휴가철이 다가오면 와티 단골 빵집의 줄이 길어져요.",
+   "blank": "antrean",
+   "src": "made"
+  }
+ ],
  "w|antusias": [
   {
    "text": "Rudi antusias merencanakan kejutan ulang tahun untuk kakaknya.",
@@ -3317,6 +3333,22 @@
    "blank": "basah"
   }
  ],
+ "w|basi": [
+  {
+   "text": "Agus batal membeli kue karena baunya sudah basi.",
+   "en": "Agus decided not to buy the cake because it already smelled stale.",
+   "ko": "아구스는 케이크에서 쉰 냄새가 나서 사지 않았어요.",
+   "blank": "basi",
+   "src": "made"
+  },
+  {
+   "text": "Di musim panas yang lembap, nasi cepat basi kalau Wati lupa menyimpannya.",
+   "en": "In the humid hot season, rice goes off quickly if Wati forgets to store it.",
+   "ko": "습한 더운 철에는 와티가 밥을 잘 보관하지 않으면 금방 쉬어요.",
+   "blank": "basi",
+   "src": "made"
+  }
+ ],
  "w|basket": [
   {
    "text": "Eko meliput final basket antarsekolah untuk halaman olahraga.",
@@ -4143,6 +4175,22 @@
    "blank": "bentuk"
   }
  ],
+ "w|benturan": [
+  {
+   "text": "Ada bekas benturan di sudut radio tua yang dibeli Agus.",
+   "en": "There's a dent from a knock on the corner of the old radio Agus bought.",
+   "ko": "아구스가 산 낡은 라디오 모서리에 부딪힌 자국이 있어요.",
+   "blank": "benturan",
+   "src": "made"
+  },
+  {
+   "text": "Wati mendengar suara benturan keras ketika dahan jatuh menimpa atap.",
+   "en": "Wati heard a loud crash when a branch fell onto the roof.",
+   "ko": "나뭇가지가 지붕에 떨어지자 와티는 큰 부딪힘 소리를 들었어요.",
+   "blank": "benturan",
+   "src": "made"
+  }
+ ],
  "w|benua": [
   {
    "text": "Agus membaca bahwa burung itu terbang dari benua lain setiap musim dingin.",
@@ -4245,6 +4293,22 @@
    "en": "Everything will end.",
    "ko": "모든 건 끝나기 마련이야.",
    "blank": "berakhir"
+  }
+ ],
+ "w|berakibat": [
+  {
+   "text": "Menurut Agus, menawar terlalu rendah bisa berakibat penjual tersinggung.",
+   "en": "According to Agus, bargaining too low can end up offending the seller.",
+   "ko": "아구스에 따르면 값을 너무 깎으면 장수가 기분 상할 수 있어요.",
+   "blank": "berakibat",
+   "src": "made"
+  },
+  {
+   "text": "Kemarau panjang tahun ini berakibat harga cabai melonjak, kata Wati.",
+   "en": "This year's long drought led to chili prices soaring, Wati said.",
+   "ko": "올해 긴 가뭄 때문에 고춧값이 치솟았다고 와티가 말했어요.",
+   "blank": "berakibat",
+   "src": "made"
   }
  ],
  "w|beraksi": [
@@ -6256,6 +6320,22 @@
    "en": "Intan read a brochure about a kingdom that once flourished in East Java.",
    "ko": "인탄은 예전에 동부 자와에서 번성했던 왕국에 관한 안내 책자를 읽었어요.",
    "blank": "berjaya",
+   "src": "made"
+  }
+ ],
+ "w|berjualan": [
+  {
+   "text": "Setiap Minggu pagi, Agus berjualan buku bekas di dekat stasiun.",
+   "en": "Every Sunday morning, Agus sells secondhand books near the station.",
+   "ko": "아구스는 일요일 아침마다 역 근처에서 헌책을 팔아요.",
+   "blank": "berjualan",
+   "src": "made"
+  },
+  {
+   "text": "Saat musim durian, tetangga Wati berjualan di depan rumah sampai malam.",
+   "en": "During durian season, Wati's neighbor sells in front of the house until night.",
+   "ko": "두리안 철이 되면 와티의 이웃은 밤까지 집 앞에서 장사해요.",
+   "blank": "berjualan",
    "src": "made"
   }
  ],
@@ -10609,6 +10689,22 @@
    "blank": "Bus"
   }
  ],
+ "w|busana": [
+  {
+   "text": "Agus melihat gaun pengantin dan busana pesta tahun delapan puluhan dijual di satu lapak.",
+   "en": "Agus saw wedding dresses and eighties party outfits sold at one stall.",
+   "ko": "아구스는 한 노점에서 웨딩드레스와 80년대 파티 옷을 파는 걸 봤어요.",
+   "blank": "busana",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengganti koleksi busana di lemarinya dengan pakaian yang lebih tipis saat kemarau.",
+   "en": "Wati swapped the clothes in her wardrobe for lighter ones in the dry season.",
+   "ko": "와티는 건기가 되면 옷장의 옷을 더 얇은 것으로 바꿔요.",
+   "blank": "busana",
+   "src": "made"
+  }
+ ],
  "w|busuk": [
   {
    "text": "Buah itu sudah busuk di kulkas.",
@@ -14883,6 +14979,22 @@
    "blank": "Garis"
   }
  ],
+ "w|garpu": [
+  {
+   "text": "Agus membeli satu set garpu perak tua dari lapak paling ujung.",
+   "en": "Agus bought a set of old silver forks from the stall at the very end.",
+   "ko": "아구스는 맨 끝 노점에서 오래된 은포크 한 세트를 샀어요.",
+   "blank": "garpu",
+   "src": "made"
+  },
+  {
+   "text": "Saat musim hujan tiba, Wati makan mi kuah panas dengan garpu dan sendok.",
+   "en": "When the rainy season arrives, Wati eats hot noodle soup with a fork and spoon.",
+   "ko": "우기가 오면 와티는 포크와 숟가락으로 뜨거운 국수를 먹어요.",
+   "blank": "garpu",
+   "src": "made"
+  }
+ ],
  "w|gas": [
   {
    "text": "Kompor gas di dapur rusak.",
@@ -16501,6 +16613,22 @@
    "blank": "harta"
   }
  ],
+ "w|harum": [
+  {
+   "text": "Agus mencium bau harum dari lapak penjual dupa dan minyak wangi.",
+   "en": "Agus caught a fragrant smell from the incense and perfume stall.",
+   "ko": "아구스는 향과 향수 파는 노점에서 좋은 냄새를 맡았어요.",
+   "blank": "harum",
+   "src": "made"
+  },
+  {
+   "text": "Bau tanah yang harum setelah hujan pertama selalu membuat Wati tersenyum.",
+   "en": "The fragrant smell of earth after the first rain always makes Wati smile.",
+   "ko": "첫비 뒤 흙냄새는 늘 와티를 미소 짓게 해요.",
+   "blank": "harum",
+   "src": "made"
+  }
+ ],
  "w|harus": [
   {
    "text": "Kamu harus istirahat.",
@@ -17814,6 +17942,22 @@
    "en": "The questionnaire is Dewi's main instrument for measuring customer satisfaction.",
    "ko": "그 설문지는 디위가 고객 만족도를 재는 주된 도구예요.",
    "blank": "instrumen",
+   "src": "made"
+  }
+ ],
+ "w|integritas": [
+  {
+   "text": "Agus suka belanja di lapak Bu Sri karena integritas penjualnya terjaga.",
+   "en": "Agus likes shopping at Mrs. Sri's stall because the seller has integrity.",
+   "ko": "아구스는 장사가 정직한 스리 아주머니의 노점에서 사는 걸 좋아해요.",
+   "blank": "integritas",
+   "src": "made"
+  },
+  {
+   "text": "Wati menghormati integritas petani yang tidak menaikkan harga beras saat paceklik.",
+   "en": "Wati respects the integrity of farmers who don't raise rice prices during lean times.",
+   "ko": "와티는 흉년에도 쌀값을 올리지 않는 농부들의 정직함을 존중해요.",
+   "blank": "integritas",
    "src": "made"
   }
  ],
@@ -19593,6 +19737,22 @@
    "blank": "kadang-kadang"
   }
  ],
+ "w|kadar": [
+  {
+   "text": "Agus memeriksa kadar perak pada sendok tua itu dengan cairan khusus.",
+   "en": "Agus checked the silver content of the old spoon with a special liquid.",
+   "ko": "아구스는 특수 용액으로 그 낡은 숟가락의 은 함량을 확인했어요.",
+   "blank": "kadar",
+   "src": "made"
+  },
+  {
+   "text": "Wati memasang alat pengukur kadar kelembapan di kamar tidurnya.",
+   "en": "Wati installed a humidity-level meter in her bedroom.",
+   "ko": "와티는 침실에 습도 측정기를 달았어요.",
+   "blank": "kadar",
+   "src": "made"
+  }
+ ],
  "w|kado": [
   {
    "text": "Bayu mencari kado unik untuk ulang tahun pacarnya di antara tumpukan barang bekas.",
@@ -20201,6 +20361,22 @@
    "src": "made"
   }
  ],
+ "w|kantin": [
+  {
+   "text": "Agus menemukan papan menu kantin sekolah zaman dulu di tumpukan barang bekas.",
+   "en": "Agus found an old school canteen menu board in a pile of secondhand goods.",
+   "ko": "아구스는 중고품 더미에서 옛날 학교 매점 메뉴판을 찾았어요.",
+   "blank": "kantin",
+   "src": "made"
+  },
+  {
+   "text": "Saat musim hujan, kantin kantor Wati mulai menjual wedang ronde.",
+   "en": "In the rainy season, the canteen at Wati's office starts selling wedang ronde.",
+   "ko": "우기가 되면 와티네 회사 구내식당은 웨당 론데를 팔기 시작해요.",
+   "blank": "kantin",
+   "src": "made"
+  }
+ ],
  "w|kantong": [
   {
    "text": "Kantong plastik itu sudah robek.",
@@ -20303,6 +20479,22 @@
    "en": "Just say whenever.",
    "ko": "언제든 그냥 말해.",
    "blank": "kapan"
+  }
+ ],
+ "w|kapas": [
+  {
+   "text": "Agus membungkus cangkir antik itu dengan kapas supaya tidak pecah.",
+   "en": "Agus wrapped the antique cup in cotton so it wouldn't break.",
+   "ko": "아구스는 깨지지 않게 옛날 찻잔을 솜으로 쌌어요.",
+   "blank": "kapas",
+   "src": "made"
+  },
+  {
+   "text": "Saat kemarau, Wati lebih suka memakai kemeja kapas yang tipis.",
+   "en": "In the dry season, Wati prefers wearing thin cotton shirts.",
+   "ko": "건기에는 와티가 얇은 면 셔츠를 즐겨 입어요.",
+   "blank": "kapas",
+   "src": "made"
   }
  ],
  "w|kapasitas": [
@@ -21576,6 +21768,22 @@
    "en": "The big waves caused worry among the parents on the beach.",
    "ko": "큰 파도에 해변의 부모들이 잠시 불안해했어요.",
    "blank": "kecemasan",
+   "src": "made"
+  }
+ ],
+ "w|kecenderungan": [
+  {
+   "text": "Agus melihat kecenderungan anak muda sekarang menyukai barang antik.",
+   "en": "Agus has noticed a tendency among young people these days to love antiques.",
+   "ko": "아구스는 요즘 젊은이들이 골동품을 좋아하는 경향을 느껴요.",
+   "blank": "kecenderungan",
+   "src": "made"
+  },
+  {
+   "text": "Wati punya kecenderungan malas berolahraga saat musim hujan.",
+   "en": "Wati has a tendency to skip exercise in the rainy season.",
+   "ko": "와티는 우기가 되면 운동을 게을리하는 경향이 있어요.",
+   "blank": "kecenderungan",
    "src": "made"
   }
  ],
@@ -23189,6 +23397,22 @@
    "src": "made"
   }
  ],
+ "w|kemewahan": [
+  {
+   "text": "Bagi Agus, kemewahan sejati adalah menemukan buku langka dengan harga murah.",
+   "en": "For Agus, true luxury is finding a rare book at a low price.",
+   "ko": "아구스에게 진짜 사치는 희귀한 책을 싼값에 찾는 거예요.",
+   "blank": "kemewahan",
+   "src": "made"
+  },
+  {
+   "text": "Bagi Wati, kemewahan kecil di musim hujan adalah secangkir cokelat panas di bawah selimut.",
+   "en": "For Wati, a small luxury in the rainy season is a cup of hot chocolate under a blanket.",
+   "ko": "와티에게 우기의 작은 사치는 이불 속에서 마시는 핫초코 한 잔이에요.",
+   "blank": "kemewahan",
+   "src": "made"
+  }
+ ],
  "w|kemiskinan": [
   {
    "text": "Kelas Budi menggalang dana untuk keluarga yang hidup dalam kemiskinan.",
@@ -23895,6 +24119,22 @@
    "en": "My throat is so dry after running.",
    "ko": "달린 뒤 목이 정말 말라.",
    "blank": "Kering"
+  }
+ ],
+ "w|keripik": [
+  {
+   "text": "Sambil berkeliling, Agus mengunyah keripik singkong pedas.",
+   "en": "As he walked around, Agus munched on spicy cassava chips.",
+   "ko": "아구스는 돌아다니며 매운 카사바 칩을 씹었어요.",
+   "blank": "keripik",
+   "src": "made"
+  },
+  {
+   "text": "Hujan seharian membuat Wati betah di rumah sambil makan keripik pisang.",
+   "en": "The all-day rain kept Wati happily at home eating banana chips.",
+   "ko": "하루 종일 비가 와서 와티는 집에서 바나나 칩을 먹으며 뒹굴었어요.",
+   "blank": "keripik",
+   "src": "made"
   }
  ],
  "w|kerja": [
@@ -25241,6 +25481,22 @@
    "en": "The new restaurant hired a talented chef.",
    "ko": "새 식당이 재능 있는 요리사를 고용했어.",
    "blank": "koki"
+  }
+ ],
+ "w|koktail": [
+  {
+   "text": "Agus membeli gelas koktail bergaya lama untuk kafe adiknya.",
+   "en": "Agus bought vintage cocktail glasses for his sister's café.",
+   "ko": "아구스는 여동생 카페에 쓸 옛날식 칵테일 잔을 샀어요.",
+   "blank": "koktail",
+   "src": "made"
+  },
+  {
+   "text": "Saat kemarau panjang, Wati membuat koktail buah tanpa alkohol untuk keluarganya.",
+   "en": "During the long dry season, Wati makes non-alcoholic fruit cocktails for her family.",
+   "ko": "긴 건기에 와티는 가족을 위해 무알코올 과일 칵테일을 만들어요.",
+   "blank": "koktail",
+   "src": "made"
   }
  ],
  "w|kolam": [
@@ -28535,6 +28791,22 @@
    "src": "made"
   }
  ],
+ "w|liontin": [
+  {
+   "text": "Agus membelikan ibunya liontin kuno berbentuk bunga melati.",
+   "en": "Agus bought his mother an antique pendant shaped like a jasmine flower.",
+   "ko": "아구스는 엄마에게 재스민꽃 모양의 옛 펜던트를 사 드렸어요.",
+   "blank": "liontin",
+   "src": "made"
+  },
+  {
+   "text": "Wati memakai kalung dengan liontin berbentuk daun untuk menyambut musim gugur di luar negeri.",
+   "en": "Wati wore a necklace with a leaf-shaped pendant to welcome autumn abroad.",
+   "ko": "와티는 외국에서 가을을 맞으며 나뭇잎 모양 펜던트 목걸이를 했어요.",
+   "blank": "liontin",
+   "src": "made"
+  }
+ ],
  "w|lipat": [
   {
    "text": "Tolong lipat baju yang sudah kering.",
@@ -28547,6 +28819,22 @@
    "en": "Fold that letter before putting it in.",
    "ko": "넣기 전에 그 편지를 접어.",
    "blank": "Lipat"
+  }
+ ],
+ "w|lipstik": [
+  {
+   "text": "Agus menemukan tabung lipstik antik berlapis emas di dalam kotak perhiasan.",
+   "en": "Agus found an antique gold-plated lipstick case in a jewelry box.",
+   "ko": "아구스는 보석함 안에서 금도금된 옛날 립스틱 케이스를 찾았어요.",
+   "blank": "lipstik",
+   "src": "made"
+  },
+  {
+   "text": "Bibir Wati kering di musim kemarau, jadi ia memakai lipstik yang melembapkan.",
+   "en": "Wati's lips get dry in the dry season, so she wears a moisturizing lipstick.",
+   "ko": "건기에는 와티의 입술이 건조해져서 보습 립스틱을 발라요.",
+   "blank": "lipstik",
+   "src": "made"
   }
  ],
  "w|lisensi": [
@@ -32791,6 +33079,22 @@
    "blank": "memberitahukan"
   }
  ],
+ "w|memberitakan": [
+  {
+   "text": "Koran lokal memberitakan pasar loak tempat Agus berjualan sebagai tujuan wisata baru.",
+   "en": "The local paper reported on the flea market where Agus sells as a new tourist spot.",
+   "ko": "지역 신문은 아구스가 장사하는 벼룩시장을 새 관광지로 소개했어요.",
+   "blank": "memberitakan",
+   "src": "made"
+  },
+  {
+   "text": "Televisi memberitakan bahwa musim hujan tahun ini datang lebih awal, dan Wati segera membeli jas hujan.",
+   "en": "The TV reported that this year's rainy season came early, and Wati quickly bought a raincoat.",
+   "ko": "TV에서 올해 우기가 일찍 온다고 보도하자 와티는 곧바로 비옷을 샀어요.",
+   "blank": "memberitakan",
+   "src": "made"
+  }
+ ],
  "w|memberkati": [
   {
    "text": "Pemuka agama memberkati pasangan pengantin.",
@@ -33625,6 +33929,22 @@
    "en": "This product meets safety standards.",
    "ko": "이 제품은 안전 기준을 충족해.",
    "blank": "memenuhi"
+  }
+ ],
+ "w|memerah": [
+  {
+   "text": "Wajah Agus memerah ketika ketahuan lupa membawa dompet.",
+   "en": "Agus's face turned red when he was caught having forgotten his wallet.",
+   "ko": "지갑을 깜빡한 게 들통나자 아구스의 얼굴이 빨개졌어요.",
+   "blank": "memerah",
+   "src": "made"
+  },
+  {
+   "text": "Daun-daun di taman kota mulai memerah, dan Wati sibuk memotretnya.",
+   "en": "The leaves in the city park began to turn red, and Wati was busy photographing them.",
+   "ko": "도시 공원의 나뭇잎이 붉어지기 시작하자 와티는 사진 찍느라 바빴어요.",
+   "blank": "memerah",
+   "src": "made"
   }
  ],
  "w|memerangi": [
@@ -35164,6 +35484,22 @@
    "en": "Rina saves money from selling vegetables to buy school shoes.",
    "ko": "리나는 채소를 판 돈을 모아 학교 신발을 사려고 해요.",
    "blank": "menabung",
+   "src": "made"
+  }
+ ],
+ "w|menagih": [
+  {
+   "text": "Pemilik lapak sebelah datang untuk menagih utang kepada Agus.",
+   "en": "The owner of the next stall came to collect a debt from Agus.",
+   "ko": "옆 노점 주인이 아구스에게 빚을 받으러 왔어요.",
+   "blank": "menagih",
+   "src": "made"
+  },
+  {
+   "text": "Pemilik kos datang menagih uang sewa ketika Wati sedang menjemur kasur setelah hujan.",
+   "en": "The landlord came to collect the rent while Wati was airing her mattress after the rain.",
+   "ko": "와티가 비 그친 뒤 매트리스를 말리고 있을 때 하숙집 주인이 방세를 받으러 왔어요.",
+   "blank": "menagih",
    "src": "made"
   }
  ],
@@ -37673,6 +38009,22 @@
    "src": "made"
   }
  ],
+ "w|mengaduk": [
+  {
+   "text": "Penjual wedang jahe mengaduk minumannya sambil mengobrol dengan Agus.",
+   "en": "The ginger drink seller stirred his drink while chatting with Agus.",
+   "ko": "생강차 장수는 아구스와 이야기하며 음료를 저었어요.",
+   "blank": "mengaduk",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengaduk bubur kacang hijau sambil mendengar hujan pertama jatuh.",
+   "en": "Wati stirred the mung bean porridge while listening to the first rain fall.",
+   "ko": "와티는 첫비 소리를 들으며 녹두죽을 저었어요.",
+   "blank": "mengaduk",
+   "src": "made"
+  }
+ ],
  "w|mengagetkan": [
   {
    "text": "Suara buku jatuh dari rak atas sempat mengagetkan Andi.",
@@ -38176,6 +38528,22 @@
    "en": "A big truck carries new goods to the mall warehouse every Monday.",
    "ko": "큰 트럭이 월요일마다 새 물건을 쇼핑몰 창고로 실어 와요.",
    "blank": "mengangkut",
+   "src": "made"
+  }
+ ],
+ "w|menganiaya": [
+  {
+   "text": "Agus menegur seorang pria yang menganiaya kucing liar di dekat pasar.",
+   "en": "Agus confronted a man who was abusing a stray cat near the market.",
+   "ko": "아구스는 시장 근처에서 길고양이를 괴롭히던 남자를 나무랐어요.",
+   "blank": "menganiaya",
+   "src": "made"
+  },
+  {
+   "text": "Wati membaca berita tentang orang yang menganiaya hewan ternak saat musim kering, lalu melapor ke dinas.",
+   "en": "Wati read news about someone abusing livestock in the dry season, then reported it to the authorities.",
+   "ko": "와티는 건기에 가축을 학대한 사람에 관한 뉴스를 읽고 관청에 신고했어요.",
+   "blank": "menganiaya",
    "src": "made"
   }
  ],
@@ -39293,6 +39661,22 @@
    "src": "made"
   }
  ],
+ "w|menggairahkan": [
+  {
+   "text": "Musik keroncong dari lapak sebelah menggairahkan suasana pagi bagi Agus.",
+   "en": "The keroncong music from the next stall livened up the morning for Agus.",
+   "ko": "옆 노점의 끄론총 음악이 아구스의 아침 분위기를 들뜨게 했어요.",
+   "blank": "menggairahkan",
+   "src": "made"
+  },
+  {
+   "text": "Udara sejuk di awal musim hujan menggairahkan Wati untuk mulai berkebun lagi.",
+   "en": "The cool air at the start of the rainy season made Wati eager to start gardening again.",
+   "ko": "우기 초입의 시원한 공기에 와티는 다시 텃밭 가꾸기에 의욕이 생겼어요.",
+   "blank": "menggairahkan",
+   "src": "made"
+  }
+ ],
  "w|menggali": [
   {
    "text": "Mereka menggali lubang di kebun belakang.",
@@ -39853,6 +40237,22 @@
    "en": "Blocking other people is not a good attitude.",
    "ko": "다른 사람을 가로막는 건 좋은 태도가 아니야.",
    "blank": "Menghalangi"
+  }
+ ],
+ "w|menghambat": [
+  {
+   "text": "Genangan air setelah hujan menghambat pengunjung ke lapak Agus.",
+   "en": "The puddles after the rain kept visitors from reaching Agus's stall.",
+   "ko": "비 온 뒤 물웅덩이 때문에 손님들이 아구스의 노점에 오기 힘들었어요.",
+   "blank": "menghambat",
+   "src": "made"
+  },
+  {
+   "text": "Hujan deras menghambat perjalanan Wati ke kantor pagi ini.",
+   "en": "Heavy rain held up Wati's trip to the office this morning.",
+   "ko": "오늘 아침 폭우 때문에 와티의 출근길이 늦어졌어요.",
+   "blank": "menghambat",
+   "src": "made"
   }
  ],
  "w|menghampiri": [
@@ -42399,6 +42799,22 @@
    "src": "made"
   }
  ],
+ "w|mentransfer": [
+  {
+   "text": "Penjual itu tidak punya kembalian, jadi Agus mentransfer uangnya lewat ponsel.",
+   "en": "The seller didn't have change, so Agus transferred the money by phone.",
+   "ko": "장수가 거스름돈이 없어서 아구스는 휴대폰으로 돈을 보냈어요.",
+   "blank": "mentransfer",
+   "src": "made"
+  },
+  {
+   "text": "Wati mentransfer uang ke ibunya untuk membeli bibit sebelum musim tanam.",
+   "en": "Wati transferred money to her mother to buy seedlings before planting season.",
+   "ko": "와티는 파종철 전에 모종을 사라고 엄마에게 돈을 보냈어요.",
+   "blank": "mentransfer",
+   "src": "made"
+  }
+ ],
  "w|menu": [
   {
    "text": "Bulan ini toko Fajar menambah menu roti tawar gandum.",
@@ -42955,6 +43371,22 @@
    "blank": "Menyala"
   }
  ],
+ "w|menyalahgunakan": [
+  {
+   "text": "Agus curiga ada orang yang menyalahgunakan nama pasar itu untuk berjualan daring.",
+   "en": "Agus suspects someone is misusing the market's name to sell online.",
+   "ko": "아구스는 누군가 그 시장 이름을 도용해 온라인에서 장사한다고 의심해요.",
+   "blank": "menyalahgunakan",
+   "src": "made"
+  },
+  {
+   "text": "Wati kesal pada pedagang yang menyalahgunakan musim banjir untuk menaikkan harga air galon.",
+   "en": "Wati is annoyed at traders who exploit the flood season to raise the price of bottled water.",
+   "ko": "와티는 홍수철을 틈타 생수 값을 올리는 장사꾼들에게 화가 나요.",
+   "blank": "menyalahgunakan",
+   "src": "made"
+  }
+ ],
  "w|menyalahkan": [
   {
    "text": "Jangan menyalahkan orang lain terus-menerus.",
@@ -43221,6 +43653,22 @@
    "en": "I suggest you arrive earlier.",
    "ko": "더 일찍 오시길 권해요.",
    "blank": "menyarankan"
+  }
+ ],
+ "w|menyaring": [
+  {
+   "text": "Penjual kopi menyaring ampas sebelum menuangkan kopi untuk Agus.",
+   "en": "The coffee seller strained the grounds before pouring coffee for Agus.",
+   "ko": "커피 장수는 아구스에게 커피를 따르기 전에 찌꺼기를 걸러 냈어요.",
+   "blank": "menyaring",
+   "src": "made"
+  },
+  {
+   "text": "Wati menyaring air hujan sebelum dipakai menyiram tanaman.",
+   "en": "Wati filters rainwater before using it to water the plants.",
+   "ko": "와티는 빗물을 걸러서 화분에 물을 줘요.",
+   "blank": "menyaring",
+   "src": "made"
   }
  ],
  "w|menyatakan": [
@@ -47573,6 +48021,22 @@
    "src": "made"
   }
  ],
+ "w|ongkos": [
+  {
+   "text": "Agus kaget karena ongkos kirim lemari tua itu lebih mahal dari harganya.",
+   "en": "Agus was shocked that the shipping cost for the old cupboard was more than its price.",
+   "ko": "아구스는 낡은 장롱 배송비가 물건값보다 비싸서 깜짝 놀랐어요.",
+   "blank": "ongkos",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengeluh karena ongkos angkot naik setiap musim banjir.",
+   "en": "Wati complains because minibus fares go up every flood season.",
+   "ko": "와티는 홍수철마다 미니버스 요금이 올라서 불평해요.",
+   "blank": "ongkos",
+   "src": "made"
+  }
+ ],
  "w|online": [
   {
    "text": "Kelas hari ini diadakan secara online.",
@@ -48267,6 +48731,22 @@
    "en": "The coffee is still hot.",
    "ko": "커피가 아직 뜨거워.",
    "blank": "panas"
+  }
+ ],
+ "w|panci": [
+  {
+   "text": "Agus menawar panci tembaga yang masih mengkilap.",
+   "en": "Agus haggled over a copper pot that was still shiny.",
+   "ko": "아구스는 아직 반짝이는 구리 냄비 값을 흥정했어요.",
+   "blank": "panci",
+   "src": "made"
+  },
+  {
+   "text": "Wati merebus sup jagung dalam panci besar ketika udara mulai dingin.",
+   "en": "Wati boils corn soup in a big pot when the air starts to get cold.",
+   "ko": "날이 쌀쌀해지기 시작하면 와티는 큰 냄비에 옥수수 수프를 끓여요.",
+   "blank": "panci",
+   "src": "made"
   }
  ],
  "w|pandai": [
@@ -50248,6 +50728,22 @@
    "en": "Lestari dreams that one day her cakes will have lots of buyers.",
    "ko": "레스타리는 언젠가 자기가 만든 케이크를 사는 사람이 많아지기를 꿈꿔요.",
    "blank": "pembeli",
+   "src": "made"
+  }
+ ],
+ "w|pembelian": [
+  {
+   "text": "Agus menyimpan struk pembelian kamera tua itu di dompetnya.",
+   "en": "Agus kept the receipt for the old camera purchase in his wallet.",
+   "ko": "아구스는 낡은 카메라를 산 영수증을 지갑에 넣어 뒀어요.",
+   "blank": "pembelian",
+   "src": "made"
+  },
+  {
+   "text": "Wati menunda pembelian payung baru sampai musim hujan benar-benar datang.",
+   "en": "Wati put off buying a new umbrella until the rainy season really arrived.",
+   "ko": "와티는 우기가 정말 올 때까지 새 우산 사는 걸 미뤘어요.",
+   "blank": "pembelian",
    "src": "made"
   }
  ],
@@ -52244,6 +52740,22 @@
    "en": "Ayu's painting depicts a cat chasing a butterfly.",
    "ko": "아유의 그림은 고양이가 나비를 쫓는 장면을 담고 있어요.",
    "blank": "pengejaran",
+   "src": "made"
+  }
+ ],
+ "w|pengeluaran": [
+  {
+   "text": "Agus mencatat semua pengeluaran supaya tidak kalap belanja di pasar loak.",
+   "en": "Agus notes down all his spending so he won't go overboard at the flea market.",
+   "ko": "아구스는 벼룩시장에서 충동구매하지 않으려고 쓴 돈을 다 적어요.",
+   "blank": "pengeluaran",
+   "src": "made"
+  },
+  {
+   "text": "Di musim hujan, pengeluaran Wati untuk ojek daring naik dua kali lipat.",
+   "en": "In the rainy season, Wati's spending on ride-hailing bikes doubles.",
+   "ko": "우기에는 와티의 오토바이 택시 비용이 두 배로 늘어요.",
+   "blank": "pengeluaran",
    "src": "made"
   }
  ],
@@ -55445,6 +55957,22 @@
    "src": "made"
   }
  ],
+ "w|persik": [
+  {
+   "text": "Agus menemukan kaleng sirup persik kosong yang sekarang jadi barang koleksi.",
+   "en": "Agus found an empty peach syrup tin that is now a collector's item.",
+   "ko": "아구스는 이제는 수집품이 된 빈 복숭아 시럽 깡통을 찾았어요.",
+   "blank": "persik",
+   "src": "made"
+  },
+  {
+   "text": "Wati paling menunggu musim buah persik saat berlibur ke daerah sejuk.",
+   "en": "Wati looks forward most to peach season when she vacations in cooler regions.",
+   "ko": "와티는 서늘한 지역으로 휴가 갈 때 복숭아 철을 가장 기다려요.",
+   "blank": "persik",
+   "src": "made"
+  }
+ ],
  "w|persimpangan": [
   {
    "text": "Agus salah belok di persimpangan dan akhirnya masuk ke pasar.",
@@ -56691,6 +57219,22 @@
    "src": "made"
   }
  ],
+ "w|piyama": [
+  {
+   "text": "Agus membeli piyama bergaris untuk ayahnya dengan harga miring.",
+   "en": "Agus bought striped pajamas for his father at a bargain price.",
+   "ko": "아구스는 아빠에게 드릴 줄무늬 잠옷을 싸게 샀어요.",
+   "blank": "piyama",
+   "src": "made"
+  },
+  {
+   "text": "Wati membeli piyama flanel karena malam di bulan Juli terasa dingin.",
+   "en": "Wati bought flannel pajamas because the nights in July feel cold.",
+   "ko": "와티는 7월 밤이 쌀쌀해서 플란넬 잠옷을 샀어요.",
+   "blank": "piyama",
+   "src": "made"
+  }
+ ],
  "w|pizza": [
   {
    "text": "Pizza panas itu baru keluar dari oven.",
@@ -57014,6 +57558,22 @@
    "en": "Rina sees great potential in selling organic vegetables.",
    "ko": "리나는 유기농 채소 장사에 큰 가능성이 있다고 봐요.",
    "blank": "potensi",
+   "src": "made"
+  }
+ ],
+ "w|potensial": [
+  {
+   "text": "Agus yakin meja jati rusak itu barang potensial untuk dijual lagi setelah dipoles.",
+   "en": "Agus is sure that damaged teak table has potential for resale once it's refinished.",
+   "ko": "아구스는 그 망가진 티크 탁자를 다시 칠하면 되팔 만한 물건이 될 거라고 확신해요.",
+   "blank": "potensial",
+   "src": "made"
+  },
+  {
+   "text": "Wati cemas karena kampungnya termasuk daerah potensial banjir saat pergantian musim.",
+   "en": "Wati is worried because her neighborhood is a flood-prone area at the change of season.",
+   "ko": "와티는 동네가 환절기 홍수 위험 지역이라서 걱정이에요.",
+   "blank": "potensial",
    "src": "made"
   }
  ],
@@ -59350,6 +59910,22 @@
    "en": "Rina asked the previous owner about the house's history.",
    "ko": "리나는 전 주인에게 그 집의 내력을 물어봤어요.",
    "blank": "riwayat",
+   "src": "made"
+  }
+ ],
+ "w|roboh": [
+  {
+   "text": "Tenda lapak Agus hampir roboh tertiup angin siang itu.",
+   "en": "Agus's stall tent almost collapsed in the wind that afternoon.",
+   "ko": "그날 오후 아구스의 노점 천막이 바람에 무너질 뻔했어요.",
+   "blank": "roboh",
+   "src": "made"
+  },
+  {
+   "text": "Pohon tua di depan rumah Wati roboh diterjang angin musim hujan.",
+   "en": "The old tree in front of Wati's house fell in the rainy-season wind.",
+   "ko": "와티네 집 앞 고목이 우기 바람에 쓰러졌어요.",
+   "blank": "roboh",
    "src": "made"
   }
  ],
@@ -66085,6 +66661,22 @@
    "src": "made"
   }
  ],
+ "w|syal": [
+  {
+   "text": "Agus membeli syal batik untuk dipakai di kereta yang dingin.",
+   "en": "Agus bought a batik scarf to wear on the cold train.",
+   "ko": "아구스는 추운 기차에서 두르려고 바틱 스카프를 샀어요.",
+   "blank": "syal",
+   "src": "made"
+  },
+  {
+   "text": "Angin malam makin dingin, jadi Wati melilitkan syal di lehernya.",
+   "en": "The night wind got colder, so Wati wrapped a scarf around her neck.",
+   "ko": "밤바람이 차가워져서 와티는 목에 스카프를 둘렀어요.",
+   "blank": "syal",
+   "src": "made"
+  }
+ ],
  "w|syarat": [
   {
    "text": "Syarat masuk sudah dijelaskan di papan.",
@@ -68760,6 +69352,22 @@
    "en": "On Saturday night, every table at Putri's restaurant was full from seven o'clock.",
    "ko": "토요일 밤이면 푸트리네 식당 테이블은 일곱 시부터 다 차요.",
    "blank": "terisi",
+   "src": "made"
+  }
+ ],
+ "w|terisolasi": [
+  {
+   "text": "Lapak kecil Agus agak terisolasi di pojok, jauh dari keramaian.",
+   "en": "Agus's small stall is rather isolated in the corner, far from the crowd.",
+   "ko": "아구스의 작은 노점은 구석에 있어서 사람들 북적이는 데서 좀 떨어져 있어요.",
+   "blank": "terisolasi",
+   "src": "made"
+  },
+  {
+   "text": "Desa nenek Wati sempat terisolasi karena jalan tertutup banjir.",
+   "en": "Wati's grandmother's village was briefly cut off because the road was flooded.",
+   "ko": "와티 할머니의 마을은 길이 물에 잠겨 한동안 고립됐어요.",
+   "blank": "terisolasi",
    "src": "made"
   }
  ],
@@ -72888,6 +73496,38 @@
    "en": "The coach reminded Lestari that whisky and hard training don't mix.",
    "ko": "코치는 레스타리에게 위스키와 힘든 훈련은 맞지 않는다고 일러 줬어요.",
    "blank": "wiski",
+   "src": "made"
+  }
+ ],
+ "w|wol": [
+  {
+   "text": "Agus mencoba sweter wol tebal yang dijual sangat murah.",
+   "en": "Agus tried on a thick wool sweater sold very cheaply.",
+   "ko": "아구스는 아주 싸게 파는 두꺼운 울 스웨터를 입어 봤어요.",
+   "blank": "wol",
+   "src": "made"
+  },
+  {
+   "text": "Wati mengeluarkan selimut wol dari lemari ketika malam mulai dingin.",
+   "en": "Wati took the wool blanket out of the cupboard when the nights started getting cold.",
+   "ko": "밤이 쌀쌀해지자 와티는 장롱에서 울 담요를 꺼냈어요.",
+   "blank": "wol",
+   "src": "made"
+  }
+ ],
+ "w|wortel": [
+  {
+   "text": "Di pasar loak itu ada juga ibu yang menjual wortel dari kebunnya sendiri, kata Agus.",
+   "en": "At that flea market there's also a woman selling carrots from her own garden, Agus said.",
+   "ko": "그 벼룩시장에는 자기 밭에서 키운 당근을 파는 아주머니도 있다고 아구스가 말했어요.",
+   "blank": "wortel",
+   "src": "made"
+  },
+  {
+   "text": "Musim kemarau ini membuat wortel di kebun Wati tumbuh kecil-kecil.",
+   "en": "This dry season has made the carrots in Wati's garden grow small.",
+   "ko": "이번 건기 때문에 와티네 밭의 당근이 작게 자랐어요.",
+   "blank": "wortel",
    "src": "made"
   }
  ],

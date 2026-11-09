@@ -3379,6 +3379,22 @@
    "src": "made"
   }
  ],
+ "w|กิโลเมตร": [
+  {
+   "text": "โรงแรมของวิชัยอยู่ห่างจากสนามบินแค่ห้ากิโลเมตร",
+   "en": "Wichai's hotel is only five kilometers from the airport.",
+   "ko": "위차이의 호텔은 공항에서 오 킬로미터밖에 안 떨어져 있어요.",
+   "blank": "กิโลเมตร",
+   "src": "made"
+  },
+  {
+   "text": "นภาพายเรือคายักไปได้เกือบสิบกิโลเมตรในวันเดียว",
+   "en": "Napha paddled her kayak almost ten kilometers in one day.",
+   "ko": "나파는 하루에 카약으로 거의 십 킬로미터를 저어 갔어요.",
+   "blank": "กิโลเมตร",
+   "src": "made"
+  }
+ ],
  "w|กี่": [
   {
    "text": "ชัยถามเพื่อนบ้านใหม่ว่ามีลูกกี่คน",
@@ -7897,6 +7913,22 @@
    "en": "His words are sharp and direct.",
    "ko": "그의 말은 날카롭고 직설적이야.",
    "blank": "คม"
+  }
+ ],
+ "w|คมนาคม": [
+  {
+   "text": "พนักงานต้อนรับแนะนำวิชัยว่าระบบคมนาคมในเมืองนี้สะดวกมาก",
+   "en": "The receptionist told Wichai that the transport system in this city is very convenient.",
+   "ko": "프런트 직원은 위차이에게 이 도시의 교통 체계가 아주 편리하다고 알려 줬어요.",
+   "blank": "คมนาคม",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนมีถนน แม่น้ำเป็นเส้นทางคมนาคมหลักของคนในหุบเขา",
+   "en": "Before roads, the river was the main transport route for people in the valley.",
+   "ko": "도로가 생기기 전에는 강이 골짜기 사람들의 주요 교통로였어요.",
+   "blank": "คมนาคม",
+   "src": "made"
   }
  ],
  "w|ครบ": [
@@ -12565,6 +12597,22 @@
    "blank": "เครื่องมือ"
   }
  ],
+ "w|เครื่องยนต์": [
+  {
+   "text": "วิชัยได้ยินเสียงเครื่องยนต์รถกระบะดังมาจากลานจอดรถทั้งคืน",
+   "en": "Wichai heard truck engines rumbling from the parking lot all night.",
+   "ko": "위차이는 밤새 주차장에서 트럭 엔진 소리를 들었어요.",
+   "blank": "เครื่องยนต์",
+   "src": "made"
+  },
+  {
+   "text": "เรือหางยาวดับเครื่องยนต์กลางน้ำเพื่อให้นภาฟังเสียงนก",
+   "en": "The long-tail boat turned off its engine mid-river so Napha could listen to the birds.",
+   "ko": "긴 꼬리 배는 나파가 새소리를 들을 수 있게 강 한가운데서 엔진을 껐어요.",
+   "blank": "เครื่องยนต์",
+   "src": "made"
+  }
+ ],
  "w|เครื่องสำอาง": [
   {
    "text": "เธอเลือกเครื่องสำอางอย่างระมัดระวัง",
@@ -13859,6 +13907,22 @@
    "blank": "จระเข้"
   }
  ],
+ "w|จราจร": [
+  {
+   "text": "พนักงานเตือนวิชัยให้ออกเดินทางเช้าๆ เพราะจราจรช่วงเย็นติดมาก",
+   "en": "The staff warned Wichai to leave early because evening traffic is very heavy.",
+   "ko": "직원은 저녁 교통이 아주 막히니 일찍 출발하라고 위차이에게 일러 줬어요.",
+   "blank": "จราจร",
+   "src": "made"
+  },
+  {
+   "text": "นภาดีใจที่ได้หนีจากจราจรในเมืองมาอยู่กลางป่าเงียบๆ",
+   "en": "Napha was glad to escape the city traffic and be in the quiet forest.",
+   "ko": "나파는 도시 교통에서 벗어나 조용한 숲속에 있게 되어 기뻤어요.",
+   "blank": "จราจร",
+   "src": "made"
+  }
+ ],
  "w|จริง": [
   {
    "text": "ไม่จริง",
@@ -15115,6 +15179,22 @@
    "en": "Let's meet in seven days.",
    "ko": "칠 일 뒤에 보자.",
    "blank": "เจ็ด"
+  }
+ ],
+ "w|เจดีย์": [
+  {
+   "text": "จากหน้าต่างห้อง วิชัยเห็นยอดเจดีย์ทองบนดอยไกลๆ",
+   "en": "From the room window, Wichai could see the top of a golden stupa on a distant mountain.",
+   "ko": "위차이는 방 창문으로 먼 산 위 황금 탑 꼭대기를 볼 수 있었어요.",
+   "blank": "เจดีย์",
+   "src": "made"
+  },
+  {
+   "text": "บนเนินเหนือแม่น้ำมีเจดีย์เก่าที่ชาวบ้านสร้างไว้นานแล้ว",
+   "en": "On the hill above the river there's an old stupa the villagers built long ago.",
+   "ko": "강 위 언덕에는 마을 사람들이 오래전에 세운 낡은 탑이 있어요.",
+   "blank": "เจดีย์",
+   "src": "made"
   }
  ],
  "w|เจตนา": [
@@ -20795,6 +20875,22 @@
    "src": "made"
   }
  ],
+ "w|โดยสาร": [
+  {
+   "text": "วิชัยถามทางไปสถานีรถไฟฟ้าเพราะอยากโดยสารไปตลาดนัด",
+   "en": "Wichai asked for directions to the skytrain station because he wanted to ride to the weekend market.",
+   "ko": "위차이는 주말 시장까지 타고 가고 싶어서 전철역 가는 길을 물었어요.",
+   "blank": "โดยสาร",
+   "src": "made"
+  },
+  {
+   "text": "นภาโดยสารรถสองแถวจากตัวอำเภอเข้าไปถึงปากทางเข้าป่า",
+   "en": "Napha rode a songthaew from the district town to the forest entrance.",
+   "ko": "나파는 군청 소재지에서 숲 입구까지 송태우를 타고 갔어요.",
+   "blank": "โดยสาร",
+   "src": "made"
+  }
+ ],
  "w|ใด": [
   {
    "text": "บรรณาธิการบอกว่าข่าวใดที่ยังไม่ยืนยันห้ามลงเด็ดขาด",
@@ -20854,6 +20950,22 @@
    "en": "The museum has dinosaur bones.",
    "ko": "박물관에 공룡 뼈가 있어.",
    "blank": "ไดโนเสาร์",
+   "src": "made"
+  }
+ ],
+ "w|ได้เปรียบ": [
+  {
+   "text": "แขกที่จองล่วงหน้าได้เปรียบเพราะได้ห้องวิวทะเล",
+   "en": "Guests who book in advance have the advantage of getting sea-view rooms.",
+   "ko": "미리 예약한 손님은 바다 전망 방을 받을 수 있어 유리해요.",
+   "blank": "ได้เปรียบ",
+   "src": "made"
+  },
+  {
+   "text": "คนที่ว่ายน้ำเป็นย่อมได้เปรียบเวลาล่องแก่งในแม่น้ำ",
+   "en": "People who can swim naturally have an advantage when rafting the river rapids.",
+   "ko": "수영할 줄 아는 사람이 강 급류 래프팅에서 당연히 유리해요.",
+   "blank": "ได้เปรียบ",
    "src": "made"
   }
  ],
@@ -22437,6 +22549,22 @@
    "blank": "ตั้งใจ"
   }
  ],
+ "w|ตั้งใจฟัง": [
+  {
+   "text": "วิชัยตั้งใจฟังพนักงานอธิบายวิธีใช้ตู้เซฟในห้อง",
+   "en": "Wichai listened carefully as the staff explained how to use the safe in the room.",
+   "ko": "위차이는 직원이 방 금고 사용법을 설명하는 것을 귀 기울여 들었어요.",
+   "blank": "ตั้งใจฟัง",
+   "src": "made"
+  },
+  {
+   "text": "นภาตั้งใจฟังผู้ใหญ่บ้านเล่าเรื่องตำนานของแม่น้ำ",
+   "en": "Napha listened attentively as the village headman told the legend of the river.",
+   "ko": "나파는 이장님이 강의 전설을 이야기하는 것을 귀 기울여 들었어요.",
+   "blank": "ตั้งใจฟัง",
+   "src": "made"
+  }
+ ],
  "w|ตั้งชื่อ": [
   {
    "text": "ทีมของสมชายช่วยกันตั้งชื่อโครงการใหม่อยู่ทั้งบ่าย",
@@ -23407,6 +23535,22 @@
    "en": "My knowledge of this is still shallow.",
    "ko": "이 주제에 대한 지식은 아직 얕아.",
    "blank": "ตื้น"
+  }
+ ],
+ "w|ตื่นขึ้น": [
+  {
+   "text": "วิชัยตื่นขึ้นเพราะเสียงไก่ขันจากบ้านข้างโรงแรม",
+   "en": "Wichai woke up to a rooster crowing from the house next to the hotel.",
+   "ko": "위차이는 호텔 옆집에서 닭이 우는 소리에 잠에서 깼어요.",
+   "blank": "ตื่นขึ้น",
+   "src": "made"
+  },
+  {
+   "text": "นภาตื่นขึ้นตอนตีห้าเพราะเสียงชะนีร้องในป่า",
+   "en": "Napha woke up at five in the morning to the sound of gibbons calling in the forest.",
+   "ko": "나파는 새벽 다섯 시에 숲속 긴팔원숭이 울음소리에 잠에서 깼어요.",
+   "blank": "ตื่นขึ้น",
+   "src": "made"
   }
  ],
  "w|ตื่นตัว": [
@@ -24575,6 +24719,22 @@
    "en": "Tomorrow, then.",
    "ko": "그러면 내일 보자.",
    "blank": "ถ้างั้น"
+  }
+ ],
+ "w|ถ้าเช่นนั้น": [
+  {
+   "text": "พนักงานบอกว่าห้องเต็ม วิชัยจึงถามว่าถ้าเช่นนั้นมีโรงแรมในเครือใกล้ๆ ไหม",
+   "en": "The staff said the rooms were full, so Wichai asked whether in that case there was a sister hotel nearby.",
+   "ko": "직원이 방이 다 찼다고 하자 위차이는 그렇다면 근처에 계열 호텔이 있냐고 물었어요.",
+   "blank": "ถ้าเช่นนั้น",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์บอกว่าสะพานขาด นภาเลยถามว่าถ้าเช่นนั้นจะข้ามน้ำทางไหน",
+   "en": "The guide said the bridge was broken, so Napha asked which way they would cross in that case.",
+   "ko": "가이드가 다리가 끊어졌다고 하자 나파는 그렇다면 어디로 강을 건너냐고 물었어요.",
+   "blank": "ถ้าเช่นนั้น",
+   "src": "made"
   }
  ],
  "w|ถ่านหิน": [
@@ -26303,6 +26463,22 @@
    "src": "made"
   }
  ],
+ "w|ทางขวา": [
+  {
+   "text": "ห้องอาหารเช้าอยู่ทางขวาของลิฟต์ชั้นหนึ่ง",
+   "en": "The breakfast room is to the right of the elevator on the first floor.",
+   "ko": "아침 식당은 일 층 엘리베이터 오른쪽에 있어요.",
+   "blank": "ทางขวา",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์บอกนภาว่าน้ำตกอยู่ทางขวาของสะพานไม้",
+   "en": "The guide told Napha the waterfall is to the right of the wooden bridge.",
+   "ko": "가이드는 나파에게 폭포가 나무다리 오른쪽에 있다고 알려 줬어요.",
+   "blank": "ทางขวา",
+   "src": "made"
+  }
+ ],
  "w|ทางเข้า": [
   {
    "text": "ทางเข้าหลักอยู่ด้านหน้า",
@@ -26315,6 +26491,22 @@
    "en": "I could not find the mall entrance.",
    "ko": "백화점 입구를 못 찾겠어.",
    "blank": "ทางเข้า"
+  }
+ ],
+ "w|ทางซ้าย": [
+  {
+   "text": "ห้องของวิชัยอยู่ทางซ้ายสุดของทางเดิน",
+   "en": "Wichai's room is at the far left end of the corridor.",
+   "ko": "위차이의 방은 복도 맨 왼쪽 끝에 있어요.",
+   "blank": "ทางซ้าย",
+   "src": "made"
+  },
+  {
+   "text": "นภาเห็นกวางตัวหนึ่งยืนกินน้ำอยู่ทางซ้ายของลำธาร",
+   "en": "Napha saw a deer drinking water on the left side of the stream.",
+   "ko": "나파는 개울 왼쪽에서 사슴 한 마리가 물을 마시고 있는 걸 봤어요.",
+   "blank": "ทางซ้าย",
+   "src": "made"
   }
  ],
  "w|ทางด่วน": [
@@ -26407,6 +26599,22 @@
    "en": "Pick the best option.",
    "ko": "가장 좋은 선택지를 골라.",
    "blank": "ทางเลือก"
+  }
+ ],
+ "w|ทางหลวง": [
+  {
+   "text": "โรงแรมของวิชัยตั้งอยู่ติดทางหลวงสายหลักเข้าเมือง",
+   "en": "Wichai's hotel is right next to the main highway into the city.",
+   "ko": "위차이의 호텔은 시내로 들어가는 주요 고속도로 바로 옆에 있어요.",
+   "blank": "ทางหลวง",
+   "src": "made"
+  },
+  {
+   "text": "นภาลงรถที่ทางหลวงแล้วเดินต่ออีกครึ่งชั่วโมงถึงริมแม่น้ำ",
+   "en": "Napha got off at the highway and walked another half hour to the riverbank.",
+   "ko": "나파는 고속도로에서 내려 강가까지 삼십 분을 더 걸었어요.",
+   "blank": "ทางหลวง",
+   "src": "made"
   }
  ],
  "w|ทางออก": [
@@ -30371,6 +30579,22 @@
    "src": "made"
   }
  ],
+ "w|น่าสมเพช": [
+  {
+   "text": "วิชัยรู้สึกว่าข้อแก้ตัวของพนักงานที่ทำห้องผิดฟังดูน่าสมเพช",
+   "en": "Wichai felt the excuse from the staff who mixed up the room sounded pathetic.",
+   "ko": "위차이는 방을 잘못 배정한 직원의 변명이 한심하게 들렸어요.",
+   "blank": "น่าสมเพช",
+   "src": "made"
+  },
+  {
+   "text": "นภารู้สึกว่าสภาพลูกหมาที่ถูกทิ้งไว้ริมทางดูน่าสมเพชมาก",
+   "en": "Napha felt the state of the puppy abandoned by the road was truly pitiful.",
+   "ko": "나파는 길가에 버려진 강아지의 모습이 너무 가엾다고 느꼈어요.",
+   "blank": "น่าสมเพช",
+   "src": "made"
+  }
+ ],
  "w|น่าเสียดาย": [
   {
    "text": "น่าเสียดายที่ชัยกับน้องสาวไม่ได้คุยกันมาเกือบเดือน",
@@ -32002,6 +32226,22 @@
    "en": "The boss asked Napha to write a work summary of no more than five lines.",
    "ko": "상사는 나파에게 업무 요약을 다섯 줄 이내로 써 달라고 했어요.",
    "blank": "บรรทัด",
+   "src": "made"
+  }
+ ],
+ "w|บรรทุก": [
+  {
+   "text": "รถตู้ของโรงแรมบรรทุกกระเป๋าของแขกทั้งคณะไปส่งที่สนามบิน",
+   "en": "The hotel van carried the whole group's luggage to the airport.",
+   "ko": "호텔 밴이 일행 전체의 짐을 싣고 공항까지 갔어요.",
+   "blank": "บรรทุก",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านใช้เรือบรรทุกข้าวสารไปขายที่ตลาดปลายน้ำ",
+   "en": "The villagers use boats to carry rice to sell at the market downstream.",
+   "ko": "마을 사람들은 배로 쌀을 실어 하류 시장에 팔러 가요.",
+   "blank": "บรรทุก",
    "src": "made"
   }
  ],
@@ -35633,6 +35873,22 @@
    "src": "made"
   }
  ],
+ "w|ปลายทาง": [
+  {
+   "text": "รถรับส่งของโรงแรมพาวิชัยไปถึงปลายทางตรงเวลา",
+   "en": "The hotel shuttle got Wichai to his destination on time.",
+   "ko": "호텔 셔틀은 위차이를 제시간에 목적지까지 데려다줬어요.",
+   "blank": "ปลายทาง",
+   "src": "made"
+  },
+  {
+   "text": "ปลายทางของเส้นทางเดินป่าคือหน้าผาที่มองเห็นแม่น้ำทั้งสาย",
+   "en": "The end point of the hiking trail is a cliff overlooking the whole river.",
+   "ko": "등산로의 종착지는 강 전체가 내려다보이는 절벽이에요.",
+   "blank": "ปลายทาง",
+   "src": "made"
+  }
+ ],
  "w|ปลาวาฬ": [
   {
    "text": "ปลาวาฬตัวใหญ่มาก",
@@ -35868,6 +36124,22 @@
    "en": "Don't step on the coral.",
    "ko": "산호를 밟지 마.",
    "blank": "ปะการัง",
+   "src": "made"
+  }
+ ],
+ "w|ปะทะ": [
+  {
+   "text": "คืนนั้นลมพายุปะทะกระจกห้องของวิชัยจนสั่น",
+   "en": "That night the storm wind hit the window of Wichai's room so hard it shook.",
+   "ko": "그날 밤 폭풍이 위차이의 방 유리창을 세게 때려 창이 흔들렸어요.",
+   "blank": "ปะทะ",
+   "src": "made"
+  },
+  {
+   "text": "กระแสน้ำปะทะโขดหินจนเกิดฟองสีขาวเต็มลำน้ำ",
+   "en": "The current crashed against the rocks, creating white foam across the river.",
+   "ko": "물살이 바위에 부딪혀 강 전체에 하얀 거품이 일었어요.",
+   "blank": "ปะทะ",
    "src": "made"
   }
  ],
@@ -36505,6 +36777,22 @@
    "en": "Talking with him feels casual and easy.",
    "ko": "그와 얘기하면 편안하고 친근해.",
    "blank": "เป็นกันเอง"
+  }
+ ],
+ "w|เป็นเกียรติ": [
+  {
+   "text": "ผู้จัดการบอกวิชัยว่าเป็นเกียรติมากที่ได้ต้อนรับคณะของเขา",
+   "en": "The manager told Wichai it was a great honor to welcome his group.",
+   "ko": "매니저는 위차이에게 그의 일행을 맞이하게 되어 큰 영광이라고 했어요.",
+   "blank": "เป็นเกียรติ",
+   "src": "made"
+  },
+  {
+   "text": "นภารู้สึกเป็นเกียรติที่ผู้ใหญ่บ้านเชิญไปร่วมพิธีเลี้ยงผีป่า",
+   "en": "Napha felt honored that the headman invited her to the forest spirit ceremony.",
+   "ko": "나파는 이장님이 숲 정령 의식에 초대해 줘서 영광이라고 느꼈어요.",
+   "blank": "เป็นเกียรติ",
+   "src": "made"
   }
  ],
  "w|เป็นของ": [
@@ -39499,6 +39787,22 @@
    "src": "made"
   }
  ],
+ "w|ฝืน": [
+  {
+   "text": "วิชัยเหนื่อยมากแต่ฝืนลงไปกินข้าวเย็นกับลูกค้า",
+   "en": "Wichai was exhausted but forced himself to go down for dinner with his clients.",
+   "ko": "위차이는 무척 피곤했지만 억지로 내려가 고객들과 저녁을 먹었어요.",
+   "blank": "ฝืน",
+   "src": "made"
+  },
+  {
+   "text": "นภาปวดขามากแต่ฝืนเดินต่อจนถึงจุดพักแรม",
+   "en": "Napha's legs hurt badly, but she forced herself to keep walking to the camp spot.",
+   "ko": "나파는 다리가 몹시 아팠지만 억지로 야영지까지 계속 걸었어요.",
+   "blank": "ฝืน",
+   "src": "made"
+  }
+ ],
  "w|ฝุ่น": [
   {
    "text": "บนโต๊ะมีฝุ่นเต็มไปหมด",
@@ -40841,6 +41145,22 @@
    "en": "Don't go out during a storm.",
    "ko": "폭풍이 올 때 나가지 마.",
    "blank": "พายุ"
+  }
+ ],
+ "w|พิกัด": [
+  {
+   "text": "วิชัยส่งพิกัดโรงแรมให้เพื่อนทางแอปแชต",
+   "en": "Wichai sent the hotel's location to his friend through a chat app.",
+   "ko": "위차이는 채팅 앱으로 친구에게 호텔 위치를 보냈어요.",
+   "blank": "พิกัด",
+   "src": "made"
+  },
+  {
+   "text": "นภาบันทึกพิกัดจุดตั้งแคมป์ไว้ในโทรศัพท์เผื่อหลงทาง",
+   "en": "Napha saved the campsite coordinates on her phone in case she got lost.",
+   "ko": "나파는 길을 잃을 경우를 대비해 캠핑 장소 좌표를 휴대폰에 저장했어요.",
+   "blank": "พิกัด",
+   "src": "made"
   }
  ],
  "w|พิการ": [
@@ -42651,6 +42971,22 @@
    "en": "I plan to study hard throughout this semester.",
    "ko": "이번 학기 내내 열심히 공부할 계획이야.",
    "blank": "ภาคเรียน"
+  }
+ ],
+ "w|ภาคเหนือ": [
+  {
+   "text": "วิชัยเลือกพักโรงแรมเล็กๆ ที่ตกแต่งแบบบ้านไม้ภาคเหนือ",
+   "en": "Wichai chose to stay at a small hotel decorated like a northern Thai wooden house.",
+   "ko": "위차이는 북부식 목조 가옥처럼 꾸민 작은 호텔에 묵기로 했어요.",
+   "blank": "ภาคเหนือ",
+   "src": "made"
+  },
+  {
+   "text": "แม่น้ำสายนี้ไหลมาจากภูเขาสูงทางภาคเหนือ",
+   "en": "This river flows from high mountains in the north.",
+   "ko": "이 강은 북부의 높은 산에서 흘러내려요.",
+   "blank": "ภาคเหนือ",
+   "src": "made"
   }
  ],
  "w|ภาคี": [
@@ -46133,6 +46469,22 @@
    "src": "made"
   }
  ],
+ "w|ยาน": [
+  {
+   "text": "ล็อบบี้โรงแรมจัดแสดงโมเดลยานอวกาศให้เด็กๆ ถ่ายรูป",
+   "en": "The hotel lobby displays a model spaceship for kids to take pictures with.",
+   "ko": "호텔 로비에는 아이들이 사진을 찍을 수 있게 우주선 모형이 전시돼 있어요.",
+   "blank": "ยาน",
+   "src": "made"
+  },
+  {
+   "text": "เด็กในหมู่บ้านบอกนภาว่าเคยเห็นแสงประหลาดเหมือนยานบินผ่านป่า",
+   "en": "A village child told Napha he once saw a strange light like a flying craft pass over the forest.",
+   "ko": "마을 아이는 나파에게 숲 위로 비행체 같은 이상한 빛이 지나가는 걸 본 적 있다고 했어요.",
+   "blank": "ยาน",
+   "src": "made"
+  }
+ ],
  "w|ย่าน": [
   {
    "text": "โรงแรมตั้งอยู่ในย่านเมืองเก่าที่มีร้านอาหารเยอะ",
@@ -46146,6 +46498,22 @@
    "en": "A coworker invited Napa to lunch in the Yaowarat area.",
    "ko": "동료가 나파에게 야와랏 동네로 점심 먹으러 가자고 했어요.",
    "blank": "ย่าน",
+   "src": "made"
+  }
+ ],
+ "w|ยานพาหนะ": [
+  {
+   "text": "โรงแรมไม่อนุญาตให้นำยานพาหนะของแขกเข้ามาจอดหน้าล็อบบี้",
+   "en": "The hotel doesn't allow guests' vehicles to park in front of the lobby.",
+   "ko": "호텔은 손님 차량을 로비 앞에 세우지 못하게 해요.",
+   "blank": "ยานพาหนะ",
+   "src": "made"
+  },
+  {
+   "text": "อุทยานห้ามนำยานพาหนะทุกชนิดเข้าไปในเขตป่าชั้นใน",
+   "en": "The park bans all types of vehicles from entering the inner forest zone.",
+   "ko": "국립공원은 깊은 숲 구역에 모든 종류의 차량 진입을 금지해요.",
+   "blank": "ยานพาหนะ",
    "src": "made"
   }
  ],
@@ -46952,6 +47320,22 @@
    "en": "The air in the cave is chilly.",
    "ko": "동굴 안 공기가 서늘해.",
    "blank": "เยือกเย็น",
+   "src": "made"
+  }
+ ],
+ "w|เยือน": [
+  {
+   "text": "วิชัยมาเยือนเชียงใหม่ครั้งแรกเพื่อประชุมที่โรงแรมริมแม่น้ำ",
+   "en": "Wichai visited Chiang Mai for the first time for a meeting at a riverside hotel.",
+   "ko": "위차이는 강변 호텔에서 열리는 회의 때문에 처음으로 치앙마이를 방문했어요.",
+   "blank": "เยือน",
+   "src": "made"
+  },
+  {
+   "text": "นภาไปเยือนหมู่บ้านกะเหรี่ยงริมลำน้ำกับกลุ่มอาสาสมัคร",
+   "en": "Napha visited a Karen village by the river with a volunteer group.",
+   "ko": "나파는 봉사단과 함께 강가의 카렌족 마을을 방문했어요.",
+   "blank": "เยือน",
    "src": "made"
   }
  ],
@@ -49147,6 +49531,22 @@
    "blank": "รำคาญ"
   }
  ],
+ "w|ร่ำรวย": [
+  {
+   "text": "แขกส่วนใหญ่ในโรงแรมนี้เป็นนักธุรกิจร่ำรวยจากต่างเมือง",
+   "en": "Most guests at this hotel are wealthy businesspeople from other cities.",
+   "ko": "이 호텔 손님 대부분은 다른 도시에서 온 부유한 사업가예요.",
+   "blank": "ร่ำรวย",
+   "src": "made"
+  },
+  {
+   "text": "ป่าแถบนี้ร่ำรวยไปด้วยพืชสมุนไพรที่ชาวบ้านใช้รักษาโรค",
+   "en": "The forest here is rich in medicinal plants that villagers use to treat illness.",
+   "ko": "이 근처 숲에는 마을 사람들이 병을 고치는 데 쓰는 약초가 풍부해요.",
+   "blank": "ร่ำรวย",
+   "src": "made"
+  }
+ ],
  "w|ริม": [
   {
    "text": "เอกนั่งเขียนข่าวอยู่ในร้านกาแฟริมแม่น้ำ",
@@ -49585,6 +49985,22 @@
    "en": "Let's go pick some things up.",
    "ko": "우리 장 보러 가자.",
    "blank": "เรา"
+  }
+ ],
+ "w|เร้า": [
+  {
+   "text": "กลิ่นกาแฟคั่วจากห้องอาหารเร้าให้วิชัยรีบลงไปกินข้าวเช้า",
+   "en": "The smell of roasted coffee from the restaurant urged Wichai to hurry down for breakfast.",
+   "ko": "식당에서 풍기는 볶은 커피 향에 위차이는 서둘러 아침을 먹으러 내려갔어요.",
+   "blank": "เร้า",
+   "src": "made"
+  },
+  {
+   "text": "เสียงกลองจากงานบุญในหมู่บ้านเร้าให้นภาอยากเข้าไปดูใกล้ๆ",
+   "en": "The drumming from the village festival made Napha eager to go closer and watch.",
+   "ko": "마을 잔치의 북소리에 나파는 가까이 가서 보고 싶어졌어요.",
+   "blank": "เร้า",
+   "src": "made"
   }
  ],
  "w|เราเตอร์": [
@@ -50621,6 +51037,22 @@
    "src": "made"
   }
  ],
+ "w|ล้อ": [
+  {
+   "text": "พนักงานช่วยวิชัยลากกระเป๋าที่ล้อหักขึ้นไปบนห้อง",
+   "en": "A staff member helped Wichai drag his suitcase with the broken wheel up to the room.",
+   "ko": "직원이 바퀴가 부러진 위차이의 가방을 방까지 끌어다 줬어요.",
+   "blank": "ล้อ",
+   "src": "made"
+  },
+  {
+   "text": "นภาเข็นจักรยานที่ล้อแบนไปตามทางดินริมแม่น้ำ",
+   "en": "Napha pushed her bicycle with the flat tire along the dirt path by the river.",
+   "ko": "나파는 바퀴가 펑크 난 자전거를 끌고 강가 흙길을 따라갔어요.",
+   "blank": "ล้อ",
+   "src": "made"
+  }
+ ],
  "w|ลอก": [
   {
    "text": "หัวหน้าเตือนว่าห้ามลอกข้อความจากเว็บไซต์อื่นมาใส่ในรายงาน",
@@ -50663,6 +51095,22 @@
    "en": "You can try it again.",
    "ko": "다시 해 봐도 돼.",
    "blank": "ลอง"
+  }
+ ],
+ "w|ล่อง": [
+  {
+   "text": "โรงแรมมีทัวร์ล่องเรือชมแม่น้ำตอนค่ำให้แขกที่พัก",
+   "en": "The hotel offers an evening river cruise for its guests.",
+   "ko": "호텔은 투숙객을 위해 저녁 강 유람선 투어를 운영해요.",
+   "blank": "ล่อง",
+   "src": "made"
+  },
+  {
+   "text": "นภาชวนเพื่อนล่องแพไม้ไผ่ไปตามแม่น้ำปาย",
+   "en": "Napha invited her friends to float down the Pai River on a bamboo raft.",
+   "ko": "나파는 친구들에게 대나무 뗏목을 타고 빠이강을 따라 내려가자고 했어요.",
+   "blank": "ล่อง",
+   "src": "made"
   }
  ],
  "w|ล่องเรือ": [
@@ -50930,6 +51378,22 @@
    "en": "Suda hesitated for just a moment, and the ball was already stolen.",
    "ko": "수다가 잠깐 망설이는 사이에 공을 이미 빼앗겼어요.",
    "blank": "ลังเล",
+   "src": "made"
+  }
+ ],
+ "w|ลัด": [
+  {
+   "text": "วิชัยเดินลัดผ่านสวนของโรงแรมไปที่สระว่ายน้ำ",
+   "en": "Wichai took a shortcut through the hotel garden to the swimming pool.",
+   "ko": "위차이는 호텔 정원을 가로질러 수영장으로 질러갔어요.",
+   "blank": "ลัด",
+   "src": "made"
+  },
+  {
+   "text": "พรานป่าพานภาเดินลัดเลาะริมผาไปถึงถ้ำได้เร็วขึ้น",
+   "en": "The forest guide led Napha on a shortcut along the cliff so they reached the cave faster.",
+   "ko": "숲 안내인은 나파를 데리고 절벽을 따라 질러가서 동굴에 더 빨리 도착했어요.",
+   "blank": "ลัด",
    "src": "made"
   }
  ],
@@ -52361,6 +52825,38 @@
    "blank": "เลี้ยว"
   }
  ],
+ "w|เลี้ยวขวา": [
+  {
+   "text": "พนักงานบอกวิชัยว่าออกจากโรงแรมแล้วให้เลี้ยวขวาที่ไฟแดงแรก",
+   "en": "The staff told Wichai to turn right at the first traffic light after leaving the hotel.",
+   "ko": "직원은 위차이에게 호텔을 나가서 첫 신호등에서 우회전하라고 했어요.",
+   "blank": "เลี้ยวขวา",
+   "src": "made"
+  },
+  {
+   "text": "ที่ทางแยกหน้าวัด นภาต้องเลี้ยวขวาเพื่อไปท่าเรือ",
+   "en": "At the junction in front of the temple, Napha had to turn right to get to the pier.",
+   "ko": "절 앞 갈림길에서 나파는 선착장으로 가려고 우회전해야 했어요.",
+   "blank": "เลี้ยวขวา",
+   "src": "made"
+  }
+ ],
+ "w|เลี้ยวซ้าย": [
+  {
+   "text": "คนขับแท็กซี่ถามวิชัยว่าจะให้เลี้ยวซ้ายเข้าซอยโรงแรมเลยไหม",
+   "en": "The taxi driver asked Wichai whether to turn left into the hotel's lane right away.",
+   "ko": "택시 기사는 위차이에게 호텔 골목으로 바로 좌회전할지 물었어요.",
+   "blank": "เลี้ยวซ้าย",
+   "src": "made"
+  },
+  {
+   "text": "พอถึงศาลาริมน้ำ นภาก็เลี้ยวซ้ายขึ้นเนินไปทางหมู่บ้าน",
+   "en": "When she reached the riverside pavilion, Napha turned left up the hill toward the village.",
+   "ko": "강가 정자에 이르자 나파는 왼쪽으로 꺾어 언덕을 올라 마을로 갔어요.",
+   "blank": "เลี้ยวซ้าย",
+   "src": "made"
+  }
+ ],
  "w|เลือก": [
   {
    "text": "เลือกอันนี้แหละ",
@@ -52492,6 +52988,22 @@
    "en": "During the dry weather, customers buy eye drops more than usual.",
    "ko": "건조한 날씨에는 손님들이 평소보다 안약을 많이 사 가요.",
    "blank": "แล้ง",
+   "src": "made"
+  }
+ ],
+ "w|แล่น": [
+  {
+   "text": "วิชัยนั่งดูเรือหางยาวแล่นผ่านหน้าโรงแรมตอนพระอาทิตย์ตก",
+   "en": "Wichai sat watching long-tail boats sail past the hotel at sunset.",
+   "ko": "위차이는 해 질 녘 호텔 앞을 지나가는 긴 꼬리 배를 앉아서 바라봤어요.",
+   "blank": "แล่น",
+   "src": "made"
+  },
+  {
+   "text": "เรือของชาวบ้านแล่นทวนน้ำขึ้นไปช้าๆ ในฤดูน้ำหลาก",
+   "en": "The villagers' boat sailed slowly upstream in the flood season.",
+   "ko": "마을 사람들의 배가 홍수철에 강을 거슬러 천천히 올라갔어요.",
+   "blank": "แล่น",
    "src": "made"
   }
  ],
@@ -56024,6 +56536,22 @@
    "en": "Chan's homeroom teacher just got married last month.",
    "ko": "짠의 담임 선생님은 지난달에 혼인했어요.",
    "blank": "สมรส",
+   "src": "made"
+  }
+ ],
+ "w|สมเหตุสมผล": [
+  {
+   "text": "ค่าห้องคืนละพันห้าร้อยบาทถือว่าสมเหตุสมผลสำหรับทำเลนี้",
+   "en": "Fifteen hundred baht a night is considered reasonable for this location.",
+   "ko": "이 위치라면 하룻밤 천오백 바트는 합리적인 편이에요.",
+   "blank": "สมเหตุสมผล",
+   "src": "made"
+  },
+  {
+   "text": "ข้อเสนอของไกด์ที่ให้กลับก่อนฝนตกฟังดูสมเหตุสมผลที่สุด",
+   "en": "The guide's suggestion to go back before the rain sounded the most reasonable.",
+   "ko": "비가 오기 전에 돌아가자는 가이드의 제안이 가장 합리적으로 들렸어요.",
+   "blank": "สมเหตุสมผล",
    "src": "made"
   }
  ],
@@ -60513,6 +61041,22 @@
    "src": "made"
   }
  ],
+ "w|หนุน": [
+  {
+   "text": "วิชัยขอหมอนเพิ่มอีกใบมาหนุนหลังตอนนั่งอ่านหนังสือ",
+   "en": "Wichai asked for an extra pillow to support his back while reading.",
+   "ko": "위차이는 책을 읽을 때 등을 받치려고 베개를 하나 더 달라고 했어요.",
+   "blank": "หนุน",
+   "src": "made"
+  },
+  {
+   "text": "นภาเอาเป้มาหนุนหัวแล้วนอนฟังเสียงน้ำไหล",
+   "en": "Napha used her backpack as a pillow and lay listening to the flowing water.",
+   "ko": "나파는 배낭을 베개 삼아 누워 물 흐르는 소리를 들었어요.",
+   "blank": "หนุน",
+   "src": "made"
+  }
+ ],
  "w|หนุ่ม": [
   {
    "text": "ชายหนุ่มคนนั้นสูงดี",
@@ -61267,6 +61811,22 @@
    "en": "Are you serious or joking?",
    "ko": "진짜야, 아니면 장난이야?",
    "blank": "หรือว่า"
+  }
+ ],
+ "w|หรู": [
+  {
+   "text": "ห้องสวีทชั้นบนสุดตกแต่งหรูจนวิชัยไม่กล้านั่งบนโซฟา",
+   "en": "The top-floor suite is so luxuriously decorated that Wichai didn't dare sit on the sofa.",
+   "ko": "꼭대기 층 스위트룸이 너무 호화로워서 위차이는 소파에 앉기도 망설였어요.",
+   "blank": "หรู",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนของนภาเลือกพักรีสอร์ตหรูริมน้ำแทนการกางเต็นท์",
+   "en": "Napha's friend chose to stay at a luxurious riverside resort instead of camping.",
+   "ko": "나파의 친구는 텐트를 치는 대신 강가의 고급 리조트에 묵기로 했어요.",
+   "blank": "หรู",
+   "src": "made"
   }
  ],
  "w|หรูหรา": [
@@ -62724,6 +63284,22 @@
    "en": "The man whose bag was stolen said he was job hunting and all his money was in it.",
    "ko": "가방을 도둑맞은 남자는 일자리를 찾는 중인데 돈이 전부 그 안에 있었다고 했어요.",
    "blank": "หางาน",
+   "src": "made"
+  }
+ ],
+ "w|หาด": [
+  {
+   "text": "จากระเบียงห้อง วิชัยมองเห็นหาดสีขาวทอดยาวไปจนสุดตา",
+   "en": "From his balcony, Wichai could see the white beach stretching as far as the eye could see.",
+   "ko": "위차이는 방 발코니에서 끝없이 펼쳐진 하얀 해변을 볼 수 있었어요.",
+   "blank": "หาด",
+   "src": "made"
+  },
+  {
+   "text": "นภาจอดเรือที่หาดทรายเล็กๆ ริมโค้งน้ำแล้วกินข้าวกลางวัน",
+   "en": "Napha moored her boat at a small sandy beach at the river bend and had lunch.",
+   "ko": "나파는 강굽이의 작은 모래사장에 배를 대고 점심을 먹었어요.",
+   "blank": "หาด",
    "src": "made"
   }
  ],
@@ -64793,6 +65369,22 @@
    "blank": "อยู่"
   }
  ],
+ "w|อยู่รอด": [
+  {
+   "text": "ช่วงโควิดโรงแรมเล็กๆ หลายแห่งต้องลดพนักงานเพื่อให้อยู่รอด",
+   "en": "During COVID many small hotels had to cut staff to survive.",
+   "ko": "코로나 시기에 많은 작은 호텔이 살아남으려고 직원을 줄여야 했어요.",
+   "blank": "อยู่รอด",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์สอนนภาว่าถ้าหลงป่าต้องหาแหล่งน้ำก่อนเพื่อให้อยู่รอด",
+   "en": "The guide taught Napha that if lost in the forest, you must find water first to survive.",
+   "ko": "가이드는 나파에게 숲에서 길을 잃으면 살아남기 위해 먼저 물을 찾아야 한다고 가르쳐 줬어요.",
+   "blank": "อยู่รอด",
+   "src": "made"
+  }
+ ],
  "w|อยู่อาศัย": [
   {
    "text": "ครอบครัวนี้อยู่อาศัยในคอนโด",
@@ -65213,6 +65805,22 @@
    "src": "made"
   }
  ],
+ "w|อ้อม": [
+  {
+   "text": "แท็กซี่ต้องขับอ้อมไปอีกทางเพราะถนนหน้าโรงแรมปิด",
+   "en": "The taxi had to take a detour because the road in front of the hotel was closed.",
+   "ko": "호텔 앞 도로가 막혀서 택시는 다른 길로 돌아가야 했어요.",
+   "blank": "อ้อม",
+   "src": "made"
+  },
+  {
+   "text": "ทางเดินถูกน้ำท่วม นภาจึงต้องเดินอ้อมเข้าไปในป่า",
+   "en": "The trail was flooded, so Napha had to walk around through the forest.",
+   "ko": "길이 물에 잠겨서 나파는 숲속으로 돌아가야 했어요.",
+   "blank": "อ้อม",
+   "src": "made"
+  }
+ ],
  "w|อะไร": [
   {
    "text": "นั่นอะไร",
@@ -65301,6 +65909,22 @@
    "en": "Don't pack the bag too tightly.",
    "ko": "가방을 너무 꽉 채우지 마.",
    "blank": "อัด"
+  }
+ ],
+ "w|อัตโนมัติ": [
+  {
+   "text": "ประตูห้องของวิชัยล็อกอัตโนมัติทุกครั้งที่ปิด",
+   "en": "The door of Wichai's room locks automatically every time it closes.",
+   "ko": "위차이의 방문은 닫힐 때마다 자동으로 잠겨요.",
+   "blank": "อัตโนมัติ",
+   "src": "made"
+  },
+  {
+   "text": "กล้องดักถ่ายสัตว์ในป่าจะถ่ายภาพอัตโนมัติเมื่อมีอะไรขยับ",
+   "en": "The wildlife camera trap in the forest takes pictures automatically when something moves.",
+   "ko": "숲속 야생동물 카메라는 무언가 움직이면 자동으로 사진을 찍어요.",
+   "blank": "อัตโนมัติ",
+   "src": "made"
   }
  ],
  "w|อัตรา": [
@@ -66680,6 +67304,22 @@
    "en": "After the show, the crew loaded the sound equipment onto the truck together.",
    "ko": "공연이 끝난 뒤 스태프들이 함께 음향 장비를 차에 실었어요.",
    "blank": "อุปกรณ์",
+   "src": "made"
+  }
+ ],
+ "w|อุปถัมภ์": [
+  {
+   "text": "โรงแรมนี้อุปถัมภ์โรงเรียนในหมู่บ้านใกล้ๆ มาหลายปี",
+   "en": "This hotel has sponsored a school in a nearby village for many years.",
+   "ko": "이 호텔은 여러 해 동안 근처 마을 학교를 후원해 왔어요.",
+   "blank": "อุปถัมภ์",
+   "src": "made"
+  },
+  {
+   "text": "โครงการปลูกป่าริมน้ำที่นภาไปช่วยได้รับการอุปถัมภ์จากบริษัทเอกชน",
+   "en": "The riverside reforestation project Napha helped with is sponsored by a private company.",
+   "ko": "나파가 도우러 간 강변 숲 가꾸기 사업은 민간 기업의 후원을 받아요.",
+   "blank": "อุปถัมภ์",
    "src": "made"
   }
  ],
