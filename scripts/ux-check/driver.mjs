@@ -12,7 +12,9 @@ const [learn, ui, name, controlPort] = process.argv.slice(2);
 const OUT = path.join(ROOT, "tmp/ux/run", name); fs.rmSync(OUT, { recursive: true, force: true }); fs.mkdirSync(OUT, { recursive: true });
 const appPort = Number(controlPort) + 100;
 const server = await serve(appPort);
-state.uid = `simcheck-ux-${Date.now().toString(36)}-${name}`;
+// 헤더(x-rc-user)는 ASCII만 — 한글 이름이면 /day·서버 호출이 깨졌음(2026-11-09)
+const idName = /^[\x21-\x7e]+$/.test(name) ? name : [...name].map((c) => c.codePointAt(0).toString(36)).join("");
+state.uid = `simcheck-ux-${Date.now().toString(36)}-${idName}`;
 const browser = await chromium.launch({ args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", `--use-file-for-fake-audio-capture=${path.join(ROOT, "tmp/ux/voice.wav")}`] });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, colorScheme: "dark", hasTouch: true });
 // UX_UPDATED_FROM=2.75: 처음 열 때 그 버전에서 업데이트한 사람처럼(새로워진 점이 뜸 — hub/ux-issues.md U02).
