@@ -11,6 +11,7 @@ import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
 import { playTts } from "@/lib/ttsPlayer";
 import type { UICopy } from "@/lib/copy";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { TTSButton } from "@/components/TTSButton";
 
 type ItemView = { char: string; reading: string; say: string; word?: string; meaning?: string };
@@ -271,6 +272,8 @@ export function ScriptSheet({
                   {ui.scriptBackToList}
                 </button>
               </div>
+              {/* 글자 퀴즈 끝 화면 아래 네이티브 하나(버튼과 한 줄 넘게 띄움). */}
+              <NativeAdSlot feedId="results" slotKey="letters-end" spaced />
             </div>
           )}
         </div>

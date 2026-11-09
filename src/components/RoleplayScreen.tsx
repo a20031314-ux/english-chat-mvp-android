@@ -399,21 +399,6 @@ export function RoleplayScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [said, state, memory]);
 
-  // 통화가 끝까지 끝났을 때 한 번: 무료 사용자에게 전면 광고를 띄울 수 있는
-  // 자연스러운 끝(lib/ads.ts). 작별 인사가 끝난 뒤로 조금 미룬다. 중간에 끊고 나간 통화에는 띄우지 않는다.
-  const adShownForCall = useRef(false);
-  useEffect(() => {
-    if (!scenario) return;
-    if (!(state?.finished || instruction?.do === "finish")) {
-      adShownForCall.current = false; // 새 통화
-      return;
-    }
-    if (adShownForCall.current) return;
-    adShownForCall.current = true;
-    window.setTimeout(() => void maybeShowInterstitial("callEnd"), 1500);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state?.finished, instruction?.do]);
-
   /** Play the current line, then hand control back to the state machine. */
   useEffect(() => {
     if (!scenario || !state || instruction?.do !== "say") return;
@@ -1107,6 +1092,15 @@ export function RoleplayScreen({
     setHungUp(true);
   };
   const { recap } = useCallRecap(callOver, scenario?.language ?? null, said, isPremium);
+  /**
+   * 끝 화면을 닫을 때(✕·닫기) 전면 광고 한 번 — 통화가 끝까지 끝났고(중단 아님) 내가 한마디라도 했을 때만.
+   * 포인트 없음·마이크 거부로 첫 차례에 끝난 통화(📞를 누르자마자)엔 없고, 끝 화면에 들어서자마자 뜨지 않아 call-end 네이티브와 겹치지 않는다.
+   * 통화 정리·글자 숙제처럼 다른 학습으로 이어 가는 닫기에는 없음(흐름 한가운데).
+   */
+  const closeEnd = () => {
+    if (!hungUp && (state?.finished || instruction?.do === "finish") && said.some((line) => line.who === "learner")) void maybeShowInterstitial("callEnd");
+    onClose();
+  };
   /** 통화가 끝난 뒤 튜터가 남긴 메모(끝 화면 요약 아래, Logbank 카드에도). */
   const [tutorNote, setTutorNote] = useState("");
   // 끝나면 이번 통화에서 들은 삶을 이 폰에 남긴다. 짧은 통화는 접기가 안 돌아 여기서만 남는다.
@@ -1194,7 +1188,7 @@ export function RoleplayScreen({
           ui={ui}
           title={headTitle}
           subtitle={timeLine ?? scenario.tutorRole}
-          onClose={onClose}
+          onClose={closeEnd}
         />
         <CallSummary
           gender={tutorGender}
@@ -1283,7 +1277,7 @@ export function RoleplayScreen({
         <div className="shrink-0 px-4">
           <NativeAdSlot feedId="results" slotKey="call-end" spaced />
         </div>
-        <CallFooter ui={ui} instruction={instruction} outOfPoints={outOfPoints} onClose={onClose} />
+        <CallFooter ui={ui} instruction={instruction} outOfPoints={outOfPoints} onClose={closeEnd} />
       </FullScreenLayer>
     );
   }

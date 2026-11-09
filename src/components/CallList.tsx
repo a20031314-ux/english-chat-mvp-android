@@ -2,6 +2,7 @@
 
 import { useState, useSyncExternalStore } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { discardCall, readCalls, readCallsOnServer, subscribeCalls } from "@/lib/roleplay/callStore";
@@ -84,6 +85,12 @@ export function CallList({
         {calls.map((call) => (
           <CallRow key={call.id} call={call} ui={ui} locale={locale} onLeave={onClose} />
         ))}
+        {/* 기록 목록 끝 네이티브 하나(둘러보는 목록 끝 — 기록이 있을 때만, 마지막 줄 버튼과 한 줄 넘게 띄움). */}
+        {calls.length ? (
+          <li>
+            <NativeAdSlot feedId="sheets" slotKey="call-records" spaced />
+          </li>
+        ) : null}
       </ol>
     </FullScreenLayer>
   );

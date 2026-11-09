@@ -140,8 +140,8 @@ export function InlineQuiz({
         explainLink={explainLink}
         dictDoor={dictDoor}
       />
-      {/* Quizbank 문제 아래 빈 공간에 네이티브 하나(전체 화면에서만) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
-      {adKey ? <NativeAdSlot feedId="quiz-inline" slotKey={`${adKey}-${adRound}`} spaced layerOnly /> : null}
+      {/* Quizbank 문제 아래 빈 공간에 네이티브 하나(바닥 칸·전체 화면 모두 — My 탭은 배너가 없어 한 화면에 광고 하나) — 입력칸·버튼과 한 줄 넘게 띄우고, 키보드가 올라오면 숨김, 문제가 바뀔 때 60초 넘었으면 새 광고. */}
+      {adKey ? <NativeAdSlot feedId="quiz-inline" slotKey={`${adKey}-${adRound}`} spaced /> : null}
     </div>
   );
 }

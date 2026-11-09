@@ -6,8 +6,9 @@ import { DictNotesToggle } from "@/components/studyMap/DictNotes";
  * Quizbank 어휘 탭과 같은 표현 카드 — 표현 · 뜻 · 예문(그 표현 칠함)·예문 뜻 · 들려주기. 통화에서 왔으면 그 문장도 위에.
  * 카드는 server/expressionCards.ts(이 폰 exprCards.v2 — useExpressionCards와 같은 저장). 카드가 없으면 부르는 쪽이 예전 수업으로.
  */
-import { useEffect, useState } from "react";
-import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { useContext, useEffect, useState } from "react";
+import { FullScreenLayer, LayerAboveContext } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { SceneCard } from "@/components/studyMap/FrameLesson";
 import { TTSButton } from "@/components/TTSButton";
 import { apiUrl } from "@/lib/apiBase";
@@ -74,6 +75,7 @@ export function ExpressionCard({
       alive = false;
     };
   }, [language, locale, stage, expression, onMissing]);
+  const above = useContext(LayerAboveContext);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   const at = card ? card.example.indexOf(card.piece) : -1;
   return (
@@ -121,6 +123,8 @@ export function ExpressionCard({
                 <TTSButton text={card.example} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" />
               </div>
             </section>
+            {/* 예문 아래 네이티브 하나(읽는 카드 끝 — 대화·통화 위에서 연 카드(above)에는 없음). */}
+            {above ? null : <NativeAdSlot feedId="sheets" slotKey="expression-card" spaced />}
           </>
         ) : null}
       </div>

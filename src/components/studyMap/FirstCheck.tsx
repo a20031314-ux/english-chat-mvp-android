@@ -10,6 +10,7 @@
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { UICopy } from "@/lib/copy";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { QuestionView, type Answer } from "@/components/studyMap/QuizPlayer";
 import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -427,6 +428,8 @@ export function FirstCheck({
           <button type="button" data-first-start onClick={() => onDone(result)} className="tb-btn rounded-xl px-4 py-3 text-note font-semibold">
             {recheck ? ui.billingClose : ui.fcStart}
           </button>
+          {/* 📏 실력 확인 결과(14일마다 하는 시험의 끝) 아래 네이티브 하나 — 닫기 버튼과 한 줄 넘게 띄움. 처음 측정(설치 직후 온보딩)에는 없음. */}
+          {recheck ? <NativeAdSlot feedId="results" slotKey="skill-check-end" spaced /> : null}
         </div>
       ) : null}
     </div>

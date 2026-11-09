@@ -25,11 +25,10 @@ import { WebAdSlot } from "@/components/WebAdSlot";
  * 그 밖에 저절로 떼는 때: 이 자리가 든 층(FullScreenLayer·BodyLayer, 바닥 화면 0) 위에 다른 층이 덮였을 때,
  * 키보드가 올라왔을 때(입력칸 바로 아래로 붙지 않게).
  * `spaced`: 누르는 버튼·입력칸과 한 줄 넘게 띄운다(빈 공간 자리, AdMob 잘못 누름 정책).
- * `layerOnly`: 전체 화면 층 안에서만(My 칸처럼 같은 내용이 바닥 화면에도 그려질 때 — 바닥 화면은 배너가 있어 광고 하나).
  */
 const noSubscribe = () => () => undefined;
 
-type SlotProps = { feedId: string; slotKey: string; active?: boolean; spaced?: boolean; layerOnly?: boolean };
+type SlotProps = { feedId: string; slotKey: string; active?: boolean; spaced?: boolean };
 
 export function NativeAdSlot(props: SlotProps) {
   // 웹은 같은 자리에 AdSense(WebAdSlot). 판정은 처음 한 번 — 웹/앱은 실행 중에 바뀌지 않는다.
@@ -37,7 +36,6 @@ export function NativeAdSlot(props: SlotProps) {
   const layer = useAdLayer();
   const top = useSyncExternalStore(subscribeAdLayers, topAdLayer, () => 0);
   const keyboard = useKeyboardOpen();
-  if (props.layerOnly && layer === 0) return null;
   const visible = (props.active ?? true) && top === layer && !keyboard;
   if (web) return <WebAdSlot active={visible} spaced={props.spaced} />;
   return <AppAdSlot feedId={props.feedId} slotKey={props.slotKey} active={visible} layer={layer} spaced={props.spaced} />;

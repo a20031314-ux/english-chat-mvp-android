@@ -35,19 +35,3 @@ test("버튼으로 넘어갈 때는 닫기에서 줄을 띄우지 않고 다음 
   assert.deepEqual(opened, ["s1"]);
   publishUpNext([]);
 });
-
-test("다음 학습으로 넘어가는 닫기에서는 전면 광고를 건너뛰고, Quizbank(오늘 끝)로 갈 때는 그대로", async () => {
-  const { goingToNextStudy } = await import("./upNext.ts");
-  const keep = { id: "keep", label: "Quizbank", open: () => undefined };
-  setUpNextFallback(keep);
-  publishUpNext([{ id: "s1", label: "카페에서", open: () => undefined }]);
-  let seen: boolean | null = null;
-  goUpNext(pickUpNext("f1")!, () => { seen = goingToNextStudy(); });
-  assert.equal(seen, true);
-  publishUpNext([]);
-  goUpNext(pickUpNext("f1")!, () => { seen = goingToNextStudy(); });
-  assert.equal(seen, false);
-  assert.equal(goingToNextStudy(), false);
-  setUpNextFallback(null);
-  await new Promise((resolve) => setTimeout(resolve, 5));
-});

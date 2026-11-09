@@ -5,6 +5,7 @@ import { bankTone } from "@/components/studyMap/bankTone";
 import { useEffect, useMemo, useState, useSyncExternalStore, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import type { UICopy } from "@/lib/copy";
 import { clearQuizDay, dayValue, readQuizDays, type QuizDays } from "@/lib/curriculum/quizDays";
@@ -378,8 +379,8 @@ export function Logbank({
         ) : null}
       </section>
       {showTime ? <TimeSources ui={ui} summary={summary} input={input} period={period} /> : null}
-      {/* Logbank 아래 네이티브 하나(전체 화면에서만, 바닥 화면은 배너) — 둘러보는 목록 자리 규칙. */}
-      <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced layerOnly />
+      {/* Logbank 아래 네이티브 하나(바닥 칸·전체 화면 모두 — My 탭은 배너가 없어 한 화면에 광고 하나) — 둘러보는 목록 자리 규칙. */}
+      <NativeAdSlot feedId="my-full" slotKey="logbank-list" spaced />
       {dayDetail ? (
         <LogSheet title={dayFormat(locale, dayDetail.day)} ui={ui} onClose={() => setOpenDay(null)}>
           <DayTimeline
@@ -525,7 +526,11 @@ function LogSheet({ title, ui, onClose, children }: { title: string; ui: UICopy;
           <h2 dir="auto" className="min-w-0 flex-1 truncate text-body font-semibold text-ink">{title}</h2>
           <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">✕</button>
         </header>
-        <div data-log-sheet className="min-h-0 flex-1 overflow-y-auto px-4 py-3">{children}</div>
+        <div data-log-sheet className="min-h-0 flex-1 overflow-y-auto px-4 py-3">
+          {children}
+          {/* 그날·배운 것 세부 시트 끝 네이티브 하나(읽는 화면 끝). */}
+          <NativeAdSlot feedId="sheets" slotKey="log-sheet" spaced />
+        </div>
       </div>
     </FullScreenLayer>
   );
@@ -1592,6 +1597,8 @@ function SkillChecks({ ui, locale, language, ledger }: { ui: UICopy; locale: str
                 onDone={() => {
                   setOpen(false);
                   setTick((n) => n + 1);
+                  // 결과를 보고 닫을 때 전면 한 번(시험 끝 — 콘텐츠 사이 논리적 쉼). 시험 도중·▶를 누를 때는 없음.
+                  void maybeShowInterstitial("skillCheckEnd");
                 }}
               />
             </div>

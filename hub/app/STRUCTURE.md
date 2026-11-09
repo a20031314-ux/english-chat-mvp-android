@@ -65,7 +65,7 @@
   옛 링크 `?screen=…`는 `AppHome.tsx` `resolveTab`이 새 자리로 보낸다 — 탭을 바꾸면 여기와 사용법(`GUIDE_CHAPTERS`)·새로워진 점 `guide` 칸·캡처 스크립트를 같이 본다.
 - **탭끼리는 서로를 직접 부르지 않는다.** 이동은 `appIntents` 신호(아래 자동 표)로 하고, 받는 쪽이 처리한다. My 안 칸끼리는 이 폰 안 신호(`quizFocus.ts` QUIZ_FOCUS_EVENT · `lettersOpen.ts` LETTERS_OPEN_EVENT).
 - **오늘 해볼 것·표현 장부(`learner`)는 채팅·통화 첫 화면이 같이 쓴다.** 바꾸면 두 곳을 다 본다.
-- **광고**(무료·안드로이드만, 자리·설정·손익 전체는 `hub/app/ADS.md` — 자동): 배너는 둘러보는 화면(My·영상·대화 목록), 채팅·통화·Room·사람에는 없음. 네이티브는 목록 사이·전체 화면 칸 안 빈 공간·끝 화면 점수 아래(`NativeAdSlot`, 층이 맨 위일 때만), 전면은 끝나는 자리에만. 웹은 같은 자리에 AdSense만(`WebAdSlot`).
+- **광고**(무료·안드로이드만, 자리·설정·손익 전체는 `hub/app/ADS.md` — 자동): 배너는 영상·대화 목록만(My·채팅·통화·Room·사람에는 없음). 네이티브는 목록 사이·My 칸 안(Logbank 끝·Quizbank 문제 아래·Languagebank 끝 — 바닥 칸·전체 화면 모두)·끝 화면·읽는 시트 끝(`NativeAdSlot`, 층이 맨 위일 때만), 전면은 끝난 자리를 닫을 때만. 웹은 같은 자리에 AdSense만(`WebAdSlot`).
 - **창구(웹, `src/lib/doors.ts`):** 겉은 다른 서비스, 속은 같은 앱. `call.` = Moyeo(첫 화면 Room), `talk.` = Pingo(첫 화면 사람 "🟢 지금 접속 중"), `spin.` = Spin(🎲 랜덤 탭 `random`, 웹만, 서버 스위치 `RANDOM_ENABLED`). 창구 주소의 `/`·`/<언어>` → 소개 페이지(`app/door/…`), `?screen=`이 붙으면 창구 모드.
 - **다시 켤 때 하던 자리로**(`lib/resumeSpot.ts` resumeSpot.v1 이 폰): 하단 탭·My 칸과 전체 화면·열어 둔 소재 수업을 남겨, 1시간 안이면 그 자리로. 주소 ?screen·창구가 앞선다.
 - **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).

@@ -5,7 +5,7 @@ import { CardProgressDots, ladderName } from "@/components/studyMap/Growth";
 import { quizShapeOf } from "@/lib/curriculum/missKind";
 import { readLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { fireTodayEnd, maybeShowInterstitial } from "@/lib/ads";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/speech/Attempt";
@@ -75,7 +75,7 @@ export function QuizPlayer({
   unit,
   bundleKeys,
   onBundle,
-  fromToday = false,
+  homeworkLast = false,
   glossFirst = false,
   scoreEnd = false,
 }: {
@@ -111,8 +111,8 @@ export function QuizPlayer({
   /** 묶음 퀴즈(curriculum/quiz.ts bundleQuiz): unit 문제마다의 열쇠 — 끝나면 onBundle로 열쇠마다 결과. */
   bundleKeys?: readonly string[];
   onBundle?: (results: { key: string; correct: boolean; skipped: boolean }[]) => void;
-  /** 오늘 할 것에서 연 묶음(대본 하나 문제) — 닫을 때 전면 광고는 그날 마지막 항목일 때만(lib/ads.ts fireTodayEnd). */
-  fromToday?: boolean;
+  /** 통화 숙제의 남은 반쪽(대화는 이미 함) — 끝까지 풀고 닫으면 숙제가 끝난 자리라 전면(homeworkEnd). 아니면 닫아도 숙제 도중이라 없음. */
+  homeworkLast?: boolean;
   /** 빈칸 쓰기에서 앱 언어 뜻을 먼저 보여 준다(통화 숙제 — 뜻 없이는 답이 여럿, 2026-11-08 점검). */
   glossFirst?: boolean;
   /** 끝 화면 제목을 맞음/틀림 대신 점수만(통화 숙제 — 4/6에 "틀렸어요"가 실패처럼 보임, 2026-11-08 점검). */
@@ -131,10 +131,9 @@ export function QuizPlayer({
   const reported = useRef(false);
   const questions = useMemo(() => quiz?.questions ?? [], [quiz]);
   const done = index >= questions.length;
-  // 끝까지 푼 퀴즈를 닫을 때만 전면 광고(무료·안드로이드, 간격은 lib/ads.ts).
+  // 숙제를 다 끝낸 퀴즈를 끝까지 풀고 닫을 때만 전면 광고(무료·안드로이드, 간격은 lib/ads.ts).
   const closeQuiz = () => {
-    if (fromToday) fireTodayEnd();
-    else if (done && questions.length) void maybeShowInterstitial("quizEnd");
+    if (homeworkLast && done && questions.length) void maybeShowInterstitial("homeworkEnd");
     onClose();
   };
   const correct = Object.values(answers).filter((answer) => answer.correct).length;
@@ -220,7 +219,7 @@ export function QuizPlayer({
                 {ui.billingClose}
               </button>
             </div>
-            {/* 끝 화면 점수 아래 네이티브 하나(닫을 때 전면은 그대로) — 버튼과 한 줄 넘게 띄움. */}
+            {/* 끝 화면 점수 아래 네이티브 하나(숙제를 다 끝낸 퀴즈면 닫을 때 전면 homeworkEnd) — 버튼과 한 줄 넘게 띄움. */}
             <NativeAdSlot feedId="results" slotKey={`quiz-end-${seed}`} spaced />
           </div>
         ) : null}

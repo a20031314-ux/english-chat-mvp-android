@@ -32,15 +32,13 @@ type AdsConfig = {
 
 export type InterstitialMoment =
   | "callEnd"
-  | "missionDone"
+  | "homeworkEnd"
   | "chatLeave"
   | "roomLeave"
   | "videoLeave"
-  | "scriptEnd"
-  | "quizEnd"
-  | "checkupEnd"
   | "quizBreak"
-  | "stageUp";
+  | "skillCheckEnd"
+  | "flipEnd";
 
 /** Google 데모 광고 단위(개발·내부 테스트용). `NEXT_PUBLIC_ADS_TEST=1`로 빌드하면 실제 광고 대신 이것. */
 const TEST_UNITS = {
@@ -190,33 +188,6 @@ export async function maybeShowInterstitial(moment: InterstitialMoment, stayedSe
   } catch {
     interstitialReady = false;
   }
-}
-
-// ─── 오늘 할 것을 다 끝낸 순간(2026-11-01 사용자 "흑자가 되는 구조로") ─────────────────────
-//
-// 오늘 할 것의 항목(수업·대본·꺼내 쓰기) 사이에서는 전면 광고를 띄우지 않고, 그날 마지막 항목을 끝낸 뒤 한 번만(scriptEnd).
-// My(AutoQuiz)가 끝난 순간을 알리면: 그 위에 연 화면(마지막 수업의 끝 화면)이 있으면 그것을 닫을 때(fireTodayEnd),
-// 없으면(칸 안 퀴즈로 끝남) 바로. 30분 안에 닫지 않으면 잊는다(다음 날 다른 항목을 닫을 때 뜨지 않게).
-
-const TODAY_END_WAIT_MS = 30 * 60 * 1000;
-let todayEndArmedAt = 0;
-
-/** 오늘 할 것을 다 끝냈다(그날 한 번). overlayOpen = 마지막 항목 화면이 아직 떠 있는지. */
-export function noteTodayFinished(overlayOpen: boolean) {
-  if (overlayOpen) {
-    todayEndArmedAt = Date.now();
-    return;
-  }
-  todayEndArmedAt = 0;
-  void maybeShowInterstitial("scriptEnd");
-}
-
-/** 오늘 할 것에서 연 화면을 닫을 때 부른다 — 그날 마지막 항목이었을 때만 전면(scriptEnd), 아니면 아무것도 안 함. */
-export function fireTodayEnd() {
-  if (!todayEndArmedAt) return;
-  const fresh = Date.now() - todayEndArmedAt < TODAY_END_WAIT_MS;
-  todayEndArmedAt = 0;
-  if (fresh) void maybeShowInterstitial("scriptEnd");
 }
 
 export type RewardOffer = { chats: number; left: number };

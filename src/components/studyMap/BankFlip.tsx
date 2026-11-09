@@ -11,6 +11,8 @@
  */
 import { useMemo, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { DictionaryBody, type CardMask } from "@/components/studyMap/Dictionary";
 import type { UICopy } from "@/lib/copy";
 import { FLIP_HIDES, flipNext, startFlip, type FlipHide, type FlipRound } from "@/lib/curriculum/bankFlip";
@@ -55,9 +57,14 @@ export function BankFlip({ ui, language, locale, words, onClose }: { ui: UICopy;
   };
   const hideName: Record<FlipHide, string> = { meaning: ui.flipHideMeaning, word: ui.flipHideWord, example: ui.flipHideExample };
   const leftover = round.unsure.filter((word) => !round.known.includes(word));
+  // 묶음을 끝까지 넘기고 끝 화면을 ✕·바깥으로 닫을 때 전면 한 번(flipEnd — 한 묶음 끝, 논리적 쉼). ▶ Quizbank로 이어 갈 때·도중에 닫을 때는 없음.
+  const close = () => {
+    if (!current && round.total) void maybeShowInterstitial("flipEnd");
+    onClose();
+  };
   return (
     <BodyLayer>
-      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={onClose}>
+      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 sm:items-center" onClick={close}>
         <div
           role="dialog"
           aria-modal="true"
@@ -69,7 +76,7 @@ export function BankFlip({ ui, language, locale, words, onClose }: { ui: UICopy;
           <div className="flex items-center gap-2">
             <span className="text-meta tabular-nums text-slate-400">{current ? `${round.seen + 1} / ${round.total}` : ""}</span>
             <span className="flex-1" />
-            <button type="button" aria-label={ui.billingClose} onClick={onClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+            <button type="button" aria-label={ui.billingClose} onClick={close} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
               ✕
             </button>
           </div>
@@ -123,6 +130,10 @@ export function BankFlip({ ui, language, locale, words, onClose }: { ui: UICopy;
                   ▶ {ui.keepTitle}
                 </button>
               ) : null}
+              {/* 끝 화면 아래 네이티브 하나(버튼과 한 줄 넘게 띄움). */}
+              <div className="w-full pt-2">
+                <NativeAdSlot feedId="results" slotKey="flip-end" spaced />
+              </div>
             </div>
           )}
         </div>

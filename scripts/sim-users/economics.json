@@ -157,48 +157,128 @@
     "value": 0
   },
   "my": {
-    "_설명": "My 끝 전면 광고 어림(2026-11-01 광고 자리 넣음 — hub/app/ADS.md·hub/app/ads-plan.json econ 값): 오늘 할 것 항목 사이에는 없고 그날 다 끝낸 순간 한 번(todayEndsPerDay — ads-plan '옮김' 안 값 1), 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(stageScriptEndsPerDay, ✕·끝 화면 닫기 — 닷새에 한 번 어림 0.2), 쓰는 날 퀴즈 끝 quizEndsPerDay번, Quizbank 10문제 묶음 경계 quizBreaksPerDay번(0.8), 정기·단계 시험 끝은 한 달 checkupEndsPerMonth번, 단계 올라감 한 달 stageUpsPerMonth번(0.5). linesPerLesson은 예전 계산(수업마다 scriptEnd)용 — 0이면 안 셈. 대본을 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
-    "linesPerLesson": 0,
-    "todayEndsPerDay": 1,
-    "stageScriptEndsPerDay": 0.2,
-    "quizEndsPerDay": 0.3,
+    "_설명": "My 끝 전면 광고 어림(2026-11-09 개편에 맞춤 — hub/app/ADS.md): Quizbank 10문제 묶음 경계 quizBreaksPerDay번(쓰는 날 0.8), 넘겨 보기 묶음 끝을 닫을 때 flipEndsPerDay번(0.15), 📏 실력 확인 결과를 닫을 때 한 달 skillChecksPerMonth번(14일마다 ▶가 밝지만 무료가 끝까지 하는 일은 한 달 1번 남짓). My를 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
     "quizBreaksPerDay": 0.8,
-    "checkupEndsPerMonth": 2,
-    "stageUpsPerMonth": 0.5
+    "flipEndsPerDay": 0.15,
+    "skillChecksPerMonth": 1
   },
   "extraAds": [
     {
-      "_설명": "My·사람·Room 빈 공간 네이티브(2026-11-01 넣음, hub/app/ads-plan.json econ 값 그대로 — 쓰는 날 하루 노출, when my = 대본을 쓰는 날만·any = 쓰는 날 모두·room = 말하는 방을 쓰는 날만). 넣었지만 값이 없어 안 센 자리(덤): AI 채팅 잠김 화면. 2026-11-01 23시 학습과 떨어진 자리 6곳(hub/work/drafts/ads-passive-2026-11-01.md)도 ads-plan econ 값 그대로 더함."
+      "_설명": "무료에 더하는(음수면 빼는) 광고 노출 — 쓰는 날 하루 어림(2026-11-09 개편에 맞춰 다시 짬: 지워진 Stagebank·시험·대본 자리를 빼고, 넣었지만 안 세던 자리·새 자리를 넣음). when my = My를 쓰는 날만 · any = 쓰는 날 모두 · room = 말하는 방을 쓰는 날만. 근거는 hub/app/ads-plan.md·hub/work/drafts/ads-2026-11-09.md."
     },
     {
       "format": "native",
       "perActiveDay": 5,
       "when": "my",
-      "what": "Quizbank·수업 퀴즈 문제 아래(quiz-inline) — 문제가 바뀔 때 60초 넘었으면 새 광고(2026-11-01). 퀴즈를 쓰는 날 약 5분 → 5번(어림)"
+      "what": "Quizbank 문제 아래(quiz-inline) — 바닥 칸·전체 화면 모두, 문제가 바뀔 때 60초 넘었으면 새 광고. 퀴즈를 쓰는 날 약 5분 → 5번(어림)"
     },
     {
       "format": "native",
-      "perActiveDay": 1.5,
+      "perActiveDay": 1.0,
       "when": "my",
-      "what": "결과 화면 점수 아래(results)"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 1.5,
-      "when": "my",
-      "what": "Stagebank 전체 화면 오늘 할 것 아래(my-full)"
+      "what": "Logbank 끝(my-full logbank-list) — 바닥 칸·전체 화면 모두. My를 열면 첫 칸이라 쓰는 날 1번"
     },
     {
       "format": "native",
       "perActiveDay": 0.3,
       "when": "my",
-      "what": "Quizbank 시험 탭 대기 줄 아래(my-full)"
+      "what": "Languagebank 끝(my-full langbank-list) — 색인·묶음·낱말 화면 아래"
+    },
+    {
+      "format": "banner",
+      "perActiveDay": -2,
+      "when": "my",
+      "what": "배너 빼기 — My 탭 배너 없앰(바닥 칸 네이티브로, 한 화면에 광고 하나). My 바닥 화면 머무름 약 2분"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.3,
+      "when": "my",
+      "what": "끝 화면 점수 아래(results) — 소재 수업 lesson-end·숙제 퀴즈 quiz-end"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.3,
+      "when": "my",
+      "what": "사전 시트 끝(sheets dictionary-sheet) — My·Quizbank에서 열 때만"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.1,
+      "when": "my",
+      "what": "표현 카드 예문 아래(sheets expression-card) — 대화·통화 위에서 연 카드는 없음"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.3,
+      "when": "my",
+      "what": "넘겨 보기 끝 화면(results flip-end)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "my",
+      "what": "글자 퀴즈 끝 화면(results letters-end) — 0단계·글자가 다른 언어만"
     },
     {
       "format": "native",
       "perActiveDay": 0.4,
       "when": "my",
-      "what": "Logbank 세 번째 날 뒤·짧으면 목록 끝(my-full)"
+      "what": "Logbank 그날·배운 것 세부 시트 끝(sheets log-sheet)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.04,
+      "when": "my",
+      "what": "📏 실력 확인 결과 아래(results skill-check-end) — 한 달 1번 남짓"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "my",
+      "what": "칸 ? 설명 시트 끝(sheets bank-help)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.05,
+      "when": "any",
+      "what": "사용법(?) 창 끝(sheets guide-end)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.07,
+      "when": "any",
+      "what": "통화 끝 화면(results call-end) — 📞를 눌러 본 무료"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.03,
+      "when": "any",
+      "what": "통화 중 버튼 아래(call call-live) — 포인트를 산 무료만"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.03,
+      "when": "any",
+      "what": "이렇게도 말할 수 있었어요 장면 끝(results replay-end)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.01,
+      "when": "any",
+      "what": "숙제 화면 끝(sheets homework-sheet) — Logbank 숙제 줄에서 연 것"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.02,
+      "when": "any",
+      "what": "통화 기록 목록 끝(sheets call-records)"
+    },
+    {
+      "format": "native",
+      "perActiveDay": 0.1,
+      "when": "any",
+      "what": "AI 채팅 잠김 화면(chat-locked)"
     },
     {
       "format": "native",
@@ -220,57 +300,33 @@
     },
     {
       "format": "native",
-      "perActiveDay": 0.4,
-      "when": "my",
-      "what": "Stagebank 단계 화면 대화 예시 앞(my-full stagebank-stage)"
-    },
-    {
-      "format": "native",
       "perActiveDay": 0.1,
       "when": "any",
       "what": "영상 목록 여덟 번째 뒤(video-library 두 번째)"
     },
     {
-      "format": "native",
-      "perActiveDay": 0.05,
-      "when": "my",
-      "what": "📖 배울 수 있는 것 시트 끝(sheets)"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 0.05,
-      "when": "my",
-      "what": "칸 ? 설명 시트 끝(sheets)"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 0.05,
-      "when": "any",
-      "what": "사용법(?) 창 끝(sheets)"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 0.05,
-      "when": "my",
-      "what": "📈 내 진척·실력 기록 끝(sheets, 익힌 것이 있을 때만)"
-    },
-    {
-      "format": "native",
-      "perActiveDay": 0.8,
-      "when": "my",
-      "what": "My 대본(ScriptPlayer) 끝 화면 버튼 아래(results script-end, 2026-11-02 — 오늘 할 것 맨 끝 대본 장면 + 단계 화면에서 연 대본, 보수적 어림)"
-    },
-    {
       "format": "interstitial",
       "perActiveDay": 0.05,
       "when": "any",
-      "what": "videoLeave — 영상을 2분 넘게 보고 나올 때 전면(2026-11-02 손익에 넣음, 2.76~ 무료는 영상 대부분 잠김이라 쓰는 날 0.05번 어림)"
+      "what": "videoLeave — 영상을 2분 넘게 보고 나올 때 전면(2.76~ 무료는 영상 대부분 잠김)"
     },
     {
       "format": "interstitial",
       "perActiveDay": 0.03,
       "when": "any",
-      "what": "callEnd — 무료가 포인트로 한 AI 통화가 끝날 때 전면(2026-11-02 손익에 넣음, 2.76~ 무료는 자유 통화가 없어 쓰는 날 0.03번 어림)"
+      "what": "callEnd — 끝까지 간 AI 통화의 끝 화면을 닫을 때 전면(무료는 포인트로 한 통화만)"
+    },
+    {
+      "format": "interstitial",
+      "perActiveDay": 0.007,
+      "when": "any",
+      "what": "homeworkEnd — 수업 숙제 둘 다 끝내고 닫을 때 전면"
+    },
+    {
+      "format": "interstitial",
+      "perActiveDay": 0.02,
+      "when": "any",
+      "what": "chatLeave — 채팅 맛보기(평생 10통)를 2통 넘게 보내고 나올 때 전면"
     }
   ]
 }

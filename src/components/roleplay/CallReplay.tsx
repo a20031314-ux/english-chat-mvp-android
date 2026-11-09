@@ -5,6 +5,8 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { AiAvatar } from "@/components/AiTutorProfile";
 import { Attempt } from "@/components/speech/Attempt";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { chatPartnerForLanguage, tutorVoice, type TutorGender } from "@/lib/chatPartner";
@@ -195,7 +197,11 @@ function HomeworkSheet({ ui, language, gender, onClose, children }: { ui: UICopy
           ✕
         </button>
       </div>
-      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">{children}</div>
+      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">
+        {children}
+        {/* 숙제 화면 아래 빈 곳 네이티브 하나(읽는 화면 끝 — 버튼과 한 줄 넘게 띄움, 위에 장면·퀴즈가 덮이면 뗌). */}
+        <NativeAdSlot feedId="sheets" slotKey="homework-sheet" spaced />
+      </div>
     </FullScreenLayer>
   );
 }
@@ -244,7 +250,7 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
           <span className="tabular-nums text-slate-300">{stored.quiz ? `${stored.quiz.ok}/${stored.quiz.of}` : quiz.length}</span>
         </button>
       ) : (
-        <SceneChips {...shared} hasQuiz={quiz.length > 0} />
+        <SceneChips {...shared} hasQuiz={quiz.length > 0} homework />
       )}
       {playing ? (
         <QuizPlayer
@@ -262,6 +268,7 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
             if (next) onStored(next);
           }}
           onDone={() => undefined}
+          homeworkLast={talkDone}
           glossFirst
           scoreEnd
           onClose={() => setPlaying(false)}
@@ -272,8 +279,15 @@ function HomeworkTabs({ quiz, ...shared }: Shared & { quiz: readonly QuizQuestio
 }
 
 /** 대화: 장면 칩(같은 흐름 · 한 걸음 더/다른 갈래) → 장면 연습. */
-function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz }: Shared & { hasQuiz: boolean }) {
+function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored, hasQuiz, homework = false }: Shared & { hasQuiz: boolean; homework?: boolean }) {
   const [playing, setPlaying] = useState<ReplayScene | null>(null);
+  // 숙제의 마지막 반쪽(퀴즈가 없거나 이미 함)인 장면을 끝까지 하고 닫으면 숙제가 끝난 자리 — 전면 한 번(homeworkEnd). 통화 끝 화면의 장면은 통화 끝 전면과 같은 흐름이라 없음.
+  const finishedScene = useRef(false);
+  const closeScene = () => {
+    if (homework && finishedScene.current && (!hasQuiz || stored.quiz)) void maybeShowInterstitial("homeworkEnd");
+    finishedScene.current = false;
+    setPlaying(null);
+  };
   return (
     <>
       <div className="mt-2 flex flex-wrap gap-2">
@@ -303,10 +317,11 @@ function SceneChips({ ui, language, locale, stored, gender, isPremium, onStored,
           gender={gender}
           isPremium={isPremium}
           onDone={(result) => {
+            finishedScene.current = true;
             const next = noteReplayResult(storage(), language, stored.callId, playing.kind, { ...result, at: Date.now() }, hasQuiz);
             if (next) onStored(next);
           }}
-          onClose={() => setPlaying(null)}
+          onClose={closeScene}
         />
       ) : null}
     </>
@@ -466,6 +481,10 @@ function ReplayPlayer({
               ✓ {results.filter((one) => one!.ok).length}/{results.length}
               {whole ? ` · ${ui.replayWhole} ${answers.whole?.ok ? "✓" : "✗"}` : ""}
             </p>
+            {/* 장면 끝 점수 아래 네이티브 하나(끝 화면 — 아래 닫기 버튼과 한 줄 넘게 띄움). */}
+            <div className="mt-4">
+              <NativeAdSlot feedId="results" slotKey={`replay-end-${scene.kind}`} spaced />
+            </div>
           </li>
         ) : null}
       </ol>

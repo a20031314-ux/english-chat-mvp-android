@@ -65,8 +65,11 @@ const noSubscribe = () => () => {};
 export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk" | "random";
 
 const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages", "talk", "random"];
-/** 광고 배너를 두는 둘러보는 화면(lib/ads.ts). 채팅·통화·말하는 방·사람 화면에는 없음. */
-const BANNER_TABS: AppTab[] = ["map", "video", "vocab", "talk"];
+/**
+ * 광고 배너를 두는 둘러보는 화면(lib/ads.ts). 채팅·통화·말하는 방·사람 화면에는 없음.
+ * My(map)도 없음 — Logbank·Quizbank·Languagebank 칸 안 네이티브가 바닥 화면에서도 붙어 한 화면에 광고 하나(사용자 2026-11-09).
+ */
+const BANNER_TABS: AppTab[] = ["video", "vocab", "talk"];
 /** 앱 오프닝 광고를 띄우지 않는 화면(통화·말하는 방 — 소리가 이어지는 곳). */
 const NO_APP_OPEN_TABS: AppTab[] = ["roleplay", "rooms"];
 

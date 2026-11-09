@@ -16,7 +16,6 @@ let fallback: UpNext | null = null;
 let offer: { own: string; at: number } | null = null;
 let signature = "";
 let leaving = false;
-let leavingToFallback = false;
 let offerTimer: ReturnType<typeof setTimeout> | null = null;
 const listeners = new Set<() => void>();
 const OFFER_MS = 15_000;
@@ -67,20 +66,13 @@ export function dismissUpNext(): void {
 }
 
 /** 다음 추천으로 넘어가기: 지금 화면을 닫고(close) 다음 것을 연다. 닫을 때 줄은 띄우지 않는다. */
-/** 다음 추천 버튼으로 다음 학습에 넘어가는 중인지 — 닫기의 전면 광고를 건너뛴다(흐름 한가운데, ADS 원칙). Quizbank(오늘 끝)로 갈 때는 아님. */
-export function goingToNextStudy(): boolean {
-  return leaving && !leavingToFallback;
-}
-
 export function goUpNext(next: UpNext, close?: () => void): void {
   leaving = true;
-  leavingToFallback = next === fallback;
   offer = null;
   try {
     close?.();
   } finally {
     leaving = false;
-    leavingToFallback = false;
   }
   window.setTimeout(() => next.open(), 0);
   notify();

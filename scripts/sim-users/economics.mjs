@@ -39,11 +39,10 @@ const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "
  * 이 계산이 세는 전면 광고 순간(hub/app/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
  * 여기 없는 순간은 "손익에 안 들어간 광고"로 알린다 — 새 순간을 simulate에 넣으면 여기에도 더한다.
  * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움. 새 무료·유료는 팩이 0이라 계산에 안 나옴.)
- * My 끝 순간(2026-11-01 광고 자리 넣음): 오늘 할 것을 다 끝냄·단계 화면에서 연 수업 끝(scriptEnd) · 퀴즈 끝(quizEnd) · 시험 끝(checkupEnd) ·
- * Quizbank 10문제 묶음 경계(quizBreak) · 단계 올라감(stageUp) — economics.json "my". 빈 공간 네이티브는 economics.json "extraAds".
- * 영상 보고 나옴(videoLeave)·AI 통화 끝(callEnd)은 2026-11-02부터 extraAds의 interstitial 줄로 셈(쓰는 날 어림).
+ * My 끝 순간(2026-11-09 개편에 맞춤): Quizbank 10문제 묶음 경계(quizBreak) · 📏 실력 확인 결과 닫기(skillCheckEnd) · 넘겨 보기 끝(flipEnd) — economics.json "my".
+ * 영상 보고 나옴(videoLeave)·AI 통화 끝(callEnd)·숙제 끝(homeworkEnd)·채팅 맛보기 나옴(chatLeave 덤)은 extraAds의 interstitial 줄로 셈(쓰는 날 어림). 빈 공간 네이티브도 extraAds.
  */
-export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "scriptEnd", "quizEnd", "checkupEnd", "quizBreak", "stageUp", "videoLeave", "callEnd"];
+export const MODELED_MOMENTS = ["chatLeave", "roomLeave", "quizBreak", "skillCheckEnd", "flipEnd", "homeworkEnd", "videoLeave", "callEnd"];
 
 export const PLANS = [
   // 무료 = 2.76부터의 대본 앱 무료(채팅·통화·팩 없음, My 대본만 — 2026-11-01 변경 감시 광고 안 1). 2.75 이하 앱 무료는 5절 민감도 "옛 무료"로만.
@@ -124,21 +123,17 @@ export function simulate(type, terms, o) {
     // packDaysPerWeek 0(대본 앱 무료·대본 플랜)은 팩 없음, null은 매일 1번 + 추가.
     const packCap = typeof terms.packDaysPerWeek === "number" ? terms.packDaysPerWeek / 7 : 1 + terms.extraPacks;
     n.packs += Math.min(type.packs, packCap);
-    // My 대본 내 줄(모든 요금, 하루 한도 dailyScriptLines) + 끝 순간 전면(무료만, economics.json "my"):
-    // 오늘 할 것 끝 한 번 · 단계 화면에서 연 수업 끝 · 퀴즈 끝 · Quizbank 묶음 경계 · 시험 끝·단계 올라감(한 달 몇 번을 쓰는 날로 나눔).
-    // linesPerLesson > 0이면 예전 계산(수업마다 scriptEnd)도 더한다(민감도용).
+    // My를 쓰는 날(scriptLines > 0, 하루 한도 dailyScriptLines) + My 끝 순간 전면(무료만, economics.json "my"):
+    // Quizbank 묶음 경계 · 넘겨 보기 끝 · 📏 실력 확인 결과 닫기(한 달 몇 번을 쓰는 날로 나눔).
     const lines = Math.min(type.scriptLines ?? 0, terms.dailyScriptLines ?? 0);
     n.scriptLines += lines;
     if (ads && lines > 0) {
       const my = o.assume.my;
       n.interstitial +=
-        (my.linesPerLesson > 0 ? lines / my.linesPerLesson : 0) +
-        (my.todayEndsPerDay ?? 0) +
-        (my.stageScriptEndsPerDay ?? 0) +
-        my.quizEndsPerDay +
         (my.quizBreaksPerDay ?? 0) +
+        (my.flipEndsPerDay ?? 0) +
         // 한 달 n번 → 쓰는 날 하루 n / days번
-        (my.checkupEndsPerMonth + (my.stageUpsPerMonth ?? 0)) / Math.max(1, type.days);
+        (my.skillChecksPerMonth ?? 0) / Math.max(1, type.days);
       lastInter = d * 1440 + 9 * 60; // 그날 첫 세션 전에 My를 한 것으로 — 채팅 나갈 때 전면과 간격
     }
     // 광고 안(새 자리·옮김)으로 더하거나 빼는 노출 — 무료만, 없으면 0.
@@ -348,7 +343,8 @@ export function render(o) {
     ["방 퇴장 전면 끔", { ads: { ...o.ads, roomLeaveMinutes: 0 } }],
     ["배너 끔", { ads: { ...o.ads, bannerEnabled: false } }],
     // 오늘 할 것을 다 끝내는 날이 열흘 중 여섯 날뿐이면(오늘 할 것 끝 전면 1 → 0.6, hub/app/ads-plan.json 근거의 어림).
-    ["오늘 할 것 끝 전면이 쓰는 날 60%", { assume: { ...o.assume, my: { ...o.assume.my, todayEndsPerDay: (o.assume.my.todayEndsPerDay ?? 0) * 0.6 } } }],
+    // Quizbank를 10문제 넘게 푸는 날이 절반뿐이면(묶음 경계 전면 0.8 → 0.4, 어림).
+    ["Quizbank 묶음 경계 전면 절반", { assume: { ...o.assume, my: { ...o.assume.my, quizBreaksPerDay: (o.assume.my.quizBreaksPerDay ?? 0) * 0.5 } } }],
     // 2026-11-01 넣은 빈 공간 네이티브(economics.json extraAds)를 빼면.
     ["빈 공간 네이티브 없음", { assume: { ...o.assume, extraAds: [] } }],
     ["무료가 대본을 두 배로 씀", { assume: { ...o.assume, types: Object.fromEntries(Object.entries(o.assume.types).map(([k, t]) => [k, typeof t === "object" ? { ...t, scriptLines: (t.scriptLines ?? 0) * 2 } : t])) } }],
@@ -365,7 +361,7 @@ export function render(o) {
     "- 광고 단가·채움률은 AdMob 보고서가 쌓이기 전까지 가정입니다(`ads.ts` `AD_REVENUE_USD`).",
     "- **무료는 2.76부터의 대본 앱 무료**(채팅·자유 통화·팩 없음, My 대본만 — 하루 내 줄 25줄까지)로 계산합니다(2026-11-01부터). 2.75 이하 앱 무료(채팅 7번·팩)는 옛 앱이 줄어들면 사라져 넣지 않았습니다. 대본 한 줄 원가·틀림 다시 보기 비율은 `plan-cost.mjs`(`hub/app/costs.md`)와 같은 값.",
     "- 대본 플랜 2,900원은 1절·2절에만 — 결제한 사람 비율(`planShare`)에는 아직 없습니다(실측 전).",
-    "- My 끝 광고 횟수(`economics.json` `my`: 수업 하나 = 내 줄 8개, 퀴즈 끝 하루 0.3번, 시험 끝 한 달 2번)는 어림입니다.",
+    "- My 끝 광고 횟수(`economics.json` `my`: Quizbank 묶음 경계 하루 0.8번, 넘겨 보기 끝 0.15번, 실력 확인 한 달 1번)와 빈 공간 네이티브 횟수(`extraAds`)는 어림입니다.",
     "- 무료 첫 달의 처음 20포인트(통화 100분)는 한 번뿐이라 뺐습니다. 구매 포인트 수입, 환불, 무료 체험도 넣지 않았습니다.",
     "- 광고는 안드로이드만입니다. iOS 무료 사용자는 광고 수입 0으로 봐야 합니다(아직 iOS 사용자 없음).",
     "- 부가세 10%는 Play가 한국 부가세를 떼고 정산한다고 본 값으로, Play 정산 보고서로 확인이 필요합니다.",

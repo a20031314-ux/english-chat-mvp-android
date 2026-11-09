@@ -1,6 +1,7 @@
 "use client";
 
 import { DictNotesToggle } from "@/components/studyMap/DictNotes";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
@@ -328,6 +329,8 @@ export function DictionarySheet({ ui, language, locale, word, title, onClose, ab
           ) : (
             <DictionaryBody ui={ui} language={language} locale={locale} above />
           )}
+          {/* 사전 시트 아래 네이티브 하나(읽는 시트 끝 — My·Quizbank에서 열 때만, 대화·통화 위(above)에서는 없음: 쓰고 말하는 흐름 위라서). */}
+          {above ? null : <NativeAdSlot feedId="sheets" slotKey="dictionary-sheet" spaced />}
         </div>
       </div>
     </BodyLayer>

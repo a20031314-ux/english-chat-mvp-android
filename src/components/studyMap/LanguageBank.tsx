@@ -1,5 +1,6 @@
 "use client";
 
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { BankFlip } from "@/components/studyMap/BankFlip";
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import type { UICopy } from "@/lib/copy";
@@ -377,6 +378,8 @@ export function LanguageBank({
           ) : null}
         </>
       )}
+      {/* Languagebank 맨 끝 네이티브 하나(색인·묶음·낱말 화면 아래 — 둘러보는 목록 끝, 바닥 칸·전체 화면 모두, 글자 연습 중에는 없음). */}
+      {lettersView ? null : <NativeAdSlot feedId="my-full" slotKey="langbank-list" spaced />}
       {flip ? <BankFlip ui={ui} language={language} locale={locale} words={flip} onClose={() => setFlip(null)} /> : null}
     </div>
   );
