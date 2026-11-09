@@ -1831,6 +1831,22 @@
    "src": "made"
   }
  ],
+ "w|advertir": [
+  {
+   "text": "A juíza precisou advertir a plateia por causa das conversas paralelas.",
+   "en": "The judge had to warn the audience because of the side conversations.",
+   "ko": "판사는 방청석의 잡담 때문에 주의를 줘야 했어요.",
+   "blank": "advertir",
+   "src": "made"
+  },
+  {
+   "text": "Na carta, a Carla quis advertir a amiga sobre o golpe do falso empréstimo.",
+   "en": "In the letter, Carla wanted to warn her friend about the fake loan scam.",
+   "ko": "편지에서 카를라는 친구에게 가짜 대출 사기를 조심하라고 알려 주고 싶었어요.",
+   "blank": "advertir",
+   "src": "made"
+  }
+ ],
  "w|advogado": [
   {
    "text": "Meu advogado ligou agora.",
@@ -2934,6 +2950,22 @@
    "en": "Inês sprays water on the lettuce so it doesn't wilt.",
    "ko": "이네스는 상추가 시들지 않게 물을 뿌려요.",
    "blank": "alface",
+   "src": "made"
+  }
+ ],
+ "w|alferes": [
+  {
+   "text": "No corredor do tribunal há um quadro de Tiradentes vestido de alferes.",
+   "en": "In the courthouse hallway there's a painting of Tiradentes dressed as an ensign.",
+   "ko": "법원 복도에는 소위 차림의 치라덴치스 그림이 걸려 있어요.",
+   "blank": "alferes",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu que o filho fez o papel de alferes na peça sobre a Inconfidência.",
+   "en": "Carla wrote that her son played the ensign in the play about the Inconfidência.",
+   "ko": "카를라는 아들이 인콘피덴시아 연극에서 소위 역을 맡았다고 썼어요.",
+   "blank": "alferes",
    "src": "made"
   }
  ],
@@ -7253,6 +7285,22 @@
    "blank": "assim que"
   }
  ],
+ "w|assinado": [
+  {
+   "text": "O contrato assinado pelas duas partes foi a prova principal do processo.",
+   "en": "The contract signed by both parties was the main evidence in the case.",
+   "ko": "양측이 서명한 계약서가 소송의 핵심 증거였어요.",
+   "blank": "assinado",
+   "src": "made"
+  },
+  {
+   "text": "A Carla guardou na gaveta o cartão assinado por toda a turma antiga.",
+   "en": "Carla kept in a drawer the card signed by the whole old class.",
+   "ko": "카를라는 옛 반 친구들 모두가 서명한 카드를 서랍에 간직했어요.",
+   "blank": "assinado",
+   "src": "made"
+  }
+ ],
  "w|assinar": [
   {
    "text": "Assina aqui embaixo.",
@@ -7528,6 +7576,22 @@
    "en": "Beatriz bought the drinks wholesale to save money.",
    "ko": "베아트리스는 돈을 아끼려고 음료를 도매로 샀어요.",
    "blank": "atacado",
+   "src": "made"
+  }
+ ],
+ "w|atacante": [
+  {
+   "text": "O jogador processado por agressão é atacante de um time do interior.",
+   "en": "The player sued for assault is a striker for a team from the countryside.",
+   "ko": "폭행으로 소송을 당한 선수는 지방 팀의 공격수예요.",
+   "blank": "atacante",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que o filho quer ser atacante quando crescer.",
+   "en": "Carla said her son wants to be a striker when he grows up.",
+   "ko": "카를라는 아들이 커서 공격수가 되고 싶어 한다고 전했어요.",
+   "blank": "atacante",
    "src": "made"
   }
  ],
@@ -10429,6 +10493,22 @@
    "src": "made"
   }
  ],
+ "w|beneficente": [
+  {
+   "text": "O Rafael atende de graça os casos de uma entidade beneficente do bairro.",
+   "en": "Rafael handles the cases of a neighborhood charity free of charge.",
+   "ko": "하파에우는 동네 자선 단체의 사건을 무료로 맡아요.",
+   "blank": "beneficente",
+   "src": "made"
+  },
+  {
+   "text": "A Carla ajudou a organizar um bazar beneficente na igreja do bairro.",
+   "en": "Carla helped organize a charity bazaar at the neighborhood church.",
+   "ko": "카를라는 동네 교회의 자선 바자회 준비를 도왔어요.",
+   "blank": "beneficente",
+   "src": "made"
+  }
+ ],
  "w|beneficiar": [
   {
    "text": "A reforma do telhado vai beneficiar principalmente a sala dos quadros mais frágeis.",
@@ -11555,6 +11635,22 @@
    "blank": "brava"
   }
  ],
+ "w|bravura": [
+  {
+   "text": "A juíza elogiou a bravura da testemunha que enfrentou o réu.",
+   "en": "The judge praised the courage of the witness who stood up to the defendant.",
+   "ko": "판사는 피고인에게 맞선 증인의 용기를 칭찬했어요.",
+   "blank": "bravura",
+   "src": "made"
+  },
+  {
+   "text": "A Carla lembrou a bravura da avó, que criou seis filhos sozinha.",
+   "en": "Carla recalled the courage of her grandmother, who raised six children on her own.",
+   "ko": "카를라는 혼자 여섯 아이를 키운 할머니의 용기를 떠올렸어요.",
+   "blank": "bravura",
+   "src": "made"
+  }
+ ],
  "w|brecha": [
   {
    "text": "A defesa encontrou uma brecha no contrato e pediu a absolvição do cliente.",
@@ -11956,6 +12052,22 @@
    "en": "Mariana wasted the whole morning on paperwork to import a medicine.",
    "ko": "마리아나는 약 하나를 수입하는 서류 절차로 오전을 다 보냈어요.",
    "blank": "burocracia",
+   "src": "made"
+  }
+ ],
+ "w|burrice": [
+  {
+   "text": "O Rafael admitiu que foi burrice esquecer a pasta no táxi antes da audiência.",
+   "en": "Rafael admitted it was foolish to leave his briefcase in the taxi before the hearing.",
+   "ko": "하파에우는 공판 전에 택시에 서류 가방을 두고 내린 건 바보짓이었다고 인정했어요.",
+   "blank": "burrice",
+   "src": "made"
+  },
+  {
+   "text": "A Carla pediu desculpas pela burrice de ter brigado por uma bobagem anos atrás.",
+   "en": "Carla apologized for the foolishness of having fought over nothing years ago.",
+   "ko": "카를라는 몇 년 전 사소한 일로 다툰 어리석음을 사과했어요.",
+   "blank": "burrice",
    "src": "made"
   }
  ],
@@ -16709,6 +16821,22 @@
    "src": "made"
   }
  ],
+ "w|civilizar": [
+  {
+   "text": "O professor de direito dizia que as leis existem para civilizar os conflitos.",
+   "en": "The law professor used to say that laws exist to civilize conflicts.",
+   "ko": "법학 교수는 법이 갈등을 문명화하려고 있는 거라고 말하곤 했어요.",
+   "blank": "civilizar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla brincou que ainda tenta civilizar o marido à mesa.",
+   "en": "Carla joked that she is still trying to civilize her husband at the table.",
+   "ko": "카를라는 아직도 남편의 식탁 예절을 길들이는 중이라고 농담했어요.",
+   "blank": "civilizar",
+   "src": "made"
+  }
+ ],
  "w|clã": [
   {
    "text": "O Pedro escreveu sobre um clã de pescadores que vive na mesma vila há gerações.",
@@ -17299,6 +17427,22 @@
    "ko": "내 우표 수집품 볼래?",
    "blank": "coleção",
    "src": "tatoeba:5371278/bill en:3871280/CK"
+  }
+ ],
+ "w|colecionar": [
+  {
+   "text": "O réu costumava colecionar moedas raras, segundo a defesa.",
+   "en": "The defendant used to collect rare coins, according to the defense.",
+   "ko": "변호 측에 따르면 피고인은 희귀 동전을 모으곤 했어요.",
+   "blank": "colecionar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla começou a colecionar selos por causa das cartas que troca com a amiga.",
+   "en": "Carla started collecting stamps because of the letters she exchanges with her friend.",
+   "ko": "카를라는 친구와 편지를 주고받다가 우표를 모으기 시작했어요.",
+   "blank": "colecionar",
+   "src": "made"
   }
  ],
  "w|colega": [
@@ -18769,6 +18913,22 @@
    "ko": "파딜은 작은 마을에 살아요.",
    "blank": "comunidade",
    "src": "tatoeba:5881817/sergiomelo en:5879557/OsoHombre"
+  }
+ ],
+ "w|comunismo": [
+  {
+   "text": "O livro de história que o Rafael lia na pausa falava do comunismo na Guerra Fria.",
+   "en": "The history book Rafael was reading on his break was about communism in the Cold War.",
+   "ko": "하파에우가 쉬는 시간에 읽던 역사책은 냉전기 공산주의를 다뤘어요.",
+   "blank": "comunismo",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que a filha está estudando a queda do comunismo na Europa.",
+   "en": "Carla said her daughter is studying the fall of communism in Europe.",
+   "ko": "카를라는 딸이 유럽 공산주의의 몰락을 공부하고 있다고 전했어요.",
+   "blank": "comunismo",
+   "src": "made"
   }
  ],
  "w|comunista": [
@@ -26167,6 +26327,22 @@
    "src": "made"
   }
  ],
+ "w|detento": [
+  {
+   "text": "O detento chegou ao tribunal escoltado por dois agentes.",
+   "en": "The inmate arrived at the courthouse escorted by two officers.",
+   "ko": "수감자는 교도관 두 명의 호송을 받으며 법원에 도착했어요.",
+   "blank": "detento",
+   "src": "made"
+  },
+  {
+   "text": "A Carla dá aulas de leitura para um detento num projeto da prefeitura.",
+   "en": "Carla teaches reading to an inmate in a city hall program.",
+   "ko": "카를라는 시청 프로그램으로 수감자 한 명에게 읽기를 가르쳐요.",
+   "blank": "detento",
+   "src": "made"
+  }
+ ],
  "w|deter": [
   {
    "text": "O Rafael deteve o cachorro pela coleira antes que ele fugisse pela porta.",
@@ -26567,6 +26743,22 @@
    "blank": "diabo"
   }
  ],
+ "w|diabólico": [
+  {
+   "text": "O promotor descreveu o golpe como um plano diabólico contra aposentados.",
+   "en": "The prosecutor described the scam as a diabolical plan against retirees.",
+   "ko": "검사는 그 사기를 은퇴자를 노린 악랄한 계획이라고 묘사했어요.",
+   "blank": "diabólico",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu que o calor deste verão está diabólico.",
+   "en": "Carla wrote that the heat this summer is diabolical.",
+   "ko": "카를라는 올여름 더위가 지독하다고 썼어요.",
+   "blank": "diabólico",
+   "src": "made"
+  }
+ ],
  "w|diagnóstico": [
   {
    "text": "O diagnóstico saiu rápido, e o Miguel tranquilizou a família do coelho.",
@@ -26828,6 +27020,22 @@
    "en": "Beatriz took a while to type the message, her fingers still shaking from the game.",
    "ko": "경기 후 손가락이 아직 떨려서 베아트리스는 메시지를 치는 데 한참 걸렸어요.",
    "blank": "digitar",
+   "src": "made"
+  }
+ ],
+ "w|dígito": [
+  {
+   "text": "Um dígito errado no número do processo atrasou a audiência.",
+   "en": "One wrong digit in the case number delayed the hearing.",
+   "ko": "사건 번호의 숫자 하나가 틀려서 공판이 늦어졌어요.",
+   "blank": "dígito",
+   "src": "made"
+  },
+  {
+   "text": "A Carla esqueceu o último dígito do telefone novo e pediu à amiga que confirmasse.",
+   "en": "Carla forgot the last digit of the new phone number and asked her friend to confirm it.",
+   "ko": "카를라는 새 전화번호 끝자리를 잊어서 친구에게 확인해 달라고 했어요.",
+   "blank": "dígito",
    "src": "made"
   }
  ],
@@ -27198,6 +27406,22 @@
    "en": "Ana usually disagrees with people who say marathons are only for athletes.",
    "ko": "아나는 마라톤이 선수들만 하는 거라는 말에 늘 반대해요.",
    "blank": "discordar",
+   "src": "made"
+  }
+ ],
+ "w|discoteca": [
+  {
+   "text": "A briga que deu origem ao processo começou na saída de uma discoteca.",
+   "en": "The fight that led to the lawsuit started outside a nightclub.",
+   "ko": "소송의 발단이 된 싸움은 나이트클럽 앞에서 시작됐어요.",
+   "blank": "discoteca",
+   "src": "made"
+  },
+  {
+   "text": "A Carla lembrou das noites de sábado na discoteca da cidade quando eram jovens.",
+   "en": "Carla remembered the Saturday nights at the town's disco when they were young.",
+   "ko": "카를라는 젊었을 때 동네 디스코텍에서 보낸 토요일 밤들을 떠올렸어요.",
+   "blank": "discoteca",
    "src": "made"
   }
  ],
@@ -33547,6 +33771,22 @@
    "src": "made"
   }
  ],
+ "w|estouro": [
+  {
+   "text": "O processo começou depois do estouro de um cano que inundou o prédio.",
+   "en": "The lawsuit began after a pipe burst and flooded the building.",
+   "ko": "소송은 배관이 터져 건물이 물에 잠긴 뒤 시작됐어요.",
+   "blank": "estouro",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que o estouro de um balão assustou o cachorro na festa da neta.",
+   "en": "Carla said a balloon popping scared the dog at her granddaughter's party.",
+   "ko": "카를라는 손녀 생일 파티에서 풍선 터지는 소리에 개가 놀랐다고 했어요.",
+   "blank": "estouro",
+   "src": "made"
+  }
+ ],
  "w|estrada": [
   {
    "text": "A estrada está esburacada.",
@@ -34122,6 +34362,22 @@
    "en": "With the river flooding, Carla had to evacuate the animals up the hill.",
    "ko": "강이 범람해서 카를라는 가축을 언덕으로 대피시켜야 했어요.",
    "blank": "evacuar",
+   "src": "made"
+  }
+ ],
+ "w|evangelho": [
+  {
+   "text": "A testemunha jurou dizer a verdade com a mão sobre o evangelho.",
+   "en": "The witness swore to tell the truth with a hand on the Gospel.",
+   "ko": "증인은 복음서에 손을 얹고 진실만 말하겠다고 맹세했어요.",
+   "blank": "evangelho",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que a mãe ainda lê um trecho do evangelho toda noite.",
+   "en": "Carla said her mother still reads a passage from the Gospel every night.",
+   "ko": "카를라는 엄마가 아직도 매일 밤 복음서 한 구절을 읽는다고 전했어요.",
+   "blank": "evangelho",
    "src": "made"
   }
  ],
@@ -35894,6 +36150,22 @@
    "en": "The plot revolves around the forgery of a will in a rich family.",
    "ko": "줄거리는 한 부잣집의 유언장 위조를 중심으로 돌아가요.",
    "blank": "falsificação",
+   "src": "made"
+  }
+ ],
+ "w|falsificar": [
+  {
+   "text": "O réu é acusado de falsificar a assinatura do sócio em vários contratos.",
+   "en": "The defendant is accused of forging his partner's signature on several contracts.",
+   "ko": "피고인은 여러 계약서에 동업자 서명을 위조한 혐의를 받고 있어요.",
+   "blank": "falsificar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla lembrou de quando as duas tentaram falsificar a assinatura da mãe no boletim.",
+   "en": "Carla remembered when the two of them tried to forge her mother's signature on the report card.",
+   "ko": "카를라는 둘이 성적표에 엄마 서명을 위조하려 했던 일을 떠올렸어요.",
+   "blank": "falsificar",
    "src": "made"
   }
  ],
@@ -38418,6 +38690,22 @@
    "en": "One of Luísa's coworkers forgot his lunch in the oven and filled the kitchenette with smoke.",
    "ko": "루이자의 동료가 도시락을 오븐에 넣고 잊어버려서 탕비실이 연기로 가득 찼어요.",
    "blank": "forno",
+   "src": "made"
+  }
+ ],
+ "w|fortalecer": [
+  {
+   "text": "O novo depoimento serviu para fortalecer a tese da defesa.",
+   "en": "The new testimony served to strengthen the defense's argument.",
+   "ko": "새 증언은 변호 측 주장을 더 탄탄하게 해 줬어요.",
+   "blank": "fortalecer",
+   "src": "made"
+  },
+  {
+   "text": "A Carla acredita que as cartas ajudam a fortalecer a amizade mesmo de longe.",
+   "en": "Carla believes letters help strengthen a friendship even from afar.",
+   "ko": "카를라는 편지가 멀리 있어도 우정을 단단하게 해 준다고 믿어요.",
+   "blank": "fortalecer",
    "src": "made"
   }
  ],
@@ -41503,6 +41791,22 @@
    "blank": "gritar"
   }
  ],
+ "w|gritaria": [
+  {
+   "text": "Depois da sentença, a gritaria no corredor obrigou a juíza a chamar os seguranças.",
+   "en": "After the sentence, the shouting in the hallway forced the judge to call security.",
+   "ko": "선고 뒤 복도의 고함 소리 때문에 판사는 경비를 불러야 했어요.",
+   "blank": "gritaria",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que a gritaria dos netos não a deixa escrever em paz.",
+   "en": "Carla said her grandchildren's shouting doesn't let her write in peace.",
+   "ko": "카를라는 손주들 떠드는 소리 때문에 편지를 차분히 쓸 수가 없다고 했어요.",
+   "blank": "gritaria",
+   "src": "made"
+  }
+ ],
  "w|grito": [
   {
    "text": "Eu ouvi um grito e então uma batida.",
@@ -42687,6 +42991,22 @@
    "src": "tatoeba:6484298/bill en:318718/CK"
   }
  ],
+ "w|húngaro": [
+  {
+   "text": "O tribunal chamou um intérprete para o empresário húngaro.",
+   "en": "The court called an interpreter for the Hungarian businessman.",
+   "ko": "법원은 헝가리 사업가를 위해 통역사를 불렀어요.",
+   "blank": "húngaro",
+   "src": "made"
+  },
+  {
+   "text": "A Carla mandou junto com a carta uma receita de gulache húngaro.",
+   "en": "Carla sent a Hungarian goulash recipe along with the letter.",
+   "ko": "카를라는 편지와 함께 헝가리식 굴라시 요리법을 보냈어요.",
+   "blank": "húngaro",
+   "src": "made"
+  }
+ ],
  "w|iate": [
   {
    "text": "O Pedro brinca que, com o preço dessa reforma, daria para comprar um iate.",
@@ -43357,6 +43677,22 @@
    "src": "made"
   }
  ],
+ "w|imoral": [
+  {
+   "text": "O Rafael argumentou que a cláusula do contrato era abusiva e imoral.",
+   "en": "Rafael argued that the contract clause was abusive and immoral.",
+   "ko": "하파에우는 그 계약 조항이 부당하고 비도덕적이라고 주장했어요.",
+   "blank": "imoral",
+   "src": "made"
+  },
+  {
+   "text": "A Carla achou imoral o aumento do aluguel no meio da crise.",
+   "en": "Carla found the rent increase in the middle of the crisis immoral.",
+   "ko": "카를라는 위기 한가운데 월세를 올린 게 비도덕적이라고 느꼈어요.",
+   "blank": "imoral",
+   "src": "made"
+  }
+ ],
  "w|imortal": [
   {
    "text": "Na aula de literatura, o Bruno leu sobre um herói grego que queria ser imortal.",
@@ -43890,6 +44226,22 @@
    "en": "The innovation award gave a huge boost to the startup's sales.",
    "ko": "혁신상은 스타트업 매출에 큰 힘이 됐어요.",
    "blank": "impulso",
+   "src": "made"
+  }
+ ],
+ "w|impune": [
+  {
+   "text": "A família da vítima teme que o responsável pelo acidente fique impune.",
+   "en": "The victim's family fears that the person responsible for the accident will go unpunished.",
+   "ko": "피해자 가족은 사고 책임자가 처벌을 피할까 봐 걱정해요.",
+   "blank": "impune",
+   "src": "made"
+  },
+  {
+   "text": "A Carla reclamou que o motorista que bateu no carro dela saiu impune.",
+   "en": "Carla complained that the driver who hit her car got away with it.",
+   "ko": "카를라는 자기 차를 들이받은 운전자가 아무 처벌도 안 받았다고 불평했어요.",
+   "blank": "impune",
    "src": "made"
   }
  ],
@@ -45909,6 +46261,22 @@
    "ko": "실내 수영장은 어디예요?",
    "blank": "interior",
    "src": "tatoeba:10648480/malafaya en:10648320/sundown"
+  }
+ ],
+ "w|intermediário": [
+  {
+   "text": "O juiz propôs uma solução intermediária para a guarda das crianças.",
+   "en": "The judge proposed a middle-ground solution for the children's custody.",
+   "ko": "판사는 아이들 양육권에 대해 절충안을 내놓았어요.",
+   "blank": "intermediária",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu que o filho já está no nível intermediário de inglês.",
+   "en": "Carla wrote that her son is already at the intermediate level in English.",
+   "ko": "카를라는 아들이 벌써 영어 중급반이라고 썼어요.",
+   "blank": "intermediário",
+   "src": "made"
   }
  ],
  "w|internacional": [
@@ -50791,6 +51159,22 @@
    "src": "tatoeba:13033205/carlosalberto en:13033264/carlosalberto"
   }
  ],
+ "w|majestoso": [
+  {
+   "text": "O Rafael entrou no prédio majestoso do tribunal pela primeira vez como advogado.",
+   "en": "Rafael entered the majestic courthouse building for the first time as a lawyer.",
+   "ko": "하파에우는 변호사로서 처음으로 웅장한 법원 건물에 들어섰어요.",
+   "blank": "majestoso",
+   "src": "made"
+  },
+  {
+   "text": "A Carla descreveu o pôr do sol majestoso que viu do alto da serra.",
+   "en": "Carla described the majestic sunset she saw from the top of the mountains.",
+   "ko": "카를라는 산꼭대기에서 본 장엄한 노을을 묘사했어요.",
+   "blank": "majestoso",
+   "src": "made"
+  }
+ ],
  "w|major": [
   {
    "text": "O major revisou a escala.",
@@ -51705,6 +52089,22 @@
    "src": "made"
   }
  ],
+ "w|marginal": [
+  {
+   "text": "A defesa disse que o papel do réu no esquema era apenas marginal.",
+   "en": "The defense said the defendant's role in the scheme was only marginal.",
+   "ko": "변호 측은 그 계획에서 피고인의 역할이 미미했다고 주장했어요.",
+   "blank": "marginal",
+   "src": "made"
+  },
+  {
+   "text": "A Carla descreveu a casa nova, que fica perto da via marginal do rio.",
+   "en": "Carla described her new house, which is near the riverside expressway.",
+   "ko": "카를라는 강변 도로 근처에 있는 새집을 묘사했어요.",
+   "blank": "marginal",
+   "src": "made"
+  }
+ ],
  "w|marido": [
   {
    "text": "Meu marido faz o jantar.",
@@ -52329,6 +52729,22 @@
    "ko": "우리 엄마는 고등학교 선생님이에요.",
    "blank": "médio",
    "src": "tatoeba:4814950/Ricardo14 en:3050944/CK"
+  }
+ ],
+ "w|medíocre": [
+  {
+   "text": "O cliente disse que o advogado anterior fez uma defesa medíocre.",
+   "en": "The client said the previous lawyer had put up a mediocre defense.",
+   "ko": "의뢰인은 전 변호사가 변론을 형편없이 했다고 말했어요.",
+   "blank": "medíocre",
+   "src": "made"
+  },
+  {
+   "text": "A Carla confessou que achou o filme que a amiga indicou bem medíocre.",
+   "en": "Carla confessed that she found the movie her friend recommended pretty mediocre.",
+   "ko": "카를라는 친구가 추천한 영화가 꽤 시시했다고 털어놨어요.",
+   "blank": "medíocre",
+   "src": "made"
   }
  ],
  "w|medir": [
@@ -53399,6 +53815,22 @@
    "src": "made"
   }
  ],
+ "w|milícia": [
+  {
+   "text": "O processo trata da atuação de uma milícia que cobrava taxas ilegais dos moradores.",
+   "en": "The case concerns a militia that charged residents illegal fees.",
+   "ko": "그 재판은 주민들에게 불법 요금을 걷던 민병대의 활동을 다뤄요.",
+   "blank": "milícia",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que leu um livro sobre a milícia que defendeu a vila no século passado.",
+   "en": "Carla said she read a book about the militia that defended the village in the last century.",
+   "ko": "카를라는 지난 세기에 마을을 지킨 민병대에 관한 책을 읽었다고 했어요.",
+   "blank": "milícia",
+   "src": "made"
+  }
+ ],
  "w|milímetro": [
   {
    "text": "Na aula de ciências, o João mediu cada folha com precisão de um milímetro.",
@@ -53834,6 +54266,22 @@
    "en": "Beatriz thinks jumping seven waves is more myth than luck.",
    "ko": "베아트리스는 파도 일곱 번 넘기가 행운이라기보다 미신이라고 생각해요.",
    "blank": "mito",
+   "src": "made"
+  }
+ ],
+ "w|mitologia": [
+  {
+   "text": "O advogado citou a mitologia grega para falar da justiça cega.",
+   "en": "The lawyer cited Greek mythology to talk about blind justice.",
+   "ko": "변호사는 눈먼 정의를 이야기하려고 그리스 신화를 인용했어요.",
+   "blank": "mitologia",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu que a neta é apaixonada por mitologia e sabe o nome de todos os deuses.",
+   "en": "Carla wrote that her granddaughter loves mythology and knows the names of all the gods.",
+   "ko": "카를라는 손녀가 신화에 푹 빠져서 신들 이름을 다 안다고 썼어요.",
+   "blank": "mitologia",
    "src": "made"
   }
  ],
@@ -54317,6 +54765,22 @@
    "ko": "이야기의 교훈이 뭐예요?",
    "blank": "moral",
    "src": "tatoeba:3691550/Ricardo14 en:6058622/sergiomelo"
+  }
+ ],
+ "w|moralidade": [
+  {
+   "text": "O debate no tribunal girou em torno da moralidade da decisão da empresa.",
+   "en": "The debate in court revolved around the morality of the company's decision.",
+   "ko": "법정 공방은 회사 결정의 도덕성을 두고 벌어졌어요.",
+   "blank": "moralidade",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu que o romance que está lendo discute a moralidade de uma família rica.",
+   "en": "Carla wrote that the novel she is reading discusses the morality of a rich family.",
+   "ko": "카를라는 읽고 있는 소설이 한 부잣집의 도덕성을 다룬다고 썼어요.",
+   "blank": "moralidade",
+   "src": "made"
   }
  ],
  "w|morango": [
@@ -57505,6 +57969,22 @@
    "src": "made"
   }
  ],
+ "w|ogiva": [
+  {
+   "text": "A sala de audiências tem janelas em forma de ogiva, no estilo gótico.",
+   "en": "The courtroom has pointed-arch windows in the Gothic style.",
+   "ko": "법정 창문은 고딕 양식의 뾰족한 아치 모양이에요.",
+   "blank": "ogiva",
+   "src": "made"
+  },
+  {
+   "text": "A Carla mencionou uma reportagem sobre o desarmamento de cada ogiva nuclear antiga.",
+   "en": "Carla mentioned a news report about the dismantling of every old nuclear warhead.",
+   "ko": "카를라는 오래된 핵탄두를 하나하나 해체하는 기사 이야기를 꺼냈어요.",
+   "blank": "ogiva",
+   "src": "made"
+  }
+ ],
  "w|oi": [
   {
    "text": "Oi, sumido.",
@@ -59490,6 +59970,22 @@
    "en": "Rita checked the information through a separate route, with registry documents.",
    "ko": "히타는 등기소 서류로 다른 경로를 통해 그 정보를 확인했어요.",
    "blank": "paralelo",
+   "src": "made"
+  }
+ ],
+ "w|paralisar": [
+  {
+   "text": "Uma queda de energia chegou a paralisar a audiência por quase uma hora.",
+   "en": "A power outage stalled the hearing for almost an hour.",
+   "ko": "정전 때문에 공판이 거의 한 시간 동안 멈췄어요.",
+   "blank": "paralisar",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que a greve dos ônibus chegou a paralisar a cidade.",
+   "en": "Carla said the bus strike brought the city to a standstill.",
+   "ko": "카를라는 버스 파업으로 도시가 마비됐다고 전했어요.",
+   "blank": "paralisar",
    "src": "made"
   }
  ],
@@ -63091,6 +63587,22 @@
    "src": "tatoeba:5116883/bill en:4665793/CK"
   }
  ],
+ "w|politicamente": [
+  {
+   "text": "O caso é politicamente delicado, porque envolve um vereador da cidade.",
+   "en": "The case is politically sensitive because it involves a city councilor.",
+   "ko": "그 사건은 시의원이 얽혀 있어서 정치적으로 민감해요.",
+   "blank": "politicamente",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu que o tio dela é politicamente incorreto em todo almoço de família.",
+   "en": "Carla wrote that her uncle is politically incorrect at every family lunch.",
+   "ko": "카를라는 삼촌이 가족 점심 때마다 정치적으로 부적절한 말을 한다고 썼어요.",
+   "blank": "politicamente",
+   "src": "made"
+  }
+ ],
  "w|político": [
   {
    "text": "Não voto nesse político.",
@@ -64598,6 +65110,22 @@
    "en": "The preliminary moving estimate scared Sofia, but the final one came out cheaper.",
    "ko": "이사 가견적에 소피아는 놀랐지만 최종 금액은 더 쌌어요.",
    "blank": "preliminar",
+   "src": "made"
+  }
+ ],
+ "w|premiar": [
+  {
+   "text": "A associação de advogados vai premiar o Rafael pelo trabalho voluntário.",
+   "en": "The bar association is going to award Rafael for his volunteer work.",
+   "ko": "변호사회는 하파에우의 봉사 활동에 상을 줄 거예요.",
+   "blank": "premiar",
+   "src": "made"
+  },
+  {
+   "text": "A escola onde a Carla ensina resolveu premiar os alunos que mais leram no ano.",
+   "en": "The school where Carla teaches decided to reward the students who read the most this year.",
+   "ko": "카를라가 가르치는 학교는 올해 책을 가장 많이 읽은 학생들에게 상을 주기로 했어요.",
+   "blank": "premiar",
    "src": "made"
   }
  ],
@@ -66579,6 +67107,22 @@
    "src": "made"
   }
  ],
+ "w|provisão": [
+  {
+   "text": "O juiz negou a provisão de recursos pedida pela empresa.",
+   "en": "The judge denied the provision of funds requested by the company.",
+   "ko": "판사는 회사가 요청한 자금 충당 신청을 기각했어요.",
+   "blank": "provisão",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que faz provisão de lenha antes do inverno chegar.",
+   "en": "Carla said she stocks up on firewood before winter arrives.",
+   "ko": "카를라는 겨울이 오기 전에 장작을 넉넉히 쟁여 둔다고 했어요.",
+   "blank": "provisão",
+   "src": "made"
+  }
+ ],
  "w|provocação": [
   {
    "text": "A professora ignorou a provocação e continuou a aula normalmente.",
@@ -66970,6 +67514,22 @@
    "en": "The law exists to punish those who drive after drinking, Ana explained.",
    "ko": "음주 운전자를 처벌하려고 법이 있는 거라고 아나가 설명했어요.",
    "blank": "punir",
+   "src": "made"
+  }
+ ],
+ "w|pureza": [
+  {
+   "text": "A perícia analisou a pureza do ouro apreendido na casa do acusado.",
+   "en": "The forensic team analyzed the purity of the gold seized at the defendant's house.",
+   "ko": "감식반은 피고인 집에서 압수한 금의 순도를 분석했어요.",
+   "blank": "pureza",
+   "src": "made"
+  },
+  {
+   "text": "A Carla escreveu sobre a pureza do ar no sítio onde passou as férias.",
+   "en": "Carla wrote about the purity of the air at the farm where she spent her vacation.",
+   "ko": "카를라는 휴가를 보낸 농장의 맑은 공기에 대해 썼어요.",
+   "blank": "pureza",
    "src": "made"
   }
  ],
@@ -67888,6 +68448,22 @@
    "en": "The documentary Sofia downloaded is about the fight against racial inequality.",
    "ko": "소피아가 받은 다큐멘터리는 인종 불평등에 맞선 싸움을 다뤄요.",
    "blank": "racial",
+   "src": "made"
+  }
+ ],
+ "w|raciocínio": [
+  {
+   "text": "A juíza acompanhou o raciocínio do Rafael até o fim da sustentação.",
+   "en": "The judge followed Rafael's reasoning to the end of his oral argument.",
+   "ko": "판사는 하파에우의 변론을 끝까지 따라가며 그 논리를 들었어요.",
+   "blank": "raciocínio",
+   "src": "made"
+  },
+  {
+   "text": "A Carla admirou o raciocínio rápido da amiga para resolver problemas.",
+   "en": "Carla admired her friend's quick thinking in solving problems.",
+   "ko": "카를라는 문제를 푸는 친구의 빠른 머리를 감탄했어요.",
+   "blank": "raciocínio",
    "src": "made"
   }
  ],
@@ -69384,6 +69960,22 @@
    "en": "Beatriz paused for a moment to reflect on everything she went through that year.",
    "ko": "베아트리스는 잠시 멈추고 올해 겪은 일들을 돌아봤어요.",
    "blank": "refletir",
+   "src": "made"
+  }
+ ],
+ "w|reflexão": [
+  {
+   "text": "Antes de dar a sentença, a juíza pediu um momento de reflexão.",
+   "en": "Before handing down the sentence, the judge asked for a moment of reflection.",
+   "ko": "판사는 선고하기 전에 잠시 숙고할 시간을 가졌어요.",
+   "blank": "reflexão",
+   "src": "made"
+  },
+  {
+   "text": "A última carta da Carla trazia uma reflexão bonita sobre envelhecer.",
+   "en": "Carla's last letter carried a beautiful reflection on growing older.",
+   "ko": "카를라의 마지막 편지에는 나이 드는 것에 대한 아름다운 생각이 담겨 있었어요.",
+   "blank": "reflexão",
    "src": "made"
   }
  ],
@@ -78971,6 +79563,22 @@
    "src": "made"
   }
  ],
+ "w|terminado": [
+  {
+   "text": "Com o julgamento terminado, o Rafael finalmente pôde descansar.",
+   "en": "With the trial over, Rafael could finally rest.",
+   "ko": "재판이 끝나자 하파에우는 드디어 쉴 수 있었어요.",
+   "blank": "terminado",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que o livro dela está quase terminado.",
+   "en": "Carla said her book is almost finished.",
+   "ko": "카를라는 자기 책이 거의 완성됐다고 했어요.",
+   "blank": "terminado",
+   "src": "made"
+  }
+ ],
  "w|terminal": [
   {
    "text": "O ônibus para a reserva sai do terminal rodoviário logo cedo.",
@@ -84279,6 +84887,22 @@
    "src": "made"
   }
  ],
+ "w|vil": [
+  {
+   "text": "O promotor chamou de vil a atitude de enganar uma senhora doente.",
+   "en": "The prosecutor called the act of deceiving a sick woman vile.",
+   "ko": "검사는 아픈 할머니를 속인 행동을 비열하다고 했어요.",
+   "blank": "vil",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que um vizinho fez uma fofoca vil sobre a família dela.",
+   "en": "Carla said a neighbor spread a vile rumor about her family.",
+   "ko": "카를라는 이웃이 자기 가족에 대해 비열한 뒷말을 퍼뜨렸다고 했어요.",
+   "blank": "vil",
+   "src": "made"
+  }
+ ],
  "w|vila": [
   {
    "text": "A vila na qual eu moro é muito pequena.",
@@ -84803,6 +85427,22 @@
    "ko": "우리한테는 이 승리가 필요했어요.",
    "blank": "vitória",
    "src": "tatoeba:4925514/ToinhoAlam en:4501144/CK"
+  }
+ ],
+ "w|vitorioso": [
+  {
+   "text": "O Rafael saiu vitorioso do seu primeiro caso no tribunal do júri.",
+   "en": "Rafael came out victorious in his first jury trial.",
+   "ko": "하파에우는 첫 배심 재판에서 승소했어요.",
+   "blank": "vitorioso",
+   "src": "made"
+  },
+  {
+   "text": "A Carla contou que o time da filha voltou vitorioso do campeonato.",
+   "en": "Carla said her daughter's team came back victorious from the championship.",
+   "ko": "카를라는 딸의 팀이 대회에서 우승하고 돌아왔다고 전했어요.",
+   "blank": "vitorioso",
+   "src": "made"
   }
  ],
  "w|vitrine": [
