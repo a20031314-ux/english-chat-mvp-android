@@ -1435,6 +1435,22 @@
    "blank": "angkatan"
   }
  ],
+ "w|angkuh": [
+  {
+   "text": "Penghuni baru di ujung jalan terkesan angkuh, tetapi Andi tetap menyapa.",
+   "en": "The new resident at the end of the street seems arrogant, but Andi still says hello.",
+   "ko": "길 끝에 새로 온 사람은 거만해 보이지만 안디는 그래도 인사해요.",
+   "blank": "angkuh",
+   "src": "made"
+  },
+  {
+   "text": "Pianis tamu itu angkuh dan tidak mau menyapa murid-murid Dewi.",
+   "en": "The guest pianist was arrogant and wouldn't greet Dewi's students.",
+   "ko": "그 초청 피아니스트는 거만해서 데위의 학생들에게 인사도 하지 않았어요.",
+   "blank": "angkuh",
+   "src": "made"
+  }
+ ],
  "w|angsa": [
   {
    "text": "Sepasang angsa putih berenang pelan di bagian sungai yang tenang.",
@@ -3403,6 +3419,22 @@
    "en": "That airport is very busy today.",
    "ko": "그 공항은 오늘 아주 붐벼.",
    "blank": "Bandara"
+  }
+ ],
+ "w|bandel": [
+  {
+   "text": "Anak tetangga yang bandel itu memanjat pagar rumah Andi lagi.",
+   "en": "That naughty neighbor kid climbed over Andi's fence again.",
+   "ko": "그 말썽꾸러기 이웃집 아이가 또 안디네 담을 넘었어요.",
+   "blank": "bandel",
+   "src": "made"
+  },
+  {
+   "text": "Murid yang bandel itu sering memainkan lagu pop di tengah pelajaran Dewi.",
+   "en": "That unruly student often plays pop songs in the middle of Dewi's lessons.",
+   "ko": "그 말썽꾸러기 학생은 데위의 수업 중에 자주 팝송을 연주해요.",
+   "blank": "bandel",
+   "src": "made"
   }
  ],
  "w|banding": [
@@ -9459,6 +9491,22 @@
    "src": "made"
   }
  ],
+ "w|bersahaja": [
+  {
+   "text": "Keluarga di sebelah Andi hidup bersahaja meski cukup kaya.",
+   "en": "The family next to Andi lives simply even though they're fairly well off.",
+   "ko": "안디네 옆집 가족은 꽤 부유한데도 소박하게 살아요.",
+   "blank": "bersahaja",
+   "src": "made"
+  },
+  {
+   "text": "Meski sudah terkenal, Dewi tetap tampil bersahaja di depan murid.",
+   "en": "Even though she's famous, Dewi stays down-to-earth in front of her students.",
+   "ko": "데위는 유명해졌어도 학생들 앞에서는 여전히 소탈해요.",
+   "blank": "bersahaja",
+   "src": "made"
+  }
+ ],
  "w|bersaing": [
   {
    "text": "Koran cetak sekarang harus bersaing dengan berita di media sosial.",
@@ -9501,6 +9549,22 @@
    "en": "Guilty or not, we must be fair.",
    "ko": "유죄든 아니든 공정해야 해.",
    "blank": "Bersalah"
+  }
+ ],
+ "w|bersalaman": [
+  {
+   "text": "Saat Lebaran, Andi bersalaman dengan semua tetangga di masjid.",
+   "en": "On Eid, Andi shook hands with all the neighbors at the mosque.",
+   "ko": "르바란에 안디는 모스크에서 이웃들과 모두 악수를 나눴어요.",
+   "blank": "bersalaman",
+   "src": "made"
+  },
+  {
+   "text": "Setelah resital, Dewi bersalaman dengan setiap orang tua murid.",
+   "en": "After the recital, Dewi shook hands with every parent.",
+   "ko": "발표회가 끝나고 데위는 학부모 한 명 한 명과 악수했어요.",
+   "blank": "bersalaman",
+   "src": "made"
   }
  ],
  "w|bersama": [
@@ -9894,6 +9958,22 @@
    "en": "Rina cried out with joy when the kitten began to nurse.",
    "ko": "새끼 고양이가 젖을 빨기 시작하자 리나는 기뻐서 소리쳤어요.",
    "blank": "berseru",
+   "src": "made"
+  }
+ ],
+ "w|bersetubuh": [
+  {
+   "text": "Dari radio tetangga, Andi mendengar dokter menjelaskan kapan pasangan sebaiknya bersetubuh agar cepat hamil.",
+   "en": "From the neighbor's radio, Andi heard a doctor explain when couples should have intercourse to conceive quickly.",
+   "ko": "안디는 이웃집 라디오에서 의사가 임신하려면 부부가 언제 관계를 갖는 게 좋은지 설명하는 걸 들었어요.",
+   "blank": "bersetubuh",
+   "src": "made"
+  },
+  {
+   "text": "Sambil menunggu les, Dewi membaca buku anaknya yang menjelaskan bahwa ikan tidak bersetubuh, tetapi bertelur di air.",
+   "en": "While waiting for a lesson, Dewi read her child's book explaining that fish don't mate by intercourse but lay eggs in water.",
+   "ko": "데위는 수업을 기다리며 물고기는 교미하지 않고 물속에 알을 낳는다고 설명하는 아이 책을 읽었어요.",
+   "blank": "bersetubuh",
    "src": "made"
   }
  ],
@@ -18113,6 +18193,22 @@
    "blank": "gelombang"
   }
  ],
+ "w|gembala": [
+  {
+   "text": "Kakek di ujung gang dulu seorang gembala kambing, cerita Andi.",
+   "en": "The old man at the end of the alley used to be a goat herder, Andi says.",
+   "ko": "안디 말로는 골목 끝 할아버지가 예전에 염소 목동이었대요.",
+   "blank": "gembala",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengajarkan lagu daerah tentang seorang gembala dan seruling bambu.",
+   "en": "Dewi teaches a folk song about a shepherd and a bamboo flute.",
+   "ko": "데위는 목동과 대나무 피리에 관한 민요를 가르쳐요.",
+   "blank": "gembala",
+   "src": "made"
+  }
+ ],
  "w|gembira": [
   {
    "text": "Anak-anak tampak gembira di taman bermain.",
@@ -18491,6 +18587,22 @@
    "en": "Brush your teeth before bed.",
    "ko": "자기 전에 양치해.",
    "blank": "gigi"
+  }
+ ],
+ "w|gigih": [
+  {
+   "text": "Bu Sari gigih menagih iuran sampah sampai Andi akhirnya membayar.",
+   "en": "Bu Sari kept stubbornly collecting the trash fee until Andi finally paid.",
+   "ko": "사리 씨가 쓰레기 회비를 끈질기게 걷어서 안디가 결국 냈어요.",
+   "blank": "gigih",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memuji murid yang gigih berlatih tangga nada setiap hari.",
+   "en": "Dewi praised the student who persistently practices scales every day.",
+   "ko": "데위는 매일 꾸준히 음계를 연습하는 학생을 칭찬했어요.",
+   "blank": "gigih",
+   "src": "made"
   }
  ],
  "w|gigitan": [
@@ -23035,6 +23147,22 @@
    "blank": "jutaan"
   }
  ],
+ "w|jutawan": [
+  {
+   "text": "Konon pemilik rumah besar di ujung gang itu seorang jutawan, kata Andi.",
+   "en": "They say the owner of the big house at the end of the alley is a millionaire, Andi says.",
+   "ko": "안디 말로는 골목 끝 큰 집 주인이 백만장자래요.",
+   "blank": "jutawan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang jutawan menyumbangkan grand piano ke sekolah musik Dewi.",
+   "en": "A millionaire donated a grand piano to Dewi's music school.",
+   "ko": "한 백만장자가 데위의 음악 학교에 그랜드 피아노를 기증했어요.",
+   "blank": "jutawan",
+   "src": "made"
+  }
+ ],
  "w|kabar": [
   {
    "text": "Ada kabar baik hari ini.",
@@ -23655,6 +23783,22 @@
    "en": "She brought a new camera.",
    "ko": "그녀는 새 카메라를 가져왔어.",
    "blank": "kamera"
+  }
+ ],
+ "w|kamerad": [
+  {
+   "text": "Pak Darmo menyebut Andi kamerad karena mereka sama-sama suka main catur.",
+   "en": "Pak Darmo calls Andi \"comrade\" because they both love playing chess.",
+   "ko": "다르모 씨는 둘 다 체스를 좋아해서 안디를 동지라고 불러요.",
+   "blank": "kamerad",
+   "src": "made"
+  },
+  {
+   "text": "Dalam opera yang dilatih Dewi, para prajurit saling memanggil kamerad.",
+   "en": "In the opera Dewi is rehearsing, the soldiers call each other comrade.",
+   "ko": "데위가 연습시키는 오페라에서 군인들은 서로를 동지라고 불러요.",
+   "blank": "kamerad",
+   "src": "made"
   }
  ],
  "w|kami": [
@@ -25682,6 +25826,22 @@
    "en": "Ayu screamed when she saw a cockroach in the hotel bathroom before the race.",
    "ko": "아유는 대회 전 호텔 욕실에서 바퀴벌레를 보고 비명을 질렀어요.",
    "blank": "kecoak",
+   "src": "made"
+  }
+ ],
+ "w|kecocokan": [
+  {
+   "text": "Andi dan tetangga sebelah punya kecocokan dalam selera musik.",
+   "en": "Andi and the neighbor next door have a lot in common in their taste in music.",
+   "ko": "안디와 옆집 사람은 음악 취향이 잘 맞아요.",
+   "blank": "kecocokan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memasangkan murid untuk duet berdasarkan kecocokan tempo dan gaya.",
+   "en": "Dewi pairs students for duets based on how well their tempo and style match.",
+   "ko": "데위는 템포와 스타일이 잘 맞는지 보고 학생들을 이중주 짝으로 묶어요.",
+   "blank": "kecocokan",
    "src": "made"
   }
  ],
@@ -29700,6 +29860,22 @@
    "en": "\"A rain of blessings\" is a figure of speech Siti often uses when the harvest is plentiful.",
    "ko": "\"복의 비\"는 수확이 넉넉할 때 시티가 자주 쓰는 비유예요.",
    "blank": "kiasan",
+   "src": "made"
+  }
+ ],
+ "w|kidal": [
+  {
+   "text": "Andi baru tahu bahwa anak tetangga kidal saat mereka main bulu tangkis.",
+   "en": "Andi only found out the neighbor's kid is left-handed when they played badminton.",
+   "ko": "안디는 배드민턴을 치다가 이웃집 아이가 왼손잡이라는 걸 알았어요.",
+   "blank": "kidal",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mencarikan gitar khusus untuk murid yang kidal.",
+   "en": "Dewi found a special guitar for the left-handed student.",
+   "ko": "데위는 왼손잡이 학생을 위해 전용 기타를 구해 줬어요.",
+   "blank": "kidal",
    "src": "made"
   }
  ],
@@ -34333,6 +34509,22 @@
    "blank": "lucu"
   }
  ],
+ "w|lugu": [
+  {
+   "text": "Anak tetangga Andi masih lugu dan percaya semua cerita kakaknya.",
+   "en": "Andi's neighbor's kid is still naive and believes every story the older sibling tells.",
+   "ko": "안디네 이웃집 아이는 아직 순진해서 언니 오빠가 하는 이야기를 다 믿어요.",
+   "blank": "lugu",
+   "src": "made"
+  },
+  {
+   "text": "Kata Dewi, murid baru itu masih lugu dan mengira semua biola sama saja.",
+   "en": "According to Dewi, the new student is still naive and thinks all violins are the same.",
+   "ko": "데위 말로는 새로 온 학생이 아직 순진해서 바이올린이 다 똑같은 줄 알아요.",
+   "blank": "lugu",
+   "src": "made"
+  }
+ ],
  "w|luka": [
   {
    "text": "Luka di tangannya dalam.",
@@ -34785,6 +34977,22 @@
    "en": "Many university students joined this morning's seminar.",
    "ko": "많은 대학생이 오늘 아침 세미나에 참석했어.",
    "blank": "mahasiswa"
+  }
+ ],
+ "w|mahasiswi": [
+  {
+   "text": "Rumah kos di sebelah Andi dihuni beberapa mahasiswi kedokteran.",
+   "en": "The boarding house next to Andi's is home to several female medical students.",
+   "ko": "안디네 옆 하숙집에는 의대 여학생 몇 명이 살아요.",
+   "blank": "mahasiswi",
+   "src": "made"
+  },
+  {
+   "text": "Seorang mahasiswi konservatori membantu Dewi mengajar kelas biola.",
+   "en": "A female conservatory student helps Dewi teach the violin class.",
+   "ko": "음악원 여대생 한 명이 데위의 바이올린 수업을 도와요.",
+   "blank": "mahasiswi",
+   "src": "made"
   }
  ],
  "w|mahir": [
@@ -37756,6 +37964,22 @@
    "en": "Intan's child gazes at the big aquarium in the corner of the restaurant.",
    "ko": "인탄의 아이는 식당 구석의 큰 수족관을 바라봐요.",
    "blank": "memandangi",
+   "src": "made"
+  }
+ ],
+ "w|memandikan": [
+  {
+   "text": "Andi membantu tetangga memandikan anjing besar mereka di halaman.",
+   "en": "Andi helped the neighbors bathe their big dog in the yard.",
+   "ko": "안디는 이웃이 마당에서 큰 개를 씻기는 걸 도왔어요.",
+   "blank": "memandikan",
+   "src": "made"
+  },
+  {
+   "text": "Pagi ini Dewi terlambat mengajar karena harus memandikan bayi dulu.",
+   "en": "This morning Dewi was late for class because she had to bathe the baby first.",
+   "ko": "오늘 아침 데위는 아기를 먼저 씻겨야 해서 수업에 늦었어요.",
+   "blank": "memandikan",
    "src": "made"
   }
  ],
@@ -42703,6 +42927,22 @@
    "src": "made"
   }
  ],
+ "w|mencerna": [
+  {
+   "text": "Andi butuh waktu untuk mencerna kabar bahwa tetangga terbaiknya akan pindah.",
+   "en": "Andi needed time to take in the news that his best neighbor was moving away.",
+   "ko": "안디는 가장 친한 이웃이 이사 간다는 소식을 받아들이는 데 시간이 걸렸어요.",
+   "blank": "mencerna",
+   "src": "made"
+  },
+  {
+   "text": "Murid-murid butuh waktu untuk mencerna teori harmoni yang Dewi ajarkan.",
+   "en": "The students need time to digest the harmony theory Dewi teaches.",
+   "ko": "학생들은 데위가 가르치는 화성학을 소화하는 데 시간이 걸려요.",
+   "blank": "mencerna",
+   "src": "made"
+  }
+ ],
  "w|mencetak": [
   {
    "text": "Mesin itu bisa mencetak dokumen berwarna.",
@@ -43237,6 +43477,22 @@
    "src": "made"
   }
  ],
+ "w|mendasar": [
+  {
+   "text": "Andi dan Pak RT punya perbedaan pendapat yang mendasar soal parkir di gang.",
+   "en": "Andi and the neighborhood head have a fundamental disagreement about parking in the alley.",
+   "ko": "안디와 반장님은 골목 주차 문제에 대해 근본적으로 생각이 달라요.",
+   "blank": "mendasar",
+   "src": "made"
+  },
+  {
+   "text": "Dewi mengajarkan teknik mendasar seperti posisi jari dan cara bernapas.",
+   "en": "Dewi teaches basic techniques like finger position and breathing.",
+   "ko": "데위는 손가락 위치와 호흡법 같은 기본기를 가르쳐요.",
+   "blank": "mendasar",
+   "src": "made"
+  }
+ ],
  "w|mendatang": [
   {
    "text": "Badan cuaca memperkirakan musim hujan akan datang dalam minggu-minggu mendatang.",
@@ -43540,6 +43796,22 @@
    "en": "A doctor from the city came to diagnose the skin disease affecting children in Rina's village.",
    "ko": "도시에서 온 의사가 리나네 마을 아이들의 피부병을 진단하러 왔어요.",
    "blank": "mendiagnosis",
+   "src": "made"
+  }
+ ],
+ "w|mendiang": [
+  {
+   "text": "Andi masih merawat pohon mangga yang ditanam mendiang Pak Harun.",
+   "en": "Andi still takes care of the mango tree planted by the late Pak Harun.",
+   "ko": "안디는 지금도 고(故) 하룬 씨가 심은 망고나무를 돌봐요.",
+   "blank": "mendiang",
+   "src": "made"
+  },
+  {
+   "text": "Piano tua di kelas Dewi adalah peninggalan mendiang pendiri sekolah.",
+   "en": "The old piano in Dewi's classroom was left by the school's late founder.",
+   "ko": "데위 교실의 낡은 피아노는 돌아가신 학교 설립자가 남긴 거예요.",
+   "blank": "mendiang",
    "src": "made"
   }
  ],
@@ -44444,6 +44716,22 @@
    "en": "Lestari waited until the oil stopped dripping from the fried bananas.",
    "ko": "레스타리는 바나나 튀김에서 기름이 그만 떨어질 때까지 기다렸어요.",
    "blank": "menetes",
+   "src": "made"
+  }
+ ],
+ "w|meneteskan": [
+  {
+   "text": "Bu Sari meneteskan air mata saat Andi mengembalikan dompet yang hilang.",
+   "en": "Bu Sari shed tears when Andi returned the lost wallet.",
+   "ko": "안디가 잃어버린 지갑을 돌려주자 사리 씨는 눈물을 흘렸어요.",
+   "blank": "meneteskan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi meneteskan minyak katup ke trompet yang macet.",
+   "en": "Dewi put a few drops of valve oil on the stuck trumpet.",
+   "ko": "데위는 뻑뻑한 트럼펫에 밸브 오일을 몇 방울 떨어뜨렸어요.",
+   "blank": "meneteskan",
    "src": "made"
   }
  ],
@@ -46189,6 +46477,22 @@
    "src": "made"
   }
  ],
+ "w|mengencingi": [
+  {
+   "text": "Kucing tetangga sering mengencingi pot bunga di teras Andi.",
+   "en": "The neighbor's cat often pees on the flower pots on Andi's porch.",
+   "ko": "이웃집 고양이가 안디네 현관 화분에 자주 오줌을 싸요.",
+   "blank": "mengencingi",
+   "src": "made"
+  },
+  {
+   "text": "Anak anjing Dewi mengencingi karpet di ruang latihan.",
+   "en": "Dewi's puppy peed on the carpet in the practice room.",
+   "ko": "데위의 강아지가 연습실 카펫에 오줌을 쌌어요.",
+   "blank": "mengencingi",
+   "src": "made"
+  }
+ ],
  "w|mengendalikan": [
   {
    "text": "Dia berusaha mengendalikan emosinya.",
@@ -46700,6 +47004,22 @@
    "en": "Rina scratched her arm where an insect had bitten her in the tea garden.",
    "ko": "리나는 차밭에서 벌레에 물린 팔을 긁었어요.",
    "blank": "menggaruk",
+   "src": "made"
+  }
+ ],
+ "w|menggelar": [
+  {
+   "text": "Warga menggelar tikar di jalan untuk syukuran, dan Andi membawa nasi kuning.",
+   "en": "The residents spread mats on the street for a thanksgiving meal, and Andi brought yellow rice.",
+   "ko": "주민들이 감사 잔치를 하려고 길에 돗자리를 깔았고 안디는 노란 밥을 가져왔어요.",
+   "blank": "menggelar",
+   "src": "made"
+  },
+  {
+   "text": "Sekolah musik Dewi menggelar resital akhir tahun di gedung kesenian.",
+   "en": "Dewi's music school holds a year-end recital at the arts center.",
+   "ko": "데위의 음악 학교는 예술 회관에서 연말 발표회를 열어요.",
+   "blank": "menggelar",
    "src": "made"
   }
  ],
@@ -49433,6 +49753,22 @@
    "src": "made"
   }
  ],
+ "w|menindas": [
+  {
+   "text": "Andi menegur anak-anak yang menindas bocah kecil di lapangan kompleks.",
+   "en": "Andi scolded the kids who were bullying a little boy on the neighborhood field.",
+   "ko": "안디는 단지 운동장에서 꼬마를 괴롭히던 아이들을 꾸짖었어요.",
+   "blank": "menindas",
+   "src": "made"
+  },
+  {
+   "text": "Dewi tidak membiarkan murid senior menindas murid baru di ruang ganti.",
+   "en": "Dewi doesn't let senior students bully new ones in the changing room.",
+   "ko": "데위는 선배 학생들이 탈의실에서 신입생을 괴롭히지 못하게 해요.",
+   "blank": "menindas",
+   "src": "made"
+  }
+ ],
  "w|meninggal": [
   {
    "text": "Kakekku meninggal tahun lalu.",
@@ -50348,6 +50684,22 @@
    "en": "The hotel where Lestari stayed has a special menu for athletes.",
    "ko": "레스타리가 묵은 호텔에는 운동선수를 위한 특별 메뉴가 있어요.",
    "blank": "menu",
+   "src": "made"
+  }
+ ],
+ "w|menua": [
+  {
+   "text": "Andi sedih melihat tetangga-tetangga lama mulai menua.",
+   "en": "Andi is sad to see his longtime neighbors growing old.",
+   "ko": "안디는 오랜 이웃들이 늙어 가는 걸 보며 마음이 아파요.",
+   "blank": "menua",
+   "src": "made"
+  },
+  {
+   "text": "Dewi ingin terus mengajar musik sampai menua.",
+   "en": "Dewi wants to keep teaching music until she grows old.",
+   "ko": "데위는 늙을 때까지 계속 음악을 가르치고 싶어요.",
+   "blank": "menua",
    "src": "made"
   }
  ],
@@ -53073,6 +53425,22 @@
    "src": "made"
   }
  ],
+ "w|meredup": [
+  {
+   "text": "Lampu jalan di depan rumah Andi mulai meredup menjelang tengah malam.",
+   "en": "The streetlight in front of Andi's house starts to dim toward midnight.",
+   "ko": "안디네 집 앞 가로등은 자정 무렵이면 흐려지기 시작해요.",
+   "blank": "meredup",
+   "src": "made"
+  },
+  {
+   "text": "Lampu panggung meredup, lalu murid-murid Dewi mulai memainkan lagu pembuka.",
+   "en": "The stage lights dimmed, and Dewi's students began playing the opening piece.",
+   "ko": "무대 조명이 어두워지자 데위의 학생들이 첫 곡을 연주하기 시작했어요.",
+   "blank": "meredup",
+   "src": "made"
+  }
+ ],
  "w|merek": [
   {
    "text": "Bayu tidak peduli merek, yang penting jaketnya masih bagus.",
@@ -53224,6 +53592,22 @@
    "en": "A good teacher never belittles a participant's failed dish.",
    "ko": "좋은 선생님은 참가자가 망친 요리를 절대 깔보지 않아요.",
    "blank": "merendahkan",
+   "src": "made"
+  }
+ ],
+ "w|merendam": [
+  {
+   "text": "Andi merendam baju kotor semalaman sebelum mencucinya besok pagi.",
+   "en": "Andi soaks dirty clothes overnight before washing them the next morning.",
+   "ko": "안디는 빨래를 밤새 물에 담가 뒀다가 다음 날 아침에 빨아요.",
+   "blank": "merendam",
+   "src": "made"
+  },
+  {
+   "text": "Dewi merendam corong klarinet dalam air hangat agar mudah dibersihkan.",
+   "en": "Dewi soaks the clarinet mouthpiece in warm water so it's easy to clean.",
+   "ko": "데위는 클라리넷 마우스피스를 쉽게 닦으려고 따뜻한 물에 담가 둬요.",
+   "blank": "merendam",
    "src": "made"
   }
  ],
@@ -59737,6 +60121,22 @@
    "src": "made"
   }
  ],
+ "w|pemberi": [
+  {
+   "text": "Andi selalu jadi pemberi kabar pertama kalau ada tetangga yang sakit.",
+   "en": "Andi is always the first to pass on the news when a neighbor is sick.",
+   "ko": "이웃이 아프면 늘 안디가 제일 먼저 소식을 전해요.",
+   "blank": "pemberi",
+   "src": "made"
+  },
+  {
+   "text": "Sekolah musik tempat Dewi mengajar berterima kasih kepada para pemberi beasiswa.",
+   "en": "The music school where Dewi teaches thanked the scholarship donors.",
+   "ko": "데위가 가르치는 음악 학교는 장학금 후원자들에게 감사를 전했어요.",
+   "blank": "pemberi",
+   "src": "made"
+  }
+ ],
  "w|pemberian": [
   {
    "text": "Jam tangan Agus adalah pemberian kakeknya saat dia masuk SMA.",
@@ -62801,6 +63201,22 @@
    "src": "made"
   }
  ],
+ "w|pengirim": [
+  {
+   "text": "Andi menerima paket dari pengirim yang tidak dikenal.",
+   "en": "Andi received a package from an unknown sender.",
+   "ko": "안디는 모르는 사람이 보낸 택배를 받았어요.",
+   "blank": "pengirim",
+   "src": "made"
+  },
+  {
+   "text": "Dewi menerima karangan bunga, tetapi nama pengirim tidak tertulis di kartu.",
+   "en": "Dewi received a bouquet, but the sender's name wasn't written on the card.",
+   "ko": "데위는 꽃다발을 받았지만 카드에 보낸 사람 이름이 없었어요.",
+   "blank": "pengirim",
+   "src": "made"
+  }
+ ],
  "w|pengiriman": [
   {
    "text": "Pengiriman paket tertunda karena hujan.",
@@ -62813,6 +63229,22 @@
    "en": "Track the shipment through the store site.",
    "ko": "가게 사이트에서 배송을 추적해.",
    "blank": "pengiriman"
+  }
+ ],
+ "w|pengiring": [
+  {
+   "text": "Andi ikut menjadi pengiring pengantin di pernikahan anak tetangga.",
+   "en": "Andi was one of the groom's escorts at the neighbor's child's wedding.",
+   "ko": "안디는 이웃집 자녀 결혼식에서 신랑 들러리를 섰어요.",
+   "blank": "pengiring",
+   "src": "made"
+  },
+  {
+   "text": "Setiap Sabtu, Dewi menjadi pengiring piano untuk paduan suara anak.",
+   "en": "Every Saturday, Dewi is the piano accompanist for the children's choir.",
+   "ko": "토요일마다 데위는 어린이 합창단의 피아노 반주를 맡아요.",
+   "blank": "pengiring",
+   "src": "made"
   }
  ],
  "w|pengisap": [
@@ -63199,6 +63631,22 @@
    "blank": "Penipuan"
   }
  ],
+ "w|peniru": [
+  {
+   "text": "Burung beo milik Andi adalah peniru suara yang hebat.",
+   "en": "Andi's parrot is a great mimic of sounds.",
+   "ko": "안디가 키우는 앵무새는 소리 흉내를 기막히게 내요.",
+   "blank": "peniru",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bilang murid itu peniru yang hebat, tetapi belum punya gaya sendiri.",
+   "en": "Dewi says that student is a great imitator but doesn't have a style of their own yet.",
+   "ko": "데위는 그 학생이 흉내는 잘 내지만 아직 자기 스타일이 없다고 해요.",
+   "blank": "peniru",
+   "src": "made"
+  }
+ ],
  "w|penitipan": [
   {
    "text": "Bayu menulis tentang tempat penitipan anak yang dibuka khusus untuk pedagang pasar.",
@@ -63329,6 +63777,22 @@
    "en": "She is in charge of online sales.",
    "ko": "그녀가 온라인 판매를 담당해.",
    "blank": "penjualan"
+  }
+ ],
+ "w|penjudi": [
+  {
+   "text": "Andi membaca berita tentang penjudi yang ditangkap di kampung sebelah.",
+   "en": "Andi read the news about gamblers arrested in the next village.",
+   "ko": "안디는 옆 동네에서 도박꾼들이 잡혔다는 기사를 읽었어요.",
+   "blank": "penjudi",
+   "src": "made"
+  },
+  {
+   "text": "Murid-murid Dewi mementaskan opera tentang seorang penjudi yang kehilangan segalanya.",
+   "en": "Dewi's students staged an opera about a gambler who loses everything.",
+   "ko": "데위의 학생들은 모든 것을 잃은 도박꾼에 관한 오페라를 무대에 올렸어요.",
+   "blank": "penjudi",
+   "src": "made"
   }
  ],
  "w|penjuru": [
@@ -63944,6 +64408,22 @@
    "en": "Intan's family prays for the recovery of the uncle who is still in hospital.",
    "ko": "인탄의 가족은 아직 입원 중인 삼촌이 낫기를 기도해요.",
    "blank": "penyembuhan",
+   "src": "made"
+  }
+ ],
+ "w|penyendiri": [
+  {
+   "text": "Andi jarang melihat tetangga penyendiri itu keluar rumah.",
+   "en": "Andi rarely sees that reclusive neighbor leave the house.",
+   "ko": "안디는 그 혼자 지내는 이웃이 집 밖에 나오는 걸 거의 못 봐요.",
+   "blank": "penyendiri",
+   "src": "made"
+  },
+  {
+   "text": "Murid penyendiri itu baru berani bicara setelah Dewi mengajarinya main cello.",
+   "en": "The loner student only dared to speak after Dewi taught him to play the cello.",
+   "ko": "혼자 지내던 그 학생은 데위에게 첼로를 배우고 나서야 말을 꺼냈어요.",
+   "blank": "penyendiri",
    "src": "made"
   }
  ],
@@ -65225,6 +65705,22 @@
    "blank": "peristiwa"
   }
  ],
+ "w|perjaka": [
+  {
+   "text": "Para ibu di gang sering menjodohkan Andi karena masih perjaka di usia tiga puluh.",
+   "en": "The women in the alley often try to set Andi up because he's still a bachelor at thirty.",
+   "ko": "골목 아주머니들은 안디가 서른인데 아직 총각이라 자꾸 중매를 서려고 해요.",
+   "blank": "perjaka",
+   "src": "made"
+  },
+  {
+   "text": "Guru gitar yang masih perjaka itu sering digoda rekan-rekan Dewi.",
+   "en": "Dewi's colleagues often tease the guitar teacher who is still a bachelor.",
+   "ko": "데위의 동료들은 아직 총각인 기타 선생님을 자주 놀려요.",
+   "blank": "perjaka",
+   "src": "made"
+  }
+ ],
  "w|perjalanan": [
   {
    "text": "Perjalanan kami panjang.",
@@ -65405,6 +65901,22 @@
    "en": "They monitor the project's progress every week.",
    "ko": "그들은 매주 프로젝트 진행을 지켜봐.",
    "blank": "perkembangan"
+  }
+ ],
+ "w|perkenalan": [
+  {
+   "text": "Andi membawa kue sebagai tanda perkenalan kepada tetangga baru.",
+   "en": "Andi brought cake to the new neighbors as a way of introducing himself.",
+   "ko": "안디는 새 이웃에게 인사 겸 케이크를 가져갔어요.",
+   "blank": "perkenalan",
+   "src": "made"
+  },
+  {
+   "text": "Kelas pertama Dewi selalu dibuka dengan perkenalan singkat.",
+   "en": "Dewi's first class always opens with brief introductions.",
+   "ko": "데위의 첫 수업은 늘 짧은 자기소개로 시작해요.",
+   "blank": "perkenalan",
+   "src": "made"
   }
  ],
  "w|perkenalkan": [
@@ -68189,6 +68701,22 @@
    "en": "His personality is very friendly.",
    "ko": "그의 성격은 정말 친절해.",
    "blank": "Pribadi"
+  }
+ ],
+ "w|pribumi": [
+  {
+   "text": "Andi membaca buku sejarah tentang perlawanan kaum pribumi pada masa kolonial.",
+   "en": "Andi read a history book about the resistance of native people in the colonial era.",
+   "ko": "안디는 식민지 시대 원주민들의 저항에 관한 역사책을 읽었어요.",
+   "blank": "pribumi",
+   "src": "made"
+  },
+  {
+   "text": "Untuk kelas sejarah musik, Dewi mempelajari lagu-lagu suku pribumi Australia.",
+   "en": "For the music history class, Dewi studied songs of Australia's native peoples.",
+   "ko": "데위는 음악사 수업을 위해 호주 원주민 부족의 노래를 공부했어요.",
+   "blank": "pribumi",
+   "src": "made"
   }
  ],
  "w|prihatin": [
@@ -76091,6 +76619,22 @@
    "src": "made"
   }
  ],
+ "w|sesulit": [
+  {
+   "text": "Andi tidak menyangka memperbaiki atap rumah tetangga bisa sesulit itu.",
+   "en": "Andi didn't expect fixing the neighbor's roof to be that hard.",
+   "ko": "안디는 이웃집 지붕 고치는 일이 그렇게 어려울 줄 몰랐어요.",
+   "blank": "sesulit",
+   "src": "made"
+  },
+  {
+   "text": "Dewi bilang bermain harpa tidak sesulit kelihatannya.",
+   "en": "Dewi says playing the harp isn't as hard as it looks.",
+   "ko": "데위는 하프 연주가 보기만큼 어렵지 않다고 해요.",
+   "blank": "sesulit",
+   "src": "made"
+  }
+ ],
  "w|sesungguhnya": [
   {
    "text": "Sesungguhnya dia sudah tahu jawabannya.",
@@ -76989,6 +77533,22 @@
    "en": "Come here, I'll help.",
    "ko": "이리 와, 내가 도와줄게.",
    "blank": "Sini"
+  }
+ ],
+ "w|sinis": [
+  {
+   "text": "Pak Darto selalu sinis setiap kali Andi mengusulkan kerja bakti.",
+   "en": "Pak Darto is always cynical whenever Andi proposes a community clean-up.",
+   "ko": "다르토 씨는 안디가 동네 대청소를 제안할 때마다 늘 냉소적이에요.",
+   "blank": "sinis",
+   "src": "made"
+  },
+  {
+   "text": "Seorang kritikus menulis ulasan sinis tentang konser murid-murid Dewi.",
+   "en": "A critic wrote a cynical review of the concert by Dewi's students.",
+   "ko": "한 평론가가 데위 학생들의 연주회에 대해 냉소적인 평을 썼어요.",
+   "blank": "sinis",
+   "src": "made"
   }
  ],
  "w|sinting": [
@@ -80101,6 +80661,22 @@
    "src": "made"
   }
  ],
+ "w|teladan": [
+  {
+   "text": "Bagi anak-anak di gang, Andi adalah teladan karena rajin membantu orang tua.",
+   "en": "For the kids in the alley, Andi is a role model because he always helps the elderly.",
+   "ko": "골목 아이들에게 안디는 어르신들을 잘 도와서 본보기예요.",
+   "blank": "teladan",
+   "src": "made"
+  },
+  {
+   "text": "Dewi memberi penghargaan murid teladan kepada Rina yang tak pernah bolos latihan.",
+   "en": "Dewi gave the model student award to Rina, who never skipped practice.",
+   "ko": "데위는 연습에 한 번도 빠지지 않은 리나에게 모범생 상을 줬어요.",
+   "blank": "teladan",
+   "src": "made"
+  }
+ ],
  "w|telah": [
   {
    "text": "Waktu telah habis.",
@@ -81137,6 +81713,22 @@
    "src": "made"
   }
  ],
+ "w|terberat": [
+  {
+   "text": "Pindah rumah adalah keputusan terberat bagi Andi karena tetangganya begitu baik.",
+   "en": "Moving was the hardest decision for Andi because his neighbors are so kind.",
+   "ko": "이웃들이 너무 좋아서 이사는 안디에게 가장 힘든 결정이었어요.",
+   "blank": "terberat",
+   "src": "made"
+  },
+  {
+   "text": "Kata Dewi, bagian terberat lagu itu adalah nada tinggi di akhir.",
+   "en": "According to Dewi, the hardest part of that song is the high note at the end.",
+   "ko": "데위 말로는 그 노래에서 가장 어려운 부분은 끝의 고음이에요.",
+   "blank": "terberat",
+   "src": "made"
+  }
+ ],
  "w|terbesar": [
   {
    "text": "Ini toko terbesar di kota.",
@@ -81177,6 +81769,22 @@
    "en": "His new book will be published next month.",
    "ko": "그의 새 책은 다음 달에 출간돼.",
    "blank": "terbit"
+  }
+ ],
+ "w|terbodoh": [
+  {
+   "text": "Lupa mengunci pagar adalah kesalahan terbodoh Andi minggu ini.",
+   "en": "Forgetting to lock the gate was Andi's dumbest mistake this week.",
+   "ko": "대문 잠그는 걸 잊은 건 안디가 이번 주에 한 가장 바보 같은 실수였어요.",
+   "blank": "terbodoh",
+   "src": "made"
+  },
+  {
+   "text": "Dewi tertawa dan menyebut lupa membawa partitur sebagai kesalahan terbodoh hari itu.",
+   "en": "Dewi laughed and called forgetting the sheet music the dumbest mistake of the day.",
+   "ko": "데위는 웃으면서 악보를 깜빡한 게 그날 가장 바보 같은 실수였다고 했어요.",
+   "blank": "terbodoh",
+   "src": "made"
   }
  ],
  "w|terbongkar": [
@@ -81562,6 +82170,22 @@
    "en": "Dewi was shocked because a virus was detected on her office laptop.",
    "ko": "디위는 회사 노트북에서 바이러스가 발견돼서 놀랐어요.",
    "blank": "terdeteksi",
+   "src": "made"
+  }
+ ],
+ "w|terdiam": [
+  {
+   "text": "Andi terdiam ketika tetangga bercerita tentang anaknya yang sakit keras.",
+   "en": "Andi fell silent when the neighbor talked about their seriously ill child.",
+   "ko": "이웃이 중병에 걸린 아이 이야기를 하자 안디는 말을 잃었어요.",
+   "blank": "terdiam",
+   "src": "made"
+  },
+  {
+   "text": "Seluruh aula terdiam ketika murid kecil Dewi mulai bernyanyi.",
+   "en": "The whole hall fell silent when Dewi's young student began to sing.",
+   "ko": "데위의 어린 제자가 노래를 시작하자 강당 전체가 조용해졌어요.",
+   "blank": "terdiam",
    "src": "made"
   }
  ],
@@ -83083,6 +83707,22 @@
    "en": "Our rooms are separated by a thin wall.",
    "ko": "우리 방은 얇은 벽으로 나뉘어 있어.",
    "blank": "terpisah"
+  }
+ ],
+ "w|terpojok": [
+  {
+   "text": "Kucing liar itu terpojok di garasi Andi dan mendesis keras.",
+   "en": "The stray cat was cornered in Andi's garage and hissed loudly.",
+   "ko": "그 길고양이는 안디네 차고 구석에 몰려서 크게 하악질을 했어요.",
+   "blank": "terpojok",
+   "src": "made"
+  },
+  {
+   "text": "Dewi merasa terpojok ketika para orang tua mengeluhkan jadwal resital.",
+   "en": "Dewi felt cornered when the parents complained about the recital schedule.",
+   "ko": "학부모들이 발표회 일정에 불만을 쏟아내자 데위는 궁지에 몰린 기분이었어요.",
+   "blank": "terpojok",
+   "src": "made"
   }
  ],
  "w|terpotong": [

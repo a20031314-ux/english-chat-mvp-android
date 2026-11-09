@@ -347,6 +347,22 @@
    "blank": "अगर"
   }
  ],
+ "w|अगरबत्ती": [
+  {
+   "text": "दिवाली की शाम करण ने घर में अगरबत्ती जलाई और दीये रखे।",
+   "en": "On Diwali evening Karan lit incense at home and set out oil lamps.",
+   "ko": "디왈리 저녁에 카란은 집에 향을 피우고 등잔을 놓았어요.",
+   "blank": "अगरबत्ती",
+   "src": "made"
+  },
+  {
+   "text": "सुबह दीपा के निकलने से पहले उसकी माँ ने भगवान के आगे अगरबत्ती जलाई।",
+   "en": "In the morning, before Deepa left, her mother lit incense before the gods.",
+   "ko": "아침에 디파가 나가기 전에 어머니가 신 앞에 향을 피우셨어요.",
+   "blank": "अगरबत्ती",
+   "src": "made"
+  }
+ ],
  "w|अगला": [
   {
    "text": "अगला पड़ाव बहुत सुंदर है।",
@@ -2296,6 +2312,22 @@
    "en": "Deepa's team got a government grant for a new machine.",
    "ko": "디파 팀은 새 장비를 살 정부 보조금을 받았어요.",
    "blank": "अनुदान",
+   "src": "made"
+  }
+ ],
+ "w|अनुपयोगी": [
+  {
+   "text": "करण ने पुराना, अनुपयोगी टीवी बेचकर एक छोटी अलमारी ख़रीदी।",
+   "en": "Karan sold the old, useless TV and bought a small cupboard.",
+   "ko": "카란은 쓸모없는 낡은 텔레비전을 팔고 작은 수납장을 샀어요.",
+   "blank": "अनुपयोगी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने बैग से अनुपयोगी चीज़ें निकाल दीं ताकि वह हल्का रहे।",
+   "en": "Deepa took the useless things out of her bag to keep it light.",
+   "ko": "디파는 가방을 가볍게 하려고 쓸데없는 물건을 빼냈어요.",
+   "blank": "अनुपयोगी",
    "src": "made"
   }
  ],
@@ -4445,6 +4477,22 @@
    "blank": "अवैध"
   }
  ],
+ "w|अव्यवस्थित": [
+  {
+   "text": "करण का कमरा इतना अव्यवस्थित है कि चाबियाँ ढूँढने में आधा घंटा लग जाता है।",
+   "en": "Karan's room is so messy that finding the keys takes half an hour.",
+   "ko": "카란의 방은 너무 어수선해서 열쇠 찾는 데 반 시간이 걸려요.",
+   "blank": "अव्यवस्थित",
+   "src": "made"
+  },
+  {
+   "text": "शुरुआत की लाइन पर भीड़ इतनी अव्यवस्थित थी कि दीपा को अपनी जगह ढूँढने में देर लगी।",
+   "en": "The crowd at the start line was so disorganised that it took Deepa a while to find her spot.",
+   "ko": "출발선 인파가 너무 어수선해서 디파는 자기 자리를 찾는 데 한참 걸렸어요.",
+   "blank": "अव्यवस्थित",
+   "src": "made"
+  }
+ ],
  "w|अव्वल": [
   {
    "text": "इस साल की गुणवत्ता रैंकिंग में अमित की टीम अव्वल रही।",
@@ -5127,6 +5175,22 @@
    "blank": "आँकड़ा"
   }
  ],
+ "w|आँकना": [
+  {
+   "text": "मरम्मत का ख़र्च आँकने के लिए सोसाइटी ने एक इंजीनियर बुलाया, और करण उसके साथ घूमा।",
+   "en": "The society called an engineer to estimate the repair cost, and Karan went around with him.",
+   "ko": "단지에서 수리비를 가늠하려고 기술자를 불렀고 카란이 같이 둘러봤어요.",
+   "blank": "आँकने",
+   "src": "made"
+  },
+  {
+   "text": "कोच ने दीपा की रफ़्तार आँकने के लिए हर किलोमीटर का समय लिखा।",
+   "en": "The coach wrote down the time for every kilometre to gauge Deepa's pace.",
+   "ko": "코치는 디파의 속도를 가늠하려고 일 킬로미터마다 기록을 적었어요.",
+   "blank": "आँकने",
+   "src": "made"
+  }
+ ],
  "w|आकर्षक": [
   {
    "text": "नए नाटक का पोस्टर इतना आकर्षक था कि लोग रुककर देखने लगे।",
@@ -5746,6 +5810,22 @@
    "en": "You need the committee's permission to set up a stall in the market.",
    "ko": "시장에 가판대를 차리려면 위원회 허락을 받아야 해요.",
    "blank": "आज्ञा",
+   "src": "made"
+  }
+ ],
+ "w|आज्ञाकारी": [
+  {
+   "text": "पड़ोसी का आज्ञाकारी कुत्ता करण के एक इशारे पर बैठ जाता है।",
+   "en": "The neighbour's obedient dog sits down at a single gesture from Karan.",
+   "ko": "이웃집의 말 잘 듣는 개는 카란이 손짓 한 번만 해도 앉아요.",
+   "blank": "आज्ञाकारी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा कोई आज्ञाकारी शिष्या नहीं है, वह कोच से हर सलाह का कारण पूछती है।",
+   "en": "Deepa is no obedient pupil; she asks her coach the reason behind every piece of advice.",
+   "ko": "디파는 고분고분한 제자가 아니에요. 코치의 조언마다 이유를 물어요.",
+   "blank": "आज्ञाकारी",
    "src": "made"
   }
  ],
@@ -7097,6 +7177,22 @@
    "blank": "आराम से"
   }
  ],
+ "w|आरामदायक": [
+  {
+   "text": "करण ने बालकनी में एक आरामदायक कुर्सी रखी है, जहाँ वह शाम को पढ़ता है।",
+   "en": "Karan has put a comfortable chair on the balcony, where he reads in the evening.",
+   "ko": "카란은 발코니에 편안한 의자를 두고 저녁마다 거기서 책을 읽어요.",
+   "blank": "आरामदायक",
+   "src": "made"
+  },
+  {
+   "text": "लंबी दौड़ के लिए दीपा हमेशा आरामदायक जूते चुनती है, फ़ैशन वाले नहीं।",
+   "en": "For long runs Deepa always picks comfortable shoes, not fashionable ones.",
+   "ko": "디파는 장거리 달리기에는 늘 멋보다 편한 신발을 골라요.",
+   "blank": "आरामदायक",
+   "src": "made"
+  }
+ ],
  "w|आरोप": [
   {
    "text": "उस पर चोरी का आरोप लगा है।",
@@ -7294,6 +7390,22 @@
    "en": "A journalist criticised the hotel's slow service, but Meena listened calmly.",
    "ko": "한 기자가 호텔의 느린 서비스를 비판했지만 미나는 차분히 들었어요.",
    "blank": "आलोचना की",
+   "src": "made"
+  }
+ ],
+ "w|आलोचनात्मक": [
+  {
+   "text": "सोसाइटी की बैठक में करण ने रखरखाव के बजट पर आलोचनात्मक सवाल उठाए।",
+   "en": "At the society meeting Karan raised critical questions about the maintenance budget.",
+   "ko": "단지 회의에서 카란은 관리비 예산에 대해 비판적인 질문을 던졌어요.",
+   "blank": "आलोचनात्मक",
+   "src": "made"
+  },
+  {
+   "text": "दीपा अपनी हर रेस का वीडियो आलोचनात्मक नज़र से देखती है और अपनी ग़लतियाँ ढूँढती है।",
+   "en": "Deepa watches the video of every race with a critical eye and looks for her mistakes.",
+   "ko": "디파는 경주 영상을 매번 비판적인 눈으로 보며 자기 실수를 찾아요.",
+   "blank": "आलोचनात्मक",
    "src": "made"
   }
  ],
@@ -10673,6 +10785,22 @@
    "src": "made"
   }
  ],
+ "w|उफ़्फ़": [
+  {
+   "text": "\"उफ़्फ़, फिर से लिफ़्ट बंद है!\" करण ने सीढ़ियाँ चढ़ते हुए कहा।",
+   "en": "\"Ugh, the lift is out again!\" Karan said as he climbed the stairs.",
+   "ko": "\"아휴, 엘리베이터가 또 멈췄네!\" 카란이 계단을 오르며 말했어요.",
+   "blank": "उफ़्फ़",
+   "src": "made"
+  },
+  {
+   "text": "\"उफ़्फ़, यह चढ़ाई तो ख़त्म ही नहीं हो रही,\" दीपा ने हाँफते हुए कहा।",
+   "en": "\"Phew, this climb just won't end,\" Deepa said, panting.",
+   "ko": "\"휴, 이 오르막은 끝이 없네.\" 디파가 헐떡이며 말했어요.",
+   "blank": "उफ़्फ़",
+   "src": "made"
+  }
+ ],
  "w|उबरना": [
   {
    "text": "बाढ़ से उबरने के बाद गाँव कैसे बसा, इस पर करण ने लंबी रिपोर्ट लिखी।",
@@ -12743,6 +12871,22 @@
    "src": "made"
   }
  ],
+ "w|कढ़ाई": [
+  {
+   "text": "करण की माँ ने उसके नए फ़्लैट के लिए कढ़ाई वाला तकिया भेजा।",
+   "en": "Karan's mother sent an embroidered cushion for his new flat.",
+   "ko": "카란의 어머니가 새 아파트에 쓰라고 자수 놓은 베개를 보내 주셨어요.",
+   "blank": "कढ़ाई",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की टोपी पर उसकी बहन ने कढ़ाई से उसका नाम लिख दिया था।",
+   "en": "Deepa's sister had embroidered her name on her cap.",
+   "ko": "디파의 언니가 디파 모자에 이름을 수놓아 줬어요.",
+   "blank": "कढ़ाई",
+   "src": "made"
+  }
+ ],
  "w|कढ़ी": [
   {
    "text": "बाज़ार के ढाबे पर गुरुवार को पकौड़े वाली कढ़ी बनती है।",
@@ -12788,6 +12932,22 @@
    "en": "Seema cut up old newspapers into small pieces for wrapping goods.",
    "ko": "시마는 헌 신문을 잘라 물건 싸는 작은 종이를 만들었어요.",
    "blank": "कतरकर",
+   "src": "made"
+  }
+ ],
+ "w|कतराना": [
+  {
+   "text": "करण का भतीजा सोसाइटी के बड़े बच्चों से बात करने में कतराता है।",
+   "en": "Karan's nephew shies away from talking to the older children in the society.",
+   "ko": "카란의 조카는 단지의 큰 아이들과 말하는 걸 피해요.",
+   "blank": "कतराता",
+   "src": "made"
+  },
+  {
+   "text": "दीपा पहाड़ी रास्तों पर दौड़ने से कभी नहीं कतराती।",
+   "en": "Deepa never shies away from running on hill trails.",
+   "ko": "디파는 산길 달리기를 한 번도 피한 적이 없어요.",
+   "blank": "कतराती",
    "src": "made"
   }
  ],
@@ -13203,6 +13363,22 @@
    "src": "made"
   }
  ],
+ "w|कबाड़": [
+  {
+   "text": "करण की बालकनी पुराने कबाड़ से भरी थी, जिसे उसने आख़िरकार बेच दिया।",
+   "en": "Karan's balcony was full of old junk, which he finally sold.",
+   "ko": "카란의 발코니는 낡은 고물로 가득했는데 결국 다 팔았어요.",
+   "blank": "कबाड़",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने अपने घिसे हुए पुराने जूते कबाड़ में नहीं फेंके, बल्कि याद के तौर पर रख लिए।",
+   "en": "Deepa didn't throw her worn-out old shoes into the junk; she kept them as a memento.",
+   "ko": "디파는 닳은 옛 신발을 고물로 버리지 않고 기념으로 간직했어요.",
+   "blank": "कबाड़",
+   "src": "made"
+  }
+ ],
  "w|कबाब": [
   {
    "text": "शाम को मीट मार्केट के पास कबाब की ख़ुशबू दूर तक फैल जाती है।",
@@ -13437,6 +13613,22 @@
    "en": "Lotus petals are soft.",
    "ko": "연꽃 꽃잎은 부드러워.",
    "blank": "कमल"
+  }
+ ],
+ "w|कमसिन": [
+  {
+   "text": "कमसिन उम्र में ही करण के पड़ोसी का बेटा घर की ज़िम्मेदारी उठाने लगा।",
+   "en": "Karan's neighbour's son started shouldering the family's responsibilities at a tender age.",
+   "ko": "카란네 이웃집 아들은 어린 나이에 벌써 집안을 책임지기 시작했어요.",
+   "blank": "कमसिन",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने कमसिन उम्र में ही स्कूल की दौड़ों में मेडल जीतने शुरू कर दिए थे।",
+   "en": "Deepa had started winning medals in school races at a tender age.",
+   "ko": "디파는 어린 나이부터 학교 달리기 대회에서 메달을 따기 시작했어요.",
+   "blank": "कमसिन",
+   "src": "made"
   }
  ],
  "w|कमाई": [
@@ -14775,6 +14967,22 @@
    "src": "made"
   }
  ],
+ "w|कामवाली": [
+  {
+   "text": "करण की कामवाली आज छुट्टी पर थी, इसलिए बर्तन उसे ख़ुद धोने पड़े।",
+   "en": "Karan's house help was on leave today, so he had to wash the dishes himself.",
+   "ko": "오늘 카란네 도우미 아주머니가 쉬는 날이라 카란이 설거지를 직접 해야 했어요.",
+   "blank": "कामवाली",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की कामवाली ने मैराथन से एक दिन पहले उसके सारे जूते चमका दिए।",
+   "en": "A day before the marathon, Deepa's house help polished all her shoes.",
+   "ko": "마라톤 전날 디파네 도우미 아주머니가 신발을 전부 반짝반짝 닦아 줬어요.",
+   "blank": "कामवाली",
+   "src": "made"
+  }
+ ],
  "w|क़ायदा": [
   {
    "text": "स्कूल का क़ायदा है कि घंटी बजते ही सब कक्षा में पहुँचें।",
@@ -15601,6 +15809,22 @@
    "en": "The taxi fare felt a bit high.",
    "ko": "택시 요금이 좀 비싸게 느껴졌어.",
    "blank": "किराया"
+  }
+ ],
+ "w|किराये पर लेना": [
+  {
+   "text": "पिछले साल करण ने शहर के बीच में दो कमरों का फ़्लैट किराये पर लिया।",
+   "en": "Last year Karan rented a two-room flat in the middle of the city.",
+   "ko": "작년에 카란은 도심에 방 두 개짜리 아파트를 세 얻었어요.",
+   "blank": "किराये पर लिया",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने रेस वाले शहर में एक साइकिल किराये पर ली ताकि रास्ता पहले देख सके।",
+   "en": "Deepa rented a bicycle in the race city so she could see the route beforehand.",
+   "ko": "디파는 경주가 열리는 도시에서 코스를 미리 보려고 자전거를 빌렸어요.",
+   "blank": "किराये पर ली",
+   "src": "made"
   }
  ],
  "w|किरायेदार": [
@@ -17303,6 +17527,22 @@
    "src": "made"
   }
  ],
+ "w|कोठरी": [
+  {
+   "text": "सीढ़ियों के नीचे की छोटी कोठरी में करण अपना पुराना सामान रखता है।",
+   "en": "Karan keeps his old things in the small storeroom under the stairs.",
+   "ko": "카란은 계단 밑 작은 골방에 옛 물건을 둬요.",
+   "blank": "कोठरी",
+   "src": "made"
+  },
+  {
+   "text": "स्टेडियम की एक छोटी कोठरी में धावकों के बैग रखे गए, और दीपा ने भी अपना बैग वहीं दिया।",
+   "en": "The runners' bags were kept in a small room at the stadium, and Deepa handed in hers there too.",
+   "ko": "경기장의 작은 방에 선수들 가방을 맡겼고 디파도 거기에 가방을 맡겼어요.",
+   "blank": "कोठरी",
+   "src": "made"
+  }
+ ],
  "w|कोठी": [
   {
    "text": "दादाजी की पुरानी कोठी में तीनों भाई-बहन गर्मी की छुट्टियाँ बिताते थे।",
@@ -18462,6 +18702,22 @@
    "en": "Everyone affectionately calls the team's fastest player 'rabbit'.",
    "ko": "팀에서 가장 빠른 선수를 모두 다정하게 토끼라고 불러요.",
    "blank": "खरगोश",
+   "src": "made"
+  }
+ ],
+ "w|खरब": [
+  {
+   "text": "अख़बार में करण ने पढ़ा कि देश के मकानों का बाज़ार खरबों रुपये का है।",
+   "en": "Karan read in the paper that the country's housing market is worth trillions of rupees.",
+   "ko": "카란은 신문에서 나라의 주택 시장 규모가 수조 루피라는 기사를 읽었어요.",
+   "blank": "खरबों",
+   "src": "made"
+  },
+  {
+   "text": "एक इंटरव्यू में दीपा ने कहा कि खेल के सामान का बाज़ार अब खरबों का हो चुका है।",
+   "en": "In an interview Deepa said the sports goods market is now worth trillions.",
+   "ko": "디파는 인터뷰에서 스포츠 용품 시장이 이제 수조 규모가 됐다고 말했어요.",
+   "blank": "खरबों",
    "src": "made"
   }
  ],
@@ -21625,6 +21881,22 @@
    "src": "made"
   }
  ],
+ "w|गृहस्थी": [
+  {
+   "text": "शादी के बाद करण को समझ आया कि गृहस्थी चलाना कितना मुश्किल काम है।",
+   "en": "After the wedding, Karan realised how hard it is to run a household.",
+   "ko": "결혼하고 나서 카란은 살림을 꾸리는 게 얼마나 힘든지 알게 됐어요.",
+   "blank": "गृहस्थी",
+   "src": "made"
+  },
+  {
+   "text": "गृहस्थी और नौकरी सँभालते हुए भी दीपा हर सुबह दौड़ने का समय निकाल लेती है।",
+   "en": "Even while managing her household and job, Deepa finds time to run every morning.",
+   "ko": "살림과 직장을 챙기면서도 디파는 매일 아침 달릴 시간을 내요.",
+   "blank": "गृहस्थी",
+   "src": "made"
+  }
+ ],
  "w|गेट": [
   {
    "text": "घर का गेट रात को बंद कर दो।",
@@ -21754,6 +22026,22 @@
    "en": "As soon as Priya opened the parcel, her cat jumped into her lap.",
    "ko": "소포를 열자마자 프리야의 고양이가 무릎 위로 뛰어올랐어요.",
    "blank": "गोद",
+   "src": "made"
+  }
+ ],
+ "w|गोंद": [
+  {
+   "text": "टूटे हुए फूलदान को करण ने गोंद से जोड़ने की कोशिश की।",
+   "en": "Karan tried to stick the broken vase back together with glue.",
+   "ko": "카란은 깨진 꽃병을 풀로 붙여 보려고 했어요.",
+   "blank": "गोंद",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने फटे हुए रेस कार्ड को गोंद लगाकर जोड़ा।",
+   "en": "Deepa glued her torn race card back together.",
+   "ko": "디파는 찢어진 경주 번호표를 풀로 붙였어요.",
+   "blank": "गोंद",
    "src": "made"
   }
  ],
@@ -22497,6 +22785,22 @@
    "en": "This household remedy is very useful.",
    "ko": "이 가정 요법은 아주 쓸모 있어.",
    "blank": "घरेलू"
+  }
+ ],
+ "w|घसीटना": [
+  {
+   "text": "लिफ़्ट ख़राब थी, इसलिए करण को भारी सूटकेस सीढ़ियों पर घसीटना पड़ा।",
+   "en": "The lift was broken, so Karan had to drag the heavy suitcase up the stairs.",
+   "ko": "엘리베이터가 고장 나서 카란은 무거운 여행 가방을 계단으로 끌고 올라가야 했어요.",
+   "blank": "घसीटना",
+   "src": "made"
+  },
+  {
+   "text": "आख़िरी किलोमीटर में दीपा थकान से पैर घसीटते हुए चल रही थी, पर रुकी नहीं।",
+   "en": "In the last kilometre Deepa was dragging her feet from exhaustion, but she didn't stop.",
+   "ko": "마지막 일 킬로미터에서 디파는 지쳐서 발을 질질 끌었지만 멈추지 않았어요.",
+   "blank": "घसीटते",
+   "src": "made"
   }
  ],
  "w|घाट": [
@@ -25915,6 +26219,22 @@
    "src": "made"
   }
  ],
+ "w|छिड़ना": [
+  {
+   "text": "पार्किंग को लेकर सोसाइटी में फिर बहस छिड़ गई, और करण चुपचाप घर लौट आया।",
+   "en": "Another argument broke out in the society over parking, and Karan quietly went back home.",
+   "ko": "주차 문제로 단지에서 또 말다툼이 벌어지자 카란은 조용히 집으로 돌아왔어요.",
+   "blank": "छिड़",
+   "src": "made"
+  },
+  {
+   "text": "रेस के बाद इंटरनेट पर बहस छिड़ गई कि रास्ता ग़लत नापा गया था, पर दीपा ने ध्यान नहीं दिया।",
+   "en": "After the race a debate broke out online that the route had been measured wrong, but Deepa paid no attention.",
+   "ko": "경주가 끝나고 코스 거리를 잘못 쟀다는 논란이 온라인에서 벌어졌지만 디파는 신경 쓰지 않았어요.",
+   "blank": "छिड़",
+   "src": "made"
+  }
+ ],
  "w|छिपकली": [
   {
    "text": "चट्टान पर धूप सेंकती छिपकली रोहन को देखते ही भाग गई।",
@@ -26487,6 +26807,22 @@
    "blank": "जज"
   }
  ],
+ "w|ज़ंजीर": [
+  {
+   "text": "चोरी के डर से करण ने अपनी साइकिल को ज़ंजीर से खंभे में बाँध दिया।",
+   "en": "Fearing theft, Karan chained his bicycle to the pole.",
+   "ko": "도둑이 무서워서 카란은 자전거를 쇠사슬로 기둥에 묶어 두었어요.",
+   "blank": "ज़ंजीर",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ से पहले दीपा ने अपनी चाबी एक पतली ज़ंजीर में डालकर गले में पहन ली।",
+   "en": "Before the race Deepa put her key on a thin chain and wore it around her neck.",
+   "ko": "경주 전에 디파는 열쇠를 가는 줄에 꿰어 목에 걸었어요.",
+   "blank": "ज़ंजीर",
+   "src": "made"
+  }
+ ],
  "w|जज़्बा": [
   {
    "text": "राहुल में कुछ नया सीखने का जज़्बा देखकर सीनियर ख़ुश हुए।",
@@ -26732,6 +27068,22 @@
    "en": "Public opinion on the market parking issue was on the shopkeepers' side.",
    "ko": "시장 주차 문제에 대한 여론은 상인들 편이었어요.",
    "blank": "जनमत",
+   "src": "made"
+  }
+ ],
+ "w|जनरेटर": [
+  {
+   "text": "बिजली जाते ही इमारत का जनरेटर चल पड़ा, और करण लिफ़्ट में फँसने से बच गया।",
+   "en": "The building's generator started the moment the power went, and Karan escaped getting stuck in the lift.",
+   "ko": "정전되자마자 건물 발전기가 돌아가서 카란은 엘리베이터에 갇히지 않았어요.",
+   "blank": "जनरेटर",
+   "src": "made"
+  },
+  {
+   "text": "मेडिकल टेंट में जनरेटर की आवाज़ इतनी तेज़ थी कि दीपा को डॉक्टर की बात सुनाई नहीं दी।",
+   "en": "The generator in the medical tent was so loud that Deepa couldn't hear the doctor.",
+   "ko": "의료 천막의 발전기 소리가 너무 커서 디파는 의사 말을 못 들었어요.",
+   "blank": "जनरेटर",
    "src": "made"
   }
  ],
@@ -31753,6 +32105,22 @@
    "blank": "ढकना"
   }
  ],
+ "w|ढक्कन": [
+  {
+   "text": "करण ने पानी की टंकी का ढक्कन खोला तो अंदर काई जमी मिली।",
+   "en": "When Karan opened the lid of the water tank, he found moss inside.",
+   "ko": "카란이 물탱크 뚜껑을 열자 안에 이끼가 껴 있었어요.",
+   "blank": "ढक्कन",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने पानी की बोतल का ढक्कन दाँतों से खोला और दौड़ती रही।",
+   "en": "Deepa opened the water bottle's cap with her teeth and kept running.",
+   "ko": "디파는 물병 뚜껑을 이로 열고 계속 달렸어요.",
+   "blank": "ढक्कन",
+   "src": "made"
+  }
+ ],
  "w|ढंग": [
   {
    "text": "काम सही ढंग से करो।",
@@ -31812,6 +32180,22 @@
    "en": "A ramp has been built up to the library door for wheelchair users.",
    "ko": "휠체어 이용자를 위해 도서관 문까지 경사로를 만들었어요.",
    "blank": "ढलान",
+   "src": "made"
+  }
+ ],
+ "w|ढहना": [
+  {
+   "text": "पुरानी इमारत की एक दीवार भारी बारिश में ढह गई, पर करण का फ़्लैट सुरक्षित रहा।",
+   "en": "A wall of the old building collapsed in the heavy rain, but Karan's flat stayed safe.",
+   "ko": "폭우에 낡은 건물 벽 하나가 무너졌지만 카란의 집은 무사했어요.",
+   "blank": "ढह",
+   "src": "made"
+  },
+  {
+   "text": "तेज़ हवा में रेस का एक स्वागत द्वार ढह गया, पर दीपा बाल-बाल बच गई।",
+   "en": "A welcome arch on the race route collapsed in the strong wind, but Deepa had a narrow escape.",
+   "ko": "강한 바람에 경주로의 환영 아치가 무너졌지만 디파는 아슬아슬하게 피했어요.",
+   "blank": "ढह",
    "src": "made"
   }
  ],
@@ -32973,6 +33357,22 @@
    "src": "made"
   }
  ],
+ "w|तली": [
+  {
+   "text": "फ़ोन पर बात करते-करते करण की कड़ाही की तली जल गई।",
+   "en": "While Karan was talking on the phone, the bottom of his wok got burnt.",
+   "ko": "카란이 통화하는 사이에 웍 바닥이 타 버렸어요.",
+   "blank": "तली",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के जूते की तली घिस गई थी, इसलिए उसने मैराथन से पहले नई जोड़ी ली।",
+   "en": "The sole of Deepa's shoe had worn out, so she bought a new pair before the marathon.",
+   "ko": "디파의 신발 밑창이 닳아서 마라톤 전에 새 신발을 샀어요.",
+   "blank": "तली",
+   "src": "made"
+  }
+ ],
  "w|तवा": [
   {
    "text": "पुरानी रसोई की सफ़ाई करते हुए विकास को दादी का लोहे का तवा मिला।",
@@ -33261,6 +33661,22 @@
    "text": "घर के पीछे वाले ताड़ के पेड़ पर तोते शोर मचा रहे थे।",
    "en": "Parrots were making a racket in the palm tree behind the house.",
    "ko": "집 뒤 야자나무에서 앵무새들이 시끄럽게 떠들었어요.",
+   "blank": "ताड़",
+   "src": "made"
+  }
+ ],
+ "w|ताड़ना": [
+  {
+   "text": "चौकीदार ने करण का उतरा चेहरा देखकर ताड़ लिया कि आज दफ़्तर में कुछ गड़बड़ हुई है।",
+   "en": "Seeing Karan's downcast face, the watchman guessed that something had gone wrong at the office.",
+   "ko": "경비 아저씨는 카란의 시무룩한 얼굴을 보고 오늘 회사에서 뭔가 잘못됐다는 걸 눈치챘어요.",
+   "blank": "ताड़",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के कोच ने उसकी चाल देखकर ताड़ लिया कि उसके घुटने में दर्द है।",
+   "en": "Watching Deepa's stride, her coach sensed that her knee was hurting.",
+   "ko": "코치는 디파의 걸음걸이를 보고 무릎이 아프다는 걸 알아챘어요.",
    "blank": "ताड़",
    "src": "made"
   }
@@ -34661,6 +35077,22 @@
    "blank": "थामना"
   }
  ],
+ "w|थाल": [
+  {
+   "text": "गृहप्रवेश की पूजा के लिए करण की माँ पीतल का थाल लेकर आईं।",
+   "en": "Karan's mother brought a brass platter for the housewarming puja.",
+   "ko": "카란의 어머니가 집들이 예배에 쓸 놋쇠 쟁반을 가져오셨어요.",
+   "blank": "थाल",
+   "src": "made"
+  },
+  {
+   "text": "जीत के बाद दीपा के घर पर मिठाइयों से सजा थाल उसका इंतज़ार कर रहा था।",
+   "en": "After her win, a platter laden with sweets was waiting for Deepa at home.",
+   "ko": "우승하고 집에 오니 과자가 가득 담긴 쟁반이 디파를 기다리고 있었어요.",
+   "blank": "थाल",
+   "src": "made"
+  }
+ ],
  "w|थाली": [
   {
    "text": "खाना साफ़ थाली में परोसा गया।",
@@ -35620,6 +36052,22 @@
    "en": "Hearing the news of a data theft, Neha was shaken and immediately ordered a security check.",
    "ko": "데이터 유출 소식에 네하는 덜컥 겁이 나서 바로 보안 점검을 시켰어요.",
    "blank": "दहल",
+   "src": "made"
+  }
+ ],
+ "w|दहलीज़": [
+  {
+   "text": "पड़ोसन ने दहलीज़ पर रंगोली बनाई थी, तो करण सँभलकर बाहर निकला।",
+   "en": "The neighbour had drawn a rangoli on the threshold, so Karan stepped out carefully.",
+   "ko": "이웃 아주머니가 문턱에 랑골리를 그려 놓아서 카란은 조심조심 나갔어요.",
+   "blank": "दहलीज़",
+   "src": "made"
+  },
+  {
+   "text": "रेस से लौटकर दीपा घर की दहलीज़ पर ही बैठ गई, अंदर जाने की भी ताक़त नहीं बची थी।",
+   "en": "Back from the race, Deepa sat right down on the threshold; she had no strength left even to go in.",
+   "ko": "경주에서 돌아온 디파는 문턱에 그대로 주저앉았어요. 안에 들어갈 힘도 없었거든요.",
+   "blank": "दहलीज़",
    "src": "made"
   }
  ],
@@ -38392,6 +38840,38 @@
    "en": "Because of the fog, the road ahead looked hazy in the morning.",
    "ko": "안개 때문에 아침에 앞길이 뿌옇게 보였어요.",
    "blank": "धुँधला",
+   "src": "made"
+  }
+ ],
+ "w|धुलना": [
+  {
+   "text": "बारिश में बालकनी की सारी धूल अपने आप धुल गई, यह देखकर करण ख़ुश हुआ।",
+   "en": "Karan was pleased to see that the rain had washed all the dust off the balcony by itself.",
+   "ko": "비에 발코니 먼지가 저절로 다 씻겨 나가서 카란은 기뻤어요.",
+   "blank": "धुल",
+   "src": "made"
+  },
+  {
+   "text": "कीचड़ के दाग़ इतने पक्के थे कि कई बार रगड़ने पर भी दीपा की टी-शर्ट साफ़ नहीं धुली।",
+   "en": "The mud stains were so stubborn that Deepa's T-shirt didn't wash clean even after scrubbing many times.",
+   "ko": "진흙 얼룩이 너무 질겨서 여러 번 문질러도 디파의 티셔츠가 깨끗이 빨리지 않았어요.",
+   "blank": "धुली",
+   "src": "made"
+  }
+ ],
+ "w|धुलाई": [
+  {
+   "text": "पानी की टंकी की धुलाई के लिए सोसाइटी ने करण से पैसे इकट्ठे करने को कहा।",
+   "en": "The society asked Karan to collect money for cleaning the water tank.",
+   "ko": "단지에서 카란에게 물탱크 청소비를 걷어 달라고 했어요.",
+   "blank": "धुलाई",
+   "src": "made"
+  },
+  {
+   "text": "मैराथन वाले कीचड़ भरे कपड़ों की धुलाई दीपा ने बाक़ी कपड़ों से अलग की।",
+   "en": "Deepa washed her muddy marathon clothes separately from the rest.",
+   "ko": "디파는 진흙투성이 마라톤 옷을 다른 빨래와 따로 빨았어요.",
+   "blank": "धुलाई",
    "src": "made"
   }
  ],
@@ -42617,6 +43097,22 @@
    "src": "made"
   }
  ],
+ "w|नौकरानी": [
+  {
+   "text": "तीसरी मंज़िल वाली नौकरानी रोज़ सुबह करण के दरवाज़े पर दूध की थैली रख जाती है।",
+   "en": "The maid from the third floor leaves a packet of milk at Karan's door every morning.",
+   "ko": "삼 층 가사도우미가 매일 아침 카란의 문 앞에 우유 봉지를 놓고 가요.",
+   "blank": "नौकरानी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के घर की पुरानी नौकरानी सुबह-सुबह उठकर उसके लिए दलिया बनाती थी।",
+   "en": "The old maid at Deepa's house used to get up early to make porridge for her.",
+   "ko": "디파네 집의 오랜 가정부는 새벽같이 일어나 디파에게 죽을 끓여 주곤 했어요.",
+   "blank": "नौकरानी",
+   "src": "made"
+  }
+ ],
  "w|नौकरी": [
   {
    "text": "उसे शहर में नई नौकरी मिली।",
@@ -44047,6 +44543,22 @@
    "en": "The plan is good, but the budget is low.",
    "ko": "계획은 좋은데 예산이 적어.",
    "blank": "परंतु"
+  }
+ ],
+ "w|परदा": [
+  {
+   "text": "सुबह की धूप रोकने के लिए करण ने खिड़की पर मोटा परदा लगाया।",
+   "en": "Karan put a thick curtain on the window to block the morning sun.",
+   "ko": "카란은 아침 햇빛을 막으려고 창문에 두꺼운 커튼을 달았어요.",
+   "blank": "परदा",
+   "src": "made"
+  },
+  {
+   "text": "होटल के कमरे में दीपा ने परदा खींचकर अंधेरा किया ताकि रेस से पहले ठीक से सो सके।",
+   "en": "In the hotel room Deepa drew the curtain to make it dark so she could sleep well before the race.",
+   "ko": "호텔 방에서 디파는 경주 전에 푹 자려고 커튼을 쳐서 어둡게 했어요.",
+   "blank": "परदा",
+   "src": "made"
   }
  ],
  "w|परंपरा": [
@@ -47487,6 +47999,22 @@
    "src": "made"
   }
  ],
+ "w|पेटी": [
+  {
+   "text": "करण की दादी की पुरानी लोहे की पेटी अब भी पलंग के नीचे रखी है।",
+   "en": "Karan's grandmother's old iron trunk is still kept under the bed.",
+   "ko": "카란 할머니의 낡은 철제 궤짝이 아직도 침대 밑에 있어요.",
+   "blank": "पेटी",
+   "src": "made"
+  },
+  {
+   "text": "मेडल रखने के लिए दीपा ने लकड़ी की एक छोटी पेटी बनवाई है।",
+   "en": "Deepa has had a small wooden box made to keep her medals in.",
+   "ko": "디파는 메달을 넣어 둘 작은 나무 상자를 맞췄어요.",
+   "blank": "पेटी",
+   "src": "made"
+  }
+ ],
  "w|पेट्रोल": [
   {
    "text": "पेट्रोल महँगा हो गया है।",
@@ -48169,6 +48697,22 @@
    "en": "I miss that cute dog.",
    "ko": "그 귀여운 강아지가 생각나.",
    "blank": "प्यारा"
+  }
+ ],
+ "w|प्याला": [
+  {
+   "text": "करण ने चाय का प्याला लेकर छत पर सूरज उगते देखा।",
+   "en": "Karan took a cup of tea and watched the sun rise from the roof.",
+   "ko": "카란은 찻잔을 들고 옥상에서 해가 뜨는 걸 봤어요.",
+   "blank": "प्याला",
+   "src": "made"
+  },
+  {
+   "text": "रेस के बाद दीपा ने अदरक वाली चाय का पूरा प्याला एक साँस में पी लिया।",
+   "en": "After the race Deepa drank a whole cup of ginger tea in one go.",
+   "ko": "경주가 끝나고 디파는 생강차 한 잔을 단숨에 마셨어요.",
+   "blank": "प्याला",
+   "src": "made"
   }
  ],
  "w|प्यास": [
@@ -51240,6 +51784,22 @@
    "en": "Kavita put the old tax files in the upper cupboard.",
    "ko": "카비타는 오래된 세금 파일들을 위쪽 장에 넣어 두었어요.",
    "blank": "फ़ाइलें",
+   "src": "made"
+  }
+ ],
+ "w|फाटक": [
+  {
+   "text": "आधी रात के बाद सोसाइटी का फाटक बंद हो जाता है, इसलिए करण जल्दी लौट आया।",
+   "en": "The society gate closes after midnight, so Karan came back early.",
+   "ko": "단지 정문이 자정이 지나면 닫혀서 카란은 일찍 돌아왔어요.",
+   "blank": "फाटक",
+   "src": "made"
+  },
+  {
+   "text": "सुबह-सुबह स्टेडियम का फाटक खुला और दीपा सबसे पहले अंदर गई।",
+   "en": "The stadium gate opened early in the morning and Deepa was the first to go in.",
+   "ko": "이른 아침 경기장 문이 열리자 디파가 제일 먼저 들어갔어요.",
+   "blank": "फाटक",
    "src": "made"
   }
  ],
@@ -65143,6 +65703,22 @@
    "src": "made"
   }
  ],
+ "w|रद्दी": [
+  {
+   "text": "हर महीने करण पुराने अख़बार रद्दी वाले को बेच देता है।",
+   "en": "Every month Karan sells his old newspapers to the waste-paper man.",
+   "ko": "카란은 매달 묵은 신문을 폐지 장수에게 팔아요.",
+   "blank": "रद्दी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा पुरानी पत्रिकाएँ रद्दी में डालने से पहले उनमें से दौड़ के लेख काट लेती है।",
+   "en": "Before throwing old magazines out as waste paper, Deepa cuts out the running articles.",
+   "ko": "디파는 묵은 잡지를 폐지로 내놓기 전에 달리기 기사를 오려 둬요.",
+   "blank": "रद्दी",
+   "src": "made"
+  }
+ ],
  "w|रफ़्तार": [
   {
    "text": "गाड़ी की रफ़्तार बहुत ज़्यादा थी।",
@@ -66305,6 +66881,22 @@
    "blank": "रिश्वत"
   }
  ],
+ "w|रिसाव": [
+  {
+   "text": "रसोई की छत से रिसाव हो रहा था, तो करण ने ऊपर वाले पड़ोसी का दरवाज़ा खटखटाया।",
+   "en": "Water was leaking from the kitchen ceiling, so Karan knocked on the upstairs neighbour's door.",
+   "ko": "부엌 천장에서 물이 새서 카란은 위층 이웃집 문을 두드렸어요.",
+   "blank": "रिसाव",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की पानी की थैली में रिसाव था, इसलिए उसकी जेब पूरी भीग गई।",
+   "en": "Deepa's water pouch had a leak, so her pocket got soaked.",
+   "ko": "디파의 물주머니가 새서 주머니가 흠뻑 젖었어요.",
+   "blank": "रिसाव",
+   "src": "made"
+  }
+ ],
  "w|रिसॉर्ट": [
   {
    "text": "पहाड़ वाले रिसॉर्ट का रसोइया हर हफ़्ते अजय की दुकान से मसाले ले जाता है।",
@@ -67393,6 +67985,22 @@
    "en": "The table's length comes up to the waist.",
    "ko": "탁자 길이가 허리까지 와.",
    "blank": "लंबाई"
+  }
+ ],
+ "w|लबालब": [
+  {
+   "text": "करण की इमारत के सामने वाला गड्ढा बारिश के पानी से लबालब भर गया।",
+   "en": "The pit in front of Karan's building filled to the brim with rainwater.",
+   "ko": "카란네 건물 앞 웅덩이가 빗물로 가득 찼어요.",
+   "blank": "लबालब",
+   "src": "made"
+  },
+  {
+   "text": "पानी के स्टॉल पर गिलास लबालब भरे थे, और दीपा ने दौड़ते-दौड़ते एक उठा लिया।",
+   "en": "At the water stall the glasses were filled to the brim, and Deepa grabbed one on the run.",
+   "ko": "급수대에 컵마다 물이 넘치도록 차 있었고 디파는 달리면서 하나를 집었어요.",
+   "blank": "लबालब",
+   "src": "made"
   }
  ],
  "w|ललकारना": [
@@ -69243,6 +69851,22 @@
    "en": "Stay right there, I'll be back in a moment.",
    "ko": "너는 거기 앉아 있어, 나 금방 올게.",
    "blank": "वहीं"
+  }
+ ],
+ "w|वाईफ़ाई": [
+  {
+   "text": "करण के फ़्लैट में वाईफ़ाई इतना धीमा है कि वीडियो कॉल बार-बार कट जाती है।",
+   "en": "The Wi-Fi in Karan's flat is so slow that video calls keep dropping.",
+   "ko": "카란네 아파트 와이파이가 너무 느려서 영상 통화가 자꾸 끊겨요.",
+   "blank": "वाईफ़ाई",
+   "src": "made"
+  },
+  {
+   "text": "होटल का वाईफ़ाई बंद था, इसलिए दीपा रेस का नक़्शा अपने फ़ोन पर नहीं उतार पाई।",
+   "en": "The hotel Wi-Fi was down, so Deepa couldn't download the race map to her phone.",
+   "ko": "호텔 와이파이가 안 돼서 디파는 경주 지도를 휴대폰에 받지 못했어요.",
+   "blank": "वाईफ़ाई",
+   "src": "made"
   }
  ],
  "w|वाक़ई": [
@@ -85685,6 +86309,22 @@
    "en": "With a clever plan the work became easy.",
    "ko": "영리한 계획으로 일이 쉬워졌어.",
    "blank": "होशियार"
+  }
+ ],
+ "w|होशियारी": [
+  {
+   "text": "करण ने होशियारी से फ़र्नीचर ऐसे रखा कि छोटा कमरा भी बड़ा लगने लगा।",
+   "en": "Karan cleverly arranged the furniture so that even the small room began to look big.",
+   "ko": "카란이 가구를 영리하게 배치해서 작은 방도 넓어 보이기 시작했어요.",
+   "blank": "होशियारी",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने होशियारी से शुरुआत धीमी रखी और आख़िरी हिस्से में रफ़्तार पकड़ी।",
+   "en": "Deepa cleverly kept a slow start and picked up speed in the last stretch.",
+   "ko": "디파는 영리하게 처음엔 천천히 달리다가 마지막 구간에서 속도를 냈어요.",
+   "blank": "होशियारी",
+   "src": "made"
   }
  ],
  "w|हौसला": [

@@ -1911,6 +1911,22 @@
    "src": "made"
   }
  ],
+ "w|affichage": [
+  {
+   "text": "Les consignes de sécurité sont en affichage près de la machine de Julien.",
+   "en": "The safety instructions are posted near Julien's machine.",
+   "ko": "줄리앙의 기계 옆에 안전 수칙이 게시돼 있어요.",
+   "blank": "affichage",
+   "src": "made"
+  },
+  {
+   "text": "Le menu du jour de Manon est en affichage sur un tableau devant la porte.",
+   "en": "Manon's daily menu is displayed on a board in front of the door.",
+   "ko": "마농의 오늘의 메뉴가 문 앞 칠판에 걸려 있어요.",
+   "blank": "affichage",
+   "src": "made"
+  }
+ ],
  "w|affiche": [
   {
    "text": "L'affiche est collée de travers.",
@@ -4141,6 +4157,22 @@
    "blank": "animal"
   }
  ],
+ "w|animateur": [
+  {
+   "text": "Julien est aussi l'animateur du club de foot de l'entreprise.",
+   "en": "Julien is also the organizer of the company football club.",
+   "ko": "줄리앙은 회사 축구 동호회 진행도 맡고 있어요.",
+   "blank": "animateur",
+   "src": "made"
+  },
+  {
+   "text": "Pour l'anniversaire de sa fille, Manon engage un animateur qui fait des tours de magie.",
+   "en": "For her daughter's birthday, Manon hires an entertainer who does magic tricks.",
+   "ko": "딸 생일에 마농은 마술을 하는 진행자를 불러요.",
+   "blank": "animateur",
+   "src": "made"
+  }
+ ],
  "w|animation": [
   {
    "text": "Le samedi, Hugo s'occupe de l'animation du club de lecture.",
@@ -5272,6 +5304,22 @@
    "en": "Émilie makes a balloon arch for her daughter's birthday.",
    "ko": "에밀리는 딸 생일에 풍선 아치를 만들어요.",
    "blank": "arche",
+   "src": "made"
+  }
+ ],
+ "w|archéologue": [
+  {
+   "text": "En creusant les fondations de l'usine, on a appelé une archéologue, raconte Julien.",
+   "en": "While digging the factory foundations, they called in an archaeologist, Julien says.",
+   "ko": "공장 기초 공사를 하다가 고고학자를 불렀다고 줄리앙이 말해요.",
+   "blank": "archéologue",
+   "src": "made"
+  },
+  {
+   "text": "Une archéologue en fouilles dans la région déjeune chaque jour chez Manon.",
+   "en": "An archaeologist excavating in the area has lunch at Manon's every day.",
+   "ko": "근처에서 발굴 중인 고고학자가 매일 마농네 식당에서 점심을 먹어요.",
+   "blank": "archéologue",
    "src": "made"
   }
  ],
@@ -7682,6 +7730,22 @@
    "en": "Claire doesn't dare venture into Japanese pastry without taking a class.",
    "ko": "클레르는 수업을 듣기 전에는 일본식 제과에 도전할 엄두를 못 내요.",
    "blank": "aventurer",
+   "src": "made"
+  }
+ ],
+ "w|aventurier": [
+  {
+   "text": "Avant l'usine, Julien vivait en aventurier et travaillait sur des bateaux de pêche.",
+   "en": "Before the factory, Julien lived as an adventurer and worked on fishing boats.",
+   "ko": "공장에 오기 전 줄리앙은 모험가처럼 살며 고깃배에서 일했어요.",
+   "blank": "aventurier",
+   "src": "made"
+  },
+  {
+   "text": "Un aventurier de passage raconte ses voyages à Manon pendant tout le dîner.",
+   "en": "A passing adventurer tells Manon about his travels throughout dinner.",
+   "ko": "지나가던 모험가가 저녁 내내 마농에게 여행 이야기를 들려줘요.",
+   "blank": "aventurier",
    "src": "made"
   }
  ],
@@ -11293,6 +11357,22 @@
    "src": "made"
   }
  ],
+ "w|boulon": [
+  {
+   "text": "Julien resserre chaque boulon de la machine avant de la relancer.",
+   "en": "Julien tightens every bolt on the machine before restarting it.",
+   "ko": "줄리앙은 기계를 다시 돌리기 전에 볼트를 하나하나 조여요.",
+   "blank": "boulon",
+   "src": "made"
+  },
+  {
+   "text": "Un boulon de la chaise a sauté, et Manon doit la réparer avant le service.",
+   "en": "A bolt in the chair came loose, and Manon has to fix it before service.",
+   "ko": "의자 볼트가 빠져서 마농은 영업 전에 고쳐야 해요.",
+   "blank": "boulon",
+   "src": "made"
+  }
+ ],
  "w|boulot": [
   {
    "text": "J'ai beaucoup de boulot cette semaine.",
@@ -12345,6 +12425,22 @@
    "blank": "budget"
   }
  ],
+ "w|budgétaire": [
+  {
+   "text": "À cause des restrictions budgétaires, l'usine de Julien n'embauche plus.",
+   "en": "Because of budget cuts, Julien's factory isn't hiring anymore.",
+   "ko": "예산 감축 때문에 줄리앙의 공장은 더는 사람을 뽑지 않아요.",
+   "blank": "budgétaires",
+   "src": "made"
+  },
+  {
+   "text": "Manon fait ses comptes chaque soir pour éviter les surprises budgétaires.",
+   "en": "Manon does her accounts every evening to avoid budget surprises.",
+   "ko": "마농은 예산에 구멍이 나지 않게 매일 저녁 장부를 정리해요.",
+   "blank": "budgétaires",
+   "src": "made"
+  }
+ ],
  "w|buffet": [
   {
    "text": "Le dimanche, Antoine installe un grand buffet de desserts dans la salle.",
@@ -12453,6 +12549,22 @@
    "en": "I work at the office every day.",
    "ko": "나는 매일 사무실에서 일해.",
    "blank": "bureau"
+  }
+ ],
+ "w|bureaucrate": [
+  {
+   "text": "Julien perd une matinée à remplir les formulaires d'un bureaucrate du siège.",
+   "en": "Julien wastes a morning filling in forms for a bureaucrat from headquarters.",
+   "ko": "줄리앙은 본사 관료가 요구한 서류를 채우느라 오전을 날려요.",
+   "blank": "bureaucrate",
+   "src": "made"
+  },
+  {
+   "text": "Un bureaucrate de la mairie vient vérifier les licences du restaurant de Manon.",
+   "en": "A bureaucrat from the town hall comes to check the licenses of Manon's restaurant.",
+   "ko": "시청 공무원이 마농네 식당 허가증을 확인하러 와요.",
+   "blank": "bureaucrate",
+   "src": "made"
   }
  ],
  "w|bus": [
@@ -13114,6 +13226,22 @@
    "en": "The night watchman caught a burglar in the hotel parking lot.",
    "ko": "야간 경비원이 호텔 주차장에서 도둑을 붙잡았어요.",
    "blank": "cambrioleur",
+   "src": "made"
+  }
+ ],
+ "w|camelote": [
+  {
+   "text": "Julien refuse de fabriquer de la camelote, même si la direction veut baisser les coûts.",
+   "en": "Julien refuses to make junk, even if management wants to cut costs.",
+   "ko": "경영진이 비용을 줄이려 해도 줄리앙은 싸구려를 만들기를 거부해요.",
+   "blank": "camelote",
+   "src": "made"
+  },
+  {
+   "text": "Manon refuse d'acheter de la vaisselle en camelote pour son restaurant.",
+   "en": "Manon refuses to buy cheap junk tableware for her restaurant.",
+   "ko": "마농은 식당에 쓸 싸구려 그릇은 사지 않아요.",
+   "blank": "camelote",
    "src": "made"
   }
  ],
@@ -14849,6 +14977,22 @@
    "blank": "cendre"
   }
  ],
+ "w|cendrier": [
+  {
+   "text": "Depuis l'interdiction de fumer, le vieux cendrier de la salle de pause sert de vide-poche à Julien.",
+   "en": "Since the smoking ban, the old ashtray in the break room serves as Julien's tray for odds and ends.",
+   "ko": "흡연이 금지된 뒤로 휴게실의 낡은 재떨이는 줄리앙의 잡동사니 접시가 됐어요.",
+   "blank": "cendrier",
+   "src": "made"
+  },
+  {
+   "text": "Manon a gardé le cendrier de son grand-père en souvenir, sur une étagère.",
+   "en": "Manon kept her grandfather's ashtray on a shelf as a keepsake.",
+   "ko": "마농은 할아버지의 재떨이를 기념으로 선반에 간직했어요.",
+   "blank": "cendrier",
+   "src": "made"
+  }
+ ],
  "w|censé": [
   {
    "text": "Tu es censé finir ce travail.",
@@ -15953,6 +16097,22 @@
    "src": "made"
   }
  ],
+ "w|charpentier": [
+  {
+   "text": "Un charpentier répare la toiture de l'atelier où travaille Julien.",
+   "en": "A carpenter repairs the roof of the workshop where Julien works.",
+   "ko": "목수가 줄리앙이 일하는 작업장 지붕을 고쳐요.",
+   "blank": "charpentier",
+   "src": "made"
+  },
+  {
+   "text": "Le père de Manon, ancien charpentier, a fabriqué toutes les tables du restaurant.",
+   "en": "Manon's father, a former carpenter, made all the restaurant's tables.",
+   "ko": "목수였던 마농의 아버지가 식당 탁자를 전부 만들었어요.",
+   "blank": "charpentier",
+   "src": "made"
+  }
+ ],
  "w|charrette": [
   {
    "text": "Hugo croise un vieux paysan qui transporte du bois dans une charrette.",
@@ -16569,6 +16729,22 @@
    "blank": "chimique"
   }
  ],
+ "w|chimiste": [
+  {
+   "text": "Une chimiste vérifie la qualité des peintures que Julien utilise.",
+   "en": "A chemist checks the quality of the paints Julien uses.",
+   "ko": "화학자가 줄리앙이 쓰는 페인트의 품질을 검사해요.",
+   "blank": "chimiste",
+   "src": "made"
+  },
+  {
+   "text": "Le mari de Manon est chimiste, mais il fait la plonge le week-end.",
+   "en": "Manon's husband is a chemist, but he washes the dishes on weekends.",
+   "ko": "마농의 남편은 화학자지만 주말엔 설거지를 해요.",
+   "blank": "chimiste",
+   "src": "made"
+  }
+ ],
  "w|chimpanzé": [
   {
    "text": "Le fils de Julien imite un chimpanzé pour faire rire tout le monde autour du feu.",
@@ -17122,6 +17298,22 @@
    "en": "After her shift, Léa dashes to the village cinema to see a comedy.",
    "ko": "근무가 끝나면 레아는 마을 영화관에 코미디를 보러 달려가요.",
    "blank": "ciné",
+   "src": "made"
+  }
+ ],
+ "w|cinéaste": [
+  {
+   "text": "Un cinéaste tourne un documentaire sur l'usine de Julien.",
+   "en": "A filmmaker is shooting a documentary about Julien's factory.",
+   "ko": "한 영화감독이 줄리앙의 공장에 관한 다큐멘터리를 찍어요.",
+   "blank": "cinéaste",
+   "src": "made"
+  },
+  {
+   "text": "Un cinéaste a tourné une scène de son film dans le restaurant de Manon.",
+   "en": "A filmmaker shot a scene of his film in Manon's restaurant.",
+   "ko": "한 영화감독이 마농의 식당에서 영화 한 장면을 찍었어요.",
+   "blank": "cinéaste",
    "src": "made"
   }
  ],
@@ -23989,6 +24181,22 @@
    "blank": "cracher"
   }
  ],
+ "w|craie": [
+  {
+   "text": "Julien marque à la craie les pièces défectueuses.",
+   "en": "Julien marks the faulty parts with chalk.",
+   "ko": "줄리앙은 불량 부품에 분필로 표시해요.",
+   "blank": "craie",
+   "src": "made"
+  },
+  {
+   "text": "Manon écrit les plats du jour à la craie sur l'ardoise de l'entrée.",
+   "en": "Manon writes the daily specials in chalk on the board at the entrance.",
+   "ko": "마농은 입구 칠판에 분필로 오늘의 요리를 적어요.",
+   "blank": "craie",
+   "src": "made"
+  }
+ ],
  "w|craindre": [
   {
    "text": "Tu n’as rien à craindre ici.",
@@ -26807,6 +27015,22 @@
    "en": "I like to take on a new challenge every day.",
    "ko": "나는 매일 새로운 도전을 하는 걸 좋아해.",
    "blank": "défi"
+  }
+ ],
+ "w|déficit": [
+  {
+   "text": "Le déficit de l'usine inquiète Julien et ses collègues.",
+   "en": "The factory's deficit worries Julien and his colleagues.",
+   "ko": "공장의 적자 때문에 줄리앙과 동료들이 걱정해요.",
+   "blank": "déficit",
+   "src": "made"
+  },
+  {
+   "text": "Après un hiver calme, le restaurant de Manon a fini l'année en déficit.",
+   "en": "After a quiet winter, Manon's restaurant ended the year in deficit.",
+   "ko": "조용한 겨울을 보낸 뒤 마농의 식당은 적자로 한 해를 마쳤어요.",
+   "blank": "déficit",
+   "src": "made"
   }
  ],
  "w|défier": [
@@ -32629,6 +32853,22 @@
    "src": "made"
   }
  ],
+ "w|éboueur": [
+  {
+   "text": "Chaque matin, Julien salue l'éboueur qui vide les bennes de l'usine.",
+   "en": "Every morning, Julien greets the garbage collector who empties the factory's dumpsters.",
+   "ko": "매일 아침 줄리앙은 공장 쓰레기통을 비우는 환경미화원에게 인사해요.",
+   "blank": "éboueur",
+   "src": "made"
+  },
+  {
+   "text": "Manon garde un repas chaud pour l'éboueur qui passe à la fin du service.",
+   "en": "Manon keeps a hot meal for the garbage collector who comes by at the end of service.",
+   "ko": "마농은 영업이 끝날 무렵 들르는 환경미화원을 위해 따뜻한 밥을 남겨 둬요.",
+   "blank": "éboueur",
+   "src": "made"
+  }
+ ],
  "w|écart": [
   {
    "text": "L’écart entre eux est minime.",
@@ -33903,6 +34143,22 @@
    "src": "made"
   }
  ],
+ "w|électricien": [
+  {
+   "text": "L'électricien de l'usine apprend à Julien à changer un disjoncteur.",
+   "en": "The factory electrician teaches Julien to change a circuit breaker.",
+   "ko": "공장 전기 기사가 줄리앙에게 차단기 바꾸는 법을 가르쳐요.",
+   "blank": "électricien",
+   "src": "made"
+  },
+  {
+   "text": "Un électricien installe de nouvelles lampes au-dessus du comptoir de Manon.",
+   "en": "An electrician installs new lamps above Manon's counter.",
+   "ko": "전기 기사가 마농의 계산대 위에 새 조명을 달아요.",
+   "blank": "électricien",
+   "src": "made"
+  }
+ ],
  "w|électricité": [
   {
    "text": "L'électricité a été coupée hier soir.",
@@ -34095,6 +34351,22 @@
    "en": "It's hard to élever a child alone.",
    "ko": "혼자 아이를 élever하는 건 어려워.",
    "blank": "élever"
+  }
+ ],
+ "w|éleveur": [
+  {
+   "text": "L'usine de Julien achète son lait à un éleveur de la région.",
+   "en": "Julien's factory buys its milk from a local farmer.",
+   "ko": "줄리앙의 공장은 지역 축산 농가에서 우유를 사요.",
+   "blank": "éleveur",
+   "src": "made"
+  },
+  {
+   "text": "Manon achète son agneau directement à un éleveur du village.",
+   "en": "Manon buys her lamb directly from a village farmer.",
+   "ko": "마농은 마을 축산 농가에서 양고기를 직접 사요.",
+   "blank": "éleveur",
+   "src": "made"
   }
  ],
  "w|élimination": [
@@ -37990,6 +38262,22 @@
    "en": "Chloé finds a label with her name on the parcel the neighbour kept for her.",
    "ko": "클로에는 이웃이 맡아 준 소포에서 자기 이름이 적힌 라벨을 봐요.",
    "blank": "étiquette",
+   "src": "made"
+  }
+ ],
+ "w|étoffe": [
+  {
+   "text": "L'usine de Julien tisse une étoffe épaisse pour les manteaux d'hiver.",
+   "en": "Julien's factory weaves a thick fabric for winter coats.",
+   "ko": "줄리앙의 공장은 겨울 외투용 두꺼운 천을 짜요.",
+   "blank": "étoffe",
+   "src": "made"
+  },
+  {
+   "text": "Manon a cousu les rideaux du restaurant dans une jolie étoffe à carreaux.",
+   "en": "Manon sewed the restaurant's curtains from a pretty checked fabric.",
+   "ko": "마농은 예쁜 체크무늬 천으로 식당 커튼을 직접 만들었어요.",
+   "blank": "étoffe",
    "src": "made"
   }
  ],
@@ -42701,6 +42989,22 @@
    "src": "made"
   }
  ],
+ "w|forage": [
+  {
+   "text": "Avant l'usine, Julien travaillait sur un chantier de forage en mer.",
+   "en": "Before the factory, Julien worked on an offshore drilling site.",
+   "ko": "공장에 오기 전 줄리앙은 해상 시추 현장에서 일했어요.",
+   "blank": "forage",
+   "src": "made"
+  },
+  {
+   "text": "Les ouvriers du forage voisin viennent manger chez Manon chaque midi.",
+   "en": "The workers from the nearby drilling site come to eat at Manon's every lunchtime.",
+   "ko": "근처 시추 현장 인부들이 매일 점심 마농네 식당에 와요.",
+   "blank": "forage",
+   "src": "made"
+  }
+ ],
  "w|force": [
   {
    "text": "Elle a beaucoup de force physique.",
@@ -45901,6 +46205,22 @@
    "src": "made"
   }
  ],
+ "w|gourou": [
+  {
+   "text": "Le nouveau consultant se prend pour un gourou du management, se moque Julien.",
+   "en": "The new consultant thinks he's a management guru, Julien mocks.",
+   "ko": "새 컨설턴트가 자기가 경영의 구루인 줄 안다며 줄리앙이 비웃어요.",
+   "blank": "gourou",
+   "src": "made"
+  },
+  {
+   "text": "Le frère de Manon se prend pour un gourou de la cuisine depuis qu'il regarde des vidéos.",
+   "en": "Manon's brother thinks he's a cooking guru since he started watching videos.",
+   "ko": "마농의 오빠는 영상을 보기 시작한 뒤로 자기가 요리 고수인 줄 알아요.",
+   "blank": "gourou",
+   "src": "made"
+  }
+ ],
  "w|goût": [
   {
    "text": "J’adore le goût du chocolat noir.",
@@ -46914,6 +47234,22 @@
    "en": "At night, a guard keeps watch over the machines on Manon's site.",
    "ko": "밤에는 경비원이 마농의 공사장 장비 앞을 지켜요.",
    "blank": "guet",
+   "src": "made"
+  }
+ ],
+ "w|guichet": [
+  {
+   "text": "Le jour de paie, Julien fait la queue au guichet de la banque près de l'usine.",
+   "en": "On payday, Julien queues at the bank counter near the factory.",
+   "ko": "월급날 줄리앙은 공장 근처 은행 창구에 줄을 서요.",
+   "blank": "guichet",
+   "src": "made"
+  },
+  {
+   "text": "Le restaurant de Manon n'a pas de guichet : on commande directement à table.",
+   "en": "Manon's restaurant has no counter: you order directly at the table.",
+   "ko": "마농의 식당엔 주문 창구가 없어요. 식탁에서 바로 주문해요.",
+   "blank": "guichet",
    "src": "made"
   }
  ],
@@ -50255,6 +50591,22 @@
    "src": "made"
   }
  ],
+ "w|imprimante": [
+  {
+   "text": "L'imprimante du bureau de l'usine tombe en panne juste quand Julien en a besoin.",
+   "en": "The factory office printer breaks down just when Julien needs it.",
+   "ko": "줄리앙이 필요할 때 딱 맞춰 공장 사무실 프린터가 고장 나요.",
+   "blank": "imprimante",
+   "src": "made"
+  },
+  {
+   "text": "Manon imprime les nouveaux menus avec l'imprimante de sa sœur.",
+   "en": "Manon prints the new menus on her sister's printer.",
+   "ko": "마농은 언니의 프린터로 새 메뉴판을 뽑아요.",
+   "blank": "imprimante",
+   "src": "made"
+  }
+ ],
  "w|imprimé": [
   {
    "text": "Louis a trouvé un imprimé anonyme glissé sous la porte de la rédaction.",
@@ -51748,6 +52100,22 @@
    "en": "Sarah embroiders each child's initial on their beach towel.",
    "ko": "사라는 아이들 비치 타월에 각자의 이니셜을 수놓아요.",
    "blank": "initiale",
+   "src": "made"
+  }
+ ],
+ "w|initiation": [
+  {
+   "text": "Le premier jour, Julien a reçu une initiation à la sécurité d'une heure.",
+   "en": "On the first day, Julien received an hour-long safety induction.",
+   "ko": "첫날 줄리앙은 한 시간짜리 안전 입문 교육을 받았어요.",
+   "blank": "initiation",
+   "src": "made"
+  },
+  {
+   "text": "Le samedi, Manon propose une initiation à la cuisine pour les enfants.",
+   "en": "On Saturdays, Manon offers an introductory cooking class for children.",
+   "ko": "토요일이면 마농은 아이들을 위한 요리 입문 수업을 열어요.",
+   "blank": "initiation",
    "src": "made"
   }
  ],
@@ -56729,6 +57097,22 @@
    "blank": "lion"
   }
  ],
+ "w|liqueur": [
+  {
+   "text": "Pour le pot de départ, le chef de Julien offre une liqueur de prune.",
+   "en": "For the farewell drinks, Julien's boss offers a plum liqueur.",
+   "ko": "송별 모임에서 줄리앙의 상사가 자두 리큐어를 내요.",
+   "blank": "liqueur",
+   "src": "made"
+  },
+  {
+   "text": "Le grand-père de Manon offre une liqueur maison aux clients fidèles.",
+   "en": "Manon's grandfather offers a homemade liqueur to loyal customers.",
+   "ko": "마농의 할아버지는 단골손님에게 집에서 담근 리큐어를 대접해요.",
+   "blank": "liqueur",
+   "src": "made"
+  }
+ ],
  "w|liquide": [
   {
    "text": "Je préfère payer en liquide.",
@@ -60073,6 +60457,22 @@
    "en": "The maximum number of participants is reached.",
    "ko": "참가자 최대 인원이 찼어.",
    "blank": "maximum"
+  }
+ ],
+ "w|mayonnaise": [
+  {
+   "text": "À la pause, Julien mange un sandwich au thon avec trop de mayonnaise.",
+   "en": "At break, Julien eats a tuna sandwich with too much mayonnaise.",
+   "ko": "쉬는 시간에 줄리앙은 마요네즈를 너무 많이 넣은 참치 샌드위치를 먹어요.",
+   "blank": "mayonnaise",
+   "src": "made"
+  },
+  {
+   "text": "Manon fait sa mayonnaise elle-même, avec un fouet et beaucoup de patience.",
+   "en": "Manon makes her own mayonnaise, with a whisk and a lot of patience.",
+   "ko": "마농은 거품기로 인내심 있게 마요네즈를 직접 만들어요.",
+   "blank": "mayonnaise",
+   "src": "made"
   }
  ],
  "w|me": [
@@ -64148,6 +64548,22 @@
    "en": "Sarah's father used to work in a shipyard.",
    "ko": "사라의 아버지는 예전에 조선소에서 일했어요.",
    "blank": "naval",
+   "src": "made"
+  }
+ ],
+ "w|navet": [
+  {
+   "text": "Le film d'entreprise sur l'usine est un vrai navet, rigole Julien.",
+   "en": "The corporate film about the factory is a real flop, Julien laughs.",
+   "ko": "공장 홍보 영화가 진짜 졸작이라며 줄리앙이 웃어요.",
+   "blank": "navet",
+   "src": "made"
+  },
+  {
+   "text": "Manon prépare une soupe de navet et de poireau pour le menu du jour.",
+   "en": "Manon makes a turnip and leek soup for the daily menu.",
+   "ko": "마농은 오늘의 메뉴로 순무와 대파 수프를 끓여요.",
+   "blank": "navet",
    "src": "made"
   }
  ],
@@ -70219,6 +70635,22 @@
    "blank": "pension"
   }
  ],
+ "w|pensionnat": [
+  {
+   "text": "Le fils de Julien est au pensionnat pendant la semaine, car son père travaille de nuit.",
+   "en": "Julien's son is at boarding school during the week, because his father works nights.",
+   "ko": "줄리앙이 밤 근무를 해서 아들은 주중에 기숙학교에 있어요.",
+   "blank": "pensionnat",
+   "src": "made"
+  },
+  {
+   "text": "Manon a appris à cuisiner au pensionnat, où elle aidait la cuisinière.",
+   "en": "Manon learned to cook at boarding school, where she helped the cook.",
+   "ko": "마농은 기숙학교에서 요리사를 도우며 요리를 배웠어요.",
+   "blank": "pensionnat",
+   "src": "made"
+  }
+ ],
  "w|pente": [
   {
    "text": "Paul monte la tente sur un terrain plat, loin de la pente trop raide.",
@@ -74673,6 +75105,22 @@
    "src": "made"
   }
  ],
+ "w|précoce": [
+  {
+   "text": "Cette année, l'hiver précoce a obligé Julien à rallumer le chauffage de l'atelier dès octobre.",
+   "en": "This year, the early winter forced Julien to turn the workshop heating back on in October.",
+   "ko": "올해는 겨울이 일찍 와서 줄리앙은 시월부터 작업장 난방을 다시 켜야 했어요.",
+   "blank": "précoce",
+   "src": "made"
+  },
+  {
+   "text": "Le fils de Manon a montré un talent précoce pour la pâtisserie.",
+   "en": "Manon's son showed an early talent for pastry.",
+   "ko": "마농의 아들은 어려서부터 제과에 재능을 보였어요.",
+   "blank": "précoce",
+   "src": "made"
+  }
+ ],
  "w|prédateur": [
   {
    "text": "Thomas apprend aux enfants que le brochet est un prédateur redoutable.",
@@ -76361,6 +76809,22 @@
    "src": "made"
   }
  ],
+ "w|programmation": [
+  {
+   "text": "Julien suit une formation en programmation des robots de la chaîne.",
+   "en": "Julien takes a training course in programming the line's robots.",
+   "ko": "줄리앙은 생산 라인 로봇 프로그래밍 교육을 받아요.",
+   "blank": "programmation",
+   "src": "made"
+  },
+  {
+   "text": "La radio du restaurant de Manon diffuse une programmation de vieilles chansons.",
+   "en": "The radio in Manon's restaurant plays a lineup of old songs.",
+   "ko": "마농네 식당 라디오에서는 옛날 노래가 흘러나와요.",
+   "blank": "programmation",
+   "src": "made"
+  }
+ ],
  "w|programme": [
   {
    "text": "Le programme commence à neuf heures.",
@@ -76373,6 +76837,22 @@
    "en": "Did you watch the program yesterday?",
    "ko": "어제 그 프로그램 봤어?",
    "blank": "programme"
+  }
+ ],
+ "w|programmer": [
+  {
+   "text": "Julien apprend à programmer la nouvelle presse à partir d'une tablette.",
+   "en": "Julien learns to program the new press from a tablet.",
+   "ko": "줄리앙은 태블릿으로 새 프레스를 프로그래밍하는 법을 배워요.",
+   "blank": "programmer",
+   "src": "made"
+  },
+  {
+   "text": "Manon doit programmer le four pour que le pain soit prêt à l'ouverture.",
+   "en": "Manon has to program the oven so the bread is ready at opening time.",
+   "ko": "마농은 문을 열 때 빵이 다 구워지게 오븐을 맞춰 놔야 해요.",
+   "blank": "programmer",
+   "src": "made"
   }
  ],
  "w|progrès": [
@@ -78731,6 +79211,22 @@
    "src": "made"
   }
  ],
+ "w|radiateur": [
+  {
+   "text": "Dans le vestiaire de l'usine, Julien fait sécher ses gants sur le radiateur.",
+   "en": "In the factory locker room, Julien dries his gloves on the radiator.",
+   "ko": "공장 탈의실에서 줄리앙은 장갑을 라디에이터에 말려요.",
+   "blank": "radiateur",
+   "src": "made"
+  },
+  {
+   "text": "En hiver, les clients se battent pour la table près du radiateur, rit Manon.",
+   "en": "In winter, customers fight over the table near the radiator, Manon laughs.",
+   "ko": "겨울이면 손님들이 라디에이터 옆 자리를 두고 다툰다며 마농이 웃어요.",
+   "blank": "radiateur",
+   "src": "made"
+  }
+ ],
  "w|radical": [
   {
    "text": "Pour les puces, Paul conseille un traitement radical sur toute la maison.",
@@ -80207,6 +80703,22 @@
    "src": "made"
   }
  ],
+ "w|réclamation": [
+  {
+   "text": "Julien traite une réclamation d'un client mécontent de sa livraison.",
+   "en": "Julien handles a complaint from a customer unhappy with his delivery.",
+   "ko": "줄리앙은 배송에 불만인 고객의 항의를 처리해요.",
+   "blank": "réclamation",
+   "src": "made"
+  },
+  {
+   "text": "Manon répond poliment à la réclamation d'un client qui trouve son plat trop salé.",
+   "en": "Manon politely responds to the complaint of a customer who finds his dish too salty.",
+   "ko": "마농은 음식이 너무 짜다는 손님의 항의에 공손히 답해요.",
+   "blank": "réclamation",
+   "src": "made"
+  }
+ ],
  "w|réclamer": [
   {
    "text": "Le nouveau collègue de Julien réclame déjà un deuxième écran.",
@@ -80608,6 +81120,22 @@
    "en": "Camille needs a week to recover her sense of smell after her cold.",
    "ko": "카미유는 감기가 나은 뒤 후각을 되찾는 데 일주일이 걸려요.",
    "blank": "recouvrer",
+   "src": "made"
+  }
+ ],
+ "w|récréation": [
+  {
+   "text": "Julien entend la sonnerie de l'école voisine annoncer la récréation.",
+   "en": "Julien hears the bell of the nearby school announcing recess.",
+   "ko": "줄리앙은 옆 학교에서 쉬는 시간을 알리는 종소리를 들어요.",
+   "blank": "récréation",
+   "src": "made"
+  },
+  {
+   "text": "Pendant la récréation, les enfants de l'école d'en face font coucou à Manon.",
+   "en": "During recess, the children from the school across the street wave to Manon.",
+   "ko": "쉬는 시간이면 맞은편 학교 아이들이 마농에게 손을 흔들어요.",
+   "blank": "récréation",
    "src": "made"
   }
  ],
@@ -82688,6 +83216,22 @@
    "en": "The rumour that the shop was closing spread quickly around the neighbourhood, but Inès is staying.",
    "ko": "가게가 문을 닫는다는 소문이 동네에 금세 퍼졌지만 이네스는 계속 장사해요.",
    "blank": "répandue",
+   "src": "made"
+  }
+ ],
+ "w|réparateur": [
+  {
+   "text": "Le réparateur ne viendra que lundi, alors Julien doit arrêter la machine.",
+   "en": "The repairman won't come until Monday, so Julien has to stop the machine.",
+   "ko": "수리 기사가 월요일에야 와서 줄리앙은 기계를 세워야 해요.",
+   "blank": "réparateur",
+   "src": "made"
+  },
+  {
+   "text": "Le frigo est en panne, et Manon attend le réparateur avec angoisse.",
+   "en": "The fridge is broken, and Manon anxiously waits for the repairman.",
+   "ko": "냉장고가 고장 나서 마농은 초조하게 수리 기사를 기다려요.",
+   "blank": "réparateur",
    "src": "made"
   }
  ],
@@ -87971,6 +88515,22 @@
    "src": "made"
   }
  ],
+ "w|séduction": [
+  {
+   "text": "Le directeur commercial use de séduction pour convaincre les clients de visiter l'usine, observe Julien.",
+   "en": "The sales director uses charm to persuade clients to visit the factory, Julien observes.",
+   "ko": "영업 이사는 손님들이 공장을 방문하도록 매력을 발산한다고 줄리앙이 봐요.",
+   "blank": "séduction",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux serveur du restaurant de Manon mise tout sur la séduction pour vendre le dessert.",
+   "en": "The old waiter at Manon's restaurant relies entirely on charm to sell dessert.",
+   "ko": "마농네 식당의 나이 든 종업원은 디저트를 팔 때 오로지 매력에 기대요.",
+   "blank": "séduction",
+   "src": "made"
+  }
+ ],
  "w|séduire": [
   {
    "text": "Le nouveau a vite séduit toute l'équipe de Julien avec ses croissants du lundi.",
@@ -92315,6 +92875,22 @@
    "blank": "style"
   }
  ],
+ "w|styliste": [
+  {
+   "text": "Une styliste vient choisir les tissus que fabrique l'usine de Julien.",
+   "en": "A fashion designer comes to choose the fabrics Julien's factory makes.",
+   "ko": "패션 디자이너가 줄리앙의 공장에서 만드는 천을 고르러 와요.",
+   "blank": "styliste",
+   "src": "made"
+  },
+  {
+   "text": "Une styliste du quartier a redessiné les tabliers des serveurs de Manon.",
+   "en": "A local fashion designer redesigned the aprons of Manon's waiters.",
+   "ko": "동네 디자이너가 마농네 종업원 앞치마를 새로 디자인했어요.",
+   "blank": "styliste",
+   "src": "made"
+  }
+ ],
  "w|stylo": [
   {
    "text": "Peux-tu me passer un stylo ?",
@@ -93893,6 +94469,22 @@
    "en": "I finished my task for today.",
    "ko": "오늘 할 일을 끝냈어.",
    "blank": "tâche"
+  }
+ ],
+ "w|tact": [
+  {
+   "text": "Julien annonce la mauvaise nouvelle à l'équipe avec beaucoup de tact.",
+   "en": "Julien announces the bad news to the team with a lot of tact.",
+   "ko": "줄리앙은 팀에게 나쁜 소식을 아주 조심스럽게 전해요.",
+   "blank": "tact",
+   "src": "made"
+  },
+  {
+   "text": "Manon refuse avec tact le gâteau que la voisine veut vendre dans son restaurant.",
+   "en": "Manon tactfully declines the cake the neighbor wants to sell in her restaurant.",
+   "ko": "마농은 이웃이 식당에서 팔고 싶어 하는 케이크를 정중하게 거절해요.",
+   "blank": "tact",
+   "src": "made"
   }
  ],
  "w|tactique": [
@@ -96689,6 +97281,22 @@
    "src": "made"
   }
  ],
+ "w|traducteur": [
+  {
+   "text": "Julien a besoin d'un traducteur pour lire le manuel de la machine allemande.",
+   "en": "Julien needs a translator to read the German machine's manual.",
+   "ko": "줄리앙은 독일산 기계 설명서를 읽으려면 번역가가 필요해요.",
+   "blank": "traducteur",
+   "src": "made"
+  },
+  {
+   "text": "Un traducteur aide Manon à rédiger sa carte en anglais pour les touristes.",
+   "en": "A translator helps Manon write her menu in English for tourists.",
+   "ko": "번역가가 마농이 관광객용 영어 메뉴판을 쓰는 걸 도와줘요.",
+   "blank": "traducteur",
+   "src": "made"
+  }
+ ],
  "w|traduction": [
   {
    "text": "La traduction est fidèle au texte original.",
@@ -97102,6 +97710,22 @@
    "en": "Inès writes to her friend that selling her house was a long transaction.",
    "ko": "이네스는 친구에게 집을 파는 일이 긴 거래였다고 써요.",
    "blank": "transaction",
+   "src": "made"
+  }
+ ],
+ "w|transcription": [
+  {
+   "text": "Julien relit la transcription de la réunion syndicale avant de la signer.",
+   "en": "Julien rereads the transcript of the union meeting before signing it.",
+   "ko": "줄리앙은 노조 회의록을 서명하기 전에 다시 읽어요.",
+   "blank": "transcription",
+   "src": "made"
+  },
+  {
+   "text": "Manon a fait la transcription des recettes de sa grand-mère dans un cahier.",
+   "en": "Manon transcribed her grandmother's recipes into a notebook.",
+   "ko": "마농은 할머니의 요리법을 공책에 옮겨 적었어요.",
+   "blank": "transcription",
    "src": "made"
   }
  ],
@@ -101864,6 +102488,22 @@
    "en": "Before the race, a fortune-teller had jokingly predicted a fine victory for Émilie.",
    "ko": "경주 전에 점쟁이가 재미 삼아 에밀리에게 멋진 승리를 점쳐 줬어요.",
    "blank": "voyante",
+   "src": "made"
+  }
+ ],
+ "w|voyeur": [
+  {
+   "text": "Pendant l'accident, Julien a demandé aux curieux de ne pas rester en voyeurs et d'appeler les secours.",
+   "en": "During the accident, Julien asked the onlookers not to just stand gawking and to call for help.",
+   "ko": "사고가 났을 때 줄리앙은 구경꾼들에게 구경만 하지 말고 구조대를 부르라고 했어요.",
+   "blank": "voyeurs",
+   "src": "made"
+  },
+  {
+   "text": "Manon tire les rideaux pour que les voyeurs du trottoir ne fixent pas les clients.",
+   "en": "Manon draws the curtains so the gawkers on the sidewalk don't stare at the customers.",
+   "ko": "마농은 길가 구경꾼들이 손님을 빤히 보지 않게 커튼을 쳐요.",
+   "blank": "voyeurs",
    "src": "made"
   }
  ],

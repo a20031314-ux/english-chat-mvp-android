@@ -2377,6 +2377,22 @@
    "src": "made"
   }
  ],
+ "w|お守り": [
+  {
+   "text": "翔太は、母からもらったお守りを鞄に入れて図書館に通っている。",
+   "en": "Shota goes to the library with the good-luck charm his mother gave him in his bag.",
+   "ko": "쇼타는 어머니께 받은 부적을 가방에 넣고 도서관에 다녀요.",
+   "blank": "お守り",
+   "src": "made"
+  },
+  {
+   "text": "由美は、山の神社でもらったお守りをリュックに付けている。",
+   "en": "Yumi has a charm from a mountain shrine attached to her backpack.",
+   "ko": "유미는 산속 신사에서 받은 부적을 배낭에 달고 있어요.",
+   "blank": "お守り",
+   "src": "made"
+  }
+ ],
  "w|お客": [
   {
    "text": "お客がたくさん来た。",
@@ -11633,6 +11649,22 @@
    "blank": "まさか"
   }
  ],
+ "w|まさしく": [
+  {
+   "text": "この本こそ、まさしく翔太が探していた一冊だった。",
+   "en": "This was exactly the book Shota had been looking for.",
+   "ko": "이 책이야말로 바로 쇼타가 찾던 한 권이었어요.",
+   "blank": "まさしく",
+   "src": "made"
+  },
+  {
+   "text": "満天の星空は、まさしく由美が夢見ていた景色だった。",
+   "en": "The star-filled sky was exactly the view Yumi had dreamed of.",
+   "ko": "별이 가득한 밤하늘은 바로 유미가 꿈꾸던 풍경이었어요.",
+   "blank": "まさしく",
+   "src": "made"
+  }
+ ],
  "w|まさに": [
   {
    "text": "まさにその通り。",
@@ -15571,6 +15603,22 @@
    "src": "made"
   }
  ],
+ "w|不況": [
+  {
+   "text": "不況の時期には図書館の利用者が増えると、翔太は本で知った。",
+   "en": "Shota learned from a book that library users increase during recessions.",
+   "ko": "불황기에는 도서관 이용자가 늘어난다는 걸 쇼타는 책에서 알았어요.",
+   "blank": "不況",
+   "src": "made"
+  },
+  {
+   "text": "不況の時代でも、キャンプは安く楽しめる遊びだと由美は思う。",
+   "en": "Yumi thinks camping is a cheap way to have fun, even in hard economic times.",
+   "ko": "불황인 시대에도 캠핑은 싸게 즐길 수 있는 놀이라고 유미는 생각해요.",
+   "blank": "不況",
+   "src": "made"
+  }
+ ],
  "w|不法": [
   {
    "text": "不法に持ち出された仏像が、長い交渉の末に博物館へ返還された。",
@@ -16036,6 +16084,22 @@
    "en": "This year's bonus was about the same as usual.",
    "ko": "올해 보너스는 거의 예년 수준이었어요.",
    "blank": "並み",
+   "src": "made"
+  }
+ ],
+ "w|並行": [
+  {
+   "text": "翔太は、三冊の本を並行して読み進めている。",
+   "en": "Shota is reading three books in parallel.",
+   "ko": "쇼타는 책 세 권을 동시에 읽어 나가고 있어요.",
+   "blank": "並行",
+   "src": "made"
+  },
+  {
+   "text": "由美は、川と並行して続く細い道を歩いた。",
+   "en": "Yumi walked along a narrow path that ran parallel to the river.",
+   "ko": "유미는 강과 나란히 이어진 좁은 길을 걸었어요.",
+   "blank": "並行",
    "src": "made"
   }
  ],
@@ -16804,6 +16868,22 @@
    "en": "A cat that had overcome a serious illness came in for a checkup looking healthy.",
    "ko": "큰 병을 이겨 낸 고양이가 건강한 얼굴로 검진을 받으러 왔어요.",
    "blank": "乗り越えた",
+   "src": "made"
+  }
+ ],
+ "w|乗り込む": [
+  {
+   "text": "閉館に間に合うよう、翔太は急いでバスに乗り込んだ。",
+   "en": "Shota hurried onto the bus to make it before the library closed.",
+   "ko": "폐관 시간에 맞추려고 쇼타는 서둘러 버스에 올라탔어요.",
+   "blank": "乗り込んだ",
+   "src": "made"
+  },
+  {
+   "text": "由美たちは、キャンプ道具を積んで車に乗り込んだ。",
+   "en": "Yumi and her friends loaded their camping gear and got into the car.",
+   "ko": "유미네는 캠핑 도구를 싣고 차에 올라탔어요.",
+   "blank": "乗り込んだ",
    "src": "made"
   }
  ],
@@ -20421,6 +20501,22 @@
    "src": "made"
   }
  ],
+ "w|供養": [
+  {
+   "text": "健太の学校の書道部では、毎年使い古した筆を供養する行事がある。",
+   "en": "The calligraphy club at Kenta's school holds a memorial ceremony every year for worn-out brushes.",
+   "ko": "겐타네 학교 서예부에서는 매년 다 쓴 붓을 공양하는 행사가 있어요.",
+   "blank": "供養",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、亡くなった恩師の供養に行ったことを由紀に知らせた。",
+   "en": "Misaki let Yuki know she had attended a memorial service for their late teacher.",
+   "ko": "미사키는 돌아가신 은사의 추모 법회에 다녀왔다고 유키에게 알렸어요.",
+   "blank": "供養",
+   "src": "made"
+  }
+ ],
  "w|依存": [
   {
    "text": "スマホへの依存が強い。",
@@ -23401,6 +23497,22 @@
    "blank": "共同"
   }
  ],
+ "w|共存": [
+  {
+   "text": "健太は、人と野生動物の共存についてレポートを書いた。",
+   "en": "Kenta wrote a report on the coexistence of people and wild animals.",
+   "ko": "겐타는 사람과 야생 동물의 공존에 관한 리포트를 썼어요.",
+   "blank": "共存",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、田舎で猫や鳥と共存する暮らしを楽しんでいると書いた。",
+   "en": "Misaki wrote that she is enjoying a country life living alongside cats and birds.",
+   "ko": "미사키는 시골에서 고양이와 새와 공존하는 생활을 즐기고 있다고 썼어요.",
+   "blank": "共存",
+   "src": "made"
+  }
+ ],
  "w|共感": [
   {
    "text": "健太が不安を話すと、同期の美香も共感してくれた。",
@@ -23965,6 +24077,22 @@
    "blank": "最初"
   }
  ],
+ "w|最善": [
+  {
+   "text": "翔太は、限られた時間の中で最善の資料を探そうとした。",
+   "en": "Shota tried to find the best materials in the limited time he had.",
+   "ko": "쇼타는 한정된 시간 안에서 최선의 자료를 찾으려고 했어요.",
+   "blank": "最善",
+   "src": "made"
+  },
+  {
+   "text": "嵐が近づいたとき、由美は早めに下山するのが最善だと判断した。",
+   "en": "When the storm approached, Yumi decided it was best to descend early.",
+   "ko": "폭풍이 다가오자 유미는 일찍 하산하는 게 최선이라고 판단했어요.",
+   "blank": "最善",
+   "src": "made"
+  }
+ ],
  "w|最多": [
   {
    "text": "お年玉の額は、子どもの中で翔太の甥が最多だった。",
@@ -24370,6 +24498,22 @@
    "en": "Relations between the two countries have cooled in recent years.",
    "ko": "두 나라의 관계는 최근 몇 년 사이에 냉각돼 있어요.",
    "blank": "冷却",
+   "src": "made"
+  }
+ ],
+ "w|冷戦": [
+  {
+   "text": "健太は、歴史の授業で冷戦の時代について調べた。",
+   "en": "Kenta researched the Cold War era in history class.",
+   "ko": "겐타는 역사 시간에 냉전 시대에 대해 조사했어요.",
+   "blank": "冷戦",
+   "src": "made"
+  },
+  {
+   "text": "美咲と由紀は、高校時代に一時期冷戦状態だったことがある。",
+   "en": "Misaki and Yuki once went through a cold war phase in high school.",
+   "ko": "미사키와 유키는 고등학교 때 한동안 냉전 상태였던 적이 있어요.",
+   "blank": "冷戦",
    "src": "made"
   }
  ],
@@ -25689,6 +25833,22 @@
    "src": "made"
   }
  ],
+ "w|別名": [
+  {
+   "text": "健太の学校の裏山は、別名「たぬき山」と呼ばれている。",
+   "en": "The hill behind Kenta's school is also known as \"Raccoon Dog Hill.\"",
+   "ko": "겐타네 학교 뒷산은 별명으로 '너구리산'이라고 불려요.",
+   "blank": "別名",
+   "src": "made"
+  },
+  {
+   "text": "美咲は手紙で、昔由紀と二人で「くじら公園」という別名で呼んでいた公園のことを書いた。",
+   "en": "In her letter, Misaki wrote about the park that she and Yuki used to call by the nickname \"Whale Park.\"",
+   "ko": "미사키는 편지에 옛날 유키와 둘이서 '고래 공원'이라는 별명으로 부르던 공원 이야기를 썼어요.",
+   "blank": "別名",
+   "src": "made"
+  }
+ ],
  "w|別荘": [
   {
    "text": "翔太は、図書館で借りた本を持って家族の別荘に出かけた。",
@@ -25702,6 +25862,38 @@
    "en": "In summer, Yumi's teacher holds a piano camp at a villa in the highlands.",
    "ko": "유미의 선생님은 여름이 되면 고원 별장에서 피아노 합숙을 열어요.",
    "blank": "別荘",
+   "src": "made"
+  }
+ ],
+ "w|別途": [
+  {
+   "text": "図書館でのカラーコピーは別途料金がかかると、翔太は知った。",
+   "en": "Shota learned that color copies at the library cost extra.",
+   "ko": "도서관 컬러 복사는 별도 요금이 든다는 걸 쇼타는 알았어요.",
+   "blank": "別途",
+   "src": "made"
+  },
+  {
+   "text": "由美が泊まったキャンプ場では、薪は別途購入が必要だった。",
+   "en": "At the campsite where Yumi stayed, firewood had to be bought separately.",
+   "ko": "유미가 묵은 캠핑장에서는 장작을 따로 사야 했어요.",
+   "blank": "別途",
+   "src": "made"
+  }
+ ],
+ "w|利便": [
+  {
+   "text": "新しい予約システムで、図書館の利便性が上がったと翔太は感じた。",
+   "en": "Shota felt the new reservation system made the library more convenient.",
+   "ko": "새 예약 시스템 덕분에 도서관이 편리해졌다고 쇼타는 느꼈어요.",
+   "blank": "利便",
+   "src": "made"
+  },
+  {
+   "text": "由美が選んだキャンプ場は、駅から近くて利便性が高い。",
+   "en": "The campsite Yumi chose is close to the station and very convenient.",
+   "ko": "유미가 고른 캠핑장은 역에서 가까워서 편리해요.",
+   "blank": "利便",
    "src": "made"
   }
  ],
@@ -25807,6 +25999,22 @@
    "en": "I produced it myself.",
    "ko": "직접 제작했어.",
    "blank": "制作"
+  }
+ ],
+ "w|制圧": [
+  {
+   "text": "健太は、山の上の城がたった一日で制圧された話を歴史の本で読んだ。",
+   "en": "Kenta read in a history book about a mountaintop castle that was taken in just one day.",
+   "ko": "겐타는 산 위의 성이 단 하루 만에 제압된 이야기를 역사책에서 읽었어요.",
+   "blank": "制圧",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、「台所の虫をやっと制圧した」と冗談まじりに由紀に書いた。",
+   "en": "Misaki jokingly wrote to Yuki, \"I've finally conquered the bugs in the kitchen.\"",
+   "ko": "미사키는 '부엌 벌레를 드디어 제압했어'라고 농담 섞어 유키에게 썼어요.",
+   "blank": "制圧",
+   "src": "made"
   }
  ],
  "w|制定": [
@@ -25927,6 +26135,22 @@
    "en": "There's a time limit.",
    "ko": "시간에 제한이 있어.",
    "blank": "制限"
+  }
+ ],
+ "w|刺さる": [
+  {
+   "text": "ある詩の一節が心に刺さって、翔太は何度も読み返した。",
+   "en": "A line of a poem struck Shota's heart, and he read it again and again.",
+   "ko": "어떤 시의 한 구절이 마음에 꽂혀서 쇼타는 몇 번이나 다시 읽었어요.",
+   "blank": "刺さって",
+   "src": "made"
+  },
+  {
+   "text": "由美の足の裏に、小さなとげが刺さった。",
+   "en": "A small thorn got stuck in the sole of Yumi's foot.",
+   "ko": "유미의 발바닥에 작은 가시가 박혔어요.",
+   "blank": "刺さった",
+   "src": "made"
   }
  ],
  "w|刺す": [
@@ -26521,6 +26745,22 @@
    "blank": "力"
   }
  ],
+ "w|力士": [
+  {
+   "text": "翔太は、昔の有名な力士の伝記を読んだ。",
+   "en": "Shota read a biography of a famous sumo wrestler from long ago.",
+   "ko": "쇼타는 옛날 유명한 스모 선수의 전기를 읽었어요.",
+   "blank": "力士",
+   "src": "made"
+  },
+  {
+   "text": "由美の隣のテントには、力士のように大きな男性たちがいた。",
+   "en": "The tent next to Yumi's had men as big as sumo wrestlers.",
+   "ko": "유미 옆 텐트에는 스모 선수처럼 덩치 큰 남자들이 있었어요.",
+   "blank": "力士",
+   "src": "made"
+  }
+ ],
  "w|功績": [
   {
    "text": "この橋を設計した技師の功績は、町の記念碑に刻まれている。",
@@ -26992,6 +27232,22 @@
    "en": "This app runs slowly.",
    "ko": "이 앱은 동작이 느려요.",
    "blank": "動作",
+   "src": "made"
+  }
+ ],
+ "w|動力": [
+  {
+   "text": "翔太は、蒸気を動力とする機関車の本を夢中で読んだ。",
+   "en": "Shota was absorbed in a book about steam-powered locomotives.",
+   "ko": "쇼타는 증기를 동력으로 하는 기관차 책을 푹 빠져 읽었어요.",
+   "blank": "動力",
+   "src": "made"
+  },
+  {
+   "text": "由美は、太陽の光を動力にする小さなランタンを持ってきた。",
+   "en": "Yumi brought a small lantern powered by sunlight.",
+   "ko": "유미는 햇빛을 동력으로 하는 작은 랜턴을 가져왔어요.",
+   "blank": "動力",
    "src": "made"
   }
  ],
@@ -27745,6 +28001,22 @@
    "src": "tatoeba:101624/bunbuku en:302069/CK"
   }
  ],
+ "w|十字架": [
+  {
+   "text": "健太は、美術の授業で古い教会の十字架をスケッチした。",
+   "en": "Kenta sketched the cross of an old church in art class.",
+   "ko": "겐타는 미술 시간에 오래된 교회의 십자가를 스케치했어요.",
+   "blank": "十字架",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、旅先で見た丘の上の十字架の写真を、由紀への手紙に添えた。",
+   "en": "Misaki enclosed a photo of a cross on a hill she saw on her trip in her letter to Yuki.",
+   "ko": "미사키는 여행지에서 본 언덕 위 십자가 사진을 유키에게 보내는 편지에 넣었어요.",
+   "blank": "十字架",
+   "src": "made"
+  }
+ ],
  "w|午前": [
   {
    "text": "午前中に終わるよ。",
@@ -28401,6 +28673,22 @@
    "src": "made"
   }
  ],
+ "w|厚い": [
+  {
+   "text": "翔太は、辞書のように厚い歴史の本を借りた。",
+   "en": "Shota borrowed a history book as thick as a dictionary.",
+   "ko": "쇼타는 사전처럼 두꺼운 역사책을 빌렸어요.",
+   "blank": "厚い",
+   "src": "made"
+  },
+  {
+   "text": "夜は冷えるので、由美は厚い寝袋を持ってきた。",
+   "en": "It gets cold at night, so Yumi brought a thick sleeping bag.",
+   "ko": "밤에는 추워서 유미는 두꺼운 침낭을 가져왔어요.",
+   "blank": "厚い",
+   "src": "made"
+  }
+ ],
  "w|原作": [
   {
    "text": "原作の方が面白い。",
@@ -28983,6 +29271,22 @@
    "src": "made"
   }
  ],
+ "w|反則": [
+  {
+   "text": "図書館で大声で電話するのは反則だよ、と翔太は友達に注意した。",
+   "en": "Shota warned his friend that talking loudly on the phone in the library was against the rules.",
+   "ko": "도서관에서 큰 소리로 통화하는 건 반칙이라고 쇼타는 친구에게 주의를 줬어요.",
+   "blank": "反則",
+   "src": "made"
+  },
+  {
+   "text": "トランプでずるをした弟に、由美は「それは反則だよ」と言った。",
+   "en": "Yumi told her brother, who cheated at cards, \"That's against the rules.\"",
+   "ko": "카드 게임에서 꾀를 부린 남동생에게 유미는 \"그건 반칙이야\"라고 말했어요.",
+   "blank": "反則",
+   "src": "made"
+  }
+ ],
  "w|反動": [
   {
    "text": "忙しい一週間の反動で、悠斗は週末ずっと寝ていた。",
@@ -29136,6 +29440,22 @@
    "en": "They argued about whether to go to the sea or the mountains in summer, and Mayu disagreed with her brother.",
    "ko": "여름에 바다냐 산이냐로 논쟁이 붙어서 마유는 오빠 의견에 반론했어요.",
    "blank": "反論",
+   "src": "made"
+  }
+ ],
+ "w|反逆": [
+  {
+   "text": "翔太は、王への反逆を描いた古い戯曲を読んだ。",
+   "en": "Shota read an old play depicting a rebellion against the king.",
+   "ko": "쇼타는 왕에 대한 반역을 그린 오래된 희곡을 읽었어요.",
+   "blank": "反逆",
+   "src": "made"
+  },
+  {
+   "text": "由美の父は、たき火を囲みながら王に反逆した英雄の昔話を語った。",
+   "en": "Gathered around the campfire, Yumi's father told an old tale of a hero who rebelled against the king.",
+   "ko": "유미의 아버지는 모닥불을 둘러싸고 왕에게 반역한 영웅의 옛이야기를 들려줬어요.",
+   "blank": "反逆",
    "src": "made"
   }
  ],
@@ -29707,6 +30027,22 @@
    "src": "made"
   }
  ],
+ "w|口癖": [
+  {
+   "text": "「静かに」が担任の先生の口癖だと、健太は笑った。",
+   "en": "Kenta laughed that \"Be quiet\" is his homeroom teacher's favorite phrase.",
+   "ko": "'조용히'가 담임 선생님 말버릇이라며 겐타는 웃었어요.",
+   "blank": "口癖",
+   "src": "made"
+  },
+  {
+   "text": "「なんとかなるよ」という由紀の口癖を、美咲は今も覚えている。",
+   "en": "Misaki still remembers Yuki's favorite saying, \"It'll work out somehow.\"",
+   "ko": "'어떻게든 될 거야'라는 유키의 말버릇을 미사키는 지금도 기억해요.",
+   "blank": "口癖",
+   "src": "made"
+  }
+ ],
  "w|口調": [
   {
    "text": "大輔は、落ち着いた口調で迷子の女の子に名前を聞いた。",
@@ -29830,6 +30166,22 @@
    "en": "Seeing her junior asked to work on a holiday, Yumi felt sorry for him.",
    "ko": "휴일 출근을 부탁받은 후배를 보고 유미는 안쓰러웠어요.",
    "blank": "可哀想",
+   "src": "made"
+  }
+ ],
+ "w|可愛らしい": [
+  {
+   "text": "翔太は、姪のために可愛らしい絵本を何冊か選んだ。",
+   "en": "Shota picked out a few cute picture books for his niece.",
+   "ko": "쇼타는 조카를 위해 귀여운 그림책을 몇 권 골랐어요.",
+   "blank": "可愛らしい",
+   "src": "made"
+  },
+  {
+   "text": "テントの近くに可愛らしいリスが現れて、由美は喜んだ。",
+   "en": "Yumi was delighted when a cute squirrel appeared near the tent.",
+   "ko": "텐트 근처에 귀여운 다람쥐가 나타나서 유미는 기뻐했어요.",
+   "blank": "可愛らしい",
    "src": "made"
   }
  ],
@@ -30139,6 +30491,22 @@
    "en": "Our opinions match.",
    "ko": "의견이 맞네.",
    "blank": "合う"
+  }
+ ],
+ "w|合コン": [
+  {
+   "text": "翔太は合コンに誘われたが、図書館で勉強すると言って断った。",
+   "en": "Shota was invited to a group blind date but turned it down, saying he'd study at the library.",
+   "ko": "쇼타는 미팅에 초대받았지만 도서관에서 공부한다며 거절했어요.",
+   "blank": "合コン",
+   "src": "made"
+  },
+  {
+   "text": "由美は、合コンで知り合った友達とキャンプに来た。",
+   "en": "Yumi came camping with friends she met at a group blind date.",
+   "ko": "유미는 미팅에서 알게 된 친구들과 캠핑을 왔어요.",
+   "blank": "合コン",
+   "src": "made"
   }
  ],
  "w|合わせる": [
@@ -30931,6 +31299,22 @@
    "blank": "向かう"
   }
  ],
+ "w|向き合う": [
+  {
+   "text": "翔太は、図書館の静かな席で自分の論文と向き合った。",
+   "en": "Shota faced his thesis at a quiet seat in the library.",
+   "ko": "쇼타는 도서관의 조용한 자리에서 자기 논문과 마주했어요.",
+   "blank": "向き合った",
+   "src": "made"
+  },
+  {
+   "text": "由美は、たき火を前に自分の将来と静かに向き合った。",
+   "en": "In front of the campfire, Yumi quietly faced her own future.",
+   "ko": "유미는 모닥불 앞에서 자신의 미래와 조용히 마주했어요.",
+   "blank": "向き合った",
+   "src": "made"
+  }
+ ],
  "w|向ける": [
   {
    "text": "こっち向けて。",
@@ -31104,6 +31488,22 @@
    "en": "In her school days, Misaki played flute in the wind band.",
    "ko": "미사키는 학창 시절에 취주악부에서 플루트를 불었어요.",
    "blank": "吹奏楽",
+   "src": "made"
+  }
+ ],
+ "w|呆れる": [
+  {
+   "text": "返却期限を一か月も過ぎていて、翔太は自分に呆れた。",
+   "en": "The book was a whole month overdue, and Shota was fed up with himself.",
+   "ko": "반납 기한이 한 달이나 지나서 쇼타는 자기 자신에게 어이가 없었어요.",
+   "blank": "呆れた",
+   "src": "made"
+  },
+  {
+   "text": "テントの張り方を忘れた弟に、由美は呆れてしまった。",
+   "en": "Yumi was exasperated with her little brother for forgetting how to pitch the tent.",
+   "ko": "텐트 치는 법을 잊어버린 남동생에게 유미는 어이가 없었어요.",
+   "blank": "呆れて",
    "src": "made"
   }
  ],
@@ -31447,6 +31847,22 @@
    "src": "made"
   }
  ],
+ "w|呼称": [
+  {
+   "text": "健太の学校では、生徒会長の呼称を「代表」に改めることになった。",
+   "en": "At Kenta's school, they decided to change the title of student council president to \"representative.\"",
+   "ko": "겐타네 학교에서는 학생회장의 호칭을 '대표'로 바꾸기로 했어요.",
+   "blank": "呼称",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、合併で町の呼称が変わったことを由紀に知らせた。",
+   "en": "Misaki let Yuki know that the town's name had changed after a merger.",
+   "ko": "미사키는 합병으로 마을 호칭이 바뀐 것을 유키에게 알렸어요.",
+   "blank": "呼称",
+   "src": "made"
+  }
+ ],
  "w|命": [
   {
    "text": "命、大事にして。",
@@ -31489,6 +31905,22 @@
    "en": "I gave an order.",
    "ko": "명령을 내렸어.",
    "blank": "命令"
+  }
+ ],
+ "w|命名": [
+  {
+   "text": "健太たちは、教室で飼い始めたメダカに「ぎん」と命名した。",
+   "en": "Kenta and his classmates named the killifish they started keeping in class \"Gin.\"",
+   "ko": "겐타네 반은 교실에서 키우기 시작한 송사리에게 '긴'이라고 이름을 붙였어요.",
+   "blank": "命名",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、新しく飼った猫に「もも」と命名したと由紀に書いた。",
+   "en": "Misaki wrote to Yuki that she had named her new cat \"Momo.\"",
+   "ko": "미사키는 새로 기른 고양이에게 '모모'라고 이름 지었다고 유키에게 썼어요.",
+   "blank": "命名",
+   "src": "made"
   }
  ],
  "w|和解": [
@@ -32268,6 +32700,22 @@
    "en": "Chihiro made dumplings with mugwort she picked in the field.",
    "ko": "지히로는 밭에서 뜯은 쑥으로 경단을 만들었어요.",
    "blank": "団子",
+   "src": "made"
+  }
+ ],
+ "w|団結": [
+  {
+   "text": "体育祭に向けて、健太のクラスは一つに団結した。",
+   "en": "Kenta's class came together as one for sports day.",
+   "ko": "체육대회를 앞두고 겐타네 반은 하나로 단결했어요.",
+   "blank": "団結",
+   "src": "made"
+  },
+  {
+   "text": "「あの頃の私たちは、本当によく団結していたね」と美咲は由紀に書いた。",
+   "en": "Misaki wrote to Yuki, \"Back then we really stuck together, didn't we.\"",
+   "ko": "\"그때 우리는 정말 잘 단결했었지\" 하고 미사키는 유키에게 썼어요.",
+   "blank": "団結",
    "src": "made"
   }
  ],
@@ -36273,6 +36721,22 @@
    "src": "made"
   }
  ],
+ "w|奪還": [
+  {
+   "text": "翔太は、奪われた城の奪還を描いた歴史小説を読んでいる。",
+   "en": "Shota is reading a historical novel about retaking a captured castle.",
+   "ko": "쇼타는 빼앗긴 성의 탈환을 그린 역사 소설을 읽고 있어요.",
+   "blank": "奪還",
+   "src": "made"
+  },
+  {
+   "text": "由美たちは、カラスに取られたお菓子の袋を見事に奪還した。",
+   "en": "Yumi and her friends skillfully took back the bag of snacks a crow had stolen.",
+   "ko": "유미네는 까마귀에게 빼앗긴 과자 봉지를 멋지게 탈환했어요.",
+   "blank": "奪還",
+   "src": "made"
+  }
+ ],
  "w|女": [
   {
    "text": "女の人に聞いた。",
@@ -39503,6 +39967,22 @@
    "blank": "将来"
   }
  ],
+ "w|将校": [
+  {
+   "text": "健太は、戦時中の若い将校が書いた日記を授業で読んだ。",
+   "en": "In class, Kenta read a diary written by a young officer during the war.",
+   "ko": "겐타는 전쟁 중 젊은 장교가 쓴 일기를 수업에서 읽었어요.",
+   "blank": "将校",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、祖父が若い頃に将校だったと最近知ったと由紀に書いた。",
+   "en": "Misaki wrote to Yuki that she had recently learned her grandfather was an officer when he was young.",
+   "ko": "미사키는 할아버지가 젊을 때 장교였다는 걸 최근에 알았다고 유키에게 썼어요.",
+   "blank": "将校",
+   "src": "made"
+  }
+ ],
  "w|将棋": [
   {
    "text": "直樹は昼休みに、友達と教室で将棋を指す。",
@@ -40321,6 +40801,22 @@
    "blank": "展示"
   }
  ],
+ "w|展覧": [
+  {
+   "text": "健太が描いた絵が、市の展覧会に選ばれた。",
+   "en": "A picture Kenta drew was chosen for the city exhibition.",
+   "ko": "겐타가 그린 그림이 시 전람회에 뽑혔어요.",
+   "blank": "展覧",
+   "src": "made"
+  },
+  {
+   "text": "由紀の絵が展覧会に出ると知って、美咲は励ましの手紙を送った。",
+   "en": "Learning that Yuki's painting would be in an exhibition, Misaki sent her a letter of encouragement.",
+   "ko": "유키의 그림이 전람회에 나간다는 걸 알고 미사키는 응원 편지를 보냈어요.",
+   "blank": "展覧",
+   "src": "made"
+  }
+ ],
  "w|展開": [
   {
    "text": "展開が早すぎる。",
@@ -40769,6 +41265,22 @@
    "en": "I want a society without discrimination.",
    "ko": "차별 없는 사회가 좋아.",
    "blank": "差別"
+  }
+ ],
+ "w|差異": [
+  {
+   "text": "健太は、二つの実験結果の差異をグラフにまとめた。",
+   "en": "Kenta summarized the differences between the two experimental results in a graph.",
+   "ko": "겐타는 두 실험 결과의 차이를 그래프로 정리했어요.",
+   "blank": "差異",
+   "src": "made"
+  },
+  {
+   "text": "由紀との考え方の差異を、今では面白いと思えると美咲は書いた。",
+   "en": "Misaki wrote that she can now find the differences in how she and Yuki think interesting.",
+   "ko": "유키와의 생각 차이를 이제는 재미있다고 여길 수 있다고 미사키는 썼어요.",
+   "blank": "差異",
+   "src": "made"
   }
  ],
  "w|巻き込む": [
@@ -41228,6 +41740,22 @@
    "en": "Keiko tries not to interfere too much with her family's shopping.",
    "ko": "게이코는 가족의 쇼핑에 너무 간섭하지 않으려고 해요.",
    "blank": "干渉",
+   "src": "made"
+  }
+ ],
+ "w|平凡": [
+  {
+   "text": "健太は、自分の作文が平凡すぎると落ち込んだ。",
+   "en": "Kenta was down because he thought his essay was too ordinary.",
+   "ko": "겐타는 자기 작문이 너무 평범하다며 풀이 죽었어요.",
+   "blank": "平凡",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、平凡だけど幸せな毎日を送っていると由紀に伝えた。",
+   "en": "Misaki told Yuki that she was living ordinary but happy days.",
+   "ko": "미사키는 평범하지만 행복한 나날을 보내고 있다고 유키에게 전했어요.",
+   "blank": "平凡",
    "src": "made"
   }
  ],
@@ -42377,6 +42905,22 @@
    "en": "Let's rest before we catch a cold.",
    "ko": "감기 걸리기 전에 쉬자.",
    "blank": "引く"
+  }
+ ],
+ "w|引っかかる": [
+  {
+   "text": "健太は、数学のテストで先生の仕掛けたわなにまんまと引っかかった。",
+   "en": "On the math test, Kenta fell right into the trap the teacher had set.",
+   "ko": "겐타는 수학 시험에서 선생님이 놓은 함정에 보기 좋게 걸려들었어요.",
+   "blank": "引っかかった",
+   "src": "made"
+  },
+  {
+   "text": "由紀の前の手紙の一言が、美咲の心にずっと引っかかっていた。",
+   "en": "A single remark in Yuki's last letter had been bothering Misaki ever since.",
+   "ko": "유키의 지난 편지 속 한마디가 미사키의 마음에 계속 걸려 있었어요.",
+   "blank": "引っかかって",
+   "src": "made"
   }
  ],
  "w|引っ張る": [
@@ -43696,6 +44240,22 @@
    "en": "On the sofa, Aoi rewatched the goal from the soccer match again and again.",
    "ko": "아오이는 소파에서 축구 경기 득점 장면을 몇 번이나 다시 봤어요.",
    "blank": "得点",
+   "src": "made"
+  }
+ ],
+ "w|得票": [
+  {
+   "text": "翔太は、過去の選挙での得票の推移を図書館の資料で調べた。",
+   "en": "Shota looked up changes in vote counts in past elections using library materials.",
+   "ko": "쇼타는 과거 선거의 득표 추이를 도서관 자료로 조사했어요.",
+   "blank": "得票",
+   "src": "made"
+  },
+  {
+   "text": "由美は、テントの中でラジオから流れる得票の速報を聞いた。",
+   "en": "Inside the tent, Yumi listened to the vote count updates on the radio.",
+   "ko": "유미는 텐트 안에서 라디오로 득표 속보를 들었어요.",
+   "blank": "得票",
    "src": "made"
   }
  ],
@@ -45285,6 +45845,22 @@
    "src": "made"
   }
  ],
+ "w|情けない": [
+  {
+   "text": "借りた本を電車に忘れるなんて情けない、と翔太はため息をついた。",
+   "en": "Shota sighed that it was pathetic to leave a borrowed book on the train.",
+   "ko": "빌린 책을 전철에 두고 오다니 한심하다며 쇼타는 한숨을 쉬었어요.",
+   "blank": "情けない",
+   "src": "made"
+  },
+  {
+   "text": "火も起こせない自分が情けない、と由美は笑った。",
+   "en": "Yumi laughed that it was pathetic she couldn't even start a fire.",
+   "ko": "불도 못 피우는 내가 한심하다며 유미는 웃었어요.",
+   "blank": "情けない",
+   "src": "made"
+  }
+ ],
  "w|情勢": [
   {
    "text": "署長は朝礼で、最近の治安情勢について話した。",
@@ -46011,6 +46587,22 @@
    "src": "made"
   }
  ],
+ "w|憧れる": [
+  {
+   "text": "翔太は、子どもの頃から図書館の司書に憧れていた。",
+   "en": "Shota has looked up to librarians since he was a child.",
+   "ko": "쇼타는 어릴 때부터 도서관 사서를 동경했어요.",
+   "blank": "憧れて",
+   "src": "made"
+  },
+  {
+   "text": "由美は、山で一人キャンプを楽しむ人に憧れている。",
+   "en": "Yumi admires people who enjoy camping alone in the mountains.",
+   "ko": "유미는 산에서 혼자 캠핑을 즐기는 사람을 동경해요.",
+   "blank": "憧れて",
+   "src": "made"
+  }
+ ],
  "w|憲法": [
   {
    "text": "憲法について学んだ。",
@@ -46052,6 +46644,22 @@
    "en": "The radio news reported that a fraudster had been sentenced to three years in prison.",
    "ko": "라디오 뉴스는 사기로 징역 삼 년 판결이 나왔다고 전했어요.",
    "blank": "懲役",
+   "src": "made"
+  }
+ ],
+ "w|懲戒": [
+  {
+   "text": "翔太は、公務員の懲戒の仕組みについて法律の本で調べた。",
+   "en": "Shota looked up how disciplinary action for civil servants works in a law book.",
+   "ko": "쇼타는 공무원 징계 제도에 대해 법률책으로 조사했어요.",
+   "blank": "懲戒",
+   "src": "made"
+  },
+  {
+   "text": "由美は、規則を破った役場の職員が懲戒を受けたというニュースを聞いた。",
+   "en": "Yumi heard news that a town hall employee who broke the rules had been disciplined.",
+   "ko": "유미는 규칙을 어긴 관공서 직원이 징계를 받았다는 뉴스를 들었어요.",
+   "blank": "懲戒",
    "src": "made"
   }
  ],
@@ -47673,6 +48281,22 @@
    "en": "Don't resist forcibly.",
    "ko": "억지로 저항하지 마.",
    "blank": "抵抗"
+  }
+ ],
+ "w|抹消": [
+  {
+   "text": "長く使っていなかったので、翔太の利用登録は抹消されていた。",
+   "en": "Because he hadn't used it for so long, Shota's library registration had been deleted.",
+   "ko": "오래 쓰지 않아서 쇼타의 이용 등록은 말소되어 있었어요.",
+   "blank": "抹消",
+   "src": "made"
+  },
+  {
+   "text": "由美は、地図に書いた古いルートを線を引いて抹消した。",
+   "en": "Yumi crossed out the old route she had written on the map.",
+   "ko": "유미는 지도에 적은 옛 경로에 줄을 그어 지웠어요.",
+   "blank": "抹消",
+   "src": "made"
   }
  ],
  "w|抹茶": [
@@ -49691,6 +50315,22 @@
    "blank": "搭載"
   }
  ],
+ "w|携わる": [
+  {
+   "text": "健太の父は、この学校の校舎の設計に携わった建築家だ。",
+   "en": "Kenta's father is an architect who worked on the design of this school building.",
+   "ko": "겐타의 아버지는 이 학교 건물 설계에 참여한 건축가예요.",
+   "blank": "携わった",
+   "src": "made"
+  },
+  {
+   "text": "美咲は今、地域の図書館の仕事に携わっていると由紀に書いた。",
+   "en": "Misaki wrote to Yuki that she now works at the local library.",
+   "ko": "미사키는 지금 지역 도서관 일에 종사하고 있다고 유키에게 썼어요.",
+   "blank": "携わって",
+   "src": "made"
+  }
+ ],
  "w|携帯": [
   {
    "text": "携帯忘れた。",
@@ -49734,6 +50374,22 @@
    "en": "When the starter fired the pistol, the runners all set off at once.",
    "ko": "스타터가 총을 쏘자 주자들이 일제히 달려 나갔어요.",
    "blank": "撃つ",
+   "src": "made"
+  }
+ ],
+ "w|撒く": [
+  {
+   "text": "翔太は、図書館の前の花壇に水を撒いた。",
+   "en": "Shota watered the flower bed in front of the library.",
+   "ko": "쇼타는 도서관 앞 화단에 물을 뿌렸어요.",
+   "blank": "撒いた",
+   "src": "made"
+  },
+  {
+   "text": "由美は、たき火の跡に水を撒いてしっかり消した。",
+   "en": "Yumi poured water over the remains of the campfire to put it out completely.",
+   "ko": "유미는 모닥불 자리에 물을 뿌려 확실히 껐어요.",
+   "blank": "撒いて",
    "src": "made"
   }
  ],
@@ -53867,6 +54523,22 @@
    "src": "made"
   }
  ],
+ "w|有志": [
+  {
+   "text": "健太は、有志の生徒と一緒に校庭のごみ拾いをした。",
+   "en": "Kenta picked up trash in the schoolyard with student volunteers.",
+   "ko": "겐타는 자원한 학생들과 함께 운동장 쓰레기를 주웠어요.",
+   "blank": "有志",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、同窓会を有志で開こうと由紀に提案した。",
+   "en": "Misaki suggested to Yuki that they hold a class reunion with whoever wanted to help.",
+   "ko": "미사키는 뜻있는 사람끼리 동창회를 열자고 유키에게 제안했어요.",
+   "blank": "有志",
+   "src": "made"
+  }
+ ],
  "w|有料": [
   {
    "text": "この道は有料だよ。",
@@ -53879,6 +54551,22 @@
    "en": "I'll sign up for the paid service.",
    "ko": "유료 서비스에 신청해.",
    "blank": "有料"
+  }
+ ],
+ "w|有権者": [
+  {
+   "text": "健太の学校には、もうすぐ有権者になる三年生向けの選挙の授業がある。",
+   "en": "Kenta's school has a class on elections for seniors who will soon be voters.",
+   "ko": "겐타네 학교에는 곧 유권자가 되는 삼 학년을 위한 선거 수업이 있어요.",
+   "blank": "有権者",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、初めて有権者として投票に行った日のことを由紀に書いた。",
+   "en": "Misaki wrote to Yuki about the day she first went to vote as an eligible voter.",
+   "ko": "미사키는 처음 유권자로서 투표하러 간 날 이야기를 유키에게 썼어요.",
+   "blank": "有権者",
+   "src": "made"
   }
  ],
  "w|有機": [
@@ -54020,6 +54708,22 @@
    "en": "Chihiro agonized over what to wear on her first day and ended up choosing a navy suit.",
    "ko": "치히로는 첫날 옷차림을 고민하다가 결국 남색 정장을 골랐어요.",
    "blank": "服装",
+   "src": "made"
+  }
+ ],
+ "w|朗報": [
+  {
+   "text": "合唱部が全国大会に出るという朗報が、健太の学校に届いた。",
+   "en": "Good news arrived at Kenta's school that the choir would compete in the national contest.",
+   "ko": "합창부가 전국 대회에 나간다는 기쁜 소식이 겐타네 학교에 전해졌어요.",
+   "blank": "朗報",
+   "src": "made"
+  },
+  {
+   "text": "由紀が結婚するという朗報に、美咲は思わず声を上げた。",
+   "en": "At the happy news that Yuki was getting married, Misaki cried out without thinking.",
+   "ko": "유키가 결혼한다는 기쁜 소식에 미사키는 저도 모르게 소리를 질렀어요.",
+   "blank": "朗報",
    "src": "made"
   }
  ],
@@ -55947,6 +56651,22 @@
    "src": "made"
   }
  ],
+ "w|極限": [
+  {
+   "text": "翔太は、極限の状況を生き延びた登山家の手記を読んだ。",
+   "en": "Shota read the memoir of a mountaineer who survived extreme conditions.",
+   "ko": "쇼타는 극한 상황을 살아남은 등산가의 수기를 읽었어요.",
+   "blank": "極限",
+   "src": "made"
+  },
+  {
+   "text": "由美は、寒さと疲れが極限に達したあの夜を今も覚えている。",
+   "en": "Yumi still remembers that night when the cold and exhaustion reached their limit.",
+   "ko": "유미는 추위와 피로가 극한에 달했던 그날 밤을 지금도 기억해요.",
+   "blank": "極限",
+   "src": "made"
+  }
+ ],
  "w|楽": [
   {
    "text": "この仕事、楽だね。",
@@ -56873,6 +57593,22 @@
    "blank": "歌う"
   }
  ],
+ "w|歌唱": [
+  {
+   "text": "健太は、音楽の歌唱テストで緊張して声が震えた。",
+   "en": "Kenta was so nervous during the singing test in music class that his voice shook.",
+   "ko": "겐타는 음악 가창 시험에서 긴장해서 목소리가 떨렸어요.",
+   "blank": "歌唱",
+   "src": "made"
+  },
+  {
+   "text": "由紀の歌唱力は昔から抜群だった、と美咲は手紙で思い出した。",
+   "en": "In her letter, Misaki recalled that Yuki had always been an outstanding singer.",
+   "ko": "유키의 가창력은 예전부터 뛰어났다고 미사키는 편지에서 떠올렸어요.",
+   "blank": "歌唱",
+   "src": "made"
+  }
+ ],
  "w|歌声": [
   {
    "text": "昔の民謡を録音したテープから、村人たちの歌声が流れてきた。",
@@ -57162,6 +57898,22 @@
    "en": "The man in the next seat said he had just become a full-time employee and it was his first business trip.",
    "ko": "옆자리 남자는 정규직이 된 지 얼마 안 돼서 첫 출장이라고 말했어요.",
    "blank": "正社員",
+   "src": "made"
+  }
+ ],
+ "w|正統": [
+  {
+   "text": "健太の剣道の先生は、昔から伝わる正統な技を教えてくれる。",
+   "en": "Kenta's kendo teacher teaches him orthodox techniques passed down from long ago.",
+   "ko": "겐타의 검도 선생님은 예부터 전해지는 정통 기술을 가르쳐 줘요.",
+   "blank": "正統",
+   "src": "made"
+  },
+  {
+   "text": "由紀が正統派のフランス料理店を開いたと聞いて、美咲は驚いた。",
+   "en": "Misaki was surprised to hear that Yuki had opened a classic French restaurant.",
+   "ko": "유키가 정통파 프랑스 요리점을 열었다는 말을 듣고 미사키는 놀랐어요.",
+   "blank": "正統",
    "src": "made"
   }
  ],
@@ -57648,6 +58400,22 @@
    "en": "Office workers buy bread at Aoi's shop before working overtime.",
    "ko": "회사원 손님들은 야근 전에 아오이네 가게에서 빵을 사 가요.",
    "blank": "残業",
+   "src": "made"
+  }
+ ],
+ "w|残留": [
+  {
+   "text": "健太のサッカー部は、なんとか一部リーグに残留した。",
+   "en": "Kenta's soccer club somehow managed to stay in the top division.",
+   "ko": "겐타네 축구부는 간신히 일부 리그에 잔류했어요.",
+   "blank": "残留",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、野菜の残留農薬を気にするようになったと由紀に書いた。",
+   "en": "Misaki wrote to Yuki that she had started worrying about pesticide residue on vegetables.",
+   "ko": "미사키는 채소의 잔류 농약을 신경 쓰게 됐다고 유키에게 썼어요.",
+   "blank": "残留",
    "src": "made"
   }
  ],
@@ -59085,6 +59853,22 @@
    "src": "made"
   }
  ],
+ "w|決闘": [
+  {
+   "text": "翔太は、決闘の場面が有名な西部劇の小説を借りた。",
+   "en": "Shota borrowed a Western novel famous for its duel scene.",
+   "ko": "쇼타는 결투 장면으로 유명한 서부극 소설을 빌렸어요.",
+   "blank": "決闘",
+   "src": "made"
+  },
+  {
+   "text": "由美の子どもたちは、木の枝を剣にして決闘ごっこをした。",
+   "en": "Yumi's children played at dueling with tree branches as swords.",
+   "ko": "유미의 아이들은 나뭇가지를 칼 삼아 결투 놀이를 했어요.",
+   "blank": "決闘",
+   "src": "made"
+  }
+ ],
  "w|沈む": [
   {
    "text": "日が沈むころ、出店者たちは片付けを始めた。",
@@ -59558,6 +60342,22 @@
    "en": "I do all my laundry on the weekend.",
    "ko": "주말에 몰아서 빨래해요.",
    "blank": "洗濯",
+   "src": "made"
+  }
+ ],
+ "w|洗練": [
+  {
+   "text": "新しい制服は洗練されたデザインだと、健太は思った。",
+   "en": "Kenta thought the new uniform had a refined design.",
+   "ko": "새 교복은 세련된 디자인이라고 겐타는 생각했어요.",
+   "blank": "洗練",
+   "src": "made"
+  },
+  {
+   "text": "久しぶりに届いた由紀の文章は、ずいぶん洗練されていると美咲は感じた。",
+   "en": "Misaki felt that Yuki's writing in the letter that came after so long had become much more polished.",
+   "ko": "오랜만에 온 유키의 글은 꽤 세련돼졌다고 미사키는 느꼈어요.",
+   "blank": "洗練",
    "src": "made"
   }
  ],
@@ -61113,6 +61913,22 @@
    "src": "made"
   }
  ],
+ "w|溜める": [
+  {
+   "text": "健太は夏休みの宿題を溜めてしまい、最後の数日で慌てた。",
+   "en": "Kenta let his summer homework pile up and panicked in the last few days.",
+   "ko": "겐타는 여름방학 숙제를 쌓아 두다가 마지막 며칠에 허둥댔어요.",
+   "blank": "溜めて",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、書きたいことを溜めておいて、由紀に長い手紙を書いた。",
+   "en": "Misaki saved up things she wanted to say and wrote Yuki a long letter.",
+   "ko": "미사키는 쓰고 싶은 말을 모아 두었다가 유키에게 긴 편지를 썼어요.",
+   "blank": "溜めて",
+   "src": "made"
+  }
+ ],
  "w|溢れる": [
   {
    "text": "選挙の夜、編集部には電話の音が溢れていた。",
@@ -61193,6 +62009,22 @@
    "src": "made"
   }
  ],
+ "w|滑る": [
+  {
+   "text": "健太は、雨上がりの廊下で滑って転んだ。",
+   "en": "Kenta slipped and fell in the hallway after the rain.",
+   "ko": "겐타는 비 갠 뒤 복도에서 미끄러져 넘어졌어요.",
+   "blank": "滑って",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、冬の湖で由紀と滑った思い出を手紙に書いた。",
+   "en": "Misaki wrote in her letter about the memory of skating on the winter lake with Yuki.",
+   "ko": "미사키는 겨울 호수에서 유키와 스케이트를 탄 추억을 편지에 썼어요.",
+   "blank": "滑った",
+   "src": "made"
+  }
+ ],
  "w|漁師": [
   {
    "text": "誠の村には漁師はいないが、川で魚を捕るのが上手な老人がいる。",
@@ -61222,6 +62054,22 @@
    "en": "Chihiro's village has long made its living from farming and fishing.",
    "ko": "지히로의 마을은 옛날부터 농업과 어업으로 살아왔어요.",
    "blank": "漁業",
+   "src": "made"
+  }
+ ],
+ "w|漂う": [
+  {
+   "text": "古い本の匂いが漂う書庫が、翔太は好きだ。",
+   "en": "Shota loves the stacks where the smell of old books hangs in the air.",
+   "ko": "쇼타는 오래된 책 냄새가 감도는 서고를 좋아해요.",
+   "blank": "漂う",
+   "src": "made"
+  },
+  {
+   "text": "由美のテントのまわりに、カレーのいい匂いが漂っていた。",
+   "en": "A nice smell of curry was drifting around Yumi's tent.",
+   "ko": "유미의 텐트 주변에 카레의 좋은 냄새가 풍기고 있었어요.",
+   "blank": "漂って",
    "src": "made"
   }
  ],
@@ -66315,6 +67163,22 @@
    "src": "made"
   }
  ],
+ "w|皇室": [
+  {
+   "text": "健太は、社会の授業で皇室の歴史について発表した。",
+   "en": "Kenta gave a presentation on the history of the imperial family in social studies.",
+   "ko": "겐타는 사회 시간에 황실의 역사에 대해 발표했어요.",
+   "blank": "皇室",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、祖母が皇室のニュースを毎朝楽しみにしていると書いた。",
+   "en": "Misaki wrote that her grandmother looks forward to news about the imperial family every morning.",
+   "ko": "미사키는 할머니가 매일 아침 황실 뉴스를 즐겨 보신다고 썼어요.",
+   "blank": "皇室",
+   "src": "made"
+  }
+ ],
  "w|皇帝": [
   {
    "text": "世界史のテストに、ローマの皇帝の名前が出た。",
@@ -66411,6 +67275,22 @@
    "src": "made"
   }
  ],
+ "w|盗難": [
+  {
+   "text": "健太の学校で自転車の盗難が続き、防犯カメラが付けられた。",
+   "en": "After a string of bicycle thefts at Kenta's school, security cameras were installed.",
+   "ko": "겐타네 학교에서 자전거 도난이 잇따라 방범 카메라가 설치됐어요.",
+   "blank": "盗難",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、自転車の盗難にあった話を笑い話として由紀に書いた。",
+   "en": "Misaki wrote to Yuki about her bike being stolen as a funny story.",
+   "ko": "미사키는 자전거를 도난당한 이야기를 우스갯소리로 유키에게 썼어요.",
+   "blank": "盗難",
+   "src": "made"
+  }
+ ],
  "w|盛り上がり": [
   {
    "text": "部署の飲み会は、課長の歌で最高の盛り上がりを見せた。",
@@ -66472,6 +67352,22 @@
    "en": "Wheat farming has long thrived in this town.",
    "ko": "이 동네는 예부터 밀 재배가 활발해요.",
    "blank": "盛ん",
+   "src": "made"
+  }
+ ],
+ "w|盛大": [
+  {
+   "text": "健太の学校の創立記念式典が、体育館で盛大に行われた。",
+   "en": "Kenta's school held a grand founding anniversary ceremony in the gym.",
+   "ko": "겐타네 학교 개교기념식이 체육관에서 성대하게 열렸어요.",
+   "blank": "盛大",
+   "src": "made"
+  },
+  {
+   "text": "祖父の米寿の会が盛大に開かれたことを、美咲は由紀に伝えた。",
+   "en": "Misaki told Yuki that her grandfather's eighty-eighth birthday party had been a grand affair.",
+   "ko": "할아버지의 미수 잔치가 성대하게 열렸다는 걸 미사키는 유키에게 전했어요.",
+   "blank": "盛大",
    "src": "made"
   }
  ],
@@ -67146,6 +68042,22 @@
    "en": "In the town where Aoi lives, many people in the prefecture commute by car.",
    "ko": "아오이가 사는 동네에서는 현민 대부분이 차로 출퇴근해요.",
    "blank": "県民",
+   "src": "made"
+  }
+ ],
+ "w|県知事": [
+  {
+   "text": "新しい図書館の開館式に県知事が来たと、翔太は聞いた。",
+   "en": "Shota heard that the governor came to the opening ceremony of the new library.",
+   "ko": "새 도서관 개관식에 도지사가 왔다고 쇼타는 들었어요.",
+   "blank": "県知事",
+   "src": "made"
+  },
+  {
+   "text": "由美が泊まったキャンプ場は、県知事が自ら宣伝していた。",
+   "en": "The campsite where Yumi stayed had been promoted by the governor himself.",
+   "ko": "유미가 묵은 캠핑장은 도지사가 직접 홍보하던 곳이었어요.",
+   "blank": "県知事",
    "src": "made"
   }
  ],
@@ -68447,6 +69359,22 @@
    "src": "made"
   }
  ],
+ "w|祖国": [
+  {
+   "text": "健太のクラスに、祖国を離れて家族と来た転校生が入った。",
+   "en": "A transfer student who had left her homeland with her family joined Kenta's class.",
+   "ko": "겐타네 반에 조국을 떠나 가족과 함께 온 전학생이 들어왔어요.",
+   "blank": "祖国",
+   "src": "made"
+  },
+  {
+   "text": "留学を終えて祖国に戻った由紀から、美咲に久しぶりの手紙が届いた。",
+   "en": "Misaki got a letter for the first time in ages from Yuki, who had returned to her homeland after studying abroad.",
+   "ko": "유학을 마치고 조국으로 돌아간 유키에게서 미사키에게 오랜만에 편지가 왔어요.",
+   "blank": "祖国",
+   "src": "made"
+  }
+ ],
  "w|祖母": [
   {
    "text": "新婦の祖母は、着物姿で一番前の席に座っていた。",
@@ -68495,6 +69423,22 @@
    "src": "made"
   }
  ],
+ "w|祝う": [
+  {
+   "text": "健太のクラスは、担任の先生の誕生日をサプライズで祝った。",
+   "en": "Kenta's class celebrated their homeroom teacher's birthday with a surprise.",
+   "ko": "겐타네 반은 담임 선생님 생일을 깜짝 이벤트로 축하했어요.",
+   "blank": "祝った",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、遠くに住む由紀の誕生日を手紙で祝った。",
+   "en": "Misaki celebrated Yuki's birthday with a letter, since Yuki lives far away.",
+   "ko": "미사키는 멀리 사는 유키의 생일을 편지로 축하했어요.",
+   "blank": "祝った",
+   "src": "made"
+  }
+ ],
  "w|祝日": [
   {
    "text": "今年は祝日の並びがよく、正月休みが長い。",
@@ -68539,6 +69483,22 @@
    "en": "I said a prayer.",
    "ko": "신께 빌었어.",
    "blank": "神"
+  }
+ ],
+ "w|神宮": [
+  {
+   "text": "健太は、遠足で町の大きな神宮にお参りした。",
+   "en": "On a school trip, Kenta visited the big shrine in town.",
+   "ko": "겐타는 소풍 때 마을의 큰 신궁에 참배했어요.",
+   "blank": "神宮",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、昔由紀と初詣に行った神宮をまた訪ねたと書いた。",
+   "en": "Misaki wrote that she had revisited the shrine she and Yuki used to visit at New Year.",
+   "ko": "미사키는 옛날 유키와 새해 첫 참배를 갔던 신궁에 다시 가 봤다고 썼어요.",
+   "blank": "神宮",
+   "src": "made"
   }
  ],
  "w|神社": [
@@ -69463,6 +70423,22 @@
    "src": "tatoeba:10624613/small_snow en:11123012/newtonlkh"
   }
  ],
+ "w|空ける": [
+  {
+   "text": "健太は、転校生が座れるように隣の席を空けた。",
+   "en": "Kenta cleared the seat next to him so the transfer student could sit down.",
+   "ko": "겐타는 전학생이 앉을 수 있게 옆자리를 비웠어요.",
+   "blank": "空けた",
+   "src": "made"
+  },
+  {
+   "text": "由紀が遊びに来る日のために、美咲は週末の予定を空けておいた。",
+   "en": "Misaki kept her weekend free for the day Yuki would come to visit.",
+   "ko": "유키가 놀러 오는 날을 위해 미사키는 주말 일정을 비워 두었어요.",
+   "blank": "空けて",
+   "src": "made"
+  }
+ ],
  "w|空中": [
   {
    "text": "トンボが、空中でぴたりと止まったように見えた。",
@@ -69476,6 +70452,22 @@
    "en": "The wind blew the sign up into the air, and Yoko rushed after it.",
    "ko": "바람에 간판이 공중으로 날아올라서 요코는 허둥지둥 쫓아갔어요.",
    "blank": "空中",
+   "src": "made"
+  }
+ ],
+ "w|空手": [
+  {
+   "text": "翔太は、空手の型を写真で解説した本を借りた。",
+   "en": "Shota borrowed a book explaining karate forms with photos.",
+   "ko": "쇼타는 가라테 품새를 사진으로 설명한 책을 빌렸어요.",
+   "blank": "空手",
+   "src": "made"
+  },
+  {
+   "text": "由美は、空手で鍛えた腕で重いテントを運んだ。",
+   "en": "Yumi carried the heavy tent with arms trained in karate.",
+   "ko": "유미는 가라테로 단련한 팔로 무거운 텐트를 날랐어요.",
+   "blank": "空手",
    "src": "made"
   }
  ],
@@ -71680,6 +72672,22 @@
    "en": "In the middle of packing, Mayu ended up starting to read the sequel to her favorite novel.",
    "ko": "마유는 짐을 싸다가 좋아하는 소설의 속편을 읽기 시작해 버렸어요.",
    "blank": "続編",
+   "src": "made"
+  }
+ ],
+ "w|続行": [
+  {
+   "text": "雨が降り出したが、健太たちの体育祭はそのまま続行された。",
+   "en": "It started to rain, but Kenta's sports day went on as planned.",
+   "ko": "비가 내리기 시작했지만 겐타네 체육대회는 그대로 속행됐어요.",
+   "blank": "続行",
+   "src": "made"
+  },
+  {
+   "text": "雨でも試合が続行された高校最後の大会を、美咲は懐かしく思い出した。",
+   "en": "Misaki fondly recalled her last high school tournament, where the game went on despite the rain.",
+   "ko": "비가 와도 경기가 속행됐던 고등학교 마지막 대회를 미사키는 그립게 떠올렸어요.",
+   "blank": "続行",
    "src": "made"
   }
  ],
@@ -74179,6 +75187,22 @@
    "blank": "興奮"
   }
  ],
+ "w|興行": [
+  {
+   "text": "翔太は、昔のサーカスの興行について資料を集めている。",
+   "en": "Shota is collecting materials on old circus shows.",
+   "ko": "쇼타는 옛 서커스 흥행에 관한 자료를 모으고 있어요.",
+   "blank": "興行",
+   "src": "made"
+  },
+  {
+   "text": "由美は、近くの町で旅回りの一座の興行があると知った。",
+   "en": "Yumi learned that a traveling troupe was putting on a show in a nearby town.",
+   "ko": "유미는 근처 마을에서 유랑 극단의 공연이 있다는 걸 알았어요.",
+   "blank": "興行",
+   "src": "made"
+  }
+ ],
  "w|舌": [
   {
    "text": "走りすぎて、翔太は舌までからからに乾いてしまった。",
@@ -75381,6 +76405,22 @@
    "src": "made"
   }
  ],
+ "w|虚偽": [
+  {
+   "text": "健太は、ネット上の虚偽の情報に気をつけるよう授業で学んだ。",
+   "en": "Kenta learned in class to watch out for false information online.",
+   "ko": "겐타는 인터넷의 허위 정보에 주의하라고 수업에서 배웠어요.",
+   "blank": "虚偽",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、虚偽の請求はがきが届いたら気をつけて、と由紀に注意した。",
+   "en": "Misaki warned Yuki to be careful if she got a postcard with a fake bill.",
+   "ko": "미사키는 허위 청구 엽서가 오면 조심하라고 유키에게 당부했어요.",
+   "blank": "虚偽",
+   "src": "made"
+  }
+ ],
  "w|虫": [
   {
    "text": "虫が飛んでる。",
@@ -75500,6 +76540,22 @@
    "en": "Aoi held a hand warmer so the veins in her hands wouldn't stand out from the cold.",
    "ko": "추위로 손 혈관이 도드라지지 않게 아오이는 핫팩을 쥐고 있었어요.",
    "blank": "血管",
+   "src": "made"
+  }
+ ],
+ "w|衆院": [
+  {
+   "text": "翔太は、衆院選の結果を図書館の新聞で確かめた。",
+   "en": "Shota checked the results of the lower house election in the library's newspapers.",
+   "ko": "쇼타는 중의원 선거 결과를 도서관 신문으로 확인했어요.",
+   "blank": "衆院",
+   "src": "made"
+  },
+  {
+   "text": "由美は、衆院選の期日前投票を済ませてからキャンプに出かけた。",
+   "en": "Yumi cast her early vote in the lower house election before heading out camping.",
+   "ko": "유미는 중의원 선거 사전 투표를 마치고 캠핑을 떠났어요.",
+   "blank": "衆院",
    "src": "made"
   }
  ],
@@ -76061,6 +77117,22 @@
    "blank": "装備"
   }
  ],
+ "w|装甲": [
+  {
+   "text": "翔太は、戦車の装甲について詳しく書かれた図鑑を眺めた。",
+   "en": "Shota looked through an illustrated book with detailed information on tank armor.",
+   "ko": "쇼타는 전차 장갑에 대해 자세히 쓴 도감을 훑어봤어요.",
+   "blank": "装甲",
+   "src": "made"
+  },
+  {
+   "text": "由美の大きな車は、装甲車みたいだと友達に笑われた。",
+   "en": "Yumi's friends laughed that her big car looked like an armored vehicle.",
+   "ko": "유미의 큰 차는 장갑차 같다며 친구들에게 놀림을 받았어요.",
+   "blank": "装甲",
+   "src": "made"
+  }
+ ],
  "w|装着": [
   {
    "text": "離陸の前に、シートベルトの装着を確認された。",
@@ -76247,6 +77319,22 @@
    "ko": "그 비행기는 보조 로켓을 써서 이륙했어요.",
    "blank": "補助",
    "src": "tatoeba:207097 en:44347"
+  }
+ ],
+ "w|補完": [
+  {
+   "text": "休んだ日の授業ノートを、健太は友達のノートで補完した。",
+   "en": "Kenta filled in the class notes from the day he was absent using a friend's notes.",
+   "ko": "쉬었던 날 수업 노트를 겐타는 친구 노트로 보완했어요.",
+   "blank": "補完",
+   "src": "made"
+  },
+  {
+   "text": "美咲のあいまいな記憶を、由紀の手紙が補完してくれた。",
+   "en": "Yuki's letter filled in the gaps in Misaki's hazy memory.",
+   "ko": "미사키의 흐릿한 기억을 유키의 편지가 보완해 줬어요.",
+   "blank": "補完",
+   "src": "made"
   }
  ],
  "w|補強": [
@@ -76650,6 +77738,22 @@
    "en": "Yoko realized that lack of sleep is why she gets tired easily these days.",
    "ko": "요코는 요즘 쉽게 피곤한 요인이 수면 부족이라는 걸 깨달았어요.",
    "blank": "要因",
+   "src": "made"
+  }
+ ],
+ "w|要塞": [
+  {
+   "text": "健太は、社会科見学で海沿いの古い要塞の跡を見学した。",
+   "en": "On a social studies field trip, Kenta toured the ruins of an old seaside fortress.",
+   "ko": "겐타는 사회 견학으로 바닷가의 오래된 요새 터를 둘러봤어요.",
+   "blank": "要塞",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、子どもの頃に由紀と段ボールで作った要塞の写真を同封した。",
+   "en": "Misaki enclosed a photo of the cardboard fortress she and Yuki built as kids.",
+   "ko": "미사키는 어릴 때 유키와 골판지로 만든 요새 사진을 동봉했어요.",
+   "blank": "要塞",
    "src": "made"
   }
  ],
@@ -77139,6 +78243,22 @@
    "en": "I started on a small scale.",
    "ko": "소규모로 시작했어.",
    "blank": "規模"
+  }
+ ],
+ "w|規範": [
+  {
+   "text": "翔太は、社会の規範について考える哲学の本を読んだ。",
+   "en": "Shota read a philosophy book that considers social norms.",
+   "ko": "쇼타는 사회 규범에 대해 생각하는 철학책을 읽었어요.",
+   "blank": "規範",
+   "src": "made"
+  },
+  {
+   "text": "自然の中でも社会の規範は変わらないと、由美は子どもたちに話した。",
+   "en": "Yumi told the children that social norms are the same even in nature.",
+   "ko": "자연 속에서도 사회 규범은 다르지 않다고 유미는 아이들에게 이야기했어요.",
+   "blank": "規範",
+   "src": "made"
   }
  ],
  "w|規約": [
@@ -79635,6 +80755,22 @@
    "src": "made"
   }
  ],
+ "w|諜報": [
+  {
+   "text": "翔太は、諜報員が主人公の小説が大好きだ。",
+   "en": "Shota loves novels whose main character is an intelligence agent.",
+   "ko": "쇼타는 첩보원이 주인공인 소설을 아주 좋아해요.",
+   "blank": "諜報",
+   "src": "made"
+  },
+  {
+   "text": "由美は、たき火のそばで諜報機関が出てくる映画の話をした。",
+   "en": "By the campfire, Yumi talked about a movie featuring an intelligence agency.",
+   "ko": "유미는 모닥불 옆에서 첩보 기관이 나오는 영화 이야기를 했어요.",
+   "blank": "諜報",
+   "src": "made"
+  }
+ ],
  "w|諦める": [
   {
    "text": "諦めないで。",
@@ -79647,6 +80783,22 @@
    "en": "I've already given up.",
    "ko": "이미 포기했어.",
    "blank": "諦めた"
+  }
+ ],
+ "w|諸々": [
+  {
+   "text": "翔太は、引っ越しの諸々の手続きを終えてから図書館に寄った。",
+   "en": "Shota stopped by the library after finishing all the various moving procedures.",
+   "ko": "쇼타는 이사 관련 이런저런 절차를 마치고 도서관에 들렀어요.",
+   "blank": "諸々",
+   "src": "made"
+  },
+  {
+   "text": "由美は、食料や燃料など諸々の準備を前の日に済ませた。",
+   "en": "Yumi finished all the various preparations, like food and fuel, the day before.",
+   "ko": "유미는 식량과 연료 등 이런저런 준비를 전날 끝냈어요.",
+   "blank": "諸々",
+   "src": "made"
   }
  ],
  "w|諸国": [
@@ -82849,6 +84001,22 @@
    "src": "made"
   }
  ],
+ "w|迷宮": [
+  {
+   "text": "健太の学校の旧校舎は、迷宮のように通路が入り組んでいる。",
+   "en": "The old building at Kenta's school has passages as tangled as a labyrinth.",
+   "ko": "겐타네 학교 옛 건물은 미궁처럼 통로가 복잡하게 얽혀 있어요.",
+   "blank": "迷宮",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、由紀と迷子になった迷宮のような商店街を思い出した。",
+   "en": "Misaki remembered the labyrinth-like shopping street where she and Yuki got lost.",
+   "ko": "미사키는 유키와 길을 잃었던 미궁 같은 상점가를 떠올렸어요.",
+   "blank": "迷宮",
+   "src": "made"
+  }
+ ],
  "w|迷惑": [
   {
    "text": "迷惑かけてごめん。",
@@ -83689,6 +84857,22 @@
    "src": "made"
   }
  ],
+ "w|速やか": [
+  {
+   "text": "火災報知器が鳴ったら速やかに校庭へ出るよう、健太たちは指示された。",
+   "en": "Kenta and the others were told to go out to the schoolyard promptly if the fire alarm rang.",
+   "ko": "화재경보기가 울리면 신속하게 운동장으로 나가라고 겐타네는 지시를 받았어요.",
+   "blank": "速やか",
+   "src": "made"
+  },
+  {
+   "text": "由紀からの返事が速やかに届いたので、美咲は驚いた。",
+   "en": "Misaki was surprised at how promptly Yuki's reply arrived.",
+   "ko": "유키의 답장이 신속하게 와서 미사키는 놀랐어요.",
+   "blank": "速やか",
+   "src": "made"
+  }
+ ],
  "w|速報": [
   {
    "text": "速報が入ったよ。",
@@ -83886,6 +85070,22 @@
    "en": "Cooperation between school and home is important.",
    "ko": "학교와 가정의 협력이 중요해요.",
    "blank": "連携",
+   "src": "made"
+  }
+ ],
+ "w|連敗": [
+  {
+   "text": "応援しているチームが連敗して、翔太は新聞のスポーツ欄を開く気になれなかった。",
+   "en": "The team he supports kept losing, so Shota didn't feel like opening the sports page.",
+   "ko": "응원하는 팀이 연패해서 쇼타는 신문 스포츠면을 펼칠 마음이 들지 않았어요.",
+   "blank": "連敗",
+   "src": "made"
+  },
+  {
+   "text": "由美は、釣りの勝負で兄に連敗して悔しがった。",
+   "en": "Yumi was frustrated after losing to her brother again and again in a fishing contest.",
+   "ko": "유미는 낚시 시합에서 오빠에게 연패해서 분해했어요.",
+   "blank": "連敗",
    "src": "made"
   }
  ],
@@ -84639,6 +85839,22 @@
    "blank": "過去"
   }
  ],
+ "w|過失": [
+  {
+   "text": "借りた本を汚してしまった翔太は、自分の過失を素直に謝った。",
+   "en": "Shota, who had stained a borrowed book, honestly apologized for his mistake.",
+   "ko": "빌린 책을 더럽힌 쇼타는 자기 과실을 순순히 사과했어요.",
+   "blank": "過失",
+   "src": "made"
+  },
+  {
+   "text": "たき火の消し忘れは重大な過失になると、由美は管理人に教わった。",
+   "en": "The campground manager told Yumi that forgetting to put out a campfire counts as serious negligence.",
+   "ko": "모닥불을 끄는 걸 잊으면 중대한 과실이 된다고 유미는 관리인에게 배웠어요.",
+   "blank": "過失",
+   "src": "made"
+  }
+ ],
  "w|過度": [
   {
    "text": "過度な釣りのせいで、この川の魚は一時期かなり減ってしまった。",
@@ -84668,6 +85884,22 @@
    "en": "Keiko thought tearing it all down and rebuilding would be too drastic.",
    "ko": "게이코는 전부 허물고 다시 짓는 건 너무 과격하다고 생각했어요.",
    "blank": "過激",
+   "src": "made"
+  }
+ ],
+ "w|過疎": [
+  {
+   "text": "翔太は、過疎の町で図書館を支えるボランティアの記事を読んだ。",
+   "en": "Shota read an article about volunteers who keep a library going in a depopulated town.",
+   "ko": "쇼타는 인구가 줄어든 마을에서 도서관을 지키는 봉사자에 관한 기사를 읽었어요.",
+   "blank": "過疎",
+   "src": "made"
+  },
+  {
+   "text": "由美が向かった山は、過疎が進む村の奥にある。",
+   "en": "The mountain Yumi headed for lies deep beyond a village that is losing its population.",
+   "ko": "유미가 향한 산은 인구가 줄어드는 마을 안쪽에 있어요.",
+   "blank": "過疎",
    "src": "made"
   }
  ],
@@ -87669,6 +88901,22 @@
    "src": "made"
   }
  ],
+ "w|防備": [
+  {
+   "text": "翔太は、昔の城の防備について書かれた本を借りた。",
+   "en": "Shota borrowed a book about the defenses of old castles.",
+   "ko": "쇼타는 옛 성의 방비에 관해 쓴 책을 빌렸어요.",
+   "blank": "防備",
+   "src": "made"
+  },
+  {
+   "text": "由美は、虫よけスプレーと長袖で防備を固めた。",
+   "en": "Yumi armed herself with bug spray and long sleeves.",
+   "ko": "유미는 벌레 퇴치 스프레이와 긴소매로 단단히 대비했어요.",
+   "blank": "防備",
+   "src": "made"
+  }
+ ],
  "w|防止": [
   {
    "text": "事故の防止が第一だ。",
@@ -89691,6 +90939,22 @@
    "src": "made"
   }
  ],
+ "w|頑丈": [
+  {
+   "text": "健太の学校の体育館は頑丈な造りで、災害時の避難所にもなる。",
+   "en": "The gym at Kenta's school is sturdily built and also serves as an evacuation shelter in disasters.",
+   "ko": "겐타네 학교 체육관은 튼튼하게 지어져서 재해 때 대피소도 돼요.",
+   "blank": "頑丈",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、由紀からの手紙を頑丈な缶に大切にしまっている。",
+   "en": "Misaki carefully keeps Yuki's letters in a sturdy tin.",
+   "ko": "미사키는 유키에게 받은 편지를 튼튼한 깡통에 소중히 보관해요.",
+   "blank": "頑丈",
+   "src": "made"
+  }
+ ],
  "w|頑張る": [
   {
    "text": "頑張ってね。",
@@ -90776,6 +92040,22 @@
    "en": "The company moved into a new building in front of the station last month.",
    "ko": "회사는 지난달 역 앞 새 건물로 이사했어요.",
    "blank": "駅前",
+   "src": "made"
+  }
+ ],
+ "w|駆けつける": [
+  {
+   "text": "健太がけがをしたと聞いて、保健の先生がすぐに駆けつけた。",
+   "en": "Hearing Kenta was hurt, the school nurse rushed over right away.",
+   "ko": "겐타가 다쳤다는 말을 듣고 보건 선생님이 바로 달려왔어요.",
+   "blank": "駆けつけた",
+   "src": "made"
+  },
+  {
+   "text": "由紀が入院したと聞いて、美咲は病院に駆けつけた。",
+   "en": "When she heard Yuki had been hospitalized, Misaki rushed to the hospital.",
+   "ko": "유키가 입원했다는 말을 듣고 미사키는 병원으로 달려갔어요.",
+   "blank": "駆けつけた",
    "src": "made"
   }
  ],
