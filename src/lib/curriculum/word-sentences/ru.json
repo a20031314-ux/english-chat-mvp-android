@@ -13,6 +13,22 @@
    "blank": "абсолютно"
   }
  ],
+ "w|абсолютный": [
+  {
+   "text": "На ферме Андрея по ночам стоит абсолютная тишина.",
+   "en": "At night there is absolute silence on Andrey's farm.",
+   "ko": "밤이면 안드레이네 농장은 완전히 고요해요.",
+   "blank": "абсолютная",
+   "src": "made"
+  },
+  {
+   "text": "Для Ирины этот переезд оказался абсолютным хаосом.",
+   "en": "For Irina this move turned out to be absolute chaos.",
+   "ko": "이리나에게 이번 이사는 완전히 난장판이었어요.",
+   "blank": "абсолютным",
+   "src": "made"
+  }
+ ],
  "w|авария": [
   {
    "text": "Вы знаете, когда произошла эта авария?",
@@ -357,6 +373,22 @@
    "src": "made"
   }
  ],
+ "w|акула": [
+  {
+   "text": "Сын Андрея нарисовал на стене сарая огромную акулу.",
+   "en": "Andrey's son painted a huge shark on the barn wall.",
+   "ko": "안드레이의 아들이 헛간 벽에 커다란 상어를 그렸어요.",
+   "blank": "акулу",
+   "src": "made"
+  },
+  {
+   "text": "Ирина нашла среди игрушек сына плюшевую акулу.",
+   "en": "Irina found a plush shark among her son's toys.",
+   "ko": "이리나는 아들 장난감 사이에서 봉제 상어 인형을 찾았어요.",
+   "blank": "акулу",
+   "src": "made"
+  }
+ ],
  "w|акцент": [
   {
    "text": "Свидетель говорил с южным акцентом, и Дмитрий переспрашивал каждое слово.",
@@ -561,6 +593,22 @@
    "ko": "영어 실력 늘리고 싶으세요?",
    "blank": "английский",
    "src": "tatoeba:4777743/odexed en:3371537/sugirajj"
+  }
+ ],
+ "w|англичанин": [
+  {
+   "text": "Шафером у Михаила был его коллега-англичанин.",
+   "en": "Mikhail's best man was his English colleague.",
+   "ko": "미하일의 들러리는 영국인 동료였어요.",
+   "blank": "англичанин",
+   "src": "made"
+  },
+  {
+   "text": "Коллега Светланы, англичанин, говорит, что здешняя зима ему нравится больше лета.",
+   "en": "Svetlana's colleague, an Englishman, says he likes the winter here more than summer.",
+   "ko": "영국인인 스베틀라나의 동료는 여기 겨울이 여름보다 더 좋다고 말해요.",
+   "blank": "англичанин",
+   "src": "made"
   }
  ],
  "w|апельсин": [
@@ -863,6 +911,38 @@
    "ko": "공항에 몇 시에 가야 해요?",
    "blank": "аэропорт",
    "src": "tatoeba:2657156/odexed en:18213/Zifre"
+  }
+ ],
+ "w|бабочка": [
+  {
+   "text": "Над цветущим клевером у Андрея порхает белая бабочка.",
+   "en": "A white butterfly flutters over Andrey's flowering clover.",
+   "ko": "안드레이네 꽃 핀 클로버 위로 흰 나비가 팔랑팔랑 날아다녀요.",
+   "blank": "бабочка",
+   "src": "made"
+  },
+  {
+   "text": "Когда Ирина открыла окно, в пустую комнату влетела бабочка.",
+   "en": "When Irina opened the window, a butterfly flew into the empty room.",
+   "ko": "이리나가 창문을 열자 빈 방으로 나비가 날아 들어왔어요.",
+   "blank": "бабочка",
+   "src": "made"
+  }
+ ],
+ "w|бабуля": [
+  {
+   "text": "Больше всех на свадьбе Михаила танцевала его бабуля.",
+   "en": "Mikhail's granny danced more than anyone at his wedding.",
+   "ko": "미하일의 결혼식에서 할머니가 누구보다 많이 춤을 췄어요.",
+   "blank": "бабуля",
+   "src": "made"
+  },
+  {
+   "text": "Каждую весну бабуля Светланы первой сажает рассаду на балконе.",
+   "en": "Every spring Svetlana's granny is the first to plant seedlings on the balcony.",
+   "ko": "봄마다 스베틀라나의 할머니가 제일 먼저 발코니에 모종을 심어요.",
+   "blank": "бабуля",
+   "src": "made"
   }
  ],
  "w|бабушка": [
@@ -1575,6 +1655,22 @@
    "src": "made"
   }
  ],
+ "w|бесконечный": [
+  {
+   "text": "Михаилу казалось, что поздравления гостей были просто бесконечными.",
+   "en": "It seemed to Mikhail that the guests' congratulations were simply endless.",
+   "ko": "미하일에게는 하객들의 축하 인사가 끝도 없이 이어지는 것 같았어요.",
+   "blank": "бесконечными",
+   "src": "made"
+  },
+  {
+   "text": "Светлана терпеть не может бесконечный ноябрьский дождь.",
+   "en": "Svetlana can't stand the endless November rain.",
+   "ko": "스베틀라나는 끝없이 내리는 십일월 비를 정말 싫어해요.",
+   "blank": "бесконечный",
+   "src": "made"
+  }
+ ],
  "w|бесплатный": [
   {
    "text": "Не хотели бы вы бесплатный пробник?",
@@ -2205,6 +2301,22 @@
    "src": "tatoeba:2571458/sharptoothed en:2571457/sharptoothed"
   }
  ],
+ "w|бойфренд": [
+  {
+   "text": "Подруга невесты пришла на свадьбу Михаила со своим новым бойфрендом.",
+   "en": "The bride's friend came to Mikhail's wedding with her new boyfriend.",
+   "ko": "신부 친구는 새 남자 친구와 함께 미하일의 결혼식에 왔어요.",
+   "blank": "бойфрендом",
+   "src": "made"
+  },
+  {
+   "text": "Летом Светлана познакомила маму со своим бойфрендом.",
+   "en": "In summer Svetlana introduced her mom to her boyfriend.",
+   "ko": "여름에 스베틀라나는 엄마에게 남자 친구를 소개했어요.",
+   "blank": "бойфрендом",
+   "src": "made"
+  }
+ ],
  "w|бок": [
   {
    "text": "После пробежки у Никиты закололо в боку.",
@@ -2603,6 +2715,22 @@
    "en": "I'm younger than my brother.",
    "ko": "나는 형보다 어려.",
    "blank": "брата"
+  }
+ ],
+ "w|братишка": [
+  {
+   "text": "Младший братишка Михаила весь вечер танцевал с подружками невесты.",
+   "en": "Mikhail's little brother danced with the bridesmaids all evening.",
+   "ko": "미하일의 남동생은 저녁 내내 신부 들러리들과 춤을 췄어요.",
+   "blank": "братишка",
+   "src": "made"
+  },
+  {
+   "text": "Весной Светлана учит братишку кататься на велосипеде.",
+   "en": "In spring Svetlana teaches her little brother to ride a bike.",
+   "ko": "봄에 스베틀라나는 남동생에게 자전거 타는 법을 가르쳐요.",
+   "blank": "братишку",
+   "src": "made"
   }
  ],
  "w|братство": [
@@ -4865,6 +4993,22 @@
    "src": "made"
   }
  ],
+ "w|внешность": [
+  {
+   "text": "Михаил так волновался о своей внешности, что трижды поправил галстук.",
+   "en": "Mikhail was so worried about his appearance that he adjusted his tie three times.",
+   "ko": "미하일은 외모가 너무 신경 쓰여서 넥타이를 세 번이나 고쳐 맸어요.",
+   "blank": "внешности",
+   "src": "made"
+  },
+  {
+   "text": "Светлана замечает, что к весне её внешность меняется: появляются веснушки.",
+   "en": "Svetlana notices that her appearance changes by spring: freckles appear.",
+   "ko": "스베틀라나는 봄이 오면 얼굴에 주근깨가 생기면서 모습이 달라지는 걸 느껴요.",
+   "blank": "внешность",
+   "src": "made"
+  }
+ ],
  "w|вниз": [
   {
    "text": "Мы скатились на лыжах вниз по склону.",
@@ -6551,6 +6695,22 @@
    "src": "tatoeba:6683723/marafon en:3130850/CK"
   }
  ],
+ "w|вспышка": [
+  {
+   "text": "Андрей вздрогнул, когда над лесом мелькнула яркая вспышка.",
+   "en": "Andrey flinched when a bright flash flickered over the forest.",
+   "ko": "숲 위로 밝은 섬광이 번쩍이자 안드레이는 깜짝 놀랐어요.",
+   "blank": "вспышка",
+   "src": "made"
+  },
+  {
+   "text": "На память Ирина сфотографировала пустую квартиру со вспышкой.",
+   "en": "As a keepsake Irina photographed the empty flat with the flash on.",
+   "ko": "이리나는 기념으로 빈 아파트를 플래시를 켜고 찍었어요.",
+   "blank": "вспышкой",
+   "src": "made"
+  }
+ ],
  "w|вставать": [
   {
    "text": "Тебе не кажется, что пора вставать?",
@@ -7689,6 +7849,22 @@
    "src": "made"
   }
  ],
+ "w|выследить": [
+  {
+   "text": "Андрей всё-таки сумел выследить лису, которая таскала кур.",
+   "en": "Andrey finally managed to track down the fox that had been stealing the chickens.",
+   "ko": "안드레이는 결국 닭을 물어 가던 여우를 추적해 찾아냈어요.",
+   "blank": "выследить",
+   "src": "made"
+  },
+  {
+   "text": "Ирина целый час пыталась выследить кошку, спрятавшуюся среди коробок.",
+   "en": "Irina spent a whole hour trying to track down the cat hiding among the boxes.",
+   "ko": "이리나는 상자들 사이에 숨은 고양이를 찾아내려고 한 시간 내내 애썼어요.",
+   "blank": "выследить",
+   "src": "made"
+  }
+ ],
  "w|выслушать": [
   {
    "text": "У вас есть время, чтобы меня выслушать?",
@@ -8035,6 +8211,22 @@
    "ko": "어제 신문 아직 있어요?",
    "blank": "газета",
    "src": "tatoeba:13308776/frpzzd en:12303604/CK"
+  }
+ ],
+ "w|галактика": [
+  {
+   "text": "Ночью над фермой Андрея видна светлая полоса Млечного Пути — наша галактика.",
+   "en": "At night above Andrey's farm you can see the bright band of the Milky Way, our galaxy.",
+   "ko": "밤이면 안드레이네 농장 위로 우리 은하인 은하수의 밝은 띠가 보여요.",
+   "blank": "галактика",
+   "src": "made"
+  },
+  {
+   "text": "Ирина поклеила в детской обои, на которых нарисована галактика.",
+   "en": "Irina put up wallpaper with a galaxy on it in the children's room.",
+   "ko": "이리나는 아이 방에 은하가 그려진 벽지를 발랐어요.",
+   "blank": "галактика",
+   "src": "made"
   }
  ],
  "w|галерея": [
@@ -9082,6 +9274,22 @@
    "en": "The whole village is getting ready for the harvest festival.",
    "ko": "온 마을이 추수 잔치를 준비하고 있어요.",
    "blank": "готовится",
+   "src": "made"
+  }
+ ],
+ "w|готовность": [
+  {
+   "text": "Перед уборкой Андрей проверяет готовность комбайна.",
+   "en": "Before the harvest Andrey checks that the combine is ready.",
+   "ko": "수확 전에 안드레이는 콤바인이 준비됐는지 점검해요.",
+   "blank": "готовность",
+   "src": "made"
+  },
+  {
+   "text": "Грузчики позвонили Ирине и спросили о готовности вещей к погрузке.",
+   "en": "The movers called Irina and asked whether her things were ready to be loaded.",
+   "ko": "이삿짐센터에서 이리나에게 전화해 짐을 실을 준비가 됐는지 물었어요.",
+   "blank": "готовности",
    "src": "made"
   }
  ],
@@ -10667,6 +10875,22 @@
    "src": "tatoeba:3626055/marafon en:2713449/CK"
   }
  ],
+ "w|джунгли": [
+  {
+   "text": "После дождей огород Андрея зарос так, что стал похож на джунгли.",
+   "en": "After the rains Andrey's vegetable garden became so overgrown that it looked like a jungle.",
+   "ko": "비가 온 뒤 안드레이의 텃밭은 정글처럼 보일 만큼 무성해졌어요.",
+   "blank": "джунгли",
+   "src": "made"
+  },
+  {
+   "text": "Ирина везёт столько цветов в горшках, что машина похожа на джунгли.",
+   "en": "Irina is taking so many potted plants that the car looks like a jungle.",
+   "ko": "이리나가 화분을 얼마나 많이 싣고 가는지 차 안이 정글 같아요.",
+   "blank": "джунгли",
+   "src": "made"
+  }
+ ],
  "w|диагноз": [
   {
    "text": "Никита боялся услышать страшный диагноз, но оказалось, что это просто растяжение.",
@@ -10761,6 +10985,22 @@
    "ko": "아기처럼 푹 잤어요.",
    "blank": "дитя",
    "src": "tatoeba:4287684/odexed en:3177965/CK"
+  }
+ ],
+ "w|длина": [
+  {
+   "text": "Михаил долго спорил с портным о длине брюк.",
+   "en": "Mikhail argued with the tailor for a long time about the length of the trousers.",
+   "ko": "미하일은 바지 길이 때문에 재단사와 오래 실랑이했어요.",
+   "blank": "длине",
+   "src": "made"
+  },
+  {
+   "text": "Светлана замечает, как растёт длина дня после зимнего солнцестояния.",
+   "en": "Svetlana notices how the length of the day grows after the winter solstice.",
+   "ko": "스베틀라나는 동지가 지나면 낮이 길어지는 걸 느껴요.",
+   "blank": "длина",
+   "src": "made"
   }
  ],
  "w|длинный": [
@@ -10995,6 +11235,22 @@
    "ko": "저는 제 담당 의사를 전적으로 믿어요.",
    "blank": "доверие",
    "src": "tatoeba:1585988/corvard en:256032/CK"
+  }
+ ],
+ "w|доверить": [
+  {
+   "text": "Михаил решил доверить другу самое важное — кольца.",
+   "en": "Mikhail decided to entrust his friend with the most important thing, the rings.",
+   "ko": "미하일은 가장 중요한 반지를 친구에게 맡기기로 했어요.",
+   "blank": "доверить",
+   "src": "made"
+  },
+  {
+   "text": "Уезжая на лето, Светлана решила доверить соседке поливать цветы.",
+   "en": "Leaving for the summer, Svetlana decided to trust her neighbour with watering the flowers.",
+   "ko": "여름에 떠나면서 스베틀라나는 이웃에게 꽃에 물 주는 일을 맡기기로 했어요.",
+   "blank": "доверить",
+   "src": "made"
   }
  ],
  "w|довериться": [
@@ -11415,6 +11671,22 @@
    "ko": "드디어 그 자리를 얻었어!",
    "blank": "должность",
    "src": "tatoeba:611747/ae5s en:7051121/AlanF_US"
+  }
+ ],
+ "w|долина": [
+  {
+   "text": "Ферма Андрея стоит в тихой долине у реки.",
+   "en": "Andrey's farm lies in a quiet valley by the river.",
+   "ko": "안드레이의 농장은 강가의 조용한 골짜기에 있어요.",
+   "blank": "долине",
+   "src": "made"
+  },
+  {
+   "text": "Окна новой квартиры Ирины смотрят на зелёную долину.",
+   "en": "The windows of Irina's new flat look out onto a green valley.",
+   "ko": "이리나의 새 아파트 창문은 푸른 골짜기를 향해 있어요.",
+   "blank": "долину",
+   "src": "made"
   }
  ],
  "w|доллар": [
@@ -11993,6 +12265,22 @@
    "src": "made"
   }
  ],
+ "w|дрожать": [
+  {
+   "text": "У Михаила дрожали руки, когда он надевал кольцо невесте.",
+   "en": "Mikhail's hands were trembling when he put the ring on the bride.",
+   "ko": "신부에게 반지를 끼워 줄 때 미하일의 손이 떨렸어요.",
+   "blank": "дрожали",
+   "src": "made"
+  },
+  {
+   "text": "На остановке в ноябре Светлана так замёрзла, что начала дрожать.",
+   "en": "At the bus stop in November Svetlana got so cold that she started to shiver.",
+   "ko": "십일월에 버스 정류장에서 스베틀라나는 너무 추워서 몸이 떨리기 시작했어요.",
+   "blank": "дрожать",
+   "src": "made"
+  }
+ ],
  "w|друг": [
   {
    "text": "Он мой лучший друг.",
@@ -12035,6 +12323,22 @@
    "ko": "너한테 우정은 어떤 의미야?",
    "blank": "дружба",
    "src": "tatoeba:10176109/odexed en:10137979/Ricardo14"
+  }
+ ],
+ "w|дружить": [
+  {
+   "text": "Михаил дружит с невестой ещё со школы.",
+   "en": "Mikhail has been friends with his bride since school.",
+   "ko": "미하일은 신부와 학교 때부터 친구로 지냈어요.",
+   "blank": "дружит",
+   "src": "made"
+  },
+  {
+   "text": "Светлана с детства дружит с девочкой с соседней улицы.",
+   "en": "Svetlana has been friends with a girl from the next street since childhood.",
+   "ko": "스베틀라나는 어릴 때부터 옆 동네 여자아이와 친하게 지내요.",
+   "blank": "дружит",
+   "src": "made"
   }
  ],
  "w|дружище": [
@@ -15715,6 +16019,22 @@
    "src": "tatoeba:7074335/marafon en:7060180/Hybrid"
   }
  ],
+ "w|злодей": [
+  {
+   "text": "Племянник Михаила пришёл на свадьбу в костюме злодея из мультфильма.",
+   "en": "Mikhail's nephew came to the wedding in a costume of a cartoon villain.",
+   "ko": "미하일의 조카가 만화 속 악당 옷을 입고 결혼식에 왔어요.",
+   "blank": "злодея",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Светлана читает сыну сказки, где злодей всегда проигрывает.",
+   "en": "In winter Svetlana reads her son fairy tales where the villain always loses.",
+   "ko": "겨울에 스베틀라나는 악당이 늘 지는 동화를 아들에게 읽어 줘요.",
+   "blank": "злодей",
+   "src": "made"
+  }
+ ],
  "w|злой": [
   {
    "text": "Почему ты всегда такой злой?",
@@ -15793,6 +16113,22 @@
    "ko": "일본어 하는 아는 의사 있어?",
    "blank": "знакомый",
    "src": "tatoeba:8599548/marafon en:3050188/Eldad"
+  }
+ ],
+ "w|знаменитость": [
+  {
+   "text": "Фотографом на свадьбе Михаила была местная знаменитость.",
+   "en": "The photographer at Mikhail's wedding was a local celebrity.",
+   "ko": "미하일의 결혼식 사진작가는 동네 유명 인사였어요.",
+   "blank": "знаменитость",
+   "src": "made"
+  },
+  {
+   "text": "Летом в городок Светланы приезжала какая-то знаменитость снимать кино.",
+   "en": "In summer some celebrity came to Svetlana's town to shoot a film.",
+   "ko": "여름에 어떤 유명인이 영화를 찍으러 스베틀라나가 사는 작은 도시에 왔어요.",
+   "blank": "знаменитость",
+   "src": "made"
   }
  ],
  "w|знаменитый": [
@@ -15949,6 +16285,22 @@
    "ko": "거기는 전쟁터 같아요.",
    "blank": "зона",
    "src": "tatoeba:3977611/odexed en:3635926/CK"
+  }
+ ],
+ "w|зоопарк": [
+  {
+   "text": "Андрей продал пару кроликов в городской зоопарк.",
+   "en": "Andrey sold a couple of rabbits to the city zoo.",
+   "ko": "안드레이는 토끼 두 마리를 시립 동물원에 팔았어요.",
+   "blank": "зоопарк",
+   "src": "made"
+  },
+  {
+   "text": "Новая квартира Ирины находится совсем рядом с зоопарком.",
+   "en": "Irina's new flat is right next to the zoo.",
+   "ko": "이리나의 새 아파트는 동물원 바로 옆에 있어요.",
+   "blank": "зоопарком",
+   "src": "made"
   }
  ],
  "w|зрелище": [
@@ -16237,6 +16589,22 @@
    "ko": "저는 수돗물이 더 좋아요.",
    "blank": "из-под",
    "src": "tatoeba:13847013/marafon en:13819004/araneo"
+  }
+ ],
+ "w|избавить": [
+  {
+   "text": "Агентство обещало избавить Михаила от всех хлопот.",
+   "en": "The wedding agency promised to spare Mikhail all the hassle.",
+   "ko": "웨딩 업체는 미하일이 아무 신경 쓸 일 없게 해 주겠다고 약속했어요.",
+   "blank": "избавить",
+   "src": "made"
+  },
+  {
+   "text": "Светлана надеется, что тёплый апрель избавит её от простуды.",
+   "en": "Svetlana hopes that a warm April will rid her of her cold.",
+   "ko": "스베틀라나는 따뜻한 사월이 감기를 떨쳐 주기를 바라요.",
+   "blank": "избавит",
+   "src": "made"
   }
  ],
  "w|избавиться": [
@@ -18942,6 +19310,22 @@
    "en": "Elena remembers her grandmother, who baked bread for the regiment's command during the war.",
    "ko": "엘레나는 전쟁 때 연대 지휘부에 빵을 구워 주던 할머니를 떠올려요.",
    "blank": "командования",
+   "src": "made"
+  }
+ ],
+ "w|командовать": [
+  {
+   "text": "На свадьбе Михаила всем командовала его энергичная тёща.",
+   "en": "At Mikhail's wedding his energetic mother-in-law was in charge of everything.",
+   "ko": "미하일의 결혼식에서는 활달한 장모님이 모든 걸 지휘했어요.",
+   "blank": "командовала",
+   "src": "made"
+  },
+  {
+   "text": "Зимой Светлана любит командовать детьми, когда они строят снежную крепость.",
+   "en": "In winter Svetlana likes to boss the kids around when they build a snow fort.",
+   "ko": "겨울이면 스베틀라나는 아이들이 눈 요새를 쌓을 때 이것저것 지시하는 걸 좋아해요.",
+   "blank": "командовать",
    "src": "made"
   }
  ],
@@ -21735,6 +22119,22 @@
    "src": "tatoeba:4409746/Selena777 en:4387824/Hybrid"
   }
  ],
+ "w|луч": [
+  {
+   "text": "Первый луч солнца падает на крышу амбара, когда Андрей уже доит коров.",
+   "en": "The first ray of sun falls on the barn roof when Andrey is already milking the cows.",
+   "ko": "첫 햇살이 곳간 지붕에 닿을 때면 안드레이는 벌써 소젖을 짜고 있어요.",
+   "blank": "луч",
+   "src": "made"
+  },
+  {
+   "text": "Ирина заметила, как солнечный луч осветил пустую гостиную.",
+   "en": "Irina noticed a ray of sunlight light up the empty living room.",
+   "ko": "이리나는 햇살 한 줄기가 빈 거실을 비추는 걸 보았어요.",
+   "blank": "луч",
+   "src": "made"
+  }
+ ],
  "w|лучше": [
   {
    "text": "Ты думаешь, что мог бы сделать лучше?",
@@ -21838,6 +22238,22 @@
    "en": "In the plot Anna's heroine hides her lover from her husband.",
    "ko": "줄거리에서 안나가 맡은 여주인공은 남편 몰래 애인을 숨겨요.",
    "blank": "любовника",
+   "src": "made"
+  }
+ ],
+ "w|любовница": [
+  {
+   "text": "Гости смеялись над тостом, в котором Михаил назвал работу своей бывшей любовницей.",
+   "en": "The guests laughed at the toast in which Mikhail called his job his former mistress.",
+   "ko": "미하일이 일을 옛 애인이라고 부른 건배사에 하객들이 웃었어요.",
+   "blank": "любовницей",
+   "src": "made"
+  },
+  {
+   "text": "В старом фильме, который Светлана смотрела зимой, любовница графа оказалась шпионкой.",
+   "en": "In the old film Svetlana watched in winter, the count's mistress turned out to be a spy.",
+   "ko": "스베틀라나가 겨울에 본 옛날 영화에서 백작의 애인은 첩자로 밝혀졌어요.",
+   "blank": "любовница",
    "src": "made"
   }
  ],
@@ -22367,6 +22783,22 @@
    "src": "tatoeba:3759976/Robertpaulson en:1552272/erikspen"
   }
  ],
+ "w|матушка": [
+  {
+   "text": "Перед венчанием Михаил попросил у матушки благословения.",
+   "en": "Before the wedding ceremony Mikhail asked his mother for her blessing.",
+   "ko": "혼례 전에 미하일은 어머니께 축복을 청했어요.",
+   "blank": "матушки",
+   "src": "made"
+  },
+  {
+   "text": "Каждую осень матушка Светланы варит варенье из рябины.",
+   "en": "Every autumn Svetlana's mother makes rowan jam.",
+   "ko": "가을마다 스베틀라나의 어머니는 마가목 잼을 만들어요.",
+   "blank": "матушка",
+   "src": "made"
+  }
+ ],
  "w|матч": [
   {
    "text": "Где я могу увидеть футбольный матч?",
@@ -22775,6 +23207,22 @@
    "blank": "мере"
   }
  ],
+ "w|мерзавец": [
+  {
+   "text": "Михаил в шутку назвал мерзавцем друга, который спрятал туфлю невесты.",
+   "en": "Mikhail jokingly called his friend a scoundrel for hiding the bride's shoe.",
+   "ko": "미하일은 신부 구두를 숨긴 친구를 장난으로 나쁜 놈이라고 불렀어요.",
+   "blank": "мерзавцем",
+   "src": "made"
+  },
+  {
+   "text": "В осеннем сериале, который смотрит Светлана, главный мерзавец оказался братом героя.",
+   "en": "In the autumn series Svetlana is watching, the main scoundrel turned out to be the hero's brother.",
+   "ko": "스베틀라나가 보는 가을 드라마에서 제일 나쁜 놈은 주인공의 형으로 밝혀졌어요.",
+   "blank": "мерзавец",
+   "src": "made"
+  }
+ ],
  "w|мерзкий": [
   {
    "text": "В столовой дали мерзкий кисель, и Андрей оставил его на подносе.",
@@ -22804,6 +23252,22 @@
    "en": "Maria is helping to organise an event in the courtyard for Neighbours' Day.",
    "ko": "마리아는 이웃의 날을 맞아 마당에서 하는 행사 준비를 돕고 있어요.",
    "blank": "мероприятие",
+   "src": "made"
+  }
+ ],
+ "w|мертвец": [
+  {
+   "text": "Михаил так устал после свадьбы, что спал как мертвец до самого обеда.",
+   "en": "Mikhail was so tired after the wedding that he slept like a dead man until lunch.",
+   "ko": "미하일은 결혼식 뒤 너무 지쳐서 점심때까지 죽은 듯이 잤어요.",
+   "blank": "мертвец",
+   "src": "made"
+  },
+  {
+   "text": "В страшной сказке, которую Светлана слушала в детстве, мертвец бродил по зимнему лесу.",
+   "en": "In the scary tale Svetlana heard as a child, a dead man wandered through the winter forest.",
+   "ko": "스베틀라나가 어릴 때 들은 무서운 옛날이야기에서는 죽은 사람이 겨울 숲을 헤맸어요.",
+   "blank": "мертвец",
    "src": "made"
   }
  ],
@@ -23459,6 +23923,22 @@
    "src": "made"
   }
  ],
+ "w|младенец": [
+  {
+   "text": "Во время клятв в зале заплакал младенец, и Михаил улыбнулся.",
+   "en": "During the vows a baby started crying in the hall, and Mikhail smiled.",
+   "ko": "서약하는 동안 식장에서 아기가 울기 시작하자 미하일이 미소 지었어요.",
+   "blank": "младенец",
+   "src": "made"
+  },
+  {
+   "text": "Весной у соседей Светланы родился младенец, и теперь по утрам слышен его плач.",
+   "en": "In spring a baby was born to Svetlana's neighbours, and now its crying can be heard in the mornings.",
+   "ko": "봄에 스베틀라나의 이웃집에 아기가 태어나서 이제 아침마다 울음소리가 들려요.",
+   "blank": "младенец",
+   "src": "made"
+  }
+ ],
  "w|младший": [
   {
    "text": "У тебя есть младший брат?",
@@ -23718,6 +24198,22 @@
    "en": "When the movers carried the piano up the stairs, Anna was ready to pray.",
    "ko": "이삿짐 직원들이 피아노를 들고 계단을 오를 때 안나는 기도라도 하고 싶었어요.",
    "blank": "молиться",
+   "src": "made"
+  }
+ ],
+ "w|молния": [
+  {
+   "text": "Ночью в старый дуб у фермы Андрея ударила молния.",
+   "en": "At night lightning struck the old oak by Andrey's farm.",
+   "ko": "밤에 안드레이네 농장 옆 오래된 참나무에 벼락이 떨어졌어요.",
+   "blank": "молния",
+   "src": "made"
+  },
+  {
+   "text": "На сумке Ирины сломалась молния, и вещи посыпались на лестницу.",
+   "en": "The zipper on Irina's bag broke, and her things spilled onto the stairs.",
+   "ko": "이리나의 가방 지퍼가 고장 나서 물건들이 계단에 쏟아졌어요.",
+   "blank": "молния",
    "src": "made"
   }
  ],
@@ -24253,6 +24749,22 @@
    "src": "tatoeba:7498744/fjay69 en:3329708/CK"
   }
  ],
+ "w|муха": [
+  {
+   "text": "На кухне у Андрея целый день жужжит муха, и он никак не может её поймать.",
+   "en": "A fly has been buzzing in Andrey's kitchen all day, and he just can't catch it.",
+   "ko": "안드레이네 부엌에서 파리 한 마리가 하루 종일 윙윙거리는데 도무지 잡을 수가 없어요.",
+   "blank": "муха",
+   "src": "made"
+  },
+  {
+   "text": "Пока Ирина таскала коробки, в открытую дверь залетела муха.",
+   "en": "While Irina was carrying boxes, a fly flew in through the open door.",
+   "ko": "이리나가 상자를 나르는 동안 열린 문으로 파리가 날아 들어왔어요.",
+   "blank": "муха",
+   "src": "made"
+  }
+ ],
  "w|мы": [
   {
    "text": "Мы уже рядом.",
@@ -24562,6 +25074,22 @@
    "en": "I want to visit my grandma on the weekend.",
    "ko": "주말에 할머니 댁에 가 보고 싶어요.",
    "blank": "навестить",
+   "src": "made"
+  }
+ ],
+ "w|навещать": [
+  {
+   "text": "Перед свадьбой Михаил каждый день навещал бабушку, чтобы помочь ей с нарядом.",
+   "en": "Before the wedding Mikhail visited his grandmother every day to help her with her outfit.",
+   "ko": "결혼식 전에 미하일은 할머니 옷 준비를 도우려고 매일 할머니를 찾아갔어요.",
+   "blank": "навещал",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Светлана чаще навещает родителей в деревне.",
+   "en": "In autumn Svetlana visits her parents in the village more often.",
+   "ko": "가을에는 스베틀라나가 시골에 계신 부모님을 더 자주 찾아가요.",
+   "blank": "навещает",
    "src": "made"
   }
  ],
@@ -25154,6 +25682,22 @@
    "en": "The editor took Olga's hint and gave her a day off.",
    "ko": "편집장은 올가의 눈치를 알아채고 하루 쉬게 해 줬어요.",
    "blank": "намёк",
+   "src": "made"
+  }
+ ],
+ "w|намекать": [
+  {
+   "text": "Жена давно намекает Андрею, что пора купить новый трактор.",
+   "en": "Andrey's wife has been hinting for a long time that it's time to buy a new tractor.",
+   "ko": "아내는 이제 새 트랙터를 살 때가 됐다고 오래전부터 안드레이에게 넌지시 말해요.",
+   "blank": "намекает",
+   "src": "made"
+  },
+  {
+   "text": "Подруга намекала Ирине, что пора бы устроить новоселье.",
+   "en": "Irina's friend kept hinting that it was time to throw a housewarming party.",
+   "ko": "친구는 이제 집들이를 할 때가 됐다고 이리나에게 은근히 말했어요.",
+   "blank": "намекала",
    "src": "made"
   }
  ],
@@ -26055,6 +26599,22 @@
    "src": "made"
   }
  ],
+ "w|наткнуться": [
+  {
+   "text": "Андрей боялся наткнуться в темноте на брошенные грабли.",
+   "en": "Andrey was afraid of stumbling onto a discarded rake in the dark.",
+   "ko": "안드레이는 어둠 속에서 아무렇게나 놓인 갈퀴에 걸려 넘어질까 봐 조심했어요.",
+   "blank": "наткнуться",
+   "src": "made"
+  },
+  {
+   "text": "Разбирая антресоли, Ирина наткнулась на свои школьные дневники.",
+   "en": "While sorting out the top shelves, Irina came across her old school diaries.",
+   "ko": "이리나는 다락 선반을 정리하다가 학창 시절 일기장을 발견했어요.",
+   "blank": "наткнулась",
+   "src": "made"
+  }
+ ],
  "w|наука": [
   {
    "text": "Мне всегда была интересна наука.",
@@ -26451,6 +27011,22 @@
    "en": "There's no reasoning with him.",
    "ko": "그와는 말이 안 통해.",
    "blank": "невозможно"
+  }
+ ],
+ "w|негодяй": [
+  {
+   "text": "Ведущий свадьбы назвал Михаила счастливым негодяем, который украл сердце невесты.",
+   "en": "The wedding host called Mikhail a lucky rascal who stole the bride's heart.",
+   "ko": "결혼식 사회자는 미하일을 신부의 마음을 훔친 운 좋은 녀석이라고 불렀어요.",
+   "blank": "негодяем",
+   "src": "made"
+  },
+  {
+   "text": "Светлана называет мартовский ветер настоящим негодяем, потому что он ломает её зонты.",
+   "en": "Svetlana calls the March wind a real rascal because it breaks her umbrellas.",
+   "ko": "스베틀라나는 삼월 바람이 우산을 자꾸 망가뜨려서 진짜 못된 녀석이라고 불러요.",
+   "blank": "негодяем",
+   "src": "made"
   }
  ],
  "w|недавно": [
@@ -29993,6 +30569,22 @@
    "src": "made"
   }
  ],
+ "w|окружить": [
+  {
+   "text": "Андрей решил окружить огород высоким забором от кабанов.",
+   "en": "Andrey decided to surround the vegetable garden with a high fence against wild boars.",
+   "ko": "안드레이는 멧돼지를 막으려고 텃밭을 높은 울타리로 두르기로 했어요.",
+   "blank": "окружить",
+   "src": "made"
+  },
+  {
+   "text": "Коробки окружили Ирину со всех сторон, и она не знала, с чего начать.",
+   "en": "Boxes surrounded Irina on all sides, and she didn't know where to start.",
+   "ko": "상자들이 사방에서 이리나를 에워싸서 어디서부터 시작해야 할지 몰랐어요.",
+   "blank": "окружили",
+   "src": "made"
+  }
+ ],
  "w|октябрь": [
   {
    "text": "В октябре Сергей собирает с деревьев последние яблоки.",
@@ -30006,6 +30598,22 @@
    "en": "Maria jokes that October is wall-to-wall birthdays for their class.",
    "ko": "마리아는 시월이 자기 반 생일 잔치 달이라고 농담해요.",
    "blank": "октябре",
+   "src": "made"
+  }
+ ],
+ "w|олень": [
+  {
+   "text": "Зимой к ферме Андрея из леса иногда выходит олень.",
+   "en": "In winter a deer sometimes comes out of the forest to Andrey's farm.",
+   "ko": "겨울에는 가끔 사슴이 숲에서 나와 안드레이네 농장까지 와요.",
+   "blank": "олень",
+   "src": "made"
+  },
+  {
+   "text": "Ирина упаковала статуэтку оленя, которую ей подарила подруга.",
+   "en": "Irina packed the deer figurine her friend had given her.",
+   "ko": "이리나는 친구가 선물한 사슴 조각상을 포장했어요.",
+   "blank": "оленя",
    "src": "made"
   }
  ],
@@ -30474,6 +31082,22 @@
    "en": "Olga said she'd seen a crime film where the heroine was issued an arrest warrant.",
    "ko": "올가는 여주인공에게 체포 영장이 발부되는 형사 영화를 봤다고 했어요.",
    "blank": "ордер",
+   "src": "made"
+  }
+ ],
+ "w|орёл": [
+  {
+   "text": "Над пастбищем Андрея часто кружит орёл, высматривая зайцев.",
+   "en": "An eagle often circles over Andrey's pasture, looking out for hares.",
+   "ko": "안드레이의 목초지 위로 독수리가 토끼를 찾으며 자주 맴돌아요.",
+   "blank": "орёл",
+   "src": "made"
+  },
+  {
+   "text": "Новый сосед рассказал Ирине, что в горах за городом живёт орёл.",
+   "en": "The new neighbour told Irina that an eagle lives in the mountains outside town.",
+   "ko": "새 이웃은 도시 밖 산에 독수리가 산다고 이리나에게 얘기해 줬어요.",
+   "blank": "орёл",
    "src": "made"
   }
  ],
@@ -32117,6 +32741,38 @@
    "src": "tatoeba:7998778/soweli_Elepanto en:22934/auxitt"
   }
  ],
+ "w|отстранить": [
+  {
+   "text": "Андрею пришлось отстранить нового работника от трактора.",
+   "en": "Andrey had to take the new worker off the tractor.",
+   "ko": "안드레이는 새 일꾼을 트랙터 일에서 빼야 했어요.",
+   "blank": "отстранить",
+   "src": "made"
+  },
+  {
+   "text": "Ирина решила отстранить мужа от упаковки посуды, потому что он всё бьёт.",
+   "en": "Irina decided to keep her husband away from packing the dishes because he breaks everything.",
+   "ko": "남편이 뭐든 깨뜨려서 이리나는 그릇 포장에서 남편을 빼기로 했어요.",
+   "blank": "отстранить",
+   "src": "made"
+  }
+ ],
+ "w|отступить": [
+  {
+   "text": "Когда начался дождь, Михаилу пришлось отступить с гостями под навес.",
+   "en": "When it started to rain, Mikhail had to retreat with the guests under the awning.",
+   "ko": "비가 오기 시작하자 미하일은 하객들과 함께 차양 밑으로 물러나야 했어요.",
+   "blank": "отступить",
+   "src": "made"
+  },
+  {
+   "text": "Светлана радуется, когда зима наконец решает отступить.",
+   "en": "Svetlana is glad when winter finally decides to retreat.",
+   "ko": "스베틀라나는 겨울이 드디어 물러가면 기뻐해요.",
+   "blank": "отступить",
+   "src": "made"
+  }
+ ],
  "w|отсутствие": [
   {
    "text": "Чем вы объясняете ваше отсутствие?",
@@ -33231,6 +33887,22 @@
    "blank": "Первая"
   }
  ],
+ "w|перевернуть": [
+  {
+   "text": "Племянник Михаила случайно перевернул вазу с цветами на главном столе.",
+   "en": "Mikhail's nephew accidentally knocked over the vase of flowers on the head table.",
+   "ko": "미하일의 조카가 주 테이블의 꽃병을 실수로 엎었어요.",
+   "blank": "перевернул",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Светлана не забывает перевернуть матрас и проветрить одеяла.",
+   "en": "In autumn Svetlana doesn't forget to flip the mattress and air the blankets.",
+   "ko": "가을이면 스베틀라나는 매트리스를 뒤집고 이불을 바람에 말리는 걸 잊지 않아요.",
+   "blank": "перевернуть",
+   "src": "made"
+  }
+ ],
  "w|перевести": [
   {
    "text": "Вы не могли бы перевести это для меня?",
@@ -34309,6 +34981,22 @@
    "ko": "그녀가 제 어깨에 머리를 기댔어요.",
    "blank": "плечо",
    "src": "tatoeba:5217866/Selena777 en:4149469/Hybrid"
+  }
+ ],
+ "w|плод": [
+  {
+   "text": "Андрей сорвал с молодой яблони первый спелый плод и отдал его дочке.",
+   "en": "Andrey picked the first ripe fruit from the young apple tree and gave it to his daughter.",
+   "ko": "안드레이는 어린 사과나무에서 처음 익은 열매를 따서 딸에게 줬어요.",
+   "blank": "плод",
+   "src": "made"
+  },
+  {
+   "text": "Соседка сказала Ирине, что груша во дворе даёт плоды не каждый год.",
+   "en": "The neighbour told Irina that the pear tree in the yard doesn't bear fruit every year.",
+   "ko": "이웃은 마당의 배나무가 해마다 열매를 맺지는 않는다고 이리나에게 말했어요.",
+   "blank": "плоды",
+   "src": "made"
   }
  ],
  "w|плоть": [
@@ -36123,6 +36811,38 @@
    "src": "tatoeba:8018186/marafon en:6252252/CK"
   }
  ],
+ "w|подчиняться": [
+  {
+   "text": "Михаил смеётся, что теперь будет подчиняться жене во всём.",
+   "en": "Mikhail laughs that now he will obey his wife in everything.",
+   "ko": "미하일은 이제 모든 일에서 아내 말을 따르겠다며 웃어요.",
+   "blank": "подчиняться",
+   "src": "made"
+  },
+  {
+   "text": "Светлана смеётся, что её настроение подчиняется погоде за окном.",
+   "en": "Svetlana laughs that her mood obeys the weather outside the window.",
+   "ko": "스베틀라나는 자기 기분이 창밖 날씨를 따라간다며 웃어요.",
+   "blank": "подчиняется",
+   "src": "made"
+  }
+ ],
+ "w|подъём": [
+  {
+   "text": "Михаил запыхался во время подъёма по лестнице к церкви.",
+   "en": "Mikhail got out of breath while climbing the stairs to the church.",
+   "ko": "교회로 올라가는 계단에서 미하일은 숨이 찼어요.",
+   "blank": "подъёма",
+   "src": "made"
+  },
+  {
+   "text": "Летом Светлана ходит в горы и особенно любит ранний подъём к перевалу.",
+   "en": "In summer Svetlana goes hiking and especially loves the early climb to the pass.",
+   "ko": "여름에 스베틀라나는 산에 가는데, 이른 아침에 고개로 오르는 길을 특히 좋아해요.",
+   "blank": "подъём",
+   "src": "made"
+  }
+ ],
  "w|поезд": [
   {
    "text": "Поторопись, или мы опоздаем на поезд!",
@@ -37737,6 +38457,22 @@
    "en": "He always helps me.",
    "ko": "그 사람은 늘 나를 도와.",
    "blank": "помогает"
+  }
+ ],
+ "w|помолвка": [
+  {
+   "text": "Свадьбу Михаил сыграл ровно через год после помолвки.",
+   "en": "Mikhail held the wedding exactly one year after the engagement.",
+   "ko": "미하일은 약혼하고 딱 일 년 뒤에 결혼식을 올렸어요.",
+   "blank": "помолвки",
+   "src": "made"
+  },
+  {
+   "text": "Осенью Светлана узнала о помолвке своей лучшей подруги.",
+   "en": "In autumn Svetlana learned about her best friend's engagement.",
+   "ko": "가을에 스베틀라나는 가장 친한 친구가 약혼했다는 소식을 들었어요.",
+   "blank": "помолвке",
+   "src": "made"
   }
  ],
  "w|помолиться": [
@@ -39369,6 +40105,22 @@
    "ko": "우리 첫 키스 기억나?",
    "blank": "поцелуй",
    "src": "tatoeba:9020485/marafon en:8990553/CK"
+  }
+ ],
+ "w|почва": [
+  {
+   "text": "Весной Андрей проверяет, прогрелась ли почва на поле.",
+   "en": "In spring Andrey checks whether the soil in the field has warmed up.",
+   "ko": "봄이면 안드레이는 밭의 흙이 따뜻해졌는지 살펴봐요.",
+   "blank": "почва",
+   "src": "made"
+  },
+  {
+   "text": "На новом балконе Ирина пересадила цветы в свежую почву.",
+   "en": "On the new balcony Irina repotted the flowers in fresh soil.",
+   "ko": "이리나는 새 발코니에서 꽃들을 새 흙에 옮겨 심었어요.",
+   "blank": "почву",
+   "src": "made"
   }
  ],
  "w|почему": [
@@ -41027,6 +41779,22 @@
    "src": "made"
   }
  ],
+ "w|привыкать": [
+  {
+   "text": "Михаил всё ещё привыкает к кольцу на пальце.",
+   "en": "Mikhail is still getting used to the ring on his finger.",
+   "ko": "미하일은 아직도 손가락의 반지에 익숙해지는 중이에요.",
+   "blank": "привыкает",
+   "src": "made"
+  },
+  {
+   "text": "Каждую весну Светлана заново привыкает вставать при свете.",
+   "en": "Every spring Svetlana gets used again to waking up when it's light.",
+   "ko": "봄마다 스베틀라나는 밝을 때 일어나는 데 새로 익숙해져요.",
+   "blank": "привыкает",
+   "src": "made"
+  }
+ ],
  "w|привыкнуть": [
   {
    "text": "Я, пожалуй, смог бы к этому привыкнуть.",
@@ -41261,6 +42029,22 @@
    "ko": "그녀는 병원 예약을 할 거예요.",
    "blank": "прием",
    "src": "tatoeba:10658637/carlosalberto en:10658616/carlosalberto"
+  }
+ ],
+ "w|приёмный": [
+  {
+   "text": "На свадьбе Михаила его приёмный отец произнёс самый трогательный тост.",
+   "en": "At Mikhail's wedding his adoptive father gave the most touching toast.",
+   "ko": "미하일의 결혼식에서 양아버지가 가장 감동적인 건배사를 했어요.",
+   "blank": "приёмный",
+   "src": "made"
+  },
+  {
+   "text": "Весной Светлана с мужем взяла из приюта приёмного котёнка.",
+   "en": "In spring Svetlana and her husband adopted a kitten from a shelter.",
+   "ko": "봄에 스베틀라나는 남편과 보호소에서 새끼 고양이를 입양했어요.",
+   "blank": "приёмного",
+   "src": "made"
   }
  ],
  "w|приехать": [
@@ -41955,6 +42739,22 @@
    "src": "tatoeba:3527343/marafon en:1324381/Scott"
   }
  ],
+ "w|приступать": [
+  {
+   "text": "Андрей приступает к сенокосу, как только высохнет роса.",
+   "en": "Andrey starts haymaking as soon as the dew dries.",
+   "ko": "안드레이는 이슬이 마르자마자 풀베기를 시작해요.",
+   "blank": "приступает",
+   "src": "made"
+  },
+  {
+   "text": "К распаковке Ирина приступила только через неделю.",
+   "en": "Irina only started unpacking a week later.",
+   "ko": "이리나는 일주일이 지나서야 짐 풀기를 시작했어요.",
+   "blank": "приступила",
+   "src": "made"
+  }
+ ],
  "w|приступить": [
   {
    "text": "После объяснения учитель разрешил классу приступить к контрольной.",
@@ -42207,6 +43007,22 @@
    "src": "made"
   }
  ],
+ "w|пришелец": [
+  {
+   "text": "Михаил пришёл на собственную свадьбу в таком блестящем пиджаке, что друзья прозвали его пришельцем.",
+   "en": "Mikhail came to his own wedding in such a shiny jacket that his friends nicknamed him the alien.",
+   "ko": "미하일이 자기 결혼식에 너무 번쩍이는 재킷을 입고 와서 친구들이 외계인이라고 불렀어요.",
+   "blank": "пришельцем",
+   "src": "made"
+  },
+  {
+   "text": "Осенним вечером Светлана читала дочке сказку про доброго пришельца.",
+   "en": "On an autumn evening Svetlana read her daughter a fairy tale about a kind alien.",
+   "ko": "가을 저녁에 스베틀라나는 딸에게 착한 외계인 이야기를 읽어 줬어요.",
+   "blank": "пришельца",
+   "src": "made"
+  }
+ ],
  "w|приют": [
   {
    "text": "Потерявшуюся собаку Дмитрий отвёз в городской приют.",
@@ -42309,6 +43125,22 @@
    "ko": "다른 건 해 보고 싶지 않아요.",
    "blank": "пробовать",
    "src": "tatoeba:8664021/AntonKhorev en:2573233/Hybrid"
+  }
+ ],
+ "w|пробраться": [
+  {
+   "text": "Михаилу пришлось пробраться через толпу гостей, чтобы найти невесту.",
+   "en": "Mikhail had to make his way through the crowd of guests to find the bride.",
+   "ko": "미하일은 신부를 찾으려고 하객들 사이를 비집고 지나가야 했어요.",
+   "blank": "пробраться",
+   "src": "made"
+  },
+  {
+   "text": "Зимой в сарай Светланы смогла пробраться лиса.",
+   "en": "In winter a fox managed to sneak into Svetlana's shed.",
+   "ko": "겨울에 여우가 스베틀라나네 헛간에 몰래 들어왔어요.",
+   "blank": "пробраться",
+   "src": "made"
   }
  ],
  "w|пробыть": [
@@ -42431,6 +43263,22 @@
    "en": "We're spending the evening at home.",
    "ko": "저녁은 집에서 보내.",
    "blank": "проводим"
+  }
+ ],
+ "w|прогнать": [
+  {
+   "text": "Собака Андрея быстро прогнала ворон с поля.",
+   "en": "Andrey's dog quickly chased the crows off the field.",
+   "ko": "안드레이의 개가 까마귀들을 밭에서 금세 쫓아냈어요.",
+   "blank": "прогнала",
+   "src": "made"
+  },
+  {
+   "text": "Ирина прогнала детей из комнаты, чтобы спокойно собрать шкаф.",
+   "en": "Irina shooed the kids out of the room so she could assemble the wardrobe in peace.",
+   "ko": "이리나는 옷장을 차분히 조립하려고 아이들을 방에서 내보냈어요.",
+   "blank": "прогнала",
+   "src": "made"
   }
  ],
  "w|проголосовать": [
@@ -42796,6 +43644,22 @@
    "en": "Don't be afraid to lose, just play.",
    "ko": "지는 걸 두려워하지 말고 그냥 해.",
    "blank": "проиграть",
+   "src": "made"
+  }
+ ],
+ "w|проигрывать": [
+  {
+   "text": "Андрей терпеть не может проигрывать соседу в конкурсе на самую большую тыкву.",
+   "en": "Andrey can't stand losing to his neighbour in the biggest pumpkin contest.",
+   "ko": "안드레이는 가장 큰 호박 대회에서 이웃에게 지는 걸 정말 싫어해요.",
+   "blank": "проигрывать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина не хотела проигрывать спор с хозяином квартиры о залоге.",
+   "en": "Irina didn't want to lose the argument with the landlord about the deposit.",
+   "ko": "이리나는 보증금 문제로 집주인과 벌인 다툼에서 지고 싶지 않았어요.",
+   "blank": "проигрывать",
    "src": "made"
   }
  ],
@@ -43170,6 +44034,22 @@
    "en": "Svetlana's daughter prepared for her music school audition right in the back room.",
    "ko": "스베틀라나의 딸은 창고에서 음악 학교 오디션을 준비했어요.",
    "blank": "прослушиванию",
+   "src": "made"
+  }
+ ],
+ "w|просмотр": [
+  {
+   "text": "После просмотра прогноза погоды Андрей решил убрать сено сегодня.",
+   "en": "After checking the weather forecast Andrey decided to bring in the hay today.",
+   "ko": "일기 예보를 보고 나서 안드레이는 오늘 건초를 거둬들이기로 했어요.",
+   "blank": "просмотра",
+   "src": "made"
+  },
+  {
+   "text": "Ирина сняла эту квартиру сразу после первого просмотра.",
+   "en": "Irina rented this flat right after the first viewing.",
+   "ko": "이리나는 처음 집을 보고 나서 바로 이 아파트를 계약했어요.",
+   "blank": "просмотра",
    "src": "made"
   }
  ],
@@ -44653,6 +45533,22 @@
    "src": "made"
   }
  ],
+ "w|развестись": [
+  {
+   "text": "Тётя Михаила давно успела развестись и теперь шутит, что разбирается в браке лучше всех.",
+   "en": "Mikhail's aunt got divorced long ago and now jokes that she knows marriage better than anyone.",
+   "ko": "미하일의 이모는 진작에 이혼했는데, 결혼은 자기가 제일 잘 안다고 농담해요.",
+   "blank": "развестись",
+   "src": "made"
+  },
+  {
+   "text": "В романе, который Светлана читала зимой, героиня решила развестись и уехать к морю.",
+   "en": "In the novel Svetlana read in winter, the heroine decided to divorce and move to the sea.",
+   "ko": "스베틀라나가 겨울에 읽은 소설에서 여주인공은 이혼하고 바닷가로 떠나기로 했어요.",
+   "blank": "развестись",
+   "src": "made"
+  }
+ ],
  "w|развитие": [
   {
    "text": "Павел читает книгу о развитии письменности.",
@@ -44743,6 +45639,22 @@
    "ko": "괜찮아요, 계산은 나눠서 하면 돼요.",
    "blank": "разделить",
    "src": "tatoeba:13702555/gregoryguy en:837029/nthkmf"
+  }
+ ],
+ "w|разделиться": [
+  {
+   "text": "Гости Михаила разделились на две команды для весёлого конкурса.",
+   "en": "Mikhail's guests split into two teams for the wedding contest.",
+   "ko": "미하일의 하객들은 결혼식 게임을 하려고 두 팀으로 나뉘었어요.",
+   "blank": "разделились",
+   "src": "made"
+  },
+  {
+   "text": "Осенью дорога у дома Светланы разделилась на две колеи из-за луж.",
+   "en": "In autumn the road by Svetlana's house split into two ruts because of the puddles.",
+   "ko": "가을에 스베틀라나네 집 앞 길은 물웅덩이 때문에 바퀴 자국 두 줄로 갈라졌어요.",
+   "blank": "разделилась",
+   "src": "made"
   }
  ],
  "w|раздражать": [
@@ -45012,6 +45924,22 @@
    "en": "Olga believes that gossip destroys trust in journalists.",
    "ko": "올가는 뒷소문이 기자에 대한 신뢰를 무너뜨린다고 생각해요.",
    "blank": "разрушают",
+   "src": "made"
+  }
+ ],
+ "w|разрушение": [
+  {
+   "text": "После свадьбы Михаил с ужасом смотрел на разрушение, оставшееся в зале.",
+   "en": "After the wedding Mikhail looked in horror at the wreckage left in the hall.",
+   "ko": "결혼식이 끝나고 미하일은 엉망이 된 식장을 보고 기겁했어요.",
+   "blank": "разрушение",
+   "src": "made"
+  },
+  {
+   "text": "Светлана прочитала в газете о разрушении старого моста после весеннего паводка.",
+   "en": "Svetlana read in the newspaper about the destruction of the old bridge after the spring flood.",
+   "ko": "스베틀라나는 봄철 홍수로 옛 다리가 무너졌다는 기사를 신문에서 읽었어요.",
+   "blank": "разрушении",
    "src": "made"
   }
  ],
@@ -45612,6 +46540,22 @@
    "en": "You can always count on my brother's help.",
    "ko": "형 도움은 언제든 기대할 수 있어요.",
    "blank": "рассчитывать",
+   "src": "made"
+  }
+ ],
+ "w|растение": [
+  {
+   "text": "Андрей опрыскивает каждое растение в теплице вручную.",
+   "en": "Andrey sprays every plant in the greenhouse by hand.",
+   "ko": "안드레이는 온실의 식물 하나하나에 손으로 약을 뿌려요.",
+   "blank": "растение",
+   "src": "made"
+  },
+  {
+   "text": "Больше всего Ирина волнуется, как растения перенесут переезд.",
+   "en": "Most of all Irina worries about how the plants will handle the move.",
+   "ko": "이리나는 무엇보다 화분 식물들이 이사를 잘 견딜지 걱정이에요.",
+   "blank": "растения",
    "src": "made"
   }
  ],
@@ -47019,6 +47963,22 @@
    "src": "tatoeba:4450148/Selena777 en:1039719/tatomeimei"
   }
  ],
+ "w|рыбка": [
+  {
+   "text": "Дочка Андрея поймала в пруду маленькую золотистую рыбку.",
+   "en": "Andrey's daughter caught a little golden fish in the pond.",
+   "ko": "안드레이의 딸이 연못에서 작은 금빛 물고기를 잡았어요.",
+   "blank": "рыбку",
+   "src": "made"
+  },
+  {
+   "text": "Аквариум везли отдельно, и Ирина всю дорогу переживала за рыбку.",
+   "en": "The aquarium was transported separately, and Irina worried about the fish the whole way.",
+   "ko": "어항은 따로 옮겼는데 이리나는 가는 내내 물고기 걱정을 했어요.",
+   "blank": "рыбку",
+   "src": "made"
+  }
+ ],
  "w|рынок": [
   {
    "text": "В какое время ты ходишь на рынок?",
@@ -47359,6 +48319,22 @@
    "src": "made"
   }
  ],
+ "w|свадебный": [
+  {
+   "text": "Михаил три недели выбирал свадебный костюм и в итоге купил самый простой.",
+   "en": "Mikhail spent three weeks choosing a wedding suit and in the end bought the simplest one.",
+   "ko": "미하일은 결혼식 정장을 삼 주 동안 고르다가 결국 제일 단순한 걸 샀어요.",
+   "blank": "свадебный",
+   "src": "made"
+  },
+  {
+   "text": "Светлана хранит свадебный альбом родителей и пересматривает его каждую осень.",
+   "en": "Svetlana keeps her parents' wedding album and looks through it every autumn.",
+   "ko": "스베틀라나는 부모님의 결혼 앨범을 간직하고 가을마다 다시 넘겨 봐요.",
+   "blank": "свадебный",
+   "src": "made"
+  }
+ ],
  "w|свадьба": [
   {
    "text": "Свадьба в субботу.",
@@ -47419,6 +48395,22 @@
    "ko": "바람이 들어오게 창문을 열었어요.",
    "blank": "свежий",
    "src": "tatoeba:4561976/marafon en:2389576/CK"
+  }
+ ],
+ "w|свернуть": [
+  {
+   "text": "У старой мельницы Андрей попросил водителя свернуть налево к ферме.",
+   "en": "At the old mill Andrey asked the driver to turn left towards the farm.",
+   "ko": "오래된 방앗간 앞에서 안드레이는 운전기사에게 농장 쪽으로 좌회전해 달라고 했어요.",
+   "blank": "свернуть",
+   "src": "made"
+  },
+  {
+   "text": "Ирина помогла свернуть большой ковёр и перевязать его верёвкой.",
+   "en": "Irina helped roll up the big rug and tie it with string.",
+   "ko": "이리나는 큰 카펫을 말아서 끈으로 묶는 걸 도왔어요.",
+   "blank": "свернуть",
+   "src": "made"
   }
  ],
  "w|сверху": [
@@ -47820,6 +48812,22 @@
    "en": "In summer Natalia got sunburned at the outdoor pool because she forgot her sunscreen.",
    "ko": "여름에 나탈리야는 선크림을 깜빡해서 야외 수영장에서 살이 탔어요.",
    "blank": "сгорела",
+   "src": "made"
+  }
+ ],
+ "w|сдавать": [
+  {
+   "text": "Через неделю после свадьбы Михаилу предстоит сдавать экзамен на права.",
+   "en": "A week after the wedding Mikhail has to take his driving test.",
+   "ko": "결혼식 일주일 뒤에 미하일은 운전면허 시험을 봐야 해요.",
+   "blank": "сдавать",
+   "src": "made"
+  },
+  {
+   "text": "Каждое лето Светлана помогает сыну сдавать книги в библиотеку.",
+   "en": "Every summer Svetlana helps her son return books to the library.",
+   "ko": "여름마다 스베틀라나는 아들이 도서관에 책을 반납하는 걸 도와줘요.",
+   "blank": "сдавать",
    "src": "made"
   }
  ],
@@ -48521,6 +49529,22 @@
    "blank": "сестре"
   }
  ],
+ "w|сестрёнка": [
+  {
+   "text": "Младшая сестрёнка Михаила несла кольца по проходу.",
+   "en": "Mikhail's little sister carried the rings down the aisle.",
+   "ko": "미하일의 여동생이 반지를 들고 통로를 걸어갔어요.",
+   "blank": "сестрёнка",
+   "src": "made"
+  },
+  {
+   "text": "Каждую зиму Светлана с сестрёнкой лепят снеговика во дворе.",
+   "en": "Every winter Svetlana and her little sister build a snowman in the yard.",
+   "ko": "겨울마다 스베틀라나는 여동생과 마당에 눈사람을 만들어요.",
+   "blank": "сестрёнкой",
+   "src": "made"
+  }
+ ],
  "w|сесть": [
   {
    "text": "Сядь, не стой в дверях.",
@@ -48838,6 +49862,22 @@
    "en": "In the evening Elena read her son a bedtime story.",
    "ko": "저녁에 엘레나는 아들에게 잠자리 동화를 읽어 줬어요.",
    "blank": "сказку",
+   "src": "made"
+  }
+ ],
+ "w|скала": [
+  {
+   "text": "Козы Андрея любят забираться на скалу за пастбищем.",
+   "en": "Andrey's goats love climbing the rock behind the pasture.",
+   "ko": "안드레이의 염소들은 목초지 뒤 바위에 올라가는 걸 좋아해요.",
+   "blank": "скалу",
+   "src": "made"
+  },
+  {
+   "text": "Шкаф Ирины оказался тяжёлым, как скала, и грузчики еле его подняли.",
+   "en": "Irina's wardrobe turned out to be as heavy as a rock, and the movers barely lifted it.",
+   "ko": "이리나의 옷장은 바위처럼 무거워서 이삿짐센터 직원들이 겨우 들어 올렸어요.",
+   "blank": "скала",
    "src": "made"
   }
  ],
@@ -49440,6 +50480,22 @@
    "en": "Svetlana's running watch broke the day before the marathon.",
    "ko": "마라톤 전날 스베틀라나의 러닝 시계가 고장 났어요.",
    "blank": "сломались",
+   "src": "made"
+  }
+ ],
+ "w|слон": [
+  {
+   "text": "Андрей шутит, что его новый трактор пьёт солярку, как слон.",
+   "en": "Andrey jokes that his new tractor drinks diesel like an elephant.",
+   "ko": "안드레이는 새 트랙터가 코끼리처럼 경유를 마셔 댄다고 농담해요.",
+   "blank": "слон",
+   "src": "made"
+  },
+  {
+   "text": "Ирина бережно обернула в газету фарфорового слона, подарок бабушки.",
+   "en": "Irina carefully wrapped the porcelain elephant, a gift from her grandmother, in newspaper.",
+   "ko": "이리나는 할머니가 주신 도자기 코끼리를 신문지로 조심스럽게 쌌어요.",
+   "blank": "слона",
    "src": "made"
   }
  ],
@@ -50891,6 +51947,22 @@
    "src": "tatoeba:2796090/marafon en:992019/CK"
   }
  ],
+ "w|солнышко": [
+  {
+   "text": "Утром выглянуло солнышко, и Андрей выпустил кур во двор.",
+   "en": "In the morning the sun peeked out, and Andrey let the chickens out into the yard.",
+   "ko": "아침에 해님이 고개를 내밀자 안드레이는 닭들을 마당에 풀어 놓았어요.",
+   "blank": "солнышко",
+   "src": "made"
+  },
+  {
+   "text": "В новой спальне Ирины по утрам светит солнышко.",
+   "en": "In Irina's new bedroom the sun shines in the mornings.",
+   "ko": "이리나의 새 침실에는 아침마다 햇살이 들어요.",
+   "blank": "солнышко",
+   "src": "made"
+  }
+ ],
  "w|соль": [
   {
    "text": "Вы не могли бы передать соль и перец?",
@@ -51122,6 +52194,22 @@
    "en": "The cat managed to tear off its bandage, and Natalia had to bandage it again.",
    "ko": "고양이가 붕대를 뜯어내는 바람에 나탈리야는 다시 감아 줘야 했어요.",
    "blank": "сорвать",
+   "src": "made"
+  }
+ ],
+ "w|сорваться": [
+  {
+   "text": "Сделка с молокозаводом чуть не сорвалась из-за погоды, но Андрей договорился.",
+   "en": "The deal with the dairy almost fell through because of the weather, but Andrey worked it out.",
+   "ko": "유제품 공장과의 거래가 날씨 때문에 깨질 뻔했지만 안드레이가 잘 조율했어요.",
+   "blank": "сорвалась",
+   "src": "made"
+  },
+  {
+   "text": "Переезд Ирины чуть не сорвался, потому что фургон не приехал.",
+   "en": "Irina's move almost fell through because the van didn't show up.",
+   "ko": "트럭이 오지 않아서 이리나의 이사가 무산될 뻔했어요.",
+   "blank": "сорвался",
    "src": "made"
   }
  ],
@@ -51737,6 +52825,22 @@
    "en": "Add milk to the list.",
    "ko": "목록에 우유를 넣어.",
    "blank": "список"
+  }
+ ],
+ "w|спланировать": [
+  {
+   "text": "Зимой Андрей успевает спланировать посевы на весь год.",
+   "en": "In winter Andrey has time to plan the sowing for the whole year.",
+   "ko": "겨울에 안드레이는 한 해 파종 계획을 다 세워 둬요.",
+   "blank": "спланировать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина заранее спланировала, в какой комнате будет стоять каждая коробка.",
+   "en": "Irina planned in advance which room each box would go in.",
+   "ko": "이리나는 상자마다 어느 방에 둘지 미리 계획해 두었어요.",
+   "blank": "спланировала",
+   "src": "made"
   }
  ],
  "w|сплетня": [
@@ -52429,6 +53533,22 @@
    "ko": "식사할 때 우유 큰 잔으로 한 잔 주실래요?",
    "blank": "стакан",
    "src": "tatoeba:14082255/marafon en:6457894/Eccles17"
+  }
+ ],
+ "w|сталкиваться": [
+  {
+   "text": "Каждую весну Андрей сталкивается с нехваткой рабочих рук.",
+   "en": "Every spring Andrey faces a shortage of workers.",
+   "ko": "해마다 봄이면 안드레이는 일손 부족에 부딪혀요.",
+   "blank": "сталкивается",
+   "src": "made"
+  },
+  {
+   "text": "В узком коридоре Ирина постоянно сталкивалась с грузчиками.",
+   "en": "In the narrow hallway Irina kept bumping into the movers.",
+   "ko": "좁은 복도에서 이리나는 이삿짐 나르는 사람들과 자꾸 부딪쳤어요.",
+   "blank": "сталкивалась",
+   "src": "made"
   }
  ],
  "w|становиться": [
@@ -53632,6 +54752,22 @@
    "en": "Svetlana told her friend that her first borscht turned out super.",
    "ko": "스베틀라나는 친구에게 첫 보르시가 끝내주게 됐다고 말했어요.",
    "blank": "супер",
+   "src": "made"
+  }
+ ],
+ "w|супруг": [
+  {
+   "text": "В загсе Михаил впервые услышал, как его назвали супругом.",
+   "en": "At the registry office Mikhail heard himself called a spouse for the first time.",
+   "ko": "혼인 신고소에서 미하일은 처음으로 배우자라고 불리는 걸 들었어요.",
+   "blank": "супругом",
+   "src": "made"
+  },
+  {
+   "text": "Летом Светлана с супругом каждые выходные ездят на дачу.",
+   "en": "In summer Svetlana and her husband go to the dacha every weekend.",
+   "ko": "여름이면 스베틀라나는 남편과 주말마다 다차에 가요.",
+   "blank": "супругом",
    "src": "made"
   }
  ],
@@ -55979,6 +57115,22 @@
    "blank": "туда"
   }
  ],
+ "w|туман": [
+  {
+   "text": "Рано утром над полем Андрея лежит густой туман.",
+   "en": "Early in the morning a thick fog lies over Andrey's field.",
+   "ko": "이른 아침이면 안드레이의 밭 위에 짙은 안개가 깔려 있어요.",
+   "blank": "туман",
+   "src": "made"
+  },
+  {
+   "text": "В день переезда Ирины город накрыл туман, и фургон ехал медленно.",
+   "en": "On the day Irina moved, fog covered the city and the van drove slowly.",
+   "ko": "이리나가 이사하는 날 도시에 안개가 껴서 트럭이 천천히 달렸어요.",
+   "blank": "туман",
+   "src": "made"
+  }
+ ],
  "w|тупик": [
   {
    "text": "Свернув не туда, Сергей упёрся в тупик за египетским залом.",
@@ -55992,6 +57144,22 @@
    "en": "The market rows ended in a dead end, and Maria had to turn back.",
    "ko": "시장 골목이 막다른 길이어서 마리야는 되돌아가야 했어요.",
    "blank": "тупиком",
+   "src": "made"
+  }
+ ],
+ "w|тупица": [
+  {
+   "text": "Михаил забыл кольца дома и весь вечер называл себя тупицей.",
+   "en": "Mikhail forgot the rings at home and called himself a dimwit all evening.",
+   "ko": "미하일은 반지를 집에 두고 와서 저녁 내내 자기를 바보라고 했어요.",
+   "blank": "тупицей",
+   "src": "made"
+  },
+  {
+   "text": "Светлана ругает себя тупицей, когда снова забывает зонт в дождливый октябрь.",
+   "en": "Svetlana calls herself a dimwit when she forgets her umbrella again in rainy October.",
+   "ko": "비 오는 시월에 또 우산을 잊으면 스베틀라나는 자기가 바보라고 투덜대요.",
+   "blank": "тупицей",
    "src": "made"
   }
  ],
@@ -58133,6 +59301,22 @@
    "src": "made"
   }
  ],
+ "w|утка": [
+  {
+   "text": "Утром Андрей насыпал корм уткам у пруда.",
+   "en": "In the morning Andrey scattered feed for the ducks by the pond.",
+   "ko": "아침에 안드레이는 연못가 오리들에게 모이를 뿌려 줬어요.",
+   "blank": "уткам",
+   "src": "made"
+  },
+  {
+   "text": "Под окнами нового дома Ирины в пруду плавает утка с утятами.",
+   "en": "Under the windows of Irina's new building a duck with ducklings swims in the pond.",
+   "ko": "이리나의 새 집 창문 아래 연못에서 오리가 새끼들과 헤엄쳐요.",
+   "blank": "утка",
+   "src": "made"
+  }
+ ],
  "w|утонуть": [
   {
    "text": "На литературе Михаил читал рассказ о собаке, которая чуть не утонула в реке.",
@@ -58177,6 +59361,22 @@
    "ko": "와, 무지개가 끝에서 끝까지 다 보여!",
    "blank": "Ух",
    "src": "tatoeba:3521358/Ooneykcall en:514726/Spamster"
+  }
+ ],
+ "w|ухаживать": [
+  {
+   "text": "Михаил два года ухаживал за невестой, прежде чем сделать предложение.",
+   "en": "Mikhail courted his bride for two years before proposing.",
+   "ko": "미하일은 청혼하기 전에 이 년 동안 신부에게 구애했어요.",
+   "blank": "ухаживал",
+   "src": "made"
+  },
+  {
+   "text": "Весной Светлана ухаживает за розами на даче.",
+   "en": "In spring Svetlana takes care of the roses at the dacha.",
+   "ko": "봄에 스베틀라나는 다차의 장미를 돌봐요.",
+   "blank": "ухаживает",
+   "src": "made"
   }
  ],
  "w|ухо": [
@@ -59021,6 +60221,22 @@
    "src": "made"
   }
  ],
+ "w|француз": [
+  {
+   "text": "Торт к свадьбе Михаила испёк знакомый француз из соседней пекарни.",
+   "en": "The wedding cake for Mikhail was baked by a Frenchman he knows from the bakery next door.",
+   "ko": "미하일의 웨딩 케이크는 옆 빵집에서 일하는 아는 프랑스 사람이 구웠어요.",
+   "blank": "француз",
+   "src": "made"
+  },
+  {
+   "text": "Знакомый француз объяснил Светлане, как в его городе празднуют сбор винограда.",
+   "en": "A Frenchman she knows explained to Svetlana how they celebrate the grape harvest in his town.",
+   "ko": "아는 프랑스 사람이 자기 고향에서 포도 수확을 어떻게 축하하는지 스베틀라나에게 설명해 줬어요.",
+   "blank": "француз",
+   "src": "made"
+  }
+ ],
  "w|французский": [
   {
    "text": "Вы ведь понимаете французский, правда?",
@@ -59396,6 +60612,22 @@
    "en": "From her balcony Olga can see a hill with a little church.",
    "ko": "올가는 발코니에서 작은 교회가 있는 언덕을 볼 수 있어요.",
    "blank": "холм",
+   "src": "made"
+  }
+ ],
+ "w|холод": [
+  {
+   "text": "Андрей боится, что ранний холод погубит урожай.",
+   "en": "Andrey is afraid that an early cold snap will ruin the harvest.",
+   "ko": "안드레이는 이른 추위가 농사를 망칠까 봐 걱정해요.",
+   "blank": "холод",
+   "src": "made"
+  },
+  {
+   "text": "В новой квартире Ирины ещё не включили отопление, и там стоит холод.",
+   "en": "The heating hasn't been turned on yet in Irina's new flat, and it's cold there.",
+   "ko": "이리나의 새 아파트는 아직 난방이 안 들어와서 냉기가 돌아요.",
+   "blank": "холод",
    "src": "made"
   }
  ],
@@ -60095,6 +61327,22 @@
    "en": "Does that happen often?",
    "ko": "그런 일이 자주 있어?",
    "blank": "Часто"
+  }
+ ],
+ "w|частота": [
+  {
+   "text": "Андрей внимательно следит за частотой полива в теплице.",
+   "en": "Andrey closely watches how often the greenhouse is watered.",
+   "ko": "안드레이는 온실에 물을 주는 횟수를 꼼꼼히 챙겨요.",
+   "blank": "частотой",
+   "src": "made"
+  },
+  {
+   "text": "Ирина спросила у соседей о частоте автобусов до центра.",
+   "en": "Irina asked the neighbours how frequently the buses run to the centre.",
+   "ko": "이리나는 이웃들에게 시내 가는 버스가 얼마나 자주 다니는지 물었어요.",
+   "blank": "частоте",
+   "src": "made"
   }
  ],
  "w|частый": [
@@ -61599,6 +62847,22 @@
    "src": "made"
   }
  ],
+ "w|элемент": [
+  {
+   "text": "Агроном объяснил Андрею, что калий — важный элемент для роста картофеля.",
+   "en": "The agronomist explained to Andrey that potassium is an important element for potato growth.",
+   "ko": "농업 전문가는 칼륨이 감자가 자라는 데 중요한 원소라고 안드레이에게 설명했어요.",
+   "blank": "элемент",
+   "src": "made"
+  },
+  {
+   "text": "Ирина потеряла один элемент от шкафа и теперь не может его собрать.",
+   "en": "Irina lost one part of the wardrobe and now can't put it together.",
+   "ko": "이리나는 옷장 부품 하나를 잃어버려서 이제 조립을 못 해요.",
+   "blank": "элемент",
+   "src": "made"
+  }
+ ],
  "w|эмоция": [
   {
    "text": "Гнев - это эмоция.",
@@ -61990,6 +63254,22 @@
    "en": "The customer insisted that this cream supposedly removes wrinkles in a week.",
    "ko": "손님은 이 크림이 일주일 만에 주름을 없앤다고 우겼어요.",
    "blank": "якобы",
+   "src": "made"
+  }
+ ],
+ "w|яма": [
+  {
+   "text": "Трактор Андрея застрял в глубокой яме у ворот.",
+   "en": "Andrey's tractor got stuck in a deep pit by the gate.",
+   "ko": "안드레이의 트랙터가 대문 옆 깊은 구덩이에 빠졌어요.",
+   "blank": "яме",
+   "src": "made"
+  },
+  {
+   "text": "Перед подъездом нового дома Ирины зияет яма, и грузовик не может подъехать.",
+   "en": "There's a gaping hole in front of the entrance to Irina's new building, and the truck can't get close.",
+   "ko": "이리나의 새 집 현관 앞에 구덩이가 크게 파여 있어서 트럭이 다가갈 수가 없어요.",
+   "blank": "яма",
    "src": "made"
   }
  ],

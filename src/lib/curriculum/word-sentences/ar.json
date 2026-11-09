@@ -2801,6 +2801,22 @@
    "blank": "تطل"
   }
  ],
+ "w|أطراف": [
+  {
+   "text": "نام علي في فندق صغير على أطراف المدينة.",
+   "en": "Ali slept in a small hotel on the outskirts of the city.",
+   "ko": "알리는 도시 변두리의 작은 호텔에서 잤어요.",
+   "blank": "أطراف",
+   "src": "made"
+  },
+  {
+   "text": "تبادلت نور وصديقتها أطراف الحديث في رسائل طويلة.",
+   "en": "Nour and her friend chatted back and forth in long letters.",
+   "ko": "누르와 친구는 긴 편지로 이런저런 이야기를 나눴어요.",
+   "blank": "أطراف",
+   "src": "made"
+  }
+ ],
  "w|أطعم": [
   {
    "text": "أطعم القطط كل صباح.",
@@ -7101,6 +7117,22 @@
    "blank": "اتجاه"
   }
  ],
+ "w|اتجه": [
+  {
+   "text": "اتجه علي شمالا بعد أن ترك الساحل.",
+   "en": "Ali headed north after leaving the coast.",
+   "ko": "알리는 해안을 떠난 뒤 북쪽으로 향했어요.",
+   "blank": "اتجه",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن اهتمامها اتجه إلى الرسم في السنوات الأخيرة.",
+   "en": "Nour wrote that her interest had turned to drawing in recent years.",
+   "ko": "누르는 요즘 몇 년 사이 관심이 그림 쪽으로 갔다고 썼어요.",
+   "blank": "اتجه",
+   "src": "made"
+  }
+ ],
  "w|اتحاد": [
   {
    "text": "حضر سامي المؤتمر السنوي لاتحاد الصحفيين.",
@@ -9844,6 +9876,22 @@
    "en": "Sara's husband caught the fish she cooked in class.",
    "ko": "사라가 수업에서 요리한 생선은 남편이 직접 잡아 온 거예요.",
    "blank": "اصطاد",
+   "src": "made"
+  }
+ ],
+ "w|اصطحب": [
+  {
+   "text": "اصطحب علي ابن عمه في الرحلة الطويلة إلى الجنوب.",
+   "en": "Ali took his cousin along on the long trip south.",
+   "ko": "알리는 남쪽으로 가는 긴 여행에 사촌을 데려갔어요.",
+   "blank": "اصطحب",
+   "src": "made"
+  },
+  {
+   "text": "وعدت نور بأن تصطحب ابنتها لزيارة صديقتها في الصيف.",
+   "en": "Nour promised to bring her daughter to visit her friend in the summer.",
+   "ko": "누르는 여름에 딸을 데리고 친구를 보러 가겠다고 약속했어요.",
+   "blank": "تصطحب",
    "src": "made"
   }
  ],
@@ -12681,6 +12729,22 @@
    "src": "made"
   }
  ],
+ "w|باص": [
+  {
+   "text": "ترك علي سيارته وركب الباص إلى وسط المدينة.",
+   "en": "Ali left his car and took the bus to the city center.",
+   "ko": "알리는 차를 두고 버스를 타고 시내로 갔어요.",
+   "blank": "الباص",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت نور الباص الأصفر الذي كان يأخذهما إلى المدرسة.",
+   "en": "Nour remembered the yellow bus that used to take the two of them to school.",
+   "ko": "누르는 둘을 학교에 태워 주던 노란 버스를 떠올렸어요.",
+   "blank": "الباص",
+   "src": "made"
+  }
+ ],
  "w|باع": [
   {
    "text": "باع التاجر جميع البضائع.",
@@ -15077,6 +15141,22 @@
    "blank": "بندقية"
   }
  ],
+ "w|بنزين": [
+  {
+   "text": "نفد البنزين من سيارة علي قرب قرية صغيرة.",
+   "en": "Ali's car ran out of petrol near a small village.",
+   "ko": "알리의 차가 작은 마을 근처에서 기름이 떨어졌어요.",
+   "blank": "البنزين",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن سعر البنزين ارتفع كثيرا في مدينتها.",
+   "en": "Nour wrote that the price of petrol had gone up a lot in her city.",
+   "ko": "누르는 자기 도시에서 기름값이 많이 올랐다고 썼어요.",
+   "blank": "البنزين",
+   "src": "made"
+  }
+ ],
  "w|بنطال": [
   {
    "text": "ارتديت بنطال مريح اليوم.",
@@ -16191,6 +16271,22 @@
    "en": "I avoided fatty foods.",
    "ko": "나는 기름진 음식을 피했어.",
    "blank": "تجنبت"
+  }
+ ],
+ "w|تجول": [
+  {
+   "text": "تجول علي في السوق القديم ساعتين قبل أن يكمل الطريق.",
+   "en": "Ali wandered the old market for two hours before continuing on.",
+   "ko": "알리는 길을 계속 가기 전에 옛 시장을 두 시간 돌아다녔어요.",
+   "blank": "تجول",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أنها تجولت أمس في الحي الذي كبرتا فيه.",
+   "en": "Nour wrote that she had walked around the neighborhood where they grew up yesterday.",
+   "ko": "누르는 어제 둘이 자란 동네를 돌아다녔다고 썼어요.",
+   "blank": "تجولت",
+   "src": "made"
   }
  ],
  "w|تحالف": [
@@ -24387,6 +24483,22 @@
    "src": "made"
   }
  ],
+ "w|حافلات": [
+  {
+   "text": "كانت حافلات السياح تملأ الموقف عند الشلال.",
+   "en": "Tour buses filled the parking lot by the waterfall.",
+   "ko": "폭포 앞 주차장은 관광버스로 가득했어요.",
+   "blank": "حافلات",
+   "src": "made"
+  },
+  {
+   "text": "قالت نور إن حافلات مدينتها الجديدة تعمل طوال الليل.",
+   "en": "Nour said that the buses in her new city run all night.",
+   "ko": "누르는 새 도시의 버스가 밤새 다닌다고 했어요.",
+   "blank": "حافلات",
+   "src": "made"
+  }
+ ],
  "w|حافلة": [
   {
    "text": "حافلة العمل تتأخر أحياناً.",
@@ -25381,6 +25493,22 @@
    "src": "made"
   }
  ],
+ "w|حزم": [
+  {
+   "text": "حزم علي حقيبته في الليل ليخرج مع الفجر.",
+   "en": "Ali packed his bag at night so he could leave at dawn.",
+   "ko": "알리는 새벽에 떠나려고 밤에 가방을 쌌어요.",
+   "blank": "حزم",
+   "src": "made"
+  },
+  {
+   "text": "حزمت نور الرسائل القديمة بشريط أحمر ووضعتها في درج.",
+   "en": "Nour tied the old letters with a red ribbon and put them in a drawer.",
+   "ko": "누르는 옛 편지들을 빨간 리본으로 묶어 서랍에 넣었어요.",
+   "blank": "حزمت",
+   "src": "made"
+  }
+ ],
  "w|حزن": [
   {
    "text": "شعرت بـ حزن عميق بعد سماع الأخبار.",
@@ -25705,6 +25833,22 @@
    "en": "When did this happen?",
    "ko": "이게 언제 일어났어?",
    "blank": "حصل"
+  }
+ ],
+ "w|حصن": [
+  {
+   "text": "زار علي حصنا قديما فوق التل.",
+   "en": "Ali visited an old fortress on top of the hill.",
+   "ko": "알리는 언덕 위의 오래된 요새를 둘러봤어요.",
+   "blank": "حصنا",
+   "src": "made"
+  },
+  {
+   "text": "ذكرت نور الحصن الرملي الذي بنتاه على الشاطئ وهما صغيرتان.",
+   "en": "Nour mentioned the sandcastle the two of them built on the beach as little girls.",
+   "ko": "누르는 어릴 때 둘이 해변에서 쌓은 모래성 이야기를 꺼냈어요.",
+   "blank": "الحصن",
+   "src": "made"
   }
  ],
  "w|حصوة": [
@@ -28895,6 +29039,22 @@
    "en": "I love riding horses during holidays.",
    "ko": "휴일에 말을 타는 걸 좋아해.",
    "blank": "خيل"
+  }
+ ],
+ "w|خيم": [
+  {
+   "text": "خيم الظلام قبل أن يصل علي إلى المخيم.",
+   "en": "Darkness fell before Ali reached the campsite.",
+   "ko": "알리가 야영지에 닿기 전에 어둠이 깔렸어요.",
+   "blank": "خيم",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن حزنا خيم على الحي بعد إغلاق المكتبة.",
+   "en": "Nour wrote that sadness hung over the neighborhood after the library closed.",
+   "ko": "누르는 도서관이 문을 닫은 뒤 동네에 슬픔이 드리웠다고 썼어요.",
+   "blank": "خيم",
+   "src": "made"
   }
  ],
  "w|خيمة": [
@@ -35867,6 +36027,22 @@
    "blank": "السياحة"
   }
  ],
+ "w|سياحي": [
+  {
+   "text": "نزل علي في قرية سياحية على البحر.",
+   "en": "Ali stayed in a tourist village by the sea.",
+   "ko": "알리는 바닷가 관광 마을에 묵었어요.",
+   "blank": "سياحية",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت نور بطاقة بريدية من مدينة سياحية على البحر.",
+   "en": "Nour sent a postcard from a tourist town by the sea.",
+   "ko": "누르는 바닷가 관광 도시에서 엽서를 보냈어요.",
+   "blank": "سياحية",
+   "src": "made"
+  }
+ ],
  "w|سيادة": [
   {
    "text": "تعلم الطلاب في حصة التربية المدنية معنى سيادة الدولة على أرضها.",
@@ -36404,6 +36580,22 @@
    "en": "Sara says chicken soup is a healing remedy on cold days.",
    "ko": "사라는 추운 날엔 닭고기 수프가 몸을 낫게 하는 약이라고 말해요.",
    "blank": "شاف",
+   "src": "made"
+  }
+ ],
+ "w|شاق": [
+  {
+   "text": "كان الصعود بالسيارة إلى القرية شاقا على علي.",
+   "en": "Driving up to the village was hard on Ali.",
+   "ko": "차로 마을까지 올라가는 길은 알리에게 힘들었어요.",
+   "blank": "شاقا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن العمل في المستشفى شاق لكنه ممتع.",
+   "en": "Nour wrote that working at the hospital is hard but enjoyable.",
+   "ko": "누르는 병원 일이 고되지만 즐겁다고 썼어요.",
+   "blank": "شاق",
    "src": "made"
   }
  ],
@@ -42967,6 +43159,22 @@
    "blank": "عزيز"
   }
  ],
+ "w|عسكر": [
+  {
+   "text": "عسكر علي وابن عمه ليلة قرب الوادي.",
+   "en": "Ali and his cousin camped for a night near the valley.",
+   "ko": "알리와 사촌은 계곡 근처에서 하룻밤 야영했어요.",
+   "blank": "عسكر",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت نور الليلة التي عسكرتا فيها في حديقة البيت.",
+   "en": "Nour remembered the night the two of them camped out in the garden.",
+   "ko": "누르는 둘이 집 마당에서 야영하던 밤을 떠올렸어요.",
+   "blank": "عسكرتا",
+   "src": "made"
+  }
+ ],
  "w|عسكري": [
   {
    "text": "غطى سامي العرض العسكري في ساحة المدينة.",
@@ -46377,6 +46585,22 @@
    "src": "made"
   }
  ],
+ "w|فرامل": [
+  {
+   "text": "ضغط علي على الفرامل حين قطع غزال الطريق.",
+   "en": "Ali hit the brakes when a deer crossed the road.",
+   "ko": "사슴이 길을 건너자 알리는 브레이크를 밟았어요.",
+   "blank": "الفرامل",
+   "src": "made"
+  },
+  {
+   "text": "روت نور كيف تعطلت فرامل دراجتها في نزول التل.",
+   "en": "Nour told how her bike's brakes failed going down the hill.",
+   "ko": "누르는 언덕을 내려가다 자전거 브레이크가 고장 났던 이야기를 했어요.",
+   "blank": "فرامل",
+   "src": "made"
+  }
+ ],
  "w|فراولة": [
   {
    "text": "اشتريت فراولة طازجة من السوق.",
@@ -47909,6 +48133,22 @@
    "blank": "قاومت"
   }
  ],
+ "w|قايض": [
+  {
+   "text": "قايض علي بائعا عجوزا، فأعطاه قبعته مقابل خريطة قديمة.",
+   "en": "Ali bartered with an old seller, giving him his hat for an old map.",
+   "ko": "알리는 나이 든 상인과 물물교환을 해서 모자를 주고 옛 지도를 받았어요.",
+   "blank": "قايض",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت نور وهي تتذكر كيف قايضتا الملصقات في الاستراحة.",
+   "en": "Nour laughed remembering how they used to trade stickers at recess.",
+   "ko": "누르는 쉬는 시간에 둘이 스티커를 바꾸던 일을 떠올리며 웃었어요.",
+   "blank": "قايضتا",
+   "src": "made"
+  }
+ ],
  "w|قبة": [
   {
    "text": "رسم طلاب خالد قبة المسجد القديم في حصة الفنون.",
@@ -48867,6 +49107,22 @@
    "en": "The night train is very quiet.",
    "ko": "야간 열차는 아주 조용해.",
    "blank": "قطار"
+  }
+ ],
+ "w|قطارات": [
+  {
+   "text": "لا توجد قطارات إلى قرية الصيادين، فاضطر علي إلى القيادة.",
+   "en": "There are no trains to the fishing village, so Ali had to drive.",
+   "ko": "어촌 마을로 가는 기차가 없어서 알리는 운전해야 했어요.",
+   "blank": "قطارات",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن القطارات في بلدها الجديد دقيقة جدا.",
+   "en": "Nour wrote that trains in her new country are very punctual.",
+   "ko": "누르는 새로 사는 나라의 기차가 아주 정확하다고 썼어요.",
+   "blank": "القطارات",
+   "src": "made"
   }
  ],
  "w|قطاع": [
@@ -53793,6 +54049,22 @@
    "blank": "مبدأ"
   }
  ],
+ "w|مبدئي": [
+  {
+   "text": "وضع علي خطة مبدئية للرحلة ثم غيرها في الطريق.",
+   "en": "Ali made a tentative plan for the trip, then changed it on the way.",
+   "ko": "알리는 여행 계획을 대충 세웠다가 가는 길에 바꿨어요.",
+   "blank": "مبدئية",
+   "src": "made"
+  },
+  {
+   "text": "أعطت نور موافقة مبدئية على زيارة صديقتها في الربيع.",
+   "en": "Nour gave initial agreement to visiting her friend in the spring.",
+   "ko": "누르는 봄에 친구를 찾아가는 것에 일단 동의했어요.",
+   "blank": "مبدئية",
+   "src": "made"
+  }
+ ],
  "w|مبرمج": [
   {
    "text": "يعمل أخي مبرمج في شركة تقنية.",
@@ -53820,6 +54092,22 @@
    "en": "Her colleagues welcomed Sarah to the office with congratulations and a bouquet of flowers.",
    "ko": "동료들은 축하 인사와 꽃다발로 사라를 사무실에 맞이했어요.",
    "blank": "مبروك",
+   "src": "made"
+  }
+ ],
+ "w|مبسط": [
+  {
+   "text": "رسم صاحب المحطة لعلي خريطة مبسطة على ورقة.",
+   "en": "The station owner drew Ali a simplified map on a sheet of paper.",
+   "ko": "주유소 주인이 알리에게 종이에 간단한 지도를 그려 줬어요.",
+   "blank": "مبسطة",
+   "src": "made"
+  },
+  {
+   "text": "شرحت نور عملها الجديد بكلام مبسط حتى تفهمه صديقتها.",
+   "en": "Nour explained her new job in simple terms so her friend would understand it.",
+   "ko": "누르는 친구가 알아듣도록 새 일을 쉽게 풀어 설명했어요.",
+   "blank": "مبسط",
    "src": "made"
   }
  ],
@@ -54393,6 +54681,22 @@
    "blank": "متشائم"
   }
  ],
+ "w|متشابك": [
+  {
+   "text": "ضاع علي بين طرق متشابكة في الغابة.",
+   "en": "Ali got lost among tangled roads in the forest.",
+   "ko": "알리는 숲속의 얽힌 길들 사이에서 길을 잃었어요.",
+   "blank": "متشابكة",
+   "src": "made"
+  },
+  {
+   "text": "رسمت نور في آخر الرسالة يدين متشابكتين.",
+   "en": "At the end of the letter, Nour drew two clasped hands.",
+   "ko": "누르는 편지 끝에 맞잡은 두 손을 그렸어요.",
+   "blank": "متشابكتين",
+   "src": "made"
+  }
+ ],
  "w|متشابه": [
   {
    "text": "هذان الكتابان متشابهان جدًا.",
@@ -54419,6 +54723,22 @@
    "en": "Are you connected to the internet?",
    "ko": "너 인터넷에 연결되어 있어?",
    "blank": "متصل"
+  }
+ ],
+ "w|متضارب": [
+  {
+   "text": "كانت تعليقات المسافرين عن الفندق متضاربة.",
+   "en": "Travelers' reviews of the hotel were conflicting.",
+   "ko": "그 호텔에 대한 여행객들의 후기는 엇갈렸어요.",
+   "blank": "متضاربة",
+   "src": "made"
+  },
+  {
+   "text": "وصلت إلى نور أخبار متضاربة عن زميلتهما القديمة.",
+   "en": "Nour received conflicting news about their old classmate.",
+   "ko": "누르는 옛 동창에 대해 엇갈린 소식을 들었어요.",
+   "blank": "متضاربة",
+   "src": "made"
   }
  ],
  "w|متضايق": [
@@ -54448,6 +54768,22 @@
    "en": "Sara rejected her colleague's extreme view about firing all lazy employees.",
    "ko": "사라는 게으른 직원을 다 내보내자는 동료의 극단적인 의견에 반대했어요.",
    "blank": "المتطرف",
+   "src": "made"
+  }
+ ],
+ "w|متعارض": [
+  {
+   "text": "كانت مواعيد العبارة في الكتيب متعارضة مع ما في الموقع.",
+   "en": "The ferry times in the brochure conflicted with those on the website.",
+   "ko": "안내 책자의 배 시간이 웹사이트와 맞지 않았어요.",
+   "blank": "متعارضة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن رأيها ورأي زوجها متعارضان في مسألة السفر.",
+   "en": "Nour wrote that her and her husband's views on traveling were opposed.",
+   "ko": "누르는 여행 문제에서 자기와 남편의 생각이 서로 맞지 않는다고 썼어요.",
+   "blank": "متعارضان",
    "src": "made"
   }
  ],
@@ -54599,6 +54935,54 @@
    "blank": "متفرغ"
   }
  ],
+ "w|متقطع": [
+  {
+   "text": "كانت إشارة الهاتف متقطعة طوال الطريق في الجبال.",
+   "en": "The phone signal kept cutting out all the way through the mountains.",
+   "ko": "산길 내내 휴대폰 신호가 끊겼다 이어졌다 했어요.",
+   "blank": "متقطعة",
+   "src": "made"
+  },
+  {
+   "text": "قالت نور إن تواصلهما كان متقطعا بعد الجامعة.",
+   "en": "Nour said their contact had been on and off after university.",
+   "ko": "누르는 대학 이후 둘의 연락이 끊겼다 이어졌다 했다고 말했어요.",
+   "blank": "متقطعا",
+   "src": "made"
+  }
+ ],
+ "w|متكامل": [
+  {
+   "text": "وجد علي استراحة متكاملة فيها مطعم ومحطة وقود ومصلى.",
+   "en": "Ali found a full-service rest stop with a restaurant, a fuel station and a prayer room.",
+   "ko": "알리는 식당, 주유소, 기도실까지 다 갖춘 휴게소를 찾았어요.",
+   "blank": "متكاملة",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت نور لصديقتها وصفا متكاملا لحياتها الجديدة.",
+   "en": "Nour sent her friend a complete description of her new life.",
+   "ko": "누르는 친구에게 새 생활을 빠짐없이 적어 보냈어요.",
+   "blank": "متكاملا",
+   "src": "made"
+  }
+ ],
+ "w|متماسك": [
+  {
+   "text": "ظل علي متماسكا حين انفجر إطار السيارة.",
+   "en": "Ali stayed composed when the car's tire burst.",
+   "ko": "차 타이어가 터졌을 때도 알리는 침착했어요.",
+   "blank": "متماسكا",
+   "src": "made"
+  },
+  {
+   "text": "قالت نور إن عائلتها بقيت متماسكة رغم البعد.",
+   "en": "Nour said her family had stayed close-knit despite the distance.",
+   "ko": "누르는 멀리 떨어져 있어도 가족이 똘똘 뭉쳐 있다고 했어요.",
+   "blank": "متماسكة",
+   "src": "made"
+  }
+ ],
  "w|متمرس": [
   {
    "text": "صار صديق علي طباخا متمرسا يعمل في فندق كبير.",
@@ -54628,6 +55012,38 @@
    "en": "Layla arranged the boxes scattered on the shelves before opening the pharmacy.",
    "ko": "라일라는 약국 문을 열기 전에 선반에 흩어진 상자들을 정리했어요.",
    "blank": "المتناثرة",
+   "src": "made"
+  }
+ ],
+ "w|متناسق": [
+  {
+   "text": "كانت بيوت القرية البيضاء متناسقة على سفح الجبل.",
+   "en": "The village's white houses were neatly arranged on the mountainside.",
+   "ko": "마을의 하얀 집들이 산비탈에 가지런히 놓여 있었어요.",
+   "blank": "متناسقة",
+   "src": "made"
+  },
+  {
+   "text": "كان خط نور جميلا متناسقا كما في أيام المدرسة.",
+   "en": "Nour's handwriting was beautiful and even, just like in school days.",
+   "ko": "누르의 글씨는 학교 다닐 때처럼 예쁘고 고르게 반듯했어요.",
+   "blank": "متناسقا",
+   "src": "made"
+  }
+ ],
+ "w|متناقض": [
+  {
+   "text": "سمع علي من أهل القرية روايات متناقضة عن حالة الطريق.",
+   "en": "Ali heard contradictory accounts from the villagers about the state of the road.",
+   "ko": "알리는 마을 사람들에게서 길 상태에 대해 서로 모순되는 이야기를 들었어요.",
+   "blank": "متناقضة",
+   "src": "made"
+  },
+  {
+   "text": "اعترفت نور بأن مشاعرها متناقضة تجاه العودة إلى بلدتها.",
+   "en": "Nour admitted her feelings about going back to her hometown were contradictory.",
+   "ko": "누르는 고향으로 돌아가는 것에 대해 마음이 오락가락한다고 털어놨어요.",
+   "blank": "متناقضة",
    "src": "made"
   }
  ],
@@ -55800,6 +56216,22 @@
    "en": "Fatima's house is on the edge of a nature reserve, so she isn't allowed to cut down trees.",
    "ko": "파티마의 집은 자연 보호구역 가장자리에 있어서 나무를 벨 수 없어요.",
    "blank": "محمية",
+   "src": "made"
+  }
+ ],
+ "w|محوري": [
+  {
+   "text": "كانت الاستراحة نقطة محورية يلتقي فيها كل المسافرين.",
+   "en": "The rest stop was a central point where all travelers met.",
+   "ko": "그 휴게소는 모든 여행자가 모이는 중심지였어요.",
+   "blank": "محورية",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن تلك الصداقة كان لها دور محوري في حياتها.",
+   "en": "Nour wrote that that friendship had played a central role in her life.",
+   "ko": "누르는 그 우정이 자기 삶에서 중심적인 역할을 했다고 썼어요.",
+   "blank": "محوري",
    "src": "made"
   }
  ],
@@ -57151,6 +57583,22 @@
    "en": "The ceiling fan spins at a high speed.",
    "ko": "천장 선풍기가 빠르게 돌아가.",
    "blank": "مروحة"
+  }
+ ],
+ "w|مروحية": [
+  {
+   "text": "رأى علي مروحية تحلق فوق الطريق السريع.",
+   "en": "Ali saw a helicopter flying over the highway.",
+   "ko": "알리는 고속도로 위를 나는 헬리콥터를 봤어요.",
+   "blank": "مروحية",
+   "src": "made"
+  },
+  {
+   "text": "حكت نور في رسالتها أن أخاها صار يقود مروحية إسعاف.",
+   "en": "Nour told in her letter that her brother now flies an ambulance helicopter.",
+   "ko": "누르는 편지에서 오빠가 이제 응급 헬리콥터를 조종한다고 전했어요.",
+   "blank": "مروحية",
+   "src": "made"
   }
  ],
  "w|مرور": [
@@ -58983,6 +59431,22 @@
    "src": "made"
   }
  ],
+ "w|مضياف": [
+  {
+   "text": "كان أهل القرية مضيافين مع علي وقدموا له الشاي والتمر.",
+   "en": "The villagers were hospitable to Ali and offered him tea and dates.",
+   "ko": "마을 사람들은 알리를 환대하며 차와 대추야자를 내줬어요.",
+   "blank": "مضيافين",
+   "src": "made"
+  },
+  {
+   "text": "وصفت نور جيرانها الجدد بأنهم مضيافون وطيبون.",
+   "en": "Nour described her new neighbors as hospitable and kind.",
+   "ko": "누르는 새 이웃들이 손님을 잘 대접하고 착하다고 했어요.",
+   "blank": "مضيافون",
+   "src": "made"
+  }
+ ],
  "w|مضيفة": [
   {
    "text": "المضيفة كانت لطيفة جدًا.",
@@ -59151,6 +59615,22 @@
    "en": "You are wanted in the manager's office.",
    "ko": "너는 관리자 사무실로 오라는 요청을 받았어.",
    "blank": "مطلوب"
+  }
+ ],
+ "w|مطول": [
+  {
+   "text": "قضى علي وقتا مطولا في الحديث مع سائق شاحنة.",
+   "en": "Ali spent a long time talking with a truck driver.",
+   "ko": "알리는 트럭 운전사와 오랫동안 이야기를 나눴어요.",
+   "blank": "مطولا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور ردا مطولا من أربع صفحات.",
+   "en": "Nour wrote a lengthy reply of four pages.",
+   "ko": "누르는 네 장짜리 긴 답장을 썼어요.",
+   "blank": "مطولا",
+   "src": "made"
   }
  ],
  "w|مطيع": [
@@ -60505,6 +60985,22 @@
    "blank": "مقدس"
   }
  ],
+ "w|مقدما": [
+  {
+   "text": "حجز علي غرفته مقدما لأن الموسم مزدحم.",
+   "en": "Ali booked his room in advance because it's the busy season.",
+   "ko": "성수기라서 알리는 방을 미리 예약했어요.",
+   "blank": "مقدما",
+   "src": "made"
+  },
+  {
+   "text": "شكرت نور صديقتها مقدما على الصور التي سترسلها.",
+   "en": "Nour thanked her friend in advance for the photos she would send.",
+   "ko": "누르는 친구가 보내 줄 사진에 대해 미리 고맙다고 했어요.",
+   "blank": "مقدما",
+   "src": "made"
+  }
+ ],
  "w|مقدمة": [
   {
    "text": "كتبت مقدمة قصيرة للبحث.",
@@ -60561,6 +61057,22 @@
    "en": "Don't use hair scissors for paper.",
    "ko": "머리카락 가위로 종이를 자르지 마.",
    "blank": "مقص"
+  }
+ ],
+ "w|مقصد": [
+  {
+   "text": "كان مقصد علي الأول بحيرة صغيرة بين الجبال.",
+   "en": "Ali's first destination was a small lake among the mountains.",
+   "ko": "알리의 첫 목적지는 산 사이의 작은 호수였어요.",
+   "blank": "مقصد",
+   "src": "made"
+  },
+  {
+   "text": "سألت نور صديقتها عن مقصدها في العطلة القادمة.",
+   "en": "Nour asked her friend about her destination for the next holiday.",
+   "ko": "누르는 친구에게 다음 휴가 때 어디로 갈지 물었어요.",
+   "blank": "مقصدها",
+   "src": "made"
   }
  ],
  "w|مقصود": [
@@ -60729,6 +61241,22 @@
    "en": "Would you like us to meet at the cafe tomorrow?",
    "ko": "내일 카페에서 만날까?",
    "blank": "المقهى"
+  }
+ ],
+ "w|مقود": [
+  {
+   "text": "أمسك علي المقود بقوة في المنعطفات الحادة.",
+   "en": "Ali gripped the steering wheel tightly on the sharp bends.",
+   "ko": "알리는 급커브에서 운전대를 꽉 잡았어요.",
+   "blank": "المقود",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أنها تعلمت القيادة أخيرا لكنها ما زالت تخاف من المقود.",
+   "en": "Nour wrote that she finally learned to drive but is still afraid of the steering wheel.",
+   "ko": "누르는 드디어 운전을 배웠지만 아직 운전대가 무섭다고 썼어요.",
+   "blank": "المقود",
+   "src": "made"
   }
  ],
  "w|مقياس": [
@@ -62431,6 +62959,22 @@
    "blank": "مهتم"
   }
  ],
+ "w|مهجور": [
+  {
+   "text": "مر علي بمحطة وقود مهجورة في وسط الصحراء.",
+   "en": "Ali passed an abandoned gas station in the middle of the desert.",
+   "ko": "알리는 사막 한가운데서 버려진 주유소를 지나갔어요.",
+   "blank": "مهجورة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن بيت جدتها القديم صار مهجورا.",
+   "en": "Nour wrote that her grandmother's old house had become deserted.",
+   "ko": "누르는 할머니의 옛집이 빈집이 됐다고 썼어요.",
+   "blank": "مهجورا",
+   "src": "made"
+  }
+ ],
  "w|مهذب": [
   {
    "text": "الطفل مهذب ويقول شكراً دائماً.",
@@ -62800,6 +63344,22 @@
    "en": "Layla set off a wave of cheering when she scored in the last second.",
    "ko": "라일라가 마지막 순간에 골을 넣자 환호가 물결쳤어요.",
    "blank": "موجة",
+   "src": "made"
+  }
+ ],
+ "w|موجز": [
+  {
+   "text": "أرسل علي لأمه رسالة موجزة يقول فيها إنه وصل بخير.",
+   "en": "Ali sent his mother a brief message saying he had arrived safely.",
+   "ko": "알리는 무사히 도착했다고 어머니께 짧은 메시지를 보냈어요.",
+   "blank": "موجزة",
+   "src": "made"
+  },
+  {
+   "text": "اعتذرت نور لأن رسالتها هذه المرة موجزة.",
+   "en": "Nour apologized because her letter was brief this time.",
+   "ko": "누르는 이번 편지가 짧아서 미안하다고 했어요.",
+   "blank": "موجزة",
    "src": "made"
   }
  ],
@@ -63327,6 +63887,22 @@
    "en": "Don't disturb your brother, he is asleep.",
    "ko": "형을 방해하지 마, 자고 있으니까.",
    "blank": "نائم"
+  }
+ ],
+ "w|نائي": [
+  {
+   "text": "وصل علي إلى قرية نائية لا يعرفها أحد من أصدقائه.",
+   "en": "Ali reached a remote village none of his friends knew.",
+   "ko": "알리는 친구들 중 아무도 모르는 외딴 마을에 도착했어요.",
+   "blank": "نائية",
+   "src": "made"
+  },
+  {
+   "text": "تعمل نور معلمة في قرية نائية في الجبال.",
+   "en": "Nour works as a teacher in a remote village in the mountains.",
+   "ko": "누르는 산속 외딴 마을에서 교사로 일해요.",
+   "blank": "نائية",
+   "src": "made"
   }
  ],
  "w|ناجح": [
@@ -65973,6 +66549,22 @@
    "blank": "هام"
   }
  ],
+ "w|هامشي": [
+  {
+   "text": "بدا عطل المكيف أمرا هامشيا أمام جمال المنظر.",
+   "en": "The broken air conditioner seemed a minor matter next to the beautiful view.",
+   "ko": "아름다운 경치 앞에서 에어컨 고장은 사소한 일로 보였어요.",
+   "blank": "هامشيا",
+   "src": "made"
+  },
+  {
+   "text": "رأت نور أن الخلاف القديم بينهما كان هامشيا.",
+   "en": "Nour felt that their old disagreement had been trivial.",
+   "ko": "누르는 둘 사이의 옛 다툼이 사소한 일이었다고 생각했어요.",
+   "blank": "هامشيا",
+   "src": "made"
+  }
+ ],
  "w|هاو": [
   {
    "text": "أنا هاو في جمع الطوابع.",
@@ -66945,6 +67537,22 @@
    "src": "made"
   }
  ],
+ "w|وافر": [
+  {
+   "text": "كان عند علي وقت وافر قبل غروب الشمس.",
+   "en": "Ali had plenty of time before sunset.",
+   "ko": "해가 지기 전까지 알리에게는 시간이 넉넉했어요.",
+   "blank": "وافر",
+   "src": "made"
+  },
+  {
+   "text": "تمنت نور لصديقتها حظا وافرا في عملها الجديد.",
+   "en": "Nour wished her friend plenty of luck in her new job.",
+   "ko": "누르는 친구의 새 직장에 행운이 가득하길 빌었어요.",
+   "blank": "وافرا",
+   "src": "made"
+  }
+ ],
  "w|وافق": [
   {
    "text": "وافق على الشروط بسهولة.",
@@ -67485,6 +68093,22 @@
    "en": "The neighbor is friendly and likes to help.",
    "ko": "이웃은 친절하고 도와주길 좋아해.",
    "blank": "ودود"
+  }
+ ],
+ "w|ودي": [
+  {
+   "text": "استقبل صاحب المقهى عليا بأسلوب ودي.",
+   "en": "The café owner welcomed Ali in a friendly way.",
+   "ko": "카페 주인은 알리를 친근하게 맞아 줬어요.",
+   "blank": "ودي",
+   "src": "made"
+  },
+  {
+   "text": "بدأت نور رسالتها بسلام ودي كأن السنين لم تمر.",
+   "en": "Nour began her letter with a friendly greeting as if the years hadn't passed.",
+   "ko": "누르는 세월이 흐르지 않은 것처럼 다정한 인사로 편지를 시작했어요.",
+   "blank": "ودي",
+   "src": "made"
   }
  ],
  "w|وراء": [
@@ -68065,6 +68689,22 @@
    "en": "Did you promise to help me?",
    "ko": "도와주겠다고 약속했어?",
    "blank": "وعدتني"
+  }
+ ],
+ "w|وعر": [
+  {
+   "text": "كان الطريق إلى الشلال وعرا ومليئا بالحجارة.",
+   "en": "The road to the waterfall was rugged and full of stones.",
+   "ko": "폭포로 가는 길은 험하고 돌투성이였어요.",
+   "blank": "وعرا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت نور أن الطريق إلى قريتها وعر في الشتاء.",
+   "en": "Nour wrote that the road to her village is rough in winter.",
+   "ko": "누르는 겨울이면 자기 마을로 가는 길이 험하다고 썼어요.",
+   "blank": "وعر",
+   "src": "made"
   }
  ],
  "w|وعي": [

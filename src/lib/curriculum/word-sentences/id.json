@@ -143,6 +143,22 @@
    "blank": "adil"
   }
  ],
+ "w|administrasi": [
+  {
+   "text": "Urusan cuti harus diajukan lewat bagian administrasi pabrik.",
+   "en": "Leave requests must be submitted through the factory's administration office.",
+   "ko": "휴가 신청은 공장 행정 부서를 통해 해야 해요.",
+   "blank": "administrasi",
+   "src": "made"
+  },
+  {
+   "text": "Putri sekarang bekerja di bagian administrasi sebuah rumah sakit.",
+   "en": "Putri now works in the administration department of a hospital.",
+   "ko": "푸트리는 지금 한 병원의 행정 부서에서 일해요.",
+   "blank": "administrasi",
+   "src": "made"
+  }
+ ],
  "w|aduh": [
   {
    "text": "Aduh, kakiku terantuk meja.",
@@ -3445,6 +3461,22 @@
    "blank": "bendera"
   }
  ],
+ "w|bengkel": [
+  {
+   "text": "Mesin jahit yang rusak dibawa ke bengkel di sudut pabrik.",
+   "en": "The broken sewing machine was taken to the workshop in the corner of the factory.",
+   "ko": "고장 난 재봉틀은 공장 구석의 작업장으로 옮겨졌어요.",
+   "blank": "bengkel",
+   "src": "made"
+  },
+  {
+   "text": "Ayah Sari dulu punya bengkel sepeda di ujung gang.",
+   "en": "Sari's father used to have a bicycle repair shop at the end of the alley.",
+   "ko": "사리의 아버지는 예전에 골목 끝에 자전거 수리점을 했어요.",
+   "blank": "bengkel",
+   "src": "made"
+  }
+ ],
  "w|benih": [
   {
    "text": "Kelompok pecinta lingkungan mengajak Eko menanam benih bakau di pantai.",
@@ -4219,6 +4251,22 @@
    "src": "made"
   }
  ],
+ "w|berdagang": [
+  {
+   "text": "Sebelum bekerja di pabrik, Dimas pernah berdagang sayur di pasar.",
+   "en": "Before working at the factory, Dimas used to sell vegetables at the market.",
+   "ko": "디마스는 공장에서 일하기 전에 시장에서 채소 장사를 했어요.",
+   "blank": "berdagang",
+   "src": "made"
+  },
+  {
+   "text": "Ibu Sari masih berdagang kue di pasar pagi.",
+   "en": "Sari's mother still sells cakes at the morning market.",
+   "ko": "사리의 어머니는 아직도 아침 시장에서 떡을 팔아요.",
+   "blank": "berdagang",
+   "src": "made"
+  }
+ ],
  "w|berdamai": [
   {
    "text": "Setelah bertengkar seminggu, Eko akhirnya berdamai dengan sahabatnya.",
@@ -4905,6 +4953,22 @@
    "en": "The old machine sounds very noisy.",
    "ko": "낡은 기계가 아주 시끄럽게 들려.",
    "blank": "berisik"
+  }
+ ],
+ "w|berisiko": [
+  {
+   "text": "Bekerja tanpa helm di area pengelasan sangat berisiko.",
+   "en": "Working without a helmet in the welding area is very risky.",
+   "ko": "용접 구역에서 안전모 없이 일하는 건 아주 위험해요.",
+   "blank": "berisiko",
+   "src": "made"
+  },
+  {
+   "text": "Putri menulis bahwa mengirim uang tunai lewat pos itu berisiko.",
+   "en": "Putri writes that sending cash by post is risky.",
+   "ko": "푸트리는 우편으로 현금을 보내는 건 위험하다고 썼어요.",
+   "blank": "berisiko",
+   "src": "made"
   }
  ],
  "w|beristirahat": [
@@ -6439,6 +6503,22 @@
    "en": "Two alarms rang at the same time this morning.",
    "ko": "오늘 아침 알람 두 개가 동시에 울렸어.",
    "blank": "bersamaan"
+  }
+ ],
+ "w|bersandar": [
+  {
+   "text": "Saat istirahat, Dimas bersandar di dinding gudang sambil minum kopi.",
+   "en": "During the break, Dimas leans against the warehouse wall while drinking coffee.",
+   "ko": "쉬는 시간에 디마스는 커피를 마시며 창고 벽에 기대요.",
+   "blank": "bersandar",
+   "src": "made"
+  },
+  {
+   "text": "Putri menulis surat sambil bersandar di kursi rotan dekat jendela.",
+   "en": "Putri writes the letter while leaning back in a rattan chair by the window.",
+   "ko": "푸트리는 창가 등나무 의자에 기대어 편지를 써요.",
+   "blank": "bersandar",
+   "src": "made"
   }
  ],
  "w|bersandiwara": [
@@ -8455,6 +8535,22 @@
    "src": "made"
   }
  ],
+ "w|buruh": [
+  {
+   "text": "Ratusan buruh keluar dari gerbang pabrik saat sirene berbunyi.",
+   "en": "Hundreds of laborers poured out of the factory gate when the siren sounded.",
+   "ko": "사이렌이 울리자 노동자 수백 명이 공장 문을 나섰어요.",
+   "blank": "buruh",
+   "src": "made"
+  },
+  {
+   "text": "Ayah Putri dulu buruh pelabuhan yang selalu pulang larut malam.",
+   "en": "Putri's father was a dock worker who always came home late at night.",
+   "ko": "푸트리의 아버지는 늘 밤늦게 귀가하던 항구 노동자였어요.",
+   "blank": "buruh",
+   "src": "made"
+  }
+ ],
  "w|buruk": [
   {
    "text": "Cuaca hari ini buruk.",
@@ -9059,6 +9155,22 @@
    "en": "It was so careless to leave the stove on.",
    "ko": "가스불을 켜 둔 채 나가다니 너무 부주의해.",
    "blank": "Ceroboh"
+  }
+ ],
+ "w|cetakan": [
+  {
+   "text": "Dimas membersihkan cetakan plastik itu sebelum dipakai lagi.",
+   "en": "Dimas cleans the plastic mold before it is used again.",
+   "ko": "디마스는 플라스틱 틀을 다시 쓰기 전에 깨끗이 닦아요.",
+   "blank": "cetakan",
+   "src": "made"
+  },
+  {
+   "text": "Bersama suratnya, Putri meminjamkan cetakan kue milik ibunya.",
+   "en": "Along with her letter, Putri lends Sari her mother's cake mold.",
+   "ko": "푸트리는 편지와 함께 어머니의 케이크 틀을 빌려줘요.",
+   "blank": "cetakan",
+   "src": "made"
   }
  ],
  "w|cewek": [
@@ -11679,6 +11791,22 @@
    "blank": "Foto"
   }
  ],
+ "w|fotografer": [
+  {
+   "text": "Seorang fotografer memotret proses produksi untuk katalog baru.",
+   "en": "A photographer took pictures of the production process for the new catalog.",
+   "ko": "한 사진작가가 새 카탈로그에 쓸 생산 과정을 찍었어요.",
+   "blank": "fotografer",
+   "src": "made"
+  },
+  {
+   "text": "Kakak Sari dulu jadi fotografer di acara wisuda mereka.",
+   "en": "Sari's older sibling was the photographer at their graduation.",
+   "ko": "사리의 언니는 둘의 졸업식에서 사진사를 맡았어요.",
+   "blank": "fotografer",
+   "src": "made"
+  }
+ ],
  "w|frekuensi": [
   {
    "text": "Radio balai kota mengudara pada frekuensi yang bisa didengar seluruh kota.",
@@ -11708,6 +11836,22 @@
    "en": "Lestari still uses an old fridge whose cooling function is already weak.",
    "ko": "레스타리는 냉각 기능이 약해진 낡은 냉장고를 아직 써요.",
    "blank": "fungsi",
+   "src": "made"
+  }
+ ],
+ "w|gabungan": [
+  {
+   "text": "Pabrik itu dikelola oleh gabungan beberapa perusahaan lokal.",
+   "en": "The factory is run by a group of several local companies.",
+   "ko": "그 공장은 여러 지역 회사의 연합이 운영해요.",
+   "blank": "gabungan",
+   "src": "made"
+  },
+  {
+   "text": "Hadiah untuk Sari adalah gabungan foto lama dan kartu pos dari kota-kota yang pernah Putri kunjungi.",
+   "en": "The gift for Sari is a mix of old photos and postcards from cities Putri has visited.",
+   "ko": "사리에게 줄 선물은 옛 사진과 푸트리가 가 본 도시들의 엽서를 모은 거예요.",
+   "blank": "gabungan",
    "src": "made"
   }
  ],
@@ -15779,6 +15923,22 @@
    "src": "made"
   }
  ],
+ "w|jurnalis": [
+  {
+   "text": "Seorang jurnalis datang ke pabrik untuk menulis soal keselamatan kerja.",
+   "en": "A journalist came to the factory to write about workplace safety.",
+   "ko": "한 기자가 산업 안전에 대해 쓰려고 공장에 왔어요.",
+   "blank": "jurnalis",
+   "src": "made"
+  },
+  {
+   "text": "Dulu Putri bercita-cita menjadi jurnalis, dan Sari selalu mendukungnya.",
+   "en": "Putri once dreamed of becoming a journalist, and Sari always supported her.",
+   "ko": "푸트리는 예전에 기자가 되고 싶었고 사리는 늘 응원해 줬어요.",
+   "blank": "jurnalis",
+   "src": "made"
+  }
+ ],
  "w|juru": [
   {
    "text": "Rudi ditunjuk menjadi juru bicara para tukang saat rapat dengan pemilik proyek.",
@@ -18231,6 +18391,22 @@
    "src": "made"
   }
  ],
+ "w|kekal": [
+  {
+   "text": "Kata mandor, tidak ada pekerjaan yang kekal, jadi Dimas rajin menabung.",
+   "en": "The foreman says no job lasts forever, so Dimas saves diligently.",
+   "ko": "반장 말로는 영원한 일자리는 없대서 디마스는 꾸준히 저축해요.",
+   "blank": "kekal",
+   "src": "made"
+  },
+  {
+   "text": "Putri menulis bahwa persahabatan mereka terasa kekal walau jarang bertemu.",
+   "en": "Putri writes that their friendship feels everlasting even though they rarely meet.",
+   "ko": "푸트리는 자주 못 만나도 둘의 우정은 영원한 것 같다고 썼어요.",
+   "blank": "kekal",
+   "src": "made"
+  }
+ ],
  "w|kekalahan": [
   {
    "text": "Fajar menerima kekalahan di pengadilan dengan kepala tegak.",
@@ -19132,6 +19308,22 @@
    "en": "Dad keeps the ownership papers for Dewi's family house in the safe.",
    "ko": "아빠는 데위네 집 소유 증서를 금고에 보관해요.",
    "blank": "kepemilikan",
+   "src": "made"
+  }
+ ],
+ "w|kepemimpinan": [
+  {
+   "text": "Di bawah kepemimpinan manajer baru, pabrik jadi lebih rapi.",
+   "en": "Under the new manager's leadership, the factory became tidier.",
+   "ko": "새 관리자의 지휘 아래 공장이 더 깔끔해졌어요.",
+   "blank": "kepemimpinan",
+   "src": "made"
+  },
+  {
+   "text": "Sari dulu ketua OSIS, dan Putri selalu kagum pada jiwa kepemimpinan sahabatnya itu.",
+   "en": "Sari used to be student council president, and Putri always admired her friend's leadership.",
+   "ko": "사리는 학생회장이었고 푸트리는 친구의 리더십에 늘 감탄했어요.",
+   "blank": "kepemimpinan",
    "src": "made"
   }
  ],
@@ -21039,6 +21231,22 @@
    "blank": "kontrak"
   }
  ],
+ "w|kontraktor": [
+  {
+   "text": "Sebuah kontraktor sedang memperbaiki atap gudang yang bocor.",
+   "en": "A contractor is repairing the leaking warehouse roof.",
+   "ko": "한 시공업체가 새는 창고 지붕을 고치고 있어요.",
+   "blank": "kontraktor",
+   "src": "made"
+  },
+  {
+   "text": "Suami Sari bekerja sebagai kontraktor yang membangun rumah-rumah di desa.",
+   "en": "Sari's husband works as a contractor building houses in the village.",
+   "ko": "사리의 남편은 마을에 집을 짓는 시공업자로 일해요.",
+   "blank": "kontraktor",
+   "src": "made"
+  }
+ ],
  "w|kontrol": [
   {
    "text": "Dia kehilangan kontrol atas mobil.",
@@ -21722,6 +21930,22 @@
    "en": "Ayu made a clay dwarf statue for the school garden.",
    "ko": "아유는 학교 정원에 둘 난쟁이 점토 조각을 만들었어요.",
    "blank": "kurcaci",
+   "src": "made"
+  }
+ ],
+ "w|kurir": [
+  {
+   "text": "Setiap sore seorang kurir datang mengambil paket dari pabrik.",
+   "en": "Every afternoon a courier comes to pick up packages from the factory.",
+   "ko": "매일 오후 택배 기사가 공장에 소포를 가지러 와요.",
+   "blank": "kurir",
+   "src": "made"
+  },
+  {
+   "text": "Putri memilih pos biasa daripada kurir karena suka cap pos di amplop.",
+   "en": "Putri chooses regular mail over a courier because she likes the postmark on the envelope.",
+   "ko": "푸트리는 봉투의 소인이 좋아서 택배 대신 일반 우편을 골라요.",
+   "blank": "kurir",
    "src": "made"
   }
  ],
@@ -23093,6 +23317,22 @@
    "blank": "Lipat"
   }
  ],
+ "w|lisensi": [
+  {
+   "text": "Pabrik itu baru mendapat lisensi untuk memproduksi suku cadang mobil.",
+   "en": "The factory just got a license to produce car parts.",
+   "ko": "그 공장은 자동차 부품을 생산할 수 있는 허가를 막 받았어요.",
+   "blank": "lisensi",
+   "src": "made"
+  },
+  {
+   "text": "Putri baru saja mendapat lisensi sebagai pemandu wisata.",
+   "en": "Putri has just received her license as a tour guide.",
+   "ko": "푸트리는 막 관광 가이드 자격증을 받았어요.",
+   "blank": "lisensi",
+   "src": "made"
+  }
+ ],
  "w|listrik": [
   {
    "text": "Listrik mati tadi malam.",
@@ -23867,6 +24107,22 @@
    "en": "He became more confident after practice.",
    "ko": "연습 후에 그는 더 자신감이 생겼어.",
    "blank": "makin"
+  }
+ ],
+ "w|maksimal": [
+  {
+   "text": "Kecepatan maksimal mesin itu hanya boleh dipakai saat ada pengawas.",
+   "en": "The machine's maximum speed may only be used when a supervisor is present.",
+   "ko": "그 기계의 최고 속도는 감독관이 있을 때만 쓸 수 있어요.",
+   "blank": "maksimal",
+   "src": "made"
+  },
+  {
+   "text": "Putri berjanji akan berusaha maksimal untuk datang ke pernikahan Sari.",
+   "en": "Putri promises to do her best to come to Sari's wedding.",
+   "ko": "푸트리는 사리의 결혼식에 가려고 최대한 애쓰겠다고 약속해요.",
+   "blank": "maksimal",
+   "src": "made"
   }
  ],
  "w|maksud": [
@@ -25285,6 +25541,22 @@
    "blank": "Melompat"
   }
  ],
+ "w|meloncat": [
+  {
+   "text": "Seekor kucing meloncat ke atas tumpukan kardus di gudang pabrik.",
+   "en": "A cat jumped onto a pile of cardboard boxes in the factory warehouse.",
+   "ko": "고양이 한 마리가 공장 창고의 상자 더미 위로 뛰어올랐어요.",
+   "blank": "meloncat",
+   "src": "made"
+  },
+  {
+   "text": "Putri ingat dulu mereka suka meloncat ke sungai di belakang sekolah.",
+   "en": "Putri remembers how they used to love jumping into the river behind the school.",
+   "ko": "푸트리는 예전에 학교 뒤 강으로 뛰어들기를 좋아했던 걸 기억해요.",
+   "blank": "meloncat",
+   "src": "made"
+  }
+ ],
  "w|meluangkan": [
   {
    "text": "Pak Guru selalu meluangkan waktu untuk menjawab pertanyaan Rudi sepulang sekolah.",
@@ -25553,6 +25825,22 @@
    "en": "That incident was so shameful.",
    "ko": "그 일이 정말 창피해.",
    "blank": "Memalukan"
+  }
+ ],
+ "w|memamerkan": [
+  {
+   "text": "Pabrik itu memamerkan mesin barunya kepada para tamu dari dinas perindustrian.",
+   "en": "The factory showed off its new machine to guests from the industry office.",
+   "ko": "그 공장은 산업청에서 온 손님들에게 새 기계를 자랑했어요.",
+   "blank": "memamerkan",
+   "src": "made"
+  },
+  {
+   "text": "Dalam suratnya, Sari memamerkan kebun tomat yang ia tanam sendiri.",
+   "en": "In her letter, Sari shows off the tomato garden she planted herself.",
+   "ko": "편지에서 사리는 직접 가꾼 토마토 밭을 자랑해요.",
+   "blank": "memamerkan",
+   "src": "made"
   }
  ],
  "w|memancing": [
@@ -26445,6 +26733,22 @@
    "en": "Dad helps clear the dining table.",
    "ko": "아빠가 식탁 정리하는 걸 도와줘.",
    "blank": "membereskan"
+  }
+ ],
+ "w|memberhentikan": [
+  {
+   "text": "Perusahaan tidak boleh memberhentikan pekerja tanpa pesangon.",
+   "en": "A company may not dismiss workers without severance pay.",
+   "ko": "회사는 퇴직금 없이 노동자를 해고하면 안 돼요.",
+   "blank": "memberhentikan",
+   "src": "made"
+  },
+  {
+   "text": "Sari menulis bahwa kantornya terpaksa memberhentikan banyak karyawan tahun ini.",
+   "en": "Sari writes that her office had to let go of many employees this year.",
+   "ko": "사리는 올해 회사가 어쩔 수 없이 직원을 많이 내보냈다고 썼어요.",
+   "blank": "memberhentikan",
+   "src": "made"
   }
  ],
  "w|memberi": [
@@ -27381,6 +27685,22 @@
    "en": "Please move that bag to the car.",
    "ko": "그 가방을 차로 옮겨 줘.",
    "blank": "memindahkan"
+  }
+ ],
+ "w|memindai": [
+  {
+   "text": "Petugas gudang memindai kode barang sebelum kotak dimuat ke truk.",
+   "en": "Warehouse staff scan the item codes before the boxes are loaded onto the truck.",
+   "ko": "창고 직원은 상자를 트럭에 싣기 전에 물품 코드를 스캔해요.",
+   "blank": "memindai",
+   "src": "made"
+  },
+  {
+   "text": "Putri memindai foto-foto lama mereka dan menyelipkan salinannya di amplop.",
+   "en": "Putri scans their old photos and slips the copies into the envelope.",
+   "ko": "푸트리는 둘의 옛 사진을 스캔해서 사본을 봉투에 넣어요.",
+   "blank": "memindai",
+   "src": "made"
   }
  ],
  "w|meminjam": [
@@ -29139,6 +29459,22 @@
    "en": "Let's try new food.",
    "ko": "새 음식을 먹어 보자.",
    "blank": "mencoba"
+  }
+ ],
+ "w|mencolok": [
+  {
+   "text": "Para pekerja memakai rompi oranye yang mencolok agar mudah terlihat.",
+   "en": "The workers wear bright orange vests so they are easy to see.",
+   "ko": "노동자들은 눈에 잘 띄도록 화려한 주황색 조끼를 입어요.",
+   "blank": "mencolok",
+   "src": "made"
+  },
+  {
+   "text": "Putri memakai tinta ungu yang mencolok supaya Sari langsung tahu surat itu darinya.",
+   "en": "Putri uses striking purple ink so Sari knows right away the letter is from her.",
+   "ko": "푸트리는 사리가 바로 알아보도록 눈에 띄는 보라색 잉크를 써요.",
+   "blank": "mencolok",
+   "src": "made"
   }
  ],
  "w|mencuci": [
@@ -34031,6 +34367,22 @@
    "blank": "Menteri"
   }
  ],
+ "w|mentraktir": [
+  {
+   "text": "Setelah gajian, Dimas mentraktir teman satu shift makan bakso.",
+   "en": "After payday, Dimas treated his shift mates to meatball soup.",
+   "ko": "월급날이 지나자 디마스는 같은 조 동료들에게 바소를 샀어요.",
+   "blank": "mentraktir",
+   "src": "made"
+  },
+  {
+   "text": "Putri masih ingat waktu Sari mentraktir dia es campur sepulang sekolah.",
+   "en": "Putri still remembers when Sari treated her to mixed shaved ice after school.",
+   "ko": "푸트리는 사리가 방과 후에 에스 참푸르를 사 줬던 때를 아직 기억해요.",
+   "blank": "mentraktir",
+   "src": "made"
+  }
+ ],
  "w|menu": [
   {
    "text": "Bulan ini toko Fajar menambah menu roti tawar gandum.",
@@ -35963,6 +36315,22 @@
    "src": "made"
   }
  ],
+ "w|merengek": [
+  {
+   "text": "Anak Dimas merengek minta ikut setiap kali ayahnya berangkat ke pabrik.",
+   "en": "Dimas's child whines to come along every time his father leaves for the factory.",
+   "ko": "디마스의 아이는 아빠가 공장에 갈 때마다 따라가겠다고 칭얼대요.",
+   "blank": "merengek",
+   "src": "made"
+  },
+  {
+   "text": "Putri tertawa membaca cerita tentang anak Sari yang merengek minta kucing.",
+   "en": "Putri laughs reading the story about Sari's child whining for a cat.",
+   "ko": "푸트리는 고양이를 사 달라고 조르는 사리 아이 이야기를 읽고 웃어요.",
+   "blank": "merengek",
+   "src": "made"
+  }
+ ],
  "w|merenggut": [
   {
    "text": "Seorang warga bercerita bahwa banjir bandang pernah merenggut banyak rumah di lembah itu.",
@@ -36707,6 +37075,22 @@
    "en": "This kitchen design feels very modern.",
    "ko": "이 주방 디자인이 아주 모던해.",
    "blank": "modern"
+  }
+ ],
+ "w|mogok": [
+  {
+   "text": "Pekerja di pabrik sebelah mogok selama tiga hari menuntut kenaikan upah.",
+   "en": "Workers at the factory next door went on strike for three days demanding a raise.",
+   "ko": "옆 공장 노동자들이 임금 인상을 요구하며 사흘 동안 파업했어요.",
+   "blank": "mogok",
+   "src": "made"
+  },
+  {
+   "text": "Putri bercerita bahwa motornya mogok di tengah hujan minggu lalu.",
+   "en": "Putri tells how her motorbike broke down in the rain last week.",
+   "ko": "푸트리는 지난주 빗속에서 오토바이가 멈춰 버린 이야기를 해요.",
+   "blank": "mogok",
+   "src": "made"
   }
  ],
  "w|momen": [
@@ -40189,6 +40573,22 @@
    "src": "made"
   }
  ],
+ "w|pembangkit": [
+  {
+   "text": "Pabrik itu punya pembangkit listrik sendiri di belakang gedung utama.",
+   "en": "The factory has its own power plant behind the main building.",
+   "ko": "그 공장은 본관 뒤에 자체 발전소가 있어요.",
+   "blank": "pembangkit",
+   "src": "made"
+  },
+  {
+   "text": "Kota tempat Sari tinggal sekarang dekat dengan pembangkit listrik tenaga angin.",
+   "en": "The town where Sari now lives is near a wind power plant.",
+   "ko": "사리가 지금 사는 도시는 풍력 발전소 근처예요.",
+   "blank": "pembangkit",
+   "src": "made"
+  }
+ ],
  "w|pembangunan": [
   {
    "text": "Ayah Budi dulu bekerja di proyek pembangunan jalan tol.",
@@ -40343,6 +40743,22 @@
    "en": "He is known as a brave person in his village.",
    "ko": "그는 마을에서 용감한 사람으로 알려졌어.",
    "blank": "pemberani"
+  }
+ ],
+ "w|pemberhentian": [
+  {
+   "text": "Kabar pemberhentian puluhan pekerja membuat suasana pabrik tegang.",
+   "en": "News of dozens of workers being laid off made the mood at the factory tense.",
+   "ko": "노동자 수십 명이 해고된다는 소식에 공장 분위기가 팽팽해졌어요.",
+   "blank": "pemberhentian",
+   "src": "made"
+  },
+  {
+   "text": "Putri menulis surat itu di halte, di pemberhentian terakhir bus kota.",
+   "en": "Putri writes the letter at the bus shelter, at the last stop of the city bus.",
+   "ko": "푸트리는 시내버스 종점 정류장에서 그 편지를 써요.",
+   "blank": "pemberhentian",
+   "src": "made"
   }
  ],
  "w|pemberian": [
@@ -41073,6 +41489,22 @@
    "blank": "Pendapatnya"
   }
  ],
+ "w|pendapatan": [
+  {
+   "text": "Tahun ini pendapatan pabrik naik karena pesanan ekspor bertambah.",
+   "en": "This year the factory's income rose because export orders increased.",
+   "ko": "올해는 수출 주문이 늘어서 공장 수입이 올랐어요.",
+   "blank": "pendapatan",
+   "src": "made"
+  },
+  {
+   "text": "Sari bercerita bahwa pendapatan warung kopinya mulai stabil.",
+   "en": "Sari says the income from her coffee stall is starting to stabilize.",
+   "ko": "사리는 커피 가게 수입이 안정되기 시작했다고 전해요.",
+   "blank": "pendapatan",
+   "src": "made"
+  }
+ ],
  "w|pendarahan": [
   {
    "text": "Dokter menekan gusi Agus dengan kapas untuk menghentikan pendarahan.",
@@ -41191,6 +41623,22 @@
    "en": "The education system is being updated this year.",
    "ko": "교육 제도가 올해 개편되고 있어.",
    "blank": "pendidikan"
+  }
+ ],
+ "w|pendiri": [
+  {
+   "text": "Foto pendiri perusahaan tergantung di ruang rapat pabrik.",
+   "en": "A photo of the company's founder hangs in the factory meeting room.",
+   "ko": "회사 창립자의 사진이 공장 회의실에 걸려 있어요.",
+   "blank": "pendiri",
+   "src": "made"
+  },
+  {
+   "text": "Putri kini menjadi salah satu pendiri klub buku kecil di kampungnya.",
+   "en": "Putri is now one of the founders of a small book club in her village.",
+   "ko": "푸트리는 이제 동네 작은 독서 모임의 창립자 중 한 명이에요.",
+   "blank": "pendiri",
+   "src": "made"
   }
  ],
  "w|pendorong": [
@@ -42117,6 +42565,22 @@
    "blank": "penguasa"
   }
  ],
+ "w|pengujian": [
+  {
+   "text": "Setiap sepatu melewati pengujian kekuatan sebelum dikemas.",
+   "en": "Every shoe goes through strength testing before it is packed.",
+   "ko": "신발은 모두 포장 전에 내구성 시험을 거쳐요.",
+   "blank": "pengujian",
+   "src": "made"
+  },
+  {
+   "text": "Sari bekerja di laboratorium pengujian makanan di kotanya.",
+   "en": "Sari works at a food testing laboratory in her town.",
+   "ko": "사리는 자기 도시의 식품 검사 연구소에서 일해요.",
+   "blank": "pengujian",
+   "src": "made"
+  }
+ ],
  "w|pengumuman": [
   {
    "text": "Rudi mendengar pengumuman bahwa pertunjukan wayang akan dimulai sepuluh menit lagi.",
@@ -42130,6 +42594,22 @@
    "en": "Over the loudspeaker, the management announced that the market would close early.",
    "ko": "관리소가 확성기로 시장이 일찍 문을 닫는다고 알렸어요.",
    "blank": "pengumuman",
+   "src": "made"
+  }
+ ],
+ "w|pengunduran": [
+  {
+   "text": "Pak Joko, mandor lama, mengajukan pengunduran diri setelah puluhan tahun bekerja.",
+   "en": "Mr. Joko, the old foreman, submitted his resignation after decades of work.",
+   "ko": "오랜 반장인 조코 씨는 수십 년 일한 끝에 사직서를 냈어요.",
+   "blank": "pengunduran",
+   "src": "made"
+  },
+  {
+   "text": "Sari kaget mendengar kabar pengunduran diri Putri dari kantor lamanya.",
+   "en": "Sari was surprised to hear that Putri had resigned from her old office.",
+   "ko": "사리는 푸트리가 예전 회사를 그만뒀다는 소식에 놀랐어요.",
+   "blank": "pengunduran",
    "src": "made"
   }
  ],
@@ -44061,6 +44541,22 @@
    "blank": "persahabatan"
   }
  ],
+ "w|persaingan": [
+  {
+   "text": "Pabrik harus menekan biaya karena persaingan dengan produk impor makin ketat.",
+   "en": "The factory has to cut costs because competition with imported products is getting tougher.",
+   "ko": "수입품과의 경쟁이 더 치열해져서 공장은 비용을 줄여야 해요.",
+   "blank": "persaingan",
+   "src": "made"
+  },
+  {
+   "text": "Putri dan Sari tetap bersahabat walau dulu ada persaingan ketat soal nilai rapor.",
+   "en": "Putri and Sari stayed friends even though they once competed fiercely over report-card grades.",
+   "ko": "푸트리와 사리는 예전에 성적표 점수로 치열하게 경쟁했어도 계속 친구로 지냈어요.",
+   "blank": "persaingan",
+   "src": "made"
+  }
+ ],
  "w|persamaan": [
   {
    "text": "Kata Ayah, Budi dan Rina punya banyak persamaan, terutama sama-sama keras kepala.",
@@ -44288,6 +44784,22 @@
    "en": "Putri resolved the issue with the vegetable supplier over the phone.",
    "ko": "푸트리는 채소 납품업자와의 문제를 전화로 해결했어요.",
    "blank": "persoalan",
+   "src": "made"
+  }
+ ],
+ "w|personel": [
+  {
+   "text": "Jumlah personel keamanan ditambah setelah ada pencurian bahan baku.",
+   "en": "The number of security personnel was increased after raw materials were stolen.",
+   "ko": "원자재 도난 사건 뒤로 경비 인원이 늘었어요.",
+   "blank": "personel",
+   "src": "made"
+  },
+  {
+   "text": "Putri menulis bahwa kantornya kekurangan personel sejak awal tahun.",
+   "en": "Putri writes that her office has been short of staff since the start of the year.",
+   "ko": "푸트리는 연초부터 회사에 인력이 모자란다고 썼어요.",
+   "blank": "personel",
    "src": "made"
   }
  ],
@@ -45345,6 +45857,22 @@
    "src": "made"
   }
  ],
+ "w|polos": [
+  {
+   "text": "Dimas memakai kaus putih polos di bawah seragam pabriknya.",
+   "en": "Dimas wears a plain white T-shirt under his factory uniform.",
+   "ko": "디마스는 공장 작업복 안에 무늬 없는 흰 티셔츠를 입어요.",
+   "blank": "polos",
+   "src": "made"
+  },
+  {
+   "text": "Putri menulis surat di atas kertas polos tanpa garis.",
+   "en": "Putri writes the letter on plain paper without lines.",
+   "ko": "푸트리는 줄 없는 흰 종이에 편지를 써요.",
+   "blank": "polos",
+   "src": "made"
+  }
+ ],
  "w|pompa": [
   {
    "text": "Kru memakai pompa kecil untuk membuat efek hujan di atas panggung.",
@@ -45722,6 +46250,22 @@
    "en": "On the plane, Intan sat next to a friendly music producer.",
    "ko": "비행기에서 인탄은 친절한 음악 프로듀서 옆자리에 앉았어요.",
    "blank": "produser",
+   "src": "made"
+  }
+ ],
+ "w|profesi": [
+  {
+   "text": "Bagi Dimas, operator mesin adalah profesi yang patut dibanggakan.",
+   "en": "For Dimas, machine operator is a profession to be proud of.",
+   "ko": "디마스에게 기계 조작원은 자랑스러운 직업이에요.",
+   "blank": "profesi",
+   "src": "made"
+  },
+  {
+   "text": "Sari bertanya apakah Putri masih betah dengan profesi barunya.",
+   "en": "Sari asks whether Putri still enjoys her new profession.",
+   "ko": "사리는 푸트리가 새 직업에 아직 만족하는지 물어요.",
+   "blank": "profesi",
    "src": "made"
   }
  ],
@@ -46826,6 +47370,22 @@
    "en": "Rina wants readers to see the reality of dockworkers' lives.",
    "ko": "리나는 독자들이 항만 노동자의 현실을 보길 바라요.",
    "blank": "realitas",
+   "src": "made"
+  }
+ ],
+ "w|referensi": [
+  {
+   "text": "Dimas meminta surat referensi dari mandornya sebelum melamar ke tempat lain.",
+   "en": "Dimas asked his foreman for a reference letter before applying elsewhere.",
+   "ko": "디마스는 다른 곳에 지원하기 전에 반장에게 추천서를 부탁했어요.",
+   "blank": "referensi",
+   "src": "made"
+  },
+  {
+   "text": "Sari meminta Putri menjadi referensi untuk lamaran kerjanya.",
+   "en": "Sari asks Putri to be a reference for her job application.",
+   "ko": "사리는 푸트리에게 입사 지원서의 추천인이 되어 달라고 부탁해요.",
+   "blank": "referensi",
    "src": "made"
   }
  ],
@@ -49205,6 +49765,22 @@
    "blank": "Sehingga"
   }
  ],
+ "w|seimbang": [
+  {
+   "text": "Dimas mengatur beban di rak supaya seimbang dan tidak mudah roboh.",
+   "en": "Dimas arranges the load on the shelf so it is balanced and won't topple easily.",
+   "ko": "디마스는 선반이 쉽게 무너지지 않도록 짐을 균형 있게 놓아요.",
+   "blank": "seimbang",
+   "src": "made"
+  },
+  {
+   "text": "Dalam suratnya, Putri bercerita sedang belajar hidup seimbang antara kerja dan istirahat.",
+   "en": "In her letter, Putri says she is learning to live with a balance between work and rest.",
+   "ko": "편지에서 푸트리는 일과 쉼 사이에 균형 있게 사는 법을 배우는 중이라고 해요.",
+   "blank": "seimbang",
+   "src": "made"
+  }
+ ],
  "w|seiring": [
   {
    "text": "Andi makin akrab dengan teman sebangkunya seiring berjalannya waktu.",
@@ -49444,6 +50020,22 @@
    "en": "The sunset only lasts a moment, so the crew has to move fast.",
    "ko": "해 지는 순간은 잠깐이라서 제작진은 빨리 움직여야 했어요.",
    "blank": "sekejap",
+   "src": "made"
+  }
+ ],
+ "w|sekelas": [
+  {
+   "text": "Ternyata Dimas bekerja bersama teman sekelas waktu SMK dulu.",
+   "en": "It turns out Dimas works with a former classmate from vocational school.",
+   "ko": "알고 보니 디마스는 직업고 시절 같은 반 친구와 함께 일해요.",
+   "blank": "sekelas",
+   "src": "made"
+  },
+  {
+   "text": "Putri dan Sari sudah sekelas sejak kelas satu SD.",
+   "en": "Putri and Sari have been in the same class since first grade.",
+   "ko": "푸트리와 사리는 초등학교 일 학년 때부터 같은 반이었어요.",
+   "blank": "sekelas",
    "src": "made"
   }
  ],
@@ -49839,6 +50431,22 @@
    "en": "She cleaned the whole house.",
    "ko": "그녀가 집 전체를 청소했어.",
    "blank": "seluruh"
+  }
+ ],
+ "w|selusin": [
+  {
+   "text": "Dimas memesan selusin sarung tangan baru untuk timnya.",
+   "en": "Dimas ordered a dozen new pairs of gloves for his team.",
+   "ko": "디마스는 팀을 위해 새 장갑을 한 다스 주문했어요.",
+   "blank": "selusin",
+   "src": "made"
+  },
+  {
+   "text": "Putri sudah menulis hampir selusin surat sejak Sari pindah ke luar kota.",
+   "en": "Putri has written almost a dozen letters since Sari moved out of town.",
+   "ko": "사리가 다른 도시로 이사한 뒤로 푸트리는 편지를 거의 열두 통 썼어요.",
+   "blank": "selusin",
+   "src": "made"
   }
  ],
  "w|semacam": [
@@ -51107,6 +51715,22 @@
    "en": "Don't talk about demons at night.",
    "ko": "밤에 악마 이야기 하지 마.",
    "blank": "setan"
+  }
+ ],
+ "w|setara": [
+  {
+   "text": "Dimas menuntut upah yang setara dengan pekerja di pabrik sebelah.",
+   "en": "Dimas demands wages equal to those of workers at the factory next door.",
+   "ko": "디마스는 옆 공장 노동자들과 같은 임금을 요구해요.",
+   "blank": "setara",
+   "src": "made"
+  },
+  {
+   "text": "Di surat lama itu, Sari pernah menulis bahwa laki-laki dan perempuan harus dianggap setara.",
+   "en": "In that old letter, Sari once wrote that men and women should be treated as equals.",
+   "ko": "그 옛 편지에서 사리는 남자와 여자가 동등하게 여겨져야 한다고 썼어요.",
+   "blank": "setara",
+   "src": "made"
   }
  ],
  "w|setelah": [
@@ -54714,6 +55338,22 @@
    "en": "Dewi was shocked because a virus was detected on her office laptop.",
    "ko": "디위는 회사 노트북에서 바이러스가 발견돼서 놀랐어요.",
    "blank": "terdeteksi",
+   "src": "made"
+  }
+ ],
+ "w|terdiri": [
+  {
+   "text": "Tim jaga malam di pabrik itu terdiri dari Dimas dan dua teknisi muda.",
+   "en": "The night shift team at the factory consists of Dimas and two young technicians.",
+   "ko": "그 공장의 야간 근무 팀은 디마스와 젊은 기술자 두 명으로 이루어져 있어요.",
+   "blank": "terdiri",
+   "src": "made"
+  },
+  {
+   "text": "Surat Putri kali ini terdiri dari tiga halaman penuh cerita.",
+   "en": "Putri's letter this time consists of three pages full of stories.",
+   "ko": "이번 푸트리의 편지는 이야기로 가득 찬 세 장으로 되어 있어요.",
+   "blank": "terdiri",
    "src": "made"
   }
  ],

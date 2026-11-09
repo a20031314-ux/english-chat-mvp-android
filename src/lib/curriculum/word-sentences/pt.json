@@ -219,6 +219,22 @@
    "src": "made"
   }
  ],
+ "w|aborto": [
+  {
+   "text": "O Miguel explicou ao fazendeiro que uma infecção pode causar aborto nas vacas.",
+   "en": "Miguel explained to the farmer that an infection can cause miscarriage in cows.",
+   "ko": "미겔은 농부에게 감염이 소의 유산을 일으킬 수 있다고 설명했어요.",
+   "blank": "aborto",
+   "src": "made"
+  },
+  {
+   "text": "A Rita leu numa revista que o frio extremo pode aumentar o risco de aborto em ovelhas.",
+   "en": "Rita read in a magazine that extreme cold can increase the risk of miscarriage in sheep.",
+   "ko": "히타는 잡지에서 혹한이 양의 유산 위험을 높일 수 있다고 읽었어요.",
+   "blank": "aborto",
+   "src": "made"
+  }
+ ],
  "w|abraçar": [
   {
    "text": "Lucas escreveu que queria abraçar o Rafael no próximo Natal.",
@@ -4471,6 +4487,22 @@
    "src": "tatoeba:1001339/alexmarcelo en:1529256/erikspen"
   }
  ],
+ "w|arranhão": [
+  {
+   "text": "O gato deixou um arranhão no braço do Miguel durante a vacina.",
+   "en": "The cat left a scratch on Miguel's arm during the vaccine.",
+   "ko": "예방 주사를 맞다가 고양이가 미겔의 팔을 할퀴었어요.",
+   "blank": "arranhão",
+   "src": "made"
+  },
+  {
+   "text": "No outono, a Rita ganhou um arranhão no braço ao podar as roseiras.",
+   "en": "In the fall, Rita got a scratch on her arm while pruning the rose bushes.",
+   "ko": "가을에 히타는 장미를 가지치기하다가 팔이 긁혔어요.",
+   "blank": "arranhão",
+   "src": "made"
+  }
+ ],
  "w|arranjar": [
   {
    "text": "Eu acho que é hora de eu arranjar um emprego.",
@@ -4874,6 +4906,22 @@
    "en": "Rita burned her hand taking the baked bread out of the oven and went to the pharmacy.",
    "ko": "히타는 오븐에서 구운 빵을 꺼내다 손을 데어 약국에 갔어요.",
    "blank": "assado",
+   "src": "made"
+  }
+ ],
+ "w|assaltar": [
+  {
+   "text": "O jornal contou que ladrões tentaram assaltar a farmácia ao lado da clínica do Miguel.",
+   "en": "The newspaper reported that thieves tried to rob the pharmacy next to Miguel's clinic.",
+   "ko": "신문에 따르면 도둑들이 미겔의 병원 옆 약국을 털려고 했어요.",
+   "blank": "assaltar",
+   "src": "made"
+  },
+  {
+   "text": "No noticiário, a Rita viu que tentaram assaltar uma loja de casacos durante a liquidação de inverno.",
+   "en": "On the news, Rita saw that someone tried to rob a coat shop during the winter sale.",
+   "ko": "히타는 뉴스에서 겨울 세일 중에 외투 가게를 털려던 일이 있었다고 봤어요.",
+   "blank": "assaltar",
    "src": "made"
   }
  ],
@@ -9839,6 +9887,22 @@
    "src": "tatoeba:1247956/Welton en:276047/CK"
   }
  ],
+ "w|cápsula": [
+  {
+   "text": "O Miguel escondeu a cápsula de vermífugo num pedaço de queijo para o cachorro engolir.",
+   "en": "Miguel hid the dewormer capsule in a piece of cheese so the dog would swallow it.",
+   "ko": "미겔은 개가 삼키도록 구충제 캡슐을 치즈 조각에 숨겼어요.",
+   "blank": "cápsula",
+   "src": "made"
+  },
+  {
+   "text": "No inverno, a Rita toma uma cápsula de vitamina D todo dia.",
+   "en": "In winter, Rita takes a vitamin D capsule every day.",
+   "ko": "겨울에 히타는 매일 비타민 D 캡슐을 먹어요.",
+   "blank": "cápsula",
+   "src": "made"
+  }
+ ],
  "w|captar": [
   {
    "text": "Na feira de ciências, o João montou uma antena para captar sinais de rádio.",
@@ -11787,6 +11851,22 @@
    "src": "made"
   }
  ],
+ "w|cicatriz": [
+  {
+   "text": "A cadela resgatada tem uma cicatriz na orelha, mas está saudável, garantiu o Miguel.",
+   "en": "The rescued dog has a scar on her ear, but she's healthy, Miguel assured.",
+   "ko": "구조된 개는 귀에 흉터가 있지만 건강하다고 미겔이 장담했어요.",
+   "blank": "cicatriz",
+   "src": "made"
+  },
+  {
+   "text": "A Rita tem uma cicatriz no joelho de um tombo de bicicleta numa primavera antiga.",
+   "en": "Rita has a scar on her knee from a bike fall one spring long ago.",
+   "ko": "히타는 오래전 어느 봄 자전거에서 넘어져 무릎에 흉터가 있어요.",
+   "blank": "cicatriz",
+   "src": "made"
+  }
+ ],
  "w|ciclo": [
   {
    "text": "O Tiago gosta de observar o ciclo das estações no jardim.",
@@ -12739,6 +12819,22 @@
    "src": "tatoeba:12597388/Advanced en:12084367/CK"
   }
  ],
+ "w|colo": [
+  {
+   "text": "A menina segurou o hamster no colo enquanto o Miguel examinava os dentes dele.",
+   "en": "The girl held the hamster in her lap while Miguel examined its teeth.",
+   "ko": "미겔이 이빨을 살피는 동안 소녀는 햄스터를 무릎에 올려 안고 있었어요.",
+   "blank": "colo",
+   "src": "made"
+  },
+  {
+   "text": "Nas noites frias, a Rita lê com o gato no colo e uma manta nas pernas.",
+   "en": "On cold nights, Rita reads with the cat on her lap and a blanket over her legs.",
+   "ko": "추운 밤이면 히타는 무릎에 고양이를 올리고 다리에 담요를 덮고 책을 읽어요.",
+   "blank": "colo",
+   "src": "made"
+  }
+ ],
  "w|colocar": [
   {
    "text": "Pode colocar na mesa.",
@@ -13417,6 +13513,22 @@
    "src": "made"
   }
  ],
+ "w|compor": [
+  {
+   "text": "O Miguel gosta de compor músicas sobre os pacientes de quatro patas.",
+   "en": "Miguel likes to compose songs about his four-legged patients.",
+   "ko": "미겔은 네 발 달린 환자들에 대한 노래를 짓는 걸 좋아해요.",
+   "blank": "compor",
+   "src": "made"
+  },
+  {
+   "text": "A Rita gosta de compor arranjos de flores diferentes a cada estação.",
+   "en": "Rita likes to put together different flower arrangements each season.",
+   "ko": "히타는 계절마다 다른 꽃꽂이를 만드는 걸 좋아해요.",
+   "blank": "compor",
+   "src": "made"
+  }
+ ],
  "w|comportamento": [
   {
    "text": "Meu comportamento foi muito estranho.",
@@ -13524,6 +13636,22 @@
    "en": "Mariana cut a piece of cake about a hand's length long.",
    "ko": "마리아나는 한 뼘 길이만큼 케이크를 잘랐어요.",
    "blank": "comprimento",
+   "src": "made"
+  }
+ ],
+ "w|comprimido": [
+  {
+   "text": "O Miguel mostrou como partir o comprimido ao meio para o gato pequeno.",
+   "en": "Miguel showed how to split the pill in half for the small cat.",
+   "ko": "미겔은 작은 고양이를 위해 알약을 반으로 쪼개는 법을 보여 줬어요.",
+   "blank": "comprimido",
+   "src": "made"
+  },
+  {
+   "text": "Quando a garganta começa a doer no frio, a Rita toma um comprimido e descansa.",
+   "en": "When her throat starts hurting in the cold, Rita takes a pill and rests.",
+   "ko": "추위에 목이 아프기 시작하면 히타는 알약을 먹고 쉬어요.",
+   "blank": "comprimido",
    "src": "made"
   }
  ],
@@ -17895,6 +18023,22 @@
    "blank": "depressa"
   }
  ],
+ "w|depressão": [
+  {
+   "text": "Animais também podem ter sinais de depressão quando perdem o dono, diz o Miguel.",
+   "en": "Animals can also show signs of depression when they lose their owner, Miguel says.",
+   "ko": "동물도 주인을 잃으면 우울증 증상을 보일 수 있다고 미겔이 말해요.",
+   "blank": "depressão",
+   "src": "made"
+  },
+  {
+   "text": "A médica explicou à Rita que algumas pessoas têm depressão no inverno.",
+   "en": "The doctor explained to Rita that some people get depression in winter.",
+   "ko": "의사는 히타에게 겨울에 우울증을 겪는 사람들이 있다고 설명했어요.",
+   "blank": "depressão",
+   "src": "made"
+  }
+ ],
  "w|deputado": [
   {
    "text": "Um deputado visitou a escola do Bruno para falar sobre a nova biblioteca.",
@@ -18097,6 +18241,22 @@
    "ko": "데이트는 완전히 망했어요.",
    "blank": "desastre",
    "src": "tatoeba:11878818/ajdavidl en:5350247/Hybrid"
+  }
+ ],
+ "w|desativar": [
+  {
+   "text": "O Miguel esqueceu de desativar o alarme e acordou o bairro inteiro ao abrir a clínica.",
+   "en": "Miguel forgot to turn off the alarm and woke the whole neighborhood when he opened the clinic.",
+   "ko": "미겔은 경보기를 끄는 걸 잊어서 병원 문을 열 때 동네를 다 깨웠어요.",
+   "blank": "desativar",
+   "src": "made"
+  },
+  {
+   "text": "No verão, a Rita costuma desativar o aquecedor e guardar os cobertores.",
+   "en": "In summer, Rita usually turns off the heater and puts away the blankets.",
+   "ko": "여름이면 히타는 난방기를 끄고 이불을 넣어 둬요.",
+   "blank": "desativar",
+   "src": "made"
   }
  ],
  "w|descansar": [
@@ -19159,6 +19319,22 @@
    "blank": "diabo"
   }
  ],
+ "w|diagnóstico": [
+  {
+   "text": "O diagnóstico saiu rápido, e o Miguel tranquilizou a família do coelho.",
+   "en": "The diagnosis came out quickly, and Miguel reassured the rabbit's family.",
+   "ko": "진단이 빨리 나와서 미겔은 토끼 가족을 안심시켰어요.",
+   "blank": "diagnóstico",
+   "src": "made"
+  },
+  {
+   "text": "O diagnóstico da Rita foi alergia ao pólen, típica da primavera.",
+   "en": "Rita's diagnosis was pollen allergy, typical of spring.",
+   "ko": "히타의 진단은 봄철에 흔한 꽃가루 알레르기였어요.",
+   "blank": "diagnóstico",
+   "src": "made"
+  }
+ ],
  "w|diamante": [
   {
    "text": "Eu acho que esse diamante não é verdadeiro.",
@@ -20165,6 +20341,22 @@
    "en": "It's hard to say.",
    "ko": "말하기가 어려워.",
    "blank": "dizer"
+  }
+ ],
+ "w|doador": [
+  {
+   "text": "Um labrador grande foi o doador de sangue que salvou o filhote, contou o Miguel.",
+   "en": "A big Labrador was the blood donor that saved the puppy, Miguel said.",
+   "ko": "커다란 래브라도가 강아지를 살린 헌혈견이었다고 미겔이 말했어요.",
+   "blank": "doador",
+   "src": "made"
+  },
+  {
+   "text": "A Rita se cadastrou como doadora de sangue, e o primo dela também virou doador.",
+   "en": "Rita registered as a blood donor, and her cousin became a donor too.",
+   "ko": "히타는 헌혈자로 등록했고 사촌도 헌혈자가 됐어요.",
+   "blank": "doador",
+   "src": "made"
   }
  ],
  "w|doar": [
@@ -22073,6 +22265,22 @@
    "blank": "energia"
   }
  ],
+ "w|enfermaria": [
+  {
+   "text": "O cavalo ficou três dias na enfermaria da clínica, e o Miguel o visitava toda manhã.",
+   "en": "The horse stayed three days in the clinic's infirmary, and Miguel visited every morning.",
+   "ko": "말은 병원 입원실에 사흘 있었고, 미겔은 매일 아침 들여다봤어요.",
+   "blank": "enfermaria",
+   "src": "made"
+  },
+  {
+   "text": "Na época da gripe, a enfermaria da escola onde a Rita trabalha vive cheia.",
+   "en": "During flu season, the infirmary at the school where Rita works is always full.",
+   "ko": "독감 철이면 히타가 일하는 학교 보건실은 늘 꽉 차요.",
+   "blank": "enfermaria",
+   "src": "made"
+  }
+ ],
  "w|enfermeiro": [
   {
    "text": "Por que você quer ser enfermeiro?",
@@ -22291,6 +22499,22 @@
    "en": "He's hilarious.",
    "ko": "그 사람 너무 웃겨.",
    "blank": "engraçado"
+  }
+ ],
+ "w|engravidar": [
+  {
+   "text": "A dona perguntou ao Miguel se a cadela ainda podia engravidar depois da cirurgia.",
+   "en": "The owner asked Miguel if the dog could still get pregnant after the surgery.",
+   "ko": "주인은 미겔에게 수술 뒤에도 개가 새끼를 밸 수 있는지 물었어요.",
+   "blank": "engravidar",
+   "src": "made"
+  },
+  {
+   "text": "A irmã da Rita conseguiu engravidar no outono e o bebê vai nascer no verão.",
+   "en": "Rita's sister got pregnant in the fall and the baby will be born in the summer.",
+   "ko": "히타의 언니는 가을에 임신해서 아기가 여름에 태어날 거예요.",
+   "blank": "engravidar",
+   "src": "made"
   }
  ],
  "w|enlouquecer": [
@@ -23836,6 +24060,22 @@
    "en": "Inês remembers the toy rifle that Clara's brother carried everywhere.",
    "ko": "이네스는 클라라의 남동생이 어디든 들고 다니던 장난감 총을 떠올려요.",
    "blank": "espingarda",
+   "src": "made"
+  }
+ ],
+ "w|espionar": [
+  {
+   "text": "O gato do vizinho vive a espionar a clínica pela janela, diz o Miguel rindo.",
+   "en": "The neighbor's cat is always spying on the clinic through the window, Miguel says laughing.",
+   "ko": "이웃집 고양이가 늘 창문으로 병원을 엿본다고 미겔이 웃으며 말해요.",
+   "blank": "espionar",
+   "src": "made"
+  },
+  {
+   "text": "A Rita e os sobrinhos brincaram de espionar os passarinhos que voltaram na primavera.",
+   "en": "Rita and her nephews played at spying on the birds that came back in spring.",
+   "ko": "히타와 조카들은 봄에 돌아온 새들을 몰래 관찰하며 놀았어요.",
+   "blank": "espionar",
    "src": "made"
   }
  ],
@@ -25899,6 +26139,22 @@
    "blank": "falar"
   }
  ],
+ "w|falecer": [
+  {
+   "text": "O cavalo mais velho da fazenda veio a falecer em paz, e o Miguel consolou a família.",
+   "en": "The farm's oldest horse passed away peacefully, and Miguel comforted the family.",
+   "ko": "농장의 가장 늙은 말이 편안히 세상을 떠났고, 미겔은 가족을 위로했어요.",
+   "blank": "falecer",
+   "src": "made"
+  },
+  {
+   "text": "A avó da Rita veio a falecer no outono, e a família plantou uma árvore para ela.",
+   "en": "Rita's grandmother passed away in the fall, and the family planted a tree for her.",
+   "ko": "히타의 할머니가 가을에 돌아가셔서 가족이 할머니를 위해 나무를 심었어요.",
+   "blank": "falecer",
+   "src": "made"
+  }
+ ],
  "w|falecido": [
   {
    "text": "A noiva colocou uma foto do pai falecido no altar.",
@@ -26589,6 +26845,22 @@
    "src": "tatoeba:1112728/alexmarcelo en:1112727/CN"
   }
  ],
+ "w|fender": [
+  {
+   "text": "O casco do cavalo começou a fender, e o Miguel chamou o ferrador.",
+   "en": "The horse's hoof started to crack, and Miguel called the farrier.",
+   "ko": "말발굽이 갈라지기 시작해서 미겔은 편자공을 불렀어요.",
+   "blank": "fender",
+   "src": "made"
+  },
+  {
+   "text": "A Rita viu o gelo do lago fender com o sol do fim do inverno.",
+   "en": "Rita saw the lake ice crack under the late-winter sun.",
+   "ko": "히타는 늦겨울 햇볕에 호수 얼음이 갈라지는 걸 봤어요.",
+   "blank": "fender",
+   "src": "made"
+  }
+ ],
  "w|feriado": [
   {
    "text": "O teatro do Pedro faz sessão extra em todo feriado.",
@@ -27207,6 +27479,22 @@
    "src": "tatoeba:375072/brauliobezerra en:319980/CK"
   }
  ],
+ "w|fisicamente": [
+  {
+   "text": "O Miguel termina o plantão fisicamente cansado, mas feliz.",
+   "en": "Miguel ends his shift physically tired, but happy.",
+   "ko": "미겔은 당직을 마치면 몸은 지쳐도 마음은 기뻐요.",
+   "blank": "fisicamente",
+   "src": "made"
+  },
+  {
+   "text": "Com o calor do verão, a Rita fica fisicamente esgotada no fim da tarde.",
+   "en": "With the summer heat, Rita is physically exhausted by late afternoon.",
+   "ko": "여름 더위 때문에 히타는 늦은 오후면 몸이 녹초가 돼요.",
+   "blank": "fisicamente",
+   "src": "made"
+  }
+ ],
  "w|físico": [
   {
    "text": "Meu objetivo é me tornar físico.",
@@ -27470,6 +27758,22 @@
    "en": "The boy in Ana's room was wearing pajamas covered in rockets.",
    "ko": "아나와 같은 병실 남자아이는 로켓 무늬가 가득한 잠옷을 입고 있었어요.",
    "blank": "foguetes",
+   "src": "made"
+  }
+ ],
+ "w|fôlego": [
+  {
+   "text": "O buldogue perde o fôlego no calor, por isso o Miguel recomenda passeios curtos.",
+   "en": "The bulldog gets out of breath in the heat, so Miguel recommends short walks.",
+   "ko": "불도그는 더우면 숨이 차서 미겔은 짧은 산책을 권해요.",
+   "blank": "fôlego",
+   "src": "made"
+  },
+  {
+   "text": "A Rita subiu a ladeira na neve e ficou sem fôlego.",
+   "en": "Rita climbed the hill in the snow and was out of breath.",
+   "ko": "히타는 눈 속에서 언덕을 올라가서 숨이 찼어요.",
+   "blank": "fôlego",
    "src": "made"
   }
  ],
@@ -28061,6 +28365,22 @@
    "src": "made"
   }
  ],
+ "w|fratura": [
+  {
+   "text": "O raio-X mostrou uma fratura pequena na pata do gato, e o Miguel colocou uma tala.",
+   "en": "The X-ray showed a small fracture in the cat's paw, and Miguel put on a splint.",
+   "ko": "엑스레이에 고양이 발의 작은 골절이 보여서 미겔은 부목을 댔어요.",
+   "blank": "fratura",
+   "src": "made"
+  },
+  {
+   "text": "A Rita escorregou no gelo e teve uma fratura no pulso.",
+   "en": "Rita slipped on the ice and had a fracture in her wrist.",
+   "ko": "히타는 얼음에 미끄러져 손목이 부러졌어요.",
+   "blank": "fratura",
+   "src": "made"
+  }
+ ],
  "w|fraude": [
   {
    "text": "Meu avô acredita que a alunissagem foi uma fraude.",
@@ -28481,6 +28801,22 @@
    "ko": "장례식에는 검은 옷을 입는 게 전통이에요.",
    "blank": "funeral",
    "src": "tatoeba:3494883/piterkeo en:274283/CK"
+  }
+ ],
+ "w|furado": [
+  {
+   "text": "A bola do cachorro estava furada, e o Miguel deu uma nova de presente.",
+   "en": "The dog's ball had a hole in it, and Miguel gave him a new one as a gift.",
+   "ko": "개의 공에 구멍이 나서 미겔이 새 공을 선물했어요.",
+   "blank": "furada",
+   "src": "made"
+  },
+  {
+   "text": "O guarda-chuva da Rita estava furado, e ela chegou molhada ao trabalho.",
+   "en": "Rita's umbrella had a hole in it, and she arrived at work wet.",
+   "ko": "히타의 우산에 구멍이 나 있어서 회사에 젖은 채 도착했어요.",
+   "blank": "furado",
+   "src": "made"
   }
  ],
  "w|furioso": [
@@ -29749,6 +30085,22 @@
    "src": "tatoeba:3650560/Luciosp en:3650559/Luciosp"
   }
  ],
+ "w|grandão": [
+  {
+   "text": "Um cachorro grandão entrou na clínica, mas tinha medo até do Miguel.",
+   "en": "A big old dog came into the clinic, but it was afraid even of Miguel.",
+   "ko": "덩치 큰 개가 병원에 들어왔지만 미겔조차 무서워했어요.",
+   "blank": "grandão",
+   "src": "made"
+  },
+  {
+   "text": "O sobrinho da Rita fez um boneco de neve grandão no quintal.",
+   "en": "Rita's nephew made a huge snowman in the backyard.",
+   "ko": "히타의 조카가 마당에 커다란 눈사람을 만들었어요.",
+   "blank": "grandão",
+   "src": "made"
+  }
+ ],
  "w|grande": [
   {
    "text": "A casa é grande.",
@@ -30293,6 +30645,22 @@
    "src": "tatoeba:3453834/piterkeo en:33897/CM"
   }
  ],
+ "w|hemorragia": [
+  {
+   "text": "O Miguel conseguiu parar a hemorragia do cachorro atropelado em poucos minutos.",
+   "en": "Miguel managed to stop the bleeding of the dog that had been hit by a car in a few minutes.",
+   "ko": "미겔은 차에 치인 개의 출혈을 몇 분 만에 멈췄어요.",
+   "blank": "hemorragia",
+   "src": "made"
+  },
+  {
+   "text": "O ar seco do inverno às vezes causa uma pequena hemorragia no nariz da Rita.",
+   "en": "The dry winter air sometimes causes a small nosebleed for Rita.",
+   "ko": "건조한 겨울 공기 때문에 히타는 가끔 코피가 나요.",
+   "blank": "hemorragia",
+   "src": "made"
+  }
+ ],
  "w|herdeiro": [
   {
    "text": "O noivo é o único herdeiro da fazenda onde aconteceu a festa.",
@@ -30352,6 +30720,22 @@
    "en": "Ana liked the coat so much that she bought it without hesitating.",
    "ko": "아나는 코트가 너무 마음에 들어서 망설이지 않고 샀어요.",
    "blank": "hesitar",
+   "src": "made"
+  }
+ ],
+ "w|hilário": [
+  {
+   "text": "Foi hilário ver o Miguel correndo atrás de uma galinha fugida pela sala de espera.",
+   "en": "It was hilarious to see Miguel chasing a runaway chicken through the waiting room.",
+   "ko": "미겔이 대기실에서 도망친 닭을 쫓아다니는 모습은 정말 웃겼어요.",
+   "blank": "hilário",
+   "src": "made"
+  },
+  {
+   "text": "A Rita achou hilário o cachorro pulando nas poças da primeira chuva.",
+   "en": "Rita found it hilarious when the dog jumped in the puddles of the first rain.",
+   "ko": "히타는 첫비 웅덩이에서 뛰노는 개가 너무 웃겼어요.",
+   "blank": "hilário",
    "src": "made"
   }
  ],
@@ -31855,6 +32239,22 @@
    "blank": "índios"
   }
  ],
+ "w|individual": [
+  {
+   "text": "Cada animal recebe um plano individual de tratamento na clínica do Miguel.",
+   "en": "Each animal gets an individual treatment plan at Miguel's clinic.",
+   "ko": "미겔의 병원에서는 동물마다 따로 치료 계획을 세워요.",
+   "blank": "individual",
+   "src": "made"
+  },
+  {
+   "text": "A Rita prefere esportes de equipe no verão e treino individual no inverno.",
+   "en": "Rita prefers team sports in summer and individual training in winter.",
+   "ko": "히타는 여름엔 단체 운동, 겨울엔 혼자 하는 운동을 좋아해요.",
+   "blank": "individual",
+   "src": "made"
+  }
+ ],
  "w|indivíduo": [
   {
    "text": "Eu conheço um indivíduo que nunca viu neve.",
@@ -32025,6 +32425,22 @@
    "en": "The traffic is hell.",
    "ko": "교통이 지옥이야.",
    "blank": "inferno"
+  }
+ ],
+ "w|infiltrar": [
+  {
+   "text": "O Miguel teve que infiltrar anestésico na pata do cachorro antes de dar os pontos.",
+   "en": "Miguel had to inject anesthetic into the dog's paw before stitching.",
+   "ko": "미겔은 봉합하기 전에 개의 발에 마취제를 주사해야 했어요.",
+   "blank": "infiltrar",
+   "src": "made"
+  },
+  {
+   "text": "A chuva de outono conseguiu infiltrar pelo teto do quarto da Rita.",
+   "en": "The autumn rain managed to seep through the ceiling of Rita's bedroom.",
+   "ko": "가을비가 히타 방 천장으로 스며들었어요.",
+   "blank": "infiltrar",
+   "src": "made"
   }
  ],
  "w|infinito": [
@@ -32382,6 +32798,22 @@
    "en": "Sofia threw away a lot of insignificant stuff she had kept for years.",
    "ko": "소피아는 몇 년 동안 쌓아 둔 하찮은 물건을 많이 버렸어요.",
    "blank": "insignificante",
+   "src": "made"
+  }
+ ],
+ "w|insinuar": [
+  {
+   "text": "O Miguel não quis insinuar nada, mas o cachorro estava claramente acima do peso.",
+   "en": "Miguel didn't want to imply anything, but the dog was clearly overweight.",
+   "ko": "미겔은 넌지시 말하고 싶지 않았지만 개는 확실히 살이 쪘어요.",
+   "blank": "insinuar",
+   "src": "made"
+  },
+  {
+   "text": "A mãe da Rita gosta de insinuar que ela devia usar um casaco mais grosso.",
+   "en": "Rita's mother likes to hint that she should wear a thicker coat.",
+   "ko": "히타의 엄마는 더 두꺼운 외투를 입으라고 넌지시 말하곤 해요.",
+   "blank": "insinuar",
    "src": "made"
   }
  ],
@@ -39355,6 +39787,22 @@
    "blank": "mudar"
   }
  ],
+ "w|mudo": [
+  {
+   "text": "O papagaio ficou mudo depois da mudança de casa, e o Miguel pediu paciência.",
+   "en": "The parrot went silent after moving house, and Miguel asked for patience.",
+   "ko": "이사한 뒤 앵무새가 말을 안 해서 미겔은 기다려 보라고 했어요.",
+   "blank": "mudo",
+   "src": "made"
+  },
+  {
+   "text": "O parque fica mudo depois da primeira neve, e a Rita adora esse silêncio.",
+   "en": "The park goes silent after the first snow, and Rita loves that silence.",
+   "ko": "첫눈이 오면 공원이 조용해지고, 히타는 그 고요함을 좋아해요.",
+   "blank": "mudo",
+   "src": "made"
+  }
+ ],
  "w|muito": [
   {
    "text": "Faz muito calor.",
@@ -39970,6 +40418,22 @@
    "en": "For the party scene, Ana is going to need a hundred extras.",
    "ko": "파티 장면을 위해 아나는 엑스트라 백 명이 필요할 거예요.",
    "blank": "necessitar",
+   "src": "made"
+  }
+ ],
+ "w|necrotério": [
+  {
+   "text": "Num romance policial que o Miguel lê no intervalo, o detetive visita o necrotério da cidade.",
+   "en": "In a crime novel Miguel reads on his break, the detective visits the city morgue.",
+   "ko": "미겔이 쉬는 시간에 읽는 추리 소설에서 탐정이 도시 시체 안치소를 찾아가요.",
+   "blank": "necrotério",
+   "src": "made"
+  },
+  {
+   "text": "A Rita assistiu a uma série em que a detetive passa o inverno inteiro investigando no necrotério.",
+   "en": "Rita watched a series in which the detective spends the whole winter investigating at the morgue.",
+   "ko": "히타는 탐정이 겨울 내내 시체 안치소에서 수사하는 드라마를 봤어요.",
+   "blank": "necrotério",
    "src": "made"
   }
  ],
@@ -42689,6 +43153,22 @@
    "ko": "그 광대는 어둠을 무서워해요.",
    "blank": "palhaço",
    "src": "tatoeba:12270167/MathKay en:5508540/Nicacioh20"
+  }
+ ],
+ "w|palma": [
+  {
+   "text": "O gatinho cabia inteiro na palma da mão do Miguel.",
+   "en": "The kitten fit entirely in the palm of Miguel's hand.",
+   "ko": "새끼 고양이는 미겔의 손바닥에 쏙 들어갔어요.",
+   "blank": "palma",
+   "src": "made"
+  },
+  {
+   "text": "A Rita esfregou a palma das mãos para esquentar no primeiro dia de frio.",
+   "en": "Rita rubbed her palms together to warm up on the first cold day.",
+   "ko": "첫 추운 날 히타는 손바닥을 비벼 몸을 녹였어요.",
+   "blank": "palma",
+   "src": "made"
   }
  ],
  "w|palpite": [
@@ -46369,6 +46849,22 @@
    "src": "tatoeba:6039911/KimiP en:4011727/CK"
   }
  ],
+ "w|precaução": [
+  {
+   "text": "Por precaução, o Miguel pediu exames de sangue antes da anestesia.",
+   "en": "As a precaution, Miguel ordered blood tests before the anesthesia.",
+   "ko": "미겔은 만약을 위해 마취 전에 혈액 검사를 했어요.",
+   "blank": "precaução",
+   "src": "made"
+  },
+  {
+   "text": "Quando o tempo muda, a Rita leva um casaco na bolsa por precaução.",
+   "en": "When the weather changes, Rita carries a jacket in her bag as a precaution.",
+   "ko": "날씨가 바뀔 때면 히타는 만약을 위해 가방에 재킷을 넣고 다녀요.",
+   "blank": "precaução",
+   "src": "made"
+  }
+ ],
  "w|precioso": [
   {
    "text": "Estamos desperdiçando tempo precioso.",
@@ -48081,6 +48577,22 @@
    "blank": "próximo"
   }
  ],
+ "w|psicológico": [
+  {
+   "text": "O Miguel explicou que o medo do papagaio era um problema psicológico, não físico.",
+   "en": "Miguel explained that the parrot's fear was a psychological problem, not a physical one.",
+   "ko": "미겔은 앵무새의 두려움이 몸이 아니라 마음의 문제라고 설명했어요.",
+   "blank": "psicológico",
+   "src": "made"
+  },
+  {
+   "text": "A Rita sente que os dias curtos têm um efeito psicológico forte nela.",
+   "en": "Rita feels that the short days have a strong psychological effect on her.",
+   "ko": "히타는 짧은 낮이 자기 마음에 큰 영향을 준다고 느껴요.",
+   "blank": "psicológico",
+   "src": "made"
+  }
+ ],
  "w|psicopata": [
   {
    "text": "Na mesa do Gabriel, todo mundo comentava um filme de suspense sobre um psicopata.",
@@ -48376,6 +48888,22 @@
    "en": "Rita's bib came printed on a square piece of paper pinned to her shirt.",
    "ko": "리타의 번호는 티셔츠에 단 네모난 종이에 인쇄돼 있었어요.",
    "blank": "quadrado",
+   "src": "made"
+  }
+ ],
+ "w|quadril": [
+  {
+   "text": "O pastor-alemão tem um problema no quadril, e o Miguel receitou exercícios leves.",
+   "en": "The German shepherd has a hip problem, and Miguel prescribed light exercise.",
+   "ko": "저먼 셰퍼드가 고관절에 문제가 있어서 미겔은 가벼운 운동을 처방했어요.",
+   "blank": "quadril",
+   "src": "made"
+  },
+  {
+   "text": "A Rita sente dor no quadril quando a temperatura cai de repente.",
+   "en": "Rita feels pain in her hip when the temperature drops suddenly.",
+   "ko": "기온이 갑자기 떨어지면 히타는 엉덩이 관절이 아파요.",
+   "blank": "quadril",
    "src": "made"
   }
  ],
@@ -49428,6 +49956,22 @@
    "en": "The music school's monthly fee is reasonable, according to Carla's mother.",
    "ko": "카를라의 엄마 말로는 음악 학교 월 수강료가 적당하대요.",
    "blank": "razoável",
+   "src": "made"
+  }
+ ],
+ "w|reabilitação": [
+  {
+   "text": "Depois da cirurgia, o cachorro começou a reabilitação na piscina da clínica com o Miguel.",
+   "en": "After surgery, the dog started rehabilitation in the clinic pool with Miguel.",
+   "ko": "수술 뒤 개는 미겔과 함께 병원 수영장에서 재활을 시작했어요.",
+   "blank": "reabilitação",
+   "src": "made"
+  },
+  {
+   "text": "Na primavera, a Rita terminou a reabilitação do joelho e voltou a correr.",
+   "en": "In the spring, Rita finished her knee rehabilitation and went back to running.",
+   "ko": "봄에 히타는 무릎 재활을 마치고 다시 달리기 시작했어요.",
+   "blank": "reabilitação",
    "src": "made"
   }
  ],
@@ -54189,6 +54733,22 @@
    "blank": "significar"
   }
  ],
+ "w|significativo": [
+  {
+   "text": "A cadela teve uma melhora significativa, e o Miguel ligou para a dona.",
+   "en": "The dog had a significant improvement, and Miguel called the owner.",
+   "ko": "개가 눈에 띄게 좋아져서 미겔은 주인에게 전화했어요.",
+   "blank": "significativa",
+   "src": "made"
+  },
+  {
+   "text": "A queda das folhas trouxe uma mudança significativa na paisagem da rua da Rita.",
+   "en": "The falling leaves brought a significant change to the view on Rita's street.",
+   "ko": "낙엽이 지자 히타네 거리 풍경이 크게 바뀌었어요.",
+   "blank": "significativa",
+   "src": "made"
+  }
+ ],
  "w|silêncio": [
   {
    "text": "Faz silêncio um pouco.",
@@ -55560,6 +56120,22 @@
    "en": "Beatriz left a suggestion in the box to improve the waiting room.",
    "ko": "베아트리스는 대기실을 개선하자는 제안을 건의함에 넣었어요.",
    "blank": "sugestão",
+   "src": "made"
+  }
+ ],
+ "w|suicidar": [
+  {
+   "text": "No filme que o Miguel viu, o vilão tenta se suicidar e o herói o impede.",
+   "en": "In the film Miguel saw, the villain tries to kill himself and the hero stops him.",
+   "ko": "미겔이 본 영화에서 악당이 스스로 목숨을 끊으려 하자 주인공이 막아요.",
+   "blank": "suicidar",
+   "src": "made"
+  },
+  {
+   "text": "Na peça antiga que a Rita viu, o personagem decide se suicidar no último ato.",
+   "en": "In the old play Rita saw, the character decides to take his own life in the last act.",
+   "ko": "히타가 본 옛 연극에서 주인공은 마지막 막에 스스로 목숨을 끊기로 해요.",
+   "blank": "suicidar",
    "src": "made"
   }
  ],
@@ -58471,6 +59047,22 @@
    "src": "made"
   }
  ],
+ "w|tramar": [
+  {
+   "text": "Os dois gatos pareciam tramar uma fuga da caixa de transporte, brincou o Miguel.",
+   "en": "The two cats seemed to be plotting an escape from the carrier, Miguel joked.",
+   "ko": "고양이 두 마리가 이동장에서 탈출을 꾸미는 것 같다고 미겔이 농담했어요.",
+   "blank": "tramar",
+   "src": "made"
+  },
+  {
+   "text": "As crianças da rua parecem tramar uma guerra de bolas de neve contra a Rita.",
+   "en": "The kids on the street seem to be plotting a snowball fight against Rita.",
+   "ko": "동네 아이들이 히타를 상대로 눈싸움을 꾸미는 것 같아요.",
+   "blank": "tramar",
+   "src": "made"
+  }
+ ],
  "w|trancado": [
   {
    "text": "O Pedro chegou cedo, mas o camarim ainda estava trancado.",
@@ -58831,6 +59423,22 @@
    "en": "Don't forget to bring bread.",
    "ko": "빵 가져오는 거 잊지 마.",
    "blank": "trazer"
+  }
+ ],
+ "w|treinado": [
+  {
+   "text": "O cão-guia que o Miguel atende é muito bem treinado e fica quieto na consulta.",
+   "en": "The guide dog Miguel treats is very well trained and stays still during the appointment.",
+   "ko": "미겔이 진료하는 안내견은 아주 잘 훈련돼서 진료 중에 얌전해요.",
+   "blank": "treinado",
+   "src": "made"
+  },
+  {
+   "text": "A Rita tem um olho treinado para perceber quando a estação está mudando.",
+   "en": "Rita has a trained eye for noticing when the season is changing.",
+   "ko": "히타는 계절이 바뀌는 걸 알아채는 눈이 길러져 있어요.",
+   "blank": "treinado",
+   "src": "made"
   }
  ],
  "w|treinador": [
@@ -60843,6 +61451,22 @@
    "src": "made"
   }
  ],
+ "w|vício": [
+  {
+   "text": "O Miguel brinca que o cachorro dele tem um vício em bolinhas de tênis.",
+   "en": "Miguel jokes that his dog has an addiction to tennis balls.",
+   "ko": "미겔은 자기 개가 테니스공에 중독됐다고 농담해요.",
+   "blank": "vício",
+   "src": "made"
+  },
+  {
+   "text": "No inverno, chocolate quente vira um vício para a Rita.",
+   "en": "In winter, hot chocolate becomes an addiction for Rita.",
+   "ko": "겨울이면 히타는 핫초코에 푹 빠져요.",
+   "blank": "vício",
+   "src": "made"
+  }
+ ],
  "w|vida": [
   {
    "text": "Assim é a vida.",
@@ -61197,6 +61821,22 @@
    "ko": "그는 아직 경험이 없어요.",
    "blank": "virgem",
    "src": "tatoeba:7703936/iart61 en:10706968/AutoBot"
+  }
+ ],
+ "w|virtude": [
+  {
+   "text": "A paciência é a maior virtude do Miguel com os bichos assustados.",
+   "en": "Patience is Miguel's greatest virtue with frightened animals.",
+   "ko": "겁먹은 동물을 대할 때 미겔의 가장 큰 장점은 인내심이에요.",
+   "blank": "virtude",
+   "src": "made"
+  },
+  {
+   "text": "A Rita diz que a maior virtude do outono é o céu limpo.",
+   "en": "Rita says the greatest virtue of autumn is the clear sky.",
+   "ko": "히타는 가을의 가장 좋은 점이 맑은 하늘이라고 해요.",
+   "blank": "virtude",
+   "src": "made"
   }
  ],
  "w|vírus": [

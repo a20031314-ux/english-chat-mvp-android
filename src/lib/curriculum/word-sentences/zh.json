@@ -573,6 +573,22 @@
    "src": "made"
   }
  ],
+ "w|上场": [
+  {
+   "text": "陈杰年轻时踢过球，常把出庭比作上场比赛。",
+   "en": "Chen Jie played football when he was young and often compares appearing in court to taking the field.",
+   "ko": "천제는 젊었을 때 축구를 해서 법정에 서는 걸 경기에 나가는 것에 자주 비유해요.",
+   "blank": "上场",
+   "src": "made"
+  },
+  {
+   "text": "护士说，小雪的弟弟明天比赛还要上场，所以先简单处理一下。",
+   "en": "The nurse said Xiaoxue's brother still has to play in tomorrow's match, so they'd do a quick fix first.",
+   "ko": "간호사는 샤오쉐의 남동생이 내일 경기에 또 나가야 하니 우선 간단히 처치하자고 했어요.",
+   "blank": "上场",
+   "src": "made"
+  }
+ ],
  "w|上学": [
   {
    "text": "孩子每天上学。",
@@ -671,6 +687,22 @@
    "en": "Don't want to go to work.",
    "ko": "출근하기 싫어.",
    "blank": "上班"
+  }
+ ],
+ "w|上级": [
+  {
+   "text": "张伟的上级也来参加婚礼，还包了个大红包。",
+   "en": "Zhang Wei's boss also came to the wedding and gave a big red envelope.",
+   "ko": "장웨이의 상사도 결혼식에 와서 두툼한 축의금 봉투를 줬어요.",
+   "blank": "上级",
+   "src": "made"
+  },
+  {
+   "text": "刘芳把这个特殊病例报告给了上级部门。",
+   "en": "Liu Fang reported this unusual case to the higher authorities.",
+   "ko": "류팡은 이 특이한 사례를 상급 기관에 보고했어요.",
+   "blank": "上级",
+   "src": "made"
   }
  ],
  "w|上课": [
@@ -1753,6 +1785,22 @@
    "blank": "个人"
   }
  ],
+ "w|个性": [
+  {
+   "text": "新娘很有个性，坚持穿红色的婚纱。",
+   "en": "The bride has a strong personality and insisted on wearing a red wedding dress.",
+   "ko": "신부는 개성이 강해서 빨간 웨딩드레스를 고집했어요.",
+   "blank": "个性",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，每只猫都有自己的个性，有的爱叫，有的很安静。",
+   "en": "Liu Fang says every cat has its own personality—some are loud, some are quiet.",
+   "ko": "류팡은 고양이마다 개성이 있어서 잘 우는 애도 있고 조용한 애도 있다고 해요.",
+   "blank": "个性",
+   "src": "made"
+  }
+ ],
  "w|中": [
   {
    "text": "会议中别走神。",
@@ -2096,6 +2144,22 @@
    "en": "She was elected student council president.",
    "ko": "그녀는 학생회장으로 뽑혔어요.",
    "blank": "主席",
+   "src": "made"
+  }
+ ],
+ "w|主张": [
+  {
+   "text": "陈杰在法庭上清楚地陈述了当事人的主张。",
+   "en": "Chen Jie clearly stated his client's position in court.",
+   "ko": "천제는 법정에서 의뢰인의 주장을 분명하게 진술했어요.",
+   "blank": "主张",
+   "src": "made"
+  },
+  {
+   "text": "这位牙医的主张是能保留的牙尽量不拔。",
+   "en": "This dentist's view is that any tooth that can be saved shouldn't be pulled.",
+   "ko": "이 치과 의사의 주장은 살릴 수 있는 이는 되도록 뽑지 않는다는 거예요.",
+   "blank": "主张",
    "src": "made"
   }
  ],
@@ -2771,6 +2835,22 @@
    "en": "Nothing's up.",
    "ko": "별일 없어.",
    "blank": "事儿"
+  }
+ ],
+ "w|事先": [
+  {
+   "text": "张伟事先把婚礼的流程跟司仪对了好几遍。",
+   "en": "Zhang Wei went over the wedding schedule with the emcee several times in advance.",
+   "ko": "장웨이는 결혼식 순서를 사회자와 미리 여러 번 맞춰 봤어요.",
+   "blank": "事先",
+   "src": "made"
+  },
+  {
+   "text": "做手术前，刘芳事先跟主人说明了风险。",
+   "en": "Before the operation, Liu Fang explained the risks to the owner in advance.",
+   "ko": "수술 전에 류팡은 보호자에게 위험을 미리 설명했어요.",
+   "blank": "事先",
+   "src": "made"
   }
  ],
  "w|事务": [
@@ -3557,6 +3637,22 @@
    "blank": "仅仅"
   }
  ],
+ "w|仆人": [
+  {
+   "text": "婚礼上演了一出小话剧，张伟的表弟扮演一个笨手笨脚的仆人。",
+   "en": "A short play was performed at the wedding, and Zhang Wei's cousin played a clumsy servant.",
+   "ko": "결혼식에서 짧은 연극을 했는데 장웨이의 사촌 동생이 어설픈 하인 역을 맡았어요.",
+   "blank": "仆人",
+   "src": "made"
+  },
+  {
+   "text": "刘芳开玩笑说，自家的猫把她当成仆人使唤。",
+   "en": "Liu Fang jokes that her cat orders her around like a servant.",
+   "ko": "류팡은 자기 집 고양이가 자기를 하인처럼 부린다고 농담해요.",
+   "blank": "仆人",
+   "src": "made"
+  }
+ ],
  "w|今后": [
   {
    "text": "王刚对教练说，今后每天都会早起来锻炼。",
@@ -4244,6 +4340,22 @@
    "en": "Yang Yang complained the shoes his sister bought weren't worth it, but she said that price was already discounted.",
    "ko": "양양은 누나가 산 신발이 돈값을 못 한다고 했지만 누나는 그 가격이 이미 할인된 거라고 했어요.",
    "blank": "价格",
+   "src": "made"
+  }
+ ],
+ "w|价钱": [
+  {
+   "text": "这家婚庆公司的价钱比别家贵，但服务很周到。",
+   "en": "This wedding company's price is higher than others, but the service is very thorough.",
+   "ko": "이 웨딩 업체는 가격이 다른 곳보다 비싸지만 서비스가 아주 꼼꼼해요.",
+   "blank": "价钱",
+   "src": "made"
+  },
+  {
+   "text": "诊所把各种检查的价钱都贴在了墙上。",
+   "en": "The clinic posted the prices of all the different tests on the wall.",
+   "ko": "동물병원은 검사마다 가격을 벽에 붙여 놓았어요.",
+   "blank": "价钱",
    "src": "made"
   }
  ],
@@ -5213,6 +5325,22 @@
    "src": "made"
   }
  ],
+ "w|例子": [
+  {
+   "text": "陈杰举了一个以前的判例当例子，说服了陪审团。",
+   "en": "Chen Jie cited an earlier precedent as an example and convinced the jury.",
+   "ko": "천제는 예전 판례를 예로 들어 배심원단을 설득했어요.",
+   "blank": "例子",
+   "src": "made"
+  },
+  {
+   "text": "牙医举了几个例子，说明为什么晚上吃糖最伤牙。",
+   "en": "The dentist gave a few examples to explain why eating sweets at night is worst for teeth.",
+   "ko": "치과 의사는 몇 가지 예를 들어 밤에 단 걸 먹는 게 왜 이에 가장 나쁜지 설명했어요.",
+   "blank": "例子",
+   "src": "made"
+  }
+ ],
  "w|依然": [
   {
    "text": "他依然很忙。",
@@ -5986,6 +6114,22 @@
    "en": "Li Na's grandfather says the most important thing in business is keeping your word.",
    "ko": "리나의 할아버지는 장사에서 가장 중요한 건 신용을 지키는 거라고 해요.",
    "blank": "做生意",
+   "src": "made"
+  }
+ ],
+ "w|做饭": [
+  {
+   "text": "婚礼前一周，张伟的妈妈天天在家做饭招待亲戚。",
+   "en": "The week before the wedding, Zhang Wei's mother cooked at home every day to host relatives.",
+   "ko": "결혼식 일주일 전부터 장웨이 엄마는 날마다 집에서 밥을 해서 친척들을 대접했어요.",
+   "blank": "做饭",
+   "src": "made"
+  },
+  {
+   "text": "刘芳工作太忙，下班回家常常懒得做饭。",
+   "en": "Liu Fang is so busy at work that she's often too tired to cook when she gets home.",
+   "ko": "류팡은 일이 너무 바빠서 퇴근하면 밥하기가 귀찮을 때가 많아요.",
+   "blank": "做饭",
    "src": "made"
   }
  ],
@@ -8051,6 +8195,22 @@
    "blank": "出"
   }
  ],
+ "w|出事": [
+  {
+   "text": "婚车在路上出事了，幸好只是轮胎爆了。",
+   "en": "The wedding car had an accident on the way, but luckily it was just a flat tire.",
+   "ko": "웨딩카가 길에서 사고가 났는데 다행히 타이어만 터졌어요.",
+   "blank": "出事",
+   "src": "made"
+  },
+  {
+   "text": "主人说小狗昨晚还好好的，没想到今天早上就出事了。",
+   "en": "The owner said the puppy was fine last night, and he never expected something to go wrong this morning.",
+   "ko": "보호자는 강아지가 어젯밤까지 멀쩡했는데 오늘 아침에 일이 날 줄은 몰랐다고 했어요.",
+   "blank": "出事",
+   "src": "made"
+  }
+ ],
  "w|出于": [
   {
    "text": "小明出于好奇，把闹钟拆开看了看里面。",
@@ -8277,6 +8437,22 @@
    "blank": "出色"
   }
  ],
+ "w|出路": [
+  {
+   "text": "陈杰劝当事人和解，说这是眼下最好的出路。",
+   "en": "Chen Jie urged his client to settle, saying it was the best way out for now.",
+   "ko": "천제는 의뢰인에게 합의를 권하면서 지금으로선 그게 최선의 길이라고 했어요.",
+   "blank": "出路",
+   "src": "made"
+  },
+  {
+   "text": "小雪的表哥牙医毕业后找不到出路，最后回老家开了诊所。",
+   "en": "Xiaoxue's cousin couldn't find a way forward after dental school and eventually opened a clinic back home.",
+   "ko": "샤오쉐의 사촌 오빠는 치대를 졸업하고 길을 못 찾다가 결국 고향에 가서 치과를 열었어요.",
+   "blank": "出路",
+   "src": "made"
+  }
+ ],
  "w|出门": [
   {
    "text": "我刚要出门，就下雨了。",
@@ -8306,6 +8482,22 @@
    "en": "Wang Fang tossed the dough toward the basket and hit right in the middle.",
    "ko": "왕팡이 반죽을 바구니로 던졌더니 딱 한가운데 맞았어요.",
    "blank": "击中",
+   "src": "made"
+  }
+ ],
+ "w|击败": [
+  {
+   "text": "抢捧花的时候，伴娘击败了十几个对手。",
+   "en": "When catching the bouquet, the bridesmaid beat out a dozen rivals.",
+   "ko": "부케를 받을 때 들러리가 열 명 넘는 경쟁자를 이겼어요.",
+   "blank": "击败",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，打完疫苗，小狗的身体就能击败这种病毒。",
+   "en": "Liu Fang says after the vaccine, the puppy's body can fight off this virus.",
+   "ko": "류팡은 백신을 맞으면 강아지 몸이 이 바이러스를 물리칠 수 있다고 해요.",
+   "blank": "击败",
    "src": "made"
   }
  ],
@@ -8380,6 +8572,22 @@
    "en": "Liu Fang is an active member of the neighbourhood and never misses a community meeting.",
    "ko": "류팡은 동네 열성 회원이라 주민 회의에 한 번도 빠진 적이 없어요.",
    "blank": "分子",
+   "src": "made"
+  }
+ ],
+ "w|分布": [
+  {
+   "text": "这家公司的工厂分布在三个省，调查花了很长时间。",
+   "en": "The company's factories are spread across three provinces, so the investigation took a long time.",
+   "ko": "이 회사의 공장이 세 개 성에 흩어져 있어서 조사에 시간이 오래 걸렸어요.",
+   "blank": "分布",
+   "src": "made"
+  },
+  {
+   "text": "这个城市的牙科诊所大多分布在市中心。",
+   "en": "Most of this city's dental clinics are concentrated downtown.",
+   "ko": "이 도시의 치과는 대부분 도심에 몰려 있어요.",
+   "blank": "分布",
    "src": "made"
   }
  ],
@@ -8619,6 +8827,22 @@
    "en": "He set a record.",
    "ko": "그가 기록을 세웠어.",
    "blank": "创造"
+  }
+ ],
+ "w|判决": [
+  {
+   "text": "法院最后判决被告赔偿原告十万元。",
+   "en": "The court finally ruled that the defendant must pay the plaintiff a hundred thousand yuan in compensation.",
+   "ko": "법원은 결국 피고가 원고에게 십만 위안을 배상하라고 판결했어요.",
+   "blank": "判决",
+   "src": "made"
+  },
+  {
+   "text": "小雪在新闻里看到，法院判决那家无证牙科停业整顿。",
+   "en": "Xiaoxue saw on the news that the court ordered that unlicensed dental clinic to shut down for rectification.",
+   "ko": "샤오쉐는 뉴스에서 법원이 그 무면허 치과에 영업 정지 판결을 내렸다는 걸 봤어요.",
+   "blank": "判决",
+   "src": "made"
   }
  ],
  "w|判断": [
@@ -8973,6 +9197,22 @@
    "blank": "前往"
   }
  ],
+ "w|前提": [
+  {
+   "text": "陈杰说，在法律面前人人平等，这是一切公正的前提。",
+   "en": "Chen Jie says everyone is equal before the law, and that's the premise of all justice.",
+   "ko": "천제는 법 앞에 모두가 평등하다는 것이 모든 공정의 전제라고 말해요.",
+   "blank": "前提",
+   "src": "made"
+  },
+  {
+   "text": "医生说，牙龈健康是做种植牙的前提。",
+   "en": "The dentist says healthy gums are a prerequisite for getting an implant.",
+   "ko": "의사는 잇몸이 건강해야 임플란트를 할 수 있다고 해요.",
+   "blank": "前提",
+   "src": "made"
+  }
+ ],
  "w|前辈": [
   {
    "text": "张伟的单位来了好几位前辈，都给他包了红包。",
@@ -9044,6 +9284,22 @@
    "en": "The musical theatre club handed out scripts, and Xiaoxue got a small singing role.",
    "ko": "뮤지컬 동아리에서 대본을 나눠 줬는데 샤오쉐는 노래하는 작은 배역을 맡았어요.",
    "blank": "剧本",
+   "src": "made"
+  }
+ ],
+ "w|剧院": [
+  {
+   "text": "这起案子的原告是城南一家老剧院的老板。",
+   "en": "The plaintiff in this case is the owner of an old theater in the south of the city.",
+   "ko": "이 사건의 원고는 도시 남쪽에 있는 오래된 극장의 사장이에요.",
+   "blank": "剧院",
+   "src": "made"
+  },
+  {
+   "text": "小雪的牙医诊所就在剧院对面，看完病还能去看戏。",
+   "en": "Xiaoxue's dental clinic is right across from the theater, so she can catch a show after her appointment.",
+   "ko": "샤오쉐가 다니는 치과는 극장 바로 맞은편이라 진료 후에 공연을 볼 수도 있어요.",
+   "blank": "剧院",
    "src": "made"
   }
  ],
@@ -11159,6 +11415,22 @@
    "src": "made"
   }
  ],
+ "w|取代": [
+  {
+   "text": "陈杰认为，再多的证人陈述也取代不了一份可靠的书面证据。",
+   "en": "Chen Jie believes no amount of witness testimony can replace a single reliable piece of written evidence.",
+   "ko": "천제는 증인 진술이 아무리 많아도 믿을 만한 서면 증거 하나를 대신할 수 없다고 생각해요.",
+   "blank": "取代",
+   "src": "made"
+  },
+  {
+   "text": "医生说，这颗烂牙只能拔掉，用假牙来取代。",
+   "en": "The dentist said this rotten tooth has to come out and be replaced with a false tooth.",
+   "ko": "의사는 이 썩은 이를 뽑고 의치로 대신할 수밖에 없다고 했어요.",
+   "blank": "取代",
+   "src": "made"
+  }
+ ],
  "w|取得": [
   {
    "text": "她取得了很好的成绩。",
@@ -11374,6 +11646,22 @@
    "en": "The village has only one old well, and the whole village used to depend on it for water.",
    "ko": "마을에는 우물이 하나뿐인데 예전엔 온 마을 사람들이 그 물을 마셨어요.",
    "blank": "口",
+   "src": "made"
+  }
+ ],
+ "w|口味": [
+  {
+   "text": "为了照顾不同客人的口味，婚宴准备了辣的和不辣的菜。",
+   "en": "To suit different guests' tastes, the banquet had both spicy and mild dishes.",
+   "ko": "여러 손님의 입맛에 맞추려고 피로연에 매운 요리와 안 매운 요리를 다 준비했어요.",
+   "blank": "口味",
+   "src": "made"
+  },
+  {
+   "text": "这只老狗口味很挑，只吃鸡肉做的狗粮。",
+   "en": "This old dog is a picky eater and only eats chicken dog food.",
+   "ko": "이 늙은 개는 입맛이 까다로워서 닭고기 사료만 먹어요.",
+   "blank": "口味",
    "src": "made"
   }
  ],
@@ -13193,6 +13481,22 @@
    "blank": "命令"
   }
  ],
+ "w|命名": [
+  {
+   "text": "新郎新娘用两人名字里的字给新家的小狗命名。",
+   "en": "The bride and groom named their new puppy using characters from both their names.",
+   "ko": "신랑 신부는 두 사람 이름의 글자를 따서 새로 들인 강아지 이름을 지었어요.",
+   "blank": "命名",
+   "src": "made"
+  },
+  {
+   "text": "诊所捡到的小猫还没命名，护士们都叫它“小白”。",
+   "en": "The kitten the clinic found hasn't been named yet, so the nurses call it \"Xiaobai.\"",
+   "ko": "동물병원에서 주운 새끼 고양이는 아직 이름이 없어서 간호사들이 다 “샤오바이”라고 불러요.",
+   "blank": "命名",
+   "src": "made"
+  }
+ ],
  "w|命运": [
   {
    "text": "相信命运。",
@@ -14247,6 +14551,22 @@
    "blank": "回去"
   }
  ],
+ "w|回复": [
+  {
+   "text": "对方律师一直没有回复陈杰的邮件，开庭前才打来电话。",
+   "en": "The opposing lawyer never replied to Chen Jie's email and only called right before the hearing.",
+   "ko": "상대 변호사는 천제의 메일에 답장을 안 하다가 재판 직전에야 전화했어요.",
+   "blank": "回复",
+   "src": "made"
+  },
+  {
+   "text": "小雪在网上留言问能不能周日看牙，诊所很快就回复了。",
+   "en": "Xiaoxue left a message online asking if she could come on Sunday, and the clinic replied quickly.",
+   "ko": "샤오쉐가 인터넷에 일요일 진료가 되냐고 남기자 치과에서 금방 답이 왔어요.",
+   "blank": "回复",
+   "src": "made"
+  }
+ ],
  "w|回头": [
   {
    "text": "他回头看了一眼。",
@@ -15117,6 +15437,22 @@
    "src": "made"
   }
  ],
+ "w|场面": [
+  {
+   "text": "宣判后，原告一家抱头痛哭，场面让人心酸。",
+   "en": "After the verdict, the plaintiff's family wept in each other's arms, a heartbreaking scene.",
+   "ko": "판결 후 원고 가족이 부둥켜안고 울어서 보는 사람 마음이 아팠어요.",
+   "blank": "场面",
+   "src": "made"
+  },
+  {
+   "text": "小男孩一见到钳子就大哭起来，场面一度很混乱。",
+   "en": "The little boy burst into tears at the sight of the forceps, and things got chaotic for a while.",
+   "ko": "꼬마가 집게를 보자마자 울음을 터뜨려서 한동안 난리가 났어요.",
+   "blank": "场面",
+   "src": "made"
+  }
+ ],
  "w|坏": [
   {
    "text": "东西坏了。",
@@ -15643,6 +15979,22 @@
    "src": "made"
   }
  ],
+ "w|处境": [
+  {
+   "text": "被告失去了工作，又欠了债，处境非常困难。",
+   "en": "The defendant lost his job and is in debt, so his situation is very difficult.",
+   "ko": "피고인은 일자리를 잃고 빚까지 져서 처지가 아주 어려워요.",
+   "blank": "处境",
+   "src": "made"
+  },
+  {
+   "text": "小雪牙疼得睡不着，又找不到开门的诊所，处境很尴尬。",
+   "en": "Xiaoxue's toothache kept her awake, and she couldn't find an open clinic—an awkward situation.",
+   "ko": "샤오쉐는 이가 아파 잠을 못 자는데 문 연 치과도 못 찾아서 난처했어요.",
+   "blank": "处境",
+   "src": "made"
+  }
+ ],
  "w|处理": [
   {
    "text": "我来处理。",
@@ -15729,6 +16081,22 @@
    "en": "There's someone outside the door.",
    "ko": "문밖에 사람이 있어.",
    "blank": "外"
+  }
+ ],
+ "w|外交": [
+  {
+   "text": "这个案子牵涉到两个国家，还惊动了外交部门。",
+   "en": "This case involves two countries and even alarmed the foreign affairs department.",
+   "ko": "이 사건은 두 나라가 얽혀 있어서 외교 부서까지 나섰어요.",
+   "blank": "外交",
+   "src": "made"
+  },
+  {
+   "text": "小雪的姐姐在外交部工作，常年在国外，回国第一件事就是看牙。",
+   "en": "Xiaoxue's sister works at the foreign ministry and is abroad most of the year; the first thing she does back home is see the dentist.",
+   "ko": "샤오쉐 언니는 외교부에서 일해서 일 년 내내 해외에 있다가 귀국하면 제일 먼저 치과에 가요.",
+   "blank": "外交",
+   "src": "made"
   }
  ],
  "w|外国": [
@@ -15978,6 +16346,22 @@
    "en": "Lili said she has an industry conference tomorrow, so she can't drink too much.",
    "ko": "리리는 내일 업계 대회에 가야 해서 많이 마실 수 없다고 했어요.",
    "blank": "大会",
+   "src": "made"
+  }
+ ],
+ "w|大使": [
+  {
+   "text": "新娘的舅舅以前当过大使，在婚礼上讲了很多国外的趣事。",
+   "en": "The bride's uncle used to be an ambassador and told lots of funny stories from abroad at the wedding.",
+   "ko": "신부의 외삼촌은 예전에 대사였는데 결혼식에서 외국 이야기를 재미있게 많이 했어요.",
+   "blank": "大使",
+   "src": "made"
+  },
+  {
+   "text": "这家宠物医院请了一只金毛当形象大使。",
+   "en": "This animal hospital made a golden retriever its mascot ambassador.",
+   "ko": "이 동물병원은 골든레트리버를 홍보대사로 삼았어요.",
+   "blank": "大使",
    "src": "made"
   }
  ],
@@ -17525,6 +17909,22 @@
    "blank": "妈妈"
   }
  ],
+ "w|妨碍": [
+  {
+   "text": "摄影师提醒客人站到两边，不要妨碍新人走红毯。",
+   "en": "The photographer reminded guests to stand to the sides and not block the couple walking the red carpet.",
+   "ko": "사진작가는 손님들에게 양옆으로 서서 신랑 신부가 레드카펫 걷는 걸 방해하지 말라고 했어요.",
+   "blank": "妨碍",
+   "src": "made"
+  },
+  {
+   "text": "护士提醒主人别站在门口，以免妨碍医生进出。",
+   "en": "The nurse reminded the owner not to stand in the doorway so as not to get in the doctors' way.",
+   "ko": "간호사는 보호자에게 의사 출입에 방해되지 않게 문 앞에 서 있지 말라고 했어요.",
+   "blank": "妨碍",
+   "src": "made"
+  }
+ ],
  "w|妹妹": [
   {
    "text": "妹妹在家。",
@@ -17645,6 +18045,22 @@
    "src": "made"
   }
  ],
+ "w|委员": [
+  {
+   "text": "新娘的妈妈是社区委员，邻居们都来道喜了。",
+   "en": "The bride's mother is a community committee member, so all the neighbors came to congratulate them.",
+   "ko": "신부 엄마가 동네 위원이라 이웃들이 다 축하하러 왔어요.",
+   "blank": "委员",
+   "src": "made"
+  },
+  {
+   "text": "刘芳是本市动物保护协会的委员。",
+   "en": "Liu Fang is a committee member of the city's animal protection association.",
+   "ko": "류팡은 이 도시 동물보호협회의 위원이에요.",
+   "blank": "委员",
+   "src": "made"
+  }
+ ],
  "w|委员会": [
   {
    "text": "委员会开会了。",
@@ -17657,6 +18073,22 @@
    "en": "He joined the committee.",
    "ko": "그는 위원회에 들어갔어.",
    "blank": "委员会"
+  }
+ ],
+ "w|姿势": [
+  {
+   "text": "陈杰发言时总保持着一个自然放松的姿势。",
+   "en": "When Chen Jie speaks, he always keeps a natural, relaxed posture.",
+   "ko": "천제는 발언할 때 늘 자연스럽고 편안한 자세를 유지해요.",
+   "blank": "姿势",
+   "src": "made"
+  },
+  {
+   "text": "牙医让小雪换个姿势，头再往后仰一点。",
+   "en": "The dentist asked Xiaoxue to change position and tilt her head back a bit more.",
+   "ko": "치과 의사는 샤오쉐에게 자세를 바꿔서 고개를 조금 더 뒤로 젖히라고 했어요.",
+   "blank": "姿势",
+   "src": "made"
   }
  ],
  "w|威胁": [
@@ -18407,6 +18839,22 @@
    "en": "Let's set a time.",
    "ko": "우리 시간 정하자.",
    "blank": "定"
+  }
+ ],
+ "w|定位": [
+  {
+   "text": "警方通过手机信号定位了嫌疑人当晚的位置。",
+   "en": "The police located the suspect's whereabouts that night through his phone signal.",
+   "ko": "경찰은 휴대폰 신호로 그날 밤 용의자의 위치를 추적했어요.",
+   "blank": "定位",
+   "src": "made"
+  },
+  {
+   "text": "这家诊所把自己定位成适合儿童的牙科。",
+   "en": "This clinic positions itself as a dental practice suited to children.",
+   "ko": "이 치과는 스스로를 아이들에게 맞는 치과로 자리매김했어요.",
+   "blank": "定位",
+   "src": "made"
   }
  ],
  "w|宝宝": [
@@ -20457,6 +20905,22 @@
    "src": "made"
   }
  ],
+ "w|工程师": [
+  {
+   "text": "张伟的新娘是一名桥梁工程师，平时很少穿裙子。",
+   "en": "Zhang Wei's bride is a bridge engineer who rarely wears dresses.",
+   "ko": "장웨이의 신부는 교량 엔지니어라서 평소에 치마를 거의 안 입어요.",
+   "blank": "工程师",
+   "src": "made"
+  },
+  {
+   "text": "带猫来看病的是一位年轻的软件工程师。",
+   "en": "The person who brought the cat in was a young software engineer.",
+   "ko": "고양이를 데리고 진료 온 사람은 젊은 소프트웨어 엔지니어였어요.",
+   "blank": "工程师",
+   "src": "made"
+  }
+ ],
  "w|工资": [
   {
    "text": "每个月十号，周强都会把工资寄一部分回家。",
@@ -22069,6 +22533,22 @@
    "src": "made"
   }
  ],
+ "w|引发": [
+  {
+   "text": "伴郎一句玩笑话引发了满堂笑声。",
+   "en": "The best man's joke set off laughter throughout the hall.",
+   "ko": "들러리의 농담 한마디에 장내에 웃음이 터졌어요.",
+   "blank": "引发",
+   "src": "made"
+  },
+  {
+   "text": "刘芳解释说，吃巧克力会引发狗中毒。",
+   "en": "Liu Fang explained that eating chocolate can cause poisoning in dogs.",
+   "ko": "류팡은 초콜릿을 먹으면 개가 중독될 수 있다고 설명했어요.",
+   "blank": "引发",
+   "src": "made"
+  }
+ ],
  "w|引擎": [
   {
    "text": "引擎突然坏了。",
@@ -22327,6 +22807,22 @@
    "src": "made"
   }
  ],
+ "w|当局": [
+  {
+   "text": "当局表示，会尊重法院的最终裁决。",
+   "en": "The authorities said they would respect the court's final ruling.",
+   "ko": "당국은 법원의 최종 결정을 존중하겠다고 밝혔어요.",
+   "blank": "当局",
+   "src": "made"
+  },
+  {
+   "text": "卫生当局最近对全市的牙科诊所进行了检查。",
+   "en": "The health authorities recently inspected all the dental clinics in the city.",
+   "ko": "보건 당국은 최근 시내 치과들을 점검했어요.",
+   "blank": "当局",
+   "src": "made"
+  }
+ ],
  "w|当年": [
   {
    "text": "马林当年第一次来这座城市，正好赶上桂花开。",
@@ -22417,6 +22913,22 @@
    "src": "made"
   }
  ],
+ "w|形容": [
+  {
+   "text": "证人用“又高又瘦”来形容那天晚上见到的男人。",
+   "en": "The witness described the man she saw that night as \"tall and thin.\"",
+   "ko": "증인은 그날 밤 본 남자를 “키 크고 마른 사람”이라고 묘사했어요.",
+   "blank": "形容",
+   "src": "made"
+  },
+  {
+   "text": "小雪不知道该怎么形容那种疼，只说像被针扎一样。",
+   "en": "Xiaoxue didn't know how to describe the pain, only that it felt like being pricked by a needle.",
+   "ko": "샤오쉐는 그 통증을 어떻게 표현해야 할지 몰라서 바늘에 찔리는 것 같다고만 했어요.",
+   "blank": "形容",
+   "src": "made"
+  }
+ ],
  "w|形式": [
   {
    "text": "今年的市民意见征集改成了网上投票的形式。",
@@ -22446,6 +22958,22 @@
    "en": "This habit was formed in childhood.",
    "ko": "이 습관은 어릴 때 생겼어요.",
    "blank": "形成",
+   "src": "made"
+  }
+ ],
+ "w|形状": [
+  {
+   "text": "鉴定专家说，伤口的形状跟那把钥匙完全吻合。",
+   "en": "The forensic expert said the shape of the wound matched that key exactly.",
+   "ko": "감정 전문가는 상처 모양이 그 열쇠와 정확히 들어맞는다고 했어요.",
+   "blank": "形状",
+   "src": "made"
+  },
+  {
+   "text": "牙医拿出一个模型，给小雪看牙根的形状。",
+   "en": "The dentist took out a model to show Xiaoxue the shape of the tooth root.",
+   "ko": "치과 의사는 모형을 꺼내 샤오쉐에게 치아 뿌리 모양을 보여 줬어요.",
+   "blank": "形状",
    "src": "made"
   }
  ],
@@ -23314,6 +23842,22 @@
    "en": "At the interview, the manager asked Yang Yang what kind of personality she thinks she has.",
    "ko": "면접 때 부장은 양양에게 자기 성격이 어떤 것 같냐고 물었어요.",
    "blank": "性格",
+   "src": "made"
+  }
+ ],
+ "w|性质": [
+  {
+   "text": "法官提醒大家，这个案子的性质跟普通的合同纠纷不一样。",
+   "en": "The judge reminded everyone that the nature of this case differs from an ordinary contract dispute.",
+   "ko": "판사는 이 사건의 성격이 일반 계약 분쟁과 다르다고 모두에게 일깨웠어요.",
+   "blank": "性质",
+   "src": "made"
+  },
+  {
+   "text": "医生说，这种疼的性质不是蛀牙，而是牙龈发炎。",
+   "en": "The dentist said the nature of this pain isn't a cavity but gum inflammation.",
+   "ko": "의사는 이 통증의 성격이 충치가 아니라 잇몸 염증이라고 했어요.",
+   "blank": "性质",
    "src": "made"
   }
  ],
@@ -24439,6 +24983,22 @@
    "src": "made"
   }
  ],
+ "w|戏剧": [
+  {
+   "text": "庭审的气氛紧张得像一出戏剧，旁听席上鸦雀无声。",
+   "en": "The trial was as tense as a play, and the gallery was dead silent.",
+   "ko": "재판 분위기가 연극처럼 팽팽해서 방청석이 쥐 죽은 듯 조용했어요.",
+   "blank": "戏剧",
+   "src": "made"
+  },
+  {
+   "text": "等候室的电视上在放一部老戏剧，看的人不多。",
+   "en": "An old drama was playing on the waiting room TV, but few people watched.",
+   "ko": "대기실 TV에서 옛날 드라마가 나오고 있었는데 보는 사람은 별로 없었어요.",
+   "blank": "戏剧",
+   "src": "made"
+  }
+ ],
  "w|成": [
   {
    "text": "事情成了。",
@@ -24733,6 +25293,22 @@
    "blank": "战士"
   }
  ],
+ "w|战役": [
+  {
+   "text": "这场官司打了整整三年，陈杰把它比作一场漫长的战役。",
+   "en": "The lawsuit dragged on for a full three years, and Chen Jie compared it to a long military campaign.",
+   "ko": "이 소송은 꼬박 삼 년을 끌어서 천제는 그것을 긴 전투에 비유했어요.",
+   "blank": "战役",
+   "src": "made"
+  },
+  {
+   "text": "护士开玩笑说，治这颗牙就像打一场战役，得分好几次。",
+   "en": "The nurse joked that treating this tooth is like fighting a military campaign—it takes several rounds.",
+   "ko": "간호사는 이 이를 치료하는 게 전투 같아서 여러 번에 나눠 해야 한다고 농담했어요.",
+   "blank": "战役",
+   "src": "made"
+  }
+ ],
  "w|战斗": [
   {
    "text": "准备战斗。",
@@ -24745,6 +25321,22 @@
    "en": "The battle is over.",
    "ko": "전투가 끝났어.",
    "blank": "战斗"
+  }
+ ],
+ "w|战术": [
+  {
+   "text": "陈杰改变了辩护的战术，把重点放在证人的可信度上。",
+   "en": "Chen Jie changed his defense tactics and focused on the witness's credibility.",
+   "ko": "천제는 변론 전술을 바꿔서 증인의 신빙성에 초점을 맞췄어요.",
+   "blank": "战术",
+   "src": "made"
+  },
+  {
+   "text": "为了哄小孩张嘴，牙医有一套自己的战术。",
+   "en": "The dentist has her own tactics for coaxing kids to open their mouths.",
+   "ko": "아이가 입을 벌리게 하려고 치과 의사는 나름의 전술이 있어요.",
+   "blank": "战术",
+   "src": "made"
   }
  ],
  "w|战略": [
@@ -25643,6 +26235,22 @@
    "blank": "把"
   }
  ],
+ "w|把握": [
+  {
+   "text": "张伟紧紧把握住求婚的机会，终于娶到了心爱的人。",
+   "en": "Zhang Wei seized his chance to propose and finally married the one he loves.",
+   "ko": "장웨이는 청혼할 기회를 꽉 잡아서 마침내 사랑하는 사람과 결혼했어요.",
+   "blank": "把握",
+   "src": "made"
+  },
+  {
+   "text": "这台手术难度很大，刘芳也没有十足的把握。",
+   "en": "This surgery is very difficult, and even Liu Fang isn't fully confident.",
+   "ko": "이 수술은 아주 어려워서 류팡도 확신이 서지 않아요.",
+   "blank": "把握",
+   "src": "made"
+  }
+ ],
  "w|抓": [
   {
    "text": "别抓我。",
@@ -26335,6 +26943,22 @@
    "en": "Who will save us?",
    "ko": "누가 구해 줄까?",
    "blank": "拯救"
+  }
+ ],
+ "w|拼命": [
+  {
+   "text": "为了赶上婚礼，新娘的表哥拼命开车赶了一夜路。",
+   "en": "To make it to the wedding, the bride's cousin drove all night as fast as he could.",
+   "ko": "결혼식에 늦지 않으려고 신부의 사촌 오빠는 밤새 죽기 살기로 차를 몰았어요.",
+   "blank": "拼命",
+   "src": "made"
+  },
+  {
+   "text": "小猫一进诊所就拼命往桌子底下躲。",
+   "en": "As soon as the kitten entered the clinic, it desperately tried to hide under the table.",
+   "ko": "새끼 고양이는 동물병원에 들어오자마자 필사적으로 탁자 밑으로 숨었어요.",
+   "blank": "拼命",
+   "src": "made"
   }
  ],
  "w|拿": [
@@ -27197,6 +27821,38 @@
    "src": "made"
   }
  ],
+ "w|提升": [
+  {
+   "text": "陈杰说，律师的价值在于不断提升自己的专业能力。",
+   "en": "Chen Jie says a lawyer's worth lies in constantly improving their professional skills.",
+   "ko": "천제는 변호사의 가치가 전문 능력을 꾸준히 끌어올리는 데 있다고 말해요.",
+   "blank": "提升",
+   "src": "made"
+  },
+  {
+   "text": "诊所换了新设备，看牙的效率提升了不少。",
+   "en": "The clinic got new equipment, and the efficiency of dental visits improved quite a bit.",
+   "ko": "치과가 새 장비로 바꿔서 진료 효율이 꽤 높아졌어요.",
+   "blank": "提升",
+   "src": "made"
+  }
+ ],
+ "w|提名": [
+  {
+   "text": "陈杰去年被提名为全市优秀律师。",
+   "en": "Last year Chen Jie was nominated as one of the city's outstanding lawyers.",
+   "ko": "천제는 작년에 시 우수 변호사 후보로 추천됐어요.",
+   "blank": "提名",
+   "src": "made"
+  },
+  {
+   "text": "这位牙医被提名参加全国口腔医学大会的评选。",
+   "en": "This dentist was nominated for an award at the national dental medicine conference.",
+   "ko": "이 치과 의사는 전국 구강의학 대회 시상 후보로 추천됐어요.",
+   "blank": "提名",
+   "src": "made"
+  }
+ ],
  "w|提议": [
   {
    "text": "张伟提议在周末延长开放时间，馆长同意了。",
@@ -27600,6 +28256,22 @@
    "en": "We must withdraw before dark.",
    "ko": "어두워지기 전에 철수해야 해요.",
    "blank": "撤退",
+   "src": "made"
+  }
+ ],
+ "w|撤销": [
+  {
+   "text": "由于证据不足，检方撤销了对陈杰当事人的指控。",
+   "en": "Due to insufficient evidence, the prosecution dropped the charges against Chen Jie's client.",
+   "ko": "증거가 부족해서 검찰은 천제 의뢰인에 대한 기소를 취하했어요.",
+   "blank": "撤销",
+   "src": "made"
+  },
+  {
+   "text": "小雪临时有事，只好打电话撤销了明天的预约。",
+   "en": "Something came up, so Xiaoxue had to call and cancel tomorrow's appointment.",
+   "ko": "샤오쉐는 갑자기 일이 생겨서 전화로 내일 예약을 취소할 수밖에 없었어요.",
+   "blank": "撤销",
    "src": "made"
   }
  ],
@@ -28192,6 +28864,22 @@
    "en": "The ambulance arrived quickly.",
    "ko": "구급차가 금방 왔어요.",
    "blank": "救护车",
+   "src": "made"
+  }
+ ],
+ "w|救援": [
+  {
+   "text": "这起案子起因于一次救援行动中的失误。",
+   "en": "This case arose from a mistake during a rescue operation.",
+   "ko": "이 사건은 구조 작업 중의 실수에서 비롯됐어요.",
+   "blank": "救援",
+   "src": "made"
+  },
+  {
+   "text": "地震后，这位牙医自愿到灾区参加了医疗救援。",
+   "en": "After the earthquake, this dentist volunteered to join the medical relief effort in the disaster area.",
+   "ko": "지진이 난 뒤 이 치과 의사는 자원해서 재난 지역 의료 구조에 참여했어요.",
+   "blank": "救援",
    "src": "made"
   }
  ],
@@ -28929,6 +29617,22 @@
    "blank": "无关"
   }
  ],
+ "w|无意": [
+  {
+   "text": "张伟无意中听到新娘在偷偷练习誓词。",
+   "en": "Zhang Wei accidentally overheard the bride secretly practicing her vows.",
+   "ko": "장웨이는 무심코 신부가 몰래 서약문을 연습하는 걸 들었어요.",
+   "blank": "无意",
+   "src": "made"
+  },
+  {
+   "text": "主人说自己无意伤害猫，只是不小心踩到了它的尾巴。",
+   "en": "The owner said he didn't mean to hurt the cat; he just accidentally stepped on its tail.",
+   "ko": "보호자는 고양이를 다치게 할 생각은 없었고 실수로 꼬리를 밟았을 뿐이라고 했어요.",
+   "blank": "无意",
+   "src": "made"
+  }
+ ],
  "w|无所谓": [
   {
    "text": "我无所谓。",
@@ -28941,6 +29645,22 @@
    "en": "It doesn't matter to him.",
    "ko": "그에게는 아무래도 좋아.",
    "blank": "无所谓"
+  }
+ ],
+ "w|无比": [
+  {
+   "text": "交换戒指的那一刻，张伟觉得无比幸福。",
+   "en": "The moment they exchanged rings, Zhang Wei felt incredibly happy.",
+   "ko": "반지를 교환하는 순간 장웨이는 더할 나위 없이 행복했어요.",
+   "blank": "无比",
+   "src": "made"
+  },
+  {
+   "text": "小狗醒过来摇了摇尾巴，主人无比激动。",
+   "en": "The puppy woke up and wagged its tail, and the owner was overjoyed.",
+   "ko": "강아지가 깨어나 꼬리를 흔들자 보호자는 더없이 감격했어요.",
+   "blank": "无比",
+   "src": "made"
   }
  ],
  "w|无法": [
@@ -30145,6 +30865,22 @@
    "blank": "有关"
   }
  ],
+ "w|有利": [
+  {
+   "text": "婚礼选在秋天，天气凉快，对户外仪式很有利。",
+   "en": "The wedding was set for autumn; the cool weather was good for an outdoor ceremony.",
+   "ko": "결혼식을 가을로 잡아서 날씨가 선선하니 야외 예식에 유리했어요.",
+   "blank": "有利",
+   "src": "made"
+  },
+  {
+   "text": "多晒太阳对兔子的骨骼生长很有利。",
+   "en": "Getting more sun is good for a rabbit's bone growth.",
+   "ko": "햇볕을 많이 쬐는 건 토끼 뼈 성장에 아주 유리해요.",
+   "blank": "有利",
+   "src": "made"
+  }
+ ],
  "w|有名": [
   {
    "text": "这家酒店最有名的是顶楼的早餐，能看到整座城市。",
@@ -30303,6 +31039,22 @@
    "en": "Call me when you're free.",
    "ko": "시간 되면 전화해.",
    "blank": "有空"
+  }
+ ],
+ "w|有罪": [
+  {
+   "text": "张伟在婚礼上开玩笑说，自己让新娘等了三年，真是有罪。",
+   "en": "At the wedding Zhang Wei joked that he was guilty of making the bride wait three years.",
+   "ko": "장웨이는 결혼식에서 신부를 삼 년이나 기다리게 했으니 죄가 크다고 농담했어요.",
+   "blank": "有罪",
+   "src": "made"
+  },
+  {
+   "text": "新闻里说，那个虐待动物的人被法院判定有罪。",
+   "en": "The news said the person who abused animals was found guilty by the court.",
+   "ko": "뉴스에서 동물을 학대한 사람이 법원에서 유죄 판결을 받았다고 했어요.",
+   "blank": "有罪",
+   "src": "made"
   }
  ],
  "w|有趣": [
@@ -31033,6 +31785,22 @@
    "src": "made"
   }
  ],
+ "w|构成": [
+  {
+   "text": "张伟说，亲朋好友的祝福构成了他最美好的回忆。",
+   "en": "Zhang Wei says the blessings of family and friends make up his fondest memories.",
+   "ko": "장웨이는 가족과 친구들의 축복이 가장 아름다운 추억을 이룬다고 말해요.",
+   "blank": "构成",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，猫的骨骼是由两百多块骨头构成的。",
+   "en": "Liu Fang says a cat's skeleton is made up of over two hundred bones.",
+   "ko": "류팡은 고양이 골격이 이백 개가 넘는 뼈로 이루어져 있다고 해요.",
+   "blank": "构成",
+   "src": "made"
+  }
+ ],
  "w|果然": [
   {
    "text": "果然是你。",
@@ -31672,6 +32440,22 @@
    "en": "Xiaoxue says she only truly understood the concept of \"slow living\" by the sea.",
    "ko": "샤오쉐는 \"느린 삶\"이라는 개념을 바닷가에서야 진짜로 알게 됐다고 해요.",
    "blank": "概念",
+   "src": "made"
+  }
+ ],
+ "w|模仿": [
+  {
+   "text": "小侄子模仿新郎的样子鞠躬，逗得客人哈哈大笑。",
+   "en": "The little nephew imitated the groom's bow, making the guests roar with laughter.",
+   "ko": "어린 조카가 신랑처럼 절하는 흉내를 내서 손님들이 크게 웃었어요.",
+   "blank": "模仿",
+   "src": "made"
+  },
+  {
+   "text": "诊所的鹦鹉会模仿电话铃声，常把护士骗过去。",
+   "en": "The clinic's parrot can mimic a phone ringing and often fools the nurses.",
+   "ko": "동물병원 앵무새는 전화벨 소리를 흉내 내서 자주 간호사들을 속여요.",
+   "blank": "模仿",
    "src": "made"
   }
  ],
@@ -32388,6 +33172,22 @@
    "en": "The company organizes an outing in the countryside for new employees every year.",
    "ko": "회사는 해마다 신입 사원들을 데리고 교외로 단합 행사를 가요.",
    "blank": "每年",
+   "src": "made"
+  }
+ ],
+ "w|每当": [
+  {
+   "text": "每当音乐响起，张伟就紧张得手心出汗。",
+   "en": "Whenever the music started, Zhang Wei got so nervous his palms sweated.",
+   "ko": "음악이 울릴 때마다 장웨이는 너무 긴장해서 손에 땀이 났어요.",
+   "blank": "每当",
+   "src": "made"
+  },
+  {
+   "text": "每当有动物康复出院，刘芳都会拍张照片留念。",
+   "en": "Whenever an animal recovers and goes home, Liu Fang takes a photo as a keepsake.",
+   "ko": "동물이 회복해서 퇴원할 때마다 류팡은 기념으로 사진을 찍어요.",
+   "blank": "每当",
    "src": "made"
   }
  ],
@@ -33760,6 +34560,22 @@
    "en": "What her coworker said left a deep impression on Lin Jing.",
    "ko": "동료가 한 그 말이 린징에게 깊은 인상을 남겼어요.",
    "blank": "深刻",
+   "src": "made"
+  }
+ ],
+ "w|深处": [
+  {
+   "text": "陈杰知道，被告内心深处其实很后悔。",
+   "en": "Chen Jie knows that, deep down, the defendant actually deeply regrets it.",
+   "ko": "천제는 피고인이 마음속 깊은 곳에서는 사실 많이 후회한다는 걸 알아요.",
+   "blank": "深处",
+   "src": "made"
+  },
+  {
+   "text": "医生用小镜子照了照，发现牙缝深处卡着一根鱼刺。",
+   "en": "The dentist looked with a small mirror and found a fish bone stuck deep between the teeth.",
+   "ko": "의사가 작은 거울로 비춰 보니 이 사이 깊은 곳에 생선 가시가 끼어 있었어요.",
+   "blank": "深处",
    "src": "made"
   }
  ],
@@ -35143,6 +35959,22 @@
    "blank": "牧师"
   }
  ],
+ "w|物品": [
+  {
+   "text": "婚礼前一天，张伟把要用的物品一样一样装进箱子。",
+   "en": "The day before the wedding, Zhang Wei packed everything needed into boxes one by one.",
+   "ko": "결혼식 전날 장웨이는 필요한 물품을 하나하나 상자에 담았어요.",
+   "blank": "物品",
+   "src": "made"
+  },
+  {
+   "text": "诊所规定，宠物的随身物品要放在门口的柜子里。",
+   "en": "The clinic requires pets' personal belongings to be left in the cabinet by the door.",
+   "ko": "동물병원은 반려동물 소지품을 입구 사물함에 두라고 해요.",
+   "blank": "物品",
+   "src": "made"
+  }
+ ],
  "w|物质": [
   {
    "text": "化学老师说，水是一种非常常见的物质。",
@@ -35215,6 +36047,38 @@
    "en": "He has special requests.",
    "ko": "그는 특별한 요구가 있어.",
    "blank": "特殊"
+  }
+ ],
+ "w|特点": [
+  {
+   "text": "陈杰的特点是说话慢，但每句话都有分量。",
+   "en": "Chen Jie's trademark is speaking slowly, but every sentence carries weight.",
+   "ko": "천제의 특징은 말이 느리지만 한마디 한마디에 무게가 있다는 거예요.",
+   "blank": "特点",
+   "src": "made"
+  },
+  {
+   "text": "这位牙医的特点是手很轻，小孩子都不怕她。",
+   "en": "This dentist's distinguishing trait is her gentle touch, so kids aren't afraid of her.",
+   "ko": "이 치과 의사의 특징은 손이 아주 가볍다는 거라 아이들도 무서워하지 않아요.",
+   "blank": "特点",
+   "src": "made"
+  }
+ ],
+ "w|特色": [
+  {
+   "text": "婚宴上最有特色的一道菜是新娘家乡的酸汤鱼。",
+   "en": "The most distinctive dish at the banquet was sour soup fish from the bride's hometown.",
+   "ko": "피로연에서 가장 특색 있는 요리는 신부 고향의 쏸탕위였어요.",
+   "blank": "特色",
+   "src": "made"
+  },
+  {
+   "text": "这家诊所的特色是专门给鸟和兔子看病。",
+   "en": "This clinic's specialty is treating birds and rabbits.",
+   "ko": "이 동물병원의 특색은 새와 토끼를 전문으로 본다는 거예요.",
+   "blank": "特色",
+   "src": "made"
   }
  ],
  "w|牺牲": [
@@ -36265,6 +37129,22 @@
    "src": "made"
   }
  ],
+ "w|电台": [
+  {
+   "text": "新娘以前在电台主持节目，所以婚礼上讲话特别流利。",
+   "en": "The bride used to host a radio show, so she spoke very fluently at the wedding.",
+   "ko": "신부는 예전에 라디오 방송국에서 진행을 해서 결혼식에서도 말을 아주 잘했어요.",
+   "blank": "电台",
+   "src": "made"
+  },
+  {
+   "text": "刘芳每周六上午在电台讲十分钟的养宠知识。",
+   "en": "Every Saturday morning Liu Fang talks about pet care for ten minutes on the radio.",
+   "ko": "류팡은 토요일 오전마다 라디오에서 십 분 동안 반려동물 상식을 이야기해요.",
+   "blank": "电台",
+   "src": "made"
+  }
+ ],
  "w|电子": [
   {
    "text": "周强每天早上先看电子版的报纸，再去开会。",
@@ -36339,6 +37219,22 @@
    "en": "Watching TV.",
    "ko": "TV 보고 있어.",
    "blank": "电视"
+  }
+ ],
+ "w|电视台": [
+  {
+   "text": "法院门口挤满了各家电视台的记者。",
+   "en": "The court entrance was crowded with reporters from various TV stations.",
+   "ko": "법원 입구는 여러 방송국 기자들로 붐볐어요.",
+   "blank": "电视台",
+   "src": "made"
+  },
+  {
+   "text": "一家电视台来诊所拍了一期关于儿童护牙的节目。",
+   "en": "A TV station came to the clinic to film an episode about children's dental care.",
+   "ko": "한 방송국이 치과에 와서 어린이 치아 관리에 관한 방송을 한 편 찍었어요.",
+   "blank": "电视台",
+   "src": "made"
   }
  ],
  "w|电脑": [
@@ -36515,6 +37411,22 @@
    "en": "This painting is really beautiful.",
    "ko": "이 그림 정말 예뻐.",
    "blank": "画"
+  }
+ ],
+ "w|画家": [
+  {
+   "text": "新娘的好朋友是个画家，送了一幅两人的画像。",
+   "en": "The bride's best friend is a painter and gave them a portrait of the couple.",
+   "ko": "신부의 친한 친구는 화가라서 두 사람의 초상화를 선물했어요.",
+   "blank": "画家",
+   "src": "made"
+  },
+  {
+   "text": "诊所墙上的动物画都是一位画家送的。",
+   "en": "The animal paintings on the clinic's walls were all gifts from a painter.",
+   "ko": "동물병원 벽에 걸린 동물 그림은 다 한 화가가 선물한 거예요.",
+   "blank": "画家",
+   "src": "made"
   }
  ],
  "w|画面": [
@@ -39905,6 +40817,22 @@
    "blank": "管理"
   }
  ],
+ "w|箭": [
+  {
+   "text": "这起案子的关键证物是一支射偏了的箭。",
+   "en": "The key piece of evidence in this case is an arrow that missed its mark.",
+   "ko": "이 사건의 핵심 증거물은 빗나간 화살 한 대예요.",
+   "blank": "箭",
+   "src": "made"
+  },
+  {
+   "text": "小雪觉得打麻药的针像一支箭扎进了牙龈。",
+   "en": "Xiaoxue felt the anesthetic needle go into her gums like an arrow.",
+   "ko": "샤오쉐는 마취 주사가 화살처럼 잇몸에 꽂히는 느낌이었어요.",
+   "blank": "箭",
+   "src": "made"
+  }
+ ],
  "w|箱子": [
   {
    "text": "把箱子打开。",
@@ -39992,6 +40920,22 @@
    "en": "This type of job suits you well.",
    "ko": "이런 종류의 일이 당신에게 잘 맞아요.",
    "blank": "类型",
+   "src": "made"
+  }
+ ],
+ "w|粮食": [
+  {
+   "text": "张伟的奶奶在婚礼上说，小时候家里连粮食都不够吃。",
+   "en": "At the wedding Zhang Wei's grandmother said that as a child her family didn't even have enough grain to eat.",
+   "ko": "장웨이 할머니는 결혼식에서 어릴 때 집에 먹을 곡식도 모자랐다고 말했어요.",
+   "blank": "粮食",
+   "src": "made"
+  },
+  {
+   "text": "乡下的老鼠常偷吃仓库里的粮食，所以农户都爱养猫。",
+   "en": "Rats in the countryside often steal grain from storehouses, so farmers love keeping cats.",
+   "ko": "시골 쥐들이 창고 곡식을 자주 훔쳐 먹어서 농가에서는 고양이를 즐겨 키워요.",
+   "blank": "粮食",
    "src": "made"
   }
  ],
@@ -40291,6 +41235,22 @@
    "en": "There's something urgent for you.",
    "ko": "급한 일로 널 찾아.",
    "blank": "紧急"
+  }
+ ],
+ "w|紧紧": [
+  {
+   "text": "听到宣判的那一刻，被告的母亲紧紧抓住了陈杰的手。",
+   "en": "The moment the verdict was announced, the defendant's mother grabbed Chen Jie's hand tightly.",
+   "ko": "판결이 선고되는 순간 피고인의 어머니는 천제의 손을 꽉 붙잡았어요.",
+   "blank": "紧紧",
+   "src": "made"
+  },
+  {
+   "text": "钻牙的声音一响，小雪就紧紧闭上了眼睛。",
+   "en": "As soon as the drill started buzzing, Xiaoxue squeezed her eyes shut.",
+   "ko": "드릴 소리가 나자마자 샤오쉐는 눈을 질끈 감았어요.",
+   "blank": "紧紧",
+   "src": "made"
   }
  ],
  "w|纸": [
@@ -40950,6 +41910,22 @@
    "en": "The rent went up a lot, so Lili can only get by through careful saving.",
    "ko": "집세가 많이 올라서 리리는 아껴 쓰면서 겨우 생활을 유지해요.",
    "blank": "维持",
+   "src": "made"
+  }
+ ],
+ "w|综合": [
+  {
+   "text": "法官综合了双方的证据，才做出最后的决定。",
+   "en": "The judge weighed the evidence from both sides together before making a final decision.",
+   "ko": "판사는 양측 증거를 종합한 뒤에야 최종 결정을 내렸어요.",
+   "blank": "综合",
+   "src": "made"
+  },
+  {
+   "text": "牙医综合了拍片和检查的结果，给小雪定了治疗方案。",
+   "en": "The dentist combined the X-ray and exam results to set a treatment plan for Xiaoxue.",
+   "ko": "치과 의사는 엑스레이와 검사 결과를 종합해서 샤오쉐의 치료 계획을 세웠어요.",
+   "blank": "综合",
    "src": "made"
   }
  ],
@@ -42577,6 +43553,22 @@
    "blank": "自己"
   }
  ],
+ "w|自愿": [
+  {
+   "text": "张伟的几个朋友自愿来帮忙布置会场。",
+   "en": "Several of Zhang Wei's friends volunteered to help decorate the venue.",
+   "ko": "장웨이의 친구 몇 명이 자원해서 식장 꾸미는 걸 도왔어요.",
+   "blank": "自愿",
+   "src": "made"
+  },
+  {
+   "text": "周末有几个大学生自愿来诊所帮忙遛狗。",
+   "en": "On weekends a few college students volunteer to come walk the dogs at the clinic.",
+   "ko": "주말이면 대학생 몇 명이 자원해서 동물병원에 와서 개 산책을 도와줘요.",
+   "blank": "自愿",
+   "src": "made"
+  }
+ ],
  "w|自我": [
   {
    "text": "别太自我了。",
@@ -43861,6 +44853,22 @@
    "src": "made"
   }
  ],
+ "w|补充": [
+  {
+   "text": "陈杰站起来说：“法官大人，我还有一点需要补充。”",
+   "en": "Chen Jie stood up and said, \"Your Honor, I have one more point to add.\"",
+   "ko": "천제가 일어나 “재판장님, 한 가지 덧붙일 것이 있습니다”라고 말했어요.",
+   "blank": "补充",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，多喝牛奶能给牙齿补充钙。",
+   "en": "The dentist says drinking more milk can replenish calcium for your teeth.",
+   "ko": "치과 의사는 우유를 많이 마시면 이에 칼슘을 보충할 수 있다고 해요.",
+   "blank": "补充",
+   "src": "made"
+  }
+ ],
  "w|表": [
   {
    "text": "物业让每户人家填一张表，登记家里有几个人。",
@@ -44343,6 +45351,22 @@
    "blank": "要求"
   }
  ],
+ "w|覆盖": [
+  {
+   "text": "整个草坪都被白色的花瓣覆盖着，像下过雪一样。",
+   "en": "The whole lawn was covered in white petals, as if it had snowed.",
+   "ko": "잔디밭 전체가 하얀 꽃잎으로 덮여 있어서 눈이 내린 것 같았어요.",
+   "blank": "覆盖",
+   "src": "made"
+  },
+  {
+   "text": "伤口已经被新长出来的毛覆盖住了。",
+   "en": "The wound is already covered by newly grown fur.",
+   "ko": "상처는 이미 새로 난 털로 덮였어요.",
+   "blank": "覆盖",
+   "src": "made"
+  }
+ ],
  "w|见": [
   {
    "text": "回头见。",
@@ -44369,6 +45393,22 @@
    "en": "I finally saw him.",
    "ko": "드디어 그 사람을 만났어.",
    "blank": "见到"
+  }
+ ],
+ "w|见识": [
+  {
+   "text": "外国同事说，这次总算见识了一场真正的中式婚礼。",
+   "en": "A foreign coworker said this time he finally got to experience a real Chinese wedding.",
+   "ko": "외국인 동료는 이번에 드디어 진짜 중국식 결혼식을 구경했다고 했어요.",
+   "blank": "见识",
+   "src": "made"
+  },
+  {
+   "text": "在诊所实习的这一年，小护士见识了各种各样的动物。",
+   "en": "During her year interning at the clinic, the young nurse got to see all kinds of animals.",
+   "ko": "동물병원에서 실습한 일 년 동안 젊은 간호사는 온갖 동물을 다 겪어 봤어요.",
+   "blank": "见识",
+   "src": "made"
   }
  ],
  "w|见面": [
@@ -44473,6 +45513,22 @@
    "blank": "规定"
   }
  ],
+ "w|规律": [
+  {
+   "text": "陈杰研究了上百个判例，发现了其中的规律。",
+   "en": "Chen Jie studied over a hundred precedents and discovered a pattern among them.",
+   "ko": "천제는 판례 백여 건을 연구해서 그 속의 규칙을 찾아냈어요.",
+   "blank": "规律",
+   "src": "made"
+  },
+  {
+   "text": "牙医建议小雪养成饭后刷牙的规律，别总是想起来才刷。",
+   "en": "The dentist suggested Xiaoxue make a regular habit of brushing after meals instead of only when she remembers.",
+   "ko": "치과 의사는 샤오쉐에게 생각날 때만 닦지 말고 식후에 꼬박꼬박 이 닦는 습관을 들이라고 했어요.",
+   "blank": "规律",
+   "src": "made"
+  }
+ ],
  "w|规模": [
   {
    "text": "今年学校的运动会规模比往年大了一倍。",
@@ -44515,6 +45571,22 @@
    "en": "What do you think?",
    "ko": "너는 어때?",
    "blank": "觉得"
+  }
+ ],
+ "w|角": [
+  {
+   "text": "书记员坐在法庭的一角，飞快地记录着每句话。",
+   "en": "The court clerk sat in a corner of the courtroom, rapidly recording every word.",
+   "ko": "서기는 법정 한쪽 구석에 앉아 한마디 한마디를 빠르게 받아 적었어요.",
+   "blank": "角",
+   "src": "made"
+  },
+  {
+   "text": "小雪的门牙缺了一个角，笑起来特别明显。",
+   "en": "Xiaoxue's front tooth has a chipped corner that's very obvious when she smiles.",
+   "ko": "샤오쉐는 앞니 한쪽 모서리가 깨져서 웃으면 아주 티가 나요.",
+   "blank": "角",
+   "src": "made"
   }
  ],
  "w|角度": [
@@ -45051,6 +46123,22 @@
    "src": "made"
   }
  ],
+ "w|设立": [
+  {
+   "text": "婚礼现场设立了一个拍照区，客人可以随便拍。",
+   "en": "A photo area was set up at the venue where guests could take pictures freely.",
+   "ko": "식장에 포토존을 따로 마련해서 손님들이 마음대로 찍을 수 있었어요.",
+   "blank": "设立",
+   "src": "made"
+  },
+  {
+   "text": "市里打算设立一个流浪动物救助中心。",
+   "en": "The city plans to set up a rescue center for stray animals.",
+   "ko": "시에서는 유기 동물 구조 센터를 세울 계획이에요.",
+   "blank": "设立",
+   "src": "made"
+  }
+ ],
  "w|设置": [
   {
    "text": "王刚在手机上设置了闹钟，怕守岁的时候睡着。",
@@ -45199,6 +46287,22 @@
    "en": "That sounds like a curse.",
    "ko": "그건 저주처럼 들려.",
    "blank": "诅咒"
+  }
+ ],
+ "w|诉讼": [
+  {
+   "text": "几位业主决定联合起来，向开发商提起诉讼。",
+   "en": "Several homeowners decided to join together and file a lawsuit against the developer.",
+   "ko": "집주인 몇 명이 힘을 모아 개발업체를 상대로 소송을 걸기로 했어요.",
+   "blank": "诉讼",
+   "src": "made"
+  },
+  {
+   "text": "有个病人因为种牙失败，跟诊所打起了诉讼。",
+   "en": "A patient got into a lawsuit with the clinic over a failed dental implant.",
+   "ko": "한 환자가 임플란트가 잘못돼서 치과와 소송을 벌였어요.",
+   "blank": "诉讼",
+   "src": "made"
   }
  ],
  "w|词": [
@@ -45366,6 +46470,22 @@
    "en": "Xiaoxue heard from the coach that this pool has produced several national champions.",
    "ko": "샤오쉐는 코치에게서 이 수영장에서 전국 챔피언이 여러 명 나왔다고 들었어요.",
    "blank": "诞生",
+   "src": "made"
+  }
+ ],
+ "w|询问": [
+  {
+   "text": "酒店经理打电话询问婚宴要摆几桌。",
+   "en": "The hotel manager called to ask how many tables the banquet would need.",
+   "ko": "호텔 매니저가 피로연 테이블을 몇 개 놓을지 전화로 물었어요.",
+   "blank": "询问",
+   "src": "made"
+  },
+  {
+   "text": "刘芳仔细询问了小狗最近的饮食情况。",
+   "en": "Liu Fang asked in detail about the puppy's recent diet.",
+   "ko": "류팡은 강아지의 요즘 식사 상태를 자세히 물었어요.",
+   "blank": "询问",
    "src": "made"
   }
  ],
@@ -47409,6 +48529,22 @@
    "blank": "转"
   }
  ],
+ "w|转变": [
+  {
+   "text": "结婚以后，张伟从一个贪玩的人转变成了顾家的丈夫。",
+   "en": "After getting married, Zhang Wei changed from a fun-loving guy into a family-minded husband.",
+   "ko": "결혼한 뒤 장웨이는 놀기 좋아하던 사람에서 가정적인 남편으로 바뀌었어요.",
+   "blank": "转变",
+   "src": "made"
+  },
+  {
+   "text": "住院几天后，这只狗对人的态度转变了很多，不再乱咬。",
+   "en": "After a few days in the hospital, this dog's attitude toward people changed a lot, and it stopped biting.",
+   "ko": "며칠 입원한 뒤 이 개는 사람을 대하는 태도가 많이 바뀌어서 더는 물지 않아요.",
+   "blank": "转变",
+   "src": "made"
+  }
+ ],
  "w|转移": [
   {
    "text": "我们得转移话题。",
@@ -47438,6 +48574,22 @@
    "en": "Lin Jing locked the door, turned to go downstairs, and only then remembered she'd forgotten her umbrella.",
    "ko": "린징은 문을 잠그고 돌아서 내려가다가 그제야 우산을 깜빡한 게 생각났어요.",
    "blank": "转身",
+   "src": "made"
+  }
+ ],
+ "w|软": [
+  {
+   "text": "法庭的椅子太软，陈杰坐了一上午腰都酸了。",
+   "en": "The courtroom chairs are too soft, and Chen Jie's back ached after sitting all morning.",
+   "ko": "법정 의자가 너무 푹신해서 천제는 오전 내내 앉아 있었더니 허리가 뻐근했어요.",
+   "blank": "软",
+   "src": "made"
+  },
+  {
+   "text": "拔完牙，医生让小雪这几天只吃软的东西。",
+   "en": "After the extraction, the dentist told Xiaoxue to eat only soft foods for the next few days.",
+   "ko": "이를 뽑은 뒤 의사는 샤오쉐에게 며칠 동안 부드러운 것만 먹으라고 했어요.",
+   "blank": "软",
    "src": "made"
   }
  ],
@@ -47639,6 +48791,22 @@
    "src": "made"
   }
  ],
+ "w|边界": [
+  {
+   "text": "两家农场为了土地边界的问题，闹到了法庭上。",
+   "en": "Two farms ended up in court over a dispute about their land boundary.",
+   "ko": "두 농장은 땅 경계 문제로 법정까지 가게 됐어요.",
+   "blank": "边界",
+   "src": "made"
+  },
+  {
+   "text": "牙医说，补牙材料和牙齿之间的边界要磨得很平。",
+   "en": "The dentist says the boundary between the filling and the tooth has to be ground very smooth.",
+   "ko": "치과 의사는 충전재와 치아 사이 경계를 아주 매끄럽게 갈아야 한다고 해요.",
+   "blank": "边界",
+   "src": "made"
+  }
+ ],
  "w|边缘": [
   {
    "text": "小明的成绩一直在及格的边缘，这次终于考了八十多分。",
@@ -47757,6 +48925,22 @@
    "en": "Things are much better now than before.",
    "ko": "예전에 비하면 지금은 훨씬 나아.",
    "blank": "过去"
+  }
+ ],
+ "w|过度": [
+  {
+   "text": "陈杰认为，警方在那晚使用了过度的武力。",
+   "en": "Chen Jie argues that the police used excessive force that night.",
+   "ko": "천제는 경찰이 그날 밤 과도한 무력을 썼다고 주장해요.",
+   "blank": "过度",
+   "src": "made"
+  },
+  {
+   "text": "牙医提醒小雪，刷牙太用力也算过度清洁，会伤牙龈。",
+   "en": "The dentist warned Xiaoxue that brushing too hard counts as excessive cleaning and can hurt the gums.",
+   "ko": "치과 의사는 샤오쉐에게 이를 너무 세게 닦는 것도 과도한 세정이라 잇몸이 상한다고 일렀어요.",
+   "blank": "过度",
+   "src": "made"
   }
  ],
  "w|过来": [
@@ -49611,6 +50795,22 @@
    "blank": "都"
   }
  ],
+ "w|配": [
+  {
+   "text": "新娘说，张伟的蓝领带跟她的手捧花很配。",
+   "en": "The bride said Zhang Wei's blue tie went well with her bouquet.",
+   "ko": "신부는 장웨이의 파란 넥타이가 자기 부케와 잘 어울린다고 했어요.",
+   "blank": "配",
+   "src": "made"
+  },
+  {
+   "text": "刘芳给小狗配了一副眼药水，叮嘱主人每天滴两次。",
+   "en": "Liu Fang prescribed eye drops for the puppy and told the owner to apply them twice a day.",
+   "ko": "류팡은 강아지에게 안약을 지어 주고 보호자에게 하루 두 번 넣으라고 당부했어요.",
+   "blank": "配",
+   "src": "made"
+  }
+ ],
  "w|配合": [
   {
    "text": "采访对象很配合，周强一个小时就问完了。",
@@ -49964,6 +51164,22 @@
    "en": "The low notes at the start of that symphony sound like a wild beast roaring in a valley.",
    "ko": "그 교향곡 첫머리의 저음은 골짜기에서 짐승이 울부짖는 것 같아요.",
    "blank": "野兽",
+   "src": "made"
+  }
+ ],
+ "w|野蛮": [
+  {
+   "text": "张伟的爷爷说，以前闹洞房的习俗有点野蛮，现在文明多了。",
+   "en": "Zhang Wei's grandfather says the old custom of teasing newlyweds was a bit crude, and it's much more civilized now.",
+   "ko": "장웨이 할아버지는 예전 신방 놀리기 풍습이 좀 거칠었는데 지금은 많이 점잖아졌다고 해요.",
+   "blank": "野蛮",
+   "src": "made"
+  },
+  {
+   "text": "刘芳最受不了那些野蛮对待动物的人。",
+   "en": "Liu Fang can't stand people who treat animals brutally.",
+   "ko": "류팡은 동물을 거칠게 다루는 사람을 제일 못 참아요.",
+   "blank": "野蛮",
    "src": "made"
   }
  ],
@@ -50611,6 +51827,22 @@
    "blank": "队长"
   }
  ],
+ "w|防守": [
+  {
+   "text": "面对检方的质问，陈杰决定先防守，等对方露出破绽再反击。",
+   "en": "Facing the prosecution's questions, Chen Jie decided to play defense first and counterattack once the other side slipped.",
+   "ko": "검찰의 추궁에 천제는 먼저 방어하다가 상대가 허점을 보이면 반격하기로 했어요.",
+   "blank": "防守",
+   "src": "made"
+  },
+  {
+   "text": "小雪的弟弟踢球时负责防守，被球砸掉了半颗门牙。",
+   "en": "Xiaoxue's younger brother plays defense in football and had half a front tooth knocked out by the ball.",
+   "ko": "샤오쉐의 남동생은 축구에서 수비를 맡다가 공에 맞아 앞니가 반쯤 깨졌어요.",
+   "blank": "防守",
+   "src": "made"
+  }
+ ],
  "w|防御": [
   {
    "text": "历史课上讲到古人怎么修城墙防御敌人，小明认真做了笔记。",
@@ -51166,6 +52398,22 @@
    "en": "Having to let two employees go made Liu Fang feel terrible.",
    "ko": "직원 두 명을 내보내야 해서 류팡은 마음이 몹시 괴로웠어요.",
    "blank": "难受",
+   "src": "made"
+  }
+ ],
+ "w|难得": [
+  {
+   "text": "张伟的大学同学都来了，这样的聚会真是难得。",
+   "en": "All of Zhang Wei's college classmates came—a gathering like this is truly rare.",
+   "ko": "장웨이의 대학 동기들이 다 왔는데, 이런 모임은 정말 드물어요.",
+   "blank": "难得",
+   "src": "made"
+  },
+  {
+   "text": "这种蓝眼睛的猫很难得，刘芳也是第一次见。",
+   "en": "Blue-eyed cats like this are rare; it was Liu Fang's first time seeing one too.",
+   "ko": "이런 파란 눈 고양이는 드물어서 류팡도 처음 봤어요.",
+   "blank": "难得",
    "src": "made"
   }
  ],
@@ -52279,6 +53527,22 @@
    "src": "made"
   }
  ],
+ "w|饼": [
+  {
+   "text": "按照新娘家乡的习惯，每位客人走时都能带一块喜饼。",
+   "en": "Following the custom of the bride's hometown, each guest gets a wedding cake to take home.",
+   "ko": "신부 고향 풍습에 따라 손님마다 갈 때 혼례 떡을 하나씩 가져가요.",
+   "blank": "饼",
+   "src": "made"
+  },
+  {
+   "text": "一位老太太给诊所送来一盒自己烙的饼。",
+   "en": "An old lady brought the clinic a box of flatbreads she'd made herself.",
+   "ko": "한 할머니가 직접 부친 전병 한 상자를 동물병원에 갖다줬어요.",
+   "blank": "饼",
+   "src": "made"
+  }
+ ],
  "w|饼干": [
   {
    "text": "我买了一盒饼干。",
@@ -52351,6 +53615,22 @@
    "en": "First you need to stay calm.",
    "ko": "우선 침착해야 해.",
    "blank": "首先"
+  }
+ ],
+ "w|首席": [
+  {
+   "text": "婚宴请来了一位酒店首席厨师掌勺。",
+   "en": "A hotel head chef was brought in to cook for the banquet.",
+   "ko": "피로연 요리는 호텔 수석 셰프를 모셔 와서 맡겼어요.",
+   "blank": "首席",
+   "src": "made"
+  },
+  {
+   "text": "刘芳是这家医院的首席兽医，经验特别丰富。",
+   "en": "Liu Fang is the chief veterinarian at this hospital and is very experienced.",
+   "ko": "류팡은 이 병원의 수석 수의사라 경험이 아주 많아요.",
+   "blank": "首席",
+   "src": "made"
   }
  ],
  "w|首相": [

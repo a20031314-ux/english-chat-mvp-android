@@ -119,6 +119,22 @@
    "src": "made"
   }
  ],
+ "w|aboyer": [
+  {
+   "text": "Le chien de Lucas se met à aboyer dès qu'il sent un renard.",
+   "en": "Lucas's dog starts barking as soon as he smells a fox.",
+   "ko": "뤼카의 개는 여우 냄새만 맡으면 짖기 시작해요.",
+   "blank": "aboyer",
+   "src": "made"
+  },
+  {
+   "text": "Le chien de Camille se met à aboyer de joie quand elle passe la ligne.",
+   "en": "Camille's dog starts barking with joy when she crosses the line.",
+   "ko": "카미유가 결승선을 넘자 개가 기뻐서 짖기 시작해요.",
+   "blank": "aboyer",
+   "src": "made"
+  }
+ ],
  "w|abri": [
   {
    "text": "On a trouvé un abri pendant la pluie.",
@@ -3724,6 +3740,22 @@
    "en": "Inès runs into an arrogant neighbour in the lift who never says hello.",
    "ko": "이네스는 엘리베이터에서 인사 한 번 안 하는 거만한 이웃을 마주쳐요.",
    "blank": "arrogant",
+   "src": "made"
+  }
+ ],
+ "w|arroser": [
+  {
+   "text": "Pendant la sécheresse, Lucas doit arroser le potager chaque soir.",
+   "en": "During the drought, Lucas has to water the vegetable garden every evening.",
+   "ko": "가뭄 동안 뤼카는 매일 저녁 텃밭에 물을 줘야 해요.",
+   "blank": "arroser",
+   "src": "made"
+  },
+  {
+   "text": "Les habitants viennent arroser Camille avec leurs tuyaux d'arrosage pour la rafraîchir.",
+   "en": "Locals come out to spray Camille with their garden hoses to cool her down.",
+   "ko": "주민들이 나와서 정원 호스로 카미유에게 물을 뿌려 시원하게 해 줘요.",
+   "blank": "arroser",
    "src": "made"
   }
  ],
@@ -7497,6 +7529,22 @@
    "blank": "bouffer"
   }
  ],
+ "w|bouffon": [
+  {
+   "text": "À la fête du village, Lucas joue le bouffon du roi pour amuser les enfants.",
+   "en": "At the village fair, Lucas plays the king's jester to amuse the children.",
+   "ko": "마을 축제에서 뤼카는 아이들을 웃기려고 왕의 광대 역을 해요.",
+   "blank": "bouffon",
+   "src": "made"
+  },
+  {
+   "text": "Le frère de Camille fait le bouffon sur le bord de la route pour l'encourager.",
+   "en": "Camille's brother clowns around at the roadside to cheer her on.",
+   "ko": "카미유의 오빠는 길가에서 익살을 부리며 응원해요.",
+   "blank": "bouffon",
+   "src": "made"
+  }
+ ],
  "w|bouger": [
   {
    "text": "Ne bouge pas, reste ici.",
@@ -9077,6 +9125,22 @@
    "blank": "canon"
   }
  ],
+ "w|canyon": [
+  {
+   "text": "Lucas emmène les touristes descendre le canyon en rappel.",
+   "en": "Lucas takes tourists abseiling down the canyon.",
+   "ko": "뤼카는 관광객들을 데리고 협곡을 줄 타고 내려가요.",
+   "blank": "canyon",
+   "src": "made"
+  },
+  {
+   "text": "L'an prochain, Camille veut courir un ultra-trail dans un canyon.",
+   "en": "Next year, Camille wants to run an ultra-trail in a canyon.",
+   "ko": "내년에 카미유는 협곡에서 열리는 울트라 트레일을 뛰고 싶어 해요.",
+   "blank": "canyon",
+   "src": "made"
+  }
+ ],
  "w|cap": [
   {
    "text": "Nous avons atteint le cap des cent abonnés.",
@@ -9237,6 +9301,22 @@
    "src": "made"
   }
  ],
+ "w|carbone": [
+  {
+   "text": "Lucas explique aux enfants que les forêts de la vallée stockent beaucoup de carbone.",
+   "en": "Lucas explains to the children that the valley's forests store a lot of carbon.",
+   "ko": "뤼카는 아이들에게 골짜기 숲이 탄소를 많이 저장한다고 설명해요.",
+   "blank": "carbone",
+   "src": "made"
+  },
+  {
+   "text": "Camille court avec des chaussures à semelle en fibre de carbone.",
+   "en": "Camille runs in shoes with carbon-fiber soles.",
+   "ko": "카미유는 탄소 섬유 밑창 신발을 신고 달려요.",
+   "blank": "carbone",
+   "src": "made"
+  }
+ ],
  "w|carburant": [
   {
    "text": "On n'a presque plus de carburant.",
@@ -9297,6 +9377,22 @@
    "src": "made"
   }
  ],
+ "w|cargo": [
+  {
+   "text": "Le frère de Lucas travaille loin des montagnes, sur un cargo qui traverse l'océan.",
+   "en": "Lucas's brother works far from the mountains, on a cargo ship crossing the ocean.",
+   "ko": "뤼카의 형은 산에서 멀리 떨어진 대양 횡단 화물선에서 일해요.",
+   "blank": "cargo",
+   "src": "made"
+  },
+  {
+   "text": "La course longe le port, où Camille aperçoit un énorme cargo.",
+   "en": "The race runs along the harbor, where Camille spots a huge cargo ship.",
+   "ko": "코스가 항구를 따라 이어져서 카미유는 거대한 화물선을 봐요.",
+   "blank": "cargo",
+   "src": "made"
+  }
+ ],
  "w|carnet": [
   {
    "text": "Note ça dans ton carnet.",
@@ -9338,6 +9434,22 @@
    "en": "The meeting room Chloé walks into is small and square.",
    "ko": "클로에가 들어간 회의실은 작고 네모나요.",
    "blank": "carrée",
+   "src": "made"
+  }
+ ],
+ "w|carreau": [
+  {
+   "text": "Lucas porte une chemise à carreaux pour aller couper du bois.",
+   "en": "Lucas wears a checked shirt to go chop wood.",
+   "ko": "뤼카는 장작을 패러 갈 때 체크무늬 셔츠를 입어요.",
+   "blank": "carreaux",
+   "src": "made"
+  },
+  {
+   "text": "Camille a cousu un carreau de tissu rouge sur son maillot pour que ses amis la repèrent.",
+   "en": "Camille sewed a red square of fabric on her jersey so her friends could spot her.",
+   "ko": "카미유는 친구들이 알아보게 셔츠에 빨간 천 조각을 꿰맸어요.",
+   "blank": "carreau",
    "src": "made"
   }
  ],
@@ -9409,6 +9521,22 @@
    "en": "This is not an isolated case.",
    "ko": "이건 특별한 경우가 아니야.",
    "blank": "cas"
+  }
+ ],
+ "w|cascade": [
+  {
+   "text": "Lucas se baigne sous la cascade glacée après une longue marche.",
+   "en": "Lucas bathes under the icy waterfall after a long walk.",
+   "ko": "뤼카는 오래 걷고 나서 차가운 폭포 아래서 몸을 씻어요.",
+   "blank": "cascade",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Camille enchaîne une cascade d'interviews pour le journal local.",
+   "en": "After the race, Camille does a string of interviews for the local paper.",
+   "ko": "경기가 끝나고 카미유는 지역 신문 인터뷰를 줄줄이 해요.",
+   "blank": "cascade",
+   "src": "made"
   }
  ],
  "w|caserne": [
@@ -9818,6 +9946,22 @@
    "en": "Since her triple-double, Léa has become a minor celebrity at school.",
    "ko": "트리플더블 이후 레아는 학교에서 작은 유명 인사가 됐어요.",
    "blank": "célébrité",
+   "src": "made"
+  }
+ ],
+ "w|céleste": [
+  {
+   "text": "Sans lumière en ville, Lucas admire chaque nuit la voûte céleste au-dessus du village.",
+   "en": "With no city lights, Lucas admires the night sky over the village every night.",
+   "ko": "도시 불빛이 없어서 뤼카는 밤마다 마을 위 하늘을 감상해요.",
+   "blank": "céleste",
+   "src": "made"
+  },
+  {
+   "text": "Au dernier kilomètre, Camille a l'impression de courir vers une lumière céleste.",
+   "en": "In the last kilometer, Camille feels like she's running toward a heavenly light.",
+   "ko": "마지막 일 킬로미터에서 카미유는 천상의 빛을 향해 달리는 기분이에요.",
+   "blank": "céleste",
    "src": "made"
   }
  ],
@@ -10411,6 +10555,22 @@
    "blank": "chambre"
   }
  ],
+ "w|chameau": [
+  {
+   "text": "Un cirque de passage a amené un chameau sur la place du village, au grand étonnement de Lucas.",
+   "en": "A traveling circus brought a camel to the village square, to Lucas's great surprise.",
+   "ko": "떠돌이 서커스가 마을 광장에 낙타를 데려와서 뤼카는 깜짝 놀랐어요.",
+   "blank": "chameau",
+   "src": "made"
+  },
+  {
+   "text": "Camille a lu qu'un chameau peut marcher des jours sans boire, contrairement à elle.",
+   "en": "Camille read that a camel can walk for days without drinking, unlike her.",
+   "ko": "카미유는 낙타가 자기와 달리 며칠 동안 물 없이 걸을 수 있다는 글을 읽었어요.",
+   "blank": "chameau",
+   "src": "made"
+  }
+ ],
  "w|champ": [
   {
    "text": "Les enfants jouent dans le champ.",
@@ -10947,6 +11107,22 @@
    "en": "I prefer my coffee nice and hot in the morning.",
    "ko": "아침에 뜨거운 커피를 좋아해요.",
    "blank": "chaud"
+  }
+ ],
+ "w|chauffage": [
+  {
+   "text": "En hiver, Lucas allume le chauffage dès le mois d'octobre.",
+   "en": "In winter, Lucas turns on the heating as early as October.",
+   "ko": "겨울이면 뤼카는 시월부터 난방을 켜요.",
+   "blank": "chauffage",
+   "src": "made"
+  },
+  {
+   "text": "Après la course, Camille met le chauffage à fond dans la voiture.",
+   "en": "After the race, Camille turns the car heating up full blast.",
+   "ko": "경기가 끝나고 카미유는 차 난방을 최대로 틀어요.",
+   "blank": "chauffage",
+   "src": "made"
   }
  ],
  "w|chauffer": [
@@ -12119,6 +12295,22 @@
    "en": "I served a nice client today.",
    "ko": "오늘 친절한 손님을 응대했어.",
    "blank": "client"
+  }
+ ],
+ "w|climat": [
+  {
+   "text": "Lucas remarque que le climat change : la neige arrive de plus en plus tard.",
+   "en": "Lucas notices that the climate is changing: the snow comes later and later.",
+   "ko": "뤼카는 기후가 변하는 걸 느껴요. 눈이 점점 늦게 와요.",
+   "blank": "climat",
+   "src": "made"
+  },
+  {
+   "text": "Camille s'est entraînée tout l'hiver malgré le climat humide de sa région.",
+   "en": "Camille trained all winter despite the damp climate of her region.",
+   "ko": "카미유는 지역의 습한 기후에도 겨울 내내 연습했어요.",
+   "blank": "climat",
+   "src": "made"
   }
  ],
  "w|clin": [
@@ -15363,6 +15555,22 @@
    "src": "made"
   }
  ],
+ "w|coque": [
+  {
+   "text": "Lucas répare la coque de la petite barque sur le lac de montagne.",
+   "en": "Lucas repairs the hull of the little rowboat on the mountain lake.",
+   "ko": "뤼카는 산속 호수의 작은 보트 선체를 고쳐요.",
+   "blank": "coque",
+   "src": "made"
+  },
+  {
+   "text": "Camille a mis une coque étanche sur son téléphone en cas de pluie.",
+   "en": "Camille put a waterproof case on her phone in case of rain.",
+   "ko": "카미유는 비 올 때를 대비해 휴대폰에 방수 케이스를 씌웠어요.",
+   "blank": "coque",
+   "src": "made"
+  }
+ ],
  "w|coquin": [
   {
    "text": "Avec son sourire coquin, Hugo cache mal qu'il a pris la craie du professeur.",
@@ -15407,6 +15615,22 @@
    "en": "The rope is very strong.",
    "ko": "이 줄은 아주 튼튼해.",
    "blank": "corde"
+  }
+ ],
+ "w|cordon": [
+  {
+   "text": "Lucas tire sur le cordon pour faire sonner la cloche de la chapelle.",
+   "en": "Lucas pulls the cord to ring the chapel bell.",
+   "ko": "뤼카는 줄을 당겨 예배당 종을 울려요.",
+   "blank": "cordon",
+   "src": "made"
+  },
+  {
+   "text": "Les bénévoles tendent un cordon pour retenir le public au bord de la route.",
+   "en": "Volunteers stretch a cordon to hold the crowd back at the roadside.",
+   "ko": "자원봉사자들이 길가 관중을 막으려고 줄을 쳐요.",
+   "blank": "cordon",
+   "src": "made"
   }
  ],
  "w|coréen": [
@@ -16959,6 +17183,22 @@
    "en": "Check the chicken is cooked through.",
    "ko": "닭고기가 잘 익었는지 확인해.",
    "blank": "cuit"
+  }
+ ],
+ "w|cuivre": [
+  {
+   "text": "Lucas fait briller les vieilles casseroles en cuivre de sa grand-mère.",
+   "en": "Lucas polishes his grandmother's old copper pans.",
+   "ko": "뤼카는 할머니의 오래된 구리 냄비를 반짝반짝 닦아요.",
+   "blank": "cuivre",
+   "src": "made"
+  },
+  {
+   "text": "À l'arrivée, Camille reçoit une médaille en cuivre avec son prénom gravé.",
+   "en": "At the finish, Camille gets a copper medal with her name engraved.",
+   "ko": "결승점에서 카미유는 이름이 새겨진 구리 메달을 받아요.",
+   "blank": "cuivre",
+   "src": "made"
   }
  ],
  "w|culot": [
@@ -20579,6 +20819,22 @@
    "blank": "disponible"
   }
  ],
+ "w|disposé": [
+  {
+   "text": "Lucas est toujours disposé à guider les touristes perdus.",
+   "en": "Lucas is always willing to guide lost tourists.",
+   "ko": "뤼카는 길 잃은 관광객을 늘 기꺼이 안내해요.",
+   "blank": "disposé",
+   "src": "made"
+  },
+  {
+   "text": "Camille n'est pas disposée à abandonner, même avec une ampoule au pied.",
+   "en": "Camille isn't willing to give up, even with a blister on her foot.",
+   "ko": "카미유는 발에 물집이 잡혀도 포기할 생각이 없어요.",
+   "blank": "disposée",
+   "src": "made"
+  }
+ ],
  "w|disposer": [
   {
    "text": "Pour les travaux, Louis ne dispose que de ses week-ends.",
@@ -21339,6 +21595,22 @@
    "en": "Can you hand me that file?",
    "ko": "그 서류 좀 건네줄래?",
    "blank": "dossier"
+  }
+ ],
+ "w|douane": [
+  {
+   "text": "De l'autre côté du col, Lucas doit passer la douane pour aller au marché.",
+   "en": "On the other side of the pass, Lucas has to go through customs to get to the market.",
+   "ko": "고개 너머 장에 가려면 뤼카는 세관을 지나야 해요.",
+   "blank": "douane",
+   "src": "made"
+  },
+  {
+   "text": "Le marathon traverse la frontière, mais personne ne contrôle Camille à la douane.",
+   "en": "The marathon crosses the border, but no one checks Camille at customs.",
+   "ko": "마라톤 코스가 국경을 넘지만 세관에서 카미유를 검사하는 사람은 없어요.",
+   "blank": "douane",
+   "src": "made"
   }
  ],
  "w|double": [
@@ -25341,6 +25613,22 @@
    "src": "made"
   }
  ],
+ "w|étendue": [
+  {
+   "text": "Du haut de la crête, Lucas contemple une immense étendue de neige.",
+   "en": "From the top of the ridge, Lucas gazes at a vast expanse of snow.",
+   "ko": "능선 꼭대기에서 뤼카는 끝없이 펼쳐진 눈밭을 바라봐요.",
+   "blank": "étendue",
+   "src": "made"
+  },
+  {
+   "text": "Camille voit une longue étendue de bitume sans un seul arbre.",
+   "en": "Camille sees a long stretch of asphalt without a single tree.",
+   "ko": "카미유 앞에 나무 한 그루 없는 긴 아스팔트 길이 펼쳐져 있어요.",
+   "blank": "étendue",
+   "src": "made"
+  }
+ ],
  "w|éternel": [
   {
    "text": "Il croit à l'amour éternel.",
@@ -28005,6 +28293,22 @@
    "blank": "fils"
   }
  ],
+ "w|filtre": [
+  {
+   "text": "Lucas met un filtre sur la source pour boire l'eau du torrent.",
+   "en": "Lucas puts a filter on the spring to drink the stream water.",
+   "ko": "뤼카는 계곡물을 마시려고 샘에 필터를 달아요.",
+   "blank": "filtre",
+   "src": "made"
+  },
+  {
+   "text": "Camille met un filtre noir et blanc sur sa photo d'arrivée.",
+   "en": "Camille puts a black-and-white filter on her finish photo.",
+   "ko": "카미유는 결승 사진에 흑백 필터를 씌워요.",
+   "blank": "filtre",
+   "src": "made"
+  }
+ ],
  "w|fin": [
   {
    "text": "La fin du film était surprenante.",
@@ -28399,6 +28703,22 @@
    "en": "I avoid eating too much poultry liver.",
    "ko": "나는 닭 간을 너무 많이 먹지 않아.",
    "blank": "foie"
+  }
+ ],
+ "w|foin": [
+  {
+   "text": "En juillet, Lucas fait les foins avec son voisin.",
+   "en": "In July, Lucas makes hay with his neighbor.",
+   "ko": "칠월이면 뤼카는 이웃과 건초를 만들어요.",
+   "blank": "foins",
+   "src": "made"
+  },
+  {
+   "text": "Camille passe devant des bottes de foin décorées par les fermiers.",
+   "en": "Camille runs past hay bales decorated by the farmers.",
+   "ko": "카미유는 농부들이 꾸며 놓은 건초 더미 옆을 지나가요.",
+   "blank": "foin",
+   "src": "made"
   }
  ],
  "w|foire": [
@@ -33321,6 +33641,22 @@
    "src": "made"
   }
  ],
+ "w|imminent": [
+  {
+   "text": "Les nuages noirs annoncent un orage imminent, alors Lucas rentre les bêtes.",
+   "en": "Dark clouds signal an imminent storm, so Lucas brings the animals in.",
+   "ko": "먹구름이 곧 폭풍이 온다고 알려서 뤼카는 가축을 들여요.",
+   "blank": "imminent",
+   "src": "made"
+  },
+  {
+   "text": "Le départ est imminent, et Camille sent son cœur battre très fort.",
+   "en": "The start is imminent, and Camille feels her heart pounding.",
+   "ko": "출발이 코앞이라 카미유는 심장이 쿵쾅거려요.",
+   "blank": "imminent",
+   "src": "made"
+  }
+ ],
  "w|immobile": [
   {
    "text": "Pendant le discours du directeur, Thomas reste immobile au fond de la salle.",
@@ -33408,6 +33744,22 @@
    "en": "Camille's library is at the end of a quiet cul-de-sac.",
    "ko": "카미유의 도서관은 조용한 막다른 골목 끝에 있어요.",
    "blank": "impasse",
+   "src": "made"
+  }
+ ],
+ "w|impatience": [
+  {
+   "text": "Lucas attend la première neige avec impatience pour sortir sa luge.",
+   "en": "Lucas waits impatiently for the first snow to get out his sled.",
+   "ko": "뤼카는 썰매를 꺼내려고 첫눈을 손꼽아 기다려요.",
+   "blank": "impatience",
+   "src": "made"
+  },
+  {
+   "text": "Le public attend Camille et les derniers coureurs avec impatience.",
+   "en": "The crowd waits impatiently for Camille and the last runners.",
+   "ko": "관중들은 카미유와 마지막 주자들을 애타게 기다려요.",
+   "blank": "impatience",
    "src": "made"
   }
  ],
@@ -35949,6 +36301,22 @@
    "blank": "italien"
   }
  ],
+ "w|itinéraire": [
+  {
+   "text": "Lucas dessine l'itinéraire des randonneurs sur une carte du village.",
+   "en": "Lucas draws the hikers' route on a map of the village.",
+   "ko": "뤼카는 마을 지도에 등산객들의 경로를 그려요.",
+   "blank": "itinéraire",
+   "src": "made"
+  },
+  {
+   "text": "Camille étudie l'itinéraire de la course pour repérer les montées.",
+   "en": "Camille studies the race route to spot the climbs.",
+   "ko": "카미유는 오르막을 찾아 두려고 대회 코스를 살펴봐요.",
+   "blank": "itinéraire",
+   "src": "made"
+  }
+ ],
  "w|ivre": [
   {
    "text": "Il est rentré ivre après la fête.",
@@ -38037,6 +38405,22 @@
    "blank": "local"
   }
  ],
+ "w|localisation": [
+  {
+   "text": "Dans la montagne, Lucas active la localisation de son téléphone avant chaque randonnée.",
+   "en": "In the mountains, Lucas turns on his phone's location before every hike.",
+   "ko": "산에서 뤼카는 등산할 때마다 휴대폰 위치 기능을 켜요.",
+   "blank": "localisation",
+   "src": "made"
+  },
+  {
+   "text": "La famille de Camille suit sa localisation en direct sur l'application du marathon.",
+   "en": "Camille's family follows her location live on the marathon app.",
+   "ko": "카미유의 가족은 마라톤 앱으로 카미유의 위치를 실시간으로 따라가요.",
+   "blank": "localisation",
+   "src": "made"
+  }
+ ],
  "w|localiser": [
   {
    "text": "On arrive à localiser son téléphone.",
@@ -38385,6 +38769,22 @@
    "en": "You have to pay the rent before the first of the month.",
    "ko": "월세는 매달 1일 전에 내야 해.",
    "blank": "loyer"
+  }
+ ],
+ "w|lueur": [
+  {
+   "text": "Lucas voit la lueur d'une lampe dans le refuge au loin.",
+   "en": "Lucas sees the glow of a lamp in the distant hut.",
+   "ko": "뤼카는 멀리 산장에서 등불이 희미하게 빛나는 걸 봐요.",
+   "blank": "lueur",
+   "src": "made"
+  },
+  {
+   "text": "Camille part avant l'aube, à la lueur des lampadaires.",
+   "en": "Camille sets off before dawn, by the glow of the streetlights.",
+   "ko": "카미유는 새벽이 오기 전 가로등 불빛 아래 출발해요.",
+   "blank": "lueur",
+   "src": "made"
   }
  ],
  "w|lui": [
@@ -41101,6 +41501,22 @@
    "en": "This novel is about a famous murderer.",
    "ko": "이 소설은 유명한 살인범에 대한 이야기야.",
    "blank": "meurtrier"
+  }
+ ],
+ "w|meute": [
+  {
+   "text": "Les bergers racontent à Lucas qu'une meute de loups rôde près des alpages.",
+   "en": "The shepherds tell Lucas that a wolf pack is prowling near the high pastures.",
+   "ko": "양치기들은 뤼카에게 늑대 무리가 고산 목초지 근처를 돌아다닌다고 말해요.",
+   "blank": "meute",
+   "src": "made"
+  },
+  {
+   "text": "Une meute de photographes attend Camille et les autres coureurs à l'arrivée.",
+   "en": "A pack of photographers waits for Camille and the other runners at the finish.",
+   "ko": "사진기자 무리가 결승점에서 카미유와 다른 주자들을 기다려요.",
+   "blank": "meute",
+   "src": "made"
   }
  ],
  "w|mexicain": [
@@ -47159,6 +47575,22 @@
    "src": "made"
   }
  ],
+ "w|peluche": [
+  {
+   "text": "Lucas a gagné une peluche de marmotte à la loterie du village.",
+   "en": "Lucas won a stuffed marmot toy in the village raffle.",
+   "ko": "뤼카는 마을 추첨에서 마멋 인형을 탔어요.",
+   "blank": "peluche",
+   "src": "made"
+  },
+  {
+   "text": "La fille de Camille l'attend à l'arrivée avec sa peluche préférée.",
+   "en": "Camille's daughter waits for her at the finish with her favorite stuffed toy.",
+   "ko": "카미유의 딸은 제일 좋아하는 인형을 안고 결승점에서 기다려요.",
+   "blank": "peluche",
+   "src": "made"
+  }
+ ],
  "w|pencher": [
   {
    "text": "Hugo doit pencher la tête pour voir le tableau derrière son grand voisin.",
@@ -48273,6 +48705,22 @@
    "blank": "pilule"
   }
  ],
+ "w|pin": [
+  {
+   "text": "La maison de Lucas sent bon le pin après la pluie.",
+   "en": "Lucas's house smells of pine after the rain.",
+   "ko": "비가 오고 나면 뤼카의 집에서 소나무 향이 나요.",
+   "blank": "pin",
+   "src": "made"
+  },
+  {
+   "text": "Camille fait une pause à l'ombre d'un grand pin au ravitaillement.",
+   "en": "Camille takes a break in the shade of a big pine at the refreshment stand.",
+   "ko": "카미유는 급수대 옆 큰 소나무 그늘에서 잠깐 쉬어요.",
+   "blank": "pin",
+   "src": "made"
+  }
+ ],
  "w|pince": [
   {
    "text": "Louis arrache les vieux clous du plancher avec une pince.",
@@ -48286,6 +48734,22 @@
    "en": "Just before the start, Claire clips her hair up with a hair clip.",
    "ko": "출발 직전에 클레르는 집게핀으로 머리를 묶어요.",
    "blank": "pince",
+   "src": "made"
+  }
+ ],
+ "w|pingouin": [
+  {
+   "text": "La petite nièce de Lucas n'a jamais vu de pingouin, seulement des marmottes.",
+   "en": "Lucas's little niece has never seen a penguin, only marmots.",
+   "ko": "뤼카의 어린 조카는 마멋만 봤지 펭귄은 본 적이 없어요.",
+   "blank": "pingouin",
+   "src": "made"
+  },
+  {
+   "text": "Un coureur déguisé en pingouin double Camille au dixième kilomètre.",
+   "en": "A runner dressed as a penguin overtakes Camille at the tenth kilometer.",
+   "ko": "펭귄 분장을 한 주자가 십 킬로미터 지점에서 카미유를 앞질러요.",
+   "blank": "pingouin",
    "src": "made"
   }
  ],
@@ -49371,6 +49835,22 @@
    "blank": "poker"
   }
  ],
+ "w|pôle": [
+  {
+   "text": "Lucas rêve de partir en expédition au pôle Nord.",
+   "en": "Lucas dreams of going on an expedition to the North Pole.",
+   "ko": "뤼카는 북극 탐험을 꿈꿔요.",
+   "blank": "pôle",
+   "src": "made"
+  },
+  {
+   "text": "Camille rêve de courir un jour le marathon du pôle Nord.",
+   "en": "Camille dreams of one day running the North Pole marathon.",
+   "ko": "카미유는 언젠가 북극 마라톤을 뛰는 꿈을 꿔요.",
+   "blank": "pôle",
+   "src": "made"
+  }
+ ],
  "w|poli": [
   {
    "text": "La secrétaire du cabinet est toujours très polie avec Nicolas.",
@@ -50191,6 +50671,22 @@
    "en": "A sunbeam highlights the dust in the room.",
    "ko": "햇살이 방 안의 먼지를 비추고 있어.",
    "blank": "poussière"
+  }
+ ],
+ "w|poussin": [
+  {
+   "text": "Au printemps, la poule de Lucas promène chaque poussin dans la cour.",
+   "en": "In spring, Lucas's hen walks each chick around the yard.",
+   "ko": "봄이면 뤼카의 암탉이 병아리를 하나하나 데리고 마당을 돌아다녀요.",
+   "blank": "poussin",
+   "src": "made"
+  },
+  {
+   "text": "Au départ du marathon, Camille se sent comme un poussin au milieu des athlètes.",
+   "en": "At the start of the marathon, Camille feels like a chick among the athletes.",
+   "ko": "마라톤 출발선에서 카미유는 선수들 사이에서 병아리가 된 기분이에요.",
+   "blank": "poussin",
+   "src": "made"
   }
  ],
  "w|pouvoir": [
@@ -54124,6 +54620,22 @@
    "en": "Sarah's friend, now a winegrower, brings wine from his latest harvest.",
    "ko": "포도 농사꾼이 된 사라의 친구는 지난 수확으로 만든 와인을 가져와요.",
    "blank": "récolte",
+   "src": "made"
+  }
+ ],
+ "w|récolter": [
+  {
+   "text": "En septembre, Lucas aide les voisins à récolter les pommes de terre.",
+   "en": "In September, Lucas helps the neighbors harvest the potatoes.",
+   "ko": "구월이면 뤼카는 이웃들이 감자 캐는 걸 도와줘요.",
+   "blank": "récolter",
+   "src": "made"
+  },
+  {
+   "text": "Avec cette course, Camille espère récolter de l'argent pour une association.",
+   "en": "With this race, Camille hopes to raise money for a charity.",
+   "ko": "카미유는 이 대회로 자선 단체를 위한 돈을 모으고 싶어 해요.",
+   "blank": "récolter",
    "src": "made"
   }
  ],
@@ -58911,6 +59423,22 @@
    "src": "made"
   }
  ],
+ "w|scorpion": [
+  {
+   "text": "Lucas a trouvé un petit scorpion sous une pierre chaude du chemin.",
+   "en": "Lucas found a small scorpion under a warm stone on the path.",
+   "ko": "뤼카는 길가의 따뜻한 돌 밑에서 작은 전갈을 찾았어요.",
+   "blank": "scorpion",
+   "src": "made"
+  },
+  {
+   "text": "Le maillot de Camille porte un scorpion, le symbole de son club.",
+   "en": "Camille's jersey has a scorpion on it, her club's emblem.",
+   "ko": "카미유의 셔츠에는 클럽 상징인 전갈이 그려져 있어요.",
+   "blank": "scorpion",
+   "src": "made"
+  }
+ ],
  "w|scotch": [
   {
    "text": "Passe-moi le scotch, s’il te plaît.",
@@ -59716,6 +60244,22 @@
    "en": "Camille is waiting for the cheese competition jury's verdict.",
    "ko": "카미유는 치즈 대회 심사위원단의 판정을 기다려요.",
    "blank": "sentence",
+   "src": "made"
+  }
+ ],
+ "w|sentier": [
+  {
+   "text": "Lucas entretient le sentier qui monte jusqu'au lac.",
+   "en": "Lucas maintains the trail that climbs to the lake.",
+   "ko": "뤼카는 호수까지 올라가는 오솔길을 관리해요.",
+   "blank": "sentier",
+   "src": "made"
+  },
+  {
+   "text": "Pour s'entraîner, Camille court sur un sentier au bord de la rivière.",
+   "en": "To train, Camille runs on a trail along the river.",
+   "ko": "카미유는 연습하려고 강가 오솔길을 달려요.",
+   "blank": "sentier",
    "src": "made"
   }
  ],
@@ -64521,6 +65065,22 @@
    "blank": "tension"
   }
  ],
+ "w|tentation": [
+  {
+   "text": "Devant la boulangerie du village, Lucas résiste mal à la tentation d'acheter une tarte.",
+   "en": "In front of the village bakery, Lucas can barely resist the temptation to buy a tart.",
+   "ko": "마을 빵집 앞에서 뤼카는 타르트를 사고 싶은 유혹을 잘 못 참아요.",
+   "blank": "tentation",
+   "src": "made"
+  },
+  {
+   "text": "À mi-parcours, Camille lutte contre la tentation de marcher.",
+   "en": "Halfway through, Camille fights the temptation to walk.",
+   "ko": "중간쯤에서 카미유는 걷고 싶은 유혹과 싸워요.",
+   "blank": "tentation",
+   "src": "made"
+  }
+ ],
  "w|tentative": [
   {
    "text": "Sa tentative de réparation a échoué.",
@@ -64704,6 +65264,22 @@
    "en": "Inès describes the terrifying passage of the storm along the coast.",
    "ko": "이네스는 폭풍이 해안을 지나간 무서운 순간을 묘사해요.",
    "blank": "terrifiant",
+   "src": "made"
+  }
+ ],
+ "w|terrifié": [
+  {
+   "text": "Pendant l'avalanche, Lucas est resté terrifié dans le refuge toute la nuit.",
+   "en": "During the avalanche, Lucas stayed terrified in the mountain hut all night.",
+   "ko": "눈사태가 났을 때 뤼카는 밤새 산장에서 겁에 질려 있었어요.",
+   "blank": "terrifié",
+   "src": "made"
+  },
+  {
+   "text": "La veille du marathon, Camille était terrifiée à l'idée de ne pas finir.",
+   "en": "The day before the marathon, Camille was terrified of not finishing.",
+   "ko": "마라톤 전날 카미유는 완주하지 못할까 봐 겁에 질려 있었어요.",
+   "blank": "terrifiée",
    "src": "made"
   }
  ],
@@ -65373,6 +65949,22 @@
    "en": "He's going to twist the wire without meaning to.",
    "ko": "그가 모르고 줄을 비틀 거야.",
    "blank": "tordre"
+  }
+ ],
+ "w|tornade": [
+  {
+   "text": "Lucas a vu une tornade à la télévision, mais jamais dans sa vallée.",
+   "en": "Lucas has seen a tornado on TV, but never in his valley.",
+   "ko": "뤼카는 회오리바람을 텔레비전에서는 봤지만 자기 골짜기에서는 본 적이 없어요.",
+   "blank": "tornade",
+   "src": "made"
+  },
+  {
+   "text": "Camille traverse le stade comme une tornade dans les derniers mètres.",
+   "en": "Camille crosses the stadium like a tornado in the final meters.",
+   "ko": "카미유는 마지막 몇 미터를 회오리처럼 달려 경기장을 가로질러요.",
+   "blank": "tornade",
+   "src": "made"
   }
  ],
  "w|torse": [
@@ -67945,6 +68537,22 @@
    "blank": "vérité"
   }
  ],
+ "w|vermine": [
+  {
+   "text": "Lucas pose des pièges pour éloigner la vermine du grenier à grain.",
+   "en": "Lucas sets traps to keep vermin out of the grain loft.",
+   "ko": "뤼카는 곡물 창고에서 해로운 동물을 쫓으려고 덫을 놓아요.",
+   "blank": "vermine",
+   "src": "made"
+  },
+  {
+   "text": "Le parcours de Camille longe de vieilles granges où les chats chassent la vermine.",
+   "en": "Camille's route runs past old barns where cats hunt vermin.",
+   "ko": "카미유의 코스는 고양이들이 해로운 동물을 잡는 낡은 헛간들을 지나가요.",
+   "blank": "vermine",
+   "src": "made"
+  }
+ ],
  "w|verre": [
   {
    "text": "Verse-moi un verre d'eau, s'il te plaît.",
@@ -68183,6 +68791,22 @@
    "en": "The meat is in the refrigerator.",
    "ko": "고기는 냉장고에 있어.",
    "blank": "viande"
+  }
+ ],
+ "w|vibration": [
+  {
+   "text": "Lucas sent une vibration dans le sol quand les rochers tombent de la falaise.",
+   "en": "Lucas feels a vibration in the ground when rocks fall from the cliff.",
+   "ko": "절벽에서 바위가 떨어질 때 뤼카는 땅이 떨리는 걸 느껴요.",
+   "blank": "vibration",
+   "src": "made"
+  },
+  {
+   "text": "La montre de Camille émet une vibration à chaque kilomètre.",
+   "en": "Camille's watch gives a vibration every kilometer.",
+   "ko": "카미유의 시계는 일 킬로미터마다 진동해요.",
+   "blank": "vibration",
+   "src": "made"
   }
  ],
  "w|vice": [
@@ -69079,6 +69703,22 @@
    "en": "I don't like being at the wheel in the rain.",
    "ko": "나는 비 오는 날 운전하는 것을 좋아하지 않는다.",
    "blank": "volant"
+  }
+ ],
+ "w|volcan": [
+  {
+   "text": "Depuis le sommet, Lucas aperçoit un ancien volcan endormi.",
+   "en": "From the summit, Lucas spots an old dormant volcano.",
+   "ko": "정상에서 뤼카는 오래된 휴화산을 바라봐요.",
+   "blank": "volcan",
+   "src": "made"
+  },
+  {
+   "text": "Le parcours du marathon de Camille passe au pied d'un volcan éteint.",
+   "en": "Camille's marathon route runs at the foot of an extinct volcano.",
+   "ko": "카미유의 마라톤 코스는 사화산 기슭을 지나요.",
+   "blank": "volcan",
+   "src": "made"
   }
  ],
  "w|voler": [

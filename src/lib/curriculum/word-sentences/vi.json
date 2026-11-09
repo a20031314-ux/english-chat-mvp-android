@@ -237,6 +237,22 @@
    "blank": "âm thanh"
   }
  ],
+ "w|ẩm thấp": [
+  {
+   "text": "Căn nhà gỗ sát biển hơi ẩm thấp, nên Phong phơi chăn ra nắng mỗi sáng.",
+   "en": "The wooden house by the sea is a bit damp, so Phong airs the blankets in the sun every morning.",
+   "ko": "바닷가 나무집이 좀 눅눅해서 퐁은 매일 아침 이불을 햇볕에 널어요.",
+   "blank": "ẩm thấp",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc giữ các mẫu nấm trong tủ ẩm thấp để chúng mọc nhanh hơn.",
+   "en": "Ngọc keeps the fungus samples in a damp cabinet so they grow faster.",
+   "ko": "응옥은 곰팡이 시료가 더 빨리 자라도록 눅눅한 보관함에 넣어 둬요.",
+   "blank": "ẩm thấp",
+   "src": "made"
+  }
+ ],
  "w|ẩm thực": [
   {
    "text": "Khách du lịch hay hỏi Nam về ẩm thực của vùng này.",
@@ -3499,6 +3515,22 @@
    "src": "made"
   }
  ],
+ "w|bồ câu": [
+  {
+   "text": "Trên mái đình làng, mấy con bồ câu trắng gù gù khi Phong đi ngang.",
+   "en": "On the roof of the village hall, a few white pigeons coo as Phong walks by.",
+   "ko": "마을 정자 지붕 위에서 흰 비둘기 몇 마리가 퐁이 지나갈 때 구구 울어요.",
+   "blank": "bồ câu",
+   "src": "made"
+  },
+  {
+   "text": "Bài báo Ngọc đang đọc giải thích vì sao bồ câu tìm được đường về tổ.",
+   "en": "The article Ngọc is reading explains why pigeons can find their way home.",
+   "ko": "응옥이 읽고 있는 논문은 비둘기가 어떻게 집으로 돌아오는지 설명해요.",
+   "blank": "bồ câu",
+   "src": "made"
+  }
+ ],
  "w|bỏ chạy": [
   {
    "text": "Con chó thấy lạ là bỏ chạy luôn.",
@@ -6123,6 +6155,22 @@
    "src": "tatoeba:3537930/trieuho en:3537668/trieuho"
   }
  ],
+ "w|cắt tỉa": [
+  {
+   "text": "Ông nội dạy Phong cắt tỉa giàn bông giấy trước nhà cho gọn.",
+   "en": "Grandpa teaches Phong to prune the bougainvillea trellis in front of the house.",
+   "ko": "할아버지는 퐁에게 집 앞 부겐빌레아 덩굴을 깔끔하게 다듬는 법을 가르쳐요.",
+   "blank": "cắt tỉa",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc phải cắt tỉa rễ cây con thật khéo trước khi chuyển sang ống nghiệm.",
+   "en": "Ngọc has to trim the seedling's roots carefully before moving it to a test tube.",
+   "ko": "응옥은 묘목을 시험관으로 옮기기 전에 뿌리를 아주 조심스럽게 다듬어야 해요.",
+   "blank": "cắt tỉa",
+   "src": "made"
+  }
+ ],
  "w|cáu": [
   {
    "text": "Bị em gái đổ lỗi, Minh cáu quá đóng sầm cửa.",
@@ -7045,6 +7093,22 @@
    "src": "made"
   }
  ],
+ "w|chặt cây": [
+  {
+   "text": "Dân làng của Phong cấm chặt cây phi lao vì hàng cây giữ cát cho cả bờ biển.",
+   "en": "Phong's village bans cutting down casuarinas because the trees hold the sand for the whole shore.",
+   "ko": "퐁의 마을은 나무들이 해안 모래를 붙잡아 주기 때문에 필라오를 베는 걸 금지해요.",
+   "blank": "chặt cây",
+   "src": "made"
+  },
+  {
+   "text": "Số liệu của Ngọc cho thấy chặt cây đầu nguồn làm đất bị xói mòn nhanh gấp nhiều lần.",
+   "en": "Ngọc's data show that cutting down upstream forests makes the soil erode many times faster.",
+   "ko": "응옥의 자료는 상류의 나무를 베면 흙이 몇 배나 빨리 깎인다는 걸 보여 줘요.",
+   "blank": "chặt cây",
+   "src": "made"
+  }
+ ],
  "w|chật chội": [
   {
    "text": "Phòng thay đồ của công nhân chật chội, chỉ đủ chỗ cho năm người.",
@@ -7285,6 +7349,22 @@
    "ko": "코피 나요.",
    "blank": "chảy máu",
    "src": "tatoeba:1571491/trieuho en:68973/CK"
+  }
+ ],
+ "w|chạy nhảy": [
+  {
+   "text": "Lũ trẻ chạy nhảy khắp bãi cát, còn Phong ngồi trông đồ.",
+   "en": "The kids run and jump all over the sand while Phong sits watching the bags.",
+   "ko": "아이들은 모래사장을 뛰어다니고 퐁은 앉아서 짐을 지켜요.",
+   "blank": "chạy nhảy",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc quan sát lũ chuột con chạy nhảy trong lồng sau khi được cho ăn.",
+   "en": "Ngọc watches the baby mice run and jump in their cage after being fed.",
+   "ko": "응옥은 먹이를 먹은 새끼 쥐들이 우리 안에서 뛰어노는 걸 관찰해요.",
+   "blank": "chạy nhảy",
+   "src": "made"
   }
  ],
  "w|chạy trốn": [
@@ -7888,6 +7968,38 @@
    "en": "Hà's friend's house is on a hillside, lively with birdsong every morning.",
    "ko": "하 친구네 집은 언덕 기슭에 있어서 아침마다 새소리로 떠들썩해요.",
    "blank": "chim chóc",
+   "src": "made"
+  }
+ ],
+ "w|chim én": [
+  {
+   "text": "Bà bảo Phong rằng chim én bay thấp là sắp có mưa.",
+   "en": "Grandma tells Phong that when swallows fly low, rain is coming.",
+   "ko": "할머니는 퐁에게 제비가 낮게 날면 곧 비가 온다고 해요.",
+   "blank": "chim én",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc gắn thiết bị định vị siêu nhẹ lên lưng một con chim én.",
+   "en": "Ngọc attaches an ultralight tracker to a swallow's back.",
+   "ko": "응옥은 제비 등에 아주 가벼운 위치 추적기를 달아요.",
+   "blank": "chim én",
+   "src": "made"
+  }
+ ],
+ "w|chim sẻ": [
+  {
+   "text": "Phong rắc ít cơm thừa trước hiên, đàn chim sẻ sà xuống ăn ngay.",
+   "en": "Phong scatters some leftover rice on the porch, and a flock of sparrows swoops down to eat.",
+   "ko": "퐁이 처마 앞에 남은 밥을 조금 뿌리자 참새 떼가 바로 내려와 먹어요.",
+   "blank": "chim sẻ",
+   "src": "made"
+  },
+  {
+   "text": "Thí nghiệm của Ngọc cho thấy chim sẻ thành phố hót to hơn đồng loại ở quê.",
+   "en": "Ngọc's experiment shows city sparrows sing louder than their country cousins.",
+   "ko": "응옥의 실험은 도시 참새가 시골 참새보다 더 크게 운다는 걸 보여 줘요.",
+   "blank": "chim sẻ",
    "src": "made"
   }
  ],
@@ -9581,6 +9693,22 @@
    "blank": "có"
   }
  ],
+ "w|cò": [
+  {
+   "text": "Ngoài ruộng muối, Phong thấy một con cò trắng lặng lẽ bắt cá.",
+   "en": "Out by the salt fields, Phong sees a white egret quietly catching fish.",
+   "ko": "염전 밖에서 퐁은 흰 백로 한 마리가 조용히 물고기를 잡는 걸 봐요.",
+   "blank": "cò",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc dùng ống nhòm theo dõi một con cò đang rỉa lông trên cánh đồng.",
+   "en": "Ngọc uses binoculars to watch an egret preening in the field.",
+   "ko": "응옥은 쌍안경으로 들판에서 깃털을 다듬는 백로를 관찰해요.",
+   "blank": "cò",
+   "src": "made"
+  }
+ ],
  "w|cô": [
   {
    "text": "Cháu chào cô ạ.",
@@ -10491,6 +10619,22 @@
    "src": "made"
   }
  ],
+ "w|công": [
+  {
+   "text": "Trong khu nghỉ dưỡng gần đó, Phong thấy một con công xòe đuôi rực rỡ.",
+   "en": "At a resort nearby, Phong sees a peacock fanning out its brilliant tail.",
+   "ko": "근처 리조트에서 퐁은 화려하게 꼬리를 펼친 공작을 봐요.",
+   "blank": "công",
+   "src": "made"
+  },
+  {
+   "text": "Theo Ngọc, chiếc đuôi sặc sỡ của chim công giúp con đực thu hút bạn tình.",
+   "en": "According to Ngọc, the peacock's colorful tail helps the male attract a mate.",
+   "ko": "응옥에 따르면 공작의 화려한 꼬리는 수컷이 짝을 끌어들이는 데 도움이 돼요.",
+   "blank": "công",
+   "src": "made"
+  }
+ ],
  "w|cổng": [
   {
    "text": "Cổng trường đóng sớm vào cuối tuần.",
@@ -10917,6 +11061,22 @@
    "src": "made"
   }
  ],
+ "w|cú mèo": [
+  {
+   "text": "Đêm ngủ ở nhà bà, Phong nghe tiếng cú mèo kêu ngoài rặng dừa.",
+   "en": "Sleeping at Grandma's, Phong hears an owl hooting out in the coconut grove.",
+   "ko": "할머니 댁에서 자는 밤, 퐁은 야자나무 숲에서 부엉이 우는 소리를 들어요.",
+   "blank": "cú mèo",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc phân tích tiếng kêu của cú mèo để tìm hiểu cách chúng gọi nhau ban đêm.",
+   "en": "Ngọc analyzes owl calls to learn how they call to each other at night.",
+   "ko": "응옥은 부엉이가 밤에 서로 부르는 방식을 알아보려고 울음소리를 분석해요.",
+   "blank": "cú mèo",
+   "src": "made"
+  }
+ ],
  "w|cụ thể": [
   {
    "text": "Hãy nói cụ thể hơn về kế hoạch của bạn.",
@@ -11021,6 +11181,22 @@
    "en": "Someone's knocking at the door.",
    "ko": "누가 문을 두드리고 있어.",
    "blank": "cửa"
+  }
+ ],
+ "w|cua biển": [
+  {
+   "text": "Sáng sớm, Phong theo ngư dân ra bãi đá bắt cua biển khi nước vừa rút.",
+   "en": "Early in the morning, Phong follows the fishermen to the rocks to catch sea crabs as the tide goes out.",
+   "ko": "이른 아침, 퐁은 물이 막 빠질 때 어부들을 따라 바위로 바닷게를 잡으러 가요.",
+   "blank": "cua biển",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc đặt con cua biển vào bể nước mặn để đo nhiệt độ cơ thể nó.",
+   "en": "Ngọc puts the sea crab in a saltwater tank to measure its body temperature.",
+   "ko": "응옥은 바닷게를 바닷물 수조에 넣고 체온을 재요.",
+   "blank": "cua biển",
+   "src": "made"
   }
  ],
  "w|cửa hàng": [
@@ -11128,6 +11304,22 @@
    "en": "Hà's sponge cake is super soft, and every customer praises it.",
    "ko": "하 씨의 카스텔라는 엄청 부드러워서 손님마다 칭찬해요.",
    "blank": "cực",
+   "src": "made"
+  }
+ ],
+ "w|cực khổ": [
+  {
+   "text": "Nghề làm muối cực khổ lắm, Phong chỉ phụ một buổi mà lưng đã đau nhừ.",
+   "en": "Salt-making is grueling work; Phong helped for just one morning and his back already aches.",
+   "ko": "소금 만드는 일은 정말 고돼서, 퐁은 한나절 도왔을 뿐인데 허리가 쑤셔요.",
+   "blank": "cực khổ",
+   "src": "made"
+  },
+  {
+   "text": "Những tháng ngày cực khổ làm luận văn cuối cùng cũng giúp Ngọc có kết quả đầu tiên.",
+   "en": "The grueling months of thesis work finally gave Ngọc her first results.",
+   "ko": "논문을 쓰며 고생한 몇 달 끝에 응옥은 마침내 첫 결과를 얻었어요.",
+   "blank": "cực khổ",
    "src": "made"
   }
  ],
@@ -11899,6 +12091,22 @@
    "en": "Turn on the radio and listen to music while driving.",
    "ko": "운전할 때 라디오 켜고 음악 들어.",
    "blank": "đài"
+  }
+ ],
+ "w|đại bàng": [
+  {
+   "text": "Trên vách đá cao, Phong thấy một con đại bàng đang xòe cánh lượn vòng.",
+   "en": "On the high cliff, Phong sees an eagle circling with its wings spread wide.",
+   "ko": "높은 절벽 위에서 퐁은 날개를 활짝 펴고 맴도는 독수리 한 마리를 봐요.",
+   "blank": "đại bàng",
+   "src": "made"
+  },
+  {
+   "text": "Phòng thí nghiệm của Ngọc có bộ xương đại bàng được dựng lại rất công phu.",
+   "en": "Ngọc's lab has a painstakingly reassembled eagle skeleton.",
+   "ko": "응옥의 실험실에는 정성껏 다시 맞춘 독수리 뼈대가 있어요.",
+   "blank": "đại bàng",
+   "src": "made"
   }
  ],
  "w|đại biểu": [
@@ -15011,6 +15219,22 @@
    "src": "made"
   }
  ],
+ "w|diều hâu": [
+  {
+   "text": "Một con diều hâu bất ngờ sà xuống cướp con cá khỏi tay Phong.",
+   "en": "A hawk suddenly swoops down and snatches the fish out of Phong's hand.",
+   "ko": "매 한 마리가 갑자기 내려와 퐁의 손에서 생선을 낚아채 가요.",
+   "blank": "diều hâu",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc so sánh mắt diều hâu với mắt người trong bài thuyết trình tuần này.",
+   "en": "In this week's presentation, Ngọc compares a hawk's eyes with human eyes.",
+   "ko": "이번 주 발표에서 응옥은 매의 눈과 사람의 눈을 비교해요.",
+   "blank": "diều hâu",
+   "src": "made"
+  }
+ ],
  "w|điều hòa": [
   {
    "text": "Điều hòa đang chạy nên phòng mát lắm.",
@@ -16233,6 +16457,22 @@
    "blank": "Đón"
   }
  ],
+ "w|đốn": [
+  {
+   "text": "Mấy chú thợ đóng thuyền phải đốn gỗ từ tận trên núi mang về cho Phong xem.",
+   "en": "The boat builders had to fell timber all the way up the mountain and brought it back to show Phong.",
+   "ko": "배 목수 아저씨들은 저 산 위에서 나무를 베어 와 퐁에게 보여 줘요.",
+   "blank": "đốn",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc đếm vòng gỗ trên một thân cây vừa bị đốn ở khu rừng phía tây.",
+   "en": "Ngọc counts the rings on a tree trunk that was just felled in the western forest.",
+   "ko": "응옥은 서쪽 숲에서 막 베어 낸 나무 둥치의 나이테를 세요.",
+   "blank": "đốn",
+   "src": "made"
+  }
+ ],
  "w|đồn cảnh sát": [
   {
    "text": "Lớp Minh được dẫn đi tham quan đồn cảnh sát gần trường.",
@@ -17254,6 +17494,22 @@
    "en": "On the way up the mountain to see the ripe rice season, Ngọc stops at a small village.",
    "ko": "벼 익는 철을 보러 산에 오르던 길에 응옥은 작은 마을에 머물러요.",
    "blank": "dừng chân",
+   "src": "made"
+  }
+ ],
+ "w|đúng đắn": [
+  {
+   "text": "Quyết định ở lại làng giúp ông bà là đúng đắn, Phong nghĩ vậy mỗi sáng thức dậy.",
+   "en": "Staying in the village to help his grandparents was the right decision, Phong thinks each morning.",
+   "ko": "퐁은 매일 아침 일어날 때마다 마을에 남아 조부모님을 돕기로 한 게 옳은 결정이었다고 생각해요.",
+   "blank": "đúng đắn",
+   "src": "made"
+  },
+  {
+   "text": "Giáo sư khen Ngọc có cách đặt vấn đề rất đúng đắn.",
+   "en": "The professor praises Ngọc for framing the problem very soundly.",
+   "ko": "교수님은 응옥이 문제를 아주 올바르게 세웠다고 칭찬해요.",
+   "blank": "đúng đắn",
    "src": "made"
   }
  ],
@@ -20221,6 +20477,22 @@
    "blank": "Hạ cánh"
   }
  ],
+ "w|hạc": [
+  {
+   "text": "Bức tranh thêu trong nhà bà Phong có hình một con hạc đứng trên lưng rùa.",
+   "en": "The embroidery in Phong's grandma's house shows a crane standing on a turtle's back.",
+   "ko": "퐁의 할머니 댁 자수 그림에는 거북 등 위에 선 학이 있어요.",
+   "blank": "hạc",
+   "src": "made"
+  },
+  {
+   "text": "Trong bảo tàng của viện, Ngọc dừng lại ngắm mẫu hạc đầu đỏ nhồi bông.",
+   "en": "In the institute's museum, Ngọc stops to look at a stuffed red-crowned crane.",
+   "ko": "연구소 박물관에서 응옥은 멈춰 서서 단정학 박제를 바라봐요.",
+   "blank": "hạc",
+   "src": "made"
+  }
+ ],
  "w|hai": [
   {
    "text": "Nhà em có hai cái ghế.",
@@ -21033,6 +21305,22 @@
    "blank": "Hèn"
   }
  ],
+ "w|hến": [
+  {
+   "text": "Bà ngoại dạy Phong cách đãi hến dưới nước cho sạch cát.",
+   "en": "Grandma teaches Phong how to rinse the baby clams in water to get the sand out.",
+   "ko": "외할머니는 퐁에게 가막조개를 물에 일어 모래를 빼는 법을 가르쳐 줘요.",
+   "blank": "hến",
+   "src": "made"
+  },
+  {
+   "text": "Nhóm của Ngọc đang đo lượng kim loại nặng trong hến lấy từ sông.",
+   "en": "Ngọc's team is measuring heavy metals in baby clams taken from the river.",
+   "ko": "응옥의 팀은 강에서 채취한 가막조개의 중금속 양을 재고 있어요.",
+   "blank": "hến",
+   "src": "made"
+  }
+ ],
  "w|hẹn": [
   {
    "text": "Mai mình hẹn ở quán cà phê.",
@@ -21286,6 +21574,22 @@
    "en": "Every year Trang goes to the commune once to donate blood.",
    "ko": "짱은 해마다 한 번씩 면에 가서 헌혈해요.",
    "blank": "hiến máu",
+   "src": "made"
+  }
+ ],
+ "w|hiển nhiên là": [
+  {
+   "text": "Nhìn làn da rám nắng của Phong, hiển nhiên là cậu đã ở biển cả mùa hè.",
+   "en": "Looking at Phong's tanned skin, it's obvious he has spent the whole summer at the sea.",
+   "ko": "퐁의 그을린 피부를 보면 여름 내내 바다에 있었던 게 뻔해요.",
+   "blank": "hiển nhiên là",
+   "src": "made"
+  },
+  {
+   "text": "Nhiệt độ tăng thì phản ứng nhanh hơn, hiển nhiên là vậy, nhưng Ngọc vẫn muốn đo cho chắc.",
+   "en": "Reactions speed up as temperature rises, obviously, but Ngọc still wants to measure to be sure.",
+   "ko": "온도가 오르면 반응이 빨라지는 건 당연하지만, 응옥은 그래도 확실히 재 보고 싶어 해요.",
+   "blank": "hiển nhiên là",
    "src": "made"
   }
  ],
@@ -24717,6 +25021,22 @@
    "blank": "Không bao giờ"
   }
  ],
+ "w|không chỉ": [
+  {
+   "text": "Phong không chỉ biết bơi giỏi, cậu còn biết lặn bắt hải sâm.",
+   "en": "Phong not only swims well, he also knows how to dive for sea cucumbers.",
+   "ko": "퐁은 수영을 잘할 뿐 아니라 해삼을 잡으러 잠수도 할 줄 알아요.",
+   "blank": "không chỉ",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc không chỉ lo thí nghiệm, cô ấy còn hướng dẫn hai bạn sinh viên năm nhất.",
+   "en": "Ngọc doesn't just run experiments; she also mentors two first-year students.",
+   "ko": "응옥은 실험만 하는 게 아니라 신입생 두 명도 지도해요.",
+   "blank": "không chỉ",
+   "src": "made"
+  }
+ ],
  "w|không còn": [
   {
    "text": "Không còn chỗ ngồi nữa.",
@@ -24818,6 +25138,22 @@
    "en": "The guest brings a gigantic suitcase, and Linh has to call two people to carry it.",
    "ko": "손님이 거대한 여행 가방을 가져와서 린은 두 사람을 불러 옮기게 해요.",
    "blank": "khổng lồ",
+   "src": "made"
+  }
+ ],
+ "w|không những": [
+  {
+   "text": "Biển ở làng Phong không những trong mà còn rất êm.",
+   "en": "The sea at Phong's village is not only clear but also very calm.",
+   "ko": "퐁의 마을 바다는 맑을 뿐 아니라 아주 잔잔해요.",
+   "blank": "không những",
+   "src": "made"
+  },
+  {
+   "text": "Kết quả của Ngọc không những đúng giả thuyết mà còn mở ra một hướng nghiên cứu mới.",
+   "en": "Ngọc's results not only confirm the hypothesis but also open a new line of research.",
+   "ko": "응옥의 결과는 가설에 맞을 뿐 아니라 새로운 연구 방향도 열어 줘요.",
+   "blank": "không những",
    "src": "made"
   }
  ],
@@ -25727,6 +26063,22 @@
    "src": "made"
   }
  ],
+ "w|kỳ thực": [
+  {
+   "text": "Người ta tưởng Phong ra biển để bơi, kỳ thực cậu đến để vẽ tranh.",
+   "en": "People think Phong goes to the sea to swim, but in fact he comes to paint.",
+   "ko": "사람들은 퐁이 수영하러 바다에 간다고 생각하지만, 사실 그는 그림을 그리러 와요.",
+   "blank": "kỳ thực",
+   "src": "made"
+  },
+  {
+   "text": "Ai cũng nghĩ Ngọc thích làm việc một mình, kỳ thực cô rất thích thảo luận nhóm.",
+   "en": "Everyone thinks Ngọc likes working alone, but in fact she loves group discussions.",
+   "ko": "다들 응옥이 혼자 일하는 걸 좋아한다고 생각하지만 사실 그녀는 팀 토론을 아주 좋아해요.",
+   "blank": "kỳ thực",
+   "src": "made"
+  }
+ ],
  "w|ký ức": [
   {
    "text": "Tôi không có ký ức nào về chuyện đã xảy ra.",
@@ -26163,6 +26515,22 @@
    "en": "I'm trying this dish for the first time today.",
    "ko": "오늘 이 음식을 처음 먹어 봐.",
    "blank": "lần đầu"
+  }
+ ],
+ "w|lăn lộn": [
+  {
+   "text": "Con chó nhà Phong lăn lộn trên cát rồi chạy ào xuống biển.",
+   "en": "Phong's dog rolls around in the sand and then dashes into the sea.",
+   "ko": "퐁의 집 개가 모래 위에서 뒹굴다가 바다로 달려가요.",
+   "blank": "lăn lộn",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc từng lăn lộn ở rừng ngập mặn suốt hai mùa mưa để thu mẫu.",
+   "en": "Ngọc spent two rainy seasons toiling in the mangrove forest to collect samples.",
+   "ko": "응옥은 시료를 모으려고 두 번의 우기 내내 맹그로브 숲을 누볐어요.",
+   "blank": "lăn lộn",
+   "src": "made"
   }
  ],
  "w|lẫn nhau": [
@@ -28675,6 +29043,22 @@
    "en": "Enter the code in the blank box then press confirm.",
    "ko": "빈칸에 코드를 입력하고 확인을 눌러.",
    "blank": "mã"
+  }
+ ],
+ "w|mà còn": [
+  {
+   "text": "Biển ở làng Phong không những trong mà còn rất êm.",
+   "en": "The sea at Phong's village is not only clear but also very calm.",
+   "ko": "퐁의 마을 바다는 맑을 뿐 아니라 아주 잔잔해요.",
+   "blank": "mà còn",
+   "src": "made"
+  },
+  {
+   "text": "Kết quả của Ngọc không những đúng giả thuyết mà còn mở ra một hướng nghiên cứu mới.",
+   "en": "Ngọc's results not only confirm the hypothesis but also open a new line of research.",
+   "ko": "응옥의 결과는 가설에 맞을 뿐 아니라 새로운 연구 방향도 열어 줘요.",
+   "blank": "mà còn",
+   "src": "made"
   }
  ],
  "w|ma quỷ": [
@@ -31883,6 +32267,22 @@
    "src": "made"
   }
  ],
+ "w|nặng nhọc": [
+  {
+   "text": "Kéo lưới cả buổi là việc nặng nhọc, nhưng Phong vẫn muốn làm cùng các chú.",
+   "en": "Hauling nets all morning is heavy work, but Phong still wants to do it with the men.",
+   "ko": "한나절 그물을 끄는 건 힘든 일이지만 퐁은 여전히 아저씨들과 같이 하고 싶어 해요.",
+   "blank": "nặng nhọc",
+   "src": "made"
+  },
+  {
+   "text": "Rửa cả trăm ống nghiệm mỗi ngày là việc nặng nhọc mà Ngọc chưa bao giờ than.",
+   "en": "Washing a hundred test tubes a day is tough work, but Ngọc has never complained.",
+   "ko": "매일 시험관 백 개를 씻는 건 힘든 일이지만 응옥은 한 번도 불평한 적이 없어요.",
+   "blank": "nặng nhọc",
+   "src": "made"
+  }
+ ],
  "w|nắng nóng": [
   {
    "text": "Đợt nắng nóng kéo dài khiến suối gần trại gần như cạn.",
@@ -33382,6 +33782,22 @@
    "en": "An old woman sells pearl bracelets in a corner of the market.",
    "ko": "한 할머니가 시장 구석에서 진주 팔찌를 팔아요.",
    "blank": "ngọc",
+   "src": "made"
+  }
+ ],
+ "w|ngọc trai": [
+  {
+   "text": "Ở làng chài này, Phong được xem người ta nuôi ngọc trai trong những chiếc lồng thả dưới biển.",
+   "en": "In this fishing village, Phong gets to see people cultivating pearls in cages lowered into the sea.",
+   "ko": "이 어촌에서 퐁은 사람들이 바다에 내린 통 속에서 진주를 키우는 걸 구경해요.",
+   "blank": "ngọc trai",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc đọc tài liệu về cách hạt cát lọt vào vỏ và dần thành ngọc trai.",
+   "en": "Ngọc reads about how a grain of sand gets into a shell and slowly becomes a pearl.",
+   "ko": "응옥은 모래알이 껍데기 속에 들어가 서서히 진주가 되는 과정에 관한 자료를 읽어요.",
+   "blank": "ngọc trai",
    "src": "made"
   }
  ],
@@ -35293,6 +35709,22 @@
    "src": "made"
   }
  ],
+ "w|nhảy xuống": [
+  {
+   "text": "Từ mỏm đá thấp, Phong hít một hơi rồi nhảy xuống làn nước xanh.",
+   "en": "From a low rock, Phong takes a breath and jumps down into the blue water.",
+   "ko": "낮은 바위 끝에서 퐁은 숨을 들이쉬고 파란 물속으로 뛰어내려요.",
+   "blank": "nhảy xuống",
+   "src": "made"
+  },
+  {
+   "text": "Con chuột thí nghiệm nhảy xuống khỏi bàn cân làm Ngọc phải đo lại.",
+   "en": "The lab mouse jumped down off the scale, so Ngọc had to measure again.",
+   "ko": "실험용 쥐가 저울에서 뛰어내려서 응옥은 다시 재야 했어요.",
+   "blank": "nhảy xuống",
+   "src": "made"
+  }
+ ],
  "w|nhé": [
   {
    "text": "Tối nay gọi tớ nhé.",
@@ -35826,6 +36258,22 @@
    "en": "Losing like that is really humiliating.",
    "ko": "그렇게 지다니 정말 창피해요.",
    "blank": "nhục",
+   "src": "made"
+  }
+ ],
+ "w|nhún": [
+  {
+   "text": "Đứng trên tấm ván, Phong khẽ nhún chân để giữ thăng bằng trước con sóng.",
+   "en": "Standing on the board, Phong bends his knees slightly to keep his balance before the wave.",
+   "ko": "보드 위에 선 퐁은 파도 앞에서 균형을 잡으려고 무릎을 살짝 굽혀요.",
+   "blank": "nhún",
+   "src": "made"
+  },
+  {
+   "text": "Con ếch trong bể của Ngọc nhún người một cái rồi bật lên mép kính.",
+   "en": "The frog in Ngọc's tank crouches once and then springs up onto the glass edge.",
+   "ko": "응옥의 수조 속 개구리가 몸을 한 번 움츠리더니 유리 가장자리로 튀어 올라요.",
+   "blank": "nhún",
    "src": "made"
   }
  ],
@@ -37273,6 +37721,22 @@
    "src": "made"
   }
  ],
+ "w|ốc": [
+  {
+   "text": "Mấy đứa nhỏ cùng Phong nhặt ốc trong các hốc đá lúc chiều tà.",
+   "en": "The little kids gather snails with Phong in the rock crevices at dusk.",
+   "ko": "해 질 녘, 꼬마들이 퐁과 함께 바위틈에서 고둥을 주워요.",
+   "blank": "ốc",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc ghi chép tốc độ bò của một con ốc trên tấm kính.",
+   "en": "Ngọc records how fast a snail crawls across a glass plate.",
+   "ko": "응옥은 유리판 위를 기어가는 달팽이의 속도를 기록해요.",
+   "blank": "ốc",
+   "src": "made"
+  }
+ ],
  "w|ốc sên": [
   {
    "text": "Sau cơn mưa, Quang thấy mấy con ốc sên bò chậm rãi trên tảng đá.",
@@ -38215,6 +38679,22 @@
    "en": "The pilot announced that we'll land soon.",
    "ko": "조종사가 곧 착륙한다고 안내했어.",
    "blank": "Phi công"
+  }
+ ],
+ "w|phì nhiêu": [
+  {
+   "text": "Ông nội kể với Phong rằng đất bãi bồi ven cửa sông rất phì nhiêu, trồng gì cũng tốt.",
+   "en": "Grandpa tells Phong the alluvial land by the river mouth is very fertile; anything grows well there.",
+   "ko": "할아버지는 퐁에게 강어귀 충적지는 아주 비옥해서 뭘 심어도 잘 자란다고 말해요.",
+   "blank": "phì nhiêu",
+   "src": "made"
+  },
+  {
+   "text": "Mẫu đất Ngọc lấy từ đồng bằng phì nhiêu chứa rất nhiều chất hữu cơ.",
+   "en": "The soil sample Ngọc took from the fertile delta is rich in organic matter.",
+   "ko": "응옥이 비옥한 삼각주에서 떠 온 흙 시료에는 유기물이 아주 많아요.",
+   "blank": "phì nhiêu",
+   "src": "made"
   }
  ],
  "w|phía": [
@@ -40767,6 +41247,22 @@
    "blank": "Rõ ràng"
   }
  ],
+ "w|rõ ràng là": [
+  {
+   "text": "Trời kéo mây đen thế kia, rõ ràng là sắp có bão, Phong vội gọi các thuyền về.",
+   "en": "With black clouds rolling in like that, a storm is clearly coming, so Phong hurries to call the boats back.",
+   "ko": "저렇게 먹구름이 몰려오니 분명히 곧 폭풍이 올 거라, 퐁은 서둘러 배들을 불러들여요.",
+   "blank": "rõ ràng là",
+   "src": "made"
+  },
+  {
+   "text": "Mẫu này đổi màu sau mười phút, rõ ràng là đã có phản ứng, Ngọc reo lên.",
+   "en": "This sample changed color after ten minutes, so clearly there's been a reaction, Ngọc exclaims.",
+   "ko": "이 시료가 십 분 뒤에 색이 변했으니 분명히 반응이 일어난 거라며 응옥이 외쳐요.",
+   "blank": "rõ ràng là",
+   "src": "made"
+  }
+ ],
  "w|rối": [
   {
    "text": "Tóc rối hết sau khi ra ngoài gió.",
@@ -41387,6 +41883,22 @@
    "en": "This phone number is wrong.",
    "ko": "이 전화번호가 틀려.",
    "blank": "sai"
+  }
+ ],
+ "w|sai lầm": [
+  {
+   "text": "Bơi ra xa lúc thủy triều lên là một lựa chọn sai lầm, Phong đã học được bài học đó.",
+   "en": "Swimming far out when the tide is rising is a wrong choice; Phong has learned that lesson.",
+   "ko": "밀물 때 멀리 헤엄쳐 나가는 건 잘못된 선택이라는 걸 퐁은 깨달았어요.",
+   "blank": "sai lầm",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc phát hiện một phép tính sai lầm trong bảng số liệu của tuần trước.",
+   "en": "Ngọc finds a mistaken calculation in last week's data table.",
+   "ko": "응옥은 지난주 자료표에서 잘못된 계산 하나를 찾아내요.",
+   "blank": "sai lầm",
+   "src": "made"
   }
  ],
  "w|sấm": [
@@ -42031,6 +42543,22 @@
    "src": "made"
   }
  ],
+ "w|sếu": [
+  {
+   "text": "Thầy giáo kể cho Phong rằng đàn sếu đầu đỏ từng về vùng đầm lầy này mỗi mùa khô.",
+   "en": "The teacher tells Phong that red-headed cranes used to come to this marsh every dry season.",
+   "ko": "선생님은 퐁에게 붉은머리 두루미 떼가 건기마다 이 습지에 찾아왔었다고 이야기해요.",
+   "blank": "sếu",
+   "src": "made"
+  },
+  {
+   "text": "Dự án của Ngọc nhằm đưa đàn sếu trở lại vùng đất ngập nước.",
+   "en": "Ngọc's project aims to bring the cranes back to the wetlands.",
+   "ko": "응옥의 프로젝트는 두루미 떼를 습지로 다시 불러오는 게 목표예요.",
+   "blank": "sếu",
+   "src": "made"
+  }
+ ],
  "w|siêng năng": [
   {
    "text": "Cả đội đều khen anh Hùng siêng năng, sáng nào cũng đến sớm nhất.",
@@ -42225,6 +42753,22 @@
    "en": "I'm a first-year student.",
    "ko": "나는 1학년 대학생이야.",
    "blank": "sinh viên"
+  }
+ ],
+ "w|sò": [
+  {
+   "text": "Tối nay mẹ Phong nướng sò với mỡ hành cho cả nhà.",
+   "en": "Tonight Phong's mom is grilling clams with scallion oil for the family.",
+   "ko": "오늘 저녁 퐁의 엄마는 가족을 위해 파기름을 올린 조개구이를 해요.",
+   "blank": "sò",
+   "src": "made"
+  },
+  {
+   "text": "Dưới kính hiển vi, Ngọc soi lớp vỏ sò thấy những đường vân rất mảnh.",
+   "en": "Under the microscope, Ngọc examines the clam shell and sees very fine ridges.",
+   "ko": "현미경 아래서 응옥은 조개껍데기를 들여다보며 아주 가는 결무늬를 봐요.",
+   "blank": "sò",
+   "src": "made"
   }
  ],
  "w|số": [
@@ -45951,6 +46495,22 @@
    "blank": "Thiên đường"
   }
  ],
+ "w|thiên nga": [
+  {
+   "text": "Phong ngạc nhiên khi thấy đôi thiên nga bơi trong đầm nước lợ.",
+   "en": "Phong is surprised to see a pair of swans swimming in the brackish lagoon.",
+   "ko": "퐁은 기수 늪에서 백조 한 쌍이 헤엄치는 걸 보고 놀라요.",
+   "blank": "thiên nga",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc ghi lại cách đôi thiên nga thay nhau ấp trứng trong khu bảo tồn.",
+   "en": "Ngọc records how a pair of swans take turns sitting on their eggs in the reserve.",
+   "ko": "응옥은 보호구역에서 백조 한 쌍이 번갈아 알을 품는 모습을 기록해요.",
+   "blank": "thiên nga",
+   "src": "made"
+  }
+ ],
  "w|thiên nhiên": [
   {
    "text": "Thiên nhiên quanh hồ rất yên bình.",
@@ -47375,6 +47935,22 @@
    "src": "made"
   }
  ],
+ "w|thực chất": [
+  {
+   "text": "Cái gọi là bãi tắm riêng, thực chất chỉ là một góc biển được Phong và bạn bè dọn sạch rác.",
+   "en": "The so-called private beach is really just a corner of the shore that Phong and his friends cleaned up.",
+   "ko": "이른바 전용 해수욕장이라는 건 실은 퐁과 친구들이 쓰레기를 치운 바닷가 한 귀퉁이일 뿐이에요.",
+   "blank": "thực chất",
+   "src": "made"
+  },
+  {
+   "text": "Thứ chất lỏng màu xanh ấy thực chất chỉ là nước muối pha phẩm màu, Ngọc giải thích.",
+   "en": "That green liquid is really just salt water with food coloring, Ngọc explains.",
+   "ko": "그 초록색 액체는 실은 색소를 탄 소금물일 뿐이라고 응옥이 설명해요.",
+   "blank": "thực chất",
+   "src": "made"
+  }
+ ],
  "w|thức dậy": [
   {
    "text": "Cứ sáu giờ sáng là mình thức dậy.",
@@ -47866,6 +48442,22 @@
    "en": "A ray of sunlight through the arena window dazzled Hương.",
    "ko": "체육관 유리창으로 들어온 햇살 한 줄기에 흐엉은 눈이 부셨어요.",
    "blank": "tia",
+   "src": "made"
+  }
+ ],
+ "w|tỉa": [
+  {
+   "text": "Chú Ba nhờ Phong tỉa bớt mấy cành phi lao che lối ra bãi.",
+   "en": "Uncle Ba asks Phong to trim a few casuarina branches blocking the path to the beach.",
+   "ko": "바 아저씨는 퐁에게 해변 가는 길을 막는 필라오 가지를 몇 개 쳐 달라고 해요.",
+   "blank": "tỉa",
+   "src": "made"
+  },
+  {
+   "text": "Mỗi sáng Ngọc tỉa bớt lá úa của mấy chậu cây thí nghiệm.",
+   "en": "Every morning Ngọc trims the wilted leaves off the experimental potted plants.",
+   "ko": "매일 아침 응옥은 실험용 화분의 시든 잎을 따 내요.",
+   "blank": "tỉa",
    "src": "made"
   }
  ],
@@ -49757,6 +50349,22 @@
    "blank": "Trách nhiệm"
   }
  ],
+ "w|trai": [
+  {
+   "text": "Phong cạy một con trai bám trên cọc gỗ để xem bên trong có gì.",
+   "en": "Phong pries open a mussel clinging to a wooden post to see what's inside.",
+   "ko": "퐁은 나무 말뚝에 붙은 민물조개 하나를 열어 안에 뭐가 있는지 봐요.",
+   "blank": "trai",
+   "src": "made"
+  },
+  {
+   "text": "Giáo sư cho Ngọc xem cách một con trai lọc sạch nước đục chỉ sau vài giờ.",
+   "en": "The professor shows Ngọc how a mussel filters murky water clean in just a few hours.",
+   "ko": "교수님은 응옥에게 민물조개가 몇 시간 만에 흐린 물을 맑게 거르는 걸 보여 줘요.",
+   "blank": "trai",
+   "src": "made"
+  }
+ ],
  "w|trái": [
   {
    "text": "Rẽ trái ở góc đường kia.",
@@ -50215,6 +50823,22 @@
    "en": "Look up on the shelf.",
    "ko": "선반 위를 봐.",
    "blank": "trên"
+  }
+ ],
+ "w|trên thực tế": [
+  {
+   "text": "Bãi biển trông vắng, nhưng trên thực tế cuối tuần nào nhà nghỉ cạnh nhà Phong cũng kín phòng.",
+   "en": "The beach looks empty, but in reality the guesthouse next to Phong's is full every weekend.",
+   "ko": "해변은 한산해 보이지만, 실제로는 퐁의 집 옆 민박이 주말마다 꽉 차요.",
+   "blank": "trên thực tế",
+   "src": "made"
+  },
+  {
+   "text": "Máy đo của Ngọc trên thực tế chỉ chính xác khi phòng được giữ mát.",
+   "en": "In practice, Ngọc's meter is only accurate when the room is kept cool.",
+   "ko": "실제로 응옥의 측정기는 방이 서늘하게 유지될 때만 정확해요.",
+   "blank": "trên thực tế",
+   "src": "made"
   }
  ],
  "w|treo": [
@@ -53704,6 +54328,22 @@
    "en": "I lost my ticket.",
    "ko": "차표를 잃어버렸어요.",
    "blank": "vé xe",
+   "src": "made"
+  }
+ ],
+ "w|vẹt": [
+  {
+   "text": "Quán nước đầu làng nuôi một con vẹt biết chào Phong mỗi khi cậu ghé qua.",
+   "en": "The drink stall at the village entrance keeps a parrot that greets Phong whenever he stops by.",
+   "ko": "마을 어귀 찻집에는 퐁이 들를 때마다 인사하는 앵무새가 있어요.",
+   "blank": "vẹt",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc đang nghiên cứu xem con vẹt có thật sự hiểu những từ nó nói không.",
+   "en": "Ngọc is studying whether a parrot actually understands the words it says.",
+   "ko": "응옥은 앵무새가 자기가 하는 말을 정말 이해하는지 연구하고 있어요.",
+   "blank": "vẹt",
    "src": "made"
   }
  ],
