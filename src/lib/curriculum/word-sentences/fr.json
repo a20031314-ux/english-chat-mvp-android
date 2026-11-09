@@ -1653,6 +1653,22 @@
    "blank": "Alors"
   }
  ],
+ "w|alternative": [
+  {
+   "text": "Si la salle des fêtes est prise, Julien propose une alternative au gymnase.",
+   "en": "If the village hall is taken, Julien offers an alternative at the gym.",
+   "ko": "마을 회관이 차 있으면 쥘리앵은 체육관이라는 대안을 내놓아요.",
+   "blank": "alternative",
+   "src": "made"
+  },
+  {
+   "text": "Quand il pleut, Manon cherche une alternative à la plage.",
+   "en": "When it rains, Manon looks for an alternative to the beach.",
+   "ko": "비가 오면 마농은 해변 대신 할 거리를 찾아요.",
+   "blank": "alternative",
+   "src": "made"
+  }
+ ],
  "w|amant": [
   {
    "text": "Il a avoué qu'il était son amant.",
@@ -2649,6 +2665,22 @@
    "en": "I like to sit under a tree.",
    "ko": "나는 나무 아래 앉는 걸 좋아해.",
    "blank": "arbre"
+  }
+ ],
+ "w|arc": [
+  {
+   "text": "Julien organise un concours de tir à l'arc pour la fête du village.",
+   "en": "Julien is organising an archery contest for the village fête.",
+   "ko": "쥘리앵은 마을 축제를 위해 활쏘기 대회를 열어요.",
+   "blank": "arc",
+   "src": "made"
+  },
+  {
+   "text": "La baie forme un arc parfait, et Manon la prend en photo depuis la falaise.",
+   "en": "The bay forms a perfect arc, and Manon photographs it from the cliff.",
+   "ko": "만이 완벽한 활 모양이라 마농은 절벽 위에서 사진을 찍어요.",
+   "blank": "arc",
+   "src": "made"
   }
  ],
  "w|archive": [
@@ -6155,6 +6187,22 @@
    "blank": "brûler"
   }
  ],
+ "w|brutal": [
+  {
+   "text": "Julien n'aime pas le ton brutal de certains courriers officiels.",
+   "en": "Julien doesn't like the blunt tone of some official letters.",
+   "ko": "쥘리앵은 일부 공문의 딱딱하고 거친 말투가 싫어요.",
+   "blank": "brutal",
+   "src": "made"
+  },
+  {
+   "text": "Un changement brutal de météo oblige Manon à quitter la plage.",
+   "en": "A sudden change in the weather forces Manon to leave the beach.",
+   "ko": "날씨가 갑자기 바뀌어서 마농은 해변을 떠나야 해요.",
+   "blank": "brutal",
+   "src": "made"
+  }
+ ],
  "w|brute": [
   {
    "text": "Julien trouve que le nouveau collègue a l'air d'une brute, mais il est très doux.",
@@ -6485,6 +6533,22 @@
    "en": "I checked the calculation three times.",
    "ko": "나는 계산을 세 번 확인했어.",
    "blank": "calcul"
+  }
+ ],
+ "w|calibre": [
+  {
+   "text": "Un projet de ce calibre demande au moins deux ans, explique Julien.",
+   "en": "A project of this scale needs at least two years, Julien explains.",
+   "ko": "이 정도 규모의 사업은 적어도 이 년은 걸린다고 쥘리앵이 설명해요.",
+   "blank": "calibre",
+   "src": "made"
+  },
+  {
+   "text": "Le surfeur ami de Manon est un athlète d'un autre calibre.",
+   "en": "Manon's surfer friend is an athlete of a different calibre.",
+   "ko": "마농의 서퍼 친구는 수준이 다른 선수예요.",
+   "blank": "calibre",
+   "src": "made"
   }
  ],
  "w|câlin": [
@@ -7121,6 +7185,22 @@
    "en": "It's a real disaster, everything is lost.",
    "ko": "진짜 재난이야, 모든 게 망했어.",
    "blank": "catastrophe"
+  }
+ ],
+ "w|catégorie": [
+  {
+   "text": "Julien classe les demandes de subvention par catégorie.",
+   "en": "Julien sorts the grant applications by category.",
+   "ko": "쥘리앵은 보조금 신청서를 종류별로 분류해요.",
+   "blank": "catégorie",
+   "src": "made"
+  },
+  {
+   "text": "Manon participe à la course dans la catégorie des moins de trente ans.",
+   "en": "Manon takes part in the race in the under-thirties category.",
+   "ko": "마농은 서른 살 미만 부문 경주에 참가해요.",
+   "blank": "catégorie",
+   "src": "made"
   }
  ],
  "w|catholique": [
@@ -9139,6 +9219,22 @@
    "blank": "clan"
   }
  ],
+ "w|clandestin": [
+  {
+   "text": "La police a fermé un bar clandestin, et Julien doit répondre aux voisins.",
+   "en": "The police shut down an illegal bar, and Julien has to answer the neighbours.",
+   "ko": "경찰이 무허가 술집을 닫아서 쥘리앵이 이웃들 문의에 답해야 해요.",
+   "blank": "clandestin",
+   "src": "made"
+  },
+  {
+   "text": "Les douaniers ont arrêté un pêcheur clandestin dans la baie, raconte Manon.",
+   "en": "Customs officers arrested an unlicensed fisherman in the bay, Manon says.",
+   "ko": "세관원들이 만에서 무허가 어부를 붙잡았다고 마농이 말해요.",
+   "blank": "clandestin",
+   "src": "made"
+  }
+ ],
  "w|claque": [
   {
    "text": "Pour Hugo, le nouveau présentateur de la météo a vraiment une tête à claques.",
@@ -10459,6 +10555,22 @@
    "blank": "concours"
   }
  ],
+ "w|condamnation": [
+  {
+   "text": "Julien lit dans le journal la condamnation de l'ancien trésorier pour détournement.",
+   "en": "Julien reads in the paper about the former treasurer's conviction for embezzlement.",
+   "ko": "쥘리앵은 신문에서 전 회계 담당자가 횡령으로 유죄 판결을 받았다는 기사를 읽어요.",
+   "blank": "condamnation",
+   "src": "made"
+  },
+  {
+   "text": "La radio annonce la condamnation de l'armateur pour pollution, et Manon applaudit.",
+   "en": "The radio announces the shipowner's conviction for pollution, and Manon applauds.",
+   "ko": "라디오에서 선주가 오염으로 유죄 판결을 받았다고 하자 마농은 박수를 쳐요.",
+   "blank": "condamnation",
+   "src": "made"
+  }
+ ],
  "w|condamné": [
   {
    "text": "Il a été condamné à une peine de prison.",
@@ -11361,6 +11473,22 @@
    "blank": "corde"
   }
  ],
+ "w|coréen": [
+  {
+   "text": "Julien reçoit une délégation d'une ville jumelle coréenne.",
+   "en": "Julien welcomes a delegation from a twinned Korean town.",
+   "ko": "쥘리앵은 자매결연을 맺은 한국 도시의 대표단을 맞아요.",
+   "blank": "coréenne",
+   "src": "made"
+  },
+  {
+   "text": "Une famille coréenne demande à Manon de les prendre en photo devant le phare.",
+   "en": "A Korean family asks Manon to take their photo in front of the lighthouse.",
+   "ko": "한국인 가족이 등대 앞에서 사진을 찍어 달라고 마농에게 부탁해요.",
+   "blank": "coréenne",
+   "src": "made"
+  }
+ ],
  "w|corps": [
   {
    "text": "Le corps humain est complexe.",
@@ -11431,6 +11559,22 @@
    "en": "You have to match the expectations well.",
    "ko": "기대에 잘 부합해야 해요.",
    "blank": "correspondre"
+  }
+ ],
+ "w|corruption": [
+  {
+   "text": "Julien suit une formation sur la lutte contre la corruption.",
+   "en": "Julien is taking a training course on fighting corruption.",
+   "ko": "쥘리앵은 부패 방지 교육을 받고 있어요.",
+   "blank": "corruption",
+   "src": "made"
+  },
+  {
+   "text": "Manon lit un article sur la corruption dans les marchés publics du littoral.",
+   "en": "Manon reads an article on corruption in public contracts along the coast.",
+   "ko": "마농은 해안 지역 공공 계약 비리에 관한 기사를 읽어요.",
+   "blank": "corruption",
+   "src": "made"
   }
  ],
  "w|costume": [
@@ -12233,6 +12377,22 @@
    "en": "He wears a cross around his neck.",
    "ko": "그는 목에 croix 를 걸고 있어.",
    "blank": "croix"
+  }
+ ],
+ "w|croyant": [
+  {
+   "text": "Julien reçoit un groupe de croyants qui veulent restaurer la vieille chapelle.",
+   "en": "Julien meets a group of believers who want to restore the old chapel.",
+   "ko": "쥘리앵은 오래된 예배당을 복원하고 싶어 하는 신자들을 만나요.",
+   "blank": "croyants",
+   "src": "made"
+  },
+  {
+   "text": "Dans la petite chapelle du port, Manon croise quelques croyants venus prier pour les marins.",
+   "en": "In the little harbour chapel, Manon passes a few believers who have come to pray for the sailors.",
+   "ko": "항구의 작은 예배당에서 마농은 선원들을 위해 기도하러 온 신자 몇 명을 마주쳐요.",
+   "blank": "croyants",
+   "src": "made"
   }
  ],
  "w|cruel": [
@@ -13199,6 +13359,22 @@
    "en": "Every degree counts in this recipe.",
    "ko": "이 레시피에서는 온도 하나하나가 중요해.",
    "blank": "degré"
+  }
+ ],
+ "w|déguisé": [
+  {
+   "text": "Au carnaval, Julien accueille les enfants déguisés sur le parvis de la mairie.",
+   "en": "At the carnival, Julien welcomes the children in costume outside the town hall.",
+   "ko": "카니발 때 쥘리앵은 시청 앞마당에서 분장한 아이들을 맞이해요.",
+   "blank": "déguisés",
+   "src": "made"
+  },
+  {
+   "text": "Pour la fête de la plage, Manon est déguisée en sirène.",
+   "en": "For the beach party, Manon is dressed up as a mermaid.",
+   "ko": "해변 축제에서 마농은 인어로 분장했어요.",
+   "blank": "déguisée",
+   "src": "made"
   }
  ],
  "w|dehors": [
@@ -15069,6 +15245,22 @@
    "src": "made"
   }
  ],
+ "w|distribuer": [
+  {
+   "text": "Avant le vote, Julien aide à distribuer les bulletins dans les bureaux.",
+   "en": "Before the vote, Julien helps hand out the ballot papers at the polling stations.",
+   "ko": "투표 전에 쥘리앵은 투표소마다 투표용지 나눠 주는 일을 도와요.",
+   "blank": "distribuer",
+   "src": "made"
+  },
+  {
+   "text": "Manon aide le moniteur à distribuer les gilets de sauvetage.",
+   "en": "Manon helps the instructor hand out the life jackets.",
+   "ko": "마농은 강사가 구명조끼 나눠 주는 걸 도와요.",
+   "blank": "distribuer",
+   "src": "made"
+  }
+ ],
  "w|district": [
   {
    "text": "Hugo enquête sur la fermeture d'une école dans le district nord.",
@@ -16421,6 +16613,22 @@
    "blank": "également"
   }
  ],
+ "w|égard": [
+  {
+   "text": "Julien a beaucoup de respect à l'égard des bénévoles de la commune.",
+   "en": "Julien has a great deal of respect for the town's volunteers.",
+   "ko": "쥘리앵은 마을 자원봉사자들을 무척 존중해요.",
+   "blank": "égard",
+   "src": "made"
+  },
+  {
+   "text": "À cet égard, Manon est d'accord avec le maître-nageur : la mer est dangereuse aujourd'hui.",
+   "en": "In that respect, Manon agrees with the lifeguard: the sea is dangerous today.",
+   "ko": "그 점에서 마농은 안전요원 말에 동의해요. 오늘 바다는 위험해요.",
+   "blank": "égard",
+   "src": "made"
+  }
+ ],
  "w|église": [
   {
    "text": "Nous nous sommes rencontrés à l’église.",
@@ -17079,6 +17287,22 @@
    "blank": "encre"
   }
  ],
+ "w|endommagé": [
+  {
+   "text": "Après la tempête, Julien recense les bancs endommagés dans le parc.",
+   "en": "After the storm, Julien counts the damaged benches in the park.",
+   "ko": "폭풍 뒤에 쥘리앵은 공원의 망가진 벤치를 세어요.",
+   "blank": "endommagés",
+   "src": "made"
+  },
+  {
+   "text": "Le vent a arraché le parasol de Manon, qui est maintenant endommagé.",
+   "en": "The wind tore away Manon's beach umbrella, which is now damaged.",
+   "ko": "바람에 마농의 파라솔이 날아가 망가졌어요.",
+   "blank": "endommagé",
+   "src": "made"
+  }
+ ],
  "w|endormi": [
   {
    "text": "Il est resté endormi jusqu'à midi.",
@@ -17491,6 +17715,22 @@
    "en": "We need to investigate that a bit more.",
    "ko": "그걸 좀 더 조사해야 해.",
    "blank": "enquêter"
+  }
+ ],
+ "w|enquêteur": [
+  {
+   "text": "Un enquêteur de la préfecture vient interroger Julien sur les permis de construire.",
+   "en": "An investigator from the prefecture comes to question Julien about building permits.",
+   "ko": "도청 조사관이 건축 허가에 대해 쥘리앵에게 물으러 와요.",
+   "blank": "enquêteur",
+   "src": "made"
+  },
+  {
+   "text": "Dans le polar de Manon, un enquêteur arrive dans un petit port en plein hiver.",
+   "en": "In Manon's crime novel, an investigator arrives in a small port in the middle of winter.",
+   "ko": "마농이 읽는 추리 소설에서 한 수사관이 한겨울 작은 항구에 도착해요.",
+   "blank": "enquêteur",
+   "src": "made"
   }
  ],
  "w|enregistrement": [
@@ -18182,6 +18422,22 @@
    "en": "Camille found out that her street is named after a former slave who became a writer.",
    "ko": "카미유는 자기 거리가 작가가 된 옛 노예의 이름을 땄다는 걸 알게 됐어요.",
    "blank": "esclave",
+   "src": "made"
+  }
+ ],
+ "w|escorte": [
+  {
+   "text": "Le ministre arrive à la mairie avec une escorte de motards, et Julien l'accueille.",
+   "en": "The minister arrives at the town hall with a motorcycle escort, and Julien welcomes him.",
+   "ko": "장관이 오토바이 호위를 받으며 시청에 도착하고 쥘리앵이 맞이해요.",
+   "blank": "escorte",
+   "src": "made"
+  },
+  {
+   "text": "Le bateau de Manon sort du port sous l'escorte des mouettes.",
+   "en": "Manon's boat leaves the harbour escorted by seagulls.",
+   "ko": "마농의 배가 갈매기들의 호위를 받으며 항구를 나서요.",
+   "blank": "escorte",
    "src": "made"
   }
  ],
@@ -19368,6 +19624,22 @@
    "en": "Chloé goes over the notes for her presentation at the Milan seminar.",
    "ko": "클로에는 밀라노 세미나 발표 원고를 다시 읽어요.",
    "blank": "exposé",
+   "src": "made"
+  }
+ ],
+ "w|exposer": [
+  {
+   "text": "La mairie expose les dessins des écoliers dans le hall, et Julien les montre aux visiteurs.",
+   "en": "The town hall is displaying the schoolchildren's drawings in the hall, and Julien shows them to visitors.",
+   "ko": "시청 로비에 아이들 그림이 전시돼 있고 쥘리앵이 방문객들에게 보여 줘요.",
+   "blank": "expose",
+   "src": "made"
+  },
+  {
+   "text": "Manon évite d'exposer sa peau au soleil entre midi et quatre heures.",
+   "en": "Manon avoids exposing her skin to the sun between noon and four.",
+   "ko": "마농은 정오부터 네 시까지는 햇볕에 피부를 드러내지 않아요.",
+   "blank": "exposer",
    "src": "made"
   }
  ],
@@ -21787,6 +22059,22 @@
    "en": "There was a shooting in the neighborhood this morning.",
    "ko": "오늘 아침에 동네에서 총격이 있었어.",
    "blank": "fusillade"
+  }
+ ],
+ "w|fusion": [
+  {
+   "text": "Julien prépare la fusion de deux petites communes voisines.",
+   "en": "Julien is preparing the merger of two small neighbouring towns.",
+   "ko": "쥘리앵은 이웃한 두 작은 마을의 통합을 준비해요.",
+   "blank": "fusion",
+   "src": "made"
+  },
+  {
+   "text": "La musique de ce groupe est une fusion de jazz et de rock, dit Manon.",
+   "en": "This band's music is a fusion of jazz and rock, Manon says.",
+   "ko": "이 밴드 음악은 재즈와 록을 섞은 거라고 마농이 말해요.",
+   "blank": "fusion",
+   "src": "made"
   }
  ],
  "w|futur": [
@@ -24727,6 +25015,22 @@
    "blank": "infection"
   }
  ],
+ "w|inférieur": [
+  {
+   "text": "Cette année, le nombre de mariages à la mairie est inférieur à celui de l'an dernier, note Julien.",
+   "en": "This year, the number of weddings at the town hall is lower than last year, Julien notes.",
+   "ko": "올해 시청 결혼식 수가 작년보다 적다고 쥘리앵이 적어 둬요.",
+   "blank": "inférieur",
+   "src": "made"
+  },
+  {
+   "text": "L'eau est à une température inférieure à vingt degrés, mais Manon plonge quand même.",
+   "en": "The water is below twenty degrees, but Manon dives in anyway.",
+   "ko": "물이 이십 도도 안 되지만 마농은 그래도 뛰어들어요.",
+   "blank": "inférieure",
+   "src": "made"
+  }
+ ],
  "w|infiltrer": [
   {
    "text": "Pendant six mois, Hugo a infiltré un réseau de voleurs de voitures.",
@@ -26331,6 +26635,22 @@
    "en": "You shouldn't swear, it's impolite.",
    "ko": "욕하면 안 돼, 무례해.",
    "blank": "jurer"
+  }
+ ],
+ "w|juridique": [
+  {
+   "text": "Pour cette question juridique, Julien appelle l'avocat de la commune.",
+   "en": "For this legal question, Julien calls the town's lawyer.",
+   "ko": "이 법적인 문제 때문에 쥘리앵은 시 소속 변호사에게 전화해요.",
+   "blank": "juridique",
+   "src": "made"
+  },
+  {
+   "text": "Manon a fait des études juridiques avant d'ouvrir son école de surf.",
+   "en": "Manon studied law before opening her surf school.",
+   "ko": "마농은 서핑 학교를 열기 전에 법학을 공부했어요.",
+   "blank": "juridiques",
+   "src": "made"
   }
  ],
  "w|jury": [
@@ -29671,6 +29991,22 @@
    "blank": "message"
   }
  ],
+ "w|messe": [
+  {
+   "text": "Le dimanche, les cloches de la messe sonnent juste sous la fenêtre de Julien.",
+   "en": "On Sundays, the bells for Mass ring right under Julien's window.",
+   "ko": "일요일이면 미사 종소리가 쥘리앵의 창문 바로 아래서 울려요.",
+   "blank": "messe",
+   "src": "made"
+  },
+  {
+   "text": "Le dimanche, la grand-mère de Manon va à la messe dans l'église du port.",
+   "en": "On Sundays, Manon's grandmother goes to Mass at the harbour church.",
+   "ko": "일요일마다 마농의 할머니는 항구 성당에 미사를 드리러 가요.",
+   "blank": "messe",
+   "src": "made"
+  }
+ ],
  "w|messieurs": [
   {
    "text": "Bonsoir messieurs, comment allez-vous ?",
@@ -30147,6 +30483,22 @@
    "en": "We meet at midnight in front of the station.",
    "ko": "자정에 역 앞에서 만나자.",
    "blank": "minuit"
+  }
+ ],
+ "w|minuscule": [
+  {
+   "text": "Le bureau de Julien est minuscule, mais il a une fenêtre sur la place.",
+   "en": "Julien's office is tiny, but it has a window onto the square.",
+   "ko": "쥘리앵의 사무실은 아주 작지만 광장 쪽으로 창이 있어요.",
+   "blank": "minuscule",
+   "src": "made"
+  },
+  {
+   "text": "Manon observe un crabe minuscule qui court sur le sable.",
+   "en": "Manon watches a tiny crab scuttling across the sand.",
+   "ko": "마농은 모래 위를 달리는 아주 작은 게를 바라봐요.",
+   "blank": "minuscule",
+   "src": "made"
   }
  ],
  "w|minute": [
@@ -31127,6 +31479,22 @@
    "blank": "nager"
   }
  ],
+ "w|naïf": [
+  {
+   "text": "Au début, Julien était un peu naïf sur la vitesse de l'administration.",
+   "en": "At first, Julien was a bit naive about how fast the administration works.",
+   "ko": "처음에 쥘리앵은 행정 속도에 대해 좀 순진했어요.",
+   "blank": "naïf",
+   "src": "made"
+  },
+  {
+   "text": "Manon trouve un peu naïf de laisser son sac seul sur la plage.",
+   "en": "Manon thinks it's a bit naive to leave your bag alone on the beach.",
+   "ko": "마농은 해변에 가방을 혼자 두는 건 좀 순진하다고 생각해요.",
+   "blank": "naïf",
+   "src": "made"
+  }
+ ],
  "w|nain": [
   {
    "text": "Dans la salle des contes, Lucas s'arrête devant la statue d'un nain barbu.",
@@ -31593,6 +31961,22 @@
    "en": "We have a big meal for Christmas.",
    "ko": "우리는 크리스마스에 큰 식사를 해.",
    "blank": "noël"
+  }
+ ],
+ "w|noeud": [
+  {
+   "text": "Avant le mariage, Julien ajuste le noeud de sa cravate devant le miroir.",
+   "en": "Before the wedding, Julien straightens the knot of his tie in front of the mirror.",
+   "ko": "결혼식 전에 쥘리앵은 거울 앞에서 넥타이 매듭을 고쳐요.",
+   "blank": "noeud",
+   "src": "made"
+  },
+  {
+   "text": "Manon fait un noeud solide pour attacher le bateau au ponton.",
+   "en": "Manon ties a strong knot to moor the boat to the pontoon.",
+   "ko": "마농은 배를 부두에 묶으려고 단단한 매듭을 지어요.",
+   "blank": "noeud",
+   "src": "made"
   }
  ],
  "w|noir": [
@@ -34149,6 +34533,22 @@
    "blank": "patienter"
   }
  ],
+ "w|patrie": [
+  {
+   "text": "Le monument aux morts rappelle à Julien ceux qui sont tombés pour la patrie.",
+   "en": "The war memorial reminds Julien of those who died for their country.",
+   "ko": "전쟁 기념비를 보면 쥘리앵은 조국을 위해 쓰러진 이들이 떠올라요.",
+   "blank": "patrie",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux pêcheur dit à Manon que la mer est sa vraie patrie.",
+   "en": "The old fisherman tells Manon that the sea is his true homeland.",
+   "ko": "늙은 어부는 바다가 자기의 진짜 고향이라고 마농에게 말해요.",
+   "blank": "patrie",
+   "src": "made"
+  }
+ ],
  "w|patron": [
   {
    "text": "Mon patron est très exigeant.",
@@ -34473,6 +34873,22 @@
    "en": "He receives a small retirement pension.",
    "ko": "그는 작은 연금을 받아.",
    "blank": "pension"
+  }
+ ],
+ "w|percer": [
+  {
+   "text": "Les ouvriers doivent percer le mur pour passer les câbles, prévient Julien.",
+   "en": "The workers need to drill through the wall to run the cables, Julien warns.",
+   "ko": "인부들이 케이블을 넣으려면 벽을 뚫어야 한다고 쥘리앵이 미리 알려요.",
+   "blank": "percer",
+   "src": "made"
+  },
+  {
+   "text": "Le soleil a fini par percer les nuages, et Manon sort sa serviette.",
+   "en": "The sun finally broke through the clouds, and Manon gets out her towel.",
+   "ko": "해가 마침내 구름을 뚫고 나와서 마농은 수건을 꺼내요.",
+   "blank": "percer",
+   "src": "made"
   }
  ],
  "w|perdant": [
@@ -37103,6 +37519,22 @@
    "blank": "pression"
   }
  ],
+ "w|présumer": [
+  {
+   "text": "Julien présume que la réunion va encore durer deux heures.",
+   "en": "Julien assumes the meeting will go on for another two hours.",
+   "ko": "쥘리앵은 회의가 두 시간은 더 갈 거라고 짐작해요.",
+   "blank": "présume",
+   "src": "made"
+  },
+  {
+   "text": "Manon présume que la marée sera haute vers six heures.",
+   "en": "Manon assumes high tide will be around six.",
+   "ko": "마농은 여섯 시쯤 밀물이 될 거라고 짐작해요.",
+   "blank": "présume",
+   "src": "made"
+  }
+ ],
  "w|prêt": [
   {
    "text": "Je suis prêt à partir maintenant.",
@@ -37913,6 +38345,22 @@
    "en": "This store is having a big sale on shoes.",
    "ko": "이 가게는 신발에 큰 세일을 하고 있어.",
    "blank": "promotion"
+  }
+ ],
+ "w|prophète": [
+  {
+   "text": "Le vieux conseiller se prend pour un prophète et annonce toujours le pire, soupire Julien.",
+   "en": "The old councillor thinks he's a prophet and always predicts the worst, Julien sighs.",
+   "ko": "늙은 의원은 예언자라도 된 듯 늘 최악을 점친다며 쥘리앵이 한숨을 쉬어요.",
+   "blank": "prophète",
+   "src": "made"
+  },
+  {
+   "text": "Le roman que lit Manon sur la plage parle d'un faux prophète dans un village de pêcheurs.",
+   "en": "The novel Manon is reading on the beach is about a false prophet in a fishing village.",
+   "ko": "마농이 해변에서 읽는 소설은 어촌의 가짜 예언자 이야기예요.",
+   "blank": "prophète",
+   "src": "made"
   }
  ],
  "w|propos": [
@@ -39407,6 +39855,22 @@
    "blank": "réaliser"
   }
  ],
+ "w|réaliste": [
+  {
+   "text": "Julien propose un budget plus réaliste pour la fête du village.",
+   "en": "Julien proposes a more realistic budget for the village fête.",
+   "ko": "쥘리앵은 마을 축제에 더 현실적인 예산을 제안해요.",
+   "blank": "réaliste",
+   "src": "made"
+  },
+  {
+   "text": "Manon sait qu'il n'est pas réaliste de nager jusqu'à l'île.",
+   "en": "Manon knows it isn't realistic to swim to the island.",
+   "ko": "마농은 섬까지 헤엄쳐 가는 건 현실적이지 않다는 걸 알아요.",
+   "blank": "réaliste",
+   "src": "made"
+  }
+ ],
  "w|réalité": [
   {
    "text": "La réalité est parfois difficile à accepter.",
@@ -39827,6 +40291,22 @@
    "blank": "réfléchir"
   }
  ],
+ "w|réflexion": [
+  {
+   "text": "Après réflexion, Julien accepte de présider la commission des sports.",
+   "en": "After some thought, Julien agrees to chair the sports committee.",
+   "ko": "쥘리앵은 곰곰이 생각한 끝에 체육 위원회 위원장을 맡기로 해요.",
+   "blank": "réflexion",
+   "src": "made"
+  },
+  {
+   "text": "Allongée sur le sable, Manon se perd dans une longue réflexion sur son avenir.",
+   "en": "Lying on the sand, Manon gets lost in long thoughts about her future.",
+   "ko": "모래 위에 누운 마농은 자기 앞날을 두고 한참 생각에 잠겨요.",
+   "blank": "réflexion",
+   "src": "made"
+  }
+ ],
  "w|refuge": [
   {
    "text": "On a passé la nuit au refuge.",
@@ -39839,6 +40319,22 @@
    "en": "This shelter takes in lost cats.",
    "ko": "이 보호소는 길 잃은 고양이를 받아.",
    "blank": "refuge"
+  }
+ ],
+ "w|réfugié": [
+  {
+   "text": "Julien aide une famille de réfugiés à inscrire les enfants à l'école.",
+   "en": "Julien helps a refugee family enrol the children at school.",
+   "ko": "쥘리앵은 난민 가족이 아이들을 학교에 등록하도록 도와요.",
+   "blank": "réfugiés",
+   "src": "made"
+  },
+  {
+   "text": "Manon donne des cours de natation à de jeunes réfugiés le samedi.",
+   "en": "Manon gives swimming lessons to young refugees on Saturdays.",
+   "ko": "마농은 토요일마다 어린 난민들에게 수영을 가르쳐요.",
+   "blank": "réfugiés",
+   "src": "made"
   }
  ],
  "w|refuser": [
@@ -40329,6 +40825,22 @@
    "blank": "remplir"
   }
  ],
+ "w|remporter": [
+  {
+   "text": "L'équipe de Julien a remporté le tournoi de foot des services municipaux.",
+   "en": "Julien's team won the town council's staff football tournament.",
+   "ko": "쥘리앵의 팀이 시청 부서 대항 축구 대회에서 우승했어요.",
+   "blank": "remporté",
+   "src": "made"
+  },
+  {
+   "text": "Manon a remporté le concours de châteaux de sable.",
+   "en": "Manon won the sandcastle contest.",
+   "ko": "마농은 모래성 대회에서 우승했어요.",
+   "blank": "remporté",
+   "src": "made"
+  }
+ ],
  "w|renaître": [
   {
    "text": "Grâce au nouveau site, le journal de Hugo semble renaître.",
@@ -40431,6 +40943,22 @@
    "en": "Can you do me a favor?",
    "ko": "나에게 부탁 하나 들어줄 수 있어?",
    "blank": "rendre"
+  }
+ ],
+ "w|renforcer": [
+  {
+   "text": "La mairie veut renforcer l'éclairage des rues, et Julien prépare le dossier.",
+   "en": "The town hall wants to improve street lighting, and Julien is preparing the file.",
+   "ko": "시청이 가로등을 늘리려고 해서 쥘리앵이 서류를 준비해요.",
+   "blank": "renforcer",
+   "src": "made"
+  },
+  {
+   "text": "Avant l'hiver, la commune va renforcer la digue près de chez Manon.",
+   "en": "Before winter, the town is going to reinforce the sea wall near Manon's place.",
+   "ko": "겨울 전에 마을이 마농네 근처 방파제를 보강할 거예요.",
+   "blank": "renforcer",
+   "src": "made"
   }
  ],
  "w|renfort": [
@@ -41699,6 +42227,22 @@
    "src": "made"
   }
  ],
+ "w|rime": [
+  {
+   "text": "Julien a écrit un petit poème avec des rimes pour le départ d'une collègue.",
+   "en": "Julien wrote a little rhyming poem for a colleague's farewell.",
+   "ko": "쥘리앵은 동료 송별회에 운율을 맞춘 짧은 시를 썼어요.",
+   "blank": "rimes",
+   "src": "made"
+  },
+  {
+   "text": "La chanson de l'été plaît à Manon même si la rime est facile.",
+   "en": "Manon likes the summer song even if the rhyme is easy.",
+   "ko": "운율이 뻔해도 마농은 그 여름 노래가 좋아요.",
+   "blank": "rime",
+   "src": "made"
+  }
+ ],
  "w|rire": [
   {
    "text": "J'adore rire avec mes amis.",
@@ -42019,6 +42563,22 @@
    "en": "I hate routine, I need some change.",
    "ko": "나는 루틴이 싫어서 변화가 필요해.",
    "blank": "routine"
+  }
+ ],
+ "w|roux": [
+  {
+   "text": "Une petite fille rousse vient demander à Julien où se trouve la bibliothèque.",
+   "en": "A little red-haired girl comes to ask Julien where the library is.",
+   "ko": "빨간 머리 여자아이가 쥘리앵에게 도서관이 어디냐고 물어요.",
+   "blank": "rousse",
+   "src": "made"
+  },
+  {
+   "text": "Avec sa peau de rousse, Manon met de la crème toutes les heures.",
+   "en": "With her redhead's skin, Manon puts on sun cream every hour.",
+   "ko": "빨간 머리라 피부가 약한 마농은 매시간 선크림을 발라요.",
+   "blank": "rousse",
+   "src": "made"
   }
  ],
  "w|royal": [
@@ -47431,6 +47991,22 @@
    "blank": "tête"
   }
  ],
+ "w|têtu": [
+  {
+   "text": "Julien doit convaincre un habitant têtu qui refuse de déplacer sa voiture.",
+   "en": "Julien has to convince a stubborn resident who refuses to move his car.",
+   "ko": "쥘리앵은 차를 옮기지 않겠다고 버티는 고집 센 주민을 설득해야 해요.",
+   "blank": "têtu",
+   "src": "made"
+  },
+  {
+   "text": "Le petit frère de Manon est têtu et refuse de sortir de l'eau.",
+   "en": "Manon's little brother is stubborn and refuses to get out of the water.",
+   "ko": "마농의 남동생은 고집이 세서 물에서 안 나오겠대요.",
+   "blank": "têtu",
+   "src": "made"
+  }
+ ],
  "w|texte": [
   {
    "text": "J'ai lu un texte intéressant ce matin.",
@@ -48111,6 +48687,22 @@
    "en": "Family tradition is very important to us.",
    "ko": "가족 전통은 우리에게 매우 중요해.",
    "blank": "tradition"
+  }
+ ],
+ "w|traditionnel": [
+  {
+   "text": "Julien tient à garder le repas traditionnel des anciens en décembre.",
+   "en": "Julien is keen to keep the traditional December lunch for the elderly.",
+   "ko": "쥘리앵은 십이월 어르신 전통 식사 모임을 꼭 지키고 싶어 해요.",
+   "blank": "traditionnel",
+   "src": "made"
+  },
+  {
+   "text": "Manon mange des sardines grillées dans un restaurant traditionnel du port.",
+   "en": "Manon eats grilled sardines in a traditional harbour restaurant.",
+   "ko": "마농은 항구의 전통 식당에서 구운 정어리를 먹어요.",
+   "blank": "traditionnel",
+   "src": "made"
   }
  ],
  "w|traduction": [
@@ -48939,6 +49531,22 @@
    "blank": "tunnel"
   }
  ],
+ "w|turc": [
+  {
+   "text": "Julien a déjeuné avec ses collègues dans un petit restaurant turc près de la mairie.",
+   "en": "Julien had lunch with his colleagues at a little Turkish restaurant near the town hall.",
+   "ko": "쥘리앵은 동료들과 시청 근처 작은 튀르키예 식당에서 점심을 먹었어요.",
+   "blank": "turc",
+   "src": "made"
+  },
+  {
+   "text": "Manon s'achète une serviette turque à rayures au marché.",
+   "en": "Manon buys herself a striped Turkish towel at the market.",
+   "ko": "마농은 시장에서 줄무늬 튀르키예 수건을 사요.",
+   "blank": "turque",
+   "src": "made"
+  }
+ ],
  "w|tuyau": [
   {
    "text": "Le tuyau d'arrosage est cassé.",
@@ -49421,6 +50029,22 @@
    "en": "The vampire only comes out at night.",
    "ko": "뱀파이어는 밤에만 나와.",
    "blank": "vampire"
+  }
+ ],
+ "w|vanter": [
+  {
+   "text": "Le maire aime vanter le nouveau parc devant les journalistes, sourit Julien.",
+   "en": "The mayor likes to boast about the new park in front of journalists, Julien says with a smile.",
+   "ko": "시장은 기자들 앞에서 새 공원 자랑을 좋아한다며 쥘리앵이 웃어요.",
+   "blank": "vanter",
+   "src": "made"
+  },
+  {
+   "text": "Le vendeur de glaces vante ses parfums à Manon.",
+   "en": "The ice-cream seller boasts about his flavours to Manon.",
+   "ko": "아이스크림 장수가 마농에게 자기 맛 자랑을 해요.",
+   "blank": "vante",
+   "src": "made"
   }
  ],
  "w|vécu": [
@@ -50108,6 +50732,22 @@
    "en": "On the radio, Camille is listening to a report about a rape trial.",
    "ko": "카미유는 라디오에서 성폭행 재판에 관한 보도를 듣고 있어요.",
    "blank": "viol",
+   "src": "made"
+  }
+ ],
+ "w|violation": [
+  {
+   "text": "Julien signale une violation des règles d'urbanisme dans la rue principale.",
+   "en": "Julien reports a breach of the planning rules on the high street.",
+   "ko": "쥘리앵은 중심가에서 도시 계획 규정 위반을 보고해요.",
+   "blank": "violation",
+   "src": "made"
+  },
+  {
+   "text": "Se baigner hors de la zone surveillée est une violation du règlement, rappelle le maître-nageur à Manon.",
+   "en": "Swimming outside the supervised area breaks the rules, the lifeguard reminds Manon.",
+   "ko": "감시 구역 밖에서 수영하면 규칙 위반이라고 안전요원이 마농에게 다시 알려요.",
+   "blank": "violation",
    "src": "made"
   }
  ],
