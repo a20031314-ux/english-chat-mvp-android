@@ -1717,6 +1717,22 @@
    "blank": "世纪"
   }
  ],
+ "w|世间": [
+  {
+   "text": "黄涛常说，世间的事没有那么简单，写新闻要多听几方的说法。",
+   "en": "Huang Tao often says worldly matters are never so simple, so news writing must hear several sides.",
+   "ko": "황타오는 세상일이 그렇게 단순하지 않으니 기사를 쓸 땐 여러 쪽 말을 들어야 한다고 자주 말해요.",
+   "blank": "世间",
+   "src": "made"
+  },
+  {
+   "text": "司仪说，世间最难得的就是两个人互相理解。",
+   "en": "The emcee said the rarest thing in the world is two people understanding each other.",
+   "ko": "사회자는 세상에서 가장 얻기 힘든 게 두 사람이 서로 이해하는 거라고 했어요.",
+   "blank": "世间",
+   "src": "made"
+  }
+ ],
  "w|业务": [
   {
    "text": "周强的公司主要做桥梁业务，也接一些房子的活。",
@@ -1825,6 +1841,22 @@
    "blank": "丢"
   }
  ],
+ "w|丢脸": [
+  {
+   "text": "黄涛把人名写错了，觉得特别丢脸，第二天就登了更正。",
+   "en": "Huang Tao misspelled a name and felt very embarrassed, so he ran a correction the next day.",
+   "ko": "황타오는 이름을 잘못 써서 무척 창피해하며 다음 날 바로 정정 기사를 냈어요.",
+   "blank": "丢脸",
+   "src": "made"
+  },
+  {
+   "text": "杨洋怕在婚礼上忘词丢脸，前一天晚上练了好多遍。",
+   "en": "Afraid of forgetting her lines and losing face at the wedding, Yang Yang practiced many times the night before.",
+   "ko": "양양은 결혼식에서 말을 까먹어 망신당할까 봐 전날 밤 여러 번 연습했어요.",
+   "blank": "丢脸",
+   "src": "made"
+  }
+ ],
  "w|两": [
   {
    "text": "给我两个。",
@@ -1899,6 +1931,22 @@
    "en": "The injury isn't serious.",
    "ko": "다친 건 심하지 않아.",
    "blank": "严重"
+  }
+ ],
+ "w|丧失": [
+  {
+   "text": "黄涛写的报道说，那位老人在事故中丧失了听力。",
+   "en": "Huang Tao's report says the elderly man lost his hearing in the accident.",
+   "ko": "황타오가 쓴 기사에 따르면 그 노인은 사고로 청력을 잃었어요.",
+   "blank": "丧失",
+   "src": "made"
+  },
+  {
+   "text": "新郎在婚礼上说，就算失去一切，他也不会丧失对杨洋的信任。",
+   "en": "At the wedding, the groom said that even if he lost everything, he would never lose his trust in Yang Yang.",
+   "ko": "신랑은 결혼식에서 모든 걸 잃는다 해도 양양에 대한 믿음은 잃지 않겠다고 말했어요.",
+   "blank": "丧失",
+   "src": "made"
   }
  ],
  "w|个": [
@@ -5087,6 +5135,22 @@
    "src": "made"
   }
  ],
+ "w|传闻": [
+  {
+   "text": "主编说，没有核实过的传闻，一个字都不能登。",
+   "en": "The chief editor said not a single word of unverified rumor can be printed.",
+   "ko": "편집장은 확인되지 않은 소문은 한 글자도 실을 수 없다고 했어요.",
+   "blank": "传闻",
+   "src": "made"
+  },
+  {
+   "text": "亲戚之间有个传闻，说杨洋的表哥也快结婚了。",
+   "en": "There's a rumor among relatives that Yang Yang's cousin is getting married soon too.",
+   "ko": "친척들 사이에 양양의 사촌 오빠도 곧 결혼한다는 소문이 돌아요.",
+   "blank": "传闻",
+   "src": "made"
+  }
+ ],
  "w|伤": [
   {
    "text": "他手上有伤。",
@@ -6347,6 +6411,22 @@
    "en": "The car is fixed.",
    "ko": "차가 고쳐졌어.",
    "blank": "修"
+  }
+ ],
+ "w|修复": [
+  {
+   "text": "黄涛采访了一位专门修复旧报纸的老师傅。",
+   "en": "Huang Tao interviewed an old craftsman who restores old newspapers.",
+   "ko": "황타오는 옛 신문을 복원하는 일을 하는 노장인을 인터뷰했어요.",
+   "blank": "修复",
+   "src": "made"
+  },
+  {
+   "text": "婚礼前，杨洋请人修复了妈妈当年的结婚照。",
+   "en": "Before the wedding, Yang Yang had her mother's old wedding photo restored.",
+   "ko": "결혼식 전에 양양은 엄마의 옛날 결혼사진을 복원해 달라고 맡겼어요.",
+   "blank": "修复",
+   "src": "made"
   }
  ],
  "w|修女": [
@@ -7649,6 +7729,22 @@
    "blank": "公园"
   }
  ],
+ "w|公安": [
+  {
+   "text": "公安发布通报以后，黄涛第一时间把消息发到了网上。",
+   "en": "After the police released a notice, Huang Tao posted the news online right away.",
+   "ko": "공안이 공지를 내자 황타오는 곧바로 소식을 인터넷에 올렸어요.",
+   "blank": "公安",
+   "src": "made"
+  },
+  {
+   "text": "新郎的表弟是公安，婚礼那天穿了一身西装，大家差点没认出来。",
+   "en": "The groom's cousin is a police officer; he wore a suit on the wedding day and almost no one recognized him.",
+   "ko": "신랑의 사촌 동생은 공안인데 결혼식 날 양복을 입고 와서 다들 못 알아볼 뻔했어요.",
+   "blank": "公安",
+   "src": "made"
+  }
+ ],
  "w|公寓": [
   {
    "text": "租了公寓。",
@@ -8421,6 +8517,22 @@
    "en": "It's quietest here.",
    "ko": "여기가 제일 조용해.",
    "blank": "最"
+  }
+ ],
+ "w|最低": [
+  {
+   "text": "黄涛的稿子说，本市今年把最低工资提高了一点。",
+   "en": "Huang Tao's article says the city raised the minimum wage slightly this year.",
+   "ko": "황타오의 기사에 따르면 올해 시가 최저 임금을 조금 올렸어요.",
+   "blank": "最低",
+   "src": "made"
+  },
+  {
+   "text": "杨洋比较了几家婚庆公司，选了报价最低的那家。",
+   "en": "Yang Yang compared several wedding companies and chose the one with the lowest quote.",
+   "ko": "양양은 웨딩 업체 몇 곳을 비교해서 견적이 가장 낮은 곳을 골랐어요.",
+   "blank": "最低",
+   "src": "made"
   }
  ],
  "w|最佳": [
@@ -11363,6 +11475,22 @@
    "src": "made"
   }
  ],
+ "w|协定": [
+  {
+   "text": "黄涛负责报道两国新签的贸易协定。",
+   "en": "Huang Tao is covering the trade agreement the two countries just signed.",
+   "ko": "황타오는 두 나라가 새로 맺은 무역 협정을 보도하고 있어요.",
+   "blank": "协定",
+   "src": "made"
+  },
+  {
+   "text": "新郎的父亲在外交部工作，参与过好几个国际协定的谈判。",
+   "en": "The groom's father works at the foreign ministry and took part in negotiating several international agreements.",
+   "ko": "신랑 아버지는 외교부에서 일하며 여러 국제 협정 협상에 참여했어요.",
+   "blank": "协定",
+   "src": "made"
+  }
+ ],
  "w|协议": [
   {
    "text": "双方签了协议。",
@@ -13893,6 +14021,22 @@
    "src": "made"
   }
  ],
+ "w|合并": [
+  {
+   "text": "两家报社合并以后，黄涛换到了新的编辑部。",
+   "en": "After the two newspapers merged, Huang Tao moved to a new editorial department.",
+   "ko": "두 신문사가 합병한 뒤 황타오는 새 편집부로 옮겼어요.",
+   "blank": "合并",
+   "src": "made"
+  },
+  {
+   "text": "为了省时间，杨洋把订婚宴和婚礼合并成一天办。",
+   "en": "To save time, Yang Yang combined the engagement party and wedding into one day.",
+   "ko": "시간을 아끼려고 양양은 약혼식과 결혼식을 하루에 합쳐서 치렀어요.",
+   "blank": "合并",
+   "src": "made"
+  }
+ ],
  "w|合法": [
   {
    "text": "这样做合法吗？",
@@ -14253,6 +14397,22 @@
    "src": "made"
   }
  ],
+ "w|名誉": [
+  {
+   "text": "那位商人说报道损害了他的名誉，要求报社道歉。",
+   "en": "The businessman said the report damaged his reputation and demanded an apology from the paper.",
+   "ko": "그 사업가는 기사가 자기 명예를 훼손했다며 신문사에 사과를 요구했어요.",
+   "blank": "名誉",
+   "src": "made"
+  },
+  {
+   "text": "新郎的爷爷是位很有名誉的老医生，来了不少他的学生。",
+   "en": "The groom's grandfather is a highly respected old doctor, and many of his students came.",
+   "ko": "신랑 할아버지는 명망 높은 노의사라서 그의 제자들이 많이 왔어요.",
+   "blank": "名誉",
+   "src": "made"
+  }
+ ],
  "w|后": [
   {
    "text": "晚饭后见。",
@@ -14518,6 +14678,22 @@
    "en": "The coach instructed Xiaoxue to write down her time after every swim.",
    "ko": "코치는 샤오쉐에게 매일 수영이 끝나면 기록을 적어 두라고 일렀어요.",
    "blank": "吩咐",
+   "src": "made"
+  }
+ ],
+ "w|含义": [
+  {
+   "text": "黄涛在文章里解释了这个新词的含义。",
+   "en": "Huang Tao explained the meaning of this new word in his article.",
+   "ko": "황타오는 기사에서 이 신조어의 뜻을 풀이했어요.",
+   "blank": "含义",
+   "src": "made"
+  },
+  {
+   "text": "奶奶给杨洋讲了红枣和花生在婚礼上的含义。",
+   "en": "Grandma explained to Yang Yang the meaning of red dates and peanuts at weddings.",
+   "ko": "할머니는 양양에게 결혼식에서 대추와 땅콩이 가진 의미를 알려 줬어요.",
+   "blank": "含义",
    "src": "made"
   }
  ],
@@ -15829,6 +16005,22 @@
    "blank": "喔"
   }
  ],
+ "w|喜剧": [
+  {
+   "text": "黄涛给一部新上映的喜剧写了影评。",
+   "en": "Huang Tao wrote a review of a newly released comedy.",
+   "ko": "황타오는 새로 개봉한 코미디 영화의 평을 썼어요.",
+   "blank": "喜剧",
+   "src": "made"
+  },
+  {
+   "text": "伴郎讲的笑话一个接一个，婚礼简直像一场喜剧。",
+   "en": "The best man told joke after joke, and the wedding was practically a comedy.",
+   "ko": "들러리가 농담을 연달아 해서 결혼식이 거의 한 편의 코미디 같았어요.",
+   "blank": "喜剧",
+   "src": "made"
+  }
+ ],
  "w|喜欢": [
   {
    "text": "你喜欢吗？",
@@ -16356,6 +16548,22 @@
    "en": "When Wang Fang chooses a home, whether the neighbors are nice is the factor she cares about most.",
    "ko": "왕팡이 집을 고를 때 가장 중요하게 보는 요인은 이웃이 좋은지예요.",
    "blank": "因素",
+   "src": "made"
+  }
+ ],
+ "w|因而": [
+  {
+   "text": "黄涛的报道证据充分，因而没有人能反驳。",
+   "en": "Huang Tao's report was well supported by evidence, and so no one could refute it.",
+   "ko": "황타오의 기사는 증거가 충분해서 아무도 반박하지 못했어요.",
+   "blank": "因而",
+   "src": "made"
+  },
+  {
+   "text": "那天下了大雨，因而婚礼从草地改到了室内。",
+   "en": "It rained heavily that day, so the wedding was moved from the lawn indoors.",
+   "ko": "그날 비가 많이 와서 결혼식을 잔디밭에서 실내로 옮겼어요.",
+   "blank": "因而",
    "src": "made"
   }
  ],
@@ -17651,6 +17859,22 @@
    "src": "made"
   }
  ],
+ "w|堵": [
+  {
+   "text": "去采访的路上堵了一个小时，黄涛差点迟到。",
+   "en": "Traffic was jammed for an hour on the way to the interview, and Huang Tao was almost late.",
+   "ko": "인터뷰하러 가는 길이 한 시간이나 막혀서 황타오는 하마터면 늦을 뻔했어요.",
+   "blank": "堵",
+   "src": "made"
+  },
+  {
+   "text": "婚车在路上堵了半天，杨洋急得直看手表。",
+   "en": "The wedding car was stuck in traffic for ages, and Yang Yang kept anxiously checking her watch.",
+   "ko": "웨딩카가 길에서 한참 막혀서 양양은 초조하게 자꾸 시계를 봤어요.",
+   "blank": "堵",
+   "src": "made"
+  }
+ ],
  "w|塞": [
   {
    "text": "陈杰把一叠文件塞进公文包，匆匆赶去开会。",
@@ -17879,6 +18103,22 @@
    "en": "It's been taken care of.",
    "ko": "처리 끝났어.",
    "blank": "处理"
+  }
+ ],
+ "w|处置": [
+  {
+   "text": "黄涛写道，那批过期的药品已经被有关部门处置了。",
+   "en": "Huang Tao wrote that the batch of expired medicine had already been disposed of by the authorities.",
+   "ko": "황타오는 그 유통 기한이 지난 약품들을 관계 당국이 이미 처리했다고 썼어요.",
+   "blank": "处置",
+   "src": "made"
+  },
+  {
+   "text": "婚宴剩下的菜太多，杨洋不知道该怎么处置。",
+   "en": "There was so much food left from the banquet that Yang Yang didn't know how to deal with it.",
+   "ko": "피로연 음식이 너무 많이 남아서 양양은 어떻게 처리해야 할지 몰랐어요.",
+   "blank": "处置",
+   "src": "made"
   }
  ],
  "w|复仇": [
@@ -18119,6 +18359,22 @@
    "en": "How lucky you are.",
    "ko": "넌 얼마나 행운인지.",
    "blank": "多么"
+  }
+ ],
+ "w|多亏": [
+  {
+   "text": "多亏同事帮忙查资料，黄涛才赶在截稿前写完。",
+   "en": "Thanks to a colleague's help with research, Huang Tao finished just before the deadline.",
+   "ko": "동료가 자료 찾는 걸 도와준 덕분에 황타오는 마감 직전에 원고를 끝냈어요.",
+   "blank": "多亏",
+   "src": "made"
+  },
+  {
+   "text": "多亏伴郎提前去取了戒指，婚礼才没有耽误。",
+   "en": "Thanks to the best man picking up the rings early, the wedding wasn't delayed.",
+   "ko": "들러리가 미리 반지를 찾아온 덕분에 결혼식이 늦어지지 않았어요.",
+   "blank": "多亏",
+   "src": "made"
   }
  ],
  "w|多少": [
@@ -18538,6 +18794,22 @@
    "en": "Li Na set her eyes on a blue dress the color of the sea.",
    "ko": "리나는 바다처럼 파란 원피스가 마음에 들었어요.",
    "blank": "大海",
+   "src": "made"
+  }
+ ],
+ "w|大炮": [
+  {
+   "text": "黄涛参观了一座古城墙，上面还摆着几门旧大炮。",
+   "en": "Huang Tao visited an old city wall where several old cannons still stand.",
+   "ko": "황타오는 옛 성벽을 둘러봤는데 그 위에 낡은 대포 몇 문이 아직 놓여 있었어요.",
+   "blank": "大炮",
+   "src": "made"
+  },
+  {
+   "text": "婚礼结束时，礼花像大炮一样响，吓了孩子们一跳。",
+   "en": "At the end of the wedding, the fireworks boomed like cannons and startled the kids.",
+   "ko": "결혼식이 끝날 때 폭죽이 대포처럼 터져서 아이들이 깜짝 놀랐어요.",
+   "blank": "大炮",
    "src": "made"
   }
  ],
@@ -21662,6 +21934,22 @@
    "en": "Customers send their phones in for repair, and Wang Fang posts them back once fixed.",
    "ko": "손님들이 휴대폰을 택배로 보내면 왕팡이 고쳐서 다시 부쳐 줘요.",
    "blank": "寄",
+   "src": "made"
+  }
+ ],
+ "w|密切": [
+  {
+   "text": "黄涛和几位老线人一直保持着密切的联系。",
+   "en": "Huang Tao has kept in close contact with several longtime sources.",
+   "ko": "황타오는 오랜 제보자 몇 명과 계속 긴밀하게 연락하고 있어요.",
+   "blank": "密切",
+   "src": "made"
+  },
+  {
+   "text": "杨洋和表妹从小关系密切，这次请她当伴娘。",
+   "en": "Yang Yang and her cousin have been close since childhood, so she asked her to be bridesmaid.",
+   "ko": "양양은 사촌 동생과 어릴 때부터 가까워서 이번에 들러리를 부탁했어요.",
+   "blank": "密切",
    "src": "made"
   }
  ],
@@ -25713,6 +26001,22 @@
    "src": "made"
   }
  ],
+ "w|形态": [
+  {
+   "text": "黄涛说，网络时代，新闻的形态已经变了很多。",
+   "en": "Huang Tao says in the internet age, the form of news has changed a lot.",
+   "ko": "황타오는 인터넷 시대에 뉴스의 형태가 많이 바뀌었다고 해요.",
+   "blank": "形态",
+   "src": "made"
+  },
+  {
+   "text": "婚礼蛋糕做成了一座城堡的形态，客人们都拍照。",
+   "en": "The wedding cake was shaped like a castle, and every guest took photos.",
+   "ko": "웨딩 케이크가 성 모양으로 만들어져서 하객들이 다 사진을 찍었어요.",
+   "blank": "形态",
+   "src": "made"
+  }
+ ],
  "w|形成": [
   {
    "text": "他们形成了良好的合作关系。",
@@ -25820,6 +26124,22 @@
    "en": "A TV station made a documentary film about the team, with Li Na as the lead.",
    "ko": "방송국이 팀을 다룬 다큐멘터리 영화를 찍었는데 리나가 주인공이에요.",
    "blank": "影片",
+   "src": "made"
+  }
+ ],
+ "w|影视": [
+  {
+   "text": "黄涛以前跑体育新闻，现在专门写影视评论。",
+   "en": "Huang Tao used to cover sports and now writes film and TV reviews.",
+   "ko": "황타오는 예전엔 스포츠 기사를 쓰다가 지금은 영화·드라마 평론을 전문으로 써요.",
+   "blank": "影视",
+   "src": "made"
+  },
+  {
+   "text": "新郎在一家影视公司上班，婚礼视频是同事帮忙拍的。",
+   "en": "The groom works at a film and TV company, and his colleagues filmed the wedding video.",
+   "ko": "신랑은 영상 제작사에서 일해서 결혼식 영상은 동료들이 찍어 줬어요.",
+   "blank": "影视",
    "src": "made"
   }
  ],
@@ -26506,6 +26826,22 @@
    "en": "Lin Jing was driving and listening to music when suddenly a little deer ran into the middle of the road.",
    "ko": "린징이 노래를 들으며 운전하고 있는데 갑자기 작은 사슴 한 마리가 길 한가운데로 뛰어들었어요.",
    "blank": "忽然",
+   "src": "made"
+  }
+ ],
+ "w|忽略": [
+  {
+   "text": "主编提醒黄涛，不要忽略读者来信里的小线索。",
+   "en": "The chief editor reminded Huang Tao not to overlook small clues in readers' letters.",
+   "ko": "편집장은 황타오에게 독자 편지 속 작은 단서를 놓치지 말라고 일렀어요.",
+   "blank": "忽略",
+   "src": "made"
+  },
+  {
+   "text": "忙着准备婚礼，杨洋差点忽略了奶奶的生日。",
+   "en": "Busy preparing for the wedding, Yang Yang nearly overlooked her grandma's birthday.",
+   "ko": "결혼 준비에 바빠서 양양은 하마터면 할머니 생신을 잊을 뻔했어요.",
+   "blank": "忽略",
    "src": "made"
   }
  ],
@@ -30025,6 +30361,22 @@
    "src": "made"
   }
  ],
+ "w|招待": [
+  {
+   "text": "报社年底请老读者来吃饭，黄涛负责招待。",
+   "en": "At year's end the paper invited longtime readers to dinner, and Huang Tao played host.",
+   "ko": "연말에 신문사가 오랜 독자들을 식사에 초대해서 황타오가 접대를 맡았어요.",
+   "blank": "招待",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的父母在酒店门口热情招待来宾。",
+   "en": "Yang Yang's parents warmly welcomed guests at the hotel entrance.",
+   "ko": "양양의 부모님은 호텔 입구에서 하객들을 반갑게 맞았어요.",
+   "blank": "招待",
+   "src": "made"
+  }
+ ],
  "w|拜": [
   {
    "text": "过年时，周强带着礼物去给老主编拜年。",
@@ -31051,6 +31403,22 @@
    "blank": "控制"
   }
  ],
+ "w|控告": [
+  {
+   "text": "几十名员工联名控告公司拖欠工资，黄涛跟进了这件事。",
+   "en": "Dozens of employees jointly sued the company over unpaid wages, and Huang Tao followed the story.",
+   "ko": "직원 수십 명이 임금 체불로 회사를 함께 고소해서 황타오가 이 일을 계속 취재했어요.",
+   "blank": "控告",
+   "src": "made"
+  },
+  {
+   "text": "婚礼上，新郎的律师朋友聊起自己最近代理的一个控告案。",
+   "en": "At the wedding, the groom's lawyer friend talked about a lawsuit he's been handling.",
+   "ko": "결혼식에서 신랑의 변호사 친구가 최근 맡은 고소 사건 이야기를 꺼냈어요.",
+   "blank": "控告",
+   "src": "made"
+  }
+ ],
  "w|推": [
   {
    "text": "帮我推一下门。",
@@ -31290,6 +31658,22 @@
    "en": "This dentist was nominated for an award at the national dental medicine conference.",
    "ko": "이 치과 의사는 전국 구강의학 대회 시상 후보로 추천됐어요.",
    "blank": "提名",
+   "src": "made"
+  }
+ ],
+ "w|提示": [
+  {
+   "text": "电脑屏幕上弹出提示，黄涛的稿子还没保存。",
+   "en": "A prompt popped up on the screen: Huang Tao's article hadn't been saved yet.",
+   "ko": "컴퓨터 화면에 황타오의 원고가 아직 저장되지 않았다는 알림이 떴어요.",
+   "blank": "提示",
+   "src": "made"
+  },
+  {
+   "text": "司仪小声提示杨洋，该给父母敬茶了。",
+   "en": "The emcee quietly prompted Yang Yang that it was time to serve tea to the parents.",
+   "ko": "사회자가 양양에게 이제 부모님께 차를 올릴 차례라고 작게 알려 줬어요.",
+   "blank": "提示",
    "src": "made"
   }
  ],
@@ -33285,6 +33669,22 @@
    "src": "made"
   }
  ],
+ "w|旗": [
+  {
+   "text": "运动会开幕那天，黄涛拍到了运动员举着旗入场的照片。",
+   "en": "On the day the games opened, Huang Tao photographed athletes entering with flags held high.",
+   "ko": "운동회 개막 날 황타오는 선수들이 깃발을 들고 입장하는 사진을 찍었어요.",
+   "blank": "旗",
+   "src": "made"
+  },
+  {
+   "text": "婚礼现场的入口挂着两面彩旗，非常喜庆。",
+   "en": "Two colorful flags hang at the entrance of the wedding venue, very festive.",
+   "ko": "결혼식장 입구에 알록달록한 깃발 두 개가 걸려 있어 아주 경사스러워요.",
+   "blank": "旗",
+   "src": "made"
+  }
+ ],
  "w|无": [
   {
    "text": "无能为力。",
@@ -34149,6 +34549,22 @@
    "blank": "显示"
   }
  ],
+ "w|晒": [
+  {
+   "text": "周末，黄涛在阳台上晒着太阳看别家的报纸。",
+   "en": "On the weekend, Huang Tao basks in the sun on his balcony reading rival papers.",
+   "ko": "주말에 황타오는 베란다에서 햇볕을 쬐며 다른 신문을 읽어요.",
+   "blank": "晒",
+   "src": "made"
+  },
+  {
+   "text": "婚礼第二天，杨洋在朋友圈里晒了好多张照片。",
+   "en": "The day after the wedding, Yang Yang posted lots of photos on social media.",
+   "ko": "결혼식 다음 날 양양은 SNS에 사진을 잔뜩 올렸어요.",
+   "blank": "晒",
+   "src": "made"
+  }
+ ],
  "w|晓得": [
   {
    "text": "主编晓得周强熬了好几个通宵，特意让他休息一天。",
@@ -34391,6 +34807,22 @@
    "blank": "暗"
   }
  ],
+ "w|暗杀": [
+  {
+   "text": "黄涛的历史专栏讲了一位古代国王被暗杀的经过。",
+   "en": "Huang Tao's history column described how an ancient king was assassinated.",
+   "ko": "황타오의 역사 칼럼은 옛날 한 왕이 암살된 과정을 다뤘어요.",
+   "blank": "暗杀",
+   "src": "made"
+  },
+  {
+   "text": "婚礼上大家聊起一部电视剧，剧里的皇帝差点被人暗杀。",
+   "en": "At the wedding everyone chatted about a TV drama where the emperor was nearly assassinated.",
+   "ko": "결혼식에서 다들 드라마 이야기를 했는데, 드라마 속 황제가 하마터면 암살당할 뻔했대요.",
+   "blank": "暗杀",
+   "src": "made"
+  }
+ ],
  "w|暗示": [
   {
    "text": "老师咳嗽了两声，暗示小明别再跟同桌说话了。",
@@ -34434,6 +34866,22 @@
    "en": "Sun Yue says milk shouldn't be left exposed to sunlight for long; it goes in the fridge.",
    "ko": "쑨웨는 우유를 햇빛에 오래 두면 안 되고 냉장고에 넣어야 한다고 말해요.",
    "blank": "暴露",
+   "src": "made"
+  }
+ ],
+ "w|曲子": [
+  {
+   "text": "黄涛写稿时喜欢放一首安静的钢琴曲子。",
+   "en": "Huang Tao likes to play a quiet piano piece while writing.",
+   "ko": "황타오는 기사를 쓸 때 잔잔한 피아노곡을 틀어 놓는 걸 좋아해요.",
+   "blank": "曲子",
+   "src": "made"
+  },
+  {
+   "text": "新娘入场时，乐队演奏了一首温柔的曲子。",
+   "en": "When the bride entered, the band played a gentle tune.",
+   "ko": "신부가 입장할 때 악단이 부드러운 곡을 연주했어요.",
+   "blank": "曲子",
    "src": "made"
   }
  ],
@@ -40793,6 +41241,22 @@
    "src": "made"
   }
  ],
+ "w|牢房": [
+  {
+   "text": "黄涛去看守所采访，看到牢房比他想象的还要小。",
+   "en": "Huang Tao went to report at a detention center and saw the cells were even smaller than he imagined.",
+   "ko": "황타오가 구치소에 취재하러 가 보니 감방이 생각보다 훨씬 좁았어요.",
+   "blank": "牢房",
+   "src": "made"
+  },
+  {
+   "text": "新郎的哥哥是狱警，开玩笑说婚姻不是牢房，是新的家。",
+   "en": "The groom's brother is a prison guard and joked that marriage isn't a prison cell but a new home.",
+   "ko": "신랑의 형은 교도관인데, 결혼은 감방이 아니라 새 집이라고 농담했어요.",
+   "blank": "牢房",
+   "src": "made"
+  }
+ ],
  "w|牧师": [
   {
    "text": "牧师在教堂里。",
@@ -40868,6 +41332,22 @@
    "en": "Lili said material life is better now, yet everyone is busier than ever.",
    "ko": "리리는 요즘 물질적인 생활은 나아졌는데 다들 오히려 더 바빠졌다고 했어요.",
    "blank": "物质",
+   "src": "made"
+  }
+ ],
+ "w|物资": [
+  {
+   "text": "地震以后，黄涛跟着运送救灾物资的车队去了灾区。",
+   "en": "After the earthquake, Huang Tao went to the disaster zone with a convoy carrying relief supplies.",
+   "ko": "지진이 난 뒤 황타오는 구호 물자를 싣고 가는 차량 행렬을 따라 피해 지역에 갔어요.",
+   "blank": "物资",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的表姐在救灾物资仓库工作，婚礼当天请了假赶过来。",
+   "en": "Yang Yang's cousin works at a relief supplies warehouse and took the day off to come to the wedding.",
+   "ko": "양양의 사촌 언니는 구호 물자 창고에서 일하는데 결혼식 날 휴가를 내고 달려왔어요.",
+   "blank": "物资",
    "src": "made"
   }
  ],
@@ -41319,6 +41799,22 @@
    "en": "We keep a cat at home.",
    "ko": "우리 집에 고양이를 키워.",
    "blank": "猫"
+  }
+ ],
+ "w|献给": [
+  {
+   "text": "这篇报道写的是一位把一生献给乡村教育的老教师。",
+   "en": "This report is about an old teacher who devoted her life to rural education.",
+   "ko": "이 기사는 평생을 시골 교육에 바친 노교사 이야기예요.",
+   "blank": "献给",
+   "src": "made"
+  },
+  {
+   "text": "新郎弹了一首自己写的歌，说要献给杨洋。",
+   "en": "The groom played a song he wrote himself and said it was dedicated to Yang Yang.",
+   "ko": "신랑은 직접 만든 노래를 연주하며 양양에게 바친다고 했어요.",
+   "blank": "献给",
+   "src": "made"
   }
  ],
  "w|猴子": [
@@ -43129,6 +43625,22 @@
    "en": "Don't keep me under surveillance.",
    "ko": "날 감시하지 마.",
    "blank": "监视"
+  }
+ ],
+ "w|监禁": [
+  {
+   "text": "黄涛的历史专栏讲了一位作家，他年轻时曾被监禁过三年。",
+   "en": "Huang Tao's history column covered a writer who was imprisoned for three years when young.",
+   "ko": "황타오의 역사 칼럼은 젊은 시절 삼 년 동안 감금됐던 한 작가를 다뤘어요.",
+   "blank": "监禁",
+   "src": "made"
+  },
+  {
+   "text": "新郎的舅舅是写小说的，最新一本讲一个被冤枉监禁多年的人。",
+   "en": "The groom's uncle is a novelist whose latest book is about a man wrongly imprisoned for years.",
+   "ko": "신랑 외삼촌은 소설가인데 최신작은 억울하게 오랫동안 갇혀 있던 사람 이야기예요.",
+   "blank": "监禁",
+   "src": "made"
   }
  ],
  "w|盒子": [
@@ -52695,6 +53207,22 @@
    "src": "made"
   }
  ],
+ "w|誓言": [
+  {
+   "text": "黄涛刚当记者时立下誓言：只写真话。",
+   "en": "When Huang Tao first became a reporter, he made a vow to write only the truth.",
+   "ko": "황타오는 처음 기자가 됐을 때 진실만 쓰겠다고 맹세했어요.",
+   "blank": "誓言",
+   "src": "made"
+  },
+  {
+   "text": "在亲友面前，杨洋和新郎说出了彼此的誓言。",
+   "en": "Before family and friends, Yang Yang and the groom spoke their vows to each other.",
+   "ko": "가족과 친구들 앞에서 양양과 신랑은 서로에게 맹세를 했어요.",
+   "blank": "誓言",
+   "src": "made"
+  }
+ ],
  "w|语言": [
   {
    "text": "语言是交流的工具。",
@@ -53713,6 +54241,22 @@
    "src": "made"
   }
  ],
+ "w|贿赂": [
+  {
+   "text": "黄涛的调查发现，有官员涉嫌贿赂检查人员。",
+   "en": "Huang Tao's investigation found an official suspected of bribing inspectors.",
+   "ko": "황타오의 조사로 한 공무원이 검사 요원에게 뇌물을 준 혐의가 드러났어요.",
+   "blank": "贿赂",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的舅舅说起一则新闻：有人想贿赂裁判，结果被抓了。",
+   "en": "Yang Yang's uncle brought up a news story about someone who tried to bribe a referee and got caught.",
+   "ko": "양양의 외삼촌은 누가 심판에게 뇌물을 주려다 잡혔다는 뉴스를 이야기했어요.",
+   "blank": "贿赂",
+   "src": "made"
+  }
+ ],
  "w|资产": [
   {
    "text": "对这家小餐馆来说，那几口老铁锅就是最值钱的资产。",
@@ -54197,6 +54741,22 @@
    "blank": "起来"
   }
  ],
+ "w|起源": [
+  {
+   "text": "黄涛写了一篇文章，介绍春节习俗的起源。",
+   "en": "Huang Tao wrote an article introducing the origins of Spring Festival customs.",
+   "ko": "황타오는 설 풍습의 기원을 소개하는 글을 썼어요.",
+   "blank": "起源",
+   "src": "made"
+  },
+  {
+   "text": "杨洋问奶奶，闹洞房的习俗是怎么起源的。",
+   "en": "Yang Yang asked her grandma how the custom of teasing the newlyweds originated.",
+   "ko": "양양은 할머니에게 신방 장난 풍습이 어떻게 생겨났는지 물었어요.",
+   "blank": "起源",
+   "src": "made"
+  }
+ ],
  "w|起码": [
   {
    "text": "教练要求王刚起码坚持三个月再看效果。",
@@ -54421,6 +54981,22 @@
    "en": "The dog lay down.",
    "ko": "개가 엎드렸어.",
    "blank": "趴下"
+  }
+ ],
+ "w|跌": [
+  {
+   "text": "最近房价一直在跌，黄涛准备写一篇深度分析。",
+   "en": "House prices have been falling lately, and Huang Tao is preparing an in-depth analysis.",
+   "ko": "요즘 집값이 계속 떨어져서 황타오는 심층 분석 기사를 준비하고 있어요.",
+   "blank": "跌",
+   "src": "made"
+  },
+  {
+   "text": "新娘穿着高跟鞋，在台阶上差点跌倒。",
+   "en": "The bride, in high heels, almost fell on the steps.",
+   "ko": "신부가 하이힐을 신고 계단에서 하마터면 넘어질 뻔했어요.",
+   "blank": "跌",
+   "src": "made"
   }
  ],
  "w|跑": [
@@ -56975,6 +57551,22 @@
    "src": "made"
   }
  ],
+ "w|遗嘱": [
+  {
+   "text": "那位富商的遗嘱公开以后，黄涛写了一篇跟进报道。",
+   "en": "After the wealthy merchant's will was made public, Huang Tao wrote a follow-up story.",
+   "ko": "그 부유한 상인의 유언장이 공개된 뒤 황타오는 후속 기사를 썼어요.",
+   "blank": "遗嘱",
+   "src": "made"
+  },
+  {
+   "text": "新郎的爷爷在遗嘱里留给孙子一块旧手表，今天新郎戴着它。",
+   "en": "The groom's grandfather left him an old watch in his will, and the groom is wearing it today.",
+   "ko": "신랑 할아버지가 유언장에 손자에게 낡은 손목시계를 남겼는데, 신랑이 오늘 그걸 차고 있어요.",
+   "blank": "遗嘱",
+   "src": "made"
+  }
+ ],
  "w|遗憾": [
   {
    "text": "很遗憾。",
@@ -59023,6 +59615,22 @@
    "src": "made"
   }
  ],
+ "w|隐私": [
+  {
+   "text": "主编要求，报道里不能泄露受害人的隐私。",
+   "en": "The chief editor requires that reports must not reveal victims' private information.",
+   "ko": "편집장은 기사에 피해자의 사생활을 드러내면 안 된다고 했어요.",
+   "blank": "隐私",
+   "src": "made"
+  },
+  {
+   "text": "杨洋不想在网上公开太多婚礼照片，怕暴露隐私。",
+   "en": "Yang Yang didn't want to post too many wedding photos online for fear of exposing her privacy.",
+   "ko": "양양은 사생활이 드러날까 봐 결혼사진을 인터넷에 너무 많이 올리고 싶지 않았어요.",
+   "blank": "隐私",
+   "src": "made"
+  }
+ ],
  "w|隐藏": [
   {
    "text": "他把钥匙隐藏起来。",
@@ -59398,6 +60006,22 @@
    "en": "In the tea-picking season, Li Na hires a few village women to help.",
    "ko": "찻잎 따는 철이 되면 리나는 마을 아주머니 몇 분을 고용해 도움을 받아요.",
    "blank": "雇",
+   "src": "made"
+  }
+ ],
+ "w|雕像": [
+  {
+   "text": "广场上新立了一座雕像，黄涛去拍了照片。",
+   "en": "A new statue was erected in the square, and Huang Tao went to photograph it.",
+   "ko": "광장에 새 동상이 세워져서 황타오가 사진을 찍으러 갔어요.",
+   "blank": "雕像",
+   "src": "made"
+  },
+  {
+   "text": "杨洋和新郎在公园的雕像前拍了婚纱照。",
+   "en": "Yang Yang and the groom took wedding photos in front of a statue in the park.",
+   "ko": "양양과 신랑은 공원의 동상 앞에서 웨딩 사진을 찍었어요.",
+   "blank": "雕像",
    "src": "made"
   }
  ],
@@ -60925,6 +61549,22 @@
    "en": "So glad to see you.",
    "ko": "만나서 너무 반갑다.",
    "blank": "高兴"
+  }
+ ],
+ "w|高层": [
+  {
+   "text": "公司高层拒绝接受采访，黄涛只好去找普通员工。",
+   "en": "The company's top management refused interviews, so Huang Tao had to talk to ordinary staff.",
+   "ko": "회사 고위층이 인터뷰를 거절해서 황타오는 일반 직원들을 찾아가야 했어요.",
+   "blank": "高层",
+   "src": "made"
+  },
+  {
+   "text": "新郎在一家大公司的高层工作，很多同事都来了。",
+   "en": "The groom works in senior management at a big company, and many colleagues came.",
+   "ko": "신랑이 대기업 고위직이라 동료들이 많이 왔어요.",
+   "blank": "高层",
+   "src": "made"
   }
  ],
  "w|高度": [
