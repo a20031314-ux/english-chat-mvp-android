@@ -115,8 +115,8 @@ export function LanguageBank({
     void ledgerTick;
     return readLedger(language);
   }, [language, ledgerTick]);
-  // 칠하기·숫자 = 추정(2026-11-09 사용자 "추정을 다시 넣고, 학습 단어는 해당 카드에만"): 가장 최근 첫 측정·실력 확인 하나로
-  // 칸마다 아는 정도(skillCheck.ts estimateChance), 숫자는 ≈ 추정 수 / 전체. 학습(퀴즈 기록)은 낱말 카드에만. 잰 적이 없으면 칠하지 않고 전체 수만.
+  // 칠하기 = 추정(2026-11-09 사용자 "추정을 다시 넣고, 학습 단어는 해당 카드에만"): 가장 최근 첫 측정·실력 확인 하나로
+  // 칸마다 아는 정도(skillCheck.ts estimateChance)를 칠하기로만. 학습(퀴즈 기록)은 낱말 카드에만. 잰 적이 없으면 칠하지 않음.
   const check = useMemo(() => {
     void ledgerTick;
     return latestCheck(language);
@@ -141,7 +141,7 @@ export function LanguageBank({
     );
     return { word: wordItems, expr, gram, posOf };
   }, [words, language, locale]);
-  // 낱말 곡선의 합을 잰 경계 b에 맞춘다 — 곡선 꼬리 때문에 합이 b보다 커져 실력 확인 표(≈b)와 숫자가 어긋나지 않게.
+  // 낱말 곡선의 합을 잰 경계 b에 맞춘다 — 곡선 꼬리 때문에 칠한 양이 실력 확인 표(≈b)보다 커지지 않게.
   const wordScale = useMemo(() => {
     if (!check) return 1;
     const sum = items.word.reduce((total, one) => total + estimateChance(check, { kind: "word", rank: one.rank, lv: one.lv }), 0);
@@ -153,13 +153,8 @@ export function LanguageBank({
     const chance = estimateChance(check, { kind, rank: one.rank, lv: one.lv });
     return kind === "word" ? Math.min(1, chance * wordScale) : chance;
   };
-  // ≈ 추정 수 / 전체 — 아랍어 화면에서도 왼쪽부터 읽게 묶음(LRI … PDI). 잰 적이 없으면 전체 수만.
-  const pct = (list: readonly Item[]) => {
-    if (!list.length) return "";
-    if (!check) return `\u2066${list.length.toLocaleString()}\u2069`;
-    const about = Math.round(list.reduce((sum, one) => sum + valueOf(one), 0));
-    return `\u2066≈${about.toLocaleString()} / ${list.length.toLocaleString()}\u2069`;
-  };
+  // 숫자 = 개수만(2026-11-09 사용자 "채워진 숫자보다 색깔로만, 수치는 단어 개수만") — 추정은 칠하기로만. 아랍어 화면에서도 묶어 둠(LRI … PDI).
+  const countOf = (list: readonly Item[]) => (list.length ? `\u2066${list.length.toLocaleString()}\u2069` : "");
   const kindName: Record<Kind, string> = { word: ui.partVocab, expr: ui.partExpression, gram: ui.partGrammar };
   const levels = (kind: Kind) => (kind === "word" ? [1, 2, 3, 4, 5, 6] : [1, 2, 3, 4, 5]);
   const lvName = (lv: number) => (lv === 6 ? ui.lbExtended : String(lv));
@@ -256,7 +251,7 @@ export function LanguageBank({
                     <button type="button" onClick={() => setView({ kind: k, axis: "topic", row: null, lv: null })} className="flex w-full items-baseline gap-2 text-start">
                       <span className="text-note font-semibold text-status-learned">{kindName[k]}</span>
                       <span className="flex-1" />
-                      <span className="text-title font-semibold text-ink">{pct(all)}</span>
+                      <span className="text-title font-semibold text-ink">{countOf(all)}</span>
                       <span aria-hidden className="text-slate-500 rtl:rotate-180">›</span>
                     </button>
                     <div className="mt-2 flex gap-1">
@@ -267,14 +262,14 @@ export function LanguageBank({
                           <button
                             key={lv}
                             type="button"
-                            aria-label={`${kindName[k]} ${ui.dictionaryStage.replace("{n}", lvName(lv))} ${pct(part)}`}
+                            aria-label={`${kindName[k]} ${ui.dictionaryStage.replace("{n}", lvName(lv))} ${countOf(part)}`}
                             onClick={() => setView({ kind: k, axis: "topic", row: null, lv })}
                             className="flex min-w-[1.75rem] flex-col gap-1"
                             style={{ flexGrow: part.length, flexBasis: 0 }}
                           >
                             <span className="block h-9 rounded-lg" style={ribbon(part, valueOf)} />
                             <span className="text-center text-meta text-slate-500">{lvName(lv)}</span>
-                            <span className="text-center text-meta text-slate-400">{pct(part)}</span>
+                            <span className="text-center text-meta text-slate-400">{countOf(part)}</span>
                           </button>
                         );
                       })}
@@ -333,7 +328,7 @@ export function LanguageBank({
                             className={`flex h-10 flex-col items-center justify-center rounded-lg border leading-tight ${on ? "border-ink" : "border-line"}`}
                             style={ribbon(cell, valueOf)}
                           >
-                            <span className="text-caption font-semibold text-ink">{pct(cell)}</span>
+                            <span className="text-caption font-semibold text-ink">{countOf(cell)}</span>
                           </button>
                         );
                       })}
@@ -345,7 +340,7 @@ export function LanguageBank({
                 <section data-lb-bundle className="rounded-2xl border border-line bg-surface p-3">
                   <div className="flex items-center gap-2">
                     <p className="flex-1 text-meta text-slate-400">
-                      {pct(bundle)}
+                      {countOf(bundle)}
                     </p>
                     <div className="flex gap-1" role="group">
                       {(["quiz", "talk"] as const).map((one) => (
