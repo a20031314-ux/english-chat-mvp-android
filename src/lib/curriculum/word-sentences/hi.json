@@ -1599,6 +1599,22 @@
    "src": "made"
   }
  ],
+ "w|अपितु": [
+  {
+   "text": "अमित केवल किताबें नहीं देता, अपितु पढ़ने का तरीक़ा भी सिखाता है।",
+   "en": "Amit doesn't just lend books, but also teaches how to read.",
+   "ko": "아밋은 책만 빌려주는 게 아니라 읽는 법도 가르쳐요.",
+   "blank": "अपितु",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की रिपोर्ट छोटी नहीं थी, अपितु बहुत विस्तार से लिखी गई थी।",
+   "en": "Neha's report was not short; rather, it was written in great detail.",
+   "ko": "네하의 보고서는 짧기는커녕 아주 자세히 쓰여 있었어요.",
+   "blank": "अपितु",
+   "src": "made"
+  }
+ ],
  "w|अपील": [
   {
    "text": "शो के अंत में करण ने दर्शकों से पुराने थिएटर को बचाने की अपील की।",
@@ -2409,6 +2425,22 @@
    "en": "True realization comes only after a loss.",
    "ko": "진짜 깨달음은 손해를 본 뒤에야 와.",
    "blank": "अहसास"
+  }
+ ],
+ "w|अहिंसा": [
+  {
+   "text": "पुस्तकालय में अहिंसा पर पुरानी किताबों की एक प्रदर्शनी लगी है।",
+   "en": "An exhibition of old books on non-violence has been set up in the library.",
+   "ko": "도서관에서 비폭력에 관한 옛 책 전시회가 열리고 있어요.",
+   "blank": "अहिंसा",
+   "src": "made"
+  },
+  {
+   "text": "गांधी जयंती पर नेहा के दफ़्तर में अहिंसा पर एक छोटा भाषण हुआ।",
+   "en": "On Gandhi Jayanti there was a short talk on non-violence at Neha's office.",
+   "ko": "간디 탄생일에 네하네 회사에서 비폭력에 관한 짧은 강연이 있었어요.",
+   "blank": "अहिंसा",
+   "src": "made"
   }
  ],
  "w|आइसक्रीम": [
@@ -3321,6 +3353,22 @@
    "blank": "आपस"
   }
  ],
+ "w|आपस में": [
+  {
+   "text": "दो छात्र आपस में इतनी ज़ोर से बात कर रहे थे कि अमित को टोकना पड़ा।",
+   "en": "Two students were talking among themselves so loudly that Amit had to stop them.",
+   "ko": "학생 둘이 자기들끼리 너무 크게 떠들어서 아밋이 주의를 줘야 했어요.",
+   "blank": "आपस में",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने टीम से कहा कि झगड़े आपस में सुलझा लो।",
+   "en": "Neha told the team to sort out the quarrels among themselves.",
+   "ko": "네하는 팀원들에게 다툼은 자기들끼리 풀라고 했어요.",
+   "blank": "आपस में",
+   "src": "made"
+  }
+ ],
  "w|आपूर्ति": [
   {
    "text": "पानी की आपूर्ति सुबह बंद रहेगी।",
@@ -3549,6 +3597,22 @@
    "en": "Mother performs aarti at home every day.",
    "ko": "엄마는 매일 집에서 아르티를 해.",
    "blank": "आरती"
+  }
+ ],
+ "w|आराधना": [
+  {
+   "text": "अमित ने देवी की आराधना से जुड़ी लोकगीतों की किताब ढूँढ निकाली।",
+   "en": "Amit dug out a book of folk songs connected with the worship of the goddess.",
+   "ko": "아밋은 여신 숭배와 관련된 민요집을 찾아냈어요.",
+   "blank": "आराधना",
+   "src": "made"
+  },
+  {
+   "text": "नेहा हर सुबह दफ़्तर आने से पहले थोड़ी देर आराधना करती है।",
+   "en": "Neha spends a little time in worship every morning before coming to the office.",
+   "ko": "네하는 매일 아침 출근 전에 잠깐 기도를 드려요.",
+   "blank": "आराधना",
+   "src": "made"
   }
  ],
  "w|आराम": [
@@ -3986,6 +4050,22 @@
    "en": "Dipa adjusts her diet according to the season.",
    "ko": "디파는 계절에 맞춰 식단을 바꿔요.",
    "blank": "आहार",
+   "src": "made"
+  }
+ ],
+ "w|आह्वान": [
+  {
+   "text": "अमित ने लोगों से पुरानी किताबें दान करने का आह्वान किया।",
+   "en": "Amit called on people to donate their old books.",
+   "ko": "아밋은 사람들에게 헌책을 기증해 달라고 호소했어요.",
+   "blank": "आह्वान",
+   "src": "made"
+  },
+  {
+   "text": "कंपनी के मालिक ने सबसे काग़ज़ बचाने का आह्वान किया।",
+   "en": "The company owner called on everyone to save paper.",
+   "ko": "회사 대표는 모두에게 종이를 아끼자고 호소했어요.",
+   "blank": "आह्वान",
    "src": "made"
   }
  ],
@@ -5347,6 +5427,22 @@
    "blank": "उनतीस"
   }
  ],
+ "w|उन्नत": [
+  {
+   "text": "पुस्तकालय में अब किताबें खोजने की उन्नत सुविधा है।",
+   "en": "The library now has an advanced facility for searching books.",
+   "ko": "도서관에는 이제 책을 찾는 첨단 시스템이 있어요.",
+   "blank": "उन्नत",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की कंपनी अब उन्नत सॉफ़्टवेयर से हिसाब रखती है।",
+   "en": "Neha's company now keeps accounts with advanced software.",
+   "ko": "네하네 회사는 이제 고급 소프트웨어로 장부를 관리해요.",
+   "blank": "उन्नत",
+   "src": "made"
+  }
+ ],
  "w|उन्नीस": [
   {
    "text": "परीक्षा में उन्नीस नंबर मिले।",
@@ -5497,6 +5593,22 @@
    "en": "Always remember useful advice.",
    "ko": "유용한 조언은 항상 기억해.",
    "blank": "उपयोगी"
+  }
+ ],
+ "w|उपरोक्त": [
+  {
+   "text": "अमित ने नोटिस में लिखा कि उपरोक्त नियम सोमवार से लागू होंगे।",
+   "en": "Amit wrote in the notice that the above rules will apply from Monday.",
+   "ko": "아밋은 공지에 위 규칙이 월요일부터 적용된다고 썼어요.",
+   "blank": "उपरोक्त",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने ईमेल के अंत में लिखा कि उपरोक्त बातों पर कल चर्चा होगी।",
+   "en": "Neha wrote at the end of the email that the above points will be discussed tomorrow.",
+   "ko": "네하는 이메일 끝에 위 내용을 내일 논의하겠다고 썼어요.",
+   "blank": "उपरोक्त",
+   "src": "made"
   }
  ],
  "w|उपलब्ध": [
@@ -7091,6 +7203,22 @@
    "src": "made"
   }
  ],
+ "w|क़दम उठाना": [
+  {
+   "text": "किताबें चोरी होने के बाद अमित ने सख़्त क़दम उठाए।",
+   "en": "After books were stolen, Amit took strict measures.",
+   "ko": "책이 도난당한 뒤 아밋은 엄격한 조치를 취했어요.",
+   "blank": "क़दम उठाए",
+   "src": "made"
+  },
+  {
+   "text": "देरी रोकने के लिए नेहा ने कोई ठोस क़दम उठाने की माँग की।",
+   "en": "Neha demanded that some concrete step be taken to stop the delays.",
+   "ko": "네하는 지연을 막을 확실한 조치를 취하자고 요구했어요.",
+   "blank": "क़दम उठाने",
+   "src": "made"
+  }
+ ],
  "w|कंधा": [
   {
    "text": "बैग का भार कंधा दबा रहा था।",
@@ -8180,6 +8308,22 @@
    "en": "The episode of someone's wallet going missing at the pool became the talk of the whole club.",
    "ko": "수영장에서 누군가 지갑을 잃어버린 일이 클럽 전체의 화제가 됐어요.",
    "blank": "कांड",
+   "src": "made"
+  }
+ ],
+ "w|क़ातिल": [
+  {
+   "text": "उस जासूसी उपन्यास में क़ातिल का पता आख़िरी पन्ने पर चलता है।",
+   "en": "In that detective novel the murderer is revealed on the last page.",
+   "ko": "그 추리 소설에서는 마지막 쪽에서야 범인이 밝혀져요.",
+   "blank": "क़ातिल",
+   "src": "made"
+  },
+  {
+   "text": "लंच पर नेहा ने एक फ़िल्म की कहानी सुनाई जिसमें क़ातिल आख़िर में पकड़ा जाता है।",
+   "en": "At lunch Neha told the plot of a film in which the murderer is caught at the end.",
+   "ko": "점심시간에 네하는 마지막에 살인범이 잡히는 영화 줄거리를 들려줬어요.",
+   "blank": "क़ातिल",
    "src": "made"
   }
  ],
@@ -9306,6 +9450,22 @@
    "en": "On a summer night all the kids ran out on hearing the kulfi seller's bell in the lane.",
    "ko": "여름밤 골목에 쿨피 장수 종소리가 들리자 아이들이 모두 뛰어나왔어요.",
    "blank": "कुल्फ़ी",
+   "src": "made"
+  }
+ ],
+ "w|कुश्ती": [
+  {
+   "text": "खेल वाले खाने में कुश्ती के पुराने पहलवानों पर एक मोटी किताब है।",
+   "en": "In the sports section there's a thick book on wrestlers of old.",
+   "ko": "스포츠 서가에는 옛 레슬링 선수들에 관한 두꺼운 책이 있어요.",
+   "blank": "कुश्ती",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर के खेल दिवस पर नेहा ने पहली बार कुश्ती का मुक़ाबला देखा।",
+   "en": "At the office sports day, Neha watched a wrestling bout for the first time.",
+   "ko": "회사 체육대회에서 네하는 처음으로 레슬링 경기를 봤어요.",
+   "blank": "कुश्ती",
    "src": "made"
   }
  ],
@@ -14715,6 +14875,22 @@
    "src": "made"
   }
  ],
+ "w|चर्चित": [
+  {
+   "text": "इस साल का सबसे चर्चित उपन्यास पुस्तकालय में आते ही ख़त्म हो गया।",
+   "en": "This year's most talked-about novel was gone as soon as it arrived at the library.",
+   "ko": "올해 가장 화제가 된 소설은 도서관에 들어오자마자 다 빌려 갔어요.",
+   "blank": "चर्चित",
+   "src": "made"
+  },
+  {
+   "text": "नेहा का बनाया विज्ञापन सोशल मीडिया पर काफ़ी चर्चित हुआ।",
+   "en": "The ad Neha made became quite talked about on social media.",
+   "ko": "네하가 만든 광고가 소셜 미디어에서 꽤 화제가 됐어요.",
+   "blank": "चर्चित",
+   "src": "made"
+  }
+ ],
  "w|चलन": [
   {
    "text": "आजकल स्कूल में रंग-बिरंगे पेन रखने का चलन है।",
@@ -15545,6 +15721,22 @@
    "en": "The child suddenly went quiet.",
    "ko": "아이가 갑자기 조용해졌어.",
    "blank": "चुप"
+  }
+ ],
+ "w|चुपचाप": [
+  {
+   "text": "एक बूढ़े सज्जन रोज़ आकर कोने में चुपचाप अख़बार पढ़ते हैं।",
+   "en": "An old gentleman comes every day and quietly reads the newspaper in the corner.",
+   "ko": "나이 든 신사 한 분이 매일 와서 구석에서 조용히 신문을 읽어요.",
+   "blank": "चुपचाप",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने चुपचाप सबका काम निपटाया और जल्दी घर चली गई।",
+   "en": "Neha quietly finished everyone's work and went home early.",
+   "ko": "네하는 조용히 모두의 일을 끝내고 일찍 집에 갔어요.",
+   "blank": "चुपचाप",
+   "src": "made"
   }
  ],
  "w|चुप्पी": [
@@ -16953,6 +17145,22 @@
    "en": "The village population has decreased now.",
    "ko": "마을 인구는 이제 줄었어.",
    "blank": "जनसंख्या"
+  }
+ ],
+ "w|जनहित": [
+  {
+   "text": "अमित ने जनहित में पुस्तकालय रविवार को भी खोलने का फ़ैसला किया।",
+   "en": "In the public interest, Amit decided to open the library on Sundays too.",
+   "ko": "아밋은 시민을 위해 일요일에도 도서관을 열기로 했어요.",
+   "blank": "जनहित",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की कंपनी जनहित के कुछ विज्ञापन मुफ़्त में बनाती है।",
+   "en": "Neha's company makes some public-interest ads for free.",
+   "ko": "네하네 회사는 공익 광고 몇 편을 무료로 만들어요.",
+   "blank": "जनहित",
+   "src": "made"
   }
  ],
  "w|जनाब": [
@@ -21277,6 +21485,22 @@
    "src": "made"
   }
  ],
+ "w|तस्करी": [
+  {
+   "text": "एक पत्रकार पुरानी मूर्तियों की तस्करी पर किताब लिखने के लिए यहाँ शोध करता है।",
+   "en": "A journalist does research here to write a book on the smuggling of old statues.",
+   "ko": "한 기자가 옛 조각상 밀수에 관한 책을 쓰려고 이곳에서 자료를 찾아요.",
+   "blank": "तस्करी",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर के बाहर चिपके पोस्टर में लोगों को वन्यजीवों की तस्करी के ख़िलाफ़ आगाह किया गया था।",
+   "en": "A poster stuck outside the office warned people against wildlife trafficking.",
+   "ko": "사무실 밖에 붙은 포스터는 야생동물 밀거래를 조심하라고 알리고 있었어요.",
+   "blank": "तस्करी",
+   "src": "made"
+  }
+ ],
  "w|तस्वीर": [
   {
    "text": "दीवार पर पुरानी तस्वीर टंगी है।",
@@ -23845,6 +24069,22 @@
    "src": "made"
   }
  ],
+ "w|दुरुपयोग": [
+  {
+   "text": "अमित ने कहा कि मुफ़्त इंटरनेट का दुरुपयोग हुआ तो सुविधा बंद करनी पड़ेगी।",
+   "en": "Amit said that if the free internet is misused, the facility will have to be shut.",
+   "ko": "아밋은 무료 인터넷을 엉뚱하게 쓰면 서비스를 닫을 수밖에 없다고 했어요.",
+   "blank": "दुरुपयोग",
+   "src": "made"
+  },
+  {
+   "text": "कंपनी ने दफ़्तर की गाड़ी के दुरुपयोग पर नया नियम बनाया।",
+   "en": "The company made a new rule on misuse of the office car.",
+   "ko": "회사는 업무용 차를 사적으로 쓰는 것에 대한 새 규칙을 만들었어요.",
+   "blank": "दुरुपयोग",
+   "src": "made"
+  }
+ ],
  "w|दुर्घटना": [
   {
    "text": "ट्रक की दुर्घटना गंभीर थी।",
@@ -24337,6 +24577,22 @@
    "blank": "दोष"
   }
  ],
+ "w|दोष देना": [
+  {
+   "text": "एक पाठक ने फटे पन्नों के लिए अमित को दोष दिया, पर ग़लती किसी और की थी।",
+   "en": "A reader blamed Amit for the torn pages, but the fault was someone else's.",
+   "ko": "한 이용자가 찢어진 쪽을 아밋 탓으로 돌렸지만 잘못은 다른 사람에게 있었어요.",
+   "blank": "दोष दिया",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने किसी को दोष देने के बजाय ग़लती ठीक करने पर ध्यान दिया।",
+   "en": "Instead of blaming anyone, Neha focused on fixing the mistake.",
+   "ko": "네하는 누구 탓을 하기보다 실수를 고치는 데 집중했어요.",
+   "blank": "दोष देने",
+   "src": "made"
+  }
+ ],
  "w|दोषी": [
   {
    "text": "अदालत ने उसे दोषी ठहराया।",
@@ -24627,6 +24883,22 @@
    "src": "made"
   }
  ],
+ "w|धनुष": [
+  {
+   "text": "बच्चों की किताब के कवर पर अर्जुन धनुष ताने खड़ा है।",
+   "en": "On the cover of the children's book, Arjun stands with his bow drawn.",
+   "ko": "어린이 책 표지에는 아르주나가 활을 당긴 채 서 있어요.",
+   "blank": "धनुष",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की मेज़ पर लकड़ी का एक छोटा धनुष सजा है, जो उसके बेटे ने बनाया था।",
+   "en": "A small wooden bow made by her son decorates Neha's desk.",
+   "ko": "네하 책상에는 아들이 만든 작은 나무 활이 장식돼 있어요.",
+   "blank": "धनुष",
+   "src": "made"
+  }
+ ],
  "w|धन्यवाद": [
   {
    "text": "मदद के लिए धन्यवाद।",
@@ -24682,6 +24954,22 @@
    "en": "The shopkeepers sat in protest at the market gate against the rent hike.",
    "ko": "임대료 인상에 반대해 상인들이 시장 입구에서 농성에 들어갔어요.",
    "blank": "धरने",
+   "src": "made"
+  }
+ ],
+ "w|धरोहर": [
+  {
+   "text": "अमित मानता है कि पुरानी पांडुलिपियाँ शहर की धरोहर हैं।",
+   "en": "Amit believes the old manuscripts are the city's heritage.",
+   "ko": "아밋은 옛 필사본이 도시의 유산이라고 생각해요.",
+   "blank": "धरोहर",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की कंपनी पुराने शहर की धरोहर इमारतों को सुधारने का काम करती है।",
+   "en": "Neha's company works on restoring heritage buildings in the old city.",
+   "ko": "네하네 회사는 구시가의 유산 건물을 보수하는 일을 해요.",
+   "blank": "धरोहर",
    "src": "made"
   }
  ],
@@ -25659,6 +25947,22 @@
    "en": "Children like soft flatbread.",
    "ko": "아이들은 부드러운 로티를 좋아해.",
    "blank": "नरम"
+  }
+ ],
+ "w|नरसंहार": [
+  {
+   "text": "इतिहास के छात्र ने युद्ध के समय हुए एक नरसंहार पर शोध के लिए किताबें माँगीं।",
+   "en": "A history student asked for books to research a massacre that happened during the war.",
+   "ko": "역사학과 학생이 전쟁 중 일어난 학살을 연구하려고 책을 찾았어요.",
+   "blank": "नरसंहार",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की कंपनी एक युद्ध स्मारक बना रही है जो पुराने नरसंहार की याद दिलाएगा।",
+   "en": "Neha's company is building a war memorial that will commemorate an old massacre.",
+   "ko": "네하네 회사는 옛 학살을 기억하는 전쟁 기념관을 짓고 있어요.",
+   "blank": "नरसंहार",
+   "src": "made"
   }
  ],
  "w|नर्स": [
@@ -26845,6 +27149,22 @@
    "src": "made"
   }
  ],
+ "w|निर्मल": [
+  {
+   "text": "पुस्तकालय के पीछे एक निर्मल तालाब है जहाँ लोग बैठकर पढ़ते हैं।",
+   "en": "Behind the library there's a clear pond where people sit and read.",
+   "ko": "도서관 뒤에는 맑은 연못이 있어서 사람들이 앉아 책을 읽어요.",
+   "blank": "निर्मल",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की निर्मल हँसी से दफ़्तर का माहौल खिल उठता है।",
+   "en": "Neha's pure laughter lights up the office atmosphere.",
+   "ko": "네하의 맑은 웃음에 사무실 분위기가 환해져요.",
+   "blank": "निर्मल",
+   "src": "made"
+  }
+ ],
  "w|निर्माण": [
   {
    "text": "पुल का निर्माण चल रहा है।",
@@ -27054,6 +27374,22 @@
    "en": "In the new house Puja will definitely get more space than before.",
    "ko": "새집에서 푸자는 분명히 전보다 넓게 지낼 거예요.",
    "blank": "निश्चित रूप से",
+   "src": "made"
+  }
+ ],
+ "w|निष्पक्ष": [
+  {
+   "text": "निबंध प्रतियोगिता के लिए अमित ने निष्पक्ष जज चुने।",
+   "en": "Amit chose impartial judges for the essay competition.",
+   "ko": "아밋은 글짓기 대회에 공정한 심사위원을 골랐어요.",
+   "blank": "निष्पक्ष",
+   "src": "made"
+  },
+  {
+   "text": "नेहा चाहती है कि तरक़्क़ी का फ़ैसला निष्पक्ष तरीक़े से हो।",
+   "en": "Neha wants promotion decisions to be made in a fair way.",
+   "ko": "네하는 승진이 공정하게 결정되길 바라요.",
+   "blank": "निष्पक्ष",
    "src": "made"
   }
  ],
@@ -30023,6 +30359,22 @@
    "src": "made"
   }
  ],
+ "w|पिछड़ा": [
+  {
+   "text": "अमित का गाँव पढ़ाई में पिछड़ा था, इसलिए उसने वहाँ चलता-फिरता पुस्तकालय शुरू किया।",
+   "en": "Amit's village was backward in education, so he started a mobile library there.",
+   "ko": "아밋네 마을은 교육이 뒤처져 있어서 아밋은 그곳에 이동 도서관을 열었어요.",
+   "blank": "पिछड़ा",
+   "src": "made"
+  },
+  {
+   "text": "नेहा मानती है कि कोई इलाक़ा पिछड़ा तभी रहता है जब वहाँ पढ़ाई न पहुँचे।",
+   "en": "Neha believes an area stays backward only when education doesn't reach it.",
+   "ko": "네하는 교육이 닿지 않아야만 지역이 뒤처진다고 생각해요.",
+   "blank": "पिछड़ा",
+   "src": "made"
+  }
+ ],
  "w|पिछला": [
   {
    "text": "पिछला साल बहुत व्यस्त था।",
@@ -31203,6 +31555,22 @@
    "blank": "पौना"
   }
  ],
+ "w|पौराणिक": [
+  {
+   "text": "अमित पौराणिक कथाओं वाली किताबें अलग अलमारी में रखता है।",
+   "en": "Amit keeps the books of mythological tales on a separate shelf.",
+   "ko": "아밋은 신화 이야기책을 따로 서가에 둬요.",
+   "blank": "पौराणिक",
+   "src": "made"
+  },
+  {
+   "text": "विज्ञापन के लिए नेहा ने एक पौराणिक कहानी को नए ढंग से पेश किया।",
+   "en": "For the ad, Neha presented a mythological story in a new way.",
+   "ko": "네하는 광고에서 신화 이야기를 새롭게 풀어냈어요.",
+   "blank": "पौराणिक",
+   "src": "made"
+  }
+ ],
  "w|प्याज़": [
   {
    "text": "सब्ज़ी में प्याज़ डालना मत भूलना।",
@@ -31314,6 +31682,22 @@
    "en": "When leaving the old house, Seema expressed her gratitude to the landlord.",
    "ko": "옛집을 떠나며 시마는 집주인에게 고마움을 전했어요.",
    "blank": "प्रकट",
+   "src": "made"
+  }
+ ],
+ "w|प्रकट करना": [
+  {
+   "text": "एक पाठक ने देर तक खुले पुस्तकालय के लिए अमित का आभार प्रकट किया।",
+   "en": "A reader expressed gratitude to Amit for the library staying open late.",
+   "ko": "한 이용자가 도서관을 늦게까지 열어 준 데 대해 아밋에게 고마움을 표했어요.",
+   "blank": "प्रकट किया",
+   "src": "made"
+  },
+  {
+   "text": "नए नियमों पर कई कर्मचारियों ने अपनी नाराज़गी प्रकट की।",
+   "en": "Many employees expressed their displeasure at the new rules.",
+   "ko": "새 규칙에 많은 직원이 불만을 드러냈어요.",
+   "blank": "प्रकट की",
    "src": "made"
   }
  ],
@@ -32243,6 +32627,22 @@
    "blank": "प्रश्न"
   }
  ],
+ "w|प्रसंग": [
+  {
+   "text": "अमित ने बच्चों को रामायण का एक प्रसंग पढ़कर सुनाया।",
+   "en": "Amit read an episode from the Ramayana aloud to the children.",
+   "ko": "아밋은 아이들에게 라마야나의 한 대목을 읽어 줬어요.",
+   "blank": "प्रसंग",
+   "src": "made"
+  },
+  {
+   "text": "मीटिंग में नेहा ने पिछले साल का एक मज़ेदार प्रसंग सुनाकर माहौल हल्का किया।",
+   "en": "In the meeting Neha lightened the mood by telling a funny incident from last year.",
+   "ko": "회의에서 네하는 작년에 있었던 재밌는 일을 들려주며 분위기를 풀었어요.",
+   "blank": "प्रसंग",
+   "src": "made"
+  }
+ ],
  "w|प्रसन्न": [
   {
    "text": "अच्छी खबर सुनकर प्रसन्न हो गया।",
@@ -32404,6 +32804,22 @@
    "en": "Before departing on pilgrimage, the elderly neighbor invited everyone for tea.",
    "ko": "성지 순례를 떠나기 전에 노인 이웃이 모두를 차 마시러 불렀어요.",
    "blank": "प्रस्थान",
+   "src": "made"
+  }
+ ],
+ "w|प्रहार": [
+  {
+   "text": "उपन्यास में नायक दुश्मन के प्रहार से बचकर नदी में कूद जाता है।",
+   "en": "In the novel the hero dodges the enemy's blow and jumps into the river.",
+   "ko": "소설에서 주인공은 적의 공격을 피해 강으로 뛰어들어요.",
+   "blank": "प्रहार",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने कहा कि कर्मचारियों के बोनस में कटौती उनके भरोसे पर प्रहार है।",
+   "en": "Neha said cutting the employees' bonus is a blow to their trust.",
+   "ko": "네하는 직원 보너스를 깎는 건 그들의 신뢰를 치는 일이라고 했어요.",
+   "blank": "प्रहार",
    "src": "made"
   }
  ],
@@ -34603,6 +35019,22 @@
    "blank": "बना"
   }
  ],
+ "w|बनाम": [
+  {
+   "text": "पुस्तकालय में आज \"किताब बनाम मोबाइल\" पर बहस होगी।",
+   "en": "There will be a debate on \"books versus mobiles\" at the library today.",
+   "ko": "오늘 도서관에서 \"책 대 휴대폰\" 토론이 열려요.",
+   "blank": "बनाम",
+   "src": "made"
+  },
+  {
+   "text": "मीटिंग का विषय था, घर से काम बनाम दफ़्तर से काम।",
+   "en": "The topic of the meeting was working from home versus working from the office.",
+   "ko": "회의 주제는 재택근무 대 사무실 근무였어요.",
+   "blank": "बनाम",
+   "src": "made"
+  }
+ ],
  "w|बयान": [
   {
    "text": "मंत्री ने प्रेस में बयान दिया।",
@@ -35061,6 +35493,22 @@
    "en": "Nobody accepted his excuse.",
    "ko": "그의 핑계를 아무도 안 믿었어.",
    "blank": "बहाना"
+  }
+ ],
+ "w|बहाल": [
+  {
+   "text": "मरम्मत के बाद पुस्तकालय की बिजली आख़िरकार बहाल हुई।",
+   "en": "After the repairs, the library's electricity was finally restored.",
+   "ko": "수리가 끝나고 도서관 전기가 마침내 다시 들어왔어요.",
+   "blank": "बहाल",
+   "src": "made"
+  },
+  {
+   "text": "जाँच पूरी होने के बाद नेहा के सहकर्मी को नौकरी पर बहाल कर दिया गया।",
+   "en": "After the inquiry was completed, Neha's colleague was reinstated in his job.",
+   "ko": "조사가 끝난 뒤 네하의 동료는 복직됐어요.",
+   "blank": "बहाल",
+   "src": "made"
   }
  ],
  "w|बहुत": [
@@ -37405,6 +37853,22 @@
    "blank": "भविष्य"
   }
  ],
+ "w|भविष्यवाणी": [
+  {
+   "text": "अमित को एक पुरानी पोथी मिली जिसमें मौसम की भविष्यवाणी के तरीक़े लिखे थे।",
+   "en": "Amit found an old manuscript describing methods of weather forecasting.",
+   "ko": "아밋은 날씨 예측법이 적힌 오래된 필사본을 찾았어요.",
+   "blank": "भविष्यवाणी",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की भविष्यवाणी सही निकली और नया उत्पाद ख़ूब बिका।",
+   "en": "Neha's prediction came true and the new product sold well.",
+   "ko": "네하의 예측이 맞아서 신제품이 잘 팔렸어요.",
+   "blank": "भविष्यवाणी",
+   "src": "made"
+  }
+ ],
  "w|भव्य": [
   {
    "text": "शहर का नया सरकारी अस्पताल बहुत भव्य इमारत में बना है।",
@@ -38853,6 +39317,22 @@
    "blank": "मतदान"
   }
  ],
+ "w|मतभेद": [
+  {
+   "text": "किताबों के चुनाव पर समिति में थोड़ा मतभेद था, पर आख़िर सब मान गए।",
+   "en": "There was some disagreement in the committee about the choice of books, but in the end everyone agreed.",
+   "ko": "책 선정을 두고 위원회에 의견 차이가 좀 있었지만 결국 모두 동의했어요.",
+   "blank": "मतभेद",
+   "src": "made"
+  },
+  {
+   "text": "बजट पर नेहा और उसके बॉस के बीच मतभेद खुलकर सामने आ गए।",
+   "en": "Differences of opinion between Neha and her boss over the budget came out into the open.",
+   "ko": "예산을 두고 네하와 상사의 의견 차이가 드러났어요.",
+   "blank": "मतभेद",
+   "src": "made"
+  }
+ ],
  "w|मतलब": [
   {
    "text": "तुम्हारा मतलब क्या है?",
@@ -38893,6 +39373,22 @@
    "en": "The ministry office is in the middle of the city.",
    "ko": "부처 사무실이 시내 한가운데에 있어.",
    "blank": "मंत्रालय"
+  }
+ ],
+ "w|मंत्रिमंडल": [
+  {
+   "text": "अमित ने अख़बार में पढ़ा कि मंत्रिमंडल ने पुस्तकालयों के लिए नई योजना मंज़ूर की है।",
+   "en": "Amit read in the paper that the cabinet has approved a new scheme for libraries.",
+   "ko": "아밋은 내각이 도서관을 위한 새 계획을 승인했다는 기사를 읽었어요.",
+   "blank": "मंत्रिमंडल",
+   "src": "made"
+  },
+  {
+   "text": "मंत्रिमंडल में फेरबदल की ख़बर पर दफ़्तर में दिन भर बात होती रही।",
+   "en": "The office talked all day about the news of the cabinet reshuffle.",
+   "ko": "내각 개편 소식에 사무실에서는 하루 종일 그 얘기뿐이었어요.",
+   "blank": "मंत्रिमंडल",
+   "src": "made"
   }
  ],
  "w|मंत्री": [
@@ -39577,6 +40073,22 @@
    "blank": "महत्वपूर्ण"
   }
  ],
+ "w|महफ़िल": [
+  {
+   "text": "शनिवार शाम पुस्तकालय में कविताओं की एक छोटी महफ़िल जमती है।",
+   "en": "On Saturday evenings a small poetry gathering takes place in the library.",
+   "ko": "토요일 저녁이면 도서관에서 작은 시 낭송 모임이 열려요.",
+   "blank": "महफ़िल",
+   "src": "made"
+  },
+  {
+   "text": "प्रोजेक्ट पूरा होने पर दफ़्तर की छत पर गानों की महफ़िल सजी।",
+   "en": "When the project was finished, a musical gathering was held on the office roof.",
+   "ko": "프로젝트가 끝나자 회사 옥상에서 노래 모임이 열렸어요.",
+   "blank": "महफ़िल",
+   "src": "made"
+  }
+ ],
  "w|महल": [
   {
    "text": "पुराना महल पर्यटकों से भरा था।",
@@ -39900,6 +40412,22 @@
    "en": "Meena learns to say a few words in the guests' mother tongue.",
    "ko": "미나는 손님들의 모국어로 몇 마디 하는 법을 익혀 둬요.",
    "blank": "मातृभाषा",
+   "src": "made"
+  }
+ ],
+ "w|मातृभूमि": [
+  {
+   "text": "पुस्तकालय में मातृभूमि पर लिखी कविताओं का एक नया संग्रह आया है।",
+   "en": "A new collection of poems on the motherland has arrived at the library.",
+   "ko": "도서관에 조국을 노래한 새 시집이 들어왔어요.",
+   "blank": "मातृभूमि",
+   "src": "made"
+  },
+  {
+   "text": "विदेश से लौटे नेहा के सहकर्मी कहते हैं कि मातृभूमि की मिट्टी की ख़ुशबू अलग ही है।",
+   "en": "Neha's colleague, back from abroad, says the scent of the motherland's soil is unique.",
+   "ko": "해외에서 돌아온 네하의 동료는 고국 흙냄새는 남다르다고 말해요.",
+   "blank": "मातृभूमि",
    "src": "made"
   }
  ],
@@ -49255,6 +49783,22 @@
    "blank": "सचिव"
   }
  ],
+ "w|सचिवालय": [
+  {
+   "text": "अमित ने पुस्तकालय के नए भवन के लिए सचिवालय में अर्ज़ी दी।",
+   "en": "Amit applied at the secretariat for a new library building.",
+   "ko": "아밋은 도서관 새 건물을 위해 청사에 신청서를 냈어요.",
+   "blank": "सचिवालय",
+   "src": "made"
+  },
+  {
+   "text": "नेहा को एक सरकारी ठेके के काग़ज़ लेकर सचिवालय जाना पड़ा।",
+   "en": "Neha had to go to the secretariat with papers for a government contract.",
+   "ko": "네하는 정부 계약 서류를 들고 청사에 가야 했어요.",
+   "blank": "सचिवालय",
+   "src": "made"
+  }
+ ],
  "w|सच्चा": [
   {
    "text": "सच्चा दोस्त मुश्किल में काम आता है।",
@@ -50393,6 +50937,22 @@
    "src": "made"
   }
  ],
+ "w|समर्थ": [
+  {
+   "text": "अमित चाहता है कि गाँव का हर बच्चा अपने दम पर पढ़ने में समर्थ बने।",
+   "en": "Amit wants every child in the village to become capable of reading on their own.",
+   "ko": "아밋은 마을 아이들 모두가 혼자 책을 읽을 수 있게 되길 바라요.",
+   "blank": "समर्थ",
+   "src": "made"
+  },
+  {
+   "text": "नेहा अकेले पूरा प्रोजेक्ट सँभालने में समर्थ है।",
+   "en": "Neha is capable of handling the whole project alone.",
+   "ko": "네하는 혼자서도 프로젝트 전체를 맡을 수 있어요.",
+   "blank": "समर्थ",
+   "src": "made"
+  }
+ ],
  "w|समर्थक": [
   {
    "text": "रैली में एक समर्थक ने सुनील से कहा कि उनका उम्मीदवार ज़रूर जीतेगा।",
@@ -50628,6 +51188,22 @@
    "en": "After the race Meena reviewed her preparation.",
    "ko": "경기가 끝난 뒤 미나는 자기 준비 과정을 돌아봤어요.",
    "blank": "समीक्षा",
+   "src": "made"
+  }
+ ],
+ "w|समीप": [
+  {
+   "text": "बच्चों की किताबों वाली अलमारी खिड़की के समीप रखी है।",
+   "en": "The shelf of children's books is placed near the window.",
+   "ko": "어린이 책 서가는 창가 가까이에 있어요.",
+   "blank": "समीप",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की मेज़ प्रिंटर के समीप है, इसलिए वहाँ हमेशा शोर रहता है।",
+   "en": "Neha's desk is near the printer, so it's always noisy there.",
+   "ko": "네하 책상은 프린터 가까이 있어서 늘 시끄러워요.",
+   "blank": "समीप",
    "src": "made"
   }
  ],
@@ -51747,6 +52323,22 @@
    "src": "made"
   }
  ],
+ "w|सहारा देना": [
+  {
+   "text": "अमित ने गिरते बूढ़े पाठक को बाँह से सहारा दिया।",
+   "en": "Amit supported the falling old reader by the arm.",
+   "ko": "아밋은 넘어지려는 나이 든 이용자의 팔을 잡아 부축했어요.",
+   "blank": "सहारा दिया",
+   "src": "made"
+  },
+  {
+   "text": "मुश्किल समय में नेहा ने नए सहकर्मी को हिम्मत देकर सहारा दिया।",
+   "en": "In a hard time, Neha supported a new colleague by giving him courage.",
+   "ko": "어려운 때에 네하는 새 동료에게 용기를 북돋워 힘이 되어 줬어요.",
+   "blank": "सहारा दिया",
+   "src": "made"
+  }
+ ],
  "w|सहित": [
   {
    "text": "परिवार सहित सब मेहमान आए।",
@@ -52668,6 +53260,22 @@
    "en": "Puja's principle is that anything unused for a year should be given away.",
    "ko": "푸자의 원칙은 일 년 동안 안 쓴 물건은 기부하는 거예요.",
    "blank": "सिद्धांत",
+   "src": "made"
+  }
+ ],
+ "w|सिद्धि": [
+  {
+   "text": "अमित को पुस्तकालय में बच्चों को पढ़ते देखना अपनी सबसे बड़ी सिद्धि लगती है।",
+   "en": "Amit feels that seeing children read in the library is his greatest achievement.",
+   "ko": "아밋은 도서관에서 아이들이 책 읽는 모습을 보는 게 가장 큰 성취라고 느껴요.",
+   "blank": "सिद्धि",
+   "src": "made"
+  },
+  {
+   "text": "नेहा कहती है कि मेहनत के बिना कोई सिद्धि नहीं मिलती।",
+   "en": "Neha says no accomplishment comes without hard work.",
+   "ko": "네하는 노력 없이는 어떤 성취도 없다고 말해요.",
+   "blank": "सिद्धि",
    "src": "made"
   }
  ],
@@ -54167,6 +54775,22 @@
    "blank": "सौ"
   }
  ],
+ "w|सौंदर्य": [
+  {
+   "text": "पुस्तकालय की पुरानी इमारत का सौंदर्य देखने दूर-दूर से लोग आते हैं।",
+   "en": "People come from far and wide to see the beauty of the old library building.",
+   "ko": "옛 도서관 건물의 아름다움을 보러 먼 데서도 사람들이 와요.",
+   "blank": "सौंदर्य",
+   "src": "made"
+  },
+  {
+   "text": "नेहा के डिज़ाइन में सादगी का अपना ही सौंदर्य है।",
+   "en": "Neha's design has a beauty all its own in its simplicity.",
+   "ko": "네하의 디자인에는 단순함에서 오는 아름다움이 있어요.",
+   "blank": "सौंदर्य",
+   "src": "made"
+  }
+ ],
  "w|सौंपना": [
   {
    "text": "चाबी पड़ोसी को सौंपना सुरक्षित है।",
@@ -54829,6 +55453,22 @@
    "en": "Accepting the new proposal felt right.",
    "ko": "새 제안을 받아들이는 게 맞아 보였어.",
    "blank": "स्वीकार करना"
+  }
+ ],
+ "w|स्वीकृत": [
+  {
+   "text": "अमित ने बताया कि नई किताबों का स्वीकृत बजट पिछले साल से कम है।",
+   "en": "Amit said the approved budget for new books is less than last year's.",
+   "ko": "아밋은 새 책 구입 예산 승인액이 작년보다 적다고 했어요.",
+   "blank": "स्वीकृत",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की छुट्टी की अर्ज़ी आख़िरकार स्वीकृत हो गई।",
+   "en": "Neha's leave application was finally approved.",
+   "ko": "네하의 휴가 신청이 드디어 승인됐어요.",
+   "blank": "स्वीकृत",
+   "src": "made"
   }
  ],
  "w|स्वीकृति": [

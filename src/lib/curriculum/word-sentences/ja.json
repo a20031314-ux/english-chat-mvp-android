@@ -12439,6 +12439,38 @@
    "blank": "一言"
   }
  ],
+ "w|一貫": [
+  {
+   "text": "この劇団は、創立以来一貫して家族をテーマにした作品を上演している。",
+   "en": "Since its founding, this company has consistently staged works about family.",
+   "ko": "이 극단은 창단 이후 일관되게 가족을 주제로 한 작품을 공연하고 있어요.",
+   "blank": "一貫",
+   "src": "made"
+  },
+  {
+   "text": "陽子の農場は、種まきから販売まで一貫して家族で行っている。",
+   "en": "At Yoko's farm, the family handles everything consistently, from sowing to sales.",
+   "ko": "요코의 농장은 씨 뿌리기부터 판매까지 가족이 일관되게 하고 있어요.",
+   "blank": "一貫",
+   "src": "made"
+  }
+ ],
+ "w|一連": [
+  {
+   "text": "一連の公演が終わると、誠はしばらく休みを取ることにした。",
+   "en": "Once the series of performances was over, Makoto decided to take some time off.",
+   "ko": "일련의 공연이 끝나자 마코토는 한동안 쉬기로 했어요.",
+   "blank": "一連",
+   "src": "made"
+  },
+  {
+   "text": "田植えから稲刈りまでの一連の作業を、陽子は手帳に細かく記録している。",
+   "en": "Yoko keeps detailed notes in her planner of the whole series of tasks from rice planting to harvest.",
+   "ko": "요코는 모내기부터 벼 베기까지의 일련의 작업을 수첩에 꼼꼼히 기록하고 있어요.",
+   "blank": "一連",
+   "src": "made"
+  }
+ ],
  "w|一部": [
   {
    "text": "一部だけ見たよ。",
@@ -13357,6 +13389,22 @@
    "en": "I remember my middle school days.",
    "ko": "중학생 때를 떠올려.",
    "blank": "中学生"
+  }
+ ],
+ "w|中小": [
+  {
+   "text": "今回の公演は、地元の中小企業がスポンサーになってくれた。",
+   "en": "This time, local small and medium-sized businesses sponsored the performance.",
+   "ko": "이번 공연은 지역 중소기업이 후원해 주었어요.",
+   "blank": "中小",
+   "src": "made"
+  },
+  {
+   "text": "陽子の畑の野菜は、近くの中小のスーパーに直接卸している。",
+   "en": "Yoko sells the vegetables from her fields directly to small and medium-sized supermarkets nearby.",
+   "ko": "요코의 밭 채소는 근처 중소 슈퍼마켓에 직접 납품하고 있어요.",
+   "blank": "中小",
+   "src": "made"
   }
  ],
  "w|中心": [
@@ -17609,6 +17657,22 @@
    "src": "made"
   }
  ],
+ "w|先頭": [
+  {
+   "text": "カーテンコールでは、誠が先頭に立って観客にお辞儀をした。",
+   "en": "At the curtain call, Makoto stood at the front and bowed to the audience.",
+   "ko": "커튼콜에서는 마코토가 맨 앞에 서서 관객에게 인사했어요.",
+   "blank": "先頭",
+   "src": "made"
+  },
+  {
+   "text": "牛の列の先頭を歩くのは、いつも一番年上の花子だ。",
+   "en": "The one walking at the head of the line of cows is always Hanako, the oldest.",
+   "ko": "소들 행렬의 맨 앞에서 걷는 건 늘 가장 나이 많은 하나코예요.",
+   "blank": "先頭",
+   "src": "made"
+  }
+ ],
  "w|光": [
   {
    "text": "光がまぶしいよ。",
@@ -18317,6 +18381,22 @@
    "blank": "内容"
   }
  ],
+ "w|内蔵": [
+  {
+   "text": "新しい舞台装置には、照明を自動で切り替える機能が内蔵されている。",
+   "en": "The new stage equipment has a built-in function that switches the lighting automatically.",
+   "ko": "새 무대 장치에는 조명을 자동으로 바꾸는 기능이 내장되어 있어요.",
+   "blank": "内蔵",
+   "src": "made"
+  },
+  {
+   "text": "新しいトラクターには、作業の記録を取るコンピューターが内蔵されている。",
+   "en": "The new tractor has a built-in computer that records the work.",
+   "ko": "새 트랙터에는 작업 기록을 남기는 컴퓨터가 내장되어 있어요.",
+   "blank": "内蔵",
+   "src": "made"
+  }
+ ],
  "w|内部": [
   {
    "text": "内部を見せて。",
@@ -18388,6 +18468,22 @@
    "en": "Keiko messed up her turn, and the coach told her to do it again.",
    "ko": "게이코는 턴을 실패해서 코치에게 다시 해 보라는 말을 들었어요.",
    "blank": "再度",
+   "src": "made"
+  }
+ ],
+ "w|再建": [
+  {
+   "text": "火事で焼けた劇場の再建のため、誠たちは募金活動を始めた。",
+   "en": "Makoto and the others started a fundraising campaign to rebuild the theater that had burned down.",
+   "ko": "마코토 일행은 불에 탄 극장을 재건하려고 모금 활동을 시작했어요.",
+   "blank": "再建",
+   "src": "made"
+  },
+  {
+   "text": "大雨で流された農道の再建には、半年近くかかった。",
+   "en": "Rebuilding the farm road washed away by heavy rain took almost half a year.",
+   "ko": "폭우로 쓸려 간 농로를 재건하는 데 반년 가까이 걸렸어요.",
+   "blank": "再建",
    "src": "made"
   }
  ],
@@ -18831,6 +18927,22 @@
    "blank": "処理"
   }
  ],
+ "w|処置": [
+  {
+   "text": "稽古中に役者が足をひねり、スタッフがすぐに応急処置をした。",
+   "en": "An actor twisted his ankle during rehearsal, and the staff gave first aid right away.",
+   "ko": "연습 중에 배우가 발목을 삐어서 스태프가 바로 응급 처치를 했어요.",
+   "blank": "処置",
+   "src": "made"
+  },
+  {
+   "text": "子牛の具合が悪くなり、陽子は獣医に処置を頼んだ。",
+   "en": "The calf got sick, so Yoko asked the vet to treat it.",
+   "ko": "송아지 상태가 나빠져서 요코는 수의사에게 처치를 부탁했어요.",
+   "blank": "処置",
+   "src": "made"
+  }
+ ],
  "w|出かける": [
   {
    "text": "拓也は、取引先に行くため昼前に会社を出かけた。",
@@ -19204,6 +19316,22 @@
    "en": "Aoi divided the big cake into eight pieces and handed them out to everyone.",
    "ko": "아오이는 큰 케이크를 여덟 조각으로 나눠 모두에게 나눠 줬어요.",
    "blank": "分割",
+   "src": "made"
+  }
+ ],
+ "w|分子": [
+  {
+   "text": "劇の中で、誠は政府に反抗する危険分子と疑われる青年を演じた。",
+   "en": "In the play, Makoto played a young man suspected of being a dangerous element rebelling against the government.",
+   "ko": "극 중에서 마코토는 정부에 반항하는 위험 분자로 의심받는 청년을 연기했어요.",
+   "blank": "分子",
+   "src": "made"
+  },
+  {
+   "text": "陽子の娘は、大学で植物の分子の仕組みを研究している。",
+   "en": "Yoko's daughter is studying the molecular mechanisms of plants at university.",
+   "ko": "요코의 딸은 대학에서 식물의 분자 구조를 연구하고 있어요.",
+   "blank": "分子",
    "src": "made"
   }
  ],
@@ -22395,6 +22523,22 @@
    "src": "made"
   }
  ],
+ "w|合戦": [
+  {
+   "text": "戦国時代の合戦を再現した場面では、舞台に大勢の役者が並んだ。",
+   "en": "In the scene recreating a Warring States battle, a large number of actors lined the stage.",
+   "ko": "전국 시대 전투를 재현한 장면에서는 무대에 많은 배우가 늘어섰어요.",
+   "blank": "合戦",
+   "src": "made"
+  },
+  {
+   "text": "陽子の村には、昔ここで大きな合戦があったという言い伝えが残っている。",
+   "en": "A legend remains in Yoko's village that a big battle once took place here.",
+   "ko": "요코의 마을에는 옛날 여기서 큰 전투가 있었다는 전설이 남아 있어요.",
+   "blank": "合戦",
+   "src": "made"
+  }
+ ],
  "w|合格": [
   {
    "text": "試験に合格したよ！",
@@ -23784,6 +23928,22 @@
    "en": "People of various nationalities live in this building.",
    "ko": "이 맨션에는 여러 국적의 사람들이 살아요.",
    "blank": "国籍",
+   "src": "made"
+  }
+ ],
+ "w|国語": [
+  {
+   "text": "誠は高校の国語の授業で読んだ小説を、いつか舞台にしたいと思っている。",
+   "en": "Makoto hopes to stage someday a novel he read in his high school Japanese class.",
+   "ko": "마코토는 고등학교 국어 시간에 읽은 소설을 언젠가 무대로 만들고 싶어 해요.",
+   "blank": "国語",
+   "src": "made"
+  },
+  {
+   "text": "陽子は若い頃、中学校で国語の先生をしていた。",
+   "en": "When she was young, Yoko worked as a Japanese teacher at a junior high school.",
+   "ko": "요코는 젊었을 때 중학교에서 국어 선생님을 했어요.",
+   "blank": "国語",
    "src": "made"
   }
  ],
@@ -26695,6 +26855,22 @@
    "src": "made"
   }
  ],
+ "w|孤立": [
+  {
+   "text": "村で孤立していく男を演じるうちに、誠は役の寂しさに共感するようになった。",
+   "en": "While playing a man who becomes isolated in his village, Makoto came to understand the character's loneliness.",
+   "ko": "마을에서 고립되어 가는 남자를 연기하는 동안 마코토는 그 역의 외로움에 공감하게 되었어요.",
+   "blank": "孤立",
+   "src": "made"
+  },
+  {
+   "text": "大雪で道がふさがり、陽子の集落は三日間孤立した。",
+   "en": "Heavy snow blocked the roads, and Yoko's hamlet was cut off for three days.",
+   "ko": "폭설로 길이 막혀 요코의 마을은 사흘 동안 고립됐어요.",
+   "blank": "孤立",
+   "src": "made"
+  }
+ ],
  "w|学び": [
   {
    "text": "取材の一つひとつが、健太にとって新しい学びになる。",
@@ -26884,6 +27060,22 @@
    "en": "On the high school softball team, Misaki always saved the team with her solid defense.",
    "ko": "고등학교 소프트볼부에서 미사키는 늘 탄탄한 수비로 팀을 구했어요.",
    "blank": "守備",
+   "src": "made"
+  }
+ ],
+ "w|守護": [
+  {
+   "text": "この劇場には、昔から舞台の守護神として小さな神棚がまつられている。",
+   "en": "A small shrine has long been kept in this theater for the guardian deity of the stage.",
+   "ko": "이 극장에는 예전부터 무대의 수호신으로 작은 가미다나가 모셔져 있어요.",
+   "blank": "守護",
+   "src": "made"
+  },
+  {
+   "text": "村の入り口には、田畑の守護を願う古いお地蔵さんが立っている。",
+   "en": "At the entrance to the village stands an old Jizo statue, prayed to for the protection of the fields.",
+   "ko": "마을 입구에는 논밭을 지켜 달라고 비는 오래된 지장보살상이 서 있어요.",
+   "blank": "守護",
    "src": "made"
   }
  ],
@@ -27647,6 +27839,22 @@
    "blank": "寝てない"
   }
  ],
+ "w|審判": [
+  {
+   "text": "演劇コンクールの審判は、誠の演技に最高点をつけた。",
+   "en": "The judge at the drama competition gave Makoto's performance the highest score.",
+   "ko": "연극 경연 대회 심사원은 마코토의 연기에 최고점을 줬어요.",
+   "blank": "審判",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、日曜日に村の少年野球大会で審判を務めた。",
+   "en": "Yoko served as umpire at the village youth baseball tournament on Sunday.",
+   "ko": "요코는 일요일에 마을 소년 야구 대회에서 심판을 맡았어요.",
+   "blank": "審判",
+   "src": "made"
+  }
+ ],
  "w|審査": [
   {
    "text": "審査に通ったよ。",
@@ -28141,6 +28349,22 @@
    "blank": "少ない"
   }
  ],
+ "w|少佐": [
+  {
+   "text": "誠が演じる少佐は、部下思いの優しい軍人として描かれている。",
+   "en": "The major Makoto plays is depicted as a kind officer who cares about his men.",
+   "ko": "마코토가 연기하는 소령은 부하를 아끼는 다정한 군인으로 그려져 있어요.",
+   "blank": "少佐",
+   "src": "made"
+  },
+  {
+   "text": "陽子の曽祖父は、陸の部隊を率いる少佐だったと家族に伝わっている。",
+   "en": "It has been passed down in Yoko's family that her great-grandfather was a major who led a ground unit.",
+   "ko": "요코의 증조할아버지는 지상 부대를 이끄는 소령이었다고 집안에 전해져요.",
+   "blank": "少佐",
+   "src": "made"
+  }
+ ],
  "w|少女": [
   {
    "text": "少女が笑ってる。",
@@ -28569,6 +28793,22 @@
    "en": "The result will be affected.",
    "ko": "결과가 좌우돼.",
    "blank": "左右"
+  }
+ ],
+ "w|左翼": [
+  {
+   "text": "その芝居は、学生運動の時代の左翼の若者たちを描いている。",
+   "en": "That play depicts young leftists in the era of the student movement.",
+   "ko": "그 연극은 학생 운동 시대의 좌익 젊은이들을 그리고 있어요.",
+   "blank": "左翼",
+   "src": "made"
+  },
+  {
+   "text": "陽子の祖父は若い頃、左翼の農民運動に加わっていたそうだ。",
+   "en": "Yoko's grandfather apparently joined a leftist farmers' movement when he was young.",
+   "ko": "요코의 할아버지는 젊었을 때 좌익 농민 운동에 참여했대요.",
+   "blank": "左翼",
+   "src": "made"
   }
  ],
  "w|巨人": [
@@ -29414,6 +29654,22 @@
    "en": "The two brothers sat apart in the yard without speaking to each other.",
    "ko": "형과 남동생은 마당에서 말도 안 하고 따로 앉아 있었어요.",
    "blank": "庭",
+   "src": "made"
+  }
+ ],
+ "w|庶民": [
+  {
+   "text": "江戸の庶民の暮らしを描いた喜劇は、毎回満席になる。",
+   "en": "The comedy about the lives of ordinary people in Edo sells out every time.",
+   "ko": "에도 서민의 삶을 그린 희극은 매번 만석이 돼요.",
+   "blank": "庶民",
+   "src": "made"
+  },
+  {
+   "text": "この村の米は、昔から庶民の食卓を支えてきた。",
+   "en": "The rice from this village has long supported the tables of ordinary people.",
+   "ko": "이 마을의 쌀은 옛날부터 서민의 밥상을 지켜 왔어요.",
+   "blank": "庶民",
    "src": "made"
   }
  ],
@@ -33595,6 +33851,22 @@
    "src": "made"
   }
  ],
+ "w|推理": [
+  {
+   "text": "観客は、探偵役の誠の推理を息をのんで見守った。",
+   "en": "The audience held their breath as Makoto, playing the detective, laid out his deductions.",
+   "ko": "관객은 탐정 역을 맡은 마코토의 추리를 숨죽이고 지켜봤어요.",
+   "blank": "推理",
+   "src": "made"
+  },
+  {
+   "text": "陽子は夜、農作業を終えてから推理小説を読むのが楽しみだ。",
+   "en": "Yoko enjoys reading mystery novels at night after finishing her farm work.",
+   "ko": "요코는 밤에 농사일을 마치고 추리 소설을 읽는 게 낙이에요.",
+   "blank": "推理",
+   "src": "made"
+  }
+ ],
  "w|推薦": [
   {
    "text": "健太は先生の推薦で、生徒会の書記に立候補した。",
@@ -34971,6 +35243,22 @@
    "blank": "料金"
   }
  ],
+ "w|斜め": [
+  {
+   "text": "誠の席は舞台を斜めから見る位置で、役者の顔がよく見えなかった。",
+   "en": "Makoto's seat looked at the stage from an angle, so he couldn't see the actors' faces well.",
+   "ko": "마코토의 자리는 무대를 비스듬히 보는 위치라서 배우 얼굴이 잘 안 보였어요.",
+   "blank": "斜め",
+   "src": "made"
+  },
+  {
+   "text": "陽子の畑では、強い風で斜めに傾いたトマトの支柱を直す作業が続いた。",
+   "en": "At Yoko's farm, the work of straightening tomato stakes tilted by strong winds went on.",
+   "ko": "요코의 밭에서는 센 바람에 비스듬히 기운 토마토 지지대를 바로잡는 일이 이어졌어요.",
+   "blank": "斜め",
+   "src": "made"
+  }
+ ],
  "w|断る": [
   {
    "text": "誘いを断るのが苦手だ。",
@@ -35265,6 +35553,22 @@
    "src": "made"
   }
  ],
+ "w|施行": [
+  {
+   "text": "新しい条例の施行で、劇場の客席には禁煙の表示が増えた。",
+   "en": "With the new ordinance taking effect, more no-smoking signs went up in the theater seats.",
+   "ko": "새 조례가 시행되면서 극장 객석에 금연 표시가 늘었어요.",
+   "blank": "施行",
+   "src": "made"
+  },
+  {
+   "text": "新しい農業法の施行に合わせて、陽子は帳簿のつけ方を変えた。",
+   "en": "Yoko changed how she kept her books to match the new agricultural law coming into effect.",
+   "ko": "요코는 새 농업법 시행에 맞춰 장부 쓰는 법을 바꿨어요.",
+   "blank": "施行",
+   "src": "made"
+  }
+ ],
  "w|施設": [
   {
    "text": "この施設、広いね。",
@@ -35426,6 +35730,22 @@
    "en": "On the Sunday of the race, the sky was clear from the morning.",
    "ko": "대회 날인 일요일은 아침부터 구름 한 점 없이 맑았어요.",
    "blank": "日曜日",
+   "src": "made"
+  }
+ ],
+ "w|日本一": [
+  {
+   "text": "この劇団は、日本一笑える喜劇を作ることを目標にしている。",
+   "en": "This theater company aims to create the funniest comedy in Japan.",
+   "ko": "이 극단은 일본 최고로 웃긴 희극을 만드는 것을 목표로 하고 있어요.",
+   "blank": "日本一",
+   "src": "made"
+  },
+  {
+   "text": "陽子が育てたメロンは、品評会で日本一に選ばれた。",
+   "en": "The melon Yoko grew was chosen as the best in Japan at the fair.",
+   "ko": "요코가 키운 멜론이 품평회에서 일본 최고로 뽑혔어요.",
+   "blank": "日本一",
    "src": "made"
   }
  ],
@@ -36903,6 +37223,22 @@
    "src": "made"
   }
  ],
+ "w|本能": [
+  {
+   "text": "誠は、舞台の上では本能のままに動くのが一番だと後輩に話した。",
+   "en": "Makoto told his junior actors that on stage it's best to move on instinct.",
+   "ko": "마코토는 무대 위에서는 본능대로 움직이는 게 제일이라고 후배에게 말했어요.",
+   "blank": "本能",
+   "src": "made"
+  },
+  {
+   "text": "牛は雨が近づくと本能で小屋に戻ってくる、と陽子は言う。",
+   "en": "Yoko says the cows come back to the barn by instinct when rain is approaching.",
+   "ko": "요코는 소들이 비가 다가오면 본능적으로 외양간으로 돌아온다고 말해요.",
+   "blank": "本能",
+   "src": "made"
+  }
+ ],
  "w|本質": [
   {
    "text": "トレーナーは、健康の本質は毎日の習慣にあると言った。",
@@ -37357,6 +37693,22 @@
    "ko": "이런 차림이면 운동 좀 하는 사람 같지만 전혀 안 해.",
    "blank": "格好",
    "src": "tatoeba:217381 en:54690/CM"
+  }
+ ],
+ "w|格差": [
+  {
+   "text": "都会と地方の文化の格差をテーマにした新作が、話題になっている。",
+   "en": "A new play about the cultural gap between cities and rural areas is getting attention.",
+   "ko": "도시와 지방의 문화 격차를 주제로 한 신작이 화제가 되고 있어요.",
+   "blank": "格差",
+   "src": "made"
+  },
+  {
+   "text": "都市と農村の所得の格差について、陽子はテレビの取材に答えた。",
+   "en": "Yoko answered a TV interviewer's questions about the income gap between cities and farming villages.",
+   "ko": "요코는 도시와 농촌의 소득 격차에 대해 텔레비전 취재에 답했어요.",
+   "blank": "格差",
+   "src": "made"
   }
  ],
  "w|格闘": [
@@ -37984,6 +38336,22 @@
    "en": "People change when they gain power.",
    "ko": "권력을 가지면 사람은 변해요.",
    "blank": "権力",
+   "src": "made"
+  }
+ ],
+ "w|権威": [
+  {
+   "text": "演劇界の権威として知られる評論家が、誠の舞台を絶賛した。",
+   "en": "A critic known as an authority in the theater world praised Makoto's performance highly.",
+   "ko": "연극계의 권위자로 알려진 평론가가 마코토의 무대를 극찬했어요.",
+   "blank": "権威",
+   "src": "made"
+  },
+  {
+   "text": "土壌研究の権威である教授が、陽子の畑を見学に来た。",
+   "en": "A professor who is an authority on soil research came to visit Yoko's fields.",
+   "ko": "토양 연구의 권위자인 교수가 요코의 밭을 견학하러 왔어요.",
+   "blank": "権威",
    "src": "made"
   }
  ],
@@ -38784,6 +39152,22 @@
    "en": "Office workers buy bread at Aoi's shop before working overtime.",
    "ko": "회사원 손님들은 야근 전에 아오이네 가게에서 빵을 사 가요.",
    "blank": "残業",
+   "src": "made"
+  }
+ ],
+ "w|殴る": [
+  {
+   "text": "喧嘩の場面では、相手を殴るふりをするタイミングが難しい。",
+   "en": "In the fight scene, the timing of pretending to hit the other actor is difficult.",
+   "ko": "싸움 장면에서는 상대를 때리는 척하는 타이밍이 어려워요.",
+   "blank": "殴る",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、子どもの頃に兄に殴られて泣いた日のことを笑って話した。",
+   "en": "Yoko laughed as she talked about the day as a child when her brother hit her and she cried.",
+   "ko": "요코는 어릴 때 오빠한테 맞아서 울었던 날을 웃으며 이야기했어요.",
+   "blank": "殴られて",
    "src": "made"
   }
  ],
@@ -40091,6 +40475,22 @@
    "blank": "海"
   }
  ],
+ "w|海兵": [
+  {
+   "text": "誠は、戦地から帰った若い海兵の役を演じるために髪を短く切った。",
+   "en": "Makoto cut his hair short to play a young marine returning from the front.",
+   "ko": "마코토는 전쟁터에서 돌아온 젊은 해병 역을 하려고 머리를 짧게 잘랐어요.",
+   "blank": "海兵",
+   "src": "made"
+  },
+  {
+   "text": "陽子の叔父は、若い頃に海兵として長く船に乗っていたという。",
+   "en": "Yoko's uncle apparently spent a long time on ships as a marine when he was young.",
+   "ko": "요코의 삼촌은 젊었을 때 해병으로 오랫동안 배를 탔다고 해요.",
+   "blank": "海兵",
+   "src": "made"
+  }
+ ],
  "w|海外": [
   {
    "text": "海外に行きたい。",
@@ -40150,6 +40550,22 @@
    "en": "Aoi's grandfather apparently used to work in the navy.",
    "ko": "아오이의 할아버지는 옛날에 해군에서 일했대요.",
    "blank": "海軍",
+   "src": "made"
+  }
+ ],
+ "w|浸透": [
+  {
+   "text": "演劇の楽しさが若い世代に浸透するよう、劇団は学校公演を増やしている。",
+   "en": "The company is doing more school performances so that the joy of theater spreads among young people.",
+   "ko": "연극의 즐거움이 젊은 세대에 스며들도록 극단은 학교 공연을 늘리고 있어요.",
+   "blank": "浸透",
+   "src": "made"
+  },
+  {
+   "text": "有機農業の考え方は、少しずつ若い農家にも浸透してきた。",
+   "en": "The idea of organic farming has gradually spread among young farmers too.",
+   "ko": "유기 농업의 생각은 조금씩 젊은 농가에도 스며들었어요.",
+   "blank": "浸透",
    "src": "made"
   }
  ],
@@ -40801,6 +41217,22 @@
    "en": "This manga's good.",
    "ko": "이 만화 재밌어.",
    "blank": "漫画"
+  }
+ ],
+ "w|潜入": [
+  {
+   "text": "スパイが敵の基地に潜入する場面で、舞台は真っ暗になった。",
+   "en": "The stage went completely dark in the scene where the spy sneaks into the enemy base.",
+   "ko": "스파이가 적 기지에 잠입하는 장면에서 무대는 캄캄해졌어요.",
+   "blank": "潜入",
+   "src": "made"
+  },
+  {
+   "text": "夜中にイノシシが畑に潜入しないよう、陽子は電気柵を張った。",
+   "en": "Yoko put up an electric fence so that wild boars wouldn't sneak into the field at night.",
+   "ko": "요코는 밤중에 멧돼지가 밭에 들어오지 않도록 전기 울타리를 쳤어요.",
+   "blank": "潜入",
+   "src": "made"
   }
  ],
  "w|潜在": [
@@ -41623,6 +42055,22 @@
    "src": "made"
   }
  ],
+ "w|特有": [
+  {
+   "text": "古い劇場特有のほこりっぽい匂いが、誠は嫌いではない。",
+   "en": "Makoto doesn't dislike the dusty smell peculiar to old theaters.",
+   "ko": "마코토는 오래된 극장 특유의 먼지 냄새가 싫지 않아요.",
+   "blank": "特有",
+   "src": "made"
+  },
+  {
+   "text": "この地域特有の赤い土が、甘いさつまいもを育てる。",
+   "en": "The red soil peculiar to this area grows sweet potatoes.",
+   "ko": "이 지역 특유의 붉은 흙이 달콤한 고구마를 키워요.",
+   "blank": "特有",
+   "src": "made"
+  }
+ ],
  "w|特殊": [
   {
    "text": "特殊なケースだね。",
@@ -41693,6 +42141,22 @@
    "en": "Do you have a dog?",
    "ko": "개 키우고 있어?",
    "blank": "犬"
+  }
+ ],
+ "w|犯す": [
+  {
+   "text": "主人公が罪を犯す場面で、客席は静まり返った。",
+   "en": "The audience fell silent in the scene where the main character commits a crime.",
+   "ko": "주인공이 죄를 저지르는 장면에서 객석은 조용해졌어요.",
+   "blank": "犯す",
+   "src": "made"
+  },
+  {
+   "text": "農薬の使い方を誤ると、知らないうちに法律を犯すことにもなる。",
+   "en": "If you use pesticides wrongly, you might end up breaking the law without knowing it.",
+   "ko": "농약을 잘못 쓰면 모르는 사이에 법을 어기게 될 수도 있어요.",
+   "blank": "犯す",
+   "src": "made"
   }
  ],
  "w|犯人": [
@@ -44831,6 +45295,22 @@
    "src": "made"
   }
  ],
+ "w|祝い": [
+  {
+   "text": "千秋楽の後、劇団員たちは誠の誕生日の祝いを楽屋で開いた。",
+   "en": "After the final performance, the company members held a birthday celebration for Makoto in the dressing room.",
+   "ko": "마지막 공연 후 단원들은 분장실에서 마코토의 생일 축하 자리를 열었어요.",
+   "blank": "祝い",
+   "src": "made"
+  },
+  {
+   "text": "収穫の祝いに、陽子は近所の人を呼んで餅つきをした。",
+   "en": "To celebrate the harvest, Yoko invited the neighbors and made rice cakes.",
+   "ko": "수확을 축하하며 요코는 이웃을 불러 떡메치기를 했어요.",
+   "blank": "祝い",
+   "src": "made"
+  }
+ ],
  "w|神": [
   {
    "text": "神対応だったよ。",
@@ -45063,6 +45543,22 @@
    "src": "made"
   }
  ],
+ "w|秩序": [
+  {
+   "text": "誠の役は、乱れた町の秩序を取り戻そうとする若い役人だった。",
+   "en": "Makoto's role was a young official trying to restore order to a town in chaos.",
+   "ko": "마코토의 역은 어지러워진 마을의 질서를 되찾으려는 젊은 관리였어요.",
+   "blank": "秩序",
+   "src": "made"
+  },
+  {
+   "text": "鶏の群れにも決まった秩序があり、強い順にえさを食べる。",
+   "en": "Even a flock of chickens has a fixed order, and they eat in order of strength.",
+   "ko": "닭 무리에도 정해진 질서가 있어서 힘센 순서대로 모이를 먹어요.",
+   "blank": "秩序",
+   "src": "made"
+  }
+ ],
  "w|移住": [
   {
    "text": "大輔の姉は、海外に移住してもう五年になる。",
@@ -45290,6 +45786,22 @@
    "en": "Ryosuke's factory is apparently running at night now too.",
    "ko": "료스케의 공장은 요즘 밤에도 가동한대요.",
    "blank": "稼働",
+   "src": "made"
+  }
+ ],
+ "w|積む": [
+  {
+   "text": "誠は、小さな劇場で経験を積んでから主役を任されるようになった。",
+   "en": "After gaining experience at a small theater, Makoto came to be given leading roles.",
+   "ko": "마코토는 작은 극장에서 경험을 쌓은 뒤 주연을 맡게 되었어요.",
+   "blank": "積んで",
+   "src": "made"
+  },
+  {
+   "text": "陽子は収穫したキャベツをトラックの荷台に積んだ。",
+   "en": "Yoko loaded the harvested cabbages onto the back of the truck.",
+   "ko": "요코는 수확한 양배추를 트럭 짐칸에 실었어요.",
+   "blank": "積んだ",
    "src": "made"
   }
  ],
@@ -47581,6 +48093,22 @@
    "blank": "肌"
   }
  ],
+ "w|肝心": [
+  {
+   "text": "稽古を重ねても、肝心のせりふを忘れては意味がないと演出家は言った。",
+   "en": "The director said there was no point in all the rehearsals if you forget the most important lines.",
+   "ko": "연출가는 연습을 거듭해도 가장 중요한 대사를 잊으면 의미가 없다고 말했어요.",
+   "blank": "肝心",
+   "src": "made"
+  },
+  {
+   "text": "野菜づくりで肝心なのは土だ、と陽子は口癖のように言う。",
+   "en": "Yoko always says that the key to growing vegetables is the soil.",
+   "ko": "요코는 채소 농사에서 가장 중요한 건 흙이라고 입버릇처럼 말해요.",
+   "blank": "肝心",
+   "src": "made"
+  }
+ ],
  "w|肩": [
   {
    "text": "肩が痛いよ。",
@@ -48154,6 +48682,38 @@
    "en": "The man Yoko met on the beach claimed to be a professional surfer.",
    "ko": "해변에서 만난 남자는 자칭 프로 서퍼였어요.",
    "blank": "自称",
+   "src": "made"
+  }
+ ],
+ "w|自立": [
+  {
+   "text": "親元を離れて自立を目指す少女の物語が、今月の演目だ。",
+   "en": "This month's play is the story of a girl who leaves her parents' home and strives for independence.",
+   "ko": "부모 곁을 떠나 자립을 꿈꾸는 소녀의 이야기가 이번 달 공연 작품이에요.",
+   "blank": "自立",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、農業で経済的な自立を果たした若者を応援している。",
+   "en": "Yoko supports young people who have achieved financial independence through farming.",
+   "ko": "요코는 농업으로 경제적 자립을 이룬 젊은이들을 응원하고 있어요.",
+   "blank": "自立",
+   "src": "made"
+  }
+ ],
+ "w|自衛": [
+  {
+   "text": "誠は、自衛のために剣を抜く侍の役を何度も稽古した。",
+   "en": "Makoto rehearsed many times the role of a samurai who draws his sword in self-defense.",
+   "ko": "마코토는 자신을 지키려고 칼을 뽑는 사무라이 역을 여러 번 연습했어요.",
+   "blank": "自衛",
+   "src": "made"
+  },
+  {
+   "text": "村では、獣害に対する自衛のために猟師の免許を取る農家が増えた。",
+   "en": "In the village, more farmers have gotten hunting licenses to protect themselves against damage from wild animals.",
+   "ko": "마을에서는 짐승 피해에 맞서 스스로 지키려고 사냥 면허를 따는 농가가 늘었어요.",
+   "blank": "自衛",
    "src": "made"
   }
  ],
@@ -48982,6 +49542,22 @@
    "en": "At Chihiro's company, there is an event to welcome new employees in spring.",
    "ko": "치히로의 회사에서는 봄에 신입 환영 행사가 있어요.",
    "blank": "行事",
+   "src": "made"
+  }
+ ],
+ "w|行使": [
+  {
+   "text": "劇の中で、王は自分の権力を行使して村人を追い出した。",
+   "en": "In the play, the king used his power to drive out the villagers.",
+   "ko": "극 중에서 왕은 자신의 권력을 행사해 마을 사람들을 쫓아냈어요.",
+   "blank": "行使",
+   "src": "made"
+  },
+  {
+   "text": "村の農家は、水を使う権利の行使について話し合いを重ねた。",
+   "en": "The village farmers held many discussions about exercising their water rights.",
+   "ko": "마을 농가들은 물을 쓰는 권리의 행사에 대해 여러 번 의논했어요.",
+   "blank": "行使",
    "src": "made"
   }
  ],
@@ -50035,6 +50611,22 @@
    "en": "I started on a small scale.",
    "ko": "소규모로 시작했어.",
    "blank": "規模"
+  }
+ ],
+ "w|覗く": [
+  {
+   "text": "開演前、誠は幕のすき間から客席をそっと覗いた。",
+   "en": "Before the show began, Makoto quietly peeked at the audience through a gap in the curtain.",
+   "ko": "개막 전에 마코토는 막 틈으로 객석을 살짝 엿봤어요.",
+   "blank": "覗いた",
+   "src": "made"
+  },
+  {
+   "text": "陽子は毎朝、鶏小屋を覗いて卵があるか確かめる。",
+   "en": "Every morning, Yoko peeks into the henhouse to check for eggs.",
+   "ko": "요코는 매일 아침 닭장을 들여다보고 달걀이 있는지 확인해요.",
+   "blank": "覗いて",
+   "src": "made"
   }
  ],
  "w|覚える": [
@@ -52253,6 +52845,22 @@
    "en": "I want to reduce the burden.",
    "ko": "부담을 줄이고 싶어.",
    "blank": "負担"
+  }
+ ],
+ "w|財団": [
+  {
+   "text": "この劇場は、芸術を支援する財団によって運営されている。",
+   "en": "This theater is run by a foundation that supports the arts.",
+   "ko": "이 극장은 예술을 지원하는 재단이 운영하고 있어요.",
+   "blank": "財団",
+   "src": "made"
+  },
+  {
+   "text": "農業を支援する財団から、陽子の農場に助成金が出た。",
+   "en": "Yoko's farm received a grant from a foundation that supports agriculture.",
+   "ko": "농업을 지원하는 재단에서 요코의 농장에 보조금이 나왔어요.",
+   "blank": "財団",
+   "src": "made"
   }
  ],
  "w|財布": [
@@ -56919,6 +57527,22 @@
    "src": "made"
   }
  ],
+ "w|陸軍": [
+  {
+   "text": "誠は、昔の陸軍の制服を着て舞台に立った。",
+   "en": "Makoto went on stage wearing an old army uniform.",
+   "ko": "마코토는 옛 육군 제복을 입고 무대에 섰어요.",
+   "blank": "陸軍",
+   "src": "made"
+  },
+  {
+   "text": "この辺りの土地は、戦前は陸軍の演習場だったらしい。",
+   "en": "The land around here was apparently an army training ground before the war.",
+   "ko": "이 근처 땅은 전쟁 전에는 육군 훈련장이었대요.",
+   "blank": "陸軍",
+   "src": "made"
+  }
+ ],
  "w|隊長": [
   {
    "text": "佐藤さんは学生時代、山岳部の隊長を務めていた。",
@@ -57741,6 +58365,22 @@
    "en": "They started a revolution.",
    "ko": "혁명을 일으킨 거야.",
    "blank": "革命"
+  }
+ ],
+ "w|革新": [
+  {
+   "text": "その演出家は、伝統芸能に革新をもたらした人として知られている。",
+   "en": "That director is known as someone who brought innovation to traditional performing arts.",
+   "ko": "그 연출가는 전통 예능에 혁신을 가져온 사람으로 알려져 있어요.",
+   "blank": "革新",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、ドローンで肥料をまく技術革新に期待している。",
+   "en": "Yoko has high hopes for the technological innovation of spreading fertilizer by drone.",
+   "ko": "요코는 드론으로 비료를 뿌리는 기술 혁신에 기대를 걸고 있어요.",
+   "blank": "革新",
+   "src": "made"
   }
  ],
  "w|靴": [
