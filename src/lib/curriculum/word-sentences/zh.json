@@ -1501,6 +1501,22 @@
    "blank": "不然"
   }
  ],
+ "w|不爽": [
+  {
+   "text": "老朋友坦白说，那次张伟没来送他，他心里挺不爽的。",
+   "en": "His old friend admitted that he felt pretty annoyed when Zhang Wei didn't come to see him off.",
+   "ko": "옛 친구는 그때 장웨이가 배웅하러 오지 않아서 속으로 꽤 언짢았다고 털어놨어요.",
+   "blank": "不爽",
+   "src": "made"
+  },
+  {
+   "text": "那个顾客砍了半天价最后又不买，刘芳心里有些不爽。",
+   "en": "That customer haggled forever and then didn't buy anything, which left Liu Fang a bit annoyed.",
+   "ko": "그 손님이 한참 값을 깎더니 결국 안 사서 류팡은 좀 언짢았어요.",
+   "blank": "不爽",
+   "src": "made"
+  }
+ ],
  "w|不用": [
   {
    "text": "不用了。",
@@ -2967,6 +2983,22 @@
    "blank": "乐意"
   }
  ],
+ "w|乐观": [
+  {
+   "text": "张伟在信里写道，不管遇到什么困难，他都会保持乐观。",
+   "en": "Zhang Wei wrote in his letter that no matter what difficulties he met, he would stay optimistic.",
+   "ko": "장웨이는 편지에 어떤 어려움을 만나도 낙관적인 마음을 잃지 않겠다고 썼어요.",
+   "blank": "乐观",
+   "src": "made"
+  },
+  {
+   "text": "刘芳对自己的小摊很乐观，觉得周末一定能卖出不少。",
+   "en": "Liu Fang is optimistic about her stall and thinks she'll sell plenty this weekend.",
+   "ko": "류팡은 자기 노점을 낙관해서 이번 주말에 꽤 많이 팔 거라고 생각해요.",
+   "blank": "乐观",
+   "src": "made"
+  }
+ ],
  "w|乐趣": [
   {
    "text": "读书给我带来很多乐趣。",
@@ -3274,6 +3306,22 @@
    "en": "Lin Jing grabbed tickets the moment they went on sale, hoping to get a window seat.",
    "ko": "린징은 표가 풀리자마자 창가 자리를 잡으려고 바로 예매에 뛰어들었어요.",
    "blank": "争取",
+   "src": "made"
+  }
+ ],
+ "w|争夺": [
+  {
+   "text": "信里提到，小时候他们常为了争夺一只风筝吵架。",
+   "en": "The letter mentioned that as kids they often fought over a kite.",
+   "ko": "편지에는 어릴 때 연 하나를 서로 차지하려고 자주 싸웠다는 이야기가 있었어요.",
+   "blank": "争夺",
+   "src": "made"
+  },
+  {
+   "text": "两个顾客为了争夺最后一套邮票吵了起来。",
+   "en": "Two customers started arguing as they fought over the last set of stamps.",
+   "ko": "손님 두 명이 마지막 우표 세트를 서로 차지하려고 말다툼을 벌였어요.",
+   "blank": "争夺",
    "src": "made"
   }
  ],
@@ -3949,6 +3997,22 @@
    "blank": "亲自"
   }
  ],
+ "w|亲近": [
+  {
+   "text": "分开这么多年，张伟和老朋友依然很亲近。",
+   "en": "After so many years apart, Zhang Wei and his old friend are still close.",
+   "ko": "이렇게 오래 떨어져 지냈어도 장웨이와 옛 친구는 여전히 가까워요.",
+   "blank": "亲近",
+   "src": "made"
+  },
+  {
+   "text": "刘芳和附近几个摊主越来越亲近，常互相帮忙看摊。",
+   "en": "Liu Fang has grown closer to the nearby vendors, and they often mind each other's stalls.",
+   "ko": "류팡은 근처 노점 주인들과 점점 가까워져서 서로 가게를 봐 주곤 해요.",
+   "blank": "亲近",
+   "src": "made"
+  }
+ ],
  "w|人": [
   {
    "text": "人多吗？",
@@ -4096,6 +4160,22 @@
    "en": "The ski resort didn't have enough snow, so it had to make artificial snow.",
    "ko": "스키장에 눈이 모자라서 인공 눈을 만들어야 했어요.",
    "blank": "人工",
+   "src": "made"
+  }
+ ],
+ "w|人心": [
+  {
+   "text": "老朋友写道，村里新来的医生很得人心，大家都喜欢她。",
+   "en": "His old friend wrote that the new village doctor has won people's hearts, and everyone likes her.",
+   "ko": "옛 친구는 마을에 새로 온 의사가 인심을 얻어서 모두 좋아한다고 썼어요.",
+   "blank": "人心",
+   "src": "made"
+  },
+  {
+   "text": "市场里的老规矩是明码标价，这样才能赢得人心。",
+   "en": "The market's old rule is to mark prices clearly—that's how you win people's trust.",
+   "ko": "시장의 오래된 규칙은 값을 분명히 써 붙이는 건데, 그래야 사람들의 마음을 얻어요.",
+   "blank": "人心",
    "src": "made"
   }
  ],
@@ -4933,6 +5013,22 @@
    "src": "made"
   }
  ],
+ "w|以免": [
+  {
+   "text": "张伟把信放进塑料袋里，以免被雨淋湿。",
+   "en": "Zhang Wei put the letter in a plastic bag so it wouldn't get wet in the rain.",
+   "ko": "장웨이는 비에 젖지 않도록 편지를 비닐봉지에 넣었어요.",
+   "blank": "以免",
+   "src": "made"
+  },
+  {
+   "text": "刘芳用旧报纸把瓷器包好，以免路上摔碎。",
+   "en": "Liu Fang wrapped the porcelain in old newspaper so it wouldn't break on the way.",
+   "ko": "류팡은 가는 길에 깨지지 않도록 도자기를 헌 신문지로 쌌어요.",
+   "blank": "以免",
+   "src": "made"
+  }
+ ],
  "w|以前": [
   {
    "text": "我以前来过。",
@@ -5703,6 +5799,22 @@
    "blank": "伤心"
   }
  ],
+ "w|伪装": [
+  {
+   "text": "张伟写道，当年他们为了逃课，还把自己伪装成送报的。",
+   "en": "Zhang Wei wrote that back then they even disguised themselves as newspaper boys to skip class.",
+   "ko": "장웨이는 그때 수업을 빼먹으려고 신문 배달부로 변장까지 했다고 썼어요.",
+   "blank": "伪装",
+   "src": "made"
+  },
+  {
+   "text": "有人把新做的假古董伪装成老物件来卖，刘芳一眼就看穿了。",
+   "en": "Someone was selling newly made fake antiques disguised as old pieces, and Liu Fang saw through it at once.",
+   "ko": "누가 새로 만든 가짜 골동품을 옛 물건처럼 꾸며서 팔았는데 류팡은 한눈에 알아봤어요.",
+   "blank": "伪装",
+   "src": "made"
+  }
+ ],
  "w|估计": [
   {
    "text": "我估计他不会来。",
@@ -6319,6 +6431,22 @@
    "en": "Hello, who are you looking for?",
    "ko": "안녕하세요, 누구 찾으세요?",
    "blank": "你好"
+  }
+ ],
+ "w|佩服": [
+  {
+   "text": "读完老朋友的来信，张伟很佩服他辞职去支教的勇气。",
+   "en": "After reading his old friend's letter, Zhang Wei admired his courage in quitting his job to go teach in the countryside.",
+   "ko": "옛 친구의 편지를 읽고 장웨이는 직장을 그만두고 시골에 가르치러 간 그 용기에 감탄했어요.",
+   "blank": "佩服",
+   "src": "made"
+  },
+  {
+   "text": "看到那位大爷三两下就修好了旧收音机，刘芳十分佩服。",
+   "en": "Seeing the old man fix the old radio in no time, Liu Fang was very impressed.",
+   "ko": "할아버지가 낡은 라디오를 뚝딱 고치는 걸 보고 류팡은 무척 감탄했어요.",
+   "blank": "佩服",
+   "src": "made"
   }
  ],
  "w|使": [
@@ -10727,6 +10855,22 @@
    "src": "made"
   }
  ],
+ "w|列为": [
+  {
+   "text": "老朋友说，他们小时候常去的那座老桥已经被列为文物了。",
+   "en": "His old friend said the old bridge they often went to as kids has been listed as a cultural relic.",
+   "ko": "옛 친구는 어릴 때 자주 가던 그 오래된 다리가 문화재로 지정됐다고 했어요.",
+   "blank": "列为",
+   "src": "made"
+  },
+  {
+   "text": "这个跳蚤市场被列为城市的特色景点之一。",
+   "en": "This flea market has been listed as one of the city's special attractions.",
+   "ko": "이 벼룩시장은 도시의 특색 있는 명소 가운데 하나로 꼽혀요.",
+   "blank": "列为",
+   "src": "made"
+  }
+ ],
  "w|列车": [
   {
    "text": "一位客人的列车晚点了，马林帮他把房间保留到半夜。",
@@ -11077,6 +11221,22 @@
    "src": "made"
   }
  ],
+ "w|别无选择": [
+  {
+   "text": "老朋友写道，那年工厂倒闭，他别无选择，只能去外地打工。",
+   "en": "His old friend wrote that the year the factory closed, he had no choice but to go work in another city.",
+   "ko": "옛 친구는 그해 공장이 문을 닫아서 어쩔 수 없이 타지로 일하러 갔다고 썼어요.",
+   "blank": "别无选择",
+   "src": "made"
+  },
+  {
+   "text": "房东突然要收回房子，刘芳别无选择，只好把家具拿来卖掉。",
+   "en": "The landlord suddenly wanted the apartment back, so Liu Fang had no choice but to sell her furniture.",
+   "ko": "집주인이 갑자기 집을 비우라고 해서 류팡은 어쩔 수 없이 가구를 내다 팔았어요.",
+   "blank": "别无选择",
+   "src": "made"
+  }
+ ],
  "w|别的": [
   {
    "text": "还有别的。",
@@ -11357,6 +11517,22 @@
    "en": "Brush your teeth before bed.",
    "ko": "자기 전에 이 닦아.",
    "blank": "前"
+  }
+ ],
+ "w|前后": [
+  {
+   "text": "张伟算了算，两人通信前后已经有二十年了。",
+   "en": "Zhang Wei worked it out: the two have been writing to each other for twenty years in total.",
+   "ko": "장웨이가 따져 보니 둘이 편지를 주고받은 지 앞뒤로 이십 년이 됐어요.",
+   "blank": "前后",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在摊位前后各摆了一张桌子，东西一下子显得整齐多了。",
+   "en": "Liu Fang set a table at the front and back of her stall, and everything suddenly looked much neater.",
+   "ko": "류팡이 노점 앞뒤에 탁자를 하나씩 놓으니 물건이 훨씬 가지런해 보였어요.",
+   "blank": "前后",
+   "src": "made"
   }
  ],
  "w|前往": [
@@ -13421,6 +13597,22 @@
    "en": "So that's how it is.",
    "ko": "그렇구나.",
    "blank": "原来"
+  }
+ ],
+ "w|原来如此": [
+  {
+   "text": "看到信里的解释，张伟才说：“原来如此，难怪他那年突然搬走了。”",
+   "en": "Reading the explanation in the letter, Zhang Wei said, “So that's how it was—no wonder he suddenly moved away that year.”",
+   "ko": "편지 속 설명을 보고서야 장웨이는 “그랬구나, 그해에 갑자기 이사 간 게 그래서였네”라고 했어요.",
+   "blank": "原来如此",
+   "src": "made"
+  },
+  {
+   "text": "摊主解释这只花瓶为什么便宜，刘芳点点头说：“原来如此。”",
+   "en": "The vendor explained why the vase was cheap, and Liu Fang nodded and said, “I see.”",
+   "ko": "가게 주인이 이 꽃병이 왜 싼지 설명하자 류팡은 고개를 끄덕이며 “그렇군요”라고 했어요.",
+   "blank": "原来如此",
+   "src": "made"
   }
  ],
  "w|原理": [
@@ -16077,6 +16269,22 @@
    "src": "made"
   }
  ],
+ "w|吞": [
+  {
+   "text": "老朋友说，那次他差点把鱼刺吞下去，是张伟帮他取出来的。",
+   "en": "His old friend said he once almost swallowed a fish bone, and Zhang Wei helped get it out.",
+   "ko": "옛 친구는 그때 생선 가시를 삼킬 뻔했는데 장웨이가 빼 줬다고 했어요.",
+   "blank": "吞",
+   "src": "made"
+  },
+  {
+   "text": "旁边卖小吃的大叔说，他忙得连饭都只能一口吞下去。",
+   "en": "The uncle selling snacks next door said he was so busy he could only gulp his food down.",
+   "ko": "옆에서 간식을 파는 아저씨는 너무 바빠서 밥도 한입에 삼킬 수밖에 없다고 했어요.",
+   "blank": "吞",
+   "src": "made"
+  }
+ ],
  "w|否则": [
   {
    "text": "快走，否则来不及。",
@@ -16089,6 +16297,22 @@
    "en": "Listen to me, or you'll regret it.",
    "ko": "내 말 들어, 안 그러면 후회해.",
    "blank": "否则"
+  }
+ ],
+ "w|否定": [
+  {
+   "text": "老朋友在信里鼓励张伟，别总是否定自己。",
+   "en": "His old friend encouraged Zhang Wei in the letter not to keep putting himself down.",
+   "ko": "옛 친구는 편지에서 장웨이에게 자꾸 자기를 부정하지 말라고 격려했어요.",
+   "blank": "否定",
+   "src": "made"
+  },
+  {
+   "text": "专家看了看那幅画，否定了它是名家真迹的说法。",
+   "en": "The expert looked at the painting and rejected the claim that it was a master's original.",
+   "ko": "전문가는 그 그림을 보더니 명인의 진품이라는 주장을 부정했어요.",
+   "blank": "否定",
+   "src": "made"
   }
  ],
  "w|否认": [
@@ -17025,6 +17249,22 @@
    "en": "Oh dear, what a pity.",
    "ko": "아이고, 정말 아쉽네.",
    "blank": "哎呀"
+  }
+ ],
+ "w|哎哟": [
+  {
+   "text": "拆信时被纸边划了一下，张伟叫了一声：“哎哟！”",
+   "en": "Zhang Wei got a paper cut opening the letter and cried out, “Ouch!”",
+   "ko": "편지를 뜯다가 종이에 손을 베인 장웨이는 “아야!” 하고 소리쳤어요.",
+   "blank": "哎哟",
+   "src": "made"
+  },
+  {
+   "text": "刘芳搬箱子时闪了腰，忍不住喊了声“哎哟”。",
+   "en": "Liu Fang strained her back moving boxes and couldn't help crying “ouch.”",
+   "ko": "류팡은 상자를 옮기다 허리를 삐끗해서 저도 모르게 “아이고” 했어요.",
+   "blank": "哎哟",
+   "src": "made"
   }
  ],
  "w|哟": [
@@ -29323,6 +29563,22 @@
    "blank": "忍受"
   }
  ],
+ "w|志愿": [
+  {
+   "text": "张伟在信中提起，他们高考时填的第一志愿是同一所大学。",
+   "en": "Zhang Wei mentioned in the letter that their first-choice university on the college entrance exam was the same one.",
+   "ko": "장웨이는 편지에서 둘이 수능 때 써낸 1지망 대학이 같았다고 했어요.",
+   "blank": "志愿",
+   "src": "made"
+  },
+  {
+   "text": "跳蚤市场的收入，刘芳都捐给了动物志愿组织。",
+   "en": "Liu Fang donates all her flea market income to an animal volunteer group.",
+   "ko": "류팡은 벼룩시장 수입을 모두 동물 자원봉사 단체에 기부해요.",
+   "blank": "志愿",
+   "src": "made"
+  }
+ ],
  "w|忘": [
   {
    "text": "他会忘。",
@@ -29482,6 +29738,22 @@
    "en": "Liu Fang's son is at university in the city and calls her every month.",
    "ko": "류팡의 아들은 도시에서 대학을 다니는데 매달 전화를 해요.",
    "blank": "念",
+   "src": "made"
+  }
+ ],
+ "w|念头": [
+  {
+   "text": "写到一半，张伟忽然冒出一个念头：今年夏天去看看老朋友。",
+   "en": "Halfway through writing, a thought suddenly came to Zhang Wei: visit his old friend this summer.",
+   "ko": "편지를 쓰다가 장웨이는 문득 올여름에 옛 친구를 보러 가자는 생각이 떠올랐어요.",
+   "blank": "念头",
+   "src": "made"
+  },
+  {
+   "text": "看到这么多旧书，刘芳产生了开一家二手书店的念头。",
+   "en": "Seeing so many old books gave Liu Fang the idea of opening a secondhand bookstore.",
+   "ko": "이렇게 많은 헌책을 보니 류팡은 중고 서점을 열어 볼까 하는 생각이 들었어요.",
+   "blank": "念头",
    "src": "made"
   }
  ],
@@ -29762,6 +30034,22 @@
    "en": "At the interview, the manager asked Yang Yang what kind of personality she thinks she has.",
    "ko": "면접 때 부장은 양양에게 자기 성격이 어떤 것 같냐고 물었어요.",
    "blank": "性格",
+   "src": "made"
+  }
+ ],
+ "w|性爱": [
+  {
+   "text": "老朋友在信中提到，他正在翻译一本关于婚姻与性爱的心理学著作。",
+   "en": "His old friend mentioned in the letter that he's translating a psychology book about marriage and sexuality.",
+   "ko": "옛 친구는 편지에서 결혼과 성에 관한 심리학 책을 번역하고 있다고 했어요.",
+   "blank": "性爱",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在旧书堆里翻到一本医学院的教材，里面有一章讲性爱与健康。",
+   "en": "In a pile of old books Liu Fang came across a medical school textbook with a chapter on sexuality and health.",
+   "ko": "류팡은 헌책 더미에서 의대 교재를 찾았는데, 성과 건강에 관한 장이 있었어요.",
+   "blank": "性爱",
    "src": "made"
   }
  ],
@@ -30095,6 +30383,22 @@
    "en": "Fear makes people stop.",
    "ko": "두려움이 사람을 멈추게 해.",
    "blank": "恐惧"
+  }
+ ],
+ "w|恐慌": [
+  {
+   "text": "老朋友说，当年那场洪水引起了全村的恐慌。",
+   "en": "His old friend said that flood back then caused panic throughout the village.",
+   "ko": "옛 친구는 그때 그 홍수가 온 마을을 공포에 빠뜨렸다고 했어요.",
+   "blank": "恐慌",
+   "src": "made"
+  },
+  {
+   "text": "听说市场要拆迁，摊主们一度陷入了恐慌。",
+   "en": "Hearing the market would be demolished, the vendors fell into panic for a while.",
+   "ko": "시장이 철거된다는 말에 노점 주인들은 한동안 불안에 휩싸였어요.",
+   "blank": "恐慌",
+   "src": "made"
   }
  ],
  "w|恢复": [
@@ -30439,6 +30743,22 @@
    "en": "This is such a surprise.",
    "ko": "이건 정말 놀라운 일이야.",
    "blank": "惊喜"
+  }
+ ],
+ "w|惊奇": [
+  {
+   "text": "张伟惊奇地发现，老朋友的字迹和三十年前一模一样。",
+   "en": "Zhang Wei was amazed to find that his old friend's handwriting was exactly the same as thirty years ago.",
+   "ko": "장웨이는 옛 친구의 글씨가 삼십 년 전과 똑같다는 걸 알고 놀랐어요.",
+   "blank": "惊奇",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在一个旧箱子里找到一封百年前的信，觉得十分惊奇。",
+   "en": "Liu Fang found a century-old letter in an old trunk and was amazed.",
+   "ko": "류팡은 낡은 상자 속에서 백 년 전 편지를 찾아내고 무척 신기해했어요.",
+   "blank": "惊奇",
+   "src": "made"
   }
  ],
  "w|惊讶": [
@@ -31016,6 +31336,22 @@
    "en": "Lili told the movers, \"Carry it slowly, there are glasses inside.\"",
    "ko": "리리는 이삿짐 일꾼들에게 \"천천히 옮겨 주세요, 안에 유리컵이 있어요\" 하고 말했어요.",
    "blank": "慢点",
+   "src": "made"
+  }
+ ],
+ "w|慷慨": [
+  {
+   "text": "老朋友在信中回忆，当年张伟总是很慷慨，常把午饭分给同学。",
+   "en": "His old friend recalled in the letter that Zhang Wei was always generous, often sharing his lunch with classmates.",
+   "ko": "옛 친구는 편지에서 장웨이가 그때 늘 인심이 후해서 점심을 친구들과 나눠 먹곤 했다고 회상했어요.",
+   "blank": "慷慨",
+   "src": "made"
+  },
+  {
+   "text": "隔壁摊的阿姨很慷慨，送了刘芳一个旧茶壶。",
+   "en": "The auntie at the next stall was generous and gave Liu Fang an old teapot.",
+   "ko": "옆 노점 아주머니가 인심이 좋아서 류팡에게 낡은 찻주전자를 하나 줬어요.",
+   "blank": "慷慨",
    "src": "made"
   }
  ],
@@ -37073,6 +37409,22 @@
    "blank": "无关"
   }
  ],
+ "w|无情": [
+  {
+   "text": "张伟在信里感叹，时间真是无情，转眼大家都老了。",
+   "en": "Zhang Wei sighed in his letter that time is truly merciless—in a flash everyone has grown old.",
+   "ko": "장웨이는 편지에서 세월이 참 무정해서 어느새 다들 늙었다고 한탄했어요.",
+   "blank": "无情",
+   "src": "made"
+  },
+  {
+   "text": "一场大雨无情地把刘芳摆好的旧书都打湿了。",
+   "en": "A heavy rain mercilessly soaked all the old books Liu Fang had laid out.",
+   "ko": "큰비가 무정하게도 류팡이 늘어놓은 헌책을 다 적셔 버렸어요.",
+   "blank": "无情",
+   "src": "made"
+  }
+ ],
  "w|无意": [
   {
    "text": "张伟无意中听到新娘在偷偷练习誓词。",
@@ -38761,6 +39113,22 @@
    "blank": "有时候"
   }
  ],
+ "w|有机": [
+  {
+   "text": "老朋友在乡下种起了有机蔬菜，还寄来一箱让张伟尝尝。",
+   "en": "His old friend started growing organic vegetables in the countryside and even sent a box for Zhang Wei to try.",
+   "ko": "옛 친구는 시골에서 유기농 채소를 기르기 시작해서 장웨이에게 맛보라고 한 상자를 보냈어요.",
+   "blank": "有机",
+   "src": "made"
+  },
+  {
+   "text": "市场角落有个农民在卖自己种的有机苹果。",
+   "en": "In a corner of the market a farmer was selling organic apples he grew himself.",
+   "ko": "시장 구석에서 농부가 직접 기른 유기농 사과를 팔고 있었어요.",
+   "blank": "有机",
+   "src": "made"
+  }
+ ],
  "w|有没有": [
   {
    "text": "你有没有空？",
@@ -38787,6 +39155,22 @@
    "en": "I'm a little cold.",
    "ko": "나 좀 추워.",
    "blank": "有点"
+  }
+ ],
+ "w|有点儿": [
+  {
+   "text": "信纸有点儿发黄，看得出放了很多年。",
+   "en": "The letter paper is a bit yellowed; you can tell it's been kept for many years.",
+   "ko": "편지지가 조금 누렇게 바래서 오래 보관한 게 보여요.",
+   "blank": "有点儿",
+   "src": "made"
+  },
+  {
+   "text": "这件外套有点儿大，但价钱很便宜。",
+   "en": "This coat is a bit big, but the price is very cheap.",
+   "ko": "이 외투는 조금 크지만 값이 아주 싸요.",
+   "blank": "有点儿",
+   "src": "made"
   }
  ],
  "w|有用": [
@@ -39211,6 +39595,22 @@
    "en": "It was supposed to be simple.",
    "ko": "원래는 꽤 간단했어.",
    "blank": "本来"
+  }
+ ],
+ "w|本能": [
+  {
+   "text": "张伟说，他当时冲进河里救人，完全是出于本能。",
+   "en": "Zhang Wei said that when he rushed into the river to save someone back then, it was pure instinct.",
+   "ko": "장웨이는 그때 강에 뛰어들어 사람을 구한 건 순전히 본능이었다고 했어요.",
+   "blank": "本能",
+   "src": "made"
+  },
+  {
+   "text": "一个瓷碗从桌上滑下来，刘芳出于本能伸手接住了。",
+   "en": "A porcelain bowl slid off the table, and Liu Fang instinctively reached out and caught it.",
+   "ko": "도자기 그릇이 탁자에서 미끄러지자 류팡은 본능적으로 손을 뻗어 받아 냈어요.",
+   "blank": "本能",
+   "src": "made"
   }
  ],
  "w|本质": [
@@ -40903,6 +41303,22 @@
    "src": "made"
   }
  ],
+ "w|欢呼": [
+  {
+   "text": "老朋友写道，球队赢了冠军那天，全村人都在欢呼。",
+   "en": "His old friend wrote that on the day the team won the championship, the whole village cheered.",
+   "ko": "옛 친구는 팀이 우승한 날 온 마을 사람들이 환호했다고 썼어요.",
+   "blank": "欢呼",
+   "src": "made"
+  },
+  {
+   "text": "拍卖结束，买到古董钟的年轻人高兴得欢呼起来。",
+   "en": "When the auction ended, the young man who got the antique clock cheered with joy.",
+   "ko": "경매가 끝나자 골동품 시계를 산 젊은이가 기뻐서 환호했어요.",
+   "blank": "欢呼",
+   "src": "made"
+  }
+ ],
  "w|欢迎": [
   {
    "text": "欢迎回来。",
@@ -41231,6 +41647,22 @@
    "en": "That's exactly what I mean.",
    "ko": "바로 그 뜻이야.",
    "blank": "正是"
+  }
+ ],
+ "w|正直": [
+  {
+   "text": "在张伟眼里，老朋友一直是个正直的人，从不说假话。",
+   "en": "In Zhang Wei's eyes, his old friend has always been an upright person who never lies.",
+   "ko": "장웨이가 보기에 옛 친구는 늘 거짓말을 하지 않는 올곧은 사람이에요.",
+   "blank": "正直",
+   "src": "made"
+  },
+  {
+   "text": "这个摊主很正直，有瑕疵的东西都会主动告诉顾客。",
+   "en": "This vendor is honest and tells customers up front about any flaws.",
+   "ko": "이 가게 주인은 올곧아서 흠이 있는 물건은 손님에게 먼저 알려 줘요.",
+   "blank": "正直",
+   "src": "made"
   }
  ],
  "w|正确": [
@@ -42533,6 +42965,22 @@
    "en": "Don't worry, it's fine.",
    "ko": "걱정 마, 괜찮아.",
    "blank": "没事"
+  }
+ ],
+ "w|没事儿": [
+  {
+   "text": "老朋友在信的结尾写：“我的腿已经好了，没事儿，别担心。”",
+   "en": "At the end of the letter his old friend wrote, “My leg is better now—it's nothing, don't worry.”",
+   "ko": "옛 친구는 편지 끝에 “다리는 다 나았어, 괜찮으니까 걱정하지 마”라고 썼어요.",
+   "blank": "没事儿",
+   "src": "made"
+  },
+  {
+   "text": "顾客不小心碰倒了一摞书，刘芳笑着说：“没事儿，我来捡。”",
+   "en": "A customer accidentally knocked over a stack of books, and Liu Fang smiled and said, “No problem, I'll pick them up.”",
+   "ko": "손님이 실수로 책 더미를 쓰러뜨리자 류팡은 웃으며 “괜찮아요, 제가 주울게요”라고 했어요.",
+   "blank": "没事儿",
+   "src": "made"
   }
  ],
  "w|没关系": [
@@ -44446,6 +44894,22 @@
    "en": "Sun Yue had gray aprons made for her staff.",
    "ko": "쑨웨는 직원들에게 회색 앞치마를 맞춰 줬어요.",
    "blank": "灰色",
+   "src": "made"
+  }
+ ],
+ "w|灵感": [
+  {
+   "text": "张伟说，读老朋友的信常常给他写作的灵感。",
+   "en": "Zhang Wei says reading his old friend's letters often gives him inspiration for writing.",
+   "ko": "장웨이는 옛 친구의 편지를 읽으면 글 쓸 영감이 자주 떠오른다고 해요.",
+   "blank": "灵感",
+   "src": "made"
+  },
+  {
+   "text": "刘芳是做手工的，常来这里找设计的灵感。",
+   "en": "Liu Fang makes handicrafts and often comes here looking for design inspiration.",
+   "ko": "류팡은 수공예를 해서 디자인 영감을 얻으러 자주 여기 와요.",
+   "blank": "灵感",
    "src": "made"
   }
  ],
@@ -47535,6 +47999,22 @@
    "blank": "痛"
   }
  ],
+ "w|痛快": [
+  {
+   "text": "把心里话都写出来以后，张伟觉得特别痛快。",
+   "en": "After writing down everything on his mind, Zhang Wei felt wonderfully relieved.",
+   "ko": "속마음을 다 적고 나니 장웨이는 아주 후련했어요.",
+   "blank": "痛快",
+   "src": "made"
+  },
+  {
+   "text": "这位大姐买东西很痛快，问了价钱就直接付钱。",
+   "en": "This woman shops decisively—she asks the price and pays right away.",
+   "ko": "이 아주머니는 물건을 시원시원하게 사서 값을 묻고는 바로 돈을 내요.",
+   "blank": "痛快",
+   "src": "made"
+  }
+ ],
  "w|痛苦": [
   {
    "text": "太痛苦了。",
@@ -48321,6 +48801,22 @@
    "en": "The difficulty is quite high.",
    "ko": "난이도가 꽤 높아.",
    "blank": "相当"
+  }
+ ],
+ "w|相当于": [
+  {
+   "text": "老朋友说，他现在一个月的工资相当于当年一年的收入。",
+   "en": "His old friend said his monthly salary now equals what he used to earn in a year.",
+   "ko": "옛 친구는 지금 한 달 월급이 예전 일 년 수입과 맞먹는다고 했어요.",
+   "blank": "相当于",
+   "src": "made"
+  },
+  {
+   "text": "这台旧相机的价钱相当于新的一半。",
+   "en": "This old camera costs about half the price of a new one.",
+   "ko": "이 낡은 카메라 값은 새것의 절반쯤 돼요.",
+   "blank": "相当于",
+   "src": "made"
   }
  ],
  "w|相机": [
@@ -51083,6 +51579,22 @@
    "blank": "等"
   }
  ],
+ "w|等不及": [
+  {
+   "text": "收到包裹，张伟等不及回到家，在邮局门口就拆开了。",
+   "en": "When he got the package, Zhang Wei couldn't wait to get home and opened it right outside the post office.",
+   "ko": "소포를 받자 장웨이는 집에 갈 때까지 못 참고 우체국 앞에서 바로 뜯었어요.",
+   "blank": "等不及",
+   "src": "made"
+  },
+  {
+   "text": "天还没亮，刘芳就等不及要去市场摆摊了。",
+   "en": "Before dawn, Liu Fang was already too eager to wait to go set up her stall.",
+   "ko": "날이 밝기도 전에 류팡은 시장에 노점을 펴러 가고 싶어 안달이 났어요.",
+   "blank": "等不及",
+   "src": "made"
+  }
+ ],
  "w|等于": [
   {
    "text": "老同学开玩笑说，不来聚会就等于不认这些朋友了。",
@@ -53447,6 +53959,38 @@
    "blank": "美妙"
   }
  ],
+ "w|羞辱": [
+  {
+   "text": "老朋友写道，当年老板当众羞辱他，他第二天就辞职了。",
+   "en": "His old friend wrote that when his boss humiliated him in public back then, he quit the very next day.",
+   "ko": "옛 친구는 그때 사장이 사람들 앞에서 자기를 모욕해서 다음 날 바로 그만뒀다고 썼어요.",
+   "blank": "羞辱",
+   "src": "made"
+  },
+  {
+   "text": "有个顾客砍价时说话很难听，简直是在羞辱摊主。",
+   "en": "One customer was so rude while haggling that he was practically insulting the vendor.",
+   "ko": "한 손님은 값을 깎으면서 말을 너무 험하게 해서 거의 주인을 모욕하는 수준이었어요.",
+   "blank": "羞辱",
+   "src": "made"
+  }
+ ],
+ "w|羡慕": [
+  {
+   "text": "张伟在信里说，他很羡慕老朋友能住在海边。",
+   "en": "Zhang Wei said in his letter that he envies his old friend for living by the sea.",
+   "ko": "장웨이는 편지에서 바닷가에 사는 옛 친구가 부럽다고 했어요.",
+   "blank": "羡慕",
+   "src": "made"
+  },
+  {
+   "text": "别人淘到老唱片，刘芳在一旁看得好羡慕。",
+   "en": "When someone else found an old record, Liu Fang watched from the side, full of envy.",
+   "ko": "다른 사람이 옛날 레코드를 건지자 류팡은 옆에서 무척 부러워했어요.",
+   "blank": "羡慕",
+   "src": "made"
+  }
+ ],
  "w|群": [
   {
    "text": "一群小孩围着新娘要喜糖，张伟只好去车里再拿一袋。",
@@ -54423,6 +54967,22 @@
    "src": "made"
   }
  ],
+ "w|胆子": [
+  {
+   "text": "张伟笑老朋友小时候胆子小，晚上都不敢一个人上厕所。",
+   "en": "Zhang Wei teased his old friend for being timid as a kid, too scared to go to the toilet alone at night.",
+   "ko": "장웨이는 옛 친구가 어릴 때 겁이 많아서 밤에 혼자 화장실도 못 갔다고 놀렸어요.",
+   "blank": "胆子",
+   "src": "made"
+  },
+  {
+   "text": "刘芳第一次摆摊时胆子很小，连吆喝都不敢。",
+   "en": "The first time Liu Fang ran a stall, she was so timid she didn't even dare call out to customers.",
+   "ko": "류팡은 처음 노점을 열었을 때 겁이 많아서 손님을 부르지도 못했어요.",
+   "blank": "胆子",
+   "src": "made"
+  }
+ ],
  "w|背": [
   {
    "text": "他背着箱子。",
@@ -54739,6 +55299,22 @@
    "en": "His mind works fast.",
    "ko": "그는 머리가 아주 빨라.",
    "blank": "脑子"
+  }
+ ],
+ "w|脑海": [
+  {
+   "text": "读着信，张伟的脑海里浮现出两人在操场上奔跑的样子。",
+   "en": "Reading the letter, an image of the two of them running on the sports field appeared in Zhang Wei's mind.",
+   "ko": "편지를 읽는 동안 장웨이의 머릿속에 둘이 운동장을 달리던 모습이 떠올랐어요.",
+   "blank": "脑海",
+   "src": "made"
+  },
+  {
+   "text": "看到那只旧铁皮青蛙，刘芳的脑海里立刻浮现出外公的样子。",
+   "en": "Seeing the old tin frog, an image of her grandfather immediately came to Liu Fang's mind.",
+   "ko": "낡은 양철 개구리 장난감을 보자 류팡의 머릿속에 외할아버지 모습이 바로 떠올랐어요.",
+   "blank": "脑海",
+   "src": "made"
   }
  ],
  "w|脑袋": [
@@ -57910,6 +58486,22 @@
    "en": "Wang Fang recognized which spice was in the soup with one taste.",
    "ko": "왕팡은 한 입 먹자마자 국에 무슨 향신료를 넣었는지 알아챘어요.",
    "blank": "认出",
+   "src": "made"
+  }
+ ],
+ "w|认定": [
+  {
+   "text": "老朋友写道，他早就认定张伟是一辈子的朋友。",
+   "en": "His old friend wrote that he had long been convinced Zhang Wei was a friend for life.",
+   "ko": "옛 친구는 장웨이를 평생 친구로 진작부터 마음에 정해 두었다고 썼어요.",
+   "blank": "认定",
+   "src": "made"
+  },
+  {
+   "text": "刘芳一眼就认定这把椅子是老手艺人做的。",
+   "en": "Liu Fang decided at a glance that this chair was made by an old craftsman.",
+   "ko": "류팡은 이 의자가 옛 장인이 만든 거라고 한눈에 확신했어요.",
+   "blank": "认定",
    "src": "made"
   }
  ],
@@ -61562,6 +62154,22 @@
    "en": "Several cars were parked outside the restaurant, and Lili recognised her old classmate's at once.",
    "ko": "식당 앞에 차가 여러 대 서 있었는데 리리는 동창 차를 단번에 알아봤어요.",
    "blank": "辆",
+   "src": "made"
+  }
+ ],
+ "w|辉煌": [
+  {
+   "text": "张伟写道，那支校队当年的成绩很辉煌，至今没人打破。",
+   "en": "Zhang Wei wrote that the school team's record back then was brilliant and still hasn't been broken.",
+   "ko": "장웨이는 그 학교 팀의 그때 성적이 눈부셔서 지금까지 아무도 못 깼다고 썼어요.",
+   "blank": "辉煌",
+   "src": "made"
+  },
+  {
+   "text": "摊主说，这条老街在清朝时曾经非常辉煌。",
+   "en": "The vendor said this old street was once magnificent during the Qing dynasty.",
+   "ko": "가게 주인은 이 옛 거리가 청나라 때 무척 번성했다고 했어요.",
+   "blank": "辉煌",
    "src": "made"
   }
  ],
@@ -66885,6 +67493,22 @@
    "src": "made"
   }
  ],
+ "w|预感": [
+  {
+   "text": "一连几个月没收到回信，张伟有种不好的预感。",
+   "en": "After months without a reply, Zhang Wei had a bad feeling.",
+   "ko": "몇 달째 답장이 없자 장웨이는 안 좋은 예감이 들었어요.",
+   "blank": "预感",
+   "src": "made"
+  },
+  {
+   "text": "刘芳有一种预感，今天会遇到好东西。",
+   "en": "Liu Fang had a feeling she'd come across something good today.",
+   "ko": "류팡은 오늘 좋은 물건을 만날 것 같은 예감이 들었어요.",
+   "blank": "预感",
+   "src": "made"
+  }
+ ],
  "w|预期": [
   {
    "text": "新产品的销量比预期的还要好，老板很满意。",
@@ -67901,6 +68525,22 @@
    "en": "So glad to see you.",
    "ko": "만나서 너무 반갑다.",
    "blank": "高兴"
+  }
+ ],
+ "w|高大": [
+  {
+   "text": "信里夹着一张照片，照片上老朋友站在一棵高大的槐树下。",
+   "en": "A photo was tucked into the letter, showing his old friend standing under a tall locust tree.",
+   "ko": "편지에 사진이 한 장 끼워져 있었는데, 옛 친구가 커다란 회화나무 아래 서 있었어요.",
+   "blank": "高大",
+   "src": "made"
+  },
+  {
+   "text": "市场入口有个高大的男人在卖旧自行车。",
+   "en": "A tall man at the market entrance was selling old bicycles.",
+   "ko": "시장 입구에서 덩치 큰 남자가 낡은 자전거를 팔고 있었어요.",
+   "blank": "高大",
+   "src": "made"
   }
  ],
  "w|高层": [

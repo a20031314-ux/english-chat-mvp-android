@@ -121,6 +121,22 @@
    "src": "made"
   }
  ],
+ "w|abominable": [
+  {
+   "text": "Lucas déteste ce goût abominable du produit que le dentiste applique sur ses dents.",
+   "en": "Lucas hates the awful taste of the product the dentist puts on his teeth.",
+   "ko": "뤼카는 치과 의사가 이에 바르는 약의 끔찍한 맛을 싫어해요.",
+   "blank": "abominable",
+   "src": "made"
+  },
+  {
+   "text": "Le temps de février est vraiment abominable cette année, se plaint Camille.",
+   "en": "The February weather is truly awful this year, Camille complains.",
+   "ko": "카미유는 올해 이월 날씨가 정말 끔찍하다고 투덜대요.",
+   "blank": "abominable",
+   "src": "made"
+  }
+ ],
  "w|abord": [
   {
    "text": "D'abord, il faut écouter.",
@@ -3015,6 +3031,22 @@
    "blank": "amitié"
   }
  ],
+ "w|amnésie": [
+  {
+   "text": "Lucas plaisante qu'il souffre d'amnésie dès qu'il faut prendre rendez-vous chez le dentiste.",
+   "en": "Lucas jokes that he gets amnesia whenever he has to book a dentist appointment.",
+   "ko": "뤼카는 치과 예약할 때만 되면 기억상실증이 온다고 농담해요.",
+   "blank": "amnésie",
+   "src": "made"
+  },
+  {
+   "text": "Chaque automne, Camille semble atteinte d'amnésie et oublie où elle a rangé ses gants.",
+   "en": "Every autumn, Camille seems to get amnesia and forgets where she put her gloves.",
+   "ko": "가을마다 카미유는 기억상실증이라도 걸린 듯 장갑을 어디 뒀는지 잊어요.",
+   "blank": "amnésie",
+   "src": "made"
+  }
+ ],
  "w|amour": [
   {
    "text": "L’amour est plus fort que tout.",
@@ -5163,6 +5195,22 @@
    "en": "You must ensure security.",
    "ko": "너는 안전을 보장해야 해.",
    "blank": "assurer"
+  }
+ ],
+ "w|asthme": [
+  {
+   "text": "Sur le questionnaire médical, Lucas coche la case de l'asthme et note son inhalateur.",
+   "en": "On the medical questionnaire, Lucas ticks the asthma box and notes his inhaler.",
+   "ko": "뤼카는 문진표의 천식 칸에 표시하고 흡입기도 적어요.",
+   "blank": "asthme",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, le pollen réveille l'asthme de Camille.",
+   "en": "In spring, pollen sets off Camille's asthma.",
+   "ko": "봄이면 꽃가루 때문에 카미유의 천식이 도져요.",
+   "blank": "asthme",
+   "src": "made"
   }
  ],
  "w|astronaute": [
@@ -7583,6 +7631,22 @@
    "src": "made"
   }
  ],
+ "w|bave": [
+  {
+   "text": "Sous l'anesthésie, Lucas ne sent plus sa lèvre et un filet de bave lui coule sur le menton.",
+   "en": "Under the anesthetic, Lucas can't feel his lip and a trickle of drool runs down his chin.",
+   "ko": "마취 때문에 입술 감각이 없는 뤼카의 턱으로 침이 흘러요.",
+   "blank": "bave",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Camille trouve de la bave d'escargot partout sur les feuilles de salade.",
+   "en": "In spring, Camille finds snail slime all over the lettuce leaves.",
+   "ko": "봄이면 카미유는 상추 잎마다 달팽이 점액을 발견해요.",
+   "blank": "bave",
+   "src": "made"
+  }
+ ],
  "w|baver": [
   {
    "text": "Le chien de Julien commence à baver dès qu'il sent l'odeur du fromage.",
@@ -9867,6 +9931,22 @@
    "src": "made"
   }
  ],
+ "w|brut": [
+  {
+   "text": "Lucas trouve que le coût brut des implants est énorme avant le remboursement.",
+   "en": "Lucas finds the gross cost of implants huge before reimbursement.",
+   "ko": "뤼카는 환급 전 임플란트 비용이 엄청나다고 생각해요.",
+   "blank": "brut",
+   "src": "made"
+  },
+  {
+   "text": "Camille aime le style brut de sa maison en pierre, si fraîche en été.",
+   "en": "Camille loves the raw style of her stone house, so cool in summer.",
+   "ko": "카미유는 여름에 아주 시원한 돌집의 거친 멋을 좋아해요.",
+   "blank": "brut",
+   "src": "made"
+  }
+ ],
  "w|brutal": [
   {
    "text": "Julien n'aime pas le ton brutal de certains courriers officiels.",
@@ -10424,6 +10504,22 @@
    "en": "Inès has kept the notebook where they used to write poems together.",
    "ko": "이네스는 둘이 함께 시를 쓰던 공책을 간직하고 있어요.",
    "blank": "cahier",
+   "src": "made"
+  }
+ ],
+ "w|caillot": [
+  {
+   "text": "Le dentiste explique à Lucas qu'un caillot doit se former dans le trou pour bien cicatriser.",
+   "en": "The dentist explains to Lucas that a clot needs to form in the socket for it to heal properly.",
+   "ko": "치과 의사는 잘 아물려면 구멍에 핏덩이가 생겨야 한다고 뤼카에게 설명해요.",
+   "blank": "caillot",
+   "src": "made"
+  },
+  {
+   "text": "Le médecin rappelle à Camille de bouger pendant les longs trajets d'été pour éviter un caillot.",
+   "en": "The doctor reminds Camille to move around on long summer journeys to avoid a clot.",
+   "ko": "의사는 카미유에게 여름 장거리 이동 때 혈전이 생기지 않게 몸을 움직이라고 해요.",
+   "blank": "caillot",
    "src": "made"
   }
  ],
@@ -11635,6 +11731,22 @@
    "blank": "catastrophe"
   }
  ],
+ "w|catastrophique": [
+  {
+   "text": "La radio montre un état catastrophique des dents du fond, et Lucas grimace.",
+   "en": "The X-ray shows the back teeth in a disastrous state, and Lucas winces.",
+   "ko": "엑스레이에 어금니 상태가 엉망으로 나오자 뤼카는 얼굴을 찡그려요.",
+   "blank": "catastrophique",
+   "src": "made"
+  },
+  {
+   "text": "Le printemps pluvieux a été catastrophique pour les cerisiers du voisin de Camille.",
+   "en": "The rainy spring was a disaster for the cherry trees of Camille's neighbor.",
+   "ko": "비가 잦은 봄이 카미유 이웃의 벚나무에는 재앙이었어요.",
+   "blank": "catastrophique",
+   "src": "made"
+  }
+ ],
  "w|catégorie": [
   {
    "text": "Julien classe les demandes de subvention par catégorie.",
@@ -12248,6 +12360,22 @@
    "en": "Sarah adds a bright red cherry to the top of her modelling-clay cake.",
    "ko": "사라는 찰흙 케이크 꼭대기에 새빨간 체리를 올려요.",
    "blank": "cerise",
+   "src": "made"
+  }
+ ],
+ "w|cerné": [
+  {
+   "text": "Lucas arrive au cabinet les yeux cernés après une nuit de rage de dents.",
+   "en": "Lucas arrives at the surgery with dark circles under his eyes after a night of toothache.",
+   "ko": "뤼카는 밤새 치통에 시달려 눈 밑이 퀭한 채로 치과에 와요.",
+   "blank": "cernés",
+   "src": "made"
+  },
+  {
+   "text": "Avec les nuits plus longues de novembre, Camille a souvent les yeux cernés.",
+   "en": "With the longer November nights, Camille often has dark circles under her eyes.",
+   "ko": "십일월 밤이 길어지면 카미유는 눈 밑이 자주 퀭해요.",
+   "blank": "cernés",
    "src": "made"
   }
  ],
@@ -13587,6 +13715,22 @@
    "en": "Who finished the chips?",
    "ko": "누가 감자칩을 다 먹었어?",
    "blank": "chips"
+  }
+ ],
+ "w|chirurgical": [
+  {
+   "text": "Lucas observe les gants et le masque chirurgical que l'assistante enfile avant chaque patient.",
+   "en": "Lucas watches the gloves and surgical mask the assistant puts on before each patient.",
+   "ko": "뤼카는 조무사가 환자마다 끼는 장갑과 수술용 마스크를 지켜봐요.",
+   "blank": "chirurgical",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Camille garde des masques chirurgicaux dans son sac contre le pollen.",
+   "en": "In spring, Camille keeps surgical masks in her bag against pollen.",
+   "ko": "봄에 카미유는 꽃가루 때문에 가방에 수술용 마스크를 넣고 다녀요.",
+   "blank": "chirurgicaux",
+   "src": "made"
   }
  ],
  "w|chirurgie": [
@@ -15365,6 +15509,22 @@
    "en": "This pillar supports the whole ceiling.",
    "ko": "이 기둥이 천장을 다 받치고 있어.",
    "blank": "colonne"
+  }
+ ],
+ "w|coloré": [
+  {
+   "text": "Le dentiste de Lucas accroche des dessins d'enfants très colorés au plafond pour détendre les patients.",
+   "en": "Lucas's dentist hangs very colourful children's drawings on the ceiling to relax patients.",
+   "ko": "뤼카의 치과 의사는 환자들이 편안해지게 천장에 알록달록한 아이 그림을 붙여 둬요.",
+   "blank": "colorés",
+   "src": "made"
+  },
+  {
+   "text": "En octobre, Camille ramasse les feuilles les plus colorées pour décorer la table.",
+   "en": "In October, Camille gathers the most colourful leaves to decorate the table.",
+   "ko": "시월에 카미유는 가장 알록달록한 잎을 주워 식탁을 꾸며요.",
+   "blank": "colorées",
+   "src": "made"
   }
  ],
  "w|coma": [
@@ -17203,6 +17363,22 @@
    "src": "made"
   }
  ],
+ "w|confronter": [
+  {
+   "text": "Lucas doit confronter sa peur du dentiste pour enfin faire soigner sa molaire.",
+   "en": "Lucas has to face his fear of the dentist to finally get his molar treated.",
+   "ko": "뤼카는 어금니를 치료하려면 치과 공포를 이겨 내야 해요.",
+   "blank": "confronter",
+   "src": "made"
+  },
+  {
+   "text": "Chaque hiver, Camille doit confronter ses plantes au gel et en perd toujours quelques-unes.",
+   "en": "Every winter, Camille's plants have to face the frost, and she always loses a few.",
+   "ko": "겨울마다 카미유의 화초는 서리를 견뎌야 하고 늘 몇 개는 죽어요.",
+   "blank": "confronter",
+   "src": "made"
+  }
+ ],
  "w|confus": [
   {
    "text": "Pardon, je suis confus.",
@@ -18460,6 +18636,22 @@
    "en": "Chloé and Paul sleep in an old fishing boat converted into a guesthouse.",
    "ko": "클로에와 폴은 민박으로 개조한 옛 고깃배에서 자요.",
    "blank": "converti",
+   "src": "made"
+  }
+ ],
+ "w|convertir": [
+  {
+   "text": "Le dentiste a réussi à convertir Lucas au fil dentaire après des années d'efforts.",
+   "en": "The dentist finally managed to convert Lucas to flossing after years of trying.",
+   "ko": "치과 의사는 몇 년 만에 뤼카가 치실을 쓰게 만들었어요.",
+   "blank": "convertir",
+   "src": "made"
+  },
+  {
+   "text": "Camille veut convertir la véranda en petit jardin d'hiver.",
+   "en": "Camille wants to convert the veranda into a small winter garden.",
+   "ko": "카미유는 베란다를 작은 겨울 정원으로 바꾸고 싶어 해요.",
+   "blank": "convertir",
    "src": "made"
   }
  ],
@@ -21773,6 +21965,22 @@
    "blank": "décoller"
   }
  ],
+ "w|déconseiller": [
+  {
+   "text": "Le dentiste va déconseiller à Lucas de mâcher du chewing-gum pendant quelques jours.",
+   "en": "The dentist is going to advise Lucas against chewing gum for a few days.",
+   "ko": "치과 의사는 며칠 동안 껌을 씹지 말라고 뤼카에게 말할 거예요.",
+   "blank": "déconseiller",
+   "src": "made"
+  },
+  {
+   "text": "La météo va déconseiller aux habitants de sortir pendant la tempête, prévient Camille.",
+   "en": "The weather service is going to advise residents not to go out during the storm, Camille warns.",
+   "ko": "카미유는 기상청이 폭풍 동안 외출하지 말라고 권할 거라고 알려요.",
+   "blank": "déconseiller",
+   "src": "made"
+  }
+ ],
  "w|décor": [
   {
    "text": "Hugo n'aime pas trop le décor du hall, avec ses plantes en plastique.",
@@ -23484,6 +23692,22 @@
    "en": "There's an unpleasant smell in the metro this morning, Inès sighs.",
    "ko": "오늘 아침 지하철에 불쾌한 냄새가 난다며 이네스가 한숨을 쉬어요.",
    "blank": "désagréable",
+   "src": "made"
+  }
+ ],
+ "w|désarmé": [
+  {
+   "text": "Allongé la bouche ouverte, Lucas se sent complètement désarmé face aux questions du dentiste.",
+   "en": "Lying with his mouth open, Lucas feels completely helpless before the dentist's questions.",
+   "ko": "입을 벌리고 누운 뤼카는 치과 의사의 질문 앞에서 완전히 무력해요.",
+   "blank": "désarmé",
+   "src": "made"
+  },
+  {
+   "text": "Face à la première neige, le petit frère de Camille reste désarmé et ne sait pas quoi faire.",
+   "en": "Faced with the first snow, Camille's little brother is at a loss and doesn't know what to do.",
+   "ko": "첫눈 앞에서 카미유의 남동생은 어쩔 줄 몰라 해요.",
+   "blank": "désarmé",
    "src": "made"
   }
  ],
@@ -25901,6 +26125,22 @@
    "en": "She already has seventeen friends on this social network.",
    "ko": "그녀는 이미 이 SNS에서 17명의 친구가 있어.",
    "blank": "dix-sept"
+  }
+ ],
+ "w|dixième": [
+  {
+   "text": "Lucas compte : c'est la dixième fois cette année qu'il vient chez le dentiste.",
+   "en": "Lucas counts: this is the tenth time this year he's been to the dentist.",
+   "ko": "뤼카가 세어 보니 올해 치과에 온 게 벌써 열 번째예요.",
+   "blank": "dixième",
+   "src": "made"
+  },
+  {
+   "text": "Camille note que c'est déjà le dixième jour de pluie de suite ce mois-ci.",
+   "en": "Camille notes that it's already the tenth day of rain in a row this month.",
+   "ko": "카미유는 이번 달 벌써 열흘째 비가 온다고 적어요.",
+   "blank": "dixième",
+   "src": "made"
   }
  ],
  "w|dizaine": [
@@ -28697,6 +28937,22 @@
    "src": "made"
   }
  ],
+ "w|empoisonnement": [
+  {
+   "text": "Le dentiste explique à Lucas que les vieux plombages ne causent pas d'empoisonnement au quotidien.",
+   "en": "The dentist explains to Lucas that old fillings don't cause everyday poisoning.",
+   "ko": "치과 의사는 뤼카에게 오래된 충전재가 평소에 중독을 일으키지는 않는다고 설명해요.",
+   "blank": "empoisonnement",
+   "src": "made"
+  },
+  {
+   "text": "En automne, Camille apprend à reconnaître les champignons pour éviter tout empoisonnement.",
+   "en": "In autumn, Camille learns to recognize mushrooms to avoid any poisoning.",
+   "ko": "가을에 카미유는 중독되지 않으려고 버섯 구별하는 법을 배워요.",
+   "blank": "empoisonnement",
+   "src": "made"
+  }
+ ],
  "w|empoisonner": [
   {
    "text": "Arrête d'empoisonner l'ambiance.",
@@ -30469,6 +30725,22 @@
    "blank": "épuisé"
   }
  ],
+ "w|épuiser": [
+  {
+   "text": "Les longs soins finissent par épuiser Lucas, qui s'endort presque dans le fauteuil.",
+   "en": "The long treatment ends up exhausting Lucas, who almost falls asleep in the chair.",
+   "ko": "긴 치료에 지친 뤼카는 의자에서 거의 잠들 뻔해요.",
+   "blank": "épuiser",
+   "src": "made"
+  },
+  {
+   "text": "La chaleur de l'été finit par épuiser Camille, qui rêve déjà de l'automne.",
+   "en": "The summer heat ends up wearing Camille out, and she's already dreaming of autumn.",
+   "ko": "여름 더위에 지친 카미유는 벌써 가을을 꿈꿔요.",
+   "blank": "épuiser",
+   "src": "made"
+  }
+ ],
  "w|équation": [
   {
    "text": "Pour Thomas, équilibrer le coût d'un plat reste une équation difficile.",
@@ -31471,6 +31743,22 @@
    "en": "Be careful not to choke while eating.",
    "ko": "먹을 때 목 막히지 않게 조심해.",
    "blank": "étouffer"
+  }
+ ],
+ "w|étourdi": [
+  {
+   "text": "Un peu étourdi par l'anesthésie, Lucas se lève lentement du fauteuil.",
+   "en": "A little dizzy from the anesthetic, Lucas gets up slowly from the chair.",
+   "ko": "마취 때문에 조금 어지러운 뤼카는 의자에서 천천히 일어나요.",
+   "blank": "étourdi",
+   "src": "made"
+  },
+  {
+   "text": "Camille est si étourdie qu'elle sort en sandales le premier jour de neige.",
+   "en": "Camille is so scatterbrained that she goes out in sandals on the first day of snow.",
+   "ko": "카미유는 덜렁대서 첫눈 오는 날 샌들을 신고 나가요.",
+   "blank": "étourdie",
+   "src": "made"
   }
  ],
  "w|étrange": [
@@ -36537,6 +36825,22 @@
    "blank": "fumer"
   }
  ],
+ "w|fumeur": [
+  {
+   "text": "En voyant ses dents jaunies, le dentiste devine tout de suite que Lucas est un gros fumeur.",
+   "en": "Seeing his yellowed teeth, the dentist immediately guesses Lucas is a heavy smoker.",
+   "ko": "누레진 이를 보자 치과 의사는 뤼카가 담배를 많이 피운다는 걸 바로 알아채요.",
+   "blank": "fumeur",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin de Camille, ancien fumeur, dit qu'il sent enfin l'odeur des lilas au printemps.",
+   "en": "Camille's neighbor, a former smoker, says he can finally smell the lilacs in spring.",
+   "ko": "담배를 끊은 카미유의 이웃은 봄이면 드디어 라일락 향기가 난다고 해요.",
+   "blank": "fumeur",
+   "src": "made"
+  }
+ ],
  "w|fumier": [
   {
    "text": "Près de la ferme, Antoine sent une forte odeur de fumier.",
@@ -37783,6 +38087,22 @@
    "src": "made"
   }
  ],
+ "w|glande": [
+  {
+   "text": "Le dentiste palpe le cou de Lucas pour vérifier qu'aucune glande n'est enflée.",
+   "en": "The dentist feels Lucas's neck to check that no gland is swollen.",
+   "ko": "치과 의사는 붓은 샘이 없는지 뤼카의 목을 만져 봐요.",
+   "blank": "glande",
+   "src": "made"
+  },
+  {
+   "text": "Le médecin explique à Camille que la glande thyroïde peut rendre plus frileux en hiver.",
+   "en": "The doctor explains to Camille that the thyroid gland can make you feel the cold more in winter.",
+   "ko": "의사는 카미유에게 갑상샘 때문에 겨울에 추위를 더 탈 수 있다고 설명해요.",
+   "blank": "glande",
+   "src": "made"
+  }
+ ],
  "w|glisser": [
   {
    "text": "J'ai failli glisser dans la cuisine.",
@@ -38110,6 +38430,22 @@
    "en": "In the historical series Manon ordered, the king refuses to pardon an old friend.",
    "ko": "마농이 주문한 역사 드라마에서 왕은 옛 친구를 사면하지 않아요.",
    "blank": "gracier",
+   "src": "made"
+  }
+ ],
+ "w|gracieux": [
+  {
+   "text": "Lucas remercie la réceptionniste pour son accueil gracieux malgré son retard.",
+   "en": "Lucas thanks the receptionist for her gracious welcome despite his being late.",
+   "ko": "뤼카는 늦었는데도 친절하게 맞아 준 접수원에게 고마워해요.",
+   "blank": "gracieux",
+   "src": "made"
+  },
+  {
+   "text": "Camille regarde les premières hirondelles dessiner des courbes gracieuses dans le ciel d'avril.",
+   "en": "Camille watches the first swallows trace graceful curves in the April sky.",
+   "ko": "카미유는 사월 하늘에 우아한 곡선을 그리는 첫 제비들을 봐요.",
+   "blank": "gracieuses",
    "src": "made"
   }
  ],
@@ -39237,6 +39573,22 @@
    "src": "made"
   }
  ],
+ "w|handicap": [
+  {
+   "text": "Le cabinet du dentiste de Lucas est équipé pour les patients en situation de handicap.",
+   "en": "Lucas's dentist's surgery is equipped for patients with disabilities.",
+   "ko": "뤼카가 다니는 치과는 장애가 있는 환자를 위한 시설이 갖춰져 있어요.",
+   "blank": "handicap",
+   "src": "made"
+  },
+  {
+   "text": "Camille trouve que l'hiver est un vrai handicap pour faire du vélo en ville.",
+   "en": "Camille finds winter a real handicap for cycling in the city.",
+   "ko": "카미유는 겨울이 도시에서 자전거 타기에 큰 걸림돌이라고 생각해요.",
+   "blank": "handicap",
+   "src": "made"
+  }
+ ],
  "w|handicapé": [
   {
    "text": "Louis aide un monsieur handicapé à porter ses médicaments jusqu'à la voiture.",
@@ -40129,6 +40481,22 @@
    "blank": "hors"
   }
  ],
+ "w|hospitaliser": [
+  {
+   "text": "Le dentiste rassure Lucas : inutile de l'hospitaliser pour retirer une dent de sagesse.",
+   "en": "The dentist reassures Lucas that there's no need to hospitalize him to remove a wisdom tooth.",
+   "ko": "치과 의사는 사랑니를 빼는 데 입원할 필요는 없다며 뤼카를 안심시켜요.",
+   "blank": "hospitaliser",
+   "src": "made"
+  },
+  {
+   "text": "L'hiver dernier, il a fallu hospitaliser la grand-mère de Camille à cause d'une mauvaise grippe.",
+   "en": "Last winter, Camille's grandmother had to be hospitalized with a bad flu.",
+   "ko": "지난겨울 카미유의 할머니는 독감이 심해서 입원해야 했어요.",
+   "blank": "hospitaliser",
+   "src": "made"
+  }
+ ],
  "w|hospitalité": [
   {
    "text": "Les randonneurs remercient Antoine pour son hospitalité et sa soupe chaude.",
@@ -40476,6 +40844,22 @@
    "en": "For Manon, the blackbirds' song in March is a true hymn to spring.",
    "ko": "마농에게 삼월의 지빠귀 노래는 진정한 봄의 찬가예요.",
    "blank": "hymne",
+   "src": "made"
+  }
+ ],
+ "w|hypnose": [
+  {
+   "text": "Pour vaincre sa peur, Lucas a essayé une séance d'hypnose avant ses soins dentaires.",
+   "en": "To beat his fear, Lucas tried a hypnosis session before his dental treatment.",
+   "ko": "뤼카는 무서움을 이기려고 치과 치료 전에 최면 요법을 받아 봤어요.",
+   "blank": "hypnose",
+   "src": "made"
+  },
+  {
+   "text": "Le crépitement de la pluie sur le toit plonge Camille dans une sorte d'hypnose.",
+   "en": "The patter of rain on the roof puts Camille into a kind of trance.",
+   "ko": "지붕에 떨어지는 빗소리에 카미유는 최면에 걸린 듯해요.",
+   "blank": "hypnose",
    "src": "made"
   }
  ],
@@ -41936,6 +42320,22 @@
    "en": "Manon reads in the paper that the police want to charge a network of fake shopping sites.",
    "ko": "마농은 신문에서 경찰이 가짜 쇼핑몰 조직을 기소하려 한다는 기사를 읽어요.",
    "blank": "inculper",
+   "src": "made"
+  }
+ ],
+ "w|indemne": [
+  {
+   "text": "Après sa chute à vélo, Lucas est sorti presque indemne, à part une incisive cassée.",
+   "en": "After his bike fall, Lucas came out almost unhurt, apart from a broken incisor.",
+   "ko": "자전거 사고 뒤 뤼카는 앞니 하나가 깨진 것 말고는 거의 멀쩡했어요.",
+   "blank": "indemne",
+   "src": "made"
+  },
+  {
+   "text": "La tempête d'automne a arraché le toit du cabanon, mais le potager de Camille est resté indemne.",
+   "en": "The autumn storm ripped the roof off the shed, but Camille's vegetable patch came through unharmed.",
+   "ko": "가을 폭풍에 창고 지붕이 날아갔지만 카미유의 텃밭은 멀쩡했어요.",
+   "blank": "indemne",
    "src": "made"
   }
  ],
@@ -47879,6 +48279,22 @@
    "src": "made"
   }
  ],
+ "w|maigrir": [
+  {
+   "text": "Le dentiste conseille à Lucas de moins grignoter s'il veut maigrir et protéger ses dents.",
+   "en": "The dentist advises Lucas to snack less if he wants to lose weight and protect his teeth.",
+   "ko": "치과 의사는 살을 빼고 이도 지키려면 간식을 줄이라고 뤼카에게 말해요.",
+   "blank": "maigrir",
+   "src": "made"
+  },
+  {
+   "text": "Camille veut maigrir un peu avant l'été et se remet à marcher chaque soir.",
+   "en": "Camille wants to lose a little weight before summer and starts walking every evening again.",
+   "ko": "카미유는 여름 전에 살을 좀 빼려고 매일 저녁 다시 걸어요.",
+   "blank": "maigrir",
+   "src": "made"
+  }
+ ],
  "w|mail": [
   {
    "text": "J'envoie un mail à mon professeur.",
@@ -48594,6 +49010,22 @@
    "en": "Léa gently teases Claire about her habit of writing everything down in a notebook.",
    "ko": "레아는 뭐든 수첩에 적는 클레르의 버릇을 다정하게 놀려요.",
    "blank": "manie",
+   "src": "made"
+  }
+ ],
+ "w|manier": [
+  {
+   "text": "Lucas admire la façon dont le dentiste sait manier ses petits instruments avec précision.",
+   "en": "Lucas admires how precisely the dentist handles his small instruments.",
+   "ko": "뤼카는 치과 의사가 작은 기구를 정확하게 다루는 솜씨에 감탄해요.",
+   "blank": "manier",
+   "src": "made"
+  },
+  {
+   "text": "En automne, Camille apprend à manier la tronçonneuse pour couper le bois de chauffage.",
+   "en": "In autumn, Camille learns to handle the chainsaw to cut firewood.",
+   "ko": "가을에 카미유는 땔감을 자르려고 전기톱 다루는 법을 배워요.",
+   "blank": "manier",
    "src": "made"
   }
  ],
@@ -51197,6 +51629,22 @@
    "src": "made"
   }
  ],
+ "w|miniature": [
+  {
+   "text": "Dans la vitrine du cabinet, Lucas remarque un fauteuil de dentiste en miniature.",
+   "en": "In the surgery's display case, Lucas notices a miniature dentist's chair.",
+   "ko": "뤼카는 치과 진열장에서 작은 모형 치과 의자를 발견해요.",
+   "blank": "miniature",
+   "src": "made"
+  },
+  {
+   "text": "Camille aménage un jardin japonais en miniature sur son balcon pour le printemps.",
+   "en": "Camille sets up a miniature Japanese garden on her balcony for spring.",
+   "ko": "카미유는 봄을 맞아 발코니에 작은 일본식 정원을 꾸며요.",
+   "blank": "miniature",
+   "src": "made"
+  }
+ ],
  "w|minimum": [
   {
    "text": "Je fais juste le minimum pour valider le cours.",
@@ -52675,6 +53123,22 @@
    "blank": "muscle"
   }
  ],
+ "w|musclé": [
+  {
+   "text": "L'assistant dentaire de Lucas est un grand gaillard musclé qui parle très doucement.",
+   "en": "Lucas's dental assistant is a big muscular guy who speaks very softly.",
+   "ko": "뤼카의 치과 조무사는 아주 조용히 말하는 덩치 큰 근육질 남자예요.",
+   "blank": "musclé",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Camille voit les joggeurs musclés revenir en masse au bord du canal.",
+   "en": "In spring, Camille sees the muscular joggers return in droves along the canal.",
+   "ko": "봄이 되면 카미유는 운하 옆에 근육질 조깅족이 대거 돌아오는 걸 봐요.",
+   "blank": "musclés",
+   "src": "made"
+  }
+ ],
  "w|musée": [
   {
    "text": "On va visiter le musée cet après-midi.",
@@ -52942,6 +53406,22 @@
    "en": "Sarah wants to open a second office in her hometown.",
    "ko": "사라는 고향 도시에 두 번째 사무실을 열고 싶어 해요.",
    "blank": "natale",
+   "src": "made"
+  }
+ ],
+ "w|natation": [
+  {
+   "text": "Lucas raconte au dentiste qu'il s'est cassé une dent en faisant de la natation.",
+   "en": "Lucas tells the dentist he chipped a tooth while swimming.",
+   "ko": "뤼카는 치과 의사에게 수영하다가 이가 깨졌다고 말해요.",
+   "blank": "natation",
+   "src": "made"
+  },
+  {
+   "text": "Dès les premiers beaux jours, Camille reprend la natation en piscine découverte.",
+   "en": "As soon as the first fine days arrive, Camille goes back to swimming in the outdoor pool.",
+   "ko": "날이 풀리자마자 카미유는 야외 수영장에서 수영을 다시 시작해요.",
+   "blank": "natation",
    "src": "made"
   }
  ],
@@ -54173,6 +54653,22 @@
    "en": "She refuses to obéir her parents.",
    "ko": "그녀는 부모님께 obéir하기를 거부해.",
    "blank": "obéir"
+  }
+ ],
+ "w|obèse": [
+  {
+   "text": "Dans la salle d'attente, Lucas lit un article sur les enfants obèses et le sucre caché dans les boissons.",
+   "en": "In the waiting room, Lucas reads an article about obese children and the sugar hidden in drinks.",
+   "ko": "대기실에서 뤼카는 비만 아이들과 음료 속 숨은 설탕에 관한 기사를 읽어요.",
+   "blank": "obèses",
+   "src": "made"
+  },
+  {
+   "text": "Camille remarque que son chat devient presque obèse chaque hiver, faute de sortir.",
+   "en": "Camille notices her cat becomes almost obese every winter from not going out.",
+   "ko": "카미유는 고양이가 겨울마다 밖에 안 나가서 거의 비만이 된다고 생각해요.",
+   "blank": "obèse",
+   "src": "made"
   }
  ],
  "w|objectif": [
@@ -55803,6 +56299,22 @@
    "en": "Are you hungry? Yes, a little.",
    "ko": "배고파요? 네, 조금요.",
    "blank": "Oui"
+  }
+ ],
+ "w|ouïe": [
+  {
+   "text": "Le bruit de la fraise est si fort que Lucas craint pour son ouïe.",
+   "en": "The drill is so loud that Lucas fears for his hearing.",
+   "ko": "드릴 소리가 너무 커서 뤼카는 청력이 걱정돼요.",
+   "blank": "ouïe",
+   "src": "made"
+  },
+  {
+   "text": "En hiver, la neige étouffe les sons, et Camille a l'impression de perdre l'ouïe.",
+   "en": "In winter, the snow muffles sounds, and Camille feels as if she's lost her hearing.",
+   "ko": "겨울에 눈이 소리를 삼켜서 카미유는 귀가 안 들리는 것 같아요.",
+   "blank": "ouïe",
+   "src": "made"
   }
  ],
  "w|ouragan": [
@@ -62541,6 +63053,22 @@
    "en": "The pressure rises before the exam.",
    "ko": "시험 전에 압박이 커져.",
    "blank": "pression"
+  }
+ ],
+ "w|prestigieux": [
+  {
+   "text": "Le dentiste de Lucas a étudié dans une université prestigieuse à l'étranger.",
+   "en": "Lucas's dentist studied at a prestigious university abroad.",
+   "ko": "뤼카의 치과 의사는 외국의 명문 대학에서 공부했어요.",
+   "blank": "prestigieuse",
+   "src": "made"
+  },
+  {
+   "text": "En été, Camille assiste à un festival de musique prestigieux dans un château de la région.",
+   "en": "In summer, Camille attends a prestigious music festival in a château in the region.",
+   "ko": "여름에 카미유는 지역 성에서 열리는 유명 음악 축제에 가요.",
+   "blank": "prestigieux",
+   "src": "made"
   }
  ],
  "w|présumer": [
@@ -69637,6 +70165,22 @@
    "src": "made"
   }
  ],
+ "w|rétablissement": [
+  {
+   "text": "Le dentiste promet à Lucas un rétablissement rapide après l'extraction.",
+   "en": "The dentist promises Lucas a quick recovery after the extraction.",
+   "ko": "치과 의사는 뤼카에게 발치 뒤 금방 회복될 거라고 해요.",
+   "blank": "rétablissement",
+   "src": "made"
+  },
+  {
+   "text": "Après une longue grippe, Camille profite du printemps pour son rétablissement.",
+   "en": "After a long flu, Camille makes the most of spring to recover.",
+   "ko": "오래 독감을 앓은 카미유는 봄을 맞아 몸을 추슬러요.",
+   "blank": "rétablissement",
+   "src": "made"
+  }
+ ],
  "w|retard": [
   {
    "text": "J'ai du retard pour mon rendez-vous.",
@@ -70901,6 +71445,22 @@
    "blank": "routine"
   }
  ],
+ "w|rouvrir": [
+  {
+   "text": "Le dentiste doit rouvrir l'ancienne carie de Lucas pour la nettoyer à fond.",
+   "en": "The dentist has to reopen Lucas's old cavity to clean it thoroughly.",
+   "ko": "치과 의사는 뤼카의 예전 충치를 다시 열어 깨끗이 치료해야 해요.",
+   "blank": "rouvrir",
+   "src": "made"
+  },
+  {
+   "text": "En avril, Camille a hâte de voir le glacier du coin rouvrir après l'hiver.",
+   "en": "In April, Camille can't wait to see the local ice-cream shop reopen after winter.",
+   "ko": "사월에 카미유는 동네 아이스크림 가게가 겨울을 지나 다시 문 열기를 기다려요.",
+   "blank": "rouvrir",
+   "src": "made"
+  }
+ ],
  "w|roux": [
   {
    "text": "Une petite fille rousse vient demander à Julien où se trouve la bibliothèque.",
@@ -71782,6 +72342,22 @@
    "en": "Inès's cousin, who is hot-tempered, quickly gets worked up behind the till.",
    "ko": "다혈질인 이네스의 사촌은 계산대에서 금세 화를 내요.",
    "blank": "sanguin",
+   "src": "made"
+  }
+ ],
+ "w|sanitaire": [
+  {
+   "text": "À cause de la crise sanitaire, Lucas doit attendre dehors avant d'entrer au cabinet.",
+   "en": "Because of the health crisis, Lucas has to wait outside before entering the surgery.",
+   "ko": "보건 위기 때문에 뤼카는 치과에 들어가기 전에 밖에서 기다려야 해요.",
+   "blank": "sanitaire",
+   "src": "made"
+  },
+  {
+   "text": "Pendant la canicule, la ville de Camille déclenche une alerte sanitaire pour les personnes âgées.",
+   "en": "During the heatwave, Camille's town issues a health alert for the elderly.",
+   "ko": "폭염 동안 카미유가 사는 도시는 노인을 위한 보건 경보를 내려요.",
+   "blank": "sanitaire",
    "src": "made"
   }
  ],
@@ -74011,6 +74587,22 @@
    "en": "I have to sign the contract before tomorrow.",
    "ko": "내일까지 계약서에 signer해야 해.",
    "blank": "signer"
+  }
+ ],
+ "w|significatif": [
+  {
+   "text": "Le dentiste constate un progrès significatif dans l'hygiène dentaire de Lucas.",
+   "en": "The dentist notes significant progress in Lucas's dental hygiene.",
+   "ko": "치과 의사는 뤼카의 구강 위생이 눈에 띄게 좋아졌다고 해요.",
+   "blank": "significatif",
+   "src": "made"
+  },
+  {
+   "text": "Camille note une baisse significative des températures depuis le début de la semaine.",
+   "en": "Camille notes a significant drop in temperatures since the start of the week.",
+   "ko": "카미유는 이번 주 들어 기온이 눈에 띄게 떨어졌다고 적어요.",
+   "blank": "significative",
+   "src": "made"
   }
  ],
  "w|signification": [
@@ -79403,6 +79995,22 @@
    "src": "made"
   }
  ],
+ "w|thoracique": [
+  {
+   "text": "Le dentiste demande à Lucas s'il a déjà ressenti des douleurs thoraciques pendant un soin.",
+   "en": "The dentist asks Lucas if he has ever felt chest pain during treatment.",
+   "ko": "치과 의사는 뤼카에게 치료 중에 가슴 통증을 느낀 적이 있냐고 물어요.",
+   "blank": "thoraciques",
+   "src": "made"
+  },
+  {
+   "text": "L'air glacé de janvier provoque chez Camille une légère gêne thoracique quand elle court.",
+   "en": "The icy January air gives Camille slight chest discomfort when she runs.",
+   "ko": "일월의 찬 공기 때문에 카미유는 달릴 때 가슴이 조금 답답해요.",
+   "blank": "thoracique",
+   "src": "made"
+  }
+ ],
  "w|tic": [
   {
    "text": "Le fils de Lucas a un petit tic nerveux à l'œil depuis la rentrée.",
@@ -80838,6 +81446,22 @@
    "en": "Claire starts to sweat carrying the cases of champagne up to the third floor.",
    "ko": "클레르는 샴페인 상자를 삼 층까지 나르다가 땀이 나기 시작해요.",
    "blank": "transpirer",
+   "src": "made"
+  }
+ ],
+ "w|transplantation": [
+  {
+   "text": "Le dentiste parle à Lucas d'une technique de transplantation de gencive pour couvrir la racine.",
+   "en": "The dentist tells Lucas about a gum graft technique to cover the root.",
+   "ko": "치과 의사는 뤼카에게 뿌리를 덮는 잇몸 이식 기술을 이야기해요.",
+   "blank": "transplantation",
+   "src": "made"
+  },
+  {
+   "text": "Camille prépare la transplantation de ses jeunes plants de tomates au jardin en mai.",
+   "en": "Camille is getting ready to transplant her tomato seedlings into the garden in May.",
+   "ko": "카미유는 오월에 토마토 모종을 밭에 옮겨 심을 준비를 해요.",
+   "blank": "transplantation",
    "src": "made"
   }
  ],
@@ -83103,6 +83727,22 @@
    "en": "I like green tea.",
    "ko": "나는 녹차를 좋아해.",
    "blank": "vert"
+  }
+ ],
+ "w|vertébral": [
+  {
+   "text": "Le dentiste conseille à Lucas un fauteuil plus adapté à cause de ses douleurs à la colonne vertébrale.",
+   "en": "The dentist recommends a better-suited chair for Lucas because of his spinal pain.",
+   "ko": "치과 의사는 척추 통증이 있는 뤼카에게 더 맞는 의자를 권해요.",
+   "blank": "vertébrale",
+   "src": "made"
+  },
+  {
+   "text": "Avec le froid, Camille a mal au dos et son kiné lui parle de la colonne vertébrale.",
+   "en": "With the cold, Camille's back hurts and her physio talks to her about her spine.",
+   "ko": "추위에 허리가 아픈 카미유에게 물리치료사가 척추 이야기를 해요.",
+   "blank": "vertébrale",
+   "src": "made"
   }
  ],
  "w|vertige": [
