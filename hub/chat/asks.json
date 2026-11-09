@@ -138,6 +138,75 @@
       "base": "34e515a",
       "head": "1b63757",
       "status": "open"
+    },
+    {
+      "id": "a261109-4",
+      "at": "2026-11-09 14:53",
+      "kind": "apply",
+      "from": "3",
+      "to": "1",
+      "what": "Quizbank 표현은 첫 측정 표현 단계부터, 넣어 둔 문법은 바로 아래 단계부터",
+      "files": [
+        "src/components/FindInMy.tsx"
+      ],
+      "features": [
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기"
+      ],
+      "base": "8bce8d8",
+      "head": "55c16ce",
+      "status": "open"
+    },
+    {
+      "id": "a261109-5",
+      "at": "2026-11-09 14:53",
+      "kind": "apply",
+      "from": "3",
+      "to": "2",
+      "what": "Quizbank 표현은 첫 측정 표현 단계부터, 넣어 둔 문법은 바로 아래 단계부터",
+      "files": [
+        "src/components/studyMap/Quizbank.tsx",
+        "src/components/notes/NotebookSection.tsx",
+        "src/components/studyMap/LessonHost.tsx",
+        "src/components/studyMap/FirstCheck.tsx",
+        "src/components/studyMap/StudyMapTab.tsx",
+        "src/app/api/curriculum/words/route.ts",
+        "src/components/studyMap/Logbank.tsx",
+        "src/components/studyMap/ExpressionCard.tsx",
+        "src/components/studyMap/Dictionary.tsx",
+        "src/components/studyMap/BankHelp.tsx",
+        "src/components/studyMap/BankFlip.tsx",
+        "src/components/studyMap/DictNotes.tsx",
+        "src/components/studyMap/LanguageBank.tsx",
+        "src/components/studyMap/QuizPlayer.tsx",
+        "src/components/studyMap/FrameLesson.tsx",
+        "src/components/studyMap/InlineQuiz.tsx"
+      ],
+      "features": [
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "칸 설명",
+        "My에서 찾기"
+      ],
+      "base": "8bce8d8",
+      "head": "55c16ce",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -158,9 +227,25 @@
         "a261109-2",
         "a261109-3"
       ]
+    },
+    {
+      "at": "2026-11-09 14:53",
+      "from": "3",
+      "base": "8bce8d8",
+      "head": "55c16ce",
+      "what": "Quizbank 표현은 첫 측정 표현 단계부터, 넣어 둔 문법은 바로 아래 단계부터",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261109-4",
+        "a261109-5"
+      ]
     }
   ],
   "seq": {
-    "261109": 3
+    "261109": 5
   }
 }
