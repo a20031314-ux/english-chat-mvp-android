@@ -1733,6 +1733,22 @@
    "blank": "agir"
   }
  ],
+ "w|agitation": [
+  {
+   "text": "Dans l'open space, Thomas observe l'agitation qui précède la visite du directeur.",
+   "en": "In the open-plan office, Thomas watches the bustle before the director's visit.",
+   "ko": "토마는 사무실에서 사장님 방문 전의 어수선함을 지켜봐요.",
+   "blank": "agitation",
+   "src": "made"
+  },
+  {
+   "text": "Dans le village des coureurs, Chloé observe l'agitation des bénévoles.",
+   "en": "In the runners' village, Chloé watches the volunteers bustling about.",
+   "ko": "클로에는 선수 대기 구역에서 바쁘게 움직이는 자원봉사자들을 지켜봐요.",
+   "blank": "agitation",
+   "src": "made"
+  }
+ ],
  "w|agité": [
   {
    "text": "La nuit avant de poster la lettre, Nicolas était trop agité pour dormir.",
@@ -3645,6 +3661,22 @@
    "src": "made"
   }
  ],
+ "w|anxiété": [
+  {
+   "text": "Pour cacher son anxiété, Thomas sourit à tout le monde dans l'ascenseur.",
+   "en": "To hide his anxiety, Thomas smiles at everyone in the lift.",
+   "ko": "토마는 불안을 감추려고 엘리베이터에서 모두에게 웃어 보여요.",
+   "blank": "anxiété",
+   "src": "made"
+  },
+  {
+   "text": "Avant le départ, Chloé lutte contre l'anxiété en respirant lentement.",
+   "en": "Before the start, Chloé fights her anxiety by breathing slowly.",
+   "ko": "출발 전에 클로에는 천천히 숨을 쉬며 불안을 다스려요.",
+   "blank": "anxiété",
+   "src": "made"
+  }
+ ],
  "w|anxieux": [
   {
    "text": "Avant d'appeler sa sœur, Hugo est si anxieux qu'il fait les cent pas.",
@@ -3775,6 +3807,22 @@
    "en": "You shouldn't judge by appearance.",
    "ko": "외모로 판단하면 안 돼.",
    "blank": "apparence"
+  }
+ ],
+ "w|apparent": [
+  {
+   "text": "Le calme apparent de Thomas cache une vraie nervosité.",
+   "en": "Thomas's apparent calm hides real nervousness.",
+   "ko": "겉으로 보이는 토마의 차분함 뒤에는 진짜 긴장이 숨어 있어요.",
+   "blank": "apparent",
+   "src": "made"
+  },
+  {
+   "text": "Malgré la fatigue apparente sur son visage, Chloé accélère dans la dernière ligne droite.",
+   "en": "Despite the visible tiredness on her face, Chloé speeds up on the final straight.",
+   "ko": "얼굴에 피곤함이 보이지만 클로에는 마지막 직선 구간에서 속도를 올려요.",
+   "blank": "apparente",
+   "src": "made"
   }
  ],
  "w|apparition": [
@@ -4605,6 +4653,22 @@
    "en": "When are they going to arrive?",
    "ko": "그들은 언제 도착해?",
    "blank": "arriver"
+  }
+ ],
+ "w|arrogance": [
+  {
+   "text": "Un collègue parle à Thomas avec une arrogance qui le met mal à l'aise.",
+   "en": "A colleague talks to Thomas with an arrogance that makes him uneasy.",
+   "ko": "한 동료가 거만하게 말해서 토마는 불편해요.",
+   "blank": "arrogance",
+   "src": "made"
+  },
+  {
+   "text": "Une coureuse double tout le monde avec arrogance, mais Chloé la rattrape plus loin.",
+   "en": "A runner overtakes everyone arrogantly, but Chloé catches up with her further on.",
+   "ko": "한 주자가 거만하게 모두를 앞지르지만 클로에가 나중에 따라잡아요.",
+   "blank": "arrogance",
+   "src": "made"
   }
  ],
  "w|arrogant": [
@@ -5699,6 +5763,22 @@
    "en": "I have no problem with that.",
    "ko": "나는 그거에 아무 문제 없어.",
    "blank": "aucun"
+  }
+ ],
+ "w|audace": [
+  {
+   "text": "Thomas a l'audace de poser une question pendant sa première réunion.",
+   "en": "Thomas has the nerve to ask a question during his first meeting.",
+   "ko": "토마는 첫 회의에서 용기 있게 질문을 해요.",
+   "blank": "audace",
+   "src": "made"
+  },
+  {
+   "text": "Au dernier kilomètre, Chloé a l'audace de doubler le groupe de tête.",
+   "en": "At the last kilometre, Chloé has the daring to overtake the leading group.",
+   "ko": "마지막 일 킬로미터에서 클로에는 과감하게 선두 그룹을 앞질러요.",
+   "blank": "audace",
+   "src": "made"
   }
  ],
  "w|audacieux": [
@@ -7377,6 +7457,22 @@
    "blank": "bas"
   }
  ],
+ "w|basculer": [
+  {
+   "text": "Avec ce nouveau travail en ville, Thomas sent sa vie basculer.",
+   "en": "With this new job in the city, Thomas feels his life tipping over into something new.",
+   "ko": "도시에서 새 일을 시작하며 토마는 삶이 확 바뀌는 걸 느껴요.",
+   "blank": "basculer",
+   "src": "made"
+  },
+  {
+   "text": "Un coup de vent fait presque basculer Chloé au bord du trottoir.",
+   "en": "A gust of wind nearly knocks Chloé over at the edge of the pavement.",
+   "ko": "돌풍에 클로에가 인도 가장자리에서 넘어질 뻔해요.",
+   "blank": "basculer",
+   "src": "made"
+  }
+ ],
  "w|base": [
   {
    "text": "On va commencer avec une base solide.",
@@ -7870,6 +7966,22 @@
    "en": "This year Émilie was able to get a grant for the drawing class.",
    "ko": "올해 에밀리는 그림 수업 장학금을 받을 수 있었어요.",
    "blank": "bénéficier",
+   "src": "made"
+  }
+ ],
+ "w|bénéfique": [
+  {
+   "text": "Thomas trouve la pause de midi bénéfique pour faire connaissance avec l'équipe.",
+   "en": "Thomas finds the lunch break helpful for getting to know the team.",
+   "ko": "토마는 점심시간이 팀과 친해지는 데 도움이 된다고 느껴요.",
+   "blank": "bénéfique",
+   "src": "made"
+  },
+  {
+   "text": "L'entraîneur de Chloé dit qu'une sieste avant la course est bénéfique.",
+   "en": "Chloé's coach says a nap before the race is beneficial.",
+   "ko": "클로에의 코치는 경기 전 낮잠이 몸에 좋다고 해요.",
+   "blank": "bénéfique",
    "src": "made"
   }
  ],
@@ -9811,6 +9923,22 @@
    "blank": "brosse"
   }
  ],
+ "w|brouhaha": [
+  {
+   "text": "À l'accueil, il y a un tel brouhaha que Thomas n'entend pas son nom.",
+   "en": "At reception there is such a din that Thomas doesn't hear his name.",
+   "ko": "안내 데스크가 너무 시끄러워서 토마는 자기 이름을 못 들어요.",
+   "blank": "brouhaha",
+   "src": "made"
+  },
+  {
+   "text": "Au départ, le brouhaha de la foule couvre la musique, et Chloé ajuste ses écouteurs.",
+   "en": "At the start, the crowd's racket drowns out the music, and Chloé adjusts her earphones.",
+   "ko": "출발선에서 관중의 소란이 음악을 덮어서 클로에는 이어폰을 고쳐 껴요.",
+   "blank": "brouhaha",
+   "src": "made"
+  }
+ ],
  "w|brouillard": [
   {
    "text": "Le brouillard cache la route.",
@@ -11145,6 +11273,22 @@
    "en": "I've always dreamed of living in a big capital city.",
    "ko": "나는 항상 큰 수도에서 사는 게 꿈이었어.",
    "blank": "capitale"
+  }
+ ],
+ "w|caprice": [
+  {
+   "text": "Thomas apprend que le nouveau logiciel n'est pas un caprice du directeur.",
+   "en": "Thomas learns that the new software isn't just the director's whim.",
+   "ko": "토마는 새 프로그램이 사장님의 변덕이 아니라는 걸 알게 돼요.",
+   "blank": "caprice",
+   "src": "made"
+  },
+  {
+   "text": "Chloé ne court pas par caprice : elle récolte des fonds pour une association.",
+   "en": "Chloé isn't running on a whim: she's raising money for a charity.",
+   "ko": "클로에는 변덕으로 달리는 게 아니라 단체를 위해 모금을 해요.",
+   "blank": "caprice",
+   "src": "made"
   }
  ],
  "w|capsule": [
@@ -15122,6 +15266,22 @@
    "en": "The wind makes the shutters of Camille's house bang all night.",
    "ko": "바람 때문에 카미유 집 덧창이 밤새 덜컹거려요.",
    "blank": "cogner",
+   "src": "made"
+  }
+ ],
+ "w|cohérent": [
+  {
+   "text": "La cheffe trouve le plan de Thomas cohérent et l'approuve tout de suite.",
+   "en": "The boss finds Thomas's plan coherent and approves it right away.",
+   "ko": "팀장은 토마의 계획이 일관성 있다고 보고 바로 승인해요.",
+   "blank": "cohérent",
+   "src": "made"
+  },
+  {
+   "text": "Tout au long du parcours, Chloé garde un rythme cohérent avec son objectif.",
+   "en": "Throughout the course, Chloé keeps a pace consistent with her goal.",
+   "ko": "클로에는 코스 내내 목표에 맞는 속도를 유지해요.",
+   "blank": "cohérent",
    "src": "made"
   }
  ],
@@ -24351,6 +24511,22 @@
    "blank": "détenu"
   }
  ],
+ "w|détermination": [
+  {
+   "text": "Thomas aborde sa première mission avec beaucoup de détermination.",
+   "en": "Thomas takes on his first assignment with great determination.",
+   "ko": "토마는 첫 업무를 아주 굳은 각오로 시작해요.",
+   "blank": "détermination",
+   "src": "made"
+  },
+  {
+   "text": "Malgré la douleur, Chloé continue avec beaucoup de détermination.",
+   "en": "Despite the pain, Chloé keeps going with great determination.",
+   "ko": "아파도 클로에는 굳은 의지로 계속 달려요.",
+   "blank": "détermination",
+   "src": "made"
+  }
+ ],
  "w|déterminer": [
   {
    "text": "Il faut déterminer la cause.",
@@ -24603,6 +24779,22 @@
    "en": "There is a car parked in front of the house.",
    "ko": "집 앞에 차가 주차되어 있어.",
    "blank": "devant"
+  }
+ ],
+ "w|dévasté": [
+  {
+   "text": "Thomas serait dévasté s'il perdait ce poste qu'il attendait depuis si longtemps.",
+   "en": "Thomas would be devastated if he lost the job he'd waited so long for.",
+   "ko": "오래 기다린 자리를 잃으면 토마는 크게 상심할 거예요.",
+   "blank": "dévasté",
+   "src": "made"
+  },
+  {
+   "text": "Chloé aurait été dévastée d'abandonner après six mois d'entraînement.",
+   "en": "Chloé would have been devastated to drop out after six months of training.",
+   "ko": "여섯 달을 훈련하고 포기했다면 클로에는 크게 상심했을 거예요.",
+   "blank": "dévastée",
+   "src": "made"
   }
  ],
  "w|développement": [
@@ -28539,6 +28731,22 @@
    "blank": "Elles"
   }
  ],
+ "w|éloge": [
+  {
+   "text": "Dès la première semaine, le client fait l'éloge du travail de Thomas.",
+   "en": "From the very first week, the client praises Thomas's work.",
+   "ko": "첫 주부터 고객이 토마의 일을 칭찬해요.",
+   "blank": "éloge",
+   "src": "made"
+  },
+  {
+   "text": "Dans le journal, Chloé lit un bel éloge des coureurs amateurs.",
+   "en": "In the newspaper, Chloé reads a fine tribute to amateur runners.",
+   "ko": "클로에는 신문에서 아마추어 주자들을 칭찬하는 멋진 글을 읽어요.",
+   "blank": "éloge",
+   "src": "made"
+  }
+ ],
  "w|éloigner": [
   {
    "text": "Il faut éloigner les enfants du feu.",
@@ -28625,6 +28833,22 @@
    "en": "They boarded all the passengers.",
    "ko": "승객 전원을 태웠어.",
    "blank": "embarqué"
+  }
+ ],
+ "w|embarras": [
+  {
+   "text": "Thomas cache mal son embarras quand il oublie le prénom de sa cheffe.",
+   "en": "Thomas barely hides his embarrassment when he forgets his boss's first name.",
+   "ko": "토마는 팀장 이름을 잊어버리고 당황한 걸 잘 감추지 못해요.",
+   "blank": "embarras",
+   "src": "made"
+  },
+  {
+   "text": "Au départ, Chloé remarque avec embarras qu'elle a mis son dossard à l'envers.",
+   "en": "At the start, Chloé notices with embarrassment that she has put her bib on upside down.",
+   "ko": "출발선에서 클로에는 번호표를 거꾸로 단 걸 알고 민망해해요.",
+   "blank": "embarras",
+   "src": "made"
   }
  ],
  "w|embarrassant": [
@@ -29239,6 +29463,22 @@
    "en": "He is still in the room.",
    "ko": "그는 아직 방에 있어.",
    "blank": "encore"
+  }
+ ],
+ "w|encouragement": [
+  {
+   "text": "Après la réunion, la cheffe de Thomas lui adresse quelques mots d'encouragement.",
+   "en": "After the meeting, Thomas's boss gives him a few words of encouragement.",
+   "ko": "회의가 끝나고 토마의 팀장이 격려의 말을 몇 마디 건네요.",
+   "blank": "encouragement",
+   "src": "made"
+  },
+  {
+   "text": "Les cris d'encouragement du public donnent des ailes à Chloé.",
+   "en": "The crowd's shouts of encouragement give Chloé wings.",
+   "ko": "관중의 응원 소리에 클로에는 날개가 돋친 듯해요.",
+   "blank": "encouragement",
+   "src": "made"
   }
  ],
  "w|encourager": [
@@ -31559,6 +31799,22 @@
    "src": "made"
   }
  ],
+ "w|étaler": [
+  {
+   "text": "Avant la réunion, Thomas étale ses notes sur la grande table.",
+   "en": "Before the meeting, Thomas spreads his notes out on the big table.",
+   "ko": "회의 전에 토마는 큰 테이블에 메모를 펼쳐 놓아요.",
+   "blank": "étale",
+   "src": "made"
+  },
+  {
+   "text": "Chloé étale de la crème sur ses pieds pour éviter les ampoules.",
+   "en": "Chloé spreads cream on her feet to avoid blisters.",
+   "ko": "클로에는 물집이 안 생기게 발에 크림을 발라요.",
+   "blank": "étale",
+   "src": "made"
+  }
+ ],
  "w|étang": [
   {
    "text": "Le matin, une brume légère flotte sur l'étang, et Julien sort sa canne à pêche.",
@@ -33501,6 +33757,22 @@
    "src": "made"
   }
  ],
+ "w|fâcheux": [
+  {
+   "text": "Le service a la fâcheuse habitude de finir les réunions en retard, constate Thomas.",
+   "en": "The department has the unfortunate habit of finishing meetings late, Thomas notices.",
+   "ko": "토마가 보니 그 부서는 회의를 늦게 끝내는 안 좋은 버릇이 있어요.",
+   "blank": "fâcheuse",
+   "src": "made"
+  },
+  {
+   "text": "Un incident fâcheux retarde le départ, et Chloé attend sous la pluie.",
+   "en": "An unfortunate incident delays the start, and Chloé waits in the rain.",
+   "ko": "안 좋은 일이 생겨 출발이 늦어지고 클로에는 빗속에서 기다려요.",
+   "blank": "fâcheux",
+   "src": "made"
+  }
+ ],
  "w|facial": [
   {
    "text": "Lucas achète une crème hydratante faciale pour sa peau desséchée par le froid.",
@@ -33932,6 +34204,22 @@
    "en": "The day the roof was finished, the neighbor played a brass-band tune on the trumpet.",
    "ko": "지붕이 끝난 날 이웃이 트럼펫으로 행진곡을 불었어요.",
    "blank": "fanfare",
+   "src": "made"
+  }
+ ],
+ "w|fantaisie": [
+  {
+   "text": "Pour paraître détendu, Thomas porte une cravate avec un peu de fantaisie.",
+   "en": "To look relaxed, Thomas wears a slightly playful tie.",
+   "ko": "토마는 편해 보이려고 조금 재미있는 넥타이를 매요.",
+   "blank": "fantaisie",
+   "src": "made"
+  },
+  {
+   "text": "Beaucoup de coureurs se déguisent avec fantaisie, et Chloé adore ça.",
+   "en": "Lots of runners dress up with imagination, and Chloé loves it.",
+   "ko": "많은 주자가 재미있게 분장하는데 클로에는 그게 정말 좋아요.",
+   "blank": "fantaisie",
    "src": "made"
   }
  ],
@@ -36865,6 +37153,22 @@
    "blank": "fruit"
   }
  ],
+ "w|frustré": [
+  {
+   "text": "Thomas se sent un peu frustré de ne pas encore avoir d'ordinateur.",
+   "en": "Thomas feels a bit frustrated that he doesn't have a computer yet.",
+   "ko": "토마는 아직 컴퓨터가 없어서 조금 답답해요.",
+   "blank": "frustré",
+   "src": "made"
+  },
+  {
+   "text": "Chloé est frustrée d'avoir perdu du temps au ravitaillement.",
+   "en": "Chloé is frustrated at losing time at the refreshment stand.",
+   "ko": "클로에는 급수대에서 시간을 버려서 속상해요.",
+   "blank": "frustrée",
+   "src": "made"
+  }
+ ],
  "w|fugitif": [
   {
    "text": "Dans ce drame historique, Thomas incarne un fugitif caché dans une ferme.",
@@ -39653,6 +39957,22 @@
    "src": "made"
   }
  ],
+ "w|halluciner": [
+  {
+   "text": "Thomas croit halluciner quand il voit un chien dans le bureau du directeur.",
+   "en": "Thomas thinks he's seeing things when he spots a dog in the director's office.",
+   "ko": "토마는 사장실에 개가 있는 걸 보고 헛것을 보는 줄 알아요.",
+   "blank": "halluciner",
+   "src": "made"
+  },
+  {
+   "text": "Au kilomètre vingt, Chloé croit halluciner en voyant un coureur déguisé en banane.",
+   "en": "At kilometre twenty, Chloé thinks she's seeing things when she spots a runner dressed as a banana.",
+   "ko": "이십 킬로미터 지점에서 바나나 옷을 입은 주자를 보고 클로에는 헛것을 보는 줄 알아요.",
+   "blank": "halluciner",
+   "src": "made"
+  }
+ ],
  "w|halte": [
   {
    "text": "Le train fait une courte halte dans un petit village, et Lucas descend se dégourdir les jambes.",
@@ -41683,6 +42003,22 @@
    "blank": "impact"
   }
  ],
+ "w|impardonnable": [
+  {
+   "text": "Pour Thomas, se tromper de nom de client serait une erreur impardonnable.",
+   "en": "For Thomas, getting a client's name wrong would be an unforgivable mistake.",
+   "ko": "토마에게 고객 이름을 틀리는 건 용서할 수 없는 실수예요.",
+   "blank": "impardonnable",
+   "src": "made"
+  },
+  {
+   "text": "Oublier son dossard serait une erreur impardonnable pour Chloé.",
+   "en": "Forgetting her race bib would be an unforgivable mistake for Chloé.",
+   "ko": "클로에에게 번호표를 잊는 건 용서할 수 없는 실수예요.",
+   "blank": "impardonnable",
+   "src": "made"
+  }
+ ],
  "w|impasse": [
   {
    "text": "En sortant de la gare, Lucas se perd dans une impasse.",
@@ -43220,6 +43556,22 @@
    "en": "The salespeople's hours during the holidays are almost inhumane, an employee confides to Camille.",
    "ko": "한 직원이 카미유에게 연말 근무 시간이 거의 비인간적이라고 털어놓아요.",
    "blank": "inhumains",
+   "src": "made"
+  }
+ ],
+ "w|inimaginable": [
+  {
+   "text": "Il y a un an, ce poste semblait inimaginable pour Thomas.",
+   "en": "A year ago, this job seemed unimaginable to Thomas.",
+   "ko": "일 년 전만 해도 토마에게 이 자리는 상상도 못 할 일이었어요.",
+   "blank": "inimaginable",
+   "src": "made"
+  },
+  {
+   "text": "Il y a encore deux ans, finir un marathon était inimaginable pour Chloé.",
+   "en": "Only two years ago, finishing a marathon was unimaginable for Chloé.",
+   "ko": "이 년 전만 해도 클로에에게 마라톤 완주는 상상도 못 할 일이었어요.",
+   "blank": "inimaginable",
    "src": "made"
   }
  ],
@@ -49863,6 +50215,22 @@
    "blank": "marre"
   }
  ],
+ "w|marrer": [
+  {
+   "text": "Les collègues de Thomas se marrent quand il se trompe d'étage.",
+   "en": "Thomas's colleagues crack up when he gets the wrong floor.",
+   "ko": "토마가 층을 잘못 찾자 동료들이 깔깔 웃어요.",
+   "blank": "marrent",
+   "src": "made"
+  },
+  {
+   "text": "Les amis de Chloé se sont bien marrés en voyant sa tenue fluo.",
+   "en": "Chloé's friends had a good laugh when they saw her neon outfit.",
+   "ko": "클로에의 형광색 운동복을 보고 친구들이 한참 웃었어요.",
+   "blank": "marrés",
+   "src": "made"
+  }
+ ],
  "w|marron": [
   {
    "text": "Le prof de maths de Lucas porte toujours la même veste marron.",
@@ -52954,6 +53322,22 @@
    "en": "Manon is motivated at the thought of running her first half-marathon.",
    "ko": "첫 하프 마라톤을 뛸 생각에 마농은 의욕이 넘쳐요.",
    "blank": "motivée",
+   "src": "made"
+  }
+ ],
+ "w|motiver": [
+  {
+   "text": "Selon Thomas, des objectifs clairs aident à motiver une équipe.",
+   "en": "According to Thomas, clear goals help motivate a team.",
+   "ko": "토마는 분명한 목표가 팀에 동기를 준다고 생각해요.",
+   "blank": "motiver",
+   "src": "made"
+  },
+  {
+   "text": "Dans les côtes, Chloé a besoin de musique pour se motiver.",
+   "en": "On the hills, Chloé needs music to keep herself motivated.",
+   "ko": "오르막에서 클로에는 힘을 내려면 음악이 필요해요.",
+   "blank": "motiver",
    "src": "made"
   }
  ],
@@ -63029,6 +63413,22 @@
    "blank": "prénom"
   }
  ],
+ "w|préoccupation": [
+  {
+   "text": "La principale préoccupation de Thomas est de ne pas se perdre dans le bâtiment.",
+   "en": "Thomas's main concern is not getting lost in the building.",
+   "ko": "토마의 가장 큰 걱정은 건물 안에서 길을 잃지 않는 거예요.",
+   "blank": "préoccupation",
+   "src": "made"
+  },
+  {
+   "text": "Avant la course, la seule préoccupation de Chloé est de bien dormir.",
+   "en": "Before the race, Chloé's only concern is getting a good night's sleep.",
+   "ko": "경기 전 클로에의 유일한 걱정은 잠을 잘 자는 거예요.",
+   "blank": "préoccupation",
+   "src": "made"
+  }
+ ],
  "w|préoccupé": [
   {
    "text": "La collègue de Thomas remarque qu'il a l'air préoccupé à la pause café.",
@@ -67653,6 +68053,22 @@
    "blank": "reconnaître"
   }
  ],
+ "w|reconstituer": [
+  {
+   "text": "Grâce aux anciens courriels, Thomas essaie de reconstituer les décisions de l'année passée.",
+   "en": "Using old emails, Thomas tries to piece together last year's decisions.",
+   "ko": "토마는 예전 메일로 작년의 결정들을 다시 짜 맞춰 보려고 해요.",
+   "blank": "reconstituer",
+   "src": "made"
+  },
+  {
+   "text": "Grâce à sa montre, Chloé essaie de reconstituer son parcours.",
+   "en": "Using her watch, Chloé tries to reconstruct her route.",
+   "ko": "클로에는 시계 기록으로 자기가 달린 길을 다시 맞춰 봐요.",
+   "blank": "reconstituer",
+   "src": "made"
+  }
+ ],
  "w|reconstruction": [
   {
    "text": "Paul suit la reconstruction du pont emporté par la crue.",
@@ -67728,6 +68144,22 @@
    "en": "After practice, Manon's jersey is covered in sweat.",
    "ko": "훈련이 끝나면 마농의 유니폼은 땀범벅이에요.",
    "blank": "recouvert",
+   "src": "made"
+  }
+ ],
+ "w|recréer": [
+  {
+   "text": "Thomas doit recréer son compte parce que l'ancien a été supprimé.",
+   "en": "Thomas has to recreate his account because the old one was deleted.",
+   "ko": "예전 계정이 지워져서 토마는 계정을 다시 만들어야 해요.",
+   "blank": "recréer",
+   "src": "made"
+  },
+  {
+   "text": "Chloé voudrait recréer l'ambiance du marathon lors de ses footings du dimanche.",
+   "en": "Chloé would like to recreate the marathon atmosphere on her Sunday jogs.",
+   "ko": "클로에는 일요일 조깅 때도 마라톤 분위기를 다시 느끼고 싶어요.",
+   "blank": "recréer",
    "src": "made"
   }
  ],
@@ -68691,6 +69123,22 @@
    "en": "She wants to join you tonight.",
    "ko": "그녀가 오늘 밤 너를 만나고 싶대.",
    "blank": "rejoindre"
+  }
+ ],
+ "w|réjoui": [
+  {
+   "text": "Thomas est réjoui d'apprendre qu'il aura un bureau près de la fenêtre.",
+   "en": "Thomas is delighted to learn he'll have a desk by the window.",
+   "ko": "토마는 창가 자리를 받는다는 말에 기뻐해요.",
+   "blank": "réjoui",
+   "src": "made"
+  },
+  {
+   "text": "Chloé est réjouie de voir sa sœur près de la ligne d'arrivée.",
+   "en": "Chloé is delighted to see her sister near the finish line.",
+   "ko": "클로에는 결승선 근처에서 언니를 보고 기뻐해요.",
+   "blank": "réjouie",
+   "src": "made"
   }
  ],
  "w|réjouir": [
@@ -70779,6 +71227,22 @@
    "blank": "retourner"
   }
  ],
+ "w|retracer": [
+  {
+   "text": "Thomas doit retracer l'historique du dossier pour comprendre le projet.",
+   "en": "Thomas has to trace the history of the file to understand the project.",
+   "ko": "토마는 프로젝트를 이해하려고 그 건의 경과를 되짚어야 해요.",
+   "blank": "retracer",
+   "src": "made"
+  },
+  {
+   "text": "Le soir, Chloé retrace chaque étape de sa course pour ses amis.",
+   "en": "In the evening, Chloé goes back over every stage of her race for her friends.",
+   "ko": "저녁에 클로에는 친구들에게 경기의 구간마다 다시 이야기해 줘요.",
+   "blank": "retrace",
+   "src": "made"
+  }
+ ],
  "w|retrait": [
   {
    "text": "Nicolas a annoncé le retrait d'un lot de pièces défectueuses.",
@@ -71735,6 +72199,22 @@
    "blank": "roman"
   }
  ],
+ "w|romance": [
+  {
+   "text": "Au déjeuner, les collègues de Thomas parlent de la romance entre deux comptables.",
+   "en": "At lunch, Thomas's colleagues talk about the romance between two accountants.",
+   "ko": "점심때 토마의 동료들은 회계 담당 두 사람의 연애 이야기를 해요.",
+   "blank": "romance",
+   "src": "made"
+  },
+  {
+   "text": "Pendant l'entraînement, Chloé écoute un livre audio, une romance un peu naïve.",
+   "en": "During training, Chloé listens to an audiobook, a somewhat naive romance.",
+   "ko": "클로에는 훈련하면서 조금 순진한 연애 소설 오디오북을 들어요.",
+   "blank": "romance",
+   "src": "made"
+  }
+ ],
  "w|romantique": [
   {
    "text": "Ils ont dîné dans un restaurant romantique.",
@@ -71865,6 +72345,22 @@
    "en": "Red wine is my favorite.",
    "ko": "나는 레드와인을 제일 좋아해.",
    "blank": "rouge"
+  }
+ ],
+ "w|rougir": [
+  {
+   "text": "Quand la cheffe le présente à l'équipe, Thomas commence à rougir.",
+   "en": "When the boss introduces him to the team, Thomas starts to blush.",
+   "ko": "팀장이 팀에 소개하자 토마는 얼굴이 붉어지기 시작해요.",
+   "blank": "rougir",
+   "src": "made"
+  },
+  {
+   "text": "Chloé rougit quand un journaliste local veut l'interviewer.",
+   "en": "Chloé blushes when a local journalist wants to interview her.",
+   "ko": "지역 기자가 인터뷰를 하자고 하자 클로에는 얼굴이 빨개져요.",
+   "blank": "rougit",
+   "src": "made"
   }
  ],
  "w|rouiller": [
@@ -72401,6 +72897,22 @@
    "en": "Don’t forget your bag in the car.",
    "ko": "차에 네 가방을 두고 오지 마.",
    "blank": "sac"
+  }
+ ],
+ "w|saccager": [
+  {
+   "text": "Thomas a peur de saccager le classement de son prédécesseur en rangeant les dossiers.",
+   "en": "Thomas is afraid of wrecking his predecessor's filing system while tidying the folders.",
+   "ko": "토마는 서류를 정리하다 전임자의 분류를 망칠까 봐 걱정돼요.",
+   "blank": "saccager",
+   "src": "made"
+  },
+  {
+   "text": "Chloé regrette que quelqu'un ait saccagé les panneaux du parcours.",
+   "en": "Chloé is sorry that someone vandalised the course signs.",
+   "ko": "클로에는 누군가 코스 표지판을 망가뜨린 게 안타까워요.",
+   "blank": "saccagé",
+   "src": "made"
   }
  ],
  "w|sacré": [
@@ -74297,6 +74809,22 @@
    "src": "made"
   }
  ],
+ "w|sensibilité": [
+  {
+   "text": "Thomas apprécie la sensibilité de sa cheffe, qui voit tout de suite qu'il est perdu.",
+   "en": "Thomas appreciates his boss's sensitivity; she sees right away that he is lost.",
+   "ko": "토마는 자기가 헤매는 걸 바로 알아채는 팀장의 세심함이 고마워요.",
+   "blank": "sensibilité",
+   "src": "made"
+  },
+  {
+   "text": "Chloé a une grande sensibilité au froid, alors elle court avec des gants.",
+   "en": "Chloé is very sensitive to the cold, so she runs with gloves.",
+   "ko": "클로에는 추위를 많이 타서 장갑을 끼고 달려요.",
+   "blank": "sensibilité",
+   "src": "made"
+  }
+ ],
  "w|sensible": [
   {
    "text": "Elle est très sensible aux critiques.",
@@ -76096,6 +76624,22 @@
    "en": "Claire pushes a probe into the soil to measure the moisture.",
    "ko": "클레르는 습도를 재려고 흙에 측정 막대를 꽂아요.",
    "blank": "sonde",
+   "src": "made"
+  }
+ ],
+ "w|songe": [
+  {
+   "text": "En signant son contrat, Thomas a l'impression de vivre un songe.",
+   "en": "Signing his contract, Thomas feels like he's living a dream.",
+   "ko": "계약서에 서명하면서 토마는 꿈을 꾸는 것 같아요.",
+   "blank": "songe",
+   "src": "made"
+  },
+  {
+   "text": "Entourée de cris, Chloé franchit la ligne comme dans un songe.",
+   "en": "Surrounded by cheers, Chloé crosses the line as if in a dream.",
+   "ko": "환호 속에서 클로에는 꿈결처럼 결승선을 넘어요.",
+   "blank": "songe",
    "src": "made"
   }
  ],
@@ -77938,6 +78482,22 @@
    "en": "Manon likes to watch the flowers in her garden bloom one after another.",
    "ko": "마농은 정원에서 꽃이 차례로 피는 걸 지켜보는 걸 좋아해요.",
    "blank": "succession",
+   "src": "made"
+  }
+ ],
+ "w|succomber": [
+  {
+   "text": "Thomas finit par succomber aux croissants posés dans la cuisine.",
+   "en": "Thomas ends up giving in to the croissants left in the kitchen.",
+   "ko": "토마는 결국 탕비실의 크루아상에 넘어가요.",
+   "blank": "succomber",
+   "src": "made"
+  },
+  {
+   "text": "Chloé refuse de succomber à la tentation de marcher.",
+   "en": "Chloé refuses to give in to the temptation to walk.",
+   "ko": "클로에는 걷고 싶은 유혹에 넘어가지 않아요.",
+   "blank": "succomber",
    "src": "made"
   }
  ],
@@ -80015,6 +80575,22 @@
    "blank": "tendre"
   }
  ],
+ "w|tendresse": [
+  {
+   "text": "Thomas pense avec tendresse à sa grand-mère, qui lui avait offert sa première cravate.",
+   "en": "Thomas thinks fondly of his grandmother, who gave him his first tie.",
+   "ko": "토마는 첫 넥타이를 사 준 할머니를 다정하게 떠올려요.",
+   "blank": "tendresse",
+   "src": "made"
+  },
+  {
+   "text": "À l'arrivée, le père de Chloé la serre contre lui avec tendresse.",
+   "en": "At the finish, Chloé's father hugs her tenderly.",
+   "ko": "결승선에서 클로에의 아빠가 클로에를 다정하게 안아 줘요.",
+   "blank": "tendresse",
+   "src": "made"
+  }
+ ],
  "w|tenir": [
   {
    "text": "Peux-tu tenir la porte, s'il te plaît ?",
@@ -81429,6 +82005,22 @@
    "src": "made"
   }
  ],
+ "w|trac": [
+  {
+   "text": "Le matin de son premier jour, Thomas a le trac devant la porte du bureau.",
+   "en": "On the morning of his first day, Thomas has the jitters in front of the office door.",
+   "ko": "첫 출근 날 아침, 토마는 사무실 문 앞에서 긴장돼요.",
+   "blank": "trac",
+   "src": "made"
+  },
+  {
+   "text": "La veille du marathon, Chloé a le trac comme avant un examen.",
+   "en": "The day before the marathon, Chloé has butterflies like before an exam.",
+   "ko": "마라톤 전날, 클로에는 시험 전처럼 떨려요.",
+   "blank": "trac",
+   "src": "made"
+  }
+ ],
  "w|tracasser": [
   {
    "text": "Cette dispute avec sa sœur continue de tracasser Julien toute la semaine.",
@@ -82799,6 +83391,22 @@
    "src": "made"
   }
  ],
+ "w|trouer": [
+  {
+   "text": "Avec la perforatrice, Thomas troue par erreur le contrat original.",
+   "en": "With the hole punch, Thomas accidentally punches a hole in the original contract.",
+   "ko": "토마는 실수로 펀치로 계약서 원본에 구멍을 내요.",
+   "blank": "troue",
+   "src": "made"
+  },
+  {
+   "text": "Après tant de kilomètres, Chloé a fini par trouer ses chaussettes.",
+   "en": "After so many kilometres, Chloé ended up wearing holes in her socks.",
+   "ko": "클로에는 하도 많이 달려서 양말에 구멍이 났어요.",
+   "blank": "trouer",
+   "src": "made"
+  }
+ ],
  "w|trouille": [
   {
    "text": "J’ai la trouille avant mon examen demain.",
@@ -83515,6 +84123,22 @@
    "en": "I feel a wave of nostalgia coming back here.",
    "ko": "여기에 다시 오니 향수의 물결이 느껴져.",
    "blank": "vague"
+  }
+ ],
+ "w|vaillant": [
+  {
+   "text": "Le vieux photocopieur, toujours vaillant, imprime le badge de Thomas.",
+   "en": "The old photocopier, still going strong, prints Thomas's badge.",
+   "ko": "아직 씩씩하게 돌아가는 낡은 복사기가 토마의 출입증을 뽑아요.",
+   "blank": "vaillant",
+   "src": "made"
+  },
+  {
+   "text": "Chloé admire un vaillant coureur de soixante-dix ans qui la dépasse.",
+   "en": "Chloé admires a plucky seventy-year-old runner who overtakes her.",
+   "ko": "클로에는 자기를 앞지르는 일흔 살의 씩씩한 주자에게 감탄해요.",
+   "blank": "vaillant",
+   "src": "made"
   }
  ],
  "w|vain": [
@@ -85955,6 +86579,22 @@
    "en": "That's really nice of you.",
    "ko": "정말 친절하네.",
    "blank": "vraiment"
+  }
+ ],
+ "w|vrille": [
+  {
+   "text": "Quand une crampe la saisit, Chloé voit son plan partir en vrille.",
+   "en": "When a cramp grips her, Chloé sees her plan spiral out of control.",
+   "ko": "쥐가 나자 클로에의 계획이 완전히 엉망이 돼요.",
+   "blank": "vrille",
+   "src": "made"
+  },
+  {
+   "text": "Quand le serveur tombe en panne, la matinée de Thomas part complètement en vrille.",
+   "en": "When the server goes down, Thomas's morning goes completely haywire.",
+   "ko": "서버가 멈추자 토마의 오전이 완전히 엉망이 돼요.",
+   "blank": "vrille",
+   "src": "made"
   }
  ],
  "w|vue": [

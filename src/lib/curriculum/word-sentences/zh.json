@@ -1849,6 +1849,22 @@
    "src": "made"
   }
  ],
+ "w|专注": [
+  {
+   "text": "手术时主刀医生非常专注，一句闲话也不说。",
+   "en": "During the operation, the lead surgeon was completely focused and said not a word of small talk.",
+   "ko": "수술 중에 집도의는 아주 집중해서 쓸데없는 말을 한마디도 하지 않았어요.",
+   "blank": "专注",
+   "src": "made"
+  },
+  {
+   "text": "林静专注地画画时，连门铃响了都没听见。",
+   "en": "When Lin Jing is absorbed in painting, she doesn't even hear the doorbell.",
+   "ko": "린징은 그림에 집중할 때 초인종이 울려도 못 들어요.",
+   "blank": "专注",
+   "src": "made"
+  }
+ ],
  "w|专门": [
   {
    "text": "赵磊的妈妈专门开车来机场接他。",
@@ -2215,6 +2231,22 @@
    "en": "Personal space matters.",
    "ko": "개인 공간이 중요해.",
    "blank": "个人"
+  }
+ ],
+ "w|个别": [
+  {
+   "text": "个别病人对这种药过敏，所以护士每次都会先问清楚。",
+   "en": "A few patients are allergic to this medicine, so the nurse always asks first.",
+   "ko": "일부 환자는 이 약에 알레르기가 있어서 간호사가 매번 먼저 물어봐요.",
+   "blank": "个别",
+   "src": "made"
+  },
+  {
+   "text": "小区里个别住户总把垃圾放在楼道里。",
+   "en": "A few residents in the complex always leave their trash in the stairwell.",
+   "ko": "단지의 일부 주민은 늘 쓰레기를 계단에 놔둬요.",
+   "blank": "个别",
+   "src": "made"
   }
  ],
  "w|个性": [
@@ -3338,6 +3370,22 @@
    "en": "Lin Jing grabbed tickets the moment they went on sale, hoping to get a window seat.",
    "ko": "린징은 표가 풀리자마자 창가 자리를 잡으려고 바로 예매에 뛰어들었어요.",
    "blank": "争取",
+   "src": "made"
+  }
+ ],
+ "w|争吵": [
+  {
+   "text": "两个家属在走廊里大声争吵，被保安请了出去。",
+   "en": "Two relatives were arguing loudly in the corridor and were asked to leave by security.",
+   "ko": "보호자 두 명이 복도에서 크게 다투다가 경비원에게 쫓겨났어요.",
+   "blank": "争吵",
+   "src": "made"
+  },
+  {
+   "text": "楼上的夫妻昨晚又争吵起来，林静听得清清楚楚。",
+   "en": "The couple upstairs started arguing again last night, and Lin Jing heard every word.",
+   "ko": "위층 부부가 어젯밤 또 다투기 시작했는데 린징에게 다 들렸어요.",
+   "blank": "争吵",
    "src": "made"
   }
  ],
@@ -5665,6 +5713,22 @@
    "src": "made"
   }
  ],
+ "w|传给": [
+  {
+   "text": "医生说这种病不会传给家人，赵磊这才放心。",
+   "en": "Only when the doctor said the illness wouldn't pass to his family did Zhao Lei feel at ease.",
+   "ko": "의사가 이 병은 가족에게 옮기지 않는다고 해서 자오레이는 그제야 안심했어요.",
+   "blank": "传给",
+   "src": "made"
+  },
+  {
+   "text": "王奶奶把包饺子的手艺传给了林静。",
+   "en": "Grandma Wang passed her dumpling-making skills on to Lin Jing.",
+   "ko": "왕 할머니는 만두 빚는 솜씨를 린징에게 물려줬어요.",
+   "blank": "传给",
+   "src": "made"
+  }
+ ],
  "w|传统": [
   {
    "text": "这是传统节日。",
@@ -5787,6 +5851,22 @@
    "en": "Don't hurt yourself.",
    "ko": "다치지 마.",
    "blank": "伤"
+  }
+ ],
+ "w|伤亡": [
+  {
+   "text": "电视新闻说，昨天的车祸没有造成人员伤亡。",
+   "en": "The TV news said yesterday's car accident caused no casualties.",
+   "ko": "TV 뉴스에서 어제 교통사고로 인한 사상자는 없었다고 했어요.",
+   "blank": "伤亡",
+   "src": "made"
+  },
+  {
+   "text": "林静听邻居说，那年楼里着过一场大火，幸好没有伤亡。",
+   "en": "Lin Jing heard from a neighbor that there was a big fire in the building that year, but luckily no one was hurt.",
+   "ko": "린징은 이웃에게서 그해 건물에 큰불이 났지만 다행히 사상자는 없었다고 들었어요.",
+   "blank": "伤亡",
+   "src": "made"
   }
  ],
  "w|伤口": [
@@ -6081,6 +6161,22 @@
    "en": "Stop, don't hit anymore.",
    "ko": "그만해, 더 치지 마.",
    "blank": "住手"
+  }
+ ],
+ "w|住院": [
+  {
+   "text": "赵磊住院时读了一本历史书，讲古代人怎样埋葬帝王。",
+   "en": "While in the hospital, Zhao Lei read a history book about how ancient people buried their emperors.",
+   "ko": "자오레이는 입원해 있을 때 옛날 사람들이 황제를 어떻게 묻었는지 다룬 역사책을 읽었어요.",
+   "blank": "住院",
+   "src": "made"
+  },
+  {
+   "text": "楼下的陈阿姨住院了，林静帮她喂了一个星期的鱼。",
+   "en": "Auntie Chen downstairs was hospitalized, so Lin Jing fed her fish for a week.",
+   "ko": "아래층 천 아주머니가 입원해서 린징이 일주일 동안 물고기 밥을 줬어요.",
+   "blank": "住院",
+   "src": "made"
   }
  ],
  "w|体会": [
@@ -7277,6 +7373,22 @@
    "src": "made"
   }
  ],
+ "w|修好": [
+  {
+   "text": "病房的空调坏了好几天，今天终于修好了。",
+   "en": "The ward's air conditioner had been broken for days and was finally fixed today.",
+   "ko": "병실 에어컨이 며칠 동안 고장 나 있었는데 오늘 드디어 고쳤어요.",
+   "blank": "修好",
+   "src": "made"
+  },
+  {
+   "text": "隔壁的张师傅帮林静把漏水的水龙头修好了。",
+   "en": "Master Zhang next door fixed Lin Jing's leaking faucet.",
+   "ko": "옆집 장 기사님이 린징네 물이 새는 수도꼭지를 고쳐 줬어요.",
+   "blank": "修好",
+   "src": "made"
+  }
+ ],
  "w|修改": [
   {
    "text": "农场的种植计划被大雨打乱了，赵磊只好重新修改。",
@@ -8103,6 +8215,22 @@
    "en": "The room is full of sunlight.",
    "ko": "방이 햇살로 가득해.",
    "blank": "充满"
+  }
+ ],
+ "w|充足": [
+  {
+   "text": "出院前医生叮嘱赵磊，一定要保证充足的睡眠。",
+   "en": "Before he was discharged, the doctor urged Zhao Lei to make sure he got enough sleep.",
+   "ko": "퇴원 전에 의사는 자오레이에게 꼭 충분히 자라고 당부했어요.",
+   "blank": "充足",
+   "src": "made"
+  },
+  {
+   "text": "林静家的阳台朝南，阳光充足，邻居常来借地方晒被子。",
+   "en": "Lin Jing's balcony faces south and gets plenty of sun, so neighbors often borrow it to air their quilts.",
+   "ko": "린징네 발코니는 남향이라 햇빛이 충분해서 이웃들이 자주 이불을 말리러 와요.",
+   "blank": "充足",
+   "src": "made"
   }
  ],
  "w|先": [
@@ -10515,6 +10643,22 @@
    "en": "This is an outstanding piece of work.",
    "ko": "이건 뛰어난 작품이야.",
    "blank": "出色"
+  }
+ ],
+ "w|出血": [
+  {
+   "text": "伤口还在出血，护士赶紧拿来了纱布。",
+   "en": "The wound was still bleeding, so the nurse quickly brought gauze.",
+   "ko": "상처에서 계속 피가 나서 간호사가 서둘러 거즈를 가져왔어요.",
+   "blank": "出血",
+   "src": "made"
+  },
+  {
+   "text": "邻居的孩子摔破了膝盖，一直出血，林静赶紧拿来创可贴。",
+   "en": "The neighbor's child scraped a knee that kept bleeding, so Lin Jing hurried over with a bandage.",
+   "ko": "이웃집 아이가 넘어져 무릎에서 계속 피가 나서 린징이 얼른 밴드를 가져왔어요.",
+   "blank": "出血",
+   "src": "made"
   }
  ],
  "w|出路": [
@@ -16651,6 +16795,22 @@
    "src": "made"
   }
  ],
+ "w|吸毒": [
+  {
+   "text": "医生在讲座上说，长期吸毒会严重损害大脑和心脏。",
+   "en": "At the lecture, the doctor said long-term drug use seriously damages the brain and heart.",
+   "ko": "의사는 강연에서 오랫동안 마약을 하면 뇌와 심장이 크게 손상된다고 말했어요.",
+   "blank": "吸毒",
+   "src": "made"
+  },
+  {
+   "text": "宣传栏上贴着“珍爱生命，拒绝吸毒”的海报，林静停下来看了看。",
+   "en": "A poster saying \"Cherish life, say no to drugs\" hung on the notice board, and Lin Jing stopped to look.",
+   "ko": "게시판에 \"생명을 소중히, 마약은 거절\" 포스터가 붙어 있어서 린징은 멈춰서 봤어요.",
+   "blank": "吸毒",
+   "src": "made"
+  }
+ ],
  "w|吸烟": [
   {
    "text": "赵磊开始健身以后，就彻底不吸烟了。",
@@ -19797,6 +19957,22 @@
    "blank": "埋"
   }
  ],
+ "w|埋葬": [
+  {
+   "text": "赵磊住院时读了一本历史书，讲古代人怎样埋葬帝王。",
+   "en": "While in the hospital, Zhao Lei read a history book about how ancient people buried their emperors.",
+   "ko": "자오레이는 입원해 있을 때 옛날 사람들이 황제를 어떻게 묻었는지 다룬 역사책을 읽었어요.",
+   "blank": "埋葬",
+   "src": "made"
+  },
+  {
+   "text": "邻居家的小狗死了，孩子们把它埋葬在院子的大树下。",
+   "en": "When the neighbors' puppy died, the children buried it under the big tree in the yard.",
+   "ko": "이웃집 강아지가 죽어서 아이들이 마당 큰 나무 아래에 묻어 줬어요.",
+   "blank": "埋葬",
+   "src": "made"
+  }
+ ],
  "w|培养": [
   {
    "text": "楼上的夫妻很注意培养孩子的阅读习惯。",
@@ -21727,6 +21903,22 @@
    "blank": "头发"
   }
  ],
+ "w|头痛": [
+  {
+   "text": "赵磊昨晚头痛得睡不着，只好按铃叫了护士。",
+   "en": "Zhao Lei's headache kept him awake last night, so he rang for the nurse.",
+   "ko": "자오레이는 어젯밤 두통 때문에 잠을 못 자서 벨을 눌러 간호사를 불렀어요.",
+   "blank": "头痛",
+   "src": "made"
+  },
+  {
+   "text": "隔壁装修的声音让林静一整天都头痛。",
+   "en": "The noise of the renovation next door gave Lin Jing a headache all day.",
+   "ko": "옆집 공사 소리 때문에 린징은 하루 종일 머리가 아팠어요.",
+   "blank": "头痛",
+   "src": "made"
+  }
+ ],
  "w|头盔": [
   {
    "text": "剧里的骑士一出场就摘下了头盔。",
@@ -21772,6 +21964,22 @@
    "en": "Before making fish-head soup, the teacher washed the fish's head thoroughly.",
    "ko": "생선 머리탕을 만들기 전에 선생님은 먼저 생선 머리를 깨끗이 씻었어요.",
    "blank": "头部",
+   "src": "made"
+  }
+ ],
+ "w|头顶": [
+  {
+   "text": "赵磊头顶上的灯太亮了，他请护士关掉一盏。",
+   "en": "The light above Zhao Lei's head was too bright, so he asked the nurse to turn one off.",
+   "ko": "자오레이 머리 위 불이 너무 밝아서 간호사에게 하나 꺼 달라고 했어요.",
+   "blank": "头顶",
+   "src": "made"
+  },
+  {
+   "text": "楼上的孩子跑来跑去，林静觉得头顶一直咚咚响。",
+   "en": "The kids upstairs keep running around, and Lin Jing feels like there's constant thumping over her head.",
+   "ko": "위층 아이들이 뛰어다녀서 린징은 머리 위에서 계속 쿵쿵 소리가 난다고 느껴요.",
+   "blank": "头顶",
    "src": "made"
   }
  ],
@@ -32433,6 +32641,22 @@
    "src": "made"
   }
  ],
+ "w|手脚": [
+  {
+   "text": "赵磊刚醒来时手脚发麻，动都动不了。",
+   "en": "When Zhao Lei first woke up, his hands and feet were numb and he couldn't move.",
+   "ko": "자오레이는 막 깨어났을 때 손발이 저려서 움직일 수가 없었어요.",
+   "blank": "手脚",
+   "src": "made"
+  },
+  {
+   "text": "楼下的老人手脚不太方便，林静常帮他把菜提上楼。",
+   "en": "The old man downstairs has trouble getting around, so Lin Jing often carries his groceries up for him.",
+   "ko": "아래층 할아버지는 손발이 불편해서 린징이 자주 장 본 것을 들어 드려요.",
+   "blank": "手脚",
+   "src": "made"
+  }
+ ],
  "w|手腕": [
   {
    "text": "赵磊做俯卧撑时总觉得手腕疼。",
@@ -34033,6 +34257,22 @@
    "blank": "拯救"
   }
  ],
+ "w|拳头": [
+  {
+   "text": "打针的时候，赵磊紧紧攥着拳头。",
+   "en": "Zhao Lei clenched his fists tightly while getting the injection.",
+   "ko": "주사를 맞을 때 자오레이는 주먹을 꽉 쥐었어요.",
+   "blank": "拳头",
+   "src": "made"
+  },
+  {
+   "text": "隔壁的小男孩握着拳头说，长大要当警察保护大家。",
+   "en": "The little boy next door clenched his fist and said he'll be a police officer to protect everyone when he grows up.",
+   "ko": "옆집 남자아이는 주먹을 쥐고 커서 경찰이 되어 모두를 지키겠다고 했어요.",
+   "blank": "拳头",
+   "src": "made"
+  }
+ ],
  "w|拼命": [
   {
    "text": "为了赶上婚礼，新娘的表哥拼命开车赶了一夜路。",
@@ -34317,6 +34557,22 @@
    "en": "The whole family is counting on him.",
    "ko": "온 가족이 그를 의지하고 있어.",
    "blank": "指望"
+  }
+ ],
+ "w|指甲": [
+  {
+   "text": "护士说，手术前要把指甲油擦掉。",
+   "en": "The nurse said the nail polish has to be removed before surgery.",
+   "ko": "간호사가 수술 전에 매니큐어를 지워야 한다고 했어요.",
+   "blank": "指甲",
+   "src": "made"
+  },
+  {
+   "text": "林静和对门的女孩约好周末一起去做指甲。",
+   "en": "Lin Jing and the girl across the hall agreed to get their nails done together this weekend.",
+   "ko": "린징은 맞은편 집 여자아이와 주말에 같이 네일을 받으러 가기로 했어요.",
+   "blank": "指甲",
+   "src": "made"
   }
  ],
  "w|指示": [
@@ -40277,6 +40533,22 @@
    "src": "made"
   }
  ],
+ "w|束缚": [
+  {
+   "text": "腿上打着石膏，赵磊觉得自己像被束缚住了，哪儿也去不了。",
+   "en": "With his leg in a cast, Zhao Lei felt tied down and unable to go anywhere.",
+   "ko": "다리에 깁스를 해서 자오레이는 묶인 것처럼 아무 데도 갈 수 없다고 느꼈어요.",
+   "blank": "束缚",
+   "src": "made"
+  },
+  {
+   "text": "搬到这个小区后，林静觉得终于不再被父母的规矩束缚了。",
+   "en": "After moving to this neighborhood, Lin Jing felt she was finally no longer bound by her parents' rules.",
+   "ko": "이 동네로 이사 온 뒤 린징은 드디어 부모님 규칙에 얽매이지 않는다고 느꼈어요.",
+   "blank": "束缚",
+   "src": "made"
+  }
+ ],
  "w|条": [
   {
    "text": "一条路。",
@@ -42501,6 +42773,22 @@
    "blank": "毒品"
   }
  ],
+ "w|毒药": [
+  {
+   "text": "药剂师说，有些药吃多了就跟毒药一样危险。",
+   "en": "The pharmacist said some medicines are as dangerous as poison if you take too much.",
+   "ko": "약사는 어떤 약은 많이 먹으면 독약만큼 위험하다고 했어요.",
+   "blank": "毒药",
+   "src": "made"
+  },
+  {
+   "text": "林静的邻居是个推理小说迷，最爱看凶手用毒药的故事。",
+   "en": "Lin Jing's neighbor is a mystery fan who loves stories where the killer uses poison.",
+   "ko": "린징의 이웃은 추리소설 팬이라 범인이 독약을 쓰는 이야기를 제일 좋아해요.",
+   "blank": "毒药",
+   "src": "made"
+  }
+ ],
  "w|比": [
   {
    "text": "我比你高。",
@@ -43469,6 +43757,22 @@
    "src": "made"
   }
  ],
+ "w|治愈": [
+  {
+   "text": "这种病如果发现得早，大多数都能治愈。",
+   "en": "If this disease is caught early, most cases can be cured.",
+   "ko": "이 병은 일찍 발견하면 대부분 완치될 수 있어요.",
+   "blank": "治愈",
+   "src": "made"
+  },
+  {
+   "text": "邻居们都说，林静做的汤有一种能治愈人心的味道。",
+   "en": "The neighbors all say Lin Jing's soup has a flavor that heals the heart.",
+   "ko": "이웃들은 린징이 끓인 국에 마음을 치유하는 맛이 있다고 해요.",
+   "blank": "治愈",
+   "src": "made"
+  }
+ ],
  "w|治疗": [
   {
    "text": "需要治疗。",
@@ -43877,6 +44181,22 @@
    "en": "As long as you're alive, there's hope.",
    "ko": "살아 있으면 희망이 있어.",
    "blank": "活着"
+  }
+ ],
+ "w|活跃": [
+  {
+   "text": "儿科有个很活跃的小男孩，整天跑来跑去。",
+   "en": "There's a very lively little boy in pediatrics who runs around all day.",
+   "ko": "소아과에 아주 활발한 남자아이가 있는데 하루 종일 뛰어다녀요.",
+   "blank": "活跃",
+   "src": "made"
+  },
+  {
+   "text": "林静在业主群里很活跃，大家有事都爱问她。",
+   "en": "Lin Jing is very active in the residents' group chat, and everyone likes to ask her when something comes up.",
+   "ko": "린징은 주민 단톡방에서 아주 활발해서 다들 일이 있으면 그녀에게 물어봐요.",
+   "blank": "活跃",
+   "src": "made"
   }
  ],
  "w|派": [
@@ -44435,6 +44755,22 @@
    "src": "made"
   }
  ],
+ "w|深呼吸": [
+  {
+   "text": "抽血前，护士让赵磊先深呼吸，放松一点。",
+   "en": "Before drawing blood, the nurse told Zhao Lei to take a deep breath and relax.",
+   "ko": "피를 뽑기 전에 간호사가 자오레이에게 먼저 심호흡하고 긴장을 풀라고 했어요.",
+   "blank": "深呼吸",
+   "src": "made"
+  },
+  {
+   "text": "听到楼上又开始敲墙，林静深呼吸了几次，才忍住没去发火。",
+   "en": "Hearing the pounding on the wall start again upstairs, Lin Jing took a few deep breaths to keep from losing her temper.",
+   "ko": "위층에서 또 벽을 두드리는 소리에 린징은 몇 번 심호흡하고 겨우 화를 참았어요.",
+   "blank": "深呼吸",
+   "src": "made"
+  }
+ ],
  "w|深处": [
   {
    "text": "陈杰知道，被告内心深处其实很后悔。",
@@ -44494,6 +44830,22 @@
    "en": "Lin Jing wrote that people there speak Mandarin mixed with the local dialect.",
    "ko": "린징은 그곳 사람들이 표준어에 지역 방언을 섞어서 말한다고 썼어요.",
    "blank": "混合",
+   "src": "made"
+  }
+ ],
+ "w|淹死": [
+  {
+   "text": "新闻里说，有个孩子在河里差点淹死，被送进了这家医院抢救。",
+   "en": "The news said a child nearly drowned in the river and was rushed to this hospital.",
+   "ko": "뉴스에서 한 아이가 강에서 거의 익사할 뻔해서 이 병원으로 실려 왔다고 했어요.",
+   "blank": "淹死",
+   "src": "made"
+  },
+  {
+   "text": "王大爷常跟孩子们说，别去河边玩，每年都有人淹死。",
+   "en": "Old Mr. Wang often tells the kids not to play by the river because people drown there every year.",
+   "ko": "왕 할아버지는 아이들에게 강가에서 놀지 말라고, 해마다 물에 빠져 죽는 사람이 있다고 자주 말해요.",
+   "blank": "淹死",
    "src": "made"
   }
  ],
@@ -44877,6 +45229,22 @@
    "en": "Get out of the way; don't block the road.",
    "ko": "비켜, 길 막지 마.",
    "blank": "滚开"
+  }
+ ],
+ "w|滴": [
+  {
+   "text": "护士把眼药水滴进赵磊的左眼里。",
+   "en": "The nurse dripped eye drops into Zhao Lei's left eye.",
+   "ko": "간호사가 자오레이의 왼쪽 눈에 안약을 떨어뜨렸어요.",
+   "blank": "滴",
+   "src": "made"
+  },
+  {
+   "text": "楼上空调外机的水滴在林静家的窗台上，她只好去敲门。",
+   "en": "Water from the upstairs air conditioner dripped onto Lin Jing's windowsill, so she had to go knock on their door.",
+   "ko": "위층 에어컨 실외기 물이 린징네 창틀에 떨어져서 그녀는 문을 두드리러 갔어요.",
+   "blank": "滴",
+   "src": "made"
   }
  ],
  "w|漂亮": [
@@ -47541,6 +47909,22 @@
    "blank": "生物"
   }
  ],
+ "w|生理": [
+  {
+   "text": "医生说，紧张时心跳加快是正常的生理反应。",
+   "en": "The doctor said a faster heartbeat when nervous is a normal physiological reaction.",
+   "ko": "의사는 긴장할 때 심장이 빨리 뛰는 건 정상적인 생리 반응이라고 했어요.",
+   "blank": "生理",
+   "src": "made"
+  },
+  {
+   "text": "林静的邻居是生理学老师，常给孩子们讲身体的知识。",
+   "en": "Lin Jing's neighbor is a physiology teacher who often tells the kids about the human body.",
+   "ko": "린징의 이웃은 생리학 선생님이라 아이들에게 몸에 관한 이야기를 자주 해 줘요.",
+   "blank": "生理",
+   "src": "made"
+  }
+ ],
  "w|生病": [
   {
    "text": "他生病了。",
@@ -48369,6 +48753,38 @@
    "en": "Take care of the patient.",
    "ko": "환자를 돌봐.",
    "blank": "病人"
+  }
+ ],
+ "w|病情": [
+  {
+   "text": "赵磊的病情稳定以后，家人才松了一口气。",
+   "en": "Only after Zhao Lei's condition stabilized did his family breathe a sigh of relief.",
+   "ko": "자오레이의 병세가 안정된 뒤에야 가족들이 한숨 돌렸어요.",
+   "blank": "病情",
+   "src": "made"
+  },
+  {
+   "text": "林静每天给生病的邻居送饭，也顺便问问她的病情。",
+   "en": "Lin Jing brings meals to her sick neighbor every day and asks how she's doing.",
+   "ko": "린징은 매일 아픈 이웃에게 밥을 갖다주면서 병세도 물어봐요.",
+   "blank": "病情",
+   "src": "made"
+  }
+ ],
+ "w|病房": [
+  {
+   "text": "病房的空调坏了好几天，今天终于修好了。",
+   "en": "The ward's air conditioner had been broken for days and was finally fixed today.",
+   "ko": "병실 에어컨이 며칠 동안 고장 나 있었는데 오늘 드디어 고쳤어요.",
+   "blank": "病房",
+   "src": "made"
+  },
+  {
+   "text": "林静和几个邻居去医院看陈阿姨，病房里摆满了鲜花。",
+   "en": "Lin Jing and a few neighbors visited Auntie Chen in the hospital, and her ward was full of flowers.",
+   "ko": "린징과 이웃 몇 명이 천 아주머니 병문안을 갔는데 병실에 꽃이 가득했어요.",
+   "blank": "病房",
+   "src": "made"
   }
  ],
  "w|病毒": [
@@ -52679,6 +53095,22 @@
    "blank": "精神"
   }
  ],
+ "w|精神病": [
+  {
+   "text": "赵磊的姑姑在一家精神病医院当护士。",
+   "en": "Zhao Lei's aunt works as a nurse at a psychiatric hospital.",
+   "ko": "자오레이의 고모는 정신병원에서 간호사로 일해요.",
+   "blank": "精神病",
+   "src": "made"
+  },
+  {
+   "text": "林静楼上住着一位精神病科的医生，每天很晚才下班。",
+   "en": "A psychiatrist lives upstairs from Lin Jing and gets off work very late every day.",
+   "ko": "린징 위층에는 정신과 의사가 사는데 매일 아주 늦게 퇴근해요.",
+   "blank": "精神病",
+   "src": "made"
+  }
+ ],
  "w|糊涂": [
   {
    "text": "奶奶年纪大了，有时会糊涂，把春天说成秋天。",
@@ -53317,6 +53749,22 @@
    "en": "There are many details in the story.",
    "ko": "이야기에 세부 내용이 많아.",
    "blank": "细节"
+  }
+ ],
+ "w|细菌": [
+  {
+   "text": "护士提醒赵磊饭前一定要洗手，因为手上细菌很多。",
+   "en": "The nurse reminded Zhao Lei to wash his hands before meals because hands carry a lot of bacteria.",
+   "ko": "간호사는 손에 세균이 많으니 밥 먹기 전에 꼭 손을 씻으라고 자오레이에게 말했어요.",
+   "blank": "细菌",
+   "src": "made"
+  },
+  {
+   "text": "邻居阿姨说，抹布要常晒太阳，不然容易长细菌。",
+   "en": "The neighbor lady said dishcloths should often be dried in the sun, or bacteria will grow.",
+   "ko": "이웃 아주머니는 행주를 자주 햇볕에 말리지 않으면 세균이 생기기 쉽다고 했어요.",
+   "blank": "细菌",
+   "src": "made"
   }
  ],
  "w|终于": [
@@ -55431,6 +55879,22 @@
    "blank": "肯定"
   }
  ],
+ "w|肺": [
+  {
+   "text": "医生指着片子告诉赵磊，他的肺上有一小块阴影。",
+   "en": "Pointing at the X-ray, the doctor told Zhao Lei there was a small shadow on his lung.",
+   "ko": "의사는 엑스레이를 가리키며 자오레이의 폐에 작은 그림자가 있다고 말했어요.",
+   "blank": "肺",
+   "src": "made"
+  },
+  {
+   "text": "楼下的王大爷抽了一辈子烟，去年查出肺不太好。",
+   "en": "Old Mr. Wang downstairs smoked all his life, and last year he found out his lungs weren't in good shape.",
+   "ko": "아래층 왕 할아버지는 평생 담배를 피웠는데 작년에 폐가 안 좋다는 걸 알게 됐어요.",
+   "blank": "肺",
+   "src": "made"
+  }
+ ],
  "w|肿瘤": [
   {
    "text": "健身房的老会员说，他治好肿瘤以后才开始练太极。",
@@ -55751,6 +56215,22 @@
    "blank": "能量"
   }
  ],
+ "w|脂肪": [
+  {
+   "text": "营养师建议赵磊少吃油炸食品，控制脂肪的摄入。",
+   "en": "The dietitian advised Zhao Lei to eat less fried food and limit his fat intake.",
+   "ko": "영양사는 자오레이에게 튀긴 음식을 줄이고 지방 섭취를 조절하라고 권했어요.",
+   "blank": "脂肪",
+   "src": "made"
+  },
+  {
+   "text": "林静跟邻居一起跳广场舞，说是为了减掉肚子上的脂肪。",
+   "en": "Lin Jing does square dancing with her neighbors, saying it's to lose the fat on her belly.",
+   "ko": "린징은 뱃살 지방을 빼려고 이웃들과 광장 춤을 춰요.",
+   "blank": "脂肪",
+   "src": "made"
+  }
+ ],
  "w|脆弱": [
   {
    "text": "张伟承认，那段时间他的心其实很脆弱。",
@@ -56006,6 +56486,22 @@
    "en": "Lin Jing stood all afternoon, and after making dumplings she could hardly straighten her back.",
    "ko": "린징은 오후 내내 서 있어서 만두를 다 빚고 나니 허리를 못 폈어요.",
    "blank": "腰",
+   "src": "made"
+  }
+ ],
+ "w|腹部": [
+  {
+   "text": "赵磊腹部疼了一整夜，早上做了检查。",
+   "en": "Zhao Lei had abdominal pain all night and got checked in the morning.",
+   "ko": "자오레이는 밤새 배가 아파서 아침에 검사를 받았어요.",
+   "blank": "腹部",
+   "src": "made"
+  },
+  {
+   "text": "王大爷腹部做过手术，所以林静帮他搬了那箱水。",
+   "en": "Old Mr. Wang had abdominal surgery, so Lin Jing carried the case of water for him.",
+   "ko": "왕 할아버지는 배 수술을 받으셔서 린징이 물 상자를 대신 옮겨 드렸어요.",
+   "blank": "腹部",
    "src": "made"
   }
  ],
@@ -56915,6 +57411,22 @@
    "src": "made"
   }
  ],
+ "w|英寸": [
+  {
+   "text": "医生说赵磊手臂上的伤口大约两英寸长。",
+   "en": "The doctor said the wound on Zhao Lei's arm was about two inches long.",
+   "ko": "의사는 자오레이 팔의 상처가 약 2인치 길이라고 했어요.",
+   "blank": "英寸",
+   "src": "made"
+  },
+  {
+   "text": "林静新买的电视有五十五英寸，邻居们都来她家看球赛。",
+   "en": "Lin Jing's new TV is fifty-five inches, so the neighbors all come over to watch games.",
+   "ko": "린징이 새로 산 TV가 55인치라서 이웃들이 다 그녀 집에 와서 경기를 봐요.",
+   "blank": "英寸",
+   "src": "made"
+  }
+ ],
  "w|英尺": [
   {
    "text": "墙高十英尺。",
@@ -57123,6 +57635,22 @@
    "en": "Buy some medicine.",
    "ko": "약 좀 사.",
    "blank": "药"
+  }
+ ],
+ "w|药品": [
+  {
+   "text": "赵磊在药房帮护士清点新到的药品。",
+   "en": "Zhao Lei helped the nurse count the newly arrived medicines in the pharmacy.",
+   "ko": "자오레이는 약국에서 간호사를 도와 새로 들어온 약품을 확인했어요.",
+   "blank": "药品",
+   "src": "made"
+  },
+  {
+   "text": "林静把家里过期的药品整理出来，交给社区回收。",
+   "en": "Lin Jing sorted out the expired medicines at home and handed them in to the community for recycling.",
+   "ko": "린징은 집에 있는 유통기한 지난 약을 정리해서 동네 회수함에 냈어요.",
+   "blank": "药品",
+   "src": "made"
   }
  ],
  "w|药物": [
@@ -57633,6 +58161,22 @@
    "blank": "血液"
   }
  ],
+ "w|血管": [
+  {
+   "text": "医生解释说，吸烟会让血管变窄。",
+   "en": "The doctor explained that smoking narrows the blood vessels.",
+   "ko": "의사는 담배가 혈관을 좁게 만든다고 설명했어요.",
+   "blank": "血管",
+   "src": "made"
+  },
+  {
+   "text": "楼上的李叔叔说，医生让他多吃蔬菜，保护血管。",
+   "en": "Uncle Li upstairs said his doctor told him to eat more vegetables to protect his blood vessels.",
+   "ko": "위층 리 아저씨는 의사가 혈관을 지키려면 채소를 많이 먹으라고 했대요.",
+   "blank": "血管",
+   "src": "made"
+  }
+ ],
  "w|血腥": [
   {
    "text": "马林不喜欢看血腥的电影，晚上更愿意听海浪声。",
@@ -57646,6 +58190,22 @@
    "en": "This photo is too gruesome, so the editor decided not to run it in the paper.",
    "ko": "이 사진이 너무 끔찍해서 편집장은 신문에 싣지 않기로 했어요.",
    "blank": "血腥",
+   "src": "made"
+  }
+ ],
+ "w|血迹": [
+  {
+   "text": "清洁工很快就把地上的血迹擦干净了。",
+   "en": "The cleaner quickly wiped the bloodstains off the floor.",
+   "ko": "청소부가 바닥의 핏자국을 금방 깨끗이 닦았어요.",
+   "blank": "血迹",
+   "src": "made"
+  },
+  {
+   "text": "林静在楼梯上看到一点血迹，原来是邻居家的猫受了伤。",
+   "en": "Lin Jing saw a little blood on the stairs; it turned out the neighbor's cat was hurt.",
+   "ko": "린징은 계단에서 핏자국을 봤는데 알고 보니 이웃집 고양이가 다친 거였어요.",
+   "blank": "血迹",
    "src": "made"
   }
  ],
@@ -60049,6 +60609,22 @@
    "en": "Please don't misunderstand me.",
    "ko": "날 오해하지 말아 줘.",
    "blank": "误会"
+  }
+ ],
+ "w|误解": [
+  {
+   "text": "赵磊误解了医生的意思，还以为自己得了重病。",
+   "en": "Zhao Lei misunderstood the doctor and thought he had a serious illness.",
+   "ko": "자오레이는 의사 말을 오해해서 자기가 큰 병에 걸린 줄 알았어요.",
+   "blank": "误解",
+   "src": "made"
+  },
+  {
+   "text": "林静一开始误解了新邻居，以为她不爱说话，其实她只是害羞。",
+   "en": "At first Lin Jing misjudged the new neighbor as unfriendly, but she was just shy.",
+   "ko": "린징은 처음에 새 이웃이 말하기 싫어하는 줄 오해했는데 사실 그냥 수줍은 거였어요.",
+   "blank": "误解",
+   "src": "made"
   }
  ],
  "w|诱惑": [
@@ -62513,6 +63089,22 @@
    "blank": "转"
   }
  ],
+ "w|转化": [
+  {
+   "text": "医生解释，身体会把吃进去的食物转化为能量。",
+   "en": "The doctor explained that the body converts the food we eat into energy.",
+   "ko": "의사는 몸이 먹은 음식을 에너지로 바꾼다고 설명했어요.",
+   "blank": "转化",
+   "src": "made"
+  },
+  {
+   "text": "社区把厨余垃圾转化成肥料，送给爱种花的邻居。",
+   "en": "The community turns kitchen waste into fertilizer and gives it to neighbors who love growing flowers.",
+   "ko": "동네에서는 음식물 쓰레기를 비료로 바꿔서 꽃 키우는 이웃들에게 나눠 줘요.",
+   "blank": "转化",
+   "src": "made"
+  }
+ ],
  "w|转变": [
   {
    "text": "结婚以后，张伟从一个贪玩的人转变成了顾家的丈夫。",
@@ -62991,6 +63583,22 @@
    "en": "Have you been here before?",
    "ko": "여기 와 본 적 있어?",
    "blank": "过"
+  }
+ ],
+ "w|过世": [
+  {
+   "text": "隔壁床的老人上个月过世了，赵磊难过了好几天。",
+   "en": "The old man in the next bed passed away last month, and Zhao Lei was sad for days.",
+   "ko": "옆 침대 할아버지가 지난달 돌아가셔서 자오레이는 며칠 동안 슬펐어요.",
+   "blank": "过世",
+   "src": "made"
+  },
+  {
+   "text": "对门的老奶奶去年过世了，林静一直帮忙照看她的猫。",
+   "en": "The old lady across the hall passed away last year, and Lin Jing has been looking after her cat ever since.",
+   "ko": "맞은편 집 할머니가 작년에 돌아가셔서 린징이 계속 그 고양이를 돌보고 있어요.",
+   "blank": "过世",
+   "src": "made"
   }
  ],
  "w|过于": [
@@ -64861,6 +65469,22 @@
    "src": "made"
   }
  ],
+ "w|遵循": [
+  {
+   "text": "赵磊严格遵循医嘱，每天按时吃药。",
+   "en": "Zhao Lei strictly follows the doctor's orders and takes his medicine on time every day.",
+   "ko": "자오레이는 의사 지시를 철저히 따르며 매일 제때 약을 먹어요.",
+   "blank": "遵循",
+   "src": "made"
+  },
+  {
+   "text": "大家都遵循小区的规定，晚上十点以后不弄出大声音。",
+   "en": "Everyone follows the complex's rule of no loud noise after ten at night.",
+   "ko": "다들 밤 열 시 이후에는 큰 소리를 내지 않는 단지 규칙을 따라요.",
+   "blank": "遵循",
+   "src": "made"
+  }
+ ],
  "w|避免": [
   {
    "text": "我们要避免同样的错误。",
@@ -65835,6 +66459,22 @@
    "en": "I lost the keys.",
    "ko": "나 열쇠 잃어버렸어.",
    "blank": "钥匙"
+  }
+ ],
+ "w|鉴于": [
+  {
+   "text": "鉴于赵磊恢复得不错，医生同意他下周出院。",
+   "en": "Given that Zhao Lei was recovering well, the doctor agreed to discharge him next week.",
+   "ko": "자오레이가 잘 회복하고 있어서 의사는 다음 주 퇴원을 허락했어요.",
+   "blank": "鉴于",
+   "src": "made"
+  },
+  {
+   "text": "鉴于最近楼里丢了几辆自行车，物业决定装上监控。",
+   "en": "Given that several bicycles went missing from the building recently, the management decided to install cameras.",
+   "ko": "최근 건물에서 자전거가 몇 대 없어져서 관리사무소는 CCTV를 달기로 했어요.",
+   "blank": "鉴于",
+   "src": "made"
   }
  ],
  "w|钱": [

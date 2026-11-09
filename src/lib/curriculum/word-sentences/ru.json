@@ -1423,6 +1423,22 @@
    "src": "made"
   }
  ],
+ "w|балет": [
+  {
+   "text": "Девочка попросила у Дмитрия книгу про балет с картинками.",
+   "en": "A girl asked Dmitry for a picture book about ballet.",
+   "ko": "한 여자아이가 드미트리에게 그림이 있는 발레 책을 달라고 했어요.",
+   "blank": "балет",
+   "src": "made"
+  },
+  {
+   "text": "В коробке с надписью «балет» у Ольги лежали старые пуанты дочери.",
+   "en": "In Olga's box labelled \"ballet\" lay her daughter's old pointe shoes.",
+   "ko": "\"발레\"라고 적힌 올가의 상자에는 딸의 낡은 토슈즈가 들어 있었어요.",
+   "blank": "балет",
+   "src": "made"
+  }
+ ],
  "w|балкон": [
   {
    "text": "Из окна класса Иван видит балкон соседнего дома.",
@@ -1805,6 +1821,22 @@
    "ko": "저는 숫자에 약해요.",
    "blank": "беда",
    "src": "tatoeba:8811580/marafon en:8811483/CK"
+  }
+ ],
+ "w|бедность": [
+  {
+   "text": "Дмитрий собрал подборку романов о бедности в больших городах.",
+   "en": "Dmitry put together a selection of novels about poverty in big cities.",
+   "ko": "드미트리는 대도시의 가난을 다룬 소설들을 모아 추천 목록을 만들었어요.",
+   "blank": "бедности",
+   "src": "made"
+  },
+  {
+   "text": "В юности Ольга знала бедность и поэтому ценит свой новый дом.",
+   "en": "In her youth Olga knew poverty, which is why she values her new home.",
+   "ko": "올가는 젊을 때 가난을 겪어서 새 집이 더 소중해요.",
+   "blank": "бедность",
+   "src": "made"
   }
  ],
  "w|бедный": [
@@ -2370,6 +2402,22 @@
    "en": "Arguing with the movers was pointless, so Anna just waited.",
    "ko": "이삿짐 직원들과 다투는 건 소용없는 일이라 안나는 그냥 기다렸어요.",
    "blank": "бессмысленным",
+   "src": "made"
+  }
+ ],
+ "w|бессмыслица": [
+  {
+   "text": "Дмитрий отложил рукопись, назвав её полной бессмыслицей.",
+   "en": "Dmitry put the manuscript aside, calling it complete nonsense.",
+   "ko": "드미트리는 그 원고를 말도 안 되는 소리라며 치워 두었어요.",
+   "blank": "бессмыслицей",
+   "src": "made"
+  },
+  {
+   "text": "Инструкция к шкафу показалась Ольге полной бессмыслицей.",
+   "en": "The wardrobe instructions seemed like complete nonsense to Olga.",
+   "ko": "올가에게 옷장 조립 설명서는 완전 엉터리 같았어요.",
+   "blank": "бессмыслицей",
    "src": "made"
   }
  ],
@@ -8375,6 +8423,22 @@
    "src": "tatoeba:10665490/carlosalberto en:10665475/carlosalberto"
   }
  ],
+ "w|всемогущий": [
+  {
+   "text": "Дети в библиотеке спорили, кто сильнее — всемогущий волшебник или дракон, и Дмитрий их рассудил.",
+   "en": "The children in the library argued over who was stronger, the all-powerful wizard or the dragon, and Dmitry settled it.",
+   "ko": "도서관 아이들이 전능한 마법사와 용 중 누가 센지 다투자 드미트리가 판가름해 줬어요.",
+   "blank": "всемогущий",
+   "src": "made"
+  },
+  {
+   "text": "Управляющий домом ведёт себя так, будто он всемогущий, и Ольгу это раздражает.",
+   "en": "The building manager behaves as if he were all-powerful, and it annoys Olga.",
+   "ko": "관리인이 전능한 사람처럼 굴어서 올가는 짜증이 나요.",
+   "blank": "всемогущий",
+   "src": "made"
+  }
+ ],
  "w|всерьёз": [
   {
    "text": "Вы говорите это в шутку или всерьёз?",
@@ -8621,6 +8685,22 @@
    "en": "Where do you usually meet?",
    "ko": "너희는 보통 어디서 만나?",
    "blank": "встречаетесь"
+  }
+ ],
+ "w|вступать": [
+  {
+   "text": "Дмитрий редко вступает в споры с посетителями, даже когда они неправы.",
+   "en": "Dmitry rarely gets into arguments with visitors, even when they are wrong.",
+   "ko": "드미트리는 방문객이 틀려도 웬만해선 말다툼에 끼지 않아요.",
+   "blank": "вступает",
+   "src": "made"
+  },
+  {
+   "text": "Ольга официально вступает во владение новой квартирой в понедельник.",
+   "en": "Olga officially takes possession of her new flat on Monday.",
+   "ko": "올가는 월요일에 새 아파트 소유권을 정식으로 넘겨받아요.",
+   "blank": "вступает",
+   "src": "made"
   }
  ],
  "w|вступить": [
@@ -9182,6 +9262,22 @@
    "en": "Elena didn't have to make anything up: at the interview she simply told the truth.",
    "ko": "옐레나는 아무것도 꾸며 낼 필요가 없었어요. 면접에서 그냥 사실대로 말했거든요.",
    "blank": "выдумать",
+   "src": "made"
+  }
+ ],
+ "w|выдумка": [
+  {
+   "text": "Мальчик уверял Дмитрия, что видел в подвале библиотеки привидение, но это была выдумка.",
+   "en": "A boy assured Dmitry he'd seen a ghost in the library basement, but it was made up.",
+   "ko": "한 소년이 도서관 지하에서 유령을 봤다고 우겼지만 지어낸 이야기였어요.",
+   "blank": "выдумка",
+   "src": "made"
+  },
+  {
+   "text": "Ольга знала, что слухи о шумных соседях — чья-то выдумка.",
+   "en": "Olga knew that the rumours about noisy neighbours were somebody's invention.",
+   "ko": "올가는 시끄러운 이웃이 있다는 소문이 누가 지어낸 거라는 걸 알았어요.",
+   "blank": "выдумка",
    "src": "made"
   }
  ],
@@ -15457,6 +15553,22 @@
    "blank": "дух"
   }
  ],
+ "w|духовный": [
+  {
+   "text": "Дмитрий говорит, что библиотека для него — место почти духовное.",
+   "en": "Dmitry says the library is an almost spiritual place for him.",
+   "ko": "드미트리는 도서관이 자신에게 거의 영적인 곳이라고 말해요.",
+   "blank": "духовное",
+   "src": "made"
+  },
+  {
+   "text": "Для Ольги новый дом — это ещё и духовный рубеж, начало новой жизни.",
+   "en": "For Olga the new home is also a spiritual milestone, the start of a new life.",
+   "ko": "올가에게 새 집은 새 삶을 여는 마음의 전환점이기도 해요.",
+   "blank": "духовный",
+   "src": "made"
+  }
+ ],
  "w|душа": [
   {
    "text": "На душе сегодня легко.",
@@ -18157,6 +18269,22 @@
    "src": "made"
   }
  ],
+ "w|заманчивый": [
+  {
+   "text": "Дмитрию сделали заманчивое предложение перейти в университетскую библиотеку.",
+   "en": "Dmitry received a tempting offer to move to the university library.",
+   "ko": "드미트리는 대학 도서관으로 옮기라는 솔깃한 제안을 받았어요.",
+   "blank": "заманчивое",
+   "src": "made"
+  },
+  {
+   "text": "Скидка от грузчиков показалась Ольге заманчивой.",
+   "en": "The movers' discount seemed tempting to Olga.",
+   "ko": "이삿짐센터 할인이 올가에게는 솔깃했어요.",
+   "blank": "заманчивой",
+   "src": "made"
+  }
+ ],
  "w|замена": [
   {
    "text": "Сегодня в библиотеке работала замена, и Павел не узнал новую сотрудницу.",
@@ -19817,6 +19945,22 @@
    "blank": "Здесь"
   }
  ],
+ "w|здешний": [
+  {
+   "text": "Дмитрий знает здешних читателей по именам.",
+   "en": "Dmitry knows the local readers by name.",
+   "ko": "드미트리는 이 동네 독자들 이름을 다 알아요.",
+   "blank": "здешних",
+   "src": "made"
+  },
+  {
+   "text": "В первый же день здешние жители встретили Ольгу пирогом.",
+   "en": "On the very first day the local residents welcomed Olga with a pie.",
+   "ko": "첫날부터 동네 주민들이 파이를 들고 올가를 맞아 줬어요.",
+   "blank": "здешние",
+   "src": "made"
+  }
+ ],
  "w|здоровый": [
   {
    "text": "Тебе нужен здоровый сон.",
@@ -21111,6 +21255,22 @@
    "src": "made"
   }
  ],
+ "w|изумительно": [
+  {
+   "text": "Старинные гравюры в редком фонде, по словам Дмитрия, сохранились изумительно.",
+   "en": "According to Dmitry, the old engravings in the rare collection are wonderfully preserved.",
+   "ko": "드미트리 말로는 희귀본 서고의 옛 판화들이 놀랍도록 잘 보존됐대요.",
+   "blank": "изумительно",
+   "src": "made"
+  },
+  {
+   "text": "Вид из нового окна Ольги изумительно красив на закате.",
+   "en": "The view from Olga's new window is amazingly beautiful at sunset.",
+   "ko": "올가의 새 창밖 풍경은 해 질 녘에 놀랍도록 아름다워요.",
+   "blank": "изумительно",
+   "src": "made"
+  }
+ ],
  "w|изучать": [
   {
    "text": "Павел целый день изучал отчёты конкурентов.",
@@ -21278,6 +21438,22 @@
    "en": "On her new street Anna saw a mansion built back in the days of the empire.",
    "ko": "새 동네 거리에서 안나는 제국 시절에 지어진 저택을 봤어요.",
    "blank": "империи",
+   "src": "made"
+  }
+ ],
+ "w|импульс": [
+  {
+   "text": "Новая выставка дала Дмитрию импульс переставить весь зал.",
+   "en": "The new exhibition gave Dmitry the impetus to rearrange the whole hall.",
+   "ko": "새 전시 덕분에 드미트리는 열람실 전체를 다시 배치할 마음이 생겼어요.",
+   "blank": "импульс",
+   "src": "made"
+  },
+  {
+   "text": "Ольга купила новую квартиру под импульсом, а теперь радуется своему решению.",
+   "en": "Olga bought the new flat on impulse, and now she's glad of her decision.",
+   "ko": "올가는 충동적으로 새 아파트를 샀는데 지금은 그 결정이 기뻐요.",
+   "blank": "импульсом",
    "src": "made"
   }
  ],
@@ -21874,6 +22050,22 @@
    "en": "On Fridays Elena bakes Spanish bread with olives.",
    "ko": "엘레나는 금요일마다 올리브를 넣은 스페인식 빵을 구워요.",
    "blank": "испанский",
+   "src": "made"
+  }
+ ],
+ "w|исповедь": [
+  {
+   "text": "Дмитрий посоветовал читательнице роман, построенный как исповедь старого врача.",
+   "en": "Dmitry recommended to a reader a novel written as the confession of an old doctor.",
+   "ko": "드미트리는 한 독자에게 늙은 의사의 고백 형식으로 쓴 소설을 권했어요.",
+   "blank": "исповедь",
+   "src": "made"
+  },
+  {
+   "text": "Разбирая коробки, Ольга нашла дневник бабушки, похожий на исповедь.",
+   "en": "Unpacking boxes, Olga found her grandmother's diary, which read like a confession.",
+   "ko": "상자를 풀다가 올가는 고백록 같은 할머니의 일기를 찾았어요.",
+   "blank": "исповедь",
    "src": "made"
   }
  ],
@@ -22774,6 +22966,22 @@
    "en": "A red cardinal with an injured wing was brought to Natalia's clinic.",
    "ko": "나탈리야의 병원에 날개를 다친 홍관조가 들어왔어요.",
    "blank": "кардинала",
+   "src": "made"
+  }
+ ],
+ "w|карма": [
+  {
+   "text": "Дмитрий шутит, что за неотданные книги читателей настигнет плохая карма.",
+   "en": "Dmitry jokes that bad karma will catch up with readers who don't return books.",
+   "ko": "드미트리는 책을 안 돌려주면 나쁜 업보가 따라온다고 농담해요.",
+   "blank": "карма",
+   "src": "made"
+  },
+  {
+   "text": "Подруга сказала Ольге, что выбросить старый хлам полезно для кармы.",
+   "en": "Olga's friend told her that throwing out old junk is good for karma.",
+   "ko": "친구가 올가에게 낡은 잡동사니를 버리면 업보에 좋다고 했어요.",
+   "blank": "кармы",
    "src": "made"
   }
  ],
@@ -26041,6 +26249,22 @@
    "src": "tatoeba:9876635/Ivanovb en:7716662/CK"
   }
  ],
+ "w|кружиться": [
+  {
+   "text": "Пыль кружилась в солнечном луче, пока Дмитрий снимал книги с верхней полки.",
+   "en": "Dust swirled in the sunbeam while Dmitry took books down from the top shelf.",
+   "ko": "드미트리가 맨 위 칸에서 책을 내리는 동안 햇살 속에서 먼지가 맴돌았어요.",
+   "blank": "кружилась",
+   "src": "made"
+  },
+  {
+   "text": "От усталости у Ольги кружилась голова, когда она несла последнюю коробку.",
+   "en": "Olga's head was spinning from tiredness as she carried the last box.",
+   "ko": "마지막 상자를 나를 때 올가는 피곤해서 머리가 빙빙 돌았어요.",
+   "blank": "кружилась",
+   "src": "made"
+  }
+ ],
  "w|кружка": [
   {
    "text": "Андрей пил чай из щербатой кружки, сидя на ступеньках.",
@@ -29033,6 +29257,22 @@
    "src": "made"
   }
  ],
+ "w|мексиканский": [
+  {
+   "text": "Для вечера кулинарии Дмитрий отобрал книги мексиканской кухни.",
+   "en": "For the cookery evening Dmitry selected books on Mexican cuisine.",
+   "ko": "드미트리는 요리의 밤 행사를 위해 멕시코 요리책을 골랐어요.",
+   "blank": "мексиканской",
+   "src": "made"
+  },
+  {
+   "text": "Ольга бережно завернула мексиканский кувшин, привезённый из отпуска.",
+   "en": "Olga carefully wrapped the Mexican jug she had brought back from holiday.",
+   "ko": "올가는 휴가 때 사 온 멕시코 주전자를 조심스럽게 쌌어요.",
+   "blank": "мексиканский",
+   "src": "made"
+  }
+ ],
  "w|мелкий": [
   {
    "text": "Ты мелкий шрифт весь прочитал?",
@@ -30019,6 +30259,22 @@
    "blank": "мистер"
   }
  ],
+ "w|миф": [
+  {
+   "text": "На полке у Дмитрия целый ряд книг про мифы Древней Греции.",
+   "en": "On Dmitry's shelf there's a whole row of books on the myths of Ancient Greece.",
+   "ko": "드미트리네 서가에는 고대 그리스 신화 책이 한 줄 가득 있어요.",
+   "blank": "мифы",
+   "src": "made"
+  },
+  {
+   "text": "Ольга развеяла миф, что переезд — это всегда стресс.",
+   "en": "Olga dispelled the myth that moving house is always stressful.",
+   "ko": "올가는 이사는 언제나 스트레스라는 통념을 깼어요.",
+   "blank": "миф",
+   "src": "made"
+  }
+ ],
  "w|мишень": [
   {
    "text": "На уроке ОБЖ Павел стрелял в мишень из пневматической винтовки.",
@@ -30677,6 +30933,22 @@
    "src": "tatoeba:4241505/odexed en:4161110/mervert1"
   }
  ],
+ "w|морпех": [
+  {
+   "text": "Бывший морпех каждое утро приходит к Дмитрию читать газеты.",
+   "en": "A former marine comes to Dmitry's library every morning to read the papers.",
+   "ko": "전직 해병대원이 매일 아침 드미트리네 도서관에 신문을 읽으러 와요.",
+   "blank": "морпех",
+   "src": "made"
+  },
+  {
+   "text": "Диван Ольге помог донести бывший морпех с первого этажа.",
+   "en": "A former marine from the ground floor helped Olga carry the sofa.",
+   "ko": "1층 사는 전직 해병대원이 올가의 소파 나르는 걸 도와줬어요.",
+   "blank": "морпех",
+   "src": "made"
+  }
+ ],
  "w|морской": [
   {
    "text": "Мне нравится плавать в морской воде.",
@@ -31101,6 +31373,22 @@
    "src": "tatoeba:7498744/fjay69 en:3329708/CK"
   }
  ],
+ "w|мусульманин": [
+  {
+   "text": "Один постоянный читатель Дмитрия, мусульманин, попросил найти книгу о средневековой арабской медицине.",
+   "en": "One of Dmitry's regular readers, a Muslim, asked him to find a book on medieval Arab medicine.",
+   "ko": "드미트리의 단골 독자인 한 무슬림이 중세 아랍 의학 책을 찾아 달라고 했어요.",
+   "blank": "мусульманин",
+   "src": "made"
+  },
+  {
+   "text": "Новый сосед Ольги, мусульманин, принёс ей сладости в честь новоселья.",
+   "en": "Olga's new neighbour, a Muslim, brought her sweets to celebrate the housewarming.",
+   "ko": "올가의 새 이웃인 무슬림 남자가 집들이 선물로 과자를 가져왔어요.",
+   "blank": "мусульманин",
+   "src": "made"
+  }
+ ],
  "w|муха": [
   {
    "text": "На кухне у Андрея целый день жужжит муха, и он никак не может её поймать.",
@@ -31174,6 +31462,22 @@
    "en": "After dinner the friends volunteered to wash the dishes together.",
    "ko": "저녁을 먹고 친구들이 같이 설거지를 하겠다고 나섰어요.",
    "blank": "мыть",
+   "src": "made"
+  }
+ ],
+ "w|мышление": [
+  {
+   "text": "Дмитрий подобрал для учителя книги о критическом мышлении.",
+   "en": "Dmitry picked out books on critical thinking for a teacher.",
+   "ko": "드미트리는 한 선생님을 위해 비판적 사고에 관한 책을 골라 줬어요.",
+   "blank": "мышлении",
+   "src": "made"
+  },
+  {
+   "text": "Переезд изменил мышление Ольги: теперь она не покупает лишнего.",
+   "en": "The move changed Olga's way of thinking: now she doesn't buy anything unnecessary.",
+   "ko": "이사는 올가의 생각을 바꿔 놓았어요. 이제 쓸데없는 걸 사지 않아요.",
+   "blank": "мышление",
    "src": "made"
   }
  ],
@@ -31805,6 +32109,22 @@
    "ko": "글귀 읽으셨어요?",
    "blank": "надпись",
    "src": "tatoeba:13939416/Wezel en:12314111/CK"
+  }
+ ],
+ "w|надуть": [
+  {
+   "text": "К детскому празднику Дмитрий надул шарики и развесил их над стеллажами.",
+   "en": "For the children's party Dmitry blew up balloons and hung them over the shelves.",
+   "ko": "어린이 행사에 맞춰 드미트리는 풍선을 불어 서가 위에 달았어요.",
+   "blank": "надул",
+   "src": "made"
+  },
+  {
+   "text": "Ольга надула надувной матрас, потому что кровать ещё не привезли.",
+   "en": "Olga blew up an air mattress because the bed hadn't been delivered yet.",
+   "ko": "침대가 아직 안 와서 올가는 에어 매트리스에 바람을 넣었어요.",
+   "blank": "надула",
+   "src": "made"
   }
  ],
  "w|наедине": [
@@ -32625,6 +32945,22 @@
    "blank": "например"
   }
  ],
+ "w|напролёт": [
+  {
+   "text": "Перед инвентаризацией Дмитрий ночи напролёт пересчитывал книги.",
+   "en": "Before the stocktaking Dmitry spent whole nights counting books.",
+   "ko": "장서 점검을 앞두고 드미트리는 밤새도록 책을 셌어요.",
+   "blank": "напролёт",
+   "src": "made"
+  },
+  {
+   "text": "Ольга с подругой всю ночь напролёт паковали коробки.",
+   "en": "Olga and her friend packed boxes all night long.",
+   "ko": "올가는 친구와 밤새도록 상자를 쌌어요.",
+   "blank": "напролёт",
+   "src": "made"
+  }
+ ],
  "w|напротив": [
   {
    "text": "Мы с учителем сели друг напротив друга.",
@@ -33034,6 +33370,22 @@
    "en": "Svetlana is writing an article about a dispute over a famous artist's inheritance.",
    "ko": "스베틀라나는 유명 화가의 유산을 둘러싼 다툼에 관한 기사를 써요.",
    "blank": "наследство",
+   "src": "made"
+  }
+ ],
+ "w|насмерть": [
+  {
+   "text": "В детективе, который выдал Дмитрий, героя насмерть сбивает машина в первой главе.",
+   "en": "In the detective novel Dmitry checked out, the hero is killed by a car in the first chapter.",
+   "ko": "드미트리가 대출해 준 추리 소설에서 주인공은 1장에서 차에 치여 숨져요.",
+   "blank": "насмерть",
+   "src": "made"
+  },
+  {
+   "text": "Ольга насмерть перепугалась, когда коробка с посудой упала с лестницы.",
+   "en": "Olga was scared to death when the box of dishes fell down the stairs.",
+   "ko": "그릇 상자가 계단에서 떨어지자 올가는 기겁했어요.",
+   "blank": "насмерть",
    "src": "made"
   }
  ],
@@ -33936,6 +34288,22 @@
    "en": "Their romance was short-lived.",
    "ko": "그들의 연애는 오래가지 않았어요.",
    "blank": "недолгий",
+   "src": "made"
+  }
+ ],
+ "w|недооценивать": [
+  {
+   "text": "Дмитрий считает, что многие недооценивают пользу бумажных книг.",
+   "en": "Dmitry thinks many people underestimate the value of paper books.",
+   "ko": "드미트리는 많은 사람이 종이책의 가치를 얕본다고 생각해요.",
+   "blank": "недооценивают",
+   "src": "made"
+  },
+  {
+   "text": "Ольга недооценивала, сколько вещей накопилось за десять лет.",
+   "en": "Olga underestimated how many things had piled up over ten years.",
+   "ko": "올가는 십 년 동안 쌓인 짐이 얼마나 많은지 얕봤어요.",
+   "blank": "недооценивала",
    "src": "made"
   }
  ],
@@ -37825,6 +38193,22 @@
    "src": "made"
   }
  ],
+ "w|одобрять": [
+  {
+   "text": "Заведующая библиотекой не одобряет, когда Дмитрий пьёт кофе в читальном зале.",
+   "en": "The head librarian doesn't approve of Dmitry drinking coffee in the reading room.",
+   "ko": "도서관장은 드미트리가 열람실에서 커피 마시는 걸 탐탁지 않아 해요.",
+   "blank": "одобряет",
+   "src": "made"
+  },
+  {
+   "text": "Ольга не одобряла идею брата перевозить пианино самим.",
+   "en": "Olga didn't approve of her brother's idea of moving the piano themselves.",
+   "ko": "올가는 피아노를 직접 옮기자는 오빠의 생각이 마음에 안 들었어요.",
+   "blank": "одобряла",
+   "src": "made"
+  }
+ ],
  "w|одолжение": [
   {
    "text": "Не могли бы вы сделать мне одолжение?",
@@ -40424,6 +40808,22 @@
    "en": "The students decided to celebrate Natalia's birthday with a little concert.",
    "ko": "학생들은 작은 연주회로 나탈리야의 생일을 축하하기로 했어요.",
    "blank": "отметить",
+   "src": "made"
+  }
+ ],
+ "w|отметка": [
+  {
+   "text": "Дмитрий карандашом поставил отметку на полях каталога.",
+   "en": "Dmitry made a mark in pencil in the margin of the catalogue.",
+   "ko": "드미트리는 목록 여백에 연필로 표시를 했어요.",
+   "blank": "отметку",
+   "src": "made"
+  },
+  {
+   "text": "На дверном косяке Ольга нашла отметки роста своих детей.",
+   "en": "On the door frame Olga found the height marks of her children.",
+   "ko": "올가는 문틀에서 아이들 키를 잰 표시를 발견했어요.",
+   "blank": "отметки",
    "src": "made"
   }
  ],
@@ -43203,6 +43603,22 @@
    "src": "made"
   }
  ],
+ "w|петля": [
+  {
+   "text": "Дмитрий пришил к старой папке петлю, чтобы её можно было повесить на крючок.",
+   "en": "Dmitry sewed a loop onto the old folder so it could be hung on a hook.",
+   "ko": "드미트리는 낡은 서류철에 고리를 달아 걸이에 걸 수 있게 했어요.",
+   "blank": "петлю",
+   "src": "made"
+  },
+  {
+   "text": "Ольга завязала верёвку петлёй, чтобы удобнее нести свёрнутый ковёр.",
+   "en": "Olga tied the rope in a loop to carry the rolled-up rug more easily.",
+   "ko": "올가는 말아 둔 카펫을 들기 편하게 끈을 고리로 묶었어요.",
+   "blank": "петлёй",
+   "src": "made"
+  }
+ ],
  "w|петь": [
   {
    "text": "Почему я не могу петь так же, как они?",
@@ -43988,6 +44404,22 @@
    "en": "Old newspapers in the library are kept on microfilm, and Anna reads them through a viewer.",
    "ko": "도서관의 옛 신문은 필름으로 보관돼 있어서 안나는 기계로 읽어요.",
    "blank": "плёнке",
+   "src": "made"
+  }
+ ],
+ "w|пленник": [
+  {
+   "text": "Дмитрий посоветовал роман о пленнике, который бежит из крепости.",
+   "en": "Dmitry recommended a novel about a prisoner who escapes from a fortress.",
+   "ko": "드미트리는 요새에서 탈출하는 포로 이야기를 다룬 소설을 추천했어요.",
+   "blank": "пленнике",
+   "src": "made"
+  },
+  {
+   "text": "В последний вечер Ольга смотрела фильм о пленнике, который двадцать лет мечтал о собственном доме.",
+   "en": "On the last evening Olga watched a film about a prisoner who dreamed of his own home for twenty years.",
+   "ko": "마지막 날 저녁 올가는 이십 년 동안 자기 집을 꿈꾼 포로에 관한 영화를 봤어요.",
+   "blank": "пленнике",
    "src": "made"
   }
  ],
@@ -44875,6 +45307,22 @@
    "ko": "파이프가 손상됐어요.",
    "blank": "повреждение",
    "src": "tatoeba:2184222/Ooneykcall en:680624/Source_VOA"
+  }
+ ],
+ "w|повстанец": [
+  {
+   "text": "Дмитрий выдал школьнику роман о юном повстанце.",
+   "en": "Dmitry checked out a novel about a young rebel to a schoolboy.",
+   "ko": "드미트리는 한 학생에게 젊은 반군에 관한 소설을 대출해 줬어요.",
+   "blank": "повстанце",
+   "src": "made"
+  },
+  {
+   "text": "Ольга упаковала в коробку книгу о повстанцах, которую не дочитала.",
+   "en": "Olga packed into a box a book about rebels that she hadn't finished.",
+   "ko": "올가는 다 읽지 못한 반군 이야기 책을 상자에 넣었어요.",
+   "blank": "повстанцах",
+   "src": "made"
   }
  ],
  "w|повсюду": [
@@ -51095,6 +51543,22 @@
    "src": "tatoeba:3572421/sharptoothed en:31283/CK"
   }
  ],
+ "w|предосторожность": [
+  {
+   "text": "Из предосторожности Дмитрий выдаёт редкие книги только в читальный зал.",
+   "en": "As a precaution Dmitry lends rare books only for use in the reading room.",
+   "ko": "드미트리는 만약을 위해 희귀본은 열람실에서만 보게 해요.",
+   "blank": "предосторожности",
+   "src": "made"
+  },
+  {
+   "text": "Ольга завернула зеркало в одеяло ради предосторожности.",
+   "en": "Olga wrapped the mirror in a blanket as a precaution.",
+   "ko": "올가는 만일을 대비해 거울을 담요로 쌌어요.",
+   "blank": "предосторожности",
+   "src": "made"
+  }
+ ],
  "w|предотвратить": [
   {
    "text": "Как мы могли предотвратить эту ситуацию?",
@@ -51910,6 +52374,22 @@
    "en": "Svetlana's fellow passenger, a police officer, said that crime in their city had fallen.",
    "ko": "스베틀라나의 동승객인 경찰관은 자기 도시 범죄가 줄었다고 말했어요.",
    "blank": "преступность",
+   "src": "made"
+  }
+ ],
+ "w|преступный": [
+  {
+   "text": "В романе, который читал Дмитрий, преступный мир маленького городка описан очень живо.",
+   "en": "In the novel Dmitry was reading, the criminal underworld of a small town is described very vividly.",
+   "ko": "드미트리가 읽던 소설은 작은 마을의 범죄 세계를 아주 생생하게 그려요.",
+   "blank": "преступный",
+   "src": "made"
+  },
+  {
+   "text": "Ольга прочитала, что в соседнем районе раскрыли преступную группу, воровавшую мебель при переездах.",
+   "en": "Olga read that a criminal gang that stole furniture during moves had been uncovered in the next district.",
+   "ko": "올가는 옆 동네에서 이사 때 가구를 훔치던 범죄 조직이 잡혔다는 기사를 읽었어요.",
+   "blank": "преступную",
    "src": "made"
   }
  ],
@@ -55015,6 +55495,22 @@
    "blank": "пропала"
   }
  ],
+ "w|проповедь": [
+  {
+   "text": "Пожилой читатель попросил у Дмитрия сборник проповедей девятнадцатого века.",
+   "en": "An elderly reader asked Dmitry for a collection of nineteenth-century sermons.",
+   "ko": "나이 든 독자가 드미트리에게 19세기 설교집을 달라고 했어요.",
+   "blank": "проповедей",
+   "src": "made"
+  },
+  {
+   "text": "Отец прочитал Ольге целую проповедь о том, как правильно упаковывать посуду.",
+   "en": "Olga's father delivered a whole sermon to her about how to pack dishes properly.",
+   "ko": "아버지는 올가에게 그릇 싸는 법에 대해 한바탕 설교를 하셨어요.",
+   "blank": "проповедь",
+   "src": "made"
+  }
+ ],
  "w|пропуск": [
   {
    "text": "Андрей забыл пропуск в номере и не смог попасть в спортзал.",
@@ -56727,6 +57223,22 @@
    "src": "tatoeba:6712704/odexed en:6710886/CK"
   }
  ],
+ "w|рабство": [
+  {
+   "text": "Студентка попросила у Дмитрия книги об истории рабства в Америке.",
+   "en": "A student asked Dmitry for books on the history of slavery in America.",
+   "ko": "한 대학생이 드미트리에게 미국 노예제 역사에 관한 책을 찾아 달라고 했어요.",
+   "blank": "рабства",
+   "src": "made"
+  },
+  {
+   "text": "Ольга шутит, что упаковка коробок — настоящее рабство.",
+   "en": "Olga jokes that packing boxes is real slavery.",
+   "ko": "올가는 상자 싸기가 진짜 노예 노동이라고 농담해요.",
+   "blank": "рабство",
+   "src": "made"
+  }
+ ],
  "w|равно": [
   {
    "text": "Мне всё равно, где сидеть.",
@@ -58049,6 +58561,22 @@
    "ko": "버스 시간표 좀 주시겠어요?",
    "blank": "расписание",
    "src": "tatoeba:10133244/marafon en:934420/LittleBoy"
+  }
+ ],
+ "w|расплата": [
+  {
+   "text": "Дмитрий предупредил должника, что за просрочку наступит расплата в виде штрафа.",
+   "en": "Dmitry warned the borrower that the late return would be paid for with a fine.",
+   "ko": "드미트리는 연체자에게 늦으면 벌금이라는 대가를 치른다고 경고했어요.",
+   "blank": "расплата",
+   "src": "made"
+  },
+  {
+   "text": "Ольга знала, что за спешку при упаковке придёт расплата — разбитые тарелки.",
+   "en": "Olga knew that rushing the packing would come at a price: broken plates.",
+   "ko": "올가는 서둘러 짐을 싸면 깨진 접시라는 대가를 치를 걸 알았어요.",
+   "blank": "расплата",
+   "src": "made"
   }
  ],
  "w|расплатиться": [
@@ -65939,6 +66467,22 @@
    "src": "made"
   }
  ],
+ "w|спасательный": [
+  {
+   "text": "Дмитрий нашёл для школьника книгу об истории спасательной службы на море.",
+   "en": "Dmitry found a schoolboy a book about the history of the sea rescue service.",
+   "ko": "드미트리는 한 학생에게 해양 구조대 역사에 관한 책을 찾아 줬어요.",
+   "blank": "спасательной",
+   "src": "made"
+  },
+  {
+   "text": "Ольга обнаружила в шкафу старый спасательный жилет и не знала, куда его деть.",
+   "en": "Olga found an old life jacket in the cupboard and didn't know what to do with it.",
+   "ko": "올가는 옷장에서 낡은 구명조끼를 찾았는데 어디에 둘지 몰랐어요.",
+   "blank": "спасательный",
+   "src": "made"
+  }
+ ],
  "w|спасать": [
   {
    "text": "Я знал, что ты придёшь меня спасать.",
@@ -71921,6 +72465,22 @@
    "blank": "тяжёлую"
   }
  ],
+ "w|тяжесть": [
+  {
+   "text": "Дмитрий с трудом поднял тяжесть старых энциклопедий на тележку.",
+   "en": "Dmitry struggled to lift the weight of the old encyclopedias onto the trolley.",
+   "ko": "드미트리는 낡은 백과사전 더미를 겨우 수레에 올렸어요.",
+   "blank": "тяжесть",
+   "src": "made"
+  },
+  {
+   "text": "Ольга почувствовала тяжесть в спине после того, как подняла коробку с книгами.",
+   "en": "Olga felt a heaviness in her back after lifting the box of books.",
+   "ko": "책 상자를 들고 나서 올가는 허리가 묵직했어요.",
+   "blank": "тяжесть",
+   "src": "made"
+  }
+ ],
  "w|тяжкий": [
   {
    "text": "Павел вспоминает тяжкий год, когда шторм разрушил их причал.",
@@ -73211,6 +73771,22 @@
    "blank": "Узнай"
   }
  ],
+ "w|уйма": [
+  {
+   "text": "После ремонта у Дмитрия осталась уйма книг без шифра.",
+   "en": "After the renovation Dmitry was left with loads of books without call numbers.",
+   "ko": "보수 공사 후 드미트리에게는 청구 기호 없는 책이 잔뜩 남았어요.",
+   "blank": "уйма",
+   "src": "made"
+  },
+  {
+   "text": "У Ольги ушла уйма времени на поиски ключей от нового почтового ящика.",
+   "en": "Olga spent a huge amount of time looking for the keys to the new mailbox.",
+   "ko": "올가는 새 우편함 열쇠를 찾느라 시간을 엄청 썼어요.",
+   "blank": "уйма",
+   "src": "made"
+  }
+ ],
  "w|уйти": [
   {
    "text": "Мне пора уйти.",
@@ -74389,6 +74965,22 @@
    "ko": "소란 피우고 싶지 않았어요.",
    "blank": "устраивать",
    "src": "tatoeba:13019723/Wezel en:13000253/CK"
+  }
+ ],
+ "w|устранить": [
+  {
+   "text": "Дмитрий вызвал мастера, чтобы устранить протечку над архивом.",
+   "en": "Dmitry called a repairman to fix the leak above the archive.",
+   "ko": "드미트리는 기록 보관실 위 누수를 고치려고 수리 기사를 불렀어요.",
+   "blank": "устранить",
+   "src": "made"
+  },
+  {
+   "text": "Перед переездом Ольга успела устранить все мелкие поломки в старой квартире.",
+   "en": "Before the move Olga managed to fix all the small faults in the old flat.",
+   "ko": "이사 전에 올가는 옛 집의 자잘한 고장을 다 고쳐 놓았어요.",
+   "blank": "устранить",
+   "src": "made"
   }
  ],
  "w|устроить": [
@@ -76197,6 +76789,22 @@
    "en": "Don't walk on the grass.",
    "ko": "잔디 위로 걷지 마.",
    "blank": "ходи"
+  }
+ ],
+ "w|ходячий": [
+  {
+   "text": "Коллеги называют Дмитрия ходячим каталогом: он помнит, где стоит каждая книга.",
+   "en": "Colleagues call Dmitry a walking catalogue: he remembers where every book is.",
+   "ko": "동료들은 드미트리를 걸어 다니는 목록이라고 불러요. 책마다 자리를 다 기억하거든요.",
+   "blank": "ходячим",
+   "src": "made"
+  },
+  {
+   "text": "Сосед Ольги — ходячая энциклопедия: он рассказал про каждый дом на улице.",
+   "en": "Olga's neighbour is a walking encyclopedia: he told her about every house on the street.",
+   "ko": "올가의 이웃은 걸어 다니는 백과사전이라 거리의 집마다 이야기를 들려줬어요.",
+   "blank": "ходячая",
+   "src": "made"
   }
  ],
  "w|хозяин": [
@@ -79263,6 +79871,22 @@
    "src": "made"
   }
  ],
+ "w|электрический": [
+  {
+   "text": "В читальном зале Дмитрий поставил электрический чайник для сотрудников.",
+   "en": "In the reading room Dmitry set up an electric kettle for the staff.",
+   "ko": "드미트리는 열람실에 직원용 전기 주전자를 놓았어요.",
+   "blank": "электрический",
+   "src": "made"
+  },
+  {
+   "text": "В новой квартире у Ольги электрическая плита вместо газовой.",
+   "en": "In Olga's new flat there's an electric cooker instead of a gas one.",
+   "ko": "올가의 새 집에는 가스레인지 대신 전기레인지가 있어요.",
+   "blank": "электрическая",
+   "src": "made"
+  }
+ ],
  "w|электричество": [
   {
    "text": "Сколько вы платите за электричество?",
@@ -79640,6 +80264,22 @@
    "en": "Irina asked a lawyer she knows how to draw up a warranty properly.",
    "ko": "이리나는 아는 변호사에게 보증서를 제대로 작성하는 법을 물었어요.",
    "blank": "юриста",
+   "src": "made"
+  }
+ ],
+ "w|юстиция": [
+  {
+   "text": "Дмитрий заказал для студентов-юристов новый учебник по истории юстиции.",
+   "en": "Dmitry ordered a new textbook on the history of justice for the law students.",
+   "ko": "드미트리는 법대생들을 위해 사법 역사 교과서를 새로 주문했어요.",
+   "blank": "юстиции",
+   "src": "made"
+  },
+  {
+   "text": "Оформлять документы на квартиру Ольга ходила в министерство юстиции.",
+   "en": "Olga went to the Ministry of Justice to register the documents for the flat.",
+   "ko": "올가는 아파트 서류를 처리하러 법무부에 갔어요.",
+   "blank": "юстиции",
    "src": "made"
   }
  ],

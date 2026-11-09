@@ -1159,6 +1159,22 @@
    "blank": "أحمق"
   }
  ],
+ "w|أحيا": [
+  {
+   "text": "أحيا المطر الأرض اليابسة في مزرعة سامي.",
+   "en": "The rain brought the dry land on Sami's farm back to life.",
+   "ko": "비가 사미네 농장의 메마른 땅을 되살렸어요.",
+   "blank": "أحيا",
+   "src": "made"
+  },
+  {
+   "text": "قالت رنا إن رسالة صديقتها أحيت فيها ذكريات كثيرة.",
+   "en": "Rana said her friend's letter revived many memories in her.",
+   "ko": "라나는 친구의 편지가 많은 추억을 되살려 줬다고 했어요.",
+   "blank": "أحيت",
+   "src": "made"
+  }
+ ],
  "w|أحيانا": [
   {
    "text": "أحيانا أحب البقاء في المنزل.",
@@ -5925,6 +5941,22 @@
    "src": "made"
   }
  ],
+ "w|أوزون": [
+  {
+   "text": "سمع سامي في الراديو أن ثقب الأوزون بدأ يصغر.",
+   "en": "Sami heard on the radio that the ozone hole has started to shrink.",
+   "ko": "사미는 라디오에서 오존층 구멍이 작아지기 시작했다고 들었어요.",
+   "blank": "الأوزون",
+   "src": "made"
+  },
+  {
+   "text": "ذكرت رنا في رسالتها درس الأوزون الذي ضحكتا فيه طويلا.",
+   "en": "In her letter Rana mentioned the ozone lesson where they laughed for a long time.",
+   "ko": "라나는 편지에서 둘이 한참 웃었던 오존층 수업을 떠올렸어요.",
+   "blank": "الأوزون",
+   "src": "made"
+  }
+ ],
  "w|أوسط": [
   {
    "text": "يضع علي الحلوى في الرف الأوسط حتى يصل إليها الأطفال.",
@@ -9188,6 +9220,22 @@
    "en": "Rana discovered that the seller had cheated her and sold her a fake watch.",
    "ko": "라나는 상인이 자기를 속여 가짜 시계를 판 것을 알게 됐어요.",
    "blank": "احتال",
+   "src": "made"
+  }
+ ],
+ "w|احتباس": [
+  {
+   "text": "يقول سامي إن الاحتباس الحراري غير موعد المطر في مزرعته.",
+   "en": "Sami says global warming has changed the timing of the rain on his farm.",
+   "ko": "사미는 지구 온난화 때문에 자기 농장에 비 오는 때가 바뀌었다고 해요.",
+   "blank": "الاحتباس",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت رنا لصديقتها مقالا عن الاحتباس الحراري في المدن الساحلية.",
+   "en": "Rana sent her friend an article about global warming in coastal cities.",
+   "ko": "라나는 친구에게 해안 도시의 지구 온난화에 관한 기사를 보냈어요.",
+   "blank": "الاحتباس",
    "src": "made"
   }
  ],
@@ -12497,6 +12545,22 @@
    "src": "made"
   }
  ],
+ "w|اعتدال": [
+  {
+   "text": "ينتظر سامي اعتدال الجو ليزرع البذور الجديدة.",
+   "en": "Sami waits for the weather to become mild to plant the new seeds.",
+   "ko": "사미는 날씨가 온화해지기를 기다렸다가 새 씨앗을 심어요.",
+   "blank": "اعتدال",
+   "src": "made"
+  },
+  {
+   "text": "أحبت رنا اعتدال صديقتها في الحكم على الناس.",
+   "en": "Rana loved her friend's moderation in judging people.",
+   "ko": "라나는 사람을 판단할 때 치우치지 않는 친구의 모습을 좋아했어요.",
+   "blank": "اعتدال",
+   "src": "made"
+  }
+ ],
  "w|اعتدل": [
   {
    "text": "اعتدل الجو أخيرا فدهن أحمد الجدران الخارجية.",
@@ -14105,6 +14169,22 @@
    "src": "made"
   }
  ],
+ "w|انبعاث": [
+  {
+   "text": "يحاول سامي تقليل انبعاث الدخان من فرن المزرعة القديم.",
+   "en": "Sami is trying to reduce the smoke emissions from the farm's old oven.",
+   "ko": "사미는 농장의 낡은 화덕에서 나오는 연기를 줄이려고 애써요.",
+   "blank": "انبعاث",
+   "src": "made"
+  },
+  {
+   "text": "تعمل صديقة رنا في مختبر يقيس انبعاث الكربون من المصانع.",
+   "en": "Rana's friend works in a lab that measures carbon emissions from factories.",
+   "ko": "라나의 친구는 공장의 탄소 배출을 측정하는 연구소에서 일해요.",
+   "blank": "انبعاث",
+   "src": "made"
+  }
+ ],
  "w|انبعث": [
   {
    "text": "انبعثت رائحة البخور من قاعة عرس يوسف.",
@@ -14193,6 +14273,22 @@
    "en": "Pay attention to what the teacher says.",
    "ko": "선생님이 하시는 말씀을 잘 들어.",
    "blank": "انتبه"
+  }
+ ],
+ "w|انتحر": [
+  {
+   "text": "قرأ سامي في الجريدة خبرا حزينا عن مزارع انتحر بسبب الديون.",
+   "en": "Sami read sad news in the paper about a farmer who took his own life because of debt.",
+   "ko": "사미는 신문에서 빚 때문에 스스로 목숨을 끊은 농부에 관한 슬픈 기사를 읽었어요.",
+   "blank": "انتحر",
+   "src": "made"
+  },
+  {
+   "text": "ناقشت رنا وصديقتها في الرسائل رواية عن بطل انتحر في آخر الكتاب.",
+   "en": "Rana and her friend discussed in their letters a novel about a hero who takes his own life at the end.",
+   "ko": "라나와 친구는 편지로 마지막에 주인공이 스스로 목숨을 끊는 소설에 대해 이야기했어요.",
+   "blank": "انتحر",
+   "src": "made"
   }
  ],
  "w|انتخاب": [
@@ -15244,6 +15340,22 @@
    "en": "Fatima got carried away with emotion as she sang the last part of the song.",
    "ko": "파티마는 노래 마지막 부분을 부르며 감정이 북받쳤어요.",
    "blank": "انفعلت",
+   "src": "made"
+  }
+ ],
+ "w|انقراض": [
+  {
+   "text": "يربي سامي سلالة قديمة من الدجاج لينقذها من الانقراض.",
+   "en": "Sami raises an old breed of chicken to save it from extinction.",
+   "ko": "사미는 오래된 닭 품종이 멸종하지 않도록 키우고 있어요.",
+   "blank": "الانقراض",
+   "src": "made"
+  },
+  {
+   "text": "تكتب رنا أن بعض الكلمات القديمة في لهجتهما مهددة بالانقراض.",
+   "en": "Rana writes that some old words in their dialect are threatened with extinction.",
+   "ko": "라나는 둘의 사투리에서 몇몇 옛 낱말이 사라질 위기라고 써요.",
+   "blank": "بالانقراض",
    "src": "made"
   }
  ],
@@ -16707,6 +16819,22 @@
    "en": "I love the start of the day.",
    "ko": "나는 하루의 시작을 좋아해.",
    "blank": "بداية"
+  }
+ ],
+ "w|بدر": [
+  {
+   "text": "يحب سامي أن يسقي الحقل في ليالي البدر.",
+   "en": "Sami likes to water the field on full-moon nights.",
+   "ko": "사미는 보름달 뜨는 밤에 밭에 물 주는 걸 좋아해요.",
+   "blank": "البدر",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا رسالتها في ليلة كان فيها البدر كاملا فوق السطوح.",
+   "en": "Rana wrote her letter on a night when the full moon hung over the rooftops.",
+   "ko": "라나는 지붕 위로 보름달이 환하게 뜬 밤에 편지를 썼어요.",
+   "blank": "البدر",
+   "src": "made"
   }
  ],
  "w|بدقة": [
@@ -27339,6 +27467,22 @@
    "src": "made"
   }
  ],
+ "w|جائر": [
+  {
+   "text": "منع سامي الرعي الجائر في أرضه حتى يعود العشب.",
+   "en": "Sami banned overgrazing on his land so the grass would come back.",
+   "ko": "사미는 풀이 다시 자라도록 자기 땅에서 과도한 방목을 막았어요.",
+   "blank": "الجائر",
+   "src": "made"
+  },
+  {
+   "text": "أخبرت رنا صديقتها أن الصيد الجائر أفرغ البحيرة من الأسماك.",
+   "en": "Rana told her friend that overfishing emptied the lake of fish.",
+   "ko": "라나는 친구에게 남획 때문에 호수에 물고기가 없어졌다고 알렸어요.",
+   "blank": "الجائر",
+   "src": "made"
+  }
+ ],
  "w|جائزة": [
   {
    "text": "أخذ جائزة عالرسم بالمدرسة.",
@@ -28825,6 +28969,22 @@
    "en": "The children played on the frozen lake ice.",
    "ko": "아이들이 얼어붙은 호수 위에서 놀았어.",
    "blank": "جليد"
+  }
+ ],
+ "w|جليدي": [
+  {
+   "text": "ضرب المزرعة هواء جليدي في الليل، فغطى سامي الأشجار الصغيرة.",
+   "en": "An icy wind hit the farm at night, so Sami covered the young trees.",
+   "ko": "밤에 얼음 같은 바람이 농장을 덮치자 사미는 어린 나무들을 덮어 줬어요.",
+   "blank": "جليدي",
+   "src": "made"
+  },
+  {
+   "text": "وصفت صديقة رنا شتاء جليديا في المدينة الجديدة.",
+   "en": "Rana's friend described an icy winter in the new city.",
+   "ko": "라나의 친구는 새 도시의 얼어붙을 듯한 겨울을 묘사했어요.",
+   "blank": "جليديا",
+   "src": "made"
   }
  ],
  "w|جليسة": [
@@ -34299,6 +34459,22 @@
    "en": "I lost my keys on the way.",
    "ko": "가는 길에 열쇠를 잃어버렸어.",
    "blank": "خسرت"
+  }
+ ],
+ "w|خسوف": [
+  {
+   "text": "جمع سامي أولاده على السطح ليشاهدوا خسوف القمر.",
+   "en": "Sami gathered his children on the roof to watch the lunar eclipse.",
+   "ko": "사미는 월식을 보려고 아이들을 옥상에 모았어요.",
+   "blank": "خسوف",
+   "src": "made"
+  },
+  {
+   "text": "سألت رنا صديقتها هل رأت الخسوف من مدينتها البعيدة.",
+   "en": "Rana asked her friend whether she saw the eclipse from her faraway city.",
+   "ko": "라나는 친구에게 먼 도시에서도 월식을 봤는지 물었어요.",
+   "blank": "الخسوف",
+   "src": "made"
   }
  ],
  "w|خشب": [
@@ -40465,6 +40641,22 @@
    "blank": "ريح"
   }
  ],
+ "w|ريش": [
+  {
+   "text": "يجمع سامي ريش الإوز ليصنع منه وسائد ناعمة.",
+   "en": "Sami collects goose feathers to make soft pillows.",
+   "ko": "사미는 거위 털을 모아 푹신한 베개를 만들어요.",
+   "blank": "ريش",
+   "src": "made"
+  },
+  {
+   "text": "وضعت رنا ريشة طاووس داخل الظرف هدية لصديقتها.",
+   "en": "Rana put a peacock feather inside the envelope as a gift for her friend.",
+   "ko": "라나는 친구에게 줄 선물로 공작 깃털을 봉투에 넣었어요.",
+   "blank": "ريشة",
+   "src": "made"
+  }
+ ],
  "w|ريف": [
   {
    "text": "نشأنا في ريف بعيد عن المدينة.",
@@ -42656,6 +42848,22 @@
    "en": "Before the move, Fatima set free the birds she had been keeping on the balcony.",
    "ko": "파티마는 이사하기 전에 발코니에서 키우던 새들을 놓아주었어요.",
    "blank": "سراح",
+   "src": "made"
+  }
+ ],
+ "w|سرب": [
+  {
+   "text": "نزل سرب من الحمام على حقل القمح، فأسرع سامي إليه.",
+   "en": "A flock of pigeons landed on the wheat field, so Sami hurried to it.",
+   "ko": "비둘기 떼가 밀밭에 내려앉자 사미가 서둘러 달려갔어요.",
+   "blank": "سرب",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا أن سربا من الطيور يمر فوق بيتها كل خريف.",
+   "en": "Rana wrote that a flock of birds passes over her house every autumn.",
+   "ko": "라나는 가을마다 새 떼가 집 위를 지나간다고 썼어요.",
+   "blank": "سربا",
    "src": "made"
   }
  ],
@@ -46539,6 +46747,22 @@
    "src": "made"
   }
  ],
+ "w|شهاب": [
+  {
+   "text": "رأى سامي شهابا يعبر السماء فوق الحقل.",
+   "en": "Sami saw a shooting star crossing the sky over the field.",
+   "ko": "사미는 밭 위 하늘을 가로지르는 별똥별을 봤어요.",
+   "blank": "شهابا",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت رنا ليلة تمنتا فيها أمنية حين مر شهاب فوقهما.",
+   "en": "Rana remembered the night they made a wish when a shooting star passed over them.",
+   "ko": "라나는 별똥별이 머리 위로 지나갈 때 둘이 소원을 빌던 밤을 떠올렸어요.",
+   "blank": "شهاب",
+   "src": "made"
+  }
+ ],
  "w|شهادة": [
   {
    "text": "سأحصل على شهادة بعد التخرج.",
@@ -50275,6 +50499,22 @@
    "src": "made"
   }
  ],
+ "w|طفا": [
+  {
+   "text": "طفا بط صغير على ماء البركة خلف بيت سامي.",
+   "en": "Little ducks floated on the pond water behind Sami's house.",
+   "ko": "사미네 집 뒤 연못 위에 새끼 오리들이 떠 있었어요.",
+   "blank": "طفا",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت رنا القارب الورقي الذي طفا على النهر حين كانتا صغيرتين.",
+   "en": "Rana remembered the paper boat that floated on the river when they were little.",
+   "ko": "라나는 어릴 때 강물 위에 떠 가던 종이배를 떠올렸어요.",
+   "blank": "طفا",
+   "src": "made"
+  }
+ ],
  "w|طفح": [
   {
    "text": "جاءت أم بطفلها إلى كريم بسبب طفح أحمر على ذراعه.",
@@ -50554,6 +50794,22 @@
    "en": "The company allows female employees short leave if menstrual pain becomes severe.",
    "ko": "회사는 생리통이 심하면 여직원들에게 짧은 휴가를 허락해요.",
    "blank": "الطمث",
+   "src": "made"
+  }
+ ],
+ "w|طمس": [
+  {
+   "text": "طمس المطر آثار الثعلب قرب قن الدجاج قبل أن يراها سامي.",
+   "en": "The rain erased the fox's tracks near the chicken coop before Sami could see them.",
+   "ko": "사미가 보기 전에 비가 닭장 근처 여우 발자국을 지워 버렸어요.",
+   "blank": "طمس",
+   "src": "made"
+  },
+  {
+   "text": "طمست قطرة ماء بعض الكلمات في رسالة رنا القديمة.",
+   "en": "A drop of water blurred some words in Rana's old letter.",
+   "ko": "물방울 하나가 라나의 옛 편지 몇 글자를 번지게 했어요.",
+   "blank": "طمست",
    "src": "made"
   }
  ],
@@ -52252,6 +52508,22 @@
    "en": "Huda shot a scene in a restaurant serving Arab food.",
    "ko": "후다는 아랍 음식을 파는 식당에서 한 장면을 찍었어요.",
    "blank": "العربية",
+   "src": "made"
+  }
+ ],
+ "w|عرج": [
+  {
+   "text": "عرج الحصان بعد أن داس على حجر حاد، فنادى سامي الطبيب.",
+   "en": "The horse limped after stepping on a sharp stone, so Sami called the vet.",
+   "ko": "말이 날카로운 돌을 밟고 절뚝거리자 사미는 수의사를 불렀어요.",
+   "blank": "عرج",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا أن جدتها صارت تعرج قليلا لكنها ما زالت تمشي كل يوم.",
+   "en": "Rana wrote that her grandmother now limps a little but still walks every day.",
+   "ko": "라나는 할머니가 조금 절뚝거리시지만 아직 매일 산책하신다고 썼어요.",
+   "blank": "تعرج",
    "src": "made"
   }
  ],
@@ -54713,6 +54985,22 @@
    "blank": "غاز"
   }
  ],
+ "w|غازات": [
+  {
+   "text": "يستخدم سامي غازات السماد لتشغيل موقد صغير في المطبخ.",
+   "en": "Sami uses the gases from manure to run a small stove in the kitchen.",
+   "ko": "사미는 거름에서 나오는 가스로 부엌의 작은 화로를 때요.",
+   "blank": "غازات",
+   "src": "made"
+  },
+  {
+   "text": "سألت رنا صديقتها عن بحثها في غازات البراكين.",
+   "en": "Rana asked her friend about her research on volcanic gases.",
+   "ko": "라나는 친구에게 화산 가스 연구는 어떻게 되고 있는지 물었어요.",
+   "blank": "غازات",
+   "src": "made"
+  }
+ ],
  "w|غازل": [
   {
    "text": "غازل الشاب الفتاة في الحفل.",
@@ -55483,6 +55771,22 @@
    "src": "made"
   }
  ],
+ "w|غلب": [
+  {
+   "text": "غلب النعاس سامي بعد يوم طويل في الحقل.",
+   "en": "Sleep overcame Sami after a long day in the field.",
+   "ko": "밭에서 긴 하루를 보낸 사미는 졸음을 이기지 못했어요.",
+   "blank": "غلب",
+   "src": "made"
+  },
+  {
+   "text": "غلبت الدموع رنا وهي تقرأ رسالة صديقتها الأخيرة.",
+   "en": "Tears overcame Rana as she read her friend's last letter.",
+   "ko": "라나는 친구의 마지막 편지를 읽다가 눈물을 참지 못했어요.",
+   "blank": "غلبت",
+   "src": "made"
+  }
+ ],
  "w|غلطة": [
   {
    "text": "ارتكبت غلطة في الحسابات اليوم.",
@@ -55554,6 +55858,22 @@
    "en": "Fatima was overwhelmed with joy when a famous writer gave the library his books.",
    "ko": "유명한 작가가 도서관에 자기 책을 기증하자 파티마는 기쁨에 벅찼어요.",
    "blank": "غمرت",
+   "src": "made"
+  }
+ ],
+ "w|غمز": [
+  {
+   "text": "غمز سامي لابنه حين رأى العجل الجديد يقف لأول مرة.",
+   "en": "Sami winked at his son when he saw the new calf stand for the first time.",
+   "ko": "송아지가 처음 일어서는 걸 보고 사미는 아들에게 윙크했어요.",
+   "blank": "غمز",
+   "src": "made"
+  },
+  {
+   "text": "تذكرت رنا كيف كانت صديقتها تغمز لها في الصف.",
+   "en": "Rana remembered how her friend used to wink at her in class.",
+   "ko": "라나는 친구가 수업 시간에 자기에게 윙크하던 모습을 떠올렸어요.",
+   "blank": "تغمز",
    "src": "made"
   }
  ],
@@ -55658,6 +55978,22 @@
    "en": "Fatima's friend talked about his visit to a museum with a real submarine.",
    "ko": "파티마의 친구는 진짜 잠수함이 있는 박물관에 간 이야기를 했어요.",
    "blank": "غواصة",
+   "src": "made"
+  }
+ ],
+ "w|غوريلا": [
+  {
+   "text": "رأى ابن سامي غوريلا لأول مرة في كتاب عن الغابات.",
+   "en": "Sami's son saw a gorilla for the first time in a book about forests.",
+   "ko": "사미의 아들은 숲에 관한 책에서 고릴라를 처음 봤어요.",
+   "blank": "غوريلا",
+   "src": "made"
+  },
+  {
+   "text": "أرسلت صديقة رنا صورة غوريلا من حديقة الحيوان مع رسالتها.",
+   "en": "Rana's friend sent a picture of a gorilla from the zoo with her letter.",
+   "ko": "라나의 친구는 편지와 함께 동물원 고릴라 사진을 보냈어요.",
+   "blank": "غوريلا",
    "src": "made"
   }
  ],
@@ -56301,6 +56637,22 @@
    "blank": "فتش"
   }
  ],
+ "w|فتل": [
+  {
+   "text": "فتل سامي حبلا متينا من ألياف النخيل.",
+   "en": "Sami twisted a strong rope from palm fibers.",
+   "ko": "사미는 야자 섬유를 꼬아 튼튼한 밧줄을 만들었어요.",
+   "blank": "فتل",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا أن والدها ما زال يفتل شاربه وهو يقرأ الجريدة.",
+   "en": "Rana wrote that her father still twirls his mustache while reading the paper.",
+   "ko": "라나는 아버지가 아직도 신문을 읽으며 콧수염을 꼬신다고 썼어요.",
+   "blank": "يفتل",
+   "src": "made"
+  }
+ ],
  "w|فتور": [
   {
    "text": "لاحظت الأم فتورا في العلاقة بين ابنيها منذ الصيف.",
@@ -56910,6 +57262,22 @@
    "en": "Mona keeps the vaccines in a special freezer at the back of the clinic.",
    "ko": "모나는 백신을 병원 안쪽 전용 냉동고에 보관해요.",
    "blank": "فريزر",
+   "src": "made"
+  }
+ ],
+ "w|فريسة": [
+  {
+   "text": "صارت فراخ سامي فريسة سهلة لصقر يحوم فوق المزرعة.",
+   "en": "Sami's chicks became easy prey for a hawk circling above the farm.",
+   "ko": "사미의 병아리들이 농장 위를 맴도는 매의 손쉬운 먹잇감이 됐어요.",
+   "blank": "فريسة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا عن قطتها التي تقفز على كل فريسة صغيرة في الحديقة.",
+   "en": "Rana wrote about her cat that pounces on every small prey in the garden.",
+   "ko": "라나는 정원의 작은 먹잇감마다 덮치는 고양이 이야기를 썼어요.",
+   "blank": "فريسة",
    "src": "made"
   }
  ],
@@ -57656,6 +58024,22 @@
    "en": "Layla loves falafel patties on cold autumn mornings.",
    "ko": "레일라는 쌀쌀한 가을 아침에 먹는 팔라펠을 좋아해요.",
    "blank": "الفلافل",
+   "src": "made"
+  }
+ ],
+ "w|فلت": [
+  {
+   "text": "فلت الخروف من الحظيرة وركض نحو حقل الجيران.",
+   "en": "The sheep got loose from the pen and ran toward the neighbors' field.",
+   "ko": "양이 우리에서 빠져나와 이웃 밭 쪽으로 달아났어요.",
+   "blank": "فلت",
+   "src": "made"
+  },
+  {
+   "text": "فلتت الرسالة من يد رنا وطارت مع الريح.",
+   "en": "The letter slipped from Rana's hand and flew away with the wind.",
+   "ko": "편지가 라나의 손에서 빠져나가 바람에 날아갔어요.",
+   "blank": "فلتت",
    "src": "made"
   }
  ],
@@ -59579,6 +59963,22 @@
    "blank": "تقشر"
   }
  ],
+ "w|قشرة": [
+  {
+   "text": "يرمي سامي قشرة البطيخ للماعز بعد الغداء.",
+   "en": "Sami throws the watermelon rind to the goats after lunch.",
+   "ko": "사미는 점심을 먹고 수박 껍질을 염소에게 던져 줘요.",
+   "blank": "قشرة",
+   "src": "made"
+  },
+  {
+   "text": "لصقت رنا في الرسالة قشرة شجرة من الحديقة التي كانتا تلعبان فيها.",
+   "en": "Rana stuck a piece of tree bark from the garden where they used to play in the letter.",
+   "ko": "라나는 둘이 놀던 정원의 나무껍질 한 조각을 편지에 붙였어요.",
+   "blank": "قشرة",
+   "src": "made"
+  }
+ ],
  "w|قشطة": [
   {
    "text": "يحب الأطفال كعكة خالد المحشوة بالقشطة والعسل.",
@@ -59683,6 +60083,22 @@
    "src": "made"
   }
  ],
+ "w|قصدير": [
+  {
+   "text": "غطى سامي سقف الحظيرة بألواح من القصدير قبل الشتاء.",
+   "en": "Sami covered the barn roof with tin sheets before winter.",
+   "ko": "사미는 겨울이 오기 전에 헛간 지붕을 양철판으로 덮었어요.",
+   "blank": "القصدير",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا لصديقتها أنها ما زالت تحفظ رسائلها في علبة من القصدير.",
+   "en": "Rana wrote to her friend that she still keeps her letters in a tin box.",
+   "ko": "라나는 친구에게 아직도 그 편지들을 양철 상자에 간직하고 있다고 썼어요.",
+   "blank": "القصدير",
+   "src": "made"
+  }
+ ],
  "w|قصر": [
   {
    "text": "القصر الملكي رائع جداً.",
@@ -59768,6 +60184,22 @@
    "en": "Sara works as an employee at a court complex and trains for running after work.",
    "ko": "사라는 법원 단지에서 일하고, 퇴근 후에 달리기 훈련을 해요.",
    "blank": "قضائي",
+   "src": "made"
+  }
+ ],
+ "w|قضم": [
+  {
+   "text": "قضم الأرنب أوراق الخس كلها في حديقة سامي.",
+   "en": "The rabbit nibbled all the lettuce leaves in Sami's garden.",
+   "ko": "토끼가 사미네 텃밭 상추잎을 다 갉아 먹었어요.",
+   "blank": "قضم",
+   "src": "made"
+  },
+  {
+   "text": "كانت رنا تقضم قلمها وهي تفكر في أول جملة.",
+   "en": "Rana was chewing her pen while thinking about the first sentence.",
+   "ko": "라나는 첫 문장을 고민하며 펜을 깨물고 있었어요.",
+   "blank": "تقضم",
    "src": "made"
   }
  ],
@@ -60138,6 +60570,22 @@
    "en": "Fatima noticed how few friends came compared to last year.",
    "ko": "파티마는 작년에 비해 온 친구가 적다는 걸 알아챘어요.",
    "blank": "قلة",
+   "src": "made"
+  }
+ ],
+ "w|قلد": [
+  {
+   "text": "يقلد ابن سامي صوت الديك كل صباح ليضحك الجميع.",
+   "en": "Sami's son imitates the rooster's call every morning to make everyone laugh.",
+   "ko": "사미의 아들은 아침마다 수탉 울음소리를 흉내 내서 모두를 웃겨요.",
+   "blank": "يقلد",
+   "src": "made"
+  },
+  {
+   "text": "ضحكت رنا لأن ابنها صار يقلد خط يدها.",
+   "en": "Rana laughed because her son has started imitating her handwriting.",
+   "ko": "아들이 자기 글씨체를 따라 쓰기 시작해서 라나는 웃었어요.",
+   "blank": "يقلد",
    "src": "made"
   }
  ],
@@ -60713,6 +61161,22 @@
    "blank": "قيد"
   }
  ],
+ "w|قيظ": [
+  {
+   "text": "يعمل سامي في الصباح الباكر هربا من قيظ الظهيرة.",
+   "en": "Sami works early in the morning to escape the midday heat.",
+   "ko": "사미는 한낮의 무더위를 피해 이른 아침에 일해요.",
+   "blank": "قيظ",
+   "src": "made"
+  },
+  {
+   "text": "اشتكت صديقة رنا من قيظ الصيف في المدينة الجديدة.",
+   "en": "Rana's friend complained about the summer heat in the new city.",
+   "ko": "라나의 친구는 새 도시의 찌는 듯한 여름 더위를 불평했어요.",
+   "blank": "قيظ",
+   "src": "made"
+  }
+ ],
  "w|قيلولة": [
   {
    "text": "بعد التمرين الصباحي يأخذ علي قيلولة قصيرة في البيت.",
@@ -61189,6 +61653,22 @@
    "src": "made"
   }
  ],
+ "w|كبت": [
+  {
+   "text": "كبت سامي غضبه حين داست البقرة على الشتلات الجديدة.",
+   "en": "Sami held back his anger when the cow trampled the new seedlings.",
+   "ko": "소가 새 모종을 밟아도 사미는 화를 꾹 참았어요.",
+   "blank": "كبت",
+   "src": "made"
+  },
+  {
+   "text": "اعترفت رنا بأنها كبتت مشاعرها سنوات قبل أن تكتب هذه الرسالة.",
+   "en": "Rana admitted she had suppressed her feelings for years before writing this letter.",
+   "ko": "라나는 이 편지를 쓰기 전까지 몇 년 동안 감정을 억눌러 왔다고 털어놓았어요.",
+   "blank": "كبتت",
+   "src": "made"
+  }
+ ],
  "w|كبد": [
   {
    "text": "أحب أن أتناول كبد الدجاج أحياناً.",
@@ -61408,6 +61888,22 @@
    "en": "A mass of suitcases piled up at the belt, and Mona waited a long time for hers.",
    "ko": "짐 벨트에 가방이 한 무더기로 쌓여서 모나는 자기 가방을 한참 기다렸어요.",
    "blank": "كتلة",
+   "src": "made"
+  }
+ ],
+ "w|كتم": [
+  {
+   "text": "كتم سامي ضحكته حين سقط صديقه في الوحل.",
+   "en": "Sami stifled his laugh when his friend fell in the mud.",
+   "ko": "친구가 진흙탕에 넘어지자 사미는 웃음을 참았어요.",
+   "blank": "كتم",
+   "src": "made"
+  },
+  {
+   "text": "كتمت رنا السر الذي ائتمنتها عليه صديقتها طوال هذه السنين.",
+   "en": "Rana kept the secret her friend entrusted to her all these years.",
+   "ko": "라나는 친구가 털어놓은 비밀을 그 오랜 세월 동안 지켰어요.",
+   "blank": "كتمت",
    "src": "made"
   }
  ],
@@ -62087,6 +62583,22 @@
    "en": "The teacher said the student is very lazy.",
    "ko": "선생님이 그 학생이 매우 كسول하다고 했어.",
    "blank": "كسول"
+  }
+ ],
+ "w|كشر": [
+  {
+   "text": "كشر الكلب عن أنيابه حين اقترب غريب من البوابة.",
+   "en": "The dog bared its teeth when a stranger approached the gate.",
+   "ko": "낯선 사람이 대문에 다가오자 개가 이빨을 드러냈어요.",
+   "blank": "كشر",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا أن قطتها تكشر كلما رأت الطبيب.",
+   "en": "Rana wrote that her cat bares its teeth whenever it sees the vet.",
+   "ko": "라나는 고양이가 수의사만 보면 이빨을 드러낸다고 썼어요.",
+   "blank": "تكشر",
+   "src": "made"
   }
  ],
  "w|كشف": [
@@ -62925,6 +63437,22 @@
    "en": "Do you wish to travel to another planet?",
    "ko": "다른 행성에 가보고 싶니?",
    "blank": "كوكب"
+  }
+ ],
+ "w|كوكبة": [
+  {
+   "text": "علم سامي ابنته كيف تجد كوكبة الدب الأكبر.",
+   "en": "Sami taught his daughter how to find the Big Dipper constellation.",
+   "ko": "사미는 딸에게 큰곰자리 찾는 법을 가르쳐 줬어요.",
+   "blank": "كوكبة",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا أنها تنظر كل ليلة إلى الكوكبة التي اختارتاها في الصغر.",
+   "en": "Rana wrote that she looks every night at the constellation they chose as children.",
+   "ko": "라나는 어릴 때 둘이 골랐던 별자리를 매일 밤 바라본다고 썼어요.",
+   "blank": "الكوكبة",
+   "src": "made"
   }
  ],
  "w|كوليسترول": [
@@ -64051,6 +64579,22 @@
    "blank": "الصق"
   }
  ],
+ "w|لطخ": [
+  {
+   "text": "لطخ الطين ملابس سامي بعد يوم من الحرث.",
+   "en": "Mud stained Sami's clothes after a day of plowing.",
+   "ko": "밭을 하루 종일 갈고 나니 사미의 옷이 진흙투성이가 됐어요.",
+   "blank": "لطخ",
+   "src": "made"
+  },
+  {
+   "text": "اعتذرت رنا لأن الحبر لطخ أطراف الورقة.",
+   "en": "Rana apologized because the ink smudged the edges of the paper.",
+   "ko": "잉크가 종이 가장자리에 번져서 라나는 미안하다고 했어요.",
+   "blank": "لطخ",
+   "src": "made"
+  }
+ ],
  "w|لطف": [
   {
    "text": "أشعر بالسعادة من لطف الجيران.",
@@ -64664,6 +65208,22 @@
    "en": "Farm work was no pastime for Hoda, but a whole life.",
    "ko": "후다에게 농장 일은 놀이가 아니라 삶 그 자체였어요.",
    "blank": "لهوا",
+   "src": "made"
+  }
+ ],
+ "w|لهيب": [
+  {
+   "text": "أحرق سامي الأعشاب اليابسة، ووقف بعيدا عن لهيب النار.",
+   "en": "Sami burned the dry weeds and stood far from the flames.",
+   "ko": "사미는 마른 풀을 태우면서 불길에서 멀찍이 떨어져 섰어요.",
+   "blank": "لهيب",
+   "src": "made"
+  },
+  {
+   "text": "كتبت رنا أن لهيب الشوق لا يخففه إلا لقاء قريب.",
+   "en": "Rana wrote that only a meeting soon can ease the fire of longing.",
+   "ko": "라나는 그리움의 불길은 곧 만나야만 가라앉는다고 썼어요.",
+   "blank": "لهيب",
    "src": "made"
   }
  ],
@@ -69289,6 +69849,22 @@
    "src": "made"
   }
  ],
+ "w|مدد": [
+  {
+   "text": "مدد سامي أنابيب الري إلى آخر الحقل.",
+   "en": "Sami extended the irrigation pipes to the end of the field.",
+   "ko": "사미는 물 대는 관을 밭 끝까지 늘였어요.",
+   "blank": "مدد",
+   "src": "made"
+  },
+  {
+   "text": "مددت رنا إقامتها في القرية أسبوعا لتنتظر رد صديقتها.",
+   "en": "Rana extended her stay in the village by a week to wait for her friend's reply.",
+   "ko": "라나는 친구의 답장을 기다리려고 마을에 머무는 기간을 일주일 늘렸어요.",
+   "blank": "مددت",
+   "src": "made"
+  }
+ ],
  "w|مدرب": [
   {
    "text": "أريد أن أصبح مدرب في المستقبل.",
@@ -72864,6 +73440,22 @@
    "en": "Sarah compared looking for the meeting room to a chase through a maze.",
    "ko": "사라는 회의실을 찾아 헤맨 일을 미로 속 추격전에 비유했어요.",
    "blank": "بمطاردة",
+   "src": "made"
+  }
+ ],
+ "w|مطاط": [
+  {
+   "text": "يلبس سامي حذاء من المطاط حين يدخل حظيرة البقر.",
+   "en": "Sami wears rubber boots when he enters the cow barn.",
+   "ko": "사미는 외양간에 들어갈 때 고무장화를 신어요.",
+   "blank": "المطاط",
+   "src": "made"
+  },
+  {
+   "text": "ربطت رنا الرسائل القديمة بشريط من المطاط.",
+   "en": "Rana tied the old letters with a rubber band.",
+   "ko": "라나는 옛 편지들을 고무줄로 묶었어요.",
+   "blank": "المطاط",
    "src": "made"
   }
  ],
@@ -79303,6 +79895,22 @@
    "src": "made"
   }
  ],
+ "w|نبش": [
+  {
+   "text": "نبش الدجاج التراب بحثا عن الديدان.",
+   "en": "The chickens scratched the soil looking for worms.",
+   "ko": "닭들이 벌레를 찾아 흙을 헤집었어요.",
+   "blank": "نبش",
+   "src": "made"
+  },
+  {
+   "text": "نبشت رنا في صندوق قديم حتى وجدت صورتهما في المدرسة.",
+   "en": "Rana dug through an old box until she found their school photo.",
+   "ko": "라나는 오래된 상자를 뒤져 둘의 학창 시절 사진을 찾아냈어요.",
+   "blank": "نبشت",
+   "src": "made"
+  }
+ ],
  "w|نبض": [
   {
    "text": "فحص الطبيب نبض المريض بسرعة.",
@@ -80193,6 +80801,22 @@
    "blank": "نسق"
   }
  ],
+ "w|نسمة": [
+  {
+   "text": "لم تهب نسمة واحدة على الحقل طوال النهار.",
+   "en": "Not a single breath of wind blew over the field all day.",
+   "ko": "하루 종일 밭에는 바람 한 점 불지 않았어요.",
+   "blank": "نسمة",
+   "src": "made"
+  },
+  {
+   "text": "فتحت رنا النافذة فدخلت نسمة باردة حركت الأوراق.",
+   "en": "Rana opened the window and a cool breeze came in and moved the papers.",
+   "ko": "라나가 창문을 열자 시원한 바람이 들어와 종이를 흔들었어요.",
+   "blank": "نسمة",
+   "src": "made"
+  }
+ ],
  "w|نسي": [
   {
    "text": "نسي موعد الاجتماع.",
@@ -80252,6 +80876,22 @@
    "en": "Mona bought a scarf of soft silk fabric at the duty-free shop.",
    "ko": "모나는 면세점에서 부드러운 실크 스카프를 샀어요.",
    "blank": "نسيج",
+   "src": "made"
+  }
+ ],
+ "w|نسيم": [
+  {
+   "text": "يجلس سامي تحت الشجرة في المساء ليستمتع بالنسيم.",
+   "en": "Sami sits under the tree in the evening to enjoy the breeze.",
+   "ko": "사미는 저녁이면 나무 아래 앉아 산들바람을 즐겨요.",
+   "blank": "بالنسيم",
+   "src": "made"
+  },
+  {
+   "text": "وصفت رنا نسيم البحر الذي كانتا تنتظرانه كل صيف.",
+   "en": "Rana described the sea breeze they used to wait for every summer.",
+   "ko": "라나는 둘이 여름마다 기다리던 바닷바람을 묘사했어요.",
+   "blank": "نسيم",
    "src": "made"
   }
  ],
