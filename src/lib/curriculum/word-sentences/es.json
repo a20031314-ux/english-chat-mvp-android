@@ -399,6 +399,22 @@
    "blank": "academia"
   }
  ],
+ "w|académico": [
+  {
+   "text": "Hugo dejó el mundo académico para dedicarse al periodismo.",
+   "en": "Hugo left the academic world to devote himself to journalism.",
+   "ko": "우고는 학계를 떠나 기자 일에 전념했어요.",
+   "blank": "académico",
+   "src": "made"
+  },
+  {
+   "text": "El asesor histórico de Paula tiene un perfil muy académico.",
+   "en": "Paula's historical adviser has a very academic background.",
+   "ko": "파울라의 역사 자문가는 매우 학구적인 이력을 가졌어요.",
+   "blank": "académico",
+   "src": "made"
+  }
+ ],
  "w|acampar": [
   {
    "text": "Javier decidió acampar junto al río para oír el agua por la noche.",
@@ -1145,6 +1161,22 @@
    "en": "Keep going, there's not much left.",
    "ko": "계속 가, 이제 얼마 안 남았어.",
    "blank": "adelante"
+  }
+ ],
+ "w|adelanto": [
+  {
+   "text": "La editorial le pagó a Hugo un adelanto por su primer libro.",
+   "en": "The publisher paid Hugo an advance for his first book.",
+   "ko": "출판사는 우고에게 첫 책 선인세를 줬어요.",
+   "blank": "adelanto",
+   "src": "made"
+  },
+  {
+   "text": "Paula pidió un adelanto del sueldo para comprar material.",
+   "en": "Paula asked for an advance on her salary to buy equipment.",
+   "ko": "파울라는 장비를 사려고 월급을 가불해 달라고 했어요.",
+   "blank": "adelanto",
+   "src": "made"
   }
  ],
  "w|además": [
@@ -2257,6 +2289,22 @@
    "src": "made"
   }
  ],
+ "w|ajo": [
+  {
+   "text": "Toda la redacción olía a ajo porque Hugo comió en su mesa.",
+   "en": "The whole newsroom smelled of garlic because Hugo ate at his desk.",
+   "ko": "우고가 자리에서 점심을 먹어서 편집국 전체에 마늘 냄새가 났어요.",
+   "blank": "ajo",
+   "src": "made"
+  },
+  {
+   "text": "En la escena de la cocina, la actriz picaba ajo mientras Paula contaba las tomas.",
+   "en": "In the kitchen scene, the actress was chopping garlic while Paula counted the takes.",
+   "ko": "부엌 장면에서 배우는 마늘을 다졌고 파울라는 테이크 수를 셌어요.",
+   "blank": "ajo",
+   "src": "made"
+  }
+ ],
  "w|ajustar": [
   {
    "text": "Necesito ajustar el cinturón del asiento.",
@@ -2813,6 +2861,22 @@
    "en": "Leave it over there, I'll pick it up.",
    "ko": "저기에 둬, 내가 챙길게.",
    "blank": "allá"
+  }
+ ],
+ "w|allanamiento": [
+  {
+   "text": "Raúl leyó en el periódico local una noticia sobre un allanamiento de morada en su calle.",
+   "en": "Raúl read in the local paper about a break-in on his street.",
+   "ko": "라울은 지역 신문에서 자기 동네 주거 침입 기사를 읽었어요.",
+   "blank": "allanamiento",
+   "src": "made"
+  },
+  {
+   "text": "En la tele del hotel, Nuria vio una noticia sobre un allanamiento en una joyería.",
+   "en": "On the hotel TV, Nuria saw a news report about a break-in at a jewelry shop.",
+   "ko": "누리아는 호텔 텔레비전에서 보석 가게 침입 사건 뉴스를 봤어요.",
+   "blank": "allanamiento",
+   "src": "made"
   }
  ],
  "w|allí": [
@@ -3935,6 +3999,22 @@
    "blank": "antecedente"
   }
  ],
+ "w|antena": [
+  {
+   "text": "Raúl consultó un manual para instalar la antena del tejado de su casa.",
+   "en": "Raúl looked at a manual to install the antenna on his roof.",
+   "ko": "라울은 지붕 안테나를 설치하려고 설명서를 찾아봤어요.",
+   "blank": "antena",
+   "src": "made"
+  },
+  {
+   "text": "Nuria llamó al técnico porque la antena de la tele de una habitación no funcionaba.",
+   "en": "Nuria called the technician because the TV antenna in one room wasn't working.",
+   "ko": "객실 텔레비전 안테나가 안 돼서 누리아는 기술자를 불렀어요.",
+   "blank": "antena",
+   "src": "made"
+  }
+ ],
  "w|antepasado": [
   {
    "text": "En su primera carta, Pablo le contó a su amigo Andrés que había investigado sobre un antepasado suyo.",
@@ -4529,6 +4609,22 @@
    "blank": "aplicar"
   }
  ],
+ "w|apocalipsis": [
+  {
+   "text": "Al sobrino de Raúl le encantan las novelas sobre el apocalipsis zombi.",
+   "en": "Raúl's nephew loves novels about the zombie apocalypse.",
+   "ko": "라울의 조카는 좀비 종말 소설을 아주 좋아해요.",
+   "blank": "apocalipsis",
+   "src": "made"
+  },
+  {
+   "text": "Cuando se cayó el sistema de reservas, la recepción de Nuria parecía el apocalipsis.",
+   "en": "When the booking system went down, Nuria's reception looked like the apocalypse.",
+   "ko": "예약 시스템이 다운되자 누리아의 프런트는 아수라장이 됐어요.",
+   "blank": "apocalipsis",
+   "src": "made"
+  }
+ ],
  "w|apodo": [
   {
    "text": "En el equipo, todos llaman a Mateo por su apodo, «el Rayo».",
@@ -4627,6 +4723,22 @@
    "en": "She learns fast when she practices every day.",
    "ko": "매일 연습하면 그녀는 빨리 배워.",
    "blank": "aprende"
+  }
+ ],
+ "w|aprendiz": [
+  {
+   "text": "Hugo tiene un aprendiz que le ayuda a buscar datos.",
+   "en": "Hugo has an apprentice who helps him look up facts.",
+   "ko": "우고에게는 자료 찾기를 돕는 수습생이 있어요.",
+   "blank": "aprendiz",
+   "src": "made"
+  },
+  {
+   "text": "Paula empezó en el cine como aprendiz de un director de fotografía.",
+   "en": "Paula started in film as an apprentice to a cinematographer.",
+   "ko": "파울라는 촬영감독의 견습생으로 영화 일을 시작했어요.",
+   "blank": "aprendiz",
+   "src": "made"
   }
  ],
  "w|apresurarse": [
@@ -4815,6 +4927,22 @@
    "en": "He pointed toward the door without speaking.",
    "ko": "말없이 문을 가리켰어.",
    "blank": "Apuntó"
+  }
+ ],
+ "w|apunte": [
+  {
+   "text": "Hugo revisó el apunte que tomó durante la entrevista con el alcalde.",
+   "en": "Hugo went over the note he took during the interview with the mayor.",
+   "ko": "우고는 시장 인터뷰 중에 적은 메모를 다시 살펴봤어요.",
+   "blank": "apunte",
+   "src": "made"
+  },
+  {
+   "text": "Paula anotó en un apunte rápido qué toma le gustó más al director.",
+   "en": "Paula jotted down in a quick note which take the director liked best.",
+   "ko": "파울라는 감독이 가장 마음에 들어 한 테이크를 짧게 메모했어요.",
+   "blank": "apunte",
+   "src": "made"
   }
  ],
  "w|apurar": [
@@ -6043,6 +6171,22 @@
    "en": "I feel tied down by so many debts.",
    "ko": "빚이 많아서 묶인 기분이야.",
    "blank": "atado"
+  }
+ ],
+ "w|atajo": [
+  {
+   "text": "Hugo tomó un atajo por el parque para llegar antes a la rueda de prensa.",
+   "en": "Hugo took a shortcut through the park to get to the press conference sooner.",
+   "ko": "우고는 기자회견에 일찍 가려고 공원을 질러가는 지름길로 갔어요.",
+   "blank": "atajo",
+   "src": "made"
+  },
+  {
+   "text": "El conductor de la furgoneta tomó un atajo y Paula llegó al rodaje a tiempo.",
+   "en": "The van driver took a shortcut and Paula got to the shoot on time.",
+   "ko": "승합차 기사가 지름길로 가서 파울라는 제시간에 촬영장에 도착했어요.",
+   "blank": "atajo",
+   "src": "made"
   }
  ],
  "w|ataque": [
@@ -7819,6 +7963,22 @@
    "blank": "batería"
   }
  ],
+ "w|batido": [
+  {
+   "text": "En la cafetería de la biblioteca, Raúl se tomó un batido de fresa.",
+   "en": "In the library café, Raúl had a strawberry milkshake.",
+   "ko": "라울은 도서관 카페에서 딸기 셰이크를 마셨어요.",
+   "blank": "batido",
+   "src": "made"
+  },
+  {
+   "text": "Por la mañana, Nuria preparó un batido de plátano para un niño del hotel.",
+   "en": "In the morning, Nuria made a banana milkshake for a child staying at the hotel.",
+   "ko": "아침에 누리아는 호텔에 묵는 아이에게 바나나 셰이크를 만들어 줬어요.",
+   "blank": "batido",
+   "src": "made"
+  }
+ ],
  "w|baúl": [
   {
    "text": "Nico guarda sus herramientas viejas en un baúl.",
@@ -8278,6 +8438,22 @@
    "en": "The bread on the set is made of soft plastic.",
    "ko": "무대 소품 빵은 말랑한 플라스틱으로 만들었어요.",
    "blank": "blando",
+   "src": "made"
+  }
+ ],
+ "w|blog": [
+  {
+   "text": "Además del periódico, Hugo escribe un blog sobre cine clásico.",
+   "en": "Besides the newspaper, Hugo writes a blog about classic films.",
+   "ko": "우고는 신문 말고도 고전 영화 블로그를 써요.",
+   "blank": "blog",
+   "src": "made"
+  },
+  {
+   "text": "Paula cuenta en su blog cómo es un día de rodaje.",
+   "en": "Paula describes on her blog what a day on a shoot is like.",
+   "ko": "파울라는 블로그에 촬영하는 하루가 어떤지 써요.",
+   "blank": "blog",
    "src": "made"
   }
  ],
@@ -11091,6 +11267,22 @@
    "blank": "cartera"
   }
  ],
+ "w|cartero": [
+  {
+   "text": "Hugo escribió un reportaje sobre el último cartero de un pueblo de montaña.",
+   "en": "Hugo wrote a report about the last postman in a mountain village.",
+   "ko": "우고는 산골 마을의 마지막 우체부에 관한 기사를 썼어요.",
+   "blank": "cartero",
+   "src": "made"
+  },
+  {
+   "text": "Un cartero de verdad hizo de extra en la película de Paula.",
+   "en": "A real postman appeared as an extra in Paula's film.",
+   "ko": "진짜 우체부가 파울라의 영화에 엑스트라로 나왔어요.",
+   "blank": "cartero",
+   "src": "made"
+  }
+ ],
  "w|casa": [
   {
    "text": "Ya estoy en casa.",
@@ -11739,6 +11931,22 @@
    "src": "made"
   }
  ],
+ "w|cera": [
+  {
+   "text": "En el despacho del director, Hugo notó el olor a cera del suelo recién pulido.",
+   "en": "In the editor's office, Hugo noticed the smell of wax from the freshly polished floor.",
+   "ko": "편집장실에서 우고는 막 광낸 바닥의 왁스 냄새를 맡았어요.",
+   "blank": "cera",
+   "src": "made"
+  },
+  {
+   "text": "Paula encendió velas de cera para dar un ambiente antiguo al salón.",
+   "en": "Paula lit wax candles to give the hall an old-fashioned feel.",
+   "ko": "파울라는 거실에 옛날 분위기를 내려고 밀랍 초를 켰어요.",
+   "blank": "cera",
+   "src": "made"
+  }
+ ],
  "w|cerca": [
   {
    "text": "Vivo cerca de la estación.",
@@ -11969,6 +12177,22 @@
    "src": "made"
   }
  ],
+ "w|cesta": [
+  {
+   "text": "En Navidad, el director regaló a Hugo una cesta con turrón y vino.",
+   "en": "At Christmas, the editor gave Hugo a basket with nougat and wine.",
+   "ko": "크리스마스에 편집장이 우고에게 투론과 와인이 든 바구니를 선물했어요.",
+   "blank": "cesta",
+   "src": "made"
+  },
+  {
+   "text": "Paula llenó una cesta de fruta para la escena del mercado.",
+   "en": "Paula filled a basket with fruit for the market scene.",
+   "ko": "파울라는 시장 장면을 위해 바구니에 과일을 담았어요.",
+   "blank": "cesta",
+   "src": "made"
+  }
+ ],
  "w|chaleco": [
   {
    "text": "Se puso un chaleco grueso por el frío.",
@@ -12027,6 +12251,22 @@
    "src": "made"
   }
  ],
+ "w|chantajear": [
+  {
+   "text": "En la novela negra que leyó Raúl, un político intenta chantajear a un juez.",
+   "en": "In the crime novel Raúl read, a politician tries to blackmail a judge.",
+   "ko": "라울이 읽은 추리 소설에서는 한 정치인이 판사를 협박하려 해요.",
+   "blank": "chantajear",
+   "src": "made"
+  },
+  {
+   "text": "En la serie que vio Nuria anoche, un recepcionista intentaba chantajear a un huésped famoso.",
+   "en": "In the series Nuria watched last night, a receptionist tried to blackmail a famous guest.",
+   "ko": "누리아가 어젯밤 본 드라마에서 한 프런트 직원이 유명한 손님을 협박하려 했어요.",
+   "blank": "chantajear",
+   "src": "made"
+  }
+ ],
  "w|chaqueta": [
   {
    "text": "Ponte la chaqueta, hace frío afuera.",
@@ -12067,6 +12307,22 @@
    "en": "We chatted a while at the café.",
    "ko": "카페에서 잠깐 수다 떨었어.",
    "blank": "Charlamos"
+  }
+ ],
+ "w|chatarra": [
+  {
+   "text": "La vieja impresora de la redacción acabó en la chatarra, y Hugo no la echó de menos.",
+   "en": "The newsroom's old printer ended up as scrap, and Hugo didn't miss it.",
+   "ko": "편집국의 낡은 프린터는 고철이 됐고 우고는 아쉬워하지 않았어요.",
+   "blank": "chatarra",
+   "src": "made"
+  },
+  {
+   "text": "Para la escena del desguace, Paula llenó el plató de chatarra.",
+   "en": "For the junkyard scene, Paula filled the set with scrap metal.",
+   "ko": "폐차장 장면을 위해 파울라는 촬영장을 고철로 채웠어요.",
+   "blank": "chatarra",
+   "src": "made"
   }
  ],
  "w|chaval": [
@@ -13363,6 +13619,22 @@
    "blank": "cola"
   }
  ],
+ "w|colaborar": [
+  {
+   "text": "Hugo suele colaborar con una radio local los domingos.",
+   "en": "Hugo usually collaborates with a local radio station on Sundays.",
+   "ko": "우고는 일요일마다 지역 라디오와 함께 일해요.",
+   "blank": "colaborar",
+   "src": "made"
+  },
+  {
+   "text": "Paula invitó a varios vecinos del pueblo a colaborar como extras.",
+   "en": "Paula invited several villagers to take part as extras.",
+   "ko": "파울라는 마을 주민 여럿에게 엑스트라로 함께해 달라고 부탁했어요.",
+   "blank": "colaborar",
+   "src": "made"
+  }
+ ],
  "w|colapsar": [
   {
    "text": "Hugo casi llegó a colapsar en la última vuelta de la carrera.",
@@ -14104,6 +14376,22 @@
    "en": "Óscar wrote about an ice hockey competition.",
    "ko": "오스카는 아이스하키 대회 기사를 썼어요.",
    "blank": "competición",
+   "src": "made"
+  }
+ ],
+ "w|competidor": [
+  {
+   "text": "El periódico de Hugo publicó la noticia una hora antes que su competidor.",
+   "en": "Hugo's paper published the story an hour before its competitor.",
+   "ko": "우고의 신문은 경쟁지보다 한 시간 먼저 그 소식을 실었어요.",
+   "blank": "competidor",
+   "src": "made"
+  },
+  {
+   "text": "La película de Paula se estrenó el mismo día que la de un competidor.",
+   "en": "Paula's film premiered on the same day as a competitor's.",
+   "ko": "파울라의 영화는 경쟁작과 같은 날 개봉했어요.",
+   "blank": "competidor",
    "src": "made"
   }
  ],
@@ -16085,6 +16373,22 @@
    "blank": "contrato"
   }
  ],
+ "w|contribución": [
+  {
+   "text": "Raúl hizo una pequeña contribución para comprar libros nuevos.",
+   "en": "Raúl made a small contribution to buy new books.",
+   "ko": "라울은 새 책을 사는 데 조금 보탰어요.",
+   "blank": "contribución",
+   "src": "made"
+  },
+  {
+   "text": "Nuria pidió una contribución a los huéspedes para la cena benéfica.",
+   "en": "Nuria asked the guests for a contribution to the charity dinner.",
+   "ko": "누리아는 자선 만찬을 위해 손님들에게 기부를 부탁했어요.",
+   "blank": "contribución",
+   "src": "made"
+  }
+ ],
  "w|contribuir": [
   {
    "text": "Mateo quiere contribuir a que el barrio sea más seguro.",
@@ -16423,6 +16727,22 @@
    "en": "I'm going to copy the file to another folder.",
    "ko": "그 파일을 다른 폴더로 복사할 거야.",
    "blank": "copiar"
+  }
+ ],
+ "w|coquetear": [
+  {
+   "text": "Los compañeros bromeaban con que Hugo solía coquetear con la nueva fotógrafa.",
+   "en": "His coworkers joked that Hugo used to flirt with the new photographer.",
+   "ko": "동료들은 우고가 새로 온 사진기자에게 추파를 던진다고 놀렸어요.",
+   "blank": "coquetear",
+   "src": "made"
+  },
+  {
+   "text": "En la escena del bar, el personaje tenía que coquetear con la camarera.",
+   "en": "In the bar scene, the character had to flirt with the waitress.",
+   "ko": "술집 장면에서 그 인물은 웨이트리스에게 추파를 던져야 했어요.",
+   "blank": "coquetear",
+   "src": "made"
   }
  ],
  "w|coraje": [
@@ -18445,6 +18765,22 @@
    "blank": "cuyo"
   }
  ],
+ "w|dactilar": [
+  {
+   "text": "Para entrar en la sala de archivos, Raúl tuvo que dejar su huella dactilar.",
+   "en": "To enter the archive room, Raúl had to give his fingerprint.",
+   "ko": "라울은 기록 보관실에 들어가려고 지문을 찍어야 했어요.",
+   "blank": "dactilar",
+   "src": "made"
+  },
+  {
+   "text": "Las habitaciones del hotel de Nuria se abren con la huella dactilar.",
+   "en": "The rooms in Nuria's hotel open with a fingerprint.",
+   "ko": "누리아 호텔의 객실은 지문으로 열려요.",
+   "blank": "dactilar",
+   "src": "made"
+  }
+ ],
  "w|dado": [
   {
    "text": "Dado el retraso, salimos ya.",
@@ -18501,6 +18837,22 @@
    "en": "Be careful not to damage the new equipment.",
    "ko": "새 장비를 망가뜨리지 않게 조심해.",
    "blank": "dañar"
+  }
+ ],
+ "w|danés": [
+  {
+   "text": "Raúl tomó prestado un libro de diseño danés para decorar su piso.",
+   "en": "Raúl borrowed a book on Danish design to decorate his flat.",
+   "ko": "라울은 집을 꾸미려고 덴마크 디자인 책을 빌렸어요.",
+   "blank": "danés",
+   "src": "made"
+  },
+  {
+   "text": "Una pareja de turistas daneses le regaló a Nuria galletas de mantequilla.",
+   "en": "A Danish tourist couple gave Nuria some butter cookies.",
+   "ko": "덴마크 관광객 부부가 누리아에게 버터 쿠키를 선물했어요.",
+   "blank": "daneses",
+   "src": "made"
   }
  ],
  "w|daño": [
@@ -20583,6 +20935,22 @@
    "src": "made"
   }
  ],
+ "w|desprecio": [
+  {
+   "text": "En el ensayo que leyó Raúl, el autor hablaba con desprecio de la televisión.",
+   "en": "In the essay Raúl read, the author spoke with contempt about television.",
+   "ko": "라울이 읽은 수필에서 작가는 텔레비전을 경멸하듯 말했어요.",
+   "blank": "desprecio",
+   "src": "made"
+  },
+  {
+   "text": "Nuria nunca trata con desprecio a ningún cliente, aunque sea maleducado.",
+   "en": "Nuria never treats any guest with contempt, even if they're rude.",
+   "ko": "누리아는 무례한 손님이라도 절대 깔보지 않아요.",
+   "blank": "desprecio",
+   "src": "made"
+  }
+ ],
  "w|después": [
   {
    "text": "Después te llamo.",
@@ -20667,6 +21035,22 @@
    "en": "They prevented the destruction of the historic building.",
    "ko": "그들은 역사적 건물의 파괴를 막았어.",
    "blank": "destrucción"
+  }
+ ],
+ "w|destructor": [
+  {
+   "text": "Raúl leyó una historia naval sobre un destructor de la Segunda Guerra Mundial.",
+   "en": "Raúl read a naval history about a destroyer in the Second World War.",
+   "ko": "라울은 제이차 세계대전 구축함에 관한 해군사 책을 읽었어요.",
+   "blank": "destructor",
+   "src": "made"
+  },
+  {
+   "text": "Un oficial de marina que sirvió en un destructor se alojó en el hotel de Nuria.",
+   "en": "A naval officer who served on a destroyer stayed at Nuria's hotel.",
+   "ko": "구축함에서 복무한 해군 장교가 누리아의 호텔에 묵었어요.",
+   "blank": "destructor",
+   "src": "made"
   }
  ],
  "w|destruir": [
@@ -20839,6 +21223,22 @@
    "en": "He says he detests small lies.",
    "ko": "작은 거짓말도 혐오한다고 해.",
    "blank": "detestar"
+  }
+ ],
+ "w|detonador": [
+  {
+   "text": "En la película que Raúl sacó de la biblioteca, la policía desactiva un detonador en el último segundo.",
+   "en": "In the film Raúl borrowed from the library, the police defuse a detonator at the last second.",
+   "ko": "라울이 도서관에서 빌린 영화에서 경찰은 마지막 순간에 기폭 장치를 해제해요.",
+   "blank": "detonador",
+   "src": "made"
+  },
+  {
+   "text": "Nuria leyó en una novela de espías que el detonador estaba escondido en una maleta del hotel.",
+   "en": "Nuria read in a spy novel that the detonator was hidden in a hotel suitcase.",
+   "ko": "누리아가 읽은 첩보 소설에서는 기폭 장치가 호텔 여행 가방에 숨겨져 있었어요.",
+   "blank": "detonador",
+   "src": "made"
   }
  ],
  "w|detrás": [
@@ -21749,6 +22149,22 @@
    "blank": "dispuesto"
   }
  ],
+ "w|disputa": [
+  {
+   "text": "Hugo cubrió la disputa entre dos vecinos por un árbol que tapaba el sol.",
+   "en": "Hugo covered the dispute between two neighbors over a tree that blocked the sun.",
+   "ko": "우고는 햇빛을 가리는 나무 때문에 생긴 이웃 간 다툼을 취재했어요.",
+   "blank": "disputa",
+   "src": "made"
+  },
+  {
+   "text": "Hubo una disputa entre el director y Paula sobre la iluminación.",
+   "en": "There was a dispute between the director and Paula over the lighting.",
+   "ko": "조명 문제로 감독과 파울라 사이에 언쟁이 있었어요.",
+   "blank": "disputa",
+   "src": "made"
+  }
+ ],
  "w|distancia": [
   {
    "text": "Hay mucha distancia entre las dos ciudades.",
@@ -22095,6 +22511,22 @@
    "blank": "doctor"
   }
  ],
+ "w|documentación": [
+  {
+   "text": "Antes de publicar, Hugo revisó toda la documentación del caso.",
+   "en": "Before publishing, Hugo reviewed all the documentation on the case.",
+   "ko": "우고는 기사를 내기 전에 그 사건 서류를 모두 검토했어요.",
+   "blank": "documentación",
+   "src": "made"
+  },
+  {
+   "text": "Paula preparó la documentación para rodar en la calle sin problemas.",
+   "en": "Paula prepared the paperwork to shoot in the street without problems.",
+   "ko": "파울라는 거리 촬영을 문제없이 하려고 서류를 준비했어요.",
+   "blank": "documentación",
+   "src": "made"
+  }
+ ],
  "w|documental": [
   {
    "text": "Anoche Rosa vio un documental sobre los océanos.",
@@ -22194,6 +22626,22 @@
    "en": "The dog is a very loyal domestic animal.",
    "ko": "개는 아주 충직한 반려동물이에요.",
    "blank": "doméstico",
+   "src": "made"
+  }
+ ],
+ "w|domicilio": [
+  {
+   "text": "La redacción le pidió a Hugo la dirección de su domicilio para enviarle el portátil nuevo.",
+   "en": "The newsroom asked Hugo for his home address to send him the new laptop.",
+   "ko": "편집국은 새 노트북을 보내려고 우고에게 집 주소를 물었어요.",
+   "blank": "domicilio",
+   "src": "made"
+  },
+  {
+   "text": "Paula pidió a la productora que le enviaran el vestuario a domicilio.",
+   "en": "Paula asked the production company to send the costumes to her home.",
+   "ko": "파울라는 제작사에 의상을 집으로 보내 달라고 했어요.",
+   "blank": "domicilio",
    "src": "made"
   }
  ],
@@ -23065,6 +23513,22 @@
    "blank": "ejemplo"
   }
  ],
+ "w|ejercer": [
+  {
+   "text": "Hugo estudió Derecho, pero nunca llegó a ejercer como abogado.",
+   "en": "Hugo studied law, but he never practiced as a lawyer.",
+   "ko": "우고는 법학을 공부했지만 변호사로 일한 적은 없어요.",
+   "blank": "ejercer",
+   "src": "made"
+  },
+  {
+   "text": "Paula dejó de ejercer como abogada para trabajar en el cine.",
+   "en": "Paula stopped practicing as a lawyer to work in film.",
+   "ko": "파울라는 변호사 일을 그만두고 영화 일을 시작했어요.",
+   "blank": "ejercer",
+   "src": "made"
+  }
+ ],
  "w|ejercicio": [
   {
    "text": "Hago ejercicio cada mañana en el parque.",
@@ -23463,6 +23927,22 @@
    "en": "This is a real emergency.",
    "ko": "이건 진짜 응급 상황이야.",
    "blank": "emergencia"
+  }
+ ],
+ "w|emisión": [
+  {
+   "text": "Raúl buscó en el archivo la emisión de radio de un concierto antiguo.",
+   "en": "Raúl searched the archive for the radio broadcast of an old concert.",
+   "ko": "라울은 자료실에서 옛 음악회의 라디오 방송분을 찾았어요.",
+   "blank": "emisión",
+   "src": "made"
+  },
+  {
+   "text": "El hotel de Nuria redujo la emisión de gases cambiando las calderas.",
+   "en": "Nuria's hotel cut its gas emissions by replacing the boilers.",
+   "ko": "누리아의 호텔은 보일러를 바꿔 가스 배출을 줄였어요.",
+   "blank": "emisión",
+   "src": "made"
   }
  ],
  "w|emitir": [
@@ -25113,6 +25593,22 @@
    "blank": "escenario"
   }
  ],
+ "w|esclavitud": [
+  {
+   "text": "Raúl está escribiendo un trabajo sobre la abolición de la esclavitud.",
+   "en": "Raúl is writing a paper on the abolition of slavery.",
+   "ko": "라울은 노예제 폐지에 관한 보고서를 쓰고 있어요.",
+   "blank": "esclavitud",
+   "src": "made"
+  },
+  {
+   "text": "El hotel de Nuria ocupa un palacio construido, según la guía, en tiempos de la esclavitud.",
+   "en": "Nuria's hotel occupies a palace built, according to the guidebook, in the days of slavery.",
+   "ko": "안내서에 따르면 누리아의 호텔은 노예제 시절에 지어진 궁전에 있어요.",
+   "blank": "esclavitud",
+   "src": "made"
+  }
+ ],
  "w|esclavo": [
   {
    "text": "La novela cuenta la vida de un esclavo.",
@@ -26203,6 +26699,22 @@
    "blank": "estallar"
   }
  ],
+ "w|estancia": [
+  {
+   "text": "Raúl pidió una guía para planear su estancia en Lisboa.",
+   "en": "Raúl asked for a guidebook to plan his stay in Lisbon.",
+   "ko": "라울은 리스본 체류 계획을 세우려고 여행 안내서를 빌렸어요.",
+   "blank": "estancia",
+   "src": "made"
+  },
+  {
+   "text": "Nuria preguntó a la pareja si estaban disfrutando de su estancia.",
+   "en": "Nuria asked the couple if they were enjoying their stay.",
+   "ko": "누리아는 부부에게 숙박이 즐거운지 물었어요.",
+   "blank": "estancia",
+   "src": "made"
+  }
+ ],
  "w|estándar": [
   {
    "text": "El hotel ofrece un servicio estándar correcto.",
@@ -26694,6 +27206,22 @@
    "en": "In Marta's shop there's bread, milk, eggs, and so on.",
    "ko": "마르타의 가게에는 빵, 우유, 달걀 등이 있어요.",
    "blank": "etcétera",
+   "src": "made"
+  }
+ ],
+ "w|eternamente": [
+  {
+   "text": "A Raúl le pareció que la cola del préstamo duraría eternamente.",
+   "en": "To Raúl it seemed the line at the loans desk would last forever.",
+   "ko": "라울에게는 대출 줄이 영원히 끝나지 않을 것 같았어요.",
+   "blank": "eternamente",
+   "src": "made"
+  },
+  {
+   "text": "Nuria les dijo a los recién casados que recordarían el hotel eternamente.",
+   "en": "Nuria told the newlyweds they would remember the hotel forever.",
+   "ko": "누리아는 신혼부부에게 이 호텔을 영원히 기억할 거라고 말했어요.",
+   "blank": "eternamente",
    "src": "made"
   }
  ],
@@ -27663,6 +28191,22 @@
    "blank": "expulsar"
   }
  ],
+ "w|éxtasis": [
+  {
+   "text": "Raúl leyó con éxtasis el último capítulo de la novela.",
+   "en": "Raúl read the last chapter of the novel in ecstasy.",
+   "ko": "라울은 소설의 마지막 장을 황홀하게 읽었어요.",
+   "blank": "éxtasis",
+   "src": "made"
+  },
+  {
+   "text": "Un huésped salió de la piscina del hotel en pleno éxtasis por las vistas.",
+   "en": "A guest came out of the hotel pool in sheer ecstasy over the views.",
+   "ko": "한 손님이 전망에 홀딱 반해 호텔 수영장에서 나왔어요.",
+   "blank": "éxtasis",
+   "src": "made"
+  }
+ ],
  "w|extender": [
   {
    "text": "Quieren extender el plazo del examen.",
@@ -27863,6 +28407,22 @@
    "en": "We visited the factory during the tour.",
    "ko": "투어 중에 공장을 방문했어.",
    "blank": "fábrica"
+  }
+ ],
+ "w|fabricante": [
+  {
+   "text": "Hugo llamó al fabricante para confirmar el fallo de los frenos.",
+   "en": "Hugo called the manufacturer to confirm the brake fault.",
+   "ko": "우고는 제조사에 전화해 브레이크 결함을 확인했어요.",
+   "blank": "fabricante",
+   "src": "made"
+  },
+  {
+   "text": "El fabricante de las cámaras prestó a Paula un objetivo nuevo.",
+   "en": "The camera manufacturer lent Paula a new lens.",
+   "ko": "카메라 제조사가 파울라에게 새 렌즈를 빌려줬어요.",
+   "blank": "fabricante",
+   "src": "made"
   }
  ],
  "w|fabricar": [
@@ -28896,6 +29456,22 @@
    "en": "His friend Marcos doesn't eat raw meat, so Pablo cooked the steak well done.",
    "ko": "친구 마르코스가 날고기를 안 먹어서 파블로는 스테이크를 바싹 구웠어요.",
    "blank": "filete",
+   "src": "made"
+  }
+ ],
+ "w|filmación": [
+  {
+   "text": "Raúl vio en la videoteca la filmación de una antigua obra de teatro.",
+   "en": "Raúl watched in the video library the recording of an old play.",
+   "ko": "라울은 영상 자료실에서 옛 연극 녹화본을 봤어요.",
+   "blank": "filmación",
+   "src": "made"
+  },
+  {
+   "text": "El dueño pidió a Nuria la filmación de las cámaras del aparcamiento.",
+   "en": "The owner asked Nuria for the footage from the parking lot cameras.",
+   "ko": "주인은 누리아에게 주차장 카메라 영상을 요청했어요.",
+   "blank": "filmación",
    "src": "made"
   }
  ],
@@ -30667,6 +31243,22 @@
    "blank": "gasolina"
   }
  ],
+ "w|gasolinera": [
+  {
+   "text": "De camino a la biblioteca, Raúl paró en una gasolinera para comprar agua.",
+   "en": "On the way to the library, Raúl stopped at a gas station to buy water.",
+   "ko": "라울은 도서관 가는 길에 주유소에 들러 물을 샀어요.",
+   "blank": "gasolinera",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente preguntó a Nuria si había una gasolinera cerca del hotel.",
+   "en": "A guest asked Nuria if there was a gas station near the hotel.",
+   "ko": "한 손님이 누리아에게 호텔 근처에 주유소가 있는지 물었어요.",
+   "blank": "gasolinera",
+   "src": "made"
+  }
+ ],
  "w|gastar": [
   {
    "text": "No quiero gastar más de la cuenta.",
@@ -32243,6 +32835,22 @@
    "src": "made"
   }
  ],
+ "w|hackear": [
+  {
+   "text": "Alguien intentó hackear la cuenta del periódico, pero Hugo cambió la contraseña a tiempo.",
+   "en": "Someone tried to hack the newspaper's account, but Hugo changed the password in time.",
+   "ko": "누군가 신문사 계정을 해킹하려 했지만 우고가 제때 비밀번호를 바꿨어요.",
+   "blank": "hackear",
+   "src": "made"
+  },
+  {
+   "text": "En la película, un adolescente consigue hackear la red de un banco, y Paula cuidó cada pantalla.",
+   "en": "In the film, a teenager manages to hack a bank's network, and Paula took care over every screen.",
+   "ko": "영화에서 한 십 대가 은행 전산망을 해킹하는데, 파울라는 화면 하나하나에 신경 썼어요.",
+   "blank": "hackear",
+   "src": "made"
+  }
+ ],
  "w|hada": [
   {
    "text": "La niña cree en el hada del bosque.",
@@ -33577,6 +34185,22 @@
    "blank": "humilde"
   }
  ],
+ "w|humillación": [
+  {
+   "text": "Raúl recordaba la humillación de olvidar su discurso en el club de lectura.",
+   "en": "Raúl remembered the humiliation of forgetting his speech at the book club.",
+   "ko": "라울은 독서 모임에서 발표할 말을 잊었던 굴욕을 떠올렸어요.",
+   "blank": "humillación",
+   "src": "made"
+  },
+  {
+   "text": "El cliente sintió una gran humillación cuando su tarjeta fue rechazada delante de Nuria.",
+   "en": "The guest felt deeply humiliated when his card was declined in front of Nuria.",
+   "ko": "손님은 누리아 앞에서 카드가 거절되자 몹시 창피해했어요.",
+   "blank": "humillación",
+   "src": "made"
+  }
+ ],
  "w|humillar": [
   {
    "text": "No hace falta humillar a quien se equivoca.",
@@ -34213,6 +34837,22 @@
    "blank": "impresionó"
   }
  ],
+ "w|imprimir": [
+  {
+   "text": "Hugo todavía prefiere imprimir sus artículos para corregirlos con bolígrafo.",
+   "en": "Hugo still prefers to print his articles to correct them with a pen.",
+   "ko": "우고는 아직도 기사를 출력해서 펜으로 고치는 걸 좋아해요.",
+   "blank": "imprimir",
+   "src": "made"
+  },
+  {
+   "text": "Paula tuvo que imprimir el plan de rodaje para todo el equipo.",
+   "en": "Paula had to print the shooting schedule for the whole crew.",
+   "ko": "파울라는 촬영 일정표를 팀 전체 몫으로 출력해야 했어요.",
+   "blank": "imprimir",
+   "src": "made"
+  }
+ ],
  "w|improvisar": [
   {
    "text": "El guía faltó y Sergio tuvo que improvisar una visita para un grupo de niños.",
@@ -34581,6 +35221,22 @@
    "en": "The sign indicates the emergency exit.",
    "ko": "표지판이 비상구를 가리켜.",
    "blank": "indica"
+  }
+ ],
+ "w|índice": [
+  {
+   "text": "Raúl buscó el capítulo en el índice del libro.",
+   "en": "Raúl looked up the chapter in the book's index.",
+   "ko": "라울은 책 색인에서 그 장을 찾았어요.",
+   "blank": "índice",
+   "src": "made"
+  },
+  {
+   "text": "El índice de ocupación del hotel de Nuria sube mucho en verano.",
+   "en": "The occupancy rate at Nuria's hotel rises a lot in summer.",
+   "ko": "누리아 호텔의 객실 점유율은 여름에 크게 올라요.",
+   "blank": "índice",
+   "src": "made"
   }
  ],
  "w|indicio": [
@@ -35397,6 +36053,22 @@
    "blank": "insecto"
   }
  ],
+ "w|inseguro": [
+  {
+   "text": "Raúl se sentía inseguro antes de leer su poema en voz alta.",
+   "en": "Raúl felt insecure before reading his poem aloud.",
+   "ko": "라울은 시를 소리 내어 읽기 전에 자신이 없었어요.",
+   "blank": "inseguro",
+   "src": "made"
+  },
+  {
+   "text": "El primer día en recepción, Nuria se sentía insegura con el sistema de reservas.",
+   "en": "On her first day at reception, Nuria felt unsure with the booking system.",
+   "ko": "프런트 첫날 누리아는 예약 시스템이 서툴러 자신이 없었어요.",
+   "blank": "insegura",
+   "src": "made"
+  }
+ ],
  "w|insensible": [
   {
    "text": "Con tanto frío, Andrés tiene los dedos casi insensibles.",
@@ -35965,6 +36637,22 @@
    "blank": "internacional"
   }
  ],
+ "w|internado": [
+  {
+   "text": "Hugo pasó su adolescencia en un internado y allí empezó a escribir.",
+   "en": "Hugo spent his teenage years at a boarding school and started writing there.",
+   "ko": "우고는 십 대 시절을 기숙학교에서 보냈고 거기서 글을 쓰기 시작했어요.",
+   "blank": "internado",
+   "src": "made"
+  },
+  {
+   "text": "La película de Paula se rodó en un viejo internado de chicas.",
+   "en": "Paula's film was shot in an old girls' boarding school.",
+   "ko": "파울라의 영화는 오래된 여학교 기숙사에서 촬영됐어요.",
+   "blank": "internado",
+   "src": "made"
+  }
+ ],
  "w|internet": [
   {
    "text": "Se cayó el internet otra vez.",
@@ -36079,6 +36767,22 @@
    "en": "He interrupted me right when I was speaking.",
    "ko": "내가 말하는 바로 그때 끼어들었어.",
    "blank": "interrumpió"
+  }
+ ],
+ "w|interrupción": [
+  {
+   "text": "Raúl se quejó de la interrupción del wifi en la sala de estudio.",
+   "en": "Raúl complained about the wifi outage in the study room.",
+   "ko": "라울은 열람실 와이파이가 끊겼다고 불평했어요.",
+   "blank": "interrupción",
+   "src": "made"
+  },
+  {
+   "text": "La boda en el hotel siguió sin interrupción a pesar del apagón, gracias a Nuria.",
+   "en": "The wedding at the hotel went on without interruption despite the blackout, thanks to Nuria.",
+   "ko": "정전에도 누리아 덕분에 호텔 결혼식은 끊김 없이 이어졌어요.",
+   "blank": "interrupción",
+   "src": "made"
   }
  ],
  "w|interruptor": [
@@ -36321,6 +37025,22 @@
    "en": "The initial investment was quite high.",
    "ko": "초기 투자가 꽤 컸어.",
    "blank": "inversión"
+  }
+ ],
+ "w|inversor": [
+  {
+   "text": "Un inversor extranjero compró el periódico donde trabaja Hugo.",
+   "en": "A foreign investor bought the newspaper where Hugo works.",
+   "ko": "외국 투자자가 우고가 일하는 신문사를 사들였어요.",
+   "blank": "inversor",
+   "src": "made"
+  },
+  {
+   "text": "Un inversor visitó el plató para conocer a Paula y al director.",
+   "en": "An investor visited the set to meet Paula and the director.",
+   "ko": "투자자 한 명이 파울라와 감독을 만나러 촬영장에 왔어요.",
+   "blank": "inversor",
+   "src": "made"
   }
  ],
  "w|invertir": [
@@ -38601,6 +39321,22 @@
    "src": "made"
   }
  ],
+ "w|liderazgo": [
+  {
+   "text": "La directora del periódico tiene un liderazgo tranquilo que Hugo admira.",
+   "en": "The newspaper's editor has a calm leadership style that Hugo admires.",
+   "ko": "우고는 편집장의 차분한 리더십을 존경해요.",
+   "blank": "liderazgo",
+   "src": "made"
+  },
+  {
+   "text": "En el rodaje, todos notaron el liderazgo natural de Paula.",
+   "en": "On the shoot, everyone noticed Paula's natural leadership.",
+   "ko": "촬영장에서 모두가 파울라의 타고난 리더십을 알아봤어요.",
+   "blank": "liderazgo",
+   "src": "made"
+  }
+ ],
  "w|lidiar": [
   {
    "text": "Debo lidiar con ese problema hoy.",
@@ -40023,6 +40759,22 @@
    "en": "She reads a Japanese manga on the subway.",
    "ko": "지하철에서 일본 만화를 읽어.",
    "blank": "manga"
+  }
+ ],
+ "w|mango": [
+  {
+   "text": "Hugo se comió un mango mientras corregía la portada.",
+   "en": "Hugo ate a mango while he was correcting the front page.",
+   "ko": "우고는 1면을 교정하며 망고를 먹었어요.",
+   "blank": "mango",
+   "src": "made"
+  },
+  {
+   "text": "A Paula se le rompió el mango del paraguas que usaban en la escena de lluvia.",
+   "en": "The handle of the umbrella they used in the rain scene broke in Paula's hands.",
+   "ko": "비 장면에 쓰던 우산 손잡이가 파울라 손에서 부러졌어요.",
+   "blank": "mango",
+   "src": "made"
   }
  ],
  "w|maní": [
@@ -41533,6 +42285,22 @@
    "blank": "merced"
   }
  ],
+ "w|mercenario": [
+  {
+   "text": "Raúl leyó una novela histórica sobre un mercenario en la Edad Media.",
+   "en": "Raúl read a historical novel about a mercenary in the Middle Ages.",
+   "ko": "라울은 중세 용병에 관한 역사 소설을 읽었어요.",
+   "blank": "mercenario",
+   "src": "made"
+  },
+  {
+   "text": "En la película que se rodó en el hotel de Nuria, un mercenario se escondía en el ático.",
+   "en": "In the film shot at Nuria's hotel, a mercenary hid in the attic.",
+   "ko": "누리아의 호텔에서 찍은 영화에서는 용병이 다락방에 숨어 있었어요.",
+   "blank": "mercenario",
+   "src": "made"
+  }
+ ],
  "w|merecer": [
   {
    "text": "Mereces un descanso largo.",
@@ -42665,6 +43433,22 @@
    "blank": "montón"
   }
  ],
+ "w|monumento": [
+  {
+   "text": "El reportaje de Hugo trataba sobre la restauración de un monumento del centro.",
+   "en": "Hugo's report was about the restoration of a monument downtown.",
+   "ko": "우고의 기사는 시내 기념물 복원에 관한 것이었어요.",
+   "blank": "monumento",
+   "src": "made"
+  },
+  {
+   "text": "El equipo de Paula rodó la escena final delante de un monumento al amanecer.",
+   "en": "Paula's crew shot the final scene in front of a monument at dawn.",
+   "ko": "파울라의 촬영팀은 동틀 녘에 기념물 앞에서 마지막 장면을 찍었어요.",
+   "blank": "monumento",
+   "src": "made"
+  }
+ ],
  "w|moral": [
   {
    "text": "Esa decisión pone en duda su moral.",
@@ -42781,6 +43565,22 @@
    "en": "He caught the fly with a newspaper.",
    "ko": "신문으로 파리를 잡았어.",
    "blank": "mosca"
+  }
+ ],
+ "w|mostrador": [
+  {
+   "text": "Hugo dejó su acreditación en el mostrador de la entrada del periódico.",
+   "en": "Hugo left his press pass at the front desk of the newspaper.",
+   "ko": "우고는 신문사 입구 안내 데스크에 출입증을 맡겼어요.",
+   "blank": "mostrador",
+   "src": "made"
+  },
+  {
+   "text": "Paula dejó el guion en el mostrador del hotel donde se alojaba el actor.",
+   "en": "Paula left the script at the desk of the hotel where the actor was staying.",
+   "ko": "파울라는 배우가 묵는 호텔 프런트에 대본을 맡겼어요.",
+   "blank": "mostrador",
+   "src": "made"
   }
  ],
  "w|mostrar": [
@@ -43240,6 +44040,22 @@
    "en": "In the attic, Paula found an old box of her grandfather's ammunition and called the police.",
    "ko": "파울라는 다락에서 할아버지의 오래된 탄약 상자를 찾아 경찰에 연락했어요.",
    "blank": "munición",
+   "src": "made"
+  }
+ ],
+ "w|municipal": [
+  {
+   "text": "La biblioteca municipal donde estudia Raúl abre hasta las diez.",
+   "en": "The municipal library where Raúl studies is open until ten.",
+   "ko": "라울이 공부하는 시립 도서관은 열 시까지 열어요.",
+   "blank": "municipal",
+   "src": "made"
+  },
+  {
+   "text": "Un inspector municipal revisó la cocina del hotel de Nuria.",
+   "en": "A municipal inspector checked the kitchen of Nuria's hotel.",
+   "ko": "시청 감독관이 누리아 호텔의 주방을 점검했어요.",
+   "blank": "municipal",
    "src": "made"
   }
  ],
@@ -45763,6 +46579,22 @@
    "blank": "oportunidad"
   }
  ],
+ "w|oportuno": [
+  {
+   "text": "La bibliotecaria hizo un comentario muy oportuno sobre el autor y Raúl tomó nota.",
+   "en": "The librarian made a very timely remark about the author and Raúl took note.",
+   "ko": "사서가 작가에 대해 아주 적절한 말을 해서 라울이 받아 적었어요.",
+   "blank": "oportuno",
+   "src": "made"
+  },
+  {
+   "text": "El aviso de lluvia llegó en el momento oportuno y Nuria repartió chubasqueros.",
+   "en": "The rain warning came at just the right moment and Nuria handed out raincoats.",
+   "ko": "비 예보가 딱 맞춰 와서 누리아가 비옷을 나눠 줬어요.",
+   "blank": "oportuno",
+   "src": "made"
+  }
+ ],
  "w|oposición": [
   {
    "text": "Sergio entrevistó al líder de la oposición sobre el nuevo presupuesto.",
@@ -46233,6 +47065,22 @@
    "en": "The bear hibernates during winter.",
    "ko": "곰은 겨울 동안 동면을 해.",
    "blank": "oso"
+  }
+ ],
+ "w|ostra": [
+  {
+   "text": "Hugo escribió una crónica sobre un restaurante famoso por la ostra gratinada.",
+   "en": "Hugo wrote a piece about a restaurant famous for its gratinated oyster.",
+   "ko": "우고는 오븐에 구운 굴 요리로 유명한 식당에 관한 글을 썼어요.",
+   "blank": "ostra",
+   "src": "made"
+  },
+  {
+   "text": "El actor tuvo que comerse una ostra cruda en cada toma, y Paula le trajo agua.",
+   "en": "The actor had to eat a raw oyster in every take, and Paula brought him water.",
+   "ko": "배우가 테이크마다 생굴을 먹어야 해서 파울라가 물을 갖다 줬어요.",
+   "blank": "ostra",
+   "src": "made"
   }
  ],
  "w|otoño": [
@@ -46925,6 +47773,22 @@
    "blank": "parada"
   }
  ],
+ "w|paradero": [
+  {
+   "text": "Raúl le preguntó a la bibliotecaria por el paradero de un libro que nadie encontraba.",
+   "en": "Raúl asked the librarian about the whereabouts of a book nobody could find.",
+   "ko": "라울은 사서에게 아무도 못 찾는 책의 행방을 물었어요.",
+   "blank": "paradero",
+   "src": "made"
+  },
+  {
+   "text": "Nuria explicó a un huésped dónde estaba el paradero del autobús al aeropuerto.",
+   "en": "Nuria explained to a guest where the airport bus stop was.",
+   "ko": "누리아는 손님에게 공항버스 정류장이 어디 있는지 알려 줬어요.",
+   "blank": "paradero",
+   "src": "made"
+  }
+ ],
  "w|parado": [
   {
    "text": "Estuve parado en la esquina mucho rato.",
@@ -46937,6 +47801,22 @@
    "en": "The bus has stopped again.",
    "ko": "버스가 또 멈췄어.",
    "blank": "parado"
+  }
+ ],
+ "w|paraguas": [
+  {
+   "text": "Raúl dejó el paraguas mojado en la entrada de la biblioteca.",
+   "en": "Raúl left his wet umbrella at the library entrance.",
+   "ko": "라울은 젖은 우산을 도서관 입구에 두었어요.",
+   "blank": "paraguas",
+   "src": "made"
+  },
+  {
+   "text": "Nuria tiene un paraguas de recepción para prestar a los huéspedes.",
+   "en": "Nuria keeps a reception umbrella to lend to guests.",
+   "ko": "누리아는 손님들에게 빌려줄 우산을 프런트에 두고 있어요.",
+   "blank": "paraguas",
+   "src": "made"
   }
  ],
  "w|paraíso": [
@@ -47687,6 +48567,22 @@
    "blank": "patria"
   }
  ],
+ "w|patriota": [
+  {
+   "text": "Raúl leyó la biografía de un patriota que luchó por la independencia.",
+   "en": "Raúl read the biography of a patriot who fought for independence.",
+   "ko": "라울은 독립을 위해 싸운 애국자의 전기를 읽었어요.",
+   "blank": "patriota",
+   "src": "made"
+  },
+  {
+   "text": "Un huésped muy patriota pidió a Nuria una bandera para su balcón.",
+   "en": "A very patriotic guest asked Nuria for a flag for his balcony.",
+   "ko": "애국심이 강한 손님이 누리아에게 발코니에 걸 국기를 부탁했어요.",
+   "blank": "patriota",
+   "src": "made"
+  }
+ ],
  "w|patrón": [
   {
    "text": "Mi patrón quiere una reunión mañana.",
@@ -48197,6 +49093,22 @@
    "en": "My grandmother receives a modest pension.",
    "ko": "할머니는 소박한 연금을 받아.",
    "blank": "pensión"
+  }
+ ],
+ "w|peón": [
+  {
+   "text": "Hugo entrevistó a un peón de la construcción sobre las condiciones de trabajo.",
+   "en": "Hugo interviewed a construction laborer about working conditions.",
+   "ko": "우고는 건설 현장 인부를 만나 근무 환경에 대해 인터뷰했어요.",
+   "blank": "peón",
+   "src": "made"
+  },
+  {
+   "text": "En la película, el abuelo de la protagonista trabajó de peón en el campo.",
+   "en": "In the film, the heroine's grandfather worked as a farmhand.",
+   "ko": "영화에서 주인공의 할아버지는 시골에서 날품팔이 일꾼으로 일했어요.",
+   "blank": "peón",
+   "src": "made"
   }
  ],
  "w|peor": [
@@ -49309,6 +50221,22 @@
    "blank": "pintura"
   }
  ],
+ "w|pinza": [
+  {
+   "text": "Hugo sujetó las fotos del reportaje con una pinza de madera.",
+   "en": "Hugo held the report's photos together with a wooden clip.",
+   "ko": "우고는 나무 집게로 기사 사진들을 집어 두었어요.",
+   "blank": "pinza",
+   "src": "made"
+  },
+  {
+   "text": "Paula usó una pinza para sujetar la cortina delante del foco.",
+   "en": "Paula used a clip to hold the curtain in front of the spotlight.",
+   "ko": "파울라는 조명 앞 커튼을 집게로 고정했어요.",
+   "blank": "pinza",
+   "src": "made"
+  }
+ ],
  "w|pipa": [
   {
    "text": "El abuelo de Diego fuma en pipa en la terraza todas las tardes.",
@@ -49623,6 +50551,22 @@
    "en": "They launched a digital platform for artists.",
    "ko": "예술가용 디지털 플랫폼을 출시했어.",
    "blank": "plataforma"
+  }
+ ],
+ "w|plátano": [
+  {
+   "text": "Hugo siempre tiene un plátano en el cajón para las noches de cierre.",
+   "en": "Hugo always keeps a banana in his drawer for late closing nights.",
+   "ko": "우고는 마감하는 밤을 위해 서랍에 늘 바나나를 넣어 둬요.",
+   "blank": "plátano",
+   "src": "made"
+  },
+  {
+   "text": "En el descanso, Paula repartió un plátano a cada actor.",
+   "en": "During the break, Paula handed out a banana to each actor.",
+   "ko": "쉬는 시간에 파울라는 배우마다 바나나를 하나씩 나눠 줬어요.",
+   "blank": "plátano",
+   "src": "made"
   }
  ],
  "w|plato": [
@@ -50917,6 +51861,22 @@
    "blank": "presentimiento"
   }
  ],
+ "w|presidencial": [
+  {
+   "text": "Raúl encontró una biografía sobre la última campaña presidencial del país.",
+   "en": "Raúl found a biography about the country's last presidential campaign.",
+   "ko": "라울은 그 나라의 지난 대선 운동을 다룬 전기를 찾았어요.",
+   "blank": "presidencial",
+   "src": "made"
+  },
+  {
+   "text": "El mejor cuarto del hotel de Nuria es la suite presidencial.",
+   "en": "The best room in Nuria's hotel is the presidential suite.",
+   "ko": "누리아가 일하는 호텔에서 가장 좋은 방은 프레지덴셜 스위트예요.",
+   "blank": "presidencial",
+   "src": "made"
+  }
+ ],
  "w|presidente": [
   {
    "text": "El presidente dio un discurso.",
@@ -51821,6 +52781,22 @@
    "src": "made"
   }
  ],
+ "w|propaganda": [
+  {
+   "text": "Raúl estudió carteles de propaganda de la guerra para su tesis.",
+   "en": "Raúl studied wartime propaganda posters for his thesis.",
+   "ko": "라울은 논문을 쓰려고 전쟁 선전 포스터를 연구했어요.",
+   "blank": "propaganda",
+   "src": "made"
+  },
+  {
+   "text": "Nuria tiró a la basura la propaganda que dejaron en la puerta del hotel.",
+   "en": "Nuria threw away the flyers left at the hotel door.",
+   "ko": "누리아는 호텔 문 앞에 놓인 광고 전단지를 버렸어요.",
+   "blank": "propaganda",
+   "src": "made"
+  }
+ ],
  "w|propiedad": [
   {
    "text": "Esta casa es propiedad de mi tío.",
@@ -51961,6 +52937,22 @@
    "en": "They accused the prostitute without clear evidence.",
    "ko": "분명한 증거도 없이 그 매춘부를 고발했어.",
    "blank": "prostituta"
+  }
+ ],
+ "w|protagonista": [
+  {
+   "text": "A Raúl le encanta la protagonista de la novela que está leyendo.",
+   "en": "Raúl loves the heroine of the novel he's reading.",
+   "ko": "라울은 지금 읽는 소설의 여주인공을 아주 좋아해요.",
+   "blank": "protagonista",
+   "src": "made"
+  },
+  {
+   "text": "La protagonista de una serie famosa se alojó en el hotel de Nuria.",
+   "en": "The lead actress of a famous series stayed at Nuria's hotel.",
+   "ko": "유명 드라마의 여주인공이 누리아의 호텔에 묵었어요.",
+   "blank": "protagonista",
+   "src": "made"
   }
  ],
  "w|protección": [
@@ -52167,6 +53159,22 @@
    "en": "The next train is leaving now.",
    "ko": "다음 열차가 곧 떠나.",
    "blank": "próximo"
+  }
+ ],
+ "w|proyectar": [
+  {
+   "text": "En la reunión, Hugo pidió proyectar los gráficos en la pantalla grande.",
+   "en": "In the meeting, Hugo asked to project the charts on the big screen.",
+   "ko": "회의에서 우고는 큰 화면에 그래프를 띄워 달라고 했어요.",
+   "blank": "proyectar",
+   "src": "made"
+  },
+  {
+   "text": "Al final del día, Paula suele proyectar las tomas buenas para el equipo.",
+   "en": "At the end of the day, Paula usually screens the good takes for the crew.",
+   "ko": "파울라는 하루 촬영이 끝나면 잘 나온 장면을 팀에게 틀어 줘요.",
+   "blank": "proyectar",
+   "src": "made"
   }
  ],
  "w|proyecto": [
@@ -52853,6 +53861,22 @@
    "en": "I bought fresh cheese at the market.",
    "ko": "시장에서 신선한 치즈를 샀어.",
    "blank": "queso"
+  }
+ ],
+ "w|quiebra": [
+  {
+   "text": "Hugo dio la noticia de la quiebra de la fábrica de muebles.",
+   "en": "Hugo broke the news of the furniture factory's bankruptcy.",
+   "ko": "우고는 가구 공장 파산 소식을 보도했어요.",
+   "blank": "quiebra",
+   "src": "made"
+  },
+  {
+   "text": "La quiebra de la productora anterior casi dejó a Paula sin película.",
+   "en": "The bankruptcy of the previous production company almost left Paula without a film.",
+   "ko": "이전 제작사가 파산하는 바람에 파울라는 영화를 못 찍을 뻔했어요.",
+   "blank": "quiebra",
+   "src": "made"
   }
  ],
  "w|quien": [
@@ -54145,6 +55169,22 @@
    "blank": "reemplazar"
   }
  ],
+ "w|reemplazo": [
+  {
+   "text": "Mientras Hugo esté de vacaciones, su compañera hará de reemplazo en la sección.",
+   "en": "While Hugo is on holiday, his coworker will fill in for him in the section.",
+   "ko": "우고가 휴가를 가 있는 동안 동료가 그 부서에서 대신 일할 거예요.",
+   "blank": "reemplazo",
+   "src": "made"
+  },
+  {
+   "text": "Cuando el actor se enfermó, Paula buscó un reemplazo en un solo día.",
+   "en": "When the actor got sick, Paula found a replacement in a single day.",
+   "ko": "배우가 아프자 파울라는 하루 만에 대역을 구했어요.",
+   "blank": "reemplazo",
+   "src": "made"
+  }
+ ],
  "w|referencia": [
   {
    "text": "Incluyó una referencia en su ensayo.",
@@ -54611,6 +55651,22 @@
    "en": "This music helps relax the mind.",
    "ko": "이 음악은 마음을 편하게 해 줘.",
    "blank": "relajar"
+  }
+ ],
+ "w|relato": [
+  {
+   "text": "Raúl ganó el concurso de la biblioteca con un relato sobre su abuela.",
+   "en": "Raúl won the library's contest with a short story about his grandmother.",
+   "ko": "라울은 할머니에 관한 단편으로 도서관 공모전에서 상을 탔어요.",
+   "blank": "relato",
+   "src": "made"
+  },
+  {
+   "text": "Un escritor le dejó a Nuria un relato dedicado al hotel.",
+   "en": "A writer left Nuria a short story dedicated to the hotel.",
+   "ko": "한 작가가 호텔에 바치는 단편 소설을 누리아에게 남겼어요.",
+   "blank": "relato",
+   "src": "made"
   }
  ],
  "w|relevante": [
@@ -55379,6 +56435,22 @@
    "en": "He solved the problem in a minute.",
    "ko": "일 분 만에 문제를 풀었어.",
    "blank": "Resolvió"
+  }
+ ],
+ "w|respaldo": [
+  {
+   "text": "Hugo contó con el respaldo de la directora para publicar la investigación.",
+   "en": "Hugo had the editor's backing to publish the investigation.",
+   "ko": "우고는 편집장의 지지를 받아 탐사 기사를 실었어요.",
+   "blank": "respaldo",
+   "src": "made"
+  },
+  {
+   "text": "Paula guarda una copia de respaldo de todas las grabaciones.",
+   "en": "Paula keeps a backup copy of all the footage.",
+   "ko": "파울라는 촬영본을 모두 백업해 둬요.",
+   "blank": "respaldo",
+   "src": "made"
   }
  ],
  "w|respecto": [
@@ -56331,6 +57403,22 @@
    "blank": "rock"
   }
  ],
+ "w|rodaje": [
+  {
+   "text": "La biblioteca cerró una sala por el rodaje de un anuncio, y Raúl tuvo que cambiarse de sitio.",
+   "en": "The library closed a room for the shooting of an ad, and Raúl had to move.",
+   "ko": "광고 촬영 때문에 도서관이 열람실 하나를 닫아서 라울은 자리를 옮겨야 했어요.",
+   "blank": "rodaje",
+   "src": "made"
+  },
+  {
+   "text": "Durante el rodaje de una película, el equipo ocupó medio hotel de Nuria.",
+   "en": "During a film shoot, the crew took up half of Nuria's hotel.",
+   "ko": "영화 촬영 동안 촬영팀이 누리아 호텔의 절반을 차지했어요.",
+   "blank": "rodaje",
+   "src": "made"
+  }
+ ],
  "w|rodar": [
   {
    "text": "La pelota empezó a rodar cuesta abajo.",
@@ -57099,6 +58187,22 @@
    "blank": "Sal"
   }
  ],
+ "w|salmón": [
+  {
+   "text": "Raúl buscó un libro de cocina para preparar salmón al horno.",
+   "en": "Raúl looked for a cookbook to make baked salmon.",
+   "ko": "라울은 연어 오븐구이를 만들려고 요리책을 찾았어요.",
+   "blank": "salmón",
+   "src": "made"
+  },
+  {
+   "text": "En el bufé del hotel, Nuria probó el salmón ahumado.",
+   "en": "At the hotel buffet, Nuria tried the smoked salmon.",
+   "ko": "누리아는 호텔 뷔페에서 훈제 연어를 먹어 봤어요.",
+   "blank": "salmón",
+   "src": "made"
+  }
+ ],
  "w|salón": [
   {
    "text": "La fiesta será en el salón grande.",
@@ -57715,6 +58819,22 @@
    "blank": "seda"
   }
  ],
+ "w|sede": [
+  {
+   "text": "La sede del periódico de Hugo está en un edificio antiguo del centro.",
+   "en": "Hugo's newspaper headquarters is in an old building downtown.",
+   "ko": "우고가 일하는 신문사 본사는 시내 오래된 건물에 있어요.",
+   "blank": "sede",
+   "src": "made"
+  },
+  {
+   "text": "La productora de Paula tiene su sede en un antiguo almacén.",
+   "en": "Paula's production company has its headquarters in an old warehouse.",
+   "ko": "파울라의 제작사는 옛 창고에 본사를 두고 있어요.",
+   "blank": "sede",
+   "src": "made"
+  }
+ ],
  "w|seducir": [
   {
    "text": "En la telenovela, un médico intenta seducir a una enfermera.",
@@ -58021,6 +59141,22 @@
    "en": "That idea was the seed of the project.",
    "ko": "그 아이디어가 프로젝트의 씨앗이었어.",
    "blank": "semilla"
+  }
+ ],
+ "w|seminario": [
+  {
+   "text": "Hugo asistió a un seminario sobre periodismo de datos.",
+   "en": "Hugo attended a seminar on data journalism.",
+   "ko": "우고는 데이터 저널리즘 세미나에 참석했어요.",
+   "blank": "seminario",
+   "src": "made"
+  },
+  {
+   "text": "Paula conoció al director en un seminario de cine documental.",
+   "en": "Paula met the director at a documentary film seminar.",
+   "ko": "파울라는 다큐멘터리 영화 세미나에서 감독을 만났어요.",
+   "blank": "seminario",
+   "src": "made"
   }
  ],
  "w|senado": [
@@ -60749,6 +61885,22 @@
    "blank": "superficie"
   }
  ],
+ "w|superhéroe": [
+  {
+   "text": "El sobrino de Raúl solo quiere cómics de algún superhéroe.",
+   "en": "Raúl's nephew only wants comics about some superhero.",
+   "ko": "라울의 조카는 슈퍼히어로 만화만 보고 싶어 해요.",
+   "blank": "superhéroe",
+   "src": "made"
+  },
+  {
+   "text": "Un niño se paseó por el vestíbulo vestido de superhéroe y Nuria le dio un caramelo.",
+   "en": "A boy walked around the lobby dressed as a superhero and Nuria gave him a sweet.",
+   "ko": "슈퍼히어로 옷을 입은 아이가 로비를 돌아다니자 누리아가 사탕을 줬어요.",
+   "blank": "superhéroe",
+   "src": "made"
+  }
+ ],
  "w|superior": [
   {
    "text": "Vive en el piso superior del edificio.",
@@ -61529,6 +62681,22 @@
    "blank": "taxi"
   }
  ],
+ "w|taxista": [
+  {
+   "text": "Para un artículo sobre el tráfico, Hugo entrevistó a un taxista con treinta años de oficio.",
+   "en": "For an article on traffic, Hugo interviewed a taxi driver who had been in the job for thirty years.",
+   "ko": "우고는 교통 기사를 쓰려고 삼십 년 경력의 택시 기사를 인터뷰했어요.",
+   "blank": "taxista",
+   "src": "made"
+  },
+  {
+   "text": "En la película de Paula, el protagonista es un taxista que trabaja de noche.",
+   "en": "In Paula's film, the main character is a taxi driver who works nights.",
+   "ko": "파울라의 영화 주인공은 밤에 일하는 택시 기사예요.",
+   "blank": "taxista",
+   "src": "made"
+  }
+ ],
  "w|taza": [
   {
    "text": "Me preparó una taza de té caliente.",
@@ -61937,6 +63105,22 @@
    "en": "I'm going to hang the laundry on the balcony.",
    "ko": "발코니에 빨래를 널 거야.",
    "blank": "tender"
+  }
+ ],
+ "w|tenedor": [
+  {
+   "text": "Hugo comía ensalada con un tenedor de plástico delante del ordenador.",
+   "en": "Hugo was eating salad with a plastic fork in front of the computer.",
+   "ko": "우고는 컴퓨터 앞에서 플라스틱 포크로 샐러드를 먹었어요.",
+   "blank": "tenedor",
+   "src": "made"
+  },
+  {
+   "text": "En la escena del banquete, Paula colocó cada tenedor en su sitio.",
+   "en": "In the banquet scene, Paula put each fork in its place.",
+   "ko": "연회 장면에서 파울라는 포크를 하나하나 제자리에 놓았어요.",
+   "blank": "tenedor",
+   "src": "made"
   }
  ],
  "w|tener": [
@@ -63555,6 +64739,22 @@
    "src": "made"
   }
  ],
+ "w|tranquilamente": [
+  {
+   "text": "Los domingos, Raúl lee tranquilamente en la sala de prensa.",
+   "en": "On Sundays, Raúl reads quietly in the newspaper room.",
+   "ko": "라울은 일요일마다 신문 열람실에서 느긋하게 책을 읽어요.",
+   "blank": "tranquilamente",
+   "src": "made"
+  },
+  {
+   "text": "Nuria desayuna tranquilamente antes de que lleguen los huéspedes al comedor.",
+   "en": "Nuria eats breakfast calmly before the guests come to the dining room.",
+   "ko": "누리아는 손님들이 식당에 오기 전에 여유롭게 아침을 먹어요.",
+   "blank": "tranquilamente",
+   "src": "made"
+  }
+ ],
  "w|tranquilidad": [
   {
    "text": "Lo que más necesitaba Lucía era tranquilidad.",
@@ -63597,6 +64797,22 @@
    "en": "The park is very quiet now.",
    "ko": "공원이 지금 아주 조용해.",
    "blank": "tranquilo"
+  }
+ ],
+ "w|transacción": [
+  {
+   "text": "Hugo investigó una transacción sospechosa entre dos empresas.",
+   "en": "Hugo investigated a suspicious transaction between two companies.",
+   "ko": "우고는 두 회사 사이의 수상한 거래를 조사했어요.",
+   "blank": "transacción",
+   "src": "made"
+  },
+  {
+   "text": "El banco tardó en aprobar la transacción y Paula no pudo pagar el alquiler del equipo.",
+   "en": "The bank was slow to approve the transaction and Paula couldn't pay for the equipment rental.",
+   "ko": "은행이 거래 승인을 늦게 해서 파울라는 장비 대여료를 내지 못했어요.",
+   "blank": "transacción",
+   "src": "made"
   }
  ],
  "w|transferencia": [
@@ -63887,6 +65103,22 @@
    "src": "made"
   }
  ],
+ "w|tregua": [
+  {
+   "text": "Raúl leyó un libro de historia sobre la tregua de Navidad en la Primera Guerra Mundial.",
+   "en": "Raúl read a history book about the Christmas truce in the First World War.",
+   "ko": "라울은 제일차 세계대전의 크리스마스 휴전에 관한 역사책을 읽었어요.",
+   "blank": "tregua",
+   "src": "made"
+  },
+  {
+   "text": "Después de discutir toda la mañana, los dos huéspedes y Nuria firmaron una tregua con un café.",
+   "en": "After arguing all morning, the two guests and Nuria made a truce over coffee.",
+   "ko": "오전 내내 다툰 뒤 두 손님과 누리아는 커피 한 잔으로 휴전했어요.",
+   "blank": "tregua",
+   "src": "made"
+  }
+ ],
  "w|treinta": [
   {
    "text": "Cumple treinta años el mes que viene.",
@@ -63941,6 +65173,22 @@
    "en": "Give me three, please.",
    "ko": "세 개만 줘.",
    "blank": "tres"
+  }
+ ],
+ "w|triángulo": [
+  {
+   "text": "Raúl ayudó a su hija a calcular el área de un triángulo en la biblioteca.",
+   "en": "Raúl helped his daughter work out the area of a triangle at the library.",
+   "ko": "라울은 도서관에서 딸이 삼각형 넓이 구하는 걸 도와줬어요.",
+   "blank": "triángulo",
+   "src": "made"
+  },
+  {
+   "text": "El jardín del hotel de Nuria tiene una fuente en forma de triángulo.",
+   "en": "The garden of Nuria's hotel has a triangle-shaped fountain.",
+   "ko": "누리아 호텔 정원에는 삼각형 모양의 분수가 있어요.",
+   "blank": "triángulo",
+   "src": "made"
   }
  ],
  "w|tribal": [
@@ -65068,6 +66316,22 @@
    "en": "You should value the effort, not just the grade.",
    "ko": "점수만이 아니라 노력도 인정해야 해요.",
    "blank": "valorar",
+   "src": "made"
+  }
+ ],
+ "w|válvula": [
+  {
+   "text": "El conserje de la biblioteca cerró la válvula del agua cuando goteó una tubería.",
+   "en": "The library caretaker shut off the water valve when a pipe dripped.",
+   "ko": "파이프에서 물이 새자 도서관 관리인이 수도 밸브를 잠갔어요.",
+   "blank": "válvula",
+   "src": "made"
+  },
+  {
+   "text": "El técnico del hotel cambió la válvula de la calefacción de la habitación de Nuria.",
+   "en": "The hotel technician replaced the heating valve in Nuria's room.",
+   "ko": "호텔 기술자가 누리아 방의 난방 밸브를 갈았어요.",
+   "blank": "válvula",
    "src": "made"
   }
  ],
@@ -67040,6 +68304,22 @@
    "en": "Inspector Carmen's former partner lies in that cemetery.",
    "ko": "그 묘지에 카르멘 경감의 옛 동료가 잠들어 있어요.",
    "blank": "yace",
+   "src": "made"
+  }
+ ],
+ "w|yarda": [
+  {
+   "text": "En el libro de fútbol americano que leyó Raúl, cada yarda cuenta.",
+   "en": "In the American football book Raúl read, every yard counts.",
+   "ko": "라울이 읽은 미식축구 책에서는 한 야드 한 야드가 중요해요.",
+   "blank": "yarda",
+   "src": "made"
+  },
+  {
+   "text": "Un turista le dijo a Nuria que la playa estaba a cien yardas, y ella tuvo que pensarlo.",
+   "en": "A tourist told Nuria the beach was a hundred yards away, and she had to think about it.",
+   "ko": "한 관광객이 해변이 백 야드 거리라고 해서 누리아는 잠시 생각해야 했어요.",
+   "blank": "yardas",
    "src": "made"
   }
  ],
