@@ -2131,6 +2131,22 @@
    "blank": "bật"
   }
  ],
+ "w|bất an": [
+  {
+   "text": "Không thấy tên mình trong danh sách họp, Đức bắt đầu thấy bất an.",
+   "en": "Not seeing his name on the meeting list, Đức began to feel uneasy.",
+   "ko": "회의 명단에 자기 이름이 없자 득은 불안해지기 시작했어요.",
+   "blank": "bất an",
+   "src": "made"
+  },
+  {
+   "text": "Trời sập tối mà chưa tìm được chỗ ngủ, Trang thấy bất an.",
+   "en": "Night was falling and there was still no place to sleep, so Trang felt uneasy.",
+   "ko": "날이 저무는데 잘 곳을 못 찾아서 짱은 불안했어요.",
+   "blank": "bất an",
+   "src": "made"
+  }
+ ],
  "w|bất bình đẳng": [
   {
    "text": "Đức nói sự bất bình đẳng giữa thành thị và nông thôn thể hiện cả ở việc chăm sóc vật nuôi.",
@@ -2249,6 +2265,22 @@
    "en": "They were arrested for disturbing the peace.",
    "ko": "그들은 질서 문란으로 체포됐어.",
    "blank": "bắt giữ"
+  }
+ ],
+ "w|bất hạnh": [
+  {
+   "text": "Bác bảo vệ kể cho Đức nghe về tuổi thơ bất hạnh của mình bên bờ sông.",
+   "en": "The security guard told Đức about his unhappy childhood by the river.",
+   "ko": "경비 아저씨가 득에게 강가에서 보낸 불행한 어린 시절 이야기를 해 줬어요.",
+   "blank": "bất hạnh",
+   "src": "made"
+  },
+  {
+   "text": "Bà cụ bán nước kể cho Trang về cuộc đời bất hạnh mà vẫn luôn mỉm cười.",
+   "en": "The old woman selling drinks told Trang about her unhappy life, yet she kept smiling.",
+   "ko": "음료 파는 할머니는 짱에게 불행했던 삶을 이야기하면서도 계속 웃으셨어요.",
+   "blank": "bất hạnh",
+   "src": "made"
   }
  ],
  "w|bất hợp pháp": [
@@ -2601,6 +2633,22 @@
    "ko": "늘 네 곁에 있을게.",
    "blank": "bên cạnh",
    "src": "tatoeba:8839487/dotheduyet1999 en:2263318/Hybrid"
+  }
+ ],
+ "w|bên cạnh đó": [
+  {
+   "text": "Đức sẽ lo mảng khách hàng mới, bên cạnh đó còn phải học phần mềm quản lý.",
+   "en": "Đức will handle new clients, and on top of that he has to learn the management software.",
+   "ko": "득은 신규 고객을 맡게 되고, 게다가 관리 프로그램도 배워야 해요.",
+   "blank": "bên cạnh đó",
+   "src": "made"
+  },
+  {
+   "text": "Trang chọn đi đường ven biển vì cảnh đẹp, bên cạnh đó lại ít xe tải.",
+   "en": "Trang chose the coastal road for the scenery, and besides, there are fewer trucks.",
+   "ko": "짱은 경치 때문에 해안 도로를 골랐고, 게다가 트럭도 적었어요.",
+   "blank": "bên cạnh đó",
+   "src": "made"
   }
  ],
  "w|bên ngoài": [
@@ -3825,6 +3873,22 @@
    "en": "Look at the kids playing out in the yard.",
    "ko": "마당에서 노는 애들 좀 봐.",
    "blank": "bọn"
+  }
+ ],
+ "w|bồn chồn": [
+  {
+   "text": "Ngồi chờ gặp giám đốc, Đức bồn chồn gõ ngón tay xuống mặt bàn.",
+   "en": "Waiting to meet the director, Đức nervously tapped his fingers on the table.",
+   "ko": "사장님을 기다리며 득은 초조하게 손가락으로 책상을 두드렸어요.",
+   "blank": "bồn chồn",
+   "src": "made"
+  },
+  {
+   "text": "Kim xăng gần chạm vạch đỏ khiến Trang bồn chồn không yên.",
+   "en": "The fuel needle nearing the red line made Trang restless.",
+   "ko": "기름 바늘이 빨간 선에 가까워지자 짱은 안절부절못했어요.",
+   "blank": "bồn chồn",
+   "src": "made"
   }
  ],
  "w|bọn họ": [
@@ -5305,6 +5369,22 @@
    "blank": "Cảm động"
   }
  ],
+ "w|căm ghét": [
+  {
+   "text": "Hồi đi học, Đức từng căm ghét những buổi thuyết trình, vậy mà hôm nay phải tự giới thiệu trước cả phòng.",
+   "en": "Back in school Đức hated presentations, yet today he has to introduce himself to the whole office.",
+   "ko": "학교 다닐 때 득은 발표를 몹시 싫어했는데, 오늘은 사무실 전체 앞에서 자기소개를 해야 해요.",
+   "blank": "căm ghét",
+   "src": "made"
+  },
+  {
+   "text": "Trang căm ghét cảnh kẹt xe, nên cả nhóm xuất phát từ lúc trời còn tối.",
+   "en": "Trang hates traffic jams, so the group set off while it was still dark.",
+   "ko": "짱은 차 막히는 걸 질색해서 일행은 날이 어두울 때 출발했어요.",
+   "blank": "căm ghét",
+   "src": "made"
+  }
+ ],
  "w|cảm giác": [
   {
    "text": "Cảm giác này thật lạ.",
@@ -5403,6 +5483,22 @@
    "en": "How are you feeling—okay yet?",
    "ko": "몸은 어때, 괜찮아졌어?",
    "blank": "Cảm thấy"
+  }
+ ],
+ "w|căm thù": [
+  {
+   "text": "Trong bộ phim Đức xem tối qua, hai gia tộc căm thù nhau suốt ba đời.",
+   "en": "In the film Đức watched last night, two families hated each other for three generations.",
+   "ko": "득이 어젯밤 본 영화에서 두 가문은 삼 대에 걸쳐 서로를 원수처럼 미워했어요.",
+   "blank": "căm thù",
+   "src": "made"
+  },
+  {
+   "text": "Ở bảo tàng ven đường, Trang đọc về thời hai làng căm thù nhau vì tranh nguồn nước.",
+   "en": "At a roadside museum, Trang read about a time when two villages hated each other over water.",
+   "ko": "길가 박물관에서 짱은 두 마을이 물 때문에 서로 원수가 됐던 시절 이야기를 읽었어요.",
+   "blank": "căm thù",
+   "src": "made"
   }
  ],
  "w|cắm trại": [
@@ -10319,6 +10415,22 @@
    "blank": "con số"
   }
  ],
+ "w|cơn thịnh nộ": [
+  {
+   "text": "Cả phòng kể cho Đức nghe về cơn thịnh nộ của sếp lớn khi dự án năm ngoái bị trễ.",
+   "en": "The whole office told Đức about the big boss's fury when last year's project ran late.",
+   "ko": "사무실 사람들은 득에게 작년 프로젝트가 늦어졌을 때 대표님이 불같이 화냈던 얘기를 해 줬어요.",
+   "blank": "cơn thịnh nộ",
+   "src": "made"
+  },
+  {
+   "text": "Người lái xe tải trút cơn thịnh nộ lên chiếc xe máy vừa vượt ẩu qua mặt Trang.",
+   "en": "The truck driver unleashed his fury on a motorbike that had recklessly overtaken Trang.",
+   "ko": "트럭 기사는 짱을 난폭하게 추월한 오토바이에 분노를 쏟아냈어요.",
+   "blank": "cơn thịnh nộ",
+   "src": "made"
+  }
+ ],
  "w|con trai": [
   {
    "text": "Con trai nhà bên rất ngoan.",
@@ -10559,6 +10671,22 @@
    "en": "My dad used to be a factory worker.",
    "ko": "우리 아빠는 공장 노동자였어.",
    "blank": "công nhân"
+  }
+ ],
+ "w|công sức": [
+  {
+   "text": "Bao nhiêu công sức ôn luyện của Đức cuối cùng cũng được đền đáp.",
+   "en": "All of Đức's effort in preparing has finally paid off.",
+   "ko": "득이 준비하느라 들인 노력이 마침내 보답을 받았어요.",
+   "blank": "công sức",
+   "src": "made"
+  },
+  {
+   "text": "Trang bỏ nhiều công sức lên lịch trình nên chuyến đi suôn sẻ hẳn.",
+   "en": "Trang put a lot of effort into the itinerary, so the trip went really smoothly.",
+   "ko": "짱이 일정을 짜는 데 공을 많이 들여서 여행이 훨씬 순조로웠어요.",
+   "blank": "công sức",
+   "src": "made"
   }
  ],
  "w|cộng tác": [
@@ -18893,6 +19021,38 @@
    "blank": "gián điệp"
   }
  ],
+ "w|giận dữ": [
+  {
+   "text": "Ông khách giận dữ đập bàn, còn Đức vội xin lỗi rồi hỏi lại vấn đề.",
+   "en": "The customer slammed the desk angrily, and Đức quickly apologized and asked about the problem.",
+   "ko": "손님이 화가 나서 책상을 내리치자 득은 얼른 사과하고 문제를 다시 물었어요.",
+   "blank": "giận dữ",
+   "src": "made"
+  },
+  {
+   "text": "Bác tài xe khách giận dữ quát lên khi Trang đỗ xe chắn lối.",
+   "en": "The bus driver shouted angrily when Trang parked blocking the way.",
+   "ko": "짱이 길을 막고 차를 세우자 버스 기사가 화가 나서 소리쳤어요.",
+   "blank": "giận dữ",
+   "src": "made"
+  }
+ ],
+ "w|gian nan": [
+  {
+   "text": "Chặng đường tìm việc của Đức khá gian nan, nên hôm nay cậu trân trọng từng phút.",
+   "en": "Đức's job hunt was quite tough, so today he cherishes every minute.",
+   "ko": "득의 구직 과정은 꽤 험난했기에 오늘은 일 분 일 초가 소중해요.",
+   "blank": "gian nan",
+   "src": "made"
+  },
+  {
+   "text": "Con đường lên bản khá gian nan, nhưng Trang nhất quyết không quay đầu.",
+   "en": "The road up to the village was quite rough, but Trang refused to turn back.",
+   "ko": "마을로 올라가는 길은 꽤 험난했지만 짱은 절대 돌아가지 않았어요.",
+   "blank": "gian nan",
+   "src": "made"
+  }
+ ],
  "w|giảng": [
   {
    "text": "Bếp trưởng giảng cho Quang cách phân biệt cá tươi và cá ươn.",
@@ -22091,6 +22251,22 @@
    "src": "made"
   }
  ],
+ "w|hồi hộp": [
+  {
+   "text": "Sáng nay Đức hồi hộp đến mức thắt cà vạt ba lần mới xong.",
+   "en": "This morning Đức was so nervous it took him three tries to tie his tie.",
+   "ko": "오늘 아침 득은 너무 떨려서 넥타이를 세 번 만에야 맸어요.",
+   "blank": "hồi hộp",
+   "src": "made"
+  },
+  {
+   "text": "Lần đầu lái xe qua cầu treo, Trang hồi hộp nắm chặt vô lăng.",
+   "en": "Driving over a suspension bridge for the first time, Trang nervously gripped the wheel.",
+   "ko": "처음으로 현수교를 건너며 짱은 떨리는 손으로 운전대를 꽉 잡았어요.",
+   "blank": "hồi hộp",
+   "src": "made"
+  }
+ ],
  "w|hồi nãy": [
   {
    "text": "Hồi nãy cậu nói gì vậy?",
@@ -24116,6 +24292,22 @@
    "en": "The afternoon is dry, so Linh takes the chance to walk around the lake.",
    "ko": "오후에 날이 보송해서 린 씨는 틈을 내어 호수 주변을 걸어요.",
    "blank": "khô ráo",
+   "src": "made"
+  }
+ ],
+ "w|khổ sở": [
+  {
+   "text": "Đêm trước ngày đi làm, Đức trằn trọc khổ sở vì không sao ngủ được.",
+   "en": "The night before starting work, Đức tossed and turned miserably, unable to sleep.",
+   "ko": "출근 전날 밤, 득은 잠이 안 와서 괴롭게 뒤척였어요.",
+   "blank": "khổ sở",
+   "src": "made"
+  },
+  {
+   "text": "Đường đèo quanh co làm Trang say xe khổ sở suốt buổi sáng.",
+   "en": "The winding mountain road left Trang miserably carsick all morning.",
+   "ko": "구불구불한 고갯길 때문에 짱은 오전 내내 멀미로 고생했어요.",
+   "blank": "khổ sở",
    "src": "made"
   }
  ],
@@ -26259,6 +26451,38 @@
    "blank": "lão"
   }
  ],
+ "w|lao tới": [
+  {
+   "text": "Nghe tiếng điện thoại bàn reo, Đức lao tới nhấc máy ngay.",
+   "en": "Hearing the desk phone ring, Đức rushed over to pick it up.",
+   "ko": "책상 전화가 울리자 득은 달려가 바로 받았어요.",
+   "blank": "lao tới",
+   "src": "made"
+  },
+  {
+   "text": "Vừa thấy biển, lũ trẻ trong nhóm của Trang đã lao tới mép nước.",
+   "en": "As soon as they saw the sea, the kids in Trang's group dashed to the water's edge.",
+   "ko": "바다가 보이자마자 짱 일행의 아이들은 물가로 내달렸어요.",
+   "blank": "lao tới",
+   "src": "made"
+  }
+ ],
+ "w|lao vào": [
+  {
+   "text": "Vừa ngồi xuống, Đức đã lao vào đọc chồng hồ sơ cao ngất.",
+   "en": "As soon as he sat down, Đức threw himself into reading a towering pile of files.",
+   "ko": "앉자마자 득은 산더미 같은 서류를 읽기 시작했어요.",
+   "blank": "lao vào",
+   "src": "made"
+  },
+  {
+   "text": "Đói meo sau chặng dài, Trang lao vào quán phở đầu tiên nhìn thấy.",
+   "en": "Starving after the long stretch, Trang dashed into the first pho shop she saw.",
+   "ko": "긴 구간을 달리고 배가 고팠던 짱은 처음 보이는 쌀국숫집으로 뛰어 들어갔어요.",
+   "blank": "lao vào",
+   "src": "made"
+  }
+ ],
  "w|lắp": [
   {
    "text": "Thợ đang lắp máy hút mùi mới phía trên bếp nướng.",
@@ -27567,6 +27791,22 @@
    "src": "made"
   }
  ],
+ "w|lòng ghen tị": [
+  {
+   "text": "Thấy bạn cùng khóa được nhận lương cao hơn, Đức cố gạt lòng ghen tị sang một bên.",
+   "en": "Seeing a classmate get a higher salary, Đức tried to push his envy aside.",
+   "ko": "동기가 월급을 더 많이 받는 걸 보고 득은 부러운 마음을 애써 털어 냈어요.",
+   "blank": "lòng ghen tị",
+   "src": "made"
+  },
+  {
+   "text": "Xem ảnh Trang đi phượt, mấy đồng nghiệp ở nhà không giấu được lòng ghen tị.",
+   "en": "Seeing Trang's road trip photos, her colleagues back home couldn't hide their envy.",
+   "ko": "짱의 여행 사진을 본 동료들은 부러운 마음을 숨기지 못했어요.",
+   "blank": "lòng ghen tị",
+   "src": "made"
+  }
+ ],
  "w|lộng lẫy": [
   {
    "text": "Khách sạn mà đội anh Long đang xây sẽ có sảnh rất lộng lẫy.",
@@ -27643,6 +27883,22 @@
    "en": "You've already lost their trust.",
    "ko": "너는 이미 신뢰를 잃었어.",
    "blank": "lòng tin"
+  }
+ ],
+ "w|lòng trắc ẩn": [
+  {
+   "text": "Chị trưởng phòng nhìn Đức với lòng trắc ẩn khi thấy cậu loay hoay mãi với cái máy in.",
+   "en": "The manager looked at Đức with compassion when she saw him fumbling with the printer.",
+   "ko": "팀장님은 득이 프린터와 한참 씨름하는 걸 보고 안쓰러운 마음으로 바라봤어요.",
+   "blank": "lòng trắc ẩn",
+   "src": "made"
+  },
+  {
+   "text": "Thấy chú chó lạc bên đường, Trang động lòng trắc ẩn và dừng xe cho nó uống nước.",
+   "en": "Seeing a lost dog by the road, Trang felt compassion and stopped to give it water.",
+   "ko": "길가에 길 잃은 개를 보고 짱은 측은한 마음에 차를 세워 물을 줬어요.",
+   "blank": "lòng trắc ẩn",
+   "src": "made"
   }
  ],
  "w|lòng tự hào": [
@@ -27985,6 +28241,22 @@
    "ko": "그 주차 자리에는 후진으로 넣는 게 더 쉬울 거예요.",
    "blank": "lùi",
    "src": "tatoeba:11374309/chaule3 en:11374305/chaule3"
+  }
+ ],
+ "w|lùi lại": [
+  {
+   "text": "Thang máy đông quá, Đức lùi lại nhường chỗ cho một chị đang ôm thùng giấy.",
+   "en": "The elevator was packed, so Đức stepped back to make room for a woman carrying a box.",
+   "ko": "엘리베이터가 너무 붐벼서 득은 상자를 든 여자분에게 자리를 내주려고 뒤로 물러섰어요.",
+   "blank": "lùi lại",
+   "src": "made"
+  },
+  {
+   "text": "Trang phải lùi lại gần trăm mét vì rẽ nhầm vào ngõ cụt.",
+   "en": "Trang had to back up nearly a hundred meters after turning into a dead end.",
+   "ko": "막다른 골목으로 잘못 들어가서 짱은 백 미터 가까이 후진해야 했어요.",
+   "blank": "lùi lại",
+   "src": "made"
   }
  ],
  "w|lùn": [
@@ -33019,6 +33291,22 @@
    "src": "made"
   }
  ],
+ "w|ngoài ra": [
+  {
+   "text": "Đức được phát máy tính, thẻ ra vào, ngoài ra còn có một chiếc cốc in tên công ty.",
+   "en": "Đức was given a computer and an access card, plus a mug printed with the company name.",
+   "ko": "득은 컴퓨터와 출입증을 받았고, 그 밖에 회사 이름이 새겨진 머그잔도 받았어요.",
+   "blank": "ngoài ra",
+   "src": "made"
+  },
+  {
+   "text": "Trang mang theo lều và đèn pin, ngoài ra còn một thùng mì gói phòng khi đói.",
+   "en": "Trang brought a tent and a flashlight, plus a box of instant noodles in case they got hungry.",
+   "ko": "짱은 텐트와 손전등을 챙겼고, 그 밖에 배고플 때를 대비해 라면 한 상자도 가져갔어요.",
+   "blank": "ngoài ra",
+   "src": "made"
+  }
+ ],
  "w|ngoại tệ": [
   {
    "text": "Tỷ giá hối đoái của ngoại tệ thay đổi mỗi ngày.",
@@ -34973,6 +35261,22 @@
    "blank": "Nhảy"
   }
  ],
+ "w|nhảy lên": [
+  {
+   "text": "Nhận được tin nhắn chúc mừng của mẹ, Đức vui đến mức suýt nhảy lên giữa văn phòng.",
+   "en": "Getting a congratulatory text from his mom, Đức was so happy he nearly jumped up in the office.",
+   "ko": "엄마의 축하 문자를 받고 득은 너무 기뻐서 사무실 한가운데서 뛰어오를 뻔했어요.",
+   "blank": "nhảy lên",
+   "src": "made"
+  },
+  {
+   "text": "Trang nhảy lên tảng đá lớn để chụp ảnh cả đoàn.",
+   "en": "Trang jumped up onto a big rock to take a photo of the whole group.",
+   "ko": "짱은 일행 전체 사진을 찍으려고 큰 바위 위로 뛰어올랐어요.",
+   "blank": "nhảy lên",
+   "src": "made"
+  }
+ ],
  "w|nhảy múa": [
   {
    "text": "Ở màn lễ hội, Hùng và các bạn diễn nhảy múa quanh đống lửa.",
@@ -35981,6 +36285,22 @@
    "blank": "Nói dối"
   }
  ],
+ "w|nổi giận": [
+  {
+   "text": "Đức tưởng trưởng phòng sẽ nổi giận, ai ngờ chị chỉ bảo lần sau cẩn thận hơn.",
+   "en": "Đức thought the manager would get angry, but she only told him to be more careful next time.",
+   "ko": "득은 팀장님이 화를 낼 줄 알았는데, 다음엔 더 조심하라고만 했어요.",
+   "blank": "nổi giận",
+   "src": "made"
+  },
+  {
+   "text": "Thấy hành lý bị bỏ quên ở trạm dừng, Trang suýt nổi giận với em trai.",
+   "en": "Finding the luggage left behind at the rest stop, Trang nearly got angry at her younger brother.",
+   "ko": "휴게소에 짐을 두고 온 걸 알고 짱은 남동생에게 화를 낼 뻔했어요.",
+   "blank": "nổi giận",
+   "src": "made"
+  }
+ ],
  "w|nơi làm việc": [
   {
    "text": "Công ty yêu cầu nơi làm việc phải gọn gàng trước khi tan ca.",
@@ -36040,6 +36360,22 @@
    "en": "Waiting for the night flight, Hương suddenly feels a wave of longing for her child.",
    "ko": "밤 비행기를 기다리다 흐엉은 문득 아이가 무척 그리워져요.",
    "blank": "nỗi nhớ",
+   "src": "made"
+  }
+ ],
+ "w|nổi nóng": [
+  {
+   "text": "Anh Tuấn bên kế toán hay nổi nóng, nhưng với Đức thì lúc nào cũng vui vẻ.",
+   "en": "Tuấn from accounting often loses his temper, but he's always cheerful with Đức.",
+   "ko": "회계팀 뚜언 씨는 자주 욱하지만 득에게는 늘 상냥해요.",
+   "blank": "nổi nóng",
+   "src": "made"
+  },
+  {
+   "text": "Đường xấu suốt mấy chục cây số, nhưng Trang vẫn không hề nổi nóng.",
+   "en": "The road was bad for dozens of kilometers, but Trang never lost her temper.",
+   "ko": "수십 킬로미터나 길이 험했지만 짱은 한 번도 욱하지 않았어요.",
+   "blank": "nổi nóng",
    "src": "made"
   }
  ],
@@ -36903,6 +37239,38 @@
    "en": "He drives a car to work every morning.",
    "ko": "그는 아침마다 차로 출근해.",
    "blank": "ô tô"
+  }
+ ],
+ "w|oán hận": [
+  {
+   "text": "Anh Hùng rời chỗ làm cũ mà không hề oán hận ai, Đức nghe vậy thấy rất nể.",
+   "en": "Hùng left his old job without resenting anyone, and Đức admired him for it.",
+   "ko": "훙은 예전 직장을 떠나면서 누구도 원망하지 않았대요. 득은 그 말을 듣고 감탄했어요.",
+   "blank": "oán hận",
+   "src": "made"
+  },
+  {
+   "text": "Bạn của Trang lỡ đặt nhầm khách sạn, nhưng Trang chẳng oán hận gì, chỉ cười trừ.",
+   "en": "Trang's friend booked the wrong hotel, but Trang held no grudge and just laughed it off.",
+   "ko": "짱의 친구가 호텔을 잘못 예약했지만 짱은 원망하지 않고 웃어넘겼어요.",
+   "blank": "oán hận",
+   "src": "made"
+  }
+ ],
+ "w|oán trách": [
+  {
+   "text": "Bị giao việc khó ngay buổi đầu, Đức không oán trách mà chăm chú đọc tài liệu.",
+   "en": "Given a hard task on day one, Đức didn't complain and focused on reading the documents.",
+   "ko": "첫날부터 어려운 일을 맡았지만 득은 불평하지 않고 자료를 열심히 읽었어요.",
+   "blank": "oán trách",
+   "src": "made"
+  },
+  {
+   "text": "Xe hết xăng giữa đường, Trang không oán trách ai mà rủ cả nhóm đi bộ tìm cây xăng.",
+   "en": "When the car ran out of fuel, Trang blamed no one and got the group to walk to find a gas station.",
+   "ko": "차가 길 한가운데서 기름이 떨어졌지만 짱은 누구도 탓하지 않고 다 같이 주유소를 찾아 걷자고 했어요.",
+   "blank": "oán trách",
+   "src": "made"
   }
  ],
  "w|ốc sên": [
@@ -38839,6 +39207,38 @@
    "en": "I wrap the gift with colored paper.",
    "ko": "나는 색종이로 선물을 포장해.",
    "blank": "quà tặng"
+  }
+ ],
+ "w|quả thật": [
+  {
+   "text": "Đồng nghiệp ở đây quả thật rất thân thiện, Đức nghĩ thầm.",
+   "en": "The colleagues here really are very friendly, Đức thought to himself.",
+   "ko": "여기 동료들은 정말 친절하다고 득은 속으로 생각했어요.",
+   "blank": "quả thật",
+   "src": "made"
+  },
+  {
+   "text": "Cảnh hoàng hôn trên đèo quả thật đẹp hơn mọi tấm ảnh Trang từng xem.",
+   "en": "The sunset over the pass truly was more beautiful than any photo Trang had seen.",
+   "ko": "고개 위의 노을은 짱이 본 어떤 사진보다 정말 아름다웠어요.",
+   "blank": "quả thật",
+   "src": "made"
+  }
+ ],
+ "w|quả thực": [
+  {
+   "text": "Nhớ tên từng ấy người trong một ngày quả thực không dễ với Đức.",
+   "en": "Remembering that many names in one day really wasn't easy for Đức.",
+   "ko": "하루 만에 그 많은 이름을 외우는 건 득에게 정말 쉽지 않았어요.",
+   "blank": "quả thực",
+   "src": "made"
+  },
+  {
+   "text": "Bánh căn ở thị trấn này quả thực ngon như lời người ta giới thiệu với Trang.",
+   "en": "The bánh căn in this town really is as good as people told Trang.",
+   "ko": "이 마을의 반깐은 사람들이 짱에게 말해 준 대로 정말 맛있었어요.",
+   "blank": "quả thực",
+   "src": "made"
   }
  ],
  "w|quái vật": [
@@ -40867,6 +41267,22 @@
    "src": "made"
   }
  ],
+ "w|rụt rè": [
+  {
+   "text": "Đức rụt rè gõ cửa phòng giám đốc để nộp hồ sơ.",
+   "en": "Đức timidly knocked on the director's door to hand in his paperwork.",
+   "ko": "득은 서류를 내려고 머뭇머뭇 사장실 문을 두드렸어요.",
+   "blank": "rụt rè",
+   "src": "made"
+  },
+  {
+   "text": "Cậu bé ở chợ phiên rụt rè hỏi Trang có muốn mua mật ong rừng không.",
+   "en": "A boy at the market shyly asked Trang if she wanted to buy wild honey.",
+   "ko": "장터의 한 소년이 짱에게 야생 꿀을 사겠냐고 수줍게 물었어요.",
+   "blank": "rụt rè",
+   "src": "made"
+  }
+ ],
  "w|sa thải": [
   {
    "text": "Tôi muốn cậu bị sa thải.",
@@ -42273,6 +42689,22 @@
    "src": "made"
   }
  ],
+ "w|sự cảm thông": [
+  {
+   "text": "Đức lỡ làm đổ cà phê lên bàn, may mà mọi người nhìn cậu với sự cảm thông.",
+   "en": "Đức spilled coffee on the desk, but luckily everyone looked at him with understanding.",
+   "ko": "득이 책상에 커피를 쏟았는데, 다행히 다들 이해한다는 눈으로 봐 줬어요.",
+   "blank": "sự cảm thông",
+   "src": "made"
+  },
+  {
+   "text": "Chủ quán nhìn đôi giày lấm bùn của Trang với sự cảm thông rồi mang ra ấm trà nóng.",
+   "en": "The shop owner looked at Trang's muddy shoes sympathetically and brought out a pot of hot tea.",
+   "ko": "가게 주인은 짱의 진흙투성이 신발을 안쓰럽게 보더니 뜨거운 차를 내왔어요.",
+   "blank": "sự cảm thông",
+   "src": "made"
+  }
+ ],
  "w|sự chú ý": [
   {
    "text": "Tiếng còi báo động thu hút sự chú ý của cả phân xưởng.",
@@ -42289,6 +42721,22 @@
    "src": "made"
   }
  ],
+ "w|sự đồng cảm": [
+  {
+   "text": "Đức thấy rõ sự đồng cảm trong ánh mắt cô đồng nghiệp cũng mới vào làm tuần trước.",
+   "en": "Đức saw clear sympathy in the eyes of a colleague who had only started the week before.",
+   "ko": "득은 지난주에 막 들어온 동료의 눈빛에서 공감을 분명히 느꼈어요.",
+   "blank": "sự đồng cảm",
+   "src": "made"
+  },
+  {
+   "text": "Trang cảm nhận được sự đồng cảm của dân làng khi xe bị hỏng giữa trời mưa.",
+   "en": "Trang felt the villagers' sympathy when the car broke down in the rain.",
+   "ko": "빗속에 차가 고장 났을 때 짱은 마을 사람들의 공감을 느꼈어요.",
+   "blank": "sự đồng cảm",
+   "src": "made"
+  }
+ ],
  "w|sử dụng": [
   {
    "text": "Đọc kỹ hướng dẫn trước khi sử dụng.",
@@ -42301,6 +42749,22 @@
    "en": "Using this machine requires wearing gloves.",
    "ko": "이 기계를 쓸 때는 장갑을 껴야 해.",
    "blank": "Sử dụng"
+  }
+ ],
+ "w|sự ghen tuông": [
+  {
+   "text": "Giờ ăn trưa, Đức nghe mọi người bàn về sự ghen tuông của nhân vật chính trong bộ phim truyền hình.",
+   "en": "At lunch, Đức listened to everyone discuss the main character's jealousy in a TV drama.",
+   "ko": "점심시간에 득은 사람들이 드라마 주인공의 질투에 대해 이야기하는 걸 들었어요.",
+   "blank": "sự ghen tuông",
+   "src": "made"
+  },
+  {
+   "text": "Trên xe, Trang và các bạn nghe một bài hát cũ về sự ghen tuông trong tình yêu.",
+   "en": "In the car, Trang and her friends listened to an old song about jealousy in love.",
+   "ko": "차 안에서 짱과 친구들은 사랑의 질투에 관한 옛 노래를 들었어요.",
+   "blank": "sự ghen tuông",
+   "src": "made"
   }
  ],
  "w|sự giúp đỡ": [
@@ -42378,6 +42842,22 @@
    "en": "Watching Hương decorate the kumquat tree, her younger cousin exclaims with admiration.",
    "ko": "흐엉이 금귤나무를 꾸미는 걸 보고 사촌 동생이 감탄하며 소리쳐요.",
    "blank": "sự ngưỡng mộ",
+   "src": "made"
+  }
+ ],
+ "w|sự phẫn nộ": [
+  {
+   "text": "Trên bản tin sáng, Đức đọc về sự phẫn nộ của người dân trước việc giá điện tăng.",
+   "en": "In the morning news, Đức read about public outrage over rising electricity prices.",
+   "ko": "아침 뉴스에서 득은 전기 요금 인상에 대한 시민들의 분노에 관한 기사를 읽었어요.",
+   "blank": "sự phẫn nộ",
+   "src": "made"
+  },
+  {
+   "text": "Thấy rác vứt đầy bãi biển, Trang không giấu nổi sự phẫn nộ.",
+   "en": "Seeing trash all over the beach, Trang couldn't hide her outrage.",
+   "ko": "해변에 쓰레기가 가득한 걸 보고 짱은 분노를 감추지 못했어요.",
+   "blank": "sự phẫn nộ",
    "src": "made"
   }
  ],
@@ -42469,6 +42949,22 @@
    "en": "There's a big lion at the zoo.",
    "ko": "동물원에 큰 사자가 한 마리 있어.",
    "blank": "sư tử"
+  }
+ ],
+ "w|sự tức giận": [
+  {
+   "text": "Đức cố nén sự tức giận khi file báo cáo bị mất lần thứ hai.",
+   "en": "Đức tried to hold back his anger when the report file got lost a second time.",
+   "ko": "보고서 파일이 두 번째로 날아가자 득은 화를 꾹 참았어요.",
+   "blank": "sự tức giận",
+   "src": "made"
+  },
+  {
+   "text": "Bị xe phía sau bấm còi liên tục, Trang phải cố kìm sự tức giận lại.",
+   "en": "With the car behind honking nonstop, Trang had to hold back her anger.",
+   "ko": "뒤차가 계속 경적을 울려서 짱은 화를 꾹 참아야 했어요.",
+   "blank": "sự tức giận",
+   "src": "made"
   }
  ],
  "w|sự việc": [
@@ -44863,6 +45359,22 @@
    "blank": "Thất nghiệp"
   }
  ],
+ "w|thật ra": [
+  {
+   "text": "Đức trông bình tĩnh, nhưng thật ra tay cậu đang run.",
+   "en": "Đức looks calm, but actually his hands are shaking.",
+   "ko": "득은 침착해 보이지만 사실 손이 떨리고 있어요.",
+   "blank": "thật ra",
+   "src": "made"
+  },
+  {
+   "text": "Ai cũng tưởng Trang là người dẫn đường, nhưng thật ra cô ấy chỉ đi theo điện thoại.",
+   "en": "Everyone thought Trang was the navigator, but actually she was just following her phone.",
+   "ko": "다들 짱이 길잡이인 줄 알았지만 사실 짱은 휴대폰만 따라갔어요.",
+   "blank": "thật ra",
+   "src": "made"
+  }
+ ],
  "w|thật sự": [
   {
    "text": "Mình thật sự không biết chuyện đó.",
@@ -45151,6 +45663,22 @@
    "en": "Have more, there's plenty left.",
    "ko": "더 먹어, 아직 많이 남았어.",
    "blank": "thêm"
+  }
+ ],
+ "w|thêm vào đó": [
+  {
+   "text": "Văn phòng gần nhà, thêm vào đó lại có căng tin rẻ, Đức thấy mình thật may.",
+   "en": "The office is close to home, and on top of that the canteen is cheap; Đức feels lucky.",
+   "ko": "사무실이 집에서 가깝고, 게다가 구내식당도 싸서 득은 운이 좋다고 느껴요.",
+   "blank": "thêm vào đó",
+   "src": "made"
+  },
+  {
+   "text": "Trời mưa to, thêm vào đó đường lại trơn, nên Trang lái thật chậm.",
+   "en": "It was pouring, and on top of that the road was slippery, so Trang drove very slowly.",
+   "ko": "비가 많이 왔고, 게다가 길도 미끄러워서 짱은 아주 천천히 운전했어요.",
+   "blank": "thêm vào đó",
+   "src": "made"
   }
  ],
  "w|theo": [
@@ -46427,6 +46955,22 @@
    "src": "made"
   }
  ],
+ "w|thù ghét": [
+  {
+   "text": "Sếp dặn Đức rằng ở công ty này không ai thù ghét ai, có gì cứ nói thẳng.",
+   "en": "The boss told Đức that nobody holds grudges at this company, so just speak openly.",
+   "ko": "상사는 득에게 이 회사에선 서로 미워하는 사람 없으니 할 말은 솔직하게 하라고 했어요.",
+   "blank": "thù ghét",
+   "src": "made"
+  },
+  {
+   "text": "Anh Minh hay đùa rằng Trang thù ghét bản đồ giấy vì lần nào cũng gấp sai.",
+   "en": "Minh likes to joke that Trang hates paper maps because she always folds them wrong.",
+   "ko": "민은 짱이 종이 지도를 늘 잘못 접어서 지도를 원수처럼 싫어한다고 놀려요.",
+   "blank": "thù ghét",
+   "src": "made"
+  }
+ ],
  "w|thư giãn": [
   {
    "text": "Bác sĩ Đức mở nhạc nhẹ để bệnh nhân thư giãn trên ghế.",
@@ -47433,6 +47977,22 @@
    "src": "made"
   }
  ],
+ "w|tiến": [
+  {
+   "text": "Đức hít một hơi thật sâu rồi tiến về phía quầy lễ tân.",
+   "en": "Đức took a deep breath and walked toward the reception desk.",
+   "ko": "득은 숨을 크게 들이쉬고 안내 데스크 쪽으로 걸어갔어요.",
+   "blank": "tiến",
+   "src": "made"
+  },
+  {
+   "text": "Đoàn xe của Trang chậm rãi tiến lên đỉnh đèo trong màn sương dày.",
+   "en": "Trang's convoy slowly advanced up to the pass through thick fog.",
+   "ko": "짱의 일행 차들은 짙은 안개 속에서 천천히 고개 정상으로 나아갔어요.",
+   "blank": "tiến",
+   "src": "made"
+  }
+ ],
  "w|tiền": [
   {
    "text": "Tớ hết tiền mặt rồi.",
@@ -47700,6 +48260,22 @@
    "en": "When winter comes, the electricity bill soars, so Ngọc worries she won't have enough for rent.",
    "ko": "겨울이 오면 전기료가 치솟아서 응옥은 집세가 모자랄까 걱정해요.",
    "blank": "tiền thuê nhà",
+   "src": "made"
+  }
+ ],
+ "w|tiến tới": [
+  {
+   "text": "Cuối ngày, Đức mạnh dạn tiến tới bắt tay giám đốc và cảm ơn.",
+   "en": "At the end of the day, Đức boldly stepped forward to shake the director's hand and thank him.",
+   "ko": "퇴근 무렵 득은 용기를 내 사장님께 다가가 악수하며 감사 인사를 했어요.",
+   "blank": "tiến tới",
+   "src": "made"
+  },
+  {
+   "text": "Đàn bò thong thả tiến tới giữa đường, Trang đành dừng xe chờ.",
+   "en": "A herd of cows ambled into the middle of the road, so Trang had to stop and wait.",
+   "ko": "소 떼가 느릿느릿 길 한가운데로 다가오자 짱은 차를 세우고 기다릴 수밖에 없었어요.",
+   "blank": "tiến tới",
    "src": "made"
   }
  ],
@@ -49133,6 +49709,38 @@
    "en": "Pay first, then we leave.",
    "ko": "계산하고 나서 가자.",
    "blank": "Trả tiền"
+  }
+ ],
+ "w|trách": [
+  {
+   "text": "Đến muộn mười phút, Đức sợ bị trách nhưng bác bảo vệ chỉ cười.",
+   "en": "Ten minutes late, Đức was afraid of being scolded, but the guard just smiled.",
+   "ko": "십 분 늦은 득은 꾸중 들을까 봐 걱정했지만 경비 아저씨는 웃기만 했어요.",
+   "blank": "trách",
+   "src": "made"
+  },
+  {
+   "text": "Lạc đường cả tiếng, Trang tự trách mình đã không sạc đầy điện thoại.",
+   "en": "Lost for an hour, Trang blamed herself for not charging her phone.",
+   "ko": "한 시간이나 길을 잃은 짱은 휴대폰을 충전해 두지 않은 자신을 탓했어요.",
+   "blank": "trách",
+   "src": "made"
+  }
+ ],
+ "w|trách móc": [
+  {
+   "text": "Chị Lan không trách móc gì, chỉ nhẹ nhàng chỉ cho Đức cách lưu file.",
+   "en": "Lan didn't scold him at all; she just gently showed Đức how to save the file.",
+   "ko": "란 언니는 아무 핀잔도 없이 득에게 파일 저장하는 법을 차분히 알려 줬어요.",
+   "blank": "trách móc",
+   "src": "made"
+  },
+  {
+   "text": "Mẹ gọi điện trách móc Trang vì đi chơi xa mà không báo trước.",
+   "en": "Mom called to reproach Trang for going on a long trip without telling her.",
+   "ko": "엄마는 멀리 놀러 가면서 미리 말하지 않았다고 짱에게 전화로 핀잔을 줬어요.",
+   "blank": "trách móc",
+   "src": "made"
   }
  ],
  "w|trách nhiệm": [
@@ -52841,6 +53449,22 @@
    "src": "made"
   }
  ],
+ "w|vất vả": [
+  {
+   "text": "Ngày đầu tiên không quá vất vả, nhưng Đức về nhà vẫn mệt rã rời.",
+   "en": "The first day wasn't too hard, but Đức still came home exhausted.",
+   "ko": "첫날은 그리 힘들지 않았지만 득은 집에 와서 녹초가 됐어요.",
+   "blank": "vất vả",
+   "src": "made"
+  },
+  {
+   "text": "Sau một ngày lái xe vất vả, Trang ngủ ngay khi vừa đặt lưng xuống giường.",
+   "en": "After a hard day of driving, Trang fell asleep the moment she lay down.",
+   "ko": "힘들게 운전한 하루를 보내고 짱은 눕자마자 잠들었어요.",
+   "blank": "vất vả",
+   "src": "made"
+  }
+ ],
  "w|vay": [
   {
    "text": "Anh ấy muốn vay tiền để mở quán.",
@@ -54908,6 +55532,22 @@
    "en": "When the exam started, Thảo took a breath and strode straight onto the stage.",
    "ko": "시험 시간이 되자 타오는 숨을 한 번 들이쉬고 곧장 무대로 나갔어요.",
    "blank": "xông",
+   "src": "made"
+  }
+ ],
+ "w|xông vào": [
+  {
+   "text": "Một anh giao hàng xông vào phòng hỏi ai tên Đức, làm cả phòng giật mình.",
+   "en": "A delivery man burst into the room asking for someone named Đức, startling everyone.",
+   "ko": "배달원이 득이라는 사람을 찾으며 사무실에 불쑥 들어와 모두 깜짝 놀랐어요.",
+   "blank": "xông vào",
+   "src": "made"
+  },
+  {
+   "text": "Gió lạnh xông vào xe khi Trang hạ cửa kính để chụp ảnh.",
+   "en": "Cold wind rushed into the car when Trang lowered the window to take photos.",
+   "ko": "짱이 사진을 찍으려고 창문을 내리자 찬바람이 차 안으로 몰아쳤어요.",
+   "blank": "xông vào",
    "src": "made"
   }
  ],

@@ -293,6 +293,22 @@
    "src": "made"
   }
  ],
+ "w|अग्रणी": [
+  {
+   "text": "रवि शहर के अग्रणी वकीलों में गिना जाता है।",
+   "en": "Ravi is counted among the city's leading lawyers.",
+   "ko": "라비는 도시에서 손꼽히는 변호사예요.",
+   "blank": "अग्रणी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दुकान इलाक़े की अग्रणी दवा की दुकानों में से एक है।",
+   "en": "Anjali's shop is one of the leading pharmacies in the area.",
+   "ko": "안잘리네 가게는 동네에서 손꼽히는 약국이에요.",
+   "blank": "अग्रणी",
+   "src": "made"
+  }
+ ],
  "w|अंग्रेज़ी": [
   {
    "text": "वह बच्चों को अंग्रेज़ी पढ़ाती है।",
@@ -941,6 +957,22 @@
    "blank": "अधिकांश"
   }
  ],
+ "w|अधिकृत": [
+  {
+   "text": "केवल अधिकृत लोग ही अदालत के रिकॉर्ड रूम में जा सकते हैं।",
+   "en": "Only authorised people can enter the court's record room.",
+   "ko": "허가받은 사람만 법원 기록실에 들어갈 수 있어요.",
+   "blank": "अधिकृत",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दुकान एक बड़ी कंपनी की अधिकृत विक्रेता है।",
+   "en": "Anjali's shop is an authorised dealer of a big company.",
+   "ko": "안잘리 약국은 큰 제약 회사의 공식 판매점이에요.",
+   "blank": "अधिकृत",
+   "src": "made"
+  }
+ ],
  "w|अधिनियम": [
   {
    "text": "नए यातायात अधिनियम के तहत जुर्माना बढ़ा दिया गया है।",
@@ -1118,6 +1150,22 @@
    "en": "When bargaining, Kavita has endless patience.",
    "ko": "흥정할 때 카비타는 인내심이 끝이 없어요.",
    "blank": "अनंत",
+   "src": "made"
+  }
+ ],
+ "w|अनमोल": [
+  {
+   "text": "रवि अपने गुरु की दी हुई पुरानी क़लम को अनमोल मानता है।",
+   "en": "Ravi considers the old pen his mentor gave him priceless.",
+   "ko": "라비는 스승이 준 낡은 펜을 더없이 소중히 여겨요.",
+   "blank": "अनमोल",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि कहती है कि अच्छी नींद सेहत के लिए अनमोल है।",
+   "en": "Anjali says good sleep is priceless for health.",
+   "ko": "안잘리는 잘 자는 게 건강에 더없이 소중하다고 말해요.",
+   "blank": "अनमोल",
    "src": "made"
   }
  ],
@@ -1422,6 +1470,22 @@
    "en": "The store has hired an interpreter for foreign tourists.",
    "ko": "백화점은 외국인 관광객을 위해 통역사를 두었어요.",
    "blank": "अनुवादक",
+   "src": "made"
+  }
+ ],
+ "w|अनुशासन": [
+  {
+   "text": "जज ने कहा कि अदालत में अनुशासन बनाए रखना सबकी ज़िम्मेदारी है।",
+   "en": "The judge said keeping discipline in the court is everyone's responsibility.",
+   "ko": "판사는 법정 질서를 지키는 건 모두의 책임이라고 했어요.",
+   "blank": "अनुशासन",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि मानती है कि दवा समय पर लेने के लिए थोड़ा अनुशासन चाहिए।",
+   "en": "Anjali believes a little discipline is needed to take medicine on time.",
+   "ko": "안잘리는 약을 제때 먹으려면 꾸준함이 좀 필요하다고 생각해요.",
+   "blank": "अनुशासन",
    "src": "made"
   }
  ],
@@ -2226,6 +2290,22 @@
    "en": "Kavita didn't like the new avatar of her favourite app at all.",
    "ko": "카비타는 좋아하던 앱의 새 모습이 하나도 마음에 들지 않았어요.",
    "blank": "अवतार",
+   "src": "made"
+  }
+ ],
+ "w|अवधारणा": [
+  {
+   "text": "रवि ने छात्रों को \"निर्दोष माने जाने\" की अवधारणा आसान शब्दों में समझाई।",
+   "en": "Ravi explained the concept of \"presumption of innocence\" to students in simple terms.",
+   "ko": "라비는 학생들에게 무죄 추정이라는 개념을 쉽게 설명했어요.",
+   "blank": "अवधारणा",
+   "src": "made"
+  },
+  {
+   "text": "मोहल्ले में \"सस्ती दवा सबके लिए\" की अवधारणा अंजलि ने ही शुरू की।",
+   "en": "It was Anjali who started the concept of \"cheap medicine for all\" in the neighbourhood.",
+   "ko": "동네에 \"모두를 위한 싼 약\"이라는 생각을 처음 들여온 건 안잘리였어요.",
+   "blank": "अवधारणा",
    "src": "made"
   }
  ],
@@ -3403,6 +3483,22 @@
    "blank": "आपकी"
   }
  ],
+ "w|आपत्ति": [
+  {
+   "text": "दूसरे पक्ष के वकील के सवाल पर रवि ने तुरंत आपत्ति जताई।",
+   "en": "Ravi immediately raised an objection to the other side's lawyer's question.",
+   "ko": "라비는 상대 변호사의 질문에 곧바로 이의를 제기했어요.",
+   "blank": "आपत्ति",
+   "src": "made"
+  },
+  {
+   "text": "पड़ोसी ने दुकान के बाहर गाड़ियाँ खड़ी करने पर आपत्ति की।",
+   "en": "A neighbour objected to cars being parked outside the shop.",
+   "ko": "이웃 한 명이 가게 앞에 차를 세우는 데 불만을 제기했어요.",
+   "blank": "आपत्ति",
+   "src": "made"
+  }
+ ],
  "w|आपराधिक": [
   {
    "text": "रोहन ने बताया कि सरकारी रिकॉर्ड जलाना एक आपराधिक काम है।",
@@ -3446,6 +3542,22 @@
    "en": "Neha told the team to sort out the quarrels among themselves.",
    "ko": "네하는 팀원들에게 다툼은 자기들끼리 풀라고 했어요.",
    "blank": "आपस में",
+   "src": "made"
+  }
+ ],
+ "w|आपातकाल": [
+  {
+   "text": "रवि के पिता आपातकाल के दिनों के मुक़दमों के क़िस्से सुनाते हैं।",
+   "en": "Ravi's father tells stories of the court cases from the days of the Emergency.",
+   "ko": "라비 아버지는 비상사태 시절 재판 이야기를 들려줘요.",
+   "blank": "आपातकाल",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के दादाजी ने आपातकाल के समय यह दवा की दुकान खोली थी।",
+   "en": "Anjali's grandfather opened this pharmacy during the time of the Emergency.",
+   "ko": "안잘리 할아버지는 비상사태 시절에 이 약국을 여셨어요.",
+   "blank": "आपातकाल",
    "src": "made"
   }
  ],
@@ -3663,6 +3775,22 @@
    "en": "Cancel the hotel reservation.",
    "ko": "호텔 예약을 취소해.",
    "blank": "आरक्षण"
+  }
+ ],
+ "w|आरक्षित": [
+  {
+   "text": "अदालत में पत्रकारों के लिए पीछे की दो पंक्तियाँ आरक्षित हैं।",
+   "en": "The two back rows in the court are reserved for journalists.",
+   "ko": "법정 뒤쪽 두 줄은 기자석으로 비워 둬요.",
+   "blank": "आरक्षित",
+   "src": "made"
+  },
+  {
+   "text": "फ़्रिज का ऊपर वाला खाना इंसुलिन के लिए आरक्षित है।",
+   "en": "The top shelf of the fridge is reserved for insulin.",
+   "ko": "냉장고 맨 위 칸은 인슐린 자리로 정해 뒀어요.",
+   "blank": "आरक्षित",
+   "src": "made"
   }
  ],
  "w|आरती": [
@@ -6451,6 +6579,22 @@
    "blank": "एलर्जी"
   }
  ],
+ "w|एलान": [
+  {
+   "text": "फ़ैसले का एलान सुनते ही रवि के मुवक्किल की आँखें भर आईं।",
+   "en": "As soon as Ravi's client heard the verdict announced, his eyes filled with tears.",
+   "ko": "판결 선고를 듣자마자 라비 의뢰인의 눈에 눈물이 고였어요.",
+   "blank": "एलान",
+   "src": "made"
+  },
+  {
+   "text": "सरकार के एलान के बाद ज़रूरी दवाओं के दाम घट गए।",
+   "en": "After the government's announcement, the prices of essential medicines went down.",
+   "ko": "정부 발표가 나오자 필수 의약품 값이 내려갔어요.",
+   "blank": "एलान",
+   "src": "made"
+  }
+ ],
  "w|एवं": [
   {
    "text": "न्याय एवं समानता की बात चली।",
@@ -8099,6 +8243,22 @@
    "en": "A new bud is visible in the garden.",
    "ko": "정원에 새 봉오리가 보여.",
    "blank": "कली"
+  }
+ ],
+ "w|कलेक्टर": [
+  {
+   "text": "ज़मीन के झगड़े में रवि ने कलेक्टर के आदेश को अदालत में चुनौती दी।",
+   "en": "In the land dispute, Ravi challenged the collector's order in court.",
+   "ko": "토지 분쟁에서 라비는 군수의 명령에 법정에서 이의를 제기했어요.",
+   "blank": "कलेक्टर",
+   "src": "made"
+  },
+  {
+   "text": "कलेक्टर ने ज़िले की सभी दवा दुकानों की अचानक जाँच का आदेश दिया।",
+   "en": "The collector ordered surprise inspections of all the pharmacies in the district.",
+   "ko": "군수는 군 안의 모든 약국을 불시에 점검하라고 지시했어요.",
+   "blank": "कलेक्टर",
+   "src": "made"
   }
  ],
  "w|कलेजा": [
@@ -11841,6 +12001,22 @@
    "blank": "खुद"
   }
  ],
+ "w|ख़ुफ़िया": [
+  {
+   "text": "गवाही में एक ख़ुफ़िया अधिकारी ने बंद कमरे में बयान दिया।",
+   "en": "As testimony, an intelligence officer gave a statement in a closed room.",
+   "ko": "정보 요원 한 명이 비공개로 증언했어요.",
+   "blank": "ख़ुफ़िया",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ख़ुफ़िया कहानियों की शौक़ीन है और दुकान में भी उपन्यास पढ़ती है।",
+   "en": "Anjali is fond of spy stories and reads novels even in the shop.",
+   "ko": "안잘리는 첩보 소설을 좋아해서 약국에서도 소설을 읽어요.",
+   "blank": "ख़ुफ़िया",
+   "src": "made"
+  }
+ ],
  "w|खुरदुरा": [
   {
    "text": "विज्ञान की कक्षा में राहुल को एक चौकोर पत्थर मिला जिसकी सतह खुरदुरी थी।",
@@ -12225,6 +12401,22 @@
    "src": "made"
   }
  ],
+ "w|ग़ज़ल": [
+  {
+   "text": "लंबी सुनवाई के बाद रवि घर पर पुरानी ग़ज़ल सुनकर थकान उतारता है।",
+   "en": "After a long hearing, Ravi unwinds at home listening to an old ghazal.",
+   "ko": "긴 재판이 끝나면 라비는 집에서 옛 가잘을 들으며 피로를 풀어요.",
+   "blank": "ग़ज़ल",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दुकान के रेडियो पर अक्सर कोई पुरानी ग़ज़ल बजती रहती है।",
+   "en": "Some old ghazal is often playing on the radio in Anjali's shop.",
+   "ko": "안잘리 약국 라디오에서는 옛 가잘이 자주 흘러나와요.",
+   "blank": "ग़ज़ल",
+   "src": "made"
+  }
+ ],
  "w|गंजा": [
   {
    "text": "गवाह ने बताया कि चोर गंजा था और उसने लाल शर्ट पहनी थी।",
@@ -12507,6 +12699,22 @@
    "en": "Bathe with hot water.",
    "ko": "뜨거운 물로 씻어.",
    "blank": "गरम"
+  }
+ ],
+ "w|गरिमा": [
+  {
+   "text": "जज ने कहा कि अदालत की गरिमा का सम्मान हर हाल में होना चाहिए।",
+   "en": "The judge said the dignity of the court must be respected at all costs.",
+   "ko": "판사는 어떤 경우에도 법정의 품위를 지켜야 한다고 했어요.",
+   "blank": "गरिमा",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि हर ग्राहक की गरिमा का ध्यान रखती है और बीमारी के बारे में धीरे से पूछती है।",
+   "en": "Anjali respects every customer's dignity and asks about their illness quietly.",
+   "ko": "안잘리는 손님마다 체면을 지켜 주며 병에 대해 조용히 물어요.",
+   "blank": "गरिमा",
+   "src": "made"
   }
  ],
  "w|गरीब": [
@@ -18075,6 +18283,22 @@
    "blank": "जाति"
   }
  ],
+ "w|जातिवाद": [
+  {
+   "text": "रवि ने जातिवाद के कारण नौकरी से निकाले गए एक कर्मचारी का केस जीता।",
+   "en": "Ravi won the case of an employee dismissed because of casteism.",
+   "ko": "라비는 카스트 차별로 해고된 직원의 소송에서 이겼어요.",
+   "blank": "जातिवाद",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दुकान में जातिवाद की कोई जगह नहीं, सबसे एक जैसा बर्ताव होता है।",
+   "en": "There is no place for casteism in Anjali's shop; everyone is treated the same.",
+   "ko": "안잘리네 약국에서는 카스트 차별 없이 모두를 똑같이 대해요.",
+   "blank": "जातिवाद",
+   "src": "made"
+  }
+ ],
  "w|जादू": [
   {
    "text": "बच्चों को जादू का शो बहुत अच्छा लगा।",
@@ -18247,6 +18471,22 @@
    "en": "The police caught a spy.",
    "ko": "경찰이 스파이 한 명을 잡았어.",
    "blank": "जासूस"
+  }
+ ],
+ "w|ज़ाहिर": [
+  {
+   "text": "गवाह की घबराहट से ज़ाहिर था कि वह कुछ छिपा रहा है।",
+   "en": "It was obvious from the witness's nervousness that he was hiding something.",
+   "ko": "증인이 허둥대는 걸 보니 뭔가 숨기고 있는 게 뻔했어요.",
+   "blank": "ज़ाहिर",
+   "src": "made"
+  },
+  {
+   "text": "ग्राहक की लाल आँखों से ज़ाहिर था कि उसे एलर्जी है।",
+   "en": "It was obvious from the customer's red eyes that he had an allergy.",
+   "ko": "손님 눈이 빨간 걸 보니 알레르기가 있는 게 분명했어요.",
+   "blank": "ज़ाहिर",
+   "src": "made"
   }
  ],
  "w|ज़िक्र": [
@@ -22319,6 +22559,22 @@
    "src": "made"
   }
  ],
+ "w|तृतीय": [
+  {
+   "text": "रवि ने कहा कि मामले के तृतीय पक्ष को भी सुना जाना चाहिए।",
+   "en": "Ravi said the third party in the case should also be heard.",
+   "ko": "라비는 사건의 제삼자 이야기도 들어야 한다고 했어요.",
+   "blank": "तृतीय",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दुकान बाज़ार की तृतीय गली में है।",
+   "en": "Anjali's shop is in the third lane of the market.",
+   "ko": "안잘리네 가게는 시장 셋째 골목에 있어요.",
+   "blank": "तृतीय",
+   "src": "made"
+  }
+ ],
  "w|तेईस": [
   {
    "text": "इस महीने तेईस छुट्टियाँ नहीं हैं।",
@@ -22345,6 +22601,22 @@
    "en": "The trees are shaking in the strong wind.",
    "ko": "센 바람에 나무들이 흔들리고 있어.",
    "blank": "तेज़"
+  }
+ ],
+ "w|तेजस्वी": [
+  {
+   "text": "रवि की एक तेजस्वी जूनियर ने कठिन केस का हल ढूँढ निकाला।",
+   "en": "One of Ravi's brilliant juniors found the solution to a difficult case.",
+   "ko": "라비의 똑똑한 후배 한 명이 어려운 사건의 실마리를 찾아냈어요.",
+   "blank": "तेजस्वी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की बेटी बहुत तेजस्वी है और डॉक्टर बनना चाहती है।",
+   "en": "Anjali's daughter is very bright and wants to become a doctor.",
+   "ko": "안잘리 딸은 아주 총명해서 의사가 되고 싶어 해요.",
+   "blank": "तेजस्वी",
+   "src": "made"
   }
  ],
  "w|तेज़ी": [
@@ -22669,6 +22941,22 @@
    "en": "Put oil on dry skin.",
    "ko": "건조한 피부에 기름을 발라.",
    "blank": "त्वचा"
+  }
+ ],
+ "w|त्वरित": [
+  {
+   "text": "रवि ने ज़मानत के मामले में त्वरित सुनवाई की माँग की।",
+   "en": "Ravi asked for a speedy hearing in the bail matter.",
+   "ko": "라비는 보석 사건을 빨리 심리해 달라고 요청했어요.",
+   "blank": "त्वरित",
+   "src": "made"
+  },
+  {
+   "text": "बुख़ार में त्वरित राहत के लिए अंजलि ने ठंडी पट्टी रखने की सलाह दी।",
+   "en": "For quick relief from fever, Anjali advised applying a cold compress.",
+   "ko": "안잘리는 열을 빨리 내리려면 찬 수건을 올리라고 권했어요.",
+   "blank": "त्वरित",
+   "src": "made"
   }
  ],
  "w|थकना": [
@@ -24394,6 +24682,22 @@
    "en": "I have to go over this lesson again.",
    "ko": "이 과를 복습해야 해요.",
    "blank": "दुहराना",
+   "src": "made"
+  }
+ ],
+ "w|दूत": [
+  {
+   "text": "विदेश से आए एक दूत के वीज़ा मामले की सुनवाई रवि की अदालत में हुई।",
+   "en": "The visa case of an envoy from abroad was heard in Ravi's court.",
+   "ko": "외국에서 온 사절의 비자 사건이 라비가 맡은 법정에서 심리됐어요.",
+   "blank": "दूत",
+   "src": "made"
+  },
+  {
+   "text": "एक कंपनी का दूत नई दवाओं के नमूने लेकर अंजलि के पास आया।",
+   "en": "A company's representative came to Anjali with samples of new medicines.",
+   "ko": "제약 회사 직원이 신약 견본을 들고 안잘리를 찾아왔어요.",
+   "blank": "दूत",
    "src": "made"
   }
  ],
@@ -27015,6 +27319,22 @@
    "src": "made"
   }
  ],
+ "w|निकाह": [
+  {
+   "text": "रवि ने एक ऐसे जोड़े का केस लड़ा जिनके निकाह को परिवार ने मानने से इनकार किया था।",
+   "en": "Ravi fought the case of a couple whose nikah the family had refused to accept.",
+   "ko": "라비는 가족이 결혼을 인정하지 않은 부부의 사건을 맡았어요.",
+   "blank": "निकाह",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की सहेली के निकाह में जाने के लिए उसने दुकान जल्दी बंद की।",
+   "en": "Anjali closed the shop early to go to her friend's nikah.",
+   "ko": "안잘리는 친구 결혼식에 가려고 약국 문을 일찍 닫았어요.",
+   "blank": "निकाह",
+   "src": "made"
+  }
+ ],
  "w|निगम": [
   {
    "text": "नगर निगम के ख़िलाफ़ सड़क के गड्ढों का मुक़दमा चल रहा है।",
@@ -27389,6 +27709,22 @@
    "src": "made"
   }
  ],
+ "w|निर्दोष": [
+  {
+   "text": "सालों की सुनवाई के बाद अदालत ने उस बुज़ुर्ग को निर्दोष ठहराया।",
+   "en": "After years of hearings the court declared the old man innocent.",
+   "ko": "몇 년의 재판 끝에 법원은 그 노인을 무죄로 판결했어요.",
+   "blank": "निर्दोष",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के पास नक़ली दवा मिली, पर जाँच में वह निर्दोष साबित हुई क्योंकि माल कंपनी से ही ग़लत आया था।",
+   "en": "Fake medicine was found at Anjali's, but she was proved innocent since the stock had come wrong from the company itself.",
+   "ko": "안잘리 약국에서 가짜 약이 나왔지만, 회사에서부터 잘못 온 물건이라 조사에서 무죄로 밝혀졌어요.",
+   "blank": "निर्दोष",
+   "src": "made"
+  }
+ ],
  "w|निर्धारित": [
   {
    "text": "हर शिफ़्ट का समय पहले से निर्धारित होता है।",
@@ -27510,6 +27846,22 @@
    "en": "On election day the site stayed closed so everyone could vote.",
    "ko": "선거일에는 모두 투표할 수 있게 현장이 문을 닫았어요.",
    "blank": "निर्वाचन",
+   "src": "made"
+  }
+ ],
+ "w|निर्वाचन क्षेत्र": [
+  {
+   "text": "चुनाव से जुड़े एक केस में रवि ने एक निर्वाचन क्षेत्र के मतदाताओं की ओर से बहस की।",
+   "en": "In an election-related case, Ravi argued on behalf of a constituency's voters.",
+   "ko": "라비는 선거 관련 소송에서 한 선거구 유권자들을 대변했어요.",
+   "blank": "निर्वाचन क्षेत्र",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के निर्वाचन क्षेत्र में एक नया सरकारी अस्पताल बन रहा है।",
+   "en": "A new government hospital is being built in Anjali's constituency.",
+   "ko": "안잘리가 사는 선거구에 새 공립 병원이 지어지고 있어요.",
+   "blank": "निर्वाचन क्षेत्र",
    "src": "made"
   }
  ],
@@ -28161,6 +28513,22 @@
    "en": "The judge delivered justice.",
    "ko": "판사가 정의를 실현했어.",
    "blank": "न्याय"
+  }
+ ],
+ "w|न्यायपालिका": [
+  {
+   "text": "रवि का मानना है कि आम आदमी का भरोसा ही न्यायपालिका की ताक़त है।",
+   "en": "Ravi believes the common man's trust is the strength of the judiciary.",
+   "ko": "라비는 보통 사람들의 믿음이 사법부의 힘이라고 생각해요.",
+   "blank": "न्यायपालिका",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने अख़बार में पढ़ा कि न्यायपालिका ने नक़ली दवाएँ बेचने वालों को कड़ी सज़ा देने की बात कही है।",
+   "en": "Anjali read in the paper that the judiciary has spoken of harsh punishment for those selling fake medicines.",
+   "ko": "안잘리는 사법부가 가짜 약을 파는 사람들을 엄히 처벌하겠다고 했다는 기사를 읽었어요.",
+   "blank": "न्यायपालिका",
+   "src": "made"
   }
  ],
  "w|न्यायाधीश": [
@@ -29193,6 +29561,22 @@
    "en": "It rained the day before yesterday.",
    "ko": "그저께 비가 왔어.",
    "blank": "परसों"
+  }
+ ],
+ "w|परस्पर": [
+  {
+   "text": "दोनों पक्षों ने परस्पर सहमति से झगड़ा अदालत के बाहर सुलझा लिया।",
+   "en": "Both parties resolved the dispute out of court by mutual agreement.",
+   "ko": "양측은 서로 합의해서 다툼을 법정 밖에서 해결했어요.",
+   "blank": "परस्पर",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बताया कि ये दोनों दवाएँ परस्पर असर डाल सकती हैं, इसलिए साथ न लें।",
+   "en": "Anjali said these two medicines can interact with each other, so don't take them together.",
+   "ko": "안잘리는 이 두 약이 서로 영향을 줄 수 있으니 같이 먹지 말라고 했어요.",
+   "blank": "परस्पर",
+   "src": "made"
   }
  ],
  "w|पराजित": [
@@ -32337,6 +32721,22 @@
    "blank": "प्रतियोगिता"
   }
  ],
+ "w|प्रतिरोध": [
+  {
+   "text": "सरकार के फ़ैसले के प्रतिरोध में कई संगठनों ने अदालत में याचिका दी।",
+   "en": "Many organisations petitioned the court in resistance to the government's decision.",
+   "ko": "여러 단체가 정부 결정에 맞서 법원에 청원을 냈어요.",
+   "blank": "प्रतिरोध",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बताया कि ज़्यादा एंटीबायोटिक लेने से शरीर में प्रतिरोध पैदा हो जाता है।",
+   "en": "Anjali explained that taking too many antibiotics builds up resistance in the body.",
+   "ko": "안잘리는 항생제를 너무 많이 먹으면 몸에 내성이 생긴다고 설명했어요.",
+   "blank": "प्रतिरोध",
+   "src": "made"
+  }
+ ],
  "w|प्रतिशत": [
   {
    "text": "छूट का प्रतिशत बोर्ड पर लिखा है।",
@@ -32519,6 +32919,22 @@
    "blank": "प्रदर्शन"
   }
  ],
+ "w|प्रदर्शनी": [
+  {
+   "text": "अदालत के गलियारे में संविधान के इतिहास पर एक प्रदर्शनी लगी है।",
+   "en": "An exhibition on the history of the constitution has been set up in the court corridor.",
+   "ko": "법원 복도에 헌법의 역사에 관한 전시회가 열려 있어요.",
+   "blank": "प्रदर्शनी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने स्वास्थ्य मेले की प्रदर्शनी में आयुर्वेदिक जड़ी-बूटियाँ दिखाईं।",
+   "en": "Anjali showed Ayurvedic herbs at the health fair exhibition.",
+   "ko": "안잘리는 건강 박람회 전시에서 아유르베다 약초를 선보였어요.",
+   "blank": "प्रदर्शनी",
+   "src": "made"
+  }
+ ],
  "w|प्रदर्शित": [
   {
    "text": "न्यूज़रूम की बड़ी स्क्रीन पर चुनाव के नतीजे प्रदर्शित हो रहे थे।",
@@ -32636,6 +33052,22 @@
    "en": "Neha's mother handles the management of the village homestay.",
    "ko": "마을 민박 운영은 네하의 엄마가 맡고 있어요.",
    "blank": "प्रबंधन",
+   "src": "made"
+  }
+ ],
+ "w|प्रबल": [
+  {
+   "text": "रवि के पास अपने मुवक्किल के पक्ष में प्रबल सबूत थे।",
+   "en": "Ravi had strong evidence in his client's favour.",
+   "ko": "라비에게는 의뢰인에게 유리한 강력한 증거가 있었어요.",
+   "blank": "प्रबल",
+   "src": "made"
+  },
+  {
+   "text": "इस दवा की गंध इतनी प्रबल है कि अंजलि उसे अलग डिब्बे में रखती है।",
+   "en": "This medicine's smell is so strong that Anjali keeps it in a separate box.",
+   "ko": "이 약은 냄새가 너무 강해서 안잘리는 따로 상자에 둬요.",
+   "blank": "प्रबल",
    "src": "made"
   }
  ],
@@ -34798,6 +35230,22 @@
    "en": "Meena wore a cap and sunglasses for protection from the sun.",
    "ko": "미나는 햇볕을 피하려고 모자를 쓰고 선글라스를 꼈어요.",
    "blank": "बचाव",
+   "src": "made"
+  }
+ ],
+ "w|बचाव करना": [
+  {
+   "text": "वकील रवि ने अदालत में अपने मुवक्किल का पूरे दम से बचाव किया।",
+   "en": "Lawyer Ravi defended his client in court with all his might.",
+   "ko": "변호사 라비는 법정에서 의뢰인을 온 힘을 다해 변호했어요.",
+   "blank": "बचाव किया",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने ग्राहक को समझाया कि यह क्रीम धूप से त्वचा का बचाव करती है।",
+   "en": "Anjali explained to the customer that this cream protects the skin from the sun.",
+   "ko": "안잘리는 손님에게 이 크림이 햇볕으로부터 피부를 보호해 준다고 설명했어요.",
+   "blank": "बचाव करती",
    "src": "made"
   }
  ],
@@ -37473,6 +37921,22 @@
    "en": "He was never unfaithful to his promise.",
    "ko": "그는 약속에 한 번도 배신하지 않았어.",
    "blank": "बेवफ़ा"
+  }
+ ],
+ "w|बेशक": [
+  {
+   "text": "रवि बोला कि बेशक यह मुश्किल केस है, पर हम हारेंगे नहीं।",
+   "en": "Ravi said that of course this is a tough case, but we won't lose.",
+   "ko": "라비는 물론 어려운 사건이지만 지지 않을 거라고 했어요.",
+   "blank": "बेशक",
+   "src": "made"
+  },
+  {
+   "text": "बेशक यह दवा महँगी है, पर इसका असर जल्दी होता है।",
+   "en": "Of course this medicine is expensive, but it works quickly.",
+   "ko": "물론 이 약은 비싸지만 효과가 빨라요.",
+   "blank": "बेशक",
+   "src": "made"
   }
  ],
  "w|बेशर्म": [
@@ -41671,6 +42135,22 @@
    "blank": "मीडिया"
   }
  ],
+ "w|मुआवज़ा": [
+  {
+   "text": "अदालत ने किसानों को उनकी ज़मीन के बदले उचित मुआवज़ा देने का आदेश दिया।",
+   "en": "The court ordered that the farmers be given fair compensation for their land.",
+   "ko": "법원은 농민들에게 땅값으로 정당한 보상금을 주라고 명령했어요.",
+   "blank": "मुआवज़ा",
+   "src": "made"
+  },
+  {
+   "text": "बाढ़ में अंजलि की दुकान का सामान ख़राब हुआ, तो सरकार से मुआवज़ा मिला।",
+   "en": "When the flood damaged the goods in Anjali's shop, she got compensation from the government.",
+   "ko": "홍수로 약국 물건이 망가져서 안잘리는 정부에서 보상금을 받았어요.",
+   "blank": "मुआवज़ा",
+   "src": "made"
+  }
+ ],
  "w|मुकदमा": [
   {
    "text": "ज़मीन को लेकर मुकदमा चल रहा है।",
@@ -44747,6 +45227,22 @@
    "blank": "रुक"
   }
  ],
+ "w|रुख़": [
+  {
+   "text": "गवाह के बयान के बाद जज का रुख़ थोड़ा नरम हो गया।",
+   "en": "After the witness's statement, the judge's stance softened a little.",
+   "ko": "증인 진술이 끝나자 판사의 태도가 조금 누그러졌어요.",
+   "blank": "रुख़",
+   "src": "made"
+  },
+  {
+   "text": "बिना पर्चे की दवा माँगने वालों के प्रति अंजलि का रुख़ सख़्त है।",
+   "en": "Anjali takes a strict stance toward those who ask for medicine without a prescription.",
+   "ko": "안잘리는 처방전 없이 약을 달라는 사람들에게 단호해요.",
+   "blank": "रुख़",
+   "src": "made"
+  }
+ ],
  "w|रुपया": [
   {
    "text": "सब्ज़ी वाले को रुपया दे आना।",
@@ -45633,6 +46129,22 @@
    "src": "made"
   }
  ],
+ "w|लाजवाब": [
+  {
+   "text": "अदालत के बाहर की चाय लाजवाब है, रवि रोज़ वहीं पीता है।",
+   "en": "The tea outside the court is superb; Ravi drinks it there every day.",
+   "ko": "법원 밖 차가 기막히게 맛있어서 라비는 매일 거기서 마셔요.",
+   "blank": "लाजवाब",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की माँ का बनाया अदरक का काढ़ा लाजवाब होता है।",
+   "en": "The ginger decoction Anjali's mother makes is superb.",
+   "ko": "안잘리 엄마가 끓인 생강차는 기막히게 좋아요.",
+   "blank": "लाजवाब",
+   "src": "made"
+  }
+ ],
  "w|लाठी": [
   {
    "text": "काँच के बक्से में एक संत की बाँस की लाठी रखी है।",
@@ -45709,6 +46221,22 @@
    "en": "My son has brought fruit.",
    "ko": "아들이 과일을 가져왔어.",
    "blank": "लाया"
+  }
+ ],
+ "w|लापरवाही": [
+  {
+   "text": "रवि ने दलील दी कि हादसा ड्राइवर की लापरवाही से हुआ था।",
+   "en": "Ravi argued that the accident happened due to the driver's negligence.",
+   "ko": "라비는 사고가 운전자의 부주의로 일어났다고 주장했어요.",
+   "blank": "लापरवाही",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि कहती है कि दवा लेने में लापरवाही भारी पड़ सकती है।",
+   "en": "Anjali says carelessness in taking medicine can cost you dearly.",
+   "ko": "안잘리는 약을 대충 먹으면 큰코다칠 수 있다고 말해요.",
+   "blank": "लापरवाही",
+   "src": "made"
   }
  ],
  "w|लाभ": [
@@ -48437,6 +48965,22 @@
    "en": "Be sure to drink water after exercise.",
    "ko": "운동 후에는 꼭 물을 마셔.",
    "blank": "व्यायाम"
+  }
+ ],
+ "w|व्यास": [
+  {
+   "text": "सबूत के तौर पर रवि ने एक पाइप दिखाया जिसका व्यास बहुत छोटा था।",
+   "en": "As evidence, Ravi showed a pipe whose diameter was very small.",
+   "ko": "라비는 증거로 지름이 아주 작은 관을 보여 줬어요.",
+   "blank": "व्यास",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने बताया कि इस गोली का व्यास छोटा है, इसलिए निगलना आसान है।",
+   "en": "Anjali said this pill's diameter is small, so it's easy to swallow.",
+   "ko": "안잘리는 이 알약은 지름이 작아서 삼키기 쉽다고 했어요.",
+   "blank": "व्यास",
+   "src": "made"
   }
  ],
  "w|व्रत": [
@@ -51647,6 +52191,22 @@
    "blank": "समाज"
   }
  ],
+ "w|समाजवाद": [
+  {
+   "text": "रवि के प्रोफ़ेसर समाजवाद और क़ानून के रिश्ते पर किताब लिख रहे हैं।",
+   "en": "Ravi's professor is writing a book on the relationship between socialism and law.",
+   "ko": "라비의 교수님은 사회주의와 법의 관계에 관한 책을 쓰고 있어요.",
+   "blank": "समाजवाद",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के दादाजी समाजवाद में विश्वास रखते थे और ग़रीबों को मुफ़्त दवा देते थे।",
+   "en": "Anjali's grandfather believed in socialism and gave free medicine to the poor.",
+   "ko": "안잘리 할아버지는 사회주의를 믿어서 가난한 사람들에게 약을 공짜로 주셨어요.",
+   "blank": "समाजवाद",
+   "src": "made"
+  }
+ ],
  "w|समाधान": [
   {
    "text": "हर समस्या का कोई समाधान होता है।",
@@ -53719,6 +54279,22 @@
    "blank": "साहित्य"
   }
  ],
+ "w|साहित्यिक": [
+  {
+   "text": "रवि ख़ाली समय में साहित्यिक पत्रिकाएँ पढ़ना पसंद करता है।",
+   "en": "In his free time Ravi likes reading literary magazines.",
+   "ko": "라비는 한가할 때 문학잡지 읽기를 좋아해요.",
+   "blank": "साहित्यिक",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के पति एक साहित्यिक संस्था में किताबों का संपादन करते हैं।",
+   "en": "Anjali's husband edits books at a literary society.",
+   "ko": "안잘리 남편은 문학 단체에서 책을 편집해요.",
+   "blank": "साहित्यिक",
+   "src": "made"
+  }
+ ],
  "w|साही": [
   {
    "text": "रात में एक साही आई और शकरकंद की क्यारी खोद गई।",
@@ -54050,6 +54626,22 @@
    "en": "I need to have these trousers taken in.",
    "ko": "이 바지를 줄여야 해요.",
    "blank": "सिलवानी",
+   "src": "made"
+  }
+ ],
+ "w|सिलसिला": [
+  {
+   "text": "सुबह से गवाहियों का सिलसिला शाम तक चलता रहा।",
+   "en": "The series of testimonies went on from morning until evening.",
+   "ko": "증언은 아침부터 저녁까지 줄줄이 이어졌어요.",
+   "blank": "सिलसिला",
+   "src": "made"
+  },
+  {
+   "text": "सर्दी शुरू होते ही खाँसी की दवा माँगने वालों का सिलसिला शुरू हो जाता है।",
+   "en": "As soon as winter starts, a stream of people asking for cough syrup begins.",
+   "ko": "겨울이 시작되자마자 기침약을 찾는 손님이 줄을 이어요.",
+   "blank": "सिलसिला",
    "src": "made"
   }
  ],
@@ -54748,6 +55340,22 @@
    "en": "On pleasant mountain mornings, Neha walks among the cedar trees.",
    "ko": "상쾌한 산골 아침에 네하는 삼나무 사이를 거닐어요.",
    "blank": "सुहानी",
+   "src": "made"
+  }
+ ],
+ "w|सूक्ष्म": [
+  {
+   "text": "रवि ने दस्तावेज़ के एक सूक्ष्म अंतर पर जज का ध्यान खींचा।",
+   "en": "Ravi drew the judge's attention to a subtle difference in the document.",
+   "ko": "라비는 서류의 미묘한 차이를 판사에게 짚어 보였어요.",
+   "blank": "सूक्ष्म",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने लेंस से दवा की पट्टी पर छपे सूक्ष्म अक्षर पढ़े।",
+   "en": "Anjali read the tiny letters printed on the medicine strip with a lens.",
+   "ko": "안잘리는 돋보기로 약 포장에 찍힌 아주 작은 글씨를 읽었어요.",
+   "blank": "सूक्ष्म",
    "src": "made"
   }
  ],
@@ -55499,6 +56107,22 @@
    "en": "Increase the stock of woolens before winter.",
    "ko": "겨울 전에 털옷 재고를 늘려.",
    "blank": "स्टॉक"
+  }
+ ],
+ "w|स्तंभ": [
+  {
+   "text": "अदालत के बड़े हॉल के बीच में पत्थर का एक ऊँचा स्तंभ खड़ा है।",
+   "en": "A tall stone pillar stands in the middle of the court's great hall.",
+   "ko": "법원 대강당 한가운데에 높은 돌기둥 하나가 서 있어요.",
+   "blank": "स्तंभ",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने अख़बार के स्वास्थ्य स्तंभ में सर्दी से बचने के उपाय लिखे।",
+   "en": "Anjali wrote tips on avoiding colds in the newspaper's health column.",
+   "ko": "안잘리는 신문 건강 칼럼에 감기 예방법을 썼어요.",
+   "blank": "स्तंभ",
+   "src": "made"
   }
  ],
  "w|स्तर": [
@@ -56639,6 +57263,22 @@
    "en": "A turmeric stain does not come off easily.",
    "ko": "강황 얼룩은 쉽게 안 빠져.",
    "blank": "हल्दी"
+  }
+ ],
+ "w|हवन": [
+  {
+   "text": "अदालत की नई इमारत के उद्घाटन से पहले वहाँ एक हवन रखा गया।",
+   "en": "A havan was held at the new court building before its inauguration.",
+   "ko": "새 법원 건물 개관을 앞두고 그곳에서 불 공양 의식을 치렀어요.",
+   "blank": "हवन",
+   "src": "made"
+  },
+  {
+   "text": "नई दुकान खुलने के दिन अंजलि के परिवार ने सुबह हवन किया।",
+   "en": "On the day the new shop opened, Anjali's family performed a havan in the morning.",
+   "ko": "새 가게를 연 날 아침 안잘리 가족은 불 공양 의식을 치렀어요.",
+   "blank": "हवन",
+   "src": "made"
   }
  ],
  "w|हवा": [

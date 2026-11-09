@@ -1083,6 +1083,22 @@
    "src": "made"
   }
  ],
+ "w|administrar": [
+  {
+   "text": "Agora o Bruno ajuda a administrar o estoque, além de cozinhar.",
+   "en": "Now Bruno helps manage the stock, besides cooking.",
+   "ko": "이제 브루누는 요리 말고도 재고 관리를 도와요.",
+   "blank": "administrar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia montou uma planilha para administrar os gastos da mudança.",
+   "en": "Sofia made a spreadsheet to manage the moving costs.",
+   "ko": "소피아는 이사 비용을 관리하려고 표를 만들었어요.",
+   "blank": "administrar",
+   "src": "made"
+  }
+ ],
  "w|admirar": [
   {
    "text": "Não é de admirar que as pessoas bebam.",
@@ -1283,6 +1299,22 @@
    "ko": "그건 우리 경제에 영향을 줄 거예요.",
    "blank": "afetar",
    "src": "tatoeba:5595138/Ricardo14 en:4529504/CK"
+  }
+ ],
+ "w|afiado": [
+  {
+   "text": "Uma faca bem afiada é mais segura do que uma cega, repete o Bruno.",
+   "en": "A well-sharpened knife is safer than a dull one, Bruno repeats.",
+   "ko": "잘 드는 칼이 무딘 칼보다 안전하다고 브루누는 되풀이해요.",
+   "blank": "afiada",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia cortou a fita das caixas com um estilete afiado.",
+   "en": "Sofia cut the tape on the boxes with a sharp box cutter.",
+   "ko": "소피아는 날카로운 커터칼로 상자 테이프를 잘랐어요.",
+   "blank": "afiado",
+   "src": "made"
   }
  ],
  "w|afinal": [
@@ -3803,6 +3835,22 @@
    "en": "I'll be back after the meeting.",
    "ko": "회의 끝나고 돌아올게.",
    "blank": "após"
+  }
+ ],
+ "w|aposentado": [
+  {
+   "text": "O antigo chef, já aposentado, ainda passa para provar o feijão do Bruno.",
+   "en": "The old chef, now retired, still drops by to taste Bruno's beans.",
+   "ko": "이미 은퇴한 옛 주방장은 아직도 브루누의 콩 요리를 맛보러 들러요.",
+   "blank": "aposentado",
+   "src": "made"
+  },
+  {
+   "text": "O novo vizinho da Sofia é um professor aposentado que adora plantas.",
+   "en": "Sofia's new neighbor is a retired teacher who loves plants.",
+   "ko": "소피아의 새 이웃은 식물을 아주 좋아하는 은퇴한 선생님이에요.",
+   "blank": "aposentado",
+   "src": "made"
   }
  ],
  "w|aposentar": [
@@ -7581,6 +7629,22 @@
    "src": "made"
   }
  ],
+ "w|blefar": [
+  {
+   "text": "No jogo de cartas depois do turno, o Bruno adora blefar com os colegas.",
+   "en": "In the card game after the shift, Bruno loves to bluff with his coworkers.",
+   "ko": "근무 뒤 카드 게임에서 브루누는 동료들에게 허세 부리는 걸 좋아해요.",
+   "blank": "blefar",
+   "src": "made"
+  },
+  {
+   "text": "O dono queria cobrar mais, mas a Sofia percebeu que ele estava só blefando.",
+   "en": "The owner wanted to charge more, but Sofia realized he was only bluffing.",
+   "ko": "집주인이 더 받으려 했지만 소피아는 그게 허세라는 걸 알아챘어요.",
+   "blank": "blefando",
+   "src": "made"
+  }
+ ],
  "w|bloco": [
   {
    "text": "No carnaval, o Pedro sai fantasiado num bloco de rua com o elenco.",
@@ -7975,6 +8039,22 @@
    "en": "What a lovely day today.",
    "ko": "오늘 날씨 정말 좋다.",
    "blank": "bonito"
+  }
+ ],
+ "w|bônus": [
+  {
+   "text": "No Natal, a equipe do Bruno ganhou um bônus pelo movimento recorde.",
+   "en": "At Christmas, Bruno's team got a bonus for the record business.",
+   "ko": "크리스마스에 브루누 팀은 손님이 최고로 많았던 덕에 보너스를 받았어요.",
+   "blank": "bônus",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia usou o bônus do trabalho para comprar um sofá novo.",
+   "en": "Sofia used her work bonus to buy a new sofa.",
+   "ko": "소피아는 회사 보너스로 새 소파를 샀어요.",
+   "blank": "bônus",
+   "src": "made"
   }
  ],
  "w|borboleta": [
@@ -10021,6 +10101,22 @@
    "ko": "학교까지 태워 줄 사람이 필요해요.",
    "blank": "carona",
    "src": "tatoeba:4899637/bill en:2387464/CK"
+  }
+ ],
+ "w|carregado": [
+  {
+   "text": "O caminhão chegou carregado de legumes, e o Bruno conferiu caixa por caixa.",
+   "en": "The truck arrived loaded with vegetables, and Bruno checked box by box.",
+   "ko": "채소를 가득 실은 트럭이 오자 브루누는 상자마다 확인했어요.",
+   "blank": "carregado",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia subiu a escada carregada de sacolas e chegou sem fôlego.",
+   "en": "Sofia climbed the stairs loaded with bags and arrived out of breath.",
+   "ko": "소피아는 봉투를 잔뜩 들고 계단을 올라 숨이 찼어요.",
+   "blank": "carregada",
+   "src": "made"
   }
  ],
  "w|carregar": [
@@ -12485,6 +12581,22 @@
    "blank": "colou"
   }
  ],
+ "w|colateral": [
+  {
+   "text": "A falta de gás teve um efeito colateral: o Bruno teve que mudar o cardápio inteiro.",
+   "en": "The gas shortage had a side effect: Bruno had to change the whole menu.",
+   "ko": "가스가 떨어진 탓에 생긴 부작용으로 브루누는 메뉴 전체를 바꿔야 했어요.",
+   "blank": "colateral",
+   "src": "made"
+  },
+  {
+   "text": "Um dano colateral da mudança foi a Sofia perder a chave da bicicleta.",
+   "en": "One side effect of the move was Sofia losing her bike key.",
+   "ko": "이사의 부수적 피해로 소피아는 자전거 열쇠를 잃어버렸어요.",
+   "blank": "colateral",
+   "src": "made"
+  }
+ ],
  "w|colchão": [
   {
    "text": "O Pedro carregou o colchão novo pela escada porque o elevador estava parado.",
@@ -14477,6 +14589,22 @@
    "src": "made"
   }
  ],
+ "w|constar": [
+  {
+   "text": "O nome do Bruno vai constar no cardápio ao lado do prato que ele criou.",
+   "en": "Bruno's name will appear on the menu next to the dish he created.",
+   "ko": "브루누의 이름은 그가 만든 요리 옆에 메뉴판에 올라갈 거예요.",
+   "blank": "constar",
+   "src": "made"
+  },
+  {
+   "text": "O endereço novo da Sofia ainda não passou a constar no cadastro do banco.",
+   "en": "Sofia's new address doesn't appear in the bank's records yet.",
+   "ko": "소피아의 새 주소는 아직 은행 기록에 올라가지 않았어요.",
+   "blank": "constar",
+   "src": "made"
+  }
+ ],
  "w|constituição": [
   {
    "text": "Uma cópia da primeira constituição do país fica na sala de história.",
@@ -15319,6 +15447,22 @@
    "blank": "corpo"
   }
  ],
+ "w|corporação": [
+  {
+   "text": "Uma grande corporação ofereceu ao Bruno um emprego, mas ele prefere a cozinha pequena.",
+   "en": "A big corporation offered Bruno a job, but he prefers the small kitchen.",
+   "ko": "큰 기업이 브루누에게 일자리를 제안했지만, 브루누는 작은 주방이 더 좋아요.",
+   "blank": "corporação",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia saiu de uma corporação enorme e agora trabalha perto de casa.",
+   "en": "Sofia left a huge corporation and now works close to home.",
+   "ko": "소피아는 큰 기업을 그만두고 이제 집 근처에서 일해요.",
+   "blank": "corporação",
+   "src": "made"
+  }
+ ],
  "w|corredor": [
   {
    "text": "Vocês não podem falar no corredor.",
@@ -15425,6 +15569,22 @@
    "en": "This is the right route.",
    "ko": "맞는 길은 이거야.",
    "blank": "correta"
+  }
+ ],
+ "w|corretor": [
+  {
+   "text": "O dono do restaurante falou com um corretor para alugar um segundo ponto.",
+   "en": "The restaurant owner talked to a broker about renting a second location.",
+   "ko": "식당 주인은 두 번째 가게를 빌리려고 중개인과 이야기했어요.",
+   "blank": "corretor",
+   "src": "made"
+  },
+  {
+   "text": "Foi um corretor de imóveis que mostrou o apartamento para a Sofia.",
+   "en": "It was a real estate agent who showed Sofia the apartment.",
+   "ko": "소피아에게 그 아파트를 보여 준 건 부동산 중개인이었어요.",
+   "blank": "corretor",
+   "src": "made"
   }
  ],
  "w|corrida": [
@@ -16155,6 +16315,22 @@
    "src": "made"
   }
  ],
+ "w|crucial": [
+  {
+   "text": "Para o Bruno, o tempo de descanso da massa é crucial.",
+   "en": "For Bruno, the dough's resting time is crucial.",
+   "ko": "브루누에게는 반죽을 쉬게 하는 시간이 아주 중요해요.",
+   "blank": "crucial",
+   "src": "made"
+  },
+  {
+   "text": "Para a Sofia, foi crucial mudar antes do começo das aulas.",
+   "en": "For Sofia, it was crucial to move before classes started.",
+   "ko": "소피아에게는 개학 전에 이사하는 게 아주 중요했어요.",
+   "blank": "crucial",
+   "src": "made"
+  }
+ ],
  "w|cruel": [
   {
    "text": "Por que é que o mundo é tão cruel comigo?",
@@ -16185,6 +16361,22 @@
    "ko": "더하기 기호는 십자가처럼 생겼어요.",
    "blank": "cruz",
    "src": "tatoeba:7902938/piterkeo en:6759702/swolesuki"
+  }
+ ],
+ "w|cruzado": [
+  {
+   "text": "O Bruno ficou de braços cruzados esperando o forno esquentar.",
+   "en": "Bruno stood with his arms crossed, waiting for the oven to heat up.",
+   "ko": "브루누는 오븐이 데워지길 기다리며 팔짱을 끼고 있었어요.",
+   "blank": "cruzados",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia está de dedos cruzados para o sofá caber na porta da sala.",
+   "en": "Sofia has her fingers crossed that the sofa will fit through the living room door.",
+   "ko": "소피아는 소파가 거실 문을 통과하길 바라며 손가락을 꼬고 있어요.",
+   "blank": "cruzados",
+   "src": "made"
   }
  ],
  "w|cruzar": [
@@ -17175,6 +17367,22 @@
    "blank": "definitivamente"
   }
  ],
+ "w|deitado": [
+  {
+   "text": "O gato do vizinho estava deitado na porta dos fundos quando o Bruno chegou.",
+   "en": "The neighbor's cat was lying at the back door when Bruno arrived.",
+   "ko": "브루누가 도착했을 때 이웃집 고양이가 뒷문 앞에 누워 있었어요.",
+   "blank": "deitado",
+   "src": "made"
+  },
+  {
+   "text": "Na primeira noite, a Sofia dormiu deitada num colchão no chão da sala.",
+   "en": "On the first night, Sofia slept lying on a mattress on the living room floor.",
+   "ko": "첫날 밤 소피아는 거실 바닥 매트리스에 누워 잤어요.",
+   "blank": "deitada",
+   "src": "made"
+  }
+ ],
  "w|deitar": [
   {
    "text": "Eu quero me deitar por alguns minutos.",
@@ -17371,6 +17579,22 @@
    "src": "made"
   }
  ],
+ "w|demitido": [
+  {
+   "text": "O ajudante foi demitido depois de faltar uma semana sem avisar, e o Bruno ficou sozinho.",
+   "en": "The helper was fired after missing a week without notice, and Bruno was left alone.",
+   "ko": "보조가 연락 없이 일주일을 빠져서 해고되자 브루누 혼자 남았어요.",
+   "blank": "demitido",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Sofia foi demitido e veio ajudar com a mudança a semana toda.",
+   "en": "Sofia's brother was laid off and came to help with the move all week.",
+   "ko": "소피아의 오빠는 해고돼서 일주일 내내 이사를 도우러 왔어요.",
+   "blank": "demitido",
+   "src": "made"
+  }
+ ],
  "w|demitir": [
   {
    "text": "Você não pode me demitir, eu me demito!",
@@ -17415,6 +17639,22 @@
    "en": "The movie has a demon in it.",
    "ko": "그 영화에 악마가 나와.",
    "blank": "demônio"
+  }
+ ],
+ "w|demonstração": [
+  {
+   "text": "Na feira gastronômica, o Bruno fez uma demonstração de como abrir ostras.",
+   "en": "At the food fair, Bruno gave a demonstration of how to open oysters.",
+   "ko": "음식 박람회에서 브루누는 굴 까는 법을 시연했어요.",
+   "blank": "demonstração",
+   "src": "made"
+  },
+  {
+   "text": "O vendedor fez uma demonstração do fogão novo antes de a Sofia assinar.",
+   "en": "The salesman gave a demonstration of the new stove before Sofia signed.",
+   "ko": "소피아가 서명하기 전에 판매원이 새 가스레인지를 시연했어요.",
+   "blank": "demonstração",
+   "src": "made"
   }
  ],
  "w|demonstrar": [
@@ -19343,6 +19583,22 @@
    "en": "Do you know how to drive?",
    "ko": "운전할 줄 알아?",
    "blank": "dirigir"
+  }
+ ],
+ "w|disciplina": [
+  {
+   "text": "Na cozinha do Bruno, a disciplina é tão importante quanto o tempero.",
+   "en": "In Bruno's kitchen, discipline is as important as seasoning.",
+   "ko": "브루누의 주방에서는 규율이 양념만큼 중요해요.",
+   "blank": "disciplina",
+   "src": "made"
+  },
+  {
+   "text": "Com muita disciplina, a Sofia abriu dez caixas por dia até terminar.",
+   "en": "With a lot of discipline, Sofia opened ten boxes a day until she was done.",
+   "ko": "소피아는 끝날 때까지 꾸준히 하루에 상자 열 개씩 풀었어요.",
+   "blank": "disciplina",
+   "src": "made"
   }
  ],
  "w|disco": [
@@ -21959,6 +22215,22 @@
    "src": "made"
   }
  ],
+ "w|engenharia": [
+  {
+   "text": "Antes da cozinha, o Bruno estudou engenharia, mas largou tudo pela comida.",
+   "en": "Before the kitchen, Bruno studied engineering, but he gave it all up for food.",
+   "ko": "주방 일 전에 브루누는 공학을 공부했지만 요리 때문에 다 그만뒀어요.",
+   "blank": "engenharia",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia trabalha com engenharia civil, então desenhou ela mesma a planta da casa nova.",
+   "en": "Sofia works in civil engineering, so she drew the floor plan of the new house herself.",
+   "ko": "소피아는 토목 공학 일을 해서 새 집 도면을 직접 그렸어요.",
+   "blank": "engenharia",
+   "src": "made"
+  }
+ ],
  "w|engenheiro": [
   {
    "text": "O engenheiro revisou a planta junto com o Miguel.",
@@ -22403,6 +22675,22 @@
    "src": "tatoeba:10618678/bill en:8946654/sundown"
   }
  ],
+ "w|entrevistar": [
+  {
+   "text": "Uma jornalista veio entrevistar o Bruno sobre o novo cardápio.",
+   "en": "A journalist came to interview Bruno about the new menu.",
+   "ko": "기자가 새 메뉴에 대해 브루누를 인터뷰하러 왔어요.",
+   "blank": "entrevistar",
+   "src": "made"
+  },
+  {
+   "text": "Antes de fechar o contrato, a Sofia quis entrevistar três empresas de mudança.",
+   "en": "Before signing the contract, Sofia wanted to interview three moving companies.",
+   "ko": "계약하기 전에 소피아는 이삿짐 업체 세 곳과 면담하고 싶었어요.",
+   "blank": "entrevistar",
+   "src": "made"
+  }
+ ],
  "w|envelope": [
   {
    "text": "O Rafael colocou o contrato num envelope e levou ao chefe.",
@@ -22615,6 +22903,22 @@
    "en": "I trust the new team.",
    "ko": "새 팀을 믿어.",
    "blank": "equipe"
+  }
+ ],
+ "w|erguer": [
+  {
+   "text": "O Bruno precisou erguer a panela enorme com a ajuda de um colega.",
+   "en": "Bruno had to lift the huge pot with a coworker's help.",
+   "ko": "브루누는 동료의 도움으로 커다란 냄비를 들어 올려야 했어요.",
+   "blank": "erguer",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia e o irmão conseguiram erguer o guarda-roupa sem arranhar o chão.",
+   "en": "Sofia and her brother managed to lift the wardrobe without scratching the floor.",
+   "ko": "소피아와 오빠는 바닥을 긁지 않고 옷장을 들어 올렸어요.",
+   "blank": "erguer",
+   "src": "made"
   }
  ],
  "w|errado": [
@@ -23319,6 +23623,22 @@
    "en": "You mean a lot to me.",
    "ko": "너는 나한테 특별해.",
    "blank": "especial"
+  }
+ ],
+ "w|especialidade": [
+  {
+   "text": "A especialidade do Bruno é peixe assado na folha de bananeira.",
+   "en": "Bruno's specialty is fish roasted in banana leaf.",
+   "ko": "브루누의 주특기는 바나나 잎에 싸서 구운 생선이에요.",
+   "blank": "especialidade",
+   "src": "made"
+  },
+  {
+   "text": "Embalar louça sem quebrar nada é a especialidade da mãe da Sofia.",
+   "en": "Packing dishes without breaking anything is Sofia's mother's specialty.",
+   "ko": "그릇을 하나도 안 깨고 싸는 건 소피아 어머니의 특기예요.",
+   "blank": "especialidade",
+   "src": "made"
   }
  ],
  "w|especialista": [
@@ -29507,6 +29827,22 @@
    "src": "tatoeba:13028315/carlosalberto en:13028357/carlosalberto"
   }
  ],
+ "w|gravador": [
+  {
+   "text": "O dono deixou um gravador na cozinha para registrar as receitas que o Bruno dita.",
+   "en": "The owner left a recorder in the kitchen to record the recipes Bruno dictates.",
+   "ko": "사장은 브루누가 불러 주는 조리법을 녹음하려고 주방에 녹음기를 두었어요.",
+   "blank": "gravador",
+   "src": "made"
+  },
+  {
+   "text": "Entre as caixas, a Sofia achou o velho gravador de fitas do pai.",
+   "en": "Among the boxes, Sofia found her father's old tape recorder.",
+   "ko": "상자들 사이에서 소피아는 아버지의 옛 테이프 녹음기를 찾았어요.",
+   "blank": "gravador",
+   "src": "made"
+  }
+ ],
  "w|gravar": [
   {
    "text": "Espero que você planeje gravar mais.",
@@ -30845,6 +31181,22 @@
    "src": "tatoeba:5073823/markpalmer en:5073487/jhomel"
   }
  ],
+ "w|imenso": [
+  {
+   "text": "Depois do jantar de casamento, o Bruno sentiu um cansaço imenso.",
+   "en": "After the wedding dinner, Bruno felt an immense tiredness.",
+   "ko": "결혼식 만찬이 끝나자 브루누는 엄청난 피로를 느꼈어요.",
+   "blank": "imenso",
+   "src": "made"
+  },
+  {
+   "text": "A varanda da casa nova tem uma vista para um parque imenso, e a Sofia adorou.",
+   "en": "The new house's balcony overlooks a huge park, and Sofia loved it.",
+   "ko": "새 집 베란다에서 큰 공원이 보여서 소피아는 아주 좋아했어요.",
+   "blank": "imenso",
+   "src": "made"
+  }
+ ],
  "w|imigração": [
   {
    "text": "O Lucas foi encaminhado ao setor de imigração da polícia federal.",
@@ -31785,6 +32137,22 @@
    "src": "tatoeba:3964579/carlosalberto en:3312162/CK"
   }
  ],
+ "w|informe": [
+  {
+   "text": "No fim do mês, o Bruno entrega um informe com os gastos da cozinha.",
+   "en": "At the end of the month, Bruno hands in a report with the kitchen expenses.",
+   "ko": "월말에 브루누는 주방 지출을 정리한 보고서를 내요.",
+   "blank": "informe",
+   "src": "made"
+  },
+  {
+   "text": "O síndico pediu à Sofia um informe com os horários da mudança.",
+   "en": "The building manager asked Sofia for a report with the moving times.",
+   "ko": "관리인은 소피아에게 이사 시간을 적은 안내서를 달라고 했어요.",
+   "blank": "informe",
+   "src": "made"
+  }
+ ],
  "w|inglês": [
   {
    "text": "Tenho prova de inglês amanhã.",
@@ -31969,6 +32337,22 @@
    "src": "made"
   }
  ],
+ "w|inscrever": [
+  {
+   "text": "O Bruno quer inscrever a equipe num concurso de culinária regional.",
+   "en": "Bruno wants to sign the team up for a regional cooking contest.",
+   "ko": "브루누는 팀을 지역 요리 대회에 등록하고 싶어 해요.",
+   "blank": "inscrever",
+   "src": "made"
+  },
+  {
+   "text": "Depois de se mudar, a Sofia foi inscrever o filho na escola do bairro novo.",
+   "en": "After moving, Sofia went to enroll her son at the school in the new neighborhood.",
+   "ko": "이사한 뒤 소피아는 아들을 새 동네 학교에 등록하러 갔어요.",
+   "blank": "inscrever",
+   "src": "made"
+  }
+ ],
  "w|inseto": [
   {
    "text": "Eu comi um inseto sem querer.",
@@ -31983,6 +32367,22 @@
    "ko": "벌레 무서워해요?",
    "blank": "inseto",
    "src": "tatoeba:4953857/Noktuo en:4872214/zvzuibqx"
+  }
+ ],
+ "w|insignificante": [
+  {
+   "text": "Para o cliente, aquele detalhe parecia insignificante, mas o Bruno refez o prato.",
+   "en": "To the customer that detail seemed insignificant, but Bruno remade the dish.",
+   "ko": "손님에게는 사소해 보였지만 브루누는 그 요리를 다시 만들었어요.",
+   "blank": "insignificante",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia jogou fora muita coisa insignificante que guardava havia anos.",
+   "en": "Sofia threw away a lot of insignificant stuff she had kept for years.",
+   "ko": "소피아는 몇 년 동안 쌓아 둔 하찮은 물건을 많이 버렸어요.",
+   "blank": "insignificante",
+   "src": "made"
   }
  ],
  "w|insistir": [
@@ -32238,6 +32638,22 @@
    "en": "Even after the server crash, Luísa's data stayed intact.",
    "ko": "서버가 다운된 뒤에도 루이자의 데이터는 멀쩡했어요.",
    "blank": "intactos",
+   "src": "made"
+  }
+ ],
+ "w|integridade": [
+  {
+   "text": "O Bruno não abre mão da integridade dos ingredientes e recusa peixe que não é fresco.",
+   "en": "Bruno won't compromise on the integrity of the ingredients and refuses fish that isn't fresh.",
+   "ko": "브루누는 재료의 품질을 양보하지 않아서 신선하지 않은 생선은 받지 않아요.",
+   "blank": "integridade",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia embrulhou os quadros com cuidado para garantir a integridade das molduras.",
+   "en": "Sofia wrapped the paintings carefully to make sure the frames stayed intact.",
+   "ko": "소피아는 액자가 상하지 않게 그림들을 조심스럽게 쌌어요.",
+   "blank": "integridade",
    "src": "made"
   }
  ],
@@ -32679,6 +33095,22 @@
    "src": "made"
   }
  ],
+ "w|invenção": [
+  {
+   "text": "O molho de manga com pimenta foi uma invenção do Bruno numa noite de muito movimento.",
+   "en": "The mango and pepper sauce was Bruno's invention on a very busy night.",
+   "ko": "망고 고추 소스는 손님이 많던 어느 밤 브루누가 만들어 낸 거예요.",
+   "blank": "invenção",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia acha que o carrinho de mão foi a melhor invenção para quem se muda.",
+   "en": "Sofia thinks the wheelbarrow was the best invention for anyone moving.",
+   "ko": "소피아는 손수레가 이사하는 사람에게 최고의 발명품이라고 생각해요.",
+   "blank": "invenção",
+   "src": "made"
+  }
+ ],
  "w|inventar": [
   {
    "text": "Você acaba de inventar isso, né?",
@@ -32725,6 +33157,22 @@
    "ko": "밖에 나가는 대신 집에 있었어요.",
    "blank": "invés",
    "src": "tatoeba:1141670/alexmarcelo en:256636/CK"
+  }
+ ],
+ "w|investidor": [
+  {
+   "text": "Um investidor provou o risoto e quis conhecer o Bruno pessoalmente.",
+   "en": "An investor tasted the risotto and wanted to meet Bruno in person.",
+   "ko": "한 투자자가 리소토를 맛보고 브루누를 직접 만나고 싶어 했어요.",
+   "blank": "investidor",
+   "src": "made"
+  },
+  {
+   "text": "O dono do apartamento da Sofia é um investidor que tem vários imóveis.",
+   "en": "The owner of Sofia's apartment is an investor who has several properties.",
+   "ko": "소피아의 집주인은 집을 여러 채 가진 투자자예요.",
+   "blank": "investidor",
+   "src": "made"
   }
  ],
  "w|investigação": [
@@ -34090,6 +34538,22 @@
    "en": "The cheese stall is in a wider aisle, where Mariana likes to stroll.",
    "ko": "치즈 가판대는 마리아나가 즐겨 걷는 좀 더 넓은 통로에 있어요.",
    "blank": "largo",
+   "src": "made"
+  }
+ ],
+ "w|laser": [
+  {
+   "text": "O termômetro a laser ajuda o Bruno a conferir a temperatura da chapa.",
+   "en": "The laser thermometer helps Bruno check the temperature of the griddle.",
+   "ko": "레이저 온도계로 브루누는 철판 온도를 확인해요.",
+   "blank": "laser",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia usou uma trena a laser para medir a cozinha nova.",
+   "en": "Sofia used a laser tape measure to measure the new kitchen.",
+   "ko": "소피아는 레이저 줄자로 새 부엌을 쟀어요.",
+   "blank": "laser",
    "src": "made"
   }
  ],
@@ -36259,6 +36723,22 @@
    "src": "made"
   }
  ],
+ "w|manutenção": [
+  {
+   "text": "A coifa estava fazendo barulho, então o Bruno chamou a manutenção.",
+   "en": "The range hood was making noise, so Bruno called maintenance.",
+   "ko": "후드에서 소리가 나서 브루누는 관리 기사를 불렀어요.",
+   "blank": "manutenção",
+   "src": "made"
+  },
+  {
+   "text": "O prédio novo da Sofia cobra uma taxa de manutenção do elevador.",
+   "en": "Sofia's new building charges an elevator maintenance fee.",
+   "ko": "소피아의 새 건물은 엘리베이터 관리비를 받아요.",
+   "blank": "manutenção",
+   "src": "made"
+  }
+ ],
  "w|mão": [
   {
    "text": "Minha mão dói.",
@@ -38402,6 +38882,22 @@
    "en": "A friend of Carla's says swimming calms him like a monk in meditation.",
    "ko": "카를라의 친구는 수영을 하면 명상하는 수도승처럼 마음이 편해진다고 해요.",
    "blank": "monge",
+   "src": "made"
+  }
+ ],
+ "w|monitor": [
+  {
+   "text": "Os pedidos aparecem num monitor em cima do fogão, e o Bruno lê tudo em voz alta.",
+   "en": "The orders appear on a monitor above the stove, and Bruno reads them all out loud.",
+   "ko": "주문이 화구 위 모니터에 뜨면 브루누가 전부 큰 소리로 읽어요.",
+   "blank": "monitor",
+   "src": "made"
+  },
+  {
+   "text": "O monitor do computador da Sofia quase caiu da caixa durante a mudança.",
+   "en": "Sofia's computer monitor almost fell out of the box during the move.",
+   "ko": "이사하다가 소피아의 컴퓨터 모니터가 상자에서 떨어질 뻔했어요.",
+   "blank": "monitor",
    "src": "made"
   }
  ],
@@ -44345,6 +44841,22 @@
    "src": "tatoeba:8495445/bill en:7732970/CK"
   }
  ],
+ "w|pintor": [
+  {
+   "text": "Um pintor veio retocar a parede do salão enquanto o Bruno preparava o almoço.",
+   "en": "A painter came to touch up the dining room wall while Bruno was making lunch.",
+   "ko": "브루누가 점심을 준비하는 동안 페인트공이 홀 벽을 손보러 왔어요.",
+   "blank": "pintor",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia contratou um pintor para deixar a sala da casa nova amarela.",
+   "en": "Sofia hired a painter to make the living room of the new house yellow.",
+   "ko": "소피아는 새 집 거실을 노란색으로 칠하려고 페인트공을 불렀어요.",
+   "blank": "pintor",
+   "src": "made"
+  }
+ ],
  "w|pintura": [
   {
    "text": "Vocês acham mesmo que esta pintura seja bela?",
@@ -46054,6 +46566,22 @@
    "en": "Camera flash can damage old paintings.",
    "ko": "카메라 플래시는 오래된 그림을 상하게 할 수 있어요.",
    "blank": "prejudicar",
+   "src": "made"
+  }
+ ],
+ "w|preliminar": [
+  {
+   "text": "Na reunião preliminar, o Bruno apresentou três ideias para o cardápio de verão.",
+   "en": "At the preliminary meeting, Bruno presented three ideas for the summer menu.",
+   "ko": "사전 회의에서 브루누는 여름 메뉴 아이디어 세 가지를 냈어요.",
+   "blank": "preliminar",
+   "src": "made"
+  },
+  {
+   "text": "O orçamento preliminar da mudança assustou a Sofia, mas o final saiu mais barato.",
+   "en": "The preliminary moving estimate scared Sofia, but the final one came out cheaper.",
+   "ko": "이사 가견적에 소피아는 놀랐지만 최종 금액은 더 쌌어요.",
+   "blank": "preliminar",
    "src": "made"
   }
  ],
@@ -50153,6 +50681,22 @@
    "blank": "repetiu"
   }
  ],
+ "w|reportar": [
+  {
+   "text": "O Bruno precisa reportar ao gerente qualquer falta de ingrediente.",
+   "en": "Bruno has to report any missing ingredient to the manager.",
+   "ko": "브루누는 재료가 떨어지면 무엇이든 매니저에게 보고해야 해요.",
+   "blank": "reportar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia teve que reportar à empresa de mudança um armário arranhado.",
+   "en": "Sofia had to report a scratched cupboard to the moving company.",
+   "ko": "소피아는 긁힌 찬장을 이삿짐 업체에 알려야 했어요.",
+   "blank": "reportar",
+   "src": "made"
+  }
+ ],
  "w|repórter": [
   {
    "text": "Eu não quero falar com nenhum repórter.",
@@ -50789,6 +51333,22 @@
    "blank": "reunião"
   }
  ],
+ "w|reunido": [
+  {
+   "text": "Com a equipe toda reunida, o Bruno explicou o pedido da festa de sábado.",
+   "en": "With the whole team gathered, Bruno explained the order for Saturday's party.",
+   "ko": "팀이 다 모이자 브루누는 토요일 파티 주문을 설명했어요.",
+   "blank": "reunida",
+   "src": "made"
+  },
+  {
+   "text": "Com a família reunida na casa nova, a Sofia fez um almoço simples.",
+   "en": "With the family gathered at the new house, Sofia made a simple lunch.",
+   "ko": "가족이 새 집에 모이자 소피아는 간단한 점심을 차렸어요.",
+   "blank": "reunida",
+   "src": "made"
+  }
+ ],
  "w|reunir": [
   {
    "text": "Nós todos tentamos nos reunir pelo menos uma vez ao ano.",
@@ -50881,6 +51441,22 @@
    "en": "Look over the text.",
    "ko": "글을 한 번 검토해.",
    "blank": "revisão"
+  }
+ ],
+ "w|revisar": [
+  {
+   "text": "Toda manhã, o Bruno costuma revisar a lista de compras com o fornecedor.",
+   "en": "Every morning, Bruno goes over the shopping list with the supplier.",
+   "ko": "매일 아침 브루누는 납품업자와 장보기 목록을 검토해요.",
+   "blank": "revisar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia pediu ao advogado para revisar o contrato de aluguel.",
+   "en": "Sofia asked the lawyer to review the lease.",
+   "ko": "소피아는 변호사에게 임대 계약서를 검토해 달라고 했어요.",
+   "blank": "revisar",
+   "src": "made"
   }
  ],
  "w|revista": [
@@ -53291,6 +53867,22 @@
    "en": "I need the delivery service.",
    "ko": "배달 서비스가 필요해.",
    "blank": "serviço"
+  }
+ ],
+ "w|servidor": [
+  {
+   "text": "O sistema de pedidos caiu porque o servidor parou, e o Bruno voltou a usar papel.",
+   "en": "The ordering system went down because the server stopped, and Bruno went back to paper.",
+   "ko": "서버가 멈춰 주문 시스템이 꺼지자 브루누는 다시 종이를 썼어요.",
+   "blank": "servidor",
+   "src": "made"
+  },
+  {
+   "text": "A internet da Sofia não funciona, e o técnico disse que o problema é no servidor da operadora.",
+   "en": "Sofia's internet doesn't work, and the technician said the problem is with the provider's server.",
+   "ko": "소피아의 인터넷이 안 되는데, 기사는 통신사 서버 문제라고 했어요.",
+   "blank": "servidor",
+   "src": "made"
   }
  ],
  "w|servir": [
@@ -55901,6 +56493,22 @@
    "src": "made"
   }
  ],
+ "w|técnica": [
+  {
+   "text": "O Bruno ensinou aos novatos a técnica certa para cortar cebola sem chorar.",
+   "en": "Bruno taught the newcomers the right technique for cutting onions without crying.",
+   "ko": "브루누는 신입들에게 울지 않고 양파 써는 요령을 가르쳤어요.",
+   "blank": "técnica",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia aprendeu uma técnica para dobrar roupa que ocupa menos espaço na mala.",
+   "en": "Sofia learned a technique for folding clothes that takes up less space in the suitcase.",
+   "ko": "소피아는 가방에 자리를 덜 차지하게 옷 개는 법을 배웠어요.",
+   "blank": "técnica",
+   "src": "made"
+  }
+ ],
  "w|tecnicamente": [
   {
    "text": "Tecnicamente, ele ainda é um estudante.",
@@ -58319,6 +58927,22 @@
    "src": "made"
   }
  ],
+ "w|trepar": [
+  {
+   "text": "O Bruno teve que trepar numa escada para pegar as panelas grandes da prateleira de cima.",
+   "en": "Bruno had to climb a ladder to get the big pots from the top shelf.",
+   "ko": "브루누는 맨 위 선반의 큰 냄비를 꺼내려고 사다리에 올라가야 했어요.",
+   "blank": "trepar",
+   "src": "made"
+  },
+  {
+   "text": "O filho da Sofia adorou trepar na mangueira do quintal novo.",
+   "en": "Sofia's son loved climbing the mango tree in the new backyard.",
+   "ko": "소피아의 아들은 새 집 마당의 망고나무에 올라가는 걸 아주 좋아했어요.",
+   "blank": "trepar",
+   "src": "made"
+  }
+ ],
  "w|três": [
   {
    "text": "São três irmãos.",
@@ -60261,6 +60885,22 @@
    "ko": "비상시에는 유리를 깨세요.",
    "blank": "vidro",
    "src": "tatoeba:8388369/lucasmg123 en:1272513/marcelostockle"
+  }
+ ],
+ "w|vigia": [
+  {
+   "text": "O vigia da rua sempre ganha um prato quente quando o Bruno fecha a cozinha.",
+   "en": "The street watchman always gets a hot plate when Bruno closes the kitchen.",
+   "ko": "브루누가 주방을 닫을 때면 골목 경비원은 늘 따뜻한 한 접시를 받아요.",
+   "blank": "vigia",
+   "src": "made"
+  },
+  {
+   "text": "O vigia do prédio ajudou a Sofia a levar as caixas até o elevador.",
+   "en": "The building's watchman helped Sofia carry the boxes to the elevator.",
+   "ko": "건물 경비원이 소피아를 도와 상자를 엘리베이터까지 옮겼어요.",
+   "blank": "vigia",
+   "src": "made"
   }
  ],
  "w|vigiar": [
