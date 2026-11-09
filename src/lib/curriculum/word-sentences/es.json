@@ -681,6 +681,22 @@
    "blank": "acceso"
   }
  ],
+ "w|accesorio": [
+  {
+   "text": "Raúl se compró un accesorio para colocar el portátil a la altura de los ojos.",
+   "en": "Raúl bought himself an accessory to put his laptop at eye level.",
+   "ko": "라울은 노트북을 눈높이에 맞추는 액세서리를 샀어요.",
+   "blank": "accesorio",
+   "src": "made"
+  },
+  {
+   "text": "Para la fiesta de la empresa, Nuria compró un accesorio de realidad virtual que nadie supo usar.",
+   "en": "For the company party, Nuria bought a virtual reality accessory that nobody knew how to use.",
+   "ko": "누리아는 회사 파티용으로 VR 액세서리를 샀는데 아무도 쓸 줄 몰랐어요.",
+   "blank": "accesorio",
+   "src": "made"
+  }
+ ],
  "w|accidental": [
   {
    "text": "Mateo le aseguró a la profesora que la rotura del cristal fue accidental.",
@@ -3993,6 +4009,22 @@
    "blank": "almacén"
   }
  ],
+ "w|almacenamiento": [
+  {
+   "text": "El armario de almacenamiento de la oficina está lleno de carpetas que nadie abre desde hace años.",
+   "en": "The office storage cupboard is full of folders nobody has opened in years.",
+   "ko": "사무실 수납장에는 몇 년째 아무도 안 연 서류철이 가득해요.",
+   "blank": "almacenamiento",
+   "src": "made"
+  },
+  {
+   "text": "El coste del almacenamiento en la nube se ha duplicado y Nuria busca otro proveedor.",
+   "en": "The cost of cloud storage has doubled and Nuria is looking for another provider.",
+   "ko": "클라우드 저장 비용이 두 배가 돼서 누리아는 다른 업체를 찾고 있어요.",
+   "blank": "almacenamiento",
+   "src": "made"
+  }
+ ],
  "w|almacenar": [
   {
    "text": "En la redacción, Diego aprendió a almacenar las fotos en el servidor y no en su portátil.",
@@ -4243,6 +4275,22 @@
    "en": "He addressed His Highness with great respect.",
    "ko": "전하를 아주 공손하게 불렀어.",
    "blank": "alteza"
+  }
+ ],
+ "w|altitud": [
+  {
+   "text": "Raúl viaja a menudo a una sucursal en una ciudad de mucha altitud y siempre le duele la cabeza.",
+   "en": "Raúl often travels to a branch in a high-altitude city and always gets a headache.",
+   "ko": "라울은 고도가 높은 도시의 지점에 자주 출장 가는데 갈 때마다 머리가 아파요.",
+   "blank": "altitud",
+   "src": "made"
+  },
+  {
+   "text": "La aplicación de Nuria mide la altitud y avisa a los excursionistas del mal de altura.",
+   "en": "Nuria's app measures altitude and warns hikers about altitude sickness.",
+   "ko": "누리아의 앱은 고도를 재서 등산객에게 고산병을 알려 줘요.",
+   "blank": "altitud",
+   "src": "made"
   }
  ],
  "w|alto": [
@@ -5529,6 +5577,22 @@
    "src": "made"
   }
  ],
+ "w|anticipar": [
+  {
+   "text": "Raúl intenta anticipar las preguntas del director para no quedarse en blanco.",
+   "en": "Raúl tries to anticipate the director's questions so he doesn't go blank.",
+   "ko": "라울은 말문이 막히지 않으려고 이사님의 질문을 미리 예상해 봐요.",
+   "blank": "anticipar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria intenta anticipar los fallos antes de lanzar cada versión de la aplicación.",
+   "en": "Nuria tries to anticipate bugs before releasing each version of the app.",
+   "ko": "누리아는 앱을 새로 낼 때마다 오류를 미리 예상하려고 해요.",
+   "blank": "anticipar",
+   "src": "made"
+  }
+ ],
  "w|anticuado": [
   {
    "text": "La sala del juzgado donde trabaja Diego tiene un sistema de sonido muy anticuado.",
@@ -6752,6 +6816,22 @@
    "en": "The hotel cat scratched Marta when she tried to get it out of the kitchen.",
    "ko": "마르타가 호텔 고양이를 주방에서 내보내려다 고양이에게 할퀴었어요.",
    "blank": "arañazo",
+   "src": "made"
+  }
+ ],
+ "w|arándano": [
+  {
+   "text": "En la máquina de la oficina, Raúl siempre elige la magdalena de arándano.",
+   "en": "At the office vending machine, Raúl always picks the blueberry muffin.",
+   "ko": "라울은 사무실 자판기에서 늘 블루베리 머핀을 골라요.",
+   "blank": "arándano",
+   "src": "made"
+  },
+  {
+   "text": "Nuria desayuna yogur con arándanos delante del ordenador.",
+   "en": "Nuria has yogurt with blueberries for breakfast in front of the computer.",
+   "ko": "누리아는 컴퓨터 앞에서 블루베리를 넣은 요거트로 아침을 먹어요.",
+   "blank": "arándanos",
    "src": "made"
   }
  ],
@@ -9327,6 +9407,22 @@
    "blank": "autobús"
   }
  ],
+ "w|autoestima": [
+  {
+   "text": "Después de tantas críticas del jefe, a Raúl le costó recuperar la autoestima.",
+   "en": "After so much criticism from the boss, Raúl found it hard to get his self-esteem back.",
+   "ko": "상사에게 비판을 너무 많이 들어서 라울은 자존감을 되찾기 힘들었어요.",
+   "blank": "autoestima",
+   "src": "made"
+  },
+  {
+   "text": "Nuria está creando una aplicación para ayudar a los adolescentes con la autoestima.",
+   "en": "Nuria is creating an app to help teenagers with self-esteem.",
+   "ko": "누리아는 십 대의 자존감을 높여 주는 앱을 만들고 있어요.",
+   "blank": "autoestima",
+   "src": "made"
+  }
+ ],
  "w|autógrafo": [
   {
    "text": "El tío de Diego guarda en un cajón el autógrafo de un futbolista famoso.",
@@ -10427,6 +10523,22 @@
    "blank": "bárbaro"
   }
  ],
+ "w|barbero": [
+  {
+   "text": "Cada dos semanas, Raúl va al barbero de la esquina a cortarse la barba.",
+   "en": "Every two weeks, Raúl goes to the barber on the corner to have his beard trimmed.",
+   "ko": "라울은 두 주마다 길모퉁이 이발소에 가서 수염을 다듬어요.",
+   "blank": "barbero",
+   "src": "made"
+  },
+  {
+   "text": "Nuria diseñó una aplicación para que un barbero del barrio gestione sus citas.",
+   "en": "Nuria designed an app for a local barber to manage his appointments.",
+   "ko": "누리아는 동네 이발사가 예약을 관리할 수 있는 앱을 만들었어요.",
+   "blank": "barbero",
+   "src": "made"
+  }
+ ],
  "w|barbilla": [
   {
    "text": "Sergio se dio un golpe en la barbilla y necesitó tres puntos.",
@@ -11149,6 +11261,22 @@
    "blank": "biblioteca"
   }
  ],
+ "w|bibliotecario": [
+  {
+   "text": "El mejor amigo de Raúl es bibliotecario y le recomienda libros de gestión del tiempo.",
+   "en": "Raúl's best friend is a librarian and recommends him books on time management.",
+   "ko": "라울의 제일 친한 친구는 사서인데 시간 관리 책을 추천해 줘요.",
+   "blank": "bibliotecario",
+   "src": "made"
+  },
+  {
+   "text": "Un bibliotecario le pidió a Nuria una aplicación para prestar libros sin papeles.",
+   "en": "A librarian asked Nuria for an app to lend books without paperwork.",
+   "ko": "한 사서가 누리아에게 서류 없이 책을 빌려주는 앱을 부탁했어요.",
+   "blank": "bibliotecario",
+   "src": "made"
+  }
+ ],
  "w|bicho": [
   {
    "text": "Había un bicho raro bajo la piedra.",
@@ -11598,6 +11726,38 @@
    "en": "Sofía told the man to take the pill after a bite of food.",
    "ko": "소피아는 할아버지에게 음식을 한 입 먹은 뒤 약을 드시라고 했어요.",
    "blank": "bocado",
+   "src": "made"
+  }
+ ],
+ "w|boceto": [
+  {
+   "text": "Raúl dibujó un boceto de la nueva distribución de las mesas en una servilleta.",
+   "en": "Raúl drew a sketch of the new desk layout on a napkin.",
+   "ko": "라울은 냅킨에 새 책상 배치를 대충 그렸어요.",
+   "blank": "boceto",
+   "src": "made"
+  },
+  {
+   "text": "Nuria enseñó a los inversores un boceto de la aplicación hecho a lápiz.",
+   "en": "Nuria showed the investors a pencil sketch of the app.",
+   "ko": "누리아는 투자자들에게 연필로 그린 앱 스케치를 보여 줬어요.",
+   "blank": "boceto",
+   "src": "made"
+  }
+ ],
+ "w|bocina": [
+  {
+   "text": "La bocina de un camión sonó justo cuando Raúl estaba en plena videollamada.",
+   "en": "A lorry's horn sounded just as Raúl was in the middle of a video call.",
+   "ko": "라울이 한창 화상 회의 중일 때 트럭 경적이 울렸어요.",
+   "blank": "bocina",
+   "src": "made"
+  },
+  {
+   "text": "Cuando alguien cierra una venta, en la oficina de Nuria suena una bocina de fútbol.",
+   "en": "When someone closes a sale, a football air horn goes off in Nuria's office.",
+   "ko": "누리아의 사무실에서는 누가 판매를 성사시키면 축구 응원 나팔이 울려요.",
+   "blank": "bocina",
    "src": "made"
   }
  ],
@@ -14603,6 +14763,22 @@
    "en": "The stadium's capacity is limited.",
    "ko": "경기장 수용 인원은 제한적이야.",
    "blank": "capacidad"
+  }
+ ],
+ "w|capacitar": [
+  {
+   "text": "La empresa contrató a una formadora para capacitar a Raúl y a su equipo en el programa nuevo.",
+   "en": "The company hired a trainer to train Raúl and his team on the new program.",
+   "ko": "회사는 라울과 팀원들에게 새 프로그램을 교육하려고 강사를 고용했어요.",
+   "blank": "capacitar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria dedica los jueves a capacitar a los nuevos programadores.",
+   "en": "Nuria spends Thursdays training the new programmers.",
+   "ko": "누리아는 목요일마다 새 프로그래머들을 교육해요.",
+   "blank": "capacitar",
+   "src": "made"
   }
  ],
  "w|capataz": [
@@ -18129,6 +18305,22 @@
    "src": "made"
   }
  ],
+ "w|cláusula": [
+  {
+   "text": "Raúl encontró una cláusula rara en el contrato del proveedor y llamó al abogado.",
+   "en": "Raúl found a strange clause in the supplier's contract and called the lawyer.",
+   "ko": "라울은 납품 업체 계약서에서 이상한 조항을 찾아 변호사에게 전화했어요.",
+   "blank": "cláusula",
+   "src": "made"
+  },
+  {
+   "text": "El abogado le explicó a Nuria una cláusula sobre la propiedad del código.",
+   "en": "The lawyer explained to Nuria a clause about ownership of the code.",
+   "ko": "변호사는 누리아에게 코드 소유권에 관한 조항을 설명했어요.",
+   "blank": "cláusula",
+   "src": "made"
+  }
+ ],
  "w|clavar": [
   {
    "text": "Voy a clavar el cuadro en la pared.",
@@ -18529,6 +18721,22 @@
    "src": "made"
   }
  ],
+ "w|codicia": [
+  {
+   "text": "Raúl leyó una novela sobre un banquero que lo perdió todo por codicia.",
+   "en": "Raúl read a novel about a banker who lost everything through greed.",
+   "ko": "라울은 탐욕 때문에 모든 걸 잃은 은행가에 관한 소설을 읽었어요.",
+   "blank": "codicia",
+   "src": "made"
+  },
+  {
+   "text": "Nuria rechazó a un inversor porque notó pura codicia en sus condiciones.",
+   "en": "Nuria turned down an investor because she sensed pure greed in his terms.",
+   "ko": "누리아는 한 투자자의 조건에서 순전한 탐욕을 느끼고 거절했어요.",
+   "blank": "codicia",
+   "src": "made"
+  }
+ ],
  "w|codicioso": [
   {
    "text": "Hugo hace el papel de un banquero codicioso que acaba perdiéndolo todo.",
@@ -18688,6 +18896,22 @@
    "en": "Sofía remembered the high school magazine, the result of her collaboration with Marta.",
    "ko": "소피아는 마르타와 함께 만들었던 고등학교 잡지를 떠올렸어요.",
    "blank": "colaboración",
+   "src": "made"
+  }
+ ],
+ "w|colaborador": [
+  {
+   "text": "Raúl trabaja con un colaborador externo que diseña las presentaciones.",
+   "en": "Raúl works with an external collaborator who designs the presentations.",
+   "ko": "라울은 발표 자료를 디자인하는 외부 협력자와 일해요.",
+   "blank": "colaborador",
+   "src": "made"
+  },
+  {
+   "text": "Una colaboradora de Nuria diseña los iconos desde una casa en el campo.",
+   "en": "One of Nuria's collaborators designs the icons from a house in the country.",
+   "ko": "누리아의 협력자 한 명은 시골집에서 아이콘을 디자인해요.",
+   "blank": "colaboradora",
    "src": "made"
   }
  ],
@@ -22895,6 +23119,22 @@
    "src": "made"
   }
  ],
+ "w|coordinar": [
+  {
+   "text": "Raúl tiene que coordinar a tres equipos que trabajan en oficinas distintas.",
+   "en": "Raúl has to coordinate three teams working in different offices.",
+   "ko": "라울은 서로 다른 사무실에서 일하는 세 팀을 조율해야 해요.",
+   "blank": "coordinar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria tiene que coordinar a programadores que viven en tres países distintos.",
+   "en": "Nuria has to coordinate programmers who live in three different countries.",
+   "ko": "누리아는 세 나라에 사는 프로그래머들을 조율해야 해요.",
+   "blank": "coordinar",
+   "src": "made"
+  }
+ ],
  "w|copa": [
   {
    "text": "Brindamos con una copa de vino.",
@@ -25011,6 +25251,22 @@
    "blank": "cuidado"
   }
  ],
+ "w|cuidador": [
+  {
+   "text": "El padre de Raúl tiene un cuidador que va a casa por las mañanas mientras Raúl está en la oficina.",
+   "en": "Raúl's father has a carer who comes to the house in the mornings while Raúl is at the office.",
+   "ko": "라울이 회사에 있는 동안 아버지 댁에는 아침마다 간병인이 와요.",
+   "blank": "cuidador",
+   "src": "made"
+  },
+  {
+   "text": "La aplicación de Nuria ayuda a cada cuidador a organizar las medicinas de las personas mayores.",
+   "en": "Nuria's app helps each carer organise elderly people's medicines.",
+   "ko": "누리아의 앱은 간병인이 노인들의 약을 정리하도록 도와줘요.",
+   "blank": "cuidador",
+   "src": "made"
+  }
+ ],
  "w|cuidadosamente": [
   {
    "text": "Al terminar, Lucas limpió las herramientas cuidadosamente.",
@@ -25379,6 +25635,22 @@
    "en": "I find it curious that he hasn't called.",
    "ko": "전화를 안 한 게 이상해 보여.",
    "blank": "curioso"
+  }
+ ],
+ "w|currículum": [
+  {
+   "text": "Raúl revisa cada currículum con calma antes de llamar a los candidatos.",
+   "en": "Raúl goes through each CV calmly before calling the candidates.",
+   "ko": "라울은 지원자에게 전화하기 전에 이력서를 하나하나 차분히 살펴봐요.",
+   "blank": "currículum",
+   "src": "made"
+  },
+  {
+   "text": "Nuria recibe cada semana algún currículum de programadores recién graduados.",
+   "en": "Nuria receives a CV from newly graduated programmers every week.",
+   "ko": "누리아는 매주 갓 졸업한 프로그래머들의 이력서를 받아요.",
+   "blank": "currículum",
+   "src": "made"
   }
  ],
  "w|cursi": [
@@ -31373,6 +31645,22 @@
    "src": "made"
   }
  ],
+ "w|dote": [
+  {
+   "text": "El jefe dice que Raúl tiene dotes de mando y que pronto dirigirá el equipo.",
+   "en": "The boss says Raúl has leadership qualities and will soon run the team.",
+   "ko": "상사는 라울에게 통솔력이 있어서 곧 팀을 이끌 거라고 해요.",
+   "blank": "dotes",
+   "src": "made"
+  },
+  {
+   "text": "Nuria descubrió pronto que su socio tenía dotes para vender cualquier cosa.",
+   "en": "Nuria soon discovered that her partner had a gift for selling anything.",
+   "ko": "누리아는 동업자가 무엇이든 파는 재주가 있다는 걸 금방 알았어요.",
+   "blank": "dotes",
+   "src": "made"
+  }
+ ],
  "w|dragón": [
   {
    "text": "El niño dibujó un dragón rojo enorme.",
@@ -34977,6 +35265,22 @@
    "src": "made"
   }
  ],
+ "w|escanear": [
+  {
+   "text": "Raúl tiene que escanear todas las facturas antes de mandarlas a contabilidad.",
+   "en": "Raúl has to scan all the invoices before sending them to accounting.",
+   "ko": "라울은 영수증을 모두 스캔해서 회계팀에 보내야 해요.",
+   "blank": "escanear",
+   "src": "made"
+  },
+  {
+   "text": "Con la aplicación de Nuria, puedes escanear un ticket y guardar el gasto al instante.",
+   "en": "With Nuria's app, you can scan a receipt and save the expense instantly.",
+   "ko": "누리아의 앱으로 영수증을 스캔하면 바로 지출이 저장돼요.",
+   "blank": "escanear",
+   "src": "made"
+  }
+ ],
  "w|escáner": [
   {
    "text": "Nico usó el escáner para leer el chip del gato perdido.",
@@ -36893,6 +37197,22 @@
    "blank": "estilo"
   }
  ],
+ "w|estima": [
+  {
+   "text": "Los compañeros tienen mucha estima a Raúl porque siempre ayuda sin quejarse.",
+   "en": "Raúl's colleagues hold him in high regard because he always helps without complaining.",
+   "ko": "라울은 불평 없이 늘 도와줘서 동료들이 아주 아껴요.",
+   "blank": "estima",
+   "src": "made"
+  },
+  {
+   "text": "Nuria siente una gran estima por su primer jefe, que le enseñó a programar.",
+   "en": "Nuria has great respect for her first boss, who taught her to code.",
+   "ko": "누리아는 자기에게 프로그래밍을 가르쳐 준 첫 상사를 무척 존경해요.",
+   "blank": "estima",
+   "src": "made"
+  }
+ ],
  "w|estimar": [
   {
    "text": "Puedo estimar el costo del proyecto.",
@@ -37147,6 +37467,22 @@
    "en": "Lower stress with a short walk.",
    "ko": "짧은 산책으로 스트레스를 낮춰.",
    "blank": "estrés"
+  }
+ ],
+ "w|estresante": [
+  {
+   "text": "La semana de cierre de cuentas es la más estresante del año para Raúl.",
+   "en": "Accounts closing week is the most stressful of the year for Raúl.",
+   "ko": "결산 주간은 라울에게 일 년 중 가장 스트레스가 큰 주예요.",
+   "blank": "estresante",
+   "src": "made"
+  },
+  {
+   "text": "Buscar inversores es la parte más estresante del trabajo para Nuria.",
+   "en": "Looking for investors is the most stressful part of the job for Nuria.",
+   "ko": "누리아에게 투자자를 찾는 게 일에서 가장 스트레스 받는 부분이에요.",
+   "blank": "estresante",
+   "src": "made"
   }
  ],
  "w|estresar": [
@@ -43261,6 +43597,22 @@
    "src": "made"
   }
  ],
+ "w|gestión": [
+  {
+   "text": "Raúl se encarga de la gestión de las vacaciones de todo el departamento.",
+   "en": "Raúl is in charge of managing holidays for the whole department.",
+   "ko": "라울은 부서 전체의 휴가 관리를 맡고 있어요.",
+   "blank": "gestión",
+   "src": "made"
+  },
+  {
+   "text": "Nuria quiere un programa sencillo para la gestión de los pedidos de las tiendas pequeñas.",
+   "en": "Nuria wants a simple program for managing small shops' orders.",
+   "ko": "누리아는 작은 가게들의 주문 관리를 위한 간단한 프로그램을 원해요.",
+   "blank": "gestión",
+   "src": "made"
+  }
+ ],
  "w|gesto": [
   {
    "text": "Un gesto amable cambia el día.",
@@ -43729,6 +44081,22 @@
    "en": "They bought an old engraving at the fair.",
    "ko": "장터에서 오래된 판화를 샀어.",
    "blank": "grabado"
+  }
+ ],
+ "w|grabadora": [
+  {
+   "text": "Raúl pone una grabadora en la mesa para no perder nada de lo que se dice en las reuniones.",
+   "en": "Raúl puts a recorder on the table so he doesn't miss anything said in meetings.",
+   "ko": "라울은 회의 내용을 놓치지 않으려고 탁자에 녹음기를 놓아요.",
+   "blank": "grabadora",
+   "src": "made"
+  },
+  {
+   "text": "Nuria usa la grabadora del móvil para guardar sus ideas mientras conduce.",
+   "en": "Nuria uses her phone's recorder to save ideas while she drives.",
+   "ko": "누리아는 운전하면서 휴대폰 녹음기로 아이디어를 남겨요.",
+   "blank": "grabadora",
+   "src": "made"
   }
  ],
  "w|grabar": [
@@ -44555,6 +44923,22 @@
    "en": "They rewrote the script before filming.",
    "ko": "촬영 전에 대본을 다시 썼어.",
    "blank": "guion"
+  }
+ ],
+ "w|guionista": [
+  {
+   "text": "El hermano de Raúl es guionista de televisión y trabaja desde casa en pijama.",
+   "en": "Raúl's brother is a TV scriptwriter and works from home in his pyjamas.",
+   "ko": "라울의 형은 TV 작가인데 집에서 잠옷 차림으로 일해요.",
+   "blank": "guionista",
+   "src": "made"
+  },
+  {
+   "text": "Nuria contrató a una guionista para escribir los diálogos del videojuego.",
+   "en": "Nuria hired a scriptwriter to write the video game's dialogue.",
+   "ko": "누리아는 비디오 게임 대사를 쓸 작가를 고용했어요.",
+   "blank": "guionista",
+   "src": "made"
   }
  ],
  "w|guitarra": [
@@ -45858,6 +46242,22 @@
    "en": "Lucía admits that she's a bit lazy and that's why she orders food delivery.",
    "ko": "루시아는 자기가 좀 게을러서 음식을 배달시킨다고 인정해요.",
    "blank": "holgazana",
+   "src": "made"
+  }
+ ],
+ "w|holograma": [
+  {
+   "text": "En la feria, el estand de la empresa de Raúl tenía un holograma del nuevo producto.",
+   "en": "At the trade fair, Raúl's company stand had a hologram of the new product.",
+   "ko": "박람회에서 라울 회사의 부스에는 신제품 홀로그램이 있었어요.",
+   "blank": "holograma",
+   "src": "made"
+  },
+  {
+   "text": "En la demostración, Nuria presentó a los inversores un holograma que flotaba sobre la mesa.",
+   "en": "In the demo, Nuria presented investors with a hologram floating above the table.",
+   "ko": "시연에서 누리아는 탁자 위에 떠 있는 홀로그램을 투자자들에게 보여 줬어요.",
+   "blank": "holograma",
    "src": "made"
   }
  ],
@@ -47611,6 +48011,22 @@
    "src": "made"
   }
  ],
+ "w|imprenta": [
+  {
+   "text": "Los folletos de la empresa llegaron de la imprenta con el logo al revés, y Raúl tuvo que devolverlos.",
+   "en": "The company brochures came back from the printer's with the logo upside down, and Raúl had to return them.",
+   "ko": "회사 안내 책자가 인쇄소에서 로고가 거꾸로 찍혀 와서 라울이 돌려보내야 했어요.",
+   "blank": "imprenta",
+   "src": "made"
+  },
+  {
+   "text": "La primera tarjeta de visita de Nuria salió de una imprenta del barrio y tenía una errata.",
+   "en": "Nuria's first business card came from a local printer's and had a typo.",
+   "ko": "누리아의 첫 명함은 동네 인쇄소에서 나왔는데 오타가 있었어요.",
+   "blank": "imprenta",
+   "src": "made"
+  }
+ ],
  "w|impresión": [
   {
    "text": "Me dio buena impresión en la entrevista.",
@@ -47651,6 +48067,22 @@
    "en": "I was impressed by the way he spoke.",
    "ko": "그의 말하는 방식에 인상 깊었어.",
    "blank": "impresionó"
+  }
+ ],
+ "w|impreso": [
+  {
+   "text": "El jefe de Raúl todavía prefiere leer los informes en papel impreso.",
+   "en": "Raúl's boss still prefers to read reports on printed paper.",
+   "ko": "라울의 상사는 아직도 보고서를 종이로 뽑아서 읽는 걸 좋아해요.",
+   "blank": "impreso",
+   "src": "made"
+  },
+  {
+   "text": "Nuria lleva siempre un mapa impreso del proyecto pegado en la pared.",
+   "en": "Nuria always has a printed map of the project stuck on the wall.",
+   "ko": "누리아는 늘 벽에 프로젝트 지도를 출력해서 붙여 둬요.",
+   "blank": "impreso",
+   "src": "made"
   }
  ],
  "w|imprimir": [
@@ -48553,6 +48985,22 @@
    "en": "She remembers her childhood with deep nostalgia.",
    "ko": "어린 시절을 깊은 향수로 기억해.",
    "blank": "infancia"
+  }
+ ],
+ "w|infante": [
+  {
+   "text": "En la guardería de la empresa cuidan a los infantes de los empleados mientras Raúl y sus compañeros trabajan.",
+   "en": "At the company nursery they look after employees' little ones while Raúl and his colleagues work.",
+   "ko": "회사 어린이집에서는 라울과 동료들이 일하는 동안 직원들의 아기들을 돌봐요.",
+   "blank": "infantes",
+   "src": "made"
+  },
+  {
+   "text": "La nueva clienta de Nuria es un museo que quiere un juego sobre la vida de un infante medieval.",
+   "en": "Nuria's new client is a museum that wants a game about the life of a medieval prince.",
+   "ko": "누리아의 새 고객은 중세 왕자의 삶을 다룬 게임을 원하는 박물관이에요.",
+   "blank": "infante",
+   "src": "made"
   }
  ],
  "w|infantería": [
@@ -50501,6 +50949,22 @@
    "en": "She wants to play the lead role.",
    "ko": "그녀는 주인공 역할을 연기하고 싶어 해.",
    "blank": "interpretar"
+  }
+ ],
+ "w|intérprete": [
+  {
+   "text": "En la reunión con los socios japoneses, Raúl necesitó una intérprete.",
+   "en": "In the meeting with the Japanese partners, Raúl needed an interpreter.",
+   "ko": "일본 파트너와 회의할 때 라울은 통역사가 필요했어요.",
+   "blank": "intérprete",
+   "src": "made"
+  },
+  {
+   "text": "La startup de Nuria está desarrollando un intérprete automático para médicos y pacientes.",
+   "en": "Nuria's startup is developing an automatic interpreter for doctors and patients.",
+   "ko": "누리아의 스타트업은 의사와 환자를 위한 자동 통역기를 개발하고 있어요.",
+   "blank": "intérprete",
+   "src": "made"
   }
  ],
  "w|interrogación": [
@@ -55309,6 +55773,22 @@
    "en": "It smells like freshly cut wood here.",
    "ko": "여기 갓 자른 나무 냄새가 나.",
    "blank": "madera"
+  }
+ ],
+ "w|madrastra": [
+  {
+   "text": "Raúl sale antes de la oficina los viernes porque su madrastra cuida a su hija hasta las cinco.",
+   "en": "Raúl leaves the office early on Fridays because his stepmother looks after his daughter until five.",
+   "ko": "라울의 새어머니가 다섯 시까지만 딸을 봐 주셔서 라울은 금요일마다 일찍 퇴근해요.",
+   "blank": "madrastra",
+   "src": "made"
+  },
+  {
+   "text": "Nuria fundó la empresa con el dinero que le prestó su madrastra.",
+   "en": "Nuria founded the company with money her stepmother lent her.",
+   "ko": "누리아는 새어머니가 빌려준 돈으로 회사를 세웠어요.",
+   "blank": "madrastra",
+   "src": "made"
   }
  ],
  "w|madre": [
@@ -61907,6 +62387,22 @@
    "blank": "noche"
   }
  ],
+ "w|nochebuena": [
+  {
+   "text": "En la oficina de Raúl cierran a mediodía en Nochebuena para que todos cenen con su familia.",
+   "en": "At Raúl's office they close at midday on Christmas Eve so everyone can have dinner with their family.",
+   "ko": "라울의 회사는 크리스마스이브에 다들 가족과 저녁을 먹도록 정오에 문을 닫아요.",
+   "blank": "Nochebuena",
+   "src": "made"
+  },
+  {
+   "text": "El servidor se cayó en Nochebuena y Nuria tuvo que arreglarlo desde casa de sus padres.",
+   "en": "The server went down on Christmas Eve and Nuria had to fix it from her parents' house.",
+   "ko": "크리스마스이브에 서버가 다운돼서 누리아는 부모님 댁에서 고쳐야 했어요.",
+   "blank": "Nochebuena",
+   "src": "made"
+  }
+ ],
  "w|noción": [
   {
    "text": "El nuevo becario no tiene ninguna noción de cómo funciona una redacción, dice Sergio.",
@@ -65813,6 +66309,22 @@
    "blank": "parque"
   }
  ],
+ "w|párrafo": [
+  {
+   "text": "La directora le pidió a Raúl que borrara el último párrafo del informe.",
+   "en": "The director asked Raúl to delete the last paragraph of the report.",
+   "ko": "이사는 라울에게 보고서 마지막 단락을 지우라고 했어요.",
+   "blank": "párrafo",
+   "src": "made"
+  },
+  {
+   "text": "Nuria reescribió el primer párrafo de la página web cinco veces.",
+   "en": "Nuria rewrote the first paragraph of the website five times.",
+   "ko": "누리아는 웹사이트 첫 단락을 다섯 번이나 다시 썼어요.",
+   "blank": "párrafo",
+   "src": "made"
+  }
+ ],
  "w|parrilla": [
   {
    "text": "El domingo, Andrés preparó costillas a la parrilla para toda la familia.",
@@ -67009,6 +67521,22 @@
    "src": "made"
   }
  ],
+ "w|peluquería": [
+  {
+   "text": "Antes de la reunión con los clientes, Raúl pasó por la peluquería en la hora de comer.",
+   "en": "Before the meeting with clients, Raúl stopped by the hairdresser's at lunchtime.",
+   "ko": "고객 회의 전에 라울은 점심시간에 미용실에 들렀어요.",
+   "blank": "peluquería",
+   "src": "made"
+  },
+  {
+   "text": "El primer cliente de Nuria fue una peluquería que quería un sistema de reservas.",
+   "en": "Nuria's first client was a hair salon that wanted a booking system.",
+   "ko": "누리아의 첫 고객은 예약 시스템이 필요한 미용실이었어요.",
+   "blank": "peluquería",
+   "src": "made"
+  }
+ ],
  "w|peluquero": [
   {
    "text": "Hugo bromea con que su peluquero sabe más de la fábrica que él, porque media plantilla va a su local.",
@@ -67467,6 +67995,22 @@
    "en": "Did you bring today's newspaper?",
    "ko": "오늘 신문 가져왔어?",
    "blank": "periódico"
+  }
+ ],
+ "w|periodismo": [
+  {
+   "text": "Antes de trabajar en la oficina, Raúl estudió periodismo y escribía en un diario local.",
+   "en": "Before working in the office, Raúl studied journalism and wrote for a local paper.",
+   "ko": "라울은 회사에 들어오기 전에 저널리즘을 공부하고 지역 신문에 글을 썼어요.",
+   "blank": "periodismo",
+   "src": "made"
+  },
+  {
+   "text": "La herramienta de Nuria ayuda al periodismo local a detectar noticias falsas.",
+   "en": "Nuria's tool helps local journalism detect fake news.",
+   "ko": "누리아의 도구는 지역 언론이 가짜 뉴스를 잡아내도록 도와요.",
+   "blank": "periodismo",
+   "src": "made"
   }
  ],
  "w|periodista": [
@@ -68882,6 +69426,22 @@
    "en": "Sofía plans the week's meals before going to the market.",
    "ko": "소피아는 시장에 가기 전에 일주일 식단을 계획해요.",
    "blank": "planificación",
+   "src": "made"
+  }
+ ],
+ "w|planificar": [
+  {
+   "text": "Los lunes Raúl dedica una hora a planificar la semana con su equipo.",
+   "en": "On Mondays Raúl spends an hour planning the week with his team.",
+   "ko": "월요일마다 라울은 팀과 한 시간 동안 한 주를 계획해요.",
+   "blank": "planificar",
+   "src": "made"
+  },
+  {
+   "text": "Antes de cada lanzamiento, Nuria se sienta con el equipo a planificar las tareas.",
+   "en": "Before each launch, Nuria sits down with the team to plan the tasks.",
+   "ko": "출시 전마다 누리아는 팀과 앉아 할 일을 계획해요.",
+   "blank": "planificar",
    "src": "made"
   }
  ],
@@ -71709,6 +72269,22 @@
    "blank": "produjo"
   }
  ],
+ "w|productivo": [
+  {
+   "text": "Raúl dice que es más productivo por la mañana, antes de que lleguen los correos.",
+   "en": "Raúl says he's more productive in the morning, before the emails arrive.",
+   "ko": "라울은 메일이 쏟아지기 전인 아침에 일이 더 잘된다고 해요.",
+   "blank": "productivo",
+   "src": "made"
+  },
+  {
+   "text": "Nuria cree que un equipo descansado es mucho más productivo que uno agotado.",
+   "en": "Nuria believes a rested team is much more productive than an exhausted one.",
+   "ko": "누리아는 지친 팀보다 쉰 팀이 훨씬 생산적이라고 믿어요.",
+   "blank": "productivo",
+   "src": "made"
+  }
+ ],
  "w|producto": [
   {
    "text": "Este producto se vende en muchas tiendas.",
@@ -72314,6 +72890,22 @@
    "en": "Before carrying on with the letter, Sofía made herself another tea.",
    "ko": "소피아는 편지를 이어 쓰기 전에 차를 한 잔 더 탔어요.",
    "blank": "proseguir",
+   "src": "made"
+  }
+ ],
+ "w|prosperar": [
+  {
+   "text": "Raúl espera que su proyecto pueda prosperar aunque el presupuesto sea pequeño.",
+   "en": "Raúl hopes his project can thrive even though the budget is small.",
+   "ko": "라울은 예산이 적어도 자기 프로젝트가 잘되길 바라요.",
+   "blank": "prosperar",
+   "src": "made"
+  },
+  {
+   "text": "Nuria sabe que muchas startups no llegan a prosperar en sus primeros años.",
+   "en": "Nuria knows many startups don't manage to thrive in their first years.",
+   "ko": "누리아는 많은 스타트업이 처음 몇 년을 넘기지 못한다는 걸 알아요.",
+   "blank": "prosperar",
    "src": "made"
   }
  ],
@@ -75539,6 +76131,22 @@
    "en": "It fell into the fisherman's net.",
    "ko": "어부의 그물에 걸렸어.",
    "blank": "red"
+  }
+ ],
+ "w|redacción": [
+  {
+   "text": "La redacción del contrato le llevó a Raúl toda la tarde.",
+   "en": "Drafting the contract took Raúl the whole afternoon.",
+   "ko": "라울은 계약서를 작성하는 데 오후를 통째로 썼어요.",
+   "blank": "redacción",
+   "src": "made"
+  },
+  {
+   "text": "Nuria pidió a una amiga que revisara la redacción de las preguntas frecuentes.",
+   "en": "Nuria asked a friend to check the wording of the FAQ.",
+   "ko": "누리아는 친구에게 자주 묻는 질문의 문장을 봐 달라고 했어요.",
+   "blank": "redacción",
+   "src": "made"
   }
  ],
  "w|redada": [
@@ -79228,6 +79836,22 @@
    "en": "Carmen's grandmother gave her a rosary that she keeps in her lab coat.",
    "ko": "카르멘은 할머니가 준 묵주를 실험복 주머니에 넣고 다녀요.",
    "blank": "rosario",
+   "src": "made"
+  }
+ ],
+ "w|rosquilla": [
+  {
+   "text": "Cuando alguien cumple años, Raúl trae una caja de rosquillas de anís.",
+   "en": "When someone has a birthday, Raúl brings a box of aniseed doughnuts.",
+   "ko": "누가 생일이면 라울은 아니스 도넛 한 상자를 사 와요.",
+   "blank": "rosquillas",
+   "src": "made"
+  },
+  {
+   "text": "Los viernes, Nuria trae rosquillas y café para todo el equipo.",
+   "en": "On Fridays, Nuria brings doughnuts and coffee for the whole team.",
+   "ko": "금요일마다 누리아는 팀 전체에게 도넛과 커피를 사 와요.",
+   "blank": "rosquillas",
    "src": "made"
   }
  ],
@@ -84125,6 +84749,22 @@
    "en": "Wash your hands; they're dirty.",
    "ko": "손 씻어, 더러워.",
    "blank": "sucias"
+  }
+ ],
+ "w|sucursal": [
+  {
+   "text": "Raúl viaja a menudo a una sucursal en una ciudad de mucha altitud y siempre le duele la cabeza.",
+   "en": "Raúl often travels to a branch in a high-altitude city and always gets a headache.",
+   "ko": "라울은 고도가 높은 도시의 지점에 자주 출장 가는데 갈 때마다 머리가 아파요.",
+   "blank": "sucursal",
+   "src": "made"
+  },
+  {
+   "text": "Un banco grande quiere usar el programa de Nuria en cada sucursal del país.",
+   "en": "A big bank wants to use Nuria's program in every branch in the country.",
+   "ko": "큰 은행이 전국 모든 지점에서 누리아의 프로그램을 쓰고 싶어 해요.",
+   "blank": "sucursal",
+   "src": "made"
   }
  ],
  "w|sudar": [

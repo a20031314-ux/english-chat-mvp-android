@@ -1585,6 +1585,22 @@
    "src": "made"
   }
  ],
+ "w|अनपढ़": [
+  {
+   "text": "अजय रविवार को एक अनपढ़ पड़ोसन को अख़बार पढ़कर सुनाता है।",
+   "en": "On Sundays Ajay reads the newspaper aloud to a neighbour who can't read.",
+   "ko": "아자이는 일요일마다 글을 모르는 이웃 아주머니에게 신문을 읽어 드려요.",
+   "blank": "अनपढ़",
+   "src": "made"
+  },
+  {
+   "text": "एक अनपढ़ किसान ने बिना किसी ट्रेनिंग के पूरी मैराथन दौड़कर सबको चौंका दिया।",
+   "en": "A farmer who had never learned to read surprised everyone by running the full marathon without any training.",
+   "ko": "글을 모르는 한 농부가 아무 훈련 없이 풀코스를 완주해 모두를 놀라게 했어요.",
+   "blank": "अनपढ़",
+   "src": "made"
+  }
+ ],
  "w|अनमोल": [
   {
    "text": "रवि अपने गुरु की दी हुई पुरानी क़लम को अनमोल मानता है।",
@@ -4937,6 +4953,22 @@
    "src": "made"
   }
  ],
+ "w|आपसी": [
+  {
+   "text": "मोहल्ले के लोग आपसी झगड़े भी चाय पर बैठकर निपटा लेते हैं।",
+   "en": "The people of the neighbourhood settle even their mutual quarrels over tea.",
+   "ko": "동네 사람들은 서로 간의 다툼도 차 한잔하며 풀어요.",
+   "blank": "आपसी",
+   "src": "made"
+  },
+  {
+   "text": "धावकों ने आपसी बातचीत में अगले साल साथ दौड़ने का वादा किया।",
+   "en": "In conversation among themselves, the runners promised to run together next year.",
+   "ko": "주자들은 서로 이야기하다가 내년에 같이 뛰자고 약속했어요.",
+   "blank": "आपसी",
+   "src": "made"
+  }
+ ],
  "w|आपातकाल": [
   {
    "text": "रवि के पिता आपातकाल के दिनों के मुक़दमों के क़िस्से सुनाते हैं।",
@@ -6245,6 +6277,22 @@
    "src": "made"
   }
  ],
+ "w|इमाम": [
+  {
+   "text": "गली के कोने वाली मस्जिद के इमाम ईद पर सब पड़ोसियों को सेवइयाँ भिजवाते हैं।",
+   "en": "The imam of the mosque at the corner of the lane sends vermicelli to all the neighbours at Eid.",
+   "ko": "골목 모퉁이 모스크의 이맘은 이드 때 이웃 모두에게 세와이를 보내요.",
+   "blank": "इमाम",
+   "src": "made"
+  },
+  {
+   "text": "रास्ते में मस्जिद के इमाम भी धावकों के लिए पानी लेकर खड़े थे।",
+   "en": "The imam of the mosque was also standing on the route with water for the runners.",
+   "ko": "길에서 모스크 이맘도 주자들에게 줄 물을 들고 서 있었어요.",
+   "blank": "इमाम",
+   "src": "made"
+  }
+ ],
  "w|इमारत": [
   {
    "text": "नई इमारत बहुत ऊँची है।",
@@ -7105,6 +7153,22 @@
    "src": "made"
   }
  ],
+ "w|उत्तराधिकारी": [
+  {
+   "text": "सेठ जी ने अपने भतीजे को दुकान का उत्तराधिकारी बनाया है।",
+   "en": "The merchant has made his nephew the heir to his shop.",
+   "ko": "상인 어른은 조카를 가게 후계자로 정했어요.",
+   "blank": "उत्तराधिकारी",
+   "src": "made"
+  },
+  {
+   "text": "पिछले साल के विजेता ने कहा कि सीमा ही उसकी असली उत्तराधिकारी है।",
+   "en": "Last year's winner said Seema is his true successor.",
+   "ko": "작년 우승자는 시마가 자기의 진짜 후계자라고 했어요.",
+   "blank": "उत्तराधिकारी",
+   "src": "made"
+  }
+ ],
  "w|उत्तरी": [
   {
    "text": "सुनील के खेत का उत्तरी हिस्सा नदी से लगा हुआ है।",
@@ -7941,6 +8005,22 @@
    "src": "made"
   }
  ],
+ "w|उपहार": [
+  {
+   "text": "नए पड़ोसियों के स्वागत में अजय एक छोटा-सा उपहार लेकर गया।",
+   "en": "Ajay took a small gift to welcome the new neighbours.",
+   "ko": "아자이는 새 이웃을 맞으려고 작은 선물을 들고 갔어요.",
+   "blank": "उपहार",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ पूरी करने पर हर धावक को एक छोटा उपहार मिला।",
+   "en": "Every runner got a small gift on finishing the race.",
+   "ko": "완주한 주자는 모두 작은 선물을 받았어요.",
+   "blank": "उपहार",
+   "src": "made"
+  }
+ ],
  "w|उपाधि": [
   {
    "text": "सुनील ने रात की कक्षाओं से इंजीनियरिंग की उपाधि हासिल की।",
@@ -8695,6 +8775,22 @@
    "src": "made"
   }
  ],
+ "w|एकादशी": [
+  {
+   "text": "एकादशी के दिन बगल वाली दादी चावल नहीं खातीं।",
+   "en": "The grandmother next door doesn't eat rice on Ekadashi.",
+   "ko": "옆집 할머니는 에카다시 날에는 쌀을 드시지 않아요.",
+   "blank": "एकादशी",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की माँ एकादशी का व्रत रखती हैं, फिर भी बेटी की दौड़ देखने आईं।",
+   "en": "Seema's mother was keeping the Ekadashi fast, yet she came to watch her daughter run.",
+   "ko": "시마의 어머니는 에카다시 단식 중인데도 딸의 경기를 보러 왔어요.",
+   "blank": "एकादशी",
+   "src": "made"
+  }
+ ],
  "w|एटीएम": [
   {
    "text": "नकदी निकालने एटीएम चलो।",
@@ -9394,6 +9490,22 @@
    "en": "A broken tooth from a comb was stuck in a girl's phone cover.",
    "ko": "한 소녀의 휴대폰 케이스에 부러진 빗살이 끼어 있었어요.",
    "blank": "कंघी",
+   "src": "made"
+  }
+ ],
+ "w|कचरा": [
+  {
+   "text": "अजय ने पड़ोसियों से कहा कि गीला और सूखा कचरा अलग रखें।",
+   "en": "Ajay asked the neighbours to keep wet and dry rubbish separate.",
+   "ko": "아자이는 이웃들에게 젖은 쓰레기와 마른 쓰레기를 나눠 달라고 했어요.",
+   "blank": "कचरा",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ के बाद सड़क पर पड़ा कचरा उठाने में सीमा ने भी हाथ बँटाया।",
+   "en": "After the race, Seema also helped pick up the litter on the road.",
+   "ko": "경기 뒤 시마도 길에 떨어진 쓰레기 줍기를 거들었어요.",
+   "blank": "कचरा",
    "src": "made"
   }
  ],
@@ -10426,6 +10538,22 @@
    "en": "By the time they reached Delhi, the coach was almost empty.",
    "ko": "델리에 다다를 즈음 객실은 거의 텅 비었어요.",
    "blank": "क़रीब क़रीब",
+   "src": "made"
+  }
+ ],
+ "w|क़रीबी": [
+  {
+   "text": "शर्मा जी अजय के सबसे क़रीबी पड़ोसी हैं, दोनों के दरवाज़े आमने-सामने हैं।",
+   "en": "Mr Sharma is Ajay's closest neighbour; their doors face each other.",
+   "ko": "샤르마 씨는 아자이와 가장 가까운 이웃이라 두 집 문이 마주 보고 있어요.",
+   "blank": "क़रीबी",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की सबसे क़रीबी सहेली ने आख़िरी किलोमीटर में उसका साथ दिया।",
+   "en": "Seema's closest friend kept her company over the last kilometre.",
+   "ko": "시마의 가장 친한 친구가 마지막 일 킬로미터를 함께 뛰어 줬어요.",
+   "blank": "क़रीबी",
    "src": "made"
   }
  ],
@@ -20525,6 +20653,22 @@
    "en": "Studies would be hard without a scholarship.",
    "ko": "장학금 없이는 공부가 힘들었을 거야.",
    "blank": "छात्रवृत्ति"
+  }
+ ],
+ "w|छात्रा": [
+  {
+   "text": "नीचे वाली मंज़िल की छात्रा रात भर पढ़ाई करती है, उसकी बत्ती देर तक जलती है।",
+   "en": "The student on the lower floor studies all night; her light stays on late.",
+   "ko": "아랫집 여학생은 밤새 공부해서 불이 늦게까지 켜져 있어요.",
+   "blank": "छात्रा",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के साथ दौड़ने वाली एक कॉलेज छात्रा ने पहली बार बीस किलोमीटर पूरे किए।",
+   "en": "A college student running with Seema completed twenty kilometres for the first time.",
+   "ko": "시마와 함께 뛴 여대생은 처음으로 이십 킬로미터를 완주했어요.",
+   "blank": "छात्रा",
+   "src": "made"
   }
  ],
  "w|छानना": [
@@ -32417,6 +32561,22 @@
    "blank": "नापना"
   }
  ],
+ "w|नाबालिग": [
+  {
+   "text": "अजय ने समझाया कि नाबालिग बच्चों को स्कूटर चलाने देना क़ानून के ख़िलाफ़ है।",
+   "en": "Ajay explained that letting minors ride scooters is against the law.",
+   "ko": "아자이는 미성년자에게 스쿠터를 몰게 하는 건 불법이라고 설명했어요.",
+   "blank": "नाबालिग",
+   "src": "made"
+  },
+  {
+   "text": "नियम के अनुसार नाबालिग धावक सिर्फ़ पाँच किलोमीटर की दौड़ में ही भाग ले सकते हैं।",
+   "en": "According to the rules, minor runners can only take part in the five-kilometre race.",
+   "ko": "규정상 미성년 주자는 오 킬로미터 경주에만 나갈 수 있어요.",
+   "blank": "नाबालिग",
+   "src": "made"
+  }
+ ],
  "w|नाम": [
   {
    "text": "तुम्हारा नाम क्या है?",
@@ -33965,6 +34125,22 @@
    "en": "He is wearing a blue shirt.",
    "ko": "그는 파란 셔츠를 입었어.",
    "blank": "नीला"
+  }
+ ],
+ "w|नींव": [
+  {
+   "text": "पड़ोसी के नए घर की नींव खुदते देख अजय के बच्चे रोज़ खिड़की से झाँकते हैं।",
+   "en": "Ajay's children peep from the window every day, watching the foundation of the neighbour's new house being dug.",
+   "ko": "아자이의 아이들은 이웃의 새 집 기초 파는 걸 매일 창문으로 구경해요.",
+   "blank": "नींव",
+   "src": "made"
+  },
+  {
+   "text": "कोच ने कहा कि रोज़ की छोटी दौड़ ही मैराथन की असली नींव है।",
+   "en": "The coach said daily short runs are the real foundation of a marathon.",
+   "ko": "코치는 매일 하는 짧은 달리기가 마라톤의 진짜 기초라고 했어요.",
+   "blank": "नींव",
+   "src": "made"
   }
  ],
  "w|नुकसान": [
@@ -36650,6 +36826,22 @@
    "en": "Kavita herself made the list of workers eligible for the insurance scheme.",
    "ko": "카비타는 보험 대상 인부 명단을 직접 만들었어요.",
    "blank": "पात्र",
+   "src": "made"
+  }
+ ],
+ "w|पादरी": [
+  {
+   "text": "क्रिसमस पर पास के चर्च के पादरी ने मोहल्ले के बच्चों को केक बाँटा।",
+   "en": "At Christmas the priest of the nearby church gave cake to the neighbourhood children.",
+   "ko": "크리스마스에 근처 교회 신부님이 동네 아이들에게 케이크를 나눠 줬어요.",
+   "blank": "पादरी",
+   "src": "made"
+  },
+  {
+   "text": "चर्च के पादरी ने भी अपनी टोली के साथ पाँच किलोमीटर की दौड़ पूरी की।",
+   "en": "The church priest also completed the five-kilometre run with his group.",
+   "ko": "교회 신부님도 일행과 함께 오 킬로미터를 완주했어요.",
+   "blank": "पादरी",
    "src": "made"
   }
  ],
@@ -39901,6 +40093,22 @@
    "src": "made"
   }
  ],
+ "w|प्रवासी": [
+  {
+   "text": "अजय के पड़ोस में बिहार से आया एक प्रवासी मज़दूर परिवार रहता है।",
+   "en": "A migrant labourer family from Bihar lives next to Ajay.",
+   "ko": "아자이 옆집에는 비하르에서 온 이주 노동자 가족이 살아요.",
+   "blank": "प्रवासी",
+   "src": "made"
+  },
+  {
+   "text": "विदेश में बसे कई प्रवासी भी इस मैराथन के लिए शहर लौटते हैं।",
+   "en": "Many emigrants settled abroad also return to the city for this marathon.",
+   "ko": "해외에 사는 교민들도 이 마라톤을 위해 고향에 와요.",
+   "blank": "प्रवासी",
+   "src": "made"
+  }
+ ],
  "w|प्रवाह": [
   {
    "text": "करण ने नहर का प्रवाह मोड़कर सूखे खेत तक पानी पहुँचाया।",
@@ -41659,6 +41867,22 @@
    "en": "Spread the sheet on the ground.",
    "ko": "이불을 바닥에 펴.",
    "blank": "फैला"
+  }
+ ],
+ "w|फ़ैशन": [
+  {
+   "text": "ऊपर वाली मंज़िल की लड़की फ़ैशन डिज़ाइन पढ़ती है और सबके कपड़ों पर राय देती है।",
+   "en": "The girl on the upper floor studies fashion design and gives her opinion on everyone's clothes.",
+   "ko": "윗집 여학생은 패션 디자인을 공부해서 모두의 옷에 한마디씩 해요.",
+   "blank": "फ़ैशन",
+   "src": "made"
+  },
+  {
+   "text": "सीमा फ़ैशन के लिए नहीं, आराम के लिए जूते चुनती है।",
+   "en": "Seema chooses shoes for comfort, not for fashion.",
+   "ko": "시마는 멋보다 편안함을 보고 신발을 골라요.",
+   "blank": "फ़ैशन",
+   "src": "made"
   }
  ],
  "w|फ़ैसला": [
@@ -44847,6 +45071,22 @@
    "blank": "बुद्धि"
   }
  ],
+ "w|बुद्धिजीवी": [
+  {
+   "text": "सोसाइटी की बैठक में एक बुद्धिजीवी पड़ोसी ने लंबा भाषण दे दिया।",
+   "en": "At the society meeting, an intellectual neighbour gave a long speech.",
+   "ko": "단지 회의에서 한 지식인 이웃이 긴 연설을 했어요.",
+   "blank": "बुद्धिजीवी",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ में शहर के कई बुद्धिजीवी भी पहली बार शामिल हुए।",
+   "en": "Several of the city's intellectuals also took part in the race for the first time.",
+   "ko": "도시의 여러 지식인도 처음으로 경기에 참가했어요.",
+   "blank": "बुद्धिजीवी",
+   "src": "made"
+  }
+ ],
  "w|बुद्धिमान": [
   {
    "text": "बुद्धिमान व्यक्ति जल्दबाज़ी नहीं करता।",
@@ -46657,6 +46897,22 @@
    "blank": "भुगतान"
   }
  ],
+ "w|भुगतान करना": [
+  {
+   "text": "अजय ने सोसाइटी के बिजली बिल का ऑनलाइन भुगतान कर दिया।",
+   "en": "Ajay paid the society's electricity bill online.",
+   "ko": "아자이는 단지 전기 요금을 온라인으로 냈어요.",
+   "blank": "भुगतान कर",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने मैराथन की फ़ीस का पिछले महीने ही भुगतान कर दिया था।",
+   "en": "Seema had paid the marathon fee last month itself.",
+   "ko": "시마는 마라톤 참가비를 지난달에 이미 냈어요.",
+   "blank": "भुगतान कर",
+   "src": "made"
+  }
+ ],
  "w|भुजिया": [
   {
    "text": "अजय की बेकरी में बीकानेरी भुजिया के पैकेट जल्दी ख़त्म हो जाते हैं।",
@@ -47691,6 +47947,22 @@
    "src": "made"
   }
  ],
+ "w|मंडी": [
+  {
+   "text": "अजय और उसका पड़ोसी हर रविवार साथ में सब्ज़ी मंडी जाते हैं।",
+   "en": "Ajay and his neighbour go to the vegetable market together every Sunday.",
+   "ko": "아자이와 이웃은 일요일마다 같이 채소 시장에 가요.",
+   "blank": "मंडी",
+   "src": "made"
+  },
+  {
+   "text": "मैराथन फल मंडी के सामने से निकली, जहाँ दुकानदारों ने तालियाँ बजाईं।",
+   "en": "The marathon went past the fruit market, where shopkeepers clapped.",
+   "ko": "마라톤 행렬이 과일 시장 앞을 지나자 상인들이 박수를 쳤어요.",
+   "blank": "मंडी",
+   "src": "made"
+  }
+ ],
  "w|मत": [
   {
    "text": "इतना ज़ोर से मत बोलो।",
@@ -48662,6 +48934,22 @@
    "en": "When the project was finished, a musical gathering was held on the office roof.",
    "ko": "프로젝트가 끝나자 회사 옥상에서 노래 모임이 열렸어요.",
    "blank": "महफ़िल",
+   "src": "made"
+  }
+ ],
+ "w|महर्षि": [
+  {
+   "text": "अजय के पड़ोसी अपने बेटे को महर्षि वाल्मीकि की कथा सुना रहे थे।",
+   "en": "Ajay's neighbour was telling his son the story of the sage Valmiki.",
+   "ko": "아자이의 이웃은 아들에게 성자 발미키 이야기를 들려주고 있었어요.",
+   "blank": "महर्षि",
+   "src": "made"
+  },
+  {
+   "text": "सीमा की दादी कहती हैं कि लंबी दौड़ के लिए महर्षि जैसा धैर्य चाहिए।",
+   "en": "Seema's grandmother says a long race needs patience like a great sage's.",
+   "ko": "시마의 할머니는 장거리 달리기엔 성인 같은 인내가 필요하다고 하세요.",
+   "blank": "महर्षि",
    "src": "made"
   }
  ],
@@ -49875,6 +50163,22 @@
    "blank": "मिलकर"
   }
  ],
+ "w|मिलन": [
+  {
+   "text": "होली का दिन पूरे मोहल्ले के मिलन का दिन होता है।",
+   "en": "Holi is a day when the whole neighbourhood comes together.",
+   "ko": "홀리는 온 동네가 함께 어울리는 날이에요.",
+   "blank": "मिलन",
+   "src": "made"
+  },
+  {
+   "text": "फ़िनिश लाइन पर बिछड़े दोस्तों का मिलन देखकर सीमा की आँखें भर आईं।",
+   "en": "Seeing old friends reunited at the finish line brought tears to Seema's eyes.",
+   "ko": "결승선에서 헤어졌던 친구들이 다시 만나는 걸 보고 시마는 눈시울이 붉어졌어요.",
+   "blank": "मिलन",
+   "src": "made"
+  }
+ ],
  "w|मिलना": [
   {
    "text": "मेरी चाबी मिल गई।",
@@ -49916,6 +50220,22 @@
    "en": "Neha's mission is for every girl in the village to go to school.",
    "ko": "네하의 목표는 마을 소녀가 모두 학교에 다니는 거예요.",
    "blank": "मिशन",
+   "src": "made"
+  }
+ ],
+ "w|मिश्रण": [
+  {
+   "text": "पड़ोस की आंटी ने अजय को अपने घर के मसालों का ख़ास मिश्रण भेजा।",
+   "en": "The aunty next door sent Ajay her home-made special blend of spices.",
+   "ko": "옆집 아주머니가 아자이에게 직접 만든 특제 향신료를 보내 줬어요.",
+   "blank": "मिश्रण",
+   "src": "made"
+  },
+  {
+   "text": "सीमा दौड़ से पहले नींबू, नमक और शहद का मिश्रण पीती है।",
+   "en": "Before the race, Seema drinks a mixture of lemon, salt and honey.",
+   "ko": "시마는 경기 전에 레몬과 소금, 꿀을 섞은 물을 마셔요.",
+   "blank": "मिश्रण",
    "src": "made"
   }
  ],
@@ -51559,6 +51879,22 @@
    "src": "made"
   }
  ],
+ "w|मौलवी": [
+  {
+   "text": "मोहल्ले के बच्चों को उर्दू पढ़ाने एक मौलवी साहब हर शाम आते हैं।",
+   "en": "A maulvi comes every evening to teach Urdu to the neighbourhood children.",
+   "ko": "매일 저녁 몰비 선생님이 동네 아이들에게 우르두어를 가르치러 와요.",
+   "blank": "मौलवी",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ में एक बुज़ुर्ग मौलवी साहब भी थे जो पूरे रास्ते मुस्कुराते रहे।",
+   "en": "There was also an elderly maulvi in the race who kept smiling the whole way.",
+   "ko": "경기에는 내내 웃음을 잃지 않은 나이 든 몰비 어른도 있었어요.",
+   "blank": "मौलवी",
+   "src": "made"
+  }
+ ],
  "w|मौलिक": [
   {
    "text": "संपादक को विकास के मौलिक विचार हमेशा पसंद आते हैं।",
@@ -52189,6 +52525,22 @@
    "blank": "योजना"
   }
  ],
+ "w|योद्धा": [
+  {
+   "text": "तीसरी मंज़िल के रिटायर्ड फ़ौजी अपने साथी योद्धा की बहादुरी के क़िस्से सुनाते हैं।",
+   "en": "The retired soldier on the third floor tells stories of his fellow warrior's bravery.",
+   "ko": "삼 층의 퇴역 군인은 전우의 용감한 이야기를 들려줘요.",
+   "blank": "योद्धा",
+   "src": "made"
+  },
+  {
+   "text": "फ़िनिश लाइन पार करते ही सीमा को लगा जैसे वह कोई योद्धा हो।",
+   "en": "As she crossed the finish line, Seema felt like a warrior.",
+   "ko": "결승선을 넘는 순간 시마는 자기가 전사가 된 것 같았어요.",
+   "blank": "योद्धा",
+   "src": "made"
+  }
+ ],
  "w|रकम": [
   {
    "text": "किराए की रकम आज जमा करनी है।",
@@ -52231,6 +52583,22 @@
    "en": "Eating less salt keeps blood pressure controlled.",
    "ko": "소금을 줄이면 혈압이 조절돼.",
    "blank": "रक्तचाप"
+  }
+ ],
+ "w|रक्षक": [
+  {
+   "text": "सोसाइटी का रात का रक्षक हर घंटे सीटी बजाकर गश्त लगाता है।",
+   "en": "The society's night guard patrols, blowing his whistle every hour.",
+   "ko": "단지 야간 경비원은 한 시간마다 호루라기를 불며 순찰해요.",
+   "blank": "रक्षक",
+   "src": "made"
+  },
+  {
+   "text": "पुलिस के जवान दौड़ के रक्षक बनकर पूरे रास्ते पर खड़े थे।",
+   "en": "Police officers stood along the whole route as the race's protectors.",
+   "ko": "경찰관들이 경기를 지키며 코스 내내 서 있었어요.",
+   "blank": "रक्षक",
+   "src": "made"
   }
  ],
  "w|रक्षा": [
@@ -52592,6 +52960,22 @@
    "en": "When her daughter left for her in-laws', the neighbor's eyes filled with tears.",
    "ko": "딸이 시댁으로 떠날 때 이웃 아주머니의 눈시울이 붉어졌어요.",
    "blank": "रवानगी",
+   "src": "made"
+  }
+ ],
+ "w|रवाना": [
+  {
+   "text": "पड़ोसी परिवार सुबह-सुबह तीर्थ के लिए रवाना हुआ, तो अजय उन्हें स्टेशन छोड़ आया।",
+   "en": "The neighbour's family set off early for a pilgrimage, so Ajay dropped them at the station.",
+   "ko": "이웃 가족이 아침 일찍 성지 순례를 떠나서 아자이가 역까지 바래다줬어요.",
+   "blank": "रवाना",
+   "src": "made"
+  },
+  {
+   "text": "सुबह पाँच बजे धावकों का पहला दल रवाना हुआ।",
+   "en": "The first group of runners set off at five in the morning.",
+   "ko": "새벽 다섯 시에 첫 주자 무리가 출발했어요.",
+   "blank": "रवाना",
    "src": "made"
   }
  ],
@@ -53204,6 +53588,22 @@
    "en": "Priya put the boondi raita in the fridge to chill.",
    "ko": "프리야는 분디 라이타를 차게 하려고 냉장고에 넣었어요.",
    "blank": "रायता",
+   "src": "made"
+  }
+ ],
+ "w|राशन": [
+  {
+   "text": "अजय बीमार पड़ोसी के लिए महीने भर का राशन ले आया।",
+   "en": "Ajay brought a month's groceries for his sick neighbour.",
+   "ko": "아자이는 아픈 이웃을 위해 한 달 치 식료품을 사 왔어요.",
+   "blank": "राशन",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने बताया कि मैराथन से पहले वह राशन में दाल और चावल ज़्यादा रखती है।",
+   "en": "Seema said that before a marathon she stocks up more lentils and rice in her groceries.",
+   "ko": "시마는 마라톤 전엔 장 볼 때 콩과 쌀을 더 산다고 했어요.",
+   "blank": "राशन",
    "src": "made"
   }
  ],
@@ -55669,6 +56069,22 @@
    "blank": "वर्षा"
   }
  ],
+ "w|वंश": [
+  {
+   "text": "सामने वाले बुज़ुर्ग अपने वंश की पुरानी कहानियाँ सुनाना पसंद करते हैं।",
+   "en": "The old man opposite loves telling old stories about his lineage.",
+   "ko": "앞집 할아버지는 집안 내력 이야기를 즐겨 들려줘요.",
+   "blank": "वंश",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के परिवार के वंश में वह पहली लड़की है जिसने मैराथन दौड़ी।",
+   "en": "Seema is the first girl in her family line to run a marathon.",
+   "ko": "시마는 집안에서 마라톤을 뛴 첫 여자예요.",
+   "blank": "वंश",
+   "src": "made"
+  }
+ ],
  "w|वसंत": [
   {
    "text": "वसंत में बाग़ फूलों से भर जाता है।",
@@ -55744,6 +56160,22 @@
    "en": "Neha wrote that they hadn't met for years, but in truth her friend had always been close.",
    "ko": "네하는 몇 년째 못 만났지만 사실 너는 늘 내 곁에 있었다고 썼어요.",
    "blank": "वस्तुतः",
+   "src": "made"
+  }
+ ],
+ "w|वस्त्र": [
+  {
+   "text": "सर्दी आने से पहले मोहल्ले वालों ने ग़रीबों के लिए गरम वस्त्र इकट्ठा किए।",
+   "en": "Before winter, the neighbourhood people collected warm clothes for the poor.",
+   "ko": "겨울이 오기 전 동네 사람들이 어려운 이웃을 위해 따뜻한 옷을 모았어요.",
+   "blank": "वस्त्र",
+   "src": "made"
+  },
+  {
+   "text": "धावकों ने हल्के वस्त्र पहने थे ताकि पसीना जल्दी सूख जाए।",
+   "en": "The runners wore light clothing so the sweat would dry quickly.",
+   "ko": "주자들은 땀이 빨리 마르도록 가벼운 옷을 입었어요.",
+   "blank": "वस्त्र",
    "src": "made"
   }
  ],
@@ -56030,6 +56462,22 @@
    "en": "An air force plane passed very low over the field.",
    "ko": "공군 비행기 한 대가 밭 위로 아주 낮게 날아갔어요.",
    "blank": "वायुसेना",
+   "src": "made"
+  }
+ ],
+ "w|वार्षिक": [
+  {
+   "text": "अजय की सोसाइटी का वार्षिक उत्सव इस बार पार्क में होगा।",
+   "en": "The annual festival of Ajay's housing society will be held in the park this time.",
+   "ko": "아자이네 아파트 단지의 연례 행사는 이번에 공원에서 열려요.",
+   "blank": "वार्षिक",
+   "src": "made"
+  },
+  {
+   "text": "सीमा शहर की वार्षिक मैराथन में तीसरी बार दौड़ रही है।",
+   "en": "Seema is running in the city's annual marathon for the third time.",
+   "ko": "시마는 도시 연례 마라톤에 세 번째로 참가해요.",
+   "blank": "वार्षिक",
    "src": "made"
   }
  ],
@@ -56540,6 +56988,22 @@
    "en": "Grandfather tells stories of the farmers' uprising from British times.",
    "ko": "할아버지는 영국 시절 농민 봉기 이야기를 들려줘요.",
    "blank": "विद्रोह",
+   "src": "made"
+  }
+ ],
+ "w|विद्वान": [
+  {
+   "text": "चौथी मंज़िल पर संस्कृत के एक विद्वान रहते हैं, जिनसे बच्चे श्लोक सीखते हैं।",
+   "en": "A Sanskrit scholar lives on the fourth floor, and the children learn verses from him.",
+   "ko": "사 층에는 산스크리트 학자가 사는데 아이들이 그분께 경전 구절을 배워요.",
+   "blank": "विद्वान",
+   "src": "made"
+  },
+  {
+   "text": "मैराथन के बाद एक खेल विद्वान ने सही तरीक़े से साँस लेने पर बात की।",
+   "en": "After the marathon, a sports scholar spoke about breathing correctly.",
+   "ko": "마라톤 뒤 한 스포츠 학자가 올바른 호흡법에 대해 이야기했어요.",
+   "blank": "विद्वान",
    "src": "made"
   }
  ],
@@ -58175,6 +58639,22 @@
    "src": "made"
   }
  ],
+ "w|शताब्दी": [
+  {
+   "text": "अजय के मोहल्ले का बरगद का पेड़ एक शताब्दी से भी पुराना है।",
+   "en": "The banyan tree in Ajay's neighbourhood is more than a century old.",
+   "ko": "아자이네 동네 반얀나무는 백 년도 더 됐어요.",
+   "blank": "शताब्दी",
+   "src": "made"
+  },
+  {
+   "text": "मैराथन का रास्ता एक शताब्दी पुराने पुल से होकर गुज़रता है।",
+   "en": "The marathon route passes over a century-old bridge.",
+   "ko": "마라톤 코스는 백 년 된 다리를 지나가요.",
+   "blank": "शताब्दी",
+   "src": "made"
+  }
+ ],
  "w|शत्रु": [
   {
    "text": "सच्चाई का शत्रु झूठ है।",
@@ -58762,6 +59242,22 @@
    "en": "Throughout the holidays Anjali hardly ever looked at her phone.",
    "ko": "방학 내내 안잘리는 휴대폰을 거의 안 봤어요.",
    "blank": "शायद ही",
+   "src": "made"
+  }
+ ],
+ "w|शायर": [
+  {
+   "text": "बगल वाले चाचा जवानी में शायर थे और अब भी महफ़िलों में ग़ज़ल सुनाते हैं।",
+   "en": "The uncle next door was a poet in his youth and still recites ghazals at gatherings.",
+   "ko": "옆집 아저씨는 젊을 때 시인이었고 지금도 모임에서 가잘을 읊어요.",
+   "blank": "शायर",
+   "src": "made"
+  },
+  {
+   "text": "मंच पर एक शायर ने धावकों के जोश पर शेर सुनाया।",
+   "en": "On stage a poet recited a couplet about the runners' spirit.",
+   "ko": "무대에서 한 시인이 주자들의 열정을 노래한 시구를 읊었어요.",
+   "blank": "शायर",
    "src": "made"
   }
  ],
@@ -60133,6 +60629,22 @@
    "src": "made"
   }
  ],
+ "w|संगत": [
+  {
+   "text": "अजय कहता है कि बच्चों पर दोस्तों की संगत का गहरा असर पड़ता है।",
+   "en": "Ajay says the company of friends has a deep effect on children.",
+   "ko": "아자이는 아이들은 어울리는 친구의 영향을 크게 받는다고 해요.",
+   "blank": "संगत",
+   "src": "made"
+  },
+  {
+   "text": "ढोल वालों की संगत में धावकों के कदम तेज़ हो गए।",
+   "en": "With the drummers' accompaniment, the runners' steps quickened.",
+   "ko": "북 장단에 맞춰 주자들의 발걸음이 빨라졌어요.",
+   "blank": "संगत",
+   "src": "made"
+  }
+ ],
  "w|संगम": [
   {
    "text": "करण का खेत दो नदियों के संगम के पास है, इसलिए मिट्टी बहुत उपजाऊ है।",
@@ -60615,6 +61127,22 @@
    "blank": "सतह"
   }
  ],
+ "w|संतान": [
+  {
+   "text": "अजय के पड़ोसी बुज़ुर्ग दंपति की कोई संतान नहीं है, इसलिए अजय उनका ख़ास ख़याल रखता है।",
+   "en": "The elderly couple next door to Ajay have no children, so Ajay takes special care of them.",
+   "ko": "아자이의 이웃 노부부는 자식이 없어서 아자이가 각별히 챙겨요.",
+   "blank": "संतान",
+   "src": "made"
+  },
+  {
+   "text": "दौड़ में एक माँ अपनी संतान को गोद में लेकर आख़िरी किलोमीटर चली।",
+   "en": "In the race, a mother walked the last kilometre carrying her child.",
+   "ko": "경기에서 한 엄마가 아이를 안고 마지막 일 킬로미터를 걸었어요.",
+   "blank": "संतान",
+   "src": "made"
+  }
+ ],
  "w|सताना": [
   {
    "text": "बड़े बच्चे उसे स्कूल में सताते थे।",
@@ -60972,6 +61500,22 @@
    "en": "In this coastal town, people who speak different languages live in harmony.",
    "ko": "이 바닷가 마을에는 서로 다른 말을 쓰는 사람들이 사이좋게 살아요.",
    "blank": "सद्भाव",
+   "src": "made"
+  }
+ ],
+ "w|संध्या": [
+  {
+   "text": "संध्या के समय अजय और पड़ोसी छत पर बैठकर गपशप करते हैं।",
+   "en": "In the evening, Ajay and his neighbour sit on the roof and chat.",
+   "ko": "해 질 녘이면 아자이와 이웃은 옥상에 앉아 수다를 떨어요.",
+   "blank": "संध्या",
+   "src": "made"
+  },
+  {
+   "text": "संध्या को इनाम बाँटने का कार्यक्रम रखा गया था।",
+   "en": "The prize-giving ceremony was held in the evening.",
+   "ko": "시상식은 저녁에 열렸어요.",
+   "blank": "संध्या",
    "src": "made"
   }
  ],
@@ -61944,6 +62488,22 @@
    "en": "In Neha's home, boys and girls are treated equally when chores are shared out.",
    "ko": "네하네 집에서는 일을 나눌 때 아들딸을 똑같이 대해요.",
    "blank": "समानता",
+   "src": "made"
+  }
+ ],
+ "w|समापन": [
+  {
+   "text": "उत्सव का समापन मोहल्ले के बच्चों के नाटक से हुआ।",
+   "en": "The festival concluded with a play by the neighbourhood children.",
+   "ko": "행사는 동네 아이들의 연극으로 마무리됐어요.",
+   "blank": "समापन",
+   "src": "made"
+  },
+  {
+   "text": "मैराथन के समापन पर आतिशबाज़ी हुई।",
+   "en": "There were fireworks at the close of the marathon.",
+   "ko": "마라톤이 끝날 때 불꽃놀이가 있었어요.",
+   "blank": "समापन",
    "src": "made"
   }
  ],
@@ -63151,6 +63711,22 @@
    "blank": "ससुर"
   }
  ],
+ "w|ससुराल": [
+  {
+   "text": "सामने वाली भाभी त्योहार पर अपने ससुराल से आई मिठाई सबको बाँटती हैं।",
+   "en": "The sister-in-law opposite shares sweets from her in-laws' home with everyone at festivals.",
+   "ko": "앞집 새댁은 명절이면 시댁에서 온 단것을 다 나눠 줘요.",
+   "blank": "ससुराल",
+   "src": "made"
+  },
+  {
+   "text": "सीमा के ससुराल वाले भी झंडे लेकर उसका हौसला बढ़ाने आए।",
+   "en": "Seema's in-laws also came with flags to cheer her on.",
+   "ko": "시마의 시댁 식구들도 깃발을 들고 응원하러 왔어요.",
+   "blank": "ससुराल",
+   "src": "made"
+  }
+ ],
  "w|संस्करण": [
   {
    "text": "रोहन ने दादी की बिरयानी का एक नया संस्करण तैयार किया।",
@@ -63799,6 +64375,22 @@
    "en": "You need a good companion on a trip.",
    "ko": "여행에는 좋은 동반자가 필요해.",
    "blank": "साथी"
+  }
+ ],
+ "w|साधक": [
+  {
+   "text": "ऊपर वाले अंकल योग के पक्के साधक हैं और सुबह चार बजे उठ जाते हैं।",
+   "en": "The uncle upstairs is a devoted yoga practitioner and gets up at four in the morning.",
+   "ko": "윗집 아저씨는 열성적인 요가 수행자라 새벽 네 시에 일어나요.",
+   "blank": "साधक",
+   "src": "made"
+  },
+  {
+   "text": "सीमा दौड़ को ध्यान की तरह मानती है और ख़ुद को एक साधक समझती है।",
+   "en": "Seema treats running like meditation and sees herself as a practitioner.",
+   "ko": "시마는 달리기를 명상처럼 여기며 스스로를 수행자라 생각해요.",
+   "blank": "साधक",
+   "src": "made"
   }
  ],
  "w|साधन": [
@@ -64469,6 +65061,22 @@
    "en": "The literature class is canceled tomorrow.",
    "ko": "문학 수업은 내일 취소야.",
    "blank": "साहित्य"
+  }
+ ],
+ "w|साहित्यकार": [
+  {
+   "text": "अजय की गली में एक प्रसिद्ध साहित्यकार का पुराना घर है।",
+   "en": "There is an old house of a famous writer in Ajay's lane.",
+   "ko": "아자이네 골목에는 유명한 문인의 옛집이 있어요.",
+   "blank": "साहित्यकार",
+   "src": "made"
+  },
+  {
+   "text": "एक साहित्यकार ने मैराथन के अनुभव पर अख़बार में लेख लिखा।",
+   "en": "A writer wrote a newspaper piece about the experience of the marathon.",
+   "ko": "한 문인이 마라톤 경험을 신문에 실었어요.",
+   "blank": "साहित्यकार",
+   "src": "made"
   }
  ],
  "w|साहित्यिक": [
@@ -66079,6 +66687,22 @@
    "src": "made"
   }
  ],
+ "w|सेवक": [
+  {
+   "text": "बगल वाले सेठ जी का पुराना सेवक तीस साल से उनके घर में काम कर रहा है।",
+   "en": "The old servant of the merchant next door has worked in his house for thirty years.",
+   "ko": "옆집 상인 어른의 늙은 하인은 그 집에서 삼십 년째 일하고 있어요.",
+   "blank": "सेवक",
+   "src": "made"
+  },
+  {
+   "text": "मंदिर का एक बूढ़ा सेवक भी रास्ते में खड़ा होकर धावकों को पानी पिला रहा था।",
+   "en": "An old temple attendant was also standing on the route giving water to the runners.",
+   "ko": "사원의 늙은 시중꾼도 길가에 서서 주자들에게 물을 건넸어요.",
+   "blank": "सेवक",
+   "src": "made"
+  }
+ ],
  "w|सेवा": [
   {
    "text": "जी, क्या सेवा करूँ?",
@@ -66404,6 +67028,22 @@
    "en": "Neha's design has a beauty all its own in its simplicity.",
    "ko": "네하의 디자인에는 단순함에서 오는 아름다움이 있어요.",
    "blank": "सौंदर्य",
+   "src": "made"
+  }
+ ],
+ "w|सौदा": [
+  {
+   "text": "अजय ने पड़ोसी से पुरानी साइकिल ख़रीदी, और दोनों को सौदा अच्छा लगा।",
+   "en": "Ajay bought an old bicycle from his neighbour, and both of them felt it was a good deal.",
+   "ko": "아자이는 이웃에게서 중고 자전거를 샀는데 둘 다 거래에 만족했어요.",
+   "blank": "सौदा",
+   "src": "made"
+  },
+  {
+   "text": "सीमा ने दुकानदार से मोल-भाव करके जूतों का सौदा पक्का किया।",
+   "en": "Seema bargained with the shopkeeper and closed the deal on the shoes.",
+   "ko": "시마는 가게 주인과 흥정해서 신발을 샀어요.",
+   "blank": "सौदा",
    "src": "made"
   }
  ],
