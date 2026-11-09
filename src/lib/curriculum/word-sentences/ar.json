@@ -1337,6 +1337,22 @@
    "blank": "أرض"
   }
  ],
+ "w|أرضي": [
+  {
+   "text": "مكتب عمر الجديد في الطابق الأرضي قرب باب الدخول.",
+   "en": "Omar's new office is on the ground floor near the entrance.",
+   "ko": "오마르의 새 사무실은 입구 근처 1층에 있어요.",
+   "blank": "الأرضي",
+   "src": "made"
+  },
+  {
+   "text": "تتدرب فاطمة على البيانو في قاعة بالطابق الأرضي من المدرسة.",
+   "en": "Fatima practices piano in a hall on the ground floor of the school.",
+   "ko": "파티마는 학교 1층 연습실에서 피아노를 연습해요.",
+   "blank": "الأرضي",
+   "src": "made"
+  }
+ ],
  "w|أرضية": [
   {
    "text": "الأرضية نظيفة ولامعة.",
@@ -2693,6 +2709,22 @@
    "en": "Don't approach a snake in the wild.",
    "ko": "야생에서 뱀에게 가까이 가지 마.",
    "blank": "أفعى"
+  }
+ ],
+ "w|أفق": [
+  {
+   "text": "يرى كريم في الأفق صيدلية ثانية يفتحها في الحي الجديد.",
+   "en": "Karim sees on the horizon a second pharmacy he'll open in the new district.",
+   "ko": "카림은 새 동네에 약국을 하나 더 여는 걸 내다보고 있어요.",
+   "blank": "الأفق",
+   "src": "made"
+  },
+  {
+   "text": "رأت منى من نافذة الطائرة الشمس تغيب خلف الأفق.",
+   "en": "From the plane window Mona saw the sun setting behind the horizon.",
+   "ko": "모나는 비행기 창밖으로 해가 지평선 너머로 지는 걸 봤어요.",
+   "blank": "الأفق",
+   "src": "made"
   }
  ],
  "w|أفلا": [
@@ -4755,6 +4787,22 @@
    "blank": "إصبعاً"
   }
  ],
+ "w|إصدار": [
+  {
+   "text": "انتظر عمر ساعة حتى يتم إصدار بطاقة الدخول الخاصة به.",
+   "en": "Omar waited an hour for his entry card to be issued.",
+   "ko": "오마르는 출입증이 발급될 때까지 한 시간을 기다렸어요.",
+   "blank": "إصدار",
+   "src": "made"
+  },
+  {
+   "text": "تحلم فاطمة بإصدار أول ألبوم لها قبل التخرج.",
+   "en": "Fatima dreams of releasing her first album before graduating.",
+   "ko": "파티마는 졸업 전에 첫 앨범을 내는 게 꿈이에요.",
+   "blank": "بإصدار",
+   "src": "made"
+  }
+ ],
  "w|إصلاح": [
   {
    "text": "طلبت خدمة إصلاح للثلاجة.",
@@ -6781,6 +6829,22 @@
    "blank": "استرجعت"
   }
  ],
+ "w|استرخاء": [
+  {
+   "text": "ينصح كريم الزبائن المتوترين بتمارين الاسترخاء قبل النوم.",
+   "en": "Karim advises stressed customers to do relaxation exercises before sleep.",
+   "ko": "카림은 스트레스받는 손님들에게 자기 전에 이완 운동을 하라고 권해요.",
+   "blank": "الاسترخاء",
+   "src": "made"
+  },
+  {
+   "text": "بحثت منى عن مكان للاسترخاء قبل رحلتها الطويلة.",
+   "en": "Mona looked for a place to relax before her long flight.",
+   "ko": "모나는 긴 비행 전에 쉴 곳을 찾았어요.",
+   "blank": "للاسترخاء",
+   "src": "made"
+  }
+ ],
  "w|استرخى": [
   {
    "text": "استرخى على الكرسي بعد العشاء.",
@@ -7279,6 +7343,22 @@
    "blank": "استهلكت"
   }
  ],
+ "w|استوحش": [
+  {
+   "text": "استوحش عمر في الساعة الأولى، فلم يكن يعرف أحدا.",
+   "en": "Omar felt lonely in the first hour, since he didn't know anyone.",
+   "ko": "처음 한 시간 동안 오마르는 아는 사람이 없어서 외로웠어요.",
+   "blank": "استوحش",
+   "src": "made"
+  },
+  {
+   "text": "استوحشت فاطمة المدرسة في العطلة الصيفية.",
+   "en": "Fatima missed the school during the summer holiday.",
+   "ko": "파티마는 여름방학 동안 학교가 그리웠어요.",
+   "blank": "استوحشت",
+   "src": "made"
+  }
+ ],
  "w|استورد": [
   {
    "text": "استوردت الشركة بضائع من الخارج.",
@@ -7507,6 +7587,22 @@
    "en": "The two balls collided in the air.",
    "ko": "두 공이 공중에서 부딪혔어.",
    "blank": "اصطدمت"
+  }
+ ],
+ "w|اضطر": [
+  {
+   "text": "اضطر عمر إلى ركوب سيارة أجرة لأن الحافلة تأخرت.",
+   "en": "Omar had to take a taxi because the bus was late.",
+   "ko": "버스가 늦어서 오마르는 택시를 탈 수밖에 없었어요.",
+   "blank": "اضطر",
+   "src": "made"
+  },
+  {
+   "text": "اضطرت فاطمة إلى تغيير وتر الكمان قبل الدرس بدقائق.",
+   "en": "Fatima had to change a violin string minutes before the lesson.",
+   "ko": "파티마는 수업 몇 분 전에 바이올린 줄을 갈아야 했어요.",
+   "blank": "اضطرت",
+   "src": "made"
   }
  ],
  "w|اضطراب": [
@@ -8209,6 +8305,22 @@
    "blank": "التقيت"
   }
  ],
+ "w|التهاب": [
+  {
+   "text": "نصح كريم امرأة بالغرغرة بالماء والملح لتخفيف التهاب الحلق.",
+   "en": "Karim advised a woman to gargle with salt water to ease her sore throat.",
+   "ko": "카림은 한 여자에게 목 염증을 가라앉히려면 소금물로 가글하라고 권했어요.",
+   "blank": "التهاب",
+   "src": "made"
+  },
+  {
+   "text": "ألغت منى رحلتها السابقة بسبب التهاب في أذنها.",
+   "en": "Mona cancelled her previous trip because of an ear infection.",
+   "ko": "모나는 귀에 염증이 생겨서 지난번 여행을 취소했어요.",
+   "blank": "التهاب",
+   "src": "made"
+  }
+ ],
  "w|التهم": [
   {
    "text": "التهم ابن يوسف صحن الكبة في دقائق.",
@@ -8503,6 +8615,22 @@
    "en": "I saw a woman at the market this morning.",
    "ko": "오늘 아침 시장에서 여자를 봤어.",
    "blank": "امرأة"
+  }
+ ],
+ "w|انبسط": [
+  {
+   "text": "انبسط عمر حين رأى أن مكتبه يطل على الحديقة.",
+   "en": "Omar was delighted to see that his office overlooks the garden.",
+   "ko": "사무실 창밖으로 정원이 보이자 오마르는 기분이 좋아졌어요.",
+   "blank": "انبسط",
+   "src": "made"
+  },
+  {
+   "text": "انبسطت فاطمة حين صفق لها المعلم بعد العزف.",
+   "en": "Fatima was delighted when the teacher applauded her after the performance.",
+   "ko": "연주가 끝나고 선생님이 박수를 쳐 주자 파티마는 기뻤어요.",
+   "blank": "انبسطت",
+   "src": "made"
   }
  ],
  "w|انبغى": [
@@ -9005,6 +9133,22 @@
    "en": "The student got separated from his friends at school.",
    "ko": "학생이 학교에서 친구들과 떨어졌어.",
    "blank": "انفصل"
+  }
+ ],
+ "w|انفعل": [
+  {
+   "text": "انفعل عمر قليلا حين ضاع ملفه الأول، ثم وجده على الطابعة.",
+   "en": "Omar got a little worked up when his first file went missing, then found it on the printer.",
+   "ko": "첫 파일이 없어지자 오마르는 좀 흥분했는데, 프린터 위에서 찾았어요.",
+   "blank": "انفعل",
+   "src": "made"
+  },
+  {
+   "text": "انفعلت فاطمة وهي تغني المقطع الأخير من الأغنية.",
+   "en": "Fatima got carried away with emotion as she sang the last part of the song.",
+   "ko": "파티마는 노래 마지막 부분을 부르며 감정이 북받쳤어요.",
+   "blank": "انفعلت",
+   "src": "made"
   }
  ],
  "w|انقطع": [
@@ -10471,6 +10615,22 @@
    "en": "We are humans, not machines.",
    "ko": "우리는 인간이지 기계가 아니야.",
    "blank": "بشر"
+  }
+ ],
+ "w|بشرة": [
+  {
+   "text": "تبيع صيدلية كريم كريمات طبيعية تناسب البشرة الحساسة.",
+   "en": "Karim's pharmacy sells natural creams suited to sensitive skin.",
+   "ko": "카림의 약국은 민감한 피부에 맞는 천연 크림을 팔아요.",
+   "blank": "البشرة",
+   "src": "made"
+  },
+  {
+   "text": "يجعل هواء الطائرة الجاف بشرة منى مشدودة، فتحمل كريما دائما.",
+   "en": "The dry air on the plane makes Mona's skin feel tight, so she always carries cream.",
+   "ko": "기내의 건조한 공기 때문에 모나는 피부가 당겨서 늘 크림을 들고 다녀요.",
+   "blank": "بشرة",
+   "src": "made"
   }
  ],
  "w|بشري": [
@@ -12531,6 +12691,22 @@
    "blank": "تحديدا"
   }
  ],
+ "w|تحديق": [
+  {
+   "text": "أزعج عمر تحديق الموظفين فيه حين دخل القاعة.",
+   "en": "The staff staring at Omar when he entered the hall bothered him.",
+   "ko": "오마르가 홀에 들어서자 직원들이 빤히 쳐다봐서 불편했어요.",
+   "blank": "تحديق",
+   "src": "made"
+  },
+  {
+   "text": "لم تتعود فاطمة بعد على تحديق الجمهور فيها أثناء العزف.",
+   "en": "Fatima still isn't used to the audience staring at her while she plays.",
+   "ko": "파티마는 연주할 때 관객이 빤히 쳐다보는 게 아직 익숙하지 않아요.",
+   "blank": "تحديق",
+   "src": "made"
+  }
+ ],
  "w|تحذير": [
   {
    "text": "تلقيت تحذير من المدير هذا الصباح.",
@@ -12575,6 +12751,22 @@
    "src": "made"
   }
  ],
+ "w|تحسر": [
+  {
+   "text": "تحسر عمر لأنه لم يحضر معه غداء من البيت.",
+   "en": "Omar regretted not bringing lunch from home.",
+   "ko": "오마르는 집에서 도시락을 안 싸 온 걸 아쉬워했어요.",
+   "blank": "تحسر",
+   "src": "made"
+  },
+  {
+   "text": "تحسرت فاطمة على السنوات التي ترك فيها العزف.",
+   "en": "Fatima regretted the years in which she gave up playing.",
+   "ko": "파티마는 연주를 그만뒀던 몇 년을 아쉬워했어요.",
+   "blank": "تحسرت",
+   "src": "made"
+  }
+ ],
  "w|تحسن": [
   {
    "text": "لاحظت تحسن في حالتك الصحية.",
@@ -12602,6 +12794,22 @@
    "en": "Mona proposed a plan to improve communication between departments.",
    "ko": "모나는 부서 간 소통을 개선할 계획을 제안했어요.",
    "blank": "لتحسين",
+   "src": "made"
+  }
+ ],
+ "w|تحضير": [
+  {
+   "text": "يأخذ تحضير بعض المراهم وقتا طويلا في معمل كريم الصغير.",
+   "en": "Preparing some ointments takes a long time in Karim's small lab.",
+   "ko": "카림의 작은 조제실에서는 연고 몇 가지를 만드는 데 시간이 오래 걸려요.",
+   "blank": "تحضير",
+   "src": "made"
+  },
+  {
+   "text": "أخذ تحضير حقيبة منى ليلة كاملة.",
+   "en": "Packing Mona's suitcase took a whole night.",
+   "ko": "모나는 짐을 싸는 데 밤을 꼬박 새웠어요.",
+   "blank": "تحضير",
    "src": "made"
   }
  ],
@@ -12745,6 +12953,22 @@
    "en": "The morning greeting is always special.",
    "ko": "아침 인사는 항상 특별해.",
    "blank": "تحية"
+  }
+ ],
+ "w|تحير": [
+  {
+   "text": "تحير عمر أمام الأزرار الكثيرة في آلة التصوير.",
+   "en": "Omar was baffled by the many buttons on the photocopier.",
+   "ko": "오마르는 복사기에 달린 수많은 버튼 앞에서 어리둥절했어요.",
+   "blank": "تحير",
+   "src": "made"
+  },
+  {
+   "text": "تحيرت فاطمة بين الكمان والعود حين سجلت في المدرسة.",
+   "en": "Fatima couldn't decide between the violin and the oud when she enrolled at the school.",
+   "ko": "파티마는 학교에 등록할 때 바이올린과 우드 사이에서 망설였어요.",
+   "blank": "تحيرت",
+   "src": "made"
   }
  ],
  "w|تخرج": [
@@ -13217,6 +13441,22 @@
    "blank": "ترك"
   }
  ],
+ "w|تركز": [
+  {
+   "text": "تتركز معظم زيارات الزبائن إلى صيدلية كريم في المساء.",
+   "en": "Most customer visits to Karim's pharmacy are concentrated in the evening.",
+   "ko": "카림의 약국 손님은 대부분 저녁에 몰려요.",
+   "blank": "تتركز",
+   "src": "made"
+  },
+  {
+   "text": "تركز منى على كتابها حتى لا تفكر في طول الانتظار.",
+   "en": "Mona concentrates on her book so she won't think about how long the wait is.",
+   "ko": "모나는 기다림이 길다는 생각을 안 하려고 책에 집중해요.",
+   "blank": "تركز",
+   "src": "made"
+  }
+ ],
  "w|تركيز": [
   {
    "text": "يحتاج الطالب إلى تركيز أثناء الدراسة.",
@@ -13598,6 +13838,22 @@
    "en": "Mona will take part in forming a new human resources committee.",
    "ko": "모나는 새 인사 위원회 구성에 참여할 거예요.",
    "blank": "تشكيل",
+   "src": "made"
+  }
+ ],
+ "w|تشوق": [
+  {
+   "text": "تشوق عمر لمعرفة المشروع الذي سيعمل عليه.",
+   "en": "Omar was eager to find out which project he would be working on.",
+   "ko": "오마르는 자기가 맡을 프로젝트가 뭔지 무척 궁금했어요.",
+   "blank": "تشوق",
+   "src": "made"
+  },
+  {
+   "text": "تشوقت فاطمة لحفل نهاية السنة طوال الشهر.",
+   "en": "Fatima looked forward to the end-of-year concert all month.",
+   "ko": "파티마는 한 달 내내 연말 공연을 손꼽아 기다렸어요.",
+   "blank": "تشوقت",
    "src": "made"
   }
  ],
@@ -14200,6 +14456,22 @@
    "en": "A colleague explained to Sarah the shipment tracking system the company uses.",
    "ko": "동료가 사라에게 회사가 쓰는 화물 추적 시스템을 설명해 줬어요.",
    "blank": "تعقب",
+   "src": "made"
+  }
+ ],
+ "w|تعلق": [
+  {
+   "text": "تعلق كريم عاطفيا بالصيدلية التي ورثها عن أبيه.",
+   "en": "Karim is emotionally attached to the pharmacy he inherited from his father.",
+   "ko": "카림은 아버지에게서 물려받은 약국에 정이 많이 들었어요.",
+   "blank": "تعلق",
+   "src": "made"
+  },
+  {
+   "text": "تعلقت عين منى بلوحة الرحلات تنتظر رقم البوابة.",
+   "en": "Mona's eyes were fixed on the departures board, waiting for the gate number.",
+   "ko": "모나는 탑승구 번호를 기다리며 출발 안내판에서 눈을 떼지 못했어요.",
+   "blank": "تعلقت",
    "src": "made"
   }
  ],
@@ -15091,6 +15363,22 @@
    "blank": "تلميذ"
   }
  ],
+ "w|تلهف": [
+  {
+   "text": "تلهف عمر لسماع رأي مديرته في أول تقرير كتبه.",
+   "en": "Omar was longing to hear his manager's opinion on the first report he wrote.",
+   "ko": "오마르는 처음 쓴 보고서에 대한 부장님 의견이 몹시 듣고 싶었어요.",
+   "blank": "تلهف",
+   "src": "made"
+  },
+  {
+   "text": "تلهفت فاطمة لرؤية الكمان الجديد الذي اشتراه أبوها.",
+   "en": "Fatima couldn't wait to see the new violin her father had bought.",
+   "ko": "파티마는 아빠가 사 준 새 바이올린을 빨리 보고 싶어 안달이 났어요.",
+   "blank": "تلهفت",
+   "src": "made"
+  }
+ ],
  "w|تلوث": [
   {
    "text": "تلوث الهواء يسبب أمراض كثيرة.",
@@ -15132,6 +15420,22 @@
    "en": "Nour almost cried when she missed the train, but she held herself together.",
    "ko": "누르는 기차를 놓쳐 울 뻔했지만 꾹 참았어요.",
    "blank": "تماسكت",
+   "src": "made"
+  }
+ ],
+ "w|تمالك": [
+  {
+   "text": "فقد عمر القدرة على تمالك ضحكته حين سقط القلم من أذن زميله.",
+   "en": "Omar couldn't hold back his laughter when the pen fell from his colleague's ear.",
+   "ko": "동료 귀에 꽂혀 있던 펜이 떨어지자 오마르는 웃음을 참을 수 없었어요.",
+   "blank": "تمالك",
+   "src": "made"
+  },
+  {
+   "text": "علمت المعلمة فاطمة أن تمالك الأعصاب على المسرح يأتي مع التجربة.",
+   "en": "The teacher taught Fatima that keeping your nerves on stage comes with experience.",
+   "ko": "선생님은 파티마에게 무대에서 침착함을 지키는 건 경험으로 생긴다고 가르쳤어요.",
+   "blank": "تمالك",
    "src": "made"
   }
  ],
@@ -15235,6 +15539,22 @@
    "en": "Do you want to start a new exercise today?",
    "ko": "오늘 새로운 운동을 시작하고 싶어?",
    "blank": "تمرين"
+  }
+ ],
+ "w|تمزق": [
+  {
+   "text": "تمزق كيس عمر عند الدرج وتناثرت أوراقه.",
+   "en": "Omar's bag ripped on the stairs and his papers scattered.",
+   "ko": "계단에서 오마르의 봉투가 찢어져 서류가 흩어졌어요.",
+   "blank": "تمزق",
+   "src": "made"
+  },
+  {
+   "text": "تمزقت ورقة النوتة في يد فاطمة من كثرة الاستعمال.",
+   "en": "The sheet music tore in Fatima's hand from so much use.",
+   "ko": "너무 많이 써서 악보가 파티마 손에서 찢어졌어요.",
+   "blank": "تمزقت",
+   "src": "made"
   }
  ],
  "w|تمساح": [
@@ -15557,6 +15877,22 @@
    "blank": "تهنئة"
   }
  ],
+ "w|تهيب": [
+  {
+   "text": "تهيب عمر الدخول إلى مكتب المدير العام.",
+   "en": "Omar felt nervous about walking into the general manager's office.",
+   "ko": "오마르는 사장실에 들어가는 게 조심스럽고 겁났어요.",
+   "blank": "تهيب",
+   "src": "made"
+  },
+  {
+   "text": "تهيبت فاطمة الصعود إلى المسرح أول مرة.",
+   "en": "Fatima was apprehensive about going on stage for the first time.",
+   "ko": "파티마는 처음 무대에 오를 때 몹시 떨렸어요.",
+   "blank": "تهيبت",
+   "src": "made"
+  }
+ ],
  "w|توأم": [
   {
    "text": "أنجبت أختي توأم الأسبوع الماضي.",
@@ -15687,6 +16023,22 @@
    "en": "I feel some tension before the interview.",
    "ko": "나는 면접 전에 약간의 긴장을 느낀다.",
    "blank": "توتر"
+  }
+ ],
+ "w|توجس": [
+  {
+   "text": "توجس عمر من صمت زملائه حين دخل الغرفة.",
+   "en": "Omar was uneasy about his colleagues' silence when he entered the room.",
+   "ko": "오마르가 방에 들어가자 동료들이 조용해져서 왠지 불안했어요.",
+   "blank": "توجس",
+   "src": "made"
+  },
+  {
+   "text": "توجست فاطمة من اختبار الغناء الذي سيحضره مدير المدرسة.",
+   "en": "Fatima was anxious about the singing exam the school principal would attend.",
+   "ko": "파티마는 교장 선생님이 들어오는 노래 시험이 걱정됐어요.",
+   "blank": "توجست",
+   "src": "made"
   }
  ],
  "w|توجه": [
@@ -17587,6 +17939,22 @@
    "blank": "جلدي"
   }
  ],
+ "w|جلدي": [
+  {
+   "text": "حول كريم الفتاة إلى طبيب جلدي لأن الحب في وجهها لم يتحسن.",
+   "en": "Karim referred the girl to a dermatologist because the acne on her face hadn't improved.",
+   "ko": "얼굴 여드름이 나아지지 않아서 카림은 그 소녀를 피부과 의사에게 보냈어요.",
+   "blank": "جلدي",
+   "src": "made"
+  },
+  {
+   "text": "حملت منى حقيبة جلدية صغيرة فيها جوازها وتذكرتها.",
+   "en": "Mona carried a small leather bag holding her passport and ticket.",
+   "ko": "모나는 여권과 탑승권을 넣은 작은 가죽 가방을 들었어요.",
+   "blank": "جلدية",
+   "src": "made"
+  }
+ ],
  "w|جلس": [
   {
    "text": "جلسنا في الحديقة طويلاً.",
@@ -17727,6 +18095,22 @@
    "en": "I bought big shrimp from the restaurant.",
    "ko": "나는 식당에서 큰 새우를 샀어요.",
    "blank": "جمبري"
+  }
+ ],
+ "w|جمجمة": [
+  {
+   "text": "في مكتب كريم نموذج بلاستيكي لجمجمة إنسان من أيام الجامعة.",
+   "en": "In Karim's office there is a plastic model of a human skull from his university days.",
+   "ko": "카림의 사무실에는 대학 시절부터 둔 사람 두개골 플라스틱 모형이 있어요.",
+   "blank": "لجمجمة",
+   "src": "made"
+  },
+  {
+   "text": "قرأت منى في مجلة الطائرة مقالا عن جمجمة ديناصور اكتشفت حديثا.",
+   "en": "In the in-flight magazine, Mona read an article about a recently discovered dinosaur skull.",
+   "ko": "모나는 기내 잡지에서 최근 발견된 공룡 두개골 기사를 읽었어요.",
+   "blank": "جمجمة",
+   "src": "made"
   }
  ],
  "w|جمرك": [
@@ -19715,6 +20099,22 @@
    "blank": "حسنا"
   }
  ],
+ "w|حسود": [
+  {
+   "text": "حذرت السكرتيرة عمر من موظف حسود لا يحب الوجوه الجديدة.",
+   "en": "Omar's secretary warned him about an envious employee who doesn't like new faces.",
+   "ko": "오마르의 비서는 새 얼굴을 싫어하는 시샘 많은 직원을 조심하라고 귀띔했어요.",
+   "blank": "حسود",
+   "src": "made"
+  },
+  {
+   "text": "قالت فاطمة إن العازف الحسود لا يتعلم من غيره.",
+   "en": "Fatima said an envious musician doesn't learn from others.",
+   "ko": "파티마는 시샘 많은 연주자는 남에게서 배우지 못한다고 말했어요.",
+   "blank": "الحسود",
+   "src": "made"
+  }
+ ],
  "w|حشد": [
   {
    "text": "تجمع حشد كبير أمام مبنى الجريدة صباح الانتخابات.",
@@ -21493,6 +21893,22 @@
    "src": "made"
   }
  ],
+ "w|خدش": [
+  {
+   "text": "وضع كريم لاصقا على خدش صغير في يد طفل.",
+   "en": "Karim put a plaster on a small scratch on a child's hand.",
+   "ko": "카림은 아이 손에 난 작은 긁힌 상처에 반창고를 붙였어요.",
+   "blank": "خدش",
+   "src": "made"
+  },
+  {
+   "text": "وجدت منى خدشا طويلا على حقيبتها الجديدة بعد الرحلة.",
+   "en": "Mona found a long scratch on her new suitcase after the flight.",
+   "ko": "비행 뒤 모나는 새 캐리어에 길게 긁힌 자국이 난 걸 발견했어요.",
+   "blank": "خدشا",
+   "src": "made"
+  }
+ ],
  "w|خدع": [
   {
    "text": "خدع البائع الزبون بالكلام.",
@@ -22239,6 +22655,22 @@
    "src": "made"
   }
  ],
+ "w|خلية": [
+  {
+   "text": "يشرح كريم لابنه بالمجهر كيف تبدو خلية النبات.",
+   "en": "Karim shows his son through the microscope what a plant cell looks like.",
+   "ko": "카림은 현미경으로 아들에게 식물 세포가 어떻게 생겼는지 보여 줘요.",
+   "blank": "خلية",
+   "src": "made"
+  },
+  {
+   "text": "تعمل منى في مختبر يدرس كيف تنقسم الخلية.",
+   "en": "Mona works in a lab that studies how a cell divides.",
+   "ko": "모나는 세포가 어떻게 분열하는지 연구하는 실험실에서 일해요.",
+   "blank": "الخلية",
+   "src": "made"
+  }
+ ],
  "w|خمر": [
   {
    "text": "لم يقدموا خمر في الحفل.",
@@ -22411,6 +22843,22 @@
    "blank": "خيال"
   }
  ],
+ "w|خيالي": [
+  {
+   "text": "ضحك كريم من إعلان يعد بنتائج خيالية في أسبوع.",
+   "en": "Karim laughed at an ad promising fantastic results in a week.",
+   "ko": "카림은 일주일 만에 꿈같은 효과를 준다는 광고를 보고 웃었어요.",
+   "blank": "خيالية",
+   "src": "made"
+  },
+  {
+   "text": "وجدت منى في السوق الحرة ساعة بسعر خيالي.",
+   "en": "Mona found a watch at an outrageous price in the duty-free shop.",
+   "ko": "모나는 면세점에서 터무니없이 비싼 시계를 봤어요.",
+   "blank": "خيالي",
+   "src": "made"
+  }
+ ],
  "w|خيانة": [
   {
    "text": "خيانة الصديق أصعب من أي شيء.",
@@ -22525,6 +22973,22 @@
    "en": "This is a big tent that fits everyone.",
    "ko": "이 텐트는 모두가 들어갈 수 있을 만큼 커.",
    "blank": "خيمة"
+  }
+ ],
+ "w|داء": [
+  {
+   "text": "قرأ كريم مقالا عن داء السكري وطرق الوقاية منه.",
+   "en": "Karim read an article about diabetes and ways to prevent it.",
+   "ko": "카림은 당뇨병과 예방법에 관한 글을 읽었어요.",
+   "blank": "داء",
+   "src": "made"
+  },
+  {
+   "text": "قالت منى ضاحكة إن داء السفر أصابها منذ الطفولة.",
+   "en": "Mona said laughing that she has had the travel bug since childhood.",
+   "ko": "모나는 어릴 때부터 여행병에 걸렸다며 웃었어요.",
+   "blank": "داء",
+   "src": "made"
   }
  ],
  "w|دائرة": [
@@ -23411,6 +23875,22 @@
    "en": "She spread butter on the bread.",
    "ko": "그녀는 빵에 버터를 발랐어.",
    "blank": "دهن"
+  }
+ ],
+ "w|دهون": [
+  {
+   "text": "شرح كريم لزبون أن الدهون المشبعة ترفع الكوليسترول.",
+   "en": "Karim explained to a customer that saturated fats raise cholesterol.",
+   "ko": "카림은 손님에게 포화 지방이 콜레스테롤을 높인다고 설명했어요.",
+   "blank": "الدهون",
+   "src": "made"
+  },
+  {
+   "text": "قرأت منى على علبة الطعام كمية الدهون قبل أن تشتريها.",
+   "en": "Mona read the amount of fat on the food package before buying it.",
+   "ko": "모나는 음식 포장의 지방 함량을 읽고 나서 샀어요.",
+   "blank": "الدهون",
+   "src": "made"
   }
  ],
  "w|دواء": [
@@ -25449,6 +25929,38 @@
    "blank": "تركل"
   }
  ],
+ "w|ركلة": [
+  {
+   "text": "أعطى عمر آلة القهوة ركلة خفيفة حين علقت، فضحك زملاؤه.",
+   "en": "Omar gave the coffee machine a light kick when it got stuck, and his colleagues laughed.",
+   "ko": "커피 머신이 멈추자 오마르가 살짝 발로 찼고, 동료들이 웃었어요.",
+   "blank": "ركلة",
+   "src": "made"
+  },
+  {
+   "text": "يضرب عازف الطبل في فرقة فاطمة كل ركلة على الطبلة الكبيرة بقوة.",
+   "en": "The drummer in Fatima's band hits every kick on the bass drum hard.",
+   "ko": "파티마 밴드의 드러머는 큰북 킥을 하나하나 세게 쳐요.",
+   "blank": "ركلة",
+   "src": "made"
+  }
+ ],
+ "w|ركن": [
+  {
+   "text": "جلس عمر في ركن هادئ من المطبخ ليأكل غداءه.",
+   "en": "Omar sat in a quiet corner of the kitchen to eat his lunch.",
+   "ko": "오마르는 탕비실의 조용한 구석에 앉아 점심을 먹었어요.",
+   "blank": "ركن",
+   "src": "made"
+  },
+  {
+   "text": "في ركن قاعة الموسيقى بيانو قديم لا يعزف عليه أحد غير فاطمة.",
+   "en": "In the corner of the music room is an old piano that nobody plays except Fatima.",
+   "ko": "음악실 구석에는 파티마 말고는 아무도 안 치는 낡은 피아노가 있어요.",
+   "blank": "ركن",
+   "src": "made"
+  }
+ ],
  "w|رمادي": [
   {
    "text": "الجو رمادي اليوم.",
@@ -25559,6 +26071,22 @@
    "en": "The bell rang at the door.",
    "ko": "문 앞에 벨이 울렸다.",
    "blank": "رن"
+  }
+ ],
+ "w|رنين": [
+  {
+   "text": "طلب الطبيب صورة رنين للزبون، فسأل كريما عن مركز قريب.",
+   "en": "The doctor ordered an MRI for the customer, so he asked Karim about a nearby center.",
+   "ko": "의사가 MRI를 찍으라고 해서 그 손님은 카림에게 가까운 검사 센터를 물었어요.",
+   "blank": "رنين",
+   "src": "made"
+  },
+  {
+   "text": "سمعت منى رنين هاتفها وهي تمر من جهاز التفتيش.",
+   "en": "Mona heard her phone ringing as she passed through the security scanner.",
+   "ko": "모나는 보안 검색대를 지나갈 때 휴대폰 벨소리를 들었어요.",
+   "blank": "رنين",
+   "src": "made"
   }
  ],
  "w|رهان": [
@@ -27477,6 +28005,22 @@
    "blank": "سطر"
   }
  ],
+ "w|سطو": [
+  {
+   "text": "حكى زميل لعمر عن محاولة سطو على البنك المجاور قبل سنة.",
+   "en": "A colleague told Omar about an attempted robbery at the neighboring bank a year ago.",
+   "ko": "한 동료가 오마르에게 일 년 전 옆 은행에서 있었던 강도 미수 사건 이야기를 해 줬어요.",
+   "blank": "سطو",
+   "src": "made"
+  },
+  {
+   "text": "قرأت فاطمة خبرا عن سطو على متحف للآلات الموسيقية القديمة.",
+   "en": "Fatima read a news story about a robbery at a museum of old musical instruments.",
+   "ko": "파티마는 옛 악기 박물관에 도둑이 들었다는 기사를 읽었어요.",
+   "blank": "سطو",
+   "src": "made"
+  }
+ ],
  "w|سعادة": [
   {
    "text": "وجدت سعادة في الأشياء البسيطة.",
@@ -27888,6 +28432,22 @@
    "en": "Sara wrote to her friend that she is trying not to think negatively these days.",
    "ko": "사라는 친구에게 요즘 부정적으로 생각하지 않으려고 애쓴다고 썼어요.",
    "blank": "سلبي",
+   "src": "made"
+  }
+ ],
+ "w|سلبية": [
+  {
+   "text": "قرر عمر ألا يسمح لأي سلبية أن تفسد يومه الأول.",
+   "en": "Omar decided not to let any negativity spoil his first day.",
+   "ko": "오마르는 어떤 부정적인 기분도 첫날을 망치게 두지 않기로 했어요.",
+   "blank": "سلبية",
+   "src": "made"
+  },
+  {
+   "text": "قالت معلمة فاطمة إن السلبية أكبر عدو للعازف.",
+   "en": "Fatima's teacher said negativity is a musician's biggest enemy.",
+   "ko": "파티마의 선생님은 부정적인 마음이 연주자의 가장 큰 적이라고 했어요.",
+   "blank": "السلبية",
    "src": "made"
   }
  ],
@@ -28949,6 +29509,22 @@
    "blank": "شالاً"
   }
  ],
+ "w|شامل": [
+  {
+   "text": "أجرى كريم جردا شاملا لأدوية الصيدلية في آخر الشهر.",
+   "en": "Karim did a full inventory of the pharmacy's medicines at the end of the month.",
+   "ko": "카림은 월말에 약국 약을 전부 재고 조사했어요.",
+   "blank": "شاملا",
+   "src": "made"
+  },
+  {
+   "text": "اشترت منى تأمين سفر شاملا قبل رحلتها إلى الخارج.",
+   "en": "Mona bought comprehensive travel insurance before her trip abroad.",
+   "ko": "모나는 해외여행 전에 종합 여행자 보험에 들었어요.",
+   "blank": "شاملا",
+   "src": "made"
+  }
+ ],
  "w|شاهد": [
   {
    "text": "شاهد فيلماً رائعاً أمس.",
@@ -29501,6 +30077,22 @@
    "blank": "شروق"
   }
  ],
+ "w|شريان": [
+  {
+   "text": "قال الطبيب لوالد كريم إن شريانا قرب القلب يحتاج إلى متابعة.",
+   "en": "The doctor told Karim's father that an artery near the heart needs monitoring.",
+   "ko": "의사는 카림의 아버지에게 심장 근처 동맥 하나를 지켜봐야 한다고 말했어요.",
+   "blank": "شريانا",
+   "src": "made"
+  },
+  {
+   "text": "الطريق السريع هو الشريان الذي يربط المطار بوسط المدينة.",
+   "en": "The motorway is the artery that links the airport to the city center.",
+   "ko": "고속도로는 공항과 시내를 잇는 동맥이에요.",
+   "blank": "الشريان",
+   "src": "made"
+  }
+ ],
  "w|شريحة": [
   {
    "text": "طلب الزبون شريحة لحم مشوية مع الأرز.",
@@ -29721,6 +30313,22 @@
    "blank": "شغل"
   }
  ],
+ "w|شفاء": [
+  {
+   "text": "تمنى كريم للرجل العجوز الشفاء العاجل وهو يناوله الدواء.",
+   "en": "Karim wished the old man a speedy recovery as he handed him the medicine.",
+   "ko": "카림은 할아버지에게 약을 건네며 빨리 나으시라고 했어요.",
+   "blank": "الشفاء",
+   "src": "made"
+  },
+  {
+   "text": "تسافر منى لتزور خالتها بعد شفائها من عملية في الركبة.",
+   "en": "Mona is travelling to visit her aunt after her recovery from a knee operation.",
+   "ko": "모나는 무릎 수술에서 회복한 이모를 보러 가는 길이에요.",
+   "blank": "شفائها",
+   "src": "made"
+  }
+ ],
  "w|شفاف": [
   {
    "text": "الزجاج هنا شفاف تماماً.",
@@ -29836,6 +30444,22 @@
    "en": "Sarah's brother called to ask about her first day at the company.",
    "ko": "사라의 남동생이 회사 첫날이 어땠는지 물으려고 전화했어요.",
    "blank": "شقيق",
+   "src": "made"
+  }
+ ],
+ "w|شقيقة": [
+  {
+   "text": "تعاني زبونة دائمة عند كريم من الشقيقة كلما تغير الطقس.",
+   "en": "A regular customer at Karim's suffers from migraines whenever the weather changes.",
+   "ko": "카림 약국의 단골손님은 날씨가 바뀔 때마다 편두통을 앓아요.",
+   "blank": "الشقيقة",
+   "src": "made"
+  },
+  {
+   "text": "أصيبت منى بالشقيقة بعد ساعات من الانتظار في الضوضاء.",
+   "en": "Mona got a migraine after hours of waiting in the noise.",
+   "ko": "모나는 소음 속에서 몇 시간을 기다린 끝에 편두통이 왔어요.",
+   "blank": "بالشقيقة",
    "src": "made"
   }
  ],
@@ -30815,6 +31439,22 @@
    "blank": "صديقة"
   }
  ],
+ "w|صراحة": [
+  {
+   "text": "قال كريم للزبون صراحة إن الفيتامينات لن تعالج مرضه.",
+   "en": "Karim told the customer frankly that vitamins wouldn't cure his illness.",
+   "ko": "카림은 손님에게 비타민으로는 병이 낫지 않는다고 솔직히 말했어요.",
+   "blank": "صراحة",
+   "src": "made"
+  },
+  {
+   "text": "سألت منى الموظف صراحة: هل ستقلع الطائرة اليوم أم لا؟",
+   "en": "Mona asked the clerk directly, \"Is the plane taking off today or not?\"",
+   "ko": "모나는 직원에게 대놓고 물었어요. \"비행기 오늘 뜨긴 해요?\"",
+   "blank": "صراحة",
+   "src": "made"
+  }
+ ],
  "w|صراخ": [
   {
    "text": "تصاعد صراخ الأطفال في الساحة.",
@@ -31670,6 +32310,22 @@
    "en": "An angry man caused a big commotion at Huda's stall over the prices.",
    "ko": "화가 난 남자가 가격 때문에 후다의 가판대 앞에서 크게 소란을 피웠어요.",
    "blank": "ضجة",
+   "src": "made"
+  }
+ ],
+ "w|ضجر": [
+  {
+   "text": "ضجر عمر من الاجتماع الطويل الذي لم يفهم منه شيئا.",
+   "en": "Omar got bored with the long meeting he didn't understand anything from.",
+   "ko": "오마르는 하나도 이해 못 한 긴 회의에 지루해졌어요.",
+   "blank": "ضجر",
+   "src": "made"
+  },
+  {
+   "text": "ضجرت فاطمة من تكرار التمرين نفسه عشرين مرة.",
+   "en": "Fatima got fed up with repeating the same exercise twenty times.",
+   "ko": "파티마는 같은 연습을 스무 번 되풀이하다 지겨워졌어요.",
+   "blank": "ضجرت",
    "src": "made"
   }
  ],
@@ -32675,6 +33331,38 @@
    "blank": "طعم"
   }
  ],
+ "w|طعن": [
+  {
+   "text": "طعن كريم في قرار البلدية بإغلاق صيدليته يوم الجمعة.",
+   "en": "Karim appealed against the municipality's decision to close his pharmacy on Fridays.",
+   "ko": "카림은 금요일에 약국 문을 닫으라는 시청 결정에 이의를 제기했어요.",
+   "blank": "طعن",
+   "src": "made"
+  },
+  {
+   "text": "طعنت شركة الطيران في الحكم الذي ألزمها بتعويض منى.",
+   "en": "The airline appealed the ruling that ordered it to compensate Mona.",
+   "ko": "항공사는 모나에게 보상하라는 판결에 항소했어요.",
+   "blank": "طعنت",
+   "src": "made"
+  }
+ ],
+ "w|طفح": [
+  {
+   "text": "جاءت أم بطفلها إلى كريم بسبب طفح أحمر على ذراعه.",
+   "en": "A mother brought her child to Karim because of a red rash on his arm.",
+   "ko": "한 엄마가 아이 팔에 붉은 발진이 나서 카림에게 데려왔어요.",
+   "blank": "طفح",
+   "src": "made"
+  },
+  {
+   "text": "ظهر طفح خفيف على يد منى بعد أن جربت عطرا في السوق الحرة.",
+   "en": "A mild rash appeared on Mona's hand after she tried a perfume in the duty-free shop.",
+   "ko": "면세점에서 향수를 뿌려 본 뒤 모나 손에 가벼운 발진이 났어요.",
+   "blank": "طفح",
+   "src": "made"
+  }
+ ],
  "w|طفل": [
   {
    "text": "رأيت طفل يلعب في الحديقة.",
@@ -33067,6 +33755,22 @@
    "en": "I don't like to be unfair to anyone.",
    "ko": "나는 누구에게도 불공평하게 대하고 싶지 않아.",
    "blank": "ظالم"
+  }
+ ],
+ "w|ظاهرة": [
+  {
+   "text": "قالت المديرة لعمر إن تأخر الموظفين يوم الإثنين ظاهرة معروفة هنا.",
+   "en": "The manager told Omar that staff being late on Mondays is a well-known phenomenon here.",
+   "ko": "부장님은 오마르에게 월요일 지각이 여기선 흔한 일이라고 했어요.",
+   "blank": "ظاهرة",
+   "src": "made"
+  },
+  {
+   "text": "شرح المعلم لفاطمة أن الصدى ظاهرة طبيعية في القاعات الكبيرة.",
+   "en": "The teacher explained to Fatima that echo is a natural phenomenon in big halls.",
+   "ko": "선생님은 파티마에게 큰 홀에서 울림은 자연스러운 현상이라고 설명했어요.",
+   "blank": "ظاهرة",
+   "src": "made"
   }
  ],
  "w|ظرف": [
@@ -33517,6 +34221,22 @@
    "src": "made"
   }
  ],
+ "w|عاطفيا": [
+  {
+   "text": "تعلق كريم عاطفيا بالصيدلية التي ورثها عن أبيه.",
+   "en": "Karim is emotionally attached to the pharmacy he inherited from his father.",
+   "ko": "카림은 아버지에게서 물려받은 약국에 정이 많이 들었어요.",
+   "blank": "عاطفيا",
+   "src": "made"
+  },
+  {
+   "text": "بكت منى عند بوابة المغادرة وهي تودع أختها، فقد كان يوما صعبا عاطفيا.",
+   "en": "Mona cried at the departure gate saying goodbye to her sister; it was an emotionally hard day.",
+   "ko": "모나는 출국장에서 언니를 배웅하며 울었어요. 마음이 힘든 하루였어요.",
+   "blank": "عاطفيا",
+   "src": "made"
+  }
+ ],
  "w|عاقب": [
   {
    "text": "عاقب الأب ابنه لأنه تأخر.",
@@ -33683,6 +34403,22 @@
    "en": "He suffered from the illness for a long time before recovering.",
    "ko": "병이 낫기까지 오랫동안 고생했다.",
    "blank": "عانى"
+  }
+ ],
+ "w|عبء": [
+  {
+   "text": "شعر عمر أن عبء العمل كبير منذ اليوم الأول.",
+   "en": "Omar felt the workload was heavy from day one.",
+   "ko": "오마르는 첫날부터 업무 부담이 크다고 느꼈어요.",
+   "blank": "عبء",
+   "src": "made"
+  },
+  {
+   "text": "تحمل فاطمة عبء الدراسة والتدريب معا كل يوم.",
+   "en": "Fatima carries the burden of studies and practice together every day.",
+   "ko": "파티마는 매일 공부와 연습을 함께 짊어지고 있어요.",
+   "blank": "عبء",
+   "src": "made"
   }
  ],
  "w|عبارة": [
@@ -34817,6 +35553,22 @@
    "src": "made"
   }
  ],
+ "w|عقار": [
+  {
+   "text": "وصل إلى صيدلية كريم عقار جديد لعلاج الحساسية.",
+   "en": "A new drug for treating allergies arrived at Karim's pharmacy.",
+   "ko": "카림의 약국에 새 알레르기 치료제가 들어왔어요.",
+   "blank": "عقار",
+   "src": "made"
+  },
+  {
+   "text": "سأل موظف الجمارك منى عن عقار في حقيبتها، فأرته الوصفة.",
+   "en": "The customs officer asked Mona about a drug in her bag, so she showed him the prescription.",
+   "ko": "세관원이 가방 속 약에 대해 묻자 모나는 처방전을 보여 줬어요.",
+   "blank": "عقار",
+   "src": "made"
+  }
+ ],
  "w|عقب": [
   {
    "text": "عقب خالد على كلام صاحب المزرعة قائلا إن الأبقار تحتاج إلى ظل أكثر.",
@@ -35203,6 +35955,22 @@
    "blank": "عمة"
   }
  ],
+ "w|عمدا": [
+  {
+   "text": "لم يترك كريم الباب مفتوحا عمدا، بل نسي أن يغلقه.",
+   "en": "Karim didn't leave the door open on purpose; he forgot to close it.",
+   "ko": "카림은 일부러 문을 열어 둔 게 아니라 닫는 걸 잊었어요.",
+   "blank": "عمدا",
+   "src": "made"
+  },
+  {
+   "text": "لم تتأخر منى عمدا، لكن الطريق إلى المطار كان مزدحما.",
+   "en": "Mona wasn't late on purpose, but the road to the airport was jammed.",
+   "ko": "모나는 일부러 늦은 게 아니라 공항 가는 길이 막혔어요.",
+   "blank": "عمدا",
+   "src": "made"
+  }
+ ],
  "w|عمدة": [
   {
    "text": "العمدة زار الحي اليوم.",
@@ -35345,6 +36113,22 @@
    "blank": "عملية"
   }
  ],
+ "w|عمود": [
+  {
+   "text": "ينصح كريم من يجلسون طويلا أمام الحاسوب بتمارين تريح العمود الفقري.",
+   "en": "Karim recommends exercises that relieve the spine to people who sit for long hours at the computer.",
+   "ko": "카림은 컴퓨터 앞에 오래 앉는 사람들에게 척추를 풀어 주는 운동을 권해요.",
+   "blank": "العمود",
+   "src": "made"
+  },
+  {
+   "text": "جلست منى قرب عمود في صالة الانتظار وشحنت هاتفها.",
+   "en": "Mona sat by a pillar in the waiting lounge and charged her phone.",
+   "ko": "모나는 대합실 기둥 옆에 앉아 휴대폰을 충전했어요.",
+   "blank": "عمود",
+   "src": "made"
+  }
+ ],
  "w|عموما": [
   {
    "text": "عموما الجو جميل في هذا الوقت.",
@@ -35357,6 +36141,22 @@
    "en": "Generally, I like spicy food.",
    "ko": "나는 대체로 매운 음식을 좋아해.",
    "blank": "عموما"
+  }
+ ],
+ "w|عمى": [
+  {
+   "text": "اكتشف كريم وهو طالب أنه مصاب بعمى الألوان.",
+   "en": "Karim discovered as a student that he is colour-blind.",
+   "ko": "카림은 학생 때 자기가 색맹이라는 걸 알게 됐어요.",
+   "blank": "بعمى",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت منى رجلا يعاني من العمى على الوصول إلى البوابة.",
+   "en": "Mona helped a blind man reach the gate.",
+   "ko": "모나는 앞을 못 보는 남자가 탑승구까지 가는 걸 도와줬어요.",
+   "blank": "العمى",
+   "src": "made"
   }
  ],
  "w|عميد": [
@@ -35987,6 +36787,22 @@
    "en": "The dust should be cleaned from the room every week.",
    "ko": "먼지는 매주 방에서 청소해야 해.",
    "blank": "الغبار"
+  }
+ ],
+ "w|غبط": [
+  {
+   "text": "غبط عمر زميله الذي يعرف كل الموظفين بأسمائهم.",
+   "en": "Omar admired, a little enviously, the colleague who knows all the staff by name.",
+   "ko": "오마르는 직원들 이름을 다 아는 동료가 부러웠어요.",
+   "blank": "غبط",
+   "src": "made"
+  },
+  {
+   "text": "غبطت فاطمة زميلتها على صبرها في التدريب.",
+   "en": "Fatima admired her classmate's patience in practice and wished she had it too.",
+   "ko": "파티마는 연습할 때 친구의 끈기가 부러웠어요.",
+   "blank": "غبطت",
+   "src": "made"
   }
  ],
  "w|غبي": [
@@ -37489,6 +38305,22 @@
    "en": "This is the math class.",
    "ko": "여기는 수학 교실이야.",
    "blank": "فصل"
+  }
+ ],
+ "w|فصيلة": [
+  {
+   "text": "سألت طالبة كريما كيف تعرف فصيلة دمها.",
+   "en": "A student asked Karim how to find out her blood type.",
+   "ko": "한 학생이 카림에게 자기 혈액형을 어떻게 알 수 있는지 물었어요.",
+   "blank": "فصيلة",
+   "src": "made"
+  },
+  {
+   "text": "رأت منى في المطار كلبا من فصيلة نادرة يرافق صاحبه.",
+   "en": "At the airport Mona saw a dog of a rare breed accompanying its owner.",
+   "ko": "모나는 공항에서 주인과 함께 있는 희귀 품종의 개를 봤어요.",
+   "blank": "فصيلة",
+   "src": "made"
   }
  ],
  "w|فضاء": [
@@ -39411,6 +40243,22 @@
    "blank": "قطة"
   }
  ],
+ "w|قطرة": [
+  {
+   "text": "أعطى كريم الرجل قطرة للعين بسبب الغبار في الشارع.",
+   "en": "Karim gave the man eye drops because of the dust in the street.",
+   "ko": "카림은 길거리 먼지 때문에 그 남자에게 안약을 줬어요.",
+   "blank": "قطرة",
+   "src": "made"
+  },
+  {
+   "text": "لم تشرب منى قطرة ماء طوال الرحلة، فشعرت بالصداع.",
+   "en": "Mona didn't drink a drop of water during the whole flight, so she got a headache.",
+   "ko": "모나는 비행 내내 물 한 방울도 안 마셔서 머리가 아팠어요.",
+   "blank": "قطرة",
+   "src": "made"
+  }
+ ],
  "w|قطع": [
   {
    "text": "قطع الورقة إلى نصفين.",
@@ -39507,6 +40355,22 @@
    "en": "The boys jumped into the pool.",
    "ko": "소년들이 수영장에 뛰어들었어.",
    "blank": "قفزوا"
+  }
+ ],
+ "w|قفزة": [
+  {
+   "text": "كان العمل في شركة كبيرة قفزة كبيرة في مسيرة عمر.",
+   "en": "Working at a big company was a big leap in Omar's career.",
+   "ko": "큰 회사에서 일하게 된 건 오마르의 경력에서 큰 도약이었어요.",
+   "blank": "قفزة",
+   "src": "made"
+  },
+  {
+   "text": "حققت فاطمة قفزة واضحة في مستواها هذا الفصل.",
+   "en": "Fatima made a clear leap in her level this term.",
+   "ko": "파티마는 이번 학기에 실력이 눈에 띄게 늘었어요.",
+   "blank": "قفزة",
+   "src": "made"
   }
  ],
  "w|قفل": [
@@ -39835,6 +40699,22 @@
    "blank": "القنصلية"
   }
  ],
+ "w|قنط": [
+  {
+   "text": "كاد عمر أن يقنط من فهم نظام الشركة، ثم ساعده زميل.",
+   "en": "Omar almost lost hope of understanding the company system, then a colleague helped him.",
+   "ko": "오마르는 회사 시스템을 이해하는 걸 거의 포기할 뻔했는데, 동료가 도와줬어요.",
+   "blank": "يقنط",
+   "src": "made"
+  },
+  {
+   "text": "لا تقنط فاطمة مهما أخطأت في العزف، بل تعيد من البداية.",
+   "en": "Fatima never despairs however many mistakes she makes playing; she starts again from the beginning.",
+   "ko": "파티마는 아무리 틀려도 절망하지 않고 처음부터 다시 쳐요.",
+   "blank": "تقنط",
+   "src": "made"
+  }
+ ],
  "w|قنفذ": [
   {
    "text": "قنفذ يختبئ تحت الأوراق الجافة.",
@@ -40045,6 +40925,22 @@
    "en": "The captain said to fasten the belt.",
    "ko": "기장님이 벨트를 매라고 했어.",
    "blank": "الكابتن"
+  }
+ ],
+ "w|كابد": [
+  {
+   "text": "كابد عمر الزحمة ساعة كاملة ليصل في الموعد.",
+   "en": "Omar endured the traffic for a full hour to arrive on time.",
+   "ko": "오마르는 제시간에 도착하려고 꼬박 한 시간 동안 교통 체증을 견뎠어요.",
+   "blank": "كابد",
+   "src": "made"
+  },
+  {
+   "text": "كابدت فاطمة ألم الأصابع في أشهرها الأولى مع الغيتار.",
+   "en": "Fatima endured sore fingers in her first months with the guitar.",
+   "ko": "파티마는 기타를 처음 배운 몇 달 동안 손가락 통증을 견뎠어요.",
+   "blank": "كابدت",
+   "src": "made"
   }
  ],
  "w|كابوس": [
@@ -40353,6 +41249,22 @@
    "en": "The athlete's shoulder is very strong.",
    "ko": "운동선수의 어깨가 정말 강해.",
    "blank": "كتف"
+  }
+ ],
+ "w|كتلة": [
+  {
+   "text": "حسب كريم مؤشر كتلة الجسم لزبون يريد أن ينقص وزنه.",
+   "en": "Karim calculated the body mass index for a customer who wants to lose weight.",
+   "ko": "카림은 살을 빼고 싶은 손님의 체질량 지수를 계산해 줬어요.",
+   "blank": "كتلة",
+   "src": "made"
+  },
+  {
+   "text": "تكدست كتلة من الحقائب عند الحزام، وانتظرت منى حقيبتها طويلا.",
+   "en": "A mass of suitcases piled up at the belt, and Mona waited a long time for hers.",
+   "ko": "짐 벨트에 가방이 한 무더기로 쌓여서 모나는 자기 가방을 한참 기다렸어요.",
+   "blank": "كتلة",
+   "src": "made"
   }
  ],
  "w|كثر": [
@@ -41073,6 +41985,22 @@
    "en": "Please specify the quantity of the order.",
    "ko": "주문 수량을 지정해 주세요.",
    "blank": "كمية"
+  }
+ ],
+ "w|كمين": [
+  {
+   "text": "أعد الزملاء لعمر كمينا لطيفا: حفلة ترحيب في غرفة الاجتماعات.",
+   "en": "The colleagues set a friendly trap for Omar: a welcome party in the meeting room.",
+   "ko": "동료들은 오마르를 위해 깜짝 작전을 꾸몄어요. 회의실에서 환영 파티를 연 거예요.",
+   "blank": "كمينا",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت فاطمة مع زميلتها فيلما عن جنود وقعوا في كمين في الصحراء.",
+   "en": "Fatima watched a film with her classmate about soldiers caught in an ambush in the desert.",
+   "ko": "파티마는 친구와 함께 사막에서 매복에 걸린 군인들 영화를 봤어요.",
+   "blank": "كمين",
+   "src": "made"
   }
  ],
  "w|كنبة": [
@@ -42805,6 +43733,22 @@
    "blank": "مؤتمر"
   }
  ],
+ "w|مؤثر": [
+  {
+   "text": "ألقى المدير كلمة ترحيب مؤثرة بالموظفين الجدد ومنهم عمر.",
+   "en": "The director gave a moving welcome speech to the new staff, including Omar.",
+   "ko": "사장님은 오마르를 비롯한 신입 직원들에게 감동적인 환영사를 했어요.",
+   "blank": "مؤثرة",
+   "src": "made"
+  },
+  {
+   "text": "عزفت فاطمة لحنا مؤثرا جعل أمها تبكي.",
+   "en": "Fatima played a moving melody that made her mother cry.",
+   "ko": "파티마가 감동적인 곡을 연주하자 엄마가 눈물을 흘렸어요.",
+   "blank": "مؤثرا",
+   "src": "made"
+  }
+ ],
  "w|مؤخرا": [
   {
    "text": "شاهدت فيلما جميلا مؤخرا.",
@@ -43447,6 +44391,22 @@
    "blank": "مبنى"
   }
  ],
+ "w|مبهور": [
+  {
+   "text": "وقف عمر مبهورا أمام المنظر من نافذة الطابق العاشر.",
+   "en": "Omar stood amazed at the view from the tenth-floor window.",
+   "ko": "오마르는 10층 창밖 풍경 앞에서 넋을 잃고 서 있었어요.",
+   "blank": "مبهورا",
+   "src": "made"
+  },
+  {
+   "text": "خرج الجمهور مبهورا من عزف فاطمة على البيانو.",
+   "en": "The audience left amazed by Fatima's piano playing.",
+   "ko": "관객들은 파티마의 피아노 연주에 감탄하며 나갔어요.",
+   "blank": "مبهورا",
+   "src": "made"
+  }
+ ],
  "w|متأخر": [
   {
    "text": "وصلت متأخر إلى العمل اليوم.",
@@ -43897,6 +44857,22 @@
    "en": "Tell me when you arrive.",
    "ko": "네가 도착하면 알려줘.",
    "blank": "متى"
+  }
+ ],
+ "w|متيم": [
+  {
+   "text": "قال زميل عمر إنه متيم بالقهوة التي تصنعها السكرتيرة.",
+   "en": "Omar's colleague said he was madly in love with the coffee the secretary makes.",
+   "ko": "오마르의 동료는 비서가 타 주는 커피에 푹 빠졌다고 말했어요.",
+   "blank": "متيم",
+   "src": "made"
+  },
+  {
+   "text": "كتبت فاطمة أغنية عن شاعر متيم يكتب لحبيبته كل ليلة.",
+   "en": "Fatima wrote a song about a poet madly in love who writes to his beloved every night.",
+   "ko": "파티마는 밤마다 연인에게 편지를 쓰는 사랑에 빠진 시인에 관한 노래를 지었어요.",
+   "blank": "متيم",
+   "src": "made"
   }
  ],
  "w|مثال": [
@@ -44879,6 +45855,22 @@
    "blank": "مختلف"
   }
  ],
+ "w|مخدر": [
+  {
+   "text": "نبه كريم الزبونة إلى أن هذا الدواء له تأثير مخدر خفيف، فلا تقود بعده.",
+   "en": "Karim warned the customer that this medicine has a mild numbing effect, so she shouldn't drive after taking it.",
+   "ko": "카림은 손님에게 이 약은 약간 마취 효과가 있으니 먹고 나서 운전하지 말라고 일렀어요.",
+   "blank": "مخدر",
+   "src": "made"
+  },
+  {
+   "text": "كان المسافر بجانب منى نائما كأنه تحت تأثير دواء مخدر.",
+   "en": "The passenger next to Mona was asleep as if under the effect of a sedative.",
+   "ko": "모나 옆 승객은 마치 진정제를 먹은 것처럼 곯아떨어져 있었어요.",
+   "blank": "مخدر",
+   "src": "made"
+  }
+ ],
  "w|مخدرات": [
   {
    "text": "التعامل مع مخدرات خطير جداً.",
@@ -45569,6 +46561,22 @@
    "blank": "مرتبك"
   }
  ],
+ "w|مرتعب": [
+  {
+   "text": "خرج المتدرب الجديد مرتعبا حين انطلق جرس الحريق، فطمأنه عمر.",
+   "en": "The new trainee ran out terrified when the fire alarm went off, so Omar reassured him.",
+   "ko": "화재 경보가 울리자 새 인턴이 겁에 질려 뛰어나왔고, 오마르가 안심시켰어요.",
+   "blank": "مرتعبا",
+   "src": "made"
+  },
+  {
+   "text": "شاهدت فاطمة طفلا مرتعبا من صوت الطبول، فأخذته إلى الخارج.",
+   "en": "Fatima saw a child terrified by the sound of the drums, so she took him outside.",
+   "ko": "파티마는 북소리에 겁에 질린 아이를 보고 밖으로 데리고 나갔어요.",
+   "blank": "مرتعبا",
+   "src": "made"
+  }
+ ],
  "w|مرتفع": [
   {
    "text": "البرج مرتفع ويطل على المدينة.",
@@ -45581,6 +46589,22 @@
    "en": "This mountain is very high above the sea.",
    "ko": "이 산은 바다보다 매우 높아요.",
    "blank": "مرتفع"
+  }
+ ],
+ "w|مرجح": [
+  {
+   "text": "قال كريم إن السبب المرجح للصداع هو قلة شرب الماء.",
+   "en": "Karim said the most likely cause of the headache was not drinking enough water.",
+   "ko": "카림은 두통의 가장 그럴듯한 원인이 물을 적게 마신 탓이라고 했어요.",
+   "blank": "المرجح",
+   "src": "made"
+  },
+  {
+   "text": "قال الموظف لمنى إن من المرجح أن تتأخر الرحلة ساعة.",
+   "en": "The clerk told Mona the flight was likely to be delayed by an hour.",
+   "ko": "직원은 모나에게 비행기가 한 시간쯤 늦어질 것 같다고 말했어요.",
+   "blank": "المرجح",
+   "src": "made"
   }
  ],
  "w|مرح": [
@@ -45793,6 +46817,22 @@
    "en": "The park is in a central location in the city.",
    "ko": "공원은 도시의 중심에 있어요.",
    "blank": "مركزي"
+  }
+ ],
+ "w|مرهق": [
+  {
+   "text": "دخلت ممرضة الصيدلية بوجه مرهق بعد مناوبة ليلية، فقدم لها كريم كوب ماء.",
+   "en": "A nurse came into the pharmacy looking exhausted after a night shift, and Karim offered her a glass of water.",
+   "ko": "야간 근무를 마친 간호사가 지친 얼굴로 들어오자 카림은 물 한 잔을 건넸어요.",
+   "blank": "مرهق",
+   "src": "made"
+  },
+  {
+   "text": "وصلت منى إلى الفندق في منتصف الليل، وكان يومها مرهقا.",
+   "en": "Mona arrived at the hotel at midnight after an exhausting day.",
+   "ko": "모나는 자정에 호텔에 도착했어요. 정말 고단한 하루였어요.",
+   "blank": "مرهقا",
+   "src": "made"
   }
  ],
  "w|مروحة": [
@@ -46009,6 +47049,22 @@
    "en": "The child is annoying today.",
    "ko": "오늘 아이가 시끄러워요.",
    "blank": "مزعج"
+  }
+ ],
+ "w|مزيج": [
+  {
+   "text": "يحضر كريم مزيجا من الأعشاب للسعال يحبه كبار السن.",
+   "en": "Karim prepares a herbal blend for coughs that older people love.",
+   "ko": "카림은 어르신들이 좋아하는 기침용 약초 혼합차를 만들어요.",
+   "blank": "مزيجا",
+   "src": "made"
+  },
+  {
+   "text": "شعرت منى بمزيج من الحماس والخوف قبل أول رحلة لها وحدها.",
+   "en": "Mona felt a mix of excitement and fear before her first trip alone.",
+   "ko": "처음으로 혼자 여행을 떠나기 전 모나는 설렘과 두려움이 뒤섞였어요.",
+   "blank": "بمزيج",
+   "src": "made"
   }
  ],
  "w|مزيد": [
@@ -46317,6 +47373,22 @@
    "en": "I work in a big hospital.",
    "ko": "큰 병원에서 일해요.",
    "blank": "مستشفى"
+  }
+ ],
+ "w|مستعار": [
+  {
+   "text": "اكتشف عمر أن زميله يكتب في مدونة باسم مستعار.",
+   "en": "Omar discovered that his colleague writes a blog under a pen name.",
+   "ko": "오마르는 동료가 필명으로 블로그를 쓴다는 걸 알게 됐어요.",
+   "blank": "مستعار",
+   "src": "made"
+  },
+  {
+   "text": "تنشر فاطمة أغانيها على الإنترنت باسم مستعار.",
+   "en": "Fatima posts her songs online under a stage name.",
+   "ko": "파티마는 예명으로 자기 노래를 인터넷에 올려요.",
+   "blank": "مستعار",
+   "src": "made"
   }
  ],
  "w|مستعجل": [
@@ -46861,6 +47933,22 @@
    "src": "made"
   }
  ],
+ "w|مشرق": [
+  {
+   "text": "دخلت فتاة بوجه مشرق لتشكر كريما لأن جدتها تحسنت.",
+   "en": "A girl with a bright face came in to thank Karim because her grandmother had got better.",
+   "ko": "한 소녀가 환한 얼굴로 들어와 할머니가 나아졌다며 카림에게 고마워했어요.",
+   "blank": "مشرق",
+   "src": "made"
+  },
+  {
+   "text": "هبطت طائرة منى في صباح مشرق بعد ليلة ممطرة.",
+   "en": "Mona's plane landed on a bright morning after a rainy night.",
+   "ko": "비 오는 밤이 지나고 화창한 아침에 모나가 탄 비행기가 내렸어요.",
+   "blank": "مشرق",
+   "src": "made"
+  }
+ ],
  "w|مشروب": [
   {
    "text": "أريد مشروب بارد في هذا الجو الحار.",
@@ -47304,6 +48392,22 @@
    "en": "The passenger left the fate of his journey to luck when he boarded the train without a ticket.",
    "ko": "그 승객은 표 없이 기차에 타서 여행의 운명을 운에 맡겼어요.",
    "blank": "مصير",
+   "src": "made"
+  }
+ ],
+ "w|مضاد": [
+  {
+   "text": "رفض كريم أن يبيع مضادا حيويا لزبون ليست معه وصفة طبيب.",
+   "en": "Karim refused to sell an antibiotic to a customer who had no doctor's prescription.",
+   "ko": "카림은 처방전이 없는 손님에게 항생제를 팔지 않았어요.",
+   "blank": "مضادا",
+   "src": "made"
+  },
+  {
+   "text": "وضعت منى في حقيبتها مضادا للحساسية قبل الرحلة.",
+   "en": "Mona put an antihistamine in her bag before the flight.",
+   "ko": "모나는 비행 전에 가방에 알레르기약을 넣었어요.",
+   "blank": "مضادا",
    "src": "made"
   }
  ],
@@ -48351,6 +49455,22 @@
    "blank": "مفتوح"
   }
  ],
+ "w|مفتون": [
+  {
+   "text": "عمر مفتون بالتصميم الحديث لمبنى الشركة.",
+   "en": "Omar is fascinated by the modern design of the company building.",
+   "ko": "오마르는 회사 건물의 현대적인 디자인에 매료됐어요.",
+   "blank": "مفتون",
+   "src": "made"
+  },
+  {
+   "text": "فاطمة مفتونة بصوت العود منذ سمعته في بيت جدها.",
+   "en": "Fatima has been enchanted by the sound of the oud since she heard it at her grandfather's house.",
+   "ko": "파티마는 할아버지 댁에서 우드 소리를 들은 뒤로 그 소리에 매료됐어요.",
+   "blank": "مفتونة",
+   "src": "made"
+  }
+ ],
  "w|مفرش": [
   {
    "text": "أحتاج إلى مفرش جديد لطاولتي.",
@@ -48363,6 +49483,22 @@
    "en": "This is a beautiful and decorated cloth.",
    "ko": "이것은 아름답고 장식된 천이에요.",
    "blank": "مفرش"
+  }
+ ],
+ "w|مفزوع": [
+  {
+   "text": "قفز عمر من كرسيه مفزوعا حين سقطت الملفات خلفه.",
+   "en": "Omar jumped out of his chair in alarm when the files fell behind him.",
+   "ko": "뒤에서 서류철이 떨어지자 오마르는 깜짝 놀라 의자에서 튀어 올랐어요.",
+   "blank": "مفزوعا",
+   "src": "made"
+  },
+  {
+   "text": "استيقظت فاطمة مفزوعة لأنها حلمت بأنها نسيت اللحن على المسرح.",
+   "en": "Fatima woke up in a fright because she dreamed she forgot the melody on stage.",
+   "ko": "파티마는 무대에서 곡을 잊어버리는 꿈을 꾸고 깜짝 놀라 깼어요.",
+   "blank": "مفزوعة",
+   "src": "made"
   }
  ],
  "w|مفضل": [
@@ -48827,6 +49963,22 @@
    "en": "The fried fish here is very delicious.",
    "ko": "여기 튀긴 생선이 정말 맛있어.",
    "blank": "مقلي"
+  }
+ ],
+ "w|مقنع": [
+  {
+   "text": "لم يجد كريم سببا مقنعا لتغيير الدواء الذي يأخذه الرجل.",
+   "en": "Karim found no convincing reason to change the medicine the man was taking.",
+   "ko": "카림은 그 남자가 먹는 약을 바꿀 만한 설득력 있는 이유를 찾지 못했어요.",
+   "blank": "مقنعا",
+   "src": "made"
+  },
+  {
+   "text": "لم يكن عذر شركة الطيران عن التأخير مقنعا لمنى.",
+   "en": "The airline's excuse for the delay didn't convince Mona.",
+   "ko": "항공사의 지연 해명은 모나에게 설득력이 없었어요.",
+   "blank": "مقنعا",
+   "src": "made"
   }
  ],
  "w|مقهى": [
@@ -49890,6 +51042,22 @@
    "en": "Fatima told her friends she got a scholarship to study abroad.",
    "ko": "파티마는 친구들에게 해외 유학 장학금을 받았다고 알렸어요.",
    "blank": "منحة",
+   "src": "made"
+  }
+ ],
+ "w|منحرف": [
+  {
+   "text": "قال الطبيب لزبون كريم إن الحاجز الأنفي عنده منحرف قليلا.",
+   "en": "The doctor told one of Karim's customers that his nasal septum is slightly deviated.",
+   "ko": "의사는 카림의 손님에게 코 중격이 조금 휘었다고 말했어요.",
+   "blank": "منحرف",
+   "src": "made"
+  },
+  {
+   "text": "كانت لوحة المواعيد منحرفة قليلا، فمالت منى برأسها لتقرأها.",
+   "en": "The timetable board was slightly crooked, so Mona tilted her head to read it.",
+   "ko": "시간표 전광판이 살짝 비뚤어져 있어서 모나는 고개를 기울여 읽었어요.",
+   "blank": "منحرفة",
    "src": "made"
   }
  ],
@@ -51839,6 +53007,22 @@
    "src": "made"
   }
  ],
+ "w|نسيج": [
+  {
+   "text": "شرح كريم لطالبة طب كيف يلتئم النسيج بعد الجرح.",
+   "en": "Karim explained to a medical student how tissue heals after a wound.",
+   "ko": "카림은 의대생에게 상처가 난 뒤 조직이 어떻게 아무는지 설명했어요.",
+   "blank": "النسيج",
+   "src": "made"
+  },
+  {
+   "text": "اشترت منى من السوق الحرة وشاحا من نسيج حريري ناعم.",
+   "en": "Mona bought a scarf of soft silk fabric at the duty-free shop.",
+   "ko": "모나는 면세점에서 부드러운 실크 스카프를 샀어요.",
+   "blank": "نسيج",
+   "src": "made"
+  }
+ ],
  "w|نشأ": [
   {
    "text": "نشأ أحمد في قرية صغيرة.",
@@ -52355,6 +53539,22 @@
    "blank": "نفذ"
   }
  ],
+ "w|نفر": [
+  {
+   "text": "نفر عمر من رائحة الدخان في غرفة الاستراحة.",
+   "en": "Omar was put off by the smell of smoke in the break room.",
+   "ko": "오마르는 휴게실의 담배 냄새가 거슬렸어요.",
+   "blank": "نفر",
+   "src": "made"
+  },
+  {
+   "text": "تنفر فاطمة من الموسيقى الصاخبة، وتفضل الألحان الهادئة.",
+   "en": "Fatima dislikes loud music and prefers calm melodies.",
+   "ko": "파티마는 시끄러운 음악을 싫어하고 잔잔한 곡을 좋아해요.",
+   "blank": "تنفر",
+   "src": "made"
+  }
+ ],
  "w|نفس": [
   {
    "text": "كل شخص له نفس الحقوق.",
@@ -52595,6 +53795,22 @@
    "en": "Don't carry a lot of money with you.",
    "ko": "돈을 너무 많이 가지고 다니지 마세요.",
    "blank": "نقود"
+  }
+ ],
+ "w|نقي": [
+  {
+   "text": "فتح عمر النافذة ليدخل هواء الصباح النقي إلى المكتب.",
+   "en": "Omar opened the window to let the fresh morning air into the office.",
+   "ko": "오마르는 아침의 맑은 공기가 들어오도록 사무실 창문을 열었어요.",
+   "blank": "النقي",
+   "src": "made"
+  },
+  {
+   "text": "صوت فاطمة نقي، ولذلك اختارتها المدرسة للغناء في الحفل.",
+   "en": "Fatima's voice is pure, which is why the school chose her to sing at the concert.",
+   "ko": "파티마는 목소리가 맑아서 학교가 공연에서 노래할 사람으로 뽑았어요.",
+   "blank": "نقي",
+   "src": "made"
   }
  ],
  "w|نقيب": [
@@ -54119,6 +55335,22 @@
    "blank": "الوجع"
   }
  ],
+ "w|وجل": [
+  {
+   "text": "وجل قلب عمر حين ناداه المدير باسمه أمام الجميع.",
+   "en": "Omar's heart jumped with fear when the director called his name in front of everyone.",
+   "ko": "사장님이 모두 앞에서 이름을 부르자 오마르는 가슴이 덜컥했어요.",
+   "blank": "وجل",
+   "src": "made"
+  },
+  {
+   "text": "وجلت فاطمة حين انقطع الوتر في منتصف الحفل.",
+   "en": "Fatima was frightened when the string snapped in the middle of the concert.",
+   "ko": "공연 도중 줄이 끊어지자 파티마는 겁이 덜컥 났어요.",
+   "blank": "وجلت",
+   "src": "made"
+  }
+ ],
  "w|وجه": [
   {
    "text": "كان وجه الطفل مبتسما.",
@@ -54427,6 +55659,22 @@
    "en": "The dancer moved her hip smoothly.",
    "ko": "무용수가 엉덩이를 부드럽게 움직였어.",
    "blank": "ورك"
+  }
+ ],
+ "w|ورم": [
+  {
+   "text": "سأل رجل كريما عن دواء يخفف الورم في كاحله بعد سقطة.",
+   "en": "A man asked Karim for a medicine to reduce the swelling in his ankle after a fall.",
+   "ko": "한 남자가 넘어진 뒤 발목 부기를 빼는 약을 카림에게 물었어요.",
+   "blank": "الورم",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت منى ورما خفيفا في قدميها بعد الرحلة الطويلة.",
+   "en": "Mona noticed slight swelling in her feet after the long flight.",
+   "ko": "긴 비행 뒤 모나는 발이 살짝 부은 걸 알아챘어요.",
+   "blank": "ورما",
+   "src": "made"
   }
  ],
  "w|وزارة": [
@@ -55137,6 +56385,22 @@
    "blank": "ولكن"
   }
  ],
+ "w|ولهان": [
+  {
+   "text": "يبدو زميل عمر ولهان، فهو ينظر إلى هاتفه كل دقيقة.",
+   "en": "Omar's colleague seems lovesick; he looks at his phone every minute.",
+   "ko": "오마르의 동료는 사랑에 빠졌나 봐요. 일 분마다 휴대폰을 보거든요.",
+   "blank": "ولهان",
+   "src": "made"
+  },
+  {
+   "text": "غنت فاطمة أغنية قديمة عن عاشق ولهان ينتظر حبيبته عند البحر.",
+   "en": "Fatima sang an old song about a lovesick lover waiting for his beloved by the sea.",
+   "ko": "파티마는 바닷가에서 연인을 기다리는 상사병 걸린 남자에 관한 옛 노래를 불렀어요.",
+   "blank": "ولهان",
+   "src": "made"
+  }
+ ],
  "w|وهب": [
   {
    "text": "وهب المال للجمعية الخيرية.",
@@ -55191,6 +56455,22 @@
    "en": "I felt despair when I did not succeed.",
    "ko": "성공하지 못했을 때 절망을 느꼈다.",
    "blank": "يأس"
+  }
+ ],
+ "w|يئس": [
+  {
+   "text": "كاد عمر أن ييأس من فتح بريده الجديد، ثم وجد كلمة السر.",
+   "en": "Omar nearly gave up on opening his new email, then found the password.",
+   "ko": "오마르는 새 메일함을 열려다 거의 포기할 뻔했는데, 비밀번호를 찾았어요.",
+   "blank": "ييأس",
+   "src": "made"
+  },
+  {
+   "text": "لم تيأس فاطمة رغم رفض لجنة القبول لها أول مرة.",
+   "en": "Fatima didn't give up even though the admissions committee rejected her the first time.",
+   "ko": "파티마는 처음에 입학 심사에서 떨어졌는데도 포기하지 않았어요.",
+   "blank": "تيأس",
+   "src": "made"
   }
  ],
  "w|يا": [

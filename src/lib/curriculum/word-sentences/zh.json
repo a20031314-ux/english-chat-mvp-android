@@ -55,6 +55,22 @@
    "blank": "一会儿"
   }
  ],
+ "w|一共": [
+  {
+   "text": "小明班上一共有四十五个学生。",
+   "en": "There are forty-five students in Xiao Ming's class in total.",
+   "ko": "샤오밍 반에는 학생이 모두 마흔다섯 명이에요.",
+   "blank": "一共",
+   "src": "made"
+  },
+  {
+   "text": "这部电影丽丽一共只有三场戏，可她准备了整整一个月。",
+   "en": "Lili has only three scenes in this film in total, but she prepared for a whole month.",
+   "ko": "리리는 이 영화에 장면이 모두 세 개뿐인데도 꼬박 한 달을 준비했어요.",
+   "blank": "一共",
+   "src": "made"
+  }
+ ],
  "w|一切": [
   {
    "text": "一切顺利。",
@@ -667,6 +683,22 @@
    "blank": "下"
   }
  ],
+ "w|下令": [
+  {
+   "text": "校长下令所有班级在操场上集合做早操，小明的班也排好了队。",
+   "en": "The principal ordered all classes to gather on the playground for morning exercises, Xiao Ming's included.",
+   "ko": "교장 선생님이 모든 반에 운동장에 모여 아침 체조를 하라고 지시했고 샤오밍 반도 나갔어요.",
+   "blank": "下令",
+   "src": "made"
+  },
+  {
+   "text": "剧里的将军下令开城门的那场戏，丽丽在城楼上演一个侍女。",
+   "en": "In the scene where the general orders the city gates opened, Lili plays a maid on the gate tower.",
+   "ko": "극 중 장군이 성문을 열라고 명령하는 장면에서 리리는 성루 위 시녀를 연기해요.",
+   "blank": "下令",
+   "src": "made"
+  }
+ ],
  "w|下午": [
   {
    "text": "下午见。",
@@ -967,6 +999,22 @@
    "en": "He's not as good as you.",
    "ko": "그는 너만 못해.",
    "blank": "不如"
+  }
+ ],
+ "w|不妙": [
+  {
+   "text": "小明一看卷子上那么多红叉，就知道情况不妙。",
+   "en": "As soon as Xiao Ming saw all the red crosses on his test paper, he knew things looked bad.",
+   "ko": "샤오밍은 시험지에 빨간 엑스 표시가 잔뜩 있는 걸 보자마자 상황이 좋지 않다는 걸 알았어요.",
+   "blank": "不妙",
+   "src": "made"
+  },
+  {
+   "text": "天上的乌云越来越厚，丽丽觉得今天的外景拍摄有点不妙。",
+   "en": "The dark clouds grew thicker and thicker, and Lili felt today's outdoor shoot wasn't looking good.",
+   "ko": "먹구름이 점점 짙어져서 리리는 오늘 야외 촬영이 좀 불길하다고 느꼈어요.",
+   "blank": "不妙",
+   "src": "made"
   }
  ],
  "w|不少": [
@@ -1428,6 +1476,22 @@
    "en": "Sun Yue didn't reach the finish until noon, and the sun had turned her face bright red.",
    "ko": "쑨웨는 정오가 돼서야 결승선에 들어왔고 햇볕에 얼굴이 새빨갛게 탔어요.",
    "blank": "中午",
+   "src": "made"
+  }
+ ],
+ "w|中国人": [
+  {
+   "text": "新同事问黄涛，中国人过年一般都吃什么。",
+   "en": "A new coworker asked Huang Tao what Chinese people usually eat at New Year.",
+   "ko": "새 동료가 황타오에게 중국 사람들은 설에 보통 뭘 먹는지 물었어요.",
+   "blank": "中国人",
+   "src": "made"
+  },
+  {
+   "text": "爸爸告诉杨洋，中国人吃饭讲究一家人围着一张桌子。",
+   "en": "Dad told Yang Yang that for Chinese people, mealtime means the whole family sitting around one table.",
+   "ko": "아빠는 양양에게 중국 사람들은 온 가족이 한 식탁에 둘러앉아 먹는 걸 중요하게 여긴다고 했어요.",
+   "blank": "中国人",
    "src": "made"
   }
  ],
@@ -2599,6 +2663,22 @@
    "blank": "人们"
   }
  ],
+ "w|人口": [
+  {
+   "text": "黄涛的新公司在一座人口不多的小城市。",
+   "en": "Huang Tao's new company is in a small city without a large population.",
+   "ko": "황타오의 새 회사는 인구가 많지 않은 작은 도시에 있어요.",
+   "blank": "人口",
+   "src": "made"
+  },
+  {
+   "text": "杨洋家人口多，每次出来吃饭都得订一张大圆桌。",
+   "en": "Yang Yang's family is big, so every time they eat out they have to book a big round table.",
+   "ko": "양양네는 식구가 많아서 외식할 때마다 큰 원탁을 예약해야 해요.",
+   "blank": "人口",
+   "src": "made"
+  }
+ ],
  "w|人员": [
   {
    "text": "所有人员到齐了。",
@@ -2611,6 +2691,22 @@
    "en": "We need more personnel.",
    "ko": "인원이 더 필요해.",
    "blank": "人员"
+  }
+ ],
+ "w|人士": [
+  {
+   "text": "今天来公司参观的都是业内人士，黄涛负责给他们倒茶。",
+   "en": "Today's visitors to the company were all industry professionals, and Huang Tao was in charge of pouring their tea.",
+   "ko": "오늘 회사를 방문한 사람들은 모두 업계 인사여서 황타오가 차 대접을 맡았어요.",
+   "blank": "人士",
+   "src": "made"
+  },
+  {
+   "text": "听说有位美食界的知名人士也常来这家小店吃饭。",
+   "en": "Yang Yang heard that a well-known figure in the food world often eats at this little restaurant too.",
+   "ko": "양양이 듣기로는 요식업계의 유명 인사도 이 작은 식당에 자주 온대요.",
+   "blank": "人士",
+   "src": "made"
   }
  ],
  "w|人家": [
@@ -2640,6 +2736,22 @@
    "en": "The HR manager said the company really needs technical talent like Liu Fang.",
    "ko": "인사부장은 회사가 류팡 같은 기술 인재를 꼭 필요로 한다고 했어요.",
    "blank": "人才",
+   "src": "made"
+  }
+ ],
+ "w|人数": [
+  {
+   "text": "这次培训的人数太多，黄涛只能坐在最后一排。",
+   "en": "So many people attended this training that Huang Tao could only sit in the back row.",
+   "ko": "이번 교육은 인원이 너무 많아서 황타오는 맨 뒷줄에 앉을 수밖에 없었어요.",
+   "blank": "人数",
+   "src": "made"
+  },
+  {
+   "text": "服务员问杨洋一共几位，杨洋数了数人数，说是十二位。",
+   "en": "The server asked Yang Yang how many in the party, and Yang Yang counted heads and said twelve.",
+   "ko": "종업원이 몇 분이냐고 묻자 양양은 인원수를 세어 보고 열두 명이라고 했어요.",
+   "blank": "人数",
    "src": "made"
   }
  ],
@@ -2697,6 +2809,22 @@
    "en": "We are human.",
    "ko": "우리는 인간이야.",
    "blank": "人类"
+  }
+ ],
+ "w|人群": [
+  {
+   "text": "早高峰地铁里挤满了人群，黄涛第一天上班差点迟到。",
+   "en": "The subway was packed with crowds at morning rush hour, and Huang Tao was almost late on his first day at work.",
+   "ko": "아침 출근길 지하철이 사람들로 꽉 차서 황타오는 첫 출근 날 하마터면 지각할 뻔했어요.",
+   "blank": "人群",
+   "src": "made"
+  },
+  {
+   "text": "周末的饭店门口排着长长的人群，杨洋一家等了半个小时。",
+   "en": "There was a long crowd lined up at the restaurant door on the weekend, and Yang Yang's family waited half an hour.",
+   "ko": "주말 식당 앞에 사람들이 길게 줄을 서 있어서 양양네 가족은 삼십 분을 기다렸어요.",
+   "blank": "人群",
+   "src": "made"
   }
  ],
  "w|人质": [
@@ -3114,6 +3242,22 @@
    "en": "The class monitor couldn't come, so his wife came in his place.",
    "ko": "반장이 못 와서 그의 아내가 대신 왔어요.",
    "blank": "代替",
+   "src": "made"
+  }
+ ],
+ "w|代理": [
+  {
+   "text": "班主任生病住院，这周由数学老师代理班主任的工作。",
+   "en": "The homeroom teacher is in the hospital, so the math teacher is filling in as homeroom teacher this week for Xiao Ming's class.",
+   "ko": "담임 선생님이 입원해서 이번 주는 수학 선생님이 샤오밍네 반 담임 일을 대신 맡아요.",
+   "blank": "代理",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的经纪人生病了，这个月由公司另一位同事代理她的工作。",
+   "en": "Lili's agent is sick, so another colleague at the agency is handling her work this month.",
+   "ko": "리리의 매니저가 아파서 이번 달은 회사 다른 직원이 일을 대신 맡아요.",
+   "blank": "代理",
    "src": "made"
   }
  ],
@@ -3551,6 +3695,22 @@
    "en": "He has a great dream.",
    "ko": "그 사람한테 위대한 꿈이 있어.",
    "blank": "伟大"
+  }
+ ],
+ "w|传播": [
+  {
+   "text": "老师说流感传播得很快，让小明他们勤洗手。",
+   "en": "The teacher said the flu spreads fast and told Xiao Ming's class to wash their hands often.",
+   "ko": "선생님은 독감이 빨리 퍼진다며 샤오밍네 반에게 손을 자주 씻으라고 했어요.",
+   "blank": "传播",
+   "src": "made"
+  },
+  {
+   "text": "丽丽听说拍摄现场的照片被人偷偷传播到网上，导演很生气。",
+   "en": "Photos from the set were secretly spread online, and the director was angry, Lili heard.",
+   "ko": "리리가 듣기로는 촬영장 사진이 몰래 인터넷에 퍼져서 감독이 무척 화났대요.",
+   "blank": "传播",
+   "src": "made"
   }
  ],
  "w|传统": [
@@ -4077,6 +4237,22 @@
    "blank": "使用"
   }
  ],
+ "w|例如": [
+  {
+   "text": "黄涛还有很多东西要学，例如怎么用公司的报销系统。",
+   "en": "Huang Tao still has a lot to learn, for example how to use the company's expense system.",
+   "ko": "황타오는 아직 배울 게 많아요. 예를 들면 회사 경비 처리 시스템 쓰는 법 같은 거요.",
+   "blank": "例如",
+   "src": "made"
+  },
+  {
+   "text": "这家店的家常菜都很好吃，例如西红柿炒鸡蛋和土豆丝。",
+   "en": "The home-style dishes at this restaurant are all tasty, for example tomato and egg stir-fry and shredded potato.",
+   "ko": "이 식당 가정식은 다 맛있어요. 예를 들면 토마토 달걀볶음이랑 감자채볶음이요.",
+   "blank": "例如",
+   "src": "made"
+  }
+ ],
  "w|依然": [
   {
    "text": "他依然很忙。",
@@ -4314,6 +4490,22 @@
    "en": "To be safe, let's check once more.",
    "ko": "안전하게 한 번 더 확인해요.",
    "blank": "保险",
+   "src": "made"
+  }
+ ],
+ "w|保障": [
+  {
+   "text": "学校新装了监控，保障学生上学放学的安全，小明的妈妈放心多了。",
+   "en": "The school installed new security cameras to ensure students' safety coming and going, and Xiao Ming's mom feels much more at ease.",
+   "ko": "학교가 등하교 안전을 지키려고 CCTV를 새로 달아서 샤오밍 엄마는 훨씬 안심해요.",
+   "blank": "保障",
+   "src": "made"
+  },
+  {
+   "text": "剧组给每个演员都买了保险，保障拍摄期间的安全，丽丽也签了字。",
+   "en": "The crew bought insurance for every actor to guarantee safety during filming, and Lili signed too.",
+   "ko": "제작진은 촬영 기간 안전을 보장하려고 배우마다 보험을 들었고 리리도 서명했어요.",
+   "blank": "保障",
    "src": "made"
   }
  ],
@@ -4825,6 +5017,22 @@
    "blank": "偷"
   }
  ],
+ "w|偷偷": [
+  {
+   "text": "开会时黄涛偷偷看了一眼手机，发现妈妈发来了好几条消息。",
+   "en": "During the meeting Huang Tao sneaked a look at his phone and found several messages from his mom.",
+   "ko": "회의 중에 황타오가 몰래 휴대폰을 봤더니 엄마에게서 메시지가 여러 개 와 있었어요.",
+   "blank": "偷偷",
+   "src": "made"
+  },
+  {
+   "text": "杨洋趁大人聊天，偷偷多拿了一块甜点。",
+   "en": "While the adults were chatting, Yang Yang secretly took an extra dessert.",
+   "ko": "양양은 어른들이 이야기하는 틈에 몰래 디저트를 하나 더 집었어요.",
+   "blank": "偷偷",
+   "src": "made"
+  }
+ ],
  "w|傻": [
   {
    "text": "别犯傻。",
@@ -5269,6 +5477,22 @@
    "src": "made"
   }
  ],
+ "w|公共": [
+  {
+   "text": "老师提醒小明，在公共场所说话要小声一点。",
+   "en": "The teacher reminded Xiao Ming to speak more quietly in public places.",
+   "ko": "선생님은 샤오밍에게 공공장소에서는 좀 작게 말하라고 일러 줬어요.",
+   "blank": "公共",
+   "src": "made"
+  },
+  {
+   "text": "剧组在公共汽车上拍了一场戏，丽丽演一个睡过站的乘客。",
+   "en": "The crew shot a scene on a city bus, with Lili playing a passenger who slept past her stop.",
+   "ko": "제작진은 시내버스에서 한 장면을 찍었고 리리는 졸다가 정류장을 지나친 승객을 연기했어요.",
+   "blank": "公共",
+   "src": "made"
+  }
+ ],
  "w|公司": [
   {
    "text": "我去公司了。",
@@ -5309,6 +5533,22 @@
    "en": "The apartment is clean.",
    "ko": "아파트가 깨끗해.",
    "blank": "公寓"
+  }
+ ],
+ "w|公布": [
+  {
+   "text": "学校明天公布期中考试的排名，小明紧张得睡不着。",
+   "en": "The school is announcing the midterm rankings tomorrow, and Xiao Ming is too nervous to sleep.",
+   "ko": "학교가 내일 중간고사 순위를 발표해서 샤오밍은 긴장돼서 잠이 안 와요.",
+   "blank": "公布",
+   "src": "made"
+  },
+  {
+   "text": "剧组今天公布了主演名单，丽丽的名字也在上面。",
+   "en": "The crew announced the cast list today, and Lili's name was on it.",
+   "ko": "제작진이 오늘 주연 명단을 발표했는데 리리 이름도 있었어요.",
+   "blank": "公布",
+   "src": "made"
   }
  ],
  "w|公平": [
@@ -5354,6 +5594,22 @@
    "en": "The onboarding form asks for her citizen ID number, and Liu Fang spent ages looking for her ID card.",
    "ko": "입사 서류에 시민 신분 번호를 적어야 해서 류팡은 신분증을 한참 찾았어요.",
    "blank": "公民",
+   "src": "made"
+  }
+ ],
+ "w|公爵": [
+  {
+   "text": "黄涛最近在看一本英国小说，主角是一位年轻的公爵。",
+   "en": "Huang Tao is reading a British novel lately whose hero is a young duke.",
+   "ko": "황타오는 요즘 영국 소설을 읽는데 주인공이 젊은 공작이에요.",
+   "blank": "公爵",
+   "src": "made"
+  },
+  {
+   "text": "杨洋给妹妹讲了一个故事，说有位公爵在城堡里开了一家餐馆。",
+   "en": "Yang Yang told his sister a story about a duke who opened a restaurant in his castle.",
+   "ko": "양양은 여동생에게 성에서 식당을 연 공작 이야기를 들려줬어요.",
+   "blank": "公爵",
    "src": "made"
   }
  ],
@@ -5559,6 +5815,22 @@
    "en": "Develop some interests.",
    "ko": "관심거리를 좀 키워 봐.",
    "blank": "兴趣"
+  }
+ ],
+ "w|兵": [
+  {
+   "text": "黄涛大学毕业后当过两年兵，所以做事特别有纪律。",
+   "en": "Huang Tao served two years as a soldier after college, so he's very disciplined in how he works.",
+   "ko": "황타오는 대학을 졸업하고 이 년간 군 복무를 해서 일하는 게 무척 규율 있어요.",
+   "blank": "兵",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的太爷爷年轻时当过兵，一坐下就讲起了以前的事。",
+   "en": "Yang Yang's great-grandpa served as a soldier when he was young, and as soon as he sat down he started telling old stories.",
+   "ko": "양양의 증조할아버지는 젊을 때 군인이셨는데 앉자마자 옛날이야기를 꺼내셨어요.",
+   "blank": "兵",
+   "src": "made"
   }
  ],
  "w|其": [
@@ -6069,6 +6341,22 @@
    "en": "There are many animals on the farm.",
    "ko": "농장에 동물이 많아.",
    "blank": "农场"
+  }
+ ],
+ "w|农民": [
+  {
+   "text": "黄涛家里几代都是农民，黄涛是第一个进城工作的。",
+   "en": "Huang Tao's family have been farmers for generations, and Huang Tao is the first to work in the city.",
+   "ko": "황타오 집안은 대대로 농민이었고 황타오가 처음으로 도시에 나와 일해요.",
+   "blank": "农民",
+   "src": "made"
+  },
+  {
+   "text": "饭店的蔬菜都是附近农民早上送来的，特别新鲜。",
+   "en": "The restaurant's vegetables are delivered in the morning by local farmers and are very fresh.",
+   "ko": "식당 채소는 아침마다 근처 농민들이 가져다줘서 무척 신선해요.",
+   "blank": "农民",
+   "src": "made"
   }
  ],
  "w|冠军": [
@@ -8253,6 +8541,22 @@
    "blank": "及"
   }
  ],
+ "w|双方": [
+  {
+   "text": "经过一下午的讨论，双方终于签了合同，黄涛在旁边做会议记录。",
+   "en": "After an afternoon of discussion, both sides finally signed the contract, with Huang Tao taking notes.",
+   "ko": "오후 내내 논의한 끝에 양측이 드디어 계약서에 서명했고 황타오가 회의록을 적었어요.",
+   "blank": "双方",
+   "src": "made"
+  },
+  {
+   "text": "大伯和爸爸都抢着付钱，双方争了半天，最后还是爷爷买了单。",
+   "en": "Yang Yang's uncle and dad both scrambled to pay; the two sides argued for ages, and in the end Grandpa paid.",
+   "ko": "큰아버지와 아빠가 서로 내겠다고 한참 다퉜는데 결국 할아버지가 계산하셨어요.",
+   "blank": "双方",
+   "src": "made"
+  }
+ ],
  "w|反对": [
   {
    "text": "我反对。",
@@ -8737,6 +9041,22 @@
    "src": "made"
   }
  ],
+ "w|口气": [
+  {
+   "text": "班主任的口气很严肃，小明知道这次真的犯错了。",
+   "en": "The homeroom teacher's tone was very serious, and Xiao Ming knew he'd really made a mistake this time.",
+   "ko": "담임 선생님 말투가 아주 엄해서 샤오밍은 이번엔 정말 잘못했다는 걸 알았어요.",
+   "blank": "口气",
+   "src": "made"
+  },
+  {
+   "text": "导演让丽丽换一种口气再说一遍，要更冷一点。",
+   "en": "The director asked Lili to say it again in a different tone, a bit colder.",
+   "ko": "감독은 리리에게 말투를 바꿔서 좀 더 차갑게 다시 해 보라고 했어요.",
+   "blank": "口气",
+   "src": "made"
+  }
+ ],
  "w|口袋": [
   {
    "text": "钥匙在口袋里。",
@@ -9041,6 +9361,22 @@
    "blank": "可恶"
   }
  ],
+ "w|可悲": [
+  {
+   "text": "黄涛读到一篇新闻，说有人为了升职背叛朋友，觉得这种人很可悲。",
+   "en": "Huang Tao read a news story about someone betraying a friend for a promotion and thought such people were pitiful.",
+   "ko": "황타오는 승진하려고 친구를 배신한 사람 이야기를 기사에서 읽고 그런 사람이 참 한심하다고 생각했어요.",
+   "blank": "可悲",
+   "src": "made"
+  },
+  {
+   "text": "隔壁桌一家人吃饭时都在看手机，杨洋的爸爸说这样挺可悲的。",
+   "en": "At the next table the whole family was looking at their phones while eating, and Yang Yang's dad said that was pretty sad.",
+   "ko": "옆 테이블 가족이 밥 먹으면서 다들 휴대폰만 보자 양양의 아빠는 그게 좀 서글프다고 했어요.",
+   "blank": "可悲",
+   "src": "made"
+  }
+ ],
  "w|可惜": [
   {
    "text": "真可惜错过了。",
@@ -9081,6 +9417,22 @@
    "en": "That smile is adorable.",
    "ko": "웃는 게 귀여워.",
    "blank": "可爱"
+  }
+ ],
+ "w|可疑": [
+  {
+   "text": "保安发现一个可疑的人在校门口转来转去，就过去问了几句。",
+   "en": "The security guard noticed a suspicious person hanging around the school gate and went over to ask a few questions, Xiao Ming saw.",
+   "ko": "샤오밍이 보니 경비원이 교문 앞을 서성이는 수상한 사람을 발견하고 다가가 몇 마디 물었어요.",
+   "blank": "可疑",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在这部电影里演一个侦探，专门找可疑的线索。",
+   "en": "In this film Lili plays a detective who hunts for suspicious clues.",
+   "ko": "리리는 이 영화에서 수상한 단서만 찾아다니는 탐정을 연기해요.",
+   "blank": "可疑",
+   "src": "made"
   }
  ],
  "w|可能": [
@@ -11339,6 +11691,22 @@
    "src": "made"
   }
  ],
+ "w|圣诞老人": [
+  {
+   "text": "公司圣诞节晚会上，黄涛被大家推出来扮圣诞老人。",
+   "en": "At the company Christmas party, everyone pushed Huang Tao forward to dress up as Santa Claus.",
+   "ko": "회사 크리스마스 파티에서 다들 황타오를 떠밀어 산타클로스 역을 맡겼어요.",
+   "blank": "圣诞老人",
+   "src": "made"
+  },
+  {
+   "text": "圣诞节那天，饭店老板扮成圣诞老人给孩子们发糖。",
+   "en": "On Christmas Day, the restaurant owner dressed up as Santa Claus and handed out candy to the kids.",
+   "ko": "크리스마스 날 식당 사장님이 산타클로스로 분장하고 아이들에게 사탕을 나눠 줬어요.",
+   "blank": "圣诞老人",
+   "src": "made"
+  }
+ ],
  "w|圣诞节": [
   {
    "text": "圣诞节快到了。",
@@ -11687,6 +12055,22 @@
    "en": "Don't treat everyone as a bad person.",
    "ko": "사람을 다 나쁜 사람으로 보지 마.",
    "blank": "坏人"
+  }
+ ],
+ "w|坏蛋": [
+  {
+   "text": "黄涛的同事开玩笑说，抢走最后一块蛋糕的人是个坏蛋。",
+   "en": "Huang Tao's coworker joked that whoever took the last piece of cake was a villain.",
+   "ko": "황타오의 동료는 마지막 케이크 조각을 가져간 사람은 나쁜 놈이라며 농담했어요.",
+   "blank": "坏蛋",
+   "src": "made"
+  },
+  {
+   "text": "妹妹指着电视里的动画片说，那个戴黑帽子的是坏蛋。",
+   "en": "Yang Yang's sister pointed at the cartoon on TV and said the one in the black hat was the bad guy.",
+   "ko": "양양의 여동생은 TV 만화를 가리키며 검은 모자 쓴 게 나쁜 놈이라고 했어요.",
+   "blank": "坏蛋",
+   "src": "made"
   }
  ],
  "w|坐": [
@@ -12163,6 +12547,22 @@
    "blank": "外"
   }
  ],
+ "w|外国人": [
+  {
+   "text": "黄涛的部门里有两个外国人，平时开会都说英语。",
+   "en": "There are two foreigners in Huang Tao's department, so meetings are usually in English.",
+   "ko": "황타오 부서에 외국인이 두 명 있어서 회의는 보통 영어로 해요.",
+   "blank": "外国人",
+   "src": "made"
+  },
+  {
+   "text": "最近来店里吃饭的外国人越来越多，老板还印了英文菜单。",
+   "en": "More and more foreigners have been coming to eat lately, and the owner even printed an English menu.",
+   "ko": "요즘 식당에 오는 외국인이 점점 늘어서 사장님이 영어 메뉴판까지 만들었어요.",
+   "blank": "外国人",
+   "src": "made"
+  }
+ ],
  "w|外套": [
   {
    "text": "外面冷，穿上外套。",
@@ -12479,6 +12879,22 @@
    "en": "Thanks, everyone.",
    "ko": "다들 고마워.",
    "blank": "大家"
+  }
+ ],
+ "w|大小": [
+  {
+   "text": "新发的校服大小不太合适，小明只好去换了一件。",
+   "en": "The new school uniform wasn't quite the right size, so Xiao Ming had to exchange it.",
+   "ko": "새로 받은 교복이 크기가 잘 안 맞아서 샤오밍은 하나 바꾸러 갔어요.",
+   "blank": "大小",
+   "src": "made"
+  },
+  {
+   "text": "服装师拿来几双鞋，让丽丽一双一双试大小。",
+   "en": "The costume designer brought several pairs of shoes and had Lili try them one by one for size.",
+   "ko": "의상 담당이 신발을 몇 켤레 가져와 리리에게 하나씩 신어 보며 크기를 맞추게 했어요.",
+   "blank": "大小",
+   "src": "made"
   }
  ],
  "w|大师": [
@@ -12872,6 +13288,22 @@
    "en": "The café downstairs is run by a young couple, and Liu Fang bought a latte.",
    "ko": "회사 건물 아래 카페는 젊은 부부가 하는 곳인데 류팡은 라떼 한 잔을 샀어요.",
    "blank": "夫妇",
+   "src": "made"
+  }
+ ],
+ "w|夫妻": [
+  {
+   "text": "部门里有一对夫妻，黄涛过了一个月才知道他们是一家人。",
+   "en": "There's a married couple in the department, and it took Huang Tao a month to find out they were husband and wife.",
+   "ko": "부서에 부부 한 쌍이 있는데 황타오는 한 달이 지나서야 둘이 한 가족인 걸 알았어요.",
+   "blank": "夫妻",
+   "src": "made"
+  },
+  {
+   "text": "这家饭店是一对夫妻开的，已经开了二十多年。",
+   "en": "This restaurant is run by a married couple and has been open for more than twenty years.",
+   "ko": "이 식당은 부부가 운영하는데 문을 연 지 벌써 이십 년이 넘었어요.",
+   "blank": "夫妻",
    "src": "made"
   }
  ],
@@ -13293,6 +13725,22 @@
    "src": "made"
   }
  ],
+ "w|好久不见": [
+  {
+   "text": "黄涛在电梯里遇到了大学室友，两人同时喊了一声：“好久不见！”",
+   "en": "Huang Tao ran into his college roommate in the elevator, and they both shouted, \"Long time no see!\"",
+   "ko": "황타오는 엘리베이터에서 대학 룸메이트를 만나 둘이 동시에 \"오랜만이야!\" 하고 외쳤어요.",
+   "blank": "好久不见",
+   "src": "made"
+  },
+  {
+   "text": "老板一看到杨洋的爸爸就笑着说：“好久不见，还是老位置？”",
+   "en": "As soon as the owner saw Yang Yang's dad, he smiled and said, \"Long time no see, the usual table?\"",
+   "ko": "사장님은 양양의 아빠를 보자마자 웃으며 \"오랜만이에요, 늘 앉던 자리로 할까요?\" 했어요.",
+   "blank": "好久不见",
+   "src": "made"
+  }
+ ],
  "w|好事": [
   {
    "text": "这是件好事。",
@@ -13649,6 +14097,22 @@
    "blank": "妻子"
   }
  ],
+ "w|始终": [
+  {
+   "text": "这道数学题小明想了很久，始终没想出答案。",
+   "en": "Xiao Ming thought about this math problem for a long time but never figured out the answer.",
+   "ko": "샤오밍은 이 수학 문제를 오래 고민했지만 끝내 답을 찾지 못했어요.",
+   "blank": "始终",
+   "src": "made"
+  },
+  {
+   "text": "不管拍到多晚，丽丽始终保持着好心情。",
+   "en": "No matter how late they shoot, Lili always stays in a good mood.",
+   "ko": "아무리 늦게까지 찍어도 리리는 늘 기분 좋게 지내요.",
+   "blank": "始终",
+   "src": "made"
+  }
+ ],
  "w|姐妹": [
   {
    "text": "她们是亲姐妹。",
@@ -13709,6 +14173,22 @@
    "src": "made"
   }
  ],
+ "w|姓名": [
+  {
+   "text": "入职表上要填姓名、电话和住址，黄涛几分钟就写好了。",
+   "en": "The new-hire form asks for name, phone, and address, and Huang Tao filled it out in a few minutes.",
+   "ko": "입사 서류에 이름, 전화번호, 주소를 적어야 해서 황타오는 몇 분 만에 다 썼어요.",
+   "blank": "姓名",
+   "src": "made"
+  },
+  {
+   "text": "服务员拿来一个本子，请杨洋写下姓名和电话，好排队叫号。",
+   "en": "The server brought a notebook and asked Yang Yang to write his name and phone number for the waiting list.",
+   "ko": "종업원이 공책을 가져와 대기 번호를 부르게 양양에게 이름과 전화번호를 적어 달라고 했어요.",
+   "blank": "姓名",
+   "src": "made"
+  }
+ ],
  "w|委员会": [
   {
    "text": "委员会开会了。",
@@ -13766,6 +14246,22 @@
    "en": "Mom, I'm home!",
    "ko": "엄마, 저 왔어요!",
    "blank": "娘",
+   "src": "made"
+  }
+ ],
+ "w|娱乐": [
+  {
+   "text": "期末考试前，小明的妈妈不让他碰任何娱乐活动。",
+   "en": "Before final exams, Xiao Ming's mom won't let him do any entertainment activities.",
+   "ko": "기말고사 전에 샤오밍의 엄마는 오락 활동을 하나도 못 하게 해요.",
+   "blank": "娱乐",
+   "src": "made"
+  },
+  {
+   "text": "丽丽说这一行看起来是娱乐，其实每天都很辛苦。",
+   "en": "Lili says this line of work looks like entertainment, but it's actually hard work every day.",
+   "ko": "리리는 이 일이 겉보기엔 오락 같지만 사실은 날마다 고되다고 해요.",
+   "blank": "娱乐",
    "src": "made"
   }
  ],
@@ -13923,6 +14419,22 @@
    "en": "That possibility exists.",
    "ko": "그런 가능성은 있어.",
    "blank": "存在"
+  }
+ ],
+ "w|孙子": [
+  {
+   "text": "黄涛的组长下个月要请假，因为孙子快出生了。",
+   "en": "Huang Tao's team leader is taking leave next month because his grandson is about to be born.",
+   "ko": "황타오의 팀장은 다음 달에 손자가 태어날 예정이라 휴가를 낸대요.",
+   "blank": "孙子",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的奶奶一边给孙子夹菜，一边让他多吃点。",
+   "en": "Yang Yang's grandma kept putting food on her grandson's plate, telling him to eat more.",
+   "ko": "양양의 할머니는 손자에게 반찬을 집어 주며 많이 먹으라고 하셨어요.",
+   "blank": "孙子",
+   "src": "made"
   }
  ],
  "w|孤单": [
@@ -14125,6 +14637,22 @@
    "en": "Explore the universe.",
    "ko": "우주를 탐험해.",
    "blank": "宇宙"
+  }
+ ],
+ "w|守": [
+  {
+   "text": "足球比赛时，小明在后面守着球门。",
+   "en": "During the soccer match, Xiao Ming guarded the goal at the back.",
+   "ko": "축구 시합 때 샤오밍은 뒤에서 골대를 지켰어요.",
+   "blank": "守",
+   "src": "made"
+  },
+  {
+   "text": "剧组有个规矩，拍摄现场必须守时，丽丽从来没迟到过。",
+   "en": "The crew has a rule that everyone must be punctual on set, and Lili has never been late.",
+   "ko": "촬영장은 시간을 꼭 지켜야 한다는 규칙이 있는데 리리는 한 번도 늦은 적이 없어요.",
+   "blank": "守",
+   "src": "made"
   }
  ],
  "w|安全": [
@@ -14331,6 +14859,22 @@
    "src": "made"
   }
  ],
+ "w|官方": [
+  {
+   "text": "小明在学校官方网站上看到通知，说下周一放假。",
+   "en": "The school's official website posted a notice saying next Monday is a holiday, Xiao Ming read.",
+   "ko": "샤오밍이 보니 학교 공식 홈페이지에 다음 주 월요일이 휴일이라는 공지가 올라왔어요.",
+   "blank": "官方",
+   "src": "made"
+  },
+  {
+   "text": "电影的官方海报一发出来，丽丽就转给了家里人。",
+   "en": "As soon as the film's official poster came out, Lili forwarded it to her family.",
+   "ko": "영화 공식 포스터가 나오자마자 리리는 가족들에게 보냈어요.",
+   "blank": "官方",
+   "src": "made"
+  }
+ ],
  "w|定": [
   {
    "text": "这件事已经定了。",
@@ -14430,6 +14974,22 @@
    "en": "To protect fish stocks, this sea has a fishing ban every summer.",
    "ko": "물고기를 보호하려고 이 바다는 매년 여름 휴어기를 실시해요.",
    "blank": "实行",
+   "src": "made"
+  }
+ ],
+ "w|实话": [
+  {
+   "text": "老师问是谁打碎了窗户，小明想了想，还是说了实话。",
+   "en": "When the teacher asked who broke the window, Xiao Ming thought it over and told the truth.",
+   "ko": "선생님이 누가 창문을 깼냐고 묻자 샤오밍은 잠시 생각하다가 결국 사실대로 말했어요.",
+   "blank": "实话",
+   "src": "made"
+  },
+  {
+   "text": "记者问丽丽拍戏累不累，丽丽说了实话：“真的很累。”",
+   "en": "A reporter asked Lili if filming was tiring, and Lili told the truth: \"Really tiring.\"",
+   "ko": "기자가 촬영이 힘드냐고 묻자 리리는 솔직하게 \"정말 힘들어요\"라고 했어요.",
+   "blank": "实话",
    "src": "made"
   }
  ],
@@ -15323,6 +15883,38 @@
    "blank": "小时候"
   }
  ],
+ "w|小朋友": [
+  {
+   "text": "周末公司办家庭日，同事们带来的小朋友在大厅里跑来跑去。",
+   "en": "The company held a family day on the weekend, and the kids coworkers brought ran around the lobby.",
+   "ko": "주말에 회사가 가족의 날 행사를 열어서 동료들이 데려온 아이들이 로비를 뛰어다녔어요.",
+   "blank": "小朋友",
+   "src": "made"
+  },
+  {
+   "text": "服务员给每个小朋友送了一个气球，杨洋的妹妹高兴极了。",
+   "en": "The server gave every child a balloon, and Yang Yang's little sister was thrilled.",
+   "ko": "종업원이 아이들마다 풍선을 하나씩 줘서 양양의 여동생이 무척 기뻐했어요.",
+   "blank": "小朋友",
+   "src": "made"
+  }
+ ],
+ "w|小男孩": [
+  {
+   "text": "同事的儿子是个小男孩，一到公司就缠着黄涛玩。",
+   "en": "A coworker's son, a little boy, clings to Huang Tao to play as soon as he arrives at the office.",
+   "ko": "동료의 아들은 꼬마 남자아이인데 회사에 오기만 하면 황타오에게 놀아 달라고 졸라요.",
+   "blank": "小男孩",
+   "src": "made"
+  },
+  {
+   "text": "邻桌的小男孩把果汁打翻了，他的妈妈连忙道歉。",
+   "en": "The little boy at the next table knocked over his juice, and his mom quickly apologized.",
+   "ko": "옆 테이블 남자아이가 주스를 엎질러서 아이 엄마가 얼른 사과했어요.",
+   "blank": "小男孩",
+   "src": "made"
+  }
+ ],
  "w|小组": [
   {
    "text": "我们分成三个小组。",
@@ -15545,6 +16137,22 @@
    "blank": "尸体"
   }
  ],
+ "w|尺": [
+  {
+   "text": "办公室的书架有六尺高，黄涛够不着最上面那一层。",
+   "en": "The office bookshelf is six chi tall, and Huang Tao can't reach the top shelf.",
+   "ko": "사무실 책장이 여섯 자나 돼서 황타오는 맨 위 칸에 손이 안 닿아요.",
+   "blank": "尺",
+   "src": "made"
+  },
+  {
+   "text": "老板说门口那条红布有好几尺长，是开业时挂上的。",
+   "en": "The owner said the red cloth at the door is several chi long and was hung there on opening day.",
+   "ko": "사장님은 문 앞 붉은 천이 몇 자나 되는데 개업할 때 건 거라고 했어요.",
+   "blank": "尺",
+   "src": "made"
+  }
+ ],
  "w|尽力": [
   {
    "text": "我会尽力的。",
@@ -15557,6 +16165,22 @@
    "en": "Everyone has already done their best.",
    "ko": "다들 이미 최선을 다했어.",
    "blank": "尽力"
+  }
+ ],
+ "w|尽可能": [
+  {
+   "text": "黄涛尽可能记住每个同事的名字，免得叫错。",
+   "en": "Huang Tao tries to remember every coworker's name as best he can, so he won't get them wrong.",
+   "ko": "황타오는 이름을 잘못 부르지 않으려고 동료들 이름을 최대한 외워요.",
+   "blank": "尽可能",
+   "src": "made"
+  },
+  {
+   "text": "妈妈让杨洋尽可能把碗里的饭吃干净。",
+   "en": "Mom asked Yang Yang to finish the rice in his bowl as much as he could.",
+   "ko": "엄마는 양양에게 그릇의 밥을 되도록 깨끗이 먹으라고 했어요.",
+   "blank": "尽可能",
+   "src": "made"
   }
  ],
  "w|尽快": [
@@ -16165,6 +16789,22 @@
    "src": "made"
   }
  ],
+ "w|帅哥": [
+  {
+   "text": "前台的姑娘们私下都叫黄涛“新来的帅哥”。",
+   "en": "The women at the front desk privately all call Huang Tao \"the handsome new guy.\"",
+   "ko": "안내 데스크 직원들은 뒤에서 황타오를 \"새로 온 훈남\"이라고 불러요.",
+   "blank": "帅哥",
+   "src": "made"
+  },
+  {
+   "text": "端菜的是个帅哥，杨洋的姐姐偷看了好几次。",
+   "en": "The guy bringing the dishes was handsome, and Yang Yang's older sister snuck glances several times.",
+   "ko": "음식을 나르는 종업원이 잘생겨서 양양의 언니가 몇 번이나 훔쳐봤어요.",
+   "blank": "帅哥",
+   "src": "made"
+  }
+ ],
  "w|师傅": [
   {
    "text": "师傅，去火车站多少钱？",
@@ -16451,6 +17091,22 @@
    "src": "made"
   }
  ],
+ "w|平安": [
+  {
+   "text": "黄涛出差前，老同事拍拍他的肩膀，祝他一路平安。",
+   "en": "Before Huang Tao left on a business trip, the veteran coworker patted his shoulder and wished him a safe journey.",
+   "ko": "황타오가 출장 가기 전에 고참 동료가 어깨를 두드리며 무사히 다녀오라고 했어요.",
+   "blank": "平安",
+   "src": "made"
+  },
+  {
+   "text": "吃完饭，杨洋一家举杯祝太爷爷身体健康、一生平安。",
+   "en": "After the meal, Yang Yang's family raised their glasses to wish Great-grandpa good health and peace.",
+   "ko": "식사 후 양양네 가족은 잔을 들어 증조할아버지의 건강과 평안을 빌었어요.",
+   "blank": "平安",
+   "src": "made"
+  }
+ ],
  "w|平常": [
   {
    "text": "我平常七点起床。",
@@ -16496,6 +17152,22 @@
    "en": "Yang Yang is reading a novel about a civilian family during wartime.",
    "ko": "양양은 전쟁 시대 한 민간인 가족의 이야기를 다룬 소설을 읽고 있어요.",
    "blank": "平民",
+   "src": "made"
+  }
+ ],
+ "w|平等": [
+  {
+   "text": "老师告诉小明，在班里每个人都是平等的。",
+   "en": "The teacher told Xiao Ming that everyone in the class is equal.",
+   "ko": "선생님은 샤오밍에게 반에서는 모두가 평등하다고 말해 줬어요.",
+   "blank": "平等",
+   "src": "made"
+  },
+  {
+   "text": "丽丽认为在剧组里，主角和配角的人格是平等的。",
+   "en": "Lili believes that on a film crew, leads and supporting actors deserve equal respect.",
+   "ko": "리리는 촬영장에서 주연과 조연의 인격은 평등하다고 생각해요.",
+   "blank": "平等",
    "src": "made"
   }
  ],
@@ -17275,6 +17947,22 @@
    "en": "Mr. Zhang is here.",
    "ko": "장 선생님이 왔어.",
    "blank": "张"
+  }
+ ],
+ "w|弹": [
+  {
+   "text": "公司年会上，黄涛弹了一首吉他曲，大家都很惊讶。",
+   "en": "At the company's annual party, Huang Tao played a piece on guitar, and everyone was surprised.",
+   "ko": "회사 송년회에서 황타오가 기타 곡을 한 곡 연주해서 다들 놀랐어요.",
+   "blank": "弹",
+   "src": "made"
+  },
+  {
+   "text": "饭店角落有一架旧钢琴，杨洋吃完饭上去弹了一小段。",
+   "en": "There's an old piano in a corner of the restaurant, and after eating Yang Yang went over and played a short piece.",
+   "ko": "식당 구석에 낡은 피아노가 있어서 양양은 밥을 다 먹고 가서 한 소절 쳤어요.",
+   "blank": "弹",
+   "src": "made"
   }
  ],
  "w|强": [
@@ -20011,6 +20699,22 @@
    "blank": "扔"
   }
  ],
+ "w|扔掉": [
+  {
+   "text": "黄涛把前任留下的旧文件都扔掉了，桌子一下子干净了很多。",
+   "en": "Huang Tao threw away all the old files his predecessor left, and the desk instantly looked much cleaner.",
+   "ko": "황타오가 전임자가 남긴 옛 서류를 다 버렸더니 책상이 단번에 훨씬 깔끔해졌어요.",
+   "blank": "扔掉",
+   "src": "made"
+  },
+  {
+   "text": "剩下的菜奶奶舍不得扔掉，让服务员打包带回家。",
+   "en": "Grandma couldn't bear to throw away the leftovers and had the server pack them to take home.",
+   "ko": "할머니는 남은 음식을 버리기 아까워서 종업원에게 포장해 달라고 하셨어요.",
+   "blank": "扔掉",
+   "src": "made"
+  }
+ ],
  "w|执行": [
   {
    "text": "请执行命令。",
@@ -20229,6 +20933,22 @@
    "en": "Grab him, quick!",
    "ko": "빨리 그 사람 잡아!",
    "blank": "抓住"
+  }
+ ],
+ "w|抓紧": [
+  {
+   "text": "下午就要交方案了，黄涛得抓紧时间改完。",
+   "en": "The proposal is due this afternoon, so Huang Tao has to hurry and finish revising it.",
+   "ko": "오후에 기획안을 내야 해서 황타오는 서둘러 고쳐야 해요.",
+   "blank": "抓紧",
+   "src": "made"
+  },
+  {
+   "text": "饭店九点关门，爸爸让大家抓紧吃。",
+   "en": "The restaurant closes at nine, so Dad told everyone to hurry up and eat.",
+   "ko": "식당이 아홉 시에 문을 닫아서 아빠는 다들 서둘러 먹으라고 했어요.",
+   "blank": "抓紧",
+   "src": "made"
   }
  ],
  "w|投入": [
@@ -20987,6 +21707,22 @@
    "en": "Do as I say.",
    "ko": "내 말대로 해.",
    "blank": "按"
+  }
+ ],
+ "w|按摩": [
+  {
+   "text": "体育课跑完步，小明坐在地上按摩酸痛的小腿。",
+   "en": "After running in PE class, Xiao Ming sat on the ground massaging his sore calves.",
+   "ko": "체육 시간에 달리기를 하고 나서 샤오밍은 바닥에 앉아 쑤시는 종아리를 주물렀어요.",
+   "blank": "按摩",
+   "src": "made"
+  },
+  {
+   "text": "拍了一整天，丽丽收工后去按摩店放松了一下。",
+   "en": "After filming all day, Lili went to a massage parlor to relax once she wrapped.",
+   "ko": "하루 종일 촬영하고 끝난 뒤 리리는 마사지숍에 가서 좀 쉬었어요.",
+   "blank": "按摩",
+   "src": "made"
   }
  ],
  "w|按照": [
@@ -22663,6 +23399,22 @@
    "blank": "新"
   }
  ],
+ "w|新人": [
+  {
+   "text": "经理在会上介绍说：“这位是我们部门的新人，黄涛。”",
+   "en": "The manager said at the meeting, \"This is our department's newcomer, Huang Tao.\"",
+   "ko": "매니저가 회의에서 \"이분이 우리 부서 신입 황타오 씨예요\" 하고 소개했어요.",
+   "blank": "新人",
+   "src": "made"
+  },
+  {
+   "text": "表姐下个月结婚，今天特意带着另一位新人来见长辈。",
+   "en": "Yang Yang's cousin is getting married next month and today brought her fiancé to meet the elders.",
+   "ko": "양양의 사촌 언니는 다음 달에 결혼하는데 오늘 일부러 신랑 될 사람을 데리고 어른들께 인사하러 왔어요.",
+   "blank": "新人",
+   "src": "made"
+  }
+ ],
  "w|新娘": [
   {
    "text": "新娘穿着白色的婚纱。",
@@ -23637,6 +24389,22 @@
    "en": "It's getting dark gradually.",
    "ko": "하늘이 점점 어두워져.",
    "blank": "暗"
+  }
+ ],
+ "w|暗示": [
+  {
+   "text": "老师咳嗽了两声，暗示小明别再跟同桌说话了。",
+   "en": "The teacher coughed twice, hinting that Xiao Ming should stop talking to his deskmate.",
+   "ko": "선생님이 헛기침을 두 번 해서 샤오밍에게 짝꿍과 그만 떠들라고 넌지시 알렸어요.",
+   "blank": "暗示",
+   "src": "made"
+  },
+  {
+   "text": "导演用眼神暗示丽丽，下一句台词可以说得慢一点。",
+   "en": "The director signaled to Lili with a look that she could say the next line more slowly.",
+   "ko": "감독은 눈빛으로 리리에게 다음 대사를 좀 천천히 해도 된다고 넌지시 알렸어요.",
+   "blank": "暗示",
+   "src": "made"
   }
  ],
  "w|暴力": [
@@ -24651,6 +25419,22 @@
    "blank": "查"
   }
  ],
+ "w|查看": [
+  {
+   "text": "考完试，小明马上登录学校网站查看成绩。",
+   "en": "After the exam, Xiao Ming immediately logged on to the school website to check his grades.",
+   "ko": "시험이 끝나자 샤오밍은 바로 학교 웹사이트에 들어가 성적을 확인했어요.",
+   "blank": "查看",
+   "src": "made"
+  },
+  {
+   "text": "每拍完一条，丽丽都要走到监视器前查看效果。",
+   "en": "After every take, Lili goes to the monitor to check how it looks.",
+   "ko": "한 테이크를 찍을 때마다 리리는 모니터 앞에 가서 결과를 확인해요.",
+   "blank": "查看",
+   "src": "made"
+  }
+ ],
  "w|标准": [
   {
    "text": "王刚的体能测试远远超过了录用标准。",
@@ -25048,6 +25832,22 @@
    "en": "Xiaoxue says she only truly understood the concept of \"slow living\" by the sea.",
    "ko": "샤오쉐는 \"느린 삶\"이라는 개념을 바닷가에서야 진짜로 알게 됐다고 해요.",
    "blank": "概念",
+   "src": "made"
+  }
+ ],
+ "w|模型": [
+  {
+   "text": "小明花了一个星期，做了一架飞机模型交给科技老师。",
+   "en": "Xiao Ming spent a week making a model airplane to hand in to his science and technology teacher.",
+   "ko": "샤오밍은 일주일 걸려 비행기 모형을 만들어 과학 기술 선생님께 냈어요.",
+   "blank": "模型",
+   "src": "made"
+  },
+  {
+   "text": "美术组做了一个城市的模型，用来拍远景，丽丽看了直说像真的。",
+   "en": "The art department made a model of a city for long shots, and Lili said it looked just like the real thing.",
+   "ko": "미술팀이 원경 촬영용으로 도시 모형을 만들었는데 리리는 진짜 같다며 감탄했어요.",
+   "blank": "模型",
    "src": "made"
   }
  ],
@@ -26635,6 +27435,22 @@
    "blank": "清醒"
   }
  ],
+ "w|清除": [
+  {
+   "text": "大扫除那天，小明负责清除墙上的旧海报。",
+   "en": "On the big cleaning day, Xiao Ming was in charge of removing the old posters from the wall.",
+   "ko": "대청소 날 샤오밍은 벽에 붙은 옛 포스터를 떼어 내는 일을 맡았어요.",
+   "blank": "清除",
+   "src": "made"
+  },
+  {
+   "text": "丽丽看到拍完夜戏，工作人员要把地上的假雪全部清除干净。",
+   "en": "After shooting the night scenes, the crew has to clear away all the fake snow on the ground, Lili noticed.",
+   "ko": "리리가 보니 밤 장면을 찍은 뒤 스태프들이 바닥의 가짜 눈을 깨끗이 치워야 했어요.",
+   "blank": "清除",
+   "src": "made"
+  }
+ ],
  "w|温暖": [
   {
    "text": "冬天值夜班，王刚最想念的是家里温暖的被窝。",
@@ -27221,6 +28037,22 @@
    "blank": "熟悉"
   }
  ],
+ "w|燃料": [
+  {
+   "text": "科学课上，小明学到了汽车用的燃料是从石油里提炼的。",
+   "en": "In science class, Xiao Ming learned that the fuel cars use is refined from petroleum.",
+   "ko": "과학 시간에 샤오밍은 자동차 연료가 석유에서 정제된다는 걸 배웠어요.",
+   "blank": "燃料",
+   "src": "made"
+  },
+  {
+   "text": "拍爆炸戏用的燃料都由专人管理，丽丽离得远远的。",
+   "en": "The fuel used for the explosion scenes is handled by specialists, and Lili keeps well away from it.",
+   "ko": "폭발 장면에 쓰는 연료는 전문가가 관리해서 리리는 멀찍이 떨어져 있어요.",
+   "blank": "燃料",
+   "src": "made"
+  }
+ ],
  "w|燃烧": [
   {
    "text": "工地角落里有一堆木头在燃烧，周强赶紧拿灭火器冲了过去。",
@@ -27741,6 +28573,22 @@
    "en": "That wolf is fierce.",
    "ko": "그 늑대는 사나워.",
    "blank": "狼"
+  }
+ ],
+ "w|猎人": [
+  {
+   "text": "黄涛的爷爷年轻时是个猎人，常给黄涛讲山里的故事。",
+   "en": "Huang Tao's grandfather was a hunter when he was young and often tells Huang Tao stories about the mountains.",
+   "ko": "황타오의 할아버지는 젊을 때 사냥꾼이었는데 황타오에게 산 이야기를 자주 들려줘요.",
+   "blank": "猎人",
+   "src": "made"
+  },
+  {
+   "text": "杨洋发现墙上挂着一幅画，画的是一个猎人在雪地里烤肉。",
+   "en": "A painting hangs on the wall showing a hunter roasting meat in the snow, Yang Yang noticed.",
+   "ko": "양양이 보니 벽에 사냥꾼이 눈밭에서 고기를 굽는 그림이 걸려 있었어요.",
+   "blank": "猎人",
+   "src": "made"
   }
  ],
  "w|猜": [
@@ -29327,6 +30175,22 @@
    "blank": "看上去"
   }
  ],
+ "w|看出": [
+  {
+   "text": "老同事一眼就看出黄涛很紧张，主动过来跟他聊天。",
+   "en": "The veteran coworker could tell at a glance that Huang Tao was nervous and came over to chat with him.",
+   "ko": "고참 동료는 황타오가 긴장한 걸 한눈에 알아보고 먼저 다가와 말을 걸었어요.",
+   "blank": "看出",
+   "src": "made"
+  },
+  {
+   "text": "妈妈从杨洋的表情就看出汤太辣了，赶紧给他倒了杯水。",
+   "en": "Mom could tell from Yang Yang's face that the soup was too spicy and quickly poured him a glass of water.",
+   "ko": "엄마는 양양의 표정만 보고 국이 너무 맵다는 걸 알아채고 얼른 물을 따라 줬어요.",
+   "blank": "看出",
+   "src": "made"
+  }
+ ],
  "w|看到": [
   {
    "text": "你看到了吗？",
@@ -30123,6 +30987,38 @@
    "blank": "视频"
   }
  ],
+ "w|祖国": [
+  {
+   "text": "小明在作文里写道，长大以后要为祖国做点贡献。",
+   "en": "Xiao Ming wrote in his essay that when he grows up he wants to contribute something to his country.",
+   "ko": "샤오밍은 작문에 커서 조국을 위해 뭔가 기여하고 싶다고 썼어요.",
+   "blank": "祖国",
+   "src": "made"
+  },
+  {
+   "text": "电影最后一场戏，丽丽演的角色终于回到了祖国。",
+   "en": "In the film's last scene, Lili's character finally returns to her homeland.",
+   "ko": "영화 마지막 장면에서 리리가 맡은 인물은 마침내 조국으로 돌아와요.",
+   "blank": "祖国",
+   "src": "made"
+  }
+ ],
+ "w|祖母": [
+  {
+   "text": "黄涛桌上放着一张旧照片，是祖母年轻时的样子。",
+   "en": "On Huang Tao's desk is an old photo of his grandmother when she was young.",
+   "ko": "황타오 책상 위에는 할머니의 젊은 시절 모습이 담긴 옛 사진이 놓여 있어요.",
+   "blank": "祖母",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的祖母说，这里的味道跟她小时候吃的一模一样。",
+   "en": "Yang Yang's grandmother says the flavor here is exactly the same as what she ate as a child.",
+   "ko": "양양의 할머니는 여기 맛이 어릴 때 먹던 맛과 똑같다고 하세요.",
+   "blank": "祖母",
+   "src": "made"
+  }
+ ],
  "w|祝": [
   {
    "text": "祝你好运。",
@@ -30339,6 +31235,22 @@
    "blank": "种"
   }
  ],
+ "w|种族": [
+  {
+   "text": "社会课上，老师讲了历史上不同种族的人怎样争取自己的权利。",
+   "en": "In social studies, the teacher explained how people of different races in history fought for their rights, and Xiao Ming listened carefully.",
+   "ko": "사회 시간에 선생님이 역사 속에서 여러 인종의 사람들이 어떻게 자신들의 권리를 얻으려 애썼는지 설명했고 샤오밍은 열심히 들었어요.",
+   "blank": "种族",
+   "src": "made"
+  },
+  {
+   "text": "这部历史片讲的是不同种族的人在一座城市里共同生活，丽丽演一位老师。",
+   "en": "This historical film is about people of different races living together in one city, and Lili plays a teacher.",
+   "ko": "이 역사 영화는 여러 인종의 사람들이 한 도시에서 함께 사는 이야기이고 리리는 선생님 역을 맡았어요.",
+   "blank": "种族",
+   "src": "made"
+  }
+ ],
  "w|科": [
   {
    "text": "剧院的宣传科给黄涛安排了三个采访。",
@@ -30441,6 +31353,22 @@
    "en": "Keep this secret.",
    "ko": "이 비밀 지켜.",
    "blank": "秘密"
+  }
+ ],
+ "w|秩序": [
+  {
+   "text": "午饭时食堂排队很有秩序，小明从来不插队。",
+   "en": "The lunch line in the cafeteria is very orderly, and Xiao Ming never cuts in.",
+   "ko": "점심시간 급식 줄은 질서가 잘 지켜지고 샤오밍은 한 번도 새치기한 적이 없어요.",
+   "blank": "秩序",
+   "src": "made"
+  },
+  {
+   "text": "围观的人太多，保安只好拉起绳子维持秩序，丽丽这才能继续拍。",
+   "en": "There were too many onlookers, so security had to put up a rope to keep order before Lili could keep filming.",
+   "ko": "구경꾼이 너무 많아서 경비원이 줄을 쳐 질서를 잡고 나서야 리리가 촬영을 이어 갈 수 있었어요.",
+   "blank": "秩序",
+   "src": "made"
   }
  ],
  "w|称": [
@@ -30617,6 +31545,22 @@
    "en": "His hands are empty.",
    "ko": "손이 텅 비었어.",
    "blank": "空"
+  }
+ ],
+ "w|空军": [
+  {
+   "text": "小明的表哥在空军当飞行员，是全班同学羡慕的对象。",
+   "en": "Xiao Ming's cousin is a pilot in the air force, and the whole class envies him.",
+   "ko": "샤오밍의 사촌 형은 공군 조종사라서 반 친구들이 다 부러워해요.",
+   "blank": "空军",
+   "src": "made"
+  },
+  {
+   "text": "这部电影讲的是一个空军飞行员的故事，丽丽演他的妹妹。",
+   "en": "This film tells the story of an air force pilot, and Lili plays his younger sister.",
+   "ko": "이 영화는 공군 조종사의 이야기인데 리리는 그의 여동생 역을 맡았어요.",
+   "blank": "空军",
+   "src": "made"
   }
  ],
  "w|空气": [
@@ -31945,6 +32889,22 @@
    "src": "made"
   }
  ],
+ "w|网": [
+  {
+   "text": "小明在教室窗角发现一只蜘蛛正在结网。",
+   "en": "Xiao Ming spotted a spider spinning a web in the corner of the classroom window.",
+   "ko": "샤오밍은 교실 창문 구석에서 거미 한 마리가 거미줄을 치는 걸 발견했어요.",
+   "blank": "网",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在一场海边的戏里，要帮渔民一起收网。",
+   "en": "In a seaside scene, Lili has to help fishermen haul in a net.",
+   "ko": "리리는 바닷가 장면에서 어부들과 함께 그물을 걷어 올려야 해요.",
+   "blank": "网",
+   "src": "made"
+  }
+ ],
  "w|网上": [
   {
    "text": "老师把作业要求放到网上，小明回家就能看到。",
@@ -32183,6 +33143,22 @@
    "src": "made"
   }
  ],
+ "w|群众": [
+  {
+   "text": "黄涛跟同事说，新闻里很多群众自发去帮受灾的村子清理道路。",
+   "en": "The news said many ordinary people voluntarily went to help clear roads in the disaster-hit village, Huang Tao told his coworkers.",
+   "ko": "황타오가 동료들에게, 뉴스에서 많은 주민들이 자발적으로 피해 마을의 길을 치우러 갔다고 전했어요.",
+   "blank": "群众",
+   "src": "made"
+  },
+  {
+   "text": "杨洋看到饭店门口贴着一张感谢信，是附近的群众写给老板的。",
+   "en": "There's a thank-you letter posted at the restaurant door, written by local residents to the owner, Yang Yang noticed.",
+   "ko": "양양이 보니 식당 문에 근처 주민들이 사장님께 쓴 감사 편지가 붙어 있었어요.",
+   "blank": "群众",
+   "src": "made"
+  }
+ ],
  "w|翻": [
   {
    "text": "周强翻遍了十年来的旧报纸，才找到那条消息。",
@@ -32385,6 +33361,22 @@
    "en": "Tell the boss.",
    "ko": "사장님한테 말씀드려.",
    "blank": "老板"
+  }
+ ],
+ "w|老爷": [
+  {
+   "text": "黄涛午休时在看一部古装剧，剧里的老爷正在训管家。",
+   "en": "At lunch break Huang Tao was watching a period drama, where the master of the house was scolding the steward.",
+   "ko": "황타오는 점심시간에 사극을 보고 있었는데, 극 중 나리가 집사를 꾸짖고 있었어요.",
+   "blank": "老爷",
+   "src": "made"
+  },
+  {
+   "text": "杨洋的老爷今年八十岁了，最爱吃这家店的红烧鱼。",
+   "en": "Yang Yang's maternal grandpa is eighty this year and loves this restaurant's braised fish most.",
+   "ko": "양양의 외할아버지는 올해 여든이신데 이 식당의 생선 조림을 제일 좋아하세요.",
+   "blank": "老爷",
+   "src": "made"
   }
  ],
  "w|老爸": [
@@ -32909,6 +33901,22 @@
    "en": "Victory belongs to you.",
    "ko": "승리는 너희 거야.",
    "blank": "胜利"
+  }
+ ],
+ "w|胡扯": [
+  {
+   "text": "同桌说老师是外星人，小明笑着说他又在胡扯。",
+   "en": "Xiao Ming's deskmate said the teacher was an alien, and Xiao Ming laughed that he was talking nonsense again.",
+   "ko": "짝꿍이 선생님이 외계인이라고 하자 샤오밍은 또 헛소리한다며 웃었어요.",
+   "blank": "胡扯",
+   "src": "made"
+  },
+  {
+   "text": "有人说丽丽要演女主角了，丽丽笑着说那都是网友胡扯。",
+   "en": "Someone said Lili was going to play the lead, and Lili laughed that netizens were just making things up.",
+   "ko": "누가 리리가 여주인공을 맡는다고 하자 리리는 다 누리꾼들이 지어낸 말이라며 웃었어요.",
+   "blank": "胡扯",
+   "src": "made"
   }
  ],
  "w|能": [
@@ -33881,6 +34889,22 @@
    "en": "She likes blue.",
    "ko": "그녀는 파란색을 좋아해.",
    "blank": "蓝色"
+  }
+ ],
+ "w|薄": [
+  {
+   "text": "空调开得太大，黄涛后悔今天只穿了一件薄衬衫。",
+   "en": "The air conditioning was blasting, and Huang Tao regretted wearing only a thin shirt today.",
+   "ko": "에어컨이 너무 세서 황타오는 오늘 얇은 셔츠 한 장만 입은 걸 후회했어요.",
+   "blank": "薄",
+   "src": "made"
+  },
+  {
+   "text": "这家的葱油饼又薄又脆，杨洋一个人就吃了三张。",
+   "en": "The scallion pancakes here are thin and crispy, and Yang Yang ate three all by himself.",
+   "ko": "이 집 파전병은 얇고 바삭해서 양양이 혼자 세 장이나 먹었어요.",
+   "blank": "薄",
+   "src": "made"
   }
  ],
  "w|薪水": [
@@ -35187,6 +36211,22 @@
    "src": "made"
   }
  ],
+ "w|评论": [
+  {
+   "text": "小明的作文被老师写了一段很长的评论，夸他写得真实。",
+   "en": "The teacher wrote a long comment on Xiao Ming's essay, praising how genuine it was.",
+   "ko": "선생님은 샤오밍의 작문에 진솔하게 잘 썼다는 긴 평을 달아 줬어요.",
+   "blank": "评论",
+   "src": "made"
+  },
+  {
+   "text": "电影还没上映，网上已经有很多评论在讨论丽丽的角色。",
+   "en": "The film hasn't been released yet, but there are already lots of comments online discussing Lili's role.",
+   "ko": "영화가 아직 개봉도 안 했는데 벌써 온라인에 리리의 역할을 두고 댓글이 많이 달렸어요.",
+   "blank": "评论",
+   "src": "made"
+  }
+ ],
  "w|诅咒": [
   {
    "text": "别随便诅咒别人。",
@@ -35589,6 +36629,22 @@
    "blank": "谁"
   }
  ],
+ "w|调整": [
+  {
+   "text": "经理帮黄涛调整了座位，让他坐在老员工旁边。",
+   "en": "The manager adjusted Huang Tao's seat so he could sit next to an experienced employee.",
+   "ko": "매니저가 황타오 자리를 조정해서 고참 직원 옆에 앉게 해 줬어요.",
+   "blank": "调整",
+   "src": "made"
+  },
+  {
+   "text": "老板说菜太咸的话可以随时调整口味。",
+   "en": "The owner said that if the food is too salty, they can adjust the seasoning anytime.",
+   "ko": "사장님은 음식이 짜면 언제든 간을 조절해 줄 수 있다고 했어요.",
+   "blank": "调整",
+   "src": "made"
+  }
+ ],
  "w|调查": [
   {
    "text": "正在调查中。",
@@ -35953,6 +37009,38 @@
    "blank": "责任"
   }
  ],
+ "w|贴": [
+  {
+   "text": "小明把课程表贴在书桌前面，每天都看一遍。",
+   "en": "Xiao Ming stuck the class schedule in front of his desk and looks at it every day.",
+   "ko": "샤오밍은 시간표를 책상 앞에 붙여 놓고 매일 한 번씩 봐요.",
+   "blank": "贴",
+   "src": "made"
+  },
+  {
+   "text": "化妆师在丽丽脸上贴了一道假伤疤。",
+   "en": "The makeup artist stuck a fake scar on Lili's face.",
+   "ko": "분장사가 리리 얼굴에 가짜 흉터를 붙였어요.",
+   "blank": "贴",
+   "src": "made"
+  }
+ ],
+ "w|贸易": [
+  {
+   "text": "地理课上，老师讲了古代丝绸之路上的贸易，小明听得很认真。",
+   "en": "In geography class, the teacher talked about trade on the ancient Silk Road, and Xiao Ming listened closely.",
+   "ko": "지리 시간에 선생님이 옛 실크로드 무역 이야기를 해 줬고 샤오밍은 귀 기울여 들었어요.",
+   "blank": "贸易",
+   "src": "made"
+  },
+  {
+   "text": "丽丽演的角色是一个做海上贸易的商人的女儿。",
+   "en": "The character Lili plays is the daughter of a merchant in maritime trade.",
+   "ko": "리리가 맡은 역은 해상 무역을 하는 상인의 딸이에요.",
+   "blank": "贸易",
+   "src": "made"
+  }
+ ],
  "w|贼": [
   {
    "text": "那个贼在法庭上低着头，一句话也不说。",
@@ -36133,6 +37221,22 @@
    "blank": "走"
   }
  ],
+ "w|走向": [
+  {
+   "text": "下课铃一响，小明就背起书包走向校门。",
+   "en": "As soon as the bell rang, Xiao Ming put on his backpack and walked toward the school gate.",
+   "ko": "종이 울리자마자 샤오밍은 책가방을 메고 교문 쪽으로 걸어갔어요.",
+   "blank": "走向",
+   "src": "made"
+  },
+  {
+   "text": "这场戏要丽丽慢慢走向镜头，一边走一边哭。",
+   "en": "In this scene Lili has to walk slowly toward the camera, crying as she walks.",
+   "ko": "이 장면에서 리리는 울면서 카메라 쪽으로 천천히 걸어가야 해요.",
+   "blank": "走向",
+   "src": "made"
+  }
+ ],
  "w|走开": [
   {
    "text": "走开！",
@@ -36189,6 +37293,22 @@
    "en": "Don't rush me out.",
    "ko": "나를 쫓아내지 마.",
    "blank": "赶"
+  }
+ ],
+ "w|赶上": [
+  {
+   "text": "黄涛一路小跑，终于赶上了最后一班电梯。",
+   "en": "Huang Tao jogged all the way and finally caught the last elevator.",
+   "ko": "황타오는 종종걸음으로 달려서 겨우 마지막 엘리베이터를 탔어요.",
+   "blank": "赶上",
+   "src": "made"
+  },
+  {
+   "text": "表哥下班后一路赶过来，正好赶上上菜。",
+   "en": "Yang Yang's cousin rushed over after work and arrived just in time for the food to be served.",
+   "ko": "양양의 사촌 형은 퇴근하고 서둘러 와서 딱 음식 나올 때 맞춰 도착했어요.",
+   "blank": "赶上",
+   "src": "made"
   }
  ],
  "w|赶到": [
@@ -36411,6 +37531,22 @@
    "blank": "越来越"
   }
  ],
+ "w|足以": [
+  {
+   "text": "黄涛第一个月的工资足以付清房租。",
+   "en": "Huang Tao's first month's salary is enough to pay off the rent.",
+   "ko": "황타오의 첫 달 월급이면 방세를 다 낼 수 있어요.",
+   "blank": "足以",
+   "src": "made"
+  },
+  {
+   "text": "一大盘饺子足以让杨洋一家六口吃饱。",
+   "en": "One big plate of dumplings is enough to fill up Yang Yang's family of six.",
+   "ko": "만두 한 접시면 양양네 여섯 식구가 배불리 먹을 수 있어요.",
+   "blank": "足以",
+   "src": "made"
+  }
+ ],
  "w|足够": [
   {
    "text": "时间足够。",
@@ -36625,6 +37761,22 @@
    "blank": "身上"
   }
  ],
+ "w|身为": [
+  {
+   "text": "身为班长，小明每天都要最后一个离开教室。",
+   "en": "As class monitor, Xiao Ming has to be the last to leave the classroom every day.",
+   "ko": "반장으로서 샤오밍은 매일 맨 마지막에 교실을 나가야 해요.",
+   "blank": "身为",
+   "src": "made"
+  },
+  {
+   "text": "身为新人演员，丽丽每天都提前一个小时到片场。",
+   "en": "As a newcomer actress, Lili arrives on set an hour early every day.",
+   "ko": "신인 배우로서 리리는 매일 촬영장에 한 시간 일찍 나와요.",
+   "blank": "身为",
+   "src": "made"
+  }
+ ],
  "w|身份": [
   {
    "text": "出示身份证明。",
@@ -36651,6 +37803,22 @@
    "en": "Take care of yourself.",
    "ko": "몸 조심해.",
    "blank": "身体"
+  }
+ ],
+ "w|身后": [
+  {
+   "text": "黄涛正在打字，忽然听到身后有人叫他的名字。",
+   "en": "Huang Tao was typing when he suddenly heard someone behind him call his name.",
+   "ko": "황타오가 타자를 치고 있는데 갑자기 뒤에서 누가 이름을 불렀어요.",
+   "blank": "身后",
+   "src": "made"
+  },
+  {
+   "text": "杨洋转过头，发现爷爷正站在身后对他笑。",
+   "en": "Yang Yang turned around and found Grandpa standing behind him, smiling.",
+   "ko": "양양이 고개를 돌리니 할아버지가 뒤에 서서 웃고 계셨어요.",
+   "blank": "身后",
+   "src": "made"
   }
  ],
  "w|身材": [
@@ -36933,6 +38101,22 @@
    "en": "There are trees by the river.",
    "ko": "강가에 나무가 있어.",
    "blank": "边"
+  }
+ ],
+ "w|边缘": [
+  {
+   "text": "小明的成绩一直在及格的边缘，这次终于考了八十多分。",
+   "en": "Xiao Ming's grades have always been on the edge of passing, but this time he finally scored in the eighties.",
+   "ko": "샤오밍 성적은 늘 낙제 직전이었는데 이번엔 드디어 팔십 점대를 받았어요.",
+   "blank": "边缘",
+   "src": "made"
+  },
+  {
+   "text": "丽丽站在悬崖边缘拍戏，下面虽然有保护垫，还是有点怕。",
+   "en": "Lili filmed standing at the edge of a cliff, and though there were safety mats below, she was still a bit scared.",
+   "ko": "리리는 절벽 가장자리에 서서 촬영했는데 아래 안전 매트가 있어도 좀 무서웠어요.",
+   "blank": "边缘",
+   "src": "made"
   }
  ],
  "w|达": [
@@ -37403,6 +38587,22 @@
    "en": "Come on in.",
    "ko": "들어와.",
    "blank": "进来"
+  }
+ ],
+ "w|进步": [
+  {
+   "text": "才过了两个星期，黄涛就进步得很快，已经能自己做报表了。",
+   "en": "After just two weeks, Huang Tao had made rapid progress and could already do reports on his own.",
+   "ko": "겨우 두 주 만에 황타오는 실력이 부쩍 늘어서 벌써 혼자 보고서를 만들어요.",
+   "blank": "进步",
+   "src": "made"
+  },
+  {
+   "text": "杨洋这学期成绩进步了，爸爸特意带全家出来吃饭庆祝。",
+   "en": "Yang Yang's grades improved this semester, so Dad took the whole family out to eat to celebrate.",
+   "ko": "양양이 이번 학기 성적이 올라서 아빠가 일부러 온 가족을 데리고 외식하며 축하했어요.",
+   "blank": "进步",
+   "src": "made"
   }
  ],
  "w|进行": [
@@ -37933,6 +39133,22 @@
    "en": "Pick up the pace a bit.",
    "ko": "속도를 좀 올려.",
    "blank": "速度"
+  }
+ ],
+ "w|造": [
+  {
+   "text": "小明和同学用纸箱造了一座城堡，放在教室后面展览。",
+   "en": "Xiao Ming and his classmates built a castle out of cardboard boxes and put it on display at the back of the classroom.",
+   "ko": "샤오밍과 친구들은 종이 상자로 성을 만들어 교실 뒤에 전시했어요.",
+   "blank": "造",
+   "src": "made"
+  },
+  {
+   "text": "剧组花了三个月，在山里造了一条古代的老街，丽丽的戏就在那儿拍。",
+   "en": "The film crew spent three months building an ancient old street in the mountains, where Lili's scenes were shot.",
+   "ko": "제작진은 석 달 동안 산속에 옛 거리를 하나 지었고 리리의 장면도 거기서 찍었어요.",
+   "blank": "造",
+   "src": "made"
   }
  ],
  "w|造成": [
@@ -38677,6 +39893,22 @@
    "src": "made"
   }
  ],
+ "w|重建": [
+  {
+   "text": "学校的旧礼堂要拆掉重建，小明有点舍不得。",
+   "en": "The school's old auditorium is going to be torn down and rebuilt, and Xiao Ming is a bit sad to see it go.",
+   "ko": "학교 옛 강당을 허물고 다시 짓는다고 해서 샤오밍은 좀 아쉬워요.",
+   "blank": "重建",
+   "src": "made"
+  },
+  {
+   "text": "这部电影讲的是一座小城在地震后重建的故事，丽丽演一个护士。",
+   "en": "This film tells the story of a small town rebuilding after an earthquake, and Lili plays a nurse.",
+   "ko": "이 영화는 지진 뒤 작은 도시가 다시 일어서는 이야기이고 리리는 간호사 역이에요.",
+   "blank": "重建",
+   "src": "made"
+  }
+ ],
  "w|重新": [
   {
    "text": "重新开始。",
@@ -39155,6 +40387,22 @@
    "blank": "队长"
   }
  ],
+ "w|防御": [
+  {
+   "text": "历史课上讲到古人怎么修城墙防御敌人，小明认真做了笔记。",
+   "en": "In history class they talked about how people in ancient times built city walls to defend against enemies, and Xiao Ming took notes.",
+   "ko": "역사 시간에 옛사람들이 적을 막으려고 성벽을 쌓은 이야기가 나와서 샤오밍은 필기했어요.",
+   "blank": "防御",
+   "src": "made"
+  },
+  {
+   "text": "丽丽在战争片里演一个护士，城里的士兵正在防御敌人的进攻。",
+   "en": "Lili plays a nurse in a war film while the soldiers in the city defend against an enemy attack.",
+   "ko": "리리는 전쟁 영화에서 간호사 역을 맡았는데, 극 중 도시의 병사들이 적의 공격을 막고 있어요.",
+   "blank": "防御",
+   "src": "made"
+  }
+ ],
  "w|阳光": [
   {
    "text": "早晨的阳光很温暖。",
@@ -39167,6 +40415,22 @@
    "en": "Open the curtains and let the sunlight in.",
    "ko": "커튼을 열어 햇빛이 들어오게 해.",
    "blank": "阳光"
+  }
+ ],
+ "w|阴谋": [
+  {
+   "text": "小明最近在读一本侦探小说，讲的是一个宫廷阴谋。",
+   "en": "Xiao Ming is reading a detective novel lately about a palace conspiracy.",
+   "ko": "샤오밍은 요즘 궁중 음모를 다룬 탐정 소설을 읽고 있어요.",
+   "blank": "阴谋",
+   "src": "made"
+  },
+  {
+   "text": "丽丽的角色在电影后半段发现了一个巨大的阴谋。",
+   "en": "In the second half of the film, Lili's character discovers a huge conspiracy.",
+   "ko": "리리가 맡은 인물은 영화 후반부에서 거대한 음모를 알아내요.",
+   "blank": "阴谋",
+   "src": "made"
   }
  ],
  "w|阶段": [
@@ -40050,6 +41314,22 @@
    "en": "Moving day was exhausting, so that evening Lili treated the workers to a proper meal.",
    "ko": "이사하는 날 너무 힘들어서 리리는 저녁에 일꾼들에게 한 끼 푸짐하게 대접했어요.",
    "blank": "顿",
+   "src": "made"
+  }
+ ],
+ "w|领先": [
+  {
+   "text": "接力赛跑到最后一圈，小明的班一直领先。",
+   "en": "In the relay race, Xiao Ming's class stayed in the lead right to the last lap.",
+   "ko": "계주에서 샤오밍네 반은 마지막 바퀴까지 계속 앞섰어요.",
+   "blank": "领先",
+   "src": "made"
+  },
+  {
+   "text": "这部片子的特效技术在国内领先，丽丽在绿幕前拍了好几天。",
+   "en": "This film's special effects technology leads the country, and Lili shot in front of a green screen for days.",
+   "ko": "이 영화의 특수 효과 기술은 국내에서 앞서 있어서 리리는 그린 스크린 앞에서 며칠을 찍었어요.",
+   "blank": "领先",
    "src": "made"
   }
  ],

@@ -687,6 +687,22 @@
    "src": "tatoeba:11276647/chaule3 en:11276644/chaule3"
   }
  ],
+ "w|áp dụng": [
+  {
+   "text": "Thẻ thành viên của Phong được áp dụng giảm giá cho mọi quầy.",
+   "en": "Phong's membership card applies a discount at every counter.",
+   "ko": "퐁의 회원 카드는 모든 매장에서 할인이 적용돼요.",
+   "blank": "áp dụng",
+   "src": "made"
+  },
+  {
+   "text": "Ban quản lý chợ áp dụng thanh toán bằng mã QR cho các sạp.",
+   "en": "The market management introduced QR-code payment for the stalls.",
+   "ko": "시장 관리소가 좌판들에 QR 코드 결제를 도입했어요.",
+   "blank": "áp dụng",
+   "src": "made"
+  }
+ ],
  "w|ấy": [
   {
    "text": "Hôm ấy mưa suốt ngày.",
@@ -1929,6 +1945,38 @@
    "blank": "Bất kỳ"
   }
  ],
+ "w|bắt tay": [
+  {
+   "text": "Ông quản lý cửa hàng bắt tay Phong và cảm ơn anh đã mua hàng.",
+   "en": "The store manager shakes Phong's hand and thanks him for shopping.",
+   "ko": "매장 관리자가 퐁과 악수하며 구매에 감사해요.",
+   "blank": "bắt tay",
+   "src": "made"
+  },
+  {
+   "text": "Hai bà bán hàng bắt tay làm lành sau trận cãi nhau sáng qua.",
+   "en": "The two vendors shook hands and made up after yesterday morning's argument.",
+   "ko": "두 상인 아주머니는 어제 아침 다툰 뒤 악수하고 화해했어요.",
+   "blank": "bắt tay",
+   "src": "made"
+  }
+ ],
+ "w|bắt tay vào": [
+  {
+   "text": "Sau khi trả tiền, Phong bắt tay vào lắp chiếc xe đạp cho con ngay tại sảnh.",
+   "en": "After paying, Phong sets about assembling his child's bicycle right in the lobby.",
+   "ko": "계산을 마치고 퐁은 로비에서 바로 아이 자전거 조립에 착수해요.",
+   "blank": "bắt tay vào",
+   "src": "made"
+  },
+  {
+   "text": "Về đến nhà, Ngọc bắt tay vào làm cá ngay cho tươi.",
+   "en": "Back home, Ngọc gets straight to cleaning the fish while it's fresh.",
+   "ko": "집에 오자마자 응옥은 싱싱할 때 생선 손질에 들어가요.",
+   "blank": "bắt tay vào",
+   "src": "made"
+  }
+ ],
  "w|bất tiện": [
   {
    "text": "Tủ đồ ở phòng tập nhỏ quá, để giày rất bất tiện.",
@@ -2669,6 +2717,22 @@
    "en": "The vase on the table is empty now.",
    "ko": "탁자 위 꽃병이 비었어.",
    "blank": "Bình"
+  }
+ ],
+ "w|bình dị": [
+  {
+   "text": "Giữa nơi sang trọng, Phong vẫn thích quán bún bình dị ở khu ẩm thực.",
+   "en": "Amid all the luxury, Phong still likes the simple noodle stall in the food court.",
+   "ko": "고급스러운 곳에서도 퐁은 푸드코트의 소박한 국숫집을 좋아해요.",
+   "blank": "bình dị",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc yêu không khí bình dị của chợ quê vào buổi sớm.",
+   "en": "Ngọc loves the simple atmosphere of the village market in the early morning.",
+   "ko": "응옥은 이른 아침 시골 장터의 소박한 분위기를 좋아해요.",
+   "blank": "bình dị",
+   "src": "made"
   }
  ],
  "w|binh lính": [
@@ -6261,6 +6325,22 @@
    "src": "tatoeba:5160004/truongap en:2308184/CK"
   }
  ],
+ "w|chi tiêu": [
+  {
+   "text": "Vợ Phong nhắc anh chi tiêu vừa phải vì cuối tháng còn tiền nhà.",
+   "en": "Phong's wife reminds him to spend moderately because rent is due at month's end.",
+   "ko": "퐁의 아내는 월말에 집세가 있으니 적당히 쓰라고 해요.",
+   "blank": "chi tiêu",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc ghi lại mọi khoản chi tiêu đi chợ vào một cuốn sổ nhỏ.",
+   "en": "Ngọc writes down all her market spending in a small notebook.",
+   "ko": "응옥은 장 본 지출을 작은 수첩에 다 적어요.",
+   "blank": "chi tiêu",
+   "src": "made"
+  }
+ ],
  "w|chia": [
   {
    "text": "Chia đều cho mọi người.",
@@ -8933,6 +9013,22 @@
    "blank": "Cụ"
   }
  ],
+ "w|cử động": [
+  {
+   "text": "Con robot đồ chơi có cử động rất giống thật nên con trai Phong thích mê.",
+   "en": "The toy robot moves so realistically that Phong's son loves it.",
+   "ko": "장난감 로봇이 진짜처럼 움직여서 퐁의 아들이 푹 빠졌어요.",
+   "blank": "cử động",
+   "src": "made"
+  },
+  {
+   "text": "Con cua trong rổ vẫn còn cử động, chứng tỏ rất tươi.",
+   "en": "The crab in the basket is still moving, which shows it's very fresh.",
+   "ko": "소쿠리 속 게가 아직 움직여서 아주 싱싱하다는 걸 알 수 있어요.",
+   "blank": "cử động",
+   "src": "made"
+  }
+ ],
  "w|cụ già": [
   {
    "text": "Tom cúi người trước cụ già một cách đầy kính trọng.",
@@ -9051,6 +9147,22 @@
    "en": "I'll stop by the shop for some vegetables.",
    "ko": "가게에 들러 채소 좀 살게.",
    "blank": "cửa hàng"
+  }
+ ],
+ "w|cửa hiệu": [
+  {
+   "text": "Tầng hai có một cửa hiệu đồng hồ cũ mà Phong rất thích.",
+   "en": "There's an old watch shop on the second floor that Phong really likes.",
+   "ko": "이 층에는 퐁이 아주 좋아하는 오래된 시계 가게가 있어요.",
+   "blank": "cửa hiệu",
+   "src": "made"
+  },
+  {
+   "text": "Ngoài sạp trong chợ, gia đình Ngọc còn có một cửa hiệu nhỏ bán đồ khô.",
+   "en": "Besides the market stall, Ngọc's family also has a small shop selling dried goods.",
+   "ko": "응옥네는 시장 좌판 말고도 건어물을 파는 작은 가게가 있어요.",
+   "blank": "cửa hiệu",
+   "src": "made"
   }
  ],
  "w|cửa sổ": [
@@ -10665,6 +10777,22 @@
    "ko": "이곳 땅은 기름지고 비옥해요.",
    "blank": "Đất đai",
    "src": "tatoeba:11299667/chaule3 en:11299655/chaule3"
+  }
+ ],
+ "w|đắt đỏ": [
+  {
+   "text": "Quần áo hàng hiệu ở đây đắt đỏ quá, Phong chỉ dám đứng nhìn.",
+   "en": "The designer clothes here are so expensive that Phong only dares to look.",
+   "ko": "여기 명품 옷은 너무 비싸서 퐁은 구경만 해요.",
+   "blank": "đắt đỏ",
+   "src": "made"
+  },
+  {
+   "text": "Gần Tết, giá hoa quả ở chợ trở nên đắt đỏ.",
+   "en": "Near Tết, fruit prices at the market get expensive.",
+   "ko": "설이 다가오면 시장 과일값이 비싸져요.",
+   "blank": "đắt đỏ",
+   "src": "made"
   }
  ],
  "w|đạt được": [
@@ -16109,6 +16237,22 @@
    "src": "made"
   }
  ],
+ "w|giỏ": [
+  {
+   "text": "Phong đẩy chiếc giỏ nhựa đi khắp khu siêu thị dưới tầng hầm.",
+   "en": "Phong pushes a plastic basket all over the basement supermarket.",
+   "ko": "퐁은 플라스틱 바구니를 밀고 지하 슈퍼를 다 돌아다녀요.",
+   "blank": "giỏ",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc xách giỏ mây đi chợ thay cho túi ni lông.",
+   "en": "Ngọc carries a rattan basket to the market instead of plastic bags.",
+   "ko": "응옥은 비닐봉지 대신 등나무 바구니를 들고 시장에 가요.",
+   "blank": "giỏ",
+   "src": "made"
+  }
+ ],
  "w|giơ": [
   {
    "text": "Bạn nào biết câu trả lời thì giơ tay lên nhé!",
@@ -16475,6 +16619,22 @@
    "en": "I'll call back after the meeting.",
    "ko": "회의 끝나고 다시 전화할게.",
    "blank": "gọi điện"
+  }
+ ],
+ "w|gói hàng": [
+  {
+   "text": "Phong nhờ nhân viên gói hàng thật đẹp vì đó là quà sinh nhật.",
+   "en": "Phong asks the staff to wrap the item nicely because it's a birthday present.",
+   "ko": "퐁은 생일 선물이라 직원에게 예쁘게 포장해 달라고 해요.",
+   "blank": "gói hàng",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc nhờ cô bán hàng buộc gói hàng chặt để chở bằng xe máy.",
+   "en": "Ngọc asks the vendor to tie the package tightly so she can carry it on her motorbike.",
+   "ko": "응옥은 오토바이에 싣고 가게 짐을 꽁꽁 묶어 달라고 상인에게 부탁해요.",
+   "blank": "gói hàng",
+   "src": "made"
   }
  ],
  "w|gọi lại": [
@@ -19001,6 +19161,22 @@
    "blank": "ít"
   }
  ],
+ "w|ít nhiều": [
+  {
+   "text": "Đợt giảm giá cuối năm ít nhiều giúp Phong mua đủ đồ Tết.",
+   "en": "The year-end sale helped Phong buy his Tết supplies to some extent.",
+   "ko": "연말 세일 덕분에 퐁은 어느 정도 설 준비물을 다 샀어요.",
+   "blank": "ít nhiều",
+   "src": "made"
+  },
+  {
+   "text": "Đi chợ mỗi ngày giúp Ngọc ít nhiều hiểu giá cả thị trường.",
+   "en": "Going to the market every day helps Ngọc understand prices to some degree.",
+   "ko": "매일 장을 보니 응옥은 시세를 어느 정도 알게 됐어요.",
+   "blank": "ít nhiều",
+   "src": "made"
+  }
+ ],
  "w|kể": [
   {
    "text": "Kể lại chuyện đó đi.",
@@ -19190,6 +19366,22 @@
    "en": "The phone signal in the new flat is a bit weak, so Lan has to go out on the balcony to call.",
    "ko": "새 집은 휴대폰 신호가 좀 약해서 란은 발코니에 나가서 전화해야 해요.",
    "blank": "kém",
+   "src": "made"
+  }
+ ],
+ "w|kém cỏi": [
+  {
+   "text": "Phong phàn nàn về cách phục vụ kém cỏi ở quầy điện tử.",
+   "en": "Phong complains about the poor service at the electronics counter.",
+   "ko": "퐁은 전자 제품 코너의 형편없는 서비스에 불만을 말해요.",
+   "blank": "kém cỏi",
+   "src": "made"
+  },
+  {
+   "text": "Cậu bé phụ bán hàng tính nhẩm hơi kém cỏi, Ngọc phải tính giúp.",
+   "en": "The boy helping at the stall is poor at mental math, so Ngọc has to help him add up.",
+   "ko": "좌판을 돕는 소년이 암산이 서툴러서 응옥이 대신 계산해 줘요.",
+   "blank": "kém cỏi",
    "src": "made"
   }
  ],
@@ -19459,6 +19651,22 @@
    "en": "The chance of success depends on preparation.",
    "ko": "성공 가능성은 준비에 달려 있어.",
    "blank": "Khả năng"
+  }
+ ],
+ "w|khá nhiều": [
+  {
+   "text": "Hôm nay Phong đã đi bộ khá nhiều vòng quanh các tầng.",
+   "en": "Today Phong has walked quite a few laps around the floors.",
+   "ko": "오늘 퐁은 여러 층을 꽤 많이 돌아다녔어요.",
+   "blank": "khá nhiều",
+   "src": "made"
+  },
+  {
+   "text": "Hôm nay Ngọc mua khá nhiều trái cây để cúng rằm.",
+   "en": "Today Ngọc bought quite a lot of fruit for the full-moon offering.",
+   "ko": "오늘 응옥은 보름 제사에 올릴 과일을 꽤 많이 샀어요.",
+   "blank": "khá nhiều",
+   "src": "made"
   }
  ],
  "w|khác": [
@@ -20323,6 +20531,22 @@
    "blank": "Khởi đầu"
   }
  ],
+ "w|khởi động": [
+  {
+   "text": "Nhân viên khởi động máy chạy bộ để Phong thử trước khi mua.",
+   "en": "The staff member starts up the treadmill so Phong can try it before buying.",
+   "ko": "직원이 퐁이 사기 전에 써 보도록 러닝머신을 켜요.",
+   "blank": "khởi động",
+   "src": "made"
+  },
+  {
+   "text": "Mới năm giờ sáng, các sạp đã khởi động một ngày buôn bán.",
+   "en": "At only five in the morning, the stalls have already started the day's trading.",
+   "ko": "새벽 다섯 시인데 좌판들은 벌써 하루 장사를 시작했어요.",
+   "blank": "khởi động",
+   "src": "made"
+  }
+ ],
  "w|khởi hành": [
   {
    "text": "Tàu sắp khởi hành và chúng tôi còn chưa mua vé nữa!",
@@ -20863,6 +21087,22 @@
    "blank": "Kiến"
   }
  ],
+ "w|kiện hàng": [
+  {
+   "text": "Quầy dịch vụ nhận gửi kiện hàng về tận nhà cho khách.",
+   "en": "The service desk sends parcels to customers' homes.",
+   "ko": "서비스 데스크에서 손님 집까지 택배를 보내 줘요.",
+   "blank": "kiện hàng",
+   "src": "made"
+  },
+  {
+   "text": "Xe ba gác chở mấy kiện hàng vải vào chợ từ lúc trời chưa sáng.",
+   "en": "A cart brings bales of fabric into the market before dawn.",
+   "ko": "동이 트기 전에 짐수레가 천 꾸러미 몇 개를 시장으로 실어 와요.",
+   "blank": "kiện hàng",
+   "src": "made"
+  }
+ ],
  "w|kiên nhẫn": [
   {
    "text": "Làm bánh cần rất kiên nhẫn, Nam đã học được điều đó.",
@@ -21023,6 +21263,22 @@
    "en": "Sharing travel experience is very helpful.",
    "ko": "여행 경험을 나누는 게 아주 도움이 돼.",
    "blank": "kinh nghiệm"
+  }
+ ],
+ "w|kính râm": [
+  {
+   "text": "Trước kỳ nghỉ biển, Phong mua cho cả nhà mỗi người một cặp kính râm.",
+   "en": "Before the beach holiday, Phong buys everyone in the family a pair of sunglasses.",
+   "ko": "바다 휴가 전에 퐁은 식구마다 선글라스를 하나씩 사 줘요.",
+   "blank": "kính râm",
+   "src": "made"
+  },
+  {
+   "text": "Ở chợ có sạp bán kính râm đủ kiểu với giá rất mềm.",
+   "en": "The market has a stall selling all kinds of sunglasses at very reasonable prices.",
+   "ko": "시장에는 온갖 선글라스를 아주 싸게 파는 좌판이 있어요.",
+   "blank": "kính râm",
+   "src": "made"
   }
  ],
  "w|kinh tế": [
@@ -21391,6 +21647,22 @@
    "blank": "Lái"
   }
  ],
+ "w|lãi": [
+  {
+   "text": "Một nhân viên bán hàng kể với Phong rằng tháng này cửa hàng lãi ít.",
+   "en": "A salesperson tells Phong that the store made little profit this month.",
+   "ko": "한 판매 직원은 퐁에게 이번 달 가게 이익이 적다고 말해요.",
+   "blank": "lãi",
+   "src": "made"
+  },
+  {
+   "text": "Bà bán gà nói mỗi con chỉ lãi được vài nghìn.",
+   "en": "The chicken seller says she makes only a few thousand dong profit per bird.",
+   "ko": "닭 장수 할머니는 한 마리에 몇천 동밖에 안 남는대요.",
+   "blank": "lãi",
+   "src": "made"
+  }
+ ],
  "w|lại": [
   {
    "text": "Anh lại quên ví rồi.",
@@ -21719,6 +21991,22 @@
    "en": "Listen carefully then answer.",
    "ko": "잘 듣고 나서 대답해.",
    "blank": "Lắng nghe"
+  }
+ ],
+ "w|lãng phí": [
+  {
+   "text": "Phong không muốn lãng phí cả buổi chiều chỉ để xếp hàng thanh toán.",
+   "en": "Phong doesn't want to waste a whole afternoon just queuing to pay.",
+   "ko": "퐁은 계산 줄 서느라 오후를 통째로 낭비하고 싶지 않아요.",
+   "blank": "lãng phí",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc ghét lãng phí nên chỉ mua đủ rau cho hai bữa.",
+   "en": "Ngọc hates waste, so she only buys enough vegetables for two meals.",
+   "ko": "응옥은 낭비를 싫어해서 두 끼 먹을 만큼만 채소를 사요.",
+   "blank": "lãng phí",
+   "src": "made"
   }
  ],
  "w|lành": [
@@ -23057,6 +23345,22 @@
    "blank": "Lửa"
   }
  ],
+ "w|lụa": [
+  {
+   "text": "Phong chọn mua cho mẹ một chiếc khăn lụa màu xanh lá.",
+   "en": "Phong picks out a green silk scarf for his mother.",
+   "ko": "퐁은 어머니께 드릴 초록색 실크 스카프를 골라요.",
+   "blank": "lụa",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc trả giá một xấp lụa tơ tằm để may quà cho mẹ.",
+   "en": "Ngọc bargains for a length of raw silk to make a gift for her mother.",
+   "ko": "응옥은 어머니 선물을 만들려고 명주 한 필 값을 흥정해요.",
+   "blank": "lụa",
+   "src": "made"
+  }
+ ],
  "w|lựa chọn": [
   {
    "text": "Đây là lựa chọn khó với mình.",
@@ -24111,6 +24415,22 @@
    "en": "A password that is too simple is easy to guess.",
    "ko": "너무 단순한 비밀번호는 쉽게 맞춰져.",
    "blank": "Mật khẩu"
+  }
+ ],
+ "w|mắt kính": [
+  {
+   "text": "Phong ghé cửa hàng mắt kính để thay tròng mới.",
+   "en": "Phong stops by the optician's to get new lenses.",
+   "ko": "퐁은 새 렌즈로 바꾸려고 안경점에 들러요.",
+   "blank": "mắt kính",
+   "src": "made"
+  },
+  {
+   "text": "Ông cụ bán mắt kính cũ ở cổng chợ cho Ngọc đeo thử mấy cặp.",
+   "en": "The old man selling secondhand glasses at the market gate lets Ngọc try on a few pairs.",
+   "ko": "시장 입구에서 헌 안경을 파는 할아버지가 응옥에게 몇 개 써 보게 해요.",
+   "blank": "mắt kính",
+   "src": "made"
   }
  ],
  "w|mất mạng": [
@@ -25776,6 +26096,22 @@
    "en": "There was drizzle this morning, so fewer customers came into Hà's shop than usual.",
    "ko": "오늘 아침 이슬비가 와서 하 씨 가게에 손님이 평소보다 적어요.",
    "blank": "mưa phùn",
+   "src": "made"
+  }
+ ],
+ "w|mua sắm": [
+  {
+   "text": "Cuối tuần, trung tâm thương mại đông nghẹt người đi mua sắm.",
+   "en": "On weekends, the department store is packed with shoppers.",
+   "ko": "주말이면 백화점이 쇼핑하는 사람들로 꽉 차요.",
+   "blank": "mua sắm",
+   "src": "made"
+  },
+  {
+   "text": "Sáng chủ nhật, Ngọc đi mua sắm ở chợ cùng mẹ chồng.",
+   "en": "On Sunday morning, Ngọc goes shopping at the market with her mother-in-law.",
+   "ko": "일요일 아침에 응옥은 시어머니와 시장에 장 보러 가요.",
+   "blank": "mua sắm",
    "src": "made"
   }
  ],
@@ -27623,6 +27959,22 @@
    "en": "So dumb of me—I left the keys.",
    "ko": "진짜 바보야, 열쇠를 두고 왔어.",
    "blank": "Ngốc"
+  }
+ ],
+ "w|ngọc": [
+  {
+   "text": "Ở tầng một, Phong ngắm một chiếc nhẫn đính ngọc lục bảo.",
+   "en": "On the first floor, Phong admires a ring set with an emerald.",
+   "ko": "일 층에서 퐁은 에메랄드가 박힌 반지를 구경해요.",
+   "blank": "ngọc",
+   "src": "made"
+  },
+  {
+   "text": "Một bà cụ bày bán vòng tay ngọc trai ở góc chợ.",
+   "en": "An old woman sells pearl bracelets in a corner of the market.",
+   "ko": "한 할머니가 시장 구석에서 진주 팔찌를 팔아요.",
+   "blank": "ngọc",
+   "src": "made"
   }
  ],
  "w|ngồi": [
@@ -29727,6 +30079,22 @@
    "blank": "nhưng mà"
   }
  ],
+ "w|nhuộm": [
+  {
+   "text": "Ở tầng ba có tiệm tóc, vợ Phong vào nhuộm tóc màu nâu.",
+   "en": "There's a hair salon on the third floor, and Phong's wife goes in to dye her hair brown.",
+   "ko": "삼 층에 미용실이 있어서 퐁의 아내는 머리를 갈색으로 염색해요.",
+   "blank": "nhuộm",
+   "src": "made"
+  },
+  {
+   "text": "Cô thợ may ở chợ nhuộm lại chiếc áo bạc màu cho Ngọc.",
+   "en": "The market seamstress re-dyes Ngọc's faded shirt.",
+   "ko": "시장 재봉사가 응옥의 바랜 셔츠를 다시 염색해 줘요.",
+   "blank": "nhuộm",
+   "src": "made"
+  }
+ ],
  "w|nhường": [
   {
    "text": "Tuấn nhường ghế ở hàng đầu cho một cụ bà đến dự phiên tòa.",
@@ -30115,6 +30483,22 @@
    "en": "I want to tell you this.",
    "ko": "너한테 이 말을 하고 싶어.",
    "blank": "nói với"
+  }
+ ],
+ "w|nón": [
+  {
+   "text": "Con gái Phong đòi mua chiếc nón len màu hồng ở quầy trẻ em.",
+   "en": "Phong's daughter begs for the pink knit hat at the children's counter.",
+   "ko": "퐁의 딸은 아동 코너에서 분홍색 털모자를 사 달라고 졸라요.",
+   "blank": "nón",
+   "src": "made"
+  },
+  {
+   "text": "Trời nắng, Ngọc đội nón lá đi một vòng quanh chợ.",
+   "en": "It's sunny, so Ngọc wears a conical hat and walks around the market.",
+   "ko": "햇볕이 따가워서 응옥은 논라를 쓰고 시장을 한 바퀴 돌아요.",
+   "blank": "nón",
+   "src": "made"
   }
  ],
  "w|nôn": [
@@ -31283,6 +31667,22 @@
    "src": "tatoeba:13965552/leucammieuvu en:13965185/Naityahia"
   }
  ],
+ "w|phần nào": [
+  {
+   "text": "Lời giải thích của nhân viên phần nào làm Phong bớt bực mình.",
+   "en": "The salesperson's explanation somewhat eased Phong's annoyance.",
+   "ko": "직원의 설명으로 퐁은 화가 어느 정도 풀렸어요.",
+   "blank": "phần nào",
+   "src": "made"
+  },
+  {
+   "text": "Lời khen của khách phần nào bù cho cái mệt của bà Sáu.",
+   "en": "Customers' praise partly makes up for Mrs. Sáu's tiredness.",
+   "ko": "손님들의 칭찬이 사우 할머니의 피로를 어느 정도 덜어 줘요.",
+   "blank": "phần nào",
+   "src": "made"
+  }
+ ],
  "w|phần thưởng": [
   {
    "text": "Có phần thưởng hay không?",
@@ -31391,6 +31791,22 @@
    "en": "You need to practice pronunciation a little every day.",
    "ko": "매일 조금씩 발음을 연습해야 해.",
    "blank": "phát âm"
+  }
+ ],
+ "w|phát động": [
+  {
+   "text": "Trung tâm thương mại phát động chương trình đổi túi ni lông lấy túi vải.",
+   "en": "The department store launched a campaign to swap plastic bags for cloth bags.",
+   "ko": "백화점은 비닐봉지를 천 가방으로 바꿔 주는 캠페인을 시작했어요.",
+   "blank": "phát động",
+   "src": "made"
+  },
+  {
+   "text": "Phường phát động phong trào giữ chợ sạch đẹp.",
+   "en": "The ward launched a campaign to keep the market clean.",
+   "ko": "동네에서 시장을 깨끗이 가꾸자는 운동을 시작했어요.",
+   "blank": "phát động",
+   "src": "made"
   }
  ],
  "w|phát hiện": [
@@ -32855,6 +33271,22 @@
    "src": "made"
   }
  ],
+ "w|quỹ": [
+  {
+   "text": "Mỗi tháng, Phong để riêng một khoản vào quỹ du lịch của gia đình.",
+   "en": "Each month, Phong sets aside some money in the family travel fund.",
+   "ko": "퐁은 매달 가족 여행 기금에 따로 돈을 넣어요.",
+   "blank": "quỹ",
+   "src": "made"
+  },
+  {
+   "text": "Tiểu thương trong chợ góp tiền lập quỹ sửa mái tôn.",
+   "en": "The market vendors pool money to set up a fund to repair the tin roof.",
+   "ko": "시장 상인들이 돈을 모아 양철 지붕 수리 기금을 만들어요.",
+   "blank": "quỹ",
+   "src": "made"
+  }
+ ],
  "w|quỷ": [
   {
    "text": "Trong phim có con quỷ rất đáng sợ.",
@@ -33379,6 +33811,22 @@
    "en": "It was so cheap I bought a few more.",
    "ko": "너무 싸서 몇 개 더 샀어.",
    "blank": "Rẻ"
+  }
+ ],
+ "w|rẻ tiền": [
+  {
+   "text": "Phong bảo đồ trang trí rẻ tiền thì nên mua ngoài chợ cho nhanh.",
+   "en": "Phong says cheap decorations are better bought at the market.",
+   "ko": "퐁은 싸구려 장식품은 시장에서 사는 게 낫다고 해요.",
+   "blank": "rẻ tiền",
+   "src": "made"
+  },
+  {
+   "text": "Đôi dép rẻ tiền mua ở chợ mà Ngọc đi được cả năm.",
+   "en": "Ngọc wore the cheap sandals she bought at the market for a whole year.",
+   "ko": "응옥은 시장에서 산 싸구려 슬리퍼를 일 년 내내 신었어요.",
+   "blank": "rẻ tiền",
+   "src": "made"
   }
  ],
  "w|rèm": [
@@ -34987,6 +35435,22 @@
    "src": "made"
   }
  ],
+ "w|song": [
+  {
+   "text": "Hàng ở đây đắt, song chất lượng thì Phong rất yên tâm.",
+   "en": "Things here are expensive, but Phong trusts the quality.",
+   "ko": "여기 물건은 비싸지만 퐁은 품질은 믿어요.",
+   "blank": "song",
+   "src": "made"
+  },
+  {
+   "text": "Chợ hơi ồn ào, song Ngọc vẫn thích hơn siêu thị.",
+   "en": "The market is a bit noisy, but Ngọc still prefers it to the supermarket.",
+   "ko": "시장은 좀 시끄럽지만 응옥은 그래도 슈퍼보다 좋아해요.",
+   "blank": "song",
+   "src": "made"
+  }
+ ],
  "w|sóng": [
   {
    "text": "Sóng biển hôm nay khá cao.",
@@ -35933,6 +36397,22 @@
    "en": "Can I stay at your place temporarily?",
    "ko": "당분간 네 집에 있어도 될까?",
    "blank": "Tạm thời"
+  }
+ ],
+ "w|tầm thường": [
+  {
+   "text": "Món quà trông tầm thường nhưng mẹ Phong lại rất quý.",
+   "en": "The gift looks ordinary, but Phong's mother treasures it.",
+   "ko": "선물은 평범해 보이지만 퐁의 어머니는 아주 소중히 여겨요.",
+   "blank": "tầm thường",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc thấy đi chợ là việc tầm thường mà lại vui.",
+   "en": "Ngọc finds going to the market an ordinary but fun task.",
+   "ko": "응옥은 장 보는 게 평범하지만 즐거운 일이라고 생각해요.",
+   "blank": "tầm thường",
+   "src": "made"
   }
  ],
  "w|tâm trạng": [
@@ -38187,6 +38667,22 @@
    "blank": "thông minh"
   }
  ],
+ "w|thông thường": [
+  {
+   "text": "Phong nói giá thông thường của bộ nồi này cao hơn nhiều.",
+   "en": "Phong says the usual price of this cookware set is much higher.",
+   "ko": "퐁은 이 냄비 세트의 보통 가격은 훨씬 비싸다고 해요.",
+   "blank": "thông thường",
+   "src": "made"
+  },
+  {
+   "text": "Theo Ngọc, giá thông thường của một ký thịt heo ở chợ này không cao.",
+   "en": "According to Ngọc, the usual price of a kilo of pork at this market isn't high.",
+   "ko": "응옥 말로는 이 시장의 돼지고기 일 킬로 보통 가격은 비싸지 않아요.",
+   "blank": "thông thường",
+   "src": "made"
+  }
+ ],
  "w|thông tin": [
   {
    "text": "Cho tớ xin thêm thông tin với.",
@@ -39263,6 +39759,22 @@
    "blank": "tiến hành"
   }
  ],
+ "w|tiền lẻ": [
+  {
+   "text": "Máy giữ xe chỉ nhận tiền lẻ, nên Phong phải đi đổi.",
+   "en": "The parking machine only takes small bills, so Phong has to get change.",
+   "ko": "주차 기계가 잔돈만 받아서 퐁은 바꾸러 가야 해요.",
+   "blank": "tiền lẻ",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc luôn mang theo tiền lẻ vì người bán ở chợ ít khi có tiền thừa.",
+   "en": "Ngọc always carries small bills because market vendors rarely have change.",
+   "ko": "시장 상인들이 잔돈이 별로 없어서 응옥은 늘 소액권을 가지고 다녀요.",
+   "blank": "tiền lẻ",
+   "src": "made"
+  }
+ ],
  "w|tiến lên": [
   {
    "text": "Tiến lên một bước nữa là tới đích rồi.",
@@ -39364,6 +39876,22 @@
    "en": "Dr. Lan teaches at this university.",
    "ko": "란 박사님은 이 대학에서 가르치세요.",
    "blank": "Tiến sĩ",
+   "src": "made"
+  }
+ ],
+ "w|tiền thối": [
+  {
+   "text": "Cô thu ngân đếm tiền thối rất nhanh rồi đưa cho Phong.",
+   "en": "The cashier counts the change very quickly and hands it to Phong.",
+   "ko": "계산원은 거스름돈을 아주 빨리 세어 퐁에게 건네요.",
+   "blank": "tiền thối",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc quên lấy tiền thối, bà bán trái cây phải gọi với theo.",
+   "en": "Ngọc forgot her change, so the fruit seller had to call after her.",
+   "ko": "응옥이 거스름돈을 깜빡해서 과일 장수 할머니가 뒤에서 불렀어요.",
+   "blank": "tiền thối",
    "src": "made"
   }
  ],
@@ -40359,6 +40887,22 @@
    "en": "His family respects one another's religion.",
    "ko": "그의 가족은 서로의 종교를 존중해.",
    "blank": "tôn giáo"
+  }
+ ],
+ "w|tốn kém": [
+  {
+   "text": "Mua đồ ở trung tâm thương mại khá tốn kém so với ngoài chợ.",
+   "en": "Buying things at the department store is quite costly compared with the market.",
+   "ko": "백화점에서 사는 건 시장보다 꽤 비싸요.",
+   "blank": "tốn kém",
+   "src": "made"
+  },
+  {
+   "text": "Đám cưới ở quê không tốn kém lắm vì cả xóm cùng nấu.",
+   "en": "Weddings in the countryside aren't very costly because the whole neighborhood cooks together.",
+   "ko": "시골 결혼식은 온 동네가 같이 요리해서 그리 비싸지 않아요.",
+   "blank": "tốn kém",
+   "src": "made"
   }
  ],
  "w|tồn tại": [
@@ -43201,6 +43745,22 @@
    "blank": "vài"
   }
  ],
+ "w|vải": [
+  {
+   "text": "Nhân viên giới thiệu với Phong loại áo sơ mi vải lanh rất mát.",
+   "en": "The salesperson shows Phong a very cool linen shirt.",
+   "ko": "직원이 퐁에게 아주 시원한 리넨 셔츠를 소개해요.",
+   "blank": "vải",
+   "src": "made"
+  },
+  {
+   "text": "Dãy hàng vải trong chợ có đủ màu cho Ngọc chọn may áo dài.",
+   "en": "The fabric row in the market has every color for Ngọc to choose for an áo dài.",
+   "ko": "시장 천 골목에는 응옥이 아오자이를 맞출 색이 다 있어요.",
+   "blank": "vải",
+   "src": "made"
+  }
+ ],
  "w|vali": [
   {
    "text": "Bạn khóa vali chưa?",
@@ -43318,6 +43878,22 @@
    "en": "This year professional athletes are running alongside amateurs.",
    "ko": "올해는 프로 선수들도 아마추어와 함께 달려요.",
    "blank": "vận động viên",
+   "src": "made"
+  }
+ ],
+ "w|vận dụng": [
+  {
+   "text": "Phong vận dụng mẹo săn khuyến mãi mà bạn chỉ để mua được tủ lạnh rẻ.",
+   "en": "Phong uses a sale-hunting trick a friend taught him to get a cheap fridge.",
+   "ko": "퐁은 친구가 알려 준 할인 사냥 요령을 써서 냉장고를 싸게 샀어요.",
+   "blank": "vận dụng",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc vận dụng kinh nghiệm của mẹ để chọn cá tươi.",
+   "en": "Ngọc applies her mother's know-how to pick fresh fish.",
+   "ko": "응옥은 어머니의 경험을 살려 싱싱한 생선을 골라요.",
+   "blank": "vận dụng",
    "src": "made"
   }
  ],
@@ -44325,6 +44901,22 @@
    "blank": "vội vàng"
   }
  ],
+ "w|vốn": [
+  {
+   "text": "Chủ gian hàng mỹ phẩm kể rằng anh bỏ ra rất nhiều vốn để thuê chỗ ở đây.",
+   "en": "The cosmetics stall owner says he put a lot of capital into renting a spot here.",
+   "ko": "화장품 매장 주인은 여기 자리를 빌리느라 자본을 많이 들였다고 해요.",
+   "blank": "vốn",
+   "src": "made"
+  },
+  {
+   "text": "Bà Sáu bắt đầu bán rau với số vốn ít ỏi từ hai mươi năm trước.",
+   "en": "Mrs. Sáu started selling vegetables twenty years ago with very little capital.",
+   "ko": "사우 할머니는 이십 년 전에 적은 밑천으로 채소 장사를 시작했어요.",
+   "blank": "vốn",
+   "src": "made"
+  }
+ ],
  "w|vòng cổ": [
   {
    "text": "Vòng cổ bạc này là quà của mẹ tặng.",
@@ -44621,6 +45213,22 @@
    "src": "tatoeba:4604884/khoaharp en:1744984/Amastan"
   }
  ],
+ "w|vượt trội": [
+  {
+   "text": "Chiếc máy giặt mới có khả năng tiết kiệm điện vượt trội.",
+   "en": "The new washing machine has outstanding energy efficiency.",
+   "ko": "새 세탁기는 전기 절약 성능이 뛰어나요.",
+   "blank": "vượt trội",
+   "src": "made"
+  },
+  {
+   "text": "Rau ở sạp bà Sáu tươi vượt trội so với siêu thị.",
+   "en": "The vegetables at Mrs. Sáu's stall are far fresher than the supermarket's.",
+   "ko": "사우 할머니 좌판 채소는 슈퍼보다 훨씬 싱싱해요.",
+   "blank": "vượt trội",
+   "src": "made"
+  }
+ ],
  "w|vứt": [
   {
    "text": "Đừng vứt rác ra đường.",
@@ -44751,6 +45359,22 @@
    "en": "The order confirmation was sent to the inbox.",
    "ko": "주문 확인이 받은편지함으로 왔어.",
    "blank": "Xác nhận"
+  }
+ ],
+ "w|xài": [
+  {
+   "text": "Phong nói mua máy pha cà phê này về chắc xài được mười năm.",
+   "en": "Phong says if he buys this coffee machine, it'll probably last ten years.",
+   "ko": "퐁은 이 커피 머신을 사면 십 년은 쓸 거라고 해요.",
+   "blank": "xài",
+   "src": "made"
+  },
+  {
+   "text": "Ngọc hay mua dao kéo ở chợ vì xài bền mà rẻ.",
+   "en": "Ngọc often buys knives and scissors at the market because they last and are cheap.",
+   "ko": "응옥은 시장 칼과 가위가 오래 쓰고 싸서 자주 사요.",
+   "blank": "xài",
+   "src": "made"
   }
  ],
  "w|xám": [
@@ -45388,6 +46012,22 @@
    "en": "When the exam started, Thảo took a breath and strode straight onto the stage.",
    "ko": "시험 시간이 되자 타오는 숨을 한 번 들이쉬고 곧장 무대로 나갔어요.",
    "blank": "xông",
+   "src": "made"
+  }
+ ],
+ "w|xu": [
+  {
+   "text": "Phong đùa rằng trong ví anh giờ không còn một xu nào.",
+   "en": "Phong jokes that there isn't a single cent left in his wallet now.",
+   "ko": "퐁은 이제 지갑에 동전 한 푼도 없다고 농담해요.",
+   "blank": "xu",
+   "src": "made"
+  },
+  {
+   "text": "Người bán cá tính tròn giá, bớt cho Ngọc mấy xu lẻ.",
+   "en": "The fish seller rounds down the price and knocks off a few cents for Ngọc.",
+   "ko": "생선 장수가 값을 깎아서 응옥에게 몇 푼 빼 줘요.",
+   "blank": "xu",
    "src": "made"
   }
  ],

@@ -1789,6 +1789,22 @@
    "blank": "अस्सी"
   }
  ],
+ "w|अहम": [
+  {
+   "text": "घर बदलने में सबसे अहम काम बिजली-पानी के कनेक्शन लेना था।",
+   "en": "The most important job in moving was getting the power and water connections.",
+   "ko": "이사에서 제일 중요한 일은 전기와 수도를 연결하는 거였어요.",
+   "blank": "अहम",
+   "src": "made"
+  },
+  {
+   "text": "आख़िरी सीन कहानी का सबसे अहम हिस्सा है।",
+   "en": "The last scene is the most important part of the story.",
+   "ko": "마지막 장면은 이야기에서 가장 중요한 부분이에요.",
+   "blank": "अहम",
+   "src": "made"
+  }
+ ],
  "w|अहसास": [
   {
    "text": "अब मुझे अपनी गलती का अहसास हुआ।",
@@ -3597,6 +3613,22 @@
    "blank": "इस्तेमाल करो"
   }
  ],
+ "w|इस्त्री": [
+  {
+   "text": "राहुल की बहन ने सबसे पहले इस्त्री वाला डिब्बा खोला।",
+   "en": "Rahul's sister first opened the box with the iron.",
+   "ko": "라훌의 여동생은 다리미가 든 상자부터 열었어요.",
+   "blank": "इस्त्री",
+   "src": "made"
+  },
+  {
+   "text": "सीन से पहले कॉस्ट्यूम वाले ने प्रिया की साड़ी पर इस्त्री की।",
+   "en": "Before the scene the costume man ironed Priya's sari.",
+   "ko": "장면 촬영 전에 의상 담당자가 프리야의 사리를 다림질했어요.",
+   "blank": "इस्त्री",
+   "src": "made"
+  }
+ ],
  "w|ईद": [
   {
    "text": "ईद पर घर में मिठाई बनती है।",
@@ -5111,6 +5143,22 @@
    "blank": "ओए"
   }
  ],
+ "w|ओखली": [
+  {
+   "text": "राहुल ने पीतल की ओखली को अख़बार में लपेटकर रखा।",
+   "en": "Rahul wrapped the brass mortar in newspaper.",
+   "ko": "라훌은 놋쇠 절구를 신문지로 싸 뒀어요.",
+   "blank": "ओखली",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया को ओखली में मसाला कूटते हुए गीत गाना था।",
+   "en": "Priya had to sing a song while pounding spices in a mortar.",
+   "ko": "프리야는 절구에 향신료를 찧으며 노래를 불러야 했어요.",
+   "blank": "ओखली",
+   "src": "made"
+  }
+ ],
  "w|ओटीपी": [
   {
    "text": "ऑनलाइन परीक्षा में लॉग इन करने के लिए राहुल के फ़ोन पर ओटीपी आया।",
@@ -5943,6 +5991,22 @@
    "blank": "कमी"
   }
  ],
+ "w|कमीज़": [
+  {
+   "text": "पहले दिन नया सहकर्मी इस्त्री की हुई सफ़ेद कमीज़ पहनकर आया।",
+   "en": "On the first day the new coworker came in a crisply ironed white shirt.",
+   "ko": "첫날 새 동료는 다림질한 하얀 셔츠를 입고 왔어요.",
+   "blank": "कमीज़",
+   "src": "made"
+  },
+  {
+   "text": "सुरक्षा जाँच में बीप होने पर नेहा ने कमीज़ की जेब से सिक्के निकाले।",
+   "en": "When the security check beeped, Neha took coins out of her shirt pocket.",
+   "ko": "보안 검색대에서 삐 소리가 나자 네하는 셔츠 주머니에서 동전을 꺼냈어요.",
+   "blank": "कमीज़",
+   "src": "made"
+  }
+ ],
  "w|कर": [
   {
    "text": "आय पर कर काफ़ी बढ़ गया है।",
@@ -6071,6 +6135,22 @@
    "en": "That plan runs into crores.",
    "ko": "그 계획에는 엄청난 돈이 들어.",
    "blank": "करोड़"
+  }
+ ],
+ "w|करोड़ों": [
+  {
+   "text": "राहुल ने अख़बार में पढ़ा कि करोड़ों लोग हर साल काम के लिए शहर बदलते हैं।",
+   "en": "Rahul read in the paper that tens of millions of people change cities every year for work.",
+   "ko": "라훌은 해마다 수천만 명이 일 때문에 사는 도시를 옮긴다는 기사를 읽었어요.",
+   "blank": "करोड़ों",
+   "src": "made"
+  },
+  {
+   "text": "प्रोड्यूसर ने इस फ़िल्म पर करोड़ों रुपये लगाए हैं।",
+   "en": "The producer has put crores of rupees into this film.",
+   "ko": "제작자는 이 영화에 수억 루피를 쏟아부었어요.",
+   "blank": "करोड़ों",
+   "src": "made"
   }
  ],
  "w|कर्ज़": [
@@ -6661,6 +6741,22 @@
    "en": "The team's performance was successful.",
    "ko": "팀의 활약이 성공적이었어.",
    "blank": "कामयाब"
+  }
+ ],
+ "w|क़ायम": [
+  {
+   "text": "राहुल चाहता है कि पुराने पड़ोसियों से रिश्ता क़ायम रहे।",
+   "en": "Rahul wants the relationship with his old neighbours to remain.",
+   "ko": "라훌은 옛 이웃들과의 관계가 계속 이어지길 바라요.",
+   "blank": "क़ायम",
+   "src": "made"
+  },
+  {
+   "text": "लंबी शूटिंग के बाद भी प्रिया के चेहरे पर ताज़गी क़ायम थी।",
+   "en": "Even after the long shoot, the freshness on Priya's face remained.",
+   "ko": "긴 촬영 뒤에도 프리야의 얼굴은 생기가 그대로였어요.",
+   "blank": "क़ायम",
+   "src": "made"
   }
  ],
  "w|कार": [
@@ -7289,6 +7385,22 @@
    "src": "made"
   }
  ],
+ "w|कुआँ": [
+  {
+   "text": "राहुल के दादा बताते हैं कि उनके गाँव वाले घर के आँगन में कुआँ था।",
+   "en": "Rahul's grandfather says there was a well in the courtyard of his village home.",
+   "ko": "라훌의 할아버지는 시골집 마당에 우물이 있었다고 해요.",
+   "blank": "कुआँ",
+   "src": "made"
+  },
+  {
+   "text": "गाँव के सीन में प्रिया कुएँ से पानी भरती दिखती है।",
+   "en": "In the village scene Priya is seen drawing water from a well.",
+   "ko": "시골 장면에서 프리야는 우물에서 물을 길어요.",
+   "blank": "कुएँ",
+   "src": "made"
+  }
+ ],
  "w|कुकुरमुत्ता": [
   {
    "text": "बारिश के बाद पेड़ के तने पर सफ़ेद कुकुरमुत्ता उग आया था।",
@@ -7377,6 +7489,22 @@
    "blank": "कुत्ता"
   }
  ],
+ "w|कुम्हार": [
+  {
+   "text": "नए सहकर्मी ने अपनी मेज़ पर एक कुम्हार से ख़रीदा मिट्टी का गमला रखा।",
+   "en": "The new coworker put a clay pot bought from a potter on his desk.",
+   "ko": "새 동료는 도공에게서 산 흙 화분을 책상에 올려 뒀어요.",
+   "blank": "कुम्हार",
+   "src": "made"
+  },
+  {
+   "text": "हैंडीक्राफ़्ट की दुकान में एक कुम्हार चाक पर दीये बनाकर दिखा रहा था।",
+   "en": "At the handicraft shop a potter was showing how to make lamps on a wheel.",
+   "ko": "공예품 가게에서 도공이 물레로 등잔 만드는 걸 보여 주고 있었어요.",
+   "blank": "कुम्हार",
+   "src": "made"
+  }
+ ],
  "w|कुरकुरे": [
   {
    "text": "बच्चे स्कूल से लौटते हुए बेकरी से मसालेदार कुरकुरे ख़रीदते हैं।",
@@ -7390,6 +7518,38 @@
    "en": "Seema's daughter had hidden a packet of kurkure among the boxes.",
    "ko": "시마의 딸은 상자들 사이에 쿠르쿠레 한 봉지를 숨겨 두었어요.",
    "blank": "कुरकुरे",
+   "src": "made"
+  }
+ ],
+ "w|कुर्ता": [
+  {
+   "text": "दिवाली की पार्टी में नया सहकर्मी रेशमी कुर्ता पहनकर आया।",
+   "en": "The new coworker came to the Diwali party in a silk kurta.",
+   "ko": "새 동료는 디왈리 파티에 실크 쿠르타를 입고 왔어요.",
+   "blank": "कुर्ता",
+   "src": "made"
+  },
+  {
+   "text": "गेट पर एक बुज़ुर्ग सज्जन सफ़ेद कुर्ता पहने किताब पढ़ रहे थे।",
+   "en": "At the gate an elderly gentleman in a white kurta was reading a book.",
+   "ko": "탑승구에서 하얀 쿠르타를 입은 노신사가 책을 읽고 있었어요.",
+   "blank": "कुर्ता",
+   "src": "made"
+  }
+ ],
+ "w|कुर्ती": [
+  {
+   "text": "अमित की टीम की मैनेजर अक्सर सूती सलवार और कुर्ती पहनती हैं।",
+   "en": "Amit's team manager often wears a cotton salwar and kurti.",
+   "ko": "아밋 팀의 매니저는 면 살와르와 쿠르티를 자주 입어요.",
+   "blank": "कुर्ती",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लाउंज की दुकान से अपनी भाभी के लिए एक कढ़ाईदार कुर्ती ली।",
+   "en": "Neha bought an embroidered kurti for her sister-in-law from the lounge shop.",
+   "ko": "네하는 라운지 가게에서 새언니에게 줄 자수 쿠르티를 샀어요.",
+   "blank": "कुर्ती",
    "src": "made"
   }
  ],
@@ -7419,6 +7579,22 @@
    "en": "All in all, everything is fine.",
    "ko": "전체적으로 다 괜찮아.",
    "blank": "कुल"
+  }
+ ],
+ "w|कुली": [
+  {
+   "text": "नए सहकर्मी ने बताया कि स्टेशन पर कुली ने उसका भारी बक्सा उठाया।",
+   "en": "The new coworker said a porter carried his heavy trunk at the station.",
+   "ko": "새 동료는 역에서 짐꾼이 무거운 트렁크를 날라 줬다고 했어요.",
+   "blank": "कुली",
+   "src": "made"
+  },
+  {
+   "text": "ट्रॉली न मिलने पर नेहा ने सामान उठवाने के लिए कुली बुलाया।",
+   "en": "When she couldn't find a trolley, Neha called a porter to carry her luggage.",
+   "ko": "카트를 못 찾아서 네하는 짐꾼을 불렀어요.",
+   "blank": "कुली",
+   "src": "made"
   }
  ],
  "w|कूड़ा": [
@@ -8997,6 +9173,22 @@
    "blank": "ख़र्च करना"
   }
  ],
+ "w|खलनायक": [
+  {
+   "text": "अमित ने मज़ाक किया कि हर दफ़्तर की कहानी में प्रिंटर ही खलनायक होता है।",
+   "en": "Amit joked that in every office story the printer is the villain.",
+   "ko": "아밋은 어느 사무실 이야기든 악당은 프린터라고 농담했어요.",
+   "blank": "खलनायक",
+   "src": "made"
+  },
+  {
+   "text": "फ़िल्म का खलनायक इतना डरावना था कि नेहा ने बीच में स्क्रीन बंद कर दी।",
+   "en": "The film's villain was so scary that Neha switched off the screen midway.",
+   "ko": "영화 속 악당이 너무 무서워서 네하는 중간에 화면을 꺼 버렸어요.",
+   "blank": "खलनायक",
+   "src": "made"
+  }
+ ],
  "w|खलिहान": [
   {
    "text": "पास के गाँव के खलिहान में गेहूँ के ऊँचे ढेर लगे थे।",
@@ -9445,6 +9637,22 @@
    "en": "I was very happy when I passed the exam.",
    "ko": "시험에 합격하니 정말 기뻤어.",
    "blank": "ख़ुशी"
+  }
+ ],
+ "w|खूँटी": [
+  {
+   "text": "राहुल ने दरवाज़े के पीछे चाबियाँ टाँगने के लिए एक खूँटी ठोकी।",
+   "en": "Rahul hammered in a peg behind the door to hang keys on.",
+   "ko": "라훌은 열쇠를 걸려고 문 뒤에 못걸이를 박았어요.",
+   "blank": "खूँटी",
+   "src": "made"
+  },
+  {
+   "text": "कमरे वाले सेट में दीवार की खूँटी पर एक पुराना छाता टँगा था।",
+   "en": "On the room set an old umbrella hung on a peg on the wall.",
+   "ko": "방 세트의 벽걸이 못에는 낡은 우산이 걸려 있었어요.",
+   "blank": "खूँटी",
+   "src": "made"
   }
  ],
  "w|खून": [
@@ -10035,6 +10243,22 @@
    "en": "Kids are playing cricket in the alley.",
    "ko": "골목에서 아이들이 크리켓을 하고 있어.",
    "blank": "गली"
+  }
+ ],
+ "w|गलीचा": [
+  {
+   "text": "बैठक के बीच में ईरानी गलीचा बिछाते ही कमरा भरा-भरा लगने लगा।",
+   "en": "As soon as the Persian carpet was laid in the middle of the sitting room, the room felt full.",
+   "ko": "거실 한가운데 페르시아 양탄자를 깔자 방이 꽉 차 보였어요.",
+   "blank": "गलीचा",
+   "src": "made"
+  },
+  {
+   "text": "हवेली के सेट पर एक लाल गलीचा बिछाया गया था।",
+   "en": "A red carpet had been laid on the mansion set.",
+   "ko": "저택 세트에는 빨간 양탄자가 깔려 있었어요.",
+   "blank": "गलीचा",
+   "src": "made"
   }
  ],
  "w|गवर्नर": [
@@ -11083,6 +11307,22 @@
    "blank": "ग्राहक"
   }
  ],
+ "w|ग्वाला": [
+  {
+   "text": "नए सहकर्मी ने कहा कि उसके घर रोज़ सुबह ग्वाला ताज़ा दूध दे जाता है।",
+   "en": "The new coworker said a milkman delivers fresh milk to his house every morning.",
+   "ko": "새 동료는 매일 아침 우유 배달부가 집에 신선한 우유를 갖다준다고 했어요.",
+   "blank": "ग्वाला",
+   "src": "made"
+  },
+  {
+   "text": "नेहा के दादाजी कहते थे कि पुराने ज़माने में ग्वाला साइकिल पर दूध के डिब्बे लटकाकर आता था।",
+   "en": "Neha's grandfather used to say that in the old days the milkman came with milk cans hanging off his bicycle.",
+   "ko": "네하의 할아버지는 옛날엔 우유 배달부가 자전거에 우유통을 매달고 왔다고 하셨어요.",
+   "blank": "ग्वाला",
+   "src": "made"
+  }
+ ],
  "w|घटना": [
   {
    "text": "कल रात की घटना सबको याद है।",
@@ -11601,6 +11841,22 @@
    "src": "made"
   }
  ],
+ "w|चकला": [
+  {
+   "text": "राहुल को चकला मिला, पर उसका एक कोना टूट गया था।",
+   "en": "Rahul found the rolling board, but one corner of it had broken.",
+   "ko": "라훌은 반죽판을 찾았지만 한쪽 모서리가 깨져 있었어요.",
+   "blank": "चकला",
+   "src": "made"
+  },
+  {
+   "text": "सेट पर रोटी बेलने के लिए असली चकला मँगवाया गया।",
+   "en": "A real rolling board was brought to the set for rolling rotis.",
+   "ko": "로티를 밀기 위해 진짜 반죽판을 촬영장에 가져왔어요.",
+   "blank": "चकला",
+   "src": "made"
+  }
+ ],
  "w|चक्कर आना": [
   {
    "text": "धूप में खड़े रहने से चक्कर आना शुरू हो गया।",
@@ -11807,6 +12063,22 @@
    "blank": "चना"
   }
  ],
+ "w|चपरासी": [
+  {
+   "text": "दफ़्तर का चपरासी नए सहकर्मी के लिए पानी और चाय ले आया।",
+   "en": "The office peon brought water and tea for the new coworker.",
+   "ko": "사무실 사환이 새 동료에게 물과 차를 갖다줬어요.",
+   "blank": "चपरासी",
+   "src": "made"
+  },
+  {
+   "text": "एयरलाइन दफ़्तर के चपरासी ने नेहा को सही काउंटर तक पहुँचाया।",
+   "en": "The airline office's attendant took Neha to the right counter.",
+   "ko": "항공사 사무실 사환이 네하를 맞는 창구까지 데려다줬어요.",
+   "blank": "चपरासी",
+   "src": "made"
+  }
+ ],
  "w|चपाती": [
   {
    "text": "माँ गरम-गरम चपाती बना रही हैं।",
@@ -11967,6 +12239,22 @@
    "en": "In the next stage we have to write the report.",
    "ko": "다음 단계에서는 보고서를 써야 해.",
    "blank": "चरण"
+  }
+ ],
+ "w|चरवाहा": [
+  {
+   "text": "नया सहकर्मी बचपन में गर्मियों की छुट्टियों में चरवाहा बनकर बकरियाँ चराता था।",
+   "en": "As a child, the new coworker used to graze goats as a herder in the summer holidays.",
+   "ko": "새 동료는 어릴 때 여름방학이면 목동처럼 염소를 몰았대요.",
+   "blank": "चरवाहा",
+   "src": "made"
+  },
+  {
+   "text": "खिड़की से नीचे पहाड़ी ढलान पर एक चरवाहा भेड़ों के साथ दिख रहा था।",
+   "en": "From the window, a herder could be seen with sheep on the hillside below.",
+   "ko": "창밖 아래 산비탈에 양 떼를 모는 목동이 보였어요.",
+   "blank": "चरवाहा",
+   "src": "made"
   }
  ],
  "w|चरित्र": [
@@ -12235,6 +12523,22 @@
    "en": "Four brothers live in the same courtyard.",
    "ko": "네 형제가 같은 마당에 살아.",
    "blank": "चार"
+  }
+ ],
+ "w|चारपाई": [
+  {
+   "text": "राहुल के पिता अपनी पुरानी चारपाई किसी हाल में छोड़ने को तैयार नहीं थे।",
+   "en": "Rahul's father was not willing to leave his old cot behind at any cost.",
+   "ko": "라훌의 아버지는 낡은 노끈 침상을 절대 두고 갈 수 없다고 했어요.",
+   "blank": "चारपाई",
+   "src": "made"
+  },
+  {
+   "text": "ब्रेक में प्रिया आँगन की चारपाई पर लेटकर संवाद याद करती रही।",
+   "en": "During the break Priya lay on the cot in the courtyard, memorising her lines.",
+   "ko": "쉬는 시간에 프리야는 마당 노끈 침상에 누워 대사를 외웠어요.",
+   "blank": "चारपाई",
+   "src": "made"
   }
  ],
  "w|चार्जर": [
@@ -13195,6 +13499,22 @@
    "blank": "छपना"
   }
  ],
+ "w|छप्पर": [
+  {
+   "text": "गाँव में राहुल का बचपन मिट्टी के घर और फूस के छप्पर के नीचे बीता।",
+   "en": "Rahul's childhood in the village was spent in a mud house under a thatched roof.",
+   "ko": "라훌은 시골에서 흙집 초가지붕 아래서 어린 시절을 보냈어요.",
+   "blank": "छप्पर",
+   "src": "made"
+  },
+  {
+   "text": "सेट वालों ने दो दिन में बाँस और फूस का छप्पर तैयार कर दिया।",
+   "en": "The set crew made a bamboo and thatch roof in two days.",
+   "ko": "세트 팀은 이틀 만에 대나무와 짚으로 초가지붕을 만들었어요.",
+   "blank": "छप्पर",
+   "src": "made"
+  }
+ ],
  "w|छब्बीस": [
   {
    "text": "कक्षा में छब्बीस बच्चे हैं।",
@@ -13222,6 +13542,22 @@
    "en": "The tea on the counter slopped over when the customer's hand brushed it, but the phone was saved.",
    "ko": "손님 손이 닿자 탁자 위 차가 넘쳤지만 휴대폰은 무사했어요.",
    "blank": "छलक",
+   "src": "made"
+  }
+ ],
+ "w|छलनी": [
+  {
+   "text": "रसोई के डिब्बे में सबसे ऊपर आटे की छलनी रखी थी।",
+   "en": "The flour sieve was right on top in the kitchen box.",
+   "ko": "부엌 상자 맨 위에는 밀가루 체가 놓여 있었어요.",
+   "blank": "छलनी",
+   "src": "made"
+  },
+  {
+   "text": "रसोई वाले सीन में प्रिया को छलनी से चाय छाननी थी।",
+   "en": "In the kitchen scene Priya had to strain tea through a sieve.",
+   "ko": "부엌 장면에서 프리야는 거름망으로 차를 걸러야 했어요.",
+   "blank": "छलनी",
    "src": "made"
   }
  ],
@@ -14937,6 +15273,22 @@
    "blank": "जीवित"
   }
  ],
+ "w|जींस": [
+  {
+   "text": "शुक्रवार को दफ़्तर में ज़्यादातर लोग जींस पहनकर आते हैं।",
+   "en": "On Fridays most people come to the office in jeans.",
+   "ko": "금요일에는 사무실 사람들 대부분이 청바지를 입고 와요.",
+   "blank": "जींस",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लंबी उड़ान के लिए आरामदायक जींस और स्वेटर पहना।",
+   "en": "Neha wore comfortable jeans and a sweater for the long flight.",
+   "ko": "네하는 장거리 비행을 위해 편한 청바지와 스웨터를 입었어요.",
+   "blank": "जींस",
+   "src": "made"
+  }
+ ],
  "w|ज़ुकाम": [
   {
    "text": "उसे ज़ुकाम बहुत आसानी से हो जाता है।",
@@ -15041,6 +15393,22 @@
    "en": "Our wedding is in July.",
    "ko": "우리 결혼식은 칠월이야.",
    "blank": "जुलाई"
+  }
+ ],
+ "w|जुलाहा": [
+  {
+   "text": "नए सहकर्मी के गाँव में आज भी एक बूढ़ा जुलाहा हाथ से कपड़ा बुनता है।",
+   "en": "In the new coworker's village an old weaver still weaves cloth by hand.",
+   "ko": "새 동료네 마을에는 지금도 손으로 천을 짜는 늙은 직조공이 있어요.",
+   "blank": "जुलाहा",
+   "src": "made"
+  },
+  {
+   "text": "हवाई अड्डे की प्रदर्शनी में बताया गया कि यह शॉल एक बनारसी जुलाहा बुनता है।",
+   "en": "The airport exhibition said this shawl is woven by a Banarasi weaver.",
+   "ko": "공항 전시에서는 이 숄을 바라나시 직조공이 짠다고 소개했어요.",
+   "blank": "जुलाहा",
+   "src": "made"
   }
  ],
  "w|जुलूस": [
@@ -15621,6 +15989,22 @@
    "src": "made"
   }
  ],
+ "w|झूला": [
+  {
+   "text": "बच्चों ने ज़िद की कि नए घर की बालकनी में भी झूला लगे।",
+   "en": "The children insisted that a swing be put up on the new house's balcony too.",
+   "ko": "아이들은 새집 발코니에도 그네를 달아 달라고 졸랐어요.",
+   "blank": "झूला",
+   "src": "made"
+  },
+  {
+   "text": "गाने का आख़िरी हिस्सा पेड़ पर बँधे झूले पर फ़िल्माया गया।",
+   "en": "The last part of the song was filmed on a swing tied to a tree.",
+   "ko": "노래 마지막 부분은 나무에 매단 그네에서 찍었어요.",
+   "blank": "झूले",
+   "src": "made"
+  }
+ ],
  "w|झेलना": [
   {
    "text": "सर्दी को बिना शिकायत झेलना सीखो।",
@@ -15635,6 +16019,22 @@
    "blank": "झेलना"
   }
  ],
+ "w|झोपड़ी": [
+  {
+   "text": "खेत के किनारे वाली झोपड़ी अब राहुल के चाचा का गोदाम है।",
+   "en": "The hut at the edge of the field is now Rahul's uncle's storeroom.",
+   "ko": "밭가에 있는 오두막은 이제 라훌 삼촌의 창고예요.",
+   "blank": "झोपड़ी",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया का किरदार नदी किनारे एक झोपड़ी में रहता है।",
+   "en": "Priya's character lives in a hut by the river.",
+   "ko": "프리야가 맡은 인물은 강가 오두막에 살아요.",
+   "blank": "झोपड़ी",
+   "src": "made"
+  }
+ ],
  "w|टकराना": [
   {
    "text": "अँधेरे में दीवार से टकराना पड़ा।",
@@ -15647,6 +16047,22 @@
    "en": "Two cars colliding stopped the traffic.",
    "ko": "차 두 대가 충돌해서 교통이 멈췄어.",
    "blank": "टकराना"
+  }
+ ],
+ "w|टंकी": [
+  {
+   "text": "पहले दिन पता चला कि छत की टंकी में पानी ही नहीं है।",
+   "en": "On the first day they found out there was no water in the roof tank.",
+   "ko": "첫날 옥상 물탱크에 물이 하나도 없다는 걸 알았어요.",
+   "blank": "टंकी",
+   "src": "made"
+  },
+  {
+   "text": "बारिश वाले सीन के लिए छत पर पानी की बड़ी टंकी रखी गई।",
+   "en": "A big water tank was placed on the roof for the rain scene.",
+   "ko": "비 내리는 장면을 위해 옥상에 큰 물탱크를 올려놨어요.",
+   "blank": "टंकी",
+   "src": "made"
   }
  ],
  "w|टपकना": [
@@ -15692,6 +16108,22 @@
    "en": "After lunch, Meena takes a short stroll in the library garden.",
    "ko": "점심을 먹고 나면 미나는 도서관 정원을 잠깐 산책해요.",
    "blank": "टहलती",
+   "src": "made"
+  }
+ ],
+ "w|टाई": [
+  {
+   "text": "अमित ने कहा कि क्लाइंट मीटिंग में टाई पहनना अच्छा रहेगा।",
+   "en": "Amit said it would be good to wear a tie to the client meeting.",
+   "ko": "아밋은 고객 회의에는 넥타이를 매는 게 좋겠다고 했어요.",
+   "blank": "टाई",
+   "src": "made"
+  },
+  {
+   "text": "बिज़नेस क्लास की लाइन में ज़्यादातर लोग कोट और टाई में थे।",
+   "en": "Most people in the business class queue were in coats and ties.",
+   "ko": "비즈니스석 줄에는 대부분 코트에 넥타이 차림이었어요.",
+   "blank": "टाई",
    "src": "made"
   }
  ],
@@ -16351,6 +16783,22 @@
    "src": "made"
   }
  ],
+ "w|ठोस": [
+  {
+   "text": "मकान मालिक ने कहा कि दीवार में दरार का कोई ठोस कारण नहीं मिला।",
+   "en": "The landlord said no solid reason for the crack in the wall had been found.",
+   "ko": "집주인은 벽 금의 뚜렷한 원인을 찾지 못했다고 했어요.",
+   "blank": "ठोस",
+   "src": "made"
+  },
+  {
+   "text": "शूटिंग की तारीख़ों पर अभी कोई ठोस फ़ैसला नहीं हुआ है।",
+   "en": "No firm decision has yet been made on the shooting dates.",
+   "ko": "촬영 날짜는 아직 확실히 정해지지 않았어요.",
+   "blank": "ठोस",
+   "src": "made"
+  }
+ ],
  "w|डगमगाना": [
   {
    "text": "नदी पार करते समय लकड़ी का पुल थोड़ा डगमगाया।",
@@ -16514,6 +16962,22 @@
    "en": "Priya went to the nearby post office to get her address changed.",
    "ko": "주소를 바꾸려고 프리야는 근처 우체국에 갔어요.",
    "blank": "डाकघर",
+   "src": "made"
+  }
+ ],
+ "w|डाकिया": [
+  {
+   "text": "नए सहकर्मी के पिता पैंतीस साल तक गाँव के डाकिया रहे।",
+   "en": "The new coworker's father was the village postman for thirty-five years.",
+   "ko": "새 동료의 아버지는 35년 동안 마을 우체부였어요.",
+   "blank": "डाकिया",
+   "src": "made"
+  },
+  {
+   "text": "नेहा को याद आया कि पासपोर्ट डाकिया ने ठीक एक हफ़्ता पहले पहुँचाया था।",
+   "en": "Neha remembered that the postman had delivered her passport exactly a week earlier.",
+   "ko": "네하는 우체부가 여권을 딱 일주일 전에 갖다준 게 생각났어요.",
+   "blank": "डाकिया",
    "src": "made"
   }
  ],
@@ -17517,6 +17981,22 @@
    "src": "made"
   }
  ],
+ "w|तश्तरी": [
+  {
+   "text": "पैकिंग में शादी के सेट की एक तश्तरी टूट गई।",
+   "en": "One saucer from the wedding set broke in the packing.",
+   "ko": "짐을 싸다가 혼수 그릇 세트의 받침 접시 하나가 깨졌어요.",
+   "blank": "तश्तरी",
+   "src": "made"
+  },
+  {
+   "text": "डायरेक्टर ने कहा कि मेहमान के सामने चाय तश्तरी में रखकर दी जाए।",
+   "en": "The director said the tea should be served to the guest on a saucer.",
+   "ko": "감독은 손님에게 차를 받침 접시에 받쳐 내라고 했어요.",
+   "blank": "तश्तरी",
+   "src": "made"
+  }
+ ],
  "w|तस्वीर": [
   {
    "text": "दीवार पर पुरानी तस्वीर टंगी है।",
@@ -17971,6 +18451,22 @@
    "blank": "तुलना"
   }
  ],
+ "w|तुलना करना": [
+  {
+   "text": "राहुल ने तीन घरों के किराये की तुलना की और सबसे सस्ता चुना।",
+   "en": "Rahul compared the rents of three houses and chose the cheapest.",
+   "ko": "라훌은 집 세 곳의 월세를 비교하고 가장 싼 곳을 골랐어요.",
+   "blank": "तुलना की",
+   "src": "made"
+  },
+  {
+   "text": "लोग अक्सर पुराने ज़माने की अभिनेत्रियों से प्रिया की तुलना करते हैं।",
+   "en": "People often compare Priya to the actresses of the old days.",
+   "ko": "사람들은 프리야를 옛날 여배우들과 자주 비교해요.",
+   "blank": "तुलना करते",
+   "src": "made"
+  }
+ ],
  "w|तू": [
   {
    "text": "तू कब घर आएगा?",
@@ -18154,6 +18650,22 @@
    "en": "Pooja had spent a whole month preparing for the interview.",
    "ko": "푸자는 면접 준비에 꼬박 한 달을 들였어요.",
    "blank": "तैयारी",
+   "src": "made"
+  }
+ ],
+ "w|तैयारी करना": [
+  {
+   "text": "शिफ़्टिंग से एक हफ़्ता पहले से ही राहुल तैयारी करने लगा था।",
+   "en": "Rahul had started preparing a whole week before the move.",
+   "ko": "라훌은 이사 일주일 전부터 준비를 시작했어요.",
+   "blank": "तैयारी करने",
+   "src": "made"
+  },
+  {
+   "text": "गाँव की लड़की के रोल के लिए प्रिया ने महीनों तैयारी की।",
+   "en": "Priya prepared for months for the role of a village girl.",
+   "ko": "프리야는 시골 소녀 역할을 위해 몇 달 동안 준비했어요.",
+   "blank": "तैयारी की",
    "src": "made"
   }
  ],
@@ -18752,6 +19264,22 @@
    "en": "Seema keeps old phone parts in a long drawer.",
    "ko": "시마는 오래된 휴대폰 부품을 긴 서랍에 보관해요.",
    "blank": "दराज़",
+   "src": "made"
+  }
+ ],
+ "w|दरी": [
+  {
+   "text": "मज़दूरों के बैठने के लिए राहुल ने फ़र्श पर एक दरी बिछा दी।",
+   "en": "Rahul spread a cotton rug on the floor for the workers to sit on.",
+   "ko": "라훌은 인부들이 앉도록 바닥에 면 깔개를 폈어요.",
+   "blank": "दरी",
+   "src": "made"
+  },
+  {
+   "text": "भीड़ वाले सीन में सारे कलाकार ज़मीन पर दरी बिछाकर बैठे।",
+   "en": "In the crowd scene all the actors sat on cotton rugs spread on the ground.",
+   "ko": "군중 장면에서 배우들은 모두 바닥에 면 깔개를 펴고 앉았어요.",
+   "blank": "दरी",
    "src": "made"
   }
  ],
@@ -19489,6 +20017,22 @@
    "blank": "दुकानदार"
   }
  ],
+ "w|दुकानदारी": [
+  {
+   "text": "नया सहकर्मी पहले अपने पिता के साथ कपड़ों की दुकानदारी करता था।",
+   "en": "The new coworker used to run a clothes shop business with his father.",
+   "ko": "새 동료는 전에 아버지와 함께 옷가게 장사를 했어요.",
+   "blank": "दुकानदारी",
+   "src": "made"
+  },
+  {
+   "text": "हवाई अड्डे की दुकानदारी इतनी महँगी है कि नेहा ने बस पानी ख़रीदा।",
+   "en": "Shopping at the airport is so expensive that Neha only bought water.",
+   "ko": "공항 쇼핑은 너무 비싸서 네하는 물만 샀어요.",
+   "blank": "दुकानदारी",
+   "src": "made"
+  }
+ ],
  "w|दुख": [
   {
    "text": "उसकी आँखों में दुख साफ़ दिखता है।",
@@ -19571,6 +20115,22 @@
    "en": "In this small world everyone knows everyone.",
    "ko": "이 좁은 세상에서는 서로 다 알아.",
    "blank": "दुनिया"
+  }
+ ],
+ "w|दुपट्टा": [
+  {
+   "text": "हवा से उड़ता दुपट्टा सँभालते हुए रिसेप्शनिस्ट ने नए सहकर्मी का पहचान पत्र बनाया।",
+   "en": "Holding down her fluttering dupatta, the receptionist made the new coworker's ID card.",
+   "ko": "안내 직원은 바람에 날리는 두파타를 잡으며 새 동료의 출입증을 만들어 줬어요.",
+   "blank": "दुपट्टा",
+   "src": "made"
+  },
+  {
+   "text": "विमान में ठंड लगने पर नेहा ने दुपट्टा कंधों पर ओढ़ लिया।",
+   "en": "When she felt cold on the plane, Neha wrapped her dupatta around her shoulders.",
+   "ko": "기내가 추워서 네하는 두파타를 어깨에 둘렀어요.",
+   "blank": "दुपट्टा",
+   "src": "made"
   }
  ],
  "w|दुबला": [
@@ -20547,6 +21107,22 @@
    "en": "He took the money and wanted to cheat everyone.",
    "ko": "그는 돈을 받고 모두를 속이려 했어.",
    "blank": "धोखा देना"
+  }
+ ],
+ "w|धोती": [
+  {
+   "text": "गाँव में नए सहकर्मी के दादा आज भी रोज़ धोती पहनते हैं।",
+   "en": "In the village the new coworker's grandfather still wears a dhoti every day.",
+   "ko": "새 동료의 할아버지는 시골에서 지금도 날마다 도티를 입어요.",
+   "blank": "धोती",
+   "src": "made"
+  },
+  {
+   "text": "वाराणसी जाने वाली उड़ान में कई यात्री धोती पहने हुए थे।",
+   "en": "Several passengers on the flight to Varanasi were wearing dhotis.",
+   "ko": "바라나시행 비행기에는 도티를 입은 승객이 여럿 있었어요.",
+   "blank": "धोती",
+   "src": "made"
   }
  ],
  "w|धोना": [
@@ -21579,6 +22155,22 @@
    "en": "The villagers respect that hero.",
    "ko": "마을 사람들이 그 영웅을 존경해.",
    "blank": "नायक"
+  }
+ ],
+ "w|नायिका": [
+  {
+   "text": "लंच में नया सहकर्मी अपनी पसंदीदा फ़िल्म की नायिका की बातें करता रहा।",
+   "en": "At lunch the new coworker kept talking about the heroine of his favourite film.",
+   "ko": "점심 내내 새 동료는 좋아하는 영화 여주인공 이야기를 했어요.",
+   "blank": "नायिका",
+   "src": "made"
+  },
+  {
+   "text": "उड़ान में नेहा ने जो फ़िल्म देखी उसकी नायिका एक पायलट थी।",
+   "en": "The heroine of the film Neha watched on the flight was a pilot.",
+   "ko": "네하가 기내에서 본 영화의 여주인공은 조종사였어요.",
+   "blank": "नायिका",
+   "src": "made"
   }
  ],
  "w|नारंगी": [
@@ -22903,6 +23495,22 @@
    "src": "made"
   }
  ],
+ "w|पजामा": [
+  {
+   "text": "नया सहकर्मी बोला कि घर पहुँचते ही वह सबसे पहले पजामा पहनता है।",
+   "en": "The new coworker said the first thing he does when he gets home is put on pyjamas.",
+   "ko": "새 동료는 집에 가면 제일 먼저 잠옷 바지로 갈아입는다고 했어요.",
+   "blank": "पजामा",
+   "src": "made"
+  },
+  {
+   "text": "रात की उड़ान में एक बच्चा पजामा पहनकर ही विमान में चढ़ा।",
+   "en": "On the night flight a child boarded the plane already in pyjamas.",
+   "ko": "밤 비행기에 한 아이는 잠옷 바지를 입은 채 탔어요.",
+   "blank": "पजामा",
+   "src": "made"
+  }
+ ],
  "w|पटकना": [
   {
    "text": "गुस्से में बैग ज़मीन पर पटकना ठीक नहीं।",
@@ -23073,6 +23681,22 @@
    "en": "Thin clothes are not enough in winter.",
    "ko": "겨울에는 얇은 옷으로 부족해.",
    "blank": "पतला"
+  }
+ ],
+ "w|पतलून": [
+  {
+   "text": "अमित ने बताया कि यहाँ फ़ॉर्मल पतलून रोज़ पहनना ज़रूरी नहीं है।",
+   "en": "Amit explained that wearing formal trousers every day isn't required here.",
+   "ko": "아밋은 여기서는 정장 바지를 매일 입을 필요는 없다고 알려 줬어요.",
+   "blank": "पतलून",
+   "src": "made"
+  },
+  {
+   "text": "साथ वाले यात्री की पतलून पर किसी की कॉफ़ी गिर गई।",
+   "en": "Someone's coffee spilled on the trousers of the passenger next to her.",
+   "ko": "옆 승객의 바지에 누군가 커피를 쏟았어요.",
+   "blank": "पतलून",
+   "src": "made"
   }
  ],
  "w|पता": [
@@ -23819,6 +24443,22 @@
    "blank": "पर्वत"
   }
  ],
+ "w|पर्स": [
+  {
+   "text": "राहुल की पत्नी ने अपना पर्स ट्रक में न रखकर हाथ में ही रखा।",
+   "en": "Rahul's wife kept her purse in her hand instead of putting it in the truck.",
+   "ko": "라훌의 아내는 핸드백을 트럭에 싣지 않고 손에 들고 있었어요.",
+   "blank": "पर्स",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया का लाल पर्स पूरी शूटिंग में उसके किरदार की पहचान बन गया।",
+   "en": "Priya's red purse became her character's signature throughout the shoot.",
+   "ko": "프리야의 빨간 핸드백은 촬영 내내 그 배역의 상징이 됐어요.",
+   "blank": "पर्स",
+   "src": "made"
+  }
+ ],
  "w|पल": [
   {
    "text": "वह पल हमेशा याद रहेगा।",
@@ -24419,6 +25059,22 @@
    "blank": "पाबंदी"
   }
  ],
+ "w|पायदान": [
+  {
+   "text": "नए घर के दरवाज़े पर राहुल ने 'स्वागत' लिखा पायदान रखा।",
+   "en": "Rahul put a doormat with 'Welcome' written on it at the new house's door.",
+   "ko": "라훌은 새집 문 앞에 '환영'이라고 적힌 발 매트를 놓았어요.",
+   "blank": "पायदान",
+   "src": "made"
+  },
+  {
+   "text": "दरवाज़े पर रखे पायदान से उलझकर प्रिया सचमुच लड़खड़ा गई।",
+   "en": "Priya actually stumbled after catching her foot on the doormat by the door.",
+   "ko": "프리야는 문 앞 발 매트에 걸려 진짜로 비틀거렸어요.",
+   "blank": "पायदान",
+   "src": "made"
+  }
+ ],
  "w|पायलट": [
   {
    "text": "मेरा चाचा हवाई जहाज़ का पायलट है।",
@@ -24921,6 +25577,22 @@
    "en": "Don't forget to call for help.",
    "ko": "도움이 필요하면 부르는 걸 잊지 마.",
    "blank": "पुकारना"
+  }
+ ],
+ "w|पुजारिन": [
+  {
+   "text": "नए सहकर्मी की मौसी गाँव के मंदिर में पुजारिन हैं।",
+   "en": "The new coworker's aunt is a priestess at the village temple.",
+   "ko": "새 동료의 이모는 마을 사원의 여사제예요.",
+   "blank": "पुजारिन",
+   "src": "made"
+  },
+  {
+   "text": "हवाई अड्डे के प्रार्थना कक्ष में एक बुज़ुर्ग पुजारिन दीया जला रही थीं।",
+   "en": "In the airport prayer room an elderly priestess was lighting a lamp.",
+   "ko": "공항 기도실에서 나이 든 여사제가 등잔에 불을 켜고 있었어요.",
+   "blank": "पुजारिन",
+   "src": "made"
   }
  ],
  "w|पुजारी": [
@@ -26035,6 +26707,22 @@
    "blank": "प्रतिबंध"
   }
  ],
+ "w|प्रतिभा": [
+  {
+   "text": "राहुल की बेटी की चित्रकला की प्रतिभा नए कमरे की दीवारों पर दिखने लगी।",
+   "en": "Rahul's daughter's talent for painting started to show on the new room's walls.",
+   "ko": "라훌 딸의 그림 솜씨가 새 방 벽에 드러나기 시작했어요.",
+   "blank": "प्रतिभा",
+   "src": "made"
+  },
+  {
+   "text": "डायरेक्टर ने पहली ही मुलाक़ात में प्रिया की प्रतिभा पहचान ली थी।",
+   "en": "The director recognised Priya's talent at the very first meeting.",
+   "ko": "감독은 첫 만남에서 바로 프리야의 재능을 알아봤어요.",
+   "blank": "प्रतिभा",
+   "src": "made"
+  }
+ ],
  "w|प्रतियोगिता": [
   {
    "text": "स्कूल की प्रतियोगिता अगले हफ़्ते है।",
@@ -26205,6 +26893,22 @@
    "en": "The prime minister is visiting a village.",
    "ko": "총리가 마을을 방문하고 있어.",
    "blank": "प्रधानमंत्री"
+  }
+ ],
+ "w|प्रधानाचार्य": [
+  {
+   "text": "नए सहकर्मी की माँ एक सरकारी स्कूल में प्रधानाचार्य हैं।",
+   "en": "The new coworker's mother is a principal at a government school.",
+   "ko": "새 동료의 어머니는 공립학교 교장이에요.",
+   "blank": "प्रधानाचार्य",
+   "src": "made"
+  },
+  {
+   "text": "विमान में नेहा की मुलाक़ात अपने पुराने स्कूल के प्रधानाचार्य से हुई।",
+   "en": "On the plane Neha met the principal of her old school.",
+   "ko": "비행기에서 네하는 옛 학교 교장 선생님을 만났어요.",
+   "blank": "प्रधानाचार्य",
+   "src": "made"
   }
  ],
  "w|प्रबंधन": [
@@ -26917,6 +27621,22 @@
    "en": "Technology is taught at school.",
    "ko": "학교에서 기술을 가르쳐.",
    "blank": "प्रौद्योगिकी"
+  }
+ ],
+ "w|प्लग": [
+  {
+   "text": "फ़्रिज का प्लग नई दीवार के सॉकेट में ठीक से नहीं लगा।",
+   "en": "The fridge plug didn't fit properly into the new wall socket.",
+   "ko": "냉장고 플러그가 새 벽 콘센트에 잘 맞지 않았어요.",
+   "blank": "प्लग",
+   "src": "made"
+  },
+  {
+   "text": "लाइटमैन ने तार का प्लग निकाला तो पूरा सेट अँधेरे में डूब गया।",
+   "en": "When the lightman pulled out the cable's plug, the whole set went dark.",
+   "ko": "조명 기사가 전선 플러그를 뽑자 세트 전체가 깜깜해졌어요.",
+   "blank": "प्लग",
+   "src": "made"
   }
  ],
  "w|प्लास्टर": [
@@ -27725,6 +28445,22 @@
    "src": "made"
   }
  ],
+ "w|फ्लास्क": [
+  {
+   "text": "शिफ़्टिंग के दिन राहुल ने चाय एक बड़े फ्लास्क में भरकर रख ली।",
+   "en": "On moving day Rahul filled a big flask with tea.",
+   "ko": "이삿날 라훌은 큰 보온병에 차를 가득 담아 뒀어요.",
+   "blank": "फ्लास्क",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया हमेशा शूटिंग पर अदरक वाली चाय का फ्लास्क साथ लाती है।",
+   "en": "Priya always brings a flask of ginger tea to the shoot.",
+   "ko": "프리야는 촬영장에 늘 생강차 보온병을 챙겨 와요.",
+   "blank": "फ्लास्क",
+   "src": "made"
+  }
+ ],
  "w|फ़्लैट": [
   {
    "text": "हमने नया फ़्लैट किराए पर लिया।",
@@ -27971,6 +28707,22 @@
    "blank": "बँटना"
   }
  ],
+ "w|बटुआ": [
+  {
+   "text": "सामान उठाते-उठाते राहुल का बटुआ किसी डिब्बे में गिर गया।",
+   "en": "While lifting things, Rahul's wallet fell into one of the boxes.",
+   "ko": "짐을 나르다가 라훌의 지갑이 어느 상자 속으로 떨어졌어요.",
+   "blank": "बटुआ",
+   "src": "made"
+  },
+  {
+   "text": "सीन में प्रिया को एक पुराना बटुआ सड़क पर पड़ा मिलता है।",
+   "en": "In the scene, Priya finds an old wallet lying on the road.",
+   "ko": "그 장면에서 프리야는 길에 떨어진 낡은 지갑을 발견해요.",
+   "blank": "बटुआ",
+   "src": "made"
+  }
+ ],
  "w|बटोरना": [
   {
    "text": "शो के बाद करण ने मंच पर बिखरे फूल बटोरे।",
@@ -28015,6 +28767,22 @@
    "en": "This shirt is quite large.",
    "ko": "이 셔츠는 꽤 커.",
    "blank": "बड़ी"
+  }
+ ],
+ "w|बढ़ई": [
+  {
+   "text": "दफ़्तर की टूटी कुर्सी ठीक करने के लिए आज बढ़ई आया।",
+   "en": "A carpenter came today to fix the office's broken chair.",
+   "ko": "오늘 사무실 부서진 의자를 고치러 목수가 왔어요.",
+   "blank": "बढ़ई",
+   "src": "made"
+  },
+  {
+   "text": "लाउंज की लकड़ी की कुर्सियाँ किसी कुशल बढ़ई ने बनाई लगती थीं।",
+   "en": "The lounge's wooden chairs looked like they were made by a skilled carpenter.",
+   "ko": "라운지의 나무 의자는 솜씨 좋은 목수가 만든 것 같았어요.",
+   "blank": "बढ़ई",
+   "src": "made"
   }
  ],
  "w|बढ़ना": [
@@ -30091,6 +30859,22 @@
    "blank": "बेल"
   }
  ],
+ "w|बेलन": [
+  {
+   "text": "माँ ने कहा कि बेलन ढूँढे बिना आज रोटी नहीं बनेगी।",
+   "en": "Mother said there would be no rotis today without finding the rolling pin.",
+   "ko": "엄마는 밀대를 찾지 못하면 오늘 로티를 못 만든다고 했어요.",
+   "blank": "बेलन",
+   "src": "made"
+  },
+  {
+   "text": "गुस्से वाले सीन में प्रिया ने हाथ में बेलन उठा लिया और सब हँस पड़े।",
+   "en": "In the angry scene Priya picked up a rolling pin and everyone burst out laughing.",
+   "ko": "화내는 장면에서 프리야가 밀대를 집어 들자 모두 웃음이 터졌어요.",
+   "blank": "बेलन",
+   "src": "made"
+  }
+ ],
  "w|बेल्ट": [
   {
    "text": "पैंट ढीली है, बेल्ट कस लो।",
@@ -31773,6 +32557,22 @@
    "blank": "मछली"
   }
  ],
+ "w|मछुआरा": [
+  {
+   "text": "अमित को पता चला कि नए सहकर्मी के पिता कभी गोवा में मछुआरा थे।",
+   "en": "Amit learned that the new coworker's father had once been a fisherman in Goa.",
+   "ko": "아밋은 새 동료 아버지가 한때 고아에서 어부였다는 걸 알게 됐어요.",
+   "blank": "मछुआरा",
+   "src": "made"
+  },
+  {
+   "text": "गोवा की उड़ान में नेहा के बगल में एक मछुआरा बैठा था, जो पहली बार उड़ रहा था।",
+   "en": "On the Goa flight a fisherman was sitting next to Neha, flying for the first time.",
+   "ko": "고아행 비행기에서 네하 옆에는 처음 비행기를 탄 어부가 앉아 있었어요.",
+   "blank": "मछुआरा",
+   "src": "made"
+  }
+ ],
  "w|मज़दूर": [
   {
    "text": "मज़दूर पूरे दिन मेहनत करता है।",
@@ -32161,6 +32961,22 @@
    "en": "It rained in the middle of the night.",
    "ko": "한밤중에 비가 왔어.",
    "blank": "मध्य"
+  }
+ ],
+ "w|मध्यम": [
+  {
+   "text": "राहुल ने मध्यम आकार का घर लिया, न बहुत बड़ा न बहुत छोटा।",
+   "en": "Rahul took a medium-sized house, neither too big nor too small.",
+   "ko": "라훌은 너무 크지도 작지도 않은 중간 크기 집을 얻었어요.",
+   "blank": "मध्यम",
+   "src": "made"
+  },
+  {
+   "text": "लाइटमैन ने रोशनी मध्यम कर दी ताकि शाम जैसा लगे।",
+   "en": "The lightman turned the light down to medium so it would look like evening.",
+   "ko": "조명 기사는 저녁처럼 보이게 조명을 중간 밝기로 낮췄어요.",
+   "blank": "मध्यम",
+   "src": "made"
   }
  ],
  "w|मन": [
@@ -33621,6 +34437,22 @@
    "src": "made"
   }
  ],
+ "w|मुनीम": [
+  {
+   "text": "नए सहकर्मी के पिता बाद में एक बड़े व्यापारी के यहाँ मुनीम बन गए।",
+   "en": "The new coworker's father later became an accountant for a big merchant.",
+   "ko": "새 동료의 아버지는 나중에 큰 상인 밑에서 장부 담당이 됐어요.",
+   "blank": "मुनीम",
+   "src": "made"
+  },
+  {
+   "text": "नेहा के चाचा एक पुरानी फ़र्म में मुनीम हैं और हिसाब में बहुत पक्के हैं।",
+   "en": "Neha's uncle is an accountant at an old firm and is very sharp with accounts.",
+   "ko": "네하의 삼촌은 오래된 회사의 장부 담당으로 셈이 아주 밝아요.",
+   "blank": "मुनीम",
+   "src": "made"
+  }
+ ],
  "w|मुन्ना": [
   {
    "text": "मुन्ना सोते-सोते मुस्कुरा रहा था।",
@@ -33633,6 +34465,22 @@
    "en": "Grandma tells stories to the little boy.",
    "ko": "할머니가 아기에게 이야기를 들려줘.",
    "blank": "मुन्ना"
+  }
+ ],
+ "w|मुन्नी": [
+  {
+   "text": "नए सहकर्मी की बेटी को घर में सब प्यार से मुन्नी बुलाते हैं।",
+   "en": "At home everyone affectionately calls the new coworker's daughter Munni.",
+   "ko": "새 동료의 딸을 집에서는 다들 '문니'라고 다정하게 불러요.",
+   "blank": "मुन्नी",
+   "src": "made"
+  },
+  {
+   "text": "सामने की सीट पर बैठी मुन्नी पूरी उड़ान में खिड़की से बादल गिनती रही।",
+   "en": "Little Munni in the seat in front kept counting clouds out of the window throughout the flight.",
+   "ko": "앞자리 꼬마 문니는 비행 내내 창밖 구름을 셌어요.",
+   "blank": "मुन्नी",
+   "src": "made"
   }
  ],
  "w|मुफ़्त": [
@@ -34045,6 +34893,22 @@
    "src": "made"
   }
  ],
+ "w|मेज़पोश": [
+  {
+   "text": "माँ ने नई मेज़ पर कढ़ाई वाला मेज़पोश बिछा दिया।",
+   "en": "Mother spread an embroidered tablecloth on the new table.",
+   "ko": "엄마는 새 식탁에 자수 놓은 식탁보를 깔았어요.",
+   "blank": "मेज़पोश",
+   "src": "made"
+  },
+  {
+   "text": "खाने की मेज़ वाले सीन में सफ़ेद मेज़पोश पर चाय गिर गई।",
+   "en": "In the dining table scene, tea spilled on the white tablecloth.",
+   "ko": "식탁 장면에서 하얀 식탁보에 차가 쏟아졌어요.",
+   "blank": "मेज़पोश",
+   "src": "made"
+  }
+ ],
  "w|मेट्रो": [
   {
    "text": "मेट्रो से ऑफ़िस जल्दी पहुँचते हैं।",
@@ -34337,6 +35201,38 @@
    "src": "made"
   }
  ],
+ "w|मोची": [
+  {
+   "text": "अमित ने नए सहकर्मी को दफ़्तर के पास एक अच्छे मोची का पता बताया।",
+   "en": "Amit told the new coworker where to find a good cobbler near the office.",
+   "ko": "아밋은 새 동료에게 회사 근처 솜씨 좋은 구두 수선공을 알려 줬어요.",
+   "blank": "मोची",
+   "src": "made"
+  },
+  {
+   "text": "उड़ान से पहले नेहा ने मोची से अपनी सैंडल की टूटी पट्टी सिलवाई थी।",
+   "en": "Before the flight, Neha had a cobbler sew the broken strap of her sandal.",
+   "ko": "비행 전에 네하는 구두 수선공에게 샌들 끈을 꿰매 달라고 했어요.",
+   "blank": "मोची",
+   "src": "made"
+  }
+ ],
+ "w|मोज़ा": [
+  {
+   "text": "नए सहकर्मी के दोनों मोज़े अलग-अलग रंग के थे, पर किसी ने कुछ नहीं कहा।",
+   "en": "The new coworker's two socks were different colours, but nobody said anything.",
+   "ko": "새 동료의 양말 두 짝 색이 달랐지만 아무도 말하지 않았어요.",
+   "blank": "मोज़े",
+   "src": "made"
+  },
+  {
+   "text": "विमान में नेहा को ऊनी मोज़े पहनकर ही नींद आई।",
+   "en": "On the plane Neha could only fall asleep after putting on woollen socks.",
+   "ko": "비행기에서 네하는 털양말을 신고서야 잠이 들었어요.",
+   "blank": "मोज़े",
+   "src": "made"
+  }
+ ],
  "w|मोटरसाइकिल": [
   {
    "text": "उसने नई मोटरसाइकिल खरीदी।",
@@ -34447,6 +35343,22 @@
    "en": "A peacock's feather looks very beautiful.",
    "ko": "공작 깃털이 아주 예뻐 보여.",
    "blank": "मोर"
+  }
+ ],
+ "w|मोलभाव": [
+  {
+   "text": "अमित हँसा कि दफ़्तर की कैंटीन में मोलभाव नहीं चलता।",
+   "en": "Amit laughed that bargaining doesn't work in the office canteen.",
+   "ko": "아밋은 사내 식당에서는 흥정이 안 통한다며 웃었어요.",
+   "blank": "मोलभाव",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने टैक्सी वाले से मोलभाव किया और किराया थोड़ा कम करवाया।",
+   "en": "Neha bargained with the taxi driver and got the fare lowered a little.",
+   "ko": "네하는 택시 기사와 흥정해서 요금을 조금 깎았어요.",
+   "blank": "मोलभाव",
+   "src": "made"
   }
  ],
  "w|मोहब्बत": [
@@ -35229,6 +36141,22 @@
    "en": "The story has both fun and flavor.",
    "ko": "이야기에 재미와 맛이 둘 다 있어.",
    "blank": "रस"
+  }
+ ],
+ "w|रसीद": [
+  {
+   "text": "नए सहकर्मी ने अमित से पूछा कि यात्रा भत्ते के लिए टैक्सी की रसीद कहाँ जमा करनी है।",
+   "en": "The new coworker asked Amit where to submit the taxi receipt for the travel allowance.",
+   "ko": "새 동료는 아밋에게 출장비 정산용 택시 영수증을 어디에 내야 하는지 물었어요.",
+   "blank": "रसीद",
+   "src": "made"
+  },
+  {
+   "text": "ड्यूटी फ़्री दुकान ने नेहा को परफ़्यूम की रसीद ईमेल पर भेज दी।",
+   "en": "The duty-free shop sent Neha the perfume receipt by email.",
+   "ko": "면세점은 향수 영수증을 네하에게 이메일로 보내 줬어요.",
+   "blank": "रसीद",
+   "src": "made"
   }
  ],
  "w|रसोइया": [
@@ -36435,6 +37363,22 @@
    "src": "made"
   }
  ],
+ "w|लहंगा": [
+  {
+   "text": "नए सहकर्मी ने बताया कि उसकी बहन की शादी का लहंगा उसकी माँ ने ख़ुद सिला था।",
+   "en": "The new coworker said his mother had sewn his sister's wedding lehenga herself.",
+   "ko": "새 동료는 여동생 결혼식 렝가를 어머니가 직접 지었다고 했어요.",
+   "blank": "लहंगा",
+   "src": "made"
+  },
+  {
+   "text": "नेहा अपनी चचेरी बहन की शादी के लिए भारी लहंगा अलग बैग में ले जा रही थी।",
+   "en": "Neha was carrying a heavy lehenga in a separate bag for her cousin's wedding.",
+   "ko": "네하는 사촌 결혼식에 입을 무거운 렝가를 따로 가방에 넣어 가고 있었어요.",
+   "blank": "लहंगा",
+   "src": "made"
+  }
+ ],
  "w|लहर": [
   {
    "text": "समुद्र की लहर ऊँची थी।",
@@ -36590,6 +37534,38 @@
    "en": "Deepa has never overstepped the limits of her position.",
    "ko": "디파는 한 번도 자기 직책의 선을 넘은 적이 없어요.",
    "blank": "लाँघी",
+   "src": "made"
+  }
+ ],
+ "w|लाडला": [
+  {
+   "text": "नया सहकर्मी अपने घर का लाडला बेटा है, फिर भी बहुत मेहनती है।",
+   "en": "The new coworker is his family's darling son, yet he's very hard-working.",
+   "ko": "새 동료는 집에서 귀하게 자란 아들인데도 아주 성실해요.",
+   "blank": "लाडला",
+   "src": "made"
+  },
+  {
+   "text": "एक दादी अपने लाडले पोते को पहली बार विदेश भेजते हुए रो पड़ीं।",
+   "en": "A grandmother burst into tears sending her darling grandson abroad for the first time.",
+   "ko": "한 할머니는 귀한 손자를 처음 외국에 보내며 눈물을 터뜨렸어요.",
+   "blank": "लाडले",
+   "src": "made"
+  }
+ ],
+ "w|लाडली": [
+  {
+   "text": "अमित की लाडली भतीजी ने नए सहकर्मी के लिए स्वागत कार्ड बनाया।",
+   "en": "Amit's beloved niece made a welcome card for the new coworker.",
+   "ko": "아밋이 아끼는 조카딸이 새 동료에게 줄 환영 카드를 만들었어요.",
+   "blank": "लाडली",
+   "src": "made"
+  },
+  {
+   "text": "पिता अपनी लाडली बेटी को सुरक्षा जाँच के गेट तक छोड़ने आए।",
+   "en": "A father came to see off his beloved daughter right up to the security gate.",
+   "ko": "아버지는 귀한 딸을 보안 검색대 입구까지 배웅했어요.",
+   "blank": "लाडली",
    "src": "made"
   }
  ],
@@ -37091,6 +38067,22 @@
    "en": "Iron softens when heated.",
    "ko": "쇠는 달구면 부드러워져.",
    "blank": "लोहा"
+  }
+ ],
+ "w|लोहार": [
+  {
+   "text": "नए सहकर्मी के नाना गाँव में लोहार थे और हल के फाल बनाते थे।",
+   "en": "The new coworker's maternal grandfather was a blacksmith in the village and made ploughshares.",
+   "ko": "새 동료의 외할아버지는 시골 대장장이로 쟁기 날을 만들었어요.",
+   "blank": "लोहार",
+   "src": "made"
+  },
+  {
+   "text": "हवाई अड्डे की दीवार पर एक लोहार की लोहे से बनी कलाकृति लगी थी।",
+   "en": "A blacksmith's ironwork artwork hung on the airport wall.",
+   "ko": "공항 벽에는 대장장이가 쇠로 만든 작품이 걸려 있었어요.",
+   "blank": "लोहार",
+   "src": "made"
   }
  ],
  "w|लौटना": [
@@ -38133,6 +39125,22 @@
    "blank": "विशाल"
   }
  ],
+ "w|विशिष्ट": [
+  {
+   "text": "नए घर की विशिष्ट बात उसकी बड़ी खिड़कियाँ हैं।",
+   "en": "The distinctive feature of the new house is its big windows.",
+   "ko": "새집의 특징은 큼직한 창문이에요.",
+   "blank": "विशिष्ट",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की आवाज़ में एक विशिष्ट मिठास है।",
+   "en": "Priya's voice has a distinctive sweetness.",
+   "ko": "프리야의 목소리에는 독특한 달콤함이 있어요.",
+   "blank": "विशिष्ट",
+   "src": "made"
+  }
+ ],
  "w|विशेष": [
   {
    "text": "आज कोई विशेष बात नहीं है।",
@@ -38290,6 +39298,22 @@
    "en": "The company is expanding its work in South India.",
    "ko": "회사는 남인도로 사업을 넓히고 있어요.",
    "blank": "विस्तार",
+   "src": "made"
+  }
+ ],
+ "w|विस्तृत": [
+  {
+   "text": "मकान मालिक ने किराये की शर्तों की एक विस्तृत सूची दी।",
+   "en": "The landlord gave a detailed list of the rental terms.",
+   "ko": "집주인은 임대 조건을 자세히 적은 목록을 줬어요.",
+   "blank": "विस्तृत",
+   "src": "made"
+  },
+  {
+   "text": "डायरेक्टर ने हर सीन की एक विस्तृत योजना दीवार पर चिपका रखी थी।",
+   "en": "The director had a detailed plan of every scene stuck on the wall.",
+   "ko": "감독은 장면마다 자세한 계획을 벽에 붙여 뒀어요.",
+   "blank": "विस्तृत",
    "src": "made"
   }
  ],
@@ -38493,6 +39517,22 @@
    "en": "He isn't a bad fellow, mind you.",
    "ko": "그나저나 그는 나쁜 애는 아니야.",
    "blank": "वैसे"
+  }
+ ],
+ "w|वॉशिंग मशीन": [
+  {
+   "text": "वॉशिंग मशीन को बाथरूम तक ले जाने में तीन लोग लगे।",
+   "en": "It took three people to carry the washing machine to the bathroom.",
+   "ko": "세탁기를 욕실까지 옮기는 데 세 사람이 붙었어요.",
+   "blank": "वॉशिंग मशीन",
+   "src": "made"
+  },
+  {
+   "text": "एक मज़ेदार सीन में प्रिया की बिल्ली वॉशिंग मशीन के ऊपर सोती दिखती है।",
+   "en": "In a funny scene, Priya's cat is seen sleeping on top of the washing machine.",
+   "ko": "재미있는 장면에서 프리야의 고양이가 세탁기 위에서 자고 있어요.",
+   "blank": "वॉशिंग मशीन",
+   "src": "made"
   }
  ],
  "w|वोट": [
@@ -39715,6 +40755,22 @@
    "blank": "श्रेणी"
   }
  ],
+ "w|श्रेष्ठ": [
+  {
+   "text": "पैकर्स वालों में सबसे श्रेष्ठ कारीगर ने काँच की अलमारी सँभाली।",
+   "en": "The best worker among the packers handled the glass cabinet.",
+   "ko": "이삿짐센터 직원 중 가장 솜씨 좋은 사람이 유리 장식장을 맡았어요.",
+   "blank": "श्रेष्ठ",
+   "src": "made"
+  },
+  {
+   "text": "फ़िल्म समारोह में प्रिया को श्रेष्ठ अभिनेत्री का पुरस्कार मिला।",
+   "en": "At the film festival Priya got the best actress award.",
+   "ko": "영화제에서 프리야는 최우수 여배우상을 받았어요.",
+   "blank": "श्रेष्ठ",
+   "src": "made"
+  }
+ ],
  "w|श्रोता": [
   {
    "text": "वाद-विवाद प्रतियोगिता में श्रोता बार-बार ताली बजा रहे थे।",
@@ -40109,6 +41165,22 @@
    "src": "made"
   }
  ],
+ "w|सटीक": [
+  {
+   "text": "राहुल ने नए कमरे की सटीक नाप लेकर ही पलंग ख़रीदा।",
+   "en": "Rahul bought the bed only after taking the exact measurements of the new room.",
+   "ko": "라훌은 새 방 치수를 정확히 잰 다음에야 침대를 샀어요.",
+   "blank": "सटीक",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया की टाइमिंग इतनी सटीक है कि ज़्यादातर सीन एक ही बार में हो जाते हैं।",
+   "en": "Priya's timing is so precise that most scenes are done in one take.",
+   "ko": "프리야는 타이밍이 정확해서 장면 대부분을 한 번에 끝내요.",
+   "blank": "सटीक",
+   "src": "made"
+  }
+ ],
  "w|सड़क": [
   {
    "text": "सड़क पर पानी भरा है।",
@@ -40411,6 +41483,22 @@
    "en": "A deep silence hangs in the library.",
    "ko": "도서관에는 깊은 고요가 감돌아.",
    "blank": "सन्नाटा"
+  }
+ ],
+ "w|संन्यासी": [
+  {
+   "text": "नया सहकर्मी इतना शांत रहता है कि अमित उसे मज़ाक में संन्यासी कहता है।",
+   "en": "The new coworker is so calm that Amit jokingly calls him a hermit.",
+   "ko": "새 동료가 워낙 차분해서 아밋은 농담으로 그를 수도승이라고 불러요.",
+   "blank": "संन्यासी",
+   "src": "made"
+  },
+  {
+   "text": "भगवा कपड़ों में एक संन्यासी चुपचाप गेट के पास बैठे थे।",
+   "en": "A monk in saffron robes sat quietly near the gate.",
+   "ko": "주황색 옷을 입은 수행자가 탑승구 근처에 조용히 앉아 있었어요.",
+   "blank": "संन्यासी",
+   "src": "made"
   }
  ],
  "w|संपत्ति": [
@@ -41385,6 +42473,54 @@
    "src": "made"
   }
  ],
+ "w|सर्वाधिक": [
+  {
+   "text": "शहर के इस हिस्से में सर्वाधिक किराया मेट्रो के पास वाले घरों का है।",
+   "en": "In this part of the city the highest rent is for houses near the metro.",
+   "ko": "이 동네에서 월세가 가장 비싼 곳은 지하철역 근처 집이에요.",
+   "blank": "सर्वाधिक",
+   "src": "made"
+  },
+  {
+   "text": "इस फ़िल्म में प्रिया के संवाद सर्वाधिक हैं।",
+   "en": "Priya has the most lines in this film.",
+   "ko": "이 영화에서 대사가 가장 많은 사람은 프리야예요.",
+   "blank": "सर्वाधिक",
+   "src": "made"
+  }
+ ],
+ "w|सर्वोच्च": [
+  {
+   "text": "राहुल ने बच्चों की पढ़ाई को सर्वोच्च प्राथमिकता देकर स्कूल के पास घर लिया।",
+   "en": "Giving top priority to the children's studies, Rahul took a house near the school.",
+   "ko": "라훌은 아이들 공부를 가장 먼저 생각해서 학교 근처에 집을 구했어요.",
+   "blank": "सर्वोच्च",
+   "src": "made"
+  },
+  {
+   "text": "प्रिया ने कहा कि ईमानदारी उसके लिए सर्वोच्च मूल्य है।",
+   "en": "Priya said honesty is the highest value for her.",
+   "ko": "프리야는 정직이 자기에게 가장 소중한 가치라고 말했어요.",
+   "blank": "सर्वोच्च",
+   "src": "made"
+  }
+ ],
+ "w|सलवार": [
+  {
+   "text": "अमित की टीम की मैनेजर अक्सर सूती सलवार और कुर्ती पहनती हैं।",
+   "en": "Amit's team manager often wears a cotton salwar and kurti.",
+   "ko": "아밋 팀의 매니저는 면 살와르와 쿠르티를 자주 입어요.",
+   "blank": "सलवार",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की माँ ने विदेश में रहने वाली मौसी के लिए सलवार सूट का कपड़ा भेजा।",
+   "en": "Neha's mother sent salwar suit fabric for the aunt who lives abroad.",
+   "ko": "네하의 엄마는 외국에 사는 이모에게 살와르 정장 옷감을 보냈어요.",
+   "blank": "सलवार",
+   "src": "made"
+  }
+ ],
  "w|सलाद": [
   {
    "text": "रात के खाने में ताज़ा सलाद था।",
@@ -41729,6 +42865,22 @@
    "blank": "सह"
   }
  ],
+ "w|सहपाठी": [
+  {
+   "text": "पता चला कि नया सहकर्मी अमित के कॉलेज के एक सहपाठी का भाई है।",
+   "en": "It turned out the new coworker is the brother of one of Amit's college classmates.",
+   "ko": "알고 보니 새 동료는 아밋 대학 동창의 동생이었어요.",
+   "blank": "सहपाठी",
+   "src": "made"
+  },
+  {
+   "text": "बोर्डिंग की लाइन में नेहा को स्कूल का एक पुराना सहपाठी मिल गया।",
+   "en": "In the boarding queue Neha ran into an old school classmate.",
+   "ko": "탑승 줄에서 네하는 학교 옛 동창을 만났어요.",
+   "blank": "सहपाठी",
+   "src": "made"
+  }
+ ],
  "w|सहमत": [
   {
    "text": "मैं तुम्हारी बात से सहमत हूँ।",
@@ -41927,6 +43079,22 @@
    "en": "The new bicycle is very light.",
    "ko": "새 자전거가 아주 가벼워.",
    "blank": "साइकिल"
+  }
+ ],
+ "w|साइज़": [
+  {
+   "text": "कंपनी की टी-शर्ट का साइज़ नए सहकर्मी को बड़ा पड़ गया।",
+   "en": "The company T-shirt was too big a size for the new coworker.",
+   "ko": "회사 티셔츠가 새 동료에게 사이즈가 컸어요.",
+   "blank": "साइज़",
+   "src": "made"
+  },
+  {
+   "text": "हैंडबैग का साइज़ नियम से बड़ा था, इसलिए नेहा को उसे चेक-इन करना पड़ा।",
+   "en": "The handbag's size was bigger than allowed, so Neha had to check it in.",
+   "ko": "핸드백 크기가 규정보다 커서 네하는 그걸 부쳐야 했어요.",
+   "blank": "साइज़",
+   "src": "made"
   }
  ],
  "w|साक्षात्कार": [
@@ -42679,6 +43847,22 @@
    "blank": "सिर्फ़"
   }
  ],
+ "w|सिल": [
+  {
+   "text": "दादी की पुरानी सिल इतनी भारी थी कि दो लोगों ने उठाई।",
+   "en": "Grandma's old grinding stone was so heavy that two people lifted it.",
+   "ko": "할머니의 낡은 맷돌판은 너무 무거워서 두 사람이 들었어요.",
+   "blank": "सिल",
+   "src": "made"
+  },
+  {
+   "text": "गाँव वाले सीन के लिए आर्ट डायरेक्टर ने पत्थर की सिल ढूँढ निकाली।",
+   "en": "The art director tracked down a stone grinding slab for the village scene.",
+   "ko": "미술 감독이 시골 장면에 쓸 돌 맷돌판을 구해 왔어요.",
+   "blank": "सिल",
+   "src": "made"
+  }
+ ],
  "w|सिलना": [
   {
    "text": "फटी कमीज़ को सिलना ज़रूरी है।",
@@ -43117,6 +44301,22 @@
    "en": "Just tell me your number.",
    "ko": "네 번호 좀 불러 줘.",
    "blank": "सुना"
+  }
+ ],
+ "w|सुनार": [
+  {
+   "text": "नए सहकर्मी का चचेरा भाई जयपुर में सुनार है।",
+   "en": "The new coworker's cousin is a goldsmith in Jaipur.",
+   "ko": "새 동료의 사촌은 자이푸르에서 금세공사로 일해요.",
+   "blank": "सुनार",
+   "src": "made"
+  },
+  {
+   "text": "नेहा के कानों के झुमके उसके पुराने पारिवारिक सुनार ने बनाए थे।",
+   "en": "Neha's earrings had been made by her family's longtime goldsmith.",
+   "ko": "네하의 귀걸이는 오래 거래한 집안 금세공사가 만든 거예요.",
+   "blank": "सुनार",
+   "src": "made"
   }
  ],
  "w|सुबह": [
@@ -43621,6 +44821,22 @@
    "en": "The stroll by the sea was memorable.",
    "ko": "바닷가 산책이 기억에 남았어.",
    "blank": "सैर"
+  }
+ ],
+ "w|सॉकेट": [
+  {
+   "text": "फ़्रिज का प्लग नई दीवार के सॉकेट में ठीक से नहीं लगा।",
+   "en": "The fridge plug didn't fit properly into the new wall socket.",
+   "ko": "냉장고 플러그가 새 벽 콘센트에 잘 맞지 않았어요.",
+   "blank": "सॉकेट",
+   "src": "made"
+  },
+  {
+   "text": "पुराने सेट का एक सॉकेट जल गया, इसलिए शूटिंग आधा घंटा रुकी।",
+   "en": "A socket on the old set burned out, so the shoot stopped for half an hour.",
+   "ko": "낡은 세트의 콘센트 하나가 타 버려서 촬영이 30분 멈췄어요.",
+   "blank": "सॉकेट",
+   "src": "made"
   }
  ],
  "w|सॉफ़्टवेयर": [
@@ -44253,6 +45469,22 @@
    "blank": "हक़"
   }
  ],
+ "w|हकीम": [
+  {
+   "text": "सर्दी लगने पर नया सहकर्मी अपने मोहल्ले के पुराने हकीम की दवा लेता है।",
+   "en": "When he catches a cold, the new coworker takes medicine from his neighbourhood's old hakim.",
+   "ko": "감기에 걸리면 새 동료는 동네 오래된 전통 의사의 약을 먹어요.",
+   "blank": "हकीम",
+   "src": "made"
+  },
+  {
+   "text": "दादी ने उड़ान से पहले नेहा को हकीम जी का बनाया काढ़ा पिलाया।",
+   "en": "Before the flight, Grandma made Neha drink a decoction prepared by the hakim.",
+   "ko": "할머니는 비행 전에 네하에게 전통 의사가 지은 탕약을 먹였어요.",
+   "blank": "हकीम",
+   "src": "made"
+  }
+ ],
  "w|हज़ार": [
   {
    "text": "मैंने हज़ार बार कहा, पर वह नहीं माना।",
@@ -44594,6 +45826,22 @@
    "en": "Priya made semolina halwa at home for her old friends.",
    "ko": "프리야는 옛 친구들을 위해 집에서 수지 할와를 만들었어요.",
    "blank": "हलवा",
+   "src": "made"
+  }
+ ],
+ "w|हलवाई": [
+  {
+   "text": "नए सहकर्मी के आने की ख़ुशी में अमित पास के हलवाई से जलेबी ले आया।",
+   "en": "To celebrate the new coworker's arrival, Amit brought jalebis from the nearby sweet maker.",
+   "ko": "새 동료가 온 기념으로 아밋은 근처 과자 가게에서 잘레비를 사 왔어요.",
+   "blank": "हलवाई",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने अपने शहर के मशहूर हलवाई की मिठाई का डिब्बा मौसी के लिए रखा था।",
+   "en": "Neha had packed a box of sweets from her city's famous sweet maker for her aunt.",
+   "ko": "네하는 이모에게 드리려고 동네 유명 과자 가게 단과자 상자를 챙겼어요.",
+   "blank": "हलवाई",
    "src": "made"
   }
  ],
@@ -45241,6 +46489,22 @@
    "blank": "हेलमेट"
   }
  ],
+ "w|हैंगर": [
+  {
+   "text": "अलमारी में कपड़े टाँगने के लिए हैंगर कम पड़ गए।",
+   "en": "There weren't enough hangers to hang the clothes in the wardrobe.",
+   "ko": "옷장에 옷을 걸 옷걸이가 모자랐어요.",
+   "blank": "हैंगर",
+   "src": "made"
+  },
+  {
+   "text": "कॉस्ट्यूम वाले कमरे में प्रिया की हर पोशाक अलग हैंगर पर टँगी थी।",
+   "en": "In the costume room, each of Priya's outfits hung on a separate hanger.",
+   "ko": "의상실에는 프리야의 옷이 하나하나 다른 옷걸이에 걸려 있었어요.",
+   "blank": "हैंगर",
+   "src": "made"
+  }
+ ],
  "w|हैज़ा": [
   {
    "text": "अस्पताल की दीवार पर हैज़ा से बचने के उपाय लिखे थे।",
@@ -45254,6 +46518,22 @@
    "en": "A poster outside the window said to avoid cholera by drinking boiled water.",
    "ko": "창밖 포스터에는 끓인 물을 마셔 콜레라를 막자고 적혀 있었어요.",
    "blank": "हैज़ा",
+   "src": "made"
+  }
+ ],
+ "w|हैंडपंप": [
+  {
+   "text": "नई कॉलोनी के पार्क के कोने में अब भी एक पुराना हैंडपंप लगा है।",
+   "en": "There is still an old hand pump in a corner of the new colony's park.",
+   "ko": "새 단지 공원 구석에는 아직도 낡은 수동 펌프가 있어요.",
+   "blank": "हैंडपंप",
+   "src": "made"
+  },
+  {
+   "text": "एक सीन में बच्चे हैंडपंप चलाकर पानी पीते हैं।",
+   "en": "In one scene children drink water by working a hand pump.",
+   "ko": "한 장면에서 아이들이 수동 펌프를 눌러 물을 마셔요.",
+   "blank": "हैंडपंप",
    "src": "made"
   }
  ],

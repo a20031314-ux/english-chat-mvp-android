@@ -85,6 +85,22 @@
    "src": "made"
   }
  ],
+ "w|ก็ตาม": [
+  {
+   "text": "ไม่ว่าเพื่อนบ้านจะรวยหรือจนก็ตาม ชัยก็ทักทายทุกคนเหมือนกัน",
+   "en": "Whether neighbours are rich or poor, Chai greets everyone the same.",
+   "ko": "이웃이 부자든 가난하든 짜이는 모두에게 똑같이 인사해요.",
+   "blank": "ก็ตาม",
+   "src": "made"
+  },
+  {
+   "text": "ไม่ว่าจะช้าแค่ไหนก็ตาม พรตั้งใจวิ่งให้ถึงเส้นชัย",
+   "en": "No matter how slow she is, Porn is determined to reach the finish line.",
+   "ko": "아무리 느려도 폰은 결승선까지 달리기로 마음먹었어요.",
+   "blank": "ก็ตาม",
+   "src": "made"
+  }
+ ],
  "w|กบ": [
   {
    "text": "กบร้องดังหลังฝน",
@@ -739,6 +755,22 @@
    "src": "made"
   }
  ],
+ "w|กล่าวถึง": [
+  {
+   "text": "เจ้าของหมาหลายคนกล่าวถึงเอกว่าเป็นหมอที่ใจเย็นมาก",
+   "en": "Many dog owners speak of Ek as a very patient vet.",
+   "ko": "많은 개 주인이 엑을 아주 차분한 수의사라고 말해요.",
+   "blank": "กล่าวถึง",
+   "src": "made"
+  },
+  {
+   "text": "ไกด์บนรถไฟกล่าวถึงประวัติสะพานเหล็กที่รถกำลังจะข้าม",
+   "en": "The guide on the train talked about the history of the iron bridge the train was about to cross.",
+   "ko": "기차 가이드는 곧 건널 철교의 역사를 이야기했어요.",
+   "blank": "กล่าวถึง",
+   "src": "made"
+  }
+ ],
  "w|กล้าหาญ": [
   {
    "text": "ทหารคนนั้นกล้าหาญมาก",
@@ -1275,6 +1307,22 @@
    "blank": "การแข่งขัน"
   }
  ],
+ "w|การคลอด": [
+  {
+   "text": "เมื่อคืนเอกอยู่ช่วยการคลอดของหมาพันธุ์เล็กจนตีสาม",
+   "en": "Last night Ek stayed to help with a small-breed dog's delivery until three in the morning.",
+   "ko": "어젯밤 엑은 새벽 세 시까지 소형견의 출산을 도왔어요.",
+   "blank": "การคลอด",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวในมือถือเล่าเรื่องการคลอดบนรถไฟที่ทุกคนช่วยกัน",
+   "en": "The news on her phone told of a birth on a train where everyone helped.",
+   "ko": "휴대폰 뉴스에 모두가 도와준 기차 안 출산 이야기가 나왔어요.",
+   "blank": "การคลอด",
+   "src": "made"
+  }
+ ],
  "w|การค้า": [
   {
    "text": "การค้าระหว่างประเทศเติบโตต่อเนื่อง",
@@ -1333,6 +1381,22 @@
    "blank": "การเดินทาง"
   }
  ],
+ "w|การตรวจ": [
+  {
+   "text": "การตรวจสุขภาพแมวประจำปีใช้เวลาไม่ถึงครึ่งชั่วโมง",
+   "en": "A cat's yearly health check takes less than half an hour.",
+   "ko": "고양이 연례 건강 검진은 삼십 분도 안 걸려요.",
+   "blank": "การตรวจ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนนั่งรถไฟไปเชียงใหม่เพื่อรับการตรวจตาที่โรงพยาบาลใหญ่",
+   "en": "Fon took the train to Chiang Mai for an eye examination at a big hospital.",
+   "ko": "폰은 큰 병원에서 눈 검사를 받으려고 기차를 타고 치앙마이에 갔어요.",
+   "blank": "การตรวจ",
+   "src": "made"
+  }
+ ],
  "w|การตลาด": [
   {
    "text": "แผนกการตลาดวางแผนแคมเปญใหม่",
@@ -1345,6 +1409,22 @@
    "en": "She studies marketing at university.",
    "ko": "그녀는 대학에서 마케팅을 배워.",
    "blank": "การตลาด"
+  }
+ ],
+ "w|การตั้งครรภ์": [
+  {
+   "text": "เอกอธิบายให้เจ้าของฟังว่าการตั้งครรภ์ของแมวใช้เวลาประมาณสองเดือน",
+   "en": "Ek explained to the owner that a cat's pregnancy lasts about two months.",
+   "ko": "엑은 주인에게 고양이 임신 기간이 두 달쯤이라고 설명했어요.",
+   "blank": "การตั้งครรภ์",
+   "src": "made"
+  },
+  {
+   "text": "ฝนอ่านบทความเรื่องการตั้งครรภ์ระหว่างรอรถไฟออก",
+   "en": "Fon read an article about pregnancy while waiting for the train to leave.",
+   "ko": "폰은 기차가 출발하기를 기다리며 임신에 관한 기사를 읽었어요.",
+   "blank": "การตั้งครรภ์",
+   "src": "made"
   }
  ],
  "w|การตัดสินใจ": [
@@ -1843,6 +1923,22 @@
    "src": "made"
   }
  ],
+ "w|ก้าว": [
+  {
+   "text": "ลูกหมาเพิ่งหัดเดิน ก้าวแรกก็ล้มลงบนโต๊ะตรวจ",
+   "en": "The puppy just learning to walk fell over on the exam table with its first step.",
+   "ko": "걸음마를 배우는 강아지가 진료대 위에서 첫걸음에 넘어졌어요.",
+   "blank": "ก้าว",
+   "src": "made"
+  },
+  {
+   "text": "ฝนก้าวลงจากรถไฟช้าๆ เพราะชานชาลาลื่น",
+   "en": "Fon stepped off the train slowly because the platform was slippery.",
+   "ko": "승강장이 미끄러워서 폰은 천천히 기차에서 내렸어요.",
+   "blank": "ก้าว",
+   "src": "made"
+  }
+ ],
  "w|กำเนิด": [
   {
    "text": "ประยุทธช่วยคุณยายคนหนึ่งขอใบสูติบัตรเพื่อยืนยันวันกำเนิดของหลาน",
@@ -2017,6 +2113,22 @@
    "en": "Have you eaten yet?",
    "ko": "밥은 먹었어?",
    "blank": "กิน"
+  }
+ ],
+ "w|กี่": [
+  {
+   "text": "ชัยถามเพื่อนบ้านใหม่ว่ามีลูกกี่คน",
+   "en": "Chai asked the new neighbour how many children she has.",
+   "ko": "짜이는 새 이웃에게 아이가 몇 명이냐고 물었어요.",
+   "blank": "กี่",
+   "src": "made"
+  },
+  {
+   "text": "พรไม่รู้ว่าตัวเองวิ่งผ่านจุดให้น้ำมากี่จุดแล้ว",
+   "en": "Porn doesn't know how many water stations she has run past.",
+   "ko": "폰은 급수대를 몇 군데나 지났는지 몰라요.",
+   "blank": "กี่",
+   "src": "made"
   }
  ],
  "w|กีฬา": [
@@ -3289,6 +3401,22 @@
    "src": "made"
   }
  ],
+ "w|ขอทาน": [
+  {
+   "text": "ชัยให้เงินขอทานหน้าตลาดทุกครั้งที่เดินผ่าน",
+   "en": "Chai gives money to the beggar in front of the market every time he walks by.",
+   "ko": "짜이는 시장 앞을 지날 때마다 거지에게 돈을 줘요.",
+   "blank": "ขอทาน",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างวิ่งผ่านสะพาน พรเห็นขอทานคนหนึ่งปรบมือให้กำลังใจ",
+   "en": "Running over the bridge, Porn saw a beggar clapping to cheer everyone on.",
+   "ko": "다리를 달려 건너는 동안 폰은 한 거지가 박수로 응원하는 걸 봤어요.",
+   "blank": "ขอทาน",
+   "src": "made"
+  }
+ ],
  "w|ข้อเท็จจริง": [
   {
    "text": "หมอฟันบอกข้อเท็จจริงว่าการแปรงฟันแรงไม่ได้ทำให้ฟันขาวขึ้น",
@@ -3751,6 +3879,22 @@
    "en": "Last year the company took a heavy loss.",
    "ko": "작년에 회사가 큰 손실을 봤어.",
    "blank": "ขาดทุน"
+  }
+ ],
+ "w|ข้าพเจ้า": [
+  {
+   "text": "จดหมายถึงเทศบาลที่ชัยเขียนขึ้นต้นว่า ข้าพเจ้าขอร้องเรียนเรื่องขยะ",
+   "en": "The letter Chai wrote to the municipality begins, I wish to complain about rubbish.",
+   "ko": "짜이가 시청에 쓴 편지는 본인은 쓰레기 문제에 대해 민원을 제기합니다로 시작해요.",
+   "blank": "ข้าพเจ้า",
+   "src": "made"
+  },
+  {
+   "text": "ในใบสมัครมีช่องให้เขียนว่า ข้าพเจ้ายอมรับความเสี่ยงจากการแข่งขัน",
+   "en": "The application form has a line to write, I accept the risks of the competition.",
+   "ko": "신청서에는 본인은 대회의 위험을 감수합니다라고 쓰는 칸이 있어요.",
+   "blank": "ข้าพเจ้า",
+   "src": "made"
   }
  ],
  "w|ข้าม": [
@@ -4837,6 +4981,22 @@
    "blank": "คนรู้จัก"
   }
  ],
+ "w|คนไร้บ้าน": [
+  {
+   "text": "ชาวบ้านช่วยกันทำอาหารไปแจกคนไร้บ้านที่สถานีรถไฟ",
+   "en": "Residents cooked together to hand out food to homeless people at the train station.",
+   "ko": "주민들은 함께 음식을 만들어 기차역의 노숙인들에게 나눠 줬어요.",
+   "blank": "คนไร้บ้าน",
+   "src": "made"
+  },
+  {
+   "text": "งานวิ่งการกุศลนี้จัดเพื่อหาเงินสร้างที่พักให้คนไร้บ้าน",
+   "en": "This charity race is held to raise money to build shelter for homeless people.",
+   "ko": "이 자선 마라톤은 노숙인 쉼터를 짓는 돈을 모으려고 열려요.",
+   "blank": "คนไร้บ้าน",
+   "src": "made"
+  }
+ ],
  "w|คนละ": [
   {
    "text": "สั่งคนละเมนูสิ",
@@ -5251,6 +5411,22 @@
    "ko": "그녀는 영어를 유창하게 해.",
    "blank": "คล่อง",
    "src": "tatoeba:8675880/pastelite en:313036/CK"
+  }
+ ],
+ "w|คลอด": [
+  {
+   "text": "ภรรยาของเอกเพิ่งคลอด เพื่อนที่คลินิกเลยซื้อของขวัญให้ทารกแรกเกิด",
+   "en": "Ek's wife just gave birth, so his clinic colleagues bought a gift for the newborn.",
+   "ko": "엑의 아내가 막 출산해서 병원 동료들이 신생아 선물을 샀어요.",
+   "blank": "คลอด",
+   "src": "made"
+  },
+  {
+   "text": "พี่สาวของฝนจะคลอดสัปดาห์หน้า ฝนเลยรีบกลับบ้าน",
+   "en": "Fon's older sister will give birth next week, so Fon is hurrying home.",
+   "ko": "폰의 언니가 다음 주에 출산해서 폰은 서둘러 집에 가요.",
+   "blank": "คลอด",
+   "src": "made"
   }
  ],
  "w|คล้าย": [
@@ -5853,6 +6029,22 @@
    "en": "High blood pressure needs caution.",
    "ko": "혈압이 높으면 조심해야 해.",
    "blank": "ความดัน"
+  }
+ ],
+ "w|ความดันโลหิต": [
+  {
+   "text": "แมวแก่ตัวนี้มีปัญหาความดันโลหิตสูง ต้องกินยาทุกวัน",
+   "en": "This old cat has high blood pressure and needs medicine every day.",
+   "ko": "이 늙은 고양이는 고혈압이 있어서 매일 약을 먹어야 해요.",
+   "blank": "ความดันโลหิต",
+   "src": "made"
+  },
+  {
+   "text": "ผู้โดยสารคนหนึ่งเวียนหัว เจ้าหน้าที่รถไฟเลยวัดความดันโลหิตให้",
+   "en": "A passenger felt dizzy, so the train staff measured his blood pressure.",
+   "ko": "한 승객이 어지러워해서 기차 직원이 혈압을 재 줬어요.",
+   "blank": "ความดันโลหิต",
+   "src": "made"
   }
  ],
  "w|ความดี": [
@@ -6965,6 +7157,22 @@
    "blank": "คอนโด"
   }
  ],
+ "w|คอนแทคเลนส์": [
+  {
+   "text": "เอกเลิกใส่คอนแทคเลนส์ตอนทำงาน เพราะขนแมวเข้าตาบ่อย",
+   "en": "Ek stopped wearing contact lenses at work because cat hair often gets in his eyes.",
+   "ko": "엑은 고양이 털이 자주 눈에 들어가서 일할 때 콘택트렌즈를 안 껴요.",
+   "blank": "คอนแทคเลนส์",
+   "src": "made"
+  },
+  {
+   "text": "อากาศในรถไฟแห้งมาก ฝนเลยถอดคอนแทคเลนส์ก่อนนอน",
+   "en": "The air on the train is very dry, so Fon took out her contact lenses before sleeping.",
+   "ko": "기차 안 공기가 아주 건조해서 폰은 자기 전에 콘택트렌즈를 뺐어요.",
+   "blank": "คอนแทคเลนส์",
+   "src": "made"
+  }
+ ],
  "w|คอมพิวเตอร์": [
   {
    "text": "คอมพิวเตอร์พังอีกแล้ว",
@@ -6977,6 +7185,22 @@
    "en": "Turn on the computer for me.",
    "ko": "컴퓨터 켜 줘.",
    "blank": "คอมพิวเตอร์"
+  }
+ ],
+ "w|คอย": [
+  {
+   "text": "ชัยคอยดูบ้านให้เพื่อนบ้านตอนเขาไปต่างจังหวัด",
+   "en": "Chai keeps an eye on the house for his neighbour when he goes upcountry.",
+   "ko": "짜이는 이웃이 지방에 갈 때 집을 봐 줘요.",
+   "blank": "คอย",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของพรยืนคอยอยู่ที่เส้นชัยตั้งแต่เช้า",
+   "en": "Porn's mother had been waiting at the finish line since morning.",
+   "ko": "폰의 엄마는 아침부터 결승선에서 기다리고 있었어요.",
+   "blank": "คอย",
+   "src": "made"
   }
  ],
  "w|ค่อย": [
@@ -8139,6 +8363,22 @@
    "en": "The machinery needs urgent repairs.",
    "ko": "기계를 급히 고쳐야 해.",
    "blank": "เครื่องจักร"
+  }
+ ],
+ "w|เครื่องช่วยฟัง": [
+  {
+   "text": "คุณยายเจ้าของนกแก้วลืมใส่เครื่องช่วยฟัง เอกเลยต้องพูดเสียงดัง",
+   "en": "The old woman who owns the parrot forgot her hearing aid, so Ek had to speak loudly.",
+   "ko": "앵무새 주인 할머니가 보청기를 깜빡해서 엑은 크게 말해야 했어요.",
+   "blank": "เครื่องช่วยฟัง",
+   "src": "made"
+  },
+  {
+   "text": "คุณตาที่นั่งตรงข้ามฝนปรับเครื่องช่วยฟังตอนประกาศชื่อสถานี",
+   "en": "The grandfather opposite Fon adjusted his hearing aid when the station name was announced.",
+   "ko": "폰 맞은편 할아버지는 역 이름이 안내될 때 보청기를 조절했어요.",
+   "blank": "เครื่องช่วยฟัง",
+   "src": "made"
   }
  ],
  "w|เครื่องซักผ้า": [
@@ -9993,6 +10233,22 @@
    "src": "made"
   }
  ],
+ "w|เจริญ": [
+  {
+   "text": "ชัยอวยพรให้ร้านใหม่ของเพื่อนบ้านเจริญรุ่งเรือง",
+   "en": "Chai wished the neighbour's new shop prosperity.",
+   "ko": "짜이는 이웃의 새 가게가 번창하길 빌었어요.",
+   "blank": "เจริญ",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนปล่อยตัว พระสงฆ์อวยชัยให้นักวิ่งทุกคนเจริญด้วยสุขภาพ",
+   "en": "Before the start, a monk came to bless the runners with good health.",
+   "ko": "출발 전에 스님이 와서 러너들의 건강을 축복해 줬어요.",
+   "blank": "เจริญ",
+   "src": "made"
+  }
+ ],
  "w|เจอ": [
   {
    "text": "เจอแล้ว",
@@ -10019,6 +10275,22 @@
    "en": "He's the owner of this company.",
    "ko": "그가 이 회사 소유주야.",
    "blank": "เจ้าของ"
+  }
+ ],
+ "w|เจ้าของบ้าน": [
+  {
+   "text": "เจ้าของบ้านหลังสีฟ้าใจดี ชอบแบ่งมะม่วงให้ทั้งซอย",
+   "en": "The owner of the blue house is kind and likes sharing mangoes with the whole lane.",
+   "ko": "파란 집 주인은 착해서 골목 전체에 망고를 나눠 주는 걸 좋아해요.",
+   "blank": "เจ้าของบ้าน",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าของบ้านริมเส้นทางตั้งโต๊ะแจกน้ำให้นักวิ่งฟรี",
+   "en": "A homeowner along the route set up a table giving runners free water.",
+   "ko": "코스 옆 집주인이 탁자를 놓고 러너들에게 물을 무료로 나눠 줬어요.",
+   "blank": "เจ้าของบ้าน",
+   "src": "made"
   }
  ],
  "w|เจ้าชาย": [
@@ -11337,6 +11609,22 @@
    "blank": "ช้าลง"
   }
  ],
+ "w|ชาว": [
+  {
+   "text": "ชาวซอยไปร่วมงานสวดศพคุณยายบ้านหัวมุมที่วัด",
+   "en": "The lane's residents went to the funeral chanting for the grandmother from the corner house at the temple.",
+   "ko": "골목 사람들은 절에서 열린 모퉁이 집 할머니의 장례 독경에 함께 갔어요.",
+   "blank": "ชาว",
+   "src": "made"
+  },
+  {
+   "text": "ชาวต่างชาติหลายคนบินมาร่วมงานวิ่งที่เชียงใหม่",
+   "en": "Many foreigners flew in to join the race in Chiang Mai.",
+   "ko": "많은 외국인이 치앙마이 마라톤에 참가하려고 날아왔어요.",
+   "blank": "ชาว",
+   "src": "made"
+  }
+ ],
  "w|ชาวต่างชาติ": [
   {
    "text": "ชาวต่างชาติถามทางไปวัด",
@@ -11497,6 +11785,22 @@
    "en": "Don't point at other people.",
    "ko": "남을 손가락질하지 마.",
    "blank": "ชี้"
+  }
+ ],
+ "w|ชีพจร": [
+  {
+   "text": "เอกจับชีพจรกระต่ายที่ขาหลัง เพราะหัวใจมันเต้นเร็วมาก",
+   "en": "Ek took the rabbit's pulse at its back leg because its heart beats very fast.",
+   "ko": "토끼는 심장이 아주 빨리 뛰어서 엑은 뒷다리에서 맥박을 쟀어요.",
+   "blank": "ชีพจร",
+   "src": "made"
+  },
+  {
+   "text": "นาฬิกาของฝนแจ้งว่าชีพจรเต้นเร็วตอนวิ่งไล่ขึ้นรถไฟ",
+   "en": "Fon's watch showed her pulse racing when she ran to catch the train.",
+   "ko": "폰의 시계는 기차를 타려고 뛰었을 때 맥박이 빨라졌다고 알려 줬어요.",
+   "blank": "ชีพจร",
+   "src": "made"
   }
  ],
  "w|ชีววิทยา": [
@@ -11726,6 +12030,22 @@
    "en": "Pranee packed kitchen things, such as plates, bowls and pots, in separate boxes.",
    "ko": "쁘라니는 접시, 그릇, 냄비 같은 부엌 살림을 따로 상자에 담았어요.",
    "blank": "เช่น",
+   "src": "made"
+  }
+ ],
+ "w|เช่นนี้": [
+  {
+   "text": "ชัยไม่เคยเห็นเพื่อนบ้านทะเลาะกันรุนแรงเช่นนี้มาก่อน",
+   "en": "Chai had never seen the neighbours argue so fiercely like this before.",
+   "ko": "짜이는 이웃들이 이렇게 심하게 싸우는 걸 처음 봤어요.",
+   "blank": "เช่นนี้",
+   "src": "made"
+  },
+  {
+   "text": "พรไม่คิดว่าจะวิ่งได้ไกลเช่นนี้ในปีแรก",
+   "en": "Porn didn't think she could run this far in her first year.",
+   "ko": "폰은 첫해에 이렇게 멀리 달릴 수 있을 줄 몰랐어요.",
+   "blank": "เช่นนี้",
    "src": "made"
   }
  ],
@@ -13265,6 +13585,22 @@
    "blank": "เด็กชาย"
   }
  ],
+ "w|เด็กนักเรียน": [
+  {
+   "text": "เด็กนักเรียนในซอยเดินไปโรงเรียนพร้อมกันทุกเช้า",
+   "en": "The schoolchildren in the lane walk to school together every morning.",
+   "ko": "골목 학생들은 매일 아침 함께 걸어서 학교에 가요.",
+   "blank": "เด็กนักเรียน",
+   "src": "made"
+  },
+  {
+   "text": "เด็กนักเรียนยืนถือป้ายเชียร์นักวิ่งข้างถนน",
+   "en": "Schoolchildren stood by the road holding signs to cheer on the runners.",
+   "ko": "학생들이 길가에서 피켓을 들고 러너들을 응원했어요.",
+   "blank": "เด็กนักเรียน",
+   "src": "made"
+  }
+ ],
  "w|เด็กผู้ชาย": [
   {
    "text": "เด็กผู้ชายคนนั้นวิ่งเร็วมาก",
@@ -14485,6 +14821,22 @@
    "blank": "ตอนแรก"
   }
  ],
+ "w|ต่อเนื่อง": [
+  {
+   "text": "แมวตัวนี้ต้องกินยาต่อเนื่องอีกสองสัปดาห์",
+   "en": "This cat has to keep taking medicine for another two weeks.",
+   "ko": "이 고양이는 이 주 더 계속 약을 먹어야 해요.",
+   "blank": "ต่อเนื่อง",
+   "src": "made"
+  },
+  {
+   "text": "ฝนนั่งรถไฟต่อเนื่องสิบสองชั่วโมงโดยไม่ลงเลย",
+   "en": "Fon rode the train for twelve hours straight without getting off.",
+   "ko": "폰은 한 번도 내리지 않고 열두 시간 연속으로 기차를 탔어요.",
+   "blank": "ต่อเนื่อง",
+   "src": "made"
+  }
+ ],
  "w|ตอบ": [
   {
    "text": "ตอบฉันหน่อย",
@@ -14801,6 +15153,22 @@
    "en": "We've known each other since we were kids.",
    "ko": "어릴 때부터 알았어.",
    "blank": "ตั้งแต่"
+  }
+ ],
+ "w|ตั้งท้อง": [
+  {
+   "text": "เจ้าของเพิ่งรู้ว่าแมวของตัวเองตั้งท้องได้เกือบเดือนแล้ว",
+   "en": "The owner just found out her cat has been pregnant for almost a month.",
+   "ko": "주인은 자기 고양이가 임신한 지 거의 한 달이 됐다는 걸 방금 알았어요.",
+   "blank": "ตั้งท้อง",
+   "src": "made"
+  },
+  {
+   "text": "ฝนลุกให้ผู้หญิงที่ตั้งท้องนั่งแทน",
+   "en": "Fon got up to let a pregnant woman have her seat.",
+   "ko": "폰은 임신한 여자에게 자리를 양보했어요.",
+   "blank": "ตั้งท้อง",
+   "src": "made"
   }
  ],
  "w|ตัด": [
@@ -15292,6 +15660,22 @@
    "en": "Many customers love Malee's chili dip so much that they keep coming back for more.",
    "ko": "많은 손님들이 말리의 고추 소스에 반해서 다시 사러 와요.",
    "blank": "ติดใจ",
+   "src": "made"
+  }
+ ],
+ "w|ติดเชื้อ": [
+  {
+   "text": "แผลที่หูหมาติดเชื้อ เอกจึงให้ยาฆ่าเชื้อไปกิน",
+   "en": "The wound on the dog's ear got infected, so Ek gave it antibiotics.",
+   "ko": "개의 귀 상처가 감염돼서 엑은 항생제를 줬어요.",
+   "blank": "ติดเชื้อ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนล้างมือบ่อยๆ บนรถไฟเพราะกลัวติดเชื้อหวัด",
+   "en": "Fon washes her hands often on the train because she's afraid of catching a cold.",
+   "ko": "폰은 감기에 옮을까 봐 기차에서 손을 자주 씻어요.",
+   "blank": "ติดเชื้อ",
    "src": "made"
   }
  ],
@@ -16201,6 +16585,22 @@
    "en": "Humble people often earn respect.",
    "ko": "겸손한 사람은 존경을 받기 쉬워.",
    "blank": "ถ่อมตัว"
+  }
+ ],
+ "w|ถอย": [
+  {
+   "text": "ชัยถอยรถออกจากบ้านช้าๆ เพราะเด็กๆ เล่นอยู่ในซอย",
+   "en": "Chai reversed out of his house slowly because children were playing in the lane.",
+   "ko": "짜이는 골목에서 아이들이 놀고 있어서 천천히 차를 후진해 나왔어요.",
+   "blank": "ถอย",
+   "src": "made"
+  },
+  {
+   "text": "พรเจ็บเข่ามากจนเกือบจะถอยออกจากการแข่งขัน",
+   "en": "Porn's knee hurt so much that she almost pulled out of the race.",
+   "ko": "폰은 무릎이 너무 아파서 대회를 거의 포기할 뻔했어요.",
+   "blank": "ถอย",
+   "src": "made"
   }
  ],
  "w|ถังขยะ": [
@@ -17221,6 +17621,22 @@
    "blank": "ทั้งหมด"
   }
  ],
+ "w|ทั้งหลาย": [
+  {
+   "text": "ชัยขอบคุณเพื่อนบ้านทั้งหลายที่ช่วยกันขนของตอนน้ำท่วม",
+   "en": "Chai thanked all the neighbours who helped move things during the flood.",
+   "ko": "짜이는 홍수 때 짐 옮기는 걸 도와준 이웃 모두에게 고마워했어요.",
+   "blank": "ทั้งหลาย",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดงานขอบคุณอาสาสมัครทั้งหลายที่ตื่นมาตั้งแต่ตีสอง",
+   "en": "The organisers thanked all the volunteers who got up from two in the morning.",
+   "ko": "주최 측은 새벽 두 시부터 일어난 모든 자원봉사자에게 감사했어요.",
+   "blank": "ทั้งหลาย",
+   "src": "made"
+  }
+ ],
  "w|ทันใด": [
   {
    "text": "ทันใดนั้นไฟก็ดับ",
@@ -17627,6 +18043,22 @@
    "en": "Hold the baby gently.",
    "ko": "아기를 살살 안아.",
    "blank": "ทารก"
+  }
+ ],
+ "w|ทารกแรกเกิด": [
+  {
+   "text": "ภรรยาของเอกเพิ่งคลอด เพื่อนที่คลินิกเลยซื้อของขวัญให้ทารกแรกเกิด",
+   "en": "Ek's wife just gave birth, so his clinic colleagues bought a gift for the newborn.",
+   "ko": "엑의 아내가 막 출산해서 병원 동료들이 신생아 선물을 샀어요.",
+   "blank": "ทารกแรกเกิด",
+   "src": "made"
+  },
+  {
+   "text": "ตู้ข้างๆ มีพ่อแม่อุ้มทารกแรกเกิดกลับบ้านต่างจังหวัด",
+   "en": "In the next carriage, parents were carrying their newborn home to the provinces.",
+   "ko": "옆 칸에는 부모가 신생아를 안고 지방 집으로 가고 있었어요.",
+   "blank": "ทารกแรกเกิด",
+   "src": "made"
   }
  ],
  "w|ท่าเรือ": [
@@ -18169,6 +18601,22 @@
    "src": "made"
   }
  ],
+ "w|ที่รัก": [
+  {
+   "text": "ภรรยาเรียกชัยว่าที่รักต่อหน้าเพื่อนบ้าน ชัยเลยหน้าแดง",
+   "en": "Chai's wife called him darling in front of the neighbours, so Chai blushed.",
+   "ko": "아내가 이웃들 앞에서 짜이를 자기라고 불러서 짜이는 얼굴이 빨개졌어요.",
+   "blank": "ที่รัก",
+   "src": "made"
+  },
+  {
+   "text": "แฟนของพรตะโกนว่า สู้ๆ นะที่รัก ตอนพรวิ่งผ่าน",
+   "en": "Porn's partner shouted, go, darling, as Porn ran past.",
+   "ko": "폰이 지나갈 때 애인이 자기야 힘내 하고 외쳤어요.",
+   "blank": "ที่รัก",
+   "src": "made"
+  }
+ ],
  "w|ทีละ": [
   {
    "text": "เอกตรวจรูปข่าวทีละรูปก่อนเลือกขึ้นหน้าหนึ่ง",
@@ -18603,6 +19051,22 @@
    "blank": "เท่ากัน"
   }
  ],
+ "w|เท่ากับ": [
+  {
+   "text": "ยาหนึ่งเม็ดสำหรับหมาตัวนี้เท่ากับครึ่งเม็ดสำหรับแมว",
+   "en": "One tablet for this dog equals half a tablet for a cat.",
+   "ko": "이 개에게 주는 알약 한 알은 고양이 반 알과 같아요.",
+   "blank": "เท่ากับ",
+   "src": "made"
+  },
+  {
+   "text": "ค่าตั๋วนอนชั้นสองเท่ากับค่าเครื่องบินราคาถูกเลย",
+   "en": "A second-class sleeper ticket costs as much as a budget flight.",
+   "ko": "이등 침대칸 표값은 저가 항공권과 맞먹어요.",
+   "blank": "เท่ากับ",
+   "src": "made"
+  }
+ ],
  "w|เท่านั้น": [
   {
    "text": "แค่นี้เท่านั้น",
@@ -18729,6 +19193,38 @@
    "en": "This taxi has a kind driver.",
    "ko": "이 택시는 기사가 친절해.",
    "blank": "แท็กซี่"
+  }
+ ],
+ "w|แท้ง": [
+  {
+   "text": "เอกบอกว่าแม่หมาที่เครียดมากอาจแท้งลูกได้",
+   "en": "Ek said a mother dog under a lot of stress can miscarry.",
+   "ko": "엑은 스트레스를 많이 받은 어미 개는 유산할 수 있다고 했어요.",
+   "blank": "แท้ง",
+   "src": "made"
+  },
+  {
+   "text": "ในนิยายที่ฝนอ่านบนรถไฟ นางเอกแท้งลูกแล้วต้องเริ่มชีวิตใหม่",
+   "en": "In the novel Fon reads on the train, the heroine miscarries and has to start a new life.",
+   "ko": "폰이 기차에서 읽는 소설에서 여주인공은 유산한 뒤 새 삶을 시작해야 해요.",
+   "blank": "แท้ง",
+   "src": "made"
+  }
+ ],
+ "w|แท้จริง": [
+  {
+   "text": "เอกบอกว่าสาเหตุที่แท้จริงที่แมวไม่กินข้าวคือฟันผุ",
+   "en": "Ek said the real reason the cat wasn't eating was a rotten tooth.",
+   "ko": "엑은 고양이가 밥을 안 먹은 진짜 이유가 충치라고 했어요.",
+   "blank": "แท้จริง",
+   "src": "made"
+  },
+  {
+   "text": "ฝนบอกว่าเสน่ห์ที่แท้จริงของรถไฟคือได้คุยกับคนแปลกหน้า",
+   "en": "Fon says the true charm of trains is getting to talk with strangers.",
+   "ko": "폰은 기차의 진짜 매력이 낯선 사람과 이야기하는 거라고 해요.",
+   "blank": "แท้จริง",
+   "src": "made"
   }
  ],
  "w|แทน": [
@@ -19285,6 +19781,22 @@
    "blank": "น่ะ"
   }
  ],
+ "w|นัก": [
+  {
+   "text": "บ้านชัยอยู่ไม่ไกลนักจากตลาด เดินไปได้สบาย",
+   "en": "Chai's house isn't very far from the market; it's an easy walk.",
+   "ko": "짜이네 집은 시장에서 그리 멀지 않아서 걸어가기 편해요.",
+   "blank": "นัก",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงสุดท้ายของเส้นทางชันนัก พรต้องเดินขึ้นเนิน",
+   "en": "The last part of the route is very steep, so Porn had to walk up the hill.",
+   "ko": "코스 마지막 구간이 아주 가팔라서 폰은 언덕을 걸어 올라가야 했어요.",
+   "blank": "นัก",
+   "src": "made"
+  }
+ ],
  "w|นักการเมือง": [
   {
    "text": "สมชายบอกเพื่อนร่วมงานว่าไม่อยากคุยเรื่องนักการเมืองในที่ทำงาน",
@@ -19637,6 +20149,22 @@
    "en": "It rained that day.",
    "ko": "그날은 비가 왔어.",
    "blank": "นั้น"
+  }
+ ],
+ "w|นั่นเอง": [
+  {
+   "text": "หมาเกาตัวทั้งคืน สาเหตุคือหมัดนั่นเอง",
+   "en": "The dog scratched itself all night, and the cause was fleas, of course.",
+   "ko": "개가 밤새 몸을 긁었는데 원인은 바로 벼룩이었어요.",
+   "blank": "นั่นเอง",
+   "src": "made"
+  },
+  {
+   "text": "เสียงดังทั้งคืนที่ฝนได้ยินคือเสียงล้อรถไฟนั่นเอง",
+   "en": "The noise Fon heard all night was simply the train's wheels.",
+   "ko": "폰이 밤새 들은 큰 소리는 바로 기차 바퀴 소리였어요.",
+   "blank": "นั่นเอง",
+   "src": "made"
   }
  ],
  "w|นับ": [
@@ -21021,6 +21549,22 @@
    "en": "Put it in the bag.",
    "ko": "봉지에 넣어.",
    "blank": "ใน"
+  }
+ ],
+ "w|ในขณะที่": [
+  {
+   "text": "ในขณะที่ชัยรดน้ำต้นไม้ เพื่อนบ้านก็เดินมาคุยด้วย",
+   "en": "While Chai was watering the plants, a neighbour walked over to chat.",
+   "ko": "짜이가 화분에 물을 주는 동안 이웃이 와서 말을 걸었어요.",
+   "blank": "ในขณะที่",
+   "src": "made"
+  },
+  {
+   "text": "ในขณะที่คนอื่นหยุดถ่ายรูป พรยังวิ่งต่อไม่หยุด",
+   "en": "While others stopped to take photos, Porn kept running.",
+   "ko": "다른 사람들이 사진을 찍으려고 멈추는 동안 폰은 쉬지 않고 계속 달렸어요.",
+   "blank": "ในขณะที่",
+   "src": "made"
   }
  ],
  "w|ในที่สุด": [
@@ -22465,6 +23009,22 @@
    "blank": "ประกอบ"
   }
  ],
+ "w|ประกอบด้วย": [
+  {
+   "text": "คลินิกของเอกประกอบด้วยห้องตรวจสองห้องและห้องผ่าตัดหนึ่งห้อง",
+   "en": "Ek's clinic consists of two exam rooms and one operating room.",
+   "ko": "엑의 병원은 진료실 두 개와 수술실 하나로 되어 있어요.",
+   "blank": "ประกอบด้วย",
+   "src": "made"
+  },
+  {
+   "text": "ขบวนรถไฟนี้ประกอบด้วยตู้นอนและตู้เสบียง",
+   "en": "This train consists of sleeper carriages and a dining car.",
+   "ko": "이 열차는 침대칸과 식당칸으로 이루어져 있어요.",
+   "blank": "ประกอบด้วย",
+   "src": "made"
+  }
+ ],
  "w|ประกัน": [
   {
    "text": "ซื้อประกันก่อนเดินทางไกล",
@@ -22535,6 +23095,22 @@
    "en": "This is my usual coffee shop.",
    "ko": "여기가 내 단골 카페야.",
    "blank": "ประจำ"
+  }
+ ],
+ "w|ประจำเดือน": [
+  {
+   "text": "พยาบาลที่คลินิกขอลาครึ่งวันเพราะปวดท้องประจำเดือน",
+   "en": "The clinic nurse asked for half a day off because of period cramps.",
+   "ko": "병원 간호사가 생리통 때문에 반차를 냈어요.",
+   "blank": "ประจำเดือน",
+   "src": "made"
+  },
+  {
+   "text": "ฝนพกยาแก้ปวดเผื่อมีประจำเดือนระหว่างเดินทาง",
+   "en": "Fon carries painkillers in case her period comes during the trip.",
+   "ko": "폰은 여행 중에 생리를 할까 봐 진통제를 챙겨요.",
+   "blank": "ประจำเดือน",
+   "src": "made"
   }
  ],
  "w|ประชากร": [
@@ -24577,6 +25153,22 @@
    "src": "made"
   }
  ],
+ "w|ผลตรวจ": [
+  {
+   "text": "เอกโทรบอกเจ้าของว่าผลตรวจเลือดของหมาปกติดี",
+   "en": "Ek phoned the owner to say the dog's blood test results were normal.",
+   "ko": "엑은 주인에게 전화해 개의 혈액 검사 결과가 정상이라고 알렸어요.",
+   "blank": "ผลตรวจ",
+   "src": "made"
+  },
+  {
+   "text": "ระหว่างทาง ฝนได้ข้อความจากโรงพยาบาลว่าผลตรวจออกแล้ว",
+   "en": "On the way, Fon got a message from the hospital saying her results were out.",
+   "ko": "가는 길에 폰은 병원에서 검사 결과가 나왔다는 메시지를 받았어요.",
+   "blank": "ผลตรวจ",
+   "src": "made"
+  }
+ ],
  "w|ผลประโยชน์": [
   {
    "text": "เอกขุดคุ้ยว่าใครได้ผลประโยชน์จากโครงการสร้างถนนสายใหม่",
@@ -24875,6 +25467,22 @@
    "src": "made"
   }
  ],
+ "w|ผ้าพันแผล": [
+  {
+   "text": "เอกเปลี่ยนผ้าพันแผลที่ขาหมาจรตัวนั้นทุกเช้า",
+   "en": "Ek changes the bandage on that stray dog's leg every morning.",
+   "ko": "엑은 매일 아침 그 떠돌이 개의 다리 붕대를 갈아 줘요.",
+   "blank": "ผ้าพันแผล",
+   "src": "made"
+  },
+  {
+   "text": "ผู้โดยสารข้างฝนมีผ้าพันแผลพันข้อมืออยู่",
+   "en": "The passenger next to Fon has a bandage wrapped around his wrist.",
+   "ko": "폰 옆 승객은 손목에 붕대를 감고 있어요.",
+   "blank": "ผ้าพันแผล",
+   "src": "made"
+  }
+ ],
  "w|ผ้าห่ม": [
   {
    "text": "คืนนี้หนาวห่มผ้าห่มหนาๆ",
@@ -25123,6 +25731,22 @@
    "blank": "ผู้ชาย"
   }
  ],
+ "w|ผู้เช่า": [
+  {
+   "text": "ผู้เช่าห้องชั้นล่างเปิดเพลงดังทุกคืน ชัยเลยไปขอให้เบาลง",
+   "en": "The tenant downstairs plays loud music every night, so Chai went to ask him to turn it down.",
+   "ko": "아래층 세입자가 매일 밤 음악을 크게 틀어서 짜이가 줄여 달라고 부탁하러 갔어요.",
+   "blank": "ผู้เช่า",
+   "src": "made"
+  },
+  {
+   "text": "พรเป็นผู้เช่าคอนโดใกล้สวนสาธารณะเพื่อจะได้ซ้อมวิ่งทุกเช้า",
+   "en": "Porn rents a condo near the park so she can train every morning.",
+   "ko": "폰은 매일 아침 달리기 연습을 하려고 공원 근처 콘도에 세 들어 살아요.",
+   "blank": "ผู้เช่า",
+   "src": "made"
+  }
+ ],
  "w|ผู้เชี่ยวชาญ": [
   {
    "text": "ผู้เชี่ยวชาญอธิบายเรื่องนี้อย่างชัด",
@@ -25241,6 +25865,38 @@
    "blank": "ผู้นำ"
   }
  ],
+ "w|ผู้บริสุทธิ์": [
+  {
+   "text": "เพื่อนบ้านของชัยถูกสงสัยอยู่หลายวัน สุดท้ายตำรวจก็บอกว่าเขาเป็นผู้บริสุทธิ์",
+   "en": "Chai's neighbour was suspected for days, but the police finally said he was innocent.",
+   "ko": "짜이의 이웃은 며칠 동안 의심받았지만 결국 경찰은 그가 결백하다고 했어요.",
+   "blank": "ผู้บริสุทธิ์",
+   "src": "made"
+  },
+  {
+   "text": "พรอ่านนิยายเรื่องผู้บริสุทธิ์ที่ติดคุกระหว่างนั่งรถไปงานวิ่ง",
+   "en": "On the way to the race, Porn read a novel about an innocent person who went to prison.",
+   "ko": "폰은 대회장에 가는 차 안에서 억울하게 감옥에 간 사람에 관한 소설을 읽었어요.",
+   "blank": "ผู้บริสุทธิ์",
+   "src": "made"
+  }
+ ],
+ "w|ผู้บาดเจ็บ": [
+  {
+   "text": "รถชนกันหน้าปากซอย ชัยวิ่งไปช่วยดูแลผู้บาดเจ็บก่อนรถพยาบาลมา",
+   "en": "Cars crashed at the mouth of the lane, and Chai ran to help the injured before the ambulance came.",
+   "ko": "골목 입구에서 차 사고가 나서 짜이는 구급차가 오기 전에 다친 사람을 돌보러 뛰어갔어요.",
+   "blank": "ผู้บาดเจ็บ",
+   "src": "made"
+  },
+  {
+   "text": "ทีมแพทย์ประจำจุดพักคอยดูแลผู้บาดเจ็บระหว่างทาง",
+   "en": "The medical team at the rest point looks after the injured along the way.",
+   "ko": "쉼터의 의료팀이 코스 중간에 다친 사람들을 돌봐요.",
+   "blank": "ผู้บาดเจ็บ",
+   "src": "made"
+  }
+ ],
  "w|ผู้ป่วย": [
   {
    "text": "ผู้ป่วยต้องพักผ่อนมากๆ",
@@ -25285,6 +25941,38 @@
    "src": "made"
   }
  ],
+ "w|ผู้รอดชีวิต": [
+  {
+   "text": "ลุงบ้านตรงข้ามเป็นผู้รอดชีวิตจากไฟไหม้ตลาดเมื่อหลายปีก่อน",
+   "en": "The uncle across the street is a survivor of the market fire years ago.",
+   "ko": "맞은편 집 아저씨는 몇 년 전 시장 화재에서 살아남은 사람이에요.",
+   "blank": "ผู้รอดชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "นักวิ่งคนหนึ่งในกลุ่มของพรเป็นผู้รอดชีวิตจากมะเร็ง",
+   "en": "One runner in Porn's group is a cancer survivor.",
+   "ko": "폰의 그룹에 있는 한 러너는 암 생존자예요.",
+   "blank": "ผู้รอดชีวิต",
+   "src": "made"
+  }
+ ],
+ "w|ผู้ร้าย": [
+  {
+   "text": "ชัยดูข่าวตำรวจจับผู้ร้ายที่ขโมยรถในซอยข้างๆ ได้แล้ว",
+   "en": "Chai watched the news that police caught the culprit who stole cars in the next lane.",
+   "ko": "짜이는 옆 골목에서 차를 훔친 범인을 경찰이 잡았다는 뉴스를 봤어요.",
+   "blank": "ผู้ร้าย",
+   "src": "made"
+  },
+  {
+   "text": "ในหนังที่พรดูก่อนนอน ผู้ร้ายวิ่งหนีตำรวจทั้งเมืองเหมือนวิ่งมาราธอน",
+   "en": "In the film Porn watched before bed, the villain ran from the police across the city like a marathon.",
+   "ko": "폰이 자기 전에 본 영화에서 악당은 마라톤하듯 도시 곳곳으로 경찰을 피해 달렸어요.",
+   "blank": "ผู้ร้าย",
+   "src": "made"
+  }
+ ],
  "w|ผู้สูงอายุ": [
   {
    "text": "ผู้สูงอายุควรเดินเล่นทุกวัน",
@@ -25297,6 +25985,22 @@
    "en": "The bus has seats for elderly people.",
    "ko": "버스에 노인 전용 자리가 있어.",
    "blank": "ผู้สูงอายุ"
+  }
+ ],
+ "w|ผู้เสียชีวิต": [
+  {
+   "text": "ข่าวเช้านี้รายงานว่าอุบัติเหตุบนทางด่วนไม่มีผู้เสียชีวิต",
+   "en": "This morning's news reported no deaths in the expressway accident.",
+   "ko": "오늘 아침 뉴스는 고속도로 사고에 사망자가 없었다고 보도했어요.",
+   "blank": "ผู้เสียชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "พรอ่านข่าวงานวิ่งต่างประเทศที่มีผู้เสียชีวิตเพราะอากาศร้อนจัด",
+   "en": "Porn read news of a race abroad where people died because of the extreme heat.",
+   "ko": "폰은 폭염 때문에 사망자가 나온 해외 마라톤 기사를 읽었어요.",
+   "blank": "ผู้เสียชีวิต",
+   "src": "made"
   }
  ],
  "w|ผู้หญิง": [
@@ -25325,6 +26029,22 @@
    "en": "What did the adults say?",
    "ko": "어른들이 뭐라고 하셔?",
    "blank": "ผู้ใหญ่"
+  }
+ ],
+ "w|ผู้อพยพ": [
+  {
+   "text": "ชัยบริจาคเสื้อผ้าเก่าให้ศูนย์ช่วยเหลือผู้อพยพจากน้ำท่วม",
+   "en": "Chai donated old clothes to a centre helping people evacuated from the floods.",
+   "ko": "짜이는 홍수 이재민을 돕는 센터에 헌 옷을 기부했어요.",
+   "blank": "ผู้อพยพ",
+   "src": "made"
+  },
+  {
+   "text": "รายได้จากงานวิ่งครั้งนี้จะมอบให้ค่ายผู้อพยพที่ชายแดน",
+   "en": "The proceeds from this race will be given to a refugee camp at the border.",
+   "ko": "이번 대회 수익금은 국경의 피란민 캠프에 기부될 거예요.",
+   "blank": "ผู้อพยพ",
+   "src": "made"
   }
  ],
  "w|ผู้อ่าน": [
@@ -25769,6 +26489,22 @@
    "src": "made"
   }
  ],
+ "w|พ้น": [
+  {
+   "text": "หลังผ่าตัดสามวัน ลูกหมาก็พ้นขีดอันตรายแล้ว",
+   "en": "Three days after surgery, the puppy is out of danger.",
+   "ko": "수술 사흘 뒤 강아지는 위험한 고비를 넘겼어요.",
+   "blank": "พ้น",
+   "src": "made"
+  },
+  {
+   "text": "พอรถไฟพ้นเขตเมือง ฝนก็เห็นแต่ทุ่งนาเขียว",
+   "en": "Once the train left the city limits, Fon saw nothing but green rice fields.",
+   "ko": "기차가 도시를 벗어나자 폰의 눈에는 푸른 논만 보였어요.",
+   "blank": "พ้น",
+   "src": "made"
+  }
+ ],
  "w|พนักงาน": [
   {
    "text": "พนักงานคนนี้ใจดีมาก",
@@ -25986,6 +26722,22 @@
    "en": "Ten dishes for the big table came in all at once.",
    "ko": "큰 테이블에서 열 접시 주문이 한꺼번에 들어왔어요.",
    "blank": "พร้อมกัน",
+   "src": "made"
+  }
+ ],
+ "w|พร้อมกับ": [
+  {
+   "text": "เจ้าของมาพร้อมกับกล่องใส่ลูกแมวห้าตัวที่เก็บได้ข้างทาง",
+   "en": "The owner came with a box of five kittens found by the roadside.",
+   "ko": "주인은 길가에서 주운 새끼 고양이 다섯 마리가 든 상자를 들고 왔어요.",
+   "blank": "พร้อมกับ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตื่นมาพร้อมกับแสงแดดที่ส่องผ่านหน้าต่างรถไฟ",
+   "en": "Fon woke up with sunlight shining through the train window.",
+   "ko": "폰은 기차 창문으로 들어오는 햇살과 함께 잠에서 깼어요.",
+   "blank": "พร้อมกับ",
    "src": "made"
   }
  ],
@@ -26295,6 +27047,22 @@
    "src": "made"
   }
  ],
+ "w|พวก": [
+  {
+   "text": "ชัยกับพวกเพื่อนบ้านนัดเตะฟุตบอลกันทุกเย็นวันอาทิตย์",
+   "en": "Chai and the neighbours meet to play football every Sunday evening.",
+   "ko": "짜이와 이웃들은 매주 일요일 저녁 축구를 하기로 해요.",
+   "blank": "พวก",
+   "src": "made"
+  },
+  {
+   "text": "พวกนักวิ่งหน้าใหม่มักออกตัวเร็วเกินไป",
+   "en": "New runners tend to start off too fast.",
+   "ko": "초보 러너들은 너무 빨리 출발하는 경우가 많아요.",
+   "blank": "พวก",
+   "src": "made"
+  }
+ ],
  "w|พวกเขา": [
   {
    "text": "พวกเขากลับแล้ว",
@@ -26575,6 +27343,22 @@
    "en": "I've saved a thousand baht already.",
    "ko": "이미 천 밧 모았어.",
    "blank": "พัน"
+  }
+ ],
+ "w|พันแผล": [
+  {
+   "text": "เอกสอนเจ้าของให้พันแผลที่อุ้งเท้าแมวเองที่บ้าน",
+   "en": "Ek taught the owner how to bandage the cat's paw herself at home.",
+   "ko": "엑은 주인에게 집에서 고양이 발에 직접 붕대 감는 법을 가르쳤어요.",
+   "blank": "พันแผล",
+   "src": "made"
+  },
+  {
+   "text": "เด็กข้างๆ เข่าถลอก ฝนเลยหยิบชุดปฐมพยาบาลมาพันแผลให้",
+   "en": "The child next to her scraped his knee, so Fon took out a first-aid kit and dressed the wound.",
+   "ko": "옆 아이가 무릎이 까져서 폰이 구급상자를 꺼내 상처에 붕대를 감아 줬어요.",
+   "blank": "พันแผล",
+   "src": "made"
   }
  ],
  "w|พับ": [
@@ -27109,6 +27893,38 @@
    "blank": "เพื่อนร่วมงาน"
   }
  ],
+ "w|เพื่อนร่วมชั้น": [
+  {
+   "text": "ชัยบังเอิญเจอเพื่อนร่วมชั้นสมัยประถมย้ายมาอยู่ซอยเดียวกัน",
+   "en": "Chai happened to find that a primary-school classmate had moved into the same lane.",
+   "ko": "짜이는 초등학교 동창이 같은 골목으로 이사 온 걸 우연히 알게 됐어요.",
+   "blank": "เพื่อนร่วมชั้น",
+   "src": "made"
+  },
+  {
+   "text": "ที่จุดปล่อยตัว พรเจอเพื่อนร่วมชั้นสมัยมัธยมโดยบังเอิญ",
+   "en": "At the start line, Porn ran into a high-school classmate by chance.",
+   "ko": "출발선에서 폰은 우연히 고등학교 동창을 만났어요.",
+   "blank": "เพื่อนร่วมชั้น",
+   "src": "made"
+  }
+ ],
+ "w|เพื่อนร่วมห้อง": [
+  {
+   "text": "หลานของชัยมาเช่าห้องอยู่ใกล้ๆ กับเพื่อนร่วมห้องอีกคน",
+   "en": "Chai's nephew rented a room nearby with a roommate.",
+   "ko": "짜이의 조카는 룸메이트 한 명과 근처에 방을 얻었어요.",
+   "blank": "เพื่อนร่วมห้อง",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมห้องของพรตื่นตีสามมาช่วยผูกเชือกรองเท้าให้",
+   "en": "Porn's roommate got up at three in the morning to help tie her shoelaces.",
+   "ko": "폰의 룸메이트가 새벽 세 시에 일어나 신발 끈 묶는 걸 도와줬어요.",
+   "blank": "เพื่อนร่วมห้อง",
+   "src": "made"
+  }
+ ],
  "w|เพื่อนสนิท": [
   {
    "text": "เพื่อนสนิทรู้ใจฉันดีที่สุด",
@@ -27149,6 +27965,22 @@
    "en": "I bought something too expensive.",
    "ko": "너무 비싼 걸 샀어.",
    "blank": "แพง"
+  }
+ ],
+ "w|แพร่": [
+  {
+   "text": "เอกเตือนว่าหมัดแพร่จากแมวตัวหนึ่งไปทั้งบ้านได้ในไม่กี่วัน",
+   "en": "Ek warned that fleas can spread from one cat to the whole house in a few days.",
+   "ko": "엑은 벼룩이 고양이 한 마리에서 며칠 만에 온 집으로 퍼질 수 있다고 경고했어요.",
+   "blank": "แพร่",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวลือเรื่องรถไฟเสียแพร่ไปทั้งตู้ในไม่กี่นาที",
+   "en": "A rumour that the train had broken down spread through the whole carriage in minutes.",
+   "ko": "기차가 고장 났다는 소문이 몇 분 만에 칸 전체로 퍼졌어요.",
+   "blank": "แพร่",
+   "src": "made"
   }
  ],
  "w|แพะ": [
@@ -27263,6 +28095,22 @@
    "en": "My teeth hurt when I eat ice.",
    "ko": "얼음 먹으면 이가 시려.",
    "blank": "ฟัน"
+  }
+ ],
+ "w|ฟันปลอม": [
+  {
+   "text": "หมาของคุณตาคาบฟันปลอมของเจ้าของไปซ่อนใต้โซฟา",
+   "en": "The grandfather's dog carried off its owner's dentures and hid them under the sofa.",
+   "ko": "할아버지의 개가 주인 틀니를 물고 가서 소파 밑에 숨겼어요.",
+   "blank": "ฟันปลอม",
+   "src": "made"
+  },
+  {
+   "text": "คุณยายหาฟันปลอมไม่เจอ ฝนเลยช่วยดูในกระเป๋าให้",
+   "en": "The grandmother couldn't find her dentures, so Fon helped look in her bag.",
+   "ko": "할머니가 틀니를 못 찾아서 폰이 가방 안을 같이 봐 드렸어요.",
+   "blank": "ฟันปลอม",
+   "src": "made"
   }
  ],
  "w|ฟันผุ": [
@@ -27733,6 +28581,22 @@
    "en": "The project overview is clear.",
    "ko": "프로젝트 개요가 분명해서 좋아.",
    "blank": "ภาพรวม"
+  }
+ ],
+ "w|ภายใต้": [
+  {
+   "text": "ยาตัวนี้ต้องใช้ภายใต้การดูแลของสัตวแพทย์เท่านั้น",
+   "en": "This medicine must only be used under a vet's supervision.",
+   "ko": "이 약은 반드시 수의사의 관리 아래에서만 써야 해요.",
+   "blank": "ภายใต้",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟวิ่งลอดภายใต้ภูเขาผ่านอุโมงค์ยาว",
+   "en": "The train runs under the mountain through a long tunnel.",
+   "ko": "기차는 긴 터널로 산 아래를 지나가요.",
+   "blank": "ภายใต้",
+   "src": "made"
   }
  ],
  "w|ภายนอก": [
@@ -29383,6 +30247,22 @@
    "src": "made"
   }
  ],
+ "w|แม้แต่": [
+  {
+   "text": "งานวัดปีนี้คนมาเยอะมาก แม้แต่เพื่อนบ้านที่ไม่ค่อยออกจากบ้านก็มา",
+   "en": "This year's temple fair was packed; even the neighbour who rarely leaves home came.",
+   "ko": "올해 절 축제엔 사람이 아주 많았어요. 집 밖에 잘 안 나오는 이웃까지 왔어요.",
+   "blank": "แม้แต่",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตกหนักกลางทาง แต่แม้แต่คนที่อายุเจ็ดสิบก็ยังวิ่งต่อ",
+   "en": "It rained heavily midway, but even people aged seventy kept running.",
+   "ko": "도중에 비가 세차게 왔지만 일흔 살인 사람들까지도 계속 달렸어요.",
+   "blank": "แม้แต่",
+   "src": "made"
+  }
+ ],
  "w|แม่น้ำ": [
   {
    "text": "แม่น้ำสายนี้ยาวมาก",
@@ -29611,6 +30491,22 @@
    "en": "I rarely eat sweets.",
    "ko": "난 단 걸 잘 안 먹어.",
    "blank": "ไม่ค่อย"
+  }
+ ],
+ "w|ไม้ค้ำ": [
+  {
+   "text": "ลุงเจ้าของแมวเดินใช้ไม้ค้ำมาที่คลินิกเพราะขาหัก",
+   "en": "The cat's owner, an older man, came to the clinic on a crutch because of a broken leg.",
+   "ko": "고양이 주인 아저씨는 다리가 부러져서 목발을 짚고 병원에 왔어요.",
+   "blank": "ไม้ค้ำ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนช่วยคุณป้าที่ใช้ไม้ค้ำขึ้นบันไดรถไฟ",
+   "en": "Fon helped an auntie on a crutch up the train steps.",
+   "ko": "폰은 목발을 짚은 아주머니가 기차 계단을 오르는 걸 도왔어요.",
+   "blank": "ไม้ค้ำ",
+   "src": "made"
   }
  ],
  "w|ไมโครเวฟ": [
@@ -30623,6 +31519,22 @@
    "blank": "เย็น"
   }
  ],
+ "w|เยอะ": [
+  {
+   "text": "วันเสาร์คนพาสัตว์มาหาหมอเยอะกว่าวันธรรมดา",
+   "en": "On Saturdays more people bring their animals to the vet than on weekdays.",
+   "ko": "토요일에는 평일보다 동물을 데려오는 사람이 많아요.",
+   "blank": "เยอะ",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงสงกรานต์ คนนั่งรถไฟกลับบ้านเยอะมาก",
+   "en": "During Songkran, lots of people take the train home.",
+   "ko": "송끄란 기간에는 기차로 고향에 가는 사람이 아주 많아요.",
+   "blank": "เยอะ",
+   "src": "made"
+  }
+ ],
  "w|เยี่ยม": [
   {
    "text": "เยี่ยมไปเลย",
@@ -30781,6 +31693,22 @@
    "en": "This car's broken down.",
    "ko": "이 차는 고장 났어.",
    "blank": "รถ"
+  }
+ ],
+ "w|รถเข็น": [
+  {
+   "text": "หมาตัวนี้ขาหลังอ่อนแรง เอกเลยทำรถเข็นเล็กๆ ให้มันใช้เดิน",
+   "en": "This dog's back legs are weak, so Ek made a little wheelchair for it to walk with.",
+   "ko": "이 개는 뒷다리에 힘이 없어서 엑이 걸을 수 있게 작은 휠체어를 만들어 줬어요.",
+   "blank": "รถเข็น",
+   "src": "made"
+  },
+  {
+   "text": "สถานีรถไฟใหม่มีทางลาดให้คนนั่งรถเข็นขึ้นรถได้สะดวก",
+   "en": "The new train station has a ramp so wheelchair users can board easily.",
+   "ko": "새 기차역에는 휠체어 이용자가 편하게 탈 수 있도록 경사로가 있어요.",
+   "blank": "รถเข็น",
+   "src": "made"
   }
  ],
  "w|รถแท็กซี่": [
@@ -31342,6 +32270,22 @@
    "en": "This house was built even before the change in the system of government.",
    "ko": "이 집은 정치 체제가 바뀌기 전에 지어졌어요.",
    "blank": "ระบอบ",
+   "src": "made"
+  }
+ ],
+ "w|ระบาด": [
+  {
+   "text": "ช่วงนี้ไข้หัดสุนัขระบาดในหมู่บ้าน คลินิกของเอกเลยคนแน่น",
+   "en": "Canine distemper is spreading in the village these days, so Ek's clinic is packed.",
+   "ko": "요즘 마을에 개 홍역이 돌아서 엑의 병원이 붐벼요.",
+   "blank": "ระบาด",
+   "src": "made"
+  },
+  {
+   "text": "ตอนไข้หวัดใหญ่ระบาด ฝนใส่หน้ากากตลอดการเดินทาง",
+   "en": "When the flu was going around, Fon wore a mask the whole journey.",
+   "ko": "독감이 유행할 때 폰은 여행 내내 마스크를 썼어요.",
+   "blank": "ระบาด",
    "src": "made"
   }
  ],
@@ -32163,6 +33107,38 @@
    "src": "made"
   }
  ],
+ "w|รุ่นน้อง": [
+  {
+   "text": "ลูกสาวบ้านตรงข้ามเป็นรุ่นน้องของลูกชายชัยที่โรงเรียน",
+   "en": "The daughter across the street is a junior of Chai's son at school.",
+   "ko": "맞은편 집 딸은 학교에서 짜이 아들의 후배예요.",
+   "blank": "รุ่นน้อง",
+   "src": "made"
+  },
+  {
+   "text": "พรวิ่งคู่กับรุ่นน้องที่ทำงานซึ่งลงแข่งเป็นครั้งแรก",
+   "en": "Porn ran alongside a junior colleague who was racing for the first time.",
+   "ko": "폰은 처음 대회에 나온 회사 후배와 함께 달렸어요.",
+   "blank": "รุ่นน้อง",
+   "src": "made"
+  }
+ ],
+ "w|รุ่นพี่": [
+  {
+   "text": "ชัยเพิ่งรู้ว่าเพื่อนบ้านคนใหม่เป็นรุ่นพี่ที่มหาวิทยาลัยเดียวกัน",
+   "en": "Chai just found out the new neighbour was a senior at the same university.",
+   "ko": "짜이는 새 이웃이 같은 대학 선배라는 걸 방금 알았어요.",
+   "blank": "รุ่นพี่",
+   "src": "made"
+  },
+  {
+   "text": "รุ่นพี่ในชมรมวิ่งสอนพรให้ดื่มน้ำทีละน้อย",
+   "en": "A senior in the running club taught Porn to drink water a little at a time.",
+   "ko": "달리기 동아리 선배가 폰에게 물을 조금씩 마시라고 가르쳐 줬어요.",
+   "blank": "รุ่นพี่",
+   "src": "made"
+  }
+ ],
  "w|รุนแรง": [
   {
    "text": "พายุรุนแรงทำให้ต้นไม้ล้ม",
@@ -32587,6 +33563,22 @@
    "blank": "เรือนจำ"
   }
  ],
+ "w|เรื่อย": [
+  {
+   "text": "ช่วงนี้มีคนย้ายเข้ามาในซอยเรื่อยๆ",
+   "en": "Lately people have been moving into the lane steadily.",
+   "ko": "요즘 골목에 사람들이 계속 이사 와요.",
+   "blank": "เรื่อย",
+   "src": "made"
+  },
+  {
+   "text": "พรวิ่งไปเรื่อยๆ ไม่เร่งจนถึงกิโลเมตรสุดท้าย",
+   "en": "Porn ran at an easy steady pace without pushing until the last kilometre.",
+   "ko": "폰은 마지막 일 킬로미터까지 서두르지 않고 꾸준히 달렸어요.",
+   "blank": "เรื่อย",
+   "src": "made"
+  }
+ ],
  "w|แรก": [
   {
    "text": "วันแรกที่ทำงานตื่นเต้น",
@@ -32778,6 +33770,22 @@
    "en": "We visited a strawberry farm.",
    "ko": "우리는 딸기 농장에 놀러 갔어.",
    "blank": "ไร่",
+   "src": "made"
+  }
+ ],
+ "w|ไร้": [
+  {
+   "text": "บ้านร้างท้ายซอยไร้คนดูแลมาหลายปี",
+   "en": "The abandoned house at the end of the lane has had no one looking after it for years.",
+   "ko": "골목 끝 빈집은 몇 년째 돌보는 사람이 없어요.",
+   "blank": "ไร้",
+   "src": "made"
+  },
+  {
+   "text": "บางคนวิ่งเท้าเปล่า ไร้รองเท้าตลอดทางสี่สิบสองกิโล",
+   "en": "Some people run barefoot, without shoes for the whole forty-two kilometres.",
+   "ko": "어떤 사람들은 사십이 킬로미터 내내 신발 없이 맨발로 달려요.",
+   "blank": "ไร้",
    "src": "made"
   }
  ],
@@ -33185,6 +34193,22 @@
    "en": "Loy Krathong is full of beautiful lights.",
    "ko": "로이끄라통은 예쁜 불빛으로 가득해.",
    "blank": "ลอยกระทง"
+  }
+ ],
+ "w|ล้อเล่น": [
+  {
+   "text": "ชัยบอกลูกว่าบ้านข้างๆ จะขายแล้ว แต่ที่จริงแค่ล้อเล่น",
+   "en": "Chai told his kids the house next door was for sale, but he was only joking.",
+   "ko": "짜이는 아이들에게 옆집이 팔린다고 했지만 사실 농담이었어요.",
+   "blank": "ล้อเล่น",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนบอกพรว่าจะวิ่งร้อยกิโล พรรู้ทันทีว่าเพื่อนล้อเล่น",
+   "en": "A friend told Porn she'd run a hundred kilometres; Porn knew right away she was joking.",
+   "ko": "친구가 폰에게 백 킬로미터를 뛰겠다고 하자 폰은 바로 농담인 줄 알았어요.",
+   "blank": "ล้อเล่น",
+   "src": "made"
   }
  ],
  "w|ล้อเลียน": [
@@ -33976,6 +35000,22 @@
    "en": "The crew walked down every row to check before takeoff.",
    "ko": "승무원들이 이륙 전에 모든 줄을 돌며 확인했어요.",
    "blank": "ลูกเรือ",
+   "src": "made"
+  }
+ ],
+ "w|ลูกศิษย์": [
+  {
+   "text": "ครูเกษียณข้างบ้านชัยยังมีลูกศิษย์มาเยี่ยมทุกปีใหม่",
+   "en": "The retired teacher next to Chai's house still has former students visiting every New Year.",
+   "ko": "짜이 옆집의 은퇴한 선생님은 아직도 새해마다 제자들이 찾아와요.",
+   "blank": "ลูกศิษย์",
+   "src": "made"
+  },
+  {
+   "text": "โค้ชวิ่งยืนรอรับลูกศิษย์ทุกคนที่เส้นชัย",
+   "en": "The running coach waited at the finish line to welcome every one of his students.",
+   "ko": "달리기 코치는 결승선에서 제자들을 모두 맞이하려고 기다렸어요.",
+   "blank": "ลูกศิษย์",
    "src": "made"
   }
  ],
@@ -35539,6 +36579,22 @@
    "blank": "เวียนหัว"
   }
  ],
+ "w|แว่น": [
+  {
+   "text": "เอกต้องใส่แว่นตอนอ่านฉลากยาตัวเล็กๆ",
+   "en": "Ek has to wear glasses when reading the small print on medicine labels.",
+   "ko": "엑은 작은 약 라벨을 읽을 때 안경을 써야 해요.",
+   "blank": "แว่น",
+   "src": "made"
+  },
+  {
+   "text": "ฝนทำแว่นตกใต้เบาะ ต้องคลานหาอยู่นาน",
+   "en": "Fon dropped her glasses under the seat and had to crawl around looking for a long time.",
+   "ko": "폰은 안경을 좌석 밑에 떨어뜨려서 한참을 기어 다니며 찾았어요.",
+   "blank": "แว่น",
+   "src": "made"
+  }
+ ],
  "w|แว่นตา": [
   {
    "text": "ฉันลืมแว่นตาไว้ที่บ้าน",
@@ -35657,6 +36713,22 @@
    "blank": "ศตวรรษ"
   }
  ],
+ "w|ศพ": [
+  {
+   "text": "ชาวซอยไปร่วมงานสวดศพคุณยายบ้านหัวมุมที่วัด",
+   "en": "The lane's residents went to the funeral chanting for the grandmother from the corner house at the temple.",
+   "ko": "골목 사람들은 절에서 열린 모퉁이 집 할머니의 장례 독경에 함께 갔어요.",
+   "blank": "ศพ",
+   "src": "made"
+  },
+  {
+   "text": "เส้นทางวิ่งผ่านวัดที่กำลังมีงานศพ ผู้จัดเลยขอให้นักวิ่งเงียบ",
+   "en": "The route passed a temple holding a funeral, so the organisers asked runners to be quiet.",
+   "ko": "코스가 장례식이 열리는 절을 지나서 주최 측이 러너들에게 조용히 해 달라고 했어요.",
+   "blank": "ศพ",
+   "src": "made"
+  }
+ ],
  "w|ศัตรู": [
   {
    "text": "อย่ามองเพื่อนเป็นศัตรูเลย",
@@ -35725,6 +36797,22 @@
    "en": "There's an artist exhibiting at the gallery.",
    "ko": "화랑에서 예술가가 전시해.",
    "blank": "ศิลปิน"
+  }
+ ],
+ "w|ศิษย์": [
+  {
+   "text": "พรเคยเป็นศิษย์ของโค้ชวิ่งชื่อดังมาสองปี",
+   "en": "Porn was a student of a well-known running coach for two years.",
+   "ko": "폰은 유명한 달리기 코치의 제자였던 적이 이 년 있어요.",
+   "blank": "ศิษย์",
+   "src": "made"
+  },
+  {
+   "text": "พระที่วัดหน้าซอยมีศิษย์มาช่วยกวาดลานวัดทุกเช้า",
+   "en": "The monk at the temple by the lane has disciples who come to sweep the temple grounds every morning.",
+   "ko": "골목 앞 절의 스님에게는 매일 아침 절 마당을 쓸러 오는 제자들이 있어요.",
+   "blank": "ศิษย์",
+   "src": "made"
   }
  ],
  "w|ศึก": [
@@ -35831,6 +36919,22 @@
    "blank": "เศรษฐกิจ"
   }
  ],
+ "w|เศรษฐี": [
+  {
+   "text": "คนในซอยลือกันว่าบ้านหลังใหญ่สุดซอยเป็นของเศรษฐี",
+   "en": "People in the lane gossip that the biggest house at the end belongs to a millionaire.",
+   "ko": "골목 사람들은 골목 끝 가장 큰 집이 부자 것이라고 수군거려요.",
+   "blank": "เศรษฐี",
+   "src": "made"
+  },
+  {
+   "text": "ผู้สนับสนุนงานวิ่งปีนี้เป็นเศรษฐีที่ชอบวิ่งมาราธอน",
+   "en": "This year's race sponsor is a millionaire who loves running marathons.",
+   "ko": "올해 대회 후원자는 마라톤을 좋아하는 부자예요.",
+   "blank": "เศรษฐี",
+   "src": "made"
+  }
+ ],
  "w|เศร้า": [
   {
    "text": "ทำไมดูเศร้าอย่างนี้",
@@ -35929,6 +37033,22 @@
    "blank": "สงบ"
   }
  ],
+ "w|ส่งผล": [
+  {
+   "text": "อาหารเค็มเกินไปส่งผลต่อไตของแมวแก่",
+   "en": "Food that is too salty affects older cats' kidneys.",
+   "ko": "너무 짠 음식은 늙은 고양이의 신장에 영향을 줘요.",
+   "blank": "ส่งผล",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตกหนักส่งผลให้รถไฟถึงช้ากว่ากำหนดสองชั่วโมง",
+   "en": "Heavy rain caused the train to arrive two hours late.",
+   "ko": "폭우 때문에 기차가 예정보다 두 시간 늦게 도착했어요.",
+   "blank": "ส่งผล",
+   "src": "made"
+  }
+ ],
  "w|ส่งมอบ": [
   {
    "text": "บริษัทจะส่งมอบงานวันนี้",
@@ -35969,6 +37089,22 @@
    "en": "Do not pity yourself too much.",
    "ko": "너무 스스로를 불쌍히 여기지 마.",
    "blank": "สงสาร"
+  }
+ ],
+ "w|ส่งเสริม": [
+  {
+   "text": "ชัยส่งเสริมให้เด็กในซอยมาอ่านหนังสือที่ห้องสมุดเล็กๆ หน้าบ้าน",
+   "en": "Chai encourages the kids in the lane to read at the little library in front of his house.",
+   "ko": "짜이는 골목 아이들이 집 앞 작은 도서관에서 책을 읽도록 장려해요.",
+   "blank": "ส่งเสริม",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทของพรส่งเสริมให้พนักงานออกกำลังกาย จึงจ่ายค่าสมัครให้",
+   "en": "Porn's company encourages staff to exercise, so it paid her entry fee.",
+   "ko": "폰의 회사는 직원들의 운동을 장려해서 참가비를 내줬어요.",
+   "blank": "ส่งเสริม",
+   "src": "made"
   }
  ],
  "w|สง่า": [
@@ -38389,6 +39525,22 @@
    "blank": "สูง"
   }
  ],
+ "w|สูงสุด": [
+  {
+   "text": "ยานี้ให้ได้สูงสุดวันละสองครั้งเท่านั้น",
+   "en": "This medicine can be given at most twice a day.",
+   "ko": "이 약은 하루에 최대 두 번까지만 줄 수 있어요.",
+   "blank": "สูงสุด",
+   "src": "made"
+  },
+  {
+   "text": "รถไฟขบวนนี้วิ่งได้เร็วสูงสุดราวร้อยกิโลเมตรต่อชั่วโมง",
+   "en": "This train can run at a top speed of about a hundred kilometres an hour.",
+   "ko": "이 열차는 최고 시속 백 킬로미터 정도로 달릴 수 있어요.",
+   "blank": "สูงสุด",
+   "src": "made"
+  }
+ ],
  "w|สูญเสีย": [
   {
    "text": "บริษัทสูญเสียลูกค้าจำนวนมาก",
@@ -39019,6 +40171,22 @@
    "en": "Please mow the grass in front of the house.",
    "ko": "집 앞 잔디 좀 깎아 줘.",
    "blank": "หญ้า"
+  }
+ ],
+ "w|หญิง": [
+  {
+   "text": "หญิงชราบ้านติดกันเลี้ยงแมวไว้เจ็ดตัว",
+   "en": "The old woman next door keeps seven cats.",
+   "ko": "옆집 할머니는 고양이를 일곱 마리 키워요.",
+   "blank": "หญิง",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้รุ่นหญิงอายุเกินห้าสิบมีคนสมัครเยอะกว่าทุกปี",
+   "en": "This year more women over fifty signed up in their category than ever.",
+   "ko": "올해 오십 세 이상 여성부에 지원자가 예년보다 많았어요.",
+   "blank": "หญิง",
+   "src": "made"
   }
  ],
  "w|หด": [
@@ -39670,6 +40838,22 @@
    "en": "In the story the wolf tricks the child.",
    "ko": "동화에서 늑대가 아이를 속여.",
    "blank": "หมาป่า",
+   "src": "made"
+  }
+ ],
+ "w|หมายความ": [
+  {
+   "text": "ป้าข้างบ้านถามว่าเสียงเคาะเมื่อคืนหมายความว่าอะไร",
+   "en": "The auntie next door asked what last night's knocking sound meant.",
+   "ko": "옆집 아주머니는 어젯밤 두드리는 소리가 무슨 뜻이었냐고 물었어요.",
+   "blank": "หมายความ",
+   "src": "made"
+  },
+  {
+   "text": "โค้ชบอกว่าชีพจรสูงแบบนี้หมายความว่าพรต้องลดความเร็ว",
+   "en": "The coach said a pulse this high means Porn has to slow down.",
+   "ko": "코치는 맥박이 이렇게 높으면 폰이 속도를 줄여야 한다는 뜻이라고 했어요.",
+   "blank": "หมายความ",
    "src": "made"
   }
  ],
@@ -41453,6 +42637,22 @@
    "src": "made"
   }
  ],
+ "w|หุบปาก": [
+  {
+   "text": "ลุงข้างบ้านตะโกนให้หมาหุบปากตอนตีสอง",
+   "en": "The uncle next door shouted at the dog to shut up at two in the morning.",
+   "ko": "옆집 아저씨가 새벽 두 시에 개한테 조용히 하라고 소리쳤어요.",
+   "blank": "หุบปาก",
+   "src": "made"
+  },
+  {
+   "text": "พรบอกตัวเองให้หุบปากแล้ววิ่งต่อ แทนที่จะบ่นว่าเหนื่อย",
+   "en": "Porn told herself to shut up and keep running instead of complaining about being tired.",
+   "ko": "폰은 힘들다고 투덜대는 대신 입 다물고 계속 달리라고 스스로에게 말했어요.",
+   "blank": "หุบปาก",
+   "src": "made"
+  }
+ ],
  "w|หู": [
   {
    "text": "หูฉันอื้อไปหมด",
@@ -42013,6 +43213,22 @@
    "blank": "ให้"
   }
  ],
+ "w|ให้การ": [
+  {
+   "text": "เอกไปให้การกับตำรวจเรื่องหมาที่ถูกทิ้งไว้ในรถ",
+   "en": "Ek went to give a statement to the police about a dog left in a car.",
+   "ko": "엑은 차에 버려진 개에 대해 경찰에 진술하러 갔어요.",
+   "blank": "ให้การ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนเห็นเหตุทะเลาะบนรถไฟ ตำรวจรถไฟจึงขอให้ฝนให้การเป็นพยาน",
+   "en": "Fon saw a fight on the train, so the railway police asked her to give a witness statement.",
+   "ko": "폰이 기차에서 싸움을 봐서 철도 경찰이 증인 진술을 해 달라고 했어요.",
+   "blank": "ให้การ",
+   "src": "made"
+  }
+ ],
  "w|ให้กำลังใจ": [
   {
    "text": "เพื่อนมาให้กำลังใจฉัน",
@@ -42495,6 +43711,22 @@
    "en": "He can eat one plate at most.",
    "ko": "그는 기껏해야 한 접시만 먹을 수 있어.",
    "blank": "อย่างมาก"
+  }
+ ],
+ "w|อย่างยิ่ง": [
+  {
+   "text": "เอกขอบคุณเจ้าของที่พาหมามาฉีดวัคซีนตรงเวลาอย่างยิ่ง",
+   "en": "Ek was extremely grateful that the owner brought the dog for its vaccine on time.",
+   "ko": "엑은 주인이 제때 개를 데려와 예방 주사를 맞힌 게 정말 고마웠어요.",
+   "blank": "อย่างยิ่ง",
+   "src": "made"
+  },
+  {
+   "text": "วิวทุ่งนาตอนเช้าสวยอย่างยิ่ง ฝนถ่ายรูปไม่หยุด",
+   "en": "The view of the rice fields in the morning was extremely beautiful, and Fon kept taking photos.",
+   "ko": "아침 논 풍경이 정말 아름다워서 폰은 계속 사진을 찍었어요.",
+   "blank": "อย่างยิ่ง",
+   "src": "made"
   }
  ],
  "w|อย่างไร": [
@@ -43157,6 +44389,22 @@
    "blank": "อ่าง"
   }
  ],
+ "w|อ้าง": [
+  {
+   "text": "เจ้าของอ้างว่าให้อาหารหมาทุกวัน แต่หมาผอมมาก",
+   "en": "The owner claimed to feed the dog every day, but the dog was very thin.",
+   "ko": "주인은 매일 개에게 밥을 준다고 주장했지만 개는 아주 말랐어요.",
+   "blank": "อ้าง",
+   "src": "made"
+  },
+  {
+   "text": "ชายคนหนึ่งอ้างว่าที่นั่งของฝนเป็นของเขา แต่ตั๋วของเขาเป็นตู้อื่น",
+   "en": "A man claimed Fon's seat was his, but his ticket was for another carriage.",
+   "ko": "한 남자가 폰의 자리가 자기 자리라고 우겼지만 그의 표는 다른 칸이었어요.",
+   "blank": "อ้าง",
+   "src": "made"
+  }
+ ],
  "w|อ่างอาบน้ำ": [
   {
    "text": "เด็กๆ ชอบเล่นในอ่างอาบน้ำ",
@@ -43795,6 +45043,22 @@
    "blank": "อุณหภูมิ"
   }
  ],
+ "w|อุณหภูมิร่างกาย": [
+  {
+   "text": "เอกวัดอุณหภูมิร่างกายของลูกหมา พบว่ามีไข้เล็กน้อย",
+   "en": "Ek measured the puppy's body temperature and found a slight fever.",
+   "ko": "엑이 강아지 체온을 재 보니 열이 조금 있었어요.",
+   "blank": "อุณหภูมิร่างกาย",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนขึ้นรถไฟ เจ้าหน้าที่วัดอุณหภูมิร่างกายผู้โดยสารทุกคน",
+   "en": "Before boarding, staff measured every passenger's body temperature.",
+   "ko": "탑승 전에 직원이 모든 승객의 체온을 쟀어요.",
+   "blank": "อุณหภูมิร่างกาย",
+   "src": "made"
+  }
+ ],
  "w|อุตสาหกรรม": [
   {
    "text": "อุตสาหกรรมยานยนต์จ้างงานเยอะ",
@@ -43972,6 +45236,22 @@
    "en": "Pranee hired a private company to clean the house before moving in.",
    "ko": "쁘라니는 입주 전에 민간 업체를 불러 집을 청소했어요.",
    "blank": "เอกชน",
+   "src": "made"
+  }
+ ],
+ "w|เอกซเรย์": [
+  {
+   "text": "เอกส่งหมาไปเอกซเรย์เพราะสงสัยว่ากลืนของเล่นเข้าไป",
+   "en": "Ek sent the dog for an X-ray because he suspected it had swallowed a toy.",
+   "ko": "엑은 개가 장난감을 삼킨 것 같아서 엑스레이를 찍게 했어요.",
+   "blank": "เอกซเรย์",
+   "src": "made"
+  },
+  {
+   "text": "ฝนเอาฟิล์มเอกซเรย์ปอดใส่ซองวางไว้บนชั้นวางของ",
+   "en": "Fon put her chest X-ray film in an envelope on the luggage rack.",
+   "ko": "폰은 폐 엑스레이 필름을 봉투에 넣어 짐칸에 올려 두었어요.",
+   "blank": "เอกซเรย์",
    "src": "made"
   }
  ],
