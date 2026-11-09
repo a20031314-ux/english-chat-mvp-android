@@ -201,6 +201,38 @@
    "src": "made"
   }
  ],
+ "w|abonné": [
+  {
+   "text": "Un abonné de la page du restaurant a publié une photo du gratin de Louis.",
+   "en": "A follower of the restaurant's page posted a photo of Louis's gratin.",
+   "ko": "식당 페이지 구독자 한 명이 루이의 그라탱 사진을 올렸어요.",
+   "blank": "abonné",
+   "src": "made"
+  },
+  {
+   "text": "Claire est une abonnée fidèle de la lettre d'information de la clinique.",
+   "en": "Claire is a loyal subscriber to the clinic's newsletter.",
+   "ko": "클레르는 동물 병원 소식지를 꾸준히 받아 봐요.",
+   "blank": "abonnée",
+   "src": "made"
+  }
+ ],
+ "w|abonnement": [
+  {
+   "text": "Louis propose un abonnement aux habitués : dix déjeuners pour le prix de neuf.",
+   "en": "Louis offers regulars a subscription: ten lunches for the price of nine.",
+   "ko": "루이는 단골에게 점심 열 번을 아홉 번 값에 주는 정기권을 팔아요.",
+   "blank": "abonnement",
+   "src": "made"
+  },
+  {
+   "text": "La clinique vétérinaire propose à Claire un abonnement annuel pour les vaccins.",
+   "en": "The vet clinic offers Claire an annual plan for vaccinations.",
+   "ko": "동물 병원이 클레르에게 예방 접종 연간 회원권을 권해요.",
+   "blank": "abonnement",
+   "src": "made"
+  }
+ ],
  "w|abord": [
   {
    "text": "D'abord, il faut écouter.",
@@ -2111,6 +2143,22 @@
    "src": "made"
   }
  ],
+ "w|agacer": [
+  {
+   "text": "Les clients qui claquent des doigts finissent par agacer Louis.",
+   "en": "Customers who snap their fingers end up annoying Louis.",
+   "ko": "손가락을 튕겨 부르는 손님들이 결국 루이를 짜증 나게 해요.",
+   "blank": "agacer",
+   "src": "made"
+  },
+  {
+   "text": "Le perroquet de Claire aime agacer les autres animaux de la salle d'attente.",
+   "en": "Claire's parrot likes to annoy the other animals in the waiting room.",
+   "ko": "클레르의 앵무새는 대기실의 다른 동물들을 약 올리기를 좋아해요.",
+   "blank": "agacer",
+   "src": "made"
+  }
+ ],
  "w|âge": [
   {
    "text": "Quel est ton âge?",
@@ -2692,6 +2740,22 @@
    "en": "The town's well-off neighbourhood asks Émilie for more cycle lanes.",
    "ko": "도시의 부유한 동네 주민들이 에밀리에게 자전거 도로를 더 요구해요.",
    "blank": "aisé",
+   "src": "made"
+  }
+ ],
+ "w|aisselle": [
+  {
+   "text": "L'infirmière prend la température de Paul sous l'aisselle.",
+   "en": "The nurse takes Paul's temperature under his armpit.",
+   "ko": "간호사가 폴의 겨드랑이로 체온을 재요.",
+   "blank": "aisselle",
+   "src": "made"
+  },
+  {
+   "text": "En plein été, Émilie a des auréoles de sueur sous l'aisselle.",
+   "en": "In midsummer, Émilie has sweat stains under her armpit.",
+   "ko": "한여름이면 에밀리는 겨드랑이에 땀 자국이 생겨요.",
+   "blank": "aisselle",
    "src": "made"
   }
  ],
@@ -3282,6 +3346,22 @@
    "en": "Claire writes that her granddaughter already knows the whole alphabet by heart.",
    "ko": "클레르는 손녀가 벌써 알파벳을 다 외운다고 써요.",
    "blank": "alphabet",
+   "src": "made"
+  }
+ ],
+ "w|altercation": [
+  {
+   "text": "Louis a dû calmer une altercation entre deux clients pour une place de parking.",
+   "en": "Louis had to calm down a row between two customers over a parking space.",
+   "ko": "루이는 주차 자리 때문에 손님 둘이 벌인 말다툼을 말려야 했어요.",
+   "blank": "altercation",
+   "src": "made"
+  },
+  {
+   "text": "Dans la salle d'attente, deux chiens ont eu une altercation, et Claire a reculé.",
+   "en": "In the waiting room, two dogs had a scuffle, and Claire stepped back.",
+   "ko": "대기실에서 개 두 마리가 싸워서 클레르가 뒤로 물러났어요.",
+   "blank": "altercation",
    "src": "made"
   }
  ],
@@ -4127,6 +4207,22 @@
    "src": "made"
   }
  ],
+ "w|angoissé": [
+  {
+   "text": "La veille de l'opération, Paul est trop angoissé pour dormir.",
+   "en": "The night before the operation, Paul is too anxious to sleep.",
+   "ko": "수술 전날 밤 폴은 너무 불안해서 잠을 못 자요.",
+   "blank": "angoissé",
+   "src": "made"
+  },
+  {
+   "text": "Les jours courts de novembre rendent Émilie un peu angoissée.",
+   "en": "The short days of November make Émilie a little anxious.",
+   "ko": "십일월의 짧은 낮은 에밀리를 조금 불안하게 해요.",
+   "blank": "angoissée",
+   "src": "made"
+  }
+ ],
  "w|anguille": [
   {
    "text": "Hugo aperçoit une anguille glisser entre les pierres du ruisseau.",
@@ -4573,6 +4669,22 @@
    "src": "made"
   }
  ],
+ "w|aorte": [
+  {
+   "text": "Le chirurgien montre à Paul un schéma de l'aorte avant l'intervention.",
+   "en": "The surgeon shows Paul a diagram of the aorta before the procedure.",
+   "ko": "외과 의사가 수술 전에 폴에게 대동맥 그림을 보여 줘요.",
+   "blank": "aorte",
+   "src": "made"
+  },
+  {
+   "text": "Le cardiologue explique à Émilie que la chaleur de l'été fatigue aussi l'aorte.",
+   "en": "The cardiologist explains to Émilie that summer heat also strains the aorta.",
+   "ko": "심장내과 의사가 에밀리에게 여름 더위가 대동맥에도 부담을 준다고 설명해요.",
+   "blank": "aorte",
+   "src": "made"
+  }
+ ],
  "w|août": [
   {
    "text": "Tout ferme au mois d'août.",
@@ -4631,6 +4743,22 @@
    "en": "That preview is enough for me to decide.",
    "ko": "그 맛보기면 정하기에 충분해.",
    "blank": "aperçu"
+  }
+ ],
+ "w|apéritif": [
+  {
+   "text": "Louis offre l'apéritif aux clients qui fêtent un anniversaire.",
+   "en": "Louis offers a pre-dinner drink to customers celebrating a birthday.",
+   "ko": "루이는 생일을 맞은 손님에게 식전주를 대접해요.",
+   "blank": "apéritif",
+   "src": "made"
+  },
+  {
+   "text": "Le soir, Claire raconte la journée à la clinique autour d'un apéritif avec ses amis.",
+   "en": "In the evening, Claire tells her friends about the day at the clinic over drinks.",
+   "ko": "저녁에 클레르는 친구들과 식전주를 마시며 동물 병원에서 있었던 일을 얘기해요.",
+   "blank": "apéritif",
+   "src": "made"
   }
  ],
  "w|apôtre": [
@@ -6673,6 +6801,22 @@
    "en": "You should never attack without reason.",
    "ko": "이유 없이 attaquer하면 안 돼.",
    "blank": "attaquer"
+  }
+ ],
+ "w|attarder": [
+  {
+   "text": "Les clients aiment s'attarder sur la terrasse de Louis après le dessert.",
+   "en": "Customers like to linger on Louis's terrace after dessert.",
+   "ko": "손님들은 디저트를 먹고 나서 루이네 테라스에 오래 머물기를 좋아해요.",
+   "blank": "attarder",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire préfère ne pas s'attarder sur les détails de l'opération devant Claire.",
+   "en": "The vet prefers not to dwell on the details of the operation in front of Claire.",
+   "ko": "수의사는 클레르 앞에서 수술 이야기를 길게 하지 않으려 해요.",
+   "blank": "attarder",
+   "src": "made"
   }
  ],
  "w|atteindre": [
@@ -12261,6 +12405,22 @@
    "src": "made"
   }
  ],
+ "w|brocoli": [
+  {
+   "text": "Louis sert le saumon avec du brocoli vapeur et du riz.",
+   "en": "Louis serves the salmon with steamed broccoli and rice.",
+   "ko": "루이는 연어를 찐 브로콜리와 밥과 함께 내요.",
+   "blank": "brocoli",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire dit à Claire qu'un peu de brocoli cuit ne fera pas de mal au chien.",
+   "en": "The vet tells Claire that a little cooked broccoli won't hurt the dog.",
+   "ko": "수의사는 클레르에게 익힌 브로콜리 조금은 개에게 괜찮다고 말해요.",
+   "blank": "brocoli",
+   "src": "made"
+  }
+ ],
  "w|bronzage": [
   {
    "text": "Nicolas rappelle qu'un bronzage n'empêche pas les coups de soleil.",
@@ -12835,6 +12995,22 @@
    "src": "made"
   }
  ],
+ "w|buveur": [
+  {
+   "text": "Louis remarque que les gros buveurs de vin se font plus rares au déjeuner.",
+   "en": "Louis notices that heavy wine drinkers are becoming rarer at lunch.",
+   "ko": "루이는 점심에 포도주를 많이 마시는 사람이 줄었다는 걸 알아채요.",
+   "blank": "buveurs",
+   "src": "made"
+  },
+  {
+   "text": "Le chat de Claire est un petit buveur : la vétérinaire conseille une fontaine à eau.",
+   "en": "Claire's cat doesn't drink much: the vet recommends a water fountain.",
+   "ko": "클레르의 고양이가 물을 잘 안 마셔서 수의사가 고양이 정수기를 권해요.",
+   "blank": "buveur",
+   "src": "made"
+  }
+ ],
  "w|c'est-à-dire": [
   {
    "text": "Je pars demain, c'est-à-dire dans vingt-quatre heures.",
@@ -13039,6 +13215,22 @@
    "en": "The gift was nicely wrapped.",
    "ko": "선물이 예쁘게 포장되어 있었어.",
    "blank": "cadeau"
+  }
+ ],
+ "w|cadence": [
+  {
+   "text": "La kiné demande à Paul de marcher à une cadence régulière.",
+   "en": "The physiotherapist asks Paul to walk at a steady pace.",
+   "ko": "물리치료사가 폴에게 일정한 속도로 걸으라고 해요.",
+   "blank": "cadence",
+   "src": "made"
+  },
+  {
+   "text": "En été, Émilie travaille à une cadence plus lente à cause de la chaleur.",
+   "en": "In summer, Émilie works at a slower pace because of the heat.",
+   "ko": "여름이면 에밀리는 더위 때문에 일을 더 느린 속도로 해요.",
+   "blank": "cadence",
+   "src": "made"
   }
  ],
  "w|cadet": [
@@ -13254,6 +13446,22 @@
    "en": "A neighboring stallholder offers Chloé a slice of lemon cake.",
    "ko": "옆 가판대 주인이 클로에에게 레몬 케이크 한 조각을 건네요.",
    "blank": "cake",
+   "src": "made"
+  }
+ ],
+ "w|calcium": [
+  {
+   "text": "Louis propose un dessert au fromage blanc, riche en calcium, pour les enfants.",
+   "en": "Louis offers a fromage blanc dessert, rich in calcium, for the children.",
+   "ko": "루이는 아이들에게 칼슘이 풍부한 프로마주 블랑 디저트를 내요.",
+   "blank": "calcium",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire prescrit du calcium à la vieille chienne de Claire.",
+   "en": "The vet prescribes calcium for Claire's old dog.",
+   "ko": "수의사가 클레르의 늙은 개에게 칼슘을 처방해요.",
+   "blank": "calcium",
    "src": "made"
   }
  ],
@@ -14059,6 +14267,22 @@
    "src": "made"
   }
  ],
+ "w|cappuccino": [
+  {
+   "text": "Louis termine son service par un cappuccino au comptoir.",
+   "en": "Louis ends his shift with a cappuccino at the counter.",
+   "ko": "루이는 일을 마치고 카운터에서 카푸치노를 한 잔 마셔요.",
+   "blank": "cappuccino",
+   "src": "made"
+  },
+  {
+   "text": "Claire boit un cappuccino au distributeur en attendant la fin de l'opération.",
+   "en": "Claire drinks a cappuccino from the machine while waiting for the operation to end.",
+   "ko": "클레르는 수술이 끝나기를 기다리며 자판기에서 카푸치노를 마셔요.",
+   "blank": "cappuccino",
+   "src": "made"
+  }
+ ],
  "w|caprice": [
   {
    "text": "Thomas apprend que le nouveau logiciel n'est pas un caprice du directeur.",
@@ -14443,6 +14667,22 @@
    "en": "Carrots are rich in vitamins.",
    "ko": "당근은 비타민이 풍부해.",
    "blank": "carotte"
+  }
+ ],
+ "w|carpe": [
+  {
+   "text": "Dans le bassin du parc de l'hôpital, Paul regarde nager une grosse carpe.",
+   "en": "In the pond in the hospital grounds, Paul watches a big carp swim.",
+   "ko": "병원 정원 연못에서 폴은 커다란 잉어가 헤엄치는 걸 봐요.",
+   "blank": "carpe",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'étang gèle, Émilie se demande où se cache la vieille carpe.",
+   "en": "When the pond freezes, Émilie wonders where the old carp hides.",
+   "ko": "연못이 얼면 에밀리는 늙은 잉어가 어디 숨는지 궁금해요.",
+   "blank": "carpe",
+   "src": "made"
   }
  ],
  "w|carré": [
@@ -15645,6 +15885,22 @@
    "blank": "Ces"
   }
  ],
+ "w|césarienne": [
+  {
+   "text": "Dans la chambre voisine, la femme de Paul se remet d'une césarienne.",
+   "en": "In the next room, Paul's wife is recovering from a caesarean.",
+   "ko": "옆 병실에서 폴의 아내가 제왕절개 수술에서 회복하고 있어요.",
+   "blank": "césarienne",
+   "src": "made"
+  },
+  {
+   "text": "La fille d'Émilie est née par césarienne un jour de neige.",
+   "en": "Émilie's daughter was born by caesarean on a snowy day.",
+   "ko": "에밀리의 딸은 눈 오는 날 제왕절개로 태어났어요.",
+   "blank": "césarienne",
+   "src": "made"
+  }
+ ],
  "w|cesser": [
   {
    "text": "Il va cesser de pleuvoir bientôt.",
@@ -16813,6 +17069,22 @@
    "blank": "chéri"
   }
  ],
+ "w|chérir": [
+  {
+   "text": "Après l'accident, Paul a appris à chérir chaque journée passée avec ses enfants.",
+   "en": "After the accident, Paul learned to cherish every day spent with his children.",
+   "ko": "사고 뒤 폴은 아이들과 보내는 하루하루를 소중히 여기게 됐어요.",
+   "blank": "chérir",
+   "src": "made"
+  },
+  {
+   "text": "Émilie apprend à chérir les longues soirées d'été au jardin.",
+   "en": "Émilie learns to cherish the long summer evenings in the garden.",
+   "ko": "에밀리는 정원에서 보내는 긴 여름 저녁을 소중히 여기게 돼요.",
+   "blank": "chérir",
+   "src": "made"
+  }
+ ],
  "w|cheval": [
   {
    "text": "Le cheval court très vite dans le champ.",
@@ -17409,6 +17681,22 @@
    "src": "made"
   }
  ],
+ "w|chronologie": [
+  {
+   "text": "Le médecin demande à Paul de retracer la chronologie de ses symptômes.",
+   "en": "The doctor asks Paul to retrace the timeline of his symptoms.",
+   "ko": "의사가 폴에게 증상이 나타난 순서를 되짚어 보라고 해요.",
+   "blank": "chronologie",
+   "src": "made"
+  },
+  {
+   "text": "Émilie note dans un carnet la chronologie des premières fleurs de son jardin.",
+   "en": "Émilie notes in a notebook the timeline of the first flowers in her garden.",
+   "ko": "에밀리는 정원에서 꽃이 처음 피는 순서를 수첩에 적어요.",
+   "blank": "chronologie",
+   "src": "made"
+  }
+ ],
  "w|chuchoter": [
   {
    "text": "Dans la chambre partagée, Nicolas doit chuchoter au téléphone pour ne pas réveiller son voisin.",
@@ -17481,6 +17769,22 @@
    "en": "The scar is slowly starting to fade.",
    "ko": "흉터가 천천히 사라지고 있어.",
    "blank": "cicatrice"
+  }
+ ],
+ "w|cidre": [
+  {
+   "text": "Avec les galettes, Louis sert un cidre fermier bien frais.",
+   "en": "With the buckwheat pancakes, Louis serves a nicely chilled farmhouse cider.",
+   "ko": "루이는 갈레트에 시원한 농장 사과주를 곁들여 내요.",
+   "blank": "cidre",
+   "src": "made"
+  },
+  {
+   "text": "Claire rapporte de Normandie une bouteille de cidre pour la vétérinaire.",
+   "en": "Claire brings back a bottle of cider from Normandy for the vet.",
+   "ko": "클레르는 노르망디에서 수의사에게 줄 사과주 한 병을 사 와요.",
+   "blank": "cidre",
+   "src": "made"
   }
  ],
  "w|ciel": [
@@ -18140,6 +18444,22 @@
    "en": "The rental contract has a clause about mountain roads, and Claire reads it twice.",
    "ko": "렌터카 계약서에 산길 관련 조항이 있어서 클레르는 두 번 읽어요.",
    "blank": "clause",
+   "src": "made"
+  }
+ ],
+ "w|clavicule": [
+  {
+   "text": "Paul s'est cassé la clavicule en tombant de son vélo.",
+   "en": "Paul broke his collarbone falling off his bike.",
+   "ko": "폴은 자전거에서 떨어져 쇄골이 부러졌어요.",
+   "blank": "clavicule",
+   "src": "made"
+  },
+  {
+   "text": "Émilie s'est fêlé la clavicule en glissant sur une plaque de verglas.",
+   "en": "Émilie cracked her collarbone slipping on a patch of black ice.",
+   "ko": "에밀리는 빙판에 미끄러져 쇄골에 금이 갔어요.",
+   "blank": "clavicule",
    "src": "made"
   }
  ],
@@ -22841,6 +23161,22 @@
    "src": "made"
   }
  ],
+ "w|contrefaçon": [
+  {
+   "text": "Le pharmacien met Paul en garde contre les médicaments de contrefaçon vendus en ligne.",
+   "en": "The pharmacist warns Paul against counterfeit medicines sold online.",
+   "ko": "약사가 폴에게 인터넷에서 파는 가짜 약을 조심하라고 해요.",
+   "blank": "contrefaçon",
+   "src": "made"
+  },
+  {
+   "text": "Au marché d'été, Émilie évite les lunettes de soleil de contrefaçon.",
+   "en": "At the summer market, Émilie avoids counterfeit sunglasses.",
+   "ko": "여름 장터에서 에밀리는 가짜 선글라스를 피해요.",
+   "blank": "contrefaçon",
+   "src": "made"
+  }
+ ],
  "w|contremaître": [
   {
    "text": "Le contremaître demande à Louis de rester une heure de plus ce soir.",
@@ -23227,6 +23563,22 @@
    "src": "made"
   }
  ],
+ "w|coopérative": [
+  {
+   "text": "Les ouvriers ont racheté l'usine et l'ont transformée en coopérative, raconte Lucas.",
+   "en": "The workers bought the factory and turned it into a cooperative, Lucas says.",
+   "ko": "노동자들이 공장을 사들여 협동조합으로 바꿨다고 루카가 말해요.",
+   "blank": "coopérative",
+   "src": "made"
+  },
+  {
+   "text": "En automne, Camille achète ses pommes à la coopérative du village.",
+   "en": "In autumn, Camille buys her apples at the village cooperative.",
+   "ko": "가을이면 카미유는 마을 협동조합에서 사과를 사요.",
+   "blank": "coopérative",
+   "src": "made"
+  }
+ ],
  "w|coopérer": [
   {
    "text": "En cuisine, Thomas sait qu'il faut coopérer pour tenir le rythme.",
@@ -23298,6 +23650,22 @@
    "en": "Inès admits she used to let her friend copy her math homework.",
    "ko": "이네스는 친구에게 수학 숙제를 베끼게 해 줬다고 털어놓아요.",
    "blank": "copier",
+   "src": "made"
+  }
+ ],
+ "w|copilote": [
+  {
+   "text": "Le week-end, Lucas est copilote dans les rallyes automobiles.",
+   "en": "On weekends, Lucas is a co-driver in car rallies.",
+   "ko": "주말이면 루카는 자동차 랠리에서 부조종사를 맡아요.",
+   "blank": "copilote",
+   "src": "made"
+  },
+  {
+   "text": "Pour les vacances d'été, Camille est la copilote de son frère sur la longue route.",
+   "en": "For the summer holidays, Camille is her brother's co-pilot on the long drive.",
+   "ko": "여름휴가 때 카미유는 긴 길을 운전하는 오빠의 조수석을 맡아요.",
+   "blank": "copilote",
    "src": "made"
   }
  ],
@@ -23392,6 +23760,22 @@
    "en": "The little boy from room twelve gives Léa a mischievous look before ringing every doorbell.",
    "ko": "12호실 꼬마가 레아에게 장난스러운 눈길을 보내고는 방마다 초인종을 눌러요.",
    "blank": "coquin",
+   "src": "made"
+  }
+ ],
+ "w|corail": [
+  {
+   "text": "La salle du restaurant de Louis est peinte couleur corail.",
+   "en": "The dining room in Louis's restaurant is painted coral.",
+   "ko": "루이네 식당 홀은 산호색으로 칠해져 있어요.",
+   "blank": "corail",
+   "src": "made"
+  },
+  {
+   "text": "Claire a installé un bout de corail dans l'aquarium de ses poissons.",
+   "en": "Claire put a piece of coral in her fish tank.",
+   "ko": "클레르는 물고기 어항에 산호 조각을 넣었어요.",
+   "blank": "corail",
    "src": "made"
   }
  ],
@@ -25699,6 +26083,22 @@
    "src": "made"
   }
  ],
+ "w|cuistot": [
+  {
+   "text": "Le cuistot de Louis est arrivé il y a vingt ans et n'est jamais reparti.",
+   "en": "Louis's cook arrived twenty years ago and never left.",
+   "ko": "루이네 요리사는 이십 년 전에 와서 한 번도 떠나지 않았어요.",
+   "blank": "cuistot",
+   "src": "made"
+  },
+  {
+   "text": "Le mari de Claire, cuistot dans une cantine, prépare des repas maison pour leur chien malade.",
+   "en": "Claire's husband, a cook in a canteen, makes homemade meals for their sick dog.",
+   "ko": "구내식당 요리사인 클레르의 남편이 아픈 개에게 집밥을 만들어 줘요.",
+   "blank": "cuistot",
+   "src": "made"
+  }
+ ],
  "w|cuit": [
   {
    "text": "Le pain est cuit, sors-le du four.",
@@ -26546,6 +26946,22 @@
    "en": "Between Camille's letters and the replies there is always a long delay.",
    "ko": "카미유의 편지와 답장 사이엔 늘 긴 시간 차가 있어요.",
    "blank": "décalage",
+   "src": "made"
+  }
+ ],
+ "w|décapotable": [
+  {
+   "text": "Paul rêve de reprendre sa vieille décapotable dès sa sortie de l'hôpital.",
+   "en": "Paul dreams of getting back in his old convertible as soon as he leaves hospital.",
+   "ko": "폴은 퇴원하자마자 낡은 오픈카를 다시 몰 꿈을 꿔요.",
+   "blank": "décapotable",
+   "src": "made"
+  },
+  {
+   "text": "Dès les premiers beaux jours, Émilie sort sa décapotable du garage.",
+   "en": "As soon as the first fine days arrive, Émilie takes her convertible out of the garage.",
+   "ko": "날이 풀리자마자 에밀리는 차고에서 오픈카를 꺼내요.",
+   "blank": "décapotable",
    "src": "made"
   }
  ],
@@ -28711,6 +29127,22 @@
    "src": "made"
   }
  ],
+ "w|dentelle": [
+  {
+   "text": "Les nappes en dentelle du restaurant de Louis viennent de sa grand-mère.",
+   "en": "The lace tablecloths in Louis's restaurant come from his grandmother.",
+   "ko": "루이네 식당의 레이스 식탁보는 할머니에게서 물려받은 거예요.",
+   "blank": "dentelle",
+   "src": "made"
+  },
+  {
+   "text": "La chienne de Claire a déchiré le rideau en dentelle de la salle d'attente.",
+   "en": "Claire's dog tore the lace curtain in the waiting room.",
+   "ko": "클레르의 개가 대기실 레이스 커튼을 찢었어요.",
+   "blank": "dentelle",
+   "src": "made"
+  }
+ ],
  "w|dentifrice": [
   {
    "text": "Antoine bouche les petits trous du mur avec un peu de dentifrice, une astuce de son père.",
@@ -29550,6 +29982,22 @@
    "en": "Manon's grandfather says a bad sauce could disgrace the house.",
    "ko": "마농의 할아버지는 소스가 맛없으면 가게 이름에 먹칠을 한다고 해요.",
    "blank": "déshonorer",
+   "src": "made"
+  }
+ ],
+ "w|déshydraté": [
+  {
+   "text": "Paul est arrivé aux urgences complètement déshydraté après une journée en plein soleil.",
+   "en": "Paul arrived at the emergency room completely dehydrated after a day in full sun.",
+   "ko": "폴은 땡볕에서 하루를 보낸 뒤 완전히 탈수된 채 응급실에 왔어요.",
+   "blank": "déshydraté",
+   "src": "made"
+  },
+  {
+   "text": "Après une randonnée d'août, Émilie rentre déshydratée et boit deux litres d'eau.",
+   "en": "After an August hike, Émilie comes home dehydrated and drinks two liters of water.",
+   "ko": "팔월 산행에서 돌아온 에밀리는 탈수가 와서 물을 두 리터나 마셔요.",
+   "blank": "déshydratée",
    "src": "made"
   }
  ],
@@ -30828,6 +31276,22 @@
    "en": "Sarah likes the saying that the hardest part is lacing up your shoes.",
    "ko": "사라는 제일 힘든 건 신발 끈을 매는 일이라는 말을 좋아해요.",
    "blank": "dicton",
+   "src": "made"
+  }
+ ],
+ "w|diesel": [
+  {
+   "text": "La vieille camionnette diesel de Louis démarre mal les matins d'hiver.",
+   "en": "Louis's old diesel van starts badly on winter mornings.",
+   "ko": "루이의 낡은 디젤 승합차는 겨울 아침이면 시동이 잘 안 걸려요.",
+   "blank": "diesel",
+   "src": "made"
+  },
+  {
+   "text": "La voiture diesel de Claire tombe en panne sur le parking de la clinique.",
+   "en": "Claire's diesel car breaks down in the clinic car park.",
+   "ko": "클레르의 디젤차가 동물 병원 주차장에서 멈춰 버려요.",
+   "blank": "diesel",
    "src": "made"
   }
  ],
@@ -33883,6 +34347,22 @@
    "blank": "écouter"
   }
  ],
+ "w|écouteur": [
+  {
+   "text": "Lucas porte un écouteur pour communiquer avec son chef malgré le bruit.",
+   "en": "Lucas wears an earpiece to talk with his boss despite the noise.",
+   "ko": "루카는 소음 속에서도 상사와 이야기하려고 이어폰을 껴요.",
+   "blank": "écouteur",
+   "src": "made"
+  },
+  {
+   "text": "En hiver, Camille garde un écouteur sous son bonnet pour écouter la radio.",
+   "en": "In winter, Camille keeps an earphone under her hat to listen to the radio.",
+   "ko": "겨울이면 카미유는 털모자 속에 이어폰을 끼고 라디오를 들어요.",
+   "blank": "écouteur",
+   "src": "made"
+  }
+ ],
  "w|écran": [
   {
    "text": "Regarde l'écran, il y a un message.",
@@ -35867,6 +36347,22 @@
    "src": "made"
   }
  ],
+ "w|enclos": [
+  {
+   "text": "Derrière l'usine de Lucas, un fermier garde ses moutons dans un grand enclos.",
+   "en": "Behind Lucas's factory, a farmer keeps his sheep in a big pen.",
+   "ko": "루카의 공장 뒤에서 한 농부가 커다란 울타리 안에 양을 키워요.",
+   "blank": "enclos",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Camille regarde les agneaux gambader dans l'enclos du voisin.",
+   "en": "In spring, Camille watches the lambs frolic in the neighbor's pen.",
+   "ko": "봄이면 카미유는 이웃의 울타리 안에서 뛰노는 어린 양들을 바라봐요.",
+   "blank": "enclos",
+   "src": "made"
+  }
+ ],
  "w|encore": [
   {
    "text": "Tu veux encore du café ?",
@@ -35879,6 +36375,22 @@
    "en": "He is still in the room.",
    "ko": "그는 아직 방에 있어.",
    "blank": "encore"
+  }
+ ],
+ "w|encourageant": [
+  {
+   "text": "Les premiers chiffres de l'été sont encourageants pour le restaurant de Louis.",
+   "en": "The first summer figures are encouraging for Louis's restaurant.",
+   "ko": "여름 첫 매출이 루이네 식당에 고무적이에요.",
+   "blank": "encourageants",
+   "src": "made"
+  },
+  {
+   "text": "Les résultats des analyses du chien de Claire sont encourageants.",
+   "en": "The results of Claire's dog's tests are encouraging.",
+   "ko": "클레르의 개 검사 결과가 희망적이에요.",
+   "blank": "encourageants",
+   "src": "made"
   }
  ],
  "w|encouragement": [
@@ -37507,6 +38019,22 @@
    "src": "made"
   }
  ],
+ "w|épinard": [
+  {
+   "text": "Les enfants refusent les épinards, alors Louis les cache dans les lasagnes.",
+   "en": "The children refuse spinach, so Louis hides it in the lasagna.",
+   "ko": "아이들이 시금치를 안 먹어서 루이는 라자냐 속에 숨겨요.",
+   "blank": "épinards",
+   "src": "made"
+  },
+  {
+   "text": "Claire demande si son lapin peut manger des épinards.",
+   "en": "Claire asks whether her rabbit can eat spinach.",
+   "ko": "클레르는 토끼가 시금치를 먹어도 되는지 물어요.",
+   "blank": "épinards",
+   "src": "made"
+  }
+ ],
  "w|épine": [
   {
    "text": "Julien retire une épine plantée dans la patte de son chien.",
@@ -37687,6 +38215,22 @@
    "blank": "épreuve"
   }
  ],
+ "w|éprouvant": [
+  {
+   "text": "Le service du réveillon est toujours le plus éprouvant de l'année pour Louis.",
+   "en": "The New Year's Eve service is always the most grueling of the year for Louis.",
+   "ko": "섣달그믐 저녁 영업은 루이에게 늘 일 년 중 가장 고된 일이에요.",
+   "blank": "éprouvant",
+   "src": "made"
+  },
+  {
+   "text": "La nuit d'attente après l'opération a été éprouvante pour Claire.",
+   "en": "The night of waiting after the operation was trying for Claire.",
+   "ko": "수술 뒤 기다린 밤은 클레르에게 무척 힘들었어요.",
+   "blank": "éprouvante",
+   "src": "made"
+  }
+ ],
  "w|éprouver": [
   {
    "text": "En relisant les vieilles lettres, Nicolas commence à éprouver une grande nostalgie.",
@@ -37731,6 +38275,22 @@
    "en": "The stock is already sold out.",
    "ko": "재고가 벌써 다 떨어졌어.",
    "blank": "épuisé"
+  }
+ ],
+ "w|épuisement": [
+  {
+   "text": "Le médecin parle à Paul d'un épuisement lié au travail.",
+   "en": "The doctor talks to Paul about work-related exhaustion.",
+   "ko": "의사가 폴에게 일로 인한 탈진 이야기를 해요.",
+   "blank": "épuisement",
+   "src": "made"
+  },
+  {
+   "text": "À la fin de l'hiver, Émilie ressent un vrai épuisement et rêve de soleil.",
+   "en": "At the end of winter, Émilie feels real exhaustion and dreams of sunshine.",
+   "ko": "겨울이 끝날 무렵 에밀리는 완전히 지쳐서 햇볕을 그리워해요.",
+   "blank": "épuisement",
+   "src": "made"
   }
  ],
  "w|épuiser": [
@@ -37919,6 +38479,22 @@
    "src": "made"
   }
  ],
+ "w|érable": [
+  {
+   "text": "Devant l'hôpital, un grand érable devient rouge pendant le séjour de Paul.",
+   "en": "In front of the hospital, a big maple turns red during Paul's stay.",
+   "ko": "폴이 입원해 있는 동안 병원 앞 큰 단풍나무가 빨갛게 물들어요.",
+   "blank": "érable",
+   "src": "made"
+  },
+  {
+   "text": "En octobre, Émilie ramasse les feuilles rouges de l'érable du jardin.",
+   "en": "In October, Émilie gathers the red leaves of the garden maple.",
+   "ko": "시월이면 에밀리는 정원 단풍나무의 붉은 잎을 주워요.",
+   "blank": "érable",
+   "src": "made"
+  }
+ ],
  "w|éradiquer": [
   {
    "text": "Louis veut éradiquer les accidents en imposant le casque à tout le monde.",
@@ -37932,6 +38508,22 @@
    "en": "Claire cleans the bakehouse every evening to wipe out mold.",
    "ko": "클레르는 곰팡이를 없애려고 매일 저녁 빵 굽는 곳을 청소해요.",
    "blank": "éradiquer",
+   "src": "made"
+  }
+ ],
+ "w|éraflure": [
+  {
+   "text": "Paul n'a qu'une petite éraflure au bras, mais on le garde en observation.",
+   "en": "Paul only has a small scratch on his arm, but they keep him under observation.",
+   "ko": "폴은 팔에 작은 생채기뿐이지만 병원은 경과를 지켜보려고 그를 붙잡아 둬요.",
+   "blank": "éraflure",
+   "src": "made"
+  },
+  {
+   "text": "En taillant les rosiers en automne, Émilie se fait une éraflure à la main.",
+   "en": "Pruning the roses in autumn, Émilie gets a scratch on her hand.",
+   "ko": "가을에 장미를 가지치기하다가 에밀리는 손에 생채기가 나요.",
+   "blank": "éraflure",
    "src": "made"
   }
  ],
@@ -38040,6 +38632,22 @@
    "en": "Chloé's children love climbing the rocks at low tide.",
    "ko": "클로에의 아이들은 썰물 때 바위 오르기를 아주 좋아해요.",
    "blank": "escalader",
+   "src": "made"
+  }
+ ],
+ "w|escale": [
+  {
+   "text": "Des routiers font escale chez Louis chaque midi sur la route du sud.",
+   "en": "Truck drivers stop off at Louis's every lunchtime on the road south.",
+   "ko": "남쪽으로 가는 트럭 기사들이 매일 점심 루이네 식당에 들러요.",
+   "blank": "escale",
+   "src": "made"
+  },
+  {
+   "text": "Le perroquet de Claire a voyagé en avion avec une escale à Montréal.",
+   "en": "Claire's parrot traveled by plane with a stopover in Montreal.",
+   "ko": "클레르의 앵무새는 몬트리올을 거쳐 비행기로 왔어요.",
+   "blank": "escale",
    "src": "made"
   }
  ],
@@ -38953,6 +39561,22 @@
    "en": "He seems to be tired this morning.",
    "ko": "그는 오늘 아침에 피곤해 보여.",
    "blank": "être"
+  }
+ ],
+ "w|étreinte": [
+  {
+   "text": "À sa sortie, Paul serre sa fille dans une longue étreinte.",
+   "en": "When he leaves, Paul holds his daughter in a long embrace.",
+   "ko": "퇴원하면서 폴은 딸을 오래 꼭 껴안아요.",
+   "blank": "étreinte",
+   "src": "made"
+  },
+  {
+   "text": "Au retour du printemps, Émilie accueille sa grand-mère d'une étreinte chaleureuse.",
+   "en": "When spring returns, Émilie welcomes her grandmother with a warm embrace.",
+   "ko": "봄이 돌아오면 에밀리는 할머니를 따뜻하게 꼭 안아 맞아요.",
+   "blank": "étreinte",
+   "src": "made"
   }
  ],
  "w|étroit": [
@@ -40038,6 +40662,22 @@
    "en": "In her letter, Inès writes that she is now an experienced hiker.",
    "ko": "이네스는 편지에 이제 숙련된 등산객이 됐다고 써요.",
    "blank": "expérimentée",
+   "src": "made"
+  }
+ ],
+ "w|expérimenter": [
+  {
+   "text": "Lucas aime expérimenter de nouveaux réglages sur sa machine.",
+   "en": "Lucas likes to experiment with new settings on his machine.",
+   "ko": "루카는 기계에 새로운 설정을 시험해 보는 걸 좋아해요.",
+   "blank": "expérimenter",
+   "src": "made"
+  },
+  {
+   "text": "Chaque printemps, Camille aime expérimenter de nouvelles graines dans son potager.",
+   "en": "Every spring, Camille likes to try out new seeds in her vegetable garden.",
+   "ko": "봄마다 카미유는 텃밭에 새로운 씨앗을 시험 삼아 심어 봐요.",
+   "blank": "expérimenter",
    "src": "made"
   }
  ],
@@ -41551,6 +42191,22 @@
    "src": "made"
   }
  ],
+ "w|fauve": [
+  {
+   "text": "Paul regarde à la télévision un documentaire sur les grands fauves d'Afrique.",
+   "en": "Paul watches a documentary on TV about Africa's big cats.",
+   "ko": "폴은 텔레비전으로 아프리카 맹수 다큐멘터리를 봐요.",
+   "blank": "fauves",
+   "src": "made"
+  },
+  {
+   "text": "Les feuilles d'automne prennent des teintes fauves dans la forêt d'Émilie.",
+   "en": "The autumn leaves take on tawny hues in Émilie's forest.",
+   "ko": "에밀리네 숲의 가을 잎이 황갈색으로 물들어요.",
+   "blank": "fauves",
+   "src": "made"
+  }
+ ],
  "w|faux": [
   {
    "text": "Ce document est complètement faux.",
@@ -41922,6 +42578,22 @@
    "en": "For the island festival, Léa and the orchestra take the ferry with their instruments.",
    "ko": "섬 축제에 가려고 레아와 오케스트라는 악기를 들고 여객선을 타요.",
    "blank": "ferry",
+   "src": "made"
+  }
+ ],
+ "w|fertile": [
+  {
+   "text": "Le jardinier de l'hôpital explique à Paul que la vallée a toujours eu une terre très fertile.",
+   "en": "The hospital gardener explains to Paul that the valley has always had very fertile soil.",
+   "ko": "병원 정원사가 폴에게 이 골짜기 땅은 예로부터 아주 기름졌다고 설명해요.",
+   "blank": "fertile",
+   "src": "made"
+  },
+  {
+   "text": "Après les pluies d'automne, la terre du jardin d'Émilie redevient fertile.",
+   "en": "After the autumn rains, the soil in Émilie's garden becomes fertile again.",
+   "ko": "가을비가 내린 뒤 에밀리의 정원 흙이 다시 기름져져요.",
+   "blank": "fertile",
    "src": "made"
   }
  ],
@@ -42881,6 +43553,22 @@
    "src": "made"
   }
  ],
+ "w|flaque": [
+  {
+   "text": "Après l'orage, Louis éponge une flaque d'eau devant l'entrée.",
+   "en": "After the storm, Louis mops up a puddle in front of the entrance.",
+   "ko": "폭우가 그친 뒤 루이는 입구 앞 물웅덩이를 닦아내요.",
+   "blank": "flaque",
+   "src": "made"
+  },
+  {
+   "text": "Le chien de Claire saute dans chaque flaque sur le chemin de la clinique.",
+   "en": "Claire's dog jumps into every puddle on the way to the clinic.",
+   "ko": "클레르의 개는 동물 병원 가는 길에 물웅덩이마다 뛰어들어요.",
+   "blank": "flaque",
+   "src": "made"
+  }
+ ],
  "w|flash": [
   {
    "text": "Un flash de lumière a traversé la pièce.",
@@ -43487,6 +44175,22 @@
    "en": "The emergency fund was created yesterday.",
    "ko": "비상자금이 어제 만들어졌어.",
    "blank": "fonds"
+  }
+ ],
+ "w|fondue": [
+  {
+   "text": "En hiver, la fondue au fromage est le plat le plus demandé chez Louis.",
+   "en": "In winter, cheese fondue is the most requested dish at Louis's.",
+   "ko": "겨울이면 치즈 퐁뒤가 루이네 식당에서 가장 많이 나가는 요리예요.",
+   "blank": "fondue",
+   "src": "made"
+  },
+  {
+   "text": "Le chien de Claire a mangé du fromage à fondue et a eu mal au ventre.",
+   "en": "Claire's dog ate fondue cheese and got a stomachache.",
+   "ko": "클레르의 개가 퐁뒤 치즈를 먹고 배탈이 났어요.",
+   "blank": "fondue",
+   "src": "made"
   }
  ],
  "w|fontaine": [
@@ -44289,6 +44993,22 @@
    "blank": "frais"
   }
  ],
+ "w|framboise": [
+  {
+   "text": "La mère de Louis prépare une tarte aux framboises tous les dimanches.",
+   "en": "Louis's mother makes a raspberry tart every Sunday.",
+   "ko": "루이의 어머니는 일요일마다 라즈베리 타르트를 만들어요.",
+   "blank": "framboises",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire interdit les framboises au chien de Claire pendant son traitement.",
+   "en": "The vet forbids raspberries for Claire's dog during its treatment.",
+   "ko": "수의사는 치료 중인 클레르의 개에게 라즈베리를 주지 말라고 해요.",
+   "blank": "framboises",
+   "src": "made"
+  }
+ ],
  "w|franc": [
   {
    "text": "Sois franc avec moi, s'il te plaît.",
@@ -45010,6 +45730,22 @@
    "en": "The chef's fury erupts when Camille spills the stock.",
    "ko": "카미유가 육수를 엎자 셰프의 분노가 터져요.",
    "blank": "fureur",
+   "src": "made"
+  }
+ ],
+ "w|furie": [
+  {
+   "text": "Quand le four tombe en panne en plein service, le chef entre dans une furie que Louis connaît bien.",
+   "en": "When the oven breaks down mid-service, the chef flies into a rage that Louis knows well.",
+   "ko": "영업 중에 오븐이 고장 나자 요리사가 루이에게 익숙한 분노를 터뜨려요.",
+   "blank": "furie",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'infirmière approche avec la seringue, la chatte de Claire devient une vraie furie.",
+   "en": "When the nurse approaches with the syringe, Claire's cat turns into a real fury.",
+   "ko": "간호사가 주사기를 들고 다가오자 클레르의 고양이가 미친 듯이 날뛰어요.",
+   "blank": "furie",
    "src": "made"
   }
  ],
@@ -46223,6 +46959,22 @@
    "blank": "gentleman"
   }
  ],
+ "w|géographie": [
+  {
+   "text": "Lucas a étudié la géographie avant de travailler à l'usine.",
+   "en": "Lucas studied geography before working at the factory.",
+   "ko": "루카는 공장에서 일하기 전에 지리학을 공부했어요.",
+   "blank": "géographie",
+   "src": "made"
+  },
+  {
+   "text": "Camille enseigne la géographie et parle des saisons dans l'hémisphère sud.",
+   "en": "Camille teaches geography and talks about the seasons in the southern hemisphere.",
+   "ko": "카미유는 지리를 가르치며 남반구의 계절 이야기를 해요.",
+   "blank": "géographie",
+   "src": "made"
+  }
+ ],
  "w|gérer": [
   {
    "text": "Je dois gérer plusieurs projets en même temps.",
@@ -46781,6 +47533,22 @@
    "src": "made"
   }
  ],
+ "w|gourde": [
+  {
+   "text": "Louis remplit la gourde d'un randonneur qui passe devant le restaurant.",
+   "en": "Louis fills the water bottle of a hiker passing the restaurant.",
+   "ko": "루이는 식당 앞을 지나는 등산객의 물병을 채워 줘요.",
+   "blank": "gourde",
+   "src": "made"
+  },
+  {
+   "text": "Claire emporte toujours une gourde pour faire boire son chien en promenade.",
+   "en": "Claire always takes a water bottle to give her dog a drink on walks.",
+   "ko": "클레르는 산책할 때 개에게 물을 주려고 늘 물병을 챙겨요.",
+   "blank": "gourde",
+   "src": "made"
+  }
+ ],
  "w|gourou": [
   {
    "text": "Le nouveau consultant se prend pour un gourou du management, se moque Julien.",
@@ -47205,6 +47973,22 @@
    "blank": "gras"
   }
  ],
+ "w|gratin": [
+  {
+   "text": "Le gratin dauphinois de Louis attire des clients de tout le canton.",
+   "en": "Louis's potato gratin attracts customers from all over the district.",
+   "ko": "루이의 감자 그라탱은 온 고을 손님을 끌어모아요.",
+   "blank": "gratin",
+   "src": "made"
+  },
+  {
+   "text": "Après la clinique, Claire réchauffe un reste de gratin pour dîner.",
+   "en": "After the clinic, Claire reheats some leftover gratin for dinner.",
+   "ko": "동물 병원에 다녀온 뒤 클레르는 남은 그라탱을 데워 저녁으로 먹어요.",
+   "blank": "gratin",
+   "src": "made"
+  }
+ ],
  "w|gratitude": [
   {
    "text": "Thomas exprime sa gratitude à la collègue qui lui a fait visiter les locaux.",
@@ -47416,6 +48200,22 @@
    "en": "The house cat leaves a claw mark on Sarah's dress.",
    "ko": "집고양이가 사라의 원피스에 발톱 자국을 남겨요.",
    "blank": "griffe",
+   "src": "made"
+  }
+ ],
+ "w|grignoter": [
+  {
+   "text": "Les enfants de Louis viennent grignoter des frites en cuisine après l'école.",
+   "en": "Louis's children come to nibble fries in the kitchen after school.",
+   "ko": "루이의 아이들은 학교가 끝나면 부엌에 와서 감자튀김을 집어 먹어요.",
+   "blank": "grignoter",
+   "src": "made"
+  },
+  {
+   "text": "Le lapin de Claire passe ses journées à grignoter du foin.",
+   "en": "Claire's rabbit spends its days nibbling hay.",
+   "ko": "클레르의 토끼는 하루 종일 건초를 갉아먹어요.",
+   "blank": "grignoter",
    "src": "made"
   }
  ],
@@ -47706,6 +48506,22 @@
    "en": "Inès has the camera mounted on a crane to film the square from above.",
    "ko": "이네스는 광장을 위에서 찍으려고 카메라를 크레인에 올려요.",
    "blank": "grue",
+   "src": "made"
+  }
+ ],
+ "w|guêpe": [
+  {
+   "text": "Paul est à l'hôpital à cause d'une piqûre de guêpe qui a mal tourné.",
+   "en": "Paul is in hospital because of a wasp sting that went wrong.",
+   "ko": "폴은 말벌에 쏘인 게 덧나서 병원에 있어요.",
+   "blank": "guêpe",
+   "src": "made"
+  },
+  {
+   "text": "En septembre, une guêpe tourne autour de la tarte aux prunes d'Émilie.",
+   "en": "In September, a wasp circles around Émilie's plum tart.",
+   "ko": "구월에 말벌 한 마리가 에밀리의 자두 타르트 주위를 맴돌아요.",
+   "blank": "guêpe",
    "src": "made"
   }
  ],
@@ -48405,6 +49221,22 @@
    "src": "made"
   }
  ],
+ "w|hareng": [
+  {
+   "text": "Le vendredi, Louis sert du hareng mariné avec des pommes de terre tièdes.",
+   "en": "On Fridays, Louis serves marinated herring with warm potatoes.",
+   "ko": "금요일이면 루이는 절인 청어를 따뜻한 감자와 함께 내요.",
+   "blank": "hareng",
+   "src": "made"
+  },
+  {
+   "text": "Le chat de Claire a volé un hareng fumé dans le sac de courses.",
+   "en": "Claire's cat stole a smoked herring from the shopping bag.",
+   "ko": "클레르의 고양이가 장바구니에서 훈제 청어를 훔쳐 갔어요.",
+   "blank": "hareng",
+   "src": "made"
+  }
+ ],
  "w|haricot": [
   {
    "text": "Ce haricot met longtemps à cuire.",
@@ -48657,6 +49489,22 @@
    "en": "I like to walk barefoot on the grass.",
    "ko": "나는 맨발로 herbe 위를 걷는 것을 좋아해.",
    "blank": "herbe"
+  }
+ ],
+ "w|héréditaire": [
+  {
+   "text": "Le médecin demande à Paul s'il y a une maladie héréditaire dans sa famille.",
+   "en": "The doctor asks Paul if there is a hereditary disease in his family.",
+   "ko": "의사가 폴에게 집안에 유전병이 있는지 물어요.",
+   "blank": "héréditaire",
+   "src": "made"
+  },
+  {
+   "text": "L'allergie au pollen d'Émilie est héréditaire : sa mère éternue aussi chaque printemps.",
+   "en": "Émilie's pollen allergy is hereditary: her mother also sneezes every spring.",
+   "ko": "에밀리의 꽃가루 알레르기는 유전이에요. 어머니도 봄마다 재채기를 하거든요.",
+   "blank": "héréditaire",
+   "src": "made"
   }
  ],
  "w|hérétique": [
@@ -50897,6 +51745,22 @@
    "src": "made"
   }
  ],
+ "w|imperméable": [
+  {
+   "text": "Un client a oublié son imperméable sur le porte-manteau de Louis.",
+   "en": "A customer forgot his raincoat on Louis's coat rack.",
+   "ko": "한 손님이 루이네 옷걸이에 비옷을 두고 갔어요.",
+   "blank": "imperméable",
+   "src": "made"
+  },
+  {
+   "text": "Claire a acheté un petit imperméable jaune pour son teckel.",
+   "en": "Claire bought a little yellow raincoat for her dachshund.",
+   "ko": "클레르는 닥스훈트에게 작은 노란 비옷을 사 줬어요.",
+   "blank": "imperméable",
+   "src": "made"
+  }
+ ],
  "w|impitoyable": [
   {
    "text": "Le jury du concours de la meilleure baguette est impitoyable, prévient Antoine.",
@@ -51951,6 +52815,22 @@
    "blank": "indien"
   }
  ],
+ "w|indifférence": [
+  {
+   "text": "L'indifférence d'un médecin pressé blesse Paul plus que la douleur.",
+   "en": "The indifference of a rushed doctor hurts Paul more than the pain.",
+   "ko": "바쁜 의사의 무관심이 통증보다 더 폴의 마음을 아프게 해요.",
+   "blank": "indifférence",
+   "src": "made"
+  },
+  {
+   "text": "Émilie ne regarde jamais l'arrivée de l'automne avec indifférence.",
+   "en": "Émilie never greets the arrival of autumn with indifference.",
+   "ko": "에밀리는 가을이 오는 걸 한 번도 무심히 넘긴 적이 없어요.",
+   "blank": "indifférence",
+   "src": "made"
+  }
+ ],
  "w|indifférent": [
   {
    "text": "Lucas a cru que Léa était indifférente à ses problèmes au travail.",
@@ -52276,6 +53156,22 @@
    "en": "Émilie watches a series about an unfaithful detective with her husband.",
    "ko": "에밀리는 남편과 바람둥이 형사가 나오는 드라마를 봐요.",
    "blank": "infidèle",
+   "src": "made"
+  }
+ ],
+ "w|infidélité": [
+  {
+   "text": "Le voisin de chambre de Paul lui raconte que l'infidélité a brisé son mariage.",
+   "en": "Paul's roommate tells him that infidelity broke up his marriage.",
+   "ko": "같은 병실 환자가 폴에게 외도 때문에 결혼이 깨졌다고 털어놓아요.",
+   "blank": "infidélité",
+   "src": "made"
+  },
+  {
+   "text": "Émilie lit un roman d'hiver où une infidélité déchire une famille.",
+   "en": "Émilie reads a winter novel in which an infidelity tears a family apart.",
+   "ko": "에밀리는 외도로 가족이 갈라지는 겨울 소설을 읽어요.",
+   "blank": "infidélité",
    "src": "made"
   }
  ],
@@ -53060,6 +53956,22 @@
    "en": "Inès is never unmoved by the beauty of old villages.",
    "ko": "이네스는 오래된 마을의 아름다움에 늘 마음이 움직여요.",
    "blank": "insensible",
+   "src": "made"
+  }
+ ],
+ "w|inséparable": [
+  {
+   "text": "Paul et son voisin de chambre sont devenus inséparables pendant leur séjour à l'hôpital.",
+   "en": "Paul and his roommate became inseparable during their hospital stay.",
+   "ko": "폴과 같은 병실 환자는 입원하는 동안 단짝이 됐어요.",
+   "blank": "inséparables",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Émilie et sa sœur sont inséparables dans les champs de fleurs.",
+   "en": "In spring, Émilie and her sister are inseparable in the flower fields.",
+   "ko": "봄이면 에밀리와 동생은 꽃밭에서 떨어질 줄 몰라요.",
+   "blank": "inséparables",
    "src": "made"
   }
  ],
@@ -54131,6 +55043,22 @@
    "src": "made"
   }
  ],
+ "w|intersection": [
+  {
+   "text": "L'ambulance de Paul a été bloquée à une intersection pendant de longues minutes.",
+   "en": "Paul's ambulance was stuck at an intersection for long minutes.",
+   "ko": "폴을 태운 구급차가 교차로에서 한참 동안 멈춰 있었어요.",
+   "blank": "intersection",
+   "src": "made"
+  },
+  {
+   "text": "En hiver, Émilie ralentit toujours à l'intersection, où la route gèle vite.",
+   "en": "In winter, Émilie always slows down at the intersection, where the road freezes quickly.",
+   "ko": "겨울이면 에밀리는 길이 금방 어는 교차로에서 늘 속도를 줄여요.",
+   "blank": "intersection",
+   "src": "made"
+  }
+ ],
  "w|intervalle": [
   {
    "text": "La machine de Louis s'arrête à intervalle régulier pour refroidir.",
@@ -54497,6 +55425,22 @@
    "en": "It's pointless to insist any more.",
    "ko": "더 이상 고집하는 건 쓸모없어.",
    "blank": "inutile"
+  }
+ ],
+ "w|invalide": [
+  {
+   "text": "Paul craint de rester invalide après son accident de chantier.",
+   "en": "Paul fears being left disabled after his building-site accident.",
+   "ko": "폴은 공사 현장 사고 뒤에 장애가 남을까 봐 걱정해요.",
+   "blank": "invalide",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin d'Émilie, devenu invalide, regarde passer les saisons depuis sa fenêtre.",
+   "en": "Émilie's neighbor, now disabled, watches the seasons go by from his window.",
+   "ko": "몸이 불편해진 에밀리의 이웃은 창가에서 계절이 지나가는 걸 지켜봐요.",
+   "blank": "invalide",
+   "src": "made"
   }
  ],
  "w|invasion": [
@@ -55997,6 +56941,22 @@
    "src": "made"
   }
  ],
+ "w|juriste": [
+  {
+   "text": "Une juriste de l'usine explique à Lucas son nouveau contrat.",
+   "en": "A lawyer at the factory explains Lucas's new contract to him.",
+   "ko": "공장의 법무 담당자가 루카에게 새 계약서를 설명해요.",
+   "blank": "juriste",
+   "src": "made"
+  },
+  {
+   "text": "La sœur de Camille, juriste, prend toujours ses vacances en automne.",
+   "en": "Camille's sister, a lawyer, always takes her holidays in autumn.",
+   "ko": "법률가인 카미유의 언니는 늘 가을에 휴가를 가요.",
+   "blank": "juriste",
+   "src": "made"
+  }
+ ],
  "w|jury": [
   {
    "text": "Le jury a délibéré pendant des heures.",
@@ -56108,6 +57068,38 @@
    "en": "Manon has to justify her absence from the music theory class.",
    "ko": "마농은 솔페주 수업에 빠진 이유를 설명해야 해요.",
    "blank": "justifier",
+   "src": "made"
+  }
+ ],
+ "w|juteux": [
+  {
+   "text": "Louis sert un poulet rôti juteux avec des pommes de terre.",
+   "en": "Louis serves a juicy roast chicken with potatoes.",
+   "ko": "루이는 육즙 가득한 통닭구이를 감자와 함께 내요.",
+   "blank": "juteux",
+   "src": "made"
+  },
+  {
+   "text": "Le chien de Claire a volé un steak juteux sur la table de la cuisine.",
+   "en": "Claire's dog stole a juicy steak from the kitchen table.",
+   "ko": "클레르의 개가 부엌 식탁에서 육즙 많은 스테이크를 훔쳐 먹었어요.",
+   "blank": "juteux",
+   "src": "made"
+  }
+ ],
+ "w|juvénile": [
+  {
+   "text": "Malgré ses soixante ans, Paul garde un enthousiasme juvénile qui fait sourire les infirmières.",
+   "en": "Despite his sixty years, Paul keeps a youthful enthusiasm that makes the nurses smile.",
+   "ko": "예순인데도 폴은 젊은이 같은 열정을 간직해서 간호사들이 미소 지어요.",
+   "blank": "juvénile",
+   "src": "made"
+  },
+  {
+   "text": "Le printemps rend à Émilie une énergie presque juvénile.",
+   "en": "Spring gives Émilie back an almost youthful energy.",
+   "ko": "봄이 오면 에밀리는 젊은이 같은 기운을 되찾아요.",
+   "blank": "juvénile",
    "src": "made"
   }
  ],
@@ -57555,6 +58547,22 @@
    "blank": "lieutenant"
   }
  ],
+ "w|lièvre": [
+  {
+   "text": "En automne, Louis cuisine un civet de lièvre comme son père.",
+   "en": "In autumn, Louis cooks a hare stew like his father did.",
+   "ko": "가을이면 루이는 아버지처럼 산토끼 스튜를 만들어요.",
+   "blank": "lièvre",
+   "src": "made"
+  },
+  {
+   "text": "Un promeneur apporte à la clinique un jeune lièvre blessé, et Claire l'aide à le porter.",
+   "en": "A walker brings an injured young hare to the clinic, and Claire helps carry it.",
+   "ko": "산책하던 사람이 다친 어린 산토끼를 데려오자 클레르가 옮기는 걸 도와요.",
+   "blank": "lièvre",
+   "src": "made"
+  }
+ ],
  "w|ligne": [
   {
    "text": "Cette ligne de métro est rapide.",
@@ -57613,6 +58621,22 @@
    "en": "Our team won the league this year.",
    "ko": "우리 팀이 올해 리그에서 우승했어.",
    "blank": "ligue"
+  }
+ ],
+ "w|limace": [
+  {
+   "text": "Une limace grimpe sur une feuille de salade, et Louis la jette avant le service.",
+   "en": "A slug climbs onto a lettuce leaf, and Louis throws it away before service.",
+   "ko": "상추 잎에 민달팽이가 붙어 있어서 루이는 영업 전에 버려요.",
+   "blank": "limace",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire explique à Claire que les granulés contre les limaces sont dangereux pour les chiens.",
+   "en": "The vet explains to Claire that slug pellets are dangerous for dogs.",
+   "ko": "수의사가 클레르에게 민달팽이 약이 개에게 위험하다고 설명해요.",
+   "blank": "limaces",
+   "src": "made"
   }
  ],
  "w|limite": [
@@ -58496,6 +59520,22 @@
    "en": "The first evening, Léa sees a firefly glowing in the small garden.",
    "ko": "첫날 저녁 레아는 작은 마당에서 반짝이는 반딧불이를 봐요.",
    "blank": "luciole",
+   "src": "made"
+  }
+ ],
+ "w|lucratif": [
+  {
+   "text": "La nouvelle gamme de produits s'annonce très lucrative pour l'usine de Lucas.",
+   "en": "The new product line looks very lucrative for Lucas's factory.",
+   "ko": "새 제품군이 루카의 공장에 큰 수익을 안겨 줄 것 같아요.",
+   "blank": "lucrative",
+   "src": "made"
+  },
+  {
+   "text": "La vente de sapins de Noël est une activité lucrative pour le voisin de Camille.",
+   "en": "Selling Christmas trees is a lucrative business for Camille's neighbor.",
+   "ko": "크리스마스트리 판매는 카미유의 이웃에게 짭짤한 돈벌이예요.",
+   "blank": "lucrative",
    "src": "made"
   }
  ],
@@ -59677,6 +60717,22 @@
    "blank": "mamie"
   }
  ],
+ "w|mammifère": [
+  {
+   "text": "L'usine de Lucas fabrique des peluches de mammifères marins pour les aquariums.",
+   "en": "Lucas's factory makes plush toys of marine mammals for aquariums.",
+   "ko": "루카의 공장은 수족관에 납품할 해양 포유류 인형을 만들어요.",
+   "blank": "mammifères",
+   "src": "made"
+  },
+  {
+   "text": "Camille explique à son fils que certains mammifères dorment tout l'hiver.",
+   "en": "Camille explains to her son that some mammals sleep all winter.",
+   "ko": "카미유는 아들에게 어떤 포유류는 겨우내 잠을 잔다고 설명해요.",
+   "blank": "mammifères",
+   "src": "made"
+  }
+ ],
  "w|manager": [
   {
    "text": "Le manager organise la réunion demain.",
@@ -59763,6 +60819,22 @@
    "en": "He likes to eat chocolate.",
    "ko": "그는 초콜릿 먹는 걸 좋아해.",
    "blank": "manger"
+  }
+ ],
+ "w|mangue": [
+  {
+   "text": "Louis ajoute de la mangue fraîche à sa salade d'été.",
+   "en": "Louis adds fresh mango to his summer salad.",
+   "ko": "루이는 여름 샐러드에 신선한 망고를 넣어요.",
+   "blank": "mangue",
+   "src": "made"
+  },
+  {
+   "text": "Le perroquet de Claire raffole des morceaux de mangue.",
+   "en": "Claire's parrot loves pieces of mango.",
+   "ko": "클레르의 앵무새는 망고 조각을 아주 좋아해요.",
+   "blank": "mangue",
+   "src": "made"
   }
  ],
  "w|maniaque": [
@@ -64119,6 +65191,22 @@
    "blank": "mort"
   }
  ],
+ "w|mortalité": [
+  {
+   "text": "Sur un panneau, Paul lit que la mortalité infantile a beaucoup baissé en un siècle.",
+   "en": "On a board, Paul reads that infant mortality has fallen a lot in a century.",
+   "ko": "폴은 게시판에서 한 세기 동안 영아 사망률이 크게 줄었다는 걸 읽어요.",
+   "blank": "mortalité",
+   "src": "made"
+  },
+  {
+   "text": "Émilie lit que les vagues de chaleur augmentent la mortalité chez les personnes âgées.",
+   "en": "Émilie reads that heat waves increase mortality among the elderly.",
+   "ko": "에밀리는 폭염이 노인 사망률을 높인다는 글을 읽어요.",
+   "blank": "mortalité",
+   "src": "made"
+  }
+ ],
  "w|mortel": [
   {
    "text": "Le venin de ce serpent est mortel.",
@@ -66053,6 +67141,22 @@
    "blank": "nom"
   }
  ],
+ "w|nomade": [
+  {
+   "text": "Un nomade qui traverse le pays à pied s'arrête chez Louis pour un repas chaud.",
+   "en": "A nomad crossing the country on foot stops at Louis's for a hot meal.",
+   "ko": "걸어서 나라를 가로지르는 유랑자가 따뜻한 밥을 먹으러 루이네 식당에 들러요.",
+   "blank": "nomade",
+   "src": "made"
+  },
+  {
+   "text": "Claire a adopté un chat errant, un vrai nomade du quartier.",
+   "en": "Claire adopted a stray cat, a real nomad of the neighborhood.",
+   "ko": "클레르는 동네를 떠돌던 진짜 방랑자 고양이를 입양했어요.",
+   "blank": "nomade",
+   "src": "made"
+  }
+ ],
  "w|nombre": [
   {
    "text": "Le nombre de participants augmente chaque année.",
@@ -66881,6 +67985,22 @@
    "blank": "obscurité"
   }
  ],
+ "w|obséder": [
+  {
+   "text": "Le bruit de la presse finit par obséder Lucas, même la nuit.",
+   "en": "The noise of the press ends up haunting Lucas, even at night.",
+   "ko": "프레스 소리가 밤에도 루카의 머릿속을 떠나지 않아요.",
+   "blank": "obséder",
+   "src": "made"
+  },
+  {
+   "text": "L'idée de partir à la mer finit par obséder Camille dès le mois de mai.",
+   "en": "The idea of going to the seaside ends up obsessing Camille from May onward.",
+   "ko": "오월만 되면 바다에 가고 싶은 생각이 카미유를 사로잡아요.",
+   "blank": "obséder",
+   "src": "made"
+  }
+ ],
  "w|obsèques": [
   {
    "text": "Thomas a pris un jour de congé pour assister aux obsèques de son ancien chef.",
@@ -67150,6 +68270,22 @@
    "en": "A spectator was obnoxious to the referee, and Manon is ashamed of it.",
    "ko": "한 관중이 심판에게 아주 무례하게 굴어서 마농은 부끄러워요.",
    "blank": "odieux",
+   "src": "made"
+  }
+ ],
+ "w|odorat": [
+  {
+   "text": "Depuis son virus, Paul a perdu une partie de son odorat.",
+   "en": "Since his virus, Paul has lost part of his sense of smell.",
+   "ko": "바이러스를 앓은 뒤 폴은 후각을 일부 잃었어요.",
+   "blank": "odorat",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, l'odorat d'Émilie se réveille avec le parfum des lilas.",
+   "en": "In spring, Émilie's sense of smell wakes up with the scent of lilacs.",
+   "ko": "봄이 오면 라일락 향기에 에밀리의 후각이 깨어나요.",
+   "blank": "odorat",
    "src": "made"
   }
  ],
@@ -69059,6 +70195,22 @@
    "src": "made"
   }
  ],
+ "w|palier": [
+  {
+   "text": "Le bureau du directeur est au dernier palier de l'escalier, et Lucas monte essoufflé.",
+   "en": "The director's office is on the top landing of the stairs, and Lucas climbs up out of breath.",
+   "ko": "공장장 사무실은 계단 맨 위층에 있어서 루카는 숨을 헐떡이며 올라가요.",
+   "blank": "palier",
+   "src": "made"
+  },
+  {
+   "text": "En automne, Camille pose des citrouilles sur le palier devant sa porte.",
+   "en": "In autumn, Camille puts pumpkins on the landing in front of her door.",
+   "ko": "가을이면 카미유는 현관 앞 층계참에 호박을 놓아 둬요.",
+   "blank": "palier",
+   "src": "made"
+  }
+ ],
  "w|palpitant": [
   {
    "text": "Paul trouve son nouveau projet vraiment palpitant.",
@@ -69679,6 +70831,22 @@
    "en": "He is crying because his toy is broken.",
    "ko": "장난감이 부러져서 울고 있어.",
    "blank": "parce que"
+  }
+ ],
+ "w|parcelle": [
+  {
+   "text": "De sa fenêtre, Paul voit une parcelle de jardin cultivée par les soignants.",
+   "en": "From his window, Paul sees a garden plot tended by the hospital staff.",
+   "ko": "창문으로 폴은 의료진이 가꾸는 텃밭 한 뙈기를 봐요.",
+   "blank": "parcelle",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Émilie bêche sa parcelle au jardin partagé.",
+   "en": "In spring, Émilie digs her plot in the community garden.",
+   "ko": "봄이면 에밀리는 공동 텃밭의 자기 땅을 갈아요.",
+   "blank": "parcelle",
+   "src": "made"
   }
  ],
  "w|parchemin": [
@@ -72241,6 +73409,22 @@
    "src": "made"
   }
  ],
+ "w|pétale": [
+  {
+   "text": "Un pétale de rose est tombé sur le plateau-repas de Paul.",
+   "en": "A rose petal has fallen onto Paul's meal tray.",
+   "ko": "폴의 식판 위에 장미 꽃잎 하나가 떨어졌어요.",
+   "blank": "pétale",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, le vent dépose un pétale de cerisier dans le café d'Émilie.",
+   "en": "In spring, the wind drops a cherry blossom petal into Émilie's coffee.",
+   "ko": "봄바람에 벚꽃 꽃잎 하나가 에밀리의 커피잔에 떨어져요.",
+   "blank": "pétale",
+   "src": "made"
+  }
+ ],
  "w|pétard": [
   {
    "text": "Un pétard a éclaté dans la cour, et Julien a sursauté.",
@@ -72839,6 +74023,22 @@
    "src": "made"
   }
  ],
+ "w|piéton": [
+  {
+   "text": "Un passage piéton a enfin été peint devant l'entrée de l'usine de Lucas.",
+   "en": "A pedestrian crossing has finally been painted in front of the entrance to Lucas's factory.",
+   "ko": "루카의 공장 입구 앞에 드디어 횡단보도가 그려졌어요.",
+   "blank": "piéton",
+   "src": "made"
+  },
+  {
+   "text": "En été, la rue de Camille devient piétonne le dimanche.",
+   "en": "In summer, Camille's street becomes pedestrian-only on Sundays.",
+   "ko": "여름이면 카미유네 거리는 일요일마다 보행자 전용이 돼요.",
+   "blank": "piétonne",
+   "src": "made"
+  }
+ ],
  "w|piètre": [
   {
    "text": "Le nouvel apprenti est un piètre bricoleur, mais Paul reste patient.",
@@ -73373,6 +74573,22 @@
    "en": "I love pizza with lots of cheese.",
    "ko": "나는 치즈 듬뿍 얹은 피자를 좋아해.",
    "blank": "pizza"
+  }
+ ],
+ "w|pizzeria": [
+  {
+   "text": "Le restaurant familial de Louis était une pizzeria avant que ses parents le rachètent.",
+   "en": "Louis's family restaurant was a pizzeria before his parents bought it.",
+   "ko": "루이네 가족 식당은 부모님이 사들이기 전엔 피자 가게였어요.",
+   "blank": "pizzeria",
+   "src": "made"
+  },
+  {
+   "text": "Après la consultation, Claire et son chien s'arrêtent à la pizzeria du coin.",
+   "en": "After the consultation, Claire and her dog stop at the corner pizzeria.",
+   "ko": "진료를 마치고 클레르와 개는 모퉁이 피자 가게에 들러요.",
+   "blank": "pizzeria",
+   "src": "made"
   }
  ],
  "w|placard": [
@@ -74267,6 +75483,22 @@
    "blank": "poche"
   }
  ],
+ "w|pochette": [
+  {
+   "text": "Paul garde ses papiers d'hôpital dans une pochette en plastique.",
+   "en": "Paul keeps his hospital papers in a plastic sleeve.",
+   "ko": "폴은 병원 서류를 비닐 파일에 넣어 둬요.",
+   "blank": "pochette",
+   "src": "made"
+  },
+  {
+   "text": "Émilie range les graines du printemps dans une pochette en papier.",
+   "en": "Émilie stores the spring seeds in a paper envelope.",
+   "ko": "에밀리는 봄에 뿌릴 씨앗을 종이 봉투에 넣어 둬요.",
+   "blank": "pochette",
+   "src": "made"
+  }
+ ],
  "w|poêle": [
   {
    "text": "Louis fait sauter des crêpes dans la grande poêle.",
@@ -74861,6 +76093,22 @@
    "blank": "pompier"
   }
  ],
+ "w|ponctuel": [
+  {
+   "text": "Le kiné de Paul est toujours ponctuel, à neuf heures pile.",
+   "en": "Paul's physiotherapist is always punctual, at nine sharp.",
+   "ko": "폴의 물리치료사는 늘 아홉 시 정각에 맞춰 와요.",
+   "blank": "ponctuel",
+   "src": "made"
+  },
+  {
+   "text": "Chaque année, le retour des hirondelles est ponctuel, remarque Émilie.",
+   "en": "Every year, the swallows' return is punctual, Émilie notes.",
+   "ko": "해마다 제비가 어김없이 제때 돌아온다고 에밀리가 말해요.",
+   "blank": "ponctuel",
+   "src": "made"
+  }
+ ],
  "w|pondre": [
   {
    "text": "Julien observe une cane qui vient de pondre dans les roseaux.",
@@ -75363,6 +76611,22 @@
    "en": "We share a jar of jam at breakfast.",
    "ko": "우리는 아침 식사 때 잼 한 병을 나눠 먹는다.",
    "blank": "pot"
+  }
+ ],
+ "w|potable": [
+  {
+   "text": "Louis sert l'eau potable du village en carafe, sans supplément.",
+   "en": "Louis serves the village's drinking water in carafes at no extra charge.",
+   "ko": "루이는 마을 식수를 물병에 담아 무료로 내줘요.",
+   "blank": "potable",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire conseille à Claire de ne donner que de l'eau potable à son lapin.",
+   "en": "The vet advises Claire to give her rabbit only drinking water.",
+   "ko": "수의사는 클레르에게 토끼에게 먹는 물만 주라고 조언해요.",
+   "blank": "potable",
+   "src": "made"
   }
  ],
  "w|pote": [
@@ -78939,6 +80203,22 @@
    "src": "made"
   }
  ],
+ "w|puberté": [
+  {
+   "text": "Le pédiatre explique à Paul que son fils entre dans la puberté.",
+   "en": "The pediatrician explains to Paul that his son is entering puberty.",
+   "ko": "소아과 의사가 폴에게 아들이 사춘기에 접어들었다고 설명해요.",
+   "blank": "puberté",
+   "src": "made"
+  },
+  {
+   "text": "Le fils d'Émilie a beaucoup grandi cet été, signe que la puberté arrive.",
+   "en": "Émilie's son grew a lot this summer, a sign that puberty is coming.",
+   "ko": "에밀리의 아들이 올여름 부쩍 커서 사춘기가 오는 것 같아요.",
+   "blank": "puberté",
+   "src": "made"
+  }
+ ],
  "w|public": [
   {
    "text": "Ce message est public.",
@@ -79025,6 +80305,22 @@
    "en": "I have a chip on my bank card.",
    "ko": "내 은행 카드에 칩이 있어.",
    "blank": "puce"
+  }
+ ],
+ "w|pudeur": [
+  {
+   "text": "Par pudeur, Lucas ne parle jamais de son salaire avec ses collègues.",
+   "en": "Out of modesty, Lucas never talks about his salary with his colleagues.",
+   "ko": "루카는 쑥스러워서 동료들과 월급 얘기를 절대 하지 않아요.",
+   "blank": "pudeur",
+   "src": "made"
+  },
+  {
+   "text": "Même en pleine canicule, Camille garde une certaine pudeur et refuse de se baigner en public.",
+   "en": "Even in a heat wave, Camille keeps a certain modesty and refuses to swim in public.",
+   "ko": "폭염 속에서도 카미유는 수줍음이 있어서 사람들 앞에서 수영하지 않아요.",
+   "blank": "pudeur",
+   "src": "made"
   }
  ],
  "w|puer": [
@@ -82239,6 +83535,22 @@
    "blank": "récupérer"
   }
  ],
+ "w|recyclage": [
+  {
+   "text": "Lucas trie les chutes de métal destinées au recyclage.",
+   "en": "Lucas sorts the metal scraps intended for recycling.",
+   "ko": "루카는 재활용할 금속 자투리를 분류해요.",
+   "blank": "recyclage",
+   "src": "made"
+  },
+  {
+   "text": "Après Noël, Camille dépose son sapin au point de recyclage du quartier.",
+   "en": "After Christmas, Camille drops off her tree at the neighborhood recycling point.",
+   "ko": "크리스마스가 지나면 카미유는 동네 재활용 장소에 트리를 내놓아요.",
+   "blank": "recyclage",
+   "src": "made"
+  }
+ ],
  "w|rédacteur": [
   {
    "text": "Le rédacteur du journal interne demande une interview à Nicolas.",
@@ -85271,6 +86583,22 @@
    "blank": "responsable"
   }
  ],
+ "w|ressaisir": [
+  {
+   "text": "Après une erreur sur la chaîne, Lucas prend une grande respiration pour se ressaisir.",
+   "en": "After a mistake on the line, Lucas takes a deep breath to pull himself together.",
+   "ko": "생산 라인에서 실수한 뒤 루카는 마음을 다잡으려고 크게 숨을 쉬어요.",
+   "blank": "ressaisir",
+   "src": "made"
+  },
+  {
+   "text": "Après un hiver déprimant, Camille se force à se ressaisir dès les premiers rayons de soleil.",
+   "en": "After a depressing winter, Camille makes herself pull together at the first rays of sunshine.",
+   "ko": "우울한 겨울을 보낸 카미유는 첫 햇살과 함께 마음을 다잡아요.",
+   "blank": "ressaisir",
+   "src": "made"
+  }
+ ],
  "w|ressemblance": [
   {
    "text": "La ressemblance entre les deux portraits a intrigué les visiteurs.",
@@ -87388,6 +88716,22 @@
    "en": "A detective novel set in a Marseille alley is all the rage with Camille's readers.",
    "ko": "마르세유 골목을 배경으로 한 추리 소설이 카미유의 이용자들 사이에서 인기예요.",
    "blank": "ruelle",
+   "src": "made"
+  }
+ ],
+ "w|rugby": [
+  {
+   "text": "Paul s'est blessé au genou en jouant au rugby avec ses amis.",
+   "en": "Paul hurt his knee playing rugby with his friends.",
+   "ko": "폴은 친구들과 럭비를 하다가 무릎을 다쳤어요.",
+   "blank": "rugby",
+   "src": "made"
+  },
+  {
+   "text": "L'automne, c'est la saison du rugby, et Émilie suit tous les matchs.",
+   "en": "Autumn is rugby season, and Émilie follows every match.",
+   "ko": "가을은 럭비 시즌이라 에밀리는 모든 경기를 챙겨 봐요.",
+   "blank": "rugby",
    "src": "made"
   }
  ],
@@ -89947,6 +91291,22 @@
    "en": "A senator is visiting our school tomorrow.",
    "ko": "상원의원이 내일 우리 학교에 방문해요.",
    "blank": "sénateur"
+  }
+ ],
+ "w|sénile": [
+  {
+   "text": "Le vieux voisin de Paul n'est pas sénile, il est seulement un peu sourd.",
+   "en": "Paul's old neighbor isn't senile, he's just a bit deaf.",
+   "ko": "폴의 나이 든 이웃은 노망난 게 아니라 귀가 좀 어두울 뿐이에요.",
+   "blank": "sénile",
+   "src": "made"
+  },
+  {
+   "text": "Le vieux chien d'Émilie devient un peu sénile et dort tout l'hiver près du poêle.",
+   "en": "Émilie's old dog is getting a little senile and sleeps all winter near the stove.",
+   "ko": "에밀리의 늙은 개는 조금 노망이 나서 겨우내 난로 옆에서 자요.",
+   "blank": "sénile",
+   "src": "made"
   }
  ],
  "w|sens": [
@@ -92547,6 +93907,22 @@
    "blank": "souffrir"
   }
  ],
+ "w|soufre": [
+  {
+   "text": "Le dermatologue prescrit à Paul une crème au soufre pour sa peau.",
+   "en": "The dermatologist prescribes Paul a sulfur cream for his skin.",
+   "ko": "피부과 의사가 폴에게 피부에 바를 유황 크림을 처방해요.",
+   "blank": "soufre",
+   "src": "made"
+  },
+  {
+   "text": "Près de la source chaude, l'air de l'hiver sent le soufre, remarque Émilie.",
+   "en": "Near the hot spring, the winter air smells of sulfur, Émilie notes.",
+   "ko": "온천 근처의 겨울 공기에서 유황 냄새가 난다고 에밀리가 말해요.",
+   "blank": "soufre",
+   "src": "made"
+  }
+ ],
  "w|souhait": [
   {
    "text": "Fais un souhait avant de souffler les bougies.",
@@ -93072,6 +94448,22 @@
    "en": "Sarah's children ask for spaghetti bolognese every night.",
    "ko": "사라의 아이들은 매일 저녁 볼로네제 스파게티를 해 달라고 졸라요.",
    "blank": "spaghettis",
+   "src": "made"
+  }
+ ],
+ "w|spasme": [
+  {
+   "text": "Un spasme dans le dos réveille Paul au milieu de la nuit.",
+   "en": "A spasm in his back wakes Paul in the middle of the night.",
+   "ko": "한밤중에 등 경련 때문에 폴이 잠에서 깨요.",
+   "blank": "spasme",
+   "src": "made"
+  },
+  {
+   "text": "Le froid de janvier provoque chez Émilie un spasme dans la nuque.",
+   "en": "The January cold gives Émilie a spasm in the neck.",
+   "ko": "일월 추위에 에밀리는 목덜미에 경련이 와요.",
+   "blank": "spasme",
    "src": "made"
   }
  ],
@@ -95839,6 +97231,22 @@
    "src": "made"
   }
  ],
+ "w|tanière": [
+  {
+   "text": "Le bureau de Louis, au fond du restaurant, est sa petite tanière.",
+   "en": "Louis's office at the back of the restaurant is his little den.",
+   "ko": "식당 안쪽 사무실은 루이의 작은 아지트예요.",
+   "blank": "tanière",
+   "src": "made"
+  },
+  {
+   "text": "Le renard soigné par la clinique retourne dans sa tanière, et Claire assiste à sa libération.",
+   "en": "The fox treated by the clinic returns to its den, and Claire watches its release.",
+   "ko": "동물 병원에서 치료받은 여우가 굴로 돌아가는 걸 클레르가 지켜봐요.",
+   "blank": "tanière",
+   "src": "made"
+  }
+ ],
  "w|tant": [
   {
    "text": "Il y a tant de choses à faire.",
@@ -96687,6 +98095,22 @@
    "en": "Do you follow the trend in fashion?",
    "ko": "패션 유행을 따라가나요?",
    "blank": "tendance"
+  }
+ ],
+ "w|tendon": [
+  {
+   "text": "Paul s'est déchiré un tendon de la cheville en descendant l'escalier.",
+   "en": "Paul tore a tendon in his ankle going down the stairs.",
+   "ko": "폴은 계단을 내려가다가 발목 힘줄이 찢어졌어요.",
+   "blank": "tendon",
+   "src": "made"
+  },
+  {
+   "text": "Émilie s'étire bien avant de courir pour protéger son tendon d'Achille du froid.",
+   "en": "Émilie stretches well before running to protect her Achilles tendon from the cold.",
+   "ko": "에밀리는 추위에 아킬레스건을 보호하려고 달리기 전에 스트레칭을 충분히 해요.",
+   "blank": "tendon",
+   "src": "made"
   }
  ],
  "w|tendre": [
@@ -98611,6 +100035,22 @@
    "blank": "train"
   }
  ],
+ "w|traîneau": [
+  {
+   "text": "En hiver, le neveu de Louis arrive au restaurant en tirant un petit traîneau.",
+   "en": "In winter, Louis's nephew arrives at the restaurant pulling a little sled.",
+   "ko": "겨울이면 루이의 조카가 작은 썰매를 끌고 식당에 와요.",
+   "blank": "traîneau",
+   "src": "made"
+  },
+  {
+   "text": "La vétérinaire soigne les chiens de traîneau d'un ami de Claire.",
+   "en": "The vet treats the sled dogs of one of Claire's friends.",
+   "ko": "수의사가 클레르 친구의 썰매 개들을 치료해요.",
+   "blank": "traîneau",
+   "src": "made"
+  }
+ ],
  "w|traîner": [
   {
    "text": "Tu ne devrais pas traîner dehors si tard.",
@@ -98971,6 +100411,38 @@
    "blank": "transformer"
   }
  ],
+ "w|transfusion": [
+  {
+   "text": "Après l'hémorragie, Paul a reçu une transfusion de sang.",
+   "en": "After the hemorrhage, Paul received a blood transfusion.",
+   "ko": "출혈 뒤에 폴은 수혈을 받았어요.",
+   "blank": "transfusion",
+   "src": "made"
+  },
+  {
+   "text": "L'hiver dernier, le père d'Émilie a eu besoin d'une transfusion après une chute sur la glace.",
+   "en": "Last winter, Émilie's father needed a transfusion after a fall on the ice.",
+   "ko": "지난겨울 에밀리의 아버지는 빙판에서 넘어진 뒤 수혈이 필요했어요.",
+   "blank": "transfusion",
+   "src": "made"
+  }
+ ],
+ "w|transit": [
+  {
+   "text": "Les pièces détachées de l'usine de Lucas sont bloquées en transit au port.",
+   "en": "The spare parts for Lucas's factory are stuck in transit at the port.",
+   "ko": "루카의 공장 부품이 항구에서 운송 중에 묶여 있어요.",
+   "blank": "transit",
+   "src": "made"
+  },
+  {
+   "text": "En automne, Camille regarde les oiseaux migrateurs en transit sur l'étang.",
+   "en": "In autumn, Camille watches the migrating birds stopping over on the pond.",
+   "ko": "가을이면 카미유는 연못에 잠시 머무는 철새들을 바라봐요.",
+   "blank": "transit",
+   "src": "made"
+  }
+ ],
  "w|transition": [
   {
    "text": "Paul suit la transition du journal papier vers le site internet.",
@@ -99111,6 +100583,22 @@
    "src": "made"
   }
  ],
+ "w|transporteur": [
+  {
+   "text": "Le transporteur livre les légumes au restaurant de Louis à l'aube.",
+   "en": "The carrier delivers the vegetables to Louis's restaurant at dawn.",
+   "ko": "운송 업체가 새벽에 루이네 식당으로 채소를 배달해요.",
+   "blank": "transporteur",
+   "src": "made"
+  },
+  {
+   "text": "Le transporteur aérien exige un certificat de la clinique pour que le chat de Claire puisse voyager.",
+   "en": "The airline requires a certificate from the clinic for Claire's cat to travel.",
+   "ko": "항공사는 클레르의 고양이가 비행기를 타려면 동물 병원 증명서가 있어야 한대요.",
+   "blank": "transporteur",
+   "src": "made"
+  }
+ ],
  "w|trappe": [
   {
    "text": "Louis ouvre la trappe du grenier pour chercher les décorations de Noël.",
@@ -99156,6 +100644,22 @@
    "en": "Claire remembers last year's trauma, when the rain ruined all her books.",
    "ko": "클레르는 비 때문에 책이 다 망가졌던 작년의 트라우마를 떠올려요.",
    "blank": "trauma",
+   "src": "made"
+  }
+ ],
+ "w|traumatisant": [
+  {
+   "text": "L'incendie de la cuisine a été une expérience traumatisante pour toute la famille de Louis.",
+   "en": "The kitchen fire was a traumatic experience for Louis's whole family.",
+   "ko": "부엌 화재는 루이네 가족 모두에게 충격적인 일이었어요.",
+   "blank": "traumatisante",
+   "src": "made"
+  },
+  {
+   "text": "La visite chez le vétérinaire reste traumatisante pour le vieux chat de Claire.",
+   "en": "The trip to the vet is still traumatic for Claire's old cat.",
+   "ko": "동물 병원에 가는 건 클레르의 늙은 고양이에게 여전히 큰 충격이에요.",
+   "blank": "traumatisante",
    "src": "made"
   }
  ],
@@ -99276,6 +100780,22 @@
    "en": "Among the boxes on the ground, Claire nearly trips.",
    "ko": "바닥에 놓인 상자들 사이에서 클레르는 하마터면 넘어질 뻔해요.",
    "blank": "trébucher",
+   "src": "made"
+  }
+ ],
+ "w|trèfle": [
+  {
+   "text": "La fille de Louis a trouvé un trèfle à quatre feuilles près de la terrasse.",
+   "en": "Louis's daughter found a four-leaf clover near the terrace.",
+   "ko": "루이의 딸이 테라스 근처에서 네잎클로버를 찾았어요.",
+   "blank": "trèfle",
+   "src": "made"
+  },
+  {
+   "text": "Le cochon d'Inde de Claire adore le trèfle frais du jardin.",
+   "en": "Claire's guinea pig loves fresh clover from the garden.",
+   "ko": "클레르의 기니피그는 마당의 싱싱한 클로버를 아주 좋아해요.",
+   "blank": "trèfle",
    "src": "made"
   }
  ],
@@ -100236,6 +101756,22 @@
    "en": "A tile that fell from a roof nearly hit Inès during her jog.",
    "ko": "지붕에서 떨어진 기와가 조깅하던 이네스를 칠 뻔했어요.",
    "blank": "tuile",
+   "src": "made"
+  }
+ ],
+ "w|tulipe": [
+  {
+   "text": "Les collègues de Paul lui apportent un bouquet de tulipes jaunes.",
+   "en": "Paul's colleagues bring him a bouquet of yellow tulips.",
+   "ko": "폴의 동료들이 노란 튤립 꽃다발을 가져와요.",
+   "blank": "tulipes",
+   "src": "made"
+  },
+  {
+   "text": "En avril, Émilie plante une rangée de tulipes le long de l'allée.",
+   "en": "In April, Émilie plants a row of tulips along the path.",
+   "ko": "사월에 에밀리는 오솔길을 따라 튤립을 한 줄 심어요.",
+   "blank": "tulipes",
    "src": "made"
   }
  ],
@@ -102973,6 +104509,22 @@
    "en": "She has a clear vision of her future.",
    "ko": "그녀는 자신의 미래에 대한 명확한 비전을 가지고 있어.",
    "blank": "vision"
+  }
+ ],
+ "w|visionnaire": [
+  {
+   "text": "Le fondateur de l'usine était un visionnaire, selon Lucas.",
+   "en": "The factory's founder was a visionary, according to Lucas.",
+   "ko": "루카 말로는 공장 창업자는 선견지명이 있는 사람이었대요.",
+   "blank": "visionnaire",
+   "src": "made"
+  },
+  {
+   "text": "Camille admire le grand-père visionnaire qui a planté ces chênes il y a un siècle.",
+   "en": "Camille admires the visionary grandfather who planted these oaks a century ago.",
+   "ko": "카미유는 한 세기 전에 이 참나무들을 심은 선견지명 있는 할아버지를 존경해요.",
+   "blank": "visionnaire",
+   "src": "made"
   }
  ],
  "w|visiter": [

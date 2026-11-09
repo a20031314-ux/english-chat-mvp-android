@@ -1107,6 +1107,22 @@
    "src": "tatoeba:2076254/marafon en:27254/CK"
   }
  ],
+ "w|араб": [
+  {
+   "text": "Иван вспомнил, как в общежитии жил в одной комнате с арабом Каримом.",
+   "en": "Ivan remembered sharing a dorm room with Karim, an Arab student.",
+   "ko": "이반은 기숙사에서 아랍 사람 카림과 한방을 쓰던 시절을 떠올렸어요.",
+   "blank": "арабом",
+   "src": "made"
+  },
+  {
+   "text": "Анна рассказала, что пожилой араб на рынке научил её выбирать финики.",
+   "en": "Anna told her that an elderly Arab man at the market taught her how to choose dates.",
+   "ko": "안나는 시장의 나이 든 아랍 사람에게서 대추야자 고르는 법을 배웠다고 했어요.",
+   "blank": "араб",
+   "src": "made"
+  }
+ ],
  "w|аргумент": [
   {
    "text": "Для спора с другом Дмитрий искал в книгах убедительный аргумент.",
@@ -3265,6 +3281,22 @@
    "src": "made"
   }
  ],
+ "w|блефовать": [
+  {
+   "text": "Ночью друзья играли в покер, и Иван блефовал так, что все поверили.",
+   "en": "At night the friends played poker, and Ivan bluffed so well that everyone believed him.",
+   "ko": "밤에 친구들이 포커를 쳤는데 이반이 허세를 너무 잘 부려서 다들 속았어요.",
+   "blank": "блефовал",
+   "src": "made"
+  },
+  {
+   "text": "Анна признаётся, что в юности блефовала, когда говорила, что не скучает.",
+   "en": "Anna admits that when she was young she was bluffing when she said she didn't miss her.",
+   "ko": "안나는 어릴 때 보고 싶지 않다고 한 건 허세였다고 털어놔요.",
+   "blank": "блефовала",
+   "src": "made"
+  }
+ ],
  "w|ближайший": [
   {
    "text": "Мы решили пойти погулять в ближайший лес.",
@@ -3819,6 +3851,22 @@
    "src": "tatoeba:7145383/marafon en:3724401/CM"
   }
  ],
+ "w|болтаться": [
+  {
+   "text": "Иван заметил, что на стене кафе болтается выцветший школьный вымпел.",
+   "en": "Ivan noticed a faded school pennant dangling on the café wall.",
+   "ko": "이반은 카페 벽에 빛바랜 학교 깃발이 대롱대롱 걸린 걸 봤어요.",
+   "blank": "болтается",
+   "src": "made"
+  },
+  {
+   "text": "Анна рассказывает, что всё лето болталась без дела на даче.",
+   "en": "Anna says she spent the whole summer hanging around doing nothing at the dacha.",
+   "ko": "안나는 여름 내내 다차에서 빈둥거렸다고 이야기해요.",
+   "blank": "болталась",
+   "src": "made"
+  }
+ ],
  "w|болтовня": [
   {
    "text": "Из-за болтовни на уроке Павла пересадили на первую парту.",
@@ -4187,6 +4235,22 @@
    "en": "I'm younger than my brother.",
    "ko": "나는 형보다 어려.",
    "blank": "брата"
+  }
+ ],
+ "w|братик": [
+  {
+   "text": "Одноклассники вспомнили, как Иван каждое утро водил в школу своего братика.",
+   "en": "His classmates remembered how Ivan used to walk his little brother to school every morning.",
+   "ko": "동창들은 이반이 매일 아침 남동생을 학교에 데려다주던 걸 떠올렸어요.",
+   "blank": "братика",
+   "src": "made"
+  },
+  {
+   "text": "Анна написала, что её братик пошёл в первый класс.",
+   "en": "Anna wrote that her little brother had started first grade.",
+   "ko": "안나는 남동생이 초등학교 일 학년이 됐다고 썼어요.",
+   "blank": "братик",
+   "src": "made"
   }
  ],
  "w|братишка": [
@@ -8946,6 +9010,22 @@
    "en": "Svetlana says running taught her patience.",
    "ko": "스베틀라나는 달리기가 자신에게 인내심을 길러 줬다고 말해요.",
    "blank": "воспитал",
+   "src": "made"
+  }
+ ],
+ "w|воспитывать": [
+  {
+   "text": "Иван узнал, что Маша одна воспитывает двоих сыновей.",
+   "en": "Ivan learned that Masha is raising two sons on her own.",
+   "ko": "이반은 마샤가 혼자 아들 둘을 키운다는 걸 알게 됐어요.",
+   "blank": "воспитывает",
+   "src": "made"
+  },
+  {
+   "text": "Анна спрашивает, как Лене удаётся воспитывать троих детей и работать.",
+   "en": "Anna asks how Lena manages to raise three children and work.",
+   "ko": "안나는 레나가 어떻게 일하면서 아이 셋을 키우는지 물어요.",
+   "blank": "воспитывать",
    "src": "made"
   }
  ],
@@ -15041,6 +15121,22 @@
    "blank": "Двое"
   }
  ],
+ "w|двойник": [
+  {
+   "text": "Иван сказал Петру, что недавно видел в метро его двойника.",
+   "en": "Ivan told Pyotr that he had recently seen his double on the metro.",
+   "ko": "이반은 얼마 전 지하철에서 표트르와 똑같이 생긴 사람을 봤다고 말했어요.",
+   "blank": "двойника",
+   "src": "made"
+  },
+  {
+   "text": "Анна шутит, что у Лены в их городе, кажется, есть двойник.",
+   "en": "Anna jokes that Lena seems to have a double in their town.",
+   "ko": "안나는 자기 동네에 레나와 똑같이 생긴 사람이 있는 것 같다고 농담해요.",
+   "blank": "двойник",
+   "src": "made"
+  }
+ ],
  "w|двойной": [
   {
    "text": "Можно мне двойной эспрессо?",
@@ -15275,6 +15371,22 @@
    "ko": "우리 할아버지는 저보다 다섯 배 나이가 많아요.",
    "blank": "дед",
    "src": "tatoeba:2117942/Elenkina en:65096/CK"
+  }
+ ],
+ "w|дедуля": [
+  {
+   "text": "Иван рассказал, что его дедуля в девяносто лет всё ещё ходит на рыбалку.",
+   "en": "Ivan said that his grandpa still goes fishing at ninety.",
+   "ko": "이반은 할아버지가 아흔인데도 아직 낚시를 다니신다고 했어요.",
+   "blank": "дедуля",
+   "src": "made"
+  },
+  {
+   "text": "Анна передала Лене привет от своего дедули.",
+   "en": "Anna passed on her grandpa's greetings to Lena.",
+   "ko": "안나는 할아버지의 안부를 레나에게 전했어요.",
+   "blank": "дедули",
+   "src": "made"
   }
  ],
  "w|дедушка": [
@@ -17803,6 +17915,22 @@
    "src": "made"
   }
  ],
+ "w|доченька": [
+  {
+   "text": "Иван показывал всем фото, где его доченька задувает свечи на торте.",
+   "en": "Ivan was showing everyone a photo of his little daughter blowing out the candles on her cake.",
+   "ko": "이반은 어린 딸이 케이크 촛불을 끄는 사진을 모두에게 보여 줬어요.",
+   "blank": "доченька",
+   "src": "made"
+  },
+  {
+   "text": "В конце письма Анна добавила, что доченька Лены очень похожа на маму.",
+   "en": "At the end of the letter Anna added that Lena's little daughter looks a lot like her mum.",
+   "ko": "편지 끝에 안나는 레나의 어린 딸이 엄마를 꼭 닮았다고 덧붙였어요.",
+   "blank": "доченька",
+   "src": "made"
+  }
+ ],
  "w|дочка": [
   {
    "text": "Соседка рассказала Михаилу, что едет к дочке на свадьбу.",
@@ -19111,6 +19239,22 @@
    "ko": "저는 이제 유부남이에요.",
    "blank": "женатый",
    "src": "tatoeba:5644530/marafon en:5644442/Hybrid"
+  }
+ ],
+ "w|женитьба": [
+  {
+   "text": "Друзья весь вечер подшучивали над Иваном из-за его скорой женитьбы.",
+   "en": "His friends teased Ivan all evening about his upcoming marriage.",
+   "ko": "친구들은 곧 결혼하는 이반을 저녁 내내 놀렸어요.",
+   "blank": "женитьбы",
+   "src": "made"
+  },
+  {
+   "text": "Анна подробно описала в письме женитьбу брата.",
+   "en": "Anna described her brother's wedding in detail in the letter.",
+   "ko": "안나는 편지에 오빠의 결혼 이야기를 자세히 썼어요.",
+   "blank": "женитьбу",
+   "src": "made"
   }
  ],
  "w|жениться": [
@@ -24473,6 +24617,22 @@
    "src": "tatoeba:12092141/marafon en:12075569/CK"
   }
  ],
+ "w|идентифицировать": [
+  {
+   "text": "Иван не смог идентифицировать половину одноклассников на старой фотографии.",
+   "en": "Ivan couldn't identify half of his classmates in the old photo.",
+   "ko": "이반은 옛날 사진 속 동창들 절반을 알아보지 못했어요.",
+   "blank": "идентифицировать",
+   "src": "made"
+  },
+  {
+   "text": "Анна попросила Лену помочь идентифицировать людей на старой фотографии.",
+   "en": "Anna asked Lena to help identify the people in an old photograph.",
+   "ko": "안나는 옛날 사진 속 사람들이 누군지 알아봐 달라고 레나에게 부탁했어요.",
+   "blank": "идентифицировать",
+   "src": "made"
+  }
+ ],
  "w|идея": [
   {
    "text": "Идея мне нравится.",
@@ -25879,6 +26039,22 @@
    "src": "made"
   }
  ],
+ "w|ирландец": [
+  {
+   "text": "Подруга Ивана пришла на встречу с мужем, ирландцем по имени Шон.",
+   "en": "Ivan's friend came to the reunion with her husband, an Irishman named Sean.",
+   "ko": "이반의 친구는 숀이라는 아일랜드 사람 남편과 함께 모임에 왔어요.",
+   "blank": "ирландцем",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что её новый сосед — весёлый ирландец, который играет на скрипке.",
+   "en": "Anna writes that her new neighbour is a cheerful Irishman who plays the violin.",
+   "ko": "안나는 새 이웃이 바이올린을 켜는 유쾌한 아일랜드 사람이라고 써요.",
+   "blank": "ирландец",
+   "src": "made"
+  }
+ ],
  "w|ирония": [
   {
    "text": "В фельетонах Никиты много тонкой иронии.",
@@ -26555,6 +26731,22 @@
    "en": "So, what do we decide?",
    "ko": "그래서 뭘로 할까?",
    "blank": "Итак"
+  }
+ ],
+ "w|итальянец": [
+  {
+   "text": "Иван рассказал, что его новый начальник — итальянец, который обожает борщ.",
+   "en": "Ivan said that his new boss is an Italian who adores borscht.",
+   "ko": "이반은 새 상사가 보르시를 아주 좋아하는 이탈리아 사람이라고 했어요.",
+   "blank": "итальянец",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что учится готовить пасту у знакомого итальянца.",
+   "en": "Anna writes that she's learning to make pasta from an Italian she knows.",
+   "ko": "안나는 아는 이탈리아 사람에게 파스타 만드는 법을 배우고 있다고 써요.",
+   "blank": "итальянца",
+   "src": "made"
   }
  ],
  "w|итальянский": [
@@ -33397,6 +33589,22 @@
    "src": "made"
   }
  ],
+ "w|любезность": [
+  {
+   "text": "Иван поблагодарил хозяйку кафе за любезность: она открыла зал для них пораньше.",
+   "en": "Ivan thanked the café owner for her kindness: she opened the hall for them early.",
+   "ko": "이반은 카페 주인의 친절에 고마워했어요. 주인이 그들을 위해 홀을 일찍 열어 줬거든요.",
+   "blank": "любезность",
+   "src": "made"
+  },
+  {
+   "text": "Анна поблагодарила Лену в письме за любезность и тёплый приём.",
+   "en": "In her letter Anna thanked Lena for her kindness and warm welcome.",
+   "ko": "안나는 편지에서 레나의 친절과 따뜻한 환대에 고마워했어요.",
+   "blank": "любезность",
+   "src": "made"
+  }
+ ],
  "w|любезный": [
   {
    "text": "Любезный сударь, давайте мы с вами расцелуемся на прощанье.",
@@ -35735,6 +35943,22 @@
    "en": "We made peace.",
    "ko": "우리는 화해했어.",
    "blank": "мир"
+  }
+ ],
+ "w|мириться": [
+  {
+   "text": "Иван решил, что пора мириться с Петром после старой ссоры.",
+   "en": "Ivan decided it was time to make up with Pyotr after their old quarrel.",
+   "ko": "이반은 오래된 다툼을 끝내고 이제 표트르와 화해할 때라고 생각했어요.",
+   "blank": "мириться",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что не умеет долго обижаться и быстро мирится с людьми.",
+   "en": "Anna writes that she can't stay offended for long and quickly makes up with people.",
+   "ko": "안나는 오래 서운해하지 못하고 사람들과 금방 화해한다고 써요.",
+   "blank": "мирится",
+   "src": "made"
   }
  ],
  "w|мирно": [
@@ -38677,6 +38901,22 @@
    "src": "tatoeba:1511568/corvard en:1511570/corvard"
   }
  ],
+ "w|наперекосяк": [
+  {
+   "text": "У Ивана с утра всё пошло наперекосяк, но на встречу он всё-таки успел.",
+   "en": "Everything went wrong for Ivan from the morning, but he still made it to the reunion.",
+   "ko": "이반은 아침부터 일이 다 꼬였지만 그래도 모임에는 늦지 않았어요.",
+   "blank": "наперекосяк",
+   "src": "made"
+  },
+  {
+   "text": "Анна признаётся, что этот год у неё пошёл наперекосяк.",
+   "en": "Anna admits that this year has gone all wrong for her.",
+   "ko": "안나는 올해 일이 다 꼬였다고 털어놔요.",
+   "blank": "наперекосяк",
+   "src": "made"
+  }
+ ],
  "w|напечатать": [
   {
    "text": "Андрей попросил администратора напечатать новое меню к выходным.",
@@ -40721,6 +40961,22 @@
    "blank": "некотором"
   }
  ],
+ "w|некрасиво": [
+  {
+   "text": "Иван признал, что некрасиво поступил, когда не пришёл на прошлую встречу.",
+   "en": "Ivan admitted that it wasn't nice of him to skip the last reunion.",
+   "ko": "이반은 지난 모임에 안 나온 건 보기 좋지 않았다고 인정했어요.",
+   "blank": "некрасиво",
+   "src": "made"
+  },
+  {
+   "text": "Анна извиняется, что некрасиво пропала на целый год.",
+   "en": "Anna apologises for rudely disappearing for a whole year.",
+   "ko": "안나는 일 년 내내 연락이 끊겼던 게 미안하다고 사과해요.",
+   "blank": "некрасиво",
+   "src": "made"
+  }
+ ],
  "w|некто": [
   {
    "text": "Утром некто оставил у двери кухни ящик лимонов, и Андрей так и не узнал, кто это был.",
@@ -41172,6 +41428,22 @@
    "en": "Maria set up camp right by the water.",
    "ko": "마리야는 물가 바로 옆에 텐트를 쳤어요.",
    "blank": "непосредственно",
+   "src": "made"
+  }
+ ],
+ "w|непохожий": [
+  {
+   "text": "Друзья у Ивана совершенно непохожие, но все пришли на встречу.",
+   "en": "Ivan's friends are completely unlike one another, but they all came to the reunion.",
+   "ko": "이반의 친구들은 서로 전혀 닮지 않았지만 모두 모임에 왔어요.",
+   "blank": "непохожие",
+   "src": "made"
+  },
+  {
+   "text": "Анна рассказывает о двух совсем непохожих сёстрах из соседнего дома.",
+   "en": "Anna tells her about two sisters next door who are nothing alike.",
+   "ko": "안나는 옆집에 사는 전혀 닮지 않은 두 자매 이야기를 해요.",
+   "blank": "непохожих",
    "src": "made"
   }
  ],
@@ -43177,6 +43449,22 @@
    "src": "tatoeba:10377813/marafon en:14018010/zogwarg"
   }
  ],
+ "w|обманщик": [
+  {
+   "text": "Иван в шутку назвал Петра обманщиком, когда тот снова забыл вернуть долг.",
+   "en": "Ivan jokingly called Pyotr a cheat when he once again forgot to pay back a debt.",
+   "ko": "표트르가 또 빌린 돈 갚는 걸 잊자 이반은 장난으로 사기꾼이라고 불렀어요.",
+   "blank": "обманщиком",
+   "src": "made"
+  },
+  {
+   "text": "Анна жалуется, что продавец подержанной машины оказался обманщиком.",
+   "en": "Anna complains that the seller of the used car turned out to be a swindler.",
+   "ko": "안나는 중고차를 판 사람이 사기꾼이었다고 하소연해요.",
+   "blank": "обманщиком",
+   "src": "made"
+  }
+ ],
  "w|обманывать": [
   {
    "text": "Учительница сразу видит, когда ученики пытаются её обманывать.",
@@ -44487,6 +44775,22 @@
    "src": "made"
   }
  ],
+ "w|одевать": [
+  {
+   "text": "Иван признался, что по утрам сам одевает сына в садик.",
+   "en": "Ivan admitted that in the mornings he dresses his son for kindergarten himself.",
+   "ko": "이반은 아침마다 유치원 가는 아들 옷을 직접 입힌다고 털어놨어요.",
+   "blank": "одевает",
+   "src": "made"
+  },
+  {
+   "text": "Анна написала, что дочку теперь трудно одевать: та всё выбирает сама.",
+   "en": "Anna wrote that her daughter is now hard to dress because she picks everything herself.",
+   "ko": "안나는 딸이 뭐든 스스로 고르려고 해서 옷 입히기가 힘들어졌다고 썼어요.",
+   "blank": "одевать",
+   "src": "made"
+  }
+ ],
  "w|одеваться": [
   {
    "text": "В раздевалке Иван быстро одевается в рабочую форму.",
@@ -45438,6 +45742,22 @@
    "en": "Natalia takes her nephew, whose guardian she is, to the pool.",
    "ko": "나탈리야는 자기가 후견인을 맡은 조카를 수영장에 데려가요.",
    "blank": "опека",
+   "src": "made"
+  }
+ ],
+ "w|опекун": [
+  {
+   "text": "Олег рассказал Ивану, что недавно стал опекуном племянника.",
+   "en": "Oleg told Ivan that he had recently become his nephew's guardian.",
+   "ko": "올레크는 얼마 전 조카의 후견인이 됐다고 이반에게 말했어요.",
+   "blank": "опекуном",
+   "src": "made"
+  },
+  {
+   "text": "В письме Анна вспомнила строгую тётю, которая была её опекуном.",
+   "en": "In the letter Anna remembered the strict aunt who had been her guardian.",
+   "ko": "안나는 편지에서 자기 후견인이었던 엄한 이모를 떠올렸어요.",
+   "blank": "опекуном",
    "src": "made"
   }
  ],
@@ -48661,6 +48981,22 @@
    "src": "made"
   }
  ],
+ "w|отставать": [
+  {
+   "text": "В походах Иван всегда отставал от друзей, и над ним до сих пор смеются.",
+   "en": "On hikes Ivan always fell behind his friends, and they still laugh at him for it.",
+   "ko": "하이킹 때 이반은 늘 친구들보다 뒤처졌는데 지금도 그걸로 놀림받아요.",
+   "blank": "отставал",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что часы на вокзале у них вечно отстают.",
+   "en": "Anna writes that the station clock in their town is always slow.",
+   "ko": "안나는 자기네 기차역 시계가 늘 느리다고 써요.",
+   "blank": "отстают",
+   "src": "made"
+  }
+ ],
  "w|отставка": [
   {
    "text": "Его отставка с поста премьер-министра стала неожиданностью.",
@@ -48929,6 +49265,22 @@
    "ko": "보고서는 언제까지 내야 해?",
    "blank": "отчёт",
    "src": "tatoeba:10619515/Wezel en:10619372/CK"
+  }
+ ],
+ "w|отчим": [
+  {
+   "text": "Иван признался друзьям, что с отчимом у него теперь хорошие отношения.",
+   "en": "Ivan admitted to his friends that he now gets on well with his stepfather.",
+   "ko": "이반은 이제 새아버지와 사이가 좋다고 친구들에게 털어놨어요.",
+   "blank": "отчимом",
+   "src": "made"
+  },
+  {
+   "text": "Анна написала Лене, что отчим подарил ей старое пианино.",
+   "en": "Anna wrote to Lena that her stepfather had given her an old piano.",
+   "ko": "안나는 새아버지가 낡은 피아노를 선물해 줬다고 레나에게 썼어요.",
+   "blank": "отчим",
+   "src": "made"
   }
  ],
  "w|отъезд": [
@@ -53087,6 +53439,22 @@
    "src": "made"
   }
  ],
+ "w|повзрослеть": [
+  {
+   "text": "Иван удивился, как сильно повзрослела младшая сестра Олега.",
+   "en": "Ivan was surprised at how much Oleg's younger sister had grown up.",
+   "ko": "이반은 올레크의 여동생이 그새 많이 컸다는 데 놀랐어요.",
+   "blank": "повзрослела",
+   "src": "made"
+  },
+  {
+   "text": "Анна признаётся, что повзрослеть оказалось сложнее, чем она думала.",
+   "en": "Anna admits that growing up turned out to be harder than she thought.",
+   "ko": "안나는 어른이 되는 게 생각보다 어려웠다고 털어놔요.",
+   "blank": "повзрослеть",
+   "src": "made"
+  }
+ ],
  "w|повидать": [
   {
    "text": "Андрей приехал в этот город, чтобы повидать брата.",
@@ -54162,6 +54530,22 @@
    "en": "The defective parts Irina found are to be scrapped.",
    "ko": "이리나가 찾은 불량 부품은 폐기 대상이에요.",
    "blank": "подлежат",
+   "src": "made"
+  }
+ ],
+ "w|подлец": [
+  {
+   "text": "Друзья вспомнили, как один подлец списал у Ивана выпускное сочинение.",
+   "en": "His friends recalled how some scoundrel had copied Ivan's final-year essay.",
+   "ko": "친구들은 어떤 비열한 녀석이 이반의 졸업 작문을 베꼈던 일을 떠올렸어요.",
+   "blank": "подлец",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что бывший начальник оказался настоящим подлецом.",
+   "en": "Anna writes that her former boss turned out to be a real scoundrel.",
+   "ko": "안나는 전 상사가 정말 비열한 사람이었다고 써요.",
+   "blank": "подлецом",
    "src": "made"
   }
  ],
@@ -59119,6 +59503,22 @@
    "blank": "Потом"
   }
  ],
+ "w|потомок": [
+  {
+   "text": "Сергей в шутку уверял Ивана, что он потомок знатного рода.",
+   "en": "Sergey jokingly assured Ivan that he was a descendant of a noble family.",
+   "ko": "세르게이는 자기가 귀족 집안의 후손이라고 농담 삼아 이반에게 우겼어요.",
+   "blank": "потомок",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что их городок когда-то основали потомки купцов.",
+   "en": "Anna writes that their little town was once founded by the descendants of merchants.",
+   "ko": "안나는 자기네 작은 도시를 옛날에 상인의 후손들이 세웠다고 써요.",
+   "blank": "потомки",
+   "src": "made"
+  }
+ ],
  "w|потому": [
   {
    "text": "Я молчу, потому что устал.",
@@ -60613,6 +61013,22 @@
    "ko": "할인해 주실 수 있어요?",
    "blank": "предоставить",
    "src": "tatoeba:3572421/sharptoothed en:31283/CK"
+  }
+ ],
+ "w|предоставлять": [
+  {
+   "text": "Иван узнал, что кафе бесплатно предоставляет зал для встреч выпускников.",
+   "en": "Ivan found out that the café provides its hall for alumni reunions free of charge.",
+   "ko": "이반은 그 카페가 동창 모임에 홀을 무료로 내준다는 걸 알게 됐어요.",
+   "blank": "предоставляет",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что городская библиотека предоставляет ей тихую комнату для работы.",
+   "en": "Anna writes that the city library provides her with a quiet room to work in.",
+   "ko": "안나는 시립 도서관에서 일할 수 있는 조용한 방을 내준다고 써요.",
+   "blank": "предоставляет",
+   "src": "made"
   }
  ],
  "w|предосторожность": [
@@ -62646,6 +63062,22 @@
    "en": "Elena teaches her trainees not to touch hot baking trays without oven gloves.",
    "ko": "엘레나는 수습생들에게 뜨거운 오븐 판을 장갑 없이 만지지 말라고 가르쳐요.",
    "blank": "прикасаться",
+   "src": "made"
+  }
+ ],
+ "w|прикинуть": [
+  {
+   "text": "Иван прикинул, что не видел друзей уже лет пятнадцать.",
+   "en": "Ivan reckoned he hadn't seen his friends for about fifteen years.",
+   "ko": "이반은 친구들을 못 본 지 십오 년쯤 됐다고 따져 봤어요.",
+   "blank": "прикинул",
+   "src": "made"
+  },
+  {
+   "text": "Анна прикинула, что письмо дойдёт до Лены примерно за неделю.",
+   "en": "Anna reckoned the letter would reach Lena in about a week.",
+   "ko": "안나는 편지가 레나에게 일주일쯤 걸려 도착할 거라고 어림했어요.",
+   "blank": "прикинула",
    "src": "made"
   }
  ],
@@ -69167,6 +69599,22 @@
    "src": "made"
   }
  ],
+ "w|расставаться": [
+  {
+   "text": "Иван не хотел расставаться с друзьями и предложил погулять до утра.",
+   "en": "Ivan didn't want to part with his friends and suggested walking around until morning.",
+   "ko": "이반은 친구들과 헤어지기 싫어서 아침까지 걷자고 했어요.",
+   "blank": "расставаться",
+   "src": "made"
+  },
+  {
+   "text": "Анна признаётся, что они с Леной всегда расставались на вокзале со слезами.",
+   "en": "Anna admits that she and Lena always parted at the station in tears.",
+   "ko": "안나는 레나와 기차역에서 헤어질 때마다 늘 울었다고 털어놔요.",
+   "blank": "расставались",
+   "src": "made"
+  }
+ ],
  "w|расстаться": [
   {
    "text": "Ты действительно хочешь расстаться со своей девушкой?",
@@ -69944,6 +70392,22 @@
    "en": "Olga proudly wrote that her son already cuts vegetables for salad by himself.",
    "ko": "올가는 아들이 이제 샐러드 채소를 혼자 썬다고 자랑스럽게 썼어요.",
    "blank": "режет",
+   "src": "made"
+  }
+ ],
+ "w|резкий": [
+  {
+   "text": "Иван извинился перед Олегом за свой резкий тон в давней переписке.",
+   "en": "Ivan apologised to Oleg for his harsh tone in some old messages.",
+   "ko": "이반은 예전 메시지에서 말투가 날카로웠던 걸 올레크에게 사과했어요.",
+   "blank": "резкий",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что зимой в их городе дует резкий ветер с моря.",
+   "en": "Anna writes that in winter a biting wind blows off the sea in their town.",
+   "ko": "안나는 겨울이면 자기네 도시에 바다에서 매서운 바람이 분다고 써요.",
+   "blank": "резкий",
    "src": "made"
   }
  ],
@@ -72076,6 +72540,22 @@
    "en": "Natalya has lost count of how many times she has rewritten the business plan.",
    "ko": "나탈리야는 사업 계획서를 몇 번이나 고쳐 썼는지 셀 수도 없어요.",
    "blank": "сбилась",
+   "src": "made"
+  }
+ ],
+ "w|сблизиться": [
+  {
+   "text": "За вечер Иван сблизился с одноклассником, с которым в школе почти не разговаривал.",
+   "en": "Over the evening Ivan grew close to a classmate he'd hardly spoken to at school.",
+   "ko": "이반은 학교 때 말도 별로 안 섞던 동창과 그날 저녁 친해졌어요.",
+   "blank": "сблизился",
+   "src": "made"
+  },
+  {
+   "text": "Анна вспоминает, как они с Леной сблизились в летнем лагере.",
+   "en": "Anna recalls how she and Lena became close at summer camp.",
+   "ko": "안나는 레나와 여름 캠프에서 친해졌던 걸 떠올려요.",
+   "blank": "сблизились",
    "src": "made"
   }
  ],
@@ -74281,6 +74761,22 @@
    "src": "made"
   }
  ],
+ "w|склонность": [
+  {
+   "text": "У Ивана с детства склонность к опозданиям, и на встречу он тоже опоздал.",
+   "en": "Ivan has had a tendency to be late since childhood, and he was late for the reunion too.",
+   "ko": "이반은 어릴 때부터 늦는 버릇이 있어서 모임에도 늦었어요.",
+   "blank": "склонность",
+   "src": "made"
+  },
+  {
+   "text": "Анна шутит, что у неё склонность писать слишком длинные письма.",
+   "en": "Anna jokes that she has a tendency to write overly long letters.",
+   "ko": "안나는 자기가 편지를 너무 길게 쓰는 버릇이 있다고 농담해요.",
+   "blank": "склонность",
+   "src": "made"
+  }
+ ],
  "w|склонный": [
   {
    "text": "Алексей склонен всё преувеличивать в письмах.",
@@ -75979,6 +76475,22 @@
    "en": "Try again.",
    "ko": "다시 해 봐.",
    "blank": "снова"
+  }
+ ],
+ "w|снятие": [
+  {
+   "text": "Иван отошёл к банкомату, но снятие наличных почему-то не сработало.",
+   "en": "Ivan stepped over to the cash machine, but for some reason the cash withdrawal didn't work.",
+   "ko": "이반은 현금인출기로 갔지만 어쩐 일인지 현금 인출이 안 됐어요.",
+   "blank": "снятие",
+   "src": "made"
+  },
+  {
+   "text": "Анна ждёт снятия гипса с руки, чтобы снова писать от руки длинные письма.",
+   "en": "Anna is waiting for the cast to come off her arm so she can write long letters by hand again.",
+   "ko": "안나는 다시 손으로 긴 편지를 쓰려고 팔 깁스를 풀 날만 기다려요.",
+   "blank": "снятия",
+   "src": "made"
   }
  ],
  "w|снять": [
@@ -79405,6 +79917,22 @@
    "src": "tatoeba:10965760/marafon en:30450/CK"
   }
  ],
+ "w|стареть": [
+  {
+   "text": "Иван заметил, что все они стареют, но шутят по-прежнему.",
+   "en": "Ivan noticed that they were all getting older but still joked the same way.",
+   "ko": "이반은 다들 나이는 들어도 농담하는 건 여전하다는 걸 알아챘어요.",
+   "blank": "стареют",
+   "src": "made"
+  },
+  {
+   "text": "Анна призналась Лене, что совсем не хочет стареть.",
+   "en": "Anna confessed to Lena that she doesn't want to grow old at all.",
+   "ko": "안나는 정말 늙고 싶지 않다고 레나에게 털어놨어요.",
+   "blank": "стареть",
+   "src": "made"
+  }
+ ],
  "w|старик": [
   {
    "text": "Старик рассказал мне странную историю.",
@@ -79971,6 +80499,22 @@
    "src": "made"
   }
  ],
+ "w|столкнуть": [
+  {
+   "text": "Иван вспомнил, как однажды случайно столкнул Петра в бассейн.",
+   "en": "Ivan remembered how he once accidentally pushed Pyotr into the pool.",
+   "ko": "이반은 예전에 실수로 표트르를 수영장에 밀어 빠뜨린 일을 떠올렸어요.",
+   "blank": "столкнул",
+   "src": "made"
+  },
+  {
+   "text": "Анна написала, что судьба снова столкнула её со старым учителем музыки.",
+   "en": "Anna wrote that fate had brought her together with her old music teacher again.",
+   "ko": "안나는 운명처럼 옛 음악 선생님을 다시 만났다고 썼어요.",
+   "blank": "столкнула",
+   "src": "made"
+  }
+ ],
  "w|столкнуться": [
   {
    "text": "На перемене Алексей столкнулся в коридоре с директором.",
@@ -80233,6 +80777,22 @@
    "ko": "페이지가 다 뜰 때까지 기다리세요.",
    "blank": "страница",
    "src": "tatoeba:13559742/Ooneykcall en:10096230/ddnktr"
+  }
+ ],
+ "w|странность": [
+  {
+   "text": "Иван уверен, что у каждого из его друзей есть своя странность.",
+   "en": "Ivan is sure that each of his friends has their own quirk.",
+   "ko": "이반은 친구들마다 저마다 별난 구석이 있다고 믿어요.",
+   "blank": "странность",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет о забавной странности: письма от Лены всегда приходят в дождь.",
+   "en": "Anna writes about a funny oddity: Lena's letters always arrive when it's raining.",
+   "ko": "안나는 레나의 편지가 늘 비 오는 날 도착한다는 묘한 일을 써요.",
+   "blank": "странности",
+   "src": "made"
   }
  ],
  "w|странный": [
@@ -83449,6 +84009,22 @@
    "src": "made"
   }
  ],
+ "w|толстяк": [
+  {
+   "text": "В школе Ивана дразнили толстяком, а теперь он бегает марафоны.",
+   "en": "At school Ivan was teased as the fat kid, and now he runs marathons.",
+   "ko": "학교 때 이반은 뚱보라고 놀림받았는데 지금은 마라톤을 뛰어요.",
+   "blank": "толстяком",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что их кот превратился в настоящего толстяка.",
+   "en": "Anna writes that their cat has turned into a real fatty.",
+   "ko": "안나는 자기네 고양이가 완전히 뚱보가 됐다고 써요.",
+   "blank": "толстяка",
+   "src": "made"
+  }
+ ],
  "w|толчок": [
   {
    "text": "Письмо от Веры стало для Алексея толчком к примирению.",
@@ -86311,6 +86887,22 @@
    "src": "made"
   }
  ],
+ "w|удрать": [
+  {
+   "text": "Иван со смехом рассказал, как они с Петром удрали с урока на речку.",
+   "en": "Ivan laughingly told how he and Pyotr had skipped a lesson and run off to the river.",
+   "ko": "이반은 표트르와 수업을 땡땡이치고 강으로 도망갔던 이야기를 웃으며 했어요.",
+   "blank": "удрали",
+   "src": "made"
+  },
+  {
+   "text": "Анна вспоминает, как они с Леной удрали с выпускного на крышу.",
+   "en": "Anna recalls how she and Lena slipped away from the graduation party onto the roof.",
+   "ko": "안나는 레나와 졸업 파티에서 몰래 빠져나와 옥상에 올라갔던 일을 떠올려요.",
+   "blank": "удрали",
+   "src": "made"
+  }
+ ],
  "w|уезжать": [
   {
    "text": "Тебе действительно надо завтра уезжать?",
@@ -86911,6 +87503,22 @@
    "en": "The flowers will die without water.",
    "ko": "물 없으면 꽃이 죽을 거야.",
    "blank": "умрут"
+  }
+ ],
+ "w|умерший": [
+  {
+   "text": "Иван предложил тост за умершего учителя физики.",
+   "en": "Ivan proposed a toast to their late physics teacher.",
+   "ko": "이반은 돌아가신 물리 선생님을 위해 건배하자고 했어요.",
+   "blank": "умершего",
+   "src": "made"
+  },
+  {
+   "text": "Анна вложила в конверт фото умершей бабушки Лены, которое нашла в альбоме.",
+   "en": "Anna put a photo of Lena's late grandmother, which she found in an album, into the envelope.",
+   "ko": "안나는 앨범에서 찾은 레나의 돌아가신 할머니 사진을 봉투에 넣었어요.",
+   "blank": "умершей",
+   "src": "made"
   }
  ],
  "w|уметь": [
@@ -90073,6 +90681,22 @@
    "src": "made"
   }
  ],
+ "w|хладнокровно": [
+  {
+   "text": "Иван хладнокровно выслушал все шутки о своей лысине.",
+   "en": "Ivan calmly listened to all the jokes about his bald patch.",
+   "ko": "이반은 대머리 농담을 모두 태연하게 들어 넘겼어요.",
+   "blank": "хладнокровно",
+   "src": "made"
+  },
+  {
+   "text": "Анна пишет, что хладнокровно пережила переезд, а потом расплакалась над коробками.",
+   "en": "Anna writes that she got through the move calmly and then burst into tears over the boxes.",
+   "ko": "안나는 이사는 침착하게 해냈는데 나중에 상자들 앞에서 울음을 터뜨렸다고 써요.",
+   "blank": "хладнокровно",
+   "src": "made"
+  }
+ ],
  "w|хлам": [
   {
    "text": "На чердаке избушки Михаил хранит всякий хлам для рыбалки.",
@@ -92650,6 +93274,22 @@
    "en": "The wind from the river was cold, and Irina tied her scarf tighter.",
    "ko": "강바람이 차가워서 이리나는 목도리를 더 단단히 맸어요.",
    "blank": "шарф",
+   "src": "made"
+  }
+ ],
+ "w|шафер": [
+  {
+   "text": "Иван попросил Олега стать шафером на его свадьбе.",
+   "en": "Ivan asked Oleg to be the best man at his wedding.",
+   "ko": "이반은 올레크에게 결혼식 들러리를 서 달라고 부탁했어요.",
+   "blank": "шафером",
+   "src": "made"
+  },
+  {
+   "text": "Анна рассказала, что на свадьбе брата шафер потерял кольца.",
+   "en": "Anna told her that at her brother's wedding the best man lost the rings.",
+   "ko": "안나는 오빠 결혼식에서 들러리가 반지를 잃어버렸다고 이야기했어요.",
+   "blank": "шафер",
    "src": "made"
   }
  ],

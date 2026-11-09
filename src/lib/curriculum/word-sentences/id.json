@@ -2159,6 +2159,22 @@
    "src": "made"
   }
  ],
+ "w|artistik": [
+  {
+   "text": "Dimas mengatur cahaya ruang pamer supaya terlihat lebih artistik.",
+   "en": "Dimas adjusted the gallery lighting so it would look more artistic.",
+   "ko": "디마스는 전시실이 더 예술적으로 보이도록 조명을 맞췄어요.",
+   "blank": "artistik",
+   "src": "made"
+  },
+  {
+   "text": "Pajangan etalase buatan Putri dipuji sangat artistik oleh manajer.",
+   "en": "The manager praised Putri's window display as very artistic.",
+   "ko": "매니저는 푸트리가 꾸민 쇼윈도가 아주 예술적이라고 칭찬했어요.",
+   "blank": "artistik",
+   "src": "made"
+  }
+ ],
  "w|arus": [
   {
    "text": "Polisi mengalihkan arus lalu lintas di depan balai kota karena ada pawai.",
@@ -2413,6 +2429,22 @@
    "en": "Oh my, the rain is pouring.",
    "ko": "아이고, 비가 엄청 쏟아지네.",
    "blank": "Astaga"
+  }
+ ],
+ "w|astrologi": [
+  {
+   "text": "Ada naskah kuno tentang astrologi yang dipakai untuk menentukan hari baik.",
+   "en": "There is an ancient manuscript on astrology that was used to choose auspicious days.",
+   "ko": "길일을 정하는 데 쓰인 점성술 고문서가 있어요.",
+   "blank": "astrologi",
+   "src": "made"
+  },
+  {
+   "text": "Rak dekat kasir penuh dengan buku astrologi dan ramalan bintang.",
+   "en": "The shelf near the checkout is full of astrology and horoscope books.",
+   "ko": "계산대 옆 선반은 점성술과 별자리 운세 책으로 가득해요.",
+   "blank": "astrologi",
+   "src": "made"
   }
  ],
  "w|astronom": [
@@ -3991,6 +4023,22 @@
    "blank": "barusan"
   }
  ],
+ "w|basa-basi": [
+  {
+   "text": "Tanpa banyak basa-basi, Dimas langsung mengajak rombongan ke ruang utama.",
+   "en": "Without much small talk, Dimas took the group straight to the main hall.",
+   "ko": "디마스는 별다른 인사치레 없이 단체 관람객을 곧장 본관으로 데려갔어요.",
+   "blank": "basa-basi",
+   "src": "made"
+  },
+  {
+   "text": "Setelah sedikit basa-basi, pembeli itu langsung menanyakan harga jas.",
+   "en": "After a bit of small talk, the customer went straight to asking the price of the suit.",
+   "ko": "잠깐 인사말을 나눈 뒤 그 손님은 바로 정장 값을 물었어요.",
+   "blank": "basa-basi",
+   "src": "made"
+  }
+ ],
  "w|basah": [
   {
    "text": "Bajuku basah karena hujan deras.",
@@ -5094,6 +5142,22 @@
    "en": "Rina's stall sells all sorts of things, from old lamps to film cameras.",
    "ko": "리나의 노점은 옛날 램프부터 필름 카메라까지 온갖 물건을 팔아요.",
    "blank": "beragam",
+   "src": "made"
+  }
+ ],
+ "w|beragama": [
+  {
+   "text": "Pameran itu menceritakan warga yang beragama berbeda tetapi merayakan panen bersama.",
+   "en": "The exhibition tells of residents of different religions who celebrated the harvest together.",
+   "ko": "그 전시는 종교가 다른 주민들이 함께 추수를 축하한 이야기를 들려줘요.",
+   "blank": "beragama",
+   "src": "made"
+  },
+  {
+   "text": "Pegawai toko yang beragama berbeda-beda saling menggantikan sif saat hari raya.",
+   "en": "Store staff of different religions cover each other's shifts on holidays.",
+   "ko": "종교가 서로 다른 매장 직원들은 명절에 서로 근무를 바꿔 줘요.",
+   "blank": "beragama",
    "src": "made"
   }
  ],
@@ -6275,6 +6339,22 @@
    "src": "made"
   }
  ],
+ "w|berdengung": [
+  {
+   "text": "Lampu tua di ruang bawah tanah berdengung pelan sepanjang hari.",
+   "en": "The old lamp in the basement hums softly all day long.",
+   "ko": "지하실의 낡은 전등이 하루 종일 낮게 윙윙거려요.",
+   "blank": "berdengung",
+   "src": "made"
+  },
+  {
+   "text": "Mesin pendingin di dekat kasir terus berdengung sejak pagi.",
+   "en": "The cooler near the checkout has been humming since morning.",
+   "ko": "계산대 옆 냉장고가 아침부터 계속 윙윙거려요.",
+   "blank": "berdengung",
+   "src": "made"
+  }
+ ],
  "w|berdering": [
   {
    "text": "Bel istirahat berdering, dan murid-murid berlarian ke kantin.",
@@ -6486,6 +6566,22 @@
    "en": "Siti's dog reacted nervously when it entered the unfamiliar house.",
    "ko": "시티네 개는 낯선 집에 들어가자 불안해했어요.",
    "blank": "bereaksi",
+   "src": "made"
+  }
+ ],
+ "w|berebut": [
+  {
+   "text": "Anak-anak berebut ingin memegang replika helm prajurit.",
+   "en": "The children scrambled to hold the replica soldier's helmet.",
+   "ko": "아이들은 병사 투구 복제품을 서로 만져 보려고 다퉜어요.",
+   "blank": "berebut",
+   "src": "made"
+  },
+  {
+   "text": "Dua ibu berebut sweter terakhir di meja obral.",
+   "en": "Two mothers fought over the last sweater on the sale table.",
+   "ko": "두 아주머니가 세일 매대의 마지막 스웨터를 두고 다퉜어요.",
+   "blank": "berebut",
    "src": "made"
   }
  ],
@@ -6777,6 +6873,22 @@
    "blank": "Bergegas"
   }
  ],
+ "w|bergema": [
+  {
+   "text": "Suara langkah Dimas bergema di aula museum yang masih kosong.",
+   "en": "Dimas's footsteps echoed in the still-empty museum hall.",
+   "ko": "아직 텅 빈 박물관 홀에 디마스의 발소리가 울려 퍼졌어요.",
+   "blank": "bergema",
+   "src": "made"
+  },
+  {
+   "text": "Suara pengumuman diskon bergema di seluruh lantai toko.",
+   "en": "The discount announcement echoed across every floor of the store.",
+   "ko": "할인 안내 방송이 매장 전 층에 울려 퍼졌어요.",
+   "blank": "bergema",
+   "src": "made"
+  }
+ ],
  "w|bergembira": [
   {
    "text": "Budi bergembira mendengar Andi akan pindah ke kota yang sama.",
@@ -7007,6 +7119,22 @@
    "en": "She has the right to refuse an unfair request.",
    "ko": "그는 불공정한 요청을 거절할 권리가 있어.",
    "blank": "berhak"
+  }
+ ],
+ "w|berhala": [
+  {
+   "text": "Kata Dimas, para pedagang asing dulu keliru menyebut arca itu berhala.",
+   "en": "According to Dimas, foreign traders once mistakenly called that statue an idol.",
+   "ko": "디마스 말로는 옛날 외국 상인들이 그 석상을 우상이라고 잘못 불렀대요.",
+   "blank": "berhala",
+   "src": "made"
+  },
+  {
+   "text": "Bagi sebagian remaja, merek mahal sudah seperti berhala baru.",
+   "en": "For some teenagers, expensive brands have become like a new idol.",
+   "ko": "몇몇 십 대에게 비싼 브랜드는 새로운 우상 같아요.",
+   "blank": "berhala",
+   "src": "made"
   }
  ],
  "w|berhalusinasi": [
@@ -8582,6 +8710,22 @@
    "en": "Many families buy swimsuits before going on holiday to Bali.",
    "ko": "많은 가족이 발리로 휴가 가기 전에 수영복을 사요.",
    "blank": "berlibur",
+   "src": "made"
+  }
+ ],
+ "w|berlimpah": [
+  {
+   "text": "Koleksi keramik di gudang museum berlimpah, tetapi ruang pamer sangat terbatas.",
+   "en": "The museum's storeroom is overflowing with ceramics, but exhibition space is very limited.",
+   "ko": "박물관 창고에는 도자기가 넘쳐나지만 전시 공간은 아주 좁아요.",
+   "blank": "berlimpah",
+   "src": "made"
+  },
+  {
+   "text": "Stok sepatu di gudang berlimpah, jadi Putri memasang tanda potongan harga.",
+   "en": "There were plenty of shoes in stock, so Putri put up a discount sign.",
+   "ko": "창고에 신발 재고가 넘쳐서 푸트리는 할인 표지판을 붙였어요.",
+   "blank": "berlimpah",
    "src": "made"
   }
  ],
@@ -12957,6 +13101,22 @@
    "blank": "buta"
   }
  ],
+ "w|butir": [
+  {
+   "text": "Dimas menemukan beberapa butir manik kaca di dasar kotak artefak.",
+   "en": "Dimas found a few glass beads at the bottom of the artifact box.",
+   "ko": "디마스는 유물 상자 바닥에서 유리구슬 몇 알을 찾았어요.",
+   "blank": "butir",
+   "src": "made"
+  },
+  {
+   "text": "Putri memeriksa setiap butir mutiara pada kalung sebelum membungkusnya.",
+   "en": "Putri checked every pearl on the necklace before wrapping it.",
+   "ko": "푸트리는 포장하기 전에 목걸이의 진주를 한 알 한 알 확인했어요.",
+   "blank": "butir",
+   "src": "made"
+  }
+ ],
  "w|butuh": [
   {
    "text": "Aku butuh bantuanmu.",
@@ -14855,6 +15015,22 @@
    "src": "made"
   }
  ],
+ "w|demokrat": [
+  {
+   "text": "Dimas membaca surat seorang demokrat yang memperjuangkan pemilu bebas.",
+   "en": "Dimas read a letter by a democrat who fought for free elections.",
+   "ko": "디마스는 자유 선거를 위해 싸운 한 민주주의자의 편지를 읽었어요.",
+   "blank": "demokrat",
+   "src": "made"
+  },
+  {
+   "text": "Pembeli tua itu menyebut dirinya demokrat sejati dan senang berdebat dengan Putri.",
+   "en": "The elderly customer calls himself a true democrat and loves debating with Putri.",
+   "ko": "그 나이 든 손님은 자신을 진정한 민주주의자라 부르며 푸트리와 토론하길 좋아해요.",
+   "blank": "demokrat",
+   "src": "made"
+  }
+ ],
  "w|demonstrasi": [
   {
    "text": "Naskah Eko terinspirasi dari demonstrasi mahasiswa di masa lalu.",
@@ -16393,6 +16569,22 @@
    "src": "made"
   }
  ],
+ "w|edan": [
+  {
+   "text": "Dimas bilang antrean pameran baru itu benar-benar edan.",
+   "en": "Dimas said the line for the new exhibition was absolutely insane.",
+   "ko": "디마스는 새 전시회 줄이 정말 미쳤다고 했어요.",
+   "blank": "edan",
+   "src": "made"
+  },
+  {
+   "text": "Harga tas kulit di lantai tiga itu edan, kata Putri sambil tertawa.",
+   "en": "The prices of the leather bags on the third floor are crazy, Putri said with a laugh.",
+   "ko": "3층 가죽 가방 값이 미쳤다고 푸트리가 웃으며 말했어요.",
+   "blank": "edan",
+   "src": "made"
+  }
+ ],
  "w|efek": [
   {
    "text": "Obat itu punya efek samping ringan.",
@@ -16622,6 +16814,22 @@
    "en": "Ahead of the final, Dewi does extra practice at night.",
    "ko": "결승을 앞두고 데위는 밤에 추가 훈련을 해요.",
    "blank": "ekstra",
+   "src": "made"
+  }
+ ],
+ "w|ekstradisi": [
+  {
+   "text": "Dimas membaca berita lama tentang ekstradisi pencuri yang menggondol lukisan museum.",
+   "en": "Dimas read an old news story about the extradition of the thief who made off with a museum painting.",
+   "ko": "디마스는 박물관 그림을 훔쳐 간 도둑의 범죄인 인도에 관한 옛 기사를 읽었어요.",
+   "blank": "ekstradisi",
+   "src": "made"
+  },
+  {
+   "text": "Di ruang istirahat, Putri menonton berita tentang ekstradisi seorang pengusaha buronan.",
+   "en": "In the break room, Putri watched news about the extradition of a fugitive businessman.",
+   "ko": "푸트리는 휴게실에서 도주한 사업가의 범죄인 인도 뉴스를 봤어요.",
+   "blank": "ekstradisi",
    "src": "made"
   }
  ],
@@ -17121,6 +17329,22 @@
    "en": "A red dawn colored the morning sky.",
    "ko": "붉은 새벽이 그날 아침 하늘을 물들였어.",
    "blank": "Fajar"
+  }
+ ],
+ "w|faksi": [
+  {
+   "text": "Diorama itu menggambarkan dua faksi istana yang saling bersaing.",
+   "en": "The diorama depicts two rival factions at the palace.",
+   "ko": "그 디오라마는 서로 경쟁하던 궁정의 두 파벌을 보여 줘요.",
+   "blank": "faksi",
+   "src": "made"
+  },
+  {
+   "text": "Di kantor, para pegawai terbagi menjadi dua faksi soal jadwal libur.",
+   "en": "In the office, the staff split into two factions over the holiday schedule.",
+   "ko": "사무실 직원들은 휴가 일정을 두고 두 파벌로 갈렸어요.",
+   "blank": "faksi",
+   "src": "made"
   }
  ],
  "w|fakta": [
@@ -17660,6 +17884,22 @@
    "en": "A tourist taught Intan the basics of photography on the hilltop.",
    "ko": "한 관광객이 언덕 꼭대기에서 인탄에게 사진의 기초를 가르쳐 줬어요.",
    "blank": "fotografi",
+   "src": "made"
+  }
+ ],
+ "w|fragmen": [
+  {
+   "text": "Dimas menyusun fragmen tembikar itu seperti sedang mengerjakan teka-teki.",
+   "en": "Dimas pieced the pottery fragments together as if doing a puzzle.",
+   "ko": "디마스는 퍼즐을 맞추듯 토기 조각들을 맞췄어요.",
+   "blank": "fragmen",
+   "src": "made"
+  },
+  {
+   "text": "Putri hanya ingat fragmen lagu yang diputar di lantai mainan kemarin.",
+   "en": "Putri only remembers a fragment of the song that played on the toy floor yesterday.",
+   "ko": "푸트리는 어제 장난감 층에서 나온 노래를 한 소절만 기억해요.",
+   "blank": "fragmen",
    "src": "made"
   }
  ],
@@ -18584,6 +18824,22 @@
    "en": "Ayu painted a dove as a symbol of a ceasefire for a peace poster contest.",
    "ko": "아유는 평화 포스터 대회에 휴전의 상징으로 비둘기를 그렸어요.",
    "blank": "gencatan",
+   "src": "made"
+  }
+ ],
+ "w|gendang": [
+  {
+   "text": "Anak-anak boleh memukul gendang kayu di pojok musik tradisional.",
+   "en": "Children may beat the wooden drum in the traditional music corner.",
+   "ko": "아이들은 전통 음악 코너에서 나무 북을 쳐 볼 수 있어요.",
+   "blank": "gendang",
+   "src": "made"
+  },
+  {
+   "text": "Di lantai mainan, Putri menjual gendang kecil untuk anak-anak.",
+   "en": "On the toy floor, Putri sells small drums for children.",
+   "ko": "푸트리는 장난감 층에서 아이들용 작은 북을 팔아요.",
+   "blank": "gendang",
    "src": "made"
   }
  ],
@@ -25509,6 +25765,22 @@
    "src": "made"
   }
  ],
+ "w|keagungan": [
+  {
+   "text": "Pengunjung terpukau oleh keagungan candi dalam foto besar di dinding.",
+   "en": "Visitors were awed by the grandeur of the temple in the large photo on the wall.",
+   "ko": "방문객들은 벽에 걸린 큰 사진 속 사원의 웅장함에 넋을 잃었어요.",
+   "blank": "keagungan",
+   "src": "made"
+  },
+  {
+   "text": "Lampu gantung kristal di lobi memberi kesan keagungan pada toko itu.",
+   "en": "The crystal chandelier in the lobby gives the store an air of grandeur.",
+   "ko": "로비의 크리스털 샹들리에가 그 매장에 웅장한 느낌을 줘요.",
+   "blank": "keagungan",
+   "src": "made"
+  }
+ ],
  "w|keahlian": [
   {
    "text": "Keahliannya di bidang memasak sangat terkenal.",
@@ -28251,6 +28523,22 @@
    "src": "made"
   }
  ],
+ "w|kendala": [
+  {
+   "text": "Dimas bilang kendala terbesar museum adalah biaya perawatan.",
+   "en": "Dimas says the museum's biggest obstacle is maintenance costs.",
+   "ko": "디마스는 박물관의 가장 큰 어려움이 관리 비용이라고 해요.",
+   "blank": "kendala",
+   "src": "made"
+  },
+  {
+   "text": "Putri bilang kendala utama hari ini adalah mesin kasir yang macet.",
+   "en": "Putri says today's main problem is the jammed cash register.",
+   "ko": "푸트리는 오늘 가장 큰 문제가 고장 난 계산기라고 해요.",
+   "blank": "kendala",
+   "src": "made"
+  }
+ ],
  "w|kendali": [
   {
    "text": "Dia kehilangan kendali atas mobil.",
@@ -29535,6 +29823,22 @@
    "src": "made"
   }
  ],
+ "w|kesenjangan": [
+  {
+   "text": "Dimas ingin pameran ini memperlihatkan kesenjangan antara bangsawan dan petani zaman dulu.",
+   "en": "Dimas wants this exhibition to show the gap between nobles and farmers in the old days.",
+   "ko": "디마스는 이 전시가 옛날 귀족과 농민 사이의 격차를 보여 주길 바라요.",
+   "blank": "kesenjangan",
+   "src": "made"
+  },
+  {
+   "text": "Putri melihat kesenjangan harga yang besar antara merek lokal dan merek impor.",
+   "en": "Putri noticed a big price gap between local and imported brands.",
+   "ko": "푸트리는 국산 브랜드와 수입 브랜드 사이의 큰 가격 차이를 봤어요.",
+   "blank": "kesenjangan",
+   "src": "made"
+  }
+ ],
  "w|kesepakatan": [
   {
    "text": "Kami mencapai kesepakatan.",
@@ -29576,6 +29880,22 @@
    "en": "Siti read news about the greed of airport officials in the newspaper.",
    "ko": "시티는 신문에서 공항 관리들의 탐욕에 관한 기사를 읽었어요.",
    "blank": "keserakahan",
+   "src": "made"
+  }
+ ],
+ "w|kesetaraan": [
+  {
+   "text": "Pameran bulan ini mengangkat perjuangan perempuan untuk kesetaraan dalam pendidikan.",
+   "en": "This month's exhibition highlights women's struggle for equality in education.",
+   "ko": "이번 달 전시는 교육 평등을 위한 여성들의 투쟁을 다뤄요.",
+   "blank": "kesetaraan",
+   "src": "made"
+  },
+  {
+   "text": "Serikat pramuniaga menuntut kesetaraan upah antara pegawai pria dan wanita.",
+   "en": "The salespeople's union is demanding equal pay for male and female staff.",
+   "ko": "판매원 노조는 남녀 직원의 임금 평등을 요구해요.",
+   "blank": "kesetaraan",
    "src": "made"
   }
  ],
@@ -30205,6 +30525,22 @@
    "src": "made"
   }
  ],
+ "w|kewarganegaraan": [
+  {
+   "text": "Dimas menjelaskan dokumen kewarganegaraan yang dipakai pada awal kemerdekaan.",
+   "en": "Dimas explained the citizenship documents used in the early days of independence.",
+   "ko": "디마스는 독립 초기에 쓰인 국적 서류를 설명했어요.",
+   "blank": "kewarganegaraan",
+   "src": "made"
+  },
+  {
+   "text": "Kasir meminta paspor untuk memastikan kewarganegaraan turis yang mengurus pengembalian pajak.",
+   "en": "The cashier asked for a passport to confirm the nationality of the tourist claiming a tax refund.",
+   "ko": "계산원은 세금 환급을 신청한 관광객의 국적을 확인하려고 여권을 달라고 했어요.",
+   "blank": "kewarganegaraan",
+   "src": "made"
+  }
+ ],
  "w|kewenangan": [
   {
    "text": "Andi tidak punya kewenangan untuk menghentikan pekerjaan tanpa izin manajer.",
@@ -30597,6 +30933,22 @@
    "en": "She serves clients warmly.",
    "ko": "그는 고객을 친절히 대해.",
    "blank": "klien"
+  }
+ ],
+ "w|klimaks": [
+  {
+   "text": "Ruang terakhir menjadi klimaks tur karena berisi mahkota emas.",
+   "en": "The last room is the climax of the tour because it holds a golden crown.",
+   "ko": "마지막 방에는 금관이 있어서 투어의 절정이에요.",
+   "blank": "klimaks",
+   "src": "made"
+  },
+  {
+   "text": "Pengundian hadiah menjadi klimaks acara ulang tahun toko.",
+   "en": "The prize draw was the climax of the store's anniversary event.",
+   "ko": "경품 추첨이 매장 창립 기념 행사의 하이라이트였어요.",
+   "blank": "klimaks",
+   "src": "made"
   }
  ],
  "w|klinik": [
@@ -32777,6 +33129,22 @@
    "blank": "Kurus"
   }
  ],
+ "w|kusut": [
+  {
+   "text": "Dimas merapikan peta kuno yang kusut sebelum dipajang di vitrin.",
+   "en": "Dimas smoothed out the crumpled old map before it was put on display.",
+   "ko": "디마스는 전시하기 전에 구겨진 옛 지도를 반듯하게 폈어요.",
+   "blank": "kusut",
+   "src": "made"
+  },
+  {
+   "text": "Putri menyetrika kemeja yang kusut sebelum dipasang di manekin.",
+   "en": "Putri ironed the wrinkled shirt before putting it on the mannequin.",
+   "ko": "푸트리는 마네킹에 입히기 전에 구겨진 셔츠를 다렸어요.",
+   "blank": "kusut",
+   "src": "made"
+  }
+ ],
  "w|kutipan": [
   {
    "text": "Andi mencatat kutipan dari buku filsafat ke dalam buku tulisnya.",
@@ -34597,6 +34965,22 @@
    "src": "made"
   }
  ],
+ "w|liputan": [
+  {
+   "text": "Setelah ada liputan televisi, jumlah pengunjung museum naik tajam.",
+   "en": "After the television coverage, the number of museum visitors rose sharply.",
+   "ko": "텔레비전 보도가 나간 뒤 박물관 방문객 수가 크게 늘었어요.",
+   "blank": "liputan",
+   "src": "made"
+  },
+  {
+   "text": "Majalah mode menurunkan liputan khusus tentang koleksi baru toko itu.",
+   "en": "A fashion magazine ran a special feature on the store's new collection.",
+   "ko": "패션 잡지가 그 매장의 신상품 특집 기사를 실었어요.",
+   "blank": "liputan",
+   "src": "made"
+  }
+ ],
  "w|lisensi": [
   {
    "text": "Pabrik itu baru mendapat lisensi untuk memproduksi suku cadang mobil.",
@@ -35741,6 +36125,22 @@
    "blank": "makin"
   }
  ],
+ "w|maklumat": [
+  {
+   "text": "Di ruang sejarah, Dimas memajang salinan maklumat raja yang ditulis di daun lontar.",
+   "en": "In the history room, Dimas displayed a copy of a royal proclamation written on palm leaves.",
+   "ko": "디마스는 역사관에 야자잎에 쓴 왕의 포고문 사본을 전시했어요.",
+   "blank": "maklumat",
+   "src": "made"
+  },
+  {
+   "text": "Manajemen menempelkan maklumat tentang jam buka selama libur panjang.",
+   "en": "Management posted a notice about opening hours during the long holiday.",
+   "ko": "경영진이 긴 연휴 동안의 영업시간 공지를 붙였어요.",
+   "blank": "maklumat",
+   "src": "made"
+  }
+ ],
  "w|makmur": [
   {
    "text": "Kata Rudi, kampung itu kini makmur dan angka pencurian sudah jauh berkurang.",
@@ -36490,6 +36890,22 @@
    "en": "The kitchen staff always wear masks and gloves.",
    "ko": "주방 직원들은 늘 마스크와 장갑을 껴요.",
    "blank": "masker",
+   "src": "made"
+  }
+ ],
+ "w|maskot": [
+  {
+   "text": "Di pintu masuk, maskot museum berupa badak kecil selalu diajak berfoto oleh anak-anak.",
+   "en": "At the entrance, children always pose for photos with the museum's little rhino mascot.",
+   "ko": "입구에서 아이들은 늘 작은 코뿔소 모양의 박물관 마스코트와 사진을 찍어요.",
+   "blank": "maskot",
+   "src": "made"
+  },
+  {
+   "text": "Toko memasang maskot beruang besar di depan lift untuk musim liburan.",
+   "en": "The store put a big bear mascot in front of the elevator for the holiday season.",
+   "ko": "매장은 연휴 시즌을 맞아 엘리베이터 앞에 큰 곰 마스코트를 세웠어요.",
+   "blank": "maskot",
    "src": "made"
   }
  ],
@@ -39573,6 +39989,22 @@
    "blank": "membelikan"
   }
  ],
+ "w|membelot": [
+  {
+   "text": "Label di samping lukisan bercerita tentang seorang jenderal yang membelot ke pihak lawan.",
+   "en": "The label beside the painting tells of a general who defected to the enemy side.",
+   "ko": "그림 옆 설명판에는 적군 편으로 넘어간 장군 이야기가 적혀 있어요.",
+   "blank": "membelot",
+   "src": "made"
+  },
+  {
+   "text": "Kabarnya manajer kosmetik membelot ke toko pesaing di seberang jalan.",
+   "en": "Word is the cosmetics manager defected to the rival store across the street.",
+   "ko": "화장품 매니저가 길 건너 경쟁 매장으로 넘어갔다는 소문이에요.",
+   "blank": "membelot",
+   "src": "made"
+  }
+ ],
  "w|membenarkan": [
   {
    "text": "Eko membenarkan letak payungnya supaya tidak terbang ditiup angin.",
@@ -39647,6 +40079,22 @@
    "en": "They formed a new study group.",
    "ko": "그들은 새 학습 모임을 만들었어.",
    "blank": "membentuk"
+  }
+ ],
+ "w|membenturkan": [
+  {
+   "text": "Seorang pengunjung tak sengaja membenturkan tas ke kaca vitrin.",
+   "en": "A visitor accidentally bumped a bag against the display case glass.",
+   "ko": "한 방문객이 실수로 가방을 진열장 유리에 부딪쳤어요.",
+   "blank": "membenturkan",
+   "src": "made"
+  },
+  {
+   "text": "Anak kecil itu membenturkan troli ke rak gelas, untung tidak ada yang pecah.",
+   "en": "The little kid bumped the cart into the glassware shelf, but luckily nothing broke.",
+   "ko": "꼬마가 카트를 유리컵 선반에 부딪쳤는데 다행히 깨진 건 없었어요.",
+   "blank": "membenturkan",
+   "src": "made"
   }
  ],
  "w|memberatkan": [
@@ -40607,6 +41055,22 @@
    "blank": "memeluk"
   }
  ],
+ "w|memenangi": [
+  {
+   "text": "Museum kecil ini pernah memenangi penghargaan desain pameran terbaik.",
+   "en": "This small museum once won an award for best exhibition design.",
+   "ko": "이 작은 박물관은 최우수 전시 디자인상을 받은 적이 있어요.",
+   "blank": "memenangi",
+   "src": "made"
+  },
+  {
+   "text": "Tim Putri memenangi lomba penjualan terbanyak bulan ini.",
+   "en": "Putri's team won this month's top sales contest.",
+   "ko": "푸트리 팀이 이번 달 판매왕 대회에서 이겼어요.",
+   "blank": "memenangi",
+   "src": "made"
+  }
+ ],
  "w|memenangkan": [
   {
    "text": "Mereka berhasil memenangkan pertandingan.",
@@ -41518,6 +41982,22 @@
    "en": "Wati remembered the days when they would argue about song titles late into the night.",
    "ko": "와티는 둘이 밤늦게까지 노래 제목을 두고 다투던 시절을 떠올렸어요.",
    "blank": "memperdebatkan",
+   "src": "made"
+  }
+ ],
+ "w|memperebutkan": [
+  {
+   "text": "Pameran ini menampilkan dua kerajaan yang memperebutkan jalur dagang rempah.",
+   "en": "This exhibition features two kingdoms that fought over the spice trade route.",
+   "ko": "이 전시는 향신료 무역로를 두고 다툰 두 왕국을 보여 줘요.",
+   "blank": "memperebutkan",
+   "src": "made"
+  },
+  {
+   "text": "Para pramuniaga memperebutkan posisi dekat pintu karena paling ramai.",
+   "en": "The salespeople compete for the spot near the door because it's the busiest.",
+   "ko": "판매원들은 손님이 제일 많은 문 근처 자리를 서로 차지하려고 해요.",
+   "blank": "memperebutkan",
    "src": "made"
   }
  ],
@@ -45205,6 +45685,22 @@
    "blank": "menerima"
   }
  ],
+ "w|menerjang": [
+  {
+   "text": "Dulu banjir besar menerjang kota dan merusak sebagian arsip museum.",
+   "en": "Long ago a huge flood swept through the city and damaged part of the museum's archive.",
+   "ko": "예전에 큰 홍수가 도시를 덮쳐 박물관 기록물 일부가 망가졌어요.",
+   "blank": "menerjang",
+   "src": "made"
+  },
+  {
+   "text": "Begitu pintu dibuka, ratusan pembeli menerjang masuk ke area obral.",
+   "en": "As soon as the doors opened, hundreds of shoppers charged into the sale area.",
+   "ko": "문이 열리자마자 수백 명의 손님이 세일 코너로 돌진했어요.",
+   "blank": "menerjang",
+   "src": "made"
+  }
+ ],
  "w|menerjemahkan": [
   {
    "text": "Dimas membantu menerjemahkan petunjuk pupuk yang berbahasa Inggris untuk ayahnya.",
@@ -45768,6 +46264,22 @@
    "en": "A single wrong number in the table meant Dewi's report had to be reprinted.",
    "ko": "표의 숫자 하나가 틀려서 디위의 보고서를 다시 인쇄해야 했어요.",
    "blank": "mengakibatkan",
+   "src": "made"
+  }
+ ],
+ "w|mengakomodasi": [
+  {
+   "text": "Museum menambah jalur landai agar bisa mengakomodasi pengunjung berkursi roda.",
+   "en": "The museum added ramps so it could accommodate visitors in wheelchairs.",
+   "ko": "박물관은 휠체어 방문객을 수용할 수 있도록 경사로를 더 놓았어요.",
+   "blank": "mengakomodasi",
+   "src": "made"
+  },
+  {
+   "text": "Toko memperpanjang jam buka untuk mengakomodasi pembeli yang pulang kerja malam.",
+   "en": "The store extended its opening hours to accommodate shoppers who finish work late.",
+   "ko": "매장은 밤늦게 퇴근하는 손님을 위해 영업시간을 늘렸어요.",
+   "blank": "mengakomodasi",
    "src": "made"
   }
  ],
@@ -50102,6 +50614,22 @@
    "en": "On the bus to the venue, Siti accidentally overheard another runner's strategy.",
    "ko": "대회장 가는 버스에서 시티는 다른 주자의 작전을 우연히 엿들었어요.",
    "blank": "menguping",
+   "src": "made"
+  }
+ ],
+ "w|menguraikan": [
+  {
+   "text": "Dalam tur pagi, Dimas menguraikan cara orang dulu membuat kain tenun.",
+   "en": "On the morning tour, Dimas explained how people used to make woven cloth.",
+   "ko": "아침 투어에서 디마스는 옛사람들이 직물을 짜던 방법을 자세히 설명했어요.",
+   "blank": "menguraikan",
+   "src": "made"
+  },
+  {
+   "text": "Putri menguraikan perbedaan dua jenis kain kepada pembeli yang ragu.",
+   "en": "Putri explained the difference between two kinds of fabric to a hesitant customer.",
+   "ko": "푸트리는 망설이는 손님에게 두 가지 천의 차이를 자세히 설명했어요.",
+   "blank": "menguraikan",
    "src": "made"
   }
  ],
@@ -56797,6 +57325,22 @@
    "src": "made"
   }
  ],
+ "w|ngawur": [
+  {
+   "text": "Kata Dimas, tebakan pengunjung soal umur patung itu agak ngawur.",
+   "en": "According to Dimas, the visitor's guess about the statue's age was a bit wild.",
+   "ko": "디마스 말로는 그 방문객이 조각상 나이를 짐작한 게 좀 엉터리였대요.",
+   "blank": "ngawur",
+   "src": "made"
+  },
+  {
+   "text": "Label harga di rak itu ngawur, jadi Putri mencetak ulang semuanya.",
+   "en": "The price labels on that shelf were all wrong, so Putri reprinted them all.",
+   "ko": "그 선반의 가격표가 엉망이라 푸트리가 전부 다시 뽑았어요.",
+   "blank": "ngawur",
+   "src": "made"
+  }
+ ],
  "w|nggak": [
   {
    "text": "Aku nggak bisa datang nanti.",
@@ -59963,6 +60507,22 @@
    "en": "That explosive was found near the warehouse.",
    "ko": "그 폭발물은 창고 근처에서 발견됐어.",
    "blank": "Peledak"
+  }
+ ],
+ "w|peledakan": [
+  {
+   "text": "Foto hitam putih itu merekam peledakan jembatan pada masa perang.",
+   "en": "That black-and-white photo captures the blowing up of a bridge during the war.",
+   "ko": "그 흑백 사진에는 전쟁 때 다리를 폭파하는 장면이 담겨 있어요.",
+   "blank": "peledakan",
+   "src": "made"
+  },
+  {
+   "text": "Putri membaca berita tentang peledakan gedung tua yang akan diganti mal baru.",
+   "en": "Putri read news about the demolition blast of an old building to be replaced by a new mall.",
+   "ko": "푸트리는 새 쇼핑몰이 들어설 낡은 건물을 폭파 해체한다는 기사를 읽었어요.",
+   "blank": "peledakan",
+   "src": "made"
   }
  ],
  "w|pelempar": [
@@ -64587,6 +65147,22 @@
    "src": "made"
   }
  ],
+ "w|penjajah": [
+  {
+   "text": "Gedung museum itu dulu dibangun oleh penjajah sebagai kantor pajak.",
+   "en": "The museum building was originally built by the colonizers as a tax office.",
+   "ko": "그 박물관 건물은 원래 식민 지배자들이 세무서로 지은 거예요.",
+   "blank": "penjajah",
+   "src": "made"
+  },
+  {
+   "text": "Gedung toko serba ada itu berdiri di atas bekas gudang milik penjajah.",
+   "en": "The department store building stands on the site of an old warehouse owned by the colonizers.",
+   "ko": "그 백화점 건물은 식민 지배자들의 옛 창고 자리에 서 있어요.",
+   "blank": "penjajah",
+   "src": "made"
+  }
+ ],
  "w|penjara": [
   {
    "text": "Dia masuk penjara lama.",
@@ -65430,6 +66006,22 @@
    "en": "That morning a radio announcer declared the start of the rainy season as Ayu got ready for campus.",
    "ko": "그날 아침 아유가 학교 갈 준비를 할 때 라디오 진행자가 우기가 시작됐다고 알렸어요.",
    "blank": "penyiar",
+   "src": "made"
+  }
+ ],
+ "w|penyiaran": [
+  {
+   "text": "Museum menyimpan mikrofon pertama dari stasiun penyiaran radio kota.",
+   "en": "The museum keeps the first microphone from the city's radio broadcasting station.",
+   "ko": "박물관은 시 라디오 방송국의 첫 마이크를 보관하고 있어요.",
+   "blank": "penyiaran",
+   "src": "made"
+  },
+  {
+   "text": "Putri masuk ke ruang penyiaran untuk mengumumkan anak yang terpisah dari ibunya.",
+   "en": "Putri went into the broadcast room to announce a child who had been separated from his mother.",
+   "ko": "푸트리는 엄마와 떨어진 아이를 안내 방송하려고 방송실에 들어갔어요.",
+   "blank": "penyiaran",
    "src": "made"
   }
  ],
@@ -69085,6 +69677,22 @@
    "blank": "Plastik"
   }
  ],
+ "w|podium": [
+  {
+   "text": "Kepala museum berdiri di podium untuk membuka pameran baru.",
+   "en": "The museum director stood at the podium to open the new exhibition.",
+   "ko": "박물관장은 새 전시를 열려고 연단에 섰어요.",
+   "blank": "podium",
+   "src": "made"
+  },
+  {
+   "text": "Sang desainer naik ke podium kecil untuk memperkenalkan koleksi barunya.",
+   "en": "The designer stepped onto a small podium to introduce her new collection.",
+   "ko": "디자이너가 신작을 소개하려고 작은 연단에 올랐어요.",
+   "blank": "podium",
+   "src": "made"
+  }
+ ],
  "w|pohon": [
   {
    "text": "Ada pohon besar di halaman.",
@@ -71023,6 +71631,22 @@
    "en": "She cut her hair yesterday.",
    "ko": "그녀는 어제 머리를 잘랐어.",
    "blank": "rambut"
+  }
+ ],
+ "w|rampasan": [
+  {
+   "text": "Beberapa benda di museum itu dulu merupakan barang rampasan perang.",
+   "en": "Some of the objects in that museum were once spoils of war.",
+   "ko": "그 박물관의 몇몇 물건은 예전에 전쟁 약탈품이었어요.",
+   "blank": "rampasan",
+   "src": "made"
+  },
+  {
+   "text": "Adik Putri menyebut tas-tas belanja dari obral itu sebagai hasil rampasan.",
+   "en": "Putri's younger sibling called the shopping bags from the sale \"the loot.\"",
+   "ko": "푸트리 동생은 세일에서 산 쇼핑백들을 전리품이라고 불렀어요.",
+   "blank": "rampasan",
+   "src": "made"
   }
  ],
  "w|ramuan": [
@@ -79621,6 +80245,22 @@
    "en": "That photo studio is open until night.",
    "ko": "그 사진 스튜디오는 밤까지 열어.",
    "blank": "Studio"
+  }
+ ],
+ "w|suaka": [
+  {
+   "text": "Satu ruangan bercerita tentang para pengungsi yang mencari suaka di negeri seberang.",
+   "en": "One room tells the story of refugees who sought asylum in a land across the sea.",
+   "ko": "한 전시실은 바다 건너 나라에서 망명을 구한 난민들의 이야기를 들려줘요.",
+   "blank": "suaka",
+   "src": "made"
+  },
+  {
+   "text": "Toko buku di lantai empat menjadi suaka kecil bagi Putri saat istirahat.",
+   "en": "The bookshop on the fourth floor is a little refuge for Putri during her break.",
+   "ko": "4층 서점은 쉬는 시간 푸트리의 작은 피난처예요.",
+   "blank": "suaka",
+   "src": "made"
   }
  ],
  "w|suami": [
