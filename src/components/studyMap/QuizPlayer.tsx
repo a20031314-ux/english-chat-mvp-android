@@ -1,9 +1,8 @@
 "use client";
 
 import { DictNotes } from "@/components/studyMap/DictNotes";
-import { CardProgressDots, ladderName } from "@/components/studyMap/Growth";
-import { quizShapeOf } from "@/lib/curriculum/missKind";
-import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
+import { ladderName } from "@/components/studyMap/Growth";
+import { noteLedger } from "@/lib/curriculum/logLedger";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
@@ -269,13 +268,8 @@ export function QuestionView({
   const [dictWord, setDictWord] = useState<string | null>(null);
   // 맞힌 뒤 [다시]를 눌렀나 — 맞힌 것은 저절로 다시 안 나오고, 누른 것만 다음 날 다시 볼 것에(checkState.ts again).
   const [again, setAgain] = useState(false);
-  // 답하기 전 그 열쇠의 장부(답하면 부르는 쪽이 곧바로 장부에 씀) — 점 셋의 "전"(개편만, 2026-11-08).
-  // 맞나 틀리나는 문법을 물어서 점 셋도 그 문법 열쇠(2026-11-08).
+  // [다시]가 남길 열쇠 — 맞나 틀리나는 문법을 물어서 그 문법 열쇠.
   const dotKey = given.kind === "judge" ? given.slip.key : bankKey;
-  const ledgerBefore = useMemo(() => (dictDoor && dotKey ? readLedger(language).filter((event) => event.k === dotKey) : []),
-    // 문제가 바뀔 때만 다시 — 답한 뒤에는 그대로.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [dictDoor, dotKey, given, language]);
   // 뜻 고르기인데 앱 언어로 보일 뜻이 없으면(앱 언어 = 학습 언어 — 보기가 곧 문장) 듣고 말하기로(2026-11-01 퀴즈 전수 점검).
   const question: QuizQuestion = useMemo(
     () =>
@@ -344,18 +338,6 @@ export function QuestionView({
           <span className={`whitespace-nowrap text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
             {answered.skipped ? "" : answered.correct ? `✓ ${ui.quizRight}` : answered.assisted ? "💡" : ui.quizWrong}
           </span>
-          {/* 개편: 답한 순간 그 소재의 점 셋이 바뀜(studyMap/Growth CardProgressDots, 2026-11-08). 문제마다 새로 그려 답하기 전 장부를 잡는다. */}
-          {dictDoor && dotKey && /^[wefg]\|/.test(dotKey) && !answered.skipped ? (
-            <CardProgressDots
-              ui={ui}
-              key={`${dotKey}|${"text" in question ? question.text : ""}`}
-              events={ledgerBefore}
-              locale={locale}
-              bankKey={dotKey}
-              mode={quizShapeOf(question as never, { correct: answered.correct, ...(answered.typed ? { typed: true } : {}) }, (text) => text.split(" ")).shape === "t" ? (question.kind === "type" && question.bare && answered.correct ? "sure" : "write") : "pick"}
-              correct={answered.correct && !answered.assisted}
-            />
-          ) : null}
           {dictDoor && dotKey && /^[wefg]\|/.test(dotKey) && answered.correct && !answered.skipped && !answered.assisted ? (
             <button
               type="button"

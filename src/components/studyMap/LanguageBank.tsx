@@ -353,7 +353,7 @@ export function LanguageBank({
                           onClick={() => setOrder(one)}
                           className={`rounded-lg border px-2 py-0.5 text-meta ${order === one ? "border-status-learned/50 bg-status-learned/10 font-semibold text-status-learned" : "border-line text-slate-400"}`}
                         >
-                          {one === "quiz" ? ui.lbFresh : ui.homeTabTalk}
+                          {one === "quiz" ? ui.quizTag : ui.homeTabTalk}
                         </button>
                       ))}
                     </div>

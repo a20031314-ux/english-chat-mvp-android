@@ -12,11 +12,9 @@
  */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { UICopy } from "@/lib/copy";
-import { LEDGER_EVENT, readLedger, type LogEvent } from "@/lib/curriculum/logLedger";
+import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { growthPairs, progressIn, type GrowthPair } from "@/lib/curriculum/growthView";
-import { cardProgress } from "@/lib/curriculum/cardProgress";
-import { knowTag, knowTagLabel, type KnowTag } from "@/lib/curriculum/studyTimeline";
 import { GROWTH_LINES_EVENT, readGrowthLines } from "@/lib/curriculum/growthLines";
 import { CALL_NOTES_EVENT, readCallNotes } from "@/lib/roleplay/callNotes";
 import { bestAnswerPair, readAnswers, readFirstUses, TALK_MEMORY_EVENT } from "@/lib/roleplay/talkMemory";
@@ -260,48 +258,3 @@ export function TalkCompare({ ui, language, locale, keyLabel }: { ui: UICopy; la
   );
 }
 
-/**
- * 퀴즈 답한 순간 카드 아래 점 셋(lib/curriculum/cardProgress.ts, 2026-11-08 사용자 "점수 상승을 실시간으로, 수치는 아니더라도 가시적으로").
- * 답하기 전 장부(events — 부르는 쪽이 문제를 낼 때 잡아 둠, 답하면 곧바로 장부에 들어가서)로 전 점을 내고, 답하면 바뀐 점만 톡 커졌다 돌아옴. 앎이 되면 점 셋 둘레가 빛남,
- * 전에 틀린 걸 다른 날 맞히면 ↺ 그 날짜. 글 없이 — 이름은 aria-label(Logbank 표와 같은 말이 아니라 체크 셋 이름).
- */
-/**
- * 답한 순간 그 소재의 표시(2026-11-09 사용자 "옛 상태 이름은 다 삭제" — 점 셋(체크 셋) 대신 있었던 일만):
- * 학습 · n번 학습 · 자주 씀(studyTimeline.ts knowTag), 이번 답으로 바뀌면 잠깐 커짐. ↺ = 틀렸던 것을 다른 날 다시 맞힘(그날).
- */
-export function CardProgressDots({ ui, events, locale, bankKey, mode, correct }: { ui: UICopy; events: readonly LogEvent[]; locale: string; bankKey: string; mode: "write" | "pick" | "sure"; correct: boolean }) {
-  const [at] = useState(() => Math.floor(Date.now() / 1000));
-  const progress = useMemo(() => cardProgress(events, bankKey, { correct, mode, t: at }), [events, bankKey, correct, mode, at]);
-  const tags = useMemo(() => {
-    const dayOf = (t: number) => dayOfSeconds(t);
-    const before = knowTag(events, bankKey, dayOf);
-    const after = knowTag([...events, { k: bankKey, src: "quiz", r: correct ? "ok" : "miss", m: mode, t: at }], bankKey, dayOf);
-    return { before, after };
-  }, [events, bankKey, correct, mode, at]);
-  const [phase, setPhase] = useState(0);
-  useEffect(() => {
-    const one = window.setTimeout(() => setPhase(1), 80);
-    const two = window.setTimeout(() => setPhase(2), 700);
-    return () => {
-      window.clearTimeout(one);
-      window.clearTimeout(two);
-    };
-  }, []);
-  const label = (tag: KnowTag | null) => (tag ? `${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}` : "");
-  const before = label(tags.before);
-  const after = label(tags.after);
-  if (!after) return null;
-  const changed = before !== after;
-  return (
-    <span data-card-progress={after} className="inline-flex items-center gap-2">
-      <span className={`inline-block whitespace-nowrap rounded-full border border-line px-2 py-0.5 text-caption text-slate-200 transition-transform duration-300 ${changed && phase === 1 ? "scale-125 border-good text-good" : "scale-100"}`}>
-        {phase === 0 && before ? before : after}
-      </span>
-      {progress.recoveredFrom !== null ? (
-        <span data-card-recovered className={`text-caption font-semibold text-good transition-opacity duration-500 ${phase ? "opacity-100" : "opacity-0"}`}>
-          ↺ {shortDay(locale, progress.recoveredFrom)}
-        </span>
-      ) : null}
-    </span>
-  );
-}

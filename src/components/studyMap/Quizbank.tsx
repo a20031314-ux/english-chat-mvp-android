@@ -1,6 +1,5 @@
 "use client";
 
-import { TodayGrowth } from "@/components/studyMap/Growth";
 import { QUIZ_FOCUS_EVENT, takeQuizFocus } from "@/lib/curriculum/quizFocus";
 import { cardFaces, checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
 import { answeredKeys, cardMode, expressionChance } from "@/lib/curriculum/quizTier";
@@ -443,7 +442,6 @@ export function Quizbank({
   const keepBody = (
     <div data-keep-learning data-focus-serial={focusSerial}>
       {/* Today line above the question — the cell that grew lights up briefly (same numbers as the Logbank today line). */}
-      <TodayGrowth ui={ui} language={language} />
       <InlineQuiz
         ui={ui}
         locale={locale}

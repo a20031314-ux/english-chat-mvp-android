@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (16)
+## 탭이 확인할 것 (18)
 
 ### 탭 1 메인
 
@@ -31,6 +31,10 @@
 - **a261109-2-7** (2026-11-09 23:51, 탭 2 · 1f2ff41) Quizbank 맞힌 것 저절로 다시 안 냄 — 체크 셋: 퀴즈에서 맞히면 앎(확인 날짜 1·3·7·30 없앰), 앎에서 틀림·답 뒤 [다시](장부 r again) → 다시 볼 것. 고르기 맞힘 쓰기로 다시(pickedNew) 지움. 점 셋·배운 것 표·사전 주석(앎 낱말 숨김)·넘겨 보기 순서가 바뀐 상태 계산을 씀
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 1:1 메시지 · 단체방 · 사람 · 게시판 · Room · 방 게임 · 첫 측정 · 실력 확인 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · My에서 찾기
   - 볼 곳: `components/FindInMy.tsx` · `components/account/AccountCard.tsx` · `components/account/ProfileFacts.tsx` · `app/dev/call-preview/page.tsx` · `lib/server/feedbackFixStore.ts`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261110-2-1** (2026-11-10 00:15, 탭 2 · b305d55) 값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요
+  - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘 · 학습 타임라인 · 학습 수 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
+  - 볼 곳: `components/FindInMy.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
@@ -62,6 +66,10 @@
 - **a261109-2-8** (2026-11-09 23:51, 탭 2 · 1f2ff41) Quizbank 맞힌 것 저절로 다시 안 냄 — 체크 셋: 퀴즈에서 맞히면 앎(확인 날짜 1·3·7·30 없앰), 앎에서 틀림·답 뒤 [다시](장부 r again) → 다시 볼 것. 고르기 맞힘 쓰기로 다시(pickedNew) 지움. 점 셋·배운 것 표·사전 주석(앎 낱말 숨김)·넘겨 보기 순서가 바뀐 상태 계산을 씀
   - 기능: AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 1:1 메시지 · 단체방 · 사람 · 게시판 · Room · 방 게임 · 첫 측정 · 실력 확인 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 같이 배우기 · 사전 주석 · My에서 찾기
   - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/ChatWindow.tsx` · `components/roleplay/callHooks.ts` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx` · `components/ExpressionPeek.tsx` · `components/roleplay/CallRecap.tsx` · `components/roleplay/CallParts.tsx` · `lib/server/ledgerStore.ts`
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261110-2-2** (2026-11-10 00:15, 탭 2 · b305d55) 값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요
+  - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘 · 학습 타임라인 · 학습 수 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
+  - 볼 곳: `components/RoleplayScreen.tsx` · `components/roleplay/CallReplay.tsx` · `components/conversation/LineTools.tsx` · `components/videoLearning/CurrentSubtitleCard.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 4 사람

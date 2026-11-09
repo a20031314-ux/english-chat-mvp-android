@@ -1194,6 +1194,69 @@
       "base": "HEAD",
       "head": "1f2ff41",
       "status": "open"
+    },
+    {
+      "id": "a261110-2-1",
+      "at": "2026-11-10 00:15",
+      "kind": "apply",
+      "from": "2",
+      "to": "1",
+      "what": "값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요",
+      "files": [
+        "src/components/FindInMy.tsx"
+      ],
+      "features": [
+        "자유대화",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘",
+        "학습 타임라인",
+        "학습 수",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "HEAD",
+      "head": "b305d55",
+      "status": "open"
+    },
+    {
+      "id": "a261110-2-2",
+      "at": "2026-11-10 00:15",
+      "kind": "apply",
+      "from": "2",
+      "to": "3",
+      "what": "값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요",
+      "files": [
+        "src/components/RoleplayScreen.tsx",
+        "src/components/roleplay/CallReplay.tsx",
+        "src/components/conversation/LineTools.tsx",
+        "src/components/videoLearning/CurrentSubtitleCard.tsx"
+      ],
+      "features": [
+        "자유대화",
+        "이렇게도 말할 수 있었어요",
+        "첫 측정",
+        "실력 확인",
+        "Logbank",
+        "오늘",
+        "학습 타임라인",
+        "학습 수",
+        "Quizbank",
+        "Languagebank",
+        "넘겨 보기",
+        "소재 수업",
+        "사전 주석",
+        "My에서 찾기"
+      ],
+      "base": "HEAD",
+      "head": "b305d55",
+      "status": "open"
     }
   ],
   "scopes": [
@@ -1380,13 +1443,25 @@
         "a261109-2-8",
         "a261109-2-9"
       ]
+    },
+    {
+      "at": "2026-11-10 00:15",
+      "from": "2",
+      "base": "HEAD",
+      "head": "b305d55",
+      "what": "값 꼬리표 정리 — 낱말마다 붙던 '학습·n번 학습' 표시(퀴즈 답 뒤 칩·사전·카드 기록·타임라인)·'새로/다시 학습'·'학습 n번'을 지움, '학습 n'은 그 기간에 퀴즈로 답한 서로 다른 것의 수 한 뜻. 사전은 마지막 틀림 ✗만. CardProgressDots·cardProgress.ts 지움. 새 규칙 RULES 4·DESIGN '값 꼬리표' — 그 탭 화면에도 값마다 붙은 글 꼬리표가 있는지 같은 기준으로 봐 주세요",
+      "tabs": [
+        "1",
+        "2",
+        "3"
+      ],
+      "asks": [
+        "a261110-2-1",
+        "a261110-2-2"
+      ]
     }
   ],
   "seq": {
-    "261109": 9,
-    "261109-2": 9,
-    "261109-6": 4,
-    "261109-5": 4,
-    "261109-3": 1
+    "261110-2": 2
   }
 }

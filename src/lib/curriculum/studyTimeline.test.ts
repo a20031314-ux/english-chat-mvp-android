@@ -51,7 +51,7 @@ test("학습 시간 내용: 요소별 수, 처음 답한 것과 다른 날 다�
   assert.deepEqual([tha.ok, tha.miss, tha.mode], [1, 1, "write"]);
 });
 
-test("표시: 학습 → n번 학습(답한 날 수, 찾아봄·대화 안 셈), 마지막 틀림 ✗ · 대화는 쓴 곳으로만 (ko·es)", () => {
+test("답한 날 수·마지막 틀림(✗)은 퀴즈 답만, 찾아봄·대화 안 셈 · 대화는 쓴 곳으로만 (ko·es)", () => {
   const key = "w|먹다";
   const day = (n: number) => T0 + n * DAY;
   let events: LogEvent[] = [ev(key, "ok", day(0)), ev(key, "ok", day(0) + 60)];
@@ -63,11 +63,10 @@ test("표시: 학습 → n번 학습(답한 날 수, 찾아봄·대화 안 셈),
   assert.deepEqual(knowTag(events, key, utcDay), { kind: "times", n: 2, miss: true });
   assert.equal(knowTag([ev("w|casa", "look", day(0), "dict", undefined)], "w|casa", utcDay), null);
   assert.equal(knowTag([ev("w|casa", "used", day(0), "call", undefined)], "w|casa", utcDay), null, "대화에서만 쓴 말 = 학습 아님");
-  // 학습 기록은 새것부터(퀴즈·사전만), 줄마다 그때까지의 표시.
-  const rows = cardHistory(events, key, utcDay);
+  // 학습 기록은 새것부터(퀴즈·사전만) — 결과만, 표시 글 없음.
+  const rows = cardHistory(events, key);
   assert.equal(rows.length, 4);
-  assert.equal(rows[0]!.tag?.kind, "times");
-  assert.equal(rows[rows.length - 1]!.tag?.kind, "learned");
+  assert.deepEqual(rows.map((one) => one.r), ["miss", "look", "ok", "ok"]);
   // 쓴 곳 = 대화만, 새것부터, 같은 날·같은 곳·같은 결과는 한 줄.
   const more = [...events, ev(key, "used", day(5) + 30, "people", undefined), ev(key, "miss", day(5) + 90, "people", undefined)];
   assert.deepEqual(talkHistory(more, key, utcDay).map((one) => `${one.src}:${one.r}`), ["people:miss", "people:used", "chat:used", "call:used"]);

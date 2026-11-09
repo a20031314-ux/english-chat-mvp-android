@@ -157,22 +157,16 @@ export function knowTag(events: readonly LogEvent[], key: string, dayOf: (t: num
   return null;
 }
 
-/** 화면 글(학습 · n번 학습, 마지막 틀림이면 ✗ 붙이는 것은 부르는 쪽). */
-export function knowTagLabel(ui: { tlLearnedN: string; lbFresh: string }, tag: KnowTag | null): string {
-  if (!tag) return "";
-  return tag.kind === "times" ? ui.tlLearnedN.replace("{n}", String(tag.n)) : ui.lbFresh;
-}
+export type CardHistoryRow = { t: number; src: LogEvent["src"]; r: LogEvent["r"]; mode?: LogMode };
 
-export type CardHistoryRow = { t: number; src: LogEvent["src"]; r: LogEvent["r"]; mode?: LogMode; tag: KnowTag | null };
-
-/** 순수: 카드 한 장의 학습 기록(새것부터, 퀴즈·사전 — 대화는 talkHistory) — 줄마다 그때까지의 표시. 같은 1분 안의 같은 결과는 한 줄. */
-export function cardHistory(events: readonly LogEvent[], key: string, dayOf: (t: number) => string, max = 30): CardHistoryRow[] {
+/** 순수: 카드 한 장의 학습 기록(새것부터, 퀴즈·사전 — 대화는 talkHistory). 같은 1분 안의 같은 결과는 한 줄. */
+export function cardHistory(events: readonly LogEvent[], key: string, max = 30): CardHistoryRow[] {
   const mine = events.filter((event) => event.k === key && !talkLike(event)).sort((a, b) => a.t - b.t);
   const rows: CardHistoryRow[] = [];
   for (const event of mine) {
     const prev = rows[rows.length - 1];
     if (prev && prev.src === event.src && prev.r === event.r && event.t - prev.t < 60) continue;
-    rows.push({ t: event.t, src: event.src, r: event.r, ...(event.m ? { mode: event.m } : {}), tag: knowTag(mine, key, dayOf, event.t) });
+    rows.push({ t: event.t, src: event.src, r: event.r, ...(event.m ? { mode: event.m } : {}) });
   }
   return rows.reverse().slice(0, max);
 }

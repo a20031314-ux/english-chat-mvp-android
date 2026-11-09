@@ -5,7 +5,7 @@ import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { noteLedger, readLedger } from "@/lib/curriculum/logLedger";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
-import { knowTag, knowTagLabel, type KnowTag } from "@/lib/curriculum/studyTimeline";
+import { knowTag, type KnowTag } from "@/lib/curriculum/studyTimeline";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import { useBankTone } from "@/components/studyMap/bankTone";
@@ -39,8 +39,8 @@ function grownLines(language: string, word: string, locale: string, have: readon
  * word = 이 낱말 화면으로 바로 열기(Languagebank 묶음에서 누른 낱말). onIndex = 낱말 화면 ‹ 를 눌렀을 때 바깥(색인)으로.
  */
 /**
- * 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 두 숫자 — 퀴즈(학습 · n번 학습, 답한 날 수)와
- * 대화(대화에서 n번 씀, curriculum/wordUse.ts talkCounts)를 따로(2026-11-09 사용자 "문제풀이와 대화에서 사용한 수치를 분리").
+ * 사전 낱말 화면 = 퀴즈 카드(QuizPlayer CardFace)를 모두 연 모양 + 구석에 퀴즈 마지막 답이 틀렸으면 ✗, 대화에서 쓴 수(curriculum/wordUse.ts talkCounts).
+ * 퀴즈 쪽 내부 구분(답한 날 수 등)은 글로 안 보인다(RULES 4 값 꼬리표).
  * 어림값은 사전에 붙이지 않는다. 열어 본 것은 장부에 찾아봄으로만.
  */
 type CardUse = { tag: KnowTag | null; talk: number };
@@ -51,12 +51,12 @@ function cardStatus(language: string, word: string): CardUse {
 }
 
 function StatusMark({ ui, status }: { ui: UICopy; status: CardUse }) {
-  const quiz = status.tag ? `${knowTagLabel(ui, status.tag)}${status.tag.miss ? " ✗" : ""}` : "";
+  const quiz = status.tag?.miss ? "✗" : "";
   const talk = status.talk ? ui.tlUsedN.replace("{n}", String(status.talk)) : "";
   if (!quiz && !talk) return null;
   return (
-    <span data-card-status={status.tag?.kind ?? "talk"} className="ms-auto shrink-0 text-meta text-slate-400">
-      {quiz}
+    <span data-card-status={quiz ? "miss" : "talk"} className="ms-auto shrink-0 text-meta text-slate-400">
+      {quiz ? <span className="text-bad">{quiz}</span> : null}
       {quiz && talk ? " · " : ""}
       {talk ? <span data-card-talk className="text-info">{talk}</span> : null}
     </span>

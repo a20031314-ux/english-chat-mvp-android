@@ -34,7 +34,7 @@ import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type A
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
-import { cardHistory, knowTag, knowTagLabel, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
+import { cardHistory, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { FirstCheck } from "@/components/studyMap/FirstCheck";
 import { readFirstCheck, wordsAbout } from "@/lib/curriculum/firstCheck";
@@ -665,7 +665,6 @@ function DayTimeline({
   const [openAt, setOpenAt] = useState<number | null>(null);
   const [card, setCard] = useState<string | null>(null);
   const clock = useClock(locale);
-  const dayOf = (t: number) => dayOfSeconds(t);
   const sessions = useMemo(() => {
     const events = ledger.filter((event) => sameDay(dayOfSeconds(event.t), day.day));
     const noted = new Set(day.notes.map((note) => note.id));
@@ -681,7 +680,7 @@ function DayTimeline({
   const minutes = sessions.reduce((sum, one) => sum + sessionMinutes(one), 0);
   const ok = summaries.reduce((sum, one) => sum + one.ok, 0);
   const miss = summaries.reduce((sum, one) => sum + one.miss, 0);
-  const fresh = summaries.reduce((sum, one) => sum + one.fresh.length, 0);
+  const studied = new Set(summaries.flatMap((one) => [...one.fresh, ...one.again])).size;
   const [y, m, d] = day.day.split("-").map(Number);
   const midnight = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
   const partsLine = (parts: Record<CardPart, number>) =>
@@ -735,8 +734,6 @@ function DayTimeline({
           </div>
         ) : null}
         <div className="flex flex-wrap gap-1.5">
-          {summary.fresh.length ? <span className={chipCls}>{ui.tlFreshN.replace("{n}", String(summary.fresh.length))}</span> : null}
-          {summary.again.length ? <span className={chipCls}>{ui.tlAgainN.replace("{n}", String(summary.again.length))}</span> : null}
           {summary.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(summary.looked))}</span> : null}
         </div>
         <DayResults ui={ui} language={language} day={subDay(session)} />
@@ -752,7 +749,6 @@ function DayTimeline({
               </header>
               <ul className="flex flex-col">
                 {cards.map((one) => {
-                  const tag = knowTag(ledger, one.key, dayOf);
                   const quizzed = one.last.src === "quiz" || one.last.src === "exam" || one.last.src === "judge";
                   const mark = one.last.r === "ok" ? "✓" : one.last.r === "miss" ? "✗" : "💬";
                   return (
@@ -765,7 +761,6 @@ function DayTimeline({
                             {[quizzed ? modeName(ui, one.mode) : placeName(ui, placeOfSrc(one.last.src)), clock.format(one.last.t * 1000)].filter(Boolean).join(" · ")}
                           </span>
                         </span>
-                        {tag ? <span className="shrink-0 text-meta text-slate-300">{`${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}`}</span> : null}
                       </button>
                     </li>
                   );
@@ -788,7 +783,6 @@ function DayTimeline({
         <div className={`flex flex-col px-3 py-2 ${box}`}>
           <span className="text-meta text-slate-400">{ui.logStudyTime}</span>
           <span className="text-body font-semibold tabular-nums text-ink">{ui.planMinutes.replace("{n}", String(minutes))}</span>
-          <span className="text-meta tabular-nums text-slate-500">{ui.tlSessionsN.replace("{n}", String(sessions.length))}</span>
         </div>
         <div className={`flex flex-col px-3 py-2 ${box}`}>
           <span className="text-meta text-slate-400">✓ ✗</span>
@@ -797,8 +791,8 @@ function DayTimeline({
           </span>
         </div>
         <div className={`flex flex-col px-3 py-2 ${box}`}>
-          <span className="text-meta text-slate-400">{ui.tlFreshN.replace("{n}", "").trim()}</span>
-          <span className="text-body font-semibold tabular-nums text-ink">{fresh}</span>
+          <span className="text-meta text-slate-400">{ui.lbFresh}</span>
+          <span className="text-body font-semibold tabular-nums text-ink">{studied}</span>
         </div>
       </div>
       <div data-timeline-strip aria-hidden className="relative h-2.5 rounded-full bg-white/5" dir="ltr">
@@ -839,8 +833,6 @@ function DayTimeline({
                   {partsLine(sum.parts) ? <span className="text-meta text-slate-300">{partsLine(sum.parts)}</span> : null}
                   <span className="flex flex-wrap gap-1.5">
                     {sum.ok || sum.miss ? <span className={chipCls}>{`✓ ${sum.ok}  ✗ ${sum.miss}`}</span> : null}
-                    {sum.fresh.length ? <span className={chipCls}>{ui.tlFreshN.replace("{n}", String(sum.fresh.length))}</span> : null}
-                    {sum.again.length ? <span className={chipCls}>{ui.tlAgainN.replace("{n}", String(sum.again.length))}</span> : null}
                     {fixedN ? <span className={chipCls}>{`✎ ${fixedN}`}</span> : null}
                     {sum.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(sum.looked))}</span> : null}
                   </span>
@@ -881,7 +873,7 @@ function CardTimeline({
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
 }) {
-  const rows = useMemo(() => cardHistory(ledger, cardKey, (t) => dayOfSeconds(t)), [ledger, cardKey]);
+  const rows = useMemo(() => cardHistory(ledger, cardKey), [ledger, cardKey]);
   const item = useMemo(() => {
     // 머리 ✓✗ = 퀴즈 답만(대화에서 쓴 것·막힌 것은 아래 쓴 곳 — 2026-11-09 앎·말하기 분리).
     const mine = ledger.filter((event) => event.k === cardKey && (event.r === "ok" || event.r === "miss") && event.src !== "call" && event.src !== "chat" && event.src !== "people");
@@ -901,7 +893,7 @@ function CardTimeline({
     row.r === "look" ? ui.tlLookedN.replace("{n}", "").trim() : `${row.r === "ok" ? "✓" : "✗"} ${modeName(ui, row.mode)}`.trim();
   return (
     <div data-card-timeline={cardKey} className="flex flex-col gap-3">
-      <LearnedCards ui={ui} language={language} locale={locale} items={[item]} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+      <LearnedCards ui={ui} language={language} locale={locale} items={[item]} grammarName={grammarName} keyLabel={keyLabel} />
       {talks.length ? (
         <>
           <h3 className="text-caption font-semibold text-slate-400">{ui.tlUsedN.replace("{n}", String(used))}</h3>
@@ -928,7 +920,7 @@ function CardTimeline({
               </div>
               <div className="flex min-w-0 flex-1 flex-col pb-3">
                 <span className="text-note tabular-nums text-ink">{`${when.format(row.t * 1000)} · ${PLACE_ICON[place]} ${placeName(ui, place)}`}</span>
-                <span className="text-meta text-slate-400">{[resultText(row), row.r === "look" ? "" : knowTagLabel(ui, row.tag)].filter(Boolean).join(" · ")}</span>
+                <span className="text-meta text-slate-400">{resultText(row)}</span>
               </div>
             </li>
           );
@@ -1274,12 +1266,12 @@ function Learned({
       {onDay ? <DayRows ui={ui} locale={locale} amounts={amounts} notes={notes} onDay={onDay} /> : null}
       {openCell ? (
         <LogSheet title={`${LEARN_ICON[openCell.part]} ${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
-          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
       {open === "recovered" ? (
         <LogSheet title={`↺ ${ui.growRecovered} · ${progress.recovered.length}`} ui={ui} onClose={() => setOpen(null)}>
-          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(progress.recovered.slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+          <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(progress.recovered.slice(0, 120))} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
       {open === "fixed" ? (
@@ -1303,13 +1295,12 @@ function Learned({
   );
 }
 
-/** 푼 카드들: 퀴즈에서 본 카드 그대로(낱말·뜻·예문·예문 뜻) + 체크 셋 표시·맞힘/틀림 수 + 📕(사전·그 수업). */
+/** 푼 카드들: 퀴즈에서 본 카드 그대로(낱말·뜻·예문·예문 뜻) + 맞힘/틀림 수 + 📕(사전·그 수업). */
 function LearnedCards({
   ui,
   language,
   locale,
   items,
-  ledger,
   grammarName,
   keyLabel,
 }: {
@@ -1317,18 +1308,12 @@ function LearnedCards({
   language: string;
   locale: string;
   items: readonly LearnedItem[];
-  ledger: readonly LogEvent[];
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
 }) {
   const [word, setWord] = useState<string | null>(null);
   const prepared = usePrepared(language, locale);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
-  // 표시는 있었던 일만(studyTimeline.ts knowTag — 퀴즈 답만, 학습 · n번 학습), 체크 셋은 안에서만.
-  const markOf = (key: string) => {
-    const tag = knowTag(ledger, key, (t) => dayOfSeconds(t));
-    return tag ? { label: `${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}`, cls: "text-slate-300" } : null;
-  };
   const face = (key: string) => {
     if (key.startsWith("w|") || key.startsWith("e|")) {
       const one = cardFaceOf(language, key);
@@ -1368,12 +1353,10 @@ function LearnedCards({
   return (
     <ul data-learned-cards className="flex flex-col gap-3">
       {items.map((one) => {
-        const mark = markOf(one.key);
         const card = face(one.key);
         return (
           <li key={one.key} data-learned-card={one.key} className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-caption">
-              {mark ? <span data-know-tag className={`font-semibold ${mark.cls}`}>{mark.label}</span> : null}
               <span className="tabular-nums text-good">{`✓ ${one.ok}`}</span>
               {one.miss ? <span className="tabular-nums text-bad">{`✗ ${one.miss}`}</span> : null}
               <span className="flex-1" />
@@ -1416,7 +1399,7 @@ function DayRows({ ui, locale, amounts, notes, onDay }: { ui: UICopy; locale: st
           <button type="button" data-day-row={one.day} onClick={() => onDay(one.day)} className="flex min-h-11 w-full items-center gap-3 px-3 py-2 text-start hover:bg-white/5">
             <span className="min-w-0 flex-1 truncate text-note text-ink">{dayFormat(locale, one.day)}</span>
             <span className="shrink-0 text-meta tabular-nums text-slate-400">
-              {[one.fresh ? ui.tlFreshN.replace("{n}", String(one.fresh)) : "", one.again ? ui.tlAgainN.replace("{n}", String(one.again)) : "", one.calls ? `📞 ${one.calls}` : ""].filter(Boolean).join(" · ")}
+              {[one.fresh + one.again ? `${ui.lbFresh} ${one.fresh + one.again}` : "", one.calls ? `📞 ${one.calls}` : ""].filter(Boolean).join(" · ")}
             </span>
             <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
           </button>
@@ -1427,9 +1410,9 @@ function DayRows({ ui, locale, amounts, notes, onDay }: { ui: UICopy; locale: st
 }
 
 /**
- * 학습 곡선(2026-11-07 사용자 "Logbank는 학습량 + 채운 %, 학습량은 푼 수"): 아래 막대 = 날마다 푼 수(새로 · 다시 두 색),
+ * 학습 곡선: 아래 막대 = 날마다 푼 열쇠 수(한 색 — 새로·다시 구분은 안 보임),
  * 위 선 = 그날 끝까지 활용 누적(growthView.ts usedAt — 대화에서 맞게 쓴 열쇠 수, 줄지 않음, 2026-11-07 밤).
- * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "학습 n · 복습 m · 지금까지 활용 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
+ * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "학습 n · 지금까지 활용 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
  */
 function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amounts: readonly AmountPoint[]; known: readonly (number | null)[]; dateLabel: (day: string) => string; onDay?: (day: string) => void }) {
   const [pick, setPick] = useState<number | null>(null);
@@ -1460,13 +1443,11 @@ function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amou
       <svg viewBox={`0 0 ${W} ${H + 16}`} role="img" aria-label={ui.lbCurve} direction="ltr" className="h-auto w-full">
         <line x1={0} x2={W} y1={H} y2={H} className="stroke-white/10" strokeWidth="0.6" />
         {amounts.map((one, i) => {
-          const h1 = (one.fresh / max) * (H - barTop - 4);
-          const h2 = (one.again / max) * (H - barTop - 4);
+          const h1 = ((one.fresh + one.again) / max) * (H - barTop - 4);
           return (
             <g key={one.day} data-curve-day={one.day} onClick={() => setPick(i)} className="cursor-pointer">
               <rect x={x(i) - step / 2} y={0} width={step} height={H} className="fill-transparent" />
-              {one.again ? <rect x={x(i) - barW / 2} y={H - h2} width={barW} height={h2} rx="1.5" className={`${LOG.fill} opacity-25`} /> : null}
-              {one.fresh ? <rect x={x(i) - barW / 2} y={H - h2 - h1} width={barW} height={h1} rx="1.5" className={`${LOG.fill} opacity-60`} /> : null}
+              {h1 ? <rect x={x(i) - barW / 2} y={H - h1} width={barW} height={h1} rx="1.5" className={`${LOG.fill} opacity-60`} /> : null}
               {i === shown ? <rect x={x(i) - step / 2 + 1} y={1} width={step - 2} height={H - 1} rx="3" className="fill-white/5" /> : null}
             </g>
           );
@@ -1485,15 +1466,8 @@ function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amou
         <p data-curve-detail className="flex flex-wrap items-center gap-x-3 text-meta tabular-nums text-slate-400">
           <span className="text-slate-300">{dateLabel(at.day)}</span>
           <span className="inline-flex items-center gap-1">
-            {`${ui.lbFresh} ${at.fresh + at.again}`}
-          </span>
-          <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
-            {ui.tlFreshN.replace("{n}", String(at.fresh))}
-          </span>
-          <span className="inline-flex items-center gap-1">
-            <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-25`}><rect width="8" height="8" rx="2" /></svg>
-            {ui.tlAgainN.replace("{n}", String(at.again))}
+            {`${ui.lbFresh} ${at.fresh + at.again}`}
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>

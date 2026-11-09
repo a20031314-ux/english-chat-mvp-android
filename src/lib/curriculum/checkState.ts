@@ -24,7 +24,7 @@ export function dayOfSeconds(t: number, offsetMinutes = new Date(t * 1000).getTi
 
 const quizLike = (event: LogEvent) => event.src === "quiz" || event.src === "exam" || event.src === "judge";
 
-/** 순수: 사건 하나를 받은 다음 체크 셋(stateOf·growthView·cardProgress가 같이 씀). */
+/** 순수: 사건 하나를 받은 다음 체크 셋(stateOf·growthView가 같이 씀). */
 export function stepState(prev: CheckState, event: LogEvent): CheckState {
   if (!quizLike(event) && event.r !== "look") return prev;
   const state: CheckState = { ...prev, last: event.t };
