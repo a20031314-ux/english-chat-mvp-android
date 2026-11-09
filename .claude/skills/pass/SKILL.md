@@ -1,14 +1,14 @@
 ---
 name: pass
-description: 양도 — 길어진 채팅을 끊고 이 탭(번호)의 인계 노트를 hub/handoff/<번호>.md에 남겨 새 채팅이 "N번 받기"로 이어받게 한다. "/pass 3", "3번 양도", "양도해", "끊어", 또는 끝내기 훅이 양도하라고 할 때.
+description: 양도 — 길어진 채팅을 끊고 이 탭(번호)의 인계 노트를 hub/chat/handoff/<번호>.md에 남겨 새 채팅이 "N번 받기"로 이어받게 한다. "/pass 3", "3번 양도", "양도해", "끊어", 또는 끝내기 훅이 양도하라고 할 때.
 ---
 
 # 양도 (탭 N)
 
-번호: 인자로 받은 숫자. 없으면 이 채팅이 "N번 받기"로 시작했으면 그 N, 아니면 `hub/tabs.md` 표에서 이 채팅이 한 일에 맞는 번호를 골라 쓴다(두 탭에 걸쳤으면 더 많이 한 쪽, 노트에 다른 쪽도 적음).
+번호: 인자로 받은 숫자. 없으면 이 채팅이 "N번 받기"로 시작했으면 그 N, 아니면 `hub/chat/tabs.md` 표에서 이 채팅이 한 일에 맞는 번호를 골라 쓴다(두 탭에 걸쳤으면 더 많이 한 쪽, 노트에 다른 쪽도 적음).
 
 1. **멈출 곳:** 하던 일이 커밋할 수 있는 상태면 커밋까지 마친다. 테스트가 실패 중이거나 반쯤 고친 상태면 멈추지 말고 커밋 가능한 곳까지 가거나, 고치던 것을 되돌리고 "하던 일"에 정확히 적는다. `npm run build:capacitor`가 도는 중이면 끝난 뒤에.
-2. **`hub/handoff/N.md`를 새로 쓴다**(덮어씀, 60줄 이내 — 길면 log를 가리킨다). 이 채팅이 실제로 한 것만, 짐작은 "확인 못 함"으로:
+2. **`hub/chat/handoff/N.md`를 새로 쓴다**(덮어씀, 60줄 이내 — 길면 log를 가리킨다). 이 채팅이 실제로 한 것만, 짐작은 "확인 못 함"으로:
 
 ```
 # N번 <이름> — 인계 노트
@@ -32,6 +32,7 @@ description: 양도 — 길어진 채팅을 끊고 이 탭(번호)의 인계 노
 - 파일 두세 개(설계안·역할 파일 절·QUIZ.md 절 등).
 ```
 
-3. 같은 커밋에: 역할 파일(`hub/tabs.md` 표의 역할) "열린 일" 갱신, `hub/log/YYYY-MM.md` 한 항목(`## YYYY-MM-DD · <역할> · N번 양도 — 한 줄` / 한 일 / `- 구조: …`). 커밋 메시지 한국어 "N번 양도: …". `git pull --rebase` 후 push.
+3. 앱 코드를 바꿨으면 먼저 `node scripts/asks.mjs apply --from N --base <이 채팅 첫 커밋의 부모> --what "…"`(다른 탭 확인 요청)와 `node scripts/leftovers.mjs --check`(새로 남은 옛 코드 — 지우거나 `asks.mjs delete`로 사용자에게). 이 채팅에 온 확인 요청 중 못 답한 것은 노트 "하던 일"에.
+   같은 커밋에: 역할 파일(`hub/chat/tabs.md` 표의 역할) "열린 일" 갱신, `hub/chat/log/YYYY-MM.md` 한 항목(`## YYYY-MM-DD · <역할> · N번 양도 — 한 줄` / 한 일 / `- 구조: …` / `- 옛 것: …`), `hub/chat/asks.json`·`ASKS.md`. 커밋 메시지 한국어 "N번 양도: …". `git pull --rebase` 후 push.
 4. 허브를 바꿨으니 `node scripts/hub-page.mjs` → `tmp/hub/index.html`을 Artifact 도구로 https://claude.ai/artifact/S9UCzdZQ2Ck6VGDTKkSrEo 에 다시 올린다(AGENTS.md "Hub").
 5. 사용자에게 마지막으로 딱 이렇게(+ 결정 대기가 있으면 한 줄): **"N번 양도함 — 새 채팅에서 'N번 받기'라고 하면 이어집니다."** 이 뒤로는 새 일을 시작하지 않는다.

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * 첫 단계 고르기 — 첫 측정 화면(2026-11-07 사용자 "이대로 만들어줘", 설계 hub/drafts/placement-2026-11-06.md, 계산 lib/curriculum/firstCheck.ts).
+ * 첫 단계 고르기 — 첫 측정 화면(2026-11-07 사용자 "이대로 만들어줘", 설계 hub/work/drafts/placement-2026-11-06.md, 계산 lib/curriculum/firstCheck.ts).
  * ① 글자(글자가 다른 학습 언어만) → ② 낱말 예/아니오 24장 → 뜻 고르기 5 → ③ 표현·문법 오르기 → ④ 결과 한 장 [시작].
  * 어디서나 건너뛰기 = 1단계 시작(결과 장 없이). 개편 화면(lib/reform.ts)의 My 처음 화면(StudyMapTab StageStart) 자리.
  * 결과는 이 폰에만: 낱말 경계(quizCircle.v1 lv) · firstCheck.v1 · 장부(뜻 고르기·③ 답만, exam·pick) · 글자부터면 lettersFirst. 서버에는 부르는 쪽이 지금 단계만.

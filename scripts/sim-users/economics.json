@@ -135,7 +135,7 @@
     "roomFixListen": 0.6
   },
   "storeVat": {
-    "_설명": "Play 가격에 포함된 부가세. 한국 Play는 Google이 부가세를 떼고 정산한다고 보고 10% — 확인 필요. 0으로 두면 hub/costs.md와 같은 기준.",
+    "_설명": "Play 가격에 포함된 부가세. 한국 Play는 Google이 부가세를 떼고 정산한다고 보고 10% — 확인 필요. 0으로 두면 hub/app/costs.md와 같은 기준.",
     "rate": 0.1
   },
   "native": {
@@ -157,7 +157,7 @@
     "value": 0
   },
   "my": {
-    "_설명": "My 끝 전면 광고 어림(2026-11-01 광고 자리 넣음 — hub/ADS.md·hub/ads-plan.json econ 값): 오늘 할 것 항목 사이에는 없고 그날 다 끝낸 순간 한 번(todayEndsPerDay — ads-plan '옮김' 안 값 1), 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(stageScriptEndsPerDay, ✕·끝 화면 닫기 — 닷새에 한 번 어림 0.2), 쓰는 날 퀴즈 끝 quizEndsPerDay번, Quizbank 10문제 묶음 경계 quizBreaksPerDay번(0.8), 정기·단계 시험 끝은 한 달 checkupEndsPerMonth번, 단계 올라감 한 달 stageUpsPerMonth번(0.5). linesPerLesson은 예전 계산(수업마다 scriptEnd)용 — 0이면 안 셈. 대본을 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
+    "_설명": "My 끝 전면 광고 어림(2026-11-01 광고 자리 넣음 — hub/app/ADS.md·hub/app/ads-plan.json econ 값): 오늘 할 것 항목 사이에는 없고 그날 다 끝낸 순간 한 번(todayEndsPerDay — ads-plan '옮김' 안 값 1), 단계 화면에서 직접 연 수업·대본·꺼내 쓰기를 끝까지 하고 닫을 때(stageScriptEndsPerDay, ✕·끝 화면 닫기 — 닷새에 한 번 어림 0.2), 쓰는 날 퀴즈 끝 quizEndsPerDay번, Quizbank 10문제 묶음 경계 quizBreaksPerDay번(0.8), 정기·단계 시험 끝은 한 달 checkupEndsPerMonth번, 단계 올라감 한 달 stageUpsPerMonth번(0.5). linesPerLesson은 예전 계산(수업마다 scriptEnd)용 — 0이면 안 셈. 대본을 안 쓰는 날(scriptLines 0)은 셈하지 않음.",
     "linesPerLesson": 0,
     "todayEndsPerDay": 1,
     "stageScriptEndsPerDay": 0.2,
@@ -168,7 +168,7 @@
   },
   "extraAds": [
     {
-      "_설명": "My·사람·Room 빈 공간 네이티브(2026-11-01 넣음, hub/ads-plan.json econ 값 그대로 — 쓰는 날 하루 노출, when my = 대본을 쓰는 날만·any = 쓰는 날 모두·room = 말하는 방을 쓰는 날만). 넣었지만 값이 없어 안 센 자리(덤): AI 채팅 잠김 화면. 2026-11-01 23시 학습과 떨어진 자리 6곳(hub/drafts/ads-passive-2026-11-01.md)도 ads-plan econ 값 그대로 더함."
+      "_설명": "My·사람·Room 빈 공간 네이티브(2026-11-01 넣음, hub/app/ads-plan.json econ 값 그대로 — 쓰는 날 하루 노출, when my = 대본을 쓰는 날만·any = 쓰는 날 모두·room = 말하는 방을 쓰는 날만). 넣었지만 값이 없어 안 센 자리(덤): AI 채팅 잠김 화면. 2026-11-01 23시 학습과 떨어진 자리 6곳(hub/work/drafts/ads-passive-2026-11-01.md)도 ads-plan econ 값 그대로 더함."
     },
     {
       "format": "native",

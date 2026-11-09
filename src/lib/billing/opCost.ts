@@ -8,7 +8,7 @@
  *
  * 이제 MODEL_CALLS_PER_REQUEST의 op마다 여기 한 줄이 꼭 있어야 하고
  * (opCost.test.ts가 확인, CI에서 실패), 그 줄은 무엇으로 값을 매기는지와
- * 그 숫자가 잰 것인지 가정인지를 말한다. 요금별 비용 표(hub/costs.md,
+ * 그 숫자가 잰 것인지 가정인지를 말한다. 요금별 비용 표(hub/app/costs.md,
  * scripts/plan-cost.mjs)와 실측 보고서(scripts/cost-report.mjs)가 같은 표를 읽는다.
  *
  * 순수 파일: 스크립트가 바로 읽을 수 있게 "@/" 경로를 쓰지 않는다.
@@ -22,7 +22,7 @@ import { sttPerMinute, textPrice, ttsPerMinute } from "./modelPrices.ts";
 /**
  * 2026-10-22부터: op는 모델 이름이 아니라 **기능(task)**을 적는다. 그 기능이 지금 쓰는 모델은 `lib/aiDefaults.ts`(코드 기본값 —
  * 서버 `llm.ts`가 쓰는 것과 같은 표)에서, 단가는 `modelPrices.ts`에서 읽는다. 그래서 기본 모델을 바꾸는 커밋 하나로
- * 비용 표(hub/costs.md, CI가 main push마다 다시 계산)가 저절로 바뀐다. op의 기능이 그 op를 기록하는 경로가 실제로 부르는
+ * 비용 표(hub/app/costs.md, CI가 main push마다 다시 계산)가 저절로 바뀐다. op의 기능이 그 op를 기록하는 경로가 실제로 부르는
  * 기능인지는 `scripts/cost-coverage.mjs`가 확인한다.
  */
 export function opModel(task: TextTask): string {
@@ -270,7 +270,7 @@ export function chatMessageTypicalUsd(measured?: Record<string, Tokens>): number
 /**
  * 오늘의 팩 한 번(12문답, 약 7분). 질문은 은행의 녹음이라 합성이 거의 없고,
  * 문답마다 받아쓰기 한 번과 캐릭터의 판단 한 번이 든다. 맞장구·벗어난 턴만
- * 새로 합성한다고 보고 그 비율을 가정한다(hub/drafts/daily-pack.md "비용").
+ * 새로 합성한다고 보고 그 비율을 가정한다(hub/work/drafts/daily-pack.md "비용").
  */
 export const PACK = {
   // Twelve questions and up to three follow-ups of the tutor's own (pack.ts PACK_FOLLOWS).

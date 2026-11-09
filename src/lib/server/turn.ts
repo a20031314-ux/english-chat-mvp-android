@@ -4,7 +4,7 @@
  *
  * 중계는 Cloudflare Realtime TURN — 키(TURN key id·API 토큰)는 서버에만 두고, 앱에는
  * 짧게 쓰는 아이디·비밀번호만 준다. 환경 변수가 없으면 지금처럼 STUN만(꺼진 상태).
- * 요금: 나가는 데이터 1GB당 $0.05, 월 1,000GB 무료(hub/drafts/video-workspace.md).
+ * 요금: 나가는 데이터 1GB당 $0.05, 월 1,000GB 무료(hub/work/drafts/video-workspace.md).
  *
  * 비공개 통화 방(1:1·러닝메이트·단체방)에만 준다(api/rooms "ice"). 공개 방은 16명 메시라
  * 중계를 쓰면 데이터가 크게 늘어 아직 주지 않는다.

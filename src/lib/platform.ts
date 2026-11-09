@@ -3,7 +3,7 @@ import { Capacitor } from "@capacitor/core";
 /**
  * 어느 앱(플랫폼)에서 돌고 있는지와, 플랫폼마다 다르게 켜고 끄는 기능.
  *
- * iOS 1차 출시(2026-10, `hub/drafts/ios-launch.md`)는 사용자끼리 주고받는 기능
+ * iOS 1차 출시(2026-10, `hub/work/drafts/ios-launch.md`)는 사용자끼리 주고받는 기능
  * (말하는 방·1:1 메시지)을 뺀다. 애플 심사가 사용자 생성 콘텐츠에 약관 동의·
  * 거르기·신고 처리 운영을 요구하고, 숨은 입구는 "숨긴 기능"으로 걸리기 때문이다.
  * 준비가 끝나면 Vercel에 `NEXT_PUBLIC_IOS_SOCIAL=1`을 넣고 다시 빌드하면 켜진다
@@ -43,7 +43,7 @@ export function socialFeaturesEnabled(): boolean {
 
 /**
  * AI 음성 통화. iOS 1차 심사(2026-10-25 사용자 결정): 아이폰에서 통화를 열면 마이크가 열리는 순간 폰 소리 전체가
- * 막히는 일이 기기에서만 나서(재현 못 함, hub/drafts/ios-launch.md) 고칠 때까지 통화 탭·📞·"말로"를 숨긴다.
+ * 막히는 일이 기기에서만 나서(재현 못 함, hub/work/drafts/ios-launch.md) 고칠 때까지 통화 탭·📞·"말로"를 숨긴다.
  */
 export function voiceCallAvailable(): boolean {
   // 진단 빌드(TestFlight diag)에서는 켠다 — 아이폰 통화를 고치며 확인하는 빌드.

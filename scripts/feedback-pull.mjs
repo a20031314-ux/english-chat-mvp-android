@@ -3,13 +3,13 @@
  *
  * Writes tmp/feedback/<run>/items.json (newest last) and one picture per item
  * that has one (<id>.jpg), and remembers how far it got in
- * hub/feedback/last-pulled.txt so the next run starts there. tmp/ is
+ * hub/work/feedback/last-pulled.txt so the next run starts there. tmp/ is
  * gitignored: the pictures are learners' screens and never go into the
  * repository.
  *
  * Needs the feedback read key: FEEDBACK_KEY in the environment (the scheduled
  * task that sorts feedback carries it). How the sorting is done:
- * hub/feedback/README.md.
+ * hub/work/feedback/README.md.
  *
  * Run: FEEDBACK_KEY=… node scripts/feedback-pull.mjs [--since <ms>|--all]
  */
@@ -23,7 +23,7 @@ if (!KEY) {
   process.exit(2);
 }
 const ROOT = process.cwd();
-const MARK = path.join(ROOT, "hub/feedback/last-pulled.txt");
+const MARK = path.join(ROOT, "hub/work/feedback/last-pulled.txt");
 const args = process.argv.slice(2);
 const since = args.includes("--all")
   ? 0

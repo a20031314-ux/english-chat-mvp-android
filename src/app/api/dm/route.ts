@@ -175,7 +175,7 @@ export async function POST(request: NextRequest) {
       private: true,
       allowed: [...thread.members],
       threadId: thread.id,
-      // 1:1이라 영상도 켤 수 있다(사람끼리 직접, hub/drafts/video-workspace.md 1단계).
+      // 1:1이라 영상도 켤 수 있다(사람끼리 직접, hub/work/drafts/video-workspace.md 1단계).
       video: true,
     });
     const result = await send({ from: me, to: other, kind: "call", text: "", roomId: room.id });

@@ -1,9 +1,9 @@
 /**
- * 스크린샷 모음 할 일 계산(hub/SHOTS.md "정리·고르기"). 규칙은 scripts/shots-rules.mjs.
+ * 스크린샷 모음 할 일 계산(hub/work/SHOTS.md "정리·고르기"). 규칙은 scripts/shots-rules.mjs.
  *
  * 입력: ArtifactData `list`의 out_dir로 내려받은 tmp/shots/db/shots/*.json, tmp/shots/db/picks/*.json
  * 출력: tmp/shots/plan.json — 칸별 그림(nodes·sections), 정리 예정 표시·풀기·지우기, 꼬리표 없는 것, 내려받을 그림.
- * 영역이 언제 바뀌었는지는 hub/STRUCTURE.md의 그 영역 화면·API 파일을 git log로 본다.
+ * 영역이 언제 바뀌었는지는 hub/app/STRUCTURE.md의 그 영역 화면·API 파일을 git log로 본다.
  *
  * 실행: node scripts/shots-plan.mjs [--today YYYY-MM-DD]
  */
@@ -28,7 +28,7 @@ const shots = readDir(path.join(DB, "shots"));
 const picks = Object.fromEntries(readDir(path.join(DB, "picks")).map(({ id, ...rest }) => [id, rest]));
 
 // 영역 → 화면·API 파일 → 마지막으로 바뀐 날.
-const structure = fs.readFileSync(path.join(ROOT, "hub/STRUCTURE.md"), "utf8");
+const structure = fs.readFileSync(path.join(ROOT, "hub/app/STRUCTURE.md"), "utf8");
 const changed = {};
 for (const block of structure.split(/\n(?=### )/)) {
   const head = block.match(/^### .+? `(\w+)`/);

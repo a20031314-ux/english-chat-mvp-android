@@ -1,5 +1,5 @@
 {
-  "_": "기능 장부(hub/FEATURES.md의 원본, node scripts/features.mjs). 기능 하나 = 이름 하나 = 줄 하나. 새 기능·버튼·방식을 만들기 전에 여기서 같은 일을 하는 줄을 찾는다 — 있으면 그 이름과 문구 키를 그대로 쓰고, 없을 때만 줄을 더한다. 기능을 빼면 status를 바꾸는 게 아니라 줄을 지우고 코드·문구·사용법을 같은 커밋에서 지운다(옛 앱이 쓰는 서버만 old-app으로 남김). status: live(새 앱 화면) · old-app(새 앱엔 없고 Play에 남은 옛 앱이 서버를 씀 — until에 지울 조건) · remove(지울 것 — 코드가 아직 남아 있음, 지우면 줄도 지움). copy = 화면 이름 문구 키(copy.ts) — 이름은 14개 언어가 이 키 하나에서.",
+  "_": "기능 장부(hub/app/FEATURES.md의 원본, node scripts/features.mjs). 기능 하나 = 이름 하나 = 줄 하나. 새 기능·버튼·방식을 만들기 전에 여기서 같은 일을 하는 줄을 찾는다 — 있으면 그 이름과 문구 키를 그대로 쓰고, 없을 때만 줄을 더한다. 기능을 빼면 status를 바꾸는 게 아니라 줄을 지우고 코드·문구·사용법을 같은 커밋에서 지운다(옛 앱이 쓰는 서버만 old-app으로 남김). status: live(새 앱 화면) · old-app(새 앱엔 없고 Play에 남은 옛 앱이 서버를 씀 — until에 지울 조건) · remove(지울 것 — 코드가 아직 남아 있음, 지우면 줄도 지움). copy = 화면 이름 문구 키(copy.ts) — 이름은 14개 언어가 이 키 하나에서.",
   "features": [
     { "id": "top-languages", "area": "shell", "name": "배울 언어 국기 줄", "copy": null, "does": "상단바에 내 배울 언어 국기 모두 — 누르면 그 언어로, 지금 국기 → 언어 설정 시트(배울 언어·앱 언어)", "code": ["src/components/LearningLanguageFlag.tsx", "src/lib/myLanguages.ts"], "status": "live" },
     { "id": "first-language", "area": "shell", "name": "처음 언어·튜터 고르기", "copy": null, "does": "처음 설치 때 국기 여러 개 → 언어마다 튜터 얼굴 하나", "code": ["src/components/LanguagePick.tsx", "src/lib/firstLanguage.ts"], "status": "live" },
@@ -44,7 +44,7 @@
     { "id": "analysis", "area": "sheet", "name": "문장분석", "copy": null, "does": "채팅·통화 돌아보기·영상의 문장 → 분석 시트", "code": ["src/components/EnglishAnalysisViewer.tsx"], "status": "live" },
     { "id": "find-in-my", "area": "sheet", "name": "My에서 찾기", "copy": "findInMy", "does": "🔎 — 그 말의 문법·표현 수업을 열고, 없으면 사전 시트", "code": ["src/components/FindInMy.tsx"], "status": "live", "replaces": ["노트 칸 열고 이 장면 넣기"] },
     { "id": "billing", "area": "billing", "name": "결제 화면", "copy": "billingScreenTitle", "does": "플랜(라이트·플러스·프리미엄)·포인트 상점", "code": ["src/components/BillingScreen.tsx", "src/components/PointStore.tsx"], "status": "live" },
-    { "id": "ads", "area": "billing", "name": "광고", "copy": null, "does": "무료·안드로이드만 — 자리 전체는 hub/ADS.md", "code": ["src/components/NativeAdSlot.tsx", "src/lib/ads.ts"], "status": "live" },
+    { "id": "ads", "area": "billing", "name": "광고", "copy": null, "does": "무료·안드로이드만 — 자리 전체는 hub/app/ADS.md", "code": ["src/components/NativeAdSlot.tsx", "src/lib/ads.ts"], "status": "live" },
 
     { "id": "stagebank-api", "area": "my", "name": "Stagebank 서버(대본·단계 시험·꺼내 쓰기·돌아보기)", "copy": null, "does": "옛 앱 2.79 이하 My Stagebank가 부름 — 새 앱은 Quizbank 익힘 기록(scripts check)만 씀", "code": ["src/app/api/curriculum/recall/route.ts", "src/app/api/curriculum/ask/route.ts", "src/app/api/curriculum/fixed-lesson/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.80 이상" },
     { "id": "pack-api", "area": "call", "name": "오늘의 팩 서버", "copy": null, "does": "옛 앱 2.48~2.75 오늘의 팩", "code": ["src/app/api/pack/today/route.ts", "src/app/api/pack/finish/route.ts"], "status": "old-app", "until": "최소 지원 버전 2.76 이상" },

@@ -1,16 +1,16 @@
 /**
- * 요금별 비용 표를 단가표에서 다시 계산해 hub/costs.md로 쓴다.
+ * 요금별 비용 표를 단가표에서 다시 계산해 hub/app/costs.md로 쓴다.
  *
- * 요금 결정(hub/drafts/pricing-2026-10.md)의 "최악 비용" 표는 손으로 계산한
+ * 요금 결정(hub/work/drafts/pricing-2026-10.md)의 "최악 비용" 표는 손으로 계산한
  * 것이라, 기능이 늘거나 단가·한도가 바뀌어도 그대로였다. 이 스크립트는
  * 요금표(plans.ts), 기능별 단가(opCost.ts), 원가 가정(cost.ts)만 읽어 같은 표를
  * 매번 새로 만든다. KV·키가 필요 없어 GitHub Actions에서 돈다(.github/workflows/cost.yml):
- * main에 push하면 다시 계산해서 바뀐 게 있으면 hub/costs.md를 커밋한다.
+ * main에 push하면 다시 계산해서 바뀐 게 있으면 hub/app/costs.md를 커밋한다.
  *
  * 결과에 날짜·시각을 넣지 않는다 — 입력이 같으면 파일도 같아서, 비용에
  * 영향 없는 push는 커밋을 만들지 않는다.
  *
- * 실행: node --experimental-strip-types scripts/plan-cost.mjs          (hub/costs.md 쓰기)
+ * 실행: node --experimental-strip-types scripts/plan-cost.mjs          (hub/app/costs.md 쓰기)
  *       node --experimental-strip-types scripts/plan-cost.mjs --check  (파일이 최신이 아니면 실패)
  *       node --experimental-strip-types scripts/plan-cost.mjs --stdout
  */
@@ -50,7 +50,7 @@ import { STT_USD_PER_MINUTE, TEXT_USD_PER_MTOK, TTS_USD_PER_MINUTE_BY_MODEL } fr
 import { UNMETERED, scanRoutes } from "./cost-coverage.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = join(root, "hub/costs.md");
+const OUT = join(root, "hub/app/costs.md");
 const DAYS = 30;
 
 /**
@@ -318,13 +318,13 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       // 없으면 최신이 아님.
     }
     if (current !== text) {
-      console.error("hub/costs.md가 최신이 아니에요. node --experimental-strip-types scripts/plan-cost.mjs 로 다시 만드세요.");
+      console.error("hub/app/costs.md가 최신이 아니에요. node --experimental-strip-types scripts/plan-cost.mjs 로 다시 만드세요.");
       process.exitCode = 1;
     } else {
-      console.log("hub/costs.md 최신");
+      console.log("hub/app/costs.md 최신");
     }
   } else {
     writeFileSync(OUT, text);
-    console.log("hub/costs.md 갱신");
+    console.log("hub/app/costs.md 갱신");
   }
 }

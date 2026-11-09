@@ -4,7 +4,7 @@
  * The map and the "try this" card used to send a learner to a tab and stop
  * there: the call tab opened on its own door, the chat got a first line pasted
  * into its box, and neither tutor knew what the learner had come to do
- * (hub/drafts/coaching-loop.md). A practice goal travels with the request
+ * (hub/work/drafts/coaching-loop.md). A practice goal travels with the request
  * instead — the situation, the phrases worth using, the mistake worth getting
  * right — and every tutor that receives one is told it in the same words.
  *

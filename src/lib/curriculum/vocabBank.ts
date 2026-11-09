@@ -1,6 +1,6 @@
 /**
  * 빈도 단어 묶음(2026-10-29 사용자 "언어별 단어 묶음을 정해 두고 계속 학습하면 다 습득 가능하게" → "3개 언어부터",
- * 설계 hub/drafts/vocab-bank-2026-10-29.md). 지속 학습의 어휘 분모 — My 뼈대(대본)와 따로 센다.
+ * 설계 hub/work/drafts/vocab-bank-2026-10-29.md). 지속 학습의 어휘 분모 — My 뼈대(대본)와 따로 센다.
  *
  * 목록: 많이 쓰는 순서 3,000개(일상 대화 낱말 약 95%), 언어마다 `vocab/<언어>.ts`(scripts/vocab-bank/build.py → 검토 → 고정).
  *   en·es = FrequencyWords(OpenSubtitles 2018 자막 빈도, 목록 CC BY-SA 4.0), ja = wordfreq(데이터 CC BY-SA 4.0) — 사전형으로 묶고 이름·잡음을 뺌.
@@ -52,7 +52,7 @@ export function groupsOf(list: readonly BankWord[], by: Exclude<VocabBy, "all">,
 
 /**
  * 단계마다 필수 낱말 범위(누적, 사전형 — 2026-10-31 사용자 "실력 기준으로 이 정도 단어가 필수라는 범위를 정해 놓고 층위",
- * 설계 hub/drafts/vocab-levels-2026-10-31.md): 순위가 이 칸들 중 어디에 드는지가 그 낱말의 단계. 마지막 칸 뒤는 확장(6).
+ * 설계 hub/work/drafts/vocab-levels-2026-10-31.md): 순위가 이 칸들 중 어디에 드는지가 그 낱말의 단계. 마지막 칸 뒤는 확장(6).
  * 근거: 구어 95%·98% 덮는 몫(Nation 2006), CEFR 어휘 크기(Milton & Alexiou 2009), HSK 2025·JLPT 어림·국립국어원 학습용 어휘.
  */
 export const STAGE_CUTS: Record<string, readonly number[]> = {

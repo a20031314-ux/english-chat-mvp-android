@@ -30,7 +30,7 @@ export function videoPrepMinutes(seconds: number) {
 
 /**
  * 영상 길이만큼의 포인트(소수, 0.001 단위로 올림). 2026-10-23부터 3분 단위로 올리지 않고 쓴 만큼
- * (hub/drafts/points-gauge-2026-10-23.md) — 7분 영상은 3이 아니라 2.334.
+ * (hub/work/drafts/points-gauge-2026-10-23.md) — 7분 영상은 3이 아니라 2.334.
  */
 export function importPointsForDuration(durationSeconds: number) {
   const duration = Math.max(0, Math.ceil(durationSeconds));

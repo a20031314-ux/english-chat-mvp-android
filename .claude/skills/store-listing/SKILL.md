@@ -75,7 +75,7 @@ language), run `npm run store:shots` against a running dev server, look at the
 images, and include them in the PR. Never hand-edit the PNGs.
 
 Before choosing scenes (store screenshots or promo videos in `store-shots/promo/`),
-read the latest `hub/drafts/ux-check-*.md` — the virtual-user check of what
+read the latest `hub/work/drafts/ux-check-*.md` — the virtual-user check of what
 real first-time users understood (hub/RULES.md "사용자 체감 점검", user
 decision 2026-10-29). The set must:
 

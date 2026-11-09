@@ -5,7 +5,7 @@ import { isoWeek } from "./profile.ts";
 /**
  * Every expression a learner has met in a language, wherever they met it, and
  * how far they have come with it — one ledger per person and learning
- * language (hub/drafts/expression-ledger.md).
+ * language (hub/work/drafts/expression-ledger.md).
  *
  * Until this, what was learned lived in pieces: the study map's items, the
  * expressions looked up in a tutor's line (comprehension.ts), the word list and

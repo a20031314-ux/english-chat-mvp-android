@@ -14,7 +14,7 @@ import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import { knowTag, type KnowTag } from "@/lib/curriculum/studyTimeline";
 
 /**
- * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/drafts/languagebank-2026-11-03.md,
+ * Languagebank 탭 — Stagebank 자리의 사전(2026-11-06 개편 1단계, 스위치 lib/reform.ts). 설계 hub/work/drafts/languagebank-2026-11-03.md,
  * 시안 https://claude.ai/artifact/Bzy6aC9rEvoonjYVTq4WtW "Languagebank 탭".
  *
  * - 맨 위 찾기(단어 사전 — studyMap/Dictionary DictionaryBody, 낱말을 열면 그 낱말 화면).

@@ -6,7 +6,7 @@ import { factsOf, factsPrompt, showOf } from "../account/profileFacts.ts";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "../billing/plans.ts";
 
 /**
- * 채팅·통화 한 턴에 프로필이 하는 일(hub/drafts/profile-2026-10-23.md):
+ * 채팅·통화 한 턴에 프로필이 하는 일(hub/work/drafts/profile-2026-10-23.md):
  * - 튜터에게 관심사·하는 일 한 줄(로그인했고 "튜터 사용"을 켰을 때만, account/profileFacts.ts factsPrompt)
  * - 공부한 날 표시(꾸준함 칸, 하루 한 번만 씀)
  *

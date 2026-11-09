@@ -2,7 +2,7 @@
 // (사용자 2026-11-01 "새 API가 나오거나 AI 서비스가 종료되는 경우를 대비해 계속 서치하고 기능·비용 계산 후 교체를 권유").
 // 예약 작업 "AI 모델 살피기"(매주 월요일)가 조사 → 후보 기록 → 이 스크립트 → 보고·알림 순으로 부른다. 바꾸기는 사람이 "바꿔줘" 한 뒤에만.
 //
-// 후보 목록: hub/model-candidates.json (조사가 쓰고 이 스크립트가 cost·trial 칸을 채움)
+// 후보 목록: hub/app/model-candidates.json (조사가 쓰고 이 스크립트가 cost·trial 칸을 채움)
 //   [{ "id": "haiku-6-chat", "model": "claude-haiku-6", "provider": "anthropic", "kind": "text",
 //      "tasks": ["chat","howToSay"],                       글 모델이면 바꿀 기능(aiDefaults.ts 기능 이름)
 //      "speech": { "turnTranscribe": "…" },                받아쓰기·목소리면 SPEECH_DEFAULTS에 덮을 값
@@ -10,12 +10,12 @@
 //      "replaces": "claude-haiku-5-5", "deadline": "2027-01-14" | null,   바꿀 모델과 그 종료일(있으면)
 //      "why": "한 줄", "source": "가격 근거 링크", "checked": "YYYY-MM-DD" }]
 //
-//   node scripts/models/whatif.mjs cost              후보마다 비용표·손익을 다시 계산(모델 호출 없음, 후보 하나에 약 5초) → cost 칸 + hub/model-swap.md
+//   node scripts/models/whatif.mjs cost              후보마다 비용표·손익을 다시 계산(모델 호출 없음, 후보 하나에 약 5초) → cost 칸 + hub/app/model-swap.md
 //   node scripts/models/whatif.mjs trial <id>        품질 시험 준비·실행: 운영 서버에 점검 사용자로 지금 모델·후보 모델을 같은 사람·같은 문장으로
 //                                                    (sim:users tiers, 헤더 x-sim-model-routes) → 두 결과를 섞고 이름을 가린 평가 묶음
 //                                                    tmp/models/trial-<id>/judge/batch-NN.json — 평가는 하위 에이전트가 RUBRIC.md대로 *.verdicts.json
-//   node scripts/models/whatif.mjs trial-result <id> 평가를 풀어 큰 문제 비율·응답 시간·오류를 지금 모델과 비교 → trial 칸 + hub/model-swap.md
-//   node scripts/models/whatif.mjs render            hub/model-swap.md만 다시(그리고 알릴 것을 tmp/models/notify.json에)
+//   node scripts/models/whatif.mjs trial-result <id> 평가를 풀어 큰 문제 비율·응답 시간·오류를 지금 모델과 비교 → trial 칸 + hub/app/model-swap.md
+//   node scripts/models/whatif.mjs render            hub/app/model-swap.md만 다시(그리고 알릴 것을 tmp/models/notify.json에)
 //
 // 품질 시험 비용 상한: 후보 한 번 시험에 모델 값 약 $2(TRIAL_USD) — 단가로 사람 수를 줄인다(14~28명).
 // 품질은 채팅 교정·답으로 본다(가장 많이 쓰고 이미 평가 기준·점검이 있는 기능) — 다른 기능 후보도 이 값을 대리 지표로 쓴다고 카드에 적는다.
@@ -25,8 +25,8 @@ import path from "node:path";
 import { numberOf, tableCells } from "../watch/tables.mjs";
 
 const ROOT = process.cwd();
-const FILE = path.join(ROOT, process.env.MODEL_CANDIDATES ?? "hub/model-candidates.json"); // 시험용으로 바꿀 수 있음
-const DOC = path.join(ROOT, process.env.MODEL_SWAP_DOC ?? "hub/model-swap.md");
+const FILE = path.join(ROOT, process.env.MODEL_CANDIDATES ?? "hub/app/model-candidates.json"); // 시험용으로 바꿀 수 있음
+const DOC = path.join(ROOT, process.env.MODEL_SWAP_DOC ?? "hub/app/model-swap.md");
 const OUT = path.join(ROOT, "tmp/models");
 const NODE = ["--experimental-strip-types", "--disable-warning=MODULE_TYPELESS_PACKAGE_JSON"];
 const MONEY = 500; // 원 — 변경 감시와 같은 기준(사용자 2026-11-01)
@@ -118,7 +118,7 @@ function render() {
   const lines = [
     "# 모델 교체 후보 (자동)",
     "",
-    "> 매주 월요일 예약 작업 **\"AI 모델 살피기\"**가 새 모델·종료 공지를 찾아 `hub/model-candidates.json`에 후보로 적고,",
+    "> 매주 월요일 예약 작업 **\"AI 모델 살피기\"**가 새 모델·종료 공지를 찾아 `hub/app/model-candidates.json`에 후보로 적고,",
     "> `scripts/models/whatif.mjs`가 후보마다 **비용표·손익을 다시 계산**하고, 돈이 되거나 종료가 다가온 후보만 **운영 서버에서 품질을 시험**(점검 사용자, 이름 가린 평가)합니다.",
     "> 이 파일은 그 결과로 다시 만들어집니다 — 손으로 고치지 않습니다. 바꾸는 것은 사용자가 \"바꿔줘\" 한 뒤에만(대부분 `src/lib/aiDefaults.ts` 한 줄 또는 Vercel `MODEL_ROUTES`, 서버만 — 앱 빌드 필요 없음).",
     `> 단계: 권함 · 시험 필요 · 시험 불가(사람 판단) · 지켜봄 · 안 함. 돈 기준 ${MONEY}원(한 사람 한 달), 종료 ${SOON_DAYS}일 전부터 알림, 품질은 채팅 교정 큰 문제 비율이 지금보다 ${QUALITY_SLACK}%p 넘게 높지 않으면 같음.`,

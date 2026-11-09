@@ -17,7 +17,7 @@ import { keepCall, readCalls } from "@/lib/roleplay/callStore";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 
 /**
- * AI 튜터와의 통화 — 앱 어디서나 떠 있는 층(2026-10-23, `hub/drafts/conversation-unify-2026-10-23.md` 3단계).
+ * AI 튜터와의 통화 — 앱 어디서나 떠 있는 층(2026-10-23, `hub/work/drafts/conversation-unify-2026-10-23.md` 3단계).
  *
  * 예전 통화 탭의 첫 화면(팩·오늘 해볼 것·안내·남은 시간·내 문장 말해보기·지난 대화)을 없애고, 1:1처럼 📞를 누르면 바로 통화.
  * - 시작: `startCall`(AI 튜터 줄·AI 대화 머리의 📞 = 자유대화, My 수업 문 = `lesson: true`), `practice`(tab roleplay — My 써 보기 카드 등, 수업 통화).

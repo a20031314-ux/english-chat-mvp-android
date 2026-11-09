@@ -1,5 +1,5 @@
 /**
- * 광고: 무료 사용자에게만, 늘려 준 사용량은 광고 수익이 메우는 만큼만 (hub/drafts/ads-rewarded.md).
+ * 광고: 무료 사용자에게만, 늘려 준 사용량은 광고 수익이 메우는 만큼만 (hub/work/drafts/ads-rewarded.md).
  *
  * - 전면 광고는 자연스러운 끝(통화·팩·미션이 끝날 때, 채팅 몇 번 뒤 화면을 나갈 때)에만, 최소 간격을 두고.
  * - 보상형 광고는 "광고 보고 채팅 더": 한 번 보면 채팅 몇 번, 하루 몇 번까지.
@@ -60,7 +60,7 @@ export type AdsSettings = {
 };
 
 /**
- * 흑자 구조(hub/drafts/pricing-profit-2026-10-20.md, 2026-10-20 사용자 결정): 전면은 3분에 한 번까지·채팅 2번 뒤.
+ * 흑자 구조(hub/work/drafts/pricing-profit-2026-10-20.md, 2026-10-20 사용자 결정): 전면은 3분에 한 번까지·채팅 2번 뒤.
  * 보상형("광고 보고 채팅 더")은 끔(2026-10-20 사용자: "광고 보고 더 주는 방식은 거부감, 그냥 뜨고 건너뛰는 게 흔하다").
  * 다시 켜려면 ADS_REWARDED_DAILY_MAX(예: 3) — 1회 = 채팅 3번, 무료 7 + 9 = 16번 < 라이트 30번.
  */
@@ -95,7 +95,7 @@ function flagFrom(value: string | undefined, fallback: boolean): boolean {
 
 /**
  * 광고 1회 수익 가정(한국, AdMob eCPM 대략값, 달러). 잰 값이 아니다 — AdMob 보고서의 실제 eCPM이 쌓이면 고친다.
- * 비용 표(scripts/plan-cost.mjs → hub/costs.md)가 읽는다.
+ * 비용 표(scripts/plan-cost.mjs → hub/app/costs.md)가 읽는다.
  */
 export const AD_REVENUE_USD = {
   rewarded: { low: 0.008, high: 0.02 },

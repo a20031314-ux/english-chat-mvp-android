@@ -2,7 +2,7 @@
 # 맥 없이 돌리는 방법: App Store Connect API 키로 Xcode가 서명 인증서·프로필을 스스로 만들고
 # (클라우드 서명), 내보내기 단계가 바로 App Store Connect에 올린다. 인증서 파일을 저장소에 두지 않는다.
 #
-# 준비(한 번, 사람이): hub/drafts/ios-launch.md "클라우드 빌드 설정".
+# 준비(한 번, 사람이): hub/work/drafts/ios-launch.md "클라우드 빌드 설정".
 #   environment "ios" — secrets: ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8, NEXT_PUBLIC_REVENUECAT_IOS_API_KEY(나중)
 #                       vars:    APPLE_TEAM_ID, IOS_BUNDLE_ID, NEXT_PUBLIC_APP_STORE_URL(나중)
 # 버전은 build.gradle을 따라가고(scripts/ios-project.mjs), 같은 버전을 여러 번 올릴 수 있게
@@ -42,7 +42,7 @@ jobs:
             if [ -z "${!name}" ]; then missing="$missing $name"; fi
           done
           if [ -n "$missing" ]; then
-            echo "::error::environment 'ios'에 없는 값:$missing — hub/drafts/ios-launch.md \"클라우드 빌드 설정\" 참고"
+            echo "::error::environment 'ios'에 없는 값:$missing — hub/work/drafts/ios-launch.md \"클라우드 빌드 설정\" 참고"
             exit 1
           fi
           xcodebuild -version

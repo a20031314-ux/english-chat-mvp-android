@@ -2162,7 +2162,7 @@ export function ChatWindow({
                 ) : null}
 
                 {/* Phrases in their sentence met in another tab, or just
-                    mastered (hub/drafts/tab-connections.md). */}
+                    mastered (hub/work/drafts/tab-connections.md). */}
                 {turn.mode === "chat" && !turn.ownLanguage && turn.userMessage.trim() ? (
                   <div className="flex justify-end">
                     <LedgerLinks

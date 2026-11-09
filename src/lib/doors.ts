@@ -1,5 +1,5 @@
 /**
- * 창구(door) — 겉으로는 따로인 서비스, 속은 같은 앱(사용자 결정 2026-10-20, `hub/drafts/doors.md`).
+ * 창구(door) — 겉으로는 따로인 서비스, 속은 같은 앱(사용자 결정 2026-10-20, `hub/work/drafts/doors.md`).
  *
  * 창구 하나 = 이 파일의 설정 한 묶음: 이름·주소(하위 도메인)·색·첫 화면·보이는 탭·소개 글(14개 언어)·검색어.
  * - 주소: `<host>.languagebank.net/`(next.config.ts rewrites → `/door/<id>`), 언어는 `/<언어>`(기본 `defaultLang`).
@@ -308,7 +308,7 @@ const GROUP_CALL: Door = {
 /**
  * Pingo — 1:1 대화 창구(사용자 결정 2026-10-20 "랜덤채팅은 가+나 섞어서"). 1단계(나): 무작위 연결이 아니라
  * 지금 접속한 사람 중 언어가 맞는 사람을 프로필과 함께 보여 주고, 내가 골라 대화를 요청 → 상대가 수락하면 1:1.
- * 2단계(가, 본인인증한 성인끼리 "바로 연결")는 본인인증 계약 뒤(`hub/drafts/doors.md`).
+ * 2단계(가, 본인인증한 성인끼리 "바로 연결")는 본인인증 계약 뒤(`hub/work/drafts/doors.md`).
  */
 const RANDOM_CHAT: Door = {
   id: "random-chat",

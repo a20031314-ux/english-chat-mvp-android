@@ -38,7 +38,7 @@ import {
 } from "./kv.ts";
 
 /**
- * 아이콘 묶음 저장(규칙은 rooms/icons.ts, 설계 hub/drafts/icons-2026-10-23.md). KV:
+ * 아이콘 묶음 저장(규칙은 rooms/icons.ts, 설계 hub/work/drafts/icons-2026-10-23.md). KV:
  *   icon:v1:pack:<묶음>            묶음 JSON(이름·라이선스·아이콘 목록·내림 표시)
  *   icon:v1:new                   ZSET 공개 묶음(점수 = 만든 시각)
  *   icon:v1:popular               ZSET 공개 묶음(점수 = 쓰인 수)

@@ -144,7 +144,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
     code: 83,
     items: [
       // 2.70에 합쳐 나가며 덜어냄(2026-10-20): 방장·보는 방식·묻기·자유 대화·팀은 사용법(Room·대화)에만.
-      // 2.69부터 설명은 사용법 칸에서(`guide`). 묶음 이름·가는 길을 글에 쓰지 않는다(hub/DESIGN.md "안내 글").
+      // 2.69부터 설명은 사용법 칸에서(`guide`). 묶음 이름·가는 길을 글에 쓰지 않는다(hub/app/DESIGN.md "안내 글").
       { id: "people", title: "whatsNewPeopleTitle", body: "whatsNewPeopleBody", shot: "people", tab: "people", guide: "people.find" },
       { id: "invite", title: "whatsNewInviteTitle", body: "whatsNewInviteBody", shot: "invite", tab: "people", guide: "people.invite" },
       { id: "groups", title: "whatsNewGroupsTitle", body: "whatsNewGroupsBody", shot: "groups", tab: "talk", guide: "messages.groups" },

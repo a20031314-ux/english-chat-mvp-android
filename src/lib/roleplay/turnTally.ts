@@ -1,5 +1,5 @@
 /**
- * AI 통화 차례 재기(2026-11-02, hub/drafts/fill-gauge-2026-11-02.md 9절) — Logbank 육각형 듣기·실전 대화의 재료.
+ * AI 통화 차례 재기(2026-11-02, hub/work/drafts/fill-gauge-2026-11-02.md 9절) — Logbank 육각형 듣기·실전 대화의 재료.
  * 감독이 같은 호출에서 낸 칸(heard·lead·how·fn·native, director.ts turnMeasure)과 화면이 아는 것(머뭇거림·💡 힌트·💬 자막·🙉)을
  * 학습자 줄에 숫자·낱말 몇 개로 붙이고(`TurnMark`), 통화가 끝나면 줄들을 세어 callDays 한 줄에 싣는다. 문장은 남기지 않는다. 순수 모듈.
  */

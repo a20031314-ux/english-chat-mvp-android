@@ -6,11 +6,11 @@
 
 ## 읽을 것
 
-1. `hub/ADS.md` 위쪽(원칙·넣지 않는 곳·보류) — 기준. 아래쪽 자동 부분은 지금 코드의 광고 자리.
+1. `hub/app/ADS.md` 위쪽(원칙·넣지 않는 곳·보류) — 기준. 아래쪽 자동 부분은 지금 코드의 광고 자리.
 2. `tmp/watch/ads-facts.json` — 전면 순간·네이티브 자리·배너 탭, 손익 계산에 없는 순간(`unmodeled`), 이번 범위의 화면 흐름 변화(`flowDiff`), 바뀐 화면 파일.
-3. `hub/STRUCTURE.md` 위쪽 "화면 흐름" — 지금 사용자가 어떤 순서로 무엇을 하나(특히 My: 오늘 할 것 → 수업·퀴즈가 이어지는 흐름).
+3. `hub/app/STRUCTURE.md` 위쪽 "화면 흐름" — 지금 사용자가 어떤 순서로 무엇을 하나(특히 My: 오늘 할 것 → 수업·퀴즈가 이어지는 흐름).
 4. 광고 순간을 부르는 코드(`maybeShowInterstitial(`·`<NativeAdSlot`)는 필요할 때 grep으로 — 그 순간이 실제로 언제 불리는지(끝 화면에서 닫을 때인지, 다음 할 것으로 바로 넘어갈 때도인지).
-5. `hub/economics.md` "3. 무료 + 광고"·"4. 서비스 전체" — 지금 무료 사용자 광고 수입 가정.
+5. `hub/app/economics.md` "3. 무료 + 광고"·"4. 서비스 전체" — 지금 무료 사용자 광고 수입 가정.
 
 ## 보는 것
 
@@ -35,7 +35,7 @@
 - 무료 사용자 하루(쓰는 날)에 더하거나 빼는 노출: `"econ": {"extraAds": [{"format": "banner|native|interstitial|appOpen", "perActiveDay": 1.5, "when": "my|any"}]}` — `when: "my"`는 대본을 쓰는 날만(2.76~ 무료는 대부분 이것).
 - My 끝 전면 횟수를 바꾸는 안(옮기기·빼기): `"econ": {"my": {"linesPerLesson": …, "quizEndsPerDay": …, "checkupEndsPerMonth": …}}`(`economics.json` "my"를 덮음).
 - 서로 바꿔 끼우는 안은 같은 `"alt": "이름"` — 모두 넣은 계산에는 좋은 쪽 하나만 들어감.
-- 다 쓰면 `… ads.mjs scenario`(안마다·모두 넣었을 때 `hub/economics.md`와 같은 계산으로 1,000명당 월·무료 한 사람 — `per1000Mid`를 덮어씀) → `… ads.mjs render`.
+- 다 쓰면 `… ads.mjs scenario`(안마다·모두 넣었을 때 `hub/app/economics.md`와 같은 계산으로 1,000명당 월·무료 한 사람 — `per1000Mid`를 덮어씀) → `… ads.mjs render`.
 
 ## 결과 (JSON 배열 하나 → `tmp/watch/ads-plan.json`)
 
@@ -46,5 +46,5 @@
 - `kind`: add · remove · move · setting · model(손익 계산에 넣기). `appBuild`: 자리·코드면 true, Vercel `ADS_*`만이면 false.
 - `severity`: `notify`(원칙 위반, 또는 1,000명당 월 ±20,000원 넘음) / `report`.
 - 안은 많아야 6개, 근거가 diff·코드·문서에 보이는 것만. 취향은 빼고, 원칙과 숫자로 말한다. 없으면 `[]`.
-- 끝나면 `… ads.mjs scenario` 다음 `… ads.mjs render`로 `hub/ads-plan.md`를 만든다(맨 위에 "지금 → 안을 넣으면" 손익 한 줄).
-- 지난번 안은 `hub/ads-plan.json`(render가 남김)에 있다 — 아직 코드에 반영 안 된 안은 `econ`째 이어 적고, 반영된 것은 뺀다.
+- 끝나면 `… ads.mjs scenario` 다음 `… ads.mjs render`로 `hub/app/ads-plan.md`를 만든다(맨 위에 "지금 → 안을 넣으면" 손익 한 줄).
+- 지난번 안은 `hub/app/ads-plan.json`(render가 남김)에 있다 — 아직 코드에 반영 안 된 안은 `econ`째 이어 적고, 반영된 것은 뺀다.

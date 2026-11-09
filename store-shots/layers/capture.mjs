@@ -1,4 +1,4 @@
-// 스토어 8장(마케팅 층위 — hub/drafts/marketing-layers-2026-11-01.md §3)의 화면 조각 찍기.
+// 스토어 8장(마케팅 층위 — hub/work/drafts/marketing-layers-2026-11-01.md §3)의 화면 조각 찍기.
 // 실제 앱(www, /api는 운영 — 시험 사용자 simcheck-store-…, 끝나면 지움)과 운영 웹의 통화 미리 보기(/dev/call-preview)를 폰 크기로 찍어
 // tmp/store-layers/<앱 언어>/<조각>.png 로 남긴다. 합치기는 compose.mjs.
 // 순서(저장소 맨 위에서): npm run build:capacitor → CHROMIUM=/usr/bin/google-chrome node store-shots/layers/capture.mjs [ko]

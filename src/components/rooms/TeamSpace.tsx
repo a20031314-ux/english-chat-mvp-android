@@ -8,7 +8,7 @@ import { fillTeam, type TeamCopy } from "@/lib/rooms/teamCopy";
 import { useProfile } from "./RoomParts";
 
 /**
- * 팀·러닝메이트 워크스페이스(hub/drafts/team-workspace.md): 이번 주 목표, 같이 한 날, 정기 모임,
+ * 팀·러닝메이트 워크스페이스(hub/work/drafts/team-workspace.md): 이번 주 목표, 같이 한 날, 정기 모임,
  * 쌓인 것(물은 표현·통화 기록·공유). 보는 방식은 모두 / 표현 / 통화 기록 / 공유(DESIGN.md "보는 방식 고르기").
  */
 

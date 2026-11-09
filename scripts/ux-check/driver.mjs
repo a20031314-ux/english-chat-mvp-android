@@ -2,7 +2,7 @@
 // 먼저: npm run build:capacitor, 가짜 마이크 소리
 //   ffmpeg -f lavfi -i "anoisesrc=d=1.4:c=pink:a=0.3" -f lavfi -t 7 -i anullsrc=r=48000:cl=mono -filter_complex "[0]aresample=48000,aformat=channel_layouts=mono[a];[a][1]concat=n=2:v=0:a=1" -ar 48000 -ac 1 tmp/ux/voice.wav
 // 그다음 사람마다 하나씩 띄우고(run_in_background), 에이전트에게 scripts/ux-check/BRIEF.md + 인물·PORT·NAME을 준다. 결과: tmp/ux/run/<이름>/, tmp/ux/notes/<이름>.md
-// 사용자가 짚은 문제(hub/ux-issues.md)는 인물에게 알리지 않는다 — 끝난 뒤 scripts/ux-check/JUDGE.md로 항목별 판정.
+// 사용자가 짚은 문제(hub/work/ux-issues.md)는 인물에게 알리지 않는다 — 끝난 뒤 scripts/ux-check/JUDGE.md로 항목별 판정.
 // 한계: /day는 폰 시계만 넘긴다(서버는 오늘) — 그래프 날짜·이번 주 확인 7일 규칙은 이 점검에서 믿지 않는다.
 // 가상 사용자가 직접 모는 앱: node scripts/ux-check/driver.mjs <학습언어> <앱언어> <이름> <제어포트>
 // 제어(curl): GET /shot · POST /click {text} 또는 {x,y} · POST /type {text} · POST /scroll {dy} · POST /say {text} · POST /key {key} · POST /reload · POST /day {n} · POST /mark {reason, note} · POST /stop
@@ -17,7 +17,7 @@ const idName = /^[\x21-\x7e]+$/.test(name) ? name : [...name].map((c) => c.codeP
 state.uid = `simcheck-ux-${Date.now().toString(36)}-${idName}`;
 const browser = await chromium.launch({ args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", `--use-file-for-fake-audio-capture=${path.join(ROOT, "tmp/ux/voice.wav")}`] });
 const ctx = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, colorScheme: "dark", hasTouch: true });
-// UX_UPDATED_FROM=2.75: 처음 열 때 그 버전에서 업데이트한 사람처럼(새로워진 점이 뜸 — hub/ux-issues.md U02).
+// UX_UPDATED_FROM=2.75: 처음 열 때 그 버전에서 업데이트한 사람처럼(새로워진 점이 뜸 — hub/work/ux-issues.md U02).
 // UX_REFORM=1: Languagebank 개편 화면(lib/reform.ts 스위치 — 시험 앱과 같은 화면, 2026-11-07).
 await ctx.addInitScript(([learn, ui, from, reform]) => { if (!localStorage.getItem("appUiLocale")) { localStorage.setItem("appUiLocale", ui); localStorage.setItem("appTargetLanguage", learn); if (from) localStorage.setItem("whatsNewSeenVersion", from); } if (reform) localStorage.setItem("lbReform", "1"); }, [learn, ui, process.env.UX_UPDATED_FROM || "", process.env.UX_REFORM || ""]);
 const page = await ctx.newPage();

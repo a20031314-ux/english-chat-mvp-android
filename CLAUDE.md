@@ -1,5 +1,5 @@
 @AGENTS.md
 @hub/STATE.md
 @hub/RULES.md
-@hub/FEATURES.md
-@hub/STRUCTURE.md
+@hub/app/FEATURES.md
+@hub/app/STRUCTURE.md

@@ -6,7 +6,7 @@ import { createContext, useContext } from "react";
  * My 큰 칸마다 색(2026-11-01 사용자 "ui 색상은 각각의 탭에 맞춰줘"): 칸 테두리·제목만 칸 색이던 것을 칸 안의 강조(빈칸·고른 것·정답 보기·체크 줄·시험 줄)까지.
  * Stagebank 노랑(status-learned, 빈칸은 예전 amber 그대로) · Quizbank 초록(good) · Logbank 하늘(info) — NotebookSection LAYER_TONE과 같은 색.
  * 칸이 BankToneProvider로 감싸면 그 안의 퀴즈·시트(포털이어도 React 문맥은 이어짐)가 useBankTone으로 받는다. 감싸지 않은 곳(수업·시험 화면 등)은 stage.
- * 맞음 초록(good)·틀림 빨강(bad, 2026-11-03 사용자 "오답 표시는 빨간색")은 칸과 상관없이 그대로. hub/DESIGN.md "My 큰 칸 색".
+ * 맞음 초록(good)·틀림 빨강(bad, 2026-11-03 사용자 "오답 표시는 빨간색")은 칸과 상관없이 그대로. hub/app/DESIGN.md "My 큰 칸 색".
  */
 export type BankToneId = "stage" | "keep" | "log";
 

@@ -724,7 +724,7 @@ export function boardDeleteComment(postId: string, commentId: string): Promise<{
   return board("deleteComment", { postId, commentId });
 }
 
-/* ── 팀·러닝메이트 (hub/drafts/team-workspace.md) ───────────────────────── */
+/* ── 팀·러닝메이트 (hub/work/drafts/team-workspace.md) ───────────────────────── */
 
 export function mateRequest(target: string, languages: string[]): Promise<{ group: Group; state: "pending" | "joined" | "mates" }> {
   return groups("mate", { target, languages });

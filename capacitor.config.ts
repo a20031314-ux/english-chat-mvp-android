@@ -4,7 +4,7 @@ import { join } from "node:path";
 
 /**
  * iOS에 넣지 않을 플러그인. 광고(AdMob)는 안드로이드만 — iOS는 추적 동의(ATT)·App Store 신고가 따로라
- * 1차에서 뺐다(hub/drafts/ads-rewarded.md). 넣어 두면 Info.plist에 AdMob 앱 ID가 없어 SDK가 앱을 멈출 수 있다.
+ * 1차에서 뺐다(hub/work/drafts/ads-rewarded.md). 넣어 두면 Info.plist에 AdMob 앱 ID가 없어 SDK가 앱을 멈출 수 있다.
  * includePlugins는 허용 목록이라, 의존성 전체에서 이것만 빼서 만든다(새 플러그인은 저절로 iOS에도 들어감).
  */
 const ANDROID_ONLY_PLUGINS = ["@capacitor-community/admob"];
@@ -44,7 +44,7 @@ const config: CapacitorConfig = {
   android: {
     allowMixedContent: false,
   },
-  // iOS(1차, `hub/drafts/ios-launch.md`): 웹뷰는 안전 영역 안에만(AppDelegate.swift
+  // iOS(1차, `hub/work/drafts/ios-launch.md`): 웹뷰는 안전 영역 안에만(AppDelegate.swift
   // SafeAreaHostViewController), 불러오는 동안 비치는 바탕은 앱과 같은 검정.
   ios: {
     backgroundColor: "#000000",

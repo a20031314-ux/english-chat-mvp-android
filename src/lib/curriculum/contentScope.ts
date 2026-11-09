@@ -4,7 +4,7 @@
  *
  * - 문법 = 단계 문법 칸(stages/*.ts grammar), 표현 = 단계 핵심 표현(겹치면 한 번), 문장구조 = 틀(frames/), 상황 = 단계 대본 + 은행 장면.
  * - 낱말 = 빈도 목록 + 사용자들이 찾아서 더한 낱말 — 단계마다 수는 부르는 쪽이 준다(useWordBank wordsByStage, 6 = 5단계 밖 확장).
- * 순수: 화면(studyMap/ContentScope)과 홍보용 표(scripts/content-scope.ts → hub/CONTENT.md)가 같이 쓴다.
+ * 순수: 화면(studyMap/ContentScope)과 홍보용 표(scripts/content-scope.ts → hub/app/CONTENT.md)가 같이 쓴다.
  */
 import { allFramesFor } from "./frames.ts";
 import { ladderFor } from "./stages/index.ts";

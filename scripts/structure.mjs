@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 앱 전체구조(hub/STRUCTURE.md)의 자동 부분을 코드에서 만든다.
+ * 앱 전체구조(hub/app/STRUCTURE.md)의 자동 부분을 코드에서 만든다.
  *
  *   node scripts/structure.mjs                 자동 부분을 다시 써 넣는다
  *   node scripts/structure.mjs --check         자리표가 맞고 자동 부분이 최신인지 (어긋나면 exit 1)
@@ -18,7 +18,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "src");
-const DOC = path.join(ROOT, "hub", "STRUCTURE.md");
+const DOC = path.join(ROOT, "hub", "app", "STRUCTURE.md");
 const MAP = path.join(ROOT, "scripts", "structure.json");
 const BEGIN = "<!-- 자동: scripts/structure.mjs가 아래를 다시 쓴다. 손으로 고치지 않는다. -->";
 const END = "<!-- 자동 끝 -->";
@@ -297,14 +297,14 @@ const doc = fs.existsSync(DOC) ? fs.readFileSync(DOC, "utf8") : "";
 const b = doc.indexOf(BEGIN);
 const e = doc.indexOf(END);
 if (b < 0 || e < b) {
-  console.error(`hub/STRUCTURE.md에 자동 부분 표시 줄이 없다. 맨 끝에 다음 두 줄을 넣는다:\n${BEGIN}\n${END}`);
+  console.error(`hub/app/STRUCTURE.md에 자동 부분 표시 줄이 없다. 맨 끝에 다음 두 줄을 넣는다:\n${BEGIN}\n${END}`);
   process.exit(1);
 }
 const next = doc.slice(0, b) + generated + doc.slice(e + END.length);
 
 if (CHECK) {
   if (next !== doc) {
-    console.error("hub/STRUCTURE.md 자동 부분이 코드와 다르다 → node scripts/structure.mjs");
+    console.error("hub/app/STRUCTURE.md 자동 부분이 코드와 다르다 → node scripts/structure.mjs");
     process.exit(1);
   }
   console.log("전체구조 최신");
@@ -312,7 +312,7 @@ if (CHECK) {
 }
 if (next !== doc) {
   fs.writeFileSync(DOC, next);
-  console.log("hub/STRUCTURE.md 자동 부분을 다시 씀");
+  console.log("hub/app/STRUCTURE.md 자동 부분을 다시 씀");
 } else {
-  console.log("hub/STRUCTURE.md 그대로");
+  console.log("hub/app/STRUCTURE.md 그대로");
 }

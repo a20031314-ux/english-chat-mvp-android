@@ -5,7 +5,7 @@ import { isIdentified } from "./identity.ts";
 import { requestUserId, resolveRequestEntitlement } from "./premiumRequest.ts";
 
 /**
- * 누를 때만 도는 AI(번역·표현 카드·문장분석 …)와 방 자막의 하루 한도(billing/plans.ts, hub/drafts/ai-help-limits.md).
+ * 누를 때만 도는 AI(번역·표현 카드·문장분석 …)와 방 자막의 하루 한도(billing/plans.ts, hub/work/drafts/ai-help-limits.md).
  * 사람끼리 주고받는 것은 세지 않는다 — 이건 그 위에 AI가 끼는 부분만.
  *
  * 모델을 부르기 직전(저장된 번역·캐시된 음성을 돌려줄 때는 지나서)에 부른다. 무료 한도까지는 요금 확인 없이 세고,

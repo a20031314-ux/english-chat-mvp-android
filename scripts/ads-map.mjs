@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * 광고 구조(hub/ADS.md)의 자동 부분을 코드에서 만든다.
+ * 광고 구조(hub/app/ADS.md)의 자동 부분을 코드에서 만든다.
  *
  *   npm run ads:map              자동 부분을 다시 써 넣는다
  *   npm run ads:map -- --check   자동 부분이 최신인지, 모든 광고 자리에 설명·영역이 있는지 (어긋나면 exit 1)
@@ -21,7 +21,7 @@ import { PLANS, blended, options, perSignup } from "./sim-users/economics.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = path.join(ROOT, "src");
-const DOC = path.join(ROOT, "hub", "ADS.md");
+const DOC = path.join(ROOT, "hub", "app", "ADS.md");
 const BEGIN = "<!-- 자동: scripts/ads-map.mjs가 아래를 다시 쓴다. 손으로 고치지 않는다. -->";
 const END = "<!-- 자동 끝 -->";
 const CHECK = process.argv.includes("--check");
@@ -42,7 +42,7 @@ const MOMENTS = {
   stageUp: "단계 시험을 통과해 단계가 올라갈 때(통과 화면을 닫거나 다음 단계로 넘어갈 때, 2026-11-01)",
 };
 
-/** 탭 id → 화면 이름(hub/STRUCTURE.md "안에서 쓰는 이름"). */
+/** 탭 id → 화면 이름(hub/app/STRUCTURE.md "안에서 쓰는 이름"). */
 const TAB_NAMES = { map: "My", video: "영상 학습", vocab: "단어장", talk: "대화", chat: "AI 채팅", roleplay: "통화", rooms: "Room", people: "사람" };
 
 const rel = (p) => path.relative(ROOT, p).split(path.sep).join("/");
@@ -163,7 +163,7 @@ const o = options([], {});
 const free = blended(PLANS[0], o.assume.mix.free, o);
 const row = ["low", "mid", "high"].map((s) => signed(perSignup(o, o.conv, s).net * 1000));
 out.push(
-  `가상 사용자 손익(\`hub/economics.md\`, 결제 전환 ${Math.round(o.conv * 100)}%): 가입자 1,000명당 한 달 단가 낮음 **${row[0]}** · 중간 **${row[1]}** · 높음 **${row[2]}**.`,
+  `가상 사용자 손익(\`hub/app/economics.md\`, 결제 전환 ${Math.round(o.conv * 100)}%): 가입자 1,000명당 한 달 단가 낮음 **${row[0]}** · 중간 **${row[1]}** · 높음 **${row[2]}**.`,
   `무료 한 사람 한 달: 원가 ${signed(-free.costKrw).replace("−", "")}, 광고 ${signed(free.ad.mid).replace("+", "")}(중간) → ${signed(free.net("mid"))}.`,
   "",
 );
@@ -173,7 +173,7 @@ const doc = fs.readFileSync(DOC, "utf8");
 const start = doc.indexOf(BEGIN);
 const end = doc.indexOf(END);
 if (start < 0 || end < start) {
-  console.error(`hub/ADS.md에 표시 줄(${BEGIN} … ${END})이 없음`);
+  console.error(`hub/app/ADS.md에 표시 줄(${BEGIN} … ${END})이 없음`);
   process.exit(1);
 }
 const next = `${doc.slice(0, start + BEGIN.length)}\n\n${auto}\n\n${doc.slice(end)}`;
@@ -185,11 +185,11 @@ if (PLACES_ONLY) {
   console.log(`광고 자리 ${native.length + byMoment.size}곳 모두 설명·영역 있음`);
 } else if (CHECK) {
   if (next !== doc) {
-    console.error("hub/ADS.md 자동 부분이 코드와 다르다 → npm run ads:map");
+    console.error("hub/app/ADS.md 자동 부분이 코드와 다르다 → npm run ads:map");
     process.exit(1);
   }
   console.log("광고 구조 최신");
 } else {
   fs.writeFileSync(DOC, next);
-  console.log(next === doc ? "hub/ADS.md 그대로" : "hub/ADS.md 갱신");
+  console.log(next === doc ? "hub/app/ADS.md 그대로" : "hub/app/ADS.md 갱신");
 }

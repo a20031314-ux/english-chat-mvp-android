@@ -1,5 +1,5 @@
 /**
- * 자유대화 채우기 점검(2026-11-06, hub/drafts/call-modes-2026-11-06.md 6-4) — 학습자 역을 맡은 에이전트가 한 줄씩 말하고,
+ * 자유대화 채우기 점검(2026-11-06, hub/work/drafts/call-modes-2026-11-06.md 6-4) — 학습자 역을 맡은 에이전트가 한 줄씩 말하고,
  * 이 도구가 앱처럼 겨냥(talkAims.ts)을 골라 운영 /api/roleplay/turn에 보낸다. 에이전트에게는 튜터 말만 보여 준다(겨냥은 모름).
  *
  *   node --experimental-strip-types scripts/sim-users/talk-aims.mjs start <이름> --lang ja --ui ko --level 2 --mode aim|plain \

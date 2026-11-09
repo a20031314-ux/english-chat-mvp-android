@@ -35,7 +35,7 @@ const chatDefault = () => env("OPENAI_MODEL") ?? D.chat;
 
 /**
  * 기능 → 등급 + 지금 쓰는 OpenAI 모델(예전과 같은 환경 변수·기본값). 기본 모델 이름은 `lib/aiDefaults.ts` 한 장에 있다
- * (비용 표가 같은 이름을 읽음 — 기본값을 바꾸면 hub/costs.md도 저절로 따라온다).
+ * (비용 표가 같은 이름을 읽음 — 기본값을 바꾸면 hub/app/costs.md도 저절로 따라온다).
  * basic = 자주 불리는 것(싸게), high = 드물지만 결과가 오래 남거나 틀리면 아픈 것.
  */
 export const TASKS = {

@@ -54,7 +54,7 @@ export const dynamic = "force-dynamic";
  *   invite { groupId, target }            → 방에 있는 사람이면 누구나
  *   answer { groupId, accept }            → 받은 초대에 참여/거절
  *   leave { groupId } · kick/transfer { groupId, target } (방장만)
- * 팀·러닝메이트(hub/drafts/team-workspace.md):
+ * 팀·러닝메이트(hub/work/drafts/team-workspace.md):
  *   mate { target, languages }            → { group, state }  두 사람 사이 메이트는 하나(상대 신청이 있으면 수락)
  *   team { groupId }                      → 단체방을 팀으로(방장만)
  *   space { groupId }                     → { group, space }  쌓인 것·같이 한 날
@@ -170,7 +170,7 @@ export async function POST(request: NextRequest) {
       private: true,
       allowed: [...group.members],
       groupId: group.id,
-      // 러닝메이트(둘)만 영상. 팀 영상은 사람이 많아 중계가 필요해 아직(hub/drafts/video-workspace.md).
+      // 러닝메이트(둘)만 영상. 팀 영상은 사람이 많아 중계가 필요해 아직(hub/work/drafts/video-workspace.md).
       ...(group.team?.kind === "mate" ? { video: true } : {}),
     });
     await noteGroupCall(group, me, room.id);

@@ -1,4 +1,4 @@
-// 실행: node --experimental-strip-types scripts/curve-sim.ts [언어] — 2026-11-07 Logbank 학습 곡선 점검(hub/log 2026-11-07).
+// 실행: node --experimental-strip-types scripts/curve-sim.ts [언어] — 2026-11-07 Logbank 학습 곡선 점검(hub/chat/log 2026-11-07).
 // 가상 학습자 30일: 장부(LogEvent)를 날마다 쌓고, 그날 끝의 확인된 실력(sureOf)·꼭짓점 %·내 것(앎·힘듦) 수를 본다.
 // 사람 모형: 낱말 참 경계 trueB(빈도 순위), 문법 참 단계 trueG. 한 번 본 항목은 아는 확률이 오르고(배움), 안 보면 날마다 조금 잊음.
 import { BANK_AXES, computeFill, fillCatalog } from "../src/lib/curriculum/fill.ts";

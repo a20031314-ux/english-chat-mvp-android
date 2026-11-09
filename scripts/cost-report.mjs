@@ -1,5 +1,5 @@
 /**
- * What a learner actually costs, from the usage ledger (hub/drafts/pricing-2026-10.md).
+ * What a learner actually costs, from the usage ledger (hub/work/drafts/pricing-2026-10.md).
  *
  * The pricing decision was made on estimates — a minute of call is about 11
  * won, a pack about 14 — and on a worst case where every subscriber fills

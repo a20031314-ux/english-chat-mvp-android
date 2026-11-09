@@ -149,8 +149,14 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
   <section aria-label="버전" class="versions" id="versions"></section>
   <div class="ask" id="ask" hidden></div>
 
+  <section class="panel forgotten" aria-labelledby="asks-h" id="asks" hidden>
+    <h2 id="asks-h">확인 요청 <small>(hub/chat/ASKS.md — 탭끼리 확인·사용자 삭제 질문)</small></h2>
+    <p class="forgot-sum" id="asks-sum"></p>
+    <details><summary>자세히</summary><div id="asks-body" class="md"></div></details>
+  </section>
+
   <section class="panel forgotten" aria-labelledby="forgot-h" id="forgotten" hidden>
-    <h2 id="forgot-h">잊힌 일 <small>(hub/forgotten.md, 매일 아침 자동)</small></h2>
+    <h2 id="forgot-h">잊힌 일 <small>(hub/work/forgotten.md, 매일 아침 자동)</small></h2>
     <p class="forgot-sum" id="forgot-sum"></p>
     <details><summary>자세히</summary><div id="forgot-body" class="md"></div></details>
   </section>
@@ -160,31 +166,31 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
   <nav class="jump" aria-label="칸으로 가기" id="jump"></nav>
 
   <section class="panel app-structure" aria-labelledby="app-h" id="app-structure" hidden>
-    <h2 id="app-h">앱 전체구조 <small>(hub/STRUCTURE.md, 흐름은 손으로 · 영역별 코드는 코드에서 자동)</small></h2>
+    <h2 id="app-h">앱 전체구조 <small>(hub/app/STRUCTURE.md, 흐름은 손으로 · 영역별 코드는 코드에서 자동)</small></h2>
     <div id="app-body" class="md"></div>
     <p class="how">모든 채팅이 시작할 때 읽고, 코드를 고칠 때 여기서 영향 범위를 본 뒤 같은 커밋에서 고칩니다. 새 화면 파일·API·페이지에 영역이 없으면 CI <code>structure</code>가 실패합니다.</p>
   </section>
 
   <section class="panel app-structure" aria-labelledby="ads-h" id="ads" hidden>
-    <h2 id="ads-h">광고 구조 <small>(hub/ADS.md, 원칙은 손으로 · 자리·설정·손익은 코드에서 자동)</small></h2>
+    <h2 id="ads-h">광고 구조 <small>(hub/app/ADS.md, 원칙은 손으로 · 자리·설정·손익은 코드에서 자동)</small></h2>
     <div id="ads-body" class="md"></div>
     <p class="how">광고 자리·설정을 바꾸는 채팅이 먼저 읽습니다. 영역 이름(<code>call</code> 같은)을 누르면 앱 전체구조의 그 영역으로 갑니다. 새 전면 광고 순간에 설명이 없으면 CI <code>ads-map</code>이 실패하고, main push 때 아래쪽은 저절로 다시 만들어집니다.</p>
   </section>
 
   <section class="panel app-structure" aria-labelledby="quiz-h" id="quiz" hidden>
-    <h2 id="quiz-h">퀴즈 알고리즘 <small>(hub/QUIZ.md, 손으로 — Quizbank·오늘 할 것·수업·시험)</small></h2>
+    <h2 id="quiz-h">퀴즈 알고리즘 <small>(hub/app/QUIZ.md, 손으로 — Quizbank·오늘 할 것·수업·시험)</small></h2>
     <div id="quiz-body" class="md"></div>
     <p class="how">퀴즈·문제은행·낱말 은행·오답·채점을 바꾸는 채팅이 먼저 읽고, 같은 커밋에서 고칩니다(RULES 11). 영역 이름을 누르면 앱 전체구조의 그 영역으로 갑니다.</p>
   </section>
 
   <section class="panel app-structure" aria-labelledby="models-h" id="models" hidden>
-    <h2 id="models-h">모델 교체 <small>(hub/model-swap.md, 자동 — 예약 작업 "AI 모델 살피기"가 매주 월요일)</small></h2>
+    <h2 id="models-h">모델 교체 <small>(hub/app/model-swap.md, 자동 — 예약 작업 "AI 모델 살피기"가 매주 월요일)</small></h2>
     <div id="models-body" class="md"></div>
     <p class="how">새 모델·종료 공지를 찾아 후보마다 손익을 다시 계산하고, 돈이 되거나 종료가 다가온 후보만 운영에서 품질을 시험합니다. "권함"이 생기거나 종료 90일 전이면 폰으로 알립니다. 바꾸는 것은 사용자가 "바꿔줘" 한 뒤에만.</p>
   </section>
 
   <section class="panel structure" aria-labelledby="map-h" id="structure" hidden>
-    <h2 id="map-h">저장하는 데이터 <small>(hub/data-map.md, 코드에서 자동)</small></h2>
+    <h2 id="map-h">저장하는 데이터 <small>(hub/app/data-map.md, 코드에서 자동)</small></h2>
     <div class="map-tools" role="group" aria-label="누구 것으로 거르기" id="map-filter"></div>
     <div id="map" class="md"></div>
     <p class="how">키 묶음마다 기능·누구 것·보관 기간·계정을 지울 때 어떻게 되는지. 새 키에 설명이 없으면 CI가 실패하고, 점검 데이터(<code>simcheck-</code>)는 점검이 끝날 때 지워집니다.</p>
@@ -345,6 +351,25 @@ function renderDoc(text, extraAfterHeading = () => "") {
 
 const jumps = [];
 // 잊힌 일: 요약 한 줄은 늘 보이고, 나머지는 펼쳐서.
+// 확인 요청: 열린 수 한 줄, 나머지는 펼쳐서.
+if (HUB.asks) {
+  const lines = HUB.asks.split("\n");
+  const counts = lines.filter((l) => /^## /.test(l)).map((l) => l.replace(/^## /, ""));
+  document.getElementById("asks-sum").textContent = counts.slice(0, 2).join(" · ");
+  const parts = [];
+  let chunk = [];
+  const flush = () => { if (chunk.length) { parts.push(md(chunk.join("\n"))); chunk = []; } };
+  for (const raw of lines) {
+    if (raw.startsWith("# ") || raw.startsWith(">")) continue;
+    const h = raw.match(/^##+ (.*)$/);
+    if (h) { flush(); parts.push(`<h4>${inline(h[1])}</h4>`); continue; }
+    chunk.push(raw.replace(/^  - /, "- ↳ "));
+  }
+  flush();
+  document.getElementById("asks-body").innerHTML = parts.join("");
+  document.getElementById("asks").hidden = false;
+}
+
 if (HUB.forgotten) {
   const lines = HUB.forgotten.split("\n");
   const sum = lines.find((l) => l.startsWith("기준일 "));
@@ -390,7 +415,7 @@ if (HUB.quiz) {
   jumps.push(["quiz", "퀴즈 알고리즘"]);
 }
 
-// 모델 교체 후보(hub/model-swap.md — scripts/models/whatif.mjs가 만듦).
+// 모델 교체 후보(hub/app/model-swap.md — scripts/models/whatif.mjs가 만듦).
 if (HUB.models) {
   document.getElementById("models-body").innerHTML = renderDoc(HUB.models);
   document.getElementById("models").hidden = false;

@@ -1,4 +1,4 @@
-// 스토어 8장(마케팅 층위 — hub/drafts/marketing-layers-2026-11-01.md §3) 합치기: capture.mjs가 찍은 조각을 1080×1920으로.
+// 스토어 8장(마케팅 층위 — hub/work/drafts/marketing-layers-2026-11-01.md §3) 합치기: capture.mjs가 찍은 조각을 1080×1920으로.
 // 결과: store-shots/out/layers/<앱 언어>/1~8.png. 글은 strings.mjs(앱 언어마다), 버튼·칸 이름은 앱 문구(copy.ts) 그대로.
 // --play 를 붙이면 fastlane/metadata/android/<등록정보>/images/phoneScreenshots/01-…08-로도 복사(예전 장은 지움).
 // Run(저장소 맨 위): CHROMIUM=/usr/bin/google-chrome node store-shots/layers/compose.mjs [ko,en,…] [--play]

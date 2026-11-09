@@ -1,5 +1,5 @@
 /**
- * 러닝메이트·팀 워크스페이스 문구(hub/drafts/team-workspace.md). 14개 언어 모두 여기에(teamCopy.test.ts가 빠짐을 막음).
+ * 러닝메이트·팀 워크스페이스 문구(hub/work/drafts/team-workspace.md). 14개 언어 모두 여기에(teamCopy.test.ts가 빠짐을 막음).
  * 한국어·영어 밖은 Claude가 썼다(원어민 확인 권장). {name} 사람 이름, {n} 숫자. 요일은 Intl로 그려서 문구가 없다.
  */
 const ko = {

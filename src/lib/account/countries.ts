@@ -1,6 +1,6 @@
 /**
  * 국적 칩(ISO 3166-1 두 글자, 대문자). 이름은 Intl.DisplayNames(type: "region")로 앱 언어에 맞춰 그리고,
- * 국기는 지역 표시 문자 두 개로 만든 이모지라 문구·그림 파일이 없다(hub/drafts/profile-2026-10-23.md). 순수.
+ * 국기는 지역 표시 문자 두 개로 만든 이모지라 문구·그림 파일이 없다(hub/work/drafts/profile-2026-10-23.md). 순수.
  * 역사 속 코드·예약 코드(SU·YU·EU·UN 등)와 사람이 살지 않는 지역은 뺐다.
  */
 export const COUNTRY_CODES = [

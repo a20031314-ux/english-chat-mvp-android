@@ -1,7 +1,7 @@
 /**
  * What the learner said about themselves when they started: where they feel
  * they fall short, what they want to work on most, and (if they said) where
- * they will use the language (hub/drafts/checklist-start-and-learner-brief.md).
+ * they will use the language (hub/work/drafts/checklist-start-and-learner-brief.md).
  *
  * It replaces writing a goal and picking a level. It is the first material the
  * map, "try this" and the tutors have; once conversations pile up, what was

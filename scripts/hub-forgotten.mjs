@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 /**
- * 잊힌 일 찾기: 허브와 저장소에서 오래 손대지 않은 것을 모아 hub/forgotten.md에 쓴다.
+ * 잊힌 일 찾기: 허브와 저장소에서 오래 손대지 않은 것을 모아 hub/work/forgotten.md에 쓴다.
  *
- *   node scripts/hub-forgotten.mjs              hub/forgotten.md를 다시 쓴다
+ *   node scripts/hub-forgotten.mjs              hub/work/forgotten.md를 다시 쓴다
  *   node scripts/hub-forgotten.mjs --stdout     파일 대신 화면에
  *   node scripts/hub-forgotten.mjs --date 2026-10-20   기준일을 정해서(테스트용)
  *
  * 찾는 것 (나이는 글에 적힌 날짜 기준 — 얕은 clone에서도 같은 결과):
- *   1. 사용자 결정 대기: hub/reports.md "새 보고" 중 `결정:`이 빈 것, hub/STATE.md "사용자에게 물어볼 것"
- *   2. 안 가져간 넘긴 일: hub/inbox.md에서 3일 넘은 줄 (받는 역할별)
- *   3. 오래 열린 일: hub/roles/*.md "열린 일"에서 7일 넘게 날짜가 그대로인 항목
- *   4. 멈춘 초안: hub/drafts/*.md 중 상태가 설계안·초안·결정 대기이고 7일 넘게 날짜가 그대로인 것
+ *   1. 사용자 결정 대기: hub/work/reports.md "새 보고" 중 `결정:`이 빈 것, hub/STATE.md "사용자에게 물어볼 것"
+ *   2. 안 가져간 넘긴 일: hub/work/inbox.md에서 3일 넘은 줄 (받는 역할별)
+ *   3. 오래 열린 일: hub/work/roles/*.md "열린 일"에서 7일 넘게 날짜가 그대로인 항목
+ *   4. 멈춘 초안: hub/work/drafts/*.md 중 상태가 설계안·초안·결정 대기이고 7일 넘게 날짜가 그대로인 것
  *   5. 안 나간 앱 빌드: STATE "다음 앱 버전"이 대기 중인 날수
  *   6. 안 합친 브랜치·PR: GitHub REST(gh api)로, main에 없는 커밋이 있고 2일 넘게 멈춘 브랜치와 열린 PR (gh가 없으면 건너뜀)
  *
@@ -23,7 +23,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const HUB = path.join(ROOT, "hub");
-const OUT = path.join(HUB, "forgotten.md");
+const OUT = path.join(HUB, "work", "forgotten.md");
 const REPO = "a20031314-ux/english-chat-mvp-android";
 
 const args = process.argv.slice(2);
@@ -91,7 +91,7 @@ const found = {};
 
 // 1. 사용자 결정 대기
 {
-  const reports = section(read("hub/reports.md"), "새 보고");
+  const reports = section(read("hub/work/reports.md"), "새 보고");
   const waiting = [];
   for (const block of reports.split(/\n(?=### )/)) {
     const head = block.match(/^### (.+)$/m)?.[1];
@@ -109,7 +109,7 @@ const found = {};
 
 // 2. 안 가져간 넘긴 일
 {
-  const lines = read("hub/inbox.md")
+  const lines = read("hub/work/inbox.md")
     .split("\n")
     .map((l) => l.match(/^- (20\d\d-\d\d-\d\d) (\w+) → (\w+): (.*)$/))
     .filter(Boolean)
@@ -124,10 +124,10 @@ const found = {};
 // 3. 오래 열린 일
 {
   const open = [];
-  const rolesDir = path.join(HUB, "roles");
+  const rolesDir = path.join(HUB, "work", "roles");
   for (const file of fs.readdirSync(rolesDir).filter((f) => f.endsWith(".md")).sort()) {
     const role = file.replace(/\.md$/, "");
-    const items = bullets(section(read(`hub/roles/${file}`), "열린 일"));
+    const items = bullets(section(read(`hub/work/roles/${file}`), "열린 일"));
     for (const item of items) {
       const date = latestDate(item);
       const age = ageDays(date);
@@ -142,9 +142,9 @@ const found = {};
 // 4. 멈춘 초안
 {
   const drafts = [];
-  const dir = path.join(HUB, "drafts");
+  const dir = path.join(HUB, "work", "drafts");
   for (const file of fs.readdirSync(dir).filter((f) => f.endsWith(".md")).sort()) {
-    const text = read(`hub/drafts/${file}`);
+    const text = read(`hub/work/drafts/${file}`);
     const status = text.split("\n").slice(0, 15).find((l) => /상태:/.test(l));
     if (!status || !/설계안|초안|결정 대기|사용자 확인/.test(status) || /구현됨|최종|끝/.test(status)) continue;
     const date = latestDate(text.split("\n").slice(0, 40).join("\n"));
@@ -167,7 +167,7 @@ const found = {};
     const version = row.match(/\|\s*다음 앱 버전\s*\|\s*([\d.]+)/)?.[1];
     found.build = { version, date, age: ageDays(date) };
   }
-  const devOpen = bullets(section(read("hub/roles/dev.md"), "열린 일"));
+  const devOpen = bullets(section(read("hub/work/roles/dev.md"), "열린 일"));
   found.buildWaiting = devOpen.filter((i) => /앱 다음 빌드|다음 빌드|앱 빌드 필요/.test(i)).length;
 }
 
@@ -230,7 +230,7 @@ for (const w of found.decisions.waiting) lines.push(`- 보고함: ${clip(w.text,
 for (const a of found.decisions.asks) lines.push(`- 물어볼 것: ${a.text}${a.date ? ` (${a.date})` : ""}`);
 lines.push("");
 
-lines.push(`## 안 가져간 넘긴 일 (${LIMITS.inbox}일 넘음, \`hub/inbox.md\`)`, "");
+lines.push(`## 안 가져간 넘긴 일 (${LIMITS.inbox}일 넘음, \`hub/work/inbox.md\`)`, "");
 if (!inboxCount) lines.push("- 없음");
 for (const [to, list] of Object.entries(found.inbox).sort((a, b) => b[1].length - a[1].length)) {
   lines.push(`- **→ ${to}** ${list.length}줄, 가장 오래된 것 ${list[0].age}일`);
@@ -239,12 +239,12 @@ for (const [to, list] of Object.entries(found.inbox).sort((a, b) => b[1].length 
 }
 lines.push("");
 
-lines.push(`## 오래 열린 일 (${LIMITS.open}일 넘게 날짜 그대로, \`hub/roles/\`)`, "");
+lines.push(`## 오래 열린 일 (${LIMITS.open}일 넘게 날짜 그대로, \`hub/work/roles/\`)`, "");
 if (!found.open.length) lines.push("- 없음");
 for (const o of found.open) lines.push(`- ${o.role} · ${o.age}일 · ${o.text}${o.left ? " — 남은 것 있음" : ""}`);
 lines.push("");
 
-lines.push(`## 멈춘 초안 (${LIMITS.draft}일 넘음, \`hub/drafts/\`)`, "");
+lines.push(`## 멈춘 초안 (${LIMITS.draft}일 넘음, \`hub/work/drafts/\`)`, "");
 if (!found.drafts.length) lines.push("- 없음");
 for (const d of found.drafts) lines.push(`- \`${d.file}\` · ${d.age}일 · ${d.status}`);
 lines.push("");
@@ -263,5 +263,5 @@ const text = lines.join("\n").trimEnd() + "\n";
 if (args.includes("--stdout")) process.stdout.write(text);
 else {
   fs.writeFileSync(OUT, text);
-  console.log(`hub/forgotten.md · ${summary.join(" · ")}`);
+  console.log(`hub/work/forgotten.md · ${summary.join(" · ")}`);
 }

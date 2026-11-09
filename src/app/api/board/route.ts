@@ -144,7 +144,7 @@ export async function POST(request: NextRequest) {
     const groupId = topic === "group" && isGroupId(body.groupId) ? body.groupId : undefined;
     if (roomId && !(await roomForPost(me, roomId))) return bad(request, "BAD_ROOM");
     if (groupId && !(await groupForPost(me, groupId))) return bad(request, "BAD_GROUP");
-    // 기여한 사람의 새 글은 처음 몇 시간 위쪽에(hub/drafts/profile-2026-10-23.md, 정렬만 — 비용 없음).
+    // 기여한 사람의 새 글은 처음 몇 시간 위쪽에(hub/work/drafts/profile-2026-10-23.md, 정렬만 — 비용 없음).
     const boostMs = boardBoostMs(contribScore(await readContrib(me), Date.now()));
     const created = await createPost({ author: me, language: body.language, text, images, boostMs, topic, roomId, groupId });
     if ("error" in created) return answer(request, created, "post");

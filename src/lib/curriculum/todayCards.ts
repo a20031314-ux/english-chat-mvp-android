@@ -1,5 +1,5 @@
 /**
- * Logbank "오늘" 카드(개편 3단계 2026-11-06, 설계 hub/drafts/no-today-2026-11-05.md 8절 B안 · logbank-2026-11-06.md 4절 ①).
+ * Logbank "오늘" 카드(개편 3단계 2026-11-06, 설계 hub/work/drafts/no-today-2026-11-05.md 8절 B안 · logbank-2026-11-06.md 4절 ①).
  * 쌓인 사건(logLedger.ts)과 체크 셋(checkState.ts)으로 최대 셋을 고른다. 모델 없음, 이 폰에서.
  *
  *   ① check  확인할 것   — 1·3·7·30일 된 앎이 넷 이상            → 그 열쇠 퀴즈 한 판

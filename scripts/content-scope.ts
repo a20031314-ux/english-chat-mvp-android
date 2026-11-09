@@ -3,7 +3,7 @@
  * 화면(My n단계 칸 📖 아이콘)과 같은 셈(src/lib/curriculum/contentScope.ts). 낱말 = 빈도 목록 + 운영에서 사용자들이 찾아 더한 낱말 수.
  * 은행이 늘면 숫자도 늘므로 홍보·스토어 문구를 쓰기 전에 다시 돌린다.
  *
- * Run: node --experimental-strip-types scripts/content-scope.ts [--offline]   → hub/CONTENT.md
+ * Run: node --experimental-strip-types scripts/content-scope.ts [--offline]   → hub/app/CONTENT.md
  */
 import fs from "node:fs";
 import { contentScope } from "../src/lib/curriculum/contentScope.ts";
@@ -61,5 +61,5 @@ ${rows.join("\n")}
 ## 단계마다
 
 ${detail.join("\n")}`;
-fs.writeFileSync("hub/CONTENT.md", out);
-console.log(`hub/CONTENT.md — ${LANGS.length} languages`);
+fs.writeFileSync("hub/app/CONTENT.md", out);
+console.log(`hub/app/CONTENT.md — ${LANGS.length} languages`);

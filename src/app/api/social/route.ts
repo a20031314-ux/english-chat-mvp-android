@@ -36,7 +36,7 @@ export const dynamic = "force-dynamic";
  * 프로필 보기만 로그인 없이도 되고(팔로우 여부는 false), 나머지는 로그인해야 한다.
  *
  * 공개 프로필에는 닉네임·자기소개·사진·가입 시기·숫자, 나에 대한 사실(칩), 켠 칸(기여·꾸준함·목표)만 —
- * 아이디·이메일·학습 상태(실수·약점·레벨·문장)는 내보내지 않는다(hub/drafts/profile-2026-10-23.md).
+ * 아이디·이메일·학습 상태(실수·약점·레벨·문장)는 내보내지 않는다(hub/work/drafts/profile-2026-10-23.md).
  *
  * thank: "도움됐어요" — 질문한 사람만 그 답에(server/contribStore.ts findAnswerer).
  */

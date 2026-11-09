@@ -191,7 +191,7 @@ export type DirectorRequest = {
   /** 그 문장을 지금까지 몇 번 말해 보라고 했나(1·2). 2면 이번이 마지막 — 또 틀려도 다시 묻지 않고 넘어간다. */
   redoTries?: number;
   /**
-   * 자유대화 채우기(2026-11-06, hub/drafts/call-modes-2026-11-06.md 6절): 이번 튜터 차례가 몰아갈 곳 한 줄(영어, 모델용).
+   * 자유대화 채우기(2026-11-06, hub/work/drafts/call-modes-2026-11-06.md 6절): 이번 튜터 차례가 몰아갈 곳 한 줄(영어, 모델용).
    * 앱이 기록으로 고른다(talkAims.ts). 튜터는 말하지 않고, 학습자 말과 안 맞으면 버린다. 예문은 넣지 않는다.
    */
   aim?: string;
@@ -289,7 +289,7 @@ export type Direction = {
   /** 튜터 수업: 이번 ask는 고친 게 아니라 더 자연스러운 표현을 건넨 것(말한 건 맞았음) — 화면 카드가 💡로(2026-11-02). */
   offer?: boolean;
   /**
-   * 차례 재기(Logbank 육각형 듣기·실전 대화, 2026-11-02 hub/drafts/fill-gauge-2026-11-02.md 9절) — 같은 호출에서 판단, 화면엔 안 보임.
+   * 차례 재기(Logbank 육각형 듣기·실전 대화, 2026-11-02 hub/work/drafts/fill-gauge-2026-11-02.md 9절) — 같은 호출에서 판단, 화면엔 안 보임.
    * heard: 튜터가 바로 앞에서 물었을 때 그 말에 맞게 답했나(yes)·엉뚱한 답(off)·아무 질문에나 맞는 얼버무림(vague).
    */
   heard?: Heard;

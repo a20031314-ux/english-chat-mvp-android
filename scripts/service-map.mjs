@@ -5,7 +5,7 @@
  * - 그림과 글은 사용법(?)에서 가져온다: `src/lib/guide/content.ts`의 한국어 글(GUIDE_KO) + `public/guide/ko/*.webp`.
  *   버튼 이름 {ui:키}는 `copy.ts` 한국어 문구로 채운다. 사용법을 고치면 지도도 다시 만들기만 하면 맞춰진다.
  * - 웹 창구(Moyeo·Pingo·웹 앱)는 운영 주소를 폰 크기로 찍는다(`--no-capture`면 지난번 그림을 그대로 쓴다).
- * - 코드 영역(화면 파일·API)은 `hub/STRUCTURE.md` 자동 부분에서 읽는다.
+ * - 코드 영역(화면 파일·API)은 `hub/app/STRUCTURE.md` 자동 부분에서 읽는다.
  *
  * 실행: node scripts/service-map.mjs [--no-capture]   → tmp/service-map/index.html + shots/
  * 올리기: Artifact 도구로 tmp/service-map/index.html을 hub/README.md "서비스 지도" 주소(url)에, shots/는 files로.
@@ -41,7 +41,7 @@ function copyShot(src, name) {
   usedFiles.add(rel);
   return rel;
 }
-// ── 스크린샷 모음(hub/SHOTS.md): tmp/shots/plan.json(scripts/shots-plan.mjs)과 내려받은 그림 tmp/shots/img/<assetId>.* ──
+// ── 스크린샷 모음(hub/work/SHOTS.md): tmp/shots/plan.json(scripts/shots-plan.mjs)과 내려받은 그림 tmp/shots/img/<assetId>.* ──
 // 고른 그림(picks)은 그 사용법 칸 그림을 바꾸고, 칸마다 자동으로 고른 장면은 한국어 화면이 대표·다른 언어 조합은 보조(alts).
 const SHOT_DIR = path.join(ROOT, "tmp/shots");
 const plan = fs.existsSync(path.join(SHOT_DIR, "plan.json")) ? JSON.parse(fs.readFileSync(path.join(SHOT_DIR, "plan.json"), "utf8")) : null;
@@ -136,8 +136,8 @@ const web = (name, heading, body) => {
   return { heading, body: [body], img: ok ? rel : null, from: "운영 주소 캡처" };
 };
 
-// ── 코드 영역: hub/STRUCTURE.md 자동 부분 ──────────────────────────────────────────────
-const structure = fs.readFileSync(path.join(ROOT, "hub/STRUCTURE.md"), "utf8");
+// ── 코드 영역: hub/app/STRUCTURE.md 자동 부분 ──────────────────────────────────────────────
+const structure = fs.readFileSync(path.join(ROOT, "hub/app/STRUCTURE.md"), "utf8");
 const areas = {};
 for (const block of structure.split(/\n(?=### )/)) {
   const head = block.match(/^### (.+?) `(\w+)`/);
@@ -422,10 +422,10 @@ try {
 let apiCount = 0;
 for (const a of Object.values(areas)) apiCount += a.apis.length;
 
-// ── 갱신 기록: hub/service-map.json(칸마다 지문 + 바뀐 것 기록) ─────────────────────────
+// ── 갱신 기록: hub/app/service-map.json(칸마다 지문 + 바뀐 것 기록) ─────────────────────────
 // 예약 작업 "서비스 지도 갱신"이 매일 이 스크립트를 돌린다. 칸의 글·그림(저장소 그림은 파일 내용,
 // 운영 캡처는 글만 — 열린 방 수처럼 매번 달라지는 화면은 세지 않음)·코드 영역이 바뀌면 그 칸을 기록한다.
-const SNAPSHOT = path.join(ROOT, "hub/service-map.json");
+const SNAPSHOT = path.join(ROOT, "hub/app/service-map.json");
 const hashOf = (value) => createHash("sha1").update(value).digest("hex").slice(0, 12);
 const fileHash = (rel) => (rel && !rel.startsWith("shots/web-") && fs.existsSync(path.join(OUT_DIR, rel)) ? hashOf(fs.readFileSync(path.join(OUT_DIR, rel))) : "");
 function fingerprint(n) {
@@ -492,6 +492,6 @@ const template = fs.readFileSync(path.join(ROOT, "scripts/service-map.template.h
 fs.writeFileSync(path.join(OUT_DIR, "index.html"), template.replace("/*MAP_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c")));
 const bytes = [...usedFiles].reduce((sum, rel) => sum + fs.statSync(path.join(OUT_DIR, rel)).size, 0);
 console.log(`서비스 지도 → tmp/service-map/index.html (칸 ${nodes.length}, 그림 ${usedFiles.size}장 ${(bytes / 1e6).toFixed(1)}MB)`);
-// 그림이 필요한 칸 → 스크린샷 모음 페이지 meta/plan에 Claude가 옮긴다(hub/SHOTS.md).
+// 그림이 필요한 칸 → 스크린샷 모음 페이지 meta/plan에 Claude가 옮긴다(hub/work/SHOTS.md).
 fs.writeFileSync(path.join(OUT_DIR, "needs.json"), JSON.stringify({ needs: [...new Map(needs.map((x) => [x.key, x])).values()], nodes: nodes.map((n) => ({ id: n.id, title: n.title })) }, null, 1));
 fs.writeFileSync(path.join(OUT_DIR, "files.json"), JSON.stringify(Object.fromEntries([...usedFiles].sort().map((rel) => [rel, path.join(OUT_DIR, rel)])), null, 1));

@@ -24,9 +24,9 @@ jobs:
         run: npm run check:strings
       - name: Language facts
         run: npm run check:languages
-      - name: Design tokens (hub/DESIGN.md)
+      - name: Design tokens (hub/app/DESIGN.md)
         run: npm run check:design
-      - name: Feature ledger and copy keys (hub/FEATURES.md — one name per feature, no leftover strings)
+      - name: Feature ledger and copy keys (hub/app/FEATURES.md — one name per feature, no leftover strings)
         run: npm run check:features
       - name: Types
         run: npx tsc --noEmit -p .

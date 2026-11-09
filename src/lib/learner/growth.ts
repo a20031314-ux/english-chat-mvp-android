@@ -1,6 +1,6 @@
 /**
  * How each part of a learner's language has grown: the My tab's network
- * (hub/drafts/my-growth-network.md).
+ * (hub/work/drafts/my-growth-network.md).
  *
  * Six elements, the same six as the self-check's gaps (selfCheck.ts) so the
  * first ticks, the tutor's brief and this picture read one axis. Each grows

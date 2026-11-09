@@ -8,7 +8,7 @@ import { SPEECH_DEFAULTS } from "../aiDefaults.ts";
  * 두 번째 의견 받아쓰기 — 방 내 줄 교정에서 확신이 어중간한 조각만(2026-10-22, 사용자 결정 (나)).
  *
  * 화면에 뜬 받아쓰기와 다른 모델이어야 의미가 있다. 실제 학습자 영어 발음에 가장 강했던 Scribe v2를 먼저
- * (`hub/drafts/speech-models-2026-10-21.md` — 낱말 오류 17% vs 지금 모델 25%), 키가 없으면 다른 OpenAI 모델.
+ * (`hub/work/drafts/speech-models-2026-10-21.md` — 낱말 오류 17% vs 지금 모델 25%), 키가 없으면 다른 OpenAI 모델.
  * 지시는 화면 받아쓰기와 같다: 들린 그대로, 실수도 그대로.
  */
 

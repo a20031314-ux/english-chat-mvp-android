@@ -33,7 +33,7 @@ export async function OPTIONS(request: NextRequest) {
 const bad = (request: NextRequest, error: string, status = 400) => jsonWithCors(request, { error }, { status });
 
 /**
- * 해외용 나이 확인(신분증·얼굴 나이 추정 업체, `hub/drafts/doors.md`): 업체를 정하고 계약한 뒤 붙인다.
+ * 해외용 나이 확인(신분증·얼굴 나이 추정 업체, `hub/work/drafts/doors.md`): 업체를 정하고 계약한 뒤 붙인다.
  * 그때까지 false — 해외 접속자는 "해외 인증 준비 중"을 보고, 한국 휴대폰 번호가 있으면 포트원으로 인증할 수 있다.
  */
 function globalVerifyConfigured(): boolean {

@@ -1,5 +1,5 @@
 /**
- * Stagebank 표현·문법 칸 수업(2026-11-01 설계 "설명은 Stagebank, 문제는 Quizbank", hub/drafts/quiz-pages-2026-11-01.md 2절):
+ * Stagebank 표현·문법 칸 수업(2026-11-01 설계 "설명은 Stagebank, 문제는 Quizbank", hub/work/drafts/quiz-pages-2026-11-01.md 2절):
  * 문장구조 수업(server/frameLesson.ts)과 같은 방식 — 소재마다 한 번 Haiku가 ① 뜻·쓰임·짧은 설명 줄(영어)
  * ② 그 소재를 쓰는 주고받기 세 번(상대 줄·내 줄은 학습 언어, 각 줄 영어 뜻)을 만들고, 앱 언어가 영어가 아니면 옮겨 둔다.
  * 모두가 같이 쓰는 저장(`itemlesson:v2`), 학습자 글 없음. 표현은 내 줄에 그 표현이 그대로 들어야 하고, 연습 예문과 겹치면 안 된다.

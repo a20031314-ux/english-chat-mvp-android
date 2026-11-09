@@ -24,7 +24,7 @@ import {
  * 앱이 부르는 때: 사용자가 접힌 교정을 열 때(기본 "눌러서 보기"), 또는 "바로 보기"에서 답을 받은 뒤 뒤에서.
  * 위험한 줄만(`correctionRisk`) — 아니면 모델 없이 그대로 돌려준다. 하루 상한 `VERIFY_DAILY_MAX`(기본 30)를 넘으면 그대로.
  * 학습자 문장은 저장하지 않는다(받아서 보고 돌려줄 뿐). 학습 기록은 채팅 턴 때 이미 싼 모델 교정으로 남았다.
- * 설계: `hub/drafts/model-cascade-2026-10-21.md` 안 C.
+ * 설계: `hub/work/drafts/model-cascade-2026-10-21.md` 안 C.
  */
 
 const MAX_CHARS = 600;

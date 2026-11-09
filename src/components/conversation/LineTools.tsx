@@ -8,7 +8,7 @@ import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 
 /**
- * 대화 줄의 할 일 한 줄(2026-10-23, hub/drafts/conversation-unify-2026-10-23.md):
+ * 대화 줄의 할 일 한 줄(2026-10-23, hub/work/drafts/conversation-unify-2026-10-23.md):
  * 줄에는 버튼을 늘 달지 않고, 줄을 누르면 이 한 줄이 열린다 — AI 채팅·AI 통화·1:1·단체방·Room이 같은 모양.
  * 듣기 · 번역(있을 때) · 분석(학습 언어 줄) + 화면마다 더하는 것(묻기·답하기·신고 등).
  */

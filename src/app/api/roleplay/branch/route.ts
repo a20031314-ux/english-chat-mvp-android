@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 /**
  * POST { sceneId, nodeId, heard, strictness?, tutorGender? } → { go, branch, by }
  *
- * 장면 통화의 가지 고르기(2026-11-02, `hub/drafts/call-scripts-design-2026-11-01.md` 4절 2, lib/roleplay/branchPick.ts).
+ * 장면 통화의 가지 고르기(2026-11-02, `hub/work/drafts/call-scripts-design-2026-11-01.md` 4절 2, lib/roleplay/branchPick.ts).
  * 앱이 규칙 맞추기로 못 받은 학습자 말을 보내면: 서버가 규칙을 한 번 더(같은 엄격함) → 그래도 없으면 Haiku가 가지 하나 또는 없음.
  * `by: "none"`이면 앱은 지금처럼 튜터(/api/roleplay/turn)를 부른다. 장면은 서버의 것만(요청의 글을 믿지 않음).
  * 학습자 말은 판단에만 쓰고 어디에도 남기지 않는다. 짧게만 받는다(300자).

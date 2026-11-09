@@ -1,5 +1,5 @@
 /**
- * 지금 있는 기록 → 채우기 증거(curriculum/fill.ts FillEvent·CallTurns, 2026-11-02 hub/drafts/fill-gauge-2026-11-02.md 11절 "기록 → 꼭짓점").
+ * 지금 있는 기록 → 채우기 증거(curriculum/fill.ts FillEvent·CallTurns, 2026-11-02 hub/work/drafts/fill-gauge-2026-11-02.md 11절 "기록 → 꼭짓점").
  * Logbank가 이미 받는 재료만 쓴다 — 서버 logItems(배움·익힘·고침)·익힘 기록 known(맞힌 날)·시험 결과 checkups·이 폰의 Quizbank 날마다(quizDays)·
  * 수업 결과(dayLog)·통화 숫자(callDays). 순수 모듈, 모델 없음.
  */

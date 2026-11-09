@@ -41,7 +41,7 @@
           {
             "type": "command",
             "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/hub.mjs\" stop",
-            "timeout": 20
+            "timeout": 45
           }
         ]
       }

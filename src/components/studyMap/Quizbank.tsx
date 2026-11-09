@@ -41,7 +41,7 @@ import { loadVocabulary } from "@/lib/vocabulary";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 
 /**
- * Quizbank — 한 흐름 퀴즈(설계 hub/QUIZ.md 0-2~0-4): Logbank 오늘 카드가 맡긴 열쇠 → 고르기로 맞힌 New를 쓰기로 →
+ * Quizbank — 한 흐름 퀴즈(설계 hub/app/QUIZ.md 0-2~0-4): Logbank 오늘 카드가 맡긴 열쇠 → 고르기로 맞힌 New를 쓰기로 →
  * 다시 볼 것(장부 todayCards.ts reviewKeys)과 새 묶음(낱말 수준 어림 vocabLevel + 표현 카드 + 넣어 둔 문법·표현 문제) 번갈아.
  * 낱말·표현은 카드 한 장에서 한 칸 가림(quiz.ts cardQuiz, 모양은 quizTier.ts), 결과는 사건 장부(logLedger)·quizDays·서버 익힘(/api/curriculum/scripts check).
  * 칸 몸통(keep)과 칸 밖에 떠야 하는 것(overlays)을 children으로 넘긴다 — 칸을 그리는 쪽은 notes/NotebookSection.

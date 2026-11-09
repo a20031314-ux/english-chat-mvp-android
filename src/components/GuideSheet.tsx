@@ -24,7 +24,7 @@ import {
 } from "@/lib/features";
 
 /**
- * 사용법 창 하나(2026-10-20, hub/DESIGN.md "안내 글"). 위쪽 "?"는 지금 화면의 기능 칸으로 열고,
+ * 사용법 창 하나(2026-10-20, hub/app/DESIGN.md "안내 글"). 위쪽 "?"는 지금 화면의 기능 칸으로 열고,
  * 새로워진 점의 "자세히"는 그 칸으로 연다(appIntent `openGuide`). 기능별 묶음마다 "이 화면으로 가기".
  *
  * 글은 서버에서 온다(/api/guide, src/lib/guide/content.ts) — 푸시로 고칠 수 있게. 버튼 이름은

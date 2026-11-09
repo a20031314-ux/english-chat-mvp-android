@@ -7,7 +7,7 @@ import { fillTeam, teamCopy } from "@/lib/rooms/teamCopy";
 import { Face, useProfile } from "./RoomParts";
 
 /**
- * 러닝메이트 신청(hub/drafts/team-workspace.md). 프로필 시트의 버튼과, 1:1 통화가 끝났을 때 한 번 묻는 시트.
+ * 러닝메이트 신청(hub/work/drafts/team-workspace.md). 프로필 시트의 버튼과, 1:1 통화가 끝났을 때 한 번 묻는 시트.
  * 두 사람 사이 메이트는 하나 — 상대가 먼저 신청했으면 누르는 순간 수락(서버 requestMate).
  */
 export function MateButton({ accountId, locale }: { accountId: string; locale: string }) {

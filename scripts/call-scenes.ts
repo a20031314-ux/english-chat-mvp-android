@@ -1,5 +1,5 @@
 /**
- * 통화 장면 만들기 도구(2026-11-02, `hub/drafts/call-scripts-design-2026-11-01.md` 9·15절).
+ * 통화 장면 만들기 도구(2026-11-02, `hub/work/drafts/call-scripts-design-2026-11-01.md` 9·15절).
  *
  *   node --experimental-strip-types scripts/call-scenes.ts brief <lang> <stage>     — 쓰는 사람에게 줄 자료
  *   node --experimental-strip-types scripts/call-scenes.ts check <lang> <stage>     — src/lib/roleplay/scenes/<lang>/s<stage>.json 검사 + 빈틈 검사

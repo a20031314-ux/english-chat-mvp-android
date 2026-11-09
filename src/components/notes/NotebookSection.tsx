@@ -27,7 +27,7 @@ import { scheduleMorning } from "@/lib/morningNotify";
 /**
  * My 칸 셋 [Logbank · Quizbank · Languagebank] — 위 칸 이름 줄이 탭, 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면.
  * Logbank = 오늘 카드·배운 것·학습 타임라인, Quizbank = 한 흐름 퀴즈(TodayPlan), Languagebank = 사전(+ 글자가 다른 언어면 글자·소리 칸).
- * 재료는 /api/notebook(단계·문법 칸 이름·고친 줄·Logbank 기록). 칸 이름·흐름은 hub/STRUCTURE.md "My".
+ * 재료는 /api/notebook(단계·문법 칸 이름·고친 줄·Logbank 기록). 칸 이름·흐름은 hub/app/STRUCTURE.md "My".
  */
 
 type NodeView = { id: string; chapter: string; stage?: number; index?: number; name: string };
@@ -169,7 +169,7 @@ export function NotebookSection({
 type LayerPart = { summary: ReactNode; body: ReactNode };
 type PlanParts = { keep: LayerPart; review: LayerPart; overlays: ReactNode };
 
-/** 칸마다 다른 색 — 펼친 칸의 테두리·바탕·제목, 고르지 않은 이름 버튼도 그 칸 색. hub/DESIGN.md "My 큰 칸 색". */
+/** 칸마다 다른 색 — 펼친 칸의 테두리·바탕·제목, 고르지 않은 이름 버튼도 그 칸 색. hub/app/DESIGN.md "My 큰 칸 색". */
 const LAYER_TONE: Record<MyLayer, { box: string; title: string; dim: string }> = {
   keep: { box: "border-good/40 bg-good/[0.04]", title: "text-good", dim: "border-good/20 text-good/70" },
   log: { box: "border-info/40 bg-info/[0.04]", title: "text-info", dim: "border-info/20 text-info/70" },

@@ -1,6 +1,6 @@
 /**
  * Asking about one's own progress: "what has got better lately?", "what should
- * I do more of?" (hub/drafts/my-growth-network.md, "ask directly").
+ * I do more of?" (hub/work/drafts/my-growth-network.md, "ask directly").
  *
  * The answer is written from what is kept and nothing else — the growing
  * elements, the mistakes that recur, the stuck moments, what they ticked when

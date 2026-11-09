@@ -10,7 +10,7 @@ const LOG = bankTone("log");
 
 /**
  * Logbank 맨 위 언어능력 육각형(2026-11-02 사용자 그림 "언어능력 지도" — 꼭짓점을 누르면 그 변수의 게이지, 빈 곳을 누르면 부족한 것·공부할 것·추천,
- * hub/drafts/fill-gauge-2026-11-02.md 9~11절). 값은 curriculum/fill.ts computeFill. 진한 면 = 지금, 흐린 선 = 고른 기간이 시작할 때.
+ * hub/work/drafts/fill-gauge-2026-11-02.md 9~11절). 값은 curriculum/fill.ts computeFill. 진한 면 = 지금, 흐린 선 = 고른 기간이 시작할 때.
  * 수렴 전 꼭짓점은 "~n%"와 축 위 범위 띠, 부족한 세부 칸이 있는 꼭짓점은 주황 점. 설명 글 없음(RULES 4) — 이름·숫자·아이콘만.
  * 숫자·점·▲는 띠(SkillBands)와 같은 규칙(curriculum/bandView.ts, 2026-11-07): 답 8개 미만인 꼭짓점은 ─, 면은 가운데, 빈 점.
  */

@@ -22,8 +22,8 @@ import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext"
 import type { BoardPost } from "@/lib/rooms/board";
 
 /**
- * 프로필 사실·칸·도움됐어요 화면 부품(hub/drafts/profile-2026-10-23.md, 서버는 1단계에 들어감).
- * 칸 이름·칩·스위치·상태만 보이고, 쓰는 법 설명은 사용법(?) 칸에만(hub/DESIGN.md "안내 글").
+ * 프로필 사실·칸·도움됐어요 화면 부품(hub/work/drafts/profile-2026-10-23.md, 서버는 1단계에 들어감).
+ * 칸 이름·칩·스위치·상태만 보이고, 쓰는 법 설명은 사용법(?) 칸에만(hub/app/DESIGN.md "안내 글").
  */
 
 function Chip({ label, on, disabled, onClick }: { label: string; on: boolean; disabled?: boolean; onClick: () => void }) {

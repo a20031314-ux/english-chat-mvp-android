@@ -71,7 +71,7 @@ const BANNER_TABS: AppTab[] = ["map", "video", "vocab", "talk"];
 const NO_APP_OPEN_TABS: AppTab[] = ["roleplay", "rooms"];
 
 /**
- * 하단 탭(2026-10-20, `hub/drafts/one-list-tabs.md`): 대화 · 영상 · 사람 · 룸 · My. 묶음 스위치는 없다.
+ * 하단 탭(2026-10-20, `hub/work/drafts/one-list-tabs.md`): 대화 · 영상 · 사람 · 룸 · My. 묶음 스위치는 없다.
  * "대화"(talk)는 목록: 맨 위 AI 튜터(줄 → 채팅, 📞 → 통화), 그 아래 단체방·1:1(예전 메시지 탭).
  * 채팅·통화는 대화 안에서 열리는 화면이라 하단에서는 대화가 켜져 보이고, 위에 "‹ 대화"가 생긴다.
  * 사람 기능이 꺼지면(iOS 1차, socialFeaturesEnabled) 채팅 · 통화 · 영상 · My — 목록 없이 지금과 같다.

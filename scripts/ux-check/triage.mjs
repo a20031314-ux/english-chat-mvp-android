@@ -1,6 +1,6 @@
 // 가상 사용자가 문제 화면에서 남긴 표시(/mark, tmp/ux/marks/<이름>.jsonl)를 이유·열쇠별로 묶고, 고칠 자리를 붙인다
 // (2026-11-01 사용자 "가상 사용자 피드백을 구체화 — 난이도가 너무 쉽다면 어떤 부분이 그렇게 느껴졌는지 파악해서 바로 반영").
-//   node scripts/ux-check/triage.mjs [YYYY-MM-DD]  → 표준 출력 + hub/drafts/ux-marks-<날>.md
+//   node scripts/ux-check/triage.mjs [YYYY-MM-DD]  → 표준 출력 + hub/work/drafts/ux-marks-<날>.md
 // 고치는 쪽은 scripts/ux-check/FIX.md를 따른다.
 import fs from "node:fs";
 import path from "node:path";
@@ -42,7 +42,7 @@ for (const [reason, list] of byReason) {
 const text = out.join("\n") + "\n";
 process.stdout.write(text);
 if (rows.length) {
-  const file = path.join(ROOT, "hub/drafts", `ux-marks-${date}.md`);
+  const file = path.join(ROOT, "hub/work/drafts", `ux-marks-${date}.md`);
   fs.writeFileSync(file, text);
   console.error(`→ ${path.relative(ROOT, file)}`);
 }

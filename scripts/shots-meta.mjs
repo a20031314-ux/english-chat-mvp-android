@@ -1,5 +1,5 @@
 /**
- * 스크린샷 모음 페이지의 meta/plan 문서 만들기(hub/SHOTS.md): 그림이 필요한 칸·지도 칸 목록·지도에 쓰는 그림.
+ * 스크린샷 모음 페이지의 meta/plan 문서 만들기(hub/work/SHOTS.md): 그림이 필요한 칸·지도 칸 목록·지도에 쓰는 그림.
  * 먼저 scripts/shots-plan.mjs와 npm run service-map을 돌린 뒤. → tmp/shots/meta-plan.json (ArtifactData set meta/plan file_path)
  */
 import fs from "node:fs";

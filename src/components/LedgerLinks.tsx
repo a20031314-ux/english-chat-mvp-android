@@ -17,7 +17,7 @@ import {
 
 /**
  * A line, connected to the rest of what the learner has met
- * (hub/drafts/tab-connections.md).
+ * (hub/work/drafts/tab-connections.md).
  *
  * Under their own sentence ("mine"): a phrase in it they first met in another
  * tab — "met in Video · 0:42", which takes them back to the scene — or one

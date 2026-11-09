@@ -10,7 +10,7 @@ import type { LedgerState, Place } from "@/lib/learner/ledger";
 
 /**
  * The expression ledger as the device holds it, for connecting the tabs
- * (hub/drafts/tab-connections.md): fetched once per language when a screen
+ * (hub/work/drafts/tab-connections.md): fetched once per language when a screen
  * that needs it opens, refreshed a moment after a turn has been read on the
  * server, and matched against lines here — no request per line.
  */

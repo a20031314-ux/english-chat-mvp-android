@@ -1,12 +1,12 @@
 // 변경 감시(2026-11-01 사용자 "기능 변경 후 비용·광고·퀴즈가 어떻게 바뀌는지 자동으로 알려 줘 — 기능 채팅이 다 하면 오래 걸리니 따로 두고, 알려야 할 것만 나한테").
 // 예약 작업 "변경 감시"가 2시간마다 부른다. 개발 채팅은 아무것도 안 해도 된다. 고치지 않고, 재고 비교하고 알릴 것만 고른다.
 //
-//   node scripts/watch/watch.mjs plan      마지막으로 본 커밋(hub/watch.json last) 뒤 main의 바뀐 파일 → tmp/watch/plan.json, diff.patch
+//   node scripts/watch/watch.mjs plan      마지막으로 본 커밋(hub/app/watch.json last) 뒤 main의 바뀐 파일 → tmp/watch/plan.json, diff.patch
 //                                          볼 것이 없으면(허브·문서만 바뀜) "nothing" — 예약 작업은 거기서 끝.
 //   node scripts/watch/watch.mjs measure   지금 코드로 잼(모델·네트워크 없음, 약 1~2분) → tmp/watch/now.json
 //                                          비용표(plan-cost) · 손익(economics) · 광고 지도(ads-map) 표의 모든 칸 + 퀴즈 전수 점검 원인별 수
-//   node scripts/watch/watch.mjs compare   hub/watch.json 기준값과 비교 → tmp/watch/delta.json · tmp/watch/summary.md(알릴 것 notify 표시)
-//   node scripts/watch/watch.mjs save      지금 값을 기준값으로(hub/watch.json — last·at·metrics) — 보고를 남긴 뒤 커밋할 때
+//   node scripts/watch/watch.mjs compare   hub/app/watch.json 기준값과 비교 → tmp/watch/delta.json · tmp/watch/summary.md(알릴 것 notify 표시)
+//   node scripts/watch/watch.mjs save      지금 값을 기준값으로(hub/app/watch.json — last·at·metrics) — 보고를 남긴 뒤 커밋할 때
 //
 // 알림 기준(사용자 2026-11-01 기본값으로 정함): 돈 칸(원)이 500원 넘게 바뀜 · 전면 광고 순간·광고 자리가 생기거나 없어짐 ·
 // 퀴즈 원인이 새로 생김(0 → n) 또는 20건 넘게 늚. 그 밖의 차이는 알림 없이 보고만(아침 일일 보고가 묶음).
@@ -18,7 +18,7 @@ import { numberOf, tableCells } from "./tables.mjs";
 
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, "tmp/watch");
-const STATE = path.join(ROOT, "hub/watch.json");
+const STATE = path.join(ROOT, "hub/app/watch.json");
 fs.mkdirSync(OUT, { recursive: true });
 const MONEY_ALERT = 500;
 const QUIZ_ALERT = 20;
@@ -40,7 +40,7 @@ const CHECKS = {
   review: (f) => f.startsWith("src/"),
 };
 
-/** 영역(작업 줄 설계의 줄 이름 — hub/drafts/lanes-2026-11-01.md)으로 대충 나눔: 보고·받은 일을 어느 쪽에 줄지. */
+/** 영역(작업 줄 설계의 줄 이름 — hub/work/drafts/lanes-2026-11-01.md)으로 대충 나눔: 보고·받은 일을 어느 쪽에 줄지. */
 function laneOf(file) {
   if (/curriculum|studyMap|notes\/|notebook|stageScript|qbank|wordCards|wordExtras|frameLesson|recall/.test(file)) return "my";
   if (/roleplay|ChatWindow|chat|Call|pack|correction|tutorLanguage|video|contentDiscovery|realtime|turn\.ts|secondListen|stt/i.test(file)) return "ai";
@@ -112,13 +112,13 @@ function measure() {
   now.tables.costs = tableCells(run("node", [...NODE, "scripts/plan-cost.mjs", "--stdout"]));
   now.tables.economics = tableCells(run("node", [...NODE, "scripts/sim-users/economics.mjs"]));
   // 광고 지도는 파일에 쓰는 도구라, 쓴 뒤 읽고 원래대로 돌린다(CI가 main에서 다시 만들어 커밋함).
-  const adsBefore = fs.readFileSync(path.join(ROOT, "hub/ADS.md"), "utf8");
+  const adsBefore = fs.readFileSync(path.join(ROOT, "hub/app/ADS.md"), "utf8");
   try {
     run("node", [...NODE, "scripts/ads-map.mjs"]);
-    const ads = fs.readFileSync(path.join(ROOT, "hub/ADS.md"), "utf8");
+    const ads = fs.readFileSync(path.join(ROOT, "hub/app/ADS.md"), "utf8");
     now.tables.ads = tableCells(ads.slice(ads.indexOf("<!-- 자동")));
   } finally {
-    fs.writeFileSync(path.join(ROOT, "hub/ADS.md"), adsBefore);
+    fs.writeFileSync(path.join(ROOT, "hub/app/ADS.md"), adsBefore);
   }
   // 퀴즈 전수 점검(앱 데이터만, 모델·네트워크 없음).
   const date = `watch-${now.commit}`;
@@ -131,7 +131,7 @@ function measure() {
 }
 
 // ---------- 비교 ----------
-const DOC_NAME = { costs: "비용표(hub/costs.md)", economics: "손익(hub/economics.md)", ads: "광고 지도(hub/ADS.md)" };
+const DOC_NAME = { costs: "비용표(hub/app/costs.md)", economics: "손익(hub/app/economics.md)", ads: "광고 지도(hub/app/ADS.md)" };
 
 function compare() {
   const state = readState();

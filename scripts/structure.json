@@ -1,5 +1,5 @@
 {
-  "_": "앱 전체구조(hub/STRUCTURE.md)의 자리표. 화면 코드(src/components)·API(src/app/api)·웹 페이지(src/app/**/page.tsx)가 어느 영역에 속하는지 정한다. 키는 접두어(가장 긴 것이 이김): 'components/rooms/'는 폴더 전체, 'components/ChatWindow'는 파일 하나, 'api/roleplay/'는 그 아래 모든 경로, 'api/chat'은 그 경로 하나. 새 파일이 어느 키에도 안 걸리거나, 아무것에도 안 걸리는 키가 남으면 node scripts/structure.mjs --check 와 CI(structure)가 실패한다.",
+  "_": "앱 전체구조(hub/app/STRUCTURE.md)의 자리표. 화면 코드(src/components)·API(src/app/api)·웹 페이지(src/app/**/page.tsx)가 어느 영역에 속하는지 정한다. 키는 접두어(가장 긴 것이 이김): 'components/rooms/'는 폴더 전체, 'components/ChatWindow'는 파일 하나, 'api/roleplay/'는 그 아래 모든 경로, 'api/chat'은 그 경로 하나. 새 파일이 어느 키에도 안 걸리거나, 아무것에도 안 걸리는 키가 남으면 node scripts/structure.mjs --check 와 CI(structure)가 실패한다.",
   "areas": {
     "shell": "앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법",
     "talk": "대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀",

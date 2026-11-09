@@ -1,5 +1,5 @@
 /**
- * 가상 사용자 점검 일일 보고 — 지난 24시간 점검이 남긴 것(hub/reports.md·hub/inbox.md의 git 기록)과
+ * 가상 사용자 점검 일일 보고 — 지난 24시간 점검이 남긴 것(hub/work/reports.md·hub/work/inbox.md의 git 기록)과
  * 지금 열린 qa → dev 일, 재현 캡처를 한 장의 페이지로 묶는다. 예약 작업 "가상 사용자 일일 보고"가 쓴다.
  *
  *   node scripts/sim-users/daily-digest.mjs [--hours 24] [--runs runs.json] [--shots shots.json] [--out tmp/digest/index.html]
@@ -34,7 +34,7 @@ function addedLines(file) {
 
 // 새 보고: 덧붙은 "### " 항목과 바로 아래 "- " 줄들
 const newReports = [];
-for (const line of addedLines("hub/reports.md")) {
+for (const line of addedLines("hub/work/reports.md")) {
   if (line.startsWith("### ")) newReports.push({ title: line.slice(4).trim(), body: [] });
   else if (newReports.length && /^\s*- /.test(line)) newReports.at(-1).body.push(line.trim().slice(2));
   else if (newReports.length && /^\s{2,}\S/.test(line)) newReports.at(-1).body.push(line.trim());
@@ -43,9 +43,9 @@ for (const line of addedLines("hub/reports.md")) {
 const qaLine = /^- (\d{4}-\d{2}-\d{2}) qa → ([^:]+):\s*(.*)$/;
 // "새로": 지난 시간 안의 날짜(한국 시간)로 적힌 줄. git 기록은 파일을 다시 쓰면 옛 줄도 새로 보여 날짜로 가린다.
 const since = new Date(Date.now() + 9 * 3600_000 - HOURS * 3600_000).toISOString().slice(0, 10);
-const newInbox = new Set(addedLines("hub/inbox.md").filter((l) => qaLine.test(l) && l.match(qaLine)[1] >= since));
+const newInbox = new Set(addedLines("hub/work/inbox.md").filter((l) => qaLine.test(l) && l.match(qaLine)[1] >= since));
 const open = fs
-  .readFileSync("hub/inbox.md", "utf8")
+  .readFileSync("hub/work/inbox.md", "utf8")
   .split("\n")
   .map((l) => ({ line: l, m: l.match(qaLine) }))
   .filter((x) => x.m)
@@ -53,7 +53,7 @@ const open = fs
   .sort((a, b) => (a.date < b.date ? 1 : -1));
 
 // 결정 대기: 새 보고 칸에서 "결정:"이 비어 있는 항목
-const reportsText = fs.readFileSync("hub/reports.md", "utf8");
+const reportsText = fs.readFileSync("hub/work/reports.md", "utf8");
 const newSection = reportsText.split("## 새 보고")[1]?.split("\n## ")[0] ?? "";
 const waiting = newSection
   .split("\n### ")
@@ -137,7 +137,7 @@ code { font-family: var(--mono); font-size: .85em; background: var(--chip); bord
     ${reports.length ? `<div style="display:grid;gap:12px">${reports.map((r) => `<article class="report"><h3>${inline(r.title)}</h3><ul>${r.body.filter((b) => !/^결정:\s*$/.test(b)).map((b) => `<li>${inline(b)}</li>`).join("")}</ul></article>`).join("")}</div>` : `<p class="empty">새 문제 없음. 점검은 돌았고 알려진 것만 다시 나왔어요.</p>`}
   </section>
   ${shotHtml ? `<section><h2>화면 캡처</h2><p class="meta" style="margin:-6px 0 12px">문제가 난 문장을 앱 채팅에 다시 보내 찍은 것. 모델 답이라 점검 때와 다르게 나올 수 있어요.</p><div class="shots">${shotHtml}</div></section>` : ""}
-  ${waiting.length ? `<section><h2>결정 기다림</h2><ul>${waiting.map((w) => `<li>${inline(w)}</li>`).join("")}</ul><p class="meta">hub/reports.md의 "결정:" 줄에 반영 / 보류 / 안 함을 적으면 다음 실행이 처리해요.</p></section>` : ""}
+  ${waiting.length ? `<section><h2>결정 기다림</h2><ul>${waiting.map((w) => `<li>${inline(w)}</li>`).join("")}</ul><p class="meta">hub/work/reports.md의 "결정:" 줄에 반영 / 보류 / 안 함을 적으면 다음 실행이 처리해요.</p></section>` : ""}
   <section>
     <h2>열린 일 (inbox의 qa → 줄)</h2>
     <div class="tablewrap"><table>

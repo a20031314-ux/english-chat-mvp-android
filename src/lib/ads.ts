@@ -3,7 +3,7 @@ import { entitlementHeaders, readCachedTier } from "@/lib/billing/billingService
 import { adsAvailable, isRemoteShell } from "@/lib/platform";
 
 /**
- * 광고(AdMob) — 무료 사용자에게만, 안드로이드 앱에서만(hub/drafts/ads-rewarded.md, 서버 billing/ads.ts).
+ * 광고(AdMob) — 무료 사용자에게만, 안드로이드 앱에서만(hub/work/drafts/ads-rewarded.md, 서버 billing/ads.ts).
  *
  * - 전면 광고: 자연스러운 끝(통화가 끝날 때, 채팅 몇 번 뒤 채팅 화면을 나갈 때,
  *   공개 말하는 방에 몇 분 있다 나올 때, 영상을 몇 분 보고 나올 때, My 오늘 할 것을 다 끝냈을 때·단계 화면에서 연 수업 끝,
@@ -574,7 +574,7 @@ export const NATIVE_SLOT_HEIGHT = 120;
  */
 export const NATIVE_REFRESH_MS = 60_000;
 
-/** 앱의 어두운 카드와 맞춘 색(hub/DESIGN.md 토큰 값). */
+/** 앱의 어두운 카드와 맞춘 색(hub/app/DESIGN.md 토큰 값). */
 const NATIVE_STYLE = {
   backgroundColor: "#121212",
   borderColor: "#FFFFFF1A",

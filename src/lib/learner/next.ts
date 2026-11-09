@@ -1,7 +1,7 @@
 /**
  * "Try this": the one next thing to do, from what has piled up.
  *
- * The learner no longer manages a list (hub/drafts/coaching-loop.md). What
+ * The learner no longer manages a list (hub/work/drafts/coaching-loop.md). What
  * they say is kept — the expression ledger, the mistakes that recur, the map
  * of their goal — and this reads all of it and lines up what would fill the
  * biggest gap, in this order:

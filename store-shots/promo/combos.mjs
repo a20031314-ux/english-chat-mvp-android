@@ -1,4 +1,4 @@
-// 홍보 쇼츠의 언어판과 학습 조합(사용자 결정 2026-10-24, hub/drafts/marketing-videos.md).
+// 홍보 쇼츠의 언어판과 학습 조합(사용자 결정 2026-10-24, hub/work/drafts/marketing-videos.md).
 // 사용자가 많은 언어(영어·스페인어·아랍어·동남아 3개)는 기본으로, 교류가 많은 한국어↔일본어는 서로를 배우는 조합으로.
 // 프랑스어·이탈리아어 등은 일단 뺀다. 옛 이야기(chat·people·room·invite·talk)는 예전 조합(en → es, 나머지 → en)을 그대로 쓴다.
 

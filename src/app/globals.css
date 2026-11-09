@@ -20,9 +20,9 @@
 }
 
 /*
- * 디자인 토큰 — 규칙과 쓰는 법은 hub/DESIGN.md. 값은 화면이 이미 쓰던 값 그대로라
+ * 디자인 토큰 — 규칙과 쓰는 법은 hub/app/DESIGN.md. 값은 화면이 이미 쓰던 값 그대로라
  * 토큰으로 바꿔도 모습은 달라지지 않는다. 새 값이 필요하면 여기에 먼저 더하고
- * hub/DESIGN.md 표에 한 줄 적는다. `npm run check:design`이 직접 쓴 값이 늘지 않게 막는다.
+ * hub/app/DESIGN.md 표에 한 줄 적는다. `npm run check:design`이 직접 쓴 값이 늘지 않게 막는다.
  */
 @theme {
   /* 바탕 (검정 위에 층) */

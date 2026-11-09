@@ -7,7 +7,7 @@
  * recent turns went (how often a line needed correcting, how long they paused,
  * how often they had another go) — and turns it into a few quiet lines for the
  * tutor, plus the same findings as data a screen can show and switch off
- * (hub/drafts/checklist-start-and-learner-brief.md).
+ * (hub/work/drafts/checklist-start-and-learner-brief.md).
  *
  * Both directions are read, so the tutor neither keeps things easy for someone
  * who has outgrown it nor pushes someone who is stuck. Only the last two weeks

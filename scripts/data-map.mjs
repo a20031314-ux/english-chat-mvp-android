@@ -1,11 +1,11 @@
 /**
- * 데이터 지도 — 서버가 저장소(Upstash KV)에 무엇을 얼마나 오래 두는지를 코드에서 다시 뽑아 hub/data-map.md로 쓴다.
+ * 데이터 지도 — 서버가 저장소(Upstash KV)에 무엇을 얼마나 오래 두는지를 코드에서 다시 뽑아 hub/app/data-map.md로 쓴다.
  *
  * 손으로 쓰는 구조 문서는 며칠 안에 코드와 어긋나고, 어긋난 지도를 믿고 지우면 실제 데이터가 사라진다.
  * 그래서 키 이름은 코드(src/lib/server, src/app/api)의 문자열에서, 보관 기간은 저장 호출의 마지막 인자에서 뽑고,
  * 사람이 쓰는 것은 키 묶음마다의 설명(scripts/data-map.json: 기능·누구 것·계정 지울 때)뿐이다.
  *
- *   node scripts/data-map.mjs          (hub/data-map.md 쓰기)
+ *   node scripts/data-map.mjs          (hub/app/data-map.md 쓰기)
  *   node scripts/data-map.mjs --check  (설명 없는 새 키·코드에서 사라진 키가 있거나 파일이 최신이 아니면 실패)
  *   node scripts/data-map.mjs --check --notes-only  (CI: 설명만 — 표는 main push 때 .github/workflows/data-map.yml이 다시 씀)
  *
@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const NOTES_FILE = path.join(ROOT, "scripts/data-map.json");
-const OUT = path.join(ROOT, "hub/data-map.md");
+const OUT = path.join(ROOT, "hub/app/data-map.md");
 const WRITES = ["kvSetJson", "kvSetJsonIfAbsent", "kvIncrBy", "kvListPush", "kvZAdd"];
 
 function walk(dir) {
@@ -219,11 +219,11 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
     if (stale.length) console.error(`코드에서 사라진 키 묶음 ${stale.length}개 — scripts/data-map.json에서 빼고, 운영 저장소에 남은 것은 data-sweep.mjs로: ${stale.join(", ")}`);
     const notesOnly = process.argv.includes("--notes-only"); // CI: 설명만 검사, 표는 main에서 저절로 다시 씀
     const outdated = !notesOnly && current !== text;
-    if (outdated) console.error("hub/data-map.md가 최신이 아니에요. node scripts/data-map.mjs 로 다시 만드세요.");
+    if (outdated) console.error("hub/app/data-map.md가 최신이 아니에요. node scripts/data-map.mjs 로 다시 만드세요.");
     if (missing.length || stale.length || outdated) process.exitCode = 1;
     else console.log(`데이터 지도 최신 (키 묶음 ${compare(groups, notes).keys.length}개)`);
   } else {
     fs.writeFileSync(OUT, text);
-    console.log(`hub/data-map.md 갱신 (키 묶음 ${compare(groups, notes).keys.length}개)`);
+    console.log(`hub/app/data-map.md 갱신 (키 묶음 ${compare(groups, notes).keys.length}개)`);
   }
 }

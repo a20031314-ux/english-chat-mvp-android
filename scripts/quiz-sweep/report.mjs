@@ -1,4 +1,4 @@
-// 퀴즈 전수 점검 보고서 — sweep.ts가 남긴 tmp/quiz-sweep/<날>/marks.jsonl · stats.json(· judge/*.verdicts.json)으로 hub/drafts/quiz-sweep-<날>.md를 만든다.
+// 퀴즈 전수 점검 보고서 — sweep.ts가 남긴 tmp/quiz-sweep/<날>/marks.jsonl · stats.json(· judge/*.verdicts.json)으로 hub/work/drafts/quiz-sweep-<날>.md를 만든다.
 //   node scripts/quiz-sweep/report.mjs [YYYY-MM-DD]
 // 판정(JUDGE.md)을 돌렸으면 그 결과도 표시로 바꿔 marks에 더하고(judge-*.jsonl은 한 번만) 판정 절을 붙인다.
 import fs from "node:fs";
@@ -153,6 +153,6 @@ out.push(
   "- 어휘 탭의 넓어지는 원(circle.ts)은 `scripts/quiz-circle-sim.ts`가 따로 본다. 중국어 낱말 조각 잘림은 이 규칙으로 못 가린다(한 글자 낱말이 흔해서).",
   "",
 );
-const file = path.join(ROOT, "hub/drafts", `quiz-sweep-${date}.md`);
+const file = path.join(ROOT, "hub/work/drafts", `quiz-sweep-${date}.md`);
 fs.writeFileSync(file, out.join("\n"));
 console.log(`→ ${path.relative(ROOT, file)} (표시 ${distinct.size}개 묶음, 판정 ${judged.total})`);

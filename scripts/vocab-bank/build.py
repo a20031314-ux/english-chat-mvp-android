@@ -1,4 +1,4 @@
-"""빈도 단어 묶음 후보 만들기(2026-10-29 사용자 "3개 언어부터 해줘", 설계 hub/drafts/vocab-bank-2026-10-29.md).
+"""빈도 단어 묶음 후보 만들기(2026-10-29 사용자 "3개 언어부터 해줘", 설계 hub/work/drafts/vocab-bank-2026-10-29.md).
 
 python3 scripts/vocab-bank/build.py <en|es|ja> <FrequencyWords 파일 또는 -> <출력 후보.tsv> [개수]
 - en·es: FrequencyWords(OpenSubtitles 2018, 목록 CC BY-SA 4.0) 50k → simplemma로 사전형 → 같은 사전형끼리 빈도 합침.

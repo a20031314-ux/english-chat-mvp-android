@@ -2,7 +2,7 @@
  * 앱이 쓰는 AI 모델의 **코드 기본값** — 한 장(2026-10-22).
  *
  * 왜 따로: 모델을 고르는 서버 코드(`server/llm.ts`·`server/speechModels.ts`)와 비용 계산(`billing/cost.ts`·`opCost.ts` →
- * `hub/costs.md`)이 같은 이름을 읽어야, 기본 모델을 바꾸는 커밋 하나로 비용 표도 저절로 따라온다(main push → CI가 다시 계산).
+ * `hub/app/costs.md`)이 같은 이름을 읽어야, 기본 모델을 바꾸는 커밋 하나로 비용 표도 저절로 따라온다(main push → CI가 다시 계산).
  * 전에는 비용 쪽이 모델 이름을 따로 적고 있어서, 채팅을 Haiku로 바꾼 뒤에도 비용 표는 gpt-4o-mini 단가로 계산됐다.
  *
  * 순수 파일: 환경변수·서버 모듈을 읽지 않는다(앱 화면 쪽 `cost.ts`도 가져다 씀). Vercel 값(`MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE`)이
@@ -53,7 +53,7 @@ export type TextTask = keyof typeof OPENAI_TEXT_DEFAULTS;
 /**
  * 코드에 박은 기본 경로 — Vercel `MODEL_ROUTES`가 비어 있어도 이것을 쓴다(키가 없으면 OpenAI 기본).
  * 우선순위: MODEL_ROUTES 기능 > MODEL_ROUTES 등급 > 여기 > 그 기능의 OpenAI 기본값.
- * - 2026-10-22 사용자 결정: 채팅(교정 + 답)과 표현 카드를 Claude Haiku 5.5로(`hub/drafts/correction-models-2026-10-21.md`
+ * - 2026-10-22 사용자 결정: 채팅(교정 + 답)과 표현 카드를 Claude Haiku 5.5로(`hub/work/drafts/correction-models-2026-10-21.md`
  *   "고친 뒤 다시 비교" — 큰 문제 6~10% → 4.5%, 답 2.0 → 1.7초). 되돌리기 Vercel `MODEL_ROUTES = {"chat":"openai: gpt-4o-mini","howToSay":"openai: gpt-4o-mini"}`.
  * - 방 내 줄 교정은 채팅 교정과 같은 모델(2026-10-22).
  * - 교정 확인 모델(위험한 줄만, 열 때)은 Sonnet 5.5 — 사용자 결정 2026-10-21, 코드 기본값으로 넣음 2026-10-22.
@@ -70,7 +70,7 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   chatVerify: SONNET,
   // 2026-10-22 사용자 "나머지 기능도 다 옮겨줘" — 기본은 Haiku, 드물고 결과가 오래 남는 것만 Sonnet(사용자 원칙 2026-10-21).
   // 표현 묻기(ask)·학습자 읽기(learnerRead)는 high 등급이지만 자주 불려(묻기 하루 30번, 읽기는 채팅마다) Haiku.
-  // 아직 옮기지 않은 것(가상 사용자 점검 근거, `hub/drafts/model-switch-2026-10-22.md` "전체 옮기기"):
+  // 아직 옮기지 않은 것(가상 사용자 점검 근거, `hub/work/drafts/model-switch-2026-10-22.md` "전체 옮기기"):
   // - 미션 쓰기·지도에 넣기·약점 미션(curriculum)·미션 확인(mission): OpenAI(gpt-4.1·4.1-mini, 2027-01-14 종료) 그대로 — 지도 그리기만 따로 Sonnet(curriculumMap).
   // - 통화 튜터(roleplayTutor): 스트리밍이 OpenAI만이라(`openaiModel`) 옮겨도 소용없어 그대로 — 01-14 전에 Claude 스트리밍 길을 따로.
   translate: HAIKU,

@@ -1,5 +1,5 @@
 /**
- * OpenAI 밖 받아쓰기(2026-10-21, `hub/drafts/speech-models-2026-10-21.md`): ElevenLabs Scribe v2, AssemblyAI Sync(Universal-3.5 Pro).
+ * OpenAI 밖 받아쓰기(2026-10-21, `hub/work/drafts/speech-models-2026-10-21.md`): ElevenLabs Scribe v2, AssemblyAI Sync(Universal-3.5 Pro).
  * 둘 다 한 번 보내면 바로 답이 오는 주소 — 짧은 한 마디(통화 학습·Room 자막)에 쓴다. 키는 서버에만(Vercel).
  * 답은 같은 모양: 글·낱말(시간·확신도)·알아들은 언어·전체 확신도.
  */

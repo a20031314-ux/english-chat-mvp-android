@@ -2,9 +2,9 @@ import { INTEREST_IDS, MEET_MODES, MEET_TIMES, WORK_IDS } from "./profileFacts.t
 import { learningLanguageUiLabel } from "../learningLanguages.ts";
 
 /**
- * 프로필 사실·칸·도움됐어요 문구(hub/drafts/profile-2026-10-23.md). 14개 언어 모두 여기에(profileCopy.test.ts가 빠짐을 막음).
+ * 프로필 사실·칸·도움됐어요 문구(hub/work/drafts/profile-2026-10-23.md). 14개 언어 모두 여기에(profileCopy.test.ts가 빠짐을 막음).
  * 한국어·영어 밖은 Claude가 썼다(원어민 확인 권장). {n} 숫자. 언어 이름은 learningLanguageUiLabel로 그려서 문구가 없다.
- * 화면 규칙(hub/DESIGN.md "안내 글"): 칸 이름·버튼·상태만 — 쓰는 법 설명은 사용법(?) 칸에.
+ * 화면 규칙(hub/app/DESIGN.md "안내 글"): 칸 이름·버튼·상태만 — 쓰는 법 설명은 사용법(?) 칸에.
  */
 const ko = {
   seeIn: "{lang}로 보기",

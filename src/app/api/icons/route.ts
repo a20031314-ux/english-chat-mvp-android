@@ -48,7 +48,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 /**
- * 사용자가 만든 아이콘·짤 묶음(rooms/icons.ts, hub/drafts/icons-2026-10-23.md).
+ * 사용자가 만든 아이콘·짤 묶음(rooms/icons.ts, hub/work/drafts/icons-2026-10-23.md).
  *   GET ?f=<묶음>.<아이콘> → WebP(모두에게 공개, 오래 캐시 — 내리면 CDN에서 한 시간 안에 사라짐)
  *   POST { action }
  *     list { sort: new|popular, offset }   공개 묶음

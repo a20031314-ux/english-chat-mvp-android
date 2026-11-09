@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 가짜 낱말 검사(첫 측정 예/아니오 — hub/drafts/placement-2026-11-06.md 7절).
+// 가짜 낱말 검사(첫 측정 예/아니오 — hub/work/drafts/placement-2026-11-06.md 7절).
 // src/lib/curriculum/pseudowords/<언어>.json { "words": [...] } 를 빈도 목록·사전 예문과 겹치는지, 글자 체계·개수·중복·길이·한 글자 바꿈 비율로 본다.
 //   node scripts/pseudowords-check.mjs            (있는 파일 전부)
 //   node scripts/pseudowords-check.mjs ja ko      (그 언어만)
@@ -81,7 +81,7 @@ async function check(lang) {
 const files = existsSync(DIR) ? readdirSync(DIR).filter((name) => name.endsWith(".json")).map((name) => name.replace(".json", "")) : [];
 const langs = process.argv.slice(2).length ? process.argv.slice(2) : files;
 if (!langs.length) {
-  console.log(`가짜 낱말 파일 없음 — ${DIR}/<언어>.json 을 먼저 만든다(설계 hub/drafts/placement-2026-11-06.md 7절).`);
+  console.log(`가짜 낱말 파일 없음 — ${DIR}/<언어>.json 을 먼저 만든다(설계 hub/work/drafts/placement-2026-11-06.md 7절).`);
   process.exit(0);
 }
 let bad = 0;

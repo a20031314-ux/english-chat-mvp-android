@@ -20,7 +20,7 @@ import { openLettersBank } from "@/lib/curriculum/lettersOpen";
 import { useScript } from "@/components/studyMap/ScriptPractice";
 
 /**
- * Logbank 맨 위 "오늘" 카드(개편 3단계, 스위치 lib/reform.ts — 설계 hub/drafts/no-today-2026-11-05.md 8절 B안).
+ * Logbank 맨 위 "오늘" 카드(개편 3단계, 스위치 lib/reform.ts — 설계 hub/work/drafts/no-today-2026-11-05.md 8절 B안).
  * 카드마다 이름 · 근거 숫자 한 줄 · 문 하나(▶ Quizbank 또는 📞 공부). 그날 처음 정하고 하루 그대로, 끝은 사건으로 ✓.
  * 고르기·끝 셈은 curriculum/todayCards.ts, 이 폰의 장부(logbank.v1.<언어>)만.
  */

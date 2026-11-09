@@ -1,6 +1,6 @@
 /**
  * 모델별 단가 — 비용 계산이 읽는 한 장(2026-10-22). 어느 기능이 어느 모델을 쓰는지는 `lib/aiDefaults.ts`,
- * 기능 한 번에 몇 토큰·몇 초인지는 `opCost.ts`. 셋을 곱한 것이 `hub/costs.md`(main push마다 CI가 다시 계산).
+ * 기능 한 번에 몇 토큰·몇 초인지는 `opCost.ts`. 셋을 곱한 것이 `hub/app/costs.md`(main push마다 CI가 다시 계산).
  *
  * 새 모델을 기본값으로 쓰면 여기에 단가가 있어야 한다 — 없으면 `opCost.test.ts`가 실패한다(CI `cost`).
  * 순수 파일(앱 화면 쪽 `cost.ts`도 읽음).
@@ -12,7 +12,7 @@ export const TEXT_USD_PER_MTOK: Record<string, { input: number; output: number; 
   "gpt-4.1-mini": { input: 0.4, output: 1.6, source: "OpenAI pricing" },
   "gpt-4.1": { input: 2, output: 8, source: "OpenAI pricing" },
   "gpt-5-mini": { input: 0.25, output: 2, source: "OpenAI pricing" },
-  "gpt-6-luna": { input: 0.1, output: 0.5, source: "hub/MODELS.md 2026-10-21 조사" },
+  "gpt-6-luna": { input: 0.1, output: 0.5, source: "hub/app/MODELS.md 2026-10-21 조사" },
   "gpt-5.6-terra": { input: 2, output: 12, source: "anotherwrapper.com LLM pricing 2026-10-27 (통화 돌아보기 대비 — 기본은 Sonnet)" },
   "claude-haiku-5-5": { input: 0.1, output: 0.5, source: "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)" },
   "claude-sonnet-5-5": { input: 2, output: 10, source: "platform.claude.com pricing 2026-10-22" },
@@ -23,21 +23,21 @@ export const TEXT_USD_PER_MTOK: Record<string, { input: number; output: number; 
 export const STT_USD_PER_MINUTE: Record<string, { usd: number; source: string }> = {
   "gpt-4o-mini-transcribe": { usd: 0.003, source: "OpenAI pricing" },
   "gpt-4o-transcribe": { usd: 0.006, source: "OpenAI pricing" },
-  "gpt-transcribe": { usd: 0.0045, source: "hub/drafts/speech-models-2026-10-21.md" },
-  "gpt-live-transcribe": { usd: 0.017, source: "hub/MODELS.md" },
+  "gpt-transcribe": { usd: 0.0045, source: "hub/work/drafts/speech-models-2026-10-21.md" },
+  "gpt-live-transcribe": { usd: 0.017, source: "hub/app/MODELS.md" },
   "whisper-1": { usd: 0.006, source: "OpenAI pricing" },
-  scribe_v2: { usd: 0.0036, source: "hub/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원)" },
-  "assemblyai-sync": { usd: 0.0036, source: "hub/drafts/speech-models-2026-10-21.md" },
+  scribe_v2: { usd: 0.0036, source: "hub/work/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원)" },
+  "assemblyai-sync": { usd: 0.0036, source: "hub/work/drafts/speech-models-2026-10-21.md" },
 };
 
 /** 목소리 분당 달러(말한 소리 1분). */
 export const TTS_USD_PER_MINUTE_BY_MODEL: Record<string, { usd: number; source: string }> = {
   "gpt-4o-mini-tts": { usd: 0.015, source: "OpenAI pricing — cost.ts에서 가장 약한 숫자" },
-  // Realtime 오디오 출력 초당 약 20토큰 × $20/1M + 글 토큰 — 6초 약 3.7원(hub/drafts/speech-models-2026-10-21.md).
-  "gpt-realtime-2.1-mini": { usd: 0.0264, source: "hub/drafts/speech-models-2026-10-21.md 어림" },
+  // Realtime 오디오 출력 초당 약 20토큰 × $20/1M + 글 토큰 — 6초 약 3.7원(hub/work/drafts/speech-models-2026-10-21.md).
+  "gpt-realtime-2.1-mini": { usd: 0.0264, source: "hub/work/drafts/speech-models-2026-10-21.md 어림" },
   // 100만 글자 $13 × 말하는 빠르기(운영 샘플 2026-11-02): 영어 초당 16.8자 → 분당 $0.0131. 한국어 $0.0057·일본어 $0.0045·중국어 $0.0039,
   // 스페인어 $0.0108·프랑스어 $0.0141 — 표에는 가장 많이 배우는 영어 값(대부분 언어보다 높아 넉넉한 쪽).
-  "voxtral-mini-tts-3-0": { usd: 0.0131, source: "Mistral 가격 $13/1M자 × 운영 샘플 말 빠르기(영어), hub/MODELS.md" },
+  "voxtral-mini-tts-3-0": { usd: 0.0131, source: "Mistral 가격 $13/1M자 × 운영 샘플 말 빠르기(영어), hub/app/MODELS.md" },
 };
 
 // fallback: 앱 화면 쪽(`cost.ts` → billingService)에서 단가가 빠졌다고 앱이 멈추지 않게. 빠진 단가는 테스트(CI)가 잡는다.

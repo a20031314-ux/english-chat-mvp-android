@@ -36,9 +36,9 @@ function sections(text) {
 
 const state = sections(read("STATE.md"));
 const roleIds = [
-  { id: "dev", file: "roles/dev.md", command: "/hub-dev" },
-  { id: "qa", file: "roles/qa.md", command: "/hub-qa" },
-  { id: "store", file: "roles/store.md", command: "/hub-store" },
+  { id: "dev", file: "work/roles/dev.md", command: "/hub-dev" },
+  { id: "qa", file: "work/roles/qa.md", command: "/hub-qa" },
+  { id: "store", file: "work/roles/store.md", command: "/hub-store" },
 ];
 const roles = roleIds.map((role) => {
   const text = read(role.file);
@@ -46,18 +46,18 @@ const roles = roleIds.map((role) => {
   return { ...role, title, sections: sections(text) };
 });
 
-const inbox = read("inbox.md")
+const inbox = read("work/inbox.md")
   .split("\n")
   .map((line) => line.match(/^- (\d{4}-\d{2}-\d{2}) (\w+) → (\w+): (.+)$/))
   .filter(Boolean)
   .map(([, date, from, to, text]) => ({ date, from, to, text }));
 
 const logs = fs
-  .readdirSync(path.join(HUB, "log"))
+  .readdirSync(path.join(HUB, "chat", "log"))
   .filter((f) => /^\d{4}-\d{2}\.md$/.test(f))
   .sort()
   .flatMap((file) =>
-    read(`log/${file}`)
+    read(`chat/log/${file}`)
       .split(/\n(?=## \d{4}-\d{2}-\d{2} )/)
       .slice(1)
       .map((entry) => {
@@ -80,24 +80,24 @@ const rules = sections(read("RULES.md"));
 // 앱 구조 탭: 자동 생성된 데이터 지도(scripts/data-map.mjs)의 표.
 let dataMap = "";
 try {
-  dataMap = sections(read("data-map.md"))["저장하는 것"] ?? "";
+  dataMap = sections(read("app/data-map.md"))["저장하는 것"] ?? "";
 } catch {
   // 지도가 아직 없으면 탭을 비워 둔다.
 }
-// 앱 전체구조(hub/STRUCTURE.md): 화면 흐름(손으로) + 영역별 코드(scripts/structure.mjs가 자동).
+// 앱 전체구조(hub/app/STRUCTURE.md): 화면 흐름(손으로) + 영역별 코드(scripts/structure.mjs가 자동).
 let structure = "";
 try {
-  structure = read("STRUCTURE.md");
+  structure = read("app/STRUCTURE.md");
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-// 광고 구조(hub/ADS.md): 원칙(손으로) + 자리·설정·손익(scripts/ads-map.mjs가 자동). 영역 이름으로 전체구조와 이어진다.
+// 광고 구조(hub/app/ADS.md): 원칙(손으로) + 자리·설정·손익(scripts/ads-map.mjs가 자동). 영역 이름으로 전체구조와 이어진다.
 let ads = "";
 try {
-  ads = read("ADS.md");
-  // 변경 감시가 낸 광고 재구성 안(hub/ads-plan.md, scripts/watch/ads.mjs)을 원칙 바로 아래(자동 부분 앞)에.
+  ads = read("app/ADS.md");
+  // 변경 감시가 낸 광고 재구성 안(hub/app/ads-plan.md, scripts/watch/ads.mjs)을 원칙 바로 아래(자동 부분 앞)에.
   try {
-    const plan = read("ads-plan.md");
+    const plan = read("app/ads-plan.md");
     const at = ads.indexOf("<!-- 자동");
     ads = at >= 0 ? `${ads.slice(0, at)}${plan}\n${ads.slice(at)}` : `${ads}\n\n${plan}`;
   } catch {
@@ -106,28 +106,35 @@ try {
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-// 퀴즈 알고리즘(hub/QUIZ.md, 손으로): 무엇을·어떤 모양으로·어떤 오답과 내고 결과를 어디에 남기는지.
+// 퀴즈 알고리즘(hub/app/QUIZ.md, 손으로): 무엇을·어떤 모양으로·어떤 오답과 내고 결과를 어디에 남기는지.
 let quiz = "";
 try {
-  quiz = read("QUIZ.md");
+  quiz = read("app/QUIZ.md");
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-// 잊힌 일(hub/forgotten.md, scripts/hub-forgotten.mjs가 만듦 — 예약 작업 "잊힌 일 알림"이 매일).
+// 잊힌 일(hub/work/forgotten.md, scripts/hub-forgotten.mjs가 만듦 — 예약 작업 "잊힌 일 알림"이 매일).
 let forgotten = "";
 try {
-  forgotten = read("forgotten.md");
+  forgotten = read("work/forgotten.md");
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-// 모델 교체 후보(hub/model-swap.md, scripts/models/whatif.mjs가 만듦 — 예약 작업 "AI 모델 살피기"가 매주).
+// 모델 교체 후보(hub/app/model-swap.md, scripts/models/whatif.mjs가 만듦 — 예약 작업 "AI 모델 살피기"가 매주).
 let models = "";
 try {
-  models = read("model-swap.md");
+  models = read("app/model-swap.md");
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, quiz, forgotten, models, commit, builtAt: new Date().toISOString() };
+// 확인 요청(hub/chat/ASKS.md, scripts/asks.mjs가 만듦).
+let asks = "";
+try {
+  asks = read("chat/ASKS.md");
+} catch {
+  // 아직 없으면 칸을 숨긴다.
+}
+const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, quiz, forgotten, models, asks, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

@@ -1,5 +1,5 @@
 /**
- * 통화 장면 공통 목록(2026-11-02, `hub/drafts/call-scripts-design-2026-11-01.md` 2·15절).
+ * 통화 장면 공통 목록(2026-11-02, `hub/work/drafts/call-scripts-design-2026-11-01.md` 2·15절).
  *
  * 14개 언어가 같은 목록을 쓰고, 대본 글은 언어마다(callScene.ts). 장소는 그 나라에서 흔한 곳으로 바꿔 써도 된다
  * (일본어 카페 → 편의점 같은 식) — 해낼 일과 말 기능(fns, curriculum/functions.ts)은 그대로.

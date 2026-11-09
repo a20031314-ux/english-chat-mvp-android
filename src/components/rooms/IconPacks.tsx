@@ -38,7 +38,7 @@ import {
 } from "@/lib/rooms/icons";
 
 /**
- * 사용자 아이콘·짤 묶음 화면(rooms/icons.ts, hub/drafts/icons-2026-10-23.md).
+ * 사용자 아이콘·짤 묶음 화면(rooms/icons.ts, hub/work/drafts/icons-2026-10-23.md).
  * - IconsView: 마켓(인기·새로 올라온·내 묶음, 새 묶음). 1:1·단체방 🙂 둘러보기에서 연다.
  * - PackSheet: 묶음 하나(받기·신고, 판매 묶음은 사기, 내 것이면 올리기·빼기·지우기·판매 신청).
  * - IconPicker: 1:1·단체방 입력칸에서 보낼 아이콘 고르기. 둘러보기가 마켓(2026-11-03 게시판·사람 탭 칩에서 뺌).

@@ -1,5 +1,5 @@
 /**
- * 방 내 줄 교정 운영 점검 (2026-10-22, `hub/drafts/room-fix-2026-10-22.md`).
+ * 방 내 줄 교정 운영 점검 (2026-10-22, `hub/work/drafts/room-fix-2026-10-22.md`).
  *
  *   NODE_USE_ENV_PROXY=1 node scripts/room-fix-trial.mjs --samples <폴더>/samples.json [--api …] [--out tmp/room-fix-trial] [--phase listen|fix] [--model gpt-4o-mini-transcribe] [--second always|borderline]
  *

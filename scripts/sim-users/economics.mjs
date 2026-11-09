@@ -10,7 +10,7 @@
  * 행동·비율 가정 economics.json. 앱·서버를 부르지 않는다(네트워크 없음, 결과가 늘 같음).
  *
  *   npm run sim:economics                         (표준 출력)
- *   npm run sim:economics -- --write              (hub/economics.md 쓰기)
+ *   npm run sim:economics -- --write              (hub/app/economics.md 쓰기)
  *   npm run sim:economics -- --ecpm low --conv 0.05 --chat-won 1.5 --vat 0 --fixed 60000 --ads-reward-chats 3
  *   ADS_REWARDED_DAILY_MAX=5 npm run sim:economics   (광고 설정을 바꿔 보기 — 운영과 같은 환경 변수)
  *   npm run sim:economics -- --assume my.json     (가정 파일 바꿔 끼우기)
@@ -36,7 +36,7 @@ const pct = (n) => `${Math.round(n * 1000) / 10}%`;
 const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "analysisElement", "expressionInsight", "vocabGloss"];
 
 /**
- * 이 계산이 세는 전면 광고 순간(hub/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
+ * 이 계산이 세는 전면 광고 순간(hub/app/ADS.md 표의 이름). 변경 감시(scripts/watch/ads.mjs)가 코드의 순간과 맞춰 보고,
  * 여기 없는 순간은 "손익에 안 들어간 광고"로 알린다 — 새 순간을 simulate에 넣으면 여기에도 더한다.
  * (팩 끝 전면은 2.75 이하 앱만 — 화면 코드는 2026-11-01에 지움. 새 무료·유료는 팩이 0이라 계산에 안 나옴.)
  * My 끝 순간(2026-11-01 광고 자리 넣음): 오늘 할 것을 다 끝냄·단계 화면에서 연 수업 끝(scriptEnd) · 퀴즈 끝(quizEnd) · 시험 끝(checkupEnd) ·
@@ -347,7 +347,7 @@ export function render(o) {
     ["네이티브 끔", { ads: { ...o.ads, nativeEnabled: false } }],
     ["방 퇴장 전면 끔", { ads: { ...o.ads, roomLeaveMinutes: 0 } }],
     ["배너 끔", { ads: { ...o.ads, bannerEnabled: false } }],
-    // 오늘 할 것을 다 끝내는 날이 열흘 중 여섯 날뿐이면(오늘 할 것 끝 전면 1 → 0.6, hub/ads-plan.json 근거의 어림).
+    // 오늘 할 것을 다 끝내는 날이 열흘 중 여섯 날뿐이면(오늘 할 것 끝 전면 1 → 0.6, hub/app/ads-plan.json 근거의 어림).
     ["오늘 할 것 끝 전면이 쓰는 날 60%", { assume: { ...o.assume, my: { ...o.assume.my, todayEndsPerDay: (o.assume.my.todayEndsPerDay ?? 0) * 0.6 } } }],
     // 2026-11-01 넣은 빈 공간 네이티브(economics.json extraAds)를 빼면.
     ["빈 공간 네이티브 없음", { assume: { ...o.assume, extraAds: [] } }],
@@ -363,7 +363,7 @@ export function render(o) {
     "",
     "- 행동 유형과 비율(`economics.json`)은 가정입니다. 서버의 사용자별 사용량(`scripts/cost-report.mjs`, KV 키 필요)으로 유형을 맞추면 가장 크게 좋아집니다.",
     "- 광고 단가·채움률은 AdMob 보고서가 쌓이기 전까지 가정입니다(`ads.ts` `AD_REVENUE_USD`).",
-    "- **무료는 2.76부터의 대본 앱 무료**(채팅·자유 통화·팩 없음, My 대본만 — 하루 내 줄 25줄까지)로 계산합니다(2026-11-01부터). 2.75 이하 앱 무료(채팅 7번·팩)는 옛 앱이 줄어들면 사라져 넣지 않았습니다. 대본 한 줄 원가·틀림 다시 보기 비율은 `plan-cost.mjs`(`hub/costs.md`)와 같은 값.",
+    "- **무료는 2.76부터의 대본 앱 무료**(채팅·자유 통화·팩 없음, My 대본만 — 하루 내 줄 25줄까지)로 계산합니다(2026-11-01부터). 2.75 이하 앱 무료(채팅 7번·팩)는 옛 앱이 줄어들면 사라져 넣지 않았습니다. 대본 한 줄 원가·틀림 다시 보기 비율은 `plan-cost.mjs`(`hub/app/costs.md`)와 같은 값.",
     "- 대본 플랜 2,900원은 1절·2절에만 — 결제한 사람 비율(`planShare`)에는 아직 없습니다(실측 전).",
     "- My 끝 광고 횟수(`economics.json` `my`: 수업 하나 = 내 줄 8개, 퀴즈 끝 하루 0.3번, 시험 끝 한 달 2번)는 어림입니다.",
     "- 무료 첫 달의 처음 20포인트(통화 100분)는 한 번뿐이라 뺐습니다. 구매 포인트 수입, 환불, 무료 체험도 넣지 않았습니다.",
@@ -378,8 +378,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   const o = options(process.argv.slice(2));
   const text = render(o);
   if (o.write) {
-    writeFileSync(join(root, "hub/economics.md"), text);
-    console.log("hub/economics.md 갱신");
+    writeFileSync(join(root, "hub/app/economics.md"), text);
+    console.log("hub/app/economics.md 갱신");
   } else {
     process.stdout.write(text);
   }

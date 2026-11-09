@@ -7,7 +7,7 @@
  *
  * 자막 줄은 방이 살아 있는 동안만 서버에 있다(최대 6시간). 학습자 문장을
  * 서버에 남기지 않는다는 원칙의 예외라서, 시험 기능을 넘어서기 전에 동의와
- * 보관 방식을 정해야 한다(hub/drafts/voice-room-workspace.md).
+ * 보관 방식을 정해야 한다(hub/work/drafts/voice-room-workspace.md).
  */
 import { rowsAfter } from "./lateRows.ts";
 import { roomMatches } from "../rooms/roomFilter.ts";

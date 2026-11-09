@@ -1,5 +1,5 @@
 /**
- * The questions a daily pack is made of (hub/drafts/daily-pack.md).
+ * The questions a daily pack is made of (hub/work/drafts/daily-pack.md).
  *
  * Every line here is said by the tutor in the scene's voice, as written, to
  * every learner who reaches it — so each one is synthesised once and served

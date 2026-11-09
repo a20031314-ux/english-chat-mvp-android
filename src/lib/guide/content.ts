@@ -76,7 +76,7 @@ export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
 
 /**
  * 사용법 창 하나의 기능별 묶음. 탭 구조가 바뀌면 여기서 칸을 옮기고 `go`만 바꾼다 —
- * 글에는 가는 길을 쓰지 않는다(hub/DESIGN.md "안내 글"). 제목은 화면의 탭·버튼 이름 그대로({ui:…}).
+ * 글에는 가는 길을 쓰지 않는다(hub/app/DESIGN.md "안내 글"). 제목은 화면의 탭·버튼 이름 그대로({ui:…}).
  * `go`: "이 화면으로 가기"가 여는 곳(AppHome 탭, notes = My의 노트).
  */
 export type GuideGo = "chat" | "roleplay" | "talk" | "video" | "people" | "rooms" | "map" | "notes";

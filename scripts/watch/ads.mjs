@@ -1,15 +1,15 @@
-// 광고 구조 맞추기 — 기능이 바뀌면 광고 자리가 아직 원칙(hub/ADS.md 위쪽)에 맞는지, 손익 계산이 새 흐름을 세는지 보고,
+// 광고 구조 맞추기 — 기능이 바뀌면 광고 자리가 아직 원칙(hub/app/ADS.md 위쪽)에 맞는지, 손익 계산이 새 흐름을 세는지 보고,
 // 다시 짤 안을 숫자와 함께 낸다(사용자 2026-11-01 "광고 삽입 구조도 기능 변경에 따라 재구성하고 알려 주면"). 변경 감시가 부른다.
-// 고치지 않는다 — 안은 hub/ads-plan.md·reports.md로, 바꾸는 것은 사용자가 "바꿔줘" 한 뒤(설정은 Vercel ADS_*, 자리는 앱 빌드).
+// 고치지 않는다 — 안은 hub/app/ads-plan.md·reports.md로, 바꾸는 것은 사용자가 "바꿔줘" 한 뒤(설정은 Vercel ADS_*, 자리는 앱 빌드).
 //
 //   node --experimental-strip-types scripts/watch/ads.mjs facts
-//        코드의 광고 순간·자리·배너 탭(hub/ADS.md 자동 부분) · 손익 계산이 세는 순간(economics MODELED_MOMENTS) ·
-//        이번 범위(tmp/watch/plan.json)의 화면 흐름 변화(hub/STRUCTURE.md 위쪽 diff)·바뀐 화면 파일 → tmp/watch/ads-facts.json
+//        코드의 광고 순간·자리·배너 탭(hub/app/ADS.md 자동 부분) · 손익 계산이 세는 순간(economics MODELED_MOMENTS) ·
+//        이번 범위(tmp/watch/plan.json)의 화면 흐름 변화(hub/app/STRUCTURE.md 위쪽 diff)·바뀐 화면 파일 → tmp/watch/ads-facts.json
 //   … ads.mjs estimate --format=interstitial --per-month=6          새 자리 하나: 무료 사용자 한 사람이 한 달에 n번 보면 1,000명당 월 수익(낮음·중간·높음)
 //   … ads.mjs settings --ads-gap=240 [--ads-after-chats=3 …]       Vercel ADS_* 값만 바꾸면: 손익(economics) 1,000명당·무료 유형별 차이
 //   … ads.mjs scenario                                              ads-plan.json의 안마다(econ 칸) 손익을 economics로 다시 계산 — 안 하나씩·모두 넣었을 때
 //                                                                   1,000명당 월(전환 3%, 단가 중간)·무료 한 사람 → per1000Mid 덮어씀 + tmp/watch/ads-scenario.json
-//   … ads.mjs render                                                tmp/watch/ads-plan.json(검토 에이전트가 씀) → hub/ads-plan.md, 알릴 것 → tmp/watch/ads-notify.json
+//   … ads.mjs render                                                tmp/watch/ads-plan.json(검토 에이전트가 씀) → hub/app/ads-plan.md, 알릴 것 → tmp/watch/ads-notify.json
 //
 // 알림 기준: 원칙 위반(넣지 않는 곳·흐름 도중에 뜸) · 손익 계산에서 빠진 순간이 새로 생김 · 안 하나가 1,000명당 월 ±20,000원 넘게 바꿈.
 import { execFileSync } from "node:child_process";
@@ -32,7 +32,7 @@ const won = (n) => `${n > 0 ? "+" : n < 0 ? "−" : ""}${Math.abs(Math.round(n))
 const git = (...a) => execFileSync("git", a, { cwd: ROOT, encoding: "utf8", maxBuffer: 32 * 1024 * 1024 }).trim();
 
 function adsAuto() {
-  const text = fs.readFileSync(path.join(ROOT, "hub/ADS.md"), "utf8");
+  const text = fs.readFileSync(path.join(ROOT, "hub/app/ADS.md"), "utf8");
   const auto = text.slice(text.indexOf("<!-- 자동"));
   const section = (title) => auto.split(/\n(?=### |## )/).find((s) => s.startsWith(`### ${title}`)) ?? "";
   const rows = (s) => s.split("\n").filter((l) => /^\| `/.test(l)).map((l) => l.split("|").slice(1, -1).map((c) => c.trim()));
@@ -48,7 +48,7 @@ function facts() {
   let flowDiff = "";
   if (plan.from && plan.to) {
     try {
-      flowDiff = git("diff", `${plan.from}..${plan.to}`, "--", "hub/STRUCTURE.md");
+      flowDiff = git("diff", `${plan.from}..${plan.to}`, "--", "hub/app/STRUCTURE.md");
       flowDiff = flowDiff.split("\n").filter((l) => /^[+-][^+-]/.test(l) && !/## 자동/.test(l)).slice(0, 80).join("\n");
     } catch {
       flowDiff = "";
@@ -140,10 +140,10 @@ function scenario() {
   console.log(`지금 1,000명당 ${won(base.per1000)} · 무료 한 사람 ${won(base.freePerson)} → 안 ${picked.length}개 넣으면 ${won(all.per1000)} · ${won(all.freePerson)}`);
 }
 
-/** 안 목록: 이번 실행의 tmp/watch/ads-plan.json, 없으면 지난번 것(hub/ads-plan.json — 새로 받은 저장소에서 이어 적기). */
+/** 안 목록: 이번 실행의 tmp/watch/ads-plan.json, 없으면 지난번 것(hub/app/ads-plan.json — 새로 받은 저장소에서 이어 적기). */
 function planFile() {
   const now = path.join(OUT, "ads-plan.json");
-  return fs.existsSync(now) ? now : path.join(ROOT, "hub/ads-plan.json");
+  return fs.existsSync(now) ? now : path.join(ROOT, "hub/app/ads-plan.json");
 }
 
 function render() {
@@ -158,10 +158,10 @@ function render() {
     `> 기능이 바뀐 범위 ${f.range || "—"}를 보고 광고 자리를 원칙(위쪽)과 다시 맞춘 안. ${new Date().toISOString().slice(0, 10)} · \`scripts/watch/ads.mjs\` + 검토 에이전트(\`scripts/watch/ADS-REVIEW.md\`). 바꾸는 것은 사용자가 "바꿔줘" 한 뒤 — 설정은 Vercel \`ADS_*\`(바로), 자리는 앱 빌드.`,
     "",
   ];
-  if (f.unmodeled?.length) lines.push(`- **손익 계산에 안 들어간 전면 순간:** ${f.unmodeled.map((m) => `\`${m}\``).join(" · ")} — \`hub/economics.md\`의 광고 수익이 이 순간들을 세지 않음(\`economics.mjs\` simulate·MODELED_MOMENTS).`, "");
+  if (f.unmodeled?.length) lines.push(`- **손익 계산에 안 들어간 전면 순간:** ${f.unmodeled.map((m) => `\`${m}\``).join(" · ")} — \`hub/app/economics.md\`의 광고 수익이 이 순간들을 세지 않음(\`economics.mjs\` simulate·MODELED_MOMENTS).`, "");
   const scFile = path.join(OUT, "ads-scenario.json");
   const sc = fs.existsSync(scFile) ? JSON.parse(fs.readFileSync(scFile, "utf8")) : null;
-  if (sc) lines.push(`- **손익(\`hub/economics.md\` 계산, 가입자 1,000명당 월 · 단가 중간 · 전환 3%):** 지금 ${won(sc.base.per1000)}(무료 한 사람 ${won(sc.base.freePerson)}) → 아래 안 중 ${sc.picked.length}개(원칙 위반 고침 + 수입이 느는 것, 바꿔 끼우는 안은 좋은 쪽 하나)를 넣으면 **${won(sc.all.per1000)}**(무료 한 사람 ${won(sc.all.freePerson)}).`, "");
+  if (sc) lines.push(`- **손익(\`hub/app/economics.md\` 계산, 가입자 1,000명당 월 · 단가 중간 · 전환 3%):** 지금 ${won(sc.base.per1000)}(무료 한 사람 ${won(sc.base.freePerson)}) → 아래 안 중 ${sc.picked.length}개(원칙 위반 고침 + 수입이 느는 것, 바꿔 끼우는 안은 좋은 쪽 하나)를 넣으면 **${won(sc.all.per1000)}**(무료 한 사람 ${won(sc.all.freePerson)}).`, "");
   if (!plan.length) lines.push("이번 범위에서 바꿀 안 없음.");
   else {
     lines.push("| 무엇 | 어디 | 왜(원칙) | 1,000명당 월(중간) | 무료 한 사람 | 바로/빌드 | 근거 |", "|---|---|---|---|---|---|---|");
@@ -171,8 +171,8 @@ function render() {
       if (p.severity === "notify" || (typeof p.per1000Mid === "number" && Math.abs(p.per1000Mid) >= ADS_ALERT_PER_1000)) notify.push(`${p.kind}: ${p.what}${typeof p.per1000Mid === "number" ? ` (1,000명당 월 ${won(p.per1000Mid)})` : ""}`);
     }
   }
-  fs.writeFileSync(path.join(ROOT, "hub/ads-plan.md"), lines.join("\n") + "\n");
-  fs.writeFileSync(path.join(ROOT, "hub/ads-plan.json"), JSON.stringify(plan, null, 1) + "\n"); // 다음 실행이 이어 적을 수 있게
+  fs.writeFileSync(path.join(ROOT, "hub/app/ads-plan.md"), lines.join("\n") + "\n");
+  fs.writeFileSync(path.join(ROOT, "hub/app/ads-plan.json"), JSON.stringify(plan, null, 1) + "\n"); // 다음 실행이 이어 적을 수 있게
   fs.writeFileSync(path.join(OUT, "ads-notify.json"), JSON.stringify(notify, null, 1) + "\n");
   console.log(`안 ${plan.length} · 알릴 것 ${notify.length} · 손익에 없는 순간 ${f.unmodeled?.length ?? 0}`);
 }

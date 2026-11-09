@@ -1,5 +1,5 @@
 /**
- * The paid plans and what each one gives (hub/drafts/pricing-2026-10.md "최종").
+ * The paid plans and what each one gives (hub/work/drafts/pricing-2026-10.md "최종").
  *
  * Every plan is the same shape — today's pack, a few minutes of free talk a
  * day, then points the learner bought — so a day of practice is the unit of
@@ -90,7 +90,7 @@ export type PlanTerms = {
   priceKrw: number | null;
   /**
    * 누를 때만 도는 AI 도움(번역·표현 카드·문장분석·표현 자세히·단위·단어 뜻)의 하루 한도.
-   * 사람끼리 주고받는 것(메시지·묻기·방 대화)은 세지 않는다(hub/drafts/ai-help-limits.md).
+   * 사람끼리 주고받는 것(메시지·묻기·방 대화)은 세지 않는다(hub/work/drafts/ai-help-limits.md).
    */
   dailyAiHelp: number;
   /** 말하는 방 자막(받아쓰기) 하루 줄 수. 한 줄 ≈ 6초라 100줄 ≈ 10분. 넘으면 자막만 멈추고 음성은 계속. */

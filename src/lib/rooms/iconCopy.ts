@@ -1,7 +1,7 @@
 /**
- * 사용자 아이콘·짤 묶음 문구(rooms/icons.ts, hub/drafts/icons-2026-10-23.md). 14개 언어 모두 여기에(iconCopy.test.ts가 빠짐을 막음).
+ * 사용자 아이콘·짤 묶음 문구(rooms/icons.ts, hub/work/drafts/icons-2026-10-23.md). 14개 언어 모두 여기에(iconCopy.test.ts가 빠짐을 막음).
  * 한국어·영어 밖은 Claude가 썼다(원어민 확인 권장). {n} 숫자, {name} 만든 사람.
- * 화면 규칙(hub/DESIGN.md "안내 글"): 칸 이름·버튼·상태·오류만. 동의 글(agree)은 누르기 직전 결과가 달라지는 것이라 화면에 둔다.
+ * 화면 규칙(hub/app/DESIGN.md "안내 글"): 칸 이름·버튼·상태·오류만. 동의 글(agree)은 누르기 직전 결과가 달라지는 것이라 화면에 둔다.
  */
 import { ICON_PRICE_MAX, ICON_PRICE_MIN } from "./icons.ts";
 

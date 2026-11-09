@@ -10,7 +10,7 @@ import { refreshLedger } from "@/lib/learner/ledgerClient";
 
 /**
  * The learner's own say about the words in the sentence sheet
- * (hub/drafts/learner-led-map.md, sentence by sentence):
+ * (hub/work/drafts/learner-led-map.md, sentence by sentence):
  *
  *   I know this / I don't know this — kept in their ledger as a mark, never
  *   taken as mastery, which only producing a phrase earns.

@@ -5,7 +5,7 @@
  *   public/feedback-fix/<카드>/<언어>/after.webp    고친 브랜치로 만든 www
  *
  * 웹사이트가 내주고 앱 묶음에서는 뺀다(scripts/build-capacitor.mjs). 쓰는 곳:
- * src/components/FeedbackFixedSheet.tsx, 절차: hub/feedback/README.md "반영 소식".
+ * src/components/FeedbackFixedSheet.tsx, 절차: hub/work/feedback/README.md "반영 소식".
  *
  * 순서(같은 브랜치에서):
  *   1. 고치기 전: npm run build:capacitor

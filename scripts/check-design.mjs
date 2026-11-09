@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// 화면 규칙 검사 (hub/DESIGN.md). 토큰 대신 직접 쓴 값이 기준선보다 늘면 실패한다.
+// 화면 규칙 검사 (hub/app/DESIGN.md). 토큰 대신 직접 쓴 값이 기준선보다 늘면 실패한다.
 // 이미 있는 것은 그대로 두고(래칫), 줄어들면 기준선을 낮춘다.
 //
 //   npm run check:design            검사
@@ -102,9 +102,9 @@ for (const r of RULES) {
 }
 
 if (failed) {
-  console.log("\n화면 규칙: 직접 쓴 값이 늘었습니다. hub/DESIGN.md의 토큰을 쓰세요.");
+  console.log("\n화면 규칙: 직접 쓴 값이 늘었습니다. hub/app/DESIGN.md의 토큰을 쓰세요.");
   console.log("어느 파일인지: npm run check:design -- --files");
-  console.log("새 값이 정말 필요하면 src/app/globals.css @theme에 토큰을 더하고 hub/DESIGN.md 표에 적으세요.");
+  console.log("새 값이 정말 필요하면 src/app/globals.css @theme에 토큰을 더하고 hub/app/DESIGN.md 표에 적으세요.");
   process.exit(1);
 }
 if (first || args.includes("--update")) {

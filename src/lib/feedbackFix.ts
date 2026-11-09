@@ -7,7 +7,7 @@
  * 어디에도 새로 남지 않는다.
  *
  * 그림은 `public/feedback-fix/<카드>/<UI 언어>/{before,after}.webp`(웹사이트가 내주고
- * 앱 묶음에서는 뺀다). 만드는 법: scripts/capture-feedback-fix.mjs, 절차: hub/feedback/README.md.
+ * 앱 묶음에서는 뺀다). 만드는 법: scripts/capture-feedback-fix.mjs, 절차: hub/work/feedback/README.md.
  *
  * 반영 보상(사용자 결정 2026-10-24): 반영된 의견에 운영자가 중요도에 따라 3~20포인트를 정한다(2026-10-24 범위 낮춤, 처음 5~50)(의견함 카드 `reward`).
  * 같은 의견을 여러 명이 보냈으면 먼저 보낸 3명까지, 한 사람이 한 달에 받는 반영 보상은 40포인트까지.

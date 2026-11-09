@@ -1,25 +1,26 @@
 #!/usr/bin/env node
 /**
- * 기능 장부 hub/FEATURES.md 만들기·검사(사용자 2026-11-09 "기능겹침, 같은기능 여러 단어, 옛 기능이 잔재함").
+ * 기능 장부 hub/app/FEATURES.md 만들기·검사(사용자 2026-11-09 "기능겹침, 같은기능 여러 단어, 옛 기능이 잔재함").
  * 원본은 scripts/features.json(기능 하나 = 이름 하나 = 줄 하나), 문구 겹침 기준은 scripts/copy-keys.json.
  *
- *   node scripts/features.mjs          → hub/FEATURES.md를 다시 씀
+ *   node scripts/features.mjs          → hub/app/FEATURES.md를 다시 씀
  *   node scripts/features.mjs --check  → 장부가 맞는지만(CI): 아래 중 하나라도 걸리면 실패
  *     - live·old-app 줄의 code 파일이 없음(지웠는데 줄이 남음 — 줄도 지운다)
  *     - copy 키가 copy.ts에 없음, 두 줄이 같은 copy 키·같은 이름
- *     - hub/FEATURES.md가 원본과 다름(node scripts/features.mjs로 다시 씀)
+ *     - hub/app/FEATURES.md가 원본과 다름(node scripts/features.mjs로 다시 씀)
  *   remove 줄의 코드가 남아 있는 것은 실패가 아니라 "지울 것" 표로 — 줄어드는 게 목표.
  */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { scopeOf } from "./scope.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const ledger = JSON.parse(fs.readFileSync(path.join(root, "scripts/features.json"), "utf8"));
 const copyKeys = JSON.parse(fs.readFileSync(path.join(root, "scripts/copy-keys.json"), "utf8"));
 const structure = JSON.parse(fs.readFileSync(path.join(root, "scripts/structure.json"), "utf8"));
 const copyText = fs.readFileSync(path.join(root, "src/lib/copy.ts"), "utf8");
-const outFile = path.join(root, "hub/FEATURES.md");
+const outFile = path.join(root, "hub/app/FEATURES.md");
 const check = process.argv.includes("--check");
 
 const problems = [];
@@ -52,12 +53,20 @@ for (const one of ledger.features) {
 
 const cell = (s) => String(s ?? "").replace(/\|/g, "\\|").replace(/\n/g, " ");
 const name = (one) => (one.copy ? `${one.name} \`${one.copy}\`${koValue(one.copy) && koValue(one.copy) !== one.name ? ` (화면: ${koValue(one.copy)})` : ""}` : one.name);
+const tabNames = JSON.parse(fs.readFileSync(path.join(root, "hub/chat/tabs.json"), "utf8")).tabs;
+/** 이 기능 코드가 닿는 탭(scripts/scope.mjs) — 둘 이상이면 고칠 때 그 탭들에 확인 요청(scripts/asks.mjs). */
+const usedTabs = (one) => {
+  const codeFiles = (one.code ?? []).filter(exists);
+  if (!codeFiles.length) return "";
+  return scopeOf(codeFiles, one.copy ? [one.copy] : [], { names: false }).usedBy.map((t) => `${t} ${tabNames[t]?.name ?? ""}`.trim()).join(" · ");
+};
 const files = (one) => (one.code ?? []).map((f) => `\`${f.replace(/^src\//, "")}\``).join(" · ");
 const lines = [];
 lines.push("# 기능 장부");
 lines.push("");
 lines.push("> **자동 생성 — 손으로 고치지 않는다.** 원본 `scripts/features.json` → `node scripts/features.mjs`. CI `languages`가 `--check`로 맞는지 본다.");
 lines.push("> 기능 하나 = 이름 하나 = 줄 하나. **새 버튼·방식·탭을 만들기 전에 여기서 같은 일을 하는 줄을 찾는다** — 있으면 그 이름·문구 키를 그대로 쓰고, 없을 때만 줄을 더한다(RULES \"하나의 이름·지금만 적기\").");
+lines.push("> **쓰는 탭**은 코드에서 자동(`node scripts/scope.mjs <기능 id>`로 파일까지) — 둘 이상인 기능을 고치면 끝내기 훅이 그 탭들에 확인 요청을 만들게 한다(`hub/chat/ASKS.md`).");
 lines.push("> 기능을 빼면 줄을 지우고 코드·문구 14개 언어·사용법·문서를 같은 커밋에서 지운다. 옛 앱이 쓰는 서버만 \"옛 앱 전용\"으로 남기고 지울 조건을 적는다.");
 lines.push("");
 const live = ledger.features.filter((one) => one.status === "live");
@@ -68,9 +77,9 @@ lines.push("");
 for (const [area, list] of byArea) {
   lines.push(`### ${structure.areas[area]}`);
   lines.push("");
-  lines.push("| 기능 | 하는 일 | 코드 | 대신한 옛 기능 |");
-  lines.push("|---|---|---|---|");
-  for (const one of list) lines.push(`| ${cell(name(one))} | ${cell(one.does)}${one.note ? ` — ${cell(one.note)}` : ""} | ${files(one)} | ${cell((one.replaces ?? []).join(" · "))} |`);
+  lines.push("| 기능 | 하는 일 | 쓰는 탭 | 코드 | 대신한 옛 기능 |");
+  lines.push("|---|---|---|---|---|");
+  for (const one of list) lines.push(`| ${cell(name(one))} | ${cell(one.does)}${one.note ? ` — ${cell(one.note)}` : ""} | ${usedTabs(one)} | ${files(one)} | ${cell((one.replaces ?? []).join(" · "))} |`);
   lines.push("");
 }
 const old = ledger.features.filter((one) => one.status === "old-app");
@@ -103,8 +112,8 @@ lines.push("");
 const text = lines.join("\n");
 
 if (check) {
-  const current = exists("hub/FEATURES.md") ? fs.readFileSync(outFile, "utf8") : "";
-  if (current !== text) problems.push("hub/FEATURES.md가 원본과 다름 — node scripts/features.mjs");
+  const current = exists("hub/app/FEATURES.md") ? fs.readFileSync(outFile, "utf8") : "";
+  if (current !== text) problems.push("hub/app/FEATURES.md가 원본과 다름 — node scripts/features.mjs");
   if (problems.length) {
     console.error(`기능 장부 문제 ${problems.length}:\n  ${problems.join("\n  ")}`);
     process.exit(1);
@@ -113,5 +122,5 @@ if (check) {
 } else {
   fs.writeFileSync(outFile, text);
   if (problems.length) console.error(`기능 장부 문제 ${problems.length}:\n  ${problems.join("\n  ")}`);
-  console.log(`hub/FEATURES.md 다시 씀 — 지금 앱 ${live.length} · 옛 앱 전용 ${old.length} · 지울 것 ${remove.length}`);
+  console.log(`hub/app/FEATURES.md 다시 씀 — 지금 앱 ${live.length} · 옛 앱 전용 ${old.length} · 지울 것 ${remove.length}`);
 }

@@ -1,6 +1,6 @@
 /**
  * The daily pack: one seven-minute conversation a day, made from what the
- * learner's own practice shows (hub/drafts/daily-pack.md).
+ * learner's own practice shows (hub/work/drafts/daily-pack.md).
  *
  * The loop it is one turn of: measure → steer → fill → measure again. The
  * measuring happens everywhere (every chat and call turn already writes the

@@ -1,0 +1,58 @@
+{
+  "_": "탭 번호 → 맡는 영역(scripts/structure.json areas). scripts/scope.mjs가 바뀐 코드가 어느 탭 화면에 닿는지 셀 때, scripts/asks.mjs가 확인 요청을 누구에게 보낼지 정할 때 쓴다. 영역을 더하거나 탭을 바꾸면 여기와 hub/chat/tabs.md 표를 같이 고친다.",
+  "tabs": {
+    "1": {
+      "name": "메인",
+      "areas": [
+        "shell",
+        "sheet",
+        "learner",
+        "account",
+        "billing",
+        "feedback",
+        "web",
+        "ops"
+      ]
+    },
+    "2": {
+      "name": "My",
+      "areas": [
+        "my"
+      ]
+    },
+    "3": {
+      "name": "AI",
+      "areas": [
+        "chat",
+        "call",
+        "speech",
+        "video"
+      ]
+    },
+    "4": {
+      "name": "사람",
+      "areas": [
+        "talk",
+        "people",
+        "room",
+        "random",
+        "invite"
+      ]
+    },
+    "5": {
+      "name": "점검",
+      "areas": []
+    },
+    "6": {
+      "name": "스토어",
+      "areas": []
+    }
+  },
+  "hosts": [
+    "src/components/AppHome.tsx",
+    "src/app/page.tsx",
+    "src/app/layout.tsx",
+    "src/components/Providers.tsx"
+  ],
+  "_hosts": "탭을 얹기만 하는 곳 — 범위를 셀 때 여기서는 더 올라가지 않는다(모든 화면이 여기 걸려 의미가 없음)."
+}
