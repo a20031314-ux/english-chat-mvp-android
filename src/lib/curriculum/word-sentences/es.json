@@ -4093,6 +4093,22 @@
    "blank": "Apenas"
   }
  ],
+ "w|aperitivo": [
+  {
+   "text": "Mateo sirvió aceitunas y queso como aperitivo antes de la cena del grupo.",
+   "en": "Mateo served olives and cheese as an appetizer before the group dinner.",
+   "ko": "마테오는 단체 저녁 전에 올리브와 치즈를 전채로 냈어요.",
+   "blank": "aperitivo",
+   "src": "made"
+  },
+  {
+   "text": "Lucía ofrece a los visitantes un aperitivo con quesos de la granja.",
+   "en": "Lucía offers visitors an appetizer with cheeses from the farm.",
+   "ko": "루시아는 방문객들에게 농장 치즈로 만든 전채를 내놓아요.",
+   "blank": "aperitivo",
+   "src": "made"
+  }
+ ],
  "w|apertura": [
   {
    "text": "Carlos asistió a la apertura de un museo que él mismo diseñó.",
@@ -4873,6 +4889,22 @@
    "blank": "armario"
   }
  ],
+ "w|aroma": [
+  {
+   "text": "Cuando Mateo abrió el horno, toda la cocina se llenó del aroma del pan.",
+   "en": "When Mateo opened the oven, the whole kitchen filled with the aroma of bread.",
+   "ko": "마테오가 오븐을 열자 주방 전체에 빵 냄새가 퍼졌어요.",
+   "blank": "aroma",
+   "src": "made"
+  },
+  {
+   "text": "A Lucía le encanta el aroma de la tierra mojada después de la lluvia.",
+   "en": "Lucía loves the scent of wet earth after rain.",
+   "ko": "루시아는 비 온 뒤 젖은 흙냄새를 정말 좋아해요.",
+   "blank": "aroma",
+   "src": "made"
+  }
+ ],
  "w|arquitecto": [
   {
    "text": "Carlos es arquitecto y diseña casas con mucha luz.",
@@ -5205,6 +5237,22 @@
    "blank": "as"
   }
  ],
+ "w|asado": [
+  {
+   "text": "El profesor invitado le enseñó a Mateo a preparar un asado de cordero.",
+   "en": "The guest teacher showed Mateo how to make a lamb roast.",
+   "ko": "초청 강사가 마테오에게 양고기 구이 만드는 법을 가르쳐 줬어요.",
+   "blank": "asado",
+   "src": "made"
+  },
+  {
+   "text": "Para la fiesta de la cosecha, Lucía preparó un asado para toda la familia.",
+   "en": "For the harvest festival, Lucía made a roast for the whole family.",
+   "ko": "수확 축제 때 루시아는 온 가족을 위해 고기 구이를 준비했어요.",
+   "blank": "asado",
+   "src": "made"
+  }
+ ],
  "w|asaltar": [
   {
    "text": "Intentaron asaltar la joyería anoche.",
@@ -5231,6 +5279,22 @@
    "en": "The assault ended without serious injuries.",
    "ko": "그 습격은 중상자 없이 끝났어.",
    "blank": "asalto"
+  }
+ ],
+ "w|asar": [
+  {
+   "text": "La profesora le explicó a Mateo cuánto tiempo hay que asar un pollo entero.",
+   "en": "The teacher explained to Mateo how long you need to roast a whole chicken.",
+   "ko": "선생님은 마테오에게 통닭을 얼마나 오래 구워야 하는지 설명해 줬어요.",
+   "blank": "asar",
+   "src": "made"
+  },
+  {
+   "text": "Lucía va a asar castañas en la chimenea esta noche.",
+   "en": "Lucía is going to roast chestnuts in the fireplace tonight.",
+   "ko": "루시아는 오늘 밤 벽난로에 밤을 구울 거예요.",
+   "blank": "asar",
+   "src": "made"
   }
  ],
  "w|ascender": [
@@ -7067,6 +7131,22 @@
    "en": "He shaves his beard every morning.",
    "ko": "매일 아침 수염을 깎아.",
    "blank": "barba"
+  }
+ ],
+ "w|barbacoa": [
+  {
+   "text": "En la clase de verano, Mateo aprendió a preparar carne a la barbacoa.",
+   "en": "In the summer class, Mateo learned how to make barbecued meat.",
+   "ko": "여름 수업에서 마테오는 바비큐 고기 굽는 법을 배웠어요.",
+   "blank": "barbacoa",
+   "src": "made"
+  },
+  {
+   "text": "En verano, Lucía invita a los vecinos a una barbacoa en el campo.",
+   "en": "In summer, Lucía invites the neighbors to a barbecue in the field.",
+   "ko": "여름이면 루시아는 이웃들을 들판 바비큐에 초대해요.",
+   "blank": "barbacoa",
+   "src": "made"
   }
  ],
  "w|bárbaro": [
@@ -9023,6 +9103,22 @@
    "blank": "cajón"
   }
  ],
+ "w|calabaza": [
+  {
+   "text": "En otoño, Mateo preparó una crema de calabaza con un toque de jengibre.",
+   "en": "In autumn, Mateo made a pumpkin soup with a touch of ginger.",
+   "ko": "가을에 마테오는 생강을 살짝 넣은 호박 수프를 만들었어요.",
+   "blank": "calabaza",
+   "src": "made"
+  },
+  {
+   "text": "Lucía cosechó una calabaza enorme y la llevó a la feria del pueblo.",
+   "en": "Lucía harvested a huge pumpkin and took it to the village fair.",
+   "ko": "루시아는 커다란 호박을 수확해서 마을 장터에 가져갔어요.",
+   "blank": "calabaza",
+   "src": "made"
+  }
+ ],
  "w|calabozo": [
   {
    "text": "El borracho pasó la noche en el calabozo, y Mateo lo soltó por la mañana.",
@@ -10571,6 +10667,22 @@
    "en": "The castle has a deep moat.",
    "ko": "그 성에는 깊은 해자가 있어.",
    "blank": "castillo"
+  }
+ ],
+ "w|casual": [
+  {
+   "text": "Fue un encuentro casual: Mateo conoció a su mejor amigo en la clase de repostería.",
+   "en": "It was a chance meeting: Mateo met his best friend in the pastry class.",
+   "ko": "우연한 만남이었어요. 마테오는 제과 수업에서 단짝을 만났거든요.",
+   "blank": "casual",
+   "src": "made"
+  },
+  {
+   "text": "Lucía viste ropa casual y botas de goma casi todo el año.",
+   "en": "Lucía wears casual clothes and rubber boots almost all year.",
+   "ko": "루시아는 일 년 내내 거의 편한 옷에 고무장화를 신어요.",
+   "blank": "casual",
+   "src": "made"
   }
  ],
  "w|casualidad": [
@@ -13751,6 +13863,22 @@
    "en": "I'm going with my mom.",
    "ko": "엄마랑 같이 가.",
    "blank": "con"
+  }
+ ],
+ "w|concebir": [
+  {
+   "text": "Mateo no puede concebir una tortilla de patatas sin cebolla.",
+   "en": "Mateo can't imagine a Spanish omelette without onion.",
+   "ko": "마테오는 양파 없는 감자 토르티야는 상상도 못 해요.",
+   "blank": "concebir",
+   "src": "made"
+  },
+  {
+   "text": "Lucía no puede concebir su vida lejos del campo.",
+   "en": "Lucía can't imagine her life away from the countryside.",
+   "ko": "루시아는 시골을 떠난 삶은 상상할 수도 없어요.",
+   "blank": "concebir",
+   "src": "made"
   }
  ],
  "w|conceder": [
@@ -18013,6 +18141,22 @@
    "blank": "delgado"
   }
  ],
+ "w|deliberadamente": [
+  {
+   "text": "Mateo dejó deliberadamente la carne poco hecha porque así le gusta a su novia.",
+   "en": "Mateo deliberately left the meat rare because that's how his girlfriend likes it.",
+   "ko": "마테오는 여자 친구가 좋아해서 일부러 고기를 덜 익혔어요.",
+   "blank": "deliberadamente",
+   "src": "made"
+  },
+  {
+   "text": "Lucía deja deliberadamente una parte del campo sin cultivar para las abejas.",
+   "en": "Lucía deliberately leaves part of the field uncultivated for the bees.",
+   "ko": "루시아는 벌들을 위해 밭 일부를 일부러 비워 둬요.",
+   "blank": "deliberadamente",
+   "src": "made"
+  }
+ ],
  "w|delicado": [
   {
    "text": "Ese tema es muy delicado ahora.",
@@ -18803,6 +18947,22 @@
    "en": "Take a break and come back later.",
    "ko": "잠깐 쉬고 나중에 돌아와.",
    "blank": "descanso"
+  }
+ ],
+ "w|descarado": [
+  {
+   "text": "Un compañero descarado probó la salsa de Mateo con el dedo.",
+   "en": "A cheeky classmate tasted Mateo's sauce with his finger.",
+   "ko": "뻔뻔한 수강생 하나가 마테오의 소스를 손가락으로 찍어 먹었어요.",
+   "blank": "descarado",
+   "src": "made"
+  },
+  {
+   "text": "Una cabra descarada se comió el sombrero de Lucía.",
+   "en": "A cheeky goat ate Lucía's hat.",
+   "ko": "뻔뻔한 염소 한 마리가 루시아의 모자를 먹어 버렸어요.",
+   "blank": "descarada",
+   "src": "made"
   }
  ],
  "w|descarga": [
@@ -25885,6 +26045,22 @@
    "src": "made"
   }
  ],
+ "w|exclusivo": [
+  {
+   "text": "Mateo se apuntó a un taller exclusivo con un chef muy conocido.",
+   "en": "Mateo signed up for an exclusive workshop with a well-known chef.",
+   "ko": "마테오는 유명한 셰프의 소수 정예 강좌에 등록했어요.",
+   "blank": "exclusivo",
+   "src": "made"
+  },
+  {
+   "text": "Un restaurante exclusivo de la ciudad compra los huevos de Lucía.",
+   "en": "An exclusive restaurant in the city buys Lucía's eggs.",
+   "ko": "도시의 고급 식당이 루시아의 달걀을 사 가요.",
+   "blank": "exclusivo",
+   "src": "made"
+  }
+ ],
  "w|excusa": [
   {
    "text": "Esa excusa no me convence.",
@@ -25928,6 +26104,22 @@
    "en": "Before the final there was a dunk exhibition, and Nuria shone.",
    "ko": "결승전 전에 덩크 시범이 열렸고 누리아가 돋보였어요.",
    "blank": "exhibición",
+   "src": "made"
+  }
+ ],
+ "w|exigente": [
+  {
+   "text": "La profesora de Mateo es muy exigente con la limpieza de la mesa.",
+   "en": "Mateo's teacher is very strict about keeping the counter clean.",
+   "ko": "마테오의 선생님은 조리대 청결에 아주 깐깐해요.",
+   "blank": "exigente",
+   "src": "made"
+  },
+  {
+   "text": "El trabajo en la granja es exigente, pero Lucía no lo cambiaría por nada.",
+   "en": "Farm work is demanding, but Lucía wouldn't trade it for anything.",
+   "ko": "농장 일은 힘들지만 루시아는 무엇과도 바꾸지 않을 거예요.",
+   "blank": "exigente",
    "src": "made"
   }
  ],
@@ -27329,6 +27521,22 @@
    "blank": "ficha"
   }
  ],
+ "w|fideo": [
+  {
+   "text": "Mateo aprendió a hacer una sopa de fideo con caldo de pollo.",
+   "en": "Mateo learned to make a noodle soup with chicken broth.",
+   "ko": "마테오는 닭 육수로 국수 수프 만드는 법을 배웠어요.",
+   "blank": "fideo",
+   "src": "made"
+  },
+  {
+   "text": "A los hijos de Lucía les encanta la sopa con fideo fino.",
+   "en": "Lucía's children love soup with thin noodles.",
+   "ko": "루시아의 아이들은 가는 국수가 든 수프를 아주 좋아해요.",
+   "blank": "fideo",
+   "src": "made"
+  }
+ ],
  "w|fiebre": [
   {
    "text": "Tiene fiebre desde anoche.",
@@ -28437,6 +28645,22 @@
    "en": "My forehead hurts.",
    "ko": "이마가 아파.",
    "blank": "frente"
+  }
+ ],
+ "w|fresa": [
+  {
+   "text": "Mateo decoró la tarta con una fresa en cada trozo.",
+   "en": "Mateo decorated the cake with a strawberry on every slice.",
+   "ko": "마테오는 케이크 조각마다 딸기를 하나씩 올렸어요.",
+   "blank": "fresa",
+   "src": "made"
+  },
+  {
+   "text": "Los niños ayudan a Lucía a recoger cada fresa madura del campo.",
+   "en": "The kids help Lucía pick every ripe strawberry in the field.",
+   "ko": "아이들은 루시아를 도와 밭에서 잘 익은 딸기를 하나하나 따요.",
+   "blank": "fresa",
+   "src": "made"
   }
  ],
  "w|fresco": [
@@ -31105,6 +31329,22 @@
    "blank": "héroe"
   }
  ],
+ "w|heroico": [
+  {
+   "text": "Salvar la salsa quemada fue un esfuerzo heroico por parte de Mateo.",
+   "en": "Saving the burnt sauce was a heroic effort on Mateo's part.",
+   "ko": "탄 소스를 살려 낸 건 마테오의 영웅적인 노력이었어요.",
+   "blank": "heroico",
+   "src": "made"
+  },
+  {
+   "text": "Durante la tormenta, el perro de Lucía hizo algo heroico: reunió a todas las ovejas.",
+   "en": "During the storm, Lucía's dog did something heroic: it rounded up all the sheep.",
+   "ko": "폭풍이 몰아칠 때 루시아의 개가 양을 모두 모아 오는 대단한 일을 했어요.",
+   "blank": "heroico",
+   "src": "made"
+  }
+ ],
  "w|heroína": [
   {
    "text": "La heroína de la novela salva al pueblo.",
@@ -32577,6 +32817,22 @@
    "en": "That tax went up again this month.",
    "ko": "그 세금이 이번 달에 또 올랐어.",
    "blank": "impuesto"
+  }
+ ],
+ "w|impulsar": [
+  {
+   "text": "La escuela quiere impulsar la cocina de temporada, y Mateo está encantado.",
+   "en": "The school wants to promote seasonal cooking, and Mateo is delighted.",
+   "ko": "학교가 제철 요리를 장려하려고 해서 마테오는 아주 기뻐해요.",
+   "blank": "impulsar",
+   "src": "made"
+  },
+  {
+   "text": "Lucía quiere impulsar el turismo rural en su comarca.",
+   "en": "Lucía wants to boost rural tourism in her area.",
+   "ko": "루시아는 자기 지역의 농촌 관광을 활성화하고 싶어 해요.",
+   "blank": "impulsar",
+   "src": "made"
   }
  ],
  "w|impulso": [
@@ -38105,6 +38361,22 @@
    "blank": "manga"
   }
  ],
+ "w|maní": [
+  {
+   "text": "La profesora le advirtió a Mateo que una compañera es alérgica al maní.",
+   "en": "The teacher warned Mateo that one classmate is allergic to peanuts.",
+   "ko": "선생님은 마테오에게 한 수강생이 땅콩 알레르기가 있다고 알려 줬어요.",
+   "blank": "maní",
+   "src": "made"
+  },
+  {
+   "text": "Este año, Lucía probó a cultivar maní en un rincón del campo.",
+   "en": "This year, Lucía tried growing peanuts in a corner of the field.",
+   "ko": "올해 루시아는 밭 한구석에 땅콩을 심어 봤어요.",
+   "blank": "maní",
+   "src": "made"
+  }
+ ],
  "w|manifestación": [
   {
    "text": "El sábado, Mateo tuvo que vigilar una manifestación tranquila en la plaza.",
@@ -39423,6 +39695,22 @@
    "en": "They called a messenger to take the letter.",
    "ko": "편지를 가져가라고 배달원을 불렀어.",
    "blank": "mensajero"
+  }
+ ],
+ "w|menta": [
+  {
+   "text": "Mateo añadió unas hojas de menta a la limonada.",
+   "en": "Mateo added a few mint leaves to the lemonade.",
+   "ko": "마테오는 레모네이드에 민트 잎 몇 장을 넣었어요.",
+   "blank": "menta",
+   "src": "made"
+  },
+  {
+   "text": "Junto a la puerta, Lucía tiene una maceta de menta para el té.",
+   "en": "By the door, Lucía has a pot of mint for tea.",
+   "ko": "루시아는 문 옆에 차로 마실 민트 화분을 둬요.",
+   "blank": "menta",
+   "src": "made"
   }
  ],
  "w|mental": [
@@ -42805,6 +43093,22 @@
    "blank": "obligaron"
   }
  ],
+ "w|obligatorio": [
+  {
+   "text": "En la clase es obligatorio llevar delantal, y Mateo siempre se lo olvida.",
+   "en": "Wearing an apron is mandatory in class, and Mateo always forgets his.",
+   "ko": "수업에서는 앞치마가 필수인데 마테오는 늘 깜빡해요.",
+   "blank": "obligatorio",
+   "src": "made"
+  },
+  {
+   "text": "En la granja de Lucía es obligatorio cerrar la puerta del corral.",
+   "en": "On Lucía's farm, closing the coop gate is a must.",
+   "ko": "루시아의 농장에서는 닭장 문을 꼭 닫아야 해요.",
+   "blank": "obligatorio",
+   "src": "made"
+  }
+ ],
  "w|obra": [
   {
    "text": "Vimos una obra de teatro.",
@@ -43421,6 +43725,22 @@
    "blank": "Huele"
   }
  ],
+ "w|olla": [
+  {
+   "text": "Mateo aprendió a hacer lentejas en una olla a presión.",
+   "en": "Mateo learned to make lentils in a pressure cooker.",
+   "ko": "마테오는 압력솥으로 렌틸콩 요리하는 법을 배웠어요.",
+   "blank": "olla",
+   "src": "made"
+  },
+  {
+   "text": "Lucía hierve la leche de las cabras en una olla grande.",
+   "en": "Lucía boils the goats' milk in a big pot.",
+   "ko": "루시아는 큰 냄비에 염소젖을 끓여요.",
+   "blank": "olla",
+   "src": "made"
+  }
+ ],
  "w|olor": [
   {
    "text": "Hay un olor raro en la cocina.",
@@ -43782,6 +44102,22 @@
    "en": "Elena runs an orphanage on the outskirts of the city.",
    "ko": "엘레나는 도시 외곽에서 고아원을 운영해요.",
    "blank": "orfanato",
+   "src": "made"
+  }
+ ],
+ "w|orgánico": [
+  {
+   "text": "En la clase de cocina, Mateo solo usa verduras de cultivo orgánico.",
+   "en": "In the cooking class, Mateo only uses organically grown vegetables.",
+   "ko": "요리 수업에서 마테오는 유기농 채소만 써요.",
+   "blank": "orgánico",
+   "src": "made"
+  },
+  {
+   "text": "Lucía cultiva tomates de forma orgánica y los vende en el mercado.",
+   "en": "Lucía grows tomatoes organically and sells them at the market.",
+   "ko": "루시아는 토마토를 유기농으로 키워서 시장에 팔아요.",
+   "blank": "orgánica",
    "src": "made"
   }
  ],
@@ -44493,6 +44829,22 @@
    "en": "They fed the pigeon in the square.",
    "ko": "광장에서 비둘이에게 모이를 줬어.",
    "blank": "paloma"
+  }
+ ],
+ "w|palomitas": [
+  {
+   "text": "Para descansar, la profesora le preparó a Mateo un bol de palomitas caseras.",
+   "en": "For a break, the teacher made Mateo a bowl of homemade popcorn.",
+   "ko": "쉬는 시간에 선생님이 마테오에게 집에서 만든 팝콘 한 그릇을 줬어요.",
+   "blank": "palomitas",
+   "src": "made"
+  },
+  {
+   "text": "Lucía cultiva maíz especial para hacer palomitas.",
+   "en": "Lucía grows a special corn for making popcorn.",
+   "ko": "루시아는 팝콘용 특별한 옥수수를 키워요.",
+   "blank": "palomitas",
+   "src": "made"
   }
  ],
  "w|pan": [
@@ -46748,6 +47100,38 @@
    "en": "The sauce was so spicy that everyone asked for a soft drink.",
    "ko": "소스가 너무 매워서 다들 탄산음료를 달라고 했어요.",
    "blank": "picante",
+   "src": "made"
+  }
+ ],
+ "w|picar": [
+  {
+   "text": "Mateo tardó media hora en picar la cebolla sin llorar.",
+   "en": "It took Mateo half an hour to chop the onion without crying.",
+   "ko": "마테오는 울지 않고 양파를 다지는 데 삼십 분이 걸렸어요.",
+   "blank": "picar",
+   "src": "made"
+  },
+  {
+   "text": "Los mosquitos no dejan de picar a Lucía cuando trabaja en el huerto al atardecer.",
+   "en": "The mosquitoes keep biting Lucía when she works in the garden at dusk.",
+   "ko": "해 질 녘 텃밭에서 일하면 모기가 루시아를 계속 물어요.",
+   "blank": "picar",
+   "src": "made"
+  }
+ ],
+ "w|picnic": [
+  {
+   "text": "El último día del curso, Mateo y sus compañeros hicieron un picnic con lo que cocinaron.",
+   "en": "On the last day of the course, Mateo and his classmates had a picnic with what they'd cooked.",
+   "ko": "수업 마지막 날 마테오와 친구들은 직접 만든 음식으로 소풍을 갔어요.",
+   "blank": "picnic",
+   "src": "made"
+  },
+  {
+   "text": "Los domingos, Lucía hace un picnic con sus hijos junto al granero.",
+   "en": "On Sundays, Lucía has a picnic with her kids next to the barn.",
+   "ko": "일요일마다 루시아는 헛간 옆에서 아이들과 소풍을 즐겨요.",
+   "blank": "picnic",
    "src": "made"
   }
  ],
@@ -49663,6 +50047,22 @@
    "blank": "protocolo"
   }
  ],
+ "w|provecho": [
+  {
+   "text": "Antes de comer, Mateo les dijo a todos «¡buen provecho!».",
+   "en": "Before eating, Mateo said \"enjoy your meal!\" to everyone.",
+   "ko": "먹기 전에 마테오는 모두에게 \"맛있게 드세요!\"라고 했어요.",
+   "blank": "provecho",
+   "src": "made"
+  },
+  {
+   "text": "Lucía sabe sacar provecho de todo: con las peladuras hace abono.",
+   "en": "Lucía knows how to make use of everything: she turns peelings into compost.",
+   "ko": "루시아는 뭐든 알뜰하게 써요. 껍질로는 퇴비를 만들어요.",
+   "blank": "provecho",
+   "src": "made"
+  }
+ ],
  "w|proveedor": [
   {
    "text": "Raúl llama cada mañana al proveedor de pescado para saber qué ha llegado.",
@@ -50825,6 +51225,22 @@
    "blank": "rápidamente"
   }
  ],
+ "w|rapidez": [
+  {
+   "text": "La profesora admira la rapidez con la que Mateo pela las patatas.",
+   "en": "The teacher admires how quickly Mateo peels potatoes.",
+   "ko": "선생님은 마테오가 감자를 빨리 깎는 걸 보고 감탄해요.",
+   "blank": "rapidez",
+   "src": "made"
+  },
+  {
+   "text": "Lucía recogió la ropa con rapidez cuando empezó a llover.",
+   "en": "Lucía quickly brought in the laundry when it started to rain.",
+   "ko": "비가 오기 시작하자 루시아는 재빨리 빨래를 걷었어요.",
+   "blank": "rapidez",
+   "src": "made"
+  }
+ ],
  "w|rápido": [
   {
    "text": "Ven acá rápido.",
@@ -51605,6 +52021,22 @@
    "src": "made"
   }
  ],
+ "w|redondo": [
+  {
+   "text": "Mateo aprendió a dar forma redonda a las albóndigas con las manos mojadas.",
+   "en": "Mateo learned to shape the meatballs round with wet hands.",
+   "ko": "마테오는 젖은 손으로 미트볼을 동그랗게 빚는 법을 배웠어요.",
+   "blank": "redonda",
+   "src": "made"
+  },
+  {
+   "text": "Lucía guarda la paja en balas redondas detrás del establo.",
+   "en": "Lucía stores the straw in round bales behind the stable.",
+   "ko": "루시아는 마구간 뒤에 짚을 둥근 뭉치로 쌓아 둬요.",
+   "blank": "redondas",
+   "src": "made"
+  }
+ ],
  "w|reducir": [
   {
    "text": "Queremos reducir el gasto en electricidad.",
@@ -52161,6 +52593,22 @@
    "src": "made"
   }
  ],
+ "w|relleno": [
+  {
+   "text": "Mateo preparó un relleno de espinacas y queso para las empanadillas.",
+   "en": "Mateo made a spinach and cheese filling for the turnovers.",
+   "ko": "마테오는 엠파나디야에 넣을 시금치 치즈 소를 만들었어요.",
+   "blank": "relleno",
+   "src": "made"
+  },
+  {
+   "text": "Lucía usa lana de sus ovejas como relleno para los cojines.",
+   "en": "Lucía uses wool from her sheep as stuffing for the cushions.",
+   "ko": "루시아는 자기 양털을 쿠션 속으로 써요.",
+   "blank": "relleno",
+   "src": "made"
+  }
+ ],
  "w|reloj": [
   {
    "text": "Se me paró el reloj.",
@@ -52262,6 +52710,22 @@
    "en": "At Christmas, a volunteer dressed up as a reindeer for the children.",
    "ko": "크리스마스에 한 자원봉사자가 아이들을 위해 순록 분장을 했어요.",
    "blank": "reno",
+   "src": "made"
+  }
+ ],
+ "w|renovar": [
+  {
+   "text": "Mateo quiere renovar su cuchillo antes del examen final.",
+   "en": "Mateo wants to replace his knife before the final exam.",
+   "ko": "마테오는 기말 시험 전에 칼을 새로 바꾸고 싶어 해요.",
+   "blank": "renovar",
+   "src": "made"
+  },
+  {
+   "text": "Lucía tuvo que renovar la valla del corral después del viento.",
+   "en": "Lucía had to replace the coop fence after the wind.",
+   "ko": "바람이 분 뒤 루시아는 닭장 울타리를 새로 고쳐야 했어요.",
+   "blank": "renovar",
    "src": "made"
   }
  ],
@@ -52759,6 +53223,22 @@
    "en": "There was resistance to the new change.",
    "ko": "새로운 변화에 대한 저항이 있었어.",
    "blank": "resistencia"
+  }
+ ],
+ "w|resistente": [
+  {
+   "text": "Mateo compró una sartén muy resistente que no se raya.",
+   "en": "Mateo bought a very durable frying pan that doesn't scratch.",
+   "ko": "마테오는 긁히지 않는 아주 튼튼한 프라이팬을 샀어요.",
+   "blank": "resistente",
+   "src": "made"
+  },
+  {
+   "text": "Lucía planta un trigo resistente a la sequía.",
+   "en": "Lucía plants a drought-resistant wheat.",
+   "ko": "루시아는 가뭄에 강한 밀을 심어요.",
+   "blank": "resistente",
+   "src": "made"
   }
  ],
  "w|resistir": [
@@ -54277,6 +54757,22 @@
    "en": "The taste of the coffee is very strong.",
    "ko": "커피 맛이 아주 진해.",
    "blank": "sabor"
+  }
+ ],
+ "w|sabroso": [
+  {
+   "text": "El guiso de Mateo quedó tan sabroso que la profesora repitió.",
+   "en": "Mateo's stew turned out so tasty that the teacher had seconds.",
+   "ko": "마테오의 스튜가 너무 맛있어서 선생님이 한 그릇 더 먹었어요.",
+   "blank": "sabroso",
+   "src": "made"
+  },
+  {
+   "text": "El pan que hace Lucía en el horno de leña es muy sabroso.",
+   "en": "The bread Lucía bakes in the wood oven is very tasty.",
+   "ko": "루시아가 장작 화덕에서 굽는 빵은 정말 맛있어요.",
+   "blank": "sabroso",
+   "src": "made"
   }
  ],
  "w|sacar": [
@@ -55895,6 +56391,22 @@
    "blank": "sesión"
   }
  ],
+ "w|setenta": [
+  {
+   "text": "La profesora de Mateo tiene setenta años y cocina más rápido que nadie.",
+   "en": "Mateo's teacher is seventy and cooks faster than anyone.",
+   "ko": "마테오의 선생님은 일흔 살인데 누구보다 빨리 요리해요.",
+   "blank": "setenta",
+   "src": "made"
+  },
+  {
+   "text": "La granja de Lucía tiene setenta hectáreas de olivos.",
+   "en": "Lucía's farm has seventy hectares of olive trees.",
+   "ko": "루시아의 농장에는 올리브 나무가 칠십 헥타르 있어요.",
+   "blank": "setenta",
+   "src": "made"
+  }
+ ],
  "w|severo": [
   {
    "text": "El profesor fue severo con la clase.",
@@ -56725,6 +57237,22 @@
    "en": "Help arrived just in time.",
    "ko": "구조대가 딱 맞춰 도착했어.",
    "blank": "socorro"
+  }
+ ],
+ "w|soda": [
+  {
+   "text": "La profesora le enseñó a Mateo a usar un poco de soda para que la masa quede más ligera.",
+   "en": "The teacher showed Mateo how to use a little soda water to make the batter lighter.",
+   "ko": "선생님은 마테오에게 반죽을 가볍게 하려면 탄산수를 조금 넣으라고 가르쳐 줬어요.",
+   "blank": "soda",
+   "src": "made"
+  },
+  {
+   "text": "Después de trabajar al sol, Lucía se toma una soda bien fría.",
+   "en": "After working in the sun, Lucía has an ice-cold soda.",
+   "ko": "햇볕 아래서 일하고 나면 루시아는 시원한 탄산음료를 마셔요.",
+   "blank": "soda",
+   "src": "made"
   }
  ],
  "w|sofá": [
@@ -57847,6 +58375,22 @@
    "src": "made"
   }
  ],
+ "w|sumar": [
+  {
+   "text": "Mateo quiere sumar más recetas a su cuaderno antes de que acabe el curso.",
+   "en": "Mateo wants to add more recipes to his notebook before the course ends.",
+   "ko": "마테오는 수업이 끝나기 전에 공책에 요리법을 더 모으고 싶어 해요.",
+   "blank": "sumar",
+   "src": "made"
+  },
+  {
+   "text": "Lucía quiere sumar unas gallinas más al corral en primavera.",
+   "en": "Lucía wants to add a few more hens to the coop in spring.",
+   "ko": "루시아는 봄에 닭장에 암탉 몇 마리를 더 들이고 싶어 해요.",
+   "blank": "sumar",
+   "src": "made"
+  }
+ ],
  "w|suministro": [
   {
    "text": "Hubo un corte en el suministro de agua.",
@@ -58273,6 +58817,22 @@
    "en": "The smell of tobacco filled the room.",
    "ko": "담배 냄새가 방에 배어 있었어.",
    "blank": "tabaco"
+  }
+ ],
+ "w|taberna": [
+  {
+   "text": "Después de la clase, Mateo y sus compañeros fueron a una taberna a tomar algo.",
+   "en": "After class, Mateo and his classmates went to a tavern for a drink.",
+   "ko": "수업이 끝나고 마테오와 친구들은 선술집에 한잔하러 갔어요.",
+   "blank": "taberna",
+   "src": "made"
+  },
+  {
+   "text": "La taberna del pueblo compra los quesos de Lucía.",
+   "en": "The village tavern buys Lucía's cheeses.",
+   "ko": "마을 선술집은 루시아의 치즈를 사 가요.",
+   "blank": "taberna",
+   "src": "made"
   }
  ],
  "w|tabla": [
@@ -59113,6 +59673,22 @@
    "blank": "teoría"
   }
  ],
+ "w|tequila": [
+  {
+   "text": "En la clase de cocina mexicana, Mateo usó un chorrito de tequila en la salsa.",
+   "en": "In the Mexican cooking class, Mateo used a splash of tequila in the sauce.",
+   "ko": "멕시코 요리 수업에서 마테오는 소스에 데킬라를 조금 넣었어요.",
+   "blank": "tequila",
+   "src": "made"
+  },
+  {
+   "text": "Un visitante le regaló a Lucía una botella de tequila de su viaje.",
+   "en": "A visitor gave Lucía a bottle of tequila from his trip.",
+   "ko": "한 방문객이 여행에서 사 온 데킬라 한 병을 루시아에게 선물했어요.",
+   "blank": "tequila",
+   "src": "made"
+  }
+ ],
  "w|terapeuta": [
   {
    "text": "Su terapeuta le dio un buen consejo.",
@@ -59825,6 +60401,22 @@
    "en": "It's my turn to pay the bill today.",
    "ko": "오늘은 내가 계산할 차례야.",
    "blank": "toca"
+  }
+ ],
+ "w|tocino": [
+  {
+   "text": "Mateo envolvió los dátiles en tocino y los metió al horno.",
+   "en": "Mateo wrapped the dates in bacon and put them in the oven.",
+   "ko": "마테오는 대추야자를 베이컨으로 감싸서 오븐에 넣었어요.",
+   "blank": "tocino",
+   "src": "made"
+  },
+  {
+   "text": "Lucía cura el tocino en la despensa durante el invierno.",
+   "en": "Lucía cures the bacon in the pantry over the winter.",
+   "ko": "루시아는 겨울 동안 식료품 저장실에서 베이컨을 숙성시켜요.",
+   "blank": "tocino",
+   "src": "made"
   }
  ],
  "w|todavía": [
@@ -62173,6 +62765,22 @@
    "src": "made"
   }
  ],
+ "w|vegetariano": [
+  {
+   "text": "La mitad del grupo es vegetariana, así que Mateo cocina muchas legumbres.",
+   "en": "Half the group is vegetarian, so Mateo cooks a lot of legumes.",
+   "ko": "수강생 절반이 채식주의자라서 마테오는 콩 요리를 많이 해요.",
+   "blank": "vegetariana",
+   "src": "made"
+  },
+  {
+   "text": "La hija de Lucía es vegetariana y no come los pollos de la granja.",
+   "en": "Lucía's daughter is vegetarian and doesn't eat the farm's chickens.",
+   "ko": "루시아의 딸은 채식주의자라서 농장 닭을 먹지 않아요.",
+   "blank": "vegetariana",
+   "src": "made"
+  }
+ ],
  "w|vehículo": [
   {
    "text": "El vehículo está estacionado frente a la casa.",
@@ -63575,6 +64183,22 @@
    "blank": "voluntad"
   }
  ],
+ "w|voluntariamente": [
+  {
+   "text": "Al final de la clase, Mateo se quedó voluntariamente a fregar los cacharros.",
+   "en": "At the end of class, Mateo voluntarily stayed to wash the pots.",
+   "ko": "수업이 끝나자 마테오는 자진해서 남아 설거지를 했어요.",
+   "blank": "voluntariamente",
+   "src": "made"
+  },
+  {
+   "text": "Algunos jóvenes del pueblo ayudan voluntariamente a Lucía en la vendimia.",
+   "en": "Some young people from the village voluntarily help Lucía with the grape harvest.",
+   "ko": "마을 젊은이 몇몇이 포도 수확 때 자진해서 루시아를 도와요.",
+   "blank": "voluntariamente",
+   "src": "made"
+  }
+ ],
  "w|voluntario": [
   {
    "text": "Soy voluntario en el hospital local.",
@@ -63993,6 +64617,22 @@
    "en": "The fox is cunning and quiet.",
    "ko": "여우는 교활하고 조용해.",
    "blank": "zorro"
+  }
+ ],
+ "w|zumo": [
+  {
+   "text": "Mateo exprime naranjas para hacer un zumo natural en cada clase.",
+   "en": "Mateo squeezes oranges to make fresh juice in every class.",
+   "ko": "마테오는 수업 때마다 오렌지를 짜서 생과일 주스를 만들어요.",
+   "blank": "zumo",
+   "src": "made"
+  },
+  {
+   "text": "Lucía vende zumo de manzana hecho con la fruta de su granja.",
+   "en": "Lucía sells apple juice made from the fruit on her farm.",
+   "ko": "루시아는 자기 농장 과일로 만든 사과 주스를 팔아요.",
+   "blank": "zumo",
+   "src": "made"
   }
  ]
 }
