@@ -46,14 +46,19 @@ import { forgetTalkDay } from "@/lib/roleplay/talkMemory";
 import { PairList, TalkCompare, useGrowthPairs } from "@/components/studyMap/Growth";
 import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type AmountPoint, type LearnedItem } from "@/lib/curriculum/learnedView";
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
-import { checkStates, dayOfSeconds } from "@/lib/curriculum/checkState";
-import type { LogEvent } from "@/lib/curriculum/logLedger";
+import { dayOfSeconds } from "@/lib/curriculum/checkState";
+import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
+import { cardHistory, knowTag, sessionMinutes, sessionsOf, summarizeSession, type KnowTag, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 
 const LOG = bankTone("log");
+
+function sameDay(a: string, b: string): boolean {
+  return a.split("-").map(Number).join("-") === b.split("-").map(Number).join("-");
+}
 
 function localDay(at: number): string {
   const d = new Date(at);
@@ -488,7 +493,8 @@ export function Logbank({
     { cls: "fill-info/45 text-info/60", icon: "•", title: ui.itemsLearned },
     { cls: "fill-bad text-bad", icon: "✗", title: ui.partFixed },
   ];
-  const dayDetail = openDay ? allDays.find((one) => one.day === openDay) ?? null : null;
+  // 날 문자열이 둘(logDays localDay "2026-11-9" · 장부·기간 "2026-11-09") — 숫자로 맞춰 찾는다.
+  const dayDetail = openDay ? allDays.find((one) => sameDay(one.day, openDay)) ?? null : null;
   const rowDetail = openRow ? (["grammar", "vocab", "expression"] as const).flatMap((one) => rowsOf(one)).find((row) => row.id === openRow) ?? null : null;
   const dateLabel = (day: string) => (kind === "week" ? weekdayLabel(locale, day) : String(asDate(day).getDate()));
   const rowList = (list: readonly PartRow[]) =>
@@ -630,6 +636,7 @@ export function Logbank({
             grammarName={grammarName}
             keyLabel={keyLabel}
             dateLabel={dateLabel}
+            onDay={(day) => setOpenDay(day)}
           />
         ) : null}
         <div className="flex gap-1 self-end" role="group">
@@ -730,11 +737,37 @@ export function Logbank({
       ) : null}
       {dayDetail ? (
         <LogSheet title={dayFormat(locale, dayDetail.day)} ui={ui} onClose={() => setOpenDay(null)}>
-          <DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />
+          {reform ? (
+            <DayTimeline
+              ui={ui}
+              language={language}
+              locale={locale}
+              day={dayDetail}
+              ledger={ledger}
+              grammarName={grammarName}
+              keyLabel={keyLabel}
+              fallback={<DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />}
+            />
+          ) : (
+            <DayBody ui={ui} language={language} day={dayDetail} label={(item) => (item.part === "grammar" && item.node ? nodeName(item.node) || item.text : item.text)} insight={insight} />
+          )}
         </LogSheet>
       ) : openDay ? (
         <LogSheet title={dayFormat(locale, openDay)} ui={ui} onClose={() => setOpenDay(null)}>
-          <p className="text-note text-slate-500">—</p>
+          {reform ? (
+            <DayTimeline
+              ui={ui}
+              language={language}
+              locale={locale}
+              day={{ day: openDay, items: [], quiz: null, results: [], calls: [], notes: [] }}
+              ledger={ledger}
+              grammarName={grammarName}
+              keyLabel={keyLabel}
+              fallback={<p className="text-note text-slate-500">—</p>}
+            />
+          ) : (
+            <p className="text-note text-slate-500">—</p>
+          )}
         </LogSheet>
       ) : null}
       {rowDetail ? (
@@ -913,23 +946,349 @@ function DayBody({
           </div>
         );
       })}
-      {fixed.length ? (
-        <ul className="flex flex-col gap-1">
-          {fixed.map((item, i) => (
-            <li key={`${item.at}-${i}`} className="text-meta">
-              <span aria-hidden className="me-1">{WHERE_ICON[String(item.where ?? "")] ?? "✎"}</span>
-              <span dir="auto" className="text-slate-500 line-through">{item.text}</span>
-              {item.right ? (
-                <>
-                  <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
-                  <span dir="auto" className="text-slate-200">{item.right}</span>
-                </>
-              ) : null}
-            </li>
-          ))}
-        </ul>
-      ) : null}
+      <FixedLines items={fixed} />
       {!day.results.length && !day.calls.length && !day.notes.length && !day.items.length && !day.quiz ? <p className="text-note text-slate-500">—</p> : null}
+    </div>
+  );
+}
+
+/** 그날 고친 줄(서버 기록 — 틀린 줄 → 바른 줄). */
+function FixedLines({ items }: { items: readonly LogItem[] }) {
+  if (!items.length) return null;
+  return (
+    <ul data-day-fixed className="flex flex-col gap-1">
+      {items.map((item, i) => (
+        <li key={`${item.at}-${i}`} className="text-meta">
+          <span aria-hidden className="me-1">{WHERE_ICON[String(item.where ?? "")] ?? "✎"}</span>
+          <span dir="auto" className="text-slate-500 line-through">{item.text}</span>
+          {item.right ? (
+            <>
+              <span aria-hidden className="mx-1 inline-block text-slate-500 rtl:rotate-180">→</span>
+              <span dir="auto" className="text-slate-200">{item.right}</span>
+            </>
+          ) : null}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+const PLACE_ICON: Record<Place, string> = { quiz: "📝", call: "📞", lesson: "🧩", dict: "📕", chat: "💬", people: "👤" };
+
+function placeName(ui: UICopy, place: Place): string {
+  return { quiz: ui.keepTitle, call: ui.homeTabCall, lesson: ui.framesTitle, dict: ui.languagebankTitle, chat: ui.homeTabChat, people: ui.homeTabPeople }[place];
+}
+
+/** 아는 정도 표시(studyTimeline.ts knowTag — 2026-11-09 사용자 결정: 학습 · n번 학습 · 자주 씀, 체크 셋 이름은 안 씀). */
+export function knowTagLabel(ui: UICopy, tag: KnowTag | null): string {
+  if (!tag) return "";
+  if (tag.kind === "often") return ui.tlOften;
+  return tag.kind === "times" ? ui.tlLearnedN.replace("{n}", String(tag.n)) : ui.lbFresh;
+}
+
+function modeName(ui: UICopy, mode: LogMode | undefined): string {
+  return mode === "pick" ? ui.tlPick : mode === "sure" ? ui.tlBare : mode === "write" ? ui.tlWrite : "";
+}
+
+function restLabel(ui: UICopy, ms: number): string {
+  const minutes = Math.round(ms / 60_000);
+  const span = minutes < 60 ? ui.planMinutes.replace("{n}", String(minutes)) : ui.tlHoursMin.replace("{h}", String(Math.floor(minutes / 60))).replace("{m}", String(minutes % 60));
+  return ui.tlRest.replace("{t}", span);
+}
+
+function useClock(locale: string) {
+  return useMemo(() => {
+    try {
+      return new Intl.DateTimeFormat(locale, { hour: "2-digit", minute: "2-digit" });
+    } catch {
+      return new Intl.DateTimeFormat(undefined, { hour: "2-digit", minute: "2-digit" });
+    }
+  }, [locale]);
+}
+
+/**
+ * 그날 세부 = 학습 타임라인(2026-11-09 사용자 "날 세부 시트 자리에", 시안 https://claude.ai/artifact/5ryqv3cTwk1FKLBraUKYkL):
+ * 그날 합(분·학습 시간 수·✓✗·새로 학습) + 하루 띠 → 학습 시간마다 카드(시각·어디서·무엇을·결과, 사이에 쉰 시간)
+ * → 누르면 그 학습 시간(푼 차례 띠·요소별 카드 줄·통화·수업 결과 카드) → 카드를 누르면 그 카드와 지난 기록.
+ * 끊는 기준 10분(studyTimeline.ts SESSION_GAP_MS). 장부가 없던 날(11-06 전)은 예전 세부(DayBody).
+ */
+function DayTimeline({
+  ui,
+  language,
+  locale,
+  day,
+  ledger,
+  grammarName,
+  keyLabel,
+  fallback,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  day: Day;
+  ledger: readonly LogEvent[];
+  grammarName: (stage: number, index: number) => string;
+  keyLabel: (key: string) => string;
+  fallback: ReactNode;
+}) {
+  const [openAt, setOpenAt] = useState<number | null>(null);
+  const [card, setCard] = useState<string | null>(null);
+  const clock = useClock(locale);
+  const dayOf = (t: number) => dayOfSeconds(t);
+  const sessions = useMemo(() => {
+    const events = ledger.filter((event) => sameDay(dayOfSeconds(event.t), day.day));
+    const noted = new Set(day.notes.map((note) => note.id));
+    const calls = [
+      ...day.notes.map((note) => ({ id: note.id, at: note.at, secs: note.secs })),
+      ...day.calls.filter((call) => !noted.has(call.id)).map((call) => ({ id: call.id, at: call.startedAt, secs: callSeconds(call) })),
+    ];
+    return sessionsOf({ events, calls, results: day.results.map((one) => ({ at: one.at, ...(one.secs ? { secs: one.secs } : {}), item: one.item })) });
+  }, [ledger, day]);
+  const summaries = useMemo(() => sessions.map((one) => summarizeSession(one, ledger, (t) => dayOfSeconds(t))), [sessions, ledger]);
+  if (!sessions.length) return <>{fallback}</>;
+  const fixed = day.items.filter((item) => item.kind === "fixed");
+  const minutes = sessions.reduce((sum, one) => sum + sessionMinutes(one), 0);
+  const ok = summaries.reduce((sum, one) => sum + one.ok, 0);
+  const miss = summaries.reduce((sum, one) => sum + one.miss, 0);
+  const fresh = summaries.reduce((sum, one) => sum + one.fresh.length, 0);
+  const [y, m, d] = day.day.split("-").map(Number);
+  const midnight = new Date(y ?? 1970, (m ?? 1) - 1, d ?? 1).getTime();
+  const partsLine = (parts: Record<CardPart, number>) =>
+    LEARN_PARTS.filter((part) => parts[part])
+      .map((part) => `${learnPartName(ui, part)} ${parts[part]}`)
+      .join(" · ");
+  const open = openAt === null ? -1 : sessions.findIndex((one) => one.start === openAt);
+  const session = open >= 0 ? sessions[open]! : null;
+  const summary = open >= 0 ? summaries[open]! : null;
+  const subDay = (one: Session): Day => ({
+    ...day,
+    quiz: null,
+    items: [],
+    calls: day.calls.filter((call) => one.callIds.includes(call.id)),
+    notes: day.notes.filter((note) => one.callIds.includes(note.id)),
+    results: day.results.filter((result) => one.resultAts.includes(result.at)),
+  });
+  const range = (one: Session) => {
+    const from = clock.format(one.start);
+    const to = clock.format(one.end);
+    return from === to ? from : `${from}–${to}`;
+  };
+  const cardLabel = (key: string) => {
+    if (!key.startsWith("g|")) return keyLabel(key);
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    return grammarName(stage ?? 0, index ?? 0) || keyLabel(key);
+  };
+  const box = "rounded-xl border border-line bg-white/[0.02]";
+  const chipCls = "rounded-full border border-line px-2 py-0.5 text-meta tabular-nums text-slate-300";
+  if (session && summary) {
+    const order = [...session.events].filter((event) => (event.src === "quiz" || event.src === "exam" || event.src === "judge") && (event.r === "ok" || event.r === "miss")).sort((a, b) => a.t - b.t);
+    return (
+      <div data-timeline-session={session.start} className="flex flex-col gap-3">
+        <div className="flex items-center gap-2">
+          <button type="button" data-timeline-back onClick={() => setOpenAt(null)} aria-label="‹" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-title text-slate-300 hover:bg-white/10 rtl:rotate-180">‹</button>
+          <div className="flex min-w-0 flex-1 flex-col">
+            <span className={`truncate text-body font-semibold text-info`}>{session.places.map((place) => `${PLACE_ICON[place]} ${placeName(ui, place)}`).join(" · ")}</span>
+            <span className="text-meta tabular-nums text-slate-400">{`${range(session)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(session)))}`}</span>
+          </div>
+          {summary.ok || summary.miss ? (
+            <span className="shrink-0 text-note tabular-nums">
+              <span className="text-good">{`✓ ${summary.ok}`}</span> <span className="text-bad">{`✗ ${summary.miss}`}</span>
+            </span>
+          ) : null}
+        </div>
+        {order.length ? (
+          <div data-timeline-order className="flex h-3 gap-0.5">
+            {order.map((event, i) => (
+              <span key={`${event.k}-${event.t}-${i}`} className={`flex-1 rounded-full ${event.r === "ok" ? "bg-good" : "bg-bad"}`} />
+            ))}
+          </div>
+        ) : null}
+        <div className="flex flex-wrap gap-1.5">
+          {summary.fresh.length ? <span className={chipCls}>{ui.tlFreshN.replace("{n}", String(summary.fresh.length))}</span> : null}
+          {summary.again.length ? <span className={chipCls}>{ui.tlAgainN.replace("{n}", String(summary.again.length))}</span> : null}
+          {summary.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(summary.looked))}</span> : null}
+        </div>
+        <DayResults ui={ui} language={language} day={subDay(session)} />
+        {LEARN_PARTS.filter((part) => summary.parts[part]).map((part) => {
+          const cards = summary.cards.filter((one) => one.part === part);
+          const okN = cards.reduce((sum, one) => sum + one.ok, 0);
+          const missN = cards.reduce((sum, one) => sum + one.miss, 0);
+          return (
+            <section key={part} data-timeline-part={part} className={`flex flex-col ${box}`}>
+              <header className="flex items-center gap-2 border-b border-line px-3 py-2">
+                <span className="flex-1 text-note font-semibold text-ink">{`${LEARN_ICON[part]} ${learnPartName(ui, part)} ${cards.length}`}</span>
+                <span className="text-meta tabular-nums text-slate-400">{`✓ ${okN}${missN ? ` ✗ ${missN}` : ""}`}</span>
+              </header>
+              <ul className="flex flex-col">
+                {cards.map((one) => {
+                  const tag = knowTag(ledger, one.key, dayOf);
+                  const quizzed = one.last.src === "quiz" || one.last.src === "exam" || one.last.src === "judge";
+                  const mark = one.last.r === "ok" ? "✓" : one.last.r === "miss" ? "✗" : "💬";
+                  return (
+                    <li key={one.key} className="border-t border-line first:border-t-0">
+                      <button type="button" data-timeline-card={one.key} onClick={() => setCard(one.key)} className="flex min-h-11 w-full items-center gap-2 px-3 py-1.5 text-start hover:bg-white/5">
+                        <span aria-hidden className={`w-4 shrink-0 text-note font-semibold ${one.last.r === "ok" ? "text-good" : one.last.r === "miss" ? "text-bad" : "text-slate-400"}`}>{mark}</span>
+                        <span className="flex min-w-0 flex-1 flex-col">
+                          <span dir="auto" className="truncate text-note text-ink">{cardLabel(one.key)}</span>
+                          <span className="text-meta tabular-nums text-slate-500">
+                            {[quizzed ? modeName(ui, one.mode) : placeName(ui, placeOfSrc(one.last.src)), clock.format(one.last.t * 1000)].filter(Boolean).join(" · ")}
+                          </span>
+                        </span>
+                        {tag ? <span className="shrink-0 text-meta text-slate-300">{`${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}`}</span> : null}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          );
+        })}
+        {card ? (
+          <LogSheet title={cardLabel(card)} ui={ui} onClose={() => setCard(null)}>
+            <CardTimeline ui={ui} language={language} locale={locale} cardKey={card} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+          </LogSheet>
+        ) : null}
+      </div>
+    );
+  }
+  return (
+    <div data-timeline={day.day} className="flex flex-col gap-3">
+      <div className="grid grid-cols-3 gap-2">
+        <div className={`flex flex-col px-3 py-2 ${box}`}>
+          <span className="text-meta text-slate-400">{ui.logStudyTime}</span>
+          <span className="text-body font-semibold tabular-nums text-ink">{ui.planMinutes.replace("{n}", String(minutes))}</span>
+          <span className="text-meta tabular-nums text-slate-500">{ui.tlSessionsN.replace("{n}", String(sessions.length))}</span>
+        </div>
+        <div className={`flex flex-col px-3 py-2 ${box}`}>
+          <span className="text-meta text-slate-400">✓ ✗</span>
+          <span className="text-body font-semibold tabular-nums">
+            <span className="text-good">{ok}</span> <span className="text-bad">{miss}</span>
+          </span>
+        </div>
+        <div className={`flex flex-col px-3 py-2 ${box}`}>
+          <span className="text-meta text-slate-400">{ui.tlFreshN.replace("{n}", "").trim()}</span>
+          <span className="text-body font-semibold tabular-nums text-ink">{fresh}</span>
+        </div>
+      </div>
+      <div data-timeline-strip aria-hidden className="relative h-2.5 rounded-full bg-white/5" dir="ltr">
+        {sessions.map((one) => (
+          <span
+            key={one.start}
+            className={`absolute top-0 h-full rounded-full bg-info`}
+            style={{ left: `${Math.max(0, ((one.start - midnight) / 86_400_000) * 100)}%`, width: `${Math.max(1, ((one.end - one.start) / 86_400_000) * 100)}%` }}
+          />
+        ))}
+      </div>
+      <div className="-mt-2 flex justify-between text-meta tabular-nums text-slate-500" dir="ltr">
+        <span>0</span>
+        <span>6</span>
+        <span>12</span>
+        <span>18</span>
+        <span>24</span>
+      </div>
+      <ol data-timeline-sessions className="flex flex-col">
+        {sessions.map((one, i) => {
+          const sum = summaries[i]!;
+          const next = sessions[i + 1];
+          const fixedN = day.notes.filter((note) => one.callIds.includes(note.id)).reduce((n, note) => n + note.fixed, 0);
+          return (
+            <li key={one.start} className="flex gap-3">
+              <div className="flex w-11 shrink-0 flex-col items-center">
+                <span className="text-meta font-semibold tabular-nums text-ink">{clock.format(one.start)}</span>
+                <span className={`my-1.5 h-2.5 w-2.5 rounded-full bg-info`} />
+                {next ? <span className="w-0.5 flex-1 bg-line" /> : null}
+              </div>
+              <div className="flex min-w-0 flex-1 flex-col gap-1.5 pb-3">
+                <button type="button" data-timeline-open={one.start} onClick={() => setOpenAt(one.start)} className={`flex flex-col gap-1.5 px-3 py-2.5 text-start hover:bg-white/5 ${box}`}>
+                  <span className="flex items-center gap-2">
+                    <span className={`min-w-0 truncate text-note font-semibold text-info`}>{one.places.map((place) => `${PLACE_ICON[place]} ${placeName(ui, place)}`).join(" · ")}</span>
+                    <span className="min-w-0 flex-1 truncate text-meta tabular-nums text-slate-400">{`${range(one)} · ${ui.planMinutes.replace("{n}", String(sessionMinutes(one)))}`}</span>
+                    <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
+                  </span>
+                  {partsLine(sum.parts) ? <span className="text-meta text-slate-300">{partsLine(sum.parts)}</span> : null}
+                  <span className="flex flex-wrap gap-1.5">
+                    {sum.ok || sum.miss ? <span className={chipCls}>{`✓ ${sum.ok}  ✗ ${sum.miss}`}</span> : null}
+                    {sum.fresh.length ? <span className={chipCls}>{ui.tlFreshN.replace("{n}", String(sum.fresh.length))}</span> : null}
+                    {sum.again.length ? <span className={chipCls}>{ui.tlAgainN.replace("{n}", String(sum.again.length))}</span> : null}
+                    {fixedN ? <span className={chipCls}>{`✎ ${fixedN}`}</span> : null}
+                    {sum.looked ? <span className={chipCls}>{ui.tlLookedN.replace("{n}", String(sum.looked))}</span> : null}
+                  </span>
+                </button>
+                {next ? <span className="ps-1 text-meta text-slate-500">{restLabel(ui, next.start - one.end)}</span> : null}
+              </div>
+            </li>
+          );
+        })}
+      </ol>
+      <FixedLines items={fixed} />
+      <div className="flex justify-end">
+        <ClearDay ui={ui} language={language} day={day} />
+      </div>
+    </div>
+  );
+}
+
+function placeOfSrc(src: LogEvent["src"]): Place {
+  return src === "dict" ? "dict" : src === "call" ? "call" : src === "chat" ? "chat" : src === "people" ? "people" : "quiz";
+}
+
+/** 카드 한 장 + 지난 기록(새것부터, 줄마다 그때의 표시). */
+function CardTimeline({
+  ui,
+  language,
+  locale,
+  cardKey,
+  ledger,
+  grammarName,
+  keyLabel,
+}: {
+  ui: UICopy;
+  language: string;
+  locale: string;
+  cardKey: string;
+  ledger: readonly LogEvent[];
+  grammarName: (stage: number, index: number) => string;
+  keyLabel: (key: string) => string;
+}) {
+  const rows = useMemo(() => cardHistory(ledger, cardKey, (t) => dayOfSeconds(t)), [ledger, cardKey]);
+  const item = useMemo(() => {
+    const mine = ledger.filter((event) => event.k === cardKey && (event.r === "ok" || event.r === "miss"));
+    const last = mine.reduce<LogEvent | null>((have, one) => (!have || have.t <= one.t ? one : have), null);
+    return { key: cardKey, ok: mine.filter((one) => one.r === "ok").length, miss: mine.filter((one) => one.r === "miss").length, last: last?.t ?? 0, lastOk: last?.r === "ok" };
+  }, [ledger, cardKey]);
+  const used = useMemo(() => new Set(ledger.filter((one) => one.k === cardKey && one.r === "used").map((one) => dayOfSeconds(one.t))).size, [ledger, cardKey]);
+  const when = useMemo(() => {
+    try {
+      return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+    } catch {
+      return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+    }
+  }, [locale]);
+  const resultText = (row: (typeof rows)[number]) =>
+    row.r === "look" ? ui.tlLookedN.replace("{n}", "").trim() : row.r === "used" ? ui.tlUsedN.replace("{n}", "1") : `${row.r === "ok" ? "✓" : "✗"} ${modeName(ui, row.mode)}`.trim();
+  return (
+    <div data-card-timeline={cardKey} className="flex flex-col gap-3">
+      <LearnedCards ui={ui} language={language} locale={locale} items={[item]} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
+      {used ? <span className="self-start rounded-full border border-line px-2 py-0.5 text-meta text-slate-300">{ui.tlUsedN.replace("{n}", String(used))}</span> : null}
+      <h3 className="text-caption font-semibold text-slate-400">{ui.tlHistory}</h3>
+      <ol data-card-history className="flex flex-col">
+        {rows.map((row, i) => {
+          const dot = row.r === "ok" ? "bg-good" : row.r === "miss" ? "bg-bad" : row.r === "used" ? "bg-info" : "bg-slate-500";
+          const place = placeOfSrc(row.src);
+          return (
+            <li key={`${row.t}-${i}`} className="flex gap-3">
+              <div className="flex w-3 shrink-0 flex-col items-center">
+                <span className={`mt-1 h-2.5 w-2.5 rounded-full ${dot}`} />
+                {i < rows.length - 1 ? <span className="w-0.5 flex-1 bg-line" /> : null}
+              </div>
+              <div className="flex min-w-0 flex-1 flex-col pb-3">
+                <span className="text-note tabular-nums text-ink">{`${when.format(row.t * 1000)} · ${PLACE_ICON[place]} ${placeName(ui, place)}`}</span>
+                <span className="text-meta text-slate-400">{[resultText(row), row.r === "look" ? "" : knowTagLabel(ui, row.tag)].filter(Boolean).join(" · ")}</span>
+              </div>
+            </li>
+          );
+        })}
+      </ol>
     </div>
   );
 }
@@ -1216,6 +1575,7 @@ function Learned({
   grammarName,
   keyLabel,
   dateLabel,
+  onDay,
 }: {
   ui: UICopy;
   language: string;
@@ -1230,6 +1590,7 @@ function Learned({
   grammarName: (stage: number, index: number) => string;
   keyLabel: (key: string) => string;
   dateLabel: (day: string) => string;
+  onDay?: (day: string) => void;
 }) {
   // 배운 것 = 표 하나(2026-11-07 밤 사용자 "배운 것·늘어난 것·어휘·새로가 UI로 구분이 안 돼" → "바꿔줘, 대화에서 씀은 활용으로"):
   // 줄 = 무엇(어휘·문법·표현·문장구조), 칸 = 학습(그 기간에 푼 것) · 활용(대화에서 맞게 씀) — 익힘은 뺌(같은 밤 "기준이 모호, 활용과 겹침"),
@@ -1311,8 +1672,9 @@ function Learned({
       ) : null}
       <TalkCompare ui={ui} language={language} locale={locale} keyLabel={keyLabel} />
       {curveReady(all) ? (
-        <LearnCurve ui={ui} amounts={amounts} known={known} dateLabel={dateLabel} />
+        <LearnCurve ui={ui} amounts={amounts} known={known} dateLabel={dateLabel} onDay={onDay} />
       ) : null}
+      {onDay ? <DayRows ui={ui} locale={locale} amounts={amounts} notes={notes} onDay={onDay} /> : null}
       {openCell ? (
         <LogSheet title={`${LEARN_ICON[openCell.part]} ${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
           {openCell.col === "used" ? (
@@ -1369,12 +1731,12 @@ function LearnedCards({
   keyLabel: (key: string) => string;
 }) {
   const [word, setWord] = useState<string | null>(null);
-  const states = useMemo(() => checkStates(ledger), [ledger]);
   const prepared = usePrepared(language, locale);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
+  // 표시는 있었던 일만(studyTimeline.ts knowTag — 2026-11-09 사용자 "학습 · n번 학습 · 자주 씀"), 체크 셋은 안에서만.
   const markOf = (key: string) => {
-    const level = states.get(key)?.level ?? "new";
-    return level === "known" ? { icon: "✓", label: ui.knownTag, cls: "text-good" } : level === "hard" ? { icon: "◐", label: ui.lbCardHard, cls: "text-warn" } : null;
+    const tag = knowTag(ledger, key, (t) => dayOfSeconds(t));
+    return tag ? { label: `${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}`, cls: tag.kind === "often" ? "text-info" : "text-slate-300" } : null;
   };
   const face = (key: string) => {
     if (key.startsWith("w|") || key.startsWith("e|")) {
@@ -1420,12 +1782,7 @@ function LearnedCards({
         return (
           <li key={one.key} data-learned-card={one.key} className="flex flex-col gap-1">
             <div className="flex items-center gap-2 text-caption">
-              {/* New는 표시하지 않는다(2026-11-08) — 적용이 힘듦 ◐ · 알아요 ✓만. */}
-              {mark ? (
-                <span className={`font-semibold ${mark.cls}`} aria-label={mark.label} title={mark.label}>
-                  {mark.icon}
-                </span>
-              ) : null}
+              {mark ? <span data-know-tag className={`font-semibold ${mark.cls}`}>{mark.label}</span> : null}
               <span className="tabular-nums text-good">{`✓ ${one.ok}`}</span>
               {one.miss ? <span className="tabular-nums text-bad">{`✗ ${one.miss}`}</span> : null}
               <span className="flex-1" />
@@ -1454,12 +1811,36 @@ function LearnedCards({
   );
 }
 
+/** 날마다 한 줄(새것부터) — 누르면 그날 학습 타임라인(2026-11-09, 시안 ①의 날 목록). 푼 것·통화가 있는 날만. */
+function DayRows({ ui, locale, amounts, notes, onDay }: { ui: UICopy; locale: string; amounts: readonly AmountPoint[]; notes: readonly CallNote[]; onDay: (day: string) => void }) {
+  const rows = amounts
+    .map((one) => ({ ...one, calls: notes.filter((note) => localDay(note.at) === one.day).length }))
+    .filter((one) => one.fresh + one.again + one.calls > 0)
+    .reverse();
+  if (!rows.length) return null;
+  return (
+    <ol data-day-rows className="flex flex-col overflow-hidden rounded-xl border border-line">
+      {rows.map((one) => (
+        <li key={one.day} className="border-t border-line first:border-t-0">
+          <button type="button" data-day-row={one.day} onClick={() => onDay(one.day)} className="flex min-h-11 w-full items-center gap-3 px-3 py-2 text-start hover:bg-white/5">
+            <span className="min-w-0 flex-1 truncate text-note text-ink">{dayFormat(locale, one.day)}</span>
+            <span className="shrink-0 text-meta tabular-nums text-slate-400">
+              {[one.fresh ? ui.tlFreshN.replace("{n}", String(one.fresh)) : "", one.again ? ui.tlAgainN.replace("{n}", String(one.again)) : "", one.calls ? `📞 ${one.calls}` : ""].filter(Boolean).join(" · ")}
+            </span>
+            <span aria-hidden className="shrink-0 text-slate-500 rtl:rotate-180">›</span>
+          </button>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 /**
  * 학습 곡선(2026-11-07 사용자 "Logbank는 학습량 + 채운 %, 학습량은 푼 수"): 아래 막대 = 날마다 푼 수(새로 · 다시 두 색),
  * 위 선 = 그날 끝까지 활용 누적(growthView.ts usedAt — 대화에서 맞게 쓴 열쇠 수, 줄지 않음, 2026-11-07 밤).
  * 눈금이 둘이라 숫자 눈금은 없고, 날을 누르면 그날 "학습 n · 복습 m · 지금까지 활용 N". 선의 세로는 기간 첫날 값 아래 여유 ~ 가장 높은 값 위 여유로 잡아 오름이 보이게.
  */
-function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: readonly AmountPoint[]; known: readonly (number | null)[]; dateLabel: (day: string) => string }) {
+function LearnCurve({ ui, amounts, known, dateLabel, onDay }: { ui: UICopy; amounts: readonly AmountPoint[]; known: readonly (number | null)[]; dateLabel: (day: string) => string; onDay?: (day: string) => void }) {
   const [pick, setPick] = useState<number | null>(null);
   const W = 320;
   const H = 120;
@@ -1517,16 +1898,21 @@ function LearnCurve({ ui, amounts, known, dateLabel }: { ui: UICopy; amounts: re
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-60`}><rect width="8" height="8" rx="2" /></svg>
-            {`${ui.lbNew} ${at.fresh}`}
+            {ui.tlFreshN.replace("{n}", String(at.fresh))}
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={`${LOG.fill} opacity-25`}><rect width="8" height="8" rx="2" /></svg>
-            {`${ui.lbAgain} ${at.again}`}
+            {ui.tlAgainN.replace("{n}", String(at.again))}
           </span>
           <span className="inline-flex items-center gap-1">
             <svg aria-hidden width="8" height="8" className={LOG.fill}><circle cx="4" cy="4" r="3" /></svg>
             {`${ui.growUsedAll} ${known[shown] ?? 0}`}
           </span>
+          {onDay && at.fresh + at.again ? (
+            <button type="button" data-curve-open={at.day} onClick={() => onDay(at.day)} aria-label={dateLabel(at.day)} className="ms-auto flex h-8 w-8 items-center justify-center rounded-full text-slate-300 hover:bg-white/10 rtl:rotate-180">
+              ›
+            </button>
+          ) : null}
         </p>
       ) : null}
     </figure>
