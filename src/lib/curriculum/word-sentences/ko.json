@@ -1421,6 +1421,22 @@
    "blank": "강력하다"
   }
  ],
+ "w|강렬하다": [
+  {
+   "text": "신부의 붉은 립스틱이 하얀 드레스와 강렬한 대비를 이뤘어요.",
+   "en": "The bride's red lipstick made a striking contrast with her white dress.",
+   "ko": "신부의 붉은 립스틱이 하얀 드레스와 강렬한 대비를 이뤘어요.",
+   "blank": "강렬한",
+   "src": "made"
+  },
+  {
+   "text": "감독은 강렬한 색감의 화면을 원해서 빨간 조명을 썼어요.",
+   "en": "The director wanted a vivid-colored image, so he used red lighting.",
+   "ko": "감독은 강렬한 색감의 화면을 원해서 빨간 조명을 썼어요.",
+   "blank": "강렬한",
+   "src": "made"
+  }
+ ],
  "w|강아지": [
   {
    "text": "강아지 너무 귀엽다.",
@@ -1681,6 +1697,22 @@
    "blank": "개발했어"
   }
  ],
+ "w|개방": [
+  {
+   "text": "현우네 학교 운동장은 주말에 주민들에게 개방돼요.",
+   "en": "The playground at Hyunwoo's school is open to residents on weekends.",
+   "ko": "현우네 학교 운동장은 주말에 주민들에게 개방돼요.",
+   "blank": "개방돼요",
+   "src": "made"
+  },
+  {
+   "text": "새 공항 전망대는 다음 달부터 시민들에게 개방돼요.",
+   "en": "The new airport observation deck opens to the public next month.",
+   "ko": "새 공항 전망대는 다음 달부터 시민들에게 개방돼요.",
+   "blank": "개방돼요",
+   "src": "made"
+  }
+ ],
  "w|개성": [
   {
    "text": "강한 개성이 돋보여.",
@@ -1708,6 +1740,22 @@
    "en": "It was the release day for a new phone, so even the repair shop was packed.",
    "ko": "새 휴대폰 판매 개시 날이라 수리점에도 손님이 북적였어요.",
    "blank": "개시",
+   "src": "made"
+  }
+ ],
+ "w|개요": [
+  {
+   "text": "현우는 발표 전에 내용의 개요를 칠판에 적었어요.",
+   "en": "Before his presentation, Hyunwoo wrote an outline of the content on the board.",
+   "ko": "현우는 발표 전에 내용의 개요를 칠판에 적었어요.",
+   "blank": "개요를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 출장 일정의 개요를 비행기 안에서 다시 확인했어요.",
+   "en": "On the plane, Sujin went over the outline of her business trip schedule again.",
+   "ko": "수진은 출장 일정의 개요를 비행기 안에서 다시 확인했어요.",
+   "blank": "개요를",
    "src": "made"
   }
  ],
@@ -2485,6 +2533,22 @@
    "en": "Where'd the black bag go?",
    "ko": "검은색 가방 어디 갔지?",
    "blank": "검은색"
+  }
+ ],
+ "w|검토하다": [
+  {
+   "text": "학교는 학생들의 급식 개선 의견을 꼼꼼히 검토했어요.",
+   "en": "The school carefully reviewed the students' suggestions for improving school lunches.",
+   "ko": "학교는 학생들의 급식 개선 의견을 꼼꼼히 검토했어요.",
+   "blank": "검토했어요",
+   "src": "made"
+  },
+  {
+   "text": "출입국 심사관은 수진의 여권을 한참 동안 검토했어요.",
+   "en": "The immigration officer examined Sujin's passport for a long time.",
+   "ko": "출입국 심사관은 수진의 여권을 한참 동안 검토했어요.",
+   "blank": "검토했어요",
+   "src": "made"
   }
  ],
  "w|겁": [
@@ -3533,6 +3597,22 @@
    "blank": "고구마가"
   }
  ],
+ "w|고귀하다": [
+  {
+   "text": "윤리 선생님은 모든 생명은 고귀하다고 강조하셨어요.",
+   "en": "The ethics teacher emphasized that all life is precious.",
+   "ko": "윤리 선생님은 모든 생명은 고귀하다고 강조하셨어요.",
+   "blank": "고귀하다고",
+   "src": "made"
+  },
+  {
+   "text": "공항에서 수진은 군인들의 고귀한 희생을 기리는 전시를 봤어요.",
+   "en": "At the airport, Sujin saw an exhibit honoring the noble sacrifice of soldiers.",
+   "ko": "공항에서 수진은 군인들의 고귀한 희생을 기리는 전시를 봤어요.",
+   "blank": "고귀한",
+   "src": "made"
+  }
+ ],
  "w|고급스럽다": [
   {
    "text": "분위기가 고급스러워.",
@@ -4577,6 +4657,22 @@
    "en": "The airport is really big.",
    "ko": "공항이 아주 넓어.",
    "blank": "공항이"
+  }
+ ],
+ "w|공화국": [
+  {
+   "text": "사회 시간에 현우는 민주 공화국의 뜻을 배웠어요.",
+   "en": "In social studies, Hyunwoo learned the meaning of a democratic republic.",
+   "ko": "사회 시간에 현우는 민주 공화국의 뜻을 배웠어요.",
+   "blank": "공화국의",
+   "src": "made"
+  },
+  {
+   "text": "수진이 탈 비행기는 체코 공화국의 수도 프라하로 가요.",
+   "en": "The plane Sujin is taking goes to Prague, the capital of the Czech Republic.",
+   "ko": "수진이 탈 비행기는 체코 공화국의 수도 프라하로 가요.",
+   "blank": "공화국의",
+   "src": "made"
   }
  ],
  "w|공휴일": [
@@ -6613,6 +6709,22 @@
    "blank": "그러한"
   }
  ],
+ "w|그럭저럭": [
+  {
+   "text": "민수는 서툰 춤을 그럭저럭 끝까지 해냈어요.",
+   "en": "Minsu managed to get through his clumsy dance to the end.",
+   "ko": "민수는 서툰 춤을 그럭저럭 끝까지 해냈어요.",
+   "blank": "그럭저럭",
+   "src": "made"
+  },
+  {
+   "text": "예산이 부족했지만 지영의 팀은 그럭저럭 촬영을 마쳤어요.",
+   "en": "The budget was short, but Jiyoung's team managed to finish shooting.",
+   "ko": "예산이 부족했지만 지영의 팀은 그럭저럭 촬영을 마쳤어요.",
+   "blank": "그럭저럭",
+   "src": "made"
+  }
+ ],
  "w|그런": [
   {
    "text": "그런 말은 상처가 돼.",
@@ -7004,6 +7116,22 @@
    "en": "Migyeong finally bought a house with a yard, which she had wanted so much.",
    "ko": "미경은 그토록 갖고 싶던 마당 있는 집을 드디어 샀어요.",
    "blank": "그토록",
+   "src": "made"
+  }
+ ],
+ "w|극단": [
+  {
+   "text": "선생님은 극단적인 생각보다 균형 잡힌 시각을 가지라고 하셨어요.",
+   "en": "The teacher told us to have a balanced view rather than extreme thinking.",
+   "ko": "선생님은 극단적인 생각보다 균형 잡힌 시각을 가지라고 하셨어요.",
+   "blank": "극단적인",
+   "src": "made"
+  },
+  {
+   "text": "수진은 비행기를 놓칠까 봐 극단적으로 일찍 공항에 도착했어요.",
+   "en": "Afraid of missing her flight, Sujin arrived at the airport extremely early.",
+   "ko": "수진은 비행기를 놓칠까 봐 극단적으로 일찍 공항에 도착했어요.",
+   "blank": "극단적으로",
    "src": "made"
   }
  ],
@@ -8004,6 +8132,22 @@
    "blank": "기준으로는"
   }
  ],
+ "w|기증자": [
+  {
+   "text": "신부의 아버지는 몇 년 전 신장 기증자 덕분에 건강을 되찾으셨어요.",
+   "en": "A few years ago, the bride's father regained his health thanks to a kidney donor.",
+   "ko": "신부의 아버지는 몇 년 전 신장 기증자 덕분에 건강을 되찾으셨어요.",
+   "blank": "기증자",
+   "src": "made"
+  },
+  {
+   "text": "이 다큐 영화는 장기 기증자 가족들의 이야기를 담았어요.",
+   "en": "This documentary film tells the stories of organ donors' families.",
+   "ko": "이 다큐 영화는 장기 기증자 가족들의 이야기를 담았어요.",
+   "blank": "기증자",
+   "src": "made"
+  }
+ ],
  "w|기차": [
   {
    "text": "기차를 타고 갈게.",
@@ -8086,6 +8230,22 @@
    "en": "I missed the chance.",
    "ko": "기회를 놓쳤어.",
    "blank": "기회를"
+  }
+ ],
+ "w|긴급하다": [
+  {
+   "text": "교장 선생님은 긴급한 일로 수업 중에 방송을 하셨어요.",
+   "en": "The principal made an announcement during class about an urgent matter.",
+   "ko": "교장 선생님은 긴급한 일로 수업 중에 방송을 하셨어요.",
+   "blank": "긴급한",
+   "src": "made"
+  },
+  {
+   "text": "기내에서 긴급한 환자가 생겨서 비행기가 회항했어요.",
+   "en": "A passenger had a medical emergency on board, so the plane turned back.",
+   "ko": "기내에서 긴급한 환자가 생겨서 비행기가 회항했어요.",
+   "blank": "긴급한",
+   "src": "made"
   }
  ],
  "w|긴장": [
@@ -8486,6 +8646,22 @@
    "en": "The battery seems about to die.",
    "ko": "배터리가 곧 꺼질 것 같아.",
    "blank": "꺼질"
+  }
+ ],
+ "w|꺾다": [
+  {
+   "text": "민수는 팔씨름에서 처남을 꺾고 크게 웃었어요.",
+   "en": "Minsu beat his brother-in-law at arm wrestling and laughed loudly.",
+   "ko": "민수는 팔씨름에서 처남을 꺾고 크게 웃었어요.",
+   "blank": "꺾고",
+   "src": "made"
+  },
+  {
+   "text": "이 장면에서 주인공은 들판의 꽃을 꺾어 연인에게 건네요.",
+   "en": "In this scene, the main character picks a flower from the field and hands it to his lover.",
+   "ko": "이 장면에서 주인공은 들판의 꽃을 꺾어 연인에게 건네요.",
+   "blank": "꺾어",
+   "src": "made"
   }
  ],
  "w|껌": [
@@ -8929,6 +9105,22 @@
    "en": "The team leader tried hard to draw out the new hires' ideas in the meeting.",
    "ko": "팀장님은 회의에서 신입들의 아이디어를 끌어내려고 애썼어요.",
    "blank": "끌어내려고",
+   "src": "made"
+  }
+ ],
+ "w|끌어들이다": [
+  {
+   "text": "현우는 새 동아리에 친구들을 끌어들이려고 홍보 포스터를 만들었어요.",
+   "en": "Hyunwoo made a promotional poster to draw his friends into the new club.",
+   "ko": "현우는 새 동아리에 친구들을 끌어들이려고 홍보 포스터를 만들었어요.",
+   "blank": "끌어들이려고",
+   "src": "made"
+  },
+  {
+   "text": "면세점 직원은 손님을 끌어들이려고 시식 행사를 열었어요.",
+   "en": "The duty-free shop staff held a tasting event to draw in customers.",
+   "ko": "면세점 직원은 손님을 끌어들이려고 시식 행사를 열었어요.",
+   "blank": "끌어들이려고",
    "src": "made"
   }
  ],
@@ -9716,6 +9908,22 @@
    "en": "The south is warmer.",
    "ko": "남쪽이 더 따뜻해.",
    "blank": "남쪽이"
+  }
+ ],
+ "w|남친": [
+  {
+   "text": "신부의 친구는 부케를 받고 옆에 있던 남친을 쳐다봤어요.",
+   "en": "The bride's friend caught the bouquet and looked at her boyfriend standing next to her.",
+   "ko": "신부의 친구는 부케를 받고 옆에 있던 남친을 쳐다봤어요.",
+   "blank": "남친을",
+   "src": "made"
+  },
+  {
+   "text": "지영의 남친은 촬영장에 간식을 사 들고 응원하러 왔어요.",
+   "en": "Jiyoung's boyfriend came to the set with snacks to cheer her on.",
+   "ko": "지영의 남친은 촬영장에 간식을 사 들고 응원하러 왔어요.",
+   "blank": "남친은",
+   "src": "made"
   }
  ],
  "w|남편": [
@@ -11288,6 +11496,22 @@
    "src": "made"
   }
  ],
+ "w|누이": [
+  {
+   "text": "민수의 누이는 결혼식 내내 동생 넥타이를 고쳐 줬어요.",
+   "en": "Minsu's older sister kept fixing her younger brother's tie throughout the wedding.",
+   "ko": "민수의 누이는 결혼식 내내 동생 넥타이를 고쳐 줬어요.",
+   "blank": "누이는",
+   "src": "made"
+  },
+  {
+   "text": "영화에서 주인공은 전쟁 통에 헤어진 누이를 평생 찾아다녀요.",
+   "en": "In the film, the main character spends his whole life searching for his sister, separated from him during the war.",
+   "ko": "영화에서 주인공은 전쟁 통에 헤어진 누이를 평생 찾아다녀요.",
+   "blank": "누이를",
+   "src": "made"
+  }
+ ],
  "w|눈": [
   {
    "text": "눈 비벼서 충혈됐어.",
@@ -11540,6 +11764,22 @@
    "en": "Mom and Dad have aged a lot.",
    "ko": "부모님 많이 늙으셨네.",
    "blank": "늙으셨네"
+  }
+ ],
+ "w|늙은이": [
+  {
+   "text": "민수의 할아버지는 이 늙은이가 손주 결혼식까지 보게 됐다며 눈시울을 붉히셨어요.",
+   "en": "Minsu's grandfather teared up, saying this old man got to see even his grandson's wedding.",
+   "ko": "민수의 할아버지는 이 늙은이가 손주 결혼식까지 보게 됐다며 눈시울을 붉히셨어요.",
+   "blank": "늙은이가",
+   "src": "made"
+  },
+  {
+   "text": "젊은 배우가 늙은이 분장을 하니 아무도 못 알아봤어요.",
+   "en": "When the young actor was made up as an old man, no one recognized him.",
+   "ko": "젊은 배우가 늙은이 분장을 하니 아무도 못 알아봤어요.",
+   "blank": "늙은이",
+   "src": "made"
   }
  ],
  "w|능력": [
@@ -12702,6 +12942,22 @@
    "blank": "당장"
   }
  ],
+ "w|당직": [
+  {
+   "text": "오늘은 체육 선생님이 당직이라 밤늦게까지 학교에 계세요.",
+   "en": "Today the PE teacher is on night duty, so he's at school until late.",
+   "ko": "오늘은 체육 선생님이 당직이라 밤늦게까지 학교에 계세요.",
+   "blank": "당직이라",
+   "src": "made"
+  },
+  {
+   "text": "오늘 밤 공항 의무실에는 당직 의사 한 명이 있어요.",
+   "en": "Tonight there's one doctor on duty at the airport medical office.",
+   "ko": "오늘 밤 공항 의무실에는 당직 의사 한 명이 있어요.",
+   "blank": "당직",
+   "src": "made"
+  }
+ ],
  "w|당하다": [
   {
    "text": "사기를 당했어.",
@@ -13388,6 +13644,22 @@
    "blank": "대학교에서"
   }
  ],
+ "w|대항하다": [
+  {
+   "text": "민수는 친구들의 짓궂은 장난에 대항하려고 미리 작전을 짰어요.",
+   "en": "Minsu planned a strategy in advance to fight back against his friends' mischievous pranks.",
+   "ko": "민수는 친구들의 짓궂은 장난에 대항하려고 미리 작전을 짰어요.",
+   "blank": "대항하려고",
+   "src": "made"
+  },
+  {
+   "text": "영화 속 마을 사람들은 힘을 합쳐 악당에게 대항해요.",
+   "en": "In the film, the villagers join forces to stand up against the villain.",
+   "ko": "영화 속 마을 사람들은 힘을 합쳐 악당에게 대항해요.",
+   "blank": "대항해요",
+   "src": "made"
+  }
+ ],
  "w|대형": [
   {
    "text": "로비 천장에는 대형 고래 뼈 모형이 매달려 있어요.",
@@ -13488,6 +13760,22 @@
    "en": "My clothes got dirty.",
    "ko": "옷이 더러워졌어.",
    "blank": "더러워졌어"
+  }
+ ],
+ "w|더불다": [
+  {
+   "text": "주례는 이웃과 더불어 사는 부부가 되라고 당부했어요.",
+   "en": "The officiant urged them to become a couple who lives together with their neighbors.",
+   "ko": "주례는 이웃과 더불어 사는 부부가 되라고 당부했어요.",
+   "blank": "더불어",
+   "src": "made"
+  },
+  {
+   "text": "지영은 동료들과 더불어 밤새 세트를 꾸몄어요.",
+   "en": "Jiyoung decorated the set all night together with her colleagues.",
+   "ko": "지영은 동료들과 더불어 밤새 세트를 꾸몄어요.",
+   "blank": "더불어",
+   "src": "made"
   }
  ],
  "w|더욱": [
@@ -13800,6 +14088,22 @@
    "blank": "도둑을"
   }
  ],
+ "w|도련님": [
+  {
+   "text": "신부는 민수의 남동생을 도련님이라고 부르는 게 아직 어색해요.",
+   "en": "The bride still finds it awkward to call Minsu's younger brother \"doryeonnim.\"",
+   "ko": "신부는 민수의 남동생을 도련님이라고 부르는 게 아직 어색해요.",
+   "blank": "도련님이라고",
+   "src": "made"
+  },
+  {
+   "text": "사극 속 하인은 철없는 도련님을 따라다니며 고생해요.",
+   "en": "The servant in the period drama has a hard time following around the immature young master.",
+   "ko": "사극 속 하인은 철없는 도련님을 따라다니며 고생해요.",
+   "blank": "도련님을",
+   "src": "made"
+  }
+ ],
  "w|도로": [
   {
    "text": "도로가 미끄러워.",
@@ -14000,6 +14304,22 @@
    "en": "You need courage to take on a challenge.",
    "ko": "도전에 나서는 용기가 필요해.",
    "blank": "도전에"
+  }
+ ],
+ "w|도주": [
+  {
+   "text": "청소 시간에 도주하려던 현우는 반장에게 딱 걸렸어요.",
+   "en": "Hyunwoo tried to escape during cleaning time but got caught by the class president.",
+   "ko": "청소 시간에 도주하려던 현우는 반장에게 딱 걸렸어요.",
+   "blank": "도주하려던",
+   "src": "made"
+  },
+  {
+   "text": "뉴스에서는 해외로 도주하려던 범인이 공항에서 붙잡혔다고 했어요.",
+   "en": "The news said a criminal trying to flee abroad was caught at the airport.",
+   "ko": "뉴스에서는 해외로 도주하려던 범인이 공항에서 붙잡혔다고 했어요.",
+   "blank": "도주하려던",
+   "src": "made"
   }
  ],
  "w|도착": [
@@ -14374,6 +14694,22 @@
    "blank": "동네를"
   }
  ],
+ "w|동등하다": [
+  {
+   "text": "토론 수업에서는 모든 학생이 동등한 발언 기회를 가져요.",
+   "en": "In debate class, every student has an equal chance to speak.",
+   "ko": "토론 수업에서는 모든 학생이 동등한 발언 기회를 가져요.",
+   "blank": "동등한",
+   "src": "made"
+  },
+  {
+   "text": "이 항공사는 모든 승객에게 동등한 서비스를 제공한다고 해요.",
+   "en": "This airline says it provides equal service to all passengers.",
+   "ko": "이 항공사는 모든 승객에게 동등한 서비스를 제공한다고 해요.",
+   "blank": "동등한",
+   "src": "made"
+  }
+ ],
  "w|동료": [
   {
    "text": "좋은 동료를 만나서 다행이야.",
@@ -14411,6 +14747,13 @@
    "ko": "아버지는 어렸을 적 옆집에 살았던 동무를 늘 그리워하신다.",
    "blank": "동무를",
    "src": "krdict"
+  },
+  {
+   "text": "민수의 결혼식에 어릴 적 고향 동무들이 다 모였어요.",
+   "en": "All of Minsu's childhood friends from his hometown gathered at his wedding.",
+   "ko": "민수의 결혼식에 어릴 적 고향 동무들이 다 모였어요.",
+   "blank": "동무들이",
+   "src": "made"
   }
  ],
  "w|동물": [
@@ -14785,6 +15128,22 @@
    "en": "Where did you put the keys?",
    "ko": "열쇠 어디 뒀어?",
    "blank": "뒀어"
+  }
+ ],
+ "w|두드리다": [
+  {
+   "text": "현우는 교무실 문을 조심스럽게 두드렸어요.",
+   "en": "Hyunwoo carefully knocked on the teachers' office door.",
+   "ko": "현우는 교무실 문을 조심스럽게 두드렸어요.",
+   "blank": "두드렸어요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 지루해서 탑승구 의자 팔걸이를 손가락으로 두드렸어요.",
+   "en": "Bored, Sujin drummed her fingers on the armrest of the gate seat.",
+   "ko": "수진은 지루해서 탑승구 의자 팔걸이를 손가락으로 두드렸어요.",
+   "blank": "두드렸어요",
+   "src": "made"
   }
  ],
  "w|두들기다": [
@@ -16315,6 +16674,22 @@
    "blank": "뜻은"
   }
  ],
+ "w|뜻밖": [
+  {
+   "text": "늘 조용하던 현우가 노래 대회에서 일등을 한 건 뜻밖이었어요.",
+   "en": "It was unexpected that the always quiet Hyunwoo won first place in the singing contest.",
+   "ko": "늘 조용하던 현우가 노래 대회에서 일등을 한 건 뜻밖이었어요.",
+   "blank": "뜻밖이었어요",
+   "src": "made"
+  },
+  {
+   "text": "공항에서 뜻밖에 좌석 업그레이드를 받아서 수진은 기분이 좋았어요.",
+   "en": "Sujin was happy to get an unexpected seat upgrade at the airport.",
+   "ko": "공항에서 뜻밖에 좌석 업그레이드를 받아서 수진은 기분이 좋았어요.",
+   "blank": "뜻밖에",
+   "src": "made"
+  }
+ ],
  "w|뜻하다": [
   {
    "text": "국어 선생님은 이 시에서 빨간색이 무엇을 뜻하는지 물으셨어요.",
@@ -16463,6 +16838,22 @@
    "ko": "그 회사는 업체 선정 과정에서 정치인을 상대로 여러 차례 로비를 시도했지만 실패했다.",
    "blank": "로비를",
    "src": "krdict"
+  }
+ ],
+ "w|룸메이트": [
+  {
+   "text": "민수의 대학 룸메이트가 결혼식 축사를 맡았어요.",
+   "en": "Minsu's college roommate gave the wedding toast.",
+   "ko": "민수의 대학 룸메이트가 결혼식 축사를 맡았어요.",
+   "blank": "룸메이트가",
+   "src": "made"
+  },
+  {
+   "text": "지영의 룸메이트는 같은 촬영팀의 조명 기사예요.",
+   "en": "Jiyoung's roommate is a lighting technician on the same film crew.",
+   "ko": "지영의 룸메이트는 같은 촬영팀의 조명 기사예요.",
+   "blank": "룸메이트는",
+   "src": "made"
   }
  ],
  "w|리더": [
@@ -16831,6 +17222,22 @@
    "blank": "마음대로"
   }
  ],
+ "w|마주치다": [
+  {
+   "text": "현우는 복도에서 담임 선생님과 마주치자 꾸벅 인사했어요.",
+   "en": "When Hyunwoo ran into his homeroom teacher in the hallway, he bowed.",
+   "ko": "현우는 복도에서 담임 선생님과 마주치자 꾸벅 인사했어요.",
+   "blank": "마주치자",
+   "src": "made"
+  },
+  {
+   "text": "수진은 공항 카페에서 고등학교 동창과 우연히 마주쳤어요.",
+   "en": "Sujin ran into a high school classmate by chance at the airport café.",
+   "ko": "수진은 공항 카페에서 고등학교 동창과 우연히 마주쳤어요.",
+   "blank": "마주쳤어요",
+   "src": "made"
+  }
+ ],
  "w|마지막": [
   {
    "text": "마지막 열차야, 뛰어.",
@@ -16986,6 +17393,22 @@
    "en": "Holding a marathon takes a huge number of staff.",
    "ko": "마라톤 대회를 여는 데 막대한 인력이 필요해요.",
    "blank": "막대한",
+   "src": "made"
+  }
+ ],
+ "w|막상": [
+  {
+   "text": "민수는 연습은 많이 했지만 막상 입장할 때는 다리가 떨렸어요.",
+   "en": "Minsu had practiced a lot, but when it came to actually walking in, his legs shook.",
+   "ko": "민수는 연습은 많이 했지만 막상 입장할 때는 다리가 떨렸어요.",
+   "blank": "막상",
+   "src": "made"
+  },
+  {
+   "text": "지영은 배우가 되고 싶었지만 막상 카메라 앞에 서니 말이 안 나왔어요.",
+   "en": "Jiyoung wanted to be an actor, but when she actually stood in front of the camera, no words came out.",
+   "ko": "지영은 배우가 되고 싶었지만 막상 카메라 앞에 서니 말이 안 나왔어요.",
+   "blank": "막상",
    "src": "made"
   }
  ],
@@ -17999,6 +18422,22 @@
    "blank": "머물러"
   }
  ],
+ "w|머지않다": [
+  {
+   "text": "머지않아 졸업이라고 생각하니 현우는 마음이 싱숭생숭했어요.",
+   "en": "Thinking that graduation was not far off, Hyunwoo felt restless.",
+   "ko": "머지않아 졸업이라고 생각하니 현우는 마음이 싱숭생숭했어요.",
+   "blank": "머지않아",
+   "src": "made"
+  },
+  {
+   "text": "비행기 지연이 길어졌지만 머지않아 탑승이 시작된다는 안내가 나왔어요.",
+   "en": "The delay dragged on, but an announcement said boarding would begin before long.",
+   "ko": "비행기 지연이 길어졌지만 머지않아 탑승이 시작된다는 안내가 나왔어요.",
+   "blank": "머지않아",
+   "src": "made"
+  }
+ ],
  "w|먹다": [
   {
    "text": "점심 아직 안 먹었어요.",
@@ -18368,6 +18807,22 @@
    "en": "It was obvious from the first bar that Seoyeon hadn't practiced.",
    "ko": "서연이 연습을 안 한 게 첫 소절부터 명백했어요.",
    "blank": "명백했어요",
+   "src": "made"
+  }
+ ],
+ "w|명백히": [
+  {
+   "text": "현우의 답안지에는 명백히 다른 사람의 글씨가 있었어요.",
+   "en": "Hyunwoo's answer sheet clearly had someone else's handwriting on it.",
+   "ko": "현우의 답안지에는 명백히 다른 사람의 글씨가 있었어요.",
+   "blank": "명백히",
+   "src": "made"
+  },
+  {
+   "text": "수진의 가방은 명백히 무게 제한을 넘었어요.",
+   "en": "Sujin's bag was clearly over the weight limit.",
+   "ko": "수진의 가방은 명백히 무게 제한을 넘었어요.",
+   "blank": "명백히",
    "src": "made"
   }
  ],
@@ -19523,6 +19978,22 @@
    "blank": "무조건"
   }
  ],
+ "w|무죄": [
+  {
+   "text": "모의재판 수업에서 현우는 피고의 무죄를 주장하는 변호사 역할을 했어요.",
+   "en": "In the mock trial class, Hyunwoo played the lawyer arguing for the defendant's innocence.",
+   "ko": "모의재판 수업에서 현우는 피고의 무죄를 주장하는 변호사 역할을 했어요.",
+   "blank": "무죄를",
+   "src": "made"
+  },
+  {
+   "text": "기내에서 수진은 억울하게 갇혔다가 무죄로 풀려난 사람의 영화를 봤어요.",
+   "en": "On the plane, Sujin watched a movie about a man wrongly imprisoned and then released as innocent.",
+   "ko": "기내에서 수진은 억울하게 갇혔다가 무죄로 풀려난 사람의 영화를 봤어요.",
+   "blank": "무죄로",
+   "src": "made"
+  }
+ ],
  "w|무지개": [
   {
    "text": "비 온 뒤에 무지개가 떴어.",
@@ -20225,6 +20696,22 @@
    "en": "The art museum is quiet.",
    "ko": "미술관이 조용해.",
    "blank": "미술관이"
+  }
+ ],
+ "w|미아": [
+  {
+   "text": "결혼식장에서 엄마를 잃어버린 미아가 울고 있어서 민수가 안내 데스크로 데려갔어요.",
+   "en": "A lost child who had lost track of her mother was crying at the wedding hall, so Minsu took her to the information desk.",
+   "ko": "결혼식장에서 엄마를 잃어버린 미아가 울고 있어서 민수가 안내 데스크로 데려갔어요.",
+   "blank": "미아가",
+   "src": "made"
+  },
+  {
+   "text": "지영은 놀이공원에서 미아를 찾는 장면을 찍느라 하루 종일 뛰어다녔어요.",
+   "en": "Jiyoung ran around all day filming a scene of searching for a lost child at an amusement park.",
+   "ko": "지영은 놀이공원에서 미아를 찾는 장면을 찍느라 하루 종일 뛰어다녔어요.",
+   "blank": "미아를",
+   "src": "made"
   }
  ],
  "w|미안하다": [
@@ -22085,6 +22572,22 @@
    "blank": "뱉다"
   }
  ],
+ "w|버려두다": [
+  {
+   "text": "현우는 운동장에 버려둔 공을 주워서 체육 창고에 넣었어요.",
+   "en": "Hyunwoo picked up a ball left lying on the playground and put it in the PE storeroom.",
+   "ko": "현우는 운동장에 버려둔 공을 주워서 체육 창고에 넣었어요.",
+   "blank": "버려둔",
+   "src": "made"
+  },
+  {
+   "text": "누군가 짐을 대합실에 버려두고 가서 보안 요원이 출동했어요.",
+   "en": "Someone left their bags unattended in the waiting area, so security was called.",
+   "ko": "누군가 짐을 대합실에 버려두고 가서 보안 요원이 출동했어요.",
+   "blank": "버려두고",
+   "src": "made"
+  }
+ ],
  "w|버릇": [
   {
    "text": "손톱 깨무는 버릇이 있어.",
@@ -22631,6 +23134,22 @@
    "blank": "베이컨이"
   }
  ],
+ "w|베풀다": [
+  {
+   "text": "민수의 부모님은 하객들에게 정성껏 음식을 베풀었어요.",
+   "en": "Minsu's parents treated the guests to food with great care.",
+   "ko": "민수의 부모님은 하객들에게 정성껏 음식을 베풀었어요.",
+   "blank": "베풀었어요",
+   "src": "made"
+  },
+  {
+   "text": "주연 배우는 스태프들에게 커피차를 보내 마음을 베풀었어요.",
+   "en": "The lead actor showed his generosity by sending a coffee truck to the staff.",
+   "ko": "주연 배우는 스태프들에게 커피차를 보내 마음을 베풀었어요.",
+   "blank": "베풀었어요",
+   "src": "made"
+  }
+ ],
  "w|벨트": [
   {
    "text": "수리공은 벨트가 닳은 것을 확인하고 교체하였다.",
@@ -22823,6 +23342,22 @@
    "en": "Let's go to the roof to see the stars.",
    "ko": "별 보러 옥상 가자.",
    "blank": "별"
+  }
+ ],
+ "w|별다르다": [
+  {
+   "text": "결혼식은 별다른 사고 없이 무사히 끝났어요.",
+   "en": "The wedding ended safely without any particular trouble.",
+   "ko": "결혼식은 별다른 사고 없이 무사히 끝났어요.",
+   "blank": "별다른",
+   "src": "made"
+  },
+  {
+   "text": "지영에게는 바쁜 촬영 현장이 별다를 것 없는 일상이에요.",
+   "en": "For Jiyoung, a busy film set is nothing out of the ordinary.",
+   "ko": "지영에게는 바쁜 촬영 현장이 별다를 것 없는 일상이에요.",
+   "blank": "별다를",
+   "src": "made"
   }
  ],
  "w|별도로": [
@@ -23535,6 +24070,22 @@
    "en": "Volunteering gives me great joy.",
    "ko": "봉사가 마음에 큰 기쁨을 줘.",
    "blank": "봉사가"
+  }
+ ],
+ "w|봉쇄하다": [
+  {
+   "text": "결혼식장 앞 도로는 공사 때문에 봉쇄돼서 하객들이 돌아서 왔어요.",
+   "en": "The road in front of the wedding hall was blocked off for construction, so guests had to take a detour.",
+   "ko": "결혼식장 앞 도로는 공사 때문에 봉쇄돼서 하객들이 돌아서 왔어요.",
+   "blank": "봉쇄돼서",
+   "src": "made"
+  },
+  {
+   "text": "경찰이 촬영을 위해 다리 한쪽을 잠시 봉쇄했어요.",
+   "en": "The police temporarily closed off one side of the bridge for the shoot.",
+   "ko": "경찰이 촬영을 위해 다리 한쪽을 잠시 봉쇄했어요.",
+   "blank": "봉쇄했어요",
+   "src": "made"
   }
  ],
  "w|봉지": [
@@ -24284,6 +24835,22 @@
    "blank": "분위기를"
   }
  ],
+ "w|분자": [
+  {
+   "text": "과학 시간에 현우는 물 분자 모형을 직접 만들었어요.",
+   "en": "In science class, Hyunwoo made a model of a water molecule himself.",
+   "ko": "과학 시간에 현우는 물 분자 모형을 직접 만들었어요.",
+   "blank": "분자",
+   "src": "made"
+  },
+  {
+   "text": "기내 잡지에는 향기 분자가 기억을 자극한다는 기사가 실렸어요.",
+   "en": "The in-flight magazine had an article saying scent molecules stimulate memory.",
+   "ko": "기내 잡지에는 향기 분자가 기억을 자극한다는 기사가 실렸어요.",
+   "blank": "분자가",
+   "src": "made"
+  }
+ ],
  "w|분장": [
   {
    "text": "연극부 선배가 재원의 얼굴에 할아버지 분장을 해 줬어요.",
@@ -24722,6 +25289,22 @@
    "en": "It's raining really hard.",
    "ko": "비가 너무 세게 와.",
    "blank": "비가"
+  }
+ ],
+ "w|비겁하다": [
+  {
+   "text": "현우는 잘못을 친구에게 떠넘기는 건 비겁하다고 생각했어요.",
+   "en": "Hyunwoo thought pushing the blame onto a friend was cowardly.",
+   "ko": "현우는 잘못을 친구에게 떠넘기는 건 비겁하다고 생각했어요.",
+   "blank": "비겁하다고",
+   "src": "made"
+  },
+  {
+   "text": "줄을 몰래 새치기하는 건 비겁한 행동이라고 수진은 생각했어요.",
+   "en": "Sujin thought sneakily cutting in line was a cowardly thing to do.",
+   "ko": "줄을 몰래 새치기하는 건 비겁한 행동이라고 수진은 생각했어요.",
+   "blank": "비겁한",
+   "src": "made"
   }
  ],
  "w|비결": [
@@ -25940,6 +26523,22 @@
    "blank": "사랑해요"
   }
  ],
+ "w|사령관": [
+  {
+   "text": "민수의 할아버지는 군에서 사령관까지 지내신 분이라 결혼식에 군 동료들이 많이 왔어요.",
+   "en": "Minsu's grandfather had served as a commander in the army, so many of his military colleagues came to the wedding.",
+   "ko": "민수의 할아버지는 군에서 사령관까지 지내신 분이라 결혼식에 군 동료들이 많이 왔어요.",
+   "blank": "사령관까지",
+   "src": "made"
+  },
+  {
+   "text": "지영은 이번 전쟁 영화에서 사령관 역을 맡은 배우의 분장을 담당해요.",
+   "en": "Jiyoung is in charge of makeup for the actor playing the commander in this war film.",
+   "ko": "지영은 이번 전쟁 영화에서 사령관 역을 맡은 배우의 분장을 담당해요.",
+   "blank": "사령관",
+   "src": "made"
+  }
+ ],
  "w|사례": [
   {
    "text": "선생님은 학교 폭력 사례를 들어 친구를 존중하라고 하셨어요.",
@@ -25984,6 +26583,22 @@
    "ko": "자동차 사고로 피를 많이 흘린 그녀는 어떻게 손을 써 볼 겨를도 없이 현장에서 사망했다.",
    "blank": "사망했다",
    "src": "krdict"
+  }
+ ],
+ "w|사모": [
+  {
+   "text": "주례를 맡은 교수님의 사모님께서도 결혼식에 오셨어요.",
+   "en": "The wife of the professor who officiated also came to the wedding.",
+   "ko": "주례를 맡은 교수님의 사모님께서도 결혼식에 오셨어요.",
+   "blank": "사모님께서도",
+   "src": "made"
+  },
+  {
+   "text": "지영은 드라마에서 회장 사모 역을 맡은 배우와 대본을 맞춰 봤어요.",
+   "en": "Jiyoung ran lines with the actress playing the chairman's wife in the drama.",
+   "ko": "지영은 드라마에서 회장 사모 역을 맡은 배우와 대본을 맞춰 봤어요.",
+   "blank": "사모",
+   "src": "made"
   }
  ],
  "w|사무소": [
@@ -26530,6 +27145,22 @@
    "en": "I was nervous when I first started working life.",
    "ko": "사회생활을 처음 시작할 때 긴장했어.",
    "blank": "사회생활을"
+  }
+ ],
+ "w|삭제": [
+  {
+   "text": "현우는 반 단체 대화방에서 실수로 보낸 메시지를 급히 삭제했어요.",
+   "en": "Hyunwoo quickly deleted a message he sent by mistake in the class group chat.",
+   "ko": "현우는 반 단체 대화방에서 실수로 보낸 메시지를 급히 삭제했어요.",
+   "blank": "삭제했어요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 비행기를 기다리며 휴대폰 속 사진을 정리하고 삭제했어요.",
+   "en": "While waiting for her flight, Sujin sorted and deleted photos on her phone.",
+   "ko": "수진은 비행기를 기다리며 휴대폰 속 사진을 정리하고 삭제했어요.",
+   "blank": "삭제했어요",
+   "src": "made"
   }
  ],
  "w|산": [
@@ -27786,6 +28417,22 @@
    "src": "krdict"
   }
  ],
+ "w|생존자": [
+  {
+   "text": "민수의 신부는 큰 교통사고의 생존자라서 하루하루를 소중히 여겨요.",
+   "en": "Minsu's bride is a survivor of a major car accident, so she treasures every day.",
+   "ko": "민수의 신부는 큰 교통사고의 생존자라서 하루하루를 소중히 여겨요.",
+   "blank": "생존자라서",
+   "src": "made"
+  },
+  {
+   "text": "오늘 촬영은 비행기 사고 생존자들이 섬에 도착하는 장면이에요.",
+   "en": "Today's shoot is the scene where survivors of a plane crash arrive on an island.",
+   "ko": "오늘 촬영은 비행기 사고 생존자들이 섬에 도착하는 장면이에요.",
+   "blank": "생존자들이",
+   "src": "made"
+  }
+ ],
  "w|생체": [
   {
    "text": "학교 출입문에는 지문 같은 생체 정보로 여는 장치가 생겼어요.",
@@ -28610,6 +29257,22 @@
    "en": "I served my teacher for a lifetime.",
    "ko": "스승을 평생 따랐어.",
    "blank": "섬겼어"
+  }
+ ],
+ "w|섬세하다": [
+  {
+   "text": "신부의 드레스에는 섬세한 레이스가 달려 있었어요.",
+   "en": "The bride's dress had delicate lace on it.",
+   "ko": "신부의 드레스에는 섬세한 레이스가 달려 있었어요.",
+   "blank": "섬세한",
+   "src": "made"
+  },
+  {
+   "text": "감독은 배우의 섬세한 표정 연기를 칭찬했어요.",
+   "en": "The director praised the actor's subtle facial acting.",
+   "ko": "감독은 배우의 섬세한 표정 연기를 칭찬했어요.",
+   "blank": "섬세한",
+   "src": "made"
   }
  ],
  "w|섭섭하다": [
@@ -32210,6 +32873,22 @@
    "src": "krdict"
   }
  ],
+ "w|신비": [
+  {
+   "text": "현우는 우주의 신비에 빠져서 천문 동아리에 들어갔어요.",
+   "en": "Hyunwoo was captivated by the mysteries of the universe and joined the astronomy club.",
+   "ko": "현우는 우주의 신비에 빠져서 천문 동아리에 들어갔어요.",
+   "blank": "신비에",
+   "src": "made"
+  },
+  {
+   "text": "창밖으로 보이는 구름바다는 수진에게 신비 그 자체였어요.",
+   "en": "The sea of clouds outside the window was pure mystery to Sujin.",
+   "ko": "창밖으로 보이는 구름바다는 수진에게 신비 그 자체였어요.",
+   "blank": "신비",
+   "src": "made"
+  }
+ ],
  "w|신비하다": [
   {
    "text": "재원은 과학 시간에 본 오로라 영상이 너무 신비했어요.",
@@ -32268,6 +32947,22 @@
    "ko": "스님은 생명을 신성하게 여겨 작은 벌레도 함부로 죽이지 말라고 말했다.",
    "blank": "신성하게",
    "src": "krdict"
+  }
+ ],
+ "w|신앙": [
+  {
+   "text": "현우의 학교는 종교 재단이 세웠지만 신앙을 강요하지 않아요.",
+   "en": "Hyunwoo's school was founded by a religious foundation, but it doesn't force faith on students.",
+   "ko": "현우의 학교는 종교 재단이 세웠지만 신앙을 강요하지 않아요.",
+   "blank": "신앙을",
+   "src": "made"
+  },
+  {
+   "text": "공항 한쪽에는 다양한 신앙을 가진 여행객을 위한 기도실이 있어요.",
+   "en": "In one corner of the airport, there's a prayer room for travelers of various faiths.",
+   "ko": "공항 한쪽에는 다양한 신앙을 가진 여행객을 위한 기도실이 있어요.",
+   "blank": "신앙을",
+   "src": "made"
   }
  ],
  "w|신용": [
@@ -32882,6 +33577,22 @@
    "en": "The criticism was so harsh the mood froze.",
    "ko": "비판이 심하다 못해 분위기가 얼어붙었어.",
    "blank": "심하다"
+  }
+ ],
+ "w|심호흡하다": [
+  {
+   "text": "민수는 입장하기 직전에 크게 심호흡했어요.",
+   "en": "Minsu took a deep breath right before walking in.",
+   "ko": "민수는 입장하기 직전에 크게 심호흡했어요.",
+   "blank": "심호흡했어요",
+   "src": "made"
+  },
+  {
+   "text": "신인 배우는 첫 촬영 전에 눈을 감고 심호흡했어요.",
+   "en": "The new actor closed his eyes and took a deep breath before his first take.",
+   "ko": "신인 배우는 첫 촬영 전에 눈을 감고 심호흡했어요.",
+   "blank": "심호흡했어요",
+   "src": "made"
   }
  ],
  "w|십": [
@@ -35112,6 +35823,22 @@
    "blank": "약해서"
   }
  ],
+ "w|약혼자": [
+  {
+   "text": "민수는 일 년 전 약혼자에게 반지를 건넨 바로 그 자리에서 결혼했어요.",
+   "en": "Minsu got married at the very spot where he'd given a ring to his fiancée a year earlier.",
+   "ko": "민수는 일 년 전 약혼자에게 반지를 건넨 바로 그 자리에서 결혼했어요.",
+   "blank": "약혼자에게",
+   "src": "made"
+  },
+  {
+   "text": "이번 장면은 주인공이 약혼자의 비밀을 알게 되는 순간이에요.",
+   "en": "This scene is the moment the main character learns her fiancé's secret.",
+   "ko": "이번 장면은 주인공이 약혼자의 비밀을 알게 되는 순간이에요.",
+   "blank": "약혼자의",
+   "src": "made"
+  }
+ ],
  "w|얇다": [
   {
    "text": "이 종이는 너무 얇아.",
@@ -35624,6 +36351,22 @@
    "ko": "지금 너의 판단이 어리석었다는 것을 살다 보면 알게 될 것이다.",
    "blank": "어리석었다는",
    "src": "krdict"
+  }
+ ],
+ "w|어린애": [
+  {
+   "text": "민수의 삼촌은 결혼하는 민수를 보며 엊그제까지 어린애였는데 하고 웃었어요.",
+   "en": "Watching Minsu get married, his uncle laughed, saying he was just a little kid the other day.",
+   "ko": "민수의 삼촌은 결혼하는 민수를 보며 엊그제까지 어린애였는데 하고 웃었어요.",
+   "blank": "어린애였는데",
+   "src": "made"
+  },
+  {
+   "text": "감독은 어린애처럼 들뜬 목소리로 장면을 다시 찍자고 했어요.",
+   "en": "The director, sounding as excited as a child, said to shoot the scene again.",
+   "ko": "감독은 어린애처럼 들뜬 목소리로 장면을 다시 찍자고 했어요.",
+   "blank": "어린애처럼",
+   "src": "made"
   }
  ],
  "w|어린이": [
@@ -36296,6 +37039,22 @@
    "blank": "얼음물을"
   }
  ],
+ "w|엄격하다": [
+  {
+   "text": "현우네 학교는 지각에 대해 아주 엄격해요.",
+   "en": "Hyunwoo's school is very strict about lateness.",
+   "ko": "현우네 학교는 지각에 대해 아주 엄격해요.",
+   "blank": "엄격해요",
+   "src": "made"
+  },
+  {
+   "text": "이 나라는 음식물 반입에 대한 규정이 아주 엄격해요.",
+   "en": "This country has very strict rules about bringing in food.",
+   "ko": "이 나라는 음식물 반입에 대한 규정이 아주 엄격해요.",
+   "blank": "엄격해요",
+   "src": "made"
+  }
+ ],
  "w|엄마": [
   {
    "text": "엄마, 학교 다녀왔어.",
@@ -36728,6 +37487,22 @@
    "src": "made"
   }
  ],
+ "w|여사": [
+  {
+   "text": "사회자는 신랑의 어머니인 박 여사를 소개했어요.",
+   "en": "The emcee introduced Mrs. Park, the groom's mother.",
+   "ko": "사회자는 신랑의 어머니인 박 여사를 소개했어요.",
+   "blank": "여사를",
+   "src": "made"
+  },
+  {
+   "text": "원로 배우 김 여사는 촬영장에 오자마자 모두에게 인사를 건넸어요.",
+   "en": "Veteran actress Mrs. Kim greeted everyone as soon as she arrived on set.",
+   "ko": "원로 배우 김 여사는 촬영장에 오자마자 모두에게 인사를 건넸어요.",
+   "blank": "여사는",
+   "src": "made"
+  }
+ ],
  "w|여섯": [
   {
    "text": "여섯 시에 깨워 줘.",
@@ -36900,6 +37675,22 @@
    "en": "May I ask just one thing?",
    "ko": "한 가지만 여쭤봐도 될까요?",
    "blank": "여쭤봐도"
+  }
+ ],
+ "w|여친": [
+  {
+   "text": "민수의 친구는 여친을 데리고 결혼식에 왔어요.",
+   "en": "Minsu's friend brought his girlfriend to the wedding.",
+   "ko": "민수의 친구는 여친을 데리고 결혼식에 왔어요.",
+   "blank": "여친을",
+   "src": "made"
+  },
+  {
+   "text": "로맨스 영화 대본에서 주인공은 여친에게 이별 문자를 받아요.",
+   "en": "In the romance film script, the main character gets a breakup text from his girlfriend.",
+   "ko": "로맨스 영화 대본에서 주인공은 여친에게 이별 문자를 받아요.",
+   "blank": "여친에게",
+   "src": "made"
   }
  ],
  "w|여태": [
@@ -39024,6 +39815,22 @@
    "blank": "왕"
   }
  ],
+ "w|왕비": [
+  {
+   "text": "신부는 드레스를 입고 동화 속 왕비처럼 걸어 들어왔어요.",
+   "en": "The bride walked in wearing her dress like a queen from a fairy tale.",
+   "ko": "신부는 드레스를 입고 동화 속 왕비처럼 걸어 들어왔어요.",
+   "blank": "왕비처럼",
+   "src": "made"
+  },
+  {
+   "text": "사극에서 왕비 역을 맡은 배우는 무거운 가발 때문에 목이 아프다고 했어요.",
+   "en": "The actress playing the queen in the period drama said her neck hurt from the heavy wig.",
+   "ko": "사극에서 왕비 역을 맡은 배우는 무거운 가발 때문에 목이 아프다고 했어요.",
+   "blank": "왕비",
+   "src": "made"
+  }
+ ],
  "w|왕실": [
   {
    "text": "재원은 체험 학습으로 옛 왕실 사람들이 살던 궁궐에 갔어요.",
@@ -39524,6 +40331,22 @@
    "en": "They bravely stepped forward first.",
    "ko": "용감하게 먼저 나섰어.",
    "blank": "용감하게"
+  }
+ ],
+ "w|용건": [
+  {
+   "text": "교무실에 들어간 현우는 무슨 용건으로 왔냐는 질문을 받았어요.",
+   "en": "When Hyunwoo walked into the teachers' office, he was asked what business he had there.",
+   "ko": "교무실에 들어간 현우는 무슨 용건으로 왔냐는 질문을 받았어요.",
+   "blank": "용건으로",
+   "src": "made"
+  },
+  {
+   "text": "안내 데스크 직원은 수진에게 용건을 짧게 말해 달라고 했어요.",
+   "en": "The information desk staff asked Sujin to state her business briefly.",
+   "ko": "안내 데스크 직원은 수진에게 용건을 짧게 말해 달라고 했어요.",
+   "blank": "용건을",
+   "src": "made"
   }
  ],
  "w|용기": [
@@ -40490,6 +41313,22 @@
    "src": "made"
   }
  ],
+ "w|위조": [
+  {
+   "text": "성적표를 위조하려던 학생은 결국 부모님께 혼났어요.",
+   "en": "The student who tried to forge his report card was scolded by his parents in the end.",
+   "ko": "성적표를 위조하려던 학생은 결국 부모님께 혼났어요.",
+   "blank": "위조하려던",
+   "src": "made"
+  },
+  {
+   "text": "출입국 심사대에서 위조 여권을 가진 사람이 적발됐어요.",
+   "en": "A person with a forged passport was caught at immigration.",
+   "ko": "출입국 심사대에서 위조 여권을 가진 사람이 적발됐어요.",
+   "blank": "위조",
+   "src": "made"
+  }
+ ],
  "w|위쪽": [
   {
    "text": "위쪽을 봐 봐.",
@@ -40778,6 +41617,22 @@
    "en": "It's crowded in front of the kindergarten in the morning.",
    "ko": "유치원 앞이 아침에 붐벼.",
    "blank": "유치원"
+  }
+ ],
+ "w|유쾌하다": [
+  {
+   "text": "사회자의 유쾌한 진행 덕분에 결혼식 분위기가 밝았어요.",
+   "en": "Thanks to the emcee's cheerful hosting, the wedding had a bright atmosphere.",
+   "ko": "사회자의 유쾌한 진행 덕분에 결혼식 분위기가 밝았어요.",
+   "blank": "유쾌한",
+   "src": "made"
+  },
+  {
+   "text": "이번 영화는 가족이 함께 보기 좋은 유쾌한 코미디예요.",
+   "en": "This film is a cheerful comedy that's good for families to watch together.",
+   "ko": "이번 영화는 가족이 함께 보기 좋은 유쾌한 코미디예요.",
+   "blank": "유쾌한",
+   "src": "made"
   }
  ],
  "w|유행": [
@@ -41870,6 +42725,22 @@
    "blank": "이리로"
   }
  ],
+ "w|이리저리": [
+  {
+   "text": "민수는 하객들에게 인사하느라 식장을 이리저리 뛰어다녔어요.",
+   "en": "Minsu ran around the hall here and there greeting the guests.",
+   "ko": "민수는 하객들에게 인사하느라 식장을 이리저리 뛰어다녔어요.",
+   "blank": "이리저리",
+   "src": "made"
+  },
+  {
+   "text": "지영은 소품을 들고 촬영장을 이리저리 옮겨 다녔어요.",
+   "en": "Jiyoung moved around the set here and there carrying props.",
+   "ko": "지영은 소품을 들고 촬영장을 이리저리 옮겨 다녔어요.",
+   "blank": "이리저리",
+   "src": "made"
+  }
+ ],
  "w|이마": [
   {
    "text": "더워서 이마에 땀이 흘러.",
@@ -42614,6 +43485,22 @@
    "blank": "인내로"
   }
  ],
+ "w|인내심": [
+  {
+   "text": "사진 촬영이 길어지자 민수는 인내심이 바닥났어요.",
+   "en": "As the photo shoot dragged on, Minsu ran out of patience.",
+   "ko": "사진 촬영이 길어지자 민수는 인내심이 바닥났어요.",
+   "blank": "인내심이",
+   "src": "made"
+  },
+  {
+   "text": "날씨 때문에 같은 장면을 스무 번 찍으면서 지영은 인내심을 배웠어요.",
+   "en": "Shooting the same scene twenty times because of the weather taught Jiyoung patience.",
+   "ko": "날씨 때문에 같은 장면을 스무 번 찍으면서 지영은 인내심을 배웠어요.",
+   "blank": "인내심을",
+   "src": "made"
+  }
+ ],
  "w|인물": [
   {
    "text": "우리 대학에서 세계적으로 유명한 인물이 배출되었다.",
@@ -42703,6 +43590,22 @@
    "en": "The chip on Sohee's ankle automatically records her time.",
    "ko": "소희의 발목에 찬 칩이 기록을 자동으로 인식해요.",
    "blank": "인식해요",
+   "src": "made"
+  }
+ ],
+ "w|인연": [
+  {
+   "text": "민수와 신부는 동창회에서 다시 만난 인연으로 결혼까지 했어요.",
+   "en": "Minsu and the bride got married after their paths crossed again at a class reunion.",
+   "ko": "민수와 신부는 동창회에서 다시 만난 인연으로 결혼까지 했어요.",
+   "blank": "인연으로",
+   "src": "made"
+  },
+  {
+   "text": "지영은 이 영화로 만난 감독과 십 년째 인연을 이어 가고 있어요.",
+   "en": "Jiyoung has kept up her relationship with the director she met on this film for ten years.",
+   "ko": "지영은 이 영화로 만난 감독과 십 년째 인연을 이어 가고 있어요.",
+   "blank": "인연을",
    "src": "made"
   }
  ],
@@ -44818,6 +45721,22 @@
    "blank": "장인께"
   }
  ],
+ "w|장인어른": [
+  {
+   "text": "민수는 결혼식 전날 장인어른께 큰절을 올렸어요.",
+   "en": "The day before the wedding, Minsu bowed deeply to his father-in-law.",
+   "ko": "민수는 결혼식 전날 장인어른께 큰절을 올렸어요.",
+   "blank": "장인어른께",
+   "src": "made"
+  },
+  {
+   "text": "극 중에서 주인공은 장인어른의 반대로 결혼을 미뤄요.",
+   "en": "In the drama, the main character postpones his wedding because his father-in-law-to-be objects.",
+   "ko": "극 중에서 주인공은 장인어른의 반대로 결혼을 미뤄요.",
+   "blank": "장인어른의",
+   "src": "made"
+  }
+ ],
  "w|장점": [
   {
    "text": "이 집의 장점은 위치야.",
@@ -45400,6 +46319,22 @@
    "en": "That person spoke first.",
    "ko": "저분이 먼저 말씀하셨어.",
    "blank": "저분이"
+  }
+ ],
+ "w|저자": [
+  {
+   "text": "주례는 신랑 신부가 좋아하는 책의 저자가 맡아 줬어요.",
+   "en": "The ceremony was officiated by the author of a book the bride and groom love.",
+   "ko": "주례는 신랑 신부가 좋아하는 책의 저자가 맡아 줬어요.",
+   "blank": "저자가",
+   "src": "made"
+  },
+  {
+   "text": "원작 소설의 저자가 촬영장을 찾아와 배우들과 사진을 찍었어요.",
+   "en": "The author of the original novel visited the set and took photos with the actors.",
+   "ko": "원작 소설의 저자가 촬영장을 찾아와 배우들과 사진을 찍었어요.",
+   "blank": "저자가",
+   "src": "made"
   }
  ],
  "w|저절로": [
@@ -46398,6 +47333,22 @@
    "blank": "점원이"
   }
  ],
+ "w|점잖다": [
+  {
+   "text": "현우는 장난이 심하지만 어른들 앞에서는 점잖게 행동해요.",
+   "en": "Hyunwoo plays a lot of pranks, but he behaves politely in front of adults.",
+   "ko": "현우는 장난이 심하지만 어른들 앞에서는 점잖게 행동해요.",
+   "blank": "점잖게",
+   "src": "made"
+  },
+  {
+   "text": "수진의 옆자리에는 점잖은 노신사가 앉았어요.",
+   "en": "A dignified elderly gentleman sat next to Sujin.",
+   "ko": "수진의 옆자리에는 점잖은 노신사가 앉았어요.",
+   "blank": "점잖은",
+   "src": "made"
+  }
+ ],
  "w|점점": [
   {
    "text": "점점 추워지네.",
@@ -46960,6 +47911,22 @@
    "en": "Pick a meeting place for us.",
    "ko": "약속 장소 좀 정해 줘.",
    "blank": "정해"
+  }
+ ],
+ "w|정화": [
+  {
+   "text": "과학 시간에 현우는 숯으로 물을 정화하는 실험을 했어요.",
+   "en": "In science class, Hyunwoo did an experiment purifying water with charcoal.",
+   "ko": "과학 시간에 현우는 숯으로 물을 정화하는 실험을 했어요.",
+   "blank": "정화하는",
+   "src": "made"
+  },
+  {
+   "text": "공항 화장실에는 공기 정화 식물이 놓여 있었어요.",
+   "en": "Air-purifying plants were placed in the airport restroom.",
+   "ko": "공항 화장실에는 공기 정화 식물이 놓여 있었어요.",
+   "blank": "정화",
+   "src": "made"
   }
  ],
  "w|정확하다": [
@@ -48096,6 +49063,22 @@
    "blank": "주머니가"
   }
  ],
+ "w|주목하다": [
+  {
+   "text": "선생님이 칠판을 두드리자 학생들이 모두 앞을 주목했어요.",
+   "en": "When the teacher tapped the blackboard, all the students paid attention to the front.",
+   "ko": "선생님이 칠판을 두드리자 학생들이 모두 앞을 주목했어요.",
+   "blank": "주목했어요",
+   "src": "made"
+  },
+  {
+   "text": "공항에 유명 가수가 나타나자 모두가 그쪽을 주목했어요.",
+   "en": "When a famous singer appeared at the airport, everyone turned their attention that way.",
+   "ko": "공항에 유명 가수가 나타나자 모두가 그쪽을 주목했어요.",
+   "blank": "주목했어요",
+   "src": "made"
+  }
+ ],
  "w|주문": [
   {
    "text": "앱에서 주문을 넣었어.",
@@ -48380,6 +49363,22 @@
    "en": "The parking lot is full.",
    "ko": "주차장이 꽉 찼어.",
    "blank": "주차장이"
+  }
+ ],
+ "w|주치의": [
+  {
+   "text": "할머니의 주치의도 결혼식에 와서 축하해 주셨어요.",
+   "en": "Grandmother's family doctor also came to the wedding to congratulate them.",
+   "ko": "할머니의 주치의도 결혼식에 와서 축하해 주셨어요.",
+   "blank": "주치의도",
+   "src": "made"
+  },
+  {
+   "text": "주연 배우가 쓰러지자 주치의가 촬영장으로 급히 달려왔어요.",
+   "en": "When the lead actor collapsed, his personal doctor rushed to the set.",
+   "ko": "주연 배우가 쓰러지자 주치의가 촬영장으로 급히 달려왔어요.",
+   "blank": "주치의가",
+   "src": "made"
   }
  ],
  "w|주택": [
@@ -49785,6 +50784,22 @@
    "src": "made"
   }
  ],
+ "w|진실하다": [
+  {
+   "text": "현우는 진실한 사과가 친구의 마음을 움직인다는 걸 배웠어요.",
+   "en": "Hyunwoo learned that a sincere apology moves a friend's heart.",
+   "ko": "현우는 진실한 사과가 친구의 마음을 움직인다는 걸 배웠어요.",
+   "blank": "진실한",
+   "src": "made"
+  },
+  {
+   "text": "수진은 공항에서 배웅해 준 친구의 진실한 눈빛을 잊을 수 없었어요.",
+   "en": "Sujin couldn't forget the sincere look in the eyes of the friend who saw her off at the airport.",
+   "ko": "수진은 공항에서 배웅해 준 친구의 진실한 눈빛을 잊을 수 없었어요.",
+   "blank": "진실한",
+   "src": "made"
+  }
+ ],
  "w|진심으로": [
   {
    "text": "진심으로 감사해.",
@@ -50335,6 +51350,22 @@
    "en": "The kids are building a sandcastle.",
    "ko": "아이들이 모래성을 만들고 있어.",
    "blank": "지어"
+  }
+ ],
+ "w|짚다": [
+  {
+   "text": "선생님은 시험에 나올 중요한 부분을 하나하나 짚어 주셨어요.",
+   "en": "The teacher pointed out the important parts that would be on the test one by one.",
+   "ko": "선생님은 시험에 나올 중요한 부분을 하나하나 짚어 주셨어요.",
+   "blank": "짚어",
+   "src": "made"
+  },
+  {
+   "text": "수진은 지팡이를 짚은 할머니를 탑승구까지 모셔다드렸어요.",
+   "en": "Sujin escorted an elderly woman leaning on a cane to the boarding gate.",
+   "ko": "수진은 지팡이를 짚은 할머니를 탑승구까지 모셔다드렸어요.",
+   "blank": "짚은",
+   "src": "made"
   }
  ],
  "w|짜다": [
@@ -50901,6 +51932,22 @@
    "src": "made"
   }
  ],
+ "w|차지": [
+  {
+   "text": "창가 맨 뒷자리는 늘 현우가 차지해요.",
+   "en": "Hyunwoo always takes the back seat by the window.",
+   "ko": "창가 맨 뒷자리는 늘 현우가 차지해요.",
+   "blank": "차지해요",
+   "src": "made"
+  },
+  {
+   "text": "수진은 창가 자리를 차지하려고 일찍 체크인했어요.",
+   "en": "Sujin checked in early to get a window seat.",
+   "ko": "수진은 창가 자리를 차지하려고 일찍 체크인했어요.",
+   "blank": "차지하려고",
+   "src": "made"
+  }
+ ],
  "w|차지하다": [
   {
    "text": "현우네 반이 합창 대회에서 일 등을 차지했어요.",
@@ -50943,6 +51990,22 @@
    "en": "I mistook someone else for you.",
    "ko": "다른 사람을 너로 착각했어.",
    "blank": "착각했어"
+  }
+ ],
+ "w|착오": [
+  {
+   "text": "채점에 착오가 있어서 현우의 점수가 다시 올라갔어요.",
+   "en": "There was an error in grading, so Hyunwoo's score went back up.",
+   "ko": "채점에 착오가 있어서 현우의 점수가 다시 올라갔어요.",
+   "blank": "착오가",
+   "src": "made"
+  },
+  {
+   "text": "예약 시스템의 착오로 수진의 이름이 승객 명단에 두 번 올라 있었어요.",
+   "en": "Due to a booking system error, Sujin's name was on the passenger list twice.",
+   "ko": "예약 시스템의 착오로 수진의 이름이 승객 명단에 두 번 올라 있었어요.",
+   "blank": "착오로",
+   "src": "made"
   }
  ],
  "w|착하다": [
@@ -51069,6 +52132,22 @@
    "en": "I attended the wedding and gave my blessing.",
    "ko": "결혼식에 참석해서 축복해 줬어.",
    "blank": "참석해서"
+  }
+ ],
+ "w|참여": [
+  {
+   "text": "학생회는 바자회에 전교생의 참여를 부탁했어요.",
+   "en": "The student council asked the whole school to take part in the bazaar.",
+   "ko": "학생회는 바자회에 전교생의 참여를 부탁했어요.",
+   "blank": "참여를",
+   "src": "made"
+  },
+  {
+   "text": "수진은 해외 봉사 활동 참여를 위해 공항에 왔어요.",
+   "en": "Sujin came to the airport to take part in overseas volunteer work.",
+   "ko": "수진은 해외 봉사 활동 참여를 위해 공항에 왔어요.",
+   "blank": "참여를",
+   "src": "made"
   }
  ],
  "w|참여하다": [
@@ -51341,6 +52420,22 @@
    "blank": "책임지고"
   }
  ],
+ "w|책임감": [
+  {
+   "text": "민수는 가장이 된다는 책임감에 결혼식 날 밤 쉽게 잠들지 못했어요.",
+   "en": "With the sense of responsibility of becoming head of a family, Minsu couldn't fall asleep easily on his wedding night.",
+   "ko": "민수는 가장이 된다는 책임감에 결혼식 날 밤 쉽게 잠들지 못했어요.",
+   "blank": "책임감에",
+   "src": "made"
+  },
+  {
+   "text": "지영은 책임감이 강해서 촬영이 끝날 때까지 자리를 지켰어요.",
+   "en": "Jiyoung has a strong sense of responsibility, so she stayed until the shoot was over.",
+   "ko": "지영은 책임감이 강해서 촬영이 끝날 때까지 자리를 지켰어요.",
+   "blank": "책임감이",
+   "src": "made"
+  }
+ ],
  "w|책임지다": [
   {
    "text": "실수를 내가 책임져.",
@@ -51467,6 +52562,22 @@
    "en": "I was really nervous at first.",
    "ko": "처음엔 긴장을 많이 했어.",
    "blank": "처음엔"
+  }
+ ],
+ "w|처지": [
+  {
+   "text": "현우는 숙제를 못 한 처지라 선생님 눈을 피했어요.",
+   "en": "Being in the position of not having done his homework, Hyunwoo avoided the teacher's eyes.",
+   "ko": "현우는 숙제를 못 한 처지라 선생님 눈을 피했어요.",
+   "blank": "처지라",
+   "src": "made"
+  },
+  {
+   "text": "비행기가 결항돼서 수진은 공항에서 밤을 새워야 하는 처지가 됐어요.",
+   "en": "Her flight was canceled, so Sujin ended up having to spend the night at the airport.",
+   "ko": "비행기가 결항돼서 수진은 공항에서 밤을 새워야 하는 처지가 됐어요.",
+   "blank": "처지가",
+   "src": "made"
   }
  ],
  "w|처치": [
@@ -53451,6 +54562,22 @@
    "src": "made"
   }
  ],
+ "w|침입자": [
+  {
+   "text": "결혼식장에 초대받지 않은 침입자가 들어와 축의금을 노린 적이 있다고 해요.",
+   "en": "They say an uninvited intruder once got into a wedding hall after the gift money.",
+   "ko": "결혼식장에 초대받지 않은 침입자가 들어와 축의금을 노린 적이 있다고 해요.",
+   "blank": "침입자가",
+   "src": "made"
+  },
+  {
+   "text": "오늘 밤에는 침입자가 집에 몰래 들어오는 장면을 찍어요.",
+   "en": "Tonight they're shooting the scene where an intruder sneaks into the house.",
+   "ko": "오늘 밤에는 침입자가 집에 몰래 들어오는 장면을 찍어요.",
+   "blank": "침입자가",
+   "src": "made"
+  }
+ ],
  "w|침입하다": [
   {
    "text": "밤사이 누군가 학교 과학실에 침입했다는 소식에 모두 놀랐어요.",
@@ -54117,6 +55244,22 @@
    "blank": "키웠네"
   }
  ],
+ "w|타격": [
+  {
+   "text": "주전 선수가 다쳐서 현우네 반 축구팀은 큰 타격을 입었어요.",
+   "en": "A starting player got hurt, so Hyunwoo's class soccer team took a big hit.",
+   "ko": "주전 선수가 다쳐서 현우네 반 축구팀은 큰 타격을 입었어요.",
+   "blank": "타격을",
+   "src": "made"
+  },
+  {
+   "text": "폭설로 결항이 이어지면서 항공사들이 큰 타격을 받았어요.",
+   "en": "With flights canceled one after another due to heavy snow, airlines took a big hit.",
+   "ko": "폭설로 결항이 이어지면서 항공사들이 큰 타격을 받았어요.",
+   "blank": "타격을",
+   "src": "made"
+  }
+ ],
  "w|타고나다": [
   {
    "text": "현우는 노래 실력을 타고난 것 같다는 말을 자주 들어요.",
@@ -54555,6 +55698,22 @@
    "ko": "정부는 종교적 갈등으로 테러가 발생할 위험이 높은 국가로의 여행을 제한했다.",
    "blank": "테러가",
    "src": "krdict"
+  }
+ ],
+ "w|테러리스트": [
+  {
+   "text": "신혼여행지로 가는 공항에서 테러리스트 관련 뉴스가 나와서 민수는 조금 긴장했어요.",
+   "en": "At the airport on the way to the honeymoon, news about terrorists came on and Minsu got a little tense.",
+   "ko": "신혼여행지로 가는 공항에서 테러리스트 관련 뉴스가 나와서 민수는 조금 긴장했어요.",
+   "blank": "테러리스트",
+   "src": "made"
+  },
+  {
+   "text": "이 액션 영화에서는 경찰이 테러리스트를 쫓는 장면이 제일 길어요.",
+   "en": "In this action film, the scene of the police chasing a terrorist is the longest.",
+   "ko": "이 액션 영화에서는 경찰이 테러리스트를 쫓는 장면이 제일 길어요.",
+   "blank": "테러리스트를",
+   "src": "made"
   }
  ],
  "w|테이프": [
@@ -55043,6 +56202,22 @@
    "en": "I moved the stuff by truck.",
    "ko": "트럭으로 짐을 옮겼어.",
    "blank": "트럭으로"
+  }
+ ],
+ "w|특권": [
+  {
+   "text": "고학년이 급식을 먼저 먹는 건 특권이 아니라는 의견이 나왔어요.",
+   "en": "Some said it shouldn't be a privilege for upper-grade students to eat lunch first.",
+   "ko": "고학년이 급식을 먼저 먹는 건 특권이 아니라는 의견이 나왔어요.",
+   "blank": "특권이",
+   "src": "made"
+  },
+  {
+   "text": "일등석 승객은 전용 라운지를 쓰는 특권이 있어요.",
+   "en": "First-class passengers have the privilege of using a private lounge.",
+   "ko": "일등석 승객은 전용 라운지를 쓰는 특권이 있어요.",
+   "blank": "특권이",
+   "src": "made"
   }
  ],
  "w|특별하다": [
@@ -55695,6 +56870,22 @@
    "en": "There's something to learn even from defeat.",
    "ko": "패배에서도 배울 게 있어.",
    "blank": "패배에서도"
+  }
+ ],
+ "w|패션": [
+  {
+   "text": "현우는 축제 때 친구들과 패션쇼를 열었어요.",
+   "en": "Hyunwoo held a fashion show with his friends at the festival.",
+   "ko": "현우는 축제 때 친구들과 패션쇼를 열었어요.",
+   "blank": "패션쇼를",
+   "src": "made"
+  },
+  {
+   "text": "공항에서는 여행객들의 공항 패션을 찍는 사진기자들이 있었어요.",
+   "en": "At the airport, there were photographers taking pictures of travelers' airport fashion.",
+   "ko": "공항에서는 여행객들의 공항 패션을 찍는 사진기자들이 있었어요.",
+   "blank": "패션을",
+   "src": "made"
   }
  ],
  "w|패턴": [
@@ -56465,6 +57656,22 @@
    "en": "Looking at the face, I see worry.",
    "ko": "표정을 보니 걱정이 보여.",
    "blank": "표정을"
+  }
+ ],
+ "w|표준": [
+  {
+   "text": "현우는 국어 시간에 표준 발음을 연습했어요.",
+   "en": "In Korean class, Hyunwoo practiced standard pronunciation.",
+   "ko": "현우는 국어 시간에 표준 발음을 연습했어요.",
+   "blank": "표준",
+   "src": "made"
+  },
+  {
+   "text": "기내 반입 가방은 표준 크기를 넘으면 안 돼요.",
+   "en": "Carry-on bags must not exceed the standard size.",
+   "ko": "기내 반입 가방은 표준 크기를 넘으면 안 돼요.",
+   "blank": "표준",
+   "src": "made"
   }
  ],
  "w|표하다": [
@@ -57263,6 +58470,22 @@
    "blank": "한가해서"
   }
  ],
+ "w|한결": [
+  {
+   "text": "식이 시작되자 민수의 굳었던 얼굴이 한결 편안해졌어요.",
+   "en": "Once the ceremony began, Minsu's stiff face relaxed a lot.",
+   "ko": "식이 시작되자 민수의 굳었던 얼굴이 한결 편안해졌어요.",
+   "blank": "한결",
+   "src": "made"
+  },
+  {
+   "text": "조명을 바꾸니 배우 얼굴이 한결 부드러워 보였어요.",
+   "en": "When the lighting was changed, the actor's face looked much softer.",
+   "ko": "조명을 바꾸니 배우 얼굴이 한결 부드러워 보였어요.",
+   "blank": "한결",
+   "src": "made"
+  }
+ ],
  "w|한계": [
   {
    "text": "체력의 한계를 느꼈어.",
@@ -57345,6 +58568,22 @@
    "en": "This used to be a busy district for a time.",
    "ko": "한때는 여기가 번화가였어.",
    "blank": "한때는"
+  }
+ ],
+ "w|한바탕": [
+  {
+   "text": "피로연에서 친구들이 한바탕 노래를 부르고 춤을 췄어요.",
+   "en": "At the reception, Minsu's friends had a good round of singing and dancing.",
+   "ko": "피로연에서 친구들이 한바탕 노래를 부르고 춤을 췄어요.",
+   "blank": "한바탕",
+   "src": "made"
+  },
+  {
+   "text": "촬영이 끝나자 스태프들은 한바탕 웃고 떠들며 회식을 했어요.",
+   "en": "When the shoot wrapped, the staff had a big round of laughing and chatting over dinner.",
+   "ko": "촬영이 끝나자 스태프들은 한바탕 웃고 떠들며 회식을 했어요.",
+   "blank": "한바탕",
+   "src": "made"
   }
  ],
  "w|한밤중": [
@@ -57873,6 +59112,22 @@
    "en": "The beach is clean.",
    "ko": "해변이 깨끗해.",
    "blank": "해변이"
+  }
+ ],
+ "w|해산": [
+  {
+   "text": "조회가 끝나고 선생님이 해산을 외치자 학생들이 교실로 돌아갔어요.",
+   "en": "When the teacher called \"dismissed\" after the assembly, the students went back to their classrooms.",
+   "ko": "조회가 끝나고 선생님이 해산을 외치자 학생들이 교실로 돌아갔어요.",
+   "blank": "해산을",
+   "src": "made"
+  },
+  {
+   "text": "단체 여행객들은 공항에 도착하자마자 해산해서 각자 집으로 갔어요.",
+   "en": "As soon as they arrived at the airport, the tour group broke up and everyone went home.",
+   "ko": "단체 여행객들은 공항에 도착하자마자 해산해서 각자 집으로 갔어요.",
+   "blank": "해산해서",
+   "src": "made"
   }
  ],
  "w|해산물": [
@@ -60527,6 +61782,22 @@
    "en": "Interest alone is hard to sustain for long.",
    "ko": "흥미만으로는 오래가기 어려워.",
    "blank": "흥미만으로는"
+  }
+ ],
+ "w|흥분되다": [
+  {
+   "text": "민수는 신혼여행 생각에 벌써부터 흥분됐어요.",
+   "en": "Minsu was already excited thinking about the honeymoon.",
+   "ko": "민수는 신혼여행 생각에 벌써부터 흥분됐어요.",
+   "blank": "흥분됐어요",
+   "src": "made"
+  },
+  {
+   "text": "지영은 처음으로 자기 이름이 크레디트에 나온다고 생각하니 흥분됐어요.",
+   "en": "Jiyoung got excited at the thought of her name appearing in the credits for the first time.",
+   "ko": "지영은 처음으로 자기 이름이 크레디트에 나온다고 생각하니 흥분됐어요.",
+   "blank": "흥분됐어요",
+   "src": "made"
   }
  ],
  "w|흥분하다": [
