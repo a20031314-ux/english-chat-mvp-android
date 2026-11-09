@@ -1631,6 +1631,22 @@
    "src": "made"
   }
  ],
+ "w|감수성": [
+  {
+   "text": "경민은 시인의 섬세한 감수성이 잘 드러난 시집을 서평으로 소개했어요.",
+   "en": "Gyeongmin reviewed a poetry collection that clearly showed the poet's delicate sensitivity.",
+   "ko": "경민은 시인의 섬세한 감수성이 잘 드러난 시집을 서평으로 소개했어요.",
+   "blank": "감수성이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산골에서 자라는 아이들의 감수성이 남다르다고 생각해요.",
+   "en": "Daeun thinks children growing up in the mountains have a special sensitivity.",
+   "ko": "다은은 산골에서 자라는 아이들의 감수성이 남다르다고 생각해요.",
+   "blank": "감수성이",
+   "src": "made"
+  }
+ ],
  "w|감수하다": [
   {
    "text": "성호는 밤샘 근무를 감수하고라도 이 특종을 끝까지 쫓기로 했어요.",
@@ -6775,6 +6791,22 @@
    "src": "made"
   }
  ],
+ "w|공개하다": [
+  {
+   "text": "재원은 새 공원 설계도를 주민들에게 미리 공개했어요.",
+   "en": "Jaewon released the design for the new park to residents in advance.",
+   "ko": "재원은 새 공원 설계도를 주민들에게 미리 공개했어요.",
+   "blank": "공개했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구와 주고받은 편지를 책으로 묶어 공개하기로 했어요.",
+   "en": "Sohee decided to bind the letters she exchanged with her friend into a book and publish them.",
+   "ko": "소희는 친구와 주고받은 편지를 책으로 묶어 공개하기로 했어요.",
+   "blank": "공개하기로",
+   "src": "made"
+  }
+ ],
  "w|공격": [
   {
    "text": "갑작스러운 공격에 모두 당황했어.",
@@ -7117,6 +7149,22 @@
    "en": "There's noise coming from a nearby factory.",
    "ko": "근처 공장에서 소리가 나.",
    "blank": "공장에서"
+  }
+ ],
+ "w|공정성": [
+  {
+   "text": "재원은 공무원 채용 시험의 공정성을 위해 외부 심사위원을 불렀어요.",
+   "en": "Jaewon brought in outside judges to ensure fairness in the civil service hiring exam.",
+   "ko": "재원은 공무원 채용 시험의 공정성을 위해 외부 심사위원을 불렀어요.",
+   "blank": "공정성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 회사 승진 심사에 공정성이 없다고 편지에서 속상한 마음을 털어놨어요.",
+   "en": "Sohee poured out her frustration in a letter that the company's promotion review wasn't fair.",
+   "ko": "소희는 회사 승진 심사에 공정성이 없다고 편지에서 속상한 마음을 털어놨어요.",
+   "blank": "공정성이",
+   "src": "made"
   }
  ],
  "w|공정하다": [
@@ -7791,6 +7839,22 @@
    "blank": "관련됐다고"
   }
  ],
+ "w|관련성": [
+  {
+   "text": "편집장은 기사 주제와 관련성이 없는 사진을 빼라고 경민에게 말했어요.",
+   "en": "The editor told Gyeongmin to remove the photos unrelated to the article's topic.",
+   "ko": "편집장은 기사 주제와 관련성이 없는 사진을 빼라고 경민에게 말했어요.",
+   "blank": "관련성이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 이름과 근처 바위 모양 사이에 관련성이 있다는 이야기를 들었어요.",
+   "en": "Daeun heard a story that the village's name is related to the shape of a nearby rock.",
+   "ko": "다은은 마을 이름과 근처 바위 모양 사이에 관련성이 있다는 이야기를 들었어요.",
+   "blank": "관련성이",
+   "src": "made"
+  }
+ ],
  "w|관련하다": [
   {
    "text": "수업이 끝나고 김 선생은 기말 보고서에 관련한 질문을 받았다.",
@@ -8417,6 +8481,22 @@
    "blank": "교실"
   }
  ],
+ "w|교양": [
+  {
+   "text": "경민은 주말판에 시민 교양 강좌 소식을 실었어요.",
+   "en": "Gyeongmin ran news of public liberal-arts lectures in the weekend edition.",
+   "ko": "경민은 주말판에 시민 교양 강좌 소식을 실었어요.",
+   "blank": "교양",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 회관에서 어르신들을 위한 교양 수업을 열었어요.",
+   "en": "Daeun started a general-education class for the elders at the village hall.",
+   "ko": "다은은 마을 회관에서 어르신들을 위한 교양 수업을 열었어요.",
+   "blank": "교양",
+   "src": "made"
+  }
+ ],
  "w|교외": [
   {
    "text": "집값이 오르면서 교외로 이사하는 사람이 많아졌다고 경민이 썼어요.",
@@ -8851,6 +8931,22 @@
    "src": "made"
   }
  ],
+ "w|구성하다": [
+  {
+   "text": "재원은 주민 대표와 전문가로 위원회를 구성했어요.",
+   "en": "Jaewon formed a committee of resident representatives and experts.",
+   "ko": "재원은 주민 대표와 전문가로 위원회를 구성했어요.",
+   "blank": "구성했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이번 편지를 질문 열 개로 구성해서 친구가 답하게 했어요.",
+   "en": "Sohee made up this letter of ten questions for her friend to answer.",
+   "ko": "소희는 이번 편지를 질문 열 개로 구성해서 친구가 답하게 했어요.",
+   "blank": "구성해서",
+   "src": "made"
+  }
+ ],
  "w|구식": [
   {
    "text": "과학실의 현미경은 너무 구식이라서 잘 안 보였어요.",
@@ -9047,6 +9143,22 @@
    "src": "made"
   }
  ],
+ "w|구축하다": [
+  {
+   "text": "재원은 시민들이 민원을 온라인으로 넣을 수 있는 시스템을 구축했어요.",
+   "en": "Jaewon built a system that lets citizens file complaints online.",
+   "ko": "재원은 시민들이 민원을 온라인으로 넣을 수 있는 시스템을 구축했어요.",
+   "blank": "구축했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구와 주고받은 편지 사진을 모아 볼 수 있는 작은 홈페이지를 구축했어요.",
+   "en": "Sohee built a small website where she can browse photos of the letters she and her friend exchanged.",
+   "ko": "소희는 친구와 주고받은 편지 사진을 모아 볼 수 있는 작은 홈페이지를 구축했어요.",
+   "blank": "구축했어요",
+   "src": "made"
+  }
+ ],
  "w|구출": [
   {
    "text": "성호가 연출한 연극은 산에서 조난당한 등산객의 구출 과정을 다뤄요.",
@@ -9075,6 +9187,22 @@
    "en": "I'm urgently looking for a job.",
    "ko": "일자리를 급히 구하고 있어.",
    "blank": "구하고"
+  }
+ ],
+ "w|구현하다": [
+  {
+   "text": "재원은 걷기 좋은 도시라는 시장의 공약을 실제 거리에 구현하려고 애썼어요.",
+   "en": "Jaewon worked hard to bring the mayor's promise of a walkable city to life on actual streets.",
+   "ko": "재원은 걷기 좋은 도시라는 시장의 공약을 실제 거리에 구현하려고 애썼어요.",
+   "blank": "구현하려고",
+   "src": "made"
+  },
+  {
+   "text": "소희의 친구는 어릴 때 꿈꾸던 작은 빵집을 마침내 시골에 구현했다고 편지를 보냈어요.",
+   "en": "Sohee's friend wrote that she had finally made her childhood dream of a small bakery come true in the countryside.",
+   "ko": "소희의 친구는 어릴 때 꿈꾸던 작은 빵집을 마침내 시골에 구현했다고 편지를 보냈어요.",
+   "blank": "구현했다고",
+   "src": "made"
   }
  ],
  "w|국": [
@@ -9899,6 +10027,22 @@
    "ko": "회사 내부 규정에 따라 실적이 없는 사원들은 감봉 조치를 당했다.",
    "blank": "규정에",
    "src": "krdict"
+  }
+ ],
+ "w|규정하다": [
+  {
+   "text": "재원은 공원에서 할 수 없는 일을 조례로 규정했어요.",
+   "en": "Jaewon set out in an ordinance what is not allowed in the park.",
+   "ko": "재원은 공원에서 할 수 없는 일을 조례로 규정했어요.",
+   "blank": "규정했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 사람을 직업으로 규정하는 세상이 답답하다고 친구에게 썼어요.",
+   "en": "Sohee wrote to her friend that a world that defines people by their jobs feels stifling.",
+   "ko": "소희는 사람을 직업으로 규정하는 세상이 답답하다고 친구에게 썼어요.",
+   "blank": "규정하는",
+   "src": "made"
   }
  ],
  "w|규칙": [
@@ -10956,6 +11100,22 @@
    "en": "Jiyoung read a health book that warns against extreme diets.",
    "ko": "지영은 극단적인 다이어트를 경고하는 건강 서적을 읽었어요.",
    "blank": "극단적인",
+   "src": "made"
+  }
+ ],
+ "w|극대화하다": [
+  {
+   "text": "재원은 축제 기간에 지역 상점의 매출을 극대화하려고 셔틀버스를 늘렸어요.",
+   "en": "Jaewon added more shuttle buses to maximize local shops' sales during the festival.",
+   "ko": "재원은 축제 기간에 지역 상점의 매출을 극대화하려고 셔틀버스를 늘렸어요.",
+   "blank": "극대화하려고",
+   "src": "made"
+  },
+  {
+   "text": "소희는 짧은 휴가의 즐거움을 극대화하려면 계획을 너무 많이 세우지 말라고 조언했어요.",
+   "en": "Sohee advised that to make the most of a short vacation, you shouldn't plan too much.",
+   "ko": "소희는 짧은 휴가의 즐거움을 극대화하려면 계획을 너무 많이 세우지 말라고 조언했어요.",
+   "blank": "극대화하려면",
    "src": "made"
   }
  ],
@@ -12065,6 +12225,38 @@
    "src": "made"
   }
  ],
+ "w|기반하다": [
+  {
+   "text": "재원은 감이 아니라 통계에 기반한 정책을 만들려고 해요.",
+   "en": "Jaewon tries to make policies based on statistics rather than gut feeling.",
+   "ko": "재원은 감이 아니라 통계에 기반한 정책을 만들려고 해요.",
+   "blank": "기반한",
+   "src": "made"
+  },
+  {
+   "text": "소희의 친구는 실화에 기반한 소설을 쓰고 있다고 편지에 적었어요.",
+   "en": "Sohee's friend wrote in a letter that she is writing a novel based on a true story.",
+   "ko": "소희의 친구는 실화에 기반한 소설을 쓰고 있다고 편지에 적었어요.",
+   "blank": "기반한",
+   "src": "made"
+  }
+ ],
+ "w|기법": [
+  {
+   "text": "재원은 홍보 영상에 드론 촬영 기법을 써서 도시를 멋지게 담았어요.",
+   "en": "Jaewon used drone filming techniques in the promotional video to capture the city beautifully.",
+   "ko": "재원은 홍보 영상에 드론 촬영 기법을 써서 도시를 멋지게 담았어요.",
+   "blank": "기법을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 수채화 기법을 배우고 있다며 편지 귀퉁이에 작은 꽃을 그렸어요.",
+   "en": "Saying she was learning watercolor techniques, Sohee painted a small flower in the corner of the letter.",
+   "ko": "소희는 수채화 기법을 배우고 있다며 편지 귀퉁이에 작은 꽃을 그렸어요.",
+   "blank": "기법을",
+   "src": "made"
+  }
+ ],
  "w|기본": [
   {
    "text": "예의는 기본이라고 생각해.",
@@ -12241,6 +12433,22 @@
    "blank": "기술이"
   }
  ],
+ "w|기술력": [
+  {
+   "text": "재원은 지역 기업들의 기술력을 알리는 박람회를 시청 광장에서 열었어요.",
+   "en": "Jaewon held a fair in the city hall plaza showcasing the technological capabilities of local companies.",
+   "ko": "재원은 지역 기업들의 기술력을 알리는 박람회를 시청 광장에서 열었어요.",
+   "blank": "기술력을",
+   "src": "made"
+  },
+  {
+   "text": "소희의 친구는 자기 회사가 기술력을 인정받아 큰 상을 받았다고 편지에 썼어요.",
+   "en": "Sohee's friend wrote in a letter that her company won a big award for its technological capabilities.",
+   "ko": "소희의 친구는 자기 회사가 기술력을 인정받아 큰 상을 받았다고 편지에 썼어요.",
+   "blank": "기술력을",
+   "src": "made"
+  }
+ ],
  "w|기술자": [
   {
    "text": "기계가 갑자기 멈추자 태윤은 기술자를 불렀어요.",
@@ -12386,6 +12594,22 @@
    "en": "Daeun's brother also contributed to the holiday chores by washing dishes.",
    "ko": "다은의 동생도 설거지로 연휴 집안일에 기여했어요.",
    "blank": "기여했어요",
+   "src": "made"
+  }
+ ],
+ "w|기여하다": [
+  {
+   "text": "재원은 시청 일을 하면서 동네가 조금씩 나아지는 데 기여했다는 보람을 느껴요.",
+   "en": "Working at city hall, Jaewon feels proud to have contributed to the neighborhood gradually getting better.",
+   "ko": "재원은 시청 일을 하면서 동네가 조금씩 나아지는 데 기여했다는 보람을 느껴요.",
+   "blank": "기여했다는",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구가 마을 도서관을 세우는 데 기여한 이야기를 읽고 자랑스러웠어요.",
+   "en": "Sohee felt proud reading how her friend contributed to building the village library.",
+   "ko": "소희는 친구가 마을 도서관을 세우는 데 기여한 이야기를 읽고 자랑스러웠어요.",
+   "blank": "기여한",
    "src": "made"
   }
  ],
@@ -15147,6 +15371,22 @@
    "blank": "남편이"
   }
  ],
+ "w|납득하다": [
+  {
+   "text": "주민들은 공사 기간이 왜 길어졌는지 재원의 설명을 듣고서야 납득했어요.",
+   "en": "Residents only understood why construction took longer after hearing Jaewon's explanation.",
+   "ko": "주민들은 공사 기간이 왜 길어졌는지 재원의 설명을 듣고서야 납득했어요.",
+   "blank": "납득했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구가 갑자기 연락을 끊었던 이유를 편지로 듣고 겨우 납득했어요.",
+   "en": "Sohee finally understood after reading in a letter why her friend had suddenly stopped contacting her.",
+   "ko": "소희는 친구가 갑자기 연락을 끊었던 이유를 편지로 듣고 겨우 납득했어요.",
+   "blank": "납득했어요",
+   "src": "made"
+  }
+ ],
  "w|납치": [
   {
    "text": "오늘 밤 드라마에서는 형사가 납치 사건의 범인을 쫓아요.",
@@ -16518,6 +16758,22 @@
    "en": "The friend's face was very tanned because her job keeps her exposed to the sun for long hours.",
    "ko": "친구는 햇볕에 오래 노출되는 일을 해서 얼굴이 많이 탔어요.",
    "blank": "노출되는",
+   "src": "made"
+  }
+ ],
+ "w|노출하다": [
+  {
+   "text": "재원은 직원이 실수로 주민 개인정보를 노출한 일로 사과문을 썼어요.",
+   "en": "Jaewon wrote an apology after a staff member accidentally exposed residents' personal information.",
+   "ko": "재원은 직원이 실수로 주민 개인정보를 노출한 일로 사과문을 썼어요.",
+   "blank": "노출한",
+   "src": "made"
+  },
+  {
+   "text": "소희는 편지 봉투를 햇빛에 오래 노출하면 글씨가 바랜다는 걸 알게 됐어요.",
+   "en": "Sohee learned that leaving letter envelopes exposed to sunlight for long fades the writing.",
+   "ko": "소희는 편지 봉투를 햇빛에 오래 노출하면 글씨가 바랜다는 걸 알게 됐어요.",
+   "blank": "노출하면",
    "src": "made"
   }
  ],
@@ -18057,6 +18313,22 @@
    "src": "made"
   }
  ],
+ "w|다양성": [
+  {
+   "text": "재원은 시청 직원을 뽑을 때 다양성도 중요하게 봐야 한다고 말했어요.",
+   "en": "Jaewon said diversity should also be considered important when hiring city hall staff.",
+   "ko": "재원은 시청 직원을 뽑을 때 다양성도 중요하게 봐야 한다고 말했어요.",
+   "blank": "다양성도",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이사 간 동네가 음식의 다양성이 대단하다며 친구를 초대했어요.",
+   "en": "Saying the neighborhood she moved to has an amazing variety of food, Sohee invited her friend.",
+   "ko": "소희는 이사 간 동네가 음식의 다양성이 대단하다며 친구를 초대했어요.",
+   "blank": "다양성이",
+   "src": "made"
+  }
+ ],
  "w|다양하다": [
   {
    "text": "취향이 다양하다 보니 고르기 즐거워.",
@@ -18761,6 +19033,22 @@
    "en": "Moonlight shines into the room through the window.",
    "ko": "창으로 달빛이 방 안을 비춰.",
    "blank": "달빛이"
+  }
+ ],
+ "w|달성하다": [
+  {
+   "text": "재원의 부서는 올해 쓰레기를 줄이는 목표를 석 달 일찍 달성했어요.",
+   "en": "Jaewon's department reached its goal of reducing waste three months early this year.",
+   "ko": "재원의 부서는 올해 쓰레기를 줄이는 목표를 석 달 일찍 달성했어요.",
+   "blank": "달성했어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 마라톤 완주라는 목표를 달성했다고 친구에게 사진과 함께 편지를 보냈어요.",
+   "en": "Sohee sent her friend a letter with a photo saying she achieved her goal of finishing a marathon.",
+   "ko": "소희는 마라톤 완주라는 목표를 달성했다고 친구에게 사진과 함께 편지를 보냈어요.",
+   "blank": "달성했다고",
+   "src": "made"
   }
  ],
  "w|달아나다": [
@@ -19660,6 +19948,22 @@
    "en": "Sujin's family has made kimchi together every autumn for generations.",
    "ko": "수진의 집안은 대대로 가을마다 김장을 함께 해요.",
    "blank": "대대로",
+   "src": "made"
+  }
+ ],
+ "w|대두되다": [
+  {
+   "text": "여름마다 폭염 대책이 시의회에서 대두되자 재원은 그늘막을 더 설치했어요.",
+   "en": "As heat wave measures came up at the city council every summer, Jaewon installed more sunshades.",
+   "ko": "여름마다 폭염 대책이 시의회에서 대두되자 재원은 그늘막을 더 설치했어요.",
+   "blank": "대두되자",
+   "src": "made"
+  },
+  {
+   "text": "소희는 고향에 재개발 문제가 대두되었다는 소식을 친구의 편지로 처음 알았어요.",
+   "en": "Sohee first learned from her friend's letter that redevelopment had become an issue in their hometown.",
+   "ko": "소희는 고향에 재개발 문제가 대두되었다는 소식을 친구의 편지로 처음 알았어요.",
+   "blank": "대두되었다는",
    "src": "made"
   }
  ],
@@ -21309,6 +21613,22 @@
    "blank": "도움"
   }
  ],
+ "w|도입하다": [
+  {
+   "text": "재원은 시청에 공공 자전거를 처음 도입한 사람이에요.",
+   "en": "Jaewon is the person who first introduced public bikes at city hall.",
+   "ko": "재원은 시청에 공공 자전거를 처음 도입한 사람이에요.",
+   "blank": "도입한",
+   "src": "made"
+  },
+  {
+   "text": "소희의 친구가 다니는 학교는 올해 무상 급식을 도입했대요.",
+   "en": "The school Sohee's friend goes to introduced free school meals this year.",
+   "ko": "소희의 친구가 다니는 학교는 올해 무상 급식을 도입했대요.",
+   "blank": "도입했대요",
+   "src": "made"
+  }
+ ],
  "w|도저히": [
   {
    "text": "도저히 이해할 수 없어.",
@@ -21500,6 +21820,22 @@
    "en": "Yuna's grandfather told her how hard life was for factory workers during the dictatorship era.",
    "ko": "유나의 할아버지는 독재 시절 공장 노동자들이 얼마나 힘들었는지 들려주셨어요.",
    "blank": "독재",
+   "src": "made"
+  }
+ ],
+ "w|독창성": [
+  {
+   "text": "재원은 도시 상징 공모전에서 독창성이 가장 뛰어난 작품을 골랐어요.",
+   "en": "Jaewon picked the most original entry in the city symbol contest.",
+   "ko": "재원은 도시 상징 공모전에서 독창성이 가장 뛰어난 작품을 골랐어요.",
+   "blank": "독창성이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구가 보낸 그림의 독창성에 감탄했다고 답장에 썼어요.",
+   "en": "Sohee wrote in her reply that she was amazed by the originality of the drawing her friend sent.",
+   "ko": "소희는 친구가 보낸 그림의 독창성에 감탄했다고 답장에 썼어요.",
+   "blank": "독창성에",
    "src": "made"
   }
  ],
@@ -21972,6 +22308,22 @@
    "en": "Seoyeon calls her husband, who climbs mountains with her all four seasons, her life partner.",
    "ko": "서연은 사계절 내내 산을 함께 오르는 남편을 인생의 동반자라고 불러요.",
    "blank": "동반자라고",
+   "src": "made"
+  }
+ ],
+ "w|동반하다": [
+  {
+   "text": "재원은 강한 바람을 동반한 태풍 소식에 비상 근무를 했어요.",
+   "en": "Jaewon worked an emergency shift on news of a typhoon accompanied by strong winds.",
+   "ko": "재원은 강한 바람을 동반한 태풍 소식에 비상 근무를 했어요.",
+   "blank": "동반한",
+   "src": "made"
+  },
+  {
+   "text": "소희는 두통을 동반한 감기로 일주일 내내 앓았다고 친구에게 썼어요.",
+   "en": "Sohee wrote to her friend that she was sick all week with a cold accompanied by headaches.",
+   "ko": "소희는 두통을 동반한 감기로 일주일 내내 앓았다고 친구에게 썼어요.",
+   "blank": "동반한",
    "src": "made"
   }
  ],
@@ -22969,6 +23321,22 @@
    "en": "I asked if they'd like to have more tea.",
    "ko": "차를 더 드시다 싶으신지 물었어.",
    "blank": "드시다"
+  }
+ ],
+ "w|득실": [
+  {
+   "text": "경민은 두 회사가 합치면 생기는 득실을 표로 정리해 실었어요.",
+   "en": "Gyeongmin laid out in a table what each side would gain and lose if the two companies merged.",
+   "ko": "경민은 두 회사가 합치면 생기는 득실을 표로 정리해 실었어요.",
+   "blank": "득실을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 길을 넓히는 일의 득실을 이웃들과 오래 이야기했어요.",
+   "en": "Daeun talked for a long time with her neighbors about the gains and losses of widening the village road.",
+   "ko": "다은은 마을 길을 넓히는 일의 득실을 이웃들과 오래 이야기했어요.",
+   "blank": "득실을",
+   "src": "made"
   }
  ],
  "w|든든하다": [
@@ -25027,6 +25395,22 @@
    "blank": "마련이지"
   }
  ],
+ "w|마련되다": [
+  {
+   "text": "재원의 노력으로 시청 일 층에 아이를 데려온 민원인을 위한 놀이 공간이 마련됐어요.",
+   "en": "Thanks to Jaewon's efforts, a play area was set up on city hall's first floor for visitors who bring children.",
+   "ko": "재원의 노력으로 시청 일 층에 아이를 데려온 민원인을 위한 놀이 공간이 마련됐어요.",
+   "blank": "마련됐어요",
+   "src": "made"
+  },
+  {
+   "text": "소희는 고향 마을에 작은 문학관이 마련됐다는 소식을 친구에게 전했어요.",
+   "en": "Sohee told her friend the news that a small literature museum had been set up in their hometown.",
+   "ko": "소희는 고향 마을에 작은 문학관이 마련됐다는 소식을 친구에게 전했어요.",
+   "blank": "마련됐다는",
+   "src": "made"
+  }
+ ],
  "w|마련하다": [
   {
    "text": "손님 자리를 미리 마련해.",
@@ -26671,6 +27055,22 @@
    "src": "made"
   }
  ],
+ "w|맥락": [
+  {
+   "text": "경민은 정치인의 말을 맥락 없이 잘라 쓰지 않으려고 전체 영상을 다시 봤어요.",
+   "en": "Gyeongmin watched the whole video again so as not to quote the politician out of context.",
+   "ko": "경민은 정치인의 말을 맥락 없이 잘라 쓰지 않으려고 전체 영상을 다시 봤어요.",
+   "blank": "맥락",
+   "src": "made"
+  },
+  {
+   "text": "다은은 할아버지의 옛이야기를 그 시절 맥락에서 이해하려고 마을 역사책을 읽었어요.",
+   "en": "Daeun read a village history book to understand her grandfather's old stories in the context of that era.",
+   "ko": "다은은 할아버지의 옛이야기를 그 시절 맥락에서 이해하려고 마을 역사책을 읽었어요.",
+   "blank": "맥락에서",
+   "src": "made"
+  }
+ ],
  "w|맥박": [
   {
    "text": "긴장하니 맥박이 빨라져.",
@@ -27723,6 +28123,22 @@
    "en": "I don't know that place's address.",
    "ko": "그 집 주소 몰라.",
    "blank": "몰라"
+  }
+ ],
+ "w|모색하다": [
+  {
+   "text": "재원은 주차 문제를 풀 방법을 주민들과 함께 모색하고 있어요.",
+   "en": "Jaewon is looking for a way to solve the parking problem together with residents.",
+   "ko": "재원은 주차 문제를 풀 방법을 주민들과 함께 모색하고 있어요.",
+   "blank": "모색하고",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구와 다시 만날 방법을 모색하다가 둘 다 갈 수 있는 중간 도시를 골랐어요.",
+   "en": "While looking for a way to meet her friend again, Sohee picked a city halfway between them.",
+   "ko": "소희는 친구와 다시 만날 방법을 모색하다가 둘 다 갈 수 있는 중간 도시를 골랐어요.",
+   "blank": "모색하다가",
+   "src": "made"
   }
  ],
  "w|모서리": [
@@ -29231,6 +29647,22 @@
    "en": "I suddenly stopped while walking.",
    "ko": "길을 걷다 문득 멈췄어.",
    "blank": "문득"
+  }
+ ],
+ "w|문맥": [
+  {
+   "text": "경민은 문맥에 맞지 않는 단어를 교정 기자가 고쳐 줘서 고마웠어요.",
+   "en": "Gyeongmin was grateful that the copy editor fixed a word that didn't fit the context.",
+   "ko": "경민은 문맥에 맞지 않는 단어를 교정 기자가 고쳐 줘서 고마웠어요.",
+   "blank": "문맥에",
+   "src": "made"
+  },
+  {
+   "text": "할머니의 편지에는 문맥을 모르면 이해하기 어려운 옛말이 많아서 다은이 한참 읽었어요.",
+   "en": "Grandma's letter had many old words hard to understand without the context, so Daeun read it for a long time.",
+   "ko": "할머니의 편지에는 문맥을 모르면 이해하기 어려운 옛말이 많아서 다은이 한참 읽었어요.",
+   "blank": "문맥을",
+   "src": "made"
   }
  ],
  "w|문방구": [
@@ -31513,6 +31945,22 @@
    "src": "made"
   }
  ],
+ "w|발달하다": [
+  {
+   "text": "경민은 인터넷이 발달하면서 신문 읽는 사람이 줄었다고 썼어요.",
+   "en": "Gyeongmin wrote that fewer people read newspapers as the internet developed.",
+   "ko": "경민은 인터넷이 발달하면서 신문 읽는 사람이 줄었다고 썼어요.",
+   "blank": "발달하면서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산골 아이들의 다리 근육이 잘 발달한 이유가 매일 오르막길을 걸어서라고 했어요.",
+   "en": "Daeun said mountain kids have well-developed leg muscles because they walk uphill every day.",
+   "ko": "다은은 산골 아이들의 다리 근육이 잘 발달한 이유가 매일 오르막길을 걸어서라고 했어요.",
+   "blank": "발달한",
+   "src": "made"
+  }
+ ],
  "w|발명하다": [
   {
    "text": "그 과학자가 새 기계를 발명했어.",
@@ -31615,6 +32063,22 @@
    "blank": "발전이"
   }
  ],
+ "w|발전하다": [
+  {
+   "text": "경민은 작은 항구 마을이 관광 도시로 발전한 과정을 연재했어요.",
+   "en": "Gyeongmin ran a series on how a small port village developed into a tourist city.",
+   "ko": "경민은 작은 항구 마을이 관광 도시로 발전한 과정을 연재했어요.",
+   "blank": "발전한",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 협동조합이 작은 가게에서 큰 판매장으로 발전하는 걸 지켜봤어요.",
+   "en": "Daeun watched the village cooperative grow from a small shop into a big store.",
+   "ko": "다은은 마을 협동조합이 작은 가게에서 큰 판매장으로 발전하는 걸 지켜봤어요.",
+   "blank": "발전하는",
+   "src": "made"
+  }
+ ],
  "w|발코니": [
   {
    "text": "현우는 발코니에 작은 화분들을 놓을 생각이에요.",
@@ -31687,6 +32151,22 @@
    "en": "They officially announced the new product.",
    "ko": "신제품을 공식적으로 발표했어.",
    "blank": "발표했어"
+  }
+ ],
+ "w|발휘하다": [
+  {
+   "text": "경민은 마감 직전에도 침착하게 실력을 발휘해서 특종을 냈어요.",
+   "en": "Gyeongmin stayed calm even right before the deadline, showed his skill, and got a scoop.",
+   "ko": "경민은 마감 직전에도 침착하게 실력을 발휘해서 특종을 냈어요.",
+   "blank": "발휘해서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 잔치에서 요리 솜씨를 발휘해서 어르신들의 칭찬을 받았어요.",
+   "en": "Daeun showed off her cooking skills at the village feast and was praised by the elders.",
+   "ko": "다은은 마을 잔치에서 요리 솜씨를 발휘해서 어르신들의 칭찬을 받았어요.",
+   "blank": "발휘해서",
+   "src": "made"
   }
  ],
  "w|밝다": [
@@ -32087,6 +32567,22 @@
    "src": "made"
   }
  ],
+ "w|배경지식": [
+  {
+   "text": "경민은 경제 기사를 쓸 때 독자에게 배경지식이 없어도 이해되게 쉽게 풀어요.",
+   "en": "When writing economic articles, Gyeongmin explains things simply so readers understand without background knowledge.",
+   "ko": "경민은 경제 기사를 쓸 때 독자에게 배경지식이 없어도 이해되게 쉽게 풀어요.",
+   "blank": "배경지식이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 버섯을 따러 가기 전에 독버섯에 대한 배경지식을 미리 공부했어요.",
+   "en": "Before going mushroom picking, Daeun studied up on poisonous mushrooms.",
+   "ko": "다은은 버섯을 따러 가기 전에 독버섯에 대한 배경지식을 미리 공부했어요.",
+   "blank": "배경지식을",
+   "src": "made"
+  }
+ ],
  "w|배고프다": [
   {
    "text": "점심 안 먹어서 배고파.",
@@ -32430,6 +32926,22 @@
    "en": "Haeun's article was about more spouses taking parental leave.",
    "ko": "하은의 기사는 배우자의 육아 휴직이 늘고 있다는 내용이었어요.",
    "blank": "배우자의",
+   "src": "made"
+  }
+ ],
+ "w|배제하다": [
+  {
+   "text": "경민은 개인적인 감정을 배제하고 사실만 쓰려고 노력해요.",
+   "en": "Gyeongmin tries to leave out personal feelings and write only the facts.",
+   "ko": "경민은 개인적인 감정을 배제하고 사실만 쓰려고 노력해요.",
+   "blank": "배제하고",
+   "src": "made"
+  },
+  {
+   "text": "다은은 이장 선거에서 특정 집안을 배제하지 말자고 마을 회의에서 말했어요.",
+   "en": "At the village meeting, Daeun said they shouldn't exclude any particular family from the village head election.",
+   "ko": "다은은 이장 선거에서 특정 집안을 배제하지 말자고 마을 회의에서 말했어요.",
+   "blank": "배제하지",
    "src": "made"
   }
  ],
@@ -33125,6 +33637,22 @@
    "src": "krdict"
   }
  ],
+ "w|범주": [
+  {
+   "text": "재원은 시청에 들어온 민원을 범주별로 나눠서 담당 부서에 보냈어요.",
+   "en": "Jaewon sorted the complaints that came into city hall by category and sent them to the right departments.",
+   "ko": "재원은 시청에 들어온 민원을 범주별로 나눠서 담당 부서에 보냈어요.",
+   "blank": "범주별로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 옛 친구에게 받은 편지를 가족·여행·학교 같은 범주로 나눠 상자에 담았어요.",
+   "en": "Sohee sorted the letters from her old friend into categories like family, travel, and school and put them in boxes.",
+   "ko": "소희는 옛 친구에게 받은 편지를 가족·여행·학교 같은 범주로 나눠 상자에 담았어요.",
+   "blank": "범주로",
+   "src": "made"
+  }
+ ],
  "w|범행": [
   {
    "text": "경찰은 범행 동기를 아직 밝히지 않았다고 성호가 기사에 썼어요.",
@@ -33531,6 +34059,22 @@
    "text": "다은은 전통 비빔밥을 조금 변형해서 자기만의 요리를 만들었어요.",
    "en": "Daeun modified the traditional bibimbap a little to make her own dish.",
    "ko": "다은은 전통 비빔밥을 조금 변형해서 자기만의 요리를 만들었어요.",
+   "blank": "변형해서",
+   "src": "made"
+  }
+ ],
+ "w|변형하다": [
+  {
+   "text": "경민은 사진을 변형해서 쓰면 안 된다는 원칙을 후배에게 알려 줬어요.",
+   "en": "Gyeongmin told a junior reporter the rule that photos must not be altered.",
+   "ko": "경민은 사진을 변형해서 쓰면 안 된다는 원칙을 후배에게 알려 줬어요.",
+   "blank": "변형해서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 할머니의 된장 조리법을 조금 변형해서 젊은 사람 입맛에 맞췄어요.",
+   "en": "Daeun tweaked her grandmother's soybean paste recipe a little to suit younger tastes.",
+   "ko": "다은은 할머니의 된장 조리법을 조금 변형해서 젊은 사람 입맛에 맞췄어요.",
    "blank": "변형해서",
    "src": "made"
   }
@@ -34147,6 +34691,22 @@
    "blank": "보여줬어"
   }
  ],
+ "w|보완하다": [
+  {
+   "text": "경민은 독자 지적을 받고 빠진 통계를 보완해서 기사를 다시 올렸어요.",
+   "en": "After a reader pointed it out, Gyeongmin supplemented the missing statistics and reposted the article.",
+   "ko": "경민은 독자 지적을 받고 빠진 통계를 보완해서 기사를 다시 올렸어요.",
+   "blank": "보완해서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 바람이 새는 창문을 비닐로 보완해서 겨울을 났어요.",
+   "en": "Daeun got through the winter by patching the drafty window with plastic.",
+   "ko": "다은은 바람이 새는 창문을 비닐로 보완해서 겨울을 났어요.",
+   "blank": "보완해서",
+   "src": "made"
+  }
+ ],
  "w|보유하다": [
   {
    "text": "민수네 학교 도서관은 만 권이 넘는 책을 보유하고 있어요.",
@@ -34239,6 +34799,22 @@
    "src": "made"
   }
  ],
+ "w|보존하다": [
+  {
+   "text": "경민의 신문사는 백 년 전 신문을 디지털로 보존하는 작업을 하고 있어요.",
+   "en": "Gyeongmin's newspaper is working on preserving hundred-year-old newspapers digitally.",
+   "ko": "경민의 신문사는 백 년 전 신문을 디지털로 보존하는 작업을 하고 있어요.",
+   "blank": "보존하는",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을의 오래된 돌담을 보존하자고 군청에 건의했어요.",
+   "en": "Daeun proposed to the county office that the village's old stone walls be preserved.",
+   "ko": "다은은 마을의 오래된 돌담을 보존하자고 군청에 건의했어요.",
+   "blank": "보존하자고",
+   "src": "made"
+  }
+ ],
  "w|보증금": [
   {
    "text": "민수는 집주인에게 보증금을 돌려받고 나서야 마음이 놓였어요.",
@@ -34252,6 +34828,22 @@
    "en": "Jiyoung looked up and read a law book about lease deposits.",
    "ko": "지영은 전세 보증금에 관한 법률 책을 찾아 읽었어요.",
    "blank": "보증금에",
+   "src": "made"
+  }
+ ],
+ "w|보충하다": [
+  {
+   "text": "경민은 인터뷰 내용이 부족해서 전화로 몇 가지 질문을 보충했어요.",
+   "en": "The interview material was thin, so Gyeongmin added a few questions by phone.",
+   "ko": "경민은 인터뷰 내용이 부족해서 전화로 몇 가지 질문을 보충했어요.",
+   "blank": "보충했어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산을 오르기 전에 물과 초콜릿으로 힘을 보충했어요.",
+   "en": "Daeun refueled with water and chocolate before climbing the mountain.",
+   "ko": "다은은 산을 오르기 전에 물과 초콜릿으로 힘을 보충했어요.",
+   "blank": "보충했어요",
    "src": "made"
   }
  ],
@@ -35339,6 +35931,22 @@
    "blank": "부엌"
   }
  ],
+ "w|부여하다": [
+  {
+   "text": "편집장은 경민에게 지방 선거 취재를 맡기며 큰 책임을 부여했어요.",
+   "en": "The editor gave Gyeongmin a big responsibility by assigning him to cover the local elections.",
+   "ko": "편집장은 경민에게 지방 선거 취재를 맡기며 큰 책임을 부여했어요.",
+   "blank": "부여했어요",
+   "src": "made"
+  },
+  {
+   "text": "마을 사람들은 다은에게 새로 난 송아지의 이름을 짓는 역할을 부여했어요.",
+   "en": "The villagers gave Daeun the role of naming the newborn calf.",
+   "ko": "마을 사람들은 다은에게 새로 난 송아지의 이름을 짓는 역할을 부여했어요.",
+   "blank": "부여했어요",
+   "src": "made"
+  }
+ ],
  "w|부유하다": [
   {
    "text": "그 동네가 부유하다 보니 가게도 고급져.",
@@ -35982,6 +36590,22 @@
    "en": "Everyone in the art class was busy preparing for the exhibition.",
    "ko": "전시회 준비로 미술반 사람들 모두가 분주했어요.",
    "blank": "분주했어요",
+   "src": "made"
+  }
+ ],
+ "w|분포하다": [
+  {
+   "text": "경민은 전국에 분포한 작은 서점들을 찾아다니며 기획 기사를 썼어요.",
+   "en": "Gyeongmin visited small bookstores spread across the country and wrote a feature.",
+   "ko": "경민은 전국에 분포한 작은 서점들을 찾아다니며 기획 기사를 썼어요.",
+   "blank": "분포한",
+   "src": "made"
+  },
+  {
+   "text": "다은은 이 산에 희귀한 꽃이 넓게 분포한다는 걸 알고 놀랐어요.",
+   "en": "Daeun was surprised to learn that rare flowers are widely distributed on this mountain.",
+   "ko": "다은은 이 산에 희귀한 꽃이 넓게 분포한다는 걸 알고 놀랐어요.",
+   "blank": "분포한다는",
    "src": "made"
   }
  ],
@@ -39439,6 +40063,22 @@
    "blank": "산책할래"
   }
  ],
+ "w|산출하다": [
+  {
+   "text": "경민은 새 도로 건설로 줄어드는 출퇴근 시간을 직접 산출해 봤어요.",
+   "en": "Gyeongmin calculated for himself how much commuting time the new road would save.",
+   "ko": "경민은 새 도로 건설로 줄어드는 출퇴근 시간을 직접 산출해 봤어요.",
+   "blank": "산출해",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 태양광 판이 한 달에 만드는 전기량을 산출해서 이웃들에게 알렸어요.",
+   "en": "Daeun calculated how much electricity the village solar panels make in a month and told the neighbors.",
+   "ko": "다은은 마을 태양광 판이 한 달에 만드는 전기량을 산출해서 이웃들에게 알렸어요.",
+   "blank": "산출해서",
+   "src": "made"
+  }
+ ],
  "w|살": [
   {
    "text": "스무 살이야.",
@@ -39929,6 +40569,22 @@
    "src": "made"
   }
  ],
+ "w|상관관계": [
+  {
+   "text": "경민은 수면 시간과 성적 사이의 상관관계를 다룬 연구를 소개했어요.",
+   "en": "Gyeongmin introduced research on the correlation between sleep time and grades.",
+   "ko": "경민은 수면 시간과 성적 사이의 상관관계를 다룬 연구를 소개했어요.",
+   "blank": "상관관계를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 아침 기온과 고추 수확량 사이에 상관관계가 있는지 몇 년째 기록하고 있어요.",
+   "en": "Daeun has been recording for years whether there's a correlation between morning temperatures and the pepper harvest.",
+   "ko": "다은은 아침 기온과 고추 수확량 사이에 상관관계가 있는지 몇 년째 기록하고 있어요.",
+   "blank": "상관관계가",
+   "src": "made"
+  }
+ ],
  "w|상관없다": [
   {
    "text": "어느 쪽이든 상관없어.",
@@ -40242,6 +40898,38 @@
    "en": "Sohee organized the details of how the accident happened in chronological order.",
    "ko": "소희는 사고 경위를 시간 순서대로 상세히 정리했어요.",
    "blank": "상세히",
+   "src": "made"
+  }
+ ],
+ "w|상승하다": [
+  {
+   "text": "경민은 서울 집값이 다시 상승했다는 기사를 오늘 아침 일 면에 실었어요.",
+   "en": "Gyeongmin ran an article on the front page this morning saying Seoul housing prices rose again.",
+   "ko": "경민은 서울 집값이 다시 상승했다는 기사를 오늘 아침 일 면에 실었어요.",
+   "blank": "상승했다는",
+   "src": "made"
+  },
+  {
+   "text": "안개가 걷히고 기온이 상승하자 다은은 밭에 나갔어요.",
+   "en": "When the fog lifted and the temperature rose, Daeun went out to the field.",
+   "ko": "안개가 걷히고 기온이 상승하자 다은은 밭에 나갔어요.",
+   "blank": "상승하자",
+   "src": "made"
+  }
+ ],
+ "w|상식": [
+  {
+   "text": "경민은 상식으로 알려진 건강 정보 가운데 틀린 것을 모아 기사로 냈어요.",
+   "en": "Gyeongmin gathered wrong health tips that pass as common knowledge and published them as an article.",
+   "ko": "경민은 상식으로 알려진 건강 정보 가운데 틀린 것을 모아 기사로 냈어요.",
+   "blank": "상식으로",
+   "src": "made"
+  },
+  {
+   "text": "산에서 길을 잃으면 물길을 따라 내려가는 게 상식이라고 다은의 이웃이 알려 줬어요.",
+   "en": "Daeun's neighbor told her it's common sense to follow a stream downhill if you get lost in the mountains.",
+   "ko": "산에서 길을 잃으면 물길을 따라 내려가는 게 상식이라고 다은의 이웃이 알려 줬어요.",
+   "blank": "상식이라고",
    "src": "made"
   }
  ],
@@ -41061,6 +41749,22 @@
    "src": "made"
   }
  ],
+ "w|생산하다": [
+  {
+   "text": "경민은 버려진 페트병으로 옷을 생산하는 공장을 취재했어요.",
+   "en": "Gyeongmin reported on a factory that produces clothes from discarded plastic bottles.",
+   "ko": "경민은 버려진 페트병으로 옷을 생산하는 공장을 취재했어요.",
+   "blank": "생산하는",
+   "src": "made"
+  },
+  {
+   "text": "다은의 마을은 일 년에 꿀을 백 통 넘게 생산해요.",
+   "en": "Daeun's village produces more than a hundred barrels of honey a year.",
+   "ko": "다은의 마을은 일 년에 꿀을 백 통 넘게 생산해요.",
+   "blank": "생산해요",
+   "src": "made"
+  }
+ ],
  "w|생생하다": [
   {
    "text": "준호는 이 동네로 처음 이사 온 날이 아직도 생생해요.",
@@ -41589,6 +42293,22 @@
    "en": "The pain gradually subsided.",
    "ko": "통증이 서서히 가라앉았어.",
    "blank": "서서히"
+  }
+ ],
+ "w|서술하다": [
+  {
+   "text": "경민은 사건을 시간 순서대로 서술해야 독자가 덜 헷갈린다고 생각해요.",
+   "en": "Gyeongmin thinks readers get less confused when events are described in chronological order.",
+   "ko": "경민은 사건을 시간 순서대로 서술해야 독자가 덜 헷갈린다고 생각해요.",
+   "blank": "서술해야",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 어르신들의 인생 이야기를 그대로 서술한 책을 만들고 있어요.",
+   "en": "Daeun is making a book that recounts the village elders' life stories just as they told them.",
+   "ko": "다은은 마을 어르신들의 인생 이야기를 그대로 서술한 책을 만들고 있어요.",
+   "blank": "서술한",
+   "src": "made"
   }
  ],
  "w|서식지": [
@@ -42231,6 +42951,22 @@
    "blank": "설령"
   }
  ],
+ "w|설립하다": [
+  {
+   "text": "경민의 할아버지는 이 신문사를 육십 년 전에 설립한 기자 중 한 명이에요.",
+   "en": "Gyeongmin's grandfather was one of the journalists who founded this newspaper sixty years ago.",
+   "ko": "경민의 할아버지는 이 신문사를 육십 년 전에 설립한 기자 중 한 명이에요.",
+   "blank": "설립한",
+   "src": "made"
+  },
+  {
+   "text": "다은은 이웃들과 함께 산골 아이들을 위한 작은 학교를 설립했어요.",
+   "en": "Daeun founded a small school for mountain village children together with her neighbors.",
+   "ko": "다은은 이웃들과 함께 산골 아이들을 위한 작은 학교를 설립했어요.",
+   "blank": "설립했어요",
+   "src": "made"
+  }
+ ],
  "w|설마": [
   {
    "text": "설마 그걸 잊었어?",
@@ -42848,6 +43584,22 @@
    "en": "Driving on the highway alone for the first time, Sohee felt a great sense of accomplishment.",
    "ko": "처음으로 고속도로를 혼자 달린 소희는 큰 성취감을 느꼈어요.",
    "blank": "성취감을",
+   "src": "made"
+  }
+ ],
+ "w|성패": [
+  {
+   "text": "경민은 새 사업의 성패가 젊은 고객에게 달려 있다고 분석했어요.",
+   "en": "Gyeongmin analyzed that the success or failure of the new business depends on young customers.",
+   "ko": "경민은 새 사업의 성패가 젊은 고객에게 달려 있다고 분석했어요.",
+   "blank": "성패가",
+   "src": "made"
+  },
+  {
+   "text": "다은은 민박의 성패가 첫해 손님들의 입소문에 달렸다고 생각해요.",
+   "en": "Daeun thinks the success or failure of her guesthouse depends on word of mouth from first-year guests.",
+   "ko": "다은은 민박의 성패가 첫해 손님들의 입소문에 달렸다고 생각해요.",
+   "blank": "성패가",
    "src": "made"
   }
  ],
@@ -44360,6 +45112,22 @@
    "en": "The hospital suffered a big loss due to equipment breakdowns.",
    "ko": "병원은 장비 고장으로 큰 손실을 입었어요.",
    "blank": "손실을",
+   "src": "made"
+  }
+ ],
+ "w|손익": [
+  {
+   "text": "경민은 올림픽 유치의 손익을 계산한 전문가를 인터뷰했어요.",
+   "en": "Gyeongmin interviewed an expert who calculated the gains and losses of hosting the Olympics.",
+   "ko": "경민은 올림픽 유치의 손익을 계산한 전문가를 인터뷰했어요.",
+   "blank": "손익을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 올해 감자 농사의 손익을 공책에 꼼꼼히 적어 봤어요.",
+   "en": "Daeun carefully wrote down the profit and loss of this year's potato farming in a notebook.",
+   "ko": "다은은 올해 감자 농사의 손익을 공책에 꼼꼼히 적어 봤어요.",
+   "blank": "손익을",
    "src": "made"
   }
  ],
@@ -46425,6 +47193,22 @@
    "src": "made"
   }
  ],
+ "w|승패": [
+  {
+   "text": "경민은 어젯밤 축구 결승전의 승패를 가른 장면을 기사 첫머리에 넣었어요.",
+   "en": "Gyeongmin put the scene that decided last night's soccer final at the top of his article.",
+   "ko": "경민은 어젯밤 축구 결승전의 승패를 가른 장면을 기사 첫머리에 넣었어요.",
+   "blank": "승패를",
+   "src": "made"
+  },
+  {
+   "text": "마을 윷놀이 대회에서 다은의 팀은 승패에 상관없이 끝까지 웃었어요.",
+   "en": "At the village yut game contest, Daeun's team laughed to the end regardless of winning or losing.",
+   "ko": "마을 윷놀이 대회에서 다은의 팀은 승패에 상관없이 끝까지 웃었어요.",
+   "blank": "승패에",
+   "src": "made"
+  }
+ ],
  "w|시": [
   {
    "text": "지금 몇 시?",
@@ -47547,6 +48331,22 @@
    "en": "I try not to break that trust.",
    "ko": "신뢰를 깨뜨리지 않으려고 해.",
    "blank": "신뢰를"
+  }
+ ],
+ "w|신뢰성": [
+  {
+   "text": "재원은 설문 조사의 신뢰성을 높이려고 응답자 수를 두 배로 늘렸어요.",
+   "en": "Jaewon doubled the number of respondents to make the survey more reliable.",
+   "ko": "재원은 설문 조사의 신뢰성을 높이려고 응답자 수를 두 배로 늘렸어요.",
+   "blank": "신뢰성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 인터넷 뉴스의 신뢰성이 떨어져서 요즘은 종이 신문을 본다고 썼어요.",
+   "en": "Sohee wrote that she reads paper newspapers these days because online news is less reliable.",
+   "ko": "소희는 인터넷 뉴스의 신뢰성이 떨어져서 요즘은 종이 신문을 본다고 썼어요.",
+   "blank": "신뢰성이",
+   "src": "made"
   }
  ],
  "w|신뢰하다": [
@@ -50795,6 +51595,22 @@
    "blank": "안전을"
   }
  ],
+ "w|안전성": [
+  {
+   "text": "재원은 놀이터 기구의 안전성을 확인하려고 직접 올라가 봤어요.",
+   "en": "Jaewon climbed on the playground equipment himself to check its safety.",
+   "ko": "재원은 놀이터 기구의 안전성을 확인하려고 직접 올라가 봤어요.",
+   "blank": "안전성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 아기 카시트의 안전성을 꼼꼼히 비교해 보라고 친구에게 조언했어요.",
+   "en": "Sohee advised her friend to carefully compare the safety of baby car seats.",
+   "ko": "소희는 아기 카시트의 안전성을 꼼꼼히 비교해 보라고 친구에게 조언했어요.",
+   "blank": "안전성을",
+   "src": "made"
+  }
+ ],
  "w|안전하다": [
   {
    "text": "여기가 더 안전해.",
@@ -50822,6 +51638,22 @@
    "en": "After drinking a cup of warm tea, Yuna felt calm.",
    "ko": "따뜻한 차를 한 잔 마시고 나니 유나는 마음이 안정됐어요.",
    "blank": "안정됐어요",
+   "src": "made"
+  }
+ ],
+ "w|안정성": [
+  {
+   "text": "재원은 시청 전산망의 안정성을 위해 밤마다 자료를 따로 저장해요.",
+   "en": "For the stability of the city hall network, Jaewon backs up the data separately every night.",
+   "ko": "재원은 시청 전산망의 안정성을 위해 밤마다 자료를 따로 저장해요.",
+   "blank": "안정성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 직장의 안정성보다 하고 싶은 일을 고르겠다고 친구에게 다짐했어요.",
+   "en": "Sohee vowed to her friend that she'd choose work she wants to do over job stability.",
+   "ko": "소희는 직장의 안정성보다 하고 싶은 일을 고르겠다고 친구에게 다짐했어요.",
+   "blank": "안정성보다",
    "src": "made"
   }
  ],
@@ -54663,6 +55495,22 @@
    "src": "made"
   }
  ],
+ "w|연관성": [
+  {
+   "text": "경민은 두 사건 사이의 연관성을 찾으려고 일주일 동안 자료를 뒤졌어요.",
+   "en": "Gyeongmin dug through records for a week looking for a link between the two incidents.",
+   "ko": "경민은 두 사건 사이의 연관성을 찾으려고 일주일 동안 자료를 뒤졌어요.",
+   "blank": "연관성을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 개울의 물고기가 줄어든 것과 새 축사 사이의 연관성을 의심했어요.",
+   "en": "Daeun suspected a connection between fewer fish in the village stream and the new livestock barn.",
+   "ko": "다은은 마을 개울의 물고기가 줄어든 것과 새 축사 사이의 연관성을 의심했어요.",
+   "blank": "연관성을",
+   "src": "made"
+  }
+ ],
  "w|연구": [
   {
    "text": "그 연구를 읽고 있어.",
@@ -55032,6 +55880,22 @@
    "en": "On the train, Yuna watched five episodes of a drama back to back.",
    "ko": "기차 안에서 유나는 드라마를 다섯 편 연속으로 봤어요.",
    "blank": "연속으로",
+   "src": "made"
+  }
+ ],
+ "w|연속성": [
+  {
+   "text": "재원은 담당자가 바뀌어도 사업의 연속성이 끊기지 않게 인수인계 문서를 꼼꼼히 써요.",
+   "en": "Jaewon writes handover documents carefully so the project continues even when the person in charge changes.",
+   "ko": "재원은 담당자가 바뀌어도 사업의 연속성이 끊기지 않게 인수인계 문서를 꼼꼼히 써요.",
+   "blank": "연속성이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 편지가 끊기지 않도록 매달 첫 주에 쓰는 규칙을 만들어 연속성을 지켰어요.",
+   "en": "Sohee kept up continuity by making a rule to write in the first week of each month so the letters wouldn't stop.",
+   "ko": "소희는 편지가 끊기지 않도록 매달 첫 주에 쓰는 규칙을 만들어 연속성을 지켰어요.",
+   "blank": "연속성을",
    "src": "made"
   }
  ],
@@ -58403,6 +59267,22 @@
    "blank": "우연히"
   }
  ],
+ "w|우열": [
+  {
+   "text": "경민은 두 후보의 우열을 가리기보다 공약을 나란히 보여 주는 기사를 썼어요.",
+   "en": "Rather than ranking the two candidates, Gyeongmin wrote an article showing their pledges side by side.",
+   "ko": "경민은 두 후보의 우열을 가리기보다 공약을 나란히 보여 주는 기사를 썼어요.",
+   "blank": "우열을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 이웃집 두 할머니의 김치 맛이 우열을 가리기 어려울 만큼 좋다고 했어요.",
+   "en": "Daeun said the kimchi of the two grandmothers next door are so good it's hard to say which is better.",
+   "ko": "다은은 이웃집 두 할머니의 김치 맛이 우열을 가리기 어려울 만큼 좋다고 했어요.",
+   "blank": "우열을",
+   "src": "made"
+  }
+ ],
  "w|우울": [
   {
    "text": "재원은 한동안 우울에 빠져 아무 연락도 하지 못했다고 고백했어요.",
@@ -59703,6 +60583,22 @@
    "blank": "위험을"
   }
  ],
+ "w|위험성": [
+  {
+   "text": "재원은 낡은 육교의 위험성을 알리고 철거 예산을 받아 냈어요.",
+   "en": "Jaewon raised awareness of the danger of the old pedestrian bridge and secured a budget to tear it down.",
+   "ko": "재원은 낡은 육교의 위험성을 알리고 철거 예산을 받아 냈어요.",
+   "blank": "위험성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 혼자 겨울 산에 가는 일의 위험성을 걱정하며 친구에게 조심하라고 썼어요.",
+   "en": "Worried about the danger of going to winter mountains alone, Sohee wrote to her friend to be careful.",
+   "ko": "소희는 혼자 겨울 산에 가는 일의 위험성을 걱정하며 친구에게 조심하라고 썼어요.",
+   "blank": "위험성을",
+   "src": "made"
+  }
+ ],
  "w|위험하다": [
   {
    "text": "이 길은 밤에 위험해.",
@@ -59917,6 +60813,22 @@
    "src": "made"
   }
  ],
+ "w|유사점": [
+  {
+   "text": "경민은 두 도시의 교통 정책에서 놀라운 유사점을 찾아냈어요.",
+   "en": "Gyeongmin found surprising similarities between the two cities' transport policies.",
+   "ko": "경민은 두 도시의 교통 정책에서 놀라운 유사점을 찾아냈어요.",
+   "blank": "유사점을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산골 사투리와 할머니 고향 말 사이의 유사점을 발견하고 신기해했어요.",
+   "en": "Daeun was fascinated to find similarities between the mountain dialect and her grandmother's hometown speech.",
+   "ko": "다은은 산골 사투리와 할머니 고향 말 사이의 유사점을 발견하고 신기해했어요.",
+   "blank": "유사점을",
+   "src": "made"
+  }
+ ],
  "w|유사하다": [
   {
    "text": "동민과 친구 경수는 걷는 모습이 유사해서 형제냐는 말을 들었어요.",
@@ -59961,6 +60873,22 @@
    "en": "The toddler is playing by stacking blocks.",
    "ko": "유아가 블록을 쌓으며 놀고 있어.",
    "blank": "유아가"
+  }
+ ],
+ "w|유연성": [
+  {
+   "text": "재원은 근무 시간에 유연성을 주자 직원들의 만족도가 올라갔다고 보고했어요.",
+   "en": "Jaewon reported that staff satisfaction rose after working hours were made more flexible.",
+   "ko": "재원은 근무 시간에 유연성을 주자 직원들의 만족도가 올라갔다고 보고했어요.",
+   "blank": "유연성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 요가를 시작하고 몸의 유연성이 좋아졌다고 친구에게 자랑했어요.",
+   "en": "Sohee boasted to her friend that her flexibility improved after she started yoga.",
+   "ko": "소희는 요가를 시작하고 몸의 유연성이 좋아졌다고 친구에게 자랑했어요.",
+   "blank": "유연성이",
+   "src": "made"
   }
  ],
  "w|유연하다": [
@@ -60191,6 +61119,22 @@
    "blank": "유행을"
   }
  ],
+ "w|유형": [
+  {
+   "text": "재원은 올해 들어온 민원 가운데 소음 문제가 가장 흔한 유형이라고 보고했어요.",
+   "en": "Jaewon reported that noise problems were the most common type of complaint this year.",
+   "ko": "재원은 올해 들어온 민원 가운데 소음 문제가 가장 흔한 유형이라고 보고했어요.",
+   "blank": "유형이라고",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구와 성격 유형이 정반대라서 오히려 오래 친하게 지낸다고 썼어요.",
+   "en": "Sohee wrote that she and her friend have opposite personality types, which is actually why they've stayed close so long.",
+   "ko": "소희는 친구와 성격 유형이 정반대라서 오히려 오래 친하게 지낸다고 썼어요.",
+   "blank": "유형이",
+   "src": "made"
+  }
+ ],
  "w|유혹": [
   {
    "text": "시험 기간에 재원은 게임을 하고 싶은 유혹을 꾹 참았어요.",
@@ -60314,6 +61258,22 @@
    "en": "Haeun wrote an article about the physical fatigue of delivery drivers.",
    "ko": "하은은 택배 기사들의 육체적인 피로에 대해 기사를 썼어요.",
    "blank": "육체적인",
+   "src": "made"
+  }
+ ],
+ "w|윤리": [
+  {
+   "text": "경민은 취재원의 이름을 지켜 주는 것이 기자 윤리의 기본이라고 배웠어요.",
+   "en": "Gyeongmin learned that protecting sources' names is a basic rule of journalism ethics.",
+   "ko": "경민은 취재원의 이름을 지켜 주는 것이 기자 윤리의 기본이라고 배웠어요.",
+   "blank": "윤리의",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산에서 나물을 딸 때도 뿌리는 남겨 두는 게 마을의 윤리라고 배웠어요.",
+   "en": "Daeun learned that leaving the roots when picking wild greens is part of the village's ethics.",
+   "ko": "다은은 산에서 나물을 딸 때도 뿌리는 남겨 두는 게 마을의 윤리라고 배웠어요.",
+   "blank": "윤리라고",
    "src": "made"
   }
  ],
@@ -62363,6 +63323,22 @@
    "blank": "이전보다"
   }
  ],
+ "w|이점": [
+  {
+   "text": "경민은 종이 신문의 이점은 천천히 생각하며 읽을 수 있다는 거라고 말해요.",
+   "en": "Gyeongmin says the advantage of a paper newspaper is that you can read it slowly and think.",
+   "ko": "경민은 종이 신문의 이점은 천천히 생각하며 읽을 수 있다는 거라고 말해요.",
+   "blank": "이점은",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산골에 살면 공기가 맑다는 이점 때문에 도시로 돌아가지 않았어요.",
+   "en": "Because of the clean air, one advantage of mountain life, Daeun didn't go back to the city.",
+   "ko": "다은은 산골에 살면 공기가 맑다는 이점 때문에 도시로 돌아가지 않았어요.",
+   "blank": "이점",
+   "src": "made"
+  }
+ ],
  "w|이제": [
   {
    "text": "이제 슬슬 나가자.",
@@ -62641,6 +63617,22 @@
    "blank": "인간"
   }
  ],
+ "w|인간성": [
+  {
+   "text": "경민은 지하철에서 쓰러진 사람을 도운 시민들 이야기로 인간성을 다시 믿게 됐대요.",
+   "en": "Gyeongmin says the story of citizens who helped someone who collapsed on the subway restored his faith in humanity.",
+   "ko": "경민은 지하철에서 쓰러진 사람을 도운 시민들 이야기로 인간성을 다시 믿게 됐대요.",
+   "blank": "인간성을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 눈길에 갇힌 낯선 사람을 재워 준 이웃들에게서 따뜻한 인간성을 봤어요.",
+   "en": "Daeun saw warm humanity in the neighbors who put up a stranger trapped by the snow.",
+   "ko": "다은은 눈길에 갇힌 낯선 사람을 재워 준 이웃들에게서 따뜻한 인간성을 봤어요.",
+   "blank": "인간성을",
+   "src": "made"
+  }
+ ],
  "w|인격": [
   {
    "text": "동민은 일 잘하는 사람보다 인격이 좋은 사람이 되고 싶다고 했어요.",
@@ -62702,6 +63694,22 @@
    "en": "Mikyung ran according to the training plan an AI coaching app made for her.",
    "ko": "미경은 인공지능 코치 앱이 짜 준 훈련 계획대로 달렸어요.",
    "blank": "인공지능",
+   "src": "made"
+  }
+ ],
+ "w|인과관계": [
+  {
+   "text": "경민은 인과관계가 밝혀지지 않은 통계를 단정적으로 쓰지 않으려고 조심해요.",
+   "en": "Gyeongmin is careful not to write definitively about statistics whose cause and effect haven't been established.",
+   "ko": "경민은 인과관계가 밝혀지지 않은 통계를 단정적으로 쓰지 않으려고 조심해요.",
+   "blank": "인과관계가",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산사태와 나무를 마구 벤 일 사이에 인과관계가 있다고 군청에 알렸어요.",
+   "en": "Daeun told the county office there was a causal link between the landslide and reckless tree cutting.",
+   "ko": "다은은 산사태와 나무를 마구 벤 일 사이에 인과관계가 있다고 군청에 알렸어요.",
+   "blank": "인과관계가",
    "src": "made"
   }
  ],
@@ -63202,6 +64210,22 @@
    "en": "Haeun's Saturday routine starts with loading things into the car at dawn.",
    "ko": "토요일 하은의 일과는 새벽에 물건을 차에 싣는 걸로 시작해요.",
    "blank": "일과는",
+   "src": "made"
+  }
+ ],
+ "w|일관성": [
+  {
+   "text": "시장이 바뀌어도 정책의 일관성이 있어야 한다고 재원은 강조했어요.",
+   "en": "Jaewon stressed that policies should stay consistent even when the mayor changes.",
+   "ko": "시장이 바뀌어도 정책의 일관성이 있어야 한다고 재원은 강조했어요.",
+   "blank": "일관성이",
+   "src": "made"
+  },
+  {
+   "text": "소희의 친구는 어릴 때부터 글씨체에 일관성이 있어서 봉투만 봐도 누군지 알아요.",
+   "en": "Sohee's friend's handwriting has been consistent since childhood, so Sohee knows who it is just from the envelope.",
+   "ko": "소희의 친구는 어릴 때부터 글씨체에 일관성이 있어서 봉투만 봐도 누군지 알아요.",
+   "blank": "일관성이",
    "src": "made"
   }
  ],
@@ -65817,6 +66841,22 @@
    "src": "made"
   }
  ],
+ "w|장단점": [
+  {
+   "text": "경민은 재택근무의 장단점을 직장인들에게 직접 물어 기사로 정리했어요.",
+   "en": "Gyeongmin asked office workers directly about the pros and cons of working from home and wrote it up.",
+   "ko": "경민은 재택근무의 장단점을 직장인들에게 직접 물어 기사로 정리했어요.",
+   "blank": "장단점을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산골 생활의 장단점을 블로그에 솔직하게 적었어요.",
+   "en": "Daeun honestly wrote about the pros and cons of mountain village life on her blog.",
+   "ko": "다은은 산골 생활의 장단점을 블로그에 솔직하게 적었어요.",
+   "blank": "장단점을",
+   "src": "made"
+  }
+ ],
  "w|장담하다": [
   {
    "text": "승리를 장담하다 보니 부담이 커졌어.",
@@ -67593,6 +68633,22 @@
    "blank": "전문가는"
   }
  ],
+ "w|전문성": [
+  {
+   "text": "재원은 업무의 전문성을 키우려고 퇴근 후에 행정학 공부를 해요.",
+   "en": "Jaewon studies public administration after work to build his expertise.",
+   "ko": "재원은 업무의 전문성을 키우려고 퇴근 후에 행정학 공부를 해요.",
+   "blank": "전문성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 십 년 넘게 한 일인데도 전문성이 부족하다고 느낀다고 친구에게 털어놨어요.",
+   "en": "Sohee confessed to her friend that even after more than ten years in the job, she feels she lacks expertise.",
+   "ko": "소희는 십 년 넘게 한 일인데도 전문성이 부족하다고 느낀다고 친구에게 털어놨어요.",
+   "blank": "전문성이",
+   "src": "made"
+  }
+ ],
  "w|전문의": [
   {
    "text": "아랫집 할머니는 무릎이 아파서 정형외과 전문의를 찾아가셨어요.",
@@ -68785,6 +69841,22 @@
    "src": "made"
   }
  ],
+ "w|정당성": [
+  {
+   "text": "재원은 요금을 올리는 정당성을 주민들에게 숫자로 보여 줘야 한다고 했어요.",
+   "en": "Jaewon said they had to show residents in figures why raising the fee was justified.",
+   "ko": "재원은 요금을 올리는 정당성을 주민들에게 숫자로 보여 줘야 한다고 했어요.",
+   "blank": "정당성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 오래전 싸움에서 자기 행동에 정당성이 없었다고 편지로 사과했어요.",
+   "en": "Sohee apologized in a letter, admitting her behavior in an old fight had been unjustified.",
+   "ko": "소희는 오래전 싸움에서 자기 행동에 정당성이 없었다고 편지로 사과했어요.",
+   "blank": "정당성이",
+   "src": "made"
+  }
+ ],
  "w|정당하다": [
   {
    "text": "요구가 정당하다 보니 들어줄 수밖에 없어.",
@@ -69289,6 +70361,22 @@
    "en": "I got caught trying to hide my identity.",
    "ko": "정체를 숨기려다 들켰어.",
    "blank": "정체를"
+  }
+ ],
+ "w|정체성": [
+  {
+   "text": "재원은 오래된 골목을 지키는 일이 도시의 정체성을 지키는 일이라고 믿어요.",
+   "en": "Jaewon believes that preserving old alleys is preserving the city's identity.",
+   "ko": "재원은 오래된 골목을 지키는 일이 도시의 정체성을 지키는 일이라고 믿어요.",
+   "blank": "정체성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 외국에서 오래 산 친구가 정체성 때문에 고민한다는 편지를 읽고 마음이 아팠어요.",
+   "en": "Sohee's heart ached reading a letter from her friend who had lived abroad for long and was struggling with her identity.",
+   "ko": "소희는 외국에서 오래 산 친구가 정체성 때문에 고민한다는 편지를 읽고 마음이 아팠어요.",
+   "blank": "정체성",
+   "src": "made"
   }
  ],
  "w|정치": [
@@ -73011,6 +74099,22 @@
    "src": "made"
   }
  ],
+ "w|지성": [
+  {
+   "text": "경민은 대학의 지성이 사회 문제에 목소리를 내야 한다는 칼럼을 썼어요.",
+   "en": "Gyeongmin wrote a column saying university intellectuals should speak up on social issues.",
+   "ko": "경민은 대학의 지성이 사회 문제에 목소리를 내야 한다는 칼럼을 썼어요.",
+   "blank": "지성이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 평생 책을 놓지 않은 이장님에게서 조용한 지성을 느껴요.",
+   "en": "Daeun senses a quiet intellect in the village head, who has never stopped reading his whole life.",
+   "ko": "다은은 평생 책을 놓지 않은 이장님에게서 조용한 지성을 느껴요.",
+   "blank": "지성을",
+   "src": "made"
+  }
+ ],
  "w|지속": [
   {
    "text": "독서 모임의 지속을 위해서는 꾸준히 나오는 사람이 있어야 해요.",
@@ -73024,6 +74128,22 @@
    "en": "When the shaking went on for a long while, Yuna took out her motion sickness pills.",
    "ko": "흔들림이 한참 지속되자 유나는 멀미약을 꺼냈어요.",
    "blank": "지속되자",
+   "src": "made"
+  }
+ ],
+ "w|지속성": [
+  {
+   "text": "재원은 한 번 하고 끝나는 행사보다 지속성이 있는 사업에 예산을 쓰고 싶어 해요.",
+   "en": "Jaewon would rather spend the budget on lasting projects than one-off events.",
+   "ko": "재원은 한 번 하고 끝나는 행사보다 지속성이 있는 사업에 예산을 쓰고 싶어 해요.",
+   "blank": "지속성이",
+   "src": "made"
+  },
+  {
+   "text": "소희는 운동은 지속성이 제일 중요하다며 친구에게 같이 걷기를 권했어요.",
+   "en": "Sohee suggested walking together to her friend, saying consistency is what matters most in exercise.",
+   "ko": "소희는 운동은 지속성이 제일 중요하다며 친구에게 같이 걷기를 권했어요.",
+   "blank": "지속성이",
    "src": "made"
   }
  ],
@@ -75363,6 +76483,22 @@
    "blank": "차별을"
   }
  ],
+ "w|차별화": [
+  {
+   "text": "경민의 신문사는 다른 언론과의 차별화를 위해 동네 소식 면을 늘렸어요.",
+   "en": "To set itself apart from other media, Gyeongmin's newspaper expanded its local news section.",
+   "ko": "경민의 신문사는 다른 언론과의 차별화를 위해 동네 소식 면을 늘렸어요.",
+   "blank": "차별화를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 마을 꿀의 차별화를 위해 꽃 이름을 병에 따로 적었어요.",
+   "en": "To make the village honey stand out, Daeun wrote the flower names on each jar.",
+   "ko": "다은은 마을 꿀의 차별화를 위해 꽃 이름을 병에 따로 적었어요.",
+   "blank": "차별화를",
+   "src": "made"
+  }
+ ],
  "w|차분하다": [
   {
    "text": "사고가 났을 때 성호는 차분하게 구급차를 불렀어요.",
@@ -75982,6 +77118,22 @@
    "en": "Mikyeong read an interview with the founder of an online art lesson platform.",
    "ko": "미경은 온라인 미술 강의 플랫폼 창업자의 인터뷰를 읽었어요.",
    "blank": "창업자의",
+   "src": "made"
+  }
+ ],
+ "w|창의성": [
+  {
+   "text": "재원은 젊은 직원들의 창의성을 살리려고 아이디어 회의를 매달 열어요.",
+   "en": "Jaewon holds an ideas meeting every month to make the most of young staff members' creativity.",
+   "ko": "재원은 젊은 직원들의 창의성을 살리려고 아이디어 회의를 매달 열어요.",
+   "blank": "창의성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 아이의 창의성을 키우려고 장난감 대신 빈 상자를 준다고 편지에 썼어요.",
+   "en": "Sohee wrote in a letter that she gives her child empty boxes instead of toys to foster creativity.",
+   "ko": "소희는 아이의 창의성을 키우려고 장난감 대신 빈 상자를 준다고 편지에 썼어요.",
+   "blank": "창의성을",
    "src": "made"
   }
  ],
@@ -80271,6 +81423,22 @@
    "blank": "탔어"
   }
  ],
+ "w|타당성": [
+  {
+   "text": "재원은 새 버스 노선의 타당성을 따져 보려고 주민들의 출근길을 조사했어요.",
+   "en": "Jaewon surveyed residents' commutes to assess the feasibility of a new bus route.",
+   "ko": "재원은 새 버스 노선의 타당성을 따져 보려고 주민들의 출근길을 조사했어요.",
+   "blank": "타당성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구의 이직 계획을 듣고 그 타당성을 차분히 따져 보는 답장을 썼어요.",
+   "en": "After hearing her friend's plan to change jobs, Sohee wrote a reply calmly weighing whether it made sense.",
+   "ko": "소희는 친구의 이직 계획을 듣고 그 타당성을 차분히 따져 보는 답장을 썼어요.",
+   "blank": "타당성을",
+   "src": "made"
+  }
+ ],
  "w|타락하다": [
   {
    "text": "윤리 시간에 경민은 권력을 얻고 타락한 왕의 이야기를 배웠어요.",
@@ -81500,6 +82668,22 @@
    "en": "After retiring, Sohee's uncle moved to the coast and enjoys fishing.",
    "ko": "소희의 삼촌은 퇴직 후 바닷가로 이사해서 낚시를 즐겨요.",
    "blank": "퇴직",
+   "src": "made"
+  }
+ ],
+ "w|투명성": [
+  {
+   "text": "재원은 예산 사용의 투명성을 위해 지출 내역을 홈페이지에 올려요.",
+   "en": "For transparency in budget spending, Jaewon posts the expense records on the website.",
+   "ko": "재원은 예산 사용의 투명성을 위해 지출 내역을 홈페이지에 올려요.",
+   "blank": "투명성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 친구 사이에도 투명성이 중요하다며 숨겼던 일을 편지에 다 적었어요.",
+   "en": "Saying openness matters even between friends, Sohee wrote down everything she had been hiding.",
+   "ko": "소희는 친구 사이에도 투명성이 중요하다며 숨겼던 일을 편지에 다 적었어요.",
+   "blank": "투명성이",
    "src": "made"
   }
  ],
@@ -84405,6 +85589,22 @@
    "src": "made"
   }
  ],
+ "w|필요성": [
+  {
+   "text": "재원은 어린이 도서관을 더 지어야 할 필요성을 시장에게 설명했어요.",
+   "en": "Jaewon explained to the mayor why more children's libraries need to be built.",
+   "ko": "재원은 어린이 도서관을 더 지어야 할 필요성을 시장에게 설명했어요.",
+   "blank": "필요성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 휴대폰 메시지가 있어도 손편지의 필요성은 여전하다고 생각해요.",
+   "en": "Sohee thinks handwritten letters are still needed even with phone messages.",
+   "ko": "소희는 휴대폰 메시지가 있어도 손편지의 필요성은 여전하다고 생각해요.",
+   "blank": "필요성은",
+   "src": "made"
+  }
+ ],
  "w|필요없다": [
   {
    "text": "준호는 반찬이 넉넉하니까 추가 주문은 필요없다고 말했어요.",
@@ -84548,6 +85748,22 @@
    "en": "The phone had been dropped so many times that its corners were all dented.",
    "ko": "하도 떨어뜨려서 휴대폰 모서리가 다 찌그러졌어요.",
    "blank": "하도",
+   "src": "made"
+  }
+ ],
+ "w|하락하다": [
+  {
+   "text": "경민은 주가가 크게 하락한 날 증권가 분위기를 취재하러 나갔어요.",
+   "en": "On the day stock prices fell sharply, Gyeongmin went out to report on the mood in the financial district.",
+   "ko": "경민은 주가가 크게 하락한 날 증권가 분위기를 취재하러 나갔어요.",
+   "blank": "하락한",
+   "src": "made"
+  },
+  {
+   "text": "배추 값이 하락해서 다은과 이웃들은 직접 김치를 담가 팔기로 했어요.",
+   "en": "Cabbage prices fell, so Daeun and her neighbors decided to make kimchi themselves and sell it.",
+   "ko": "배추 값이 하락해서 다은과 이웃들은 직접 김치를 담가 팔기로 했어요.",
+   "blank": "하락해서",
    "src": "made"
   }
  ],
@@ -87459,6 +88675,22 @@
    "blank": "형사는"
   }
  ],
+ "w|형식": [
+  {
+   "text": "재원은 시민 공청회를 토론 형식으로 바꿔 보자고 제안했어요.",
+   "en": "Jaewon suggested changing the public hearing to a debate format.",
+   "ko": "재원은 시민 공청회를 토론 형식으로 바꿔 보자고 제안했어요.",
+   "blank": "형식으로",
+   "src": "made"
+  },
+  {
+   "text": "소희는 이번에는 편지를 일기 형식으로 써서 친구에게 보냈어요.",
+   "en": "This time Sohee wrote her letter in the form of a diary and sent it to her friend.",
+   "ko": "소희는 이번에는 편지를 일기 형식으로 써서 친구에게 보냈어요.",
+   "blank": "형식으로",
+   "src": "made"
+  }
+ ],
  "w|형제": [
   {
    "text": "형제 사이가 참 좋네.",
@@ -89021,6 +90253,38 @@
    "src": "made"
   }
  ],
+ "w|효능": [
+  {
+   "text": "경민은 광고에 나온 영양제의 효능이 과장됐다는 제보를 받았어요.",
+   "en": "Gyeongmin received a tip that the effects of an advertised supplement were exaggerated.",
+   "ko": "경민은 광고에 나온 영양제의 효능이 과장됐다는 제보를 받았어요.",
+   "blank": "효능이",
+   "src": "made"
+  },
+  {
+   "text": "다은의 할머니는 산에서 캔 약초의 효능을 하나하나 다은에게 알려 주셨어요.",
+   "en": "Daeun's grandmother told her about the benefits of each medicinal herb dug from the mountain.",
+   "ko": "다은의 할머니는 산에서 캔 약초의 효능을 하나하나 다은에게 알려 주셨어요.",
+   "blank": "효능을",
+   "src": "made"
+  }
+ ],
+ "w|효용": [
+  {
+   "text": "경민은 비싼 건강 기구의 효용을 따져 보는 기사를 썼어요.",
+   "en": "Gyeongmin wrote an article weighing the usefulness of expensive fitness equipment.",
+   "ko": "경민은 비싼 건강 기구의 효용을 따져 보는 기사를 썼어요.",
+   "blank": "효용을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 산골에서 장작 난로의 효용을 겨울마다 새삼 느껴요.",
+   "en": "Every winter in the mountain village, Daeun feels anew how useful the wood stove is.",
+   "ko": "다은은 산골에서 장작 난로의 효용을 겨울마다 새삼 느껴요.",
+   "blank": "효용을",
+   "src": "made"
+  }
+ ],
  "w|효율": [
   {
    "text": "경민은 공부 효율을 높이려고 시간표를 새로 짰어요.",
@@ -89034,6 +90298,22 @@
    "en": "If you prep all the ingredients in advance, cooking becomes much more efficient.",
    "ko": "재료를 미리 다 손질해 두면 요리 효율이 훨씬 좋아져요.",
    "blank": "효율이",
+   "src": "made"
+  }
+ ],
+ "w|효율성": [
+  {
+   "text": "재원은 서류 처리의 효율성을 높이려고 결재를 전자로 바꿨어요.",
+   "en": "Jaewon switched approvals to electronic to make document processing more efficient.",
+   "ko": "재원은 서류 처리의 효율성을 높이려고 결재를 전자로 바꿨어요.",
+   "blank": "효율성을",
+   "src": "made"
+  },
+  {
+   "text": "소희는 효율성만 따지는 회사 생활이 가끔 숨 막힌다고 친구에게 털어놨어요.",
+   "en": "Sohee confided to her friend that office life, all about efficiency, sometimes feels suffocating.",
+   "ko": "소희는 효율성만 따지는 회사 생활이 가끔 숨 막힌다고 친구에게 털어놨어요.",
+   "blank": "효율성만",
    "src": "made"
   }
  ],

@@ -517,6 +517,22 @@
    "blank": "万岁"
   }
  ],
+ "w|万物": [
+  {
+   "text": "春雨过后，林中万物都开始苏醒。",
+   "en": "After the spring rain, all things in the forest begin to wake up.",
+   "ko": "봄비가 내린 뒤 숲속 만물이 깨어나기 시작해요.",
+   "blank": "万物",
+   "src": "made"
+  },
+  {
+   "text": "小雪的师傅常说，盖房子要顺应万物的规律。",
+   "en": "Xiaoxue's mentor often says building houses must follow the laws of nature.",
+   "ko": "샤오쉐의 스승은 집을 지을 때 만물의 이치를 따라야 한다고 자주 말해요.",
+   "blank": "万物",
+   "src": "made"
+  }
+ ],
  "w|丈夫": [
   {
    "text": "丈夫出差了。",
@@ -976,6 +992,22 @@
    "en": "I'll go to the supermarket after work.",
    "ko": "퇴근하고 마트에 갈게요.",
    "blank": "下班",
+   "src": "made"
+  }
+ ],
+ "w|下落": [
+  {
+   "text": "新闻说，那只走失的熊猫至今下落不明。",
+   "en": "The news said the missing panda's whereabouts are still unknown.",
+   "ko": "뉴스에 따르면 그 길 잃은 판다는 아직도 행방이 묘연해요.",
+   "blank": "下落",
+   "src": "made"
+  },
+  {
+   "text": "塔吊吊着的钢筋慢慢下落，地面的工人小心地接住。",
+   "en": "The rebar hanging from the tower crane slowly came down, and the workers on the ground carefully caught it.",
+   "ko": "타워크레인에 매달린 철근이 천천히 내려오자 땅에 있던 인부들이 조심스럽게 받았어요.",
+   "blank": "下落",
    "src": "made"
   }
  ],
@@ -12465,6 +12497,22 @@
    "src": "made"
   }
  ],
+ "w|化石": [
+  {
+   "text": "陈杰在河滩的石头里找到一块贝壳化石。",
+   "en": "Chen Jie found a shell fossil among the rocks on the riverbank.",
+   "ko": "천제는 강가 자갈밭 돌 사이에서 조개 화석을 하나 찾았어요.",
+   "blank": "化石",
+   "src": "made"
+  },
+  {
+   "text": "挖地基时，工人们竟然挖出了一块恐龙化石。",
+   "en": "While digging the foundation, the workers actually unearthed a dinosaur fossil.",
+   "ko": "기초를 파다가 인부들이 공룡 화석을 하나 캐냈어요.",
+   "blank": "化石",
+   "src": "made"
+  }
+ ],
  "w|北方": [
   {
    "text": "赵磊是北方人，刚来南边工作时很不习惯这里的潮湿。",
@@ -14471,6 +14519,22 @@
    "src": "made"
   }
  ],
+ "w|取决于": [
+  {
+   "text": "能不能看到萤火虫，取决于今晚的天气。",
+   "en": "Whether we can see fireflies depends on tonight's weather.",
+   "ko": "반딧불이를 볼 수 있을지는 오늘 밤 날씨에 달려 있어요.",
+   "blank": "取决于",
+   "src": "made"
+  },
+  {
+   "text": "大楼能不能按时完工，取决于这个月的天气。",
+   "en": "Whether the building can be finished on time depends on this month's weather.",
+   "ko": "건물이 제때 완공될지는 이달 날씨에 달려 있어요.",
+   "blank": "取决于",
+   "src": "made"
+  }
+ ],
  "w|取得": [
   {
    "text": "她取得了很好的成绩。",
@@ -16435,6 +16499,22 @@
    "en": "Did you hear that?",
    "ko": "너 들었어?",
    "blank": "听到"
+  }
+ ],
+ "w|听懂": [
+  {
+   "text": "护林员说的是当地方言，陈杰只听懂了一半。",
+   "en": "The forest ranger spoke the local dialect, and Chen Jie only understood half of it.",
+   "ko": "산림 감시원이 사투리를 써서 천제는 절반만 알아들었어요.",
+   "blank": "听懂",
+   "src": "made"
+  },
+  {
+   "text": "机器声太大了，小雪喊了好几遍，工人才听懂。",
+   "en": "The machines were so loud that Xiaoxue had to shout several times before the workers understood.",
+   "ko": "기계 소리가 너무 커서 샤오쉐가 몇 번이나 외쳐야 인부들이 알아들었어요.",
+   "blank": "听懂",
+   "src": "made"
   }
  ],
  "w|听见": [
@@ -20941,6 +21021,22 @@
    "blank": "大概"
   }
  ],
+ "w|大气": [
+  {
+   "text": "科学家说，森林能吸收二氧化碳，保护大气。",
+   "en": "Scientists say forests absorb carbon dioxide and protect the atmosphere.",
+   "ko": "과학자들은 숲이 이산화탄소를 흡수해서 대기를 지켜 준다고 해요.",
+   "blank": "大气",
+   "src": "made"
+  },
+  {
+   "text": "工地的扬尘会污染大气，所以每天都要洒水。",
+   "en": "Dust from the site pollutes the atmosphere, so water is sprayed every day.",
+   "ko": "공사장 먼지가 대기를 오염시켜서 날마다 물을 뿌려야 해요.",
+   "blank": "大气",
+   "src": "made"
+  }
+ ],
  "w|大海": [
   {
    "text": "王刚顺着这条小溪一直走，听说它最后会流进大海。",
@@ -21033,6 +21129,22 @@
    "src": "made"
   }
  ],
+ "w|大自然": [
+  {
+   "text": "陈杰从小就喜欢大自然，一有空就往山里跑。",
+   "en": "Chen Jie has loved nature since he was little and heads to the mountains whenever he's free.",
+   "ko": "천제는 어릴 때부터 자연을 좋아해서 틈만 나면 산으로 가요.",
+   "blank": "大自然",
+   "src": "made"
+  },
+  {
+   "text": "设计师希望这栋楼能和周围的大自然融为一体。",
+   "en": "The designer hopes this building will blend in with the surrounding nature.",
+   "ko": "설계자는 이 건물이 주변 자연과 하나로 어우러지기를 바라요.",
+   "blank": "大自然",
+   "src": "made"
+  }
+ ],
  "w|大街": [
   {
    "text": "大街上人很多。",
@@ -21062,6 +21174,22 @@
    "en": "Next month, the institute will carry out a large-scale survey.",
    "ko": "다음 달에 연구소는 대규모 조사를 한 번 해요.",
    "blank": "大规模",
+   "src": "made"
+  }
+ ],
+ "w|大象": [
+  {
+   "text": "陈杰在纪录片里看到，大象会走很远的路去找水源。",
+   "en": "Chen Jie saw in a documentary that elephants walk long distances to find water.",
+   "ko": "천제는 다큐멘터리에서 코끼리가 물을 찾아 먼 길을 걷는 걸 봤어요.",
+   "blank": "大象",
+   "src": "made"
+  },
+  {
+   "text": "新建的动物园里会有大象馆，小雪负责这一部分。",
+   "en": "The new zoo will have an elephant house, and Xiaoxue is in charge of that part.",
+   "ko": "새로 짓는 동물원에 코끼리관이 생기는데 샤오쉐가 그 부분을 맡았어요.",
+   "blank": "大象",
    "src": "made"
   }
  ],
@@ -22713,6 +22841,22 @@
    "en": "He joined the committee.",
    "ko": "그는 위원회에 들어갔어.",
    "blank": "委员会"
+  }
+ ],
+ "w|委托": [
+  {
+   "text": "环保组织委托陈杰记录河边鸟类的数量。",
+   "en": "An environmental group commissioned Chen Jie to record the number of birds along the river.",
+   "ko": "환경 단체는 천제에게 강가 새들의 수를 기록해 달라고 맡겼어요.",
+   "blank": "委托",
+   "src": "made"
+  },
+  {
+   "text": "业主委托一家监理公司检查工程质量。",
+   "en": "The owner commissioned a supervision firm to check the quality of the project.",
+   "ko": "건축주는 감리 회사에 공사 품질 검사를 맡겼어요.",
+   "blank": "委托",
+   "src": "made"
   }
  ],
  "w|姿势": [
@@ -25273,6 +25417,22 @@
    "src": "made"
   }
  ],
+ "w|小鸟": [
+  {
+   "text": "一只小鸟落在陈杰的帐篷上，叽叽喳喳地叫着。",
+   "en": "A little bird landed on Chen Jie's tent, chirping away.",
+   "ko": "작은 새 한 마리가 천제의 텐트에 앉아 짹짹 울었어요.",
+   "blank": "小鸟",
+   "src": "made"
+  },
+  {
+   "text": "一只小鸟在工地的脚手架上搭了窝，小雪让大家别打扰它。",
+   "en": "A little bird built a nest on the scaffolding, and Xiaoxue told everyone not to disturb it.",
+   "ko": "작은 새가 공사장 비계에 둥지를 틀어서 샤오쉐는 다들 건드리지 말라고 했어요.",
+   "blank": "小鸟",
+   "src": "made"
+  }
+ ],
  "w|少": [
   {
    "text": "人太少了。",
@@ -25957,6 +26117,22 @@
    "blank": "山"
   }
  ],
+ "w|山地": [
+  {
+   "text": "这一带多是山地，耕地很少。",
+   "en": "This area is mostly mountainous, with little farmland.",
+   "ko": "이 일대는 대부분 산지라서 농지가 아주 적어요.",
+   "blank": "山地",
+   "src": "made"
+  },
+  {
+   "text": "山地施工比平地难多了，材料都得用小车一点点运上去。",
+   "en": "Building in the mountains is much harder than on flat ground; materials must be hauled up bit by bit in carts.",
+   "ko": "산지 공사는 평지보다 훨씬 어려워서 자재를 수레로 조금씩 날라야 해요.",
+   "blank": "山地",
+   "src": "made"
+  }
+ ],
  "w|山谷": [
   {
    "text": "小镇就在两座山之间的山谷里，一边是山，一边是海。",
@@ -25970,6 +26146,22 @@
    "en": "Several climbers got lost in a valley, and the news desk has been following the story.",
    "ko": "등산객 몇 명이 골짜기에서 길을 잃어서 뉴스팀이 계속 소식을 쫓고 있어요.",
    "blank": "山谷",
+   "src": "made"
+  }
+ ],
+ "w|山顶": [
+  {
+   "text": "陈杰爬了三个小时，终于站在了山顶上。",
+   "en": "After climbing for three hours, Chen Jie finally stood on the summit.",
+   "ko": "천제는 세 시간을 올라 마침내 산꼭대기에 섰어요.",
+   "blank": "山顶",
+   "src": "made"
+  },
+  {
+   "text": "这家酒店要建在山顶上，材料运上去很不容易。",
+   "en": "This hotel is to be built on the summit, so getting materials up there is hard.",
+   "ko": "이 호텔은 산꼭대기에 지어서 자재를 올려 보내기가 쉽지 않아요.",
+   "blank": "山顶",
    "src": "made"
   }
  ],
@@ -30487,6 +30679,22 @@
    "blank": "恶魔"
   }
  ],
+ "w|悄悄": [
+  {
+   "text": "陈杰悄悄走近，想拍下正在喝水的小鹿。",
+   "en": "Chen Jie crept closer quietly, hoping to photograph the fawn drinking water.",
+   "ko": "천제는 물을 마시는 새끼 사슴을 찍으려고 살금살금 다가갔어요.",
+   "blank": "悄悄",
+   "src": "made"
+  },
+  {
+   "text": "下班后，小雪悄悄给加班的工人买了宵夜。",
+   "en": "After work, Xiaoxue quietly bought late-night snacks for the workers on overtime.",
+   "ko": "퇴근 후 샤오쉐는 야근하는 인부들에게 몰래 야식을 사 줬어요.",
+   "blank": "悄悄",
+   "src": "made"
+  }
+ ],
  "w|患者": [
   {
    "text": "药房的老顾客大多是慢性病患者，每个月都来拿药。",
@@ -32505,6 +32713,22 @@
    "blank": "打扰"
   }
  ],
+ "w|打招呼": [
+  {
+   "text": "陈杰在林间小路上遇见了采蘑菇的老人，笑着跟他打招呼。",
+   "en": "Chen Jie met an old man gathering mushrooms on a forest path and greeted him with a smile.",
+   "ko": "천제는 숲길에서 버섯 따는 노인을 만나 웃으며 인사했어요.",
+   "blank": "打招呼",
+   "src": "made"
+  },
+  {
+   "text": "每天早上，小雪都会跟门口的保安打招呼。",
+   "en": "Every morning Xiaoxue says hello to the security guard at the gate.",
+   "ko": "샤오쉐는 매일 아침 입구 경비원에게 인사해요.",
+   "blank": "打招呼",
+   "src": "made"
+  }
+ ],
  "w|打断": [
   {
    "text": "赵磊正专心查资料，被一阵手机铃声打断了。",
@@ -32710,6 +32934,22 @@
    "en": "At checkout, Yang Yang scanned the QR code with his phone.",
    "ko": "결제할 때 양양은 휴대폰으로 QR코드를 한 번 찍었어요.",
    "blank": "扫",
+   "src": "made"
+  }
+ ],
+ "w|扭": [
+  {
+   "text": "陈杰下坡时不小心扭了脚，只好坐在石头上休息。",
+   "en": "Chen Jie twisted his ankle going downhill and had to sit on a rock to rest.",
+   "ko": "천제는 비탈을 내려가다 발목을 삐끗해서 돌 위에 앉아 쉬어야 했어요.",
+   "blank": "扭",
+   "src": "made"
+  },
+  {
+   "text": "一个工人搬砖时扭了腰，被送去了医院。",
+   "en": "A worker hurt his back while carrying bricks and was taken to the hospital.",
+   "ko": "한 인부가 벽돌을 나르다 허리를 삐끗해서 병원에 실려 갔어요.",
+   "blank": "扭",
    "src": "made"
   }
  ],
@@ -34557,6 +34797,22 @@
    "src": "made"
   }
  ],
+ "w|排名": [
+  {
+   "text": "这条河的水质在全省排名第一。",
+   "en": "This river's water quality ranks first in the province.",
+   "ko": "이 강의 수질은 성 전체에서 일등이에요.",
+   "blank": "排名",
+   "src": "made"
+  },
+  {
+   "text": "这家建筑公司在行业里排名前十。",
+   "en": "This construction company ranks in the industry's top ten.",
+   "ko": "이 건설 회사는 업계에서 상위 열 곳 안에 들어요.",
+   "blank": "排名",
+   "src": "made"
+  }
+ ],
  "w|排队": [
   {
    "text": "中午楼下的面馆人很多，周强排队排了二十分钟。",
@@ -35240,6 +35496,22 @@
    "en": "Li Na held her daughter's hand with one hand and carried the vegetable basket with the other.",
    "ko": "리나는 한 손으로 딸 손을 잡고 다른 손으로 장바구니를 들었어요.",
    "blank": "握",
+   "src": "made"
+  }
+ ],
+ "w|揭露": [
+  {
+   "text": "一位记者揭露了有工厂偷偷往河里排污的事。",
+   "en": "A reporter exposed a factory secretly dumping pollution into the river.",
+   "ko": "한 기자가 어느 공장이 몰래 강에 오염물을 버린 일을 폭로했어요.",
+   "blank": "揭露",
+   "src": "made"
+  },
+  {
+   "text": "小雪向上级揭露了供应商偷换建材的问题。",
+   "en": "Xiaoxue reported to her superiors that a supplier had been swapping out building materials.",
+   "ko": "샤오쉐는 납품업체가 건축 자재를 몰래 바꿔치기한 문제를 상부에 폭로했어요.",
+   "blank": "揭露",
    "src": "made"
   }
  ],
@@ -38603,6 +38875,22 @@
    "src": "made"
   }
  ],
+ "w|景色": [
+  {
+   "text": "站在桥上看下去，河谷的景色美极了。",
+   "en": "Looking down from the bridge, the valley scenery is stunning.",
+   "ko": "다리 위에서 내려다보니 강 골짜기 경치가 정말 아름다웠어요.",
+   "blank": "景色",
+   "src": "made"
+  },
+  {
+   "text": "站在楼顶，小雪能看到整个城市的景色。",
+   "en": "Standing on the rooftop, Xiaoxue can see the scenery of the whole city.",
+   "ko": "옥상에 서면 샤오쉐는 도시 전체 풍경을 볼 수 있어요.",
+   "blank": "景色",
+   "src": "made"
+  }
+ ],
  "w|晴天": [
   {
    "text": "连着几个晴天，赵磊终于把晒好的玉米收进了仓库。",
@@ -38886,6 +39174,22 @@
    "en": "Li Na bought her daughter a little night light shaped like the moon.",
    "ko": "리나는 딸에게 달 모양 수면등을 사 줬어요.",
    "blank": "月亮",
+   "src": "made"
+  }
+ ],
+ "w|月光": [
+  {
+   "text": "月光洒在河面上，闪闪发亮。",
+   "en": "Moonlight spilled onto the river, sparkling.",
+   "ko": "달빛이 강물 위에 내려앉아 반짝였어요.",
+   "blank": "月光",
+   "src": "made"
+  },
+  {
+   "text": "晚上加班时，月光照在还没完工的大楼上。",
+   "en": "When they worked late at night, the moonlight shone on the unfinished building.",
+   "ko": "밤늦게 일할 때 달빛이 아직 다 짓지 않은 건물을 비췄어요.",
+   "blank": "月光",
    "src": "made"
   }
  ],
@@ -40599,6 +40903,22 @@
    "en": "A little bird perched on the tree.",
    "ko": "작은 새가 나무에 앉았어.",
    "blank": "树"
+  }
+ ],
+ "w|树木": [
+  {
+   "text": "河岸两边的树木长得又高又密。",
+   "en": "The trees along both riverbanks grow tall and dense.",
+   "ko": "강 양쪽 기슭의 나무들이 높고 빽빽하게 자랐어요.",
+   "blank": "树木",
+   "src": "made"
+  },
+  {
+   "text": "施工前，小雪要求先把工地上的树木移走，而不是砍掉。",
+   "en": "Before construction, Xiaoxue required that the trees on the site be moved, not cut down.",
+   "ko": "공사 전에 샤오쉐는 공사장 나무들을 베지 말고 옮겨 심으라고 했어요.",
+   "blank": "树木",
+   "src": "made"
   }
  ],
  "w|树林": [
@@ -43163,6 +43483,22 @@
    "blank": "治疗"
   }
  ],
+ "w|沼泽": [
+  {
+   "text": "向导提醒陈杰，森林边上有一片沼泽，千万别靠近。",
+   "en": "The guide warned Chen Jie there's a swamp at the edge of the forest and not to go near it.",
+   "ko": "안내인은 천제에게 숲 가장자리에 늪이 있으니 절대 가까이 가지 말라고 했어요.",
+   "blank": "沼泽",
+   "src": "made"
+  },
+  {
+   "text": "这块地以前是一片沼泽，打地基前要先把水抽干。",
+   "en": "This land used to be a swamp, so the water must be pumped out before laying the foundation.",
+   "ko": "이 땅은 예전에 늪이라서 기초를 놓기 전에 먼저 물을 빼야 해요.",
+   "blank": "沼泽",
+   "src": "made"
+  }
+ ],
  "w|沿着": [
   {
    "text": "张伟在信里写，他昨天又沿着那条小河走了一遍。",
@@ -43176,6 +43512,22 @@
    "en": "Every day after work, Liu Fang walks home along the river, thinking about the product on the way.",
    "ko": "류팡은 매일 퇴근하면 강변을 따라 걸어서 집에 가며 제품 생각을 해요.",
    "blank": "沿着",
+   "src": "made"
+  }
+ ],
+ "w|泄露": [
+  {
+   "text": "陈杰答应护林员，绝不泄露那个珍稀鸟巢的位置。",
+   "en": "Chen Jie promised the ranger he would never reveal the location of the rare bird's nest.",
+   "ko": "천제는 산림 감시원에게 그 희귀한 새 둥지 위치를 절대 누설하지 않겠다고 약속했어요.",
+   "blank": "泄露",
+   "src": "made"
+  },
+  {
+   "text": "小雪提醒大家，大楼的设计图纸不能泄露给外人。",
+   "en": "Xiaoxue reminded everyone that the building's blueprints must not be leaked to outsiders.",
+   "ko": "샤오쉐는 건물 설계도를 외부 사람에게 유출하면 안 된다고 모두에게 일렀어요.",
+   "blank": "泄露",
    "src": "made"
   }
  ],
@@ -43553,6 +43905,22 @@
    "en": "Go to the party.",
    "ko": "파티에 참석하러 가.",
    "blank": "派对"
+  }
+ ],
+ "w|派遣": [
+  {
+   "text": "林业局派遣了一支小队，到河上游调查水质。",
+   "en": "The forestry bureau sent a small team upstream to investigate the water quality.",
+   "ko": "임업국은 강 상류로 소규모 팀을 보내 수질을 조사하게 했어요.",
+   "blank": "派遣",
+   "src": "made"
+  },
+  {
+   "text": "公司派遣小雪到这个工地负责质量检查。",
+   "en": "The company dispatched Xiaoxue to this site to be in charge of quality inspections.",
+   "ko": "회사는 샤오쉐를 이 공사장에 보내 품질 검사를 맡겼어요.",
+   "blank": "派遣",
+   "src": "made"
   }
  ],
  "w|流": [
@@ -43984,6 +44352,22 @@
    "en": "The pool's new regulations cover safety, hygiene and opening hours.",
    "ko": "수영장의 새 규정은 안전, 위생, 운영 시간에 관한 내용을 다뤄요.",
    "blank": "涉及",
+   "src": "made"
+  }
+ ],
+ "w|液体": [
+  {
+   "text": "陈杰在树皮上发现一种黏黏的液体，原来是松脂。",
+   "en": "Chen Jie found a sticky liquid on the tree bark—it turned out to be pine resin.",
+   "ko": "천제는 나무껍질에서 끈적한 액체를 발견했는데 알고 보니 송진이었어요.",
+   "blank": "液体",
+   "src": "made"
+  },
+  {
+   "text": "工人把一桶液体倒进搅拌机，原来是给混凝土加的防水剂。",
+   "en": "A worker poured a bucket of liquid into the mixer—it was a waterproofing agent for the concrete.",
+   "ko": "인부가 액체 한 통을 믹서에 부었는데 콘크리트에 넣는 방수제였어요.",
+   "blank": "液体",
    "src": "made"
   }
  ],
@@ -44800,6 +45184,22 @@
    "en": "Sun Yue is editing a science story saying a probe found traces of water on Mars.",
    "ko": "쑨웨는 탐사선이 화성에서 물의 흔적을 찾았다는 과학 뉴스를 편집하고 있어요.",
    "blank": "火星",
+   "src": "made"
+  }
+ ],
+ "w|火灾": [
+  {
+   "text": "护林员说，秋天天气干燥，最怕发生火灾。",
+   "en": "The ranger said that autumn is dry, and a fire is what he fears most.",
+   "ko": "산림 감시원은 가을엔 날씨가 건조해서 불이 나는 게 가장 걱정이라고 했어요.",
+   "blank": "火灾",
+   "src": "made"
+  },
+  {
+   "text": "小雪每周都组织工人做防火灾演练。",
+   "en": "Every week Xiaoxue organizes fire drills for the workers.",
+   "ko": "샤오쉐는 매주 인부들과 화재 대비 훈련을 해요.",
+   "blank": "火灾",
    "src": "made"
   }
  ],
@@ -45892,6 +46292,22 @@
    "en": "Liu Fang used to study physics and only later realized what she truly loves is painting.",
    "ko": "류팡은 예전에 물리를 공부했는데 나중에야 자기가 정말 좋아하는 게 그림이라는 걸 알았어요.",
    "blank": "物理",
+   "src": "made"
+  }
+ ],
+ "w|物种": [
+  {
+   "text": "这片森林里有好几个珍稀物种。",
+   "en": "This forest is home to several rare species.",
+   "ko": "이 숲에는 희귀종이 여러 가지 있어요.",
+   "blank": "物种",
+   "src": "made"
+  },
+  {
+   "text": "专家在工地附近发现了一种罕见的植物物种，工程暂停了一周。",
+   "en": "Experts found a rare plant species near the site, and the project was paused for a week.",
+   "ko": "전문가들이 공사장 근처에서 희귀한 식물종을 발견해서 공사가 일주일 멈췄어요.",
+   "blank": "物种",
    "src": "made"
   }
  ],
@@ -47007,6 +47423,22 @@
    "en": "They struggle to survive.",
    "ko": "그들은 살아남으려고 애써.",
    "blank": "生存"
+  }
+ ],
+ "w|生态": [
+  {
+   "text": "修了水坝以后，河流的生态发生了很大变化。",
+   "en": "After the dam was built, the river's ecology changed a great deal.",
+   "ko": "댐을 지은 뒤로 강의 생태가 크게 달라졌어요.",
+   "blank": "生态",
+   "src": "made"
+  },
+  {
+   "text": "这个项目必须先通过生态评估才能开工。",
+   "en": "This project must pass an ecological assessment before work can begin.",
+   "ko": "이 사업은 생태 평가를 먼저 통과해야 착공할 수 있어요.",
+   "blank": "生态",
+   "src": "made"
   }
  ],
  "w|生意": [
@@ -49483,6 +49915,22 @@
    "blank": "瞧瞧"
   }
  ],
+ "w|瞪": [
+  {
+   "text": "一只猫头鹰在树枝上瞪着陈杰，一动不动。",
+   "en": "An owl on a branch stared at Chen Jie without moving.",
+   "ko": "부엉이 한 마리가 나뭇가지에서 꼼짝 않고 천제를 노려봤어요.",
+   "blank": "瞪",
+   "src": "made"
+  },
+  {
+   "text": "看到有人没戴安全帽，小雪狠狠地瞪了他一眼。",
+   "en": "Seeing someone without a hard hat, Xiaoxue shot him a fierce glare.",
+   "ko": "안전모를 안 쓴 사람을 보자 샤오쉐는 매섭게 노려봤어요.",
+   "blank": "瞪",
+   "src": "made"
+  }
+ ],
  "w|瞬间": [
   {
    "text": "杠铃举过头顶的那一瞬间，王刚觉得自己特别有力量。",
@@ -50991,6 +51439,22 @@
    "blank": "稍微"
   }
  ],
+ "w|稳": [
+  {
+   "text": "过河的木桥有点晃，陈杰扶着栏杆，走得很稳。",
+   "en": "The wooden bridge over the river sways a bit, but Chen Jie held the railing and walked steadily.",
+   "ko": "강을 건너는 나무다리가 좀 흔들렸지만 천제는 난간을 잡고 안정적으로 걸었어요.",
+   "blank": "稳",
+   "src": "made"
+  },
+  {
+   "text": "小雪检查了一遍脚手架，确认每根钢管都很稳。",
+   "en": "Xiaoxue checked the scaffolding and made sure every steel pipe was stable.",
+   "ko": "샤오쉐는 비계를 한 번 점검해서 강관이 모두 단단히 고정됐는지 확인했어요.",
+   "blank": "稳",
+   "src": "made"
+  }
+ ],
  "w|稳定": [
   {
    "text": "他现在工作很稳定。",
@@ -52365,6 +52829,22 @@
    "blank": "红色"
   }
  ],
+ "w|纤维": [
+  {
+   "text": "当地人用竹子的纤维编织凉席。",
+   "en": "The locals weave summer mats from bamboo fibers.",
+   "ko": "이 지역 사람들은 대나무 섬유로 돗자리를 짜요.",
+   "blank": "纤维",
+   "src": "made"
+  },
+  {
+   "text": "这种新型建材里加了玻璃纤维，非常结实。",
+   "en": "This new building material has glass fiber added, making it very sturdy.",
+   "ko": "이 새 건축 자재에는 유리 섬유를 넣어서 아주 튼튼해요.",
+   "blank": "纤维",
+   "src": "made"
+  }
+ ],
  "w|约": [
   {
    "text": "我们约一下。",
@@ -53542,6 +54022,22 @@
    "en": "As soon as spring arrives, the frogs in the pond start breeding.",
    "ko": "봄이 오자마자 연못의 개구리들이 번식하기 시작해요.",
    "blank": "繁殖",
+   "src": "made"
+  }
+ ],
+ "w|繁荣": [
+  {
+   "text": "河两岸的小镇靠着渔业变得十分繁荣。",
+   "en": "The small towns on both banks of the river became very prosperous thanks to fishing.",
+   "ko": "강 양쪽 작은 마을은 어업 덕분에 아주 번창했어요.",
+   "blank": "繁荣",
+   "src": "made"
+  },
+  {
+   "text": "新的商业区建成后，这一片会更加繁荣。",
+   "en": "Once the new business district is built, this area will be even more prosperous.",
+   "ko": "새 상업 지구가 다 지어지면 이 일대는 더 번화해질 거예요.",
+   "blank": "繁荣",
    "src": "made"
   }
  ],
@@ -56373,6 +56869,22 @@
    "src": "made"
   }
  ],
+ "w|苍蝇": [
+  {
+   "text": "午饭刚拿出来，就招来了几只苍蝇。",
+   "en": "As soon as lunch was taken out, a few flies showed up.",
+   "ko": "점심을 꺼내자마자 파리 몇 마리가 꼬였어요.",
+   "blank": "苍蝇",
+   "src": "made"
+  },
+  {
+   "text": "工地食堂的卫生很差，饭菜上总有苍蝇。",
+   "en": "The site canteen's hygiene is poor, and there are always flies on the food.",
+   "ko": "공사장 식당은 위생이 나빠서 음식에 늘 파리가 꼬여요.",
+   "blank": "苍蝇",
+   "src": "made"
+  }
+ ],
  "w|若": [
   {
    "text": "若你同意就说。",
@@ -57042,6 +57554,22 @@
    "en": "Yang Yang bought a box of scented candles online to use on the weekend.",
    "ko": "양양은 주말에 쓰려고 인터넷으로 향초 한 상자를 샀어요.",
    "blank": "蜡烛",
+   "src": "made"
+  }
+ ],
+ "w|蝙蝠": [
+  {
+   "text": "天快黑时，一群蝙蝠从山洞里飞了出来。",
+   "en": "As it was getting dark, a swarm of bats flew out of the cave.",
+   "ko": "날이 어둑해지자 박쥐 떼가 동굴에서 날아올랐어요.",
+   "blank": "蝙蝠",
+   "src": "made"
+  },
+  {
+   "text": "拆旧仓库时，屋顶上飞出来一大群蝙蝠。",
+   "en": "When the old warehouse was demolished, a big swarm of bats flew out from the roof.",
+   "ko": "낡은 창고를 허물 때 지붕에서 박쥐 떼가 날아올랐어요.",
+   "blank": "蝙蝠",
    "src": "made"
   }
  ],
@@ -57881,6 +58409,22 @@
    "en": "Or else decide for yourself.",
    "ko": "아니면 네가 직접 결정해.",
    "blank": "要么"
+  }
+ ],
+ "w|要命": [
+  {
+   "text": "夏天的森林里蚊子多得要命，陈杰被咬了好几个包。",
+   "en": "There are a crazy number of mosquitoes in the summer forest, and Chen Jie got bitten all over.",
+   "ko": "여름 숲에는 모기가 엄청 많아서 천제는 여기저기 물렸어요.",
+   "blank": "要命",
+   "src": "made"
+  },
+  {
+   "text": "夏天工地上热得要命，小雪每天要喝好几瓶水。",
+   "en": "The construction site is unbearably hot in summer, and Xiaoxue drinks several bottles of water a day.",
+   "ko": "여름 공사장은 죽을 만큼 더워서 샤오쉐는 하루에 물을 몇 병씩 마셔요.",
+   "blank": "要命",
+   "src": "made"
   }
  ],
  "w|要是": [
@@ -61307,6 +61851,22 @@
    "en": "The more the better.",
    "ko": "많을수록 좋아.",
    "blank": "越"
+  }
+ ],
+ "w|越是": [
+  {
+   "text": "越是往森林深处走，空气就越清新。",
+   "en": "The deeper you go into the forest, the fresher the air.",
+   "ko": "숲속으로 깊이 들어갈수록 공기가 더 맑아요.",
+   "blank": "越是",
+   "src": "made"
+  },
+  {
+   "text": "越是赶工期，小雪就越强调安全。",
+   "en": "The more they rush the schedule, the more Xiaoxue stresses safety.",
+   "ko": "공사 기한에 쫓길수록 샤오쉐는 안전을 더 강조해요.",
+   "blank": "越是",
+   "src": "made"
   }
  ],
  "w|越来越": [
@@ -65087,6 +65647,22 @@
    "src": "made"
   }
  ],
+ "w|野生": [
+  {
+   "text": "这片森林里生活着很多野生动物。",
+   "en": "Many wild animals live in this forest.",
+   "ko": "이 숲에는 야생 동물이 많이 살아요.",
+   "blank": "野生",
+   "src": "made"
+  },
+  {
+   "text": "施工时在草丛里发现了野生的刺猬，工人们把它送去了附近的公园。",
+   "en": "During construction a wild hedgehog was found in the grass, and the workers took it to a nearby park.",
+   "ko": "공사 중 풀숲에서 야생 고슴도치를 발견해서 인부들이 근처 공원에 옮겨 줬어요.",
+   "blank": "野生",
+   "src": "made"
+  }
+ ],
  "w|野蛮": [
   {
    "text": "张伟的爷爷说，以前闹洞房的习俗有点野蛮，现在文明多了。",
@@ -66905,6 +67481,22 @@
    "src": "made"
   }
  ],
+ "w|雾": [
+  {
+   "text": "清早的河面上飘着一层薄薄的雾，什么都看不清。",
+   "en": "A thin layer of mist floated over the river in the early morning, making everything blurry.",
+   "ko": "이른 아침 강 위에 엷은 안개가 깔려서 아무것도 잘 안 보였어요.",
+   "blank": "雾",
+   "src": "made"
+  },
+  {
+   "text": "早上起了大雾，塔吊只好暂停作业。",
+   "en": "A thick fog came in this morning, so the tower crane had to stop working.",
+   "ko": "아침에 짙은 안개가 껴서 타워크레인 작업을 잠시 멈췄어요.",
+   "blank": "雾",
+   "src": "made"
+  }
+ ],
  "w|需": [
   {
    "text": "此事需谨慎。",
@@ -68711,6 +69303,38 @@
    "blank": "鱼"
   }
  ],
+ "w|鱼类": [
+  {
+   "text": "这条河里有几十种鱼类，有的只在这里才有。",
+   "en": "This river has dozens of fish species, some found only here.",
+   "ko": "이 강에는 어류가 수십 종 있는데 어떤 건 여기에만 살아요.",
+   "blank": "鱼类",
+   "src": "made"
+  },
+  {
+   "text": "新建的水族馆将展出上百种海洋鱼类。",
+   "en": "The new aquarium will display over a hundred species of ocean fish.",
+   "ko": "새로 짓는 수족관에는 바닷물고기 백여 종이 전시될 거예요.",
+   "blank": "鱼类",
+   "src": "made"
+  }
+ ],
+ "w|鲜花": [
+  {
+   "text": "春天的河岸开满了鲜花，引来了很多蜜蜂。",
+   "en": "In spring the riverbank is covered in flowers that attract lots of bees.",
+   "ko": "봄이면 강둑에 꽃이 가득 피어 벌들이 많이 모여들어요.",
+   "blank": "鲜花",
+   "src": "made"
+  },
+  {
+   "text": "大楼完工那天，业主送来了一大束鲜花。",
+   "en": "The day the building was finished, the owner sent a big bouquet of flowers.",
+   "ko": "건물이 완공된 날 건축주가 큰 꽃다발을 보내왔어요.",
+   "blank": "鲜花",
+   "src": "made"
+  }
+ ],
  "w|鲜血": [
   {
    "text": "赵磊在拳击课上被打破了鼻子，鲜血一下子流了出来。",
@@ -68800,6 +69424,22 @@
    "en": "In science class, Xiaoxue tried to make a raw egg float in salt water.",
    "ko": "과학 시간에 샤오쉐는 날달걀을 소금물에 띄워 보려고 했어요.",
    "blank": "鸡蛋",
+   "src": "made"
+  }
+ ],
+ "w|鸭子": [
+  {
+   "text": "几只鸭子排着队，慢悠悠地游过了河。",
+   "en": "A few ducks swam leisurely across the river in a line.",
+   "ko": "오리 몇 마리가 줄지어 느긋하게 강을 헤엄쳐 건넜어요.",
+   "blank": "鸭子",
+   "src": "made"
+  },
+  {
+   "text": "工地旁边的池塘里有几只鸭子，工人们午休时常去喂它们。",
+   "en": "There are a few ducks in the pond beside the site, and the workers often feed them during lunch breaks.",
+   "ko": "공사장 옆 연못에 오리가 몇 마리 있어서 인부들이 점심시간에 자주 먹이를 줘요.",
+   "blank": "鸭子",
    "src": "made"
   }
  ],

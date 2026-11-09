@@ -7093,6 +7093,22 @@
    "blank": "แข่งขัน"
   }
  ],
+ "w|แข็งใจ": [
+  {
+   "text": "ถึงจะง่วงมาก อนันต์ก็แข็งใจนั่งฟังการอบรมจนจบ",
+   "en": "Even though he was very sleepy, Anan forced himself to sit through the training until the end.",
+   "ko": "아난은 몹시 졸렸지만 꾹 참고 교육을 끝까지 들었어요.",
+   "blank": "แข็งใจ",
+   "src": "made"
+  },
+  {
+   "text": "แม้จะเป็นหวัด ปราณีก็แข็งใจออกไปรดน้ำต้นไม้ตอนเช้า",
+   "en": "Even though she had a cold, Pranee made herself go out and water the plants in the morning.",
+   "ko": "쁘라니는 감기에 걸렸지만 꾹 참고 아침에 나가서 화초에 물을 줬어요.",
+   "blank": "แข็งใจ",
+   "src": "made"
+  }
+ ],
  "w|แข็งตัว": [
   {
    "text": "น้ำในถังแข็งตัวข้ามคืน",
@@ -8909,6 +8925,22 @@
    "blank": "ความเข้าใจ"
   }
  ],
+ "w|ความคาดหวัง": [
+  {
+   "text": "หัวหน้าอธิบายความคาดหวังของบริษัทให้อนันต์ฟังอย่างชัดเจน",
+   "en": "The manager clearly explained the company's expectations to Anan.",
+   "ko": "팀장은 아난에게 회사의 기대치를 분명하게 설명해 줬어요.",
+   "blank": "ความคาดหวัง",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนามีความคาดหวังว่าฝนปีนี้จะมาตรงฤดู",
+   "en": "The farmers hope that this year's rain will come on time.",
+   "ko": "농부들은 올해 비가 제철에 오기를 기대해요.",
+   "blank": "ความคาดหวัง",
+   "src": "made"
+  }
+ ],
  "w|ความคิด": [
   {
    "text": "มีความคิดดีๆไหม",
@@ -9235,6 +9267,22 @@
    "blank": "ความเชื่อ"
   }
  ],
+ "w|ความเชื่อมั่น": [
+  {
+   "text": "คำชมของหัวหน้าทำให้อนันต์มีความเชื่อมั่นมากขึ้น",
+   "en": "His boss's praise gave Anan more confidence.",
+   "ko": "팀장의 칭찬에 아난은 자신감이 더 생겼어요.",
+   "blank": "ความเชื่อมั่น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีมีความเชื่อมั่นว่าต้นมะม่วงจะออกดอกเยอะในหน้าหนาวนี้",
+   "en": "Pranee is confident the mango tree will flower abundantly this cool season.",
+   "ko": "쁘라니는 이번 겨울에 망고나무에 꽃이 많이 필 거라고 확신해요.",
+   "blank": "ความเชื่อมั่น",
+   "src": "made"
+  }
+ ],
  "w|ความซื่อสัตย์": [
   {
    "text": "ความซื่อสัตย์สำคัญที่สุด",
@@ -9291,6 +9339,22 @@
    "en": "Goodness is worth more than gold.",
    "ko": "선함은 금보다 가치 있어.",
    "blank": "ความดี"
+  }
+ ],
+ "w|ความโดดเดี่ยว": [
+  {
+   "text": "อนันต์รู้สึกถึงความโดดเดี่ยวตอนกินข้าวกลางวันคนเดียวที่โต๊ะ",
+   "en": "Anan felt a sense of loneliness eating lunch alone at his desk.",
+   "ko": "아난은 책상에서 혼자 점심을 먹으며 외로움을 느꼈어요.",
+   "blank": "ความโดดเดี่ยว",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกว่าคืนฝนตกยาวๆ ทำให้คนอยู่บ้านคนเดียวรู้สึกถึงความโดดเดี่ยว",
+   "en": "Pranee said that long rainy nights make people living alone feel loneliness.",
+   "ko": "쁘라니는 비가 길게 오는 밤이면 혼자 사는 사람들이 외로움을 느낀다고 했어요.",
+   "blank": "ความโดดเดี่ยว",
+   "src": "made"
   }
  ],
  "w|ความต้องการ": [
@@ -9407,6 +9471,22 @@
    "en": "Childhood memories are still clear.",
    "ko": "어린 시절 기억은 아직 선명해.",
    "blank": "ความทรงจำ"
+  }
+ ],
+ "w|ความทุกข์": [
+  {
+   "text": "อนันต์เล่าให้แม่ฟังว่าความทุกข์ของวันแรกคือรถติดตอนเช้า",
+   "en": "Anan told his mother that the misery of the first day was the morning traffic jam.",
+   "ko": "아난은 엄마에게 첫날의 괴로움은 아침 교통 체증이었다고 말했어요.",
+   "blank": "ความทุกข์",
+   "src": "made"
+  },
+  {
+   "text": "ข่าวในทีวีพูดถึงความทุกข์ของเกษตรกรที่เจอภัยแล้ง",
+   "en": "The TV news talked about the hardship of farmers hit by drought.",
+   "ko": "TV 뉴스는 가뭄을 겪는 농민들의 고통을 다뤘어요.",
+   "blank": "ความทุกข์",
+   "src": "made"
   }
  ],
  "w|ความเท่าเทียม": [
@@ -9875,6 +9955,22 @@
    "blank": "ความรับผิดชอบ"
   }
  ],
+ "w|ความรำคาญ": [
+  {
+   "text": "อนันต์พยายามซ่อนความรำคาญเมื่อเครื่องพิมพ์ติดกระดาษเป็นรอบที่สาม",
+   "en": "Anan tried to hide his annoyance when the printer jammed for the third time.",
+   "ko": "아난은 프린터에 종이가 세 번째로 걸리자 짜증을 숨기려고 애썼어요.",
+   "blank": "ความรำคาญ",
+   "src": "made"
+  },
+  {
+   "text": "ยุงที่มาพร้อมหน้าฝนสร้างความรำคาญให้ปราณีทุกคืน",
+   "en": "The mosquitoes that come with the rainy season annoy Pranee every night.",
+   "ko": "우기와 함께 오는 모기 때문에 쁘라니는 매일 밤 짜증이 나요.",
+   "blank": "ความรำคาญ",
+   "src": "made"
+  }
+ ],
  "w|ความร่ำรวย": [
   {
    "text": "ความร่ำรวยไม่ได้วัดความสุข",
@@ -10051,6 +10147,22 @@
    "en": "Trust is hard to regain.",
    "ko": "신뢰는 되찾기 어려워.",
    "blank": "ความไว้ใจ"
+  }
+ ],
+ "w|ความไว้วางใจ": [
+  {
+   "text": "หัวหน้าบอกว่าความไว้วางใจในทีมต้องใช้เวลาสร้าง",
+   "en": "The manager said that trust within a team takes time to build.",
+   "ko": "팀장은 팀 안의 신뢰는 쌓는 데 시간이 걸린다고 했어요.",
+   "blank": "ความไว้วางใจ",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านมีความไว้วางใจในคำเตือนของผู้ใหญ่บ้านเรื่องน้ำป่า",
+   "en": "The villagers trust the headman's warnings about flash floods.",
+   "ko": "마을 사람들은 산사태성 홍수에 대한 이장님의 경고를 믿어요.",
+   "blank": "ความไว้วางใจ",
+   "src": "made"
   }
  ],
  "w|ความเศร้า": [
@@ -10405,6 +10517,22 @@
    "blank": "ความเห็น"
   }
  ],
+ "w|ความเห็นอกเห็นใจ": [
+  {
+   "text": "อนันต์รู้สึกถึงความเห็นอกเห็นใจจากเพื่อนร่วมงานตอนทำเอกสารผิด",
+   "en": "Anan felt sympathy from his coworkers when he made a mistake on the documents.",
+   "ko": "아난은 서류를 잘못 만들었을 때 동료들의 공감을 느꼈어요.",
+   "blank": "ความเห็นอกเห็นใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีส่งเสื้อผ้าไปช่วยผู้ประสบภัยหนาวด้วยความเห็นอกเห็นใจ",
+   "en": "Out of sympathy, Pranee sent clothes to help people affected by the cold spell.",
+   "ko": "쁘라니는 안타까운 마음에 한파 피해자들에게 옷을 보냈어요.",
+   "blank": "ความเห็นอกเห็นใจ",
+   "src": "made"
+  }
+ ],
  "w|ความเหมือน": [
   {
    "text": "มีความเหมือนกันหลายอย่าง",
@@ -10431,6 +10559,38 @@
    "en": "Patience brings success.",
    "ko": "인내는 성공을 가져와.",
    "blank": "ความอดทน"
+  }
+ ],
+ "w|ความอบอุ่น": [
+  {
+   "text": "รอยยิ้มของพนักงานต้อนรับทำให้อนันต์รู้สึกถึงความอบอุ่นตั้งแต่ก้าวแรก",
+   "en": "The receptionist's smile made Anan feel warmth from his first step inside.",
+   "ko": "안내 직원의 미소에 아난은 첫걸음부터 따뜻함을 느꼈어요.",
+   "blank": "ความอบอุ่น",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีชอบความอบอุ่นของแดดยามเช้าในหน้าหนาว",
+   "en": "Pranee loves the warmth of the morning sun in the cool season.",
+   "ko": "쁘라니는 겨울 아침 햇살의 따스함을 좋아해요.",
+   "blank": "ความอบอุ่น",
+   "src": "made"
+  }
+ ],
+ "w|ความอยากรู้": [
+  {
+   "text": "อนันต์ถามคำถามเยอะเพราะความอยากรู้ว่าแต่ละแผนกทำอะไร",
+   "en": "Anan asked a lot of questions out of curiosity about what each department does.",
+   "ko": "아난은 부서마다 무슨 일을 하는지 궁금해서 질문을 많이 했어요.",
+   "blank": "ความอยากรู้",
+   "src": "made"
+  },
+  {
+   "text": "หลานถามปราณีด้วยความอยากรู้ว่าทำไมใบไม้ถึงร่วงตอนหน้าแล้ง",
+   "en": "Pranee's grandchild asked out of curiosity why leaves fall in the dry season.",
+   "ko": "손주는 궁금해서 쁘라니에게 왜 건기에 잎이 떨어지냐고 물었어요.",
+   "blank": "ความอยากรู้",
+   "src": "made"
   }
  ],
  "w|ความอาย": [
@@ -17467,6 +17627,22 @@
    "blank": "ชี้"
   }
  ],
+ "w|ชี้ขาด": [
+  {
+   "text": "หัวหน้าบอกอนันต์ว่าผู้อำนวยการเป็นคนชี้ขาดเรื่องงบประมาณทุกอย่าง",
+   "en": "The manager told Anan that the director makes the final decision on all budget matters.",
+   "ko": "팀장은 아난에게 예산 문제는 모두 이사님이 최종 결정한다고 말했어요.",
+   "blank": "ชี้ขาด",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนาเชื่อว่าปริมาณฝนต้นฤดูเป็นตัวชี้ขาดว่าข้าวปีนี้จะดีไหม",
+   "en": "Farmers believe the early-season rainfall decides whether this year's rice will be good.",
+   "ko": "농부들은 초기 강우량이 올해 벼농사의 성패를 가른다고 믿어요.",
+   "blank": "ชี้ขาด",
+   "src": "made"
+  }
+ ],
  "w|ชี้แจง": [
   {
    "text": "กิตติขอให้ฝ่ายบุคคลชี้แจงเรื่องค่าล่วงเวลาให้ชัดเจนกว่านี้",
@@ -17617,6 +17793,22 @@
    "en": "Everyone admires this work.",
    "ko": "모두가 이 작품을 칭찬해.",
    "blank": "ชื่นชม"
+  }
+ ],
+ "w|ชื่นชอบ": [
+  {
+   "text": "อนันต์ชื่นชอบบรรยากาศสบายๆ ของออฟฟิศใหม่ตั้งแต่วันแรก",
+   "en": "Anan liked the relaxed atmosphere of the new office from the very first day.",
+   "ko": "아난은 첫날부터 새 사무실의 편안한 분위기가 마음에 들었어요.",
+   "blank": "ชื่นชอบ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีชื่นชอบหน้าหนาวเพราะได้ใส่ผ้าพันคอสีสวย",
+   "en": "Pranee loves the cool season because she gets to wear pretty scarves.",
+   "ko": "쁘라니는 예쁜 목도리를 할 수 있어서 겨울을 좋아해요.",
+   "blank": "ชื่นชอบ",
+   "src": "made"
   }
  ],
  "w|ชื่อ": [
@@ -17822,6 +18014,22 @@
    "en": "Pranee packed kitchen things, such as plates, bowls and pots, in separate boxes.",
    "ko": "쁘라니는 접시, 그릇, 냄비 같은 부엌 살림을 따로 상자에 담았어요.",
    "blank": "เช่น",
+   "src": "made"
+  }
+ ],
+ "w|เช่นเดียวกับ": [
+  {
+   "text": "อนันต์ต้องใส่บัตรพนักงานตลอดเวลาเช่นเดียวกับทุกคนในตึก",
+   "en": "Anan has to wear his staff card at all times, just like everyone in the building.",
+   "ko": "아난은 건물 안 모든 사람과 마찬가지로 늘 사원증을 달고 있어야 해요.",
+   "blank": "เช่นเดียวกับ",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้หน้าหนาวมาช้าเช่นเดียวกับปีที่แล้ว",
+   "en": "This year winter came late, just like last year.",
+   "ko": "올해도 작년과 마찬가지로 겨울이 늦게 왔어요.",
+   "blank": "เช่นเดียวกับ",
    "src": "made"
   }
  ],
@@ -18174,6 +18382,22 @@
    "en": "Suda's grandmother always boils water before drinking because she's afraid of germs.",
    "ko": "수다의 할머니는 세균이 무서워서 마시기 전에 늘 물을 끓여요.",
    "blank": "เชื้อโรค",
+   "src": "made"
+  }
+ ],
+ "w|แช่": [
+  {
+   "text": "คืนก่อนเริ่มงาน อนันต์แช่น้ำอุ่นนานๆ เพื่อให้หายเครียด",
+   "en": "The night before starting work, Anan soaked in warm water for a long time to ease his stress.",
+   "ko": "첫 출근 전날 밤 아난은 긴장을 풀려고 따뜻한 물에 오래 몸을 담갔어요.",
+   "blank": "แช่",
+   "src": "made"
+  },
+  {
+   "text": "หน้าร้อนปราณีชอบแช่เท้าในน้ำเย็นตอนบ่าย",
+   "en": "In the hot season Pranee likes to soak her feet in cold water in the afternoon.",
+   "ko": "더운 계절이면 쁘라니는 오후에 찬물에 발을 담그는 걸 좋아해요.",
+   "blank": "แช่",
    "src": "made"
   }
  ],
@@ -18819,6 +19043,22 @@
    "blank": "ซึ่ง"
   }
  ],
+ "w|ซึ้ง": [
+  {
+   "text": "อนันต์ซึ้งใจที่ทีมเตรียมการ์ดต้อนรับไว้บนโต๊ะ",
+   "en": "Anan was touched that the team had left a welcome card on his desk.",
+   "ko": "아난은 팀이 책상 위에 환영 카드를 준비해 둔 것에 감동했어요.",
+   "blank": "ซึ้ง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีซึ้งใจที่เพื่อนบ้านช่วยกันขนกระสอบทรายกันน้ำท่วม",
+   "en": "Pranee was touched that the neighbors helped carry sandbags against the flood.",
+   "ko": "쁘라니는 이웃들이 홍수를 막으려고 모래주머니를 함께 날라 줘서 감동했어요.",
+   "blank": "ซึ้ง",
+   "src": "made"
+  }
+ ],
  "w|ซึม": [
   {
    "text": "หลังฟังคำพิพากษา จำเลยนั่งซึมอยู่นานโดยไม่พูดอะไร",
@@ -19299,6 +19539,22 @@
    "en": "Let's eat together.",
    "ko": "같이 밥 먹자.",
    "blank": "ด้วยกัน"
+  }
+ ],
+ "w|ด้วยซ้ำ": [
+  {
+   "text": "อนันต์ตื่นเต้นจนลืมกินข้าวเช้าด้วยซ้ำ",
+   "en": "Anan was so nervous that he even forgot to eat breakfast.",
+   "ko": "아난은 너무 긴장해서 아침 먹는 것조차 잊었어요.",
+   "blank": "ด้วยซ้ำ",
+   "src": "made"
+  },
+  {
+   "text": "ปีนี้ปราณีไม่ได้หยิบเสื้อกันหนาวออกจากตู้ด้วยซ้ำ",
+   "en": "This year Pranee didn't even take her sweater out of the closet.",
+   "ko": "올해 쁘라니는 외투를 옷장에서 꺼내지도 않았어요.",
+   "blank": "ด้วยซ้ำ",
+   "src": "made"
   }
  ],
  "w|ด้วยตัวเอง": [
@@ -20379,6 +20635,22 @@
    "blank": "เด็กหญิง"
   }
  ],
+ "w|เด็ด": [
+  {
+   "text": "เพื่อนร่วมงานพาอนันต์ไปกินก๋วยเตี๋ยวเรือร้านเด็ดหลังออฟฟิศ",
+   "en": "A coworker took Anan to eat at a great boat-noodle shop behind the office.",
+   "ko": "동료가 아난을 사무실 뒤 끝내주는 보트 국숫집에 데려갔어요.",
+   "blank": "เด็ด",
+   "src": "made"
+  },
+  {
+   "text": "มะม่วงหน้าร้อนปีนี้รสชาติเด็ดกว่าทุกปี",
+   "en": "This year's hot-season mangoes taste better than ever.",
+   "ko": "올해 여름 망고는 어느 해보다 맛이 끝내줘요.",
+   "blank": "เด็ด",
+   "src": "made"
+  }
+ ],
  "w|เด็ดขาด": [
   {
    "text": "ป้ายในตู้เขียนว่าห้ามสูบบุหรี่บนรถไฟโดยเด็ดขาด",
@@ -20734,6 +21006,22 @@
    "en": "The lobby of this hotel stands out with its huge chandelier.",
    "ko": "이 호텔 로비는 커다란 샹들리에로 눈에 띄어요.",
    "blank": "โดดเด่น",
+   "src": "made"
+  }
+ ],
+ "w|โดดเดี่ยว": [
+  {
+   "text": "ตอนเช้าอนันต์รู้สึกโดดเดี่ยว แต่พอบ่ายก็เริ่มมีเพื่อนคุย",
+   "en": "In the morning Anan felt lonely, but by the afternoon he had people to talk to.",
+   "ko": "아침엔 아난이 외로웠지만 오후가 되자 이야기할 동료가 생겼어요.",
+   "blank": "โดดเดี่ยว",
+   "src": "made"
+  },
+  {
+   "text": "หลังลูกๆ ย้ายไปทำงานต่างจังหวัด ปราณีรู้สึกโดดเดี่ยวทุกปลายปี",
+   "en": "After her children moved away for work, Pranee feels lonely at the end of every year.",
+   "ko": "아이들이 다른 지방으로 일하러 떠난 뒤 쁘라니는 연말마다 외로워요.",
+   "blank": "โดดเดี่ยว",
    "src": "made"
   }
  ],
@@ -25323,6 +25611,22 @@
    "blank": "ทน"
   }
  ],
+ "w|ทนทุกข์": [
+  {
+   "text": "อนันต์ทนทุกข์กับรองเท้าหนังคู่ใหม่ที่กัดเท้าทั้งวัน",
+   "en": "Anan suffered all day with new leather shoes that rubbed his feet.",
+   "ko": "아난은 하루 종일 발을 무는 새 가죽 구두 때문에 고생했어요.",
+   "blank": "ทนทุกข์",
+   "src": "made"
+  },
+  {
+   "text": "ปีที่น้ำท่วมใหญ่ ชาวบ้านริมแม่น้ำทนทุกข์อยู่หลายเดือน",
+   "en": "In the year of the big flood, villagers by the river suffered for months.",
+   "ko": "큰 홍수가 난 해에 강가 마을 사람들은 몇 달 동안 고통을 겪었어요.",
+   "blank": "ทนทุกข์",
+   "src": "made"
+  }
+ ],
  "w|ทนไม่ไหว": [
   {
    "text": "อนันต์ทนไม่ไหวจึงโทรหาเพื่อนทั้งที่ตั้งใจจะเขียนจดหมาย",
@@ -25805,6 +26109,22 @@
    "en": "With diarrhea you need lots of water.",
    "ko": "설사할 땐 물을 많이 마셔야 해.",
    "blank": "ท้องเสีย"
+  }
+ ],
+ "w|ท้อใจ": [
+  {
+   "text": "อนันต์เกือบท้อใจตอนส่งรายงานแรกแล้วถูกแก้กลับมาทั้งหน้า",
+   "en": "Anan almost lost heart when his first report came back with the whole page corrected.",
+   "ko": "아난은 첫 보고서가 한 페이지 통째로 수정돼 돌아와서 낙담할 뻔했어요.",
+   "blank": "ท้อใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีท้อใจเมื่อเห็นต้นมะลิที่ปลูกไว้เหี่ยวตายเพราะแดดแรง",
+   "en": "Pranee was disheartened to see the jasmine she planted wilt and die in the strong sun.",
+   "ko": "쁘라니는 심어 둔 재스민이 강한 햇볕에 시들어 죽은 걸 보고 낙담했어요.",
+   "blank": "ท้อใจ",
+   "src": "made"
   }
  ],
  "w|ทอด": [
@@ -27873,6 +28193,22 @@
    "en": "These days I walk to work.",
    "ko": "요즘은 걸어서 출근해.",
    "blank": "ทุกวันนี้"
+  }
+ ],
+ "w|ทุกสิ่ง": [
+  {
+   "text": "พี่เลี้ยงบอกอนันต์ว่าไม่ต้องรีบเรียนรู้ทุกสิ่งในวันเดียว",
+   "en": "His mentor told Anan he didn't need to rush to learn everything in one day.",
+   "ko": "사수는 아난에게 하루 만에 모든 걸 배우려고 서두를 필요 없다고 했어요.",
+   "blank": "ทุกสิ่ง",
+   "src": "made"
+  },
+  {
+   "text": "หลังพายุผ่านไป ทุกสิ่งในสวนของปราณีเปียกโชก",
+   "en": "After the storm passed, everything in Pranee's garden was soaking wet.",
+   "ko": "폭풍이 지나간 뒤 쁘라니네 정원의 모든 것이 흠뻑 젖었어요.",
+   "blank": "ทุกสิ่ง",
+   "src": "made"
   }
  ],
  "w|ทุกสิ่งทุกอย่าง": [
@@ -30075,6 +30411,22 @@
    "src": "made"
   }
  ],
+ "w|น่าขำ": [
+  {
+   "text": "อนันต์เรียกหัวหน้าผิดชื่อจนทุกคนหัวเราะเพราะดูน่าขำ",
+   "en": "Anan called his boss by the wrong name, and everyone laughed because it was funny.",
+   "ko": "아난이 팀장 이름을 잘못 불러서 웃겨서 다들 웃었어요.",
+   "blank": "น่าขำ",
+   "src": "made"
+  },
+  {
+   "text": "หลานของปราณีใส่เสื้อกันหนาวตัวโตเกินไปจนดูน่าขำ",
+   "en": "Pranee's grandchild wore a jacket that was way too big and looked funny.",
+   "ko": "쁘라니의 손주는 너무 큰 외투를 입어서 우스꽝스러워 보였어요.",
+   "blank": "น่าขำ",
+   "src": "made"
+  }
+ ],
  "w|นาง": [
   {
    "text": "นางมาถึงก่อนเวลานัด",
@@ -31183,6 +31535,22 @@
    "blank": "นิดเดียว"
   }
  ],
+ "w|นิดนึง": [
+  {
+   "text": "หัวหน้าขอให้อนันต์รอนิดนึงก่อนจะพาไปแนะนำตัวกับทีม",
+   "en": "The manager asked Anan to wait a little before taking him to meet the team.",
+   "ko": "팀장은 아난을 팀에 소개하러 데려가기 전에 조금만 기다려 달라고 했어요.",
+   "blank": "นิดนึง",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีบอกลูกว่าอากาศเย็นลงนิดนึงแล้ว ให้ใส่เสื้อแขนยาว",
+   "en": "Pranee told her child the weather had gotten a little cooler, so wear long sleeves.",
+   "ko": "쁘라니는 아이에게 날씨가 좀 선선해졌으니 긴소매를 입으라고 했어요.",
+   "blank": "นิดนึง",
+   "src": "made"
+  }
+ ],
  "w|นิดหน่อย": [
   {
    "text": "เผ็ดนิดหน่อย",
@@ -31434,6 +31802,22 @@
    "en": "Chan never imagined that fixing an old house would be this tiring.",
    "ko": "짠은 낡은 집을 고치는 게 이렇게 힘들 줄 상상도 못 했어요.",
    "blank": "นึก",
+   "src": "made"
+  }
+ ],
+ "w|นึกคิด": [
+  {
+   "text": "หัวหน้าบอกว่าบริษัทอยากได้คนที่กล้านึกคิดอะไรใหม่ๆ",
+   "en": "The manager said the company wants people who dare to think up new ideas.",
+   "ko": "팀장은 회사가 새로운 것을 생각해 낼 줄 아는 사람을 원한다고 했어요.",
+   "blank": "นึกคิด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีชอบนั่งริมหน้าต่างนึกคิดถึงเรื่องเก่าๆ ตอนฝนตก",
+   "en": "Pranee likes to sit by the window musing about old times when it rains.",
+   "ko": "쁘라니는 비가 올 때 창가에 앉아 옛일을 생각하는 걸 좋아해요.",
+   "blank": "นึกคิด",
    "src": "made"
   }
  ],
@@ -37195,6 +37579,22 @@
    "blank": "เปียก"
   }
  ],
+ "w|เปี่ยม": [
+  {
+   "text": "อนันต์เดินเข้าออฟฟิศด้วยใจที่เปี่ยมไปด้วยความหวัง",
+   "en": "Anan walked into the office with a heart full of hope.",
+   "ko": "아난은 희망으로 가득 찬 마음으로 사무실에 들어섰어요.",
+   "blank": "เปี่ยม",
+   "src": "made"
+  },
+  {
+   "text": "สวนหลังบ้านปราณีเปี่ยมไปด้วยดอกไม้หลากสีในหน้าหนาว",
+   "en": "Pranee's backyard is full of colorful flowers in the cool season.",
+   "ko": "겨울철 쁘라니네 뒷마당은 형형색색 꽃으로 가득해요.",
+   "blank": "เปี่ยม",
+   "src": "made"
+  }
+ ],
  "w|เปื้อน": [
   {
    "text": "เสื้อนักเรียนของเด็กชายคนหนึ่งเปื้อนหมึกจนต้องเปลี่ยนตัวใหม่",
@@ -41481,6 +41881,22 @@
    "src": "made"
   }
  ],
+ "w|พึมพำ": [
+  {
+   "text": "อนันต์พึมพำทวนชื่อเพื่อนร่วมงานในใจเพื่อจะได้จำได้",
+   "en": "Anan muttered his coworkers' names under his breath so he could remember them.",
+   "ko": "아난은 동료들의 이름을 기억하려고 속으로 중얼거렸어요.",
+   "blank": "พึมพำ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีพึมพำว่าหน้าร้อนปีนี้ร้อนกว่าทุกปี",
+   "en": "Pranee muttered that this hot season is hotter than any year before.",
+   "ko": "쁘라니는 올해 더위가 어느 해보다 심하다고 중얼거렸어요.",
+   "blank": "พึมพำ",
+   "src": "made"
+  }
+ ],
  "w|พืช": [
   {
    "text": "สมชายย้ายกระถางพืชที่ทนแดดไปวางไว้หน้าบ้าน",
@@ -41812,6 +42228,22 @@
    "en": "A store official explained the fire escape routes to new staff.",
    "ko": "백화점 직원은 신입 직원들에게 화재 대피로를 설명했어요.",
    "blank": "เพลิง",
+   "src": "made"
+  }
+ ],
+ "w|เพลิดเพลิน": [
+  {
+   "text": "อนันต์เพลิดเพลินกับการคุยกับลูกค้าจนลืมดูเวลา",
+   "en": "Anan enjoyed talking with the customers so much that he forgot to check the time.",
+   "ko": "아난은 고객과 이야기하는 게 즐거워서 시간 가는 줄 몰랐어요.",
+   "blank": "เพลิดเพลิน",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเพลิดเพลินกับการเดินชมดอกซากุระเมืองไทยบนดอย",
+   "en": "Pranee enjoyed walking among the Thai cherry blossoms on the mountain.",
+   "ko": "쁘라니는 산 위에서 태국 벚꽃을 구경하며 걷는 걸 즐겼어요.",
+   "blank": "เพลิดเพลิน",
    "src": "made"
   }
  ],
@@ -44751,6 +45183,22 @@
    "blank": "มีประโยชน์"
   }
  ],
+ "w|มีสติ": [
+  {
+   "text": "หัวหน้าชมว่าอนันต์มีสติดีตอนตอบคำถามยากๆ ในที่ประชุม",
+   "en": "The manager praised Anan for staying composed when answering hard questions in the meeting.",
+   "ko": "팀장은 아난이 회의에서 어려운 질문에 침착하게 답했다고 칭찬했어요.",
+   "blank": "มีสติ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเตือนลูกให้มีสติตอนขับรถบนถนนลื่นหลังฝนตก",
+   "en": "Pranee reminded her child to stay alert while driving on slippery roads after the rain.",
+   "ko": "쁘라니는 아이에게 비 온 뒤 미끄러운 길에서 운전할 때 정신 바짝 차리라고 일렀어요.",
+   "blank": "มีสติ",
+   "src": "made"
+  }
+ ],
  "w|มีเหตุผล": [
   {
    "text": "แพรชอบประยุทธเพราะเป็นคนใจเย็นและมีเหตุผล",
@@ -44764,6 +45212,22 @@
    "en": "The teacher praised Chan for debating reasonably and politely.",
    "ko": "선생님은 짠이 논리적이고 예의 바르게 토론했다고 칭찬했어요.",
    "blank": "มีเหตุผล",
+   "src": "made"
+  }
+ ],
+ "w|มีโอกาส": [
+  {
+   "text": "อนันต์ดีใจที่มีโอกาสได้ทำงานกับบริษัทที่ฝันไว้",
+   "en": "Anan is happy to have the chance to work at the company he dreamed of.",
+   "ko": "아난은 꿈꾸던 회사에서 일할 기회를 얻어 기뻐요.",
+   "blank": "มีโอกาส",
+   "src": "made"
+  },
+  {
+   "text": "ถ้ามีโอกาส ปราณีอยากไปดูหิมะที่ต่างประเทศสักครั้ง",
+   "en": "If she gets the chance, Pranee would like to go see snow abroad once.",
+   "ko": "기회가 있으면 쁘라니는 외국에 가서 눈을 한번 보고 싶어요.",
+   "blank": "มีโอกาส",
    "src": "made"
   }
  ],
@@ -45908,6 +46372,22 @@
    "en": "The mover broke a vase, and Pranee said it was okay because it was old.",
    "ko": "이삿짐 직원이 꽃병을 깨뜨렸지만 쁘라니는 오래된 거라 괜찮다고 했어요.",
    "blank": "ไม่เป็นไร",
+   "src": "made"
+  }
+ ],
+ "w|ไม่พอใจ": [
+  {
+   "text": "ลูกค้าคนหนึ่งโทรมาด้วยน้ำเสียงไม่พอใจ อนันต์เลยต้องส่งสายให้หัวหน้า",
+   "en": "A customer called sounding displeased, so Anan had to transfer the call to his boss.",
+   "ko": "한 고객이 불만스러운 목소리로 전화해서 아난은 팀장에게 전화를 넘겨야 했어요.",
+   "blank": "ไม่พอใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีไม่พอใจที่เทศบาลยังไม่มาลอกท่อระบายน้ำก่อนหน้าฝน",
+   "en": "Pranee was unhappy that the city still hadn't cleared the drains before the rainy season.",
+   "ko": "쁘라니는 시청이 우기 전에 아직 배수관을 청소하지 않아서 불만이었어요.",
+   "blank": "ไม่พอใจ",
    "src": "made"
   }
  ],
@@ -49959,6 +50439,22 @@
    "src": "made"
   }
  ],
+ "w|เร่งด่วน": [
+  {
+   "text": "วันแรกอนันต์ก็ได้รับงานเร่งด่วนจากฝ่ายขายแล้ว",
+   "en": "On his very first day Anan already got an urgent task from the sales department.",
+   "ko": "첫날부터 아난은 영업부에서 급한 일을 받았어요.",
+   "blank": "เร่งด่วน",
+   "src": "made"
+  },
+  {
+   "text": "เทศบาลประกาศว่าการขุดลอกคลองเป็นเรื่องเร่งด่วนก่อนเข้าหน้าฝน",
+   "en": "The municipality announced that dredging the canals is urgent before the rainy season.",
+   "ko": "시청은 우기 전에 운하 준설이 시급하다고 발표했어요.",
+   "blank": "เร่งด่วน",
+   "src": "made"
+  }
+ ],
  "w|เร็ว": [
   {
    "text": "เร็วเข้า",
@@ -51321,6 +51817,22 @@
    "blank": "ละลาย"
   }
  ],
+ "w|ละอายใจ": [
+  {
+   "text": "อนันต์ละอายใจที่มาสายวันแรกเพราะขึ้นรถไฟฟ้าผิดสาย",
+   "en": "Anan felt ashamed to be late on his first day because he took the wrong train line.",
+   "ko": "아난은 전철을 잘못 타서 첫날 지각한 게 부끄러웠어요.",
+   "blank": "ละอายใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีละอายใจที่บ่นเรื่องอากาศร้อนต่อหน้าคนงานที่ตากแดดทั้งวัน",
+   "en": "Pranee felt ashamed complaining about the heat in front of workers who stand in the sun all day.",
+   "ko": "쁘라니는 하루 종일 땡볕에서 일하는 인부들 앞에서 더위 불평을 한 게 부끄러웠어요.",
+   "blank": "ละอายใจ",
+   "src": "made"
+  }
+ ],
  "w|ละเอียด": [
   {
    "text": "อ่านคำสั่งให้ละเอียด",
@@ -52137,6 +52649,22 @@
    "blank": "ลุง"
   }
  ],
+ "w|ลุ้น": [
+  {
+   "text": "อนันต์ลุ้นว่าหัวหน้าจะชอบงานชิ้นแรกที่ส่งไปหรือเปล่า",
+   "en": "Anan was on the edge of his seat wondering if his boss would like the first piece of work he sent.",
+   "ko": "아난은 처음 낸 일을 팀장이 마음에 들어 할지 조마조마했어요.",
+   "blank": "ลุ้น",
+   "src": "made"
+  },
+  {
+   "text": "ชาวนาลุ้นทุกวันว่าฝนจะตกทันฤดูปักดำไหม",
+   "en": "Every day the farmers anxiously wait to see whether the rain will come in time for rice planting.",
+   "ko": "농부들은 모내기 철에 맞춰 비가 올지 날마다 마음 졸여요.",
+   "blank": "ลุ้น",
+   "src": "made"
+  }
+ ],
  "w|ลูก": [
   {
    "text": "ไปรับลูก",
@@ -52645,6 +53173,22 @@
    "src": "made"
   }
  ],
+ "w|เละ": [
+  {
+   "text": "อนันต์ทำกล่องข้าวหล่นจนข้าวผัดเละเต็มพื้นห้องพักพนักงาน",
+   "en": "Anan dropped his lunch box and the fried rice was a mess all over the staff room floor.",
+   "ko": "아난은 도시락을 떨어뜨려 볶음밥이 직원 휴게실 바닥에 엉망으로 흩어졌어요.",
+   "blank": "เละ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตกทั้งคืนจนถนนหน้าบ้านปราณีเป็นโคลนเละไปหมด",
+   "en": "It rained all night, so the road in front of Pranee's house turned into mud.",
+   "ko": "밤새 비가 와서 쁘라니네 집 앞길이 온통 진흙탕이 됐어요.",
+   "blank": "เละ",
+   "src": "made"
+  }
+ ],
  "w|เล่า": [
   {
    "text": "เล่าให้ฟังหน่อย",
@@ -53124,6 +53668,22 @@
    "en": "After saying it, I felt relieved.",
    "ko": "말하고 나니 속이 후련해.",
    "blank": "โล่ง",
+   "src": "made"
+  }
+ ],
+ "w|โล่งใจ": [
+  {
+   "text": "อนันต์โล่งใจมากเมื่อรู้ว่าพี่เลี้ยงใจดี",
+   "en": "Anan was very relieved to find out his mentor was kind.",
+   "ko": "아난은 사수가 친절하다는 걸 알고 크게 안심했어요.",
+   "blank": "โล่งใจ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีโล่งใจเมื่อพายุเปลี่ยนทิศไม่ผ่านหมู่บ้าน",
+   "en": "Pranee was relieved when the storm changed direction and didn't pass through the village.",
+   "ko": "쁘라니는 폭풍이 방향을 바꿔 마을을 비껴가자 안도했어요.",
+   "blank": "โล่งใจ",
    "src": "made"
   }
  ],
@@ -54295,6 +54855,22 @@
    "en": "The video hasn't finished uploading.",
    "ko": "영상이 아직 업로드 안 됐어.",
    "blank": "วิดีโอ"
+  }
+ ],
+ "w|วิตก": [
+  {
+   "text": "อนันต์วิตกว่าจะทำงานไม่ทันกำหนดส่งวันศุกร์",
+   "en": "Anan worried that he wouldn't finish the work in time for Friday's deadline.",
+   "ko": "아난은 금요일 마감까지 일을 끝내지 못할까 봐 걱정했어요.",
+   "blank": "วิตก",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีวิตกว่าน้ำในเขื่อนจะไม่พอใช้ตลอดหน้าแล้ง",
+   "en": "Pranee worried that the water in the dam wouldn't last through the dry season.",
+   "ko": "쁘라니는 댐의 물이 건기 내내 충분하지 않을까 봐 걱정했어요.",
+   "blank": "วิตก",
+   "src": "made"
   }
  ],
  "w|วิตกกังวล": [
@@ -58533,6 +59109,22 @@
    "src": "made"
   }
  ],
+ "w|สารภาพ": [
+  {
+   "text": "อนันต์สารภาพกับพี่เลี้ยงว่ายังใช้โปรแกรมของบริษัทไม่เป็น",
+   "en": "Anan confessed to his mentor that he still didn't know how to use the company software.",
+   "ko": "아난은 사수에게 아직 회사 프로그램을 쓸 줄 모른다고 털어놓았어요.",
+   "blank": "สารภาพ",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีสารภาพกับสามีว่าลืมเก็บผ้าก่อนฝนตก",
+   "en": "Pranee confessed to her husband that she forgot to bring in the laundry before it rained.",
+   "ko": "쁘라니는 남편에게 비 오기 전에 빨래 걷는 걸 잊었다고 털어놓았어요.",
+   "blank": "สารภาพ",
+   "src": "made"
+  }
+ ],
  "w|สารสนเทศ": [
   {
    "text": "ระบบสารสนเทศของสำนักข่าวล่มทั้งเช้า ทำให้ส่งข่าวไม่ได้",
@@ -59569,6 +60161,22 @@
    "blank": "สูญหาย"
   }
  ],
+ "w|สูด": [
+  {
+   "text": "ก่อนเข้าห้องประชุม อนันต์สูดหายใจลึกๆ หนึ่งครั้ง",
+   "en": "Before entering the meeting room, Anan took one deep breath.",
+   "ko": "회의실에 들어가기 전에 아난은 숨을 한 번 깊게 들이쉬었어요.",
+   "blank": "สูด",
+   "src": "made"
+  },
+  {
+   "text": "ปราณีเปิดหน้าต่างสูดอากาศเย็นสดชื่นยามเช้า",
+   "en": "Pranee opened the window and breathed in the fresh, cool morning air.",
+   "ko": "쁘라니는 창문을 열고 상쾌하고 서늘한 아침 공기를 들이마셨어요.",
+   "blank": "สูด",
+   "src": "made"
+  }
+ ],
  "w|สูตร": [
   {
    "text": "ขอสูตรทำแกงเขียวหวานหน่อย",
@@ -59809,6 +60417,22 @@
    "en": "The food's ready.",
    "ko": "음식 다 됐어.",
    "blank": "เสร็จ"
+  }
+ ],
+ "w|เสร็จสิ้น": [
+  {
+   "text": "พอการปฐมนิเทศเสร็จสิ้น อนันต์ก็ได้โต๊ะทำงานของตัวเอง",
+   "en": "When the orientation was over, Anan got his own desk.",
+   "ko": "오리엔테이션이 끝나자 아난은 자기 책상을 받았어요.",
+   "blank": "เสร็จสิ้น",
+   "src": "made"
+  },
+  {
+   "text": "พอการเก็บเกี่ยวเสร็จสิ้น ชาวบ้านก็จัดงานฉลองต้นหน้าหนาว",
+   "en": "When the harvest was finished, the villagers held a celebration at the start of the cool season.",
+   "ko": "추수가 끝나자 마을 사람들은 겨울 초입에 잔치를 열었어요.",
+   "blank": "เสร็จสิ้น",
+   "src": "made"
   }
  ],
  "w|เสริม": [
@@ -61111,6 +61735,22 @@
    "en": "We ran out of sugar in the kitchen yesterday.",
    "ko": "부엌 설탕이 어제부터 떨어졌어.",
    "blank": "หมด"
+  }
+ ],
+ "w|หมดกำลังใจ": [
+  {
+   "text": "พี่เลี้ยงบอกอนันต์ว่าไม่ต้องหมดกำลังใจ ทุกคนเคยผิดพลาดตอนเริ่มงาน",
+   "en": "His mentor told Anan not to be discouraged; everyone makes mistakes when they start.",
+   "ko": "사수는 아난에게 낙심하지 말라며 누구나 처음엔 실수한다고 했어요.",
+   "blank": "หมดกำลังใจ",
+   "src": "made"
+  },
+  {
+   "text": "ชาวสวนหลายคนหมดกำลังใจเพราะหน้าแล้งปีนี้ยาวนานผิดปกติ",
+   "en": "Many orchard farmers lost heart because this year's dry season was unusually long.",
+   "ko": "올해 건기가 유난히 길어서 많은 과수 농민이 의욕을 잃었어요.",
+   "blank": "หมดกำลังใจ",
+   "src": "made"
   }
  ],
  "w|หมดอายุ": [

@@ -5201,6 +5201,22 @@
    "blank": "आभार"
   }
  ],
+ "w|आभूषण": [
+  {
+   "text": "गाँव की औरतें चाँदी के भारी आभूषण पहनकर मेले में जा रही थीं।",
+   "en": "The village women were going to the fair wearing heavy silver jewellery.",
+   "ko": "마을 여인들이 묵직한 은장신구를 하고 장터에 가고 있었어요.",
+   "blank": "आभूषण",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बताया कि मंदिर से चोरी हुए आभूषण पुलिस ने बरामद कर लिए।",
+   "en": "Shalini reported that the police had recovered the jewellery stolen from the temple.",
+   "ko": "샬리니는 경찰이 사원에서 도난당한 장신구를 되찾았다고 보도했어요.",
+   "blank": "आभूषण",
+   "src": "made"
+  }
+ ],
  "w|आम": [
   {
    "text": "यह आम बहुत मीठा है।",
@@ -5646,6 +5662,22 @@
    "en": "An article about Priya's village appeared in the newspaper, with a photo of the waterfall.",
    "ko": "신문에 프리야네 마을 기사가 났는데 폭포 사진도 실렸어요.",
    "blank": "आलेख",
+   "src": "made"
+  }
+ ],
+ "w|आलोचक": [
+  {
+   "text": "विकास का दोस्त खाने का बड़ा आलोचक है, पर कैंप की खिचड़ी उसे भी अच्छी लगी।",
+   "en": "Vikas's friend is a big food critic, but even he liked the camp khichdi.",
+   "ko": "비카스의 친구는 음식 평에 까다롭지만 캠핑장 키치디는 그도 맛있어했어요.",
+   "blank": "आलोचक",
+   "src": "made"
+  },
+  {
+   "text": "एक फ़िल्म आलोचक हर शुक्रवार शालिनी के पन्ने के लिए समीक्षा भेजता है।",
+   "en": "A film critic sends a review for Shalini's page every Friday.",
+   "ko": "한 영화 평론가가 금요일마다 샬리니의 지면에 리뷰를 보내요.",
+   "blank": "आलोचक",
    "src": "made"
   }
  ],
@@ -8058,6 +8090,22 @@
    "en": "Kavita teaches that a smart consumer always reads the ingredients on the packet.",
    "ko": "카비타는 현명한 소비자는 포장지 성분표를 꼭 읽는다고 가르쳐요.",
    "blank": "उपभोक्ता",
+   "src": "made"
+  }
+ ],
+ "w|उपभोग": [
+  {
+   "text": "विकास मानता है कि प्रकृति का उपभोग नहीं, सम्मान करना चाहिए।",
+   "en": "Vikas believes nature should be respected, not consumed.",
+   "ko": "비카스는 자연을 소비하지 말고 존중해야 한다고 생각해요.",
+   "blank": "उपभोग",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बिजली के बढ़ते उपभोग पर आँकड़ों के साथ एक लेख लिखा।",
+   "en": "Shalini wrote an article with figures on rising electricity consumption.",
+   "ko": "샬리니는 늘어나는 전력 소비에 관한 통계 기사를 썼어요.",
+   "blank": "उपभोग",
    "src": "made"
   }
  ],
@@ -15389,6 +15437,22 @@
    "src": "made"
   }
  ],
+ "w|खाल": [
+  {
+   "text": "चरवाहे ने विकास को भेड़ की खाल से बना गरम बिछौना दिया।",
+   "en": "The shepherd gave Vikas a warm mat made of sheepskin.",
+   "ko": "양치기는 비카스에게 양가죽으로 만든 따뜻한 깔개를 줬어요.",
+   "blank": "खाल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बाघ की खाल की तस्करी पकड़े जाने की ख़बर पहले पन्ने पर लगाई।",
+   "en": "Shalini put the story of tiger-skin smuggling being caught on the front page.",
+   "ko": "샬리니는 호랑이 가죽 밀수 적발 기사를 1면에 실었어요.",
+   "blank": "खाल",
+   "src": "made"
+  }
+ ],
  "w|ख़ाली": [
   {
    "text": "कमरा बिल्कुल ख़ाली है।",
@@ -16050,6 +16114,22 @@
    "en": "The old man sitting opposite joked that the train's noise gets inside your skull.",
    "ko": "맞은편 할아버지는 기차 소음이 머릿속까지 파고든다고 농담했어요.",
    "blank": "खोपड़ी",
+   "src": "made"
+  }
+ ],
+ "w|खोया": [
+  {
+   "text": "विकास ने खोया से बनी मिठाई कैंप में सबको बाँटी।",
+   "en": "Vikas shared sweets made of khoa with everyone at the camp.",
+   "ko": "비카스는 코아로 만든 과자를 캠핑장 사람들에게 나눠 줬어요.",
+   "blank": "खोया",
+   "src": "made"
+  },
+  {
+   "text": "त्योहार से पहले शालिनी ने मिलावटी खोया बेचने वालों पर ख़बर छापी।",
+   "en": "Before the festival, Shalini printed a story on sellers of adulterated khoa.",
+   "ko": "명절 전에 샬리니는 가짜 코아를 파는 상인들에 관한 기사를 냈어요.",
+   "blank": "खोया",
    "src": "made"
   }
  ],
@@ -17209,6 +17289,22 @@
    "blank": "गिरफ़्तारी"
   }
  ],
+ "w|गिरवी": [
+  {
+   "text": "एक किसान ने विकास को बताया कि उसकी ज़मीन बरसों से गिरवी पड़ी है।",
+   "en": "A farmer told Vikas his land has been mortgaged for years.",
+   "ko": "한 농부는 비카스에게 자기 땅이 몇 년째 담보로 잡혀 있다고 했어요.",
+   "blank": "गिरवी",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने लिखा कि महँगाई की वजह से लोग अपने गहने गिरवी रख रहे हैं।",
+   "en": "Shalini wrote that people are pawning their jewellery because of rising prices.",
+   "ko": "샬리니는 물가 때문에 사람들이 장신구를 저당 잡히고 있다고 썼어요.",
+   "blank": "गिरवी",
+   "src": "made"
+  }
+ ],
  "w|गिराना": [
   {
    "text": "पेड़ मत गिराओ, पक्षी रहते हैं।",
@@ -17297,6 +17393,22 @@
    "en": "I've remembered this song since childhood.",
    "ko": "이 노래는 어릴 때부터 기억나.",
    "blank": "गीत"
+  }
+ ],
+ "w|गीतकार": [
+  {
+   "text": "अलाव पर विकास ने एक मशहूर गीतकार का पुराना गाना गाया।",
+   "en": "At the campfire, Vikas sang an old song by a famous lyricist.",
+   "ko": "모닥불 앞에서 비카스는 유명 작사가의 옛 노래를 불렀어요.",
+   "blank": "गीतकार",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने एक बूढ़े गीतकार से उनकी पहली फ़िल्म के बारे में बात की।",
+   "en": "Shalini spoke to an old lyricist about his first film.",
+   "ko": "샬리니는 노 작사가와 그의 첫 영화에 관해 이야기했어요.",
+   "blank": "गीतकार",
+   "src": "made"
   }
  ],
  "w|गीला": [
@@ -21515,6 +21627,22 @@
    "blank": "छाया"
   }
  ],
+ "w|छाल": [
+  {
+   "text": "विकास ने देखा कि भालू ने पेड़ की छाल पर पंजों के निशान छोड़े हैं।",
+   "en": "Vikas saw that a bear had left claw marks on the tree bark.",
+   "ko": "비카스는 곰이 나무껍질에 발톱 자국을 남긴 걸 봤어요.",
+   "blank": "छाल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बताया कि आदिवासी औरतें पेड़ की छाल से दवाएँ बनाती हैं।",
+   "en": "Shalini reported that tribal women make medicines from tree bark.",
+   "ko": "샬리니는 원주민 여성들이 나무껍질로 약을 만든다고 보도했어요.",
+   "blank": "छाल",
+   "src": "made"
+  }
+ ],
  "w|छाला": [
   {
    "text": "करण के मुँह में छाला होने से उसे खाना खाने में तकलीफ़ थी।",
@@ -24219,6 +24347,22 @@
    "blank": "जूस"
   }
  ],
+ "w|जूही": [
+  {
+   "text": "रात में विकास के तंबू के पास जूही के फूलों की ख़ुशबू फैली थी।",
+   "en": "At night, the scent of jasmine flowers spread near Vikas's tent.",
+   "ko": "밤에 비카스의 텐트 근처에 재스민 향기가 퍼져 있었어요.",
+   "blank": "जूही",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी की मेज़ पर रखी कटोरी में जूही के फूल रोज़ बदले जाते हैं।",
+   "en": "The jasmine flowers in the bowl on Shalini's desk are changed every day.",
+   "ko": "샬리니 책상 위 그릇에 담긴 재스민 꽃은 날마다 바뀌어요.",
+   "blank": "जूही",
+   "src": "made"
+  }
+ ],
  "w|जेब": [
   {
    "text": "चाभी जेब में रख लो।",
@@ -24633,6 +24777,38 @@
    "src": "made"
   }
  ],
+ "w|ज्वार": [
+  {
+   "text": "गाँव के खेतों में ज्वार की फ़सल लहलहा रही थी।",
+   "en": "The sorghum crop was swaying in the village fields.",
+   "ko": "마을 밭에는 수수가 무성하게 자라 있었어요.",
+   "blank": "ज्वार",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने चेतावनी छापी कि पूर्णिमा पर समुद्र में ऊँचा ज्वार आएगा।",
+   "en": "Shalini printed a warning that there will be a high tide in the sea at full moon.",
+   "ko": "샬리니는 보름에 바다에 만조가 높게 든다는 경보를 실었어요.",
+   "blank": "ज्वार",
+   "src": "made"
+  }
+ ],
+ "w|ज्वालामुखी": [
+  {
+   "text": "अलाव के पास विकास के भाई ने एक डॉक्यूमेंट्री की बात की जिसमें एक ज्वालामुखी फटता है।",
+   "en": "By the campfire, Vikas's brother talked about a documentary in which a volcano erupts.",
+   "ko": "모닥불 옆에서 비카스의 형은 화산이 폭발하는 다큐멘터리 이야기를 했어요.",
+   "blank": "ज्वालामुखी",
+   "src": "made"
+  },
+  {
+   "text": "विदेश डेस्क से शालिनी को ज्वालामुखी फटने की ख़बर मिली।",
+   "en": "Shalini got the news of a volcanic eruption from the foreign desk.",
+   "ko": "샬리니는 국제부에서 화산 폭발 소식을 받았어요.",
+   "blank": "ज्वालामुखी",
+   "src": "made"
+  }
+ ],
  "w|झगड़ना": [
   {
    "text": "भाइयों को छोटी बात पर झगड़ना नहीं चाहिए।",
@@ -24771,6 +24947,22 @@
    "blank": "झाँकना"
   }
  ],
+ "w|झाड़": [
+  {
+   "text": "विकास का तंबू एक घने झाड़ के पीछे लगा था।",
+   "en": "Vikas's tent was pitched behind a thick bush.",
+   "ko": "비카스의 텐트는 우거진 덤불 뒤에 쳐져 있었어요.",
+   "blank": "झाड़",
+   "src": "made"
+  },
+  {
+   "text": "नदी किनारे कँटीले झाड़ हटाने के अभियान पर शालिनी ने रिपोर्ट लिखी।",
+   "en": "Shalini wrote a report on the drive to clear thorny bushes along the river.",
+   "ko": "샬리니는 강가 가시덤불 제거 활동에 관한 기사를 썼어요.",
+   "blank": "झाड़",
+   "src": "made"
+  }
+ ],
  "w|झाड़ना": [
   {
    "text": "चटाई को बाहर ले जाकर झाड़ना चाहिए।",
@@ -24855,6 +25047,22 @@
    "en": "You should bend the plant toward the sun.",
    "ko": "식물을 해 쪽으로 기울여야 해.",
    "blank": "झुकाना"
+  }
+ ],
+ "w|झुंड": [
+  {
+   "text": "सुबह विकास ने झील के किनारे हिरणों का झुंड देखा।",
+   "en": "In the morning Vikas saw a herd of deer by the lake.",
+   "ko": "아침에 비카스는 호숫가에서 사슴 떼를 봤어요.",
+   "blank": "झुंड",
+   "src": "made"
+  },
+  {
+   "text": "नेता के घर के बाहर पत्रकारों का झुंड खड़ा था, उसमें शालिनी भी थी।",
+   "en": "A crowd of reporters stood outside the politician's house, and Shalini was among them.",
+   "ko": "정치인 집 앞에 기자 무리가 서 있었는데 샬리니도 그중에 있었어요.",
+   "blank": "झुंड",
+   "src": "made"
   }
  ],
  "w|झुमका": [
@@ -30251,6 +30459,22 @@
    "blank": "दिन"
   }
  ],
+ "w|दिनभर": [
+  {
+   "text": "विकास दिनभर जंगल में घूमता रहा और शाम को थककर तंबू में सो गया।",
+   "en": "Vikas wandered in the forest all day and fell asleep in the tent, tired, in the evening.",
+   "ko": "비카스는 하루 종일 숲을 돌아다니다가 저녁에 지쳐 텐트에서 잠들었어요.",
+   "blank": "दिनभर",
+   "src": "made"
+  },
+  {
+   "text": "चुनाव की गिनती वाले दिन शालिनी दिनभर फ़ोन पर रही।",
+   "en": "On the day of the vote count, Shalini was on the phone all day.",
+   "ko": "개표 날 샬리니는 하루 종일 전화기를 붙들고 있었어요.",
+   "blank": "दिनभर",
+   "src": "made"
+  }
+ ],
  "w|दिनांक": [
   {
    "text": "रवि ने जॉइनिंग फ़ॉर्म पर आज का दिनांक लिखकर दस्तख़त किए।",
@@ -30754,6 +30978,22 @@
    "en": "This time the okra at the market is thin and long.",
    "ko": "이번에 시장에 나온 오크라는 가늘고 길어요.",
    "blank": "दुबली",
+   "src": "made"
+  }
+ ],
+ "w|दुम": [
+  {
+   "text": "कैंप के पास एक गिलहरी अपनी झबरीली दुम हिलाती रही।",
+   "en": "Near the camp, a squirrel kept twitching its bushy tail.",
+   "ko": "캠핑장 근처에서 다람쥐 한 마리가 복슬복슬한 꼬리를 계속 흔들었어요.",
+   "blank": "दुम",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी के कार्टूनिस्ट ने नेता को लंबी दुम वाले बंदर की तरह बनाया था।",
+   "en": "Shalini's cartoonist had drawn the politician as a monkey with a long tail.",
+   "ko": "샬리니 신문의 만화가는 그 정치인을 꼬리 긴 원숭이로 그렸어요.",
+   "blank": "दुम",
    "src": "made"
   }
  ],
@@ -31513,6 +31753,22 @@
    "en": "Keeping a friendship is not easy.",
    "ko": "우정을 지키는 건 쉽지 않아.",
    "blank": "दोस्ती"
+  }
+ ],
+ "w|दोहना": [
+  {
+   "text": "सुबह विकास ने चरवाहे को बकरी दोहते हुए देखा।",
+   "en": "In the morning Vikas watched the shepherd milking a goat.",
+   "ko": "아침에 비카스는 양치기가 염소젖을 짜는 걸 봤어요.",
+   "blank": "दोहते",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने एक डेयरी किसान का इंटरव्यू किया जो रोज़ बीस गायें दोहता है।",
+   "en": "Shalini interviewed a dairy farmer who milks twenty cows every day.",
+   "ko": "샬리니는 날마다 소 스무 마리의 젖을 짜는 낙농업자를 인터뷰했어요.",
+   "blank": "दोहता",
+   "src": "made"
   }
  ],
  "w|दोहराना": [
@@ -33161,6 +33417,22 @@
    "en": "The nurse checked the patient's fever.",
    "ko": "간호사가 환자의 열을 재었어.",
    "blank": "नर्स"
+  }
+ ],
+ "w|नर्सरी": [
+  {
+   "text": "वन विभाग की नर्सरी में विकास ने देवदार के छोटे पौधे देखे।",
+   "en": "At the forest department's nursery, Vikas saw small cedar saplings.",
+   "ko": "산림청 묘목장에서 비카스는 작은 히말라야삼나무 묘목을 봤어요.",
+   "blank": "नर्सरी",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बच्चों की नर्सरी कक्षाओं की बढ़ती फ़ीस पर ख़बर लिखी।",
+   "en": "Shalini wrote a story on the rising fees for children's nursery classes.",
+   "ko": "샬리니는 유아반 수업료 인상에 관한 기사를 썼어요.",
+   "blank": "नर्सरी",
+   "src": "made"
   }
  ],
  "w|नल": [
@@ -36097,6 +36369,22 @@
    "blank": "पचहत्तर"
   }
  ],
+ "w|पंचांग": [
+  {
+   "text": "विकास की दादी ने पंचांग देखकर बताया कि उस हफ़्ते पूर्णिमा पड़ेगी।",
+   "en": "Vikas's grandmother checked the almanac and said there would be a full moon that week.",
+   "ko": "비카스의 할머니는 달력을 보더니 그 주에 보름달이 뜬다고 했어요.",
+   "blank": "पंचांग",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार के धर्म वाले पन्ने पर रोज़ का पंचांग छपता है, और शालिनी उसे जाँचती है।",
+   "en": "The daily almanac is printed on the newspaper's religion page, and Shalini checks it.",
+   "ko": "신문 종교면에는 날마다 달력이 실리고 샬리니가 그걸 확인해요.",
+   "blank": "पंचांग",
+   "src": "made"
+  }
+ ],
  "w|पंचानवे": [
   {
    "text": "अंकों में पंचानवे बहुत अच्छा स्कोर है।",
@@ -37173,6 +37461,22 @@
    "en": "This song feels very familiar to me.",
    "ko": "이 노래가 아주 낯익어.",
    "blank": "परिचित"
+  }
+ ],
+ "w|परिजन": [
+  {
+   "text": "विकास ने कैंप से परिजनों को फ़ोन करके बताया कि सब ठीक है।",
+   "en": "Vikas phoned his family from the camp to say all was well.",
+   "ko": "비카스는 캠핑장에서 가족에게 전화해서 다 괜찮다고 했어요.",
+   "blank": "परिजनों",
+   "src": "made"
+  },
+  {
+   "text": "हादसे के बाद शालिनी ने मृतकों के परिजनों से बात करके ख़बर लिखी।",
+   "en": "After the accident, Shalini spoke to the families of the dead and wrote the story.",
+   "ko": "사고 뒤 샬리니는 희생자 유족들과 이야기하고 기사를 썼어요.",
+   "blank": "परिजनों",
+   "src": "made"
   }
  ],
  "w|परिणाम": [
@@ -38403,6 +38707,22 @@
    "src": "made"
   }
  ],
+ "w|पायल": [
+  {
+   "text": "रात को अलाव के पास बैठी विकास की बहन की पायल हल्के से खनक रही थी।",
+   "en": "By the campfire at night, Vikas's sister's anklets jingled softly.",
+   "ko": "밤에 모닥불 옆에 앉은 비카스 여동생의 발찌가 살짝 짤랑거렸어요.",
+   "blank": "पायल",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने चाँदी की पायल बनाने वाले कारीगरों पर एक फ़ीचर लिखा।",
+   "en": "Shalini wrote a feature on the artisans who make silver anklets.",
+   "ko": "샬리니는 은 발찌 만드는 장인들에 관한 특집을 썼어요.",
+   "blank": "पायल",
+   "src": "made"
+  }
+ ],
  "w|पायलट": [
   {
    "text": "मेरा चाचा हवाई जहाज़ का पायलट है।",
@@ -39311,6 +39631,22 @@
    "en": "Both men were talking.",
    "ko": "두 남자가 이야기하고 있었어.",
    "blank": "पुरुष"
+  }
+ ],
+ "w|पुरोहित": [
+  {
+   "text": "पहाड़ी मंदिर के पुरोहित ने विकास को झरने तक का रास्ता बताया।",
+   "en": "The priest of the hill temple told Vikas the way to the waterfall.",
+   "ko": "산사원의 사제가 비카스에게 폭포 가는 길을 알려 줬어요.",
+   "blank": "पुरोहित",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने बताया कि मंदिर में अब महिला पुरोहित भी पूजा कराती हैं।",
+   "en": "Shalini reported that women priests now also conduct worship at the temple.",
+   "ko": "샬리니는 이제 그 사원에서 여성 사제도 예배를 집전한다고 보도했어요.",
+   "blank": "पुरोहित",
+   "src": "made"
   }
  ],
  "w|पुल": [
@@ -43787,6 +44123,22 @@
    "blank": "फ़्लैट"
   }
  ],
+ "w|बकरा": [
+  {
+   "text": "चरवाहे का एक बकरा बार-बार विकास के तंबू में घुसने की कोशिश करता रहा।",
+   "en": "One of the shepherd's goats kept trying to get into Vikas's tent.",
+   "ko": "양치기의 숫염소 한 마리가 자꾸 비카스의 텐트에 들어오려고 했어요.",
+   "blank": "बकरा",
+   "src": "made"
+  },
+  {
+   "text": "बकरीद से पहले शालिनी ने बकरा मंडी की रौनक़ पर फ़ोटो फ़ीचर बनाया।",
+   "en": "Before Bakrid, Shalini made a photo feature on the bustle of the goat market.",
+   "ko": "바크리드 전에 샬리니는 숫염소 시장의 활기를 사진 특집으로 냈어요.",
+   "blank": "बकरा",
+   "src": "made"
+  }
+ ],
  "w|बकरी": [
   {
    "text": "गाँव में सफ़ेद बकरी चर रही है।",
@@ -47571,6 +47923,22 @@
    "blank": "बोली"
   }
  ],
+ "w|बौछार": [
+  {
+   "text": "दोपहर को अचानक बारिश की बौछार आई और विकास तंबू में भागा।",
+   "en": "In the afternoon a sudden shower of rain came and Vikas ran into the tent.",
+   "ko": "오후에 갑자기 소나기가 쏟아져서 비카스는 텐트로 뛰어갔어요.",
+   "blank": "बौछार",
+   "src": "made"
+  },
+  {
+   "text": "संसद में सवालों की बौछार के बाद मंत्री चुप रहे, शालिनी ने यही सुर्ख़ी बनाई।",
+   "en": "After a barrage of questions in parliament the minister stayed silent, and Shalini made that the headline.",
+   "ko": "의회에서 질문이 쏟아진 뒤 장관이 침묵하자 샬리니는 그걸 헤드라인으로 뽑았어요.",
+   "blank": "बौछार",
+   "src": "made"
+  }
+ ],
  "w|बौद्धिक": [
   {
    "text": "शो के बाद दर्शकों के साथ एक बौद्धिक चर्चा हुई।",
@@ -49033,6 +49401,22 @@
    "src": "made"
   }
  ],
+ "w|भोज": [
+  {
+   "text": "आख़िरी रात गाँव वालों ने कैंप करने वालों के लिए भोज रखा।",
+   "en": "On the last night, the villagers held a feast for the campers.",
+   "ko": "마지막 밤에 마을 사람들이 캠핑객들을 위해 잔치를 열었어요.",
+   "blank": "भोज",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार की पचासवीं वर्षगाँठ पर सारे कर्मचारियों के लिए भोज हुआ।",
+   "en": "There was a feast for all staff on the newspaper's fiftieth anniversary.",
+   "ko": "신문 창간 오십 주년에 전 직원을 위한 잔치가 열렸어요.",
+   "blank": "भोज",
+   "src": "made"
+  }
+ ],
  "w|भोजन": [
   {
    "text": "स्वादिष्ट भोजन तैयार है।",
@@ -50459,6 +50843,22 @@
    "en": "With the fever came a suspicion of malaria.",
    "ko": "열과 함께 말라리아가 의심됐어.",
    "blank": "मलेरिया"
+  }
+ ],
+ "w|मशरूम": [
+  {
+   "text": "गाइड ने विकास को समझाया कि जंगली मशरूम तोड़कर न खाए।",
+   "en": "The guide warned Vikas not to pick and eat wild mushrooms.",
+   "ko": "가이드는 비카스에게 야생 버섯을 따 먹지 말라고 일렀어요.",
+   "blank": "मशरूम",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने पहाड़ी किसानों की मशरूम खेती पर एक फ़ीचर लिखा।",
+   "en": "Shalini wrote a feature on hill farmers' mushroom farming.",
+   "ko": "샬리니는 산간 농민들의 버섯 재배에 관한 특집을 썼어요.",
+   "blank": "मशरूम",
+   "src": "made"
   }
  ],
  "w|मशहूर": [
@@ -53845,6 +54245,22 @@
    "blank": "मौसम"
   }
  ],
+ "w|मौसमी": [
+  {
+   "text": "विकास ने कैंप के लिए थर्मस में मौसमी का ताज़ा जूस भर लिया।",
+   "en": "Vikas filled a thermos with fresh sweet-lime juice for the camp.",
+   "ko": "비카스는 캠핑에 가져갈 보온병에 스위트 라임 생과일주스를 담았어요.",
+   "blank": "मौसमी",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर के पास ठेले वाले से शालिनी रोज़ एक मौसमी ख़रीदती है।",
+   "en": "Shalini buys a sweet lime every day from the cart vendor near the office.",
+   "ko": "샬리니는 사무실 근처 노점에서 날마다 스위트 라임을 하나 사요.",
+   "blank": "मौसमी",
+   "src": "made"
+  }
+ ],
  "w|मौसा": [
   {
    "text": "मौसा जी बाग़ में फूल लगा रहे हैं।",
@@ -54695,6 +55111,22 @@
    "en": "This poem is her own creation.",
    "ko": "이 시는 그 사람 자신의 작품이야.",
    "blank": "रचना"
+  }
+ ],
+ "w|रचनाकार": [
+  {
+   "text": "अलाव के पास विकास ने एक पुराने रचनाकार की पहाड़ों पर लिखी कविता पढ़ी।",
+   "en": "By the campfire, Vikas read a poem about the mountains by an old writer.",
+   "ko": "모닥불 옆에서 비카스는 한 옛 작가가 산에 관해 쓴 시를 읽었어요.",
+   "blank": "रचनाकार",
+   "src": "made"
+  },
+  {
+   "text": "साहित्य पन्ने के लिए शालिनी नए रचनाकारों की कहानियाँ चुनती है।",
+   "en": "Shalini chooses stories by new writers for the literature page.",
+   "ko": "샬리니는 문학면에 실을 신인 작가들의 소설을 골라요.",
+   "blank": "रचनाकारों",
+   "src": "made"
   }
  ],
  "w|रचनात्मक": [
@@ -57939,6 +58371,38 @@
    "blank": "वन"
   }
  ],
+ "w|वनस्पति": [
+  {
+   "text": "गाइड ने विकास को पहाड़ की दुर्लभ वनस्पति के बारे में बताया।",
+   "en": "The guide told Vikas about the mountain's rare plant life.",
+   "ko": "가이드는 비카스에게 산의 희귀 식물에 대해 알려 줬어요.",
+   "blank": "वनस्पति",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने रेगिस्तान की वनस्पति पर एक वैज्ञानिक का लेख संपादित किया।",
+   "en": "Shalini edited a scientist's article on desert vegetation.",
+   "ko": "샬리니는 사막 식물에 관한 한 과학자의 글을 편집했어요.",
+   "blank": "वनस्पति",
+   "src": "made"
+  }
+ ],
+ "w|वन्यजीव": [
+  {
+   "text": "विकास ने कैमरे में बाघ, भालू और कई वन्यजीव क़ैद किए।",
+   "en": "Vikas captured a tiger, a bear and many wild animals on camera.",
+   "ko": "비카스는 호랑이, 곰 등 여러 야생동물을 카메라에 담았어요.",
+   "blank": "वन्यजीव",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने राष्ट्रीय उद्यान में वन्यजीव गणना पर विस्तार से लिखा।",
+   "en": "Shalini wrote in detail about the wildlife census in the national park.",
+   "ko": "샬리니는 국립공원의 야생동물 조사에 관해 자세히 썼어요.",
+   "blank": "वन्यजीव",
+   "src": "made"
+  }
+ ],
  "w|वफ़ा": [
   {
    "text": "रोहन ने लिखा कि दोस्ती में वफ़ा सबसे बड़ी चीज़ है।",
@@ -58082,6 +58546,22 @@
    "en": "Seema is the first girl in her family line to run a marathon.",
    "ko": "시마는 집안에서 마라톤을 뛴 첫 여자예요.",
    "blank": "वंश",
+   "src": "made"
+  }
+ ],
+ "w|वंशज": [
+  {
+   "text": "गाँव के एक बुज़ुर्ग ने विकास को बताया कि वे उस पहाड़ी राजा के वंशज हैं।",
+   "en": "An old man from the village told Vikas he is a descendant of that hill king.",
+   "ko": "마을 노인은 비카스에게 자기가 그 산골 왕의 후손이라고 했어요.",
+   "blank": "वंशज",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने एक मशहूर संगीत घराने के आख़िरी वंशज का इंटरव्यू लिया।",
+   "en": "Shalini interviewed the last descendant of a famous family of musicians.",
+   "ko": "샬리니는 한 유명 음악 가문의 마지막 후손을 인터뷰했어요.",
+   "blank": "वंशज",
    "src": "made"
   }
  ],
@@ -59435,6 +59915,22 @@
    "src": "made"
   }
  ],
+ "w|विलुप्त": [
+  {
+   "text": "गाइड ने बताया कि इस जंगल से कई पक्षी अब विलुप्त हो चुके हैं।",
+   "en": "The guide said many birds have now vanished from this forest.",
+   "ko": "가이드는 이 숲에서 여러 새가 이미 사라졌다고 말했어요.",
+   "blank": "विलुप्त",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने लिखा कि कई लोक भाषाएँ विलुप्त होने की कगार पर हैं।",
+   "en": "Shalini wrote that many folk languages are on the verge of dying out.",
+   "ko": "샬리니는 여러 민속 언어가 사라질 위기에 있다고 썼어요.",
+   "blank": "विलुप्त",
+   "src": "made"
+  }
+ ],
  "w|विवरण": [
   {
    "text": "हर व्यंजन की लागत का विवरण एक रजिस्टर में लिखा जाता है।",
@@ -59997,6 +60493,22 @@
    "blank": "वृक्ष"
   }
  ],
+ "w|वृक्षारोपण": [
+  {
+   "text": "कैंप वालों ने जाने से पहले नदी किनारे वृक्षारोपण किया।",
+   "en": "Before leaving, the campers planted trees by the river.",
+   "ko": "캠핑객들은 떠나기 전에 강가에 나무를 심었어요.",
+   "blank": "वृक्षारोपण",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार ने स्कूलों के साथ मिलकर वृक्षारोपण अभियान चलाया, जिसकी ज़िम्मेदारी शालिनी पर थी।",
+   "en": "The newspaper ran a tree-planting drive with schools, and Shalini was in charge of it.",
+   "ko": "신문사는 학교들과 함께 나무 심기 운동을 벌였고 샬리니가 그 일을 맡았어요.",
+   "blank": "वृक्षारोपण",
+   "src": "made"
+  }
+ ],
  "w|वृद्ध": [
   {
    "text": "राहुल के जिम में सुबह कुछ वृद्ध लोग भी हल्की कसरत करने आते हैं।",
@@ -60160,6 +60672,22 @@
    "en": "In Deepa's painting, deep detachment shows on an old ascetic's face.",
    "ko": "디파의 그림 속 늙은 수행자의 얼굴에는 깊은 무욕이 드러나요.",
    "blank": "वैराग्य",
+   "src": "made"
+  }
+ ],
+ "w|वैवाहिक": [
+  {
+   "text": "विकास के कैंप वाले मैदान में एक वैवाहिक समारोह की तैयारी भी चल रही थी।",
+   "en": "Preparations for a wedding ceremony were also going on in the ground where Vikas was camping.",
+   "ko": "비카스가 캠핑하던 들판에서는 결혼식 준비도 한창이었어요.",
+   "blank": "वैवाहिक",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी हर रविवार अख़बार के वैवाहिक विज्ञापनों का पन्ना सँभालती है।",
+   "en": "Every Sunday Shalini handles the newspaper's matrimonial ads page.",
+   "ko": "샬리니는 일요일마다 신문의 결혼 광고면을 맡아요.",
+   "blank": "वैवाहिक",
    "src": "made"
   }
  ],
@@ -60748,6 +61276,22 @@
    "en": "The guest's face looked drawn from tiredness, so Meena sent tea right away.",
    "ko": "손님 얼굴이 피곤에 지쳐 보여서 미나는 바로 차를 보냈어요.",
    "blank": "शक्ल",
+   "src": "made"
+  }
+ ],
+ "w|शंख": [
+  {
+   "text": "शाम की आरती में पहाड़ी मंदिर से शंख की आवाज़ गूँजी।",
+   "en": "At the evening prayer, the sound of a conch echoed from the hill temple.",
+   "ko": "저녁 예배 때 산사원에서 소라고둥 소리가 울려 퍼졌어요.",
+   "blank": "शंख",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने समुद्र तट पर शंख बेचने वाले बच्चों की कहानी छापी।",
+   "en": "Shalini printed the story of children who sell conch shells on the beach.",
+   "ko": "샬리니는 바닷가에서 소라껍데기를 파는 아이들의 이야기를 실었어요.",
+   "blank": "शंख",
    "src": "made"
   }
  ],
@@ -61585,6 +62129,22 @@
    "en": "Hunting was common in old times.",
    "ko": "옛날에는 사냥이 흔했어.",
    "blank": "शिकार"
+  }
+ ],
+ "w|शिकारी": [
+  {
+   "text": "गाइड ने बताया कि पहले यहाँ शिकारी तेंदुओं को मारने आते थे।",
+   "en": "The guide said hunters used to come here to kill leopards.",
+   "ko": "가이드는 예전에 사냥꾼들이 여기 표범을 잡으러 왔다고 했어요.",
+   "blank": "शिकारी",
+   "src": "made"
+  },
+  {
+   "text": "वन विभाग ने अवैध शिकारी पकड़े, और शालिनी ने उसकी पूरी रिपोर्ट छापी।",
+   "en": "The forest department caught illegal hunters, and Shalini printed the full report.",
+   "ko": "산림청이 불법 사냥꾼들을 잡았고 샬리니가 그 전말을 보도했어요.",
+   "blank": "शिकारी",
+   "src": "made"
   }
  ],
  "w|शिक्षक": [
@@ -65435,6 +65995,22 @@
    "src": "made"
   }
  ],
+ "w|सरोवर": [
+  {
+   "text": "विकास ने साफ़ नीले सरोवर में अपना चेहरा धोया।",
+   "en": "Vikas washed his face in the clear blue lake.",
+   "ko": "비카스는 맑고 푸른 호수에서 세수했어요.",
+   "blank": "सरोवर",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने शहर के सूखते सरोवर पर एक तीखा संपादकीय लिखा।",
+   "en": "Shalini wrote a sharp editorial on the city's drying lake.",
+   "ko": "샬리니는 말라 가는 도시 호수에 관해 날카로운 사설을 썼어요.",
+   "blank": "सरोवर",
+   "src": "made"
+  }
+ ],
  "w|सर्कुलर": [
   {
    "text": "प्रबंधन ने नया सर्कुलर निकाला कि अब मीटिंग में फ़ोन नहीं चलेगा।",
@@ -68495,6 +69071,22 @@
    "blank": "सुना"
   }
  ],
+ "w|सुनामी": [
+  {
+   "text": "समुद्र से दूर पहाड़ों पर बैठकर भी विकास के दोस्त सुनामी की ख़बर पढ़कर घबरा गए।",
+   "en": "Even sitting in the mountains far from the sea, Vikas's friends got anxious reading news of the tsunami.",
+   "ko": "바다에서 먼 산에 있었지만 비카스의 친구들은 쓰나미 소식을 읽고 불안해했어요.",
+   "blank": "सुनामी",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने पुराने सुनामी के बचे लोगों से बात करके एक लंबा लेख लिखा।",
+   "en": "Shalini talked to survivors of the old tsunami and wrote a long article.",
+   "ko": "샬리니는 옛 쓰나미 생존자들과 이야기하고 긴 글을 썼어요.",
+   "blank": "सुनामी",
+   "src": "made"
+  }
+ ],
  "w|सुनार": [
   {
    "text": "नए सहकर्मी का चचेरा भाई जयपुर में सुनार है।",
@@ -69003,6 +69595,22 @@
    "en": "In summer the sun is very strong.",
    "ko": "여름에는 태양이 아주 세.",
    "blank": "सूर्य"
+  }
+ ],
+ "w|सूर्योदय": [
+  {
+   "text": "विकास सूर्योदय देखने के लिए सुबह चार बजे उठ गया।",
+   "en": "Vikas got up at four in the morning to watch the sunrise.",
+   "ko": "비카스는 해돋이를 보려고 새벽 네 시에 일어났어요.",
+   "blank": "सूर्योदय",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने गंगा घाट पर सूर्योदय की तस्वीर रविवार के अंक में लगाई।",
+   "en": "Shalini put a photo of sunrise at the Ganga ghat in the Sunday edition.",
+   "ko": "샬리니는 갠지스 강가 해돋이 사진을 일요일판에 실었어요.",
+   "blank": "सूर्योदय",
+   "src": "made"
   }
  ],
  "w|सृजन": [
@@ -69570,6 +70178,22 @@
    "en": "Kavita showed how to cook dal in a solar cooker on the roof.",
    "ko": "카비타는 옥상에서 태양열 조리기로 달을 끓여 보여 줬어요.",
    "blank": "सौर",
+   "src": "made"
+  }
+ ],
+ "w|सौर ऊर्जा": [
+  {
+   "text": "विकास अपना फ़ोन छोटे सौर ऊर्जा पैनल से चार्ज करता है।",
+   "en": "Vikas charges his phone with a small solar power panel.",
+   "ko": "비카스는 작은 태양광 패널로 휴대폰을 충전해요.",
+   "blank": "सौर ऊर्जा",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने गाँवों में सौर ऊर्जा से चलने वाले पंपों पर ख़बर लिखी।",
+   "en": "Shalini wrote a story on solar-powered pumps in villages.",
+   "ko": "샬리니는 마을의 태양광 펌프에 관한 기사를 썼어요.",
+   "blank": "सौर ऊर्जा",
    "src": "made"
   }
  ],
@@ -72024,6 +72648,22 @@
    "en": "The village council collected money to build a water tank in the village.",
    "ko": "마을 의회는 물탱크를 짓기 위해 돈을 모았어요.",
    "blank": "हेतु",
+   "src": "made"
+  }
+ ],
+ "w|हेमंत": [
+  {
+   "text": "विकास को हेमंत की ठंडी सुबहों में कैंप करना सबसे अच्छा लगता है।",
+   "en": "Vikas likes camping best in the cool mornings of early winter.",
+   "ko": "비카스는 초겨울의 서늘한 아침에 캠핑하는 걸 가장 좋아해요.",
+   "blank": "हेमंत",
+   "src": "made"
+  },
+  {
+   "text": "शालिनी ने हेमंत ऋतु के त्योहारों पर एक रंगीन पन्ना तैयार किया।",
+   "en": "Shalini prepared a colourful page on the festivals of early winter.",
+   "ko": "샬리니는 초겨울 축제를 다룬 화려한 지면을 꾸몄어요.",
+   "blank": "हेमंत",
    "src": "made"
   }
  ],
