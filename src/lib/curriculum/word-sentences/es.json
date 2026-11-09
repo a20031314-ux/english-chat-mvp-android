@@ -225,6 +225,22 @@
    "blank": "abuela"
   }
  ],
+ "w|abuelito": [
+  {
+   "text": "El abuelito de Nico le enseñó a curar caballos.",
+   "en": "Nico's grandpa taught him how to treat horses.",
+   "ko": "니코의 할아버지가 말 치료하는 법을 가르쳐 줬어요.",
+   "blank": "abuelito",
+   "src": "made"
+  },
+  {
+   "text": "Lola visita a su abuelito cada domingo después del trabajo.",
+   "en": "Lola visits her grandpa every Sunday after work.",
+   "ko": "롤라는 일요일마다 일을 마치고 할아버지를 찾아가요.",
+   "blank": "abuelito",
+   "src": "made"
+  }
+ ],
  "w|abuelo": [
   {
    "text": "Mi abuelo me cuenta historias viejas.",
@@ -633,6 +649,22 @@
    "en": "They stopped harassing the journalist on the street.",
    "ko": "거리에서 기자를 쫓아다니는 걸 그만뒀어.",
    "blank": "acosar"
+  }
+ ],
+ "w|acoso": [
+  {
+   "text": "El sobrino de Nico sufrió acoso en el colegio, y Nico habló con los maestros.",
+   "en": "Nico's nephew was bullied at school, and Nico talked to the teachers.",
+   "ko": "니코의 조카가 학교에서 괴롭힘을 당해서 니코가 선생님들과 이야기했어요.",
+   "blank": "acoso",
+   "src": "made"
+  },
+  {
+   "text": "Lola no tolera el acoso a sus empleadas.",
+   "en": "Lola doesn't tolerate harassment of her employees.",
+   "ko": "롤라는 직원들을 괴롭히는 일을 그냥 두지 않아요.",
+   "blank": "acoso",
+   "src": "made"
   }
  ],
  "w|acostar": [
@@ -2819,6 +2851,22 @@
    "src": "made"
   }
  ],
+ "w|ambicioso": [
+  {
+   "text": "Nico es ambicioso y quiere abrir una clínica más grande.",
+   "en": "Nico is ambitious and wants to open a bigger clinic.",
+   "ko": "니코는 야심이 있어서 더 큰 병원을 열고 싶어 해요.",
+   "blank": "ambicioso",
+   "src": "made"
+  },
+  {
+   "text": "Lola es muy ambiciosa y quiere abrir otro hotel.",
+   "en": "Lola is very ambitious and wants to open another hotel.",
+   "ko": "롤라는 야심이 커서 호텔을 하나 더 열고 싶어 해요.",
+   "blank": "ambiciosa",
+   "src": "made"
+  }
+ ],
  "w|ambiente": [
   {
    "text": "El ambiente del café es muy acogedor.",
@@ -3499,6 +3547,22 @@
    "en": "The old appliance no longer works.",
    "ko": "그 오래된 기기는 더 이상 안 돼.",
    "blank": "aparato"
+  }
+ ],
+ "w|aparcar": [
+  {
+   "text": "Nico no encontró sitio para aparcar delante de la granja.",
+   "en": "Nico couldn't find a place to park in front of the farm.",
+   "ko": "니코는 농장 앞에 주차할 자리를 못 찾았어요.",
+   "blank": "aparcar",
+   "src": "made"
+  },
+  {
+   "text": "Los clientes de Lola pueden aparcar gratis en el garaje.",
+   "en": "Lola's guests can park for free in the garage.",
+   "ko": "롤라네 손님들은 차고에 무료로 주차할 수 있어요.",
+   "blank": "aparcar",
+   "src": "made"
   }
  ],
  "w|aparecer": [
@@ -6089,6 +6153,22 @@
    "blank": "bala"
   }
  ],
+ "w|balcón": [
+  {
+   "text": "Desde el balcón de la clínica, Nico ve las montañas.",
+   "en": "From the clinic balcony, Nico can see the mountains.",
+   "ko": "병원 발코니에서 니코는 산을 바라봐요.",
+   "blank": "balcón",
+   "src": "made"
+  },
+  {
+   "text": "Todas las habitaciones del hotel de Lola tienen balcón con vistas al mar.",
+   "en": "All the rooms in Lola's hotel have a balcony with a sea view.",
+   "ko": "롤라 호텔의 방은 모두 바다가 보이는 발코니가 있어요.",
+   "blank": "balcón",
+   "src": "made"
+  }
+ ],
  "w|ballena": [
   {
    "text": "Vimos una ballena cerca de la costa.",
@@ -6289,6 +6369,22 @@
    "en": "I'm going to the bathroom for a moment.",
    "ko": "잠깐 화장실 다녀올게.",
    "blank": "baño"
+  }
+ ],
+ "w|banquete": [
+  {
+   "text": "Después de una boda en el pueblo, sobró comida del banquete para los perros.",
+   "en": "After a wedding in the village, there was leftover food from the banquet for the dogs.",
+   "ko": "마을 결혼식이 끝나고 잔치 음식이 남아 개들이 먹었어요.",
+   "blank": "banquete",
+   "src": "made"
+  },
+  {
+   "text": "El hotel de Lola preparó un banquete para una boda.",
+   "en": "Lola's hotel prepared a banquet for a wedding.",
+   "ko": "롤라의 호텔은 결혼식 연회를 준비했어요.",
+   "blank": "banquete",
+   "src": "made"
   }
  ],
  "w|bar": [
@@ -6601,6 +6697,22 @@
    "en": "He plays the drums in the school band.",
    "ko": "학교 밴드에서 드럼을 쳐.",
    "blank": "batería"
+  }
+ ],
+ "w|baúl": [
+  {
+   "text": "Nico guarda sus herramientas viejas en un baúl.",
+   "en": "Nico keeps his old tools in a trunk.",
+   "ko": "니코는 낡은 도구들을 큰 상자에 넣어 둬요.",
+   "blank": "baúl",
+   "src": "made"
+  },
+  {
+   "text": "En el desván del hotel, Lola encontró un baúl antiguo.",
+   "en": "In the hotel attic, Lola found an old trunk.",
+   "ko": "롤라는 호텔 다락에서 오래된 궤짝을 찾았어요.",
+   "blank": "baúl",
+   "src": "made"
   }
  ],
  "w|bebé": [
@@ -7381,6 +7493,22 @@
    "en": "A button fell off my shirt.",
    "ko": "셔츠 단추 하나가 떨어졌어.",
    "blank": "botón"
+  }
+ ],
+ "w|boxeo": [
+  {
+   "text": "Nico vio un combate de boxeo en la tele del bar.",
+   "en": "Nico watched a boxing match on the bar's TV.",
+   "ko": "니코는 술집 텔레비전으로 권투 경기를 봤어요.",
+   "blank": "boxeo",
+   "src": "made"
+  },
+  {
+   "text": "Un sábado, el hotel de Lola organizó una noche de boxeo.",
+   "en": "One Saturday, Lola's hotel held a boxing night.",
+   "ko": "어느 토요일 롤라의 호텔에서 권투의 밤이 열렸어요.",
+   "blank": "boxeo",
+   "src": "made"
   }
  ],
  "w|bravo": [
@@ -8374,6 +8502,22 @@
    "en": "A merchant who travels by camel appears in the play.",
    "ko": "연극에는 낙타를 타고 다니는 상인이 나와요.",
    "blank": "camello",
+   "src": "made"
+  }
+ ],
+ "w|camilla": [
+  {
+   "text": "Nico y su ayudante llevaron al perro herido en una camilla.",
+   "en": "Nico and his assistant carried the injured dog on a stretcher.",
+   "ko": "니코와 조수는 다친 개를 들것에 실어 옮겼어요.",
+   "blank": "camilla",
+   "src": "made"
+  },
+  {
+   "text": "Un socorrista llevó en camilla a un turista que se torció el tobillo.",
+   "en": "A lifeguard carried a tourist who twisted his ankle on a stretcher.",
+   "ko": "인명 구조원이 발목을 삔 관광객을 들것에 실어 날랐어요.",
+   "blank": "camilla",
    "src": "made"
   }
  ],
@@ -11217,6 +11361,22 @@
    "blank": "coco"
   }
  ],
+ "w|cocodrilo": [
+  {
+   "text": "En un viaje al sur, Nico vio un cocodrilo en un río.",
+   "en": "On a trip down south, Nico saw a crocodile in a river.",
+   "ko": "남쪽으로 여행 갔을 때 니코는 강에서 악어를 봤어요.",
+   "blank": "cocodrilo",
+   "src": "made"
+  },
+  {
+   "text": "En un viaje a Australia, Lola vio un cocodrilo enorme.",
+   "en": "On a trip to Australia, Lola saw a huge crocodile.",
+   "ko": "호주 여행에서 롤라는 커다란 악어를 봤어요.",
+   "blank": "cocodrilo",
+   "src": "made"
+  }
+ ],
  "w|cóctel": [
   {
    "text": "En la fiesta del pueblo sirvieron un cóctel de frutas sin alcohol.",
@@ -13483,6 +13643,22 @@
    "en": "Don't go against your mother.",
    "ko": "엄마한테 맞서지 마.",
    "blank": "contra"
+  }
+ ],
+ "w|contrabando": [
+  {
+   "text": "La policía encontró loros de contrabando y se los llevó a Nico.",
+   "en": "The police found smuggled parrots and brought them to Nico.",
+   "ko": "경찰이 밀수된 앵무새를 찾아 니코에게 데려왔어요.",
+   "blank": "contrabando",
+   "src": "made"
+  },
+  {
+   "text": "La policía descubrió contrabando de tabaco en el puerto, cerca del hotel de Lola.",
+   "en": "The police discovered tobacco smuggling at the port near Lola's hotel.",
+   "ko": "경찰이 롤라의 호텔 근처 항구에서 담배 밀수를 적발했어요.",
+   "blank": "contrabando",
+   "src": "made"
   }
  ],
  "w|contrario": [
@@ -16653,6 +16829,22 @@
    "blank": "desastre"
   }
  ],
+ "w|desatar": [
+  {
+   "text": "Nico desató al perro, que estaba atado a un árbol.",
+   "en": "Nico untied the dog, which was tied to a tree.",
+   "ko": "니코는 나무에 묶여 있던 개를 풀어 줬어요.",
+   "blank": "desató",
+   "src": "made"
+  },
+  {
+   "text": "El viento desató la sombrilla de la piscina del hotel.",
+   "en": "The wind untied the umbrella by the hotel pool.",
+   "ko": "바람에 호텔 수영장 파라솔 끈이 풀렸어요.",
+   "blank": "desató",
+   "src": "made"
+  }
+ ],
  "w|desayunar": [
   {
    "text": "Me gusta desayunar pan con café.",
@@ -19129,6 +19321,22 @@
    "blank": "echar"
   }
  ],
+ "w|eco": [
+  {
+   "text": "En la montaña, Nico gritó su nombre y oyó el eco.",
+   "en": "In the mountains, Nico shouted his name and heard the echo.",
+   "ko": "산에서 니코는 자기 이름을 외치고 메아리를 들었어요.",
+   "blank": "eco",
+   "src": "made"
+  },
+  {
+   "text": "En la cueva cerca del hotel, los niños gritan para oír el eco.",
+   "en": "In the cave near the hotel, children shout to hear the echo.",
+   "ko": "호텔 근처 동굴에서 아이들은 메아리를 들으려고 소리를 질러요.",
+   "blank": "eco",
+   "src": "made"
+  }
+ ],
  "w|economía": [
   {
    "text": "La economía del país crece despacio.",
@@ -19887,6 +20095,22 @@
    "en": "The company opened a new office.",
    "ko": "회사가 새 사무실을 열었어.",
    "blank": "empresa"
+  }
+ ],
+ "w|empresario": [
+  {
+   "text": "Un empresario del pueblo le llevó a Nico su perro enfermo.",
+   "en": "A local businessman brought Nico his sick dog.",
+   "ko": "마을 사업가가 아픈 개를 데리고 니코를 찾아왔어요.",
+   "blank": "empresario",
+   "src": "made"
+  },
+  {
+   "text": "Lola es una empresaria que tiene un hotel junto a la playa.",
+   "en": "Lola is a businesswoman who owns a hotel by the beach.",
+   "ko": "롤라는 해변에 호텔을 가진 사업가예요.",
+   "blank": "empresaria",
+   "src": "made"
   }
  ],
  "w|empujar": [
@@ -21055,6 +21279,22 @@
    "en": "I don't want another scandal in the office.",
    "ko": "사무실에서 또 다른 스캔들은 싫어.",
    "blank": "escándalo"
+  }
+ ],
+ "w|escáner": [
+  {
+   "text": "Nico usó el escáner para leer el chip del gato perdido.",
+   "en": "Nico used the scanner to read the lost cat's chip.",
+   "ko": "니코는 스캐너로 길 잃은 고양이의 칩을 읽었어요.",
+   "blank": "escáner",
+   "src": "made"
+  },
+  {
+   "text": "En el aeropuerto, el escáner detectó unas tijeras en la maleta de Lola.",
+   "en": "At the airport, the scanner detected scissors in Lola's suitcase.",
+   "ko": "공항에서 검색대 스캐너가 롤라의 가방 속 가위를 찾아냈어요.",
+   "blank": "escáner",
+   "src": "made"
   }
  ],
  "w|escapar": [
@@ -24881,6 +25121,22 @@
    "blank": "frase"
   }
  ],
+ "w|fraternidad": [
+  {
+   "text": "En la universidad, Nico vivía en una fraternidad con otros estudiantes.",
+   "en": "At university, Nico lived in a fraternity with other students.",
+   "ko": "대학 시절 니코는 다른 학생들과 학생 기숙 모임에서 살았어요.",
+   "blank": "fraternidad",
+   "src": "made"
+  },
+  {
+   "text": "Lola cree en la fraternidad entre los empleados del hotel.",
+   "en": "Lola believes in a spirit of fellowship among the hotel staff.",
+   "ko": "롤라는 호텔 직원들 사이의 우애를 소중히 여겨요.",
+   "blank": "fraternidad",
+   "src": "made"
+  }
+ ],
  "w|fraude": [
   {
    "text": "Detectaron un fraude en las cuentas bancarias.",
@@ -25220,6 +25476,22 @@
    "en": "A foundation paid for the children's tickets.",
    "ko": "한 재단이 아이들 입장권을 대 줬어요.",
    "blank": "fundación",
+   "src": "made"
+  }
+ ],
+ "w|fundamental": [
+  {
+   "text": "Para Nico, cuidar bien a los animales es algo fundamental.",
+   "en": "For Nico, taking good care of animals is essential.",
+   "ko": "니코에게 동물을 잘 돌보는 건 가장 기본이에요.",
+   "blank": "fundamental",
+   "src": "made"
+  },
+  {
+   "text": "Para Lola, la limpieza es fundamental en un hotel.",
+   "en": "For Lola, cleanliness is essential in a hotel.",
+   "ko": "롤라에게 호텔에서 가장 기본은 청결이에요.",
+   "blank": "fundamental",
    "src": "made"
   }
  ],
@@ -27268,6 +27540,22 @@
    "en": "Pedro explains that the castle monks lived in brotherhood.",
    "ko": "페드로는 성의 수도사들이 형제처럼 함께 살았다고 설명해요.",
    "blank": "hermandad",
+   "src": "made"
+  }
+ ],
+ "w|hermanita": [
+  {
+   "text": "La hermanita de Nico quiere ser veterinaria como él.",
+   "en": "Nico's little sister wants to be a vet like him.",
+   "ko": "니코의 여동생은 오빠처럼 수의사가 되고 싶어 해요.",
+   "blank": "hermanita",
+   "src": "made"
+  },
+  {
+   "text": "En verano, la hermanita de Lola trabaja en la recepción.",
+   "en": "In summer, Lola's little sister works at the front desk.",
+   "ko": "여름이면 롤라의 여동생이 프런트에서 일해요.",
+   "blank": "hermanita",
    "src": "made"
   }
  ],
@@ -30113,6 +30401,22 @@
    "blank": "interrumpió"
   }
  ],
+ "w|interruptor": [
+  {
+   "text": "Nico buscó el interruptor de la luz en el establo oscuro.",
+   "en": "Nico looked for the light switch in the dark stable.",
+   "ko": "니코는 어두운 마구간에서 전등 스위치를 찾았어요.",
+   "blank": "interruptor",
+   "src": "made"
+  },
+  {
+   "text": "En el hotel de Lola, el interruptor de la luz del pasillo no funcionaba.",
+   "en": "At Lola's hotel, the hallway light switch wasn't working.",
+   "ko": "롤라의 호텔 복도 전등 스위치가 고장 나 있었어요.",
+   "blank": "interruptor",
+   "src": "made"
+  }
+ ],
  "w|intervenir": [
   {
    "text": "El director tuvo que intervenir en la discusión.",
@@ -31113,6 +31417,22 @@
    "blank": "justo"
   }
  ],
+ "w|juvenil": [
+  {
+   "text": "El equipo juvenil del pueblo invitó a Nico a hablar de los animales.",
+   "en": "The village youth team invited Nico to talk about animals.",
+   "ko": "마을 청소년 팀이 동물 이야기를 들려 달라고 니코를 초대했어요.",
+   "blank": "juvenil",
+   "src": "made"
+  },
+  {
+   "text": "Un equipo juvenil de fútbol se alojó en el hotel de Lola.",
+   "en": "A youth soccer team stayed at Lola's hotel.",
+   "ko": "청소년 축구팀이 롤라의 호텔에 묵었어요.",
+   "blank": "juvenil",
+   "src": "made"
+  }
+ ],
  "w|juventud": [
   {
    "text": "En su juventud viajó por todo el país.",
@@ -31279,6 +31599,22 @@
    "en": "She wiped the tear with her sleeve.",
    "ko": "그녀는 소매로 눈물을 닦았어.",
    "blank": "lágrima"
+  }
+ ],
+ "w|lamentable": [
+  {
+   "text": "El estado del perro abandonado era lamentable.",
+   "en": "The abandoned dog was in a sorry state.",
+   "ko": "버려진 개의 상태는 처참했어요.",
+   "blank": "lamentable",
+   "src": "made"
+  },
+  {
+   "text": "Lola dice que la playa quedó en un estado lamentable después de la fiesta.",
+   "en": "Lola says the beach was left in a sorry state after the party.",
+   "ko": "롤라는 파티가 끝난 뒤 해변 꼴이 엉망이었다고 해요.",
+   "blank": "lamentable",
+   "src": "made"
   }
  ],
  "w|lamentablemente": [
@@ -32629,6 +32965,22 @@
    "blank": "local"
   }
  ],
+ "w|localización": [
+  {
+   "text": "El collar del perro de Nico tiene un chip de localización.",
+   "en": "Nico's dog's collar has a tracking chip.",
+   "ko": "니코네 개 목걸이에는 위치 추적 칩이 있어요.",
+   "blank": "localización",
+   "src": "made"
+  },
+  {
+   "text": "La localización del hotel de Lola es perfecta para ir a la playa.",
+   "en": "The location of Lola's hotel is perfect for going to the beach.",
+   "ko": "롤라의 호텔은 해변 가기에 딱 좋은 위치에 있어요.",
+   "blank": "localización",
+   "src": "made"
+  }
+ ],
  "w|localizar": [
   {
    "text": "No pude localizar las llaves perdidas.",
@@ -33009,6 +33361,22 @@
    "en": "It was a magical moment for everyone.",
    "ko": "모두에게 마법 같은 순간이었어.",
    "blank": "mágico"
+  }
+ ],
+ "w|magnético": [
+  {
+   "text": "Nico tiene una pizarra magnética con las citas de la semana.",
+   "en": "Nico has a magnetic board with the week's appointments.",
+   "ko": "니코는 한 주 예약을 자석 칠판에 붙여 둬요.",
+   "blank": "magnética",
+   "src": "made"
+  },
+  {
+   "text": "En el hotel de Lola, unas tarjetas magnéticas abren las puertas.",
+   "en": "At Lola's hotel, magnetic cards open the doors.",
+   "ko": "롤라의 호텔에서는 자석 카드로 방문을 열어요.",
+   "blank": "magnéticas",
+   "src": "made"
   }
  ],
  "w|magnífico": [
@@ -33955,6 +34323,22 @@
    "blank": "masa"
   }
  ],
+ "w|masacre": [
+  {
+   "text": "Nico leyó sobre una masacre de lobos en el siglo pasado.",
+   "en": "Nico read about a mass killing of wolves in the last century.",
+   "ko": "니코는 지난 세기에 늑대가 떼죽음을 당한 일을 읽었어요.",
+   "blank": "masacre",
+   "src": "made"
+  },
+  {
+   "text": "Un historiador dio una charla en el hotel sobre una masacre de la guerra.",
+   "en": "A historian gave a talk at the hotel about a wartime massacre.",
+   "ko": "한 역사학자가 호텔에서 전쟁 중 학살에 관해 강연했어요.",
+   "blank": "masacre",
+   "src": "made"
+  }
+ ],
  "w|masaje": [
   {
    "text": "Se dio un masaje en la espalda.",
@@ -34233,6 +34617,22 @@
    "en": "There is a mechanical fault in the elevator.",
    "ko": "엘리베이터에 기계적 고장이 있어.",
    "blank": "mecánico"
+  }
+ ],
+ "w|mecanismo": [
+  {
+   "text": "Nico les explicó a los dueños el mecanismo de la vacuna.",
+   "en": "Nico explained to the owners how the vaccine works.",
+   "ko": "니코는 주인들에게 백신이 작용하는 원리를 설명했어요.",
+   "blank": "mecanismo",
+   "src": "made"
+  },
+  {
+   "text": "Un técnico arregló el mecanismo del ascensor del hotel.",
+   "en": "A technician fixed the hotel elevator's mechanism.",
+   "ko": "기술자가 호텔 엘리베이터 장치를 고쳤어요.",
+   "blank": "mecanismo",
+   "src": "made"
   }
  ],
  "w|medalla": [
@@ -35847,6 +36247,22 @@
    "blank": "moto"
   }
  ],
+ "w|motocicleta": [
+  {
+   "text": "Nico va a las granjas en motocicleta.",
+   "en": "Nico goes to the farms by motorcycle.",
+   "ko": "니코는 오토바이를 타고 농장에 다녀요.",
+   "blank": "motocicleta",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente llegó al hotel de Lola en una motocicleta antigua.",
+   "en": "A guest arrived at Lola's hotel on a vintage motorcycle.",
+   "ko": "한 손님이 오래된 오토바이를 타고 롤라의 호텔에 왔어요.",
+   "blank": "motocicleta",
+   "src": "made"
+  }
+ ],
  "w|motor": [
   {
    "text": "El motor del coche hace un ruido raro.",
@@ -36073,6 +36489,22 @@
    "blank": "mujer"
   }
  ],
+ "w|mulo": [
+  {
+   "text": "Un granjero le llevó a Nico un mulo cojo.",
+   "en": "A farmer brought Nico a lame mule.",
+   "ko": "한 농부가 다리를 저는 노새를 니코에게 데려왔어요.",
+   "blank": "mulo",
+   "src": "made"
+  },
+  {
+   "text": "En la excursión del hotel, los turistas subieron el monte en mulo.",
+   "en": "On the hotel excursion, the tourists rode up the hill on a mule.",
+   "ko": "호텔 나들이에서 관광객들은 노새를 타고 산을 올랐어요.",
+   "blank": "mulo",
+   "src": "made"
+  }
+ ],
  "w|multa": [
   {
    "text": "Me llegó una multa por estacionar mal.",
@@ -36169,6 +36601,22 @@
    "en": "They made a snowman in the park.",
    "ko": "공원에서 눈사람을 만들었어.",
    "blank": "muñeco"
+  }
+ ],
+ "w|murciélago": [
+  {
+   "text": "Una noche, un murciélago herido entró en la clínica de Nico.",
+   "en": "One night, an injured bat flew into Nico's clinic.",
+   "ko": "어느 밤 다친 박쥐 한 마리가 니코의 병원에 들어왔어요.",
+   "blank": "murciélago",
+   "src": "made"
+  },
+  {
+   "text": "Una noche, entró un murciélago en el restaurante del hotel de Lola.",
+   "en": "One night, a bat flew into the restaurant at Lola's hotel.",
+   "ko": "어느 밤 롤라네 호텔 식당에 박쥐가 들어왔어요.",
+   "blank": "murciélago",
+   "src": "made"
   }
  ],
  "w|muro": [
@@ -37771,6 +38219,22 @@
    "blank": "ocho"
   }
  ],
+ "w|octavo": [
+  {
+   "text": "Cuando estudiaba, Nico vivía en el octavo piso de un edificio.",
+   "en": "When he was a student, Nico lived on the eighth floor of a building.",
+   "ko": "학생 때 니코는 한 건물의 8층에 살았어요.",
+   "blank": "octavo",
+   "src": "made"
+  },
+  {
+   "text": "La habitación favorita de Lola está en el octavo piso.",
+   "en": "Lola's favorite room is on the eighth floor.",
+   "ko": "롤라가 가장 좋아하는 방은 8층에 있어요.",
+   "blank": "octavo",
+   "src": "made"
+  }
+ ],
  "w|octubre": [
   {
    "text": "La boda será en octubre.",
@@ -39365,6 +39829,22 @@
    "blank": "para"
   }
  ],
+ "w|parcial": [
+  {
+   "text": "Nico trabaja a tiempo parcial en un refugio de animales.",
+   "en": "Nico works part-time at an animal shelter.",
+   "ko": "니코는 동물 보호소에서 시간제로 일해요.",
+   "blank": "parcial",
+   "src": "made"
+  },
+  {
+   "text": "En verano, Lola contrata a estudiantes a tiempo parcial.",
+   "en": "In summer, Lola hires students part-time.",
+   "ko": "여름이면 롤라는 학생들을 시간제로 뽑아요.",
+   "blank": "parcial",
+   "src": "made"
+  }
+ ],
  "w|parecer": [
   {
    "text": "Parece que va a llover.",
@@ -40869,6 +41349,22 @@
    "en": "The book belongs to the library.",
    "ko": "그 책은 도서관 거야.",
    "blank": "pertenece"
+  }
+ ],
+ "w|perturbar": [
+  {
+   "text": "Nico dice que el ruido de los petardos perturba a los perros.",
+   "en": "Nico says the noise of firecrackers disturbs dogs.",
+   "ko": "니코는 폭죽 소리가 개들을 불안하게 한다고 해요.",
+   "blank": "perturba",
+   "src": "made"
+  },
+  {
+   "text": "Las obras de al lado perturbaron el descanso de los clientes de Lola.",
+   "en": "The construction next door disturbed the rest of Lola's guests.",
+   "ko": "옆 건물 공사가 롤라네 손님들의 휴식을 방해했어요.",
+   "blank": "perturbaron",
+   "src": "made"
   }
  ],
  "w|pervertir": [
@@ -42707,6 +43203,22 @@
    "en": "What do you intend to achieve with that attitude?",
    "ko": "그 태도로 뭘 얻으려고 하는 거야?",
    "blank": "pretendes"
+  }
+ ],
+ "w|prevenir": [
+  {
+   "text": "Nico vacuna a los perros para prevenir enfermedades.",
+   "en": "Nico vaccinates dogs to prevent diseases.",
+   "ko": "니코는 병을 막으려고 개들에게 예방 주사를 놓아요.",
+   "blank": "prevenir",
+   "src": "made"
+  },
+  {
+   "text": "Para prevenir accidentes, Lola puso suelos antideslizantes en la piscina.",
+   "en": "To prevent accidents, Lola put non-slip floors around the pool.",
+   "ko": "롤라는 사고를 막으려고 수영장 바닥을 미끄럼 방지로 바꿨어요.",
+   "blank": "prevenir",
+   "src": "made"
   }
  ],
  "w|prever": [
@@ -45053,6 +45565,22 @@
    "en": "Pick up your things from the floor.",
    "ko": "바닥에 있는 네 짐 치워.",
    "blank": "Recoge"
+  }
+ ],
+ "w|recomendación": [
+  {
+   "text": "Nico le dio una recomendación a una familia: no darle chocolate al perro.",
+   "en": "Nico gave a family a piece of advice: don't give the dog chocolate.",
+   "ko": "니코는 한 가족에게 개한테 초콜릿을 주지 말라고 당부했어요.",
+   "blank": "recomendación",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente le pidió a Lola una recomendación de restaurante.",
+   "en": "A guest asked Lola for a restaurant recommendation.",
+   "ko": "한 손님이 롤라에게 식당을 추천해 달라고 했어요.",
+   "blank": "recomendación",
+   "src": "made"
   }
  ],
  "w|recomendar": [
@@ -47471,6 +47999,22 @@
    "en": "Turn down the noise, please.",
    "ko": "소리 좀 줄여 줘.",
    "blank": "ruido"
+  }
+ ],
+ "w|ruidoso": [
+  {
+   "text": "Por la mañana, los perros del refugio son muy ruidosos.",
+   "en": "In the morning, the shelter dogs are very noisy.",
+   "ko": "아침이면 보호소 개들이 아주 시끄러워요.",
+   "blank": "ruidosos",
+   "src": "made"
+  },
+  {
+   "text": "Los huéspedes de la habitación de al lado eran muy ruidosos.",
+   "en": "The guests in the room next door were very noisy.",
+   "ko": "옆방 손님들이 아주 시끄러웠어요.",
+   "blank": "ruidosos",
+   "src": "made"
   }
  ],
  "w|ruina": [
@@ -50273,6 +50817,22 @@
    "blank": "soportar"
   }
  ],
+ "w|soporte": [
+  {
+   "text": "Nico le puso un soporte al perro herido para que pudiera caminar.",
+   "en": "Nico fitted the injured dog with a support so it could walk.",
+   "ko": "니코는 다친 개가 걸을 수 있게 보조 기구를 달아 줬어요.",
+   "blank": "soporte",
+   "src": "made"
+  },
+  {
+   "text": "Lola compró un soporte para la tableta de la recepción.",
+   "en": "Lola bought a stand for the front desk tablet.",
+   "ko": "롤라는 프런트 태블릿 거치대를 샀어요.",
+   "blank": "soporte",
+   "src": "made"
+  }
+ ],
  "w|sordo": [
   {
    "text": "Se hizo el sordo ante la crítica.",
@@ -50959,6 +51519,22 @@
    "blank": "superar"
   }
  ],
+ "w|superficial": [
+  {
+   "text": "Por suerte, la herida del caballo era superficial.",
+   "en": "Luckily, the horse's wound was superficial.",
+   "ko": "다행히 말의 상처는 깊지 않았어요.",
+   "blank": "superficial",
+   "src": "made"
+  },
+  {
+   "text": "Lola dice que el lujo superficial no hace feliz a nadie.",
+   "en": "Lola says superficial luxury doesn't make anyone happy.",
+   "ko": "롤라는 겉만 번지르르한 사치로는 아무도 행복해지지 않는다고 해요.",
+   "blank": "superficial",
+   "src": "made"
+  }
+ ],
  "w|superficie": [
   {
    "text": "Limpia la superficie de la mesa.",
@@ -51029,6 +51605,38 @@
    "en": "Survival depends on clean water.",
    "ko": "생존은 깨끗한 물에 달려 있어.",
    "blank": "supervivencia"
+  }
+ ],
+ "w|superviviente": [
+  {
+   "text": "El único superviviente del incendio fue un gato, y Nico lo curó.",
+   "en": "The only survivor of the fire was a cat, and Nico treated it.",
+   "ko": "화재에서 살아남은 건 고양이 한 마리뿐이었고, 니코가 치료했어요.",
+   "blank": "superviviente",
+   "src": "made"
+  },
+  {
+   "text": "Un huésped de Lola fue el único superviviente de un naufragio.",
+   "en": "One of Lola's guests was the only survivor of a shipwreck.",
+   "ko": "롤라네 호텔 손님 한 명은 난파 사고의 유일한 생존자였어요.",
+   "blank": "superviviente",
+   "src": "made"
+  }
+ ],
+ "w|suplicar": [
+  {
+   "text": "Una niña le suplicó a Nico que salvara a su conejo.",
+   "en": "A girl begged Nico to save her rabbit.",
+   "ko": "한 여자아이가 자기 토끼를 살려 달라고 니코에게 애원했어요.",
+   "blank": "suplicó",
+   "src": "made"
+  },
+  {
+   "text": "Un turista le suplicó a Lola una habitación libre en agosto.",
+   "en": "A tourist begged Lola for a free room in August.",
+   "ko": "한 관광객이 8월에 빈방을 달라고 롤라에게 사정했어요.",
+   "blank": "suplicó",
+   "src": "made"
   }
  ],
  "w|suponer": [
@@ -55213,6 +55821,22 @@
    "blank": "veterano"
   }
  ],
+ "w|veterinario": [
+  {
+   "text": "Nico es veterinario en un pueblo de montaña.",
+   "en": "Nico is a vet in a mountain village.",
+   "ko": "니코는 산골 마을의 수의사예요.",
+   "blank": "veterinario",
+   "src": "made"
+  },
+  {
+   "text": "Un veterinario cuida al perro del hotel de Lola.",
+   "en": "A vet looks after the dog at Lola's hotel.",
+   "ko": "수의사가 롤라네 호텔 개를 돌봐요.",
+   "blank": "veterinario",
+   "src": "made"
+  }
+ ],
  "w|vez": [
   {
    "text": "Tal vez llueva hoy.",
@@ -56239,6 +56863,22 @@
    "en": "I'll let you know later.",
    "ko": "나중에 내가 알려 줄게.",
    "blank": "Yo"
+  }
+ ],
+ "w|yoga": [
+  {
+   "text": "Para relajarse, Nico hace yoga por las mañanas.",
+   "en": "To relax, Nico does yoga in the mornings.",
+   "ko": "니코는 마음을 풀려고 아침마다 요가를 해요.",
+   "blank": "yoga",
+   "src": "made"
+  },
+  {
+   "text": "Cada mañana, el hotel de Lola ofrece clases de yoga en la terraza.",
+   "en": "Every morning, Lola's hotel offers yoga classes on the terrace.",
+   "ko": "롤라의 호텔은 매일 아침 테라스에서 요가 수업을 열어요.",
+   "blank": "yoga",
+   "src": "made"
   }
  ],
  "w|zanahoria": [
