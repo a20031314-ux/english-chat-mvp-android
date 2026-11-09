@@ -227,6 +227,22 @@
    "blank": "あっ"
   }
  ],
+ "w|あっち": [
+  {
+   "text": "「楽屋はあっちだよ」と先輩が新人に廊下の奥を指さした。",
+   "en": "\"The dressing room's over there,\" a senior actor said, pointing down the hall for the newcomer.",
+   "ko": "\"분장실은 저쪽이야\" 하고 선배가 신입에게 복도 안쪽을 가리켰어요.",
+   "blank": "あっち",
+   "src": "made"
+  },
+  {
+   "text": "「ドラムの練習室はあっちの建物だよ」と恵子は新入生に教えた。",
+   "en": "\"The drum practice room is in that building over there,\" Keiko told the new student.",
+   "ko": "\"드럼 연습실은 저쪽 건물이야\" 하고 게이코가 신입생에게 알려 줬어요.",
+   "blank": "あっち",
+   "src": "made"
+  }
+ ],
  "w|アップ": [
   {
    "text": "音量アップして。",
@@ -239,6 +255,38 @@
    "en": "Did you upload the photo?",
    "ko": "사진 올렸어?",
    "blank": "アップ"
+  }
+ ],
+ "w|アップデート": [
+  {
+   "text": "チケット予約のアプリがアップデートされて、席が選びやすくなった。",
+   "en": "The ticket booking app was updated, making it easier to choose seats.",
+   "ko": "티켓 예약 앱이 업데이트돼서 좌석 고르기가 쉬워졌어요.",
+   "blank": "アップデート",
+   "src": "made"
+  },
+  {
+   "text": "楽譜アプリをアップデートしたら、恵子の書き込みが消えてしまった。",
+   "en": "When she updated her sheet music app, Keiko's notes disappeared.",
+   "ko": "악보 앱을 업데이트했더니 게이코가 적어 둔 메모가 사라졌어요.",
+   "blank": "アップデート",
+   "src": "made"
+  }
+ ],
+ "w|アドバイス": [
+  {
+   "text": "直樹は先輩のアドバイスどおりに、資料の順番を入れ替えた。",
+   "en": "Naoki rearranged the order of the documents as his senior advised.",
+   "ko": "나오키는 선배의 조언대로 자료 순서를 바꿨어요.",
+   "blank": "アドバイス",
+   "src": "made"
+  },
+  {
+   "text": "葵は、常連のおじいさんのアドバイスで漬物を置くことにした。",
+   "en": "On the advice of an elderly regular, Aoi decided to stock pickles.",
+   "ko": "아오이는 단골 할아버지의 조언으로 절임 반찬을 들여놓기로 했어요.",
+   "blank": "アドバイス",
+   "src": "made"
   }
  ],
  "w|あなた": [
@@ -281,6 +329,22 @@
    "en": "Who is that person?",
    "ko": "저 사람 누구야?",
    "blank": "あの"
+  }
+ ],
+ "w|アピール": [
+  {
+   "text": "直樹は会議で、新しい企画の強みを上手にアピールした。",
+   "en": "At the meeting, Naoki skillfully pitched the strengths of the new project.",
+   "ko": "나오키는 회의에서 새 기획의 강점을 잘 어필했어요.",
+   "blank": "アピール",
+   "src": "made"
+  },
+  {
+   "text": "葵は手書きのポップで、地元の野菜の新鮮さをアピールした。",
+   "en": "Aoi used handwritten signs to show off the freshness of the local vegetables.",
+   "ko": "아오이는 손글씨 POP로 지역 채소의 신선함을 어필했어요.",
+   "blank": "アピール",
+   "src": "made"
   }
  ],
  "w|アプリ": [
@@ -423,6 +487,38 @@
    "blank": "あれ"
   }
  ],
+ "w|アレンジ": [
+  {
+   "text": "誠は、季節ごとに本の展示のアレンジを変えている。",
+   "en": "Makoto changes the arrangement of the book display each season.",
+   "ko": "마코토는 계절마다 책 전시 배치를 바꿔요.",
+   "blank": "アレンジ",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、客の好みに合わせてスマホケースのアレンジもしている。",
+   "en": "Yoko also customizes phone cases to suit customers' tastes.",
+   "ko": "요코는 손님 취향에 맞춰 스마트폰 케이스 꾸미기도 해요.",
+   "blank": "アレンジ",
+   "src": "made"
+  }
+ ],
+ "w|アンケート": [
+  {
+   "text": "店はお客さんにアンケートを書いてもらい、メニューを見直した。",
+   "en": "The restaurant had customers fill out a survey and revised the menu.",
+   "ko": "가게는 손님들에게 설문지를 받아서 메뉴를 다시 손봤어요.",
+   "blank": "アンケート",
+   "src": "made"
+  },
+  {
+   "text": "座席のポケットに、乗客向けのアンケート用紙が入っていた。",
+   "en": "There was a passenger survey form in the seat pocket.",
+   "ko": "좌석 주머니에 승객용 설문지가 들어 있었어요.",
+   "blank": "アンケート",
+   "src": "made"
+  }
+ ],
  "w|あんた": [
   {
    "text": "我々のチームは、あんたのチームを最初の試合で簡単に負かすことが可能だ。",
@@ -523,6 +619,22 @@
    "blank": "イカ"
   }
  ],
+ "w|いかが": [
+  {
+   "text": "「お茶でもいかがですか」と、翔太は落とし物を届けに来た女性に声をかけた。",
+   "en": "\"Would you like some tea?\" Shota asked the woman who came to turn in a lost item.",
+   "ko": "\"차라도 한잔 어떠세요?\" 하고 쇼타는 분실물을 가져온 여성에게 말을 걸었어요.",
+   "blank": "いかが",
+   "src": "made"
+  },
+  {
+   "text": "コーチは「次の練習試合、由美がキャプテンでいかがでしょう」と提案した。",
+   "en": "The coach suggested, \"How about Yumi as captain for the next practice game?\"",
+   "ko": "코치는 \"다음 연습 경기는 유미가 주장을 맡는 게 어떨까요?\" 하고 제안했어요.",
+   "blank": "いかが",
+   "src": "made"
+  }
+ ],
  "w|いきなり": [
   {
    "text": "いきなり来ないで。",
@@ -577,6 +689,22 @@
    "en": "I watched a movie with a handsome actor.",
    "ko": "잘생긴 배우 영화를 봤어.",
    "blank": "イケメン"
+  }
+ ],
+ "w|いじめ": [
+  {
+   "text": "学校は、いじめを見たらすぐに相談するよう生徒に伝えている。",
+   "en": "The school tells students to talk to someone right away if they see bullying.",
+   "ko": "학교는 괴롭힘을 보면 바로 상담하라고 학생들에게 알리고 있어요.",
+   "blank": "いじめ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、弟が新しい学校でいじめにあわないか心配している。",
+   "en": "Misaki is worried her little brother might be bullied at his new school.",
+   "ko": "미사키는 남동생이 새 학교에서 괴롭힘을 당하지 않을까 걱정하고 있어요.",
+   "blank": "いじめ",
+   "src": "made"
   }
  ],
  "w|いずれ": [
@@ -761,6 +889,22 @@
    "blank": "イラスト"
   }
  ],
+ "w|いらっしゃる": [
+  {
+   "text": "受付の警官は「どのようなご用件でいらっしゃいますか」と丁寧に尋ねた。",
+   "en": "The officer at reception politely asked, \"What brings you here today?\"",
+   "ko": "접수처 경찰관은 \"어떤 용건으로 오셨나요?\" 하고 정중하게 물었어요.",
+   "blank": "いらっしゃい",
+   "src": "made"
+  },
+  {
+   "text": "「監督はもう体育館にいらっしゃるよ」と先輩が由美に教えた。",
+   "en": "\"The coach is already in the gym,\" a senior player told Yumi.",
+   "ko": "\"감독님은 벌써 체육관에 계셔\" 하고 선배가 유미에게 알려 줬어요.",
+   "blank": "いらっしゃる",
+   "src": "made"
+  }
+ ],
  "w|いる": [
   {
    "text": "まだそこにいる？",
@@ -801,6 +945,22 @@
    "en": "That's the so-called expert view.",
    "ko": "이른바 전문가 의견이야.",
    "blank": "いわゆる"
+  }
+ ],
+ "w|インストール": [
+  {
+   "text": "図書館のパソコンに、新しい検索ソフトのインストールが終わった。",
+   "en": "Installation of new search software on the library computers was completed.",
+   "ko": "도서관 컴퓨터에 새 검색 프로그램 설치가 끝났어요.",
+   "blank": "インストール",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、修理が終わった携帯に必要なアプリのインストールを手伝った。",
+   "en": "Yoko helped install the necessary apps on the repaired phone.",
+   "ko": "요코는 수리가 끝난 휴대폰에 필요한 앱 설치를 도와줬어요.",
+   "blank": "インストール",
+   "src": "made"
   }
  ],
  "w|インターネット": [
@@ -975,6 +1135,22 @@
    "blank": "エネルギー"
   }
  ],
+ "w|エピソード": [
+  {
+   "text": "翔太は新人時代の失敗のエピソードを、後輩に笑いながら話した。",
+   "en": "Shota laughed as he told the juniors an episode about a mistake from his rookie days.",
+   "ko": "쇼타는 신참 시절 실수 에피소드를 후배들에게 웃으며 이야기했어요.",
+   "blank": "エピソード",
+   "src": "made"
+  },
+  {
+   "text": "卒業式で、由美は部活の面白いエピソードを話した。",
+   "en": "At graduation, Yumi talked about a funny episode from club activities.",
+   "ko": "졸업식에서 유미는 동아리의 재미있는 에피소드를 이야기했어요.",
+   "blank": "エピソード",
+   "src": "made"
+  }
+ ],
  "w|エリア": [
   {
    "text": "このエリア、詳しい？",
@@ -1029,6 +1205,22 @@
    "en": "Hey, listen.",
    "ko": "야, 들어 봐.",
    "blank": "おい"
+  }
+ ],
+ "w|おう": [
+  {
+   "text": "「おう、健太、今日も早いな」と体育の先生が声をかけた。",
+   "en": "\"Hey, Kenta, early again today, huh,\" the PE teacher called out.",
+   "ko": "\"오, 겐타, 오늘도 일찍 왔네\" 하고 체육 선생님이 말을 걸었어요.",
+   "blank": "おう",
+   "src": "made"
+  },
+  {
+   "text": "「おう、美咲ちゃん、手伝いに来たぞ」と叔父さんが玄関で笑った。",
+   "en": "\"Hey, Misaki, I came to help,\" her uncle said with a laugh at the door.",
+   "ko": "\"오, 미사키, 도와주러 왔다\" 하고 삼촌이 현관에서 웃었어요.",
+   "blank": "おう",
+   "src": "made"
   }
  ],
  "w|おお": [
@@ -1765,6 +1957,22 @@
    "blank": "キー"
   }
  ],
+ "w|キーボード": [
+  {
+   "text": "検索用のキーボードが壊れていて、誠は新しいものを注文した。",
+   "en": "The keyboard for searching was broken, so Makoto ordered a new one.",
+   "ko": "검색용 키보드가 고장 나서 마코토는 새것을 주문했어요.",
+   "blank": "キーボード",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、ノートパソコンのキーボードの交換も引き受けている。",
+   "en": "Yoko also takes on keyboard replacements for laptops.",
+   "ko": "요코는 노트북 키보드 교체도 맡아요.",
+   "blank": "キーボード",
+   "src": "made"
+  }
+ ],
  "w|キス": [
   {
    "text": "キスされた。",
@@ -2247,6 +2455,22 @@
    "blank": "コーヒー"
   }
  ],
+ "w|コール": [
+  {
+   "text": "ホールから注文のコールが入ると、大輔はすぐに返事をする。",
+   "en": "When an order call comes in from the floor, Daisuke answers right away.",
+   "ko": "홀에서 주문 콜이 들어오면 다이스케는 바로 대답해요.",
+   "blank": "コール",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、取引先からのコールに出るためにデッキに移動した。",
+   "en": "Sakura moved to the vestibule to take a call from the client.",
+   "ko": "사쿠라는 거래처 전화를 받으려고 객차 연결 통로로 갔어요.",
+   "blank": "コール",
+   "src": "made"
+  }
+ ],
  "w|ゴール": [
   {
    "text": "ゴールまであと少しだ。",
@@ -2259,6 +2483,38 @@
    "en": "I scored and celebrated.",
    "ko": "골을 넣고 기뻐했어.",
    "blank": "ゴール"
+  }
+ ],
+ "w|ゴールド": [
+  {
+   "text": "直樹の会社のカードは、出張が多いのでゴールドに変わった。",
+   "en": "Naoki's company card was upgraded to gold because he travels so much on business.",
+   "ko": "나오키의 회사 카드는 출장이 많아서 골드로 바뀌었어요.",
+   "blank": "ゴールド",
+   "src": "made"
+  },
+  {
+   "text": "レジの横には、ゴールドの招き猫が置いてある。",
+   "en": "A gold beckoning cat sits next to the register.",
+   "ko": "계산대 옆에는 금색 마네키네코가 놓여 있어요.",
+   "blank": "ゴールド",
+   "src": "made"
+  }
+ ],
+ "w|コア": [
+  {
+   "text": "この部署のコアな業務は、取引先との価格の交渉だ。",
+   "en": "The core work of this department is negotiating prices with clients.",
+   "ko": "이 부서의 핵심 업무는 거래처와의 가격 협상이에요.",
+   "blank": "コア",
+   "src": "made"
+  },
+  {
+   "text": "葵の店のコアなお客さんは、近くに住むお年寄りたちだ。",
+   "en": "The core customers of Aoi's shop are elderly people who live nearby.",
+   "ko": "아오이네 가게의 핵심 손님은 근처에 사는 어르신들이에요.",
+   "blank": "コア",
+   "src": "made"
   }
  ],
  "w|こいつ": [
@@ -2303,6 +2559,22 @@
    "en": "This is how you do it.",
    "ko": "이렇게 하는 거야.",
    "blank": "こう"
+  }
+ ],
+ "w|ごく": [
+  {
+   "text": "この図書館の古い地図は、ごく一部しか公開されていない。",
+   "en": "Only a very small portion of this library's old maps is open to the public.",
+   "ko": "이 도서관의 옛 지도는 극히 일부만 공개되어 있어요.",
+   "blank": "ごく",
+   "src": "made"
+  },
+  {
+   "text": "画面のひびは、ごく小さなものでもだんだん広がる。",
+   "en": "Cracks in a screen gradually spread, even very small ones.",
+   "ko": "화면 금은 아주 작은 것이라도 점점 커져요.",
+   "blank": "ごく",
+   "src": "made"
   }
  ],
  "w|ここ": [
@@ -2401,6 +2673,22 @@
    "en": "I like this place.",
    "ko": "이 가게 좋아.",
    "blank": "この"
+  }
+ ],
+ "w|この世": [
+  {
+   "text": "誠は、この世にある本をすべて読むのは無理だと笑った。",
+   "en": "Makoto laughed that it's impossible to read every book in this world.",
+   "ko": "마코토는 이 세상의 책을 전부 읽는 건 무리라며 웃었어요.",
+   "blank": "この世",
+   "src": "made"
+  },
+  {
+   "text": "亡くなった父の写真はこの世に一枚しかないと、客は涙ぐんだ。",
+   "en": "The customer teared up, saying it was the only photo of her late father in this world.",
+   "ko": "돌아가신 아버지 사진은 이 세상에 한 장뿐이라며 손님은 눈물을 글썽였어요.",
+   "blank": "この世",
+   "src": "made"
   }
  ],
  "w|コピー": [
@@ -2657,6 +2945,38 @@
    "blank": "ご飯"
   }
  ],
+ "w|サークル": [
+  {
+   "text": "アルバイトの学生は、大学の料理サークルに入っているそうだ。",
+   "en": "The part-time student is apparently in a cooking club at university.",
+   "ko": "아르바이트 학생은 대학 요리 동아리에 들어가 있대요.",
+   "blank": "サークル",
+   "src": "made"
+  },
+  {
+   "text": "大学時代の写真サークルの友達と、さくらは途中の駅で会う約束をした。",
+   "en": "Sakura arranged to meet a friend from her university photography club at a station along the way.",
+   "ko": "사쿠라는 대학 시절 사진 동아리 친구와 중간 역에서 만나기로 했어요.",
+   "blank": "サークル",
+   "src": "made"
+  }
+ ],
+ "w|サーバー": [
+  {
+   "text": "チケットの発売日に、予約サイトのサーバーが落ちてしまった。",
+   "en": "On the day tickets went on sale, the booking site's server went down.",
+   "ko": "티켓 판매일에 예매 사이트 서버가 다운됐어요.",
+   "blank": "サーバー",
+   "src": "made"
+  },
+  {
+   "text": "学校のサーバーに、生徒の演奏動画が保存されている。",
+   "en": "Students' performance videos are stored on the school server.",
+   "ko": "학교 서버에 학생들의 연주 영상이 저장돼 있어요.",
+   "blank": "サーバー",
+   "src": "made"
+  }
+ ],
  "w|サービス": [
   {
    "text": "サービスがいいね。",
@@ -2897,6 +3217,22 @@
    "blank": "シーン"
   }
  ],
+ "w|シェア": [
+  {
+   "text": "署の掲示板には、カーシェアの車の盗難に注意するよう書かれていた。",
+   "en": "The station bulletin board warned people to watch out for theft of car-share vehicles.",
+   "ko": "경찰서 게시판에는 카셰어링 차량 도난에 주의하라고 쓰여 있었어요.",
+   "blank": "シェア",
+   "src": "made"
+  },
+  {
+   "text": "由美は試合の動画を、チームのグループにシェアした。",
+   "en": "Yumi shared the game video with the team's group.",
+   "ko": "유미는 경기 영상을 팀 단체방에 공유했어요.",
+   "blank": "シェア",
+   "src": "made"
+  }
+ ],
  "w|しかし": [
   {
    "text": "しかし、困ったね。",
@@ -2951,6 +3287,22 @@
    "en": "Lock up properly.",
    "ko": "문 꼭 잠가.",
    "blank": "しっかり"
+  }
+ ],
+ "w|シナリオ": [
+  {
+   "text": "拓也はいつか、自分でシナリオを書いて上演したいと思っている。",
+   "en": "Takuya hopes to someday write and stage his own script.",
+   "ko": "다쿠야는 언젠가 직접 시나리오를 써서 공연하고 싶어 해요.",
+   "blank": "シナリオ",
+   "src": "made"
+  },
+  {
+   "text": "恵子は映画のシナリオを読んで、その場面に合う曲を作った。",
+   "en": "Keiko read a film script and composed a piece to fit the scene.",
+   "ko": "게이코는 영화 시나리오를 읽고 그 장면에 맞는 곡을 만들었어요.",
+   "blank": "シナリオ",
+   "src": "made"
   }
  ],
  "w|しばらく": [
@@ -3109,6 +3461,22 @@
    "blank": "ショック"
   }
  ],
+ "w|ショット": [
+  {
+   "text": "ポスター用に、拓也は衣装を着たショットを何枚も撮られた。",
+   "en": "For the poster, Takuya was photographed in many shots wearing his costume.",
+   "ko": "포스터용으로 다쿠야는 의상을 입은 사진을 몇 장이나 찍혔어요.",
+   "blank": "ショット",
+   "src": "made"
+  },
+  {
+   "text": "パンフレットには、恵子がピアノを弾くショットが大きく使われた。",
+   "en": "A shot of Keiko playing the piano was used large in the brochure.",
+   "ko": "팸플릿에는 게이코가 피아노를 치는 사진이 크게 실렸어요.",
+   "blank": "ショット",
+   "src": "made"
+  }
+ ],
  "w|ショップ": [
   {
    "text": "近くのショップに行こう。",
@@ -3135,6 +3503,22 @@
    "en": "I watched the whole series.",
    "ko": "시리즈를 다 봤어.",
    "blank": "シリーズ"
+  }
+ ],
+ "w|シンプル": [
+  {
+   "text": "部長は、資料はできるだけシンプルにまとめるよう言った。",
+   "en": "The department head said to keep the documents as simple as possible.",
+   "ko": "부장은 자료를 되도록 간단하게 정리하라고 했어요.",
+   "blank": "シンプル",
+   "src": "made"
+  },
+  {
+   "text": "葵の店の看板は、名前だけのシンプルなデザインだ。",
+   "en": "The sign at Aoi's shop is a simple design with just the name.",
+   "ko": "아오이네 가게 간판은 이름만 있는 단순한 디자인이에요.",
+   "blank": "シンプル",
+   "src": "made"
   }
  ],
  "w|スーツ": [
@@ -3473,6 +3857,22 @@
    "en": "I cleaned yesterday.",
    "ko": "어제 청소했어.",
    "blank": "した"
+  }
+ ],
+ "w|すると": [
+  {
+   "text": "誠が古い本を開いた。すると、中から昔の手紙が出てきた。",
+   "en": "Makoto opened an old book. Then an old letter fell out from inside.",
+   "ko": "마코토가 오래된 책을 펼쳤어요. 그러자 안에서 옛날 편지가 나왔어요.",
+   "blank": "すると",
+   "src": "made"
+  },
+  {
+   "text": "陽子が電源ボタンを長く押した。すると、真っ暗だった画面が明るくなった。",
+   "en": "Yoko held down the power button. Then the dark screen lit up.",
+   "ko": "요코가 전원 버튼을 길게 눌렀어요. 그러자 새카맣던 화면이 밝아졌어요.",
+   "blank": "すると",
+   "src": "made"
   }
  ],
  "w|セール": [
@@ -3885,6 +4285,22 @@
    "blank": "そんな"
   }
  ],
+ "w|ターゲット": [
+  {
+   "text": "新しい商品のターゲットは、二十代の働く女性だ。",
+   "en": "The target for the new product is working women in their twenties.",
+   "ko": "새 상품의 타깃은 이십 대 직장 여성이에요.",
+   "blank": "ターゲット",
+   "src": "made"
+  },
+  {
+   "text": "葵の新しいお弁当は、忙しい学生をターゲットにしている。",
+   "en": "Aoi's new boxed lunch targets busy students.",
+   "ko": "아오이의 새 도시락은 바쁜 학생들을 타깃으로 해요.",
+   "blank": "ターゲット",
+   "src": "made"
+  }
+ ],
  "w|ダイエット": [
   {
    "text": "ダイエット中なんだ。",
@@ -4153,6 +4569,22 @@
    "blank": "たった"
   }
  ],
+ "w|たとえ": [
+  {
+   "text": "たとえ忙しくても、大輔は味見を絶対に忘れない。",
+   "en": "Even when he's busy, Daisuke never forgets to taste.",
+   "ko": "아무리 바빠도 다이스케는 맛보기를 절대 잊지 않아요.",
+   "blank": "たとえ",
+   "src": "made"
+  },
+  {
+   "text": "たとえ電車が遅れても、会議には間に合うはずだ。",
+   "en": "Even if the train is late, Sakura should make it to the meeting in time.",
+   "ko": "설령 열차가 늦어져도 회의에는 늦지 않을 거예요.",
+   "blank": "たとえ",
+   "src": "made"
+  }
+ ],
  "w|タバコ": [
   {
    "text": "タバコの煙が苦手。",
@@ -4237,6 +4669,22 @@
    "blank": "ダメージ"
   }
  ],
+ "w|タレント": [
+  {
+   "text": "今回の舞台には、テレビで有名なタレントも出演する。",
+   "en": "A well-known TV personality is also appearing in this production.",
+   "ko": "이번 무대에는 텔레비전에서 유명한 방송인도 출연해요.",
+   "blank": "タレント",
+   "src": "made"
+  },
+  {
+   "text": "恵子の先輩は、歌の上手なタレントとしてテレビにも出ている。",
+   "en": "Keiko's senior also appears on TV as a personality who sings well.",
+   "ko": "게이코의 선배는 노래 잘하는 방송인으로 텔레비전에도 나와요.",
+   "blank": "タレント",
+   "src": "made"
+  }
+ ],
  "w|ダンス": [
   {
    "text": "ダンスを習ってる。",
@@ -4319,6 +4767,22 @@
    "en": "The tickets sold out.",
    "ko": "티켓이 매진됐어.",
    "blank": "チケット"
+  }
+ ],
+ "w|チャット": [
+  {
+   "text": "詐欺グループは、アプリのチャットで連絡を取り合っていたらしい。",
+   "en": "The fraud ring apparently kept in touch through an app's chat.",
+   "ko": "사기 조직은 앱 채팅으로 서로 연락을 주고받았던 것 같아요.",
+   "blank": "チャット",
+   "src": "made"
+  },
+  {
+   "text": "由美たちは、部活の連絡をグループチャットでしている。",
+   "en": "Yumi and her teammates handle club announcements in a group chat.",
+   "ko": "유미네는 동아리 연락을 단체 채팅으로 해요.",
+   "blank": "チャット",
+   "src": "made"
   }
  ],
  "w|チャレンジ": [
@@ -4445,6 +4909,22 @@
    "en": "I couldn't help laughing.",
    "ko": "무심코 웃어 버렸어.",
    "blank": "つい"
+  }
+ ],
+ "w|ついで": [
+  {
+   "text": "健太は職員室に行くついでに、学級日誌も先生に出しておいた。",
+   "en": "While going to the staff room anyway, Kenta also handed in the class diary to the teacher.",
+   "ko": "겐타는 교무실에 가는 김에 학급 일지도 선생님께 내 두었어요.",
+   "blank": "ついで",
+   "src": "made"
+  },
+  {
+   "text": "美咲は郵便局に行くついでに、住所変更の手続きも済ませた。",
+   "en": "While she was at the post office anyway, Misaki also took care of her change of address.",
+   "ko": "미사키는 우체국에 가는 김에 주소 변경 절차도 마쳤어요.",
+   "blank": "ついで",
+   "src": "made"
   }
  ],
  "w|ついに": [
@@ -4643,6 +5123,22 @@
    "en": "I will go even in the rain.",
    "ko": "비가 와도 갈게.",
    "blank": "でも"
+  }
+ ],
+ "w|デモ": [
+  {
+   "text": "駅前でデモがあるので、翔太は朝から交通整理に立った。",
+   "en": "There was a demonstration in front of the station, so Shota directed traffic from morning.",
+   "ko": "역 앞에서 시위가 있어서 쇼타는 아침부터 교통 정리를 했어요.",
+   "blank": "デモ",
+   "src": "made"
+  },
+  {
+   "text": "スポーツ用品店で、由美は新しいシューズのデモ品を試し履きした。",
+   "en": "At the sporting goods store, Yumi tried on a demo pair of new shoes.",
+   "ko": "스포츠 용품점에서 유미는 새 농구화 시착용 제품을 신어 봤어요.",
+   "blank": "デモ",
+   "src": "made"
   }
  ],
  "w|テレビ": [
@@ -4897,6 +5393,22 @@
    "blank": "とても"
   }
  ],
+ "w|どなた": [
+  {
+   "text": "「どなたか、この傘を落とされた方はいませんか」と係員が客席に呼びかけた。",
+   "en": "\"Has anyone dropped this umbrella?\" the attendant called to the audience.",
+   "ko": "\"이 우산 떨어뜨리신 분 계신가요?\" 하고 직원이 객석에 물었어요.",
+   "blank": "どなた",
+   "src": "made"
+  },
+  {
+   "text": "受付の人は「どなたのレッスンをご希望ですか」と尋ねた。",
+   "en": "The receptionist asked, \"Whose lessons would you like to take?\"",
+   "ko": "접수처 사람은 \"어느 선생님 레슨을 원하세요?\" 하고 물었어요.",
+   "blank": "どなた",
+   "src": "made"
+  }
+ ],
  "w|とにかく": [
   {
    "text": "とにかく行こう。",
@@ -4923,6 +5435,22 @@
    "en": "Which road should we take?",
    "ko": "어느 길로 갈까?",
    "blank": "どの"
+  }
+ ],
+ "w|どのくらい": [
+  {
+   "text": "「この資料、完成までにどのくらいかかりそう？」と課長が直樹に聞いた。",
+   "en": "\"How long do you think this document will take to finish?\" the section chief asked Naoki.",
+   "ko": "\"이 자료 완성까지 얼마나 걸릴 것 같아?\" 하고 과장이 나오키에게 물었어요.",
+   "blank": "どのくらい",
+   "src": "made"
+  },
+  {
+   "text": "「この卵、一日にどのくらい売れるの？」と常連のおばあさんが聞いた。",
+   "en": "\"How many of these eggs do you sell a day?\" asked an elderly regular.",
+   "ko": "\"이 달걀 하루에 얼마나 팔려?\" 하고 단골 할머니가 물었어요.",
+   "blank": "どのくらい",
+   "src": "made"
   }
  ],
  "w|ドライバー": [
@@ -5375,6 +5903,22 @@
    "blank": "ノート"
   }
  ],
+ "w|のんびり": [
+  {
+   "text": "金曜日の午後、仕事が早く片付いて、直樹は少しのんびりできた。",
+   "en": "On Friday afternoon, Naoki's work wrapped up early and he could relax a little.",
+   "ko": "금요일 오후, 일이 일찍 끝나서 나오키는 조금 여유를 부릴 수 있었어요.",
+   "blank": "のんびり",
+   "src": "made"
+  },
+  {
+   "text": "昼過ぎの店は客が少なくて、葵はのんびり棚を整理した。",
+   "en": "The shop was quiet after noon, so Aoi leisurely tidied the shelves.",
+   "ko": "점심이 지난 가게는 손님이 적어서 아오이는 느긋하게 진열대를 정리했어요.",
+   "blank": "のんびり",
+   "src": "made"
+  }
+ ],
  "w|バー": [
   {
    "text": "バーで飲んだ。",
@@ -5417,6 +5961,22 @@
    "ko": "저희 회사는 기계 부품을 수입하고 있어요.",
    "blank": "パーツ",
    "src": "tatoeba:83525 en:320191/CK"
+  }
+ ],
+ "w|パーティ": [
+  {
+   "text": "図書館の職員たちは、誠の誕生日に小さなパーティを開いた。",
+   "en": "The library staff threw a small party for Makoto's birthday.",
+   "ko": "도서관 직원들은 마코토의 생일에 작은 파티를 열었어요.",
+   "blank": "パーティ",
+   "src": "made"
+  },
+  {
+   "text": "パーティで携帯を落とした客が、朝一番に店に来た。",
+   "en": "A customer who dropped their phone at a party came to the shop first thing in the morning.",
+   "ko": "파티에서 휴대폰을 떨어뜨린 손님이 아침 일찍 가게에 왔어요.",
+   "blank": "パーティ",
+   "src": "made"
   }
  ],
  "w|パーティー": [
@@ -5601,6 +6161,22 @@
    "blank": "パス"
   }
  ],
+ "w|パソコン": [
+  {
+   "text": "朝、直樹のパソコンが急に動かなくなって、仕事が始められなかった。",
+   "en": "In the morning, Naoki's computer suddenly stopped working and he couldn't start work.",
+   "ko": "아침에 나오키의 컴퓨터가 갑자기 멈춰서 일을 시작할 수 없었어요.",
+   "blank": "パソコン",
+   "src": "made"
+  },
+  {
+   "text": "葵は閉店後、パソコンで売上を確認する。",
+   "en": "After closing, Aoi checks the sales on her computer.",
+   "ko": "아오이는 가게 문을 닫은 뒤 컴퓨터로 매출을 확인해요.",
+   "blank": "パソコン",
+   "src": "made"
+  }
+ ],
  "w|パターン": [
   {
    "text": "同じパターンだね。",
@@ -5713,6 +6289,22 @@
    "blank": "パパ"
   }
  ],
+ "w|パフォーマンス": [
+  {
+   "text": "文化祭で、健太たちはダンスのパフォーマンスを披露した。",
+   "en": "At the school festival, Kenta and his friends put on a dance performance.",
+   "ko": "학교 축제에서 겐타네는 댄스 퍼포먼스를 선보였어요.",
+   "blank": "パフォーマンス",
+   "src": "made"
+  },
+  {
+   "text": "新しく買った掃除機は、値段のわりにパフォーマンスがいい。",
+   "en": "The newly bought vacuum performs well for the price.",
+   "ko": "새로 산 청소기는 가격에 비해 성능이 좋아요.",
+   "blank": "パフォーマンス",
+   "src": "made"
+  }
+ ],
  "w|バラ": [
   {
    "text": "赤いバラをもらった。",
@@ -5739,6 +6331,22 @@
    "en": "I might lose my balance.",
    "ko": "균형 잃을 것 같아.",
    "blank": "バランス"
+  }
+ ],
+ "w|はるか": [
+  {
+   "text": "料理長の腕は、大輔よりもはるかに上だ。",
+   "en": "The head chef's skill is far above Daisuke's.",
+   "ko": "주방장 솜씨는 다이스케보다 훨씬 위예요.",
+   "blank": "はるか",
+   "src": "made"
+  },
+  {
+   "text": "窓の外には、はるか遠くまで田んぼが広がっていた。",
+   "en": "Outside the window, rice fields stretched far into the distance.",
+   "ko": "창밖에는 저 멀리까지 논이 펼쳐져 있었어요.",
+   "blank": "はるか",
+   "src": "made"
   }
  ],
  "w|パワー": [
@@ -5853,6 +6461,22 @@
    "blank": "ビジネス"
   }
  ],
+ "w|ビッグ": [
+  {
+   "text": "直樹のチームは、ビッグな取引先との契約を取ることに成功した。",
+   "en": "Naoki's team succeeded in landing a contract with a big client.",
+   "ko": "나오키네 팀은 큰 거래처와 계약을 따내는 데 성공했어요.",
+   "blank": "ビッグ",
+   "src": "made"
+  },
+  {
+   "text": "店の前に、ビッグサイズのアイスの新しいポスターが貼られた。",
+   "en": "A new poster for big-size ice cream was put up in front of the shop.",
+   "ko": "가게 앞에 빅 사이즈 아이스크림 새 포스터가 붙었어요.",
+   "blank": "ビッグ",
+   "src": "made"
+  }
+ ],
  "w|びっくり": [
   {
    "text": "びっくりした！",
@@ -5921,6 +6545,22 @@
    "en": "I'll wait inside the building.",
    "ko": "빌딩 안에서 기다릴게.",
    "blank": "ビル"
+  }
+ ],
+ "w|ヒロイン": [
+  {
+   "text": "学芸会で、ヒロインの役はくじで決めることになった。",
+   "en": "For the school arts festival, it was decided that the heroine's role would be chosen by lottery.",
+   "ko": "학예회에서 여주인공 역할은 제비뽑기로 정하기로 했어요.",
+   "blank": "ヒロイン",
+   "src": "made"
+  },
+  {
+   "text": "美咲の好きな漫画のヒロインも、物語の最初に新しい町へ引っ越してくる。",
+   "en": "The heroine of Misaki's favorite manga also moves to a new town at the start of the story.",
+   "ko": "미사키가 좋아하는 만화의 여주인공도 이야기 처음에 새 동네로 이사 와요.",
+   "blank": "ヒロイン",
+   "src": "made"
   }
  ],
  "w|ピンク": [
@@ -6009,6 +6649,22 @@
    "blank": "ファン"
   }
  ],
+ "w|ファンタジー": [
+  {
+   "text": "健太は図書室でファンタジーの小説を三冊も借りた。",
+   "en": "Kenta borrowed as many as three fantasy novels from the school library.",
+   "ko": "겐타는 도서실에서 판타지 소설을 세 권이나 빌렸어요.",
+   "blank": "ファンタジー",
+   "src": "made"
+  },
+  {
+   "text": "美咲が段ボールを開けると、子どもの頃に読んだファンタジーの本が出てきた。",
+   "en": "When Misaki opened a cardboard box, the fantasy books she read as a child came out.",
+   "ko": "미사키가 상자를 열자 어릴 때 읽던 판타지 책이 나왔어요.",
+   "blank": "ファンタジー",
+   "src": "made"
+  }
+ ],
  "w|フィギュア": [
   {
    "text": "好きなフィギュアを買った。",
@@ -6021,6 +6677,38 @@
    "en": "I line up figures on the shelf.",
    "ko": "선반에 피규어를 세워.",
    "blank": "フィギュア"
+  }
+ ],
+ "w|フォロー": [
+  {
+   "text": "拓也がセリフを忘れたとき、相手役がうまくフォローしてくれた。",
+   "en": "When Takuya forgot his line, his scene partner covered for him smoothly.",
+   "ko": "다쿠야가 대사를 잊었을 때 상대 배우가 잘 받쳐 줬어요.",
+   "blank": "フォロー",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、好きなピアニストのアカウントをフォローしている。",
+   "en": "Keiko follows the account of her favorite pianist.",
+   "ko": "게이코는 좋아하는 피아니스트 계정을 팔로우하고 있어요.",
+   "blank": "フォロー",
+   "src": "made"
+  }
+ ],
+ "w|ふざける": [
+  {
+   "text": "掃除の時間にふざけていた男子たちが、先生に叱られた。",
+   "en": "The boys who were fooling around during cleaning time got scolded by the teacher.",
+   "ko": "청소 시간에 장난치던 남자애들이 선생님한테 혼났어요.",
+   "blank": "ふざけ",
+   "src": "made"
+  },
+  {
+   "text": "段ボールの山で弟がふざけて遊んでいたので、美咲は注意した。",
+   "en": "Misaki's little brother was messing around on the pile of boxes, so she told him off.",
+   "ko": "남동생이 상자 더미에서 장난치며 놀고 있어서 미사키가 주의를 줬어요.",
+   "blank": "ふざけ",
+   "src": "made"
   }
  ],
  "w|プラス": [
@@ -6077,6 +6765,22 @@
    "en": "Can we get in free?",
    "ko": "무료로 들어갈 수 있어?",
    "blank": "フリー"
+  }
+ ],
+ "w|プレー": [
+  {
+   "text": "誠は、有名なサッカー選手のプレーを分析した本を探していた。",
+   "en": "Makoto was looking for a book analyzing a famous soccer player's play.",
+   "ko": "마코토는 유명한 축구 선수의 플레이를 분석한 책을 찾고 있었어요.",
+   "blank": "プレー",
+   "src": "made"
+  },
+  {
+   "text": "ゲームのプレー中に画面が割れたと、高校生が恥ずかしそうに言った。",
+   "en": "A high schooler said sheepishly that the screen cracked while he was playing a game.",
+   "ko": "게임을 하다가 화면이 깨졌다고 고등학생이 부끄러운 듯 말했어요.",
+   "blank": "プレー",
+   "src": "made"
   }
  ],
  "w|プレイ": [
@@ -6147,6 +6851,22 @@
    "en": "Let's leave it to a pro.",
    "ko": "프로한테 맡기자.",
    "blank": "プロ"
+  }
+ ],
+ "w|ブログ": [
+  {
+   "text": "直樹は会社の公式ブログに、新商品の紹介を書いた。",
+   "en": "Naoki wrote an introduction to the new product on the company's official blog.",
+   "ko": "나오키는 회사 공식 블로그에 신상품 소개를 썼어요.",
+   "blank": "ブログ",
+   "src": "made"
+  },
+  {
+   "text": "葵は、店の毎日の出来事をブログに書いている。",
+   "en": "Aoi writes about the daily happenings at her shop on her blog.",
+   "ko": "아오이는 가게의 하루하루 일을 블로그에 써요.",
+   "blank": "ブログ",
+   "src": "made"
   }
  ],
  "w|プログラム": [
@@ -6273,6 +6993,38 @@
    "en": "That pet is really cute.",
    "ko": "그 반려동물은 정말 귀여워.",
    "blank": "ペット"
+  }
+ ],
+ "w|ペン": [
+  {
+   "text": "大輔は冷蔵庫に貼ったメモに、赤いペンで日付を書いた。",
+   "en": "Daisuke wrote the date with a red pen on the memo stuck to the fridge.",
+   "ko": "다이스케는 냉장고에 붙인 메모에 빨간 펜으로 날짜를 적었어요.",
+   "blank": "ペン",
+   "src": "made"
+  },
+  {
+   "text": "さくらはペンを落としてしまい、前の座席の下を探した。",
+   "en": "Sakura dropped her pen and looked under the seat in front.",
+   "ko": "사쿠라는 펜을 떨어뜨려서 앞 좌석 밑을 찾았어요.",
+   "blank": "ペン",
+   "src": "made"
+  }
+ ],
+ "w|ボーナス": [
+  {
+   "text": "冬のボーナスで、直樹は新しいスーツを買うつもりだ。",
+   "en": "Naoki plans to buy a new suit with his winter bonus.",
+   "ko": "나오키는 겨울 보너스로 새 정장을 살 생각이에요.",
+   "blank": "ボーナス",
+   "src": "made"
+  },
+  {
+   "text": "年末にボーナスをもらった常連さんが、高いお酒を買っていった。",
+   "en": "A regular who got a year-end bonus bought an expensive bottle of sake.",
+   "ko": "연말 보너스를 받은 단골이 비싼 술을 사 갔어요.",
+   "blank": "ボーナス",
+   "src": "made"
   }
  ],
  "w|ホーム": [
@@ -6471,6 +7223,22 @@
    "blank": "ほら"
   }
  ],
+ "w|ボランティア": [
+  {
+   "text": "土曜日は、ボランティアの大学生が子どもに絵本を読んでくれる。",
+   "en": "On Saturdays, college student volunteers read picture books to the children.",
+   "ko": "토요일에는 자원봉사 대학생들이 아이들에게 그림책을 읽어 줘요.",
+   "blank": "ボランティア",
+   "src": "made"
+  },
+  {
+   "text": "陽子は月に一度、お年寄りに携帯の使い方を教えるボランティアをしている。",
+   "en": "Once a month, Yoko volunteers teaching elderly people how to use their phones.",
+   "ko": "요코는 한 달에 한 번 어르신들에게 휴대폰 사용법을 가르치는 봉사 활동을 해요.",
+   "blank": "ボランティア",
+   "src": "made"
+  }
+ ],
  "w|マーク": [
   {
    "text": "ここにマークして。",
@@ -6585,6 +7353,22 @@
    "src": "made"
   }
  ],
+ "w|マスコミ": [
+  {
+   "text": "珍しい古い地図が見つかって、マスコミが図書館に取材に来た。",
+   "en": "A rare old map was found, and the media came to the library to cover it.",
+   "ko": "희귀한 옛 지도가 발견돼서 언론이 도서관에 취재하러 왔어요.",
+   "blank": "マスコミ",
+   "src": "made"
+  },
+  {
+   "text": "陽子の店は、安くて丁寧な修理でマスコミにも紹介された。",
+   "en": "Yoko's shop was even featured in the media for its cheap and careful repairs.",
+   "ko": "요코네 가게는 싸고 꼼꼼한 수리로 언론에도 소개됐어요.",
+   "blank": "マスコミ",
+   "src": "made"
+  }
+ ],
  "w|マスター": [
   {
    "text": "操作をマスターした。",
@@ -6597,6 +7381,22 @@
    "en": "I asked the shop's owner.",
    "ko": "가게 마스터에게 물어봤어.",
    "blank": "マスター"
+  }
+ ],
+ "w|ますます": [
+  {
+   "text": "年末が近づいて、直樹の仕事はますます忙しくなった。",
+   "en": "As the end of the year approached, Naoki's work got busier and busier.",
+   "ko": "연말이 다가오면서 나오키의 일은 점점 더 바빠졌어요.",
+   "blank": "ますます",
+   "src": "made"
+  },
+  {
+   "text": "近くに大きなスーパーができて、葵の店の経営はますます厳しくなった。",
+   "en": "A big supermarket opened nearby, and running Aoi's shop got even harder.",
+   "ko": "근처에 큰 슈퍼가 생겨서 아오이네 가게 경영은 점점 더 어려워졌어요.",
+   "blank": "ますます",
+   "src": "made"
   }
  ],
  "w|また": [
@@ -6625,6 +7425,22 @@
    "en": "They aren't here yet.",
    "ko": "아직 안 도착했어.",
    "blank": "まだ"
+  }
+ ],
+ "w|または": [
+  {
+   "text": "本の返却は、カウンターまたは入り口のポストでできる。",
+   "en": "Books can be returned at the counter or in the drop box at the entrance.",
+   "ko": "책 반납은 카운터나 입구 반납함에서 할 수 있어요.",
+   "blank": "または",
+   "src": "made"
+  },
+  {
+   "text": "支払いは、現金または電子マネーでお願いしている。",
+   "en": "Payment is accepted in cash or e-money.",
+   "ko": "결제는 현금이나 전자 화폐로 부탁드리고 있어요.",
+   "blank": "または",
+   "src": "made"
   }
  ],
  "w|まだまだ": [
@@ -6737,6 +7553,22 @@
    "en": "Did you notice the mistake?",
    "ko": "실수를 알아챘어?",
    "blank": "ミス"
+  }
+ ],
+ "w|ミッション": [
+  {
+   "text": "今夜のミッションは、百人分の料理を時間どおりに出すことだ。",
+   "en": "Tonight's mission is to serve food for a hundred people on time.",
+   "ko": "오늘 밤의 미션은 백 명분 요리를 제시간에 내는 거예요.",
+   "blank": "ミッション",
+   "src": "made"
+  },
+  {
+   "text": "今回の出張のミッションは、新しい取引先と契約を結ぶことだ。",
+   "en": "The mission of this business trip is to sign a contract with a new client.",
+   "ko": "이번 출장의 미션은 새 거래처와 계약을 맺는 거예요.",
+   "blank": "ミッション",
+   "src": "made"
   }
  ],
  "w|ミニ": [
@@ -6925,6 +7757,22 @@
    "en": "I talk while looking at my notes.",
    "ko": "메모를 보며 말해.",
    "blank": "メモ"
+  }
+ ],
+ "w|メリット": [
+  {
+   "text": "電子書籍のメリットは、夜中でも借りられることだ。",
+   "en": "The advantage of e-books is that you can borrow them even in the middle of the night.",
+   "ko": "전자책의 장점은 한밤중에도 빌릴 수 있다는 거예요.",
+   "blank": "メリット",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、新しい機種に買い替えるメリットを客に説明した。",
+   "en": "Yoko explained to the customer the advantages of switching to a new model.",
+   "ko": "요코는 새 기종으로 바꿀 때의 장점을 손님에게 설명했어요.",
+   "blank": "メリット",
+   "src": "made"
   }
  ],
  "w|メンバー": [
@@ -7713,6 +8561,22 @@
    "blank": "レベル"
   }
  ],
+ "w|レポート": [
+  {
+   "text": "大輔は、食中毒を防ぐ方法について本社にレポートを出した。",
+   "en": "Daisuke submitted a report to the head office on how to prevent food poisoning.",
+   "ko": "다이스케는 식중독 예방법에 대해 본사에 보고서를 냈어요.",
+   "blank": "レポート",
+   "src": "made"
+  },
+  {
+   "text": "さくらは帰りの電車で、出張のレポートを書き上げた。",
+   "en": "On the train home, Sakura finished writing her business trip report.",
+   "ko": "사쿠라는 돌아오는 열차에서 출장 보고서를 다 썼어요.",
+   "blank": "レポート",
+   "src": "made"
+  }
+ ],
  "w|ローン": [
   {
    "text": "ローンを組んだよ。",
@@ -7825,6 +8689,22 @@
    "en": "The difference is tiny.",
    "ko": "차이는 아주 작아.",
    "blank": "わずか"
+  }
+ ],
+ "w|わっ": [
+  {
+   "text": "「わっ、油がはねた」と新人が叫んで後ろに下がった。",
+   "en": "\"Whoa, the oil splattered,\" the new cook yelled and stepped back.",
+   "ko": "\"앗, 기름 튀었다\" 하고 신입이 외치며 뒤로 물러났어요.",
+   "blank": "わっ",
+   "src": "made"
+  },
+  {
+   "text": "トンネルを抜けると海が見えて、さくらは思わず「わっ」と声を上げた。",
+   "en": "When the train came out of the tunnel the sea appeared, and Sakura couldn't help saying \"Wow.\"",
+   "ko": "터널을 빠져나오자 바다가 보여서 사쿠라는 저도 모르게 \"와\" 하고 소리를 냈어요.",
+   "blank": "わっ",
+   "src": "made"
   }
  ],
  "w|一人": [
@@ -8053,6 +8933,22 @@
    "blank": "一部"
   }
  ],
+ "w|丁寧": [
+  {
+   "text": "大輔は、どんなに小さな野菜でも丁寧に洗う。",
+   "en": "Daisuke washes even the smallest vegetables carefully.",
+   "ko": "다이스케는 아무리 작은 채소라도 꼼꼼하게 씻어요.",
+   "blank": "丁寧",
+   "src": "made"
+  },
+  {
+   "text": "車掌さんは、さくらの質問に丁寧に答えてくれた。",
+   "en": "The conductor answered Sakura's question politely.",
+   "ko": "차장님은 사쿠라의 질문에 친절하게 대답해 줬어요.",
+   "blank": "丁寧",
+   "src": "made"
+  }
+ ],
  "w|丈夫": [
   {
    "text": "このバッグは丈夫だ。",
@@ -8163,6 +9059,22 @@
    "en": "The stock rise continues.",
    "ko": "주가 상승이 이어져.",
    "blank": "上昇"
+  }
+ ],
+ "w|上映": [
+  {
+   "text": "体育館で、平和について考える映画が上映された。",
+   "en": "A film about thinking about peace was shown in the gym.",
+   "ko": "체육관에서 평화에 대해 생각하는 영화가 상영됐어요.",
+   "blank": "上映",
+   "src": "made"
+  },
+  {
+   "text": "新しい家の近くの映画館では、昔の名作も上映している。",
+   "en": "The movie theater near the new house also shows old classics.",
+   "ko": "새집 근처 영화관에서는 옛날 명작도 상영해요.",
+   "blank": "上映",
+   "src": "made"
   }
  ],
  "w|上記": [
@@ -8733,6 +9645,22 @@
    "blank": "主張"
   }
  ],
+ "w|主演": [
+  {
+   "text": "翔太の妹は、刑事が主演のドラマが大好きだ。",
+   "en": "Shota's younger sister loves dramas starring detectives.",
+   "ko": "쇼타의 여동생은 형사가 주연인 드라마를 정말 좋아해요.",
+   "blank": "主演",
+   "src": "made"
+  },
+  {
+   "text": "由美の好きな女優が主演のバスケ映画が、来月公開される。",
+   "en": "A basketball movie starring Yumi's favorite actress comes out next month.",
+   "ko": "유미가 좋아하는 여배우가 주연인 농구 영화가 다음 달 개봉해요.",
+   "blank": "主演",
+   "src": "made"
+  }
+ ],
  "w|主義": [
   {
    "text": "肉は食べない主義なんだ。",
@@ -8745,6 +9673,22 @@
    "en": "I won't bend on this.",
    "ko": "이 주의는 안 꺾어.",
    "blank": "主義"
+  }
+ ],
+ "w|主要": [
+  {
+   "text": "拓也は、今回の芝居で主要な役を任された。",
+   "en": "Takuya was given a major role in this play.",
+   "ko": "다쿠야는 이번 연극에서 주요 배역을 맡았어요.",
+   "blank": "主要",
+   "src": "made"
+  },
+  {
+   "text": "この学校の主要な科目は、ピアノと声楽と作曲だ。",
+   "en": "The main subjects at this school are piano, voice, and composition.",
+   "ko": "이 학교의 주요 과목은 피아노와 성악과 작곡이에요.",
+   "blank": "主要",
+   "src": "made"
   }
  ],
  "w|久しぶり": [
@@ -8837,6 +9781,22 @@
    "src": "made"
   }
  ],
+ "w|予告": [
+  {
+   "text": "数学の先生は、来週小テストをすると予告した。",
+   "en": "The math teacher gave notice that there would be a quiz next week.",
+   "ko": "수학 선생님은 다음 주에 쪽지 시험을 보겠다고 예고했어요.",
+   "blank": "予告",
+   "src": "made"
+  },
+  {
+   "text": "管理会社から、来月の水道工事の予告があった。",
+   "en": "The management company gave notice of water works next month.",
+   "ko": "관리 회사에서 다음 달 수도 공사 예고가 왔어요.",
+   "blank": "予告",
+   "src": "made"
+  }
+ ],
  "w|予定": [
   {
    "text": "今日、予定ある？",
@@ -8909,6 +9869,22 @@
    "blank": "予約"
   }
  ],
+ "w|争い": [
+  {
+   "text": "隣の家との小さな争いが、警察への通報につながることもある。",
+   "en": "A small dispute with the neighbors can sometimes lead to a call to the police.",
+   "ko": "이웃과의 작은 다툼이 경찰 신고로 이어지기도 해요.",
+   "blank": "争い",
+   "src": "made"
+  },
+  {
+   "text": "スタメンの座をめぐる争いは、毎年とても激しい。",
+   "en": "The competition for starting spots is very fierce every year.",
+   "ko": "주전 자리를 둘러싼 다툼은 매년 아주 치열해요.",
+   "blank": "争い",
+   "src": "made"
+  }
+ ],
  "w|事件": [
   {
    "text": "大変な事件だね。",
@@ -8921,6 +9897,22 @@
    "en": "The case got solved.",
    "ko": "사건이 해결됐어.",
    "blank": "事件"
+  }
+ ],
+ "w|事例": [
+  {
+   "text": "直樹は、ほかの会社の成功した事例を集めて会議で紹介した。",
+   "en": "Naoki gathered successful cases from other companies and presented them at the meeting.",
+   "ko": "나오키는 다른 회사의 성공 사례를 모아 회의에서 소개했어요.",
+   "blank": "事例",
+   "src": "made"
+  },
+  {
+   "text": "葵は、小さな店が生き残った事例を本で読んで参考にした。",
+   "en": "Aoi read in a book about cases of small shops that survived and used them as reference.",
+   "ko": "아오이는 작은 가게가 살아남은 사례를 책에서 읽고 참고했어요.",
+   "blank": "事例",
+   "src": "made"
   }
  ],
  "w|事前": [
@@ -9033,6 +10025,38 @@
    "en": "I hear they're starting a new business.",
    "ko": "새 사업 시작한대.",
    "blank": "事業"
+  }
+ ],
+ "w|事項": [
+  {
+   "text": "会議の前に、直樹は確認する事項を紙に書き出した。",
+   "en": "Before the meeting, Naoki wrote down the items to check on paper.",
+   "ko": "회의 전에 나오키는 확인할 사항을 종이에 적었어요.",
+   "blank": "事項",
+   "src": "made"
+  },
+  {
+   "text": "葵は、アルバイトに伝える注意事項をノートにまとめた。",
+   "en": "Aoi wrote down in a notebook the points to tell the part-timers.",
+   "ko": "아오이는 아르바이트생에게 전할 주의 사항을 노트에 정리했어요.",
+   "blank": "事項",
+   "src": "made"
+  }
+ ],
+ "w|五輪": [
+  {
+   "text": "五輪の年には、スポーツ選手の伝記がよく読まれる。",
+   "en": "In Olympic years, biographies of athletes are widely read.",
+   "ko": "올림픽이 열리는 해에는 운동선수 전기가 많이 읽혀요.",
+   "blank": "五輪",
+   "src": "made"
+  },
+  {
+   "text": "五輪の期間中は、夜中に試合を見る人が多く、電池の交換の依頼が増える。",
+   "en": "During the Olympics, many people watch the games late at night, so requests for battery replacements go up.",
+   "ko": "올림픽 기간에는 밤늦게 경기를 보는 사람이 많아서 배터리 교체 의뢰가 늘어요.",
+   "blank": "五輪",
+   "src": "made"
   }
  ],
  "w|亡くなる": [
@@ -9149,6 +10173,22 @@
    "blank": "人々"
   }
  ],
+ "w|人事": [
+  {
+   "text": "春の人事で、大輔は副料理長になった。",
+   "en": "In the spring personnel changes, Daisuke became sous-chef.",
+   "ko": "봄 인사에서 다이스케는 부주방장이 됐어요.",
+   "blank": "人事",
+   "src": "made"
+  },
+  {
+   "text": "さくらは人事の担当なので、今回は地方の大学で会社の説明をする。",
+   "en": "Sakura is in charge of HR, so this time she'll present the company at a regional university.",
+   "ko": "사쿠라는 인사 담당이라서 이번에는 지방 대학에서 회사 설명을 해요.",
+   "blank": "人事",
+   "src": "made"
+  }
+ ],
  "w|人口": [
   {
    "text": "人口が減ってる。",
@@ -9203,6 +10243,22 @@
    "en": "There are a lot of people.",
    "ko": "인원이 많네.",
    "blank": "人数"
+  }
+ ],
+ "w|人材": [
+  {
+   "text": "若い人材が足りなくて、どの店も困っている。",
+   "en": "There's a shortage of young talent, and every restaurant is struggling.",
+   "ko": "젊은 인재가 부족해서 어느 가게나 곤란해하고 있어요.",
+   "blank": "人材",
+   "src": "made"
+  },
+  {
+   "text": "さくらの会社は、地方で優秀な人材を探している。",
+   "en": "Sakura's company is looking for talented people in the regions.",
+   "ko": "사쿠라네 회사는 지방에서 우수한 인재를 찾고 있어요.",
+   "blank": "人材",
+   "src": "made"
   }
  ],
  "w|人気": [
@@ -9513,6 +10569,22 @@
    "blank": "付く"
   }
  ],
+ "w|付属": [
+  {
+   "text": "拓也は大学の付属の劇団で、演技の基礎を学んだ。",
+   "en": "Takuya learned the basics of acting in a theater troupe attached to his university.",
+   "ko": "다쿠야는 대학 부속 극단에서 연기 기초를 배웠어요.",
+   "blank": "付属",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、音楽大学の付属高校に通っている。",
+   "en": "Keiko attends a high school affiliated with a music university.",
+   "ko": "게이코는 음악 대학 부속 고등학교에 다녀요.",
+   "blank": "付属",
+   "src": "made"
+  }
+ ],
  "w|付近": [
   {
    "text": "この付近の家は、どれも似たり寄ったりだから、見分けがつかないんだよな。",
@@ -9541,6 +10613,22 @@
    "en": "Is there a substitute?",
    "ko": "대용이 있어?",
    "blank": "代わり"
+  }
+ ],
+ "w|代理": [
+  {
+   "text": "料理長が休みの日は、大輔が代理で厨房を仕切る。",
+   "en": "On days the head chef is off, Daisuke runs the kitchen in his place.",
+   "ko": "주방장이 쉬는 날에는 다이스케가 대신 주방을 맡아요.",
+   "blank": "代理",
+   "src": "made"
+  },
+  {
+   "text": "さくらは出張に行けない上司の代理として、新幹線に乗った。",
+   "en": "Sakura got on the bullet train on behalf of her boss, who couldn't go on the business trip.",
+   "ko": "사쿠라는 출장을 못 가는 상사를 대신해서 신칸센을 탔어요.",
+   "blank": "代理",
+   "src": "made"
   }
  ],
  "w|代表": [
@@ -9883,6 +10971,22 @@
    "blank": "会社員"
   }
  ],
+ "w|会見": [
+  {
+   "text": "健太はテレビで見た記者会見の様子を、新聞部の記事にまとめた。",
+   "en": "Kenta wrote up the press conference he saw on TV as an article for the newspaper club.",
+   "ko": "겐타는 텔레비전에서 본 기자 회견 모습을 신문부 기사로 정리했어요.",
+   "blank": "会見",
+   "src": "made"
+  },
+  {
+   "text": "美咲が片付けをしている間、テレビでは俳優の結婚会見が流れていた。",
+   "en": "While Misaki was tidying up, an actor's wedding press conference was on TV.",
+   "ko": "미사키가 정리하는 동안 텔레비전에서는 배우의 결혼 기자 회견이 나오고 있었어요.",
+   "blank": "会見",
+   "src": "made"
+  }
+ ],
  "w|会話": [
   {
    "text": "会話が弾んでるね。",
@@ -10121,6 +11225,22 @@
    "blank": "体制"
   }
  ],
+ "w|体育": [
+  {
+   "text": "厨房は一日中立ちっぱなしで、体育の授業より疲れると大輔は言う。",
+   "en": "Standing all day in the kitchen, Daisuke says, is more tiring than PE class.",
+   "ko": "주방은 하루 종일 서 있어서 체육 수업보다 힘들다고 다이스케는 말해요.",
+   "blank": "体育",
+   "src": "made"
+  },
+  {
+   "text": "向かいの席の高校生たちは、体育祭の話で盛り上がっていた。",
+   "en": "The high schoolers in the seats across were excitedly talking about their sports festival.",
+   "ko": "맞은편 자리 고등학생들은 체육 대회 이야기로 들떠 있었어요.",
+   "blank": "体育",
+   "src": "made"
+  }
+ ],
  "w|体調": [
   {
    "text": "トムは学校に行きたくないわけではなかったが、体調が悪くて行けなかった。",
@@ -10249,6 +11369,22 @@
    "en": "Can you make some time?",
    "ko": "시간 낼 수 있어?",
    "blank": "作れる"
+  }
+ ],
+ "w|作れる": [
+  {
+   "text": "美術の先生は、紙だけでも立派な模型が作れると言った。",
+   "en": "The art teacher said you can make a fine model with just paper.",
+   "ko": "미술 선생님은 종이만으로도 멋진 모형을 만들 수 있다고 했어요.",
+   "blank": "作れる",
+   "src": "made"
+  },
+  {
+   "text": "新しい台所は広いので、美咲はやっと好きな料理が作れる。",
+   "en": "The new kitchen is spacious, so Misaki can finally make the dishes she likes.",
+   "ko": "새 부엌은 넓어서 미사키는 드디어 좋아하는 요리를 만들 수 있어요.",
+   "blank": "作れる",
+   "src": "made"
   }
  ],
  "w|作品": [
@@ -10509,6 +11645,22 @@
    "blank": "価格"
   }
  ],
+ "w|侵入": [
+  {
+   "text": "夜中に誰かが学校に侵入したらしく、窓ガラスが割れていた。",
+   "en": "Someone seems to have broken into the school at night, and a window was smashed.",
+   "ko": "밤중에 누군가 학교에 침입했는지 유리창이 깨져 있었어요.",
+   "blank": "侵入",
+   "src": "made"
+  },
+  {
+   "text": "美咲は泥棒の侵入を防ぐため、窓に新しい鍵をつけた。",
+   "en": "To keep burglars from breaking in, Misaki put new locks on the windows.",
+   "ko": "미사키는 도둑이 침입하지 못하게 창문에 새 잠금장치를 달았어요.",
+   "blank": "侵入",
+   "src": "made"
+  }
+ ],
  "w|便利": [
   {
    "text": "このアプリ、便利だね。",
@@ -10535,6 +11687,54 @@
    "en": "Save the data.",
    "ko": "데이터를 저장해.",
    "blank": "保存"
+  }
+ ],
+ "w|保守": [
+  {
+   "text": "古い劇場の保守には、毎年かなりの費用がかかる。",
+   "en": "Maintaining the old theater costs a considerable amount every year.",
+   "ko": "오래된 극장을 유지 보수하는 데 매년 꽤 많은 비용이 들어요.",
+   "blank": "保守",
+   "src": "made"
+  },
+  {
+   "text": "恵子の先生は、昔ながらの弾き方を守る保守的な人だ。",
+   "en": "Keiko's teacher is a conservative person who sticks to traditional playing.",
+   "ko": "게이코의 선생님은 옛 방식을 지키는 보수적인 사람이에요.",
+   "blank": "保守",
+   "src": "made"
+  }
+ ],
+ "w|保管": [
+  {
+   "text": "卒業アルバムの原稿は、職員室の金庫で保管されている。",
+   "en": "The graduation album manuscripts are kept in the safe in the staff room.",
+   "ko": "졸업 앨범 원고는 교무실 금고에 보관되어 있어요.",
+   "blank": "保管",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しの間、大きな家具は業者の倉庫で保管してもらった。",
+   "en": "During the move, the large furniture was kept in the mover's warehouse.",
+   "ko": "이사하는 동안 큰 가구는 업체 창고에 보관해 두었어요.",
+   "blank": "保管",
+   "src": "made"
+  }
+ ],
+ "w|保育": [
+  {
+   "text": "誠は、保育の仕事をしている人向けの本の棚を作った。",
+   "en": "Makoto made a shelf of books for people working in childcare.",
+   "ko": "마코토는 보육 일을 하는 사람들을 위한 책장을 만들었어요.",
+   "blank": "保育",
+   "src": "made"
+  },
+  {
+   "text": "保育園で働く客は、子どもに携帯を落とされたと苦笑いした。",
+   "en": "A customer who works at a daycare smiled wryly that a child had dropped her phone.",
+   "ko": "어린이집에서 일하는 손님은 아이가 휴대폰을 떨어뜨렸다며 쓴웃음을 지었어요.",
+   "blank": "保育",
+   "src": "made"
   }
  ],
  "w|保証": [
@@ -10605,6 +11805,22 @@
    "en": "That's hard to believe.",
    "ko": "믿기 어려운 이야기네.",
    "blank": "信じ"
+  }
+ ],
+ "w|信仰": [
+  {
+   "text": "翔太は、人の信仰には口を出さないよう気をつけている。",
+   "en": "Shota is careful not to comment on people's religious faith.",
+   "ko": "쇼타는 사람의 신앙에는 참견하지 않도록 조심해요.",
+   "blank": "信仰",
+   "src": "made"
+  },
+  {
+   "text": "チームメイトの一人は信仰のために、日曜日の試合には出ない。",
+   "en": "One of Yumi's teammates doesn't play in Sunday games because of her faith.",
+   "ko": "팀원 한 명은 신앙 때문에 일요일 경기에는 안 나와요.",
+   "blank": "信仰",
+   "src": "made"
   }
  ],
  "w|信号": [
@@ -10737,6 +11953,22 @@
    "src": "made"
   }
  ],
+ "w|倒れる": [
+  {
+   "text": "朝礼の途中で、一年生の女の子が貧血で倒れた。",
+   "en": "During the morning assembly, a first-year girl fainted from anemia.",
+   "ko": "조회 도중에 1학년 여자아이가 빈혈로 쓰러졌어요.",
+   "blank": "倒れ",
+   "src": "made"
+  },
+  {
+   "text": "運んでいる途中で、背の高い本棚が倒れそうになった。",
+   "en": "While it was being carried, the tall bookshelf nearly toppled over.",
+   "ko": "옮기는 도중에 키 큰 책장이 쓰러질 뻔했어요.",
+   "blank": "倒れ",
+   "src": "made"
+  }
+ ],
  "w|候補": [
   {
    "text": "候補が決まったよ。",
@@ -10819,6 +12051,22 @@
    "en": "Look at the other side.",
    "ko": "반대쪽을 봐.",
    "blank": "側"
+  }
+ ],
+ "w|偶然": [
+  {
+   "text": "拓也は駅で偶然、昔の演劇仲間に会った。",
+   "en": "Takuya ran into an old theater friend by chance at the station.",
+   "ko": "다쿠야는 역에서 우연히 옛 연극 동료를 만났어요.",
+   "blank": "偶然",
+   "src": "made"
+  },
+  {
+   "text": "恵子が偶然聞いた曲が、次の課題曲だった。",
+   "en": "The piece Keiko happened to hear turned out to be the next assigned piece.",
+   "ko": "게이코가 우연히 들은 곡이 다음 과제곡이었어요.",
+   "blank": "偶然",
+   "src": "made"
   }
  ],
  "w|傘": [
@@ -11571,6 +12819,22 @@
    "blank": "兵器"
   }
  ],
+ "w|兵士": [
+  {
+   "text": "国語の教科書に、戦争から帰ってきた兵士の話が載っていた。",
+   "en": "The Japanese textbook had a story about a soldier who came back from the war.",
+   "ko": "국어 교과서에 전쟁에서 돌아온 병사 이야기가 실려 있었어요.",
+   "blank": "兵士",
+   "src": "made"
+  },
+  {
+   "text": "押し入れの奥から、祖父が若い兵士だった頃の写真が出てきた。",
+   "en": "From the back of the closet came a photo of Misaki's grandfather as a young soldier.",
+   "ko": "벽장 안쪽에서 할아버지가 젊은 병사였을 때 사진이 나왔어요.",
+   "blank": "兵士",
+   "src": "made"
+  }
+ ],
  "w|具体的": [
   {
    "text": "具体的な計画が必要だ。",
@@ -11681,6 +12945,22 @@
    "en": "I pressed the play button.",
    "ko": "재생 버튼을 눌렀어.",
    "blank": "再生"
+  }
+ ],
+ "w|再開": [
+  {
+   "text": "事故の処理が終わり、止まっていた道路の通行が再開された。",
+   "en": "Once the accident was cleared, traffic resumed on the road that had been closed.",
+   "ko": "사고 처리가 끝나서 막혀 있던 도로 통행이 재개됐어요.",
+   "blank": "再開",
+   "src": "made"
+  },
+  {
+   "text": "体育館の工事が終わって、由美たちの練習がやっと再開した。",
+   "en": "The gym renovation finished, and Yumi's team's practice finally resumed.",
+   "ko": "체육관 공사가 끝나서 유미네 연습이 드디어 다시 시작됐어요.",
+   "blank": "再開",
+   "src": "made"
   }
  ],
  "w|冒険": [
@@ -12055,6 +13335,22 @@
    "src": "made"
   }
  ],
+ "w|出席": [
+  {
+   "text": "直樹は、取引先の創立記念パーティーに会社の代表として出席した。",
+   "en": "Naoki attended a client's anniversary party as the company's representative.",
+   "ko": "나오키는 거래처 창립 기념 파티에 회사 대표로 참석했어요.",
+   "blank": "出席",
+   "src": "made"
+  },
+  {
+   "text": "葵は、商店街の集まりに毎月欠かさず出席している。",
+   "en": "Aoi attends the shopping street meeting every month without fail.",
+   "ko": "아오이는 상점가 모임에 매달 빠짐없이 참석해요.",
+   "blank": "出席",
+   "src": "made"
+  }
+ ],
  "w|出来事": [
   {
    "text": "昨日の出来事を話して。",
@@ -12193,6 +13489,22 @@
    "en": "I'll take on a new field.",
    "ko": "새 분야에 도전할게.",
    "blank": "分野"
+  }
+ ],
+ "w|分類": [
+  {
+   "text": "直樹は、お客さんの意見を内容ごとに分類して表にした。",
+   "en": "Naoki sorted the customer feedback by content and made a table.",
+   "ko": "나오키는 고객 의견을 내용별로 분류해서 표로 만들었어요.",
+   "blank": "分類",
+   "src": "made"
+  },
+  {
+   "text": "葵は、棚の商品を食品と日用品に分類して並べ直した。",
+   "en": "Aoi sorted the goods on the shelves into food and daily necessities and rearranged them.",
+   "ko": "아오이는 진열대 상품을 식품과 생활용품으로 분류해서 다시 진열했어요.",
+   "blank": "分類",
+   "src": "made"
   }
  ],
  "w|切る": [
@@ -12378,6 +13690,22 @@
    "en": "The culprit's name hasn't been identified yet.",
    "ko": "범인 이름은 아직 밝혀지지 않았어요.",
    "blank": "判明",
+   "src": "made"
+  }
+ ],
+ "w|判決": [
+  {
+   "text": "社会の授業で、健太たちは有名な裁判の判決について話し合った。",
+   "en": "In social studies class, Kenta and his classmates discussed the verdict of a famous trial.",
+   "ko": "사회 시간에 겐타네 반은 유명한 재판의 판결에 대해 이야기를 나눴어요.",
+   "blank": "判決",
+   "src": "made"
+  },
+  {
+   "text": "美咲は荷造りをしながら、ラジオで裁判の判決のニュースを聞いていた。",
+   "en": "While packing, Misaki was listening to news about a court ruling on the radio.",
+   "ko": "미사키는 짐을 싸면서 라디오로 재판 판결 뉴스를 듣고 있었어요.",
+   "blank": "判決",
    "src": "made"
   }
  ],
@@ -12667,6 +13995,22 @@
    "ko": "말로 된 시란 한마디로 운율이 있는 아름다움의 창조라고 정의하고 싶어요.",
    "blank": "創造",
    "src": "tatoeba:174703 en:239765"
+  }
+ ],
+ "w|劇": [
+  {
+   "text": "健太のクラスは、学芸会で劇をやることになった。",
+   "en": "Kenta's class is going to put on a play at the school arts festival.",
+   "ko": "겐타네 반은 학예회에서 연극을 하게 됐어요.",
+   "blank": "劇",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しの前の晩、美咲は友達と市民ホールで劇を見た。",
+   "en": "The night before the move, Misaki watched a play at the civic hall with a friend.",
+   "ko": "이사 전날 밤 미사키는 친구와 시민회관에서 연극을 봤어요.",
+   "blank": "劇",
+   "src": "made"
   }
  ],
  "w|劇場": [
@@ -13267,6 +14611,22 @@
    "blank": "南"
   }
  ],
+ "w|単なる": [
+  {
+   "text": "課長は、直樹の質問を単なる言い訳だと思ったらしい。",
+   "en": "The section chief apparently thought Naoki's question was just an excuse.",
+   "ko": "과장은 나오키의 질문을 단순한 변명이라고 생각한 것 같아요.",
+   "blank": "単なる",
+   "src": "made"
+  },
+  {
+   "text": "葵にとって、この店は単なる商売の場所ではない。",
+   "en": "For Aoi, this shop isn't just a place of business.",
+   "ko": "아오이에게 이 가게는 단순한 장사하는 곳이 아니에요.",
+   "blank": "単なる",
+   "src": "made"
+  }
+ ],
  "w|単に": [
   {
    "text": "単に運が良かっただけだ。",
@@ -13309,6 +14669,22 @@
    "blank": "単純"
   }
  ],
+ "w|単語": [
+  {
+   "text": "直樹は英語のメールで、知らない単語を辞書で調べた。",
+   "en": "Naoki looked up unfamiliar words in an English email using a dictionary.",
+   "ko": "나오키는 영어 메일에서 모르는 단어를 사전으로 찾아봤어요.",
+   "blank": "単語",
+   "src": "made"
+  },
+  {
+   "text": "外国から来たお客さんに、葵は知っている英語の単語で道を教えた。",
+   "en": "Aoi gave directions to a visitor from abroad using the English words she knew.",
+   "ko": "아오이는 외국에서 온 손님에게 아는 영어 단어로 길을 알려 줬어요.",
+   "blank": "単語",
+   "src": "made"
+  }
+ ],
  "w|博士": [
   {
    "text": "彼は博士だよ。",
@@ -13321,6 +14697,38 @@
    "en": "I got a doctorate.",
    "ko": "박사 학위를 땄어.",
    "blank": "博士"
+  }
+ ],
+ "w|印": [
+  {
+   "text": "直樹は、確認が終わった書類に赤い印をつけた。",
+   "en": "Naoki put a red mark on the documents he'd finished checking.",
+   "ko": "나오키는 확인이 끝난 서류에 빨간 표시를 했어요.",
+   "blank": "印",
+   "src": "made"
+  },
+  {
+   "text": "葵は、賞味期限が近い商品に黄色い印のシールを貼った。",
+   "en": "Aoi put yellow marker stickers on items close to their expiration date.",
+   "ko": "아오이는 유통기한이 가까운 상품에 노란 표시 스티커를 붙였어요.",
+   "blank": "印",
+   "src": "made"
+  }
+ ],
+ "w|印刷": [
+  {
+   "text": "新しいメニューの印刷が間に合わず、今日は手書きで出した。",
+   "en": "The new menus weren't printed in time, so today they used handwritten ones.",
+   "ko": "새 메뉴 인쇄가 늦어져서 오늘은 손으로 써서 냈어요.",
+   "blank": "印刷",
+   "src": "made"
+  },
+  {
+   "text": "ホテルで資料を印刷しようとしたが、プリンターが壊れていた。",
+   "en": "Sakura tried to print her documents at the hotel, but the printer was broken.",
+   "ko": "사쿠라는 호텔에서 자료를 인쇄하려고 했는데 프린터가 고장 나 있었어요.",
+   "blank": "印刷",
+   "src": "made"
   }
  ],
  "w|印象": [
@@ -13405,6 +14813,22 @@
    "en": "I tried reading the original.",
    "ko": "원작을 읽어 봤어.",
    "blank": "原作"
+  }
+ ],
+ "w|原則": [
+  {
+   "text": "この劇場では、原則として上演中の撮影は禁止だ。",
+   "en": "As a rule, filming during performances is prohibited at this theater.",
+   "ko": "이 극장에서는 원칙적으로 공연 중 촬영이 금지예요.",
+   "blank": "原則",
+   "src": "made"
+  },
+  {
+   "text": "レッスンを休むときは、原則として前の日までに連絡する。",
+   "en": "As a rule, you notify the school by the day before if you'll miss a lesson.",
+   "ko": "레슨을 쉴 때는 원칙적으로 전날까지 연락해요.",
+   "blank": "原則",
+   "src": "made"
   }
  ],
  "w|原因": [
@@ -13603,6 +15027,22 @@
    "blank": "反応"
   }
  ],
+ "w|反映": [
+  {
+   "text": "利用者の希望を反映して、漫画のコーナーが広くなった。",
+   "en": "Reflecting users' requests, the manga corner was expanded.",
+   "ko": "이용자들의 요청을 반영해서 만화 코너가 넓어졌어요.",
+   "blank": "反映",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、客の声を反映して営業時間を少し延ばした。",
+   "en": "Reflecting customers' feedback, Yoko extended her business hours a little.",
+   "ko": "요코는 손님들 의견을 반영해서 영업시간을 조금 늘렸어요.",
+   "blank": "反映",
+   "src": "made"
+  }
+ ],
  "w|収入": [
   {
    "text": "収入、増えた？",
@@ -13733,6 +15173,22 @@
    "blank": "受ける"
   }
  ],
+ "w|受け入れ": [
+  {
+   "text": "図書館は、近くの小学校から職場体験の受け入れをしている。",
+   "en": "The library takes in students from the nearby elementary school for work experience.",
+   "ko": "도서관은 근처 초등학교의 직장 체험 학생을 받고 있어요.",
+   "blank": "受け入れ",
+   "src": "made"
+  },
+  {
+   "text": "陽子の店では、修理の受け入れは夕方六時までだ。",
+   "en": "At Yoko's shop, repairs are accepted until six in the evening.",
+   "ko": "요코네 가게에서는 수리 접수가 저녁 여섯 시까지예요.",
+   "blank": "受け入れ",
+   "src": "made"
+  }
+ ],
  "w|受け入れる": [
   {
    "text": "現実を受け入れよう。",
@@ -13747,6 +15203,22 @@
    "blank": "受け入れる"
   }
  ],
+ "w|受け取る": [
+  {
+   "text": "健太は担任の先生から通知表を受け取った。",
+   "en": "Kenta received his report card from his homeroom teacher.",
+   "ko": "겐타는 담임 선생님에게서 성적표를 받았어요.",
+   "blank": "受け取っ",
+   "src": "made"
+  },
+  {
+   "text": "美咲は前の大家さんから、敷金を全額受け取った。",
+   "en": "Misaki got her full deposit back from her previous landlord.",
+   "ko": "미사키는 전 집주인에게서 보증금을 전액 돌려받았어요.",
+   "blank": "受け取っ",
+   "src": "made"
+  }
+ ],
  "w|受付": [
   {
    "text": "受付で名前を書いて。",
@@ -13759,6 +15231,22 @@
    "en": "Reception hours are over.",
    "ko": "접수 시간이 끝났어.",
    "blank": "受付"
+  }
+ ],
+ "w|受信": [
+  {
+   "text": "パソコン室のパソコンは古くて、メールの受信に時間がかかる。",
+   "en": "The computers in the computer room are old, so receiving email takes a while.",
+   "ko": "컴퓨터실 컴퓨터는 오래돼서 메일 수신에 시간이 걸려요.",
+   "blank": "受信",
+   "src": "made"
+  },
+  {
+   "text": "新しい部屋は、テレビの受信状態があまりよくない。",
+   "en": "In the new room, the TV reception isn't very good.",
+   "ko": "새 방은 텔레비전 수신 상태가 별로 좋지 않아요.",
+   "blank": "受信",
+   "src": "made"
   }
  ],
  "w|受賞": [
@@ -13887,6 +15375,22 @@
    "blank": "司令"
   }
  ],
+ "w|司法": [
+  {
+   "text": "公民の授業で、健太は司法の仕組みについて発表した。",
+   "en": "In civics class, Kenta gave a presentation on how the judiciary works.",
+   "ko": "공민 시간에 겐타는 사법 제도에 대해 발표했어요.",
+   "blank": "司法",
+   "src": "made"
+  },
+  {
+   "text": "美咲は荷物の中から、大学で使った司法の教科書を見つけた。",
+   "en": "Among her things, Misaki found the judiciary textbook she used in college.",
+   "ko": "미사키는 짐 속에서 대학 때 쓰던 사법 교과서를 찾았어요.",
+   "blank": "司法",
+   "src": "made"
+  }
+ ],
  "w|合う": [
   {
    "text": "サイズが合うよ。",
@@ -13913,6 +15417,22 @@
    "en": "Let's match our voices.",
    "ko": "목소리 맞추자.",
    "blank": "合わせよう"
+  }
+ ],
+ "w|合意": [
+  {
+   "text": "長い交渉の末、取引先と価格について合意した。",
+   "en": "After long negotiations, they reached an agreement with the client on price.",
+   "ko": "긴 협상 끝에 거래처와 가격에 합의했어요.",
+   "blank": "合意",
+   "src": "made"
+  },
+  {
+   "text": "葵と問屋は、来月から仕入れ値を少し下げることで合意した。",
+   "en": "Aoi and the wholesaler agreed to lower the purchase price slightly from next month.",
+   "ko": "아오이와 도매상은 다음 달부터 매입 가격을 조금 내리기로 합의했어요.",
+   "blank": "合意",
+   "src": "made"
   }
  ],
  "w|合格": [
@@ -14039,6 +15559,22 @@
    "en": "A similar problem came up.",
    "ko": "비슷한 문제가 나왔어.",
    "blank": "同様"
+  }
+ ],
+ "w|同盟": [
+  {
+   "text": "物語の中で、二つの国は秘密の同盟を結ぶ。",
+   "en": "In the story, the two countries form a secret alliance.",
+   "ko": "이야기 속에서 두 나라는 비밀 동맹을 맺어요.",
+   "blank": "同盟",
+   "src": "made"
+  },
+  {
+   "text": "近くの三つの音楽学校は、合同演奏会のために同盟を組んだ。",
+   "en": "Three nearby music schools formed an alliance for a joint concert.",
+   "ko": "근처 음악 학교 세 곳은 합동 연주회를 위해 동맹을 맺었어요.",
+   "blank": "同盟",
+   "src": "made"
   }
  ],
  "w|名前": [
@@ -14243,6 +15779,22 @@
    "src": "made"
   }
  ],
+ "w|告知": [
+  {
+   "text": "休館日の告知は、図書館のホームページにも出ている。",
+   "en": "Notice of closing days is also posted on the library's website.",
+   "ko": "휴관일 공지는 도서관 홈페이지에도 올라와 있어요.",
+   "blank": "告知",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、臨時休業の告知を店の入り口に貼った。",
+   "en": "Yoko posted a notice of a temporary closure at the shop entrance.",
+   "ko": "요코는 임시 휴업 공지를 가게 입구에 붙였어요.",
+   "blank": "告知",
+   "src": "made"
+  }
+ ],
  "w|周り": [
   {
    "text": "周りを見て。",
@@ -14353,6 +15905,22 @@
    "en": "I gave an order.",
    "ko": "명령을 내렸어.",
    "blank": "命令"
+  }
+ ],
+ "w|哲学": [
+  {
+   "text": "社長はよく「仕事には自分の哲学が必要だ」と言う。",
+   "en": "The company president often says, \"You need your own philosophy in your work.\"",
+   "ko": "사장은 자주 \"일에는 자기 철학이 필요하다\"고 말해요.",
+   "blank": "哲学",
+   "src": "made"
+  },
+  {
+   "text": "「小さい店には小さい店の哲学がある」と葵の父はよく言っていた。",
+   "en": "\"A small shop has its own philosophy,\" Aoi's father used to say.",
+   "ko": "\"작은 가게에는 작은 가게 나름의 철학이 있다\"고 아오이의 아버지는 자주 말했어요.",
+   "blank": "哲学",
+   "src": "made"
   }
  ],
  "w|唯一": [
@@ -14819,6 +16387,22 @@
    "blank": "圧倒的"
   }
  ],
+ "w|圧力": [
+  {
+   "text": "翔太は上からの圧力に負けず、最後まで捜査を続けた。",
+   "en": "Shota didn't give in to pressure from above and kept investigating to the end.",
+   "ko": "쇼타는 위에서 오는 압력에 굴하지 않고 끝까지 수사를 계속했어요.",
+   "blank": "圧力",
+   "src": "made"
+  },
+  {
+   "text": "試合の終盤、由美は相手の激しい圧力に耐えてボールを守った。",
+   "en": "Late in the game, Yumi withstood the opponent's intense pressure and kept the ball.",
+   "ko": "경기 막판에 유미는 상대의 거센 압박을 견디며 공을 지켰어요.",
+   "blank": "圧力",
+   "src": "made"
+  }
+ ],
  "w|地上": [
   {
    "text": "人間は地上への最初の出現以来、つねに情報を集め、有用な考えを他の人間に伝達しようとしてきた。",
@@ -15003,6 +16587,54 @@
    "blank": "城"
   }
  ],
+ "w|埋める": [
+  {
+   "text": "誠は、利用者アンケートの空欄を一つずつ埋めていった。",
+   "en": "Makoto filled in the blanks of the user survey one by one.",
+   "ko": "마코토는 이용자 설문의 빈칸을 하나씩 채워 나갔어요.",
+   "blank": "埋め",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、修理の受付表の空欄を客と一緒に埋めた。",
+   "en": "Yoko filled in the blanks on the repair form together with the customer.",
+   "ko": "요코는 수리 접수표의 빈칸을 손님과 함께 채웠어요.",
+   "blank": "埋め",
+   "src": "made"
+  }
+ ],
+ "w|執行": [
+  {
+   "text": "拓也が演じる裁判官は、刑の執行を前に深く悩む。",
+   "en": "The judge Takuya plays agonizes deeply before the sentence is carried out.",
+   "ko": "다쿠야가 연기하는 판사는 형 집행을 앞두고 깊이 고민해요.",
+   "blank": "執行",
+   "src": "made"
+  },
+  {
+   "text": "生徒会の予算の執行は、先生の確認が必要だ。",
+   "en": "Spending the student council's budget requires a teacher's approval.",
+   "ko": "학생회 예산 집행에는 선생님 확인이 필요해요.",
+   "blank": "執行",
+   "src": "made"
+  }
+ ],
+ "w|基づく": [
+  {
+   "text": "この店の料理は、地元の昔のレシピに基づいている。",
+   "en": "The food at this restaurant is based on old local recipes.",
+   "ko": "이 가게 요리는 그 지역의 옛 레시피를 바탕으로 해요.",
+   "blank": "基づい",
+   "src": "made"
+  },
+  {
+   "text": "さくらの発表は、去年の調査結果に基づいている。",
+   "en": "Sakura's presentation is based on last year's survey results.",
+   "ko": "사쿠라의 발표는 작년 조사 결과를 바탕으로 해요.",
+   "blank": "基づい",
+   "src": "made"
+  }
+ ],
  "w|基地": [
   {
    "text": "秘密の基地を作った。",
@@ -15171,6 +16803,22 @@
    "ko": "그 아이를 억지로 학원에 보내는 건 반대야.",
    "blank": "塾",
    "src": "tatoeba:230956 en:68323/CM"
+  }
+ ],
+ "w|墓": [
+  {
+   "text": "お盆の時期は、墓の周りでの盗難に注意するよう呼びかけている。",
+   "en": "During Obon, the police warn people to watch out for thefts around graves.",
+   "ko": "오본 시기에는 묘 주변 도난에 주의하라고 당부하고 있어요.",
+   "blank": "墓",
+   "src": "made"
+  },
+  {
+   "text": "由美は大会の前に、亡くなった祖母の墓に優勝を誓った。",
+   "en": "Before the tournament, Yumi vowed at her late grandmother's grave to win.",
+   "ko": "유미는 대회 전에 돌아가신 할머니 산소에서 우승을 다짐했어요.",
+   "blank": "墓",
+   "src": "made"
   }
  ],
  "w|増える": [
@@ -15399,6 +17047,22 @@
    "blank": "変更"
   }
  ],
+ "w|変身": [
+  {
+   "text": "幕が下りている間に、拓也は老人から若者へ早変わりの変身をした。",
+   "en": "While the curtain was down, Takuya made a quick-change transformation from an old man to a young one.",
+   "ko": "막이 내려가 있는 동안 다쿠야는 노인에서 젊은이로 순식간에 변신했어요.",
+   "blank": "変身",
+   "src": "made"
+  },
+  {
+   "text": "恵子の演奏は、留学から帰ってきて見違えるほどの変身を遂げた。",
+   "en": "Keiko's playing went through a remarkable transformation after she came back from studying abroad.",
+   "ko": "게이코의 연주는 유학에서 돌아와 몰라볼 만큼 변신했어요.",
+   "blank": "変身",
+   "src": "made"
+  }
+ ],
  "w|夏": [
   {
    "text": "夏が好きなんだ。",
@@ -15453,6 +17117,38 @@
    "en": "I decided to drop it from the plan.",
    "ko": "일정에서 빼기로 했어.",
    "blank": "外す"
+  }
+ ],
+ "w|外れる": [
+  {
+   "text": "翔太の推理は外れていて、犯人は全く別の人物だった。",
+   "en": "Shota's theory was off, and the culprit was someone else entirely.",
+   "ko": "쇼타의 추리는 빗나가서 범인은 전혀 다른 사람이었어요.",
+   "blank": "外れ",
+   "src": "made"
+  },
+  {
+   "text": "由美のフリースローは、惜しくもリングに当たって外れた。",
+   "en": "Yumi's free throw hit the rim and just missed.",
+   "ko": "유미의 자유투는 아깝게 링에 맞고 빗나갔어요.",
+   "blank": "外れ",
+   "src": "made"
+  }
+ ],
+ "w|外交": [
+  {
+   "text": "歴史の先生は、江戸時代の外交についてわかりやすく説明してくれた。",
+   "en": "The history teacher explained the diplomacy of the Edo period in an easy-to-understand way.",
+   "ko": "역사 선생님은 에도 시대의 외교에 대해 알기 쉽게 설명해 주셨어요.",
+   "blank": "外交",
+   "src": "made"
+  },
+  {
+   "text": "新居の隣の人は、外交の仕事で一年の半分は海外にいるらしい。",
+   "en": "The neighbor at Misaki's new home apparently spends half the year abroad for diplomatic work.",
+   "ko": "새집 옆집 사람은 외교 일로 일 년의 절반은 해외에 있대요.",
+   "blank": "外交",
+   "src": "made"
   }
  ],
  "w|外国": [
@@ -15783,6 +17479,22 @@
    "src": "tatoeba:11003499/small_snow en:12600524/urro"
   }
  ],
+ "w|大戦": [
+  {
+   "text": "拓也が出る芝居は、第二次大戦の頃の家族を描いている。",
+   "en": "The play Takuya is in depicts a family around the time of the Second World War.",
+   "ko": "다쿠야가 나오는 연극은 제2차 세계 대전 무렵의 가족을 그려요.",
+   "blank": "大戦",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、大戦中に作られた曲を発表会で演奏した。",
+   "en": "Keiko played a piece composed during the war at the recital.",
+   "ko": "게이코는 대전 중에 만들어진 곡을 발표회에서 연주했어요.",
+   "blank": "大戦",
+   "src": "made"
+  }
+ ],
  "w|大手": [
   {
    "text": "大手の会社だね。",
@@ -15865,6 +17577,22 @@
    "en": "I want a guardian angel.",
    "ko": "수호천사가 갖고 싶어.",
    "blank": "天使"
+  }
+ ],
+ "w|天国": [
+  {
+   "text": "芝居の最後で、主人公の父は天国から家族を見守っている。",
+   "en": "At the end of the play, the hero's father watches over his family from heaven.",
+   "ko": "연극 마지막에 주인공의 아버지는 천국에서 가족을 지켜봐요.",
+   "blank": "天国",
+   "src": "made"
+  },
+  {
+   "text": "最新のピアノがそろった練習室は、恵子にとって天国のようだ。",
+   "en": "For Keiko, the practice room full of new pianos is like heaven.",
+   "ko": "최신 피아노가 갖춰진 연습실은 게이코에게 천국 같아요.",
+   "blank": "天国",
+   "src": "made"
   }
  ],
  "w|天才": [
@@ -16151,6 +17879,22 @@
    "src": "tatoeba:93300 en:310408"
   }
  ],
+ "w|奴隷": [
+  {
+   "text": "歴史の棚には、奴隷制度の始まりと終わりを説明する本が並んでいる。",
+   "en": "The history shelf has books explaining the beginning and end of slavery.",
+   "ko": "역사 서가에는 노예 제도의 시작과 끝을 설명하는 책이 꽂혀 있어요.",
+   "blank": "奴隷",
+   "src": "made"
+  },
+  {
+   "text": "客の中学生は、奴隷解放について調べる宿題のために早く携帯を直したいと言った。",
+   "en": "A middle school customer said he wanted his phone fixed quickly for homework on the abolition of slavery.",
+   "ko": "손님인 중학생은 노예 해방을 조사하는 숙제 때문에 빨리 휴대폰을 고치고 싶다고 했어요.",
+   "blank": "奴隷",
+   "src": "made"
+  }
+ ],
  "w|好き": [
   {
    "text": "犬が好きだよ。",
@@ -16205,6 +17949,38 @@
    "en": "I took a pregnancy test.",
    "ko": "임신 검사를 받았어.",
    "blank": "妊娠"
+  }
+ ],
+ "w|妖怪": [
+  {
+   "text": "夏休みには、日本の妖怪を紹介する展示が子どもに人気だ。",
+   "en": "During summer vacation, the exhibit introducing Japanese yokai is popular with kids.",
+   "ko": "여름 방학에는 일본 요괴를 소개하는 전시가 아이들에게 인기예요.",
+   "blank": "妖怪",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、妖怪のイラストが描かれたスマホケースを店に並べた。",
+   "en": "Yoko displayed phone cases with yokai illustrations in the shop.",
+   "ko": "요코는 요괴 그림이 그려진 스마트폰 케이스를 가게에 진열했어요.",
+   "blank": "妖怪",
+   "src": "made"
+  }
+ ],
+ "w|妙": [
+  {
+   "text": "取り調べ室の容疑者は、妙に落ち着いていた。",
+   "en": "The suspect in the interrogation room was strangely calm.",
+   "ko": "취조실의 용의자는 묘하게 침착했어요.",
+   "blank": "妙",
+   "src": "made"
+  },
+  {
+   "text": "いつもうるさい先輩が今日は静かで、由美は妙な感じがした。",
+   "en": "The usually loud senior was quiet today, and Yumi felt something was off.",
+   "ko": "늘 시끄러운 선배가 오늘은 조용해서 유미는 묘한 기분이 들었어요.",
+   "blank": "妙",
+   "src": "made"
   }
  ],
  "w|妹": [
@@ -16517,6 +18293,22 @@
    "blank": "学ぶ"
   }
  ],
+ "w|学会": [
+  {
+   "text": "研究開発部の先輩は、来月の学会で発表するそうだ。",
+   "en": "A senior from R&D is apparently presenting at a conference next month.",
+   "ko": "연구 개발부 선배는 다음 달 학회에서 발표한대요.",
+   "blank": "学会",
+   "src": "made"
+  },
+  {
+   "text": "近くの大学で学会があり、店には朝からスーツ姿の人が多かった。",
+   "en": "There was an academic conference at the nearby university, so many people in suits came into the shop from morning.",
+   "ko": "근처 대학에서 학회가 있어서 가게에 아침부터 정장 차림 손님이 많았어요.",
+   "blank": "学会",
+   "src": "made"
+  }
+ ],
  "w|学園": [
   {
    "text": "学園の制服だよ。",
@@ -16599,6 +18391,22 @@
    "en": "It's a space story.",
    "ko": "우주 이야기네.",
    "blank": "宇宙"
+  }
+ ],
+ "w|守り": [
+  {
+   "text": "古い文書の守りを固めるため、図書館は書庫の鍵を新しくした。",
+   "en": "To better protect the old documents, the library changed the locks on the stacks.",
+   "ko": "오래된 문서를 더 잘 지키기 위해 도서관은 서고 열쇠를 새로 바꿨어요.",
+   "blank": "守り",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、画面の守りを強くするために厚いフィルムを勧めた。",
+   "en": "Yoko recommended a thick film to give the screen stronger protection.",
+   "ko": "요코는 화면을 더 잘 보호하려고 두꺼운 필름을 권했어요.",
+   "blank": "守り",
+   "src": "made"
   }
  ],
  "w|守る": [
@@ -16769,6 +18577,22 @@
    "blank": "定義"
   }
  ],
+ "w|実力": [
+  {
+   "text": "直樹は、実力を認められて新しいプロジェクトのリーダーになった。",
+   "en": "Naoki's ability was recognized, and he became the leader of a new project.",
+   "ko": "나오키는 실력을 인정받아 새 프로젝트 리더가 됐어요.",
+   "blank": "実力",
+   "src": "made"
+  },
+  {
+   "text": "葵はまだ若いが、商売の実力は父親にも負けない。",
+   "en": "Aoi is still young, but her business skill is a match even for her father.",
+   "ko": "아오이는 아직 젊지만 장사 실력은 아버지에게도 뒤지지 않아요.",
+   "blank": "実力",
+   "src": "made"
+  }
+ ],
  "w|実家": [
   {
    "text": "夏休みは実家に帰るよ。",
@@ -16823,6 +18647,22 @@
    "en": "Looks like we can make it happen.",
    "ko": "실현할 수 있을 것 같네.",
    "blank": "実現"
+  }
+ ],
+ "w|実用": [
+  {
+   "text": "大輔は見た目より実用を考えて、軽い鍋を選んだ。",
+   "en": "Daisuke chose a light pot, thinking of practicality over looks.",
+   "ko": "다이스케는 겉모습보다 실용성을 생각해서 가벼운 냄비를 골랐어요.",
+   "blank": "実用",
+   "src": "made"
+  },
+  {
+   "text": "さくらのキャリーケースは、デザインより実用を重んじて選んだものだ。",
+   "en": "Sakura chose her carry-on with practicality in mind rather than design.",
+   "ko": "사쿠라의 여행 가방은 디자인보다 실용성을 따져서 고른 거예요.",
+   "blank": "実用",
+   "src": "made"
   }
  ],
  "w|実績": [
@@ -16997,6 +18837,22 @@
    "blank": "家族"
   }
  ],
+ "w|容易": [
+  {
+   "text": "昔の新聞の記事を探すのは、思ったほど容易ではない。",
+   "en": "Finding articles in old newspapers isn't as easy as you'd think.",
+   "ko": "옛날 신문 기사를 찾는 건 생각만큼 쉽지 않아요.",
+   "blank": "容易",
+   "src": "made"
+  },
+  {
+   "text": "水に落ちた携帯のデータを取り出すのは、容易なことではない。",
+   "en": "Recovering data from a phone dropped in water is no easy task.",
+   "ko": "물에 빠진 휴대폰의 데이터를 꺼내는 건 쉬운 일이 아니에요.",
+   "blank": "容易",
+   "src": "made"
+  }
+ ],
  "w|宿題": [
   {
    "text": "宿題終わった？",
@@ -17095,6 +18951,22 @@
    "ko": "자이언츠는 내일 드래건스와 붙어요.",
    "blank": "対戦",
    "src": "tatoeba:11583447/bunbuku en:2050649/CK"
+  }
+ ],
+ "w|対抗": [
+  {
+   "text": "近くにできた大型店に対抗して、店は安いランチを始めた。",
+   "en": "To compete with the large chain that opened nearby, the restaurant started a cheap lunch.",
+   "ko": "근처에 생긴 대형 가게에 맞서 가게는 저렴한 점심을 시작했어요.",
+   "blank": "対抗",
+   "src": "made"
+  },
+  {
+   "text": "車内では、高校生たちが他校に対抗してクイズ大会の練習をしていた。",
+   "en": "On the train, high school students were practicing for a quiz contest against another school.",
+   "ko": "차 안에서는 고등학생들이 다른 학교와 겨룰 퀴즈 대회 연습을 하고 있었어요.",
+   "blank": "対抗",
+   "src": "made"
   }
  ],
  "w|対立": [
@@ -17197,6 +19069,22 @@
    "en": "I'm looking forward to the future.",
    "ko": "장래가 기대되네.",
    "blank": "将来"
+  }
+ ],
+ "w|将軍": [
+  {
+   "text": "誠は、昔の将軍の暮らしについて書かれた本を中学生に紹介した。",
+   "en": "Makoto recommended a book about the lives of old shoguns to a middle schooler.",
+   "ko": "마코토는 옛 쇼군의 생활을 다룬 책을 중학생에게 소개했어요.",
+   "blank": "将軍",
+   "src": "made"
+  },
+  {
+   "text": "待合室のテレビでは、将軍が主人公の時代劇が流れていた。",
+   "en": "A period drama starring a shogun was playing on the waiting room TV.",
+   "ko": "대기실 텔레비전에서는 쇼군이 주인공인 사극이 나오고 있었어요.",
+   "blank": "将軍",
+   "src": "made"
   }
  ],
  "w|尋ねる": [
@@ -17381,6 +19269,22 @@
    "blank": "尻"
   }
  ],
+ "w|届く": [
+  {
+   "text": "文化祭のポスターが、やっと印刷所から届いた。",
+   "en": "The school festival posters finally arrived from the print shop.",
+   "ko": "학교 축제 포스터가 드디어 인쇄소에서 도착했어요.",
+   "blank": "届い",
+   "src": "made"
+  },
+  {
+   "text": "新しい冷蔵庫が届くのは、明日の午後になるそうだ。",
+   "en": "The new fridge is supposed to arrive tomorrow afternoon.",
+   "ko": "새 냉장고는 내일 오후에 도착한대요.",
+   "blank": "届く",
+   "src": "made"
+  }
+ ],
  "w|届ける": [
   {
    "text": "荷物を届けて。",
@@ -17551,6 +19455,22 @@
    "en": "The construction noise is loud.",
    "ko": "공사 소리가 시끄러워.",
    "blank": "工事"
+  }
+ ],
+ "w|工作": [
+  {
+   "text": "大輔は子どもの頃、工作が得意で、今でも細かい飾り切りがうまい。",
+   "en": "Daisuke was good at crafts as a kid, and he's still good at fine decorative cutting.",
+   "ko": "다이스케는 어릴 때 만들기를 잘해서 지금도 섬세한 장식 썰기를 잘해요.",
+   "blank": "工作",
+   "src": "made"
+  },
+  {
+   "text": "さくらの隣の男の子は、夏休みの工作に使う松ぼっくりを大事そうに抱えていた。",
+   "en": "The boy next to Sakura was carefully holding pinecones for his summer craft project.",
+   "ko": "사쿠라 옆자리 남자아이는 여름방학 만들기에 쓸 솔방울을 소중히 안고 있었어요.",
+   "blank": "工作",
+   "src": "made"
   }
  ],
  "w|工場": [
@@ -17775,6 +19695,22 @@
    "en": "Head back first.",
    "ko": "먼저 가 있어.",
    "blank": "帰ってて"
+  }
+ ],
+ "w|常識": [
+  {
+   "text": "ゴミを道に捨てないのは常識だと、警官は若者に言った。",
+   "en": "The officer told the young man that not throwing trash on the street is common sense.",
+   "ko": "쓰레기를 길에 버리지 않는 건 상식이라고 경찰관은 젊은이에게 말했어요.",
+   "blank": "常識",
+   "src": "made"
+  },
+  {
+   "text": "監督は、試合の前に挨拶するのは常識だと由美たちに教えた。",
+   "en": "The coach taught Yumi and her teammates that greeting before a game is common sense.",
+   "ko": "감독은 경기 전에 인사하는 건 상식이라고 유미네에게 가르쳤어요.",
+   "blank": "常識",
+   "src": "made"
   }
  ],
  "w|幅": [
@@ -18455,6 +20391,22 @@
    "blank": "形式"
   }
  ],
+ "w|形態": [
+  {
+   "text": "この劇場は、歌と芝居を組み合わせた新しい形態の公演を続けている。",
+   "en": "This theater keeps staging a new form of performance that combines song and drama.",
+   "ko": "이 극장은 노래와 연극을 합친 새로운 형태의 공연을 이어 가고 있어요.",
+   "blank": "形態",
+   "src": "made"
+  },
+  {
+   "text": "オンラインの授業も、新しいレッスンの形態として定着してきた。",
+   "en": "Online classes have also become established as a new form of lessons.",
+   "ko": "온라인 수업도 새로운 레슨 형태로 자리 잡았어요.",
+   "blank": "形態",
+   "src": "made"
+  }
+ ],
  "w|形成": [
   {
    "text": "人間は環境に適応し、ある点では環境を形成することが出来るようになった。",
@@ -18597,6 +20549,22 @@
    "blank": "待ってる"
   }
  ],
+ "w|待機": [
+  {
+   "text": "避難訓練では、全員が校庭で待機するように言われた。",
+   "en": "In the evacuation drill, everyone was told to wait in the schoolyard.",
+   "ko": "대피 훈련에서는 모두 운동장에서 대기하라는 말을 들었어요.",
+   "blank": "待機",
+   "src": "made"
+  },
+  {
+   "text": "引っ越し業者のトラックは、マンションの前でしばらく待機していた。",
+   "en": "The movers' truck waited in front of the apartment building for a while.",
+   "ko": "이삿짐 업체 트럭은 아파트 앞에서 한동안 대기하고 있었어요.",
+   "blank": "待機",
+   "src": "made"
+  }
+ ],
  "w|後": [
   {
    "text": "この後、空いてる？",
@@ -18665,6 +20633,22 @@
    "en": "I decided to walk home.",
    "ko": "걸어서 가기로 했어.",
    "blank": "徒歩"
+  }
+ ],
+ "w|従う": [
+  {
+   "text": "図書館では、利用者は館内のルールに従う必要がある。",
+   "en": "In the library, visitors need to follow the building's rules.",
+   "ko": "도서관에서는 이용자가 관내 규칙을 따라야 해요.",
+   "blank": "従う",
+   "src": "made"
+  },
+  {
+   "text": "陽子はメーカーの説明書に従って、電池を慎重に交換した。",
+   "en": "Following the manufacturer's manual, Yoko carefully replaced the battery.",
+   "ko": "요코는 제조사 설명서에 따라 배터리를 조심스럽게 교체했어요.",
+   "blank": "従っ",
+   "src": "made"
   }
  ],
  "w|従来": [
@@ -18881,6 +20865,22 @@
    "blank": "必要"
   }
  ],
+ "w|必須": [
+  {
+   "text": "この授業では、毎回辞書を持ってくることが必須だ。",
+   "en": "In this class, bringing a dictionary every time is a must.",
+   "ko": "이 수업에서는 매번 사전을 가져오는 게 필수예요.",
+   "blank": "必須",
+   "src": "made"
+  },
+  {
+   "text": "このマンションでは、引っ越しの前に管理会社への連絡が必須だ。",
+   "en": "In this building, contacting the management company before moving in is required.",
+   "ko": "이 아파트에서는 이사 전에 관리 회사에 연락하는 게 필수예요.",
+   "blank": "必須",
+   "src": "made"
+  }
+ ],
  "w|忘れる": [
   {
    "text": "傘、忘れた。",
@@ -19075,6 +21075,22 @@
    "en": "Something urgent came up.",
    "ko": "급한 일이 생겼어.",
    "blank": "急"
+  }
+ ],
+ "w|急ぐ": [
+  {
+   "text": "締め切りが迫っていたので、直樹は急いで報告書を仕上げた。",
+   "en": "The deadline was close, so Naoki hurried to finish the report.",
+   "ko": "마감이 다가와서 나오키는 서둘러 보고서를 마무리했어요.",
+   "blank": "急い",
+   "src": "made"
+  },
+  {
+   "text": "雨が降ってきたので、葵は急いで店の外の商品を中に入れた。",
+   "en": "It started raining, so Aoi hurried to bring the goods outside the shop indoors.",
+   "ko": "비가 내리기 시작해서 아오이는 서둘러 가게 밖 물건을 안으로 들였어요.",
+   "blank": "急い",
+   "src": "made"
   }
  ],
  "w|性格": [
@@ -19671,6 +21687,22 @@
    "blank": "懐かしい"
   }
  ],
+ "w|成分": [
+  {
+   "text": "誠は、子ども向けの本で野菜の栄養の成分を調べた。",
+   "en": "Makoto looked up the nutritional components of vegetables in a children's book.",
+   "ko": "마코토는 어린이 책에서 채소의 영양 성분을 찾아봤어요.",
+   "blank": "成分",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、画面のクリーナーにどんな成分が入っているか確かめた。",
+   "en": "Yoko checked what ingredients were in the screen cleaner.",
+   "ko": "요코는 화면 클리너에 어떤 성분이 들어 있는지 확인했어요.",
+   "blank": "成分",
+   "src": "made"
+  }
+ ],
  "w|成功": [
   {
    "text": "成功したね。",
@@ -19713,6 +21745,22 @@
    "blank": "成立"
   }
  ],
+ "w|成績": [
+  {
+   "text": "営業部の今月の成績は、去年の同じ時期より良かった。",
+   "en": "The sales department's results this month were better than the same time last year.",
+   "ko": "영업부의 이번 달 실적은 작년 같은 시기보다 좋았어요.",
+   "blank": "成績",
+   "src": "made"
+  },
+  {
+   "text": "近所の中学生が、テストの成績が上がったと葵に報告しに来た。",
+   "en": "A middle schooler from the neighborhood came to tell Aoi his test grades went up.",
+   "ko": "동네 중학생이 시험 성적이 올랐다고 아오이에게 알려 주러 왔어요.",
+   "blank": "成績",
+   "src": "made"
+  }
+ ],
  "w|成長": [
   {
    "text": "成長が早いね。",
@@ -19739,6 +21787,22 @@
    "en": "We agree.",
    "ko": "우리는 찬성해.",
    "blank": "我々"
+  }
+ ],
+ "w|我が": [
+  {
+   "text": "「我が劇団の新作を、ぜひ見に来てください」と座長は挨拶した。",
+   "en": "\"Please come see our troupe's new work,\" the company head said in greeting.",
+   "ko": "\"저희 극단의 신작을 꼭 보러 와 주세요\" 하고 단장이 인사했어요.",
+   "blank": "我が",
+   "src": "made"
+  },
+  {
+   "text": "校長は入学式で「我が校の伝統を大切にしてください」と話した。",
+   "en": "At the entrance ceremony, the principal said, \"Please cherish the traditions of our school.\"",
+   "ko": "교장은 입학식에서 \"우리 학교의 전통을 소중히 해 주세요\" 하고 말했어요.",
+   "blank": "我が",
+   "src": "made"
   }
  ],
  "w|我慢": [
@@ -19809,6 +21873,22 @@
    "en": "What a brave warrior.",
    "ko": "용감한 전사네.",
    "blank": "戦士"
+  }
+ ],
+ "w|戦後": [
+  {
+   "text": "健太は夏休みの宿題で、戦後の町の暮らしについて調べた。",
+   "en": "For his summer homework, Kenta researched life in his town after the war.",
+   "ko": "겐타는 여름 방학 숙제로 전후 동네 생활에 대해 조사했어요.",
+   "blank": "戦後",
+   "src": "made"
+  },
+  {
+   "text": "美咲の新しい家は、戦後まもなく建てられた古い木造住宅だ。",
+   "en": "Misaki's new house is an old wooden home built shortly after the war.",
+   "ko": "미사키의 새집은 전후 얼마 안 돼 지어진 오래된 목조 주택이에요.",
+   "blank": "戦後",
+   "src": "made"
   }
  ],
  "w|戦略": [
@@ -20179,6 +22259,22 @@
    "blank": "投資"
   }
  ],
+ "w|抗議": [
+  {
+   "text": "ある本を置かないでほしいという抗議の電話が、図書館にかかってきた。",
+   "en": "The library got a call protesting against carrying a certain book.",
+   "ko": "어떤 책을 두지 말아 달라는 항의 전화가 도서관에 걸려 왔어요.",
+   "blank": "抗議",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、部品が届かないことについてメーカーに抗議した。",
+   "en": "Yoko complained to the manufacturer about the parts not arriving.",
+   "ko": "요코는 부품이 오지 않는 것에 대해 제조사에 항의했어요.",
+   "blank": "抗議",
+   "src": "made"
+  }
+ ],
  "w|折れる": [
   {
    "text": "台風の日は茎が折れる危険性があるので補強する必要があります。",
@@ -20309,6 +22405,22 @@
    "blank": "拒否"
   }
  ],
+ "w|拘束": [
+  {
+   "text": "長い稽古で拘束される時間が多く、拓也はアルバイトを減らした。",
+   "en": "Rehearsals tied him up for so long that Takuya cut back on his part-time job.",
+   "ko": "긴 연습에 묶이는 시간이 많아서 다쿠야는 아르바이트를 줄였어요.",
+   "blank": "拘束",
+   "src": "made"
+  },
+  {
+   "text": "恵子は一日中レッスンに拘束されて、友達と会う暇がない。",
+   "en": "Keiko is tied up with lessons all day and has no time to see friends.",
+   "ko": "게이코는 하루 종일 레슨에 매여 있어서 친구 만날 틈이 없어요.",
+   "blank": "拘束",
+   "src": "made"
+  }
+ ],
  "w|招待": [
   {
    "text": "パーティーに招待された。",
@@ -20335,6 +22447,38 @@
    "en": "The impact is spreading.",
    "ko": "영향이 확대되고 있어.",
    "blank": "拡大"
+  }
+ ],
+ "w|拡張": [
+  {
+   "text": "会社は事業の拡張に合わせて、オフィスを広い場所に移した。",
+   "en": "In line with expanding the business, the company moved its office to a larger space.",
+   "ko": "회사는 사업 확장에 맞춰 사무실을 넓은 곳으로 옮겼어요.",
+   "blank": "拡張",
+   "src": "made"
+  },
+  {
+   "text": "葵は、店の奥を拡張してイートインのコーナーを作った。",
+   "en": "Aoi expanded the back of the shop and made an eat-in corner.",
+   "ko": "아오이는 가게 안쪽을 넓혀서 먹고 갈 수 있는 자리를 만들었어요.",
+   "blank": "拡張",
+   "src": "made"
+  }
+ ],
+ "w|拡散": [
+  {
+   "text": "クラスの写真が勝手に拡散されて、健太は少し困った。",
+   "en": "A class photo got spread around without permission, and Kenta was a bit troubled.",
+   "ko": "반 사진이 마음대로 퍼져서 겐타는 좀 곤란했어요.",
+   "blank": "拡散",
+   "src": "made"
+  },
+  {
+   "text": "美咲が新しい部屋の写真を載せたら、思ったより拡散された。",
+   "en": "When Misaki posted photos of her new room, they spread more than she expected.",
+   "ko": "미사키가 새 방 사진을 올렸더니 생각보다 많이 퍼졌어요.",
+   "blank": "拡散",
+   "src": "made"
   }
  ],
  "w|持つ": [
@@ -20377,6 +22521,22 @@
    "en": "Don't touch it with your finger.",
    "ko": "손가락으로 만지지 마.",
    "blank": "指"
+  }
+ ],
+ "w|指名": [
+  {
+   "text": "演出家の指名で、拓也が主役に選ばれた。",
+   "en": "Takuya was chosen for the lead at the director's nomination.",
+   "ko": "연출가의 지명으로 다쿠야가 주연으로 뽑혔어요.",
+   "blank": "指名",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、先生の指名で卒業演奏会のトリを務めることになった。",
+   "en": "At her teacher's nomination, Keiko will play the final piece at the graduation concert.",
+   "ko": "게이코는 선생님의 지명으로 졸업 연주회 마지막 순서를 맡게 됐어요.",
+   "blank": "指名",
+   "src": "made"
   }
  ],
  "w|指定": [
@@ -20491,6 +22651,22 @@
    "blank": "挨拶"
   }
  ],
+ "w|捕まえる": [
+  {
+   "text": "理科の授業で、健太は池のカエルを捕まえた。",
+   "en": "In science class, Kenta caught a frog in the pond.",
+   "ko": "과학 시간에 겐타는 연못의 개구리를 잡았어요.",
+   "blank": "捕まえ",
+   "src": "made"
+  },
+  {
+   "text": "窓から入ってきた虫を、美咲はコップで捕まえた。",
+   "en": "Misaki caught the bug that came in through the window with a cup.",
+   "ko": "미사키는 창문으로 들어온 벌레를 컵으로 잡았어요.",
+   "blank": "捕まえ",
+   "src": "made"
+  }
+ ],
  "w|捜査": [
   {
    "text": "警察が捜査中だ。",
@@ -20547,6 +22723,22 @@
    "blank": "授業"
   }
  ],
+ "w|排除": [
+  {
+   "text": "図書館は、どんな意見も排除せずに本を集めるようにしている。",
+   "en": "The library tries to collect books without excluding any viewpoint.",
+   "ko": "도서관은 어떤 의견도 배제하지 않고 책을 모으려고 해요.",
+   "blank": "排除",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、携帯に入り込んだウイルスの排除に一時間かかった。",
+   "en": "It took Yoko an hour to remove the virus that had gotten into the phone.",
+   "ko": "요코는 휴대폰에 들어온 바이러스를 없애는 데 한 시간 걸렸어요.",
+   "blank": "排除",
+   "src": "made"
+  }
+ ],
  "w|掛ける": [
   {
    "text": "眼鏡を掛けるよ。",
@@ -20589,6 +22781,22 @@
    "blank": "探して"
   }
  ],
+ "w|探偵": [
+  {
+   "text": "健太は最近、探偵が活躍する推理小説に夢中になっている。",
+   "en": "Lately Kenta has been hooked on mystery novels featuring a detective.",
+   "ko": "겐타는 요즘 탐정이 활약하는 추리 소설에 푹 빠져 있어요.",
+   "blank": "探偵",
+   "src": "made"
+  },
+  {
+   "text": "鍵がどの箱に入っているのか、美咲は探偵のように考えた。",
+   "en": "Misaki thought like a detective about which box the keys were in.",
+   "ko": "열쇠가 어느 상자에 들어 있는지 미사키는 탐정처럼 생각했어요.",
+   "blank": "探偵",
+   "src": "made"
+  }
+ ],
  "w|接続": [
   {
    "text": "接続が切れたよ。",
@@ -20603,6 +22811,38 @@
    "blank": "接続"
   }
  ],
+ "w|接触": [
+  {
+   "text": "体育のサッカーで、健太は相手と接触して転んでしまった。",
+   "en": "Playing soccer in PE, Kenta collided with an opponent and fell over.",
+   "ko": "체육 시간 축구에서 겐타는 상대와 부딪혀서 넘어지고 말았어요.",
+   "blank": "接触",
+   "src": "made"
+  },
+  {
+   "text": "荷物を降ろすとき、ソファが壁に接触して小さな傷がついた。",
+   "en": "While unloading, the sofa touched the wall and left a small scratch.",
+   "ko": "짐을 내릴 때 소파가 벽에 닿아서 작은 흠집이 생겼어요.",
+   "blank": "接触",
+   "src": "made"
+  }
+ ],
+ "w|推奨": [
+  {
+   "text": "図書館は、目が疲れないように一時間ごとの休憩を推奨している。",
+   "en": "The library recommends taking a break every hour so your eyes don't get tired.",
+   "ko": "도서관은 눈이 피로하지 않도록 한 시간마다 쉬기를 권장해요.",
+   "blank": "推奨",
+   "src": "made"
+  },
+  {
+   "text": "メーカーが推奨する充電器を使えば、電池が長持ちする。",
+   "en": "If you use the charger the manufacturer recommends, the battery lasts longer.",
+   "ko": "제조사가 권장하는 충전기를 쓰면 배터리가 오래가요.",
+   "blank": "推奨",
+   "src": "made"
+  }
+ ],
  "w|推進": [
   {
    "text": "改革を推進している。",
@@ -20615,6 +22855,22 @@
    "en": "Please take the lead role.",
    "ko": "추진 역할을 부탁해.",
    "blank": "推進"
+  }
+ ],
+ "w|措置": [
+  {
+   "text": "大雨のため、警察は川沿いの道を通行止めにする措置をとった。",
+   "en": "Due to heavy rain, the police took the measure of closing the road along the river.",
+   "ko": "폭우 때문에 경찰은 강변 도로를 통행금지하는 조치를 취했어요.",
+   "blank": "措置",
+   "src": "made"
+  },
+  {
+   "text": "熱中症を防ぐため、学校は練習を短くする措置をとった。",
+   "en": "To prevent heatstroke, the school took the step of shortening practice.",
+   "ko": "열사병을 막기 위해 학교는 연습을 줄이는 조치를 취했어요.",
+   "blank": "措置",
+   "src": "made"
   }
  ],
  "w|掲示板": [
@@ -20699,6 +22955,38 @@
    "en": "Try making a suggestion.",
    "ko": "제안해 봐.",
    "blank": "提案"
+  }
+ ],
+ "w|援助": [
+  {
+   "text": "この図書館の建物は、ある財団の援助で建てられた。",
+   "en": "This library building was built with aid from a foundation.",
+   "ko": "이 도서관 건물은 한 재단의 지원으로 지어졌어요.",
+   "blank": "援助",
+   "src": "made"
+  },
+  {
+   "text": "陽子は店を開くとき、町の商工会から少し援助を受けた。",
+   "en": "When Yoko opened her shop, she received a bit of assistance from the town's chamber of commerce.",
+   "ko": "요코는 가게를 열 때 마을 상공회에서 약간의 지원을 받았어요.",
+   "blank": "援助",
+   "src": "made"
+  }
+ ],
+ "w|損害": [
+  {
+   "text": "大雨で公演が中止になり、劇団は大きな損害を受けた。",
+   "en": "The performance was canceled due to heavy rain, and the troupe suffered a big loss.",
+   "ko": "폭우로 공연이 취소돼서 극단은 큰 손해를 입었어요.",
+   "blank": "損害",
+   "src": "made"
+  },
+  {
+   "text": "雨漏りでピアノが濡れて、学校は大きな損害を受けた。",
+   "en": "The pianos got wet from a leak, and the school suffered heavy damage.",
+   "ko": "비가 새서 피아노가 젖는 바람에 학교는 큰 손해를 입었어요.",
+   "blank": "損害",
+   "src": "made"
   }
  ],
  "w|搭載": [
@@ -20871,6 +23159,22 @@
    "blank": "改正"
   }
  ],
+ "w|改造": [
+  {
+   "text": "古い倉庫の改造が終わり、図書館に新しい学習室ができた。",
+   "en": "The renovation of an old storeroom was finished, and the library got a new study room.",
+   "ko": "오래된 창고 개조가 끝나서 도서관에 새 학습실이 생겼어요.",
+   "blank": "改造",
+   "src": "made"
+  },
+  {
+   "text": "メーカーが認めていない改造をすると、保証が受けられなくなる。",
+   "en": "If you make modifications the manufacturer doesn't approve, you lose the warranty.",
+   "ko": "제조사가 인정하지 않은 개조를 하면 보증을 받을 수 없게 돼요.",
+   "blank": "改造",
+   "src": "made"
+  }
+ ],
  "w|改革": [
   {
    "text": "首相は議会の抜本的な改革に着手するつもりがあることを表明した。",
@@ -20885,6 +23189,22 @@
    "ko": "의미 있는 변화가 이뤄진다면 저는 정치 개혁에 대체로 찬성해요.",
    "blank": "改革",
    "src": "tatoeba:191037 en:28196/Dejo"
+  }
+ ],
+ "w|攻める": [
+  {
+   "text": "試合の後半、健太のチームは右側から攻めることにした。",
+   "en": "In the second half of the match, Kenta's team decided to attack from the right side.",
+   "ko": "경기 후반에 겐타네 팀은 오른쪽에서 공격하기로 했어요.",
+   "blank": "攻める",
+   "src": "made"
+  },
+  {
+   "text": "大掃除のとき、美咲はまず台所から攻めることにした。",
+   "en": "For the big cleanup, Misaki decided to tackle the kitchen first.",
+   "ko": "대청소할 때 미사키는 먼저 부엌부터 공략하기로 했어요.",
+   "blank": "攻める",
+   "src": "made"
   }
  ],
  "w|攻撃": [
@@ -20941,6 +23261,22 @@
    "en": "I heard there's a rerun.",
    "ko": "재방송 있대.",
    "blank": "放送"
+  }
+ ],
+ "w|政党": [
+  {
+   "text": "拓也の劇団は、政党の宣伝には関わらないと決めている。",
+   "en": "Takuya's troupe has decided not to get involved in political party promotion.",
+   "ko": "다쿠야네 극단은 정당 홍보에는 관여하지 않기로 했어요.",
+   "blank": "政党",
+   "src": "made"
+  },
+  {
+   "text": "恵子のクラスメートの父親は、ある政党の地方議員だそうだ。",
+   "en": "The father of one of Keiko's classmates is apparently a local legislator for a political party.",
+   "ko": "게이코 반 친구의 아버지는 어느 정당의 지방 의원이래요.",
+   "blank": "政党",
+   "src": "made"
   }
  ],
  "w|政府": [
@@ -21431,6 +23767,22 @@
    "en": "This way is closer.",
    "ko": "이쪽이 더 가까워.",
    "blank": "方"
+  }
+ ],
+ "w|方々": [
+  {
+   "text": "図書館の朗読会には、地域の方々がたくさん集まった。",
+   "en": "Many people from the community gathered for the library's reading event.",
+   "ko": "도서관 낭독회에는 지역 주민분들이 많이 모였어요.",
+   "blank": "方々",
+   "src": "made"
+  },
+  {
+   "text": "陽子の店には、近所のお年寄りの方々もよく相談に来る。",
+   "en": "Elderly people from the neighborhood also often come to Yoko's shop for advice.",
+   "ko": "요코네 가게에는 동네 어르신분들도 자주 상담하러 와요.",
+   "blank": "方々",
+   "src": "made"
   }
  ],
  "w|方向": [
@@ -22519,6 +24871,22 @@
    "blank": "本物"
   }
  ],
+ "w|本社": [
+  {
+   "text": "来月から、直樹は大阪の本社で働くことになった。",
+   "en": "Starting next month, Naoki will work at the head office in Osaka.",
+   "ko": "다음 달부터 나오키는 오사카 본사에서 일하게 됐어요.",
+   "blank": "本社",
+   "src": "made"
+  },
+  {
+   "text": "お菓子メーカーの本社から、新商品のサンプルが届いた。",
+   "en": "Samples of a new product arrived from the confectionery maker's head office.",
+   "ko": "과자 회사 본사에서 신상품 샘플이 왔어요.",
+   "blank": "本社",
+   "src": "made"
+  }
+ ],
  "w|本部": [
   {
    "text": "本部から連絡が来た。",
@@ -22703,6 +25071,38 @@
    "blank": "株"
   }
  ],
+ "w|株式会社": [
+  {
+   "text": "直樹の名刺には、株式会社の名前が大きく印刷されている。",
+   "en": "Naoki's business card has the corporation's name printed in large type.",
+   "ko": "나오키의 명함에는 주식회사 이름이 크게 인쇄되어 있어요.",
+   "blank": "株式会社",
+   "src": "made"
+  },
+  {
+   "text": "葵の店に商品を卸しているのは、地元の小さな株式会社だ。",
+   "en": "The supplier for Aoi's shop is a small local corporation.",
+   "ko": "아오이네 가게에 물건을 대는 곳은 지역의 작은 주식회사예요.",
+   "blank": "株式会社",
+   "src": "made"
+  }
+ ],
+ "w|根拠": [
+  {
+   "text": "部長は「その数字の根拠を説明してくれ」と直樹に言った。",
+   "en": "The department head told Naoki, \"Explain the basis for those numbers.\"",
+   "ko": "부장은 \"그 숫자의 근거를 설명해 봐\" 하고 나오키에게 말했어요.",
+   "blank": "根拠",
+   "src": "made"
+  },
+  {
+   "text": "葵は、なぜその商品が売れるのか、はっきりした根拠を探した。",
+   "en": "Aoi looked for clear grounds for why that product sells.",
+   "ko": "아오이는 그 상품이 왜 팔리는지 분명한 근거를 찾았어요.",
+   "blank": "根拠",
+   "src": "made"
+  }
+ ],
  "w|格好": [
   {
    "text": "この格好じゃ外には出られないな。ちょっと待っててくれる？すぐ着替えるから。",
@@ -22833,6 +25233,22 @@
    "blank": "検討"
   }
  ],
+ "w|検証": [
+  {
+   "text": "新しいソースが本当においしいか、スタッフ全員で検証した。",
+   "en": "The whole staff tested whether the new sauce was really good.",
+   "ko": "새 소스가 정말 맛있는지 직원 모두가 검증했어요.",
+   "blank": "検証",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、取引先から届いた数字が正しいか電車の中で検証した。",
+   "en": "On the train, Sakura verified whether the figures from the client were correct.",
+   "ko": "사쿠라는 거래처에서 온 숫자가 맞는지 전철 안에서 검증했어요.",
+   "blank": "検証",
+   "src": "made"
+  }
+ ],
  "w|業務": [
   {
    "text": "業務が立て込んでる。",
@@ -22873,6 +25289,22 @@
    "en": "That's a reliable vendor.",
    "ko": "믿을 수 있는 업체네.",
    "blank": "業者"
+  }
+ ],
+ "w|極めて": [
+  {
+   "text": "校長先生は、今回の結果は極めて残念だと話した。",
+   "en": "The principal said this result was extremely disappointing.",
+   "ko": "교장 선생님은 이번 결과가 매우 유감스럽다고 말했어요.",
+   "blank": "極めて",
+   "src": "made"
+  },
+  {
+   "text": "このマンションは駅から極めて近く、通勤にとても便利だ。",
+   "en": "This apartment building is extremely close to the station and very convenient for commuting.",
+   "ko": "이 아파트는 역에서 아주 가까워서 출퇴근하기 정말 편해요.",
+   "blank": "極めて",
+   "src": "made"
   }
  ],
  "w|楽": [
@@ -22947,6 +25379,38 @@
    "blank": "楽しめる"
   }
  ],
+ "w|楽器": [
+  {
+   "text": "この芝居では、役者が自分で楽器を弾きながら歌う。",
+   "en": "In this play, the actors sing while playing instruments themselves.",
+   "ko": "이 연극에서는 배우가 직접 악기를 연주하며 노래해요.",
+   "blank": "楽器",
+   "src": "made"
+  },
+  {
+   "text": "恵子は小学生のとき、初めて楽器に触れた。",
+   "en": "Keiko first touched a musical instrument when she was in elementary school.",
+   "ko": "게이코는 초등학생 때 처음 악기를 만져 봤어요.",
+   "blank": "楽器",
+   "src": "made"
+  }
+ ],
+ "w|楽曲": [
+  {
+   "text": "署の休憩室では、いつも同じ古い楽曲がラジオから流れている。",
+   "en": "In the station's break room, the same old songs are always playing on the radio.",
+   "ko": "경찰서 휴게실에서는 늘 같은 옛날 곡이 라디오에서 흘러나와요.",
+   "blank": "楽曲",
+   "src": "made"
+  },
+  {
+   "text": "由美は試合前に、好きなバンドの楽曲を聴いて集中する。",
+   "en": "Before games, Yumi listens to songs by her favorite band to focus.",
+   "ko": "유미는 경기 전에 좋아하는 밴드의 곡을 들으며 집중해요.",
+   "blank": "楽曲",
+   "src": "made"
+  }
+ ],
  "w|概念": [
   {
    "text": "この概念は難しい。",
@@ -22959,6 +25423,22 @@
    "en": "I learned the basic concepts.",
    "ko": "기본 개념을 배웠어.",
    "blank": "概念"
+  }
+ ],
+ "w|構う": [
+  {
+   "text": "「どうぞお構いなく」と言って、誠は館長のお茶を断った。",
+   "en": "\"Please don't trouble yourself,\" Makoto said, declining the director's offer of tea.",
+   "ko": "\"신경 쓰지 마세요\" 하고 마코토는 관장이 권한 차를 사양했어요.",
+   "blank": "構い",
+   "src": "made"
+  },
+  {
+   "text": "「ケースに傷がついても構いませんか」と陽子は客に確認した。",
+   "en": "\"Do you mind if the case gets scratched?\" Yoko checked with the customer.",
+   "ko": "\"케이스에 흠집이 나도 괜찮으세요?\" 하고 요코는 손님에게 확인했어요.",
+   "blank": "構い",
+   "src": "made"
   }
  ],
  "w|構成": [
@@ -23091,6 +25571,22 @@
    "src": "made"
   }
  ],
+ "w|権限": [
+  {
+   "text": "その書類を開示する権限は、署長にしかない。",
+   "en": "Only the chief has the authority to release those documents.",
+   "ko": "그 서류를 공개할 권한은 서장에게만 있어요.",
+   "blank": "権限",
+   "src": "made"
+  },
+  {
+   "text": "キャプテンには、練習メニューを決める権限が少しだけある。",
+   "en": "The captain has a little authority to decide the practice menu.",
+   "ko": "주장에게는 연습 메뉴를 정할 권한이 조금 있어요.",
+   "blank": "権限",
+   "src": "made"
+  }
+ ],
  "w|横": [
   {
    "text": "横に座って。",
@@ -23159,6 +25655,22 @@
    "en": "Do you know how to use this machine?",
    "ko": "이 기계 쓰는 법 알아?",
    "blank": "機械"
+  }
+ ],
+ "w|機構": [
+  {
+   "text": "劇場の運営は、市の文化振興の機構が担っている。",
+   "en": "The theater is run by the city's cultural promotion organization.",
+   "ko": "극장 운영은 시의 문화 진흥 기구가 맡고 있어요.",
+   "blank": "機構",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、ピアノの鍵盤が動く機構に興味を持った。",
+   "en": "Keiko became interested in the mechanism that moves the piano keys.",
+   "ko": "게이코는 피아노 건반이 움직이는 기구에 관심이 생겼어요.",
+   "blank": "機構",
+   "src": "made"
   }
  ],
  "w|機種": [
@@ -23393,6 +25905,22 @@
    "src": "tatoeba:201479 en:38689/CM"
   }
  ],
+ "w|正式": [
+  {
+   "text": "健太は来月から、正式にサッカー部の部員になる。",
+   "en": "Starting next month, Kenta will officially become a member of the soccer club.",
+   "ko": "겐타는 다음 달부터 정식으로 축구부 부원이 돼요.",
+   "blank": "正式",
+   "src": "made"
+  },
+  {
+   "text": "不動産屋から電話があり、美咲の入居が正式に決まった。",
+   "en": "The real estate agent called, and Misaki's move-in was officially confirmed.",
+   "ko": "부동산에서 전화가 와서 미사키의 입주가 정식으로 정해졌어요.",
+   "blank": "正式",
+   "src": "made"
+  }
+ ],
  "w|正直": [
   {
    "text": "正直に言って。",
@@ -23579,6 +26107,22 @@
    "blank": "死亡"
   }
  ],
+ "w|死刑": [
+  {
+   "text": "翔太は大学の授業で、死刑制度について議論したことがある。",
+   "en": "Shota once debated the death penalty system in a university class.",
+   "ko": "쇼타는 대학 수업에서 사형 제도에 대해 토론한 적이 있어요.",
+   "blank": "死刑",
+   "src": "made"
+  },
+  {
+   "text": "由美はバスの中で、死刑をテーマにした重い小説を読んでいた。",
+   "en": "On the bus, Yumi was reading a heavy novel about the death penalty.",
+   "ko": "유미는 버스 안에서 사형을 주제로 한 무거운 소설을 읽고 있었어요.",
+   "blank": "死刑",
+   "src": "made"
+  }
+ ],
  "w|残す": [
   {
    "text": "メモを残すよ。",
@@ -23633,6 +26177,22 @@
    "en": "I wish I could, but I can't go.",
    "ko": "아쉽지만 못 가.",
    "blank": "残念"
+  }
+ ],
+ "w|残業": [
+  {
+   "text": "今月は残業が多くて、直樹は家で夕飯を食べた日がほとんどない。",
+   "en": "There was so much overtime this month that Naoki hardly had dinner at home.",
+   "ko": "이번 달은 야근이 많아서 나오키는 집에서 저녁을 먹은 날이 거의 없어요.",
+   "blank": "残業",
+   "src": "made"
+  },
+  {
+   "text": "会社員のお客さんは、残業の前に葵の店でパンを買っていく。",
+   "en": "Office workers buy bread at Aoi's shop before working overtime.",
+   "ko": "회사원 손님들은 야근 전에 아오이네 가게에서 빵을 사 가요.",
+   "blank": "残業",
+   "src": "made"
   }
  ],
  "w|段階": [
@@ -24117,6 +26677,22 @@
    "blank": "汗"
   }
  ],
+ "w|汚い": [
+  {
+   "text": "警察署の倉庫は、古い書類が積まれていて少し汚い。",
+   "en": "The police station storeroom is a bit dirty, with old documents piled up.",
+   "ko": "경찰서 창고는 오래된 서류가 쌓여 있어서 좀 지저분해요.",
+   "blank": "汚い",
+   "src": "made"
+  },
+  {
+   "text": "由美は汚いユニフォームを洗濯機に放り込んだ。",
+   "en": "Yumi threw her dirty uniform into the washing machine.",
+   "ko": "유미는 더러운 유니폼을 세탁기에 던져 넣었어요.",
+   "blank": "汚い",
+   "src": "made"
+  }
+ ],
  "w|汚れる": [
   {
    "text": "服が汚れるのは嫌だな。",
@@ -24163,6 +26739,22 @@
    "blank": "決して"
   }
  ],
+ "w|決まり": [
+  {
+   "text": "署の決まりで、拳銃は勤務が終わるたびに返さなければならない。",
+   "en": "By station rules, pistols must be returned at the end of every shift.",
+   "ko": "경찰서 규칙상 권총은 근무가 끝날 때마다 반납해야 해요.",
+   "blank": "決まり",
+   "src": "made"
+  },
+  {
+   "text": "部の決まりで、遅刻した人は体育館を十周走る。",
+   "en": "By club rules, anyone who's late runs ten laps of the gym.",
+   "ko": "동아리 규칙상 지각한 사람은 체육관을 열 바퀴 뛰어요.",
+   "blank": "決まり",
+   "src": "made"
+  }
+ ],
  "w|決まる": [
   {
    "text": "日程、決まった？",
@@ -24189,6 +26781,22 @@
    "en": "I'll decide before the day is out.",
    "ko": "오늘 중으로 정할게.",
    "blank": "決める"
+  }
+ ],
+ "w|決勝": [
+  {
+   "text": "健太のクラスは、運動会のリレーで決勝まで進んだ。",
+   "en": "Kenta's class made it to the final of the relay at sports day.",
+   "ko": "겐타네 반은 운동회 계주에서 결승까지 올라갔어요.",
+   "blank": "決勝",
+   "src": "made"
+  },
+  {
+   "text": "美咲は荷ほどきの手を止めて、サッカーの決勝をテレビで見た。",
+   "en": "Misaki stopped unpacking and watched the soccer final on TV.",
+   "ko": "미사키는 짐 풀던 손을 멈추고 축구 결승전을 텔레비전으로 봤어요.",
+   "blank": "決勝",
+   "src": "made"
   }
  ],
  "w|決定": [
@@ -24431,6 +27039,38 @@
    "blank": "流れ"
   }
  ],
+ "w|流れる": [
+  {
+   "text": "排水口が詰まって、水がなかなか流れない。",
+   "en": "The drain is clogged, and the water won't drain.",
+   "ko": "배수구가 막혀서 물이 잘 안 내려가요.",
+   "blank": "流れ",
+   "src": "made"
+  },
+  {
+   "text": "ホームに着くと、懐かしい駅のメロディーが流れてきた。",
+   "en": "When the train arrived at the platform, the familiar station melody began to play.",
+   "ko": "플랫폼에 도착하자 그리운 역 멜로디가 흘러나왔어요.",
+   "blank": "流れ",
+   "src": "made"
+  }
+ ],
+ "w|流出": [
+  {
+   "text": "新作の台本がネットに流出して、劇団は大騒ぎになった。",
+   "en": "The new script leaked online, and the troupe was in an uproar.",
+   "ko": "신작 대본이 인터넷에 유출돼서 극단이 발칵 뒤집혔어요.",
+   "blank": "流出",
+   "src": "made"
+  },
+  {
+   "text": "優秀な若い音楽家の海外への流出が、業界で問題になっている。",
+   "en": "The exodus of talented young musicians overseas has become an issue in the industry.",
+   "ko": "우수한 젊은 음악가의 해외 유출이 업계에서 문제가 되고 있어요.",
+   "blank": "流出",
+   "src": "made"
+  }
+ ],
  "w|流行": [
   {
    "text": "この髪型が流行してる。",
@@ -24473,6 +27113,22 @@
    "blank": "海外"
   }
  ],
+ "w|海賊": [
+  {
+   "text": "翔太は子どもの頃、海賊ごっこばかりして遊んでいた。",
+   "en": "As a child, Shota was always playing pirates.",
+   "ko": "쇼타는 어릴 때 해적 놀이만 하며 놀았어요.",
+   "blank": "海賊",
+   "src": "made"
+  },
+  {
+   "text": "由美たちは合宿の夜、海賊の映画を見て盛り上がった。",
+   "en": "On the training camp night, Yumi and her teammates got excited watching a pirate movie.",
+   "ko": "유미네는 합숙 밤에 해적 영화를 보며 신났어요.",
+   "blank": "海賊",
+   "src": "made"
+  }
+ ],
  "w|消える": [
   {
    "text": "痛みが消えるよ。",
@@ -24499,6 +27155,22 @@
    "en": "Are you going to delete the history?",
    "ko": "기록을 지울 생각이야?",
    "blank": "消す"
+  }
+ ],
+ "w|消滅": [
+  {
+   "text": "時効で罪の責任が消滅することについて、翔太は複雑な気持ちになった。",
+   "en": "Shota had mixed feelings about criminal liability expiring under the statute of limitations.",
+   "ko": "공소시효로 죄의 책임이 소멸되는 것에 대해 쇼타는 복잡한 기분이 들었어요.",
+   "blank": "消滅",
+   "src": "made"
+  },
+  {
+   "text": "部員が足りず、隣の学校のバスケ部は消滅してしまった。",
+   "en": "Short on members, the basketball club at the neighboring school ceased to exist.",
+   "ko": "부원이 모자라서 옆 학교 농구부는 없어지고 말았어요.",
+   "blank": "消滅",
+   "src": "made"
   }
  ],
  "w|消費": [
@@ -24555,6 +27227,22 @@
    "en": "The wound seems deep.",
    "ko": "상처가 깊어 보여.",
    "blank": "深い"
+  }
+ ],
+ "w|深刻": [
+  {
+   "text": "本の盗難は、小さな図書館にとって深刻な問題だ。",
+   "en": "Book theft is a serious problem for small libraries.",
+   "ko": "책 도난은 작은 도서관에 심각한 문제예요.",
+   "blank": "深刻",
+   "src": "made"
+  },
+  {
+   "text": "基板まで水が入っていて、故障はかなり深刻だった。",
+   "en": "Water had gotten all the way into the circuit board, and the damage was quite serious.",
+   "ko": "기판까지 물이 들어가서 고장이 꽤 심각했어요.",
+   "blank": "深刻",
+   "src": "made"
   }
  ],
  "w|深夜": [
@@ -24729,6 +27417,22 @@
    "blank": "準備"
   }
  ],
+ "w|漏れ": [
+  {
+   "text": "天井から雨の漏れが見つかり、誠は急いで本を移動させた。",
+   "en": "A rain leak was found in the ceiling, so Makoto hurried to move the books.",
+   "ko": "천장에서 비 새는 곳이 발견돼서 마코토는 서둘러 책을 옮겼어요.",
+   "blank": "漏れ",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、個人情報の漏れがないように、修理の前にデータを消すよう客に勧めた。",
+   "en": "To prevent any leak of personal information, Yoko advised customers to erase their data before repairs.",
+   "ko": "요코는 개인 정보가 새지 않도록 수리 전에 데이터를 지우라고 손님에게 권했어요.",
+   "blank": "漏れ",
+   "src": "made"
+  }
+ ],
  "w|演出": [
   {
    "text": "舞台の演出がすごい。",
@@ -24755,6 +27459,22 @@
    "en": "I listened to a live performance.",
    "ko": "라이브 연주를 들었어.",
    "blank": "演奏"
+  }
+ ],
+ "w|演技": [
+  {
+   "text": "容疑者の涙は演技だと、ベテラン刑事はすぐに見抜いた。",
+   "en": "The veteran detective saw right through the suspect's tears as acting.",
+   "ko": "베테랑 형사는 용의자의 눈물이 연기라는 걸 바로 간파했어요.",
+   "blank": "演技",
+   "src": "made"
+  },
+  {
+   "text": "ファウルをもらおうとした相手の演技に、審判はだまされなかった。",
+   "en": "The referee wasn't fooled by the opponent's acting to draw a foul.",
+   "ko": "파울을 얻어 내려던 상대의 연기에 심판은 속지 않았어요.",
+   "blank": "演技",
+   "src": "made"
   }
  ],
  "w|漢字": [
@@ -25649,6 +28369,22 @@
    "blank": "現実"
   }
  ],
+ "w|現役": [
+  {
+   "text": "七十歳の板前さんは、今も現役で毎朝魚をさばいている。",
+   "en": "The seventy-year-old chef is still active and fillets fish every morning.",
+   "ko": "일흔 살 요리사는 지금도 현역으로 매일 아침 생선을 손질해요.",
+   "blank": "現役",
+   "src": "made"
+  },
+  {
+   "text": "隣の席のおじいさんは、昔は現役の車掌だったと話してくれた。",
+   "en": "The old man in the next seat told Sakura he used to be a working conductor.",
+   "ko": "옆자리 할아버지는 예전에 현역 차장이었다고 이야기해 줬어요.",
+   "blank": "現役",
+   "src": "made"
+  }
+ ],
  "w|現状": [
   {
    "text": "現状を報告します。",
@@ -25689,6 +28425,22 @@
    "en": "I'll take a little cash with me.",
    "ko": "현금을 조금 가져갈게.",
    "blank": "現金"
+  }
+ ],
+ "w|理事": [
+  {
+   "text": "商店街の理事を務める店長は、会議でよく店を空ける。",
+   "en": "The manager, who serves as a director of the shopping street association, is often away at meetings.",
+   "ko": "상점가 이사를 맡은 점장은 회의 때문에 가게를 자주 비워요.",
+   "blank": "理事",
+   "src": "made"
+  },
+  {
+   "text": "さくらは駅の改札で、取引先の会社の理事に迎えられた。",
+   "en": "At the station ticket gate, Sakura was met by a director of the client company.",
+   "ko": "사쿠라는 역 개찰구에서 거래처 회사의 이사에게 마중을 받았어요.",
+   "blank": "理事",
+   "src": "made"
   }
  ],
  "w|理想": [
@@ -25845,6 +28597,22 @@
    "blank": "生徒"
   }
  ],
+ "w|生放送": [
+  {
+   "text": "地元のラジオ局が、図書館の朗読会を生放送で伝えた。",
+   "en": "The local radio station broadcast the library's reading event live.",
+   "ko": "지역 라디오 방송국이 도서관 낭독회를 생방송으로 전했어요.",
+   "blank": "生放送",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、好きな歌手の生放送を携帯で見ながら仕事をしていた。",
+   "en": "Yoko was working while watching her favorite singer's live broadcast on her phone.",
+   "ko": "요코는 좋아하는 가수의 생방송을 휴대폰으로 보면서 일하고 있었어요.",
+   "blank": "生放送",
+   "src": "made"
+  }
+ ],
  "w|生活": [
   {
    "text": "生活がきついよ。",
@@ -25943,6 +28711,22 @@
    "ko": "요즘은 도시보다 시골 생활을 좋아하는 사람이 점점 많아지고 있어요.",
    "blank": "田舎",
    "src": "tatoeba:171997/bunbuku en:242478/CK"
+  }
+ ],
+ "w|由来": [
+  {
+   "text": "直樹の会社の名前は、創業者の故郷の川に由来している。",
+   "en": "The name of Naoki's company comes from a river in the founder's hometown.",
+   "ko": "나오키네 회사 이름은 창업자 고향의 강에서 유래했어요.",
+   "blank": "由来",
+   "src": "made"
+  },
+  {
+   "text": "葵の店の名前は、祖母の好きだった花に由来する。",
+   "en": "The name of Aoi's shop comes from a flower her grandmother loved.",
+   "ko": "아오이네 가게 이름은 할머니가 좋아하던 꽃에서 유래해요.",
+   "blank": "由来",
+   "src": "made"
   }
  ],
  "w|申し訳ない": [
@@ -26283,6 +29067,22 @@
    "blank": "癖"
   }
  ],
+ "w|発信": [
+  {
+   "text": "生徒会は、学校の行事をウェブサイトで発信している。",
+   "en": "The student council shares school events on the website.",
+   "ko": "학생회는 학교 행사를 웹사이트로 알리고 있어요.",
+   "blank": "発信",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、引っ越しの様子を毎日ブログで発信している。",
+   "en": "Misaki posts about her move on her blog every day.",
+   "ko": "미사키는 이사하는 모습을 매일 블로그로 올리고 있어요.",
+   "blank": "発信",
+   "src": "made"
+  }
+ ],
  "w|発売": [
   {
    "text": "もう発売した？",
@@ -26323,6 +29123,22 @@
    "en": "I feel technology advancing.",
    "ko": "기술 발전을 느껴.",
    "blank": "発展"
+  }
+ ],
+ "w|発揮": [
+  {
+   "text": "翔太は聞き込みで、持ち前の粘り強さを発揮した。",
+   "en": "Shota showed his natural persistence when questioning people.",
+   "ko": "쇼타는 탐문에서 타고난 끈기를 발휘했어요.",
+   "blank": "発揮",
+   "src": "made"
+  },
+  {
+   "text": "由美は大事な試合で、練習の成果を十分に発揮した。",
+   "en": "Yumi fully showed the results of her practice in an important game.",
+   "ko": "유미는 중요한 경기에서 연습 성과를 충분히 발휘했어요.",
+   "blank": "発揮",
+   "src": "made"
   }
  ],
  "w|発生": [
@@ -26393,6 +29209,22 @@
    "en": "What I said earlier was rude.",
    "ko": "아까 발언이 실례였어.",
    "blank": "発言"
+  }
+ ],
+ "w|発達": [
+  {
+   "text": "冷凍技術の発達で、遠くの魚も新鮮なまま届くようになった。",
+   "en": "Thanks to advances in freezing technology, fish from far away now arrive fresh.",
+   "ko": "냉동 기술의 발달로 먼 곳의 생선도 신선한 채로 오게 됐어요.",
+   "blank": "発達",
+   "src": "made"
+  },
+  {
+   "text": "鉄道の発達で、昔は一日かかった道が三時間で行けるようになった。",
+   "en": "With the development of railways, a trip that once took a day can now be made in three hours.",
+   "ko": "철도의 발달로 옛날에는 하루 걸리던 길을 세 시간이면 갈 수 있게 됐어요.",
+   "blank": "発達",
+   "src": "made"
   }
  ],
  "w|発電": [
@@ -26795,6 +29627,22 @@
    "blank": "真っ直ぐ"
   }
  ],
+ "w|真似": [
+  {
+   "text": "新人の翔太は、先輩の取り調べのやり方を真似してみた。",
+   "en": "Rookie Shota tried copying his senior's interrogation style.",
+   "ko": "신참 쇼타는 선배의 취조 방식을 따라 해 봤어요.",
+   "blank": "真似",
+   "src": "made"
+  },
+  {
+   "text": "由美はプロ選手のシュートの真似をして、何度もボールを投げた。",
+   "en": "Yumi copied a pro player's shot and threw the ball again and again.",
+   "ko": "유미는 프로 선수의 슛을 흉내 내며 몇 번이고 공을 던졌어요.",
+   "blank": "真似",
+   "src": "made"
+  }
+ ],
  "w|真剣": [
   {
    "text": "真剣に話を聞いてほしい。",
@@ -26867,6 +29715,22 @@
    "src": "tatoeba:1106176/mookeee en:1869498/JunjouLover"
   }
  ],
+ "w|眺める": [
+  {
+   "text": "拓也は舞台袖から、満員の客席を眺めた。",
+   "en": "Takuya looked out from the wings at the packed audience seats.",
+   "ko": "다쿠야는 무대 옆에서 꽉 찬 객석을 바라봤어요.",
+   "blank": "眺め",
+   "src": "made"
+  },
+  {
+   "text": "恵子は練習に疲れると、屋上から町の景色を眺める。",
+   "en": "When she gets tired of practicing, Keiko gazes at the town from the rooftop.",
+   "ko": "게이코는 연습에 지치면 옥상에서 동네 풍경을 바라봐요.",
+   "blank": "眺める",
+   "src": "made"
+  }
+ ],
  "w|眼鏡": [
   {
    "text": "眼鏡を忘れてきた。",
@@ -26937,6 +29801,22 @@
    "blank": "瞬間"
   }
  ],
+ "w|矢": [
+  {
+   "text": "弓道部の健太は、初めて矢を的に当てることができた。",
+   "en": "Kenta from the archery club managed to hit the target with an arrow for the first time.",
+   "ko": "궁도부인 겐타는 처음으로 화살을 과녁에 맞힐 수 있었어요.",
+   "blank": "矢",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しの準備をしていると、時間は矢のように過ぎていった。",
+   "en": "While getting ready for the move, time flew by like an arrow.",
+   "ko": "이사 준비를 하다 보니 시간이 쏜살같이 지나갔어요.",
+   "blank": "矢",
+   "src": "made"
+  }
+ ],
  "w|知り合い": [
   {
    "text": "知り合いに会ったよ。",
@@ -26963,6 +29843,22 @@
    "en": "I had no idea.",
    "ko": "전혀 몰랐어.",
    "blank": "知らなかった"
+  }
+ ],
+ "w|知事": [
+  {
+   "text": "初日の公演には、県の知事も見に来ていた。",
+   "en": "The prefectural governor also came to see the opening performance.",
+   "ko": "첫날 공연에는 현 지사도 보러 왔어요.",
+   "blank": "知事",
+   "src": "made"
+  },
+  {
+   "text": "恵子の学校のオーケストラは、知事の前で演奏したことがある。",
+   "en": "Keiko's school orchestra once performed in front of the governor.",
+   "ko": "게이코네 학교 오케스트라는 지사 앞에서 연주한 적이 있어요.",
+   "blank": "知事",
+   "src": "made"
   }
  ],
  "w|知識": [
@@ -27033,6 +29929,22 @@
    "en": "There's not enough sugar.",
    "ko": "설탕이 부족해.",
    "blank": "砂糖"
+  }
+ ],
+ "w|研修": [
+  {
+   "text": "直樹は新人の研修で、電話の受け方を教えた。",
+   "en": "Naoki taught new hires how to answer the phone during their training.",
+   "ko": "나오키는 신입 연수에서 전화 받는 법을 가르쳤어요.",
+   "blank": "研修",
+   "src": "made"
+  },
+  {
+   "text": "新しいレジを入れるため、葵は業者の研修を受けた。",
+   "en": "Aoi received training from the vendor to install a new register.",
+   "ko": "새 계산대를 들이기 위해 아오이는 업체 교육을 받았어요.",
+   "blank": "研修",
+   "src": "made"
   }
  ],
  "w|研究": [
@@ -27729,6 +30641,22 @@
    "blank": "競技"
   }
  ],
+ "w|競馬": [
+  {
+   "text": "スポーツの棚では、競馬の歴史の本が意外とよく借りられる。",
+   "en": "On the sports shelf, books on the history of horse racing are borrowed surprisingly often.",
+   "ko": "스포츠 서가에서는 경마 역사 책이 의외로 많이 대출돼요.",
+   "blank": "競馬",
+   "src": "made"
+  },
+  {
+   "text": "常連のおじさんは、競馬の中継を見るために画面の修理を急いでいた。",
+   "en": "A regular was in a hurry to get his screen fixed so he could watch the horse racing broadcast.",
+   "ko": "단골 아저씨는 경마 중계를 보려고 화면 수리를 서두르고 있었어요.",
+   "blank": "競馬",
+   "src": "made"
+  }
+ ],
  "w|笑い": [
   {
    "text": "大きな笑いが起きた。",
@@ -27939,6 +30867,22 @@
    "blank": "納得"
   }
  ],
+ "w|純粋": [
+  {
+   "text": "新入社員の純粋な質問に、直樹は思わず考え込んだ。",
+   "en": "Naoki found himself pondering a new employee's innocent question.",
+   "ko": "신입 사원의 순수한 질문에 나오키는 저도 모르게 생각에 잠겼어요.",
+   "blank": "純粋",
+   "src": "made"
+  },
+  {
+   "text": "小さな子が純粋な目で、お菓子の棚をじっと見ていた。",
+   "en": "A small child was staring at the snack shelf with innocent eyes.",
+   "ko": "어린아이가 순수한 눈으로 과자 진열대를 가만히 보고 있었어요.",
+   "blank": "純粋",
+   "src": "made"
+  }
+ ],
  "w|紙": [
   {
    "text": "紙、ある？",
@@ -28021,6 +30965,22 @@
    "en": "I can't simply feel happy.",
    "ko": "솔직히 기뻐할 수가 없어.",
    "blank": "素直"
+  }
+ ],
+ "w|紫": [
+  {
+   "text": "目撃者によると、犯人は紫の帽子をかぶっていたらしい。",
+   "en": "According to a witness, the culprit was wearing a purple hat.",
+   "ko": "목격자에 따르면 범인은 보라색 모자를 쓰고 있었대요.",
+   "blank": "紫",
+   "src": "made"
+  },
+  {
+   "text": "由美のチームのユニフォームは、紫と白の二色だ。",
+   "en": "Yumi's team's uniform is purple and white.",
+   "ko": "유미네 팀 유니폼은 보라색과 흰색 두 가지 색이에요.",
+   "blank": "紫",
+   "src": "made"
   }
  ],
  "w|細い": [
@@ -28133,6 +31093,38 @@
    "en": "That's a new combination for me.",
    "ko": "그 조합은 처음이야.",
    "blank": "組み合わせ"
+  }
+ ],
+ "w|組む": [
+  {
+   "text": "直樹は、隣の部署の先輩と組んで新しい企画を進めている。",
+   "en": "Naoki is teaming up with a senior colleague from the next department on a new project.",
+   "ko": "나오키는 옆 부서 선배와 짝을 이뤄 새 기획을 진행하고 있어요.",
+   "blank": "組ん",
+   "src": "made"
+  },
+  {
+   "text": "葵は近所の農家と組んで、朝採れ野菜のコーナーを作った。",
+   "en": "Aoi teamed up with a nearby farmer to set up a morning-harvested vegetable corner.",
+   "ko": "아오이는 근처 농가와 손잡고 아침에 딴 채소 코너를 만들었어요.",
+   "blank": "組ん",
+   "src": "made"
+  }
+ ],
+ "w|組合": [
+  {
+   "text": "大輔は、地元の漁業組合から直接魚を買っている。",
+   "en": "Daisuke buys fish directly from the local fishermen's cooperative.",
+   "ko": "다이스케는 지역 어업 조합에서 직접 생선을 사요.",
+   "blank": "組合",
+   "src": "made"
+  },
+  {
+   "text": "車内のニュースによると、鉄道の労働組合が賃上げを求めているらしい。",
+   "en": "According to the news on the train, the railway labor union is demanding a pay raise.",
+   "ko": "차내 뉴스에 따르면 철도 노동조합이 임금 인상을 요구하고 있대요.",
+   "blank": "組合",
+   "src": "made"
   }
  ],
  "w|組織": [
@@ -28275,6 +31267,22 @@
    "blank": "結構"
   }
  ],
+ "w|結論": [
+  {
+   "text": "長い話し合いの結論として、定休日を水曜日に変えることになった。",
+   "en": "As the conclusion of a long discussion, they decided to change the regular day off to Wednesday.",
+   "ko": "긴 회의 끝에 결론적으로 정기 휴일을 수요일로 바꾸기로 했어요.",
+   "blank": "結論",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、契約を進めるべきだという結論を報告書にまとめた。",
+   "en": "Sakura summarized in her report the conclusion that they should go ahead with the contract.",
+   "ko": "사쿠라는 계약을 진행해야 한다는 결론을 보고서에 정리했어요.",
+   "blank": "結論",
+   "src": "made"
+  }
+ ],
  "w|給料": [
   {
    "text": "給料が上がったよ。",
@@ -28301,6 +31309,22 @@
    "en": "We'll unify the design.",
    "ko": "디자인을 통일해.",
    "blank": "統一"
+  }
+ ],
+ "w|統計": [
+  {
+   "text": "店長は過去の売上の統計を見て、仕入れの量を決めている。",
+   "en": "The manager looks at past sales statistics to decide how much to order.",
+   "ko": "점장은 지난 매출 통계를 보고 들여올 양을 정해요.",
+   "blank": "統計",
+   "src": "made"
+  },
+  {
+   "text": "さくらは電車の中で、会議で使う統計のデータを見直した。",
+   "en": "On the train, Sakura went over the statistical data for the meeting.",
+   "ko": "사쿠라는 전철 안에서 회의에 쓸 통계 자료를 다시 봤어요.",
+   "blank": "統計",
+   "src": "made"
   }
  ],
  "w|絵": [
@@ -28657,6 +31681,22 @@
    "en": "I'm going to the salon.",
    "ko": "미용실에 갈게.",
    "blank": "美容"
+  }
+ ],
+ "w|美術": [
+  {
+   "text": "舞台の美術は、若いデザイナーが一から作り上げた。",
+   "en": "The stage art was built from scratch by a young designer.",
+   "ko": "무대 미술은 젊은 디자이너가 처음부터 만들어 냈어요.",
+   "blank": "美術",
+   "src": "made"
+  },
+  {
+   "text": "恵子は音楽だけでなく、美術の授業も好きだ。",
+   "en": "Keiko likes not only music but also art class.",
+   "ko": "게이코는 음악뿐 아니라 미술 수업도 좋아해요.",
+   "blank": "美術",
+   "src": "made"
   }
  ],
  "w|義務": [
@@ -29265,6 +32305,38 @@
    "blank": "自殺"
   }
  ],
+ "w|自治": [
+  {
+   "text": "町内会と警察は、地域の自治を守るために協力している。",
+   "en": "The neighborhood association and the police work together to protect local self-governance.",
+   "ko": "주민회와 경찰은 지역 자치를 지키기 위해 협력하고 있어요.",
+   "blank": "自治",
+   "src": "made"
+  },
+  {
+   "text": "由美の学校は生徒の自治を大切にしていて、部活の予算も生徒が決める。",
+   "en": "Yumi's school values student self-governance, and students even decide club budgets.",
+   "ko": "유미네 학교는 학생 자치를 중요하게 여겨서 동아리 예산도 학생이 정해요.",
+   "blank": "自治",
+   "src": "made"
+  }
+ ],
+ "w|自治体": [
+  {
+   "text": "この劇場は、地元の自治体が建てたものだ。",
+   "en": "This theater was built by the local municipality.",
+   "ko": "이 극장은 지역 지자체가 지은 거예요.",
+   "blank": "自治体",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、自治体が開く無料の音楽教室でも教えている。",
+   "en": "Keiko also teaches at free music classes run by the local government.",
+   "ko": "게이코는 지자체가 여는 무료 음악 교실에서도 가르쳐요.",
+   "blank": "自治体",
+   "src": "made"
+  }
+ ],
  "w|自然": [
   {
    "text": "自然が好きだよ。",
@@ -29333,6 +32405,22 @@
    "en": "It smells like fish.",
    "ko": "생선 냄새가 나.",
    "blank": "臭い"
+  }
+ ],
+ "w|至る": [
+  {
+   "text": "事件が解決に至るまで、翔太はほとんど家に帰れなかった。",
+   "en": "Until the case was solved, Shota could hardly go home.",
+   "ko": "사건이 해결에 이르기까지 쇼타는 거의 집에 못 갔어요.",
+   "blank": "至る",
+   "src": "made"
+  },
+  {
+   "text": "由美のチームは、何度も負けた末に優勝に至った。",
+   "en": "After losing many times, Yumi's team finally reached the championship.",
+   "ko": "유미네 팀은 몇 번이나 진 끝에 우승에 이르렀어요.",
+   "blank": "至っ",
+   "src": "made"
   }
  ],
  "w|興味": [
@@ -29503,6 +32591,22 @@
    "en": "The entertainment world seems tough.",
    "ko": "연예계는 험한 것 같아.",
    "blank": "芸能"
+  }
+ ],
+ "w|芸能人": [
+  {
+   "text": "芸能人がドラマの撮影で、警察署の前に来ていた。",
+   "en": "A celebrity had come in front of the police station to film a drama.",
+   "ko": "연예인이 드라마 촬영으로 경찰서 앞에 와 있었어요.",
+   "blank": "芸能人",
+   "src": "made"
+  },
+  {
+   "text": "決勝戦の会場には、応援に来た芸能人の姿もあった。",
+   "en": "At the final, there was even a celebrity who had come to cheer.",
+   "ko": "결승전 경기장에는 응원하러 온 연예인도 있었어요.",
+   "blank": "芸能人",
+   "src": "made"
   }
  ],
  "w|芸術": [
@@ -29989,6 +33093,54 @@
    "blank": "表示"
   }
  ],
+ "w|表紙": [
+  {
+   "text": "大輔の店の料理が、グルメ雑誌の表紙を飾った。",
+   "en": "A dish from Daisuke's restaurant made the cover of a food magazine.",
+   "ko": "다이스케네 가게 요리가 미식 잡지 표지를 장식했어요.",
+   "blank": "表紙",
+   "src": "made"
+  },
+  {
+   "text": "さくらは駅の売店で、表紙がきれいな旅行雑誌を買った。",
+   "en": "At the station kiosk, Sakura bought a travel magazine with a pretty cover.",
+   "ko": "사쿠라는 역 매점에서 표지가 예쁜 여행 잡지를 샀어요.",
+   "blank": "表紙",
+   "src": "made"
+  }
+ ],
+ "w|表記": [
+  {
+   "text": "メニューのアレルギーの表記に間違いがないか、大輔は何度も確認した。",
+   "en": "Daisuke checked many times that the allergy labels on the menu had no mistakes.",
+   "ko": "다이스케는 메뉴의 알레르기 표기에 틀린 곳이 없는지 몇 번이나 확인했어요.",
+   "blank": "表記",
+   "src": "made"
+  },
+  {
+   "text": "駅名のローマ字の表記が、前に来たときと変わっていた。",
+   "en": "The romanized spelling of the station name had changed since Sakura's last visit.",
+   "ko": "역 이름의 로마자 표기가 전에 왔을 때와 바뀌어 있었어요.",
+   "blank": "表記",
+   "src": "made"
+  }
+ ],
+ "w|表面": [
+  {
+   "text": "鑑識の人は、机の表面に残った指紋を丁寧に調べた。",
+   "en": "The forensics officer carefully examined the fingerprints left on the desk's surface.",
+   "ko": "감식반 사람은 책상 표면에 남은 지문을 꼼꼼히 조사했어요.",
+   "blank": "表面",
+   "src": "made"
+  },
+  {
+   "text": "新しいボールは、表面がざらざらしていて持ちやすい。",
+   "en": "The new ball has a rough surface and is easy to grip.",
+   "ko": "새 공은 표면이 꺼끌꺼끌해서 잡기 쉬워요.",
+   "blank": "表面",
+   "src": "made"
+  }
+ ],
  "w|袋": [
   {
    "text": "袋に入れて。",
@@ -30029,6 +33181,22 @@
    "en": "I saw news about the trial.",
    "ko": "재판 뉴스를 봤어.",
    "blank": "裁判"
+  }
+ ],
+ "w|裁判所": [
+  {
+   "text": "翔太は証言をするために、初めて裁判所に行った。",
+   "en": "Shota went to the courthouse for the first time to testify.",
+   "ko": "쇼타는 증언하기 위해 처음으로 법원에 갔어요.",
+   "blank": "裁判所",
+   "src": "made"
+  },
+  {
+   "text": "由美のチームの体育館は、裁判所のすぐ隣にある。",
+   "en": "Yumi's team's gym is right next to the courthouse.",
+   "ko": "유미네 팀 체육관은 법원 바로 옆에 있어요.",
+   "blank": "裁判所",
+   "src": "made"
   }
  ],
  "w|装備": [
@@ -30273,6 +33441,22 @@
    "en": "What's inside matters more than looks.",
    "ko": "겉모습보다 속이야.",
    "blank": "見た目"
+  }
+ ],
+ "w|見つかる": [
+  {
+   "text": "なくしたと思っていた包丁が、冷蔵庫の裏から見つかった。",
+   "en": "The knife Daisuke thought he'd lost was found behind the fridge.",
+   "ko": "잃어버린 줄 알았던 칼이 냉장고 뒤에서 나왔어요.",
+   "blank": "見つかっ",
+   "src": "made"
+  },
+  {
+   "text": "乗り換えの駅で、やっと空いている席が見つかった。",
+   "en": "At the transfer station, Sakura finally found an empty seat.",
+   "ko": "환승역에서 드디어 빈자리를 찾았어요.",
+   "blank": "見つかっ",
+   "src": "made"
   }
  ],
  "w|見つける": [
@@ -30585,6 +33769,22 @@
    "en": "The alert was lifted.",
    "ko": "경보가 해제됐어.",
    "blank": "解除"
+  }
+ ],
+ "w|触る": [
+  {
+   "text": "「熱いから鍋には触るなよ」と大輔は新人に注意した。",
+   "en": "\"It's hot, so don't touch the pot,\" Daisuke warned the new hire.",
+   "ko": "\"뜨거우니까 냄비 만지지 마\" 하고 다이스케는 신입에게 주의를 줬어요.",
+   "blank": "触る",
+   "src": "made"
+  },
+  {
+   "text": "窓ガラスに触ると、外の冷たさが伝わってきた。",
+   "en": "When Sakura touched the window glass, she could feel the cold outside.",
+   "ko": "창유리를 만지자 바깥의 차가움이 전해졌어요.",
+   "blank": "触る",
+   "src": "made"
   }
  ],
  "w|触れる": [
@@ -30911,6 +34111,22 @@
    "blank": "許可"
   }
  ],
+ "w|訴え": [
+  {
+   "text": "開館時間を延ばしてほしいという利用者の訴えが、市に届いた。",
+   "en": "Library users' appeal to extend the opening hours reached the city.",
+   "ko": "개관 시간을 늘려 달라는 이용자들의 호소가 시에 전달됐어요.",
+   "blank": "訴え",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、修理代が高すぎるという客の訴えを静かに聞いた。",
+   "en": "Yoko quietly listened to the customer's complaint that the repair was too expensive.",
+   "ko": "요코는 수리비가 너무 비싸다는 손님의 하소연을 조용히 들었어요.",
+   "blank": "訴え",
+   "src": "made"
+  }
+ ],
  "w|訴訟": [
   {
    "text": "訴訟を起こすことにした。",
@@ -30995,6 +34211,22 @@
    "blank": "評価"
   }
  ],
+ "w|評判": [
+  {
+   "text": "駅前の交番の警官は、親切だと近所で評判だ。",
+   "en": "The officer at the police box by the station is known in the neighborhood for being kind.",
+   "ko": "역 앞 파출소 경찰관은 친절하다고 동네에서 평판이 좋아요.",
+   "blank": "評判",
+   "src": "made"
+  },
+  {
+   "text": "新しいコーチは、教え方がうまいと評判がいい。",
+   "en": "The new coach has a good reputation for being a skilled teacher.",
+   "ko": "새 코치는 가르치는 솜씨가 좋다고 평판이 좋아요.",
+   "blank": "評判",
+   "src": "made"
+  }
+ ],
  "w|試合": [
   {
    "text": "試合、見に行く？",
@@ -31063,6 +34295,22 @@
    "en": "Everybody's talking about it.",
    "ko": "화제가 되고 있어.",
    "blank": "話題"
+  }
+ ],
+ "w|該当": [
+  {
+   "text": "学生割引に該当するお客さんは、受付で学生証を見せる。",
+   "en": "Customers who qualify for the student discount show their student ID at reception.",
+   "ko": "학생 할인에 해당하는 손님은 접수처에서 학생증을 보여 줘요.",
+   "blank": "該当",
+   "src": "made"
+  },
+  {
+   "text": "奨学金の条件に該当する生徒は、事務室に申し込むことができる。",
+   "en": "Students who meet the scholarship requirements can apply at the office.",
+   "ko": "장학금 조건에 해당하는 학생은 사무실에 신청할 수 있어요.",
+   "blank": "該当",
+   "src": "made"
   }
  ],
  "w|詳しい": [
@@ -31179,6 +34427,22 @@
    "blank": "誕生日"
   }
  ],
+ "w|誘導": [
+  {
+   "text": "火災訓練で、直樹は社員を非常階段へ誘導する係になった。",
+   "en": "In the fire drill, Naoki was put in charge of guiding employees to the emergency stairs.",
+   "ko": "화재 훈련에서 나오키는 직원들을 비상계단으로 유도하는 담당이 됐어요.",
+   "blank": "誘導",
+   "src": "made"
+  },
+  {
+   "text": "店の前の工事で、作業員が歩行者を誘導していた。",
+   "en": "With construction in front of the shop, a worker was directing pedestrians.",
+   "ko": "가게 앞 공사 때문에 작업자가 보행자를 안내하고 있었어요.",
+   "blank": "誘導",
+   "src": "made"
+  }
+ ],
  "w|語る": [
   {
    "text": "彼は静かに語る人だ。",
@@ -31191,6 +34455,22 @@
    "en": "I like time to talk about dreams.",
    "ko": "꿈을 이야기하는 시간이 좋아.",
    "blank": "語る"
+  }
+ ],
+ "w|説得": [
+  {
+   "text": "健太は母親の説得に負けて、塾に通うことにした。",
+   "en": "Giving in to his mother's persuasion, Kenta decided to go to cram school.",
+   "ko": "겐타는 엄마의 설득에 져서 학원에 다니기로 했어요.",
+   "blank": "説得",
+   "src": "made"
+  },
+  {
+   "text": "美咲は大家さんの説得に成功して、猫を飼う許可をもらった。",
+   "en": "Misaki succeeded in persuading the landlord and got permission to keep a cat.",
+   "ko": "미사키는 집주인을 설득하는 데 성공해서 고양이를 키워도 된다는 허락을 받았어요.",
+   "blank": "説得",
+   "src": "made"
   }
  ],
  "w|説明": [
@@ -31233,6 +34513,22 @@
    "en": "Can you read this character?",
    "ko": "이 글자 읽을 수 있어?",
    "blank": "読める"
+  }
+ ],
+ "w|読者": [
+  {
+   "text": "地域の防犯ニュースは、毎月多くの読者に読まれている。",
+   "en": "The local crime prevention newsletter is read by many readers every month.",
+   "ko": "지역 방범 소식지는 매달 많은 독자가 읽어요.",
+   "blank": "読者",
+   "src": "made"
+  },
+  {
+   "text": "由美が好きなバスケ漫画は、若い読者に大人気だ。",
+   "en": "The basketball manga Yumi likes is hugely popular with young readers.",
+   "ko": "유미가 좋아하는 농구 만화는 젊은 독자에게 인기가 아주 많아요.",
+   "blank": "読者",
+   "src": "made"
   }
  ],
  "w|誰": [
@@ -31347,6 +34643,22 @@
    "blank": "請求"
   }
  ],
+ "w|論文": [
+  {
+   "text": "大輔は、発酵について書かれた論文を読んで新しい味噌を作った。",
+   "en": "Daisuke read a paper on fermentation and made a new miso.",
+   "ko": "다이스케는 발효에 관한 논문을 읽고 새 된장을 만들었어요.",
+   "blank": "論文",
+   "src": "made"
+  },
+  {
+   "text": "隣の大学生は、電車の中でも論文を読んでいた。",
+   "en": "The college student next to Sakura was reading a paper even on the train.",
+   "ko": "옆자리 대학생은 전철 안에서도 논문을 읽고 있었어요.",
+   "blank": "論文",
+   "src": "made"
+  }
+ ],
  "w|諦める": [
   {
    "text": "諦めないで。",
@@ -31375,6 +34687,38 @@
    "blank": "謎"
   }
  ],
+ "w|講師": [
+  {
+   "text": "大輔は休みの日に、料理教室の講師もしている。",
+   "en": "On his days off, Daisuke also teaches at a cooking school.",
+   "ko": "다이스케는 쉬는 날에 요리 교실 강사도 해요.",
+   "blank": "講師",
+   "src": "made"
+  },
+  {
+   "text": "さくらは地方の大学で、英語の講師として講演をすることになっている。",
+   "en": "Sakura is scheduled to give a talk as an English lecturer at a regional university.",
+   "ko": "사쿠라는 지방 대학에서 영어 강사로 강연을 하기로 되어 있어요.",
+   "blank": "講師",
+   "src": "made"
+  }
+ ],
+ "w|講座": [
+  {
+   "text": "直樹は仕事の後、週に一回エクセルの講座に通っている。",
+   "en": "After work, Naoki attends an Excel course once a week.",
+   "ko": "나오키는 퇴근 후 일주일에 한 번 엑셀 강좌에 다녀요.",
+   "blank": "講座",
+   "src": "made"
+  },
+  {
+   "text": "葵は、公民館の料理講座で習ったおにぎりを店でも売り始めた。",
+   "en": "Aoi started selling the rice balls she learned to make in a cooking course at the community center.",
+   "ko": "아오이는 주민센터 요리 강좌에서 배운 주먹밥을 가게에서도 팔기 시작했어요.",
+   "blank": "講座",
+   "src": "made"
+  }
+ ],
  "w|謝る": [
   {
    "text": "すぐに謝るべきだった。",
@@ -31387,6 +34731,22 @@
    "en": "It's important to apologize honestly.",
    "ko": "솔직히 사과하는 게 중요해.",
    "blank": "謝る"
+  }
+ ],
+ "w|謝罪": [
+  {
+   "text": "自転車をぶつけた男性は、交番で被害者に謝罪した。",
+   "en": "The man who hit someone with his bicycle apologized to the victim at the police box.",
+   "ko": "자전거로 부딪친 남자는 파출소에서 피해자에게 사과했어요.",
+   "blank": "謝罪",
+   "src": "made"
+  },
+  {
+   "text": "ラフプレーの後、相手チームの監督が由美たちに謝罪しに来た。",
+   "en": "After the rough play, the opposing coach came to apologize to Yumi and her teammates.",
+   "ko": "거친 플레이 뒤에 상대 팀 감독이 유미네에게 사과하러 왔어요.",
+   "blank": "謝罪",
+   "src": "made"
   }
  ],
  "w|警備": [
@@ -31417,6 +34777,38 @@
    "en": "The police are here.",
    "ko": "경찰이 왔어.",
    "blank": "警察"
+  }
+ ],
+ "w|警戒": [
+  {
+   "text": "人気俳優の出演で、劇場は入り口の警戒を強めた。",
+   "en": "Because a popular actor was appearing, the theater tightened security at the entrance.",
+   "ko": "인기 배우가 출연해서 극장은 입구 경계를 강화했어요.",
+   "blank": "警戒",
+   "src": "made"
+  },
+  {
+   "text": "高いバイオリンが盗まれないよう、学校は夜間の警戒を強めた。",
+   "en": "To keep expensive violins from being stolen, the school stepped up its nighttime security.",
+   "ko": "비싼 바이올린을 도둑맞지 않도록 학교는 야간 경계를 강화했어요.",
+   "blank": "警戒",
+   "src": "made"
+  }
+ ],
+ "w|議会": [
+  {
+   "text": "社会科見学で、健太たちは市の議会を傍聴した。",
+   "en": "On a social studies field trip, Kenta and his classmates sat in on the city council.",
+   "ko": "사회 견학에서 겐타네는 시의회를 방청했어요.",
+   "blank": "議会",
+   "src": "made"
+  },
+  {
+   "text": "美咲は、新しい町の議会が駅前に公園を作ると決めたことを知った。",
+   "en": "Misaki learned that the council of her new town had decided to build a park in front of the station.",
+   "ko": "미사키는 새 동네 의회가 역 앞에 공원을 만들기로 했다는 걸 알았어요.",
+   "blank": "議会",
+   "src": "made"
   }
  ],
  "w|議員": [
@@ -31985,6 +35377,22 @@
    "blank": "距離"
   }
  ],
+ "w|跡": [
+  {
+   "text": "古い劇場の床には、昔の舞台装置の跡が残っている。",
+   "en": "Traces of old stage sets remain on the floor of the old theater.",
+   "ko": "오래된 극장 바닥에는 옛 무대 장치의 흔적이 남아 있어요.",
+   "blank": "跡",
+   "src": "made"
+  },
+  {
+   "text": "古いピアノの鍵盤には、たくさんの指の跡がついていた。",
+   "en": "The keys of the old piano bore many fingerprints.",
+   "ko": "오래된 피아노 건반에는 손가락 자국이 잔뜩 묻어 있었어요.",
+   "blank": "跡",
+   "src": "made"
+  }
+ ],
  "w|路線": [
   {
    "text": "この路線は混んでいる。",
@@ -32125,6 +35533,38 @@
    "blank": "軽い"
   }
  ],
+ "w|載せる": [
+  {
+   "text": "大輔はできあがった料理を、白い大皿にきれいに載せた。",
+   "en": "Daisuke neatly placed the finished dish on a large white plate.",
+   "ko": "다이스케는 완성된 요리를 하얀 큰 접시에 예쁘게 담았어요.",
+   "blank": "載せ",
+   "src": "made"
+  },
+  {
+   "text": "さくらは重いスーツケースを、網棚に何とか載せた。",
+   "en": "Sakura somehow managed to lift her heavy suitcase onto the luggage rack.",
+   "ko": "사쿠라는 무거운 여행 가방을 선반에 겨우 올렸어요.",
+   "blank": "載せ",
+   "src": "made"
+  }
+ ],
+ "w|載る": [
+  {
+   "text": "翔太が逮捕した窃盗犯のことが、地元の新聞に載った。",
+   "en": "The thief Shota arrested was written up in the local newspaper.",
+   "ko": "쇼타가 체포한 절도범 이야기가 지역 신문에 실렸어요.",
+   "blank": "載っ",
+   "src": "made"
+  },
+  {
+   "text": "由美のチームの写真が、学校の広報誌に載ることになった。",
+   "en": "A photo of Yumi's team is going to be in the school newsletter.",
+   "ko": "유미네 팀 사진이 학교 홍보지에 실리게 됐어요.",
+   "blank": "載る",
+   "src": "made"
+  }
+ ],
  "w|輪": [
   {
    "text": "輪になって座ろう。",
@@ -32193,6 +35633,22 @@
    "en": "An electronic dictionary is handy.",
    "ko": "전자 사전이 편리하네.",
    "blank": "辞書"
+  }
+ ],
+ "w|農業": [
+  {
+   "text": "直樹の会社は、農業で使うドローンの開発も始めた。",
+   "en": "Naoki's company has also started developing drones for use in farming.",
+   "ko": "나오키네 회사는 농업에 쓰는 드론 개발도 시작했어요.",
+   "blank": "農業",
+   "src": "made"
+  },
+  {
+   "text": "葵の兄は、会社を辞めて田舎で農業を始めた。",
+   "en": "Aoi's older brother quit his company job and started farming in the countryside.",
+   "ko": "아오이의 오빠는 회사를 그만두고 시골에서 농사를 시작했어요.",
+   "blank": "農業",
+   "src": "made"
   }
  ],
  "w|辺り": [
@@ -32325,6 +35781,22 @@
    "blank": "返事"
   }
  ],
+ "w|返信": [
+  {
+   "text": "拓也は、ファンからの手紙に一通ずつ返信している。",
+   "en": "Takuya replies to the letters from fans one by one.",
+   "ko": "다쿠야는 팬들이 보낸 편지에 한 통씩 답장을 해요.",
+   "blank": "返信",
+   "src": "made"
+  },
+  {
+   "text": "恵子は先生からのメールに、すぐ返信した。",
+   "en": "Keiko replied right away to the email from her teacher.",
+   "ko": "게이코는 선생님 메일에 바로 답장했어요.",
+   "blank": "返信",
+   "src": "made"
+  }
+ ],
  "w|述べる": [
   {
    "text": "意見を述べる機会だ。",
@@ -32379,6 +35851,22 @@
    "en": "I don't need anything extra.",
    "ko": "추가는 필요 없어.",
    "blank": "追加"
+  }
+ ],
+ "w|退職": [
+  {
+   "text": "長年働いたベテランの退職の日、厨房のみんなで花束を贈った。",
+   "en": "On the day the long-serving veteran retired, everyone in the kitchen gave him a bouquet.",
+   "ko": "오래 일한 베테랑이 퇴직하는 날, 주방 사람들 모두가 꽃다발을 선물했어요.",
+   "blank": "退職",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、退職した先輩に会いに故郷の町へ向かっている。",
+   "en": "Sakura is heading to her hometown to see a former colleague who has retired.",
+   "ko": "사쿠라는 퇴직한 선배를 만나러 고향 마을로 가고 있어요.",
+   "blank": "退職",
+   "src": "made"
   }
  ],
  "w|送る": [
@@ -32451,6 +35939,22 @@
    "blank": "逆"
   }
  ],
+ "w|逆転": [
+  {
+   "text": "新しい証拠が見つかって、捜査の流れは一気に逆転した。",
+   "en": "New evidence was found, and the investigation turned around all at once.",
+   "ko": "새 증거가 나와서 수사 흐름이 단번에 뒤집혔어요.",
+   "blank": "逆転",
+   "src": "made"
+  },
+  {
+   "text": "残り数秒で由美のシュートが決まり、チームは逆転勝ちした。",
+   "en": "Yumi's shot went in with seconds left, and the team won from behind.",
+   "ko": "몇 초 남기고 유미의 슛이 들어가서 팀이 역전승했어요.",
+   "blank": "逆転",
+   "src": "made"
+  }
+ ],
  "w|途中": [
   {
    "text": "途中で降りたよ。",
@@ -32463,6 +35967,38 @@
    "en": "We were in the middle of talking.",
    "ko": "이야기 중이었는데.",
    "blank": "途中"
+  }
+ ],
+ "w|通じる": [
+  {
+   "text": "外国人のスタッフとは、言葉が通じなくても身ぶりで何とかなる。",
+   "en": "With the foreign staff, they manage with gestures even when words don't get through.",
+   "ko": "외국인 직원과는 말이 안 통해도 몸짓으로 어떻게든 돼요.",
+   "blank": "通じ",
+   "src": "made"
+  },
+  {
+   "text": "山の中に入ると、取引先との電話が急に通じなくなった。",
+   "en": "Once the train went into the mountains, the call with the client suddenly cut out.",
+   "ko": "산속에 들어서자 거래처와의 전화가 갑자기 끊겼어요.",
+   "blank": "通じ",
+   "src": "made"
+  }
+ ],
+ "w|通す": [
+  {
+   "text": "拓也は本番の前に、台本を最初から最後まで声に出して通した。",
+   "en": "Before the show, Takuya ran through the script out loud from start to finish.",
+   "ko": "다쿠야는 공연 전에 대본을 처음부터 끝까지 소리 내어 맞춰 봤어요.",
+   "blank": "通し",
+   "src": "made"
+  },
+  {
+   "text": "恵子は合奏の前に、楽譜にざっと目を通した。",
+   "en": "Before the ensemble practice, Keiko quickly looked over the score.",
+   "ko": "게이코는 합주 전에 악보를 대충 훑어봤어요.",
+   "blank": "通し",
+   "src": "made"
   }
  ],
  "w|通り": [
@@ -32505,6 +36041,38 @@
    "en": "The connection dropped.",
    "ko": "통신이 끊겼어.",
    "blank": "通信"
+  }
+ ],
+ "w|通勤": [
+  {
+   "text": "直樹は通勤の電車で、ビジネス書を読むようにしている。",
+   "en": "Naoki makes a point of reading business books on his commuter train.",
+   "ko": "나오키는 출근 전철에서 경영 서적을 읽으려고 해요.",
+   "blank": "通勤",
+   "src": "made"
+  },
+  {
+   "text": "朝は通勤の人たちが、コーヒーと新聞を買いに来る。",
+   "en": "In the morning, commuters come in to buy coffee and newspapers.",
+   "ko": "아침에는 출근하는 사람들이 커피와 신문을 사러 와요.",
+   "blank": "通勤",
+   "src": "made"
+  }
+ ],
+ "w|通報": [
+  {
+   "text": "客席で具合が悪くなった人がいて、係員がすぐ救急に通報した。",
+   "en": "Someone in the audience fell ill, and an attendant immediately called emergency services.",
+   "ko": "객석에서 몸이 안 좋아진 사람이 있어서 직원이 바로 구급차를 불렀어요.",
+   "blank": "通報",
+   "src": "made"
+  },
+  {
+   "text": "夜中に練習室から物音がして、警備員が警察に通報した。",
+   "en": "There were noises from a practice room in the middle of the night, so the guard reported it to the police.",
+   "ko": "한밤중에 연습실에서 소리가 나서 경비원이 경찰에 신고했어요.",
+   "blank": "通報",
+   "src": "made"
   }
  ],
  "w|通常": [
@@ -33007,6 +36575,22 @@
    "blank": "過去"
   }
  ],
+ "w|過程": [
+  {
+   "text": "パンが焼き上がるまでの過程を、大輔は見習いに一つずつ見せた。",
+   "en": "Daisuke showed the apprentice each step of the process until the bread was baked.",
+   "ko": "다이스케는 빵이 구워지기까지의 과정을 견습생에게 하나씩 보여 줬어요.",
+   "blank": "過程",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、新しい商品ができるまでの過程を説明する資料を作った。",
+   "en": "Sakura made materials explaining the process of developing a new product.",
+   "ko": "사쿠라는 새 상품이 만들어지기까지의 과정을 설명하는 자료를 만들었어요.",
+   "blank": "過程",
+   "src": "made"
+  }
+ ],
  "w|道": [
   {
    "text": "道、間違えた。",
@@ -33133,6 +36717,22 @@
    "en": "A distant relative came to visit.",
    "ko": "먼 친척이 놀러 왔어.",
    "blank": "遠い"
+  }
+ ],
+ "w|適切": [
+  {
+   "text": "魚は適切な温度で保存しないと、すぐに味が落ちる。",
+   "en": "If fish isn't stored at the right temperature, it quickly loses its flavor.",
+   "ko": "생선은 적절한 온도로 보관하지 않으면 금방 맛이 떨어져요.",
+   "blank": "適切",
+   "src": "made"
+  },
+  {
+   "text": "車内アナウンスで、乗り換えについて適切な案内があった。",
+   "en": "The onboard announcement gave proper guidance about transfers.",
+   "ko": "차내 방송으로 환승에 대해 적절한 안내가 있었어요.",
+   "blank": "適切",
+   "src": "made"
   }
  ],
  "w|適当": [
@@ -33303,6 +36903,22 @@
    "blank": "邪魔"
   }
  ],
+ "w|部下": [
+  {
+   "text": "大輔は部下の若い料理人に、包丁の研ぎ方を教えた。",
+   "en": "Daisuke taught a young cook under him how to sharpen a knife.",
+   "ko": "다이스케는 부하인 젊은 요리사에게 칼 가는 법을 가르쳤어요.",
+   "blank": "部下",
+   "src": "made"
+  },
+  {
+   "text": "さくらは、駅のホームまで見送りに来た部下に手を振った。",
+   "en": "Sakura waved to her subordinate who'd come to see her off on the platform.",
+   "ko": "사쿠라는 역 플랫폼까지 배웅하러 온 부하 직원에게 손을 흔들었어요.",
+   "blank": "部下",
+   "src": "made"
+  }
+ ],
  "w|部分": [
   {
    "text": "この部分、直して。",
@@ -33317,6 +36933,22 @@
    "blank": "部分"
   }
  ],
+ "w|部品": [
+  {
+   "text": "舞台装置の部品が一つ足りず、拓也は倉庫を探し回った。",
+   "en": "One part of the stage set was missing, so Takuya searched all over the storeroom.",
+   "ko": "무대 장치 부품이 하나 모자라서 다쿠야는 창고를 샅샅이 뒤졌어요.",
+   "blank": "部品",
+   "src": "made"
+  },
+  {
+   "text": "恵子は、壊れたトランペットの部品を楽器店で取り寄せてもらった。",
+   "en": "Keiko had the music shop order a part for her broken trumpet.",
+   "ko": "게이코는 고장 난 트럼펫 부품을 악기점에 주문했어요.",
+   "blank": "部品",
+   "src": "made"
+  }
+ ],
  "w|部屋": [
   {
    "text": "部屋、汚いよ。",
@@ -33329,6 +36961,22 @@
    "en": "I'm in my room.",
    "ko": "방에 있어.",
    "blank": "部屋"
+  }
+ ],
+ "w|部長": [
+  {
+   "text": "本社の部長が、新しいメニューの試食に来た。",
+   "en": "A department head from the head office came to taste the new menu.",
+   "ko": "본사 부장이 새 메뉴를 시식하러 왔어요.",
+   "blank": "部長",
+   "src": "made"
+  },
+  {
+   "text": "新幹線の中で、部長から急ぎのメールが来た。",
+   "en": "On the bullet train, an urgent email came from Sakura's department head.",
+   "ko": "신칸센 안에서 부장에게서 급한 메일이 왔어요.",
+   "blank": "部長",
+   "src": "made"
   }
  ],
  "w|部門": [
@@ -33483,6 +37131,38 @@
    "en": "It's a job with heavy responsibility.",
    "ko": "책임이 무거운 일이야.",
    "blank": "重い"
+  }
+ ],
+ "w|重ねる": [
+  {
+   "text": "誠は返却された本を、カウンターの上にきれいに重ねた。",
+   "en": "Makoto stacked the returned books neatly on the counter.",
+   "ko": "마코토는 반납된 책을 카운터 위에 가지런히 쌓았어요.",
+   "blank": "重ね",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、修理する部品が混ざらないように小さなケースを重ねて置いた。",
+   "en": "Yoko stacked small cases so the parts to be repaired wouldn't get mixed up.",
+   "ko": "요코는 수리할 부품이 섞이지 않도록 작은 상자를 겹쳐 놓았어요.",
+   "blank": "重ね",
+   "src": "made"
+  }
+ ],
+ "w|重視": [
+  {
+   "text": "この学校は、勉強と同じくらい挨拶を重視している。",
+   "en": "This school puts as much importance on greetings as on studying.",
+   "ko": "이 학교는 공부만큼 인사를 중시해요.",
+   "blank": "重視",
+   "src": "made"
+  },
+  {
+   "text": "部屋を選ぶとき、美咲は家賃より日当たりを重視した。",
+   "en": "When choosing a room, Misaki prioritized sunlight over rent.",
+   "ko": "방을 고를 때 미사키는 월세보다 햇빛 드는 것을 중시했어요.",
+   "blank": "重視",
+   "src": "made"
   }
  ],
  "w|重要": [
@@ -33683,6 +37363,38 @@
    "blank": "銃"
   }
  ],
+ "w|録画": [
+  {
+   "text": "健太の父は、合唱コンクールの本番をビデオで録画してくれた。",
+   "en": "Kenta's father recorded the actual chorus contest performance on video.",
+   "ko": "겐타의 아빠는 합창 대회 본무대를 비디오로 녹화해 줬어요.",
+   "blank": "録画",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しで忙しかったので、美咲は見たかったドラマを録画しておいた。",
+   "en": "Since she was busy with the move, Misaki recorded the drama she wanted to watch.",
+   "ko": "이사로 바빠서 미사키는 보고 싶던 드라마를 녹화해 두었어요.",
+   "blank": "録画",
+   "src": "made"
+  }
+ ],
+ "w|録音": [
+  {
+   "text": "取り調べの内容は、すべて録音されている。",
+   "en": "Everything said during questioning is recorded.",
+   "ko": "취조 내용은 전부 녹음되고 있어요.",
+   "blank": "録音",
+   "src": "made"
+  },
+  {
+   "text": "監督は、試合中の指示を録音して後で聞き直すように言った。",
+   "en": "The coach told them to record the in-game instructions and listen to them again later.",
+   "ko": "감독은 경기 중 지시를 녹음해서 나중에 다시 들으라고 했어요.",
+   "blank": "録音",
+   "src": "made"
+  }
+ ],
  "w|鍵": [
   {
    "text": "鍵を忘れた。",
@@ -33865,6 +37577,22 @@
    "en": "The start is running late.",
    "ko": "시작이 늦어지고 있어.",
    "blank": "開始"
+  }
+ ],
+ "w|開放": [
+  {
+   "text": "夏休みの間、劇場のロビーは子ども向けに開放されている。",
+   "en": "During summer vacation, the theater lobby is open to children.",
+   "ko": "여름 방학 동안 극장 로비는 아이들에게 개방돼요.",
+   "blank": "開放",
+   "src": "made"
+  },
+  {
+   "text": "音楽学校の練習室は、夜九時まで生徒に開放されている。",
+   "en": "The music school's practice rooms are open to students until nine at night.",
+   "ko": "음악 학교 연습실은 밤 아홉 시까지 학생들에게 개방돼요.",
+   "blank": "開放",
+   "src": "made"
   }
  ],
  "w|開発": [
@@ -34417,6 +38145,22 @@
    "blank": "電気"
   }
  ],
+ "w|電波": [
+  {
+   "text": "山の中は電波が弱く、翔太は無線で署と連絡を取った。",
+   "en": "The signal was weak in the mountains, so Shota contacted the station by radio.",
+   "ko": "산속은 전파가 약해서 쇼타는 무전으로 경찰서와 연락했어요.",
+   "blank": "電波",
+   "src": "made"
+  },
+  {
+   "text": "遠征先の山のホテルは電波が悪く、由美は家に電話できなかった。",
+   "en": "The mountain hotel on the away trip had bad reception, so Yumi couldn't call home.",
+   "ko": "원정 간 산속 호텔은 전파가 약해서 유미는 집에 전화를 못 했어요.",
+   "blank": "電波",
+   "src": "made"
+  }
+ ],
  "w|電源": [
   {
    "text": "電源を切ってください。",
@@ -34489,6 +38233,22 @@
    "blank": "青"
   }
  ],
+ "w|青い": [
+  {
+   "text": "最後の場面では、舞台全体が青い光に包まれた。",
+   "en": "In the final scene, the whole stage was bathed in blue light.",
+   "ko": "마지막 장면에서는 무대 전체가 푸른 빛에 감싸였어요.",
+   "blank": "青い",
+   "src": "made"
+  },
+  {
+   "text": "恵子は発表会で、青いドレスを着てピアノを弾いた。",
+   "en": "Keiko played the piano at the recital wearing a blue dress.",
+   "ko": "게이코는 발표회에서 파란 드레스를 입고 피아노를 쳤어요.",
+   "blank": "青い",
+   "src": "made"
+  }
+ ],
  "w|静か": [
   {
    "text": "この部屋は静かだね。",
@@ -34529,6 +38289,22 @@
    "en": "Thanks for looking after me.",
    "ko": "챙겨 줘서 고마워.",
    "blank": "面倒"
+  }
+ ],
+ "w|面接": [
+  {
+   "text": "直樹は今日、新卒の採用面接を三件担当した。",
+   "en": "Today Naoki handled three interviews for new graduate hires.",
+   "ko": "나오키는 오늘 신입 채용 면접을 세 건 맡았어요.",
+   "blank": "面接",
+   "src": "made"
+  },
+  {
+   "text": "葵の店にアルバイトの面接に来た高校生は、とても礼儀正しかった。",
+   "en": "The high schooler who came to Aoi's shop for a part-time job interview was very polite.",
+   "ko": "아오이네 가게에 아르바이트 면접을 보러 온 고등학생은 아주 예의 발랐어요.",
+   "blank": "面接",
+   "src": "made"
   }
  ],
  "w|面白い": [
@@ -35065,6 +38841,54 @@
    "blank": "駐車"
   }
  ],
+ "w|騎士": [
+  {
+   "text": "子どもたちは、騎士が竜と戦う絵本を何度も借りていく。",
+   "en": "The children keep borrowing a picture book about a knight fighting a dragon.",
+   "ko": "아이들은 기사가 용과 싸우는 그림책을 몇 번이고 빌려 가요.",
+   "blank": "騎士",
+   "src": "made"
+  },
+  {
+   "text": "待合室の男の子は、騎士が出てくるゲームに夢中だった。",
+   "en": "The boy in the waiting room was absorbed in a game with knights in it.",
+   "ko": "대기실의 남자아이는 기사가 나오는 게임에 푹 빠져 있었어요.",
+   "blank": "騎士",
+   "src": "made"
+  }
+ ],
+ "w|騒動": [
+  {
+   "text": "給食のプリンが一つ足りなくて、教室はちょっとした騒動になった。",
+   "en": "One pudding was missing from school lunch, and the classroom was in a bit of an uproar.",
+   "ko": "급식 푸딩이 하나 모자라서 교실이 작은 소동이 벌어졌어요.",
+   "blank": "騒動",
+   "src": "made"
+  },
+  {
+   "text": "引っ越しの日、エレベーターが止まってちょっとした騒動になった。",
+   "en": "On moving day, the elevator stopped and there was a bit of a commotion.",
+   "ko": "이삿날 엘리베이터가 멈춰서 작은 소동이 벌어졌어요.",
+   "blank": "騒動",
+   "src": "made"
+  }
+ ],
+ "w|騙す": [
+  {
+   "text": "図書館の講座で、ネットで人を騙す手口について学んだ。",
+   "en": "At a library seminar, they learned about the tricks people use to deceive others online.",
+   "ko": "도서관 강좌에서 인터넷으로 사람을 속이는 수법에 대해 배웠어요.",
+   "blank": "騙す",
+   "src": "made"
+  },
+  {
+   "text": "「偽物の部品を使って客を騙す店もある」と陽子は言った。",
+   "en": "\"Some shops cheat customers using fake parts,\" Yoko said.",
+   "ko": "\"가짜 부품을 써서 손님을 속이는 가게도 있어요\" 하고 요코는 말했어요.",
+   "blank": "騙す",
+   "src": "made"
+  }
+ ],
  "w|驚き": [
   {
    "text": "驚きの結果だった。",
@@ -35259,6 +39083,22 @@
    "en": "I want to share this town's charm.",
    "ko": "이 마을의 매력을 전하고 싶어.",
    "blank": "魅力"
+  }
+ ],
+ "w|魔女": [
+  {
+   "text": "ハロウィンの夜、魔女の格好をした子どもたちが交番に飴をもらいに来た。",
+   "en": "On Halloween night, children dressed as witches came to the police box for candy.",
+   "ko": "핼러윈 밤에 마녀 분장을 한 아이들이 파출소에 사탕을 받으러 왔어요.",
+   "blank": "魔女",
+   "src": "made"
+  },
+  {
+   "text": "相手チームのエースは、魔女のように次々とシュートを決めた。",
+   "en": "The opposing team's ace sank one shot after another like a witch.",
+   "ko": "상대 팀 에이스는 마녀처럼 연달아 슛을 성공시켰어요.",
+   "blank": "魔女",
+   "src": "made"
   }
  ],
  "w|魔法": [
