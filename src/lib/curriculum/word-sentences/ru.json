@@ -707,6 +707,22 @@
    "src": "tatoeba:3334339/odexed en:29191/CK"
   }
  ],
+ "w|ассистент": [
+  {
+   "text": "У Сергея появился ассистент, который расшифровывает записи интервью.",
+   "en": "Sergei got an assistant who transcribes the interview recordings.",
+   "ko": "세르게이에게 인터뷰 녹음을 받아 적어 주는 조수가 생겼어요.",
+   "blank": "ассистент",
+   "src": "made"
+  },
+  {
+   "text": "Мария попросила ассистента начальника записать её на встречу.",
+   "en": "Maria asked the boss's assistant to book her a meeting.",
+   "ko": "마리야는 상사의 비서에게 면담 일정을 잡아 달라고 했어요.",
+   "blank": "ассистента",
+   "src": "made"
+  }
+ ],
  "w|атака": [
   {
    "text": "У меня была паническая атака.",
@@ -895,6 +911,22 @@
    "src": "tatoeba:13948263/Wezel en:7563786/Hybrid"
   }
  ],
+ "w|балл": [
+  {
+   "text": "Сергей написал о школьниках, набравших высший балл на экзамене.",
+   "en": "Sergei wrote about schoolchildren who got the highest score on the exam.",
+   "ko": "세르게이는 시험에서 최고 점수를 받은 학생들에 대해 썼어요.",
+   "blank": "балл",
+   "src": "made"
+  },
+  {
+   "text": "На собеседовании Мария получила самый высокий балл среди кандидатов.",
+   "en": "At the interview Maria got the highest score among the candidates.",
+   "ko": "면접에서 마리야는 지원자 중 가장 높은 점수를 받았어요.",
+   "blank": "балл",
+   "src": "made"
+  }
+ ],
  "w|банан": [
   {
    "text": "На десерт сыну Ивана принесли блинчики с бананом.",
@@ -975,6 +1007,22 @@
    "src": "made"
   }
  ],
+ "w|банковский": [
+  {
+   "text": "Сергей разбирается в банковских новостях лучше всех в редакции.",
+   "en": "Sergei understands banking news better than anyone in the newsroom.",
+   "ko": "세르게이는 편집국에서 은행 소식을 누구보다 잘 알아요.",
+   "blank": "банковских",
+   "src": "made"
+  },
+  {
+   "text": "Мария пришла в компанию из банковского сектора.",
+   "en": "Maria came to the company from the banking sector.",
+   "ko": "마리야는 은행권에서 이 회사로 옮겨 왔어요.",
+   "blank": "банковского",
+   "src": "made"
+  }
+ ],
  "w|бар": [
   {
    "text": "Это бар, в котором я впервые выпил пиво.",
@@ -1020,6 +1068,22 @@
    "en": "The professor asked Elena to clear up the mess on the lab bench.",
    "ko": "교수님은 옐레나에게 실험대 위 어질러진 것을 치우라고 했어요.",
    "blank": "бардак",
+   "src": "made"
+  }
+ ],
+ "w|бармен": [
+  {
+   "text": "Кофе для Сергея в кафе напротив редакции всегда варит один и тот же бармен.",
+   "en": "Sergei's coffee at the café across from the newsroom is always made by the same bartender.",
+   "ko": "편집국 맞은편 카페에서는 늘 같은 바텐더가 세르게이의 커피를 내려요.",
+   "blank": "бармен",
+   "src": "made"
+  },
+  {
+   "text": "В студенчестве Мария подрабатывала барменом в кафе.",
+   "en": "As a student Maria worked part-time as a bartender in a café.",
+   "ko": "대학생 때 마리야는 카페에서 바텐더로 아르바이트를 했어요.",
+   "blank": "барменом",
    "src": "made"
   }
  ],
@@ -4485,6 +4549,22 @@
    "src": "tatoeba:4659711/odexed en:10097604/ddnktr"
   }
  ],
+ "w|влезть": [
+  {
+   "text": "Сергей сократил статью, чтобы она смогла влезть в отведённое место на полосе.",
+   "en": "Sergei shortened the article so it could fit into the allotted space on the page.",
+   "ko": "세르게이는 기사가 지면의 정해진 자리에 들어가도록 줄였어요.",
+   "blank": "влезть",
+   "src": "made"
+  },
+  {
+   "text": "Папки Марии никак не хотели влезть в один ящик стола.",
+   "en": "All of Maria's folders couldn't fit into one desk drawer.",
+   "ko": "마리야의 서류철이 책상 서랍 하나에 다 들어가지 않았어요.",
+   "blank": "влезть",
+   "src": "made"
+  }
+ ],
  "w|влияние": [
   {
    "text": "Кто оказал на тебя наибольшее влияние?",
@@ -4530,6 +4610,22 @@
    "en": "Anna doesn't regret investing so much time in studying old manuscripts.",
    "ko": "안나는 옛 필사본 연구에 그 많은 시간을 쏟기로 한 걸 후회하지 않아요.",
    "blank": "вложить",
+   "src": "made"
+  }
+ ],
+ "w|вломиться": [
+  {
+   "text": "Сергей написал, как воры пытались вломиться в музей через крышу.",
+   "en": "Sergei wrote about how thieves tried to break into the museum through the roof.",
+   "ko": "세르게이는 도둑들이 지붕으로 박물관에 침입하려 한 일을 썼어요.",
+   "blank": "вломиться",
+   "src": "made"
+  },
+  {
+   "text": "Коллега Марии без стука вломился в переговорную посреди совещания.",
+   "en": "Maria's colleague barged into the meeting room in the middle of a meeting without knocking.",
+   "ko": "마리야의 동료가 회의 도중에 노크도 없이 회의실로 들이닥쳤어요.",
+   "blank": "вломился",
    "src": "made"
   }
  ],
@@ -5170,6 +5266,22 @@
    "en": "Irina asked the pupils to find all possible solutions to the problem.",
    "ko": "이리나는 학생들에게 문제의 가능한 풀이를 모두 찾으라고 했어요.",
    "blank": "возможные",
+   "src": "made"
+  }
+ ],
+ "w|возникать": [
+  {
+   "text": "У Сергея постоянно возникают новые идеи для рубрики.",
+   "en": "Sergei constantly comes up with new ideas for the section.",
+   "ko": "세르게이에게는 코너에 쓸 새 아이디어가 늘 떠올라요.",
+   "blank": "возникают",
+   "src": "made"
+  },
+  {
+   "text": "Если у Марии будут возникать вопросы, она может обратиться к наставнику.",
+   "en": "If Maria has any questions, she can turn to her mentor.",
+   "ko": "궁금한 게 생기면 마리야는 멘토에게 물어보면 돼요.",
+   "blank": "возникать",
    "src": "made"
   }
  ],
@@ -6539,6 +6651,22 @@
    "blank": "второй"
   }
  ],
+ "w|втроём": [
+  {
+   "text": "Над расследованием Сергей работал втроём с двумя стажёрами.",
+   "en": "Sergei worked on the investigation as a team of three with two interns.",
+   "ko": "세르게이는 인턴 두 명과 셋이서 탐사 기사를 준비했어요.",
+   "blank": "втроём",
+   "src": "made"
+  },
+  {
+   "text": "В обед Мария обычно ходит в столовую втроём с новыми подругами.",
+   "en": "At lunch Maria usually goes to the canteen with her two new friends, the three of them.",
+   "ko": "점심때 마리야는 보통 새로 사귄 친구 둘과 셋이서 구내식당에 가요.",
+   "blank": "втроём",
+   "src": "made"
+  }
+ ],
  "w|втянуть": [
   {
    "text": "Одноклассники пытались втянуть Михаила в спор о футболе прямо на уроке.",
@@ -6814,6 +6942,22 @@
    "en": "The security guard couldn't chase the stray cat out of the admissions room.",
    "ko": "경비원은 응급 접수실에서 길고양이를 내쫓지 못했어요.",
    "blank": "выгнать",
+   "src": "made"
+  }
+ ],
+ "w|выгода": [
+  {
+   "text": "Сергей выяснил, какую выгоду получила фирма от сделки с городом.",
+   "en": "Sergei found out what benefit the firm got from the deal with the city.",
+   "ko": "세르게이는 그 회사가 시와의 거래로 어떤 이익을 얻었는지 알아냈어요.",
+   "blank": "выгоду",
+   "src": "made"
+  },
+  {
+   "text": "Мария быстро объяснила клиенту, в чём его выгода.",
+   "en": "Maria quickly explained to the client where his benefit lay.",
+   "ko": "마리야는 고객에게 어떤 이득이 있는지 금방 설명했어요.",
+   "blank": "выгода",
    "src": "made"
   }
  ],
@@ -7559,6 +7703,22 @@
    "ko": "제 다리에 박힌 이 화살 좀 빼 주실래요?",
    "blank": "вытащить",
    "src": "tatoeba:10626553/odexed en:3951577/Amastan"
+  }
+ ],
+ "w|выучить": [
+  {
+   "text": "Перед поездкой в Мадрид Сергей пытался выучить хотя бы пару испанских фраз.",
+   "en": "Before his trip to Madrid Sergei tried to learn at least a couple of Spanish expressions.",
+   "ko": "마드리드 출장 전에 세르게이는 스페인어 몇 마디라도 익혀 보려고 했어요.",
+   "blank": "выучить",
+   "src": "made"
+  },
+  {
+   "text": "За первую неделю Мария успела выучить имена всех коллег.",
+   "en": "In her first week Maria managed to learn the names of all her colleagues.",
+   "ko": "첫 주에 마리야는 동료들 이름을 다 외웠어요.",
+   "blank": "выучить",
+   "src": "made"
   }
  ],
  "w|выход": [
@@ -11339,6 +11499,22 @@
    "src": "made"
   }
  ],
+ "w|достижение": [
+  {
+   "text": "Главным достижением года Сергей считает свою статью о местных больницах.",
+   "en": "Sergei considers his article on local hospitals the main achievement of the year.",
+   "ko": "세르게이는 지역 병원에 관한 기사를 올해 최고의 성과로 꼽아요.",
+   "blank": "достижением",
+   "src": "made"
+  },
+  {
+   "text": "На собрании Мария рассказала о главных достижениях своего отдела.",
+   "en": "At the meeting Maria talked about her department's main achievements.",
+   "ko": "회의에서 마리야는 자기 부서의 주요 성과를 이야기했어요.",
+   "blank": "достижениях",
+   "src": "made"
+  }
+ ],
  "w|достичь": [
   {
    "text": "Чего вы хотите достичь в своей работе?",
@@ -14463,6 +14639,22 @@
    "src": "made"
   }
  ],
+ "w|заслуга": [
+  {
+   "text": "Редактор признал, что успех выпуска — заслуга Сергея.",
+   "en": "The editor admitted that the success of the issue was Sergei's credit.",
+   "ko": "편집장은 이번 호가 잘된 건 세르게이 덕분이라고 인정했어요.",
+   "blank": "заслуга",
+   "src": "made"
+  },
+  {
+   "text": "Мария скромно сказала, что успех проекта — общая заслуга команды.",
+   "en": "Maria modestly said that the project's success was the whole team's merit.",
+   "ko": "마리야는 프로젝트가 잘된 건 팀 모두의 공이라고 겸손하게 말했어요.",
+   "blank": "заслуга",
+   "src": "made"
+  }
+ ],
  "w|заслуживать": [
   {
    "text": "Надо заслуживать доверие, а не требовать его.",
@@ -16107,6 +16299,22 @@
    "en": "Do it a different way.",
    "ko": "다르게 해.",
    "blank": "иначе"
+  }
+ ],
+ "w|инженер": [
+  {
+   "text": "Для статьи о мосте Сергей позвонил знакомому инженеру.",
+   "en": "For the article about the bridge Sergei called an engineer he knows.",
+   "ko": "다리에 관한 기사를 쓰려고 세르게이는 아는 기술자에게 전화했어요.",
+   "blank": "инженеру",
+   "src": "made"
+  },
+  {
+   "text": "В первый день Марию познакомили с главным инженером.",
+   "en": "On her first day Maria was introduced to the chief engineer.",
+   "ko": "첫날 마리야는 수석 엔지니어와 인사를 나눴어요.",
+   "blank": "инженером",
+   "src": "made"
   }
  ],
  "w|иногда": [
@@ -18461,6 +18669,22 @@
    "src": "tatoeba:2403465/marafon en:1522375/erikspen"
   }
  ],
+ "w|компьютерный": [
+  {
+   "text": "Из-за компьютерного сбоя Сергей едва не потерял готовую статью.",
+   "en": "Because of a computer glitch Sergei almost lost a finished article.",
+   "ko": "컴퓨터 오류 때문에 세르게이는 다 쓴 기사를 날릴 뻔했어요.",
+   "blank": "компьютерного",
+   "src": "made"
+  },
+  {
+   "text": "Мария хорошо разбирается в компьютерной графике.",
+   "en": "Maria knows computer graphics well.",
+   "ko": "마리야는 컴퓨터 그래픽을 잘 알아요.",
+   "blank": "компьютерной",
+   "src": "made"
+  }
+ ],
  "w|комфортный": [
   {
    "text": "В новом зале Никите нравятся комфортные раздевалки.",
@@ -18599,6 +18823,22 @@
    "ko": "우리가 대회에서 이겼어요.",
    "blank": "конкурс",
    "src": "tatoeba:4716214/marafon en:4546359/CK"
+  }
+ ],
+ "w|консультант": [
+  {
+   "text": "Сергей посоветовался с юридическим консультантом, прежде чем печатать расследование.",
+   "en": "Sergei consulted a legal adviser before publishing the investigation.",
+   "ko": "세르게이는 탐사 기사를 싣기 전에 법률 자문가와 상의했어요.",
+   "blank": "консультантом",
+   "src": "made"
+  },
+  {
+   "text": "До этой работы Мария была консультантом в маленькой фирме.",
+   "en": "Before this job Maria was a consultant at a small firm.",
+   "ko": "이 일을 하기 전에 마리야는 작은 회사의 컨설턴트였어요.",
+   "blank": "консультантом",
+   "src": "made"
   }
  ],
  "w|контакт": [
@@ -21567,6 +21807,22 @@
    "src": "tatoeba:1424784/Snark en:24978/CK"
   }
  ],
+ "w|мастерская": [
+  {
+   "text": "Сергей написал о мастерской, где чинят старые часы.",
+   "en": "Sergei wrote about a workshop where old clocks are repaired.",
+   "ko": "세르게이는 옛 시계를 고치는 공방에 대해 썼어요.",
+   "blank": "мастерской",
+   "src": "made"
+  },
+  {
+   "text": "По выходным Мария занимается керамикой в маленькой мастерской.",
+   "en": "On weekends Maria does pottery in a small workshop.",
+   "ko": "주말마다 마리야는 작은 공방에서 도자기를 빚어요.",
+   "blank": "мастерской",
+   "src": "made"
+  }
+ ],
  "w|математика": [
   {
    "text": "Иван признаётся, что в школе математика давалась ему с трудом.",
@@ -23280,6 +23536,22 @@
    "en": "Irina read that selling forged paintings is fraud and that copies must be signed.",
    "ko": "이리나는 위작을 파는 건 사기이고 모작에는 서명을 해야 한다는 글을 읽었어요.",
    "blank": "мошенничество",
+   "src": "made"
+  }
+ ],
+ "w|мощность": [
+  {
+   "text": "Сергей писал о новой электростанции и её мощности.",
+   "en": "Sergei wrote about the new power plant and its capacity.",
+   "ko": "세르게이는 새 발전소와 그 발전 용량에 대해 썼어요.",
+   "blank": "мощности",
+   "src": "made"
+  },
+  {
+   "text": "Мария удивилась, какая мощность у нового офисного компьютера.",
+   "en": "Maria was surprised by how powerful the new office computer is.",
+   "ko": "마리야는 새 사무실 컴퓨터 성능을 보고 놀랐어요.",
+   "blank": "мощность",
    "src": "made"
   }
  ],
@@ -25051,6 +25323,22 @@
    "ko": "인생을 즐기려고 노력 중이에요.",
    "blank": "наслаждаться",
    "src": "tatoeba:7726972/odexed en:7725805/CK"
+  }
+ ],
+ "w|наставник": [
+  {
+   "text": "Сергей до сих пор благодарен наставнику, который научил его писать коротко.",
+   "en": "Sergei is still grateful to the mentor who taught him to write concisely.",
+   "ko": "세르게이는 짧게 쓰는 법을 가르쳐 준 스승에게 지금도 고마워해요.",
+   "blank": "наставнику",
+   "src": "made"
+  },
+  {
+   "text": "Опытный коллега стал для Марии настоящим наставником.",
+   "en": "An experienced colleague became a real mentor for Maria.",
+   "ko": "경험 많은 동료가 마리야에게 진짜 스승이 되어 줬어요.",
+   "blank": "наставником",
+   "src": "made"
   }
  ],
  "w|настаивать": [
@@ -31457,6 +31745,22 @@
    "src": "made"
   }
  ],
+ "w|официантка": [
+  {
+   "text": "Сергей взял интервью у официантки, которая выиграла конкурс поваров.",
+   "en": "Sergei interviewed a waitress who won a cooking contest.",
+   "ko": "세르게이는 요리 대회에서 우승한 여종업원을 인터뷰했어요.",
+   "blank": "официантки",
+   "src": "made"
+  },
+  {
+   "text": "Мама Марии работала официанткой, пока не открыла своё кафе.",
+   "en": "Maria's mother worked as a waitress until she opened her own café.",
+   "ko": "마리야의 어머니는 자기 카페를 열기 전까지 종업원으로 일했어요.",
+   "blank": "официанткой",
+   "src": "made"
+  }
+ ],
  "w|ох": [
   {
    "text": "Ох, как я устал.",
@@ -31939,6 +32243,22 @@
    "en": "Ask dad.",
    "ko": "아빠한테 물어봐.",
    "blank": "папы"
+  }
+ ],
+ "w|папка": [
+  {
+   "text": "Все черновики Сергей хранит в синей папке на столе.",
+   "en": "Sergei keeps all his drafts in a blue folder on his desk.",
+   "ko": "세르게이는 초고를 모두 책상 위 파란 서류철에 보관해요.",
+   "blank": "папке",
+   "src": "made"
+  },
+  {
+   "text": "В первый день Марии выдали папку с инструкциями.",
+   "en": "On her first day Maria was given a folder with instructions.",
+   "ko": "첫날 마리야는 안내서가 든 서류철을 받았어요.",
+   "blank": "папку",
+   "src": "made"
   }
  ],
  "w|папочка": [
@@ -37875,6 +38195,22 @@
    "src": "tatoeba:4117652/odexed en:2314821/CK"
   }
  ],
+ "w|посчитать": [
+  {
+   "text": "Сергей попросил посчитать, сколько деревьев срубили в парке за год.",
+   "en": "Sergei asked someone to count how many trees were cut down in the park in a year.",
+   "ko": "세르게이는 일 년 동안 공원에서 나무가 몇 그루 베였는지 세어 달라고 했어요.",
+   "blank": "посчитать",
+   "src": "made"
+  },
+  {
+   "text": "Мария решила посчитать, сколько времени уходит на дорогу до офиса.",
+   "en": "Maria decided to calculate how much time the commute to the office takes.",
+   "ko": "마리야는 회사까지 출근하는 데 시간이 얼마나 걸리는지 계산해 보기로 했어요.",
+   "blank": "посчитать",
+   "src": "made"
+  }
+ ],
  "w|посылать": [
   {
    "text": "С каждой большой станции Михаил любит посылать маме открытки.",
@@ -38058,6 +38394,22 @@
    "en": "Before every update Tatiana studies users' needs.",
    "ko": "업데이트 전마다 타티야나는 사용자들의 요구를 살펴봐요.",
    "blank": "потребности",
+   "src": "made"
+  }
+ ],
+ "w|потребовать": [
+  {
+   "text": "Мэр позвонил и решил потребовать от Сергея опровержения.",
+   "en": "The mayor called and decided to demand a retraction from Sergei.",
+   "ko": "시장이 전화해서 세르게이에게 정정 보도를 요구하기로 했어요.",
+   "blank": "потребовать",
+   "src": "made"
+  },
+  {
+   "text": "Мария решила потребовать отдельный монитор для работы с графикой.",
+   "en": "Maria decided to request a separate monitor for graphics work.",
+   "ko": "마리야는 그래픽 작업용으로 모니터를 하나 더 달라고 요구하기로 했어요.",
+   "blank": "потребовать",
    "src": "made"
   }
  ],
@@ -38389,6 +38741,22 @@
    "en": "The tea has almost gone cold.",
    "ko": "차가 거의 식었어.",
    "blank": "почти"
+  }
+ ],
+ "w|почтовый": [
+  {
+   "text": "Письмо читателя пришло на почтовый адрес редакции, и Сергей сразу его открыл.",
+   "en": "A reader's letter arrived at the newsroom's postal address, and Sergei opened it right away.",
+   "ko": "독자 편지가 편집국 우편 주소로 왔고 세르게이가 바로 뜯어 봤어요.",
+   "blank": "почтовый",
+   "src": "made"
+  },
+  {
+   "text": "Мария попросила коллегу отправить документы на её почтовый ящик.",
+   "en": "Maria asked a colleague to send the documents to her mailbox.",
+   "ko": "마리야는 동료에게 서류를 자기 메일함으로 보내 달라고 했어요.",
+   "blank": "почтовый",
+   "src": "made"
   }
  ],
  "w|почувствовать": [
@@ -38887,6 +39255,22 @@
    "src": "tatoeba:1708049/ashulga en:17929/rul"
   }
  ],
+ "w|предназначить": [
+  {
+   "text": "Последнюю страницу газеты Сергея предназначили для писем читателей.",
+   "en": "The last page of Sergei's paper was set aside for readers' letters.",
+   "ko": "세르게이네 신문 마지막 면은 독자 편지 몫으로 정해졌어요.",
+   "blank": "предназначили",
+   "src": "made"
+  },
+  {
+   "text": "Мария не сразу поняла, для чего был предназначен этот странный кабинет.",
+   "en": "Maria didn't immediately understand what this strange room was intended for.",
+   "ko": "마리야는 이 이상한 방이 무슨 용도인지 바로 알지 못했어요.",
+   "blank": "предназначен",
+   "src": "made"
+  }
+ ],
  "w|предок": [
   {
    "text": "Михаил рассказал гостям, что его предок тоже женился в этой деревне.",
@@ -39339,6 +39723,22 @@
    "src": "tatoeba:2239041/Biga en:1641021/Spamster"
   }
  ],
+ "w|премия": [
+  {
+   "text": "За серию репортажей о реке Сергей получил журналистскую премию.",
+   "en": "Sergei received a journalism award for his series of reports on the river.",
+   "ko": "세르게이는 강에 관한 연속 보도로 언론상을 받았어요.",
+   "blank": "премию",
+   "src": "made"
+  },
+  {
+   "text": "Начальник пообещал Марии премию, если проект закончат вовремя.",
+   "en": "The boss promised Maria a bonus if the project is finished on time.",
+   "ko": "상사는 프로젝트를 제때 끝내면 마리야에게 보너스를 주겠다고 했어요.",
+   "blank": "премию",
+   "src": "made"
+  }
+ ],
  "w|премьер-министр": [
   {
    "text": "По телевизору у соседей выступал премьер-министр, и звук доносился до Андрея.",
@@ -39400,6 +39800,22 @@
    "en": "Tatiana had to interrupt the meeting because of a server failure.",
    "ko": "서버 장애 때문에 타티야나는 회의를 중단해야 했어요.",
    "blank": "прервать",
+   "src": "made"
+  }
+ ],
+ "w|прерывать": [
+  {
+   "text": "Сергей не любит прерывать собеседника, даже когда тот говорит слишком долго.",
+   "en": "Sergei doesn't like to interrupt the person he's talking to, even when they talk too long.",
+   "ko": "세르게이는 상대가 너무 길게 말해도 말을 끊는 걸 싫어해요.",
+   "blank": "прерывать",
+   "src": "made"
+  },
+  {
+   "text": "Мария старается не прерывать начальника на совещаниях.",
+   "en": "Maria tries not to interrupt her boss at meetings.",
+   "ko": "마리야는 회의 때 상사의 말을 끊지 않으려고 해요.",
+   "blank": "прерывать",
    "src": "made"
   }
  ],
@@ -39665,6 +40081,22 @@
    "en": "Say hi to him for me.",
    "ko": "그 사람한테 안부 전해 줘.",
    "blank": "привет"
+  }
+ ],
+ "w|приветик": [
+  {
+   "text": "Каждое утро Сергей заходит в редакцию и говорит коллегам: «Ну, приветик!»",
+   "en": "Every morning Sergei walks into the newsroom and says to his colleagues, \"Well, hiya!\"",
+   "ko": "세르게이는 아침마다 편집국에 들어오며 동료들에게 \"어, 안녕!\" 하고 인사해요.",
+   "blank": "приветик",
+   "src": "made"
+  },
+  {
+   "text": "Мария написала в общий чат: «Всем приветик, я новенькая!»",
+   "en": "Maria wrote in the group chat: \"Hi everyone, I'm the new girl!\"",
+   "ko": "마리야는 단체 대화방에 \"다들 안녕, 저 새로 왔어요!\"라고 썼어요.",
+   "blank": "приветик",
+   "src": "made"
   }
  ],
  "w|приветствовать": [
@@ -40967,6 +41399,22 @@
    "en": "This is a movie about the sea.",
    "ko": "이거 바다 영화야.",
    "blank": "про"
+  }
+ ],
+ "w|пробить": [
+  {
+   "text": "Сергей шутит, что пробить статью на первую полосу труднее, чем найти сенсацию.",
+   "en": "Sergei jokes that getting an article onto the front page is harder than finding a sensation.",
+   "ko": "세르게이는 기사를 1면에 밀어 넣는 게 특종 찾기보다 어렵다고 농담해요.",
+   "blank": "пробить",
+   "src": "made"
+  },
+  {
+   "text": "Мария попросила пробить ещё одну дырку в ремешке пропуска.",
+   "en": "Maria asked for another hole to be punched in the strap of her pass.",
+   "ko": "마리야는 출입증 끈에 구멍을 하나 더 뚫어 달라고 했어요.",
+   "blank": "пробить",
+   "src": "made"
   }
  ],
  "w|проблема": [
@@ -44681,6 +45129,22 @@
    "src": "made"
   }
  ],
+ "w|репортёр": [
+  {
+   "text": "Сергей работает репортёром уже пятнадцать лет.",
+   "en": "Sergei has been working as a reporter for fifteen years.",
+   "ko": "세르게이는 기자로 일한 지 벌써 십오 년이 됐어요.",
+   "blank": "репортёром",
+   "src": "made"
+  },
+  {
+   "text": "Отец Марии всю жизнь работал репортёром на радио.",
+   "en": "Maria's father worked as a radio reporter all his life.",
+   "ko": "마리야의 아버지는 평생 라디오 기자로 일했어요.",
+   "blank": "репортёром",
+   "src": "made"
+  }
+ ],
  "w|репутация": [
   {
    "text": "У нашего профессора хорошая репутация.",
@@ -45979,6 +46443,22 @@
    "src": "made"
   }
  ],
+ "w|светлый": [
+  {
+   "text": "Стол Сергея стоит у большого светлого окна.",
+   "en": "Sergei's desk is by a big bright window.",
+   "ko": "세르게이의 책상은 크고 환한 창가에 있어요.",
+   "blank": "светлого",
+   "src": "made"
+  },
+  {
+   "text": "Марии достался светлый кабинет с видом на парк.",
+   "en": "Maria got a bright office with a view of the park.",
+   "ko": "마리야는 공원이 보이는 환한 사무실을 받았어요.",
+   "blank": "светлый",
+   "src": "made"
+  }
+ ],
  "w|свеча": [
   {
    "text": "Павел зажёг на столе ароматную свечу.",
@@ -46191,6 +46671,22 @@
    "ko": "왜 그녀한테 연락했어?",
    "blank": "связаться",
    "src": "tatoeba:4775016/odexed en:3918686/CH"
+  }
+ ],
+ "w|связывать": [
+  {
+   "text": "Сергея и фотографа связывает многолетняя дружба.",
+   "en": "Sergei and the photographer are bound by many years of friendship.",
+   "ko": "세르게이와 사진기자는 오랜 우정으로 이어져 있어요.",
+   "blank": "связывает",
+   "src": "made"
+  },
+  {
+   "text": "Марию и начальника отдела связывает общий интерес к горным походам.",
+   "en": "Maria and the head of the department share a common interest in mountain hiking.",
+   "ko": "마리야와 부서장은 등산이라는 공통 관심사로 이어져 있어요.",
+   "blank": "связывает",
+   "src": "made"
   }
  ],
  "w|связываться": [
@@ -47845,6 +48341,22 @@
    "src": "made"
   }
  ],
+ "w|сложиться": [
+  {
+   "text": "Карьера Сергея могла бы сложиться иначе, если бы он стал юристом.",
+   "en": "Sergei's career could have turned out differently if he had become a lawyer.",
+   "ko": "세르게이가 변호사가 됐다면 경력이 달라졌을지도 몰라요.",
+   "blank": "сложиться",
+   "src": "made"
+  },
+  {
+   "text": "Мария надеется, что отношения с новыми коллегами быстро сложатся.",
+   "en": "Maria hopes that her relationships with her new colleagues will quickly take shape.",
+   "ko": "마리야는 새 동료들과 금방 잘 지내게 되길 바라요.",
+   "blank": "сложатся",
+   "src": "made"
+  }
+ ],
  "w|сложный": [
   {
    "text": "День выдался сложный.",
@@ -48477,6 +48989,22 @@
    "ko": "셔츠를 벗지 말았어야 했는데.",
    "blank": "снимать",
    "src": "tatoeba:7949456/odexed en:6249784/CK"
+  }
+ ],
+ "w|сниматься": [
+  {
+   "text": "Сергей брал интервью у актрисы, которая будет сниматься в новом сериале.",
+   "en": "Sergei interviewed an actress who will be acting in a new series.",
+   "ko": "세르게이는 새 드라마에 출연할 여배우를 인터뷰했어요.",
+   "blank": "сниматься",
+   "src": "made"
+  },
+  {
+   "text": "Новая коллега Марии раньше часто снималась в рекламе.",
+   "en": "Maria's new colleague used to act in commercials a lot.",
+   "ko": "마리야의 새 동료는 예전에 광고에 자주 출연했어요.",
+   "blank": "снималась",
+   "src": "made"
   }
  ],
  "w|снимок": [
@@ -51589,6 +52117,22 @@
    "src": "made"
   }
  ],
+ "w|строительство": [
+  {
+   "text": "Сергей следит за строительством новой школы и пишет о нём каждый месяц.",
+   "en": "Sergei follows the construction of the new school and writes about it every month.",
+   "ko": "세르게이는 새 학교 공사를 지켜보며 매달 기사를 써요.",
+   "blank": "строительством",
+   "src": "made"
+  },
+  {
+   "text": "Новую сотрудницу Марию сразу поставили на проект по строительству склада.",
+   "en": "The new employee Maria was immediately put on the warehouse construction project.",
+   "ko": "새로 온 마리야는 바로 창고 건설 프로젝트에 배치됐어요.",
+   "blank": "строительству",
+   "src": "made"
+  }
+ ],
  "w|строить": [
   {
    "text": "Я не хочу строить какие-либо догадки.",
@@ -51872,6 +52416,22 @@
    "en": "The referee blew the whistle and the match ended.",
    "ko": "심판이 휘슬을 불었고 경기가 끝났어요.",
    "blank": "Судья",
+   "src": "made"
+  }
+ ],
+ "w|суждено": [
+  {
+   "text": "Сергей верит, что ему было суждено стать журналистом.",
+   "en": "Sergei believes he was destined to become a journalist.",
+   "ko": "세르게이는 자기가 기자가 될 운명이었다고 믿어요.",
+   "blank": "суждено",
+   "src": "made"
+  },
+  {
+   "text": "Мария говорит, что им с этой командой было суждено встретиться.",
+   "en": "Maria says she and this team were destined to meet.",
+   "ko": "마리야는 이 팀과 만날 운명이었다고 말해요.",
+   "blank": "суждено",
    "src": "made"
   }
  ],
@@ -52667,6 +53227,22 @@
    "ko": "재능을 썩히고 있어.",
    "blank": "талант",
    "src": "tatoeba:8399751/marafon en:8400086/Smoky"
+  }
+ ],
+ "w|талантливый": [
+  {
+   "text": "Сергей написал о талантливом подростке, который сам собрал робота.",
+   "en": "Sergei wrote about a talented teenager who built a robot himself.",
+   "ko": "세르게이는 혼자 로봇을 만든 재능 있는 십 대에 대해 썼어요.",
+   "blank": "талантливом",
+   "src": "made"
+  },
+  {
+   "text": "Все в отделе быстро поняли, что Мария очень талантливый дизайнер.",
+   "en": "Everyone in the department quickly realized that Maria is a very talented designer.",
+   "ko": "부서 사람들은 마리야가 아주 재능 있는 디자이너라는 걸 금방 알았어요.",
+   "blank": "талантливый",
+   "src": "made"
   }
  ],
  "w|там": [
@@ -53572,6 +54148,22 @@
    "en": "Natalia put on a thin cap, and water still got into her ears.",
    "ko": "나탈리야는 얇은 수영모를 썼는데도 귀에 물이 들어갔어요.",
    "blank": "тонкую",
+   "src": "made"
+  }
+ ],
+ "w|торговец": [
+  {
+   "text": "Для очерка о рынке Сергей поговорил со старым торговцем рыбой.",
+   "en": "For a feature about the market, Sergei talked to an old fish trader.",
+   "ko": "시장에 관한 르포를 쓰려고 세르게이는 나이 든 생선 장수와 이야기했어요.",
+   "blank": "торговцем",
+   "src": "made"
+  },
+  {
+   "text": "Дед Марии был торговцем коврами и часто рассказывал ей о путешествиях.",
+   "en": "Maria's grandfather was a carpet merchant and often told her about his travels.",
+   "ko": "마리야의 할아버지는 양탄자 상인이었는데 여행 이야기를 자주 들려줬어요.",
+   "blank": "торговцем",
    "src": "made"
   }
  ],
@@ -54861,6 +55453,22 @@
    "ko": "그냥 그 사람들을 해고하지 그래?",
    "blank": "уволить",
    "src": "tatoeba:4840076/odexed en:3918077/CH"
+  }
+ ],
+ "w|уволиться": [
+  {
+   "text": "Сергей хотел уволиться, но главный редактор уговорил его остаться.",
+   "en": "Sergei wanted to quit, but the editor-in-chief persuaded him to stay.",
+   "ko": "세르게이는 그만두고 싶었지만 편집장이 남으라고 설득했어요.",
+   "blank": "уволиться",
+   "src": "made"
+  },
+  {
+   "text": "Предшественница Марии решила уволиться и уехать к морю.",
+   "en": "Maria's predecessor decided to quit and move to the seaside.",
+   "ko": "마리야의 전임자는 일을 그만두고 바닷가로 떠나기로 했어요.",
+   "blank": "уволиться",
+   "src": "made"
   }
  ],
  "w|увы": [
@@ -57369,6 +57977,22 @@
    "src": "made"
   }
  ],
+ "w|химия": [
+  {
+   "text": "Для научной страницы Сергей пишет о том, как химия помогает очищать воду.",
+   "en": "For the science page Sergei is writing about how chemistry helps purify water.",
+   "ko": "과학면에 싣기 위해 세르게이는 화학이 물을 깨끗하게 하는 데 어떻게 쓰이는지 쓰고 있어요.",
+   "blank": "химия",
+   "src": "made"
+  },
+  {
+   "text": "В школе Марии больше всего нравилась химия.",
+   "en": "At school Maria liked chemistry best.",
+   "ko": "학교 다닐 때 마리야는 화학을 제일 좋아했어요.",
+   "blank": "химия",
+   "src": "made"
+  }
+ ],
  "w|хирург": [
   {
    "text": "Тренер Никиты раньше работал хирургом, поэтому хорошо знает анатомию.",
@@ -59612,6 +60236,22 @@
    "en": "At night an ambulance crew came into the shop to buy coffee.",
    "ko": "밤에 구급대원들이 커피를 사러 가게에 들어왔어요.",
    "blank": "экипаж",
+   "src": "made"
+  }
+ ],
+ "w|экономика": [
+  {
+   "text": "Сергей ведёт в газете рубрику, где экономика объясняется простыми словами.",
+   "en": "Sergei runs a section in the paper where economics is explained in simple terms.",
+   "ko": "세르게이는 신문에서 경제를 쉬운 말로 풀어 주는 코너를 맡고 있어요.",
+   "blank": "экономика",
+   "src": "made"
+  },
+  {
+   "text": "Мария изучала экономику в университете, а теперь работает аналитиком.",
+   "en": "Maria studied economics at university and now works as an analyst.",
+   "ko": "마리야는 대학에서 경제학을 공부했고 지금은 분석가로 일해요.",
+   "blank": "экономику",
    "src": "made"
   }
  ],
