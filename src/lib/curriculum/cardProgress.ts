@@ -21,7 +21,9 @@ export function cardProgress(events: readonly LogEvent[], key: string, answer: {
   let openMiss: number | null = null;
   for (const event of mine) {
     state = stepState(state, event, dayOf);
-    if (event.r === "ok" || event.r === "used") {
+    // 퀴즈 답만(대화는 말하기 쪽, 2026-11-09).
+    if (event.src === "call" || event.src === "chat" || event.src === "people") continue;
+    if (event.r === "ok") {
       recognized = true;
       openMiss = null;
     } else if (event.r === "miss") openMiss = openMiss ?? event.t;

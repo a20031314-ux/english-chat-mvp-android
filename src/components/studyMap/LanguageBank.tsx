@@ -114,7 +114,7 @@ export function LanguageBank({
     return readLedger(language);
   }, [language, ledgerTick]);
   // 칠하기·숫자 = 있었던 일만(2026-11-09 사용자 "옛 상태의 데이터, 이름들은 다 삭제" — 체크 셋·단어 어림 % 대신):
-  // 학습 0.4 · n번 학습 0.7 · 자주 씀 1, 숫자는 학습한 수 / 전체.
+  // 학습 0.4 · n번 학습 0.6·0.8·1(넷째 날부터 꽉), 숫자는 학습한 수 / 전체. 퀴즈 답만(2026-11-09 앎·말하기 분리 — 그 전엔 자주 씀 1).
   const tags = useMemo(() => {
     const keys = new Set(ledger.map((event) => event.k));
     const out = new Map<string, KnowTag>();
@@ -126,7 +126,7 @@ export function LanguageBank({
   }, [ledger]);
   const valueOf = (one: Item) => {
     const tag = tags.get(one.key);
-    return !tag ? 0 : tag.kind === "often" ? 1 : tag.kind === "times" ? 0.7 : 0.4;
+    return !tag ? 0 : Math.min(1, 0.4 + 0.2 * (tag.n - 1));
   };
   const items = useMemo(() => {
     const ladder = ladderFor(language);

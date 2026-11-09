@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cardHistory, knowTag, sessionMinutes, sessionsOf, summarizeSession } from "./studyTimeline.ts";
+import { cardHistory, knowTag, sessionMinutes, sessionsOf, summarizeSession, talkHistory } from "./studyTimeline.ts";
 import type { LogEvent } from "./logLedger.ts";
 
 const DAY = 86400;
@@ -51,7 +51,7 @@ test("학습 시간 내용: 요소별 수, 처음 답한 것과 다른 날 다�
   assert.deepEqual([tha.ok, tha.miss, tha.mode], [1, 1, "write"]);
 });
 
-test("표시: 학습 → n번 학습(답한 날 수, 찾아봄 안 셈) → 자주 씀(대화 사흘), 마지막 틀림 ✗ (ko·es)", () => {
+test("표시: 학습 → n번 학습(답한 날 수, 찾아봄·대화 안 셈), 마지막 틀림 ✗ · 대화는 쓴 곳으로만 (ko·es)", () => {
   const key = "w|먹다";
   const day = (n: number) => T0 + n * DAY;
   let events: LogEvent[] = [ev(key, "ok", day(0)), ev(key, "ok", day(0) + 60)];
@@ -59,11 +59,16 @@ test("표시: 학습 → n번 학습(답한 날 수, 찾아봄 안 셈) → 자�
   events = [...events, { k: key, src: "dict", r: "look", t: day(1) }, ev(key, "miss", day(2))];
   assert.deepEqual(knowTag(events, key, utcDay), { kind: "times", n: 2, miss: true });
   events = [...events, ev(key, "used", day(3), "call", undefined), ev(key, "used", day(4), "chat", undefined), ev(key, "used", day(5), "people", undefined)];
-  assert.deepEqual(knowTag(events, key, utcDay), { kind: "often", n: 3, miss: true });
+  // 대화에서 쓴 것은 표시를 안 바꿈(2026-11-09 앎·말하기 분리).
+  assert.deepEqual(knowTag(events, key, utcDay), { kind: "times", n: 2, miss: true });
   assert.equal(knowTag([ev("w|casa", "look", day(0), "dict", undefined)], "w|casa", utcDay), null);
-  // 지난 기록은 새것부터, 줄마다 그때까지의 표시.
+  assert.equal(knowTag([ev("w|casa", "used", day(0), "call", undefined)], "w|casa", utcDay), null, "대화에서만 쓴 말 = 학습 아님");
+  // 학습 기록은 새것부터(퀴즈·사전만), 줄마다 그때까지의 표시.
   const rows = cardHistory(events, key, utcDay);
-  assert.equal(rows.length, 7);
-  assert.equal(rows[0]!.tag?.kind, "often");
+  assert.equal(rows.length, 4);
+  assert.equal(rows[0]!.tag?.kind, "times");
   assert.equal(rows[rows.length - 1]!.tag?.kind, "learned");
+  // 쓴 곳 = 대화만, 새것부터, 같은 날·같은 곳·같은 결과는 한 줄.
+  const more = [...events, ev(key, "used", day(5) + 30, "people", undefined), ev(key, "miss", day(5) + 90, "people", undefined)];
+  assert.deepEqual(talkHistory(more, key, utcDay).map((one) => `${one.src}:${one.r}`), ["people:miss", "people:used", "chat:used", "call:used"]);
 });

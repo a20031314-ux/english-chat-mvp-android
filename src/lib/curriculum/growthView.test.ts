@@ -72,7 +72,7 @@ test("학습 곡선 선(누적 활용): 대화에서 맞게 쓴 열쇠 수, 줄�
   assert.deepEqual([0, 1, 2, 3].map((day) => usedAt(events, T + day * D + 3600)), [0, 1, 2, 2]);
 });
 
-test("맞나 틀리나 점수: 틀린 곳을 짚음 = 학습 + 활용(판단 출처) · ⭕ 맞는 문장 = 학습만 · 체크 셋은 쓰기와 같게", async () => {
+test("맞나 틀리나 점수: 학습에만(활용은 대화에서 쓴 것만, 2026-11-09) · 체크 셋은 쓰기와 같게", async () => {
   const { stateOf } = await import("./checkState.ts");
   const day = (n: number) => 1_800_000_000 + n * 86400;
   const dayOf = (t: number) => String(Math.floor(t / 86400));
@@ -84,12 +84,10 @@ test("맞나 틀리나 점수: 틀린 곳을 짚음 = 학습 + 활용(판단 출
   ];
   const p = progressIn(events, () => true, dayOf);
   assert.deepEqual([...p.studied].sort(), ["g|1:1", "g|1:2", "g|1:4"]);
-  assert.deepEqual([...p.used].sort(), ["e|hi", "g|1:4"]);
-  assert.deepEqual(p.usedJudge, ["g|1:4"]);
-  assert.deepEqual(p.usedTalk, ["e|hi"]);
+  assert.deepEqual(p.used, ["e|hi"]);
   assert.equal(stateOf([events[0]!], dayOf).level, "hard", "짚음 = 쓰기 맞음 → 적용이 힘듦");
   assert.equal(stateOf([events[0]!, { ...events[0]!, t: day(0) + 60 }], dayOf).level, "hard", "같은 날 또 = 그대로");
   assert.equal(stateOf([events[0]!, { ...events[0]!, t: day(1) }], dayOf).level, "known", "다른 날 또 → 앎");
   assert.equal(stateOf([events[0]!, { ...events[0]!, t: day(1) }, { k: "g|1:4", src: "judge", r: "miss", t: day(3) }], dayOf).level, "hard", "앎에서 판단 틀림 → 내려감");
-  assert.equal(usedAt(events, day(1)), 2, "활용 누적에 판단도");
+  assert.equal(usedAt(events, day(1)), 1, "활용 누적은 대화만");
 });

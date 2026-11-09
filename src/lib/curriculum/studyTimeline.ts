@@ -8,14 +8,16 @@
  * 아는 정도 표시(같은 날 사용자 결정 — 체크 셋 이름은 화면에 안 씀, 복습도 이름 없이 알고리즘만):
  *   학습        퀴즈에서 답한 날이 하루
  *   n번 학습    답한 날이 n일(같은 날 여러 번은 1, 사전 찾기·넘겨 보기는 안 셈)
- *   자주 씀     통화·채팅·사람 대화에서 쓴 날이 OFTEN_DAYS일 이상(학습보다 앞섬)
  *   마지막 답이 틀렸으면 miss(✗).
+ *
+ * 앎(어휘)과 말하기(실제 출력)는 따로(2026-11-09 사용자 "학습자가 알고있는 어휘, 말하기 능력(실제 출력)을 분리 —
+ * 퀴즈에서 적용점수를 측정하려고 하니까 애매해짐"): 위 표시는 퀴즈 답만, 통화·채팅·사람 대화는 카드의 "쓴 곳"(talkHistory)으로만.
+ * 그 전에는 대화에서 쓴 날이 사흘 이상이면 "자주 씀"이 학습보다 앞섰다.
  */
 import type { LogEvent, LogMode } from "./logLedger.ts";
 import { partOf, type CardPart } from "./todayCards.ts";
 
 export const SESSION_GAP_MS = 10 * 60 * 1000;
-export const OFTEN_DAYS = 3;
 
 export type Place = "quiz" | "call" | "lesson" | "dict" | "chat" | "people";
 export type TimelineCall = { id: string; at: number; secs: number };
@@ -136,39 +138,36 @@ export function summarizeSession(session: Session, all: readonly LogEvent[], day
   return { parts, ok, miss, fresh, again, looked, used, cards };
 }
 
-export type KnowTag = { kind: "learned" | "times" | "often"; n: number; miss: boolean };
+export type KnowTag = { kind: "learned" | "times"; n: number; miss: boolean };
 
-/** 순수: 열쇠 하나의 표시(그 열쇠의 사건 전부, until(초)까지). 답한 적도 쓴 적도 없으면 null. */
+/** 순수: 열쇠 하나의 표시(그 열쇠의 사건 전부, until(초)까지) — 퀴즈 답만. 답한 적 없으면(대화에서만 썼어도) null. */
 export function knowTag(events: readonly LogEvent[], key: string, dayOf: (t: number) => string, until = Infinity): KnowTag | null {
   const quizDays = new Set<string>();
-  const usedDays = new Set<string>();
   let last: LogEvent | null = null;
   for (const event of events) {
     if (event.k !== key || event.t > until) continue;
     if (quizLike(event)) {
       quizDays.add(dayOf(event.t));
       if (!last || last.t <= event.t) last = event;
-    } else if (event.r === "used" && talkLike(event)) usedDays.add(dayOf(event.t));
+    }
   }
   const missLast = last?.r === "miss";
-  if (usedDays.size >= OFTEN_DAYS) return { kind: "often", n: usedDays.size, miss: missLast };
   if (quizDays.size >= 2) return { kind: "times", n: quizDays.size, miss: missLast };
   if (quizDays.size === 1) return { kind: "learned", n: 1, miss: missLast };
   return null;
 }
 
-/** 화면 글(학습 · n번 학습 · 자주 씀, 마지막 틀림이면 ✗ 붙이는 것은 부르는 쪽). */
-export function knowTagLabel(ui: { tlOften: string; tlLearnedN: string; lbFresh: string }, tag: KnowTag | null): string {
+/** 화면 글(학습 · n번 학습, 마지막 틀림이면 ✗ 붙이는 것은 부르는 쪽). */
+export function knowTagLabel(ui: { tlLearnedN: string; lbFresh: string }, tag: KnowTag | null): string {
   if (!tag) return "";
-  if (tag.kind === "often") return ui.tlOften;
   return tag.kind === "times" ? ui.tlLearnedN.replace("{n}", String(tag.n)) : ui.lbFresh;
 }
 
 export type CardHistoryRow = { t: number; src: LogEvent["src"]; r: LogEvent["r"]; mode?: LogMode; tag: KnowTag | null };
 
-/** 순수: 카드 한 장의 지난 기록(새것부터) — 줄마다 그때까지의 표시. 같은 1분 안의 같은 결과는 한 줄. */
+/** 순수: 카드 한 장의 학습 기록(새것부터, 퀴즈·사전 — 대화는 talkHistory) — 줄마다 그때까지의 표시. 같은 1분 안의 같은 결과는 한 줄. */
 export function cardHistory(events: readonly LogEvent[], key: string, dayOf: (t: number) => string, max = 30): CardHistoryRow[] {
-  const mine = events.filter((event) => event.k === key).sort((a, b) => a.t - b.t);
+  const mine = events.filter((event) => event.k === key && !talkLike(event)).sort((a, b) => a.t - b.t);
   const rows: CardHistoryRow[] = [];
   for (const event of mine) {
     const prev = rows[rows.length - 1];
@@ -176,4 +175,19 @@ export function cardHistory(events: readonly LogEvent[], key: string, dayOf: (t:
     rows.push({ t: event.t, src: event.src, r: event.r, ...(event.m ? { mode: event.m } : {}), tag: knowTag(mine, key, dayOf, event.t) });
   }
   return rows.reverse().slice(0, max);
+}
+
+export type TalkRow = { t: number; src: "call" | "chat" | "people"; r: "used" | "miss" };
+
+/** 순수: 카드 한 장의 쓴 곳(새것부터) — 통화·채팅·사람 대화에서 쓴 것·막힌 것. 같은 날 같은 곳·같은 결과는 한 줄. */
+export function talkHistory(events: readonly LogEvent[], key: string, dayOf: (t: number) => string, max = 30): TalkRow[] {
+  const seen = new Set<string>();
+  const rows: TalkRow[] = [];
+  for (const event of [...events].filter((one) => one.k === key && talkLike(one) && (one.r === "used" || one.r === "miss")).sort((a, b) => b.t - a.t)) {
+    const id = `${dayOf(event.t)}|${event.src}|${event.r}`;
+    if (seen.has(id)) continue;
+    seen.add(id);
+    rows.push({ t: event.t, src: event.src as TalkRow["src"], r: event.r as TalkRow["r"] });
+  }
+  return rows.slice(0, max);
 }

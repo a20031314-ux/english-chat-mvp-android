@@ -26,11 +26,11 @@ export function expressionChance(itemStage: number, stage: number): number {
   return itemStage < stage ? EXPR_BELOW : itemStage === stage ? EXPR_SAME : EXPR_ABOVE;
 }
 
-/** 그 열쇠를 퀴즈·첫 측정·맞나 틀리나에서 답했거나 대화에서 쓴 적이 있나(찾아봄만은 기록 아님). */
+/** 그 열쇠를 퀴즈·첫 측정·맞나 틀리나에서 답한 적이 있나(찾아봄·대화에서 씀은 기록 아님 — 2026-11-09 앎·말하기 분리). */
 export function answeredKeys(events: readonly { k: string; src: string; r: string }[]): Set<string> {
   const out = new Set<string>();
   for (const event of events) {
-    if (event.r === "used" || ((event.src === "quiz" || event.src === "exam" || event.src === "judge") && (event.r === "ok" || event.r === "miss"))) out.add(event.k);
+    if (((event.src === "quiz" || event.src === "exam" || event.src === "judge") && (event.r === "ok" || event.r === "miss"))) out.add(event.k);
   }
   return out;
 }

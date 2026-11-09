@@ -6,8 +6,10 @@
  *   학습     그 기간에 푼 열쇠(처음이든 다시든, 맞든 틀리든 — 퀴즈·시험·대본)
  *   새로     그 열쇠를 처음 푼 답(퀴즈·시험·대본)이 기간 안
  *   익힘     체크 셋이 처음으로 앎이 된 때가 기간 안(checkState.ts stepState)
- *   다시 맞힘 앞서 틀린 열쇠를 다른 날 맞히거나 대화에서 씀 — 그 첫 맞음이 기간 안
- *   써 봄    통화·채팅·사람 대화에서 내가 맞게 쓴 열쇠(used) · 맞나 틀리나에서 틀린 곳을 짚은 열쇠(judge ok)가 기간 안 — 표 칸 "활용"
+ *   다시 맞힘 앞서 퀴즈에서 틀린 열쇠를 다른 날 퀴즈로 맞힘 — 그 첫 맞음이 기간 안
+ *   써 봄    통화·채팅·사람 대화에서 내가 맞게 쓴 열쇠(used)가 기간 안 — 표 칸 "활용"
+ * 앎(퀴즈)과 말하기(대화)는 따로(2026-11-09 사용자 "알고있는 어휘, 말하기 능력(실제 출력)을 분리 — 퀴즈에서 적용점수를 측정하려니 애매"):
+ * 맞나 틀리나는 학습에만(그 전 11-08엔 활용에도), 대화에서 쓴 것·틀린 것은 다시 맞힘·익힘에 안 셈.
  *   앎       지금 앎인 열쇠 전체(누적, 기간과 상관없음)
  * 고쳐 씀(짝): 대화에서 고쳐진 내 줄(틀린 꼴 → 바른 꼴) 뒤, 다른 날 대화에서 그 열쇠를 내가 먼저 맞게 쓴 줄.
  */
@@ -15,14 +17,13 @@ import type { LogEvent } from "./logLedger.ts";
 import { dayOfSeconds, stepState, type CheckState } from "./checkState.ts";
 import { partOf } from "./todayCards.ts";
 
-/** usedTalk·usedJudge = 활용(used)을 나눈 것: 대화에서 씀 · 맞나 틀리나에서 틀린 곳을 짚음(둘 다면 둘 다에). */
-export type ProgressCounts = { studied: string[]; fresh: string[]; learned: string[]; recovered: string[]; used: string[]; usedTalk: string[]; usedJudge: string[]; known: string[] };
+export type ProgressCounts = { studied: string[]; fresh: string[]; learned: string[]; recovered: string[]; used: string[]; known: string[] };
 
-// 맞나 틀리나(judge)도 학습에 셈 — 틀린 곳을 짚으면 학습과 활용이 같이 오름(2026-11-08 사용자 "학습과 활용 동시에 올리는 방식").
+// 맞나 틀리나(judge)도 학습에 셈(2026-11-08).
 const answered = (event: LogEvent) => (event.src === "quiz" || event.src === "exam" || event.src === "script" || event.src === "judge") && (event.r === "ok" || event.r === "miss");
 const talked = (event: LogEvent) => event.src === "call" || event.src === "people" || event.src === "chat";
-/** 활용 = 대화에서 맞게 씀 + 맞나 틀리나에서 틀린 곳을 짚음(2026-11-08 사용자 "이쪽은 활용점수에"). */
-const applied = (event: LogEvent) => (event.r === "used" && talked(event)) || (event.src === "judge" && event.r === "ok");
+/** 활용 = 대화에서 맞게 씀(말하기 쪽만). */
+const applied = (event: LogEvent) => event.r === "used" && talked(event);
 
 /** 기간(inDay — 시각(초)이 기간 안인가)의 개수. 열쇠마다 한 번, 늦게 일어난 것부터. */
 export function progressIn(events: readonly LogEvent[], inDay: (t: number) => boolean, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): ProgressCounts {
@@ -33,7 +34,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     if (list) list.push(event);
     else byKey.set(event.k, [event]);
   }
-  const at = { studied: new Map<string, number>(), fresh: new Map<string, number>(), learned: new Map<string, number>(), recovered: new Map<string, number>(), used: new Map<string, number>(), usedTalk: new Map<string, number>(), usedJudge: new Map<string, number>() };
+  const at = { studied: new Map<string, number>(), fresh: new Map<string, number>(), learned: new Map<string, number>(), recovered: new Map<string, number>(), used: new Map<string, number>() };
   const known: [string, number][] = [];
   for (const [key, list] of byKey) {
     list.sort((a, b) => a.t - b.t);
@@ -47,15 +48,12 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
         firstAnswer = false;
         if (inDay(event.t)) at.fresh.set(key, event.t);
       }
-      if (event.r === "miss") missDay = missDay ?? dayOf(event.t);
-      else if ((event.r === "ok" || event.r === "used") && missDay !== null && dayOf(event.t) !== missDay) {
+      if (answered(event) && event.r === "miss") missDay = missDay ?? dayOf(event.t);
+      else if (answered(event) && event.r === "ok" && missDay !== null && dayOf(event.t) !== missDay) {
         if (inDay(event.t)) at.recovered.set(key, event.t);
         missDay = null;
       }
-      if (applied(event) && inDay(event.t)) {
-        at.used.set(key, event.t);
-        (event.src === "judge" ? at.usedJudge : at.usedTalk).set(key, event.t);
-      }
+      if (applied(event) && inDay(event.t)) at.used.set(key, event.t);
       state = stepState(state, event, dayOf);
       if (state.level === "known" && !wasKnown) {
         wasKnown = true;
@@ -65,7 +63,7 @@ export function progressIn(events: readonly LogEvent[], inDay: (t: number) => bo
     if (state.level === "known") known.push([key, state.last]);
   }
   const order = (map: Map<string, number>) => [...map].sort((a, b) => b[1] - a[1]).map(([key]) => key);
-  return { studied: order(at.studied), fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), usedTalk: order(at.usedTalk), usedJudge: order(at.usedJudge), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
+  return { studied: order(at.studied), fresh: order(at.fresh), learned: order(at.learned), recovered: order(at.recovered), used: order(at.used), known: known.sort((a, b) => b[1] - a[1]).map(([key]) => key) };
 }
 
 /** 그 시각(초)까지의 답으로 앎인 열쇠 수 — 학습 곡선 선(누적). */

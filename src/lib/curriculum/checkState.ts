@@ -3,11 +3,13 @@
  * 설계 hub/drafts/logbank-2026-11-06.md 3절 · languagebank-2026-11-03.md). 모델 없음, 이 폰의 사건만.
  *
  *   처음 봄       고르기 맞음·찾아봄은 그대로 · 쓰기 맞음 → 적용이 힘듦
- *   적용이 힘듦   다른 날 쓰기 맞음, 또는 통화·사람 대화에서 씀(used) → 앎
- *   앎            확인(1·3·7·30일)에서 틀림, 통화·사람 틀림, 맞나 틀리나 틀림 → 적용이 힘듦(처음 봄으로는 안 내림)
- *   맞나 틀리나(src judge)에서 틀린 곳을 짚음 = 쓰기 맞음과 같게(m write) — 대화 "씀"처럼 바로 올리지 않음(2026-11-08).
+ *   적용이 힘듦   다른 날 쓰기 맞음 → 앎
+ *   앎            확인(1·3·7·30일)에서 틀림, 맞나 틀리나 틀림 → 적용이 힘듦(처음 봄으로는 안 내림)
+ *   맞나 틀리나(src judge)에서 틀린 곳을 짚음 = 쓰기 맞음과 같게(m write).
  *
- * 통화·사람 "씀"을 앎 근거로 세는 것은 설계 권장안(정할 것 2) — 사용자가 다르게 정하면 USED_LIFTS만 끈다.
+ * 통화·채팅·사람 대화(씀·틀림)는 체크 셋을 움직이지 않는다(2026-11-09 사용자 "알고있는 어휘와 말하기(실제 출력)를 분리" —
+ * 앎은 퀴즈 답으로만, 대화는 말하기 쪽 기록). 대화에서 막힌 것은 오늘 카드 ②(todayCards.ts)가 다시 낸다.
+ * 그 전에는 대화 "씀"이 한 단계 올리고(USED_LIFTS) 대화 틀림이 앎을 내렸다.
  */
 import type { LogEvent } from "./logLedger.ts";
 
@@ -27,7 +29,6 @@ export type CheckState = {
 };
 
 export const CHECK_DAYS = [1, 3, 7, 30] as const;
-export const USED_LIFTS = true;
 const DAY = 24 * 60 * 60;
 
 /** 시각(초) → 그 폰 날짜(YYYY-MM-DD). 테스트는 UTC로 바꿔 넣을 수 있게 인자로. */
@@ -41,25 +42,25 @@ function knownNow(t: number, step = 0): Pick<CheckState, "level" | "knownAt" | "
 
 /** 순수: 사건 하나를 받은 다음 체크 셋(stateOf·learnedAt이 같이 씀). */
 export function stepState(prev: CheckState, event: LogEvent, dayOf: (t: number) => string = (t) => dayOfSeconds(t)): CheckState {
-  let state: CheckState = { ...prev, last: event.t };
   const talk = event.src === "call" || event.src === "people" || event.src === "chat";
+  if (talk) return prev;
+  let state: CheckState = { ...prev, last: event.t };
   if (event.r === "look") return state;
   const write = event.m === "write" || event.m === "sure";
   if (state.level === "new") {
     // 어림이 높은 처음 본 말을 예문 없이 써서 맞힘 = 바로 알아요, 첫 확인은 3일 뒤(2026-11-08 사용자 "첫 답이 단계를 정하게").
     if (event.r === "ok" && event.m === "sure") return { ...state, ...knownNow(event.t, 1) };
     if (event.r === "ok" && write) state = { ...state, level: "hard", hardDay: dayOf(event.t) };
-    else if (event.r === "used" && USED_LIFTS) state = { ...state, level: "hard", hardDay: dayOf(event.t) };
     return state;
   }
   if (state.level === "hard") {
     const otherDay = dayOf(event.t) !== state.hardDay;
-    if ((event.r === "ok" && (write && (otherDay || event.m === "sure"))) || (event.r === "used" && USED_LIFTS)) state = { ...state, ...knownNow(event.t) };
+    if (event.r === "ok" && write && (otherDay || event.m === "sure")) state = { ...state, ...knownNow(event.t) };
     return state;
   }
   // 앎
-  if (event.r === "miss" && (talk || event.src === "quiz" || event.src === "exam" || event.src === "judge")) return { level: "hard", step: 0, last: event.t, hardDay: dayOf(event.t) };
-  if ((event.r === "ok" || event.r === "used") && state.due !== undefined && event.t >= state.due) {
+  if (event.r === "miss" && (event.src === "quiz" || event.src === "exam" || event.src === "judge")) return { level: "hard", step: 0, last: event.t, hardDay: dayOf(event.t) };
+  if (event.r === "ok" && state.due !== undefined && event.t >= state.due) {
     // 확인 때가 지나 다시 맞힘 = 다음 확인으로.
     const step = state.step + 1;
     state = { ...state, step, due: step >= CHECK_DAYS.length ? undefined : event.t + CHECK_DAYS[step]! * DAY };
@@ -105,8 +106,8 @@ export function cardFaces(events: readonly LogEvent[]): (key: string) => "hide" 
   const lastLook = new Map<string, number>();
   const lastQuiz = new Map<string, number>();
   for (const event of events) {
-    // 통화·대화에서 쓴 말(used)도 — 그 말은 알아보기보다 쓰기로(2026-11-07 점검: 적용이 힘듦 카드인데 뜻 고르기가 나옴).
-    if (event.r === "ok" || event.r === "used") ok.add(event.k);
+    // 퀴즈 답만 — 대화에서 쓴 것(used)은 말하기 쪽이라 문제 모양을 안 바꿈(2026-11-09 앎·말하기 분리, 그 전엔 used도 쓰기로).
+    if (event.r === "ok") ok.add(event.k);
     if (event.r === "look") lastLook.set(event.k, Math.max(lastLook.get(event.k) ?? 0, event.t));
     if (event.src === "quiz" || event.src === "exam") lastQuiz.set(event.k, Math.max(lastQuiz.get(event.k) ?? 0, event.t));
   }

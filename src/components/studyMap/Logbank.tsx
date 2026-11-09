@@ -48,7 +48,7 @@ import { amountOf, curveOf, curveReady, dayEndMs, LEARN_PARTS, learnedIn, type A
 import { partOf, type CardPart } from "@/lib/curriculum/todayCards";
 import { dayOfSeconds } from "@/lib/curriculum/checkState";
 import type { LogEvent, LogMode } from "@/lib/curriculum/logLedger";
-import { cardHistory, knowTag, knowTagLabel, sessionMinutes, sessionsOf, summarizeSession, type Place, type Session } from "@/lib/curriculum/studyTimeline";
+import { cardHistory, knowTag, knowTagLabel, sessionMinutes, sessionsOf, summarizeSession, talkHistory, type Place, type Session } from "@/lib/curriculum/studyTimeline";
 import { usePrepared } from "@/lib/curriculum/preparedLoad";
 import { cardFaceOf } from "@/lib/curriculum/quiz";
 import { quizGloss } from "@/lib/curriculum/stageScripts";
@@ -1231,7 +1231,7 @@ function placeOfSrc(src: LogEvent["src"]): Place {
   return src === "dict" ? "dict" : src === "call" ? "call" : src === "chat" ? "chat" : src === "people" ? "people" : "quiz";
 }
 
-/** 카드 한 장 + 지난 기록(새것부터, 줄마다 그때의 표시). */
+/** 카드 한 장 + 학습 기록(퀴즈·사전, 새것부터, 줄마다 그때의 표시) + 쓴 곳(통화·채팅·사람 대화 — 말하기 쪽, 2026-11-09 앎·말하기 분리). */
 function CardTimeline({
   ui,
   language,
@@ -1251,11 +1251,13 @@ function CardTimeline({
 }) {
   const rows = useMemo(() => cardHistory(ledger, cardKey, (t) => dayOfSeconds(t)), [ledger, cardKey]);
   const item = useMemo(() => {
-    const mine = ledger.filter((event) => event.k === cardKey && (event.r === "ok" || event.r === "miss"));
+    // 머리 ✓✗ = 퀴즈 답만(대화에서 쓴 것·막힌 것은 아래 쓴 곳 — 2026-11-09 앎·말하기 분리).
+    const mine = ledger.filter((event) => event.k === cardKey && (event.r === "ok" || event.r === "miss") && event.src !== "call" && event.src !== "chat" && event.src !== "people");
     const last = mine.reduce<LogEvent | null>((have, one) => (!have || have.t <= one.t ? one : have), null);
     return { key: cardKey, ok: mine.filter((one) => one.r === "ok").length, miss: mine.filter((one) => one.r === "miss").length, last: last?.t ?? 0, lastOk: last?.r === "ok" };
   }, [ledger, cardKey]);
-  const used = useMemo(() => new Set(ledger.filter((one) => one.k === cardKey && one.r === "used").map((one) => dayOfSeconds(one.t))).size, [ledger, cardKey]);
+  const talks = useMemo(() => talkHistory(ledger, cardKey, (t) => dayOfSeconds(t)), [ledger, cardKey]);
+  const used = useMemo(() => new Set(talks.filter((one) => one.r === "used").map((one) => dayOfSeconds(one.t))).size, [talks]);
   const when = useMemo(() => {
     try {
       return new Intl.DateTimeFormat(locale, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
@@ -1264,15 +1266,27 @@ function CardTimeline({
     }
   }, [locale]);
   const resultText = (row: (typeof rows)[number]) =>
-    row.r === "look" ? ui.tlLookedN.replace("{n}", "").trim() : row.r === "used" ? ui.tlUsedN.replace("{n}", "1") : `${row.r === "ok" ? "✓" : "✗"} ${modeName(ui, row.mode)}`.trim();
+    row.r === "look" ? ui.tlLookedN.replace("{n}", "").trim() : `${row.r === "ok" ? "✓" : "✗"} ${modeName(ui, row.mode)}`.trim();
   return (
     <div data-card-timeline={cardKey} className="flex flex-col gap-3">
       <LearnedCards ui={ui} language={language} locale={locale} items={[item]} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
-      {used ? <span className="self-start rounded-full border border-line px-2 py-0.5 text-meta text-slate-300">{ui.tlUsedN.replace("{n}", String(used))}</span> : null}
-      <h3 className="text-caption font-semibold text-slate-400">{ui.tlHistory}</h3>
+      {talks.length ? (
+        <>
+          <h3 className="text-caption font-semibold text-slate-400">{ui.tlUsedN.replace("{n}", String(used))}</h3>
+          <ul data-card-talks className="flex flex-col gap-1">
+            {talks.map((row, i) => (
+              <li key={`${row.t}-${i}`} className="flex items-center gap-2 text-note tabular-nums text-ink">
+                <span className={`h-2.5 w-2.5 shrink-0 rounded-full ${row.r === "used" ? "bg-info" : "bg-bad"}`} />
+                <span className="min-w-0 truncate">{`${when.format(row.t * 1000)} · ${PLACE_ICON[row.src]} ${placeName(ui, row.src)} ${row.r === "used" ? "✓" : "✗"}`}</span>
+              </li>
+            ))}
+          </ul>
+        </>
+      ) : null}
+      {rows.length ? <h3 className="text-caption font-semibold text-slate-400">{ui.tlHistory}</h3> : null}
       <ol data-card-history className="flex flex-col">
         {rows.map((row, i) => {
-          const dot = row.r === "ok" ? "bg-good" : row.r === "miss" ? "bg-bad" : row.r === "used" ? "bg-info" : "bg-slate-500";
+          const dot = row.r === "ok" ? "bg-good" : row.r === "miss" ? "bg-bad" : "bg-slate-500";
           const place = placeOfSrc(row.src);
           return (
             <li key={`${row.t}-${i}`} className="flex gap-3">
@@ -1676,12 +1690,6 @@ function Learned({
       {onDay ? <DayRows ui={ui} locale={locale} amounts={amounts} notes={notes} onDay={onDay} /> : null}
       {openCell ? (
         <LogSheet title={`${LEARN_ICON[openCell.part]} ${learnPartName(ui, openCell.part)} · ${colName(openCell.col)} · ${cell(openCell.part, openCell.col).length}`} ui={ui} onClose={() => setOpen(null)}>
-          {openCell.col === "used" ? (
-            // 활용 출처(2026-11-08): 대화에서 씀 · 문장 판단(맞나 틀리나) — 둘 다 한 낱말이면 둘 다에 셈.
-            <p data-used-from className="text-caption tabular-nums text-slate-400">
-              📞 {ui.homeTabTalk} {progress.usedTalk.filter((key) => partOf(key) === openCell.part).length} · ⭕❌ {ui.growFromJudge} {progress.usedJudge.filter((key) => partOf(key) === openCell.part).length}
-            </p>
-          ) : null}
           <LearnedCards ui={ui} language={language} locale={locale} items={itemsOf(cell(openCell.part, openCell.col).slice(0, 120))} ledger={ledger} grammarName={grammarName} keyLabel={keyLabel} />
         </LogSheet>
       ) : null}
@@ -1732,10 +1740,10 @@ function LearnedCards({
   const [word, setWord] = useState<string | null>(null);
   const prepared = usePrepared(language, locale);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
-  // 표시는 있었던 일만(studyTimeline.ts knowTag — 2026-11-09 사용자 "학습 · n번 학습 · 자주 씀"), 체크 셋은 안에서만.
+  // 표시는 있었던 일만(studyTimeline.ts knowTag — 퀴즈 답만, 학습 · n번 학습), 체크 셋은 안에서만.
   const markOf = (key: string) => {
     const tag = knowTag(ledger, key, (t) => dayOfSeconds(t));
-    return tag ? { label: `${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}`, cls: tag.kind === "often" ? "text-info" : "text-slate-300" } : null;
+    return tag ? { label: `${knowTagLabel(ui, tag)}${tag.miss ? " ✗" : ""}`, cls: "text-slate-300" } : null;
   };
   const face = (key: string) => {
     if (key.startsWith("w|") || key.startsWith("e|")) {

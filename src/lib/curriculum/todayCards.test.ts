@@ -21,12 +21,13 @@ test("체크 셋: 고르기 맞음은 처음 봄, 쓰기 맞음은 적용이 힘
   assert.equal(known.due, T0 + DAY + DAY);
 });
 
-test("체크 셋: 통화에서 쓰면 앎, 앎에서 틀리면 적용이 힘듦(처음 봄으로 안 내림) (th)", () => {
+test("체크 셋: 대화(통화·사람)는 안 움직임 — 앎은 퀴즈로만, 앎에서 퀴즈 틀리면 적용이 힘듦 (th)", () => {
   const key = "e|ขอบคุณครับ";
-  const known = stateOf([ev(key, "ok", T0, { m: "write" }), { k: key, src: "call", r: "used", t: T0 + 60 }], utcDay);
-  assert.equal(known.level, "known");
-  const down = stateOf([ev(key, "ok", T0, { m: "write" }), { k: key, src: "call", r: "used", t: T0 + 60 }, { k: key, src: "people", r: "miss", t: T0 + 2 * DAY }], utcDay);
-  assert.equal(down.level, "hard");
+  const hard = stateOf([ev(key, "ok", T0, { m: "write" }), { k: key, src: "call", r: "used", t: T0 + DAY }], utcDay);
+  assert.equal(hard.level, "hard", "대화에서 써도 앎으로 안 올림");
+  const known = [ev(key, "ok", T0, { m: "write" }), ev(key, "ok", T0 + DAY, { m: "write" })];
+  assert.equal(stateOf([...known, { k: key, src: "people", r: "miss", t: T0 + 2 * DAY }], utcDay).level, "known", "대화 틀림은 안 내림");
+  assert.equal(stateOf([...known, ev(key, "miss", T0 + 2 * DAY)], utcDay).level, "hard");
 });
 
 test("체크 셋: 확인 때가 지나 맞히면 다음 확인(1→3일) (es)", () => {
