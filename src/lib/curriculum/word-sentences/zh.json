@@ -747,6 +747,22 @@
    "blank": "上学"
   }
  ],
+ "w|上将": [
+  {
+   "text": "张伟的叔叔是退休的上将，穿着便装也很有精神。",
+   "en": "Zhang Wei's uncle is a retired general and looks sharp even in casual clothes.",
+   "ko": "장웨이의 삼촌은 퇴역한 대장인데 평상복을 입어도 아주 늠름해요.",
+   "blank": "上将",
+   "src": "made"
+  },
+  {
+   "text": "开跑前，一位退休上将为选手鸣枪。",
+   "en": "Before the start, a retired general fired the starting gun for the runners.",
+   "ko": "출발 전에 퇴역한 대장 한 분이 선수들을 위해 출발 총을 쐈어요.",
+   "blank": "上将",
+   "src": "made"
+  }
+ ],
  "w|上尉": [
   {
    "text": "上尉下达了命令。",
@@ -2343,6 +2359,22 @@
    "en": "Personal space matters.",
    "ko": "개인 공간이 중요해.",
    "blank": "个人"
+  }
+ ],
+ "w|个体": [
+  {
+   "text": "新娘的父母在镇上做个体生意，开了一家小饭馆。",
+   "en": "The bride's parents run their own small business in town, a little restaurant.",
+   "ko": "신부의 부모님은 읍내에서 자영업을 하며 작은 식당을 운영해요.",
+   "blank": "个体",
+   "src": "made"
+  },
+  {
+   "text": "教练说，制定训练计划要考虑个体差异。",
+   "en": "The coach said training plans need to take individual differences into account.",
+   "ko": "코치는 훈련 계획을 세울 때 개인차를 고려해야 한다고 했어요.",
+   "blank": "个体",
+   "src": "made"
   }
  ],
  "w|个别": [
@@ -4131,6 +4163,22 @@
    "blank": "享受"
   }
  ],
+ "w|享有": [
+  {
+   "text": "在这家酒店办婚礼的新人，可以享有免费的蜜月套房。",
+   "en": "Couples who hold their wedding at this hotel can enjoy a free honeymoon suite.",
+   "ko": "이 호텔에서 결혼식을 올리는 신혼부부는 무료 허니문 스위트를 누릴 수 있어요.",
+   "blank": "享有",
+   "src": "made"
+  },
+  {
+   "text": "完赛的选手都可以享有一次免费按摩。",
+   "en": "Every runner who finishes can enjoy a free massage.",
+   "ko": "완주한 선수는 모두 무료 마사지를 한 번 받을 수 있어요.",
+   "blank": "享有",
+   "src": "made"
+  }
+ ],
  "w|亮": [
   {
    "text": "天还没亮，陈杰就背着书包出门去赶早自习。",
@@ -4359,6 +4407,22 @@
    "src": "made"
   }
  ],
+ "w|人力": [
+  {
+   "text": "这场婚礼花在人力上的钱，比花在鲜花上的还多。",
+   "en": "This wedding spent more money on staff than on flowers.",
+   "ko": "이번 결혼식은 꽃보다 인건비에 돈이 더 많이 들었어요.",
+   "blank": "人力",
+   "src": "made"
+  },
+  {
+   "text": "这么大的比赛，需要大量人力来维持秩序。",
+   "en": "A race this big needs a lot of manpower to keep order.",
+   "ko": "이렇게 큰 대회는 질서를 유지하려면 많은 인력이 필요해요.",
+   "blank": "人力",
+   "src": "made"
+  }
+ ],
  "w|人口": [
   {
    "text": "黄涛的新公司在一座人口不多的小城市。",
@@ -4512,6 +4576,22 @@
    "en": "The server asked Yang Yang how many in the party, and Yang Yang counted heads and said twelve.",
    "ko": "종업원이 몇 분이냐고 묻자 양양은 인원수를 세어 보고 열두 명이라고 했어요.",
    "blank": "人数",
+   "src": "made"
+  }
+ ],
+ "w|人格": [
+  {
+   "text": "新娘说，她最欣赏的是张伟的人格，而不是他的收入。",
+   "en": "The bride said what she admires most is Zhang Wei's character, not his income.",
+   "ko": "신부는 장웨이의 수입이 아니라 인격을 가장 존경한다고 했어요.",
+   "blank": "人格",
+   "src": "made"
+  },
+  {
+   "text": "刘芳认为，长跑能磨炼一个人的人格。",
+   "en": "Liu Fang believes long-distance running can temper a person's character.",
+   "ko": "류팡은 장거리 달리기가 사람의 인격을 단련한다고 생각해요.",
+   "blank": "人格",
    "src": "made"
   }
  ],
@@ -5787,6 +5867,22 @@
    "blank": "优秀"
   }
  ],
+ "w|优雅": [
+  {
+   "text": "张伟的婚礼上，新娘一身白纱，显得格外优雅。",
+   "en": "At Zhang Wei's wedding, the bride in her white gown looked especially elegant.",
+   "ko": "장웨이의 결혼식에서 하얀 드레스를 입은 신부는 유난히 우아해 보였어요.",
+   "blank": "优雅",
+   "src": "made"
+  },
+  {
+   "text": "刘芳跑步的姿势很优雅，一点也不像业余选手。",
+   "en": "Liu Fang's running form is so graceful that she doesn't look like an amateur at all.",
+   "ko": "류팡은 달리는 자세가 우아해서 전혀 아마추어 같지 않아요.",
+   "blank": "优雅",
+   "src": "made"
+  }
+ ],
  "w|伙伴": [
   {
    "text": "他是我的好伙伴。",
@@ -6804,6 +6900,22 @@
    "en": "Sun Yue sat in at court, where a neighbor was testifying for the defendant.",
    "ko": "쑨웨가 법원에 방청하러 갔는데 한 이웃이 피고를 위해 증언하고 있었어요.",
    "blank": "作证",
+   "src": "made"
+  }
+ ],
+ "w|作风": [
+  {
+   "text": "张伟平时作风简朴，连婚纱照都只拍了一套。",
+   "en": "Zhang Wei usually lives simply, and he only took one set of wedding photos.",
+   "ko": "장웨이는 평소 생활 태도가 검소해서 웨딩 사진도 한 세트만 찍었어요.",
+   "blank": "作风",
+   "src": "made"
+  },
+  {
+   "text": "刘芳做事作风干脆，定下目标就一定完成。",
+   "en": "Liu Fang has a decisive way of doing things: once she sets a goal, she always reaches it.",
+   "ko": "류팡은 일하는 스타일이 시원시원해서 목표를 정하면 꼭 이뤄요.",
+   "blank": "作风",
    "src": "made"
   }
  ],
@@ -9189,6 +9301,22 @@
    "src": "made"
   }
  ],
+ "w|公务员": [
+  {
+   "text": "新娘的爸爸是公务员，平时说话做事都很严谨。",
+   "en": "The bride's father is a civil servant and is careful in everything he says and does.",
+   "ko": "신부의 아버지는 공무원이라 평소에 말과 행동이 아주 신중해요.",
+   "blank": "公务员",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的跑友里有老师、医生，也有公务员。",
+   "en": "Liu Fang's running friends include teachers, doctors, and civil servants.",
+   "ko": "류팡의 러닝 친구 중에는 선생님, 의사, 공무원도 있어요.",
+   "blank": "公务员",
+   "src": "made"
+  }
+ ],
  "w|公司": [
   {
    "text": "我去公司了。",
@@ -11524,6 +11652,22 @@
    "en": "Wang Fang's cousin is a criminal lawyer and often comes to this clinic for cleanings.",
    "ko": "왕팡의 사촌 오빠는 형사 변호사인데 이 치과에 자주 스케일링하러 와요.",
    "blank": "刑事",
+   "src": "made"
+  }
+ ],
+ "w|划分": [
+  {
+   "text": "宾客的座位按亲戚和朋友划分成两边。",
+   "en": "The guests' seats were divided into two sides, relatives and friends.",
+   "ko": "하객 자리는 친척과 친구로 나뉘어 양쪽으로 배치됐어요.",
+   "blank": "划分",
+   "src": "made"
+  },
+  {
+   "text": "组委会按年龄把参赛者划分成几个组别。",
+   "en": "The organizers divided the participants into several groups by age.",
+   "ko": "조직위원회는 참가자를 나이에 따라 여러 그룹으로 나눴어요.",
+   "blank": "划分",
    "src": "made"
   }
  ],
@@ -17365,6 +17509,22 @@
    "blank": "听到"
   }
  ],
+ "w|听取": [
+  {
+   "text": "双方父母听取了张伟的意见，决定婚礼不搞得太铺张。",
+   "en": "Both sets of parents listened to Zhang Wei's opinion and decided not to make the wedding too lavish.",
+   "ko": "양가 부모님은 장웨이의 의견을 듣고 결혼식을 너무 화려하게 하지 않기로 했어요.",
+   "blank": "听取",
+   "src": "made"
+  },
+  {
+   "text": "刘芳认真听取了医生的建议，比赛前一晚早早睡了。",
+   "en": "Liu Fang took the doctor's advice seriously and went to bed early the night before the race.",
+   "ko": "류팡은 의사의 조언을 잘 듣고 경기 전날 밤 일찍 잤어요.",
+   "blank": "听取",
+   "src": "made"
+  }
+ ],
  "w|听懂": [
   {
    "text": "护林员说的是当地方言，陈杰只听懂了一半。",
@@ -21555,6 +21715,38 @@
    "src": "made"
   }
  ],
+ "w|外人": [
+  {
+   "text": "婚礼上没有一个外人，来的都是亲朋好友。",
+   "en": "There wasn't a single outsider at the wedding; everyone who came was family or a close friend.",
+   "ko": "결혼식에는 남이 한 명도 없고 온 사람은 모두 가족과 친한 친구였어요.",
+   "blank": "外人",
+   "src": "made"
+  },
+  {
+   "text": "在跑团里，刘芳从来不觉得自己是外人。",
+   "en": "In the running club, Liu Fang never feels like an outsider.",
+   "ko": "러닝 클럽에서 류팡은 한 번도 자신이 남이라고 느낀 적이 없어요.",
+   "blank": "外人",
+   "src": "made"
+  }
+ ],
+ "w|外公": [
+  {
+   "text": "张伟的外公坐在第一排，笑得合不拢嘴。",
+   "en": "Zhang Wei's grandfather sat in the front row, grinning from ear to ear.",
+   "ko": "장웨이의 외할아버지는 맨 앞줄에 앉아 입을 다물지 못하고 웃었어요.",
+   "blank": "外公",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的外公年轻时也跑过马拉松，今天特地来看比赛。",
+   "en": "Liu Fang's grandfather also ran marathons when he was young and came especially to watch the race today.",
+   "ko": "류팡의 외할아버지도 젊을 때 마라톤을 뛰었고 오늘 일부러 경기를 보러 왔어요.",
+   "blank": "外公",
+   "src": "made"
+  }
+ ],
  "w|外出": [
   {
    "text": "下雨天马林不想外出，就在房间里看书。",
@@ -22250,6 +22442,22 @@
    "en": "At the end of the wedding, the fireworks boomed like cannons and startled the kids.",
    "ko": "결혼식이 끝날 때 폭죽이 대포처럼 터져서 아이들이 깜짝 놀랐어요.",
    "blank": "大炮",
+   "src": "made"
+  }
+ ],
+ "w|大笑": [
+  {
+   "text": "伴郎讲了张伟小时候的糗事，全场都哈哈大笑。",
+   "en": "The best man told an embarrassing story from Zhang Wei's childhood, and the whole room roared with laughter.",
+   "ko": "들러리가 장웨이의 어릴 적 창피한 일을 이야기하자 모두 크게 웃었어요.",
+   "blank": "大笑",
+   "src": "made"
+  },
+  {
+   "text": "冲过终点后，刘芳和朋友们抱在一起大笑。",
+   "en": "After crossing the finish line, Liu Fang hugged her friends and laughed out loud.",
+   "ko": "결승선을 통과한 뒤 류팡은 친구들과 끌어안고 크게 웃었어요.",
+   "blank": "大笑",
    "src": "made"
   }
  ],
@@ -23501,6 +23709,22 @@
    "blank": "好"
   }
  ],
+ "w|好不容易": [
+  {
+   "text": "张伟好不容易才从敬酒的人群里脱身，去后台喝了口水。",
+   "en": "Zhang Wei finally managed to escape the crowd of toasters and went backstage for a sip of water.",
+   "ko": "장웨이는 겨우 건배하는 사람들 사이에서 빠져나와 무대 뒤에서 물을 한 모금 마셨어요.",
+   "blank": "好不容易",
+   "src": "made"
+  },
+  {
+   "text": "刘芳好不容易才抢到名额，拿到了城市马拉松的号码布。",
+   "en": "Liu Fang finally managed to grab a spot and got her bib for the city marathon.",
+   "ko": "류팡은 겨우 자리를 잡아 도시 마라톤 번호표를 받았어요.",
+   "blank": "好不容易",
+   "src": "made"
+  }
+ ],
  "w|好久": [
   {
    "text": "好久没下这么大的雨了，马林站在窗前听了很久。",
@@ -24317,6 +24541,22 @@
    "en": "Don't trust all media.",
    "ko": "모든 매체를 믿지 마.",
    "blank": "媒体"
+  }
+ ],
+ "w|媳妇": [
+  {
+   "text": "张伟的妈妈逢人就说，自己终于有了个好媳妇。",
+   "en": "Zhang Wei's mom tells everyone she meets that she finally has a good daughter-in-law.",
+   "ko": "장웨이의 엄마는 만나는 사람마다 드디어 좋은 며느리가 생겼다고 말해요.",
+   "blank": "媳妇",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的婆婆逢人就夸自己的媳妇能跑全马。",
+   "en": "Liu Fang's mother-in-law brags to everyone that her daughter-in-law can run a full marathon.",
+   "ko": "류팡의 시어머니는 만나는 사람마다 며느리가 풀코스를 뛴다고 자랑해요.",
+   "blank": "媳妇",
+   "src": "made"
   }
  ],
  "w|嫁": [
@@ -25751,6 +25991,22 @@
    "src": "made"
   }
  ],
+ "w|家属": [
+  {
+   "text": "司仪请新郎的家属上台合影。",
+   "en": "The emcee invited the groom's family onto the stage for a group photo.",
+   "ko": "사회자가 신랑 가족을 무대로 불러 단체 사진을 찍었어요.",
+   "blank": "家属",
+   "src": "made"
+  },
+  {
+   "text": "终点区专门给选手家属留了等候的地方。",
+   "en": "The finish area set aside a waiting space for runners' families.",
+   "ko": "결승 구역에는 선수 가족을 위한 대기 공간이 따로 있었어요.",
+   "blank": "家属",
+   "src": "made"
+  }
+ ],
  "w|家乡": [
   {
    "text": "马林的家乡在山里，离酒店很远。",
@@ -25949,6 +26205,22 @@
    "en": "I forgot the password.",
    "ko": "비밀번호를 잊었어.",
    "blank": "密码"
+  }
+ ],
+ "w|富人": [
+  {
+   "text": "张伟觉得，结婚不该看对方是不是富人，而要看人品。",
+   "en": "Zhang Wei thinks marriage shouldn't be about whether someone is rich, but about their character.",
+   "ko": "장웨이는 결혼은 상대가 부자인지가 아니라 됨됨이를 봐야 한다고 생각해요.",
+   "blank": "富人",
+   "src": "made"
+  },
+  {
+   "text": "有人说马拉松是富人的运动，刘芳却觉得一双跑鞋就够了。",
+   "en": "Some say marathons are a sport for the rich, but Liu Fang thinks a pair of running shoes is enough.",
+   "ko": "마라톤은 부자들의 운동이라는 말도 있지만 류팡은 운동화 한 켤레면 충분하다고 생각해요.",
+   "blank": "富人",
+   "src": "made"
   }
  ],
  "w|富有": [
@@ -27890,6 +28162,22 @@
    "en": "Sit on my left.",
    "ko": "내 왼쪽에 앉아.",
    "blank": "左边",
+   "src": "made"
+  }
+ ],
+ "w|巧": [
+  {
+   "text": "说来也巧，张伟的伴郎和伴娘竟然是小学同学。",
+   "en": "As luck would have it, Zhang Wei's best man and the bridesmaid turned out to be primary school classmates.",
+   "ko": "공교롭게도 장웨이의 들러리 둘이 알고 보니 초등학교 동창이었어요.",
+   "blank": "巧",
+   "src": "made"
+  },
+  {
+   "text": "真巧，刘芳在起点遇到了大学时的室友。",
+   "en": "What a coincidence—Liu Fang ran into her college roommate at the start.",
+   "ko": "공교롭게도 류팡은 출발점에서 대학 시절 룸메이트를 만났어요.",
+   "blank": "巧",
    "src": "made"
   }
  ],
@@ -30925,6 +31213,22 @@
    "blank": "律师"
   }
  ],
+ "w|徒弟": [
+  {
+   "text": "张伟的师父也来了，当年张伟是他最得意的徒弟。",
+   "en": "Zhang Wei's old master came too; back then Zhang Wei was his proudest apprentice.",
+   "ko": "장웨이의 스승도 왔는데, 그때 장웨이는 스승이 가장 자랑스러워하던 제자였어요.",
+   "blank": "徒弟",
+   "src": "made"
+  },
+  {
+   "text": "刘芳跟着一位老跑者练了两年，算是老人家半个徒弟。",
+   "en": "Liu Fang trained with a veteran runner for two years and is sort of his half-apprentice.",
+   "ko": "류팡은 노련한 러너에게 이 년 동안 배워서 그분의 반쯤 제자라고 할 수 있어요.",
+   "blank": "徒弟",
+   "src": "made"
+  }
+ ],
  "w|得": [
   {
    "text": "急得不行。",
@@ -30967,6 +31271,22 @@
    "en": "He got his chance.",
    "ko": "그 사람 기회를 얻었어.",
    "blank": "得到"
+  }
+ ],
+ "w|得意": [
+  {
+   "text": "张伟的师父也来了，当年张伟是他最得意的徒弟。",
+   "en": "Zhang Wei's old master came too; back then Zhang Wei was his proudest apprentice.",
+   "ko": "장웨이의 스승도 왔는데, 그때 장웨이는 스승이 가장 자랑스러워하던 제자였어요.",
+   "blank": "得意",
+   "src": "made"
+  },
+  {
+   "text": "拿到奖牌后，刘芳得意地在朋友圈发了照片。",
+   "en": "After getting her medal, Liu Fang proudly posted photos on social media.",
+   "ko": "메달을 받은 뒤 류팡은 의기양양하게 SNS에 사진을 올렸어요.",
+   "blank": "得意",
+   "src": "made"
   }
  ],
  "w|得知": [
@@ -33372,6 +33692,38 @@
    "en": "Putting her child through university is Liu Fang's greatest achievement in life.",
    "ko": "아이를 대학까지 보낸 게 류팡 인생에서 가장 큰 성취예요.",
    "blank": "成就",
+   "src": "made"
+  }
+ ],
+ "w|成年": [
+  {
+   "text": "新娘的弟弟刚成年，第一次在婚宴上喝了酒。",
+   "en": "The bride's younger brother just came of age and drank alcohol at a banquet for the first time.",
+   "ko": "신부의 남동생은 막 성인이 되어 피로연에서 처음으로 술을 마셨어요.",
+   "blank": "成年",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的儿子还没成年，只能跑迷你组。",
+   "en": "Liu Fang's son isn't an adult yet, so he can only run in the mini race.",
+   "ko": "류팡의 아들은 아직 미성년이라 미니 코스만 달릴 수 있어요.",
+   "blank": "成年",
+   "src": "made"
+  }
+ ],
+ "w|成年人": [
+  {
+   "text": "张伟笑着说，成年人的快乐有时就这么简单。",
+   "en": "Zhang Wei said with a smile that adult happiness is sometimes just this simple.",
+   "ko": "장웨이는 어른의 행복은 가끔 이렇게 단순하다며 웃었어요.",
+   "blank": "成年人",
+   "src": "made"
+  },
+  {
+   "text": "全程马拉松只允许成年人报名。",
+   "en": "Only adults are allowed to sign up for the full marathon.",
+   "ko": "풀코스 마라톤은 성인만 신청할 수 있어요.",
+   "blank": "成年人",
    "src": "made"
   }
  ],
@@ -39745,6 +40097,22 @@
    "blank": "无关"
   }
  ],
+ "w|无力": [
+  {
+   "text": "一桌桌敬完酒，张伟累得浑身无力。",
+   "en": "After toasting table after table, Zhang Wei was so tired he had no strength left.",
+   "ko": "테이블마다 건배를 하고 나니 장웨이는 온몸에 힘이 하나도 없었어요.",
+   "blank": "无力",
+   "src": "made"
+  },
+  {
+   "text": "跑到三十公里时，刘芳双腿无力，差点停下来。",
+   "en": "At thirty kilometers, Liu Fang's legs felt weak and she nearly stopped.",
+   "ko": "삼십 킬로미터 지점에서 류팡은 다리에 힘이 빠져 멈출 뻔했어요.",
+   "blank": "无力",
+   "src": "made"
+  }
+ ],
  "w|无情": [
   {
    "text": "张伟在信里感叹，时间真是无情，转眼大家都老了。",
@@ -41785,6 +42153,22 @@
    "blank": "服务"
   }
  ],
+ "w|服务员": [
+  {
+   "text": "婚宴开始前，服务员来回跑着摆放餐具。",
+   "en": "Before the banquet began, the waiters ran back and forth setting the tableware.",
+   "ko": "피로연이 시작되기 전에 종업원들이 왔다 갔다 하며 식기를 놓았어요.",
+   "blank": "服务员",
+   "src": "made"
+  },
+  {
+   "text": "终点附近餐馆的服务员也跑出来为选手鼓掌。",
+   "en": "The waiters from restaurants near the finish line also came out to cheer for the runners.",
+   "ko": "결승점 근처 식당 종업원들도 나와서 선수들에게 박수를 쳤어요.",
+   "blank": "服务员",
+   "src": "made"
+  }
+ ],
  "w|服役": [
   {
    "text": "体育版的主编年轻时在海军服役过五年。",
@@ -42321,6 +42705,22 @@
    "blank": "杀人"
   }
  ],
+ "w|杀人犯": [
+  {
+   "text": "张伟的爸爸年轻时当警察，抓过一个杀人犯，婚宴上又讲了一遍。",
+   "en": "Zhang Wei's dad was a police officer when young and once caught a murderer, a story he told again at the banquet.",
+   "ko": "장웨이의 아빠는 젊을 때 경찰로 살인범을 잡은 적이 있는데 피로연에서 또 그 얘기를 했어요.",
+   "blank": "杀人犯",
+   "src": "made"
+  },
+  {
+   "text": "刘芳边跑边听推理小说，书里的杀人犯直到最后才露出真面目。",
+   "en": "Liu Fang listened to a mystery novel while running; the murderer in the book wasn't revealed until the very end.",
+   "ko": "류팡은 달리며 추리 소설을 들었는데, 책 속 살인범은 마지막에야 정체를 드러냈어요.",
+   "blank": "杀人犯",
+   "src": "made"
+  }
+ ],
  "w|杀害": [
   {
    "text": "他被杀害了。",
@@ -42621,6 +43021,22 @@
    "blank": "来到"
   }
  ],
+ "w|来回": [
+  {
+   "text": "婚宴开始前，服务员来回跑着摆放餐具。",
+   "en": "Before the banquet began, the waiters ran back and forth setting the tableware.",
+   "ko": "피로연이 시작되기 전에 종업원들이 왔다 갔다 하며 식기를 놓았어요.",
+   "blank": "来回",
+   "src": "made"
+  },
+  {
+   "text": "开跑前，刘芳在起点附近来回走动，让身体热起来。",
+   "en": "Before the start, Liu Fang walked back and forth near the starting line to warm up.",
+   "ko": "출발 전에 류팡은 출발점 근처를 왔다 갔다 하며 몸을 데웠어요.",
+   "blank": "来回",
+   "src": "made"
+  }
+ ],
  "w|来得及": [
   {
    "text": "趁天还没冷，黄涛想把窗户修好，还来得及。",
@@ -42774,6 +43190,22 @@
    "en": "Her friend's reply gave Lin Jing enormous comfort.",
    "ko": "친구의 답장은 린징에게 큰 위로가 됐어요.",
    "blank": "极大",
+   "src": "made"
+  }
+ ],
+ "w|极度": [
+  {
+   "text": "婚礼结束时，张伟极度疲惫，却还是笑着送客。",
+   "en": "When the wedding ended, Zhang Wei was utterly exhausted but still saw the guests off with a smile.",
+   "ko": "결혼식이 끝났을 때 장웨이는 극도로 지쳤지만 그래도 웃으며 손님을 배웅했어요.",
+   "blank": "极度",
+   "src": "made"
+  },
+  {
+   "text": "刘芳极度渴望打破自己的最好成绩。",
+   "en": "Liu Fang desperately wanted to break her personal best.",
+   "ko": "류팡은 자기 최고 기록을 깨고 싶은 마음이 극도로 컸어요.",
+   "blank": "极度",
    "src": "made"
   }
  ],
@@ -46131,6 +46563,22 @@
    "src": "made"
   }
  ],
+ "w|注视": [
+  {
+   "text": "张伟注视着新娘慢慢走过来，眼眶一下子红了。",
+   "en": "Zhang Wei watched the bride slowly walk toward him, and his eyes suddenly welled up.",
+   "ko": "장웨이는 천천히 걸어오는 신부를 바라보다가 금세 눈시울이 붉어졌어요.",
+   "blank": "注视",
+   "src": "made"
+  },
+  {
+   "text": "刘芳注视着前方的终点线，咬牙加速。",
+   "en": "Liu Fang fixed her eyes on the finish line ahead, gritted her teeth, and sped up.",
+   "ko": "류팡은 앞의 결승선을 응시하며 이를 악물고 속도를 올렸어요.",
+   "blank": "注视",
+   "src": "made"
+  }
+ ],
  "w|注重": [
   {
    "text": "黄涛买旧衣服时特别注重面料，不太在乎款式。",
@@ -46784,6 +47232,22 @@
    "en": "The village head said that since tourists started coming, spending in the village has gone up a lot.",
    "ko": "촌장은 관광객이 오면서 마을 소비 수준이 꽤 올라갔다고 했어요.",
    "blank": "消费",
+   "src": "made"
+  }
+ ],
+ "w|消费者": [
+  {
+   "text": "婚庆公司说，现在的消费者越来越喜欢小而温馨的婚礼。",
+   "en": "The wedding company says consumers these days increasingly prefer small, cozy weddings.",
+   "ko": "웨딩 업체는 요즘 소비자들이 작고 따뜻한 결혼식을 점점 더 좋아한다고 해요.",
+   "blank": "消费者",
+   "src": "made"
+  },
+  {
+   "text": "马拉松热让运动品牌更重视跑步的消费者。",
+   "en": "The marathon craze has made sports brands pay more attention to consumers who run.",
+   "ko": "마라톤 열풍으로 스포츠 브랜드들은 달리는 소비자에게 더 신경 써요.",
+   "blank": "消费者",
    "src": "made"
   }
  ],
@@ -48585,6 +49049,22 @@
    "blank": "父亲"
   }
  ],
+ "w|父子": [
+  {
+   "text": "张伟和爸爸长得特别像，大家都说一看就是父子。",
+   "en": "Zhang Wei looks just like his dad, and everyone says you can tell at a glance they're father and son.",
+   "ko": "장웨이는 아빠와 정말 닮아서 다들 한눈에 부자인 걸 알겠다고 해요.",
+   "blank": "父子",
+   "src": "made"
+  },
+  {
+   "text": "刘芳跑到一半，看见一对父子手拉着手一起跑。",
+   "en": "Halfway through, Liu Fang saw a father and son running together hand in hand.",
+   "ko": "류팡은 반쯤 달렸을 때 손을 잡고 함께 달리는 아버지와 아들을 봤어요.",
+   "blank": "父子",
+   "src": "made"
+  }
+ ],
  "w|父母": [
   {
    "text": "父母会担心。",
@@ -49854,6 +50334,22 @@
    "en": "A group of basketball players boarded, every one so tall they had to duck through the door.",
    "ko": "농구 선수 한 무리가 탔는데 다들 키가 커서 고개를 숙이고 들어왔어요.",
    "blank": "球员",
+   "src": "made"
+  }
+ ],
+ "w|球迷": [
+  {
+   "text": "张伟的大学室友是个铁杆球迷，婚宴中途还偷偷看比分。",
+   "en": "Zhang Wei's college roommate is a die-hard fan and secretly checked the score in the middle of the banquet.",
+   "ko": "장웨이의 대학 룸메이트는 열성 축구 팬이라 피로연 도중에도 몰래 점수를 확인했어요.",
+   "blank": "球迷",
+   "src": "made"
+  },
+  {
+   "text": "赛道两旁有不少球迷，把看足球的热情用在了马拉松上。",
+   "en": "Many sports fans lined the course, bringing their football enthusiasm to the marathon.",
+   "ko": "코스 양옆에는 축구를 볼 때의 열정을 마라톤에 쏟는 팬들이 많았어요.",
+   "blank": "球迷",
    "src": "made"
   }
  ],
@@ -54265,6 +54761,22 @@
    "src": "made"
   }
  ],
+ "w|称号": [
+  {
+   "text": "朋友们给张伟起了个“模范丈夫”的称号。",
+   "en": "His friends gave Zhang Wei the title of \"model husband.\"",
+   "ko": "친구들은 장웨이에게 \"모범 남편\"이라는 칭호를 붙여 줬어요.",
+   "blank": "称号",
+   "src": "made"
+  },
+  {
+   "text": "这次完赛后，刘芳得到了跑团“铁娘子”的称号。",
+   "en": "After finishing this race, Liu Fang earned the running club's title of \"Iron Lady.\"",
+   "ko": "이번 완주 후 류팡은 러닝 클럽에서 \"철의 여인\"이라는 칭호를 얻었어요.",
+   "blank": "称号",
+   "src": "made"
+  }
+ ],
  "w|称呼": [
   {
    "text": "空姐礼貌地问赵磊该怎么称呼他。",
@@ -54608,6 +55120,22 @@
    "en": "Lili's result stood out in this race; she finished in the top ten.",
    "ko": "리리는 이번 대회에서 기록이 두드러져서 십 위 안에 들었어요.",
    "blank": "突出",
+   "src": "made"
+  }
+ ],
+ "w|突击": [
+  {
+   "text": "为了穿上礼服，张伟突击减肥了一个月。",
+   "en": "To fit into his suit, Zhang Wei went on a crash diet for a month.",
+   "ko": "예복을 입으려고 장웨이는 한 달 동안 벼락치기로 살을 뺐어요.",
+   "blank": "突击",
+   "src": "made"
+  },
+  {
+   "text": "赛前一周，刘芳突击加练了几次长距离。",
+   "en": "The week before the race, Liu Fang crammed in a few extra long runs.",
+   "ko": "경기 일주일 전에 류팡은 벼락치기로 장거리 훈련을 몇 번 더 했어요.",
+   "blank": "突击",
    "src": "made"
   }
  ],
@@ -55395,6 +55923,22 @@
    "blank": "管"
   }
  ],
+ "w|管家": [
+  {
+   "text": "酒店派了一位经验丰富的管家，专门照顾新人的需要。",
+   "en": "The hotel assigned an experienced butler to look after the couple's needs.",
+   "ko": "호텔은 경험 많은 집사를 보내 신랑 신부를 전담해서 챙기게 했어요.",
+   "blank": "管家",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的丈夫负责所有补给，笑称自己是“后勤管家”。",
+   "en": "Liu Fang's husband handled all the supplies and jokingly called himself the \"logistics steward.\"",
+   "ko": "류팡의 남편은 보급을 모두 맡고 자기를 \"보급 집사\"라고 부르며 웃었어요.",
+   "blank": "管家",
+   "src": "made"
+  }
+ ],
  "w|管理": [
   {
    "text": "他负责管理团队。",
@@ -55732,6 +56276,22 @@
    "en": "The frost patterns on the window were so delicate that Lili couldn't help taking several photos.",
    "ko": "창문의 성에 무늬가 아주 섬세해서 리리는 사진을 여러 장 찍었어요.",
    "blank": "精细",
+   "src": "made"
+  }
+ ],
+ "w|精英": [
+  {
+   "text": "新娘的同事都是公司里的精英，聊起工作头头是道。",
+   "en": "The bride's colleagues are all the company's elite and talk about work with great expertise.",
+   "ko": "신부의 동료들은 모두 회사의 엘리트라 일 이야기를 하면 막힘이 없어요.",
+   "blank": "精英",
+   "src": "made"
+  },
+  {
+   "text": "跑在最前面的是精英选手，配速快得惊人。",
+   "en": "Running at the very front were the elite athletes, with an astonishing pace.",
+   "ko": "맨 앞에서 달리는 건 엘리트 선수들인데 페이스가 놀랄 만큼 빨라요.",
+   "blank": "精英",
    "src": "made"
   }
  ],
@@ -58311,6 +58871,22 @@
    "src": "made"
   }
  ],
+ "w|职员": [
+  {
+   "text": "张伟在一家银行当职员，同事们都来喝喜酒了。",
+   "en": "Zhang Wei works as a clerk at a bank, and all his colleagues came to the wedding feast.",
+   "ko": "장웨이는 은행 직원이라 동료들이 모두 결혼식에 왔어요.",
+   "blank": "职员",
+   "src": "made"
+  },
+  {
+   "text": "刘芳在一家保险公司当职员，每天下班后去公园跑步。",
+   "en": "Liu Fang is an employee at an insurance company and runs in the park after work every day.",
+   "ko": "류팡은 보험 회사 직원으로 매일 퇴근 후 공원에서 달려요.",
+   "blank": "职员",
+   "src": "made"
+  }
+ ],
  "w|职责": [
   {
    "text": "王刚的职责是每天早上检查食材是否新鲜。",
@@ -59130,6 +59706,22 @@
    "en": "Once this bacterium leaves a water environment, it dies quickly.",
    "ko": "이 세균은 물 환경을 벗어나면 금방 죽어요.",
    "blank": "脱离",
+   "src": "made"
+  }
+ ],
+ "w|脱身": [
+  {
+   "text": "张伟好不容易才从敬酒的人群里脱身，去后台喝了口水。",
+   "en": "Zhang Wei finally managed to escape the crowd of toasters and went backstage for a sip of water.",
+   "ko": "장웨이는 겨우 건배하는 사람들 사이에서 빠져나와 무대 뒤에서 물을 한 모금 마셨어요.",
+   "blank": "脱身",
+   "src": "made"
+  },
+  {
+   "text": "刘芳找了个借口才从加班中脱身，赶去领参赛包。",
+   "en": "Liu Fang made an excuse to get out of overtime and hurried to pick up her race pack.",
+   "ko": "류팡은 핑계를 대고 야근에서 겨우 빠져나와 참가 키트를 받으러 서둘러 갔어요.",
+   "blank": "脱身",
    "src": "made"
   }
  ],
@@ -64859,6 +65451,22 @@
    "src": "made"
   }
  ],
+ "w|赞同": [
+  {
+   "text": "大家一致赞同让张伟的外甥当花童。",
+   "en": "Everyone agreed that Zhang Wei's nephew should be the ring bearer.",
+   "ko": "모두 장웨이의 조카를 화동으로 세우는 데 찬성했어요.",
+   "blank": "赞同",
+   "src": "made"
+  },
+  {
+   "text": "刘芳很赞同教练的说法：马拉松比的是耐心。",
+   "en": "Liu Fang strongly agrees with her coach: a marathon is a contest of patience.",
+   "ko": "류팡은 마라톤은 인내심 싸움이라는 코치의 말에 크게 공감해요.",
+   "blank": "赞同",
+   "src": "made"
+  }
+ ],
  "w|赞成": [
   {
    "text": "爸爸其实很赞成女儿独立，只是周强一开始不理解。",
@@ -68797,6 +69405,22 @@
    "blank": "那样"
   }
  ],
+ "w|那段": [
+  {
+   "text": "张伟说，那段异地恋的日子他一辈子都不会忘。",
+   "en": "Zhang Wei said he would never forget those days of their long-distance relationship.",
+   "ko": "장웨이는 그 장거리 연애 시절을 평생 잊지 못할 거라고 했어요.",
+   "blank": "那段",
+   "src": "made"
+  },
+  {
+   "text": "刘芳想起那段每天清晨训练的日子，觉得一切都值了。",
+   "en": "Remembering those days of training every early morning, Liu Fang felt it was all worth it.",
+   "ko": "류팡은 매일 새벽 훈련하던 그 시절을 떠올리며 모든 게 보람 있다고 느꼈어요.",
+   "blank": "那段",
+   "src": "made"
+  }
+ ],
  "w|那种": [
   {
    "text": "那种不行。",
@@ -70259,6 +70883,22 @@
    "en": "Please line up properly.",
    "ko": "줄을 잘 맞춰 주세요.",
    "blank": "队伍"
+  }
+ ],
+ "w|队友": [
+  {
+   "text": "张伟的伴郎都是以前篮球队的队友。",
+   "en": "Zhang Wei's groomsmen are all his old basketball teammates.",
+   "ko": "장웨이의 들러리들은 모두 예전 농구팀 동료예요.",
+   "blank": "队友",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的队友小陈一直陪在旁边帮她配速。",
+   "en": "Liu Fang's teammate Xiao Chen stayed by her side the whole time to pace her.",
+   "ko": "류팡의 팀 동료 샤오천은 내내 옆에서 페이스를 맞춰 줬어요.",
+   "blank": "队友",
+   "src": "made"
   }
  ],
  "w|队员": [

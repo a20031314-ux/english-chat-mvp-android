@@ -1801,6 +1801,22 @@
    "src": "made"
   }
  ],
+ "w|agenouiller": [
+  {
+   "text": "Hugo s'agenouille pour ranger les albums sur l'étagère la plus basse.",
+   "en": "Hugo kneels to put the picture books on the lowest shelf.",
+   "ko": "위고는 무릎을 꿇고 맨 아래 칸에 그림책을 꽂아요.",
+   "blank": "agenouille",
+   "src": "made"
+  },
+  {
+   "text": "Léa voit Marc s'agenouiller devant Sophie avec une bague.",
+   "en": "Léa sees Marc kneel in front of Sophie with a ring.",
+   "ko": "레아는 마르크가 반지를 들고 소피 앞에 무릎 꿇는 걸 봐요.",
+   "blank": "agenouiller",
+   "src": "made"
+  }
+ ],
  "w|agent": [
   {
    "text": "Un agent vérifie les passeports.",
@@ -3416,6 +3432,22 @@
    "en": "Léa hired a data analyst to understand why users are leaving.",
    "ko": "레아는 사용자들이 떠나는 이유를 알아내려고 데이터 분석가를 뽑았어요.",
    "blank": "analyste",
+   "src": "made"
+  }
+ ],
+ "w|anarchie": [
+  {
+   "text": "Après la sortie scolaire, Hugo découvre une anarchie totale dans le rayon jeunesse.",
+   "en": "After the school visit, Hugo finds total chaos in the children's section.",
+   "ko": "학교 견학이 끝나자 위고는 어린이 서가가 완전히 엉망인 걸 봐요.",
+   "blank": "anarchie",
+   "src": "made"
+  },
+  {
+   "text": "Avec les enfants de tout le monde, le salon de Léa tourne vite à l'anarchie.",
+   "en": "With everyone's kids, Léa's living room quickly turns into chaos.",
+   "ko": "다들 아이를 데려오니 레아의 거실은 금세 난장판이 돼요.",
+   "blank": "anarchie",
    "src": "made"
   }
  ],
@@ -8719,6 +8751,22 @@
    "blank": "bientôt"
   }
  ],
+ "w|bienveillant": [
+  {
+   "text": "Hugo reste bienveillant même avec les lecteurs qui rendent leurs livres en retard.",
+   "en": "Hugo stays kind even with readers who return their books late.",
+   "ko": "위고는 책을 늦게 반납하는 이용자에게도 너그러워요.",
+   "blank": "bienveillant",
+   "src": "made"
+  },
+  {
+   "text": "Le regard bienveillant de Léa met à l'aise ceux qui n'avaient pas osé venir avant.",
+   "en": "Léa's kind look puts at ease those who hadn't dared come before.",
+   "ko": "레아의 다정한 눈빛 덕분에 그동안 오기 망설이던 친구들도 편안해해요.",
+   "blank": "bienveillant",
+   "src": "made"
+  }
+ ],
  "w|bienvenue": [
   {
    "text": "Tu es la bienvenue ici.",
@@ -8821,6 +8869,22 @@
    "en": "Your train ticket is on the table.",
    "ko": "기차표가 탁자 위에 있어.",
    "blank": "billet"
+  }
+ ],
+ "w|biographie": [
+  {
+   "text": "Hugo range une biographie de dictateur au rayon histoire du vingtième siècle.",
+   "en": "Hugo shelves a dictator's biography in the twentieth-century history section.",
+   "ko": "위고는 독재자 전기를 이십 세기 역사 서가에 꽂아요.",
+   "blank": "biographie",
+   "src": "made"
+  },
+  {
+   "text": "Léa plaisante en disant qu'il faudrait écrire la biographie de leur bande de copains.",
+   "en": "Léa jokes that someone should write the biography of their group of friends.",
+   "ko": "레아는 자기네 친구 무리의 전기를 써야 한다고 농담해요.",
+   "blank": "biographie",
+   "src": "made"
   }
  ],
  "w|biologie": [
@@ -11929,6 +11993,22 @@
    "en": "I've always dreamed of living in a big capital city.",
    "ko": "나는 항상 큰 수도에서 사는 게 꿈이었어.",
    "blank": "capitale"
+  }
+ ],
+ "w|capitaliste": [
+  {
+   "text": "Un lecteur demande à Hugo un essai critique sur le modèle capitaliste.",
+   "en": "A reader asks Hugo for a critical essay on the capitalist model.",
+   "ko": "한 이용자가 위고에게 자본주의 모델을 비판한 에세이를 찾아 달라고 해요.",
+   "blank": "capitaliste",
+   "src": "made"
+  },
+  {
+   "text": "Léa taquine Marc, devenu banquier, sur son nouveau mode de vie capitaliste.",
+   "en": "Léa teases Marc, now a banker, about his new capitalist lifestyle.",
+   "ko": "레아는 은행원이 된 마르크의 자본주의적 생활 방식을 놀려요.",
+   "blank": "capitaliste",
+   "src": "made"
   }
  ],
  "w|caprice": [
@@ -17019,6 +17099,22 @@
    "blank": "commun"
   }
  ],
+ "w|communautaire": [
+  {
+   "text": "La bibliothèque où travaille Hugo accueille un jardin communautaire sur son toit.",
+   "en": "The library where Hugo works hosts a community garden on its roof.",
+   "ko": "위고가 일하는 도서관 옥상에는 공동체 텃밭이 있어요.",
+   "blank": "communautaire",
+   "src": "made"
+  },
+  {
+   "text": "Léa et ses amis évoquent l'ancien centre communautaire où ils passaient leurs mercredis.",
+   "en": "Léa and her friends recall the old community center where they spent their Wednesdays.",
+   "ko": "레아와 친구들은 수요일마다 지내던 옛 마을 회관을 떠올려요.",
+   "blank": "communautaire",
+   "src": "made"
+  }
+ ],
  "w|communauté": [
   {
    "text": "La communauté locale est très solidaire.",
@@ -17605,6 +17701,22 @@
    "en": "You should try to understand his point of view.",
    "ko": "그의 관점을 이해하려고 노력해야 해.",
    "blank": "comprendre"
+  }
+ ],
+ "w|compression": [
+  {
+   "text": "Hugo regrette la compression du budget des achats de livres cette année.",
+   "en": "Hugo regrets the cut in the book-buying budget this year.",
+   "ko": "위고는 올해 도서 구입 예산이 줄어든 게 아쉬워요.",
+   "blank": "compression",
+   "src": "made"
+  },
+  {
+   "text": "Léa garde les vieilles photos dans des sachets de compression pour gagner de la place.",
+   "en": "Léa keeps the old photos in compression bags to save space.",
+   "ko": "레아는 자리를 아끼려고 옛 사진을 압축 봉투에 보관해요.",
+   "blank": "compression",
+   "src": "made"
   }
  ],
  "w|comprimé": [
@@ -19390,6 +19502,22 @@
    "en": "The drop in toy sales worries Camille's manager.",
    "ko": "장난감 매출 감소 때문에 카미유의 팀장이 걱정해요.",
    "blank": "contraction",
+   "src": "made"
+  }
+ ],
+ "w|contradiction": [
+  {
+   "text": "Hugo relève une contradiction entre deux livres d'histoire sur la même bataille.",
+   "en": "Hugo spots a contradiction between two history books about the same battle.",
+   "ko": "위고는 같은 전투를 다룬 역사책 두 권 사이에서 모순을 찾아내요.",
+   "blank": "contradiction",
+   "src": "made"
+  },
+  {
+   "text": "Léa rit de la contradiction entre les souvenirs de deux amis sur la même soirée.",
+   "en": "Léa laughs at the contradiction between two friends' memories of the same evening.",
+   "ko": "레아는 같은 날 밤을 두고 두 친구의 기억이 엇갈리는 걸 보고 웃어요.",
+   "blank": "contradiction",
    "src": "made"
   }
  ],
@@ -25165,6 +25293,22 @@
    "blank": "désastre"
   }
  ],
+ "w|désastreux": [
+  {
+   "text": "Le dégât des eaux au sous-sol a été désastreux pour les archives de Hugo.",
+   "en": "The water damage in the basement was disastrous for Hugo's archives.",
+   "ko": "지하실 누수는 위고가 맡은 기록 보관소에 큰 피해를 줬어요.",
+   "blank": "désastreux",
+   "src": "made"
+  },
+  {
+   "text": "La première tentative de Léa pour faire un gâteau a été désastreuse.",
+   "en": "Léa's first attempt at baking a cake was a disaster.",
+   "ko": "레아가 처음 만든 케이크는 엉망이었어요.",
+   "blank": "désastreuse",
+   "src": "made"
+  }
+ ],
  "w|descendre": [
   {
    "text": "Il faut descendre à la prochaine station.",
@@ -26364,6 +26508,22 @@
    "en": "A tourist asks Sarah for something for diarrhoea.",
    "ko": "한 관광객이 사라에게 설사약을 찾아요.",
    "blank": "diarrhée",
+   "src": "made"
+  }
+ ],
+ "w|dictateur": [
+  {
+   "text": "Hugo range une biographie de dictateur au rayon histoire du vingtième siècle.",
+   "en": "Hugo shelves a dictator's biography in the twentieth-century history section.",
+   "ko": "위고는 독재자 전기를 이십 세기 역사 서가에 꽂아요.",
+   "blank": "dictateur",
+   "src": "made"
+  },
+  {
+   "text": "Léa rappelle à tout le monde que Julien jouait au petit dictateur en classe de terminale.",
+   "en": "Léa reminds everyone that Julien acted like a little dictator in senior year.",
+   "ko": "레아는 쥘리앵이 고등학교 마지막 해에 꼬마 독재자처럼 굴었다고 모두에게 상기시켜요.",
+   "blank": "dictateur",
    "src": "made"
   }
  ],
@@ -27934,6 +28094,22 @@
    "en": "Léa tries to master her tiredness during the night shift.",
    "ko": "레아는 야간 근무 중에 피로를 이겨 내려고 애써요.",
    "blank": "dominer",
+   "src": "made"
+  }
+ ],
+ "w|domino": [
+  {
+   "text": "Dans la salle de jeux de la bibliothèque, Hugo apprend aux enfants à jouer aux dominos.",
+   "en": "In the library's games room, Hugo teaches the children to play dominoes.",
+   "ko": "도서관 놀이방에서 위고는 아이들에게 도미노 놀이를 가르쳐요.",
+   "blank": "dominos",
+   "src": "made"
+  },
+  {
+   "text": "Pour Léa, une seule annulation a provoqué un effet domino sur toute l'organisation des retrouvailles.",
+   "en": "For Léa, a single cancellation set off a domino effect across the whole reunion plan.",
+   "ko": "레아가 보기에 한 명의 취소가 모임 준비 전체에 도미노 효과를 일으켰어요.",
+   "blank": "domino",
    "src": "made"
   }
  ],
@@ -30071,6 +30247,22 @@
    "en": "Every part of the project is important.",
    "ko": "프로젝트의 모든 요소가 중요해.",
    "blank": "élément"
+  }
+ ],
+ "w|élémentaire": [
+  {
+   "text": "Hugo propose des cours d'informatique élémentaire aux personnes âgées.",
+   "en": "Hugo offers basic computer classes to older people.",
+   "ko": "위고는 어르신들께 기초 컴퓨터 수업을 열어요.",
+   "blank": "élémentaire",
+   "src": "made"
+  },
+  {
+   "text": "Léa rappelle qu'au lycée, Marc ratait même les questions de maths élémentaires.",
+   "en": "Léa recalls that in high school, Marc even got basic maths questions wrong.",
+   "ko": "레아는 고등학교 때 마르크가 기초 수학 문제도 틀렸다고 말해요.",
+   "blank": "élémentaires",
+   "src": "made"
   }
  ],
  "w|éléphant": [
@@ -33033,6 +33225,22 @@
    "src": "made"
   }
  ],
+ "w|escroquer": [
+  {
+   "text": "Hugo conseille aux retraités un guide pour ne pas se faire escroquer sur internet.",
+   "en": "Hugo recommends a guide to retirees so they don't get scammed online.",
+   "ko": "위고는 어르신들에게 인터넷 사기를 당하지 않는 법을 다룬 안내서를 권해요.",
+   "blank": "escroquer",
+   "src": "made"
+  },
+  {
+   "text": "Léa raconte comment un faux agent immobilier a failli escroquer son frère.",
+   "en": "Léa tells how a fake real estate agent nearly swindled her brother.",
+   "ko": "레아는 가짜 부동산 중개인이 남동생에게 사기를 칠 뻔한 이야기를 해요.",
+   "blank": "escroquer",
+   "src": "made"
+  }
+ ],
  "w|escroquerie": [
   {
    "text": "Le procès porte sur une vaste escroquerie aux faux placements.",
@@ -34023,6 +34231,22 @@
    "en": "The event will start at ten o'clock.",
    "ko": "행사는 열 시에 시작될 거야.",
    "blank": "événement"
+  }
+ ],
+ "w|éventualité": [
+  {
+   "text": "Hugo prévoit des bougies dans l'éventualité d'une coupure de courant.",
+   "en": "Hugo sets aside candles in case of a power cut.",
+   "ko": "위고는 정전에 대비해 양초를 준비해 둬요.",
+   "blank": "éventualité",
+   "src": "made"
+  },
+  {
+   "text": "Léa a réservé une salle dans l'éventualité où il pleuvrait.",
+   "en": "Léa booked a room in case it rained.",
+   "ko": "레아는 비가 올 경우에 대비해 실내 공간을 예약해 뒀어요.",
+   "blank": "éventualité",
+   "src": "made"
   }
  ],
  "w|évidemment": [
@@ -36853,6 +37077,22 @@
    "en": "The fever went down after the medication.",
    "ko": "약 먹고 나서 열이 내렸어.",
    "blank": "fièvre"
+  }
+ ],
+ "w|figé": [
+  {
+   "text": "Hugo reste figé quand l'ancienne étagère commence à pencher.",
+   "en": "Hugo freezes when the old bookcase starts to lean.",
+   "ko": "낡은 책장이 기울기 시작하자 위고는 얼어붙어요.",
+   "blank": "figé",
+   "src": "made"
+  },
+  {
+   "text": "Sur la vieille photo de classe, le sourire de Léa paraît un peu figé.",
+   "en": "In the old class photo, Léa's smile looks a little stiff.",
+   "ko": "옛 단체 사진 속 레아의 미소는 조금 굳어 보여요.",
+   "blank": "figé",
+   "src": "made"
   }
  ],
  "w|figure": [
@@ -41615,6 +41855,22 @@
    "blank": "guitare"
   }
  ],
+ "w|guitariste": [
+  {
+   "text": "Hugo invite un guitariste du quartier pour un concert entre les rayons.",
+   "en": "Hugo invites a local guitarist for a concert among the shelves.",
+   "ko": "위고는 동네 기타리스트를 불러 서가 사이에서 공연을 열어요.",
+   "blank": "guitariste",
+   "src": "made"
+  },
+  {
+   "text": "Le guitariste du groupe de lycée de Léa sort son instrument après le dessert.",
+   "en": "The guitarist from Léa's high school band takes out his instrument after dessert.",
+   "ko": "레아의 고교 밴드 기타리스트가 디저트 뒤에 기타를 꺼내요.",
+   "blank": "guitariste",
+   "src": "made"
+  }
+ ],
  "w|gym": [
   {
    "text": "Je vais à la gym tous les lundis.",
@@ -42241,6 +42497,22 @@
    "en": "I like to walk barefoot on the grass.",
    "ko": "나는 맨발로 herbe 위를 걷는 것을 좋아해.",
    "blank": "herbe"
+  }
+ ],
+ "w|hérétique": [
+  {
+   "text": "Hugo montre un vieux traité jugé hérétique à son époque.",
+   "en": "Hugo shows an old treatise that was considered heretical in its day.",
+   "ko": "위고는 당대에 이단으로 여겨진 옛 논문을 보여 줘요.",
+   "blank": "hérétique",
+   "src": "made"
+  },
+  {
+   "text": "À l'époque, les idées de Léa sur la musique paraissaient presque hérétiques à ses amis.",
+   "en": "Back then, Léa's ideas about music seemed almost heretical to her friends.",
+   "ko": "그때 레아의 음악 취향은 친구들에게 거의 이단처럼 보였어요.",
+   "blank": "hérétiques",
+   "src": "made"
   }
  ],
  "w|héritage": [
@@ -43063,6 +43335,22 @@
    "blank": "humain"
   }
  ],
+ "w|humanitaire": [
+  {
+   "text": "Hugo organise une collecte de livres pour une association humanitaire.",
+   "en": "Hugo organizes a book drive for a humanitarian organization.",
+   "ko": "위고는 인도주의 단체를 위한 책 모으기를 열어요.",
+   "blank": "humanitaire",
+   "src": "made"
+  },
+  {
+   "text": "Léa écoute son amie raconter sa mission humanitaire à l'étranger.",
+   "en": "Léa listens to her friend talk about her humanitarian mission abroad.",
+   "ko": "레아는 친구가 해외 인도주의 활동 이야기를 하는 걸 들어요.",
+   "blank": "humanitaire",
+   "src": "made"
+  }
+ ],
  "w|humanité": [
   {
    "text": "L'humanité doit protéger la planète.",
@@ -43324,6 +43612,22 @@
    "en": "The blowtorch flame seems to hypnotize Camille as she caramelizes the custards.",
    "ko": "카미유는 크림을 캐러멜화하면서 토치 불꽃에 홀린 듯해요.",
    "blank": "hypnotiser",
+   "src": "made"
+  }
+ ],
+ "w|hypocrisie": [
+  {
+   "text": "Hugo dénonce l'hypocrisie de ceux qui parlent fort après avoir réclamé le silence.",
+   "en": "Hugo calls out the hypocrisy of those who talk loudly after demanding silence.",
+   "ko": "위고는 조용히 하라고 해 놓고 크게 떠드는 사람들의 위선을 꼬집어요.",
+   "blank": "hypocrisie",
+   "src": "made"
+  },
+  {
+   "text": "Léa déteste l'hypocrisie des compliments forcés entre vieux amis.",
+   "en": "Léa hates the hypocrisy of forced compliments between old friends.",
+   "ko": "레아는 오랜 친구 사이의 억지 칭찬 같은 위선을 싫어해요.",
+   "blank": "hypocrisie",
    "src": "made"
   }
  ],
@@ -43639,6 +43943,22 @@
    "en": "He lives under the illusion that everything is fine.",
    "ko": "그는 모든 게 괜찮다고 착각하며 살아.",
    "blank": "illusion"
+  }
+ ],
+ "w|illustre": [
+  {
+   "text": "La bibliothèque de Hugo porte le nom d'une illustre romancière de la région.",
+   "en": "Hugo's library is named after a famous novelist from the region.",
+   "ko": "위고의 도서관은 이 지역 출신의 저명한 여성 소설가의 이름을 따왔어요.",
+   "blank": "illustre",
+   "src": "made"
+  },
+  {
+   "text": "Léa affirme en riant qu'elle descend d'une illustre famille de pâtissiers.",
+   "en": "Léa claims, laughing, that she comes from an illustrious family of pastry chefs.",
+   "ko": "레아는 자기가 이름난 제과사 집안 출신이라고 웃으며 말해요.",
+   "blank": "illustre",
+   "src": "made"
   }
  ],
  "w|ils": [
@@ -44976,6 +45296,22 @@
    "en": "Inès is determined to stay an independent grocer, without a franchise.",
    "ko": "이네스는 프랜차이즈 없이 독립 식료품점 주인으로 남고 싶어 해요.",
    "blank": "indépendante",
+   "src": "made"
+  }
+ ],
+ "w|indésirable": [
+  {
+   "text": "Hugo retire les publicités indésirables collées sur la porte.",
+   "en": "Hugo removes the unwanted ads stuck on the door.",
+   "ko": "위고는 문에 붙은 원치 않는 광고를 떼어 내요.",
+   "blank": "indésirables",
+   "src": "made"
+  },
+  {
+   "text": "Léa refuse de laisser un invité indésirable gâcher la soirée.",
+   "en": "Léa refuses to let an unwelcome guest ruin the evening.",
+   "ko": "레아는 반갑지 않은 손님이 저녁을 망치게 두지 않아요.",
+   "blank": "indésirable",
    "src": "made"
   }
  ],
@@ -46870,6 +47206,22 @@
    "en": "Émilie doesn't know how to interpret the mushroom seller's smile.",
    "ko": "에밀리는 버섯 장수의 미소를 어떻게 받아들여야 할지 몰라요.",
    "blank": "interpréter",
+   "src": "made"
+  }
+ ],
+ "w|interrogation": [
+  {
+   "text": "Hugo répond à chaque interrogation des lecteurs avec patience.",
+   "en": "Hugo answers every question from readers patiently.",
+   "ko": "위고는 이용자들의 물음 하나하나에 차분히 답해요.",
+   "blank": "interrogation",
+   "src": "made"
+  },
+  {
+   "text": "Une interrogation revient sans cesse chez Léa : pourquoi se sont-ils perdus de vue ?",
+   "en": "One question keeps coming back to Léa: why did they lose touch?",
+   "ko": "레아는 왜 서로 연락이 끊겼는지 자꾸 궁금해져요.",
+   "blank": "interrogation",
    "src": "made"
   }
  ],
@@ -52739,6 +53091,22 @@
    "src": "made"
   }
  ],
+ "w|mascarade": [
+  {
+   "text": "Hugo trouve que cette élection racontée dans le roman n'est qu'une mascarade.",
+   "en": "Hugo thinks the election told in the novel is nothing but a farce.",
+   "ko": "위고는 소설 속 그 선거가 그저 엉터리 연극일 뿐이라고 생각해요.",
+   "blank": "mascarade",
+   "src": "made"
+  },
+  {
+   "text": "Léa se souvient de la mascarade de fin d'année où tout le monde était déguisé.",
+   "en": "Léa remembers the end-of-year masquerade where everyone was in costume.",
+   "ko": "레아는 모두가 분장했던 학년말 가장무도회를 떠올려요.",
+   "blank": "mascarade",
+   "src": "made"
+  }
+ ],
  "w|mascotte": [
   {
    "text": "Le procès oppose deux clubs de foot qui se disputent la même mascotte.",
@@ -54947,6 +55315,22 @@
    "blank": "minute"
   }
  ],
+ "w|minutieux": [
+  {
+   "text": "Hugo fait un travail minutieux pour réparer les reliures abîmées.",
+   "en": "Hugo does meticulous work repairing damaged bindings.",
+   "ko": "위고는 상한 제본을 꼼꼼하게 고쳐요.",
+   "blank": "minutieux",
+   "src": "made"
+  },
+  {
+   "text": "Léa est minutieuse : chaque invité a une carte avec son prénom.",
+   "en": "Léa is meticulous: every guest has a card with their name.",
+   "ko": "레아는 꼼꼼해서 손님마다 이름 카드를 준비했어요.",
+   "blank": "minutieuse",
+   "src": "made"
+  }
+ ],
  "w|miracle": [
   {
    "text": "C'est un vrai miracle qu'il soit encore en vie.",
@@ -55162,6 +55546,22 @@
    "en": "This time, Camille chose a modest but bright flat.",
    "ko": "이번에 카미유는 소박하지만 밝은 아파트를 골랐어요.",
    "blank": "modeste",
+   "src": "made"
+  }
+ ],
+ "w|modestie": [
+  {
+   "text": "Hugo accepte les compliments sur l'exposition avec modestie.",
+   "en": "Hugo accepts compliments on the exhibition with modesty.",
+   "ko": "위고는 전시에 대한 칭찬을 겸손하게 받아들여요.",
+   "blank": "modestie",
+   "src": "made"
+  },
+  {
+   "text": "Malgré son succès, l'ami de Léa parle de son livre avec beaucoup de modestie.",
+   "en": "Despite his success, Léa's friend talks about his book very modestly.",
+   "ko": "성공했는데도 레아의 친구는 자기 책 이야기를 무척 겸손하게 해요.",
+   "blank": "modestie",
    "src": "made"
   }
  ],
@@ -58777,6 +59177,22 @@
    "src": "made"
   }
  ],
+ "w|omettre": [
+  {
+   "text": "Hugo s'aperçoit qu'il a omis un auteur dans le catalogue.",
+   "en": "Hugo realizes he left an author out of the catalog.",
+   "ko": "위고는 목록에서 작가 한 명을 빠뜨린 걸 알아차려요.",
+   "blank": "omis",
+   "src": "made"
+  },
+  {
+   "text": "Léa a oublié d'inviter Sophie et refuse d'omettre qui que ce soit la prochaine fois.",
+   "en": "Léa forgot to invite Sophie and refuses to leave anyone out next time.",
+   "ko": "레아는 소피를 깜빡 안 불러서 다음엔 아무도 빼먹지 않겠다고 해요.",
+   "blank": "omettre",
+   "src": "made"
+  }
+ ],
  "w|on": [
   {
    "text": "On y va?",
@@ -60609,6 +61025,22 @@
    "blank": "parce que"
   }
  ],
+ "w|parchemin": [
+  {
+   "text": "Hugo manipule avec des gants un parchemin du Moyen Âge.",
+   "en": "Hugo handles a medieval parchment with gloves.",
+   "ko": "위고는 장갑을 끼고 중세 양피지를 다뤄요.",
+   "blank": "parchemin",
+   "src": "made"
+  },
+  {
+   "text": "Pour rire, Léa a imprimé les invitations sur du faux parchemin.",
+   "en": "For a laugh, Léa printed the invitations on fake parchment.",
+   "ko": "레아는 재미로 초대장을 가짜 양피지에 인쇄했어요.",
+   "blank": "parchemin",
+   "src": "made"
+  }
+ ],
  "w|parcourir": [
   {
    "text": "Lucas a parcouru toutes les salles en moins d'une heure.",
@@ -62095,6 +62527,22 @@
    "en": "He's a pain when he's hungry.",
    "ko": "그는 배고프면 짜증을 내.",
    "blank": "pénible"
+  }
+ ],
+ "w|pénitence": [
+  {
+   "text": "Hugo plaisante : ranger les dictionnaires, c'est sa pénitence du lundi.",
+   "en": "Hugo jokes that shelving the dictionaries is his Monday penance.",
+   "ko": "위고는 사전 정리가 자기의 월요일 고행이라고 농담해요.",
+   "blank": "pénitence",
+   "src": "made"
+  },
+  {
+   "text": "Arrivé en retard, Nicolas doit faire pénitence en lavant la vaisselle chez Léa.",
+   "en": "Having arrived late, Nicolas has to do penance by washing the dishes at Léa's.",
+   "ko": "늦게 온 니콜라는 벌로 레아 집에서 설거지를 해야 해요.",
+   "blank": "pénitence",
+   "src": "made"
   }
  ],
  "w|pensée": [
@@ -66767,6 +67215,22 @@
    "blank": "pression"
   }
  ],
+ "w|prestige": [
+  {
+   "text": "La bibliothèque de Hugo tire son prestige de sa collection de cartes anciennes.",
+   "en": "Hugo's library owes its prestige to its collection of old maps.",
+   "ko": "위고의 도서관은 옛 지도 소장품 덕분에 명성이 높아요.",
+   "blank": "prestige",
+   "src": "made"
+  },
+  {
+   "text": "Léa n'est pas impressionnée par le prestige du nouveau poste de Marc.",
+   "en": "Léa isn't impressed by the prestige of Marc's new job.",
+   "ko": "레아는 마르크의 새 직책이 주는 위신에 별로 감동하지 않아요.",
+   "blank": "prestige",
+   "src": "made"
+  }
+ ],
  "w|prestigieux": [
   {
    "text": "Le dentiste de Lucas a étudié dans une université prestigieuse à l'étranger.",
@@ -67459,6 +67923,22 @@
    "blank": "proche"
   }
  ],
+ "w|proclamer": [
+  {
+   "text": "Une affiche dans le hall semble proclamer que le silence est obligatoire, mais Hugo laisse les gens chuchoter.",
+   "en": "A poster in the lobby seems to proclaim that silence is mandatory, but Hugo lets people whisper.",
+   "ko": "로비 포스터는 조용히 하라고 외치는 듯하지만 위고는 사람들이 소곤대게 둬요.",
+   "blank": "proclamer",
+   "src": "made"
+  },
+  {
+   "text": "En levant son verre, Léa tient à proclamer que leur amitié n'a pas pris une ride.",
+   "en": "Raising her glass, Léa insists on proclaiming that their friendship hasn't aged a day.",
+   "ko": "레아는 잔을 들며 우정은 하나도 변하지 않았다고 선언해요.",
+   "blank": "proclamer",
+   "src": "made"
+  }
+ ],
  "w|procurer": [
   {
    "text": "La secrétaire peut procurer à Thomas un badge temporaire.",
@@ -67730,6 +68210,22 @@
    "en": "Thanks to the morning sessions, Claire quickly improved at backstroke.",
    "ko": "아침 훈련 덕분에 클레르는 배영 실력이 빨리 늘었어요.",
    "blank": "progressé",
+   "src": "made"
+  }
+ ],
+ "w|progression": [
+  {
+   "text": "Hugo note la progression de chaque enfant dans le club de lecture.",
+   "en": "Hugo records each child's progress in the reading club.",
+   "ko": "위고는 독서 모임 아이들의 발전을 하나하나 기록해요.",
+   "blank": "progression",
+   "src": "made"
+  },
+  {
+   "text": "Léa admire la progression de son amie, qui dirige maintenant sa propre entreprise.",
+   "en": "Léa admires the progress of her friend, who now runs her own company.",
+   "ko": "레아는 이제 자기 회사를 운영하는 친구의 성장에 감탄해요.",
+   "blank": "progression",
    "src": "made"
   }
  ],
@@ -70211,6 +70707,22 @@
    "blank": "rapidement"
   }
  ],
+ "w|rapidité": [
+  {
+   "text": "Les lecteurs admirent la rapidité avec laquelle Hugo retrouve n'importe quel livre.",
+   "en": "Readers admire how quickly Hugo finds any book.",
+   "ko": "이용자들은 위고가 어떤 책이든 금방 찾아내는 걸 보고 감탄해요.",
+   "blank": "rapidité",
+   "src": "made"
+  },
+  {
+   "text": "Léa est étonnée par la rapidité avec laquelle les années ont passé.",
+   "en": "Léa is amazed at how quickly the years have gone by.",
+   "ko": "레아는 세월이 너무 빨리 흘렀다는 데 놀라요.",
+   "blank": "rapidité",
+   "src": "made"
+  }
+ ],
  "w|rappel": [
   {
    "text": "Nicolas envoie un rappel aux lecteurs qui n'ont pas rendu leurs livres.",
@@ -70239,6 +70751,22 @@
    "en": "Thank you for reminding me about this appointment.",
    "ko": "이 약속을 상기시켜줘서 고마워.",
    "blank": "rappeler"
+  }
+ ],
+ "w|rappeur": [
+  {
+   "text": "Un jeune rappeur vient chez Hugo pour emprunter des recueils de poésie.",
+   "en": "A young rapper comes to Hugo's library to borrow poetry collections.",
+   "ko": "젊은 래퍼가 시집을 빌리러 위고의 도서관에 와요.",
+   "blank": "rappeur",
+   "src": "made"
+  },
+  {
+   "text": "Léa apprend qu'un ancien camarade de classe est devenu rappeur.",
+   "en": "Léa learns that a former classmate has become a rapper.",
+   "ko": "레아는 옛 반 친구가 래퍼가 됐다는 소식을 들어요.",
+   "blank": "rappeur",
+   "src": "made"
   }
  ],
  "w|rapport": [
@@ -71599,6 +72127,22 @@
    "src": "made"
   }
  ],
+ "w|redresser": [
+  {
+   "text": "Hugo aide un lecteur âgé à se redresser après une chute dans l'escalier.",
+   "en": "Hugo helps an elderly reader sit up after a fall on the stairs.",
+   "ko": "위고는 계단에서 넘어진 나이 든 이용자가 몸을 일으키도록 도와요.",
+   "blank": "redresser",
+   "src": "made"
+  },
+  {
+   "text": "Léa aide Paul à redresser la table pliante qui penche dangereusement.",
+   "en": "Léa helps Paul straighten the folding table that is leaning dangerously.",
+   "ko": "레아는 위험하게 기운 접이식 탁자를 폴과 함께 바로 세워요.",
+   "blank": "redresser",
+   "src": "made"
+  }
+ ],
  "w|réduction": [
   {
    "text": "Les employés de l'usine ont droit à une réduction sur les produits de la marque.",
@@ -72171,6 +72715,22 @@
    "en": "You should never regret your choices.",
    "ko": "자신의 선택을 절대 후회하지 마.",
    "blank": "regretter"
+  }
+ ],
+ "w|regrouper": [
+  {
+   "text": "Hugo décide de regrouper tous les livres de cuisine sur une seule étagère.",
+   "en": "Hugo decides to gather all the cookbooks on a single shelf.",
+   "ko": "위고는 요리책을 모두 한 선반에 모으기로 해요.",
+   "blank": "regrouper",
+   "src": "made"
+  },
+  {
+   "text": "Léa a mis des mois à regrouper tous les anciens de la classe.",
+   "en": "It took Léa months to bring all the former classmates back together.",
+   "ko": "레아는 반 친구들을 다시 모으는 데 몇 달이 걸렸어요.",
+   "blank": "regrouper",
+   "src": "made"
   }
  ],
  "w|régulier": [
@@ -73941,6 +74501,22 @@
    "src": "made"
   }
  ],
+ "w|résonner": [
+  {
+   "text": "Les pas des visiteurs font résonner le parquet de la grande salle où travaille Hugo.",
+   "en": "Visitors' footsteps make the floor of the great hall where Hugo works echo.",
+   "ko": "위고가 일하는 큰 열람실 마룻바닥에 방문객 발소리가 울려요.",
+   "blank": "résonner",
+   "src": "made"
+  },
+  {
+   "text": "Les éclats de rire de Léa font résonner toute la maison.",
+   "en": "Léa's bursts of laughter make the whole house ring.",
+   "ko": "레아의 웃음소리가 온 집 안에 울려요.",
+   "blank": "résonner",
+   "src": "made"
+  }
+ ],
  "w|résoudre": [
   {
    "text": "Il doit résoudre ce problème rapidement.",
@@ -74461,6 +75037,22 @@
    "en": "Can you take the pot off the stove?",
    "ko": "냄비 좀 불에서 내려줄래?",
    "blank": "retirer"
+  }
+ ],
+ "w|retombée": [
+  {
+   "text": "La bibliothèque étudie les retombées de la nouvelle exposition sur la fréquentation.",
+   "en": "The library is studying the effects of the new exhibition on attendance.",
+   "ko": "도서관은 새 전시가 방문객 수에 미친 영향을 살펴봐요.",
+   "blank": "retombées",
+   "src": "made"
+  },
+  {
+   "text": "Léa parle avec ses amis des retombées de la fermeture de leur ancien lycée sur le quartier.",
+   "en": "Léa talks with her friends about the effects of their old high school's closure on the neighborhood.",
+   "ko": "레아는 친구들과 옛 고등학교가 문을 닫은 게 동네에 미친 영향을 이야기해요.",
+   "blank": "retombées",
+   "src": "made"
   }
  ],
  "w|retomber": [
@@ -79357,6 +79949,22 @@
    "blank": "singe"
   }
  ],
+ "w|singulier": [
+  {
+   "text": "Hugo trouve un livre au titre singulier oublié derrière les encyclopédies.",
+   "en": "Hugo finds a book with an odd title forgotten behind the encyclopedias.",
+   "ko": "위고는 백과사전 뒤에 잊힌 묘한 제목의 책을 찾아요.",
+   "blank": "singulier",
+   "src": "made"
+  },
+  {
+   "text": "Léa a toujours eu un humour singulier que ses amis adorent.",
+   "en": "Léa has always had a peculiar sense of humor that her friends love.",
+   "ko": "레아는 친구들이 좋아하는 독특한 유머 감각을 늘 지니고 있었어요.",
+   "blank": "singulier",
+   "src": "made"
+  }
+ ],
  "w|sinistre": [
   {
    "text": "La nuit, la forêt prend un air un peu sinistre, et Antoine allume sa lampe.",
@@ -82647,6 +83255,22 @@
    "en": "I’m not sure about the answer.",
    "ko": "나는 답이 확실하지 않아.",
    "blank": "sûr"
+  }
+ ],
+ "w|surcharge": [
+  {
+   "text": "Le samedi, Hugo gère une vraie surcharge de demandes au comptoir.",
+   "en": "On Saturdays, Hugo deals with a real overload of requests at the desk.",
+   "ko": "토요일이면 위고는 안내 데스크에서 몰려드는 요청을 감당해요.",
+   "blank": "surcharge",
+   "src": "made"
+  },
+  {
+   "text": "Avec tous les plats apportés, la table de Léa ploie sous la surcharge.",
+   "en": "With all the dishes people brought, Léa's table sags under the extra weight.",
+   "ko": "다들 가져온 음식 때문에 레아의 식탁이 무게에 휘어져요.",
+   "blank": "surcharge",
+   "src": "made"
   }
  ],
  "w|sûrement": [
@@ -88172,6 +88796,22 @@
    "en": "Claire writes that the weather is very changeable this autumn, between sun and showers.",
    "ko": "클레르는 이번 가을 날씨가 해와 소나기 사이를 오가며 변덕스럽다고 써요.",
    "blank": "variable",
+   "src": "made"
+  }
+ ],
+ "w|variation": [
+  {
+   "text": "Hugo observe une légère variation du nombre de prêts selon les saisons.",
+   "en": "Hugo observes a slight variation in the number of loans depending on the season.",
+   "ko": "위고는 계절에 따라 대출 건수가 조금씩 달라지는 걸 봐요.",
+   "blank": "variation",
+   "src": "made"
+  },
+  {
+   "text": "Léa sert une variation de la tarte que sa mère faisait autrefois.",
+   "en": "Léa serves a variation on the tart her mother used to make.",
+   "ko": "레아는 어머니가 예전에 만들던 타르트를 조금 바꿔 내놓아요.",
+   "blank": "variation",
    "src": "made"
   }
  ],
