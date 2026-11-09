@@ -181,7 +181,9 @@ const GENERIC = new Set(["default", "load", "save", "clear", "render", "format",
  */
 export function scopeOf(files, keys = [], { names = true } = {}) {
   const g = loadGraph();
-  const start = files.map(abs).filter((f) => g.source.has(f));
+  // 문구 묶음(copy.ts·locales)은 모든 화면이 가져다 써서 import로 따라가면 전부 걸린다 — 바뀐 키로만 범위를 본다(아래 2)
+  const isCopyFile = (f) => /^src\/lib\/(copy\.ts|locales\/)/.test(rel(f)) || /[\\/]copy(\.locales)?\.ts$/.test(f);
+  const start = files.map(abs).filter((f) => g.source.has(f) && !isCopyFile(f));
   const reached = new Map(); // file → { area, via }
   const note = (file, area, via) => {
     if (!area) return;

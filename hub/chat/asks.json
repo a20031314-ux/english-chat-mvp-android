@@ -51,7 +51,11 @@
       ],
       "base": "34e515a",
       "head": "1b63757",
-      "status": "open"
+      "status": "해당없음",
+      "by": "1",
+      "note": "탭 1 화면은 startClimb를 부르지 않음(인자는 선택이라 기존 호출 그대로) — 통화 감독(studyPicture) 쪽은 탭 3 요청 a261109-2에서",
+      "until": "",
+      "answeredAt": "2026-11-09 15:06"
     },
     {
       "id": "a261109-2",
@@ -164,7 +168,11 @@
       ],
       "base": "8bce8d8",
       "head": "55c16ce",
-      "status": "open"
+      "status": "해당없음",
+      "by": "1",
+      "note": "FindInMy는 수업·사전만 엶 — Quizbank 순서(expressionDeck·preparedQuiz)를 안 씀",
+      "until": "",
+      "answeredAt": "2026-11-09 15:06"
     },
     {
       "id": "a261109-5",
