@@ -22,10 +22,9 @@
 │          처음(서버에 단계 없음) → 첫 측정 studyMap/FirstCheck(글자 → 단어 → 뜻 → 표현·문법 → 시작 단계, curriculum/firstCheck.ts)
 │          칸 셋 = 위 칸 이름 줄이 탭(notes/NotebookSection MyLayers — 누른 칸 하나만 제자리에, 칸을 누르면 전체 화면 FullScreenLayer, ✕로 제자리)
 │          [Logbank 하늘] studyMap/Logbank
-│              오늘 카드 최대 셋(studyMap/TodayCards — 다시 학습 n · 막힌 것 · 써 보기 · 새로 학습 n, 고르기 curriculum/todayCards.ts, 0단계면 오늘의 글자 묶음)
-│                → 누르면 Quizbank가 그 열쇠부터(curriculum/quizFocus.ts) · 써 보기 → 📞 통화(practice) · 글자 → Languagebank 글자 칸(curriculum/lettersOpen.ts)
+│              오늘(studyMap/TodayCards — 오늘 학습 n · 숙제 줄 · ▶ Quizbank 하나(curriculum/quizFocus.ts 신호, ✓ = todayCards.ts answeredToday ≥ 10) · 📞 수업(startCall lesson))
+│                0단계면 오늘의 글자 묶음 → Languagebank 글자 칸(curriculum/lettersOpen.ts)
 │              📏 실력 확인(Logbank SkillChecks — 14일마다 ▶ 밝음 → FirstCheck recheck, 표 = 확인마다 🔤·💬·📐 + 🗣 말하기, curriculum/skillCheck.ts · skillCheck.v1 이 폰)
-│              튜터 숙제 줄 · 📞 수업 줄(startCall lesson)
 │              [주 | 월] ‹기간› → 배운 것 표(Learned — 🔤 단어 · 📐 문법 · 💬 표현 · 🧩 문장구조 × 학습 · 활용, curriculum/growthView.ts)
 │                · ↺ 다시 맞힘 · ✎✓ 고쳐 씀(curriculum/growthLines.ts) · 📞 통화(CallResultCard) · 학습 곡선(curriculum/learnedView.ts) · 대화 비교(TalkCompare)
 │              날마다 한 줄 → 그날 = 학습 타임라인(DayTimeline → 학습 시간 → 카드 CardTimeline, curriculum/studyTimeline.ts) · ⏱ 학습 시간 막대
@@ -190,7 +189,7 @@
 | `openTab` | 여러 영역 7곳 | 앱 틀 |
 | `chatDraft` | — | AI 채팅 |
 | `openVideo` | 대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, 학습 기록 공통 | 영상 학습 탭 |
-| `practice` | AI 채팅, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
+| `practice` | AI 채팅, 학습 기록 공통 | 앱 틀, AI 채팅, AI 통화 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭, My 탭 | AI 통화 |
 | `sayOwnLine` | — | AI 통화 |

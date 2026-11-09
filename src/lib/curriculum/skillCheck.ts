@@ -8,7 +8,7 @@
  * 기록은 이 폰에만(skillCheck.v1.<언어>). 첫 측정(firstCheck.v1)이 있으면 그것이 첫 줄.
  */
 import type { LogEvent } from "./logLedger.ts";
-import type { FirstCheckResult } from "./firstCheck.ts";
+import { readFirstCheck, type FirstCheckResult } from "./firstCheck.ts";
 
 export const RECHECK_DAYS = 14;
 export const TALK_WINDOW_DAYS = 14;
@@ -48,6 +48,12 @@ export function checkHistory(first: FirstCheckResult | null, rechecks: readonly 
   if (first && !first.letters) out.push({ at: first.at, b: first.b, expression: first.expression, grammar: first.grammar, first: true });
   out.push(...rechecks.filter((one) => !first || one.at !== first.at));
   return out.sort((a, b) => a.at - b.at);
+}
+
+/** 가장 최근 확인(첫 측정 또는 실력 확인) — Quizbank 표현 시작 단계 등이 읽는다. 글자부터라 잰 적이 없으면 null. */
+export function latestCheck(language: string): SkillCheck | null {
+  const history = checkHistory(readFirstCheck(language), readRechecks(language));
+  return history[history.length - 1] ?? null;
 }
 
 /** 순수: 다시 잴 때가 됐나 — 기록이 없거나 마지막 것이 RECHECK_DAYS일 넘음. */

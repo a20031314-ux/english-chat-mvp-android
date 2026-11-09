@@ -10,46 +10,18 @@ import { readHomework, type Homework } from "@/lib/roleplay/replay";
 import { readCalls } from "@/lib/roleplay/callStore";
 import { useBankTone } from "@/components/studyMap/bankTone";
 import { LEDGER_EVENT, readLedger } from "@/lib/curriculum/logLedger";
-import { checkStates } from "@/lib/curriculum/checkState";
-import { cardsForDay, doneOf, parseCards, pickCards, type TodayCard, type TodayCards as Saved } from "@/lib/curriculum/todayCards";
+import { dayOfSeconds } from "@/lib/curriculum/checkState";
+import { answeredToday, TODAY_GOAL } from "@/lib/curriculum/todayCards";
 import { focusQuiz } from "@/lib/curriculum/quizFocus";
-import { reviewLabel } from "@/lib/curriculum/dailyPlan";
 import { localDay } from "@/lib/curriculum/resume";
 import { needsLetters, useLettersFirst } from "@/lib/curriculum/lettersFirst";
 import { openLettersBank } from "@/lib/curriculum/lettersOpen";
 import { useScript } from "@/components/studyMap/ScriptPractice";
 
 /**
- * Logbank 맨 위 "오늘" 카드(개편 3단계, 스위치 lib/reform.ts — 설계 hub/work/drafts/no-today-2026-11-05.md 8절 B안).
- * 카드마다 이름 · 근거 숫자 한 줄 · 문 하나(▶ Quizbank 또는 📞 공부). 그날 처음 정하고 하루 그대로, 끝은 사건으로 ✓.
- * 고르기·끝 셈은 curriculum/todayCards.ts, 이 폰의 장부(logbank.v1.<언어>)만.
+ * Logbank 맨 위 "오늘"(2026-11-09 사용자 "합쳐줘, 써 보기는 없애줘"): 오늘 숫자(TodayGrowth) · 숙제 줄 · ▶ Quizbank 하나 · 📞 수업.
+ * 갈래(막힌 것·다시 학습·새로 학습)는 화면에 없음 — 무엇을 낼지는 Quizbank가 todayCards.ts reviewKeys 순서로. ✓ = 오늘 답한 열쇠 TODAY_GOAL 이상.
  */
-const KEY = "todayCards.v1";
-
-function readSaved(language: string): Saved | null {
-  try {
-    return parseCards(localStorage.getItem(`${KEY}.${language}`));
-  } catch {
-    return null;
-  }
-}
-
-/** 그날 카드(없거나 날이 바뀌었으면 새로 고르고 저장)와 카드마다 끝났나. */
-function buildView(language: string, canCall: boolean): { today: Saved; done: boolean[] } {
-  const events = readLedger(language);
-  const now = Math.floor(Date.now() / 1000);
-  const saved = readSaved(language);
-  const today = cardsForDay(saved, localDay(), () => pickCards({ events, states: checkStates(events), now, canCall }), now);
-  if (today !== saved) {
-    try {
-      localStorage.setItem(`${KEY}.${language}`, JSON.stringify(today));
-    } catch {
-      // 이번에만(다시 열면 다시 고름).
-    }
-  }
-  return { today, done: today.cards.map((card) => doneOf(card, events, today.at)) };
-}
-
 /**
  * 0단계(글자부터, curriculum/lettersFirst.ts)면 카드 하나 — 오늘의 글자 묶음 → Languagebank 글자·소리 칸(2026-11-07 점검: 준호 카드 ▶ Quizbank가
  * Languagebank 첫 화면으로 떨어짐 — 0단계엔 Quizbank 칸이 없음). 그날 처음 고른 묶음을 지나면 ✓(todayLetters.v1).
@@ -117,7 +89,6 @@ function LettersToday({ ui, language, locale }: { ui: UICopy; language: string; 
 
 function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
   const tone = useBankTone();
-  const { isPremium } = usePremium();
   const [tick, setTick] = useState(0);
   useEffect(() => {
     const on = (event: Event) => {
@@ -127,85 +98,34 @@ function QuizToday({ ui, language }: { ui: UICopy; language: string }) {
     window.addEventListener(LEDGER_EVENT, on);
     return () => window.removeEventListener(LEDGER_EVENT, on);
   }, [language]);
-  const view = useMemo(() => {
+  const [today] = useState(() => dayOfSeconds(Math.floor(Date.now() / 1000)));
+  const done = useMemo(() => {
     void tick;
-    return buildView(language, isPremium);
-  }, [language, tick, isPremium]);
-  const allDone = view.done.length > 0 && view.done.every(Boolean);
+    return answeredToday(readLedger(language), today, (t) => dayOfSeconds(t)) >= TODAY_GOAL;
+  }, [language, tick, today]);
   return (
     <section data-today-cards className="flex flex-col gap-2 rounded-xl border border-line p-3">
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-note font-semibold text-ink">{ui.lbToday}</h3>
-        {allDone ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
+        {done ? <span data-today-done className="text-caption text-good">✓ {ui.planAllDone}</span> : null}
       </div>
       <TodayGrowth ui={ui} language={language} />
       <HomeworkRow ui={ui} language={language} />
-      {view.today.cards.map((card, index) => (
-        <CardRow key={`${card.kind}-${index}`} ui={ui} card={card} done={view.done[index] ?? false} soft={tone.soft} language={language} />
-      ))}
+      <button
+        type="button"
+        data-today-card="study"
+        data-done={done ? "1" : undefined}
+        onClick={() => focusQuiz(language, [])}
+        className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-start ${done ? "border-line" : tone.soft}`}
+      >
+        <span aria-hidden className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-caption ${done ? "border-good text-good" : "border-line text-slate-400"}`}>
+          {done ? "✓" : ""}
+        </span>
+        <span className="min-w-0 flex-1 text-chat font-semibold text-ink">{ui.keepTitle}</span>
+        <span aria-hidden className="shrink-0 text-caption text-slate-300">▶</span>
+      </button>
       <LessonDoor ui={ui} />
     </section>
-  );
-}
-
-function partLabel(ui: UICopy, part: TodayCard["part"]): string {
-  if (part === "word") return ui.partVocab;
-  if (part === "grammar") return ui.partGrammar;
-  if (part === "expression") return ui.partExpression;
-  if (part === "frame") return ui.framesTitle;
-  return "";
-}
-
-function CardRow({ ui, card, done, soft, language }: { ui: UICopy; card: TodayCard; done: boolean; soft: string; language: string }) {
-  const n = String(card.n);
-  // 옛 상태 이름(복습·적용이 힘듦·New)은 쓰지 않는다(2026-11-09 사용자 "옛 상태의 데이터, 이름들은 다 삭제") —
-  // 다시 낼 것은 "다시 학습 n" + 그 소재 이름 몇 개, 새것은 "새로 학습 n". 어느 열쇠를 낼지는 그대로(todayCards.ts).
-  const again = card.kind === "check" || card.kind === "hard";
-  const title =
-    card.kind === "stuck"
-      ? ui.lbCardStuck
-      : card.kind === "try"
-        ? ui.lbCardTry
-        : card.kind === "new"
-          ? ui.tlFreshN.replace("{n}", n)
-          : `${card.kind === "hard" ? `${partLabel(ui, card.part)} ` : ""}${ui.tlAgainN.replace("{n}", n)}`;
-  const why = again
-    ? card.keys
-        .slice(0, 3)
-        .map((key) => reviewLabel(language, key) || key.slice(2))
-        .join(" · ")
-    : card.kind === "new"
-      ? ""
-      : (card.kind === "stuck" ? ui.lbWhyStuck : ui.lbWhyTry).replace("{n}", n);
-  const call = card.kind === "try";
-  const go = () => {
-    if (call) {
-      sendAppIntent("practice", { tab: "roleplay", goal: { phrases: card.keys.map((key) => key.slice(2)) }, title });
-      return;
-    }
-    focusQuiz(language, card.keys);
-  };
-  return (
-    <button
-      type="button"
-      data-today-card={card.kind}
-      data-done={done ? "1" : undefined}
-      onClick={go}
-      className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2.5 text-start ${done ? "border-line opacity-60" : soft}`}
-    >
-      <span aria-hidden className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border text-caption ${done ? "border-good text-good" : "border-line text-slate-400"}`}>
-        {done ? "✓" : ""}
-      </span>
-      <span className="flex min-w-0 flex-1 flex-col">
-        <span className="text-chat font-semibold text-ink">{title}</span>
-        {why ? (
-          <span dir="auto" className="truncate text-caption text-slate-400">
-            {why}
-          </span>
-        ) : null}
-      </span>
-      <span className="shrink-0 text-caption text-slate-300">{call ? `📞 ${ui.callModeStudy}` : `▶ ${ui.keepTitle}`}</span>
-    </button>
   );
 }
 

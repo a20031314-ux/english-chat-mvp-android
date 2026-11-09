@@ -82,14 +82,14 @@
 |---|---|---|---|---|
 | 첫 측정 | 학습 언어로 처음 My를 열면 — 글자 → 낱말 예/아니오 → 뜻 → 표현·문법 → 시작 단계(건너뛰기 = 1단계) | 2 My · 3 AI | `components/studyMap/FirstCheck.tsx` · `lib/curriculum/firstCheck.ts` | 단계 고르기(대화 예시) · 단계 오르내리기 시험(PlacementPlayer) · 초급·중급·고급 체크 |
 | 실력 확인 `skillCheckTitle` | Logbank 📏 칸 — 14일마다 ▶ 밝음 → 첫 측정과 같은 시험(글자 없음, 오르기 지난번 −1단계부터) → 지난번 → 이번, 표는 확인마다 단어·표현·문법 + 말하기(그 전 2주 대화에서 맞게 쓴 수, 장부) | 2 My | `lib/curriculum/skillCheck.ts` · `components/studyMap/FirstCheck.tsx` |  |
-| Logbank `logbankTitle` | My 첫 칸 — 오늘 카드 · 배운 것 표 · 학습 곡선 · 그날 세부 = 학습 타임라인(%·띠·육각형 없음) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/studyMap/Logbank.tsx` · `lib/curriculum/logLedger.ts` | 복습 칸 · 📈 실력 기록 · 이번 주 확인 · 띠·육각형 %·부족한 점 |
-| 오늘 카드 `lbToday` (화면: 오늘) | Logbank 맨 위 최대 셋 — 다시 학습 n · 막힌 것 · 써 보기 · 새로 학습 n(0단계면 오늘의 글자 묶음) | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` | 오늘 할 것(Stagebank) · 다음 추천 |
+| Logbank `logbankTitle` | My 첫 칸 — 오늘 · 실력 확인 · 배운 것 표 · 학습 곡선 · 그날 세부 = 학습 타임라인(%·띠·육각형 없음) | 1 메인 · 2 My · 3 AI · 4 사람 | `components/studyMap/Logbank.tsx` · `lib/curriculum/logLedger.ts` | 복습 칸 · 📈 실력 기록 · 이번 주 확인 · 띠·육각형 %·부족한 점 |
+| 오늘 `lbToday` | Logbank 맨 위 — 오늘 학습 n · 숙제 줄 · ▶ Quizbank 하나(갈래 이름 없음, 오늘 10개 답하면 ✓) · 📞 수업, 0단계면 오늘의 글자 묶음 | 1 메인 · 2 My · 3 AI | `components/studyMap/TodayCards.tsx` · `lib/curriculum/todayCards.ts` | 오늘 할 것(Stagebank) · 다음 추천 · 오늘 카드 셋(막힌 것·다시 학습·새로 학습·써 보기) |
 | 학습 타임라인 | Logbank 그날 세부 — 학습 시간(10분 쉼으로 끊음) → 요소별 카드 → 카드 지난 기록 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` |  |
 | 아는 정도 표시 `lbFresh` (화면: 학습) | 학습 · n번 학습(+ 마지막이 틀렸으면 ✗, 퀴즈 답만) — 퀴즈 답 뒤·사전·배운 것·타임라인 같은 표시, 대화에서 쓴 것은 카드의 쓴 곳·활용 칸에만 | 1 메인 · 2 My · 3 AI | `lib/curriculum/studyTimeline.ts` | 체크 셋 이름(New·적용이 힘듦·알아요) 표시 · 점 셋 |
-| Quizbank `keepTitle` | 한 흐름 퀴즈 — 오늘 카드가 맡긴 열쇠 → 다시 볼 것과 새 묶음 번갈아, 낱말·표현은 카드 한 칸 가림, 답 뒤 📕 | 1 메인 · 2 My · 3 AI | `components/studyMap/Quizbank.tsx` · `components/studyMap/InlineQuiz.tsx` · `lib/curriculum/quiz.ts` | Quizbank 탭 [어휘 \| 다시 보기 \| 시험] · 📝 단어 시험 · 정기 시험 · 😴 쉬워요 줄 · ⚙ 어떤 낱말 |
+| Quizbank `keepTitle` | 한 흐름 퀴즈 — 다시 볼 것(막힌 것 먼저)과 새 묶음 번갈아, 낱말·표현은 카드 한 칸 가림, 답 뒤 📕 | 1 메인 · 2 My · 3 AI | `components/studyMap/Quizbank.tsx` · `components/studyMap/InlineQuiz.tsx` · `lib/curriculum/quiz.ts` | Quizbank 탭 [어휘 \| 다시 보기 \| 시험] · 📝 단어 시험 · 정기 시험 · 😴 쉬워요 줄 · ⚙ 어떤 낱말 |
 | Languagebank `languagebankTitle` | 사전 — 찾기 + 종류(품사\|주제 × 난이도) → 묶음 → 낱말 화면, 표현·문법은 소재 수업, 학습한 수 / 전체 | 1 메인 · 2 My · 3 AI | `components/studyMap/LanguageBank.tsx` · `components/studyMap/Dictionary.tsx` | Stagebank · 📕 단어 사전 버튼 · 📖 배울 수 있는 것 |
 | 넘겨 보기 `flipStart` | Languagebank 묶음 ▶ — 뜻·단어·예문 중 하나 가림 → [다시 \| 됐어요] | 2 My | `components/studyMap/BankFlip.tsx` · `lib/curriculum/bankFlip.ts` |  |
-| 글자·소리 `fcLetters` (화면: 글자) | 글자가 다른 학습 언어 — Languagebank 첫 줄 칸, 0단계면 오늘 카드 = 오늘의 글자 묶음 | 2 My · 3 AI | `components/studyMap/ScriptPractice.tsx` · `lib/curriculum/lettersOpen.ts` |  |
+| 글자·소리 `fcLetters` (화면: 글자) | 글자가 다른 학습 언어 — Languagebank 첫 줄 칸, 0단계면 Logbank 오늘 = 오늘의 글자 묶음 | 2 My · 3 AI | `components/studyMap/ScriptPractice.tsx` · `lib/curriculum/lettersOpen.ts` |  |
 | 소재 수업 | 어디서나 여는 층(openLesson) — 문장구조 수업 [설명 › 퀴즈 › 대화] · 문법 한 장 · 표현 카드 | 2 My | `components/studyMap/LessonHost.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/GrammarExplain.tsx` |  |
 | 사전 주석 | 학습 언어 문장 아래 📕 + 그 문장의 단어·표현 칩 → 사전 시트·소재 수업(대화 줄·자막·퀴즈 답 뒤) | 1 메인 · 2 My · 3 AI | `components/studyMap/DictNotes.tsx` · `lib/curriculum/dictNotes.ts` |  |
 | 칸 설명 | Logbank·Quizbank 머리 ? — 핵심 하나 + 세부 한 줄씩 | 1 메인 · 2 My | `components/studyMap/BankHelp.tsx` · `lib/guide/banks.ts` |  |
@@ -123,7 +123,7 @@
 | 오늘 할 것 계산 | Stagebank 오늘 할 것 목록 — 화면은 없어졌고 서버 다시 볼 것(review)·익힘 셈이 아직 이 파일을 씀 — 서버(scripts check)가 쓰는 reviewKeysOf 등만 남기고 나머지를 지운다 | `lib/curriculum/dailyPlan.ts` |
 | 아침 알림 | Stagebank ⚙에서 켜던 것 — 개편에 켜고 끌 곳이 없어 My를 열면 걸린 알림을 지움 — 되살리려면 사용자 결정 — 아니면 플러그인·코드 지움 | `lib/morningNotify.ts` · `lib/curriculum/morningDigest.ts` |
 
-## 이름 정리할 것 — 같은 말을 쓰는 다른 문구 키 (56)
+## 이름 정리할 것 — 같은 말을 쓰는 다른 문구 키 (55)
 
 > `node scripts/check-copy-keys.mjs`가 찾는다. 같은 기능이면 한 키로 합치고, 다른 기능이면 이름을 바꾼다. 고치면 `--write`로 기준을 줄인다. 새로 생기면 CI가 실패한다.
 
@@ -159,7 +159,6 @@
 - "사람" — `homeTabPeople`, `topicPeople`
 - "새 대화 시작" — `chatHistoryNew`, `startNewSession`
 - "설명" — `explanation`, `featureViewList`
-- "써 보기" — `lbCardTry`, `stageTry`
 - "쓰기" — `replayType`, `tlWrite`
 - "알아요" — `checkKnown`, `itemsMastered`, `knownTag`, `markKnown`
 - "어순" — `lessonOrder`, `missOrder`

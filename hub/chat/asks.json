@@ -214,7 +214,11 @@
       ],
       "base": "8bce8d8",
       "head": "55c16ce",
-      "status": "open"
+      "status": "고침",
+      "by": "2",
+      "note": "확인함. 표현 시작 단계를 첫 측정만이 아니라 가장 최근 확인(실력 확인 포함, skillCheck.ts latestCheck)에서 읽게 고침. 같은 커밋에서 55c16ce가 package.json에서 빠뜨린 check:features 스크립트·skillCheck.test도 되살림.",
+      "until": "",
+      "answeredAt": "2026-11-09 15:05"
     },
     {
       "id": "a261109-6",
