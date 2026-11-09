@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { chooseFromPrepared, pickPrepared, typeFromPrepared, type PreparedItem } from "./preparedQuiz.ts";
+import fs from "node:fs";
+import { chooseFromPrepared, pickPrepared, turnPrepared, typeFromPrepared, type PreparedItem } from "./preparedQuiz.ts";
 
 const grammar: PreparedItem = {
   key: "g|1:0",
@@ -86,5 +87,37 @@ describe("pickPrepared 아래 단계 순서(2026-11-09)", () => {
     assert.deepEqual(pickPrepared(es, { stage: 5, skip: new Set(["g|5:0"]) }).map((item) => item.key), ["g|4:0"]);
     const ja = [1, 3].map((stage) => ({ ...grammar, key: `g|${stage}:1`, stage, answer: "は", options: ["は", "が"] }));
     assert.deepEqual(pickPrepared(ja, { stage: 4 }).map((item) => item.key), ["g|3:1"]);
+  });
+});
+
+describe("turnPrepared — 같은 칸을 다른 문장으로", () => {
+  const es: PreparedItem = { key: "g|3:1", kind: "grammar", stage: 3, gloss: "몰레 먹어 본 적 있어?", before: "¿Alguna vez ", after: " el mole?", answer: "has probado", options: ["has probó", "has probar", "has probado"], line: "¿Alguna vez has probado el mole?", why: "현재완료",
+    variants: [{ before: "", after: " la radio.", answer: "Ha encendido", options: ["Ha encendido", "Ha encendado", "Ha encendió", "Ha encender"], line: "Ha encendido la radio.", gloss: "라디오를 켰어.", why: "haber + 과거분사" }] };
+  const ja: PreparedItem = { key: "g|2:0", kind: "grammar", stage: 2, gloss: "어제 책을 읽었어.", before: "昨日本を", after: "。", answer: "読みました", options: ["読みました", "読みます"], line: "昨日本を読みました。", why: "과거",
+    variants: [{ before: "友だちに", after: "。", answer: "会いました", options: ["会いました", "会います"], line: "友だちに会いました。", gloss: "친구를 만났어.", why: "과거" }] };
+  it("0번째는 원래 문장, 그다음은 바꾼 문장, 한 바퀴 돌면 다시 원래", () => {
+    assert.equal(turnPrepared(es, 0).line, es.line);
+    assert.equal(turnPrepared(es, 1).line, "Ha encendido la radio.");
+    assert.equal(turnPrepared(es, 1).key, "g|3:1");
+    assert.equal(turnPrepared(es, 2).line, es.line);
+    assert.equal(turnPrepared(ja, 1).line, "友だちに会いました。");
+  });
+  it("바꾼 문장도 고르기 문제가 된다", () => {
+    const made = chooseFromPrepared(turnPrepared(es, 1));
+    assert.ok(made);
+    assert.equal(made.options[made.answer as number], "Ha encendido");
+    assert.equal(made.gloss?.raw, "라디오를 켰어.");
+  });
+  it("es-gv.json: 문장 = 앞 + 답 + 뒤, 보기 넷이 다르고 답이 하나, 뜻 줄에 답이 안 보임", () => {
+    const book = JSON.parse(fs.readFileSync(new URL("./problems/es-gv.json", import.meta.url), "utf8")) as Record<string, { before: string; after: string; answer: string; options: string[]; line: string; ko: string; en: string }[]>;
+    assert.ok(book["g|3:1"]!.length >= 100);
+    for (const list of Object.values(book)) {
+      for (const one of list) {
+        assert.equal(one.before + one.answer + one.after, one.line);
+        assert.equal(new Set(one.options.map((o) => o.toLowerCase())).size, 4, one.line);
+        assert.equal(one.options.filter((o) => o === one.answer).length, 1, one.line);
+        assert.ok(one.ko && one.en && !one.en.toLowerCase().includes(one.answer.toLowerCase()), one.line);
+      }
+    }
   });
 });

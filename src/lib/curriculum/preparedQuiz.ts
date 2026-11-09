@@ -17,7 +17,19 @@ export type PreparedItem = {
   why: string;
   hint?: string;
   mark?: string;
+  /** 같은 칸의 다른 문장(규칙으로 바꾼 사전 예문, problems/<언어>-gv.json) — 나올 때마다 차례로. 앱 언어로 뜻이 있을 때만. */
+  variants?: readonly PreparedVariant[];
 };
+
+export type PreparedVariant = Pick<PreparedItem, "before" | "after" | "answer" | "options" | "line" | "gloss" | "why">;
+
+/** 그 칸이 나온 횟수(turn)로 문장을 고른다 — 0이면 원래 문장, 그다음은 바꾼 문장 차례로(같은 문장이 연달아 안 나오게). 순수. */
+export function turnPrepared(item: PreparedItem, turn: number): PreparedItem {
+  const list = item.variants ?? [];
+  if (!list.length) return item;
+  const at = ((Math.floor(turn) % (list.length + 1)) + list.length + 1) % (list.length + 1);
+  return at === 0 ? item : { ...item, ...list[at - 1]! };
+}
 
 export function chooseFromPrepared(item: PreparedItem): QuizQuestion | null {
   if (item.kind === "word") return null;

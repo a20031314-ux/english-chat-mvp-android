@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { PreparedItem } from "./preparedQuiz";
+import type { PreparedItem, PreparedVariant } from "./preparedQuiz";
 import { stageOfRank } from "./vocabBank";
 import { ladderFor } from "./stages/index";
 import { apiUrl } from "../apiBase";
@@ -53,6 +53,29 @@ const FILES: Record<string, (() => Promise<{ default: Record<string, Raw> }>)[]>
   // 한국어 학습은 뜻·까닭이 영어(한국어를 배우는 사람에게 한국어 뜻은 답이 보임 — 2026-11-08 사용자 "진행해줘", 문법 칸 40).
   ko: [() => import("./problems/ko-g.json")],
 };
+
+type RawVariant = Omit<PreparedVariant, "gloss" | "why"> & { ko?: string; en?: string; whyKo?: string; whyEn?: string };
+
+/** 같은 문법 칸의 다른 문장(scripts/sentence-index/<언어>-variants.mjs가 사전 예문을 규칙으로 바꿈). 뜻이 ko·en뿐이라 그 밖의 앱 언어는 원래 한 문장만. */
+const VARIANTS: Record<string, () => Promise<{ default: Record<string, RawVariant[]> }>> = {
+  es: () => import("./problems/es-gv.json"),
+};
+
+async function withVariants(language: string, ui: string, items: PreparedItem[]): Promise<PreparedItem[]> {
+  const load = VARIANTS[language];
+  if (!load || (ui !== "ko" && ui !== "en")) return items;
+  const book = await load().then((one) => one.default ?? {}).catch(() => ({}) as Record<string, RawVariant[]>);
+  return items.map((item) => {
+    const raw = item.kind === "grammar" ? book[item.key] : undefined;
+    if (!raw?.length) return item;
+    const variants = raw.flatMap((one): PreparedVariant[] => {
+      const gloss = ui === "ko" ? one.ko : one.en;
+      const why = ui === "ko" ? one.whyKo : one.whyEn;
+      return gloss && why && one.answer && one.line && one.options?.length ? [{ before: one.before ?? "", after: one.after ?? "", answer: one.answer, options: one.options, line: one.line, gloss, why }] : [];
+    });
+    return variants.length ? { ...item, variants } : item;
+  });
+}
 
 const cache = new Map<string, Promise<PreparedItem[] | null>>();
 
@@ -184,6 +207,7 @@ function usePreparedFor(language: string, ui: string): PreparedItem[] | null {
     let live = true;
     void loadPrepared(language)
       .then((list) => (list ? inUi(language, ui, list) : null))
+      .then((list) => (list ? withVariants(language, ui, list) : null))
       .then((list) => {
         if (live) setLoaded({ id, items: list?.length ? list : null });
       });

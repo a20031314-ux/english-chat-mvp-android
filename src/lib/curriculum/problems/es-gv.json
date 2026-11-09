@@ -1,0 +1,4038 @@
+{
+ "g|3:1": [
+  {
+   "before": "",
+   "after": " la disculpa sin dudar.",
+   "answer": "Ha aceptado",
+   "options": [
+    "Ha aceptado",
+    "Ha aceptido",
+    "Ha aceptó",
+    "Ha aceptar"
+   ],
+   "line": "Ha aceptado la disculpa sin dudar.",
+   "ko": "그는 망설임 없이 사과를 받아들였어.",
+   "en": "He accepted the apology without hesitation.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha aceptado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha aceptado."
+  },
+  {
+   "before": "",
+   "after": " la radio en el coche.",
+   "answer": "Ha encendido",
+   "options": [
+    "Ha encendido",
+    "Ha encendado",
+    "Ha encendió",
+    "Ha encender"
+   ],
+   "line": "Ha encendido la radio en el coche.",
+   "ko": "차에서 라디오를 켰어.",
+   "en": "He turned on the radio in the car.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha encendido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha encendido."
+  },
+  {
+   "before": "",
+   "after": " la droga sin dudar.",
+   "answer": "Ha rechazado",
+   "options": [
+    "Ha rechazado",
+    "Ha rechazido",
+    "Ha rechazó",
+    "Ha rechazar"
+   ],
+   "line": "Ha rechazado la droga sin dudar.",
+   "ko": "망설임 없이 마약을 거절했어.",
+   "en": "He refused the drug without hesitation.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha rechazado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha rechazado."
+  },
+  {
+   "before": "Se ",
+   "after": " el café.",
+   "answer": "ha acabado",
+   "options": [
+    "ha acabado",
+    "ha acabido",
+    "ha acabó",
+    "ha acabar"
+   ],
+   "line": "Se ha acabado el café.",
+   "ko": "커피 다 떨어졌어.",
+   "en": "The coffee's gone.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha acabado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha acabado."
+  },
+  {
+   "before": "",
+   "after": " contra la puerta.",
+   "answer": "Ha chocado",
+   "options": [
+    "Ha chocado",
+    "Ha chocido",
+    "Ha chocó",
+    "Ha chocar"
+   ],
+   "line": "Ha chocado contra la puerta.",
+   "ko": "문에 부딪쳤어.",
+   "en": "He bumped into the door.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha chocado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha chocado."
+  },
+  {
+   "before": "La sed lo ",
+   "after": " a parar.",
+   "answer": "ha obligado",
+   "options": [
+    "ha obligado",
+    "ha obligido",
+    "ha obligó",
+    "ha obligar"
+   ],
+   "line": "La sed lo ha obligado a parar.",
+   "ko": "갈증 때문에 멈출 수밖에 없었어.",
+   "en": "Thirst forced him to stop.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha obligado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha obligado."
+  },
+  {
+   "before": "Ya ",
+   "after": " el clima.",
+   "answer": "ha cambiado",
+   "options": [
+    "ha cambiado",
+    "ha cambiido",
+    "ha cambió",
+    "ha cambiar"
+   ],
+   "line": "Ya ha cambiado el clima.",
+   "ko": "날씨가 바뀌었어.",
+   "en": "The weather already changed.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cambiado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cambiado."
+  },
+  {
+   "before": "",
+   "after": " un grupo para el viaje.",
+   "answer": "Han creado",
+   "options": [
+    "Han creado",
+    "Han creido",
+    "Han crearon",
+    "Han crear"
+   ],
+   "line": "Han creado un grupo para el viaje.",
+   "ko": "여행용 단톡을 만들었어.",
+   "en": "They created a group for the trip.",
+   "whyKo": "현재완료는 haber + 과거분사라 han creado예요.",
+   "whyEn": "The present perfect is haber + past participle: han creado."
+  },
+  {
+   "before": "Sus amigos lo ",
+   "after": " en todo.",
+   "answer": "han apoyado",
+   "options": [
+    "han apoyado",
+    "han apoyido",
+    "han apoyaron",
+    "han apoyar"
+   ],
+   "line": "Sus amigos lo han apoyado en todo.",
+   "ko": "친구들이 모든 면에서 그를 도와줬어.",
+   "en": "His friends supported him in everything.",
+   "whyKo": "현재완료는 haber + 과거분사라 han apoyado예요.",
+   "whyEn": "The present perfect is haber + past participle: han apoyado."
+  },
+  {
+   "before": "El enemigo se ",
+   "after": " pronto.",
+   "answer": "ha retirado",
+   "options": [
+    "ha retirado",
+    "ha retirido",
+    "ha retiró",
+    "ha retirar"
+   ],
+   "line": "El enemigo se ha retirado pronto.",
+   "ko": "적이 곧 물러났어.",
+   "en": "The enemy withdrew soon.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha retirado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha retirado."
+  },
+  {
+   "before": "",
+   "after": " la acusación ante el juez.",
+   "answer": "Ha negado",
+   "options": [
+    "Ha negado",
+    "Ha negido",
+    "Ha negó",
+    "Ha negar"
+   ],
+   "line": "Ha negado la acusación ante el juez.",
+   "ko": "판사 앞에서 그 혐의를 부인했어.",
+   "en": "He denied the accusation before the judge.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha negado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha negado."
+  },
+  {
+   "before": "Se ",
+   "after": " debajo de la mesa.",
+   "answer": "ha escondido",
+   "options": [
+    "ha escondido",
+    "ha escondado",
+    "ha escondió",
+    "ha esconder"
+   ],
+   "line": "Se ha escondido debajo de la mesa.",
+   "ko": "그는 탁자 밑에 숨었어.",
+   "en": "He hid under the table.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha escondido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha escondido."
+  },
+  {
+   "before": "",
+   "after": " una piedra al río.",
+   "answer": "Ha tirado",
+   "options": [
+    "Ha tirado",
+    "Ha tirido",
+    "Ha tiró",
+    "Ha tirar"
+   ],
+   "line": "Ha tirado una piedra al río.",
+   "ko": "강에 돌을 던졌어.",
+   "en": "He threw a stone into the river.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha tirado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha tirado."
+  },
+  {
+   "before": "El caballero ",
+   "after": " su asiento.",
+   "answer": "ha cedido",
+   "options": [
+    "ha cedido",
+    "ha cedado",
+    "ha cedió",
+    "ha ceder"
+   ],
+   "line": "El caballero ha cedido su asiento.",
+   "ko": "그 신사가 자리를 양보했어.",
+   "en": "The gentleman gave up his seat.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cedido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cedido."
+  },
+  {
+   "before": "Ni modo, ya ",
+   "after": ".",
+   "answer": "ha pasado",
+   "options": [
+    "ha pasado",
+    "ha pasido",
+    "ha pasó",
+    "ha pasar"
+   ],
+   "line": "Ni modo, ya ha pasado.",
+   "ko": "어쩌겠어, 이미 지난 일이야.",
+   "en": "Oh well, it's already done.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha pasado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha pasado."
+  },
+  {
+   "before": "Por mi parte, ya ",
+   "after": ".",
+   "answer": "he terminado",
+   "options": [
+    "he terminado",
+    "he terminido",
+    "he terminé",
+    "he terminar"
+   ],
+   "line": "Por mi parte, ya he terminado.",
+   "ko": "나는 벌써 끝냈어.",
+   "en": "For my part, I'm done.",
+   "whyKo": "현재완료는 haber + 과거분사라 he terminado예요.",
+   "whyEn": "The present perfect is haber + past participle: he terminado."
+  },
+  {
+   "before": "Se ",
+   "after": " el agua.",
+   "answer": "ha acabado",
+   "options": [
+    "ha acabado",
+    "ha acabido",
+    "ha acabó",
+    "ha acabar"
+   ],
+   "line": "Se ha acabado el agua.",
+   "ko": "물이 다 떨어졌어.",
+   "en": "The water ran out.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha acabado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha acabado."
+  },
+  {
+   "before": "",
+   "after": " su honor hasta el final.",
+   "answer": "Ha defendido",
+   "options": [
+    "Ha defendido",
+    "Ha defendado",
+    "Ha defendió",
+    "Ha defender"
+   ],
+   "line": "Ha defendido su honor hasta el final.",
+   "ko": "끝까지 자신의 명예를 지켰어.",
+   "en": "He defended his honor until the end.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha defendido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha defendido."
+  },
+  {
+   "before": "",
+   "after": " la lágrima con la manga.",
+   "answer": "Ha secado",
+   "options": [
+    "Ha secado",
+    "Ha secido",
+    "Ha secó",
+    "Ha secar"
+   ],
+   "line": "Ha secado la lágrima con la manga.",
+   "ko": "그녀는 소매로 눈물을 닦았어.",
+   "en": "She wiped the tear with her sleeve.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha secado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha secado."
+  },
+  {
+   "before": "",
+   "after": " sin dejar rastro.",
+   "answer": "Ha desaparecido",
+   "options": [
+    "Ha desaparecido",
+    "Ha desaparecado",
+    "Ha desapareció",
+    "Ha desaparecer"
+   ],
+   "line": "Ha desaparecido sin dejar rastro.",
+   "ko": "흔적도 없이 사라졌어.",
+   "en": "She disappeared without a trace.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha desaparecido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha desaparecido."
+  },
+  {
+   "before": "",
+   "after": " a su rival en la final.",
+   "answer": "Ha vencido",
+   "options": [
+    "Ha vencido",
+    "Ha vencado",
+    "Ha venció",
+    "Ha vencer"
+   ],
+   "line": "Ha vencido a su rival en la final.",
+   "ko": "결승에서 라이벌을 이겼어.",
+   "en": "He defeated his rival in the final.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha vencido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha vencido."
+  },
+  {
+   "before": "",
+   "after": " muy tarde.",
+   "answer": "Has llegado",
+   "options": [
+    "Has llegado",
+    "Has llegido",
+    "Has llegaste",
+    "Has llegar"
+   ],
+   "line": "Has llegado muy tarde.",
+   "ko": "정말 늦게 왔구나.",
+   "en": "You got here really late.",
+   "whyKo": "현재완료는 haber + 과거분사라 has llegado예요.",
+   "whyEn": "The present perfect is haber + past participle: has llegado."
+  },
+  {
+   "before": "Te ",
+   "after": " un correo urgente.",
+   "answer": "he enviado",
+   "options": [
+    "he enviado",
+    "he enviido",
+    "he envié",
+    "he enviar"
+   ],
+   "line": "Te he enviado un correo urgente.",
+   "ko": "급한 메일을 보냈어.",
+   "en": "I sent you an urgent email.",
+   "whyKo": "현재완료는 haber + 과거분사라 he enviado예요.",
+   "whyEn": "The present perfect is haber + past participle: he enviado."
+  },
+  {
+   "before": "",
+   "after": " un golpe en la cabeza.",
+   "answer": "Ha recibido",
+   "options": [
+    "Ha recibido",
+    "Ha recibado",
+    "Ha recibió",
+    "Ha recibir"
+   ],
+   "line": "Ha recibido un golpe en la cabeza.",
+   "ko": "그는 머리에 한 대 맞았어.",
+   "en": "He got a blow to the head.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha recibido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha recibido."
+  },
+  {
+   "before": "",
+   "after": " a mi sobrino al parque.",
+   "answer": "He llevado",
+   "options": [
+    "He llevado",
+    "He llevido",
+    "He llevé",
+    "He llevar"
+   ],
+   "line": "He llevado a mi sobrino al parque.",
+   "ko": "조카를 공원에 데려갔어.",
+   "en": "I took my nephew to the park.",
+   "whyKo": "현재완료는 haber + 과거분사라 he llevado예요.",
+   "whyEn": "The present perfect is haber + past participle: he llevado."
+  },
+  {
+   "before": "Se me ",
+   "after": " decírtelo.",
+   "answer": "ha olvidado",
+   "options": [
+    "ha olvidado",
+    "ha olvidido",
+    "ha olvidó",
+    "ha olvidar"
+   ],
+   "line": "Se me ha olvidado decírtelo.",
+   "ko": "그 말을 너한테 하는 걸 깜빡했어.",
+   "en": "I forgot to tell you.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha olvidado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha olvidado."
+  },
+  {
+   "before": "",
+   "after": " a doce amigos a la cena.",
+   "answer": "He invitado",
+   "options": [
+    "He invitado",
+    "He invitido",
+    "He invité",
+    "He invitar"
+   ],
+   "line": "He invitado a doce amigos a la cena.",
+   "ko": "저녁에 친구 열두 명을 초대했어.",
+   "en": "I invited twelve friends to dinner.",
+   "whyKo": "현재완료는 haber + 과거분사라 he invitado예요.",
+   "whyEn": "The present perfect is haber + past participle: he invitado."
+  },
+  {
+   "before": "Me ",
+   "after": " un truco de cartas.",
+   "answer": "ha enseñado",
+   "options": [
+    "ha enseñado",
+    "ha enseñido",
+    "ha enseñó",
+    "ha enseñar"
+   ],
+   "line": "Me ha enseñado un truco de cartas.",
+   "ko": "카드 마술을 하나 알려 줬어.",
+   "en": "He taught me a card trick.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha enseñado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha enseñado."
+  },
+  {
+   "before": "La cabra ",
+   "after": " sobre la roca.",
+   "answer": "ha saltado",
+   "options": [
+    "ha saltado",
+    "ha saltido",
+    "ha saltó",
+    "ha saltar"
+   ],
+   "line": "La cabra ha saltado sobre la roca.",
+   "ko": "염소가 바위 위로 뛰어올랐어.",
+   "en": "The goat jumped onto the rock.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha saltado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha saltado."
+  },
+  {
+   "before": "",
+   "after": " la amenaza por completo.",
+   "answer": "Ha ignorado",
+   "options": [
+    "Ha ignorado",
+    "Ha ignorido",
+    "Ha ignoró",
+    "Ha ignorar"
+   ],
+   "line": "Ha ignorado la amenaza por completo.",
+   "ko": "위협을 완전히 무시했어.",
+   "en": "He ignored the threat completely.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ignorado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ignorado."
+  },
+  {
+   "before": "La vela se ",
+   "after": " con el viento.",
+   "answer": "ha apagado",
+   "options": [
+    "ha apagado",
+    "ha apagido",
+    "ha apagó",
+    "ha apagar"
+   ],
+   "line": "La vela se ha apagado con el viento.",
+   "ko": "촛불이 바람에 꺼졌어.",
+   "en": "The candle went out with the wind.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha apagado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha apagado."
+  },
+  {
+   "before": "",
+   "after": " una canción hermosa.",
+   "answer": "Ha cantado",
+   "options": [
+    "Ha cantado",
+    "Ha cantido",
+    "Ha cantó",
+    "Ha cantar"
+   ],
+   "line": "Ha cantado una canción hermosa.",
+   "ko": "아름다운 노래를 불렀어.",
+   "en": "She sang a beautiful song.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cantado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cantado."
+  },
+  {
+   "before": "El ruido ",
+   "after": " la queja.",
+   "answer": "ha causado",
+   "options": [
+    "ha causado",
+    "ha causido",
+    "ha causó",
+    "ha causar"
+   ],
+   "line": "El ruido ha causado la queja.",
+   "ko": "소음 때문에 민원이 생겼어.",
+   "en": "The noise caused the complaint.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha causado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha causado."
+  },
+  {
+   "before": "Esa joya ",
+   "after": " a mi abuela.",
+   "answer": "ha pertenecido",
+   "options": [
+    "ha pertenecido",
+    "ha pertenecado",
+    "ha perteneció",
+    "ha pertenecer"
+   ],
+   "line": "Esa joya ha pertenecido a mi abuela.",
+   "ko": "그 보석은 할머니 것이었어.",
+   "en": "That jewel belonged to my grandmother.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha pertenecido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha pertenecido."
+  },
+  {
+   "before": "El juez lo ",
+   "after": " culpable.",
+   "answer": "ha declarado",
+   "options": [
+    "ha declarado",
+    "ha declarido",
+    "ha declaró",
+    "ha declarar"
+   ],
+   "line": "El juez lo ha declarado culpable.",
+   "ko": "판사가 그를 유죄로 선고했어.",
+   "en": "The judge found him guilty.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha declarado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha declarado."
+  },
+  {
+   "before": "",
+   "after": " la tumba de su abuelo.",
+   "answer": "Han visitado",
+   "options": [
+    "Han visitado",
+    "Han visitido",
+    "Han visitaron",
+    "Han visitar"
+   ],
+   "line": "Han visitado la tumba de su abuelo.",
+   "ko": "할아버지 묘를 찾았어.",
+   "en": "They visited their grandfather's grave.",
+   "whyKo": "현재완료는 haber + 과거분사라 han visitado예요.",
+   "whyEn": "The present perfect is haber + past participle: han visitado."
+  },
+  {
+   "before": "",
+   "after": " hasta el final.",
+   "answer": "Ha luchado",
+   "options": [
+    "Ha luchado",
+    "Ha luchido",
+    "Ha luchó",
+    "Ha luchar"
+   ],
+   "line": "Ha luchado hasta el final.",
+   "ko": "끝까지 싸웠어.",
+   "en": "She fought until the end.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha luchado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha luchado."
+  },
+  {
+   "before": "",
+   "after": " amigos de toda América.",
+   "answer": "Ha conocido",
+   "options": [
+    "Ha conocido",
+    "Ha conocado",
+    "Ha conoció",
+    "Ha conocer"
+   ],
+   "line": "Ha conocido amigos de toda América.",
+   "ko": "아메리카 전역에서 친구를 사귀었어.",
+   "en": "She made friends from all over America.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha conocido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha conocido."
+  },
+  {
+   "before": "",
+   "after": " frente al juez.",
+   "answer": "Han hablado",
+   "options": [
+    "Han hablado",
+    "Han hablido",
+    "Han hablaron",
+    "Han hablar"
+   ],
+   "line": "Han hablado frente al juez.",
+   "ko": "판사 앞에서 이야기했어.",
+   "en": "They spoke in front of the judge.",
+   "whyKo": "현재완료는 haber + 과거분사라 han hablado예요.",
+   "whyEn": "The present perfect is haber + past participle: han hablado."
+  },
+  {
+   "before": "",
+   "after": " el robo esta mañana.",
+   "answer": "Han denunciado",
+   "options": [
+    "Han denunciado",
+    "Han denunciido",
+    "Han denunciaron",
+    "Han denunciar"
+   ],
+   "line": "Han denunciado el robo esta mañana.",
+   "ko": "오늘 아침에 도난을 신고했어.",
+   "en": "They reported the theft this morning.",
+   "whyKo": "현재완료는 haber + 과거분사라 han denunciado예요.",
+   "whyEn": "The present perfect is haber + past participle: han denunciado."
+  },
+  {
+   "before": "",
+   "after": " todo el sistema.",
+   "answer": "Han cambiado",
+   "options": [
+    "Han cambiado",
+    "Han cambiido",
+    "Han cambiaron",
+    "Han cambiar"
+   ],
+   "line": "Han cambiado todo el sistema.",
+   "ko": "시스템 전체를 바꿨어.",
+   "en": "They changed the whole system.",
+   "whyKo": "현재완료는 haber + 과거분사라 han cambiado예요.",
+   "whyEn": "The present perfect is haber + past participle: han cambiado."
+  },
+  {
+   "before": "",
+   "after": " el correo esta mañana.",
+   "answer": "He revisado",
+   "options": [
+    "He revisado",
+    "He revisido",
+    "He revisé",
+    "He revisar"
+   ],
+   "line": "He revisado el correo esta mañana.",
+   "ko": "오늘 아침에 메일을 확인했어.",
+   "en": "I checked the mail this morning.",
+   "whyKo": "현재완료는 haber + 과거분사라 he revisado예요.",
+   "whyEn": "The present perfect is haber + past participle: he revisado."
+  },
+  {
+   "before": "¿Ya ",
+   "after": " la cuenta?",
+   "answer": "has pagado",
+   "options": [
+    "has pagado",
+    "has pagido",
+    "has pagaste",
+    "has pagar"
+   ],
+   "line": "¿Ya has pagado la cuenta?",
+   "ko": "계산 이미 했어?",
+   "en": "Did you pay the bill already?",
+   "whyKo": "현재완료는 haber + 과거분사라 has pagado예요.",
+   "whyEn": "The present perfect is haber + past participle: has pagado."
+  },
+  {
+   "before": "",
+   "after": " el cheque con cuidado.",
+   "answer": "Ha firmado",
+   "options": [
+    "Ha firmado",
+    "Ha firmido",
+    "Ha firmó",
+    "Ha firmar"
+   ],
+   "line": "Ha firmado el cheque con cuidado.",
+   "ko": "그는 신중하게 수표에 서명했어.",
+   "en": "He signed the check carefully.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha firmado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha firmado."
+  },
+  {
+   "before": "",
+   "after": " su anillo en la playa.",
+   "answer": "Ha perdido",
+   "options": [
+    "Ha perdido",
+    "Ha perdado",
+    "Ha perdió",
+    "Ha perder"
+   ],
+   "line": "Ha perdido su anillo en la playa.",
+   "ko": "해변에서 반지를 잃어버렸어.",
+   "en": "She lost her ring on the beach.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha perdido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha perdido."
+  },
+  {
+   "before": "Se ",
+   "after": " al club de lectura.",
+   "answer": "ha unido",
+   "options": [
+    "ha unido",
+    "ha unado",
+    "ha unió",
+    "ha unir"
+   ],
+   "line": "Se ha unido al club de lectura.",
+   "ko": "독서 모임에 가입했어.",
+   "en": "She joined the book club.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha unido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha unido."
+  },
+  {
+   "before": "El príncipe ",
+   "after": " a la gente.",
+   "answer": "ha saludado",
+   "options": [
+    "ha saludado",
+    "ha saludido",
+    "ha saludó",
+    "ha saludar"
+   ],
+   "line": "El príncipe ha saludado a la gente.",
+   "ko": "왕자가 사람들에게 인사했어.",
+   "en": "The prince greeted the people.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha saludado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha saludado."
+  },
+  {
+   "before": "El sistema ",
+   "after": " otra vez.",
+   "answer": "ha fallado",
+   "options": [
+    "ha fallado",
+    "ha fallido",
+    "ha falló",
+    "ha fallar"
+   ],
+   "line": "El sistema ha fallado otra vez.",
+   "ko": "시스템이 또 고장 났어.",
+   "en": "The system failed again.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha fallado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha fallado."
+  },
+  {
+   "before": "No ",
+   "after": " ningún crimen.",
+   "answer": "ha cometido",
+   "options": [
+    "ha cometido",
+    "ha cometado",
+    "ha cometió",
+    "ha cometer"
+   ],
+   "line": "No ha cometido ningún crimen.",
+   "ko": "아무 범죄도 저지르지 않았어.",
+   "en": "He didn't commit any crime.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cometido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cometido."
+  },
+  {
+   "before": "El vecino de arriba se ",
+   "after": ".",
+   "answer": "ha mudado",
+   "options": [
+    "ha mudado",
+    "ha mudido",
+    "ha mudó",
+    "ha mudar"
+   ],
+   "line": "El vecino de arriba se ha mudado.",
+   "ko": "위층 이웃이 이사 갔어.",
+   "en": "The upstairs neighbor moved out.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha mudado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha mudado."
+  },
+  {
+   "before": "",
+   "after": " la alfombra en el patio.",
+   "answer": "Ha sacudido",
+   "options": [
+    "Ha sacudido",
+    "Ha sacudado",
+    "Ha sacudió",
+    "Ha sacudir"
+   ],
+   "line": "Ha sacudido la alfombra en el patio.",
+   "ko": "마당에서 카펫을 털었어.",
+   "en": "She shook out the carpet in the yard.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha sacudido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha sacudido."
+  },
+  {
+   "before": "Se lo ",
+   "after": " a mi mamá.",
+   "answer": "he contado",
+   "options": [
+    "he contado",
+    "he contido",
+    "he conté",
+    "he contar"
+   ],
+   "line": "Se lo he contado a mi mamá.",
+   "ko": "엄마한테 말했어.",
+   "en": "I told my mom.",
+   "whyKo": "현재완료는 haber + 과거분사라 he contado예요.",
+   "whyEn": "The present perfect is haber + past participle: he contado."
+  },
+  {
+   "before": "Al menos lo ",
+   "after": ".",
+   "answer": "he intentado",
+   "options": [
+    "he intentado",
+    "he intentido",
+    "he intenté",
+    "he intentar"
+   ],
+   "line": "Al menos lo he intentado.",
+   "ko": "적어도 해 보긴 했어.",
+   "en": "At least I tried.",
+   "whyKo": "현재완료는 haber + 과거분사라 he intentado예요.",
+   "whyEn": "The present perfect is haber + past participle: he intentado."
+  },
+  {
+   "before": "Se me ",
+   "after": " una idea.",
+   "answer": "ha ocurrido",
+   "options": [
+    "ha ocurrido",
+    "ha ocurrado",
+    "ha ocurrió",
+    "ha ocurrir"
+   ],
+   "line": "Se me ha ocurrido una idea.",
+   "ko": "문득 생각이 하나 떠올랐어.",
+   "en": "An idea just came to me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ocurrido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ocurrido."
+  },
+  {
+   "before": "¡Mierda, se me ",
+   "after": "!",
+   "answer": "ha olvidado",
+   "options": [
+    "ha olvidado",
+    "ha olvidido",
+    "ha olvidó",
+    "ha olvidar"
+   ],
+   "line": "¡Mierda, se me ha olvidado!",
+   "ko": "젠장, 깜빡했어.",
+   "en": "Damn, I forgot!",
+   "whyKo": "현재완료는 haber + 과거분사라 ha olvidado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha olvidado."
+  },
+  {
+   "before": "",
+   "after": " el examen a duras penas.",
+   "answer": "Ha aprobado",
+   "options": [
+    "Ha aprobado",
+    "Ha aprobido",
+    "Ha aprobó",
+    "Ha aprobar"
+   ],
+   "line": "Ha aprobado el examen a duras penas.",
+   "ko": "겨우겨우 시험에 합격했어.",
+   "en": "He barely passed the exam.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha aprobado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha aprobado."
+  },
+  {
+   "before": "",
+   "after": " por una tontería.",
+   "answer": "Han discutido",
+   "options": [
+    "Han discutido",
+    "Han discutado",
+    "Han discutieron",
+    "Han discutir"
+   ],
+   "line": "Han discutido por una tontería.",
+   "ko": "하찮은 일로 다퉜어.",
+   "en": "They argued over something silly.",
+   "whyKo": "현재완료는 haber + 과거분사라 han discutido예요.",
+   "whyEn": "The present perfect is haber + past participle: han discutido."
+  },
+  {
+   "before": "",
+   "after": " la carga del camión.",
+   "answer": "Han bajado",
+   "options": [
+    "Han bajado",
+    "Han bajido",
+    "Han bajaron",
+    "Han bajar"
+   ],
+   "line": "Han bajado la carga del camión.",
+   "ko": "트럭에서 화물을 내렸어.",
+   "en": "They unloaded the cargo from the truck.",
+   "whyKo": "현재완료는 haber + 과거분사라 han bajado예요.",
+   "whyEn": "The present perfect is haber + past participle: han bajado."
+  },
+  {
+   "before": "Me ",
+   "after": " la boca con el café.",
+   "answer": "he quemado",
+   "options": [
+    "he quemado",
+    "he quemido",
+    "he quemé",
+    "he quemar"
+   ],
+   "line": "Me he quemado la boca con el café.",
+   "ko": "커피로 입을 데었어.",
+   "en": "I burned my mouth on the coffee.",
+   "whyKo": "현재완료는 haber + 과거분사라 he quemado예요.",
+   "whyEn": "The present perfect is haber + past participle: he quemado."
+  },
+  {
+   "before": "",
+   "after": " el problema claramente.",
+   "answer": "Ha explicado",
+   "options": [
+    "Ha explicado",
+    "Ha explicido",
+    "Ha explicó",
+    "Ha explicar"
+   ],
+   "line": "Ha explicado el problema claramente.",
+   "ko": "그는 문제를 분명히 설명했어.",
+   "en": "He explained the problem clearly.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha explicado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha explicado."
+  },
+  {
+   "before": "El banco ",
+   "after": " el cheque.",
+   "answer": "ha rechazado",
+   "options": [
+    "ha rechazado",
+    "ha rechazido",
+    "ha rechazó",
+    "ha rechazar"
+   ],
+   "line": "El banco ha rechazado el cheque.",
+   "ko": "은행이 그 수표를 거절했어.",
+   "en": "The bank rejected the check.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha rechazado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha rechazado."
+  },
+  {
+   "before": "Su risa ",
+   "after": " toda la sala.",
+   "answer": "ha llenado",
+   "options": [
+    "ha llenado",
+    "ha llenido",
+    "ha llenó",
+    "ha llenar"
+   ],
+   "line": "Su risa ha llenado toda la sala.",
+   "ko": "그녀의 웃음이 방 전체를 채웠어.",
+   "en": "Her laugh filled the whole room.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha llenado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha llenado."
+  },
+  {
+   "before": "",
+   "after": " un personaje muy creíble.",
+   "answer": "Ha creado",
+   "options": [
+    "Ha creado",
+    "Ha creido",
+    "Ha creó",
+    "Ha crear"
+   ],
+   "line": "Ha creado un personaje muy creíble.",
+   "ko": "그녀는 아주 설득력 있는 인물을 만들었어.",
+   "en": "She created a very believable character.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha creado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha creado."
+  },
+  {
+   "before": "",
+   "after": " a un detective privado.",
+   "answer": "Ha contratado",
+   "options": [
+    "Ha contratado",
+    "Ha contratido",
+    "Ha contrató",
+    "Ha contratar"
+   ],
+   "line": "Ha contratado a un detective privado.",
+   "ko": "사설 탐정을 고용했어.",
+   "en": "He hired a private detective.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha contratado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha contratado."
+  },
+  {
+   "before": "Le ",
+   "after": " la billetera.",
+   "answer": "han robado",
+   "options": [
+    "han robado",
+    "han robido",
+    "han robaron",
+    "han robar"
+   ],
+   "line": "Le han robado la billetera.",
+   "ko": "지갑을 도둑맞았어.",
+   "en": "They stole his wallet.",
+   "whyKo": "현재완료는 haber + 과거분사라 han robado예요.",
+   "whyEn": "The present perfect is haber + past participle: han robado."
+  },
+  {
+   "before": "¿Viste el vídeo que te ",
+   "after": "?",
+   "answer": "he mandado",
+   "options": [
+    "he mandado",
+    "he mandido",
+    "he mandé",
+    "he mandar"
+   ],
+   "line": "¿Viste el vídeo que te he mandado?",
+   "ko": "내가 보낸 영상 봤어?",
+   "en": "Did you see the video I sent you?",
+   "whyKo": "현재완료는 haber + 과거분사라 he mandado예요.",
+   "whyEn": "The present perfect is haber + past participle: he mandado."
+  },
+  {
+   "before": "",
+   "after": " poca comida.",
+   "answer": "Ha quedado",
+   "options": [
+    "Ha quedado",
+    "Ha quedido",
+    "Ha quedó",
+    "Ha quedar"
+   ],
+   "line": "Ha quedado poca comida.",
+   "ko": "음식이 얼마 안 남았어.",
+   "en": "There's not much food left.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha quedado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha quedado."
+  },
+  {
+   "before": "",
+   "after": " un delito grave.",
+   "answer": "Ha cometido",
+   "options": [
+    "Ha cometido",
+    "Ha cometado",
+    "Ha cometió",
+    "Ha cometer"
+   ],
+   "line": "Ha cometido un delito grave.",
+   "ko": "그는 중대한 범죄를 저질렀어.",
+   "en": "He committed a serious crime.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cometido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cometido."
+  },
+  {
+   "before": "Me ",
+   "after": " arena en los zapatos.",
+   "answer": "ha entrado",
+   "options": [
+    "ha entrado",
+    "ha entrido",
+    "ha entró",
+    "ha entrar"
+   ],
+   "line": "Me ha entrado arena en los zapatos.",
+   "ko": "신발에 모래가 들어갔어.",
+   "en": "Sand got into my shoes.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha entrado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha entrado."
+  },
+  {
+   "before": "De repente se ",
+   "after": " la luz.",
+   "answer": "ha apagado",
+   "options": [
+    "ha apagado",
+    "ha apagido",
+    "ha apagó",
+    "ha apagar"
+   ],
+   "line": "De repente se ha apagado la luz.",
+   "ko": "갑자기 불이 꺼졌어.",
+   "en": "Suddenly the light went out.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha apagado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha apagado."
+  },
+  {
+   "before": "",
+   "after": " la reunión de hoy.",
+   "answer": "Han cancelado",
+   "options": [
+    "Han cancelado",
+    "Han cancelido",
+    "Han cancelaron",
+    "Han cancelar"
+   ],
+   "line": "Han cancelado la reunión de hoy.",
+   "ko": "오늘 회의를 취소했어.",
+   "en": "They canceled today's meeting.",
+   "whyKo": "현재완료는 haber + 과거분사라 han cancelado예요.",
+   "whyEn": "The present perfect is haber + past participle: han cancelado."
+  },
+  {
+   "before": "Nadie me ",
+   "after": " con eso.",
+   "answer": "ha ayudado",
+   "options": [
+    "ha ayudado",
+    "ha ayudido",
+    "ha ayudó",
+    "ha ayudar"
+   ],
+   "line": "Nadie me ha ayudado con eso.",
+   "ko": "그 일은 아무도 안 도와줬어.",
+   "en": "Nobody helped me with that.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ayudado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ayudado."
+  },
+  {
+   "before": "No ",
+   "after": " ni cinco minutos.",
+   "answer": "ha durado",
+   "options": [
+    "ha durado",
+    "ha durido",
+    "ha duró",
+    "ha durar"
+   ],
+   "line": "No ha durado ni cinco minutos.",
+   "ko": "오 분도 안 갔어.",
+   "en": "It didn't even last five minutes.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha durado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha durado."
+  },
+  {
+   "before": "Me ",
+   "after": " un trago de agua.",
+   "answer": "he tomado",
+   "options": [
+    "he tomado",
+    "he tomido",
+    "he tomé",
+    "he tomar"
+   ],
+   "line": "Me he tomado un trago de agua.",
+   "ko": "물 한 모금 마셨어.",
+   "en": "I took a sip of water.",
+   "whyKo": "현재완료는 haber + 과거분사라 he tomado예요.",
+   "whyEn": "The present perfect is haber + past participle: he tomado."
+  },
+  {
+   "before": "",
+   "after": " al techo sin decir nada.",
+   "answer": "Ha mirado",
+   "options": [
+    "Ha mirado",
+    "Ha mirido",
+    "Ha miró",
+    "Ha mirar"
+   ],
+   "line": "Ha mirado al techo sin decir nada.",
+   "ko": "그는 아무 말 없이 천장을 바라봤어.",
+   "en": "He stared at the ceiling without saying anything.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha mirado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha mirado."
+  },
+  {
+   "before": "No te ",
+   "after": " bien.",
+   "answer": "he escuchado",
+   "options": [
+    "he escuchado",
+    "he escuchido",
+    "he escuché",
+    "he escuchar"
+   ],
+   "line": "No te he escuchado bien.",
+   "ko": "잘 안 들렸어.",
+   "en": "I didn't hear you properly.",
+   "whyKo": "현재완료는 haber + 과거분사라 he escuchado예요.",
+   "whyEn": "The present perfect is haber + past participle: he escuchado."
+  },
+  {
+   "before": "",
+   "after": " su mayor deseo.",
+   "answer": "Ha cumplido",
+   "options": [
+    "Ha cumplido",
+    "Ha cumplado",
+    "Ha cumplió",
+    "Ha cumplir"
+   ],
+   "line": "Ha cumplido su mayor deseo.",
+   "ko": "가장 큰 소원을 이뤘어.",
+   "en": "He fulfilled his greatest wish.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cumplido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cumplido."
+  },
+  {
+   "before": "",
+   "after": " terminar a tiempo.",
+   "answer": "He logrado",
+   "options": [
+    "He logrado",
+    "He logrido",
+    "He logré",
+    "He lograr"
+   ],
+   "line": "He logrado terminar a tiempo.",
+   "ko": "제시간에 끝냈어.",
+   "en": "I managed to finish on time.",
+   "whyKo": "현재완료는 haber + 과거분사라 he logrado예요.",
+   "whyEn": "The present perfect is haber + past participle: he logrado."
+  },
+  {
+   "before": "",
+   "after": " la reserva sin avisar.",
+   "answer": "Han cancelado",
+   "options": [
+    "Han cancelado",
+    "Han cancelido",
+    "Han cancelaron",
+    "Han cancelar"
+   ],
+   "line": "Han cancelado la reserva sin avisar.",
+   "ko": "예고 없이 예약을 취소했어.",
+   "en": "They canceled the reservation without notice.",
+   "whyKo": "현재완료는 haber + 과거분사라 han cancelado예요.",
+   "whyEn": "The present perfect is haber + past participle: han cancelado."
+  },
+  {
+   "before": "La mayoría ",
+   "after": " a favor.",
+   "answer": "ha votado",
+   "options": [
+    "ha votado",
+    "ha votido",
+    "ha votó",
+    "ha votar"
+   ],
+   "line": "La mayoría ha votado a favor.",
+   "ko": "대다수가 찬성표를 던졌어.",
+   "en": "The majority voted in favor.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha votado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha votado."
+  },
+  {
+   "before": "El bebé ",
+   "after": " a llorar.",
+   "answer": "ha empezado",
+   "options": [
+    "ha empezado",
+    "ha empezido",
+    "ha empezó",
+    "ha empezar"
+   ],
+   "line": "El bebé ha empezado a llorar.",
+   "ko": "아기가 울기 시작했어.",
+   "en": "The baby started to cry.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha empezado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha empezado."
+  },
+  {
+   "before": "¿Acaso no me ",
+   "after": "?",
+   "answer": "has escuchado",
+   "options": [
+    "has escuchado",
+    "has escuchido",
+    "has escuchaste",
+    "has escuchar"
+   ],
+   "line": "¿Acaso no me has escuchado?",
+   "ko": "설마 내 말 안 들었어?",
+   "en": "Did you not hear me, by any chance?",
+   "whyKo": "현재완료는 haber + 과거분사라 has escuchado예요.",
+   "whyEn": "The present perfect is haber + past participle: has escuchado."
+  },
+  {
+   "before": "Nunca se me ",
+   "after": " eso.",
+   "answer": "ha ocurrido",
+   "options": [
+    "ha ocurrido",
+    "ha ocurrado",
+    "ha ocurrió",
+    "ha ocurrir"
+   ],
+   "line": "Nunca se me ha ocurrido eso.",
+   "ko": "그건 한 번도 생각이 안 났어.",
+   "en": "That never occurred to me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ocurrido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ocurrido."
+  },
+  {
+   "before": "",
+   "after": " el libro a su madre.",
+   "answer": "Ha dedicado",
+   "options": [
+    "Ha dedicado",
+    "Ha dedicido",
+    "Ha dedicó",
+    "Ha dedicar"
+   ],
+   "line": "Ha dedicado el libro a su madre.",
+   "ko": "그 책을 어머니께 바쳤어.",
+   "en": "She dedicated the book to her mother.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha dedicado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha dedicado."
+  },
+  {
+   "before": "",
+   "after": " el plan con calma.",
+   "answer": "Ha explicado",
+   "options": [
+    "Ha explicado",
+    "Ha explicido",
+    "Ha explicó",
+    "Ha explicar"
+   ],
+   "line": "Ha explicado el plan con calma.",
+   "ko": "차분히 계획을 설명했어.",
+   "en": "He explained the plan calmly.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha explicado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha explicado."
+  },
+  {
+   "before": "",
+   "after": " una lesión cerebral leve.",
+   "answer": "Ha sufrido",
+   "options": [
+    "Ha sufrido",
+    "Ha sufrado",
+    "Ha sufrió",
+    "Ha sufrir"
+   ],
+   "line": "Ha sufrido una lesión cerebral leve.",
+   "ko": "가벼운 뇌 부상을 입었어.",
+   "en": "He suffered a mild brain injury.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha sufrido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha sufrido."
+  },
+  {
+   "before": "",
+   "after": " la bandera al amanecer.",
+   "answer": "Han izado",
+   "options": [
+    "Han izado",
+    "Han izido",
+    "Han izaron",
+    "Han izar"
+   ],
+   "line": "Han izado la bandera al amanecer.",
+   "ko": "새벽에 깃발을 게양했어.",
+   "en": "They raised the flag at dawn.",
+   "whyKo": "현재완료는 haber + 과거분사라 han izado예요.",
+   "whyEn": "The present perfect is haber + past participle: han izado."
+  },
+  {
+   "before": "Una ola grande ",
+   "after": " la barca.",
+   "answer": "ha empujado",
+   "options": [
+    "ha empujado",
+    "ha empujido",
+    "ha empujó",
+    "ha empujar"
+   ],
+   "line": "Una ola grande ha empujado la barca.",
+   "ko": "큰 파도가 배를 밀어붙였어.",
+   "en": "A big wave pushed the boat.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha empujado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha empujado."
+  },
+  {
+   "before": "Se ",
+   "after": " por una tontería.",
+   "answer": "han peleado",
+   "options": [
+    "han peleado",
+    "han peleido",
+    "han pelearon",
+    "han pelear"
+   ],
+   "line": "Se han peleado por una tontería.",
+   "ko": "그들은 하찮은 일로 싸웠어.",
+   "en": "They fought over something silly.",
+   "whyKo": "현재완료는 haber + 과거분사라 han peleado예요.",
+   "whyEn": "The present perfect is haber + past participle: han peleado."
+  },
+  {
+   "before": "El avión ",
+   "after": " sin problemas.",
+   "answer": "ha volado",
+   "options": [
+    "ha volado",
+    "ha volido",
+    "ha voló",
+    "ha volar"
+   ],
+   "line": "El avión ha volado sin problemas.",
+   "ko": "비행기가 문제없이 날았어.",
+   "en": "The plane flew without problems.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha volado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha volado."
+  },
+  {
+   "before": "Me ",
+   "after": " muy temprano hoy.",
+   "answer": "he levantado",
+   "options": [
+    "he levantado",
+    "he levantido",
+    "he levanté",
+    "he levantar"
+   ],
+   "line": "Me he levantado muy temprano hoy.",
+   "ko": "오늘 아주 일찍 일어났어.",
+   "en": "I got up very early today.",
+   "whyKo": "현재완료는 haber + 과거분사라 he levantado예요.",
+   "whyEn": "The present perfect is haber + past participle: he levantado."
+  },
+  {
+   "before": "",
+   "after": " sin pensarlo dos veces.",
+   "answer": "Ha disparado",
+   "options": [
+    "Ha disparado",
+    "Ha disparido",
+    "Ha disparó",
+    "Ha disparar"
+   ],
+   "line": "Ha disparado sin pensarlo dos veces.",
+   "ko": "두 번 생각도 안 하고 쐈어.",
+   "en": "He shot without thinking twice.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha disparado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha disparado."
+  },
+  {
+   "before": "Al primer intento no ",
+   "after": ".",
+   "answer": "ha funcionado",
+   "options": [
+    "ha funcionado",
+    "ha funcionido",
+    "ha funcionó",
+    "ha funcionar"
+   ],
+   "line": "Al primer intento no ha funcionado.",
+   "ko": "첫 시도에는 안 됐어.",
+   "en": "It didn't work on the first try.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha funcionado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha funcionado."
+  },
+  {
+   "before": "La nave ",
+   "after": " al amanecer.",
+   "answer": "ha zarpado",
+   "options": [
+    "ha zarpado",
+    "ha zarpido",
+    "ha zarpó",
+    "ha zarpar"
+   ],
+   "line": "La nave ha zarpado al amanecer.",
+   "ko": "배가 새벽에 출항했어.",
+   "en": "The ship set sail at dawn.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha zarpado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha zarpado."
+  },
+  {
+   "before": "",
+   "after": " venganza tras la traición.",
+   "answer": "Ha jurado",
+   "options": [
+    "Ha jurado",
+    "Ha jurido",
+    "Ha juró",
+    "Ha jurar"
+   ],
+   "line": "Ha jurado venganza tras la traición.",
+   "ko": "그는 배신 뒤에 복수를 다짐했어.",
+   "en": "He swore revenge after the betrayal.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha jurado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha jurado."
+  },
+  {
+   "before": "La muerte de su padre nos ",
+   "after": ".",
+   "answer": "ha dolido",
+   "options": [
+    "ha dolido",
+    "ha dolado",
+    "ha dolió",
+    "ha doler"
+   ],
+   "line": "La muerte de su padre nos ha dolido.",
+   "ko": "그 사람 아버지가 돌아가셔서 우리 마음이 아팠어.",
+   "en": "His father's death hurt us.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha dolido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha dolido."
+  },
+  {
+   "before": "El barco ",
+   "after": " al amanecer.",
+   "answer": "ha zarpado",
+   "options": [
+    "ha zarpado",
+    "ha zarpido",
+    "ha zarpó",
+    "ha zarpar"
+   ],
+   "line": "El barco ha zarpado al amanecer.",
+   "ko": "배가 새벽에 출항했어.",
+   "en": "The ship set sail at dawn.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha zarpado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha zarpado."
+  },
+  {
+   "before": "El plan ",
+   "after": " muy efectivo.",
+   "answer": "ha resultado",
+   "options": [
+    "ha resultado",
+    "ha resultido",
+    "ha resultó",
+    "ha resultar"
+   ],
+   "line": "El plan ha resultado muy efectivo.",
+   "ko": "그 계획이 아주 효과적이었어.",
+   "en": "The plan turned out very effective.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha resultado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha resultado."
+  },
+  {
+   "before": "",
+   "after": " de golpe al oír el ruido.",
+   "answer": "Ha callado",
+   "options": [
+    "Ha callado",
+    "Ha callido",
+    "Ha calló",
+    "Ha callar"
+   ],
+   "line": "Ha callado de golpe al oír el ruido.",
+   "ko": "소리를 듣자마자 갑자기 입을 다물었어.",
+   "en": "He fell silent suddenly when he heard the noise.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha callado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha callado."
+  },
+  {
+   "before": "Allí ",
+   "after": " el carro.",
+   "answer": "he dejado",
+   "options": [
+    "he dejado",
+    "he dejido",
+    "he dejé",
+    "he dejar"
+   ],
+   "line": "Allí he dejado el carro.",
+   "ko": "거기에 차를 뒀어.",
+   "en": "I left the car there.",
+   "whyKo": "현재완료는 haber + 과거분사라 he dejado예요.",
+   "whyEn": "The present perfect is haber + past participle: he dejado."
+  },
+  {
+   "before": "",
+   "after": " la cena con calma.",
+   "answer": "He preparado",
+   "options": [
+    "He preparado",
+    "He preparido",
+    "He preparé",
+    "He preparar"
+   ],
+   "line": "He preparado la cena con calma.",
+   "ko": "여유 있게 저녁을 차렸어.",
+   "en": "I made dinner at a leisurely pace.",
+   "whyKo": "현재완료는 haber + 과거분사라 he preparado예요.",
+   "whyEn": "The present perfect is haber + past participle: he preparado."
+  },
+  {
+   "before": "",
+   "after": " la espada en su vaina.",
+   "answer": "Ha guardado",
+   "options": [
+    "Ha guardado",
+    "Ha guardido",
+    "Ha guardó",
+    "Ha guardar"
+   ],
+   "line": "Ha guardado la espada en su vaina.",
+   "ko": "검을 칼집에 넣었어.",
+   "en": "He put the sword back in its sheath.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha guardado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha guardado."
+  },
+  {
+   "before": "¿",
+   "after": " algo rico?",
+   "answer": "has comido",
+   "options": [
+    "has comido",
+    "has comado",
+    "has comiste",
+    "has comer"
+   ],
+   "line": "¿has comido algo rico?",
+   "ko": "맛있는 거 먹었어?",
+   "en": "Did you eat something good?",
+   "whyKo": "현재완료는 haber + 과거분사라 has comido예요.",
+   "whyEn": "The present perfect is haber + past participle: has comido."
+  },
+  {
+   "before": "",
+   "after": " una excusa para no ir.",
+   "answer": "Ha inventado",
+   "options": [
+    "Ha inventado",
+    "Ha inventido",
+    "Ha inventó",
+    "Ha inventar"
+   ],
+   "line": "Ha inventado una excusa para no ir.",
+   "ko": "그는 안 가려고 핑계를 만들어 냈어.",
+   "en": "He made up an excuse not to go.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha inventado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha inventado."
+  },
+  {
+   "before": "Se ",
+   "after": " de la enfermedad.",
+   "answer": "ha recuperado",
+   "options": [
+    "ha recuperado",
+    "ha recuperido",
+    "ha recuperó",
+    "ha recuperar"
+   ],
+   "line": "Se ha recuperado de la enfermedad.",
+   "ko": "병에서 회복됐어.",
+   "en": "She recovered from the illness.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha recuperado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha recuperado."
+  },
+  {
+   "before": "",
+   "after": " en casa todo el día.",
+   "answer": "Ha permanecido",
+   "options": [
+    "Ha permanecido",
+    "Ha permanecado",
+    "Ha permaneció",
+    "Ha permanecer"
+   ],
+   "line": "Ha permanecido en casa todo el día.",
+   "ko": "하루 종일 집에 있었어.",
+   "en": "He stayed home all day.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha permanecido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha permanecido."
+  },
+  {
+   "before": "El paciente se ",
+   "after": " bien.",
+   "answer": "ha recuperado",
+   "options": [
+    "ha recuperado",
+    "ha recuperido",
+    "ha recuperó",
+    "ha recuperar"
+   ],
+   "line": "El paciente se ha recuperado bien.",
+   "ko": "환자가 잘 회복됐어.",
+   "en": "The patient recovered well.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha recuperado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha recuperado."
+  },
+  {
+   "before": "Mira quién ",
+   "after": ".",
+   "answer": "ha llegado",
+   "options": [
+    "ha llegado",
+    "ha llegido",
+    "ha llegó",
+    "ha llegar"
+   ],
+   "line": "Mira quién ha llegado.",
+   "ko": "누가 왔는지 봐.",
+   "en": "Look who showed up.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha llegado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha llegado."
+  },
+  {
+   "before": "",
+   "after": " de pronto en la puerta.",
+   "answer": "Ha aparecido",
+   "options": [
+    "Ha aparecido",
+    "Ha aparecado",
+    "Ha apareció",
+    "Ha aparecer"
+   ],
+   "line": "Ha aparecido de pronto en la puerta.",
+   "ko": "갑자기 문 앞에 나타났어.",
+   "en": "He suddenly appeared at the door.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha aparecido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha aparecido."
+  },
+  {
+   "before": "Se me ",
+   "after": " el reloj.",
+   "answer": "ha parado",
+   "options": [
+    "ha parado",
+    "ha parido",
+    "ha paró",
+    "ha parar"
+   ],
+   "line": "Se me ha parado el reloj.",
+   "ko": "시계가 멈췄어.",
+   "en": "My watch stopped.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha parado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha parado."
+  },
+  {
+   "before": "",
+   "after": " toda la noche.",
+   "answer": "Ha caminado",
+   "options": [
+    "Ha caminado",
+    "Ha caminido",
+    "Ha caminó",
+    "Ha caminar"
+   ],
+   "line": "Ha caminado toda la noche.",
+   "ko": "밤새 걸었어.",
+   "en": "He walked all night.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha caminado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha caminado."
+  },
+  {
+   "before": "",
+   "after": " la verdad al final.",
+   "answer": "Ha averiguado",
+   "options": [
+    "Ha averiguado",
+    "Ha averiguido",
+    "Ha averiguó",
+    "Ha averiguar"
+   ],
+   "line": "Ha averiguado la verdad al final.",
+   "ko": "결국 진실을 알아냈어.",
+   "en": "She found out the truth in the end.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha averiguado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha averiguado."
+  },
+  {
+   "before": "El conductor ",
+   "after": " de golpe.",
+   "answer": "ha frenado",
+   "options": [
+    "ha frenado",
+    "ha frenido",
+    "ha frenó",
+    "ha frenar"
+   ],
+   "line": "El conductor ha frenado de golpe.",
+   "ko": "운전자가 갑자기 급정거했어.",
+   "en": "The driver slammed on the brakes.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha frenado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha frenado."
+  },
+  {
+   "before": "",
+   "after": " el paquete a tiempo.",
+   "answer": "Ha entregado",
+   "options": [
+    "Ha entregado",
+    "Ha entregido",
+    "Ha entregó",
+    "Ha entregar"
+   ],
+   "line": "Ha entregado el paquete a tiempo.",
+   "ko": "그는 제시간에 소포를 전달했어.",
+   "en": "He delivered the package on time.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha entregado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha entregado."
+  },
+  {
+   "before": "",
+   "after": " oponer su plan al mío.",
+   "answer": "Han decidido",
+   "options": [
+    "Han decidido",
+    "Han decidado",
+    "Han decidieron",
+    "Han decidir"
+   ],
+   "line": "Han decidido oponer su plan al mío.",
+   "ko": "그들은 내 계획에 맞설 계획을 세웠어.",
+   "en": "They decided to set their plan against mine.",
+   "whyKo": "현재완료는 haber + 과거분사라 han decidido예요.",
+   "whyEn": "The present perfect is haber + past participle: han decidido."
+  },
+  {
+   "before": "",
+   "after": " algo raro en el trabajo.",
+   "answer": "Ha sucedido",
+   "options": [
+    "Ha sucedido",
+    "Ha sucedado",
+    "Ha sucedió",
+    "Ha suceder"
+   ],
+   "line": "Ha sucedido algo raro en el trabajo.",
+   "ko": "직장에서 이상한 일이 생겼어.",
+   "en": "Something strange happened at work.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha sucedido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha sucedido."
+  },
+  {
+   "before": "",
+   "after": " huir de la policía.",
+   "answer": "Ha intentado",
+   "options": [
+    "Ha intentado",
+    "Ha intentido",
+    "Ha intentó",
+    "Ha intentar"
+   ],
+   "line": "Ha intentado huir de la policía.",
+   "ko": "그는 경찰에게서 도망치려 했어.",
+   "en": "He tried to flee from the police.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha intentado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha intentado."
+  },
+  {
+   "before": "¿Te ",
+   "after": " claro?",
+   "answer": "ha quedado",
+   "options": [
+    "ha quedado",
+    "ha quedido",
+    "ha quedó",
+    "ha quedar"
+   ],
+   "line": "¿Te ha quedado claro?",
+   "ko": "이해됐어?",
+   "en": "Did you get that?",
+   "whyKo": "현재완료는 haber + 과거분사라 ha quedado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha quedado."
+  },
+  {
+   "before": "El aplauso ",
+   "after": " toda la sala.",
+   "answer": "ha llenado",
+   "options": [
+    "ha llenado",
+    "ha llenido",
+    "ha llenó",
+    "ha llenar"
+   ],
+   "line": "El aplauso ha llenado toda la sala.",
+   "ko": "박수가 홀 전체를 가득 채웠어.",
+   "en": "The applause filled the whole hall.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha llenado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha llenado."
+  },
+  {
+   "before": "",
+   "after": " sus miedos con valor.",
+   "answer": "Ha enfrentado",
+   "options": [
+    "Ha enfrentado",
+    "Ha enfrentido",
+    "Ha enfrentó",
+    "Ha enfrentar"
+   ],
+   "line": "Ha enfrentado sus miedos con valor.",
+   "ko": "용기를 내서 두려움을 마주했어.",
+   "en": "He faced his fears with courage.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha enfrentado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha enfrentado."
+  },
+  {
+   "before": "Me ",
+   "after": " un café caliente.",
+   "answer": "ha ofrecido",
+   "options": [
+    "ha ofrecido",
+    "ha ofrecado",
+    "ha ofreció",
+    "ha ofrecer"
+   ],
+   "line": "Me ha ofrecido un café caliente.",
+   "ko": "따뜻한 커피를 권해 줬어.",
+   "en": "She offered me a hot coffee.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ofrecido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ofrecido."
+  },
+  {
+   "before": "",
+   "after": " la vista con los años.",
+   "answer": "Ha perdido",
+   "options": [
+    "Ha perdido",
+    "Ha perdado",
+    "Ha perdió",
+    "Ha perder"
+   ],
+   "line": "Ha perdido la vista con los años.",
+   "ko": "나이가 들며 시력을 잃었어.",
+   "en": "He lost his eyesight over the years.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha perdido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha perdido."
+  },
+  {
+   "before": "Le ",
+   "after": " una rosa roja.",
+   "answer": "he regalado",
+   "options": [
+    "he regalado",
+    "he regalido",
+    "he regalé",
+    "he regalar"
+   ],
+   "line": "Le he regalado una rosa roja.",
+   "ko": "빨간 장미를 선물했어.",
+   "en": "I gave her a red rose.",
+   "whyKo": "현재완료는 haber + 과거분사라 he regalado예요.",
+   "whyEn": "The present perfect is haber + past participle: he regalado."
+  },
+  {
+   "before": "",
+   "after": " con mi padre.",
+   "answer": "He hablado",
+   "options": [
+    "He hablado",
+    "He hablido",
+    "He hablé",
+    "He hablar"
+   ],
+   "line": "He hablado con mi padre.",
+   "ko": "아빠랑 얘기했어.",
+   "en": "I talked with my dad.",
+   "whyKo": "현재완료는 haber + 과거분사라 he hablado예요.",
+   "whyEn": "The present perfect is haber + past participle: he hablado."
+  },
+  {
+   "before": "",
+   "after": " la guitarra toda la tarde.",
+   "answer": "Ha tocado",
+   "options": [
+    "Ha tocado",
+    "Ha tocido",
+    "Ha tocó",
+    "Ha tocar"
+   ],
+   "line": "Ha tocado la guitarra toda la tarde.",
+   "ko": "오후 내내 기타를 쳤어.",
+   "en": "He played the guitar all afternoon.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha tocado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha tocado."
+  },
+  {
+   "before": "Se ",
+   "after": " totalmente.",
+   "answer": "ha equivocado",
+   "options": [
+    "ha equivocado",
+    "ha equivocido",
+    "ha equivocó",
+    "ha equivocar"
+   ],
+   "line": "Se ha equivocado totalmente.",
+   "ko": "완전히 틀렸어.",
+   "en": "He was totally wrong.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha equivocado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha equivocado."
+  },
+  {
+   "before": "Al principio me ",
+   "after": ".",
+   "answer": "ha costado",
+   "options": [
+    "ha costado",
+    "ha costido",
+    "ha costó",
+    "ha costar"
+   ],
+   "line": "Al principio me ha costado.",
+   "ko": "처음엔 힘들었지.",
+   "en": "At first it was hard for me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha costado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha costado."
+  },
+  {
+   "before": "El jefe ",
+   "after": " cerrar temprano.",
+   "answer": "ha ordenado",
+   "options": [
+    "ha ordenado",
+    "ha ordenido",
+    "ha ordenó",
+    "ha ordenar"
+   ],
+   "line": "El jefe ha ordenado cerrar temprano.",
+   "ko": "상사가 일찍 닫으라고 지시했어.",
+   "en": "The boss ordered them to close early.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ordenado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ordenado."
+  },
+  {
+   "before": "",
+   "after": " la bici en el garaje.",
+   "answer": "Ha guardado",
+   "options": [
+    "Ha guardado",
+    "Ha guardido",
+    "Ha guardó",
+    "Ha guardar"
+   ],
+   "line": "Ha guardado la bici en el garaje.",
+   "ko": "자전거를 차고에 넣었어.",
+   "en": "He put the bike in the garage.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha guardado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha guardado."
+  },
+  {
+   "before": "",
+   "after": " de alegría al verla.",
+   "answer": "Ha llorado",
+   "options": [
+    "Ha llorado",
+    "Ha llorido",
+    "Ha lloró",
+    "Ha llorar"
+   ],
+   "line": "Ha llorado de alegría al verla.",
+   "ko": "그녀를 보고 기쁨에 울었어.",
+   "en": "He cried with joy when he saw her.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha llorado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha llorado."
+  },
+  {
+   "before": "Un conocido me lo ",
+   "after": ".",
+   "answer": "ha contado",
+   "options": [
+    "ha contado",
+    "ha contido",
+    "ha contó",
+    "ha contar"
+   ],
+   "line": "Un conocido me lo ha contado.",
+   "ko": "아는 사람이 말해 줬어.",
+   "en": "An acquaintance told me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha contado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha contado."
+  },
+  {
+   "before": "Se ",
+   "after": " demasiado tarde.",
+   "answer": "ha enterado",
+   "options": [
+    "ha enterado",
+    "ha enterido",
+    "ha enteró",
+    "ha enterar"
+   ],
+   "line": "Se ha enterado demasiado tarde.",
+   "ko": "너무 늦게 알게 됐어.",
+   "en": "He found out too late.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha enterado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha enterado."
+  },
+  {
+   "before": "",
+   "after": " un palo seco del suelo.",
+   "answer": "Ha recogido",
+   "options": [
+    "Ha recogido",
+    "Ha recogado",
+    "Ha recogió",
+    "Ha recoger"
+   ],
+   "line": "Ha recogido un palo seco del suelo.",
+   "ko": "그는 땅에서 마른 막대기를 주웠어.",
+   "en": "He picked up a dry stick from the ground.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha recogido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha recogido."
+  },
+  {
+   "before": "",
+   "after": " la silla de la mesa.",
+   "answer": "Ha alejado",
+   "options": [
+    "Ha alejado",
+    "Ha alejido",
+    "Ha alejó",
+    "Ha alejar"
+   ],
+   "line": "Ha alejado la silla de la mesa.",
+   "ko": "의자를 테이블에서 멀리 밀었어.",
+   "en": "He moved the chair away from the table.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha alejado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha alejado."
+  },
+  {
+   "before": "",
+   "after": " una fortuna de su abuelo.",
+   "answer": "Ha heredado",
+   "options": [
+    "Ha heredado",
+    "Ha heredido",
+    "Ha heredó",
+    "Ha heredar"
+   ],
+   "line": "Ha heredado una fortuna de su abuelo.",
+   "ko": "할아버지에게서 재산을 상속받았어.",
+   "en": "He inherited a fortune from his grandfather.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha heredado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha heredado."
+  },
+  {
+   "before": "",
+   "after": " el cañón al amanecer.",
+   "answer": "Han disparado",
+   "options": [
+    "Han disparado",
+    "Han disparido",
+    "Han dispararon",
+    "Han disparar"
+   ],
+   "line": "Han disparado el cañón al amanecer.",
+   "ko": "새벽에 대포를 발사했어.",
+   "en": "They fired the cannon at dawn.",
+   "whyKo": "현재완료는 haber + 과거분사라 han disparado예요.",
+   "whyEn": "The present perfect is haber + past participle: han disparado."
+  },
+  {
+   "before": "",
+   "after": " haber visto nada.",
+   "answer": "Ha negado",
+   "options": [
+    "Ha negado",
+    "Ha negido",
+    "Ha negó",
+    "Ha negar"
+   ],
+   "line": "Ha negado haber visto nada.",
+   "ko": "아무것도 못 봤다고 부인했어.",
+   "en": "He denied having seen anything.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha negado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha negado."
+  },
+  {
+   "before": "No sé qué ",
+   "after": ".",
+   "answer": "ha pasado",
+   "options": [
+    "ha pasado",
+    "ha pasido",
+    "ha pasó",
+    "ha pasar"
+   ],
+   "line": "No sé qué ha pasado.",
+   "ko": "무슨 일인지 모르겠어.",
+   "en": "I don't know what happened.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha pasado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha pasado."
+  },
+  {
+   "before": "Nos ",
+   "after": " a su boda.",
+   "answer": "han invitado",
+   "options": [
+    "han invitado",
+    "han invitido",
+    "han invitaron",
+    "han invitar"
+   ],
+   "line": "Nos han invitado a su boda.",
+   "ko": "그들이 자기네 결혼식에 초대했어.",
+   "en": "They invited us to their wedding.",
+   "whyKo": "현재완료는 haber + 과거분사라 han invitado예요.",
+   "whyEn": "The present perfect is haber + past participle: han invitado."
+  },
+  {
+   "before": "",
+   "after": " a los niños a dormir.",
+   "answer": "Ha mandado",
+   "options": [
+    "Ha mandado",
+    "Ha mandido",
+    "Ha mandó",
+    "Ha mandar"
+   ],
+   "line": "Ha mandado a los niños a dormir.",
+   "ko": "아이들을 재우러 보냈어.",
+   "en": "He sent the kids to bed.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha mandado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha mandado."
+  },
+  {
+   "before": "El combate ",
+   "after": " en empate.",
+   "answer": "ha terminado",
+   "options": [
+    "ha terminado",
+    "ha terminido",
+    "ha terminó",
+    "ha terminar"
+   ],
+   "line": "El combate ha terminado en empate.",
+   "ko": "경기가 무승부로 끝났어.",
+   "en": "The fight ended in a draw.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha terminado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha terminado."
+  },
+  {
+   "before": "Todavía no ",
+   "after": " al ganador.",
+   "answer": "han anunciado",
+   "options": [
+    "han anunciado",
+    "han anunciido",
+    "han anunciaron",
+    "han anunciar"
+   ],
+   "line": "Todavía no han anunciado al ganador.",
+   "ko": "아직 우승자를 발표하지 않았어.",
+   "en": "They still haven't announced the winner.",
+   "whyKo": "현재완료는 haber + 과거분사라 han anunciado예요.",
+   "whyEn": "The present perfect is haber + past participle: han anunciado."
+  },
+  {
+   "before": "El detective ",
+   "after": " una pista.",
+   "answer": "ha hallado",
+   "options": [
+    "ha hallado",
+    "ha hallido",
+    "ha halló",
+    "ha hallar"
+   ],
+   "line": "El detective ha hallado una pista.",
+   "ko": "형사가 단서를 찾았어.",
+   "en": "The detective found a clue.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha hallado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha hallado."
+  },
+  {
+   "before": "Un ave pequeña ",
+   "after": " en la rama.",
+   "answer": "ha posado",
+   "options": [
+    "ha posado",
+    "ha posido",
+    "ha posó",
+    "ha posar"
+   ],
+   "line": "Un ave pequeña ha posado en la rama.",
+   "ko": "작은 새가 나뭇가지에 앉았어.",
+   "en": "A small bird landed on the branch.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha posado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha posado."
+  },
+  {
+   "before": "",
+   "after": " una solución sencilla.",
+   "answer": "Ha hallado",
+   "options": [
+    "Ha hallado",
+    "Ha hallido",
+    "Ha halló",
+    "Ha hallar"
+   ],
+   "line": "Ha hallado una solución sencilla.",
+   "ko": "간단한 해결책을 찾아냈어.",
+   "en": "He found a simple solution.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha hallado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha hallado."
+  },
+  {
+   "before": "",
+   "after": " toda la noche.",
+   "answer": "Ha bailado",
+   "options": [
+    "Ha bailado",
+    "Ha bailido",
+    "Ha bailó",
+    "Ha bailar"
+   ],
+   "line": "Ha bailado toda la noche.",
+   "ko": "밤새 춤췄어.",
+   "en": "She danced all night.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha bailado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha bailado."
+  },
+  {
+   "before": "",
+   "after": " la derrota con dignidad.",
+   "answer": "Ha admitido",
+   "options": [
+    "Ha admitido",
+    "Ha admitado",
+    "Ha admitió",
+    "Ha admitir"
+   ],
+   "line": "Ha admitido la derrota con dignidad.",
+   "ko": "그는 품위 있게 패배를 인정했어.",
+   "en": "He admitted defeat with dignity.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha admitido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha admitido."
+  },
+  {
+   "before": "",
+   "after": " el cargo sin dudar.",
+   "answer": "Ha asumido",
+   "options": [
+    "Ha asumido",
+    "Ha asumado",
+    "Ha asumió",
+    "Ha asumir"
+   ],
+   "line": "Ha asumido el cargo sin dudar.",
+   "ko": "그는 망설임 없이 그 자리를 맡았어.",
+   "en": "He assumed the position without hesitation.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha asumido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha asumido."
+  },
+  {
+   "before": "Lo ",
+   "after": " y quizá sí.",
+   "answer": "he pensado",
+   "options": [
+    "he pensado",
+    "he pensido",
+    "he pensé",
+    "he pensar"
+   ],
+   "line": "Lo he pensado y quizá sí.",
+   "ko": "생각해 봤는데, 아마 그럴 거야.",
+   "en": "I thought about it, and maybe yes.",
+   "whyKo": "현재완료는 haber + 과거분사라 he pensado예요.",
+   "whyEn": "The present perfect is haber + past participle: he pensado."
+  },
+  {
+   "before": "Me ",
+   "after": " su respuesta.",
+   "answer": "ha sorprendido",
+   "options": [
+    "ha sorprendido",
+    "ha sorprendado",
+    "ha sorprendió",
+    "ha sorprender"
+   ],
+   "line": "Me ha sorprendido su respuesta.",
+   "ko": "그의 대답에 놀랐어.",
+   "en": "His answer surprised me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha sorprendido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha sorprendido."
+  },
+  {
+   "before": "",
+   "after": " salvar al perro.",
+   "answer": "Ha logrado",
+   "options": [
+    "Ha logrado",
+    "Ha logrido",
+    "Ha logró",
+    "Ha lograr"
+   ],
+   "line": "Ha logrado salvar al perro.",
+   "ko": "개를 구해 냈어.",
+   "en": "He managed to save the dog.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha logrado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha logrado."
+  },
+  {
+   "before": "",
+   "after": " al rehén sin violencia.",
+   "answer": "Han liberado",
+   "options": [
+    "Han liberado",
+    "Han liberido",
+    "Han liberaron",
+    "Han liberar"
+   ],
+   "line": "Han liberado al rehén sin violencia.",
+   "ko": "폭력 없이 인질을 풀어 줬어.",
+   "en": "They freed the hostage without violence.",
+   "whyKo": "현재완료는 haber + 과거분사라 han liberado예요.",
+   "whyEn": "The present perfect is haber + past participle: han liberado."
+  },
+  {
+   "before": "Se ",
+   "after": " la rodilla al caer.",
+   "answer": "ha lastimado",
+   "options": [
+    "ha lastimado",
+    "ha lastimido",
+    "ha lastimó",
+    "ha lastimar"
+   ],
+   "line": "Se ha lastimado la rodilla al caer.",
+   "ko": "넘어지면서 무릎을 다쳤어.",
+   "en": "He hurt his knee when he fell.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha lastimado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha lastimado."
+  },
+  {
+   "before": "Ya ",
+   "after": " mi decisión.",
+   "answer": "he tomado",
+   "options": [
+    "he tomado",
+    "he tomido",
+    "he tomé",
+    "he tomar"
+   ],
+   "line": "Ya he tomado mi decisión.",
+   "ko": "이미 결정했어.",
+   "en": "I've already made my decision.",
+   "whyKo": "현재완료는 haber + 과거분사라 he tomado예요.",
+   "whyEn": "The present perfect is haber + past participle: he tomado."
+  },
+  {
+   "before": "",
+   "after": " un cuadro en la pared.",
+   "answer": "Han colgado",
+   "options": [
+    "Han colgado",
+    "Han colgido",
+    "Han colgaron",
+    "Han colgar"
+   ],
+   "line": "Han colgado un cuadro en la pared.",
+   "ko": "벽에 그림을 걸었어.",
+   "en": "They hung a picture on the wall.",
+   "whyKo": "현재완료는 haber + 과거분사라 han colgado예요.",
+   "whyEn": "The present perfect is haber + past participle: han colgado."
+  },
+  {
+   "before": "",
+   "after": " pasta con salsa de tomate.",
+   "answer": "He cenado",
+   "options": [
+    "He cenado",
+    "He cenido",
+    "He cené",
+    "He cenar"
+   ],
+   "line": "He cenado pasta con salsa de tomate.",
+   "ko": "저녁으로 토마토 소스 파스타를 먹었어.",
+   "en": "I had pasta with tomato sauce for dinner.",
+   "whyKo": "현재완료는 haber + 과거분사라 he cenado예요.",
+   "whyEn": "The present perfect is haber + past participle: he cenado."
+  },
+  {
+   "before": "",
+   "after": " su promesa sin dudar.",
+   "answer": "Ha cumplido",
+   "options": [
+    "Ha cumplido",
+    "Ha cumplado",
+    "Ha cumplió",
+    "Ha cumplir"
+   ],
+   "line": "Ha cumplido su promesa sin dudar.",
+   "ko": "그는 망설임 없이 약속을 지켰어.",
+   "en": "He kept his promise without hesitation.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cumplido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cumplido."
+  },
+  {
+   "before": "¿Dónde lo ",
+   "after": "?",
+   "answer": "has encontrado",
+   "options": [
+    "has encontrado",
+    "has encontrido",
+    "has encontraste",
+    "has encontrar"
+   ],
+   "line": "¿Dónde lo has encontrado?",
+   "ko": "어디서 찾았어?",
+   "en": "Where did you find it?",
+   "whyKo": "현재완료는 haber + 과거분사라 has encontrado예요.",
+   "whyEn": "The present perfect is haber + past participle: has encontrado."
+  },
+  {
+   "before": "Se ",
+   "after": " ante su majestad.",
+   "answer": "ha inclinado",
+   "options": [
+    "ha inclinado",
+    "ha inclinido",
+    "ha inclinó",
+    "ha inclinar"
+   ],
+   "line": "Se ha inclinado ante su majestad.",
+   "ko": "폐하 앞에서 고개를 숙였어.",
+   "en": "He bowed before his majesty.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha inclinado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha inclinado."
+  },
+  {
+   "before": "",
+   "after": " el cuadro en la pared.",
+   "answer": "Ha colgado",
+   "options": [
+    "Ha colgado",
+    "Ha colgido",
+    "Ha colgó",
+    "Ha colgar"
+   ],
+   "line": "Ha colgado el cuadro en la pared.",
+   "ko": "그림을 벽에 걸었어.",
+   "en": "He hung the painting on the wall.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha colgado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha colgado."
+  },
+  {
+   "before": "Se ",
+   "after": " muy temprano.",
+   "answer": "ha levantado",
+   "options": [
+    "ha levantado",
+    "ha levantido",
+    "ha levantó",
+    "ha levantar"
+   ],
+   "line": "Se ha levantado muy temprano.",
+   "ko": "아주 일찍 일어났어.",
+   "en": "He got up very early.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha levantado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha levantado."
+  },
+  {
+   "before": "Se ",
+   "after": " porque llegué tarde.",
+   "answer": "ha enfadado",
+   "options": [
+    "ha enfadado",
+    "ha enfadido",
+    "ha enfadó",
+    "ha enfadar"
+   ],
+   "line": "Se ha enfadado porque llegué tarde.",
+   "ko": "내가 늦어서 그녀가 화났어.",
+   "en": "She got angry because I arrived late.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha enfadado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha enfadado."
+  },
+  {
+   "before": "",
+   "after": " en ti todo el día.",
+   "answer": "He pensado",
+   "options": [
+    "He pensado",
+    "He pensido",
+    "He pensé",
+    "He pensar"
+   ],
+   "line": "He pensado en ti todo el día.",
+   "ko": "하루 종일 너 생각했어.",
+   "en": "I thought about you all day.",
+   "whyKo": "현재완료는 haber + 과거분사라 he pensado예요.",
+   "whyEn": "The present perfect is haber + past participle: he pensado."
+  },
+  {
+   "before": "Se ",
+   "after": " el cabello corto.",
+   "answer": "ha cortado",
+   "options": [
+    "ha cortado",
+    "ha cortido",
+    "ha cortó",
+    "ha cortar"
+   ],
+   "line": "Se ha cortado el cabello corto.",
+   "ko": "머리를 짧게 잘랐어.",
+   "en": "She cut her hair short.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cortado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cortado."
+  },
+  {
+   "before": "",
+   "after": " su nombre de la lista.",
+   "answer": "Han eliminado",
+   "options": [
+    "Han eliminado",
+    "Han eliminido",
+    "Han eliminaron",
+    "Han eliminar"
+   ],
+   "line": "Han eliminado su nombre de la lista.",
+   "ko": "목록에서 그의 이름을 지웠어.",
+   "en": "They removed his name from the list.",
+   "whyKo": "현재완료는 haber + 과거분사라 han eliminado예요.",
+   "whyEn": "The present perfect is haber + past participle: han eliminado."
+  },
+  {
+   "before": "Creo que el destino nos ",
+   "after": ".",
+   "answer": "ha unido",
+   "options": [
+    "ha unido",
+    "ha unado",
+    "ha unió",
+    "ha unir"
+   ],
+   "line": "Creo que el destino nos ha unido.",
+   "ko": "운명이 우리를 만나게 한 것 같아.",
+   "en": "I think destiny brought us together.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha unido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha unido."
+  },
+  {
+   "before": "",
+   "after": " dormirse para no hablar.",
+   "answer": "Ha fingido",
+   "options": [
+    "Ha fingido",
+    "Ha fingado",
+    "Ha fingió",
+    "Ha fingir"
+   ],
+   "line": "Ha fingido dormirse para no hablar.",
+   "ko": "말하기 싫어서 잠든 척했어.",
+   "en": "He pretended to fall asleep so he wouldn't have to talk.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha fingido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha fingido."
+  },
+  {
+   "before": "Se ",
+   "after": " frente a la estación.",
+   "answer": "han reunido",
+   "options": [
+    "han reunido",
+    "han reunado",
+    "han reunieron",
+    "han reunir"
+   ],
+   "line": "Se han reunido frente a la estación.",
+   "ko": "그들은 역 앞에서 모였어.",
+   "en": "They met in front of the station.",
+   "whyKo": "현재완료는 haber + 과거분사라 han reunido예요.",
+   "whyEn": "The present perfect is haber + past participle: han reunido."
+  },
+  {
+   "before": "Un beso de despedida ",
+   "after": ".",
+   "answer": "ha bastado",
+   "options": [
+    "ha bastado",
+    "ha bastido",
+    "ha bastó",
+    "ha bastar"
+   ],
+   "line": "Un beso de despedida ha bastado.",
+   "ko": "작별 키스 한 번이면 충분했어.",
+   "en": "A goodbye kiss was enough.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha bastado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha bastado."
+  },
+  {
+   "before": "",
+   "after": " su voto en silencio.",
+   "answer": "Ha emitido",
+   "options": [
+    "Ha emitido",
+    "Ha emitado",
+    "Ha emitió",
+    "Ha emitir"
+   ],
+   "line": "Ha emitido su voto en silencio.",
+   "ko": "조용히 투표했어.",
+   "en": "He cast his vote in silence.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha emitido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha emitido."
+  },
+  {
+   "before": "",
+   "after": " decir solo la verdad.",
+   "answer": "Ha jurado",
+   "options": [
+    "Ha jurado",
+    "Ha jurido",
+    "Ha juró",
+    "Ha jurar"
+   ],
+   "line": "Ha jurado decir solo la verdad.",
+   "ko": "진실만 말하겠다고 맹세했어.",
+   "en": "He swore to tell only the truth.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha jurado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha jurado."
+  },
+  {
+   "before": "Lo ",
+   "after": " en la cárcel por robo.",
+   "answer": "han metido",
+   "options": [
+    "han metido",
+    "han metado",
+    "han metieron",
+    "han meter"
+   ],
+   "line": "Lo han metido en la cárcel por robo.",
+   "ko": "절도 때문에 그를 감옥에 넣었어.",
+   "en": "They put him in jail for theft.",
+   "whyKo": "현재완료는 haber + 과거분사라 han metido예요.",
+   "whyEn": "The present perfect is haber + past participle: han metido."
+  },
+  {
+   "before": "",
+   "after": " su pecado en voz baja.",
+   "answer": "Ha confesado",
+   "options": [
+    "Ha confesado",
+    "Ha confesido",
+    "Ha confesó",
+    "Ha confesar"
+   ],
+   "line": "Ha confesado su pecado en voz baja.",
+   "ko": "그는 낮은 목소리로 자신의 죄를 고백했어.",
+   "en": "He confessed his sin in a low voice.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha confesado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha confesado."
+  },
+  {
+   "before": "",
+   "after": " con una pluma de tinta.",
+   "answer": "Ha firmado",
+   "options": [
+    "Ha firmado",
+    "Ha firmido",
+    "Ha firmó",
+    "Ha firmar"
+   ],
+   "line": "Ha firmado con una pluma de tinta.",
+   "ko": "잉크 펜으로 서명했어.",
+   "en": "He signed with an ink pen.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha firmado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha firmado."
+  },
+  {
+   "before": "",
+   "after": " el cargo sin dudar.",
+   "answer": "Ha aceptado",
+   "options": [
+    "Ha aceptado",
+    "Ha aceptido",
+    "Ha aceptó",
+    "Ha aceptar"
+   ],
+   "line": "Ha aceptado el cargo sin dudar.",
+   "ko": "망설임 없이 그 직책을 수락했어.",
+   "en": "He accepted the position without hesitation.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha aceptado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha aceptado."
+  },
+  {
+   "before": "La lluvia ",
+   "after": " toda la calle.",
+   "answer": "ha empapado",
+   "options": [
+    "ha empapado",
+    "ha empapido",
+    "ha empapó",
+    "ha empapar"
+   ],
+   "line": "La lluvia ha empapado toda la calle.",
+   "ko": "비가 길 전체를 흠뻑 적셨어.",
+   "en": "The rain soaked the whole street.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha empapado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha empapado."
+  },
+  {
+   "before": "¿Ya ",
+   "after": " el paquete?",
+   "answer": "has recibido",
+   "options": [
+    "has recibido",
+    "has recibado",
+    "has recibiste",
+    "has recibir"
+   ],
+   "line": "¿Ya has recibido el paquete?",
+   "ko": "택배 벌써 받았어?",
+   "en": "Did you get the package yet?",
+   "whyKo": "현재완료는 haber + 과거분사라 has recibido예요.",
+   "whyEn": "The present perfect is haber + past participle: has recibido."
+  },
+  {
+   "before": "Se ",
+   "after": " una aguja en el dedo.",
+   "answer": "ha clavado",
+   "options": [
+    "ha clavado",
+    "ha clavido",
+    "ha clavó",
+    "ha clavar"
+   ],
+   "line": "Se ha clavado una aguja en el dedo.",
+   "ko": "바늘에 손가락을 찔렸어.",
+   "en": "She pricked her finger with a needle.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha clavado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha clavado."
+  },
+  {
+   "before": "",
+   "after": " al escenario con nervios.",
+   "answer": "Ha subido",
+   "options": [
+    "Ha subido",
+    "Ha subado",
+    "Ha subió",
+    "Ha subir"
+   ],
+   "line": "Ha subido al escenario con nervios.",
+   "ko": "긴장한 채로 무대에 올랐어.",
+   "en": "He went up on stage feeling nervous.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha subido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha subido."
+  },
+  {
+   "before": "",
+   "after": " un cadáver en el río.",
+   "answer": "Han encontrado",
+   "options": [
+    "Han encontrado",
+    "Han encontrido",
+    "Han encontraron",
+    "Han encontrar"
+   ],
+   "line": "Han encontrado un cadáver en el río.",
+   "ko": "강에서 시체를 발견했어.",
+   "en": "They found a corpse in the river.",
+   "whyKo": "현재완료는 haber + 과거분사라 han encontrado예요.",
+   "whyEn": "The present perfect is haber + past participle: han encontrado."
+  },
+  {
+   "before": "Se ",
+   "after": " en un lío enorme.",
+   "answer": "ha metido",
+   "options": [
+    "ha metido",
+    "ha metado",
+    "ha metió",
+    "ha meter"
+   ],
+   "line": "Se ha metido en un lío enorme.",
+   "ko": "그는 엄청난 말썽에 휘말렸어.",
+   "en": "He got into a huge mess.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha metido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha metido."
+  },
+  {
+   "before": "El perro ",
+   "after": " al ladrón.",
+   "answer": "ha atacado",
+   "options": [
+    "ha atacado",
+    "ha atacido",
+    "ha atacó",
+    "ha atacar"
+   ],
+   "line": "El perro ha atacado al ladrón.",
+   "ko": "개가 도둑을 공격했어.",
+   "en": "The dog attacked the thief.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha atacado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha atacado."
+  },
+  {
+   "before": "El mono ",
+   "after": " del árbol.",
+   "answer": "ha saltado",
+   "options": [
+    "ha saltado",
+    "ha saltido",
+    "ha saltó",
+    "ha saltar"
+   ],
+   "line": "El mono ha saltado del árbol.",
+   "ko": "원숭이가 나무에서 뛰어내렸어.",
+   "en": "The monkey jumped from the tree.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha saltado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha saltado."
+  },
+  {
+   "before": "Nos ",
+   "after": " de un gran lío.",
+   "answer": "ha salvado",
+   "options": [
+    "ha salvado",
+    "ha salvido",
+    "ha salvó",
+    "ha salvar"
+   ],
+   "line": "Nos ha salvado de un gran lío.",
+   "ko": "큰 난장판에서 우릴 구해 줬어.",
+   "en": "He saved us from a big mess.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha salvado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha salvado."
+  },
+  {
+   "before": "El golpe no ",
+   "after": " daño.",
+   "answer": "ha dejado",
+   "options": [
+    "ha dejado",
+    "ha dejido",
+    "ha dejó",
+    "ha dejar"
+   ],
+   "line": "El golpe no ha dejado daño.",
+   "ko": "그 충격으로 상처는 안 남았어.",
+   "en": "The hit left no damage.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha dejado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha dejado."
+  },
+  {
+   "before": "Se ",
+   "after": " de forma rara.",
+   "answer": "ha comportado",
+   "options": [
+    "ha comportado",
+    "ha comportido",
+    "ha comportó",
+    "ha comportar"
+   ],
+   "line": "Se ha comportado de forma rara.",
+   "ko": "행동이 이상했어.",
+   "en": "He behaved in a weird way.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha comportado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha comportado."
+  },
+  {
+   "before": "Esa crema ",
+   "after": " mi piel irritada.",
+   "answer": "ha curado",
+   "options": [
+    "ha curado",
+    "ha curido",
+    "ha curó",
+    "ha curar"
+   ],
+   "line": "Esa crema ha curado mi piel irritada.",
+   "ko": "그 크림이 자극받은 피부를 나았어.",
+   "en": "That cream healed my irritated skin.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha curado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha curado."
+  },
+  {
+   "before": "",
+   "after": " la casa sin avisar.",
+   "answer": "Ha abandonado",
+   "options": [
+    "Ha abandonado",
+    "Ha abandonido",
+    "Ha abandonó",
+    "Ha abandonar"
+   ],
+   "line": "Ha abandonado la casa sin avisar.",
+   "ko": "말도 없이 집을 떠났어.",
+   "en": "He left the house without saying anything.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha abandonado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha abandonado."
+  },
+  {
+   "before": "Alguien ",
+   "after": " la puerta.",
+   "answer": "ha golpeado",
+   "options": [
+    "ha golpeado",
+    "ha golpeido",
+    "ha golpeó",
+    "ha golpear"
+   ],
+   "line": "Alguien ha golpeado la puerta.",
+   "ko": "누가 문을 두드렸어.",
+   "en": "Someone knocked on the door.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha golpeado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha golpeado."
+  },
+  {
+   "before": "",
+   "after": " un show increíble.",
+   "answer": "Han montado",
+   "options": [
+    "Han montado",
+    "Han montido",
+    "Han montaron",
+    "Han montar"
+   ],
+   "line": "Han montado un show increíble.",
+   "ko": "멋진 쇼를 올렸어.",
+   "en": "They put on an incredible show.",
+   "whyKo": "현재완료는 haber + 과거분사라 han montado예요.",
+   "whyEn": "The present perfect is haber + past participle: han montado."
+  },
+  {
+   "before": "Lo ",
+   "after": " para ti.",
+   "answer": "he comprado",
+   "options": [
+    "he comprado",
+    "he comprido",
+    "he compré",
+    "he comprar"
+   ],
+   "line": "Lo he comprado para ti.",
+   "ko": "너를 위해 샀어.",
+   "en": "I bought it for you.",
+   "whyKo": "현재완료는 haber + 과거분사라 he comprado예요.",
+   "whyEn": "The present perfect is haber + past participle: he comprado."
+  },
+  {
+   "before": "Se ",
+   "after": " la uña de color rojo.",
+   "answer": "ha pintado",
+   "options": [
+    "ha pintado",
+    "ha pintido",
+    "ha pintó",
+    "ha pintar"
+   ],
+   "line": "Se ha pintado la uña de color rojo.",
+   "ko": "손톱을 빨간색으로 칠했어.",
+   "en": "She painted her nail red.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha pintado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha pintado."
+  },
+  {
+   "before": "Ni siquiera me ",
+   "after": ".",
+   "answer": "ha saludado",
+   "options": [
+    "ha saludado",
+    "ha saludido",
+    "ha saludó",
+    "ha saludar"
+   ],
+   "line": "Ni siquiera me ha saludado.",
+   "ko": "인사조차 안 했어.",
+   "en": "He didn't even say hello to me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha saludado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha saludado."
+  },
+  {
+   "before": "",
+   "after": " muy bien en la obra.",
+   "answer": "Ha actuado",
+   "options": [
+    "Ha actuado",
+    "Ha actuido",
+    "Ha actuó",
+    "Ha actuar"
+   ],
+   "line": "Ha actuado muy bien en la obra.",
+   "ko": "연극에서 연기를 아주 잘했어.",
+   "en": "She acted very well in the play.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha actuado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha actuado."
+  },
+  {
+   "before": "De repente ",
+   "after": " a llover.",
+   "answer": "ha empezado",
+   "options": [
+    "ha empezado",
+    "ha empezido",
+    "ha empezó",
+    "ha empezar"
+   ],
+   "line": "De repente ha empezado a llover.",
+   "ko": "갑자기 비가 오기 시작했어.",
+   "en": "Suddenly it started to rain.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha empezado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha empezado."
+  },
+  {
+   "before": "Lo ",
+   "after": " cobarde por huir.",
+   "answer": "han llamado",
+   "options": [
+    "han llamado",
+    "han llamido",
+    "han llamaron",
+    "han llamar"
+   ],
+   "line": "Lo han llamado cobarde por huir.",
+   "ko": "도망쳤다고 그를 겁쟁이라고 불렀어.",
+   "en": "They called him a coward for running away.",
+   "whyKo": "현재완료는 haber + 과거분사라 han llamado예요.",
+   "whyEn": "The present perfect is haber + past participle: han llamado."
+  },
+  {
+   "before": "",
+   "after": " una medalla de oro.",
+   "answer": "Ha ganado",
+   "options": [
+    "Ha ganado",
+    "Ha ganido",
+    "Ha ganó",
+    "Ha ganar"
+   ],
+   "line": "Ha ganado una medalla de oro.",
+   "ko": "그는 금메달을 땄어.",
+   "en": "He won a gold medal.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ganado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ganado."
+  },
+  {
+   "before": "Me ",
+   "after": " tu ayuda.",
+   "answer": "ha salvado",
+   "options": [
+    "ha salvado",
+    "ha salvido",
+    "ha salvó",
+    "ha salvar"
+   ],
+   "line": "Me ha salvado tu ayuda.",
+   "ko": "네 도움이 날 살렸어.",
+   "en": "Your help saved me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha salvado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha salvado."
+  },
+  {
+   "before": "",
+   "after": " la verdad ante el juez.",
+   "answer": "Ha confesado",
+   "options": [
+    "Ha confesado",
+    "Ha confesido",
+    "Ha confesó",
+    "Ha confesar"
+   ],
+   "line": "Ha confesado la verdad ante el juez.",
+   "ko": "판사 앞에서 진실을 고백했어.",
+   "en": "He confessed the truth before the judge.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha confesado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha confesado."
+  },
+  {
+   "before": "Me ",
+   "after": " de que habría tráfico.",
+   "answer": "ha avisado",
+   "options": [
+    "ha avisado",
+    "ha avisido",
+    "ha avisó",
+    "ha avisar"
+   ],
+   "line": "Me ha avisado de que habría tráfico.",
+   "ko": "차가 막힐 거라고 알려 줬어.",
+   "en": "He warned me there would be traffic.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha avisado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha avisado."
+  },
+  {
+   "before": "Se ",
+   "after": " detrás del sofá.",
+   "answer": "ha escondido",
+   "options": [
+    "ha escondido",
+    "ha escondado",
+    "ha escondió",
+    "ha esconder"
+   ],
+   "line": "Se ha escondido detrás del sofá.",
+   "ko": "소파 뒤에 숨었어.",
+   "en": "He hid behind the sofa.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha escondido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha escondido."
+  },
+  {
+   "before": "",
+   "after": " un misil en el radar.",
+   "answer": "Han detectado",
+   "options": [
+    "Han detectado",
+    "Han detectido",
+    "Han detectaron",
+    "Han detectar"
+   ],
+   "line": "Han detectado un misil en el radar.",
+   "ko": "레이더에서 미사일을 탐지했어.",
+   "en": "They detected a missile on the radar.",
+   "whyKo": "현재완료는 haber + 과거분사라 han detectado예요.",
+   "whyEn": "The present perfect is haber + past participle: han detectado."
+  },
+  {
+   "before": "Le ",
+   "after": " una flor roja.",
+   "answer": "ha regalado",
+   "options": [
+    "ha regalado",
+    "ha regalido",
+    "ha regaló",
+    "ha regalar"
+   ],
+   "line": "Le ha regalado una flor roja.",
+   "ko": "빨간 꽃 한 송이를 선물했어.",
+   "en": "He gave her a red flower.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha regalado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha regalado."
+  },
+  {
+   "before": "",
+   "after": " de alegría al verlo.",
+   "answer": "Ha gritado",
+   "options": [
+    "Ha gritado",
+    "Ha gritido",
+    "Ha gritó",
+    "Ha gritar"
+   ],
+   "line": "Ha gritado de alegría al verlo.",
+   "ko": "그를 보고 기뻐서 소리쳤어.",
+   "en": "She shouted with joy when she saw him.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha gritado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha gritado."
+  },
+  {
+   "before": "Mi abogado me ",
+   "after": " hoy.",
+   "answer": "ha llamado",
+   "options": [
+    "ha llamado",
+    "ha llamido",
+    "ha llamó",
+    "ha llamar"
+   ],
+   "line": "Mi abogado me ha llamado hoy.",
+   "ko": "내 변호사가 오늘 전화했어.",
+   "en": "My lawyer called me today.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha llamado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha llamado."
+  },
+  {
+   "before": "",
+   "after": " tras el autobús.",
+   "answer": "Ha corrido",
+   "options": [
+    "Ha corrido",
+    "Ha corrado",
+    "Ha corrió",
+    "Ha correr"
+   ],
+   "line": "Ha corrido tras el autobús.",
+   "ko": "버스를 쫓아 달렸어.",
+   "en": "She ran after the bus.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha corrido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha corrido."
+  },
+  {
+   "before": "",
+   "after": " los brazos sobre el pecho.",
+   "answer": "Ha cruzado",
+   "options": [
+    "Ha cruzado",
+    "Ha cruzido",
+    "Ha cruzó",
+    "Ha cruzar"
+   ],
+   "line": "Ha cruzado los brazos sobre el pecho.",
+   "ko": "가슴에 팔을 교차했어.",
+   "en": "He crossed his arms over his chest.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha cruzado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha cruzado."
+  },
+  {
+   "before": "El rey ",
+   "after": " la corona de oro.",
+   "answer": "ha llevado",
+   "options": [
+    "ha llevado",
+    "ha llevido",
+    "ha llevó",
+    "ha llevar"
+   ],
+   "line": "El rey ha llevado la corona de oro.",
+   "ko": "왕이 금관을 썼어.",
+   "en": "The king wore the golden crown.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha llevado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha llevado."
+  },
+  {
+   "before": "",
+   "after": " un método nuevo.",
+   "answer": "Han utilizado",
+   "options": [
+    "Han utilizado",
+    "Han utilizido",
+    "Han utilizaron",
+    "Han utilizar"
+   ],
+   "line": "Han utilizado un método nuevo.",
+   "ko": "새 방법을 썼어.",
+   "en": "They used a new method.",
+   "whyKo": "현재완료는 haber + 과거분사라 han utilizado예요.",
+   "whyEn": "The present perfect is haber + past participle: han utilizado."
+  },
+  {
+   "before": "El resultado me ",
+   "after": ".",
+   "answer": "ha sorprendido",
+   "options": [
+    "ha sorprendido",
+    "ha sorprendado",
+    "ha sorprendió",
+    "ha sorprender"
+   ],
+   "line": "El resultado me ha sorprendido.",
+   "ko": "결과가 나를 놀라게 했어.",
+   "en": "The result surprised me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha sorprendido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha sorprendido."
+  },
+  {
+   "before": "",
+   "after": " el anuncio en la web.",
+   "answer": "Han publicado",
+   "options": [
+    "Han publicado",
+    "Han publicido",
+    "Han publicaron",
+    "Han publicar"
+   ],
+   "line": "Han publicado el anuncio en la web.",
+   "ko": "웹에 공지를 올렸어.",
+   "en": "They posted the announcement on the web.",
+   "whyKo": "현재완료는 haber + 과거분사라 han publicado예요.",
+   "whyEn": "The present perfect is haber + past participle: han publicado."
+  },
+  {
+   "before": "",
+   "after": " la demo del nuevo juego.",
+   "answer": "He probado",
+   "options": [
+    "He probado",
+    "He probido",
+    "He probé",
+    "He probar"
+   ],
+   "line": "He probado la demo del nuevo juego.",
+   "ko": "새 게임의 데모를 해 봤어.",
+   "en": "I tried the demo of the new game.",
+   "whyKo": "현재완료는 haber + 과거분사라 he probado예요.",
+   "whyEn": "The present perfect is haber + past participle: he probado."
+  },
+  {
+   "before": "El plan ",
+   "after": " a última hora.",
+   "answer": "ha fallado",
+   "options": [
+    "ha fallado",
+    "ha fallido",
+    "ha falló",
+    "ha fallar"
+   ],
+   "line": "El plan ha fallado a última hora.",
+   "ko": "계획이 막판에 실패했어.",
+   "en": "The plan failed at the last minute.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha fallado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha fallado."
+  },
+  {
+   "before": "",
+   "after": " agua del pozo antiguo.",
+   "answer": "Han sacado",
+   "options": [
+    "Han sacado",
+    "Han sacido",
+    "Han sacaron",
+    "Han sacar"
+   ],
+   "line": "Han sacado agua del pozo antiguo.",
+   "ko": "오래된 우물에서 물을 길어 왔어.",
+   "en": "They drew water from the old well.",
+   "whyKo": "현재완료는 haber + 과거분사라 han sacado예요.",
+   "whyEn": "The present perfect is haber + past participle: han sacado."
+  },
+  {
+   "before": "",
+   "after": " a su amigo sin dudar.",
+   "answer": "Ha defendido",
+   "options": [
+    "Ha defendido",
+    "Ha defendado",
+    "Ha defendió",
+    "Ha defender"
+   ],
+   "line": "Ha defendido a su amigo sin dudar.",
+   "ko": "망설임 없이 친구를 변호했어.",
+   "en": "He defended his friend without hesitation.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha defendido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha defendido."
+  },
+  {
+   "before": "Todos ",
+   "after": " amén al final.",
+   "answer": "han respondido",
+   "options": [
+    "han respondido",
+    "han respondado",
+    "han respondieron",
+    "han responder"
+   ],
+   "line": "Todos han respondido amén al final.",
+   "ko": "모두가 마지막에 아멘이라고 응답했어.",
+   "en": "Everyone answered amen at the end.",
+   "whyKo": "현재완료는 haber + 과거분사라 han respondido예요.",
+   "whyEn": "The present perfect is haber + past participle: han respondido."
+  },
+  {
+   "before": "Nos ",
+   "after": " fotos del viaje.",
+   "answer": "ha mostrado",
+   "options": [
+    "ha mostrado",
+    "ha mostrido",
+    "ha mostró",
+    "ha mostrar"
+   ],
+   "line": "Nos ha mostrado fotos del viaje.",
+   "ko": "여행 사진을 보여 줬어.",
+   "en": "She showed us photos from the trip.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha mostrado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha mostrado."
+  },
+  {
+   "before": "Se me ",
+   "after": " la sangre.",
+   "answer": "ha helado",
+   "options": [
+    "ha helado",
+    "ha helido",
+    "ha heló",
+    "ha helar"
+   ],
+   "line": "Se me ha helado la sangre.",
+   "ko": "소름이 돋았어.",
+   "en": "My blood ran cold.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha helado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha helado."
+  },
+  {
+   "before": "",
+   "after": " la pelota con una mano.",
+   "answer": "Ha atrapado",
+   "options": [
+    "Ha atrapado",
+    "Ha atrapido",
+    "Ha atrapó",
+    "Ha atrapar"
+   ],
+   "line": "Ha atrapado la pelota con una mano.",
+   "ko": "한 손으로 공을 잡았어.",
+   "en": "He caught the ball with one hand.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha atrapado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha atrapado."
+  },
+  {
+   "before": "",
+   "after": " por caridad, no por fama.",
+   "answer": "Ha actuado",
+   "options": [
+    "Ha actuado",
+    "Ha actuido",
+    "Ha actuó",
+    "Ha actuar"
+   ],
+   "line": "Ha actuado por caridad, no por fama.",
+   "ko": "명예가 아니라 자비로 행동했어.",
+   "en": "He acted out of charity, not for fame.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha actuado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha actuado."
+  },
+  {
+   "before": "",
+   "after": " una carrera muy dura.",
+   "answer": "Ha corrido",
+   "options": [
+    "Ha corrido",
+    "Ha corrado",
+    "Ha corrió",
+    "Ha correr"
+   ],
+   "line": "Ha corrido una carrera muy dura.",
+   "ko": "아주 힘든 경기를 뛰었어.",
+   "en": "He ran a very tough race.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha corrido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha corrido."
+  },
+  {
+   "before": "",
+   "after": " un millón en la lotería.",
+   "answer": "Ha ganado",
+   "options": [
+    "Ha ganado",
+    "Ha ganido",
+    "Ha ganó",
+    "Ha ganar"
+   ],
+   "line": "Ha ganado un millón en la lotería.",
+   "ko": "복권으로 백만을 땄어.",
+   "en": "He won a million in the lottery.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ganado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ganado."
+  },
+  {
+   "before": "¿",
+   "after": " el regalo?",
+   "answer": "has comprado",
+   "options": [
+    "has comprado",
+    "has comprido",
+    "has compraste",
+    "has comprar"
+   ],
+   "line": "¿has comprado el regalo?",
+   "ko": "선물 샀어?",
+   "en": "Did you buy the gift?",
+   "whyKo": "현재완료는 haber + 과거분사라 has comprado예요.",
+   "whyEn": "The present perfect is haber + past participle: has comprado."
+  },
+  {
+   "before": "",
+   "after": " un grado la temperatura.",
+   "answer": "Ha subido",
+   "options": [
+    "Ha subido",
+    "Ha subado",
+    "Ha subió",
+    "Ha subir"
+   ],
+   "line": "Ha subido un grado la temperatura.",
+   "ko": "기온이 일 도 올랐어.",
+   "en": "The temperature went up a degree.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha subido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha subido."
+  },
+  {
+   "before": "",
+   "after": " la cima al mediodía.",
+   "answer": "Han alcanzado",
+   "options": [
+    "Han alcanzado",
+    "Han alcanzido",
+    "Han alcanzaron",
+    "Han alcanzar"
+   ],
+   "line": "Han alcanzado la cima al mediodía.",
+   "ko": "그들은 정오에 정상에 올랐어.",
+   "en": "They reached the summit at noon.",
+   "whyKo": "현재완료는 haber + 과거분사라 han alcanzado예요.",
+   "whyEn": "The present perfect is haber + past participle: han alcanzado."
+  },
+  {
+   "before": "",
+   "after": " mucho daño al coche.",
+   "answer": "Ha causado",
+   "options": [
+    "Ha causado",
+    "Ha causido",
+    "Ha causó",
+    "Ha causar"
+   ],
+   "line": "Ha causado mucho daño al coche.",
+   "ko": "차에 큰 손해를 입혔어.",
+   "en": "It did a lot of damage to the car.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha causado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha causado."
+  },
+  {
+   "before": "",
+   "after": " un caballo blanco.",
+   "answer": "Ha montado",
+   "options": [
+    "Ha montado",
+    "Ha montido",
+    "Ha montó",
+    "Ha montar"
+   ],
+   "line": "Ha montado un caballo blanco.",
+   "ko": "흰 말을 탔어.",
+   "en": "He rode a white horse.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha montado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha montado."
+  },
+  {
+   "before": "",
+   "after": " el tesoro durante años.",
+   "answer": "Han buscado",
+   "options": [
+    "Han buscado",
+    "Han buscido",
+    "Han buscaron",
+    "Han buscar"
+   ],
+   "line": "Han buscado el tesoro durante años.",
+   "ko": "그들은 수년 동안 보물을 찾았어.",
+   "en": "They searched for the treasure for years.",
+   "whyKo": "현재완료는 haber + 과거분사라 han buscado예요.",
+   "whyEn": "The present perfect is haber + past participle: han buscado."
+  },
+  {
+   "before": "El perro se ",
+   "after": " del patio.",
+   "answer": "ha escapado",
+   "options": [
+    "ha escapado",
+    "ha escapido",
+    "ha escapó",
+    "ha escapar"
+   ],
+   "line": "El perro se ha escapado del patio.",
+   "ko": "개가 마당에서 도망쳤어.",
+   "en": "The dog got out of the yard.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha escapado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha escapado."
+  },
+  {
+   "before": "",
+   "after": " demasiado en responder.",
+   "answer": "Ha tardado",
+   "options": [
+    "Ha tardado",
+    "Ha tardido",
+    "Ha tardó",
+    "Ha tardar"
+   ],
+   "line": "Ha tardado demasiado en responder.",
+   "ko": "답하는 데 너무 오래 걸렸어.",
+   "en": "He took too long to reply.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha tardado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha tardado."
+  },
+  {
+   "before": "Ella ",
+   "after": " en pagar la cuenta.",
+   "answer": "ha insistido",
+   "options": [
+    "ha insistido",
+    "ha insistado",
+    "ha insistió",
+    "ha insistir"
+   ],
+   "line": "Ella ha insistido en pagar la cuenta.",
+   "ko": "그녀가 계산서를 내겠다고 고집했어.",
+   "en": "She insisted on paying the bill.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha insistido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha insistido."
+  },
+  {
+   "before": "Un monje budista nos ",
+   "after": " té.",
+   "answer": "ha ofrecido",
+   "options": [
+    "ha ofrecido",
+    "ha ofrecado",
+    "ha ofreció",
+    "ha ofrecer"
+   ],
+   "line": "Un monje budista nos ha ofrecido té.",
+   "ko": "불교 승려가 우리에게 차를 권했어.",
+   "en": "A Buddhist monk offered us tea.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha ofrecido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha ofrecido."
+  },
+  {
+   "before": "El trueno me ",
+   "after": " de verdad.",
+   "answer": "ha asustado",
+   "options": [
+    "ha asustado",
+    "ha asustido",
+    "ha asustó",
+    "ha asustar"
+   ],
+   "line": "El trueno me ha asustado de verdad.",
+   "ko": "천둥이 진짜 나를 놀래켰어.",
+   "en": "The thunder really scared me.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha asustado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha asustado."
+  },
+  {
+   "before": "El público ",
+   "after": " fuerte.",
+   "answer": "ha aplaudido",
+   "options": [
+    "ha aplaudido",
+    "ha aplaudado",
+    "ha aplaudió",
+    "ha aplaudir"
+   ],
+   "line": "El público ha aplaudido fuerte.",
+   "ko": "관객이 크게 박수쳤어.",
+   "en": "The audience clapped loudly.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha aplaudido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha aplaudido."
+  },
+  {
+   "before": "",
+   "after": " la calle sin mirar.",
+   "answer": "Ha atravesado",
+   "options": [
+    "Ha atravesado",
+    "Ha atravesido",
+    "Ha atravesó",
+    "Ha atravesar"
+   ],
+   "line": "Ha atravesado la calle sin mirar.",
+   "ko": "그는 보지도 않고 길을 건넜어.",
+   "en": "He crossed the street without looking.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha atravesado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha atravesado."
+  },
+  {
+   "before": "El cerdo se ",
+   "after": " del corral.",
+   "answer": "ha escapado",
+   "options": [
+    "ha escapado",
+    "ha escapido",
+    "ha escapó",
+    "ha escapar"
+   ],
+   "line": "El cerdo se ha escapado del corral.",
+   "ko": "돼지가 우리에서 탈출했어.",
+   "en": "The pig escaped from the pen.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha escapado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha escapado."
+  },
+  {
+   "before": "¿Se lo ",
+   "after": " a tu mamá?",
+   "answer": "has enviado",
+   "options": [
+    "has enviado",
+    "has enviido",
+    "has enviaste",
+    "has enviar"
+   ],
+   "line": "¿Se lo has enviado a tu mamá?",
+   "ko": "엄마한테 보냈어?",
+   "en": "Did you send it to your mom?",
+   "whyKo": "현재완료는 haber + 과거분사라 has enviado예요.",
+   "whyEn": "The present perfect is haber + past participle: has enviado."
+  },
+  {
+   "before": "",
+   "after": " la pelota al jardín.",
+   "answer": "Ha tirado",
+   "options": [
+    "Ha tirado",
+    "Ha tirido",
+    "Ha tiró",
+    "Ha tirar"
+   ],
+   "line": "Ha tirado la pelota al jardín.",
+   "ko": "공을 정원으로 던졌어.",
+   "en": "He threw the ball into the garden.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha tirado예요.",
+   "whyEn": "The present perfect is haber + past participle: ha tirado."
+  },
+  {
+   "before": "",
+   "after": " el origen del rumor.",
+   "answer": "Han investigado",
+   "options": [
+    "Han investigado",
+    "Han investigido",
+    "Han investigaron",
+    "Han investigar"
+   ],
+   "line": "Han investigado el origen del rumor.",
+   "ko": "소문의 출처를 조사했어.",
+   "en": "They investigated the origin of the rumor.",
+   "whyKo": "현재완료는 haber + 과거분사라 han investigado예요.",
+   "whyEn": "The present perfect is haber + past participle: han investigado."
+  },
+  {
+   "before": "Ella ya ",
+   "after": ".",
+   "answer": "ha comido",
+   "options": [
+    "ha comido",
+    "ha comado",
+    "ha comió",
+    "ha comer"
+   ],
+   "line": "Ella ya ha comido.",
+   "ko": "걔는 벌써 밥 먹었어.",
+   "en": "She already ate.",
+   "whyKo": "현재완료는 haber + 과거분사라 ha comido예요.",
+   "whyEn": "The present perfect is haber + past participle: ha comido."
+  }
+ ],
+ "g|3:4": [
+  {
+   "before": "¿",
+   "after": " describir la casa con más detalle?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías describir la casa con más detalle?",
+   "ko": "그 집을 좀 더 자세히 설명해 줄래?",
+   "en": "Can you describe the house in more detail?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿",
+   "after": " aclarar lo que dijiste ayer?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías aclarar lo que dijiste ayer?",
+   "ko": "어제 한 말을 설명해 줄 수 있어?",
+   "en": "Can you clarify what you said yesterday?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿Me ",
+   "after": " prestar tu bolígrafo?",
+   "answer": "podrías",
+   "options": [
+    "podrías",
+    "poderías",
+    "puedrías",
+    "podríais"
+   ],
+   "line": "¿Me podrías prestar tu bolígrafo?",
+   "ko": "펜 좀 빌려줄래?",
+   "en": "Can you lend me your pen?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿Me ",
+   "after": " enseñar el camino?",
+   "answer": "podrías",
+   "options": [
+    "podrías",
+    "poderías",
+    "puedrías",
+    "podríais"
+   ],
+   "line": "¿Me podrías enseñar el camino?",
+   "ko": "길을 알려 줄 수 있어?",
+   "en": "Can you show me the way?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿",
+   "after": " repetir eso, por favor?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías repetir eso, por favor?",
+   "ko": "그것 다시 말해 줄래?",
+   "en": "Can you repeat that, please?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿",
+   "after": " encender la luz, por favor?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías encender la luz, por favor?",
+   "ko": "불 좀 켜 줄래?",
+   "en": "Can you turn on the light, please?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿",
+   "after": " mostrarme el plano?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías mostrarme el plano?",
+   "ko": "지도를 보여 줄 수 있어?",
+   "en": "Can you show me the map?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿Me ",
+   "after": " acompañar al médico?",
+   "answer": "podrías",
+   "options": [
+    "podrías",
+    "poderías",
+    "puedrías",
+    "podríais"
+   ],
+   "line": "¿Me podrías acompañar al médico?",
+   "ko": "병원에 같이 가 줄래?",
+   "en": "Can you come with me to the doctor?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿",
+   "after": " apagar la luz?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías apagar la luz?",
+   "ko": "불 좀 꺼 줄래?",
+   "en": "Can you turn off the light?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿",
+   "after": " venir a cenar?",
+   "answer": "Podrías",
+   "options": [
+    "Podrías",
+    "Poderías",
+    "Puedrías",
+    "Podríais"
+   ],
+   "line": "¿Podrías venir a cenar?",
+   "ko": "저녁 먹으러 올래?",
+   "en": "Can you come over for dinner?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿Me ",
+   "after": " explicar la regla otra vez?",
+   "answer": "podrías",
+   "options": [
+    "podrías",
+    "poderías",
+    "puedrías",
+    "podríais"
+   ],
+   "line": "¿Me podrías explicar la regla otra vez?",
+   "ko": "규칙을 한 번 더 설명해 줄래?",
+   "en": "Can you explain the rule again?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  },
+  {
+   "before": "¿Me ",
+   "after": " ayudar?",
+   "answer": "podrías",
+   "options": [
+    "podrías",
+    "poderías",
+    "puedrías",
+    "podríais"
+   ],
+   "line": "¿Me podrías ayudar?",
+   "ko": "나 좀 도와줄래?",
+   "en": "Can you help me?",
+   "whyKo": "공손한 부탁은 조건법이라 tú는 podrías예요.",
+   "whyEn": "A polite request uses the conditional: podrías for tú."
+  }
+ ]
+}

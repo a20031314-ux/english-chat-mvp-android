@@ -20,7 +20,7 @@ import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
 import { latestCheck } from "@/lib/curriculum/skillCheck";
-import { chooseFromPrepared, pickPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
+import { chooseFromPrepared, pickPrepared, turnPrepared, typeFromPrepared } from "@/lib/curriculum/preparedQuiz";
 import { knownSlotWeight } from "@/lib/curriculum/languagePairs";
 import { loadWordTraits } from "@/lib/curriculum/wordTraits";
 import { learnerLanguages } from "@/lib/curriculum/learnerLanguages";
@@ -307,12 +307,17 @@ export function Quizbank({
     if (question && how.bare) sureKeys.current.add(key);
     return question;
   };
+  /** 같은 칸의 바꾼 문장이 있는 문법 칸(problems/<언어>-gv.json)은 다시 볼 때도 그 칸 퀴즈 답 수 차례의 다른 문장으로. 없으면 null(묶음 퀴즈). */
+  const turnedGrammar = (key: string, events: readonly { k: string; src: string }[]): QuizQuestion | null => {
+    const item = prepared?.find((one) => one.key === key && one.kind === "grammar");
+    return item?.variants?.length ? chooseFromPrepared(turnPrepared(item, events.filter((one) => one.k === key && one.src === "quiz").length)) : null;
+  };
   /** 열쇠마다 카드 문제, 카드가 없는 열쇠(문법·문장구조 등)는 old(묶음 퀴즈)로 — 순서는 받은 대로. */
   const askKeys = (keys: readonly string[], old: (rest: readonly string[]) => { keys: string[]; questions: QuizQuestion[] }, noJudge = false): { keys: string[]; questions: QuizQuestion[] } => {
     const ledgerNow = readLedger(language);
     const face = cardFaces(ledgerNow);
     const answered = answeredKeys(ledgerNow);
-    const made = keys.map((key) => ({ key, question: askCard(key, face, answered, `${day}-${round}`, noJudge) }));
+    const made = keys.map((key) => ({ key, question: askCard(key, face, answered, `${day}-${round}`, noJudge) ?? turnedGrammar(key, ledgerNow) }));
     const rest = made.filter((one) => !one.question).map((one) => one.key);
     const back = rest.length ? old(rest) : { keys: [], questions: [] };
     const byKey = new Map(back.keys.map((key, index) => [key, back.questions[index]!] as const));
@@ -393,15 +398,17 @@ export function Quizbank({
     const questions: QuizQuestion[] = [];
     const used: string[] = [];
     const writtenWord = new Map((prepared ?? []).filter((item) => item.kind === "word").map((item) => [item.key, item]));
+    // 같은 칸은 나올 때마다 다른 문장(바꾼 사전 예문이 있는 칸만) — 이 폰 장부의 그 칸 퀴즈 답 수로 차례.
+    const asked = readLedger(language);
     for (const item of head) {
-      const made = chooseFromPrepared(item);
+      const made = chooseFromPrepared(turnPrepared(item, asked.filter((one) => one.k === item.key && one.src === "quiz").length));
       if (made) {
         questions.push(made);
         used.push(item.key);
       }
     }
     // 낱말·표현은 카드 한 장에서 한 칸 가림(카드가 없을 때만 넣어 둔 영어 단어 문제·묶음 퀴즈).
-    const ledgerNow = readLedger(language);
+    const ledgerNow = asked;
     const face = cardFaces(ledgerNow);
     const answered = answeredKeys(ledgerNow);
     for (const key of keys) {

@@ -8,7 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (15)
+## 탭이 확인할 것 (16)
 
 ### 탭 1 메인
 
@@ -38,6 +38,10 @@
 - **a261109-5-2** (2026-11-09 17:40, 탭 5 · 64865477) 광고 구조 다시 짬: 통화 끝 전면을 끝 화면 닫기로·숙제 끝 전면·장면 끝·숙제 화면·통화 기록 네이티브, My 칸 안 네이티브(바닥 칸도)·My 배너 없음, 사전·표현 카드·넘겨 보기·실력 확인 결과 네이티브, 수업 닫기 전면 없음
   - 기능: 처음 언어·튜터 고르기 · 사용법 · 새로워진 점 · 의견 보내기 · AI 채팅 · 자유대화 · 통화 끝 화면 · 이렇게도 말할 수 있었어요 · 통화 기록 · 1:1 메시지 · 단체방 · 사람 · 게시판 · 친구 초대 · Room · 방 게임 · 영상 학습 · 첫 측정 · 실력 확인 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 글자·소리 · 소재 수업 · 사전 주석 · 칸 설명 · 문장분석 · My에서 찾기 · 결제 화면 · 광고
   - 볼 곳: `components/studyMap/BankFlip.tsx` · `components/studyMap/Dictionary.tsx` · `components/studyMap/ExpressionCard.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/FrameLesson.tsx` · `components/studyMap/InlineQuiz.tsx` · `components/studyMap/LanguageBank.tsx` · `components/studyMap/LessonHost.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/QuizPlayer.tsx` … 9개 더
+  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+- **a261109-3-1** (2026-11-09 17:46, 탭 3 · d88135a) Quizbank 넣어 둔 문법 문제: 바꾼 사전 예문이 있는 칸(스페인어 g|3:1·g|3:4, 앱 언어 ko·en)은 나올 때마다 다른 문장(turnPrepared) — 다시 볼 것에서도. FirstCheck는 그대로.
+  - 기능: 첫 측정 · 실력 확인 · Logbank · Quizbank
+  - 볼 곳: `components/studyMap/Quizbank.tsx` · `components/notes/NotebookSection.tsx` · `components/studyMap/FirstCheck.tsx` · `components/studyMap/Logbank.tsx` · `components/studyMap/StudyMapTab.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
 ### 탭 3 AI
