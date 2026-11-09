@@ -2151,6 +2151,22 @@
    "blank": "adn"
   }
  ],
+ "w|adolescencia": [
+  {
+   "text": "Diego recuerda que en su adolescencia también ponía la música muy alta.",
+   "en": "Diego remembers that in his teens he also played music very loud.",
+   "ko": "디에고는 자기도 십 대 때 음악을 크게 틀었던 걸 기억해요.",
+   "blank": "adolescencia",
+   "src": "made"
+  },
+  {
+   "text": "Sofía recordó su propia adolescencia y escuchó a su hija sin interrumpir.",
+   "en": "Sofía remembered her own teenage years and listened to her daughter without interrupting.",
+   "ko": "소피아는 자기 십 대 시절을 떠올리며 딸의 말을 끊지 않고 들었어요.",
+   "blank": "adolescencia",
+   "src": "made"
+  }
+ ],
  "w|adolescente": [
   {
    "text": "Mi sobrino ya es un adolescente.",
@@ -3561,6 +3577,22 @@
    "en": "We sat in the left wing of the theater.",
    "ko": "극장 왼쪽 날개석에 앉았어.",
    "blank": "ala"
+  }
+ ],
+ "w|alabanza": [
+  {
+   "text": "En la reunión, Diego recibió la alabanza de todos por arreglar el ascensor.",
+   "en": "At the meeting, Diego received praise from everyone for fixing the lift.",
+   "ko": "회의에서 디에고는 엘리베이터를 고쳤다고 모두에게 칭찬을 받았어요.",
+   "blank": "alabanza",
+   "src": "made"
+  },
+  {
+   "text": "El guarda del parque dedicó una alabanza al grupo de Sofía por dejarlo todo limpio.",
+   "en": "The park ranger praised Sofía's group for leaving everything clean.",
+   "ko": "공원 관리인이 모든 걸 깨끗이 치웠다며 소피아 일행을 칭찬했어요.",
+   "blank": "alabanza",
+   "src": "made"
   }
  ],
  "w|alambre": [
@@ -6319,6 +6351,22 @@
    "blank": "antecedente"
   }
  ],
+ "w|antemano": [
+  {
+   "text": "Diego avisa a los vecinos de antemano cuando va a hacer obras en casa.",
+   "en": "Diego tells the neighbours in advance when he's going to do work on his flat.",
+   "ko": "디에고는 집수리를 할 때 이웃들에게 미리 알려요.",
+   "blank": "antemano",
+   "src": "made"
+  },
+  {
+   "text": "Sofía reservó la parcela de antemano porque en verano se llena.",
+   "en": "Sofía booked the pitch in advance because it fills up in summer.",
+   "ko": "여름에는 자리가 꽉 차서 소피아는 미리 예약했어요.",
+   "blank": "antemano",
+   "src": "made"
+  }
+ ],
  "w|antena": [
   {
    "text": "Raúl consultó un manual para instalar la antena del tejado de su casa.",
@@ -8997,6 +9045,22 @@
    "src": "made"
   }
  ],
+ "w|aseo": [
+  {
+   "text": "En el piso de Diego solo hay un aseo, así que por las mañanas hay cola.",
+   "en": "There is only one bathroom in Diego's flat, so there is a queue in the mornings.",
+   "ko": "디에고의 집에는 화장실이 하나뿐이라 아침마다 줄을 서요.",
+   "blank": "aseo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía fue al aseo del camping con la linterna porque no había luz en el camino.",
+   "en": "Sofía went to the campsite toilets with a torch because there was no light on the path.",
+   "ko": "길에 불이 없어서 소피아는 손전등을 들고 캠핑장 화장실에 갔어요.",
+   "blank": "aseo",
+   "src": "made"
+  }
+ ],
  "w|asesinar": [
   {
    "text": "Nadie quería asesinar a nadie.",
@@ -9717,6 +9781,22 @@
    "en": "Paper can jam the printer.",
    "ko": "종이가 프린터를 막을 수 있어.",
    "blank": "atascar"
+  }
+ ],
+ "w|atasco": [
+  {
+   "text": "Diego llegó tarde a la reunión de vecinos por un atasco en la autopista.",
+   "en": "Diego arrived late to the residents' meeting because of a traffic jam on the motorway.",
+   "ko": "디에고는 고속도로 정체 때문에 주민 회의에 늦었어요.",
+   "blank": "atasco",
+   "src": "made"
+  },
+  {
+   "text": "Por el camino, Sofía y sus amigas estuvieron una hora en un atasco.",
+   "en": "On the way, Sofía and her friends were stuck in a traffic jam for an hour.",
+   "ko": "가는 길에 소피아와 친구들은 한 시간 동안 차가 막혀 꼼짝 못 했어요.",
+   "blank": "atasco",
+   "src": "made"
   }
  ],
  "w|ataúd": [
@@ -10958,6 +11038,22 @@
    "en": "Lola's brother, an aircraft mechanic, swapped his shift to see her cross the finish line.",
    "ko": "항공 정비사인 롤라의 오빠는 결승선 들어오는 걸 보려고 근무를 바꿨어요.",
    "blank": "aviación",
+   "src": "made"
+  }
+ ],
+ "w|aviador": [
+  {
+   "text": "El abuelo del tercero fue aviador y le cuenta a Diego historias de sus vuelos.",
+   "en": "The grandfather on the third floor was an aviator and tells Diego stories about his flights.",
+   "ko": "삼 층 할아버지는 비행사였는데 디에고에게 비행 이야기를 들려줘요.",
+   "blank": "aviador",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le explicó a su hijo que un aviador había cruzado ese mismo valle en un avión pequeño.",
+   "en": "Sofía explained to her son that an aviator had crossed that same valley in a small plane.",
+   "ko": "소피아는 아들에게 한 비행사가 작은 비행기로 바로 그 골짜기를 건넜다고 설명했어요.",
+   "blank": "aviador",
    "src": "made"
   }
  ],
@@ -14489,6 +14585,22 @@
    "en": "Don't be rough with your siblings.",
    "ko": "형제자매에게 거칠게 굴지 마.",
    "blank": "bruto"
+  }
+ ],
+ "w|bucear": [
+  {
+   "text": "La vecina del quinto aprendió a bucear a los setenta años, y Diego la admira.",
+   "en": "The fifth-floor neighbour learned to dive at seventy, and Diego admires her.",
+   "ko": "오 층 이웃 할머니는 일흔에 잠수를 배웠는데, 디에고는 그분을 존경해요.",
+   "blank": "bucear",
+   "src": "made"
+  },
+  {
+   "text": "En el lago, Sofía se puso las gafas para bucear entre las rocas.",
+   "en": "In the lake, Sofía put on her goggles to dive among the rocks.",
+   "ko": "호수에서 소피아는 바위 사이로 잠수하려고 물안경을 썼어요.",
+   "blank": "bucear",
+   "src": "made"
   }
  ],
  "w|buceo": [
@@ -22953,6 +23065,22 @@
    "src": "made"
   }
  ],
+ "w|compinche": [
+  {
+   "text": "El compinche del niño del segundo es el perro de Diego.",
+   "en": "The partner in crime of the boy on the second floor is Diego's dog.",
+   "ko": "이 층 아이의 단짝 친구는 디에고의 개예요.",
+   "blank": "compinche",
+   "src": "made"
+  },
+  {
+   "text": "El perro de Sofía y el del camping de al lado se hicieron compinches enseguida.",
+   "en": "Sofía's dog and the one from the next pitch became partners in crime straight away.",
+   "ko": "소피아의 개와 옆자리 개는 금세 단짝이 됐어요.",
+   "blank": "compinches",
+   "src": "made"
+  }
+ ],
  "w|complacer": [
   {
    "text": "Siempre intenta complacer a sus padres.",
@@ -24270,6 +24398,22 @@
    "en": "The researchers signed a confidentiality agreement, so Paula can't say where the eagles nest.",
    "ko": "연구자들이 비밀 유지 협약에 서명해서 파울라는 독수리가 어디에 둥지를 트는지 말할 수 없어요.",
    "blank": "confidencialidad",
+   "src": "made"
+  }
+ ],
+ "w|confidente": [
+  {
+   "text": "La vecina mayor es la confidente de todos los niños del edificio, incluido el sobrino de Diego.",
+   "en": "The elderly neighbour is the confidante of all the children in the building, including Diego's nephew.",
+   "ko": "나이 든 이웃 할머니는 디에고의 조카를 포함해 건물 아이들 모두의 속마음을 들어 주는 사람이에요.",
+   "blank": "confidente",
+   "src": "made"
+  },
+  {
+   "text": "Para la hija de Sofía, su madre es su mejor confidente.",
+   "en": "For Sofía's daughter, her mother is her best confidante.",
+   "ko": "소피아의 딸에게 엄마는 가장 좋은 속 이야기 상대예요.",
+   "blank": "confidente",
    "src": "made"
   }
  ],
@@ -27593,6 +27737,22 @@
    "blank": "crema"
   }
  ],
+ "w|cremallera": [
+  {
+   "text": "A Diego se le rompió la cremallera de la chaqueta y la vecina se la cosió.",
+   "en": "The zip on Diego's jacket broke and the neighbour sewed it for him.",
+   "ko": "디에고의 재킷 지퍼가 고장 나서 이웃이 꿰매 줬어요.",
+   "blank": "cremallera",
+   "src": "made"
+  },
+  {
+   "text": "La cremallera de la tienda de Sofía se atascó la primera noche.",
+   "en": "The zip on Sofía's tent got stuck the first night.",
+   "ko": "첫날 밤 소피아의 텐트 지퍼가 걸려서 안 움직였어요.",
+   "blank": "cremallera",
+   "src": "made"
+  }
+ ],
  "w|cresta": [
   {
    "text": "Las olas llegaban con una cresta blanca de espuma y Raúl esperaba la mejor para surfear.",
@@ -27667,6 +27827,22 @@
    "en": "I was raised in a small town.",
    "ko": "작은 마을에서 자랐어.",
    "blank": "criado"
+  }
+ ],
+ "w|crianza": [
+  {
+   "text": "La vecina le da consejos a Diego sobre la crianza de su bebé.",
+   "en": "The neighbour gives Diego advice on raising his baby.",
+   "ko": "이웃이 디에고에게 아기 키우는 법에 대해 조언해 줘요.",
+   "blank": "crianza",
+   "src": "made"
+  },
+  {
+   "text": "Junto al fuego, Sofía y sus amigas hablaron de la crianza de los hijos.",
+   "en": "By the fire, Sofía and her friends talked about raising children.",
+   "ko": "모닥불 곁에서 소피아와 친구들은 아이 키우는 이야기를 나눴어요.",
+   "blank": "crianza",
+   "src": "made"
   }
  ],
  "w|criar": [
@@ -35083,6 +35259,22 @@
    "src": "made"
   }
  ],
+ "w|diva": [
+  {
+   "text": "La vecina del ático canta ópera y se comporta como una diva, pero Diego la adora.",
+   "en": "The penthouse neighbour sings opera and acts like a diva, but Diego adores her.",
+   "ko": "꼭대기 층 이웃은 오페라 가수인데 디바처럼 굴어도 디에고는 그녀를 아주 좋아해요.",
+   "blank": "diva",
+   "src": "made"
+  },
+  {
+   "text": "Su amiga Elena, que se cree una diva, se negó a dormir en el suelo, y Sofía le dejó su colchón.",
+   "en": "Her friend Elena, who thinks she's a diva, refused to sleep on the ground, and Sofía lent her her mattress.",
+   "ko": "자기가 디바인 줄 아는 친구 엘레나가 바닥에서 못 자겠다고 해서 소피아가 매트리스를 내줬어요.",
+   "blank": "diva",
+   "src": "made"
+  }
+ ],
  "w|diversión": [
   {
    "text": "La fiesta fue pura diversión.",
@@ -39982,6 +40174,22 @@
    "en": "At the airport, the scanner detected scissors in Lola's suitcase.",
    "ko": "공항에서 검색대 스캐너가 롤라의 가방 속 가위를 찾아냈어요.",
    "blank": "escáner",
+   "src": "made"
+  }
+ ],
+ "w|escapada": [
+  {
+   "text": "Diego y su pareja se fueron de escapada a la sierra y dejaron las plantas a la vecina.",
+   "en": "Diego and his partner went on a getaway to the mountains and left the plants with the neighbour.",
+   "ko": "디에고와 애인은 산으로 짧은 여행을 떠나며 화분을 이웃에게 맡겼어요.",
+   "blank": "escapada",
+   "src": "made"
+  },
+  {
+   "text": "Sofía y sus amigas se fueron de escapada a un camping junto al lago.",
+   "en": "Sofía and her friends went on a getaway to a campsite by the lake.",
+   "ko": "소피아와 친구들은 호숫가 캠핑장으로 짧은 여행을 떠났어요.",
+   "blank": "escapada",
    "src": "made"
   }
  ],
@@ -47183,6 +47391,22 @@
    "src": "made"
   }
  ],
+ "w|fragancia": [
+  {
+   "text": "En la escalera siempre hay una fragancia de jazmín que viene del balcón de Diego.",
+   "en": "There is always a jasmine fragrance on the stairs that comes from Diego's balcony.",
+   "ko": "계단에는 늘 디에고의 발코니에서 오는 재스민 향기가 나요.",
+   "blank": "fragancia",
+   "src": "made"
+  },
+  {
+   "text": "El jabón de Sofía tenía una fragancia de lavanda que llenaba toda la tienda.",
+   "en": "Sofía's soap had a lavender fragrance that filled the whole tent.",
+   "ko": "소피아의 비누에서 나는 라벤더 향기가 텐트 안을 가득 채웠어요.",
+   "blank": "fragancia",
+   "src": "made"
+  }
+ ],
  "w|frágil": [
   {
    "text": "El vaso es frágil: trátalo con cuidado.",
@@ -47209,6 +47433,22 @@
    "en": "She read a fragment of the novel out loud.",
    "ko": "소설 한 조각을 소리 내어 읽었어.",
    "blank": "fragmento"
+  }
+ ],
+ "w|frambuesa": [
+  {
+   "text": "Diego plantó frambuesas en el patio común y las comparte con los vecinos.",
+   "en": "Diego planted raspberries in the shared courtyard and shares them with the neighbours.",
+   "ko": "디에고는 공동 마당에 산딸기를 심어서 이웃들과 나눠 먹어요.",
+   "blank": "frambuesas",
+   "src": "made"
+  },
+  {
+   "text": "Por el sendero, Sofía encontró frambuesas silvestres y llenó un vaso.",
+   "en": "Along the trail, Sofía found wild raspberries and filled a cup.",
+   "ko": "산길에서 소피아는 야생 산딸기를 발견해 컵 하나를 채웠어요.",
+   "blank": "frambuesas",
+   "src": "made"
   }
  ],
  "w|francamente": [
@@ -49943,6 +50183,22 @@
    "src": "made"
   }
  ],
+ "w|gradualmente": [
+  {
+   "text": "Con los años, Diego se ha hecho gradualmente amigo de casi todo el edificio.",
+   "en": "Gradually, Diego has made friends with almost the whole building.",
+   "ko": "디에고는 차츰 건물 사람들 거의 모두와 친해졌어요.",
+   "blank": "gradualmente",
+   "src": "made"
+  },
+  {
+   "text": "La niebla del lago desapareció gradualmente y Sofía pudo ver las montañas.",
+   "en": "Gradually the mist over the lake disappeared and Sofía could see the mountains.",
+   "ko": "호수의 안개가 차츰 걷히자 소피아는 산을 볼 수 있었어요.",
+   "blank": "gradualmente",
+   "src": "made"
+  }
+ ],
  "w|graduarse": [
   {
    "text": "Quiere graduarse el próximo verano.",
@@ -50987,6 +51243,22 @@
    "blank": "habitual"
   }
  ],
+ "w|habitualmente": [
+  {
+   "text": "Los sábados, Diego habitualmente saca la basura cuando sale a correr.",
+   "en": "On Saturdays, Diego usually takes out the rubbish when he goes for a run.",
+   "ko": "토요일마다 디에고는 보통 달리러 나가면서 쓰레기를 내다 버려요.",
+   "blank": "habitualmente",
+   "src": "made"
+  },
+  {
+   "text": "Sofía habitualmente se despierta tarde, pero en el camping la despertaron los pájaros al amanecer.",
+   "en": "Sofía usually wakes up late, but at the campsite the birds woke her at dawn.",
+   "ko": "소피아는 평소에 늦게 일어나는데, 캠핑장에서는 새벽에 새소리에 깼어요.",
+   "blank": "habitualmente",
+   "src": "made"
+  }
+ ],
  "w|hablador": [
   {
    "text": "Hugo trabaja al lado de un compañero tan hablador que la jornada se le pasa volando.",
@@ -51118,6 +51390,22 @@
    "en": "Marta's coach doesn't usually flatter anyone, but that day he congratulated her.",
    "ko": "마르타의 코치는 원래 칭찬을 잘 안 하지만 그날은 축하해 줬어요.",
    "blank": "halagar",
+   "src": "made"
+  }
+ ],
+ "w|halago": [
+  {
+   "text": "Diego le hizo un halago al portero por lo limpio que estaba el portal.",
+   "en": "Diego paid the doorman a compliment on how clean the entrance was.",
+   "ko": "디에고는 현관이 아주 깨끗하다며 관리인에게 칭찬을 했어요.",
+   "blank": "halago",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le hizo un halago sincero a su hija por lo bien que había montado el fuego.",
+   "en": "Sofía paid her daughter a sincere compliment on how well she had built the fire.",
+   "ko": "소피아는 딸이 불을 아주 잘 피웠다고 진심으로 칭찬했어요.",
+   "blank": "halago",
    "src": "made"
   }
  ],
@@ -51623,6 +51911,22 @@
    "blank": "hermana"
   }
  ],
+ "w|hermanastro": [
+  {
+   "text": "El hermanastro de Diego se mudó al piso de al lado.",
+   "en": "Diego's stepbrother moved into the flat next door.",
+   "ko": "디에고의 의붓형이 바로 옆집으로 이사 왔어요.",
+   "blank": "hermanastro",
+   "src": "made"
+  },
+  {
+   "text": "El hermanastro de Sofía montó la tienda en diez minutos.",
+   "en": "Sofía's stepbrother put up the tent in ten minutes.",
+   "ko": "소피아의 의붓오빠가 십 분 만에 텐트를 쳤어요.",
+   "blank": "hermanastro",
+   "src": "made"
+  }
+ ],
  "w|hermandad": [
   {
    "text": "Entre las enfermeras del hospital hay una gran hermandad.",
@@ -51938,6 +52242,22 @@
    "en": "Lola carried toilet paper in her backpack because there's never any at festivals.",
    "ko": "페스티벌엔 늘 휴지가 없어서 롤라는 가방에 휴지를 챙겨 다녔어요.",
    "blank": "higiénico",
+   "src": "made"
+  }
+ ],
+ "w|hijastro": [
+  {
+   "text": "La vecina de Diego vive con su marido y el hijastro de este, que estudia medicina.",
+   "en": "Diego's neighbour lives with her husband and his stepson, who is studying medicine.",
+   "ko": "디에고의 이웃은 남편, 그리고 의대생인 남편의 의붓아들과 함께 살아요.",
+   "blank": "hijastro",
+   "src": "made"
+  },
+  {
+   "text": "Sofía llevó también a su hijastro, que nunca había dormido al aire libre.",
+   "en": "Sofía also brought her stepson, who had never slept outdoors.",
+   "ko": "소피아는 한 번도 밖에서 자 본 적 없는 의붓아들도 데려갔어요.",
+   "blank": "hijastro",
    "src": "made"
   }
  ],
@@ -52381,6 +52701,22 @@
    "blank": "homosexual"
   }
  ],
+ "w|homosexualidad": [
+  {
+   "text": "Diego vio un documental sobre cómo han cambiado las leyes sobre la homosexualidad en el último siglo.",
+   "en": "Diego watched a documentary on how laws about homosexuality have changed over the last century.",
+   "ko": "디에고는 지난 백 년 동안 동성애에 관한 법이 어떻게 바뀌었는지 다룬 다큐멘터리를 봤어요.",
+   "blank": "homosexualidad",
+   "src": "made"
+  },
+  {
+   "text": "En la radio del camping, Sofía escuchó un programa sobre la historia de la homosexualidad en el arte.",
+   "en": "On the campsite radio, Sofía heard a programme on the history of homosexuality in art.",
+   "ko": "캠핑장 라디오에서 소피아는 예술 속 동성애의 역사를 다룬 방송을 들었어요.",
+   "blank": "homosexualidad",
+   "src": "made"
+  }
+ ],
  "w|honda": [
   {
    "text": "Unos chavales rompieron una farola con una honda y Pablo habló con sus padres.",
@@ -52636,6 +52972,22 @@
    "en": "Carmen read that jet lag disrupts melatonin, a sleep hormone.",
    "ko": "카르멘은 시차가 수면 호르몬인 멜라토닌을 흐트러뜨린다는 글을 읽었어요.",
    "blank": "hormona",
+   "src": "made"
+  }
+ ],
+ "w|hornear": [
+  {
+   "text": "Los domingos, Diego suele hornear pan y le lleva una barra a la vecina.",
+   "en": "On Sundays, Diego usually bakes bread and takes a loaf to his neighbour.",
+   "ko": "일요일마다 디에고는 빵을 구워서 이웃에게 한 덩이 가져다줘요.",
+   "blank": "hornear",
+   "src": "made"
+  },
+  {
+   "text": "Sofía cocinó sobre las brasas un pescado envuelto en papel, porque allí no podía hornear nada.",
+   "en": "Sofía cooked a fish wrapped in paper over the embers, because she couldn't bake anything there.",
+   "ko": "거기선 오븐에 구울 수가 없어서 소피아는 생선을 종이에 싸서 숯불에 익혔어요.",
+   "blank": "hornear",
    "src": "made"
   }
  ],
@@ -55063,6 +55415,22 @@
    "src": "made"
   }
  ],
+ "w|indignar": [
+  {
+   "text": "A Diego le indigna que algunos vecinos dejen las bolsas de basura en la escalera.",
+   "en": "It outrages Diego that some neighbours leave their rubbish bags on the stairs.",
+   "ko": "디에고는 몇몇 이웃이 쓰레기봉투를 계단에 두는 게 화가 나요.",
+   "blank": "indigna",
+   "src": "made"
+  },
+  {
+   "text": "A Sofía le indignó ver basura tirada junto al río.",
+   "en": "Sofía was outraged to see rubbish dumped by the river.",
+   "ko": "소피아는 강가에 버려진 쓰레기를 보고 화가 났어요.",
+   "blank": "indignó",
+   "src": "made"
+  }
+ ],
  "w|indio": [
   {
    "text": "El restaurante indio está lleno.",
@@ -56467,6 +56835,22 @@
    "en": "That insect doesn't sting; it only bothers you.",
    "ko": "그 벌레는 안 쏘고 그냥 귀찮게만 해.",
    "blank": "insecto"
+  }
+ ],
+ "w|inseguridad": [
+  {
+   "text": "Tras el robo en el barrio, muchos vecinos hablaron con Diego de la inseguridad en la calle.",
+   "en": "After the burglary in the area, many neighbours talked to Diego about safety on the street.",
+   "ko": "동네에 도둑이 든 뒤로 많은 이웃이 디에고와 거리 치안이 불안하다는 얘기를 나눴어요.",
+   "blank": "inseguridad",
+   "src": "made"
+  },
+  {
+   "text": "Por la noche, la hija de Sofía le habló de la inseguridad que siente en el instituto.",
+   "en": "At night, Sofía's daughter told her about the insecurity she feels at school.",
+   "ko": "밤에 소피아의 딸은 학교에서 느끼는 불안감을 털어놓았어요.",
+   "blank": "inseguridad",
+   "src": "made"
   }
  ],
  "w|inseguro": [
@@ -58699,6 +59083,22 @@
    "src": "made"
   }
  ],
+ "w|jalea": [
+  {
+   "text": "La vecina le regaló a Diego un tarro de jalea de membrillo hecha en casa.",
+   "en": "The neighbour gave Diego a jar of homemade quince jelly.",
+   "ko": "이웃이 디에고에게 집에서 만든 모과 젤리 한 병을 선물했어요.",
+   "blank": "jalea",
+   "src": "made"
+  },
+  {
+   "text": "Para desayunar, Sofía untó jalea de manzana en las tostadas.",
+   "en": "For breakfast, Sofía spread apple jelly on her toast.",
+   "ko": "아침으로 소피아는 토스트에 사과 젤리를 발랐어요.",
+   "blank": "jalea",
+   "src": "made"
+  }
+ ],
  "w|jaleo": [
   {
    "text": "Entre bastidores había tanto jaleo que Hugo casi no oyó su entrada.",
@@ -58938,6 +59338,22 @@
    "en": "Marta always keeps ginger sweets on her desk for long calls.",
    "ko": "마르타는 긴 통화에 대비해 책상에 생강 사탕을 늘 둬요.",
    "blank": "jengibre",
+   "src": "made"
+  }
+ ],
+ "w|jerga": [
+  {
+   "text": "Los chicos del portal hablan con una jerga que Diego apenas entiende.",
+   "en": "The kids in the entrance hall speak a slang that Diego barely understands.",
+   "ko": "건물 현관의 아이들은 디에고가 거의 못 알아듣는 은어로 말해요.",
+   "blank": "jerga",
+   "src": "made"
+  },
+  {
+   "text": "Los chicos usaban una jerga de videojuegos y Sofía les pidió que hablaran claro.",
+   "en": "The boys were using gaming slang and Sofía asked them to speak plainly.",
+   "ko": "남자아이들이 게임 은어를 써서 소피아가 알아듣게 말하라고 했어요.",
+   "blank": "jerga",
    "src": "made"
   }
  ],
@@ -67015,6 +67431,22 @@
    "src": "made"
   }
  ],
+ "w|mimo": [
+  {
+   "text": "Diego cuida con mucho mimo las plantas de la vecina cuando ella viaja.",
+   "en": "Diego looks after his neighbour's plants with great care when she travels.",
+   "ko": "디에고는 이웃이 여행 갈 때 그 집 화분을 정성껏 돌봐요.",
+   "blank": "mimo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía secó con mimo el pelo de su hijo después del baño en el lago.",
+   "en": "Sofía tenderly dried her son's hair after his swim in the lake.",
+   "ko": "소피아는 호수에서 수영한 아들의 머리를 다정하게 말려 줬어요.",
+   "blank": "mimo",
+   "src": "made"
+  }
+ ],
  "w|mina": [
   {
    "text": "Trabajó en una mina de carbón años atrás.",
@@ -68519,6 +68951,22 @@
    "src": "made"
   }
  ],
+ "w|motociclista": [
+  {
+   "text": "Un motociclista del edificio arranca la moto a las seis de la mañana y despierta a Diego.",
+   "en": "A motorcyclist in the building starts his bike at six in the morning and wakes Diego up.",
+   "ko": "건물에 사는 오토바이 운전자가 아침 여섯 시에 시동을 걸어서 디에고를 깨워요.",
+   "blank": "motociclista",
+   "src": "made"
+  },
+  {
+   "text": "Un motociclista se paró en el camping para pedirle a Sofía un poco de agua.",
+   "en": "A motorcyclist stopped at the campsite to ask Sofía for some water.",
+   "ko": "오토바이 운전자 한 명이 캠핑장에 멈춰 서서 소피아에게 물을 좀 달라고 했어요.",
+   "blank": "motociclista",
+   "src": "made"
+  }
+ ],
  "w|motor": [
   {
    "text": "El motor del coche hace un ruido raro.",
@@ -69755,6 +70203,22 @@
    "src": "made"
   }
  ],
+ "w|navío": [
+  {
+   "text": "El abuelo aviador tiene en el salón la maqueta de un navío antiguo, y Diego le ayuda a pintarla.",
+   "en": "The old aviator has a model of an old ship in his living room, and Diego helps him paint it.",
+   "ko": "비행사 할아버지 거실에는 옛 범선 모형이 있는데, 디에고가 색칠을 도와요.",
+   "blank": "navío",
+   "src": "made"
+  },
+  {
+   "text": "En el museo del puerto, Sofía y su hijo vieron un navío de guerra del siglo pasado.",
+   "en": "At the harbour museum, Sofía and her son saw a warship from the last century.",
+   "ko": "항구 박물관에서 소피아와 아들은 지난 세기의 군함을 봤어요.",
+   "blank": "navío",
+   "src": "made"
+  }
+ ],
  "w|nazi": [
   {
    "text": "El museo explica el régimen nazi.",
@@ -70415,6 +70879,22 @@
    "en": "The overnight train arrives at dawn.",
    "ko": "야간 열차는 새벽에 도착해.",
    "blank": "nocturno"
+  }
+ ],
+ "w|nodriza": [
+  {
+   "text": "En la novela histórica que lee Diego, el hijo del rey crece al cuidado de una nodriza.",
+   "en": "In the historical novel Diego is reading, the king's son grows up in the care of a wet nurse.",
+   "ko": "디에고가 읽는 역사 소설에서 왕자는 유모의 손에서 자라요.",
+   "blank": "nodriza",
+   "src": "made"
+  },
+  {
+   "text": "Mirando las estrellas, el hijo de Sofía aseguró que una luz rara era una nave nodriza.",
+   "en": "Looking at the stars, Sofía's son insisted that a strange light was a mothership.",
+   "ko": "별을 보던 소피아의 아들은 이상한 불빛이 모선이라고 우겼어요.",
+   "blank": "nodriza",
+   "src": "made"
   }
  ],
  "w|nombrar": [
@@ -72659,6 +73139,22 @@
    "src": "made"
   }
  ],
+ "w|optimismo": [
+  {
+   "text": "A pesar de las obras en la calle, Diego mantiene el optimismo y sonríe a todo el mundo.",
+   "en": "Despite the roadworks, Diego stays optimistic and smiles at everyone.",
+   "ko": "길에서 공사를 해도 디에고는 낙관을 잃지 않고 모두에게 웃어 줘요.",
+   "blank": "optimismo",
+   "src": "made"
+  },
+  {
+   "text": "Sofía mantuvo el optimismo aunque llovió dos días seguidos.",
+   "en": "Sofía stayed optimistic even though it rained two days in a row.",
+   "ko": "이틀 내내 비가 왔지만 소피아는 낙관을 잃지 않았어요.",
+   "blank": "optimismo",
+   "src": "made"
+  }
+ ],
  "w|optimista": [
   {
    "text": "A pesar de todo, el tono de la carta de Pablo era optimista.",
@@ -73783,6 +74279,22 @@
    "en": "You have my word.",
    "ko": "내가 약속할게.",
    "blank": "palabra"
+  }
+ ],
+ "w|palabrota": [
+  {
+   "text": "El loro del vecino ha aprendido una palabrota y Diego no para de reírse.",
+   "en": "The neighbour's parrot has learned a swear word and Diego can't stop laughing.",
+   "ko": "이웃집 앵무새가 욕을 하나 배워서 디에고는 웃음을 멈추지 못해요.",
+   "blank": "palabrota",
+   "src": "made"
+  },
+  {
+   "text": "El hijo de Sofía soltó una palabrota cuando se le cayó la linterna al río.",
+   "en": "Sofía's son let out a swear word when his torch fell into the river.",
+   "ko": "소피아의 아들은 손전등을 강에 떨어뜨리자 욕을 내뱉었어요.",
+   "blank": "palabrota",
+   "src": "made"
   }
  ],
  "w|palacio": [
@@ -81409,6 +81921,22 @@
    "src": "made"
   }
  ],
+ "w|prodigio": [
+  {
+   "text": "La niña de enfrente es un prodigio del piano, y Diego la oye ensayar cada tarde.",
+   "en": "The girl across the way is a piano prodigy, and Diego hears her practise every afternoon.",
+   "ko": "맞은편 집 여자아이는 피아노 신동인데 디에고는 매일 오후 연습하는 소리를 들어요.",
+   "blank": "prodigio",
+   "src": "made"
+  },
+  {
+   "text": "El primo de Sofía es un prodigio con la guitarra y tocó junto al fuego.",
+   "en": "Sofía's cousin is a guitar prodigy and played by the fire.",
+   "ko": "소피아의 사촌은 기타 신동이라 모닥불 옆에서 연주했어요.",
+   "blank": "prodigio",
+   "src": "made"
+  }
+ ],
  "w|producción": [
   {
    "text": "La producción de la fábrica bajó este mes.",
@@ -85088,6 +85616,22 @@
    "en": "Marta's niece is going to recite a poem just before the midnight chimes.",
    "ko": "마르타의 조카는 자정 종소리 직전에 시를 낭송할 거예요.",
    "blank": "recitar",
+   "src": "made"
+  }
+ ],
+ "w|reclamación": [
+  {
+   "text": "Diego presentó una reclamación a la comunidad por las goteras del garaje.",
+   "en": "Diego filed a complaint with the residents' association about the leaks in the garage.",
+   "ko": "디에고는 주차장 누수 때문에 주민회에 민원을 냈어요.",
+   "blank": "reclamación",
+   "src": "made"
+  },
+  {
+   "text": "Al volver, Sofía puso una reclamación porque las duchas no tenían agua caliente.",
+   "en": "When she got back, Sofía made a complaint because the showers had no hot water.",
+   "ko": "돌아와서 소피아는 샤워실에 따뜻한 물이 안 나와서 민원을 넣었어요.",
+   "blank": "reclamación",
    "src": "made"
   }
  ],
@@ -95197,6 +95741,22 @@
    "blank": "sudar"
   }
  ],
+ "w|sudeste": [
+  {
+   "text": "La familia del cuarto se mudó al sudeste del país y Diego les echa de menos.",
+   "en": "The family on the fourth floor moved to the southeast of the country and Diego misses them.",
+   "ko": "사 층 가족이 나라 남동부로 이사 가서 디에고는 그들이 그리워요.",
+   "blank": "sudeste",
+   "src": "made"
+  },
+  {
+   "text": "El camping está en el sudeste de la isla, y Sofía eligió la parcela más cercana al agua.",
+   "en": "The campsite is in the southeast of the island, and Sofía picked the pitch closest to the water.",
+   "ko": "캠핑장은 섬 남동쪽에 있었고 소피아는 물에서 가장 가까운 자리를 골랐어요.",
+   "blank": "sudeste",
+   "src": "made"
+  }
+ ],
  "w|sudor": [
   {
    "text": "Después del turno, Marina tenía la frente llena de sudor.",
@@ -95695,6 +96255,22 @@
    "blank": "superar"
   }
  ],
+ "w|superestrella": [
+  {
+   "text": "Dicen que en el ático vivió una superestrella del cine, pero Diego no se lo cree.",
+   "en": "They say a film superstar lived in the penthouse, but Diego doesn't believe it.",
+   "ko": "꼭대기 층에 영화 슈퍼스타가 살았다는데 디에고는 믿지 않아요.",
+   "blank": "superestrella",
+   "src": "made"
+  },
+  {
+   "text": "Junto a la hoguera, Sofía cantó como si fuera una superestrella del pop.",
+   "en": "By the campfire, Sofía sang as if she were a pop superstar.",
+   "ko": "모닥불 곁에서 소피아는 팝 슈퍼스타라도 된 것처럼 노래했어요.",
+   "blank": "superestrella",
+   "src": "made"
+  }
+ ],
  "w|superficial": [
   {
    "text": "Por suerte, la herida del caballo era superficial.",
@@ -96076,6 +96652,22 @@
    "en": "Lola bought herself a board because she wants to learn to surf this summer.",
    "ko": "롤라는 올여름 서핑을 배우려고 보드를 샀어요.",
    "blank": "surfear",
+   "src": "made"
+  }
+ ],
+ "w|surfista": [
+  {
+   "text": "El vecino de arriba de Diego es surfista y deja la tabla en el rellano.",
+   "en": "Diego's upstairs neighbour is a surfer and leaves his board on the landing.",
+   "ko": "디에고의 위층 이웃은 서퍼라서 서핑보드를 계단참에 둬요.",
+   "blank": "surfista",
+   "src": "made"
+  },
+  {
+   "text": "Un surfista que acampaba al lado le enseñó a Sofía a hacer un nudo marinero.",
+   "en": "A surfer camping next to them taught Sofía to tie a sailor's knot.",
+   "ko": "옆에서 캠핑하던 서퍼가 소피아에게 뱃사람 매듭 묶는 법을 가르쳐 줬어요.",
+   "blank": "surfista",
    "src": "made"
   }
  ],
@@ -99667,6 +100259,22 @@
    "src": "made"
   }
  ],
+ "w|tracción": [
+  {
+   "text": "El vecino del bajo tiene un coche con tracción a las cuatro ruedas para ir al campo.",
+   "en": "The ground-floor neighbour has a four-wheel-drive car for going to the countryside.",
+   "ko": "일 층 이웃은 시골에 가려고 사륜구동 차를 갖고 있어요.",
+   "blank": "tracción",
+   "src": "made"
+  },
+  {
+   "text": "Para subir por la pista de tierra, Sofía alquiló una furgoneta con tracción total.",
+   "en": "To get up the dirt track, Sofía hired a van with all-wheel drive.",
+   "ko": "흙길을 오르려고 소피아는 사륜구동 승합차를 빌렸어요.",
+   "blank": "tracción",
+   "src": "made"
+  }
+ ],
  "w|tractor": [
   {
    "text": "Un granjero sacó la furgoneta de Mateo del barro con su tractor.",
@@ -101162,6 +101770,22 @@
    "en": "Sofía apologised for filling the letter with trivial details about her cat.",
    "ko": "소피아는 고양이 얘기 같은 사소한 내용으로 편지를 채워서 미안하다고 했어요.",
    "blank": "triviales",
+   "src": "made"
+  }
+ ],
+ "w|trocito": [
+  {
+   "text": "La vecina le dio a Diego un trocito de tarta para que la probara.",
+   "en": "The neighbour gave Diego a little piece of cake to try.",
+   "ko": "이웃이 디에고에게 맛보라고 케이크를 한 조각 줬어요.",
+   "blank": "trocito",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le dio un trocito de chocolate a cada niño del camping.",
+   "en": "Sofía gave a little piece of chocolate to each child at the campsite.",
+   "ko": "소피아는 캠핑장 아이들에게 초콜릿을 한 조각씩 나눠 줬어요.",
+   "blank": "trocito",
    "src": "made"
   }
  ],
@@ -104503,6 +105127,22 @@
    "en": "My computer has a strange virus.",
    "ko": "내 컴퓨터에 이상한 바이러스가 있어.",
    "blank": "virus"
+  }
+ ],
+ "w|visado": [
+  {
+   "text": "El vecino nuevo de Diego está esperando el visado para quedarse a trabajar.",
+   "en": "Diego's new neighbour is waiting for his visa so he can stay and work.",
+   "ko": "디에고의 새 이웃은 계속 일하려고 비자를 기다리고 있어요.",
+   "blank": "visado",
+   "src": "made"
+  },
+  {
+   "text": "Al lado de la tienda de Sofía acampaba un viajero que esperaba su visado para seguir el viaje.",
+   "en": "Next to Sofía's tent was a traveller waiting for his visa to continue his trip.",
+   "ko": "소피아의 텐트 옆에는 여행을 계속하려고 비자를 기다리는 여행자가 머물렀어요.",
+   "blank": "visado",
+   "src": "made"
   }
  ],
  "w|visible": [

@@ -17051,6 +17051,22 @@
    "src": "made"
   }
  ],
+ "w|互い": [
+  {
+   "text": "悠斗と先輩は、お互いの趣味がキャンプだと分かって盛り上がった。",
+   "en": "Yuto and his senior got excited when they found out they both love camping.",
+   "ko": "유토와 선배는 서로 취미가 캠핑이라는 걸 알고 신이 났어요.",
+   "blank": "互い",
+   "src": "made"
+  },
+  {
+   "text": "ゴールの後、千尋と友人はお互いの健闘をたたえ合った。",
+   "en": "After the finish, Chihiro and her friend praised each other's efforts.",
+   "ko": "결승선 뒤에서 치히로와 친구는 서로의 선전을 칭찬했어요.",
+   "blank": "互い",
+   "src": "made"
+  }
+ ],
  "w|互換": [
   {
    "text": "新しい機械は、古い部品とも互換性があるので助かる。",
@@ -17397,6 +17413,22 @@
    "en": "I went to see a puppet show.",
    "ko": "인형극을 보러 갔어.",
    "blank": "人形"
+  }
+ ],
+ "w|人手": [
+  {
+   "text": "人手が足りない営業部に、悠斗が配属された。",
+   "en": "Yuto was assigned to the sales department, which was short-handed.",
+   "ko": "일손이 부족한 영업부에 유토가 배치됐어요.",
+   "blank": "人手",
+   "src": "made"
+  },
+  {
+   "text": "給水所は人手が足りず、千尋の友人もボランティアで手伝った。",
+   "en": "The water station was short-handed, so Chihiro's friend helped out as a volunteer.",
+   "ko": "급수대는 일손이 부족해서 치히로의 친구도 자원봉사로 도왔어요.",
+   "blank": "人手",
+   "src": "made"
   }
  ],
  "w|人数": [
@@ -18421,6 +18453,22 @@
    "src": "made"
   }
  ],
+ "w|仲良し": [
+  {
+   "text": "一週間もたたないうちに、悠斗は隣の席の同僚と仲良しになった。",
+   "en": "In less than a week, Yuto became good friends with the coworker at the next desk.",
+   "ko": "일주일도 안 돼서 유토는 옆자리 동료와 친한 사이가 됐어요.",
+   "blank": "仲良し",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、練習会で仲良しになった友人と一緒に走った。",
+   "en": "Chihiro ran with a friend she had become close to at a training session.",
+   "ko": "치히로는 연습 모임에서 친해진 친구와 함께 달렸어요.",
+   "blank": "仲良し",
+   "src": "made"
+  }
+ ],
  "w|仲間": [
   {
    "text": "仲間が必要だ。",
@@ -19238,6 +19286,22 @@
    "en": "Yumi ordered a book of exercises you can do at home.",
    "ko": "유미는 집에서 할 수 있는 체조 책을 주문했어요.",
    "blank": "体操",
+   "src": "made"
+  }
+ ],
+ "w|体温": [
+  {
+   "text": "会社の入り口には、今も体温を測る機械が置いてある。",
+   "en": "There's still a machine that measures body temperature at the office entrance.",
+   "ko": "회사 입구에는 지금도 체온을 재는 기계가 놓여 있어요.",
+   "blank": "体温",
+   "src": "made"
+  },
+  {
+   "text": "走り終えた千尋は、体温が急に下がらないよう上着をはおった。",
+   "en": "After finishing, Chihiro put on a jacket so her body temperature wouldn't drop suddenly.",
+   "ko": "다 달린 치히로는 체온이 갑자기 떨어지지 않도록 겉옷을 걸쳤어요.",
+   "blank": "体温",
    "src": "made"
   }
  ],
@@ -22733,6 +22797,22 @@
    "blank": "内容"
   }
  ],
+ "w|内科": [
+  {
+   "text": "悠斗は風邪が治らず、昼休みに近所の内科に行った。",
+   "en": "Yuto's cold wouldn't go away, so he went to a nearby internal medicine clinic at lunch.",
+   "ko": "유토는 감기가 낫지 않아서 점심시간에 근처 내과에 갔어요.",
+   "blank": "内科",
+   "src": "made"
+  },
+  {
+   "text": "レースの前に、千尋は内科で心臓の検査を受けた。",
+   "en": "Before the race, Chihiro had a heart checkup at an internal medicine clinic.",
+   "ko": "경기 전에 치히로는 내과에서 심장 검사를 받았어요.",
+   "blank": "内科",
+   "src": "made"
+  }
+ ],
  "w|内臓": [
   {
    "text": "自然史の展示室には、魚の内臓のしくみが分かる模型がある。",
@@ -23901,6 +23981,22 @@
    "en": "The appearance of a rare bird is unusual.",
    "ko": "희귀 새의 출현은 드물어.",
    "blank": "出現"
+  }
+ ],
+ "w|出生": [
+  {
+   "text": "悠斗は先月、長女の出生届を役所に出したばかりだそうだ。",
+   "en": "Yuto apparently just submitted his eldest daughter's birth registration at the city office last month.",
+   "ko": "유토는 지난달 큰딸 출생 신고를 막 구청에 냈대요.",
+   "blank": "出生",
+   "src": "made"
+  },
+  {
+   "text": "その町は出生率が低く、マラソン大会で若い人を呼び込もうとしている。",
+   "en": "The town has a low birth rate and is trying to attract young people with a marathon.",
+   "ko": "그 마을은 출생률이 낮아서 마라톤 대회로 젊은 사람들을 끌어들이려 해요.",
+   "blank": "出生",
+   "src": "made"
   }
  ],
  "w|出産": [
@@ -25135,6 +25231,22 @@
    "src": "made"
   }
  ],
+ "w|前面": [
+  {
+   "text": "悠斗の会社のビルは、前面がガラス張りで明るい。",
+   "en": "The front of Yuto's office building is all glass and bright.",
+   "ko": "유토 회사 건물은 전면이 유리로 되어 있어서 밝아요.",
+   "blank": "前面",
+   "src": "made"
+  },
+  {
+   "text": "千尋はゼッケンを、ウェアの前面に安全ピンでしっかり留めた。",
+   "en": "Chihiro firmly pinned her race bib to the front of her running top with safety pins.",
+   "ko": "치히로는 번호표를 운동복 전면에 안전핀으로 단단히 달았어요.",
+   "blank": "前面",
+   "src": "made"
+  }
+ ],
  "w|副作用": [
   {
    "text": "痛み止めには眠くなる副作用があると、薬剤師が注意した。",
@@ -25474,6 +25586,22 @@
    "en": "The restaurant's food was seasoned with just the right amount of salt.",
    "ko": "가게 음식은 간이 딱 좋았어요.",
    "blank": "加減",
+   "src": "made"
+  }
+ ],
+ "w|加熱": [
+  {
+   "text": "悠斗は社内の電子レンジで弁当を加熱しすぎて、ふたを溶かしてしまった。",
+   "en": "Yuto overheated his lunch box in the office microwave and melted the lid.",
+   "ko": "유토는 사내 전자레인지로 도시락을 너무 가열해서 뚜껑을 녹여 버렸어요.",
+   "blank": "加熱",
+   "src": "made"
+  },
+  {
+   "text": "レースの前の晩、千尋はよく加熱した料理だけを食べた。",
+   "en": "The night before the race, Chihiro only ate food that had been cooked thoroughly.",
+   "ko": "경기 전날 밤 치히로는 충분히 가열한 음식만 먹었어요.",
+   "blank": "加熱",
    "src": "made"
   }
  ],
@@ -26007,6 +26135,22 @@
    "blank": "勝手"
   }
  ],
+ "w|勝者": [
+  {
+   "text": "社内のボウリング大会の勝者には、商品券が贈られた。",
+   "en": "The winner of the company bowling tournament was given gift vouchers.",
+   "ko": "사내 볼링 대회 승자에게는 상품권이 주어졌어요.",
+   "blank": "勝者",
+   "src": "made"
+  },
+  {
+   "text": "レースの勝者は、最後の一キロで逆転した若い選手だった。",
+   "en": "The winner of the race was a young runner who came from behind in the final kilometer.",
+   "ko": "경기 승자는 마지막 일 킬로미터에서 역전한 젊은 선수였어요.",
+   "blank": "勝者",
+   "src": "made"
+  }
+ ],
  "w|勝負": [
   {
    "text": "勝負の時が来た。",
@@ -26391,6 +26535,22 @@
    "src": "made"
   }
  ],
+ "w|医学部": [
+  {
+   "text": "新しく入った悠斗は、もともと医学部を目指していたらしい。",
+   "en": "Apparently Yuto, the new hire, originally aimed for medical school.",
+   "ko": "새로 들어온 유토는 원래 의대를 목표로 했었대요.",
+   "blank": "医学部",
+   "src": "made"
+  },
+  {
+   "text": "千尋と並んで走っていたのは、医学部の学生ランナーたちだった。",
+   "en": "The runners alongside Chihiro were medical school students.",
+   "ko": "치히로와 나란히 달리던 건 의대생 러너들이었어요.",
+   "blank": "医学部",
+   "src": "made"
+  }
+ ],
  "w|医師": [
   {
    "text": "医師の診断を待ってる。",
@@ -26584,6 +26744,22 @@
    "en": "At the end-of-summer clearance, Misaki bought a swimsuit at half price.",
    "ko": "여름 상품 떨이 세일에서 미사키는 수영복을 반값에 샀어요.",
    "blank": "半額",
+   "src": "made"
+  }
+ ],
+ "w|卑怯": [
+  {
+   "text": "悠斗は、他人の手柄を横取りするような卑怯なことはしない人だ。",
+   "en": "Yuto is not the kind of person who would do something as cowardly as stealing someone else's credit.",
+   "ko": "유토는 남의 공을 가로채는 비겁한 짓은 하지 않는 사람이에요.",
+   "blank": "卑怯",
+   "src": "made"
+  },
+  {
+   "text": "コースの近道をした卑怯なランナーが、失格になった。",
+   "en": "A runner who cowardly took a shortcut on the course was disqualified.",
+   "ko": "코스 지름길로 간 비겁한 러너가 실격됐어요.",
+   "blank": "卑怯",
    "src": "made"
   }
  ],
@@ -29039,6 +29215,22 @@
    "src": "made"
   }
  ],
+ "w|同性": [
+  {
+   "text": "悠斗の部署には同性の同期がいなくて、少し寂しいらしい。",
+   "en": "There are no other new hires of the same gender in Yuto's department, so he seems a bit lonely.",
+   "ko": "유토의 부서에는 동성 입사 동기가 없어서 조금 외롭대요.",
+   "blank": "同性",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、同じ年代の同性ランナーに抜かれて悔しがった。",
+   "en": "Chihiro was frustrated at being passed by a runner of the same age and gender.",
+   "ko": "치히로는 같은 연령대 동성 러너에게 추월당해서 분해했어요.",
+   "blank": "同性",
+   "src": "made"
+  }
+ ],
  "w|同性愛": [
   {
    "text": "人権の授業では、同性愛についての偏見をなくす大切さも話し合った。",
@@ -30354,6 +30546,22 @@
    "en": "When the long-established bakery closed, the townspeople mourned the loss of a cherished place.",
    "ko": "오래된 빵집이 문을 닫았을 때 동네 사람들은 소중한 곳을 잃은 것을 슬퍼했어요.",
    "blank": "喪失",
+   "src": "made"
+  }
+ ],
+ "w|喫茶": [
+  {
+   "text": "昼休みに、悠斗は会社の近くの喫茶店でナポリタンを食べた。",
+   "en": "At lunch, Yuto had spaghetti Napolitan at a coffee shop near the office.",
+   "ko": "점심시간에 유토는 회사 근처 찻집에서 나폴리탄을 먹었어요.",
+   "blank": "喫茶",
+   "src": "made"
+  },
+  {
+   "text": "レースのあと、千尋は友人と駅前の喫茶店でパフェを食べた。",
+   "en": "After the race, Chihiro and her friend had parfaits at a coffee shop by the station.",
+   "ko": "경기가 끝나고 치히로는 친구와 역 앞 찻집에서 파르페를 먹었어요.",
+   "blank": "喫茶",
    "src": "made"
   }
  ],
@@ -31739,6 +31947,22 @@
    "src": "made"
   }
  ],
+ "w|執事": [
+  {
+   "text": "悠斗は休み時間に、執事が主人公の推理小説を読んでいる。",
+   "en": "During breaks, Yuto reads a mystery novel whose hero is a butler.",
+   "ko": "유토는 쉬는 시간에 집사가 주인공인 추리 소설을 읽어요.",
+   "blank": "執事",
+   "src": "made"
+  },
+  {
+   "text": "コースには、執事の格好をして走る仮装ランナーもいた。",
+   "en": "On the course, there was even a costumed runner dressed as a butler.",
+   "ko": "코스에는 집사 차림으로 달리는 분장 러너도 있었어요.",
+   "blank": "執事",
+   "src": "made"
+  }
+ ],
  "w|執筆": [
   {
    "text": "拓也は、現場の安全について業界誌の記事を執筆した。",
@@ -32751,6 +32975,22 @@
    "src": "made"
   }
  ],
+ "w|外人": [
+  {
+   "text": "悠斗の祖父は、今でも外国の人のことを「外人」と呼んでしまう。",
+   "en": "Yuto's grandfather still ends up calling people from abroad \"gaijin.\"",
+   "ko": "유토의 할아버지는 지금도 외국 사람을 '외인'이라고 불러 버려요.",
+   "blank": "外人",
+   "src": "made"
+  },
+  {
+   "text": "千尋の祖母は、海外から来た選手を「外人さん」と呼んで応援していた。",
+   "en": "Chihiro's grandmother was cheering on the runners from abroad, calling them \"gaijin-san.\"",
+   "ko": "치히로의 할머니는 해외에서 온 선수들을 '외인 양반'이라 부르며 응원했어요.",
+   "blank": "外人",
+   "src": "made"
+  }
+ ],
  "w|外側": [
   {
    "text": "誠は、空港の外側にある駐車場まで歩いた。",
@@ -33650,6 +33890,22 @@
    "en": "Most of the animals that come to Keiko's clinic are dogs or cats.",
    "ko": "게이코의 병원에 오는 건 대개 개나 고양이예요.",
    "blank": "大抵",
+   "src": "made"
+  }
+ ],
+ "w|大根": [
+  {
+   "text": "社員食堂の今日の定食は、ぶり大根だった。",
+   "en": "Today's set meal at the staff cafeteria was yellowtail simmered with daikon.",
+   "ko": "사원 식당의 오늘 정식은 방어 무조림이었어요.",
+   "blank": "大根",
+   "src": "made"
+  },
+  {
+   "text": "給水所の近くで、地元の人たちが大根の煮物を配っていた。",
+   "en": "Near the water station, locals were handing out simmered daikon.",
+   "ko": "급수대 근처에서 동네 사람들이 무조림을 나눠 주고 있었어요.",
+   "blank": "大根",
    "src": "made"
   }
  ],
@@ -35797,6 +36053,22 @@
    "src": "made"
   }
  ],
+ "w|安値": [
+  {
+   "text": "悠斗は、ネットで安値で買ったスーツを着て初出勤した。",
+   "en": "Yuto came to his first day of work in a suit he bought cheap online.",
+   "ko": "유토는 인터넷에서 싼값에 산 정장을 입고 첫 출근했어요.",
+   "blank": "安値",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、型落ちのランニングシューズを安値で手に入れた。",
+   "en": "Chihiro got last season's running shoes at a low price.",
+   "ko": "치히로는 지난 모델 러닝화를 싼값에 손에 넣었어요.",
+   "blank": "安値",
+   "src": "made"
+  }
+ ],
  "w|安全": [
   {
    "text": "ここ、安全？",
@@ -37221,6 +37493,22 @@
    "blank": "対象"
   }
  ],
+ "w|対面": [
+  {
+   "text": "悠斗とはオンラインで何度も話していたが、今日やっと対面で会えた。",
+   "en": "We had talked with Yuto online many times, but today we finally met him face to face.",
+   "ko": "유토와는 온라인으로 몇 번이나 이야기했지만 오늘 드디어 대면으로 만났어요.",
+   "blank": "対面",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ネットでつながっていたランナー仲間と大会で初めて対面した。",
+   "en": "At the race, Chihiro met in person for the first time a runner friend she knew online.",
+   "ko": "치히로는 인터넷으로 알던 러너 친구와 대회에서 처음 대면했어요.",
+   "blank": "対面",
+   "src": "made"
+  }
+ ],
  "w|寿司": [
   {
    "text": "箸で寿司を取ろうとするたびに、相変わらず落としてしまいます。",
@@ -38605,6 +38893,22 @@
    "en": "Let's meet at city hall.",
    "ko": "시민홀에서 만나자.",
    "blank": "市民"
+  }
+ ],
+ "w|市町村": [
+  {
+   "text": "悠斗の部署は、全国の市町村向けのシステムを作っている。",
+   "en": "Yuto's department builds systems for cities, towns and villages across the country.",
+   "ko": "유토의 부서는 전국 시정촌을 위한 시스템을 만들어요.",
+   "blank": "市町村",
+   "src": "made"
+  },
+  {
+   "text": "このマラソンのコースは、三つの市町村にまたがっている。",
+   "en": "This marathon course stretches across three municipalities.",
+   "ko": "이 마라톤 코스는 세 개의 시정촌에 걸쳐 있어요.",
+   "blank": "市町村",
+   "src": "made"
   }
  ],
  "w|市販": [
@@ -40689,6 +40993,22 @@
    "blank": "役"
   }
  ],
+ "w|役人": [
+  {
+   "text": "悠斗の父は元役人で、真面目な性格は悠斗とそっくりだ。",
+   "en": "Yuto's father is a former government official, and Yuto has exactly the same serious personality.",
+   "ko": "유토의 아버지는 전직 공무원인데 성실한 성격이 유토와 꼭 닮았어요.",
+   "blank": "役人",
+   "src": "made"
+  },
+  {
+   "text": "開会式では、市の役人がマラソン大会の歴史を紹介した。",
+   "en": "At the opening ceremony, a city official introduced the history of the marathon.",
+   "ko": "개회식에서는 시 공무원이 마라톤 대회 역사를 소개했어요.",
+   "blank": "役人",
+   "src": "made"
+  }
+ ],
  "w|役割": [
   {
    "text": "役割を決めた。",
@@ -40868,6 +41188,22 @@
    "en": "Mayu's older brother says his dream is to conquer Mt. Fuji in winter.",
    "ko": "마유의 오빠는 겨울 후지산을 정복하는 게 꿈이라고 해요.",
    "blank": "征服",
+   "src": "made"
+  }
+ ],
+ "w|待ち合わせ": [
+  {
+   "text": "新人歓迎会の日、悠斗は駅前で先輩と待ち合わせをした。",
+   "en": "On the day of the welcome party, Yuto met up with his senior in front of the station.",
+   "ko": "신입 환영회 날 유토는 역 앞에서 선배와 만나기로 했어요.",
+   "blank": "待ち合わせ",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、ゴール後の待ち合わせ場所を家族に伝えておいた。",
+   "en": "Chihiro told her family where to meet after the finish.",
+   "ko": "치히로는 결승 후 만날 장소를 가족에게 알려 두었어요.",
+   "blank": "待ち合わせ",
    "src": "made"
   }
  ],
@@ -44216,6 +44552,22 @@
    "en": "Yumi had a quick lunch at a place near the office.",
    "ko": "유미는 점심을 회사 근처 가게에서 간단히 때웠어요.",
    "blank": "手軽",
+   "src": "made"
+  }
+ ],
+ "w|手遅れ": [
+  {
+   "text": "「締め切りに気づいた時には、もう手遅れだった」と悠斗は笑って話した。",
+   "en": "Yuto laughed as he said that by the time he noticed the deadline, it was already too late.",
+   "ko": "\"마감을 알아챘을 때는 이미 늦었어요\"라고 유토는 웃으며 말했어요.",
+   "blank": "手遅れ",
+   "src": "made"
+  },
+  {
+   "text": "千尋のコーチは、「けがは手遅れになる前に診てもらえ」が口癖だ。",
+   "en": "Chihiro's coach always says to get injuries checked before it's too late.",
+   "ko": "치히로의 코치는 \"부상은 늦기 전에 진찰받아라\"가 입버릇이에요.",
+   "blank": "手遅れ",
    "src": "made"
   }
  ],
@@ -53297,6 +53649,22 @@
    "src": "made"
   }
  ],
+ "w|次男": [
+  {
+   "text": "悠斗は三人兄弟の次男で、兄と弟にはさまれて育った。",
+   "en": "Yuto is the second of three brothers and grew up between an older and a younger one.",
+   "ko": "유토는 삼 형제 중 차남이라 형과 남동생 사이에서 자랐어요.",
+   "blank": "次男",
+   "src": "made"
+  },
+  {
+   "text": "千尋のいとこの次男も、子どもの部に出場した。",
+   "en": "The second son of Chihiro's cousin also ran in the children's race.",
+   "ko": "치히로 사촌의 둘째 아들도 어린이 부문에 출전했어요.",
+   "blank": "次男",
+   "src": "made"
+  }
+ ],
  "w|次第": [
   {
    "text": "天気次第だね。",
@@ -53963,6 +54331,22 @@
    "blank": "死亡"
   }
  ],
+ "w|死人": [
+  {
+   "text": "悠斗は、死人が生き返るホラー映画が苦手だ。",
+   "en": "Yuto can't stand horror movies where the dead come back to life.",
+   "ko": "유토는 죽은 사람이 되살아나는 공포 영화를 못 봐요.",
+   "blank": "死人",
+   "src": "made"
+  },
+  {
+   "text": "昔のマラソン大会では、暑さで死人が出たこともあると新聞で読んだ。",
+   "en": "Chihiro read in the newspaper that in old marathons, people had even died from the heat.",
+   "ko": "옛날 마라톤 대회에서는 더위로 사망자가 나온 적도 있다고 신문에서 읽었어요.",
+   "blank": "死人",
+   "src": "made"
+  }
+ ],
  "w|死体": [
   {
    "text": "ジムのテレビでは、川で死体が見つかったというニュースが流れていた。",
@@ -54215,6 +54599,38 @@
    "en": "My mom is worried.",
    "ko": "엄마가 걱정하고 있어.",
    "blank": "母"
+  }
+ ],
+ "w|母さん": [
+  {
+   "text": "「母さんから荷物が届いた」と、悠斗は嬉しそうに言った。",
+   "en": "\"A package came from my mom,\" Yuto said happily.",
+   "ko": "\"엄마한테서 소포가 왔어\"라고 유토는 기쁜 듯이 말했어요.",
+   "blank": "母さん",
+   "src": "made"
+  },
+  {
+   "text": "ゴールした千尋に、娘が「母さん、すごい！」と駆け寄った。",
+   "en": "As Chihiro crossed the finish, her daughter ran up shouting, \"Mom, that was amazing!\"",
+   "ko": "결승선을 통과한 치히로에게 딸이 \"엄마, 대단해!\" 하며 달려왔어요.",
+   "blank": "母さん",
+   "src": "made"
+  }
+ ],
+ "w|母乳": [
+  {
+   "text": "育休から戻った先輩は、母乳を冷凍して保育園に預けていると話した。",
+   "en": "A senior back from parental leave said she freezes breast milk and leaves it at the daycare.",
+   "ko": "육아휴직에서 돌아온 선배는 모유를 얼려서 어린이집에 맡긴다고 했어요.",
+   "blank": "母乳",
+   "src": "made"
+  },
+  {
+   "text": "出産後、母乳での育児が落ち着いてから、千尋はランニングを再開した。",
+   "en": "After giving birth, Chihiro started running again once breastfeeding had settled down.",
+   "ko": "출산 후 모유 수유가 안정되고 나서 치히로는 달리기를 다시 시작했어요.",
+   "blank": "母乳",
+   "src": "made"
   }
  ],
  "w|母親": [
@@ -54830,6 +55246,22 @@
    "en": "Before pitching the tent, they checked whether the ground was level.",
    "ko": "텐트를 치기 전에 땅이 수평인지 확인했어요.",
    "blank": "水平",
+   "src": "made"
+  }
+ ],
+ "w|水族館": [
+  {
+   "text": "歓迎会の後、同僚たちは悠斗を夜の水族館に連れて行った。",
+   "en": "After the welcome party, his coworkers took Yuto to the aquarium at night.",
+   "ko": "환영회가 끝나고 동료들은 유토를 밤 수족관에 데려갔어요.",
+   "blank": "水族館",
+   "src": "made"
+  },
+  {
+   "text": "折り返し地点は、海沿いの水族館の前だった。",
+   "en": "The turnaround point was in front of the seaside aquarium.",
+   "ko": "반환점은 바닷가 수족관 앞이었어요.",
+   "blank": "水族館",
    "src": "made"
   }
  ],
@@ -57178,6 +57610,22 @@
    "en": "In the evening, Misaki's shop was filled with the sweet smell of roasted sweet potatoes.",
    "ko": "저녁 무렵 미사키의 가게는 군고구마의 달콤한 냄새로 가득했어요.",
    "blank": "満ちて",
+   "src": "made"
+  }
+ ],
+ "w|満員": [
+  {
+   "text": "悠斗は毎朝、満員電車で一時間かけて通勤している。",
+   "en": "Every morning Yuto spends an hour commuting on a packed train.",
+   "ko": "유토는 매일 아침 만원 전철로 한 시간 걸려 출근해요.",
+   "blank": "満員",
+   "src": "made"
+  },
+  {
+   "text": "大会当日、会場へ向かうシャトルバスは満員だった。",
+   "en": "On race day, the shuttle bus to the venue was full.",
+   "ko": "대회 당일 경기장으로 가는 셔틀버스는 만원이었어요.",
+   "blank": "満員",
    "src": "made"
   }
  ],
@@ -59757,6 +60205,22 @@
    "src": "made"
   }
  ],
+ "w|王者": [
+  {
+   "text": "悠斗は学生時代、卓球の県大会で王者になったことがある。",
+   "en": "Yuto once became the champion of the prefectural table tennis tournament as a student.",
+   "ko": "유토는 학생 시절 탁구 현 대회에서 챔피언이 된 적이 있어요.",
+   "blank": "王者",
+   "src": "made"
+  },
+  {
+   "text": "去年の王者が、今年もレースの先頭を走っていた。",
+   "en": "Last year's champion was leading the race again this year.",
+   "ko": "작년 챔피언이 올해도 경기 선두를 달리고 있었어요.",
+   "blank": "王者",
+   "src": "made"
+  }
+ ],
  "w|王道": [
   {
    "text": "地道な聞き込みこそ捜査の王道だと、先輩は言った。",
@@ -60981,6 +61445,22 @@
    "en": "The image is grainy.",
    "ko": "이미지가 거칠어.",
    "blank": "画像"
+  }
+ ],
+ "w|画家": [
+  {
+   "text": "悠斗の祖母は、地元では名の知れた画家だそうだ。",
+   "en": "Yuto's grandmother is said to be a well-known painter in her hometown.",
+   "ko": "유토의 할머니는 고향에서는 이름난 화가래요.",
+   "blank": "画家",
+   "src": "made"
+  },
+  {
+   "text": "沿道では、一人の画家が走る人たちをスケッチしていた。",
+   "en": "By the roadside, a painter was sketching the runners.",
+   "ko": "길가에서는 한 화가가 달리는 사람들을 스케치하고 있었어요.",
+   "blank": "画家",
+   "src": "made"
   }
  ],
  "w|画質": [
@@ -69741,6 +70221,22 @@
    "blank": "船"
   }
  ],
+ "w|船長": [
+  {
+   "text": "悠斗は、子どものころ船長になるのが夢だったと話した。",
+   "en": "Yuto said his childhood dream was to become a ship's captain.",
+   "ko": "유토는 어릴 때 선장이 되는 게 꿈이었다고 말했어요.",
+   "blank": "船長",
+   "src": "made"
+  },
+  {
+   "text": "漁船の船長をしている千尋の父も、沿道で応援してくれた。",
+   "en": "Chihiro's father, a fishing boat captain, also cheered from the roadside.",
+   "ko": "어선 선장인 치히로의 아버지도 길가에서 응원해 줬어요.",
+   "blank": "船長",
+   "src": "made"
+  }
+ ],
  "w|良い": [
   {
    "text": "良い天気だね。",
@@ -70661,6 +71157,22 @@
    "blank": "薬"
   }
  ],
+ "w|薬局": [
+  {
+   "text": "頭が痛いと言う悠斗のために、先輩が近くの薬局まで案内した。",
+   "en": "When Yuto said he had a headache, a senior colleague showed him to a nearby pharmacy.",
+   "ko": "머리가 아프다는 유토를 위해 선배가 근처 약국까지 안내했어요.",
+   "blank": "薬局",
+   "src": "made"
+  },
+  {
+   "text": "千尋は、薬局でテーピング用のテープを買い足した。",
+   "en": "Chihiro bought more athletic tape at the pharmacy.",
+   "ko": "치히로는 약국에서 테이핑용 테이프를 더 샀어요.",
+   "blank": "薬局",
+   "src": "made"
+  }
+ ],
  "w|薬物": [
   {
    "text": "待合室のポスターは、違法な薬物の危険を伝えていた。",
@@ -71399,6 +71911,22 @@
    "en": "It's behind the park.",
    "ko": "공원 뒤야.",
    "blank": "裏"
+  }
+ ],
+ "w|裏切り": [
+  {
+   "text": "悠斗が好きなドラマは、仲間の裏切りが次々に起こる話ばかりだ。",
+   "en": "The dramas Yuto likes are all stories where betrayals by friends happen one after another.",
+   "ko": "유토가 좋아하는 드라마는 동료의 배신이 잇따라 일어나는 이야기뿐이에요.",
+   "blank": "裏切り",
+   "src": "made"
+  },
+  {
+   "text": "平らだと聞いていたのに、最後の上り坂は千尋にとって裏切りのようだった。",
+   "en": "She had heard the course was flat, so the final uphill felt like a betrayal to Chihiro.",
+   "ko": "평탄하다고 들었는데 마지막 오르막은 치히로에게 배신 같았어요.",
+   "blank": "裏切り",
+   "src": "made"
   }
  ],
  "w|裏切る": [
@@ -72598,6 +73126,22 @@
    "en": "The children observed the insects.",
    "ko": "아이들이 벌레를 관찰했어요.",
    "blank": "観察",
+   "src": "made"
+  }
+ ],
+ "w|観念": [
+  {
+   "text": "悠斗は時間の観念がしっかりしていて、会議に遅れたことがない。",
+   "en": "Yuto has a strong sense of time and has never been late to a meeting.",
+   "ko": "유토는 시간 관념이 확실해서 회의에 늦은 적이 없어요.",
+   "blank": "観念",
+   "src": "made"
+  },
+  {
+   "text": "雨と風が強くなり、千尋は自己ベストは無理だと観念した。",
+   "en": "As the rain and wind grew stronger, Chihiro resigned herself to not getting a personal best.",
+   "ko": "비바람이 거세지자 치히로는 개인 기록은 무리라고 체념했어요.",
+   "blank": "観念",
    "src": "made"
   }
  ],
@@ -75467,6 +76011,22 @@
    "src": "made"
   }
  ],
+ "w|貧乏": [
+  {
+   "text": "悠斗は学生時代、貧乏で毎日もやしばかり食べていたという。",
+   "en": "Yuto says he was so poor as a student that he ate nothing but bean sprouts every day.",
+   "ko": "유토는 학생 시절 가난해서 매일 숙주나물만 먹었대요.",
+   "blank": "貧乏",
+   "src": "made"
+  },
+  {
+   "text": "遠征が続いて、千尋は「マラソン貧乏だ」と笑った。",
+   "en": "After one trip to a race after another, Chihiro laughed that marathons were making her broke.",
+   "ko": "원정이 이어지자 치히로는 \"마라톤 때문에 가난해졌다\"며 웃었어요.",
+   "blank": "貧乏",
+   "src": "made"
+  }
+ ],
  "w|貧困": [
   {
    "text": "社会の授業で、世界の貧困について話し合った。",
@@ -75936,6 +76496,22 @@
    "en": "The shop's cat is very smart, so it waits quietly beside the register.",
    "ko": "미사키 가게의 마스코트 고양이는 아주 영리해서 계산대 옆에서 얌전히 기다려요.",
    "blank": "賢い",
+   "src": "made"
+  }
+ ],
+ "w|賢者": [
+  {
+   "text": "悠斗が昔はまったゲームでは、いつも賢者を選んで遊んでいた。",
+   "en": "In a game Yuto was hooked on years ago, he always chose to play as the sage.",
+   "ko": "유토가 예전에 빠졌던 게임에서는 늘 현자를 골라 놀았어요.",
+   "blank": "賢者",
+   "src": "made"
+  },
+  {
+   "text": "千尋の好きな本では、山に住む賢者が旅人に「急ぐな」と教える。",
+   "en": "In Chihiro's favorite book, a sage who lives on a mountain tells a traveler not to hurry.",
+   "ko": "치히로가 좋아하는 책에서는 산에 사는 현자가 나그네에게 \"서두르지 마라\"고 가르쳐요.",
+   "blank": "賢者",
    "src": "made"
   }
  ],
@@ -77647,6 +78223,22 @@
    "en": "I'm undecided which to choose.",
    "ko": "어느 쪽으로 할지 망설여져.",
    "blank": "迷う"
+  }
+ ],
+ "w|迷子": [
+  {
+   "text": "初日、悠斗は広い社内で迷子になり、受付の人に助けてもらった。",
+   "en": "On his first day, Yuto got lost in the large office and was helped by the receptionist.",
+   "ko": "첫날 유토는 넓은 사내에서 길을 잃어 접수처 직원의 도움을 받았어요.",
+   "blank": "迷子",
+   "src": "made"
+  },
+  {
+   "text": "人が多いスタート地点で、千尋の弟が迷子になった。",
+   "en": "Chihiro's little brother got lost at the crowded starting point.",
+   "ko": "사람이 많은 출발 지점에서 치히로의 남동생이 길을 잃었어요.",
+   "blank": "迷子",
+   "src": "made"
   }
  ],
  "w|迷惑": [
@@ -80045,6 +80637,22 @@
    "blank": "遺産"
   }
  ],
+ "w|遺言": [
+  {
+   "text": "悠斗は、祖父の遺言で受け継いだ古い腕時計を大切にしている。",
+   "en": "Yuto treasures the old wristwatch he inherited through his grandfather's will.",
+   "ko": "유토는 할아버지 유언으로 물려받은 오래된 손목시계를 소중히 여겨요.",
+   "blank": "遺言",
+   "src": "made"
+  },
+  {
+   "text": "走り続けろという祖父の遺言を守って、千尋は毎年この大会に出ている。",
+   "en": "Keeping her grandfather's last wish that she keep running, Chihiro enters this race every year.",
+   "ko": "계속 달리라는 할아버지의 유언을 지켜 치히로는 매년 이 대회에 나가요.",
+   "blank": "遺言",
+   "src": "made"
+  }
+ ],
  "w|遺跡": [
   {
    "text": "遠足で、学校の近くにある古い遺跡を見に行った。",
@@ -81419,6 +82027,22 @@
    "en": "Your hair is long.",
    "ko": "머리가 기네.",
    "blank": "長い"
+  }
+ ],
+ "w|長女": [
+  {
+   "text": "悠斗は先月、長女の出生届を役所に出したばかりだそうだ。",
+   "en": "Yuto apparently just submitted his eldest daughter's birth registration at the city office last month.",
+   "ko": "유토는 지난달 큰딸 출생 신고를 막 구청에 냈대요.",
+   "blank": "長女",
+   "src": "made"
+  },
+  {
+   "text": "千尋は三姉妹の長女で、妹たちも沿道で応援してくれた。",
+   "en": "Chihiro is the eldest of three sisters, and her younger sisters cheered from the roadside too.",
+   "ko": "치히로는 세 자매 중 장녀라 여동생들도 길가에서 응원해 줬어요.",
+   "blank": "長女",
+   "src": "made"
   }
  ],
  "w|長官": [
@@ -84912,6 +85536,22 @@
    "en": "An owner came in worried because their cat had snatched gyoza off the table last night.",
    "ko": "어젯밤 고양이가 식탁 위 만두를 몰래 먹었다며 주인이 걱정돼서 병원에 왔어요.",
    "blank": "餃子",
+   "src": "made"
+  }
+ ],
+ "w|養子": [
+  {
+   "text": "悠斗は、幼いころ親戚の家に養子に入ったと打ち明けてくれた。",
+   "en": "Yuto confided that he was adopted into a relative's family when he was little.",
+   "ko": "유토는 어렸을 때 친척 집에 양자로 들어갔다고 털어놓았어요.",
+   "blank": "養子",
+   "src": "made"
+  },
+  {
+   "text": "千尋の隣を走った女性は、養子に迎えた息子と親子で参加していた。",
+   "en": "The woman running next to Chihiro was taking part with the son she had adopted.",
+   "ko": "치히로 옆에서 달린 여성은 입양한 아들과 함께 참가했어요.",
+   "blank": "養子",
    "src": "made"
   }
  ],
