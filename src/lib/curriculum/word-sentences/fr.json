@@ -895,6 +895,22 @@
    "blank": "administration"
   }
  ],
+ "w|admirateur": [
+  {
+   "text": "Un grand admirateur du peintre vient voir la même toile tous les dimanches.",
+   "en": "A great admirer of the painter comes to see the same canvas every Sunday.",
+   "ko": "그 화가를 무척 좋아하는 사람이 일요일마다 같은 그림을 보러 와요.",
+   "blank": "admirateur",
+   "src": "made"
+  },
+  {
+   "text": "Après sa conférence, Inès a reçu la lettre d'un jeune admirateur passionné de chimie.",
+   "en": "After her lecture, Inès received a letter from a young admirer passionate about chemistry.",
+   "ko": "강연이 끝난 뒤 이네스는 화학을 좋아하는 젊은 팬에게서 편지를 받았어요.",
+   "blank": "admirateur",
+   "src": "made"
+  }
+ ],
  "w|admirer": [
   {
    "text": "J'aime admirer le coucher du soleil à la plage.",
@@ -2313,6 +2329,22 @@
    "blank": "âme"
   }
  ],
+ "w|amélioration": [
+  {
+   "text": "Les visiteurs ont remarqué une nette amélioration de l'éclairage depuis les travaux.",
+   "en": "Visitors have noticed a clear improvement in the lighting since the renovation.",
+   "ko": "방문객들은 공사 뒤로 조명이 확실히 나아진 걸 알아챘어요.",
+   "blank": "amélioration",
+   "src": "made"
+  },
+  {
+   "text": "Le nouveau logiciel apporte une vraie amélioration à l'analyse des données d'Inès.",
+   "en": "The new software brings a real improvement to Inès's data analysis.",
+   "ko": "새 프로그램 덕분에 이네스의 데이터 분석이 확실히 나아졌어요.",
+   "blank": "amélioration",
+   "src": "made"
+  }
+ ],
  "w|améliorer": [
   {
    "text": "Je cherche à améliorer mon français.",
@@ -3352,6 +3384,22 @@
    "en": "Camille is getting ready to go on set when it starts to rain.",
    "ko": "카미유가 막 촬영에 들어가려는데 비가 내리기 시작해요.",
    "blank": "apprête",
+   "src": "made"
+  }
+ ],
+ "w|approbation": [
+  {
+   "text": "Nicolas attend l'approbation du directeur pour prêter le tableau à un autre musée.",
+   "en": "Nicolas is waiting for the director's approval to lend the painting to another museum.",
+   "ko": "니콜라는 그림을 다른 박물관에 빌려주려고 관장의 승인을 기다려요.",
+   "blank": "approbation",
+   "src": "made"
+  },
+  {
+   "text": "Inès a besoin de l'approbation du comité d'éthique avant de commencer l'étude.",
+   "en": "Inès needs the ethics committee's approval before starting the study.",
+   "ko": "이네스는 연구를 시작하기 전에 윤리 위원회 승인이 필요해요.",
+   "blank": "approbation",
    "src": "made"
   }
  ],
@@ -5049,6 +5097,22 @@
    "blank": "automne"
   }
  ],
+ "w|automobile": [
+  {
+   "text": "Le musée consacre une aile entière à l'histoire de l'automobile.",
+   "en": "The museum devotes an entire wing to the history of the automobile.",
+   "ko": "박물관은 자동차 역사에 한 동 전체를 할애해요.",
+   "blank": "automobile",
+   "src": "made"
+  },
+  {
+   "text": "Le laboratoire d'Inès teste de nouvelles batteries pour l'industrie automobile.",
+   "en": "Inès's lab tests new batteries for the car industry.",
+   "ko": "이네스의 실험실은 자동차 산업용 새 배터리를 시험해요.",
+   "blank": "automobile",
+   "src": "made"
+  }
+ ],
  "w|autopsie": [
   {
    "text": "Le médecin a pratiqué une autopsie pour découvrir la cause.",
@@ -5459,6 +5523,22 @@
    "en": "I would like to have a new car.",
    "ko": "나는 새 차를 갖고 싶어.",
    "blank": "avoir"
+  }
+ ],
+ "w|avortement": [
+  {
+   "text": "L'exposition sur les droits des femmes présente les débats sur l'avortement dans les années soixante-dix.",
+   "en": "The exhibition on women's rights presents the debates on abortion in the seventies.",
+   "ko": "여성 권리 전시는 칠십 년대 낙태 논쟁을 소개해요.",
+   "blank": "avortement",
+   "src": "made"
+  },
+  {
+   "text": "Le laboratoire d'Inès étudie les risques médicaux après un avortement tardif.",
+   "en": "Inès's lab studies the medical risks after a late abortion.",
+   "ko": "이네스의 실험실은 늦은 낙태 뒤의 의학적 위험을 연구해요.",
+   "blank": "avortement",
+   "src": "made"
   }
  ],
  "w|avouer": [
@@ -6401,6 +6481,22 @@
    "blank": "batterie"
   }
  ],
+ "w|batteur": [
+  {
+   "text": "Le musée expose la batterie et la veste d'un batteur de jazz célèbre dans la ville.",
+   "en": "The museum displays the drum kit and jacket of a jazz drummer famous in the town.",
+   "ko": "박물관은 그 도시에서 유명했던 재즈 드러머의 드럼과 재킷을 전시해요.",
+   "blank": "batteur",
+   "src": "made"
+  },
+  {
+   "text": "Inès utilise un batteur électrique pour mélanger la solution plus vite.",
+   "en": "Inès uses an electric whisk to mix the solution faster.",
+   "ko": "이네스는 용액을 더 빨리 섞으려고 전동 거품기를 써요.",
+   "blank": "batteur",
+   "src": "made"
+  }
+ ],
  "w|battre": [
   {
    "text": "Je vais essayer de battre mon record.",
@@ -7207,6 +7303,22 @@
    "blank": "bloquer"
   }
  ],
+ "w|blouse": [
+  {
+   "text": "La restauratrice enfile une blouse blanche avant de toucher le vieux tableau.",
+   "en": "The restorer puts on a white smock before touching the old painting.",
+   "ko": "복원가는 오래된 그림을 만지기 전에 흰 가운을 입어요.",
+   "blank": "blouse",
+   "src": "made"
+  },
+  {
+   "text": "Inès a taché sa blouse avec un produit bleu impossible à enlever.",
+   "en": "Inès stained her lab coat with a blue chemical that won't come off.",
+   "ko": "이네스는 지워지지 않는 파란 약품을 실험복에 묻혔어요.",
+   "blank": "blouse",
+   "src": "made"
+  }
+ ],
  "w|bluffer": [
   {
    "text": "Lucas n'a rien révisé, alors il essaie de bluffer pendant l'oral.",
@@ -7759,6 +7871,22 @@
    "blank": "boule"
   }
  ],
+ "w|boulet": [
+  {
+   "text": "Un boulet de canon retrouvé dans la rivière est posé à l'entrée de la salle.",
+   "en": "A cannonball found in the river sits at the entrance of the room.",
+   "ko": "강에서 찾은 대포알이 전시실 입구에 놓여 있어요.",
+   "blank": "boulet",
+   "src": "made"
+  },
+  {
+   "text": "Le collègue paresseux d'Inès est un vrai boulet pour toute l'équipe.",
+   "en": "Inès's lazy colleague is a real drag on the whole team.",
+   "ko": "이네스의 게으른 동료는 팀 전체의 짐 덩어리예요.",
+   "blank": "boulet",
+   "src": "made"
+  }
+ ],
  "w|boulette": [
   {
    "text": "La grand-mère d'Antoine roule chaque boulette de viande à la main.",
@@ -8186,6 +8314,22 @@
    "en": "The route goes past the old brick factories that Claire loves.",
    "ko": "코스는 클레르가 좋아하는 오래된 벽돌 공장들 앞을 지나요.",
    "blank": "brique",
+   "src": "made"
+  }
+ ],
+ "w|briquet": [
+  {
+   "text": "Dans une vitrine, Nicolas montre aux visiteurs le briquet d'un soldat de la Grande Guerre.",
+   "en": "In a display case, Nicolas shows visitors a soldier's lighter from the Great War.",
+   "ko": "니콜라는 진열장에서 방문객들에게 제일차 세계대전 병사의 라이터를 보여 줘요.",
+   "blank": "briquet",
+   "src": "made"
+  },
+  {
+   "text": "Inès allume le bec Bunsen avec un briquet, car les allumettes sont mouillées.",
+   "en": "Inès lights the Bunsen burner with a lighter because the matches are wet.",
+   "ko": "성냥이 젖어서 이네스는 라이터로 분젠 버너에 불을 붙여요.",
+   "blank": "briquet",
    "src": "made"
   }
  ],
@@ -10043,6 +10187,22 @@
    "blank": "caution"
   }
  ],
+ "w|cavale": [
+  {
+   "text": "Une affiche ancienne raconte la cavale d'un célèbre bandit du siècle dernier.",
+   "en": "An old poster tells of a famous bandit's run from the law in the last century.",
+   "ko": "옛 포스터는 지난 세기 유명한 도적의 도주 이야기를 담고 있어요.",
+   "blank": "cavale",
+   "src": "made"
+  },
+  {
+   "text": "Le hamster du laboratoire s'est fait la belle, et sa cavale a duré tout le week-end.",
+   "en": "The lab hamster escaped, and its getaway lasted the whole weekend.",
+   "ko": "실험실 햄스터가 탈출해서 주말 내내 도망 다녔어요.",
+   "blank": "cavale",
+   "src": "made"
+  }
+ ],
  "w|cavalier": [
   {
    "text": "Au séminaire, Julien était le cavalier de sa collègue pour la danse d'ouverture.",
@@ -11367,6 +11527,22 @@
    "blank": "château"
   }
  ],
+ "w|châtiment": [
+  {
+   "text": "Le panneau explique quel châtiment attendait les voleurs au Moyen Âge.",
+   "en": "The panel explains what punishment awaited thieves in the Middle Ages.",
+   "ko": "안내판은 중세에 도둑이 어떤 형벌을 받았는지 설명해요.",
+   "blank": "châtiment",
+   "src": "made"
+  },
+  {
+   "text": "Inès explique à un élève qu'au dix-septième siècle, certains savants risquaient un châtiment sévère.",
+   "en": "Inès explains to a student that in the seventeenth century some scientists risked severe punishment.",
+   "ko": "이네스는 한 학생에게 십칠 세기에 어떤 학자들은 엄한 벌을 받을 위험이 있었다고 설명해요.",
+   "blank": "châtiment",
+   "src": "made"
+  }
+ ],
  "w|chaton": [
   {
    "text": "La chatte de la ferme a eu un chaton tout blanc, et Julien l'a appelé Neige.",
@@ -12661,6 +12837,22 @@
    "en": "The clinic is closed on Sundays.",
    "ko": "클리닉은 일요일에 문을 닫아.",
    "blank": "clinique"
+  }
+ ],
+ "w|clip": [
+  {
+   "text": "Pour attirer les jeunes, le musée a tourné un clip avec un rappeur local.",
+   "en": "To attract young people, the museum shot a music video with a local rapper.",
+   "ko": "젊은 사람들을 끌려고 박물관이 지역 래퍼와 뮤직비디오를 찍었어요.",
+   "blank": "clip",
+   "src": "made"
+  },
+  {
+   "text": "Inès accroche ses notes au tableau avec un clip en métal.",
+   "en": "Inès fastens her notes to the board with a metal clip.",
+   "ko": "이네스는 금속 집게로 메모를 칠판에 꽂아 둬요.",
+   "blank": "clip",
+   "src": "made"
   }
  ],
  "w|cloche": [
@@ -17363,6 +17555,22 @@
    "src": "made"
   }
  ],
+ "w|critère": [
+  {
+   "text": "Nicolas explique à un stagiaire chaque critère pour accepter un don au musée.",
+   "en": "Nicolas explains to an intern each criterion for accepting a donation to the museum.",
+   "ko": "니콜라는 인턴에게 박물관 기증을 받는 기준을 하나하나 설명해요.",
+   "blank": "critère",
+   "src": "made"
+  },
+  {
+   "text": "Inès définit un critère précis pour choisir les patients de l'étude.",
+   "en": "Inès sets a precise criterion for selecting the study's patients.",
+   "ko": "이네스는 연구 환자를 고르는 명확한 기준을 정해요.",
+   "blank": "critère",
+   "src": "made"
+  }
+ ],
  "w|critique": [
   {
    "text": "La critique du film était positive.",
@@ -17528,6 +17736,22 @@
    "en": "In the little harbour chapel, Manon passes a few believers who have come to pray for the sailors.",
    "ko": "항구의 작은 예배당에서 마농은 선원들을 위해 기도하러 온 신자 몇 명을 마주쳐요.",
    "blank": "croyants",
+   "src": "made"
+  }
+ ],
+ "w|cruauté": [
+  {
+   "text": "Les gravures de la dernière salle montrent la cruauté de la guerre sans rien cacher.",
+   "en": "The engravings in the last room show the cruelty of war without hiding anything.",
+   "ko": "마지막 전시실의 판화들은 전쟁의 잔인함을 숨김없이 보여 줘요.",
+   "blank": "cruauté",
+   "src": "made"
+  },
+  {
+   "text": "Le comité refuse toute cruauté envers les souris du laboratoire d'Inès.",
+   "en": "The committee forbids any cruelty toward the mice in Inès's lab.",
+   "ko": "위원회는 이네스 실험실 생쥐에 대한 어떤 잔인한 행위도 허용하지 않아요.",
+   "blank": "cruauté",
    "src": "made"
   }
  ],
@@ -25623,6 +25847,22 @@
    "src": "made"
   }
  ],
+ "w|épargne": [
+  {
+   "text": "Une salle du musée raconte l'histoire de l'épargne populaire depuis le dix-neuvième siècle.",
+   "en": "A room in the museum tells the history of household savings since the nineteenth century.",
+   "ko": "박물관의 한 전시실은 십구 세기부터의 서민 저축 역사를 다뤄요.",
+   "blank": "épargne",
+   "src": "made"
+  },
+  {
+   "text": "Inès met une partie de son salaire sur un compte d'épargne chaque mois.",
+   "en": "Inès puts part of her salary into a savings account every month.",
+   "ko": "이네스는 매달 월급 일부를 저축 계좌에 넣어요.",
+   "blank": "épargne",
+   "src": "made"
+  }
+ ],
  "w|épargner": [
   {
    "text": "Paul épargne un peu chaque mois pour s'acheter un kayak.",
@@ -28409,6 +28649,22 @@
    "blank": "fascinant"
   }
  ],
+ "w|fasciste": [
+  {
+   "text": "L'exposition retrace la montée du régime fasciste en Italie dans les années vingt.",
+   "en": "The exhibition traces the rise of the fascist regime in Italy in the twenties.",
+   "ko": "전시는 이십 년대 이탈리아에서 파시스트 정권이 부상한 과정을 짚어요.",
+   "blank": "fasciste",
+   "src": "made"
+  },
+  {
+   "text": "Dans un livre d'histoire, Inès lit comment le gouvernement fasciste contrôlait la recherche.",
+   "en": "In a history book, Inès reads how the fascist government controlled research.",
+   "ko": "이네스는 역사책에서 파시스트 정부가 연구를 어떻게 통제했는지 읽어요.",
+   "blank": "fasciste",
+   "src": "made"
+  }
+ ],
  "w|fatal": [
   {
    "text": "Dans la tragédie, Thomas boit un poison fatal devant le public.",
@@ -29491,6 +29747,22 @@
    "blank": "fixer"
   }
  ],
+ "w|flacon": [
+  {
+   "text": "Le musée de Nicolas expose les premiers flacons de sérum fabriqués contre la rage.",
+   "en": "Nicolas's museum displays the first bottles of serum made against rabies.",
+   "ko": "니콜라의 박물관에는 광견병 치료용으로 처음 만든 혈청 병들이 전시돼 있어요.",
+   "blank": "flacons",
+   "src": "made"
+  },
+  {
+   "text": "Inès verse quelques gouttes d'acide dans un flacon en verre brun.",
+   "en": "Inès pours a few drops of acid into a brown glass bottle.",
+   "ko": "이네스는 갈색 유리병에 산을 몇 방울 떨어뜨려요.",
+   "blank": "flacon",
+   "src": "made"
+  }
+ ],
  "w|flamme": [
   {
    "text": "La flamme de la bougie vacille.",
@@ -29503,6 +29775,22 @@
    "en": "He lit the flame of the fireplace.",
    "ko": "그는 벽난로에 불을 붙였어.",
    "blank": "flamme"
+  }
+ ],
+ "w|flanc": [
+  {
+   "text": "La statue du cheval porte une inscription gravée sur son flanc gauche.",
+   "en": "The horse statue bears an inscription carved on its left flank.",
+   "ko": "말 조각상의 왼쪽 옆구리에는 글귀가 새겨져 있어요.",
+   "blank": "flanc",
+   "src": "made"
+  },
+  {
+   "text": "Le laboratoire d'Inès est construit à flanc de colline, au-dessus de la ville.",
+   "en": "Inès's lab is built on the hillside, above the town.",
+   "ko": "이네스의 실험실은 도시 위 언덕 비탈에 지어졌어요.",
+   "blank": "flanc",
+   "src": "made"
   }
  ],
  "w|flash": [
@@ -33005,6 +33293,22 @@
    "blank": "gym"
   }
  ],
+ "w|gymnase": [
+  {
+   "text": "Le musée organise une exposition sur le sport dans l'ancien gymnase de la ville.",
+   "en": "The museum is holding an exhibition on sport in the town's old gymnasium.",
+   "ko": "박물관은 시의 옛 체육관에서 스포츠 전시를 열어요.",
+   "blank": "gymnase",
+   "src": "made"
+  },
+  {
+   "text": "Après le travail, Inès va courir au gymnase de l'université.",
+   "en": "After work, Inès goes running at the university gym.",
+   "ko": "퇴근 후 이네스는 대학 체육관에 달리러 가요.",
+   "blank": "gymnase",
+   "src": "made"
+  }
+ ],
  "w|habile": [
   {
    "text": "Lucas admire le conducteur habile qui manœuvre le train dans la gare.",
@@ -33737,6 +34041,22 @@
    "en": "We're watching the hockey together tonight.",
    "ko": "오늘 밤에 같이 하키를 봐.",
    "blank": "hockey"
+  }
+ ],
+ "w|hollandais": [
+  {
+   "text": "La salle la plus visitée du musée est celle des peintres hollandais.",
+   "en": "The most visited room in the museum is the one with the Dutch painters.",
+   "ko": "박물관에서 가장 많이 찾는 전시실은 네덜란드 화가들의 방이에요.",
+   "blank": "hollandais",
+   "src": "made"
+  },
+  {
+   "text": "Inès travaille avec un chercheur hollandais spécialiste des tulipes.",
+   "en": "Inès works with a Dutch researcher who specializes in tulips.",
+   "ko": "이네스는 튤립 전문 네덜란드 연구자와 함께 일해요.",
+   "blank": "hollandais",
+   "src": "made"
   }
  ],
  "w|homard": [
@@ -34701,6 +35021,22 @@
    "en": "Sometimes I feel a little foolish.",
    "ko": "가끔 나는 좀 바보 같아.",
    "blank": "imbécile"
+  }
+ ],
+ "w|imitation": [
+  {
+   "text": "Nicolas révèle aux visiteurs que ce vase grec est une imitation très réussie.",
+   "en": "Nicolas reveals to visitors that this Greek vase is a very convincing imitation.",
+   "ko": "니콜라는 방문객들에게 그 그리스 항아리가 아주 잘 만든 모조품이라고 밝혀요.",
+   "blank": "imitation",
+   "src": "made"
+  },
+  {
+   "text": "Le robot du laboratoire d'Inès apprend par imitation des gestes humains.",
+   "en": "The robot in Inès's lab learns through imitation of human movements.",
+   "ko": "이네스 실험실의 로봇은 사람 동작을 흉내 내며 배워요.",
+   "blank": "imitation",
+   "src": "made"
   }
  ],
  "w|imiter": [
@@ -36683,6 +37019,22 @@
    "blank": "intention"
   }
  ],
+ "w|interdiction": [
+  {
+   "text": "Nicolas rappelle l'interdiction de prendre des photos avec flash.",
+   "en": "Nicolas reminds visitors of the ban on taking photos with a flash.",
+   "ko": "니콜라는 플래시 사진 촬영 금지를 다시 알려요.",
+   "blank": "interdiction",
+   "src": "made"
+  },
+  {
+   "text": "Une affiche rappelle l'interdiction de manger dans le laboratoire.",
+   "en": "A poster reminds everyone of the ban on eating in the lab.",
+   "ko": "포스터가 실험실 안 음식물 섭취 금지를 알려요.",
+   "blank": "interdiction",
+   "src": "made"
+  }
+ ],
  "w|interdire": [
   {
    "text": "Il faut interdire de fumer dans ce bâtiment.",
@@ -37120,6 +37472,22 @@
    "en": "Inès is dealing with a real invasion of ants in her kitchen.",
    "ko": "이네스네 부엌에 개미가 그야말로 떼로 몰려들었어요.",
    "blank": "invasion",
+   "src": "made"
+  }
+ ],
+ "w|inventaire": [
+  {
+   "text": "Chaque année, Nicolas fait l'inventaire complet des objets conservés en réserve.",
+   "en": "Every year, Nicolas does a full inventory of the objects kept in storage.",
+   "ko": "니콜라는 해마다 창고에 보관된 물건을 전부 재고 조사해요.",
+   "blank": "inventaire",
+   "src": "made"
+  },
+  {
+   "text": "Le vendredi, Inès fait l'inventaire des produits chimiques du laboratoire.",
+   "en": "On Fridays, Inès takes inventory of the lab's chemicals.",
+   "ko": "금요일마다 이네스는 실험실 화학 약품 재고를 확인해요.",
+   "blank": "inventaire",
    "src": "made"
   }
  ],
@@ -37671,6 +38039,22 @@
    "en": "I understand what you're saying.",
    "ko": "네가 말하는 걸 이해해.",
    "blank": "Je"
+  }
+ ],
+ "w|jeep": [
+  {
+   "text": "Une vieille jeep militaire trône au milieu de la salle consacrée à la Libération.",
+   "en": "An old military jeep stands proudly in the middle of the room devoted to the Liberation.",
+   "ko": "해방 전시실 한가운데에 낡은 군용 지프가 떡하니 놓여 있어요.",
+   "blank": "jeep",
+   "src": "made"
+  },
+  {
+   "text": "L'équipe d'Inès part prélever des échantillons de sol en jeep dans le désert.",
+   "en": "Inès's team goes off by jeep to take soil samples in the desert.",
+   "ko": "이네스의 팀은 지프를 타고 사막으로 흙 시료를 채취하러 가요.",
+   "blank": "jeep",
+   "src": "made"
   }
  ],
  "w|jet": [
@@ -41601,6 +41985,22 @@
    "en": "Hand me the hammer, please.",
    "ko": "망치 좀 건네줘.",
    "blank": "marteau"
+  }
+ ],
+ "w|martyr": [
+  {
+   "text": "Le guide présente ce poète comme un martyr de la liberté d'expression.",
+   "en": "The guide presents this poet as a martyr of free speech.",
+   "ko": "가이드는 그 시인을 표현의 자유를 위한 순교자로 소개해요.",
+   "blank": "martyr",
+   "src": "made"
+  },
+  {
+   "text": "Dans son cours, Inès parle d'un médecin considéré comme un martyr de la science.",
+   "en": "In her class, Inès talks about a doctor regarded as a martyr of science.",
+   "ko": "이네스는 수업에서 과학의 순교자로 여겨지는 한 의사 이야기를 해요.",
+   "blank": "martyr",
+   "src": "made"
   }
  ],
  "w|masculin": [
@@ -48137,6 +48537,22 @@
    "blank": "parking"
   }
  ],
+ "w|parlement": [
+  {
+   "text": "Une maquette du parlement attire beaucoup d'élèves pendant les sorties scolaires.",
+   "en": "A model of the parliament draws many pupils during school trips.",
+   "ko": "의회 모형은 현장 학습 때 학생들을 많이 끌어요.",
+   "blank": "parlement",
+   "src": "made"
+  },
+  {
+   "text": "Inès présente ses résultats sur la qualité de l'air devant une commission du parlement.",
+   "en": "Inès presents her air quality findings to a parliamentary committee.",
+   "ko": "이네스는 의회 위원회 앞에서 대기 질 연구 결과를 발표해요.",
+   "blank": "parlement",
+   "src": "made"
+  }
+ ],
  "w|parler": [
   {
    "text": "Je veux parler français.",
@@ -48263,6 +48679,22 @@
    "blank": "partenaire"
   }
  ],
+ "w|participation": [
+  {
+   "text": "Les visites guidées sont gratuites, mais une participation libre est conseillée.",
+   "en": "Guided tours are free, but a voluntary contribution is suggested.",
+   "ko": "가이드 투어는 무료지만 자유 기부를 권해요.",
+   "blank": "participation",
+   "src": "made"
+  },
+  {
+   "text": "La participation des volontaires est indispensable au projet d'Inès.",
+   "en": "Volunteers' participation is essential to Inès's project.",
+   "ko": "이네스의 프로젝트에는 지원자들의 참여가 꼭 필요해요.",
+   "blank": "participation",
+   "src": "made"
+  }
+ ],
  "w|participer": [
   {
    "text": "Je veux participer à ce concours.",
@@ -48347,6 +48779,22 @@
    "en": "When are you going on vacation?",
    "ko": "언제 휴가 가?",
    "blank": "partir"
+  }
+ ],
+ "w|partisan": [
+  {
+   "text": "Une lettre exposée montre que ce roi avait un partisan fidèle jusqu'à la fin.",
+   "en": "A letter on display shows that this king had a loyal supporter to the end.",
+   "ko": "전시된 편지를 보면 그 왕에게는 끝까지 충성한 지지자가 있었어요.",
+   "blank": "partisan",
+   "src": "made"
+  },
+  {
+   "text": "Le directeur du laboratoire d'Inès est un partisan convaincu des données ouvertes.",
+   "en": "The head of Inès's lab is a firm supporter of open data.",
+   "ko": "이네스 실험실의 소장은 공개 데이터를 확고히 지지해요.",
+   "blank": "partisan",
+   "src": "made"
   }
  ],
  "w|partout": [
@@ -48970,6 +49418,22 @@
    "en": "The study room lamp switches on with a pedal, which amuses Camille.",
    "ko": "자습실 램프가 페달로 켜져서 카미유는 재미있어해요.",
    "blank": "pédale",
+   "src": "made"
+  }
+ ],
+ "w|peigne": [
+  {
+   "text": "Nicolas range un peigne en ivoire du Moyen Âge dans une petite vitrine.",
+   "en": "Nicolas places an ivory comb from the Middle Ages in a small display case.",
+   "ko": "니콜라는 중세 상아 빗을 작은 진열장에 넣어요.",
+   "blank": "peigne",
+   "src": "made"
+  },
+  {
+   "text": "Pour ne pas contaminer ses échantillons, Inès attache ses cheveux après un coup de peigne.",
+   "en": "So as not to contaminate her samples, Inès ties her hair back after running a comb through it.",
+   "ko": "시료가 오염되지 않게 이네스는 빗으로 머리를 빗고 묶어요.",
+   "blank": "peigne",
    "src": "made"
   }
  ],
@@ -52758,6 +53222,22 @@
    "en": "Léa washes her hands often to protect patients from infections.",
    "ko": "레아는 환자들을 감염에서 지키려고 손을 자주 씻어요.",
    "blank": "préserver",
+   "src": "made"
+  }
+ ],
+ "w|présidence": [
+  {
+   "text": "Une salle présente les portraits officiels de chaque présidence de la République.",
+   "en": "A room displays the official portraits from each presidency of the Republic.",
+   "ko": "한 전시실에는 공화국 역대 대통령 임기마다의 공식 초상화가 있어요.",
+   "blank": "présidence",
+   "src": "made"
+  },
+  {
+   "text": "La présidence de l'université a promis un nouveau microscope au laboratoire d'Inès.",
+   "en": "The university presidency promised a new microscope to Inès's lab.",
+   "ko": "대학 총장실이 이네스의 실험실에 새 현미경을 약속했어요.",
+   "blank": "présidence",
    "src": "made"
   }
  ],
@@ -59603,6 +60083,22 @@
    "blank": "robe"
   }
  ],
+ "w|robinet": [
+  {
+   "text": "Nicolas a coupé le robinet d'eau après une fuite près des archives.",
+   "en": "Nicolas turned off the water tap after a leak near the archives.",
+   "ko": "니콜라는 기록 보관실 근처에서 물이 새자 수도꼭지를 잠갔어요.",
+   "blank": "robinet",
+   "src": "made"
+  },
+  {
+   "text": "Inès rince les éprouvettes sous le robinet d'eau distillée.",
+   "en": "Inès rinses the test tubes under the distilled water tap.",
+   "ko": "이네스는 증류수 수도꼭지 아래에서 시험관을 헹궈요.",
+   "blank": "robinet",
+   "src": "made"
+  }
+ ],
  "w|robot": [
   {
    "text": "Ce robot peut répondre à tes questions.",
@@ -60468,6 +60964,22 @@
    "en": "With the spring mud, Léa's kids are going to dirty the whole living room.",
    "ko": "봄 진흙 때문에 레아네 아이들이 거실을 온통 더럽힐 거예요.",
    "blank": "salir",
+   "src": "made"
+  }
+ ],
+ "w|salive": [
+  {
+   "text": "Un guide explique que les Égyptiens utilisaient parfois de la salive dans leurs remèdes.",
+   "en": "A guide explains that the Egyptians sometimes used saliva in their remedies.",
+   "ko": "한 가이드가 이집트인들이 치료약에 가끔 침을 썼다고 설명해요.",
+   "blank": "salive",
+   "src": "made"
+  },
+  {
+   "text": "Inès analyse la salive de volontaires pour mesurer leur niveau de stress.",
+   "en": "Inès analyzes volunteers' saliva to measure their stress levels.",
+   "ko": "이네스는 지원자들의 침을 분석해 스트레스 수준을 재요.",
+   "blank": "salive",
    "src": "made"
   }
  ],
@@ -62292,6 +62804,22 @@
    "en": "With the first frost, the lock on Léa's gate won't turn.",
    "ko": "첫서리가 내리자 레아네 대문 자물쇠가 돌아가지 않아요.",
    "blank": "serrure",
+   "src": "made"
+  }
+ ],
+ "w|sérum": [
+  {
+   "text": "Le musée de Nicolas expose les premiers flacons de sérum fabriqués contre la rage.",
+   "en": "Nicolas's museum displays the first bottles of serum made against rabies.",
+   "ko": "니콜라의 박물관에는 광견병 치료용으로 처음 만든 혈청 병들이 전시돼 있어요.",
+   "blank": "sérum",
+   "src": "made"
+  },
+  {
+   "text": "Inès prépare un sérum pour conserver les cellules à basse température.",
+   "en": "Inès prepares a serum to keep the cells at low temperature.",
+   "ko": "이네스는 세포를 저온 보관하기 위해 혈청을 준비해요.",
+   "blank": "sérum",
    "src": "made"
   }
  ],
@@ -64259,6 +64787,22 @@
    "blank": "souvent"
   }
  ],
+ "w|souverain": [
+  {
+   "text": "Le portrait du souverain occupe tout le mur du fond.",
+   "en": "The portrait of the sovereign takes up the whole back wall.",
+   "ko": "군주의 초상화가 안쪽 벽 전체를 차지해요.",
+   "blank": "souverain",
+   "src": "made"
+  },
+  {
+   "text": "Dans le musée de l'université, Inès admire une pièce d'or à l'effigie d'un souverain.",
+   "en": "In the university museum, Inès admires a gold coin bearing a sovereign's likeness.",
+   "ko": "대학 박물관에서 이네스는 군주의 얼굴이 새겨진 금화를 감상해요.",
+   "blank": "souverain",
+   "src": "made"
+  }
+ ],
  "w|soviétique": [
   {
    "text": "Un chercheur consulte des affiches soviétiques que Nicolas a sorties des réserves.",
@@ -65143,6 +65687,22 @@
    "src": "made"
   }
  ],
+ "w|suicidaire": [
+  {
+   "text": "Dans la salle du poète romantique, le guide évoque avec pudeur ses pensées suicidaires.",
+   "en": "In the Romantic poet's room, the guide tactfully mentions his suicidal thoughts.",
+   "ko": "낭만주의 시인의 전시실에서 가이드는 시인의 자살 충동을 조심스럽게 이야기해요.",
+   "blank": "suicidaires",
+   "src": "made"
+  },
+  {
+   "text": "Inès lit une étude sur la prévention des idées suicidaires chez les adolescents.",
+   "en": "Inès reads a study on preventing suicidal thoughts among teenagers.",
+   "ko": "이네스는 청소년의 자살 충동 예방에 관한 연구를 읽어요.",
+   "blank": "suicidaires",
+   "src": "made"
+  }
+ ],
  "w|suicide": [
   {
    "text": "Dans un magazine, Nicolas lit un article sur la prévention du suicide.",
@@ -65791,6 +66351,22 @@
    "src": "made"
   }
  ],
+ "w|suspension": [
+  {
+   "text": "La suspension de cristal dans le grand hall date du dix-huitième siècle.",
+   "en": "The crystal chandelier in the great hall dates from the eighteenth century.",
+   "ko": "대형 홀의 크리스털 샹들리에는 십팔 세기 것이에요.",
+   "blank": "suspension",
+   "src": "made"
+  },
+  {
+   "text": "Inès observe au microscope des bactéries en suspension dans l'eau.",
+   "en": "Inès looks at bacteria in suspension in water under the microscope.",
+   "ko": "이네스는 현미경으로 물에 떠 있는 세균을 관찰해요.",
+   "blank": "suspension",
+   "src": "made"
+  }
+ ],
  "w|symbole": [
   {
    "text": "La colombe est un symbole de paix.",
@@ -66307,6 +66883,22 @@
    "blank": "tarder"
   }
  ],
+ "w|tarif": [
+  {
+   "text": "Le tarif réduit s'applique aux étudiants et aux personnes de plus de soixante ans.",
+   "en": "The reduced rate applies to students and people over sixty.",
+   "ko": "할인 요금은 학생과 예순 살 넘은 사람에게 적용돼요.",
+   "blank": "tarif",
+   "src": "made"
+  },
+  {
+   "text": "Le fournisseur a augmenté son tarif pour les gants jetables.",
+   "en": "The supplier raised its rate for disposable gloves.",
+   "ko": "공급업체가 일회용 장갑 값을 올렸어요.",
+   "blank": "tarif",
+   "src": "made"
+  }
+ ],
  "w|tarte": [
   {
    "text": "J'ai préparé une tarte aux pommes hier.",
@@ -66568,6 +67160,22 @@
    "en": "Before leaving, Inès remembered to download the offline maps.",
    "ko": "떠나기 전에 이네스는 오프라인 지도를 내려받아 뒀어요.",
    "blank": "télécharger",
+   "src": "made"
+  }
+ ],
+ "w|télécommande": [
+  {
+   "text": "Nicolas utilise une télécommande pour allumer les écrans de la nouvelle salle.",
+   "en": "Nicolas uses a remote control to turn on the screens in the new room.",
+   "ko": "니콜라는 리모컨으로 새 전시실의 화면들을 켜요.",
+   "blank": "télécommande",
+   "src": "made"
+  },
+  {
+   "text": "Inès cherche partout la télécommande du projecteur avant la réunion.",
+   "en": "Inès looks everywhere for the projector's remote control before the meeting.",
+   "ko": "이네스는 회의 전에 프로젝터 리모컨을 여기저기 찾아요.",
+   "blank": "télécommande",
    "src": "made"
   }
  ],
@@ -68007,6 +68615,22 @@
    "blank": "tournoi"
   }
  ],
+ "w|tousser": [
+  {
+   "text": "La poussière des réserves fait tousser Nicolas chaque fois qu'il ouvre une caisse.",
+   "en": "The dust in the storerooms makes Nicolas cough every time he opens a crate.",
+   "ko": "창고 먼지 때문에 니콜라는 상자를 열 때마다 기침을 해요.",
+   "blank": "tousser",
+   "src": "made"
+  },
+  {
+   "text": "Le gaz fait tousser Inès, qui ouvre vite la fenêtre du laboratoire.",
+   "en": "The gas makes Inès cough, and she quickly opens the lab window.",
+   "ko": "가스 때문에 기침이 나서 이네스는 실험실 창문을 얼른 열어요.",
+   "blank": "tousser",
+   "src": "made"
+  }
+ ],
  "w|tout": [
   {
    "text": "Tout va bien.",
@@ -69063,6 +69687,22 @@
    "en": "You must not deceive your friends.",
    "ko": "친구를 속이면 안 돼.",
    "blank": "tromper"
+  }
+ ],
+ "w|trompette": [
+  {
+   "text": "Dans la salle des instruments, Nicolas montre une trompette du dix-neuvième siècle.",
+   "en": "In the instrument room, Nicolas shows a nineteenth-century trumpet.",
+   "ko": "악기 전시실에서 니콜라는 십구 세기 트럼펫을 보여 줘요.",
+   "blank": "trompette",
+   "src": "made"
+  },
+  {
+   "text": "Le soir, Inès joue de la trompette dans la fanfare du quartier.",
+   "en": "In the evening, Inès plays the trumpet in the neighborhood brass band.",
+   "ko": "저녁이면 이네스는 동네 관악대에서 트럼펫을 불어요.",
+   "blank": "trompette",
+   "src": "made"
   }
  ],
  "w|trône": [
