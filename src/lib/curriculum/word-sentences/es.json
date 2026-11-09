@@ -1075,6 +1075,22 @@
    "blank": "actual"
   }
  ],
+ "w|actualidad": [
+  {
+   "text": "En la actualidad, Hugo vive a diez minutos de su trabajo.",
+   "en": "These days, Hugo lives ten minutes from his work.",
+   "ko": "지금 우고는 회사에서 십 분 거리에 살아요.",
+   "blank": "actualidad",
+   "src": "made"
+  },
+  {
+   "text": "Paula cuenta que en la actualidad muchos clientes piden platos sin carne.",
+   "en": "Paula says that nowadays many customers order meat-free dishes.",
+   "ko": "파울라 말로는 요즘 고기 없는 요리를 찾는 손님이 많대요.",
+   "blank": "actualidad",
+   "src": "made"
+  }
+ ],
  "w|actualmente": [
   {
    "text": "Actualmente vivo en una ciudad pequeña.",
@@ -2611,6 +2627,22 @@
    "blank": "alcance"
   }
  ],
+ "w|alcantarilla": [
+  {
+   "text": "Al sacar el sofá, a Hugo se le cayó una llave por la alcantarilla de la calle.",
+   "en": "While taking out the sofa, Hugo dropped a key down the street drain.",
+   "ko": "소파를 내가다가 우고는 열쇠를 길가 하수구에 빠뜨렸어요.",
+   "blank": "alcantarilla",
+   "src": "made"
+  },
+  {
+   "text": "El olor de la alcantarilla entraba por la puerta trasera del restaurante de Paula.",
+   "en": "The smell from the sewer came in through the back door of Paula's restaurant.",
+   "ko": "하수구 냄새가 파울라네 식당 뒷문으로 들어왔어요.",
+   "blank": "alcantarilla",
+   "src": "made"
+  }
+ ],
  "w|alcanzar": [
   {
    "text": "No puedo alcanzar el estante de arriba.",
@@ -3256,6 +3288,22 @@
    "en": "In the castle chapel there is a stone altar.",
    "ko": "성 예배당에는 돌로 된 제단이 있어요.",
    "blank": "altar",
+   "src": "made"
+  }
+ ],
+ "w|altavoz": [
+  {
+   "text": "El altavoz de Hugo sonaba muy fuerte mientras pintaba las paredes.",
+   "en": "Hugo's speaker was playing very loud while he painted the walls.",
+   "ko": "우고가 벽을 칠하는 동안 스피커가 아주 크게 울렸어요.",
+   "blank": "altavoz",
+   "src": "made"
+  },
+  {
+   "text": "Paula bajó el volumen del altavoz porque los clientes no se oían.",
+   "en": "Paula turned down the speaker because the customers couldn't hear each other.",
+   "ko": "손님들이 서로 말소리를 못 들어서 파울라는 스피커 소리를 줄였어요.",
+   "blank": "altavoz",
    "src": "made"
   }
  ],
@@ -7831,6 +7879,22 @@
    "src": "made"
   }
  ],
+ "w|balneario": [
+  {
+   "text": "Antes de la mudanza, Hugo pasó un fin de semana en un balneario para relajarse.",
+   "en": "Before the move, Hugo spent a weekend at a spa to relax.",
+   "ko": "이사 전에 우고는 쉬려고 온천 휴양지에서 주말을 보냈어요.",
+   "blank": "balneario",
+   "src": "made"
+  },
+  {
+   "text": "Una pareja que volvía del balneario cenó en el restaurante de Paula.",
+   "en": "A couple coming back from the spa had dinner at Paula's restaurant.",
+   "ko": "온천 휴양지에서 돌아오던 부부가 파울라네 식당에서 저녁을 먹었어요.",
+   "blank": "balneario",
+   "src": "made"
+  }
+ ],
  "w|balón": [
   {
    "text": "El balón cruzó toda la cancha.",
@@ -9321,6 +9385,22 @@
    "blank": "bono"
   }
  ],
+ "w|borda": [
+  {
+   "text": "Hugo se mudó a la isla en ferry y miró el mar apoyado en la borda.",
+   "en": "Hugo moved to the island by ferry and watched the sea leaning on the rail.",
+   "ko": "우고는 배를 타고 섬으로 이사 가며 뱃전에 기대 바다를 바라봤어요.",
+   "blank": "borda",
+   "src": "made"
+  },
+  {
+   "text": "En la pared hay una foto del barco de pesca del padre de Paula, con redes sobre la borda.",
+   "en": "On the wall there's a photo of Paula's father's fishing boat, with nets over the side.",
+   "ko": "벽에는 뱃전에 그물이 걸린 파울라 아버지의 고깃배 사진이 있어요.",
+   "blank": "borda",
+   "src": "made"
+  }
+ ],
  "w|borde": [
   {
    "text": "Se sentó al borde de la piscina.",
@@ -9817,6 +9897,22 @@
    "src": "made"
   }
  ],
+ "w|buitre": [
+  {
+   "text": "Desde la nueva terraza, Hugo vio un buitre volando sobre las montañas.",
+   "en": "From the new terrace, Hugo saw a vulture flying over the mountains.",
+   "ko": "새 테라스에서 우고는 산 위를 나는 독수리를 봤어요.",
+   "blank": "buitre",
+   "src": "made"
+  },
+  {
+   "text": "Paula llama buitre a su primo porque siempre se come lo que dejan los demás.",
+   "en": "Paula calls her cousin a vulture because he always eats what others leave.",
+   "ko": "사촌이 늘 남들이 남긴 걸 먹어서 파울라는 그를 독수리라고 불러요.",
+   "blank": "buitre",
+   "src": "made"
+  }
+ ],
  "w|burbuja": [
   {
    "text": "El niño sopló una burbuja enorme.",
@@ -9887,6 +9983,22 @@
    "en": "The police are looking for the witness.",
    "ko": "경찰이 목격자를 찾고 있어.",
    "blank": "busca"
+  }
+ ],
+ "w|buscador": [
+  {
+   "text": "Hugo usó un buscador para encontrar una empresa de mudanzas barata.",
+   "en": "Hugo used a search engine to find a cheap moving company.",
+   "ko": "우고는 검색 엔진으로 싼 이삿짐 업체를 찾았어요.",
+   "blank": "buscador",
+   "src": "made"
+  },
+  {
+   "text": "Paula encontró en un buscador una receta de flan sin huevo.",
+   "en": "Paula found an egg-free flan recipe on a search engine.",
+   "ko": "파울라는 검색 엔진에서 달걀 없는 푸딩 요리법을 찾았어요.",
+   "blank": "buscador",
+   "src": "made"
   }
  ],
  "w|buscar": [
@@ -10407,6 +10519,22 @@
    "en": "Check the calculation before sending the report.",
    "ko": "보고서를 보내기 전에 계산을 확인해.",
    "blank": "cálculo"
+  }
+ ],
+ "w|calefacción": [
+  {
+   "text": "La calefacción de la casa nueva no funcionaba y Hugo durmió con dos mantas.",
+   "en": "The heating in the new house didn't work and Hugo slept with two blankets.",
+   "ko": "새집 난방이 안 돼서 우고는 담요 두 장을 덮고 잤어요.",
+   "blank": "calefacción",
+   "src": "made"
+  },
+  {
+   "text": "En invierno, Paula enciende la calefacción una hora antes de abrir.",
+   "en": "In winter, Paula turns on the heating an hour before opening.",
+   "ko": "겨울에는 파울라가 문 열기 한 시간 전에 난방을 켜요.",
+   "blank": "calefacción",
+   "src": "made"
   }
  ],
  "w|calendario": [
@@ -11517,6 +11645,22 @@
    "blank": "cara"
   }
  ],
+ "w|caracol": [
+  {
+   "text": "Después de la lluvia, Hugo vio un caracol subiendo por la puerta del jardín.",
+   "en": "After the rain, Hugo saw a snail climbing up the garden gate.",
+   "ko": "비가 그친 뒤 우고는 마당 문을 기어오르는 달팽이를 봤어요.",
+   "blank": "caracol",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente encontró un caracol en la ensalada y Paula se puso roja.",
+   "en": "A customer found a snail in the salad and Paula went red.",
+   "ko": "손님이 샐러드에서 달팽이를 발견해서 파울라는 얼굴이 빨개졌어요.",
+   "blank": "caracol",
+   "src": "made"
+  }
+ ],
  "w|carácter": [
   {
    "text": "Tiene un carácter fuerte pero amable.",
@@ -11899,6 +12043,22 @@
    "blank": "carretera"
   }
  ],
+ "w|carrito": [
+  {
+   "text": "Hugo cargó las cajas más pesadas en un carrito del supermercado prestado.",
+   "en": "Hugo loaded the heaviest boxes into a borrowed supermarket trolley.",
+   "ko": "우고는 가장 무거운 상자들을 빌린 마트 카트에 실었어요.",
+   "blank": "carrito",
+   "src": "made"
+  },
+  {
+   "text": "Paula llevó un carrito lleno de platos sucios a la cocina.",
+   "en": "Paula took a trolley full of dirty plates to the kitchen.",
+   "ko": "파울라는 더러운 접시가 가득한 카트를 부엌으로 가져갔어요.",
+   "blank": "carrito",
+   "src": "made"
+  }
+ ],
  "w|carro": [
   {
    "text": "El carro no arranca esta mañana.",
@@ -12103,6 +12263,22 @@
    "blank": "casi"
   }
  ],
+ "w|casillero": [
+  {
+   "text": "Hugo vació su casillero del gimnasio porque el nuevo barrio queda lejos.",
+   "en": "Hugo emptied his gym locker because the new neighbourhood is far away.",
+   "ko": "새 동네가 멀어서 우고는 헬스장 사물함을 비웠어요.",
+   "blank": "casillero",
+   "src": "made"
+  },
+  {
+   "text": "Cada camarero tiene un casillero para su ropa, y el de Paula está al fondo.",
+   "en": "Each waiter has a locker for their clothes, and Paula's is at the back.",
+   "ko": "종업원마다 옷 사물함이 있는데 파울라 것은 맨 안쪽에 있어요.",
+   "blank": "casillero",
+   "src": "made"
+  }
+ ],
  "w|casino": [
   {
    "text": "Perdió dinero en el casino anoche.",
@@ -12115,6 +12291,22 @@
    "en": "The new casino opens this Friday.",
    "ko": "새 카지노가 이번 금요일에 열려.",
    "blank": "casino"
+  }
+ ],
+ "w|casita": [
+  {
+   "text": "La nueva casa de Hugo es una casita blanca con un jardín pequeño.",
+   "en": "Hugo's new home is a little white house with a small garden.",
+   "ko": "우고의 새집은 작은 마당이 있는 하얀 작은 집이에요.",
+   "blank": "casita",
+   "src": "made"
+  },
+  {
+   "text": "Detrás del restaurante, la familia de Paula tiene una casita para guardar leña.",
+   "en": "Behind the restaurant, Paula's family has a little shed to store firewood.",
+   "ko": "식당 뒤에 파울라 가족은 장작을 두는 작은 집이 있어요.",
+   "blank": "casita",
+   "src": "made"
   }
  ],
  "w|caso": [
@@ -12655,6 +12847,22 @@
    "en": "It's short by one centimeter to close the door.",
    "ko": "문을 닫으려면 센티미터가 모자라.",
    "blank": "centímetro"
+  }
+ ],
+ "w|céntimo": [
+  {
+   "text": "Hugo no quería gastar ni un céntimo más en cajas de cartón.",
+   "en": "Hugo didn't want to spend a single cent more on cardboard boxes.",
+   "ko": "우고는 종이 상자에 한 푼도 더 쓰고 싶지 않았어요.",
+   "blank": "céntimo",
+   "src": "made"
+  },
+  {
+   "text": "La caja cuadró sin un céntimo de diferencia y Paula se fue tranquila.",
+   "en": "The till balanced without a cent of difference and Paula left relaxed.",
+   "ko": "계산대 돈이 한 푼도 틀리지 않아서 파울라는 마음 편히 퇴근했어요.",
+   "blank": "céntimo",
+   "src": "made"
   }
  ],
  "w|central": [
@@ -18295,6 +18503,22 @@
    "src": "made"
   }
  ],
+ "w|cósmico": [
+  {
+   "text": "Tumbado en el jardín, Hugo sintió un silencio cósmico bajo las estrellas.",
+   "en": "Lying in the garden, Hugo felt a cosmic silence under the stars.",
+   "ko": "마당에 누운 우고는 별 아래에서 우주 같은 고요를 느꼈어요.",
+   "blank": "cósmico",
+   "src": "made"
+  },
+  {
+   "text": "El sobrino de Paula llama a su tarta de chocolate el pastel cósmico.",
+   "en": "Paula's nephew calls her chocolate cake the cosmic cake.",
+   "ko": "파울라의 조카는 파울라의 초콜릿 케이크를 우주 케이크라고 불러요.",
+   "blank": "cósmico",
+   "src": "made"
+  }
+ ],
  "w|cosquillas": [
   {
    "text": "En los estiramientos, Hugo se ríe porque tiene cosquillas en los pies.",
@@ -22925,6 +23149,22 @@
    "blank": "digno"
   }
  ],
+ "w|diligencia": [
+  {
+   "text": "Hugo hizo con diligencia todos los trámites del cambio de domicilio.",
+   "en": "Hugo diligently did all the paperwork for the change of address.",
+   "ko": "우고는 주소 변경 서류를 꼼꼼하게 모두 처리했어요.",
+   "blank": "diligencia",
+   "src": "made"
+  },
+  {
+   "text": "La nueva camarera trabaja con diligencia y Paula está muy contenta con ella.",
+   "en": "The new waitress works diligently and Paula is very happy with her.",
+   "ko": "새 종업원이 성실하게 일해서 파울라는 아주 만족해요.",
+   "blank": "diligencia",
+   "src": "made"
+  }
+ ],
  "w|dimensión": [
   {
    "text": "El proyecto tiene una dimensión social importante.",
@@ -24733,6 +24973,22 @@
    "blank": "editor"
   }
  ],
+ "w|editorial": [
+  {
+   "text": "Hugo trabaja en una editorial y tiene cientos de libros que empaquetar.",
+   "en": "Hugo works at a publishing house and has hundreds of books to pack.",
+   "ko": "우고는 출판사에서 일해서 싸야 할 책이 수백 권이에요.",
+   "blank": "editorial",
+   "src": "made"
+  },
+  {
+   "text": "Una editorial quiere publicar el libro de recetas de la familia de Paula.",
+   "en": "A publisher wants to publish Paula's family recipe book.",
+   "ko": "한 출판사가 파울라 가족의 요리책을 내고 싶어 해요.",
+   "blank": "editorial",
+   "src": "made"
+  }
+ ],
  "w|educación": [
   {
    "text": "La educación de los niños es prioridad.",
@@ -25530,6 +25786,22 @@
    "en": "The rain soaked Paula's coat before she got into the restaurant.",
    "ko": "식당에 들어가기 전에 비가 파울라의 코트를 흠뻑 적셨어요.",
    "blank": "empapar",
+   "src": "made"
+  }
+ ],
+ "w|empeñar": [
+  {
+   "text": "Para pagar la fianza del piso, Hugo tuvo que empeñar el reloj de su abuelo.",
+   "en": "To pay the deposit on the flat, Hugo had to pawn his grandfather's watch.",
+   "ko": "집 보증금을 내려고 우고는 할아버지 시계를 전당포에 맡겨야 했어요.",
+   "blank": "empeñar",
+   "src": "made"
+  },
+  {
+   "text": "El abuelo de Paula tuvo que empeñar su anillo para abrir el restaurante.",
+   "en": "Paula's grandfather had to pawn his ring to open the restaurant.",
+   "ko": "파울라의 할아버지는 식당을 열려고 반지를 전당포에 맡겨야 했어요.",
+   "blank": "empeñar",
    "src": "made"
   }
  ],
@@ -36093,6 +36365,22 @@
    "blank": "humano"
   }
  ],
+ "w|humedad": [
+  {
+   "text": "Hugo notó manchas de humedad en el techo del baño.",
+   "en": "Hugo noticed damp stains on the bathroom ceiling.",
+   "ko": "우고는 욕실 천장에 습기 얼룩이 있는 걸 발견했어요.",
+   "blank": "humedad",
+   "src": "made"
+  },
+  {
+   "text": "Paula guarda el pan en una caja de madera para protegerlo de la humedad.",
+   "en": "Paula keeps the bread in a wooden box to protect it from the damp.",
+   "ko": "파울라는 습기를 막으려고 빵을 나무 상자에 보관해요.",
+   "blank": "humedad",
+   "src": "made"
+  }
+ ],
  "w|húmedo": [
   {
    "text": "El clima húmedo hace sudar la ropa.",
@@ -37965,6 +38253,22 @@
    "src": "made"
   }
  ],
+ "w|inminente": [
+  {
+   "text": "Con la mudanza inminente, Hugo apenas tenía tiempo para dormir.",
+   "en": "With the move imminent, Hugo barely had time to sleep.",
+   "ko": "이사가 코앞이라 우고는 잘 시간도 거의 없었어요.",
+   "blank": "inminente",
+   "src": "made"
+  },
+  {
+   "text": "Paula vio las nubes negras y supo que la tormenta era inminente.",
+   "en": "Paula saw the black clouds and knew the storm was imminent.",
+   "ko": "파울라는 먹구름을 보고 폭풍이 곧 온다는 걸 알았어요.",
+   "blank": "inminente",
+   "src": "made"
+  }
+ ],
  "w|inmortal": [
   {
    "text": "Ese mito parece inmortal en la cultura.",
@@ -39004,6 +39308,22 @@
    "en": "Carmen trusted her intuition and picked the neighborhood without knowing it.",
    "ko": "카르멘은 직감을 믿고 잘 모르는 동네를 골랐어요.",
    "blank": "intuición",
+   "src": "made"
+  }
+ ],
+ "w|inundación": [
+  {
+   "text": "Hugo dejó el piso viejo porque una inundación estropeó la cocina.",
+   "en": "Hugo left the old flat because a flood ruined the kitchen.",
+   "ko": "홍수로 부엌이 망가져서 우고는 옛집을 떠났어요.",
+   "blank": "inundación",
+   "src": "made"
+  },
+  {
+   "text": "Tras la inundación del sótano, Paula perdió todos los sacos de harina.",
+   "en": "After the basement flood, Paula lost all the sacks of flour.",
+   "ko": "지하실이 물에 잠긴 뒤 파울라는 밀가루 포대를 전부 잃었어요.",
+   "blank": "inundación",
    "src": "made"
   }
  ],
@@ -40503,6 +40823,22 @@
    "en": "Wash the wool in cold water.",
    "ko": "양모는 찬물로 빨아.",
    "blank": "lana"
+  }
+ ],
+ "w|lancha": [
+  {
+   "text": "Hugo y su amigo cruzaron el lago en una lancha para ver la casa desde el agua.",
+   "en": "Hugo and his friend crossed the lake in a motorboat to see the house from the water.",
+   "ko": "우고와 친구는 물 위에서 집을 보려고 보트로 호수를 건넜어요.",
+   "blank": "lancha",
+   "src": "made"
+  },
+  {
+   "text": "El pescado llega cada mañana en la lancha de un pescador amigo de Paula.",
+   "en": "The fish arrives every morning on the motorboat of a fisherman friend of Paula's.",
+   "ko": "생선은 매일 아침 파울라와 친한 어부의 보트에 실려 와요.",
+   "blank": "lancha",
+   "src": "made"
   }
  ],
  "w|langosta": [
@@ -42409,6 +42745,22 @@
    "blank": "lujo"
   }
  ],
+ "w|lujoso": [
+  {
+   "text": "Hugo no buscaba un piso lujoso, solo uno con buena luz.",
+   "en": "Hugo wasn't looking for a luxurious flat, just one with good light.",
+   "ko": "우고는 호화로운 집이 아니라 볕만 잘 드는 집을 찾았어요.",
+   "blank": "lujoso",
+   "src": "made"
+  },
+  {
+   "text": "A Paula no le interesa abrir un local lujoso; prefiere la comida casera.",
+   "en": "Paula isn't interested in opening a luxurious place; she prefers home cooking.",
+   "ko": "파울라는 호화로운 가게엔 관심 없고 집밥 같은 음식이 좋아요.",
+   "blank": "lujoso",
+   "src": "made"
+  }
+ ],
  "w|luna": [
   {
    "text": "La luna brilla mucho esta noche.",
@@ -43769,6 +44121,22 @@
    "en": "The hammer fell to the floor with a bang.",
    "ko": "망치가 요란하게 바닥에 떨어졌어.",
    "blank": "martillo"
+  }
+ ],
+ "w|mártir": [
+  {
+   "text": "La hermana de Hugo se hizo la mártir por cargar una sola caja.",
+   "en": "Hugo's sister played the martyr for carrying just one box.",
+   "ko": "우고의 누나는 상자 하나 들고는 엄청 고생한 척했어요.",
+   "blank": "mártir",
+   "src": "made"
+  },
+  {
+   "text": "El hermano de Paula se queja como un mártir cada vez que le toca fregar.",
+   "en": "Paula's brother complains like a martyr every time it's his turn to wash up.",
+   "ko": "파울라의 오빠는 설거지 차례만 되면 순교자라도 된 듯 투덜거려요.",
+   "blank": "mártir",
+   "src": "made"
   }
  ],
  "w|marzo": [
@@ -46111,6 +46479,22 @@
    "src": "made"
   }
  ],
+ "w|mostaza": [
+  {
+   "text": "Hugo comió un bocadillo con mostaza sentado en el suelo del salón vacío.",
+   "en": "Hugo ate a sandwich with mustard sitting on the floor of the empty living room.",
+   "ko": "우고는 빈 거실 바닥에 앉아 머스터드 바른 샌드위치를 먹었어요.",
+   "blank": "mostaza",
+   "src": "made"
+  },
+  {
+   "text": "Paula prepara una salsa de miel y mostaza para el pollo.",
+   "en": "Paula makes a honey mustard sauce for the chicken.",
+   "ko": "파울라는 닭고기에 곁들일 꿀 머스터드 소스를 만들어요.",
+   "blank": "mostaza",
+   "src": "made"
+  }
+ ],
  "w|mostrador": [
   {
    "text": "Hugo dejó su acreditación en el mostrador de la entrada del periódico.",
@@ -47565,6 +47949,22 @@
    "en": "The babysitter read stories before bedtime.",
    "ko": "베이비시터가 잠들기 전에 동화를 읽어 줬어.",
    "blank": "niñera"
+  }
+ ],
+ "w|niñez": [
+  {
+   "text": "En el desván, Hugo encontró juguetes de su niñez y no pudo tirarlos.",
+   "en": "In the attic, Hugo found toys from his childhood and couldn't throw them away.",
+   "ko": "다락에서 우고는 어린 시절 장난감을 찾았는데 버릴 수가 없었어요.",
+   "blank": "niñez",
+   "src": "made"
+  },
+  {
+   "text": "Las recetas de la abuela le recuerdan a Paula su niñez en la cocina.",
+   "en": "Grandma's recipes remind Paula of her childhood in the kitchen.",
+   "ko": "할머니 요리법은 파울라에게 부엌에서 보낸 어린 시절을 떠올리게 해요.",
+   "blank": "niñez",
+   "src": "made"
   }
  ],
  "w|ninguno": [
@@ -49829,6 +50229,22 @@
    "blank": "oveja"
   }
  ],
+ "w|ovni": [
+  {
+   "text": "El vecino de Hugo jura que una noche vio un ovni sobre el tejado.",
+   "en": "Hugo's neighbour swears he once saw a UFO over the roof one night.",
+   "ko": "우고의 이웃은 어느 밤 지붕 위에서 UFO를 봤다고 맹세해요.",
+   "blank": "ovni",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente le contó a Paula que había visto un ovni de camino al restaurante.",
+   "en": "A customer told Paula he had seen a UFO on the way to the restaurant.",
+   "ko": "한 손님이 식당 오는 길에 UFO를 봤다고 파울라에게 말했어요.",
+   "blank": "ovni",
+   "src": "made"
+  }
+ ],
  "w|oxígeno": [
   {
    "text": "Las plantas producen oxígeno durante el día.",
@@ -51614,6 +52030,22 @@
    "en": "The table was left sticky after Paula spilled her soda.",
    "ko": "파울라가 탄산음료를 쏟는 바람에 탁자가 끈적해졌어요.",
    "blank": "pegajosa",
+   "src": "made"
+  }
+ ],
+ "w|pegamento": [
+  {
+   "text": "Hugo arregló la taza rota con pegamento antes de envolverla en papel.",
+   "en": "Hugo fixed the broken mug with glue before wrapping it in paper.",
+   "ko": "우고는 깨진 머그잔을 접착제로 붙인 뒤 종이로 쌌어요.",
+   "blank": "pegamento",
+   "src": "made"
+  },
+  {
+   "text": "Paula arregló el cartel de la puerta con un poco de pegamento.",
+   "en": "Paula fixed the sign on the door with a bit of glue.",
+   "ko": "파울라는 접착제를 조금 써서 문 간판을 고쳤어요.",
+   "blank": "pegamento",
    "src": "made"
   }
  ],
@@ -53942,6 +54374,22 @@
    "en": "Marta keeps a small percentage of every lottery ticket she sells.",
    "ko": "마르타는 파는 복권마다 적은 비율을 수수료로 받아요.",
    "blank": "porcentaje",
+   "src": "made"
+  }
+ ],
+ "w|porche": [
+  {
+   "text": "Por la tarde, Hugo se sentó en el porche rodeado de cajas.",
+   "en": "In the afternoon, Hugo sat on the porch surrounded by boxes.",
+   "ko": "오후에 우고는 상자들에 둘러싸여 현관 앞에 앉았어요.",
+   "blank": "porche",
+   "src": "made"
+  },
+  {
+   "text": "En verano, Paula pone mesas en el porche del restaurante.",
+   "en": "In summer, Paula puts tables out on the restaurant's porch.",
+   "ko": "여름이면 파울라는 식당 현관 앞에 테이블을 내놓아요.",
+   "blank": "porche",
    "src": "made"
   }
  ],
@@ -56687,6 +57135,22 @@
    "blank": "punto"
   }
  ],
+ "w|puntual": [
+  {
+   "text": "El camión de la mudanza fue puntual, y eso a Hugo le sorprendió.",
+   "en": "The moving truck was on time, and that surprised Hugo.",
+   "ko": "이삿짐 트럭이 제시간에 와서 우고는 놀랐어요.",
+   "blank": "puntual",
+   "src": "made"
+  },
+  {
+   "text": "El proveedor de pescado de Paula siempre es puntual.",
+   "en": "Paula's fish supplier is always on time.",
+   "ko": "파울라네 생선 납품업자는 늘 시간을 잘 지켜요.",
+   "blank": "puntual",
+   "src": "made"
+  }
+ ],
  "w|puro": [
   {
    "text": "Quiero aire puro esta mañana.",
@@ -57775,6 +58239,22 @@
    "en": "The hotel reception is very friendly.",
    "ko": "호텔 리셉션이 아주 친절해.",
    "blank": "recepción"
+  }
+ ],
+ "w|receptor": [
+  {
+   "text": "El técnico instaló un receptor nuevo para que Hugo pudiera ver la tele.",
+   "en": "The technician installed a new receiver so Hugo could watch TV.",
+   "ko": "기사님이 우고가 TV를 볼 수 있게 새 수신기를 설치했어요.",
+   "blank": "receptor",
+   "src": "made"
+  },
+  {
+   "text": "El receptor de la radio de la cocina se estropeó y Paula cocinó sin música.",
+   "en": "The kitchen radio's receiver broke and Paula cooked without music.",
+   "ko": "부엌 라디오 수신기가 고장 나서 파울라는 음악 없이 요리했어요.",
+   "blank": "receptor",
+   "src": "made"
   }
  ],
  "w|receta": [
@@ -58941,6 +59421,22 @@
    "blank": "remedio"
   }
  ],
+ "w|remo": [
+  {
+   "text": "Hugo encontró un remo viejo en el garaje y lo colgó en la pared.",
+   "en": "Hugo found an old oar in the garage and hung it on the wall.",
+   "ko": "우고는 차고에서 낡은 노를 찾아 벽에 걸었어요.",
+   "blank": "remo",
+   "src": "made"
+  },
+  {
+   "text": "Encima de la barra cuelga un remo antiguo que Paula trajo de un viaje.",
+   "en": "Above the bar hangs an old oar that Paula brought back from a trip.",
+   "ko": "바 위에는 파울라가 여행에서 가져온 오래된 노가 걸려 있어요.",
+   "blank": "remo",
+   "src": "made"
+  }
+ ],
  "w|remolque": [
   {
    "text": "El padre de Mateo llevó las bicicletas en un remolque detrás del coche.",
@@ -59974,6 +60470,22 @@
    "en": "Elena read the youngest ones a summary of the story.",
    "ko": "엘레나는 제일 어린 아이들에게 동화 줄거리를 읽어 줬어요.",
    "blank": "resumen",
+   "src": "made"
+  }
+ ],
+ "w|resumir": [
+  {
+   "text": "Hugo intentó resumir su lista de tareas en una sola hoja.",
+   "en": "Hugo tried to sum up his to-do list on a single sheet.",
+   "ko": "우고는 할 일 목록을 종이 한 장에 요약하려고 했어요.",
+   "blank": "resumir",
+   "src": "made"
+  },
+  {
+   "text": "Paula le pidió a su hijo resumir las reservas de la semana en una lista.",
+   "en": "Paula asked her son to sum up the week's bookings in a list.",
+   "ko": "파울라는 아들에게 이번 주 예약을 목록으로 정리해 달라고 했어요.",
+   "blank": "resumir",
    "src": "made"
   }
  ],
@@ -64849,6 +65361,22 @@
    "src": "made"
   }
  ],
+ "w|suciedad": [
+  {
+   "text": "Hugo limpió toda la suciedad que habían dejado los antiguos inquilinos.",
+   "en": "Hugo cleaned up all the dirt the previous tenants had left.",
+   "ko": "우고는 전 세입자들이 남긴 먼지와 때를 다 치웠어요.",
+   "blank": "suciedad",
+   "src": "made"
+  },
+  {
+   "text": "Al cerrar, Paula fregó la suciedad del suelo de la cocina.",
+   "en": "At closing time, Paula scrubbed the dirt off the kitchen floor.",
+   "ko": "문을 닫고 파울라는 부엌 바닥의 때를 닦았어요.",
+   "blank": "suciedad",
+   "src": "made"
+  }
+ ],
  "w|sucio": [
   {
    "text": "El suelo está sucio después de la obra.",
@@ -65997,6 +66525,22 @@
    "blank": "tan"
   }
  ],
+ "w|tango": [
+  {
+   "text": "Cuando llegó Hugo, una pareja de vecinos bailaba tango en el patio.",
+   "en": "When Hugo arrived, a couple of neighbours were dancing tango in the courtyard.",
+   "ko": "우고가 도착했을 때 이웃 부부가 안뜰에서 탱고를 추고 있었어요.",
+   "blank": "tango",
+   "src": "made"
+  },
+  {
+   "text": "Los sábados, una pareja mayor baila un tango en el restaurante de Paula.",
+   "en": "On Saturdays, an older couple dances a tango in Paula's restaurant.",
+   "ko": "토요일마다 나이 지긋한 부부가 파울라네 식당에서 탱고를 춰요.",
+   "blank": "tango",
+   "src": "made"
+  }
+ ],
  "w|tanque": [
   {
    "text": "El tanque del ejército cruzó el puente.",
@@ -66037,6 +66581,22 @@
    "en": "They ordered an olive tapa at the bar.",
    "ko": "바에서 올리브 타파를 주문했어.",
    "blank": "tapa"
+  }
+ ],
+ "w|tapadera": [
+  {
+   "text": "Entre tantas cajas, Hugo no encontraba la tapadera de la olla.",
+   "en": "Among so many boxes, Hugo couldn't find the lid of the pot.",
+   "ko": "상자가 너무 많아서 우고는 냄비 뚜껑을 찾지 못했어요.",
+   "blank": "tapadera",
+   "src": "made"
+  },
+  {
+   "text": "Paula levantó la tapadera de la cazuela y la cocina olió a guiso.",
+   "en": "Paula lifted the lid of the casserole and the kitchen smelled of stew.",
+   "ko": "파울라가 냄비 뚜껑을 열자 부엌에 스튜 냄새가 퍼졌어요.",
+   "blank": "tapadera",
+   "src": "made"
   }
  ],
  "w|tapar": [
@@ -66397,6 +66957,22 @@
    "en": "There's an interesting documentary on TV.",
    "ko": "티비에 흥미로운 다큐가 나와.",
    "blank": "tele"
+  }
+ ],
+ "w|telefonear": [
+  {
+   "text": "Hugo tuvo que telefonear a la compañía del gas tres veces.",
+   "en": "Hugo had to phone the gas company three times.",
+   "ko": "우고는 가스 회사에 세 번이나 전화해야 했어요.",
+   "blank": "telefonear",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente fiel suele telefonear a Paula para reservar la mesa junto a la ventana.",
+   "en": "A loyal customer usually phones Paula to book the table by the window.",
+   "ko": "단골손님 한 분은 창가 자리를 예약하려고 파울라에게 자주 전화해요.",
+   "blank": "telefonear",
+   "src": "made"
   }
  ],
  "w|telefónico": [
@@ -67313,6 +67889,22 @@
    "blank": "tímido"
   }
  ],
+ "w|timón": [
+  {
+   "text": "Hugo dirigía la mudanza como un capitán al timón de su barco.",
+   "en": "Hugo ran the move like a captain at the helm of his ship.",
+   "ko": "우고는 배의 키를 잡은 선장처럼 이사를 지휘했어요.",
+   "blank": "timón",
+   "src": "made"
+  },
+  {
+   "text": "La madre de Paula sigue al timón del negocio aunque ya tiene setenta años.",
+   "en": "Paula's mother is still at the helm of the business even though she's seventy.",
+   "ko": "파울라의 어머니는 벌써 일흔이지만 여전히 가게를 이끌고 있어요.",
+   "blank": "timón",
+   "src": "made"
+  }
+ ],
  "w|tinta": [
   {
    "text": "Se acabó la tinta de la impresora.",
@@ -67801,6 +68393,22 @@
    "en": "They won the tournament after an intense final.",
    "ko": "치열한 결승 끝에 대회에서 이겼어.",
    "blank": "torneo"
+  }
+ ],
+ "w|tornillo": [
+  {
+   "text": "Hugo guardó cada tornillo de la cama en una bolsita con etiqueta.",
+   "en": "Hugo kept every screw from the bed in a little labelled bag.",
+   "ko": "우고는 침대 나사를 하나하나 라벨 붙인 작은 봉지에 넣어 두었어요.",
+   "blank": "tornillo",
+   "src": "made"
+  },
+  {
+   "text": "Antes de abrir, Paula apretó un tornillo suelto de una silla.",
+   "en": "Before opening, Paula tightened a loose screw on a chair.",
+   "ko": "문 열기 전에 파울라는 의자의 헐거운 나사를 조였어요.",
+   "blank": "tornillo",
+   "src": "made"
   }
  ],
  "w|toro": [
@@ -68767,6 +69375,22 @@
    "src": "made"
   }
  ],
+ "w|trayectoria": [
+  {
+   "text": "Hugo marcó en el mapa la trayectoria del camión para que nadie se perdiera.",
+   "en": "Hugo marked the truck's route on the map so nobody would get lost.",
+   "ko": "우고는 아무도 길을 잃지 않게 지도에 트럭 경로를 표시했어요.",
+   "blank": "trayectoria",
+   "src": "made"
+  },
+  {
+   "text": "Paula está orgullosa de la trayectoria del restaurante que abrió su abuelo.",
+   "en": "Paula is proud of the history of the restaurant her grandfather opened.",
+   "ko": "파울라는 할아버지가 연 식당이 걸어온 길이 자랑스러워요.",
+   "blank": "trayectoria",
+   "src": "made"
+  }
+ ],
  "w|trece": [
   {
    "text": "La espada más antigua del museo tiene más de trece siglos, según Sergio.",
@@ -69673,6 +70297,22 @@
    "en": "How are you?",
    "ko": "어떻게 지내세요?",
    "blank": "usted"
+  }
+ ],
+ "w|usual": [
+  {
+   "text": "Para Hugo, mudarse cada dos años ya es algo usual.",
+   "en": "For Hugo, moving every two years is already something usual.",
+   "ko": "우고에게 이 년마다 이사하는 건 이제 흔한 일이에요.",
+   "blank": "usual",
+   "src": "made"
+  },
+  {
+   "text": "Los domingos, Paula prepara el plato usual de la casa: arroz con pollo.",
+   "en": "On Sundays, Paula makes the house's usual dish: chicken with rice.",
+   "ko": "일요일마다 파울라는 늘 하던 대표 메뉴인 닭고기 밥을 만들어요.",
+   "blank": "usual",
+   "src": "made"
   }
  ],
  "w|usualmente": [

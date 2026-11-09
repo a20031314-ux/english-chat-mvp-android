@@ -277,6 +277,22 @@
    "blank": "अंगूर"
   }
  ],
+ "w|अग्नि": [
+  {
+   "text": "ठंडी रातों में करण का परिवार अग्नि के पास बैठकर कहानियाँ सुनता है।",
+   "en": "On cold nights Karan's family sits by the fire listening to stories.",
+   "ko": "추운 밤이면 카란의 가족은 불가에 앉아 이야기를 들어요.",
+   "blank": "अग्नि",
+   "src": "made"
+  },
+  {
+   "text": "लोहड़ी की रात लोग अग्नि में मूँगफली और रेवड़ी डालते हैं।",
+   "en": "On the night of Lohri people toss peanuts and revdi into the fire.",
+   "ko": "로리 밤에 사람들은 불 속에 땅콩과 레브리를 던져 넣어요.",
+   "blank": "अग्नि",
+   "src": "made"
+  }
+ ],
  "w|अंग्रेज़ी": [
   {
    "text": "वह बच्चों को अंग्रेज़ी पढ़ाती है।",
@@ -535,6 +551,22 @@
    "en": "This is an international problem.",
    "ko": "이건 국제적인 문제야.",
    "blank": "अंतरराष्ट्रीय"
+  }
+ ],
+ "w|अंतरिक्ष": [
+  {
+   "text": "साफ़ रात में गाँव से अंतरिक्ष स्टेशन आसमान में चलता दिखता है।",
+   "en": "On a clear night the space station can be seen moving across the sky from the village.",
+   "ko": "맑은 밤이면 마을에서 우주 정거장이 하늘을 지나가는 게 보여요.",
+   "blank": "अंतरिक्ष",
+   "src": "made"
+  },
+  {
+   "text": "दीपा के भाई का सपना है कि वह बड़ा होकर अंतरिक्ष में जाए।",
+   "en": "Dipa's brother dreams of going to space when he grows up.",
+   "ko": "디파의 남동생은 커서 우주에 가는 게 꿈이에요.",
+   "blank": "अंतरिक्ष",
+   "src": "made"
   }
  ],
  "w|अंतर्गत": [
@@ -2239,6 +2271,22 @@
    "blank": "आग्रह"
   }
  ],
+ "w|आचार्य": [
+  {
+   "text": "गाँव के संस्कृत विद्यालय के आचार्य बच्चों को सुबह योग भी सिखाते हैं।",
+   "en": "The teacher at the village Sanskrit school also teaches the children yoga in the morning.",
+   "ko": "마을 산스크리트 학교 선생님은 아이들에게 아침 요가도 가르쳐요.",
+   "blank": "आचार्य",
+   "src": "made"
+  },
+  {
+   "text": "योग के आचार्य ने कहा कि मौसम बदलने पर सुबह प्राणायाम ज़रूर करें।",
+   "en": "The yoga teacher said to be sure to do breathing exercises in the morning when the season changes.",
+   "ko": "요가 스승은 환절기에는 아침에 꼭 호흡 수련을 하라고 했어요.",
+   "blank": "आचार्य",
+   "src": "made"
+  }
+ ],
  "w|आज": [
   {
    "text": "आज मौसम बहुत सुहावना है।",
@@ -2919,6 +2967,22 @@
    "blank": "आयात"
   }
  ],
+ "w|आयु": [
+  {
+   "text": "गाँव के सबसे बुज़ुर्ग आदमी की आयु सौ साल के क़रीब है।",
+   "en": "The village's oldest man is close to a hundred years of age.",
+   "ko": "마을 최고령 노인의 나이는 백 살 가까이 돼요.",
+   "blank": "आयु",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की दादी कहती हैं कि बढ़ती आयु के साथ ठंड ज़्यादा लगने लगती है।",
+   "en": "Dipa's grandmother says you feel the cold more as you age.",
+   "ko": "디파의 할머니는 나이가 들수록 추위를 더 탄다고 하세요.",
+   "blank": "आयु",
+   "src": "made"
+  }
+ ],
  "w|आयोग": [
   {
    "text": "आयोग ने रिपोर्ट जारी की।",
@@ -3179,6 +3243,22 @@
    "blank": "आवाज़"
   }
  ],
+ "w|आवास": [
+  {
+   "text": "सरकार ने भूकंप में घर खोने वालों के लिए नए आवास बनवाए।",
+   "en": "The government built new housing for those who lost their homes in the earthquake.",
+   "ko": "정부는 지진으로 집을 잃은 사람들을 위해 새 주택을 지었어요.",
+   "blank": "आवास",
+   "src": "made"
+  },
+  {
+   "text": "सर्दी आने से पहले कुछ पक्षी अपने आवास बदलकर दक्षिण चले जाते हैं।",
+   "en": "Before winter comes, some birds change their habitat and head south.",
+   "ko": "겨울이 오기 전에 어떤 새들은 서식지를 옮겨 남쪽으로 떠나요.",
+   "blank": "आवास",
+   "src": "made"
+  }
+ ],
  "w|आविष्कार": [
   {
    "text": "पहिए का आविष्कार जीवन बदल गया।",
@@ -3363,6 +3443,22 @@
    "en": "My faith is still intact.",
    "ko": "내 믿음은 아직도 남아 있어.",
    "blank": "आस्था"
+  }
+ ],
+ "w|आहार": [
+  {
+   "text": "पहाड़ के लोगों के आहार में मंडुआ और राजमा ज़रूर होता है।",
+   "en": "Finger millet and kidney beans are always part of the mountain people's diet.",
+   "ko": "산골 사람들의 식단에는 꼭 손가락조와 강낭콩이 들어가요.",
+   "blank": "आहार",
+   "src": "made"
+  },
+  {
+   "text": "दीपा मौसम के हिसाब से अपने आहार में बदलाव करती है।",
+   "en": "Dipa adjusts her diet according to the season.",
+   "ko": "디파는 계절에 맞춰 식단을 바꿔요.",
+   "blank": "आहार",
+   "src": "made"
   }
  ],
  "w|इक्कीस": [
@@ -4591,6 +4687,22 @@
    "blank": "उपकरण"
   }
  ],
+ "w|उपचार": [
+  {
+   "text": "करण की दादी घुटनों के दर्द का उपचार गरम सरसों के तेल से करती हैं।",
+   "en": "Karan's grandmother treats her knee pain with warm mustard oil.",
+   "ko": "카란의 할머니는 무릎 통증을 따뜻한 겨자기름으로 다스려요.",
+   "blank": "उपचार",
+   "src": "made"
+  },
+  {
+   "text": "गले की खराश के उपचार के लिए माँ ने दीपा को अदरक वाली चाय दी।",
+   "en": "To treat her sore throat, Mom gave Dipa ginger tea.",
+   "ko": "엄마는 디파의 목 아픈 데 좋으라고 생강차를 줬어요.",
+   "blank": "उपचार",
+   "src": "made"
+  }
+ ],
  "w|उपन्यास": [
   {
    "text": "यह उपन्यास बहुत रोचक है।",
@@ -4873,6 +4985,22 @@
    "blank": "उम्मीद"
   }
  ],
+ "w|उम्मीद करना": [
+  {
+   "text": "करण उम्मीद करता है कि इस साल सेब की फ़सल अच्छी होगी।",
+   "en": "Karan hopes the apple crop will be good this year.",
+   "ko": "카란은 올해 사과 농사가 잘되길 바라요.",
+   "blank": "उम्मीद करता",
+   "src": "made"
+  },
+  {
+   "text": "किसान उम्मीद कर रहे हैं कि इस बार मानसून समय पर आएगा।",
+   "en": "The farmers are hoping the monsoon will come on time this year.",
+   "ko": "농부들은 올해 장마가 제때 오기를 바라고 있어요.",
+   "blank": "उम्मीद कर",
+   "src": "made"
+  }
+ ],
  "w|उम्मीदवार": [
   {
    "text": "हर उम्मीदवार ने अपना भाषण दिया।",
@@ -5119,6 +5247,22 @@
    "en": "Repay the bank loan on time.",
    "ko": "은행 대출을 제때 갚아.",
    "blank": "ऋण"
+  }
+ ],
+ "w|ऋषि": [
+  {
+   "text": "लोग मानते हैं कि पुराने ज़माने में एक ऋषि इसी गुफा में तप करते थे।",
+   "en": "People believe a sage used to meditate in this very cave long ago.",
+   "ko": "사람들은 옛날 한 성자가 바로 이 동굴에서 수행했다고 믿어요.",
+   "blank": "ऋषि",
+   "src": "made"
+  },
+  {
+   "text": "कहानी में एक ऋषि बताते हैं कि हर ऋतु का अपना महत्व है।",
+   "en": "In the story a sage explains that every season has its own importance.",
+   "ko": "이야기 속 성자는 계절마다 저마다의 의미가 있다고 말해요.",
+   "blank": "ऋषि",
+   "src": "made"
   }
  ],
  "w|एक": [
@@ -6065,6 +6209,22 @@
    "blank": "कंधा"
   }
  ],
+ "w|कन्या": [
+  {
+   "text": "नवरात्रि में गाँव वाले छोटी कन्या को देवी मानकर भोजन कराते हैं।",
+   "en": "During Navratri the villagers feed little girls, honoring them as the goddess.",
+   "ko": "나브라트리 때 마을 사람들은 어린 소녀를 여신으로 모시고 음식을 대접해요.",
+   "blank": "कन्या",
+   "src": "made"
+  },
+  {
+   "text": "दुर्गा पूजा में दीपा की छोटी भतीजी कन्या पूजन के लिए सजी-धजी आई।",
+   "en": "At Durga Puja Dipa's little niece came all dressed up for the girl-worship ritual.",
+   "ko": "두르가 푸자 때 디파의 어린 조카딸이 소녀 공양 의식에 곱게 차려입고 왔어요.",
+   "blank": "कन्या",
+   "src": "made"
+  }
+ ],
  "w|कप": [
   {
    "text": "मुझे एक कप चाय दे दो।",
@@ -6770,6 +6930,22 @@
    "en": "When the brakes were suddenly applied, Deepa's heart leapt into her mouth.",
    "ko": "기차가 갑자기 서자 디파는 간이 철렁했어요.",
    "blank": "कलेजा",
+   "src": "made"
+  }
+ ],
+ "w|कल्पना": [
+  {
+   "text": "बचपन में करण की कल्पना थी कि पहाड़ के पीछे कोई जादुई देश है।",
+   "en": "As a child Karan imagined there was a magical land behind the mountain.",
+   "ko": "어릴 때 카란은 산 너머에 마법의 나라가 있다고 상상했어요.",
+   "blank": "कल्पना",
+   "src": "made"
+  },
+  {
+   "text": "दीपा की कल्पना में बर्फ़ से ढका शहर किसी परी-कथा जैसा लगता है।",
+   "en": "In Dipa's imagination a snow-covered city looks like something from a fairy tale.",
+   "ko": "디파의 상상 속에서 눈 덮인 도시는 동화 속 같아요.",
+   "blank": "कल्पना",
    "src": "made"
   }
  ],
@@ -9903,6 +10079,22 @@
    "blank": "खाता"
   }
  ],
+ "w|खाद्य": [
+  {
+   "text": "सरकार ने गाँव के गोदाम में खाद्य सामग्री का भंडार रखा है ताकि सर्दियों में कमी न हो।",
+   "en": "The government keeps a stock of food supplies in the village store so there's no shortage in winter.",
+   "ko": "정부는 겨울에 모자라지 않게 마을 창고에 식료품을 비축해 뒀어요.",
+   "blank": "खाद्य",
+   "src": "made"
+  },
+  {
+   "text": "सूखे के मौसम में सरकार खाद्य सुरक्षा पर ज़्यादा ध्यान देती है।",
+   "en": "In the dry season the government pays more attention to food security.",
+   "ko": "가뭄철에는 정부가 식량 안보에 더 신경을 써요.",
+   "blank": "खाद्य",
+   "src": "made"
+  }
+ ],
  "w|खाना": [
   {
    "text": "रोटी गरम है, खा लो।",
@@ -12049,6 +12241,22 @@
    "blank": "ग्यारह"
   }
  ],
+ "w|ग्रह": [
+  {
+   "text": "करण के बेटे ने दूरबीन से शनि ग्रह के छल्ले देखे।",
+   "en": "Karan's son saw Saturn's rings through a telescope.",
+   "ko": "카란의 아들은 망원경으로 토성의 고리를 봤어요.",
+   "blank": "ग्रह",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने पढ़ा कि पृथ्वी के झुकाव से ही ग्रह पर ऋतुएँ बदलती हैं।",
+   "en": "Dipa read that the seasons on the planet change because of the Earth's tilt.",
+   "ko": "디파는 지구의 기울기 때문에 행성에 계절이 바뀐다는 걸 읽었어요.",
+   "blank": "ग्रह",
+   "src": "made"
+  }
+ ],
  "w|ग्रहण": [
   {
    "text": "सूर्य ग्रहण देखने के लिए पूरी टीम दोपहर में छत पर इकट्ठा हुई।",
@@ -13561,6 +13769,22 @@
    "en": "After washing, the hair felt oily.",
    "ko": "머리를 감은 뒤 기름진 느낌이었어.",
    "blank": "चिकना"
+  }
+ ],
+ "w|चिकित्सा": [
+  {
+   "text": "गाँव में चिकित्सा की सुविधा के लिए महीने में एक बार डॉक्टर आते हैं।",
+   "en": "For medical care a doctor visits the village once a month.",
+   "ko": "마을에는 의료를 위해 한 달에 한 번 의사가 와요.",
+   "blank": "चिकित्सा",
+   "src": "made"
+  },
+  {
+   "text": "मौसम बदलने पर सर्दी-ज़ुकाम के मरीज़ चिकित्सा केंद्र पर बढ़ जाते हैं।",
+   "en": "When the season changes, more cold patients show up at the medical center.",
+   "ko": "환절기에는 보건소에 감기 환자가 늘어요.",
+   "blank": "चिकित्सा",
+   "src": "made"
   }
  ],
  "w|चिट्ठी": [
@@ -15257,6 +15481,22 @@
    "en": "The village population has decreased now.",
    "ko": "마을 인구는 이제 줄었어.",
    "blank": "जनसंख्या"
+  }
+ ],
+ "w|जनाब": [
+  {
+   "text": "दुकानदार ने मुस्कुराकर पूछा, जनाब, आज कौन-सी चाय लेंगे?",
+   "en": "The shopkeeper smiled and asked, which tea will you have today, sir?",
+   "ko": "가게 주인이 웃으며 물었어요, 나리, 오늘은 어떤 차로 하시겠어요?",
+   "blank": "जनाब",
+   "src": "made"
+  },
+  {
+   "text": "चाय वाले ने दीपा के पिता से कहा, जनाब, आज तो ठंड बढ़ गई है।",
+   "en": "The tea seller told Dipa's father, sir, it's got colder today.",
+   "ko": "찻집 주인이 디파의 아버지에게 나리, 오늘은 날이 쌀쌀해졌네요라고 했어요.",
+   "blank": "जनाब",
+   "src": "made"
   }
  ],
  "w|जन्मदिन": [
@@ -18783,6 +19023,22 @@
    "src": "made"
   }
  ],
+ "w|तत्व": [
+  {
+   "text": "बूढ़े वैद्य कहते हैं कि पहाड़ी जड़ी-बूटियों में कई ख़ास तत्व होते हैं।",
+   "en": "The old healer says mountain herbs contain many special elements.",
+   "ko": "늙은 약초꾼은 산 약초에 특별한 성분이 많다고 해요.",
+   "blank": "तत्व",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने पढ़ा कि पुराने ग्रंथों में प्रकृति के पाँच तत्व माने गए हैं।",
+   "en": "Dipa read that old texts count five elements of nature.",
+   "ko": "디파는 옛 경전에서 자연을 다섯 원소로 본다는 걸 읽었어요.",
+   "blank": "तत्व",
+   "src": "made"
+  }
+ ],
  "w|तथा": [
   {
    "text": "चाय तथा नमकीन तैयार हैं।",
@@ -21143,6 +21399,22 @@
    "blank": "दिल"
   }
  ],
+ "w|दिल लगाना": [
+  {
+   "text": "शहर से लौटकर करण ने खेती में दिल लगाया और सेब का बाग़ लगाया।",
+   "en": "After coming back from the city, Karan put his heart into farming and planted an apple orchard.",
+   "ko": "도시에서 돌아온 카란은 농사에 마음을 붙이고 사과 과수원을 일궜어요.",
+   "blank": "दिल लगाया",
+   "src": "made"
+  },
+  {
+   "text": "बसंत आते ही दीपा ने बगीचे में दिल लगाकर नए पौधे रोपे।",
+   "en": "As soon as spring came Dipa lovingly planted new seedlings in the garden.",
+   "ko": "봄이 오자마자 디파는 정성 들여 정원에 새 모종을 심었어요.",
+   "blank": "दिल लगाकर",
+   "src": "made"
+  }
+ ],
  "w|दिलचस्प": [
   {
    "text": "यह किताब बहुत दिलचस्प है।",
@@ -22993,6 +23265,22 @@
    "blank": "नई"
   }
  ],
+ "w|नर": [
+  {
+   "text": "करण ने बताया कि मोर में नर के पंख ही रंग-बिरंगे होते हैं।",
+   "en": "Karan explained that among peafowl only the male has colorful feathers.",
+   "ko": "카란은 공작새 중 수컷만 깃털이 화려하다고 알려 줬어요.",
+   "blank": "नर",
+   "src": "made"
+  },
+  {
+   "text": "वसंत में नर कोयल की कूक सबसे ज़्यादा सुनाई देती है।",
+   "en": "In spring the call of the male koel is heard most of all.",
+   "ko": "봄이면 수컷 뻐꾸기 울음소리가 가장 많이 들려요.",
+   "blank": "नर",
+   "src": "made"
+  }
+ ],
  "w|नरक": [
   {
    "text": "झूठ बोलना नरक का रास्ता माना जाता है।",
@@ -23617,6 +23905,22 @@
    "blank": "नारियल पानी"
   }
  ],
+ "w|नारी": [
+  {
+   "text": "गाँव की नारी शक्ति ने मिलकर पानी की नई टंकी बनवाई।",
+   "en": "The women of the village joined forces to get a new water tank built.",
+   "ko": "마을 여성들이 힘을 모아 새 물탱크를 세웠어요.",
+   "blank": "नारी",
+   "src": "made"
+  },
+  {
+   "text": "तीज के दिन मोहल्ले की हर नारी हरी साड़ी पहनकर झूला झूलती है।",
+   "en": "On Teej every woman in the neighborhood wears a green sari and rides the swing.",
+   "ko": "티즈 날 동네 여성들은 모두 초록 사리를 입고 그네를 타요.",
+   "blank": "नारी",
+   "src": "made"
+  }
+ ],
  "w|नाली": [
   {
    "text": "सड़क किनारे की नाली साफ़ करो।",
@@ -24134,6 +24438,22 @@
    "en": "On election day the site stayed closed so everyone could vote.",
    "ko": "선거일에는 모두 투표할 수 있게 현장이 문을 닫았어요.",
    "blank": "निर्वाचन",
+   "src": "made"
+  }
+ ],
+ "w|निवासी": [
+  {
+   "text": "गाँव का हर निवासी करण को उसके सेबों की वजह से जानता है।",
+   "en": "Every resident of the village knows Karan for his apples.",
+   "ko": "마을 주민이라면 누구나 사과 덕분에 카란을 알아요.",
+   "blank": "निवासी",
+   "src": "made"
+  },
+  {
+   "text": "दिल्ली का हर निवासी नवंबर में धुंध और प्रदूषण से परेशान रहता है।",
+   "en": "Every resident of Delhi suffers from smog and pollution in November.",
+   "ko": "델리 주민이라면 누구나 십일월에 스모그와 공해로 고생해요.",
+   "blank": "निवासी",
    "src": "made"
   }
  ],
@@ -25389,6 +25709,22 @@
    "src": "made"
   }
  ],
+ "w|पदार्थ": [
+  {
+   "text": "गाँव के स्कूल में बच्चों ने सीखा कि पानी, बर्फ़ और भाप एक ही पदार्थ के रूप हैं।",
+   "en": "At the village school the children learned that water, ice and steam are forms of the same substance.",
+   "ko": "마을 학교에서 아이들은 물과 얼음과 수증기가 같은 물질의 다른 모습이라는 걸 배웠어요.",
+   "blank": "पदार्थ",
+   "src": "made"
+  },
+  {
+   "text": "ठंड में कुछ पदार्थ सिकुड़ जाते हैं, यह दीपा ने छोटे भाई को समझाया।",
+   "en": "Dipa explained to her little brother that some materials shrink in the cold.",
+   "ko": "디파는 남동생에게 추우면 어떤 물질은 줄어든다고 설명해 줬어요.",
+   "blank": "पदार्थ",
+   "src": "made"
+  }
+ ],
  "w|पंद्रह": [
   {
    "text": "कक्षा में पंद्रह छात्र बैठे हैं।",
@@ -25564,6 +25900,22 @@
    "en": "Watching the sunrise from the new house's balcony, Seema felt supreme peace.",
    "ko": "새집 발코니에서 해돋이를 보며 시마는 더없는 평온을 느꼈어요.",
    "blank": "परम",
+   "src": "made"
+  }
+ ],
+ "w|परमाणु": [
+  {
+   "text": "गाँव के लोग नीचे घाटी में परमाणु बिजलीघर बनने की योजना का विरोध कर रहे हैं।",
+   "en": "The villagers are opposing a plan to build a nuclear power plant down in the valley.",
+   "ko": "마을 사람들은 아래 계곡에 원자력 발전소를 짓는 계획에 반대하고 있어요.",
+   "blank": "परमाणु",
+   "src": "made"
+  },
+  {
+   "text": "विज्ञान की कक्षा में दीपा ने सीखा कि सूरज की ऊर्जा परमाणु क्रियाओं से आती है।",
+   "en": "In science class Dipa learned that the sun's energy comes from atomic reactions.",
+   "ko": "과학 시간에 디파는 태양 에너지가 원자 반응에서 나온다는 걸 배웠어요.",
+   "blank": "परमाणु",
    "src": "made"
   }
  ],
@@ -26059,6 +26411,22 @@
    "en": "The western wind feels cold.",
    "ko": "서쪽 바람이 차갑게 느껴져.",
    "blank": "पश्चिम"
+  }
+ ],
+ "w|पश्चिमी": [
+  {
+   "text": "गाँव की पश्चिमी ढलान पर देवदार का घना जंगल है।",
+   "en": "There's a dense deodar forest on the village's western slope.",
+   "ko": "마을 서쪽 비탈에는 히말라야삼나무 숲이 빽빽해요.",
+   "blank": "पश्चिमी",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में पश्चिमी विक्षोभ की वजह से उत्तर भारत में बारिश होती है।",
+   "en": "In winter western disturbances bring rain to north India.",
+   "ko": "겨울에는 서풍 기압골 때문에 북인도에 비가 내려요.",
+   "blank": "पश्चिमी",
+   "src": "made"
   }
  ],
  "w|पसंद आना": [
@@ -35577,6 +35945,22 @@
    "blank": "महीना"
   }
  ],
+ "w|महोदय": [
+  {
+   "text": "पंचायत के पत्र में लिखा था, आदरणीय महोदय, सड़क की मरम्मत जल्द करवाएँ।",
+   "en": "The panchayat's letter said, respected sir, please have the road repaired soon.",
+   "ko": "마을 의회 편지에는 존경하는 귀하, 도로를 빨리 고쳐 주십시오라고 적혀 있었어요.",
+   "blank": "महोदय",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने नगर निगम को पत्र लिखा, महोदय, पार्क के सूखे पेड़ों की छँटाई करवाएँ।",
+   "en": "Dipa wrote to the municipality, sir, please have the park's dead trees pruned.",
+   "ko": "디파는 시청에 귀하, 공원의 마른 나무를 가지치기해 주십시오라고 편지를 썼어요.",
+   "blank": "महोदय",
+   "src": "made"
+  }
+ ],
  "w|माँ": [
   {
    "text": "माँ रसोई में हैं।",
@@ -36682,6 +37066,22 @@
    "en": "Neha's grandmother says to get up even earlier than the laying hen if she wants to become a player.",
    "ko": "네하의 할머니는 선수가 되려면 알 낳는 암탉보다 일찍 일어나라고 하세요.",
    "blank": "मुर्गी",
+   "src": "made"
+  }
+ ],
+ "w|मुलाक़ात": [
+  {
+   "text": "मेले में करण की मुलाक़ात अपने बचपन के दोस्त से हुई।",
+   "en": "At the fair Karan ran into his childhood friend.",
+   "ko": "축제에서 카란은 어릴 적 친구를 만났어요.",
+   "blank": "मुलाक़ात",
+   "src": "made"
+  },
+  {
+   "text": "पतझड़ में दीपा की मुलाक़ात पार्क में एक पक्षी-प्रेमी से हुई।",
+   "en": "In autumn Dipa met a birdwatcher in the park.",
+   "ko": "가을에 디파는 공원에서 새를 좋아하는 사람을 만났어요.",
+   "blank": "मुलाक़ात",
    "src": "made"
   }
  ],
@@ -38075,6 +38475,22 @@
    "blank": "रकम"
   }
  ],
+ "w|रक्त": [
+  {
+   "text": "ऊँचाई पर रहने वालों के रक्त में ऑक्सीजन की कमी जल्दी नहीं होती।",
+   "en": "People who live at altitude don't easily run short of oxygen in their blood.",
+   "ko": "고지대에 사는 사람들은 혈액 속 산소가 쉽게 모자라지 않아요.",
+   "blank": "रक्त",
+   "src": "made"
+  },
+  {
+   "text": "डॉक्टर ने कहा कि ठंड में रक्त संचार धीमा हो जाता है, इसलिए रोज़ टहलना चाहिए।",
+   "en": "The doctor said blood circulation slows in the cold, so one should walk daily.",
+   "ko": "의사는 추우면 혈액 순환이 느려지니 매일 걸으라고 했어요.",
+   "blank": "रक्त",
+   "src": "made"
+  }
+ ],
  "w|रक्तचाप": [
   {
    "text": "डॉक्टर ने रक्तचाप चेक किया।",
@@ -38713,6 +39129,22 @@
    "en": "It's better to keep dinner light.",
    "ko": "저녁은 가볍게 먹는 게 나아.",
    "blank": "रात का खाना"
+  }
+ ],
+ "w|रात्रि": [
+  {
+   "text": "मेले की रात्रि में पूरे गाँव ने अलाव के चारों ओर नाच किया।",
+   "en": "On the night of the fair the whole village danced around the bonfire.",
+   "ko": "축제 밤에 온 마을이 모닥불을 둘러싸고 춤을 췄어요.",
+   "blank": "रात्रि",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों की रात्रि लंबी होती है, इसलिए दीपा जल्दी सो जाती है।",
+   "en": "Winter nights are long, so Dipa goes to sleep early.",
+   "ko": "겨울밤은 길어서 디파는 일찍 잠자리에 들어요.",
+   "blank": "रात्रि",
+   "src": "made"
   }
  ],
  "w|रानी": [
@@ -40827,6 +41259,22 @@
    "blank": "वाक्य"
   }
  ],
+ "w|वातावरण": [
+  {
+   "text": "पहाड़ का साफ़ वातावरण शहर से आने वालों को बहुत भाता है।",
+   "en": "The clean air of the mountains really appeals to visitors from the city.",
+   "ko": "산의 맑은 공기는 도시에서 온 사람들 마음에 쏙 들어요.",
+   "blank": "वातावरण",
+   "src": "made"
+  },
+  {
+   "text": "पहली बारिश के बाद पूरा वातावरण मिट्टी की ख़ुशबू से भर जाता है।",
+   "en": "After the first rain the whole atmosphere fills with the scent of earth.",
+   "ko": "첫비가 내리고 나면 사방이 흙냄새로 가득해요.",
+   "blank": "वातावरण",
+   "src": "made"
+  }
+ ],
  "w|वाद विवाद": [
   {
    "text": "कक्षा में विषय पर वाद विवाद हुआ।",
@@ -40911,6 +41359,22 @@
    "en": "The new virus is spreading quickly.",
    "ko": "새 바이러스가 빠르게 퍼지고 있어.",
    "blank": "वायरस"
+  }
+ ],
+ "w|वायु": [
+  {
+   "text": "पहाड़ की ठंडी वायु में करण की थकान पल भर में उतर जाती है।",
+   "en": "In the cool mountain air Karan's tiredness disappears in a moment.",
+   "ko": "시원한 산바람에 카란의 피로가 금세 풀려요.",
+   "blank": "वायु",
+   "src": "made"
+  },
+  {
+   "text": "सर्दियों में शहर की वायु इतनी ख़राब हो जाती है कि दीपा मास्क पहनती है।",
+   "en": "In winter the city's air gets so bad that Dipa wears a mask.",
+   "ko": "겨울이면 도시 공기가 너무 나빠져서 디파는 마스크를 써요.",
+   "blank": "वायु",
+   "src": "made"
   }
  ],
  "w|वाला": [
@@ -41261,6 +41725,22 @@
    "en": "A new school was built near the village.",
    "ko": "새 학교가 마을 근처에 생겼어.",
    "blank": "विद्यालय"
+  }
+ ],
+ "w|विद्युत": [
+  {
+   "text": "नदी पर बने छोटे बाँध से गाँव को विद्युत मिलती है।",
+   "en": "The village gets electricity from a small dam on the river.",
+   "ko": "마을은 강에 지은 작은 댐에서 전기를 얻어요.",
+   "blank": "विद्युत",
+   "src": "made"
+  },
+  {
+   "text": "गर्मियों में एसी चलने से विद्युत की खपत बहुत बढ़ जाती है।",
+   "en": "In summer, running ACs pushes electricity consumption way up.",
+   "ko": "여름에는 에어컨 때문에 전기 소비가 크게 늘어요.",
+   "blank": "विद्युत",
+   "src": "made"
   }
  ],
  "w|विधवा": [
@@ -42319,6 +42799,22 @@
    "blank": "शक्ति"
   }
  ],
+ "w|शख़्स": [
+  {
+   "text": "एक अनजान शख़्स रास्ता भटककर करण के घर तक आ पहुँचा।",
+   "en": "A stranger lost his way and ended up at Karan's house.",
+   "ko": "낯선 사람 하나가 길을 잃고 카란의 집까지 왔어요.",
+   "blank": "शख़्स",
+   "src": "made"
+  },
+  {
+   "text": "पार्क में रोज़ एक बूढ़ा शख़्स पतझड़ के पत्ते इकट्ठा करता है।",
+   "en": "Every day an old man in the park collects autumn leaves.",
+   "ko": "공원에서 매일 한 노인이 낙엽을 모아요.",
+   "blank": "शख़्स",
+   "src": "made"
+  }
+ ],
  "w|शत्रु": [
   {
    "text": "सच्चाई का शत्रु झूठ है।",
@@ -42911,6 +43407,22 @@
    "blank": "शिक्षा"
   }
  ],
+ "w|शिखर": [
+  {
+   "text": "सुबह की धूप में बर्फ़ से ढका शिखर सोने की तरह चमकता है।",
+   "en": "In the morning sun the snow-covered peak shines like gold.",
+   "ko": "아침 햇살에 눈 덮인 봉우리가 금처럼 반짝여요.",
+   "blank": "शिखर",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने टीवी पर देखा कि सर्दियों में पर्वतारोहियों के लिए शिखर का रास्ता बंद हो जाता है।",
+   "en": "Dipa saw on TV that the route to the summit closes to climbers in winter.",
+   "ko": "디파는 겨울에는 등산가들에게 정상 가는 길이 막힌다는 걸 텔레비전에서 봤어요.",
+   "blank": "शिखर",
+   "src": "made"
+  }
+ ],
  "w|शिफ़्ट": [
   {
    "text": "सुनील की इस हफ़्ते रात की शिफ़्ट है।",
@@ -43452,6 +43964,22 @@
    "en": "The stairs were so narrow that it took an hour to get the sofa up.",
    "ko": "계단이 너무 좁아서 소파를 위로 올리는 데 한 시간이나 걸렸어요.",
    "blank": "संकरी",
+   "src": "made"
+  }
+ ],
+ "w|संकल्प": [
+  {
+   "text": "करण ने संकल्प लिया कि वह गाँव छोड़कर कभी नहीं जाएगा।",
+   "en": "Karan resolved that he would never leave the village.",
+   "ko": "카란은 절대 마을을 떠나지 않겠다고 다짐했어요.",
+   "blank": "संकल्प",
+   "src": "made"
+  },
+  {
+   "text": "नए साल पर दीपा ने रोज़ सुबह जल्दी उठने का संकल्प लिया।",
+   "en": "On New Year Dipa resolved to get up early every morning.",
+   "ko": "새해에 디파는 매일 아침 일찍 일어나기로 다짐했어요.",
+   "blank": "संकल्प",
    "src": "made"
   }
  ],
@@ -44045,6 +44573,22 @@
    "blank": "सत्य"
   }
  ],
+ "w|सत्र": [
+  {
+   "text": "गाँव के स्कूल का नया सत्र बर्फ़ पिघलने के बाद अप्रैल में शुरू होता है।",
+   "en": "The village school's new term starts in April after the snow melts.",
+   "ko": "마을 학교의 새 학기는 눈이 녹은 뒤 사월에 시작돼요.",
+   "blank": "सत्र",
+   "src": "made"
+  },
+  {
+   "text": "बरसात ख़त्म होते ही दीपा के कॉलेज का नया सत्र शुरू हुआ।",
+   "en": "As soon as the rains ended, Dipa's college began its new session.",
+   "ko": "장마가 끝나자마자 디파네 대학의 새 학기가 시작됐어요.",
+   "blank": "सत्र",
+   "src": "made"
+  }
+ ],
  "w|सत्रह": [
   {
    "text": "उसकी बेटी सत्रह साल की हो गई।",
@@ -44364,6 +44908,22 @@
    "en": "The whole village handed out sweets to celebrate Neha's success.",
    "ko": "네하가 합격하자 온 마을이 단 과자를 나눴어요.",
    "blank": "सफलता",
+   "src": "made"
+  }
+ ],
+ "w|सफ़ाई": [
+  {
+   "text": "मेले से पहले पूरे गाँव ने मिलकर मंदिर की सफ़ाई की।",
+   "en": "Before the fair the whole village cleaned the temple together.",
+   "ko": "축제 전에 온 마을이 함께 사원을 청소했어요.",
+   "blank": "सफ़ाई",
+   "src": "made"
+  },
+  {
+   "text": "दिवाली से पहले दीपा ने पूरे घर की सफ़ाई की।",
+   "en": "Before Diwali Dipa cleaned the whole house.",
+   "ko": "디왈리 전에 디파는 온 집안을 청소했어요.",
+   "blank": "सफ़ाई",
    "src": "made"
   }
  ],
@@ -45183,6 +45743,22 @@
    "en": "This is a government school, so the fee is low.",
    "ko": "여기는 공립학교라 학비가 적어.",
    "blank": "सरकारी"
+  }
+ ],
+ "w|संरक्षण": [
+  {
+   "text": "करण गाँव के जंगल के संरक्षण के लिए युवाओं का एक दल चलाता है।",
+   "en": "Karan runs a group of young people to protect the village forest.",
+   "ko": "카란은 마을 숲을 지키려고 청년 모임을 이끌고 있어요.",
+   "blank": "संरक्षण",
+   "src": "made"
+  },
+  {
+   "text": "दीपा पक्षियों के संरक्षण पर काम करने वाली एक संस्था में है।",
+   "en": "Dipa is with an organization that works on bird conservation.",
+   "ko": "디파는 조류 보호 단체에서 일해요.",
+   "blank": "संरक्षण",
+   "src": "made"
   }
  ],
  "w|सरपंच": [
@@ -47677,6 +48253,22 @@
    "blank": "सूर्य"
   }
  ],
+ "w|सृष्टि": [
+  {
+   "text": "दादी कहती हैं कि पहाड़ों में सृष्टि की सबसे सुंदर रचना दिखती है।",
+   "en": "Grandma says the mountains show the most beautiful work of creation.",
+   "ko": "할머니는 산에서 조물주의 가장 아름다운 작품을 볼 수 있다고 하세요.",
+   "blank": "सृष्टि",
+   "src": "made"
+  },
+  {
+   "text": "बसंत में खिले फूल देखकर दीपा को सृष्टि का नया जन्म-सा लगता है।",
+   "en": "Seeing the flowers bloom in spring, Dipa feels as if the world is born anew.",
+   "ko": "봄에 핀 꽃을 보면 디파는 세상이 새로 태어나는 것 같아요.",
+   "blank": "सृष्टि",
+   "src": "made"
+  }
+ ],
  "w|से": [
   {
    "text": "वह बस से दफ़्तर जाता है।",
@@ -48185,6 +48777,22 @@
    "blank": "स्त्री"
   }
  ],
+ "w|स्थल": [
+  {
+   "text": "गाँव के ऊपर वाला झरना अब एक मशहूर पर्यटन स्थल बन गया है।",
+   "en": "The waterfall above the village has now become a famous tourist spot.",
+   "ko": "마을 위쪽 폭포는 이제 유명한 관광지가 됐어요.",
+   "blank": "स्थल",
+   "src": "made"
+  },
+  {
+   "text": "शरद ऋतु में झील किनारे का वह स्थल प्रवासी पक्षियों से भर जाता है।",
+   "en": "In autumn that spot by the lake fills with migratory birds.",
+   "ko": "가을이면 호숫가 그곳은 철새들로 가득해요.",
+   "blank": "स्थल",
+   "src": "made"
+  }
+ ],
  "w|स्थान": [
   {
    "text": "यह स्थान बहुत शांत है।",
@@ -48459,6 +49067,22 @@
    "en": "The hill village feels like heaven.",
    "ko": "산골 마을이 천국 같아.",
    "blank": "स्वर्ग"
+  }
+ ],
+ "w|स्वर्ण": [
+  {
+   "text": "मंदिर के कलश पर स्वर्ण की परत चढ़ी है।",
+   "en": "The temple's spire pot is coated with a layer of gold.",
+   "ko": "사원 꼭대기 항아리 장식에는 금박이 입혀져 있어요.",
+   "blank": "स्वर्ण",
+   "src": "made"
+  },
+  {
+   "text": "शाम के समय खेतों पर पड़ती धूप स्वर्ण जैसी लगती है।",
+   "en": "In the evening the sunlight on the fields looks like gold.",
+   "ko": "저녁 무렵 들판에 내리는 햇빛은 금빛 같아요.",
+   "blank": "स्वर्ण",
+   "src": "made"
   }
  ],
  "w|स्वस्थ": [
@@ -49280,6 +49904,22 @@
    "en": "The board outside the store says a warm welcome to all customers.",
    "ko": "백화점 밖 간판에는 모든 손님을 진심으로 환영한다고 적혀 있어요.",
    "blank": "हार्दिक",
+   "src": "made"
+  }
+ ],
+ "w|हाल ही में": [
+  {
+   "text": "करण के गाँव तक हाल ही में पक्की सड़क बनी है।",
+   "en": "A paved road has recently been built up to Karan's village.",
+   "ko": "카란의 마을까지 최근에 포장도로가 났어요.",
+   "blank": "हाल ही में",
+   "src": "made"
+  },
+  {
+   "text": "दीपा ने हाल ही में देखा कि सुबह की हवा में ठंडक घुलने लगी है।",
+   "en": "Dipa recently noticed that a chill has started to creep into the morning air.",
+   "ko": "디파는 최근 아침 공기에 서늘함이 스며들기 시작한 걸 느꼈어요.",
+   "blank": "हाल ही में",
    "src": "made"
   }
  ],

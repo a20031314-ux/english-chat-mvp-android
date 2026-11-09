@@ -3187,6 +3187,22 @@
    "blank": "Bố mẹ"
   }
  ],
+ "w|bộ não": [
+  {
+   "text": "Long đang viết loạt bài khoa học về cách bộ não ghi nhớ.",
+   "en": "Long is writing a science series on how the brain remembers.",
+   "ko": "롱은 뇌가 기억하는 방식에 관한 과학 연재 기사를 쓰고 있어요.",
+   "blank": "bộ não",
+   "src": "made"
+  },
+  {
+   "text": "Linh nói thiếu ngủ lâu ngày làm bộ não mệt mỏi và khó tập trung.",
+   "en": "Linh says long-term lack of sleep tires the brain and makes it hard to focus.",
+   "ko": "린은 오랜 수면 부족이 뇌를 지치게 하고 집중을 어렵게 한다고 말해요.",
+   "blank": "bộ não",
+   "src": "made"
+  }
+ ],
  "w|bổ nhiệm": [
   {
    "text": "Tuấn dừng lại khá lâu trước bản quyết định bổ nhiệm một viên quan từ thế kỷ trước.",
@@ -6293,6 +6309,22 @@
    "src": "made"
   }
  ],
+ "w|chật hẹp": [
+  {
+   "text": "Phòng biên tập chật hẹp đến mức Long phải ngồi viết ở hành lang.",
+   "en": "The editorial room is so cramped that Long has to sit and write in the hallway.",
+   "ko": "편집실이 너무 비좁아서 롱은 복도에 앉아 기사를 써야 해요.",
+   "blank": "chật hẹp",
+   "src": "made"
+  },
+  {
+   "text": "Kho thuốc của Linh khá chật hẹp nên cô phải xếp hàng lên tận trần.",
+   "en": "Linh's medicine storeroom is quite cramped, so she has to stack things up to the ceiling.",
+   "ko": "린의 약 창고는 꽤 비좁아서 천장까지 쌓아야 해요.",
+   "blank": "chật hẹp",
+   "src": "made"
+  }
+ ],
  "w|chất lượng": [
   {
    "text": "Chất lượng hàng này rất tốt.",
@@ -7705,6 +7737,22 @@
    "blank": "chữ"
   }
  ],
+ "w|chủ doanh nghiệp": [
+  {
+   "text": "Long phỏng vấn một chủ doanh nghiệp nhỏ về khó khăn khi vay vốn.",
+   "en": "Long interviews a small business owner about the difficulties of getting a loan.",
+   "ko": "롱은 대출받기 어려운 사정을 들으려고 작은 회사 사장을 인터뷰해요.",
+   "blank": "chủ doanh nghiệp",
+   "src": "made"
+  },
+  {
+   "text": "Linh mơ một ngày sẽ trở thành chủ doanh nghiệp dược của riêng mình.",
+   "en": "Linh dreams of one day owning her own pharmaceutical business.",
+   "ko": "린은 언젠가 자기 제약 회사의 사장이 되기를 꿈꿔요.",
+   "blank": "chủ doanh nghiệp",
+   "src": "made"
+  }
+ ],
  "w|chú hề": [
   {
    "text": "Tôi sợ chú hề từ nhỏ.",
@@ -7909,6 +7957,22 @@
    "en": "Treating the illness in time helps you recover faster.",
    "ko": "제때 치료하면 더 빨리 나아.",
    "blank": "Chữa bệnh"
+  }
+ ],
+ "w|chữa trị": [
+  {
+   "text": "Long phỏng vấn một bác sĩ đã chữa trị miễn phí cho hàng nghìn bệnh nhân nghèo.",
+   "en": "Long interviews a doctor who has treated thousands of poor patients for free.",
+   "ko": "롱은 가난한 환자 수천 명을 무료로 치료해 온 의사를 인터뷰해요.",
+   "blank": "chữa trị",
+   "src": "made"
+  },
+  {
+   "text": "Linh khuyên khách đến bệnh viện để được chữa trị chứ đừng tự mua kháng sinh.",
+   "en": "Linh advises the customer to go to the hospital for treatment rather than buy antibiotics on their own.",
+   "ko": "린은 손님에게 항생제를 마음대로 사지 말고 병원에서 치료받으라고 권해요.",
+   "blank": "chữa trị",
+   "src": "made"
   }
  ],
  "w|chưa từng": [
@@ -10723,6 +10787,38 @@
    "src": "tatoeba:13341063/leucammieuvu en:3825514/CK"
   }
  ],
+ "w|đảm nhận": [
+  {
+   "text": "Long đảm nhận chuyên mục ý kiến bạn đọc từ tháng này.",
+   "en": "Long takes on the readers' opinion column starting this month.",
+   "ko": "롱은 이번 달부터 독자 의견 코너를 맡아요.",
+   "blank": "đảm nhận",
+   "src": "made"
+  },
+  {
+   "text": "Linh đảm nhận thêm việc đào tạo nhân viên mới cho cả chuỗi.",
+   "en": "Linh takes on the additional job of training new staff for the whole chain.",
+   "ko": "린은 체인 전체의 신입 교육까지 맡아요.",
+   "blank": "đảm nhận",
+   "src": "made"
+  }
+ ],
+ "w|đảm nhiệm": [
+  {
+   "text": "Long đảm nhiệm cả việc viết lẫn chụp ảnh cho chuyến đi này.",
+   "en": "Long handles both the writing and the photography for this trip.",
+   "ko": "롱은 이번 출장에서 글과 사진을 모두 맡아요.",
+   "blank": "đảm nhiệm",
+   "src": "made"
+  },
+  {
+   "text": "Linh đảm nhiệm việc kiểm tra hạn dùng của tất cả các loại thuốc.",
+   "en": "Linh is responsible for checking the expiry dates of all medicines.",
+   "ko": "린은 모든 약의 유통기한 확인을 맡고 있어요.",
+   "blank": "đảm nhiệm",
+   "src": "made"
+  }
+ ],
  "w|đàm phán": [
   {
    "text": "Hai công ty đang đàm phán hợp đồng.",
@@ -12175,6 +12271,22 @@
    "src": "made"
   }
  ],
+ "w|đề bạt": [
+  {
+   "text": "Sau ba năm làm phóng viên, Long được đề bạt làm biên tập viên.",
+   "en": "After three years as a reporter, Long is promoted to editor.",
+   "ko": "기자로 삼 년을 일한 뒤 롱은 편집자로 승진해요.",
+   "blank": "đề bạt",
+   "src": "made"
+  },
+  {
+   "text": "Nhờ làm việc chăm chỉ, Linh được đề bạt làm quản lý cửa hàng.",
+   "en": "Thanks to her hard work, Linh is promoted to store manager.",
+   "ko": "열심히 일한 덕에 린은 매장 관리자로 승진해요.",
+   "blank": "đề bạt",
+   "src": "made"
+  }
+ ],
  "w|dễ chịu": [
   {
    "text": "Thuốc này sẽ làm bạn dễ chịu.",
@@ -12801,6 +12913,22 @@
    "en": "They just went out of the room.",
    "ko": "그들은 방금 방에서 나갔어.",
    "blank": "đi ra"
+  }
+ ],
+ "w|đi siêu thị": [
+  {
+   "text": "Để viết bài về giá cả, Long tự đi siêu thị và ghi lại giá từng món.",
+   "en": "To write about prices, Long goes to the supermarket himself and notes the price of each item.",
+   "ko": "물가 기사를 쓰려고 롱은 직접 마트에 가서 품목마다 가격을 적어요.",
+   "blank": "đi siêu thị",
+   "src": "made"
+  },
+  {
+   "text": "Tan ca, Linh tranh thủ đi siêu thị mua sữa cho con.",
+   "en": "After her shift, Linh squeezes in a trip to the supermarket to buy milk for her child.",
+   "ko": "근무가 끝나면 린은 짬을 내 마트에 가서 아이 우유를 사요.",
+   "blank": "đi siêu thị",
+   "src": "made"
   }
  ],
  "w|đi thẳng": [
@@ -13722,6 +13850,22 @@
    "en": "A nearby business hired Hà to maintain its staff's phones.",
    "ko": "근처 한 회사가 직원들 휴대폰 관리를 하에게 맡겼어요.",
    "blank": "doanh nghiệp",
+   "src": "made"
+  }
+ ],
+ "w|doanh nhân": [
+  {
+   "text": "Long được giao viết chân dung một doanh nhân trẻ đi lên từ hai bàn tay trắng.",
+   "en": "Long is assigned to write a profile of a young businessperson who started from nothing.",
+   "ko": "롱은 맨손으로 일어선 젊은 사업가의 인물 기사를 맡아요.",
+   "blank": "doanh nhân",
+   "src": "made"
+  },
+  {
+   "text": "Một doanh nhân đi công tác ghé vào hỏi Linh thuốc trị mất ngủ.",
+   "en": "A businessman on a business trip drops in to ask Linh for something for insomnia.",
+   "ko": "출장 중인 사업가가 들러 린에게 불면증 약을 물어요.",
+   "blank": "doanh nhân",
    "src": "made"
   }
  ],
@@ -16775,6 +16919,22 @@
    "blank": "giao thông"
   }
  ],
+ "w|giao việc": [
+  {
+   "text": "Mỗi sáng thư ký tòa soạn giao việc cho Long qua tin nhắn.",
+   "en": "Every morning the managing editor assigns Long's tasks by message.",
+   "ko": "매일 아침 편집 비서가 메시지로 롱에게 일을 맡겨요.",
+   "blank": "giao việc",
+   "src": "made"
+  },
+  {
+   "text": "Đầu ca, Linh giao việc cho từng nhân viên trong cửa hàng.",
+   "en": "At the start of the shift, Linh assigns tasks to each staff member in the store.",
+   "ko": "근무를 시작할 때 린은 가게 직원마다 일을 나눠 줘요.",
+   "blank": "giao việc",
+   "src": "made"
+  }
+ ],
  "w|giáo viên": [
   {
    "text": "Giáo viên khen lớp mình hôm nay.",
@@ -17141,6 +17301,22 @@
    "en": "The kid speaks English so well.",
    "ko": "그 아이가 영어를 너무 잘해.",
    "blank": "giỏi"
+  }
+ ],
+ "w|giỏi giang": [
+  {
+   "text": "Long học được nhiều từ một nữ biên tập viên rất giỏi giang.",
+   "en": "Long learns a lot from a very capable female editor.",
+   "ko": "롱은 아주 유능한 여성 편집자에게서 많이 배워요.",
+   "blank": "giỏi giang",
+   "src": "made"
+  },
+  {
+   "text": "Ai cũng khen Linh giỏi giang, vừa bán thuốc vừa nuôi hai con nhỏ.",
+   "en": "Everyone praises Linh for being so capable, running a pharmacy while raising two small kids.",
+   "ko": "다들 린이 약국을 하면서 어린 두 아이를 키운다며 야무지다고 칭찬해요.",
+   "blank": "giỏi giang",
+   "src": "made"
   }
  ],
  "w|giới thiệu": [
@@ -20857,6 +21033,22 @@
    "blank": "khách mời"
   }
  ],
+ "w|khách quốc tế": [
+  {
+   "text": "Long viết bài về lượng khách quốc tế đến thành phố tăng mạnh sau Tết.",
+   "en": "Long writes about the sharp rise in international visitors to the city after Tết.",
+   "ko": "롱은 설 이후 도시를 찾는 외국인 관광객이 크게 늘었다는 기사를 써요.",
+   "blank": "khách quốc tế",
+   "src": "made"
+  },
+  {
+   "text": "Linh học thêm tiếng Anh để tư vấn cho khách quốc tế.",
+   "en": "Linh studies more English to advise international customers.",
+   "ko": "린은 외국인 손님을 상담하려고 영어를 더 배워요.",
+   "blank": "khách quốc tế",
+   "src": "made"
+  }
+ ],
  "w|khách sạn": [
   {
    "text": "Khách sạn này gần biển và yên tĩnh.",
@@ -21681,6 +21873,22 @@
    "ko": "공항버스는 어디서 출발해요?",
    "blank": "khởi hành",
    "src": "tatoeba:510404/autuno en:65393/brauliobezerra"
+  }
+ ],
+ "w|khởi nghiệp": [
+  {
+   "text": "Long đang viết một loạt bài về phong trào khởi nghiệp của sinh viên.",
+   "en": "Long is writing a series on the student startup movement.",
+   "ko": "롱은 대학생 창업 열풍에 관한 연재 기사를 쓰고 있어요.",
+   "blank": "khởi nghiệp",
+   "src": "made"
+  },
+  {
+   "text": "Linh đang tìm hiểu một khóa học về khởi nghiệp dành cho dược sĩ.",
+   "en": "Linh is looking into a startup course for pharmacists.",
+   "ko": "린은 약사를 위한 창업 강좌를 알아보고 있어요.",
+   "blank": "khởi nghiệp",
+   "src": "made"
   }
  ],
  "w|khôn": [
@@ -23237,6 +23445,22 @@
    "src": "made"
   }
  ],
+ "w|lành nghề": [
+  {
+   "text": "Long ghi hình một người thợ mộc lành nghề đang chạm trổ cánh cửa.",
+   "en": "Long films a skilled carpenter carving a door.",
+   "ko": "롱은 문짝을 조각하는 숙련된 목수를 촬영해요.",
+   "blank": "lành nghề",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhờ một người thợ điện lành nghề sửa lại tủ lạnh bảo quản vắc-xin.",
+   "en": "Linh asks a skilled electrician to repair the vaccine refrigerator.",
+   "ko": "린은 숙련된 전기 기사에게 백신 보관 냉장고를 고쳐 달라고 해요.",
+   "blank": "lành nghề",
+   "src": "made"
+  }
+ ],
  "w|lao": [
   {
    "text": "Một chiếc xe tải vừa lao đi dọc theo con đường.",
@@ -23449,6 +23673,22 @@
    "src": "made"
   }
  ],
+ "w|lấy vợ": [
+  {
+   "text": "Cả tòa soạn trêu Long khi nghe tin anh sắp lấy vợ.",
+   "en": "The whole newsroom teases Long when they hear he's about to get married.",
+   "ko": "롱이 곧 장가간다는 소식에 신문사 사람들이 다 놀려요.",
+   "blank": "lấy vợ",
+   "src": "made"
+  },
+  {
+   "text": "Anh trai của Linh sắp lấy vợ nên cô xin nghỉ hai ngày về quê.",
+   "en": "Linh's older brother is about to get married, so she asks for two days off to go home.",
+   "ko": "오빠가 곧 장가가서 린은 고향에 가려고 이틀 휴가를 내요.",
+   "blank": "lấy vợ",
+   "src": "made"
+  }
+ ],
  "w|lễ": [
   {
    "text": "Lễ Tết năm nay sớm.",
@@ -23521,6 +23761,22 @@
    "en": "Put the suitcase in the car for me.",
    "ko": "가방 차에 실어 줘.",
    "blank": "lên"
+  }
+ ],
+ "w|lên đường": [
+  {
+   "text": "Tối mai Long lên đường đi đưa tin hội nghị ở nước ngoài.",
+   "en": "Tomorrow evening Long sets off to cover a conference abroad.",
+   "ko": "내일 저녁 롱은 해외 회의를 취재하러 길을 떠나요.",
+   "blank": "lên đường",
+   "src": "made"
+  },
+  {
+   "text": "Linh chuẩn bị túi thuốc cho một đoàn leo núi sắp lên đường.",
+   "en": "Linh prepares a medicine kit for a hiking group about to set off.",
+   "ko": "린은 곧 길을 떠날 등산 모임을 위해 약 꾸러미를 챙겨요.",
+   "blank": "lên đường",
+   "src": "made"
   }
  ],
  "w|lên kế hoạch": [
@@ -30065,6 +30321,22 @@
    "blank": "người lạ"
   }
  ],
+ "w|người lao động": [
+  {
+   "text": "Bài của Long kể về những người lao động làm ca đêm ở cảng.",
+   "en": "Long's article tells of the workers who do night shifts at the port.",
+   "ko": "롱의 기사는 항구에서 야간 근무를 하는 노동자들 이야기예요.",
+   "blank": "người lao động",
+   "src": "made"
+  },
+  {
+   "text": "Nhiều người lao động ở khu công nghiệp ghé nhà thuốc của Linh sau giờ làm.",
+   "en": "Many workers from the industrial park stop by Linh's pharmacy after work.",
+   "ko": "산업단지 노동자들이 퇴근 후 린의 약국에 많이 들러요.",
+   "blank": "người lao động",
+   "src": "made"
+  }
+ ],
  "w|người lớn": [
   {
    "text": "Người lớn cũng có lúc sợ hãi.",
@@ -30105,6 +30377,22 @@
    "en": "A lot of foreigners come to this place.",
    "ko": "이 가게에 외국인이 많이 와.",
    "blank": "người nước ngoài"
+  }
+ ],
+ "w|người sử dụng lao động": [
+  {
+   "text": "Long hỏi luật sư về trách nhiệm của người sử dụng lao động khi công nhân bị tai nạn.",
+   "en": "Long asks a lawyer about the employer's responsibility when a worker has an accident.",
+   "ko": "롱은 노동자가 사고를 당했을 때 사용자의 책임이 무엇인지 변호사에게 물어요.",
+   "blank": "người sử dụng lao động",
+   "src": "made"
+  },
+  {
+   "text": "Linh hỏi người sử dụng lao động của mình về chế độ bảo hiểm cho nhân viên bán thời gian.",
+   "en": "Linh asks her employer about insurance for part-time staff.",
+   "ko": "린은 고용주에게 시간제 직원 보험에 대해 물어요.",
+   "blank": "người sử dụng lao động",
+   "src": "made"
   }
  ],
  "w|người ta": [
@@ -30353,6 +30641,22 @@
    "blank": "Nhà khoa học"
   }
  ],
+ "w|nhà khởi nghiệp": [
+  {
+   "text": "Long gặp một nhà khởi nghiệp làm ứng dụng giao đồ ăn cho người già.",
+   "en": "Long meets a founder making a food delivery app for the elderly.",
+   "ko": "롱은 노인용 음식 배달 앱을 만드는 창업가를 만나요.",
+   "blank": "nhà khởi nghiệp",
+   "src": "made"
+  },
+  {
+   "text": "Linh từng làm thuê cho một nhà khởi nghiệp mở chuỗi nhà thuốc trực tuyến.",
+   "en": "Linh once worked for a founder who started an online pharmacy chain.",
+   "ko": "린은 온라인 약국 체인을 차린 창업가 밑에서 일한 적이 있어요.",
+   "blank": "nhà khởi nghiệp",
+   "src": "made"
+  }
+ ],
  "w|nhà máy": [
   {
    "text": "Nhà máy này sản xuất rất nhiều hàng.",
@@ -30408,6 +30712,38 @@
    "en": "Thảo is in charge of applications for housing support for workers.",
    "ko": "타오는 노동자 주거 지원 신청 서류를 맡고 있어요.",
    "blank": "nhà ở",
+   "src": "made"
+  }
+ ],
+ "w|nhà phố": [
+  {
+   "text": "Long viết về những căn nhà phố cũ sắp bị giải tỏa ở trung tâm.",
+   "en": "Long writes about the old townhouses downtown that are about to be cleared.",
+   "ko": "롱은 곧 철거될 도심의 오래된 상가주택에 대해 써요.",
+   "blank": "nhà phố",
+   "src": "made"
+  },
+  {
+   "text": "Nhà thuốc của Linh nằm ở tầng trệt một căn nhà phố trên đường lớn.",
+   "en": "Linh's pharmacy is on the ground floor of a townhouse on the main road.",
+   "ko": "린의 약국은 큰길에 있는 상가주택 일층에 있어요.",
+   "blank": "nhà phố",
+   "src": "made"
+  }
+ ],
+ "w|nhà riêng": [
+  {
+   "text": "Long hẹn phỏng vấn ông bộ trưởng tại nhà riêng vào cuối tuần.",
+   "en": "Long arranges to interview the minister at his private home on the weekend.",
+   "ko": "롱은 주말에 장관의 자택에서 인터뷰하기로 약속해요.",
+   "blank": "nhà riêng",
+   "src": "made"
+  },
+  {
+   "text": "Ông bác sĩ già mở phòng khám ngay tại nhà riêng, cạnh nhà thuốc của Linh.",
+   "en": "The old doctor runs a clinic right in his own home, next to Linh's pharmacy.",
+   "ko": "나이 든 의사는 린의 약국 옆 자기 집에서 진료소를 열어요.",
+   "blank": "nhà riêng",
    "src": "made"
   }
  ],
@@ -30971,6 +31307,22 @@
    "en": "I forgot to text that I'd be late.",
    "ko": "늦는다고 문자하는 걸 깜빡했어.",
    "blank": "nhắn tin"
+  }
+ ],
+ "w|nhân vật": [
+  {
+   "text": "Trong phóng sự của Long, nhân vật chính là một bà cụ bán vé số.",
+   "en": "In Long's feature story, the main figure is an old woman who sells lottery tickets.",
+   "ko": "롱의 르포 주인공은 복권을 파는 할머니예요.",
+   "blank": "nhân vật",
+   "src": "made"
+  },
+  {
+   "text": "Linh kể về một nhân vật trong phim mà cô bị nhầm là dược sĩ thật.",
+   "en": "Linh talks about a character in a film whom people mistook for a real pharmacist.",
+   "ko": "린은 사람들이 진짜 약사로 착각했던 영화 속 인물 이야기를 해요.",
+   "blank": "nhân vật",
+   "src": "made"
   }
  ],
  "w|nhân viên": [
@@ -32121,6 +32473,22 @@
    "ko": "두려움은 믿음이 없는 거예요.",
    "blank": "Nỗi sợ",
    "src": "tatoeba:9714625/dotheduyet1999 en:2948318/Dejo"
+  }
+ ],
+ "w|nội tạng": [
+  {
+   "text": "Long viết bài về đường dây buôn bán nội tạng động vật hoang dã bị phát hiện.",
+   "en": "Long writes about a ring trading wild animal organs that was uncovered.",
+   "ko": "롱은 적발된 야생동물 내장 밀매 조직에 대한 기사를 써요.",
+   "blank": "nội tạng",
+   "src": "made"
+  },
+  {
+   "text": "Linh giải thích cho khách rằng rượu bia lâu ngày có hại cho các cơ quan nội tạng.",
+   "en": "Linh explains to a customer that drinking over a long time harms the internal organs.",
+   "ko": "린은 손님에게 오랜 음주가 내장 기관에 해롭다고 설명해요.",
+   "blank": "nội tạng",
+   "src": "made"
   }
  ],
  "w|nói thật": [
@@ -33397,6 +33765,22 @@
    "src": "made"
   }
  ],
+ "w|phân công": [
+  {
+   "text": "Tổng biên tập phân công Long theo dõi mảng giáo dục.",
+   "en": "The editor-in-chief assigns Long to cover education.",
+   "ko": "편집국장은 롱에게 교육 분야를 맡겨요.",
+   "blank": "phân công",
+   "src": "made"
+  },
+  {
+   "text": "Linh phân công một bạn trực quầy và một bạn kiểm kho.",
+   "en": "Linh assigns one person to the counter and another to check the stockroom.",
+   "ko": "린은 한 명에게 계산대를, 다른 한 명에게 재고 확인을 맡겨요.",
+   "blank": "phân công",
+   "src": "made"
+  }
+ ],
  "w|phản đối": [
   {
    "text": "Phản đối quyết định này vì thiếu công bằng.",
@@ -33947,6 +34331,22 @@
    "src": "tatoeba:13480483/leucammieuvu en:13479745/epiphany"
   }
  ],
+ "w|phó phòng": [
+  {
+   "text": "Chị phó phòng thường giúp Long sửa những câu văn quá dài.",
+   "en": "The deputy department head often helps Long fix overly long sentences.",
+   "ko": "차장은 롱이 쓴 너무 긴 문장을 자주 고쳐 줘요.",
+   "blank": "phó phòng",
+   "src": "made"
+  },
+  {
+   "text": "Anh phó phòng gọi điện hỏi Linh về lô thuốc bị giao thiếu.",
+   "en": "The deputy department head calls Linh to ask about the short-delivered batch of medicine.",
+   "ko": "차장이 덜 들어온 약 묶음에 대해 린에게 전화로 물어요.",
+   "blank": "phó phòng",
+   "src": "made"
+  }
+ ],
  "w|phổi": [
   {
    "text": "Anh ấy bị ung thư phổi.",
@@ -34301,6 +34701,22 @@
    "blank": "phù thủy"
   }
  ],
+ "w|phụ trách": [
+  {
+   "text": "Long phụ trách trang thể thao của số báo cuối tuần.",
+   "en": "Long is in charge of the sports page of the weekend edition.",
+   "ko": "롱은 주말판 스포츠 면을 담당해요.",
+   "blank": "phụ trách",
+   "src": "made"
+  },
+  {
+   "text": "Linh phụ trách quầy thuốc kê đơn vào các buổi chiều.",
+   "en": "Linh is in charge of the prescription counter in the afternoons.",
+   "ko": "린은 오후마다 처방약 계산대를 맡아요.",
+   "blank": "phụ trách",
+   "src": "made"
+  }
+ ],
  "w|phức tạp": [
   {
    "text": "Vấn đề này hơi phức tạp.",
@@ -34639,6 +35055,22 @@
    "en": "Bring some warm clothes along.",
    "ko": "따뜻한 옷 좀 챙겨 가.",
    "blank": "quần áo"
+  }
+ ],
+ "w|quần chúng": [
+  {
+   "text": "Long muốn bài báo của mình dễ hiểu với đông đảo quần chúng.",
+   "en": "Long wants his article to be easy to understand for the general public.",
+   "ko": "롱은 자기 기사가 일반 대중에게 쉽게 읽히길 바라요.",
+   "blank": "quần chúng",
+   "src": "made"
+  },
+  {
+   "text": "Linh tham gia buổi tư vấn sức khỏe cho quần chúng ở nhà văn hóa phường.",
+   "en": "Linh joins a public health counseling session at the ward cultural house.",
+   "ko": "린은 동네 문화회관에서 열린 주민 건강 상담에 참여해요.",
+   "blank": "quần chúng",
+   "src": "made"
   }
  ],
  "w|quan điểm": [
@@ -37077,6 +37509,22 @@
    "blank": "Sinh ra"
   }
  ],
+ "w|sinh sống": [
+  {
+   "text": "Long đến ngôi làng nơi những người làm muối đã sinh sống qua nhiều đời.",
+   "en": "Long goes to the village where salt makers have lived for generations.",
+   "ko": "롱은 소금 만드는 사람들이 대대로 살아온 마을에 가요.",
+   "blank": "sinh sống",
+   "src": "made"
+  },
+  {
+   "text": "Khách quen của Linh đa số là người già sinh sống quanh khu chợ.",
+   "en": "Most of Linh's regulars are elderly people living around the market area.",
+   "ko": "린의 단골은 대부분 시장 주변에 사는 노인들이에요.",
+   "blank": "sinh sống",
+   "src": "made"
+  }
+ ],
  "w|sinh thái": [
   {
    "text": "Khu rừng này được giữ gìn để nghiên cứu về sinh thái.",
@@ -38289,6 +38737,22 @@
    "en": "Drive carefully to avoid an accident.",
    "ko": "사고 나지 않게 조심히 운전해.",
    "blank": "tai nạn"
+  }
+ ],
+ "w|tài năng": [
+  {
+   "text": "Long viết về một cậu bé tài năng tự học vẽ trên giấy báo cũ.",
+   "en": "Long writes about a talented boy who taught himself to draw on old newspaper.",
+   "ko": "롱은 헌 신문지에 그림을 독학한 재능 있는 소년에 대해 써요.",
+   "blank": "tài năng",
+   "src": "made"
+  },
+  {
+   "text": "Linh nhận xét cô thực tập mới rất tài năng và nhanh nhẹn.",
+   "en": "Linh remarks that the new trainee is very talented and quick.",
+   "ko": "린은 새로 온 실습생이 아주 재능 있고 민첩하다고 평해요.",
+   "blank": "tài năng",
+   "src": "made"
   }
  ],
  "w|tai nghe": [
@@ -39543,6 +40007,22 @@
    "en": "I grew up in a small city.",
    "ko": "나는 작은 도시에서 자랐어.",
    "blank": "thành phố"
+  }
+ ],
+ "w|thành thạo": [
+  {
+   "text": "Long đã thành thạo việc dựng video ngắn cho bản báo điện tử.",
+   "en": "Long has become skilled at editing short videos for the online edition.",
+   "ko": "롱은 인터넷판용 짧은 영상 편집에 능숙해졌어요.",
+   "blank": "thành thạo",
+   "src": "made"
+  },
+  {
+   "text": "Linh đã thành thạo cách tra tương tác thuốc trên phần mềm mới.",
+   "en": "Linh has mastered how to check drug interactions in the new software.",
+   "ko": "린은 새 프로그램으로 약물 상호작용을 찾는 법에 능숙해졌어요.",
+   "blank": "thành thạo",
+   "src": "made"
   }
  ],
  "w|thành thị": [
@@ -41527,6 +42007,22 @@
    "blank": "thực sự"
   }
  ],
+ "w|thực tập sinh": [
+  {
+   "text": "Long dẫn hai thực tập sinh đi lấy tin ở tòa án.",
+   "en": "Long takes two interns to gather news at the courthouse.",
+   "ko": "롱은 인턴 두 명을 데리고 법원에 취재하러 가요.",
+   "blank": "thực tập sinh",
+   "src": "made"
+  },
+  {
+   "text": "Linh hướng dẫn thực tập sinh cách đọc đơn thuốc của bác sĩ.",
+   "en": "Linh shows the intern how to read a doctor's prescription.",
+   "ko": "린은 인턴에게 의사 처방전 읽는 법을 가르쳐요.",
+   "blank": "thực tập sinh",
+   "src": "made"
+  }
+ ],
  "w|thực thi": [
   {
    "text": "Hướng dẫn viên nói với Tuấn rằng luật ấy có nhưng gần như không được thực thi.",
@@ -43333,6 +43829,22 @@
    "src": "made"
   }
  ],
+ "w|tổng giám đốc": [
+  {
+   "text": "Sáng nay, tổng giám đốc của tờ báo gọi Long lên để khen bài phóng sự.",
+   "en": "This morning, the newspaper's general director calls Long up to praise his feature.",
+   "ko": "신문사 사장이 르포를 칭찬하려고 롱을 불러요.",
+   "blank": "tổng giám đốc",
+   "src": "made"
+  },
+  {
+   "text": "Sáng nay, tổng giám đốc chuỗi nhà thuốc về thăm cửa hàng của Linh.",
+   "en": "The general director of the pharmacy chain visits Linh's store this morning.",
+   "ko": "오늘 아침 약국 체인 사장이 린의 가게를 방문해요.",
+   "blank": "tổng giám đốc",
+   "src": "made"
+  }
+ ],
  "w|tổng thống": [
   {
    "text": "Tin tổng thống mới được đưa lên tivi.",
@@ -44303,6 +44815,22 @@
    "blank": "Trời ơi"
   }
  ],
+ "w|trôi qua": [
+  {
+   "text": "Cả buổi chiều trôi qua mà Long vẫn chưa viết xong tít bài.",
+   "en": "The whole afternoon goes by and Long still hasn't finished the headline.",
+   "ko": "오후 내내 지나갔는데 롱은 아직 기사 제목을 다 못 썼어요.",
+   "blank": "trôi qua",
+   "src": "made"
+  },
+  {
+   "text": "Ngày nghỉ trôi qua rất nhanh, Linh lại phải mở cửa nhà thuốc từ sáng sớm.",
+   "en": "The day off goes by quickly, and Linh has to open the pharmacy early again.",
+   "ko": "쉬는 날이 금방 지나가고 린은 다시 이른 아침부터 약국 문을 열어야 해요.",
+   "blank": "trôi qua",
+   "src": "made"
+  }
+ ],
  "w|trộm": [
   {
    "text": "Trộm đã lấy hết tiền trong két.",
@@ -44653,6 +45181,22 @@
    "blank": "Trung tâm"
   }
  ],
+ "w|trung tâm thương mại": [
+  {
+   "text": "Long được cử đến đưa tin vụ cháy ở một trung tâm thương mại.",
+   "en": "Long is sent to report on a fire at a shopping mall.",
+   "ko": "롱은 한 쇼핑몰 화재를 취재하러 파견돼요.",
+   "blank": "trung tâm thương mại",
+   "src": "made"
+  },
+  {
+   "text": "Chuỗi nhà thuốc định mở thêm một quầy trong trung tâm thương mại và nhờ Linh quản lý.",
+   "en": "The pharmacy chain plans to open a counter in the shopping mall and asks Linh to manage it.",
+   "ko": "약국 체인이 쇼핑몰에 매장을 하나 더 내고 린에게 관리를 맡기려 해요.",
+   "blank": "trung tâm thương mại",
+   "src": "made"
+  }
+ ],
  "w|trung thực": [
   {
    "text": "Mình thích người trung thực.",
@@ -44765,6 +45309,38 @@
    "en": "This case needs to be handled quickly.",
    "ko": "이 경우는 빨리 처리해야 해.",
    "blank": "Trường hợp"
+  }
+ ],
+ "w|trưởng nhóm": [
+  {
+   "text": "Long làm trưởng nhóm của tổ phóng viên điều tra.",
+   "en": "Long is the team leader of the investigative reporting group.",
+   "ko": "롱은 탐사 기자 팀의 팀장이에요.",
+   "blank": "trưởng nhóm",
+   "src": "made"
+  },
+  {
+   "text": "Linh làm trưởng nhóm của ba dược sĩ trẻ ở chi nhánh này.",
+   "en": "Linh is the team leader of three young pharmacists at this branch.",
+   "ko": "린은 이 지점 젊은 약사 세 명의 팀장이에요.",
+   "blank": "trưởng nhóm",
+   "src": "made"
+  }
+ ],
+ "w|trưởng phòng": [
+  {
+   "text": "Long phải gửi bản thảo cho trưởng phòng duyệt trước mười giờ.",
+   "en": "Long has to send his draft to the department head for approval before ten.",
+   "ko": "롱은 열 시 전에 원고를 부장에게 보내 검토를 받아야 해요.",
+   "blank": "trưởng phòng",
+   "src": "made"
+  },
+  {
+   "text": "Linh báo cáo doanh thu tháng cho trưởng phòng kinh doanh.",
+   "en": "Linh reports the monthly sales to the head of the sales department.",
+   "ko": "린은 월 매출을 영업부장에게 보고해요.",
+   "blank": "trưởng phòng",
+   "src": "made"
   }
  ],
  "w|trưởng thành": [
@@ -45989,6 +46565,22 @@
    "src": "made"
   }
  ],
+ "w|ứng viên": [
+  {
+   "text": "Long ngồi trong hội đồng phỏng vấn ứng viên cho vị trí phóng viên mới.",
+   "en": "Long sits on the panel interviewing candidates for the new reporter position.",
+   "ko": "롱은 새 기자 자리 지원자 면접 위원으로 앉아요.",
+   "blank": "ứng viên",
+   "src": "made"
+  },
+  {
+   "text": "Linh đọc hồ sơ của các ứng viên xin vào làm dược sĩ ca tối.",
+   "en": "Linh reads the applications of candidates for the evening-shift pharmacist job.",
+   "ko": "린은 저녁 근무 약사 자리에 지원한 사람들의 서류를 읽어요.",
+   "blank": "ứng viên",
+   "src": "made"
+  }
+ ],
  "w|ước": [
   {
    "text": "Mình ước được đi du lịch vào hè.",
@@ -46148,6 +46740,38 @@
    "en": "Trang's club gives gifts to the most outstanding members of the season.",
    "ko": "짱의 클럽은 시즌 최우수 회원들에게 선물을 줘요.",
    "blank": "ưu tú",
+   "src": "made"
+  }
+ ],
+ "w|ủy quyền": [
+  {
+   "text": "Khi Long nghỉ phép, chị biên tập viên được ủy quyền ký duyệt thay anh.",
+   "en": "When Long is on leave, the editor is authorized to sign off in his place.",
+   "ko": "롱이 휴가일 때는 편집자가 대신 결재하도록 위임받아요.",
+   "blank": "ủy quyền",
+   "src": "made"
+  },
+  {
+   "text": "Bà cụ ủy quyền cho con gái đến nhà thuốc của Linh nhận thuốc thay mình.",
+   "en": "The old woman authorizes her daughter to pick up medicine at Linh's pharmacy on her behalf.",
+   "ko": "할머니는 딸에게 린의 약국에서 대신 약을 받아 오도록 위임해요.",
+   "blank": "ủy quyền",
+   "src": "made"
+  }
+ ],
+ "w|ủy thác": [
+  {
+   "text": "Long viết về những gia đình ủy thác cho ngân hàng quản lý tiền tiết kiệm.",
+   "en": "Long writes about families who entrust their savings to banks to manage.",
+   "ko": "롱은 저축을 은행에 맡겨 관리하는 가정들에 대해 써요.",
+   "blank": "ủy thác",
+   "src": "made"
+  },
+  {
+   "text": "Chủ nhà thuốc ủy thác cho Linh toàn quyền nhập hàng khi ông đi vắng.",
+   "en": "The pharmacy owner entrusts Linh with full authority over purchasing while he's away.",
+   "ko": "약국 주인은 자리를 비울 때 물건 들이는 일을 린에게 전부 맡겨요.",
+   "blank": "ủy thác",
    "src": "made"
   }
  ],
@@ -48617,6 +49241,22 @@
    "en": "Once she appeared on stage, she smiled.",
    "ko": "무대에 나타나자마자 그녀는 웃었어.",
    "blank": "Xuất hiện"
+  }
+ ],
+ "w|xuất phát": [
+  {
+   "text": "Năm giờ sáng, xe của tòa soạn xuất phát đưa Long ra vùng lũ.",
+   "en": "At five in the morning, the newsroom's car sets off to take Long to the flood zone.",
+   "ko": "새벽 다섯 시, 신문사 차가 롱을 태우고 홍수 지역으로 출발해요.",
+   "blank": "xuất phát",
+   "src": "made"
+  },
+  {
+   "text": "Linh dặn khách uống thuốc chống say xe nửa tiếng trước khi xuất phát.",
+   "en": "Linh tells the customer to take motion sickness pills half an hour before setting off.",
+   "ko": "린은 손님에게 출발 삼십 분 전에 멀미약을 먹으라고 일러요.",
+   "blank": "xuất phát",
+   "src": "made"
   }
  ],
  "w|xuất sắc": [
