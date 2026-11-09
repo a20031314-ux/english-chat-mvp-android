@@ -8,14 +8,7 @@
 
 없음
 
-## 탭이 확인할 것 (4)
-
-### 탭 1 메인
-
-- **a261109-2-1** (2026-11-09 15:09, 탭 2 · cf72967) Logbank 오늘을 ▶ Quizbank 하나로 합침(막힌 것·다시 학습·새로 학습·써 보기 카드 없음), todayCards.ts pickCards·doneOf 지움 → stuckKeys·answeredToday, Quizbank 다시 볼 것은 막힌 것 먼저, 표현 시작 단계 = 최근 실력 확인. 오늘 카드·써 보기를 가리키던 화면·글이 있으면 확인
-  - 기능: 자유대화 · 이렇게도 말할 수 있었어요 · 첫 측정 · 실력 확인 · Logbank · 오늘 · Quizbank · Languagebank · 넘겨 보기 · 소재 수업 · 사전 주석 · My에서 찾기
-  - 볼 곳: `components/FindInMy.tsx`
-  - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
+## 탭이 확인할 것 (3)
 
 ### 탭 3 AI
 
@@ -35,8 +28,9 @@
   - 볼 곳: `components/AiTutorProfile.tsx` · `components/rooms/RoomView.tsx` · `components/AiTutorRow.tsx` · `components/rooms/PeopleTab.tsx` · `components/rooms/RoomsScreen.tsx`
   - 볼 것: 이 화면들에서도 새 동작이 나오나 · 옛 동작(같은 일을 따로 하는 코드)이 남았나 · 문구 14개 언어
 
-## 최근 답 (7, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
+## 최근 답 (8, 14일 뒤 저절로 빠짐 — 경위는 git 기록)
 
+- a261109-2-1 → 1 메인: **해당없음** — FindInMy·사용법·새로워진 점에 오늘 카드·써 보기를 가리키는 곳 없음 · Logbank 오늘을 ▶ Quizbank 하나로 합침(막힌 것·다시 학습·새로 학습·써 보기 카드 없음), todayCards.ts pickCards·doneOf 지움 → stuckKeys·answeredToday, Quizbank 다시 볼 것은 막힌 것 먼저, 표현 시작 단계 = 최근 실력 확인. 오늘 카드·써 보기를 가리키던 화면·글이 있으면 확인 (2026-11-09 15:25)
 - a261109-9 → 사용자: **지움** — 사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움 · AI 통화 옛 조각(callLines·realtimeCallSession) — 테스트만 씀 (2026-11-09 14:56)
 - a261109-8 → 사용자: **지움** — 사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움 · 글자 안내 패널 데이터(characterGuide) — 패널은 지웠고 테스트만 씀 (2026-11-09 14:56)
 - a261109-7 → 사용자: **지움** — 사용자 2026-11-09 네 묶음 모두 지움 — 같은 커밋에서 지움 · 옛 단계 만들기 엔진(curriculum/engine) — 테스트만 씀 (2026-11-09 14:56)
