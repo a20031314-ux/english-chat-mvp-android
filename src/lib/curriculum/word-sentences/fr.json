@@ -207,6 +207,22 @@
    "blank": "absolument"
   }
  ],
+ "w|absorber": [
+  {
+   "text": "Le dossier de l'affaire a fini par absorber toutes les soirées de Julien.",
+   "en": "The case file ended up taking over all of Julien's evenings.",
+   "ko": "사건 기록이 결국 쥘리앵의 저녁 시간을 다 잡아먹었어요.",
+   "blank": "absorber",
+   "src": "made"
+  },
+  {
+   "text": "La terre du jardin a du mal à absorber toute la pluie de novembre.",
+   "en": "The garden soil struggles to absorb all the November rain.",
+   "ko": "정원 흙이 십일월 비를 다 빨아들이지 못해요.",
+   "blank": "absorber",
+   "src": "made"
+  }
+ ],
  "w|absurde": [
   {
    "text": "Ce qu'il dit est complètement absurde.",
@@ -1963,6 +1979,22 @@
    "en": "We must stay alert during the storm.",
    "ko": "폭풍 동안 경계해야 해.",
    "blank": "alerte"
+  }
+ ],
+ "w|alerter": [
+  {
+   "text": "Une voisine avait tenté d'alerter la police bien avant le drame.",
+   "en": "A neighbor had tried to alert the police well before the tragedy.",
+   "ko": "이웃 한 명이 사건이 일어나기 한참 전에 경찰에 알리려 했어요.",
+   "blank": "alerter",
+   "src": "made"
+  },
+  {
+   "text": "La mairie a voulu alerter les habitants avant les premières gelées.",
+   "en": "The town hall wanted to warn residents before the first frosts.",
+   "ko": "시청은 첫서리가 내리기 전에 주민들에게 알리려 했어요.",
+   "blank": "alerter",
+   "src": "made"
   }
  ],
  "w|alibi": [
@@ -5691,6 +5723,22 @@
    "en": "He moves like a blind man in the night.",
    "ko": "그는 밤에 시각장애인처럼 움직여요.",
    "blank": "aveugle"
+  }
+ ],
+ "w|aveugler": [
+  {
+   "text": "Selon le juge, la colère avait aveuglé l'accusé ce soir-là.",
+   "en": "According to the judge, anger had blinded the defendant that evening.",
+   "ko": "판사는 그날 밤 피고인이 분노에 눈이 멀었다고 봤어요.",
+   "blank": "aveuglé",
+   "src": "made"
+  },
+  {
+   "text": "Le soleil bas d'hiver vient aveugler Manon quand elle conduit le soir.",
+   "en": "The low winter sun dazzles Manon when she drives in the evening.",
+   "ko": "겨울의 낮은 해가 저녁 운전하는 마농의 눈을 부시게 해요.",
+   "blank": "aveugler",
+   "src": "made"
   }
  ],
  "w|avion": [
@@ -13291,6 +13339,22 @@
    "blank": "clef"
   }
  ],
+ "w|clémence": [
+  {
+   "text": "Julien a demandé la clémence du tribunal pour ce jeune père de famille.",
+   "en": "Julien asked the court for leniency for this young father.",
+   "ko": "쥘리앵은 이 젊은 아버지에게 관용을 베풀어 달라고 법원에 요청했어요.",
+   "blank": "clémence",
+   "src": "made"
+  },
+  {
+   "text": "Cette année, l'hiver a fait preuve de clémence et la neige est restée rare.",
+   "en": "This year, winter was mild and snow stayed rare.",
+   "ko": "올해 겨울은 온화해서 눈이 드물었어요.",
+   "blank": "clémence",
+   "src": "made"
+  }
+ ],
  "w|cliché": [
   {
    "text": "Thomas refuse de jouer le méchant comme un cliché de film.",
@@ -13395,6 +13459,22 @@
    "en": "I hear the church bell every Sunday.",
    "ko": "나는 매주 일요일마다 교회의 cloche 를 들어.",
    "blank": "cloche"
+  }
+ ],
+ "w|clocher": [
+  {
+   "text": "Depuis son bureau, Julien entend sonner le clocher à chaque heure.",
+   "en": "From his office, Julien hears the church bell tower ring every hour.",
+   "ko": "쥘리앵은 사무실에서 매시간 종탑이 울리는 소리를 들어요.",
+   "blank": "clocher",
+   "src": "made"
+  },
+  {
+   "text": "Les cigognes reviennent chaque printemps sur le clocher du village.",
+   "en": "The storks come back to the village bell tower every spring.",
+   "ko": "황새들이 봄마다 마을 종탑으로 돌아와요.",
+   "blank": "clocher",
+   "src": "made"
   }
  ],
  "w|clone": [
@@ -20997,6 +21077,22 @@
    "src": "made"
   }
  ],
+ "w|déployer": [
+  {
+   "text": "Pour ce procès, la préfecture a dû déployer des policiers autour du bâtiment.",
+   "en": "For this trial, the prefecture had to deploy police officers around the building.",
+   "ko": "이번 재판 때문에 도청은 건물 주변에 경찰을 배치해야 했어요.",
+   "blank": "déployer",
+   "src": "made"
+  },
+  {
+   "text": "Dès les premiers beaux jours, le café du coin aime déployer sa terrasse sur la place.",
+   "en": "As soon as the first fine days arrive, the corner café likes to spread its terrace out across the square.",
+   "ko": "날이 풀리기 시작하면 동네 카페는 광장에 테라스를 펼쳐요.",
+   "blank": "déployer",
+   "src": "made"
+  }
+ ],
  "w|déposer": [
   {
    "text": "Je vais déposer ce colis à la poste.",
@@ -21143,6 +21239,22 @@
    "en": "Is it okay if I disturb?",
    "ko": "내가 방해해도 될까?",
    "blank": "dérange"
+  }
+ ],
+ "w|dérive": [
+  {
+   "text": "L'avocat a décrit la lente dérive de son client vers le jeu.",
+   "en": "The lawyer described his client's slow drift into gambling.",
+   "ko": "변호사는 의뢰인이 천천히 도박에 빠져든 과정을 설명했어요.",
+   "blank": "dérive",
+   "src": "made"
+  },
+  {
+   "text": "Avec le dégel, la vieille barque de Manon est partie à la dérive sur l'étang.",
+   "en": "With the thaw, Manon's old rowing boat drifted off across the pond.",
+   "ko": "얼음이 녹자 마농의 낡은 배가 연못 위로 떠내려갔어요.",
+   "blank": "dérive",
+   "src": "made"
   }
  ],
  "w|dernier": [
@@ -21509,6 +21621,22 @@
    "en": "From now on, I get up earlier every morning.",
    "ko": "이제부터 나는 매일 아침 더 일찍 일어나.",
    "blank": "Désormais"
+  }
+ ],
+ "w|dessein": [
+  {
+   "text": "Le procureur affirme que l'accusé avait agi dans le dessein de nuire.",
+   "en": "The prosecutor claims the defendant had acted with the intent to harm.",
+   "ko": "검사는 피고인이 해를 끼칠 의도로 행동했다고 주장해요.",
+   "blank": "dessein",
+   "src": "made"
+  },
+  {
+   "text": "Manon a semé ces graines dans le dessein d'avoir des fleurs tout l'été.",
+   "en": "Manon sowed these seeds with the aim of having flowers all summer.",
+   "ko": "마농은 여름 내내 꽃을 보려는 생각으로 이 씨앗을 뿌렸어요.",
+   "blank": "dessein",
+   "src": "made"
   }
  ],
  "w|dessert": [
@@ -22351,6 +22479,22 @@
    "blank": "dignité"
   }
  ],
+ "w|dilemme": [
+  {
+   "text": "Julien fait face à un dilemme : défendre un ami ou refuser l'affaire.",
+   "en": "Julien faces a dilemma: defend a friend or turn down the case.",
+   "ko": "쥘리앵은 친구를 변호할지 사건을 거절할지 딜레마에 빠졌어요.",
+   "blank": "dilemme",
+   "src": "made"
+  },
+  {
+   "text": "Chaque mois d'avril, Manon a le même dilemme : manteau ou simple veste ?",
+   "en": "Every April, Manon has the same dilemma: coat or just a jacket?",
+   "ko": "사월마다 마농은 외투를 입을지 재킷만 입을지 같은 고민을 해요.",
+   "blank": "dilemme",
+   "src": "made"
+  }
+ ],
  "w|dimanche": [
   {
    "text": "On se repose souvent le dimanche.",
@@ -22911,6 +23055,22 @@
    "src": "made"
   }
  ],
+ "w|dissuader": [
+  {
+   "text": "Julien a essayé de dissuader son client de parler aux journalistes.",
+   "en": "Julien tried to dissuade his client from talking to the journalists.",
+   "ko": "쥘리앵은 의뢰인에게 기자들과 말하지 말라고 설득했어요.",
+   "blank": "dissuader",
+   "src": "made"
+  },
+  {
+   "text": "La pluie n'a pas réussi à dissuader Manon de faire sa promenade du dimanche.",
+   "en": "The rain didn't manage to put Manon off her Sunday walk.",
+   "ko": "비가 와도 마농은 일요일 산책을 그만두지 않았어요.",
+   "blank": "dissuader",
+   "src": "made"
+  }
+ ],
  "w|distance": [
   {
    "text": "Garde une certaine distance entre nous.",
@@ -22923,6 +23083,22 @@
    "en": "The distance to school is short.",
    "ko": "학교까지의 거리는 짧아.",
    "blank": "distance"
+  }
+ ],
+ "w|distant": [
+  {
+   "text": "Pendant toute l'audience, l'accusé est resté froid et distant.",
+   "en": "Throughout the hearing, the defendant remained cold and distant.",
+   "ko": "재판 내내 피고인은 차갑고 무심했어요.",
+   "blank": "distant",
+   "src": "made"
+  },
+  {
+   "text": "En automne, le bruit lointain de la ville semble plus distant qu'en été.",
+   "en": "In autumn, the city's faint noise seems more distant than in summer.",
+   "ko": "가을이면 먼 도시 소음이 여름보다 더 멀게 느껴져요.",
+   "blank": "distant",
+   "src": "made"
   }
  ],
  "w|distingué": [
@@ -23672,6 +23848,22 @@
    "en": "The site is offering to double loyalty points this weekend, so Manon takes advantage.",
    "ko": "이번 주말에 사이트가 적립 포인트를 두 배로 준다고 해서 마농은 그 기회를 잡아요.",
    "blank": "doubler",
+   "src": "made"
+  }
+ ],
+ "w|doublure": [
+  {
+   "text": "La robe d'avocat de Julien a une doublure de soie un peu usée.",
+   "en": "Julien's lawyer's gown has a slightly worn silk lining.",
+   "ko": "쥘리앵의 법복은 안감 비단이 좀 해졌어요.",
+   "blank": "doublure",
+   "src": "made"
+  },
+  {
+   "text": "Manon a ressorti son manteau à doublure polaire dès les premiers frimas.",
+   "en": "Manon took out her fleece-lined coat as soon as the first frosts came.",
+   "ko": "첫 추위가 오자 마농은 안감이 플리스인 외투를 꺼냈어요.",
+   "blank": "doublure",
    "src": "made"
   }
  ],
@@ -25038,6 +25230,22 @@
    "en": "Chloé got a scratch on her arm squeezing her way to the front row.",
    "ko": "클로에는 맨 앞줄로 비집고 들어가다가 팔이 긁혔어요.",
    "blank": "égratignure",
+   "src": "made"
+  }
+ ],
+ "w|égyptien": [
+  {
+   "text": "La statue égyptienne volée a été présentée comme pièce à conviction.",
+   "en": "The stolen Egyptian statue was presented as evidence.",
+   "ko": "도난당한 이집트 조각상이 증거물로 제시됐어요.",
+   "blank": "égyptienne",
+   "src": "made"
+  },
+  {
+   "text": "Manon a fait pousser des papyrus égyptiens dans un grand pot sur le balcon.",
+   "en": "Manon grew Egyptian papyrus in a big pot on the balcony.",
+   "ko": "마농은 발코니의 큰 화분에 이집트 파피루스를 길렀어요.",
+   "blank": "égyptiens",
    "src": "made"
   }
  ],
@@ -27721,6 +27929,22 @@
    "src": "made"
   }
  ],
+ "w|escroquerie": [
+  {
+   "text": "Le procès porte sur une vaste escroquerie aux faux placements.",
+   "en": "The trial concerns a vast scam involving fake investments.",
+   "ko": "이번 재판은 가짜 투자를 내세운 대규모 사기 사건이에요.",
+   "blank": "escroquerie",
+   "src": "made"
+  },
+  {
+   "text": "Le faux bois de chauffage vendu sur internet était une escroquerie.",
+   "en": "The fake firewood sold online was a scam.",
+   "ko": "인터넷에서 산 장작은 사기였어요.",
+   "blank": "escroquerie",
+   "src": "made"
+  }
+ ],
  "w|espace": [
   {
    "text": "Il manque de l’espace dans cette pièce.",
@@ -27918,6 +28142,22 @@
    "en": "Before going back on stage, the singer grabs a towel to wipe her forehead.",
    "ko": "가수는 무대에 다시 오르기 전에 수건으로 이마를 닦아요.",
    "blank": "essuyer",
+   "src": "made"
+  }
+ ],
+ "w|esthétique": [
+  {
+   "text": "Julien trouve la nouvelle salle d'audience plus esthétique que pratique.",
+   "en": "Julien finds the new courtroom more attractive than practical.",
+   "ko": "쥘리앵은 새 법정이 실용적이라기보다 보기에만 좋다고 생각해요.",
+   "blank": "esthétique",
+   "src": "made"
+  },
+  {
+   "text": "Manon trouve que les feuilles rousses ont un côté très esthétique.",
+   "en": "Manon thinks the russet leaves have something very beautiful about them.",
+   "ko": "마농은 붉은 낙엽이 아주 아름답다고 생각해요.",
+   "blank": "esthétique",
    "src": "made"
   }
  ],
@@ -28785,6 +29025,22 @@
    "en": "You did an excellent job.",
    "ko": "너 일 정말 잘했어.",
    "blank": "excellent"
+  }
+ ],
+ "w|excentrique": [
+  {
+   "text": "Le témoin excentrique est arrivé au tribunal avec un chapeau à plumes.",
+   "en": "The eccentric witness arrived at court wearing a feathered hat.",
+   "ko": "괴짜 증인은 깃털 모자를 쓰고 법정에 나타났어요.",
+   "blank": "excentrique",
+   "src": "made"
+  },
+  {
+   "text": "Le voisin excentrique de Manon porte un short même en décembre.",
+   "en": "Manon's eccentric neighbor wears shorts even in December.",
+   "ko": "마농의 괴짜 이웃은 십이월에도 반바지를 입어요.",
+   "blank": "excentrique",
+   "src": "made"
   }
  ],
  "w|excepté": [
@@ -30033,6 +30289,22 @@
    "blank": "famille"
   }
  ],
+ "w|famine": [
+  {
+   "text": "L'avocat a cité un livre d'histoire sur la famine pour expliquer la colère du village.",
+   "en": "The lawyer quoted a history book about the famine to explain the village's anger.",
+   "ko": "변호사는 마을의 분노를 설명하려고 기근을 다룬 역사책을 인용했어요.",
+   "blank": "famine",
+   "src": "made"
+  },
+  {
+   "text": "Manon lit un roman sur une famine causée par un hiver interminable.",
+   "en": "Manon is reading a novel about a famine caused by an endless winter.",
+   "ko": "마농은 끝없는 겨울이 부른 기근을 다룬 소설을 읽어요.",
+   "blank": "famine",
+   "src": "made"
+  }
+ ],
  "w|fan": [
   {
    "text": "Je suis fan de ce groupe de musique.",
@@ -30737,6 +31009,22 @@
    "en": "My brother has been engaged for a year.",
    "ko": "내 남동생은 1년째 약혼 중이야.",
    "blank": "fiancé"
+  }
+ ],
+ "w|fiasco": [
+  {
+   "text": "Pour l'accusation, ce premier procès a été un vrai fiasco.",
+   "en": "For the prosecution, this first trial was a real fiasco.",
+   "ko": "검찰 측에게 이번 첫 재판은 완전한 실패였어요.",
+   "blank": "fiasco",
+   "src": "made"
+  },
+  {
+   "text": "Le pique-nique de Pâques sous la grêle a été un fiasco complet.",
+   "en": "The Easter picnic in the hail was a complete fiasco.",
+   "ko": "우박 속 부활절 소풍은 완전히 엉망이었어요.",
+   "blank": "fiasco",
+   "src": "made"
   }
  ],
  "w|fibre": [
@@ -36367,6 +36655,22 @@
    "src": "made"
   }
  ],
+ "w|hymne": [
+  {
+   "text": "Pour la cérémonie d'ouverture de l'année judiciaire, on a joué l'hymne national.",
+   "en": "For the opening ceremony of the judicial year, the national anthem was played.",
+   "ko": "사법 연도 개막식에서 국가가 연주됐어요.",
+   "blank": "hymne",
+   "src": "made"
+  },
+  {
+   "text": "Pour Manon, le chant des merles en mars est un véritable hymne au printemps.",
+   "en": "For Manon, the blackbirds' song in March is a true hymn to spring.",
+   "ko": "마농에게 삼월의 지빠귀 노래는 진정한 봄의 찬가예요.",
+   "blank": "hymne",
+   "src": "made"
+  }
+ ],
  "w|hypocrite": [
   {
    "text": "Paul trouve hypocrite de sourire au professeur après s'être moqué de lui.",
@@ -39587,6 +39891,22 @@
    "blank": "inviter"
   }
  ],
+ "w|involontaire": [
+  {
+   "text": "Selon la défense de Julien, il s'agissait d'un geste involontaire.",
+   "en": "According to Julien's defense, it was an involuntary movement.",
+   "ko": "쥘리앵의 변론에 따르면 그건 의도하지 않은 행동이었어요.",
+   "blank": "involontaire",
+   "src": "made"
+  },
+  {
+   "text": "Manon a laissé échapper un frisson involontaire en sortant ce matin.",
+   "en": "Manon let out an involuntary shiver as she went out this morning.",
+   "ko": "오늘 아침 밖에 나가자 마농은 저도 모르게 몸을 떨었어요.",
+   "blank": "involontaire",
+   "src": "made"
+  }
+ ],
  "w|invoquer": [
   {
    "text": "Un client invoque une urgence pour passer devant tout le monde, mais Louis reste calme.",
@@ -40668,6 +40988,22 @@
    "en": "Manon has to justify her absence from the music theory class.",
    "ko": "마농은 솔페주 수업에 빠진 이유를 설명해야 해요.",
    "blank": "justifier",
+   "src": "made"
+  }
+ ],
+ "w|karaoké": [
+  {
+   "text": "Après le verdict, les collègues de Julien l'ont entraîné dans un bar à karaoké.",
+   "en": "After the verdict, Julien's colleagues dragged him to a karaoke bar.",
+   "ko": "판결이 나자 동료들이 쥘리앵을 노래방으로 끌고 갔어요.",
+   "blank": "karaoké",
+   "src": "made"
+  },
+  {
+   "text": "Pour fêter le solstice, les amis de Manon ont organisé un karaoké dans le jardin.",
+   "en": "To celebrate the solstice, Manon's friends organized karaoke in the garden.",
+   "ko": "하지를 축하하려고 마농의 친구들이 정원에서 노래 파티를 열었어요.",
+   "blank": "karaoké",
    "src": "made"
   }
  ],
@@ -42013,6 +42349,22 @@
    "en": "Your bed is very comfortable.",
    "ko": "네 침대는 아주 편안해.",
    "blank": "lit"
+  }
+ ],
+ "w|littéraire": [
+  {
+   "text": "Julien a commencé par des études littéraires avant de choisir le droit.",
+   "en": "Julien started with literature studies before choosing law.",
+   "ko": "쥘리앵은 문학을 공부하다가 법학을 택했어요.",
+   "blank": "littéraires",
+   "src": "made"
+  },
+  {
+   "text": "Manon participe à un café littéraire chaque premier jeudi de l'automne.",
+   "en": "Manon takes part in a literary café every first Thursday in autumn.",
+   "ko": "마농은 가을이면 매달 첫 목요일 문학 카페에 나가요.",
+   "blank": "littéraire",
+   "src": "made"
   }
  ],
  "w|littéralement": [
@@ -44147,6 +44499,22 @@
    "src": "made"
   }
  ],
+ "w|mascotte": [
+  {
+   "text": "Le procès oppose deux clubs de foot qui se disputent la même mascotte.",
+   "en": "The trial pits two football clubs fighting over the same mascot.",
+   "ko": "이번 재판은 같은 마스코트를 두고 다투는 두 축구 클럽 사이의 일이에요.",
+   "blank": "mascotte",
+   "src": "made"
+  },
+  {
+   "text": "Le bonhomme de neige est devenu la mascotte du quartier de Manon cet hiver.",
+   "en": "The snowman became the mascot of Manon's neighborhood this winter.",
+   "ko": "이번 겨울 눈사람이 마농네 동네의 마스코트가 됐어요.",
+   "blank": "mascotte",
+   "src": "made"
+  }
+ ],
  "w|masculin": [
   {
    "text": "Julien se moque du prénom trop masculin que sa sœur a choisi pour son chat.",
@@ -44951,6 +45319,22 @@
    "src": "made"
   }
  ],
+ "w|menotter": [
+  {
+   "text": "Les gendarmes ont dû menotter l'accusé après son coup de colère.",
+   "en": "The gendarmes had to handcuff the defendant after his outburst.",
+   "ko": "헌병들은 피고인이 화를 터뜨리자 수갑을 채워야 했어요.",
+   "blank": "menotter",
+   "src": "made"
+  },
+  {
+   "text": "Dans le polar d'hiver que lit Manon, un détective doit menotter un suspect dans la neige.",
+   "en": "In the winter crime novel Manon is reading, a detective has to handcuff a suspect in the snow.",
+   "ko": "마농이 읽는 겨울 추리 소설에서 형사는 눈 속에서 용의자에게 수갑을 채워야 해요.",
+   "blank": "menotter",
+   "src": "made"
+  }
+ ],
  "w|menottes": [
   {
    "text": "Le policier lui a mis les menottes.",
@@ -45375,6 +45759,22 @@
    "en": "The metal shines in the sun.",
    "ko": "금속이 햇빛에 반짝여.",
    "blank": "métal"
+  }
+ ],
+ "w|métallique": [
+  {
+   "text": "Un bruit métallique a fait sursauter le juge au milieu du témoignage.",
+   "en": "A metallic noise made the judge jump in the middle of the testimony.",
+   "ko": "증언 도중에 쇳소리가 나서 판사가 깜짝 놀랐어요.",
+   "blank": "métallique",
+   "src": "made"
+  },
+  {
+   "text": "Le ciel de janvier a une couleur grise presque métallique.",
+   "en": "The January sky is a grey that is almost metallic.",
+   "ko": "일월 하늘은 거의 금속 같은 회색이에요.",
+   "blank": "métallique",
+   "src": "made"
   }
  ],
  "w|métaphore": [
@@ -45941,6 +46341,22 @@
    "en": "The health minister made an important announcement.",
    "ko": "보건부 장관이 중요한 발표를 했어.",
    "blank": "ministre"
+  }
+ ],
+ "w|minorité": [
+  {
+   "text": "Seule une minorité des jurés semblait convaincue par l'expert.",
+   "en": "Only a minority of the jurors seemed convinced by the expert.",
+   "ko": "배심원 중 소수만 감정인 말에 수긍하는 듯했어요.",
+   "blank": "minorité",
+   "src": "made"
+  },
+  {
+   "text": "Seule une minorité d'arbres garde ses feuilles en hiver dans ce parc.",
+   "en": "Only a minority of trees in this park keep their leaves in winter.",
+   "ko": "이 공원에서 겨울에도 잎이 남는 나무는 소수예요.",
+   "blank": "minorité",
+   "src": "made"
   }
  ],
  "w|minuit": [
@@ -49211,6 +49627,22 @@
    "src": "made"
   }
  ],
+ "w|offensive": [
+  {
+   "text": "La défense a lancé une offensive contre la crédibilité de l'expert.",
+   "en": "The defense launched an attack on the expert's credibility.",
+   "ko": "변호인 측은 감정인의 신뢰성을 겨냥해 공세를 펼쳤어요.",
+   "blank": "offensive",
+   "src": "made"
+  },
+  {
+   "text": "Les jardiniers parlent du retour du froid comme d'une offensive de l'hiver.",
+   "en": "Gardeners talk of the cold snap as winter going on the offensive.",
+   "ko": "정원사들은 다시 찾아온 추위를 겨울의 공세라고 말해요.",
+   "blank": "offensive",
+   "src": "made"
+  }
+ ],
  "w|officiel": [
   {
    "text": "Le discours officiel commence dans une heure.",
@@ -49251,6 +49683,22 @@
    "en": "An officer spoke to the press yesterday.",
    "ko": "어제 한 장교가 언론과 이야기했어.",
    "blank": "officier"
+  }
+ ],
+ "w|offrande": [
+  {
+   "text": "Le musée a porté plainte pour le vol d'une offrande antique.",
+   "en": "The museum filed a complaint over the theft of an ancient offering.",
+   "ko": "박물관이 고대 봉헌물 도난으로 고소했어요.",
+   "blank": "offrande",
+   "src": "made"
+  },
+  {
+   "text": "Le village dépose une offrande de fruits pour la fête des récoltes.",
+   "en": "The village lays out an offering of fruit for the harvest festival.",
+   "ko": "마을은 추수 축제에 과일을 바쳐요.",
+   "blank": "offrande",
+   "src": "made"
   }
  ],
  "w|offre": [
@@ -55981,6 +56429,22 @@
    "src": "made"
   }
  ],
+ "w|prélever": [
+  {
+   "text": "Les enquêteurs ont pu prélever des traces d'ADN sur le verre.",
+   "en": "The investigators were able to take DNA samples from the glass.",
+   "ko": "수사관들은 유리잔에서 DNA 흔적을 채취할 수 있었어요.",
+   "blank": "prélever",
+   "src": "made"
+  },
+  {
+   "text": "Manon va prélever quelques branches de lavande pour les faire sécher.",
+   "en": "Manon is going to take a few lavender sprigs to dry them.",
+   "ko": "마농은 라벤더 가지 몇 개를 잘라 말리려고 해요.",
+   "blank": "prélever",
+   "src": "made"
+  }
+ ],
  "w|préliminaire": [
   {
    "text": "Thomas présente une étude préliminaire au comité de direction.",
@@ -58875,6 +59339,22 @@
    "src": "made"
   }
  ],
+ "w|radin": [
+  {
+   "text": "Le patron accusé était si radin qu'il ne payait jamais les heures supplémentaires.",
+   "en": "The accused boss was so stingy that he never paid overtime.",
+   "ko": "피고인 사장은 너무 인색해서 초과 근무 수당을 한 번도 안 줬어요.",
+   "blank": "radin",
+   "src": "made"
+  },
+  {
+   "text": "Le propriétaire de Manon est trop radin pour allumer le chauffage avant novembre.",
+   "en": "Manon's landlord is too stingy to turn on the heating before November.",
+   "ko": "마농의 집주인은 너무 인색해서 십일월 전에는 난방을 안 켜요.",
+   "blank": "radin",
+   "src": "made"
+  }
+ ],
  "w|radio": [
   {
    "text": "J’écoute la radio tous les matins.",
@@ -59759,6 +60239,22 @@
    "blank": "rechercher"
   }
  ],
+ "w|réciproque": [
+  {
+   "text": "Entre Julien et la procureure, le respect est réciproque.",
+   "en": "Between Julien and the prosecutor, the respect is mutual.",
+   "ko": "쥘리앵과 검사 사이에는 존중이 서로 오가요.",
+   "blank": "réciproque",
+   "src": "made"
+  },
+  {
+   "text": "Manon et sa voisine échangent des confitures et des graines ; l'amitié est réciproque.",
+   "en": "Manon and her neighbor swap jams and seeds; the friendship goes both ways.",
+   "ko": "마농과 이웃은 잼과 씨앗을 주고받아요. 우정이 서로 오가요.",
+   "blank": "réciproque",
+   "src": "made"
+  }
+ ],
  "w|récit": [
   {
    "text": "Hugo écrit le récit de ses vacances pour le cours de français.",
@@ -60083,6 +60579,22 @@
    "src": "made"
   }
  ],
+ "w|recueillir": [
+  {
+   "text": "Julien a passé des semaines à recueillir les témoignages des anciens salariés.",
+   "en": "Julien spent weeks gathering statements from former employees.",
+   "ko": "쥘리앵은 몇 주 동안 전 직원들의 증언을 모았어요.",
+   "blank": "recueillir",
+   "src": "made"
+  },
+  {
+   "text": "Manon aime recueillir les marrons tombés dans le parc.",
+   "en": "Manon likes to gather the chestnuts that fall in the park.",
+   "ko": "마농은 공원에 떨어진 밤을 줍는 걸 좋아해요.",
+   "blank": "recueillir",
+   "src": "made"
+  }
+ ],
  "w|recul": [
   {
    "text": "Avec le recul, Julien ne regrette pas d'avoir quitté la ville.",
@@ -60140,6 +60652,22 @@
    "en": "Inès keeps a travel blog, and a magazine editor has contacted her.",
    "ko": "이네스는 여행 블로그를 쓰는데, 한 잡지 편집자가 연락해 왔어요.",
    "blank": "rédacteur",
+   "src": "made"
+  }
+ ],
+ "w|rédemption": [
+  {
+   "text": "L'accusé parle de son procès comme d'une chance de rédemption.",
+   "en": "The defendant speaks of his trial as a chance for redemption.",
+   "ko": "피고인은 재판을 속죄의 기회라고 말해요.",
+   "blank": "rédemption",
+   "src": "made"
+  },
+  {
+   "text": "Le film de Noël préféré de Manon raconte l'histoire d'une rédemption.",
+   "en": "Manon's favorite Christmas film tells a story of redemption.",
+   "ko": "마농이 좋아하는 크리스마스 영화는 구원 이야기예요.",
+   "blank": "rédemption",
    "src": "made"
   }
  ],
@@ -68057,6 +68585,22 @@
    "src": "made"
   }
  ],
+ "w|souple": [
+  {
+   "text": "Le règlement intérieur du tribunal est assez souple pour les journalistes.",
+   "en": "The court's internal rules are fairly flexible for journalists.",
+   "ko": "법원 내부 규칙은 기자들에게 꽤 너그러워요.",
+   "blank": "souple",
+   "src": "made"
+  },
+  {
+   "text": "Au printemps, Manon reprend le yoga pour retrouver un corps souple.",
+   "en": "In spring, Manon takes up yoga again to get her body supple.",
+   "ko": "봄이면 마농은 몸을 유연하게 만들려고 요가를 다시 시작해요.",
+   "blank": "souple",
+   "src": "made"
+  }
+ ],
  "w|source": [
   {
    "text": "La source de la rivière est cachée dans la forêt.",
@@ -69061,6 +69605,22 @@
    "blank": "succès"
   }
  ],
+ "w|succession": [
+  {
+   "text": "Cette affaire de succession oppose trois sœurs depuis des années.",
+   "en": "This inheritance case has pitted three sisters against each other for years.",
+   "ko": "이 상속 사건으로 세 자매가 몇 년째 다투고 있어요.",
+   "blank": "succession",
+   "src": "made"
+  },
+  {
+   "text": "Manon aime observer la succession des fleurs dans son jardin.",
+   "en": "Manon likes to watch the flowers in her garden bloom one after another.",
+   "ko": "마농은 정원에서 꽃이 차례로 피는 걸 지켜보는 걸 좋아해요.",
+   "blank": "succession",
+   "src": "made"
+  }
+ ],
  "w|sucre": [
   {
    "text": "Je mets du sucre dans mon café.",
@@ -69755,6 +70315,22 @@
    "en": "I love surprise parties.",
    "ko": "나는 깜짝 파티를 좋아한다.",
    "blank": "surprise"
+  }
+ ],
+ "w|sursis": [
+  {
+   "text": "Son client a été condamné à six mois avec sursis.",
+   "en": "His client got a six-month suspended sentence.",
+   "ko": "의뢰인은 징역 육 개월에 집행 유예를 받았어요.",
+   "blank": "sursis",
+   "src": "made"
+  },
+  {
+   "text": "Les rosiers de Manon ont gagné un petit sursis grâce à la douceur de novembre.",
+   "en": "Manon's rose bushes got a small reprieve thanks to the mild November.",
+   "ko": "따뜻한 십일월 덕분에 마농의 장미가 조금 더 버텼어요.",
+   "blank": "sursis",
+   "src": "made"
   }
  ],
  "w|surtout": [
@@ -71835,6 +72411,22 @@
    "blank": "toit"
   }
  ],
+ "w|tolérance": [
+  {
+   "text": "Le juge a rappelé que la loi prévoit une tolérance zéro pour ces faits.",
+   "en": "The judge reminded everyone that the law sets zero tolerance for such acts.",
+   "ko": "판사는 이런 행위에는 법이 무관용 원칙을 둔다고 다시 말했어요.",
+   "blank": "tolérance",
+   "src": "made"
+  },
+  {
+   "text": "Manon a peu de tolérance pour la chaleur du mois d'août.",
+   "en": "Manon has little tolerance for the August heat.",
+   "ko": "마농은 팔월 더위를 잘 못 견뎌요.",
+   "blank": "tolérance",
+   "src": "made"
+  }
+ ],
  "w|tolérer": [
   {
    "text": "Nicolas reconnaît qu'à l'époque, il avait du mal à tolérer les critiques.",
@@ -73098,6 +73690,22 @@
    "en": "Inès comes back from the report completely soaked by the storm.",
    "ko": "이네스는 취재에서 폭우에 흠뻑 젖은 채 돌아와요.",
    "blank": "trempée",
+   "src": "made"
+  }
+ ],
+ "w|trentaine": [
+  {
+   "text": "Une trentaine de personnes attendaient devant le palais de justice.",
+   "en": "About thirty people were waiting outside the courthouse.",
+   "ko": "서른 명쯤 되는 사람들이 법원 앞에서 기다리고 있었어요.",
+   "blank": "trentaine",
+   "src": "made"
+  },
+  {
+   "text": "Manon a planté une trentaine de bulbes de tulipes avant l'hiver.",
+   "en": "Manon planted about thirty tulip bulbs before winter.",
+   "ko": "마농은 겨울이 오기 전에 튤립 구근을 서른 개쯤 심었어요.",
+   "blank": "trentaine",
    "src": "made"
   }
  ],
@@ -74396,6 +75004,22 @@
    "en": "Sarah steams the vegetables for her vegetarian friend.",
    "ko": "사라는 채식하는 친구를 위해 채소를 쪄요.",
    "blank": "vapeur",
+   "src": "made"
+  }
+ ],
+ "w|variété": [
+  {
+   "text": "Julien traite une grande variété d'affaires, du vol de vélo au divorce.",
+   "en": "Julien handles a wide variety of cases, from bike theft to divorce.",
+   "ko": "쥘리앵은 자전거 도난부터 이혼까지 아주 다양한 사건을 맡아요.",
+   "blank": "variété",
+   "src": "made"
+  },
+  {
+   "text": "Manon cultive une variété ancienne de tomates qui mûrit en septembre.",
+   "en": "Manon grows an old variety of tomato that ripens in September.",
+   "ko": "마농은 구월에 익는 토종 토마토 품종을 길러요.",
+   "blank": "variété",
    "src": "made"
   }
  ],
@@ -76446,6 +77070,22 @@
    "en": "Sarah stores her hay in an old freight car.",
    "ko": "사라는 건초를 오래된 화물칸에 쌓아 둬요.",
    "blank": "wagon",
+   "src": "made"
+  }
+ ],
+ "w|watt": [
+  {
+   "text": "L'expert a expliqué combien de watts consommait le radiateur défectueux.",
+   "en": "The expert explained how many watts the faulty heater used.",
+   "ko": "감정인은 고장 난 난방기가 몇 와트를 썼는지 설명했어요.",
+   "blank": "watts",
+   "src": "made"
+  },
+  {
+   "text": "Manon a choisi un petit radiateur de cinq cents watts pour le bureau.",
+   "en": "Manon chose a small five-hundred-watt heater for the study.",
+   "ko": "마농은 서재에 오백 와트짜리 작은 난방기를 골랐어요.",
+   "blank": "watts",
    "src": "made"
   }
  ],

@@ -939,6 +939,22 @@
    "src": "made"
   }
  ],
+ "w|अंदाज़ा लगाना": [
+  {
+   "text": "रोहन ने लिखा कि तुम अंदाज़ा भी नहीं लगा सकते कि मैं तुम्हें कितना याद करता हूँ।",
+   "en": "Rohan wrote, \"You can't even guess how much I miss you.\"",
+   "ko": "로한은 내가 너를 얼마나 그리워하는지 넌 짐작도 못 할 거라고 썼어요.",
+   "blank": "अंदाज़ा भी नहीं लगा",
+   "src": "made"
+  },
+  {
+   "text": "संपादक ने अंदाज़ा लगाया कि यह ख़बर सुबह तक पूरे देश में फैल जाएगी।",
+   "en": "The editor guessed that this story would spread across the country by morning.",
+   "ko": "편집장은 이 기사가 아침이면 전국에 퍼질 거라고 내다봤어요.",
+   "blank": "अंदाज़ा लगाया",
+   "src": "made"
+  }
+ ],
  "w|अदालत": [
   {
    "text": "मामला कल अदालत में पेश होगा।",
@@ -1684,6 +1700,22 @@
    "en": "Kavita hired an experienced adviser who had worked in banking.",
    "ko": "카비타는 은행에서 일했던 노련한 자문을 고용했어요.",
    "blank": "अनुभवी",
+   "src": "made"
+  }
+ ],
+ "w|अनुभूति": [
+  {
+   "text": "पुरानी तस्वीर देखकर रोहन को घर लौटने जैसी अनुभूति हुई।",
+   "en": "Looking at the old photo, Rohan felt as if he had come home.",
+   "ko": "옛 사진을 보니 로한은 집에 돌아온 듯한 기분이 들었어요.",
+   "blank": "अनुभूति",
+   "src": "made"
+  },
+  {
+   "text": "पहली बार अपना नाम अख़बार में देखकर मीना को अजीब-सी अनुभूति हुई।",
+   "en": "Seeing her name in the paper for the first time, Meena had a strange feeling.",
+   "ko": "처음으로 신문에 자기 이름이 실린 걸 보고 미나는 묘한 기분이 들었어요.",
+   "blank": "अनुभूति",
    "src": "made"
   }
  ],
@@ -2789,6 +2821,22 @@
    "blank": "अलविदा"
   }
  ],
+ "w|अलौकिक": [
+  {
+   "text": "रोहन ने पहाड़ों पर देखे सूर्योदय को एक अलौकिक दृश्य बताया।",
+   "en": "Rohan described the sunrise he saw in the mountains as an otherworldly sight.",
+   "ko": "로한은 산에서 본 해돋이를 이 세상 것이 아닌 광경이라고 했어요.",
+   "blank": "अलौकिक",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने अलौकिक शक्तियों के दावों की जाँच करके सच लिखा।",
+   "en": "Meena investigated claims of supernatural powers and wrote the truth.",
+   "ko": "미나는 초자연적인 힘이 있다는 주장을 조사해서 진실을 썼어요.",
+   "blank": "अलौकिक",
+   "src": "made"
+  }
+ ],
  "w|अल्पसंख्यक": [
   {
    "text": "अमित एक संस्था में काम करता है जो भाषाई अल्पसंख्यक समुदायों के बच्चों को पढ़ाती है।",
@@ -3185,6 +3233,22 @@
    "src": "made"
   }
  ],
+ "w|असुविधा": [
+  {
+   "text": "रोहन ने देर से जवाब देने से हुई असुविधा के लिए माफ़ी माँगी।",
+   "en": "Rohan apologised for the inconvenience caused by his late reply.",
+   "ko": "로한은 답장이 늦어 불편을 끼쳐 미안하다고 했어요.",
+   "blank": "असुविधा",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार ने छपाई में देरी से हुई असुविधा के लिए पाठकों से माफ़ी माँगी।",
+   "en": "The newspaper apologised to readers for the inconvenience caused by the printing delay.",
+   "ko": "신문사는 인쇄가 늦어져 불편을 드려 죄송하다고 독자들에게 사과했어요.",
+   "blank": "असुविधा",
+   "src": "made"
+  }
+ ],
  "w|अस्तित्व": [
   {
    "text": "सुनील को उस कंपनी के अस्तित्व पर ही शक था, क्योंकि उसका कोई दफ़्तर नहीं मिला।",
@@ -3243,6 +3307,22 @@
    "en": "Eighty passengers can sit on the bus.",
    "ko": "버스에 승객이 여든 명 탈 수 있어.",
    "blank": "अस्सी"
+  }
+ ],
+ "w|अहंकार": [
+  {
+   "text": "रोहन ने चिट्ठी में माना कि उस दिन उसके अहंकार ने दोस्ती को चोट पहुँचाई थी।",
+   "en": "In the letter Rohan admitted that his ego had hurt the friendship that day.",
+   "ko": "로한은 그날 자기 자존심 때문에 우정에 금이 갔다고 편지에서 인정했어요.",
+   "blank": "अहंकार",
+   "src": "made"
+  },
+  {
+   "text": "मीना कहती है कि अच्छे पत्रकार में अहंकार नहीं होना चाहिए।",
+   "en": "Meena says a good journalist shouldn't have an ego.",
+   "ko": "미나는 좋은 기자라면 오만해서는 안 된다고 말해요.",
+   "blank": "अहंकार",
+   "src": "made"
   }
  ],
  "w|अहम": [
@@ -3383,6 +3463,22 @@
    "src": "made"
   }
  ],
+ "w|आकर्षित करना": [
+  {
+   "text": "रोहन ने लिखा कि पहाड़ों की शांति ने उसे हमेशा आकर्षित किया है।",
+   "en": "Rohan wrote that the peace of the mountains has always attracted him.",
+   "ko": "로한은 산의 고요함에 늘 마음이 끌렸다고 썼어요.",
+   "blank": "आकर्षित किया",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार नए पाठकों को आकर्षित करने के लिए रंगीन पन्ने छाप रहा है।",
+   "en": "The newspaper is printing colour pages to attract new readers.",
+   "ko": "신문사는 새 독자를 끌어들이려고 컬러 면을 찍고 있어요.",
+   "blank": "आकर्षित करने",
+   "src": "made"
+  }
+ ],
  "w|आकलन": [
   {
    "text": "बाढ़ के बाद फ़ैक्टरी के नुक़सान का आकलन किया गया।",
@@ -3486,6 +3582,22 @@
    "en": "In summer, the monkeys get rather aggressive.",
    "ko": "여름엔 원숭이들이 꽤 사나워져요.",
    "blank": "आक्रामक",
+   "src": "made"
+  }
+ ],
+ "w|आक्रोश": [
+  {
+   "text": "रोहन ने बताया कि गाँव के स्कूल के बंद होने पर लोगों में बहुत आक्रोश है।",
+   "en": "Rohan said that people are very angry about the village school closing.",
+   "ko": "로한은 마을 학교가 문을 닫아서 사람들이 몹시 분노하고 있다고 알렸어요.",
+   "blank": "आक्रोश",
+   "src": "made"
+  },
+  {
+   "text": "पानी की कमी पर मीना की रिपोर्ट से लोगों का आक्रोश सामने आया।",
+   "en": "Meena's report on the water shortage brought people's anger out into the open.",
+   "ko": "물 부족에 관한 미나의 기사로 사람들의 분노가 드러났어요.",
+   "blank": "आक्रोश",
    "src": "made"
   }
  ],
@@ -3645,6 +3757,22 @@
    "en": "At the doctor's insistence he took the medicine.",
    "ko": "의사의 권유로 그는 약을 먹었어.",
    "blank": "आग्रह"
+  }
+ ],
+ "w|आघात": [
+  {
+   "text": "पिताजी के जाने का आघात रोहन को आज भी महसूस होता है।",
+   "en": "Rohan still feels the shock of his father's passing.",
+   "ko": "로한은 아버지를 잃은 충격을 아직도 느껴요.",
+   "blank": "आघात",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार बंद होने की अफ़वाह से कर्मचारियों को गहरा आघात लगा।",
+   "en": "The rumour that the paper would close came as a deep shock to the staff.",
+   "ko": "신문이 폐간된다는 소문에 직원들은 큰 충격을 받았어요.",
+   "blank": "आघात",
+   "src": "made"
   }
  ],
  "w|आचरण": [
@@ -5143,6 +5271,22 @@
    "blank": "आँसू"
   }
  ],
+ "w|आँसू बहाना": [
+  {
+   "text": "विदाई के दिन दोनों दोस्तों ने स्टेशन पर चुपचाप आँसू बहाए थे।",
+   "en": "On the day of the farewell, the two friends had quietly shed tears at the station.",
+   "ko": "헤어지던 날 두 친구는 역에서 말없이 눈물을 흘렸어요.",
+   "blank": "आँसू बहाए",
+   "src": "made"
+  },
+  {
+   "text": "शहीद के परिवार से मिलकर लौटी मीना ने चुपचाप आँसू बहाए।",
+   "en": "Meena, back from meeting the fallen soldier's family, quietly shed tears.",
+   "ko": "순직한 군인의 가족을 만나고 돌아온 미나는 조용히 눈물을 흘렸어요.",
+   "blank": "आँसू बहाए",
+   "src": "made"
+  }
+ ],
  "w|आस्तीन": [
   {
    "text": "रवि ने आस्तीन से आँसू पोंछे ताकि कोई देख न ले।",
@@ -5171,6 +5315,22 @@
    "en": "My faith is still intact.",
    "ko": "내 믿음은 아직도 남아 있어.",
    "blank": "आस्था"
+  }
+ ],
+ "w|आहत": [
+  {
+   "text": "रोहन ने लिखा कि अगर मेरी बात से तुम आहत हुए हो तो माफ़ करना।",
+   "en": "Rohan wrote, \"If my words hurt you, please forgive me.\"",
+   "ko": "로한은 내 말에 상처받았다면 용서해 달라고 썼어요.",
+   "blank": "आहत",
+   "src": "made"
+  },
+  {
+   "text": "एक पाठक ने लिखा कि कार्टून से उसकी भावनाएँ आहत हुई हैं।",
+   "en": "A reader wrote that the cartoon had hurt his feelings.",
+   "ko": "한 독자는 그 만평 때문에 마음이 상했다고 보내왔어요.",
+   "blank": "आहत",
+   "src": "made"
   }
  ],
  "w|आहार": [
@@ -13155,6 +13315,22 @@
    "blank": "ख़बर"
   }
  ],
+ "w|ख़याल": [
+  {
+   "text": "चिट्ठी के आख़िर में रोहन ने लिखा, अपना ख़याल रखना।",
+   "en": "At the end of the letter, Rohan wrote, \"Take care of yourself.\"",
+   "ko": "로한은 편지 끝에 몸 건강히 잘 지내라고 썼어요.",
+   "blank": "ख़याल",
+   "src": "made"
+  },
+  {
+   "text": "संपादक ने कहा कि पाठकों के ख़याल से भाषा आसान रखो।",
+   "en": "The editor said to keep the language simple for the readers' sake.",
+   "ko": "편집장은 독자를 생각해서 글을 쉽게 쓰라고 했어요.",
+   "blank": "ख़याल",
+   "src": "made"
+  }
+ ],
  "w|ख़याल रखना": [
   {
    "text": "बच्चों का ख़याल रखना माता-पिता का काम है।",
@@ -13198,6 +13374,22 @@
    "en": "Anjali finds muskmelon sweeter than watermelon.",
    "ko": "안잘리는 멜론이 수박보다 더 달다고 느껴요.",
    "blank": "खरबूज़ा",
+   "src": "made"
+  }
+ ],
+ "w|खरा": [
+  {
+   "text": "रोहन ने लिखा कि तुम हमेशा से खरे इंसान रहे हो।",
+   "en": "Rohan wrote that his friend had always been an honest, straightforward person.",
+   "ko": "로한은 네가 언제나 올곧은 사람이었다고 썼어요.",
+   "blank": "खरे",
+   "src": "made"
+  },
+  {
+   "text": "मीना अपनी खरी बातों के लिए पूरे दफ़्तर में जानी जाती है।",
+   "en": "Meena is known across the whole office for her plain speaking.",
+   "ko": "미나는 바른말 잘하기로 사무실에서 유명해요.",
+   "blank": "खरी",
    "src": "made"
   }
  ],
@@ -14362,6 +14554,22 @@
    "en": "Kavita's letters carry news of every little thing happening in the neighbourhood.",
    "ko": "카비타의 편지에는 동네의 크고 작은 일 소식이 다 들어 있어요.",
    "blank": "गतिविधि",
+   "src": "made"
+  }
+ ],
+ "w|गतिशील": [
+  {
+   "text": "रोहन ने लिखा कि शहर की गतिशील ज़िंदगी में समय का पता ही नहीं चलता।",
+   "en": "Rohan wrote that in the fast-moving city life, time just flies.",
+   "ko": "로한은 바쁘게 돌아가는 도시 생활 속에서 시간 가는 줄 모른다고 썼어요.",
+   "blank": "गतिशील",
+   "src": "made"
+  },
+  {
+   "text": "मीना को न्यूज़रूम का गतिशील माहौल बहुत पसंद है।",
+   "en": "Meena loves the dynamic atmosphere of the newsroom.",
+   "ko": "미나는 편집국의 역동적인 분위기를 무척 좋아해요.",
+   "blank": "गतिशील",
    "src": "made"
   }
  ],
@@ -15835,6 +16043,22 @@
    "blank": "गोदाम"
   }
  ],
+ "w|गोपनीय": [
+  {
+   "text": "रोहन ने लिखा कि यह बात गोपनीय है, किसी को मत बताना।",
+   "en": "Rohan wrote, \"This is confidential, don't tell anyone.\"",
+   "ko": "로한은 이건 비밀이니 아무한테도 말하지 말라고 썼어요.",
+   "blank": "गोपनीय",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने ख़बर के गोपनीय सूत्र का नाम कभी नहीं बताया।",
+   "en": "Meena never revealed the name of her confidential source.",
+   "ko": "미나는 기사의 비밀 취재원 이름을 끝내 밝히지 않았어요.",
+   "blank": "गोपनीय",
+   "src": "made"
+  }
+ ],
  "w|गोपनीयता": [
   {
    "text": "अख़बार अपने सूत्रों की गोपनीयता का पूरा ध्यान रखता है।",
@@ -16615,6 +16839,22 @@
    "blank": "घेरा"
   }
  ],
+ "w|घेराव": [
+  {
+   "text": "रोहन ने लिखा कि स्कूल बचाने के लिए गाँव वालों ने दफ़्तर का घेराव किया।",
+   "en": "Rohan wrote that the villagers surrounded the office in protest to save the school.",
+   "ko": "로한은 학교를 지키려고 마을 사람들이 관청을 에워쌌다고 썼어요.",
+   "blank": "घेराव",
+   "src": "made"
+  },
+  {
+   "text": "वेतन न मिलने पर कर्मचारियों ने मालिक के दफ़्तर का घेराव किया।",
+   "en": "When salaries weren't paid, the employees surrounded the owner's office.",
+   "ko": "월급이 안 나오자 직원들이 사장실을 에워싸고 항의했어요.",
+   "blank": "घेराव",
+   "src": "made"
+  }
+ ],
  "w|घोंघा": [
   {
    "text": "पत्ते पर धीरे-धीरे चलता घोंघा देखकर रवि की बेटी बैठ गई।",
@@ -17156,6 +17396,22 @@
    "en": "When the long-dead gramophone suddenly played, it seemed like a miracle to people.",
    "ko": "멈춰 있던 축음기가 갑자기 울리자 사람들은 기적 같다고 느꼈어요.",
    "blank": "चमत्कार",
+   "src": "made"
+  }
+ ],
+ "w|चमत्कारी": [
+  {
+   "text": "रोहन ने मज़ाक़ में लिखा कि माँ के हाथ की खिचड़ी में कोई चमत्कारी ताक़त है।",
+   "en": "Rohan wrote jokingly that his mother's khichdi has some miraculous power.",
+   "ko": "로한은 장난삼아 엄마가 끓인 키치디에는 신기한 힘이 있다고 썼어요.",
+   "blank": "चमत्कारी",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने चमत्कारी इलाज का दावा करने वाले एक नक़ली बाबा का पर्दाफ़ाश किया।",
+   "en": "Meena exposed a fake holy man who claimed miraculous cures.",
+   "ko": "미나는 기적의 치료를 한다고 떠벌린 가짜 도사의 정체를 폭로했어요.",
+   "blank": "चमत्कारी",
    "src": "made"
   }
  ],
@@ -18189,6 +18445,22 @@
    "en": "Every lane is talking about the election.",
    "ko": "골목마다 선거 이야기다.",
    "blank": "चुनाव"
+  }
+ ],
+ "w|चुनिंदा": [
+  {
+   "text": "रोहन ने चिट्ठी के साथ अपनी चुनिंदा तस्वीरें भी भेजीं।",
+   "en": "Rohan also sent a few selected photos with the letter.",
+   "ko": "로한은 편지와 함께 골라 둔 사진들도 보냈어요.",
+   "blank": "चुनिंदा",
+   "src": "made"
+  },
+  {
+   "text": "रविवार के अंक में पाठकों की चुनिंदा चिट्ठियाँ छपती हैं।",
+   "en": "Selected readers' letters are printed in the Sunday edition.",
+   "ko": "일요일 판에는 독자 편지 몇 통을 골라 실어요.",
+   "blank": "चुनिंदा",
+   "src": "made"
   }
  ],
  "w|चुनौती": [
@@ -21289,6 +21561,22 @@
    "src": "made"
   }
  ],
+ "w|जुटाना": [
+  {
+   "text": "रोहन ने लिखा कि गाँव के स्कूल के लिए वह भी चंदा जुटाना चाहता है।",
+   "en": "Rohan wrote that he too wants to raise donations for the village school.",
+   "ko": "로한은 자기도 마을 학교를 위해 기부금을 모으고 싶다고 썼어요.",
+   "blank": "जुटाना",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने सबूत जुटाने में पूरे तीन महीने लगाए।",
+   "en": "Meena spent three whole months gathering evidence.",
+   "ko": "미나는 증거를 모으는 데 꼬박 석 달을 들였어요.",
+   "blank": "जुटाने",
+   "src": "made"
+  }
+ ],
  "w|जुड़ना": [
   {
    "text": "नई पाइपलाइन मोहल्ले की मुख्य लाइन से जुड़ गई।",
@@ -24103,6 +24391,38 @@
    "blank": "तनाव"
   }
  ],
+ "w|तन्हा": [
+  {
+   "text": "नए शहर में पहले कुछ महीने रोहन बहुत तन्हा महसूस करता था।",
+   "en": "For the first few months in the new city, Rohan felt very lonely.",
+   "ko": "새 도시에서 처음 몇 달 동안 로한은 무척 외로웠어요.",
+   "blank": "तन्हा",
+   "src": "made"
+  },
+  {
+   "text": "रात की शिफ़्ट में ख़ाली दफ़्तर में मीना कभी-कभी तन्हा महसूस करती है।",
+   "en": "On the night shift, Meena sometimes feels lonely in the empty office.",
+   "ko": "야간 근무 때 텅 빈 사무실에서 미나는 가끔 외로워요.",
+   "blank": "तन्हा",
+   "src": "made"
+  }
+ ],
+ "w|तन्हाई": [
+  {
+   "text": "रोहन ने लिखा कि रविवार की तन्हाई में वह पुरानी चिट्ठियाँ पढ़ता है।",
+   "en": "Rohan wrote that in the solitude of Sundays he reads old letters.",
+   "ko": "로한은 일요일의 쓸쓸함 속에서 옛 편지를 읽는다고 썼어요.",
+   "blank": "तन्हाई",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने गाँवों में अकेले रहने वाले बुज़ुर्गों की तन्हाई पर लेख लिखा।",
+   "en": "Meena wrote an article on the loneliness of elderly people living alone in villages.",
+   "ko": "미나는 시골에서 홀로 사는 노인들의 외로움에 관한 글을 썼어요.",
+   "blank": "तन्हाई",
+   "src": "made"
+  }
+ ],
  "w|तपस्या": [
   {
    "text": "रोहन कहता है कि सरकारी परीक्षा की तैयारी किसी तपस्या से कम नहीं थी।",
@@ -26853,6 +27173,22 @@
    "src": "made"
   }
  ],
+ "w|दायरा": [
+  {
+   "text": "रोहन ने लिखा कि नौकरी ने उसकी दुनिया का दायरा बड़ा कर दिया है।",
+   "en": "Rohan wrote that his job has widened the circle of his world.",
+   "ko": "로한은 직장 덕분에 세상을 보는 폭이 넓어졌다고 썼어요.",
+   "blank": "दायरा",
+   "src": "made"
+  },
+  {
+   "text": "संपादक ने कहा कि यह मामला हमारे इलाक़े के दायरे से बाहर है।",
+   "en": "The editor said this matter is outside the scope of our area.",
+   "ko": "편집장은 이 일이 우리 담당 범위를 벗어난다고 했어요.",
+   "blank": "दायरे",
+   "src": "made"
+  }
+ ],
  "w|दायाँ": [
   {
    "text": "ट्रैक्टर का बायाँ पहिया पंचर था, पर दायाँ ठीक था।",
@@ -27075,6 +27411,22 @@
    "en": "He told an interesting story.",
    "ko": "그가 재미있는 이야기를 해 줬어.",
    "blank": "दिलचस्प"
+  }
+ ],
+ "w|दिलचस्पी": [
+  {
+   "text": "रोहन ने पूछा कि क्या अब भी तुम्हारी दिलचस्पी पुराने सिक्कों में है।",
+   "en": "Rohan asked whether his friend was still interested in old coins.",
+   "ko": "로한은 너 아직도 옛날 동전에 관심 있냐고 물었어요.",
+   "blank": "दिलचस्पी",
+   "src": "made"
+  },
+  {
+   "text": "मीना की दिलचस्पी मुख्यतः पर्यावरण से जुड़ी ख़बरों में है।",
+   "en": "Meena is mainly interested in environment-related news.",
+   "ko": "미나는 주로 환경 관련 기사에 관심이 있어요.",
+   "blank": "दिलचस्पी",
+   "src": "made"
   }
  ],
  "w|दिलवाना": [
@@ -27963,6 +28315,22 @@
    "blank": "दो"
   }
  ],
+ "w|दोगुना": [
+  {
+   "text": "रोहन ने लिखा कि नई नौकरी में उसकी तनख़्वाह दोगुनी हो गई है।",
+   "en": "Rohan wrote that his salary has doubled in the new job.",
+   "ko": "로한은 새 직장에서 월급이 두 배가 됐다고 썼어요.",
+   "blank": "दोगुनी",
+   "src": "made"
+  },
+  {
+   "text": "चुनाव के दिनों में न्यूज़रूम का काम दोगुना हो जाता है।",
+   "en": "During elections the newsroom's work doubles.",
+   "ko": "선거철에는 편집국 일이 두 배로 늘어요.",
+   "blank": "दोगुना",
+   "src": "made"
+  }
+ ],
  "w|दोनों": [
   {
    "text": "दोनों भाई एक ही स्कूल में पढ़ते हैं।",
@@ -28267,6 +28635,22 @@
    "blank": "द्वीप"
   }
  ],
+ "w|द्वेष": [
+  {
+   "text": "रोहन ने लिखा कि उसके मन में किसी के लिए कोई द्वेष नहीं है।",
+   "en": "Rohan wrote that he holds no malice in his heart towards anyone.",
+   "ko": "로한은 누구에게도 미움을 품고 있지 않다고 썼어요.",
+   "blank": "द्वेष",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने कहा कि ख़बर में किसी के प्रति द्वेष नहीं झलकना चाहिए।",
+   "en": "Meena said a news story should not show malice towards anyone.",
+   "ko": "미나는 기사에 누군가를 향한 악의가 드러나선 안 된다고 했어요.",
+   "blank": "द्वेष",
+   "src": "made"
+  }
+ ],
  "w|धकेलना": [
   {
    "text": "कतार में किसी को धकेलना गलत है।",
@@ -28368,6 +28752,22 @@
    "en": "A small wooden bow made by her son decorates Neha's desk.",
    "ko": "네하 책상에는 아들이 만든 작은 나무 활이 장식돼 있어요.",
    "blank": "धनुष",
+   "src": "made"
+  }
+ ],
+ "w|धन्य": [
+  {
+   "text": "रोहन ने लिखा कि तुम जैसा दोस्त पाकर मैं धन्य हूँ।",
+   "en": "Rohan wrote, \"I am blessed to have a friend like you.\"",
+   "ko": "로한은 너 같은 친구가 있어서 복받았다고 썼어요.",
+   "blank": "धन्य",
+   "src": "made"
+  },
+  {
+   "text": "एक बूढ़ी महिला ने मीना से कहा कि तुम्हारी ख़बर से मेरा बेटा मिल गया, मैं धन्य हो गई।",
+   "en": "An old woman told Meena, \"Your story found my son, I'm so blessed.\"",
+   "ko": "한 할머니가 미나에게 네 기사 덕에 아들을 찾았다며 너무 감사하다고 했어요.",
+   "blank": "धन्य",
    "src": "made"
   }
  ],
@@ -31281,6 +31681,22 @@
    "src": "made"
   }
  ],
+ "w|निष्ठा": [
+  {
+   "text": "रोहन ने दोस्त की अपने गाँव के प्रति निष्ठा की सराहना की।",
+   "en": "Rohan praised his friend's loyalty to their village.",
+   "ko": "로한은 친구가 고향을 향해 보여 준 한결같은 마음을 칭찬했어요.",
+   "blank": "निष्ठा",
+   "src": "made"
+  },
+  {
+   "text": "मीना की सच के प्रति निष्ठा पर किसी को शक नहीं है।",
+   "en": "No one doubts Meena's commitment to the truth.",
+   "ko": "진실을 향한 미나의 신념을 의심하는 사람은 없어요.",
+   "blank": "निष्ठा",
+   "src": "made"
+  }
+ ],
  "w|निष्पक्ष": [
   {
    "text": "निबंध प्रतियोगिता के लिए अमित ने निष्पक्ष जज चुने।",
@@ -32065,6 +32481,22 @@
    "en": "Fifty-five plants are set in the garden.",
    "ko": "정원에 식물이 쉰다섯 포기 있어.",
    "blank": "पचपन"
+  }
+ ],
+ "w|पंचम": [
+  {
+   "text": "रोहन ने लिखा कि यह इस साल की उसकी पंचम चिट्ठी है।",
+   "en": "Rohan wrote that this is his fifth letter this year.",
+   "ko": "로한은 이게 올해 다섯 번째 편지라고 썼어요.",
+   "blank": "पंचम",
+   "src": "made"
+  },
+  {
+   "text": "मीना की लेख-शृंखला का पंचम भाग सबसे ज़्यादा पढ़ा गया।",
+   "en": "The fifth part of Meena's article series was the most read.",
+   "ko": "미나 연재 기사의 다섯 번째 편이 가장 많이 읽혔어요.",
+   "blank": "पंचम",
+   "src": "made"
   }
  ],
  "w|पचहत्तर": [
@@ -36419,6 +36851,22 @@
    "src": "made"
   }
  ],
+ "w|प्रतिभाशाली": [
+  {
+   "text": "रोहन ने याद किया कि दोस्त स्कूल का सबसे प्रतिभाशाली गायक था।",
+   "en": "Rohan recalled that his friend had been the most talented singer in school.",
+   "ko": "로한은 친구가 학교에서 가장 재능 있는 가수였다고 떠올렸어요.",
+   "blank": "प्रतिभाशाली",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने एक प्रतिभाशाली युवा फ़ोटोग्राफ़र को अपनी टीम में लिया।",
+   "en": "Meena took a talented young photographer onto her team.",
+   "ko": "미나는 재능 있는 젊은 사진기자를 팀에 들였어요.",
+   "blank": "प्रतिभाशाली",
+   "src": "made"
+  }
+ ],
  "w|प्रतिमा": [
   {
    "text": "चौराहे पर स्वतंत्रता सेनानी की प्रतिमा का अनावरण कल होगा।",
@@ -39496,6 +39944,22 @@
    "en": "Meena complained that rents in the city have gone up sharply.",
    "ko": "미나는 도시 집세가 많이 올랐다고 불평했어요.",
    "blank": "बढ़ोतरी",
+   "src": "made"
+  }
+ ],
+ "w|बतलाना": [
+  {
+   "text": "रोहन ने दोस्त से कहा कि अपने गाँव का सारा हाल बतलाना।",
+   "en": "Rohan asked his friend to tell him all the news of the village.",
+   "ko": "로한은 친구에게 마을 소식을 다 들려 달라고 했어요.",
+   "blank": "बतलाना",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने नए प्रशिक्षुओं को ख़बर लिखने के गुर बतलाए।",
+   "en": "Meena explained the tricks of news writing to the new trainees.",
+   "ko": "미나는 새 수습기자들에게 기사 쓰는 요령을 알려 줬어요.",
+   "blank": "बतलाए",
    "src": "made"
   }
  ],
@@ -42693,6 +43157,22 @@
    "blank": "भगवान"
   }
  ],
+ "w|भगाना": [
+  {
+   "text": "रोहन को याद आया कि दोनों ने खेत से बंदरों को भगाने के लिए ढोल बजाया था।",
+   "en": "Rohan remembered that the two of them had beaten a drum to chase the monkeys from the field.",
+   "ko": "로한은 둘이 밭에서 원숭이를 쫓으려고 북을 쳤던 일을 떠올렸어요.",
+   "blank": "भगाने",
+   "src": "made"
+  },
+  {
+   "text": "दफ़्तर के बाहर बैठे आवारा कुत्तों को भगाने के लिए चौकीदार ने डंडा उठाया।",
+   "en": "The watchman picked up a stick to chase away the stray dogs sitting outside the office.",
+   "ko": "경비원은 사무실 밖에 앉은 떠돌이 개들을 쫓으려고 막대기를 들었어요.",
+   "blank": "भगाने",
+   "src": "made"
+  }
+ ],
  "w|भजन": [
   {
    "text": "हर सुबह स्कूल की सभा एक छोटे-से भजन से शुरू होती है।",
@@ -43237,6 +43717,22 @@
    "en": "There is deep emotion in the song.",
    "ko": "노래에 깊은 감정이 담겨 있어.",
    "blank": "भावना"
+  }
+ ],
+ "w|भावनात्मक": [
+  {
+   "text": "रोहन ने लिखा कि यह भावनात्मक चिट्ठी लिखते हुए उसकी आँखें भर आईं।",
+   "en": "Rohan wrote that his eyes filled up while writing this emotional letter.",
+   "ko": "로한은 이 감정이 북받치는 편지를 쓰다가 눈시울이 붉어졌다고 했어요.",
+   "blank": "भावनात्मक",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने भावनात्मक शीर्षकों की जगह तथ्य वाले शीर्षक चुने।",
+   "en": "Meena chose factual headlines over emotional ones.",
+   "ko": "미나는 감성적인 제목 대신 사실을 담은 제목을 골랐어요.",
+   "blank": "भावनात्मक",
+   "src": "made"
   }
  ],
  "w|भावुक": [
@@ -49555,6 +50051,22 @@
    "blank": "राजा"
   }
  ],
+ "w|राज़ी": [
+  {
+   "text": "रोहन ने पूछा कि क्या तुम अगली छुट्टियों में शहर आने को राज़ी हो।",
+   "en": "Rohan asked whether his friend would agree to come to the city next holidays.",
+   "ko": "로한은 다음 휴가 때 도시에 올 생각이 있냐고 물었어요.",
+   "blank": "राज़ी",
+   "src": "made"
+  },
+  {
+   "text": "काफ़ी समझाने के बाद मंत्री इंटरव्यू देने के लिए राज़ी हुए।",
+   "en": "After a lot of persuading, the minister agreed to give an interview.",
+   "ko": "한참 설득한 끝에 장관이 인터뷰에 응했어요.",
+   "blank": "राज़ी",
+   "src": "made"
+  }
+ ],
  "w|राज्य": [
   {
    "text": "इस राज्य में आम की बहार है।",
@@ -50082,6 +50594,22 @@
    "en": "Before the demo Pooja kept nervously wiping her hands with a handkerchief.",
    "ko": "데모 전에 푸자는 긴장해서 자꾸 손수건으로 손을 닦고 있었어요.",
    "blank": "रूमाल",
+   "src": "made"
+  }
+ ],
+ "w|रूह": [
+  {
+   "text": "रोहन ने लिखा कि गाँव की मिट्टी की ख़ुशबू उसकी रूह में बसी है।",
+   "en": "Rohan wrote that the smell of the village soil lives deep in his soul.",
+   "ko": "로한은 고향 흙냄새가 자기 영혼에 배어 있다고 썼어요.",
+   "blank": "रूह",
+   "src": "made"
+  },
+  {
+   "text": "मीना कहती है कि सच्ची ख़बर पत्रकारिता की रूह है।",
+   "en": "Meena says that truthful news is the soul of journalism.",
+   "ko": "미나는 진실한 보도가 언론의 영혼이라고 말해요.",
+   "blank": "रूह",
    "src": "made"
   }
  ],
@@ -51113,6 +51641,22 @@
    "blank": "लाल"
   }
  ],
+ "w|लालच": [
+  {
+   "text": "रोहन ने लिखा कि ज़्यादा पैसे के लालच में उसने शहर की नौकरी चुनी थी।",
+   "en": "Rohan wrote that he had chosen the city job out of greed for more money.",
+   "ko": "로한은 돈을 더 벌고 싶은 욕심에 도시 직장을 골랐다고 썼어요.",
+   "blank": "लालच",
+   "src": "made"
+  },
+  {
+   "text": "मीना की रिपोर्ट ने दिखाया कि ठेकेदारों के लालच ने पुल को कमज़ोर कर दिया।",
+   "en": "Meena's report showed that the contractors' greed had weakened the bridge.",
+   "ko": "미나의 기사는 업자들의 욕심이 다리를 약하게 만들었다는 걸 보여 줬어요.",
+   "blank": "लालच",
+   "src": "made"
+  }
+ ],
  "w|लालची": [
   {
    "text": "रवि थोड़ा लालची निकला, उसने सबसे बड़ा गुलाब जामुन अपने लिए रख लिया।",
@@ -51873,6 +52417,22 @@
    "en": "Protecting the forest is everyone's job.",
    "ko": "숲을 지키는 건 모두의 일이야.",
    "blank": "वन"
+  }
+ ],
+ "w|वफ़ा": [
+  {
+   "text": "रोहन ने लिखा कि दोस्ती में वफ़ा सबसे बड़ी चीज़ है।",
+   "en": "Rohan wrote that faithfulness is the greatest thing in friendship.",
+   "ko": "로한은 우정에서 가장 큰 건 의리라고 썼어요.",
+   "blank": "वफ़ा",
+   "src": "made"
+  },
+  {
+   "text": "पुराना चपरासी चालीस साल से अख़बार के प्रति वफ़ा निभा रहा है।",
+   "en": "The old peon has stayed faithful to the newspaper for forty years.",
+   "ko": "늙은 사환은 사십 년째 신문사에 의리를 지키고 있어요.",
+   "blank": "वफ़ा",
+   "src": "made"
   }
  ],
  "w|वफ़ादार": [
@@ -53176,6 +53736,22 @@
    "en": "Full details of the marathon route were given on the website.",
    "ko": "웹사이트에 마라톤 코스 안내가 자세히 나와 있었어요.",
    "blank": "विवरण",
+   "src": "made"
+  }
+ ],
+ "w|विवश": [
+  {
+   "text": "पिताजी की बीमारी के कारण रोहन गाँव लौटने को विवश हो गया था।",
+   "en": "Because of his father's illness, Rohan had been forced to return to the village.",
+   "ko": "아버지가 편찮으셔서 로한은 어쩔 수 없이 고향으로 돌아갔었어요.",
+   "blank": "विवश",
+   "src": "made"
+  },
+  {
+   "text": "ख़राब मौसम के कारण संपादक प्रिंट में देरी करने को विवश थे।",
+   "en": "Because of the bad weather, the editors were forced to delay printing.",
+   "ko": "날씨가 나빠서 편집자들은 인쇄를 늦출 수밖에 없었어요.",
+   "blank": "विवश",
    "src": "made"
   }
  ],
@@ -58871,6 +59447,22 @@
    "src": "made"
   }
  ],
+ "w|संवेदना": [
+  {
+   "text": "रोहन ने दोस्त की माँ के निधन पर अपनी गहरी संवेदना भेजी।",
+   "en": "Rohan sent his deep condolences on the death of his friend's mother.",
+   "ko": "로한은 친구 어머니의 별세에 깊은 애도를 전했어요.",
+   "blank": "संवेदना",
+   "src": "made"
+  },
+  {
+   "text": "मीना बाढ़ पीड़ितों की कहानियाँ बड़ी संवेदना के साथ लिखती है।",
+   "en": "Meena writes the stories of flood victims with great compassion.",
+   "ko": "미나는 홍수 피해자들의 이야기를 깊은 공감을 담아 써요.",
+   "blank": "संवेदना",
+   "src": "made"
+  }
+ ],
  "w|सवेरा": [
   {
    "text": "सवेरा होते ही पक्षी चहचहाने लगे।",
@@ -62885,6 +63477,22 @@
    "src": "made"
   }
  ],
+ "w|स्वार्थ": [
+  {
+   "text": "रोहन ने लिखा कि हमारी दोस्ती में कभी कोई स्वार्थ नहीं था।",
+   "en": "Rohan wrote that there had never been any selfishness in their friendship.",
+   "ko": "로한은 우리 우정에는 사리사욕이 조금도 없었다고 썼어요.",
+   "blank": "स्वार्थ",
+   "src": "made"
+  },
+  {
+   "text": "मीना ने नेताओं के स्वार्थ पर एक तीखा संपादकीय लिखा।",
+   "en": "Meena wrote a sharp editorial on the politicians' self-interest.",
+   "ko": "미나는 정치인들의 사리사욕을 꼬집는 날카로운 사설을 썼어요.",
+   "blank": "स्वार्थ",
+   "src": "made"
+  }
+ ],
  "w|स्वास्थ्य": [
   {
    "text": "स्वास्थ्य का ध्यान रखना ज़रूरी है।",
@@ -63429,6 +64037,22 @@
    "en": "This green chili is quite hot.",
    "ko": "이 풋고추는 꽤 매워.",
    "blank": "हरी मिर्च"
+  }
+ ],
+ "w|हर्ष": [
+  {
+   "text": "दोस्त के बेटे के जन्म की ख़बर से रोहन के मन में हर्ष की लहर दौड़ गई।",
+   "en": "The news of his friend's son's birth sent a wave of joy through Rohan's heart.",
+   "ko": "친구 아들이 태어났다는 소식에 로한의 마음에 기쁨이 밀려왔어요.",
+   "blank": "हर्ष",
+   "src": "made"
+  },
+  {
+   "text": "पुरस्कार की घोषणा पर पूरे न्यूज़रूम में हर्ष का माहौल था।",
+   "en": "At the announcement of the award, the whole newsroom was in a mood of joy.",
+   "ko": "수상 발표에 편집국 전체가 기쁨에 들떴어요.",
+   "blank": "हर्ष",
+   "src": "made"
   }
  ],
  "w|हल": [
@@ -64597,6 +65221,22 @@
    "en": "With a clever plan the work became easy.",
    "ko": "영리한 계획으로 일이 쉬워졌어.",
    "blank": "होशियार"
+  }
+ ],
+ "w|हौसला": [
+  {
+   "text": "रोहन ने लिखा कि मुश्किल दिनों में तुम्हारी चिट्ठियों ने मेरा हौसला बढ़ाया।",
+   "en": "Rohan wrote that in hard times his friend's letters had lifted his spirits.",
+   "ko": "로한은 힘든 시절 네 편지가 큰 힘이 됐다고 썼어요.",
+   "blank": "हौसला",
+   "src": "made"
+  },
+  {
+   "text": "पहली ख़बर ख़ारिज होने पर संपादक ने मीना का हौसला बढ़ाया।",
+   "en": "When her first story was rejected, the editor encouraged Meena.",
+   "ko": "첫 기사가 퇴짜를 맞자 편집장은 미나에게 용기를 북돋아 줬어요.",
+   "blank": "हौसला",
+   "src": "made"
   }
  ]
 }

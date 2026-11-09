@@ -2651,6 +2651,22 @@
    "blank": "أشعة"
   }
  ],
+ "w|أشعث": [
+  {
+   "text": "وصل كريم مرة بشعر أشعث لأن الريح كانت قوية.",
+   "en": "Karim once arrived with tousled hair because the wind was strong.",
+   "ko": "카림이 한번은 바람이 세서 머리가 헝클어진 채 왔어요.",
+   "blank": "أشعث",
+   "src": "made"
+  },
+  {
+   "text": "جاء إلى البلدية طفل أشعث يبحث عن أمه، فاتصلت منى بالشرطة.",
+   "en": "A disheveled child came to city hall looking for his mother, so Mona called the police.",
+   "ko": "머리가 헝클어진 아이가 엄마를 찾으러 시청에 와서 모나가 경찰에 연락했어요.",
+   "blank": "أشعث",
+   "src": "made"
+  }
+ ],
  "w|أشعل": [
   {
    "text": "أشعل الولد الشمعة في الظلام.",
@@ -3365,6 +3381,22 @@
    "en": "My friend was single until last year.",
    "ko": "내 친구는 작년까지 미혼이었다.",
    "blank": "أعزب"
+  }
+ ],
+ "w|أعسر": [
+  {
+   "text": "طلب كريم فأرة خاصة لأنه أعسر.",
+   "en": "Karim asked for a special mouse because he is left-handed.",
+   "ko": "카림은 왼손잡이라서 전용 마우스를 달라고 했어요.",
+   "blank": "أعسر",
+   "src": "made"
+  },
+  {
+   "text": "زوج منى أعسر، فاشترت له مقصا خاصا لليد اليسرى.",
+   "en": "Mona's husband is left-handed, so she bought him special left-handed scissors.",
+   "ko": "모나의 남편은 왼손잡이라서 모나가 왼손용 가위를 사 줬어요.",
+   "blank": "أعسر",
+   "src": "made"
   }
  ],
  "w|أعشاب": [
@@ -4791,6 +4823,22 @@
    "en": "I like coffee.",
    "ko": "나 커피 좋아해.",
    "blank": "أنا"
+  }
+ ],
+ "w|أناقة": [
+  {
+   "text": "لاحظ الجميع أناقة كريم في أول يوم عمل له في الشركة.",
+   "en": "Everyone noticed Karim's elegance on his first day of work at the company.",
+   "ko": "모두가 회사 첫 출근 날 카림의 세련된 옷차림을 알아봤어요.",
+   "blank": "أناقة",
+   "src": "made"
+  },
+  {
+   "text": "ترتدي منى في البلدية ملابس بسيطة لكنها تحافظ على أناقتها.",
+   "en": "At city hall Mona wears simple clothes but keeps her elegance.",
+   "ko": "모나는 시청에서 수수한 옷을 입지만 세련됨을 잃지 않아요.",
+   "blank": "أناقتها",
+   "src": "made"
   }
  ],
  "w|أناناس": [
@@ -7405,6 +7453,22 @@
    "blank": "إيقاع"
   }
  ],
+ "w|إيماءة": [
+  {
+   "text": "رد كريم على سؤال المدير بإيماءة صغيرة من رأسه.",
+   "en": "Karim answered the manager's question with a small nod of his head.",
+   "ko": "카림은 부장의 질문에 고개를 살짝 끄덕여 답했어요.",
+   "blank": "بإيماءة",
+   "src": "made"
+  },
+  {
+   "text": "فهمت منى من إيماءة رئيس البلدية أن الاجتماع انتهى.",
+   "en": "Mona understood from the mayor's gesture that the meeting was over.",
+   "ko": "모나는 시장의 손짓을 보고 회의가 끝났다는 걸 알았어요.",
+   "blank": "إيماءة",
+   "src": "made"
+  }
+ ],
  "w|إيمان": [
   {
    "text": "إيمان الإنسان يمنحه قوة في الأوقات الصعبة.",
@@ -7448,6 +7512,22 @@
    "en": "Fatima helped her elderly neighbor cancel a stolen credit card.",
    "ko": "파티마는 나이 든 이웃이 도난당한 신용카드를 해지하도록 도왔어요.",
    "blank": "ائتمان",
+   "src": "made"
+  }
+ ],
+ "w|ائتمن": [
+  {
+   "text": "ائتمن المدير كريم على مفاتيح الخزنة بعد شهر واحد.",
+   "en": "The manager trusted Karim with the safe's keys after just one month.",
+   "ko": "부장은 한 달 만에 카림에게 금고 열쇠를 맡겼어요.",
+   "blank": "ائتمن",
+   "src": "made"
+  },
+  {
+   "text": "ائتمنت منى مساعدها على ملفات الميزانية السرية.",
+   "en": "Mona entrusted her assistant with the confidential budget files.",
+   "ko": "모나는 비서에게 기밀 예산 파일을 맡겼어요.",
+   "blank": "ائتمنت",
    "src": "made"
   }
  ],
@@ -9109,6 +9189,22 @@
    "src": "made"
   }
  ],
+ "w|استحالة": [
+  {
+   "text": "أقنع كريم الفريق باستحالة إنهاء المشروع في أسبوع.",
+   "en": "Karim convinced the team that it was impossible to finish the project in a week.",
+   "ko": "카림은 일주일 안에 사업을 끝내는 건 불가능하다고 팀을 설득했어요.",
+   "blank": "باستحالة",
+   "src": "made"
+  },
+  {
+   "text": "شرحت منى للسكان استحالة بناء موقف سيارات تحت الساحة.",
+   "en": "Mona explained to the residents that building a parking lot under the square was impossible.",
+   "ko": "모나는 주민들에게 광장 밑에 주차장을 짓는 건 불가능하다고 설명했어요.",
+   "blank": "استحالة",
+   "src": "made"
+  }
+ ],
  "w|استحق": [
   {
    "text": "عمل بجد حتى استحق الجائزة.",
@@ -9121,6 +9217,22 @@
    "en": "I feel that I deserve this opportunity.",
    "ko": "나는 이 기회를 받을 자격이 있다고 느껴.",
    "blank": "استحق"
+  }
+ ],
+ "w|استحقاق": [
+  {
+   "text": "حصل كريم على المكتب المطل على الحديقة عن استحقاق.",
+   "en": "Karim got the office overlooking the garden on merit.",
+   "ko": "카림은 실력으로 정원이 보이는 사무실을 차지했어요.",
+   "blank": "استحقاق",
+   "src": "made"
+  },
+  {
+   "text": "تقول منى إن الحصول على السكن استحقاق لكل عائلة.",
+   "en": "Mona says getting housing is a right for every family.",
+   "ko": "모나는 집을 얻는 건 모든 가족의 권리라고 말해요.",
+   "blank": "استحقاق",
+   "src": "made"
   }
  ],
  "w|استحم": [
@@ -9209,6 +9321,22 @@
    "en": "He used the pen to write the letter.",
    "ko": "그는 펜을 사용해 편지를 썼다.",
    "blank": "استخدم"
+  }
+ ],
+ "w|استخراج": [
+  {
+   "text": "طلب المدير من كريم استخراج الأرقام من الملفات القديمة.",
+   "en": "The manager asked Karim to extract the figures from the old files.",
+   "ko": "부장은 카림에게 옛 파일에서 숫자를 뽑아 달라고 했어요.",
+   "blank": "استخراج",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت منى شابا في استخراج شهادة ميلاد بديلة.",
+   "en": "Mona helped a young man get a replacement birth certificate issued.",
+   "ko": "모나는 한 청년이 출생증명서를 다시 발급받도록 도왔어요.",
+   "blank": "استخراج",
+   "src": "made"
   }
  ],
  "w|استخرج": [
@@ -9579,6 +9707,22 @@
    "blank": "استعنت"
   }
  ],
+ "w|استعانة": [
+  {
+   "text": "أنهى كريم التقرير بالاستعانة بزميلة تعرف النظام جيدا.",
+   "en": "Karim finished the report with the help of a colleague who knows the system well.",
+   "ko": "카림은 시스템을 잘 아는 동료의 도움을 받아 보고서를 끝냈어요.",
+   "blank": "بالاستعانة",
+   "src": "made"
+  },
+  {
+   "text": "قررت منى الاستعانة بخبراء لتخطيط الحديقة الكبيرة.",
+   "en": "Mona decided to call on experts to plan the big park.",
+   "ko": "모나는 큰 공원 설계를 위해 전문가 도움을 받기로 했어요.",
+   "blank": "الاستعانة",
+   "src": "made"
+  }
+ ],
  "w|استعد": [
   {
    "text": "استعد للمقابلة جيدا.",
@@ -9800,6 +9944,22 @@
    "en": "Rana got a lot of benefit from her early-morning training.",
    "ko": "라나는 이른 아침 훈련으로 큰 효과를 봤어요.",
    "blank": "استفادة",
+   "src": "made"
+  }
+ ],
+ "w|استفسار": [
+  {
+   "text": "أرسل كريم استفسارا إلى قسم الموظفين عن أيام الإجازة.",
+   "en": "Karim sent an inquiry to the HR department about vacation days.",
+   "ko": "카림은 인사팀에 휴가 일수를 묻는 문의를 보냈어요.",
+   "blank": "استفسارا",
+   "src": "made"
+  },
+  {
+   "text": "ردت منى على استفسار رجل مسن عن رسوم البناء.",
+   "en": "Mona answered an elderly man's inquiry about building fees.",
+   "ko": "모나는 건축 수수료를 묻는 할아버지에게 답해 줬어요.",
+   "blank": "استفسار",
    "src": "made"
   }
  ],
@@ -10097,6 +10257,22 @@
    "src": "made"
   }
  ],
+ "w|استنكار": [
+  {
+   "text": "عبر كريم عن استنكاره لتأخير رواتب العمال.",
+   "en": "Karim expressed his disapproval of the delay in the workers' salaries.",
+   "ko": "카림은 직원 월급이 밀린 데 대해 못마땅함을 드러냈어요.",
+   "blank": "استنكاره",
+   "src": "made"
+  },
+  {
+   "text": "أثار قطع الأشجار في الساحة استنكار السكان، فأوقفته منى.",
+   "en": "Cutting the trees in the square provoked the residents' outrage, so Mona stopped it.",
+   "ko": "광장 나무를 베자 주민들이 반발해서 모나가 중단시켰어요.",
+   "blank": "استنكار",
+   "src": "made"
+  }
+ ],
  "w|استنكر": [
   {
    "text": "استنكر يوسف طول الانتظار في قسم الطوارئ.",
@@ -10110,6 +10286,22 @@
    "en": "Sara disapproved of throwing leftover bread in the trash.",
    "ko": "사라는 남은 빵을 쓰레기통에 버리는 걸 못마땅해했어요.",
    "blank": "استنكرت",
+   "src": "made"
+  }
+ ],
+ "w|استهداف": [
+  {
+   "text": "اقترح كريم استهداف الطلاب في الحملة الإعلانية الجديدة.",
+   "en": "Karim suggested targeting students in the new advertising campaign.",
+   "ko": "카림은 새 광고 캠페인에서 학생들을 공략하자고 했어요.",
+   "blank": "استهداف",
+   "src": "made"
+  },
+  {
+   "text": "ركزت خطة منى على استهداف الأحياء الفقيرة بالخدمات أولا.",
+   "en": "Mona's plan focused on targeting the poor neighborhoods with services first.",
+   "ko": "모나의 계획은 가난한 동네부터 서비스를 집중하는 거였어요.",
+   "blank": "استهداف",
    "src": "made"
   }
  ],
@@ -11021,6 +11213,22 @@
    "en": "Do you take care of a pet at your home?",
    "ko": "집에서 반려동물을 돌보니?",
    "blank": "تعتنى"
+  }
+ ],
+ "w|اغتاب": [
+  {
+   "text": "لم يغتب كريم أحدا منذ أن جاء، فأحبه الجميع.",
+   "en": "Karim hasn't gossiped about anyone since he came, so everyone likes him.",
+   "ko": "카림은 온 뒤로 아무 험담도 하지 않아서 모두 그를 좋아해요.",
+   "blank": "يغتب",
+   "src": "made"
+  },
+  {
+   "text": "سمعت منى موظفين يغتابان زميلة، فطلبت منهما التوقف.",
+   "en": "Mona heard two employees gossiping about a colleague and asked them to stop.",
+   "ko": "모나는 직원 둘이 동료 험담하는 걸 듣고 그만하라고 했어요.",
+   "blank": "يغتابان",
+   "src": "made"
   }
  ],
  "w|اغتال": [
@@ -11967,6 +12175,22 @@
    "en": "The hall was filled with attendees.",
    "ko": "강당이 참석자들로 가득 찼어.",
    "blank": "امتلأت"
+  }
+ ],
+ "w|امتلاء": [
+  {
+   "text": "بسبب امتلاء قاعة الاجتماعات جلس كريم على كرسي قرب الباب.",
+   "en": "Because the meeting room was full, Karim sat on a chair near the door.",
+   "ko": "회의실이 꽉 차서 카림은 문 옆 의자에 앉았어요.",
+   "blank": "امتلاء",
+   "src": "made"
+  },
+  {
+   "text": "أخبر العامل منى بامتلاء الحاويات قبل موعد جمع القمامة.",
+   "en": "The worker told Mona the bins were full before the garbage collection time.",
+   "ko": "직원은 모나에게 쓰레기 수거 전에 통이 다 찼다고 알렸어요.",
+   "blank": "بامتلاء",
+   "src": "made"
   }
  ],
  "w|امتلاك": [
@@ -14459,6 +14683,22 @@
    "en": "I ate the food without salt.",
    "ko": "나는 소금 없이 음식을 먹었어.",
    "blank": "بدون"
+  }
+ ],
+ "w|بدوي": [
+  {
+   "text": "تعلم كريم كرم الضيافة من جده البدوي.",
+   "en": "Karim learned generous hospitality from his Bedouin grandfather.",
+   "ko": "카림은 베두인인 할아버지에게서 손님을 후하게 대하는 법을 배웠어요.",
+   "blank": "البدوي",
+   "src": "made"
+  },
+  {
+   "text": "استقبلت منى وفدا من شيوخ قبيلة بدوية جاؤوا يطلبون مدرسة.",
+   "en": "Mona received a delegation of elders from a Bedouin tribe who came asking for a school.",
+   "ko": "모나는 학교를 지어 달라고 온 베두인 부족 원로들을 맞이했어요.",
+   "blank": "بدوية",
+   "src": "made"
   }
  ],
  "w|بديع": [
@@ -22129,6 +22369,22 @@
    "src": "made"
   }
  ],
+ "w|تنمر": [
+  {
+   "text": "تنمر بعض الأولاد على كريم في المدرسة، فصار يدافع عن الموظفين الجدد.",
+   "en": "Some boys bullied Karim at school, so he became one to stand up for new employees.",
+   "ko": "카림은 학교에서 괴롭힘을 당해 봐서 신입 직원 편을 들어 줘요.",
+   "blank": "تنمر",
+   "src": "made"
+  },
+  {
+   "text": "أطلقت منى برنامجا في المدارس لحماية الأطفال الذين يتنمر عليهم زملاؤهم.",
+   "en": "Mona launched a program in schools to protect children whose classmates bully them.",
+   "ko": "모나는 친구들에게 괴롭힘당하는 아이들을 지키는 학교 프로그램을 시작했어요.",
+   "blank": "يتنمر",
+   "src": "made"
+  }
+ ],
  "w|تنمية": [
   {
    "text": "يرى خالد أن التعليم أساس التنمية في أي بلد.",
@@ -24975,6 +25231,22 @@
    "blank": "الجلسة"
   }
  ],
+ "w|جلف": [
+  {
+   "text": "رد عامل التوصيل على كريم بأسلوب جلف ثم رمى الصندوق.",
+   "en": "The delivery man answered Karim in a coarse way and then threw the box down.",
+   "ko": "배달원은 카림에게 퉁명스럽게 대꾸하고 상자를 던지듯 놓았어요.",
+   "blank": "جلف",
+   "src": "made"
+  },
+  {
+   "text": "صبرت منى على موظف جلف يصرخ في وجه المراجعين.",
+   "en": "Mona put up with a coarse employee who shouts at visitors.",
+   "ko": "모나는 민원인에게 소리 지르는 무례한 직원을 참아 줬어요.",
+   "blank": "جلف",
+   "src": "made"
+  }
+ ],
  "w|جلوس": [
   {
    "text": "جلوس طويل بيعمل وجع ضهر.",
@@ -26775,6 +27047,22 @@
    "en": "This is the speed limit on the road.",
    "ko": "이것이 도로의 속도 제한이에요.",
    "blank": "حد"
+  }
+ ],
+ "w|حداثة": [
+  {
+   "text": "لم تمنع حداثة كريم في الشركة من أن يقترح أفكارا جريئة.",
+   "en": "Being new to the company didn't stop Karim from proposing bold ideas.",
+   "ko": "카림은 회사에 들어온 지 얼마 안 됐지만 과감한 아이디어를 냈어요.",
+   "blank": "حداثة",
+   "src": "made"
+  },
+  {
+   "text": "تفخر منى بحداثة نظام الدفع في البلدية.",
+   "en": "Mona is proud of how modern the payment system at city hall is.",
+   "ko": "모나는 시청 납부 시스템이 최신인 게 자랑스러워요.",
+   "blank": "بحداثة",
+   "src": "made"
   }
  ],
  "w|حداثي": [
@@ -30635,6 +30923,22 @@
    "blank": "الخلاف"
   }
  ],
+ "w|خلاق": [
+  {
+   "text": "صمم كريم شعارا خلاقا أعجب العملاء.",
+   "en": "Karim designed a creative logo that pleased the clients.",
+   "ko": "카림이 만든 기발한 로고를 고객들이 좋아했어요.",
+   "blank": "خلاقا",
+   "src": "made"
+  },
+  {
+   "text": "عرض فنان خلاق على منى فكرة لتلوين جدران الحي القديم.",
+   "en": "A creative artist offered Mona an idea for painting the walls of the old quarter.",
+   "ko": "창의적인 예술가가 모나에게 옛 동네 벽을 색칠하자는 아이디어를 냈어요.",
+   "blank": "خلاق",
+   "src": "made"
+  }
+ ],
  "w|خلال": [
   {
    "text": "سأسافر خلال عطلة الصيف.",
@@ -34105,6 +34409,22 @@
    "src": "made"
   }
  ],
+ "w|رداءة": [
+  {
+   "text": "اشتكى كريم من رداءة القهوة في آلة المكتب.",
+   "en": "Karim complained about the poor quality of the coffee in the office machine.",
+   "ko": "카림은 사무실 커피 머신 커피가 형편없다고 불평했어요.",
+   "blank": "رداءة",
+   "src": "made"
+  },
+  {
+   "text": "اشتكى السكان لمنى من رداءة الإنارة في شارعهم.",
+   "en": "The residents complained to Mona about the poor lighting on their street.",
+   "ko": "주민들이 모나에게 동네 거리 조명이 형편없다고 하소연했어요.",
+   "blank": "رداءة",
+   "src": "made"
+  }
+ ],
  "w|رذاذ": [
   {
    "text": "وقف سامي على الصخرة ورذاذ الموج يبلل وجهه.",
@@ -34997,6 +35317,22 @@
    "blank": "رمان"
   }
  ],
+ "w|رماية": [
+  {
+   "text": "حكى كريم أنه فاز ببطولة في الرماية أيام الجامعة.",
+   "en": "Karim told how he won a shooting championship in his university days.",
+   "ko": "카림은 대학 시절 사격 대회에서 우승한 이야기를 했어요.",
+   "blank": "الرماية",
+   "src": "made"
+  },
+  {
+   "text": "افتتحت منى ناديا للرماية بالقوس في الحديقة العامة.",
+   "en": "Mona opened an archery club in the public park.",
+   "ko": "모나는 공원에 활쏘기 동호회장을 열었어요.",
+   "blank": "للرماية",
+   "src": "made"
+  }
+ ],
  "w|رمح": [
   {
    "text": "في المتحف المجاور للمركز رمح قديم سرق مرة ثم أعيد.",
@@ -35604,6 +35940,22 @@
    "en": "Rana was the dentist's schoolmate in high school years ago.",
    "ko": "라나는 오래전 고등학교 때 그 치과 의사와 같은 반이었어요.",
    "blank": "زاملت",
+   "src": "made"
+  }
+ ],
+ "w|زاهد": [
+  {
+   "text": "يعيش كريم حياة زاهدة، فلا يملك إلا حقيبة وكتبا.",
+   "en": "Karim lives an ascetic life, owning nothing but a bag and books.",
+   "ko": "카림은 가방 하나와 책밖에 없는 소박한 삶을 살아요.",
+   "blank": "زاهدة",
+   "src": "made"
+  },
+  {
+   "text": "عاش جد منى عيشة زاهد في بيت من غرفة واحدة.",
+   "en": "Mona's grandfather lived the life of an ascetic in a one-room house.",
+   "ko": "모나의 할아버지는 방 한 칸짜리 집에서 금욕적으로 살았어요.",
+   "blank": "زاهد",
    "src": "made"
   }
  ],
@@ -39971,6 +40323,22 @@
    "blank": "شراب"
   }
  ],
+ "w|شراكة": [
+  {
+   "text": "جاء كريم إلى الشركة ليدير شراكة جديدة مع مصنع في الشمال.",
+   "en": "Karim came to the company to manage a new partnership with a factory in the north.",
+   "ko": "카림은 북쪽 공장과의 새 협력 사업을 맡으러 회사에 왔어요.",
+   "blank": "شراكة",
+   "src": "made"
+  },
+  {
+   "text": "وقعت منى باسم البلدية اتفاق شراكة مع جامعة المدينة.",
+   "en": "Mona signed a partnership agreement with the city university on behalf of the municipality.",
+   "ko": "모나는 시청을 대표해 시립 대학과 협력 협정을 맺었어요.",
+   "blank": "شراكة",
+   "src": "made"
+  }
+ ],
  "w|شرب": [
   {
    "text": "شربت كوباً من الماء.",
@@ -41941,6 +42309,22 @@
    "blank": "صدقة"
   }
  ],
+ "w|صدم": [
+  {
+   "text": "صدم كريم زملاءه حين قال إنه يعرف المدير منذ الطفولة.",
+   "en": "Karim shocked his colleagues when he said he had known the manager since childhood.",
+   "ko": "카림이 부장을 어릴 때부터 알았다고 하자 동료들이 깜짝 놀랐어요.",
+   "blank": "صدم",
+   "src": "made"
+  },
+  {
+   "text": "صدمت منى حين رأت حجم الديون في دفاتر البلدية.",
+   "en": "Mona was shocked when she saw the size of the debts in the city hall's books.",
+   "ko": "모나는 시청 장부에 적힌 빚 규모를 보고 충격을 받았어요.",
+   "blank": "صدمت",
+   "src": "made"
+  }
+ ],
  "w|صدمة": [
   {
    "text": "كانت صدمة الخبر واضحة على وجهه.",
@@ -43121,6 +43505,22 @@
    "en": "He laughs a lot with his friends.",
    "ko": "그는 친구들과 많이 웃어.",
    "blank": "يضحك"
+  }
+ ],
+ "w|ضحكة": [
+  {
+   "text": "ملأت ضحكة كريم الممر حين سمع النكتة.",
+   "en": "Karim's laugh filled the corridor when he heard the joke.",
+   "ko": "농담을 들은 카림의 웃음소리가 복도를 가득 채웠어요.",
+   "blank": "ضحكة",
+   "src": "made"
+  },
+  {
+   "text": "أطلقت منى ضحكة عالية حين رأت الطفل يجلس على كرسي الرئيس.",
+   "en": "Mona let out a loud laugh when she saw the child sitting in the mayor's chair.",
+   "ko": "모나는 아이가 시장 의자에 앉은 걸 보고 크게 웃음을 터뜨렸어요.",
+   "blank": "ضحكة",
+   "src": "made"
   }
  ],
  "w|ضحل": [
@@ -44523,6 +44923,22 @@
    "en": "Red tomatoes are very delicious.",
    "ko": "빨간 토마토가 정말 맛있어.",
    "blank": "طماطم"
+  }
+ ],
+ "w|طماع": [
+  {
+   "text": "رفض كريم العمل مع مورد طماع رفع أسعاره فجأة.",
+   "en": "Karim refused to work with a greedy supplier who suddenly raised his prices.",
+   "ko": "카림은 갑자기 값을 올린 욕심 많은 납품업자와 일하지 않겠다고 했어요.",
+   "blank": "طماع",
+   "src": "made"
+  },
+  {
+   "text": "كشفت منى مقاولا طماعا ضاعف ثمن الإسفلت.",
+   "en": "Mona exposed a greedy contractor who doubled the price of asphalt.",
+   "ko": "모나는 아스팔트값을 두 배로 올린 욕심 많은 업자를 적발했어요.",
+   "blank": "طماعا",
+   "src": "made"
   }
  ],
  "w|طمث": [
@@ -52749,6 +53165,22 @@
    "blank": "القرنبيط"
   }
  ],
+ "w|قروي": [
+  {
+   "text": "يحن كريم إلى الهدوء القروي الذي عاش فيه طفولته.",
+   "en": "Karim longs for the village quiet he lived in as a child.",
+   "ko": "카림은 어린 시절을 보낸 시골의 고요함이 그리워요.",
+   "blank": "القروي",
+   "src": "made"
+  },
+  {
+   "text": "زارت منى سوقا قرويا في أطراف المدينة يبيع العسل والجبن.",
+   "en": "Mona visited a village market on the edge of the city that sells honey and cheese.",
+   "ko": "모나는 꿀과 치즈를 파는 도시 변두리의 시골 장터를 찾았어요.",
+   "blank": "قرويا",
+   "src": "made"
+  }
+ ],
  "w|قريب": [
   {
    "text": "منزلي قريب من المدرسة.",
@@ -53750,6 +54182,22 @@
    "en": "Despair didn't creep into Layla's heart despite her loss.",
    "ko": "라일라는 졌는데도 절망하지 않았어요.",
    "blank": "القنوط",
+   "src": "made"
+  }
+ ],
+ "w|قنوع": [
+  {
+   "text": "كريم رجل قنوع لا يطلب زيادة في راتبه.",
+   "en": "Karim is a contented man who doesn't ask for a raise.",
+   "ko": "카림은 월급을 올려 달라고 하지 않는 욕심 없는 사람이에요.",
+   "blank": "قنوع",
+   "src": "made"
+  },
+  {
+   "text": "تحب منى عملها رغم راتبها القليل، فهي امرأة قنوعة.",
+   "en": "Mona loves her work despite her low salary; she is a contented woman.",
+   "ko": "모나는 월급이 적어도 일을 좋아해요. 욕심 없는 사람이거든요.",
+   "blank": "قنوعة",
    "src": "made"
   }
  ],
@@ -58529,6 +58977,22 @@
    "src": "made"
   }
  ],
+ "w|مبذر": [
+  {
+   "text": "مازح كريم زميلا مبذرا يشتري هاتفا جديدا كل سنة.",
+   "en": "Karim joked with a wasteful colleague who buys a new phone every year.",
+   "ko": "카림은 해마다 새 휴대폰을 사는 헤픈 동료에게 농담을 건넸어요.",
+   "blank": "مبذرا",
+   "src": "made"
+  },
+  {
+   "text": "انتقدت منى المجلس المبذر الذي أنفق الميزانية على الحفلات.",
+   "en": "Mona criticized the wasteful council that spent the budget on parties.",
+   "ko": "모나는 예산을 잔치에 쓴 헤픈 의회를 비판했어요.",
+   "blank": "المبذر",
+   "src": "made"
+  }
+ ],
  "w|مبرمج": [
   {
    "text": "يعمل أخي مبرمج في شركة تقنية.",
@@ -58795,6 +59259,22 @@
    "blank": "متاعب"
   }
  ],
+ "w|متانة": [
+  {
+   "text": "اختبر كريم متانة الكراسي الجديدة قبل أن يوقع على الطلبية.",
+   "en": "Karim tested the sturdiness of the new chairs before signing the order.",
+   "ko": "카림은 주문서에 서명하기 전에 새 의자가 튼튼한지 시험해 봤어요.",
+   "blank": "متانة",
+   "src": "made"
+  },
+  {
+   "text": "طلبت منى تقريرا عن متانة الجسر القديم قبل الشتاء.",
+   "en": "Mona requested a report on the strength of the old bridge before winter.",
+   "ko": "모나는 겨울 전에 옛 다리가 튼튼한지 보고서를 요청했어요.",
+   "blank": "متانة",
+   "src": "made"
+  }
+ ],
  "w|متباين": [
   {
    "text": "كانت آراء خالد وأخيه متباينة في طريقة الاحتفال بعيد ميلاد أبيهما.",
@@ -58903,6 +59383,22 @@
    "src": "made"
   }
  ],
+ "w|متحرر": [
+  {
+   "text": "يحمل كريم أفكارا متحررة عن ساعات العمل المرنة.",
+   "en": "Karim holds liberal ideas about flexible working hours.",
+   "ko": "카림은 유연 근무에 대해 자유로운 생각을 가지고 있어요.",
+   "blank": "متحررة",
+   "src": "made"
+  },
+  {
+   "text": "يرى بعض الموظفين أن منى متحررة أكثر من اللازم في قراراتها.",
+   "en": "Some employees think Mona is too liberal in her decisions.",
+   "ko": "몇몇 직원은 모나의 결정이 지나치게 자유분방하다고 생각해요.",
+   "blank": "متحررة",
+   "src": "made"
+  }
+ ],
  "w|متحرك": [
   {
    "text": "ركب علي على الحزام المتحرك وبدأ يركض ببطء.",
@@ -58932,6 +59428,22 @@
    "en": "The student was full of regret because he forgot his homework at home, so Huda gave him a day.",
    "ko": "숙제를 집에 두고 와서 속상해하는 학생에게 후다는 하루를 더 줬어요.",
    "blank": "متحسرا",
+   "src": "made"
+  }
+ ],
+ "w|متحضر": [
+  {
+   "text": "قال كريم إن الحوار المتحضر يحل أي خلاف في الفريق.",
+   "en": "Karim said civilized dialogue solves any disagreement in the team.",
+   "ko": "카림은 점잖은 대화로 팀 안의 어떤 갈등도 풀 수 있다고 했어요.",
+   "blank": "المتحضر",
+   "src": "made"
+  },
+  {
+   "text": "تريد منى أن تكون المدينة متحضرة في طريقة تعاملها مع الغرباء.",
+   "en": "Mona wants the city to be civilized in how it treats strangers.",
+   "ko": "모나는 도시가 낯선 사람을 대할 때 품위 있기를 바라요.",
+   "blank": "متحضرة",
    "src": "made"
   }
  ],
@@ -62665,6 +63177,22 @@
    "blank": "مزاجي"
   }
  ],
+ "w|مزاجي": [
+  {
+   "text": "حذر الزملاء كريم من أن المدير مزاجي في الصباح.",
+   "en": "The colleagues warned Karim that the manager is moody in the mornings.",
+   "ko": "동료들은 카림에게 부장이 아침엔 기분파라고 귀띔했어요.",
+   "blank": "مزاجي",
+   "src": "made"
+  },
+  {
+   "text": "تعرف منى أن رئيس البلدية مزاجي، فتختار وقت الحديث معه بعناية.",
+   "en": "Mona knows the mayor is moody, so she chooses carefully when to talk to him.",
+   "ko": "모나는 시장이 기분파라는 걸 알아서 말 걸 때를 신중히 골라요.",
+   "blank": "مزاجي",
+   "src": "made"
+  }
+ ],
  "w|مزاح": [
   {
    "text": "لم يفهم الزميل الجديد مزاح أحمد في البداية، ثم ضحك.",
@@ -66381,6 +66909,22 @@
    "blank": "مقبول"
   }
  ],
+ "w|مقتصد": [
+  {
+   "text": "يحضر كريم غداءه من البيت لأنه مقتصد.",
+   "en": "Karim brings his lunch from home because he is thrifty.",
+   "ko": "카림은 알뜰해서 점심을 집에서 싸 와요.",
+   "blank": "مقتصد",
+   "src": "made"
+  },
+  {
+   "text": "طبقت منى نظاما مقتصدا للكهرباء في مباني البلدية.",
+   "en": "Mona applied an economical electricity system in the city hall buildings.",
+   "ko": "모나는 시청 건물에 전기를 아끼는 방식을 도입했어요.",
+   "blank": "مقتصدا",
+   "src": "made"
+  }
+ ],
  "w|مقدار": [
   {
    "text": "أضف مقدار صغير من الملح للطعام.",
@@ -67339,6 +67883,22 @@
    "en": "I forgot to put salt in the soup.",
    "ko": "나는 수프에 소금 넣는 걸 잊었어.",
    "blank": "ملح"
+  }
+ ],
+ "w|ملحد": [
+  {
+   "text": "بطل الرواية التي يقرؤها كريم عالم ملحد يبحث عن معنى الحياة.",
+   "en": "The hero of the novel Karim is reading is an atheist scientist searching for the meaning of life.",
+   "ko": "카림이 읽는 소설의 주인공은 삶의 의미를 찾는 무신론자 과학자예요.",
+   "blank": "ملحد",
+   "src": "made"
+  },
+  {
+   "text": "كان والد منى أستاذا ملحدا، ووالدتها تصلي كل يوم، وعاشا بسلام.",
+   "en": "Mona's father was an atheist professor and her mother prayed every day, and they lived in peace.",
+   "ko": "모나의 아버지는 무신론자 교수였고 어머니는 매일 기도했는데, 둘은 사이좋게 살았어요.",
+   "blank": "ملحدا",
+   "src": "made"
   }
  ],
  "w|ملحمة": [
@@ -68957,6 +69517,22 @@
    "blank": "مهندس"
   }
  ],
+ "w|مهندم": [
+  {
+   "text": "يأتي كريم إلى العمل مهندما كل يوم كأنه ذاهب إلى عرس.",
+   "en": "Karim comes to work neatly dressed every day as if he were going to a wedding.",
+   "ko": "카림은 결혼식에 가는 것처럼 매일 단정하게 차려입고 출근해요.",
+   "blank": "مهندما",
+   "src": "made"
+  },
+  {
+   "text": "دخل رجل مهندم إلى مكتب منى يطلب رخصة مطعم.",
+   "en": "A neatly dressed man came into Mona's office asking for a restaurant license.",
+   "ko": "말쑥한 남자가 식당 허가를 받으러 모나의 사무실에 들어왔어요.",
+   "blank": "مهندم",
+   "src": "made"
+  }
+ ],
  "w|مهني": [
   {
    "text": "يتعامل كريم مع الشكاوى بأسلوب مهني هادئ.",
@@ -70343,6 +70919,22 @@
    "src": "made"
   }
  ],
+ "w|نبرة": [
+  {
+   "text": "يتكلم كريم بنبرة هادئة حتى حين يغضب.",
+   "en": "Karim speaks in a calm tone even when he is angry.",
+   "ko": "카림은 화가 나도 차분한 목소리로 말해요.",
+   "blank": "بنبرة",
+   "src": "made"
+  },
+  {
+   "text": "لاحظت منى نبرة الغضب في صوت المتصل فطمأنته.",
+   "en": "Mona noticed the anger in the caller's tone and reassured him.",
+   "ko": "모나는 전화한 사람 목소리에 화가 묻어 있는 걸 알고 안심시켰어요.",
+   "blank": "نبرة",
+   "src": "made"
+  }
+ ],
  "w|نبض": [
   {
    "text": "فحص الطبيب نبض المريض بسرعة.",
@@ -70776,6 +71368,22 @@
    "en": "Mona rarely leaves the office before seven o'clock.",
    "ko": "모나가 일곱 시 전에 사무실을 나서는 일은 드물어요.",
    "blank": "يندر",
+   "src": "made"
+  }
+ ],
+ "w|ندرة": [
+  {
+   "text": "قال المدير إن ندرة المبرمجين المهرة جعلته يوظف كريم بسرعة.",
+   "en": "The manager said the scarcity of skilled programmers made him hire Karim quickly.",
+   "ko": "부장은 실력 있는 프로그래머가 드물어서 카림을 서둘러 뽑았다고 했어요.",
+   "blank": "ندرة",
+   "src": "made"
+  },
+  {
+   "text": "تحدثت منى في الاجتماع عن ندرة المياه في الأحياء العالية.",
+   "en": "Mona spoke at the meeting about the scarcity of water in the upper neighborhoods.",
+   "ko": "모나는 회의에서 고지대 동네의 물 부족 문제를 이야기했어요.",
+   "blank": "ندرة",
    "src": "made"
   }
  ],
@@ -73133,6 +73741,22 @@
    "blank": "هزيمة"
   }
  ],
+ "w|هشاشة": [
+  {
+   "text": "كشف كريم هشاشة الخطة المالية في أول اجتماع.",
+   "en": "Karim exposed the fragility of the financial plan at the first meeting.",
+   "ko": "카림은 첫 회의에서 재무 계획의 허술함을 짚어 냈어요.",
+   "blank": "هشاشة",
+   "src": "made"
+  },
+  {
+   "text": "كشف الزلزال الصغير هشاشة بعض المباني، فأمرت منى بفحصها.",
+   "en": "The small earthquake revealed the fragility of some buildings, so Mona ordered them inspected.",
+   "ko": "작은 지진으로 일부 건물이 약한 게 드러나 모나는 점검을 지시했어요.",
+   "blank": "هشاشة",
+   "src": "made"
+  }
+ ],
  "w|هضبة": [
   {
    "text": "من فوق هضبة قرب البلدة يرى سامي البحر كله.",
@@ -74561,6 +75185,22 @@
    "en": "I attended a very useful workshop last week.",
    "ko": "지난주에 아주 유익한 워크샵에 참석했어요.",
    "blank": "ورشة"
+  }
+ ],
+ "w|ورع": [
+  {
+   "text": "يصف كريم جده بأنه رجل ورع لا يترك صلاة الفجر.",
+   "en": "Karim describes his grandfather as a devout man who never misses the dawn prayer.",
+   "ko": "카림은 할아버지를 새벽 기도를 거르지 않는 경건한 분이라고 해요.",
+   "blank": "ورع",
+   "src": "made"
+  },
+  {
+   "text": "تبرع رجل ورع بأرضه للبلدية لتبني عليها مستوصفا.",
+   "en": "A devout man donated his land to the municipality to build a clinic on it.",
+   "ko": "경건한 한 남자가 진료소를 지으라고 시청에 땅을 기부했어요.",
+   "blank": "ورع",
+   "src": "made"
   }
  ],
  "w|ورق": [

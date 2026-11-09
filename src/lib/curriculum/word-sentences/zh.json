@@ -3219,6 +3219,22 @@
    "blank": "互相"
   }
  ],
+ "w|互联网": [
+  {
+   "text": "周强的公司做的是互联网广告。",
+   "en": "Zhou Qiang's company does internet advertising.",
+   "ko": "저우창의 회사는 인터넷 광고를 해요.",
+   "blank": "互联网",
+   "src": "made"
+  },
+  {
+   "text": "老师提醒大家，在互联网上查资料要注意来源是否可靠。",
+   "en": "The teacher reminded everyone to check whether sources are reliable when researching on the internet.",
+   "ko": "선생님은 인터넷에서 자료를 찾을 때 출처가 믿을 만한지 살피라고 일렀어요.",
+   "blank": "互联网",
+   "src": "made"
+  }
+ ],
  "w|五": [
   {
    "text": "我有五本书。",
@@ -5347,6 +5363,22 @@
    "src": "made"
   }
  ],
+ "w|体现": [
+  {
+   "text": "这次的销售成绩体现了周强团队的努力。",
+   "en": "This sales result reflects the effort of Zhou Qiang's team.",
+   "ko": "이번 판매 실적에는 저우창 팀의 노력이 드러나 있어요.",
+   "blank": "体现",
+   "src": "made"
+  },
+  {
+   "text": "这次运动会，王芳的班级很好地体现了团结精神。",
+   "en": "At this sports day, Wang Fang's class showed great team spirit.",
+   "ko": "이번 운동회에서 왕팡네 반은 단결심을 잘 보여 줬어요.",
+   "blank": "体现",
+   "src": "made"
+  }
+ ],
  "w|体系": [
   {
    "text": "学校今年换了一套新的评分体系，大家都还不太习惯。",
@@ -5909,6 +5941,22 @@
    "en": "Cheap isn't always good.",
    "ko": "싸다고 다 좋은 건 아니야.",
    "blank": "便宜"
+  }
+ ],
+ "w|促进": [
+  {
+   "text": "周强认为，多组织团建活动可以促进同事之间的了解。",
+   "en": "Zhou Qiang thinks more team-building activities can promote understanding among colleagues.",
+   "ko": "저우창은 단합 행사를 자주 하면 동료끼리 서로 더 잘 알게 된다고 생각해요.",
+   "blank": "促进",
+   "src": "made"
+  },
+  {
+   "text": "老师觉得，让学生互相讲题能促进他们的思考。",
+   "en": "The teacher believes having students explain problems to each other promotes their thinking.",
+   "ko": "선생님은 학생끼리 문제를 설명해 주게 하면 생각하는 힘이 길러진다고 봐요.",
+   "blank": "促进",
+   "src": "made"
   }
  ],
  "w|保佑": [
@@ -9281,6 +9329,22 @@
    "blank": "分"
   }
  ],
+ "w|分为": [
+  {
+   "text": "公司的工作流程分为三个步骤：计划、执行和检查。",
+   "en": "The company's workflow is divided into three steps: planning, execution, and review.",
+   "ko": "회사 업무 과정은 계획, 실행, 점검의 세 단계로 나뉘어요.",
+   "blank": "分为",
+   "src": "made"
+  },
+  {
+   "text": "王芳的学校一天分为八节课，下午还有自习。",
+   "en": "Wang Fang's school day is divided into eight periods, with study hall in the afternoon.",
+   "ko": "왕팡의 학교는 하루가 여덟 교시로 나뉘고 오후엔 자습도 있어요.",
+   "blank": "分为",
+   "src": "made"
+  }
+ ],
  "w|分享": [
   {
    "text": "我们一起分享吧。",
@@ -9355,6 +9419,22 @@
    "en": "Throw the trash separately.",
    "ko": "쓰레기를 나눠서 버려.",
    "blank": "分开"
+  }
+ ],
+ "w|分成": [
+  {
+   "text": "经理把大家分成两个小组，比一比谁的方案更好。",
+   "en": "The manager split everyone into two groups to see whose plan was better.",
+   "ko": "매니저는 모두를 두 조로 나눠 누구 방안이 더 나은지 겨루게 했어요.",
+   "blank": "分成",
+   "src": "made"
+  },
+  {
+   "text": "王芳把一块蛋糕分成八份，分给小组的同学。",
+   "en": "Wang Fang cut a cake into eight pieces and shared it with her group.",
+   "ko": "왕팡은 케이크 하나를 여덟 조각으로 나눠 모둠 친구들에게 줬어요.",
+   "blank": "分成",
+   "src": "made"
   }
  ],
  "w|分手": [
@@ -10421,6 +10501,22 @@
    "blank": "加入"
   }
  ],
+ "w|加工": [
+  {
+   "text": "这批木材运到工厂以后，还要再加工才能做成家具。",
+   "en": "After this batch of timber reaches the factory, it still has to be processed before becoming furniture.",
+   "ko": "이 목재는 공장에 도착한 뒤에도 더 가공해야 가구가 돼요.",
+   "blank": "加工",
+   "src": "made"
+  },
+  {
+   "text": "王芳参观工厂时，看到工人在把牛奶加工成奶酪。",
+   "en": "Visiting a factory, Wang Fang saw workers processing milk into cheese.",
+   "ko": "왕팡은 공장 견학 때 직원들이 우유를 치즈로 가공하는 걸 봤어요.",
+   "blank": "加工",
+   "src": "made"
+  }
+ ],
  "w|加强": [
   {
    "text": "张伟说毕业后大家联系太少，以后得加强来往。",
@@ -10434,6 +10530,22 @@
    "en": "Property management said it would tighten access control, so outsiders can't just walk into the building anymore.",
    "ko": "관리사무소는 앞으로 출입 관리를 강화해서 외부인이 함부로 건물에 들어올 수 없다고 했어요.",
    "blank": "加强",
+   "src": "made"
+  }
+ ],
+ "w|加快": [
+  {
+   "text": "客户催得紧，周强只好加快进度。",
+   "en": "The client is pressing hard, so Zhou Qiang has to speed up.",
+   "ko": "고객이 재촉해서 저우창은 속도를 낼 수밖에 없었어요.",
+   "blank": "加快",
+   "src": "made"
+  },
+  {
+   "text": "快要上课了，王芳加快脚步跑回教室。",
+   "en": "Class was about to start, so Wang Fang quickened her pace back to the classroom.",
+   "ko": "곧 수업이 시작돼서 왕팡은 걸음을 재촉해 교실로 뛰어갔어요.",
+   "blank": "加快",
    "src": "made"
   }
  ],
@@ -11793,6 +11905,22 @@
    "src": "made"
   }
  ],
+ "w|原料": [
+  {
+   "text": "原料价格上涨，公司的产品也只好跟着涨价。",
+   "en": "Raw material prices went up, so the company had to raise its product prices too.",
+   "ko": "원료 값이 올라서 회사 제품 값도 따라 올릴 수밖에 없었어요.",
+   "blank": "原料",
+   "src": "made"
+  },
+  {
+   "text": "化学老师说，做肥皂的原料其实很简单。",
+   "en": "The chemistry teacher said the raw materials for making soap are actually simple.",
+   "ko": "화학 선생님은 비누를 만드는 원료가 사실 아주 간단하다고 했어요.",
+   "blank": "原料",
+   "src": "made"
+  }
+ ],
  "w|原本": [
   {
    "text": "我原本想早点回家。",
@@ -12518,6 +12646,22 @@
    "en": "Lin Jing says with the internet so developed, even small companies can sell products far away.",
    "ko": "린징은 인터넷이 이렇게 발달해서 작은 회사도 멀리까지 제품을 팔 수 있다고 해요.",
    "blank": "发达",
+   "src": "made"
+  }
+ ],
+ "w|发送": [
+  {
+   "text": "周强把报告发送给经理以后，才发现忘了加附件。",
+   "en": "After sending the report to the manager, Zhou Qiang realized he'd forgotten the attachment.",
+   "ko": "저우창은 보고서를 매니저에게 보내고 나서야 첨부 파일을 빠뜨린 걸 알았어요.",
+   "blank": "发送",
+   "src": "made"
+  },
+  {
+   "text": "老师把作业发送到班级群里，让大家晚上完成。",
+   "en": "The teacher sent the homework to the class group chat for everyone to finish tonight.",
+   "ko": "선생님이 숙제를 반 단톡방에 보내고 저녁에 끝내라고 했어요.",
+   "blank": "发送",
    "src": "made"
   }
  ],
@@ -13666,6 +13810,22 @@
    "en": "Li Na says tea should be priced reasonably and visitors shouldn't be ripped off.",
    "ko": "리나는 찻값은 합리적으로 정해야 하고 관광객을 속이면 안 된다고 해요.",
    "blank": "合理",
+   "src": "made"
+  }
+ ],
+ "w|合约": [
+  {
+   "text": "周强和供应商签了一份为期三年的合约。",
+   "en": "Zhou Qiang signed a three-year agreement with the supplier.",
+   "ko": "저우창은 공급업체와 삼 년짜리 계약을 맺었어요.",
+   "blank": "合约",
+   "src": "made"
+  },
+  {
+   "text": "学校和附近的游泳馆签了合约，学生可以免费去游泳。",
+   "en": "The school signed an agreement with a nearby pool so students can swim for free.",
+   "ko": "학교가 근처 수영장과 계약을 맺어서 학생들이 무료로 수영할 수 있어요.",
+   "blank": "合约",
    "src": "made"
   }
  ],
@@ -16381,6 +16541,38 @@
    "src": "made"
   }
  ],
+ "w|图像": [
+  {
+   "text": "这台旧投影仪的图像有点模糊，周强申请换一台新的。",
+   "en": "The old projector's image is a bit blurry, so Zhou Qiang requested a new one.",
+   "ko": "이 낡은 프로젝터 화면이 좀 흐려서 저우창이 새것으로 바꿔 달라고 신청했어요.",
+   "blank": "图像",
+   "src": "made"
+  },
+  {
+   "text": "生物课上，老师用电脑放大了细胞的图像。",
+   "en": "In biology class, the teacher enlarged an image of a cell on the computer.",
+   "ko": "생물 시간에 선생님이 컴퓨터로 세포 사진을 크게 보여 줬어요.",
+   "blank": "图像",
+   "src": "made"
+  }
+ ],
+ "w|图案": [
+  {
+   "text": "设计部给新包装画了好几种图案，让周强挑一个。",
+   "en": "The design department drew several patterns for the new packaging and asked Zhou Qiang to pick one.",
+   "ko": "디자인팀이 새 포장에 쓸 무늬를 여러 개 그려서 저우창에게 하나 고르라고 했어요.",
+   "blank": "图案",
+   "src": "made"
+  },
+  {
+   "text": "王芳在美术课上给自己的书包设计了一个图案。",
+   "en": "In art class, Wang Fang designed a pattern for her own schoolbag.",
+   "ko": "왕팡은 미술 시간에 자기 책가방에 넣을 무늬를 디자인했어요.",
+   "blank": "图案",
+   "src": "made"
+  }
+ ],
  "w|图片": [
   {
    "text": "周强给报道配了几张现场图片，读者反应很好。",
@@ -17331,6 +17523,22 @@
    "src": "made"
   }
  ],
+ "w|堆": [
+  {
+   "text": "周强的桌上堆着一摞还没签字的合同。",
+   "en": "A pile of unsigned contracts is stacked on Zhou Qiang's desk.",
+   "ko": "저우창의 책상에 아직 서명 안 한 계약서가 한 무더기 쌓여 있어요.",
+   "blank": "堆",
+   "src": "made"
+  },
+  {
+   "text": "大扫除时，王芳把落叶堆在操场的角落里。",
+   "en": "During the big cleanup, Wang Fang piled the fallen leaves in a corner of the playground.",
+   "ko": "대청소 때 왕팡은 낙엽을 운동장 구석에 모아 쌓았어요.",
+   "blank": "堆",
+   "src": "made"
+  }
+ ],
  "w|塞": [
   {
    "text": "陈杰把一叠文件塞进公文包，匆匆赶去开会。",
@@ -17574,6 +17782,22 @@
    "en": "The owner of the shop next door is waiting for Wang Fang to slip up so he can take revenge.",
    "ko": "옆 가게 사장은 왕팡이 실수하기만 기다리며 복수할 기회를 노려요.",
    "blank": "复仇",
+   "src": "made"
+  }
+ ],
+ "w|复制": [
+  {
+   "text": "周强把那份表格复制了一份，免得改错了没法恢复。",
+   "en": "Zhou Qiang made a copy of the spreadsheet so he could restore it if he made a mistake.",
+   "ko": "저우창은 잘못 고치면 되돌릴 수 없을까 봐 그 표를 하나 복사해 뒀어요.",
+   "blank": "复制",
+   "src": "made"
+  },
+  {
+   "text": "老师说，写作文不能直接从网上复制别人的句子。",
+   "en": "The teacher said you can't copy other people's sentences straight from the internet in essays.",
+   "ko": "선생님은 작문할 때 인터넷에서 남의 문장을 그대로 복사하면 안 된다고 했어요.",
+   "blank": "复制",
    "src": "made"
   }
  ],
@@ -18667,6 +18891,22 @@
    "src": "made"
   }
  ],
+ "w|失业": [
+  {
+   "text": "公司裁员的消息传开后，周强很担心自己会失业。",
+   "en": "After news of layoffs spread, Zhou Qiang worried he might lose his job.",
+   "ko": "회사 구조조정 소식이 퍼지자 저우창은 자기가 실직할까 봐 걱정했어요.",
+   "blank": "失业",
+   "src": "made"
+  },
+  {
+   "text": "王芳的父亲失业以后，在学校门口开了一家小文具店。",
+   "en": "After Wang Fang's father lost his job, he opened a small stationery shop by the school gate.",
+   "ko": "왕팡의 아버지는 실직한 뒤 학교 앞에 작은 문구점을 열었어요.",
+   "blank": "失业",
+   "src": "made"
+  }
+ ],
  "w|失去": [
   {
    "text": "别失去信心。",
@@ -19283,6 +19523,22 @@
    "en": "Is it tasty?",
    "ko": "맛있어?",
    "blank": "好吃"
+  }
+ ],
+ "w|好听": [
+  {
+   "text": "前台小姐的声音很好听，接电话的客户都夸她。",
+   "en": "The receptionist has a lovely voice, and callers always compliment her.",
+   "ko": "안내 데스크 직원 목소리가 고와서 전화한 고객들이 다 칭찬해요.",
+   "blank": "好听",
+   "src": "made"
+  },
+  {
+   "text": "音乐老师说王芳的嗓音很好听，让她参加合唱团。",
+   "en": "The music teacher said Wang Fang has a lovely voice and asked her to join the choir.",
+   "ko": "음악 선생님은 왕팡 목소리가 듣기 좋다며 합창단에 들어오라고 했어요.",
+   "blank": "好听",
+   "src": "made"
   }
  ],
  "w|好处": [
@@ -22659,6 +22915,22 @@
    "blank": "岁"
   }
  ],
+ "w|岗位": [
+  {
+   "text": "周强在这个岗位上干了五年，对业务非常熟悉。",
+   "en": "Zhou Qiang has worked in this position for five years and knows the business inside out.",
+   "ko": "저우창은 이 자리에서 오 년을 일해서 업무를 아주 잘 알아요.",
+   "blank": "岗位",
+   "src": "made"
+  },
+  {
+   "text": "值日表上写着每个同学的岗位，王芳负责擦黑板。",
+   "en": "The duty roster lists each student's post, and Wang Fang is in charge of wiping the blackboard.",
+   "ko": "당번표에 학생마다 맡은 자리가 적혀 있는데 왕팡은 칠판 닦기 담당이에요.",
+   "blank": "岗位",
+   "src": "made"
+  }
+ ],
  "w|岛": [
   {
    "text": "他们住在岛上。",
@@ -23600,6 +23872,22 @@
    "en": "Neighborhood officials visited the company and asked Lin Jing to build a mini-app for the community.",
    "ko": "동네 간부들이 회사를 둘러보고 린징에게 마을용 작은 앱을 만들어 달라고 부탁했어요.",
    "blank": "干部",
+   "src": "made"
+  }
+ ],
+ "w|平台": [
+  {
+   "text": "公司打算在网上建一个平台，专门卖自己的产品。",
+   "en": "The company plans to build an online platform just for selling its own products.",
+   "ko": "회사는 자기 제품만 파는 온라인 플랫폼을 만들 계획이에요.",
+   "blank": "平台",
+   "src": "made"
+  },
+  {
+   "text": "王芳在一个学习平台上找到了很多免费的数学课。",
+   "en": "Wang Fang found many free math lessons on a learning platform.",
+   "ko": "왕팡은 한 학습 플랫폼에서 무료 수학 강의를 많이 찾았어요.",
+   "blank": "平台",
    "src": "made"
   }
  ],
@@ -24781,6 +25069,22 @@
    "src": "made"
   }
  ],
+ "w|弯": [
+  {
+   "text": "周强弯下腰，把掉在桌子底下的文件捡了起来。",
+   "en": "Zhou Qiang bent down and picked up the papers that had fallen under the desk.",
+   "ko": "저우창은 허리를 굽혀 책상 밑에 떨어진 서류를 주웠어요.",
+   "blank": "弯",
+   "src": "made"
+  },
+  {
+   "text": "王芳不小心把尺子弯断了，只好向同桌借。",
+   "en": "Wang Fang accidentally bent her ruler until it snapped and had to borrow her deskmate's.",
+   "ko": "왕팡은 실수로 자를 구부리다 부러뜨려서 짝꿍에게 빌렸어요.",
+   "blank": "弯",
+   "src": "made"
+  }
+ ],
  "w|弱": [
   {
    "text": "市政厅的手机信号很弱，马林只好到窗边打电话。",
@@ -25150,6 +25454,38 @@
    "en": "To train new nurses, Sun Yue recorded a video of changing a dressing.",
    "ko": "쑨웨는 신입 간호사 교육을 위해 상처 소독하는 영상을 찍었어요.",
    "blank": "录像",
+   "src": "made"
+  }
+ ],
+ "w|录取": [
+  {
+   "text": "周强的女儿被一所好大学录取了，他高兴得请全组喝咖啡。",
+   "en": "Zhou Qiang's daughter was admitted to a good university, and he happily treated his whole team to coffee.",
+   "ko": "저우창의 딸이 좋은 대학에 합격해서 그는 기뻐하며 팀 전체에 커피를 샀어요.",
+   "blank": "录取",
+   "src": "made"
+  },
+  {
+   "text": "王芳的表姐去年被师范大学录取了，现在已经开始实习。",
+   "en": "Wang Fang's cousin was admitted to a teachers' university last year and has already started an internship.",
+   "ko": "왕팡의 사촌 언니는 작년에 사범대에 합격해서 지금 벌써 실습을 시작했어요.",
+   "blank": "录取",
+   "src": "made"
+  }
+ ],
+ "w|录音": [
+  {
+   "text": "为了写会议纪要，周强把整场会议都做了录音。",
+   "en": "To write up the minutes, Zhou Qiang recorded the entire meeting.",
+   "ko": "회의록을 쓰려고 저우창은 회의 전체를 녹음했어요.",
+   "blank": "录音",
+   "src": "made"
+  },
+  {
+   "text": "英语老师每天给大家放一段课文录音。",
+   "en": "The English teacher plays a recording of a text for the class every day.",
+   "ko": "영어 선생님은 매일 교과서 본문 녹음을 한 부분씩 들려줘요.",
+   "blank": "录音",
    "src": "made"
   }
  ],
@@ -26375,6 +26711,22 @@
    "en": "Who was elected president?",
    "ko": "누가 대통령이 됐어?",
    "blank": "总统"
+  }
+ ],
+ "w|总裁": [
+  {
+   "text": "公司的总裁今天突然来到周强的部门视察。",
+   "en": "The company president suddenly came to inspect Zhou Qiang's department today.",
+   "ko": "오늘 회사 총재가 갑자기 저우창의 부서를 둘러보러 왔어요.",
+   "blank": "总裁",
+   "src": "made"
+  },
+  {
+   "text": "一家大公司的总裁来学校做演讲，讲他年轻时的故事。",
+   "en": "The president of a big company came to the school to give a talk about his youth.",
+   "ko": "한 대기업 총재가 학교에 와서 젊은 시절 이야기를 강연했어요.",
+   "blank": "总裁",
+   "src": "made"
   }
  ],
  "w|总部": [
@@ -28813,6 +29165,22 @@
    "blank": "技术"
   }
  ],
+ "w|技能": [
+  {
+   "text": "公司鼓励员工下班后学习新的技能。",
+   "en": "The company encourages employees to learn new skills after work.",
+   "ko": "회사는 직원들이 퇴근 후에 새 기술을 배우도록 권해요.",
+   "blank": "技能",
+   "src": "made"
+  },
+  {
+   "text": "学校开了烹饪课，让学生学点生活技能。",
+   "en": "The school started a cooking class so students can learn some life skills.",
+   "ko": "학교에서 요리 수업을 열어 학생들이 생활 기술을 배우게 했어요.",
+   "blank": "技能",
+   "src": "made"
+  }
+ ],
  "w|把": [
   {
    "text": "把门关上。",
@@ -29973,6 +30341,22 @@
    "blank": "挖"
   }
  ],
+ "w|挣": [
+  {
+   "text": "周强加班加点，就是想多挣点钱给家里换套大房子。",
+   "en": "Zhou Qiang works overtime because he wants to earn more to get his family a bigger home.",
+   "ko": "저우창이 야근을 하는 건 돈을 더 벌어서 가족에게 더 큰 집을 마련해 주고 싶어서예요.",
+   "blank": "挣",
+   "src": "made"
+  },
+  {
+   "text": "王芳暑假帮邻居看孩子，挣了一点零花钱。",
+   "en": "Over the summer Wang Fang babysat for a neighbor and earned a little pocket money.",
+   "ko": "왕팡은 여름방학에 이웃 아이를 봐 주고 용돈을 조금 벌었어요.",
+   "blank": "挣",
+   "src": "made"
+  }
+ ],
  "w|挣扎": [
   {
    "text": "一只小猫卡在栏杆中间拼命挣扎，黄涛赶紧过去帮忙。",
@@ -30173,6 +30557,22 @@
    "src": "made"
   }
  ],
+ "w|排队": [
+  {
+   "text": "中午楼下的面馆人很多，周强排队排了二十分钟。",
+   "en": "The noodle shop downstairs is crowded at noon, and Zhou Qiang waited in line for twenty minutes.",
+   "ko": "점심때 아래층 국숫집에 사람이 많아서 저우창은 이십 분이나 줄을 섰어요.",
+   "blank": "排队",
+   "src": "made"
+  },
+  {
+   "text": "食堂开饭时，大家都在窗口前排队打饭。",
+   "en": "When the cafeteria opens, everyone lines up at the windows for food.",
+   "ko": "식당 배식이 시작되면 다들 창구 앞에 줄을 서서 밥을 받아요.",
+   "blank": "排队",
+   "src": "made"
+  }
+ ],
  "w|排除": [
   {
    "text": "老师查了监控，排除了小明偷拿橡皮的可能。",
@@ -30304,6 +30704,22 @@
    "en": "Shooting a promo video for her company, Liu Fang turned down the director's idea of adding a couple kissing.",
    "ko": "류팡이 회사 홍보 영상을 찍을 때 감독이 연인이 키스하는 장면을 넣자고 했지만 그녀가 거절했어요.",
    "blank": "接吻",
+   "src": "made"
+  }
+ ],
+ "w|接待": [
+  {
+   "text": "下午有客户来访，经理让周强负责接待。",
+   "en": "A client is visiting this afternoon, and the manager put Zhou Qiang in charge of receiving them.",
+   "ko": "오후에 고객이 방문해서 매니저가 저우창에게 맞이하는 일을 맡겼어요.",
+   "blank": "接待",
+   "src": "made"
+  },
+  {
+   "text": "学校开放日那天，王芳和几个同学负责接待家长。",
+   "en": "On the school open day, Wang Fang and a few classmates were in charge of welcoming parents.",
+   "ko": "학교 공개의 날에 왕팡과 친구 몇 명이 학부모 안내를 맡았어요.",
+   "blank": "接待",
    "src": "made"
   }
  ],
@@ -31367,6 +31783,22 @@
    "src": "made"
   }
  ],
+ "w|收藏": [
+  {
+   "text": "周强把同事发来的那篇好文章收藏了起来，打算周末再读。",
+   "en": "Zhou Qiang saved the good article his colleague sent, planning to read it on the weekend.",
+   "ko": "저우창은 동료가 보낸 좋은 글을 저장해 두고 주말에 다시 읽을 생각이에요.",
+   "blank": "收藏",
+   "src": "made"
+  },
+  {
+   "text": "王芳很喜欢收藏书签，已经攒了满满一盒。",
+   "en": "Wang Fang loves collecting bookmarks and has filled a whole box.",
+   "ko": "왕팡은 책갈피 모으기를 좋아해서 벌써 한 상자 가득 모았어요.",
+   "blank": "收藏",
+   "src": "made"
+  }
+ ],
  "w|收集": [
   {
    "text": "他喜欢收集邮票。",
@@ -31837,6 +32269,22 @@
    "blank": "教堂"
   }
  ],
+ "w|教学": [
+  {
+   "text": "周强的妻子是中学老师，晚上常在家准备教学材料。",
+   "en": "Zhou Qiang's wife is a high school teacher who often prepares teaching materials at home in the evening.",
+   "ko": "저우창의 아내는 중학교 선생님이라 저녁에 집에서 수업 자료를 자주 준비해요.",
+   "blank": "教学",
+   "src": "made"
+  },
+  {
+   "text": "这位老师的教学方法很特别，学生们上课从不打瞌睡。",
+   "en": "This teacher's teaching method is unusual; students never doze off in class.",
+   "ko": "이 선생님 수업 방식이 독특해서 학생들이 수업 중에 절대 졸지 않아요.",
+   "blank": "教学",
+   "src": "made"
+  }
+ ],
  "w|教师": [
   {
    "text": "张伟的老同学现在在中学当教师，说起学生来停不下来。",
@@ -32015,6 +32463,22 @@
    "en": "The data still needs checking.",
    "ko": "데이터는 아직 확인이 필요해.",
    "blank": "数据"
+  }
+ ],
+ "w|数目": [
+  {
+   "text": "周强算了算，这笔订单的数目比去年多了一倍。",
+   "en": "Zhou Qiang calculated that this order's amount is double last year's.",
+   "ko": "저우창이 계산해 보니 이번 주문 규모가 작년의 두 배였어요.",
+   "blank": "数目",
+   "src": "made"
+  },
+  {
+   "text": "王芳数了数，图书角的书比上学期多了不少，这个数目让大家很惊喜。",
+   "en": "Wang Fang counted and found the reading corner had many more books than last term, which surprised everyone.",
+   "ko": "왕팡이 세어 보니 학급 문고 책이 지난 학기보다 꽤 늘어서 다들 놀라고 기뻐했어요.",
+   "blank": "数目",
+   "src": "made"
   }
  ],
  "w|数量": [
@@ -35353,6 +35817,22 @@
    "src": "made"
   }
  ],
+ "w|校园": [
+  {
+   "text": "周强的公司今年去大学校园里招了一批新人。",
+   "en": "Zhou Qiang's company recruited a group of new hires on university campuses this year.",
+   "ko": "저우창의 회사는 올해 대학 캠퍼스에 가서 신입을 한 무리 뽑았어요.",
+   "blank": "校园",
+   "src": "made"
+  },
+  {
+   "text": "春天的校园里开满了樱花，王芳每天都绕路去看。",
+   "en": "In spring the campus is full of cherry blossoms, and Wang Fang takes a detour every day to see them.",
+   "ko": "봄이면 교정에 벚꽃이 가득 피어서 왕팡은 매일 일부러 돌아서 보러 가요.",
+   "blank": "校园",
+   "src": "made"
+  }
+ ],
  "w|校长": [
   {
    "text": "附近小学的校长每周都来吃王刚做的红烧肉。",
@@ -37985,6 +38465,22 @@
    "blank": "测试"
   }
  ],
+ "w|测量": [
+  {
+   "text": "搬进新办公室前，周强先去测量了房间的大小。",
+   "en": "Before moving into the new office, Zhou Qiang went to measure the size of the room.",
+   "ko": "새 사무실로 옮기기 전에 저우창은 먼저 방 크기를 쟀어요.",
+   "blank": "测量",
+   "src": "made"
+  },
+  {
+   "text": "科学课上，王芳和同桌一起测量了水的温度。",
+   "en": "In science class, Wang Fang and her deskmate measured the water temperature together.",
+   "ko": "과학 시간에 왕팡과 짝꿍은 함께 물의 온도를 쟀어요.",
+   "blank": "测量",
+   "src": "made"
+  }
+ ],
  "w|浪漫": [
   {
    "text": "今晚很浪漫。",
@@ -39095,6 +39591,22 @@
    "en": "Add a bit of salt.",
    "ko": "소금을 조금 넣어.",
    "blank": "点儿"
+  }
+ ],
+ "w|点子": [
+  {
+   "text": "开会时周强想出一个好点子，老板当场就同意了。",
+   "en": "At the meeting Zhou Qiang came up with a good idea, and the boss agreed on the spot.",
+   "ko": "회의 때 저우창이 좋은 아이디어를 내자 사장님이 그 자리에서 찬성했어요.",
+   "blank": "点子",
+   "src": "made"
+  },
+  {
+   "text": "班会上，王芳出了个点子：每周换一次座位。",
+   "en": "At the class meeting, Wang Fang suggested an idea: change seats once a week.",
+   "ko": "학급회의에서 왕팡이 매주 자리를 바꾸자는 아이디어를 냈어요.",
+   "blank": "点子",
+   "src": "made"
   }
  ],
  "w|烂": [
@@ -42589,6 +43101,22 @@
    "blank": "看到"
   }
  ],
+ "w|看待": [
+  {
+   "text": "周强学会了用积极的态度看待工作中的批评。",
+   "en": "Zhou Qiang has learned to view criticism at work with a positive attitude.",
+   "ko": "저우창은 일에서 받는 비판을 긍정적인 태도로 바라보는 법을 배웠어요.",
+   "blank": "看待",
+   "src": "made"
+  },
+  {
+   "text": "班主任教大家怎样正确看待失败。",
+   "en": "The homeroom teacher taught everyone how to view failure the right way.",
+   "ko": "담임 선생님은 실패를 어떻게 바르게 받아들일지 가르쳐 줬어요.",
+   "blank": "看待",
+   "src": "made"
+  }
+ ],
  "w|看来": [
   {
    "text": "看来不行。",
@@ -43169,6 +43697,22 @@
    "en": "This question is worth studying.",
    "ko": "이 문제는 연구할 가치가 있어.",
    "blank": "研究"
+  }
+ ],
+ "w|研究所": [
+  {
+   "text": "周强以前在一家研究所工作，后来才跳到这家公司。",
+   "en": "Zhou Qiang used to work at a research institute before moving to this company.",
+   "ko": "저우창은 예전에 한 연구소에서 일하다가 나중에 이 회사로 옮겼어요.",
+   "blank": "研究所",
+   "src": "made"
+  },
+  {
+   "text": "王芳的物理老师以前是研究所的科学家。",
+   "en": "Wang Fang's physics teacher used to be a scientist at a research institute.",
+   "ko": "왕팡의 물리 선생님은 예전에 연구소 과학자였어요.",
+   "blank": "研究所",
+   "src": "made"
   }
  ],
  "w|砰": [
@@ -45653,6 +46197,22 @@
    "src": "made"
   }
  ],
+ "w|纯粹": [
+  {
+   "text": "周强说，他帮同事纯粹是出于好心，没想要什么回报。",
+   "en": "Zhou Qiang says he helped his colleague purely out of kindness, expecting nothing in return.",
+   "ko": "저우창은 동료를 도운 건 순전히 좋은 마음에서였고 대가는 바라지 않았다고 해요.",
+   "blank": "纯粹",
+   "src": "made"
+  },
+  {
+   "text": "王芳画画纯粹是因为喜欢，从来没想过要比赛。",
+   "en": "Wang Fang draws purely because she enjoys it and never thought about competing.",
+   "ko": "왕팡은 순전히 좋아서 그림을 그리지, 대회는 생각해 본 적이 없어요.",
+   "blank": "纯粹",
+   "src": "made"
+  }
+ ],
  "w|纸": [
   {
    "text": "周强的桌上总是堆满了写着笔记的纸。",
@@ -47332,6 +47892,22 @@
    "en": "Wang Fang holds a fairly high position at her company, but in the kitchen she's still a beginner.",
    "ko": "왕팡은 회사에서 직위가 낮지 않지만 부엌에서는 아직 초보예요.",
    "blank": "职位",
+   "src": "made"
+  }
+ ],
+ "w|职务": [
+  {
+   "text": "周强升了职，新职务是市场部副经理。",
+   "en": "Zhou Qiang got promoted; his new post is deputy manager of the marketing department.",
+   "ko": "저우창이 승진해서 새 직책은 마케팅부 부매니저예요.",
+   "blank": "职务",
+   "src": "made"
+  },
+  {
+   "text": "王芳这学期当上了班长，这个职务让她忙了不少。",
+   "en": "Wang Fang became class monitor this term, and the role has kept her much busier.",
+   "ko": "왕팡은 이번 학기에 반장이 됐는데, 그 직책 때문에 꽤 바빠졌어요.",
+   "blank": "职务",
    "src": "made"
   }
  ],
@@ -52337,6 +52913,22 @@
    "blank": "责任"
   }
  ],
+ "w|账户": [
+  {
+   "text": "财务让周强把公司账户里的钱再核对一遍。",
+   "en": "Finance asked Zhou Qiang to double-check the money in the company account.",
+   "ko": "재무팀은 저우창에게 회사 계좌의 돈을 한 번 더 확인하라고 했어요.",
+   "blank": "账户",
+   "src": "made"
+  },
+  {
+   "text": "王芳把压岁钱存进了妈妈帮她开的银行账户。",
+   "en": "Wang Fang deposited her New Year's money into the bank account her mom opened for her.",
+   "ko": "왕팡은 세뱃돈을 엄마가 만들어 준 은행 계좌에 넣었어요.",
+   "blank": "账户",
+   "src": "made"
+  }
+ ],
  "w|货": [
   {
    "text": "黄涛每个周末都去跳蚤市场，看看有没有新到的货。",
@@ -52572,6 +53164,22 @@
    "en": "A company is willing to invest capital to turn Lili's invention into a product.",
    "ko": "한 회사가 리리의 발명을 제품으로 만들려고 자본을 투자하겠다고 했어요.",
    "blank": "资本",
+   "src": "made"
+  }
+ ],
+ "w|资本主义": [
+  {
+   "text": "周强午休时在看一本讲资本主义历史的书。",
+   "en": "Zhou Qiang is reading a book on the history of capitalism during his lunch break.",
+   "ko": "저우창은 점심시간에 자본주의 역사를 다룬 책을 읽고 있어요.",
+   "blank": "资本主义",
+   "src": "made"
+  },
+  {
+   "text": "历史课上，老师讲了资本主义是怎么发展起来的。",
+   "en": "In history class, the teacher explained how capitalism developed.",
+   "ko": "역사 시간에 선생님이 자본주의가 어떻게 발전했는지 설명했어요.",
+   "blank": "资本主义",
    "src": "made"
   }
  ],
@@ -57531,6 +58139,22 @@
    "blank": "附近"
   }
  ],
+ "w|陌生": [
+  {
+   "text": "第一天上班，周强对陌生的环境有点不适应。",
+   "en": "On his first day, Zhou Qiang felt a little out of place in the unfamiliar surroundings.",
+   "ko": "출근 첫날 저우창은 낯선 환경이 좀 어색했어요.",
+   "blank": "陌生",
+   "src": "made"
+  },
+  {
+   "text": "转学第一天，王芳看着满教室陌生的面孔，有点紧张。",
+   "en": "On her first day at the new school, Wang Fang felt nervous seeing a classroom full of unfamiliar faces.",
+   "ko": "전학 첫날 왕팡은 교실 가득한 낯선 얼굴들을 보고 좀 긴장했어요.",
+   "blank": "陌生",
+   "src": "made"
+  }
+ ],
  "w|陌生人": [
   {
    "text": "别跟陌生人说话。",
@@ -58754,6 +59378,22 @@
    "en": "Before the launch event, Liu Fang had everyone get the demo phones and computers ready.",
    "ko": "발표회 전에 류팡은 모두에게 시연용 휴대폰과 컴퓨터를 준비해 두라고 했어요.",
    "blank": "预备",
+   "src": "made"
+  }
+ ],
+ "w|预期": [
+  {
+   "text": "新产品的销量比预期的还要好，老板很满意。",
+   "en": "Sales of the new product were even better than expected, and the boss is very pleased.",
+   "ko": "신제품 판매량이 예상보다 좋아서 사장님이 무척 만족해요.",
+   "blank": "预期",
+   "src": "made"
+  },
+  {
+   "text": "这次考试王芳没考到预期的分数，心里有点难过。",
+   "en": "Wang Fang didn't get the score she expected on this exam and feels a bit down.",
+   "ko": "이번 시험에서 왕팡은 기대한 점수가 안 나와서 좀 속상해요.",
+   "blank": "预期",
    "src": "made"
   }
  ],

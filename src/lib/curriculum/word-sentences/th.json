@@ -1657,6 +1657,22 @@
    "blank": "กัน"
   }
  ],
+ "w|กั้น": [
+  {
+   "text": "ตำรวจเอาแผงเหล็กมากั้นไม่ให้นักข่าวเข้าใกล้ที่เกิดเหตุ",
+   "en": "Police set up metal barriers to keep reporters away from the scene.",
+   "ko": "경찰은 철제 바리케이드를 쳐서 기자들이 현장에 다가가지 못하게 했어요.",
+   "blank": "กั้น",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะใช้ตู้ไม้กั้นครัวกับที่นั่งลูกค้าไว้",
+   "en": "Piya uses a wooden cabinet to separate the kitchen from the customer seating.",
+   "ko": "삐야는 나무 장으로 주방과 손님 자리를 나눠 놨어요.",
+   "blank": "กั้น",
+   "src": "made"
+  }
+ ],
  "w|กันยายน": [
   {
    "text": "กันยายนเริ่มเย็นลง",
@@ -3064,6 +3080,22 @@
    "en": "Someone reported being tricked into paying a fee before getting an online loan.",
    "ko": "누군가 온라인 대출 전에 수수료를 보내라는 사기를 당했다고 신고했어요.",
    "blank": "กู้เงิน",
+   "src": "made"
+  }
+ ],
+ "w|กู้ยืม": [
+  {
+   "text": "เอกตามข่าวบริษัทที่กู้ยืมเงินจากธนาคารรัฐแล้วไม่ยอมจ่ายคืน",
+   "en": "Ek is following a company that borrowed from a state bank and refused to pay it back.",
+   "ko": "엑은 국책 은행에서 돈을 빌리고 갚지 않은 회사를 취재하고 있어요.",
+   "blank": "กู้ยืม",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะกู้ยืมเงินจากพี่ชายมาซ่อมหลังคาร้านที่รั่ว",
+   "en": "Piya borrowed money from her older brother to fix the leaking restaurant roof.",
+   "ko": "삐야는 새는 가게 지붕을 고치려고 오빠에게 돈을 빌렸어요.",
+   "blank": "กู้ยืม",
    "src": "made"
   }
  ],
@@ -5953,6 +5985,22 @@
    "src": "made"
   }
  ],
+ "w|เข้มข้น": [
+  {
+   "text": "การสืบสวนเรื่องนี้เข้มข้นขึ้นหลังมีพยานคนใหม่โผล่มา",
+   "en": "The investigation intensified after a new witness turned up.",
+   "ko": "새 증인이 나타난 뒤 이 사건 조사가 더 치열해졌어요.",
+   "blank": "เข้มข้น",
+   "src": "made"
+  },
+  {
+   "text": "น้ำซุปของร้านปิยะเข้มข้นเพราะเคี่ยวกระดูกหมูทั้งคืน",
+   "en": "Piya's broth is rich because she simmers pork bones all night.",
+   "ko": "삐야네 국물이 진한 건 돼지 뼈를 밤새 고았기 때문이에요.",
+   "blank": "เข้มข้น",
+   "src": "made"
+  }
+ ],
  "w|เข็มขัด": [
   {
    "text": "เข็มขัดเส้นนี้ยาวไปหน่อย",
@@ -6527,6 +6575,22 @@
    "blank": "คงจะ"
   }
  ],
+ "w|คณบดี": [
+  {
+   "text": "คณบดีคณะนิเทศศาสตร์เชิญเอกไปเล่าประสบการณ์ให้นักศึกษาฟัง",
+   "en": "The dean of the communication arts faculty invited Ek to share his experience with students.",
+   "ko": "커뮤니케이션학부 학장이 엑을 초대해 학생들에게 경험을 들려 달라고 했어요.",
+   "blank": "คณบดี",
+   "src": "made"
+  },
+  {
+   "text": "คณบดีจากมหาวิทยาลัยใกล้ๆ มากินข้าวมันไก่ที่ร้านทุกวันศุกร์",
+   "en": "A dean from the nearby university eats chicken rice at the restaurant every Friday.",
+   "ko": "근처 대학 학장이 매주 금요일 가게에 와서 닭고기 덮밥을 먹어요.",
+   "blank": "คณบดี",
+   "src": "made"
+  }
+ ],
  "w|คณะ": [
   {
    "text": "คณะนักข่าวจากต่างประเทศมาดูงานที่ห้องข่าวเมื่อวานนี้",
@@ -7060,6 +7124,22 @@
    "en": "The monthly pool membership covers both the locker and the towel.",
    "ko": "수영장 월 회비에는 사물함과 수건 이용료가 모두 포함돼요.",
    "blank": "ครอบคลุม",
+   "src": "made"
+  }
+ ],
+ "w|ครอบงำ": [
+  {
+   "text": "เอกเตือนว่าข่าวปลอมกำลังครอบงำความคิดของคนดูโซเชียล",
+   "en": "Ek warned that fake news is taking over the minds of social media users.",
+   "ko": "엑은 가짜 뉴스가 소셜 미디어 이용자들의 생각을 지배하고 있다고 경고했어요.",
+   "blank": "ครอบงำ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะไม่ยอมให้ความเหนื่อยครอบงำจนเลิกทำสิ่งที่รัก",
+   "en": "Piya won't let exhaustion overpower her into quitting what she loves.",
+   "ko": "삐야는 피로에 짓눌려 좋아하는 일을 그만두지 않으려 해요.",
+   "blank": "ครอบงำ",
    "src": "made"
   }
  ],
@@ -9697,6 +9777,22 @@
    "src": "made"
   }
  ],
+ "w|ค้าขาย": [
+  {
+   "text": "เอกสัมภาษณ์แม่ค้าที่ค้าขายอยู่หน้าสถานีรถไฟมาสามสิบปี",
+   "en": "Ek interviewed a vendor who has traded in front of the train station for thirty years.",
+   "ko": "엑은 기차역 앞에서 삼십 년째 장사해 온 상인을 인터뷰했어요.",
+   "blank": "ค้าขาย",
+   "src": "made"
+  },
+  {
+   "text": "ครอบครัวของปิยะค้าขายข้าวมันไก่มาตั้งแต่รุ่นปู่",
+   "en": "Piya's family has sold chicken rice since her grandfather's time.",
+   "ko": "삐야의 가족은 할아버지 때부터 닭고기 덮밥을 팔아 왔어요.",
+   "blank": "ค้าขาย",
+   "src": "made"
+  }
+ ],
  "w|คาง": [
   {
    "text": "เขาวางมือรองคาง",
@@ -10861,6 +10957,22 @@
    "blank": "คู่รัก"
   }
  ],
+ "w|คู่สัญญา": [
+  {
+   "text": "สัญญาโฆษณาฉบับนี้ระบุว่าคู่สัญญาห้ามเปิดเผยตัวเลขกัน",
+   "en": "This advertising contract states that the parties may not disclose the figures.",
+   "ko": "이 광고 계약서에는 계약 당사자가 금액을 공개하면 안 된다고 적혀 있어요.",
+   "blank": "คู่สัญญา",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะกับคู่สัญญาเช่าตึกตกลงต่อสัญญาอีกห้าปี",
+   "en": "Piya and the other party to the building lease agreed to renew for five more years.",
+   "ko": "삐야와 건물 임대 계약 상대는 계약을 오 년 더 연장하기로 했어요.",
+   "blank": "คู่สัญญา",
+   "src": "made"
+  }
+ ],
  "w|คู่หมั้น": [
   {
    "text": "เขานำแหวนให้คู่หมั้น",
@@ -11585,6 +11697,22 @@
    "blank": "ฆ่าตัวตาย"
   }
  ],
+ "w|โฆษก": [
+  {
+   "text": "โฆษกกระทรวงนัดแถลงข่าวตอนบ่ายสาม เอกจึงต้องรีบออกไป",
+   "en": "The ministry spokesperson scheduled a briefing for three in the afternoon, so Ek had to hurry out.",
+   "ko": "부처 대변인이 오후 세 시에 브리핑을 잡아서 엑은 서둘러 나가야 했어요.",
+   "blank": "โฆษก",
+   "src": "made"
+  },
+  {
+   "text": "โฆษกจังหวัดแวะมากินข้าวที่ร้านหลังแถลงข่าวเสร็จ",
+   "en": "The provincial spokesperson stopped by the restaurant to eat after the press briefing.",
+   "ko": "도 대변인이 브리핑이 끝난 뒤 가게에 들러 밥을 먹었어요.",
+   "blank": "โฆษก",
+   "src": "made"
+  }
+ ],
  "w|โฆษณา": [
   {
    "text": "โฆษณาบนโทรทัศน์ดังมาก",
@@ -11993,6 +12121,22 @@
    "en": "The change is still not correct.",
    "ko": "거스름돈이 아직 맞지 않아.",
    "blank": "เงินทอน"
+  }
+ ],
+ "w|เงินทุน": [
+  {
+   "text": "สำนักข่าวเล็กๆ ของเอกขาดเงินทุนจนต้องลดจำนวนหน้าลง",
+   "en": "Ek's small news outlet ran short of funds and had to cut pages.",
+   "ko": "엑의 작은 언론사는 자금이 부족해서 지면을 줄여야 했어요.",
+   "blank": "เงินทุน",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะใช้เงินทุนก้อนแรกซื้อเตาและกระทะใบใหญ่",
+   "en": "Piya used her first capital to buy a stove and a big wok.",
+   "ko": "삐야는 첫 자금으로 화덕과 큰 웍을 샀어요.",
+   "blank": "เงินทุน",
+   "src": "made"
   }
  ],
  "w|เงินบำนาญ": [
@@ -13781,6 +13925,22 @@
    "en": "Contact staff if there is a problem.",
    "ko": "문제가 있으면 직원에게 연락해.",
    "blank": "เจ้าหน้าที่"
+  }
+ ],
+ "w|เจ้าหนี้": [
+  {
+   "text": "บริษัทที่เอกตามข่าวยังค้างเงินเจ้าหนี้หลายสิบราย",
+   "en": "The company Ek is covering still owes money to dozens of creditors.",
+   "ko": "엑이 취재하는 회사는 아직 수십 명의 채권자에게 돈을 갚지 않았어요.",
+   "blank": "เจ้าหนี้",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะจ่ายเงินคืนเจ้าหนี้ครบทุกบาทภายในสามปี",
+   "en": "Piya paid her creditors back every last baht within three years.",
+   "ko": "삐야는 삼 년 안에 채권자에게 한 푼도 빠짐없이 갚았어요.",
+   "blank": "เจ้าหนี้",
+   "src": "made"
   }
  ],
  "w|เจาะ": [
@@ -17107,6 +17267,22 @@
    "blank": "ไซซ์"
   }
  ],
+ "w|ไซต์": [
+  {
+   "text": "เอกขับรถไปไซต์ก่อสร้างคอนโดที่ถล่มลงเมื่อคืน",
+   "en": "Ek drove to the condo construction site that collapsed last night.",
+   "ko": "엑은 어젯밤 무너진 콘도 공사 현장으로 차를 몰고 갔어요.",
+   "blank": "ไซต์",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะส่งข้าวกล่องให้คนงานที่ไซต์ก่อสร้างหลังร้านทุกเที่ยง",
+   "en": "Piya sends boxed lunches to the workers at the construction site behind the restaurant every noon.",
+   "ko": "삐야는 매일 점심 가게 뒤 공사 현장 인부들에게 도시락을 보내요.",
+   "blank": "ไซต์",
+   "src": "made"
+  }
+ ],
  "w|ญาติ": [
   {
    "text": "ญาติมาเยี่ยมบ้านวันหยุด",
@@ -17546,6 +17722,22 @@
    "en": "The teacher pointed out to Chan that the index finger in her picture was too long.",
    "ko": "선생님은 짠의 그림에서 검지가 너무 길다고 짚어 줬어요.",
    "blank": "ดัชนี",
+   "src": "made"
+  }
+ ],
+ "w|ดัดแปลง": [
+  {
+   "text": "ฝ่ายกราฟิกดัดแปลงแผนที่เก่าให้ใช้ประกอบข่าวน้ำท่วม",
+   "en": "The graphics team adapted an old map to use with the flood story.",
+   "ko": "그래픽팀은 옛 지도를 홍수 기사에 쓰도록 고쳤어요.",
+   "blank": "ดัดแปลง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะดัดแปลงสูตรแกงเขียวหวานให้เด็กกินได้โดยไม่เผ็ด",
+   "en": "Piya modified the green curry recipe so children can eat it without the heat.",
+   "ko": "삐야는 아이들도 맵지 않게 먹을 수 있도록 그린 커리 요리법을 바꿨어요.",
+   "blank": "ดัดแปลง",
    "src": "made"
   }
  ],
@@ -18635,6 +18827,22 @@
    "blank": "โดยเฉพาะ"
   }
  ],
+ "w|โดยเฉพาะอย่างยิ่ง": [
+  {
+   "text": "ข่าวเศรษฐกิจโดยเฉพาะอย่างยิ่งเรื่องราคาน้ำมันมีคนอ่านมากที่สุด",
+   "en": "Economic news, especially about oil prices, gets the most readers.",
+   "ko": "경제 뉴스, 그중에서도 특히 기름값 기사를 가장 많이 읽어요.",
+   "blank": "โดยเฉพาะอย่างยิ่ง",
+   "src": "made"
+  },
+  {
+   "text": "เมนูขายดีของร้าน โดยเฉพาะอย่างยิ่งต้มยำ ต้องใช้กุ้งสดทุกวัน",
+   "en": "The restaurant's best-sellers, tom yum above all, need fresh shrimp every day.",
+   "ko": "가게 인기 메뉴, 특히 똠얌에는 매일 신선한 새우가 들어가요.",
+   "blank": "โดยเฉพาะอย่างยิ่ง",
+   "src": "made"
+  }
+ ],
  "w|โดยตรง": [
   {
    "text": "ธนาโอนค่าส่วนกลางให้นิติบุคคลโดยตรงทุกเดือน",
@@ -18790,6 +18998,22 @@
    "en": "Short morning meetings worked better than Napha expected.",
    "ko": "짧은 아침 회의는 나파가 생각했던 것보다 효과가 있었어요.",
    "blank": "ได้ผล",
+   "src": "made"
+  }
+ ],
+ "w|ได้มา": [
+  {
+   "text": "บรรณาธิการถามเอกว่าเอกสารชุดนี้ได้มาจากใคร",
+   "en": "The editor asked Ek who he had gotten this set of documents from.",
+   "ko": "편집장은 엑에게 이 서류를 누구에게서 얻었냐고 물었어요.",
+   "blank": "ได้มา",
+   "src": "made"
+  },
+  {
+   "text": "สูตรน้ำจิ้มที่ร้านใช้อยู่ได้มาจากยายของปิยะ",
+   "en": "The dipping sauce recipe the restaurant uses came from Piya's grandmother.",
+   "ko": "가게에서 쓰는 소스 요리법은 삐야의 할머니에게서 물려받았어요.",
+   "blank": "ได้มา",
    "src": "made"
   }
  ],
@@ -21761,6 +21985,22 @@
    "blank": "แตะ"
   }
  ],
+ "w|แตะต้อง": [
+  {
+   "text": "เอกถูกสั่งห้ามแตะต้องหลักฐานในที่เกิดเหตุ",
+   "en": "Ek was told not to touch any evidence at the scene.",
+   "ko": "엑은 현장의 증거물에 손대지 말라는 지시를 받았어요.",
+   "blank": "แตะต้อง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสั่งลูกน้องห้ามแตะต้องหม้อซุปที่ยังเดือดอยู่",
+   "en": "Piya told her staff not to touch the soup pot that's still boiling.",
+   "ko": "삐야는 직원들에게 아직 끓고 있는 수프 냄비에 손대지 말라고 했어요.",
+   "blank": "แตะต้อง",
+   "src": "made"
+  }
+ ],
  "w|โต": [
   {
    "text": "ลูกชายโตเร็วมากปีนี้",
@@ -24097,6 +24337,22 @@
    "src": "made"
   }
  ],
+ "w|ทำนา": [
+  {
+   "text": "เอกลงพื้นที่ไปคุยกับชาวบ้านที่ยังทำนาด้วยควาย",
+   "en": "Ek went into the field to talk with villagers who still farm rice with buffalo.",
+   "ko": "엑은 현장에 가서 아직도 물소로 벼농사를 짓는 주민들과 이야기했어요.",
+   "blank": "ทำนา",
+   "src": "made"
+  },
+  {
+   "text": "ข้าวที่ร้านใช้มาจากญาติของปิยะที่ทำนาอยู่สุพรรณบุรี",
+   "en": "The rice the restaurant uses comes from Piya's relatives who grow rice in Suphanburi.",
+   "ko": "가게에서 쓰는 쌀은 수판부리에서 벼농사를 짓는 삐야의 친척에게서 와요.",
+   "blank": "ทำนา",
+   "src": "made"
+  }
+ ],
  "w|ทำนาย": [
   {
    "text": "หมอดูทำนายดวงชะตาให้",
@@ -24481,6 +24737,22 @@
    "src": "made"
   }
  ],
+ "w|ที่ทำการ": [
+  {
+   "text": "เอกไปที่ทำการไปรษณีย์เพื่อสัมภาษณ์บุรุษไปรษณีย์ที่ทำงานมานานที่สุด",
+   "en": "Ek went to the post office to interview its longest-serving postman.",
+   "ko": "엑은 가장 오래 일한 집배원을 인터뷰하러 우체국에 갔어요.",
+   "blank": "ที่ทำการ",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของปิยะอยู่ตรงข้ามที่ทำการอำเภอพอดี",
+   "en": "Piya's restaurant is right across from the district office.",
+   "ko": "삐야의 식당은 군청 바로 맞은편에 있어요.",
+   "blank": "ที่ทำการ",
+   "src": "made"
+  }
+ ],
  "w|ที่นอน": [
   {
    "text": "ที่นอนนี้แข็งเกินไป",
@@ -24599,6 +24871,22 @@
    "en": "He just joined a new team.",
    "ko": "그는 방금 새 팀에 들어왔어.",
    "blank": "ทีม"
+  }
+ ],
+ "w|ทีมงาน": [
+  {
+   "text": "ทีมงานข่าวกะดึกสั่งข้าวต้มมากินด้วยกันตอนตีหนึ่ง",
+   "en": "The night-shift news team ordered rice porridge to eat together at one in the morning.",
+   "ko": "야간 뉴스팀은 새벽 한 시에 죽을 시켜 함께 먹었어요.",
+   "blank": "ทีมงาน",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานรายการอาหารมาถ่ายทำที่ร้านของปิยะเมื่อวันเสาร์",
+   "en": "A food show crew came to film at Piya's restaurant on Saturday.",
+   "ko": "음식 프로그램 제작진이 토요일에 삐야의 식당에서 촬영했어요.",
+   "blank": "ทีมงาน",
+   "src": "made"
   }
  ],
  "w|ที่มา": [
@@ -25889,6 +26177,22 @@
    "blank": "ธุรกิจ"
   }
  ],
+ "w|ธุระ": [
+  {
+   "text": "เอกขอลาครึ่งวันเพราะมีธุระต้องไปทำที่อำเภอ",
+   "en": "Ek asked for half a day off because he had business at the district office.",
+   "ko": "엑은 군청에 볼일이 있어서 반차를 냈어요.",
+   "blank": "ธุระ",
+   "src": "made"
+  },
+  {
+   "text": "วันนี้ปิยะฝากร้านไว้กับน้องเพราะมีธุระที่ธนาคาร",
+   "en": "Today Piya left the restaurant with her younger sibling because she had business at the bank.",
+   "ko": "오늘 삐야는 은행에 볼일이 있어서 가게를 동생에게 맡겼어요.",
+   "blank": "ธุระ",
+   "src": "made"
+  }
+ ],
  "w|เธอ": [
   {
    "text": "เธอไปไหนมา",
@@ -27115,6 +27419,22 @@
    "en": "This employer is kind.",
    "ko": "이 고용주는 마음이 좋아.",
    "blank": "นายจ้าง"
+  }
+ ],
+ "w|นายทุน": [
+  {
+   "text": "เอกกำลังเขียนข่าวเรื่องนายทุนต่างถิ่นที่กว้านซื้อที่ดินริมทะเล",
+   "en": "Ek is writing a story about outside investors buying up land along the coast.",
+   "ko": "엑은 외지 자본가들이 해변 땅을 사들이는 기사를 쓰고 있어요.",
+   "blank": "นายทุน",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของปิยะไม่เคยกู้เงินนายทุน ใช้แต่เงินเก็บของครอบครัว",
+   "en": "Piya's restaurant never borrowed from investors; it only used family savings.",
+   "ko": "삐야의 식당은 자본가에게 돈을 빌린 적이 없고 가족 저축만 썼어요.",
+   "blank": "นายทุน",
+   "src": "made"
   }
  ],
  "w|นายพล": [
@@ -28908,6 +29228,22 @@
    "en": "The woman sitting across from Napha runs a small hotel in the town the train is heading to.",
    "ko": "나파 맞은편에 앉은 여자는 기차가 향하는 도시에서 작은 호텔을 운영해요.",
    "blank": "บริหาร",
+   "src": "made"
+  }
+ ],
+ "w|บริหารงาน": [
+  {
+   "text": "บรรณาธิการคนใหม่บริหารงานแบบให้นักข่าวตัดสินใจเองมากขึ้น",
+   "en": "The new editor runs things by letting reporters make more of their own decisions.",
+   "ko": "새 편집장은 기자들이 스스로 더 결정하게 하는 방식으로 운영해요.",
+   "blank": "บริหารงาน",
+   "src": "made"
+  },
+  {
+   "text": "แม่ของปิยะยังช่วยบริหารงานในครัวทุกเช้าแม้จะเกษียณแล้ว",
+   "en": "Piya's mother still helps run the kitchen every morning even though she's retired.",
+   "ko": "삐야의 어머니는 은퇴했는데도 매일 아침 주방 운영을 도와요.",
+   "blank": "บริหารงาน",
    "src": "made"
   }
  ],
@@ -30923,6 +31259,22 @@
    "src": "made"
   }
  ],
+ "w|ประท้วง": [
+  {
+   "text": "นักศึกษากลุ่มหนึ่งรวมตัวประท้วงหน้าสำนักงานเขต เอกจึงรีบไปทำข่าว",
+   "en": "A group of students gathered to protest at the district office, so Ek rushed to cover it.",
+   "ko": "학생들이 구청 앞에 모여 시위하자 엑은 서둘러 취재하러 갔어요.",
+   "blank": "ประท้วง",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าประจำแกล้งประท้วงเมื่อปิยะเอาเมนูแกงส้มออก",
+   "en": "Regular customers jokingly protested when Piya took the sour curry off the menu.",
+   "ko": "단골손님들은 삐야가 깽솜을 메뉴에서 빼자 장난으로 항의했어요.",
+   "blank": "ประท้วง",
+   "src": "made"
+  }
+ ],
  "w|ประทับใจ": [
   {
    "text": "ฉันประทับใจการแสดง",
@@ -32464,6 +32816,22 @@
    "en": "That bird hurt its wing.",
    "ko": "그 새는 날개를 다쳤어.",
    "blank": "ปีก",
+   "src": "made"
+  }
+ ],
+ "w|ปีงบประมาณ": [
+  {
+   "text": "เอกรายงานว่างบป้องกันน้ำท่วมของปีงบประมาณหน้าถูกตัดลงครึ่งหนึ่ง",
+   "en": "Ek reported that next fiscal year's flood prevention budget was cut in half.",
+   "ko": "엑은 다음 회계연도 홍수 방지 예산이 반으로 깎였다고 보도했어요.",
+   "blank": "ปีงบประมาณ",
+   "src": "made"
+  },
+  {
+   "text": "สามีของปิยะบ่นว่าช่วงปลายปีงบประมาณงานที่ศาลากลางยุ่งมาก",
+   "en": "Piya's husband grumbles that work at city hall gets very busy at the end of the fiscal year.",
+   "ko": "삐야의 남편은 회계연도 말에는 시청 일이 아주 바쁘다고 투덜대요.",
+   "blank": "ปีงบประมาณ",
    "src": "made"
   }
  ],
@@ -36229,6 +36597,22 @@
    "blank": "พ่อตา"
   }
  ],
+ "w|พอเพียง": [
+  {
+   "text": "เอกทำสกู๊ปเรื่องหมู่บ้านที่ใช้ชีวิตแบบพอเพียงในจังหวัดน่าน",
+   "en": "Ek did a feature on a village in Nan province that lives self-sufficiently.",
+   "ko": "엑은 난 도에서 자급자족하며 사는 마을을 특집으로 다뤘어요.",
+   "blank": "พอเพียง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะบอกว่ากำไรไม่ต้องมาก แค่พอเพียงให้ลูกได้เรียนหนังสือ",
+   "en": "Piya says the profit doesn't need to be big, just enough to put her kids through school.",
+   "ko": "삐야는 이익이 많을 필요 없고 아이들 학교 보낼 만큼이면 충분하다고 해요.",
+   "blank": "พอเพียง",
+   "src": "made"
+  }
+ ],
  "w|พ่อแม่": [
   {
    "text": "พ่อแม่สนับสนุนให้เรียนต่อ",
@@ -36932,6 +37316,22 @@
    "en": "This airport has only one smoking area, outside the building.",
    "ko": "이 공항에는 흡연 구역이 건물 밖에 한 곳밖에 없어요.",
    "blank": "พื้นที่",
+   "src": "made"
+  }
+ ],
+ "w|พื้นบ้าน": [
+  {
+   "text": "เอกเขียนข่าวงานประเพณีพื้นบ้านที่จัดเพียงปีละครั้ง",
+   "en": "Ek wrote about a local folk festival held only once a year.",
+   "ko": "엑은 일 년에 한 번만 열리는 지역 전통 축제 기사를 썼어요.",
+   "blank": "พื้นบ้าน",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของปิยะขายขนมพื้นบ้านที่หากินยากในเมืองใหญ่",
+   "en": "Piya's restaurant sells traditional local sweets that are hard to find in big cities.",
+   "ko": "삐야의 식당은 대도시에서 보기 힘든 향토 과자를 팔아요.",
+   "blank": "พื้นบ้าน",
    "src": "made"
   }
  ],
@@ -39351,6 +39751,22 @@
    "en": "It's broken.",
    "ko": "고장 났어.",
    "blank": "มัน"
+  }
+ ],
+ "w|มั่น": [
+  {
+   "text": "เอกยืนยันอย่างหนักแน่นมั่นเหมาะว่าแหล่งข่าวน่าเชื่อถือ",
+   "en": "Ek firmly insisted that his source was reliable.",
+   "ko": "엑은 취재원이 믿을 만하다고 단호하게 말했어요.",
+   "blank": "มั่น",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะสอนลูกชายว่าทำอาหารต้องใจเย็นและมือมั่น",
+   "en": "Piya teaches her son that cooking takes a calm mind and a steady hand.",
+   "ko": "삐야는 아들에게 요리는 침착한 마음과 흔들림 없는 손이 필요하다고 가르쳐요.",
+   "blank": "มั่น",
+   "src": "made"
   }
  ],
  "w|มั่นคง": [
@@ -43443,6 +43859,22 @@
    "blank": "รับ"
   }
  ],
+ "w|รับจ้าง": [
+  {
+   "text": "ช่างภาพบางคนในกองข่าวรับจ้างถ่ายงานแต่งช่วงวันหยุด",
+   "en": "Some photographers in the newsroom take paid wedding jobs on weekends.",
+   "ko": "보도국 사진기자 몇몇은 주말에 돈을 받고 결혼식 촬영을 해요.",
+   "blank": "รับจ้าง",
+   "src": "made"
+  },
+  {
+   "text": "ช่วงเทศกาลปิยะจ้างแม่บ้านรับจ้างมาช่วยล้างจาน",
+   "en": "During the festival season Piya hires day laborers to help wash dishes.",
+   "ko": "축제 기간에 삐야는 일당 일꾼을 불러 설거지를 돕게 해요.",
+   "blank": "รับจ้าง",
+   "src": "made"
+  }
+ ],
  "w|รับใช้": [
   {
    "text": "พ่อของกิตติเคยรับใช้ครอบครัวเจ้าของโรงงานในฐานะคนขับรถ",
@@ -43534,6 +43966,22 @@
    "en": "Suda assured customers that the eggs in the shop are fresh every day.",
    "ko": "수다는 손님들에게 가게 달걀이 매일 신선하다고 장담했어요.",
    "blank": "รับรอง",
+   "src": "made"
+  }
+ ],
+ "w|รับราชการ": [
+  {
+   "text": "พ่อของเอกรับราชการเป็นครูก่อนลูกชายจะมาเป็นนักข่าว",
+   "en": "Ek's father worked in government service as a teacher before his son became a journalist.",
+   "ko": "엑의 아버지는 아들이 기자가 되기 전에 공무원으로 교사 일을 했어요.",
+   "blank": "รับราชการ",
+   "src": "made"
+  },
+  {
+   "text": "สามีของปิยะรับราชการอยู่ที่ศาลากลาง ตอนเย็นจึงมาช่วยเก็บร้าน",
+   "en": "Piya's husband is a civil servant at city hall, so he comes to help close up in the evening.",
+   "ko": "삐야의 남편은 시청 공무원이라 저녁에 와서 가게 정리를 도와요.",
+   "blank": "รับราชการ",
    "src": "made"
   }
  ],
@@ -44872,6 +45320,22 @@
    "en": "Porn ran at an easy steady pace without pushing until the last kilometre.",
    "ko": "폰은 마지막 일 킬로미터까지 서두르지 않고 꾸준히 달렸어요.",
    "blank": "เรื่อย",
+   "src": "made"
+  }
+ ],
+ "w|เรื่อยๆ": [
+  {
+   "text": "ยอดคนอ่านข่าวออนไลน์ของสำนักข่าวเพิ่มขึ้นเรื่อยๆ ตั้งแต่ต้นปี",
+   "en": "The outlet's online readership has kept rising since the start of the year.",
+   "ko": "언론사의 온라인 독자 수가 연초부터 꾸준히 늘었어요.",
+   "blank": "เรื่อยๆ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกค้าเดินเข้าร้านมาเรื่อยๆ ตั้งแต่สิบโมงจนถึงบ่ายสอง",
+   "en": "Customers keep trickling into the restaurant from ten until two in the afternoon.",
+   "ko": "손님이 오전 열 시부터 오후 두 시까지 끊임없이 들어와요.",
+   "blank": "เรื่อยๆ",
    "src": "made"
   }
  ],
@@ -46679,6 +47143,22 @@
    "blank": "ลูกสาว"
   }
  ],
+ "w|ลูกหนี้": [
+  {
+   "text": "ข่าวพาดหัววันนี้เป็นเรื่องลูกหนี้นอกระบบที่ถูกทวงเงินอย่างรุนแรง",
+   "en": "Today's headline is about informal borrowers being harshly pressed for money.",
+   "ko": "오늘 머리기사는 사채 채무자들이 거칠게 빚 독촉을 받는 이야기예요.",
+   "blank": "ลูกหนี้",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะจดชื่อลูกหนี้ที่ค้างค่าข้าวไว้ในสมุดเล่มเล็ก",
+   "en": "Piya writes down the names of customers who owe her for meals in a small notebook.",
+   "ko": "삐야는 밥값을 외상한 사람 이름을 작은 공책에 적어 둬요.",
+   "blank": "ลูกหนี้",
+   "src": "made"
+  }
+ ],
  "w|ลูกหมา": [
   {
    "text": "ลูกหมาตัวนี้ชอบกัดรองเท้า",
@@ -46798,6 +47278,22 @@
    "en": "The foundation's secretary-general sat in the front row at the premiere.",
    "ko": "재단 사무총장이 첫 공연을 맨 앞줄에서 봤어요.",
    "blank": "เลขาธิการ",
+   "src": "made"
+  }
+ ],
+ "w|เลขานุการ": [
+  {
+   "text": "เลขานุการของบรรณาธิการโทรมาเรียกเอกเข้าประชุมด่วน",
+   "en": "The editor's secretary called Ek into an urgent meeting.",
+   "ko": "편집장의 비서가 엑을 급한 회의에 불렀어요.",
+   "blank": "เลขานุการ",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนเปิดร้าน ปิยะเคยเป็นเลขานุการที่บริษัทประกันมาห้าปี",
+   "en": "Before opening the restaurant, Piya worked as a secretary at an insurance company for five years.",
+   "ko": "식당을 열기 전에 삐야는 보험 회사에서 오 년 동안 비서로 일했어요.",
+   "blank": "เลขานุการ",
    "src": "made"
   }
  ],
@@ -46972,6 +47468,22 @@
    "en": "She is the finest singer.",
    "ko": "그녀는 가장 뛰어난 가수야.",
    "blank": "เลิศ",
+   "src": "made"
+  }
+ ],
+ "w|เลี่ยง": [
+  {
+   "text": "นักการเมืองคนนั้นเลี่ยงไม่ตอบคำถามของเอกเรื่องงบสร้างสะพาน",
+   "en": "That politician dodged Ek's question about the bridge budget.",
+   "ko": "그 정치인은 다리 건설 예산에 관한 엑의 질문을 피했어요.",
+   "blank": "เลี่ยง",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะเลี่ยงใส่ถั่วลิสงในจานของลูกค้าที่แพ้",
+   "en": "Piya avoids putting peanuts on the plates of customers with allergies.",
+   "ko": "삐야는 알레르기가 있는 손님 접시에는 땅콩을 넣지 않아요.",
+   "blank": "เลี่ยง",
    "src": "made"
   }
  ],
@@ -49435,6 +49947,22 @@
    "src": "made"
   }
  ],
+ "w|สงเคราะห์": [
+  {
+   "text": "เอกเขียนถึงมูลนิธิที่สงเคราะห์เด็กกำพร้ามาหลายสิบปี",
+   "en": "Ek wrote about a foundation that has helped orphans for decades.",
+   "ko": "엑은 수십 년 동안 고아를 돌봐 온 재단에 대해 썼어요.",
+   "blank": "สงเคราะห์",
+   "src": "made"
+  },
+  {
+   "text": "ทุกวันพระร้านของปิยะทำข้าวกล่องไปสงเคราะห์คนไร้บ้าน",
+   "en": "Every Buddhist holy day, Piya's restaurant makes boxed meals to help the homeless.",
+   "ko": "불일마다 삐야의 식당은 노숙인을 돕기 위해 도시락을 만들어요.",
+   "blank": "สงเคราะห์",
+   "src": "made"
+  }
+ ],
  "w|สงบ": [
   {
    "text": "สวนนี้เงียบและสงบ",
@@ -49520,6 +50048,22 @@
    "en": "Porn's company encourages staff to exercise, so it paid her entry fee.",
    "ko": "폰의 회사는 직원들의 운동을 장려해서 참가비를 내줬어요.",
    "blank": "ส่งเสริม",
+   "src": "made"
+  }
+ ],
+ "w|ส่งเสียง": [
+  {
+   "text": "ทั้งห้องข่าวเงียบจนไม่มีใครกล้าส่งเสียงตอนบรรณาธิการโกรธ",
+   "en": "The whole newsroom went quiet; no one dared make a sound while the editor was angry.",
+   "ko": "편집장이 화가 나자 보도국 전체가 조용해져서 아무도 소리를 못 냈어요.",
+   "blank": "ส่งเสียง",
+   "src": "made"
+  },
+  {
+   "text": "เด็กโต๊ะริมหน้าต่างส่งเสียงดังจนพ่อแม่ต้องปราม",
+   "en": "The kids at the window table were so noisy their parents had to hush them.",
+   "ko": "창가 테이블 아이들이 너무 떠들어서 부모가 말려야 했어요.",
+   "blank": "ส่งเสียง",
    "src": "made"
   }
  ],
@@ -51441,6 +51985,22 @@
    "src": "made"
   }
  ],
+ "w|สั่งการ": [
+  {
+   "text": "บรรณาธิการสั่งการให้ทุกคนตรวจข้อมูลสองรอบก่อนส่งข่าว",
+   "en": "The editor ordered everyone to check facts twice before filing a story.",
+   "ko": "편집장은 모두에게 기사를 보내기 전에 자료를 두 번 확인하라고 지시했어요.",
+   "blank": "สั่งการ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะยืนหน้าเตาคอยสั่งการลูกน้องตลอดช่วงเที่ยง",
+   "en": "Piya stands at the stove giving orders to her staff all through lunch.",
+   "ko": "삐야는 점심 내내 화덕 앞에 서서 직원들에게 지시해요.",
+   "blank": "สั่งการ",
+   "src": "made"
+  }
+ ],
  "w|สังเกต": [
   {
    "text": "ฉันสังเกตเห็นรอยยิ้มของเธอ",
@@ -51767,6 +52327,22 @@
    "blank": "สัมภาษณ์"
   }
  ],
+ "w|สัมมนา": [
+  {
+   "text": "เอกไปร่วมงานสัมมนาเรื่องจริยธรรมสื่อที่มหาวิทยาลัย",
+   "en": "Ek attended a seminar on media ethics at the university.",
+   "ko": "엑은 대학에서 열린 언론 윤리 세미나에 참석했어요.",
+   "blank": "สัมมนา",
+   "src": "made"
+  },
+  {
+   "text": "ห้องชั้นบนของร้านมีคนมาเช่าจัดงานสัมมนาเล็กๆ บ่อยๆ",
+   "en": "People often rent the room upstairs for small seminars.",
+   "ko": "가게 위층 방은 작은 세미나용으로 자주 빌려 가요.",
+   "blank": "สัมมนา",
+   "src": "made"
+  }
+ ],
  "w|สากล": [
   {
    "text": "ธนาฝึกพูดภาษาอังกฤษเพราะอยากใช้ภาษาสากลคุยกับเพื่อนต่างชาติ",
@@ -52050,6 +52626,22 @@
    "en": "Pranee's eyes stung because the pool water had too many chemicals in it.",
    "ko": "수영장 물에 화학 약품이 너무 많아서 쁘라니는 눈이 따가웠어요.",
    "blank": "สารเคมี",
+   "src": "made"
+  }
+ ],
+ "w|สารสนเทศ": [
+  {
+   "text": "ระบบสารสนเทศของสำนักข่าวล่มทั้งเช้า ทำให้ส่งข่าวไม่ได้",
+   "en": "The outlet's information system was down all morning, so no stories could be filed.",
+   "ko": "언론사 정보 시스템이 오전 내내 멈춰서 기사를 보낼 수 없었어요.",
+   "blank": "สารสนเทศ",
+   "src": "made"
+  },
+  {
+   "text": "ลูกสาวของปิยะเรียนสาขาเทคโนโลยีสารสนเทศและทำระบบสั่งอาหารให้ร้าน",
+   "en": "Piya's daughter studies information technology and built an ordering system for the restaurant.",
+   "ko": "삐야의 딸은 정보 기술을 전공하고 가게 주문 시스템을 만들었어요.",
+   "blank": "สารสนเทศ",
    "src": "made"
   }
  ],
@@ -52425,6 +53017,22 @@
    "en": "This product is good quality.",
    "ko": "이 상품은 품질이 좋아.",
    "blank": "สินค้า"
+  }
+ ],
+ "w|สินเชื่อ": [
+  {
+   "text": "ธนาคารปล่อยสินเชื่อดอกเบี้ยต่ำให้ร้านค้ารายย่อย เอกจึงทำข่าวเรื่องนี้",
+   "en": "Banks are offering low-interest credit to small shops, so Ek is covering it.",
+   "ko": "은행들이 소상점에 저금리 대출을 내줘서 엑이 그 기사를 써요.",
+   "blank": "สินเชื่อ",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะยื่นขอสินเชื่อเพื่อเปิดร้านสาขาที่สอง",
+   "en": "Piya applied for a loan to open a second branch.",
+   "ko": "삐야는 두 번째 지점을 열려고 대출을 신청했어요.",
+   "blank": "สินเชื่อ",
+   "src": "made"
   }
  ],
  "w|สิ้นสุด": [
@@ -54289,6 +54897,22 @@
    "en": "Do not create debt unnecessarily.",
    "ko": "필요 없이 빚을 만들지 마.",
    "blank": "หนี้"
+  }
+ ],
+ "w|หนี้สิน": [
+  {
+   "text": "เอกพบว่าหนี้สินของครัวเรือนในหมู่บ้านนั้นสูงกว่ารายได้หลายเท่า",
+   "en": "Ek found that household debt in that village was many times higher than income.",
+   "ko": "엑은 그 마을의 가계 부채가 소득보다 몇 배나 높다는 걸 알았어요.",
+   "blank": "หนี้สิน",
+   "src": "made"
+  },
+  {
+   "text": "ปิยะตั้งใจปลดหนี้สินทั้งหมดก่อนลูกคนเล็กเข้ามหาวิทยาลัย",
+   "en": "Piya intends to clear all her debts before her youngest goes to university.",
+   "ko": "삐야는 막내가 대학에 가기 전에 빚을 모두 갚으려고 해요.",
+   "blank": "หนี้สิน",
+   "src": "made"
   }
  ],
  "w|หนึ่ง": [
@@ -57383,6 +58007,22 @@
    "en": "I'll take a large.",
    "ko": "큰 사이즈로 할게.",
    "blank": "ใหญ่"
+  }
+ ],
+ "w|ใหญ่โต": [
+  {
+   "text": "งานเปิดตัวตึกใหม่จัดอย่างใหญ่โตจนถนนแถวนั้นติดยาว",
+   "en": "The opening of the new building was so grand that the roads around it were jammed.",
+   "ko": "새 건물 개관식이 너무 성대해서 그 주변 길이 꽉 막혔어요.",
+   "blank": "ใหญ่โต",
+   "src": "made"
+  },
+  {
+   "text": "ร้านของปิยะไม่ได้ใหญ่โตแต่คนรอคิวยาวทุกเที่ยง",
+   "en": "Piya's restaurant isn't big, but there's a long line every lunchtime.",
+   "ko": "삐야의 식당은 크지 않지만 점심마다 줄이 길어요.",
+   "blank": "ใหญ่โต",
+   "src": "made"
   }
  ],
  "w|ใหม่": [
