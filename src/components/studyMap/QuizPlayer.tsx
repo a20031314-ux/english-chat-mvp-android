@@ -336,7 +336,8 @@ export function QuestionView({
       {question.kind === "judge" ? <JudgeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "reply" ? <ReplyView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {answered && examples && bankKey && "text" in question ? <MoreExamples key={question.text} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
+      {/* 열쇠 앞머리: 아래 DictNotes도 같은 문장을 key로 써서 형제 key가 겹쳐 예문 목록이 두 번 그려졌음(가상 사용자 2026-11-09 easy-repeat "같은 예문 두 번"). */}
+      {answered && examples && bankKey && "text" in question ? <MoreExamples key={`more|${question.text}`} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">
           <span className={`text-note font-semibold ${answered.correct ? "text-good" : "text-bad"}`}>
@@ -376,7 +377,7 @@ export function QuestionView({
         </div>
       ) : null}
       {/* 사전 주석(2026-11-08): 답한 뒤에만 — 답하기 전에 뜻이 보이면 답이 샌다. */}
-      {answered && sentenceOf(question) ? <DictNotes key={sentenceOf(question)} text={sentenceOf(question)!} language={language} locale={isLocale(locale) ? locale : undefined} skip={bankKey} /> : null}
+      {answered && sentenceOf(question) ? <DictNotes key={`notes|${sentenceOf(question)}`} text={sentenceOf(question)!} language={language} locale={isLocale(locale) ? locale : undefined} skip={bankKey} /> : null}
       {dictWord ? <DictionarySheet ui={ui} language={language} locale={locale} word={dictWord} title={ui.languagebankTitle} onClose={() => setDictWord(null)} /> : null}
     </section>
   );

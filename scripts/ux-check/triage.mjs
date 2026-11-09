@@ -4,7 +4,7 @@
 // 고치는 쪽은 scripts/ux-check/FIX.md를 따른다.
 import fs from "node:fs";
 import path from "node:path";
-import { NAMES, pieceOf, target } from "./marks.mjs";
+import { NAMES, optText, pieceOf, target } from "./marks.mjs";
 
 const ROOT = process.cwd();
 const dir = path.join(ROOT, "tmp/ux/marks");
@@ -31,8 +31,8 @@ for (const [reason, list] of byReason) {
   for (const row of list) {
     const qs = row.questions?.length ? row.questions : [{}];
     for (const q of qs) {
-      const opts = Array.isArray(q.options) ? q.options.map((o, i) => (i === q.answer ? `**${o}**` : o)).join(" / ") : "";
-      out.push(`- ${row.persona} ${row.learn}/${row.ui} ${row.day}일째 ${row.shot} · \`${q.key ?? "?"}\` ${q.kind ?? ""} — ${q.text ?? "(문제 없음)"}${opts ? ` · 보기 ${opts}` : ""}${!opts && pieceOf(q) ? ` · 답 ${pieceOf(q)}` : ""}`);
+      const opts = Array.isArray(q.options) ? q.options.map(optText).map((o, i) => (i === q.answer ? `**${o}**` : o)).join(" / ") : "";
+      out.push(`- ${row.persona} ${row.learn}/${row.ui} ${row.day}일째 ${row.shot} · \`${q.key || q.from || "?"}\` ${q.kind ?? ""} — ${q.text ?? "(문제 없음)"}${opts ? ` · 보기 ${opts}` : ""}${!opts && pieceOf(q) ? ` · 답 ${pieceOf(q)}` : ""}`);
       out.push(`  - 왜: ${row.note || "(적지 않음)"}`);
       const where = target(reason, q, row.learn);
       if (where) out.push(`  - 고칠 자리: ${where}`);

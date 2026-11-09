@@ -1182,6 +1182,15 @@ export function lessonQuiz(
   return out.length >= (options.min ?? 2) ? out : [];
 }
 
+/** 두 뜻풀이의 모양이 비슷한가(뜻 고르기 오답 — 낱말 수, 띄어 쓰지 않으면 글자 수). */
+export function similarShape(a: string, b: string): boolean {
+  const words = (text: string) => text.trim().split(/[\s/,;·]+/u).filter(Boolean).length;
+  const wa = words(a), wb = words(b);
+  if (wa > 1 || wb > 1) return Math.abs(wa - wb) <= 1;
+  const la = [...a.trim()].length, lb = [...b.trim()].length;
+  return Math.max(la, lb) <= 2 * Math.max(1, Math.min(la, lb));
+}
+
 /** 같은 단계 근처의 다른 줄(뜻 고르기 오답). */
 function otherLines(language: string, source: QuizSource): { text: string; gloss: ScriptGloss }[] {
   const near = (s: number) => source.stage === 0 || Math.abs(s - source.stage) <= 1;
@@ -1362,8 +1371,11 @@ export function cardQuiz(language: string, key: string, mode: "hide" | "show", s
   const seen = new Set([norm(gloss)]);
   const samePos = others.filter((other) => !source.pos || other.pos === source.pos);
   const near = samePos.filter((other) => at < 0 || Math.abs(other.at - at) <= 200);
+  // 모양이 비슷한 뜻 먼저(가상 사용자 2026-11-09 easy-decoy: "소리 내어 말하다" 옆 "파도타기", "لا أظن ذلك" 옆 "الفاتورة" — 표현은 품사가 없어
+  // 낱말 하나짜리 뜻이 한눈에 지워짐). 띄어 쓰는 앱 언어는 낱말 수 차이 1 이하, 안 띄어 쓰는 언어(ja·zh·th)는 글자 수 두 배 안.
+  const shaped = (list: typeof others) => list.filter((other) => similarShape(other.gloss, gloss));
   const wrong: string[] = [];
-  for (const other of [...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)]) {
+  for (const other of [...shuffled(shaped(near), random), ...shuffled(shaped(samePos), random), ...shuffled(shaped(others), random), ...shuffled(near, random), ...shuffled(samePos, random), ...shuffled(others, random)]) {
     if (wrong.length >= 3) break;
     const n = norm(other.gloss);
     if (seen.has(n) || recent.has(n)) continue;

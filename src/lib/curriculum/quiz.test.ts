@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { allFramesFor } from "./frames.ts";
 import { allScriptsFor } from "./stageScripts.ts";
-import { buildQuiz, canQuiz, nearOf, weakKeysOfScript, fixOf, joinWords, orderCorrect, quizPassed, quizSources, wrongWords } from "./quiz.ts";
+import { buildQuiz, canQuiz, nearOf, weakKeysOfScript, fixOf, joinWords, orderCorrect, quizPassed, quizSources, similarShape, wrongWords } from "./quiz.ts";
 import { segmentWords } from "../wordSegments.ts";
 
 const fixed = () => 0.42;
@@ -520,4 +520,16 @@ test("최근에 낸 문장은 같은 열쇠의 다음 문제에서 뒤로(noteAs
       assert.notEqual(q2.text, q1.text);
     }
   }
+});
+
+test("similarShape: 뜻 고르기 오답은 모양이 비슷한 뜻부터(2026-11-09 easy-decoy)", () => {
+  // 띄어 쓰는 앱 언어: 낱말 수
+  assert.equal(similarShape("소리 내어 말하다", "파도타기"), false);
+  assert.equal(similarShape("소리 내어 말하다", "분명히 하다"), true);
+  assert.equal(similarShape("لا أظن ذلك / لا أعتقد ذلك", "الفاتورة"), false);
+  assert.equal(similarShape("tomar el pelo", "gastar una broma"), true);
+  // 띄어 쓰지 않는 앱 언어: 글자 수
+  assert.equal(similarShape("猫", "パン屋さん"), false);
+  assert.equal(similarShape("話す", "伝える"), true);
+  assert.equal(similarShape("พูด", "บอกให้รู้"), false);
 });

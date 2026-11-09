@@ -19,11 +19,13 @@ export const NAMES = {
 };
 
 /** 정답 조각(고르기 = 보기[정답 자리], 쓰기 = answer 글자). */
-export const pieceOf = (q) => (Array.isArray(q.options) && typeof q.answer === "number" ? q.options[q.answer] : typeof q.answer === "string" ? q.answer : q.right ?? "");
+// 뜻 고르기 보기는 {raw, en} — 글자로 펴서 보여 준다(예전엔 [object Object]로 찍힘, 2026-11-09)
+export const optText = (o) => (o && typeof o === "object" ? o.raw || o.text || o.en || "" : String(o ?? ""));
+export const pieceOf = (q) => (Array.isArray(q.options) && typeof q.answer === "number" ? optText(q.options[q.answer]) : typeof q.answer === "string" ? q.answer : q.right ?? "");
 
 /** 고칠 자리 — 데이터로 고칠 수 있으면 그 파일·키, 아니면 코드 자리. */
 export function target(reason, q, learn) {
-  const key = q.key ?? "";
+  const key = q.key || q.from || "";
   const piece = pieceOf(q);
   const fromBank = q.from === "qbank";
   if (reason === "easy-decoy" || reason === "hard-ambiguous") {
