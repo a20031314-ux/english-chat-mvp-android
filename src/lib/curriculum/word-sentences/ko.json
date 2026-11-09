@@ -1189,6 +1189,22 @@
    "blank": "간단히"
   }
  ],
+ "w|간병": [
+  {
+   "text": "다리를 다친 개를 간병하느라 보호자는 일주일 휴가를 냈어요.",
+   "en": "The owner took a week off to care for the dog with an injured leg.",
+   "ko": "다리를 다친 개를 간병하느라 보호자는 일주일 휴가를 냈어요.",
+   "blank": "간병하느라",
+   "src": "made"
+  },
+  {
+   "text": "서연은 가족 간병을 맡은 사람들끼리 교대 일정을 나누는 기능을 기획했어요.",
+   "en": "Seoyeon planned a feature for family caregivers to share shift schedules.",
+   "ko": "서연은 가족 간병을 맡은 사람들끼리 교대 일정을 나누는 기능을 기획했어요.",
+   "blank": "간병을",
+   "src": "made"
+  }
+ ],
  "w|간병인": [
   {
    "text": "할머니를 돌보는 간병인도 휠체어를 밀며 결혼식에 함께 왔어요.",
@@ -1279,6 +1295,22 @@
    "src": "made"
   }
  ],
+ "w|간접흡연": [
+  {
+   "text": "간접흡연은 고양이 폐에도 해롭다고 동민이 보호자에게 말했어요.",
+   "en": "Dongmin told the owner that secondhand smoke is harmful to cats' lungs too.",
+   "ko": "간접흡연은 고양이 폐에도 해롭다고 동민이 보호자에게 말했어요.",
+   "blank": "간접흡연은",
+   "src": "made"
+  },
+  {
+   "text": "비상계단에서 올라오는 담배 연기 때문에 서연은 간접흡연이 걱정됐어요.",
+   "en": "Seoyeon worried about secondhand smoke because of cigarette smoke coming up the emergency stairs.",
+   "ko": "비상계단에서 올라오는 담배 연기 때문에 서연은 간접흡연이 걱정됐어요.",
+   "blank": "간접흡연이",
+   "src": "made"
+  }
+ ],
  "w|간주하다": [
   {
    "text": "성호는 리허설에 늦은 배우를 그날 공연에서 빠진 것으로 간주했어요.",
@@ -1308,6 +1340,22 @@
    "en": "The delivered soup was bland, so Jiyoung re-seasoned it with soup soy sauce.",
    "ko": "배달 온 국이 싱거워서 지영은 국간장으로 다시 간했어요.",
    "blank": "간했어요",
+   "src": "made"
+  }
+ ],
+ "w|간호": [
+  {
+   "text": "동민의 병원 동물 간호 선생님은 주사를 정말 아프지 않게 놓아요.",
+   "en": "The veterinary nurse at Dongmin's clinic gives shots really painlessly.",
+   "ko": "동민의 병원 동물 간호 선생님은 주사를 정말 아프지 않게 놓아요.",
+   "blank": "간호",
+   "src": "made"
+  },
+  {
+   "text": "서연은 간호 대학 교수님께 앱 화면을 보여 드리고 조언을 들었어요.",
+   "en": "Seoyeon showed the app screens to a nursing college professor and got advice.",
+   "ko": "서연은 간호 대학 교수님께 앱 화면을 보여 드리고 조언을 들었어요.",
+   "blank": "간호",
    "src": "made"
   }
  ],
@@ -2266,6 +2314,22 @@
    "en": "The mother of a child who had fallen into the river asked Seoyeon about fever reducers.",
    "ko": "강물에 빠졌던 아이의 엄마가 서연에게 해열제를 물었어요.",
    "blank": "강물에",
+   "src": "made"
+  }
+ ],
+ "w|강박증": [
+  {
+   "text": "꼬리를 계속 쫓는 개는 강박증일 수도 있다고 동민이 말했어요.",
+   "en": "Dongmin said a dog that keeps chasing its tail might have a compulsive disorder.",
+   "ko": "꼬리를 계속 쫓는 개는 강박증일 수도 있다고 동민이 말했어요.",
+   "blank": "강박증일",
+   "src": "made"
+  },
+  {
+   "text": "서연은 코드를 몇 번이나 다시 확인하는 버릇이 강박증 같다고 웃었어요.",
+   "en": "Seoyeon laughed that her habit of rechecking code over and over is like a compulsion.",
+   "ko": "서연은 코드를 몇 번이나 다시 확인하는 버릇이 강박증 같다고 웃었어요.",
+   "blank": "강박증",
    "src": "made"
   }
  ],
@@ -4070,6 +4134,22 @@
    "en": "A cat moving abroad has to go through quarantine on arrival.",
    "ko": "해외로 이사하는 고양이는 도착하면 검역을 받아야 해요.",
    "blank": "검역을",
+   "src": "made"
+  }
+ ],
+ "w|검열": [
+  {
+   "text": "동민은 수술 영상이 검열 없이 그대로 올라가면 보기 힘든 사람도 있다고 걱정했어요.",
+   "en": "Dongmin worried that some people would find it hard to watch if surgery videos went up uncensored.",
+   "ko": "동민은 수술 영상이 검열 없이 그대로 올라가면 보기 힘든 사람도 있다고 걱정했어요.",
+   "blank": "검열",
+   "src": "made"
+  },
+  {
+   "text": "서연의 팀은 게시물을 지나치게 검열하지 않으면서 욕설만 거르는 기능을 만들었어요.",
+   "en": "Seoyeon's team built a feature that filters only profanity without over-censoring posts.",
+   "ko": "서연의 팀은 게시물을 지나치게 검열하지 않으면서 욕설만 거르는 기능을 만들었어요.",
+   "blank": "검열하지",
    "src": "made"
   }
  ],
@@ -9987,6 +10067,22 @@
    "src": "made"
   }
  ],
+ "w|구속": [
+  {
+   "text": "뉴스에서는 개를 학대한 남자가 결국 구속됐다고 전했어요.",
+   "en": "The news reported that the man who abused a dog was finally arrested.",
+   "ko": "뉴스에서는 개를 학대한 남자가 결국 구속됐다고 전했어요.",
+   "blank": "구속됐다고",
+   "src": "made"
+  },
+  {
+   "text": "서연은 회사 일에만 매달리다 보니 생활이 구속받는 느낌이 들었어요.",
+   "en": "Seoyeon felt restricted in her daily life from being so tied up with company work.",
+   "ko": "서연은 회사 일에만 매달리다 보니 생활이 구속받는 느낌이 들었어요.",
+   "blank": "구속받는",
+   "src": "made"
+  }
+ ],
  "w|구식": [
   {
    "text": "과학실의 현미경은 너무 구식이라서 잘 안 보였어요.",
@@ -12873,6 +12969,22 @@
    "en": "I sold gold and fixed up the house.",
    "ko": "금을 팔아서 집을 고쳤어.",
    "blank": "금을"
+  }
+ ],
+ "w|금단증상": [
+  {
+   "text": "진통제를 갑자기 끊으면 동물도 금단증상을 보일 수 있어요.",
+   "en": "Animals can show withdrawal symptoms too if painkillers are stopped suddenly.",
+   "ko": "진통제를 갑자기 끊으면 동물도 금단증상을 보일 수 있어요.",
+   "blank": "금단증상을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 커피를 끊은 첫 주에 두통 같은 금단증상을 겪었어요.",
+   "en": "Seoyeon had withdrawal symptoms like headaches the first week she quit coffee.",
+   "ko": "서연은 커피를 끊은 첫 주에 두통 같은 금단증상을 겪었어요.",
+   "blank": "금단증상을",
+   "src": "made"
   }
  ],
  "w|금리": [
@@ -17099,6 +17211,22 @@
    "src": "made"
   }
  ],
+ "w|납품": [
+  {
+   "text": "사료 업체가 납품을 하루 늦게 해서 동민은 급하게 다른 사료를 구했어요.",
+   "en": "The feed company delivered a day late, so Dongmin hurriedly found other food.",
+   "ko": "사료 업체가 납품을 하루 늦게 해서 동민은 급하게 다른 사료를 구했어요.",
+   "blank": "납품을",
+   "src": "made"
+  },
+  {
+   "text": "서연의 팀은 은행에 납품할 프로그램을 밤새 점검했어요.",
+   "en": "Seoyeon's team checked the software to be delivered to the bank all night.",
+   "ko": "서연의 팀은 은행에 납품할 프로그램을 밤새 점검했어요.",
+   "blank": "납품할",
+   "src": "made"
+  }
+ ],
  "w|낫다": [
   {
    "text": "감기 이제 다 나았어?",
@@ -17527,6 +17655,22 @@
    "en": "I held back, unable to let out a sigh.",
    "ko": "한숨을 내쉬다 못해 참았어.",
    "blank": "내쉬다"
+  }
+ ],
+ "w|내시경": [
+  {
+   "text": "강아지가 양말을 삼켜서 동민은 내시경으로 꺼냈어요.",
+   "en": "The puppy swallowed a sock, so Dongmin took it out with an endoscope.",
+   "ko": "강아지가 양말을 삼켜서 동민은 내시경으로 꺼냈어요.",
+   "blank": "내시경으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 건강검진에서 처음 위 내시경을 받고 하루 종일 기운이 없었어요.",
+   "en": "Seoyeon had her first gastroscopy at a health checkup and felt drained all day.",
+   "ko": "서연은 건강검진에서 처음 위 내시경을 받고 하루 종일 기운이 없었어요.",
+   "blank": "내시경을",
+   "src": "made"
   }
  ],
  "w|내용": [
@@ -24741,6 +24885,22 @@
    "blank": "동사무소"
   }
  ],
+ "w|동상": [
+  {
+   "text": "한겨울 밖에서 지낸 길고양이는 귀 끝에 동상을 입었어요.",
+   "en": "The stray cat that spent the deep winter outside got frostbite on its ear tips.",
+   "ko": "한겨울 밖에서 지낸 길고양이는 귀 끝에 동상을 입었어요.",
+   "blank": "동상을",
+   "src": "made"
+  },
+  {
+   "text": "서연의 회사는 광장의 커다란 동상 바로 옆 건물에 있어요.",
+   "en": "Seoyeon's company is in the building right next to the big statue in the square.",
+   "ko": "서연의 회사는 광장의 커다란 동상 바로 옆 건물에 있어요.",
+   "blank": "동상",
+   "src": "made"
+  }
+ ],
  "w|동생": [
   {
    "text": "동생 학원 데려다 줘야 해.",
@@ -30801,6 +30961,22 @@
    "src": "krdict"
   }
  ],
+ "w|명세서": [
+  {
+   "text": "보호자는 반려견 보험 청구에 쓸 진료비 명세서를 달라고 했어요.",
+   "en": "The owner asked for an itemized bill of the vet fees to claim pet insurance.",
+   "ko": "보호자는 반려견 보험 청구에 쓸 진료비 명세서를 달라고 했어요.",
+   "blank": "명세서를",
+   "src": "made"
+  },
+  {
+   "text": "서연은 첫 직원에게 급여 명세서를 건네며 조금 뭉클했어요.",
+   "en": "Seoyeon felt a little moved as she handed her first employee a pay stub.",
+   "ko": "서연은 첫 직원에게 급여 명세서를 건네며 조금 뭉클했어요.",
+   "blank": "명세서를",
+   "src": "made"
+  }
+ ],
  "w|명소": [
   {
    "text": "이 공항의 전망대는 비행기를 가까이 볼 수 있는 명소로 유명해요.",
@@ -35375,6 +35551,22 @@
    "src": "made"
   }
  ],
+ "w|발주": [
+  {
+   "text": "동민은 다 떨어져 가는 주사기를 넉넉하게 발주했어요.",
+   "en": "Dongmin placed a generous order for syringes that were running out.",
+   "ko": "동민은 다 떨어져 가는 주사기를 넉넉하게 발주했어요.",
+   "blank": "발주했어요",
+   "src": "made"
+  },
+  {
+   "text": "대기업이 서연의 회사에 앱 개발을 발주하면서 일이 크게 늘었어요.",
+   "en": "A large company commissioned app development from Seoyeon's company, and the workload grew a lot.",
+   "ko": "대기업이 서연의 회사에 앱 개발을 발주하면서 일이 크게 늘었어요.",
+   "blank": "발주하면서",
+   "src": "made"
+  }
+ ],
  "w|발코니": [
   {
    "text": "현우는 발코니에 작은 화분들을 놓을 생각이에요.",
@@ -37199,6 +37391,22 @@
    "blank": "법원"
   }
  ],
+ "w|법인": [
+  {
+   "text": "동민은 동물병원을 법인으로 바꿀지 회계사와 상의했어요.",
+   "en": "Dongmin consulted an accountant on whether to turn the clinic into a corporation.",
+   "ko": "동민은 동물병원을 법인으로 바꿀지 회계사와 상의했어요.",
+   "blank": "법인으로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 투자를 받기 전에 개인 사업자를 법인으로 전환했어요.",
+   "en": "Seoyeon converted her sole proprietorship into a corporation before taking investment.",
+   "ko": "서연은 투자를 받기 전에 개인 사업자를 법인으로 전환했어요.",
+   "blank": "법인으로",
+   "src": "made"
+  }
+ ],
  "w|법칙": [
   {
    "text": "연출가는 무대에도 관객이 지루해지는 법칙 같은 게 있다고 했어요.",
@@ -38536,6 +38744,22 @@
    "en": "After a kitchen fire, Jiyoung's restaurant bought a new oven with the insurance money.",
    "ko": "주방에 불이 난 뒤 지영의 식당은 보험금으로 오븐을 새로 샀어요.",
    "blank": "보험금으로",
+   "src": "made"
+  }
+ ],
+ "w|보험료": [
+  {
+   "text": "보호자는 반려묘 보험료가 해마다 오른다고 불평했어요.",
+   "en": "The owner complained that the cat insurance premium goes up every year.",
+   "ko": "보호자는 반려묘 보험료가 해마다 오른다고 불평했어요.",
+   "blank": "보험료가",
+   "src": "made"
+  },
+  {
+   "text": "회사가 커지면서 서연은 직원 건강 보험료를 회사에서 더 내 주기로 했어요.",
+   "en": "As the company grew, Seoyeon decided the company would cover more of the staff's health insurance premiums.",
+   "ko": "회사가 커지면서 서연은 직원 건강 보험료를 회사에서 더 내 주기로 했어요.",
+   "blank": "보험료를",
    "src": "made"
   }
  ],
@@ -50707,6 +50931,22 @@
    "blank": "수사를"
   }
  ],
+ "w|수사관": [
+  {
+   "text": "동물 학대 사건을 맡은 수사관이 동민의 동물병원에 진료 기록을 확인하러 왔어요.",
+   "en": "An investigator handling an animal abuse case came to Dongmin's vet clinic to check the medical records.",
+   "ko": "동물 학대 사건을 맡은 수사관이 동민의 동물병원에 진료 기록을 확인하러 왔어요.",
+   "blank": "수사관이",
+   "src": "made"
+  },
+  {
+   "text": "서연의 스타트업은 경찰 수사관들이 쓰는 증거 정리 프로그램을 만들어요.",
+   "en": "Seoyeon's startup makes evidence-organizing software used by police investigators.",
+   "ko": "서연의 스타트업은 경찰 수사관들이 쓰는 증거 정리 프로그램을 만들어요.",
+   "blank": "수사관들이",
+   "src": "made"
+  }
+ ],
  "w|수상하다": [
   {
    "text": "행동이 좀 수상해.",
@@ -51083,6 +51323,22 @@
    "src": "made"
   }
  ],
+ "w|수주": [
+  {
+   "text": "동민의 병원은 구청 유기견 진료 사업을 수주해서 바빠졌어요.",
+   "en": "Dongmin's clinic won the district's stray dog care contract and got busy.",
+   "ko": "동민의 병원은 구청 유기견 진료 사업을 수주해서 바빠졌어요.",
+   "blank": "수주해서",
+   "src": "made"
+  },
+  {
+   "text": "서연의 회사가 첫 공공 프로젝트를 수주하자 다 같이 피자를 시켰어요.",
+   "en": "When Seoyeon's company won its first public project, everyone ordered pizza together.",
+   "ko": "서연의 회사가 첫 공공 프로젝트를 수주하자 다 같이 피자를 시켰어요.",
+   "blank": "수주하자",
+   "src": "made"
+  }
+ ],
  "w|수준": [
   {
    "text": "영어 수준이 많이 올랐어.",
@@ -51278,6 +51534,22 @@
    "en": "Sohee carried out the training plan her coach made without skipping a single day.",
    "ko": "소희는 코치가 짜 준 훈련 계획을 하루도 빼먹지 않고 수행했어요.",
    "blank": "수행했어요",
+   "src": "made"
+  }
+ ],
+ "w|수혈": [
+  {
+   "text": "피를 많이 흘린 개는 헌혈견의 피로 수혈을 받고 살아났어요.",
+   "en": "The dog that lost a lot of blood survived after a transfusion from a donor dog.",
+   "ko": "피를 많이 흘린 개는 헌혈견의 피로 수혈을 받고 살아났어요.",
+   "blank": "수혈을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 헌혈 기록으로 수혈이 급한 환자와 이어 주는 서비스를 구상했어요.",
+   "en": "Seoyeon came up with a service using blood donation records to connect with patients urgently needing transfusions.",
+   "ko": "서연은 헌혈 기록으로 수혈이 급한 환자와 이어 주는 서비스를 구상했어요.",
+   "blank": "수혈이",
    "src": "made"
   }
  ],
@@ -58393,6 +58665,22 @@
    "blank": "약간만"
   }
  ],
+ "w|약값": [
+  {
+   "text": "강아지 피부약은 오래 먹여야 해서 약값이 꽤 들어요.",
+   "en": "The puppy's skin medicine has to be given for a long time, so the medicine costs add up.",
+   "ko": "강아지 피부약은 오래 먹여야 해서 약값이 꽤 들어요.",
+   "blank": "약값이",
+   "src": "made"
+  },
+  {
+   "text": "약국마다 약값을 비교해 주는 앱이 서연 팀의 다음 목표예요.",
+   "en": "An app that compares medicine prices across pharmacies is Seoyeon's team's next goal.",
+   "ko": "약국마다 약값을 비교해 주는 앱이 서연 팀의 다음 목표예요.",
+   "blank": "약값을",
+   "src": "made"
+  }
+ ],
  "w|약국": [
   {
    "text": "약국에서 약 사 왔어.",
@@ -62387,6 +62675,22 @@
    "blank": "열매를"
   }
  ],
+ "w|열사병": [
+  {
+   "text": "한여름 차 안에 있던 개가 열사병으로 쓰러져서 급히 실려 왔어요.",
+   "en": "A dog left in a car in midsummer collapsed from heatstroke and was rushed in.",
+   "ko": "한여름 차 안에 있던 개가 열사병으로 쓰러져서 급히 실려 왔어요.",
+   "blank": "열사병으로",
+   "src": "made"
+  },
+  {
+   "text": "서연의 팀은 폭염 때 야외 노동자에게 열사병 위험을 알리는 알림을 만들었어요.",
+   "en": "Seoyeon's team made alerts warning outdoor workers of heatstroke risk during heat waves.",
+   "ko": "서연의 팀은 폭염 때 야외 노동자에게 열사병 위험을 알리는 알림을 만들었어요.",
+   "blank": "열사병",
+   "src": "made"
+  }
+ ],
  "w|열쇠": [
   {
    "text": "열쇠 어디 뒀어?",
@@ -64853,6 +65157,22 @@
    "src": "made"
   }
  ],
+ "w|외래": [
+  {
+   "text": "오전에는 외래 진료가 몰려서 동민은 점심도 늦게 먹었어요.",
+   "en": "Outpatient visits piled up in the morning, so Dongmin ate lunch late.",
+   "ko": "오전에는 외래 진료가 몰려서 동민은 점심도 늦게 먹었어요.",
+   "blank": "외래",
+   "src": "made"
+  },
+  {
+   "text": "서연의 예약 앱을 쓰면 외래 대기 시간이 확 줄어요.",
+   "en": "Using Seoyeon's booking app cuts outpatient waiting time a lot.",
+   "ko": "서연의 예약 앱을 쓰면 외래 대기 시간이 확 줄어요.",
+   "blank": "외래",
+   "src": "made"
+  }
+ ],
  "w|외로움": [
   {
    "text": "밤마다 외로움이 밀려와.",
@@ -65208,6 +65528,38 @@
    "en": "Sujin summarized her moving checklist on one page and stuck it on the fridge.",
    "ko": "수진은 이사 준비 목록을 한 장으로 요약해서 냉장고에 붙였어요.",
    "blank": "요약해서",
+   "src": "made"
+  }
+ ],
+ "w|요양": [
+  {
+   "text": "수술을 마친 늙은 개는 며칠 동안 입원실에서 요양했어요.",
+   "en": "The old dog recuperated in the inpatient room for a few days after surgery.",
+   "ko": "수술을 마친 늙은 개는 며칠 동안 입원실에서 요양했어요.",
+   "blank": "요양했어요",
+   "src": "made"
+  },
+  {
+   "text": "과로로 쓰러진 공동 창업자는 한 달 동안 시골에서 요양하기로 했어요.",
+   "en": "The co-founder who collapsed from overwork decided to rest and recover in the countryside for a month.",
+   "ko": "과로로 쓰러진 공동 창업자는 한 달 동안 시골에서 요양하기로 했어요.",
+   "blank": "요양하기로",
+   "src": "made"
+  }
+ ],
+ "w|요양병원": [
+  {
+   "text": "고양이 주인 할머니가 요양병원에 들어가셔서 동민이 새 가족을 찾아 줬어요.",
+   "en": "The cat's elderly owner moved into a nursing hospital, so Dongmin found it a new family.",
+   "ko": "고양이 주인 할머니가 요양병원에 들어가셔서 동민이 새 가족을 찾아 줬어요.",
+   "blank": "요양병원에",
+   "src": "made"
+  },
+  {
+   "text": "서연의 회사는 요양병원 직원들이 쓰는 투약 관리 앱을 만들고 있어요.",
+   "en": "Seoyeon's company is building a medication management app for nursing hospital staff.",
+   "ko": "서연의 회사는 요양병원 직원들이 쓰는 투약 관리 앱을 만들고 있어요.",
+   "blank": "요양병원",
    "src": "made"
   }
  ],
@@ -68473,6 +68825,22 @@
    "src": "made"
   }
  ],
+ "w|음주운전": [
+  {
+   "text": "음주운전 차량에 치인 유기견이 동민의 병원으로 실려 왔어요.",
+   "en": "A stray dog hit by a drunk driver was brought to Dongmin's clinic.",
+   "ko": "음주운전 차량에 치인 유기견이 동민의 병원으로 실려 왔어요.",
+   "blank": "음주운전",
+   "src": "made"
+  },
+  {
+   "text": "회식 날 서연은 음주운전을 막으려고 직원들 대리운전 비용을 회사에서 냈어요.",
+   "en": "On the company dinner night, Seoyeon had the company pay for designated drivers to prevent drunk driving.",
+   "ko": "회식 날 서연은 음주운전을 막으려고 직원들 대리운전 비용을 회사에서 냈어요.",
+   "blank": "음주운전을",
+   "src": "made"
+  }
+ ],
  "w|응": [
   {
    "text": "응, 알겠어.",
@@ -68683,6 +69051,22 @@
    "en": "You need medical insurance abroad.",
    "ko": "해외에서 의료 보험이 필요해.",
    "blank": "의료"
+  }
+ ],
+ "w|의료비": [
+  {
+   "text": "반려동물 의료비가 비싸다는 말에 동민은 할부 방법을 알려 줬어요.",
+   "en": "When told pet medical costs were expensive, Dongmin explained installment options.",
+   "ko": "반려동물 의료비가 비싸다는 말에 동민은 할부 방법을 알려 줬어요.",
+   "blank": "의료비가",
+   "src": "made"
+  },
+  {
+   "text": "서연은 부모님 의료비를 한눈에 정리해 주는 가계부 기능을 넣었어요.",
+   "en": "Seoyeon added a budgeting feature that sorts out her parents' medical bills at a glance.",
+   "ko": "서연은 부모님 의료비를 한눈에 정리해 주는 가계부 기능을 넣었어요.",
+   "blank": "의료비를",
+   "src": "made"
   }
  ],
  "w|의료진": [
@@ -71023,6 +71407,22 @@
    "src": "made"
   }
  ],
+ "w|인권침해": [
+  {
+   "text": "동민은 동물 학대 다큐를 보고 인권침해만큼 심각한 문제라고 생각했어요.",
+   "en": "After watching a documentary on animal abuse, Dongmin thought it was as serious a problem as human rights violations.",
+   "ko": "동민은 동물 학대 다큐를 보고 인권침해만큼 심각한 문제라고 생각했어요.",
+   "blank": "인권침해만큼",
+   "src": "made"
+  },
+  {
+   "text": "서연은 직원 메신저를 몰래 보는 건 인권침해라고 딱 잘라 말했어요.",
+   "en": "Seoyeon flatly said that secretly reading employees' messages is a human rights violation.",
+   "ko": "서연은 직원 메신저를 몰래 보는 건 인권침해라고 딱 잘라 말했어요.",
+   "blank": "인권침해라고",
+   "src": "made"
+  }
+ ],
  "w|인기": [
   {
    "text": "요즘 인기 많더라.",
@@ -71769,6 +72169,22 @@
    "en": "Did you come late on purpose?",
    "ko": "일부러 늦게 온 거야?",
    "blank": "일부러"
+  }
+ ],
+ "w|일사병": [
+  {
+   "text": "동민은 땡볕에 산책하면 개도 일사병에 걸릴 수 있다고 경고했어요.",
+   "en": "Dongmin warned that dogs can get sunstroke too if walked in the blazing sun.",
+   "ko": "동민은 땡볕에 산책하면 개도 일사병에 걸릴 수 있다고 경고했어요.",
+   "blank": "일사병에",
+   "src": "made"
+  },
+  {
+   "text": "야외 워크숍에서 땡볕을 오래 쬔 팀원이 일사병 증세를 보였어요.",
+   "en": "A team member who spent too long in the blazing sun at an outdoor workshop showed signs of sunstroke.",
+   "ko": "야외 워크숍에서 땡볕을 오래 쬔 팀원이 일사병 증세를 보였어요.",
+   "blank": "일사병",
+   "src": "made"
   }
  ],
  "w|일상": [
@@ -73519,6 +73935,22 @@
    "src": "made"
   }
  ],
+ "w|자외선": [
+  {
+   "text": "털이 하얀 고양이는 자외선에 귀 끝이 쉽게 상해요.",
+   "en": "White cats' ear tips are easily damaged by ultraviolet rays.",
+   "ko": "털이 하얀 고양이는 자외선에 귀 끝이 쉽게 상해요.",
+   "blank": "자외선에",
+   "src": "made"
+  },
+  {
+   "text": "서연의 날씨 앱은 자외선이 강한 날 선크림을 바르라고 알려 줘요.",
+   "en": "Seoyeon's weather app reminds you to put on sunscreen when UV rays are strong.",
+   "ko": "서연의 날씨 앱은 자외선이 강한 날 선크림을 바르라고 알려 줘요.",
+   "blank": "자외선이",
+   "src": "made"
+  }
+ ],
  "w|자원": [
   {
    "text": "물도 소중한 자원이야.",
@@ -73694,6 +74126,22 @@
    "en": "At the restaurant entrance was a sign from the local government certifying it for excellent hygiene.",
    "ko": "레스토랑 입구에는 자치단체가 주는 위생 우수 업소 표시가 붙어 있었어요.",
    "blank": "자치단체가",
+   "src": "made"
+  }
+ ],
+ "w|자해": [
+  {
+   "text": "스트레스를 받은 앵무새가 깃털을 뽑는 건 일종의 자해 행동이라고 동민이 설명했어요.",
+   "en": "Dongmin explained that a stressed parrot pulling out its feathers is a kind of self-harm behavior.",
+   "ko": "스트레스를 받은 앵무새가 깃털을 뽑는 건 일종의 자해 행동이라고 동민이 설명했어요.",
+   "blank": "자해",
+   "src": "made"
+  },
+  {
+   "text": "서연의 팀은 자해 위험이 있는 글을 찾아 상담 기관을 안내하는 기능을 만들었어요.",
+   "en": "Seoyeon's team made a feature that finds posts showing self-harm risk and points to counseling services.",
+   "ko": "서연의 팀은 자해 위험이 있는 글을 찾아 상담 기관을 안내하는 기능을 만들었어요.",
+   "blank": "자해",
    "src": "made"
   }
  ],
@@ -75871,6 +76319,22 @@
    "src": "made"
   }
  ],
+ "w|저작권": [
+  {
+   "text": "동민은 병원 홍보물에 쓸 강아지 사진의 저작권을 미리 확인했어요.",
+   "en": "Dongmin checked the copyright of the puppy photo for the clinic's flyer in advance.",
+   "ko": "동민은 병원 홍보물에 쓸 강아지 사진의 저작권을 미리 확인했어요.",
+   "blank": "저작권을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 앱에 넣을 배경 음악의 저작권 사용료를 냈어요.",
+   "en": "Seoyeon paid the copyright fee for the background music in the app.",
+   "ko": "서연은 앱에 넣을 배경 음악의 저작권 사용료를 냈어요.",
+   "blank": "저작권",
+   "src": "made"
+  }
+ ],
  "w|저장되다": [
   {
    "text": "민수의 운동 기록은 헬스장 앱에 자동으로 저장돼요.",
@@ -75943,6 +76407,22 @@
    "en": "Do you see that building over there?",
    "ko": "저쪽 건물 보여?",
    "blank": "저쪽"
+  }
+ ],
+ "w|저체온증": [
+  {
+   "text": "동민은 겨울 강에 빠졌던 강아지를 담요로 감싸 저체온증을 막았어요.",
+   "en": "Dongmin wrapped the puppy that had fallen into the winter river in a blanket to prevent hypothermia.",
+   "ko": "동민은 겨울 강에 빠졌던 강아지를 담요로 감싸 저체온증을 막았어요.",
+   "blank": "저체온증을",
+   "src": "made"
+  },
+  {
+   "text": "등산 앱 기능 회의에서 서연은 저체온증 증상을 안내하는 화면을 추가하자고 했어요.",
+   "en": "At a hiking app feature meeting, Seoyeon suggested adding a screen describing hypothermia symptoms.",
+   "ko": "등산 앱 기능 회의에서 서연은 저체온증 증상을 안내하는 화면을 추가하자고 했어요.",
+   "blank": "저체온증",
+   "src": "made"
   }
  ],
  "w|저축": [
@@ -82109,6 +82589,22 @@
    "blank": "중학교에"
   }
  ],
+ "w|중환자": [
+  {
+   "text": "교통사고를 당한 고양이는 중환자 입원실에서 밤새 지켜봤어요.",
+   "en": "The cat hit by a car was watched all night in the intensive care ward.",
+   "ko": "교통사고를 당한 고양이는 중환자 입원실에서 밤새 지켜봤어요.",
+   "blank": "중환자",
+   "src": "made"
+  },
+  {
+   "text": "병원 측은 중환자 상태를 한눈에 보는 화면을 서연에게 부탁했어요.",
+   "en": "The hospital asked Seoyeon for a screen showing critically ill patients' conditions at a glance.",
+   "ko": "병원 측은 중환자 상태를 한눈에 보는 화면을 서연에게 부탁했어요.",
+   "blank": "중환자",
+   "src": "made"
+  }
+ ],
  "w|쥐": [
   {
    "text": "쥐가 부엌에 나타났어.",
@@ -83534,6 +84030,22 @@
    "en": "After it was pointed out that she swung her arms too much, Haeun fixed her form.",
    "ko": "팔을 너무 많이 흔든다는 점이 지적된 뒤로 하은은 자세를 고쳤어요.",
    "blank": "지적된",
+   "src": "made"
+  }
+ ],
+ "w|지적재산권": [
+  {
+   "text": "수의학 세미나에서는 동물 사료 제조법의 지적재산권 문제도 다뤘어요.",
+   "en": "The veterinary seminar also covered intellectual property issues around pet food recipes.",
+   "ko": "수의학 세미나에서는 동물 사료 제조법의 지적재산권 문제도 다뤘어요.",
+   "blank": "지적재산권",
+   "src": "made"
+  },
+  {
+   "text": "투자자는 서연의 회사가 가진 지적재산권이 얼마나 되는지 물었어요.",
+   "en": "The investor asked how much intellectual property Seoyeon's company owned.",
+   "ko": "투자자는 서연의 회사가 가진 지적재산권이 얼마나 되는지 물었어요.",
+   "blank": "지적재산권이",
    "src": "made"
   }
  ],
@@ -85087,6 +85599,22 @@
    "src": "made"
   }
  ],
+ "w|집행유예": [
+  {
+   "text": "동민은 동물 학대범이 집행유예로 풀려났다는 기사를 읽고 한숨을 쉬었어요.",
+   "en": "Dongmin sighed after reading that the animal abuser got off with a suspended sentence.",
+   "ko": "동민은 동물 학대범이 집행유예로 풀려났다는 기사를 읽고 한숨을 쉬었어요.",
+   "blank": "집행유예로",
+   "src": "made"
+  },
+  {
+   "text": "서연은 해킹으로 집행유예를 받은 사람이 보안 전문가가 됐다는 기사를 읽었어요.",
+   "en": "Seoyeon read an article about someone who got a suspended sentence for hacking and became a security expert.",
+   "ko": "서연은 해킹으로 집행유예를 받은 사람이 보안 전문가가 됐다는 기사를 읽었어요.",
+   "blank": "집행유예를",
+   "src": "made"
+  }
+ ],
  "w|집회": [
   {
    "text": "학생회는 급식 개선을 요구하는 집회를 운동장에서 열었어요.",
@@ -85130,6 +85658,22 @@
    "en": "The big spider that came out of the warehouse corner was so creepy that Yuna screamed.",
    "ko": "창고 구석에서 나온 커다란 거미가 징그러워서 유나는 소리를 질렀어요.",
    "blank": "징그러워서",
+   "src": "made"
+  }
+ ],
+ "w|징역": [
+  {
+   "text": "요즘은 동물을 학대하면 징역을 살 수도 있다고 동민이 보호자에게 설명했어요.",
+   "en": "Dongmin explained to a pet owner that these days you can go to prison for abusing animals.",
+   "ko": "요즘은 동물을 학대하면 징역을 살 수도 있다고 동민이 보호자에게 설명했어요.",
+   "blank": "징역을",
+   "src": "made"
+  },
+  {
+   "text": "개인정보를 빼돌린 개발자가 징역형을 받았다는 뉴스에 팀원들이 놀랐어요.",
+   "en": "The team was shocked by news that a developer who leaked personal data got a prison sentence.",
+   "ko": "개인정보를 빼돌린 개발자가 징역형을 받았다는 뉴스에 팀원들이 놀랐어요.",
+   "blank": "징역형을",
    "src": "made"
   }
  ],
@@ -88351,6 +88895,22 @@
    "src": "made"
   }
  ],
+ "w|초음파": [
+  {
+   "text": "동민은 초음파로 강아지 배 속의 새끼 수를 확인했어요.",
+   "en": "Dongmin checked the number of puppies in the dog's belly with an ultrasound.",
+   "ko": "동민은 초음파로 강아지 배 속의 새끼 수를 확인했어요.",
+   "blank": "초음파로",
+   "src": "made"
+  },
+  {
+   "text": "서연의 팀은 초음파 영상을 자동으로 읽는 프로그램을 시험하고 있어요.",
+   "en": "Seoyeon's team is testing a program that reads ultrasound images automatically.",
+   "ko": "서연의 팀은 초음파 영상을 자동으로 읽는 프로그램을 시험하고 있어요.",
+   "blank": "초음파",
+   "src": "made"
+  }
+ ],
  "w|초인종": [
   {
    "text": "녹슨 초인종이 울리지 않아서 현우는 새것으로 바꿨어요.",
@@ -89459,6 +90019,22 @@
    "en": "The business trip is long, so I'm tired.",
    "ko": "출장이 길어서 피곤해.",
    "blank": "출장이"
+  }
+ ],
+ "w|출장비": [
+  {
+   "text": "동민은 학회에 다녀온 출장비를 병원 장부에 적었어요.",
+   "en": "Dongmin recorded the travel expenses for the conference in the clinic's books.",
+   "ko": "동민은 학회에 다녀온 출장비를 병원 장부에 적었어요.",
+   "blank": "출장비를",
+   "src": "made"
+  },
+  {
+   "text": "서연의 회사는 아직 작아서 출장비를 아끼려고 기차표도 제일 싼 걸로 사요.",
+   "en": "Seoyeon's company is still small, so they buy the cheapest train tickets to save on travel costs.",
+   "ko": "서연의 회사는 아직 작아서 출장비를 아끼려고 기차표도 제일 싼 걸로 사요.",
+   "blank": "출장비를",
+   "src": "made"
   }
  ],
  "w|출출하다": [
@@ -93513,6 +94089,22 @@
    "src": "made"
   }
  ],
+ "w|특허권": [
+  {
+   "text": "동민의 선배는 고양이 전용 수술대를 개발해서 특허권을 땄어요.",
+   "en": "Dongmin's senior developed a surgical table just for cats and got a patent for it.",
+   "ko": "동민의 선배는 고양이 전용 수술대를 개발해서 특허권을 땄어요.",
+   "blank": "특허권을",
+   "src": "made"
+  },
+  {
+   "text": "서연은 새 검색 알고리즘의 특허권을 지키려고 변리사를 만났어요.",
+   "en": "Seoyeon met a patent attorney to protect the patent on her new search algorithm.",
+   "ko": "서연은 새 검색 알고리즘의 특허권을 지키려고 변리사를 만났어요.",
+   "blank": "특허권을",
+   "src": "made"
+  }
+ ],
  "w|특혜": [
   {
    "text": "경민은 특정 업체가 특혜를 받았다는 의혹을 끝까지 파헤쳤어요.",
@@ -95678,6 +96270,22 @@
    "en": "A warning sign said pickpockets target tourists.",
    "ko": "소매치기가 관광객을 표적으로 삼는다는 경고문이 붙어 있었어요.",
    "blank": "표적으로",
+   "src": "made"
+  }
+ ],
+ "w|표절": [
+  {
+   "text": "옆 동물병원 블로그가 동민의 글을 표절해서 직원들이 화를 냈어요.",
+   "en": "The staff got angry because the blog of the vet clinic next door plagiarized Dongmin's post.",
+   "ko": "옆 동물병원 블로그가 동민의 글을 표절해서 직원들이 화를 냈어요.",
+   "blank": "표절해서",
+   "src": "made"
+  },
+  {
+   "text": "경쟁 회사가 서연의 앱 디자인을 표절했다는 의혹이 나왔어요.",
+   "en": "Suspicions arose that a rival company had copied the design of Seoyeon's app.",
+   "ko": "경쟁 회사가 서연의 앱 디자인을 표절했다는 의혹이 나왔어요.",
+   "blank": "표절했다는",
    "src": "made"
   }
  ],
@@ -100529,6 +101137,22 @@
    "blank": "호수에서"
   }
  ],
+ "w|호스피스": [
+  {
+   "text": "동민은 나이 든 반려동물을 위한 호스피스 진료도 시작했어요.",
+   "en": "Dongmin also started hospice care for elderly pets.",
+   "ko": "동민은 나이 든 반려동물을 위한 호스피스 진료도 시작했어요.",
+   "blank": "호스피스",
+   "src": "made"
+  },
+  {
+   "text": "서연의 팀은 호스피스 병동 가족들이 편지를 남길 수 있는 서비스를 만들었어요.",
+   "en": "Seoyeon's team made a service where families in hospice wards can leave letters.",
+   "ko": "서연의 팀은 호스피스 병동 가족들이 편지를 남길 수 있는 서비스를 만들었어요.",
+   "blank": "호스피스",
+   "src": "made"
+  }
+ ],
  "w|호의": [
   {
    "text": "관장님의 호의 덕분에 준호는 수장고를 잠깐 구경할 수 있었어요.",
@@ -103244,6 +103868,22 @@
    "en": "Seoyeon wrote to her friend that she was quickly absorbing the feel of her new neighborhood.",
    "ko": "서연은 새 동네 분위기를 빨리 흡수하고 있다고 친구에게 썼어요.",
    "blank": "흡수하고",
+   "src": "made"
+  }
+ ],
+ "w|흡연": [
+  {
+   "text": "동민의 병원 건물은 입구 앞에서 흡연을 금지하고 있어요.",
+   "en": "Dongmin's clinic building bans smoking in front of the entrance.",
+   "ko": "동민의 병원 건물은 입구 앞에서 흡연을 금지하고 있어요.",
+   "blank": "흡연을",
+   "src": "made"
+  },
+  {
+   "text": "서연의 사무실 건물은 옥상에만 흡연 구역이 있어요.",
+   "en": "Seoyeon's office building has a smoking area only on the roof.",
+   "ko": "서연의 사무실 건물은 옥상에만 흡연 구역이 있어요.",
+   "blank": "흡연",
    "src": "made"
   }
  ],
