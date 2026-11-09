@@ -57,7 +57,6 @@ export function CallRecap({
     <section className="mt-4 rounded-2xl border border-line bg-white/[0.03] p-3" data-call-recap>
       <header className="flex items-center justify-between gap-2">
         <h3 className="text-note font-semibold text-title">{ui.callRecapTitle}</h3>
-        {saved ? <span className="text-caption text-slate-400">✓ {ui.studyReview}</span> : null}
       </header>
       <ol className="mt-2 space-y-2">
         {items.map((item, index) => (

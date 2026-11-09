@@ -639,6 +639,9 @@ export function Logbank({
             onDay={(day) => setOpenDay(day)}
           />
         ) : null}
+        {/* Reform: no bands/hexagon % or direction — the learned table and the study timeline only (user 2026-11-09). */}
+        {!reform ? (
+          <>
         <div className="flex gap-1 self-end" role="group">
           {(["bands", "hexagon"] as const).map((one) => (
             <button
@@ -683,6 +686,8 @@ export function Logbank({
             setOpenCell(cell);
           }}
         />
+          </>
+        ) : null}
         {recordOpen && checkups?.length ? (
           <SkillRecord
             ui={ui}

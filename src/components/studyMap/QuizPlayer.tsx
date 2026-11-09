@@ -336,7 +336,7 @@ export function QuestionView({
       {question.kind === "judge" ? <JudgeView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "say" ? <SayView ui={ui} locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
       {question.kind === "reply" ? <ReplyView locale={locale} language={language} question={question} answered={answered} onAnswer={onAnswer} tag={tag} /> : null}
-      {/* 열쇠 앞머리: 아래 DictNotes도 같은 문장을 key로 써서 형제 key가 겹쳐 예문 목록이 두 번 그려졌음(가상 사용자 2026-11-09 easy-repeat "같은 예문 두 번"). */}
+      {/* Key prefix: DictNotes below also keyed on the sentence, so sibling keys collided and the example list rendered twice (ux check 2026-11-09 easy-repeat). */}
       {answered && examples && bankKey && "text" in question ? <MoreExamples key={`more|${question.text}`} locale={locale} language={language} bankKey={bankKey} current={question.text} tag={tag} /> : null}
       {answered ? (
         <div className="flex items-center justify-between gap-2">

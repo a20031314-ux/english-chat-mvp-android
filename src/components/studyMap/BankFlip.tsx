@@ -95,10 +95,10 @@ export function BankFlip({ ui, language, locale, words, onClose }: { ui: UICopy;
               {shown ? (
                 <div className="flex gap-2">
                   <button type="button" data-flip-answer="unsure" onClick={() => answer(false)} className="flex-1 rounded-xl border border-line py-2.5 text-note text-slate-200 hover:bg-white/5">
-                    {ui.checkUnsure}
+                    {ui.flipAgainBtn}
                   </button>
                   <button type="button" data-flip-answer="known" onClick={() => answer(true)} className="flex-1 rounded-xl bg-white/90 py-2.5 text-note font-semibold text-slate-900">
-                    {ui.checkKnown}
+                    {ui.flipGotBtn}
                   </button>
                 </div>
               ) : (

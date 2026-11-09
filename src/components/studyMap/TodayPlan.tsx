@@ -38,8 +38,7 @@ import { maybeShowInterstitial } from "@/lib/ads";
 import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { bigTestDue, buildEntryCheck, buildStageTest, entryCheckResult, entryDue, failedToday, stageTestResult } from "@/lib/curriculum/stageTest";
 import { announceKnown, useCheckups } from "@/lib/curriculum/useCheckups";
-import { cleanKnown, confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
-import { addTally, readTally, saveTally, type Tally } from "@/lib/curriculum/studyTally";
+import { confirmDue, knownState, skippedIds } from "@/lib/curriculum/known";
 import { useWordBank } from "@/lib/curriculum/useWordBank";
 import { useExpressionCards } from "@/lib/curriculum/useExpressionCards";
 import { nextExpressions } from "@/lib/curriculum/expressionDeck";
@@ -235,8 +234,6 @@ export function TodayPlan({
   const [reform] = useState(reformOn);
   const examTab = !reform && examReady && settings.focus === "exam";
   const studyFocus: PartId | null = keepFocus;
-  // 오늘 계속 공부로 는 것(curriculum/studyTally.ts, 이 폰).
-  const [tally, setTally] = useState<Tally>({ day: "", known: [], fixed: [] });
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [now, setNow] = useState(0);
   // 오늘 배운 것에서 누른 칩 — 위 목록에서 그게 나온 대본·문장구조를 표시한다.
@@ -500,7 +497,6 @@ export function TodayPlan({
   }, [gaps, redo.map((item) => `${item.frame}:${item.card.wrong}`).join("|")]);
   const day = now ? localDay(new Date(now)) : "";
   useEffect(() => {
-    if (day) setTally(readTally(language, day));
   }, [language, day]);
   useEffect(() => {
     if (day) setQuizDone(readQuizDone(day));
@@ -595,7 +591,6 @@ export function TodayPlan({
     if (!all.length) return;
     const results = all.filter((one) => !one.seen);
     let logged = log;
-    let nextTally = tally;
     for (const { key, correct, shape, miss, src } of results) {
       const sure = sureKeys.current.has(key) && shape === "t";
       sureKeys.current.delete(key);
@@ -604,13 +599,7 @@ export function TodayPlan({
       noteQuizDay(language, localDay(), correct, key, shape, miss, src, sure);
       // 틀린 문장구조·표현·문법은 정기 시험 재료로(curriculum/exam.ts).
       if (!correct) notePool(language, key, "wrong");
-      // 오늘 는 것: 틀렸다가 맞힘(이 폰 기록) — 이미 앎이 된 것은 서버 답에서.
-      if (correct && logged[key] && !logged[key]!.last) nextTally = addTally(nextTally, { fixed: key });
       logged = recordQuiz(logged, key, correct);
-    }
-    if (nextTally !== tally) {
-      setTally(nextTally);
-      saveTally(language, nextTally);
     }
     setLog(logged);
     saveQuizLog(language, logged, false);
@@ -635,18 +624,7 @@ export function TodayPlan({
       .then((response) => (response.ok ? response.json() : null))
       .then((body: { review?: ReviewMap; known?: unknown } | null) => {
         if (body?.review) announceReview(language, body.review);
-        if (body?.known) {
-          announceKnown(language, body.known);
-          const fresh = cleanKnown(body.known);
-          const became = Object.keys(check).filter((key) => knownState(fresh, key) === "known" && knownState(known, key) !== "known");
-          if (became.length) {
-            setTally((current) => {
-              const next = became.reduce((acc, key) => addTally(acc, { known: key }), current);
-              saveTally(language, next);
-              return next;
-            });
-          }
-        }
+        if (body?.known) announceKnown(language, body.known);
       })
       .catch(() => undefined);
   };

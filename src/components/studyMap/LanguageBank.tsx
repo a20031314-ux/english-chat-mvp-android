@@ -217,7 +217,6 @@ export function LanguageBank({
                   <section key={k} data-lb-kind={k} className="rounded-2xl border border-line bg-surface p-3">
                     <button type="button" onClick={() => setView({ kind: k, axis: "topic", row: null, lv: null })} className="flex w-full items-baseline gap-2 text-start">
                       <span className="text-note font-semibold text-status-learned">{kindName[k]}</span>
-                      <span className="text-meta text-slate-500">{all.length.toLocaleString()}</span>
                       <span className="flex-1" />
                       <span className="text-title font-semibold text-ink">{pct(all)}</span>
                       <span aria-hidden className="text-slate-500 rtl:rotate-180">›</span>
@@ -297,7 +296,6 @@ export function LanguageBank({
                             style={ribbon(cell, valueOf)}
                           >
                             <span className="text-caption font-semibold text-ink">{pct(cell)}</span>
-                            <span className="text-meta text-slate-400">{cell.length || ""}</span>
                           </button>
                         );
                       })}
