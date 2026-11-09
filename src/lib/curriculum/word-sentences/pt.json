@@ -793,6 +793,22 @@
    "src": "tatoeba:6088194/carlosalberto en:2259427/_undertoad"
   }
  ],
+ "w|acompanhante": [
+  {
+   "text": "O Bruno contratou uma acompanhante para cuidar da mãe idosa durante o dia.",
+   "en": "Bruno hired a caregiver to look after his elderly mother during the day.",
+   "ko": "브루누는 낮 동안 나이 드신 어머니를 돌볼 간병인을 고용했어요.",
+   "blank": "acompanhante",
+   "src": "made"
+  },
+  {
+   "text": "A acompanhante da Dona Teresa vem comprar o pão dela todas as manhãs.",
+   "en": "Dona Teresa's caregiver comes to buy her bread every morning.",
+   "ko": "테레자 할머니의 간병인이 매일 아침 할머니 빵을 사러 와요.",
+   "blank": "acompanhante",
+   "src": "made"
+  }
+ ],
  "w|acompanhar": [
   {
    "text": "Vocês podem me acompanhar até lá, por favor?",
@@ -1133,6 +1149,22 @@
    "src": "tatoeba:3980206/alexmarcelo en:3738250/CK"
   }
  ],
+ "w|adicional": [
+  {
+   "text": "O síndico cobrou uma taxa adicional para pintar a fachada.",
+   "en": "The building manager charged an additional fee to paint the façade.",
+   "ko": "관리인은 외벽 도색비로 추가 요금을 걷었어요.",
+   "blank": "adicional",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia oferece um desconto adicional para quem paga em dinheiro.",
+   "en": "Sofia offers an additional discount for those who pay in cash.",
+   "ko": "소피아는 현금으로 내는 손님에게 추가 할인을 해 줘요.",
+   "blank": "adicional",
+   "src": "made"
+  }
+ ],
  "w|adicionar": [
   {
    "text": "O Rafael pediu para adicionar mais um item na pauta da reunião.",
@@ -1426,6 +1458,22 @@
    "en": "Sofia cut the tape on the boxes with a sharp box cutter.",
    "ko": "소피아는 날카로운 커터칼로 상자 테이프를 잘랐어요.",
    "blank": "afiado",
+   "src": "made"
+  }
+ ],
+ "w|afim": [
+  {
+   "text": "A Paula e o Bruno têm gostos afins: os dois adoram samba antigo.",
+   "en": "Paula and Bruno have similar tastes: they both love old samba.",
+   "ko": "파울라와 브루누는 취향이 비슷해서 둘 다 옛날 삼바를 좋아해요.",
+   "blank": "afins",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia vende produtos afins, como pilhas e lâmpadas, na mesma prateleira.",
+   "en": "Sofia sells related products, like batteries and light bulbs, on the same shelf.",
+   "ko": "소피아는 건전지와 전구처럼 비슷한 물건을 같은 선반에 둬요.",
+   "blank": "afins",
    "src": "made"
   }
  ],
@@ -2803,6 +2851,22 @@
    "src": "tatoeba:8211882/pedrolima en:5971852/ApioDelPueblo"
   }
  ],
+ "w|amador": [
+  {
+   "text": "O Bruno joga futebol de amador com os vizinhos aos domingos.",
+   "en": "Bruno plays amateur soccer with the neighbors on Sundays.",
+   "ko": "브루누는 일요일마다 이웃들과 아마추어 축구를 해요.",
+   "blank": "amador",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Sofia, que é fotógrafo amador, tirou fotos novas da fachada.",
+   "en": "Sofia's brother, an amateur photographer, took new photos of the shop front.",
+   "ko": "아마추어 사진가인 소피아의 오빠가 가게 앞모습 사진을 새로 찍었어요.",
+   "blank": "amador",
+   "src": "made"
+  }
+ ],
  "w|amaldiçoar": [
   {
    "text": "No ônibus, o Lucas começou a amaldiçoar o trânsito quando viu a hora.",
@@ -3297,6 +3361,38 @@
    "ko": "분석 결과가 어땠어요?",
    "blank": "análise",
    "src": "tatoeba:11541561/carlosalberto en:11541555/carlosalberto"
+  }
+ ],
+ "w|anão": [
+  {
+   "text": "Na peça da escola, o filho do Bruno fez o papel de um anão do bosque.",
+   "en": "In the school play, Bruno's son played a forest dwarf.",
+   "ko": "학교 연극에서 브루누의 아들은 숲속 난쟁이 역을 맡았어요.",
+   "blank": "anão",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia vende um boneco de anão de jardim que ninguém compra.",
+   "en": "Sofia sells a garden gnome that nobody buys.",
+   "ko": "소피아는 아무도 안 사는 정원 난쟁이 인형을 팔아요.",
+   "blank": "anão",
+   "src": "made"
+  }
+ ],
+ "w|ancestral": [
+  {
+   "text": "A Dona Lúcia jura que um ancestral dela chegou à cidade de carroça.",
+   "en": "Dona Lúcia swears an ancestor of hers came to the city by cart.",
+   "ko": "루시아 할머니는 조상 한 분이 마차를 타고 이 도시에 왔다고 장담해요.",
+   "blank": "ancestral",
+   "src": "made"
+  },
+  {
+   "text": "Na parede da loja há uma foto de um ancestral da Sofia ao lado do balcão.",
+   "en": "On the shop wall there's a photo of one of Sofia's ancestors beside the counter.",
+   "ko": "가게 벽에는 계산대 옆에 선 소피아 조상의 사진이 걸려 있어요.",
+   "blank": "ancestral",
+   "src": "made"
   }
  ],
  "w|andamento": [
@@ -4501,6 +4597,22 @@
    "src": "made"
   }
  ],
+ "w|aquecido": [
+  {
+   "text": "A piscina aquecida do prédio fica lotada no inverno.",
+   "en": "The building's heated pool gets packed in winter.",
+   "ko": "건물의 온수 수영장은 겨울에 사람들로 꽉 차요.",
+   "blank": "aquecida",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia guarda o pão de queijo aquecido numa estufa no balcão.",
+   "en": "Sofia keeps the cheese bread warm in a heated case on the counter.",
+   "ko": "소피아는 계산대 위 보온 진열장에 데운 치즈빵을 둬요.",
+   "blank": "aquecido",
+   "src": "made"
+  }
+ ],
  "w|aquele": [
   {
    "text": "Aquele carro é meu.",
@@ -4900,6 +5012,22 @@
    "en": "In the fall, Rita got a scratch on her arm while pruning the rose bushes.",
    "ko": "가을에 히타는 장미를 가지치기하다가 팔이 긁혔어요.",
    "blank": "arranhão",
+   "src": "made"
+  }
+ ],
+ "w|arranhar": [
+  {
+   "text": "O gato do Bruno adora arranhar o sofá da sala.",
+   "en": "Bruno's cat loves to scratch the living room sofa.",
+   "ko": "브루누의 고양이는 거실 소파를 긁는 걸 아주 좋아해요.",
+   "blank": "arranhar",
+   "src": "made"
+  },
+  {
+   "text": "O gato já tentou arranhar um cliente que mexeu no saco de ração.",
+   "en": "The cat once tried to scratch a customer who touched the pet food bag.",
+   "ko": "고양이는 사료 봉지를 건드린 손님을 할퀴려고 한 적이 있어요.",
+   "blank": "arranhar",
    "src": "made"
   }
  ],
@@ -5963,6 +6091,22 @@
    "src": "made"
   }
  ],
+ "w|atleta": [
+  {
+   "text": "O vizinho do terceiro andar é atleta e corre na praça todas as manhãs.",
+   "en": "The neighbor on the third floor is an athlete and runs in the square every morning.",
+   "ko": "삼 층 이웃은 운동선수라 매일 아침 광장에서 달려요.",
+   "blank": "atleta",
+   "src": "made"
+  },
+  {
+   "text": "Um atleta da equipe de vôlei compra banana na loja da Sofia toda tarde.",
+   "en": "An athlete from the volleyball team buys bananas at Sofia's shop every afternoon.",
+   "ko": "배구팀 운동선수 한 명이 매일 오후 소피아 가게에서 바나나를 사요.",
+   "blank": "atleta",
+   "src": "made"
+  }
+ ],
  "w|atmosfera": [
   {
    "text": "O Bruno adora a atmosfera tranquila da vila nas noites de inverno.",
@@ -6380,6 +6524,22 @@
    "en": "The coach's absence left Carla in charge of the team's warm-up.",
    "ko": "코치가 없어서 카를라가 팀 준비 운동을 맡았어요.",
    "blank": "ausência",
+   "src": "made"
+  }
+ ],
+ "w|ausente": [
+  {
+   "text": "O dono do apartamento vazio está sempre ausente nas reuniões.",
+   "en": "The owner of the empty apartment is always absent from the meetings.",
+   "ko": "빈집 주인은 회의에 늘 빠져요.",
+   "blank": "ausente",
+   "src": "made"
+  },
+  {
+   "text": "O irmão da Sofia anda ausente desde que mudou de emprego.",
+   "en": "Sofia's brother has been absent since he changed jobs.",
+   "ko": "소피아의 오빠는 직장을 옮긴 뒤로 통 얼굴을 안 비쳐요.",
+   "blank": "ausente",
    "src": "made"
   }
  ],
@@ -7351,6 +7511,22 @@
    "ko": "면도해 보는 건 처음이에요.",
    "blank": "barba",
    "src": "tatoeba:1682974/alexmarcelo en:1679652/Amastan"
+  }
+ ],
+ "w|bárbaro": [
+  {
+   "text": "A festa junina do prédio foi bárbara, com quadrilha e fogueira.",
+   "en": "The building's June festival was awesome, with square dancing and a bonfire.",
+   "ko": "건물의 유월 축제는 콰드릴랴 춤과 모닥불까지 있어서 끝내줬어요.",
+   "blank": "bárbara",
+   "src": "made"
+  },
+  {
+   "text": "O bolo fez um sucesso bárbaro e acabou antes do meio-dia.",
+   "en": "The cake was a huge hit and sold out before noon.",
+   "ko": "케이크는 대박이 나서 정오 전에 다 팔렸어요.",
+   "blank": "bárbaro",
+   "src": "made"
   }
  ],
  "w|barco": [
@@ -10013,6 +10189,22 @@
    "blank": "campo"
   }
  ],
+ "w|camponês": [
+  {
+   "text": "O avô do Bruno era camponês e plantava milho no interior.",
+   "en": "Bruno's grandfather was a peasant farmer who grew corn in the countryside.",
+   "ko": "브루누의 할아버지는 시골에서 옥수수를 기르던 농부였어요.",
+   "blank": "camponês",
+   "src": "made"
+  },
+  {
+   "text": "O pai do fornecedor era camponês e vendia queijo na feira.",
+   "en": "The supplier's father was a peasant farmer who sold cheese at the market.",
+   "ko": "그 납품업자의 아버지는 장터에서 치즈를 팔던 농부였어요.",
+   "blank": "camponês",
+   "src": "made"
+  }
+ ],
  "w|campus": [
   {
    "text": "A empresa do Rafael fica num campus enorme, cheio de árvores.",
@@ -10460,6 +10652,22 @@
    "en": "The store uses soft music to capture customers' attention, Ana noticed.",
    "ko": "아나는 백화점이 손님의 관심을 끌려고 잔잔한 음악을 튼다는 걸 알아챘어요.",
    "blank": "captar",
+   "src": "made"
+  }
+ ],
+ "w|captura": [
+  {
+   "text": "A captura do rato do porão virou assunto no grupo do prédio.",
+   "en": "Catching the rat in the basement became the talk of the building's group chat.",
+   "ko": "지하실 쥐를 잡은 일이 건물 단톡방 화제가 됐어요.",
+   "blank": "captura",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia leu no jornal sobre a captura de um ladrão de carros no bairro.",
+   "en": "Sofia read in the paper about the capture of a car thief in the neighborhood.",
+   "ko": "소피아는 신문에서 동네 자동차 도둑이 붙잡혔다는 기사를 읽었어요.",
+   "blank": "captura",
    "src": "made"
   }
  ],
@@ -17203,6 +17411,22 @@
    "src": "made"
   }
  ],
+ "w|criador": [
+  {
+   "text": "O Seu Jorge, do térreo, é criador de canários e vende os filhotes para os vizinhos.",
+   "en": "Seu Jorge, from the ground floor, breeds canaries and sells the chicks to the neighbors.",
+   "ko": "일 층의 조르지 아저씨는 카나리아를 길러서 새끼를 이웃에게 팔아요.",
+   "blank": "criador",
+   "src": "made"
+  },
+  {
+   "text": "O fornecedor de ovos da Sofia é criador de galinhas caipiras.",
+   "en": "Sofia's egg supplier is a free-range chicken farmer.",
+   "ko": "소피아에게 달걀을 대는 사람은 토종닭을 기르는 사람이에요.",
+   "blank": "criador",
+   "src": "made"
+  }
+ ],
  "w|criança": [
   {
    "text": "A criança acordou.",
@@ -19837,6 +20061,22 @@
    "blank": "desligar"
   }
  ],
+ "w|deslizar": [
+  {
+   "text": "O Bruno viu a vizinha deslizar no piso molhado do saguão.",
+   "en": "Bruno saw his neighbor slip on the wet lobby floor.",
+   "ko": "브루누는 이웃이 젖은 로비 바닥에서 미끄러지는 걸 봤어요.",
+   "blank": "deslizar",
+   "src": "made"
+  },
+  {
+   "text": "A porta de correr da loja voltou a deslizar fácil depois do óleo.",
+   "en": "The shop's sliding door glided easily again after being oiled.",
+   "ko": "기름칠을 하고 나니 가게 미닫이문이 다시 부드럽게 미끄러졌어요.",
+   "blank": "deslizar",
+   "src": "made"
+  }
+ ],
  "w|desmaiar": [
   {
    "text": "Na primeira cirurgia, o Rafael quase desmaiou de nervoso.",
@@ -19978,6 +20218,22 @@
    "en": "Mariana called the scalper selling fake tickets despicable.",
    "ko": "마리아나는 가짜 표를 팔던 암표상을 비열하다고 했어요.",
    "blank": "desprezível",
+   "src": "made"
+  }
+ ],
+ "w|destacar": [
+  {
+   "text": "A Paula destacou na reunião a necessidade de mais luz na garagem.",
+   "en": "At the meeting, Paula highlighted the need for more light in the garage.",
+   "ko": "파울라는 회의에서 주차장에 조명이 더 필요하다고 강조했어요.",
+   "blank": "destacou",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia resolveu destacar os produtos locais numa vitrine na entrada.",
+   "en": "Sofia decided to feature local products in a display at the entrance.",
+   "ko": "소피아는 입구 진열장에 지역 상품을 눈에 띄게 놓기로 했어요.",
+   "blank": "destacar",
    "src": "made"
   }
  ],
@@ -24195,6 +24451,22 @@
    "src": "made"
   }
  ],
+ "w|envelhecer": [
+  {
+   "text": "A vizinha do Bruno, Dona Lúcia, diz que não quer envelhecer longe das plantas dela.",
+   "en": "Bruno's neighbor, Dona Lúcia, says she doesn't want to grow old far from her plants.",
+   "ko": "브루누의 이웃 루시아 할머니는 자기 화분들과 떨어져서 늙고 싶지 않대요.",
+   "blank": "envelhecer",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia percebeu que vai envelhecer atrás desse balcão, e não se importa.",
+   "en": "Sofia realized she'll grow old behind that counter, and she doesn't mind.",
+   "ko": "소피아는 이 계산대 뒤에서 늙어 갈 거라는 걸 깨달았지만 개의치 않아요.",
+   "blank": "envelhecer",
+   "src": "made"
+  }
+ ],
  "w|envelope": [
   {
    "text": "O Rafael colocou o contrato num envelope e levou ao chefe.",
@@ -28273,6 +28545,22 @@
    "src": "made"
   }
  ],
+ "w|feiticeiro": [
+  {
+   "text": "A filha do síndico foi fantasiada de feiticeiro, com chapéu pontudo e tudo.",
+   "en": "The building manager's daughter went dressed as a sorcerer, pointy hat and all.",
+   "ko": "관리인 딸은 뾰족한 모자까지 쓰고 마법사 분장을 했어요.",
+   "blank": "feiticeiro",
+   "src": "made"
+  },
+  {
+   "text": "As crianças pedem à Sofia o álbum de figurinhas do feiticeiro do desenho.",
+   "en": "The kids ask Sofia for the sticker album of the cartoon sorcerer.",
+   "ko": "아이들은 소피아에게 만화 속 마법사 스티커 앨범을 달라고 해요.",
+   "blank": "feiticeiro",
+   "src": "made"
+  }
+ ],
  "w|feitiço": [
   {
    "text": "O mago lançou um feitiço sobre as crianças.",
@@ -29159,6 +29447,22 @@
    "src": "made"
   }
  ],
+ "w|flertar": [
+  {
+   "text": "O Bruno tentou flertar com a Paula oferecendo carona até o mercado.",
+   "en": "Bruno tried to flirt with Paula by offering her a ride to the market.",
+   "ko": "브루누는 시장까지 태워 주겠다며 파울라에게 작업을 걸었어요.",
+   "blank": "flertar",
+   "src": "made"
+  },
+  {
+   "text": "Um rapaz vive tentando flertar com a Sofia na hora do troco.",
+   "en": "A young man keeps trying to flirt with Sofia when she gives change.",
+   "ko": "한 청년은 거스름돈을 받을 때마다 소피아에게 작업을 걸어요.",
+   "blank": "flertar",
+   "src": "made"
+  }
+ ],
  "w|flor": [
   {
    "text": "A flor caiu no chão.",
@@ -29618,6 +29922,22 @@
    "en": "The whole team went to Beatriz's graduation wearing the club jersey.",
    "ko": "팀 전체가 클럽 유니폼을 입고 베아트리스의 졸업식에 갔어요.",
    "blank": "formatura",
+   "src": "made"
+  }
+ ],
+ "w|formidável": [
+  {
+   "text": "O Bruno achou formidável a ideia de uma horta no terraço.",
+   "en": "Bruno thought the idea of a rooftop vegetable garden was terrific.",
+   "ko": "브루누는 옥상 텃밭 아이디어가 아주 멋지다고 생각했어요.",
+   "blank": "formidável",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia tem uma memória formidável para o nome dos clientes.",
+   "en": "Sofia has a terrific memory for customers' names.",
+   "ko": "소피아는 손님 이름을 기가 막히게 잘 기억해요.",
+   "blank": "formidável",
    "src": "made"
   }
  ],
@@ -32386,6 +32706,38 @@
    "en": "The dry winter air sometimes causes a small nosebleed for Rita.",
    "ko": "건조한 겨울 공기 때문에 히타는 가끔 코피가 나요.",
    "blank": "hemorragia",
+   "src": "made"
+  }
+ ],
+ "w|herança": [
+  {
+   "text": "A casa da Dona Lúcia foi herança de um tio que nunca se casou.",
+   "en": "Dona Lúcia's house was an inheritance from an uncle who never married.",
+   "ko": "루시아 할머니의 집은 결혼하지 않은 삼촌에게서 물려받은 유산이에요.",
+   "blank": "herança",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia tem uma mercearia de esquina que foi herança do avô.",
+   "en": "Sofia has a corner shop that was an inheritance from her grandfather.",
+   "ko": "소피아에게는 할아버지에게서 물려받은 동네 구멍가게가 있어요.",
+   "blank": "herança",
+   "src": "made"
+  }
+ ],
+ "w|herdar": [
+  {
+   "text": "O neto da Dona Lúcia vai herdar a coleção de discos dela.",
+   "en": "Dona Lúcia's grandson will inherit her record collection.",
+   "ko": "루시아 할머니의 손자가 할머니의 음반 컬렉션을 물려받을 거예요.",
+   "blank": "herdar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia vai herdar também a velha balança de ferro da loja.",
+   "en": "Sofia will also inherit the shop's old iron scale.",
+   "ko": "소피아는 가게의 낡은 쇠저울도 물려받을 거예요.",
+   "blank": "herdar",
    "src": "made"
   }
  ],
@@ -35367,6 +35719,22 @@
    "src": "tatoeba:11095028/MrJuice en:5666414/CK"
   }
  ],
+ "w|intimidar": [
+  {
+   "text": "O cachorro do vizinho late alto, mas não consegue intimidar ninguém.",
+   "en": "The neighbor's dog barks loudly, but it can't intimidate anyone.",
+   "ko": "이웃집 개는 크게 짖지만 아무도 겁주지 못해요.",
+   "blank": "intimidar",
+   "src": "made"
+  },
+  {
+   "text": "O supermercado tentou intimidar a Sofia com preços mais baixos.",
+   "en": "The supermarket tried to intimidate Sofia with lower prices.",
+   "ko": "슈퍼마켓은 더 싼 가격으로 소피아를 위협하려 했어요.",
+   "blank": "intimidar",
+   "src": "made"
+  }
+ ],
  "w|íntimo": [
   {
    "text": "Lucas e Rafael eram amigos íntimos desde o colégio.",
@@ -35725,6 +36093,22 @@
    "en": "Where's your brother?",
    "ko": "형 어디 있어?",
    "blank": "irmão"
+  }
+ ],
+ "w|ironia": [
+  {
+   "text": "A ironia é que o vizinho mais reclamão é o que faz mais barulho.",
+   "en": "The irony is that the neighbor who complains most is the one who makes the most noise.",
+   "ko": "아이러니하게도 가장 불평이 많은 이웃이 가장 시끄러워요.",
+   "blank": "ironia",
+   "src": "made"
+  },
+  {
+   "text": "A ironia é que a Sofia vende chocolate mas não pode comer açúcar.",
+   "en": "The irony is that Sofia sells chocolate but can't eat sugar.",
+   "ko": "아이러니하게도 소피아는 초콜릿을 팔지만 설탕을 먹으면 안 돼요.",
+   "blank": "ironia",
+   "src": "made"
   }
  ],
  "w|irrelevante": [
@@ -38733,6 +39117,22 @@
    "src": "made"
   }
  ],
+ "w|mago": [
+  {
+   "text": "As crianças chamavam o Seu Jorge de mago porque ele sempre achava a bola perdida.",
+   "en": "The kids called Seu Jorge a wizard because he always found the lost ball.",
+   "ko": "아이들은 조르지 아저씨가 잃어버린 공을 늘 찾아내서 마법사라고 불렀어요.",
+   "blank": "mago",
+   "src": "made"
+  },
+  {
+   "text": "Na prateleira de revistas há um gibi de um mago que perdeu os poderes.",
+   "en": "On the magazine rack there's a comic about a wizard who lost his powers.",
+   "ko": "잡지 선반에는 힘을 잃은 마법사가 나오는 만화책이 있어요.",
+   "blank": "mago",
+   "src": "made"
+  }
+ ],
  "w|magoado": [
   {
    "text": "A Clara ficou magoada quando o João leu o diário dela sem pedir.",
@@ -39139,6 +39539,22 @@
    "en": "The morning flew by.",
    "ko": "아침이 순식간에 갔어.",
    "blank": "manhã"
+  }
+ ],
+ "w|maníaco": [
+  {
+   "text": "O Bruno brinca que o vizinho de cima é um maníaco por furadeira.",
+   "en": "Bruno jokes that the upstairs neighbor is a power-drill maniac.",
+   "ko": "브루누는 윗집 이웃이 드릴광이라고 농담해요.",
+   "blank": "maníaco",
+   "src": "made"
+  },
+  {
+   "text": "O cliente mais fiel da Sofia é um maníaco por palavras cruzadas.",
+   "en": "Sofia's most loyal customer is crazy about crossword puzzles.",
+   "ko": "소피아의 가장 단골손님은 낱말 맞추기 퍼즐에 푹 빠진 사람이에요.",
+   "blank": "maníaco",
+   "src": "made"
   }
  ],
  "w|manipular": [
@@ -41479,6 +41895,22 @@
    "src": "made"
   }
  ],
+ "w|moleque": [
+  {
+   "text": "Um moleque da rua chutou a bola por cima do muro do Bruno.",
+   "en": "A kid from the street kicked the ball over Bruno's wall.",
+   "ko": "동네 꼬마 하나가 브루누네 담장 너머로 공을 찼어요.",
+   "blank": "moleque",
+   "src": "made"
+  },
+  {
+   "text": "Um moleque tentou levar uma bala sem pagar, e a Sofia deu bronca.",
+   "en": "A kid tried to take a candy without paying, and Sofia scolded him.",
+   "ko": "꼬마 하나가 돈을 안 내고 사탕을 가져가려다 소피아에게 혼났어요.",
+   "blank": "moleque",
+   "src": "made"
+  }
+ ],
  "w|molhado": [
   {
    "text": "O chão da entrada estava molhado por causa da chuva, e o Tiago quase escorregou.",
@@ -41645,6 +42077,22 @@
    "en": "There's a pile of dishes in the sink.",
    "ko": "싱크에 그릇이 산더미야.",
    "blank": "monte"
+  }
+ ],
+ "w|morador": [
+  {
+   "text": "O Bruno mora no mesmo prédio há quinze anos e conhece cada morador pelo nome.",
+   "en": "Bruno has lived in the same building for fifteen years and knows every resident by name.",
+   "ko": "브루누는 같은 건물에 십오 년째 살고 있어서 주민 한 명 한 명의 이름을 다 알아요.",
+   "blank": "morador",
+   "src": "made"
+  },
+  {
+   "text": "Todo morador da rua tem caderneta de fiado com a Sofia.",
+   "en": "Every resident on the street has a tab with Sofia.",
+   "ko": "이 거리 주민들은 모두 소피아 가게에 외상 장부가 있어요.",
+   "blank": "morador",
+   "src": "made"
   }
  ],
  "w|moral": [
@@ -42425,6 +42873,22 @@
    "blank": "namorar"
   }
  ],
+ "w|namoro": [
+  {
+   "text": "O namoro do Bruno com a Paula começou na reunião de condomínio.",
+   "en": "Bruno's relationship with Paula started at a condo meeting.",
+   "ko": "브루누와 파울라의 연애는 관리 회의에서 시작됐어요.",
+   "blank": "namoro",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia não tem tempo para namoro com a loja aberta de domingo a domingo.",
+   "en": "Sofia has no time for dating with the shop open seven days a week.",
+   "ko": "소피아는 가게를 매일 열어서 연애할 시간이 없어요.",
+   "blank": "namoro",
+   "src": "made"
+  }
+ ],
  "w|não": [
   {
    "text": "Hoje não posso.",
@@ -42901,6 +43365,22 @@
    "en": "No excuse will do.",
    "ko": "어떤 변명도 안 통해.",
    "blank": "Nenhuma"
+  }
+ ],
+ "w|nerd": [
+  {
+   "text": "O filho da vizinha é muito nerd e ajudou o Bruno a configurar o roteador.",
+   "en": "The neighbor's son is a real nerd and helped Bruno set up the router.",
+   "ko": "이웃집 아들은 완전 컴퓨터광이라 브루누의 공유기 설정을 도와줬어요.",
+   "blank": "nerd",
+   "src": "made"
+  },
+  {
+   "text": "O sobrinho nerd da Sofia criou um site para a mercearia.",
+   "en": "Sofia's nerdy nephew created a website for the shop.",
+   "ko": "컴퓨터를 잘하는 소피아의 조카가 가게 웹사이트를 만들어 줬어요.",
+   "blank": "nerd",
+   "src": "made"
   }
  ],
  "w|nervo": [
@@ -46107,6 +46587,22 @@
    "src": "made"
   }
  ],
+ "w|participante": [
+  {
+   "text": "Cada participante do jogo leva um prato para o churrasco depois.",
+   "en": "Each participant in the game brings a dish for the barbecue afterward.",
+   "ko": "경기에 나오는 사람마다 끝나고 바비큐에 음식을 하나씩 가져와요.",
+   "blank": "participante",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia inscreveu a loja como participante da feira de pequenos negócios.",
+   "en": "Sofia signed the shop up as a participant in the small-business fair.",
+   "ko": "소피아는 가게를 소상공인 박람회 참가자로 등록했어요.",
+   "blank": "participante",
+   "src": "made"
+  }
+ ],
  "w|participar": [
   {
    "text": "Eu quero participar desta conferência.",
@@ -47539,6 +48035,22 @@
    "ko": "칠면조 샌드위치를 먹었어요.",
    "blank": "peru",
    "src": "tatoeba:6277552/bill en:1804044/Spamster"
+  }
+ ],
+ "w|perverso": [
+  {
+   "text": "O Bruno acha perverso o vizinho que joga lixo no jardim dos outros.",
+   "en": "Bruno thinks the neighbor who dumps trash in other people's gardens is wicked.",
+   "ko": "브루누는 남의 정원에 쓰레기를 버리는 이웃이 고약하다고 생각해요.",
+   "blank": "perverso",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia acha perverso quem vende produto vencido para idosos.",
+   "en": "Sofia thinks it's wicked to sell expired products to the elderly.",
+   "ko": "소피아는 노인에게 유통기한 지난 물건을 파는 건 고약한 짓이라고 생각해요.",
+   "blank": "perverso",
+   "src": "made"
   }
  ],
  "w|pervertido": [
@@ -50885,6 +51397,22 @@
    "src": "made"
   }
  ],
+ "w|progredir": [
+  {
+   "text": "A horta progrediu rápido com a ajuda da Dona Lúcia.",
+   "en": "The garden progressed quickly with Dona Lúcia's help.",
+   "ko": "텃밭은 루시아 할머니 도움으로 빠르게 자리를 잡았어요.",
+   "blank": "progrediu",
+   "src": "made"
+  },
+  {
+   "text": "As vendas da Sofia começaram a progredir depois do site novo.",
+   "en": "Sofia's sales began to pick up after the new website.",
+   "ko": "새 웹사이트 뒤로 소피아의 매출이 늘기 시작했어요.",
+   "blank": "progredir",
+   "src": "made"
+  }
+ ],
  "w|progresso": [
   {
    "text": "Eu estou impressionado com o seu progresso.",
@@ -51318,6 +51846,22 @@
    "en": "There was a big protest downtown today.",
    "ko": "오늘 시내에서 큰 시위가 있었어요.",
    "blank": "protesto",
+   "src": "made"
+  }
+ ],
+ "w|protetor": [
+  {
+   "text": "O porteiro é o grande protetor das crianças do prédio.",
+   "en": "The doorman is the great protector of the building's kids.",
+   "ko": "경비원은 건물 아이들의 든든한 보호자예요.",
+   "blank": "protetor",
+   "src": "made"
+  },
+  {
+   "text": "O gato da loja se acha o protetor do estoque de ração.",
+   "en": "The shop cat thinks it's the protector of the pet food stock.",
+   "ko": "가게 고양이는 자기가 사료 재고를 지키는 보호자라고 생각해요.",
+   "blank": "protetor",
    "src": "made"
   }
  ],
@@ -54521,6 +55065,22 @@
    "src": "tatoeba:13245694/LucasDePaula en:307176/CK"
   }
  ],
+ "w|residente": [
+  {
+   "text": "A Dona Lúcia é residente do prédio desde que ele foi construído.",
+   "en": "Dona Lúcia has been a resident of the building since it was built.",
+   "ko": "루시아 할머니는 건물이 지어졌을 때부터 이곳에 살았어요.",
+   "blank": "residente",
+   "src": "made"
+  },
+  {
+   "text": "Um residente novo do bairro perguntou à Sofia onde fica o posto de saúde.",
+   "en": "A new resident of the neighborhood asked Sofia where the health clinic is.",
+   "ko": "동네에 새로 온 주민이 소피아에게 보건소가 어디냐고 물었어요.",
+   "blank": "residente",
+   "src": "made"
+  }
+ ],
  "w|resistência": [
   {
    "text": "Você precisa de bastante resistência para correr dez mil metros.",
@@ -54777,6 +55337,22 @@
    "en": "Let's go to another restaurant.",
    "ko": "다른 식당으로 가자.",
    "blank": "restaurante"
+  }
+ ],
+ "w|restaurar": [
+  {
+   "text": "O Bruno ajudou a restaurar o banco de madeira da entrada.",
+   "en": "Bruno helped restore the wooden bench at the entrance.",
+   "ko": "브루누는 입구의 나무 벤치를 복원하는 걸 도왔어요.",
+   "blank": "restaurar",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia quer restaurar a placa pintada à mão que o avô fez.",
+   "en": "Sofia wants to restore the hand-painted sign her grandfather made.",
+   "ko": "소피아는 할아버지가 손으로 그린 간판을 복원하고 싶어 해요.",
+   "blank": "restaurar",
+   "src": "made"
   }
  ],
  "w|resto": [
@@ -55430,6 +56006,22 @@
    "en": "Having a pastel before opening the stall is Carla's Sunday ritual.",
    "ko": "가판대를 열기 전에 파스텔을 먹는 게 카를라의 일요일 의식이에요.",
    "blank": "ritual",
+   "src": "made"
+  }
+ ],
+ "w|rival": [
+  {
+   "text": "O time do prédio tem um rival antigo: o pessoal da rua de trás.",
+   "en": "The building's team has an old rival: the people from the street behind.",
+   "ko": "건물 팀에는 오랜 라이벌이 있는데 바로 뒷골목 사람들이에요.",
+   "blank": "rival",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia é a rival mais simpática do supermercado da avenida.",
+   "en": "Sofia is the friendliest rival of the supermarket on the avenue.",
+   "ko": "소피아는 큰길 슈퍼마켓의 가장 친절한 경쟁자예요.",
+   "blank": "rival",
    "src": "made"
   }
  ],
@@ -57341,6 +57933,22 @@
    "src": "tatoeba:6177743/User75171 en:6175223/sundown"
   }
  ],
+ "w|sensacional": [
+  {
+   "text": "O show de talentos do prédio foi sensacional.",
+   "en": "The building's talent show was sensational.",
+   "ko": "건물 장기 자랑은 대단했어요.",
+   "blank": "sensacional",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia achou sensacional o bolo de fubá que a vizinha trouxe para vender.",
+   "en": "Sofia thought the cornmeal cake her neighbor brought to sell was sensational.",
+   "ko": "소피아는 이웃이 팔려고 가져온 옥수수가루 케이크가 끝내준다고 생각했어요.",
+   "blank": "sensacional",
+   "src": "made"
+  }
+ ],
  "w|sensato": [
   {
    "text": "O João deu uma resposta sensata quando a briga começou no recreio.",
@@ -57541,6 +58149,22 @@
    "ko": "네 요리가 그리울 거야.",
    "blank": "sentir falta",
    "src": "tatoeba:2462191/MarlonX19 en:1185312/bart"
+  }
+ ],
+ "w|separação": [
+  {
+   "text": "Os vizinhos ficaram tristes com a separação do casal do quinto andar.",
+   "en": "The neighbors were sad about the separation of the couple on the fifth floor.",
+   "ko": "이웃들은 오 층 부부가 헤어진 걸 안타까워했어요.",
+   "blank": "separação",
+   "src": "made"
+  },
+  {
+   "text": "A Sofia consola uma cliente que está passando por uma separação difícil.",
+   "en": "Sofia comforts a customer who is going through a difficult separation.",
+   "ko": "소피아는 힘든 이별을 겪고 있는 손님을 위로해요.",
+   "blank": "separação",
+   "src": "made"
   }
  ],
  "w|separado": [
@@ -66408,6 +67032,22 @@
    "en": "The marathon route passes in front of the zoo, and Ana heard the monkeys.",
    "ko": "마라톤 코스가 동물원 앞을 지나서 아나는 원숭이 소리를 들었어요.",
    "blank": "zoológico",
+   "src": "made"
+  }
+ ],
+ "w|zumbi": [
+  {
+   "text": "O sobrinho da Dona Lúcia se vestiu de zumbi para a festa do prédio.",
+   "en": "Dona Lúcia's nephew dressed up as a zombie for the building party.",
+   "ko": "루시아 할머니의 조카는 건물 파티에 좀비 분장을 하고 왔어요.",
+   "blank": "zumbi",
+   "src": "made"
+  },
+  {
+   "text": "No Halloween, a Sofia atende os clientes com maquiagem de zumbi.",
+   "en": "On Halloween, Sofia serves customers in zombie makeup.",
+   "ko": "핼러윈에 소피아는 좀비 분장을 하고 손님을 맞아요.",
+   "blank": "zumbi",
    "src": "made"
   }
  ],

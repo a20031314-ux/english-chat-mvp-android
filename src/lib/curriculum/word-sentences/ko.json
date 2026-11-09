@@ -3517,6 +3517,38 @@
    "blank": "게다가"
   }
  ],
+ "w|게시물": [
+  {
+   "text": "가짜 뉴스 게시물이 퍼지자 경민은 사실 확인 기사를 급히 썼어요.",
+   "en": "When a fake news post spread, Kyungmin hurriedly wrote a fact-check article.",
+   "ko": "가짜 뉴스 게시물이 퍼지자 경민은 사실 확인 기사를 급히 썼어요.",
+   "blank": "게시물이",
+   "src": "made"
+  },
+  {
+   "text": "다은이 올린 웨딩드레스 게시물에 좋아요가 수백 개 달렸어요.",
+   "en": "The wedding dress post Daeun uploaded got hundreds of likes.",
+   "ko": "다은이 올린 웨딩드레스 게시물에 좋아요가 수백 개 달렸어요.",
+   "blank": "게시물에",
+   "src": "made"
+  }
+ ],
+ "w|게시판": [
+  {
+   "text": "경민은 동네 주민 게시판에 올라온 글에서 기사거리를 찾았어요.",
+   "en": "Kyungmin found a story idea in a post on the neighborhood residents' bulletin board.",
+   "ko": "경민은 동네 주민 게시판에 올라온 글에서 기사거리를 찾았어요.",
+   "blank": "게시판에",
+   "src": "made"
+  },
+  {
+   "text": "다은은 결혼 준비 카페 게시판에서 드레스 가게 정보를 얻었어요.",
+   "en": "Daeun got information on dress shops from the bulletin board of an online wedding prep forum.",
+   "ko": "다은은 결혼 준비 카페 게시판에서 드레스 가게 정보를 얻었어요.",
+   "blank": "게시판에서",
+   "src": "made"
+  }
+ ],
  "w|게으르다": [
   {
    "text": "주말에 너무 게을렀어.",
@@ -3767,6 +3799,22 @@
    "en": "Did you see the exam results?",
    "ko": "시험 결과 봤어?",
    "blank": "결과"
+  }
+ ],
+ "w|결과적으로": [
+  {
+   "text": "경민의 보도 덕분에 결과적으로 위험한 다리가 다시 공사에 들어갔어요.",
+   "en": "Thanks to Kyungmin's reporting, the dangerous bridge eventually went back under construction.",
+   "ko": "경민의 보도 덕분에 결과적으로 위험한 다리가 다시 공사에 들어갔어요.",
+   "blank": "결과적으로",
+   "src": "made"
+  },
+  {
+   "text": "날씨 때문에 야외 결혼식을 실내로 옮겼는데 결과적으로 더 아늑했어요.",
+   "en": "Because of the weather, they moved the outdoor wedding indoors, and in the end it was cozier.",
+   "ko": "날씨 때문에 야외 결혼식을 실내로 옮겼는데 결과적으로 더 아늑했어요.",
+   "blank": "결과적으로",
+   "src": "made"
   }
  ],
  "w|결국": [
@@ -4789,6 +4837,22 @@
    "en": "Which season do you like?",
    "ko": "어느 계절 좋아해?",
    "blank": "계절"
+  }
+ ],
+ "w|계정": [
+  {
+   "text": "누군가 신문사 공식 계정을 해킹해서 경민이 밤새 수습했어요.",
+   "en": "Someone hacked the newspaper's official account, so Kyungmin spent all night cleaning it up.",
+   "ko": "누군가 신문사 공식 계정을 해킹해서 경민이 밤새 수습했어요.",
+   "blank": "계정을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 결혼하고 나서 부부 공동 계정을 하나 만들었어요.",
+   "en": "After getting married, Daeun created one joint account for the couple.",
+   "ko": "다은은 결혼하고 나서 부부 공동 계정을 하나 만들었어요.",
+   "blank": "계정을",
+   "src": "made"
   }
  ],
  "w|계좌": [
@@ -6173,6 +6237,22 @@
    "blank": "공동체"
   }
  ],
+ "w|공로": [
+  {
+   "text": "경민은 평생 지역 도서관을 지켜 온 할머니의 공로를 기사로 소개했어요.",
+   "en": "Kyungmin introduced in an article the contributions of a grandmother who had looked after the local library all her life.",
+   "ko": "경민은 평생 지역 도서관을 지켜 온 할머니의 공로를 기사로 소개했어요.",
+   "blank": "공로를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 결혼식에서 자기를 키워 주신 할머니의 공로를 따로 소개했어요.",
+   "en": "At her wedding, Daeun gave a special mention to the efforts of her grandmother who raised her.",
+   "ko": "다은은 결혼식에서 자기를 키워 주신 할머니의 공로를 따로 소개했어요.",
+   "blank": "공로를",
+   "src": "made"
+  }
+ ],
  "w|공룡": [
   {
    "text": "아이가 공룡 그림을 그려 왔어.",
@@ -7083,6 +7163,22 @@
    "src": "made"
   }
  ],
+ "w|관중": [
+  {
+   "text": "결승전 날 경기장을 가득 메운 관중 사진이 신문 일 면에 실렸어요.",
+   "en": "A photo of the crowd that packed the stadium on the day of the final ran on the front page.",
+   "ko": "결승전 날 경기장을 가득 메운 관중 사진이 신문 일 면에 실렸어요.",
+   "blank": "관중",
+   "src": "made"
+  },
+  {
+   "text": "신랑 친구들의 춤이 시작되자 하객들이 관중처럼 환호했어요.",
+   "en": "When the groom's friends started dancing, the guests cheered like a crowd at a game.",
+   "ko": "신랑 친구들의 춤이 시작되자 하객들이 관중처럼 환호했어요.",
+   "blank": "관중처럼",
+   "src": "made"
+  }
+ ],
  "w|관찰": [
   {
    "text": "경민은 시장 상인들의 하루를 꼼꼼한 관찰로 기사에 담았어요.",
@@ -7707,6 +7803,38 @@
    "en": "Fold the shirt neatly so it doesn't wrinkle.",
    "ko": "셔츠를 구기지 않게 잘 개어 둬.",
    "blank": "구기지"
+  }
+ ],
+ "w|구독": [
+  {
+   "text": "요즘은 종이 신문 구독을 끊는 집이 많아서 경민은 걱정이에요.",
+   "en": "These days many households are canceling their newspaper subscriptions, which worries Kyungmin.",
+   "ko": "요즘은 종이 신문 구독을 끊는 집이 많아서 경민은 걱정이에요.",
+   "blank": "구독을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 신혼집으로 이사하면서 우유 배달 구독을 새로 신청했어요.",
+   "en": "When she moved into the newlyweds' home, Daeun signed up for a new milk delivery subscription.",
+   "ko": "다은은 신혼집으로 이사하면서 우유 배달 구독을 새로 신청했어요.",
+   "blank": "구독을",
+   "src": "made"
+  }
+ ],
+ "w|구독자": [
+  {
+   "text": "신문사는 온라인 구독자를 늘리려고 경민에게 뉴스레터를 맡겼어요.",
+   "en": "To grow online subscribers, the newspaper put Kyungmin in charge of the newsletter.",
+   "ko": "신문사는 온라인 구독자를 늘리려고 경민에게 뉴스레터를 맡겼어요.",
+   "blank": "구독자를",
+   "src": "made"
+  },
+  {
+   "text": "다은의 결혼 준비 영상에 구독자들이 축하 인사를 남겼어요.",
+   "en": "Subscribers left congratulations on Daeun's wedding preparation video.",
+   "ko": "다은의 결혼 준비 영상에 구독자들이 축하 인사를 남겼어요.",
+   "blank": "구독자들이",
+   "src": "made"
   }
  ],
  "w|구두": [
@@ -8983,6 +9111,22 @@
    "blank": "그늘로"
   }
  ],
+ "w|그다음": [
+  {
+   "text": "경민은 먼저 제목을 정하고 그다음 첫 문장을 오래 고민해요.",
+   "en": "Kyungmin decides the headline first, and next he spends a long time on the first sentence.",
+   "ko": "경민은 먼저 제목을 정하고 그다음 첫 문장을 오래 고민해요.",
+   "blank": "그다음",
+   "src": "made"
+  },
+  {
+   "text": "다은과 신랑은 반지를 주고받고 그다음 양가 부모님께 인사를 드렸어요.",
+   "en": "Daeun and the groom exchanged rings, and next they bowed to both sets of parents.",
+   "ko": "다은과 신랑은 반지를 주고받고 그다음 양가 부모님께 인사를 드렸어요.",
+   "blank": "그다음",
+   "src": "made"
+  }
+ ],
  "w|그다지": [
   {
    "text": "그다지 안 바빠.",
@@ -9139,6 +9283,22 @@
    "blank": "그러나"
   }
  ],
+ "w|그러니": [
+  {
+   "text": "마감이 한 시간 남았다는 말에 경민은 그러니 빨리 사진을 보내 달라고 했어요.",
+   "en": "Told there was an hour left until deadline, Kyungmin said, so please send the photos quickly.",
+   "ko": "마감이 한 시간 남았다는 말에 경민은 그러니 빨리 사진을 보내 달라고 했어요.",
+   "blank": "그러니",
+   "src": "made"
+  },
+  {
+   "text": "다은의 엄마는 비가 올지도 모른다며 그러니 우산을 챙기라고 했어요.",
+   "en": "Daeun's mom said it might rain, so she should bring an umbrella.",
+   "ko": "다은의 엄마는 비가 올지도 모른다며 그러니 우산을 챙기라고 했어요.",
+   "blank": "그러니",
+   "src": "made"
+  }
+ ],
  "w|그러니까": [
   {
    "text": "그러니까 일찍 와.",
@@ -9165,6 +9325,22 @@
    "en": "I'm worried contact might break off if it goes on like that.",
    "ko": "그러다 연락이 끊길까 봐 걱정돼.",
    "blank": "그러다"
+  }
+ ],
+ "w|그러다가": [
+  {
+   "text": "경민은 자료를 뒤지고 있었어요. 그러다가 오래된 사진 한 장을 발견했어요.",
+   "en": "Kyungmin was digging through records. Then, all of a sudden, he found an old photo.",
+   "ko": "경민은 자료를 뒤지고 있었어요. 그러다가 오래된 사진 한 장을 발견했어요.",
+   "blank": "그러다가",
+   "src": "made"
+  },
+  {
+   "text": "다은과 신랑은 같은 동호회에서 그냥 친구로 지냈어요. 그러다가 사랑에 빠졌대요.",
+   "en": "Daeun and the groom were just friends in the same club. Then they fell in love.",
+   "ko": "다은과 신랑은 같은 동호회에서 그냥 친구로 지냈어요. 그러다가 사랑에 빠졌대요.",
+   "blank": "그러다가",
+   "src": "made"
   }
  ],
  "w|그러면": [
@@ -9325,6 +9501,22 @@
    "blank": "그럼"
   }
  ],
+ "w|그럼에도": [
+  {
+   "text": "경민은 협박 전화를 받았어요. 그럼에도 기사를 내리지 않았어요.",
+   "en": "Kyungmin received threatening calls. Even so, he didn't take the article down.",
+   "ko": "경민은 협박 전화를 받았어요. 그럼에도 기사를 내리지 않았어요.",
+   "blank": "그럼에도",
+   "src": "made"
+  },
+  {
+   "text": "식장에 비가 새기 시작했어요. 그럼에도 다은은 계속 웃었어요.",
+   "en": "Rain began leaking into the wedding hall. Even so, Daeun kept smiling.",
+   "ko": "식장에 비가 새기 시작했어요. 그럼에도 다은은 계속 웃었어요.",
+   "blank": "그럼에도",
+   "src": "made"
+  }
+ ],
  "w|그렇게": [
   {
    "text": "그렇게 서두르지 마.",
@@ -9351,6 +9543,22 @@
    "en": "Things like that aren't common.",
    "ko": "그런 일은 흔하지 않아.",
    "blank": "그런"
+  }
+ ],
+ "w|그렇다면": [
+  {
+   "text": "편집장은 경민에게 증거가 확실하냐고 묻고, 그렇다면 바로 내보내자고 했어요.",
+   "en": "The editor-in-chief asked Kyungmin if his evidence was solid and said that, if so, they should run it right away.",
+   "ko": "편집장은 경민에게 증거가 확실하냐고 묻고, 그렇다면 바로 내보내자고 했어요.",
+   "blank": "그렇다면",
+   "src": "made"
+  },
+  {
+   "text": "신랑이 노래를 못 한다고 하자 다은은 그렇다면 같이 부르자고 했어요.",
+   "en": "When the groom said he couldn't sing, Daeun said in that case they should sing together.",
+   "ko": "신랑이 노래를 못 한다고 하자 다은은 그렇다면 같이 부르자고 했어요.",
+   "blank": "그렇다면",
+   "src": "made"
   }
  ],
  "w|그렇지만": [
@@ -12458,6 +12666,22 @@
    "en": "The work of fixing up the old house went on endlessly.",
    "ko": "오래된 집을 고치는 일은 끝없이 이어졌어요.",
    "blank": "끝없이",
+   "src": "made"
+  }
+ ],
+ "w|끝으로": [
+  {
+   "text": "경민은 끝으로 취재에 응해 준 분들께 감사하다는 말을 덧붙였어요.",
+   "en": "Finally, Kyungmin added a note of thanks to the people who agreed to be interviewed.",
+   "ko": "경민은 끝으로 취재에 응해 준 분들께 감사하다는 말을 덧붙였어요.",
+   "blank": "끝으로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 끝으로 와 주신 모든 분께 고개 숙여 감사 인사를 했어요.",
+   "en": "Finally, Daeun bowed her head and thanked everyone who came.",
+   "ko": "다은은 끝으로 와 주신 모든 분께 고개 숙여 감사 인사를 했어요.",
+   "blank": "끝으로",
    "src": "made"
   }
  ],
@@ -16135,6 +16359,22 @@
    "blank": "다양하다"
   }
  ],
+ "w|다운로드": [
+  {
+   "text": "경민은 독자들이 신문 전체를 파일로 다운로드할 수 있게 하자고 제안했어요.",
+   "en": "Kyungmin proposed letting readers download the entire newspaper as a file.",
+   "ko": "경민은 독자들이 신문 전체를 파일로 다운로드할 수 있게 하자고 제안했어요.",
+   "blank": "다운로드할",
+   "src": "made"
+  },
+  {
+   "text": "하객들은 사진 작가가 보낸 링크에서 결혼식 사진 다운로드를 받았어요.",
+   "en": "The guests downloaded the wedding photos from the link the photographer sent.",
+   "ko": "하객들은 사진 작가가 보낸 링크에서 결혼식 사진 다운로드를 받았어요.",
+   "blank": "다운로드를",
+   "src": "made"
+  }
+ ],
  "w|다음": [
   {
    "text": "다음 역에서 내리자.",
@@ -17785,6 +18025,22 @@
    "blank": "대신"
   }
  ],
+ "w|대신에": [
+  {
+   "text": "사진 기자가 아파서 경민이 대신에 카메라를 들고 현장에 나갔어요.",
+   "en": "The photographer was sick, so Kyungmin went out to the scene with the camera instead.",
+   "ko": "사진 기자가 아파서 경민이 대신에 카메라를 들고 현장에 나갔어요.",
+   "blank": "대신에",
+   "src": "made"
+  },
+  {
+   "text": "다은은 화환 대신에 쌀을 받아서 복지관에 기부했어요.",
+   "en": "Instead of flower wreaths, Daeun received rice and donated it to a welfare center.",
+   "ko": "다은은 화환 대신에 쌀을 받아서 복지관에 기부했어요.",
+   "blank": "대신에",
+   "src": "made"
+  }
+ ],
  "w|대신하다": [
   {
    "text": "편집장이 출장 중이라 오늘은 부장이 회의를 대신했어요.",
@@ -17936,6 +18192,22 @@
    "en": "Haeun's company makes a snack brand well known to the public.",
    "ko": "하은의 회사는 대중에게 잘 알려진 과자 브랜드를 만들어요.",
    "blank": "대중에게",
+   "src": "made"
+  }
+ ],
+ "w|대중문화": [
+  {
+   "text": "신문 문화면에서 경민은 대중문화와 관련된 기사를 주로 써요.",
+   "en": "In the culture section of the newspaper, Kyungmin mostly writes articles about pop culture.",
+   "ko": "신문 문화면에서 경민은 대중문화와 관련된 기사를 주로 써요.",
+   "blank": "대중문화와",
+   "src": "made"
+  },
+  {
+   "text": "다은은 대중문화 잡지 기자라서 연예인 친구들이 축하하러 왔어요.",
+   "en": "Daeun is a pop culture magazine reporter, so celebrity friends came to congratulate her.",
+   "ko": "다은은 대중문화 잡지 기자라서 연예인 친구들이 축하하러 왔어요.",
+   "blank": "대중문화",
    "src": "made"
   }
  ],
@@ -18283,6 +18555,22 @@
    "en": "The contest is next month.",
    "ko": "대회가 다음 달이야.",
    "blank": "대회가"
+  }
+ ],
+ "w|댓글": [
+  {
+   "text": "경민은 기사 밑에 달린 악성 댓글을 읽지 않으려고 노력해요.",
+   "en": "Kyungmin tries not to read the hateful comments posted under his articles.",
+   "ko": "경민은 기사 밑에 달린 악성 댓글을 읽지 않으려고 노력해요.",
+   "blank": "댓글을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 결혼 소식 아래 달린 축하 댓글을 하나하나 읽었어요.",
+   "en": "Daeun read the congratulatory comments under her wedding announcement one by one.",
+   "ko": "다은은 결혼 소식 아래 달린 축하 댓글을 하나하나 읽었어요.",
+   "blank": "댓글을",
+   "src": "made"
   }
  ],
  "w|더": [
@@ -19165,6 +19453,22 @@
    "en": "I spotted an eagle above the cliff.",
    "ko": "절벽 위에서 독수리를 발견했어.",
    "blank": "독수리를"
+  }
+ ],
+ "w|독자": [
+  {
+   "text": "경민의 기사를 읽은 독자가 신문사로 감사 편지를 보내왔어요.",
+   "en": "A reader who read Kyungmin's article sent a thank-you letter to the newspaper.",
+   "ko": "경민의 기사를 읽은 독자가 신문사로 감사 편지를 보내왔어요.",
+   "blank": "독자가",
+   "src": "made"
+  },
+  {
+   "text": "다은은 잡지 독자들에게도 결혼 소식을 짧게 전했어요.",
+   "en": "Daeun briefly shared the news of her wedding with her magazine's readers too.",
+   "ko": "다은은 잡지 독자들에게도 결혼 소식을 짧게 전했어요.",
+   "blank": "독자들에게도",
+   "src": "made"
   }
  ],
  "w|독재": [
@@ -22113,6 +22417,22 @@
    "blank": "레지던트"
   }
  ],
+ "w|로그인": [
+  {
+   "text": "회사 시스템이 바뀌어서 경민은 아침마다 로그인을 다시 해야 해요.",
+   "en": "The company system changed, so Kyungmin has to log in again every morning.",
+   "ko": "회사 시스템이 바뀌어서 경민은 아침마다 로그인을 다시 해야 해요.",
+   "blank": "로그인을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 축의금 송금 앱에 로그인이 안 돼서 현금을 따로 준비했어요.",
+   "en": "Daeun couldn't log in to the money-transfer app for gift money, so she prepared cash separately.",
+   "ko": "다은은 축의금 송금 앱에 로그인이 안 돼서 현금을 따로 준비했어요.",
+   "blank": "로그인이",
+   "src": "made"
+  }
+ ],
  "w|로맨틱하다": [
   {
    "text": "현우는 경찰서 앞에서 꽃다발을 들고 청혼하는 남자를 보고 참 로맨틱하다고 생각했어요.",
@@ -22633,6 +22953,22 @@
    "en": "This is the last chance.",
    "ko": "이게 마지막 기회야.",
    "blank": "마지막"
+  }
+ ],
+ "w|마지막으로": [
+  {
+   "text": "경민은 마지막으로 맞춤법을 한 번 더 확인하고 기사를 보냈어요.",
+   "en": "Last of all, Kyungmin checked the spelling once more and sent the article.",
+   "ko": "경민은 마지막으로 맞춤법을 한 번 더 확인하고 기사를 보냈어요.",
+   "blank": "마지막으로",
+   "src": "made"
+  },
+  {
+   "text": "사진 작가는 마지막으로 하객 모두와 단체 사진을 찍자고 했어요.",
+   "en": "The photographer said that, last of all, they should take a group photo with all the guests.",
+   "ko": "사진 작가는 마지막으로 하객 모두와 단체 사진을 찍자고 했어요.",
+   "blank": "마지막으로",
+   "src": "made"
   }
  ],
  "w|마치": [
@@ -23247,6 +23583,22 @@
    "en": "They said it first.",
    "ko": "걔가 먼저 말했어.",
    "blank": "말했어"
+  }
+ ],
+ "w|말하자면": [
+  {
+   "text": "경민에게 그 선배는 말하자면 기자 생활의 스승 같은 사람이에요.",
+   "en": "To Kyungmin, that senior colleague is, so to speak, like a mentor in his reporting career.",
+   "ko": "경민에게 그 선배는 말하자면 기자 생활의 스승 같은 사람이에요.",
+   "blank": "말하자면",
+   "src": "made"
+  },
+  {
+   "text": "다은에게 그 친구는 말하자면 결혼을 이어 준 다리 같은 존재예요.",
+   "en": "To Daeun, that friend is, so to speak, the bridge who brought about her marriage.",
+   "ko": "다은에게 그 친구는 말하자면 결혼을 이어 준 다리 같은 존재예요.",
+   "blank": "말하자면",
+   "src": "made"
   }
  ],
  "w|맑다": [
@@ -25893,6 +26245,22 @@
    "blank": "무엇부터"
   }
  ],
+ "w|무엇보다": [
+  {
+   "text": "경민은 기자에게 무엇보다 필요한 건 끈기라고 생각해요.",
+   "en": "Kyungmin thinks that what a reporter needs above all is persistence.",
+   "ko": "경민은 기자에게 무엇보다 필요한 건 끈기라고 생각해요.",
+   "blank": "무엇보다",
+   "src": "made"
+  },
+  {
+   "text": "다은은 결혼 생활에서 무엇보다 대화가 중요하다고 믿어요.",
+   "en": "Daeun believes that above all, conversation matters in married life.",
+   "ko": "다은은 결혼 생활에서 무엇보다 대화가 중요하다고 믿어요.",
+   "blank": "무엇보다",
+   "src": "made"
+  }
+ ],
  "w|무역": [
   {
    "text": "무역 일을 배우고 싶어.",
@@ -27875,6 +28243,22 @@
    "en": "I'm against it.",
    "ko": "난 반대해.",
    "blank": "반대해"
+  }
+ ],
+ "w|반대로": [
+  {
+   "text": "다들 집값이 오른다고 했지만 경민의 기사는 반대로 떨어질 수 있다고 내다봤어요.",
+   "en": "Everyone said housing prices would rise, but Kyungmin's article predicted the opposite, that they could fall.",
+   "ko": "다들 집값이 오른다고 했지만 경민의 기사는 반대로 떨어질 수 있다고 내다봤어요.",
+   "blank": "반대로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 차분한 성격이고 신랑은 반대로 장난기가 많아요.",
+   "en": "Daeun is calm, while the groom, on the contrary, is very playful.",
+   "ko": "다은은 차분한 성격이고 신랑은 반대로 장난기가 많아요.",
+   "blank": "반대로",
+   "src": "made"
   }
  ],
  "w|반대편": [
@@ -34943,6 +35327,22 @@
    "en": "The empty shop in Yuna's neighborhood is being used as a resident lounge these days.",
    "ko": "유나네 동네 빈 가게는 요즘 주민 쉼터로 사용되고 있어요.",
    "blank": "사용되고",
+   "src": "made"
+  }
+ ],
+ "w|사용자": [
+  {
+   "text": "신문사 홈페이지를 바꾼 뒤 사용자 불만이 쏟아져서 경민도 놀랐어요.",
+   "en": "After the newspaper's website was redesigned, user complaints poured in, which surprised even Kyungmin.",
+   "ko": "신문사 홈페이지를 바꾼 뒤 사용자 불만이 쏟아져서 경민도 놀랐어요.",
+   "blank": "사용자",
+   "src": "made"
+  },
+  {
+   "text": "모바일 청첩장 사용자가 늘면서 종이 청첩장은 점점 줄고 있어요.",
+   "en": "As more people use mobile invitations, paper invitations are becoming less common.",
+   "ko": "모바일 청첩장 사용자가 늘면서 종이 청첩장은 점점 줄고 있어요.",
+   "blank": "사용자가",
    "src": "made"
   }
  ],
@@ -42038,6 +42438,22 @@
    "blank": "시위에"
   }
  ],
+ "w|시인": [
+  {
+   "text": "경민은 새 시집을 낸 시인을 만나러 남해까지 내려갔어요.",
+   "en": "Kyungmin went all the way down to Namhae to meet a poet who had published a new poetry collection.",
+   "ko": "경민은 새 시집을 낸 시인을 만나러 남해까지 내려갔어요.",
+   "blank": "시인을",
+   "src": "made"
+  },
+  {
+   "text": "시인인 다은의 이모가 결혼식에서 직접 쓴 축시를 낭송했어요.",
+   "en": "Daeun's aunt, a poet, recited a poem she wrote herself at the wedding.",
+   "ko": "시인인 다은의 이모가 결혼식에서 직접 쓴 축시를 낭송했어요.",
+   "blank": "시인인",
+   "src": "made"
+  }
+ ],
  "w|시작": [
   {
    "text": "수업 시작이 조금 늦었어.",
@@ -42136,6 +42552,38 @@
    "en": "I submitted papers at city hall.",
    "ko": "시청에 서류를 냈어.",
    "blank": "시청에"
+  }
+ ],
+ "w|시청률": [
+  {
+   "text": "경민은 주말 예능의 시청률이 왜 떨어졌는지 분석했어요.",
+   "en": "Kyungmin analyzed why the ratings for the weekend variety show had dropped.",
+   "ko": "경민은 주말 예능의 시청률이 왜 떨어졌는지 분석했어요.",
+   "blank": "시청률이",
+   "src": "made"
+  },
+  {
+   "text": "다은이 출연한 결혼 예능은 시청률이 꽤 높았어요.",
+   "en": "The wedding reality show Daeun appeared on had pretty high ratings.",
+   "ko": "다은이 출연한 결혼 예능은 시청률이 꽤 높았어요.",
+   "blank": "시청률이",
+   "src": "made"
+  }
+ ],
+ "w|시청자": [
+  {
+   "text": "경민은 드라마 결말에 실망한 시청자들의 반응을 모아 기사를 썼어요.",
+   "en": "Kyungmin gathered reactions from viewers disappointed by the drama's ending and wrote an article.",
+   "ko": "경민은 드라마 결말에 실망한 시청자들의 반응을 모아 기사를 썼어요.",
+   "blank": "시청자들의",
+   "src": "made"
+  },
+  {
+   "text": "다은의 결혼식은 방송에 나와서 많은 시청자가 축하 메시지를 보냈어요.",
+   "en": "Daeun's wedding was on TV, so many viewers sent congratulatory messages.",
+   "ko": "다은의 결혼식은 방송에 나와서 많은 시청자가 축하 메시지를 보냈어요.",
+   "blank": "시청자가",
+   "src": "made"
   }
  ],
  "w|시키다": [
@@ -44896,6 +45344,22 @@
    "blank": "아예"
   }
  ],
+ "w|아울러": [
+  {
+   "text": "경민은 사건의 원인을 짚고 아울러 해결 방안도 함께 제시했어요.",
+   "en": "Kyungmin pointed out the cause of the incident and, in addition, proposed solutions as well.",
+   "ko": "경민은 사건의 원인을 짚고 아울러 해결 방안도 함께 제시했어요.",
+   "blank": "아울러",
+   "src": "made"
+  },
+  {
+   "text": "다은은 신랑에게 고맙다는 말을 하고 아울러 시부모님께도 인사를 드렸어요.",
+   "en": "Daeun thanked the groom and, in addition, greeted her parents-in-law too.",
+   "ko": "다은은 신랑에게 고맙다는 말을 하고 아울러 시부모님께도 인사를 드렸어요.",
+   "blank": "아울러",
+   "src": "made"
+  }
+ ],
  "w|아이": [
   {
    "text": "아이 손 꼭 잡고 건너.",
@@ -46123,6 +46587,22 @@
    "en": "The soybean paste stew at the office cafeteria had big chunks of zucchini in it.",
    "ko": "회사 식당 된장찌개에는 애호박이 큼직하게 들어 있었어요.",
    "blank": "애호박이",
+   "src": "made"
+  }
+ ],
+ "w|앱": [
+  {
+   "text": "신문사가 새 앱을 내놓자 경민의 기사를 휴대폰으로 읽는 사람이 늘었어요.",
+   "en": "After the newspaper released a new app, more people started reading Kyungmin's articles on their phones.",
+   "ko": "신문사가 새 앱을 내놓자 경민의 기사를 휴대폰으로 읽는 사람이 늘었어요.",
+   "blank": "앱을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 결혼 준비 앱으로 해야 할 일과 예산을 정리했어요.",
+   "en": "Daeun organized her to-do list and budget with a wedding planning app.",
+   "ko": "다은은 결혼 준비 앱으로 해야 할 일과 예산을 정리했어요.",
+   "blank": "앱으로",
    "src": "made"
   }
  ],
@@ -50256,6 +50736,22 @@
    "src": "made"
   }
  ],
+ "w|예컨대": [
+  {
+   "text": "경민은 작은 습관, 예컨대 장바구니 쓰기만으로도 쓰레기가 줄어든다고 썼어요.",
+   "en": "Kyungmin wrote that small habits, for example using a shopping bag, can reduce waste.",
+   "ko": "경민은 작은 습관, 예컨대 장바구니 쓰기만으로도 쓰레기가 줄어든다고 썼어요.",
+   "blank": "예컨대",
+   "src": "made"
+  },
+  {
+   "text": "다은은 작은 것, 예컨대 하객 이름표까지 손으로 직접 썼어요.",
+   "en": "Daeun even wrote small things by hand herself, for example the guests' name tags.",
+   "ko": "다은은 작은 것, 예컨대 하객 이름표까지 손으로 직접 썼어요.",
+   "blank": "예컨대",
+   "src": "made"
+  }
+ ],
  "w|옛날": [
   {
    "text": "옛날 이야기가 생각나.",
@@ -50654,6 +51150,22 @@
    "en": "Watch out for motorcycles.",
    "ko": "오토바이를 조심해.",
    "blank": "오토바이를"
+  }
+ ],
+ "w|오프라인": [
+  {
+   "text": "경민은 온라인으로만 친구를 사귀던 청년들이 오프라인 모임을 여는 현상을 취재했어요.",
+   "en": "Kyungmin reported on young people who had only made friends online now holding offline meetups.",
+   "ko": "경민은 온라인으로만 친구를 사귀던 청년들이 오프라인 모임을 여는 현상을 취재했어요.",
+   "blank": "오프라인",
+   "src": "made"
+  },
+  {
+   "text": "다은은 온라인으로 고른 드레스를 오프라인 매장에서 직접 입어 봤어요.",
+   "en": "Daeun tried on the dress she picked online at a physical store.",
+   "ko": "다은은 온라인으로 고른 드레스를 오프라인 매장에서 직접 입어 봤어요.",
+   "blank": "오프라인",
+   "src": "made"
   }
  ],
  "w|오피스텔": [
@@ -51802,6 +52314,22 @@
    "blank": "요청할게"
   }
  ],
+ "w|요컨대": [
+  {
+   "text": "경민의 칼럼은 요컨대 정책보다 사람이 먼저라는 이야기였어요.",
+   "en": "In short, Kyungmin's column was saying that people come before policy.",
+   "ko": "경민의 칼럼은 요컨대 정책보다 사람이 먼저라는 이야기였어요.",
+   "blank": "요컨대",
+   "src": "made"
+  },
+  {
+   "text": "아버지의 축사는 요컨대 서로 아끼며 살라는 말이었어요.",
+   "en": "In short, her father's speech was telling them to cherish each other.",
+   "ko": "아버지의 축사는 요컨대 서로 아끼며 살라는 말이었어요.",
+   "blank": "요컨대",
+   "src": "made"
+  }
+ ],
  "w|욕구": [
   {
    "text": "점심시간이 가까워지자 민수는 먹고 싶은 욕구를 참기 힘들었어요.",
@@ -52428,6 +52956,22 @@
    "en": "I feel refreshed after exercising.",
    "ko": "운동하니까 개운해.",
    "blank": "운동하니까"
+  }
+ ],
+ "w|운동선수": [
+  {
+   "text": "경민은 은퇴한 운동선수들의 두 번째 인생을 다룬 연재를 시작했어요.",
+   "en": "Kyungmin started a series about the second lives of retired athletes.",
+   "ko": "경민은 은퇴한 운동선수들의 두 번째 인생을 다룬 연재를 시작했어요.",
+   "blank": "운동선수들의",
+   "src": "made"
+  },
+  {
+   "text": "다은의 오빠는 운동선수라서 경기 일정 때문에 결혼식에 겨우 왔어요.",
+   "en": "Daeun's older brother is an athlete, so he barely made it to the wedding because of his game schedule.",
+   "ko": "다은의 오빠는 운동선수라서 경기 일정 때문에 결혼식에 겨우 왔어요.",
+   "blank": "운동선수라서",
+   "src": "made"
   }
  ],
  "w|운동장": [
@@ -53124,6 +53668,22 @@
    "en": "What brings this call?",
    "ko": "웬일로 연락이 온 거지?",
    "blank": "웬일로"
+  }
+ ],
+ "w|웹사이트": [
+  {
+   "text": "경민은 시청 웹사이트에서 지난 오 년 치 예산 자료를 찾아냈어요.",
+   "en": "Kyungmin dug up five years' worth of budget data on the city hall website.",
+   "ko": "경민은 시청 웹사이트에서 지난 오 년 치 예산 자료를 찾아냈어요.",
+   "blank": "웹사이트에서",
+   "src": "made"
+  },
+  {
+   "text": "다은과 신랑은 결혼식 사진을 모아 둘 웹사이트를 따로 만들었어요.",
+   "en": "Daeun and the groom made a separate website to collect their wedding photos.",
+   "ko": "다은과 신랑은 결혼식 사진을 모아 둘 웹사이트를 따로 만들었어요.",
+   "blank": "웹사이트를",
+   "src": "made"
   }
  ],
  "w|위": [
@@ -55640,6 +56200,22 @@
    "src": "made"
   }
  ],
+ "w|이어서": [
+  {
+   "text": "경민은 시장을 인터뷰하고 이어서 반대편 주민들의 이야기도 들었어요.",
+   "en": "Kyungmin interviewed the mayor and then went on to hear from residents on the other side.",
+   "ko": "경민은 시장을 인터뷰하고 이어서 반대편 주민들의 이야기도 들었어요.",
+   "blank": "이어서",
+   "src": "made"
+  },
+  {
+   "text": "축가가 끝나고 이어서 신랑 신부가 행진을 했어요.",
+   "en": "After the wedding song ended, the bride and groom walked down the aisle next.",
+   "ko": "축가가 끝나고 이어서 신랑 신부가 행진을 했어요.",
+   "blank": "이어서",
+   "src": "made"
+  }
+ ],
  "w|이어지다": [
   {
    "text": "이야기가 자연스럽게 이어졌어.",
@@ -55683,6 +56259,22 @@
    "en": "Jiyoung carefully read reviews from people who had used the moving company.",
    "ko": "지영은 이삿짐 센터 이용 후기를 꼼꼼히 읽어 봤어요.",
    "blank": "이용",
+   "src": "made"
+  }
+ ],
+ "w|이용자": [
+  {
+   "text": "경민은 공공 자전거 이용자들이 겪는 불편을 직접 타 보며 취재했어요.",
+   "en": "Kyungmin reported on the inconveniences that public bike users face by riding one himself.",
+   "ko": "경민은 공공 자전거 이용자들이 겪는 불편을 직접 타 보며 취재했어요.",
+   "blank": "이용자들이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 웨딩홀 예약 서비스 이용자 후기를 꼼꼼히 읽어 봤어요.",
+   "en": "Daeun carefully read the reviews from users of the wedding hall booking service.",
+   "ko": "다은은 웨딩홀 예약 서비스 이용자 후기를 꼼꼼히 읽어 봤어요.",
+   "blank": "이용자",
    "src": "made"
   }
  ],
@@ -58212,6 +58804,22 @@
    "en": "You wrote the letters small.",
    "ko": "글씨를 작게 썼네.",
    "blank": "작게"
+  }
+ ],
+ "w|작곡가": [
+  {
+   "text": "영화 음악을 만든 작곡가는 경민에게 곡이 탄생한 과정을 들려줬어요.",
+   "en": "The composer who wrote the film score told Kyungmin how the music came to be.",
+   "ko": "영화 음악을 만든 작곡가는 경민에게 곡이 탄생한 과정을 들려줬어요.",
+   "blank": "작곡가는",
+   "src": "made"
+  },
+  {
+   "text": "작곡가로 일하는 신랑은 다은을 위해 만든 노래를 불렀어요.",
+   "en": "The groom, who works as a composer, sang a song he made for Daeun.",
+   "ko": "작곡가로 일하는 신랑은 다은을 위해 만든 노래를 불렀어요.",
+   "blank": "작곡가로",
+   "src": "made"
   }
  ],
  "w|작년": [
@@ -62974,6 +63582,22 @@
    "en": "If you need to leave early, tell the teacher.",
    "ko": "조퇴하려면 선생님께 말씀드려.",
    "blank": "조퇴하려면"
+  }
+ ],
+ "w|조회수": [
+  {
+   "text": "경민이 쓴 인터뷰 기사가 하루 만에 조회수 십만을 넘었어요.",
+   "en": "The interview article Kyungmin wrote passed a hundred thousand views in a single day.",
+   "ko": "경민이 쓴 인터뷰 기사가 하루 만에 조회수 십만을 넘었어요.",
+   "blank": "조회수",
+   "src": "made"
+  },
+  {
+   "text": "다은이 올린 결혼식 영상은 일주일 만에 조회수가 크게 늘었어요.",
+   "en": "The wedding video Daeun posted got a lot more views within a week.",
+   "ko": "다은이 올린 결혼식 영상은 일주일 만에 조회수가 크게 늘었어요.",
+   "blank": "조회수가",
+   "src": "made"
   }
  ],
  "w|족발": [
@@ -73016,6 +73640,22 @@
    "en": "I moved the stuff by truck.",
    "ko": "트럭으로 짐을 옮겼어.",
    "blank": "트럭으로"
+  }
+ ],
+ "w|트렌드": [
+  {
+   "text": "경민은 요즘 이십 대의 소비 트렌드를 분석한 기사를 맡았어요.",
+   "en": "Kyungmin was assigned an article analyzing the spending trends of people in their twenties these days.",
+   "ko": "경민은 요즘 이십 대의 소비 트렌드를 분석한 기사를 맡았어요.",
+   "blank": "트렌드를",
+   "src": "made"
+  },
+  {
+   "text": "요즘 결혼식 트렌드는 하객을 적게 부르는 작은 결혼식이래요.",
+   "en": "They say the current wedding trend is small weddings with few guests.",
+   "ko": "요즘 결혼식 트렌드는 하객을 적게 부르는 작은 결혼식이래요.",
+   "blank": "트렌드는",
+   "src": "made"
   }
  ],
  "w|특권": [
