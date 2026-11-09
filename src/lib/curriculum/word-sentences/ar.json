@@ -8213,6 +8213,22 @@
    "src": "made"
   }
  ],
+ "w|احتيال": [
+  {
+   "text": "اكتشف حسن أن موقع بيع التذاكر المزيف عملية احتيال.",
+   "en": "Hassan discovered that the fake ticket-selling website was a scam.",
+   "ko": "하산은 가짜 표 판매 사이트가 사기라는 걸 알아냈어요.",
+   "blank": "احتيال",
+   "src": "made"
+  },
+  {
+   "text": "حذرت هدى جيرانها من احتيال رجل يبيع بطاقات شحن مزيفة.",
+   "en": "Huda warned her neighbors about a scam by a man selling fake top-up cards.",
+   "ko": "후다는 가짜 충전 카드를 파는 남자의 사기를 이웃들에게 알렸어요.",
+   "blank": "احتيال",
+   "src": "made"
+  }
+ ],
  "w|اختار": [
   {
    "text": "اختار القميص الأزرق من بين الجميع.",
@@ -8525,6 +8541,22 @@
    "en": "Did you save anything from your salary?",
    "ko": "월급에서 뭔가 저축했어?",
    "blank": "ادخرت"
+  }
+ ],
+ "w|ادعاء": [
+  {
+   "text": "نفى حسن ادعاء الصحيفة بأن المسرح سيغلق.",
+   "en": "Hassan denied the newspaper's claim that the theater would close.",
+   "ko": "하산은 극장이 문을 닫는다는 신문의 주장을 부인했어요.",
+   "blank": "ادعاء",
+   "src": "made"
+  },
+  {
+   "text": "كذبت هدى ادعاء الزبون بأنه دفع ثمن الخبز.",
+   "en": "Huda refuted the customer's claim that he had paid for the bread.",
+   "ko": "후다는 빵값을 냈다는 손님의 주장을 반박했어요.",
+   "blank": "ادعاء",
+   "src": "made"
   }
  ],
  "w|ادعى": [
@@ -13467,6 +13499,22 @@
    "blank": "لأبارك"
   }
  ],
+ "w|بارود": [
+  {
+   "text": "تفوح رائحة البارود في القاعة بعد مشهد المعركة.",
+   "en": "The smell of gunpowder fills the hall after the battle scene.",
+   "ko": "전투 장면이 끝나면 극장에 화약 냄새가 퍼져요.",
+   "blank": "البارود",
+   "src": "made"
+  },
+  {
+   "text": "ترفض هدى بيع الألعاب النارية لأن فيها بارودا.",
+   "en": "Huda refuses to sell fireworks because they contain gunpowder.",
+   "ko": "후다는 화약이 들어 있어서 폭죽을 팔지 않아요.",
+   "blank": "بارودا",
+   "src": "made"
+  }
+ ],
  "w|بازلاء": [
   {
    "text": "أمي تطبخ البازلاء بالأرز.",
@@ -16737,6 +16785,22 @@
    "blank": "تأمين"
   }
  ],
+ "w|تأهب": [
+  {
+   "text": "تأهب الممثلون خلف الستار حين أطفئت الأنوار.",
+   "en": "The actors got ready behind the curtain when the lights went out.",
+   "ko": "불이 꺼지자 배우들은 막 뒤에서 준비 자세를 취했어요.",
+   "blank": "تأهب",
+   "src": "made"
+  },
+  {
+   "text": "تأهبت هدى لزحمة العيد وملأت الرفوف بالحلوى.",
+   "en": "Huda got ready for the holiday rush and filled the shelves with sweets.",
+   "ko": "후다는 명절 손님맞이를 준비하며 선반을 과자로 채웠어요.",
+   "blank": "تأهبت",
+   "src": "made"
+  }
+ ],
  "w|تأهل": [
   {
    "text": "تأهل حسن للوظيفة بعد ثلاث مقابلات صعبة.",
@@ -17725,6 +17789,22 @@
    "src": "made"
   }
  ],
+ "w|تحفة": [
+  {
+   "text": "قال النقاد إن مسرحية حسن الأخيرة تحفة فنية.",
+   "en": "The critics said Hassan's latest play is a masterpiece.",
+   "ko": "평론가들은 하산의 최근 연극이 걸작이라고 했어요.",
+   "blank": "تحفة",
+   "src": "made"
+  },
+  {
+   "text": "تعلق هدى على جدار الدكان لوحة قديمة تعدها تحفة.",
+   "en": "Huda hangs an old painting on the shop wall that she considers a masterpiece.",
+   "ko": "후다는 걸작이라 여기는 옛 그림을 가게 벽에 걸어 둬요.",
+   "blank": "تحفة",
+   "src": "made"
+  }
+ ],
  "w|تحقق": [
   {
    "text": "تحقق من الأوراق قبل التوقيع.",
@@ -17765,6 +17845,22 @@
    "en": "Controlling the car is a bit difficult.",
    "ko": "차를 조종하는 게 좀 어려워.",
    "blank": "تحكم"
+  }
+ ],
+ "w|تحليق": [
+  {
+   "text": "علق حسن الممثلة بحبال رفيعة لتبدو في حالة تحليق فوق الجمهور.",
+   "en": "Hassan hung the actress on thin ropes so she would appear to be flying over the audience.",
+   "ko": "하산은 여배우가 관객 위를 나는 것처럼 보이게 가는 줄에 매달았어요.",
+   "blank": "تحليق",
+   "src": "made"
+  },
+  {
+   "text": "رفعت هدى رأسها ورأت تحليق الطيور فوق سطح الدكان.",
+   "en": "Huda raised her head and saw the birds flying over the shop roof.",
+   "ko": "후다는 고개를 들어 가게 지붕 위를 나는 새들을 봤어요.",
+   "blank": "تحليق",
+   "src": "made"
   }
  ],
  "w|تحليل": [
@@ -18295,6 +18391,22 @@
    "en": "The cinema ticket is not expensive.",
    "ko": "영화관 티켓이 비싸지 않아.",
    "blank": "تذكرة"
+  }
+ ],
+ "w|تذكير": [
+  {
+   "text": "أرسل حسن إلى الممثلين تذكيرا بموعد البروفة صباح السبت.",
+   "en": "Hassan sent the actors a reminder of the rehearsal on Saturday morning.",
+   "ko": "하산은 배우들에게 토요일 아침 리허설 일정을 다시 알렸어요.",
+   "blank": "تذكيرا",
+   "src": "made"
+  },
+  {
+   "text": "علقت هدى ورقة تذكير بموعد دفع فاتورة الكهرباء.",
+   "en": "Huda put up a reminder note for the electricity bill due date.",
+   "ko": "후다는 전기 요금 낼 날을 알리는 메모를 붙였어요.",
+   "blank": "تذكير",
+   "src": "made"
   }
  ],
  "w|تذوق": [
@@ -19109,6 +19221,22 @@
    "src": "made"
   }
  ],
+ "w|تشبث": [
+  {
+   "text": "تشبث حسن بفكرته رغم أن المنتج رفضها مرتين.",
+   "en": "Hassan held on to his idea even though the producer rejected it twice.",
+   "ko": "하산은 제작자가 두 번이나 거절했는데도 자기 생각을 고집했어요.",
+   "blank": "تشبث",
+   "src": "made"
+  },
+  {
+   "text": "تشبثت الطفلة بيد هدى حين ضاعت عن أمها.",
+   "en": "The little girl clung to Huda's hand when she got lost from her mother.",
+   "ko": "엄마를 잃은 여자아이가 후다의 손을 꼭 붙잡았어요.",
+   "blank": "تشبثت",
+   "src": "made"
+  }
+ ],
  "w|تشجيع": [
   {
    "text": "يحتاج الطفل إلى تشجيع مستمر.",
@@ -19548,6 +19676,22 @@
    "en": "Maryam rejected any misleading of customers in the new ad.",
    "ko": "마리암은 새 광고에서 고객을 오도하는 내용은 하나도 받아들이지 않았어요.",
    "blank": "تضليل",
+   "src": "made"
+  }
+ ],
+ "w|تضمن": [
+  {
+   "text": "تضمن برنامج المساء عرضين قصيرين وحفلة موسيقية.",
+   "en": "The evening program included two short shows and a concert.",
+   "ko": "저녁 프로그램에는 짧은 공연 둘과 음악회가 들어 있었어요.",
+   "blank": "تضمن",
+   "src": "made"
+  },
+  {
+   "text": "تضمنت طلبية هدى صناديق حليب وزيت وسكر.",
+   "en": "Huda's order included boxes of milk, oil and sugar.",
+   "ko": "후다의 주문에는 우유·기름·설탕 상자가 들어 있었어요.",
+   "blank": "تضمنت",
    "src": "made"
   }
  ],
@@ -26213,6 +26357,22 @@
    "blank": "حاول"
   }
  ],
+ "w|حاوية": [
+  {
+   "text": "وصلت الديكورات الجديدة إلى المسرح في حاوية كبيرة من الميناء.",
+   "en": "The new sets arrived at the theater in a big container from the port.",
+   "ko": "새 무대 장치가 항구에서 큰 컨테이너에 실려 극장에 도착했어요.",
+   "blank": "حاوية",
+   "src": "made"
+  },
+  {
+   "text": "وضعت هدى حاوية للبلاستيك أمام الدكان لإعادة التدوير.",
+   "en": "Huda put a plastic container in front of the shop for recycling.",
+   "ko": "후다는 재활용하려고 가게 앞에 플라스틱 수거함을 놓았어요.",
+   "blank": "حاوية",
+   "src": "made"
+  }
+ ],
  "w|حب": [
   {
    "text": "حب الأم لا يوصف.",
@@ -27310,6 +27470,22 @@
    "en": "Layla ordered dates from a farm that sells its crop straight after the harvest.",
    "ko": "라일라는 수확하자마자 바로 파는 농장에서 대추야자를 주문했어요.",
    "blank": "الحصاد",
+   "src": "made"
+  }
+ ],
+ "w|حصار": [
+  {
+   "text": "تدور المسرحية في مدينة قديمة تحت الحصار.",
+   "en": "The play takes place in an old city under siege.",
+   "ko": "그 연극은 포위된 옛 도시를 배경으로 해요.",
+   "blank": "الحصار",
+   "src": "made"
+  },
+  {
+   "text": "يحكي جد هدى عن أيام الحصار حين كان الخبز قليلا.",
+   "en": "Huda's grandfather tells of the days of the siege when bread was scarce.",
+   "ko": "후다의 할아버지는 빵이 귀하던 포위 시절 이야기를 해요.",
+   "blank": "الحصار",
    "src": "made"
   }
  ],
@@ -29455,6 +29631,22 @@
    "blank": "خدمة"
   }
  ],
+ "w|خرافة": [
+  {
+   "text": "تبدأ المسرحية بجدة تحكي لأحفادها خرافة عن غول الجبل.",
+   "en": "The play opens with a grandmother telling her grandchildren a fable about the mountain ogre.",
+   "ko": "연극은 할머니가 손주들에게 산 도깨비 옛이야기를 들려주며 시작해요.",
+   "blank": "خرافة",
+   "src": "made"
+  },
+  {
+   "text": "تضحك هدى من خرافة يرددها الجيران عن قطة الدكان السوداء.",
+   "en": "Huda laughs at a superstition the neighbors repeat about the shop's black cat.",
+   "ko": "후다는 가게 검은 고양이를 두고 이웃들이 하는 미신에 웃어요.",
+   "blank": "خرافة",
+   "src": "made"
+  }
+ ],
  "w|خرج": [
   {
    "text": "خرج الأطفال للعب في الحديقة.",
@@ -30193,6 +30385,22 @@
    "src": "made"
   }
  ],
+ "w|خفي": [
+  {
+   "text": "ركب حسن تحت الخشبة بابا خفيا يخرج منه الساحر.",
+   "en": "Hassan installed a hidden door under the stage for the magician to come out of.",
+   "ko": "하산은 마술사가 나올 비밀 문을 무대 밑에 달았어요.",
+   "blank": "خفيا",
+   "src": "made"
+  },
+  {
+   "text": "وجدت هدى أن للعطر الرخيص عيبا خفيا يظهر بعد ساعة.",
+   "en": "Huda found that the cheap perfume had a hidden flaw that shows up after an hour.",
+   "ko": "후다는 싼 향수에 한 시간 뒤에야 드러나는 숨은 흠이 있다는 걸 알았어요.",
+   "blank": "خفيا",
+   "src": "made"
+  }
+ ],
  "w|خفيف": [
   {
    "text": "هذا القميص خفيف جدًا.",
@@ -30667,6 +30875,22 @@
    "en": "The tailor is skilled at his work.",
    "ko": "재단사는 그의 일에 능숙해요.",
    "blank": "الخياط"
+  }
+ ],
+ "w|خياطة": [
+  {
+   "text": "تعلمت أم حسن الخياطة صغيرة، وهي تصنع أزياء المسرحية.",
+   "en": "Hassan's mother learned sewing young, and she makes the play's costumes.",
+   "ko": "하산의 어머니는 어릴 때 바느질을 배워서 연극 의상을 만들어요.",
+   "blank": "الخياطة",
+   "src": "made"
+  },
+  {
+   "text": "تبيع هدى خيوط الخياطة والأزرار في زاوية الدكان.",
+   "en": "Huda sells sewing thread and buttons in the corner of the shop.",
+   "ko": "후다는 가게 구석에서 바느질 실과 단추를 팔아요.",
+   "blank": "الخياطة",
+   "src": "made"
   }
  ],
  "w|خيال": [
@@ -31251,6 +31475,22 @@
    "en": "The temperature is low today.",
    "ko": "오늘은 기온이 낮아.",
    "blank": "درجة"
+  }
+ ],
+ "w|دردشة": [
+  {
+   "text": "بعد العرض جلس حسن مع الجمهور في دردشة عن المسرحية.",
+   "en": "After the show, Hassan sat with the audience for a chat about the play.",
+   "ko": "공연이 끝난 뒤 하산은 관객들과 앉아 연극 이야기를 나눴어요.",
+   "blank": "دردشة",
+   "src": "made"
+  },
+  {
+   "text": "تحب هدى الدردشة مع الزبائن عن أخبار الحي.",
+   "en": "Huda loves chatting with customers about neighborhood news.",
+   "ko": "후다는 손님들과 동네 소식을 수다 떠는 걸 좋아해요.",
+   "blank": "الدردشة",
+   "src": "made"
   }
  ],
  "w|درس": [
@@ -34847,6 +35087,22 @@
    "blank": "روبيان"
   }
  ],
+ "w|روتين": [
+  {
+   "text": "روتين حسن قبل كل عرض فنجان قهوة وعشر دقائق من الصمت.",
+   "en": "Hassan's routine before every show is a cup of coffee and ten minutes of silence.",
+   "ko": "공연 전 하산의 습관은 커피 한 잔과 십 분의 침묵이에요.",
+   "blank": "روتين",
+   "src": "made"
+  },
+  {
+   "text": "تبدأ هدى يومها بروتين ثابت: تكنس الرصيف وتفتح الباب.",
+   "en": "Huda starts her day with a fixed routine: she sweeps the sidewalk and opens the door.",
+   "ko": "후다는 정해진 순서로 하루를 시작해요. 보도를 쓸고 문을 열어요.",
+   "blank": "بروتين",
+   "src": "made"
+  }
+ ],
  "w|روح": [
   {
    "text": "شعرت براحة في روحي.",
@@ -35257,6 +35513,22 @@
    "en": "This is an empty water bottle.",
    "ko": "이건 빈 생수병이야.",
    "blank": "زجاجة"
+  }
+ ],
+ "w|زحام": [
+  {
+   "text": "وصل حسن إلى المسرح متأخرا بسبب زحام السيارات في وسط المدينة.",
+   "en": "Hassan arrived at the theater late because of the traffic jam downtown.",
+   "ko": "하산은 시내 교통 체증 때문에 극장에 늦게 도착했어요.",
+   "blank": "زحام",
+   "src": "made"
+  },
+  {
+   "text": "يشتد الزحام أمام دكان هدى في الصباح قبل المدارس.",
+   "en": "The crowd in front of Huda's shop gets heavy in the morning before school.",
+   "ko": "아침 등교 전에는 후다의 가게 앞이 붐벼요.",
+   "blank": "الزحام",
+   "src": "made"
   }
  ],
  "w|زحف": [
@@ -38355,6 +38627,22 @@
    "en": "The politician promised to improve conditions.",
    "ko": "정치인은 상황을 개선하겠다고 약속했어.",
    "blank": "السياسي"
+  }
+ ],
+ "w|سيجار": [
+  {
+   "text": "يمسك الممثل سيجارا مطفأ طوال المشهد ولا يدخنه.",
+   "en": "The actor holds an unlit cigar throughout the scene and doesn't smoke it.",
+   "ko": "배우는 장면 내내 불 붙이지 않은 시가를 들고만 있어요.",
+   "blank": "سيجارا",
+   "src": "made"
+  },
+  {
+   "text": "لا تبيع هدى السيجار، لكنها تبيع أعواد الكبريت.",
+   "en": "Huda doesn't sell cigars, but she sells matches.",
+   "ko": "후다는 시가는 안 팔지만 성냥은 팔아요.",
+   "blank": "السيجار",
+   "src": "made"
   }
  ],
  "w|سيجارة": [
@@ -44555,6 +44843,22 @@
    "blank": "عار"
   }
  ],
+ "w|عارض": [
+  {
+   "text": "عارض حسن فكرة رفع أسعار التذاكر في الصيف.",
+   "en": "Hassan opposed the idea of raising ticket prices in summer.",
+   "ko": "하산은 여름에 표값을 올리자는 생각에 반대했어요.",
+   "blank": "عارض",
+   "src": "made"
+  },
+  {
+   "text": "عارضت هدى بناء سوق كبير في الحي لأنه سيغلق الدكاكين الصغيرة.",
+   "en": "Huda opposed building a big supermarket in the neighborhood because it would close the small shops.",
+   "ko": "후다는 큰 마트가 동네 작은 가게들을 문 닫게 할 거라며 건설에 반대했어요.",
+   "blank": "عارضت",
+   "src": "made"
+  }
+ ],
  "w|عازب": [
   {
    "text": "ما زلت عازب وأستمتع بحياتي.",
@@ -46437,6 +46741,22 @@
    "blank": "عفا"
   }
  ],
+ "w|عفن": [
+  {
+   "text": "وجد حسن العفن على ستائر المخزن بعد الشتاء الرطب.",
+   "en": "Hassan found mold on the storeroom curtains after the damp winter.",
+   "ko": "하산은 습한 겨울을 지나고 창고 커튼에 곰팡이가 핀 걸 발견했어요.",
+   "blank": "العفن",
+   "src": "made"
+  },
+  {
+   "text": "رمت هدى الخبز لأن عليه بقعا من العفن.",
+   "en": "Huda threw away the bread because it had spots of mold.",
+   "ko": "후다는 곰팡이가 슬어서 빵을 버렸어요.",
+   "blank": "العفن",
+   "src": "made"
+  }
+ ],
  "w|عفو": [
   {
    "text": "صدر عفو عن السجناء في العيد.",
@@ -47389,6 +47709,38 @@
    "en": "Each member in the team has an important role.",
    "ko": "팀의 각 구성원은 중요한 역할을 해.",
    "blank": "عنصر"
+  }
+ ],
+ "w|عنصري": [
+  {
+   "text": "رفض حسن نصا فيه نكات ذات طابع عنصري.",
+   "en": "Hassan rejected a script with racist jokes in it.",
+   "ko": "하산은 인종차별적인 농담이 든 대본을 거절했어요.",
+   "blank": "عنصري",
+   "src": "made"
+  },
+  {
+   "text": "طردت هدى رجلا قال كلاما عنصريا لزبونة.",
+   "en": "Huda threw out a man who said something racist to a customer.",
+   "ko": "후다는 여자 손님에게 인종차별적인 말을 한 남자를 내쫓았어요.",
+   "blank": "عنصريا",
+   "src": "made"
+  }
+ ],
+ "w|عنصرية": [
+  {
+   "text": "تكشف المسرحية كيف تؤذي العنصرية الأطفال في المدارس.",
+   "en": "The play shows how racism hurts children in schools.",
+   "ko": "그 연극은 인종차별이 학교 아이들에게 얼마나 상처를 주는지 보여 줘요.",
+   "blank": "العنصرية",
+   "src": "made"
+  },
+  {
+   "text": "علقت هدى على الباب لافتة صغيرة ضد العنصرية.",
+   "en": "Huda hung a small sign against racism on the door.",
+   "ko": "후다는 문에 인종차별 반대 작은 팻말을 걸었어요.",
+   "blank": "العنصرية",
+   "src": "made"
   }
  ],
  "w|عنف": [
@@ -49895,6 +50247,22 @@
    "blank": "فسر"
   }
  ],
+ "w|فشار": [
+  {
+   "text": "يمنع حسن الجمهور من أكل الفشار داخل قاعة المسرح.",
+   "en": "Hassan forbids the audience from eating popcorn inside the theater hall.",
+   "ko": "하산은 관객이 극장 안에서 팝콘을 먹지 못하게 해요.",
+   "blank": "الفشار",
+   "src": "made"
+  },
+  {
+   "text": "تبيع هدى أكياس الفشار للأطفال بعد المدرسة.",
+   "en": "Huda sells bags of popcorn to children after school.",
+   "ko": "후다는 방과 후 아이들에게 팝콘 봉지를 팔아요.",
+   "blank": "الفشار",
+   "src": "made"
+  }
+ ],
  "w|فشل": [
   {
    "text": "فشل الفريق في الفوز بالمباراة.",
@@ -50645,6 +51013,22 @@
    "blank": "فوضوي"
   }
  ],
+ "w|فوضوية": [
+  {
+   "text": "كانت البروفة الأولى فوضوية، ونسي نصف الممثلين أدوارهم.",
+   "en": "The first rehearsal was chaotic, and half the actors forgot their parts.",
+   "ko": "첫 리허설은 엉망이었고, 배우 절반이 대사를 잊어버렸어요.",
+   "blank": "فوضوية",
+   "src": "made"
+  },
+  {
+   "text": "أعادت هدى ترتيب الرفوف بعد أسبوع من الفوضوية.",
+   "en": "Huda rearranged the shelves after a week of disorder.",
+   "ko": "후다는 일주일 동안 어지러웠던 선반을 다시 정리했어요.",
+   "blank": "الفوضوية",
+   "src": "made"
+  }
+ ],
  "w|فوضى": [
   {
    "text": "الغرفة في حالة فوضى كاملة.",
@@ -50685,6 +51069,22 @@
    "en": "Fava beans are a popular meal.",
    "ko": "콩은 인기 있는 음식이야.",
    "blank": "فول"
+  }
+ ],
+ "w|فولاذ": [
+  {
+   "text": "صنع الحداد لحسن سيفا من الفولاذ لمشهد المبارزة.",
+   "en": "The blacksmith made Hassan a steel sword for the duel scene.",
+   "ko": "대장장이가 하산에게 결투 장면에 쓸 강철 칼을 만들어 줬어요.",
+   "blank": "الفولاذ",
+   "src": "made"
+  },
+  {
+   "text": "اشترت هدى رفوفا من الفولاذ لا تصدأ.",
+   "en": "Huda bought steel shelves that don't rust.",
+   "ko": "후다는 녹슬지 않는 강철 선반을 샀어요.",
+   "blank": "الفولاذ",
+   "src": "made"
   }
  ],
  "w|في": [
@@ -51689,6 +52089,22 @@
    "blank": "قذر"
   }
  ],
+ "w|قذيفة": [
+  {
+   "text": "استخدم حسن صوت قذيفة مسجلا في مشهد الحرب.",
+   "en": "Hassan used a recorded shell blast in the war scene.",
+   "ko": "하산은 전쟁 장면에 녹음된 포탄 소리를 썼어요.",
+   "blank": "قذيفة",
+   "src": "made"
+  },
+  {
+   "text": "يحتفظ جد هدى بغلاف قذيفة قديم من الحرب على رف عال.",
+   "en": "Huda's grandfather keeps an old shell casing from the war on a high shelf.",
+   "ko": "후다의 할아버지는 전쟁 때 오래된 포탄 껍데기를 높은 선반에 둬요.",
+   "blank": "قذيفة",
+   "src": "made"
+  }
+ ],
  "w|قرآن": [
   {
    "text": "أحب الاستماع إلى تلاوة قرآن.",
@@ -51859,6 +52275,22 @@
    "en": "I will pay off the loan next month.",
    "ko": "다음 달에 대출을 갚을 거야.",
    "blank": "قرض"
+  }
+ ],
+ "w|قرع": [
+  {
+   "text": "قرع حسن الجرس ثلاث مرات قبل رفع الستار.",
+   "en": "Hassan rang the bell three times before the curtain went up.",
+   "ko": "하산은 막이 오르기 전에 종을 세 번 쳤어요.",
+   "blank": "قرع",
+   "src": "made"
+  },
+  {
+   "text": "قرعت جارة هدى الباب بعد الإغلاق لتشتري دواء.",
+   "en": "Huda's neighbor knocked on the door after closing to buy medicine.",
+   "ko": "후다의 이웃이 문 닫은 뒤에 약을 사려고 문을 두드렸어요.",
+   "blank": "قرعت",
+   "src": "made"
   }
  ],
  "w|قرف": [
@@ -59417,6 +59849,22 @@
    "blank": "المحاسب"
   }
  ],
+ "w|محاسبة": [
+  {
+   "text": "يدرس ابن حسن المحاسبة لكنه يحب المسرح أكثر.",
+   "en": "Hassan's son studies accounting but loves the theater more.",
+   "ko": "하산의 아들은 회계를 공부하지만 연극을 더 좋아해요.",
+   "blank": "المحاسبة",
+   "src": "made"
+  },
+  {
+   "text": "تقضي هدى ليلة الخميس في محاسبة دخل الأسبوع.",
+   "en": "Huda spends Thursday night doing the accounts for the week's income.",
+   "ko": "후다는 목요일 밤에 한 주 수입을 정산해요.",
+   "blank": "محاسبة",
+   "src": "made"
+  }
+ ],
  "w|محاضر": [
   {
    "text": "يسكن فوق كريم محاضر في الجامعة يقرأ حتى الفجر.",
@@ -59477,6 +59925,22 @@
    "en": "I recently moved to a new governorate.",
    "ko": "최근에 새로운 주로 이사했어요.",
    "blank": "محافظة"
+  }
+ ],
+ "w|محاكاة": [
+  {
+   "text": "يتقن الممثل محاكاة أصوات الحيوانات، فيضحك الأطفال.",
+   "en": "The actor masters imitating animal sounds, so the children laugh.",
+   "ko": "그 배우는 동물 소리 흉내를 잘 내서 아이들이 웃어요.",
+   "blank": "محاكاة",
+   "src": "made"
+  },
+  {
+   "text": "لعب ابن هدى لعبة محاكاة للدكاكين على هاتف أمه.",
+   "en": "Huda's son played a shop simulation game on his mother's phone.",
+   "ko": "후다의 아들은 엄마 휴대폰으로 가게 경영 시뮬레이션 게임을 했어요.",
+   "blank": "محاكاة",
+   "src": "made"
   }
  ],
  "w|محاكمة": [
@@ -59992,6 +60456,22 @@
    "en": "Fatima's house is on the edge of a nature reserve, so she isn't allowed to cut down trees.",
    "ko": "파티마의 집은 자연 보호구역 가장자리에 있어서 나무를 벨 수 없어요.",
    "blank": "محمية",
+   "src": "made"
+  }
+ ],
+ "w|محنة": [
+  {
+   "text": "تحكي المسرحية عن محنة عائلة فقدت بيتها في الفيضان.",
+   "en": "The play tells of the ordeal of a family who lost their home in the flood.",
+   "ko": "그 연극은 홍수로 집을 잃은 가족의 시련을 그려요.",
+   "blank": "محنة",
+   "src": "made"
+  },
+  {
+   "text": "ساعدت هدى جيرانها في محنة انقطاع الماء أسبوعا.",
+   "en": "Huda helped her neighbors through the ordeal of a week without water.",
+   "ko": "후다는 일주일 동안 물이 끊긴 어려움 속에서 이웃을 도왔어요.",
+   "blank": "محنة",
    "src": "made"
   }
  ],
@@ -62769,6 +63249,22 @@
    "blank": "مسموح"
   }
  ],
+ "w|مسنين": [
+  {
+   "text": "يقدم حسن عرضا مجانيا كل شهر في دار المسنين.",
+   "en": "Hassan puts on a free show every month at the elderly care home.",
+   "ko": "하산은 매달 양로원에서 무료 공연을 해요.",
+   "blank": "المسنين",
+   "src": "made"
+  },
+  {
+   "text": "توصل هدى الطلبات إلى بيوت المسنين في العمارة.",
+   "en": "Huda delivers orders to the homes of the elderly in the building.",
+   "ko": "후다는 건물에 사는 어르신들 집에 주문한 물건을 배달해요.",
+   "blank": "المسنين",
+   "src": "made"
+  }
+ ],
  "w|مسيحي": [
   {
    "text": "جاري مسيحي يحتفل بعيد الميلاد.",
@@ -62840,6 +63336,22 @@
    "en": "A pedestrian found an injured dog in the street and brought it to Mona's clinic.",
    "ko": "행인 한 명이 길에서 다친 개를 발견해 모나의 병원에 데려왔어요.",
    "blank": "المشاة",
+   "src": "made"
+  }
+ ],
+ "w|مشاجرة": [
+  {
+   "text": "وقعت مشاجرة بين ممثلين في الكواليس، فأوقف حسن البروفة.",
+   "en": "A fight broke out between two actors backstage, so Hassan stopped the rehearsal.",
+   "ko": "무대 뒤에서 배우 둘이 다퉈서 하산은 리허설을 멈췄어요.",
+   "blank": "مشاجرة",
+   "src": "made"
+  },
+  {
+   "text": "فضت هدى مشاجرة بين ولدين على آخر قطعة شوكولاتة.",
+   "en": "Huda broke up a fight between two boys over the last piece of chocolate.",
+   "ko": "후다는 마지막 초콜릿 하나를 두고 싸우는 두 아이를 말렸어요.",
+   "blank": "مشاجرة",
    "src": "made"
   }
  ],
@@ -63143,6 +63655,22 @@
    "en": "The restaurant is famous in the city.",
    "ko": "그 식당은 시내에서 유명해요.",
    "blank": "مشهور"
+  }
+ ],
+ "w|مشوق": [
+  {
+   "text": "كان الفصل الثاني مشوقا، ولم يغادر أحد مقعده.",
+   "en": "The second act was gripping, and no one left their seat.",
+   "ko": "2막이 흥미진진해서 아무도 자리를 뜨지 않았어요.",
+   "blank": "مشوقا",
+   "src": "made"
+  },
+  {
+   "text": "تبيع هدى المجلات، وأكثرها طلبا مجلة ألغاز مشوقة.",
+   "en": "Huda sells magazines, and the most popular is an exciting puzzle magazine.",
+   "ko": "후다는 잡지를 파는데, 제일 잘 팔리는 건 흥미진진한 퍼즐 잡지예요.",
+   "blank": "مشوقة",
+   "src": "made"
   }
  ],
  "w|مشوي": [
@@ -64059,6 +64587,22 @@
    "src": "made"
   }
  ],
+ "w|معاهدة": [
+  {
+   "text": "يجلس الملكان في المشهد الأخير لتوقيع معاهدة سلام.",
+   "en": "In the last scene, the two kings sit down to sign a peace treaty.",
+   "ko": "마지막 장면에서 두 왕이 평화 조약에 서명하려고 앉아요.",
+   "blank": "معاهدة",
+   "src": "made"
+  },
+  {
+   "text": "سمعت هدى في الراديو خبرا عن معاهدة تجارية بين بلدين جارين.",
+   "en": "Huda heard on the radio a news item about a trade treaty between two neighboring countries.",
+   "ko": "후다는 라디오에서 이웃한 두 나라의 무역 조약 소식을 들었어요.",
+   "blank": "معاهدة",
+   "src": "made"
+  }
+ ],
  "w|معبد": [
   {
    "text": "دخلت معبد قديم في الهند.",
@@ -64836,6 +65380,22 @@
    "en": "The train came to a sudden stop in the middle of the fields.",
    "ko": "기차가 들판 한가운데서 갑자기 멈췄어요.",
    "blank": "مفاجئا",
+   "src": "made"
+  }
+ ],
+ "w|مفاعل": [
+  {
+   "text": "يقرأ حسن مسرحية عن مهندس يعمل في مفاعل نووي.",
+   "en": "Hassan is reading a play about an engineer who works at a nuclear reactor.",
+   "ko": "하산은 원자로에서 일하는 엔지니어에 관한 희곡을 읽고 있어요.",
+   "blank": "مفاعل",
+   "src": "made"
+  },
+  {
+   "text": "قرأت هدى في الجريدة خبرا عن إغلاق مفاعل قديم.",
+   "en": "Huda read a news item in the paper about an old reactor being shut down.",
+   "ko": "후다는 신문에서 오래된 원자로를 폐쇄한다는 기사를 읽었어요.",
+   "blank": "مفاعل",
    "src": "made"
   }
  ],
@@ -65659,6 +66219,22 @@
    "src": "made"
   }
  ],
+ "w|مقولة": [
+  {
+   "text": "كتب حسن على باب غرفة الملابس مقولة لكاتب مسرحي قديم.",
+   "en": "Hassan wrote a saying by an old playwright on the dressing room door.",
+   "ko": "하산은 분장실 문에 옛 극작가의 명언을 써 붙였어요.",
+   "blank": "مقولة",
+   "src": "made"
+  },
+  {
+   "text": "تردد هدى مقولة أمها: الزبون الراضي يعود.",
+   "en": "Huda repeats her mother's saying: a satisfied customer comes back.",
+   "ko": "후다는 \"만족한 손님은 다시 온다\"는 어머니 말을 되뇌어요.",
+   "blank": "مقولة",
+   "src": "made"
+  }
+ ],
  "w|مقياس": [
   {
    "text": "نظر حسن إلى مقياس الضغط في الرافعة قبل تشغيلها.",
@@ -65939,6 +66515,22 @@
    "en": "The broom broke while cleaning.",
    "ko": "청소 중에 빗자루가 부러졌어.",
    "blank": "مكنسة"
+  }
+ ],
+ "w|مكوك": [
+  {
+   "text": "بنى حسن على المسرح مكوكا فضائيا من الخشب والقماش.",
+   "en": "Hassan built a space shuttle out of wood and cloth on the stage.",
+   "ko": "하산은 나무와 천으로 무대 위에 우주 왕복선을 만들었어요.",
+   "blank": "مكوكا",
+   "src": "made"
+  },
+  {
+   "text": "يشتري ابن هدى ألعابا صغيرة على شكل مكوك فضائي.",
+   "en": "Huda's son buys little toys shaped like a space shuttle.",
+   "ko": "후다의 아들은 우주 왕복선 모양의 작은 장난감을 사요.",
+   "blank": "مكوك",
+   "src": "made"
   }
  ],
  "w|مكونات": [
@@ -69143,6 +69735,22 @@
    "blank": "نبات"
   }
  ],
+ "w|نبتة": [
+  {
+   "text": "وضع حسن نبتة صغيرة على حافة المسرح رمزا للأمل.",
+   "en": "Hassan put a small plant at the edge of the stage as a symbol of hope.",
+   "ko": "하산은 희망의 상징으로 무대 가장자리에 작은 화초를 놓았어요.",
+   "blank": "نبتة",
+   "src": "made"
+  },
+  {
+   "text": "تسقي هدى نبتة النعناع على النافذة كل صباح.",
+   "en": "Huda waters the mint plant on the window every morning.",
+   "ko": "후다는 아침마다 창가의 박하 화분에 물을 줘요.",
+   "blank": "نبتة",
+   "src": "made"
+  }
+ ],
  "w|نبح": [
   {
    "text": "نبح كلب الحارس حين اقترب عمر من الكوخ.",
@@ -69667,6 +70275,22 @@
    "en": "The game's dice got lost in the garden.",
    "ko": "게임 주사위가 정원에서 없어졌어.",
    "blank": "نرد"
+  }
+ ],
+ "w|نزاع": [
+  {
+   "text": "انتهى نزاع حسن مع المنتج حين اتفقا على موعد الافتتاح.",
+   "en": "Hassan's dispute with the producer ended when they agreed on the opening date.",
+   "ko": "하산과 제작자의 다툼은 개막일에 합의하면서 끝났어요.",
+   "blank": "نزاع",
+   "src": "made"
+  },
+  {
+   "text": "انتهى نزاع هدى مع صاحب البيت على الإيجار بعد شهرين.",
+   "en": "Huda's dispute with the landlord over the rent ended after two months.",
+   "ko": "후다와 집주인의 월세 다툼은 두 달 만에 끝났어요.",
+   "blank": "نزاع",
+   "src": "made"
   }
  ],
  "w|نزاهة": [
@@ -71729,6 +72353,22 @@
    "en": "They decided to demolish the wall because it was tilted.",
    "ko": "벽이 기울어져서 허물기로 했어.",
    "blank": "هدم"
+  }
+ ],
+ "w|هدنة": [
+  {
+   "text": "ينتهي الفصل الأول بهدنة بين القبيلتين المتحاربتين.",
+   "en": "The first act ends with a truce between the two warring tribes.",
+   "ko": "1막은 싸우던 두 부족의 휴전으로 끝나요.",
+   "blank": "بهدنة",
+   "src": "made"
+  },
+  {
+   "text": "اتفقت هدى مع صاحب الدكان المقابل على هدنة في حرب الأسعار.",
+   "en": "Huda agreed with the owner of the shop across the street on a truce in the price war.",
+   "ko": "후다는 맞은편 가게 주인과 가격 경쟁을 잠시 멈추기로 했어요.",
+   "blank": "هدنة",
+   "src": "made"
   }
  ],
  "w|هدوء": [
