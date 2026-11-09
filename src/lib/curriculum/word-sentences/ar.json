@@ -897,6 +897,22 @@
    "blank": "أخطأ"
   }
  ],
+ "w|أخطر": [
+  {
+   "text": "أخطر يوسف صاحب المطعم بأن الثلاجة الكبيرة معطلة.",
+   "en": "Youssef notified the restaurant owner that the big fridge was broken.",
+   "ko": "유수프는 큰 냉장고가 고장 났다고 식당 주인에게 알렸어요.",
+   "blank": "أخطر",
+   "src": "made"
+  },
+  {
+   "text": "أخطرت سارة مدير المختبر بتسرب صغير من أنبوب الغاز.",
+   "en": "Sara notified the lab director of a small leak from the gas pipe.",
+   "ko": "사라는 가스관에서 조금 새는 걸 실험실장에게 알렸어요.",
+   "blank": "أخطرت",
+   "src": "made"
+  }
+ ],
  "w|أخفى": [
   {
    "text": "أخفى الطفل لعبته تحت السرير.",
@@ -1321,6 +1337,22 @@
    "en": "The guide led the group through the museum.",
    "ko": "안내원이 박물관에서 일행을 이끌었어.",
    "blank": "أرشد"
+  }
+ ],
+ "w|أرشف": [
+  {
+   "text": "أرشف يوسف وصفاته القديمة في دفتر واحد.",
+   "en": "Youssef archived his old recipes in a single notebook.",
+   "ko": "유수프는 옛 레시피들을 공책 한 권에 정리해 보관했어요.",
+   "blank": "أرشف",
+   "src": "made"
+  },
+  {
+   "text": "أرشفت سارة صور التجارب القديمة على الحاسوب.",
+   "en": "Sara archived the photos of old experiments on the computer.",
+   "ko": "사라는 예전 실험 사진들을 컴퓨터에 보관해 두었어요.",
+   "blank": "أرشفت",
+   "src": "made"
   }
  ],
  "w|أرض": [
@@ -2755,6 +2787,22 @@
    "blank": "أفلتت"
   }
  ],
+ "w|أفلس": [
+  {
+   "text": "أفلس المطعم القديم الذي عمل فيه يوسف، فانتقل إلى هذا المطبخ.",
+   "en": "The old restaurant where Youssef worked went bankrupt, so he moved to this kitchen.",
+   "ko": "유수프가 일하던 옛 식당이 파산해서 이 주방으로 옮겼어요.",
+   "blank": "أفلس",
+   "src": "made"
+  },
+  {
+   "text": "أفلست الشركة التي كانت تزود مختبر سارة بالمعدات.",
+   "en": "The company that supplied Sara's lab with equipment went bankrupt.",
+   "ko": "사라의 실험실에 장비를 대던 회사가 파산했어요.",
+   "blank": "أفلست",
+   "src": "made"
+  }
+ ],
  "w|أقارب": [
   {
    "text": "قابلت أقارب في العطلة الماضية.",
@@ -3989,6 +4037,22 @@
    "blank": "أوان"
   }
  ],
+ "w|أودع": [
+  {
+   "text": "أودع يوسف إيراد اليوم في البنك صباحا.",
+   "en": "Youssef deposited the day's takings at the bank in the morning.",
+   "ko": "유수프는 아침에 그날 매출을 은행에 입금했어요.",
+   "blank": "أودع",
+   "src": "made"
+  },
+  {
+   "text": "أودعت سارة العينات في الثلاجة الخاصة قبل أن تغادر.",
+   "en": "Sara placed the samples in the special fridge before leaving.",
+   "ko": "사라는 퇴근하기 전에 샘플을 전용 냉장고에 넣어 두었어요.",
+   "blank": "أودعت",
+   "src": "made"
+  }
+ ],
  "w|أوسط": [
   {
    "text": "يضع علي الحلوى في الرف الأوسط حتى يصل إليها الأطفال.",
@@ -4119,6 +4183,22 @@
    "en": "I have three boys at home.",
    "ko": "우리 집에 세 명의 아들이 있어요.",
    "blank": "أولاد"
+  }
+ ],
+ "w|أولوية": [
+  {
+   "text": "نظافة المطبخ أولوية عند يوسف قبل أي شيء آخر.",
+   "en": "For Youssef, a clean kitchen is the priority above everything else.",
+   "ko": "유수프에게는 무엇보다 주방 청결이 우선이에요.",
+   "blank": "أولوية",
+   "src": "made"
+  },
+  {
+   "text": "السلامة أولوية في مختبر سارة.",
+   "en": "Safety is a priority in Sara's lab.",
+   "ko": "사라의 실험실에서는 안전이 우선이에요.",
+   "blank": "أولوية",
+   "src": "made"
   }
  ],
  "w|أولي": [
@@ -4772,6 +4852,22 @@
    "en": "Sara asked her friend not to believe any rumour about her marriage.",
    "ko": "사라는 친구에게 자기 결혼에 대한 소문은 믿지 말라고 했어요.",
    "blank": "إشاعة",
+   "src": "made"
+  }
+ ],
+ "w|إشعار": [
+  {
+   "text": "وصل إلى هاتف يوسف إشعار بطلب جديد من التطبيق.",
+   "en": "A notification for a new order from the app arrived on Youssef's phone.",
+   "ko": "유수프의 휴대폰에 앱으로 새 주문이 들어왔다는 알림이 왔어요.",
+   "blank": "إشعار",
+   "src": "made"
+  },
+  {
+   "text": "تلقت سارة إشعارا بقبول بحثها للنشر.",
+   "en": "Sara received a notice that her paper had been accepted for publication.",
+   "ko": "사라는 논문이 게재 승인됐다는 통지를 받았어요.",
+   "blank": "إشعارا",
    "src": "made"
   }
  ],
@@ -5555,6 +5651,22 @@
    "en": "We went back to the same problem again.",
    "ko": "다시 그 문제로 돌아갔어.",
    "blank": "إياها"
+  }
+ ],
+ "w|إيجابي": [
+  {
+   "text": "يبقى يوسف إيجابيا حتى في ليالي الزحام الشديد.",
+   "en": "Youssef stays positive even on the busiest nights.",
+   "ko": "유수프는 아주 붐비는 밤에도 긍정적이에요.",
+   "blank": "إيجابيا",
+   "src": "made"
+  },
+  {
+   "text": "كانت نتيجة الاختبار الأول إيجابية، ففرحت سارة.",
+   "en": "The result of the first test was positive, and Sara was delighted.",
+   "ko": "첫 검사 결과가 양성으로 나와서 사라는 기뻐했어요.",
+   "blank": "إيجابية",
+   "src": "made"
   }
  ],
  "w|إيجابية": [
@@ -12689,6 +12801,22 @@
    "blank": "تجنبت"
   }
  ],
+ "w|تحالف": [
+  {
+   "text": "تحالف يوسف مع مطعم مجاور لشراء الخضار بالجملة.",
+   "en": "Youssef teamed up with a neighboring restaurant to buy vegetables in bulk.",
+   "ko": "유수프는 채소를 도매로 사려고 옆 식당과 손을 잡았어요.",
+   "blank": "تحالف",
+   "src": "made"
+  },
+  {
+   "text": "تحالف مختبر سارة مع جامعة أخرى لدراسة المياه الجوفية.",
+   "en": "Sara's lab joined forces with another university to study groundwater.",
+   "ko": "사라의 실험실은 지하수를 연구하려고 다른 대학과 손을 잡았어요.",
+   "blank": "تحالف",
+   "src": "made"
+  }
+ ],
  "w|تحت": [
   {
    "text": "جلست القطة تحت الطاولة.",
@@ -13511,6 +13639,22 @@
    "en": "Everyone here welcomes you.",
    "ko": "여기 모든 사람이 널 환영해.",
    "blank": "يرحبون"
+  }
+ ],
+ "w|ترخيص": [
+  {
+   "text": "جدد يوسف ترخيص المطعم قبل نهاية السنة.",
+   "en": "Youssef renewed the restaurant's license before the end of the year.",
+   "ko": "유수프는 연말 전에 식당 영업 허가를 갱신했어요.",
+   "blank": "ترخيص",
+   "src": "made"
+  },
+  {
+   "text": "تحتاج سارة إلى ترخيص خاص للتعامل مع المواد المشعة.",
+   "en": "Sara needs a special license to handle radioactive materials.",
+   "ko": "사라는 방사성 물질을 다루려면 특별 허가가 필요해요.",
+   "blank": "ترخيص",
+   "src": "made"
   }
  ],
  "w|تردد": [
@@ -15757,6 +15901,22 @@
    "blank": "تمهل"
   }
  ],
+ "w|تمويل": [
+  {
+   "text": "حصل يوسف على تمويل من البنك لشراء فرن جديد.",
+   "en": "Youssef got financing from the bank to buy a new oven.",
+   "ko": "유수프는 새 오븐을 사려고 은행에서 자금을 지원받았어요.",
+   "blank": "تمويل",
+   "src": "made"
+  },
+  {
+   "text": "حصلت سارة على تمويل لمدة سنتين لمشروعها الجديد.",
+   "en": "Sara got two years of funding for her new project.",
+   "ko": "사라는 새 프로젝트로 이 년 동안 연구비를 받게 됐어요.",
+   "blank": "تمويل",
+   "src": "made"
+  }
+ ],
  "w|تمييز": [
   {
    "text": "رفع أحمد قضية ضد شركة بسبب التمييز في الرواتب بين الموظفين.",
@@ -15813,6 +15973,22 @@
    "en": "The food here is very delicious.",
    "ko": "여기 음식은 정말 맛있어.",
    "blank": "تناول"
+  }
+ ],
+ "w|تنبيه": [
+  {
+   "text": "علق يوسف تنبيها على باب المخزن: الأرض مبللة.",
+   "en": "Youssef hung a warning on the storeroom door: wet floor.",
+   "ko": "유수프는 창고 문에 \"바닥 젖음\" 주의 표시를 붙였어요.",
+   "blank": "تنبيها",
+   "src": "made"
+  },
+  {
+   "text": "أصدر الجهاز تنبيها عندما ارتفعت حرارة العينة، فأسرعت سارة إليه.",
+   "en": "The device gave an alert when the sample's temperature rose, and Sara hurried over.",
+   "ko": "샘플 온도가 올라가자 장비에서 경고음이 울려 사라가 달려갔어요.",
+   "blank": "تنبيها",
+   "src": "made"
   }
  ],
  "w|تنزيل": [
@@ -16441,6 +16617,22 @@
    "en": "I need the manager's signature on this paper.",
    "ko": "이 서류에 관리자 서명이 필요해.",
    "blank": "توقيع"
+  }
+ ],
+ "w|تولد": [
+  {
+   "text": "في الصيف تولد الأفران حرارة لا تحتمل في مطبخ يوسف.",
+   "en": "In summer the ovens generate unbearable heat in Youssef's kitchen.",
+   "ko": "여름이면 오븐들이 유수프의 주방에 견딜 수 없는 열기를 내뿜어요.",
+   "blank": "تولد",
+   "src": "made"
+  },
+  {
+   "text": "أثبتت سارة أن البطارية الصغيرة تولد كهرباء كافية لتشغيل الحساس.",
+   "en": "Sara proved that the small battery generates enough electricity to run the sensor.",
+   "ko": "사라는 작은 배터리가 센서를 돌릴 만큼 전기를 만든다는 걸 증명했어요.",
+   "blank": "تولد",
+   "src": "made"
   }
  ],
  "w|تولى": [
@@ -17793,6 +17985,22 @@
    "en": "Cleaning the wound is important for healing.",
    "ko": "상처를 깨끗이 해야 빨리 나아.",
    "blank": "الجرح"
+  }
+ ],
+ "w|جرد": [
+  {
+   "text": "جرد يوسف محتويات المخزن في آخر الأسبوع.",
+   "en": "Youssef took inventory of the storeroom at the end of the week.",
+   "ko": "유수프는 주말에 창고 재고를 조사했어요.",
+   "blank": "جرد",
+   "src": "made"
+  },
+  {
+   "text": "جردت سارة الأدوات الزجاجية لتعرف ما ينقص المختبر.",
+   "en": "Sara inventoried the glassware to find out what the lab was missing.",
+   "ko": "사라는 실험실에 뭐가 모자라는지 알려고 유리 기구를 점검했어요.",
+   "blank": "جردت",
+   "src": "made"
   }
  ],
  "w|جرذ": [
@@ -22355,6 +22563,22 @@
    "blank": "الخزانة"
   }
  ],
+ "w|خزن": [
+  {
+   "text": "خزن يوسف الأرز في أوعية محكمة الإغلاق.",
+   "en": "Youssef stored the rice in airtight containers.",
+   "ko": "유수프는 쌀을 밀폐 용기에 보관했어요.",
+   "blank": "خزن",
+   "src": "made"
+  },
+  {
+   "text": "خزنت سارة البيانات على قرص احتياطي.",
+   "en": "Sara stored the data on a backup drive.",
+   "ko": "사라는 데이터를 백업 디스크에 저장했어요.",
+   "blank": "خزنت",
+   "src": "made"
+  }
+ ],
  "w|خزنة": [
   {
    "text": "يحفظ حسن مفاتيح المعدات في خزنة صغيرة داخل الكرفان.",
@@ -23909,6 +24133,22 @@
    "blank": "دقة"
   }
  ],
+ "w|دقق": [
+  {
+   "text": "دقق يوسف في فاتورة الخضار فوجد خطأ في الحساب.",
+   "en": "Youssef checked the vegetable invoice carefully and found a calculation error.",
+   "ko": "유수프는 채소 계산서를 꼼꼼히 확인하다가 계산 실수를 찾았어요.",
+   "blank": "دقق",
+   "src": "made"
+  },
+  {
+   "text": "دققت سارة الحسابات مرتين قبل إرسال البحث.",
+   "en": "Sara double-checked the calculations before sending the paper.",
+   "ko": "사라는 논문을 보내기 전에 계산을 두 번 검토했어요.",
+   "blank": "دققت",
+   "src": "made"
+  }
+ ],
  "w|دقيق": [
   {
    "text": "هل هذا خبز من دقيق القمح؟",
@@ -25183,6 +25423,22 @@
    "blank": "راقب"
   }
  ],
+ "w|راقص": [
+  {
+   "text": "كان يوسف راقصا في شبابه قبل أن يصبح طباخا.",
+   "en": "Youssef was a dancer in his youth before he became a cook.",
+   "ko": "유수프는 요리사가 되기 전 젊었을 때 무용수였어요.",
+   "blank": "راقصا",
+   "src": "made"
+  },
+  {
+   "text": "تدرس سارة حركة جسم راقص باستخدام كاميرات سريعة في المختبر.",
+   "en": "Sara studies a dancer's body movement using high-speed cameras in the lab.",
+   "ko": "사라는 실험실에서 고속 카메라로 무용수의 몸 움직임을 연구해요.",
+   "blank": "راقص",
+   "src": "made"
+  }
+ ],
  "w|راكب": [
   {
    "text": "كان فيه راكب مزعج وراي.",
@@ -26130,6 +26386,22 @@
    "en": "Huda dreams of her app becoming the best-known digital shop for used books.",
    "ko": "후다는 자기 앱이 가장 유명한 중고 책 디지털 상점이 되기를 꿈꿔요.",
    "blank": "رقمي",
+   "src": "made"
+  }
+ ],
+ "w|رقى": [
+  {
+   "text": "رقى صاحب المطعم يوسف إلى رئيس الطهاة.",
+   "en": "The restaurant owner promoted Youssef to head chef.",
+   "ko": "식당 주인은 유수프를 주방장으로 승진시켰어요.",
+   "blank": "رقى",
+   "src": "made"
+  },
+  {
+   "text": "رقت الجامعة سارة إلى أستاذة مشاركة.",
+   "en": "The university promoted Sara to associate professor.",
+   "ko": "대학은 사라를 부교수로 승진시켰어요.",
+   "blank": "رقت",
    "src": "made"
   }
  ],
@@ -27471,6 +27743,22 @@
    "en": "The doctor helped the patient quickly.",
    "ko": "의사가 환자를 신속하게 도왔어.",
    "blank": "ساعد"
+  }
+ ],
+ "w|ساعي": [
+  {
+   "text": "أحضر ساعي البريد رسالة إلى يوسف وهو يغسل القدور.",
+   "en": "The mail carrier brought Youssef a letter while he was washing the pots.",
+   "ko": "유수프가 냄비를 씻고 있을 때 우체부가 편지를 가져왔어요.",
+   "blank": "ساعي",
+   "src": "made"
+  },
+  {
+   "text": "جاء ساعي البريد بطرد من العينات إلى مختبر سارة.",
+   "en": "The mail carrier brought a parcel of samples to Sara's lab.",
+   "ko": "우체부가 사라의 실험실에 샘플 소포를 가져왔어요.",
+   "blank": "ساعي",
+   "src": "made"
   }
  ],
  "w|سافر": [
@@ -32553,6 +32841,22 @@
    "src": "made"
   }
  ],
+ "w|ضئيل": [
+  {
+   "text": "الفرق بين الصلصتين ضئيل، لكن يوسف يلاحظه فورا.",
+   "en": "The difference between the two sauces is tiny, but Youssef notices it right away.",
+   "ko": "두 소스의 차이는 아주 작지만 유수프는 바로 알아채요.",
+   "blank": "ضئيل",
+   "src": "made"
+  },
+  {
+   "text": "وجدت سارة كمية ضئيلة من الرصاص في ماء البئر.",
+   "en": "Sara found a tiny amount of lead in the well water.",
+   "ko": "사라는 우물물에서 아주 적은 양의 납을 찾아냈어요.",
+   "blank": "ضئيلة",
+   "src": "made"
+  }
+ ],
  "w|ضائع": [
   {
    "text": "الهاتف ضائع منذ الأمس.",
@@ -35655,6 +35959,22 @@
    "blank": "عشوائي"
   }
  ],
+ "w|عشوائية": [
+  {
+   "text": "لا يحب يوسف العشوائية في ترتيب الثلاجة.",
+   "en": "Youssef doesn't like randomness in how the fridge is arranged.",
+   "ko": "유수프는 냉장고가 아무렇게나 정리돼 있는 걸 싫어해요.",
+   "blank": "العشوائية",
+   "src": "made"
+  },
+  {
+   "text": "تحاول سارة تقليل العشوائية في اختيار العينات.",
+   "en": "Sara tries to reduce randomness in how the samples are chosen.",
+   "ko": "사라는 샘플을 고를 때 무작위성을 줄이려고 해요.",
+   "blank": "العشوائية",
+   "src": "made"
+  }
+ ],
  "w|عصا": [
   {
    "text": "يستعمل الحارس العجوز عصا خشبية عندما يمشي في الساحة.",
@@ -37701,6 +38021,22 @@
    "blank": "غلى"
   }
  ],
+ "w|غموض": [
+  {
+   "text": "يحيط الغموض بوصفة الصلصة التي يرفض يوسف أن يكشفها.",
+   "en": "Mystery surrounds the sauce recipe that Youssef refuses to reveal.",
+   "ko": "유수프가 공개하지 않는 소스 레시피는 수수께끼로 남아 있어요.",
+   "blank": "الغموض",
+   "src": "made"
+  },
+  {
+   "text": "ما زال بعض الغموض يحيط بنتائج سارة الأخيرة.",
+   "en": "Some uncertainty still surrounds Sara's latest results.",
+   "ko": "사라의 최근 결과에는 아직 불분명한 점이 남아 있어요.",
+   "blank": "الغموض",
+   "src": "made"
+  }
+ ],
  "w|غناء": [
   {
    "text": "غناء الأطفال في الحفل جميل جداً.",
@@ -38165,6 +38501,22 @@
    "en": "There are many fruits in the market.",
    "ko": "시장에는 과일이 많아.",
    "blank": "فاكهة"
+  }
+ ],
+ "w|فاوض": [
+  {
+   "text": "فاوض يوسف بائع اللحم على سعر أقل.",
+   "en": "Youssef negotiated a lower price with the butcher.",
+   "ko": "유수프는 정육점 주인과 값을 깎으려고 흥정했어요.",
+   "blank": "فاوض",
+   "src": "made"
+  },
+  {
+   "text": "فاوضت سارة المورد على خصم للباحثين الشباب.",
+   "en": "Sara negotiated a discount with the supplier for young researchers.",
+   "ko": "사라는 젊은 연구자들을 위해 공급업체와 할인을 협상했어요.",
+   "blank": "فاوضت",
+   "src": "made"
   }
  ],
  "w|فبراير": [
@@ -38813,6 +39165,22 @@
    "blank": "فضل"
   }
  ],
+ "w|فضلا": [
+  {
+   "text": "قال يوسف للنادل: ناولني الملح فضلا.",
+   "en": "Youssef told the waiter: pass me the salt, please.",
+   "ko": "유수프가 웨이터에게 \"소금 좀 건네줘요\"라고 했어요.",
+   "blank": "فضلا",
+   "src": "made"
+  },
+  {
+   "text": "كتبت سارة على باب المختبر: أغلقوا الباب خلفكم فضلا.",
+   "en": "Sara wrote on the lab door: please close the door behind you.",
+   "ko": "사라는 실험실 문에 \"들어오면 문을 닫아 주세요\"라고 써 붙였어요.",
+   "blank": "فضلا",
+   "src": "made"
+  }
+ ],
  "w|فضول": [
   {
    "text": "عندي فضول لمعرفة ماذا حدث أمس.",
@@ -39255,6 +39623,22 @@
    "blank": "فوز"
   }
  ],
+ "w|فوض": [
+  {
+   "text": "فوض يوسف مساعده بإدارة المطبخ يوم إجازته.",
+   "en": "Youssef authorized his assistant to run the kitchen on his day off.",
+   "ko": "유수프는 쉬는 날 주방 운영을 조수에게 맡겼어요.",
+   "blank": "فوض",
+   "src": "made"
+  },
+  {
+   "text": "فوضت سارة طالبا بمتابعة التجربة أثناء سفرها.",
+   "en": "Sara delegated a student to monitor the experiment while she traveled.",
+   "ko": "사라는 출장 가 있는 동안 실험 관리를 한 학생에게 맡겼어요.",
+   "blank": "فوضت",
+   "src": "made"
+  }
+ ],
  "w|فوضوي": [
   {
    "text": "غرفته فوضوي جدا.",
@@ -39621,6 +40005,22 @@
    "blank": "القاض"
   }
  ],
+ "w|قاضى": [
+  {
+   "text": "قاضى أحد الزبائن المطعم بعد خلاف على الفاتورة، لكن المحكمة رفضت دعواه.",
+   "en": "A customer sued the restaurant after a dispute over the bill, but the court dismissed his case.",
+   "ko": "한 손님이 계산서 문제로 식당을 고소했지만 법원은 소송을 기각했어요.",
+   "blank": "قاضى",
+   "src": "made"
+  },
+  {
+   "text": "قاضى المختبر شركة باعت له أجهزة معيبة، كما أخبرت سارة زملاءها.",
+   "en": "The lab sued a company that sold it faulty equipment, as Sara told her colleagues.",
+   "ko": "사라가 동료들에게 말한 대로, 실험실은 불량 장비를 판 회사를 고소했어요.",
+   "blank": "قاضى",
+   "src": "made"
+  }
+ ],
  "w|قاطع": [
   {
    "text": "قاطع أحد الحضور خالدا أثناء كلمته في الاجتماع العام.",
@@ -39749,6 +40149,22 @@
    "en": "Everything in the company must be legal.",
    "ko": "회사에서 모든 것이 합법적이어야 해.",
    "blank": "قانوني"
+  }
+ ],
+ "w|قانونيا": [
+  {
+   "text": "يجب قانونيا أن يحفظ يوسف اللحم في درجة حرارة معينة.",
+   "en": "Youssef is legally required to keep the meat at a certain temperature.",
+   "ko": "유수프는 법적으로 고기를 정해진 온도에 보관해야 해요.",
+   "blank": "قانونيا",
+   "src": "made"
+  },
+  {
+   "text": "لا يسمح قانونيا بإخراج المواد الكيميائية من المختبر، كما تذكر سارة الطلاب دائما.",
+   "en": "It's not legally allowed to take chemicals out of the lab, as Sara always reminds the students.",
+   "ko": "사라가 학생들에게 늘 일러 주듯, 화학 물질을 실험실 밖으로 가져가는 건 법적으로 금지돼 있어요.",
+   "blank": "قانونيا",
+   "src": "made"
   }
  ],
  "w|قاوم": [
@@ -40419,6 +40835,22 @@
    "en": "The dwarf always helps the animals.",
    "ko": "난쟁이는 항상 동물들을 도와요.",
    "blank": "القزم"
+  }
+ ],
+ "w|قسط": [
+  {
+   "text": "يدفع يوسف كل شهر قسطا من ثمن آلة العجين.",
+   "en": "Every month Youssef pays an installment on the dough machine.",
+   "ko": "유수프는 매달 반죽기 값을 할부로 내요.",
+   "blank": "قسطا",
+   "src": "made"
+  },
+  {
+   "text": "دفعت سارة القسط الأخير من رسوم الدكتوراه.",
+   "en": "Sara paid the last installment of her doctoral fees.",
+   "ko": "사라는 박사 과정 등록금 마지막 분납금을 냈어요.",
+   "blank": "القسط",
+   "src": "made"
   }
  ],
  "w|قسم": [
@@ -44011,6 +44443,22 @@
    "blank": "ليت"
   }
  ],
+ "w|ليزر": [
+  {
+   "text": "اشترى المطعم ميزان حرارة يعمل بالليزر، فصار يوسف يقيس حرارة الزيت بسرعة.",
+   "en": "The restaurant bought a laser thermometer, so Youssef can now measure the oil temperature quickly.",
+   "ko": "식당에서 레이저 온도계를 사서 유수프는 기름 온도를 금방 잴 수 있게 됐어요.",
+   "blank": "بالليزر",
+   "src": "made"
+  },
+  {
+   "text": "وجهت سارة شعاع ليزر نحو العينة بحذر.",
+   "en": "Sara carefully aimed a laser beam at the sample.",
+   "ko": "사라는 조심스럽게 샘플에 레이저 빔을 비췄어요.",
+   "blank": "ليزر",
+   "src": "made"
+  }
+ ],
  "w|ليس": [
   {
    "text": "هذا ليس صعباً.",
@@ -45075,6 +45523,22 @@
    "blank": "متحمس"
   }
  ],
+ "w|متخصص": [
+  {
+   "text": "يعمل في المطبخ طاه متخصص في الحلويات، ويتعلم منه يوسف كثيرا.",
+   "en": "A chef specialized in desserts works in the kitchen, and Youssef learns a lot from him.",
+   "ko": "주방에는 디저트 전문 요리사가 있는데, 유수프는 그에게 많이 배워요.",
+   "blank": "متخصص",
+   "src": "made"
+  },
+  {
+   "text": "طلبت سارة رأي باحث متخصص في الكيمياء الحيوية.",
+   "en": "Sara asked for the opinion of a researcher specializing in biochemistry.",
+   "ko": "사라는 생화학 전문 연구자의 의견을 구했어요.",
+   "blank": "متخصص",
+   "src": "made"
+  }
+ ],
  "w|متر": [
   {
    "text": "الطاولة طولها متر واحد.",
@@ -46033,6 +46497,22 @@
    "en": "Every task should have a specific goal.",
    "ko": "모든 일에는 구체적인 목표가 있어야 해.",
    "blank": "محدد"
+  }
+ ],
+ "w|محدود": [
+  {
+   "text": "عدد الطاولات محدود، لذلك ينصح يوسف الزبائن بالحجز مسبقا.",
+   "en": "The number of tables is limited, so Youssef advises customers to book ahead.",
+   "ko": "테이블 수가 한정돼 있어서 유수프는 손님들에게 미리 예약하라고 권해요.",
+   "blank": "محدود",
+   "src": "made"
+  },
+  {
+   "text": "الوقت المتاح لاستخدام المجهر محدود، فتحجزه سارة مبكرا.",
+   "en": "Time on the microscope is limited, so Sara books it early.",
+   "ko": "현미경 사용 시간이 한정돼 있어서 사라는 일찍 예약해요.",
+   "blank": "محدود",
+   "src": "made"
   }
  ],
  "w|محرج": [
@@ -47047,6 +47527,22 @@
    "en": "I brought apricot jam from the market.",
    "ko": "시장서 살구잼을 샀어.",
    "blank": "مربى"
+  }
+ ],
+ "w|مربية": [
+  {
+   "text": "تأخرت مربية الأطفال، فاضطر يوسف إلى إحضار ابنه معه إلى المطبخ.",
+   "en": "The nanny was late, so Youssef had to bring his son with him to the kitchen.",
+   "ko": "보모가 늦어서 유수프는 아들을 주방에 데려와야 했어요.",
+   "blank": "مربية",
+   "src": "made"
+  },
+  {
+   "text": "تبقى مربية ابنة سارة مع الطفلة حتى تنتهي التجربة مساء.",
+   "en": "Sara's daughter's nanny stays with the child until the experiment ends in the evening.",
+   "ko": "사라의 딸 보모는 저녁에 실험이 끝날 때까지 아이와 함께 있어요.",
+   "blank": "مربية",
+   "src": "made"
   }
  ],
  "w|مرة": [
@@ -49001,6 +49497,22 @@
    "src": "made"
   }
  ],
+ "w|مضطرب": [
+  {
+   "text": "بدا الطاهي الجديد مضطربا عندما تراكمت الطلبات أمامه.",
+   "en": "The new cook looked flustered when the orders piled up in front of him.",
+   "ko": "주문이 밀려들자 새 요리사는 허둥대는 것 같았어요.",
+   "blank": "مضطربا",
+   "src": "made"
+  },
+  {
+   "text": "كان نوم سارة مضطربا في الليلة التي سبقت عرض النتائج.",
+   "en": "Sara's sleep was restless the night before she presented the results.",
+   "ko": "결과 발표 전날 밤 사라는 잠을 설쳤어요.",
+   "blank": "مضطربا",
+   "src": "made"
+  }
+ ],
  "w|مضغ": [
   {
    "text": "من فضلك لا مضغ العلكة في الصف.",
@@ -49289,6 +49801,22 @@
    "en": "This writer is contemporary and writes about today's issues.",
    "ko": "이 작가는 현대적이며 오늘날의 문제를 다뤄.",
    "blank": "معاصر"
+  }
+ ],
+ "w|معالج": [
+  {
+   "text": "نصح معالج طبيعي يوسف بأن يرتاح من الوقوف الطويل.",
+   "en": "A physiotherapist advised Youssef to rest from standing for long hours.",
+   "ko": "물리치료사는 유수프에게 오래 서 있지 말고 쉬라고 했어요.",
+   "blank": "معالج",
+   "src": "made"
+  },
+  {
+   "text": "يحتاج حاسوب المختبر إلى معالج أسرع لتحليل بيانات سارة.",
+   "en": "The lab computer needs a faster processor to analyze Sara's data.",
+   "ko": "사라의 데이터를 분석하려면 실험실 컴퓨터에 더 빠른 프로세서가 필요해요.",
+   "blank": "معالج",
+   "src": "made"
   }
  ],
  "w|معالجة": [
@@ -49912,6 +50440,22 @@
    "en": "Mona opens the office door with a magnetic card every morning.",
    "ko": "모나는 매일 아침 자석 카드로 사무실 문을 열어요.",
    "blank": "مغناطيسية",
+   "src": "made"
+  }
+ ],
+ "w|مغني": [
+  {
+   "text": "يدندن يوسف أغاني مغني قديم وهو يقطع البصل.",
+   "en": "Youssef hums an old singer's songs while chopping onions.",
+   "ko": "유수프는 양파를 썰면서 옛 가수의 노래를 흥얼거려요.",
+   "blank": "مغني",
+   "src": "made"
+  },
+  {
+   "text": "تحلل سارة تسجيلا لصوت مغني أوبرا لتقيس ترددات صوته.",
+   "en": "Sara is analyzing a recording of an opera singer to measure the frequencies of his voice.",
+   "ko": "사라는 오페라 가수의 녹음을 분석해 목소리 주파수를 재고 있어요.",
+   "blank": "مغني",
    "src": "made"
   }
  ],
@@ -51751,6 +52295,22 @@
    "blank": "المنزلي"
   }
  ],
+ "w|منشأة": [
+  {
+   "text": "زار مفتش البلدية المطعم ليتأكد أن المنشأة نظيفة.",
+   "en": "The municipal inspector visited the restaurant to make sure the premises were clean.",
+   "ko": "시청 위생 검사관이 식당이 깨끗한지 확인하러 왔어요.",
+   "blank": "المنشأة",
+   "src": "made"
+  },
+  {
+   "text": "يقع مختبر سارة داخل منشأة بحثية كبيرة خارج المدينة.",
+   "en": "Sara's lab is inside a large research facility outside the city.",
+   "ko": "사라의 실험실은 도시 밖 큰 연구 시설 안에 있어요.",
+   "blank": "منشأة",
+   "src": "made"
+  }
+ ],
  "w|منشفة": [
   {
    "text": "أحتاج إلى منشفة بعد الاستحمام.",
@@ -51851,6 +52411,22 @@
    "en": "I love the sunset view in summer.",
    "ko": "여름의 석양 풍경을 좋아해요.",
    "blank": "منظر"
+  }
+ ],
+ "w|منظم": [
+  {
+   "text": "مطبخ يوسف منظم جدا، فلكل سكين مكانها.",
+   "en": "Youssef's kitchen is very organized; every knife has its place.",
+   "ko": "유수프의 주방은 아주 정돈돼 있어서 칼마다 제자리가 있어요.",
+   "blank": "منظم",
+   "src": "made"
+  },
+  {
+   "text": "تحتفظ سارة بدفتر منظم لكل تجاربها.",
+   "en": "Sara keeps an organized notebook for all her experiments.",
+   "ko": "사라는 모든 실험을 정리한 노트를 갖고 있어요.",
+   "blank": "منظم",
+   "src": "made"
   }
  ],
  "w|منظمة": [
@@ -52211,6 +52787,22 @@
    "en": "Death is a part of life.",
    "ko": "죽음은 삶의 일부야.",
    "blank": "موت"
+  }
+ ],
+ "w|موثوق": [
+  {
+   "text": "يشتري يوسف السمك من مورد موثوق منذ سنوات.",
+   "en": "Youssef has been buying fish from a reliable supplier for years.",
+   "ko": "유수프는 몇 년째 믿을 만한 공급자에게서 생선을 사요.",
+   "blank": "موثوق",
+   "src": "made"
+  },
+  {
+   "text": "تحتاج سارة إلى جهاز قياس موثوق كي تثق بالأرقام.",
+   "en": "Sara needs a reliable measuring device so she can trust the figures.",
+   "ko": "사라는 수치를 믿으려면 신뢰할 수 있는 측정 장비가 필요해요.",
+   "blank": "موثوق",
+   "src": "made"
   }
  ],
  "w|موج": [
@@ -52937,6 +53529,22 @@
    "en": "The lesson is incomplete and not finished yet.",
    "ko": "수업이 미완성이라 아직 끝나지 않았어.",
    "blank": "ناقص"
+  }
+ ],
+ "w|نال": [
+  {
+   "text": "نال يوسف جائزة أفضل طبق في مسابقة المدينة.",
+   "en": "Youssef won the best-dish award in the city competition.",
+   "ko": "유수프는 시 대회에서 최고 요리상을 받았어요.",
+   "blank": "نال",
+   "src": "made"
+  },
+  {
+   "text": "نال بحث سارة إعجاب الحاضرين في المؤتمر العلمي.",
+   "en": "Sara's research won the admiration of the attendees at the scientific conference.",
+   "ko": "사라의 연구는 학회 참석자들의 호평을 받았어요.",
+   "blank": "نال",
+   "src": "made"
   }
  ],
  "w|نام": [
@@ -54217,6 +54825,22 @@
    "en": "There is a pedestrian tunnel under the street.",
    "ko": "길 아래에 보행자 터널이 있어.",
    "blank": "نفق"
+  }
+ ],
+ "w|نفوذ": [
+  {
+   "text": "لصاحب المطعم نفوذ كبير بين تجار الخضار في السوق.",
+   "en": "The restaurant owner has a lot of influence among the vegetable sellers at the market.",
+   "ko": "식당 주인은 시장 채소 상인들 사이에서 영향력이 커요.",
+   "blank": "نفوذ",
+   "src": "made"
+  },
+  {
+   "text": "للمشرف على المختبر نفوذ واسع في لجنة المنح.",
+   "en": "The lab supervisor has wide influence on the grants committee.",
+   "ko": "실험실 책임자는 연구비 위원회에서 영향력이 커요.",
+   "blank": "نفوذ",
+   "src": "made"
   }
  ],
  "w|نفى": [
@@ -55771,6 +56395,22 @@
    "en": "We must face the reality of things.",
    "ko": "우리는 현실을 직시해야 해.",
    "blank": "واقع"
+  }
+ ],
+ "w|واقعي": [
+  {
+   "text": "وضع يوسف خطة واقعية لتقليل هدر الطعام.",
+   "en": "Youssef put together a realistic plan to reduce food waste.",
+   "ko": "유수프는 음식물 낭비를 줄이기 위한 현실적인 계획을 세웠어요.",
+   "blank": "واقعية",
+   "src": "made"
+  },
+  {
+   "text": "قالت سارة إن الجدول الزمني للمشروع غير واقعي.",
+   "en": "Sara said the project timeline was unrealistic.",
+   "ko": "사라는 프로젝트 일정이 현실적이지 않다고 했어요.",
+   "blank": "واقعي",
+   "src": "made"
   }
  ],
  "w|واقف": [

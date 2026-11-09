@@ -659,6 +659,22 @@
    "src": "tatoeba:908478/joulin en:278663/CK"
   }
  ],
+ "w|атаковать": [
+  {
+   "text": "На уроке истории Алексей узнал, когда вражеская армия решила атаковать крепость.",
+   "en": "In history class Alexei learned when the enemy army decided to attack the fortress.",
+   "ko": "역사 시간에 알렉세이는 적군이 언제 요새를 공격하기로 했는지 배웠어요.",
+   "blank": "атаковать",
+   "src": "made"
+  },
+  {
+   "text": "На станции Наталью начали атаковать торговцы пирожками.",
+   "en": "At the station pie sellers started besieging Natalia.",
+   "ko": "역에서 피로시키 장수들이 나탈리야에게 몰려들기 시작했어요.",
+   "blank": "атаковать",
+   "src": "made"
+  }
+ ],
  "w|ах": [
   {
    "text": "Ах, как красиво!",
@@ -1223,6 +1239,22 @@
    "src": "made"
   }
  ],
+ "w|беседа": [
+  {
+   "text": "После урока у Алексея была долгая беседа с классным руководителем.",
+   "en": "After the lesson Alexei had a long talk with his form teacher.",
+   "ko": "수업이 끝나고 알렉세이는 담임 선생님과 오래 이야기를 나눴어요.",
+   "blank": "беседа",
+   "src": "made"
+  },
+  {
+   "text": "Наталью так увлекла беседа с попутчиком, что она пропустила ужин.",
+   "en": "Natalia got so absorbed in the conversation with a fellow passenger that she missed dinner.",
+   "ko": "같은 칸 승객과의 대화에 빠져서 나탈리야는 저녁을 놓쳤어요.",
+   "blank": "беседа",
+   "src": "made"
+  }
+ ],
  "w|бесить": [
   {
    "text": "Алексея всегда бесило, что сестра читает его сообщения через плечо.",
@@ -1441,6 +1473,22 @@
    "ko": "탭댄스 출 줄 알아?",
    "blank": "бить",
    "src": "tatoeba:13241489/marafon en:8026577/CK"
+  }
+ ],
+ "w|благо": [
+  {
+   "text": "Директор сказал Алексею, что новые правила введены для общего блага.",
+   "en": "The headmaster told Alexei that the new rules were introduced for the common good.",
+   "ko": "교장 선생님은 알렉세이에게 새 규칙이 모두의 이익을 위한 거라고 말했어요.",
+   "blank": "блага",
+   "src": "made"
+  },
+  {
+   "text": "Наталья считает, что тишина в поезде — настоящее благо.",
+   "en": "Natalia thinks that quiet on a train is a real blessing.",
+   "ko": "나탈리야는 기차 안의 조용함이 정말 축복이라고 생각해요.",
+   "blank": "благо",
+   "src": "made"
   }
  ],
  "w|благодарение": [
@@ -2091,6 +2139,22 @@
    "src": "tatoeba:5124274/marafon en:4563416/mailohilohi"
   }
  ],
+ "w|британский": [
+  {
+   "text": "На уроке английского Алексей учится различать британский и американский акцент.",
+   "en": "In English class Alexei is learning to tell British and American accents apart.",
+   "ko": "영어 시간에 알렉세이는 영국식과 미국식 억양을 구별하는 법을 배워요.",
+   "blank": "британский",
+   "src": "made"
+  },
+  {
+   "text": "В купе к Наталье подсел пожилой британский турист.",
+   "en": "An elderly British tourist joined Natalia in her compartment.",
+   "ko": "나이 든 영국인 관광객이 나탈리야의 칸에 함께 탔어요.",
+   "blank": "британский",
+   "src": "made"
+  }
+ ],
  "w|бросать": [
   {
    "text": "Я не люблю бросать работу на середине.",
@@ -2532,6 +2596,22 @@
    "en": "To register for the marathon Svetlana had to enter her passport number.",
    "ko": "마라톤 등록하려고 스베틀라나는 여권 번호를 입력해야 했어요.",
    "blank": "ввести",
+   "src": "made"
+  }
+ ],
+ "w|вдали": [
+  {
+   "text": "Из окна класса Алексей видит, как вдали поднимается дым над заводом.",
+   "en": "From the classroom window Alexei can see smoke rising over the factory in the distance.",
+   "ko": "알렉세이는 교실 창문으로 멀리 공장 위로 연기가 피어오르는 걸 봐요.",
+   "blank": "вдали",
+   "src": "made"
+  },
+  {
+   "text": "Наталья увидела, как вдали показались огни большого города.",
+   "en": "Natalia saw the lights of a big city appear in the distance.",
+   "ko": "나탈리야는 멀리서 큰 도시의 불빛이 보이기 시작하는 걸 봤어요.",
+   "blank": "вдали",
    "src": "made"
   }
  ],
@@ -5423,6 +5503,22 @@
    "src": "made"
   }
  ],
+ "w|всюду": [
+  {
+   "text": "Перед выпускным в школе Алексея всюду висели шарики.",
+   "en": "Before graduation there were balloons hanging everywhere in Alexei's school.",
+   "ko": "졸업식 전에 알렉세이 학교 곳곳에 풍선이 걸려 있었어요.",
+   "blank": "всюду",
+   "src": "made"
+  },
+  {
+   "text": "Наталья заметила, что в вагоне всюду пахнет чаем и варёными яйцами.",
+   "en": "Natalia noticed that the whole carriage smelled of tea and boiled eggs.",
+   "ko": "나탈리야는 객차 어디서나 차와 삶은 달걀 냄새가 난다는 걸 알아챘어요.",
+   "blank": "всюду",
+   "src": "made"
+  }
+ ],
  "w|всякий": [
   {
    "text": "Всякий с этим согласится.",
@@ -7277,6 +7373,22 @@
    "src": "tatoeba:12707052/marafon en:12707322/rul"
   }
  ],
+ "w|государственный": [
+  {
+   "text": "Алексей учится в обычной государственной школе недалеко от дома.",
+   "en": "Alexei goes to an ordinary state school not far from home.",
+   "ko": "알렉세이는 집 근처 평범한 공립 학교에 다녀요.",
+   "blank": "государственной",
+   "src": "made"
+  },
+  {
+   "text": "Наталья работает в государственном архиве и едет на конференцию.",
+   "en": "Natalia works at a state archive and is travelling to a conference.",
+   "ko": "나탈리야는 국립 기록 보관소에서 일하고 학회에 가는 길이에요.",
+   "blank": "государственном",
+   "src": "made"
+  }
+ ],
  "w|государство": [
   {
    "text": "Для доклада Павел собирает книги об истории древнего государства.",
@@ -8697,6 +8809,22 @@
    "ko": "어린 시절을 자주 떠올려?",
    "blank": "детство",
    "src": "tatoeba:11319838/Wezel en:11317183/sundown"
+  }
+ ],
+ "w|деться": [
+  {
+   "text": "Алексей не понимает, куда могла деться его тетрадь по химии.",
+   "en": "Alexei can't understand where his chemistry notebook could have got to.",
+   "ko": "알렉세이는 화학 공책이 어디로 갔는지 모르겠어요.",
+   "blank": "деться",
+   "src": "made"
+  },
+  {
+   "text": "Наталья обыскала всё купе, но билет как будто куда-то делся.",
+   "en": "Natalia searched the whole compartment, but the ticket seemed to have vanished.",
+   "ko": "나탈리야는 칸을 다 뒤졌지만 표가 어디론가 사라진 것 같았어요.",
+   "blank": "делся",
+   "src": "made"
   }
  ],
  "w|дешёвый": [
@@ -10225,6 +10353,22 @@
    "src": "made"
   }
  ],
+ "w|жалоба": [
+  {
+   "text": "Родители Алексея написали директору жалобу на холодные батареи.",
+   "en": "Alexei's parents wrote the headmaster a complaint about the cold radiators.",
+   "ko": "알렉세이의 부모님은 교장에게 라디에이터가 차갑다는 민원을 냈어요.",
+   "blank": "жалобу",
+   "src": "made"
+  },
+  {
+   "text": "Наталья оставила в книге отзывов жалобу на холодный чай.",
+   "en": "Natalia left a complaint about the cold tea in the feedback book.",
+   "ko": "나탈리야는 의견 노트에 차가 식어 있었다는 불만을 남겼어요.",
+   "blank": "жалобу",
+   "src": "made"
+  }
+ ],
  "w|жаловаться": [
   {
    "text": "Алексей перестал жаловаться маме на сестру и просто поговорил с Катей.",
@@ -10795,6 +10939,22 @@
    "ko": "그게 제 유일한 걱정이에요.",
    "blank": "забота",
    "src": "tatoeba:5588933/odexed en:42050/CM"
+  }
+ ],
+ "w|заботить": [
+  {
+   "text": "Алексея сейчас больше всего заботит экзамен по математике.",
+   "en": "What worries Alexei most right now is the maths exam.",
+   "ko": "지금 알렉세이가 가장 신경 쓰는 건 수학 시험이에요.",
+   "blank": "заботит",
+   "src": "made"
+  },
+  {
+   "text": "Наталью совсем не заботит, что поезд идёт медленно.",
+   "en": "Natalia isn't at all bothered that the train is slow.",
+   "ko": "나탈리야는 기차가 느리게 가는 게 전혀 신경 쓰이지 않아요.",
+   "blank": "заботит",
+   "src": "made"
   }
  ],
  "w|заботиться": [
@@ -11875,6 +12035,22 @@
    "src": "tatoeba:5134161/marafon en:11966185/sundown"
   }
  ],
+ "w|запас": [
+  {
+   "text": "Алексей всегда держит в рюкзаке запас ручек.",
+   "en": "Alexei always keeps a supply of pens in his backpack.",
+   "ko": "알렉세이는 늘 가방에 펜을 여분으로 넣어 다녀요.",
+   "blank": "запас",
+   "src": "made"
+  },
+  {
+   "text": "Наталья взяла в дорогу запас печенья и яблок.",
+   "en": "Natalia took a supply of biscuits and apples for the journey.",
+   "ko": "나탈리야는 가는 길에 먹을 과자와 사과를 넉넉히 챙겼어요.",
+   "blank": "запас",
+   "src": "made"
+  }
+ ],
  "w|запасной": [
   {
    "text": "Сергей всегда держит в машине запасной шарф и перчатки.",
@@ -12867,6 +13043,22 @@
    "src": "tatoeba:8599548/marafon en:3050188/Eldad"
   }
  ],
+ "w|знаменитый": [
+  {
+   "text": "На урок литературы к Алексею в класс пришёл знаменитый писатель.",
+   "en": "A famous writer came to Alexei's literature class.",
+   "ko": "알렉세이네 문학 수업에 유명한 작가가 왔어요.",
+   "blank": "знаменитый",
+   "src": "made"
+  },
+  {
+   "text": "За окном Натальи проплывал знаменитый мост через Волгу.",
+   "en": "The famous bridge over the Volga floated past Natalia's window.",
+   "ko": "나탈리야의 창밖으로 볼가 강을 건너는 유명한 다리가 지나갔어요.",
+   "blank": "знаменитый",
+   "src": "made"
+  }
+ ],
  "w|знание": [
   {
    "text": "Может ли знание быть бесполезным?",
@@ -13309,6 +13501,22 @@
    "ko": "내전을 피할 수 있을까요?",
    "blank": "избежать",
    "src": "tatoeba:9432060/marafon en:6076555/CK"
+  }
+ ],
+ "w|избить": [
+  {
+   "text": "В рассказе, который читал класс Алексея, хулиганы хотели избить главного героя.",
+   "en": "In the story Alexei's class read, some bullies wanted to beat up the main character.",
+   "ko": "알렉세이네 반이 읽은 소설에서 불량배들이 주인공을 때리려고 했어요.",
+   "blank": "избить",
+   "src": "made"
+  },
+  {
+   "text": "В детективе, который читала Наталья, бандиты пытались избить свидетеля.",
+   "en": "In the detective novel Natalia was reading, gangsters tried to beat up a witness.",
+   "ko": "나탈리야가 읽던 추리 소설에서 깡패들이 목격자를 때리려고 했어요.",
+   "blank": "избить",
+   "src": "made"
   }
  ],
  "w|известный": [
@@ -16161,6 +16369,22 @@
    "src": "tatoeba:4276387/odexed en:2331605/CK"
   }
  ],
+ "w|кража": [
+  {
+   "text": "Из раздевалки школы Алексея пропал телефон, и директор назвал это кражей.",
+   "en": "A phone went missing from the changing room at Alexei's school, and the headmaster called it theft.",
+   "ko": "알렉세이 학교 탈의실에서 휴대폰이 없어지자 교장 선생님은 이를 도둑질이라고 했어요.",
+   "blank": "кражей",
+   "src": "made"
+  },
+  {
+   "text": "Проводник предупредил Наталью, что на этом маршруте часты кражи багажа.",
+   "en": "The attendant warned Natalia that luggage theft is common on this route.",
+   "ko": "차장은 나탈리야에게 이 노선에서 짐 도난이 잦다고 주의를 줬어요.",
+   "blank": "кражи",
+   "src": "made"
+  }
+ ],
  "w|край": [
   {
    "text": "Ради тебя я готов пешком идти на край света.",
@@ -16298,6 +16522,22 @@
    "en": "Your sister is a real beauty.",
    "ko": "너희 언니 진짜 미인이다.",
    "blank": "красотка",
+   "src": "made"
+  }
+ ],
+ "w|красть": [
+  {
+   "text": "Учительница объяснила младшим, что красть чужие вещи стыдно.",
+   "en": "The teacher explained to the younger kids that stealing other people's things is shameful.",
+   "ko": "선생님은 어린 학생들에게 남의 물건을 훔치는 건 부끄러운 일이라고 설명했어요.",
+   "blank": "красть",
+   "src": "made"
+  },
+  {
+   "text": "Проводник напомнил Наталье, что в поездах иногда могут красть сумки.",
+   "en": "The attendant reminded Natalia that bags sometimes get stolen on trains.",
+   "ko": "차장은 나탈리야에게 기차에서 가끔 가방을 훔쳐 갈 수 있다고 일러 줬어요.",
+   "blank": "красть",
    "src": "made"
   }
  ],
@@ -18153,6 +18393,22 @@
    "ko": "이 순간이 영원했으면 좋겠어요.",
    "blank": "мгновение",
    "src": "tatoeba:13731681/marafon en:13731508/glossboss"
+  }
+ ],
+ "w|мебель": [
+  {
+   "text": "Летом в классе Алексея поменяли всю мебель.",
+   "en": "Over the summer all the furniture in Alexei's classroom was replaced.",
+   "ko": "여름에 알렉세이네 교실 가구가 전부 바뀌었어요.",
+   "blank": "мебель",
+   "src": "made"
+  },
+  {
+   "text": "Наталья переезжает в другой город, а мебель отправила отдельным контейнером.",
+   "en": "Natalia is moving to another city and sent her furniture separately in a container.",
+   "ko": "나탈리야는 다른 도시로 이사 가는데 가구는 따로 컨테이너로 보냈어요.",
+   "blank": "мебель",
+   "src": "made"
   }
  ],
  "w|медаль": [
@@ -20405,6 +20661,22 @@
    "src": "tatoeba:9147943/marafon en:9039824/CK"
   }
  ],
+ "w|нападать": [
+  {
+   "text": "В школьной игре Алексей любит нападать, а не стоять в защите.",
+   "en": "In school games Alexei likes to attack rather than play defence.",
+   "ko": "학교 경기에서 알렉세이는 수비보다 공격하는 걸 좋아해요.",
+   "blank": "нападать",
+   "src": "made"
+  },
+  {
+   "text": "Наталья читала статью о том, почему комары чаще нападают на одних людей, чем на других.",
+   "en": "Natalia was reading an article about why mosquitoes bite some people more than others.",
+   "ko": "나탈리야는 모기가 왜 어떤 사람을 더 자주 무는지에 대한 기사를 읽었어요.",
+   "blank": "нападают",
+   "src": "made"
+  }
+ ],
  "w|нападение": [
   {
    "text": "Кому выгодно это нападение?",
@@ -21754,6 +22026,22 @@
    "en": "A German tourist spent a long time explaining to Irina with gestures what had happened to the charger.",
    "ko": "독일인 관광객이 충전기에 무슨 일이 있었는지 손짓으로 이리나에게 한참 설명했어요.",
    "blank": "немец",
+   "src": "made"
+  }
+ ],
+ "w|немецкий": [
+  {
+   "text": "Со второго класса Алексей учит немецкий язык.",
+   "en": "Alexei has been learning German since second grade.",
+   "ko": "알렉세이는 이 학년 때부터 독일어를 배우고 있어요.",
+   "blank": "немецкий",
+   "src": "made"
+  },
+  {
+   "text": "Наталья читала в дороге немецкий журнал о путешествиях.",
+   "en": "Natalia was reading a German travel magazine on the way.",
+   "ko": "나탈리야는 가는 길에 독일 여행 잡지를 읽었어요.",
+   "blank": "немецкий",
    "src": "made"
   }
  ],
@@ -23271,6 +23559,22 @@
    "ko": "감히 나를 속였어요?",
    "blank": "обмануть",
    "src": "tatoeba:10377813/marafon en:14018010/zogwarg"
+  }
+ ],
+ "w|обманывать": [
+  {
+   "text": "Учительница сразу видит, когда ученики пытаются её обманывать.",
+   "en": "The teacher can always tell when the students try to fool her.",
+   "ko": "선생님은 학생들이 속이려 하면 바로 알아채요.",
+   "blank": "обманывать",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик признался Наталье, что не любит обманывать, но о возрасте всегда врёт.",
+   "en": "A fellow passenger admitted to Natalia that he doesn't like to deceive people but always lies about his age.",
+   "ko": "같은 칸 승객은 나탈리야에게 거짓말을 싫어하지만 나이는 늘 속인다고 털어놨어요.",
+   "blank": "обманывать",
+   "src": "made"
   }
  ],
  "w|обмен": [
@@ -26667,6 +26971,22 @@
    "src": "made"
   }
  ],
+ "w|очко": [
+  {
+   "text": "В баскетбольном матче Алексей набрал больше всех очков.",
+   "en": "In the basketball game Alexei scored the most points.",
+   "ko": "농구 경기에서 알렉세이가 가장 많은 점수를 냈어요.",
+   "blank": "очков",
+   "src": "made"
+  },
+  {
+   "text": "Вечером Наталья с соседями по купе играла в карты на очки.",
+   "en": "In the evening Natalia played cards for points with her compartment neighbours.",
+   "ko": "저녁에 나탈리야는 같은 칸 사람들과 점수 내기 카드놀이를 했어요.",
+   "blank": "очки",
+   "src": "made"
+  }
+ ],
  "w|очнуться": [
   {
    "text": "Когда он смог очнуться, рядом никого не было.",
@@ -26927,6 +27247,22 @@
    "en": "She asked that guy.",
    "ko": "그 사람이 그 남자한테 물어봤어.",
    "blank": "парня"
+  }
+ ],
+ "w|пари": [
+  {
+   "text": "Алексей заключил с другом пари, кто лучше напишет диктант.",
+   "en": "Alexei made a bet with his friend about who would do better on the dictation.",
+   "ko": "알렉세이는 친구와 누가 받아쓰기를 더 잘하는지 내기를 했어요.",
+   "blank": "пари",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик предложил Наталье пари, что поезд опоздает.",
+   "en": "A fellow passenger offered Natalia a bet that the train would be late.",
+   "ko": "같은 칸 승객이 나탈리야에게 기차가 늦을 거라며 내기를 하자고 했어요.",
+   "blank": "пари",
+   "src": "made"
   }
  ],
  "w|парк": [
@@ -27648,6 +27984,22 @@
    "en": "Maria's team jokingly calls the small windowless room the cave.",
    "ko": "마리아 팀은 창문 없는 작은 방을 농담 삼아 동굴이라고 불러요.",
    "blank": "пещерой",
+   "src": "made"
+  }
+ ],
+ "w|пианино": [
+  {
+   "text": "В актовом зале школы Алексея стоит старое пианино.",
+   "en": "There is an old upright piano in the assembly hall of Alexei's school.",
+   "ko": "알렉세이 학교 강당에는 낡은 피아노가 있어요.",
+   "blank": "пианино",
+   "src": "made"
+  },
+  {
+   "text": "В вагоне-ресторане, где обедала Наталья, кто-то играл на маленьком пианино.",
+   "en": "In the dining car where Natalia was having lunch, someone was playing a small piano.",
+   "ko": "나탈리야가 점심을 먹던 식당칸에서 누군가 작은 피아노를 치고 있었어요.",
+   "blank": "пианино",
    "src": "made"
   }
  ],
@@ -28623,6 +28975,22 @@
    "src": "tatoeba:10495133/marafon en:61207/Eldad"
   }
  ],
+ "w|повести": [
+  {
+   "text": "В пятницу учитель истории повёл класс Алексея в музей.",
+   "en": "On Friday the history teacher took Alexei's class to the museum.",
+   "ko": "금요일에 역사 선생님이 알렉세이네 반을 박물관에 데려갔어요.",
+   "blank": "повёл",
+   "src": "made"
+  },
+  {
+   "text": "На стоянке Наталья повела племянника посмотреть на паровоз.",
+   "en": "At the stop Natalia took her nephew to see the steam locomotive.",
+   "ko": "정차 중에 나탈리야는 조카를 데리고 증기 기관차를 보러 갔어요.",
+   "blank": "повела",
+   "src": "made"
+  }
+ ],
  "w|повидать": [
   {
    "text": "Андрей приехал в этот город, чтобы повидать брата.",
@@ -29419,6 +29787,22 @@
    "ko": "저는 삼 년 연속 올해의 직원이었어요.",
    "blank": "подряд",
    "src": "tatoeba:5136592/marafon en:2952599/CK"
+  }
+ ],
+ "w|подсказывать": [
+  {
+   "text": "На контрольной Алексею нельзя подсказывать соседу по парте.",
+   "en": "During the test Alexei isn't allowed to whisper answers to his deskmate.",
+   "ko": "시험 중에 알렉세이는 짝꿍에게 답을 알려 주면 안 돼요.",
+   "blank": "подсказывать",
+   "src": "made"
+  },
+  {
+   "text": "Соседка по купе вызвалась подсказывать Наталье названия станций.",
+   "en": "Natalia's compartment neighbour offered to tell her the names of the stations.",
+   "ko": "같은 칸 여자가 나탈리야에게 역 이름을 알려 주겠다고 나섰어요.",
+   "blank": "подсказывать",
+   "src": "made"
   }
  ],
  "w|подставить": [
@@ -30661,6 +31045,22 @@
    "src": "made"
   }
  ],
+ "w|полотенце": [
+  {
+   "text": "После физкультуры Алексей понял, что забыл дома полотенце.",
+   "en": "After PE Alexei realised he had left his towel at home.",
+   "ko": "체육 시간이 끝나고 알렉세이는 수건을 집에 두고 왔다는 걸 알았어요.",
+   "blank": "полотенце",
+   "src": "made"
+  },
+  {
+   "text": "Проводница выдала Наталье чистое бельё и полотенце.",
+   "en": "The carriage attendant gave Natalia clean bedding and a towel.",
+   "ko": "차장이 나탈리야에게 깨끗한 침구와 수건을 줬어요.",
+   "blank": "полотенце",
+   "src": "made"
+  }
+ ],
  "w|полтора": [
   {
    "text": "Через полтора часа мы наконец доехали.",
@@ -30797,6 +31197,22 @@
    "ko": "식단을 바꿔야 해요?",
    "blank": "поменять",
    "src": "tatoeba:3597171/sharptoothed en:434518/lukaszpp"
+  }
+ ],
+ "w|поместить": [
+  {
+   "text": "Рисунок Алексея решили поместить на школьный стенд.",
+   "en": "They decided to put Alexei's drawing on the school notice board.",
+   "ko": "알렉세이의 그림을 학교 게시판에 붙이기로 했어요.",
+   "blank": "поместить",
+   "src": "made"
+  },
+  {
+   "text": "Чемодан Натальи не удалось поместить на верхнюю полку.",
+   "en": "Natalia's suitcase couldn't be fitted onto the top shelf.",
+   "ko": "나탈리야의 여행 가방은 위 선반에 들어가지 않았어요.",
+   "blank": "поместить",
+   "src": "made"
   }
  ],
  "w|помешать": [
@@ -31593,6 +32009,22 @@
    "en": "Let me have a listen.",
    "ko": "나도 좀 듣게.",
    "blank": "послушать"
+  }
+ ],
+ "w|посметь": [
+  {
+   "text": "Никто в классе Алексея не посмел возразить строгой учительнице.",
+   "en": "No one in Alexei's class dared to argue with the strict teacher.",
+   "ko": "알렉세이네 반에서 아무도 엄한 선생님에게 감히 말대꾸하지 못했어요.",
+   "blank": "посмел",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик так громко храпел, что Наталья не посмела его будить.",
+   "en": "Her fellow passenger snored so loudly that Natalia didn't dare wake him.",
+   "ko": "같은 칸 승객이 너무 크게 코를 골았지만 나탈리야는 감히 깨우지 못했어요.",
+   "blank": "посмела",
+   "src": "made"
   }
  ],
  "w|посмотреть": [
@@ -32587,6 +33019,22 @@
    "src": "made"
   }
  ],
+ "w|превращаться": [
+  {
+   "text": "На уроке химии Алексей смотрел, как лёд превращается в воду.",
+   "en": "In chemistry class Alexei watched ice turn into water.",
+   "ko": "화학 시간에 알렉세이는 얼음이 물로 변하는 걸 지켜봤어요.",
+   "blank": "превращается",
+   "src": "made"
+  },
+  {
+   "text": "К вечеру лес за окном у Натальи превращался в сплошную тёмную стену.",
+   "en": "By evening the forest outside Natalia's window was turning into a solid dark wall.",
+   "ko": "저녁이 되자 나탈리야의 창밖 숲은 온통 검은 벽으로 변해 갔어요.",
+   "blank": "превращался",
+   "src": "made"
+  }
+ ],
  "w|преданность": [
   {
    "text": "Алексей всегда ценил преданность сестры, даже когда они ссорились.",
@@ -33537,6 +33985,22 @@
    "src": "tatoeba:3384266/odexed en:1096331/CK"
   }
  ],
+ "w|придерживаться": [
+  {
+   "text": "Алексей старается придерживаться расписания, которое составил сам.",
+   "en": "Alexei tries to stick to the timetable he made himself.",
+   "ko": "알렉세이는 스스로 짠 시간표를 지키려고 애써요.",
+   "blank": "придерживаться",
+   "src": "made"
+  },
+  {
+   "text": "В поездках Наталья старается придерживаться простой еды.",
+   "en": "When travelling Natalia tries to stick to simple food.",
+   "ko": "여행할 때 나탈리야는 간단한 음식을 먹으려고 해요.",
+   "blank": "придерживаться",
+   "src": "made"
+  }
+ ],
  "w|придумать": [
   {
    "text": "Надо срочно что-то придумать.",
@@ -33785,6 +34249,22 @@
    "src": "tatoeba:8917012/User91366 en:2308164/CK"
   }
  ],
+ "w|приказывать": [
+  {
+   "text": "Алексей шутит, что завуч любит приказывать даже на школьном празднике.",
+   "en": "Alexei jokes that the deputy head likes to give orders even at the school party.",
+   "ko": "알렉세이는 교감 선생님이 학교 축제에서도 명령하는 걸 좋아한다고 농담해요.",
+   "blank": "приказывать",
+   "src": "made"
+  },
+  {
+   "text": "Начальник поезда не стал приказывать, а вежливо попросил Наталью пересесть.",
+   "en": "The train manager didn't give orders but politely asked Natalia to change seats.",
+   "ko": "열차장은 명령하지 않고 나탈리야에게 자리를 옮겨 달라고 정중하게 부탁했어요.",
+   "blank": "приказывать",
+   "src": "made"
+  }
+ ],
  "w|приключение": [
   {
    "text": "Командировка на север стала для Дмитрия настоящим приключением.",
@@ -33814,6 +34294,22 @@
    "en": "A friend sent Elena a funny video about cats.",
    "ko": "친구가 엘레나에게 고양이가 나오는 재미있는 영상을 보냈어요.",
    "blank": "прикольный",
+   "src": "made"
+  }
+ ],
+ "w|прикончить": [
+  {
+   "text": "В компьютерной игре Алексею никак не удаётся прикончить последнего дракона.",
+   "en": "In the computer game Alexei just can't manage to finish off the last dragon.",
+   "ko": "컴퓨터 게임에서 알렉세이는 마지막 용을 도무지 해치우지 못해요.",
+   "blank": "прикончить",
+   "src": "made"
+  },
+  {
+   "text": "В сериале, который смотрела Наталья, злодей так и не смог прикончить героя.",
+   "en": "In the series Natalia was watching, the villain never managed to finish off the hero.",
+   "ko": "나탈리야가 보던 드라마에서 악당은 끝내 주인공을 해치우지 못했어요.",
+   "blank": "прикончить",
    "src": "made"
   }
  ],
@@ -34145,6 +34641,22 @@
    "ko": "저랑 같이 하실래요?",
    "blank": "присоединиться",
    "src": "tatoeba:12657461/marafon en:1977353/Spamster"
+  }
+ ],
+ "w|пристрелить": [
+  {
+   "text": "В книге, которую Алексей читал по программе, шериф хотел пристрелить бандита.",
+   "en": "In the set book Alexei was reading, the sheriff wanted to shoot the outlaw.",
+   "ko": "알렉세이가 필독서로 읽은 책에서 보안관은 무법자를 쏘려고 했어요.",
+   "blank": "пристрелить",
+   "src": "made"
+  },
+  {
+   "text": "В фильме на планшете у Натальи ковбой грозился пристрелить конокрада.",
+   "en": "In the film on Natalia's tablet a cowboy threatened to shoot a horse thief.",
+   "ko": "나탈리야의 태블릿 영화에서 카우보이가 말 도둑을 쏴 버리겠다고 위협했어요.",
+   "blank": "пристрелить",
+   "src": "made"
   }
  ],
  "w|приступ": [
@@ -38319,6 +38831,22 @@
    "src": "tatoeba:8572160/marafon en:6870356/CC"
   }
  ],
+ "w|сбор": [
+  {
+   "text": "Класс Алексея объявил сбор старых книг для сельской библиотеки.",
+   "en": "Alexei's class announced a collection of old books for the village library.",
+   "ko": "알렉세이네 반은 시골 도서관에 보낼 헌책 모으기를 시작했어요.",
+   "blank": "сбор",
+   "src": "made"
+  },
+  {
+   "text": "Наталья узнала, что сбор пассажиров на экскурсию будет у первого вагона.",
+   "en": "Natalia found out that passengers for the excursion would gather by the first carriage.",
+   "ko": "나탈리야는 관광에 갈 승객들이 첫 번째 객차 앞에 모인다는 걸 알았어요.",
+   "blank": "сбор",
+   "src": "made"
+  }
+ ],
  "w|сбросить": [
   {
    "text": "На привале Сергей с облегчением сбросил тяжёлый рюкзак.",
@@ -41035,6 +41563,22 @@
    "src": "tatoeba:1779340/soweli_Elepanto en:1688750/Amastan"
   }
  ],
+ "w|содержать": [
+  {
+   "text": "Школа Алексея содержит маленькую теплицу, где ученики выращивают помидоры.",
+   "en": "Alexei's school runs a small greenhouse where the students grow tomatoes.",
+   "ko": "알렉세이의 학교는 학생들이 토마토를 키우는 작은 온실을 운영해요.",
+   "blank": "содержит",
+   "src": "made"
+  },
+  {
+   "text": "Пожилой сосед рассказал Наталье, что раньше содержал небольшую гостиницу у моря.",
+   "en": "An elderly neighbour told Natalia that he used to run a small hotel by the sea.",
+   "ko": "나이 든 옆 승객은 나탈리야에게 예전에 바닷가에서 작은 호텔을 했다고 말했어요.",
+   "blank": "содержал",
+   "src": "made"
+  }
+ ],
  "w|соединить": [
   {
    "text": "Мама давно мечтала соединить детей за одним столом.",
@@ -41696,6 +42240,22 @@
    "en": "Olga explains that the syrup must be kept in the fridge.",
    "ko": "올가는 시럽을 냉장고에 보관해야 한다고 설명해요.",
    "blank": "сохранять",
+   "src": "made"
+  }
+ ],
+ "w|социальный": [
+  {
+   "text": "Школьный психолог помогает Алексею развивать социальные навыки.",
+   "en": "The school psychologist helps Alexei develop social skills.",
+   "ko": "학교 상담 선생님은 알렉세이가 사회성을 기르도록 도와줘요.",
+   "blank": "социальные",
+   "src": "made"
+  },
+  {
+   "text": "Соседка Натальи по купе оказалась социальным работником из Казани.",
+   "en": "Natalia's compartment neighbour turned out to be a social worker from Kazan.",
+   "ko": "나탈리야와 같은 칸 여자는 카잔에서 온 사회복지사였어요.",
+   "blank": "социальным",
    "src": "made"
   }
  ],
@@ -42463,6 +43023,22 @@
    "src": "tatoeba:11084974/soniamiku en:12381705/Miktsoanit"
   }
  ],
+ "w|ссора": [
+  {
+   "text": "После небольшой ссоры Алексей и его друг помирились на следующий день.",
+   "en": "After a small quarrel Alexei and his friend made up the next day.",
+   "ko": "작은 다툼 뒤에 알렉세이와 친구는 다음 날 화해했어요.",
+   "blank": "ссоры",
+   "src": "made"
+  },
+  {
+   "text": "Наталья невольно слушала ссору двух соседей за стенкой.",
+   "en": "Natalia couldn't help overhearing a quarrel between two neighbours through the wall.",
+   "ko": "나탈리야는 벽 너머 두 승객의 말다툼을 어쩔 수 없이 들었어요.",
+   "blank": "ссору",
+   "src": "made"
+  }
+ ],
  "w|ставить": [
   {
    "text": "Я не могу ставить тебе это в вину.",
@@ -42883,6 +43459,22 @@
    "src": "tatoeba:5685814/Balamax en:5685810/CK"
   }
  ],
+ "w|столкнуться": [
+  {
+   "text": "На перемене Алексей столкнулся в коридоре с директором.",
+   "en": "During the break Alexei bumped into the headmaster in the corridor.",
+   "ko": "쉬는 시간에 알렉세이는 복도에서 교장 선생님과 마주쳤어요.",
+   "blank": "столкнулся",
+   "src": "made"
+  },
+  {
+   "text": "В тамбуре Наталья случайно столкнулась со своей бывшей одноклассницей.",
+   "en": "In the vestibule Natalia ran into her former classmate by chance.",
+   "ko": "나탈리야는 연결 통로에서 우연히 옛 동창과 마주쳤어요.",
+   "blank": "столкнулась",
+   "src": "made"
+  }
+ ],
  "w|столь": [
   {
    "text": "Как ты умудрился просмотреть столь явную ошибку?",
@@ -43108,6 +43700,22 @@
    "en": "Olga looked at the scoreboard: the stopwatch hand had almost reached the end.",
    "ko": "올가가 전광판을 보니 스톱워치 바늘이 거의 끝에 다다랐어요.",
    "blank": "стрелка",
+   "src": "made"
+  }
+ ],
+ "w|стрельба": [
+  {
+   "text": "В школьном тире Алексей впервые попробовал стрельбу из лука.",
+   "en": "At the school range Alexei tried archery for the first time.",
+   "ko": "학교 사격장에서 알렉세이는 처음으로 활쏘기를 해 봤어요.",
+   "blank": "стрельбу",
+   "src": "made"
+  },
+  {
+   "text": "В новостях Наталья прочитала, что стрельба на полигоне закончится к вечеру.",
+   "en": "In the news Natalia read that the firing at the range would end by evening.",
+   "ko": "나탈리야는 뉴스에서 사격장 사격이 저녁까지 끝난다는 걸 읽었어요.",
+   "blank": "стрельба",
    "src": "made"
   }
  ],
@@ -50005,6 +50613,22 @@
    "blank": "штуку"
   }
  ],
+ "w|штучка": [
+  {
+   "text": "Алексей принёс в класс какую-то хитрую штучку, которая светится в темноте.",
+   "en": "Alexei brought some clever little gadget to class that glows in the dark.",
+   "ko": "알렉세이는 어둠 속에서 빛나는 신기한 물건을 반에 가져왔어요.",
+   "blank": "штучку",
+   "src": "made"
+  },
+  {
+   "text": "Наталья купила на вокзале забавную штучку — брелок в виде паровоза.",
+   "en": "Natalia bought a funny little thing at the station, a keyring shaped like a steam engine.",
+   "ko": "나탈리야는 역에서 기관차 모양 열쇠고리라는 재밌는 물건을 샀어요.",
+   "blank": "штучку",
+   "src": "made"
+  }
+ ],
  "w|шум": [
   {
    "text": "Как ты можешь выносить весь этот шум?",
@@ -50471,6 +51095,22 @@
    "ko": "어떤 독을 썼어?",
    "blank": "яд",
    "src": "tatoeba:6078756/odexed en:4012187/CK"
+  }
+ ],
+ "w|ядерный": [
+  {
+   "text": "На уроке физики Алексей сделал доклад о ядерной энергии.",
+   "en": "In physics class Alexei gave a presentation on nuclear energy.",
+   "ko": "물리 시간에 알렉세이는 원자력 에너지에 대해 발표했어요.",
+   "blank": "ядерной",
+   "src": "made"
+  },
+  {
+   "text": "Попутчик рассказал Наталье, что раньше работал инженером на ядерном реакторе.",
+   "en": "A fellow passenger told Natalia that he used to work as an engineer at a nuclear reactor.",
+   "ko": "같은 칸 승객은 나탈리야에게 예전에 원자로 기술자로 일했다고 말했어요.",
+   "blank": "ядерном",
+   "src": "made"
   }
  ],
  "w|язык": [

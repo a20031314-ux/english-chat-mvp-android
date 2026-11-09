@@ -901,6 +901,22 @@
    "blank": "acostumbró"
   }
  ],
+ "w|acta": [
+  {
+   "text": "Diego firmó el acta de la reunión de seguridad.",
+   "en": "Diego signed the minutes of the safety meeting.",
+   "ko": "디에고는 안전 회의 회의록에 서명했어요.",
+   "blank": "acta",
+   "src": "made"
+  },
+  {
+   "text": "El inspector dejó a Sofía una copia del acta de la visita.",
+   "en": "The inspector left Sofía a copy of the inspection report.",
+   "ko": "점검관이 소피아에게 방문 기록서 사본을 남겼어요.",
+   "blank": "acta",
+   "src": "made"
+  }
+ ],
  "w|actitud": [
   {
    "text": "Su actitud positiva anima al equipo.",
@@ -1417,6 +1433,22 @@
    "en": "Many admire her musical talent.",
    "ko": "많은 사람들이 그녀의 음악적 재능을 존경해.",
    "blank": "admiran"
+  }
+ ],
+ "w|admisión": [
+  {
+   "text": "Diego estuvo en la oficina de admisión el día que lo contrataron.",
+   "en": "Diego was at the hiring office the day they took him on.",
+   "ko": "디에고는 채용되던 날 입사 접수처에 있었어요.",
+   "blank": "admisión",
+   "src": "made"
+  },
+  {
+   "text": "Sofía recuerda el examen de admisión de la facultad de farmacia.",
+   "en": "Sofía remembers the entrance exam for pharmacy school.",
+   "ko": "소피아는 약대 입학시험을 기억해요.",
+   "blank": "admisión",
+   "src": "made"
   }
  ],
  "w|admitir": [
@@ -5385,6 +5417,22 @@
    "blank": "armario"
   }
  ],
+ "w|aro": [
+  {
+   "text": "En la línea de producción, Diego revisa que cada aro de metal salga perfecto.",
+   "en": "On the production line, Diego checks that every metal ring comes out perfect.",
+   "ko": "생산 라인에서 디에고는 쇠고리 하나하나가 완벽하게 나오는지 확인해요.",
+   "blank": "aro",
+   "src": "made"
+  },
+  {
+   "text": "Una clienta le pidió a Sofía algo para la oreja después de ponerse un aro nuevo.",
+   "en": "A customer asked Sofía for something for her ear after putting in a new hoop earring.",
+   "ko": "한 손님이 새 링 귀걸이를 한 뒤 귀에 바를 약을 소피아에게 달라고 했어요.",
+   "blank": "aro",
+   "src": "made"
+  }
+ ],
  "w|aroma": [
   {
    "text": "Cuando Mateo abrió el horno, toda la cocina se llenó del aroma del pan.",
@@ -8721,6 +8769,22 @@
    "src": "made"
   }
  ],
+ "w|bocado": [
+  {
+   "text": "Diego no había probado bocado desde el desayuno por culpa de una avería.",
+   "en": "Diego hadn't had a bite since breakfast because of a breakdown.",
+   "ko": "고장 때문에 디에고는 아침 이후로 한 입도 못 먹었어요.",
+   "blank": "bocado",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le dijo al señor que tomara la pastilla después de un bocado de comida.",
+   "en": "Sofía told the man to take the pill after a bite of food.",
+   "ko": "소피아는 할아버지에게 음식을 한 입 먹은 뒤 약을 드시라고 했어요.",
+   "blank": "bocado",
+   "src": "made"
+  }
+ ],
  "w|boda": [
   {
    "text": "La boda será en el jardín.",
@@ -8806,6 +8870,22 @@
    "en": "Nuria writes postcards with a blue pen, sitting on the terrace.",
    "ko": "누리아는 테라스에 앉아 파란 볼펜으로 엽서를 써요.",
    "blank": "bolígrafo",
+   "src": "made"
+  }
+ ],
+ "w|bollo": [
+  {
+   "text": "Diego se comió un bollo de crema en el descanso de media mañana.",
+   "en": "Diego ate a cream bun during the mid-morning break.",
+   "ko": "디에고는 오전 쉬는 시간에 크림빵 하나를 먹었어요.",
+   "blank": "bollo",
+   "src": "made"
+  },
+  {
+   "text": "La panadera de al lado le regala a Sofía un bollo cada mañana.",
+   "en": "The baker next door gives Sofía a bun every morning.",
+   "ko": "옆집 빵집 주인은 매일 아침 소피아에게 빵 하나를 줘요.",
+   "blank": "bollo",
    "src": "made"
   }
  ],
@@ -10661,6 +10741,22 @@
    "en": "Don't be a jerk to your friends.",
    "ko": "친구들에게 비열하게 굴지 마.",
    "blank": "canalla"
+  }
+ ],
+ "w|canasta": [
+  {
+   "text": "Cada pieza defectuosa va a una canasta azul al final de la línea.",
+   "en": "Every defective part goes into a blue basket at the end of the line.",
+   "ko": "불량품은 모두 라인 끝 파란 바구니에 담겨요.",
+   "blank": "canasta",
+   "src": "made"
+  },
+  {
+   "text": "En el mostrador, Sofía tiene una canasta con caramelos para los niños.",
+   "en": "At the counter, Sofía has a basket of candies for the children.",
+   "ko": "소피아는 계산대에 아이들에게 줄 사탕 바구니를 두고 있어요.",
+   "blank": "canasta",
+   "src": "made"
   }
  ],
  "w|cancelar": [
@@ -16255,6 +16351,22 @@
    "blank": "construcción"
   }
  ],
+ "w|constructor": [
+  {
+   "text": "El constructor de la nave nueva prometió terminarla antes del verano.",
+   "en": "The builder of the new warehouse promised to finish it before summer.",
+   "ko": "새 창고를 짓는 건설업자는 여름 전에 끝내겠다고 약속했어요.",
+   "blank": "constructor",
+   "src": "made"
+  },
+  {
+   "text": "El constructor del edificio vino a la farmacia por una crema para las manos.",
+   "en": "The building contractor came to the pharmacy for a hand cream.",
+   "ko": "건물을 짓는 건설업자가 핸드크림을 사러 약국에 왔어요.",
+   "blank": "constructor",
+   "src": "made"
+  }
+ ],
  "w|construir": [
   {
    "text": "Van a construir un puente nuevo.",
@@ -16340,6 +16452,22 @@
    "en": "Seafood should be eaten the same day it's bought.",
    "ko": "해산물은 산 날 바로 먹어야 해요.",
    "blank": "consumirlo",
+   "src": "made"
+  }
+ ],
+ "w|contabilidad": [
+  {
+   "text": "La hermana de Diego lleva la contabilidad de la fábrica.",
+   "en": "Diego's sister keeps the factory's accounts.",
+   "ko": "디에고의 누나가 공장 회계를 맡고 있어요.",
+   "blank": "contabilidad",
+   "src": "made"
+  },
+  {
+   "text": "Sofía odia la contabilidad, pero la hace ella misma cada mes.",
+   "en": "Sofía hates bookkeeping, but she does it herself every month.",
+   "ko": "소피아는 회계를 싫어하지만 매달 직접 해요.",
+   "blank": "contabilidad",
    "src": "made"
   }
  ],
@@ -16677,6 +16805,22 @@
    "en": "They hired her for her experience.",
    "ko": "경험 때문에 그녀를 채용했어.",
    "blank": "contrataron"
+  }
+ ],
+ "w|contratista": [
+  {
+   "text": "La fábrica contrató a un contratista para arreglar el sistema eléctrico.",
+   "en": "The factory hired a contractor to fix the electrical system.",
+   "ko": "공장은 전기 설비를 고치려고 외부 업자를 불렀어요.",
+   "blank": "contratista",
+   "src": "made"
+  },
+  {
+   "text": "El contratista que pintó la farmacia dejó manchas en el suelo.",
+   "en": "The contractor who painted the pharmacy left stains on the floor.",
+   "ko": "약국에 페인트칠한 업자가 바닥에 얼룩을 남겼어요.",
+   "blank": "contratista",
+   "src": "made"
   }
  ],
  "w|contrato": [
@@ -20197,6 +20341,22 @@
    "blank": "deportivo"
   }
  ],
+ "w|depositar": [
+  {
+   "text": "Diego fue al banco a depositar su primer sueldo de la fábrica.",
+   "en": "Diego went to the bank to deposit his first factory paycheck.",
+   "ko": "디에고는 공장에서 받은 첫 월급을 입금하러 은행에 갔어요.",
+   "blank": "depositar",
+   "src": "made"
+  },
+  {
+   "text": "Al cerrar, Sofía va al banco a depositar el dinero de la caja.",
+   "en": "At closing time, Sofía goes to the bank to deposit the money from the till.",
+   "ko": "문을 닫으면 소피아는 계산대 돈을 입금하러 은행에 가요.",
+   "blank": "depositar",
+   "src": "made"
+  }
+ ],
  "w|depósito": [
   {
    "text": "Dejé el coche en el depósito seguro.",
@@ -22749,6 +22909,22 @@
    "src": "made"
   }
  ],
+ "w|distribución": [
+  {
+   "text": "Diego trabaja ahora en la distribución de las cajas a los camiones.",
+   "en": "Diego now works on distributing the boxes to the trucks.",
+   "ko": "디에고는 이제 상자를 트럭에 나누어 싣는 일을 해요.",
+   "blank": "distribución",
+   "src": "made"
+  },
+  {
+   "text": "Una empresa de distribución trae medicinas a la farmacia de Sofía cada martes.",
+   "en": "A distribution company brings medicines to Sofía's pharmacy every Tuesday.",
+   "ko": "유통 회사가 화요일마다 소피아의 약국에 약을 가져와요.",
+   "blank": "distribución",
+   "src": "made"
+  }
+ ],
  "w|distrito": [
   {
    "text": "Vivo en un distrito tranquilo del norte.",
@@ -23459,6 +23635,22 @@
    "blank": "drogar"
   }
  ],
+ "w|dron": [
+  {
+   "text": "La empresa usa un dron para revisar el techo de la nave.",
+   "en": "The company uses a drone to inspect the roof of the warehouse.",
+   "ko": "회사는 창고 지붕을 점검하려고 드론을 써요.",
+   "blank": "dron",
+   "src": "made"
+  },
+  {
+   "text": "En la noticia, Sofía leyó que un dron lleva medicinas a pueblos aislados.",
+   "en": "In the news, Sofía read that a drone carries medicine to isolated villages.",
+   "ko": "소피아는 뉴스에서 드론이 외딴 마을에 약을 배달한다는 기사를 읽었어요.",
+   "blank": "dron",
+   "src": "made"
+  }
+ ],
  "w|ducha": [
   {
    "text": "Me doy una ducha rápida antes de salir.",
@@ -23731,6 +23923,22 @@
    "en": "The economic report will come out next week.",
    "ko": "경제 보고서는 다음 주에 나와.",
    "blank": "económico"
+  }
+ ],
+ "w|ecuación": [
+  {
+   "text": "El ingeniero le mostró a Diego la ecuación que controla la temperatura del horno.",
+   "en": "The engineer showed Diego the equation that controls the oven's temperature.",
+   "ko": "기술자가 디에고에게 가마 온도를 조절하는 방정식을 보여 줬어요.",
+   "blank": "ecuación",
+   "src": "made"
+  },
+  {
+   "text": "Para calcular la dosis de un bebé, Sofía usa una ecuación sencilla.",
+   "en": "To calculate a baby's dose, Sofía uses a simple equation.",
+   "ko": "아기 복용량을 계산할 때 소피아는 간단한 공식을 써요.",
+   "blank": "ecuación",
+   "src": "made"
   }
  ],
  "w|edad": [
@@ -24081,6 +24289,22 @@
    "blank": "él"
   }
  ],
+ "w|elaborar": [
+  {
+   "text": "Diego tuvo que elaborar un informe sobre el accidente de la máquina.",
+   "en": "Diego had to prepare a report on the machine accident.",
+   "ko": "디에고는 기계 사고에 관한 보고서를 작성해야 했어요.",
+   "blank": "elaborar",
+   "src": "made"
+  },
+  {
+   "text": "En la farmacia, Sofía sabe elaborar cremas a medida para la piel.",
+   "en": "At the pharmacy, Sofía knows how to make custom skin creams.",
+   "ko": "소피아는 약국에서 피부에 맞춘 크림을 조제할 줄 알아요.",
+   "blank": "elaborar",
+   "src": "made"
+  }
+ ],
  "w|elección": [
   {
    "text": "Fue una elección difícil para mí.",
@@ -24423,6 +24647,22 @@
    "en": "This is a real emergency.",
    "ko": "이건 진짜 응급 상황이야.",
    "blank": "emergencia"
+  }
+ ],
+ "w|eminencia": [
+  {
+   "text": "Al taller vino una eminencia en robótica para enseñarles las máquinas nuevas.",
+   "en": "An eminent robotics expert came to the workshop to show them the new machines.",
+   "ko": "로봇 공학 권위자가 새 기계를 보여 주러 작업장에 왔어요.",
+   "blank": "eminencia",
+   "src": "made"
+  },
+  {
+   "text": "El médico del barrio es una eminencia y Sofía conoce bien sus recetas.",
+   "en": "The neighborhood doctor is a leading expert and Sofía knows his prescriptions well.",
+   "ko": "동네 의사는 그 분야의 권위자라서 소피아는 그의 처방을 잘 알아요.",
+   "blank": "eminencia",
+   "src": "made"
   }
  ],
  "w|emisión": [
@@ -26687,6 +26927,22 @@
    "blank": "especialista"
   }
  ],
+ "w|especializarse": [
+  {
+   "text": "Diego quiere especializarse en soldadura para ganar más.",
+   "en": "Diego wants to specialize in welding to earn more.",
+   "ko": "디에고는 돈을 더 벌려고 용접을 전문으로 배우고 싶어 해요.",
+   "blank": "especializarse",
+   "src": "made"
+  },
+  {
+   "text": "Sofía decidió especializarse en dermatología tras años en la farmacia.",
+   "en": "Sofía decided to specialize in dermatology after years at the pharmacy.",
+   "ko": "소피아는 약국에서 몇 년 일한 뒤 피부과 쪽으로 전문을 정했어요.",
+   "blank": "especializarse",
+   "src": "made"
+  }
+ ],
  "w|especialmente": [
   {
    "text": "Me gusta especialmente el café.",
@@ -27930,6 +28186,22 @@
    "en": "The final assessment will be next week.",
    "ko": "기말 평가는 다음 주예요.",
    "blank": "evaluación",
+   "src": "made"
+  }
+ ],
+ "w|evaluar": [
+  {
+   "text": "Cada mes, la supervisora viene a evaluar el trabajo de Diego.",
+   "en": "Every month, the supervisor comes to evaluate Diego's work.",
+   "ko": "매달 감독관이 디에고의 작업을 평가하러 와요.",
+   "blank": "evaluar",
+   "src": "made"
+  },
+  {
+   "text": "Sofía tiene que evaluar si un cliente necesita ir al médico o no.",
+   "en": "Sofía has to assess whether a customer needs to see a doctor or not.",
+   "ko": "소피아는 손님이 병원에 가야 하는지 아닌지 판단해야 해요.",
+   "blank": "evaluar",
    "src": "made"
   }
  ],
@@ -29533,6 +29805,22 @@
    "en": "What's your favorite color?",
    "ko": "네가 제일 좋아하는 색깔은 뭐야?",
    "blank": "favorito"
+  }
+ ],
+ "w|fax": [
+  {
+   "text": "En la oficina de la fábrica todavía hay un fax que nadie se atreve a tirar.",
+   "en": "In the factory office there is still a fax machine nobody dares to throw away.",
+   "ko": "공장 사무실에는 아무도 감히 버리지 못하는 팩스기가 아직 있어요.",
+   "blank": "fax",
+   "src": "made"
+  },
+  {
+   "text": "Algunas recetas del hospital todavía llegan por fax a la farmacia de Sofía.",
+   "en": "Some hospital prescriptions still arrive at Sofía's pharmacy by fax.",
+   "ko": "병원 처방전 몇 장은 아직도 팩스로 소피아의 약국에 와요.",
+   "blank": "fax",
+   "src": "made"
   }
  ],
  "w|fe": [
@@ -32537,6 +32825,22 @@
    "blank": "gorra"
   }
  ],
+ "w|gorro": [
+  {
+   "text": "En la planta hace tanto frío que Diego trabaja con gorro de lana.",
+   "en": "It's so cold in the plant that Diego works in a wool hat.",
+   "ko": "공장 안이 너무 추워서 디에고는 털모자를 쓰고 일해요.",
+   "blank": "gorro",
+   "src": "made"
+  },
+  {
+   "text": "Un niño entró en la farmacia con un gorro de dinosaurio y fiebre.",
+   "en": "A boy came into the pharmacy with a dinosaur hat and a fever.",
+   "ko": "공룡 모자를 쓴 아이가 열이 나서 약국에 들어왔어요.",
+   "blank": "gorro",
+   "src": "made"
+  }
+ ],
  "w|gota": [
   {
    "text": "Cayó una gota de lluvia en mi mano.",
@@ -33015,6 +33319,22 @@
    "en": "Don't be rude to the waiter.",
    "ko": "웨이터에게 무례하게 굴지 마.",
    "blank": "grosero"
+  }
+ ],
+ "w|grúa": [
+  {
+   "text": "Una grúa enorme levantó el motor nuevo hasta el segundo piso.",
+   "en": "A huge crane lifted the new engine up to the second floor.",
+   "ko": "커다란 크레인이 새 엔진을 이 층까지 들어 올렸어요.",
+   "blank": "grúa",
+   "src": "made"
+  },
+  {
+   "text": "Una grúa se llevó el coche que estaba aparcado delante de la farmacia.",
+   "en": "A tow truck took away the car that was parked in front of the pharmacy.",
+   "ko": "견인차가 약국 앞에 세워 둔 차를 끌고 갔어요.",
+   "blank": "grúa",
+   "src": "made"
   }
  ],
  "w|grupo": [
@@ -37009,6 +37329,22 @@
    "blank": "instrucción"
   }
  ],
+ "w|instructor": [
+  {
+   "text": "Un instructor le enseñó a Diego a manejar la carretilla elevadora.",
+   "en": "An instructor taught Diego how to drive the forklift.",
+   "ko": "강사가 디에고에게 지게차 운전하는 법을 가르쳐 줬어요.",
+   "blank": "instructor",
+   "src": "made"
+  },
+  {
+   "text": "Los fines de semana, Sofía va a yoga con una instructora muy paciente.",
+   "en": "At weekends, Sofía goes to yoga with a very patient instructor.",
+   "ko": "주말마다 소피아는 아주 참을성 있는 강사와 요가를 해요.",
+   "blank": "instructora",
+   "src": "made"
+  }
+ ],
  "w|instrumento": [
   {
    "text": "Toca un instrumento desde niño.",
@@ -37685,6 +38021,22 @@
    "blank": "Inventó"
   }
  ],
+ "w|inventario": [
+  {
+   "text": "A final de año, Diego ayuda a hacer el inventario del almacén.",
+   "en": "At the end of the year, Diego helps do the warehouse inventory.",
+   "ko": "연말이면 디에고는 창고 재고 조사를 도와요.",
+   "blank": "inventario",
+   "src": "made"
+  },
+  {
+   "text": "Cada lunes, Sofía revisa el inventario de jarabes para la tos.",
+   "en": "Every Monday, Sofía checks the inventory of cough syrups.",
+   "ko": "월요일마다 소피아는 기침 시럽 재고를 확인해요.",
+   "blank": "inventario",
+   "src": "made"
+  }
+ ],
  "w|invento": [
   {
    "text": "Un médico joven presentó un invento para medir la fiebre sin tocar al paciente.",
@@ -38280,6 +38632,22 @@
    "en": "There was also a painting of a rider on a white horse.",
    "ko": "흰 말을 탄 기수 그림도 있었어요.",
    "blank": "jinete",
+   "src": "made"
+  }
+ ],
+ "w|jornada": [
+  {
+   "text": "Esa jornada fue la más larga de Diego: catorce horas sin parar.",
+   "en": "That workday was Diego's longest: fourteen hours without stopping.",
+   "ko": "그날 근무는 디에고에게 가장 길었어요. 열네 시간을 쉬지 않고 일했거든요.",
+   "blank": "jornada",
+   "src": "made"
+  },
+  {
+   "text": "En invierno, la jornada de Sofía empieza antes de que salga el sol.",
+   "en": "In winter, Sofía's workday starts before the sun comes up.",
+   "ko": "겨울에는 소피아의 근무가 해 뜨기 전에 시작돼요.",
+   "blank": "jornada",
    "src": "made"
   }
  ],
@@ -41755,6 +42123,22 @@
    "blank": "manual"
   }
  ],
+ "w|manuscrito": [
+  {
+   "text": "En sus ratos libres, Diego escribe un manuscrito sobre la vida en la fábrica.",
+   "en": "In his free time, Diego writes a manuscript about life in the factory.",
+   "ko": "디에고는 쉬는 시간에 공장 생활에 관한 원고를 써요.",
+   "blank": "manuscrito",
+   "src": "made"
+  },
+  {
+   "text": "Una receta escrita a mano parecía un manuscrito antiguo y Sofía no la entendía.",
+   "en": "A handwritten prescription looked like an ancient manuscript and Sofía couldn't read it.",
+   "ko": "손으로 쓴 처방전이 옛 필사본 같아서 소피아는 알아볼 수 없었어요.",
+   "blank": "manuscrito",
+   "src": "made"
+  }
+ ],
  "w|manzana": [
   {
    "text": "Me comí una manzana después del almuerzo.",
@@ -43031,6 +43415,22 @@
    "blank": "mentiroso"
   }
  ],
+ "w|mentor": [
+  {
+   "text": "El viejo encargado fue el mentor de Diego durante su primer año.",
+   "en": "The old foreman was Diego's mentor during his first year.",
+   "ko": "나이 든 현장 반장이 첫해 동안 디에고의 멘토였어요.",
+   "blank": "mentor",
+   "src": "made"
+  },
+  {
+   "text": "La farmacéutica que fue mentora de Sofía se jubiló el año pasado.",
+   "en": "The pharmacist who was Sofía's mentor retired last year.",
+   "ko": "소피아의 멘토였던 약사는 작년에 은퇴했어요.",
+   "blank": "mentora",
+   "src": "made"
+  }
+ ],
  "w|menú": [
   {
    "text": "El menú del día incluye sopa y pan.",
@@ -44209,6 +44609,22 @@
    "blank": "monstruo"
   }
  ],
+ "w|montaje": [
+  {
+   "text": "Diego trabaja en el montaje de lavadoras desde hace tres años.",
+   "en": "Diego has been working on assembling washing machines for three years.",
+   "ko": "디에고는 삼 년째 세탁기 조립 일을 하고 있어요.",
+   "blank": "montaje",
+   "src": "made"
+  },
+  {
+   "text": "Sofía ayudó al técnico con el montaje de las estanterías nuevas.",
+   "en": "Sofía helped the technician assemble the new shelving.",
+   "ko": "소피아는 기술자가 새 진열장을 조립하는 걸 도왔어요.",
+   "blank": "montaje",
+   "src": "made"
+  }
+ ],
  "w|montaña": [
   {
    "text": "Subimos la montaña juntos.",
@@ -45359,6 +45775,22 @@
    "en": "He speaks naturally when he's among friends.",
    "ko": "친구들 사이에 있으면 자연스럽게 말해.",
    "blank": "naturalmente"
+  }
+ ],
+ "w|náusea": [
+  {
+   "text": "El olor de la pintura le dio a Diego una náusea terrible.",
+   "en": "The smell of the paint gave Diego a terrible wave of nausea.",
+   "ko": "페인트 냄새 때문에 디에고는 심한 메스꺼움을 느꼈어요.",
+   "blank": "náusea",
+   "src": "made"
+  },
+  {
+   "text": "Una mujer embarazada le preguntó a Sofía qué tomar para la náusea.",
+   "en": "A pregnant woman asked Sofía what to take for nausea.",
+   "ko": "임신한 여성이 소피아에게 입덧에 뭘 먹으면 좋을지 물었어요.",
+   "blank": "náusea",
+   "src": "made"
   }
  ],
  "w|navaja": [
@@ -48503,6 +48935,22 @@
    "blank": "pánico"
   }
  ],
+ "w|panqueque": [
+  {
+   "text": "Los viernes, la cafetería de la fábrica sirve panqueques con miel.",
+   "en": "On Fridays, the factory café serves pancakes with honey.",
+   "ko": "금요일마다 공장 카페에서는 꿀 얹은 팬케이크를 내줘요.",
+   "blank": "panqueques",
+   "src": "made"
+  },
+  {
+   "text": "Antes de abrir la farmacia, Sofía desayuna un panqueque con plátano.",
+   "en": "Before opening the pharmacy, Sofía has a pancake with banana for breakfast.",
+   "ko": "소피아는 약국 문을 열기 전에 바나나 팬케이크로 아침을 먹어요.",
+   "blank": "panqueque",
+   "src": "made"
+  }
+ ],
  "w|pantalla": [
   {
    "text": "La pantalla del teléfono se rompió.",
@@ -49409,6 +49857,22 @@
    "en": "He got an accidental kick in the match.",
    "ko": "경기에서 우연히 발에 차였어.",
    "blank": "patada"
+  }
+ ],
+ "w|patán": [
+  {
+   "text": "Un compañero llamó patán a Diego por dejar las herramientas tiradas.",
+   "en": "A coworker called Diego a lout for leaving the tools lying around.",
+   "ko": "동료가 연장을 아무 데나 둔 디에고를 무례한 놈이라고 불렀어요.",
+   "blank": "patán",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente se portó como un patán y Sofía le pidió que esperara su turno.",
+   "en": "A customer acted like a boor and Sofía asked him to wait his turn.",
+   "ko": "한 손님이 무례하게 굴자 소피아는 차례를 기다려 달라고 했어요.",
+   "blank": "patán",
+   "src": "made"
   }
  ],
  "w|patata": [
@@ -55413,6 +55877,22 @@
    "src": "made"
   }
  ],
+ "w|rastreador": [
+  {
+   "text": "Cada caja lleva un rastreador para saber dónde está el pedido.",
+   "en": "Every box carries a tracker to know where the order is.",
+   "ko": "상자마다 주문이 어디 있는지 알 수 있게 추적 장치가 달려 있어요.",
+   "blank": "rastreador",
+   "src": "made"
+  },
+  {
+   "text": "A una señora mayor, Sofía le recomendó un rastreador de pastillas en el móvil.",
+   "en": "Sofía recommended a pill tracker app on her phone to an elderly lady.",
+   "ko": "소피아는 나이 든 부인에게 휴대폰 복약 관리 앱을 권했어요.",
+   "blank": "rastreador",
+   "src": "made"
+  }
+ ],
  "w|rastrear": [
   {
    "text": "Pudieron rastrear el paquete perdido.",
@@ -57413,6 +57893,22 @@
    "blank": "rescate"
   }
  ],
+ "w|resentimiento": [
+  {
+   "text": "Diego todavía guarda resentimiento contra el jefe que le negó el aumento.",
+   "en": "Diego still holds resentment against the boss who denied him the raise.",
+   "ko": "디에고는 월급 인상을 거절한 상사에게 아직도 앙금이 남아 있어요.",
+   "blank": "resentimiento",
+   "src": "made"
+  },
+  {
+   "text": "Sofía nota resentimiento en algunos clientes cuando el seguro no cubre algo.",
+   "en": "Sofía senses resentment in some customers when insurance doesn't cover something.",
+   "ko": "보험이 안 되는 약이 있을 때 소피아는 몇몇 손님에게서 불만을 느껴요.",
+   "blank": "resentimiento",
+   "src": "made"
+  }
+ ],
  "w|reserva": [
   {
    "text": "Hice una reserva para dos esta noche.",
@@ -57557,6 +58053,22 @@
    "en": "The bridge was able to withstand the storm.",
    "ko": "다리가 폭풍을 버틸 수 있었어.",
    "blank": "resistir"
+  }
+ ],
+ "w|resolución": [
+  {
+   "text": "Diego esperó la resolución del sindicato antes de firmar el contrato.",
+   "en": "Diego waited for the union's decision before signing the contract.",
+   "ko": "디에고는 계약서에 서명하기 전에 노조의 결정을 기다렸어요.",
+   "blank": "resolución",
+   "src": "made"
+  },
+  {
+   "text": "Según una resolución del ministerio, Sofía ya puede poner vacunas.",
+   "en": "According to a ministry resolution, Sofía can now give vaccines.",
+   "ko": "보건부 결정에 따라 소피아는 이제 백신을 놓을 수 있어요.",
+   "blank": "resolución",
+   "src": "made"
   }
  ],
  "w|resolver": [
@@ -57948,6 +58460,22 @@
    "en": "The thief twisted a guard's arm and escaped.",
    "ko": "도둑은 경비원의 팔을 비틀고 달아났어요.",
    "blank": "retorció",
+   "src": "made"
+  }
+ ],
+ "w|retorno": [
+  {
+   "text": "Después de las vacaciones, el retorno al turno de noche le costó mucho a Diego.",
+   "en": "After the holidays, going back to the night shift was very hard for Diego.",
+   "ko": "휴가가 끝나고 야간 근무로 돌아가는 게 디에고에겐 무척 힘들었어요.",
+   "blank": "retorno",
+   "src": "made"
+  },
+  {
+   "text": "En la farmacia de Sofía no aceptan el retorno de medicamentos abiertos.",
+   "en": "At Sofía's pharmacy they don't accept returns of opened medicines.",
+   "ko": "소피아의 약국에서는 개봉한 약은 반품을 받지 않아요.",
+   "blank": "retorno",
    "src": "made"
   }
  ],
@@ -59525,6 +60053,22 @@
    "blank": "salvó"
   }
  ],
+ "w|salvavidas": [
+  {
+   "text": "La fábrica de Diego produce chalecos salvavidas para barcos pesqueros.",
+   "en": "Diego's factory makes life jackets for fishing boats.",
+   "ko": "디에고의 공장은 어선용 구명조끼를 만들어요.",
+   "blank": "salvavidas",
+   "src": "made"
+  },
+  {
+   "text": "Para Sofía, ese café de media tarde es su salvavidas.",
+   "en": "For Sofía, that mid-afternoon coffee is her lifesaver.",
+   "ko": "소피아에게 오후 중반의 커피 한 잔은 구세주예요.",
+   "blank": "salvavidas",
+   "src": "made"
+  }
+ ],
  "w|salvo": [
   {
    "text": "Todos llegaron salvo Juan.",
@@ -60857,6 +61401,22 @@
    "en": "They updated the server before the launch.",
    "ko": "출시 전에 서버를 업데이트했어.",
    "blank": "servidor"
+  }
+ ],
+ "w|servilleta": [
+  {
+   "text": "En el comedor de la fábrica, Diego se limpió las manos con una servilleta de papel.",
+   "en": "In the factory canteen, Diego wiped his hands with a paper napkin.",
+   "ko": "공장 식당에서 디에고는 종이 냅킨으로 손을 닦았어요.",
+   "blank": "servilleta",
+   "src": "made"
+  },
+  {
+   "text": "Sofía anotó la dosis en una servilleta porque no encontraba papel.",
+   "en": "Sofía wrote the dose on a napkin because she couldn't find any paper.",
+   "ko": "소피아는 종이를 못 찾아서 냅킨에 복용량을 적었어요.",
+   "blank": "servilleta",
+   "src": "made"
   }
  ],
  "w|servir": [
@@ -63289,6 +63849,22 @@
    "en": "They can call off the game if it snows.",
    "ko": "눈이 오면 경기를 중지할 수 있어.",
    "blank": "suspender"
+  }
+ ],
+ "w|suspensión": [
+  {
+   "text": "Por un fallo grave, Diego recibió una suspensión de dos días sin sueldo.",
+   "en": "Because of a serious mistake, Diego got a two-day unpaid suspension.",
+   "ko": "큰 실수 때문에 디에고는 이틀 무급 정직을 받았어요.",
+   "blank": "suspensión",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le dio al niño un antibiótico en suspensión con sabor a fresa.",
+   "en": "Sofía gave the boy a strawberry-flavored antibiotic suspension.",
+   "ko": "소피아는 아이에게 딸기 맛 항생제 시럽을 줬어요.",
+   "blank": "suspensión",
+   "src": "made"
   }
  ],
  "w|suspirar": [
@@ -66103,6 +66679,22 @@
    "blank": "transmisión"
   }
  ],
+ "w|transmisor": [
+  {
+   "text": "Diego lleva un transmisor en el cinturón para hablar con el supervisor.",
+   "en": "Diego carries a transmitter on his belt to talk to the supervisor.",
+   "ko": "디에고는 감독관과 연락하려고 허리띠에 무전기를 차고 다녀요.",
+   "blank": "transmisor",
+   "src": "made"
+  },
+  {
+   "text": "El vigilante de la farmacia lleva un pequeño transmisor para pedir ayuda.",
+   "en": "The pharmacy's security guard carries a small transmitter to call for help.",
+   "ko": "약국 경비원은 도움을 요청할 작은 무전기를 차고 있어요.",
+   "blank": "transmisor",
+   "src": "made"
+  }
+ ],
  "w|transmitir": [
   {
    "text": "Van a transmitir el partido en directo.",
@@ -66480,6 +67072,22 @@
    "en": "Lola's first client was a cooperative of wheat growers.",
    "ko": "롤라의 첫 고객은 밀 농가 협동조합이었어요.",
    "blank": "trigo",
+   "src": "made"
+  }
+ ],
+ "w|trío": [
+  {
+   "text": "Diego y dos compañeros forman un trío inseparable en el turno de mañana.",
+   "en": "Diego and two coworkers form an inseparable trio on the morning shift.",
+   "ko": "디에고와 동료 두 명은 오전 근무조의 떼려야 뗄 수 없는 삼총사예요.",
+   "blank": "trío",
+   "src": "made"
+  },
+  {
+   "text": "Por la tarde, un trío de turistas pidió a Sofía crema para el sol.",
+   "en": "In the afternoon, a trio of tourists asked Sofía for sunscreen.",
+   "ko": "오후에 관광객 셋이 소피아에게 자외선 차단제를 달라고 했어요.",
+   "blank": "trío",
    "src": "made"
   }
  ],
@@ -67224,6 +67832,22 @@
    "en": "Javier usually goes to bed late, but in the jungle he slept early.",
    "ko": "하비에르는 보통 늦게 자지만 정글에서는 일찍 잤어요.",
    "blank": "usualmente",
+   "src": "made"
+  }
+ ],
+ "w|usuario": [
+  {
+   "text": "Diego creó un usuario nuevo en el sistema para registrar sus horas.",
+   "en": "Diego created a new user account in the system to log his hours.",
+   "ko": "디에고는 근무 시간을 기록하려고 시스템에 새 사용자 계정을 만들었어요.",
+   "blank": "usuario",
+   "src": "made"
+  },
+  {
+   "text": "En el programa de la farmacia, cada empleado entra con su usuario y su clave.",
+   "en": "In the pharmacy software, each employee logs in with their username and password.",
+   "ko": "약국 프로그램에는 직원마다 자기 아이디와 비밀번호로 들어가요.",
+   "blank": "usuario",
    "src": "made"
   }
  ],
@@ -68498,6 +69122,22 @@
    "en": "The club's vice president handed out the prizes.",
    "ko": "클럽 부회장이 상을 나눠 줬어요.",
    "blank": "vicepresidente",
+   "src": "made"
+  }
+ ],
+ "w|vicio": [
+  {
+   "text": "Diego intenta dejar el vicio del tabaco desde que entró en la fábrica.",
+   "en": "Diego has been trying to quit the smoking habit since he joined the factory.",
+   "ko": "디에고는 공장에 들어온 뒤로 담배 끊으려고 애쓰고 있어요.",
+   "blank": "vicio",
+   "src": "made"
+  },
+  {
+   "text": "Sofía le recomendó a un cliente chicles de nicotina para dejar el vicio.",
+   "en": "Sofía recommended nicotine gum to a customer to quit the habit.",
+   "ko": "소피아는 한 손님에게 담배를 끊으라고 니코틴 껌을 권했어요.",
+   "blank": "vicio",
    "src": "made"
   }
  ],

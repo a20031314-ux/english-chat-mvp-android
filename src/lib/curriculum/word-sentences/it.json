@@ -443,6 +443,22 @@
    "src": "made"
   }
  ],
+ "w|accostare": [
+  {
+   "text": "Prima di entrare in scena, Davide ama accostare l'orecchio alla tenda per sentire il pubblico.",
+   "en": "Before going on stage, Davide likes to put his ear to the curtain to hear the audience.",
+   "ko": "무대에 나가기 전에 다비데는 막에 귀를 대고 관객 소리를 듣는 걸 좋아해요.",
+   "blank": "accostare",
+   "src": "made"
+  },
+  {
+   "text": "Elena consiglia di accostare la giacca blu ai pantaloni grigi.",
+   "en": "Elena suggests pairing the blue jacket with the grey trousers.",
+   "ko": "엘레나는 파란 재킷을 회색 바지와 맞춰 입어 보라고 권해요.",
+   "blank": "accostare",
+   "src": "made"
+  }
+ ],
  "w|accusa": [
   {
    "text": "L'accusa contro di lui è grave.",
@@ -1497,6 +1513,22 @@
    "blank": "allora"
   }
  ],
+ "w|allucinazione": [
+  {
+   "text": "Nel monologo finale, Davide recita un re che vede il fantasma del padre, o forse è solo un'allucinazione.",
+   "en": "In the final monologue, Davide plays a king who sees his father's ghost, or maybe it's just a hallucination.",
+   "ko": "마지막 독백에서 다비데는 아버지의 유령을 보는 왕을 연기하는데, 어쩌면 그건 환각일 뿐이에요.",
+   "blank": "allucinazione",
+   "src": "made"
+  },
+  {
+   "text": "Dopo dieci ore in piedi, Elena dice che le luci al neon le danno quasi un'allucinazione.",
+   "en": "After ten hours on her feet, Elena says the neon lights almost make her hallucinate.",
+   "ko": "열 시간을 서 있었더니 엘레나는 형광등 때문에 헛것이 보일 지경이라고 해요.",
+   "blank": "allucinazione",
+   "src": "made"
+  }
+ ],
  "w|almeno": [
   {
    "text": "Almeno avvisa, dai.",
@@ -2131,6 +2163,22 @@
    "blank": "annullato"
   }
  ],
+ "w|annunciare": [
+  {
+   "text": "Prima dello spettacolo il regista sale sul palco per annunciare che Davide sostituisce un collega malato.",
+   "en": "Before the show the director goes on stage to announce that Davide is replacing a sick colleague.",
+   "ko": "공연 전에 연출가가 무대에 올라 다비데가 아픈 동료를 대신한다고 알려요.",
+   "blank": "annunciare",
+   "src": "made"
+  },
+  {
+   "text": "Alle sette la voce dell'altoparlante comincia ad annunciare la chiusura del grande magazzino.",
+   "en": "At seven the voice on the loudspeaker starts announcing the department store's closing.",
+   "ko": "일곱 시가 되면 스피커에서 백화점 영업 종료를 알리는 방송이 나와요.",
+   "blank": "annunciare",
+   "src": "made"
+  }
+ ],
  "w|annuncio": [
   {
    "text": "Ho letto l'annuncio sul giornale locale.",
@@ -2587,6 +2635,22 @@
    "en": "The shop opens late.",
    "ko": "가게는 늦게 열어.",
    "blank": "apre"
+  }
+ ],
+ "w|arabo": [
+  {
+   "text": "Per la scena del mercato, il teatro ha noleggiato costumi in stile arabo.",
+   "en": "For the market scene, the theater rented Arabic-style costumes.",
+   "ko": "시장 장면을 위해 극장은 아랍풍 의상을 빌렸어요.",
+   "blank": "arabo",
+   "src": "made"
+  },
+  {
+   "text": "Elena consiglia a una cliente un profumo arabo alla rosa.",
+   "en": "Elena recommends an Arabian rose perfume to a customer.",
+   "ko": "엘레나는 손님에게 장미 향 아랍 향수를 권해요.",
+   "blank": "arabo",
+   "src": "made"
   }
  ],
  "w|arancia": [
@@ -3341,6 +3405,22 @@
    "src": "made"
   }
  ],
+ "w|atleta": [
+  {
+   "text": "Per il ruolo del pugile, Davide si allena ogni mattina come un atleta.",
+   "en": "For the boxer's role, Davide trains every morning like an athlete.",
+   "ko": "권투 선수 역을 위해 다비데는 매일 아침 운동선수처럼 훈련해요.",
+   "blank": "atleta",
+   "src": "made"
+  },
+  {
+   "text": "Nel reparto sportivo un atleta famoso firma autografi, e Elena fa la fila.",
+   "en": "In the sports department a famous athlete is signing autographs, and Elena queues up.",
+   "ko": "스포츠 매장에서 유명한 운동선수가 사인을 해 줘서 엘레나도 줄을 서요.",
+   "blank": "atleta",
+   "src": "made"
+  }
+ ],
  "w|atmosfera": [
   {
    "text": "L'atmosfera della festa era gioiosa.",
@@ -4025,6 +4105,22 @@
    "en": "He warned me in time.",
    "ko": "그가 제때 알려 줬어.",
    "blank": "avvertito"
+  }
+ ],
+ "w|avviare": [
+  {
+   "text": "Quest'anno Davide vuole avviare un corso di recitazione per ragazzi.",
+   "en": "This year Davide wants to start an acting course for teenagers.",
+   "ko": "올해 다비데는 청소년 연기 수업을 시작하고 싶어 해요.",
+   "blank": "avviare",
+   "src": "made"
+  },
+  {
+   "text": "Elena deve avviare la nuova cassa automatica prima dell'apertura.",
+   "en": "Elena has to start up the new self-checkout before opening.",
+   "ko": "엘레나는 개점 전에 새 무인 계산대를 켜야 해요.",
+   "blank": "avviare",
+   "src": "made"
   }
  ],
  "w|avvicinare": [
@@ -5465,6 +5561,22 @@
    "en": "They toasted with champagne at midnight.",
    "ko": "그들은 자정에 샴페인으로 건배했어.",
    "blank": "brindato"
+  }
+ ],
+ "w|britannico": [
+  {
+   "text": "Davide studia da mesi l'accento britannico per il ruolo di un maggiordomo.",
+   "en": "Davide has been studying a British accent for months for the role of a butler.",
+   "ko": "다비데는 집사 역을 위해 몇 달째 영국식 억양을 공부하고 있어요.",
+   "blank": "britannico",
+   "src": "made"
+  },
+  {
+   "text": "Nel reparto alimentari Elena trova biscotti britannici al burro.",
+   "en": "In the food department Elena finds British butter biscuits.",
+   "ko": "식품 매장에서 엘레나는 영국산 버터 비스킷을 찾아요.",
+   "blank": "britannici",
+   "src": "made"
   }
  ],
  "w|brivido": [
@@ -7021,6 +7133,22 @@
    "blank": "cattivo"
   }
  ],
+ "w|cattolico": [
+  {
+   "text": "Il personaggio di Davide è un cattolico devoto che si innamora di una ballerina.",
+   "en": "Davide's character is a devout Catholic who falls in love with a dancer.",
+   "ko": "다비데가 맡은 인물은 무용수와 사랑에 빠지는 독실한 가톨릭 신자예요.",
+   "blank": "cattolico",
+   "src": "made"
+  },
+  {
+   "text": "Un cliente cattolico chiede a Elena dove si trovano i presepi di Natale.",
+   "en": "A Catholic customer asks Elena where the Christmas nativity scenes are.",
+   "ko": "가톨릭 신자인 손님이 엘레나에게 크리스마스 구유 장식이 어디 있는지 물어요.",
+   "blank": "cattolico",
+   "src": "made"
+  }
+ ],
  "w|cattura": [
   {
    "text": "Il gatto di Paolo è fiero della cattura di un topo in cantina.",
@@ -7167,6 +7295,22 @@
    "src": "made"
   }
  ],
+ "w|cecchino": [
+  {
+   "text": "Nel giallo che Davide prova in questi giorni, il colpevole si rivela un ex cecchino dell'esercito.",
+   "en": "In the mystery Davide is rehearsing these days, the culprit turns out to be a former army sniper.",
+   "ko": "요즘 다비데가 연습하는 추리극에서 범인은 전직 군 저격수로 밝혀져요.",
+   "blank": "cecchino",
+   "src": "made"
+  },
+  {
+   "text": "Il documentario che Elena guarda la sera parla di un cecchino della prima guerra mondiale.",
+   "en": "The documentary Elena watches in the evening is about a sniper in the First World War.",
+   "ko": "엘레나가 저녁에 보는 다큐멘터리는 제일차 세계대전의 한 저격수에 관한 거예요.",
+   "blank": "cecchino",
+   "src": "made"
+  }
+ ],
  "w|cedere": [
   {
    "text": "Non voglio cedere su questo punto.",
@@ -7179,6 +7323,22 @@
    "en": "In the end he gave in to the requests.",
    "ko": "결국 그는 요청에 굴복했어.",
    "blank": "ceduto"
+  }
+ ],
+ "w|celebrare": [
+  {
+   "text": "Dopo la centesima replica, la compagnia di Davide va a celebrare in trattoria.",
+   "en": "After the hundredth performance, Davide's company goes to celebrate at a trattoria.",
+   "ko": "백 번째 공연이 끝나고 다비데의 극단은 식당에 가서 축하해요.",
+   "blank": "celebrare",
+   "src": "made"
+  },
+  {
+   "text": "Quest'anno il grande magazzino vuole celebrare i suoi cento anni con una grande festa.",
+   "en": "This year the department store wants to celebrate its hundred years with a big party.",
+   "ko": "올해 백화점은 큰 파티로 창립 백 주년을 기념하려고 해요.",
+   "blank": "celebrare",
+   "src": "made"
   }
  ],
  "w|cella": [
@@ -9511,6 +9671,22 @@
    "blank": "comunicazione"
   }
  ],
+ "w|comunista": [
+  {
+   "text": "Nella commedia c'è anche un vecchio comunista che litiga sempre con il prete del paese.",
+   "en": "In the play there's also an old communist who is always arguing with the village priest.",
+   "ko": "그 연극에는 마을 신부와 늘 다투는 늙은 공산주의자도 나와요.",
+   "blank": "comunista",
+   "src": "made"
+  },
+  {
+   "text": "Il nonno di Elena da giovane era comunista e ancora oggi legge il giornale ogni mattina.",
+   "en": "Elena's grandfather was a communist when he was young and still reads the paper every morning.",
+   "ko": "엘레나의 할아버지는 젊었을 때 공산주의자였고 지금도 매일 아침 신문을 읽어요.",
+   "blank": "comunista",
+   "src": "made"
+  }
+ ],
  "w|comunità": [
   {
    "text": "La comunità locale organizza una festa.",
@@ -9725,6 +9901,22 @@
    "en": "The car is in excellent condition.",
    "ko": "차가 아주 좋은 상태야.",
    "blank": "condizione"
+  }
+ ],
+ "w|condoglianza": [
+  {
+   "text": "Dopo la morte del vecchio direttore, Davide ha mandato le sue condoglianze alla famiglia.",
+   "en": "After the old director died, Davide sent his condolences to the family.",
+   "ko": "옛 극장장이 세상을 떠나자 다비데는 유족에게 조의를 전했어요.",
+   "blank": "condoglianze",
+   "src": "made"
+  },
+  {
+   "text": "Quando è morto il padre della collega, Elena ha firmato un biglietto di condoglianze.",
+   "en": "When her colleague's father died, Elena signed a condolence card.",
+   "ko": "동료의 아버지가 돌아가셨을 때 엘레나는 조의 카드에 서명했어요.",
+   "blank": "condoglianze",
+   "src": "made"
   }
  ],
  "w|condoglianze": [
@@ -10179,6 +10371,22 @@
    "en": "She deserves more consideration from you.",
    "ko": "그녀는 너에게서 더 배려받을 자격이 있어.",
    "blank": "considerazione"
+  }
+ ],
+ "w|consigliare": [
+  {
+   "text": "Un amico ha voluto consigliare a Davide un buon insegnante di dizione.",
+   "en": "A friend wanted to recommend a good diction teacher to Davide.",
+   "ko": "한 친구가 다비데에게 좋은 발성 선생님을 추천해 주고 싶어 했어요.",
+   "blank": "consigliare",
+   "src": "made"
+  },
+  {
+   "text": "Il lavoro di Elena è consigliare ai clienti il colore giusto.",
+   "en": "Elena's job is to advise customers on the right colour.",
+   "ko": "엘레나의 일은 손님에게 알맞은 색을 골라 주는 거예요.",
+   "blank": "consigliare",
+   "src": "made"
   }
  ],
  "w|consigliere": [
@@ -11991,6 +12199,22 @@
    "blank": "decidere"
   }
  ],
+ "w|decina": [
+  {
+   "text": "Questa sera in platea ci sono solo una decina di spettatori.",
+   "en": "Tonight there are only about ten spectators in the stalls.",
+   "ko": "오늘 저녁 객석에는 관객이 열 명 남짓뿐이에요.",
+   "blank": "decina",
+   "src": "made"
+  },
+  {
+   "text": "Stamattina una decina di clienti aspettava già davanti alle porte.",
+   "en": "This morning about ten customers were already waiting outside the doors.",
+   "ko": "오늘 아침에는 손님 열 명쯤이 벌써 문 앞에서 기다리고 있었어요.",
+   "blank": "decina",
+   "src": "made"
+  }
+ ],
  "w|decisamente": [
   {
    "text": "È decisamente troppo tardi per uscire.",
@@ -12091,6 +12315,22 @@
    "en": "It is a delicate topic, speak softly.",
    "ko": "민감한 주제야, 조심히 말해.",
    "blank": "delicato"
+  }
+ ],
+ "w|delinquente": [
+  {
+   "text": "Davide è bravissimo a fare il delinquente simpatico nelle commedie leggere.",
+   "en": "Davide is great at playing the likeable crook in light comedies.",
+   "ko": "다비데는 가벼운 희극에서 정감 가는 건달 역을 아주 잘해요.",
+   "blank": "delinquente",
+   "src": "made"
+  },
+  {
+   "text": "La guardia ha fermato un delinquente che usciva con tre profumi nascosti in tasca.",
+   "en": "The guard stopped a crook who was leaving with three perfumes hidden in his pocket.",
+   "ko": "경비원이 향수 세 병을 주머니에 숨기고 나가던 좀도둑을 붙잡았어요.",
+   "blank": "delinquente",
+   "src": "made"
   }
  ],
  "w|delitto": [
@@ -14041,6 +14281,38 @@
    "blank": "donato"
   }
  ],
+ "w|donatore": [
+  {
+   "text": "Il nome di ogni donatore è scritto su una targa nell'ingresso del teatro.",
+   "en": "The name of every donor is written on a plaque in the theater lobby.",
+   "ko": "기부자마다 이름이 극장 로비의 명판에 적혀 있어요.",
+   "blank": "donatore",
+   "src": "made"
+  },
+  {
+   "text": "Al grande magazzino c'è una raccolta di sangue, ed Elena convince il marito a iscriversi come donatore.",
+   "en": "There's a blood drive at the department store, and Elena persuades her husband to sign up as a donor.",
+   "ko": "백화점에서 헌혈 행사가 열려서 엘레나는 남편에게 헌혈자로 등록하라고 설득해요.",
+   "blank": "donatore",
+   "src": "made"
+  }
+ ],
+ "w|donazione": [
+  {
+   "text": "Grazie a una donazione privata, il teatro ha potuto comprare un sipario nuovo.",
+   "en": "Thanks to a private donation, the theater was able to buy a new curtain.",
+   "ko": "개인 기부 덕분에 극장은 새 막을 살 수 있었어요.",
+   "blank": "donazione",
+   "src": "made"
+  },
+  {
+   "text": "Con ogni acquisto, il grande magazzino fa una piccola donazione a un ospedale per bambini.",
+   "en": "With every purchase, the department store makes a small donation to a children's hospital.",
+   "ko": "구매할 때마다 백화점이 어린이 병원에 작은 기부를 해요.",
+   "blank": "donazione",
+   "src": "made"
+  }
+ ],
  "w|donna": [
   {
    "text": "Quella donna ti sta cercando.",
@@ -15915,6 +16187,22 @@
    "en": "You look so worn out.",
    "ko": "얼굴이 많이 피곤해 보여.",
    "blank": "faccia"
+  }
+ ],
+ "w|facciata": [
+  {
+   "text": "Hanno appena restaurato la facciata del teatro dove lavora Davide.",
+   "en": "They've just restored the facade of the theater where Davide works.",
+   "ko": "다비데가 일하는 극장의 정면을 막 복원했어요.",
+   "blank": "facciata",
+   "src": "made"
+  },
+  {
+   "text": "A Natale la facciata del grande magazzino si riempie di luci.",
+   "en": "At Christmas the facade of the department store fills with lights.",
+   "ko": "크리스마스가 되면 백화점 정면이 불빛으로 가득해요.",
+   "blank": "facciata",
+   "src": "made"
   }
  ],
  "w|facile": [
@@ -20147,6 +20435,22 @@
    "src": "made"
   }
  ],
+ "w|impiccare": [
+  {
+   "text": "Il dramma storico racconta di un ribelle che il re voleva impiccare in piazza.",
+   "en": "The historical drama tells of a rebel whom the king wanted to hang in the square.",
+   "ko": "그 역사극은 왕이 광장에서 교수형에 처하려던 한 반역자의 이야기예요.",
+   "blank": "impiccare",
+   "src": "made"
+  },
+  {
+   "text": "Il romanzo storico che Elena legge in metro parla di un pirata che i soldati volevano impiccare.",
+   "en": "The historical novel Elena reads on the metro is about a pirate the soldiers wanted to hang.",
+   "ko": "엘레나가 지하철에서 읽는 역사 소설은 군인들이 교수형에 처하려던 해적 이야기예요.",
+   "blank": "impiccare",
+   "src": "made"
+  }
+ ],
  "w|impiegare": [
   {
    "text": "Per finire l'articolo, Paolo ha impiegato tutta la notte.",
@@ -20761,6 +21065,22 @@
    "en": "I got the wrong address and got lost.",
    "ko": "주소를 잘못 알아듣고 길을 잃었어.",
    "blank": "indirizzo"
+  }
+ ],
+ "w|individuo": [
+  {
+   "text": "Secondo il regista, ogni personaggio è un individuo con i suoi segreti.",
+   "en": "According to the director, every character is an individual with their own secrets.",
+   "ko": "연출가에 따르면 모든 인물은 저마다 비밀을 가진 개인이에요.",
+   "blank": "individuo",
+   "src": "made"
+  },
+  {
+   "text": "Un individuo strano gira da un'ora tra gli scaffali, e Elena avvisa la sicurezza.",
+   "en": "A strange individual has been wandering among the shelves for an hour, and Elena alerts security.",
+   "ko": "이상한 사람이 한 시간째 진열대 사이를 돌아다녀서 엘레나가 보안팀에 알려요.",
+   "blank": "individuo",
+   "src": "made"
   }
  ],
  "w|indizio": [
@@ -21423,6 +21743,22 @@
    "blank": "insieme"
   }
  ],
+ "w|insinuare": [
+  {
+   "text": "Nella seconda scena, la cameriera cerca di insinuare un dubbio nella mente del padrone.",
+   "en": "In the second scene, the maid tries to plant a doubt in her master's mind.",
+   "ko": "두 번째 장면에서 하녀는 주인의 마음에 의심을 심으려고 해요.",
+   "blank": "insinuare",
+   "src": "made"
+  },
+  {
+   "text": "Una collega gelosa ha provato a insinuare che Elena arriva sempre tardi.",
+   "en": "A jealous colleague tried to insinuate that Elena always arrives late.",
+   "ko": "샘이 난 동료가 엘레나가 늘 지각한다고 넌지시 말하려 했어요.",
+   "blank": "insinuare",
+   "src": "made"
+  }
+ ],
  "w|insistere": [
   {
    "text": "La prof ha insistito tanto che alla fine Marco ha dovuto rifare il tema.",
@@ -21627,6 +21963,22 @@
    "en": "Show interest in what he's saying.",
    "ko": "그가 말하는 것에 관심을 보여.",
    "blank": "interesse"
+  }
+ ],
+ "w|interferire": [
+  {
+   "text": "Il produttore cerca sempre di interferire con le scelte del regista, e Davide si arrabbia.",
+   "en": "The producer always tries to interfere with the director's choices, and Davide gets angry.",
+   "ko": "제작자가 늘 연출가의 결정에 끼어들려고 해서 다비데는 화가 나요.",
+   "blank": "interferire",
+   "src": "made"
+  },
+  {
+   "text": "Elena preferisce non interferire quando due clienti litigano per l'ultima borsa in saldo.",
+   "en": "Elena prefers not to interfere when two customers fight over the last bag on sale.",
+   "ko": "손님 둘이 마지막 할인 가방을 두고 다툴 때 엘레나는 끼어들지 않으려고 해요.",
+   "blank": "interferire",
+   "src": "made"
   }
  ],
  "w|internazionale": [
@@ -23697,6 +24049,22 @@
    "blank": "maestro"
   }
  ],
+ "w|mafia": [
+  {
+   "text": "Il nuovo spettacolo racconta la storia vera di un giudice che ha combattuto la mafia.",
+   "en": "The new show tells the true story of a judge who fought the mafia.",
+   "ko": "새 공연은 마피아와 싸운 한 판사의 실화를 다뤄요.",
+   "blank": "mafia",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha visto una serie sulla mafia degli anni Ottanta e non riesce a smettere.",
+   "en": "Elena watched a series about the mafia in the eighties and can't stop.",
+   "ko": "엘레나는 팔십 년대 마피아를 다룬 드라마를 보기 시작했는데 멈출 수가 없어요.",
+   "blank": "mafia",
+   "src": "made"
+  }
+ ],
  "w|magari": [
   {
    "text": "Magari vincessi un viaggio.",
@@ -24155,6 +24523,22 @@
    "blank": "maniera"
   }
  ],
+ "w|manipolare": [
+  {
+   "text": "Il personaggio di Davide sa manipolare tutti con un sorriso.",
+   "en": "Davide's character knows how to manipulate everyone with a smile.",
+   "ko": "다비데가 맡은 인물은 미소 하나로 모두를 조종할 줄 알아요.",
+   "blank": "manipolare",
+   "src": "made"
+  },
+  {
+   "text": "Elena sa che certe offerte servono a manipolare i clienti.",
+   "en": "Elena knows that certain deals are meant to manipulate customers.",
+   "ko": "엘레나는 어떤 할인은 손님을 조종하려는 거라는 걸 알아요.",
+   "blank": "manipolare",
+   "src": "made"
+  }
+ ],
  "w|mano": [
   {
    "text": "Dammi una mano.",
@@ -24255,6 +24639,22 @@
    "en": "Put it in first gear and start slowly.",
    "ko": "일 단에 넣고 천천히 출발해.",
    "blank": "marcia"
+  }
+ ],
+ "w|marciare": [
+  {
+   "text": "Nel finale, tutti gli attori devono marciare a tempo di tamburo.",
+   "en": "In the finale, all the actors have to march to the beat of a drum.",
+   "ko": "마지막 장면에서 배우들은 모두 북소리에 맞춰 행진해야 해요.",
+   "blank": "marciare",
+   "src": "made"
+  },
+  {
+   "text": "Per la festa del centenario, una banda musicale ha voluto marciare davanti alle vetrine.",
+   "en": "For the centenary party, a band wanted to march in front of the shop windows.",
+   "ko": "백 주년 행사 때 악단이 쇼윈도 앞을 행진하고 싶어 했어요.",
+   "blank": "marciare",
+   "src": "made"
   }
  ],
  "w|mare": [
@@ -25707,6 +26107,22 @@
    "blank": "momento"
   }
  ],
+ "w|monaco": [
+  {
+   "text": "Nella nuova commedia Davide interpreta un monaco che ha paura del buio.",
+   "en": "In the new comedy Davide plays a monk who is afraid of the dark.",
+   "ko": "새 희극에서 다비데는 어둠을 무서워하는 수도사를 연기해요.",
+   "blank": "monaco",
+   "src": "made"
+  },
+  {
+   "text": "Elena vende sciarpe al grande magazzino, e oggi una cliente le chiede un regalo per uno zio monaco.",
+   "en": "Elena sells scarves at the department store, and today a customer asks her for a gift for an uncle who is a monk.",
+   "ko": "엘레나는 백화점에서 스카프를 파는데, 오늘 한 손님이 수도사인 삼촌에게 줄 선물을 찾아요.",
+   "blank": "monaco",
+   "src": "made"
+  }
+ ],
  "w|mondiale": [
   {
    "text": "La finale mondiale sarà trasmessa in diretta.",
@@ -25789,6 +26205,22 @@
    "en": "There's a moral in this story.",
    "ko": "이 이야기에는 교훈이 있어.",
    "blank": "morale"
+  }
+ ],
+ "w|morbido": [
+  {
+   "text": "Le poltrone della platea sono rosse e morbide come un cuscino.",
+   "en": "The seats in the stalls are red and soft as a cushion.",
+   "ko": "객석 의자는 빨갛고 쿠션처럼 푹신해요.",
+   "blank": "morbide",
+   "src": "made"
+  },
+  {
+   "text": "Elena fa toccare a una cliente un maglione di cachemire morbidissimo.",
+   "en": "Elena lets a customer feel a very soft cashmere sweater.",
+   "ko": "엘레나는 손님에게 아주 부드러운 캐시미어 스웨터를 만져 보게 해요.",
+   "blank": "morbidissimo",
+   "src": "made"
   }
  ],
  "w|mordere": [
@@ -26174,6 +26606,22 @@
    "en": "On Saturdays a band plays among the stalls, and Sara hums along.",
    "ko": "토요일이면 악단이 노점 사이에서 연주하고 사라는 흥얼거려요.",
    "blank": "musicale",
+   "src": "made"
+  }
+ ],
+ "w|musicista": [
+  {
+   "text": "Durante le prove un musicista suona il violino dietro le quinte.",
+   "en": "During rehearsals a musician plays the violin backstage.",
+   "ko": "연습하는 동안 한 음악가가 무대 뒤에서 바이올린을 연주해요.",
+   "blank": "musicista",
+   "src": "made"
+  },
+  {
+   "text": "Sabato all'ingresso del grande magazzino suona un musicista di strada.",
+   "en": "On Saturday a street musician plays at the department store entrance.",
+   "ko": "토요일이면 백화점 입구에서 거리 음악가가 연주해요.",
+   "blank": "musicista",
    "src": "made"
   }
  ],
@@ -26975,6 +27423,22 @@
    "blank": "notizia"
   }
  ],
+ "w|notiziario": [
+  {
+   "text": "La sera della prima, il notiziario locale ha intervistato Davide in camerino.",
+   "en": "On opening night, the local news interviewed Davide in his dressing room.",
+   "ko": "첫 공연 날 저녁, 지역 뉴스가 분장실에서 다비데를 인터뷰했어요.",
+   "blank": "notiziario",
+   "src": "made"
+  },
+  {
+   "text": "Nella sala del personale, la tv trasmette il notiziario della sera.",
+   "en": "In the staff room, the TV is showing the evening news.",
+   "ko": "직원 휴게실 텔레비전에서 저녁 뉴스가 나와요.",
+   "blank": "notiziario",
+   "src": "made"
+  }
+ ],
  "w|notte": [
   {
    "text": "Buona notte, a domani.",
@@ -27171,6 +27635,22 @@
    "en": "Are we staying or going?",
    "ko": "있을래, 갈래?",
    "blank": "o"
+  }
+ ],
+ "w|obbedire": [
+  {
+   "text": "Nella commedia, il servo deve obbedire al padrone ma lo prende sempre in giro.",
+   "en": "In the comedy, the servant has to obey his master but always makes fun of him.",
+   "ko": "그 희극에서 하인은 주인에게 복종해야 하지만 늘 주인을 놀려요.",
+   "blank": "obbedire",
+   "src": "made"
+  },
+  {
+   "text": "Il cane di una cliente non vuole obbedire e corre tra i vestiti.",
+   "en": "A customer's dog won't obey and runs among the clothes.",
+   "ko": "한 손님의 개가 말을 안 듣고 옷 사이로 뛰어다녀요.",
+   "blank": "obbedire",
+   "src": "made"
   }
  ],
  "w|obbligare": [
@@ -30495,6 +30975,22 @@
    "blank": "piazza"
   }
  ],
+ "w|piazzare": [
+  {
+   "text": "Il tecnico deve piazzare un faro proprio sopra la testa di Davide.",
+   "en": "The technician has to place a spotlight right above Davide's head.",
+   "ko": "기술자는 다비데 머리 바로 위에 조명을 설치해야 해요.",
+   "blank": "piazzare",
+   "src": "made"
+  },
+  {
+   "text": "Elena deve piazzare i nuovi cappotti vicino all'ingresso.",
+   "en": "Elena has to put the new coats near the entrance.",
+   "ko": "엘레나는 새 코트를 입구 근처에 진열해야 해요.",
+   "blank": "piazzare",
+   "src": "made"
+  }
+ ],
  "w|piccante": [
   {
    "text": "Questa salsa è troppo piccante.",
@@ -32207,6 +32703,22 @@
    "en": "I prefer a private meeting with her.",
    "ko": "그녀와 비공개로 만나는 게 좋겠어.",
    "blank": "privato"
+  }
+ ],
+ "w|privilegio": [
+  {
+   "text": "Recitare in questo teatro antico è un privilegio per Davide.",
+   "en": "Acting in this old theater is a privilege for Davide.",
+   "ko": "이 오래된 극장에서 연기하는 건 다비데에게 특권이에요.",
+   "blank": "privilegio",
+   "src": "made"
+  },
+  {
+   "text": "I clienti con la tessera d'oro hanno il privilegio di un parcheggio gratuito.",
+   "en": "Customers with the gold card have the privilege of free parking.",
+   "ko": "골드 카드 고객은 무료 주차 특혜가 있어요.",
+   "blank": "privilegio",
+   "src": "made"
   }
  ],
  "w|privo": [
@@ -34067,6 +34579,22 @@
    "blank": "rapina"
   }
  ],
+ "w|rapinare": [
+  {
+   "text": "Nella farsa, Davide e un collega fingono di rapinare una banca con due banane.",
+   "en": "In the farce, Davide and a colleague pretend to rob a bank with two bananas.",
+   "ko": "그 소극에서 다비데와 동료는 바나나 두 개로 은행을 터는 척해요.",
+   "blank": "rapinare",
+   "src": "made"
+  },
+  {
+   "text": "Il telegiornale dice che hanno provato a rapinare la gioielleria accanto al grande magazzino.",
+   "en": "The news says someone tried to rob the jewellery shop next to the department store.",
+   "ko": "뉴스에서 백화점 옆 보석 가게를 털려는 시도가 있었다고 해요.",
+   "blank": "rapinare",
+   "src": "made"
+  }
+ ],
  "w|rapire": [
   {
    "text": "Hanno cercato di rapire il bambino.",
@@ -34893,6 +35421,22 @@
    "blank": "ribelle"
   }
  ],
+ "w|ricattare": [
+  {
+   "text": "Nel secondo atto il cattivo cerca di ricattare il personaggio di Davide con una lettera.",
+   "en": "In the second act the villain tries to blackmail Davide's character with a letter.",
+   "ko": "이 막에서 악당이 편지 한 통으로 다비데의 인물을 협박하려고 해요.",
+   "blank": "ricattare",
+   "src": "made"
+  },
+  {
+   "text": "Elena legge un giallo in pausa pranzo: il protagonista cerca di ricattare un ricco banchiere.",
+   "en": "Elena reads a mystery on her lunch break: the main character tries to blackmail a rich banker.",
+   "ko": "엘레나는 점심시간에 추리 소설을 읽어요. 주인공이 부자 은행가를 협박하려고 해요.",
+   "blank": "ricattare",
+   "src": "made"
+  }
+ ],
  "w|ricco": [
   {
    "text": "Suo zio è molto ricco.",
@@ -34919,6 +35463,22 @@
    "en": "I'm doing research on the topic.",
    "ko": "그 주제로 조사를 하고 있어.",
    "blank": "ricerca"
+  }
+ ],
+ "w|ricercare": [
+  {
+   "text": "Per il ruolo dello scienziato, Davide ha dovuto ricercare molte informazioni sulla chimica.",
+   "en": "For the role of the scientist, Davide had to research a lot about chemistry.",
+   "ko": "과학자 역을 위해 다비데는 화학에 대해 많은 걸 조사해야 했어요.",
+   "blank": "ricercare",
+   "src": "made"
+  },
+  {
+   "text": "Elena deve ricercare il modello che una cliente ha visto in una rivista.",
+   "en": "Elena has to track down the model a customer saw in a magazine.",
+   "ko": "엘레나는 한 손님이 잡지에서 본 제품을 찾아내야 해요.",
+   "blank": "ricercare",
+   "src": "made"
   }
  ],
  "w|ricetta": [
@@ -35808,6 +36368,22 @@
    "en": "It was risky for Francesca to open on Sundays too, but it worked out.",
    "ko": "일요일에도 문을 여는 건 프란체스카에게 모험이었지만 잘 풀렸어요.",
    "blank": "rischioso",
+   "src": "made"
+  }
+ ],
+ "w|riscontrare": [
+  {
+   "text": "Durante l'ultima prova i tecnici hanno dovuto riscontrare un guasto alle luci.",
+   "en": "During the last rehearsal the technicians found a fault in the lighting.",
+   "ko": "마지막 연습 때 기술진이 조명 고장을 발견했어요.",
+   "blank": "riscontrare",
+   "src": "made"
+  },
+  {
+   "text": "Elena ha dovuto riscontrare un errore nell'inventario delle cravatte.",
+   "en": "Elena found a mistake in the tie inventory.",
+   "ko": "엘레나는 넥타이 재고 목록에서 오류를 발견했어요.",
+   "blank": "riscontrare",
    "src": "made"
   }
  ],
@@ -39915,6 +40491,22 @@
    "src": "made"
   }
  ],
+ "w|soffocare": [
+  {
+   "text": "In sala fa così caldo che Davide si sente soffocare sotto il costume di lana.",
+   "en": "It's so hot in the hall that Davide feels he's suffocating under his wool costume.",
+   "ko": "극장 안이 너무 더워서 다비데는 양모 의상 속에서 숨이 막힐 것 같아요.",
+   "blank": "soffocare",
+   "src": "made"
+  },
+  {
+   "text": "Nei camerini c'è così poca aria che Elena si sente soffocare.",
+   "en": "There's so little air in the fitting rooms that Elena feels like she's suffocating.",
+   "ko": "탈의실에 공기가 너무 없어서 엘레나는 숨이 막힐 것 같아요.",
+   "blank": "soffocare",
+   "src": "made"
+  }
+ ],
  "w|soffrire": [
   {
    "text": "Non voglio farti soffrire.",
@@ -43311,6 +43903,22 @@
    "blank": "televisione"
   }
  ],
+ "w|televisivo": [
+  {
+   "text": "Davide preferisce il teatro, anche se il lavoro televisivo paga di più.",
+   "en": "Davide prefers theater, even if television work pays more.",
+   "ko": "다비데는 텔레비전 일이 돈을 더 주더라도 연극이 더 좋아요.",
+   "blank": "televisivo",
+   "src": "made"
+  },
+  {
+   "text": "Domani un programma televisivo girerà alcune scene nel reparto di Elena.",
+   "en": "Tomorrow a TV programme will film some scenes in Elena's department.",
+   "ko": "내일 한 텔레비전 프로그램이 엘레나의 매장에서 몇 장면을 찍을 거예요.",
+   "blank": "televisivo",
+   "src": "made"
+  }
+ ],
  "w|tema": [
   {
    "text": "Il tema della riunione è la sicurezza.",
@@ -45335,6 +45943,22 @@
    "blank": "umido"
   }
  ],
+ "w|umiliare": [
+  {
+   "text": "Un buon regista sa correggere gli attori senza umiliare nessuno.",
+   "en": "A good director knows how to correct the actors without humiliating anyone.",
+   "ko": "좋은 연출가는 아무도 무안하게 하지 않고 배우들을 고쳐 줄 줄 알아요.",
+   "blank": "umiliare",
+   "src": "made"
+  },
+  {
+   "text": "Il nuovo responsabile ha cercato di umiliare Elena davanti a tutti, ma lei ha risposto con calma.",
+   "en": "The new manager tried to humiliate Elena in front of everyone, but she answered calmly.",
+   "ko": "새 매장 책임자가 모두 앞에서 엘레나를 망신 주려 했지만 엘레나는 침착하게 대답했어요.",
+   "blank": "umiliare",
+   "src": "made"
+  }
+ ],
  "w|umore": [
   {
    "text": "Oggi ho un umore fantastico.",
@@ -45701,6 +46325,22 @@
    "en": "I need a long vacation.",
    "ko": "긴 휴가가 필요해.",
    "blank": "vacanza"
+  }
+ ],
+ "w|vago": [
+  {
+   "text": "Davide ha solo un ricordo vago della prima volta che è salito su un palco.",
+   "en": "Davide has only a vague memory of the first time he went on stage.",
+   "ko": "다비데는 처음 무대에 오른 날이 어렴풋이 기억날 뿐이에요.",
+   "blank": "vago",
+   "src": "made"
+  },
+  {
+   "text": "La cliente ha dato a Elena una descrizione molto vaga della borsa che cerca.",
+   "en": "The customer gave Elena a very vague description of the bag she's looking for.",
+   "ko": "손님은 찾는 가방을 엘레나에게 아주 막연하게 설명했어요.",
+   "blank": "vaga",
+   "src": "made"
   }
  ],
  "w|valere": [

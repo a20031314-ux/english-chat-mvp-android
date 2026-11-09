@@ -1355,6 +1355,22 @@
    "blank": "エンジン"
   }
  ],
+ "w|オーナー": [
+  {
+   "text": "佐藤さんが前に働いていたカフェのオーナーが、店に誠を招いてくれた。",
+   "en": "The owner of the café where Mr. Sato used to work invited Makoto to the shop.",
+   "ko": "사토 씨가 전에 일하던 카페 사장님이 마코토를 가게에 초대해 줬어요.",
+   "blank": "オーナー",
+   "src": "made"
+  },
+  {
+   "text": "学校の前のパン屋のオーナーは、陽子の母の同級生だ。",
+   "en": "The owner of the bakery in front of the school is a former classmate of Yoko's mother.",
+   "ko": "학교 앞 빵집 주인은 요코 엄마의 동창이에요.",
+   "blank": "オーナー",
+   "src": "made"
+  }
+ ],
  "w|オーバー": [
   {
    "text": "今月は残業時間が予定をオーバーしてしまった。",
@@ -1885,6 +1901,22 @@
    "en": "There's an important notice.",
    "ko": "중요한 공지가 있어.",
    "blank": "お知らせ"
+  }
+ ],
+ "w|お礼": [
+  {
+   "text": "卒業式の日、直樹は担任の先生に手紙でお礼を伝えた。",
+   "en": "On graduation day, Naoki thanked his homeroom teacher in a letter.",
+   "ko": "졸업식 날 나오키는 담임 선생님께 편지로 감사 인사를 전했어요.",
+   "blank": "お礼",
+   "src": "made"
+  },
+  {
+   "text": "葵は、手伝ってくれた同僚にお礼のお菓子を渡した。",
+   "en": "Aoi gave some sweets as thanks to the coworker who had helped her.",
+   "ko": "아오이는 도와준 동료에게 감사의 과자를 건넸어요.",
+   "blank": "お礼",
+   "src": "made"
   }
  ],
  "w|お祝い": [
@@ -3459,6 +3491,22 @@
    "blank": "コンピュータ"
   }
  ],
+ "w|ご存知": [
+  {
+   "text": "皆さんもご存知のとおり、来週から期末テストが始まります。",
+   "en": "As you all know, final exams start next week.",
+   "ko": "여러분도 아시다시피 다음 주부터 기말시험이 시작돼요.",
+   "blank": "ご存知",
+   "src": "made"
+  },
+  {
+   "text": "部長、新しい取引先の担当者をご存知ですか。",
+   "en": "Manager, do you know the person in charge at the new client?",
+   "ko": "부장님, 새 거래처 담당자를 아세요?",
+   "blank": "ご存知",
+   "src": "made"
+  }
+ ],
  "w|ご飯": [
   {
    "text": "ご飯を食べよう。",
@@ -3643,6 +3691,22 @@
    "en": "You'd better go home right away.",
    "ko": "얼른 돌아가는 게 좋아.",
    "blank": "さっさと"
+  }
+ ],
+ "w|さっぱり": [
+  {
+   "text": "佐藤さんは、さっぱりした性格で誰とでもすぐ仲良くなる。",
+   "en": "Mr. Sato has an easygoing personality and quickly gets along with anyone.",
+   "ko": "사토 씨는 시원시원한 성격이라 누구와도 금방 친해져요.",
+   "blank": "さっぱり",
+   "src": "made"
+  },
+  {
+   "text": "数学の宿題がさっぱり分からなくて、陽子は兄に聞いた。",
+   "en": "Yoko had no idea how to do the math homework, so she asked her brother.",
+   "ko": "수학 숙제를 전혀 몰라서 요코는 오빠한테 물어봤어요.",
+   "blank": "さっぱり",
+   "src": "made"
   }
  ],
  "w|さて": [
@@ -3952,6 +4016,22 @@
    "en": "At a secondhand clothing stall in the market, Chihiro found a leather jacket.",
    "ko": "시장 헌옷 가게에서 지히로는 가죽 재킷을 찾았어요.",
    "blank": "ジャケット",
+   "src": "made"
+  }
+ ],
+ "w|ジャズ": [
+  {
+   "text": "音楽の先生は、授業でジャズのレコードを聞かせてくれた。",
+   "en": "The music teacher let the class listen to a jazz record.",
+   "ko": "음악 선생님은 수업 시간에 재즈 음반을 들려줬어요.",
+   "blank": "ジャズ",
+   "src": "made"
+  },
+  {
+   "text": "会社の近くのカフェでは、いつも静かなジャズが流れている。",
+   "en": "Quiet jazz is always playing at the café near the office.",
+   "ko": "회사 근처 카페에서는 늘 잔잔한 재즈가 흘러요.",
+   "blank": "ジャズ",
    "src": "made"
   }
  ],
@@ -4811,6 +4891,22 @@
    "en": "Watch out, that's dangerous.",
    "ko": "거기 위험해.",
    "blank": "そこ"
+  }
+ ],
+ "w|そこそこ": [
+  {
+   "text": "直樹の成績は、数学はそこそこだが英語はかなりいい。",
+   "en": "Naoki's grades are so-so in math but quite good in English.",
+   "ko": "나오키의 성적은 수학은 그럭저럭이지만 영어는 꽤 좋아요.",
+   "blank": "そこそこ",
+   "src": "made"
+  },
+  {
+   "text": "葵の企画した本は、そこそこ売れている。",
+   "en": "The book Aoi planned is selling reasonably well.",
+   "ko": "아오이가 기획한 책은 그럭저럭 팔리고 있어요.",
+   "blank": "そこそこ",
+   "src": "made"
   }
  ],
  "w|そして": [
@@ -5981,6 +6077,22 @@
    "en": "I still can't do it.",
    "ko": "아직 못 해.",
    "blank": "できない"
+  }
+ ],
+ "w|できるだけ": [
+  {
+   "text": "誠は、佐藤さんの質問にできるだけ丁寧に答えた。",
+   "en": "Makoto answered Mr. Sato's questions as carefully as he could.",
+   "ko": "마코토는 사토 씨의 질문에 되도록 친절하게 대답했어요.",
+   "blank": "できるだけ",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、テストの前はできるだけ早く寝るようにしている。",
+   "en": "Yoko tries to go to bed as early as possible before tests.",
+   "ko": "요코는 시험 전에는 되도록 일찍 자려고 해요.",
+   "blank": "できるだけ",
+   "src": "made"
   }
  ],
  "w|デザイナー": [
@@ -9313,6 +9425,22 @@
    "blank": "もしもし"
   }
  ],
+ "w|もたらす": [
+  {
+   "text": "新しい校長は、学校に明るい雰囲気をもたらした。",
+   "en": "The new principal brought a cheerful atmosphere to the school.",
+   "ko": "새 교장 선생님은 학교에 밝은 분위기를 가져왔어요.",
+   "blank": "もたらした",
+   "src": "made"
+  },
+  {
+   "text": "新しいシステムは、仕事の効率に大きな変化をもたらした。",
+   "en": "The new system brought about a big change in work efficiency.",
+   "ko": "새 시스템은 업무 효율에 큰 변화를 가져왔어요.",
+   "blank": "もたらした",
+   "src": "made"
+  }
+ ],
  "w|もちろん": [
   {
    "text": "もちろん行くよ。",
@@ -9401,6 +9529,22 @@
    "blank": "もの"
   }
  ],
+ "w|ものすごい": [
+  {
+   "text": "佐藤さんは、ものすごい速さでキーボードを打つ。",
+   "en": "Mr. Sato types on the keyboard at incredible speed.",
+   "ko": "사토 씨는 엄청난 속도로 키보드를 쳐요.",
+   "blank": "ものすごい",
+   "src": "made"
+  },
+  {
+   "text": "体育館の中は、応援の声でものすごい盛り上がりだった。",
+   "en": "Inside the gym, the cheering made for an incredible atmosphere.",
+   "ko": "체육관 안은 응원 소리로 엄청난 열기였어요.",
+   "blank": "ものすごい",
+   "src": "made"
+  }
+ ],
  "w|モバイル": [
   {
    "text": "最近は、モバイル端末で機械の状態を確認できる。",
@@ -9471,6 +9615,22 @@
    "en": "That's a strong monster.",
    "ko": "강한 몬스터네.",
    "blank": "モンスター"
+  }
+ ],
+ "w|やたら": [
+  {
+   "text": "佐藤さんは、なぜかやたらとコピー機に詳しい。",
+   "en": "For some reason, Mr. Sato knows an awful lot about the copy machine.",
+   "ko": "사토 씨는 왜인지 복사기에 엄청 잘 알아요.",
+   "blank": "やたら",
+   "src": "made"
+  },
+  {
+   "text": "今日の陽子は、なぜかやたら眠そうだ。",
+   "en": "For some reason, Yoko seems really sleepy today.",
+   "ko": "오늘 요코는 왠지 엄청 졸려 보여요.",
+   "blank": "やたら",
+   "src": "made"
   }
  ],
  "w|やつ": [
@@ -9789,6 +9949,22 @@
    "blank": "ライト"
   }
  ],
+ "w|ライバル": [
+  {
+   "text": "誠と佐藤さんは、営業成績を競うよきライバルになった。",
+   "en": "Makoto and Mr. Sato became good rivals competing over sales results.",
+   "ko": "마코토와 사토 씨는 영업 실적을 겨루는 좋은 라이벌이 됐어요.",
+   "blank": "ライバル",
+   "src": "made"
+  },
+  {
+   "text": "陽子と美咲は、テストのたびに点数を比べるライバルだ。",
+   "en": "Yoko and Misaki are rivals who compare scores after every test.",
+   "ko": "요코와 미사키는 시험 때마다 점수를 비교하는 라이벌이에요.",
+   "blank": "ライバル",
+   "src": "made"
+  }
+ ],
  "w|ライブ": [
   {
    "text": "ライブ、行く？",
@@ -9844,6 +10020,22 @@
    "en": "I cried at the last scene.",
    "ko": "마지막 장면에서 울어 버렸어요.",
    "blank": "ラスト",
+   "src": "made"
+  }
+ ],
+ "w|ラッキー": [
+  {
+   "text": "初日に部長に褒められて、佐藤さんは「ラッキー」と笑った。",
+   "en": "Praised by the department manager on his first day, Mr. Sato laughed and said, \"Lucky.\"",
+   "ko": "첫날 부장님한테 칭찬받아서 사토 씨는 \"운이 좋네요\" 하고 웃었어요.",
+   "blank": "ラッキー",
+   "src": "made"
+  },
+  {
+   "text": "くじ引きで窓際の席になって、陽子はラッキーだと思った。",
+   "en": "Yoko got the seat by the window in the draw and thought she was lucky.",
+   "ko": "제비뽑기로 창가 자리가 돼서 요코는 운이 좋다고 생각했어요.",
+   "blank": "ラッキー",
    "src": "made"
   }
  ],
@@ -10145,6 +10337,22 @@
    "src": "made"
   }
  ],
+ "w|ローカル": [
+  {
+   "text": "佐藤さんは、ローカルな情報に詳しくて店選びが上手だ。",
+   "en": "Mr. Sato knows a lot about local information and is good at picking places to eat.",
+   "ko": "사토 씨는 지역 정보에 밝아서 가게를 잘 골라요.",
+   "blank": "ローカル",
+   "src": "made"
+  },
+  {
+   "text": "陽子のクラスは、ローカル線に乗って隣の町の工場を見学した。",
+   "en": "Yoko's class rode a local train line to visit a factory in the next town.",
+   "ko": "요코네 반은 지역 노선을 타고 옆 동네 공장을 견학했어요.",
+   "blank": "ローカル",
+   "src": "made"
+  }
+ ],
  "w|ローン": [
   {
    "text": "ローンを組んだよ。",
@@ -10375,6 +10583,22 @@
    "blank": "一方"
   }
  ],
+ "w|一族": [
+  {
+   "text": "佐藤さんの一族は、代々お茶を作ってきた家だという。",
+   "en": "Mr. Sato's family is said to have made tea for generations.",
+   "ko": "사토 씨 집안은 대대로 차를 만들어 온 집이래요.",
+   "blank": "一族",
+   "src": "made"
+  },
+  {
+   "text": "国語の教科書に、ある一族の三代にわたる物語が載っている。",
+   "en": "The Japanese textbook includes a story spanning three generations of a family.",
+   "ko": "국어 교과서에 한 집안의 삼대에 걸친 이야기가 실려 있어요.",
+   "blank": "一族",
+   "src": "made"
+  }
+ ],
  "w|一旦": [
   {
    "text": "荷物が多くなったので、悠斗は一旦コインロッカーに預けた。",
@@ -10461,6 +10685,22 @@
    "en": "I hesitated for a moment.",
    "ko": "잠깐 망설여 버렸어.",
    "blank": "一瞬"
+  }
+ ],
+ "w|一種": [
+  {
+   "text": "先生によると、トマトは野菜の一種として扱われることが多い。",
+   "en": "According to the teacher, tomatoes are often treated as a kind of vegetable.",
+   "ko": "선생님에 따르면 토마토는 채소의 일종으로 다뤄지는 경우가 많대요.",
+   "blank": "一種",
+   "src": "made"
+  },
+  {
+   "text": "葵によると、締め切り前の緊張も一種の楽しみだそうだ。",
+   "en": "According to Aoi, the tension before a deadline is a kind of fun too.",
+   "ko": "아오이 말로는 마감 전의 긴장도 일종의 즐거움이래요.",
+   "blank": "一種",
+   "src": "made"
   }
  ],
  "w|一緒": [
@@ -11205,6 +11445,22 @@
    "en": "I'll line the photos up on the desk.",
    "ko": "사진을 책상에 늘어놓을게.",
    "blank": "並べる"
+  }
+ ],
+ "w|並み": [
+  {
+   "text": "直樹の絵は、プロ並みの腕前だとみんなに言われる。",
+   "en": "Everyone says Naoki's drawings show a professional level of skill.",
+   "ko": "나오키의 그림은 프로급 솜씨라고 다들 말해요.",
+   "blank": "並み",
+   "src": "made"
+  },
+  {
+   "text": "今年のボーナスは、ほぼ例年並みだった。",
+   "en": "This year's bonus was about the same as usual.",
+   "ko": "올해 보너스는 거의 예년 수준이었어요.",
+   "blank": "並み",
+   "src": "made"
   }
  ],
  "w|中": [
@@ -12149,6 +12405,22 @@
    "src": "made"
   }
  ],
+ "w|人格": [
+  {
+   "text": "佐藤さんの人格を疑う人は、職場に一人もいない。",
+   "en": "No one at the workplace doubts Mr. Sato's character.",
+   "ko": "사토 씨의 인격을 의심하는 사람은 직장에 한 명도 없어요.",
+   "blank": "人格",
+   "src": "made"
+  },
+  {
+   "text": "先生は、相手の人格を傷つける言葉は使わないようにと話した。",
+   "en": "The teacher told the class not to use words that hurt other people's dignity.",
+   "ko": "선생님은 상대의 인격에 상처를 주는 말은 쓰지 말라고 했어요.",
+   "blank": "人格",
+   "src": "made"
+  }
+ ],
  "w|人権": [
   {
    "text": "市役所のロビーで、人権について考える展示が開かれている。",
@@ -12205,6 +12477,22 @@
    "en": "First time in my life.",
    "ko": "태어나서 처음이야.",
    "blank": "人生"
+  }
+ ],
+ "w|人種": [
+  {
+   "text": "佐藤さんは、人種や国籍で人を判断しない人だ。",
+   "en": "Mr. Sato is someone who doesn't judge people by race or nationality.",
+   "ko": "사토 씨는 인종이나 국적으로 사람을 판단하지 않는 사람이에요.",
+   "blank": "人種",
+   "src": "made"
+  },
+  {
+   "text": "社会の授業で、人種による差別の歴史について話し合った。",
+   "en": "In social studies, the class discussed the history of racial discrimination.",
+   "ko": "사회 수업에서 인종 차별의 역사에 대해 이야기를 나눴어요.",
+   "blank": "人種",
+   "src": "made"
   }
  ],
  "w|人間": [
@@ -13837,6 +14125,22 @@
    "src": "made"
   }
  ],
+ "w|侵略": [
+  {
+   "text": "歴史の授業で、直樹は他国の侵略を受けた時代について学んだ。",
+   "en": "In history class, Naoki learned about a period when the country was invaded by another nation.",
+   "ko": "역사 수업에서 나오키는 다른 나라의 침략을 받은 시대에 대해 배웠어요.",
+   "blank": "侵略",
+   "src": "made"
+  },
+  {
+   "text": "葵が担当する映画は、宇宙人の侵略をテーマにしている。",
+   "en": "The film Aoi is working on has an alien invasion as its theme.",
+   "ko": "아오이가 맡은 영화는 외계인의 침략을 주제로 하고 있어요.",
+   "blank": "侵略",
+   "src": "made"
+  }
+ ],
  "w|便利": [
   {
    "text": "このアプリ、便利だね。",
@@ -14225,6 +14529,22 @@
    "src": "made"
   }
  ],
+ "w|個性": [
+  {
+   "text": "新しく来た佐藤さんは、服装にも話し方にも個性がある。",
+   "en": "Mr. Sato, who just joined, has a distinctive style in both his clothes and the way he talks.",
+   "ko": "새로 온 사토 씨는 옷차림에도 말투에도 개성이 있어요.",
+   "blank": "個性",
+   "src": "made"
+  },
+  {
+   "text": "担任の先生は、一人一人の個性を大切にしている。",
+   "en": "The homeroom teacher values each student's individuality.",
+   "ko": "담임 선생님은 한 사람 한 사람의 개성을 소중히 여겨요.",
+   "blank": "個性",
+   "src": "made"
+  }
+ ],
  "w|倒す": [
   {
    "text": "強いチームを倒すのは簡単ではない。",
@@ -14313,6 +14633,22 @@
    "en": "Try asking the price.",
    "ko": "가격을 물어봐.",
    "blank": "値段"
+  }
+ ],
+ "w|偉大": [
+  {
+   "text": "直樹は、偉大な科学者の伝記を夏休みに読んだ。",
+   "en": "Naoki read a biography of a great scientist over summer vacation.",
+   "ko": "나오키는 여름 방학에 위대한 과학자의 전기를 읽었어요.",
+   "blank": "偉大",
+   "src": "made"
+  },
+  {
+   "text": "会社のロビーには、偉大な作家の言葉が飾られている。",
+   "en": "The words of a great writer are displayed in the company lobby.",
+   "ko": "회사 로비에는 위대한 작가의 말이 걸려 있어요.",
+   "blank": "偉大",
+   "src": "made"
   }
  ],
  "w|停止": [
@@ -14644,6 +14980,22 @@
    "en": "At Yoko's parents' house, her husband gets called \"big brother.\"",
    "ko": "요코의 남편은 요코 친정에 가면 \"형님\"이라고 불려요.",
    "blank": "兄さん",
+   "src": "made"
+  }
+ ],
+ "w|兄ちゃん": [
+  {
+   "text": "佐藤さんは、近所の子どもたちに「兄ちゃん」と呼ばれているらしい。",
+   "en": "Mr. Sato is apparently called \"big bro\" by the kids in his neighborhood.",
+   "ko": "사토 씨는 동네 아이들한테 \"형아\"라고 불린대요.",
+   "blank": "兄ちゃん",
+   "src": "made"
+  },
+  {
+   "text": "陽子の弟は、近所の高校生を「兄ちゃん」と呼んで慕っている。",
+   "en": "Yoko's little brother adores a high school student in the neighborhood and calls him \"big bro.\"",
+   "ko": "요코의 남동생은 동네 고등학생을 \"형\"이라고 부르며 따라요.",
+   "blank": "兄ちゃん",
    "src": "made"
   }
  ],
@@ -15079,6 +15431,22 @@
    "en": "It's totally fine.",
    "ko": "전혀 괜찮아.",
    "blank": "全然"
+  }
+ ],
+ "w|全般": [
+  {
+   "text": "佐藤さんは、パソコン全般のことなら何でも分かる。",
+   "en": "Mr. Sato understands anything to do with computers in general.",
+   "ko": "사토 씨는 컴퓨터 전반에 관한 거라면 뭐든 알아요.",
+   "blank": "全般",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、理科全般が得意で、特に生物が好きだ。",
+   "en": "Yoko is good at science in general and especially likes biology.",
+   "ko": "요코는 과학 전반을 잘하고 특히 생물을 좋아해요.",
+   "blank": "全般",
+   "src": "made"
   }
  ],
  "w|全身": [
@@ -16869,6 +17237,22 @@
    "src": "made"
   }
  ],
+ "w|助かる": [
+  {
+   "text": "資料作りを佐藤さんが手伝ってくれて、誠はとても助かった。",
+   "en": "Mr. Sato helped make the materials, which was a big help to Makoto.",
+   "ko": "사토 씨가 자료 만드는 걸 도와줘서 마코토는 아주 큰 도움이 됐어요.",
+   "blank": "助かった",
+   "src": "made"
+  },
+  {
+   "text": "傘を忘れた日に友達が貸してくれて、陽子は助かった。",
+   "en": "On the day Yoko forgot her umbrella, a friend lent her one, which was a relief.",
+   "ko": "우산을 깜빡한 날 친구가 빌려줘서 요코는 살았어요.",
+   "blank": "助かった",
+   "src": "made"
+  }
+ ],
  "w|助ける": [
   {
    "text": "助けるよ、すぐ行く。",
@@ -17805,6 +18189,22 @@
    "blank": "原因"
   }
  ],
+ "w|原子力": [
+  {
+   "text": "討論の授業では、原子力発電に賛成か反対かで意見が分かれた。",
+   "en": "In the debate class, opinions were divided on whether to support nuclear power.",
+   "ko": "토론 수업에서는 원자력 발전에 찬성하는지 반대하는지로 의견이 갈렸어요.",
+   "blank": "原子力",
+   "src": "made"
+  },
+  {
+   "text": "葵の会社は、原子力に関する専門書も出版している。",
+   "en": "Aoi's company also publishes specialized books on nuclear energy.",
+   "ko": "아오이의 회사는 원자력에 관한 전문 서적도 출판하고 있어요.",
+   "blank": "原子力",
+   "src": "made"
+  }
+ ],
  "w|原発": [
   {
    "text": "原発のニュースを読んだ。",
@@ -17831,6 +18231,22 @@
    "en": "The screening is tough.",
    "ko": "심사가 까다로워.",
    "blank": "厳しい"
+  }
+ ],
+ "w|去る": [
+  {
+   "text": "前の担当者が会社を去ったので、佐藤さんがその仕事を引き継いだ。",
+   "en": "Since the previous person in charge left the company, Mr. Sato took over the job.",
+   "ko": "전 담당자가 회사를 떠나서 사토 씨가 그 일을 이어받았어요.",
+   "blank": "去った",
+   "src": "made"
+  },
+  {
+   "text": "三月で、陽子の大好きな先生が学校を去ることになった。",
+   "en": "Yoko's favorite teacher is going to leave the school in March.",
+   "ko": "삼월에 요코가 아주 좋아하는 선생님이 학교를 떠나게 됐어요.",
+   "blank": "去る",
+   "src": "made"
   }
  ],
  "w|去年": [
@@ -17957,6 +18373,22 @@
    "en": "I'll introduce a friend.",
    "ko": "친구 소개할게.",
    "blank": "友達"
+  }
+ ],
+ "w|双子": [
+  {
+   "text": "佐藤さんには双子の弟がいて、顔がそっくりらしい。",
+   "en": "Mr. Sato has a twin brother who apparently looks exactly like him.",
+   "ko": "사토 씨에게는 쌍둥이 남동생이 있는데 얼굴이 똑같대요.",
+   "blank": "双子",
+   "src": "made"
+  },
+  {
+   "text": "陽子のクラスには双子がいて、先生もよく間違える。",
+   "en": "There are twins in Yoko's class, and even the teacher often mixes them up.",
+   "ko": "요코네 반에는 쌍둥이가 있어서 선생님도 자주 헷갈려요.",
+   "blank": "双子",
+   "src": "made"
   }
  ],
  "w|反乱": [
@@ -19691,6 +20123,22 @@
    "blank": "国民"
   }
  ],
+ "w|国王": [
+  {
+   "text": "英語の教科書に、昔の国王の話が載っている。",
+   "en": "The English textbook includes a story about a king long ago.",
+   "ko": "영어 교과서에 옛날 국왕 이야기가 실려 있어요.",
+   "blank": "国王",
+   "src": "made"
+  },
+  {
+   "text": "葵が翻訳した童話では、国王が三人の娘に宝を分ける。",
+   "en": "In the fairy tale Aoi translated, the king divides his treasure among his three daughters.",
+   "ko": "아오이가 번역한 동화에서는 국왕이 세 딸에게 보물을 나눠 줘요.",
+   "blank": "国王",
+   "src": "made"
+  }
+ ],
  "w|国立": [
   {
    "text": "老人のための国立の病院がもっとあってしかるべきだ。",
@@ -21399,6 +21847,22 @@
    "blank": "失礼"
   }
  ],
+ "w|奇妙": [
+  {
+   "text": "佐藤さんの机の上には、奇妙な形の置物が並んでいる。",
+   "en": "Oddly shaped ornaments are lined up on Mr. Sato's desk.",
+   "ko": "사토 씨 책상 위에는 이상한 모양의 장식품이 늘어서 있어요.",
+   "blank": "奇妙",
+   "src": "made"
+  },
+  {
+   "text": "夜の学校で奇妙な音が聞こえるという噂が広まった。",
+   "en": "A rumor spread that strange sounds can be heard at the school at night.",
+   "ko": "밤에 학교에서 이상한 소리가 들린다는 소문이 퍼졌어요.",
+   "blank": "奇妙",
+   "src": "made"
+  }
+ ],
  "w|奇跡": [
   {
    "text": "奇跡が起きたみたいだ。",
@@ -21454,6 +21918,22 @@
    "en": "Yoko's brother's wife makes delicious New Year dishes every year.",
    "ko": "요코 오빠의 아내는 해마다 맛있는 오세치 요리를 만들어 줘요.",
    "blank": "奥さん",
+   "src": "made"
+  }
+ ],
+ "w|奥様": [
+  {
+   "text": "取引先の社長の奥様が、佐藤さんの名前を覚えていた。",
+   "en": "The wife of the client company's president remembered Mr. Sato's name.",
+   "ko": "거래처 사장님의 사모님이 사토 씨 이름을 기억하고 있었어요.",
+   "blank": "奥様",
+   "src": "made"
+  },
+  {
+   "text": "校長先生の奥様が、文化祭に手作りのお菓子を持ってきてくれた。",
+   "en": "The principal's wife brought homemade sweets to the school festival.",
+   "ko": "교장 선생님 사모님이 축제에 손수 만든 과자를 가져다주셨어요.",
+   "blank": "奥様",
    "src": "made"
   }
  ],
@@ -21679,6 +22159,22 @@
    "src": "made"
   }
  ],
+ "w|妖精": [
+  {
+   "text": "直樹のクラスの劇では、森の妖精が主人公を助ける。",
+   "en": "In the play by Naoki's class, a forest fairy helps the main character.",
+   "ko": "나오키네 반 연극에서는 숲의 요정이 주인공을 도와요.",
+   "blank": "妖精",
+   "src": "made"
+  },
+  {
+   "text": "葵は、新しい絵本の妖精のキャラクターをデザインしている。",
+   "en": "Aoi is designing the fairy character for a new picture book.",
+   "ko": "아오이는 새 그림책의 요정 캐릭터를 디자인하고 있어요.",
+   "blank": "妖精",
+   "src": "made"
+  }
+ ],
  "w|妙": [
   {
    "text": "取り調べ室の容疑者は、妙に落ち着いていた。",
@@ -21735,6 +22231,22 @@
    "en": "I talked it over with my sister.",
    "ko": "언니에게 상담했어.",
    "blank": "姉"
+  }
+ ],
+ "w|姉さん": [
+  {
+   "text": "誠は、電話で姉さんに新しい同僚のことを話した。",
+   "en": "Makoto told his older sister on the phone about his new coworker.",
+   "ko": "마코토는 전화로 누나에게 새 동료 이야기를 했어요.",
+   "blank": "姉さん",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、大学生の姉さんに数学の宿題を教えてもらった。",
+   "en": "Yoko got her older sister, a university student, to help her with her math homework.",
+   "ko": "요코는 대학생 언니에게 수학 숙제를 배웠어요.",
+   "blank": "姉さん",
+   "src": "made"
   }
  ],
  "w|姉妹": [
@@ -22311,6 +22823,22 @@
    "blank": "完璧"
   }
  ],
+ "w|完結": [
+  {
+   "text": "図書室で人気の長い漫画が、ついに完結した。",
+   "en": "The long manga that is popular in the school library finally came to an end.",
+   "ko": "도서실에서 인기 있던 긴 만화가 드디어 완결됐어요.",
+   "blank": "完結",
+   "src": "made"
+  },
+  {
+   "text": "このシリーズは、来月出る第五巻で完結する予定だ。",
+   "en": "This series is scheduled to conclude with the fifth volume coming out next month.",
+   "ko": "이 시리즈는 다음 달 나오는 오 권으로 완결될 예정이에요.",
+   "blank": "完結",
+   "src": "made"
+  }
+ ],
  "w|宗教": [
   {
    "text": "宗教の話は避けよう。",
@@ -22353,6 +22881,22 @@
    "en": "Did you get your checkup?",
    "ko": "정기검진 받았어?",
    "blank": "定期"
+  }
+ ],
+ "w|定番": [
+  {
+   "text": "佐藤さんが勧めた昼ご飯は、この辺りでは定番の定食屋だった。",
+   "en": "The lunch spot Mr. Sato recommended was a standard set-meal restaurant in the area.",
+   "ko": "사토 씨가 추천한 점심은 이 근처에서는 단골 정식집이었어요.",
+   "blank": "定番",
+   "src": "made"
+  },
+  {
+   "text": "卒業式で歌うのは、毎年同じ定番の曲だ。",
+   "en": "The song sung at the graduation ceremony is the same standard every year.",
+   "ko": "졸업식에서 부르는 건 매년 같은 단골 곡이에요.",
+   "blank": "定番",
+   "src": "made"
   }
  ],
  "w|定着": [
@@ -22398,6 +22942,22 @@
    "en": "The antique shop was piled with old tools like a mountain of treasure.",
    "ko": "골동품 가게에는 보물 산처럼 오래된 도구들이 쌓여 있었어요.",
    "blank": "宝",
+   "src": "made"
+  }
+ ],
+ "w|実写": [
+  {
+   "text": "直樹は、アニメの実写版より原作のほうが好きだ。",
+   "en": "Naoki likes the original better than the live-action version of the anime.",
+   "ko": "나오키는 애니메이션 실사판보다 원작을 더 좋아해요.",
+   "blank": "実写",
+   "src": "made"
+  },
+  {
+   "text": "あの人気漫画の実写映画の宣伝を、葵のチームが任された。",
+   "en": "Aoi's team was put in charge of promoting the live-action film of that popular manga.",
+   "ko": "그 인기 만화의 실사 영화 홍보를 아오이 팀이 맡게 됐어요.",
+   "blank": "実写",
    "src": "made"
   }
  ],
@@ -23039,6 +23599,22 @@
    "blank": "将来"
   }
  ],
+ "w|将棋": [
+  {
+   "text": "直樹は昼休みに、友達と教室で将棋を指す。",
+   "en": "Naoki plays shogi with his friends in the classroom at lunch.",
+   "ko": "나오키는 점심시간에 친구와 교실에서 장기를 둬요.",
+   "blank": "将棋",
+   "src": "made"
+  },
+  {
+   "text": "葵の上司は、昼休みにスマホで将棋をしている。",
+   "en": "Aoi's boss plays shogi on his phone during lunch break.",
+   "ko": "아오이의 상사는 점심시간에 스마트폰으로 장기를 둬요.",
+   "blank": "将棋",
+   "src": "made"
+  }
+ ],
  "w|将軍": [
   {
    "text": "誠は、昔の将軍の暮らしについて書かれた本を中学生に紹介した。",
@@ -23299,6 +23875,22 @@
    "en": "I'm under serious pressure now.",
    "ko": "발등에 불이 떨어졌어.",
    "blank": "尻"
+  }
+ ],
+ "w|尽くす": [
+  {
+   "text": "直樹たちは、文化祭を成功させるために全力を尽くした。",
+   "en": "Naoki and his classmates did their utmost to make the school festival a success.",
+   "ko": "나오키와 친구들은 축제를 성공시키려고 온 힘을 다했어요.",
+   "blank": "尽くした",
+   "src": "made"
+  },
+  {
+   "text": "葵は、お客さんのために最善を尽くすことを大切にしている。",
+   "en": "Aoi values doing her very best for the customers.",
+   "ko": "아오이는 고객을 위해 최선을 다하는 걸 소중히 여겨요.",
+   "blank": "尽くす",
+   "src": "made"
   }
  ],
  "w|届く": [
@@ -23735,6 +24327,22 @@
    "en": "I saw the ruins of an empire.",
    "ko": "제국의 유적을 봤어.",
    "blank": "帝国"
+  }
+ ],
+ "w|師匠": [
+  {
+   "text": "佐藤さんは、前の会社の先輩を今でも師匠と呼んでいる。",
+   "en": "Mr. Sato still calls his senior from his previous company his mentor.",
+   "ko": "사토 씨는 전 회사 선배를 지금도 스승이라고 불러요.",
+   "blank": "師匠",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、書道教室の先生を師匠として尊敬している。",
+   "en": "Yoko respects her calligraphy teacher as her master.",
+   "ko": "요코는 서예 교실 선생님을 스승으로 존경해요.",
+   "blank": "師匠",
+   "src": "made"
   }
  ],
  "w|席": [
@@ -24973,6 +25581,22 @@
    "blank": "後悔"
   }
  ],
+ "w|後輩": [
+  {
+   "text": "誠にとって、佐藤さんは初めてできた後輩だ。",
+   "en": "For Makoto, Mr. Sato is the first junior colleague he has ever had.",
+   "ko": "마코토에게 사토 씨는 처음 생긴 후배예요.",
+   "blank": "後輩",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、部活の後輩にラケットの持ち方を教えた。",
+   "en": "Yoko taught a younger club member how to hold the racket.",
+   "ko": "요코는 동아리 후배에게 라켓 잡는 법을 가르쳐 줬어요.",
+   "blank": "後輩",
+   "src": "made"
+  }
+ ],
  "w|徒歩": [
   {
    "text": "駅まで徒歩十分だ。",
@@ -25573,6 +26197,22 @@
    "src": "made"
   }
  ],
+ "w|性別": [
+  {
+   "text": "会社の書類から、性別の欄がなくなった。",
+   "en": "The gender field was removed from the company's forms.",
+   "ko": "회사 서류에서 성별 칸이 없어졌어요.",
+   "blank": "性別",
+   "src": "made"
+  },
+  {
+   "text": "性別に関係なく、好きな部活を選べるようになった。",
+   "en": "Students can now choose any club they like, regardless of gender.",
+   "ko": "성별과 관계없이 좋아하는 동아리를 고를 수 있게 됐어요.",
+   "blank": "性別",
+   "src": "made"
+  }
+ ],
  "w|性格": [
   {
    "text": "性格が似てるね。",
@@ -25599,6 +26239,22 @@
    "en": "Let's compare performance.",
    "ko": "성능을 비교하자.",
    "blank": "性能"
+  }
+ ],
+ "w|性質": [
+  {
+   "text": "佐藤さんは、困っている人を放っておけない性質だ。",
+   "en": "Mr. Sato is the kind of person who can't leave people in trouble alone.",
+   "ko": "사토 씨는 곤란한 사람을 그냥 두지 못하는 성격이에요.",
+   "blank": "性質",
+   "src": "made"
+  },
+  {
+   "text": "理科の実験で、水と油の性質の違いを調べた。",
+   "en": "In a science experiment, the students examined the different properties of water and oil.",
+   "ko": "과학 실험에서 물과 기름의 성질 차이를 조사했어요.",
+   "blank": "性質",
+   "src": "made"
   }
  ],
  "w|怪しい": [
@@ -27177,6 +27833,22 @@
    "blank": "押す"
   }
  ],
+ "w|抽選": [
+  {
+   "text": "文化祭のライブのチケットは、抽選で配られることになった。",
+   "en": "Tickets for the school festival concert are going to be given out by lottery.",
+   "ko": "축제 공연 티켓은 추첨으로 나눠 주기로 했어요.",
+   "blank": "抽選",
+   "src": "made"
+  },
+  {
+   "text": "社内パーティーの抽選で、葵は旅行券を当てた。",
+   "en": "Aoi won a travel voucher in the raffle at the company party.",
+   "ko": "사내 파티 추첨에서 아오이는 여행권에 당첨됐어요.",
+   "blank": "抽選",
+   "src": "made"
+  }
+ ],
  "w|担当": [
   {
    "text": "担当、誰？",
@@ -27769,6 +28441,22 @@
    "src": "made"
   }
  ],
+ "w|掲げる": [
+  {
+   "text": "佐藤さんは「一年で一番を取る」という目標を掲げた。",
+   "en": "Mr. Sato set himself the goal of \"being number one within a year.\"",
+   "ko": "사토 씨는 \"일 년 안에 일등을 하겠다\"는 목표를 내걸었어요.",
+   "blank": "掲げた",
+   "src": "made"
+  },
+  {
+   "text": "運動会の朝、校庭に学校の旗が掲げられた。",
+   "en": "On the morning of sports day, the school flag was raised in the schoolyard.",
+   "ko": "운동회 날 아침, 운동장에 학교 깃발이 걸렸어요.",
+   "blank": "掲げられた",
+   "src": "made"
+  }
+ ],
  "w|掲示板": [
   {
    "text": "掲示板を確認して。",
@@ -28275,6 +28963,22 @@
    "src": "made"
   }
  ],
+ "w|放出": [
+  {
+   "text": "理科の授業で、植物が酸素を放出する仕組みを学んだ。",
+   "en": "In science class, they learned how plants release oxygen.",
+   "ko": "과학 수업에서 식물이 산소를 방출하는 원리를 배웠어요.",
+   "blank": "放出",
+   "src": "made"
+  },
+  {
+   "text": "在庫の大放出セールで、古い本が半額になった。",
+   "en": "In a big clearance sale, old books were sold at half price.",
+   "ko": "재고 대방출 세일로 오래된 책이 반값이 됐어요.",
+   "blank": "放出",
+   "src": "made"
+  }
+ ],
  "w|放棄": [
   {
    "text": "相続を放棄する場合の書類について、市民から質問があった。",
@@ -28547,6 +29251,22 @@
    "en": "Tell me how many.",
    "ko": "몇 개인지 알려 줘.",
    "blank": "数"
+  }
+ ],
+ "w|数々": [
+  {
+   "text": "佐藤さんは、前の職場で数々の賞をもらったらしい。",
+   "en": "Mr. Sato apparently received numerous awards at his previous workplace.",
+   "ko": "사토 씨는 전 직장에서 여러 상을 받았대요.",
+   "blank": "数々",
+   "src": "made"
+  },
+  {
+   "text": "学校の廊下には、卒業生が残した数々の作品が飾られている。",
+   "en": "Many works left by graduates are displayed in the school hallway.",
+   "ko": "학교 복도에는 졸업생들이 남긴 여러 작품이 걸려 있어요.",
+   "blank": "数々",
+   "src": "made"
   }
  ],
  "w|数値": [
@@ -29793,6 +30513,22 @@
    "blank": "暮らし"
   }
  ],
+ "w|暮らす": [
+  {
+   "text": "佐藤さんは、会社の近くで猫と一緒に暮らしている。",
+   "en": "Mr. Sato lives near the office with his cat.",
+   "ko": "사토 씨는 회사 근처에서 고양이와 같이 살고 있어요.",
+   "blank": "暮らして",
+   "src": "made"
+  },
+  {
+   "text": "陽子は、昔おじいさんが暮らした町について作文を書いた。",
+   "en": "Yoko wrote an essay about the town where her grandfather once lived.",
+   "ko": "요코는 예전에 할아버지가 사셨던 동네에 대해 작문을 썼어요.",
+   "blank": "暮らした",
+   "src": "made"
+  }
+ ],
  "w|暴れる": [
   {
    "text": "機内で子どもが暴れて、母親が困っていた。",
@@ -30255,6 +30991,22 @@
    "en": "The charger comes with the main unit.",
    "ko": "충전기는 본체에 붙어 있어.",
    "blank": "本体"
+  }
+ ],
+ "w|本名": [
+  {
+   "text": "みんなが「サトちゃん」と呼ぶので、誠は佐藤さんの本名をしばらく知らなかった。",
+   "en": "Everyone called him \"Sato-chan,\" so for a while Makoto didn't know Mr. Sato's real name.",
+   "ko": "다들 \"사토짱\"이라고 불러서 마코토는 한동안 사토 씨의 본명을 몰랐어요.",
+   "blank": "本名",
+   "src": "made"
+  },
+  {
+   "text": "教科書に載っている作家は、本名とは別の名前で本を出していた。",
+   "en": "The author in the textbook published books under a name different from his real name.",
+   "ko": "교과서에 실린 작가는 본명과 다른 이름으로 책을 냈어요.",
+   "blank": "本名",
+   "src": "made"
   }
  ],
  "w|本屋": [
@@ -31071,6 +31823,22 @@
    "en": "I learned the basic concepts.",
    "ko": "기본 개념을 배웠어.",
    "blank": "概念"
+  }
+ ],
+ "w|概要": [
+  {
+   "text": "発表の前に、直樹は研究の概要を一枚の紙にまとめた。",
+   "en": "Before the presentation, Naoki summarized the outline of his research on one sheet of paper.",
+   "ko": "발표 전에 나오키는 연구 개요를 종이 한 장에 정리했어요.",
+   "blank": "概要",
+   "src": "made"
+  },
+  {
+   "text": "会議の前に、新しい企画の概要がメールで送られてきた。",
+   "en": "Before the meeting, an outline of the new project was sent by email.",
+   "ko": "회의 전에 새 기획의 개요가 메일로 왔어요.",
+   "blank": "概要",
+   "src": "made"
   }
  ],
  "w|構う": [
@@ -32851,6 +33619,22 @@
    "blank": "活躍"
   }
  ],
+ "w|派手": [
+  {
+   "text": "直樹は文化祭で、派手な衣装を着て舞台に立った。",
+   "en": "Naoki went on stage at the school festival in a flashy costume.",
+   "ko": "나오키는 축제에서 화려한 의상을 입고 무대에 섰어요.",
+   "blank": "派手",
+   "src": "made"
+  },
+  {
+   "text": "葵は、オフィスには派手すぎない服を選んで着ている。",
+   "en": "Aoi chooses clothes that aren't too flashy for the office.",
+   "ko": "아오이는 사무실에서는 너무 화려하지 않은 옷을 골라 입어요.",
+   "blank": "派手",
+   "src": "made"
+  }
+ ],
  "w|派遣": [
   {
    "text": "派遣で働いてる。",
@@ -32863,6 +33647,22 @@
    "en": "They dispatched staff.",
    "ko": "직원을 파견했어.",
    "blank": "派遣"
+  }
+ ],
+ "w|流す": [
+  {
+   "text": "歓迎会のあと、誠と佐藤さんはカラオケで汗を流した。",
+   "en": "After the welcome party, Makoto and Mr. Sato worked up a sweat at karaoke.",
+   "ko": "환영회 뒤에 마코토와 사토 씨는 노래방에서 땀을 흘렸어요.",
+   "blank": "流した",
+   "src": "made"
+  },
+  {
+   "text": "昼の放送で、放送部が陽子のリクエストした曲を流した。",
+   "en": "During the lunchtime broadcast, the broadcasting club played the song Yoko requested.",
+   "ko": "점심 방송에서 방송부가 요코가 신청한 곡을 틀었어요.",
+   "blank": "流した",
+   "src": "made"
   }
  ],
  "w|流れ": [
@@ -32923,6 +33723,22 @@
    "en": "You're sensitive to trends.",
    "ko": "유행에 민감한 사람이네.",
    "blank": "流行"
+  }
+ ],
+ "w|流通": [
+  {
+   "text": "社会科見学で、野菜が店に届くまでの流通の仕組みを見た。",
+   "en": "On a social studies field trip, they saw the distribution system that gets vegetables to stores.",
+   "ko": "사회 견학에서 채소가 가게에 도착하기까지의 유통 구조를 봤어요.",
+   "blank": "流通",
+   "src": "made"
+  },
+  {
+   "text": "本の流通が遅れて、発売日に店に並ばなかった。",
+   "en": "Book distribution was delayed, so it wasn't on store shelves on the release date.",
+   "ko": "책 유통이 늦어져서 발매일에 가게에 깔리지 않았어요.",
+   "blank": "流通",
+   "src": "made"
   }
  ],
  "w|浮気": [
@@ -32998,6 +33814,22 @@
    "en": "On the training camp night, Yumi and her teammates got excited watching a pirate movie.",
    "ko": "유미네는 합숙 밤에 해적 영화를 보며 신났어요.",
    "blank": "海賊",
+   "src": "made"
+  }
+ ],
+ "w|海軍": [
+  {
+   "text": "修学旅行で、直樹たちは海軍の古い船を見学した。",
+   "en": "On the school trip, Naoki and his classmates toured an old navy ship.",
+   "ko": "수학여행에서 나오키와 친구들은 해군의 오래된 배를 견학했어요.",
+   "blank": "海軍",
+   "src": "made"
+  },
+  {
+   "text": "葵の祖父は、昔海軍で働いていたそうだ。",
+   "en": "Aoi's grandfather apparently used to work in the navy.",
+   "ko": "아오이의 할아버지는 옛날에 해군에서 일했대요.",
+   "blank": "海軍",
    "src": "made"
   }
  ],
@@ -33145,6 +33977,22 @@
    "en": "Late-night ramen tastes good.",
    "ko": "심야 라멘이 맛있어.",
    "blank": "深夜"
+  }
+ ],
+ "w|混ぜる": [
+  {
+   "text": "佐藤さんはカフェで、コーヒーに砂糖を入れてゆっくり混ぜた。",
+   "en": "At the café, Mr. Sato put sugar in his coffee and stirred it slowly.",
+   "ko": "사토 씨는 카페에서 커피에 설탕을 넣고 천천히 저었어요.",
+   "blank": "混ぜた",
+   "src": "made"
+  },
+  {
+   "text": "調理実習で、陽子は卵と牛乳をよく混ぜる係になった。",
+   "en": "In cooking class, Yoko was in charge of mixing the eggs and milk well.",
+   "ko": "조리 실습에서 요코는 달걀과 우유를 잘 섞는 담당이 됐어요.",
+   "blank": "混ぜる",
+   "src": "made"
   }
  ],
  "w|混乱": [
@@ -33321,6 +34169,22 @@
    "en": "Are you satisfied with this?",
    "ko": "이걸로 만족해?",
    "blank": "満足"
+  }
+ ],
+ "w|満載": [
+  {
+   "text": "直樹の鞄は、教科書と部活の道具で満載だ。",
+   "en": "Naoki's bag is crammed full of textbooks and club gear.",
+   "ko": "나오키의 가방은 교과서와 동아리 용품으로 가득해요.",
+   "blank": "満載",
+   "src": "made"
+  },
+  {
+   "text": "今月の社内報は、新入社員の紹介が満載だ。",
+   "en": "This month's company newsletter is packed with introductions of new employees.",
+   "ko": "이번 달 사내보는 신입 사원 소개로 가득해요.",
+   "blank": "満載",
+   "src": "made"
   }
  ],
  "w|滞在": [
@@ -33783,6 +34647,22 @@
    "src": "tatoeba:80029 en:264763"
   }
  ],
+ "w|燃える": [
+  {
+   "text": "理科室の実験で、マグネシウムが白い光を出して燃えた。",
+   "en": "In the science lab experiment, magnesium burned with a white light.",
+   "ko": "과학실 실험에서 마그네슘이 하얀 빛을 내며 탔어요.",
+   "blank": "燃えた",
+   "src": "made"
+  },
+  {
+   "text": "新しい企画に、葵はやる気に燃えている。",
+   "en": "Aoi is fired up about the new project.",
+   "ko": "아오이는 새 기획에 의욕이 불타고 있어요.",
+   "blank": "燃えて",
+   "src": "made"
+  }
+ ],
  "w|燃料": [
   {
    "text": "燃料が足りない。",
@@ -34021,6 +34901,22 @@
    "en": "This is the distinctive part.",
    "ko": "여기가 특징이야.",
    "blank": "特徴"
+  }
+ ],
+ "w|特性": [
+  {
+   "text": "理科の先生は、金属の特性を一つずつ説明した。",
+   "en": "The science teacher explained the properties of metals one by one.",
+   "ko": "과학 선생님은 금속의 특성을 하나씩 설명했어요.",
+   "blank": "特性",
+   "src": "made"
+  },
+  {
+   "text": "商品の特性を分かりやすく伝えるのが、葵の仕事だ。",
+   "en": "Aoi's job is to communicate the product's features clearly.",
+   "ko": "상품의 특성을 알기 쉽게 전하는 게 아오이의 일이에요.",
+   "blank": "特性",
+   "src": "made"
   }
  ],
  "w|特殊": [
@@ -34681,6 +35577,22 @@
    "en": "I want to live my own way.",
    "ko": "내 식대로 살고 싶어.",
    "blank": "生きたい"
+  }
+ ],
+ "w|生き物": [
+  {
+   "text": "佐藤さんは、海の生き物の写真を撮るのが趣味だ。",
+   "en": "Mr. Sato's hobby is taking pictures of sea creatures.",
+   "ko": "사토 씨의 취미는 바다 생물 사진을 찍는 거예요.",
+   "blank": "生き物",
+   "src": "made"
+  },
+  {
+   "text": "理科の授業で、陽子たちは池の小さな生き物を観察した。",
+   "en": "In science class, Yoko and her classmates observed small creatures in the pond.",
+   "ko": "과학 수업에서 요코와 친구들은 연못의 작은 생물을 관찰했어요.",
+   "blank": "生き物",
+   "src": "made"
   }
  ],
  "w|生ずる": [
@@ -35679,6 +36591,22 @@
    "blank": "白い"
   }
  ],
+ "w|白人": [
+  {
+   "text": "佐藤さんが見せてくれた写真には、白人の留学生仲間が写っていた。",
+   "en": "The photo Mr. Sato showed included white classmates from his study-abroad days.",
+   "ko": "사토 씨가 보여 준 사진에는 백인 유학생 친구들이 찍혀 있었어요.",
+   "blank": "白人",
+   "src": "made"
+  },
+  {
+   "text": "歴史の授業で、白人の移民がこの国に来た時代について学んだ。",
+   "en": "In history class, they learned about the period when white immigrants came to this country.",
+   "ko": "역사 수업에서 백인 이민자들이 이 나라에 온 시대에 대해 배웠어요.",
+   "blank": "白人",
+   "src": "made"
+  }
+ ],
  "w|皆": [
   {
    "text": "皆で行こう。",
@@ -35705,6 +36633,22 @@
    "en": "I want to tell everyone.",
    "ko": "여러분께 전하고 싶어.",
    "blank": "皆さん"
+  }
+ ],
+ "w|皇帝": [
+  {
+   "text": "世界史のテストに、ローマの皇帝の名前が出た。",
+   "en": "The name of a Roman emperor came up on the world history test.",
+   "ko": "세계사 시험에 로마 황제의 이름이 나왔어요.",
+   "blank": "皇帝",
+   "src": "made"
+  },
+  {
+   "text": "葵の好きな歴史ドラマの主人公は、中国の皇帝だ。",
+   "en": "The main character of Aoi's favorite historical drama is a Chinese emperor.",
+   "ko": "아오이가 좋아하는 사극의 주인공은 중국 황제예요.",
+   "blank": "皇帝",
+   "src": "made"
   }
  ],
  "w|皮": [
@@ -36571,6 +37515,22 @@
    "blank": "確率"
   }
  ],
+ "w|確立": [
+  {
+   "text": "新しいコーチは、チームの練習方法を確立した。",
+   "en": "The new coach established the team's training method.",
+   "ko": "새 코치는 팀의 연습 방법을 확립했어요.",
+   "blank": "確立",
+   "src": "made"
+  },
+  {
+   "text": "会社のブランドを確立するまでに、十年かかった。",
+   "en": "It took ten years to establish the company's brand.",
+   "ko": "회사 브랜드를 확립하기까지 십 년이 걸렸어요.",
+   "blank": "確立",
+   "src": "made"
+  }
+ ],
  "w|確認": [
   {
    "text": "確認して。",
@@ -36867,6 +37827,22 @@
    "en": "I'm on my way.",
    "ko": "지금 이동하고 있어.",
    "blank": "移動"
+  }
+ ],
+ "w|移民": [
+  {
+   "text": "社会の授業で、直樹たちは昔の移民の暮らしについて調べた。",
+   "en": "In social studies, Naoki and his classmates researched the lives of immigrants in the past.",
+   "ko": "사회 수업에서 나오키와 친구들은 옛날 이민자들의 생활에 대해 조사했어요.",
+   "blank": "移民",
+   "src": "made"
+  },
+  {
+   "text": "葵は、移民の家族を描いたドキュメンタリーの資料を集めている。",
+   "en": "Aoi is gathering materials for a documentary about an immigrant family.",
+   "ko": "아오이는 이민자 가족을 그린 다큐멘터리 자료를 모으고 있어요.",
+   "blank": "移民",
+   "src": "made"
   }
  ],
  "w|移行": [
@@ -37665,6 +38641,22 @@
    "en": "Those are skin cells.",
    "ko": "피부 세포야.",
    "blank": "細胞"
+  }
+ ],
+ "w|紳士": [
+  {
+   "text": "佐藤さんは、ドアを開けて人を先に通す紳士だ。",
+   "en": "Mr. Sato is a gentleman who holds the door open and lets others go first.",
+   "ko": "사토 씨는 문을 열고 다른 사람을 먼저 지나가게 하는 신사예요.",
+   "blank": "紳士",
+   "src": "made"
+  },
+  {
+   "text": "英語の劇で、陽子はイギリスの紳士の役をもらった。",
+   "en": "In the English play, Yoko got the role of an English gentleman.",
+   "ko": "영어 연극에서 요코는 영국 신사 역을 맡았어요.",
+   "blank": "紳士",
+   "src": "made"
   }
  ],
  "w|紹介": [
@@ -39741,6 +40733,22 @@
    "src": "made"
   }
  ],
+ "w|若手": [
+  {
+   "text": "佐藤さんは、若手の中でもいちばん元気がいい。",
+   "en": "Mr. Sato is the most energetic of the young employees.",
+   "ko": "사토 씨는 젊은 직원 중에서도 제일 활기차요.",
+   "blank": "若手",
+   "src": "made"
+  },
+  {
+   "text": "陽子の学校には、今年若手の先生が三人入ってきた。",
+   "en": "Three young teachers joined Yoko's school this year.",
+   "ko": "요코네 학교에 올해 젊은 선생님이 세 명 들어왔어요.",
+   "blank": "若手",
+   "src": "made"
+  }
+ ],
  "w|若者": [
   {
    "text": "若者が集まっている。",
@@ -40217,6 +41225,22 @@
    "en": "I put it together in a table.",
    "ko": "표로 정리했어.",
    "blank": "表"
+  }
+ ],
+ "w|表す": [
+  {
+   "text": "美術の時間に、直樹は自分の気持ちを色で表してみた。",
+   "en": "In art class, Naoki tried expressing his feelings with color.",
+   "ko": "미술 시간에 나오키는 자기 기분을 색으로 표현해 봤어요.",
+   "blank": "表して",
+   "src": "made"
+  },
+  {
+   "text": "このグラフは、去年からの売り上げの変化を表している。",
+   "en": "This graph shows the change in sales since last year.",
+   "ko": "이 그래프는 작년부터의 매출 변화를 나타내고 있어요.",
+   "blank": "表して",
+   "src": "made"
   }
  ],
  "w|表情": [
@@ -40833,6 +41857,22 @@
    "blank": "見つける"
   }
  ],
+ "w|見つめる": [
+  {
+   "text": "直樹は、黒板の難しい式をじっと見つめていた。",
+   "en": "Naoki was staring intently at the difficult equation on the blackboard.",
+   "ko": "나오키는 칠판의 어려운 식을 가만히 바라보고 있었어요.",
+   "blank": "見つめて",
+   "src": "made"
+  },
+  {
+   "text": "葵はパソコンの画面を見つめたまま、しばらく考え込んだ。",
+   "en": "Aoi stayed lost in thought for a while, staring at the computer screen.",
+   "ko": "아오이는 컴퓨터 화면을 바라본 채 한동안 생각에 잠겼어요.",
+   "blank": "見つめた",
+   "src": "made"
+  }
+ ],
  "w|見る": [
   {
    "text": "ちょっと見て。",
@@ -41082,6 +42122,38 @@
    "en": "On her day off, Yoko had a long phone call with her best friend from high school.",
    "ko": "요코는 쉬는 날 고등학교 시절 절친과 오래 통화했어요.",
    "blank": "親友",
+   "src": "made"
+  }
+ ],
+ "w|親子": [
+  {
+   "text": "佐藤さんは週末、親子で釣りに行くのが楽しみだそうだ。",
+   "en": "Mr. Sato says he looks forward to going fishing with his child on weekends.",
+   "ko": "사토 씨는 주말에 아이와 함께 낚시 가는 게 낙이래요.",
+   "blank": "親子",
+   "src": "made"
+  },
+  {
+   "text": "陽子の学校では、毎年秋に親子で参加する運動会がある。",
+   "en": "At Yoko's school, there is a sports day every autumn that parents and children take part in together.",
+   "ko": "요코네 학교에는 매년 가을 부모와 아이가 함께 참가하는 운동회가 있어요.",
+   "blank": "親子",
+   "src": "made"
+  }
+ ],
+ "w|親父": [
+  {
+   "text": "佐藤さんの親父さんは、町で小さな工場をやっているそうだ。",
+   "en": "Mr. Sato's father apparently runs a small factory in town.",
+   "ko": "사토 씨의 아버지는 동네에서 작은 공장을 하신대요.",
+   "blank": "親父",
+   "src": "made"
+  },
+  {
+   "text": "陽子の友達は、自分の父親のことを冗談で「親父」と呼ぶ。",
+   "en": "Yoko's friend jokingly calls his own father \"my old man.\"",
+   "ko": "요코의 친구는 자기 아버지를 농담으로 \"영감\"이라고 불러요.",
+   "blank": "親父",
    "src": "made"
   }
  ],
@@ -43107,6 +44179,22 @@
    "blank": "賞"
   }
  ],
+ "w|賠償": [
+  {
+   "text": "公民の授業で、事故の賠償の仕組みを学んだ。",
+   "en": "In civics class, the students learned how compensation for accidents works.",
+   "ko": "공민 수업에서 사고 배상의 구조를 배웠어요.",
+   "blank": "賠償",
+   "src": "made"
+  },
+  {
+   "text": "納品が遅れて、会社は取引先に賠償を求められた。",
+   "en": "The delivery was late, and the company was asked by the client to pay compensation.",
+   "ko": "납품이 늦어져서 회사는 거래처로부터 배상을 요구받았어요.",
+   "blank": "賠償",
+   "src": "made"
+  }
+ ],
  "w|質": [
   {
    "text": "質が高い商品だ。",
@@ -43535,6 +44623,22 @@
    "en": "It's a town near a military base.",
    "ko": "군사 기지가 가까운 마을이야.",
    "blank": "軍事"
+  }
+ ],
+ "w|軍人": [
+  {
+   "text": "直樹の祖父は若いころ軍人だったと、授業で話した。",
+   "en": "Naoki told the class that his grandfather had been a soldier when he was young.",
+   "ko": "나오키는 할아버지가 젊었을 때 군인이었다고 수업 시간에 이야기했어요.",
+   "blank": "軍人",
+   "src": "made"
+  },
+  {
+   "text": "今度の小説の主人公は、戦争から帰ってきた軍人だ。",
+   "en": "The main character of the next novel is a soldier who has returned from war.",
+   "ko": "이번 소설의 주인공은 전쟁에서 돌아온 군인이에요.",
+   "blank": "軍人",
+   "src": "made"
   }
  ],
  "w|軍隊": [
@@ -44011,6 +45115,22 @@
    "en": "I don't need anything extra.",
    "ko": "추가는 필요 없어.",
    "blank": "追加"
+  }
+ ],
+ "w|追求": [
+  {
+   "text": "直樹は、部活でも勉強でも、完璧を追求するタイプだ。",
+   "en": "Naoki is the type who pursues perfection both in club activities and studying.",
+   "ko": "나오키는 동아리든 공부든 완벽을 추구하는 타입이에요.",
+   "blank": "追求",
+   "src": "made"
+  },
+  {
+   "text": "会社は、利益だけを追求するやり方を見直した。",
+   "en": "The company reconsidered its approach of pursuing profit alone.",
+   "ko": "회사는 이익만을 추구하는 방식을 재검토했어요.",
+   "blank": "追求",
+   "src": "made"
   }
  ],
  "w|退職": [
@@ -44623,6 +45743,22 @@
    "blank": "進化"
   }
  ],
+ "w|進歩": [
+  {
+   "text": "先生は、直樹の英語の進歩を見て驚いていた。",
+   "en": "The teacher was surprised to see Naoki's progress in English.",
+   "ko": "선생님은 나오키의 영어 실력이 는 걸 보고 놀랐어요.",
+   "blank": "進歩",
+   "src": "made"
+  },
+  {
+   "text": "技術の進歩で、本の作り方も大きく変わった。",
+   "en": "With technological progress, the way books are made has changed a lot.",
+   "ko": "기술의 진보로 책 만드는 방식도 크게 바뀌었어요.",
+   "blank": "進歩",
+   "src": "made"
+  }
+ ],
  "w|進行": [
   {
    "text": "工事が進行中だ。",
@@ -45143,6 +46279,22 @@
    "blank": "選手"
   }
  ],
+ "w|選手権": [
+  {
+   "text": "直樹の高校のバスケ部は、県の選手権で準優勝した。",
+   "en": "The basketball team at Naoki's high school came in second in the prefectural championship.",
+   "ko": "나오키네 고등학교 농구부는 현 선수권에서 준우승했어요.",
+   "blank": "選手権",
+   "src": "made"
+  },
+  {
+   "text": "葵の会社は、ゲームの世界選手権のスポンサーをしている。",
+   "en": "Aoi's company sponsors a world gaming championship.",
+   "ko": "아오이의 회사는 게임 세계 선수권의 후원을 하고 있어요.",
+   "blank": "選手権",
+   "src": "made"
+  }
+ ],
  "w|選択": [
   {
    "text": "選択を間違えた。",
@@ -45211,6 +46363,22 @@
    "en": "Let's protect cultural heritage.",
    "ko": "문화유산을 지키자.",
    "blank": "遺産"
+  }
+ ],
+ "w|遺跡": [
+  {
+   "text": "遠足で、学校の近くにある古い遺跡を見に行った。",
+   "en": "On the field trip, the class went to see some old ruins near the school.",
+   "ko": "소풍 때 학교 근처에 있는 오래된 유적을 보러 갔어요.",
+   "blank": "遺跡",
+   "src": "made"
+  },
+  {
+   "text": "葵は、古代の遺跡を紹介する写真集を編集している。",
+   "en": "Aoi is editing a photo book introducing ancient ruins.",
+   "ko": "아오이는 고대 유적을 소개하는 사진집을 편집하고 있어요.",
+   "blank": "遺跡",
+   "src": "made"
   }
  ],
  "w|避ける": [
@@ -46153,6 +47321,22 @@
    "blank": "開発"
   }
  ],
+ "w|開設": [
+  {
+   "text": "今年から、学校に新しいプログラミング部が開設された。",
+   "en": "A new programming club was established at the school this year.",
+   "ko": "올해부터 학교에 새 프로그래밍부가 개설됐어요.",
+   "blank": "開設",
+   "src": "made"
+  },
+  {
+   "text": "葵の会社は、海外のお客さん向けに新しいサイトを開設した。",
+   "en": "Aoi's company launched a new website for overseas customers.",
+   "ko": "아오이의 회사는 해외 고객을 위한 새 사이트를 개설했어요.",
+   "blank": "開設",
+   "src": "made"
+  }
+ ],
  "w|間": [
   {
    "text": "間が空いたね。",
@@ -46369,6 +47553,22 @@
    "blank": "防衛"
   }
  ],
+ "w|阻止": [
+  {
+   "text": "ゴール前で、直樹は相手のシュートを阻止した。",
+   "en": "In front of the goal, Naoki blocked the opponent's shot.",
+   "ko": "골문 앞에서 나오키는 상대의 슛을 저지했어요.",
+   "blank": "阻止",
+   "src": "made"
+  },
+  {
+   "text": "情報の流出を阻止するため、パスワードが毎月変わる。",
+   "en": "To prevent information leaks, the passwords change every month.",
+   "ko": "정보 유출을 막기 위해 비밀번호가 매달 바뀌어요.",
+   "blank": "阻止",
+   "src": "made"
+  }
+ ],
  "w|降りる": [
   {
    "text": "次で降りるよ。",
@@ -46471,6 +47671,22 @@
    "src": "made"
   }
  ],
+ "w|隊長": [
+  {
+   "text": "佐藤さんは学生時代、山岳部の隊長を務めていた。",
+   "en": "In his student days, Mr. Sato was the leader of the mountaineering club.",
+   "ko": "사토 씨는 학창 시절 산악부 대장을 맡았어요.",
+   "blank": "隊長",
+   "src": "made"
+  },
+  {
+   "text": "林間学校では、班ごとに隊長を一人決めた。",
+   "en": "At the outdoor school camp, each group chose one leader.",
+   "ko": "임간 학교에서는 조마다 대장을 한 명 정했어요.",
+   "blank": "隊長",
+   "src": "made"
+  }
+ ],
  "w|随分": [
   {
    "text": "拓也は、この一年で随分仕事に慣れてきた。",
@@ -46543,6 +47759,22 @@
    "en": "The next room is noisy.",
    "ko": "옆방이 시끄러워.",
    "blank": "隣"
+  }
+ ],
+ "w|集まり": [
+  {
+   "text": "金曜の夜、部署の集まりで佐藤さんの歓迎会が開かれた。",
+   "en": "On Friday night, a welcome party for Mr. Sato was held at the department gathering.",
+   "ko": "금요일 밤 부서 모임에서 사토 씨 환영회가 열렸어요.",
+   "blank": "集まり",
+   "src": "made"
+  },
+  {
+   "text": "放課後、図書委員の集まりに陽子も出た。",
+   "en": "After school, Yoko also attended the library committee meeting.",
+   "ko": "방과 후에 도서 위원 모임에 요코도 나갔어요.",
+   "blank": "集まり",
+   "src": "made"
   }
  ],
  "w|集まる": [
@@ -46982,6 +48214,22 @@
    "en": "Keiko played the piano at the recital wearing a blue dress.",
    "ko": "게이코는 발표회에서 파란 드레스를 입고 피아노를 쳤어요.",
    "blank": "青い",
+   "src": "made"
+  }
+ ],
+ "w|青年": [
+  {
+   "text": "部長は、佐藤さんを「まじめな青年だ」と褒めた。",
+   "en": "The department manager praised Mr. Sato as \"a serious young man.\"",
+   "ko": "부장님은 사토 씨를 \"성실한 청년\"이라고 칭찬했어요.",
+   "blank": "青年",
+   "src": "made"
+  },
+  {
+   "text": "陽子が読んだ小説は、旅に出た青年が主人公だった。",
+   "en": "The novel Yoko read had a young man who goes on a journey as its main character.",
+   "ko": "요코가 읽은 소설은 여행을 떠난 청년이 주인공이었어요.",
+   "blank": "青年",
    "src": "made"
   }
  ],
@@ -47769,6 +49017,22 @@
    "src": "made"
   }
  ],
+ "w|騒ぎ": [
+  {
+   "text": "廊下で大きな騒ぎがあって、先生が走ってきた。",
+   "en": "There was a big commotion in the hallway, and a teacher came running.",
+   "ko": "복도에서 큰 소동이 있어서 선생님이 달려왔어요.",
+   "blank": "騒ぎ",
+   "src": "made"
+  },
+  {
+   "text": "コピー機が煙を出して、オフィスはちょっとした騒ぎになった。",
+   "en": "The copier started smoking, and the office was thrown into a bit of a commotion.",
+   "ko": "복사기에서 연기가 나서 사무실이 작은 소동에 휩싸였어요.",
+   "blank": "騒ぎ",
+   "src": "made"
+  }
+ ],
  "w|騒動": [
   {
    "text": "給食のプリンが一つ足りなくて、教室はちょっとした騒動になった。",
@@ -47913,6 +49177,22 @@
    "en": "I remember my high school days.",
    "ko": "고등학생 때를 떠올려.",
    "blank": "高校生"
+  }
+ ],
+ "w|高等": [
+  {
+   "text": "直樹の兄は、高等専門学校で機械を学んでいる。",
+   "en": "Naoki's older brother is studying machinery at a technical college.",
+   "ko": "나오키의 형은 고등 전문학교에서 기계를 배우고 있어요.",
+   "blank": "高等",
+   "src": "made"
+  },
+  {
+   "text": "この仕事には、かなり高等な数学の知識が必要だ。",
+   "en": "This job requires knowledge of fairly advanced mathematics.",
+   "ko": "이 일에는 꽤 고등한 수학 지식이 필요해요.",
+   "blank": "高等",
+   "src": "made"
   }
  ],
  "w|高級": [
