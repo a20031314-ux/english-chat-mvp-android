@@ -1165,6 +1165,22 @@
    "blank": "การขนส่ง"
   }
  ],
+ "w|การเขียน": [
+  {
+   "text": "ในแบบฟอร์มของคลินิก ธนาต้องใช้การเขียนตัวบรรจงให้อ่านง่าย",
+   "en": "On the clinic form, Thana has to write in neat print so it's easy to read.",
+   "ko": "치과 서류에 타나는 알아보기 쉽게 또박또박 적어야 해요.",
+   "blank": "การเขียน",
+   "src": "made"
+  },
+  {
+   "text": "เด็กบนดอยหลายคนเก่งการเขียนเพราะชอบเขียนจดหมายถึงพ่อแม่ที่ไปทำงานในเมือง",
+   "en": "Many mountain kids are good at writing because they love writing letters to parents working in the city.",
+   "ko": "산골 아이들 중에는 도시로 일하러 간 부모에게 편지 쓰기를 좋아해서 글을 잘 쓰는 아이가 많아요.",
+   "blank": "การเขียน",
+   "src": "made"
+  }
+ ],
  "w|การแข่งขัน": [
   {
    "text": "การแข่งขันเริ่มแล้ว",
@@ -1264,6 +1280,22 @@
    "en": "The judge asked for a week before making a decision.",
    "ko": "판사는 결정을 내리기 전에 일주일의 시간을 요청했어요.",
    "blank": "การตัดสินใจ",
+   "src": "made"
+  }
+ ],
+ "w|การติดเชื้อ": [
+  {
+   "text": "หลังถอนฟันคุด ธนาต้องดูแลแผลให้ดีเพื่อป้องกันการติดเชื้อ",
+   "en": "After having his wisdom tooth pulled, Thana has to look after the wound to prevent infection.",
+   "ko": "사랑니를 뽑은 뒤 타나는 감염을 막으려고 상처를 잘 관리해야 해요.",
+   "blank": "การติดเชื้อ",
+   "src": "made"
+  },
+  {
+   "text": "สุดาล้างแผลที่โดนหนามเกี่ยวทันทีเพราะกลัวการติดเชื้อ",
+   "en": "Suda cleaned the thorn scratch right away for fear of infection.",
+   "ko": "수다는 감염이 걱정돼서 가시에 긁힌 상처를 바로 씻었어요.",
+   "blank": "การติดเชื้อ",
    "src": "made"
   }
  ],
@@ -1427,6 +1459,22 @@
    "src": "made"
   }
  ],
+ "w|การแปล": [
+  {
+   "text": "แอปของโรงแรมใช้การแปลอัตโนมัติ บางประโยคเลยอ่านแล้วแปลกๆ",
+   "en": "The hotel app uses automatic translation, so some sentences read oddly.",
+   "ko": "호텔 앱은 자동 번역을 써서 어떤 문장은 좀 어색해요.",
+   "blank": "การแปล",
+   "src": "made"
+  },
+  {
+   "text": "งานของนภามีการแปลเอกสารจากภาษาอังกฤษเป็นไทยด้วย",
+   "en": "Napa's job also involves translating documents from English into Thai.",
+   "ko": "나파의 일에는 영어 문서를 태국어로 번역하는 것도 있어요.",
+   "blank": "การแปล",
+   "src": "made"
+  }
+ ],
  "w|การผ่าตัด": [
   {
    "text": "การผ่าตัดสำเร็จเรียบร้อย",
@@ -1515,6 +1563,22 @@
    "en": "He studies medicine at a famous university.",
    "ko": "그는 유명한 대학에서 의학을 배워.",
    "blank": "การแพทย์"
+  }
+ ],
+ "w|การฟัง": [
+  {
+   "text": "ผู้ช่วยหมอฟันบอกว่างานนี้ต้องใช้การฟังมากพอๆ กับมือ",
+   "en": "The dental assistant says this job needs as much listening as handiwork.",
+   "ko": "치과 보조원은 이 일은 손만큼이나 잘 듣는 게 중요하다고 해요.",
+   "blank": "การฟัง",
+   "src": "made"
+  },
+  {
+   "text": "สุดาฝึกการฟังภาษาม้งจากการคุยกับคนในหมู่บ้านทุกวัน",
+   "en": "Suda practices listening to Hmong by chatting with villagers every day.",
+   "ko": "수다는 매일 마을 사람들과 이야기하며 몽족 말 듣기를 연습해요.",
+   "blank": "การฟัง",
+   "src": "made"
   }
  ],
  "w|การเมือง": [
@@ -1664,6 +1728,22 @@
    "en": "A foreign customer praised Malee's English pronunciation as very clear.",
    "ko": "외국인 손님이 말리의 영어 발음이 아주 또렷하다고 칭찬했어요.",
    "blank": "การออกเสียง",
+   "src": "made"
+  }
+ ],
+ "w|การอ่าน": [
+  {
+   "text": "ธนาฆ่าเวลาในห้องรอด้วยการอ่านนิตยสารเก่า",
+   "en": "Thana killed time in the waiting room by reading old magazines.",
+   "ko": "타나는 대기실에서 옛날 잡지를 읽으며 시간을 보냈어요.",
+   "blank": "การอ่าน",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเปิดห้องสอนการอ่านให้เด็กในหมู่บ้านทุกเย็นวันเสาร์",
+   "en": "Suda runs a reading class for village kids every Saturday evening.",
+   "ko": "수다는 매주 토요일 저녁 마을 아이들에게 읽기 교실을 열어요.",
+   "blank": "การอ่าน",
    "src": "made"
   }
  ],
@@ -2879,6 +2959,22 @@
    "blank": "ของขวัญ"
   }
  ],
+ "w|ของฝาก": [
+  {
+   "text": "ก่อนเช็กเอาต์ วิชัยซื้อขนมเป็นของฝากให้เพื่อนที่ออฟฟิศ",
+   "en": "Before checking out, Wichai bought snacks as gifts for his friends at the office.",
+   "ko": "체크아웃 전에 위차이는 사무실 친구들에게 줄 과자를 선물로 샀어요.",
+   "blank": "ของฝาก",
+   "src": "made"
+  },
+  {
+   "text": "นภาเอาขนมเปี๊ยะที่เป็นของฝากจากบ้านเกิดมาแจกเพื่อนร่วมงาน",
+   "en": "Napa brought bean cakes from her hometown to hand out to her coworkers.",
+   "ko": "나파는 고향에서 가져온 빵을 선물로 동료들에게 나눠 줬어요.",
+   "blank": "ของฝาก",
+   "src": "made"
+  }
+ ],
  "w|ของรางวัล": [
   {
    "text": "ของรางวัลสวยจัง",
@@ -2937,6 +3033,38 @@
    "blank": "ข้อดี"
   }
  ],
+ "w|ข้อตกลง": [
+  {
+   "text": "ตามข้อตกลงกับบริษัททัวร์ แขกทุกคนได้อาหารเช้าฟรี",
+   "en": "Under the agreement with the tour company, every guest gets free breakfast.",
+   "ko": "여행사와의 협약에 따라 모든 손님이 무료 조식을 받아요.",
+   "blank": "ข้อตกลง",
+   "src": "made"
+  },
+  {
+   "text": "นภาอ่านข้อตกลงการจ้างงานอย่างละเอียดก่อนเซ็น",
+   "en": "Napa read the employment agreement carefully before signing.",
+   "ko": "나파는 서명하기 전에 고용 계약 조항을 꼼꼼히 읽었어요.",
+   "blank": "ข้อตกลง",
+   "src": "made"
+  }
+ ],
+ "w|ข้อเท็จจริง": [
+  {
+   "text": "หมอฟันบอกข้อเท็จจริงว่าการแปรงฟันแรงไม่ได้ทำให้ฟันขาวขึ้น",
+   "en": "The dentist told the fact that brushing hard doesn't make teeth whiter.",
+   "ko": "치과 의사는 세게 양치해도 이가 하얘지지 않는다는 사실을 알려 줬어요.",
+   "blank": "ข้อเท็จจริง",
+   "src": "made"
+  },
+  {
+   "text": "นักข่าวขึ้นมาเก็บข้อเท็จจริงเรื่องดินถล่มในหมู่บ้าน",
+   "en": "Reporters came up to gather facts about the landslide in the village.",
+   "ko": "기자들이 마을 산사태에 대한 사실을 취재하러 올라왔어요.",
+   "blank": "ข้อเท็จจริง",
+   "src": "made"
+  }
+ ],
  "w|ข้อเท้า": [
   {
    "text": "พลิกข้อเท้าตอนเดินเล่น",
@@ -2963,6 +3091,22 @@
    "en": "Sorry I'm late.",
    "ko": "늦어서 미안해.",
    "blank": "ขอโทษ"
+  }
+ ],
+ "w|ข้อแนะนำ": [
+  {
+   "text": "ในห้องพักมีกระดาษข้อแนะนำเรื่องการใช้น้ำอย่างประหยัด",
+   "en": "There's a note in the room with tips on saving water.",
+   "ko": "객실에는 물을 아껴 쓰는 방법에 대한 안내문이 있어요.",
+   "blank": "ข้อแนะนำ",
+   "src": "made"
+  },
+  {
+   "text": "รุ่นพี่ให้ข้อแนะนำนภาว่าให้จดทุกอย่างลงสมุดในสัปดาห์แรก",
+   "en": "A senior colleague advised Napa to write everything down in a notebook during the first week.",
+   "ko": "선배는 나파에게 첫 주에는 모든 걸 수첩에 적으라고 조언했어요.",
+   "blank": "ข้อแนะนำ",
+   "src": "made"
   }
  ],
  "w|ขอบ": [
@@ -3025,6 +3169,22 @@
    "blank": "ขอบใจ"
   }
  ],
+ "w|ข้อผิดพลาด": [
+  {
+   "text": "คลินิกโทรมาขอโทษธนาเรื่องข้อผิดพลาดในใบเสร็จ",
+   "en": "The clinic called Thana to apologize for an error on the receipt.",
+   "ko": "치과는 영수증 오류에 대해 타나에게 사과 전화를 했어요.",
+   "blank": "ข้อผิดพลาด",
+   "src": "made"
+  },
+  {
+   "text": "แผนที่เก่ามีข้อผิดพลาด สุดาเลยเดินหลงไปอีกฝั่งของเขา",
+   "en": "The old map had an error, so Suda got lost on the other side of the mountain.",
+   "ko": "옛 지도에 오류가 있어서 수다는 산 반대편으로 길을 잃었어요.",
+   "blank": "ข้อผิดพลาด",
+   "src": "made"
+  }
+ ],
  "w|ข้อมือ": [
   {
    "text": "พิมพ์นานแล้วข้อมือปวด",
@@ -3079,6 +3239,22 @@
    "en": "This exam set is hard but fair.",
    "ko": "이 시험지는 어렵지만 공정해.",
    "blank": "ข้อสอบ"
+  }
+ ],
+ "w|ข้อเสนอ": [
+  {
+   "text": "โรงแรมยื่นข้อเสนอให้วิชัยอัปเกรดห้องโดยจ่ายเพิ่มนิดหน่อย",
+   "en": "The hotel offered Wichai a room upgrade for a small extra fee.",
+   "ko": "호텔은 위차이에게 조금만 더 내면 방을 업그레이드해 주겠다고 제안했어요.",
+   "blank": "ข้อเสนอ",
+   "src": "made"
+  },
+  {
+   "text": "ในการประชุมแรก นภากล้ายื่นข้อเสนอให้ปรับหน้าเว็บใหม่",
+   "en": "At her first meeting, Napa was bold enough to propose redesigning the website.",
+   "ko": "첫 회의에서 나파는 용기 내어 웹사이트를 새로 바꾸자는 제안을 했어요.",
+   "blank": "ข้อเสนอ",
+   "src": "made"
   }
  ],
  "w|ข้อเสีย": [
@@ -3447,6 +3623,22 @@
    "en": "Roasted corn smells great.",
    "ko": "구운 옥수수 향이 정말 좋아.",
    "blank": "ข้าวโพด"
+  }
+ ],
+ "w|ข่าวลือ": [
+  {
+   "text": "ธนาเคยได้ยินข่าวลือว่าการจัดฟันทำให้หน้าเปลี่ยน",
+   "en": "Thana once heard a rumor that braces change the shape of your face.",
+   "ko": "타나는 교정을 하면 얼굴형이 바뀐다는 소문을 들은 적이 있어요.",
+   "blank": "ข่าวลือ",
+   "src": "made"
+  },
+  {
+   "text": "ในหมู่บ้านมีข่าวลือว่าจะมีถนนลาดยางมาถึงปีหน้า",
+   "en": "There's a rumor in the village that a paved road will reach it next year.",
+   "ko": "마을에는 내년에 포장도로가 들어온다는 소문이 돌아요.",
+   "blank": "ข่าวลือ",
+   "src": "made"
   }
  ],
  "w|ข่าวสาร": [
@@ -4035,6 +4227,22 @@
    "en": "Can I have two fried eggs?",
    "ko": "달걀프라이 두 개 주세요.",
    "blank": "ไข่ดาว"
+  }
+ ],
+ "w|ไข้เลือดออก": [
+  {
+   "text": "พยาบาลในคลินิกเล่าว่าเพิ่งหายจากไข้เลือดออกเมื่อเดือนก่อน",
+   "en": "The nurse at the clinic said she just recovered from dengue fever last month.",
+   "ko": "치과 간호사는 지난달에 뎅기열에서 막 나았다고 했어요.",
+   "blank": "ไข้เลือดออก",
+   "src": "made"
+  },
+  {
+   "text": "หน้าฝนชาวบ้านช่วยกันคว่ำโอ่งเพื่อป้องกันไข้เลือดออก",
+   "en": "In the rainy season, villagers turn over water jars to prevent dengue fever.",
+   "ko": "우기에는 마을 사람들이 뎅기열을 막으려고 물항아리를 엎어 둬요.",
+   "blank": "ไข้เลือดออก",
+   "src": "made"
   }
  ],
  "w|ไขว่คว้า": [
@@ -5007,6 +5215,22 @@
    "blank": "ความโกรธ"
   }
  ],
+ "w|ความขัดแย้ง": [
+  {
+   "text": "ผู้จัดการโรงแรมเข้ามาช่วยแก้ความขัดแย้งระหว่างแขกสองห้อง",
+   "en": "The hotel manager stepped in to settle a conflict between guests in two rooms.",
+   "ko": "호텔 지배인이 두 객실 손님 사이의 갈등을 풀려고 나섰어요.",
+   "blank": "ความขัดแย้ง",
+   "src": "made"
+  },
+  {
+   "text": "นภารู้สึกถึงความขัดแย้งเล็กๆ ระหว่างสองทีมตั้งแต่วันแรก",
+   "en": "Napa sensed a small conflict between the two teams from the first day.",
+   "ko": "나파는 첫날부터 두 팀 사이의 작은 갈등을 느꼈어요.",
+   "blank": "ความขัดแย้ง",
+   "src": "made"
+  }
+ ],
  "w|ความเข้าใจ": [
   {
    "text": "ขอความเข้าใจหน่อย",
@@ -5207,6 +5431,22 @@
    "en": "I understand your pain.",
    "ko": "네 아픔을 이해해.",
    "blank": "ความเจ็บปวด"
+  }
+ ],
+ "w|ความเจ็บป่วย": [
+  {
+   "text": "ประกันสุขภาพของธนาจ่ายค่ารักษาความเจ็บป่วยแต่ไม่จ่ายค่าทำฟัน",
+   "en": "Thana's health insurance covers illness but not dental work.",
+   "ko": "타나의 건강 보험은 질병 치료비는 내 주지만 치과 비용은 안 내 줘요.",
+   "blank": "ความเจ็บป่วย",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านต้องเดินลงเขาครึ่งวันเพื่อไปรักษาความเจ็บป่วยที่โรงพยาบาล",
+   "en": "Villagers have to walk down the mountain for half a day to get illnesses treated at the hospital.",
+   "ko": "마을 사람들은 병원에서 병을 치료하려면 반나절을 걸어 산을 내려가야 해요.",
+   "blank": "ความเจ็บป่วย",
+   "src": "made"
   }
  ],
  "w|ความช่วยเหลือ": [
@@ -5553,6 +5793,22 @@
    "blank": "ความพยายาม"
   }
  ],
+ "w|ความพร้อม": [
+  {
+   "text": "หมอฟันตรวจความพร้อมของธนาก่อนเริ่มฉีดยาชา",
+   "en": "The dentist checked that Thana was ready before starting the anesthetic.",
+   "ko": "치과 의사는 마취 주사를 놓기 전에 타나가 준비됐는지 확인했어요.",
+   "blank": "ความพร้อม",
+   "src": "made"
+  },
+  {
+   "text": "ก่อนหน้าหนาว ชาวบ้านเช็กความพร้อมของฟืนและผ้าห่ม",
+   "en": "Before the cold season, villagers check that firewood and blankets are ready.",
+   "ko": "겨울이 오기 전에 마을 사람들은 장작과 이불이 준비됐는지 확인해요.",
+   "blank": "ความพร้อม",
+   "src": "made"
+  }
+ ],
  "w|ความภูมิใจ": [
   {
    "text": "พ่อมีความภูมิใจในลูก",
@@ -5817,6 +6073,22 @@
    "blank": "ความล้มเหลว"
   }
  ],
+ "w|ความลังเล": [
+  {
+   "text": "หมอฟันเห็นความลังเลในสีหน้าธนาเลยอธิบายขั้นตอนให้ฟังอีกรอบ",
+   "en": "Seeing hesitation on Thana's face, the dentist explained the steps again.",
+   "ko": "치과 의사는 타나 얼굴에서 망설임을 보고 절차를 다시 설명해 줬어요.",
+   "blank": "ความลังเล",
+   "src": "made"
+  },
+  {
+   "text": "สุดาตอบรับงานครูอาสาโดยไม่มีความลังเลเลย",
+   "en": "Suda accepted the volunteer teaching job without any hesitation.",
+   "ko": "수다는 망설임 없이 자원 교사 일을 받아들였어요.",
+   "blank": "ความลังเล",
+   "src": "made"
+  }
+ ],
  "w|ความลับ": [
   {
    "text": "เก็บเป็นความลับนะ",
@@ -5860,6 +6132,22 @@
    "en": "Wanna looked at the diving map in the in-flight magazine, which shows the depth of each spot.",
    "ko": "완나는 기내 잡지에서 지점마다 수심이 표시된 다이빙 지도를 봤어요.",
    "blank": "ความลึก",
+   "src": "made"
+  }
+ ],
+ "w|ความวิตกกังวล": [
+  {
+   "text": "ธนามีความวิตกกังวลทุกครั้งที่ได้ยินเสียงสว่านกรอฟัน",
+   "en": "Thana gets anxious every time he hears the dental drill.",
+   "ko": "타나는 치과 드릴 소리를 들을 때마다 불안해져요.",
+   "blank": "ความวิตกกังวล",
+   "src": "made"
+  },
+  {
+   "text": "เสียงนกและลำธารช่วยให้ความวิตกกังวลของสุดาลดลง",
+   "en": "The sound of birds and the stream helped ease Suda's anxiety.",
+   "ko": "새소리와 시냇물 소리가 수다의 불안을 덜어 줬어요.",
+   "blank": "ความวิตกกังวล",
    "src": "made"
   }
  ],
@@ -6695,6 +6983,54 @@
    "blank": "คำขอ"
   }
  ],
+ "w|คำขอโทษ": [
+  {
+   "text": "แอร์ในห้องเสียทั้งคืน โรงแรมส่งคำขอโทษมาพร้อมผลไม้หนึ่งตะกร้า",
+   "en": "The air conditioning was broken all night, so the hotel sent an apology with a basket of fruit.",
+   "ko": "밤새 에어컨이 고장 나서 호텔은 과일 바구니와 함께 사과의 말을 전했어요.",
+   "blank": "คำขอโทษ",
+   "src": "made"
+  },
+  {
+   "text": "นภาส่งอีเมลผิดคน เลยต้องรีบเขียนคำขอโทษตามไป",
+   "en": "Napa sent an email to the wrong person, so she quickly wrote an apology after it.",
+   "ko": "나파는 이메일을 잘못 보내서 급히 사과 메일을 이어 보냈어요.",
+   "blank": "คำขอโทษ",
+   "src": "made"
+  }
+ ],
+ "w|คำขอบคุณ": [
+  {
+   "text": "วิชัยทิ้งทิปพร้อมโน้ตคำขอบคุณไว้บนหมอน",
+   "en": "Wichai left a tip with a thank-you note on the pillow.",
+   "ko": "위차이는 베개 위에 팁과 감사 쪽지를 남겼어요.",
+   "blank": "คำขอบคุณ",
+   "src": "made"
+  },
+  {
+   "text": "ตอนเย็นนภาส่งข้อความคำขอบคุณถึงทุกคนที่ช่วยสอนงาน",
+   "en": "In the evening Napa sent a thank-you message to everyone who helped train her.",
+   "ko": "저녁에 나파는 일을 가르쳐 준 모두에게 감사 메시지를 보냈어요.",
+   "blank": "คำขอบคุณ",
+   "src": "made"
+  }
+ ],
+ "w|คำชม": [
+  {
+   "text": "วิชัยเขียนคำชมแม่บ้านที่ทำห้องสะอาดมากลงในแบบประเมิน",
+   "en": "Wichai wrote praise for the housekeeper who cleaned the room so well on the feedback form.",
+   "ko": "위차이는 평가지에 방을 아주 깨끗이 치운 객실 청소원 칭찬을 적었어요.",
+   "blank": "คำชม",
+   "src": "made"
+  },
+  {
+   "text": "นภาได้คำชมจากหัวหน้าตั้งแต่งานชิ้นแรก",
+   "en": "Napa got praise from the boss on her very first task.",
+   "ko": "나파는 첫 업무부터 팀장에게 칭찬을 받았어요.",
+   "blank": "คำชม",
+   "src": "made"
+  }
+ ],
  "w|คำตอบ": [
   {
    "text": "ยังหาคำตอบไม่ได้",
@@ -6723,6 +7059,22 @@
    "blank": "คำถาม"
   }
  ],
+ "w|คำทักทาย": [
+  {
+   "text": "พนักงานต้อนรับเรียนคำทักทายง่ายๆ ไว้หลายภาษา",
+   "en": "The receptionists learned simple greetings in several languages.",
+   "ko": "프런트 직원들은 간단한 인사말을 여러 언어로 익혀 뒀어요.",
+   "blank": "คำทักทาย",
+   "src": "made"
+  },
+  {
+   "text": "นภาซ้อมคำทักทายสั้นๆ ไว้แนะนำตัวกับทีม",
+   "en": "Napa rehearsed a short greeting to introduce herself to the team.",
+   "ko": "나파는 팀에 자기소개할 짧은 인사말을 연습해 뒀어요.",
+   "blank": "คำทักทาย",
+   "src": "made"
+  }
+ ],
  "w|คำนวณ": [
   {
    "text": "ฉันคำนวณราคารวมแล้ว",
@@ -6737,6 +7089,22 @@
    "blank": "คำนวณ"
   }
  ],
+ "w|คำนิยาม": [
+  {
+   "text": "ป้ายในล็อบบี้ให้คำนิยามของโรงแรมสีเขียวว่าเป็นโรงแรมที่ลดขยะ",
+   "en": "A sign in the lobby defines a green hotel as one that cuts down on waste.",
+   "ko": "로비 안내판은 친환경 호텔을 쓰레기를 줄이는 호텔이라고 정의해요.",
+   "blank": "คำนิยาม",
+   "src": "made"
+  },
+  {
+   "text": "นภาต้องเขียนคำนิยามศัพท์เฉพาะทางให้ลูกค้าเข้าใจง่าย",
+   "en": "Napa has to write definitions of technical terms so clients can understand easily.",
+   "ko": "나파는 고객이 쉽게 이해하도록 전문 용어의 정의를 써야 해요.",
+   "blank": "คำนิยาม",
+   "src": "made"
+  }
+ ],
  "w|คำแนะนำ": [
   {
    "text": "ขอบคุณสำหรับคำแนะนำ",
@@ -6749,6 +7117,38 @@
    "en": "Can I get some advice?",
    "ko": "조언 좀 부탁해도 될까?",
    "blank": "คำแนะนำ"
+  }
+ ],
+ "w|คำใบ้": [
+  {
+   "text": "ลูกชายธนาเล่นเกมทายคำในห้องรอโดยให้คำใบ้ทีละข้อ",
+   "en": "Thana's son played a word-guessing game in the waiting room, giving clues one by one.",
+   "ko": "타나의 아들은 대기실에서 힌트를 하나씩 주며 단어 맞히기 놀이를 했어요.",
+   "blank": "คำใบ้",
+   "src": "made"
+  },
+  {
+   "text": "เด็กๆ ทิ้งคำใบ้ไว้บนต้นไม้ให้สุดาตามหาของขวัญ",
+   "en": "The kids left clues on the trees for Suda to find her present.",
+   "ko": "아이들은 수다가 선물을 찾도록 나무에 힌트를 남겼어요.",
+   "blank": "คำใบ้",
+   "src": "made"
+  }
+ ],
+ "w|คำแปล": [
+  {
+   "text": "เมนูอาหารเช้าของโรงแรมมีคำแปลภาษาอังกฤษใต้ชื่ออาหารทุกจาน",
+   "en": "The hotel breakfast menu has an English translation under every dish name.",
+   "ko": "호텔 조식 메뉴에는 모든 요리 이름 아래에 영어 번역이 있어요.",
+   "blank": "คำแปล",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าให้นภาตรวจคำแปลในคู่มือสินค้าภาษาญี่ปุ่น",
+   "en": "The boss had Napa check the translations in the Japanese product manual.",
+   "ko": "팀장은 나파에게 일본어 제품 설명서의 번역문을 검토하게 했어요.",
+   "blank": "คำแปล",
+   "src": "made"
   }
  ],
  "w|คำศัพท์": [
@@ -6793,6 +7193,38 @@
    "en": "Don't break your promise.",
    "ko": "약속 어기지 마.",
    "blank": "คำสัญญา"
+  }
+ ],
+ "w|คำอธิบาย": [
+  {
+   "text": "วิชัยอ่านคำอธิบายวิธีใช้ตู้เซฟในห้องแล้วก็ยังงงอยู่",
+   "en": "Wichai read the instructions for the room safe but was still confused.",
+   "ko": "위차이는 객실 금고 사용 설명을 읽었지만 여전히 헷갈렸어요.",
+   "blank": "คำอธิบาย",
+   "src": "made"
+  },
+  {
+   "text": "ฝ่ายบุคคลให้คำอธิบายเรื่องวันลาและสวัสดิการกับนภา",
+   "en": "HR gave Napa an explanation of leave days and benefits.",
+   "ko": "인사팀은 나파에게 휴가와 복지에 대해 설명해 줬어요.",
+   "blank": "คำอธิบาย",
+   "src": "made"
+  }
+ ],
+ "w|คำอวยพร": [
+  {
+   "text": "วันเกิดของวิชัย โรงแรมส่งเค้กพร้อมการ์ดคำอวยพรมาที่ห้อง",
+   "en": "On Wichai's birthday, the hotel sent a cake with a greeting card to his room.",
+   "ko": "위차이의 생일에 호텔은 축하 카드와 함께 케이크를 방으로 보냈어요.",
+   "blank": "คำอวยพร",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานเขียนคำอวยพรลงการ์ดต้อนรับนภาเข้าทีม",
+   "en": "Coworkers wrote good wishes on a card welcoming Napa to the team.",
+   "ko": "동료들은 나파의 입사를 환영하는 카드에 축하 인사를 적었어요.",
+   "blank": "คำอวยพร",
+   "src": "made"
   }
  ],
  "w|คิด": [
@@ -7424,6 +7856,22 @@
    "en": "Chan marks the used parts boxes with a pen.",
    "ko": "짠은 다 쓴 부품 상자에 펜으로 표시를 해 둬요.",
    "blank": "เครื่องหมาย",
+   "src": "made"
+  }
+ ],
+ "w|เคล็ดลับ": [
+  {
+   "text": "หมอฟันบอกเคล็ดลับให้ธนาแปรงฟันเป็นวงกลมเบาๆ",
+   "en": "The dentist gave Thana a tip: brush gently in small circles.",
+   "ko": "치과 의사는 타나에게 살살 원을 그리며 닦으라는 요령을 알려 줬어요.",
+   "blank": "เคล็ดลับ",
+   "src": "made"
+  },
+  {
+   "text": "ป้าข้างบ้านสอนเคล็ดลับการปลูกกาแฟบนเขาให้สุดา",
+   "en": "The neighbor auntie taught Suda the secrets of growing coffee on the mountain.",
+   "ko": "옆집 아주머니는 수다에게 산에서 커피 키우는 비결을 알려 줬어요.",
+   "blank": "เคล็ดลับ",
    "src": "made"
   }
  ],
@@ -8995,6 +9443,22 @@
    "blank": "จุดจบ"
   }
  ],
+ "w|จุดชมวิว": [
+  {
+   "text": "ตอนเย็นพนักงานแนะนำให้วิชัยขึ้นไปดูพระอาทิตย์ตกที่จุดชมวิวบนเนิน",
+   "en": "In the evening the staff recommended Wichai go up to the viewpoint on the hill to watch the sunset.",
+   "ko": "저녁에 직원은 위차이에게 언덕 위 전망대에 올라가 노을을 보라고 추천했어요.",
+   "blank": "จุดชมวิว",
+   "src": "made"
+  },
+  {
+   "text": "ตอนพักเที่ยง เพื่อนพานภาขึ้นไปจุดชมวิวบนดาดฟ้าของตึก",
+   "en": "At lunch break, a coworker took Napa up to the viewing spot on the building's rooftop.",
+   "ko": "점심시간에 동료가 나파를 건물 옥상 전망 자리에 데려갔어요.",
+   "blank": "จุดชมวิว",
+   "src": "made"
+  }
+ ],
  "w|จุดเริ่มต้น": [
   {
    "text": "นี่คือจุดเริ่มต้นของเรื่อง",
@@ -9335,6 +9799,22 @@
    "en": "I'm sorry to hear that.",
    "ko": "유감이야.",
    "blank": "ใจ"
+  }
+ ],
+ "w|ใจกลางเมือง": [
+  {
+   "text": "ห้องพักใจกลางเมืองแพงกว่าแต่วิชัยไม่ต้องเสียเวลาเดินทาง",
+   "en": "Rooms in the city center are pricier, but Wichai doesn't waste time traveling.",
+   "ko": "도심 객실은 더 비싸지만 위차이는 이동 시간을 아낄 수 있어요.",
+   "blank": "ใจกลางเมือง",
+   "src": "made"
+  },
+  {
+   "text": "บริษัทใหม่ของนภาตั้งอยู่ใจกลางเมือง ใกล้ห้างใหญ่หลายแห่ง",
+   "en": "Napa's new company is in the city center, near several big malls.",
+   "ko": "나파의 새 회사는 큰 쇼핑몰 여러 곳과 가까운 도심에 있어요.",
+   "blank": "ใจกลางเมือง",
+   "src": "made"
   }
  ],
  "w|ใจกว้าง": [
@@ -9718,6 +10198,22 @@
    "en": "There's no class divide in this restaurant's kitchen; everyone helps wash dishes.",
    "ko": "이 가게 주방에는 위아래 구분이 없어서 모두 함께 설거지를 해요.",
    "blank": "ชนชั้น",
+   "src": "made"
+  }
+ ],
+ "w|ชนบท": [
+  {
+   "text": "วิชัยเลือกพักโฮมสเตย์ในชนบทแทนโรงแรมในเมืองสักสองคืน",
+   "en": "Wichai chose to stay at a countryside homestay instead of a city hotel for a couple of nights.",
+   "ko": "위차이는 이틀 정도 도시 호텔 대신 시골 홈스테이에 묵기로 했어요.",
+   "blank": "ชนบท",
+   "src": "made"
+  },
+  {
+   "text": "นภาโตมาในชนบท การทำงานในตึกสูงจึงเป็นเรื่องใหม่มาก",
+   "en": "Napa grew up in the countryside, so working in a tall building is all new to her.",
+   "ko": "나파는 시골에서 자라서 고층 건물에서 일하는 게 무척 새로워요.",
+   "blank": "ชนบท",
    "src": "made"
   }
  ],
@@ -10257,6 +10753,38 @@
    "en": "Any nationality is fine.",
    "ko": "어느 나라든 괜찮아.",
    "blank": "ชาติ"
+  }
+ ],
+ "w|ชานชาลา": [
+  {
+   "text": "พนักงานโรงแรมบอกวิชัยว่ารถไฟไปเชียงใหม่ออกจากชานชาลาที่ห้า",
+   "en": "The hotel staff told Wichai that the train to Chiang Mai leaves from platform five.",
+   "ko": "호텔 직원은 위차이에게 치앙마이행 기차가 오번 승강장에서 출발한다고 알려 줬어요.",
+   "blank": "ชานชาลา",
+   "src": "made"
+  },
+  {
+   "text": "วันแรกของงาน นภารีบเกินไปจนขึ้นรถไฟผิดชานชาลา",
+   "en": "On her first day at work, Napa was in such a rush that she boarded the train from the wrong platform.",
+   "ko": "첫 출근 날 나파는 너무 서두르다 엉뚱한 승강장에서 기차를 탔어요.",
+   "blank": "ชานชาลา",
+   "src": "made"
+  }
+ ],
+ "w|ชานเมือง": [
+  {
+   "text": "รอบนี้วิชัยจองโรงแรมแถวชานเมืองเพราะราคาถูกกว่าครึ่ง",
+   "en": "This time Wichai booked a hotel in the suburbs because it was less than half the price.",
+   "ko": "이번에 위차이는 값이 절반도 안 돼서 교외 호텔을 예약했어요.",
+   "blank": "ชานเมือง",
+   "src": "made"
+  },
+  {
+   "text": "นภาเช่าห้องอยู่ชานเมืองแล้วนั่งรถเมล์เข้ามาทำงาน",
+   "en": "Napa rents a room in the suburbs and takes the bus to work.",
+   "ko": "나파는 교외에 방을 얻어 버스로 출근해요.",
+   "blank": "ชานเมือง",
+   "src": "made"
   }
  ],
  "w|ชาม": [
@@ -10879,6 +11407,22 @@
    "en": "Help connect this cable.",
    "ko": "이 선 좀 연결해 줘.",
    "blank": "เชื่อมต่อ"
+  }
+ ],
+ "w|เชื้อโรค": [
+  {
+   "text": "เครื่องมือทุกชิ้นในคลินิกต้องฆ่าเชื้อโรคก่อนใช้",
+   "en": "Every instrument in the clinic must be sterilized before use.",
+   "ko": "치과의 모든 기구는 쓰기 전에 소독해야 해요.",
+   "blank": "เชื้อโรค",
+   "src": "made"
+  },
+  {
+   "text": "ยายของสุดาต้มน้ำทุกครั้งก่อนดื่มเพราะกลัวเชื้อโรค",
+   "en": "Suda's grandmother always boils water before drinking because she's afraid of germs.",
+   "ko": "수다의 할머니는 세균이 무서워서 마시기 전에 늘 물을 끓여요.",
+   "blank": "เชื้อโรค",
+   "src": "made"
   }
  ],
  "w|แชท": [
@@ -13059,6 +13603,22 @@
    "blank": "ตลาด"
   }
  ],
+ "w|ตลาดกลางคืน": [
+  {
+   "text": "หลังมื้อเย็น วิชัยเดินเล่นที่ตลาดกลางคืนข้างโรงแรม",
+   "en": "After dinner, Wichai strolled through the night market next to the hotel.",
+   "ko": "저녁 식사 후 위차이는 호텔 옆 야시장을 거닐었어요.",
+   "blank": "ตลาดกลางคืน",
+   "src": "made"
+  },
+  {
+   "text": "หลังเลิกงานวันแรก นภาแวะซื้อข้าวที่ตลาดกลางคืนใกล้หอพัก",
+   "en": "After her first day, Napa stopped to buy dinner at the night market near her dorm.",
+   "ko": "첫 근무를 마치고 나파는 기숙사 근처 야시장에 들러 저녁을 샀어요.",
+   "blank": "ตลาดกลางคืน",
+   "src": "made"
+  }
+ ],
  "w|ตลาดนัด": [
   {
    "text": "วันหยุดไปเดินตลาดนัดกับเพื่อน",
@@ -13071,6 +13631,22 @@
    "en": "The flea market has good secondhand deals.",
    "ko": "벼룩시장에 괜찮은 중고가 있어.",
    "blank": "ตลาดนัด"
+  }
+ ],
+ "w|ตลาดน้ำ": [
+  {
+   "text": "รถตู้ของโรงแรมพาแขกไปเที่ยวตลาดน้ำตั้งแต่เช้าตรู่",
+   "en": "The hotel van takes guests to the floating market early in the morning.",
+   "ko": "호텔 승합차가 이른 아침부터 손님들을 수상 시장에 데려가요.",
+   "blank": "ตลาดน้ำ",
+   "src": "made"
+  },
+  {
+   "text": "ทีมใหม่ของนภาวางแผนไปเที่ยวตลาดน้ำด้วยกันเดือนหน้า",
+   "en": "Napa's new team is planning a trip to a floating market together next month.",
+   "ko": "나파의 새 팀은 다음 달에 함께 수상 시장에 놀러 갈 계획이에요.",
+   "blank": "ตลาดน้ำ",
+   "src": "made"
   }
  ],
  "w|ตลาดหุ้น": [
@@ -13833,6 +14409,22 @@
    "blank": "ต่าง"
   }
  ],
+ "w|ต่างจังหวัด": [
+  {
+   "text": "วิชัยไปทำงานต่างจังหวัดบ่อยจนจำชื่อพนักงานโรงแรมได้หลายคน",
+   "en": "Wichai works out of town so often that he remembers the names of many hotel staff.",
+   "ko": "위차이는 지방 출장이 잦아서 호텔 직원 이름을 여럿 외워요.",
+   "blank": "ต่างจังหวัด",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าบอกนภาว่าเดือนหน้าต้องไปดูงานต่างจังหวัด",
+   "en": "The boss told Napa she'll have to go on a work trip out of town next month.",
+   "ko": "팀장은 나파에게 다음 달에 지방 출장을 가야 한다고 했어요.",
+   "blank": "ต่างจังหวัด",
+   "src": "made"
+  }
+ ],
  "w|ต่างชาติ": [
   {
    "text": "บริษัทนี้มีลูกค้าต่างชาติ",
@@ -14281,6 +14873,22 @@
    "en": "This doll's fur is very soft.",
    "ko": "이 인형 털이 정말 부드러워.",
    "blank": "ตุ๊กตา"
+  }
+ ],
+ "w|ตุ๊กตุ๊ก": [
+  {
+   "text": "วิชัยต่อราคาตุ๊กตุ๊กหน้าโรงแรมอยู่นานกว่าจะได้ราคาที่พอใจ",
+   "en": "Wichai haggled with the tuk-tuk in front of the hotel for a long time before getting a fair price.",
+   "ko": "위차이는 호텔 앞 툭툭과 한참 흥정한 끝에 마음에 드는 값을 받았어요.",
+   "blank": "ตุ๊กตุ๊ก",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าเล่าให้นภาฟังว่าเคยนั่งตุ๊กตุ๊กไปพบลูกค้าตอนรถติด",
+   "en": "The boss told Napa that he once took a tuk-tuk to meet a client during a traffic jam.",
+   "ko": "팀장은 나파에게 차가 막힐 때 툭툭을 타고 고객을 만나러 간 적이 있다고 했어요.",
+   "blank": "ตุ๊กตุ๊ก",
+   "src": "made"
   }
  ],
  "w|ตุลาคม": [
@@ -14849,6 +15457,22 @@
    "en": "Watch for cars when crossing the street.",
    "ko": "길 건널 때 차 조심해.",
    "blank": "ถนน"
+  }
+ ],
+ "w|ถนนคนเดิน": [
+  {
+   "text": "ทุกวันอาทิตย์ถนนหน้าโรงแรมกลายเป็นถนนคนเดิน",
+   "en": "Every Sunday the street in front of the hotel becomes a walking street.",
+   "ko": "매주 일요일 호텔 앞길은 보행자 거리로 바뀌어요.",
+   "blank": "ถนนคนเดิน",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานชวนนภาไปเดินถนนคนเดินเย็นวันเสาร์",
+   "en": "A coworker invited Napa to walk the walking street on Saturday evening.",
+   "ko": "동료가 나파에게 토요일 저녁 보행자 거리를 걷자고 했어요.",
+   "blank": "ถนนคนเดิน",
+   "src": "made"
   }
  ],
  "w|ถนนใหญ่": [
@@ -16079,6 +16703,22 @@
    "blank": "ทางการ"
   }
  ],
+ "w|ทางแก้": [
+  {
+   "text": "หมอฟันเสนอทางแก้ให้ธนาผ่อนค่ารักษาเป็นรายเดือน",
+   "en": "The dentist offered Thana a solution: paying for treatment in monthly installments.",
+   "ko": "치과 의사는 타나에게 치료비를 매달 나눠 내는 해결책을 제안했어요.",
+   "blank": "ทางแก้",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านช่วยกันคิดทางแก้เรื่องน้ำไม่พอใช้ในหน้าแล้ง",
+   "en": "Villagers worked together to find a solution to the water shortage in the dry season.",
+   "ko": "마을 사람들은 건기 물 부족 해결책을 함께 고민했어요.",
+   "blank": "ทางแก้",
+   "src": "made"
+  }
+ ],
  "w|ทางเข้า": [
   {
    "text": "ทางเข้าหลักอยู่ด้านหน้า",
@@ -16541,6 +17181,22 @@
    "src": "made"
   }
  ],
+ "w|ทิวทัศน์": [
+  {
+   "text": "จากระเบียงห้อง วิชัยเห็นทิวทัศน์ของภูเขาสลับกันไกลสุดตา",
+   "en": "From his balcony, Wichai could see mountain scenery stretching as far as the eye could see.",
+   "ko": "위차이는 객실 발코니에서 끝없이 이어진 산 풍경을 볼 수 있었어요.",
+   "blank": "ทิวทัศน์",
+   "src": "made"
+  },
+  {
+   "text": "ห้องประชุมชั้นบนสุดเห็นทิวทัศน์ของเมืองทั้งเมือง",
+   "en": "The top-floor meeting room overlooks the whole city.",
+   "ko": "꼭대기 층 회의실에서는 도시 전체 풍경이 보여요.",
+   "blank": "ทิวทัศน์",
+   "src": "made"
+  }
+ ],
  "w|ทิศ": [
   {
    "text": "ถามทิศทางไปสถานีหน่อย",
@@ -16742,6 +17398,22 @@
    "en": "A reporter asked Suda about the origin of the nickname her teammates gave her.",
    "ko": "기자가 수다에게 팀 동료들이 붙여 준 별명의 유래를 물었어요.",
    "blank": "ที่มา",
+   "src": "made"
+  }
+ ],
+ "w|ที่ระลึก": [
+  {
+   "text": "ร้านขายของที่ระลึกในล็อบบี้มีพวงกุญแจรูปช้างน่ารัก",
+   "en": "The souvenir shop in the lobby has cute elephant keychains.",
+   "ko": "로비의 기념품 가게에는 귀여운 코끼리 열쇠고리가 있어요.",
+   "blank": "ที่ระลึก",
+   "src": "made"
+  },
+  {
+   "text": "ทีมใหม่ให้แก้วกาแฟสลักชื่อนภาเป็นที่ระลึกวันแรก",
+   "en": "The new team gave Napa a mug engraved with her name to remember her first day.",
+   "ko": "새 팀은 나파의 첫날 기념으로 이름을 새긴 머그잔을 줬어요.",
+   "blank": "ที่ระลึก",
    "src": "made"
   }
  ],
@@ -17739,6 +18411,22 @@
    "en": "When are you going to sleep?",
    "ko": "언제 잘 거야?",
    "blank": "นอน"
+  }
+ ],
+ "w|นอนไม่หลับ": [
+  {
+   "text": "คืนก่อนนัดถอนฟัน ธนานอนไม่หลับทั้งคืน",
+   "en": "The night before his tooth extraction, Thana couldn't sleep at all.",
+   "ko": "발치 예약 전날 밤 타나는 밤새 잠을 못 잤어요.",
+   "blank": "นอนไม่หลับ",
+   "src": "made"
+  },
+  {
+   "text": "คืนแรกในหมู่บ้าน สุดานอนไม่หลับเพราะเสียงจิ้งหรีดดังมาก",
+   "en": "On her first night in the village, Suda couldn't sleep because the crickets were so loud.",
+   "ko": "마을에서의 첫날 밤 수다는 귀뚜라미 소리가 너무 커서 잠을 못 잤어요.",
+   "blank": "นอนไม่หลับ",
+   "src": "made"
   }
  ],
  "w|นอนหลับ": [
@@ -18806,6 +19494,22 @@
    "en": "The customer complained that fuel costs are high these days, so she has to save on phone repairs.",
    "ko": "손님은 요즘 기름값이 비싸서 휴대폰 수리비를 아껴야 한다고 투덜댔어요.",
    "blank": "น้ำมันรถ",
+   "src": "made"
+  }
+ ],
+ "w|น้ำมูก": [
+  {
+   "text": "ธนาเป็นหวัดมีน้ำมูกไหลตลอด หมอเลยขอเลื่อนนัดออกไป",
+   "en": "Thana had a cold with a constantly runny nose, so the dentist postponed the appointment.",
+   "ko": "타나가 감기에 걸려 콧물이 계속 나서 의사가 예약을 미뤘어요.",
+   "blank": "น้ำมูก",
+   "src": "made"
+  },
+  {
+   "text": "ตอนเช้าบนดอยหนาวจนเด็กๆ มีน้ำมูกไหลกันทุกคน",
+   "en": "Mornings on the mountain are so cold that all the kids have runny noses.",
+   "ko": "산 위 아침은 너무 추워서 아이들 모두 콧물을 흘려요.",
+   "blank": "น้ำมูก",
    "src": "made"
   }
  ],
@@ -20317,6 +21021,22 @@
    "blank": "เบื่อหน่าย"
   }
  ],
+ "w|แบคทีเรีย": [
+  {
+   "text": "หมอฟันอธิบายว่าแบคทีเรียในปากทำให้เหงือกอักเสบ",
+   "en": "The dentist explained that bacteria in the mouth cause gum inflammation.",
+   "ko": "치과 의사는 입안 세균이 잇몸 염증을 일으킨다고 설명했어요.",
+   "blank": "แบคทีเรีย",
+   "src": "made"
+  },
+  {
+   "text": "ครูอนามัยสอนเด็กว่าแบคทีเรียบางชนิดช่วยทำให้ผักดองเปรี้ยว",
+   "en": "The health teacher taught the kids that some bacteria help make pickled vegetables sour.",
+   "ko": "보건 교사는 아이들에게 어떤 세균은 채소 절임을 시게 만든다고 가르쳤어요.",
+   "blank": "แบคทีเรีย",
+   "src": "made"
+  }
+ ],
  "w|แบ่ง": [
   {
    "text": "แบ่งเค้กให้ทุกคน",
@@ -20589,6 +21309,22 @@
    "en": "Submit the application before the closing date.",
    "ko": "마감 전에 지원서를 내.",
    "blank": "ใบสมัคร"
+  }
+ ],
+ "w|ใบสั่งยา": [
+  {
+   "text": "หมอฟันเขียนใบสั่งยาให้ธนาไปซื้อยาที่คลินิกข้างล่าง",
+   "en": "The dentist wrote Thana a prescription to buy medicine at the pharmacy downstairs.",
+   "ko": "치과 의사는 타나에게 아래층에서 약을 살 처방전을 써 줬어요.",
+   "blank": "ใบสั่งยา",
+   "src": "made"
+  },
+  {
+   "text": "หมอที่มาตรวจในหมู่บ้านเดือนละครั้งเขียนใบสั่งยาด้วยลายมือ",
+   "en": "The doctor who visits the village once a month writes prescriptions by hand.",
+   "ko": "한 달에 한 번 마을에 오는 의사는 처방전을 손으로 써요.",
+   "blank": "ใบสั่งยา",
+   "src": "made"
   }
  ],
  "w|ใบเสร็จ": [
@@ -21255,6 +21991,22 @@
    "src": "made"
   }
  ],
+ "w|ปริศนา": [
+  {
+   "text": "อาการเสียวฟันของธนาเป็นปริศนาจนหมอเอ็กซเรย์ดู",
+   "en": "Thana's tooth sensitivity was a mystery until the dentist took an X-ray.",
+   "ko": "타나의 이 시림은 의사가 엑스레이를 찍기 전까지 수수께끼였어요.",
+   "blank": "ปริศนา",
+   "src": "made"
+  },
+  {
+   "text": "ยายเล่นทายปริศนากับเด็กๆ ตอนนั่งผิงไฟ",
+   "en": "Grandma plays riddles with the kids while sitting by the fire.",
+   "ko": "할머니는 불을 쬐며 아이들과 수수께끼 놀이를 해요.",
+   "blank": "ปริศนา",
+   "src": "made"
+  }
+ ],
  "w|ปรึกษา": [
   {
    "text": "ฉันอยากปรึกษาเรื่องงานกับพี่",
@@ -21501,6 +22253,22 @@
    "en": "I saw a whale leap above the water.",
    "ko": "고래가 물 위로 뛰어오르는 걸 봤어.",
    "blank": "ปลาวาฬ"
+  }
+ ],
+ "w|ปลาสเตอร์": [
+  {
+   "text": "เด็กที่ร้องไห้ในคลินิกได้ปลาสเตอร์ลายการ์ตูนเป็นรางวัล",
+   "en": "The child crying in the clinic got a cartoon bandage as a reward.",
+   "ko": "치과에서 울던 아이는 상으로 만화 그림 반창고를 받았어요.",
+   "blank": "ปลาสเตอร์",
+   "src": "made"
+  },
+  {
+   "text": "สุดาติดปลาสเตอร์ให้เด็กที่หกล้มตอนวิ่งเล่นในลานบ้าน",
+   "en": "Suda put a bandage on a child who fell while running in the yard.",
+   "ko": "수다는 마당에서 뛰다 넘어진 아이에게 반창고를 붙여 줬어요.",
+   "blank": "ปลาสเตอร์",
+   "src": "made"
   }
  ],
  "w|ปลาหมึก": [
@@ -22585,6 +23353,22 @@
    "blank": "โปรโมชั่น"
   }
  ],
+ "w|โปสการ์ด": [
+  {
+   "text": "วิชัยเขียนโปสการ์ดถึงแม่แล้วฝากพนักงานโรงแรมส่งให้",
+   "en": "Wichai wrote a postcard to his mother and asked the hotel staff to mail it.",
+   "ko": "위차이는 어머니께 엽서를 써서 호텔 직원에게 부쳐 달라고 맡겼어요.",
+   "blank": "โปสการ์ด",
+   "src": "made"
+  },
+  {
+   "text": "โต๊ะข้างๆ นภามีโปสการ์ดจากหลายประเทศติดเต็มผนัง",
+   "en": "The desk next to Napa has postcards from many countries all over the wall.",
+   "ko": "나파 옆자리 벽에는 여러 나라에서 온 엽서가 잔뜩 붙어 있어요.",
+   "blank": "โปสการ์ด",
+   "src": "made"
+  }
+ ],
  "w|ไป": [
   {
    "text": "ไปไหนมา",
@@ -23115,6 +23899,22 @@
    "blank": "ผึ้ง"
   }
  ],
+ "w|ผื่น": [
+  {
+   "text": "หลังใช้ยาสีฟันยี่ห้อใหม่ ธนามีผื่นขึ้นรอบปาก",
+   "en": "After using a new toothpaste, Thana got a rash around his mouth.",
+   "ko": "새 치약을 쓴 뒤 타나는 입 주위에 발진이 났어요.",
+   "blank": "ผื่น",
+   "src": "made"
+  },
+  {
+   "text": "สุดาเดินลุยหญ้าในไร่จนมีผื่นแดงขึ้นที่ขา",
+   "en": "Suda walked through the grass in the field and got a red rash on her legs.",
+   "ko": "수다는 밭의 풀숲을 걷다가 다리에 빨간 발진이 났어요.",
+   "blank": "ผื่น",
+   "src": "made"
+  }
+ ],
  "w|ผู้กำกับ": [
   {
    "text": "กิตติตื่นเต้นที่ได้เจอเพื่อนเก่าซึ่งตอนนี้เป็นผู้กำกับละครโทรทัศน์",
@@ -23593,6 +24393,22 @@
    "en": "Don't pick at the wound.",
    "ko": "상처 건드리지 마.",
    "blank": "แผล"
+  }
+ ],
+ "w|แผลเป็น": [
+  {
+   "text": "ธนามีแผลเป็นเล็กๆ ที่ริมฝีปากจากตอนล้มเมื่อเด็ก",
+   "en": "Thana has a small scar on his lip from a fall as a child.",
+   "ko": "타나는 어릴 때 넘어져서 입술에 작은 흉터가 있어요.",
+   "blank": "แผลเป็น",
+   "src": "made"
+  },
+  {
+   "text": "ลุงผู้ใหญ่บ้านมีแผลเป็นยาวที่แขนจากตอนตัดไม้",
+   "en": "The old village headman has a long scar on his arm from cutting wood.",
+   "ko": "마을 이장 아저씨는 나무를 베다 생긴 긴 흉터가 팔에 있어요.",
+   "blank": "แผลเป็น",
+   "src": "made"
   }
  ],
  "w|ไผ่": [
@@ -24093,6 +24909,22 @@
    "en": "This Buddha statue is very beautiful.",
    "ko": "이 불상은 정말 아름다워.",
    "blank": "พระพุทธรูป"
+  }
+ ],
+ "w|พระราชวัง": [
+  {
+   "text": "วิชัยถามพนักงานว่าต้องแต่งตัวยังไงถึงจะเข้าชมพระราชวังได้",
+   "en": "Wichai asked the staff how he has to dress to visit the palace.",
+   "ko": "위차이는 직원에게 궁전을 관람하려면 어떻게 입어야 하는지 물었어요.",
+   "blank": "พระราชวัง",
+   "src": "made"
+  },
+  {
+   "text": "ทางไปออฟฟิศของนภาผ่านกำแพงพระราชวังทุกเช้า",
+   "en": "Napa's route to the office passes the palace walls every morning.",
+   "ko": "나파는 매일 아침 출근길에 궁전 담장을 지나요.",
+   "blank": "พระราชวัง",
+   "src": "made"
   }
  ],
  "w|พระราชา": [
@@ -25281,6 +26113,22 @@
    "blank": "ฟัน"
   }
  ],
+ "w|ฟันผุ": [
+  {
+   "text": "หมอฟันบอกธนาว่ามีฟันผุสองซี่ที่ต้องอุด",
+   "en": "The dentist told Thana he has two cavities that need filling.",
+   "ko": "치과 의사는 타나에게 때워야 할 충치가 두 개 있다고 했어요.",
+   "blank": "ฟันผุ",
+   "src": "made"
+  },
+  {
+   "text": "เด็กในหมู่บ้านบนดอยหลายคนมีฟันผุเพราะไม่มีหมอฟันมาตรวจ",
+   "en": "Many children in the mountain village have cavities because no dentist comes to check them.",
+   "ko": "산골 마을 아이들 상당수는 치과 의사가 오지 않아 충치가 있어요.",
+   "blank": "ฟันผุ",
+   "src": "made"
+  }
+ ],
  "w|ฟ้า": [
   {
    "text": "ฟ้าครึ้มจัง",
@@ -25851,6 +26699,22 @@
    "blank": "ภาษาเกาหลี"
   }
  ],
+ "w|ภาษาเขียน": [
+  {
+   "text": "จดหมายต้อนรับในห้องใช้ภาษาเขียนที่สุภาพมาก",
+   "en": "The welcome letter in the room uses very polite written language.",
+   "ko": "객실 환영 편지는 아주 정중한 문어체로 쓰여 있어요.",
+   "blank": "ภาษาเขียน",
+   "src": "made"
+  },
+  {
+   "text": "รายงานของบริษัทต้องเขียนด้วยภาษาเขียนที่เป็นทางการ",
+   "en": "The company's reports must be written in formal written language.",
+   "ko": "회사 보고서는 격식 있는 문어체로 써야 해요.",
+   "blank": "ภาษาเขียน",
+   "src": "made"
+  }
+ ],
  "w|ภาษาจีน": [
   {
    "text": "ภาษาจีนมีตัวอักษรจำนวนมาก",
@@ -25905,6 +26769,22 @@
    "en": "The street signs are clearly written in Thai.",
    "ko": "도로 표지판이 태국어로 분명하게 쓰여 있어.",
    "blank": "ภาษาไทย"
+  }
+ ],
+ "w|ภาษาพูด": [
+  {
+   "text": "วิชัยพูดไทยภาษาพูดคล่อง แต่อ่านป้ายบางอันไม่ออก",
+   "en": "Wichai speaks colloquial Thai fluently but can't read some signs.",
+   "ko": "위차이는 구어체 태국어는 유창하지만 어떤 표지판은 못 읽어요.",
+   "blank": "ภาษาพูด",
+   "src": "made"
+  },
+  {
+   "text": "หัวหน้าเตือนนภาว่าอย่าใช้ภาษาพูดในอีเมลถึงลูกค้า",
+   "en": "The boss reminded Napa not to use casual language in emails to clients.",
+   "ko": "팀장은 나파에게 고객 이메일에 구어체를 쓰지 말라고 했어요.",
+   "blank": "ภาษาพูด",
+   "src": "made"
   }
  ],
  "w|ภาษาอังกฤษ": [
@@ -25977,6 +26857,22 @@
    "en": "I'm proud of this work.",
    "ko": "이 작품이 자랑스러워.",
    "blank": "ภูมิใจ"
+  }
+ ],
+ "w|ภูมิประเทศ": [
+  {
+   "text": "ไกด์ของโรงแรมอธิบายภูมิประเทศของเกาะก่อนพาออกทัวร์",
+   "en": "The hotel guide explained the island's geography before taking them on tour.",
+   "ko": "호텔 가이드는 투어를 떠나기 전에 섬의 지형을 설명해 줬어요.",
+   "blank": "ภูมิประเทศ",
+   "src": "made"
+  },
+  {
+   "text": "งานแรกของนภาคือทำแผนที่ภูมิประเทศให้ลูกค้าบริษัทก่อสร้าง",
+   "en": "Napa's first task was making a topographic map for a construction company client.",
+   "ko": "나파의 첫 업무는 건설 회사 고객을 위한 지형도를 만드는 일이었어요.",
+   "blank": "ภูมิประเทศ",
+   "src": "made"
   }
  ],
  "w|ภูมิแพ้": [
@@ -26887,6 +27783,22 @@
    "blank": "มือสอง"
   }
  ],
+ "w|มุก": [
+  {
+   "text": "ธนาอยากหัวเราะกับมุกของหมอแต่อ้าปากค้างอยู่",
+   "en": "Thana wanted to laugh at the dentist's joke, but his mouth was stuck open.",
+   "ko": "타나는 의사의 농담에 웃고 싶었지만 입을 벌리고 있어야 했어요.",
+   "blank": "มุก",
+   "src": "made"
+  },
+  {
+   "text": "สุดายังฟังภาษาถิ่นไม่คล่อง เลยไม่เข้าใจมุกของลุงข้างบ้าน",
+   "en": "Suda isn't fluent in the local dialect yet, so she didn't get the neighbor's joke.",
+   "ko": "수다는 아직 사투리를 잘 못 알아들어서 옆집 아저씨 농담을 이해 못 했어요.",
+   "blank": "มุก",
+   "src": "made"
+  }
+ ],
  "w|มุ้ง": [
   {
    "text": "นอนในมุ้งจะได้ไม่โดนยุงกัด",
@@ -27075,6 +27987,22 @@
    "en": "When are you moving into the city?",
    "ko": "언제 도시로 이사해?",
    "blank": "เมือง"
+  }
+ ],
+ "w|เมืองหลวง": [
+  {
+   "text": "โรงแรมเก่าแห่งนี้เป็นโรงแรมแรกๆ ของเมืองหลวง",
+   "en": "This old hotel is one of the first hotels in the capital.",
+   "ko": "이 오래된 호텔은 수도에서 손꼽히게 오래된 호텔이에요.",
+   "blank": "เมืองหลวง",
+   "src": "made"
+  },
+  {
+   "text": "นภาย้ายมาเมืองหลวงได้แค่สัปดาห์เดียวก็เริ่มงานเลย",
+   "en": "Napa started work just one week after moving to the capital.",
+   "ko": "나파는 수도로 이사 온 지 일주일 만에 일을 시작했어요.",
+   "blank": "เมืองหลวง",
+   "src": "made"
   }
  ],
  "w|เมื่อไร": [
@@ -27799,6 +28727,22 @@
    "blank": "ยาก"
   }
  ],
+ "w|ยาแก้ปวด": [
+  {
+   "text": "หลังถอนฟัน ธนากินยาแก้ปวดก่อนนอน",
+   "en": "After the extraction, Thana took a painkiller before bed.",
+   "ko": "이를 뽑은 뒤 타나는 자기 전에 진통제를 먹었어요.",
+   "blank": "ยาแก้ปวด",
+   "src": "made"
+  },
+  {
+   "text": "สุดาพกยาแก้ปวดติดกระเป๋าไว้เสมอเวลาเดินป่า",
+   "en": "Suda always carries painkillers in her bag when trekking.",
+   "ko": "수다는 숲길을 걸을 때 늘 진통제를 가방에 넣고 다녀요.",
+   "blank": "ยาแก้ปวด",
+   "src": "made"
+  }
+ ],
  "w|ย่าง": [
   {
    "text": "ย่างไก่ให้หอมกรุ่น",
@@ -27842,6 +28786,38 @@
    "en": "Malee bought an eraser and a pencil for her child at the stationery stall.",
    "ko": "말리는 문구 좌판에서 아이에게 줄 지우개와 연필을 샀어요.",
    "blank": "ยางลบ",
+   "src": "made"
+  }
+ ],
+ "w|ย่าน": [
+  {
+   "text": "โรงแรมตั้งอยู่ในย่านเมืองเก่าที่มีร้านอาหารเยอะ",
+   "en": "The hotel is in the old town area with lots of restaurants.",
+   "ko": "호텔은 식당이 많은 구시가지 동네에 있어요.",
+   "blank": "ย่าน",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานชวนนภาไปกินข้าวเที่ยงย่านเยาวราช",
+   "en": "A coworker invited Napa to lunch in the Yaowarat area.",
+   "ko": "동료가 나파에게 야와랏 동네로 점심 먹으러 가자고 했어요.",
+   "blank": "ย่าน",
+   "src": "made"
+  }
+ ],
+ "w|ยาปฏิชีวนะ": [
+  {
+   "text": "หมอฟันสั่งยาปฏิชีวนะให้กินจนหมดแผง",
+   "en": "The dentist prescribed antibiotics to take until the whole pack is finished.",
+   "ko": "치과 의사는 한 판을 다 먹을 때까지 항생제를 처방했어요.",
+   "blank": "ยาปฏิชีวนะ",
+   "src": "made"
+  },
+  {
+   "text": "หมอเตือนชาวบ้านว่าอย่ากินยาปฏิชีวนะเองโดยไม่จำเป็น",
+   "en": "The doctor warned villagers not to take antibiotics on their own when not needed.",
+   "ko": "의사는 마을 사람들에게 필요 없이 항생제를 마음대로 먹지 말라고 경고했어요.",
+   "blank": "ยาปฏิชีวนะ",
    "src": "made"
   }
  ],
@@ -28549,6 +29525,38 @@
    "en": "This train is full.",
    "ko": "이 기차는 만석이야.",
    "blank": "รถไฟ"
+  }
+ ],
+ "w|รถไฟใต้ดิน": [
+  {
+   "text": "วิชัยนั่งรถไฟใต้ดินจากสนามบินมาถึงโรงแรมได้สบาย",
+   "en": "Wichai took the subway from the airport to the hotel easily.",
+   "ko": "위차이는 공항에서 지하철을 타고 편하게 호텔까지 왔어요.",
+   "blank": "รถไฟใต้ดิน",
+   "src": "made"
+  },
+  {
+   "text": "ออฟฟิศใหม่ของนภาอยู่ตรงทางออกสถานีรถไฟใต้ดินพอดี",
+   "en": "Napa's new office is right at the subway station exit.",
+   "ko": "나파의 새 사무실은 지하철역 출구 바로 앞에 있어요.",
+   "blank": "รถไฟใต้ดิน",
+   "src": "made"
+  }
+ ],
+ "w|รถไฟฟ้า": [
+  {
+   "text": "โรงแรมของวิชัยอยู่ใกล้สถานีรถไฟฟ้า เดินแค่สามนาทีก็ถึง",
+   "en": "Wichai's hotel is near the skytrain station, just a three-minute walk.",
+   "ko": "위차이의 호텔은 지상철역 근처라서 걸어서 삼 분이면 도착해요.",
+   "blank": "รถไฟฟ้า",
+   "src": "made"
+  },
+  {
+   "text": "นภาออกจากบ้านตั้งแต่หกโมงเพราะกลัวรถไฟฟ้าคนแน่น",
+   "en": "Napa left home at six because she was afraid the skytrain would be packed.",
+   "ko": "나파는 지상철이 붐빌까 봐 여섯 시에 집을 나섰어요.",
+   "blank": "รถไฟฟ้า",
+   "src": "made"
   }
  ],
  "w|รถเมล์": [
@@ -29469,6 +30477,22 @@
    "blank": "ร้านกาแฟ"
   }
  ],
+ "w|ร้านขายยา": [
+  {
+   "text": "ธนาแวะร้านขายยาซื้อไหมขัดฟันระหว่างทางกลับบ้าน",
+   "en": "Thana stopped at the pharmacy on the way home to buy dental floss.",
+   "ko": "타나는 집에 가는 길에 약국에 들러 치실을 샀어요.",
+   "blank": "ร้านขายยา",
+   "src": "made"
+  },
+  {
+   "text": "ร้านขายยาที่ใกล้ที่สุดอยู่ในตัวอำเภอ ห่างจากหมู่บ้านเกือบชั่วโมง",
+   "en": "The nearest pharmacy is in town, almost an hour from the village.",
+   "ko": "가장 가까운 약국은 읍내에 있는데 마을에서 거의 한 시간 거리예요.",
+   "blank": "ร้านขายยา",
+   "src": "made"
+  }
+ ],
  "w|ร้านค้า": [
   {
    "text": "ร้านค้าปิดวันจันทร์ทุกสัปดาห์",
@@ -30065,6 +31089,22 @@
    "blank": "เรือ"
   }
  ],
+ "w|เรือข้ามฟาก": [
+  {
+   "text": "จากท่าน้ำหน้าโรงแรม วิชัยนั่งเรือข้ามฟากไปเที่ยวอีกฝั่ง",
+   "en": "From the pier in front of the hotel, Wichai took the ferry across to the other side.",
+   "ko": "위차이는 호텔 앞 선착장에서 나룻배를 타고 건너편으로 놀러 갔어요.",
+   "blank": "เรือข้ามฟาก",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนร่วมงานคนใหม่เล่าว่านั่งเรือข้ามฟากมาทำงานทุกวัน",
+   "en": "A new coworker said she takes the ferry to work every day.",
+   "ko": "새 동료는 매일 나룻배를 타고 출근한다고 했어요.",
+   "blank": "เรือข้ามฟาก",
+   "src": "made"
+  }
+ ],
  "w|เรื่อง": [
   {
    "text": "มีเรื่องอะไร",
@@ -30077,6 +31117,22 @@
    "en": "This matter is settled.",
    "ko": "이 일은 끝났어.",
    "blank": "เรื่อง"
+  }
+ ],
+ "w|เรื่องตลก": [
+  {
+   "text": "หมอฟันเล่าเรื่องตลกให้ธนาฟังเพื่อให้หายเกร็ง",
+   "en": "The dentist told Thana a funny story to help him relax.",
+   "ko": "치과 의사는 타나가 긴장을 풀도록 웃긴 이야기를 해 줬어요.",
+   "blank": "เรื่องตลก",
+   "src": "made"
+  },
+  {
+   "text": "รอบกองไฟ ผู้เฒ่าเล่าเรื่องตลกจนเด็กๆ หัวเราะไม่หยุด",
+   "en": "Around the campfire, the elders told funny stories that kept the kids laughing.",
+   "ko": "모닥불 주위에서 어르신들이 웃긴 이야기를 해서 아이들이 계속 웃었어요.",
+   "blank": "เรื่องตลก",
+   "src": "made"
   }
  ],
  "w|เรื่องราว": [
@@ -30149,6 +31205,38 @@
    "en": "This disease spreads easily.",
    "ko": "이 병은 전염이 쉬워.",
    "blank": "โรค"
+  }
+ ],
+ "w|โรคซึมเศร้า": [
+  {
+   "text": "บทความในห้องรอพูดถึงโรคซึมเศร้าในคนทำงาน",
+   "en": "An article in the waiting room talks about depression among working people.",
+   "ko": "대기실의 기사는 직장인의 우울증을 다뤄요.",
+   "blank": "โรคซึมเศร้า",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนของสุดาในกรุงเทพฯ กำลังรักษาโรคซึมเศร้ากับจิตแพทย์",
+   "en": "Suda's friend in Bangkok is being treated for depression by a psychiatrist.",
+   "ko": "방콕에 있는 수다의 친구는 정신과 의사에게 우울증 치료를 받고 있어요.",
+   "blank": "โรคซึมเศร้า",
+   "src": "made"
+  }
+ ],
+ "w|โรคระบาด": [
+  {
+   "text": "ช่วงโรคระบาด คลินิกทำฟันต้องปิดไปหลายเดือน",
+   "en": "During the pandemic, the dental clinic had to close for several months.",
+   "ko": "전염병 유행 때 치과는 몇 달 동안 문을 닫아야 했어요.",
+   "blank": "โรคระบาด",
+   "src": "made"
+  },
+  {
+   "text": "ผู้เฒ่าในหมู่บ้านเล่าถึงโรคระบาดที่เคยเกิดเมื่อหลายสิบปีก่อน",
+   "en": "The village elders told of an epidemic that happened decades ago.",
+   "ko": "마을 어르신들은 수십 년 전에 돌았던 전염병 이야기를 했어요.",
+   "blank": "โรคระบาด",
+   "src": "made"
   }
  ],
  "w|โรงงาน": [
@@ -30901,6 +31989,22 @@
    "en": "Sick leave needs a doctor's note.",
    "ko": "병가에는 진단서가 필요해.",
    "blank": "ลาป่วย"
+  }
+ ],
+ "w|ล่าม": [
+  {
+   "text": "โรงแรมจัดล่ามให้แขกที่มาประชุมสัมมนาจากต่างประเทศ",
+   "en": "The hotel provided interpreters for guests attending a seminar from abroad.",
+   "ko": "호텔은 해외에서 세미나에 온 손님들을 위해 통역사를 마련했어요.",
+   "blank": "ล่าม",
+   "src": "made"
+  },
+  {
+   "text": "นภาเคยเป็นล่ามในงานแสดงสินค้ามาก่อนเข้าบริษัทนี้",
+   "en": "Napa worked as an interpreter at trade fairs before joining this company.",
+   "ko": "나파는 이 회사에 들어오기 전에 박람회 통역사였어요.",
+   "blank": "ล่าม",
+   "src": "made"
   }
  ],
  "w|ลายเซ็น": [
@@ -32105,6 +33209,22 @@
    "blank": "วัด"
   }
  ],
+ "w|วัดวาอาราม": [
+  {
+   "text": "แผนที่ในห้องพักบอกทางไปวัดวาอารามเก่าแก่รอบเมือง",
+   "en": "The map in the room shows the way to the old temples around town.",
+   "ko": "객실 지도에는 도시 곳곳의 오래된 사찰로 가는 길이 나와 있어요.",
+   "blank": "วัดวาอาราม",
+   "src": "made"
+  },
+  {
+   "text": "งานของนภาคือเขียนบทความแนะนำวัดวาอารามสำหรับนักท่องเที่ยว",
+   "en": "Napa's job is writing articles introducing temples for tourists.",
+   "ko": "나파의 일은 관광객을 위한 사찰 소개 기사를 쓰는 거예요.",
+   "blank": "วัดวาอาราม",
+   "src": "made"
+  }
+ ],
  "w|วัตถุ": [
   {
    "text": "โบราณวัตถุทุกชิ้นในนี้เป็นทรัพย์สินของแผ่นดิน ห้ามแตะต้อง",
@@ -32563,6 +33683,22 @@
    "blank": "ว้าว"
   }
  ],
+ "w|วิกฤต": [
+  {
+   "text": "คลินิกเล็กๆ หลายแห่งเจอวิกฤตเพราะค่าเช่าขึ้น",
+   "en": "Many small clinics are facing a crisis because rents went up.",
+   "ko": "작은 치과 여러 곳이 임대료가 올라 위기를 맞았어요.",
+   "blank": "วิกฤต",
+   "src": "made"
+  },
+  {
+   "text": "ปีที่ราคากาแฟตก หมู่บ้านเจอวิกฤตจนหลายบ้านต้องลงไปทำงานในเมือง",
+   "en": "In the year coffee prices fell, the village faced a crisis and many families had to go work in the city.",
+   "ko": "커피값이 떨어진 해에 마을은 위기를 맞아 여러 집이 도시로 일하러 내려가야 했어요.",
+   "blank": "วิกฤต",
+   "src": "made"
+  }
+ ],
  "w|วิเคราะห์": [
   {
    "text": "นักข่าววิเคราะห์สถานการณ์การเมือง",
@@ -32665,6 +33801,22 @@
    "blank": "วิดีโอ"
   }
  ],
+ "w|วิตามิน": [
+  {
+   "text": "ธนาถามหมอว่าควรกินวิตามินซีเพื่อให้เหงือกแข็งแรงไหม",
+   "en": "Thana asked the dentist if he should take vitamin C for healthy gums.",
+   "ko": "타나는 의사에게 잇몸 건강을 위해 비타민 C를 먹어야 하는지 물었어요.",
+   "blank": "วิตามิน",
+   "src": "made"
+  },
+  {
+   "text": "เด็กนักเรียนบนดอยได้นมกับวิตามินจากโครงการของรัฐ",
+   "en": "Students on the mountain get milk and vitamins from a government program.",
+   "ko": "산골 학생들은 정부 사업으로 우유와 비타민을 받아요.",
+   "blank": "วิตามิน",
+   "src": "made"
+  }
+ ],
  "w|วิทยาศาสตร์": [
   {
    "text": "วิทยาศาสตร์อธิบายปรากฏการณ์ธรรมชาติ",
@@ -32719,6 +33871,22 @@
    "en": "There are ten seconds left.",
    "ko": "십 초 남았어.",
    "blank": "วินาที"
+  }
+ ],
+ "w|วิว": [
+  {
+   "text": "วิชัยขอเปลี่ยนห้องเพราะอยากได้ห้องที่เห็นวิวทะเล",
+   "en": "Wichai asked to change rooms because he wanted one with a sea view.",
+   "ko": "위차이는 바다가 보이는 방을 원해서 방을 바꿔 달라고 했어요.",
+   "blank": "วิว",
+   "src": "made"
+  },
+  {
+   "text": "โต๊ะทำงานของนภาอยู่ริมหน้าต่างที่มีวิวสวยมาก",
+   "en": "Napa's desk is by a window with a lovely view.",
+   "ko": "나파의 책상은 전망이 아주 좋은 창가에 있어요.",
+   "blank": "วิว",
+   "src": "made"
   }
  ],
  "w|วิศวกร": [
@@ -32936,6 +34104,22 @@
    "en": "The English sign in front of the fruit shop has grammar mistakes, but tourists still understand it.",
    "ko": "과일 가게 앞 영어 간판은 문법이 틀렸지만 관광객들은 그래도 알아봐요.",
    "blank": "ไวยากรณ์",
+   "src": "made"
+  }
+ ],
+ "w|ไวรัส": [
+  {
+   "text": "หมอฟันใส่หน้ากากตลอดเวลาเพื่อกันไวรัส",
+   "en": "The dentist wears a mask the whole time to guard against viruses.",
+   "ko": "치과 의사는 바이러스를 막으려고 계속 마스크를 써요.",
+   "blank": "ไวรัส",
+   "src": "made"
+  },
+  {
+   "text": "เจ้าหน้าที่อนามัยขึ้นมาตรวจว่าไก่ในหมู่บ้านติดไวรัสหรือไม่",
+   "en": "Health officials came up to check whether the village chickens had a virus.",
+   "ko": "보건 직원들이 마을 닭이 바이러스에 걸렸는지 검사하러 올라왔어요.",
+   "blank": "ไวรัส",
    "src": "made"
   }
  ],
@@ -34765,6 +35949,22 @@
    "blank": "สาม"
   }
  ],
+ "w|สามล้อ": [
+  {
+   "text": "คนเฝ้าประตูโรงแรมเรียกสามล้อให้วิชัยไปตลาดเช้า",
+   "en": "The hotel doorman called a pedicab for Wichai to go to the morning market.",
+   "ko": "호텔 도어맨이 위차이를 위해 아침 시장 가는 삼륜차를 불러 줬어요.",
+   "blank": "สามล้อ",
+   "src": "made"
+  },
+  {
+   "text": "ฝนตกหนัก นภาเลยนั่งสามล้อจากปากซอยมาถึงหน้าตึก",
+   "en": "It was raining hard, so Napa took a pedicab from the end of the lane to the building.",
+   "ko": "비가 많이 와서 나파는 골목 입구에서 건물 앞까지 삼륜차를 탔어요.",
+   "blank": "สามล้อ",
+   "src": "made"
+  }
+ ],
  "w|สามเหลี่ยม": [
   {
    "text": "กิตติพับกระดาษเป็นรูปสามเหลี่ยมใส่ชื่อเพื่อนไว้หน้าจาน",
@@ -35141,6 +36341,22 @@
    "blank": "สิบ"
   }
  ],
+ "w|สิว": [
+  {
+   "text": "ลูกสาวของธนาที่นั่งรออยู่ข้างนอกกำลังกังวลเรื่องสิวบนหน้า",
+   "en": "Thana's daughter, waiting outside, is worried about the pimples on her face.",
+   "ko": "밖에서 기다리는 타나의 딸은 얼굴에 난 여드름 때문에 고민이에요.",
+   "blank": "สิว",
+   "src": "made"
+  },
+  {
+   "text": "อากาศบนดอยเย็นและสะอาดจนสิวของสุดาหายไปเอง",
+   "en": "The mountain air is so cool and clean that Suda's acne cleared up on its own.",
+   "ko": "산 공기가 시원하고 깨끗해서 수다의 여드름이 저절로 없어졌어요.",
+   "blank": "สิว",
+   "src": "made"
+  }
+ ],
  "w|สี": [
   {
    "text": "ชอบสีอะไรที่สุด",
@@ -35315,6 +36531,22 @@
    "en": "Take good care of your health.",
    "ko": "건강 잘 챙겨.",
    "blank": "สุขภาพ"
+  }
+ ],
+ "w|สุขภาพจิต": [
+  {
+   "text": "หมอฟันบอกว่าความเครียดส่งผลทั้งต่อฟันและสุขภาพจิต",
+   "en": "The dentist said stress affects both your teeth and your mental health.",
+   "ko": "치과 의사는 스트레스가 치아와 정신 건강 모두에 영향을 준다고 했어요.",
+   "blank": "สุขภาพจิต",
+   "src": "made"
+  },
+  {
+   "text": "สุดาย้ายมาอยู่บนดอยเพราะอยากดูแลสุขภาพจิตของตัวเอง",
+   "en": "Suda moved to the mountain because she wanted to take care of her mental health.",
+   "ko": "수다는 자기 정신 건강을 돌보고 싶어서 산으로 이사 왔어요.",
+   "blank": "สุขภาพจิต",
+   "src": "made"
   }
  ],
  "w|สุดท้าย": [
@@ -35573,6 +36805,22 @@
    "en": "We welcome suggestions from everyone.",
    "ko": "모두의 제안을 환영해.",
    "blank": "เสนอแนะ"
+  }
+ ],
+ "w|เสมหะ": [
+  {
+   "text": "ธนาไอมีเสมหะ หมอฟันเลยให้ไปหาหมอทั่วไปก่อน",
+   "en": "Thana was coughing up phlegm, so the dentist sent him to a general doctor first.",
+   "ko": "타나가 가래 섞인 기침을 해서 치과 의사는 먼저 일반 의사에게 가 보라고 했어요.",
+   "blank": "เสมหะ",
+   "src": "made"
+  },
+  {
+   "text": "ยายของสุดาต้มขิงกินเวลามีเสมหะในคอ",
+   "en": "Suda's grandmother drinks boiled ginger when she has phlegm in her throat.",
+   "ko": "수다의 할머니는 목에 가래가 끼면 생강을 끓여 마셔요.",
+   "blank": "เสมหะ",
+   "src": "made"
   }
  ],
  "w|เสมอ": [
@@ -40365,6 +41613,22 @@
    "blank": "อาหารเย็น"
   }
  ],
+ "w|อาหารเสริม": [
+  {
+   "text": "หมอฟันเตือนว่าอาหารเสริมบางยี่ห้อมีน้ำตาลเยอะ",
+   "en": "The dentist warned that some supplement brands contain a lot of sugar.",
+   "ko": "치과 의사는 어떤 건강 보조제는 설탕이 많다고 경고했어요.",
+   "blank": "อาหารเสริม",
+   "src": "made"
+  },
+  {
+   "text": "ชาวบ้านขายใบชาป่าให้บริษัทที่เอาไปทำอาหารเสริม",
+   "en": "Villagers sell wild tea leaves to a company that makes supplements from them.",
+   "ko": "마을 사람들은 야생 찻잎을 건강 보조제 만드는 회사에 팔아요.",
+   "blank": "อาหารเสริม",
+   "src": "made"
+  }
+ ],
  "w|อำนาจ": [
   {
    "text": "เขาต้องการอำนาจมากเกินไป",
@@ -40712,6 +41976,22 @@
    "en": "The teacher likened piano practice to watering a plant every day.",
    "ko": "선생님은 피아노 연습을 매일 나무에 물 주는 일에 비유했어요.",
    "blank": "อุปมา",
+   "src": "made"
+  }
+ ],
+ "w|อุปสรรค": [
+  {
+   "text": "อุปสรรคใหญ่ของธนาคือความกลัวเข็มฉีดยา",
+   "en": "Thana's biggest obstacle is his fear of needles.",
+   "ko": "타나의 가장 큰 걸림돌은 주삿바늘 공포예요.",
+   "blank": "อุปสรรค",
+   "src": "made"
+  },
+  {
+   "text": "ถนนลื่นในหน้าฝนเป็นอุปสรรคใหญ่ของการขนผักลงไปขาย",
+   "en": "Slippery roads in the rainy season are a big obstacle to taking vegetables down to sell.",
+   "ko": "우기의 미끄러운 길은 채소를 팔러 내려가는 데 큰 장애물이에요.",
+   "blank": "อุปสรรค",
    "src": "made"
   }
  ],
