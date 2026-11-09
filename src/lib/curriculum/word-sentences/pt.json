@@ -13,6 +13,22 @@
    "blank": "a"
   }
  ],
+ "w|a menos que": [
+  {
+   "text": "O Tiago não falta ao treino, a menos que esteja doente.",
+   "en": "Tiago doesn't skip training unless he's sick.",
+   "ko": "티아구는 아프지 않으면 운동을 빠지지 않아요.",
+   "blank": "a menos que",
+   "src": "made"
+  },
+  {
+   "text": "A Inês vai correr os quarenta e dois quilômetros, a menos que chova granizo.",
+   "en": "Inês will run the forty-two kilometers unless it hails.",
+   "ko": "이네스는 우박만 안 오면 사십이 킬로미터를 다 달릴 거예요.",
+   "blank": "a menos que",
+   "src": "made"
+  }
+ ],
  "w|a partir de": [
   {
    "text": "Eu não sei o que fazer a partir de agora.",
@@ -523,6 +539,38 @@
    "src": "tatoeba:10000947/Ricardo14 en:10000949/Ricardo14"
   }
  ],
+ "w|abrangente": [
+  {
+   "text": "O Tiago fez uma avaliação física abrangente antes de começar o plano.",
+   "en": "Tiago did a comprehensive fitness assessment before starting the plan.",
+   "ko": "티아구는 계획을 시작하기 전에 종합 체력 검사를 받았어요.",
+   "blank": "abrangente",
+   "src": "made"
+  },
+  {
+   "text": "A Inês seguiu um plano de treino abrangente, com força, corrida e descanso.",
+   "en": "Inês followed a comprehensive training plan with strength, running and rest.",
+   "ko": "이네스는 근력, 달리기, 휴식을 모두 담은 종합 훈련 계획을 따랐어요.",
+   "blank": "abrangente",
+   "src": "made"
+  }
+ ],
+ "w|abranger": [
+  {
+   "text": "O plano do Tiago passou a abranger também alongamento e descanso.",
+   "en": "Tiago's plan came to cover stretching and rest as well.",
+   "ko": "티아구의 계획에는 스트레칭과 휴식까지 들어가게 됐어요.",
+   "blank": "abranger",
+   "src": "made"
+  },
+  {
+   "text": "O percurso da maratona da Inês vai abranger os principais bairros da cidade.",
+   "en": "The route of Inês's marathon will cover the city's main neighborhoods.",
+   "ko": "이네스가 뛸 마라톤 코스는 도시의 주요 동네를 두루 지나요.",
+   "blank": "abranger",
+   "src": "made"
+  }
+ ],
  "w|abrigar": [
   {
    "text": "O museu vai abrigar a coleção de uma escola de artes que fechou.",
@@ -851,6 +899,22 @@
    "src": "made"
   }
  ],
+ "w|acarretar": [
+  {
+   "text": "O médico avisou o Tiago que treinar sem aquecer pode acarretar lesões.",
+   "en": "The doctor warned Tiago that training without warming up can lead to injuries.",
+   "ko": "의사는 티아구에게 준비 운동 없이 하면 다칠 수 있다고 경고했어요.",
+   "blank": "acarretar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês sabe que largar rápido demais pode acarretar câimbras no final.",
+   "en": "Inês knows that starting too fast can bring on cramps at the end.",
+   "ko": "이네스는 처음에 너무 빨리 달리면 막판에 쥐가 날 수 있다는 걸 알아요.",
+   "blank": "acarretar",
+   "src": "made"
+  }
+ ],
  "w|acaso": [
   {
    "text": "Por um acaso você sabe onde eu pus minhas chaves?",
@@ -942,6 +1006,22 @@
    "en": "At night, Inês likes to light a candle in the living room.",
    "ko": "밤이면 이네스는 거실에 촛불을 켜는 걸 좋아해요.",
    "blank": "acender",
+   "src": "made"
+  }
+ ],
+ "w|acentuar": [
+  {
+   "text": "A luz da academia ajuda a acentuar os músculos nas fotos do Tiago.",
+   "en": "The gym lighting helps accentuate the muscles in Tiago's photos.",
+   "ko": "헬스장 조명 덕분에 티아구 사진 속 근육이 더 도드라져요.",
+   "blank": "acentuar",
+   "src": "made"
+  },
+  {
+   "text": "A subida final serve para acentuar o cansaço de todos, inclusive da Inês.",
+   "en": "The final climb only accentuates everyone's fatigue, Inês's included.",
+   "ko": "마지막 오르막은 이네스를 포함해 모두의 피로를 더 키워요.",
+   "blank": "acentuar",
    "src": "made"
   }
  ],
@@ -1913,6 +1993,22 @@
    "src": "made"
   }
  ],
+ "w|adoecer": [
+  {
+   "text": "O Tiago acredita que treinar com regularidade ajuda a não adoecer no inverno.",
+   "en": "Tiago believes training regularly helps him not get sick in winter.",
+   "ko": "티아구는 꾸준히 운동하면 겨울에 덜 아프다고 믿어요.",
+   "blank": "adoecer",
+   "src": "made"
+  },
+  {
+   "text": "A Inês tem medo de adoecer na semana da prova e anda com álcool em gel.",
+   "en": "Inês is afraid of getting sick the week of the race and carries hand sanitizer.",
+   "ko": "이네스는 대회 주간에 아플까 봐 손 소독제를 들고 다녀요.",
+   "blank": "adoecer",
+   "src": "made"
+  }
+ ],
  "w|adolescente": [
   {
    "text": "O meu filho é um adolescente rebelde.",
@@ -2667,6 +2763,22 @@
    "src": "made"
   }
  ],
+ "w|agravar": [
+  {
+   "text": "O Tiago continuou treinando com dor e acabou por agravar a lesão no ombro.",
+   "en": "Tiago kept training in pain and ended up making the shoulder injury worse.",
+   "ko": "티아구는 아픈데도 계속 운동하다가 어깨 부상을 더 키우고 말았어요.",
+   "blank": "agravar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês parou para alongar e não agravar a dor na panturrilha.",
+   "en": "Inês stopped to stretch so as not to worsen the pain in her calf.",
+   "ko": "이네스는 종아리 통증이 심해지지 않게 멈춰서 스트레칭을 했어요.",
+   "blank": "agravar",
+   "src": "made"
+  }
+ ],
  "w|agredir": [
   {
    "text": "O jornal do bairro contou que um homem foi preso por agredir um entregador.",
@@ -3289,6 +3401,22 @@
    "en": "On top of that, I lost the key.",
    "ko": "게다가 열쇠까지 잃어버렸어.",
    "blank": "Além"
+  }
+ ],
+ "w|além disso": [
+  {
+   "text": "A academia nova é perto de casa e, além disso, abre de madrugada, o que agrada ao Tiago.",
+   "en": "The new gym is close to home and, besides that, opens before dawn, which pleases Tiago.",
+   "ko": "새 헬스장은 집에서 가깝고 게다가 새벽에도 열어서 티아구 마음에 들어요.",
+   "blank": "além disso",
+   "src": "made"
+  },
+  {
+   "text": "A Inês treinou na chuva e, além disso, enfrentou um vento contra terrível.",
+   "en": "Inês trained in the rain and, on top of that, faced a terrible headwind.",
+   "ko": "이네스는 빗속에서 훈련했고, 게다가 지독한 맞바람까지 맞았어요.",
+   "blank": "além disso",
+   "src": "made"
   }
  ],
  "w|alemão": [
@@ -6455,6 +6583,38 @@
    "src": "tatoeba:1120499/brauliobezerra en:411309/CK"
   }
  ],
+ "w|aprimorar": [
+  {
+   "text": "O Tiago contratou um treinador para aprimorar a técnica do agachamento.",
+   "en": "Tiago hired a trainer to improve his squat technique.",
+   "ko": "티아구는 스쿼트 자세를 다듬으려고 트레이너를 고용했어요.",
+   "blank": "aprimorar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês faz tiros na pista para aprimorar o ritmo.",
+   "en": "Inês does sprints on the track to improve her pace.",
+   "ko": "이네스는 속도를 다듬으려고 트랙에서 인터벌 달리기를 해요.",
+   "blank": "aprimorar",
+   "src": "made"
+  }
+ ],
+ "w|aprofundar": [
+  {
+   "text": "O Tiago quer aprofundar os estudos em nutrição esportiva.",
+   "en": "Tiago wants to deepen his studies in sports nutrition.",
+   "ko": "티아구는 스포츠 영양학 공부를 더 깊이 하고 싶어 해요.",
+   "blank": "aprofundar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês leu um livro para aprofundar o que sabe sobre hidratação.",
+   "en": "Inês read a book to deepen what she knows about hydration.",
+   "ko": "이네스는 수분 보충에 대해 더 깊이 알고 싶어 책을 읽었어요.",
+   "blank": "aprofundar",
+   "src": "made"
+  }
+ ],
  "w|aprontar": [
   {
    "text": "O Tiago e os amigos adoram aprontar no último dia de aula.",
@@ -9331,6 +9491,22 @@
    "src": "made"
   }
  ],
+ "w|atribuir": [
+  {
+   "text": "O Tiago costuma atribuir o bom humor aos treinos da manhã.",
+   "en": "Tiago tends to attribute his good mood to his morning workouts.",
+   "ko": "티아구는 기분이 좋은 걸 아침 운동 덕으로 돌리곤 해요.",
+   "blank": "atribuir",
+   "src": "made"
+  },
+  {
+   "text": "A Inês prefere atribuir o bom resultado à equipe que treinou com ela.",
+   "en": "Inês prefers to attribute the good result to the team that trained with her.",
+   "ko": "이네스는 좋은 결과를 함께 훈련한 팀 덕으로 돌리고 싶어 해요.",
+   "blank": "atribuir",
+   "src": "made"
+  }
+ ],
  "w|atriz": [
   {
    "text": "Eu sou melhor atriz do que garçonete.",
@@ -12186,6 +12362,22 @@
    "en": "The city's bishop blessed the new public pool that Carla goes to.",
    "ko": "도시의 주교가 카를라가 다니는 새 공공 수영장을 축복했어요.",
    "blank": "bispo",
+   "src": "made"
+  }
+ ],
+ "w|bisturi": [
+  {
+   "text": "O Tiago machucou o joelho e precisou passar pelo bisturi no ano passado.",
+   "en": "Tiago hurt his knee and had to go under the knife last year.",
+   "ko": "티아구는 무릎을 다쳐서 작년에 수술을 받아야 했어요.",
+   "blank": "bisturi",
+   "src": "made"
+  },
+  {
+   "text": "A Inês, que é cirurgiã, brinca que é mais fácil segurar o bisturi do que correr.",
+   "en": "Inês, who is a surgeon, jokes that holding a scalpel is easier than running.",
+   "ko": "외과 의사인 이네스는 메스를 잡는 게 달리기보다 쉽다고 농담해요.",
+   "blank": "bisturi",
    "src": "made"
   }
  ],
@@ -23261,6 +23453,22 @@
    "blank": "contrário"
   }
  ],
+ "w|contrastar": [
+  {
+   "text": "O Tiago gosta de contrastar as fotos de antes e depois do treino.",
+   "en": "Tiago likes to compare the before and after photos of his training.",
+   "ko": "티아구는 운동 전후 사진을 나란히 놓고 비교하는 걸 좋아해요.",
+   "blank": "contrastar",
+   "src": "made"
+  },
+  {
+   "text": "As camisetas coloridas da equipe da Inês contrastam com o asfalto cinza.",
+   "en": "The colorful shirts of Inês's team contrast with the gray asphalt.",
+   "ko": "이네스 팀의 알록달록한 셔츠가 회색 아스팔트와 대비돼요.",
+   "blank": "contrastam",
+   "src": "made"
+  }
+ ],
  "w|contratar": [
   {
    "text": "Onde eu posso contratar uma empregada?",
@@ -27767,6 +27975,22 @@
    "src": "made"
   }
  ],
+ "w|depressivo": [
+  {
+   "text": "O Tiago diz que o exercício o tirou de um período depressivo.",
+   "en": "Tiago says exercise pulled him out of a depressive period.",
+   "ko": "티아구는 운동 덕분에 우울한 시기를 벗어났다고 해요.",
+   "blank": "depressivo",
+   "src": "made"
+  },
+  {
+   "text": "A Inês diz que o quilômetro trinta e cinco tem um silêncio meio depressivo.",
+   "en": "Inês says kilometer thirty-five has a somewhat depressing silence.",
+   "ko": "이네스는 삼십오 킬로미터 지점은 왠지 우울한 정적이 흐른다고 해요.",
+   "blank": "depressivo",
+   "src": "made"
+  }
+ ],
  "w|deprimente": [
   {
    "text": "O Rafael confessou que o inverno sem notícias do amigo foi deprimente.",
@@ -30135,6 +30359,22 @@
    "en": "It was a long day.",
    "ko": "긴 하루였어.",
    "blank": "dia"
+  }
+ ],
+ "w|diabetes": [
+  {
+   "text": "O pai do Tiago tem diabetes e caminha na academia todo fim de tarde.",
+   "en": "Tiago's father has diabetes and walks at the gym every late afternoon.",
+   "ko": "티아구의 아버지는 당뇨가 있어서 매일 해 질 무렵 헬스장에서 걸어요.",
+   "blank": "diabetes",
+   "src": "made"
+  },
+  {
+   "text": "A Inês correu ao lado de uma senhora que controla o diabetes com corrida.",
+   "en": "Inês ran next to a lady who controls her diabetes with running.",
+   "ko": "이네스는 달리기로 당뇨를 관리하는 아주머니 옆에서 달렸어요.",
+   "blank": "diabetes",
+   "src": "made"
   }
  ],
  "w|diabo": [
@@ -33077,6 +33317,22 @@
    "src": "made"
   }
  ],
+ "w|elástico": [
+  {
+   "text": "O Tiago usa uma faixa elástica para aquecer os ombros.",
+   "en": "Tiago uses an elastic band to warm up his shoulders.",
+   "ko": "티아구는 탄력 밴드로 어깨를 풀어요.",
+   "blank": "elástica",
+   "src": "made"
+  },
+  {
+   "text": "A Inês comprou um cadarço elástico para não precisar amarrar o tênis.",
+   "en": "Inês bought elastic laces so she wouldn't need to tie her sneakers.",
+   "ko": "이네스는 운동화 끈을 안 묶어도 되게 고무줄 끈을 샀어요.",
+   "blank": "elástico",
+   "src": "made"
+  }
+ ],
  "w|ele": [
   {
    "text": "Ele chega tarde.",
@@ -34805,6 +35061,22 @@
    "src": "made"
   }
  ],
+ "w|enjoado": [
+  {
+   "text": "O Tiago ficou enjoado depois de tomar o suplemento de estômago vazio.",
+   "en": "Tiago got nauseous after taking the supplement on an empty stomach.",
+   "ko": "티아구는 빈속에 보충제를 먹고 속이 메스꺼워졌어요.",
+   "blank": "enjoado",
+   "src": "made"
+  },
+  {
+   "text": "A Inês ficou enjoada no ônibus que levava os corredores até a largada.",
+   "en": "Inês felt sick on the bus taking the runners to the start.",
+   "ko": "이네스는 주자들을 출발점까지 태우고 가는 버스에서 멀미가 났어요.",
+   "blank": "enjoada",
+   "src": "made"
+  }
+ ],
  "w|enjoar": [
   {
    "text": "O Gabriel costuma enjoar quando treina logo depois de comer.",
@@ -35443,6 +35715,22 @@
    "src": "made"
   }
  ],
+ "w|envenenamento": [
+  {
+   "text": "O Tiago leu numa notícia sobre um caso de envenenamento por suplemento falsificado.",
+   "en": "Tiago read in the news about a case of poisoning from a counterfeit supplement.",
+   "ko": "티아구는 가짜 보충제로 인한 중독 사건 기사를 읽었어요.",
+   "blank": "envenenamento",
+   "src": "made"
+  },
+  {
+   "text": "A Inês leu sobre um corredor que teve envenenamento por comer cogumelo selvagem.",
+   "en": "Inês read about a runner who got poisoned from eating a wild mushroom.",
+   "ko": "이네스는 야생 버섯을 먹고 중독된 마라톤 주자 이야기를 읽었어요.",
+   "blank": "envenenamento",
+   "src": "made"
+  }
+ ],
  "w|envenenar": [
   {
    "text": "O dono da venda usa armadilha em vez de envenenar os ratos do depósito.",
@@ -35548,6 +35836,22 @@
    "en": "Inês speaks proudly of her son's involvement in the volleyball team.",
    "ko": "이네스는 아들이 배구팀에서 열심히 활동하는 걸 자랑스럽게 말해요.",
    "blank": "envolvimento",
+   "src": "made"
+  }
+ ],
+ "w|enxaqueca": [
+  {
+   "text": "O Tiago parou o treino porque sentiu uma enxaqueca forte.",
+   "en": "Tiago stopped his workout because he felt a strong migraine.",
+   "ko": "티아구는 편두통이 심하게 와서 운동을 멈췄어요.",
+   "blank": "enxaqueca",
+   "src": "made"
+  },
+  {
+   "text": "A Inês teve uma enxaqueca no dia anterior e quase desistiu da prova.",
+   "en": "Inês had a migraine the day before and almost gave up on the race.",
+   "ko": "이네스는 전날 편두통이 와서 대회를 포기할 뻔했어요.",
+   "blank": "enxaqueca",
    "src": "made"
   }
  ],
@@ -42103,6 +42407,22 @@
    "src": "tatoeba:8940295/JGEN en:8927570/CK"
   }
  ],
+ "w|feto": [
+  {
+   "text": "A esposa do Tiago está grávida, e ele mostrou na academia a imagem do feto no ultrassom.",
+   "en": "Tiago's wife is pregnant, and he showed the ultrasound image of the fetus at the gym.",
+   "ko": "티아구의 아내가 임신해서 그는 헬스장에서 초음파 속 태아 사진을 보여 줬어요.",
+   "blank": "feto",
+   "src": "made"
+  },
+  {
+   "text": "A irmã da Inês está grávida e torceu na chegada com a foto do feto no celular.",
+   "en": "Inês's sister is pregnant and cheered at the finish with the fetus photo on her phone.",
+   "ko": "이네스의 언니는 임신 중인데, 결승선에서 휴대폰 속 태아 사진을 들고 응원했어요.",
+   "blank": "feto",
+   "src": "made"
+  }
+ ],
  "w|fevereiro": [
   {
    "text": "O calor forte de fevereiro deixou o Tiago com uma irritação temporária na pele.",
@@ -45979,6 +46299,22 @@
    "ko": "관리자에게 항의하고 싶어요.",
    "blank": "gerente",
    "src": "tatoeba:8587844/lucasmg123 en:3109417/CK"
+  }
+ ],
+ "w|gesso": [
+  {
+   "text": "O Tiago ficou um mês com o braço no gesso e só treinou as pernas.",
+   "en": "Tiago spent a month with his arm in a cast and only trained his legs.",
+   "ko": "티아구는 한 달 동안 팔에 깁스를 하고 다리 운동만 했어요.",
+   "blank": "gesso",
+   "src": "made"
+  },
+  {
+   "text": "No ano passado, a Inês assistiu à maratona com a perna no gesso, e hoje ela corre.",
+   "en": "Last year, Inês watched the marathon with her leg in a cast, and today she runs.",
+   "ko": "작년에 이네스는 다리에 깁스를 한 채 마라톤을 구경했는데, 오늘은 직접 달려요.",
+   "blank": "gesso",
+   "src": "made"
   }
  ],
  "w|gestão": [
@@ -56263,6 +56599,22 @@
    "src": "made"
   }
  ],
+ "w|lindamente": [
+  {
+   "text": "A professora de ioga do Tiago executa as posturas lindamente.",
+   "en": "Tiago's yoga teacher performs the poses beautifully.",
+   "ko": "티아구의 요가 선생님은 동작을 아름답게 해내요.",
+   "blank": "lindamente",
+   "src": "made"
+  },
+  {
+   "text": "O sol nasceu lindamente sobre o rio no início da maratona da Inês.",
+   "en": "The sun rose beautifully over the river at the start of Inês's marathon.",
+   "ko": "이네스의 마라톤이 시작될 때 강 위로 해가 아름답게 떠올랐어요.",
+   "blank": "lindamente",
+   "src": "made"
+  }
+ ],
  "w|lindo": [
   {
    "text": "O pôr do sol ficou lindo.",
@@ -57883,6 +58235,22 @@
    "src": "made"
   }
  ],
+ "w|mancar": [
+  {
+   "text": "O Tiago saiu da aula de pernas a mancar e riu de si mesmo.",
+   "en": "Tiago left leg class limping and laughed at himself.",
+   "ko": "티아구는 하체 수업을 마치고 절뚝거리며 나오면서 스스로 웃었어요.",
+   "blank": "mancar",
+   "src": "made"
+  },
+  {
+   "text": "A Inês terminou a prova sem mancar, para orgulho do treinador.",
+   "en": "Inês finished the race without limping, to her coach's pride.",
+   "ko": "이네스가 절뚝거리지 않고 완주해서 코치가 뿌듯해했어요.",
+   "blank": "mancar",
+   "src": "made"
+  }
+ ],
  "w|mancha": [
   {
    "text": "O Rafael derrubou café e ficou uma mancha na camisa nova.",
@@ -57960,6 +58328,22 @@
    "en": "Always washing your hands is the number one commandment in Ana's kitchen.",
    "ko": "손을 늘 씻는 것이 아나의 주방에서 첫째 계명이에요.",
    "blank": "mandamento",
+   "src": "made"
+  }
+ ],
+ "w|mandão": [
+  {
+   "text": "O Tiago acha o instrutor da musculação mandão demais.",
+   "en": "Tiago thinks the weight-room instructor is too bossy.",
+   "ko": "티아구는 웨이트 트레이닝 강사가 너무 이래라저래라 한다고 생각해요.",
+   "blank": "mandão",
+   "src": "made"
+  },
+  {
+   "text": "O treinador mandão da Inês proibiu doce na semana da prova.",
+   "en": "Inês's bossy coach banned sweets the week of the race.",
+   "ko": "이네스의 깐깐한 코치는 대회 주간에 단 걸 금지했어요.",
+   "blank": "mandão",
    "src": "made"
   }
  ],
@@ -59432,6 +59816,22 @@
    "en": "Sofia needs to measure the window before ordering the glass.",
    "ko": "소피아는 유리를 주문하기 전에 창문 치수를 재야 해요.",
    "blank": "medir",
+   "src": "made"
+  }
+ ],
+ "w|meditação": [
+  {
+   "text": "Depois do treino, o Tiago faz dez minutos de meditação no vestiário.",
+   "en": "After the workout, Tiago does ten minutes of meditation in the locker room.",
+   "ko": "운동이 끝나면 티아구는 탈의실에서 십 분 동안 명상을 해요.",
+   "blank": "meditação",
+   "src": "made"
+  },
+  {
+   "text": "Antes da largada, a Inês faz uma meditação curta para acalmar a respiração.",
+   "en": "Before the start, Inês does a short meditation to calm her breathing.",
+   "ko": "출발 전에 이네스는 호흡을 가라앉히려고 짧게 명상을 해요.",
+   "blank": "meditação",
    "src": "made"
   }
  ],
@@ -63681,6 +64081,22 @@
    "src": "made"
   }
  ],
+ "w|no entanto": [
+  {
+   "text": "O Tiago treinou muito, no entanto não conseguiu bater o recorde no supino.",
+   "en": "Tiago trained hard, but he couldn't beat his record on the bench press.",
+   "ko": "티아구는 열심히 운동했지만 벤치프레스 기록을 깨지 못했어요.",
+   "blank": "no entanto",
+   "src": "made"
+  },
+  {
+   "text": "A Inês queria baixar o tempo, no entanto o calor atrapalhou.",
+   "en": "Inês wanted to lower her time, but the heat got in the way.",
+   "ko": "이네스는 기록을 줄이고 싶었지만 더위가 발목을 잡았어요.",
+   "blank": "no entanto",
+   "src": "made"
+  }
+ ],
  "w|nobre": [
   {
    "text": "Que nobre coração tem esse bom homem!",
@@ -65705,6 +66121,22 @@
    "blank": "opinião"
   }
  ],
+ "w|ópio": [
+  {
+   "text": "Na esteira, o Tiago ouviu um podcast sobre a história do comércio de ópio.",
+   "en": "On the treadmill, Tiago listened to a podcast on the history of the opium trade.",
+   "ko": "러닝머신 위에서 티아구는 아편 무역의 역사에 관한 팟캐스트를 들었어요.",
+   "blank": "ópio",
+   "src": "made"
+  },
+  {
+   "text": "Num livro de história, a Inês leu que o ópio já foi vendido como remédio.",
+   "en": "In a history book, Inês read that opium was once sold as medicine.",
+   "ko": "이네스는 역사책에서 아편이 한때 약으로 팔렸다는 걸 읽었어요.",
+   "blank": "ópio",
+   "src": "made"
+  }
+ ],
  "w|oponente": [
   {
    "text": "No torneio de pingue-pongue da firma, o Gabriel perdeu para um oponente da contabilidade.",
@@ -66561,6 +66993,22 @@
    "en": "I overcooked the egg.",
    "ko": "달걀을 너무 익혔어.",
    "blank": "ovo"
+  }
+ ],
+ "w|óvulo": [
+  {
+   "text": "A esposa do Tiago contou que a médica explicou como o óvulo é fecundado.",
+   "en": "Tiago's wife said the doctor explained how the egg is fertilized.",
+   "ko": "티아구의 아내는 의사가 난자가 어떻게 수정되는지 설명해 줬다고 했어요.",
+   "blank": "óvulo",
+   "src": "made"
+  },
+  {
+   "text": "A Inês corre com uma amiga ginecologista que adora explicar como o óvulo amadurece.",
+   "en": "Inês runs with a gynecologist friend who loves explaining how the egg matures.",
+   "ko": "이네스는 난자가 어떻게 성숙하는지 설명하길 좋아하는 산부인과 의사 친구와 달려요.",
+   "blank": "óvulo",
+   "src": "made"
   }
  ],
  "w|oxalá": [
@@ -71751,6 +72199,22 @@
    "en": "Wait for me, please.",
    "ko": "나 좀 기다려 줘.",
    "blank": "por favor"
+  }
+ ],
+ "w|por outro lado": [
+  {
+   "text": "O Tiago ganhou força; por outro lado, perdeu um pouco de flexibilidade.",
+   "en": "Tiago gained strength; on the other hand, he lost some flexibility.",
+   "ko": "티아구는 힘이 세졌지만, 한편으로는 유연성이 좀 떨어졌어요.",
+   "blank": "por outro lado",
+   "src": "made"
+  },
+  {
+   "text": "A maratona cansa muito; por outro lado, a Inês diz que nada se compara à chegada.",
+   "en": "The marathon is exhausting; on the other hand, Inês says nothing compares to the finish.",
+   "ko": "마라톤은 정말 힘들지만, 한편으로 이네스는 결승선만 한 게 없다고 해요.",
+   "blank": "por outro lado",
+   "src": "made"
   }
  ],
  "w|porão": [
@@ -81529,6 +81993,22 @@
    "src": "made"
   }
  ],
+ "w|roncar": [
+  {
+   "text": "O colega de quarto reclama que o Tiago começou a roncar depois que voltou a treinar pesado.",
+   "en": "Tiago's roommate complains that he started snoring after he went back to heavy training.",
+   "ko": "룸메이트는 티아구가 다시 운동을 세게 하면서 코를 골기 시작했다고 투덜대요.",
+   "blank": "roncar",
+   "src": "made"
+  },
+  {
+   "text": "Na véspera da maratona, a Inês não dormiu porque o vizinho de quarto não parava de roncar.",
+   "en": "On the eve of the marathon, Inês didn't sleep because the person in the next room wouldn't stop snoring.",
+   "ko": "마라톤 전날 이네스는 옆방 사람이 계속 코를 골아서 잠을 못 잤어요.",
+   "blank": "roncar",
+   "src": "made"
+  }
+ ],
  "w|rondar": [
   {
    "text": "Um segurança costuma rondar a sala das joias a noite toda.",
@@ -83027,6 +83507,22 @@
    "blank": "Saúde"
   }
  ],
+ "w|sauna": [
+  {
+   "text": "O Tiago gosta de relaxar na sauna depois da natação.",
+   "en": "Tiago likes to relax in the sauna after swimming.",
+   "ko": "티아구는 수영하고 나서 사우나에서 쉬는 걸 좋아해요.",
+   "blank": "sauna",
+   "src": "made"
+  },
+  {
+   "text": "Dois dias depois da maratona, a Inês foi à sauna para soltar as pernas.",
+   "en": "Two days after the marathon, Inês went to the sauna to loosen her legs.",
+   "ko": "마라톤 이틀 뒤 이네스는 다리를 풀려고 사우나에 갔어요.",
+   "blank": "sauna",
+   "src": "made"
+  }
+ ],
  "w|se": [
   {
    "text": "Se puder, vem.",
@@ -84337,6 +84833,22 @@
    "blank": "série"
   }
  ],
+ "w|seringa": [
+  {
+   "text": "O Tiago tem tanto medo de seringa que desviou o olhar no exame de sangue.",
+   "en": "Tiago is so afraid of syringes that he looked away during the blood test.",
+   "ko": "티아구는 주사기를 너무 무서워해서 피검사 때 눈을 돌렸어요.",
+   "blank": "seringa",
+   "src": "made"
+  },
+  {
+   "text": "Na tenda médica, a Inês viu uma enfermeira preparando uma seringa de soro.",
+   "en": "In the medical tent, Inês saw a nurse preparing a syringe of saline.",
+   "ko": "의료 천막에서 이네스는 간호사가 식염수 주사기를 준비하는 걸 봤어요.",
+   "blank": "seringa",
+   "src": "made"
+  }
+ ],
  "w|sério": [
   {
    "text": "Você está falando sério?",
@@ -84657,6 +85169,22 @@
    "en": "Avoid sexual jokes at work.",
    "ko": "직장에서 성적인 농담은 피해.",
    "blank": "sexual"
+  }
+ ],
+ "w|sexualidade": [
+  {
+   "text": "A academia do Tiago promoveu uma palestra sobre saúde, corpo e sexualidade.",
+   "en": "Tiago's gym held a talk on health, the body and sexuality.",
+   "ko": "티아구가 다니는 헬스장에서 건강, 몸, 성에 관한 강연을 열었어요.",
+   "blank": "sexualidade",
+   "src": "made"
+  },
+  {
+   "text": "A Inês leu uma reportagem sobre atletas que falam abertamente de sexualidade.",
+   "en": "Inês read a report about athletes who speak openly about sexuality.",
+   "ko": "이네스는 성에 대해 터놓고 말하는 선수들에 관한 기사를 읽었어요.",
+   "blank": "sexualidade",
+   "src": "made"
   }
  ],
  "w|sexualmente": [
@@ -86045,6 +86573,22 @@
    "src": "made"
   }
  ],
+ "w|soluço": [
+  {
+   "text": "O Tiago ficou com soluço depois de beber o isotônico rápido demais.",
+   "en": "Tiago got the hiccups after drinking the sports drink too fast.",
+   "ko": "티아구는 이온 음료를 너무 빨리 마셔서 딸꾹질이 났어요.",
+   "blank": "soluço",
+   "src": "made"
+  },
+  {
+   "text": "A Inês teve um soluço chato logo depois de tomar o gel de carboidrato.",
+   "en": "Inês got an annoying hiccup right after taking the carb gel.",
+   "ko": "이네스는 탄수화물 젤을 먹자마자 귀찮은 딸꾹질이 났어요.",
+   "blank": "soluço",
+   "src": "made"
+  }
+ ],
  "w|som": [
   {
    "text": "Aumenta o som, por favor.",
@@ -86276,6 +86820,22 @@
    "en": "Mariana had to blow the dust off the books before putting them away.",
    "ko": "마리아나는 책을 넣기 전에 위에 쌓인 먼지를 불어 내야 했어요.",
    "blank": "soprar",
+   "src": "made"
+  }
+ ],
+ "w|sopro": [
+  {
+   "text": "O médico ouviu um sopro no coração do Tiago e pediu um exame antes do treino pesado.",
+   "en": "The doctor heard a heart murmur in Tiago and ordered a test before heavy training.",
+   "ko": "의사가 티아구의 심장에서 잡음을 듣고 고강도 운동 전에 검사를 하자고 했어요.",
+   "blank": "sopro",
+   "src": "made"
+  },
+  {
+   "text": "Um sopro de vento fresco ajudou a Inês na subida da ponte.",
+   "en": "A gust of fresh wind helped Inês on the climb up the bridge.",
+   "ko": "시원한 바람 한 줄기가 다리 오르막에서 이네스를 도왔어요.",
+   "blank": "sopro",
    "src": "made"
   }
  ],
@@ -86528,6 +87088,22 @@
    "en": "In early spring, the rain falls softly on Ana's roof.",
    "ko": "이른 봄에는 비가 아나의 지붕에 부드럽게 내려요.",
    "blank": "suavemente",
+   "src": "made"
+  }
+ ],
+ "w|subconsciente": [
+  {
+   "text": "O personal do Tiago diz que o medo de levantar peso está no subconsciente.",
+   "en": "Tiago's personal trainer says the fear of lifting weights is in the subconscious.",
+   "ko": "티아구의 개인 트레이너는 무거운 걸 드는 두려움이 잠재의식에 있다고 해요.",
+   "blank": "subconsciente",
+   "src": "made"
+  },
+  {
+   "text": "A Inês diz que, no fim da maratona, quem corre é o subconsciente.",
+   "en": "Inês says that at the end of the marathon, it's the subconscious that runs.",
+   "ko": "이네스는 마라톤 막바지에는 잠재의식이 달린다고 해요.",
+   "blank": "subconsciente",
    "src": "made"
   }
  ],
@@ -90339,6 +90915,22 @@
    "blank": "toque"
   }
  ],
+ "w|tórax": [
+  {
+   "text": "O Tiago quer aumentar o tórax, então treina supino três vezes por semana.",
+   "en": "Tiago wants to build up his chest, so he does bench press three times a week.",
+   "ko": "티아구는 가슴을 키우고 싶어서 일주일에 세 번 벤치프레스를 해요.",
+   "blank": "tórax",
+   "src": "made"
+  },
+  {
+   "text": "A Inês prende o número da corrida bem no meio do tórax.",
+   "en": "Inês pins her race number right in the middle of her chest.",
+   "ko": "이네스는 대회 번호표를 가슴 한가운데에 달아요.",
+   "blank": "tórax",
+   "src": "made"
+  }
+ ],
  "w|torcer": [
   {
    "text": "O Pedro torce para o time da cidade e assiste aos jogos no camarim.",
@@ -91076,6 +91668,22 @@
    "en": "The kids on the street seem to be plotting a snowball fight against Rita.",
    "ko": "동네 아이들이 히타를 상대로 눈싸움을 꾸미는 것 같아요.",
    "blank": "tramar",
+   "src": "made"
+  }
+ ],
+ "w|trança": [
+  {
+   "text": "A instrutora de crossfit prende o cabelo numa trança antes de cada aula com o Tiago.",
+   "en": "The crossfit instructor ties her hair in a braid before every class with Tiago.",
+   "ko": "크로스핏 강사는 티아구와 수업하기 전마다 머리를 땋아 묶어요.",
+   "blank": "trança",
+   "src": "made"
+  },
+  {
+   "text": "A Inês corre de trança para o cabelo não grudar no pescoço.",
+   "en": "Inês runs with a braid so her hair doesn't stick to her neck.",
+   "ko": "이네스는 머리카락이 목에 달라붙지 않게 땋고 달려요.",
+   "blank": "trança",
    "src": "made"
   }
  ],
@@ -95047,6 +95655,22 @@
    "src": "made"
   }
  ],
+ "w|vigor": [
+  {
+   "text": "Mesmo aos cinquenta, o pai do Tiago treina com um vigor impressionante.",
+   "en": "Even at fifty, Tiago's father trains with impressive vigor.",
+   "ko": "티아구의 아버지는 쉰 살인데도 놀라운 기운으로 운동해요.",
+   "blank": "vigor",
+   "src": "made"
+  },
+  {
+   "text": "A Inês chegou ao último quilômetro com um vigor que surpreendeu o treinador.",
+   "en": "Inês reached the last kilometer with a vigor that surprised her coach.",
+   "ko": "이네스는 마지막 일 킬로미터를 코치가 놀랄 만큼 힘차게 달렸어요.",
+   "blank": "vigor",
+   "src": "made"
+  }
+ ],
  "w|vil": [
   {
    "text": "O promotor chamou de vil a atitude de enganar uma senhora doente.",
@@ -96218,6 +96842,22 @@
    "en": "Luísa keeps dry shampoo in her drawer for busy days.",
    "ko": "루이자는 바쁜 날을 대비해 서랍에 드라이 샴푸를 둬요.",
    "blank": "xampu",
+   "src": "made"
+  }
+ ],
+ "w|xarope": [
+  {
+   "text": "O Tiago tomou xarope para a tosse e faltou à aula de spinning.",
+   "en": "Tiago took cough syrup and skipped spinning class.",
+   "ko": "티아구는 기침 시럽을 먹고 스피닝 수업을 빠졌어요.",
+   "blank": "xarope",
+   "src": "made"
+  },
+  {
+   "text": "A Inês leva no bolso um sachê de xarope de glicose para o quilômetro trinta.",
+   "en": "Inês carries a sachet of glucose syrup in her pocket for kilometer thirty.",
+   "ko": "이네스는 삼십 킬로미터 지점용으로 포도당 시럽 한 봉을 주머니에 넣어 다녀요.",
+   "blank": "xarope",
    "src": "made"
   }
  ],
