@@ -104,12 +104,13 @@ function write(data) {
   fs.writeFileSync(PAGE, render(data));
 }
 
-function nextId(data) {
+function nextId(data, from) {
+  // 번호는 보내는 탭마다 따로 센다 — 두 채팅이 같은 날 따로 만들어도 rebase 때 같은 id가 안 생기게(a<날>-<탭>-<n>)
   const day = today().replace(/-/g, "").slice(2);
-  // 지운 요청과 번호가 겹치지 않게 그날 마지막 번호를 따로 둔다
-  const n = (data.seq?.[day] ?? 0) + 1;
-  data.seq = { [day]: n };
-  return `a${day}-${n}`;
+  const key = `${day}-${from}`;
+  const n = (data.seq?.[key] ?? 0) + 1;
+  data.seq = { ...Object.fromEntries(Object.entries(data.seq ?? {}).filter(([k]) => k.startsWith(day))), [key]: n };
+  return `a${key}-${n}`;
 }
 
 function opt(args, name) {
@@ -157,7 +158,7 @@ async function apply(args) {
       made.push(same.id);
       continue;
     }
-    const ask = { id: nextId(data), at: nowKst(), kind: "apply", from: String(from), to: String(tab), what, files: tabFiles, features: result.features.map((f) => f.name), base: base ?? null, head, status: "open" };
+    const ask = { id: nextId(data, from), at: nowKst(), kind: "apply", from: String(from), to: String(tab), what, files: tabFiles, features: result.features.map((f) => f.name), base: base ?? null, head, status: "open" };
     data.asks.push(ask);
     made.push(ask.id);
   }
@@ -177,7 +178,7 @@ function del(args) {
   const files = (opt(args, "files") ?? "").split(",").filter(Boolean);
   if (!from || !what || !files.length) throw new Error('delete에는 --from <내 탭> --what "무엇" --files a,b가 필요');
   const data = readAsks();
-  const ask = { id: nextId(data), at: nowKst(), kind: "delete", from: String(from), to: "user", what, why: opt(args, "why") ?? "", files, status: "open" };
+  const ask = { id: nextId(data, from), at: nowKst(), kind: "delete", from: String(from), to: "user", what, why: opt(args, "why") ?? "", files, status: "open" };
   data.asks.push(ask);
   write(data);
   console.log(`사용자 삭제 질문 ${ask.id} — 지금 사용자에게 묻고(AskUserQuestion) 답을 answer로 적는다`);
