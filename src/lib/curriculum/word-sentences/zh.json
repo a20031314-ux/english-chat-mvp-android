@@ -159,6 +159,22 @@
    "blank": "一定"
   }
  ],
+ "w|一家人": [
+  {
+   "text": "仪式结束后，两边的一家人围在一起拍了张大合照。",
+   "en": "After the ceremony, both families gathered for a big group photo.",
+   "ko": "예식이 끝난 뒤 양가 가족이 다 함께 모여 큰 단체 사진을 찍었어요.",
+   "blank": "一家人",
+   "src": "made"
+  },
+  {
+   "text": "经理说：“以后咱们就是一家人了，有事尽管开口。”",
+   "en": "The manager said, \"From now on we're all family, so just ask if you need anything.\"",
+   "ko": "매니저는 \"이제 우린 한 가족이니까 필요한 거 있으면 얼마든지 말해요\"라고 했어요.",
+   "blank": "一家人",
+   "src": "made"
+  }
+ ],
  "w|一旦": [
   {
    "text": "一旦开始就别停。",
@@ -241,6 +257,22 @@
    "en": "The phone keeps ringing.",
    "ko": "전화가 계속 울려.",
    "blank": "一直"
+  }
+ ],
+ "w|一致": [
+  {
+   "text": "全班意见很一致，都想让陈杰当班长。",
+   "en": "The whole class agreed unanimously that they wanted Chen Jie to be class monitor.",
+   "ko": "반 전체 의견이 일치해서 다들 천제가 반장이 되길 원했어요.",
+   "blank": "一致",
+   "src": "made"
+  },
+  {
+   "text": "小雪和朋友们意见一致，决定明天早起看日出。",
+   "en": "Xiaoxue and her friends agreed to get up early tomorrow to watch the sunrise.",
+   "ko": "샤오쉐와 친구들은 의견이 같아서 내일 일찍 일어나 일출을 보기로 했어요.",
+   "blank": "一致",
+   "src": "made"
   }
  ],
  "w|一般": [
@@ -1011,6 +1043,22 @@
    "blank": "不许"
   }
  ],
+ "w|不论": [
+  {
+   "text": "不论刮风下雨，陈杰都坚持骑车上学。",
+   "en": "Whatever the weather, Chen Jie insists on cycling to school.",
+   "ko": "바람이 불든 비가 오든 천제는 꼭 자전거를 타고 학교에 가요.",
+   "blank": "不论",
+   "src": "made"
+  },
+  {
+   "text": "小雪说，不论去过多少次，她还是最爱这片海。",
+   "en": "Xiaoxue says no matter how many times she's been, she still loves this sea most.",
+   "ko": "샤오쉐는 몇 번을 와도 이 바다가 제일 좋다고 해요.",
+   "blank": "不论",
+   "src": "made"
+  }
+ ],
  "w|不过": [
   {
    "text": "不过如此。",
@@ -1335,6 +1383,22 @@
    "en": "Why leave all of a sudden?",
    "ko": "왜 갑자기 떠난 거야?",
    "blank": "为何"
+  }
+ ],
+ "w|为啥": [
+  {
+   "text": "小侄子问张伟：“结婚为啥要穿这么多衣服？”",
+   "en": "His little nephew asked Zhang Wei, \"Why do you have to wear so many clothes to get married?\"",
+   "ko": "어린 조카가 장웨이에게 \"결혼할 때 왜 옷을 이렇게 많이 입어?\"라고 물었어요.",
+   "blank": "为啥",
+   "src": "made"
+  },
+  {
+   "text": "刘芳小声问同事：“为啥大家都站着开会？”",
+   "en": "Liu Fang quietly asked a colleague, \"Why does everyone stand during meetings?\"",
+   "ko": "류팡은 동료에게 작은 소리로 \"왜 다들 서서 회의해요?\"라고 물었어요.",
+   "blank": "为啥",
+   "src": "made"
   }
  ],
  "w|为止": [
@@ -1727,6 +1791,22 @@
    "en": "You need to be good and listen.",
    "ko": "얌전히 말을 잘 들어.",
    "blank": "乖乖"
+  }
+ ],
+ "w|九": [
+  {
+   "text": "陈杰每天早上七点五十进教室，九点就开始第二节课。",
+   "en": "Chen Jie gets to class at seven fifty every morning, and the second lesson begins at nine.",
+   "ko": "천제는 매일 아침 일곱 시 오십 분에 교실에 들어가고 아홉 시면 둘째 시간이 시작돼요.",
+   "blank": "九",
+   "src": "made"
+  },
+  {
+   "text": "退潮以后，小雪在沙滩上捡了九个贝壳。",
+   "en": "After the tide went out, Xiaoxue picked up nine shells on the beach.",
+   "ko": "썰물 뒤에 샤오쉐는 모래사장에서 조개껍데기 아홉 개를 주웠어요.",
+   "blank": "九",
+   "src": "made"
   }
  ],
  "w|也": [
@@ -2337,6 +2417,22 @@
    "en": "Don't blame others.",
    "ko": "남 탓하지 마.",
    "blank": "人家"
+  }
+ ],
+ "w|人才": [
+  {
+   "text": "新娘的老板在致辞里说，她是公司难得的人才。",
+   "en": "In his speech, the bride's boss said she is a rare talent at the company.",
+   "ko": "신부의 상사는 축사에서 그녀가 회사에서 보기 드문 인재라고 했어요.",
+   "blank": "人才",
+   "src": "made"
+  },
+  {
+   "text": "人事部经理说，公司特别需要刘芳这样的技术人才。",
+   "en": "The HR manager said the company really needs technical talent like Liu Fang.",
+   "ko": "인사부장은 회사가 류팡 같은 기술 인재를 꼭 필요로 한다고 했어요.",
+   "blank": "人才",
+   "src": "made"
   }
  ],
  "w|人民": [
@@ -3459,6 +3555,22 @@
    "blank": "住手"
   }
  ],
+ "w|体育": [
+  {
+   "text": "陈杰最喜欢体育课，一下课就冲去球场。",
+   "en": "Chen Jie loves PE most and rushes to the court the moment class ends.",
+   "ko": "천제는 체육 시간을 제일 좋아해서 수업이 끝나자마자 운동장으로 달려가요.",
+   "blank": "体育",
+   "src": "made"
+  },
+  {
+   "text": "海滩上有个体育公园，小雪每天傍晚去打排球。",
+   "en": "There's a sports park on the beach, and Xiaoxue plays volleyball there every evening.",
+   "ko": "해변에 체육 공원이 있어서 샤오쉐는 매일 저녁 배구를 하러 가요.",
+   "blank": "体育",
+   "src": "made"
+  }
+ ],
  "w|体验": [
   {
    "text": "第一次出庭的体验让马林终生难忘。",
@@ -3472,6 +3584,22 @@
    "en": "Quite a few tourists come to Sun Yue's shop on purpose to experience old neighbourhood life.",
    "ko": "꽤 많은 여행객이 옛 동네 생활을 체험해 보려고 일부러 쑨웨의 가게에 와요.",
    "blank": "体验",
+   "src": "made"
+  }
+ ],
+ "w|何": [
+  {
+   "text": "主持人问张伟：“此时此刻你有何感想？”",
+   "en": "The host asked Zhang Wei, \"What are your feelings at this moment?\"",
+   "ko": "사회자가 장웨이에게 \"지금 이 순간 어떤 느낌이세요?\"라고 물었어요.",
+   "blank": "何",
+   "src": "made"
+  },
+  {
+   "text": "刘芳一时不知道该如何回答经理的问题。",
+   "en": "For a moment Liu Fang didn't know how to answer the manager's question.",
+   "ko": "류팡은 잠깐 매니저의 질문에 어떻게 답해야 할지 몰랐어요.",
+   "blank": "何",
    "src": "made"
   }
  ],
@@ -4045,6 +4173,38 @@
    "blank": "修"
   }
  ],
+ "w|修女": [
+  {
+   "text": "婚礼在一座老教堂里办，一位修女帮张伟整理了领带。",
+   "en": "The wedding was held in an old church, and a nun helped Zhang Wei straighten his tie.",
+   "ko": "결혼식은 오래된 성당에서 열렸는데 한 수녀님이 장웨이의 넥타이를 바로잡아 줬어요.",
+   "blank": "修女",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，她的新工位安静得像修女住的房间。",
+   "en": "Liu Fang says her new desk is as quiet as a nun's room.",
+   "ko": "류팡은 새 자리가 수녀님 방처럼 조용하다고 해요.",
+   "blank": "修女",
+   "src": "made"
+  }
+ ],
+ "w|修理": [
+  {
+   "text": "教室的投影仪坏了，陈杰自告奋勇去修理。",
+   "en": "The classroom projector broke, and Chen Jie volunteered to fix it.",
+   "ko": "교실 프로젝터가 고장 나서 천제가 자진해서 고치러 갔어요.",
+   "blank": "修理",
+   "src": "made"
+  },
+  {
+   "text": "小雪的自行车链条断了，海边一位大叔帮她修理好了。",
+   "en": "Xiaoxue's bike chain broke, and a man by the sea fixed it for her.",
+   "ko": "샤오쉐의 자전거 체인이 끊어졌는데 바닷가의 한 아저씨가 고쳐 줬어요.",
+   "blank": "修理",
+   "src": "made"
+  }
+ ],
  "w|俱乐部": [
   {
    "text": "他加入了俱乐部。",
@@ -4423,6 +4583,22 @@
    "blank": "傻"
   }
  ],
+ "w|傻子": [
+  {
+   "text": "张伟紧张得把誓词念错了，笑着说自己像个傻子。",
+   "en": "Zhang Wei was so nervous he flubbed his vows and laughed that he was acting like a fool.",
+   "ko": "장웨이는 너무 긴장해서 혼인 서약을 틀리게 읽고는 자기가 바보 같다며 웃었어요.",
+   "blank": "傻子",
+   "src": "made"
+  },
+  {
+   "text": "刘芳把门禁卡忘在了家里，觉得自己像个傻子。",
+   "en": "Liu Fang left her access card at home and felt like an idiot.",
+   "ko": "류팡은 출입 카드를 집에 두고 와서 자기가 바보 같다고 느꼈어요.",
+   "blank": "傻子",
+   "src": "made"
+  }
+ ],
  "w|傻瓜": [
   {
    "text": "别当傻瓜。",
@@ -4731,6 +4907,22 @@
    "src": "made"
   }
  ],
+ "w|全新": [
+  {
+   "text": "学校新盖的图书馆全新开放，陈杰第一个去借书。",
+   "en": "The school's newly built library opened brand new, and Chen Jie was the first to borrow a book.",
+   "ko": "학교에 새로 지은 도서관이 새 단장으로 문을 열자 천제가 제일 먼저 책을 빌렸어요.",
+   "blank": "全新",
+   "src": "made"
+  },
+  {
+   "text": "小雪住的海景民宿刚装修过，房间全新。",
+   "en": "The seaview guesthouse where Xiaoxue is staying was just renovated, and the rooms are brand new.",
+   "ko": "샤오쉐가 묵는 바다 전망 민박은 막 리모델링해서 방이 새것이에요.",
+   "blank": "全新",
+   "src": "made"
+  }
+ ],
  "w|全球": [
   {
    "text": "这家公司在全球都有分店。",
@@ -4805,6 +4997,22 @@
    "blank": "公主"
   }
  ],
+ "w|公众": [
+  {
+   "text": "婚礼不对公众开放，只请了亲朋好友。",
+   "en": "The wedding isn't open to the public; only family and friends were invited.",
+   "ko": "결혼식은 일반에 공개하지 않고 친지와 친구만 초대했어요.",
+   "blank": "公众",
+   "src": "made"
+  },
+  {
+   "text": "这份报告以后要向公众公开，刘芳检查了好几遍。",
+   "en": "The report will be made public later, so Liu Fang checked it several times.",
+   "ko": "이 보고서는 나중에 대중에게 공개되기 때문에 류팡은 여러 번 확인했어요.",
+   "blank": "公众",
+   "src": "made"
+  }
+ ],
  "w|公司": [
   {
    "text": "我去公司了。",
@@ -4874,6 +5082,22 @@
    "en": "He apologized publicly.",
    "ko": "그는 공개적으로 사과했어요.",
    "blank": "公开",
+   "src": "made"
+  }
+ ],
+ "w|公民": [
+  {
+   "text": "张伟和新娘去民政局登记，作为公民领到了结婚证。",
+   "en": "Zhang Wei and the bride registered at the civil affairs office and got their marriage certificate as citizens.",
+   "ko": "장웨이와 신부는 민정국에 가서 등록하고 시민으로서 혼인증을 받았어요.",
+   "blank": "公民",
+   "src": "made"
+  },
+  {
+   "text": "入职表上要填公民身份号码，刘芳找了半天身份证。",
+   "en": "The onboarding form asks for her citizen ID number, and Liu Fang spent ages looking for her ID card.",
+   "ko": "입사 서류에 시민 신분 번호를 적어야 해서 류팡은 신분증을 한참 찾았어요.",
+   "blank": "公民",
    "src": "made"
   }
  ],
@@ -5512,6 +5736,22 @@
    "en": "One of Sun Yue's regulars is a retired soldier who loves chatting about military news.",
    "ko": "쑨웨의 단골은 퇴역 군인인데 군사 뉴스 얘기를 제일 좋아해요.",
    "blank": "军事",
+   "src": "made"
+  }
+ ],
+ "w|军人": [
+  {
+   "text": "张伟的哥哥是军人，穿着军装来参加婚礼。",
+   "en": "Zhang Wei's older brother is a soldier and came to the wedding in uniform.",
+   "ko": "장웨이의 형은 군인이라 군복을 입고 결혼식에 왔어요.",
+   "blank": "军人",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的新经理以前是军人，说话干脆利落。",
+   "en": "Liu Fang's new manager used to be a soldier and speaks crisply and to the point.",
+   "ko": "류팡의 새 매니저는 전에 군인이었어서 말이 시원시원해요.",
+   "blank": "军人",
    "src": "made"
   }
  ],
@@ -6323,6 +6563,22 @@
    "blank": "制造"
   }
  ],
+ "w|刺": [
+  {
+   "text": "张伟整理花束时被玫瑰刺了一下，手指流了点血。",
+   "en": "Zhang Wei got pricked by a rose while arranging the bouquet, and his finger bled a little.",
+   "ko": "장웨이는 꽃다발을 정리하다가 장미 가시에 찔려서 손가락에서 피가 조금 났어요.",
+   "blank": "刺",
+   "src": "made"
+  },
+  {
+   "text": "屏幕太亮，刺得刘芳眼睛直流泪。",
+   "en": "The screen was so bright it stung Liu Fang's eyes until they watered.",
+   "ko": "화면이 너무 밝아서 류팡은 눈이 따가워 눈물이 났어요.",
+   "blank": "刺",
+   "src": "made"
+  }
+ ],
  "w|刺激": [
   {
    "text": "这场比赛很刺激。",
@@ -6363,6 +6619,22 @@
    "en": "He left for the airport.",
    "ko": "그는 공항으로 갔어.",
    "blank": "前往"
+  }
+ ],
+ "w|前辈": [
+  {
+   "text": "张伟的单位来了好几位前辈，都给他包了红包。",
+   "en": "Several senior colleagues from Zhang Wei's workplace came, and each gave him a red envelope.",
+   "ko": "장웨이 직장의 선배 여러 명이 와서 다들 축의금 봉투를 줬어요.",
+   "blank": "前辈",
+   "src": "made"
+  },
+  {
+   "text": "组里的前辈手把手教刘芳用公司的系统。",
+   "en": "A senior on the team showed Liu Fang step by step how to use the company system.",
+   "ko": "팀 선배가 류팡에게 회사 시스템 쓰는 법을 하나하나 가르쳐 줬어요.",
+   "blank": "前辈",
+   "src": "made"
   }
  ],
  "w|前进": [
@@ -6623,6 +6895,22 @@
    "blank": "动作"
   }
  ],
+ "w|动力": [
+  {
+   "text": "陈杰说，想考上好大学是他学习最大的动力。",
+   "en": "Chen Jie says wanting to get into a good university is his biggest motivation to study.",
+   "ko": "천제는 좋은 대학에 가고 싶은 게 공부하는 가장 큰 동기라고 해요.",
+   "blank": "动力",
+   "src": "made"
+  },
+  {
+   "text": "这艘游船靠风帆提供动力，开起来特别安静。",
+   "en": "This tour boat is powered by sails and is very quiet.",
+   "ko": "이 유람선은 돛으로 동력을 얻어서 아주 조용히 움직여요.",
+   "blank": "动力",
+   "src": "made"
+  }
+ ],
  "w|动手": [
   {
    "text": "别动手打人。",
@@ -6713,6 +7001,22 @@
    "blank": "努力"
   }
  ],
+ "w|劲": [
+  {
+   "text": "拔河比赛时，陈杰喊着口号，全班一起使劲。",
+   "en": "In the tug-of-war, Chen Jie shouted the chant and the whole class pulled together.",
+   "ko": "줄다리기 때 천제가 구호를 외치자 반 전체가 함께 힘을 줬어요.",
+   "blank": "劲",
+   "src": "made"
+  },
+  {
+   "text": "风太大，小雪费了好大劲才把遮阳伞撑开。",
+   "en": "The wind was so strong that Xiaoxue had to work hard to open the beach umbrella.",
+   "ko": "바람이 너무 세서 샤오쉐는 한참 힘을 써서야 파라솔을 펼쳤어요.",
+   "blank": "劲",
+   "src": "made"
+  }
+ ],
  "w|勇敢": [
   {
    "text": "你真勇敢。",
@@ -6753,6 +7057,22 @@
    "en": "Help me grab the bag.",
    "ko": "가방 좀 들어 줘.",
    "blank": "包"
+  }
+ ],
+ "w|包围": [
+  {
+   "text": "张伟一进门就被伴娘们包围了，要他先唱首歌。",
+   "en": "As soon as Zhang Wei came in, the bridesmaids surrounded him and made him sing first.",
+   "ko": "장웨이가 문에 들어서자마자 신부 들러리들이 둘러싸고 노래부터 하라고 했어요.",
+   "blank": "包围",
+   "src": "made"
+  },
+  {
+   "text": "刘芳一坐下，就被热情的同事们包围了，问东问西。",
+   "en": "As soon as Liu Fang sat down, friendly colleagues surrounded her with questions.",
+   "ko": "류팡이 앉자마자 친절한 동료들이 둘러싸고 이것저것 물었어요.",
+   "blank": "包围",
+   "src": "made"
   }
  ],
  "w|包括": [
@@ -6915,6 +7235,22 @@
    "blank": "半"
   }
  ],
+ "w|协会": [
+  {
+   "text": "陈杰加入了学校的天文协会，每周五晚上观星。",
+   "en": "Chen Jie joined the school astronomy society and stargazes every Friday night.",
+   "ko": "천제는 학교 천문 협회에 가입해서 매주 금요일 밤에 별을 봐요.",
+   "blank": "协会",
+   "src": "made"
+  },
+  {
+   "text": "当地的潜水协会周末免费教游客浮潜。",
+   "en": "The local diving association teaches tourists snorkelling for free at weekends.",
+   "ko": "이 지역 다이빙 협회는 주말에 관광객에게 무료로 스노클링을 가르쳐 줘요.",
+   "blank": "协会",
+   "src": "made"
+  }
+ ],
  "w|协助": [
   {
    "text": "王刚负责协助交警处理早高峰的事故。",
@@ -7032,6 +7368,22 @@
    "en": "Lili says her job takes up most of her time now.",
    "ko": "리리는 요즘 일이 시간을 대부분 차지한다고 말해요.",
    "blank": "占",
+   "src": "made"
+  }
+ ],
+ "w|占领": [
+  {
+   "text": "课本里讲到，这座城市在战争中曾被敌军占领。",
+   "en": "The textbook says this city was once occupied by enemy troops during the war.",
+   "ko": "교과서에는 이 도시가 전쟁 중에 적군에게 점령당한 적이 있다고 나와요.",
+   "blank": "占领",
+   "src": "made"
+  },
+  {
+   "text": "一群海鸥占领了码头的栏杆，小雪拍了好多照片。",
+   "en": "A flock of gulls took over the pier railings, and Xiaoxue took lots of photos.",
+   "ko": "갈매기 떼가 부두 난간을 점령해서 샤오쉐는 사진을 많이 찍었어요.",
+   "blank": "占领",
    "src": "made"
   }
  ],
@@ -7889,6 +8241,22 @@
    "src": "made"
   }
  ],
+ "w|口": [
+  {
+   "text": "午饭时陈杰只吃了一口青菜，就被老师发现了。",
+   "en": "At lunch Chen Jie took just one bite of greens, and the teacher noticed.",
+   "ko": "점심때 천제가 채소를 한 입만 먹자 선생님한테 들켰어요.",
+   "blank": "口",
+   "src": "made"
+  },
+  {
+   "text": "村里只有一口老井，以前全村人都靠它喝水。",
+   "en": "The village has only one old well, and the whole village used to depend on it for water.",
+   "ko": "마을에는 우물이 하나뿐인데 예전엔 온 마을 사람들이 그 물을 마셨어요.",
+   "blank": "口",
+   "src": "made"
+  }
+ ],
  "w|口袋": [
   {
    "text": "钥匙在口袋里。",
@@ -8511,6 +8879,22 @@
    "blank": "同事"
   }
  ],
+ "w|同伴": [
+  {
+   "text": "张伟说，新娘不只是爱人，也是他这辈子最好的同伴。",
+   "en": "Zhang Wei says the bride is not just his love but also the best companion of his life.",
+   "ko": "장웨이는 신부가 사랑하는 사람일 뿐 아니라 평생 가장 좋은 동반자라고 말해요.",
+   "blank": "同伴",
+   "src": "made"
+  },
+  {
+   "text": "刘芳和一起入职的同伴约好每天中午一起吃饭。",
+   "en": "Liu Fang and a fellow new hire agreed to have lunch together every day.",
+   "ko": "류팡은 같이 입사한 동기와 매일 점심을 같이 먹기로 했어요.",
+   "blank": "同伴",
+   "src": "made"
+  }
+ ],
  "w|同学": [
   {
    "text": "他是我的同学。",
@@ -8708,6 +9092,22 @@
    "en": "Lili signed the contract without reading it carefully, and as a result couldn't get her deposit back.",
    "ko": "리리는 계약서를 꼼꼼히 안 보고 서명했다가 결국 보증금을 못 돌려받았어요.",
    "blank": "后果",
+   "src": "made"
+  }
+ ],
+ "w|后退": [
+  {
+   "text": "烟花一放，张伟吓得往后退了一步。",
+   "en": "When the fireworks went off, Zhang Wei jumped back a step in fright.",
+   "ko": "불꽃이 터지자 장웨이는 깜짝 놀라 한 걸음 물러났어요.",
+   "blank": "后退",
+   "src": "made"
+  },
+  {
+   "text": "经理说，项目不能后退，只能想办法往前推。",
+   "en": "The manager said the project can't go backwards; they can only find ways to push ahead.",
+   "ko": "매니저는 프로젝트는 뒤로 물러설 수 없고 앞으로 밀고 나갈 방법을 찾아야 한다고 했어요.",
+   "blank": "后退",
    "src": "made"
   }
  ],
@@ -10225,6 +10625,22 @@
    "en": "This matter is difficult.",
    "ko": "이 일은 어려워.",
    "blank": "困难"
+  }
+ ],
+ "w|国会": [
+  {
+   "text": "政治课上，陈杰学到了美国国会是怎样运作的。",
+   "en": "In politics class, Chen Jie learned how the US Congress works.",
+   "ko": "정치 시간에 천제는 미국 의회가 어떻게 돌아가는지 배웠어요.",
+   "blank": "国会",
+   "src": "made"
+  },
+  {
+   "text": "民宿老板在看新闻，说国会又在讨论保护海洋的法案。",
+   "en": "The guesthouse owner was watching the news and said Congress is debating an ocean protection bill again.",
+   "ko": "민박 주인이 뉴스를 보며 의회가 또 해양 보호 법안을 논의하고 있다고 했어요.",
+   "blank": "国会",
+   "src": "made"
   }
  ],
  "w|国家": [
@@ -11835,6 +12251,22 @@
    "blank": "夫人"
   }
  ],
+ "w|夫妇": [
+  {
+   "text": "来参加婚礼的有一对结婚五十年的老夫妇，是张伟的外公外婆。",
+   "en": "Among the guests was an old couple married fifty years, Zhang Wei's maternal grandparents.",
+   "ko": "결혼식에는 결혼한 지 오십 년 된 노부부도 왔는데 장웨이의 외할아버지와 외할머니였어요.",
+   "blank": "夫妇",
+   "src": "made"
+  },
+  {
+   "text": "公司楼下咖啡店是一对年轻夫妇开的，刘芳买了杯拿铁。",
+   "en": "The café downstairs is run by a young couple, and Liu Fang bought a latte.",
+   "ko": "회사 건물 아래 카페는 젊은 부부가 하는 곳인데 류팡은 라떼 한 잔을 샀어요.",
+   "blank": "夫妇",
+   "src": "made"
+  }
+ ],
  "w|失去": [
   {
    "text": "别失去信心。",
@@ -12077,6 +12509,22 @@
    "en": "Girls like soccer too.",
    "ko": "여자아이들도 축구를 좋아해.",
    "blank": "女孩子"
+  }
+ ],
+ "w|女巫": [
+  {
+   "text": "张伟的小侄女扮成女巫，提着小篮子撒花瓣。",
+   "en": "Zhang Wei's little niece dressed up as a witch and scattered petals from a small basket.",
+   "ko": "장웨이의 어린 조카딸이 마녀 분장을 하고 작은 바구니로 꽃잎을 뿌렸어요.",
+   "blank": "女巫",
+   "src": "made"
+  },
+  {
+   "text": "刘芳负责的第一个项目是一款关于女巫的手机游戏。",
+   "en": "The first project Liu Fang is in charge of is a mobile game about a witch.",
+   "ko": "류팡이 맡은 첫 프로젝트는 마녀가 나오는 모바일 게임이에요.",
+   "blank": "女巫",
+   "src": "made"
   }
  ],
  "w|女性": [
@@ -12473,6 +12921,22 @@
    "blank": "如此"
   }
  ],
+ "w|妇女": [
+  {
+   "text": "村里的妇女们一大早就来帮忙包饺子、贴喜字。",
+   "en": "The village women came early in the morning to help make dumplings and put up double-happiness signs.",
+   "ko": "마을 여성들이 아침 일찍 와서 만두를 빚고 囍 자를 붙이는 걸 도왔어요.",
+   "blank": "妇女",
+   "src": "made"
+  },
+  {
+   "text": "三八妇女节那天，公司给每位女员工发了一束花。",
+   "en": "On International Women's Day, the company gave each female employee a bunch of flowers.",
+   "ko": "삼팔 여성의 날에 회사는 여직원마다 꽃다발을 하나씩 줬어요.",
+   "blank": "妇女",
+   "src": "made"
+  }
+ ],
  "w|妈": [
   {
    "text": "妈，我回来了。",
@@ -12587,6 +13051,22 @@
    "en": "Miss, don't cry.",
    "ko": "아가씨, 울지 마.",
    "blank": "姑娘"
+  }
+ ],
+ "w|姓": [
+  {
+   "text": "新娘也姓张，大家开玩笑说张伟娶了个本家。",
+   "en": "The bride's surname is also Zhang, and everyone joked that Zhang Wei married into his own clan.",
+   "ko": "신부도 성이 장 씨라서 다들 장웨이가 같은 집안 사람과 결혼했다고 농담했어요.",
+   "blank": "姓",
+   "src": "made"
+  },
+  {
+   "text": "部门里有三个人都姓王，刘芳一时分不清。",
+   "en": "Three people in the department are all surnamed Wang, and Liu Fang couldn't tell them apart at first.",
+   "ko": "부서에 왕 씨 성을 가진 사람이 셋이나 있어서 류팡은 처음에 헷갈렸어요.",
+   "blank": "姓",
+   "src": "made"
   }
  ],
  "w|委员会": [
@@ -13297,6 +13777,22 @@
    "blank": "实现"
   }
  ],
+ "w|实行": [
+  {
+   "text": "学校从本学期起实行新的作息时间，早上八点才上课。",
+   "en": "From this term the school has brought in a new timetable, with classes starting at eight.",
+   "ko": "학교는 이번 학기부터 새 일과표를 실시해서 아침 여덟 시에 수업이 시작돼요.",
+   "blank": "实行",
+   "src": "made"
+  },
+  {
+   "text": "为了保护鱼群，这片海每年夏天实行休渔期。",
+   "en": "To protect fish stocks, this sea has a fishing ban every summer.",
+   "ko": "물고기를 보호하려고 이 바다는 매년 여름 휴어기를 실시해요.",
+   "blank": "实行",
+   "src": "made"
+  }
+ ],
  "w|实际": [
   {
    "text": "实际情况比我想的复杂。",
@@ -13453,6 +13949,22 @@
    "en": "Please come outside the room.",
    "ko": "실외로 나와 주세요.",
    "blank": "室"
+  }
+ ],
+ "w|宪法": [
+  {
+   "text": "法治课上，老师让陈杰朗读宪法的第一条。",
+   "en": "In civics class, the teacher asked Chen Jie to read aloud the first article of the constitution.",
+   "ko": "법치 시간에 선생님은 천제에게 헌법 제일 조를 읽게 했어요.",
+   "blank": "宪法",
+   "src": "made"
+  },
+  {
+   "text": "小雪在海边书店看到一本讲各国宪法的书，买了下来。",
+   "en": "At the seaside bookshop, Xiaoxue found a book on different countries' constitutions and bought it.",
+   "ko": "샤오쉐는 바닷가 서점에서 여러 나라 헌법을 다룬 책을 보고 샀어요.",
+   "blank": "宪法",
+   "src": "made"
   }
  ],
  "w|害": [
@@ -13745,6 +14257,22 @@
    "src": "made"
   }
  ],
+ "w|对面": [
+  {
+   "text": "婚宴设在酒店里，新娘的娘家就在马路对面。",
+   "en": "The banquet is at a hotel, and the bride's family home is right across the road.",
+   "ko": "피로연은 호텔에서 열렸는데 신부의 친정집이 바로 길 건너편이에요.",
+   "blank": "对面",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的工位在窗户对面，抬头就能看到江。",
+   "en": "Liu Fang's desk faces the window, and she can see the river just by looking up.",
+   "ko": "류팡의 자리는 창문 맞은편이라 고개만 들면 강이 보여요.",
+   "blank": "对面",
+   "src": "made"
+  }
+ ],
  "w|寻找": [
   {
    "text": "我在寻找答案。",
@@ -13979,6 +14507,22 @@
    "blank": "小伙子"
   }
  ],
+ "w|小偷": [
+  {
+   "text": "婚礼前一天，张伟的车被小偷撬了，西装差点丢了。",
+   "en": "The day before the wedding, a thief broke into Zhang Wei's car, and his suit was nearly lost.",
+   "ko": "결혼식 전날 장웨이의 차가 도둑에게 털려서 정장을 잃어버릴 뻔했어요.",
+   "blank": "小偷",
+   "src": "made"
+  },
+  {
+   "text": "上班第一天，同事就提醒刘芳，这一带有小偷，包要看好。",
+   "en": "On her first day, a colleague warned Liu Fang that there are thieves around here and to watch her bag.",
+   "ko": "출근 첫날 동료가 류팡에게 이 근처에 도둑이 있으니 가방을 잘 챙기라고 했어요.",
+   "blank": "小偷",
+   "src": "made"
+  }
+ ],
  "w|小女孩": [
   {
    "text": "小女孩在哭。",
@@ -14165,6 +14709,22 @@
    "en": "Eat a little less.",
    "ko": "조금 덜 먹어.",
    "blank": "少"
+  }
+ ],
+ "w|少女": [
+  {
+   "text": "新娘说，她从少女时代就梦想着在海边结婚。",
+   "en": "The bride says she has dreamed of a seaside wedding since she was a girl.",
+   "ko": "신부는 소녀 시절부터 바닷가에서 결혼하는 꿈을 꿨다고 해요.",
+   "blank": "少女",
+   "src": "made"
+  },
+  {
+   "text": "刘芳桌上放着一张少女时期的照片，同事都说她没怎么变。",
+   "en": "Liu Fang keeps a photo of herself as a teenage girl on her desk, and colleagues say she hasn't changed much.",
+   "ko": "류팡의 책상에는 소녀 시절 사진이 있는데 동료들은 별로 안 변했다고 해요.",
+   "blank": "少女",
+   "src": "made"
   }
  ],
  "w|少校": [
@@ -14704,6 +15264,22 @@
    "en": "Yang Yang and the new client turned out to share a birthday, and everyone said what a coincidence.",
    "ko": "양양과 새 고객이 뜻밖에도 생일이 같아서 다들 정말 우연이라고 했어요.",
    "blank": "巧合",
+   "src": "made"
+  }
+ ],
+ "w|巨人": [
+  {
+   "text": "新郎的表弟身高两米，站在人群里像个巨人。",
+   "en": "The groom's cousin is two metres tall and looks like a giant in the crowd.",
+   "ko": "신랑의 사촌 동생은 키가 이 미터라서 사람들 속에 서 있으면 거인 같아요.",
+   "blank": "巨人",
+   "src": "made"
+  },
+  {
+   "text": "刘芳说，在大公司里她觉得自己像站在巨人脚边的小孩。",
+   "en": "Liu Fang says at a big company she feels like a child standing at a giant's feet.",
+   "ko": "류팡은 큰 회사에 있으니 거인 발치에 선 아이 같은 기분이라고 해요.",
+   "blank": "巨人",
    "src": "made"
   }
  ],
@@ -15299,6 +15875,22 @@
    "blank": "并非"
   }
  ],
+ "w|幸会": [
+  {
+   "text": "新娘的舅舅握着张伟的手说：“幸会，幸会，久仰大名！”",
+   "en": "The bride's uncle shook Zhang Wei's hand and said, \"Delighted to meet you, I've heard so much about you!\"",
+   "ko": "신부의 외삼촌은 장웨이의 손을 잡고 \"반갑네, 이름은 많이 들었어!\"라고 했어요.",
+   "blank": "幸会",
+   "src": "made"
+  },
+  {
+   "text": "客户总监走过来跟刘芳握手：“幸会，以后多合作。”",
+   "en": "The client director came over and shook Liu Fang's hand: \"A pleasure, I look forward to working together.\"",
+   "ko": "고객사 이사가 다가와 류팡과 악수하며 \"반갑습니다, 앞으로 잘 부탁해요\"라고 했어요.",
+   "blank": "幸会",
+   "src": "made"
+  }
+ ],
  "w|幸福": [
   {
    "text": "祝你幸福。",
@@ -15851,6 +16443,22 @@
    "blank": "强"
   }
  ],
+ "w|强壮": [
+  {
+   "text": "体育老师说陈杰身体强壮，很适合练举重。",
+   "en": "The PE teacher says Chen Jie is strong and well suited to weightlifting.",
+   "ko": "체육 선생님은 천제가 몸이 튼튼해서 역도를 하기에 딱 좋다고 해요.",
+   "blank": "强壮",
+   "src": "made"
+  },
+  {
+   "text": "渔民们个个皮肤黝黑、身体强壮。",
+   "en": "The fishermen are all tanned and strong.",
+   "ko": "어부들은 모두 피부가 까맣고 몸이 튼튼해요.",
+   "blank": "强壮",
+   "src": "made"
+  }
+ ],
  "w|强大": [
   {
    "text": "这支队伍很强大。",
@@ -15878,6 +16486,22 @@
    "en": "After that concert, Xiaoxue felt a strong desire to learn the cello.",
    "ko": "그 음악회를 듣고 나서 샤오쉐는 첼로를 배우고 싶다는 강한 열망이 생겼어요.",
    "blank": "强烈",
+   "src": "made"
+  }
+ ],
+ "w|强迫": [
+  {
+   "text": "陈杰的妈妈从来不强迫他上补习班。",
+   "en": "Chen Jie's mother has never forced him to go to cram school.",
+   "ko": "천제의 엄마는 한 번도 억지로 학원에 보낸 적이 없어요.",
+   "blank": "强迫",
+   "src": "made"
+  },
+  {
+   "text": "小雪的妈妈总强迫她涂厚厚的防晒霜。",
+   "en": "Xiaoxue's mother always makes her put on thick sunscreen.",
+   "ko": "샤오쉐의 엄마는 늘 억지로 선크림을 두껍게 바르게 해요.",
+   "blank": "强迫",
    "src": "made"
   }
  ],
@@ -16375,6 +16999,22 @@
    "en": "Don't forget to bring the keys.",
    "ko": "열쇠 가져가는 거 잊지 마.",
    "blank": "忘"
+  }
+ ],
+ "w|忘掉": [
+  {
+   "text": "老师劝陈杰忘掉上次比赛的失利，好好准备下一场。",
+   "en": "The teacher urged Chen Jie to forget last match's defeat and prepare well for the next one.",
+   "ko": "선생님은 천제에게 지난 경기 패배는 잊고 다음 경기를 잘 준비하라고 했어요.",
+   "blank": "忘掉",
+   "src": "made"
+  },
+  {
+   "text": "小雪说，看着大海就能忘掉工作上的烦恼。",
+   "en": "Xiaoxue says looking at the sea makes her forget her worries at work.",
+   "ko": "샤오쉐는 바다를 보고 있으면 회사 고민을 잊을 수 있다고 해요.",
+   "blank": "忘掉",
+   "src": "made"
   }
  ],
  "w|忘记": [
@@ -17125,6 +17765,22 @@
    "en": "He showed a surprised look.",
    "ko": "그는 놀란 표정을 지었어.",
    "blank": "惊讶"
+  }
+ ],
+ "w|惨": [
+  {
+   "text": "伴郎们闹洞房输了游戏，被罚得很惨。",
+   "en": "The groomsmen lost the wedding-night games and got punished badly.",
+   "ko": "들러리들은 신방 놀이에서 게임에 져서 혹독한 벌칙을 받았어요.",
+   "blank": "惨",
+   "src": "made"
+  },
+  {
+   "text": "刘芳第一天就把咖啡洒在键盘上，说自己太惨了。",
+   "en": "Liu Fang spilled coffee on her keyboard on her very first day and said she was so unlucky.",
+   "ko": "류팡은 첫날부터 키보드에 커피를 쏟고는 자기가 너무 불쌍하다고 했어요.",
+   "blank": "惨",
+   "src": "made"
   }
  ],
  "w|惩罚": [
@@ -19883,6 +20539,22 @@
    "src": "made"
   }
  ],
+ "w|插": [
+  {
+   "text": "新娘在头发上插了一朵白玫瑰。",
+   "en": "The bride tucked a white rose into her hair.",
+   "ko": "신부는 머리에 하얀 장미 한 송이를 꽂았어요.",
+   "blank": "插",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的电脑插上电源以后还是开不了机。",
+   "en": "Liu Fang's computer still wouldn't turn on after she plugged it in.",
+   "ko": "류팡의 컴퓨터는 전원을 꽂아도 켜지지 않았어요.",
+   "blank": "插",
+   "src": "made"
+  }
+ ],
  "w|搜查": [
   {
    "text": "警察在搜查房间。",
@@ -20160,6 +20832,22 @@
    "en": "I'm not very good at talking.",
    "ko": "저는 말을 잘 못해요.",
    "blank": "擅长",
+   "src": "made"
+  }
+ ],
+ "w|操作": [
+  {
+   "text": "实验室的新机器怎么操作，老师演示了好几遍。",
+   "en": "The teacher demonstrated several times how to operate the new machine in the lab.",
+   "ko": "선생님은 실험실의 새 기계를 어떻게 조작하는지 여러 번 시범을 보였어요.",
+   "blank": "操作",
+   "src": "made"
+  },
+  {
+   "text": "教练教小雪怎么操作冲浪板，她摔了好几次。",
+   "en": "The instructor taught Xiaoxue how to handle the surfboard, and she fell off several times.",
+   "ko": "강사가 샤오쉐에게 서핑보드 다루는 법을 가르쳐 줬는데 그녀는 여러 번 넘어졌어요.",
+   "blank": "操作",
    "src": "made"
   }
  ],
@@ -22887,6 +23575,22 @@
    "blank": "样子"
   }
  ],
+ "w|核心": [
+  {
+   "text": "陈杰是篮球队的核心，比赛时大家都把球传给他。",
+   "en": "Chen Jie is the core of the basketball team, and everyone passes him the ball in games.",
+   "ko": "천제는 농구부의 핵심이라 경기 때 다들 그에게 공을 패스해요.",
+   "blank": "核心",
+   "src": "made"
+  },
+  {
+   "text": "小雪说，这次旅行的核心就是什么都不干，好好休息。",
+   "en": "Xiaoxue says the whole point of this trip is to do nothing and rest properly.",
+   "ko": "샤오쉐는 이번 여행의 핵심은 아무것도 안 하고 푹 쉬는 거라고 해요.",
+   "blank": "核心",
+   "src": "made"
+  }
+ ],
  "w|根据": [
   {
    "text": "根据规定来。",
@@ -23144,6 +23848,22 @@
    "en": "A new café opened downstairs.",
    "ko": "아래층에 카페가 새로 생겼어요.",
    "blank": "楼下",
+   "src": "made"
+  }
+ ],
+ "w|概念": [
+  {
+   "text": "陈杰一开始搞不懂“函数”这个概念，问了老师三次。",
+   "en": "At first Chen Jie couldn't grasp the concept of a \"function\" and asked the teacher three times.",
+   "ko": "천제는 처음에 \"함수\"라는 개념을 이해하지 못해서 선생님께 세 번 물었어요.",
+   "blank": "概念",
+   "src": "made"
+  },
+  {
+   "text": "小雪说她对“慢生活”的概念，是在海边才真正明白的。",
+   "en": "Xiaoxue says she only truly understood the concept of \"slow living\" by the sea.",
+   "ko": "샤오쉐는 \"느린 삶\"이라는 개념을 바닷가에서야 진짜로 알게 됐다고 해요.",
+   "blank": "概念",
    "src": "made"
   }
  ],
@@ -23497,6 +24217,22 @@
    "src": "made"
   }
  ],
+ "w|武装": [
+  {
+   "text": "历史课上，老师讲了古代农民武装起义的经过。",
+   "en": "In history class, the teacher described how an ancient peasant armed uprising unfolded.",
+   "ko": "역사 시간에 선생님은 옛날 농민 무장 봉기의 경과를 설명했어요.",
+   "blank": "武装",
+   "src": "made"
+  },
+  {
+   "text": "小雪在海边看到海警全副武装地巡逻。",
+   "en": "By the sea Xiaoxue saw the coast guard patrolling in full gear.",
+   "ko": "샤오쉐는 바닷가에서 해경이 완전 무장을 하고 순찰하는 걸 봤어요.",
+   "blank": "武装",
+   "src": "made"
+  }
+ ],
  "w|死": [
   {
    "text": "饿得要死。",
@@ -23553,6 +24289,22 @@
    "en": "Observe a moment of silence for the dead.",
    "ko": "고인을 위해 묵념해.",
    "blank": "死者"
+  }
+ ],
+ "w|残忍": [
+  {
+   "text": "读到书里的猎人对待动物那么残忍，陈杰难过了半天。",
+   "en": "Reading how cruelly the hunter in the book treated animals, Chen Jie was upset for a long time.",
+   "ko": "책 속 사냥꾼이 동물을 그렇게 잔인하게 대하는 걸 읽고 천제는 한참 속상했어요.",
+   "blank": "残忍",
+   "src": "made"
+  },
+  {
+   "text": "小雪觉得把海龟关在小池子里给游客看很残忍。",
+   "en": "Xiaoxue thinks keeping sea turtles in a small pool for tourists to look at is cruel.",
+   "ko": "샤오쉐는 바다거북을 작은 수조에 가둬 놓고 관광객에게 보여 주는 게 잔인하다고 생각해요.",
+   "blank": "残忍",
+   "src": "made"
   }
  ],
  "w|段": [
@@ -23829,6 +24581,22 @@
    "blank": "水"
   }
  ],
+ "w|水平": [
+  {
+   "text": "乐队的水平很高，好几位客人跟着跳起了舞。",
+   "en": "The band was really good, and several guests got up to dance.",
+   "ko": "밴드 실력이 아주 좋아서 손님 몇 명이 따라 춤을 췄어요.",
+   "blank": "水平",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的英语水平不错，经理让她负责和海外客户联系。",
+   "en": "Liu Fang's English is good, so the manager put her in charge of contacting overseas clients.",
+   "ko": "류팡은 영어 실력이 좋아서 매니저가 해외 고객 연락을 맡겼어요.",
+   "blank": "水平",
+   "src": "made"
+  }
+ ],
  "w|永远": [
   {
    "text": "我永远记得你。",
@@ -23855,6 +24623,22 @@
    "en": "Don't beg me.",
    "ko": "나한테 빌지 마.",
    "blank": "求"
+  }
+ ],
+ "w|求婚": [
+  {
+   "text": "张伟是在一场烟花下向新娘求婚的。",
+   "en": "Zhang Wei proposed to the bride beneath a fireworks display.",
+   "ko": "장웨이는 불꽃놀이 아래에서 신부에게 청혼했어요.",
+   "blank": "求婚",
+   "src": "made"
+  },
+  {
+   "text": "午饭时同事们聊起谁最近被求婚了，刘芳听得很认真。",
+   "en": "At lunch colleagues chatted about who had been proposed to lately, and Liu Fang listened closely.",
+   "ko": "점심때 동료들이 최근 누가 청혼을 받았는지 얘기하자 류팡은 열심히 들었어요.",
+   "blank": "求婚",
+   "src": "made"
   }
  ],
  "w|汉语": [
@@ -24288,6 +25072,22 @@
    "en": "He fell and his knee was bleeding.",
    "ko": "그는 넘어져서 무릎에서 피가 났어요.",
    "blank": "流血",
+   "src": "made"
+  }
+ ],
+ "w|流行": [
+  {
+   "text": "现在很流行在草地上办婚礼，张伟他们也选了户外。",
+   "en": "Lawn weddings are popular now, so Zhang Wei and his bride chose outdoors too.",
+   "ko": "요즘은 잔디밭 결혼식이 유행이라 장웨이네도 야외를 골랐어요.",
+   "blank": "流行",
+   "src": "made"
+  },
+  {
+   "text": "公司里流行午睡，到了一点办公室就安静下来了。",
+   "en": "Midday naps are popular at the company, and the office goes quiet at one o'clock.",
+   "ko": "회사에서는 낮잠이 유행이라 한 시가 되면 사무실이 조용해져요.",
+   "blank": "流行",
    "src": "made"
   }
  ],
@@ -24791,6 +25591,22 @@
    "src": "made"
   }
  ],
+ "w|潜艇": [
+  {
+   "text": "陈杰在科技节上做了一个会下潜的潜艇模型。",
+   "en": "At the science festival, Chen Jie built a model submarine that can dive.",
+   "ko": "천제는 과학 축제에서 물속으로 잠수하는 잠수함 모형을 만들었어요.",
+   "blank": "潜艇",
+   "src": "made"
+  },
+  {
+   "text": "港口停着一艘退役的潜艇，现在改成了博物馆。",
+   "en": "A decommissioned submarine is docked at the port and has been turned into a museum.",
+   "ko": "항구에 퇴역한 잠수함 한 척이 있는데 지금은 박물관으로 바뀌었어요.",
+   "blank": "潜艇",
+   "src": "made"
+  }
+ ],
  "w|激动": [
   {
    "text": "我很激动。",
@@ -25111,6 +25927,22 @@
    "blank": "熊"
   }
  ],
+ "w|熟": [
+  {
+   "text": "陈杰和新同桌很快就混熟了。",
+   "en": "Chen Jie quickly got to know his new deskmate well.",
+   "ko": "천제는 새 짝과 금방 친해졌어요.",
+   "blank": "熟",
+   "src": "made"
+  },
+  {
+   "text": "小雪问摊主螃蟹熟了没有，摊主说再等五分钟。",
+   "en": "Xiaoxue asked the stall owner if the crabs were cooked yet, and he said to wait another five minutes.",
+   "ko": "샤오쉐가 게가 다 익었는지 묻자 노점 주인은 오 분만 더 기다리라고 했어요.",
+   "blank": "熟",
+   "src": "made"
+  }
+ ],
  "w|熟悉": [
   {
    "text": "我对这里很熟悉。",
@@ -25123,6 +25955,22 @@
    "en": "Get familiar with the surroundings first.",
    "ko": "먼저 환경을 익혀 봐.",
    "blank": "熟悉"
+  }
+ ],
+ "w|爆": [
+  {
+   "text": "化学实验时一个气球突然爆了，全班都吓了一跳。",
+   "en": "A balloon suddenly burst during the chemistry experiment, and the whole class jumped.",
+   "ko": "화학 실험 중에 풍선 하나가 갑자기 터져서 반 전체가 깜짝 놀랐어요.",
+   "blank": "爆",
+   "src": "made"
+  },
+  {
+   "text": "太阳太大，小雪的拖鞋被晒得都快爆了。",
+   "en": "The sun was so strong that Xiaoxue's flip-flops looked ready to split.",
+   "ko": "햇볕이 너무 세서 샤오쉐의 슬리퍼가 터질 것 같았어요.",
+   "blank": "爆",
+   "src": "made"
   }
  ],
  "w|爆炸": [
@@ -25267,6 +26115,22 @@
    "blank": "爸"
   }
  ],
+ "w|爸妈": [
+  {
+   "text": "张伟的爸妈激动得一直在擦眼泪。",
+   "en": "Zhang Wei's mum and dad were so moved they kept wiping away tears.",
+   "ko": "장웨이의 부모님은 감격해서 계속 눈물을 닦았어요.",
+   "blank": "爸妈",
+   "src": "made"
+  },
+  {
+   "text": "下班后刘芳给爸妈打电话，说新同事都很好。",
+   "en": "After work Liu Fang called her mum and dad and said her new colleagues are all nice.",
+   "ko": "퇴근 후 류팡은 부모님께 전화해서 새 동료들이 다 좋다고 했어요.",
+   "blank": "爸妈",
+   "src": "made"
+  }
+ ],
  "w|爸爸": [
   {
    "text": "爸爸还在忙。",
@@ -25337,6 +26201,22 @@
    "en": "That cow is very big.",
    "ko": "그 소는 아주 커.",
    "blank": "牛"
+  }
+ ],
+ "w|牛仔": [
+  {
+   "text": "伴郎穿了一身牛仔服就来了，被伴娘笑了半天。",
+   "en": "One groomsman turned up in a denim outfit, and the bridesmaids laughed at him for ages.",
+   "ko": "들러리 한 명이 청바지 차림으로 와서 신부 들러리들에게 한참 놀림을 받았어요.",
+   "blank": "牛仔",
+   "src": "made"
+  },
+  {
+   "text": "公司没有着装要求，刘芳穿着牛仔裤就来上班了。",
+   "en": "The company has no dress code, so Liu Fang came to work in jeans.",
+   "ko": "회사에 복장 규정이 없어서 류팡은 청바지를 입고 출근했어요.",
+   "blank": "牛仔",
+   "src": "made"
   }
  ],
  "w|牛奶": [
@@ -26377,6 +27257,22 @@
    "blank": "男孩"
   }
  ],
+ "w|男性": [
+  {
+   "text": "伴郎团都是男性，个个穿着一样的蓝西装。",
+   "en": "The groomsmen are all men, each in the same blue suit.",
+   "ko": "들러리단은 모두 남성인데 다들 똑같은 파란 정장을 입었어요.",
+   "blank": "男性",
+   "src": "made"
+  },
+  {
+   "text": "技术部里男性多，刘芳是组里唯一的女工程师。",
+   "en": "There are more men in the tech department, and Liu Fang is the only female engineer on her team.",
+   "ko": "기술부에는 남성이 많아서 류팡은 팀에서 유일한 여성 엔지니어예요.",
+   "blank": "男性",
+   "src": "made"
+  }
+ ],
  "w|男朋友": [
   {
    "text": "我有男朋友。",
@@ -26953,6 +27849,22 @@
    "blank": "直接"
   }
  ],
+ "w|直播": [
+  {
+   "text": "毕业典礼在网上直播，陈杰的奶奶在家也能看到。",
+   "en": "The graduation ceremony was streamed live online, so Chen Jie's grandmother could watch at home.",
+   "ko": "졸업식이 인터넷으로 생중계돼서 천제의 할머니도 집에서 볼 수 있었어요.",
+   "blank": "直播",
+   "src": "made"
+  },
+  {
+   "text": "小雪用手机直播了海上的日落，好多朋友在线看。",
+   "en": "Xiaoxue livestreamed the sunset over the sea on her phone, and lots of friends watched.",
+   "ko": "샤오쉐는 휴대폰으로 바다 일몰을 생방송했고 많은 친구가 실시간으로 봤어요.",
+   "blank": "直播",
+   "src": "made"
+  }
+ ],
  "w|相信": [
   {
    "text": "我相信你。",
@@ -27359,6 +28271,22 @@
    "blank": "睡觉"
   }
  ],
+ "w|瞄准": [
+  {
+   "text": "新娘背对着人群抛花束，没瞄准，花落到了张伟的哥哥手里。",
+   "en": "The bride threw the bouquet with her back to the crowd, didn't aim, and it landed in Zhang Wei's brother's hands.",
+   "ko": "신부가 사람들을 등지고 부케를 던졌는데 조준을 못 해서 장웨이 형 손에 떨어졌어요.",
+   "blank": "瞄准",
+   "src": "made"
+  },
+  {
+   "text": "经理说，这款产品主要瞄准年轻上班族。",
+   "en": "The manager said this product mainly targets young office workers.",
+   "ko": "매니저는 이 제품이 주로 젊은 직장인을 겨냥한다고 했어요.",
+   "blank": "瞄准",
+   "src": "made"
+  }
+ ],
  "w|瞎": [
   {
    "text": "有个游客对着展品瞎指挥，非说标签写错了。",
@@ -27417,6 +28345,22 @@
    "en": "Let me see your hand.",
    "ko": "손 좀 보여 줘.",
    "blank": "瞧瞧"
+  }
+ ],
+ "w|矛盾": [
+  {
+   "text": "陈杰和同桌闹了点矛盾，老师让他们当面说清楚。",
+   "en": "Chen Jie had a bit of a falling-out with his deskmate, and the teacher had them talk it out face to face.",
+   "ko": "천제가 짝과 약간 갈등이 생기자 선생님이 둘이 직접 얘기해서 풀라고 했어요.",
+   "blank": "矛盾",
+   "src": "made"
+  },
+  {
+   "text": "小雪想住海边又怕潮湿，心里很矛盾。",
+   "en": "Xiaoxue wants to live by the sea but hates the damp, so she's torn.",
+   "ko": "샤오쉐는 바닷가에 살고 싶지만 습한 게 싫어서 마음이 오락가락해요.",
+   "blank": "矛盾",
+   "src": "made"
   }
  ],
  "w|知": [
@@ -27759,6 +28703,22 @@
    "blank": "社会"
   }
  ],
+ "w|社会主义": [
+  {
+   "text": "政治课本里有一章专门讲社会主义的发展历程。",
+   "en": "The politics textbook has a chapter devoted to the development of socialism.",
+   "ko": "정치 교과서에는 사회주의의 발전 과정을 다루는 장이 하나 있어요.",
+   "blank": "社会主义",
+   "src": "made"
+  },
+  {
+   "text": "民宿里住着一位退休教授，晚上跟小雪聊起了社会主义的历史。",
+   "en": "A retired professor staying at the guesthouse chatted with Xiaoxue in the evening about the history of socialism.",
+   "ko": "민박에 묵는 은퇴한 교수님이 저녁에 샤오쉐와 사회주의의 역사에 대해 이야기했어요.",
+   "blank": "社会主义",
+   "src": "made"
+  }
+ ],
  "w|社区": [
   {
    "text": "周强每周写一篇社区新闻，专门讲街坊邻里的小事。",
@@ -27903,6 +28863,22 @@
    "en": "This is a mysterious place.",
    "ko": "여긴 신비한 곳이야.",
    "blank": "神秘"
+  }
+ ],
+ "w|神经病": [
+  {
+   "text": "张伟的朋友开玩笑说：“大冬天在外面办婚礼，你真是神经病！”",
+   "en": "Zhang Wei's friend joked, \"Holding a wedding outside in the dead of winter—you're nuts!\"",
+   "ko": "장웨이 친구는 \"한겨울에 밖에서 결혼식이라니, 너 진짜 제정신 아니다!\"라고 농담했어요.",
+   "blank": "神经病",
+   "src": "made"
+  },
+  {
+   "text": "有个同事说刘芳第一天就加班到九点，简直是神经病。",
+   "en": "A colleague said Liu Fang working until nine on her first day was just crazy.",
+   "ko": "한 동료는 류팡이 첫날부터 아홉 시까지 야근한 건 정말 미친 짓이라고 했어요.",
+   "blank": "神经病",
+   "src": "made"
   }
  ],
  "w|票": [
@@ -28985,6 +29961,22 @@
    "blank": "约会"
   }
  ],
+ "w|纪念": [
+  {
+   "text": "为了纪念建校六十周年，学校种了一排银杏树。",
+   "en": "To commemorate the school's sixtieth anniversary, they planted a row of ginkgo trees.",
+   "ko": "개교 육십 주년을 기념해서 학교는 은행나무 한 줄을 심었어요.",
+   "blank": "纪念",
+   "src": "made"
+  },
+  {
+   "text": "小雪买了一串贝壳风铃作纪念。",
+   "en": "Xiaoxue bought a string of seashell wind chimes as a keepsake.",
+   "ko": "샤오쉐는 기념으로 조개껍데기 풍경을 하나 샀어요.",
+   "blank": "纪念",
+   "src": "made"
+  }
+ ],
  "w|紧": [
   {
    "text": "这双鞋有点紧。",
@@ -29127,6 +30119,22 @@
    "en": "Join this organization.",
    "ko": "이 조직에 들어와.",
    "blank": "组织"
+  }
+ ],
+ "w|绅士": [
+  {
+   "text": "张伟像个绅士一样，替新娘拉开了椅子。",
+   "en": "Like a gentleman, Zhang Wei pulled out the chair for the bride.",
+   "ko": "장웨이는 신사처럼 신부를 위해 의자를 빼 주었어요.",
+   "blank": "绅士",
+   "src": "made"
+  },
+  {
+   "text": "大家都说经理是个绅士，从来不对下属发脾气。",
+   "en": "Everyone says the manager is a gentleman who never loses his temper with his staff.",
+   "ko": "다들 매니저는 신사라서 부하 직원에게 화를 내는 법이 없다고 해요.",
+   "blank": "绅士",
+   "src": "made"
   }
  ],
  "w|细节": [
@@ -29345,6 +30353,22 @@
    "blank": "结果"
   }
  ],
+ "w|结论": [
+  {
+   "text": "做完实验，陈杰把结论写在了实验报告的最后。",
+   "en": "After the experiment, Chen Jie wrote the conclusion at the end of the lab report.",
+   "ko": "실험을 마친 뒤 천제는 결론을 실험 보고서 맨 끝에 적었어요.",
+   "blank": "结论",
+   "src": "made"
+  },
+  {
+   "text": "小雪比较了三家民宿，得出的结论是这家最划算。",
+   "en": "Xiaoxue compared three guesthouses and concluded this one was the best value.",
+   "ko": "샤오쉐는 민박 세 곳을 비교해 보고 여기가 제일 가성비가 좋다는 결론을 내렸어요.",
+   "blank": "结论",
+   "src": "made"
+  }
+ ],
  "w|给": [
   {
    "text": "给我。",
@@ -29403,6 +30427,22 @@
    "src": "made"
   }
  ],
+ "w|统一": [
+  {
+   "text": "学校要求全体学生统一穿校服参加升旗仪式。",
+   "en": "The school requires all students to wear uniform for the flag-raising ceremony.",
+   "ko": "학교는 모든 학생이 국기 게양식 때 교복을 통일해서 입도록 해요.",
+   "blank": "统一",
+   "src": "made"
+  },
+  {
+   "text": "海边的小摊都统一刷成了蓝白两色。",
+   "en": "The little stalls by the sea are all painted in matching blue and white.",
+   "ko": "바닷가 노점들은 모두 파란색과 흰색으로 통일해서 칠했어요.",
+   "blank": "统一",
+   "src": "made"
+  }
+ ],
  "w|统治": [
   {
    "text": "那个黑帮曾经统治这条街十几年，直到王刚他们把它端掉。",
@@ -29431,6 +30471,22 @@
    "en": "Let's keep going.",
    "ko": "우리 계속하자.",
    "blank": "继续"
+  }
+ ],
+ "w|维护": [
+  {
+   "text": "陈杰当了纪律委员，负责维护课堂秩序。",
+   "en": "Chen Jie became the discipline monitor, responsible for keeping order in class.",
+   "ko": "천제는 규율 위원이 되어 수업 질서를 지키는 일을 맡았어요.",
+   "blank": "维护",
+   "src": "made"
+  },
+  {
+   "text": "志愿者们每周来清理沙滩，维护海边的环境。",
+   "en": "Volunteers come every week to clean the beach and protect the seaside environment.",
+   "ko": "자원봉사자들이 매주 와서 모래사장을 청소하며 바닷가 환경을 지켜요.",
+   "blank": "维护",
+   "src": "made"
   }
  ],
  "w|维持": [
@@ -29687,6 +30743,22 @@
    "blank": "美妙"
   }
  ],
+ "w|群": [
+  {
+   "text": "一群小孩围着新娘要喜糖，张伟只好去车里再拿一袋。",
+   "en": "A crowd of kids surrounded the bride asking for wedding sweets, so Zhang Wei went to the car for another bag.",
+   "ko": "아이들 한 무리가 신부를 둘러싸고 사탕을 달라고 해서 장웨이가 차에 가서 한 봉지 더 가져왔어요.",
+   "blank": "群",
+   "src": "made"
+  },
+  {
+   "text": "经理把刘芳拉进了一个工作群，消息一下子就来了几十条。",
+   "en": "The manager added Liu Fang to a work group chat, and dozens of messages arrived at once.",
+   "ko": "매니저가 류팡을 업무 단톡방에 넣자 메시지가 한꺼번에 수십 개 왔어요.",
+   "blank": "群",
+   "src": "made"
+  }
+ ],
  "w|翻": [
   {
    "text": "周强翻遍了十年来的旧报纸，才找到那条消息。",
@@ -29801,6 +30873,22 @@
    "en": "Oh my God!",
    "ko": "맙소사!",
    "blank": "老天"
+  }
+ ],
+ "w|老头": [
+  {
+   "text": "门口有个陌生老头一直在看热闹，张伟请他进来喝杯喜酒。",
+   "en": "A strange old man at the door kept watching, so Zhang Wei invited him in for a drink.",
+   "ko": "입구에서 낯선 노인이 계속 구경하고 있어서 장웨이가 들어와 축하주 한잔하라고 했어요.",
+   "blank": "老头",
+   "src": "made"
+  },
+  {
+   "text": "门卫是个和气的老头，第一天就记住了刘芳的名字。",
+   "en": "The security guard is a friendly old man who remembered Liu Fang's name on the first day.",
+   "ko": "경비원은 친절한 할아버지인데 첫날부터 류팡의 이름을 기억했어요.",
+   "blank": "老头",
+   "src": "made"
   }
  ],
  "w|老妈": [
@@ -30334,6 +31422,22 @@
    "en": "While Xiaoxue was singing, the backing music suddenly stopped, so she sang unaccompanied.",
    "ko": "샤오쉐가 노래하는데 배경 음악이 갑자기 끊겨서 무반주로 불렀어요.",
    "blank": "背景",
+   "src": "made"
+  }
+ ],
+ "w|胖子": [
+  {
+   "text": "张伟小时候是个小胖子，现在穿上西装却特别精神。",
+   "en": "Zhang Wei was a chubby kid, but now he looks sharp in a suit.",
+   "ko": "장웨이는 어릴 때 꼬마 뚱보였는데 지금은 정장을 입으니 아주 멋져요.",
+   "blank": "胖子",
+   "src": "made"
+  },
+  {
+   "text": "隔壁组有个爱笑的小胖子，一上午给刘芳送了两回零食。",
+   "en": "There's a cheerful chubby guy on the next team who brought Liu Fang snacks twice in one morning.",
+   "ko": "옆 팀에 잘 웃는 통통한 친구가 있는데 오전에만 두 번이나 류팡에게 간식을 갖다줬어요.",
+   "blank": "胖子",
    "src": "made"
   }
  ],
@@ -31929,6 +33033,22 @@
    "blank": "规定"
   }
  ],
+ "w|规模": [
+  {
+   "text": "今年学校的运动会规模比往年大了一倍。",
+   "en": "This year's school sports day is twice the scale of previous years.",
+   "ko": "올해 학교 운동회는 규모가 예년보다 두 배 커졌어요.",
+   "blank": "规模",
+   "src": "made"
+  },
+  {
+   "text": "这个渔港规模不大，但每天早上都很热闹。",
+   "en": "This fishing harbour isn't large in scale, but it's lively every morning.",
+   "ko": "이 어항은 규모가 크지 않지만 매일 아침 북적여요.",
+   "blank": "规模",
+   "src": "made"
+  }
+ ],
  "w|规矩": [
   {
    "text": "这里有规矩。",
@@ -32377,6 +33497,22 @@
    "blank": "设计"
   }
  ],
+ "w|访问": [
+  {
+   "text": "下周有一位作家要来学校访问，陈杰准备了几个问题。",
+   "en": "A writer is visiting the school next week, and Chen Jie has prepared some questions.",
+   "ko": "다음 주에 작가 한 분이 학교를 방문해서 천제는 질문 몇 개를 준비했어요.",
+   "blank": "访问",
+   "src": "made"
+  },
+  {
+   "text": "小雪在一个旅游网站上访问了渔村的一位老船长。",
+   "en": "Xiaoxue interviewed an old sea captain from the fishing village for a travel website.",
+   "ko": "샤오쉐는 한 여행 웹사이트를 위해 어촌의 늙은 선장님을 인터뷰했어요.",
+   "blank": "访问",
+   "src": "made"
+  }
+ ],
  "w|证人": [
   {
    "text": "他是重要证人。",
@@ -32433,6 +33569,22 @@
    "en": "This proves he was right.",
    "ko": "이건 그 사람이 맞았다는 증거야.",
    "blank": "证明"
+  }
+ ],
+ "w|评价": [
+  {
+   "text": "老师在陈杰的作文后面写了很高的评价。",
+   "en": "The teacher wrote very high praise at the end of Chen Jie's essay.",
+   "ko": "선생님은 천제의 작문 끝에 아주 높은 평가를 적었어요.",
+   "blank": "评价",
+   "src": "made"
+  },
+  {
+   "text": "这家海鲜店网上的评价很好，小雪特意来尝尝。",
+   "en": "This seafood restaurant has great reviews online, so Xiaoxue came especially to try it.",
+   "ko": "이 해산물 가게는 인터넷 평가가 좋아서 샤오쉐가 일부러 맛보러 왔어요.",
+   "blank": "评价",
+   "src": "made"
   }
  ],
  "w|诅咒": [
@@ -33123,6 +34275,22 @@
    "blank": "负责"
   }
  ],
+ "w|贡献": [
+  {
+   "text": "校长表扬了几位老师对学校的贡献。",
+   "en": "The principal praised several teachers for their contribution to the school.",
+   "ko": "교장 선생님은 몇몇 선생님이 학교에 한 공헌을 칭찬했어요.",
+   "blank": "贡献",
+   "src": "made"
+  },
+  {
+   "text": "导游说，老船长为村里的渔业作出了很大贡献。",
+   "en": "The guide said the old captain made a big contribution to the village's fishing industry.",
+   "ko": "가이드는 늙은 선장님이 마을 어업에 큰 공헌을 했다고 말했어요.",
+   "blank": "贡献",
+   "src": "made"
+  }
+ ],
  "w|财产": [
   {
    "text": "这是他全部的财产。",
@@ -33503,6 +34671,22 @@
    "en": "I super like it.",
    "ko": "완전 좋아해.",
    "blank": "超级"
+  }
+ ],
+ "w|超越": [
+  {
+   "text": "陈杰的目标是这次考试超越自己上次的分数。",
+   "en": "Chen Jie's goal is to beat his own score from last time on this test.",
+   "ko": "천제의 목표는 이번 시험에서 지난번 자기 점수를 뛰어넘는 거예요.",
+   "blank": "超越",
+   "src": "made"
+  },
+  {
+   "text": "小雪游泳时想超越前面的哥哥，结果呛了一口水。",
+   "en": "Swimming, Xiaoxue tried to overtake her brother ahead and ended up choking on water.",
+   "ko": "샤오쉐는 수영하다가 앞서가는 오빠를 따라잡으려다가 물을 먹었어요.",
+   "blank": "超越",
+   "src": "made"
   }
  ],
  "w|超过": [
@@ -34065,6 +35249,22 @@
    "en": "The temperature reached its peak.",
    "ko": "온도가 최고점에 이르렀어.",
    "blank": "达到"
+  }
+ ],
+ "w|达成": [
+  {
+   "text": "两个班吵了半天，终于就球场的使用时间达成了协议。",
+   "en": "After arguing for ages, the two classes finally reached an agreement on court times.",
+   "ko": "두 반은 한참 다투다가 마침내 운동장 쓰는 시간에 합의했어요.",
+   "blank": "达成",
+   "src": "made"
+  },
+  {
+   "text": "小雪和船老板讨价还价，最后达成了半价出海的协议。",
+   "en": "Xiaoxue haggled with the boat owner and finally struck a deal to go out at half price.",
+   "ko": "샤오쉐는 배 주인과 흥정해서 결국 반값에 바다에 나가기로 합의했어요.",
+   "blank": "达成",
+   "src": "made"
   }
  ],
  "w|迅速": [
@@ -36075,6 +37275,22 @@
    "blank": "间谍"
   }
  ],
+ "w|闻": [
+  {
+   "text": "新娘低头闻了一下手里的花，笑得特别甜。",
+   "en": "The bride bent her head to smell the flowers in her hand, smiling sweetly.",
+   "ko": "신부는 고개를 숙여 손에 든 꽃 향기를 맡고 아주 달콤하게 웃었어요.",
+   "blank": "闻",
+   "src": "made"
+  },
+  {
+   "text": "刘芳一进茶水间就闻到了一股刚烤好的面包香。",
+   "en": "As soon as Liu Fang walked into the pantry, she smelled freshly baked bread.",
+   "ko": "류팡은 탕비실에 들어서자마자 갓 구운 빵 냄새를 맡았어요.",
+   "blank": "闻",
+   "src": "made"
+  }
+ ],
  "w|阁下": [
   {
    "text": "请问阁下贵姓？",
@@ -36453,6 +37669,22 @@
    "src": "made"
   }
  ],
+ "w|障碍": [
+  {
+   "text": "学校给坐轮椅的同学修了无障碍通道。",
+   "en": "The school built a step-free ramp for the student in a wheelchair.",
+   "ko": "학교는 휠체어 타는 학생을 위해 장애물 없는 통로를 만들었어요.",
+   "blank": "障碍",
+   "src": "made"
+  },
+  {
+   "text": "小雪小时候怕水，学游泳是她克服的第一个障碍。",
+   "en": "Xiaoxue was afraid of water as a child, and learning to swim was the first obstacle she overcame.",
+   "ko": "샤오쉐는 어릴 때 물을 무서워해서 수영 배우기가 그녀가 넘은 첫 장애물이었어요.",
+   "blank": "障碍",
+   "src": "made"
+  }
+ ],
  "w|难": [
   {
    "text": "这题很难。",
@@ -36601,6 +37833,22 @@
    "src": "made"
   }
  ],
+ "w|零": [
+  {
+   "text": "婚礼那天气温零下，客人们都穿着厚外套。",
+   "en": "It was below zero on the wedding day, and the guests all wore thick coats.",
+   "ko": "결혼식 날 기온이 영하라서 손님들이 모두 두꺼운 외투를 입었어요.",
+   "blank": "零",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的待办清单到下班时终于清零了。",
+   "en": "By the end of the day, Liu Fang's to-do list was finally cleared to zero.",
+   "ko": "퇴근할 때쯤 류팡의 할 일 목록이 드디어 하나도 안 남았어요.",
+   "blank": "零",
+   "src": "made"
+  }
+ ],
  "w|需": [
   {
    "text": "此事需谨慎。",
@@ -36613,6 +37861,22 @@
    "en": "I need to rest a bit.",
    "ko": "나는 잠깐 쉬어야 해.",
    "blank": "需"
+  }
+ ],
+ "w|需求": [
+  {
+   "text": "学校调查了学生的需求，决定多开几个兴趣班。",
+   "en": "The school surveyed students' needs and decided to add more interest clubs.",
+   "ko": "학교는 학생들의 수요를 조사해서 동아리 반을 더 열기로 했어요.",
+   "blank": "需求",
+   "src": "made"
+  },
+  {
+   "text": "夏天游客多，海边对救生员的需求特别大。",
+   "en": "There are many tourists in summer, and the demand for lifeguards on the beach is very high.",
+   "ko": "여름에는 관광객이 많아서 바닷가에 안전 요원 수요가 아주 커요.",
+   "blank": "需求",
+   "src": "made"
   }
  ],
  "w|需要": [
@@ -37372,6 +38636,22 @@
    "en": "This song demands a high pitch, and Xiaoxue's voice can just reach that height.",
    "ko": "이 노래는 음이 아주 높은데 샤오쉐의 목소리가 딱 그 높이까지 올라가요.",
    "blank": "高度",
+   "src": "made"
+  }
+ ],
+ "w|高级": [
+  {
+   "text": "婚宴上的菜都很高级，客人们吃得赞不绝口。",
+   "en": "The banquet dishes were all upscale, and the guests couldn't stop praising them.",
+   "ko": "피로연 음식이 다 고급스러워서 손님들이 칭찬을 멈추지 않았어요.",
+   "blank": "高级",
+   "src": "made"
+  },
+  {
+   "text": "刘芳的职位是高级工程师，比她想的还要忙。",
+   "en": "Liu Fang's title is senior engineer, and it's even busier than she expected.",
+   "ko": "류팡의 직위는 선임 엔지니어인데 생각보다 더 바빠요.",
+   "blank": "高级",
    "src": "made"
   }
  ],
