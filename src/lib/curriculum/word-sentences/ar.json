@@ -1213,6 +1213,22 @@
    "src": "made"
   }
  ],
+ "w|أخمص": [
+  {
+   "text": "أظهرت الصورة أثر أخمص قدم حافية على الأرض الموحلة.",
+   "en": "The photo showed the print of a bare sole on the muddy ground.",
+   "ko": "사진에는 진흙 바닥에 찍힌 맨발 발바닥 자국이 보였어요.",
+   "blank": "أخمص",
+   "src": "made"
+  },
+  {
+   "text": "ظهرت فقاعة مؤلمة في أخمص قدم سارة اليسرى.",
+   "en": "A painful blister appeared on the sole of Sara's left foot.",
+   "ko": "사라의 왼발 발바닥에 아픈 물집이 생겼어요.",
+   "blank": "أخمص",
+   "src": "made"
+  }
+ ],
  "w|أخير": [
   {
    "text": "هذا هو الحل الأخير لدينا.",
@@ -2280,6 +2296,22 @@
    "en": "Rana dropped the perfume bottle, but luckily it didn't break.",
    "ko": "라나는 향수병을 떨어뜨렸지만 다행히 깨지지 않았어요.",
    "blank": "أسقطت",
+   "src": "made"
+  }
+ ],
+ "w|أسقف": [
+  {
+   "text": "زار أسقف المدينة المركز ليشكر الضباط على حماية الاحتفال.",
+   "en": "The city's bishop visited the station to thank the officers for protecting the celebration.",
+   "ko": "시의 주교가 행사를 지켜 준 경찰들에게 고마움을 전하러 경찰서를 찾았어요.",
+   "blank": "أسقف",
+   "src": "made"
+  },
+  {
+   "text": "صافح أسقف البلدة العدائين عند خط النهاية.",
+   "en": "The town's bishop shook hands with the runners at the finish line.",
+   "ko": "마을 주교가 결승선에서 주자들과 악수했어요.",
+   "blank": "أسقف",
    "src": "made"
   }
  ],
@@ -5511,6 +5543,22 @@
    "blank": "إبريق"
   }
  ],
+ "w|إبط": [
+  {
+   "text": "حمل يوسف الملفات تحت إبطه وصعد إلى مكتب المدير.",
+   "en": "Youssef carried the files under his arm and went up to the chief's office.",
+   "ko": "유세프는 서류를 겨드랑이에 끼고 서장실로 올라갔어요.",
+   "blank": "إبطه",
+   "src": "made"
+  },
+  {
+   "text": "ثبتت سارة زجاجة الماء تحت إبطها وهي تفتح علبة الهلام.",
+   "en": "Sara held the water bottle under her arm while opening the gel pack.",
+   "ko": "사라는 물병을 겨드랑이에 끼고 젤 봉지를 뜯었어요.",
+   "blank": "إبطها",
+   "src": "made"
+  }
+ ],
  "w|إبلاغ": [
   {
    "text": "اتصل أحمد بحارس الغابة من أجل إبلاغ عن دخان قرب الوادي.",
@@ -8315,6 +8363,22 @@
    "blank": "ارتاح"
   }
  ],
+ "w|ارتباك": [
+  {
+   "text": "لاحظ يوسف ارتباك الشاهد حين سأله عن الوقت.",
+   "en": "Youssef noticed the witness's confusion when he asked him about the time.",
+   "ko": "유세프는 시간을 묻자 증인이 당황하는 걸 알아챘어요.",
+   "blank": "ارتباك",
+   "src": "made"
+  },
+  {
+   "text": "سبب تغيير المسار ارتباكا بين العدائين عند خط البداية.",
+   "en": "The change of route caused confusion among the runners at the starting line.",
+   "ko": "코스 변경 때문에 출발선의 주자들 사이에 혼란이 생겼어요.",
+   "blank": "ارتباكا",
+   "src": "made"
+  }
+ ],
  "w|ارتبط": [
   {
    "text": "ارتبط العمل بموعد نهائي مهم.",
@@ -10119,6 +10183,22 @@
    "blank": "اشتهيت"
   }
  ],
+ "w|اشتياق": [
+  {
+   "text": "بعد مناوبة ليلية طويلة شعر يوسف باشتياق كبير إلى أطفاله.",
+   "en": "After a long night shift, Youssef missed his children terribly.",
+   "ko": "긴 야간 근무를 마치고 유세프는 아이들이 몹시 그리웠어요.",
+   "blank": "باشتياق",
+   "src": "made"
+  },
+  {
+   "text": "بعد شهرين من الإصابة عادت سارة إلى الركض باشتياق.",
+   "en": "After two months of injury, Sara returned to running eagerly.",
+   "ko": "부상으로 두 달을 쉬고 사라는 그리웠던 달리기로 돌아왔어요.",
+   "blank": "باشتياق",
+   "src": "made"
+  }
+ ],
  "w|اشمأز": [
   {
    "text": "اشمأز علي من الكذبة التي نشرها ابن عمه عن أخته.",
@@ -10714,6 +10794,22 @@
    "en": "Thursday morning's newspaper editorial was about the heat wave, and Maryam read all of it.",
    "ko": "목요일 아침 신문 사설이 폭염에 관한 거라 마리암은 끝까지 다 읽었어요.",
    "blank": "افتتاحية",
+   "src": "made"
+  }
+ ],
+ "w|افتتان": [
+  {
+   "text": "يتحدث يوسف بافتتان عن أول قضية حلها في شبابه.",
+   "en": "Youssef talks with fascination about the first case he solved when he was young.",
+   "ko": "유세프는 젊을 때 처음 해결한 사건 이야기를 홀린 듯이 해요.",
+   "blank": "بافتتان",
+   "src": "made"
+  },
+  {
+   "text": "تنظر سارة بافتتان إلى العدائين الذين ينهون السباق في ساعتين.",
+   "en": "Sara looks with fascination at runners who finish the race in two hours.",
+   "ko": "사라는 두 시간 만에 완주하는 주자들을 넋을 잃고 바라봐요.",
+   "blank": "بافتتان",
    "src": "made"
   }
  ],
@@ -13657,6 +13753,22 @@
    "blank": "بحثت"
   }
  ],
+ "w|بحثي": [
+  {
+   "text": "زار فريق بحثي من الجامعة المركز لدراسة جرائم الشباب.",
+   "en": "A research team from the university visited the station to study youth crime.",
+   "ko": "대학 연구팀이 청소년 범죄를 연구하러 경찰서를 찾았어요.",
+   "blank": "بحثي",
+   "src": "made"
+  },
+  {
+   "text": "يتابع مركز بحثي ضربات قلب سارة أثناء التدريب.",
+   "en": "A research center monitors Sara's heartbeat during training.",
+   "ko": "한 연구소가 훈련 중 사라의 심박을 지켜봐요.",
+   "blank": "بحثي",
+   "src": "made"
+  }
+ ],
  "w|بحذر": [
   {
    "text": "قد القدر بحذر في الليل.",
@@ -16291,6 +16403,22 @@
    "src": "made"
   }
  ],
+ "w|تأميم": [
+  {
+   "text": "قرأ يوسف في الصحيفة مقالا عن تأميم مناجم الفحم قبل عقود.",
+   "en": "Youssef read an article in the newspaper about the nationalization of coal mines decades ago.",
+   "ko": "유세프는 신문에서 수십 년 전 탄광 국유화에 관한 기사를 읽었어요.",
+   "blank": "تأميم",
+   "src": "made"
+  },
+  {
+   "text": "يمر الماراثون بمصنع غزل قديم عاد إلى الدولة بعد تأميم الصناعة.",
+   "en": "The marathon passes an old spinning mill that went back to the state after industry was nationalized.",
+   "ko": "마라톤 코스는 산업 국유화 뒤 국가 소유가 된 오래된 방적 공장 옆을 지나요.",
+   "blank": "تأميم",
+   "src": "made"
+  }
+ ],
  "w|تأمين": [
   {
    "text": "أحتاج إلى تأمين صحي للسفر.",
@@ -16463,6 +16591,22 @@
    "en": "I need the next page.",
    "ko": "나는 다음 페이지가 필요해.",
    "blank": "التال"
+  }
+ ],
+ "w|تالف": [
+  {
+   "text": "جاء رجل يشكو أن بائعا باعه هاتفا تالفا، فدون يوسف الشكوى.",
+   "en": "A man came to complain that a seller had sold him a broken phone, so Youssef wrote down the complaint.",
+   "ko": "한 남자가 판매자에게 고장 난 휴대폰을 샀다고 신고하러 와서 유세프가 신고를 적었어요.",
+   "blank": "تالفا",
+   "src": "made"
+  },
+  {
+   "text": "رمت سارة رباط الحذاء التالف ووضعت رباطا جديدا.",
+   "en": "Sara threw away the worn-out shoelace and put in a new one.",
+   "ko": "사라는 해진 신발 끈을 버리고 새 끈을 끼웠어요.",
+   "blank": "التالف",
+   "src": "made"
   }
  ],
  "w|تاليا": [
@@ -17087,6 +17231,22 @@
    "en": "The police warning was clear to everyone.",
    "ko": "경찰의 경고는 모두에게 분명했어.",
    "blank": "تحذير"
+  }
+ ],
+ "w|تحرش": [
+  {
+   "text": "سجل يوسف بلاغا عن تحرش في محطة القطار.",
+   "en": "Youssef recorded a report of harassment at the train station.",
+   "ko": "유세프는 기차역에서 일어난 성희롱 신고를 접수했어요.",
+   "blank": "تحرش",
+   "src": "made"
+  },
+  {
+   "text": "أطلق المنظمون قبل السباق حملة ضد التحرش بالعداءات.",
+   "en": "Before the race, the organizers launched a campaign against harassment of female runners.",
+   "ko": "운영진은 대회 전에 여성 주자 대상 괴롭힘 반대 캠페인을 시작했어요.",
+   "blank": "التحرش",
+   "src": "made"
   }
  ],
  "w|تحرك": [
@@ -29143,6 +29303,22 @@
    "src": "made"
   }
  ],
+ "w|خصخصة": [
+  {
+   "text": "تجمع عمال أمام المركز احتجاجا على خصخصة شركة الكهرباء.",
+   "en": "Workers gathered in front of the station to protest the privatization of the electricity company.",
+   "ko": "노동자들이 전력 회사 민영화에 항의하려고 경찰서 앞에 모였어요.",
+   "blank": "خصخصة",
+   "src": "made"
+  },
+  {
+   "text": "قال مذيع السباق إن خصخصة الملعب رفعت رسوم التسجيل.",
+   "en": "The race announcer said the privatization of the stadium raised the entry fees.",
+   "ko": "대회 아나운서는 경기장 민영화로 참가비가 올랐다고 말했어요.",
+   "blank": "خصخصة",
+   "src": "made"
+  }
+ ],
  "w|خصر": [
   {
    "text": "ارتديت حزاماً حول خصر.",
@@ -29388,6 +29564,22 @@
    "en": "Nour walked a few steps along the aisle to stretch her legs.",
    "ko": "누르는 다리를 풀려고 통로를 몇 걸음 걸었어요.",
    "blank": "خطوات",
+   "src": "made"
+  }
+ ],
+ "w|خطوبة": [
+  {
+   "text": "أخذ يوسف إجازة يومين لحضور حفل خطوبة أخيه.",
+   "en": "Youssef took two days off to attend his brother's engagement party.",
+   "ko": "유세프는 형의 약혼식에 가려고 이틀 휴가를 냈어요.",
+   "blank": "خطوبة",
+   "src": "made"
+  },
+  {
+   "text": "احتفلت سارة بخطوبتها في الأسبوع الذي ركضت فيه أول ماراثون.",
+   "en": "Sara celebrated her engagement the same week she ran her first marathon.",
+   "ko": "사라는 첫 마라톤을 뛴 그 주에 약혼을 축하했어요.",
+   "blank": "بخطوبتها",
    "src": "made"
   }
  ],
@@ -29893,6 +30085,22 @@
    "blank": "خنزير"
   }
  ],
+ "w|خنصر": [
+  {
+   "text": "أخذ يوسف بصمة الخنصر من يد المشتبه به.",
+   "en": "Youssef took the little-finger print from the suspect's hand.",
+   "ko": "유세프는 용의자의 새끼손가락 지문을 채취했어요.",
+   "blank": "الخنصر",
+   "src": "made"
+  },
+  {
+   "text": "لفت سارة شريطا لاصقا على خنصرها المجروح.",
+   "en": "Sara wrapped tape around her injured little finger.",
+   "ko": "사라는 다친 새끼손가락에 테이프를 감았어요.",
+   "blank": "خنصرها",
+   "src": "made"
+  }
+ ],
  "w|خوخ": [
   {
    "text": "اشتريت خوخ من السوق بالأمس.",
@@ -30051,6 +30259,22 @@
    "en": "I heard good news today.",
    "ko": "오늘 좋은 소식을 들었어.",
    "blank": "خير"
+  }
+ ],
+ "w|خيري": [
+  {
+   "text": "نظم ضباط المركز سوقا خيريا لجمع التبرعات للأيتام.",
+   "en": "The station's officers organized a charity market to raise donations for orphans.",
+   "ko": "경찰서 직원들이 고아들을 위한 기부금을 모으려고 자선 장터를 열었어요.",
+   "blank": "خيريا",
+   "src": "made"
+  },
+  {
+   "text": "ركضت سارة لجمع المال لمشروع خيري يبني مدرسة في قرية.",
+   "en": "Sara ran to raise money for a charity project building a school in a village.",
+   "ko": "사라는 한 마을에 학교를 짓는 자선 사업 기금을 모으려고 달렸어요.",
+   "blank": "خيري",
+   "src": "made"
   }
  ],
  "w|خيرية": [
@@ -30575,6 +30799,22 @@
    "en": "Did the manager know what happened?",
    "ko": "매니저가 무슨 일이 있었는지 알았어?",
    "blank": "درى"
+  }
+ ],
+ "w|دزينة": [
+  {
+   "text": "طلب يوسف دزينة من الأقلام لمكتب الاستقبال.",
+   "en": "Youssef ordered a dozen pens for the front desk.",
+   "ko": "유세프는 접수처에 쓸 펜을 한 다스 주문했어요.",
+   "blank": "دزينة",
+   "src": "made"
+  },
+  {
+   "text": "أحضرت سارة دزينة من قوارير الماء لزميلاتها في الفريق.",
+   "en": "Sara brought a dozen water bottles for her teammates.",
+   "ko": "사라는 팀 동료들에게 줄 물병을 한 다스 가져왔어요.",
+   "blank": "دزينة",
+   "src": "made"
   }
  ],
  "w|دستور": [
@@ -32589,6 +32829,22 @@
    "blank": "ربع"
   }
  ],
+ "w|ربلة": [
+  {
+   "text": "أصيب يوسف بشد في ربلة ساقه أثناء مطاردة اللص.",
+   "en": "Youssef pulled a calf muscle while chasing the thief.",
+   "ko": "유세프는 도둑을 쫓다가 종아리 근육이 땅겼어요.",
+   "blank": "ربلة",
+   "src": "made"
+  },
+  {
+   "text": "تدلك سارة ربلة ساقها بعد كل تدريب.",
+   "en": "Sara massages her calf after every training session.",
+   "ko": "사라는 훈련이 끝날 때마다 종아리를 주물러요.",
+   "blank": "ربلة",
+   "src": "made"
+  }
+ ],
  "w|ربما": [
   {
    "text": "ربما سأذهب إلى السينما اليوم.",
@@ -32758,6 +33014,22 @@
    "en": "Nour bought a return ticket because coming back the same day is cheaper.",
    "ko": "누르는 당일에 돌아오는 게 더 싸서 왕복표를 샀어요.",
    "blank": "الرجوع",
+   "src": "made"
+  }
+ ],
+ "w|رجيم": [
+  {
+   "text": "بدأ يوسف رجيما صارما بعد أن ضاق عليه زيه الرسمي.",
+   "en": "Youssef started a strict diet after his uniform got too tight.",
+   "ko": "유세프는 제복이 끼기 시작하자 엄격한 다이어트를 시작했어요.",
+   "blank": "رجيما",
+   "src": "made"
+  },
+  {
+   "text": "لا تؤمن سارة بالرجيم القاسي قبل السباق.",
+   "en": "Sara doesn't believe in harsh dieting before a race.",
+   "ko": "사라는 대회 전에 혹독하게 다이어트하는 걸 믿지 않아요.",
+   "blank": "بالرجيم",
    "src": "made"
   }
  ],
@@ -33779,6 +34051,22 @@
    "en": "Pomegranate is a fruit full of benefits.",
    "ko": "석류는 건강에 좋은 과일이야.",
    "blank": "رمان"
+  }
+ ],
+ "w|رمح": [
+  {
+   "text": "في المتحف المجاور للمركز رمح قديم سرق مرة ثم أعيد.",
+   "en": "In the museum next to the station there is an old spear that was once stolen and then returned.",
+   "ko": "경찰서 옆 박물관에는 한 번 도난당했다가 돌아온 오래된 창이 있어요.",
+   "blank": "رمح",
+   "src": "made"
+  },
+  {
+   "text": "كانت سارة ترمي الرمح في المدرسة قبل أن تحب الجري الطويل.",
+   "en": "Sara used to throw the javelin at school before she fell in love with long-distance running.",
+   "ko": "사라는 장거리 달리기를 좋아하기 전에 학교에서 창던지기를 했어요.",
+   "blank": "الرمح",
+   "src": "made"
   }
  ],
  "w|رمز": [
@@ -35409,6 +35697,22 @@
    "en": "I don't like anyone to swear at me.",
    "ko": "누군가 나를 욕하는 게 싫어요.",
    "blank": "يسبني"
+  }
+ ],
+ "w|سبابة": [
+  {
+   "text": "أشار الشاهد بسبابته إلى الرجل الطويل في الصف.",
+   "en": "The witness pointed his index finger at the tall man in the lineup.",
+   "ko": "증인이 검지로 줄에 선 키 큰 남자를 가리켰어요.",
+   "blank": "بسبابته",
+   "src": "made"
+  },
+  {
+   "text": "رفعت سارة سبابتها نحو السماء حين عبرت خط النهاية.",
+   "en": "Sara raised her index finger to the sky as she crossed the finish line.",
+   "ko": "사라는 결승선을 넘으며 검지를 하늘로 치켜들었어요.",
+   "blank": "سبابتها",
+   "src": "made"
   }
  ],
  "w|سباحة": [
@@ -39309,6 +39613,22 @@
    "blank": "شمسية"
   }
  ],
+ "w|شمع": [
+  {
+   "text": "ختم يوسف ظرف الأدلة بالشمع الأحمر.",
+   "en": "Youssef sealed the evidence envelope with red wax.",
+   "ko": "유세프는 증거 봉투를 빨간 밀랍으로 봉인했어요.",
+   "blank": "بالشمع",
+   "src": "made"
+  },
+  {
+   "text": "تشعل سارة شمعا معطرا في غرفتها لتسترخي ليلة السباق.",
+   "en": "Sara lights scented wax candles in her room to relax the night before the race.",
+   "ko": "사라는 대회 전날 밤 긴장을 풀려고 방에 향초를 켜요.",
+   "blank": "شمعا",
+   "src": "made"
+  }
+ ],
  "w|شمعة": [
   {
    "text": "أشعلت شمعة عند انقطاع الكهرباء.",
@@ -41970,6 +42290,22 @@
    "en": "The race organizer said the marathon brings people together away from any sectarian division.",
    "ko": "대회 주최자는 마라톤이 어떤 종파 갈등과도 상관없이 사람들을 모은다고 말했어요.",
    "blank": "طائفي",
+   "src": "made"
+  }
+ ],
+ "w|طابع": [
+  {
+   "text": "لصق يوسف طابعا على الرسالة الرسمية قبل إرسالها إلى المحكمة.",
+   "en": "Youssef stuck a stamp on the official letter before sending it to the court.",
+   "ko": "유세프는 공문을 법원에 보내기 전에 우표를 붙였어요.",
+   "blank": "طابعا",
+   "src": "made"
+  },
+  {
+   "text": "لماراثون المدينة طابع احتفالي، وتحب سارة أجواءه كثيرا.",
+   "en": "The city marathon has a festive character, and Sara loves its atmosphere.",
+   "ko": "도시 마라톤은 축제 분위기가 있어서 사라는 그 분위기를 무척 좋아해요.",
+   "blank": "طابع",
    "src": "made"
   }
  ],
@@ -46475,6 +46811,22 @@
    "en": "You must make up for the delay today.",
    "ko": "오늘 지연을 보상해야 해.",
    "blank": "تعوض"
+  }
+ ],
+ "w|عولمة": [
+  {
+   "text": "يرى يوسف أن العولمة جعلت جرائم الاحتيال تعبر الحدود بسهولة.",
+   "en": "Youssef believes globalization has made fraud cross borders easily.",
+   "ko": "유세프는 세계화 때문에 사기 범죄가 국경을 쉽게 넘게 됐다고 봐요.",
+   "blank": "العولمة",
+   "src": "made"
+  },
+  {
+   "text": "قالت سارة إن العولمة جعلت الماراثون يجمع عدائين من كل القارات.",
+   "en": "Sara said globalization has made the marathon bring together runners from every continent.",
+   "ko": "사라는 세계화 덕분에 마라톤에 모든 대륙의 주자가 모인다고 했어요.",
+   "blank": "العولمة",
+   "src": "made"
   }
  ],
  "w|عيادة": [
@@ -51003,6 +51355,22 @@
    "blank": "قضاء"
   }
  ],
+ "w|قضائي": [
+  {
+   "text": "أرسل يوسف الملف إلى الجهات القضائية صباح الإثنين.",
+   "en": "Youssef sent the file to the judicial authorities on Monday morning.",
+   "ko": "유세프는 월요일 아침에 파일을 사법 당국에 보냈어요.",
+   "blank": "القضائية",
+   "src": "made"
+  },
+  {
+   "text": "تعمل سارة موظفة في مجمع قضائي، وتتدرب على الجري بعد الدوام.",
+   "en": "Sara works as an employee at a court complex and trains for running after work.",
+   "ko": "사라는 법원 단지에서 일하고, 퇴근 후에 달리기 훈련을 해요.",
+   "blank": "قضائي",
+   "src": "made"
+  }
+ ],
  "w|قضية": [
   {
    "text": "ناقشنا قضية مهمة في الاجتماع.",
@@ -52323,6 +52691,22 @@
    "src": "made"
   }
  ],
+ "w|كتيبة": [
+  {
+   "text": "مرت كتيبة من الجنود أمام مركز الشرطة في طريقها إلى العرض.",
+   "en": "A battalion of soldiers passed in front of the police station on its way to the parade.",
+   "ko": "군인 대대가 행진하러 가는 길에 경찰서 앞을 지나갔어요.",
+   "blank": "كتيبة",
+   "src": "made"
+  },
+  {
+   "text": "شاركت كتيبة من الجيش في الماراثون وركض جنودها بخطوة واحدة.",
+   "en": "An army battalion took part in the marathon, its soldiers running in step.",
+   "ko": "군 대대가 마라톤에 참가해 병사들이 발을 맞춰 달렸어요.",
+   "blank": "كتيبة",
+   "src": "made"
+  }
+ ],
  "w|كثر": [
   {
    "text": "كثر الحديث عن هذا الموضوع مؤخراً.",
@@ -52512,6 +52896,22 @@
    "en": "The technician told Fatima that the old heater might give off carbon monoxide.",
    "ko": "기사는 파티마에게 낡은 난로에서 일산화탄소가 나올 수 있다고 말했어요.",
    "blank": "الكربون",
+   "src": "made"
+  }
+ ],
+ "w|كربوهيدرات": [
+  {
+   "text": "يتجنب يوسف الكربوهيدرات في وجبات المناوبة الليلية.",
+   "en": "Youssef avoids carbohydrates in his night-shift meals.",
+   "ko": "유세프는 야간 근무 식사에서 탄수화물을 피해요.",
+   "blank": "الكربوهيدرات",
+   "src": "made"
+  },
+  {
+   "text": "أكلت سارة طبقا كبيرا من المعكرونة لتخزن الكربوهيدرات ليلة السباق.",
+   "en": "Sara ate a big plate of pasta to store carbohydrates the night before the race.",
+   "ko": "사라는 대회 전날 밤 탄수화물을 채우려고 파스타를 한 접시 가득 먹었어요.",
+   "blank": "الكربوهيدرات",
    "src": "made"
   }
  ],
@@ -53380,6 +53780,22 @@
    "en": "Nour said she wants to keep working at the bakery even into middle age.",
    "ko": "누르는 중년이 되어서도 빵집에서 일하고 싶다고 했어요.",
    "blank": "كهولتها",
+   "src": "made"
+  }
+ ],
+ "w|كواليس": [
+  {
+   "text": "يعرف يوسف ما يجري في كواليس المركز أكثر من أي ضابط آخر.",
+   "en": "Youssef knows what goes on behind the scenes at the station better than any other officer.",
+   "ko": "유세프는 경찰서 뒷사정을 다른 어떤 경찰보다 잘 알아요.",
+   "blank": "كواليس",
+   "src": "made"
+  },
+  {
+   "text": "في كواليس السباق كان المنظمون يوزعون الأرقام على العدائين.",
+   "en": "Behind the scenes of the race, the organizers were handing out numbers to the runners.",
+   "ko": "대회 뒤편에서 운영진이 주자들에게 번호표를 나눠 주고 있었어요.",
+   "blank": "كواليس",
    "src": "made"
   }
  ],
@@ -54625,6 +55041,22 @@
    "blank": "لف"
   }
  ],
+ "w|لفة": [
+  {
+   "text": "وجد يوسف في درج مكتبه لفة شريط لاصق وأغلق بها ملف القضية.",
+   "en": "Youssef found a roll of tape in his desk drawer and sealed the case file with it.",
+   "ko": "유세프는 책상 서랍에서 테이프 한 롤을 찾아 사건 파일을 봉했어요.",
+   "blank": "لفة",
+   "src": "made"
+  },
+  {
+   "text": "أنهت سارة اللفة الأخيرة حول الملعب وهي تبتسم.",
+   "en": "Sara finished the last lap around the stadium smiling.",
+   "ko": "사라는 웃으면서 경기장 마지막 바퀴를 돌았어요.",
+   "blank": "اللفة",
+   "src": "made"
+  }
+ ],
  "w|لفت": [
   {
    "text": "أضاف حسن اللفت المخلل إلى طبق الفلافل.",
@@ -54987,6 +55419,22 @@
    "blank": "لهجة"
   }
  ],
+ "w|لهفة": [
+  {
+   "text": "انتظرت أم الطفل المفقود الخبر بلهفة في قاعة المركز.",
+   "en": "The missing child's mother waited anxiously for news in the station hall.",
+   "ko": "실종된 아이의 엄마는 경찰서 대기실에서 애타게 소식을 기다렸어요.",
+   "blank": "بلهفة",
+   "src": "made"
+  },
+  {
+   "text": "انتظرت سارة إعلان النتائج بلهفة.",
+   "en": "Sara waited eagerly for the results to be announced.",
+   "ko": "사라는 결과 발표를 애타게 기다렸어요.",
+   "blank": "بلهفة",
+   "src": "made"
+  }
+ ],
  "w|لهو": [
   {
    "text": "يقضي أطفال الحي أوقات اللهو في ساحة العمارة تحت شباك حسن.",
@@ -55091,6 +55539,22 @@
    "en": "Almonds give a crunchy taste to desserts.",
    "ko": "아몬드는 디저트에 바삭한 맛을 더해준다.",
    "blank": "اللوز"
+  }
+ ],
+ "w|لوزة": [
+  {
+   "text": "اعتذر يوسف عن المناوبة بسبب التهاب في اللوزة.",
+   "en": "Youssef called off his shift because of an inflamed tonsil.",
+   "ko": "유세프는 편도염 때문에 근무를 빠졌어요.",
+   "blank": "اللوزة",
+   "src": "made"
+  },
+  {
+   "text": "قال الطبيب إن التهاب اللوزة لن يمنع سارة من السباق إن أخذت الدواء.",
+   "en": "The doctor said the inflamed tonsil won't stop Sara from racing if she takes the medicine.",
+   "ko": "의사는 약을 먹으면 편도염이 있어도 사라가 대회에 나갈 수 있다고 했어요.",
+   "blank": "اللوزة",
+   "src": "made"
   }
  ],
  "w|لوعة": [
@@ -57339,6 +57803,22 @@
    "src": "made"
   }
  ],
+ "w|متين": [
+  {
+   "text": "يحفظ يوسف الأدلة في صندوق حديدي متين.",
+   "en": "Youssef keeps the evidence in a sturdy iron box.",
+   "ko": "유세프는 증거물을 튼튼한 쇠 상자에 보관해요.",
+   "blank": "متين",
+   "src": "made"
+  },
+  {
+   "text": "بنت سارة جسما متينا بعد سنة كاملة من التدريب.",
+   "en": "Sara built a strong body after a full year of training.",
+   "ko": "사라는 꼬박 일 년을 훈련해서 탄탄한 몸을 만들었어요.",
+   "blank": "متينا",
+   "src": "made"
+  }
+ ],
  "w|مثابرة": [
   {
    "text": "نجح حسن بالمثابرة في إقناع البلدية بزرع أشجار في الشارع.",
@@ -59117,6 +59597,22 @@
    "blank": "مدمن"
   }
  ],
+ "w|مدني": [
+  {
+   "text": "جاء يوسف إلى العمل بلباس مدني لأنه في مهمة سرية.",
+   "en": "Youssef came to work in plain clothes because he is on a secret mission.",
+   "ko": "유세프는 비밀 임무 중이라 사복을 입고 출근했어요.",
+   "blank": "مدني",
+   "src": "made"
+  },
+  {
+   "text": "نظمت جمعيات المجتمع المدني محطات الماء على طول المسار.",
+   "en": "Civil society groups set up water stations along the route.",
+   "ko": "시민 단체들이 코스를 따라 급수대를 차렸어요.",
+   "blank": "المدني",
+   "src": "made"
+  }
+ ],
  "w|مدهش": [
   {
    "text": "كانت النتيجة مدهش وغير متوقعة.",
@@ -59201,6 +59697,22 @@
    "en": "I love the sour taste of oranges.",
    "ko": "나는 오렌지의 신맛을 좋아한다.",
    "blank": "مذاق"
+  }
+ ],
+ "w|مذبح": [
+  {
+   "text": "فتح يوسف تحقيقا في سرقة شمعدان من مذبح كنيسة قديمة.",
+   "en": "Youssef opened an investigation into the theft of a candlestick from the altar of an old church.",
+   "ko": "유세프는 오래된 성당 제단에서 촛대가 도난당한 사건을 수사하기 시작했어요.",
+   "blank": "مذبح",
+   "src": "made"
+  },
+  {
+   "text": "مرت سارة بكنيسة قديمة، ورأت من بابها المفتوح المذبح المضاء بالشموع.",
+   "en": "Sara passed an old church and through its open door saw the candlelit altar.",
+   "ko": "사라는 오래된 성당을 지나며 열린 문 너머로 촛불 켜진 제단을 봤어요.",
+   "blank": "المذبح",
+   "src": "made"
   }
  ],
  "w|مذكرات": [
@@ -60028,6 +60540,22 @@
    "en": "Farming needs great flexibility, as Hoda learned from the changing weather.",
    "ko": "후다는 변덕스러운 날씨로 농사에는 큰 융통성이 필요하다는 걸 배웠어요.",
    "blank": "مرونة",
+   "src": "made"
+  }
+ ],
+ "w|مريء": [
+  {
+   "text": "نقل لص إلى المستشفى بعد أن ابتلع خاتما علق في مريئه.",
+   "en": "A thief was taken to hospital after swallowing a ring that got stuck in his esophagus.",
+   "ko": "도둑이 반지를 삼켰다가 식도에 걸려 병원으로 옮겨졌어요.",
+   "blank": "مريئه",
+   "src": "made"
+  },
+  {
+   "text": "شعرت سارة بحرقة في المريء بعد أن شربت عصيرا حامضا أثناء الركض.",
+   "en": "Sara felt heartburn in her esophagus after drinking sour juice while running.",
+   "ko": "사라는 달리다가 신 주스를 마시고 식도가 쓰렸어요.",
+   "blank": "المريء",
    "src": "made"
   }
  ],
@@ -60859,6 +61387,22 @@
    "en": "There is a warehouse for storing grains here.",
    "ko": "여기 곡물을 저장하는 창고가 있어요.",
    "blank": "مستودع"
+  }
+ ],
+ "w|مستورد": [
+  {
+   "text": "ضبطت الشرطة شحنة سجائر مستوردة بلا أوراق، وسجل يوسف تفاصيلها.",
+   "en": "The police seized an undocumented shipment of imported cigarettes, and Youssef recorded the details.",
+   "ko": "경찰이 서류 없는 수입 담배를 압수했고, 유세프가 자세한 내용을 기록했어요.",
+   "blank": "مستوردة",
+   "src": "made"
+  },
+  {
+   "text": "اشترت سارة حذاء جري مستوردا قبل الماراثون بشهر.",
+   "en": "Sara bought imported running shoes a month before the marathon.",
+   "ko": "사라는 마라톤 한 달 전에 수입 러닝화를 샀어요.",
+   "blank": "مستوردا",
+   "src": "made"
   }
  ],
  "w|مستوصف": [
@@ -62889,6 +63433,22 @@
    "src": "made"
   }
  ],
+ "w|معيب": [
+  {
+   "text": "قال صاحب المتجر ليوسف إن المنتج المعيب يستبدل خلال أسبوع.",
+   "en": "The shop owner told Youssef that a defective product is replaced within a week.",
+   "ko": "가게 주인은 유세프에게 불량품은 일주일 안에 교환해 준다고 했어요.",
+   "blank": "المعيب",
+   "src": "made"
+  },
+  {
+   "text": "أعادت سارة الساعة الرياضية إلى المتجر لأن شاشتها كانت معيبة.",
+   "en": "Sara returned the sports watch to the store because its screen was defective.",
+   "ko": "사라는 스포츠 시계 화면에 결함이 있어서 가게에 돌려줬어요.",
+   "blank": "معيبة",
+   "src": "made"
+  }
+ ],
  "w|معيشة": [
   {
    "text": "يشتكي العمال من ارتفاع تكاليف المعيشة رغم الزيادة الأخيرة.",
@@ -63914,6 +64474,22 @@
    "en": "The airline's excuse for the delay didn't convince Mona.",
    "ko": "항공사의 지연 해명은 모나에게 설득력이 없었어요.",
    "blank": "مقنعا",
+   "src": "made"
+  }
+ ],
+ "w|مقنعة": [
+  {
+   "text": "سلمت امرأة مسنة يوسف مقنعة حريرية وجدتها في الحافلة.",
+   "en": "An elderly woman handed Youssef a silk headscarf she had found on the bus.",
+   "ko": "할머니 한 분이 버스에서 주운 비단 머릿수건을 유세프에게 건넸어요.",
+   "blank": "مقنعة",
+   "src": "made"
+  },
+  {
+   "text": "ركضت سارة وهي تلبس مقنعة رياضية خفيفة.",
+   "en": "Sara ran wearing a light sports headscarf.",
+   "ko": "사라는 가벼운 스포츠 머릿수건을 쓰고 달렸어요.",
+   "blank": "مقنعة",
    "src": "made"
   }
  ],
@@ -65689,6 +66265,22 @@
    "blank": "منع"
   }
  ],
+ "w|منعطف": [
+  {
+   "text": "كتب يوسف في تقريره أن الحادث وقع عند منعطف حاد قرب المركز.",
+   "en": "Youssef wrote in his report that the accident happened at a sharp bend near the station.",
+   "ko": "유세프는 사고가 경찰서 근처 급커브에서 났다고 보고서에 썼어요.",
+   "blank": "منعطف",
+   "src": "made"
+  },
+  {
+   "text": "عند المنعطف الأخير سمعت سارة هتاف الجمهور.",
+   "en": "At the last turn, Sara heard the crowd cheering.",
+   "ko": "마지막 모퉁이에서 사라는 관중의 환호를 들었어요.",
+   "blank": "المنعطف",
+   "src": "made"
+  }
+ ],
  "w|منفذ": [
   {
    "text": "كان الدرج المنفذ الوحيد للعمارة حين تعطل المصعد.",
@@ -66862,6 +67454,22 @@
    "en": "Nour works as a teacher in a remote village in the mountains.",
    "ko": "누르는 산속 외딴 마을에서 교사로 일해요.",
    "blank": "نائية",
+   "src": "made"
+  }
+ ],
+ "w|ناب": [
+  {
+   "text": "عض كلب ضال رجلا، وقال الطبيب ليوسف إن أثر الناب عميق.",
+   "en": "A stray dog bit a man, and the doctor told Youssef the fang mark was deep.",
+   "ko": "떠돌이 개가 남자를 물었는데, 의사는 유세프에게 송곳니 자국이 깊다고 했어요.",
+   "blank": "الناب",
+   "src": "made"
+  },
+  {
+   "text": "نبح كلب على سارة وكشف عن ناب طويل فأسرعت خطاها.",
+   "en": "A dog barked at Sara and bared a long fang, so she picked up her pace.",
+   "ko": "개가 사라에게 짖으며 긴 송곳니를 드러내서 사라는 걸음을 재촉했어요.",
+   "blank": "ناب",
    "src": "made"
   }
  ],
@@ -71163,6 +71771,22 @@
    "blank": "وحش"
   }
  ],
+ "w|وحشة": [
+  {
+   "text": "يكره يوسف وحشة المركز في ساعات الفجر حين يخلو من الناس.",
+   "en": "Youssef hates the loneliness of the station at dawn when it is empty of people.",
+   "ko": "유세프는 새벽에 사람 하나 없는 경찰서의 쓸쓸함이 싫어요.",
+   "blank": "وحشة",
+   "src": "made"
+  },
+  {
+   "text": "شعرت سارة بوحشة الطريق في المقاطع الطويلة الخالية من الجمهور.",
+   "en": "Sara felt the loneliness of the road on the long stretches without spectators.",
+   "ko": "사라는 관중 없는 긴 구간에서 길의 쓸쓸함을 느꼈어요.",
+   "blank": "بوحشة",
+   "src": "made"
+  }
+ ],
  "w|وحشي": [
   {
    "text": "وصف كريم المنافسة في السوق بأنها وحشية هذا العام.",
@@ -71434,6 +72058,22 @@
    "en": "Mona noticed slight swelling in her feet after the long flight.",
    "ko": "긴 비행 뒤 모나는 발이 살짝 부은 걸 알아챘어요.",
    "blank": "ورما",
+   "src": "made"
+  }
+ ],
+ "w|وريد": [
+  {
+   "text": "سحبت الممرضة الدم من وريد يوسف في الفحص السنوي للضباط.",
+   "en": "The nurse drew blood from Youssef's vein during the officers' annual checkup.",
+   "ko": "간호사가 경찰 연례 검진에서 유세프의 정맥에서 피를 뽑았어요.",
+   "blank": "وريد",
+   "src": "made"
+  },
+  {
+   "text": "انتفخ وريد في عنق سارة من شدة الجهد.",
+   "en": "A vein in Sara's neck swelled from the strain.",
+   "ko": "힘을 너무 써서 사라의 목에 핏줄이 섰어요.",
+   "blank": "وريد",
    "src": "made"
   }
  ],
