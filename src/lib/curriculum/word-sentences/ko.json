@@ -2113,6 +2113,22 @@
    "blank": "거래를"
   }
  ],
+ "w|거래처": [
+  {
+   "text": "성호는 자재가 늦게 와서 거래처에 전화를 걸었어요.",
+   "en": "The materials arrived late, so Seongho called the supplier.",
+   "ko": "성호는 자재가 늦게 와서 거래처에 전화를 걸었어요.",
+   "blank": "거래처에",
+   "src": "made"
+  },
+  {
+   "text": "미경은 회사 거래처 사장님께 직접 그린 그림을 선물했어요.",
+   "en": "Mikyeong gave a painting she made herself to the head of one of her company's suppliers.",
+   "ko": "미경은 회사 거래처 사장님께 직접 그린 그림을 선물했어요.",
+   "blank": "거래처",
+   "src": "made"
+  }
+ ],
  "w|거래하다": [
   {
    "text": "온라인으로 안전하게 거래해.",
@@ -3931,6 +3947,22 @@
    "src": "made"
   }
  ],
+ "w|계약직": [
+  {
+   "text": "성호는 이 현장에서 일 년 계약직으로 일하고 있어요.",
+   "en": "Seongho is working at this site on a one-year contract.",
+   "ko": "성호는 이 현장에서 일 년 계약직으로 일하고 있어요.",
+   "blank": "계약직으로",
+   "src": "made"
+  },
+  {
+   "text": "미술 학원 선생님은 계약직이라서 내년에도 계실지 모른대요.",
+   "en": "The art academy teacher is on a contract, so she may not be there next year.",
+   "ko": "미술 학원 선생님은 계약직이라서 내년에도 계실지 모른대요.",
+   "blank": "계약직이라서",
+   "src": "made"
+  }
+ ],
  "w|계약하다": [
   {
    "text": "집주인과 바로 계약했어.",
@@ -4045,6 +4077,22 @@
    "en": "A regular customer came again.",
    "ko": "단골 고객이 또 왔어.",
    "blank": "고객이"
+  }
+ ],
+ "w|고객사": [
+  {
+   "text": "고객사 담당자가 공사 진행 상황을 보러 현장에 왔어요.",
+   "en": "A representative from the client company came to the site to see how construction was going.",
+   "ko": "고객사 담당자가 공사 진행 상황을 보러 현장에 왔어요.",
+   "blank": "고객사",
+   "src": "made"
+  },
+  {
+   "text": "미경의 그림이 고객사 사무실 벽에 걸리게 됐어요.",
+   "en": "Mikyeong's painting ended up hanging on the wall of a client company's office.",
+   "ko": "미경의 그림이 고객사 사무실 벽에 걸리게 됐어요.",
+   "blank": "고객사",
+   "src": "made"
   }
  ],
  "w|고구마": [
@@ -4693,6 +4741,22 @@
    "en": "I'll arrive soon.",
    "ko": "곧 도착해.",
    "blank": "곧"
+  }
+ ],
+ "w|곧다": [
+  {
+   "text": "성호는 기둥이 곧게 서 있는지 수평계로 확인했어요.",
+   "en": "Seongho checked with a level whether the pillar stood straight.",
+   "ko": "성호는 기둥이 곧게 서 있는지 수평계로 확인했어요.",
+   "blank": "곧게",
+   "src": "made"
+  },
+  {
+   "text": "미경은 곧은 대나무를 먹으로 그리는 법을 배웠어요.",
+   "en": "Mikyeong learned how to paint straight bamboo with ink.",
+   "ko": "미경은 곧은 대나무를 먹으로 그리는 법을 배웠어요.",
+   "blank": "곧은",
+   "src": "made"
   }
  ],
  "w|곧바로": [
@@ -8155,6 +8219,22 @@
    "src": "made"
   }
  ],
+ "w|근무시간": [
+  {
+   "text": "성호네 공사 현장은 근무시간이 아침 일곱 시에 시작돼요.",
+   "en": "Working hours at Seongho's construction site start at seven in the morning.",
+   "ko": "성호네 공사 현장은 근무시간이 아침 일곱 시에 시작돼요.",
+   "blank": "근무시간이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 회사 근무시간이 끝나면 바로 미술 학원으로 가요.",
+   "en": "Mikyeong goes straight to her art class as soon as her working hours end.",
+   "ko": "미경은 회사 근무시간이 끝나면 바로 미술 학원으로 가요.",
+   "blank": "근무시간이",
+   "src": "made"
+  }
+ ],
  "w|근무하다": [
   {
    "text": "주말에도 근무해야 해.",
@@ -8447,6 +8527,22 @@
    "en": "They banned passage inside the school.",
    "ko": "학교 안을 다니지 못하게 했어.",
    "blank": "금지했어"
+  }
+ ],
+ "w|급여": [
+  {
+   "text": "성호는 급여가 들어오자마자 부모님께 용돈을 보냈어요.",
+   "en": "Seongho sent his parents pocket money as soon as his pay came in.",
+   "ko": "성호는 급여가 들어오자마자 부모님께 용돈을 보냈어요.",
+   "blank": "급여가",
+   "src": "made"
+  },
+  {
+   "text": "미경은 급여의 일부를 떼어 물감과 붓을 사요.",
+   "en": "Mikyeong sets aside part of her pay to buy paint and brushes.",
+   "ko": "미경은 급여의 일부를 떼어 물감과 붓을 사요.",
+   "blank": "급여의",
+   "src": "made"
   }
  ],
  "w|급하다": [
@@ -12067,6 +12163,22 @@
    "blank": "네모야"
   }
  ],
+ "w|네모나다": [
+  {
+   "text": "성호는 네모난 벽돌을 한 줄씩 정확하게 쌓았어요.",
+   "en": "Seongho stacked the square bricks precisely one row at a time.",
+   "ko": "성호는 네모난 벽돌을 한 줄씩 정확하게 쌓았어요.",
+   "blank": "네모난",
+   "src": "made"
+  },
+  {
+   "text": "미경은 네모난 캔버스에 바다 풍경을 그렸어요.",
+   "en": "Mikyeong painted a seascape on a square canvas.",
+   "ko": "미경은 네모난 캔버스에 바다 풍경을 그렸어요.",
+   "blank": "네모난",
+   "src": "made"
+  }
+ ],
  "w|네트워크": [
   {
    "text": "학교 와이파이 네트워크가 끊겨서 온라인 과제를 못 냈어요.",
@@ -13103,6 +13215,22 @@
    "en": "I leave the news on every morning.",
    "ko": "아침마다 뉴스 켜 놔.",
    "blank": "뉴스"
+  }
+ ],
+ "w|느긋하다": [
+  {
+   "text": "공사가 끝나자 성호는 오랜만에 느긋한 주말을 보냈어요.",
+   "en": "When the construction ended, Seongho spent a relaxed weekend for the first time in a while.",
+   "ko": "공사가 끝나자 성호는 오랜만에 느긋한 주말을 보냈어요.",
+   "blank": "느긋한",
+   "src": "made"
+  },
+  {
+   "text": "미경은 주말 오후에 느긋하게 공원 풍경을 스케치했어요.",
+   "en": "Mikyeong leisurely sketched the park scenery on a weekend afternoon.",
+   "ko": "미경은 주말 오후에 느긋하게 공원 풍경을 스케치했어요.",
+   "blank": "느긋하게",
+   "src": "made"
   }
  ],
  "w|느끼다": [
@@ -17169,6 +17297,22 @@
    "en": "They say the rain starts on the second day.",
    "ko": "둘째 날부터 비 온대.",
    "blank": "둘째"
+  }
+ ],
+ "w|둥그렇다": [
+  {
+   "text": "현장 입구에 둥그런 안전 표지판이 세워져 있었어요.",
+   "en": "A round safety sign stood at the entrance of the site.",
+   "ko": "현장 입구에 둥그런 안전 표지판이 세워져 있었어요.",
+   "blank": "둥그런",
+   "src": "made"
+  },
+  {
+   "text": "미경은 둥그런 사과를 보고 명암을 넣어 그렸어요.",
+   "en": "Mikyeong looked at a round apple and drew it with shading.",
+   "ko": "미경은 둥그런 사과를 보고 명암을 넣어 그렸어요.",
+   "blank": "둥그런",
+   "src": "made"
   }
  ],
  "w|둥글다": [
@@ -23937,6 +24081,22 @@
    "blank": "반드시"
   }
  ],
+ "w|반듯하다": [
+  {
+   "text": "성호는 타일을 반듯하게 붙이려고 실을 띄워 기준을 잡았어요.",
+   "en": "Seongho stretched a string as a guide so he could lay the tiles straight.",
+   "ko": "성호는 타일을 반듯하게 붙이려고 실을 띄워 기준을 잡았어요.",
+   "blank": "반듯하게",
+   "src": "made"
+  },
+  {
+   "text": "미경은 자로 반듯한 선을 그어 건물의 윤곽을 잡았어요.",
+   "en": "Mikyeong drew straight lines with a ruler to outline the building.",
+   "ko": "미경은 자로 반듯한 선을 그어 건물의 윤곽을 잡았어요.",
+   "blank": "반듯한",
+   "src": "made"
+  }
+ ],
  "w|반란": [
   {
    "text": "국사 시간에 동민은 농민들이 일으킨 반란에 대해 배웠어요.",
@@ -25967,6 +26127,22 @@
    "blank": "병이"
   }
  ],
+ "w|병가": [
+  {
+   "text": "성호는 허리를 다쳐서 사흘 동안 병가를 냈어요.",
+   "en": "Seongho hurt his back and took three days of sick leave.",
+   "ko": "성호는 허리를 다쳐서 사흘 동안 병가를 냈어요.",
+   "blank": "병가를",
+   "src": "made"
+  },
+  {
+   "text": "미술 선생님이 병가 중이라서 오늘은 다른 선생님이 수업을 하셨어요.",
+   "en": "The art teacher was on sick leave, so a different teacher taught today.",
+   "ko": "미술 선생님이 병가 중이라서 오늘은 다른 선생님이 수업을 하셨어요.",
+   "blank": "병가",
+   "src": "made"
+  }
+ ],
  "w|병균": [
   {
    "text": "손을 안 씻으면 병균이 남아.",
@@ -26692,6 +26868,22 @@
    "en": "The demonstration plate the teacher made became the model for the students.",
    "ko": "선생님이 만든 시범 접시가 학생들의 본보기가 됐어요.",
    "blank": "본보기가",
+   "src": "made"
+  }
+ ],
+ "w|본사": [
+  {
+   "text": "성호는 매주 금요일에 본사로 공사 보고서를 보내요.",
+   "en": "Every Friday Seongho sends the construction report to headquarters.",
+   "ko": "성호는 매주 금요일에 본사로 공사 보고서를 보내요.",
+   "blank": "본사로",
+   "src": "made"
+  },
+  {
+   "text": "미경은 본사 로비에서 열리는 직원 그림 전시회에 작품을 냈어요.",
+   "en": "Mikyeong submitted a work to the staff art exhibition held in the headquarters lobby.",
+   "ko": "미경은 본사 로비에서 열리는 직원 그림 전시회에 작품을 냈어요.",
+   "blank": "본사",
    "src": "made"
   }
  ],
@@ -27690,6 +27882,22 @@
    "src": "made"
   }
  ],
+ "w|분주하다": [
+  {
+   "text": "준공 검사 전날 현장은 아침부터 분주했어요.",
+   "en": "The day before the final inspection, the site was busy from the morning.",
+   "ko": "준공 검사 전날 현장은 아침부터 분주했어요.",
+   "blank": "분주했어요",
+   "src": "made"
+  },
+  {
+   "text": "전시회 준비로 미술반 사람들 모두가 분주했어요.",
+   "en": "Everyone in the art class was busy preparing for the exhibition.",
+   "ko": "전시회 준비로 미술반 사람들 모두가 분주했어요.",
+   "blank": "분주했어요",
+   "src": "made"
+  }
+ ],
  "w|불": [
   {
    "text": "불 좀 꺼 줘.",
@@ -28472,6 +28680,22 @@
    "blank": "비둘기를"
   }
  ],
+ "w|비뚤다": [
+  {
+   "text": "성호는 창틀이 비뚤게 달린 걸 발견하고 다시 설치했어요.",
+   "en": "Seongho noticed the window frame was installed crooked and put it in again.",
+   "ko": "성호는 창틀이 비뚤게 달린 걸 발견하고 다시 설치했어요.",
+   "blank": "비뚤게",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 미경이 그린 얼굴의 코가 조금 비뚤다고 하셨어요.",
+   "en": "The teacher said the nose on the face Mikyeong drew was a bit crooked.",
+   "ko": "선생님은 미경이 그린 얼굴의 코가 조금 비뚤다고 하셨어요.",
+   "blank": "비뚤다고",
+   "src": "made"
+  }
+ ],
  "w|비로소": [
   {
    "text": "그때 비로소 내 마음을 알았어.",
@@ -28758,6 +28982,22 @@
    "en": "I need a visa.",
    "ko": "비자가 필요해.",
    "blank": "비자가"
+  }
+ ],
+ "w|비정규직": [
+  {
+   "text": "현장에는 비정규직 노동자가 많아서 성호는 늘 고용이 걱정이에요.",
+   "en": "There are many temporary workers at the site, so Seongho always worries about job security.",
+   "ko": "현장에는 비정규직 노동자가 많아서 성호는 늘 고용이 걱정이에요.",
+   "blank": "비정규직",
+   "src": "made"
+  },
+  {
+   "text": "미경의 미술 친구는 비정규직이라 수업 시간을 맞추기가 어려워요.",
+   "en": "Mikyeong's friend from art class is a temporary worker, so it's hard for her to fit in the class schedule.",
+   "ko": "미경의 미술 친구는 비정규직이라 수업 시간을 맞추기가 어려워요.",
+   "blank": "비정규직이라",
+   "src": "made"
   }
  ],
  "w|비참하다": [
@@ -31148,6 +31388,22 @@
    "src": "made"
   }
  ],
+ "w|상여금": [
+  {
+   "text": "공사를 일정보다 빨리 끝내서 성호네 팀은 상여금을 받았어요.",
+   "en": "Seongho's team got a bonus for finishing the construction ahead of schedule.",
+   "ko": "공사를 일정보다 빨리 끝내서 성호네 팀은 상여금을 받았어요.",
+   "blank": "상여금을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 연말 상여금으로 좋은 이젤을 하나 샀어요.",
+   "en": "Mikyeong bought a nice easel with her year-end bonus.",
+   "ko": "미경은 연말 상여금으로 좋은 이젤을 하나 샀어요.",
+   "blank": "상여금으로",
+   "src": "made"
+  }
+ ],
  "w|상의하다": [
   {
    "text": "변호사와 먼저 상의할게.",
@@ -32824,6 +33080,22 @@
    "blank": "성과를"
   }
  ],
+ "w|성급하다": [
+  {
+   "text": "성호는 성급하게 작업하다가 실수하지 않도록 늘 두 번 확인해요.",
+   "en": "Seongho always double-checks so he doesn't make mistakes by working too hastily.",
+   "ko": "성호는 성급하게 작업하다가 실수하지 않도록 늘 두 번 확인해요.",
+   "blank": "성급하게",
+   "src": "made"
+  },
+  {
+   "text": "미경은 물감이 마르기 전에 성급하게 덧칠해서 색이 번졌어요.",
+   "en": "Mikyeong hastily painted over it before the paint dried, and the colors bled.",
+   "ko": "미경은 물감이 마르기 전에 성급하게 덧칠해서 색이 번졌어요.",
+   "blank": "성급하게",
+   "src": "made"
+  }
+ ],
  "w|성당": [
   {
    "text": "성당에서 결혼했어.",
@@ -34406,6 +34678,22 @@
    "en": "Our means of contact was cut off.",
    "ko": "연락 수단이 끊겼어.",
    "blank": "수단이"
+  }
+ ],
+ "w|수당": [
+  {
+   "text": "성호는 야간 작업을 하면 따로 수당을 받아요.",
+   "en": "Seongho gets a separate allowance when he works night shifts.",
+   "ko": "성호는 야간 작업을 하면 따로 수당을 받아요.",
+   "blank": "수당을",
+   "src": "made"
+  },
+  {
+   "text": "미경의 회사는 자기 계발 수당으로 미술 수업료를 일부 지원해 줘요.",
+   "en": "Mikyeong's company covers part of her art tuition with a self-development allowance.",
+   "ko": "미경의 회사는 자기 계발 수당으로 미술 수업료를 일부 지원해 줘요.",
+   "blank": "수당으로",
+   "src": "made"
   }
  ],
  "w|수도": [
@@ -38350,6 +38638,22 @@
    "blank": "아래쪽"
   }
  ],
+ "w|아르바이트": [
+  {
+   "text": "성호는 대학생 때 공사 현장에서 아르바이트를 했어요.",
+   "en": "Seongho had a part-time job at a construction site when he was in college.",
+   "ko": "성호는 대학생 때 공사 현장에서 아르바이트를 했어요.",
+   "blank": "아르바이트를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 학생 때 미술 학원에서 아르바이트로 아이들을 가르쳤어요.",
+   "en": "When she was a student, Mikyeong taught children part-time at an art academy.",
+   "ko": "미경은 학생 때 미술 학원에서 아르바이트로 아이들을 가르쳤어요.",
+   "blank": "아르바이트로",
+   "src": "made"
+  }
+ ],
  "w|아름다움": [
   {
    "text": "미술 선생님은 자연의 아름다움을 그림에 담아 보라고 하셨어요.",
@@ -41902,6 +42206,22 @@
    "src": "krdict"
   }
  ],
+ "w|여유롭다": [
+  {
+   "text": "성호는 비 오는 날에는 작업이 없어서 여유로운 하루를 보내요.",
+   "en": "There's no work on rainy days, so Seongho spends a leisurely day.",
+   "ko": "성호는 비 오는 날에는 작업이 없어서 여유로운 하루를 보내요.",
+   "blank": "여유로운",
+   "src": "made"
+  },
+  {
+   "text": "미경은 일요일 아침 여유롭게 커피를 마시며 색연필화를 그려요.",
+   "en": "On Sunday mornings Mikyeong leisurely drinks coffee and draws with colored pencils.",
+   "ko": "미경은 일요일 아침 여유롭게 커피를 마시며 색연필화를 그려요.",
+   "blank": "여유롭게",
+   "src": "made"
+  }
+ ],
  "w|여인": [
   {
    "text": "한 여인이 잃어버린 강아지를 찾아 달라며 경찰서에 들어왔어요.",
@@ -42664,6 +42984,22 @@
    "ko": "거리의 악사는 바이올린으로 경쾌한 춤곡을 연주하기 시작했다.",
    "blank": "연주하기",
    "src": "krdict"
+  }
+ ],
+ "w|연차": [
+  {
+   "text": "성호는 공사가 끝나면 연차를 내고 푹 쉴 생각이에요.",
+   "en": "Seongho plans to take annual leave and rest well once the construction is done.",
+   "ko": "성호는 공사가 끝나면 연차를 내고 푹 쉴 생각이에요.",
+   "blank": "연차를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 연차를 써서 평일 오전 미술 특강을 들었어요.",
+   "en": "Mikyeong used a day of annual leave to attend a weekday morning art workshop.",
+   "ko": "미경은 연차를 써서 평일 오전 미술 특강을 들었어요.",
+   "blank": "연차를",
+   "src": "made"
   }
  ],
  "w|연초": [
@@ -44650,6 +44986,22 @@
    "blank": "요금을"
   }
  ],
+ "w|요란하다": [
+  {
+   "text": "아침부터 굴착기 소리가 요란해서 주민들이 민원을 넣었어요.",
+   "en": "The excavator was so loud from the morning that residents filed complaints.",
+   "ko": "아침부터 굴착기 소리가 요란해서 주민들이 민원을 넣었어요.",
+   "blank": "요란해서",
+   "src": "made"
+  },
+  {
+   "text": "선생님은 미경의 그림 색이 너무 요란하다며 톤을 낮추라고 하셨어요.",
+   "en": "The teacher said the colors in Mikyeong's painting were too loud and told her to tone them down.",
+   "ko": "선생님은 미경의 그림 색이 너무 요란하다며 톤을 낮추라고 하셨어요.",
+   "blank": "요란하다며",
+   "src": "made"
+  }
+ ],
  "w|요리": [
   {
    "text": "요리를 배우는 중이야.",
@@ -45463,6 +45815,22 @@
    "en": "In spring, forsythia blooms yellow along Sujin's fence.",
    "ko": "봄이 되면 수진네 울타리에 개나리가 노랗게 피어요.",
    "blank": "울타리에",
+   "src": "made"
+  }
+ ],
+ "w|울퉁불퉁하다": [
+  {
+   "text": "현장 진입로가 울퉁불퉁해서 트럭이 천천히 지나갔어요.",
+   "en": "The access road to the site was bumpy, so the trucks passed slowly.",
+   "ko": "현장 진입로가 울퉁불퉁해서 트럭이 천천히 지나갔어요.",
+   "blank": "울퉁불퉁해서",
+   "src": "made"
+  },
+  {
+   "text": "미경은 울퉁불퉁한 나무껍질 질감을 표현하느라 애를 먹었어요.",
+   "en": "Mikyeong struggled to capture the rough texture of the tree bark.",
+   "ko": "미경은 울퉁불퉁한 나무껍질 질감을 표현하느라 애를 먹었어요.",
+   "blank": "울퉁불퉁한",
    "src": "made"
   }
  ],
@@ -49110,6 +49478,22 @@
    "blank": "잃어버리지"
   }
  ],
+ "w|임금": [
+  {
+   "text": "현장 노동자들은 밀린 임금을 달라고 회사에 요구했어요.",
+   "en": "The site workers demanded that the company pay their overdue wages.",
+   "ko": "현장 노동자들은 밀린 임금을 달라고 회사에 요구했어요.",
+   "blank": "임금을",
+   "src": "made"
+  },
+  {
+   "text": "미술 학원 선생님은 강사 임금이 너무 낮다고 하소연했어요.",
+   "en": "The art academy teacher complained that instructors' wages are too low.",
+   "ko": "미술 학원 선생님은 강사 임금이 너무 낮다고 하소연했어요.",
+   "blank": "임금이",
+   "src": "made"
+  }
+ ],
  "w|임대": [
   {
    "text": "학교는 주말에 운동장을 동네 축구팀에 임대해 줘요.",
@@ -49992,6 +50376,38 @@
    "blank": "자연스럽다"
   }
  ],
+ "w|자영업": [
+  {
+   "text": "성호의 아버지는 오랫동안 철물점 자영업을 하셨어요.",
+   "en": "Seongho's father ran his own hardware store for a long time.",
+   "ko": "성호의 아버지는 오랫동안 철물점 자영업을 하셨어요.",
+   "blank": "자영업을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 자영업은 힘들어도 언젠가 작은 화실을 열고 싶어요.",
+   "en": "Even though running your own business is hard, Mikyeong wants to open a small studio someday.",
+   "ko": "미경은 자영업은 힘들어도 언젠가 작은 화실을 열고 싶어요.",
+   "blank": "자영업은",
+   "src": "made"
+  }
+ ],
+ "w|자영업자": [
+  {
+   "text": "현장 근처 식당 주인은 공사 덕분에 손님이 늘었다는 자영업자예요.",
+   "en": "The owner of the restaurant near the site is a small-business owner whose customers grew thanks to the construction.",
+   "ko": "현장 근처 식당 주인은 공사 덕분에 손님이 늘었다는 자영업자예요.",
+   "blank": "자영업자예요",
+   "src": "made"
+  },
+  {
+   "text": "미술 학원 원장님은 이십 년째 학원을 운영하는 자영업자예요.",
+   "en": "The art academy director is a small-business owner who has run the academy for twenty years.",
+   "ko": "미술 학원 원장님은 이십 년째 학원을 운영하는 자영업자예요.",
+   "blank": "자영업자예요",
+   "src": "made"
+  }
+ ],
  "w|자원": [
   {
    "text": "물도 소중한 자원이야.",
@@ -50531,6 +50947,22 @@
    "en": "Daeun watched quietly while the teacher demonstrated how to use the knife.",
    "ko": "다은은 선생님이 칼 쓰는 법을 보여 주시는 동안 잠자코 지켜봤어요.",
    "blank": "잠자코",
+   "src": "made"
+  }
+ ],
+ "w|잠잠하다": [
+  {
+   "text": "점심시간이 되자 시끄럽던 현장이 잠잠해졌어요.",
+   "en": "When lunchtime came, the noisy site went quiet.",
+   "ko": "점심시간이 되자 시끄럽던 현장이 잠잠해졌어요.",
+   "blank": "잠잠해졌어요",
+   "src": "made"
+  },
+  {
+   "text": "모두가 그림에 집중하자 교실이 잠잠했어요.",
+   "en": "When everyone focused on their drawings, the classroom was quiet.",
+   "ko": "모두가 그림에 집중하자 교실이 잠잠했어요.",
+   "blank": "잠잠했어요",
    "src": "made"
   }
  ],
@@ -52939,6 +53371,22 @@
    "en": "One of the friends showed off an intricate ring she'd made by hand.",
    "ko": "친구 하나가 손으로 직접 만든 정교한 반지를 보여 줬어요.",
    "blank": "정교한",
+   "src": "made"
+  }
+ ],
+ "w|정규직": [
+  {
+   "text": "성호는 성실함을 인정받아 건설사 정규직이 됐어요.",
+   "en": "Seongho was recognized for his diligence and became a permanent employee at the construction company.",
+   "ko": "성호는 성실함을 인정받아 건설사 정규직이 됐어요.",
+   "blank": "정규직이",
+   "src": "made"
+  },
+  {
+   "text": "미경은 정규직으로 일하면서도 화가의 꿈을 놓지 않았어요.",
+   "en": "Mikyeong has held on to her dream of being a painter even while working full-time.",
+   "ko": "미경은 정규직으로 일하면서도 화가의 꿈을 놓지 않았어요.",
+   "blank": "정규직으로",
    "src": "made"
   }
  ],
@@ -58012,6 +58460,22 @@
    "blank": "차별을"
   }
  ],
+ "w|차분하다": [
+  {
+   "text": "사고가 났을 때 성호는 차분하게 구급차를 불렀어요.",
+   "en": "When the accident happened, Seongho calmly called an ambulance.",
+   "ko": "사고가 났을 때 성호는 차분하게 구급차를 불렀어요.",
+   "blank": "차분하게",
+   "src": "made"
+  },
+  {
+   "text": "미경은 그림을 그릴 때 마음이 차분해져서 좋대요.",
+   "en": "Mikyeong says she likes how drawing calms her mind.",
+   "ko": "미경은 그림을 그릴 때 마음이 차분해져서 좋대요.",
+   "blank": "차분해져서",
+   "src": "made"
+  }
+ ],
  "w|차원": [
   {
    "text": "평면과 입체는 차원이 다르다.",
@@ -58423,6 +58887,38 @@
    "en": "When her laptop died right before the presentation, Haeun looked at the CEO with a pale face.",
    "ko": "발표 직전에 노트북이 꺼지자 하은은 창백한 얼굴로 대표를 쳐다봤어요.",
    "blank": "창백한",
+   "src": "made"
+  }
+ ],
+ "w|창업": [
+  {
+   "text": "성호는 언젠가 인테리어 회사를 창업하는 게 꿈이에요.",
+   "en": "Seongho dreams of founding an interior design company someday.",
+   "ko": "성호는 언젠가 인테리어 회사를 창업하는 게 꿈이에요.",
+   "blank": "창업하는",
+   "src": "made"
+  },
+  {
+   "text": "미경의 수업 친구는 그림 굿즈로 창업에 성공했어요.",
+   "en": "Mikyeong's classmate succeeded in starting a business selling art merchandise.",
+   "ko": "미경의 수업 친구는 그림 굿즈로 창업에 성공했어요.",
+   "blank": "창업에",
+   "src": "made"
+  }
+ ],
+ "w|창업자": [
+  {
+   "text": "성호가 일하는 건설사의 창업자는 목수 출신이래요.",
+   "en": "The founder of the construction company Seongho works for was reportedly a carpenter.",
+   "ko": "성호가 일하는 건설사의 창업자는 목수 출신이래요.",
+   "blank": "창업자는",
+   "src": "made"
+  },
+  {
+   "text": "미경은 온라인 미술 강의 플랫폼 창업자의 인터뷰를 읽었어요.",
+   "en": "Mikyeong read an interview with the founder of an online art lesson platform.",
+   "ko": "미경은 온라인 미술 강의 플랫폼 창업자의 인터뷰를 읽었어요.",
+   "blank": "창업자의",
    "src": "made"
   }
  ],
@@ -59454,6 +59950,22 @@
    "blank": "초과야"
   }
  ],
+ "w|초과근무": [
+  {
+   "text": "공사 마감이 다가와서 성호는 이번 주 내내 초과근무를 했어요.",
+   "en": "The construction deadline was approaching, so Seongho worked overtime all week.",
+   "ko": "공사 마감이 다가와서 성호는 이번 주 내내 초과근무를 했어요.",
+   "blank": "초과근무를",
+   "src": "made"
+  },
+  {
+   "text": "미경은 초과근무 때문에 이번 주 미술 수업을 두 번이나 빠졌어요.",
+   "en": "Mikyeong missed art class twice this week because of overtime.",
+   "ko": "미경은 초과근무 때문에 이번 주 미술 수업을 두 번이나 빠졌어요.",
+   "blank": "초과근무",
+   "src": "made"
+  }
+ ],
  "w|초기": [
   {
    "text": "조선 초기에는 문화와 과학 기술이 발달하였다.",
@@ -59776,6 +60288,22 @@
    "en": "I only packed the bare minimum.",
    "ko": "최소한의 준비만 챙겼어.",
    "blank": "최소한의"
+  }
+ ],
+ "w|최저임금": [
+  {
+   "text": "성호는 뉴스에서 내년 최저임금이 오른다는 소식을 들었어요.",
+   "en": "Seongho heard on the news that next year's minimum wage is going up.",
+   "ko": "성호는 뉴스에서 내년 최저임금이 오른다는 소식을 들었어요.",
+   "blank": "최저임금이",
+   "src": "made"
+  },
+  {
+   "text": "미경과 같이 수업 듣는 대학생은 최저임금을 받는 편의점에서 일한대요.",
+   "en": "The college student in Mikyeong's class says she works at a convenience store that pays minimum wage.",
+   "ko": "미경과 같이 수업 듣는 대학생은 최저임금을 받는 편의점에서 일한대요.",
+   "blank": "최저임금을",
+   "src": "made"
   }
  ],
  "w|추다": [
@@ -60218,6 +60746,22 @@
    "en": "I was so peckish I picked up a piece of bread.",
    "ko": "출출하다 못해 빵을 하나 집어 들었어.",
    "blank": "출출하다"
+  }
+ ],
+ "w|출퇴근": [
+  {
+   "text": "성호는 현장이 멀어서 출퇴근에만 두 시간이 걸려요.",
+   "en": "Seongho's site is far away, so commuting alone takes him two hours.",
+   "ko": "성호는 현장이 멀어서 출퇴근에만 두 시간이 걸려요.",
+   "blank": "출퇴근에만",
+   "src": "made"
+  },
+  {
+   "text": "미경은 출퇴근 지하철에서 사람들 얼굴을 스케치해요.",
+   "en": "Mikyeong sketches people's faces on the subway during her commute.",
+   "ko": "미경은 출퇴근 지하철에서 사람들 얼굴을 스케치해요.",
+   "blank": "출퇴근",
+   "src": "made"
   }
  ],
  "w|출판": [
@@ -63308,6 +63852,22 @@
    "blank": "파트너가"
   }
  ],
+ "w|파트타임": [
+  {
+   "text": "현장 식당에는 파트타임으로 일하는 직원이 두 명 있어요.",
+   "en": "The site cafeteria has two staff members who work part-time.",
+   "ko": "현장 식당에는 파트타임으로 일하는 직원이 두 명 있어요.",
+   "blank": "파트타임으로",
+   "src": "made"
+  },
+  {
+   "text": "미술 학원 선생님은 파트타임 강사를 한 명 더 뽑았어요.",
+   "en": "The art academy teacher hired one more part-time instructor.",
+   "ko": "미술 학원 선생님은 파트타임 강사를 한 명 더 뽑았어요.",
+   "blank": "파트타임",
+   "src": "made"
+  }
+ ],
  "w|파티": [
   {
    "text": "파티에 올 거지?",
@@ -63929,6 +64489,22 @@
    "en": "Haeun applied because the company had a good reputation in the industry.",
    "ko": "하은은 그 회사가 업계에서 평판이 좋아서 지원했어요.",
    "blank": "평판이",
+   "src": "made"
+  }
+ ],
+ "w|평평하다": [
+  {
+   "text": "성호는 땅을 평평하게 다진 다음에 기초 공사를 시작했어요.",
+   "en": "Seongho leveled the ground flat before starting the foundation work.",
+   "ko": "성호는 땅을 평평하게 다진 다음에 기초 공사를 시작했어요.",
+   "blank": "평평하게",
+   "src": "made"
+  },
+  {
+   "text": "미경은 평평한 책상 위에 종이를 펴고 수채화를 시작했어요.",
+   "en": "Mikyeong spread paper on the flat desk and started a watercolor.",
+   "ko": "미경은 평평한 책상 위에 종이를 펴고 수채화를 시작했어요.",
+   "blank": "평평한",
    "src": "made"
   }
  ],
@@ -66874,6 +67450,22 @@
    "blank": "협력해서"
   }
  ],
+ "w|협력사": [
+  {
+   "text": "성호네 회사는 전기 공사를 협력사에 맡겼어요.",
+   "en": "Seongho's company handed the electrical work to a partner company.",
+   "ko": "성호네 회사는 전기 공사를 협력사에 맡겼어요.",
+   "blank": "협력사에",
+   "src": "made"
+  },
+  {
+   "text": "미술 학원은 화방과 협력사 계약을 맺어서 재료를 싸게 받아요.",
+   "en": "The art academy signed a partner contract with an art supply store and gets materials cheaply.",
+   "ko": "미술 학원은 화방과 협력사 계약을 맺어서 재료를 싸게 받아요.",
+   "blank": "협력사",
+   "src": "made"
+  }
+ ],
  "w|협력하다": [
   {
    "text": "두 팀이 함께 협력해.",
@@ -67918,6 +68510,22 @@
    "blank": "활동을"
   }
  ],
+ "w|활발하다": [
+  {
+   "text": "성호의 신입 동료는 성격이 활발해서 현장 분위기를 밝게 만들어요.",
+   "en": "Seongho's new coworker has a lively personality and brightens up the mood on site.",
+   "ko": "성호의 신입 동료는 성격이 활발해서 현장 분위기를 밝게 만들어요.",
+   "blank": "활발해서",
+   "src": "made"
+  },
+  {
+   "text": "미경의 미술반은 서로 의견을 나누는 분위기가 활발해요.",
+   "en": "Mikyeong's art class has a lively atmosphere where people share opinions.",
+   "ko": "미경의 미술반은 서로 의견을 나누는 분위기가 활발해요.",
+   "blank": "활발해요",
+   "src": "made"
+  }
+ ],
  "w|활짝": [
   {
    "text": "꽃이 활짝 피었어.",
@@ -68066,6 +68674,22 @@
    "en": "The office workers had dinner together.",
    "ko": "회사원들끼리 저녁을 먹었어.",
    "blank": "회사원끼리"
+  }
+ ],
+ "w|회식": [
+  {
+   "text": "골조 공사가 끝난 날 성호네 팀은 삼겹살집에서 회식을 했어요.",
+   "en": "The day the framework was finished, Seongho's team had a work dinner at a pork belly restaurant.",
+   "ko": "골조 공사가 끝난 날 성호네 팀은 삼겹살집에서 회식을 했어요.",
+   "blank": "회식을",
+   "src": "made"
+  },
+  {
+   "text": "미경은 회식 대신 미술 수업에 가겠다고 팀장님께 말했어요.",
+   "en": "Mikyeong told her team leader she'd go to art class instead of the work dinner.",
+   "ko": "미경은 회식 대신 미술 수업에 가겠다고 팀장님께 말했어요.",
+   "blank": "회식",
+   "src": "made"
   }
  ],
  "w|회원": [
@@ -68444,6 +69068,22 @@
    "en": "The flag flutters freely.",
    "ko": "깃발이 훨훨 펄럭여.",
    "blank": "훨훨"
+  }
+ ],
+ "w|휘다": [
+  {
+   "text": "무거운 자재를 올렸더니 철근이 조금 휘어서 성호가 교체했어요.",
+   "en": "The rebar bent a little under the heavy materials, so Seongho replaced it.",
+   "ko": "무거운 자재를 올렸더니 철근이 조금 휘어서 성호가 교체했어요.",
+   "blank": "휘어서",
+   "src": "made"
+  },
+  {
+   "text": "미경의 붓은 오래 써서 끝이 살짝 휘었어요.",
+   "en": "Mikyeong's brush has been used so long that its tip is slightly bent.",
+   "ko": "미경의 붓은 오래 써서 끝이 살짝 휘었어요.",
+   "blank": "휘었어요",
+   "src": "made"
   }
  ],
  "w|휘두르다": [

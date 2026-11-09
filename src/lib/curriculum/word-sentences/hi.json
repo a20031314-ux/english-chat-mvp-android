@@ -687,6 +687,22 @@
    "src": "made"
   }
  ],
+ "w|अत्याचार": [
+  {
+   "text": "इतिहास की किताब में बताया गया है कि ग़ुलामी के दौर में किसानों पर कैसा अत्याचार हुआ।",
+   "en": "The history book describes the oppression farmers suffered in the colonial era.",
+   "ko": "역사책에는 식민지 시절 농민들이 어떤 억압을 받았는지 나와요.",
+   "blank": "अत्याचार",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने एक लेख में पढ़ा कि पुराने ज़माने में कुछ लोगों पर तालाब में नहाने तक की रोक का अत्याचार होता था।",
+   "en": "Anjali read in an article that in old times some people suffered the oppression of not even being allowed to bathe in the pond.",
+   "ko": "안잘리는 옛날 어떤 사람들은 연못에서 씻는 것조차 금지당하는 억압을 받았다는 글을 읽었어요.",
+   "blank": "अत्याचार",
+   "src": "made"
+  }
+ ],
  "w|अथवा": [
   {
    "text": "चाय अथवा कॉफ़ी ले लोगे?",
@@ -890,6 +906,22 @@
    "en": "According to the newspaper, the new consumer act gives customers more rights.",
    "ko": "신문에 따르면 새 소비자법은 소비자에게 더 많은 권리를 줘요.",
    "blank": "अधिनियम",
+   "src": "made"
+  }
+ ],
+ "w|अधीन": [
+  {
+   "text": "गाँव का स्कूल अब ज़िला शिक्षा विभाग के अधीन आ गया है।",
+   "en": "The village school has now come under the district education department.",
+   "ko": "마을 학교는 이제 군 교육청 소관이 됐어요.",
+   "blank": "अधीन",
+   "src": "made"
+  },
+  {
+   "text": "यह स्विमिंग पूल नगर खेल परिषद के अधीन चलता है।",
+   "en": "This swimming pool is run under the city sports council.",
+   "ko": "이 수영장은 시 체육위원회 소관으로 운영돼요.",
+   "blank": "अधीन",
    "src": "made"
   }
  ],
@@ -1289,6 +1321,22 @@
    "en": "Tell the other people about this too.",
    "ko": "이 말은 다른 사람들에게도 전해.",
    "blank": "अन्य"
+  }
+ ],
+ "w|अन्यथा": [
+  {
+   "text": "रवि सर ने कहा कि कल तक प्रोजेक्ट जमा करो, अन्यथा अंक कट जाएँगे।",
+   "en": "Ravi sir said to hand in the project by tomorrow, otherwise marks would be cut.",
+   "ko": "라비 선생님은 내일까지 과제를 내라고, 그렇지 않으면 감점이라고 했어요.",
+   "blank": "अन्यथा",
+   "src": "made"
+  },
+  {
+   "text": "स्विमिंग कैप पहनना ज़रूरी है, अन्यथा पानी में उतरने नहीं दिया जाता।",
+   "en": "Wearing a swimming cap is compulsory; otherwise you're not allowed into the water.",
+   "ko": "수영모는 꼭 써야 해요. 안 그러면 물에 들어갈 수 없어요.",
+   "blank": "अन्यथा",
+   "src": "made"
   }
  ],
  "w|अपना": [
@@ -1717,6 +1765,22 @@
    "src": "made"
   }
  ],
+ "w|अमृत": [
+  {
+   "text": "संस्कृत की कक्षा में बच्चों ने समुद्र मंथन और अमृत की कथा पढ़ी।",
+   "en": "In Sanskrit class the children read the tale of the churning of the ocean and the nectar of immortality.",
+   "ko": "산스크리트어 시간에 아이들은 바다 휘젓기와 불사의 감로 이야기를 읽었어요.",
+   "blank": "अमृत",
+   "src": "made"
+  },
+  {
+   "text": "लंबी तैराकी के बाद ठंडा नींबू पानी अंजलि को अमृत जैसा लगा।",
+   "en": "After a long swim, the cold lemonade tasted like nectar to Anjali.",
+   "ko": "오래 수영한 뒤 시원한 레몬수는 안잘리에게 감로수 같았어요.",
+   "blank": "अमृत",
+   "src": "made"
+  }
+ ],
  "w|अरब": [
   {
    "text": "गाइड ने बताया कि दुनिया में अरबों कीड़े-मकोड़े हैं।",
@@ -2051,6 +2115,22 @@
    "en": "The rain had an effect on the crops.",
    "ko": "비가 작물에 영향을 줬어.",
    "blank": "असर"
+  }
+ ],
+ "w|असर डालना": [
+  {
+   "text": "रवि जानता है कि घर का माहौल बच्चे की पढ़ाई पर गहरा असर डालता है।",
+   "en": "Ravi knows that the home atmosphere has a deep effect on a child's studies.",
+   "ko": "라비는 집안 분위기가 아이의 공부에 큰 영향을 준다는 걸 알아요.",
+   "blank": "असर डालता",
+   "src": "made"
+  },
+  {
+   "text": "ज़्यादा क्लोरीन बालों और आँखों पर बुरा असर डाल सकता है।",
+   "en": "Too much chlorine can have a bad effect on hair and eyes.",
+   "ko": "염소가 너무 많으면 머리카락과 눈에 해로울 수 있어요.",
+   "blank": "असर डाल",
+   "src": "made"
   }
  ],
  "w|असली": [
@@ -4343,6 +4423,22 @@
    "blank": "उच्च"
   }
  ],
+ "w|उच्चतम": [
+  {
+   "text": "रवि की कक्षा ने इस बार ज़िले में उच्चतम अंक पाए।",
+   "en": "Ravi's class got the highest marks in the district this time.",
+   "ko": "라비네 반이 이번에 군에서 가장 높은 점수를 받았어요.",
+   "blank": "उच्चतम",
+   "src": "made"
+  },
+  {
+   "text": "पूल का उच्चतम डाइविंग बोर्ड दस मीटर ऊँचा है।",
+   "en": "The pool's highest diving board is ten metres high.",
+   "ko": "수영장의 가장 높은 다이빙대는 십 미터예요.",
+   "blank": "उच्चतम",
+   "src": "made"
+  }
+ ],
  "w|उच्चारण": [
   {
    "text": "विदेशी क्लाइंट ने रोहन के नाम का उच्चारण ठीक से करने की कोशिश की।",
@@ -4908,6 +5004,22 @@
    "en": "To treat her sore throat, Mom gave Dipa ginger tea.",
    "ko": "엄마는 디파의 목 아픈 데 좋으라고 생강차를 줬어요.",
    "blank": "उपचार",
+   "src": "made"
+  }
+ ],
+ "w|उपदेश": [
+  {
+   "text": "बच्चे कहते हैं कि रवि सर लंबा उपदेश नहीं देते, बस उदाहरण से समझाते हैं।",
+   "en": "The children say Ravi sir doesn't give long sermons; he just explains with examples.",
+   "ko": "아이들은 라비 선생님이 긴 설교 대신 예를 들어 설명한다고 해요.",
+   "blank": "उपदेश",
+   "src": "made"
+  },
+  {
+   "text": "हारकर लौटी अंजलि को पिता ने उपदेश देने की जगह गले लगा लिया।",
+   "en": "When Anjali came back after losing, her father hugged her instead of lecturing her.",
+   "ko": "지고 돌아온 안잘리를 아버지는 훈계 대신 안아 주었어요.",
+   "blank": "उपदेश",
    "src": "made"
   }
  ],
@@ -6675,6 +6787,22 @@
    "src": "made"
   }
  ],
+ "w|क़ब्र": [
+  {
+   "text": "इतिहास की सैर में बच्चे एक मुग़ल बादशाह की क़ब्र देखने गए।",
+   "en": "On a history trip the children went to see the tomb of a Mughal emperor.",
+   "ko": "역사 체험학습에서 아이들은 무굴 황제의 무덤을 보러 갔어요.",
+   "blank": "क़ब्र",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने एक उपन्यास पढ़ा जिसमें एक महान तैराक की क़ब्र समुद्र के किनारे बनाई गई थी।",
+   "en": "Anjali read a novel in which a great swimmer's grave was built by the sea.",
+   "ko": "안잘리는 위대한 수영 선수의 무덤이 바닷가에 세워진 소설을 읽었어요.",
+   "blank": "क़ब्र",
+   "src": "made"
+  }
+ ],
  "w|कभी": [
   {
    "text": "क्या तुम कभी आगरा गए हो?",
@@ -7511,6 +7639,22 @@
    "blank": "कांटा"
   }
  ],
+ "w|कांड": [
+  {
+   "text": "टूटे शीशे वाले कांड के बाद प्रिंसिपल ने पूरी कक्षा को बुलाया।",
+   "en": "After the broken-window incident the principal called in the whole class.",
+   "ko": "유리창 깨진 사건 뒤 교장은 반 전체를 불렀어요.",
+   "blank": "कांड",
+   "src": "made"
+  },
+  {
+   "text": "पूल में किसी का बटुआ खोने का कांड पूरे क्लब में चर्चा का विषय बन गया।",
+   "en": "The episode of someone's wallet going missing at the pool became the talk of the whole club.",
+   "ko": "수영장에서 누군가 지갑을 잃어버린 일이 클럽 전체의 화제가 됐어요.",
+   "blank": "कांड",
+   "src": "made"
+  }
+ ],
  "w|कान": [
   {
    "text": "तेज़ आवाज़ से कान दर्द करने लगे।",
@@ -7919,6 +8063,22 @@
    "en": "Don't walk on the carpet with shoes on.",
    "ko": "카펫 위에서 신발을 신고 걷지 마.",
    "blank": "कालीन"
+  }
+ ],
+ "w|काव्य": [
+  {
+   "text": "रवि सर हिंदी काव्य पढ़ाते समय हर पंक्ति लय में गाकर सुनाते हैं।",
+   "en": "When teaching Hindi poetry, Ravi sir sings every line in rhythm.",
+   "ko": "라비 선생님은 힌디어 시를 가르칠 때 한 줄 한 줄 가락을 붙여 읊어요.",
+   "blank": "काव्य",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के कोच कहते हैं कि अच्छी तैराकी पानी पर लिखे काव्य जैसी होती है।",
+   "en": "Anjali's coach says good swimming is like poetry written on water.",
+   "ko": "코치는 좋은 수영은 물 위에 쓴 시 같다고 말해요.",
+   "blank": "काव्य",
+   "src": "made"
   }
  ],
  "w|कि": [
@@ -10095,6 +10255,22 @@
    "src": "made"
   }
  ],
+ "w|खंड": [
+  {
+   "text": "परीक्षा के प्रश्नपत्र का पहला खंड व्याकरण पर था।",
+   "en": "The first section of the exam paper was on grammar.",
+   "ko": "시험지 첫 부분은 문법이었어요.",
+   "blank": "खंड",
+   "src": "made"
+  },
+  {
+   "text": "पूल का गहरा खंड सिर्फ़ अनुभवी तैराकों के लिए खुला है।",
+   "en": "The deep section of the pool is open only to experienced swimmers.",
+   "ko": "수영장의 깊은 구역은 숙련된 사람만 들어갈 수 있어요.",
+   "blank": "खंड",
+   "src": "made"
+  }
+ ],
  "w|खड़ा होना": [
   {
    "text": "बस में बुज़ुर्गों के लिए खड़ा होना चाहिए।",
@@ -11265,6 +11441,22 @@
    "blank": "गंभीर"
   }
  ],
+ "w|गंभीरता": [
+  {
+   "text": "प्रधानाचार्य ने नकल की शिकायत को पूरी गंभीरता से लिया।",
+   "en": "The principal took the complaint about cheating with full seriousness.",
+   "ko": "교장은 부정행위 신고를 아주 진지하게 받아들였어요.",
+   "blank": "गंभीरता",
+   "src": "made"
+  },
+  {
+   "text": "कोच ने अंजलि से कहा कि साँस लेने के अभ्यास को गंभीरता से ले।",
+   "en": "The coach told Anjali to take her breathing practice seriously.",
+   "ko": "코치는 안잘리에게 호흡 연습을 진지하게 하라고 했어요.",
+   "blank": "गंभीरता",
+   "src": "made"
+  }
+ ],
  "w|ग़म": [
   {
    "text": "उसके चेहरे पर गहरा ग़म छाया हुआ था।",
@@ -12326,6 +12518,22 @@
    "en": "At the housewarming prayer Meena lit camphor and performed the aarti.",
    "ko": "집들이 기도 때 미나는 장뇌를 태워 아르티를 올렸어요.",
    "blank": "गृह",
+   "src": "made"
+  }
+ ],
+ "w|गृह मंत्री": [
+  {
+   "text": "सामाजिक विज्ञान की परीक्षा में पूछा गया कि गृह मंत्री के क्या काम होते हैं।",
+   "en": "The social science exam asked what the duties of the home minister are.",
+   "ko": "사회 시험에 내무부 장관이 하는 일이 무엇인지 나왔어요.",
+   "blank": "गृह मंत्री",
+   "src": "made"
+  },
+  {
+   "text": "राज्य स्तर की तैराकी प्रतियोगिता का उद्घाटन गृह मंत्री ने किया।",
+   "en": "The state-level swimming championship was opened by the home minister.",
+   "ko": "주 수영 대회 개막은 내무부 장관이 했어요.",
+   "blank": "गृह मंत्री",
    "src": "made"
   }
  ],
@@ -16535,6 +16743,22 @@
    "blank": "जान"
   }
  ],
+ "w|जान बचाना": [
+  {
+   "text": "अग्नि सुरक्षा अभ्यास में बच्चों को सिखाया गया कि आग लगने पर जान कैसे बचाएँ।",
+   "en": "In the fire safety drill the children were taught how to save their lives in a fire.",
+   "ko": "소방 훈련에서 아이들은 불이 나면 어떻게 목숨을 구하는지 배웠어요.",
+   "blank": "जान कैसे बचाएँ",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के कोच ने कभी समुद्र में डूबते एक बच्चे की जान बचाई थी।",
+   "en": "Anjali's coach once saved the life of a child drowning in the sea.",
+   "ko": "안잘리의 코치는 바다에서 물에 빠진 아이의 목숨을 구한 적이 있어요.",
+   "blank": "जान बचाई",
+   "src": "made"
+  }
+ ],
  "w|जानकारी": [
   {
    "text": "मुझे इसकी जानकारी नहीं थी।",
@@ -17593,6 +17817,22 @@
    "src": "made"
   }
  ],
+ "w|ज्योतिष": [
+  {
+   "text": "विज्ञान की कक्षा में रवि सर ने समझाया कि खगोल विज्ञान और ज्योतिष में क्या अंतर है।",
+   "en": "In science class Ravi sir explained the difference between astronomy and astrology.",
+   "ko": "과학 시간에 라비 선생님은 천문학과 점성술이 어떻게 다른지 설명했어요.",
+   "blank": "ज्योतिष",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की दादी ज्योतिष देखकर बताती हैं कि प्रतियोगिता का दिन शुभ है या नहीं।",
+   "en": "Anjali's grandmother checks astrology to say whether a competition day is auspicious.",
+   "ko": "안잘리의 할머니는 점성술을 보고 대회 날이 길한지 알려 줘요.",
+   "blank": "ज्योतिष",
+   "src": "made"
+  }
+ ],
  "w|झगड़ना": [
   {
    "text": "भाइयों को छोटी बात पर झगड़ना नहीं चाहिए।",
@@ -17619,6 +17859,22 @@
    "en": "This fight happened because of money.",
    "ko": "이 싸움은 돈 때문에 났어.",
    "blank": "झगड़ा"
+  }
+ ],
+ "w|झटकना": [
+  {
+   "text": "रवि ने ब्लैकबोर्ड पोंछने के बाद हाथों से चॉक की धूल झटकी।",
+   "en": "After wiping the blackboard, Ravi shook the chalk dust off his hands.",
+   "ko": "라비는 칠판을 지운 뒤 손에 묻은 분필 가루를 털었어요.",
+   "blank": "झटकी",
+   "src": "made"
+  },
+  {
+   "text": "पानी से निकलकर अंजलि ने सिर झटककर कानों से पानी निकाला।",
+   "en": "Coming out of the water, Anjali shook her head to get the water out of her ears.",
+   "ko": "물에서 나온 안잘리는 머리를 흔들어 귀의 물을 뺐어요.",
+   "blank": "झटककर",
+   "src": "made"
   }
  ],
  "w|झपटना": [
@@ -20289,6 +20545,22 @@
    "en": "Sesame and jaggery were mixed into the laddoo.",
    "ko": "라두에 참깨와 자그리를 섞었어.",
    "blank": "तिल"
+  }
+ ],
+ "w|तिलक": [
+  {
+   "text": "रक्षाबंधन पर छोटी बच्चियों ने रवि सर के माथे पर तिलक लगाया।",
+   "en": "On Raksha Bandhan the little girls put a tilak on Ravi sir's forehead.",
+   "ko": "락샤 반단에 어린 여학생들이 라비 선생님 이마에 틸락을 찍어 줬어요.",
+   "blank": "तिलक",
+   "src": "made"
+  },
+  {
+   "text": "प्रतियोगिता से पहले माँ ने अंजलि के माथे पर छोटा-सा तिलक लगाया।",
+   "en": "Before the competition, her mother put a small tilak on Anjali's forehead.",
+   "ko": "대회 전에 어머니가 안잘리 이마에 작은 틸락을 찍어 줬어요.",
+   "blank": "तिलक",
+   "src": "made"
   }
  ],
  "w|तिलचट्टा": [
@@ -23589,6 +23861,22 @@
    "blank": "नकारना"
   }
  ],
+ "w|नकारात्मक": [
+  {
+   "text": "रवि सर किसी बच्चे के बारे में नकारात्मक बातें सुनना पसंद नहीं करते।",
+   "en": "Ravi sir doesn't like hearing negative things about any child.",
+   "ko": "라비 선생님은 어떤 아이에 대해서든 부정적인 말을 듣기 싫어해요.",
+   "blank": "नकारात्मक",
+   "src": "made"
+  },
+  {
+   "text": "हारने के बाद भी अंजलि ने अपने मन में कोई नकारात्मक विचार नहीं आने दिया।",
+   "en": "Even after losing, Anjali didn't let any negative thoughts into her mind.",
+   "ko": "져도 안잘리는 부정적인 생각을 마음에 들이지 않았어요.",
+   "blank": "नकारात्मक",
+   "src": "made"
+  }
+ ],
  "w|नक्शा": [
   {
    "text": "पटवारी ने विकास को ज़मीन का पुराना नक्शा दिखाया।",
@@ -24683,6 +24971,22 @@
    "en": "The fishermen set out with a boat in the morning.",
    "ko": "어부들이 아침에 배를 타고 나갔어.",
    "blank": "नाव"
+  }
+ ],
+ "w|नाश": [
+  {
+   "text": "इतिहास की कक्षा में रवि सर ने एक प्राचीन नगर के नाश की कहानी सुनाई।",
+   "en": "In history class Ravi sir told the story of the destruction of an ancient city.",
+   "ko": "역사 시간에 라비 선생님은 고대 도시가 멸망한 이야기를 들려줬어요.",
+   "blank": "नाश",
+   "src": "made"
+  },
+  {
+   "text": "कोच कहते हैं कि आलस प्रतिभा का नाश कर देता है।",
+   "en": "The coach says laziness destroys talent.",
+   "ko": "코치는 게으름이 재능을 망친다고 말해요.",
+   "blank": "नाश",
+   "src": "made"
   }
  ],
  "w|नाश्ता": [
@@ -29547,6 +29851,22 @@
    "blank": "प्रगति"
   }
  ],
+ "w|प्रचलित": [
+  {
+   "text": "स्कूल में आजकल बच्चों के बीच एक नया खेल बहुत प्रचलित है।",
+   "en": "A new game is very popular among the children at school these days.",
+   "ko": "요즘 학교 아이들 사이에서 새 놀이가 크게 유행이에요.",
+   "blank": "प्रचलित",
+   "src": "made"
+  },
+  {
+   "text": "गर्मी में बच्चों के बीच तैराकी सीखना बहुत प्रचलित हो गया है।",
+   "en": "In summer, learning to swim has become very popular among children.",
+   "ko": "여름이면 아이들 사이에서 수영 배우기가 크게 유행해요.",
+   "blank": "प्रचलित",
+   "src": "made"
+  }
+ ],
  "w|प्रचार": [
   {
    "text": "चुनाव से पहले प्रचार तेज़ हो गया।",
@@ -29799,6 +30119,22 @@
    "en": "Everyone met on the very first day.",
    "ko": "첫날에 다들 만났어.",
    "blank": "प्रथम"
+  }
+ ],
+ "w|प्रथा": [
+  {
+   "text": "स्कूल में हर सोमवार सुबह राष्ट्रगान गाने की प्रथा है।",
+   "en": "The school has the custom of singing the national anthem every Monday morning.",
+   "ko": "학교에는 매주 월요일 아침 국가를 부르는 관례가 있어요.",
+   "blank": "प्रथा",
+   "src": "made"
+  },
+  {
+   "text": "क्लब में प्रथा है कि नए सदस्य को पहले दिन सब मिलकर पानी में धकेलते हैं।",
+   "en": "The club has a custom that on the first day everyone pushes the new member into the water.",
+   "ko": "클럽에는 첫날 신입을 다 같이 물에 밀어 넣는 관습이 있어요.",
+   "blank": "प्रथा",
+   "src": "made"
   }
  ],
  "w|प्रदर्शन": [
@@ -30491,6 +30827,22 @@
    "en": "People are praying in the temple.",
    "ko": "사원에서 사람들이 기도하고 있어.",
    "blank": "प्रार्थना"
+  }
+ ],
+ "w|प्रावधान": [
+  {
+   "text": "नई नीति में लड़कियों की मुफ़्त साइकिल के लिए अलग प्रावधान रखा गया है।",
+   "en": "The new policy includes a separate provision for free bicycles for girls.",
+   "ko": "새 정책에는 여학생 무료 자전거를 위한 별도 조항이 있어요.",
+   "blank": "प्रावधान",
+   "src": "made"
+  },
+  {
+   "text": "पूल के नियमों में विकलांग तैराकों के लिए अलग समय का प्रावधान है।",
+   "en": "The pool rules include a provision for separate hours for disabled swimmers.",
+   "ko": "수영장 규칙에는 장애인 수영자를 위한 별도 시간 조항이 있어요.",
+   "blank": "प्रावधान",
+   "src": "made"
   }
  ],
  "w|प्रिंटर": [
@@ -31239,6 +31591,22 @@
    "en": "The course fee seems a bit high.",
    "ko": "코스 수강료가 좀 비싸 보여.",
    "blank": "फ़ीस"
+  }
+ ],
+ "w|फ़ीसदी": [
+  {
+   "text": "इस साल स्कूल के नब्बे फ़ीसदी बच्चे पहली श्रेणी में पास हुए।",
+   "en": "This year ninety percent of the school's children passed in the first division.",
+   "ko": "올해 학교 학생의 구십 퍼센트가 일등급으로 합격했어요.",
+   "blank": "फ़ीसदी",
+   "src": "made"
+  },
+  {
+   "text": "पिछले साल के मुक़ाबले इस साल पूल की सदस्यता बीस फ़ीसदी महँगी हो गई।",
+   "en": "Compared with last year, pool membership has become twenty percent more expensive.",
+   "ko": "작년보다 올해 수영장 회원비가 이십 퍼센트 올랐어요.",
+   "blank": "फ़ीसदी",
+   "src": "made"
   }
  ],
  "w|फ़ुटपाथ": [
@@ -32617,6 +32985,22 @@
    "en": "Push the door with force.",
    "ko": "힘을 줘서 문을 밀쳐.",
    "blank": "बल"
+  }
+ ],
+ "w|बलिदान": [
+  {
+   "text": "स्वतंत्रता दिवस पर बच्चों ने सेनानियों के बलिदान पर कविताएँ पढ़ीं।",
+   "en": "On Independence Day the children recited poems about the sacrifice of freedom fighters.",
+   "ko": "독립기념일에 아이들은 독립투사들의 희생에 관한 시를 낭송했어요.",
+   "blank": "बलिदान",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि की माँ ने बेटी के सपने के लिए अपनी नौकरी का बलिदान दे दिया।",
+   "en": "Anjali's mother sacrificed her own job for her daughter's dream.",
+   "ko": "안잘리의 어머니는 딸의 꿈을 위해 자기 일을 희생했어요.",
+   "blank": "बलिदान",
+   "src": "made"
   }
  ],
  "w|बल्कि": [
@@ -34571,6 +34955,22 @@
    "en": "The new boss is very friendly.",
    "ko": "새 보스는 아주 다정해.",
    "blank": "बॉस"
+  }
+ ],
+ "w|बोझ": [
+  {
+   "text": "रवि सर मानते हैं कि भारी बस्ते का बोझ बच्चों की पीठ के लिए ठीक नहीं।",
+   "en": "Ravi sir believes the weight of heavy schoolbags isn't good for children's backs.",
+   "ko": "라비 선생님은 무거운 책가방의 무게가 아이들 허리에 좋지 않다고 생각해요.",
+   "blank": "बोझ",
+   "src": "made"
+  },
+  {
+   "text": "तैरते समय अंजलि को लगता है कि मन का सारा बोझ पानी में घुल गया।",
+   "en": "When she swims, Anjali feels as if all the weight on her mind has dissolved in the water.",
+   "ko": "수영할 때 안잘리는 마음의 짐이 모두 물에 녹아 버린 것 같아요.",
+   "blank": "बोझ",
+   "src": "made"
   }
  ],
  "w|बोतल": [
@@ -37489,6 +37889,22 @@
    "blank": "मानव"
   }
  ],
+ "w|मानवता": [
+  {
+   "text": "रवि सर बच्चों को सिखाते हैं कि सबसे बड़ा धर्म मानवता है।",
+   "en": "Ravi sir teaches the children that the greatest duty is humanity.",
+   "ko": "라비 선생님은 아이들에게 가장 큰 도리는 인류애라고 가르쳐요.",
+   "blank": "मानवता",
+   "src": "made"
+  },
+  {
+   "text": "एक अनजान बच्चे को डूबने से बचाने के लिए अंजलि का कूद जाना सच्ची मानवता थी।",
+   "en": "Anjali jumping in to save an unknown child from drowning was true humanity.",
+   "ko": "모르는 아이를 구하려고 뛰어든 안잘리의 행동은 진정한 인간애였어요.",
+   "blank": "मानवता",
+   "src": "made"
+  }
+ ],
  "w|मानसिक": [
   {
    "text": "मानसिक शांति के लिए टहलना अच्छा है।",
@@ -39089,6 +39505,22 @@
    "blank": "मॉल"
   }
  ],
+ "w|मोक्ष": [
+  {
+   "text": "दर्शन की कक्षा में रवि ने समझाया कि भारतीय दर्शन में मोक्ष का अर्थ क्या है।",
+   "en": "In philosophy class Ravi explained what moksha means in Indian philosophy.",
+   "ko": "철학 시간에 라비는 인도 철학에서 해탈이 무엇을 뜻하는지 설명했어요.",
+   "blank": "मोक्ष",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि मज़ाक में कहती है कि गर्मी में पूल ही उसका मोक्ष है।",
+   "en": "Anjali jokes that in summer the pool is her salvation.",
+   "ko": "안잘리는 여름엔 수영장이 자기 구원이라고 농담해요.",
+   "blank": "मोक्ष",
+   "src": "made"
+  }
+ ],
  "w|मोच": [
   {
    "text": "फ़ुटबॉल खेलते हुए करण के टखने में मोच आ गई।",
@@ -39769,6 +40201,22 @@
    "blank": "यूँ"
   }
  ],
+ "w|यूँ ही": [
+  {
+   "text": "छुट्टी के बाद भी कुछ बच्चे यूँ ही मैदान में घूमते रहते हैं।",
+   "en": "Even after school some children just hang around on the playground for no reason.",
+   "ko": "방과 후에도 몇몇 아이들은 그냥 운동장을 어슬렁거려요.",
+   "blank": "यूँ ही",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने तैराकी यूँ ही शुरू की थी, पर अब यही उसका जुनून है।",
+   "en": "Anjali started swimming just for the fun of it, but now it's her passion.",
+   "ko": "안잘리는 그냥 수영을 시작했는데 이제는 그게 열정이 됐어요.",
+   "blank": "यूँ ही",
+   "src": "made"
+  }
+ ],
  "w|यूनियन": [
   {
    "text": "मज़दूरों ने यूनियन बनाई है।",
@@ -40351,6 +40799,22 @@
    "en": "Sweets were shared at home on Rakhi day.",
    "ko": "라키 날에 집에서 과자를 나눴어.",
    "blank": "राखी"
+  }
+ ],
+ "w|राग": [
+  {
+   "text": "संगीत अध्यापक ने बच्चों को सुबह गाया जाने वाला एक राग सिखाया।",
+   "en": "The music teacher taught the children a raga that is sung in the morning.",
+   "ko": "음악 선생님은 아이들에게 아침에 부르는 라가 하나를 가르쳤어요.",
+   "blank": "राग",
+   "src": "made"
+  },
+  {
+   "text": "चेंजिंग रूम के स्पीकर पर कोई पुराना राग बज रहा था।",
+   "en": "Some old raga was playing on the changing room speaker.",
+   "ko": "탈의실 스피커에서 옛 라가가 흘러나오고 있었어요.",
+   "blank": "राग",
+   "src": "made"
   }
  ],
  "w|राज़": [
@@ -42297,6 +42761,22 @@
    "blank": "लोकप्रिय"
   }
  ],
+ "w|लोकप्रियता": [
+  {
+   "text": "रवि सर की लोकप्रियता इतनी है कि पुराने छात्र भी उनसे मिलने आते हैं।",
+   "en": "Ravi sir is so popular that even former students come to see him.",
+   "ko": "라비 선생님은 인기가 많아서 졸업생들도 찾아와요.",
+   "blank": "लोकप्रियता",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के तैराकी वीडियो की लोकप्रियता देखकर कोच भी हैरान हैं।",
+   "en": "Even the coach is amazed at how popular Anjali's swimming videos are.",
+   "ko": "코치도 안잘리 수영 영상의 인기에 놀라고 있어요.",
+   "blank": "लोकप्रियता",
+   "src": "made"
+  }
+ ],
  "w|लोकसभा": [
   {
    "text": "गवाहों में एक लोकसभा का पूर्व कर्मचारी भी था।",
@@ -42486,6 +42966,22 @@
    "en": "Meena had promised her coach that she wouldn't stop midway.",
    "ko": "미나는 중간에 멈추지 않겠다고 코치에게 약속했었어요.",
    "blank": "वचन",
+   "src": "made"
+  }
+ ],
+ "w|वंचित": [
+  {
+   "text": "रवि शाम को वंचित परिवारों के बच्चों को मुफ़्त में पढ़ाता है।",
+   "en": "In the evenings Ravi teaches children from underprivileged families for free.",
+   "ko": "라비는 저녁마다 형편이 어려운 집 아이들을 무료로 가르쳐요.",
+   "blank": "वंचित",
+   "src": "made"
+  },
+  {
+   "text": "पूल हर रविवार वंचित बस्तियों के बच्चों को मुफ़्त तैराकी सिखाता है।",
+   "en": "Every Sunday the pool teaches free swimming to children from poor neighbourhoods.",
+   "ko": "수영장은 일요일마다 가난한 동네 아이들에게 무료로 수영을 가르쳐요.",
+   "blank": "वंचित",
    "src": "made"
   }
  ],
@@ -43401,6 +43897,22 @@
    "blank": "विनम्र"
   }
  ],
+ "w|विनाश": [
+  {
+   "text": "भूगोल की किताब में भूकंप से होने वाले विनाश पर एक पूरा अध्याय है।",
+   "en": "The geography book has a whole chapter on the destruction caused by earthquakes.",
+   "ko": "지리 교과서에는 지진이 일으키는 파괴에 관한 장이 따로 있어요.",
+   "blank": "विनाश",
+   "src": "made"
+  },
+  {
+   "text": "अख़बार में ख़बर थी कि बाढ़ के विनाश के बाद गोताखोरों ने कई लोगों को बचाया।",
+   "en": "The newspaper reported that after the flood's devastation, divers rescued many people.",
+   "ko": "신문에 홍수 피해 뒤 잠수부들이 많은 사람을 구했다는 기사가 났어요.",
+   "blank": "विनाश",
+   "src": "made"
+  }
+ ],
  "w|विपक्ष": [
   {
    "text": "विपक्ष के कुछ नेताओं ने थाने के बाहर धरना दिया।",
@@ -43842,6 +44354,22 @@
    "en": "The director had a detailed plan of every scene stuck on the wall.",
    "ko": "감독은 장면마다 자세한 계획을 벽에 붙여 뒀어요.",
    "blank": "विस्तृत",
+   "src": "made"
+  }
+ ],
+ "w|विस्फोट": [
+  {
+   "text": "प्रयोगशाला में ग़लत रसायन मिलाने से एक छोटा विस्फोट हुआ, पर कोई घायल नहीं हुआ।",
+   "en": "Mixing the wrong chemicals caused a small explosion in the lab, but no one was hurt.",
+   "ko": "실험실에서 화학약품을 잘못 섞어 작은 폭발이 났지만 다친 사람은 없었어요.",
+   "blank": "विस्फोट",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने पानी में ऐसी छलाँग लगाई कि छींटों का विस्फोट-सा हो गया।",
+   "en": "Anjali jumped into the water so hard that there was an explosion of splashes.",
+   "ko": "안잘리가 물에 뛰어들자 물보라가 폭발하듯 튀었어요.",
+   "blank": "विस्फोट",
    "src": "made"
   }
  ],
@@ -44805,6 +45333,22 @@
    "blank": "शादी कर"
   }
  ],
+ "w|शान": [
+  {
+   "text": "वार्षिक समारोह में नई वर्दी पहनकर बच्चे बड़ी शान से मंच पर चढ़े।",
+   "en": "At the annual function the children climbed onto the stage proudly in their new uniforms.",
+   "ko": "연례 행사에서 아이들은 새 교복을 입고 당당하게 무대에 올랐어요.",
+   "blank": "शान",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि ने तैराकी प्रतियोगिता में स्वर्ण पदक जीतकर क्लब की शान बढ़ा दी।",
+   "en": "Anjali won a gold medal in the swimming contest and brought glory to the club.",
+   "ko": "안잘리는 수영 대회에서 금메달을 따서 클럽의 명예를 높였어요.",
+   "blank": "शान",
+   "src": "made"
+  }
+ ],
  "w|शानदार": [
   {
    "text": "रात का नज़ारा सच में शानदार था।",
@@ -44906,6 +45450,22 @@
    "en": "Throughout the holidays Anjali hardly ever looked at her phone.",
    "ko": "방학 내내 안잘리는 휴대폰을 거의 안 봤어요.",
    "blank": "शायद ही",
+   "src": "made"
+  }
+ ],
+ "w|शायरी": [
+  {
+   "text": "विदाई समारोह में एक छात्र ने रवि सर के लिए उर्दू शायरी सुनाई।",
+   "en": "At the farewell function a student recited Urdu poetry for Ravi sir.",
+   "ko": "송별회에서 한 학생이 라비 선생님께 우르두 시를 읊어 드렸어요.",
+   "blank": "शायरी",
+   "src": "made"
+  },
+  {
+   "text": "अंजलि के कोच को शायरी का बहुत शौक़ है और वे हर जीत पर एक शेर सुनाते हैं।",
+   "en": "Anjali's coach loves poetry and recites a couplet after every win.",
+   "ko": "안잘리의 코치는 시를 무척 좋아해서 이길 때마다 한 구절을 읊어요.",
+   "blank": "शायरी",
    "src": "made"
   }
  ],
@@ -47311,6 +47871,22 @@
    "src": "made"
   }
  ],
+ "w|समृद्धि": [
+  {
+   "text": "रवि सर कहते हैं कि शिक्षा ही किसी गाँव की समृद्धि की असली नींव है।",
+   "en": "Ravi sir says education is the real foundation of a village's prosperity.",
+   "ko": "라비 선생님은 교육이 마을 번영의 진짜 바탕이라고 말해요.",
+   "blank": "समृद्धि",
+   "src": "made"
+  },
+  {
+   "text": "शहर की बढ़ती समृद्धि के साथ अब हर नई सोसाइटी में पूल बनने लगा है।",
+   "en": "With the city's growing prosperity, every new housing society now has a pool.",
+   "ko": "도시가 부유해지면서 새 아파트마다 수영장이 생기고 있어요.",
+   "blank": "समृद्धि",
+   "src": "made"
+  }
+ ],
  "w|समेत": [
   {
    "text": "परिवार समेत सब लोग आ गए।",
@@ -47843,6 +48419,22 @@
    "en": "We'll leave after having breakfast in the morning.",
    "ko": "우리는 아침에 아침 먹고 나갈 거야.",
    "blank": "सवेरा"
+  }
+ ],
+ "w|संवैधानिक": [
+  {
+   "text": "रवि सर ने बच्चों को उनके संवैधानिक अधिकारों के बारे में बताया।",
+   "en": "Ravi sir told the children about their constitutional rights.",
+   "ko": "라비 선생님은 아이들에게 헌법상 권리를 알려 줬어요.",
+   "blank": "संवैधानिक",
+   "src": "made"
+  },
+  {
+   "text": "खेल संघ के संवैधानिक नियमों के अनुसार हर चार साल में चुनाव होते हैं।",
+   "en": "According to the sports federation's constitutional rules, elections are held every four years.",
+   "ko": "체육 협회 정관에 따라 사 년마다 선거를 해요.",
+   "blank": "संवैधानिक",
+   "src": "made"
   }
  ],
  "w|संशोधन": [
@@ -49248,6 +49840,22 @@
    "en": "With no internet at the village school, Neha studies the whole syllabus from books.",
    "ko": "마을 학교에 인터넷이 없어서 네하는 교과 과정을 전부 책으로 공부해요.",
    "blank": "सिलेबस",
+   "src": "made"
+  }
+ ],
+ "w|सिवा": [
+  {
+   "text": "रवि के सिवा किसी को नहीं पता था कि प्रिंसिपल अचानक जाँच करने आएँगी।",
+   "en": "Apart from Ravi, nobody knew the principal would come for a surprise inspection.",
+   "ko": "라비 말고는 교장이 갑자기 점검하러 온다는 걸 아무도 몰랐어요.",
+   "blank": "सिवा",
+   "src": "made"
+  },
+  {
+   "text": "सुबह छह बजे पूल में अंजलि के सिवा कोई नहीं होता।",
+   "en": "At six in the morning there's no one in the pool except Anjali.",
+   "ko": "아침 여섯 시 수영장엔 안잘리 말고 아무도 없어요.",
+   "blank": "सिवा",
    "src": "made"
   }
  ],
@@ -51149,6 +51757,22 @@
    "src": "made"
   }
  ],
+ "w|हंगामा": [
+  {
+   "text": "फ़ीस बढ़ने की ख़बर पर अभिभावकों ने स्कूल के बाहर हंगामा कर दिया।",
+   "en": "At news of the fee rise, parents created an uproar outside the school.",
+   "ko": "수업료 인상 소식에 학부모들이 학교 밖에서 소동을 벌였어요.",
+   "blank": "हंगामा",
+   "src": "made"
+  },
+  {
+   "text": "पूल का पानी ठंडा होने पर सदस्यों ने रिसेप्शन पर हंगामा मचा दिया।",
+   "en": "When the pool water was cold, members raised a ruckus at reception.",
+   "ko": "수영장 물이 차갑자 회원들이 접수대에서 소란을 피웠어요.",
+   "blank": "हंगामा",
+   "src": "made"
+  }
+ ],
  "w|हज़ार": [
   {
    "text": "मैंने हज़ार बार कहा, पर वह नहीं माना।",
@@ -51451,6 +52075,22 @@
    "en": "This same quarrel happens every day.",
    "ko": "매일 똑같은 다툼이 생겨.",
    "blank": "हर दिन"
+  }
+ ],
+ "w|हरकत": [
+  {
+   "text": "पीछे की बेंच वाले लड़कों की हरकत देखकर रवि सर ने पढ़ाना रोक दिया।",
+   "en": "Seeing the antics of the boys on the back bench, Ravi sir stopped teaching.",
+   "ko": "뒷줄 남학생들의 장난을 보고 라비 선생님은 수업을 멈췄어요.",
+   "blank": "हरकत",
+   "src": "made"
+  },
+  {
+   "text": "लाइफ़गार्ड ने पानी में धक्का देने वाले लड़के की हरकत पर सीटी बजाई।",
+   "en": "The lifeguard blew the whistle at the boy pushing others into the water.",
+   "ko": "안전요원은 물에서 남을 미는 소년의 행동에 호루라기를 불었어요.",
+   "blank": "हरकत",
+   "src": "made"
   }
  ],
  "w|हरा": [

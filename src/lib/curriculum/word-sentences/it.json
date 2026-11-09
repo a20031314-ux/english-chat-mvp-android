@@ -551,6 +551,22 @@
    "blank": "accusare"
   }
  ],
+ "w|accusato": [
+  {
+   "text": "Nel processo simulato in classe, Paolo fa la parte dell'accusato.",
+   "en": "In the mock trial in class, Paolo plays the defendant.",
+   "ko": "교실에서 하는 모의재판에서 파올로는 피고 역을 맡아요.",
+   "blank": "accusato",
+   "src": "made"
+  },
+  {
+   "text": "Al telegiornale Francesca sente che l'accusato del furto al mercato è stato assolto.",
+   "en": "On the news Francesca hears that the man accused of the market theft was acquitted.",
+   "ko": "뉴스에서 프란체스카는 시장 절도 혐의를 받은 사람이 무죄를 받았다고 들어요.",
+   "blank": "accusato",
+   "src": "made"
+  }
+ ],
  "w|acido": [
   {
    "text": "Stefano usa un po' di acido citrico per non far annerire i carciofi.",
@@ -1087,6 +1103,22 @@
    "en": "I don't know how to deal with this situation.",
    "ko": "이 상황을 어떻게 대처할지 모르겠어.",
    "blank": "affrontare"
+  }
+ ],
+ "w|africano": [
+  {
+   "text": "A geografia Paolo prepara una ricerca su un parco naturale africano.",
+   "en": "In geography Paolo is preparing a project on an African nature park.",
+   "ko": "지리 시간에 파올로는 아프리카 자연공원에 관한 조사를 준비해요.",
+   "blank": "africano",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra un tessuto africano coloratissimo per farsi una borsa.",
+   "en": "Francesca buys a brightly coloured African fabric to make herself a bag.",
+   "ko": "프란체스카는 가방을 만들려고 아주 화려한 아프리카 천을 사요.",
+   "blank": "africano",
+   "src": "made"
   }
  ],
  "w|agenda": [
@@ -5053,6 +5085,22 @@
    "blank": "bandiera"
   }
  ],
+ "w|bandire": [
+  {
+   "text": "La scuola di Paolo ha deciso di bandire le bottigliette di plastica dalla mensa.",
+   "en": "Paolo's school has decided to ban plastic bottles from the canteen.",
+   "ko": "파올로의 학교는 급식실에서 플라스틱 병을 금지하기로 했어요.",
+   "blank": "bandire",
+   "src": "made"
+  },
+  {
+   "text": "Il comune ha deciso di bandire i sacchetti di plastica dal mercato, e Francesca porta la borsa di tela.",
+   "en": "The council decided to ban plastic bags from the market, and Francesca brings a canvas bag.",
+   "ko": "시청이 시장에서 비닐봉지를 금지해서 프란체스카는 천 가방을 가져가요.",
+   "blank": "bandire",
+   "src": "made"
+  }
+ ],
  "w|bar": [
   {
    "text": "Ci vediamo al bar dopo cena.",
@@ -5470,6 +5518,22 @@
    "en": "According to Anna, the benefit of this molecule could be enormous.",
    "ko": "안나에 따르면 이 분자의 효용은 어마어마할 수 있어요.",
    "blank": "beneficio",
+   "src": "made"
+  }
+ ],
+ "w|benessere": [
+  {
+   "text": "La scuola di Paolo ha una settimana dedicata al benessere degli studenti.",
+   "en": "Paolo's school has a week devoted to the students' well-being.",
+   "ko": "파올로의 학교에는 학생들의 건강과 행복을 위한 주간이 있어요.",
+   "blank": "benessere",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra le tisane per il benessere da una signora che coltiva erbe.",
+   "en": "Francesca buys wellness herbal teas from a woman who grows herbs.",
+   "ko": "프란체스카는 허브를 키우는 아주머니에게서 건강 차를 사요.",
+   "blank": "benessere",
    "src": "made"
   }
  ],
@@ -7631,6 +7695,22 @@
    "src": "made"
   }
  ],
+ "w|caserma": [
+  {
+   "text": "La scuola di Paolo si trova in una vecchia caserma ristrutturata.",
+   "en": "Paolo's school is in an old renovated barracks.",
+   "ko": "파올로의 학교는 리모델링한 옛 군 막사 건물에 있어요.",
+   "blank": "caserma",
+   "src": "made"
+  },
+  {
+   "text": "Il mercato coperto dove va Francesca era una caserma dei carabinieri.",
+   "en": "The covered market Francesca goes to used to be a police barracks.",
+   "ko": "프란체스카가 다니는 실내 시장은 예전에 경찰 막사였어요.",
+   "blank": "caserma",
+   "src": "made"
+  }
+ ],
  "w|casino": [
   {
    "text": "Che casino in cucina stamattina!",
@@ -9167,6 +9247,22 @@
    "src": "made"
   }
  ],
+ "w|citazione": [
+  {
+   "text": "Paolo comincia il tema con una citazione di un filosofo greco.",
+   "en": "Paolo starts his essay with a quotation from a Greek philosopher.",
+   "ko": "파올로는 그리스 철학자의 인용구로 작문을 시작해요.",
+   "blank": "citazione",
+   "src": "made"
+  },
+  {
+   "text": "Sul banco dei libri usati, Francesca trova una citazione sottolineata da qualcuno.",
+   "en": "At the second-hand book stall, Francesca finds a quotation someone has underlined.",
+   "ko": "중고책 가판대에서 프란체스카는 누군가 밑줄 친 인용구를 발견해요.",
+   "blank": "citazione",
+   "src": "made"
+  }
+ ],
  "w|città": [
   {
    "text": "In questa città si vive bene.",
@@ -10301,6 +10397,22 @@
    "blank": "completo"
   }
  ],
+ "w|complicare": [
+  {
+   "text": "Paolo ha voluto complicare il problema con un metodo nuovo e ha sbagliato tutto.",
+   "en": "Paolo tried to complicate the problem with a new method and got everything wrong.",
+   "ko": "파올로는 새로운 방법으로 문제를 꼬아 풀다가 다 틀렸어요.",
+   "blank": "complicare",
+   "src": "made"
+  },
+  {
+   "text": "La pioggia improvvisa rischia di complicare la mattina di Francesca al mercato.",
+   "en": "The sudden rain threatens to complicate Francesca's morning at the market.",
+   "ko": "갑자기 내리는 비 때문에 프란체스카의 시장 나들이가 꼬일 것 같아요.",
+   "blank": "complicare",
+   "src": "made"
+  }
+ ],
  "w|complicato": [
   {
    "text": "Il rapporto con lei è diventato complicato.",
@@ -10341,6 +10453,22 @@
    "en": "He paid her a nice compliment on the dress.",
    "ko": "그가 드레스에 대해 멋진 칭찬을 했어.",
    "blank": "complimento"
+  }
+ ],
+ "w|complotto": [
+  {
+   "text": "Paolo e gli amici hanno organizzato un complotto per fare una festa a sorpresa alla maestra.",
+   "en": "Paolo and his friends hatched a plot to throw the teacher a surprise party.",
+   "ko": "파올로와 친구들은 선생님께 깜짝 파티를 해 드리려고 몰래 작전을 짰어요.",
+   "blank": "complotto",
+   "src": "made"
+  },
+  {
+   "text": "Al mercato tutti scherzano di un complotto dei pescivendoli per alzare i prezzi, e Francesca ride.",
+   "en": "At the market everyone jokes about a fishmongers' plot to raise prices, and Francesca laughs.",
+   "ko": "시장에서는 다들 생선 장수들이 값을 올리려고 짠 음모라며 농담하고 프란체스카도 웃어요.",
+   "blank": "complotto",
+   "src": "made"
   }
  ],
  "w|comporre": [
@@ -12041,6 +12169,22 @@
    "blank": "corridoio"
   }
  ],
+ "w|corrispondenza": [
+  {
+   "text": "Paolo tiene una corrispondenza con uno studente di una scuola gemellata in Francia.",
+   "en": "Paolo keeps up a correspondence with a student from a twinned school in France.",
+   "ko": "파올로는 프랑스 자매 학교 학생과 편지를 주고받아요.",
+   "blank": "corrispondenza",
+   "src": "made"
+  },
+  {
+   "text": "Il formaggiaio vende anche per corrispondenza, e Francesca gli ordina il pecorino per Natale.",
+   "en": "The cheesemonger also sells by mail order, and Francesca orders pecorino from him for Christmas.",
+   "ko": "치즈 가게는 통신 판매도 해서 프란체스카는 크리스마스에 먹을 페코리노를 주문해요.",
+   "blank": "corrispondenza",
+   "src": "made"
+  }
+ ],
  "w|corrispondere": [
   {
    "text": "La descrizione del testimone non corrispondeva all'uomo che Luca aveva fermato.",
@@ -13705,6 +13849,22 @@
    "src": "made"
   }
  ],
+ "w|derivare": [
+  {
+   "text": "Il professore spiega a Paolo che molte parole italiane derivano dal latino.",
+   "en": "The teacher explains to Paolo that many Italian words derive from Latin.",
+   "ko": "선생님은 파올로에게 이탈리아어 낱말 상당수가 라틴어에서 왔다고 설명해요.",
+   "blank": "derivano",
+   "src": "made"
+  },
+  {
+   "text": "Al mercato Francesca scopre che il nome del formaggio deriva dal paese dove lo fanno.",
+   "en": "At the market Francesca discovers that the cheese's name comes from the village where it's made.",
+   "ko": "시장에서 프란체스카는 그 치즈 이름이 만들어지는 마을에서 왔다는 걸 알게 돼요.",
+   "blank": "deriva",
+   "src": "made"
+  }
+ ],
  "w|derubare": [
   {
    "text": "Due turisti sono stati derubati alla stazione, e Luca ha raccolto la loro testimonianza.",
@@ -14673,6 +14833,22 @@
    "en": "After the disaster they rebuilt everything.",
    "ko": "재난 후에 모든 걸 다시 지었어.",
    "blank": "disastro"
+  }
+ ],
+ "w|disciplina": [
+  {
+   "text": "Il preside dice che nella classe di Paolo manca un po' di disciplina.",
+   "en": "The head says Paolo's class lacks a bit of discipline.",
+   "ko": "교장 선생님은 파올로네 반에 규율이 좀 부족하다고 해요.",
+   "blank": "disciplina",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ammira la disciplina dei venditori che montano i banchi alle cinque.",
+   "en": "Francesca admires the discipline of the sellers who set up their stalls at five.",
+   "ko": "프란체스카는 새벽 다섯 시에 가판대를 차리는 상인들의 성실함에 감탄해요.",
+   "blank": "disciplina",
+   "src": "made"
   }
  ],
  "w|disco": [
@@ -17963,6 +18139,22 @@
    "blank": "famoso"
   }
  ],
+ "w|fanatico": [
+  {
+   "text": "Paolo è un fanatico di dinosauri e ne conosce tutti i nomi.",
+   "en": "Paolo is a dinosaur fanatic and knows all their names.",
+   "ko": "파올로는 공룡 마니아라서 공룡 이름을 다 알아요.",
+   "blank": "fanatico",
+   "src": "made"
+  },
+  {
+   "text": "Il marito di Francesca è un fanatico del caffè e compra solo chicchi tostati al momento.",
+   "en": "Francesca's husband is a coffee fanatic and only buys freshly roasted beans.",
+   "ko": "프란체스카의 남편은 커피 광이라서 갓 볶은 원두만 사요.",
+   "blank": "fanatico",
+   "src": "made"
+  }
+ ],
  "w|fango": [
   {
    "text": "Dopo il temporale la strada per la spiaggia era piena di fango, e Davide è andato a piedi nudi.",
@@ -18327,6 +18519,22 @@
    "en": "He's a highly respected federal agent.",
    "ko": "그는 매우 존경받는 연방 수사관이야.",
    "blank": "federale"
+  }
+ ],
+ "w|federazione": [
+  {
+   "text": "La squadra di pallavolo di Paolo è iscritta alla federazione sportiva scolastica.",
+   "en": "Paolo's volleyball team is registered with the school sports federation.",
+   "ko": "파올로의 배구팀은 학교 체육 연맹에 등록되어 있어요.",
+   "blank": "federazione",
+   "src": "made"
+  },
+  {
+   "text": "Il mercato contadino di Francesca fa parte di una federazione di produttori biologici.",
+   "en": "Francesca's farmers' market is part of a federation of organic producers.",
+   "ko": "프란체스카가 가는 농민 시장은 유기농 생산자 연맹에 속해 있어요.",
+   "blank": "federazione",
+   "src": "made"
   }
  ],
  "w|fegato": [
@@ -21015,6 +21223,22 @@
    "blank": "gigante"
   }
  ],
+ "w|gigantesco": [
+  {
+   "text": "Nell'atrio della scuola di Paolo c'è un mappamondo gigantesco.",
+   "en": "In the entrance hall of Paolo's school there is a gigantic globe.",
+   "ko": "파올로의 학교 현관에는 거대한 지구본이 있어요.",
+   "blank": "gigantesco",
+   "src": "made"
+  },
+  {
+   "text": "Un contadino ha portato una zucca gigantesca e Francesca ci ha fatto una foto.",
+   "en": "A farmer brought a gigantic pumpkin and Francesca took a photo of it.",
+   "ko": "농부가 거대한 호박을 가져와서 프란체스카는 사진을 찍었어요.",
+   "blank": "gigantesca",
+   "src": "made"
+  }
+ ],
  "w|ginnastica": [
   {
    "text": "Paolo ha un dolore alla mascella e il dentista gli consiglia un po' di ginnastica facciale.",
@@ -22515,6 +22739,22 @@
    "src": "made"
   }
  ],
+ "w|immortale": [
+  {
+   "text": "La professoressa dice a Paolo che i versi di Dante sono immortali.",
+   "en": "The teacher tells Paolo that Dante's verses are immortal.",
+   "ko": "선생님은 파올로에게 단테의 시구는 영원하다고 말해요.",
+   "blank": "immortali",
+   "src": "made"
+  },
+  {
+   "text": "Il fruttivendolo dice a Francesca che i suoi limoni sono immortali: durano un mese.",
+   "en": "The greengrocer tells Francesca that his lemons are immortal: they last a month.",
+   "ko": "과일 장수는 프란체스카에게 자기 레몬은 한 달은 간다며 불멸이라고 말해요.",
+   "blank": "immortali",
+   "src": "made"
+  }
+ ],
  "w|imparare": [
   {
    "text": "Imparo ancora a guidare.",
@@ -22939,6 +23179,22 @@
    "en": "The spell broke at dawn.",
    "ko": "주문이 새벽에 풀렸어.",
    "blank": "incantesimo"
+  }
+ ],
+ "w|incantevole": [
+  {
+   "text": "Dalla finestra dell'aula di Paolo si vede un panorama incantevole sul lago.",
+   "en": "From the window of Paolo's classroom there's an enchanting view of the lake.",
+   "ko": "파올로네 교실 창문으로는 호수가 보이는 매혹적인 풍경이 펼쳐져요.",
+   "blank": "incantevole",
+   "src": "made"
+  },
+  {
+   "text": "La piazza del mercato è incantevole all'alba, e Francesca ci arriva sempre presto.",
+   "en": "The market square is enchanting at dawn, and Francesca always gets there early.",
+   "ko": "시장 광장은 새벽에 매혹적이라 프란체스카는 늘 일찍 가요.",
+   "blank": "incantevole",
+   "src": "made"
   }
  ],
  "w|incapace": [
@@ -24095,6 +24351,22 @@
    "blank": "insieme"
   }
  ],
+ "w|insignificante": [
+  {
+   "text": "Il professore dice a Paolo che l'errore è insignificante e non cambia il voto.",
+   "en": "The teacher tells Paolo that the mistake is insignificant and doesn't change the mark.",
+   "ko": "선생님은 파올로에게 그 실수는 사소해서 점수에 영향이 없다고 말해요.",
+   "blank": "insignificante",
+   "src": "made"
+  },
+  {
+   "text": "Il venditore dice a Francesca che la differenza di prezzo è insignificante.",
+   "en": "The seller tells Francesca the price difference is insignificant.",
+   "ko": "상인은 프란체스카에게 가격 차이는 아주 적다고 말해요.",
+   "blank": "insignificante",
+   "src": "made"
+  }
+ ],
  "w|insinuare": [
   {
    "text": "Nella seconda scena, la cameriera cerca di insinuare un dubbio nella mente del padrone.",
@@ -24999,6 +25271,22 @@
    "en": "The institute opened a new course.",
    "ko": "그 기관이 새 과정을 열었어.",
    "blank": "istituto"
+  }
+ ],
+ "w|istruttore": [
+  {
+   "text": "L'istruttore di nuoto della scuola dice che Paolo ha fatto grandi progressi.",
+   "en": "The school swimming instructor says Paolo has made great progress.",
+   "ko": "학교 수영 강사는 파올로가 많이 늘었다고 해요.",
+   "blank": "istruttore",
+   "src": "made"
+  },
+  {
+   "text": "Al mercato Francesca incontra il suo istruttore di yoga che compra le verdure.",
+   "en": "At the market Francesca bumps into her yoga instructor buying vegetables.",
+   "ko": "시장에서 프란체스카는 채소를 사는 요가 강사를 만나요.",
+   "blank": "istruttore",
+   "src": "made"
   }
  ],
  "w|istruzione": [
@@ -27693,6 +27981,22 @@
    "blank": "matita"
   }
  ],
+ "w|matricola": [
+  {
+   "text": "Il primo giorno di liceo Paolo si sentiva una matricola spaesata.",
+   "en": "On his first day of high school Paolo felt like a lost freshman.",
+   "ko": "고등학교 첫날 파올로는 어리둥절한 신입생 같았어요.",
+   "blank": "matricola",
+   "src": "made"
+  },
+  {
+   "text": "Francesca aiuta una matricola dell'università a scegliere la frutta di stagione.",
+   "en": "Francesca helps a university freshman choose seasonal fruit.",
+   "ko": "프란체스카는 대학 신입생이 제철 과일 고르는 걸 도와줘요.",
+   "blank": "matricola",
+   "src": "made"
+  }
+ ],
  "w|matrimonio": [
   {
    "text": "Al matrimonio ci vengo.",
@@ -27763,6 +28067,22 @@
    "en": "That plan seems completely crazy.",
    "ko": "그 계획은 완전히 미친 것 같아.",
    "blank": "matto"
+  }
+ ],
+ "w|mattone": [
+  {
+   "text": "La scuola di Paolo è un vecchio edificio di mattoni rossi del primo Novecento.",
+   "en": "Paolo's school is an old red-brick building from the early twentieth century.",
+   "ko": "파올로의 학교는 이십 세기 초에 지은 붉은 벽돌 건물이에요.",
+   "blank": "mattoni",
+   "src": "made"
+  },
+  {
+   "text": "Il mercato si tiene sotto un portico di mattoni dove Francesca si ripara dal sole.",
+   "en": "The market is held under a brick arcade where Francesca shelters from the sun.",
+   "ko": "시장은 벽돌 회랑 아래에서 열려서 프란체스카는 거기서 햇볕을 피해요.",
+   "blank": "mattoni",
+   "src": "made"
   }
  ],
  "w|maturo": [
@@ -28731,6 +29051,22 @@
    "blank": "miracolo"
   }
  ],
+ "w|miserabile": [
+  {
+   "text": "In classe Paolo legge un romanzo sulla vita miserabile dei bambini nelle miniere.",
+   "en": "In class Paolo reads a novel about the miserable life of children in the mines.",
+   "ko": "수업 시간에 파올로는 광산 아이들의 비참한 삶을 그린 소설을 읽어요.",
+   "blank": "miserabile",
+   "src": "made"
+  },
+  {
+   "text": "Francesca trova miserabile il trattamento dei polli chiusi in gabbie minuscole.",
+   "en": "Francesca finds the treatment of the chickens shut in tiny cages miserable.",
+   "ko": "프란체스카는 작은 우리에 갇힌 닭들이 비참하다고 생각해요.",
+   "blank": "miserabile",
+   "src": "made"
+  }
+ ],
  "w|miseria": [
   {
    "text": "Vivevano in miseria dopo la guerra.",
@@ -28945,6 +29281,22 @@
    "en": "Give my regards to your wife.",
    "ko": "아내에게 안부 전해 줘.",
    "blank": "moglie"
+  }
+ ],
+ "w|molestia": [
+  {
+   "text": "La scuola di Paolo ha uno sportello per segnalare casi di molestia o bullismo.",
+   "en": "Paolo's school has a desk for reporting cases of harassment or bullying.",
+   "ko": "파올로의 학교에는 괴롭힘이나 따돌림을 신고하는 창구가 있어요.",
+   "blank": "molestia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha denunciato un uomo per molestia dopo che l'aveva seguita tra le bancarelle.",
+   "en": "Francesca reported a man for harassment after he had followed her among the stalls.",
+   "ko": "프란체스카는 가판대 사이로 자기를 따라온 남자를 괴롭힘으로 신고했어요.",
+   "blank": "molestia",
+   "src": "made"
   }
  ],
  "w|mollare": [
@@ -29695,6 +30047,22 @@
    "en": "I'm preparing the Christmas gifts.",
    "ko": "크리스마스 선물을 준비하고 있어.",
    "blank": "Natale"
+  }
+ ],
+ "w|natalizio": [
+  {
+   "text": "Per il concerto natalizio, Paolo canta nel coro della scuola.",
+   "en": "For the Christmas concert, Paolo sings in the school choir.",
+   "ko": "크리스마스 음악회에서 파올로는 학교 합창단으로 노래해요.",
+   "blank": "natalizio",
+   "src": "made"
+  },
+  {
+   "text": "A dicembre Francesca compra le decorazioni al mercatino natalizio della piazza.",
+   "en": "In December Francesca buys decorations at the Christmas market in the square.",
+   "ko": "십이월에 프란체스카는 광장의 크리스마스 마켓에서 장식품을 사요.",
+   "blank": "natalizio",
+   "src": "made"
   }
  ],
  "w|natura": [
@@ -31699,6 +32067,22 @@
    "en": "He's too proud to ask for help.",
    "ko": "도움을 청하기엔 너무 자존심이 세.",
    "blank": "orgoglioso"
+  }
+ ],
+ "w|orientale": [
+  {
+   "text": "A storia dell'arte Paolo studia l'influenza della pittura orientale sugli artisti europei.",
+   "en": "In art history Paolo studies the influence of Eastern painting on European artists.",
+   "ko": "미술사 시간에 파올로는 동양화가 유럽 화가들에게 준 영향을 공부해요.",
+   "blank": "orientale",
+   "src": "made"
+  },
+  {
+   "text": "Al mercato c'è un banco di spezie orientali, e Francesca prende la curcuma.",
+   "en": "At the market there's a stall of Eastern spices, and Francesca gets turmeric.",
+   "ko": "시장에는 동양 향신료 가판대가 있어서 프란체스카는 강황을 사요.",
+   "blank": "orientali",
+   "src": "made"
   }
  ],
  "w|originale": [
@@ -34343,6 +34727,22 @@
    "blank": "piedi"
   }
  ],
+ "w|piega": [
+  {
+   "text": "Paolo ha i pantaloni della divisa con una piega perfetta, stirati dalla nonna.",
+   "en": "Paolo's uniform trousers have a perfect crease, ironed by his grandmother.",
+   "ko": "파올로의 교복 바지는 할머니가 다려 주셔서 주름이 반듯해요.",
+   "blank": "piega",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha comprato una gonna con le pieghe da una bancarella di vestiti usati.",
+   "en": "Francesca bought a pleated skirt from a second-hand clothes stall.",
+   "ko": "프란체스카는 중고 옷 가판대에서 주름치마를 샀어요.",
+   "blank": "pieghe",
+   "src": "made"
+  }
+ ],
  "w|piegare": [
   {
    "text": "Alla fine della giornata Simone deve piegare il tendone con l'aiuto del vicino.",
@@ -35373,6 +35773,22 @@
    "en": "There is no similar precedent.",
    "ko": "비슷한 선례가 없어.",
    "blank": "precedente"
+  }
+ ],
+ "w|precipitare": [
+  {
+   "text": "A scienze Paolo osserva come i sali precipitano sul fondo della provetta.",
+   "en": "In science Paolo watches how the salts settle to the bottom of the test tube.",
+   "ko": "과학 시간에 파올로는 염분이 시험관 바닥으로 가라앉는 걸 관찰해요.",
+   "blank": "precipitano",
+   "src": "made"
+  },
+  {
+   "text": "Dopo la grandinata, i prezzi della frutta sono precipitati e Francesca ne approfitta.",
+   "en": "After the hailstorm, fruit prices plummeted and Francesca takes advantage.",
+   "ko": "우박이 내린 뒤 과일값이 폭락해서 프란체스카는 그 기회를 잡아요.",
+   "blank": "precipitati",
+   "src": "made"
   }
  ],
  "w|precisamente": [
@@ -36455,6 +36871,22 @@
    "src": "made"
   }
  ],
+ "w|profezia": [
+  {
+   "text": "Nel libro di mitologia Paolo legge la profezia dell'oracolo di Delfi.",
+   "en": "In his mythology book Paolo reads the prophecy of the oracle at Delphi.",
+   "ko": "신화 책에서 파올로는 델포이 신탁의 예언을 읽어요.",
+   "blank": "profezia",
+   "src": "made"
+  },
+  {
+   "text": "Una signora al mercato legge le carte e fa una profezia scherzosa a Francesca.",
+   "en": "A woman at the market reads cards and makes a playful prophecy for Francesca.",
+   "ko": "시장의 한 아주머니가 카드 점을 보며 프란체스카에게 장난스러운 예언을 해 줘요.",
+   "blank": "profezia",
+   "src": "made"
+  }
+ ],
  "w|profilo": [
   {
    "text": "Ho aggiornato il mio profilo online.",
@@ -36996,6 +37428,22 @@
    "en": "Many of the travel books come from a private donation, Laura explains.",
    "ko": "여행 책 상당수는 개인 기증으로 들어온 거라고 라우라가 설명해요.",
    "blank": "provengono",
+   "src": "made"
+  }
+ ],
+ "w|provincia": [
+  {
+   "text": "Paolo va a scuola in città, ma abita in un paesino della provincia.",
+   "en": "Paolo goes to school in the city, but lives in a small village in the province.",
+   "ko": "파올로는 도시에 있는 학교에 다니지만 지방의 작은 마을에 살아요.",
+   "blank": "provincia",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra l'olio da un produttore della provincia di Bari.",
+   "en": "Francesca buys her olive oil from a producer in the province of Bari.",
+   "ko": "프란체스카는 바리 지방 생산자에게서 올리브유를 사요.",
+   "blank": "provincia",
    "src": "made"
   }
  ],
@@ -39269,6 +39717,22 @@
    "en": "There's no signal here.",
    "ko": "여기서는 전화가 안 터져.",
    "blank": "riceve"
+  }
+ ],
+ "w|ricevimento": [
+  {
+   "text": "Dopo la consegna dei diplomi, i genitori di Paolo sono andati al ricevimento in palestra.",
+   "en": "After the diploma ceremony, Paolo's parents went to the reception in the gym.",
+   "ko": "졸업장 수여식이 끝나고 파올로의 부모님은 체육관에서 열린 축하연에 갔어요.",
+   "blank": "ricevimento",
+   "src": "made"
+  },
+  {
+   "text": "Francesca compra i fiori per il ricevimento di nozze di sua sorella.",
+   "en": "Francesca buys the flowers for her sister's wedding reception.",
+   "ko": "프란체스카는 언니 결혼 피로연에 쓸 꽃을 사요.",
+   "blank": "ricevimento",
+   "src": "made"
   }
  ],
  "w|richiamare": [
@@ -41885,6 +42349,22 @@
    "en": "This shoe is tight on me.",
    "ko": "이 신발이 너무 꽉 껴.",
    "blank": "scarpa"
+  }
+ ],
+ "w|scarso": [
+  {
+   "text": "La pagella dice che Paolo ha un rendimento scarso in geografia.",
+   "en": "Paolo's report says his performance in geography is poor.",
+   "ko": "성적표에는 파올로의 지리 성적이 저조하다고 적혀 있어요.",
+   "blank": "scarso",
+   "src": "made"
+  },
+  {
+   "text": "Quest'anno la raccolta delle ciliegie è stata scarsa, dice il contadino a Francesca.",
+   "en": "This year the cherry harvest has been poor, the farmer tells Francesca.",
+   "ko": "농부는 프란체스카에게 올해 체리 수확이 적었다고 말해요.",
+   "blank": "scarsa",
+   "src": "made"
   }
  ],
  "w|scatenare": [
@@ -45595,6 +46075,22 @@
    "src": "made"
   }
  ],
+ "w|sottovalutare": [
+  {
+   "text": "Paolo ha sottovalutato il compito di chimica e adesso deve studiare tutta la notte.",
+   "en": "Paolo underestimated the chemistry test and now has to study all night.",
+   "ko": "파올로는 화학 시험을 얕보다가 이제 밤새 공부해야 해요.",
+   "blank": "sottovalutato",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha sottovalutato la spesa e adesso non riesce a portare tutte le borse.",
+   "en": "Francesca underestimated the shopping and now can't carry all the bags.",
+   "ko": "프란체스카는 장 볼 양을 얕봤다가 이제 봉투를 다 들 수 없어요.",
+   "blank": "sottovalutato",
+   "src": "made"
+  }
+ ],
  "w|spaccare": [
   {
    "text": "Con il martello pneumatico Andrea ha spaccato il vecchio pavimento in poche ore.",
@@ -47008,6 +47504,22 @@
    "en": "Giulia felt strangely at home, as if only a few days had passed.",
    "ko": "줄리아는 며칠밖에 안 지난 것처럼 이상하게도 편안했어요.",
    "blank": "stranamente",
+   "src": "made"
+  }
+ ],
+ "w|strangolare": [
+  {
+   "text": "Nella tragedia letta in classe, Paolo scopre che Otello strangola Desdemona per gelosia.",
+   "en": "In the tragedy read in class, Paolo discovers that Othello strangles Desdemona out of jealousy.",
+   "ko": "수업 시간에 읽은 비극에서 파올로는 오셀로가 질투로 데스데모나의 목을 조른다는 걸 알게 돼요.",
+   "blank": "strangola",
+   "src": "made"
+  },
+  {
+   "text": "In un vecchio giallo comprato al mercato, Francesca legge di un uomo strangolato in biblioteca.",
+   "en": "In an old mystery bought at the market, Francesca reads about a man strangled in a library.",
+   "ko": "시장에서 산 옛 추리 소설에서 프란체스카는 도서관에서 목이 졸린 남자 이야기를 읽어요.",
+   "blank": "strangolato",
    "src": "made"
   }
  ],
@@ -48731,6 +49243,22 @@
    "blank": "Tienilo"
   }
  ],
+ "w|tenero": [
+  {
+   "text": "A ricreazione Paolo divide la sua focaccia tenera con il compagno di banco.",
+   "en": "At break Paolo shares his soft focaccia with his deskmate.",
+   "ko": "쉬는 시간에 파올로는 부드러운 포카치아를 짝꿍과 나눠 먹어요.",
+   "blank": "tenera",
+   "src": "made"
+  },
+  {
+   "text": "Francesca sceglie la carne più tenera per fare lo spezzatino.",
+   "en": "Francesca chooses the most tender meat for the stew.",
+   "ko": "프란체스카는 스튜를 만들려고 가장 연한 고기를 골라요.",
+   "blank": "tenera",
+   "src": "made"
+  }
+ ],
  "w|tennis": [
   {
    "text": "Al museo dello sport, Matteo ha visto la racchetta di un vecchio torneo di tennis.",
@@ -48948,6 +49476,22 @@
    "en": "Anna is terrified of public speaking, but the presentation went well.",
    "ko": "안나는 사람들 앞에서 말하는 걸 몹시 두려워하지만 발표는 잘 끝났어요.",
    "blank": "terrore",
+   "src": "made"
+  }
+ ],
+ "w|terrorismo": [
+  {
+   "text": "Al liceo Paolo ha partecipato a un incontro con un giudice che ha combattuto il terrorismo.",
+   "en": "At high school Paolo attended a talk by a judge who fought terrorism.",
+   "ko": "고등학교에서 파올로는 테러와 싸운 판사의 강연에 참석했어요.",
+   "blank": "terrorismo",
+   "src": "made"
+  },
+  {
+   "text": "Al banco dei giornali Francesca legge un titolo su una nuova legge contro il terrorismo.",
+   "en": "At the newspaper stand Francesca reads a headline about a new anti-terrorism law.",
+   "ko": "신문 가판대에서 프란체스카는 새 테러 방지법에 관한 머리기사를 읽어요.",
+   "blank": "terrorismo",
    "src": "made"
   }
  ],
@@ -49273,6 +49817,22 @@
    "en": "Don't pull, it'll break.",
    "ko": "당기지 마, 부러져.",
    "blank": "tirare"
+  }
+ ],
+ "w|tiratore": [
+  {
+   "text": "Al corso di tiro con l'arco Paolo si è rivelato un ottimo tiratore.",
+   "en": "At the archery course Paolo turned out to be an excellent shot.",
+   "ko": "양궁 수업에서 파올로는 뛰어난 궁수라는 게 드러났어요.",
+   "blank": "tiratore",
+   "src": "made"
+  },
+  {
+   "text": "Al luna park vicino al mercato, Francesca vince un peluche al banco del tiratore.",
+   "en": "At the funfair near the market, Francesca wins a soft toy at the shooting stall.",
+   "ko": "시장 근처 놀이공원에서 프란체스카는 사격 게임으로 인형을 따요.",
+   "blank": "tiratore",
+   "src": "made"
   }
  ],
  "w|tiro": [
@@ -50417,6 +50977,22 @@
    "src": "made"
   }
  ],
+ "w|truffatore": [
+  {
+   "text": "A educazione civica Paolo impara a riconoscere un truffatore che manda false email.",
+   "en": "In civics Paolo learns to recognise a fraudster sending fake emails.",
+   "ko": "시민 교육 시간에 파올로는 가짜 이메일을 보내는 사기꾼을 알아보는 법을 배워요.",
+   "blank": "truffatore",
+   "src": "made"
+  },
+  {
+   "text": "Un truffatore ha provato a dare il resto sbagliato a Francesca, ma lei se n'è accorta.",
+   "en": "A swindler tried to give Francesca the wrong change, but she noticed.",
+   "ko": "사기꾼이 프란체스카에게 거스름돈을 잘못 주려 했지만 프란체스카가 알아챘어요.",
+   "blank": "truffatore",
+   "src": "made"
+  }
+ ],
  "w|truppa": [
   {
    "text": "La truppa avanza lentamente nella valle.",
@@ -50647,6 +51223,22 @@
    "en": "I'm just here killing time.",
    "ko": "여기서 시간이나 때우고 있어.",
    "blank": "uccidere"
+  }
+ ],
+ "w|uccisione": [
+  {
+   "text": "A storia Paolo studia l'uccisione di Giulio Cesare alle Idi di marzo.",
+   "en": "In history Paolo studies the killing of Julius Caesar on the Ides of March.",
+   "ko": "역사 시간에 파올로는 삼월 보름날 율리우스 카이사르가 살해된 사건을 공부해요.",
+   "blank": "uccisione",
+   "src": "made"
+  },
+  {
+   "text": "Il giornale che Francesca compra al mercato parla dell'uccisione di un lupo nel parco.",
+   "en": "The newspaper Francesca buys at the market reports the killing of a wolf in the park.",
+   "ko": "프란체스카가 시장에서 산 신문에는 공원에서 늑대가 죽임을 당한 기사가 실려 있어요.",
+   "blank": "uccisione",
+   "src": "made"
   }
  ],
  "w|udienza": [
@@ -51205,6 +51797,22 @@
    "en": "I need a long vacation.",
    "ko": "긴 휴가가 필요해.",
    "blank": "vacanza"
+  }
+ ],
+ "w|vagare": [
+  {
+   "text": "Durante l'intervallo Paolo ama vagare per i corridoi invece di stare in cortile.",
+   "en": "At break Paolo likes to wander the corridors instead of staying in the courtyard.",
+   "ko": "쉬는 시간에 파올로는 마당에 있기보다 복도를 돌아다니는 걸 좋아해요.",
+   "blank": "vagare",
+   "src": "made"
+  },
+  {
+   "text": "Il sabato Francesca ama vagare tra le bancarelle senza una lista.",
+   "en": "On Saturdays Francesca loves to wander among the stalls without a list.",
+   "ko": "토요일이면 프란체스카는 목록 없이 가판대 사이를 돌아다니는 걸 좋아해요.",
+   "blank": "vagare",
+   "src": "made"
   }
  ],
  "w|vago": [
@@ -52231,6 +52839,22 @@
    "blank": "villaggio"
   }
  ],
+ "w|vincente": [
+  {
+   "text": "La squadra vincente del quiz di classe, quella di Paolo, avrà un giorno senza compiti.",
+   "en": "The winning team in the class quiz, Paolo's, will get a day without homework.",
+   "ko": "학급 퀴즈에서 이긴 파올로네 팀은 숙제 없는 하루를 받아요.",
+   "blank": "vincente",
+   "src": "made"
+  },
+  {
+   "text": "Francesca ha comprato un biglietto della lotteria vincente al chiosco del mercato.",
+   "en": "Francesca bought a winning lottery ticket at the market kiosk.",
+   "ko": "프란체스카는 시장 가판대에서 당첨 복권을 샀어요.",
+   "blank": "vincente",
+   "src": "made"
+  }
+ ],
  "w|vincere": [
   {
    "text": "Abbiamo vinto per un soffio.",
@@ -52363,6 +52987,22 @@
    "en": "They condemned every form of violence.",
    "ko": "그들은 모든 형태의 폭력을 규탄했어.",
    "blank": "violenza"
+  }
+ ],
+ "w|violino": [
+  {
+   "text": "Paolo studia violino al conservatorio dopo la scuola.",
+   "en": "Paolo studies violin at the conservatory after school.",
+   "ko": "파올로는 방과 후에 음악원에서 바이올린을 배워요.",
+   "blank": "violino",
+   "src": "made"
+  },
+  {
+   "text": "All'angolo del mercato un ragazzo suona il violino, e Francesca gli lascia una moneta.",
+   "en": "At the corner of the market a young man plays the violin, and Francesca leaves him a coin.",
+   "ko": "시장 모퉁이에서 한 청년이 바이올린을 켜자 프란체스카는 동전을 놓고 가요.",
+   "blank": "violino",
+   "src": "made"
   }
  ],
  "w|virus": [
