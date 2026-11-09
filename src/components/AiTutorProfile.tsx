@@ -113,44 +113,6 @@ export function callTutor(targetLanguage: string, gender: TutorGender | undefine
 }
 
 /**
- * 📞를 누르면 펼쳐지는 통화 종류(2026-11-08 사용자 "튜터 프로필에 자유대화, 수업, 게임으로 나눠줘. 통화 버튼은 클릭하면 그 탭 나열이 펼쳐지게"):
- * [자유대화 · 수업 · 게임] — 게임을 누르면 [퀴즈 · 스무고개 · 가르치기(상급)]. 고르면 그 통화가 바로 시작.
- */
-function CallChoices({ ui, wide, onPick }: { ui: UICopy; wide?: boolean; onPick: (kind: CallKind) => void }) {
-  const [games, setGames] = useState(false);
-  const chip = wide
-    ? "flex-1 rounded-xl border border-white/20 px-3 py-2 text-sm text-slate-100 hover:bg-white/10"
-    : "rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100 hover:bg-white/10";
-  const on = wide ? " border-white/60 bg-white/15" : " border-white/60 bg-white/15";
-  return (
-    <div data-call-choices className="mt-2 flex flex-col gap-2">
-      <div className="flex flex-wrap justify-end gap-2">
-        <button type="button" data-call-choice="talk" onClick={() => onPick("talk")} className={chip}>
-          {ui.callModeTalk}
-        </button>
-        <button type="button" data-call-choice="lesson" onClick={() => onPick("lesson")} className={chip}>
-          {ui.callModeStudy}
-        </button>
-        <button type="button" data-call-choice="game" aria-expanded={games} onClick={() => setGames((open) => !open)} className={chip + (games ? on : "")}>
-          {ui.callModeGame} {games ? "▾" : "›"}
-        </button>
-      </div>
-      {games ? (
-        <div className="flex flex-wrap justify-end gap-2">
-          <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className={chip}>
-            {ui.gameTwenty}
-          </button>
-          {/* 튜터가 내 말을 배우는 사람을 연기 — 상급(잠그지 않고 표시만, 2026-11-08). */}
-          <button type="button" data-call-choice="teach" onClick={() => onPick("teach")} className={chip}>
-            {ui.gameTeach} <span className="ms-1 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span>
-          </button>
-        </div>
-      ) : null}
-    </div>
-  );
-}
-
-/**
  * 사람 탭 맨 위 AI 튜터 둘(그 학습 언어의 여자·남자 튜터, 사용자 2026-11-02 "AI 튜터가 한쪽 성별만 떠") — 지금 고른 튜터가 먼저.
  */
 export function AiTutorPeople({ ui, targetLanguage, canCall }: { ui: UICopy; targetLanguage: string; canCall: boolean }) {
@@ -168,7 +130,6 @@ export function AiTutorPeople({ ui, targetLanguage, canCall }: { ui: UICopy; tar
 /** 사람 탭 목록의 AI 튜터 한 줄(사람 카드와 같은 모양). */
 export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UICopy; targetLanguage: string; canCall: boolean; gender?: TutorGender }) {
   const [open, setOpen] = useState(false);
-  const [choosing, setChoosing] = useState(false);
   const about = useTutorAbout(targetLanguage, ui.aiTutorBio, gender);
   return (
     <>
@@ -182,7 +143,7 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
             <span className="mt-1 inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>
             <p className="mt-1.5 line-clamp-2 text-note leading-relaxed text-slate-300">{about}</p>
           </button>
-          <div className="mt-1.5 flex items-center justify-end gap-2">
+          <div className="mt-1.5 flex flex-wrap items-center justify-end gap-2">
             <button
               type="button"
               onClick={() => chatWithTutor(targetLanguage, gender)}
@@ -190,28 +151,8 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, gender }: { ui: UIC
             >
               💬 {roomCopy(appLocale()).message}
             </button>
-            {canCall ? (
-              <button
-                type="button"
-                onClick={() => setChoosing((now) => !now)}
-                aria-label={ui.talkAiCall}
-                aria-expanded={choosing}
-                title={ui.talkAiCall}
-                className={`rounded-full border px-3 py-1 text-meta text-slate-100 ${choosing ? "border-white/60 bg-white/15" : "border-white/20"}`}
-              >
-                📞 {ui.homeTabCall}
-              </button>
-            ) : null}
+            {canCall ? <CallDoors ui={ui} look="icons" onPick={(kind) => callTutor(targetLanguage, gender, kind)} /> : null}
           </div>
-          {canCall && choosing ? (
-            <CallChoices
-              ui={ui}
-              onPick={(kind) => {
-                setChoosing(false);
-                callTutor(targetLanguage, gender, kind);
-              }}
-            />
-          ) : null}
         </div>
       </div>
       {open ? <AiTutorSheet ui={ui} targetLanguage={targetLanguage} canCall={canCall} gender={gender} onClose={() => setOpen(false)} /> : null}
@@ -287,47 +228,74 @@ function shortDay(at: number, locale: string): string {
   }
 }
 
-/** 자유대화 · 수업 문(넓게) + 게임 ›(누르면 스무고개 · 가르치기) — 시안 "문 둘", 게임은 2026-11-08 결정대로 펼침. */
-function CallDoors({ ui, onPick }: { ui: UICopy; onPick: (kind: CallKind) => void }) {
+/**
+ * 통화 문 — 자유대화 · 수업 · 게임을 같은 층으로(사용자 2026-11-09 "자유대화, 수업, 게임.. 이런 옵션들은 같은 층위로 나열해줘"):
+ * 셋 다 같은 크기·같은 모양, 게임을 누르면 그 아래 줄에 스무고개 · 가르치기. "wide"는 프로필·고른 튜터 줄(이름 붙은 버튼), "icons"는 다른 튜터 줄(아이콘만).
+ */
+export function CallDoors({ ui, onPick, look = "wide", className = "" }: { ui: UICopy; onPick: (kind: CallKind) => void; look?: "wide" | "icons"; className?: string }) {
   const [games, setGames] = useState(false);
+  const doors: { kind: "talk" | "lesson" | "game"; icon: string; label: string }[] = [
+    { kind: "talk", icon: "📞", label: ui.callModeTalk },
+    { kind: "lesson", icon: "🎓", label: ui.callModeStudy },
+    { kind: "game", icon: "🎲", label: ui.callModeGame },
+  ];
+  const tap = (kind: "talk" | "lesson" | "game") => (kind === "game" ? setGames((open) => !open) : onPick(kind));
+  const on = "border-white/60 bg-white/15";
+  const sub = (
+    <div className="grid grid-cols-2 gap-2">
+      <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className="min-h-11 rounded-xl border border-white/20 px-2 text-note text-slate-100 hover:bg-white/10">
+        {ui.gameTwenty}
+      </button>
+      <button type="button" data-call-choice="teach" onClick={() => onPick("teach")} className="min-h-11 rounded-xl border border-white/20 px-2 text-note text-slate-100 hover:bg-white/10">
+        {ui.gameTeach} <span className="ms-1 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span>
+      </button>
+    </div>
+  );
+  if (look === "icons") {
+    return (
+      <>
+        {doors.map((door) => (
+          <button
+            key={door.kind}
+            type="button"
+            data-call-choice={door.kind}
+            onClick={() => tap(door.kind)}
+            aria-label={door.label}
+            title={door.label}
+            {...(door.kind === "game" ? { "aria-expanded": games } : {})}
+            className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border text-title hover:bg-white/10 ${door.kind === "game" && games ? on : "border-line"}`}
+          >
+            <span aria-hidden>{door.icon}</span>
+          </button>
+        ))}
+        {games ? <div className="basis-full px-1 pt-1">{sub}</div> : null}
+      </>
+    );
+  }
   return (
-    <div data-call-doors className="mt-3 flex flex-col gap-2">
-      <div className="grid grid-cols-2 gap-2">
-        <button type="button" data-call-choice="talk" onClick={() => onPick("talk")} className="min-h-12 rounded-xl border border-white/20 px-3 text-body font-medium text-ink hover:bg-white/10">
-          📞 {ui.callModeTalk}
-        </button>
-        <button type="button" data-call-choice="lesson" onClick={() => onPick("lesson")} className="min-h-12 rounded-xl bg-platinum px-3 text-body font-semibold text-black hover:bg-platinum-hover">
-          🎓 {ui.callModeStudy}
-        </button>
+    <div data-call-doors className={`flex flex-col gap-2 ${className}`}>
+      <div className="grid grid-cols-3 gap-2">
+        {doors.map((door) => (
+          <button
+            key={door.kind}
+            type="button"
+            data-call-choice={door.kind}
+            onClick={() => tap(door.kind)}
+            {...(door.kind === "game" ? { "aria-expanded": games } : {})}
+            className={`min-h-11 rounded-xl border px-2 text-note font-medium text-ink hover:bg-white/10 ${door.kind === "game" && games ? on : "border-white/20"}`}
+          >
+            {door.icon} {door.label}
+          </button>
+        ))}
       </div>
-      <div className="flex flex-wrap justify-end gap-2">
-        <button
-          type="button"
-          data-call-choice="game"
-          aria-expanded={games}
-          onClick={() => setGames((open) => !open)}
-          className={`rounded-full border px-3 py-1 text-meta text-slate-100 ${games ? "border-white/60 bg-white/15" : "border-white/20"}`}
-        >
-          {ui.callModeGame} {games ? "▾" : "›"}
-        </button>
-        {games ? (
-          <>
-            <button type="button" data-call-choice="twenty" onClick={() => onPick("twenty")} className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100 hover:bg-white/10">
-              {ui.gameTwenty}
-            </button>
-            <button type="button" data-call-choice="teach" onClick={() => onPick("teach")} className="rounded-full border border-white/20 px-3 py-1 text-meta text-slate-100 hover:bg-white/10">
-              {ui.gameTeach} <span className="ms-1 rounded-full bg-warn/20 px-1.5 text-caption text-warn">{ui.mapLevelAdvanced}</span>
-            </button>
-          </>
-        ) : null}
-      </div>
+      {games ? sub : null}
     </div>
   );
 }
 
 /**
  * AI 튜터 프로필 시트 — 사람 프로필과 같은 틀(ProfileFrame, 2026-11-02 사용자 "프로필 구조 통일").
- * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업(+ 게임 ›) → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
+ * 2026-11-09 "이 튜터와의 공부"(시안): 문 자유대화 · 수업 · 게임(같은 층) → 숙제 → 튜터 메모 → 아래 팔로우 · 메시지 · 통화 기록.
  */
 export function AiTutorSheet({
   ui,
@@ -370,7 +338,7 @@ export function AiTutorSheet({
         </p>
       }
     >
-      {canCall ? <CallDoors ui={ui} onPick={(kind) => go(() => callTutor(targetLanguage, who, kind))()} /> : null}
+      {canCall ? <CallDoors ui={ui} className="mt-3" onPick={(kind) => go(() => callTutor(targetLanguage, who, kind))()} /> : null}
       {desk.homework ? (
         <div className="mt-3" onClickCapture={() => onClose()}>
           <TutorHomework ui={ui} homework={desk.homework} />

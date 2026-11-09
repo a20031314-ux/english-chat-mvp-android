@@ -6,7 +6,7 @@ import { CONVERSATION_SESSIONS_KEY, lastLineFor, normalizeConversationSession, t
 import { getLearningLanguage } from "@/lib/learningLanguages";
 import { useTutorGender } from "@/lib/tutorGender";
 import { tutorChatRows, useFollowedTutors } from "@/lib/tutorFollows";
-import { AiAvatar, HomeworkDot, TutorHomework, useTutorDesk, type CallKind } from "@/components/AiTutorProfile";
+import { AiAvatar, CallDoors, HomeworkDot, TutorHomework, useTutorDesk, type CallKind } from "@/components/AiTutorProfile";
 
 function savedSessions(): ConversationSession[] {
   try {
@@ -61,7 +61,7 @@ export function AiTutorRows({
  * 대화 목록의 AI 튜터 한 줄(2026-10-20, `hub/drafts/one-list-tabs.md`).
  * 2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합": 사람 탭에 프로필(AiTutorProfile)이 있고, 대화 목록에는 다른 대화처럼
  * 그 사람(이름·국기)과의 대화 한 줄 — 줄을 누르면 채팅. 통화 기록 목록은 사람 탭 프로필 시트(CallList). 사람 탭이 없을 때만 채팅 ⋮.
- * 2026-11-09(시안 "튜터 화면"): 문 둘 📞 자유대화 · 🎓 수업 — 지금 고른 튜터(main)는 이름 붙은 넓은 버튼 + 그 튜터 숙제 줄, 다른 튜터는 아이콘 둘.
+ * 2026-11-09(시안 "튜터 화면"): 문 셋 📞 자유대화 · 🎓 수업 · 🎲 게임(같은 층, CallDoors) — 지금 고른 튜터(main)는 이름 붙은 같은 크기 버튼 + 그 튜터 숙제 줄, 다른 튜터는 아이콘 셋.
  * 숙제가 남았으면 얼굴 모서리에 점. 숫자(통화 수·고친 말)는 Logbank 몫이라 없다.
  */
 export function AiTutorRow({
@@ -89,10 +89,9 @@ export function AiTutorRow({
   const partner = chatPartnerForLanguage(targetLanguage, gender);
   const { homework } = useTutorDesk(targetLanguage, gender);
   const open = Boolean(homework && !homework.done);
-  const icon = "flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-title hover:bg-white/10";
   return (
     <div data-tutor-row={main ? "main" : "other"} className="rounded-xl border border-line bg-surface p-2">
-      <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center gap-2">
         <button type="button" onClick={onChat} className="flex min-w-0 flex-1 items-center gap-3 rounded-lg p-1 text-start hover:bg-white/5">
           <span className="relative shrink-0">
             <AiAvatar size={main ? 48 : 44} language={targetLanguage} gender={gender} />
@@ -115,27 +114,9 @@ export function AiTutorRow({
             )}
           </span>
         </button>
-        {canCall && !main ? (
-          <>
-            <button type="button" data-call-choice="talk" onClick={() => onCall("talk")} aria-label={ui.callModeTalk} title={ui.callModeTalk} className={icon}>
-              <span aria-hidden>📞</span>
-            </button>
-            <button type="button" data-call-choice="lesson" onClick={() => onCall("lesson")} aria-label={ui.callModeStudy} title={ui.callModeStudy} className={icon}>
-              <span aria-hidden>🎓</span>
-            </button>
-          </>
-        ) : null}
+        {canCall && !main ? <CallDoors ui={ui} look="icons" onPick={onCall} /> : null}
       </div>
-      {canCall && main ? (
-        <div className="mt-2 grid grid-cols-2 gap-2 px-1">
-          <button type="button" data-call-choice="talk" onClick={() => onCall("talk")} className="min-h-11 rounded-xl border border-white/20 px-3 text-note font-medium text-ink hover:bg-white/10">
-            📞 {ui.callModeTalk}
-          </button>
-          <button type="button" data-call-choice="lesson" onClick={() => onCall("lesson")} className="min-h-11 rounded-xl bg-platinum px-3 text-note font-semibold text-black hover:bg-platinum-hover">
-            🎓 {ui.callModeStudy}
-          </button>
-        </div>
-      ) : null}
+      {canCall && main ? <CallDoors ui={ui} className="mt-2 px-1" onPick={onCall} /> : null}
       {main && homework ? <TutorHomework ui={ui} homework={homework} className="mt-2" /> : null}
     </div>
   );
