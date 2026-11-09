@@ -477,6 +477,22 @@
    "src": "made"
   }
  ],
+ "w|가설": [
+  {
+   "text": "경민은 기자는 가설이 아니라 사실을 써야 한다고 후배에게 말했어요.",
+   "en": "Gyeongmin told his junior that a reporter must write facts, not hypotheses.",
+   "ko": "경민은 기자는 가설이 아니라 사실을 써야 한다고 후배에게 말했어요.",
+   "blank": "가설이",
+   "src": "made"
+  },
+  {
+   "text": "다은의 가설은 세 번째 실험에서야 맞다는 게 밝혀졌어요.",
+   "en": "Daeun's hypothesis was only proven right in the third experiment.",
+   "ko": "다은의 가설은 세 번째 실험에서야 맞다는 게 밝혀졌어요.",
+   "blank": "가설은",
+   "src": "made"
+  }
+ ],
  "w|가수": [
   {
    "text": "신인 가수의 음원이 차트에 올랐어.",
@@ -3729,6 +3745,22 @@
    "blank": "경제"
   }
  ],
+ "w|경제학": [
+  {
+   "text": "경민은 경제학 용어를 쉬운 말로 바꿔 쓰느라 애를 먹었어요.",
+   "en": "Gyeongmin struggled to rewrite economics terms in plain words.",
+   "ko": "경민은 경제학 용어를 쉬운 말로 바꿔 쓰느라 애를 먹었어요.",
+   "blank": "경제학",
+   "src": "made"
+  },
+  {
+   "text": "다은은 연구비 계산 때문에 경제학을 공부하는 친구에게 도움을 받았어요.",
+   "en": "Daeun got help with research budget calculations from a friend studying economics.",
+   "ko": "다은은 연구비 계산 때문에 경제학을 공부하는 친구에게 도움을 받았어요.",
+   "blank": "경제학을",
+   "src": "made"
+  }
+ ],
  "w|경찰": [
   {
    "text": "경찰에 신고하는 게 좋겠어.",
@@ -4695,6 +4727,22 @@
    "src": "krdict"
   }
  ],
+ "w|고집스럽다": [
+  {
+   "text": "경민의 편집장은 고집스러워서 제목 하나도 쉽게 바꾸지 않아요.",
+   "en": "Gyeongmin's editor-in-chief is so stubborn he won't easily change even a single headline.",
+   "ko": "경민의 편집장은 고집스러워서 제목 하나도 쉽게 바꾸지 않아요.",
+   "blank": "고집스러워서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 고집스럽게 같은 실험을 백 번 넘게 되풀이했어요.",
+   "en": "Daeun stubbornly repeated the same experiment more than a hundred times.",
+   "ko": "다은은 고집스럽게 같은 실험을 백 번 넘게 되풀이했어요.",
+   "blank": "고집스럽게",
+   "src": "made"
+  }
+ ],
  "w|고추": [
   {
    "text": "고추를 넣으면 매워져.",
@@ -5413,6 +5461,22 @@
    "blank": "공포를"
   }
  ],
+ "w|공학": [
+  {
+   "text": "경민은 공학을 전공한 교수와 인터뷰를 했어요.",
+   "en": "Gyeongmin interviewed a professor who majored in engineering.",
+   "ko": "경민은 공학을 전공한 교수와 인터뷰를 했어요.",
+   "blank": "공학을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 생명 공학 연구실에서 박사 과정을 밟고 있어요.",
+   "en": "Daeun is pursuing a doctorate in a biotechnology lab.",
+   "ko": "다은은 생명 공학 연구실에서 박사 과정을 밟고 있어요.",
+   "blank": "공학",
+   "src": "made"
+  }
+ ],
  "w|공항": [
   {
    "text": "공항으로 가는 중이야.",
@@ -5469,6 +5533,22 @@
    "en": "If I could go back, I'd do it differently.",
    "ko": "과거로 돌아가면 다르게 할 거야.",
    "blank": "과거로"
+  }
+ ],
+ "w|과묵하다": [
+  {
+   "text": "경민의 사진기자 선배는 과묵해서 사진으로만 말해요.",
+   "en": "Gyeongmin's senior photojournalist is reticent and speaks only through photos.",
+   "ko": "경민의 사진기자 선배는 과묵해서 사진으로만 말해요.",
+   "blank": "과묵해서",
+   "src": "made"
+  },
+  {
+   "text": "과묵한 실험실 관리인은 다은이 질문하면 늘 친절하게 알려 줘요.",
+   "en": "The taciturn lab manager always kindly answers whenever Daeun asks a question.",
+   "ko": "과묵한 실험실 관리인은 다은이 질문하면 늘 친절하게 알려 줘요.",
+   "blank": "과묵한",
+   "src": "made"
   }
  ],
  "w|과부": [
@@ -5853,6 +5933,22 @@
    "blank": "관리했어"
   }
  ],
+ "w|관습": [
+  {
+   "text": "경민은 회사의 낡은 관습이 바뀌어야 한다는 사설을 썼어요.",
+   "en": "Gyeongmin wrote an editorial saying the company's outdated customs must change.",
+   "ko": "경민은 회사의 낡은 관습이 바뀌어야 한다는 사설을 썼어요.",
+   "blank": "관습이",
+   "src": "made"
+  },
+  {
+   "text": "실험이 끝나면 다 같이 실험대를 닦는 게 다은네 연구실의 관습이에요.",
+   "en": "Wiping down the lab benches together after experiments is a custom in Daeun's lab.",
+   "ko": "실험이 끝나면 다 같이 실험대를 닦는 게 다은네 연구실의 관습이에요.",
+   "blank": "관습이에요",
+   "src": "made"
+  }
+ ],
  "w|관심": [
   {
    "text": "관심 있어?",
@@ -5912,6 +6008,22 @@
    "en": "All the factory's equipment is managed by a central control system.",
    "ko": "공장의 모든 설비는 중앙 관제 시스템으로 관리돼요.",
    "blank": "관제",
+   "src": "made"
+  }
+ ],
+ "w|관찰": [
+  {
+   "text": "경민은 시장 상인들의 하루를 꼼꼼한 관찰로 기사에 담았어요.",
+   "en": "Gyeongmin captured the market vendors' day in his article through careful observation.",
+   "ko": "경민은 시장 상인들의 하루를 꼼꼼한 관찰로 기사에 담았어요.",
+   "blank": "관찰로",
+   "src": "made"
+  },
+  {
+   "text": "다은은 매일 아침 식물이 자라는 모습을 관찰해서 기록해요.",
+   "en": "Every morning, Daeun observes and records how the plants grow.",
+   "ko": "다은은 매일 아침 식물이 자라는 모습을 관찰해서 기록해요.",
+   "blank": "관찰해서",
    "src": "made"
   }
  ],
@@ -11915,6 +12027,22 @@
    "blank": "내보내다"
   }
  ],
+ "w|내성적": [
+  {
+   "text": "경민은 원래 내성적이라서 처음 취재를 나갔을 때 무척 긴장했어요.",
+   "en": "Gyeongmin is naturally introverted, so he was very nervous on his first reporting assignment.",
+   "ko": "경민은 원래 내성적이라서 처음 취재를 나갔을 때 무척 긴장했어요.",
+   "blank": "내성적이라서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 내성적인 후배가 발표를 잘할 수 있게 연습을 도와줬어요.",
+   "en": "Daeun helped her introverted junior practice so she could present well.",
+   "ko": "다은은 내성적인 후배가 발표를 잘할 수 있게 연습을 도와줬어요.",
+   "blank": "내성적인",
+   "src": "made"
+  }
+ ],
  "w|내쉬다": [
   {
    "text": "숨을 내쉬다 보니 마음이 가라앉았어.",
@@ -15369,6 +15497,22 @@
    "src": "made"
   }
  ],
+ "w|대안": [
+  {
+   "text": "경민은 반대만 하지 말고 현실적인 대안을 내놓자고 칼럼에 썼어요.",
+   "en": "Gyeongmin wrote in his column that we should offer realistic alternatives instead of just objecting.",
+   "ko": "경민은 반대만 하지 말고 현실적인 대안을 내놓자고 칼럼에 썼어요.",
+   "blank": "대안을",
+   "src": "made"
+  },
+  {
+   "text": "시약이 다 떨어져서 다은은 대안으로 다른 용액을 썼어요.",
+   "en": "The reagent ran out, so Daeun used a different solution as an alternative.",
+   "ko": "시약이 다 떨어져서 다은은 대안으로 다른 용액을 썼어요.",
+   "blank": "대안으로",
+   "src": "made"
+  }
+ ],
  "w|대원": [
   {
    "text": "탐험대의 대원 한 명이 실종되었다.",
@@ -15488,6 +15632,22 @@
    "en": "Yuna gazed out the hotel window at the land stretching endlessly.",
    "ko": "유나는 호텔 창밖으로 끝없이 펼쳐진 대지를 바라봤어요.",
    "blank": "대지를",
+   "src": "made"
+  }
+ ],
+ "w|대책": [
+  {
+   "text": "경민은 집값 문제에 대한 정부의 대책을 자세히 분석했어요.",
+   "en": "Gyeongmin analyzed the government's measures on housing prices in detail.",
+   "ko": "경민은 집값 문제에 대한 정부의 대책을 자세히 분석했어요.",
+   "blank": "대책을",
+   "src": "made"
+  },
+  {
+   "text": "실험실에 불이 날 경우를 대비한 대책이 다은의 연구실에도 마련돼 있어요.",
+   "en": "Daeun's lab also has measures prepared in case of a fire.",
+   "ko": "실험실에 불이 날 경우를 대비한 대책이 다은의 연구실에도 마련돼 있어요.",
+   "blank": "대책이",
    "src": "made"
   }
  ],
@@ -18304,6 +18464,22 @@
    "en": "Seoyeon secretly yawned during a boring class.",
    "ko": "서연은 따분한 수업 시간에 몰래 하품을 했어요.",
    "blank": "따분한",
+   "src": "made"
+  }
+ ],
+ "w|따스하다": [
+  {
+   "text": "경민은 따스한 이웃 이야기를 연말 기사로 골랐어요.",
+   "en": "Gyeongmin chose a heartwarming story about neighbors for the year-end article.",
+   "ko": "경민은 따스한 이웃 이야기를 연말 기사로 골랐어요.",
+   "blank": "따스한",
+   "src": "made"
+  },
+  {
+   "text": "창으로 들어오는 햇살이 따스해서 다은은 잠깐 졸았어요.",
+   "en": "The sunlight coming through the window was so warm that Daeun dozed off for a moment.",
+   "ko": "창으로 들어오는 햇살이 따스해서 다은은 잠깐 졸았어요.",
+   "blank": "따스해서",
    "src": "made"
   }
  ],
@@ -21381,6 +21557,22 @@
    "blank": "명"
   }
  ],
+ "w|명랑하다": [
+  {
+   "text": "신문사 막내 기자는 늘 명랑해서 사무실 분위기를 밝게 해요.",
+   "en": "The newspaper's youngest reporter is always cheerful and brightens the office mood.",
+   "ko": "신문사 막내 기자는 늘 명랑해서 사무실 분위기를 밝게 해요.",
+   "blank": "명랑해서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 실험이 실패해도 명랑하게 다시 시작해요.",
+   "en": "Even when an experiment fails, Daeun cheerfully starts again.",
+   "ko": "다은은 실험이 실패해도 명랑하게 다시 시작해요.",
+   "blank": "명랑하게",
+   "src": "made"
+  }
+ ],
  "w|명령": [
   {
    "text": "상관의 명령을 따랐어.",
@@ -23543,6 +23735,22 @@
    "blank": "미워했어"
   }
  ],
+ "w|미지근하다": [
+  {
+   "text": "경민의 기획안에 대한 반응은 생각보다 미지근했어요.",
+   "en": "The response to Gyeongmin's proposal was more lukewarm than he expected.",
+   "ko": "경민의 기획안에 대한 반응은 생각보다 미지근했어요.",
+   "blank": "미지근했어요",
+   "src": "made"
+  },
+  {
+   "text": "다은은 미지근한 물에 시료를 녹여야 한다는 걸 잊지 않았어요.",
+   "en": "Daeun didn't forget that the sample has to be dissolved in lukewarm water.",
+   "ko": "다은은 미지근한 물에 시료를 녹여야 한다는 걸 잊지 않았어요.",
+   "blank": "미지근한",
+   "src": "made"
+  }
+ ],
  "w|미처": [
   {
    "text": "성호는 시험 시간이 모자라서 마지막 문제를 미처 풀지 못했어요.",
@@ -25009,6 +25217,22 @@
    "blank": "방식이"
   }
  ],
+ "w|방안": [
+  {
+   "text": "경민의 기사는 출퇴근길 교통 체증을 줄일 방안을 몇 가지 제시했어요.",
+   "en": "Gyeongmin's article suggested several ways to reduce rush-hour traffic.",
+   "ko": "경민의 기사는 출퇴근길 교통 체증을 줄일 방안을 몇 가지 제시했어요.",
+   "blank": "방안을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 실험 시간을 줄일 방안을 지도 교수님과 의논했어요.",
+   "en": "Daeun discussed ways to shorten the experiment time with her advisor.",
+   "ko": "다은은 실험 시간을 줄일 방안을 지도 교수님과 의논했어요.",
+   "blank": "방안을",
+   "src": "made"
+  }
+ ],
  "w|방어": [
   {
    "text": "성곽 모형을 보니 옛날 사람들이 방어에 얼마나 신경 썼는지 알겠어요.",
@@ -25093,6 +25317,22 @@
    "en": "Take some of the peeled pear.",
    "ko": "깎은 배 좀 가져가.",
    "blank": "배"
+  }
+ ],
+ "w|배경": [
+  {
+   "text": "경민은 사건의 배경을 알아보려고 그 마을 주민들을 만났어요.",
+   "en": "Gyeongmin met the village residents to learn the background of the incident.",
+   "ko": "경민은 사건의 배경을 알아보려고 그 마을 주민들을 만났어요.",
+   "blank": "배경을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 발표에서 이 연구를 시작한 배경부터 설명했어요.",
+   "en": "In her presentation, Daeun started by explaining the background of this research.",
+   "ko": "다은은 발표에서 이 연구를 시작한 배경부터 설명했어요.",
+   "blank": "배경부터",
+   "src": "made"
   }
  ],
  "w|배고프다": [
@@ -30146,6 +30386,22 @@
    "blank": "사과했어"
   }
  ],
+ "w|사교적": [
+  {
+   "text": "경민은 사교적인 선배 덕분에 정치부 사람들을 많이 알게 됐어요.",
+   "en": "Thanks to a sociable senior, Gyeongmin got to know many people in the politics desk.",
+   "ko": "경민은 사교적인 선배 덕분에 정치부 사람들을 많이 알게 됐어요.",
+   "blank": "사교적인",
+   "src": "made"
+  },
+  {
+   "text": "다은은 사교적이지 않지만 공동 연구를 위해 모임에 나가요.",
+   "en": "Daeun isn't sociable, but she goes to gatherings for joint research.",
+   "ko": "다은은 사교적이지 않지만 공동 연구를 위해 모임에 나가요.",
+   "blank": "사교적이지",
+   "src": "made"
+  }
+ ],
  "w|사귀다": [
   {
    "text": "요즘 누구 사귀어?",
@@ -32514,6 +32770,22 @@
    "blank": "샴푸가"
   }
  ],
+ "w|서늘하다": [
+  {
+   "text": "밤늦게 신문사를 나서니 서늘한 바람이 경민의 얼굴을 스쳤어요.",
+   "en": "When Gyeongmin left the newspaper late at night, a cool breeze brushed his face.",
+   "ko": "밤늦게 신문사를 나서니 서늘한 바람이 경민의 얼굴을 스쳤어요.",
+   "blank": "서늘한",
+   "src": "made"
+  },
+  {
+   "text": "실험실은 에어컨 때문에 여름에도 서늘해서 다은은 늘 겉옷을 챙겨요.",
+   "en": "The lab stays cool even in summer because of the air conditioning, so Daeun always brings a jacket.",
+   "ko": "실험실은 에어컨 때문에 여름에도 서늘해서 다은은 늘 겉옷을 챙겨요.",
+   "blank": "서늘해서",
+   "src": "made"
+  }
+ ],
  "w|서다": [
   {
    "text": "출입구 옆에 서 있어.",
@@ -33788,6 +34060,22 @@
    "blank": "세대가"
   }
  ],
+ "w|세련되다": [
+  {
+   "text": "새로 바뀐 신문 디자인은 훨씬 세련돼 보였어요.",
+   "en": "The newspaper's new design looked much more polished.",
+   "ko": "새로 바뀐 신문 디자인은 훨씬 세련돼 보였어요.",
+   "blank": "세련돼",
+   "src": "made"
+  },
+  {
+   "text": "다은은 학회에서 세련된 발표 자료로 박수를 받았어요.",
+   "en": "Daeun got applause at the conference for her polished presentation slides.",
+   "ko": "다은은 학회에서 세련된 발표 자료로 박수를 받았어요.",
+   "blank": "세련된",
+   "src": "made"
+  }
+ ],
  "w|세모": [
   {
    "text": "지붕이 세모처럼 보여.",
@@ -34192,6 +34480,22 @@
    "en": "Rumors are going around.",
    "ko": "소문이 돌고 있어.",
    "blank": "소문이"
+  }
+ ],
+ "w|소박하다": [
+  {
+   "text": "경민은 소박한 동네 빵집 주인의 삶을 인터뷰했어요.",
+   "en": "Gyeongmin interviewed the owner of a modest neighborhood bakery about her life.",
+   "ko": "경민은 소박한 동네 빵집 주인의 삶을 인터뷰했어요.",
+   "blank": "소박한",
+   "src": "made"
+  },
+  {
+   "text": "다은의 꿈은 거창하지 않고 소박해요.",
+   "en": "Daeun's dream isn't grand; it's simple.",
+   "ko": "다은의 꿈은 거창하지 않고 소박해요.",
+   "blank": "소박해요",
+   "src": "made"
   }
  ],
  "w|소방관": [
@@ -35080,6 +35384,22 @@
    "en": "At the hospital, a nun cared for patients.",
    "ko": "병원에서 수녀가 환자를 돌봤어.",
    "blank": "수녀가"
+  }
+ ],
+ "w|수다스럽다": [
+  {
+   "text": "경민이 만난 택시 기사는 수다스러웠지만 좋은 이야기를 많이 들려줬어요.",
+   "en": "The taxi driver Gyeongmin met was chatty but told him many good stories.",
+   "ko": "경민이 만난 택시 기사는 수다스러웠지만 좋은 이야기를 많이 들려줬어요.",
+   "blank": "수다스러웠지만",
+   "src": "made"
+  },
+  {
+   "text": "수다스러운 선배와 같이 있으면 다은은 실험에 집중하기 어려워요.",
+   "en": "Daeun finds it hard to focus on experiments when she's with her chatty senior.",
+   "ko": "수다스러운 선배와 같이 있으면 다은은 실험에 집중하기 어려워요.",
+   "blank": "수다스러운",
+   "src": "made"
   }
  ],
  "w|수단": [
@@ -36706,6 +37026,22 @@
    "src": "made"
   }
  ],
+ "w|시상식": [
+  {
+   "text": "경민은 올해 언론상 시상식에서 상을 받았어요.",
+   "en": "Gyeongmin received an award at this year's press award ceremony.",
+   "ko": "경민은 올해 언론상 시상식에서 상을 받았어요.",
+   "blank": "시상식에서",
+   "src": "made"
+  },
+  {
+   "text": "다은은 학회 시상식에서 젊은 연구자 상을 받았어요.",
+   "en": "Daeun received the young researcher award at the academic conference's award ceremony.",
+   "ko": "다은은 학회 시상식에서 젊은 연구자 상을 받았어요.",
+   "blank": "시상식에서",
+   "src": "made"
+  }
+ ],
  "w|시선": [
   {
    "text": "그녀는 놀라서 나의 시선을 피했다.",
@@ -37934,6 +38270,22 @@
    "blank": "실은"
   }
  ],
+ "w|실정": [
+  {
+   "text": "경민의 기사는 농촌 인력이 부족한 실정을 생생하게 보여 줬어요.",
+   "en": "Gyeongmin's article vividly showed the actual shortage of rural labor.",
+   "ko": "경민의 기사는 농촌 인력이 부족한 실정을 생생하게 보여 줬어요.",
+   "blank": "실정을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 연구비가 부족한 실정이라 중고 현미경을 샀어요.",
+   "en": "Since research funding is actually short, Daeun bought a used microscope.",
+   "ko": "다은은 연구비가 부족한 실정이라 중고 현미경을 샀어요.",
+   "blank": "실정이라",
+   "src": "made"
+  }
+ ],
  "w|실제로": [
   {
    "text": "실제로 만나 보니 달랐어.",
@@ -38151,6 +38503,22 @@
    "en": "Daeun studied psychology in college, so she's confident dealing with customers.",
    "ko": "다은은 대학에서 심리를 공부해서 고객 응대에 자신이 있어요.",
    "blank": "심리를",
+   "src": "made"
+  }
+ ],
+ "w|심리학": [
+  {
+   "text": "경민은 범죄 심리학 전문가의 의견을 기사에 덧붙였어요.",
+   "en": "Gyeongmin added a criminal psychology expert's opinion to the article.",
+   "ko": "경민은 범죄 심리학 전문가의 의견을 기사에 덧붙였어요.",
+   "blank": "심리학",
+   "src": "made"
+  },
+  {
+   "text": "다은은 실험 참가자의 반응을 보려고 심리학 교수와 함께 연구해요.",
+   "en": "Daeun works with a psychology professor to see the participants' reactions.",
+   "ko": "다은은 실험 참가자의 반응을 보려고 심리학 교수와 함께 연구해요.",
+   "blank": "심리학",
    "src": "made"
   }
  ],
@@ -42426,6 +42794,22 @@
    "src": "krdict"
   }
  ],
+ "w|여건": [
+  {
+   "text": "경민은 시골 학교의 열악한 교육 여건에 대해 취재했어요.",
+   "en": "Gyeongmin reported on the poor educational conditions of rural schools.",
+   "ko": "경민은 시골 학교의 열악한 교육 여건에 대해 취재했어요.",
+   "blank": "여건에",
+   "src": "made"
+  },
+  {
+   "text": "다은의 실험실은 장비가 낡아서 연구 여건이 좋지 않아요.",
+   "en": "Daeun's lab has old equipment, so the research conditions aren't good.",
+   "ko": "다은의 실험실은 장비가 낡아서 연구 여건이 좋지 않아요.",
+   "blank": "여건이",
+   "src": "made"
+  }
+ ],
  "w|여권": [
   {
    "text": "여권을 챙겼어?",
@@ -42968,6 +43352,22 @@
    "en": "It's a city with a long history.",
    "ko": "역사가 긴 도시야.",
    "blank": "역사가"
+  }
+ ],
+ "w|역사학": [
+  {
+   "text": "경민은 역사학 교수에게 그 성곽의 유래를 물었어요.",
+   "en": "Gyeongmin asked a history professor about the origin of the fortress wall.",
+   "ko": "경민은 역사학 교수에게 그 성곽의 유래를 물었어요.",
+   "blank": "역사학",
+   "src": "made"
+  },
+  {
+   "text": "다은의 룸메이트는 역사학을 전공해서 실험실 이야기를 신기해해요.",
+   "en": "Daeun's roommate majors in history, so she finds lab stories fascinating.",
+   "ko": "다은의 룸메이트는 역사학을 전공해서 실험실 이야기를 신기해해요.",
+   "blank": "역사학을",
+   "src": "made"
   }
  ],
  "w|역시": [
@@ -44202,6 +44602,22 @@
    "blank": "예습하면"
   }
  ],
+ "w|예식": [
+  {
+   "text": "경민은 요즘 작은 결혼 예식이 늘어나는 현상을 취재했어요.",
+   "en": "Gyeongmin reported on the recent rise of small wedding ceremonies.",
+   "ko": "경민은 요즘 작은 결혼 예식이 늘어나는 현상을 취재했어요.",
+   "blank": "예식이",
+   "src": "made"
+  },
+  {
+   "text": "다은은 실험 일정 때문에 사촌 언니 결혼 예식에 늦게 도착했어요.",
+   "en": "Because of her experiment schedule, Daeun arrived late to her cousin's wedding ceremony.",
+   "ko": "다은은 실험 일정 때문에 사촌 언니 결혼 예식에 늦게 도착했어요.",
+   "blank": "예식에",
+   "src": "made"
+  }
+ ],
  "w|예약": [
   {
    "text": "예약을 취소했어.",
@@ -45064,6 +45480,22 @@
    "src": "made"
   }
  ],
+ "w|완고하다": [
+  {
+   "text": "경민은 완고한 마을 어른들을 설득하느라 며칠을 보냈어요.",
+   "en": "Gyeongmin spent several days persuading the stubborn village elders.",
+   "ko": "경민은 완고한 마을 어른들을 설득하느라 며칠을 보냈어요.",
+   "blank": "완고한",
+   "src": "made"
+  },
+  {
+   "text": "다은의 지도 교수님은 완고해서 새로운 방법을 잘 받아들이지 않으세요.",
+   "en": "Daeun's advisor is rigid and doesn't easily accept new methods.",
+   "ko": "다은의 지도 교수님은 완고해서 새로운 방법을 잘 받아들이지 않으세요.",
+   "blank": "완고해서",
+   "src": "made"
+  }
+ ],
  "w|완벽하다": [
   {
    "text": "준비가 거의 완벽해.",
@@ -45472,6 +45904,22 @@
    "en": "I ran while crying out for help.",
    "ko": "도움을 외치며 뛰어갔어.",
    "blank": "외치며"
+  }
+ ],
+ "w|외향적": [
+  {
+   "text": "경민의 동료는 외향적인 성격이라 처음 보는 사람과도 금방 친해져요.",
+   "en": "Gyeongmin's colleague is outgoing, so she quickly makes friends even with strangers.",
+   "ko": "경민의 동료는 외향적인 성격이라 처음 보는 사람과도 금방 친해져요.",
+   "blank": "외향적인",
+   "src": "made"
+  },
+  {
+   "text": "다은은 학회에 가면 외향적으로 변해서 처음 보는 연구자에게도 말을 걸어요.",
+   "en": "At conferences Daeun becomes outgoing and talks even to researchers she's never met.",
+   "ko": "다은은 학회에 가면 외향적으로 변해서 처음 보는 연구자에게도 말을 걸어요.",
+   "blank": "외향적으로",
+   "src": "made"
   }
  ],
  "w|왼쪽": [
@@ -46556,6 +47004,22 @@
    "blank": "원료"
   }
  ],
+ "w|원리": [
+  {
+   "text": "경민은 금리가 오르는 원리를 독자들이 알기 쉽게 풀어 썼어요.",
+   "en": "Gyeongmin explained the principle of rising interest rates in a way readers could easily understand.",
+   "ko": "경민은 금리가 오르는 원리를 독자들이 알기 쉽게 풀어 썼어요.",
+   "blank": "원리를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 동생에게 무지개가 생기는 원리를 그림으로 설명해 줬어요.",
+   "en": "Daeun explained to her younger sibling with a drawing how rainbows form.",
+   "ko": "다은은 동생에게 무지개가 생기는 원리를 그림으로 설명해 줬어요.",
+   "blank": "원리를",
+   "src": "made"
+  }
+ ],
  "w|원망": [
   {
    "text": "재원은 연락이 끊겼던 시간 동안 친구를 원망한 적은 없다고 썼어요.",
@@ -47144,6 +47608,22 @@
    "src": "made"
   }
  ],
+ "w|유머러스하다": [
+  {
+   "text": "경민의 칼럼은 유머러스해서 독자들에게 인기가 많아요.",
+   "en": "Gyeongmin's column is humorous, so it's very popular with readers.",
+   "ko": "경민의 칼럼은 유머러스해서 독자들에게 인기가 많아요.",
+   "blank": "유머러스해서",
+   "src": "made"
+  },
+  {
+   "text": "다은의 선배는 유머러스한 말로 긴 실험 시간을 즐겁게 만들어요.",
+   "en": "Daeun's senior makes the long hours of experiments fun with humorous remarks.",
+   "ko": "다은의 선배는 유머러스한 말로 긴 실험 시간을 즐겁게 만들어요.",
+   "blank": "유머러스한",
+   "src": "made"
+  }
+ ],
  "w|유명하다": [
   {
    "text": "이 가게 동네에서 유명해.",
@@ -47202,6 +47682,22 @@
    "en": "The toddler is playing by stacking blocks.",
    "ko": "유아가 블록을 쌓으며 놀고 있어.",
    "blank": "유아가"
+  }
+ ],
+ "w|유연하다": [
+  {
+   "text": "경민은 마감이 바뀌어도 유연하게 일정을 조정했어요.",
+   "en": "Even when the deadline changed, Gyeongmin adjusted his schedule flexibly.",
+   "ko": "경민은 마감이 바뀌어도 유연하게 일정을 조정했어요.",
+   "blank": "유연하게",
+   "src": "made"
+  },
+  {
+   "text": "다은이 만든 새 소재는 고무처럼 유연해요.",
+   "en": "The new material Daeun made is flexible like rubber.",
+   "ko": "다은이 만든 새 소재는 고무처럼 유연해요.",
+   "blank": "유연해요",
+   "src": "made"
   }
  ],
  "w|유용하다": [
@@ -50338,6 +50834,22 @@
    "blank": "입학"
   }
  ],
+ "w|입학식": [
+  {
+   "text": "경민은 신입생이 줄어든 시골 학교의 입학식 사진을 일면에 실었어요.",
+   "en": "Gyeongmin ran a photo of a rural school's entrance ceremony, with fewer new students, on the front page.",
+   "ko": "경민은 신입생이 줄어든 시골 학교의 입학식 사진을 일면에 실었어요.",
+   "blank": "입학식",
+   "src": "made"
+  },
+  {
+   "text": "대학 입학식 날 다은은 이 실험실에서 연구하는 꿈을 꿨어요.",
+   "en": "On the day of her university entrance ceremony, Daeun dreamed of doing research in this lab.",
+   "ko": "대학 입학식 날 다은은 이 실험실에서 연구하는 꿈을 꿨어요.",
+   "blank": "입학식",
+   "src": "made"
+  }
+ ],
  "w|입학하다": [
   {
    "text": "봄에 새 학교에 입학했어.",
@@ -53246,6 +53758,38 @@
    "src": "made"
   }
  ],
+ "w|전시": [
+  {
+   "text": "경민은 신문사 창간 기념 사진 전시를 준비하고 있어요.",
+   "en": "Gyeongmin is preparing a photo exhibition for the newspaper's founding anniversary.",
+   "ko": "경민은 신문사 창간 기념 사진 전시를 준비하고 있어요.",
+   "blank": "전시를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 과학관에서 열리는 화석 전시에 연구실 표본을 빌려줬어요.",
+   "en": "Daeun lent the lab's specimens to a fossil exhibition at the science museum.",
+   "ko": "다은은 과학관에서 열리는 화석 전시에 연구실 표본을 빌려줬어요.",
+   "blank": "전시에",
+   "src": "made"
+  }
+ ],
+ "w|전시회": [
+  {
+   "text": "경민은 주말에 젊은 화가들의 전시회를 보고 짧은 리뷰를 썼어요.",
+   "en": "Gyeongmin saw young painters' exhibition on the weekend and wrote a short review.",
+   "ko": "경민은 주말에 젊은 화가들의 전시회를 보고 짧은 리뷰를 썼어요.",
+   "blank": "전시회를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 학생들의 과학 발명품 전시회에서 심사를 맡았어요.",
+   "en": "Daeun served as a judge at the students' science invention exhibition.",
+   "ko": "다은은 학생들의 과학 발명품 전시회에서 심사를 맡았어요.",
+   "blank": "전시회에서",
+   "src": "made"
+  }
+ ],
  "w|전역": [
   {
    "text": "재원은 지리 시간에 장마가 전국 전역에 걸쳐 온다는 걸 배웠어요.",
@@ -54702,6 +55246,22 @@
    "src": "made"
   }
  ],
+ "w|제사": [
+  {
+   "text": "경민은 명절에 제사를 지내지 않는 집이 늘었다는 기사를 썼어요.",
+   "en": "Gyeongmin wrote an article saying more families no longer hold ancestral rites on holidays.",
+   "ko": "경민은 명절에 제사를 지내지 않는 집이 늘었다는 기사를 썼어요.",
+   "blank": "제사를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 할아버지 제사 때문에 주말 실험을 미뤘어요.",
+   "en": "Daeun postponed her weekend experiment because of her grandfather's memorial rite.",
+   "ko": "다은은 할아버지 제사 때문에 주말 실험을 미뤘어요.",
+   "blank": "제사",
+   "src": "made"
+  }
+ ],
  "w|제안": [
   {
    "text": "좋은 제안을 해 줬어.",
@@ -55374,6 +55934,22 @@
    "en": "I'll get a job right after graduating.",
    "ko": "졸업하고 바로 취직할 거야.",
    "blank": "졸업하고"
+  }
+ ],
+ "w|졸업식": [
+  {
+   "text": "경민은 학생이 한 명뿐인 분교의 졸업식을 취재하러 갔어요.",
+   "en": "Gyeongmin went to cover the graduation ceremony of a branch school with only one student.",
+   "ko": "경민은 학생이 한 명뿐인 분교의 졸업식을 취재하러 갔어요.",
+   "blank": "졸업식을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 졸업식 날에도 실험 결과가 궁금해서 연구실에 들렀어요.",
+   "en": "Even on her graduation day, Daeun stopped by the lab because she was curious about her results.",
+   "ko": "다은은 졸업식 날에도 실험 결과가 궁금해서 연구실에 들렀어요.",
+   "blank": "졸업식",
+   "src": "made"
   }
  ],
  "w|졸업하다": [
@@ -61008,6 +61584,22 @@
    "blank": "추석"
   }
  ],
+ "w|추세": [
+  {
+   "text": "경민은 혼자 사는 가구가 늘어나는 추세를 기사로 다뤘어요.",
+   "en": "Gyeongmin covered the growing trend of single-person households in an article.",
+   "ko": "경민은 혼자 사는 가구가 늘어나는 추세를 기사로 다뤘어요.",
+   "blank": "추세를",
+   "src": "made"
+  },
+  {
+   "text": "다은은 기온이 오를수록 세균 수가 늘어나는 추세를 그래프로 그렸어요.",
+   "en": "Daeun drew a graph of the trend of bacteria increasing as the temperature rose.",
+   "ko": "다은은 기온이 오를수록 세균 수가 늘어나는 추세를 그래프로 그렸어요.",
+   "blank": "추세를",
+   "src": "made"
+  }
+ ],
  "w|추억": [
   {
    "text": "그때 추억이 아직도 생생해.",
@@ -62686,6 +63278,22 @@
    "en": "Braised beans go well with rice.",
    "ko": "콩 조림이 밥반찬으로 좋아.",
    "blank": "콩"
+  }
+ ],
+ "w|쾌활하다": [
+  {
+   "text": "경민이 인터뷰한 할머니는 아흔이 넘었는데도 쾌활했어요.",
+   "en": "The grandmother Gyeongmin interviewed was lively even though she was over ninety.",
+   "ko": "경민이 인터뷰한 할머니는 아흔이 넘었는데도 쾌활했어요.",
+   "blank": "쾌활했어요",
+   "src": "made"
+  },
+  {
+   "text": "쾌활한 인턴 덕분에 다은의 연구실은 늘 웃음이 넘쳐요.",
+   "en": "Thanks to a cheerful intern, Daeun's lab is always full of laughter.",
+   "ko": "쾌활한 인턴 덕분에 다은의 연구실은 늘 웃음이 넘쳐요.",
+   "blank": "쾌활한",
+   "src": "made"
   }
  ],
  "w|쿠키": [
@@ -65752,6 +66360,22 @@
    "blank": "풍부하다"
   }
  ],
+ "w|풍습": [
+  {
+   "text": "경민은 섬마을에 남아 있는 독특한 풍습을 특집으로 소개했어요.",
+   "en": "Gyeongmin introduced the unique customs remaining in an island village in a feature.",
+   "ko": "경민은 섬마을에 남아 있는 독특한 풍습을 특집으로 소개했어요.",
+   "blank": "풍습을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 연구 주제로 동지에 팥죽을 먹는 풍습과 영양의 관계를 골랐어요.",
+   "en": "Daeun chose the link between the custom of eating red bean porridge on the winter solstice and nutrition as her research topic.",
+   "ko": "다은은 연구 주제로 동지에 팥죽을 먹는 풍습과 영양의 관계를 골랐어요.",
+   "blank": "풍습과",
+   "src": "made"
+  }
+ ],
  "w|프라이팬": [
   {
    "text": "프라이팬에 계란을 부쳤어.",
@@ -66316,6 +66940,22 @@
    "en": "I finished this school year.",
    "ko": "올해 학년을 마쳤어.",
    "blank": "학년을"
+  }
+ ],
+ "w|학문": [
+  {
+   "text": "경민은 신문사에 들어오기 전에 대학원에서 학문을 계속할지 고민했어요.",
+   "en": "Before joining the newspaper, Gyeongmin considered whether to continue his studies in graduate school.",
+   "ko": "경민은 신문사에 들어오기 전에 대학원에서 학문을 계속할지 고민했어요.",
+   "blank": "학문을",
+   "src": "made"
+  },
+  {
+   "text": "다은은 과학이 가장 정직한 학문이라고 생각해요.",
+   "en": "Daeun thinks science is the most honest field of study.",
+   "ko": "다은은 과학이 가장 정직한 학문이라고 생각해요.",
+   "blank": "학문이라고",
+   "src": "made"
   }
  ],
  "w|학부모": [

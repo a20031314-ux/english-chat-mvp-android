@@ -1973,6 +1973,22 @@
    "src": "made"
   }
  ],
+ "w|altitude": [
+  {
+   "text": "En montagne, le train de Lucas grimpe à plus de mille mètres d'altitude.",
+   "en": "In the mountains, Lucas's train climbs to over a thousand metres in altitude.",
+   "ko": "산에서 뤼카의 기차는 해발 천 미터가 넘게 올라가요.",
+   "blank": "altitude",
+   "src": "made"
+  },
+  {
+   "text": "Camille range un atlas qui indique l'altitude de chaque sommet.",
+   "en": "Camille shelves an atlas that shows the altitude of every peak.",
+   "ko": "카미유는 봉우리마다 고도가 적힌 지도책을 꽂아요.",
+   "blank": "altitude",
+   "src": "made"
+  }
+ ],
  "w|amant": [
   {
    "text": "Il a avoué qu'il était son amant.",
@@ -4203,6 +4219,22 @@
    "blank": "attention"
   }
  ],
+ "w|attentionné": [
+  {
+   "text": "Un passager attentionné aide Lucas à monter sa valise dans le filet.",
+   "en": "A thoughtful passenger helps Lucas lift his suitcase onto the rack.",
+   "ko": "배려심 많은 승객이 뤼카의 가방을 짐칸에 올리는 걸 도와줘요.",
+   "blank": "attentionné",
+   "src": "made"
+  },
+  {
+   "text": "Les lecteurs aiment Camille parce qu'elle est attentionnée avec tout le monde.",
+   "en": "Readers love Camille because she's thoughtful with everyone.",
+   "ko": "카미유는 누구에게나 세심해서 이용자들이 좋아해요.",
+   "blank": "attentionnée",
+   "src": "made"
+  }
+ ],
  "w|atterrir": [
   {
    "text": "L'avion va atterrir dans quelques minutes.",
@@ -4257,6 +4289,22 @@
    "en": "I admire her calm attitude in difficult situations.",
    "ko": "나는 그녀가 어려운 상황에서 보이는 침착한 태도를 존경해.",
    "blank": "attitude"
+  }
+ ],
+ "w|attraction": [
+  {
+   "text": "Lucas a lu que la grande attraction de la ville est un marché flottant.",
+   "en": "Lucas has read that the town's big attraction is a floating market.",
+   "ko": "뤼카는 그 도시의 가장 큰 볼거리가 수상 시장이라는 글을 읽었어요.",
+   "blank": "attraction",
+   "src": "made"
+  },
+  {
+   "text": "Le coin des enfants est la grande attraction de la bibliothèque de Camille.",
+   "en": "The children's corner is the main attraction of Camille's library.",
+   "ko": "어린이 코너는 카미유가 일하는 도서관의 가장 큰 볼거리예요.",
+   "blank": "attraction",
+   "src": "made"
   }
  ],
  "w|attraper": [
@@ -4357,6 +4405,22 @@
    "en": "The dawn was beautiful this morning.",
    "ko": "오늘 아침 새벽이 아름다웠어.",
    "blank": "aube"
+  }
+ ],
+ "w|auberge": [
+  {
+   "text": "Lucas a réservé une nuit dans une auberge de jeunesse près de la gare.",
+   "en": "Lucas has booked a night at a youth hostel near the station.",
+   "ko": "뤼카는 역 근처 유스호스텔에 하룻밤을 예약했어요.",
+   "blank": "auberge",
+   "src": "made"
+  },
+  {
+   "text": "Le club de lecture de Camille se retrouve chaque mois dans une vieille auberge.",
+   "en": "Camille's book club meets every month in an old inn.",
+   "ko": "카미유의 독서 모임은 매달 오래된 여관에서 모여요.",
+   "blank": "auberge",
+   "src": "made"
   }
  ],
  "w|aucun": [
@@ -6891,6 +6955,22 @@
    "blank": "bord"
   }
  ],
+ "w|borne": [
+  {
+   "text": "Lucas imprime son billet à la borne automatique du hall.",
+   "en": "Lucas prints his ticket at the self-service machine in the hall.",
+   "ko": "뤼카는 대합실의 무인 발권기에서 표를 뽑아요.",
+   "blank": "borne",
+   "src": "made"
+  },
+  {
+   "text": "Les lecteurs empruntent leurs livres à la borne, et Camille vérifie que tout marche.",
+   "en": "Readers borrow their books at the self-service kiosk, and Camille checks that everything works.",
+   "ko": "이용자들이 무인 대출기에서 책을 빌리고 카미유는 잘 되는지 확인해요.",
+   "blank": "borne",
+   "src": "made"
+  }
+ ],
  "w|bosse": [
   {
    "text": "Je me suis fait une bosse en tombant.",
@@ -8613,6 +8693,22 @@
    "blank": "caractère"
   }
  ],
+ "w|caravane": [
+  {
+   "text": "Par la fenêtre du train, Lucas aperçoit une caravane garée au bord d'un champ.",
+   "en": "From the train window, Lucas spots a caravan parked at the edge of a field.",
+   "ko": "기차 창밖으로 뤼카는 들판 가장자리에 세워진 캠핑카를 봐요.",
+   "blank": "caravane",
+   "src": "made"
+  },
+  {
+   "text": "Camille range un livre de photos sur une caravane qui a traversé le Sahara.",
+   "en": "Camille shelves a photo book about a caravan that crossed the Sahara.",
+   "ko": "카미유는 사하라를 건넌 대상에 관한 사진집을 꽂아요.",
+   "blank": "caravane",
+   "src": "made"
+  }
+ ],
  "w|carburant": [
   {
    "text": "On n'a presque plus de carburant.",
@@ -8654,6 +8750,22 @@
    "en": "For Léa, punctuality is a cardinal rule of reception work.",
    "ko": "레아에게 시간 엄수는 손님맞이의 기본 원칙이에요.",
    "blank": "cardinale",
+   "src": "made"
+  }
+ ],
+ "w|cargaison": [
+  {
+   "text": "Le train de Lucas attend qu'un train de marchandises passe avec sa cargaison de bois.",
+   "en": "Lucas's train waits for a freight train to pass with its load of timber.",
+   "ko": "뤼카가 탄 기차는 목재를 실은 화물 열차가 지나가길 기다려요.",
+   "blank": "cargaison",
+   "src": "made"
+  },
+  {
+   "text": "Une cargaison de livres neufs arrive à la bibliothèque, et Camille commence à déballer.",
+   "en": "A shipment of new books arrives at the library, and Camille starts unpacking.",
+   "ko": "새 책 한 무더기가 도서관에 도착하자 카미유는 상자를 풀기 시작해요.",
+   "blank": "cargaison",
    "src": "made"
   }
  ],
@@ -14369,6 +14481,22 @@
    "src": "made"
   }
  ],
+ "w|coriace": [
+  {
+   "text": "Le sandwich du wagon-bar est tellement coriace que Lucas renonce à le finir.",
+   "en": "The buffet-car sandwich is so tough that Lucas gives up on finishing it.",
+   "ko": "식당칸 샌드위치가 너무 질겨서 뤼카는 다 먹기를 포기해요.",
+   "blank": "coriace",
+   "src": "made"
+  },
+  {
+   "text": "Une tache coriace résiste à tous les efforts de Camille sur la couverture du livre.",
+   "en": "A stubborn stain resists all Camille's efforts on the book cover.",
+   "ko": "책 표지의 끈질긴 얼룩이 카미유가 아무리 닦아도 지워지지 않아요.",
+   "blank": "coriace",
+   "src": "made"
+  }
+ ],
  "w|corne": [
   {
    "text": "Le bouc de Julien a perdu une corne en se battant avec un autre mâle.",
@@ -14440,6 +14568,22 @@
    "en": "On the train, Chloé finishes marking her students' papers.",
    "ko": "기차에서 클로에는 학생들 시험지 채점을 마무리해요.",
    "blank": "correction",
+   "src": "made"
+  }
+ ],
+ "w|correspondance": [
+  {
+   "text": "Le train a du retard et Lucas a peur de rater sa correspondance à Lyon.",
+   "en": "The train is late and Lucas is afraid of missing his connection in Lyon.",
+   "ko": "기차가 늦어서 뤼카는 리옹에서 환승 열차를 놓칠까 봐 걱정해요.",
+   "blank": "correspondance",
+   "src": "made"
+  },
+  {
+   "text": "Camille classe la correspondance d'un écrivain du siècle dernier.",
+   "en": "Camille sorts the letters of a writer from the last century.",
+   "ko": "카미유는 지난 세기 한 작가의 편지들을 정리해요.",
+   "blank": "correspondance",
    "src": "made"
   }
  ],
@@ -15133,6 +15277,22 @@
    "blank": "craquer"
   }
  ],
+ "w|crash": [
+  {
+   "text": "À côté de Lucas, un passager lit un article sur le crash d'un avion de tourisme.",
+   "en": "Next to Lucas, a passenger reads an article about a light aircraft crash.",
+   "ko": "뤼카 옆자리 승객이 경비행기 추락 사고 기사를 읽어요.",
+   "blank": "crash",
+   "src": "made"
+  },
+  {
+   "text": "Après le crash de l'ordinateur, Camille note les prêts à la main.",
+   "en": "After the computer crash, Camille writes down the loans by hand.",
+   "ko": "컴퓨터가 멈춘 뒤 카미유는 대출 기록을 손으로 적어요.",
+   "blank": "crash",
+   "src": "made"
+  }
+ ],
  "w|cravate": [
   {
    "text": "Il porte une cravate rouge aujourd'hui.",
@@ -15483,6 +15643,22 @@
    "en": "You might bump into an old friend in town.",
    "ko": "도시에서 오랜 친구를 만날 수도 있어.",
    "blank": "croiser"
+  }
+ ],
+ "w|croisière": [
+  {
+   "text": "Après le train, Lucas embarque pour une croisière sur la Méditerranée.",
+   "en": "After the train, Lucas boards a cruise on the Mediterranean.",
+   "ko": "기차를 탄 뒤 뤼카는 지중해 크루즈에 올라요.",
+   "blank": "croisière",
+   "src": "made"
+  },
+  {
+   "text": "Camille a gagné une croisière au tirage au sort de la fête du livre.",
+   "en": "Camille won a cruise in the book fair raffle.",
+   "ko": "카미유는 책 축제 경품 추첨에서 크루즈 여행에 당첨됐어요.",
+   "blank": "croisière",
+   "src": "made"
   }
  ],
  "w|croissance": [
@@ -16805,6 +16981,22 @@
    "src": "made"
   }
  ],
+ "w|dégénéré": [
+  {
+   "text": "Lucas assiste à une dispute entre deux passagers qui a vite dégénéré.",
+   "en": "Lucas witnesses an argument between two passengers that quickly got out of hand.",
+   "ko": "뤼카는 두 승객 사이의 말다툼이 순식간에 험악해지는 걸 봐요.",
+   "blank": "dégénéré",
+   "src": "made"
+  },
+  {
+   "text": "Le débat organisé par Camille a dégénéré quand deux auteurs ont commencé à crier.",
+   "en": "The debate Camille organized got out of hand when two authors started shouting.",
+   "ko": "두 작가가 소리를 지르기 시작하면서 카미유가 연 토론회가 엉망이 됐어요.",
+   "blank": "dégénéré",
+   "src": "made"
+  }
+ ],
  "w|dégoûtant": [
   {
    "text": "Ce plat est vraiment dégoûtant.",
@@ -17035,6 +17227,22 @@
    "en": "You can ask Pierre.",
    "ko": "피에르에게 물어봐.",
    "blank": "demander"
+  }
+ ],
+ "w|démarche": [
+  {
+   "text": "Lucas reconnaît son ami de loin, rien qu'à sa démarche.",
+   "en": "Lucas recognizes his friend from afar just by the way he walks.",
+   "ko": "뤼카는 걸음걸이만 보고도 멀리서 친구를 알아봐요.",
+   "blank": "démarche",
+   "src": "made"
+  },
+  {
+   "text": "Camille explique à un étudiant la démarche à suivre pour obtenir une carte de lecteur.",
+   "en": "Camille explains to a student the steps for getting a library card.",
+   "ko": "카미유는 학생에게 도서관 카드를 받는 절차를 설명해요.",
+   "blank": "démarche",
+   "src": "made"
   }
  ],
  "w|démarrer": [
@@ -24459,6 +24667,22 @@
    "blank": "exister"
   }
  ],
+ "w|expédition": [
+  {
+   "text": "Lucas part rejoindre des amis pour une expédition dans les Alpes.",
+   "en": "Lucas is off to join friends for an expedition in the Alps.",
+   "ko": "뤼카는 알프스 원정에 함께하려고 친구들을 만나러 가요.",
+   "blank": "expédition",
+   "src": "made"
+  },
+  {
+   "text": "Camille prépare une exposition sur une expédition polaire du siècle dernier.",
+   "en": "Camille is preparing an exhibition on a polar expedition from the last century.",
+   "ko": "카미유는 지난 세기 극지 탐험에 관한 전시를 준비해요.",
+   "blank": "expédition",
+   "src": "made"
+  }
+ ],
  "w|expérience": [
   {
    "text": "Cette expérience m'a beaucoup appris.",
@@ -24719,6 +24943,22 @@
    "en": "The outside of the house is white.",
    "ko": "집의 외부는 하얀색이에요.",
    "blank": "extérieur"
+  }
+ ],
+ "w|externe": [
+  {
+   "text": "Lucas branche une batterie externe pour recharger son téléphone.",
+   "en": "Lucas plugs in an external battery to charge his phone.",
+   "ko": "뤼카는 휴대폰을 충전하려고 보조 배터리를 연결해요.",
+   "blank": "externe",
+   "src": "made"
+  },
+  {
+   "text": "Camille branche un disque dur externe pour sauvegarder le catalogue.",
+   "en": "Camille plugs in an external hard drive to back up the catalogue.",
+   "ko": "카미유는 목록을 백업하려고 외장 하드를 연결해요.",
+   "blank": "externe",
+   "src": "made"
   }
  ],
  "w|extraire": [
@@ -27207,6 +27447,22 @@
    "src": "made"
   }
  ],
+ "w|frein": [
+  {
+   "text": "Le train freine brusquement et Lucas entend le frein crisser sur les rails.",
+   "en": "The train brakes suddenly and Lucas hears the brake screech on the rails.",
+   "ko": "기차가 급정거하자 뤼카는 레일 위에서 브레이크가 끽 하는 소리를 들어요.",
+   "blank": "frein",
+   "src": "made"
+  },
+  {
+   "text": "Le frein du chariot à livres est cassé, et Camille le retient de justesse dans la pente.",
+   "en": "The book trolley's brake is broken, and Camille catches it just in time on the slope.",
+   "ko": "책 수레의 브레이크가 고장 나서 카미유가 비탈에서 간신히 붙잡아요.",
+   "blank": "frein",
+   "src": "made"
+  }
+ ],
  "w|fréquence": [
   {
    "text": "La fréquence des cours a changé cette année.",
@@ -29389,6 +29645,22 @@
    "blank": "gym"
   }
  ],
+ "w|habile": [
+  {
+   "text": "Lucas admire le conducteur habile qui manœuvre le train dans la gare.",
+   "en": "Lucas admires the skilled driver steering the train into the station.",
+   "ko": "뤼카는 역으로 기차를 능숙하게 들여보내는 기관사에게 감탄해요.",
+   "blank": "habile",
+   "src": "made"
+  },
+  {
+   "text": "Avec des doigts habiles, Camille répare la reliure d'un vieux dictionnaire.",
+   "en": "With nimble fingers, Camille repairs the binding of an old dictionary.",
+   "ko": "카미유는 능숙한 손놀림으로 오래된 사전의 제본을 고쳐요.",
+   "blank": "habiles",
+   "src": "made"
+  }
+ ],
  "w|habillé": [
   {
    "text": "Je me suis habillé rapidement ce matin.",
@@ -29586,6 +29858,22 @@
    "en": "After eight hours at the screen, Émilie thinks she's hallucinating when the boss calls her by the wrong name.",
    "ko": "여덟 시간 화면을 본 뒤 사장이 이름을 틀리게 부르자 에밀리는 헛것을 들은 줄 알아요.",
    "blank": "hallucination",
+   "src": "made"
+  }
+ ],
+ "w|halte": [
+  {
+   "text": "Le train fait une courte halte dans un petit village, et Lucas descend se dégourdir les jambes.",
+   "en": "The train makes a short stop at a small village, and Lucas gets off to stretch his legs.",
+   "ko": "기차가 작은 마을에 잠깐 서자 뤼카는 내려서 다리를 풀어요.",
+   "blank": "halte",
+   "src": "made"
+  },
+  {
+   "text": "Camille fait une halte au café du coin avant d'ouvrir la bibliothèque.",
+   "en": "Camille stops off at the corner café before opening the library.",
+   "ko": "카미유는 도서관 문을 열기 전에 길모퉁이 카페에 잠깐 들러요.",
+   "blank": "halte",
    "src": "made"
   }
  ],
@@ -30333,6 +30621,22 @@
    "blank": "hôtel"
   }
  ],
+ "w|hôtesse": [
+  {
+   "text": "Une hôtesse passe dans le couloir et propose un café à Lucas.",
+   "en": "A hostess comes down the aisle and offers Lucas a coffee.",
+   "ko": "승무원이 통로를 지나가며 뤼카에게 커피를 권해요.",
+   "blank": "hôtesse",
+   "src": "made"
+  },
+  {
+   "text": "Une ancienne hôtesse de l'air donne à Camille ses carnets de voyage.",
+   "en": "A former flight attendant gives Camille her travel notebooks.",
+   "ko": "전직 비행기 승무원이 카미유에게 여행 수첩들을 기증해요.",
+   "blank": "hôtesse",
+   "src": "made"
+  }
+ ],
  "w|huer": [
   {
    "text": "Pendant sa pause, Louis regarde un match où les supporters huent l'arbitre.",
@@ -30493,6 +30797,22 @@
    "en": "You don't need to yell to be heard.",
    "ko": "듣게 하려고 소리 지를 필요 없어.",
    "blank": "hurler"
+  }
+ ],
+ "w|hybride": [
+  {
+   "text": "Le nouveau train hybride de la région emmène Lucas jusqu'au bord de la mer.",
+   "en": "The region's new hybrid train takes Lucas all the way to the seaside.",
+   "ko": "지역의 새 하이브리드 열차가 뤼카를 바닷가까지 데려다줘요.",
+   "blank": "hybride",
+   "src": "made"
+  },
+  {
+   "text": "Camille recommande un roman hybride, entre polar et conte de fées.",
+   "en": "Camille recommends a hybrid novel, half crime story, half fairy tale.",
+   "ko": "카미유는 추리 소설과 동화가 섞인 독특한 소설을 권해요.",
+   "blank": "hybride",
+   "src": "made"
   }
  ],
  "w|hypocrite": [
@@ -30979,6 +31299,22 @@
    "blank": "impact"
   }
  ],
+ "w|impasse": [
+  {
+   "text": "En sortant de la gare, Lucas se perd dans une impasse.",
+   "en": "Coming out of the station, Lucas gets lost in a dead end.",
+   "ko": "역을 나서다 뤼카는 막다른 골목에서 길을 잃어요.",
+   "blank": "impasse",
+   "src": "made"
+  },
+  {
+   "text": "La bibliothèque de Camille se trouve au fond d'une impasse tranquille.",
+   "en": "Camille's library is at the end of a quiet cul-de-sac.",
+   "ko": "카미유의 도서관은 조용한 막다른 골목 끝에 있어요.",
+   "blank": "impasse",
+   "src": "made"
+  }
+ ],
  "w|impatient": [
   {
    "text": "Il est impatient de te revoir.",
@@ -31228,6 +31564,22 @@
    "en": "Mountain weather is unpredictable, so Claire brings the animals in early.",
    "ko": "산 날씨는 예측할 수 없어서 클레르는 가축을 일찍 들여요.",
    "blank": "imprévisible",
+   "src": "made"
+  }
+ ],
+ "w|improviser": [
+  {
+   "text": "Sans réseau dans le train, Lucas doit improviser pour trouver son hôtel.",
+   "en": "With no signal on the train, Lucas has to improvise to find his hotel.",
+   "ko": "기차에서 신호가 안 잡혀서 뤼카는 즉석에서 호텔을 찾아야 해요.",
+   "blank": "improviser",
+   "src": "made"
+  },
+  {
+   "text": "Quand l'auteur invité tombe malade, Camille doit improviser une lecture à voix haute.",
+   "en": "When the guest author falls ill, Camille has to improvise a reading aloud.",
+   "ko": "초청 작가가 아프자 카미유는 즉석에서 낭독회를 해야 해요.",
+   "blank": "improviser",
    "src": "made"
   }
  ],
@@ -32885,6 +33237,22 @@
    "en": "You have to put the coin in the slot.",
    "ko": "동전을 홈에 넣어야 해.",
    "blank": "introduire"
+  }
+ ],
+ "w|introuvable": [
+  {
+   "text": "Lucas fouille son sac, mais son billet reste introuvable.",
+   "en": "Lucas searches his bag, but his ticket is nowhere to be found.",
+   "ko": "뤼카는 가방을 뒤지지만 표가 도무지 안 보여요.",
+   "blank": "introuvable",
+   "src": "made"
+  },
+  {
+   "text": "Le livre réservé par le maire est introuvable, et Camille cherche partout.",
+   "en": "The book reserved by the mayor can't be found, and Camille looks everywhere.",
+   "ko": "시장이 예약한 책이 보이지 않아 카미유는 사방을 찾아요.",
+   "blank": "introuvable",
+   "src": "made"
   }
  ],
  "w|intrusion": [
@@ -35050,6 +35418,22 @@
    "en": "Access to the glacier is restricted in summer, Sarah explains to the tourists.",
    "ko": "여름에는 빙하 출입이 제한된다고 사라가 관광객들에게 설명해요.",
    "blank": "limité",
+   "src": "made"
+  }
+ ],
+ "w|limousine": [
+  {
+   "text": "À l'arrivée, Lucas rit en voyant une limousine attendre devant la petite gare.",
+   "en": "On arrival, Lucas laughs to see a limousine waiting outside the little station.",
+   "ko": "도착해서 뤼카는 작은 역 앞에 리무진이 기다리는 걸 보고 웃어요.",
+   "blank": "limousine",
+   "src": "made"
+  },
+  {
+   "text": "Dans le roman que lit Camille, l'héroïne arrive au bal en limousine.",
+   "en": "In the novel Camille is reading, the heroine arrives at the ball in a limousine.",
+   "ko": "카미유가 읽는 소설에서 주인공은 리무진을 타고 무도회에 도착해요.",
+   "blank": "limousine",
    "src": "made"
   }
  ],
@@ -38303,6 +38687,22 @@
    "blank": "mine"
   }
  ],
+ "w|miner": [
+  {
+   "text": "Les retards à répétition finissent par miner le moral de Lucas.",
+   "en": "The repeated delays end up wearing down Lucas's morale.",
+   "ko": "거듭되는 지연에 뤼카의 기운이 점점 꺾여요.",
+   "blank": "miner",
+   "src": "made"
+  },
+  {
+   "text": "L'humidité a fini par miner les fondations de la vieille bibliothèque de Camille.",
+   "en": "Damp eventually undermined the foundations of Camille's old library.",
+   "ko": "습기가 결국 카미유가 일하는 오래된 도서관의 기초를 약하게 만들었어요.",
+   "blank": "miner",
+   "src": "made"
+  }
+ ],
  "w|mineur": [
   {
    "text": "Il est encore mineur, il n’a que seize ans.",
@@ -39091,6 +39491,22 @@
    "en": "He survived a deadly accident.",
    "ko": "그는 치명적인 사고에서 살아남았어.",
    "blank": "mortel"
+  }
+ ],
+ "w|morveux": [
+  {
+   "text": "Un petit garçon morveux colle son nez sur la vitre à côté de Lucas.",
+   "en": "A snotty-nosed little boy presses his nose to the window next to Lucas.",
+   "ko": "콧물을 흘리는 꼬마가 뤼카 옆 창문에 코를 붙여요.",
+   "blank": "morveux",
+   "src": "made"
+  },
+  {
+   "text": "Camille sourit quand un petit morveux lui rend un album couvert de confiture.",
+   "en": "Camille smiles when a little brat returns a picture book covered in jam.",
+   "ko": "꼬맹이가 잼 범벅이 된 그림책을 돌려주자 카미유는 웃어요.",
+   "blank": "morveux",
+   "src": "made"
   }
  ],
  "w|mot": [
@@ -43199,6 +43615,22 @@
    "blank": "passer"
   }
  ],
+ "w|passerelle": [
+  {
+   "text": "Lucas traverse la passerelle au-dessus des voies pour rejoindre le quai numéro trois.",
+   "en": "Lucas crosses the footbridge over the tracks to get to platform three.",
+   "ko": "뤼카는 선로 위 육교를 건너 삼번 승강장으로 가요.",
+   "blank": "passerelle",
+   "src": "made"
+  },
+  {
+   "text": "Une passerelle vitrée relie la bibliothèque où travaille Camille au musée voisin.",
+   "en": "A glass walkway links the library where Camille works to the museum next door.",
+   "ko": "유리로 된 통로가 카미유가 일하는 도서관과 옆 박물관을 이어요.",
+   "blank": "passerelle",
+   "src": "made"
+  }
+ ],
  "w|passion": [
   {
    "text": "Elle a une passion pour la danse.",
@@ -43658,6 +44090,22 @@
    "en": "For her role, Camille spends a week on a Breton fisherman's boat.",
    "ko": "배역을 위해 카미유는 브르타뉴 어부의 배에서 일주일을 보내요.",
    "blank": "pêcheur",
+   "src": "made"
+  }
+ ],
+ "w|pédale": [
+  {
+   "text": "Lucas a pris son vélo dans le train, mais une pédale s'est tordue dans le couloir.",
+   "en": "Lucas brought his bike on the train, but a pedal got bent in the aisle.",
+   "ko": "뤼카는 자전거를 기차에 실었는데 통로에서 페달 하나가 휘었어요.",
+   "blank": "pédale",
+   "src": "made"
+  },
+  {
+   "text": "La lampe de la salle d'étude s'allume avec une pédale, ce qui amuse Camille.",
+   "en": "The study room lamp switches on with a pedal, which amuses Camille.",
+   "ko": "자습실 램프가 페달로 켜져서 카미유는 재미있어해요.",
+   "blank": "pédale",
    "src": "made"
   }
  ],
@@ -44477,6 +44925,22 @@
    "en": "Maybe he forgot.",
    "ko": "아마 그가 잊었을 거야.",
    "blank": "Peut-être"
+  }
+ ],
+ "w|phare": [
+  {
+   "text": "En longeant la côte, Lucas voit un phare blanc sur un rocher.",
+   "en": "Along the coast, Lucas sees a white lighthouse on a rock.",
+   "ko": "해안을 따라가며 뤼카는 바위 위의 하얀 등대를 봐요.",
+   "blank": "phare",
+   "src": "made"
+  },
+  {
+   "text": "Camille recommande à un enfant un album sur un gardien de phare et son chat.",
+   "en": "Camille recommends a picture book about a lighthouse keeper and his cat to a child.",
+   "ko": "카미유는 아이에게 등대지기와 고양이에 관한 그림책을 권해요.",
+   "blank": "phare",
+   "src": "made"
   }
  ],
  "w|pharmacie": [
@@ -46479,6 +46943,22 @@
    "blank": "pour"
   }
  ],
+ "w|pourchasser": [
+  {
+   "text": "Lucas regarde par la fenêtre un chien pourchasser des moutons dans un pré.",
+   "en": "Lucas watches through the window as a dog chases sheep in a meadow.",
+   "ko": "뤼카는 창밖으로 개가 풀밭에서 양을 쫓는 걸 봐요.",
+   "blank": "pourchasser",
+   "src": "made"
+  },
+  {
+   "text": "Dans l'album préféré de Camille, un renard s'amuse à pourchasser les poules.",
+   "en": "In Camille's favourite picture book, a fox has fun chasing the hens.",
+   "ko": "카미유가 가장 좋아하는 그림책에서 여우는 닭들을 쫓아다니며 놀아요.",
+   "blank": "pourchasser",
+   "src": "made"
+  }
+ ],
  "w|pourquoi": [
   {
    "text": "Pourquoi tu ris?",
@@ -48235,6 +48715,22 @@
    "src": "made"
   }
  ],
+ "w|propager": [
+  {
+   "text": "Le contrôleur demande à Lucas de porter un masque pour ne pas propager son rhume.",
+   "en": "The inspector asks Lucas to wear a mask so as not to spread his cold.",
+   "ko": "검표원은 감기를 퍼뜨리지 않게 마스크를 쓰라고 뤼카에게 부탁해요.",
+   "blank": "propager",
+   "src": "made"
+  },
+  {
+   "text": "Camille utilise les réseaux sociaux pour propager l'amour de la lecture.",
+   "en": "Camille uses social media to spread a love of reading.",
+   "ko": "카미유는 소셜 미디어로 독서의 즐거움을 널리 퍼뜨려요.",
+   "blank": "propager",
+   "src": "made"
+  }
+ ],
  "w|prophète": [
   {
    "text": "Le vieux conseiller se prend pour un prophète et annonce toujours le pire, soupire Julien.",
@@ -49521,6 +50017,22 @@
    "en": "That’s a reasonable price for this service.",
    "ko": "이 서비스에 그 가격은 합리적이야.",
    "blank": "raisonnable"
+  }
+ ],
+ "w|raisonner": [
+  {
+   "text": "Lucas essaie de raisonner son petit frère qui veut descendre à chaque gare.",
+   "en": "Lucas tries to reason with his little brother, who wants to get off at every station.",
+   "ko": "뤼카는 역마다 내리고 싶어 하는 남동생을 달래 보려 해요.",
+   "blank": "raisonner",
+   "src": "made"
+  },
+  {
+   "text": "Camille apprend aux enfants à raisonner avec des jeux de logique.",
+   "en": "Camille teaches children to reason with logic games.",
+   "ko": "카미유는 논리 게임으로 아이들에게 생각하는 법을 가르쳐요.",
+   "blank": "raisonner",
+   "src": "made"
   }
  ],
  "w|rajouter": [
@@ -52141,6 +52653,22 @@
    "blank": "réseau"
   }
  ],
+ "w|réservation": [
+  {
+   "text": "Lucas montre sa réservation au contrôleur sur son téléphone.",
+   "en": "Lucas shows his booking to the ticket inspector on his phone.",
+   "ko": "뤼카는 휴대폰으로 검표원에게 예약 내역을 보여 줘요.",
+   "blank": "réservation",
+   "src": "made"
+  },
+  {
+   "text": "Camille confirme la réservation de la salle de réunion pour jeudi.",
+   "en": "Camille confirms the booking of the meeting room for Thursday.",
+   "ko": "카미유는 목요일 회의실 예약을 확인해요.",
+   "blank": "réservation",
+   "src": "made"
+  }
+ ],
  "w|réserve": [
   {
    "text": "La réserve naturelle est protégée.",
@@ -52168,6 +52696,22 @@
    "en": "Chloé found someone sitting in her reserved seat.",
    "ko": "클로에는 자기 예약석에 누가 앉아 있는 걸 발견했어요.",
    "blank": "réservée",
+   "src": "made"
+  }
+ ],
+ "w|réservoir": [
+  {
+   "text": "Avant de partir à la gare, Lucas a fait le plein du réservoir de la voiture de sa mère.",
+   "en": "Before leaving for the station, Lucas filled up the tank of his mother's car.",
+   "ko": "역으로 떠나기 전에 뤼카는 어머니 차의 연료 탱크를 가득 채웠어요.",
+   "blank": "réservoir",
+   "src": "made"
+  },
+  {
+   "text": "Camille remplit le réservoir de la machine à café de la salle de lecture.",
+   "en": "Camille fills the tank of the coffee machine in the reading room.",
+   "ko": "카미유는 열람실 커피 머신의 물통을 채워요.",
+   "blank": "réservoir",
    "src": "made"
   }
  ],
@@ -53565,6 +54109,22 @@
    "en": "The street is very lively tonight.",
    "ko": "오늘 저녁 거리가 아주 활기차.",
    "blank": "rue"
+  }
+ ],
+ "w|ruelle": [
+  {
+   "text": "Pour trouver son auberge, Lucas emprunte une ruelle pavée derrière la gare.",
+   "en": "To find his hostel, Lucas takes a cobbled alley behind the station.",
+   "ko": "숙소를 찾으려고 뤼카는 역 뒤의 돌길 골목으로 들어가요.",
+   "blank": "ruelle",
+   "src": "made"
+  },
+  {
+   "text": "Un roman policier qui se passe dans une ruelle de Marseille fait fureur auprès des lecteurs de Camille.",
+   "en": "A detective novel set in a Marseille alley is all the rage with Camille's readers.",
+   "ko": "마르세유 골목을 배경으로 한 추리 소설이 카미유의 이용자들 사이에서 인기예요.",
+   "blank": "ruelle",
+   "src": "made"
   }
  ],
  "w|ruine": [
@@ -56341,6 +56901,22 @@
    "src": "made"
   }
  ],
+ "w|ski": [
+  {
+   "text": "Dans le train de nuit, Lucas croise une famille qui part au ski.",
+   "en": "On the night train, Lucas meets a family going skiing.",
+   "ko": "야간열차에서 뤼카는 스키 타러 가는 가족을 만나요.",
+   "blank": "ski",
+   "src": "made"
+  },
+  {
+   "text": "Camille aide une lectrice à trouver un guide des stations de ski.",
+   "en": "Camille helps a reader find a guide to ski resorts.",
+   "ko": "카미유는 한 이용자가 스키장 안내서를 찾도록 도와요.",
+   "blank": "ski",
+   "src": "made"
+  }
+ ],
  "w|sms": [
   {
    "text": "Envoie-moi un sms quand tu arrives.",
@@ -57311,6 +57887,22 @@
    "en": "She bought a new mouse for her computer.",
    "ko": "그녀는 컴퓨터용 새 마우스를 샀어.",
    "blank": "souris"
+  }
+ ],
+ "w|sournois": [
+  {
+   "text": "Un pigeon sournois vole une miette du sandwich de Lucas sur le quai.",
+   "en": "A sneaky pigeon steals a crumb of Lucas's sandwich on the platform.",
+   "ko": "승강장에서 얄미운 비둘기가 뤼카의 샌드위치 부스러기를 훔쳐 가요.",
+   "blank": "sournois",
+   "src": "made"
+  },
+  {
+   "text": "Le méchant du roman que lit Camille est un notaire sournois.",
+   "en": "The villain of the novel Camille is reading is a sly notary.",
+   "ko": "카미유가 읽는 소설의 악당은 음흉한 공증인이에요.",
+   "blank": "sournois",
+   "src": "made"
   }
  ],
  "w|sous": [
@@ -58610,6 +59202,22 @@
    "en": "Claire had to overcome a cramp to finish the race.",
    "ko": "클레르는 쥐가 난 걸 이겨 내고 경주를 마쳐야 했어요.",
    "blank": "surmonter",
+   "src": "made"
+  }
+ ],
+ "w|surnaturel": [
+  {
+   "text": "Pour passer le temps, Lucas lit un roman surnaturel plein de fantômes.",
+   "en": "To pass the time, Lucas reads a supernatural novel full of ghosts.",
+   "ko": "시간을 보내려고 뤼카는 유령이 가득한 초자연 소설을 읽어요.",
+   "blank": "surnaturel",
+   "src": "made"
+  },
+  {
+   "text": "Camille a créé un rayon spécial pour les histoires de monstres et de phénomènes surnaturels.",
+   "en": "Camille has created a special shelf for stories of monsters and supernatural phenomena.",
+   "ko": "카미유는 괴물과 초자연 현상 이야기만 모은 특별 서가를 만들었어요.",
+   "blank": "surnaturels",
    "src": "made"
   }
  ],
@@ -61157,6 +61765,22 @@
    "en": "The traître was discovered by the group.",
    "ko": "그 traître는 그룹에 의해 밝혀졌어.",
    "blank": "traître"
+  }
+ ],
+ "w|trajectoire": [
+  {
+   "text": "Lucas suit des yeux la trajectoire d'un cerf-volant au-dessus des champs.",
+   "en": "Lucas follows the path of a kite above the fields with his eyes.",
+   "ko": "뤼카는 들판 위를 나는 연의 궤적을 눈으로 따라가요.",
+   "blank": "trajectoire",
+   "src": "made"
+  },
+  {
+   "text": "Camille aide un lycéen à trouver un livre sur la trajectoire des comètes.",
+   "en": "Camille helps a high-school student find a book on the path of comets.",
+   "ko": "카미유는 고등학생이 혜성의 궤도에 관한 책을 찾도록 도와요.",
+   "blank": "trajectoire",
+   "src": "made"
   }
  ],
  "w|trajet": [
@@ -64249,6 +64873,22 @@
    "en": "Traveling by train is very relaxing.",
    "ko": "기차 여행은 정말 편안해.",
    "blank": "Voyager"
+  }
+ ],
+ "w|voyageur": [
+  {
+   "text": "Dans le wagon, Lucas discute avec un voyageur qui rentre d'Espagne.",
+   "en": "In the carriage, Lucas chats with a traveller coming back from Spain.",
+   "ko": "객차에서 뤼카는 스페인에서 돌아오는 여행자와 이야기를 나눠요.",
+   "blank": "voyageur",
+   "src": "made"
+  },
+  {
+   "text": "Un vieux voyageur demande à Camille des cartes de l'Asie centrale.",
+   "en": "An old traveller asks Camille for maps of Central Asia.",
+   "ko": "나이 든 여행자가 카미유에게 중앙아시아 지도를 찾아 달라고 해요.",
+   "blank": "voyageur",
+   "src": "made"
   }
  ],
  "w|voyou": [
