@@ -299,6 +299,22 @@
    "src": "made"
   }
  ],
+ "w|กรอง": [
+  {
+   "text": "วิชัยกรองน้ำใส่ขวดไว้ดื่มตอนกลางวัน",
+   "en": "Wichai filters water into a bottle to drink during the day.",
+   "ko": "위차이는 낮에 마시려고 물을 걸러 병에 담아요.",
+   "blank": "กรอง",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดกรองรายชื่อแฟนคลับเพื่อเลือกคนขึ้นไปร้องบนเวที",
+   "en": "The organizers screened the fan club list to pick someone to sing on stage.",
+   "ko": "주최 측은 무대에 올라 노래할 사람을 뽑으려고 팬클럽 명단을 걸렀어요.",
+   "blank": "กรอง",
+   "src": "made"
+  }
+ ],
  "w|กรอบ": [
   {
    "text": "ขนมปังยังกรอบดี",
@@ -1509,6 +1525,22 @@
    "en": "Call me before you decide.",
    "ko": "결정하기 전에 나한테 전화해.",
    "blank": "ก่อนที่"
+  }
+ ],
+ "w|ก่อนหน้า": [
+  {
+   "text": "วิชัยรดน้ำต้นไม้ก่อนหน้าที่ฝนจะตกไม่กี่นาที",
+   "en": "Wichai watered the plants just a few minutes before the rain started.",
+   "ko": "위차이는 비가 오기 몇 분 전에 화분에 물을 줬어요.",
+   "blank": "ก่อนหน้า",
+   "src": "made"
+  },
+  {
+   "text": "วงที่เล่นก่อนหน้าทำให้คนดูคึกคักมาก",
+   "en": "The band that played earlier really got the crowd going.",
+   "ko": "앞서 공연한 밴드가 관객을 아주 들뜨게 했어요.",
+   "blank": "ก่อนหน้า",
+   "src": "made"
   }
  ],
  "w|ก่อนหน้านี้": [
@@ -4149,6 +4181,22 @@
    "blank": "ขณะที่"
   }
  ],
+ "w|ขณะนั้น": [
+  {
+   "text": "ขณะนั้นวิชัยกำลังต่อแถวซื้อโจ๊กหน้าปากซอย",
+   "en": "At that moment Wichai was in line to buy rice porridge at the mouth of the lane.",
+   "ko": "그때 위차이는 골목 입구에서 죽을 사려고 줄을 서 있었어요.",
+   "blank": "ขณะนั้น",
+   "src": "made"
+  },
+  {
+   "text": "ขณะนั้นนภากำลังยกโทรศัพท์ถ่ายวิดีโอพอดี",
+   "en": "At that moment Napa happened to be holding up her phone to film a video.",
+   "ko": "그때 나파는 마침 휴대폰을 들어 영상을 찍고 있었어요.",
+   "blank": "ขณะนั้น",
+   "src": "made"
+  }
+ ],
  "w|ขณะนี้": [
   {
    "text": "ป้ายในห้างบอกว่าขณะนี้ของขวัญปีใหม่ลดราคาเกือบทุกร้าน",
@@ -4345,6 +4393,22 @@
    "en": "Black coffee is a bit bitter.",
    "ko": "블랙커피는 조금 써.",
    "blank": "ขม"
+  }
+ ],
+ "w|ข่มขู่": [
+  {
+   "text": "วิชัยอ่านข่าวเช้าเรื่องแก๊งที่ข่มขู่เจ้าของร้านค้าให้จ่ายเงิน",
+   "en": "Wichai read a morning news story about a gang that threatened shop owners into paying money.",
+   "ko": "위차이는 가게 주인들을 협박해 돈을 뜯은 조직에 관한 아침 뉴스를 읽었어요.",
+   "blank": "ข่มขู่",
+   "src": "made"
+  },
+  {
+   "text": "ตำรวจจับคนขายบัตรผีที่ข่มขู่ผู้ซื้อหน้าฮอลล์",
+   "en": "The police arrested a ticket scalper who threatened buyers in front of the hall.",
+   "ko": "경찰이 공연장 앞에서 구매자를 협박한 암표상을 잡았어요.",
+   "blank": "ข่มขู่",
+   "src": "made"
   }
  ],
  "w|ขโมย": [
@@ -6751,6 +6815,22 @@
    "blank": "คงจะ"
   }
  ],
+ "w|คงที่": [
+  {
+   "text": "วิชัยตั้งแอร์ในห้องนอนให้อุณหภูมิคงที่ตลอดคืน",
+   "en": "Wichai sets the bedroom air conditioner to keep the temperature steady all night.",
+   "ko": "위차이는 밤새 온도가 일정하도록 침실 에어컨을 맞춰 둬요.",
+   "blank": "คงที่",
+   "src": "made"
+  },
+  {
+   "text": "ซาวด์เอนจิเนียร์คุมระดับเสียงให้คงที่ตลอดการแสดง",
+   "en": "The sound engineer kept the volume steady throughout the show.",
+   "ko": "음향 엔지니어는 공연 내내 소리 크기를 일정하게 유지했어요.",
+   "blank": "คงที่",
+   "src": "made"
+  }
+ ],
  "w|คณบดี": [
   {
    "text": "คณบดีคณะนิเทศศาสตร์เชิญเอกไปเล่าประสบการณ์ให้นักศึกษาฟัง",
@@ -7363,6 +7443,22 @@
    "blank": "ครั้งแรก"
   }
  ],
+ "w|ครั้งสุดท้าย": [
+  {
+   "text": "ครั้งสุดท้ายที่วิชัยทำกับข้าวเองคือช่วงปีใหม่",
+   "en": "The last time Wichai cooked for himself was around New Year.",
+   "ko": "위차이가 마지막으로 직접 요리한 건 새해 무렵이었어요.",
+   "blank": "ครั้งสุดท้าย",
+   "src": "made"
+  },
+  {
+   "text": "นี่อาจเป็นครั้งสุดท้ายที่นภาจะได้ดูวงนี้เล่นสด",
+   "en": "This might be the last time Napa gets to see this band play live.",
+   "ko": "이번이 나파가 이 밴드의 라이브를 보는 마지막일지도 몰라요.",
+   "blank": "ครั้งสุดท้าย",
+   "src": "made"
+  }
+ ],
  "w|ครั้งหน้า": [
   {
    "text": "ครั้งหน้าเราไปกินข้าวด้วยกันนะ",
@@ -7375,6 +7471,22 @@
    "en": "Don't forget to bring the book next time.",
    "ko": "다음에는 책을 가져오는 걸 잊지 마.",
    "blank": "ครั้งหน้า"
+  }
+ ],
+ "w|ครั้งหนึ่ง": [
+  {
+   "text": "วิชัยเคยไปตลาดน้ำครั้งหนึ่งตอนเรียนมหาวิทยาลัย",
+   "en": "Wichai once went to a floating market when he was at university.",
+   "ko": "위차이는 대학 다닐 때 수상시장에 한 번 가 본 적이 있어요.",
+   "blank": "ครั้งหนึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "นภาเคยได้จับมือนักร้องคนนี้ครั้งหนึ่งที่งานแจกลายเซ็น",
+   "en": "Napa once shook hands with this singer at a signing event.",
+   "ko": "나파는 사인회에서 이 가수와 한 번 악수한 적이 있어요.",
+   "blank": "ครั้งหนึ่ง",
+   "src": "made"
   }
  ],
  "w|ครั้น": [
@@ -7463,6 +7575,22 @@
    "en": "Last time she left her keys at home.",
    "ko": "지난번에 그녀는 열쇠를 집에 두고 왔어.",
    "blank": "คราวที่แล้ว"
+  }
+ ],
+ "w|คราวนี้": [
+  {
+   "text": "คราวนี้วิชัยตั้งนาฬิกาปลุกไว้สองเครื่องกันตื่นสาย",
+   "en": "This time Wichai set two alarm clocks so he wouldn't oversleep.",
+   "ko": "이번에는 위차이가 늦잠 자지 않으려고 알람 시계를 두 개 맞춰 뒀어요.",
+   "blank": "คราวนี้",
+   "src": "made"
+  },
+  {
+   "text": "คราวนี้นภาได้ที่นั่งแถวหน้าใกล้เวทีมาก",
+   "en": "This time Napa got a front-row seat very close to the stage.",
+   "ko": "이번에 나파는 무대 바로 앞 맨 앞줄 자리를 잡았어요.",
+   "blank": "คราวนี้",
+   "src": "made"
   }
  ],
  "w|คราวหน้า": [
@@ -10315,6 +10443,22 @@
    "blank": "คำ"
   }
  ],
+ "w|ค่ำ": [
+  {
+   "text": "ตอนค่ำวิชัยชอบเดินเล่นรอบสวนสาธารณะแถวบ้าน",
+   "en": "In the evening Wichai likes to walk around the park near his home.",
+   "ko": "저녁이면 위차이는 집 근처 공원을 한 바퀴 걷는 걸 좋아해요.",
+   "blank": "ค่ำ",
+   "src": "made"
+  },
+  {
+   "text": "คอนเสิร์ตเริ่มตอนค่ำแต่นภาไปต่อคิวตั้งแต่บ่าย",
+   "en": "The concert starts in the evening but Napa went to queue in the afternoon.",
+   "ko": "콘서트는 저녁에 시작하지만 나파는 오후부터 줄을 섰어요.",
+   "blank": "ค่ำ",
+   "src": "made"
+  }
+ ],
  "w|คำโกหก": [
   {
    "text": "อย่าพูดคำโกหกเลย",
@@ -12635,6 +12779,22 @@
    "blank": "จง"
   }
  ],
+ "w|จงใจ": [
+  {
+   "text": "วิชัยไม่ได้จงใจทำกาแฟหกใส่โต๊ะเพื่อนร่วมงาน",
+   "en": "Wichai didn't mean to spill coffee on his coworker's desk.",
+   "ko": "위차이는 일부러 동료 책상에 커피를 쏟은 게 아니에요.",
+   "blank": "จงใจ",
+   "src": "made"
+  },
+  {
+   "text": "มือกีตาร์จงใจเล่นผิดจังหวะเพื่อแกล้งนักร้องให้หัวเราะ",
+   "en": "The guitarist deliberately played off the beat to make the singer laugh.",
+   "ko": "기타리스트는 가수를 웃기려고 일부러 박자를 틀리게 쳤어요.",
+   "blank": "จงใจ",
+   "src": "made"
+  }
+ ],
  "w|จด": [
   {
    "text": "ฉันจดโน้ตไว้บนสมุด",
@@ -13298,6 +13458,22 @@
    "en": "The team finished the day scenes first, then set up lighting for the night scenes.",
    "ko": "팀은 낮 장면을 먼저 끝내고 그다음에 밤 장면 조명을 설치했어요.",
    "blank": "จากนั้น",
+   "src": "made"
+  }
+ ],
+ "w|จากนี้": [
+  {
+   "text": "จากนี้วิชัยตั้งใจจะเข้านอนก่อนเที่ยงคืนทุกวัน",
+   "en": "From now on Wichai intends to go to bed before midnight every day.",
+   "ko": "앞으로 위차이는 매일 자정 전에 자려고 해요.",
+   "blank": "จากนี้",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องสัญญาว่าจากนี้จะแต่งเพลงใหม่ให้แฟนๆ ทุกปี",
+   "en": "The singer promised that from now on she'll write a new song for the fans every year.",
+   "ko": "가수는 앞으로 매년 팬들을 위해 새 노래를 쓰겠다고 약속했어요.",
+   "blank": "จากนี้",
    "src": "made"
   }
  ],
@@ -15507,6 +15683,22 @@
    "blank": "ชั้น"
   }
  ],
+ "w|ชั้นนำ": [
+  {
+   "text": "วิชัยทำงานเป็นนักบัญชีในบริษัทชั้นนำแห่งหนึ่ง",
+   "en": "Wichai works as an accountant at a leading company.",
+   "ko": "위차이는 한 일류 회사에서 회계사로 일해요.",
+   "blank": "ชั้นนำ",
+   "src": "made"
+  },
+  {
+   "text": "วงออร์เคสตราชั้นนำของประเทศมาร่วมเล่นในคืนนี้",
+   "en": "One of the country's leading orchestras joined the performance tonight.",
+   "ko": "오늘 밤에는 국내 최고의 오케스트라가 함께 연주했어요.",
+   "blank": "ชั้นนำ",
+   "src": "made"
+  }
+ ],
  "w|ชั้นเรียน": [
   {
    "text": "ชั้นเรียนของเรามีนักเรียนสามสิบคน",
@@ -17075,6 +17267,22 @@
    "src": "made"
   }
  ],
+ "w|ใช้เวลา": [
+  {
+   "text": "วิชัยใช้เวลาเดินจากบ้านไปที่ทำงานราวยี่สิบนาที",
+   "en": "It takes Wichai about twenty minutes to walk from home to work.",
+   "ko": "위차이는 집에서 회사까지 걸어서 이십 분쯤 걸려요.",
+   "blank": "ใช้เวลา",
+   "src": "made"
+  },
+  {
+   "text": "ทีมงานใช้เวลาตั้งเวทีเกือบทั้งสัปดาห์",
+   "en": "The crew spent almost the whole week setting up the stage.",
+   "ko": "스태프는 무대를 세우는 데 거의 일주일을 썼어요.",
+   "blank": "ใช้เวลา",
+   "src": "made"
+  }
+ ],
  "w|ใช่ไหม": [
   {
    "text": "ครูชิมน้ำซุปแล้วถามว่า กิตติใส่น้ำปลาเยอะไปใช่ไหม",
@@ -18503,6 +18711,22 @@
    "src": "made"
   }
  ],
+ "w|ดำรงชีวิต": [
+  {
+   "text": "วิชัยดำรงชีวิตอย่างเรียบง่ายด้วยเงินเดือนที่พอใช้",
+   "en": "Wichai lives simply on a salary that is just enough.",
+   "ko": "위차이는 그럭저럭 쓸 만한 월급으로 소박하게 살아요.",
+   "blank": "ดำรงชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "นักดนตรีหลายคนดำรงชีวิตด้วยการเล่นดนตรีกลางคืน",
+   "en": "Many musicians make a living by playing music at night.",
+   "ko": "많은 음악가들이 밤에 연주하며 생계를 이어 가요.",
+   "blank": "ดำรงชีวิต",
+   "src": "made"
+  }
+ ],
  "w|ดิฉัน": [
   {
    "text": "ดิฉันชื่อแอนนะคะ",
@@ -19161,6 +19385,22 @@
    "blank": "เดือน"
   }
  ],
+ "w|เดือนก่อน": [
+  {
+   "text": "เดือนก่อนวิชัยเพิ่งย้ายมาอยู่คอนโดใกล้สถานีรถไฟฟ้า",
+   "en": "Last month Wichai just moved into a condo near the skytrain station.",
+   "ko": "지난달 위차이는 전철역 근처 콘도로 막 이사 왔어요.",
+   "blank": "เดือนก่อน",
+   "src": "made"
+  },
+  {
+   "text": "นภารู้ข่าวคอนเสิร์ตนี้ตั้งแต่เดือนก่อน",
+   "en": "Napa has known about this concert since last month.",
+   "ko": "나파는 지난달부터 이 콘서트 소식을 알고 있었어요.",
+   "blank": "เดือนก่อน",
+   "src": "made"
+  }
+ ],
  "w|แด่": [
   {
    "text": "ของขวัญแด่แม่วันเกิด",
@@ -19551,6 +19791,22 @@
    "en": "The cat got startled and ran.",
    "ko": "고양이가 놀라서 도망갔어.",
    "blank": "ตกใจ"
+  }
+ ],
+ "w|ตกต่ำ": [
+  {
+   "text": "ช่วงที่เศรษฐกิจตกต่ำวิชัยต้องประหยัดค่ากินค่าใช้",
+   "en": "When the economy was in a slump Wichai had to cut back on living costs.",
+   "ko": "경기가 나빴을 때 위차이는 생활비를 아껴야 했어요.",
+   "blank": "ตกต่ำ",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องเล่าว่าเคยผ่านช่วงชีวิตที่ตกต่ำก่อนจะดัง",
+   "en": "The singer shared that she went through a low point in life before becoming famous.",
+   "ko": "가수는 유명해지기 전에 인생의 밑바닥을 겪었다고 이야기했어요.",
+   "blank": "ตกต่ำ",
+   "src": "made"
   }
  ],
  "w|ตกปลา": [
@@ -20089,6 +20345,22 @@
    "blank": "ตลอด"
   }
  ],
+ "w|ตลอดกาล": [
+  {
+   "text": "แม่ของวิชัยบอกว่าความขยันจะติดตัวเราไปตลอดกาล",
+   "en": "Wichai's mother says diligence stays with us forever.",
+   "ko": "위차이의 어머니는 부지런함은 영원히 몸에 남는다고 말해요.",
+   "blank": "ตลอดกาล",
+   "src": "made"
+  },
+  {
+   "text": "แฟนเพลงหลายคนบอกว่าเพลงนี้จะอยู่ในใจไปตลอดกาล",
+   "en": "Many fans say this song will stay in their hearts forever.",
+   "ko": "많은 팬들이 이 노래는 영원히 마음속에 남을 거라고 해요.",
+   "blank": "ตลอดกาล",
+   "src": "made"
+  }
+ ],
  "w|ตลอดจน": [
   {
    "text": "ตั๋วรถไฟนี้รวมที่นอนตลอดจนอาหารเช้าหนึ่งมื้อ",
@@ -20102,6 +20374,22 @@
    "en": "Malee takes care of the cameras, lighting and even the actors' costumes.",
    "ko": "말리는 카메라와 조명은 물론 배우 의상까지 챙겨요.",
    "blank": "ตลอดจน",
+   "src": "made"
+  }
+ ],
+ "w|ตลอดชีวิต": [
+  {
+   "text": "ยายของวิชัยทำงานหนักมาตลอดชีวิตเพื่อเลี้ยงลูกหลาน",
+   "en": "Wichai's grandmother worked hard all her life to raise her children and grandchildren.",
+   "ko": "위차이의 할머니는 자식과 손주를 키우려고 평생 열심히 일했어요.",
+   "blank": "ตลอดชีวิต",
+   "src": "made"
+  },
+  {
+   "text": "นภาบอกว่าคืนนี้จะเป็นความทรงจำไปตลอดชีวิต",
+   "en": "Napa says tonight will be a memory for the rest of her life.",
+   "ko": "나파는 오늘 밤이 평생의 추억이 될 거라고 해요.",
+   "blank": "ตลอดชีวิต",
    "src": "made"
   }
  ],
@@ -23271,6 +23559,22 @@
    "src": "made"
   }
  ],
+ "w|เถิด": [
+  {
+   "text": "แม่บอกวิชัยว่าพักผ่อนบ้างเถิดลูก",
+   "en": "Mom told Wichai, do get some rest, son.",
+   "ko": "엄마가 위차이에게 좀 쉬렴 하고 말했어요.",
+   "blank": "เถิด",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องตะโกนบอกคนดูว่ามาร้องด้วยกันเถิด",
+   "en": "The singer shouted to the crowd, come sing along together.",
+   "ko": "가수는 관객에게 다 함께 노래하자고 외쳤어요.",
+   "blank": "เถิด",
+   "src": "made"
+  }
+ ],
  "w|เถียง": [
   {
    "text": "อย่าเถียงกับพ่อแม่",
@@ -24177,6 +24481,22 @@
    "en": "He suddenly stopped talking.",
    "ko": "그는 갑자기 말을 멈췄어.",
    "blank": "ทันใด"
+  }
+ ],
+ "w|ทันใดนั้น": [
+  {
+   "text": "ทันใดนั้นไฟก็ดับไปทั้งซอยขณะที่วิชัยกำลังอาบน้ำ",
+   "en": "Suddenly the power went out on the whole lane while Wichai was showering.",
+   "ko": "갑자기 위차이가 샤워하는 동안 골목 전체가 정전됐어요.",
+   "blank": "ทันใดนั้น",
+   "src": "made"
+  },
+  {
+   "text": "ทันใดนั้นพลุก็ถูกจุดขึ้นเหนือเวทีพร้อมเสียงกรี๊ด",
+   "en": "Suddenly fireworks were set off above the stage amid screams.",
+   "ko": "갑자기 환호성과 함께 무대 위로 폭죽이 터졌어요.",
+   "blank": "ทันใดนั้น",
+   "src": "made"
   }
  ],
  "w|ทันตแพทย์": [
@@ -27851,6 +28171,22 @@
    "blank": "นาน"
   }
  ],
+ "w|นานมาแล้ว": [
+  {
+   "text": "ร้านข้าวมันไก่ที่วิชัยกินประจำเปิดมานานมาแล้ว",
+   "en": "The chicken rice shop Wichai always eats at has been open for a long time.",
+   "ko": "위차이가 늘 가는 카오만까이 가게는 문을 연 지 아주 오래됐어요.",
+   "blank": "นานมาแล้ว",
+   "src": "made"
+  },
+  {
+   "text": "เพลงนี้ออกมานานมาแล้วแต่ทั้งฮอลล์ยังร้องตามได้ทุกคำ",
+   "en": "This song came out long ago but the whole hall can still sing along to every line.",
+   "ko": "이 노래는 나온 지 오래됐지만 공연장 전체가 아직 가사를 다 따라 불러요.",
+   "blank": "นานมาแล้ว",
+   "src": "made"
+  }
+ ],
  "w|นานา": [
   {
    "text": "อนันต์รับว่าความให้ลูกความจากนานาอาชีพ ทั้งชาวนา ครู และพ่อค้า",
@@ -30076,6 +30412,22 @@
    "en": "Chan painted her friend in a graduation gown as a gift for the day she became a graduate.",
    "ko": "짠은 친구가 졸업하는 날 선물로 졸업 가운을 입은 친구를 그렸어요.",
    "blank": "บัณฑิต",
+   "src": "made"
+  }
+ ],
+ "w|บัดนี้": [
+  {
+   "text": "บัดนี้ต้นมะม่วงที่วิชัยปลูกไว้หน้าบ้านออกลูกเต็มต้นแล้ว",
+   "en": "Now the mango tree Wichai planted in front of the house is full of fruit.",
+   "ko": "이제 위차이가 집 앞에 심은 망고나무에 열매가 가득 열렸어요.",
+   "blank": "บัดนี้",
+   "src": "made"
+  },
+  {
+   "text": "ป้ายหน้าฮอลล์เขียนว่าบัดนี้บัตรทุกที่นั่งขายหมดแล้ว",
+   "en": "The sign in front of the hall says that all seats are now sold out.",
+   "ko": "공연장 앞 안내판에는 이제 모든 좌석이 매진됐다고 쓰여 있어요.",
+   "blank": "บัดนี้",
    "src": "made"
   }
  ],
@@ -33769,6 +34121,22 @@
    "blank": "เป็นของ"
   }
  ],
+ "w|เป็นความลับ": [
+  {
+   "text": "วิชัยเก็บเรื่องเลื่อนตำแหน่งไว้เป็นความลับจนกว่าจะประกาศ",
+   "en": "Wichai is keeping his promotion a secret until it is announced.",
+   "ko": "위차이는 발표가 날 때까지 승진 소식을 비밀로 하고 있어요.",
+   "blank": "เป็นความลับ",
+   "src": "made"
+  },
+  {
+   "text": "รายชื่อแขกรับเชิญพิเศษถูกเก็บเป็นความลับจนนาทีสุดท้าย",
+   "en": "The list of special guests was kept secret until the last minute.",
+   "ko": "특별 게스트 명단은 마지막 순간까지 비밀로 지켜졌어요.",
+   "blank": "เป็นความลับ",
+   "src": "made"
+  }
+ ],
  "w|เป็นเจ้าของ": [
   {
    "text": "วิชัยฝันว่าวันหนึ่งจะได้เป็นเจ้าของบริษัทรับเหมาเล็ก ๆ",
@@ -36385,6 +36753,22 @@
    "blank": "ฝาก"
   }
  ],
+ "w|ฝ่าฝืน": [
+  {
+   "text": "คนขับแท็กซี่ที่วิชัยนั่งฝ่าฝืนไฟแดงจนโดนตำรวจเรียก",
+   "en": "The taxi driver Wichai rode with ran a red light and got pulled over by the police.",
+   "ko": "위차이가 탄 택시 기사가 신호를 위반해서 경찰에게 잡혔어요.",
+   "blank": "ฝ่าฝืน",
+   "src": "made"
+  },
+  {
+   "text": "คนที่ฝ่าฝืนกฎด้วยการถ่ายรูปแบบใช้แฟลชจะถูกเชิญออก",
+   "en": "Anyone who breaks the rules by taking flash photos will be asked to leave.",
+   "ko": "플래시를 터뜨려 사진을 찍어 규칙을 어기는 사람은 퇴장당해요.",
+   "blank": "ฝ่าฝืน",
+   "src": "made"
+  }
+ ],
  "w|ฝ่าย": [
   {
    "text": "ฝ่ายไหนรับผิดชอบเรื่องนี้",
@@ -38659,6 +39043,22 @@
    "blank": "เพื่อนสนิท"
   }
  ],
+ "w|เพื่อให้": [
+  {
+   "text": "วิชัยตื่นเช้ากว่าปกติเพื่อให้ทันรถเมล์เที่ยวแรก",
+   "en": "Wichai got up earlier than usual so he could catch the first bus.",
+   "ko": "위차이는 첫 버스를 타려고 평소보다 일찍 일어났어요.",
+   "blank": "เพื่อให้",
+   "src": "made"
+  },
+  {
+   "text": "นภาไปถึงฮอลล์ตั้งแต่บ่ายเพื่อให้ได้ยืนแถวหน้า",
+   "en": "Napa got to the hall in the afternoon so she could stand in the front row.",
+   "ko": "나파는 맨 앞줄에 서려고 오후부터 공연장에 도착했어요.",
+   "blank": "เพื่อให้",
+   "src": "made"
+  }
+ ],
  "w|แพ้": [
   {
    "text": "แพ้อีกแล้ว",
@@ -40915,6 +41315,22 @@
    "src": "made"
   }
  ],
+ "w|มาสาย": [
+  {
+   "text": "เช้านี้วิชัยมาสายเพราะรถติดยาวบนถนนใหญ่",
+   "en": "This morning Wichai was late because of a long traffic jam on the main road.",
+   "ko": "오늘 아침 위차이는 큰길이 꽉 막혀서 지각했어요.",
+   "blank": "มาสาย",
+   "src": "made"
+  },
+  {
+   "text": "เพื่อนของนภามาสายจนพลาดเพลงแรก",
+   "en": "Napa's friend came late and missed the first song.",
+   "ko": "나파의 친구는 늦게 와서 첫 곡을 놓쳤어요.",
+   "blank": "มาสาย",
+   "src": "made"
+  }
+ ],
  "w|มิฉะนั้น": [
   {
    "text": "ปิดไฟมิฉะนั้นแบตจะหมด",
@@ -41570,6 +41986,22 @@
    "en": "Napa started work just one week after moving to the capital.",
    "ko": "나파는 수도로 이사 온 지 일주일 만에 일을 시작했어요.",
    "blank": "เมืองหลวง",
+   "src": "made"
+  }
+ ],
+ "w|เมื่อใด": [
+  {
+   "text": "วิชัยไม่แน่ใจว่าพัสดุจะมาส่งเมื่อใด",
+   "en": "Wichai isn't sure when the parcel will be delivered.",
+   "ko": "위차이는 택배가 언제 올지 잘 몰라요.",
+   "blank": "เมื่อใด",
+   "src": "made"
+  },
+  {
+   "text": "นภาไม่รู้ว่าวงจะกลับมาเล่นที่นี่อีกเมื่อใด",
+   "en": "Napa doesn't know when the band will come back to play here again.",
+   "ko": "나파는 밴드가 언제 다시 여기서 공연할지 몰라요.",
+   "blank": "เมื่อใด",
    "src": "made"
   }
  ],
@@ -44354,6 +44786,22 @@
    "en": "Somsak tried to keep his temper when a car cut him off.",
    "ko": "솜싹은 차가 끼어들었을 때 화를 참으려고 애썼어요.",
    "blank": "ระงับ",
+   "src": "made"
+  }
+ ],
+ "w|ระดม": [
+  {
+   "text": "บริษัทของวิชัยระดมพนักงานช่วยกันเก็บขยะริมคลอง",
+   "en": "Wichai's company rallied its staff to pick up trash along the canal together.",
+   "ko": "위차이의 회사는 직원들을 모아 운하 옆 쓰레기를 함께 주웠어요.",
+   "blank": "ระดม",
+   "src": "made"
+  },
+  {
+   "text": "แฟนคลับระดมเงินซื้อป้ายไฟไปเชียร์นักร้อง",
+   "en": "The fan club pooled money to buy light-up signs to cheer for the singer.",
+   "ko": "팬클럽은 돈을 모아 가수를 응원할 전광판을 샀어요.",
+   "blank": "ระดม",
    "src": "made"
   }
  ],
@@ -48747,6 +49195,22 @@
    "blank": "แล้วก็"
   }
  ],
+ "w|แล้วกัน": [
+  {
+   "text": "วิชัยบอกเพื่อนว่าเย็นนี้กินข้าวต้มแล้วกัน",
+   "en": "Wichai told his friend, let's just have rice soup this evening.",
+   "ko": "위차이는 친구에게 오늘 저녁은 그냥 죽 먹자고 했어요.",
+   "blank": "แล้วกัน",
+   "src": "made"
+  },
+  {
+   "text": "นภาบอกเพื่อนว่าเรานัดเจอกันที่ประตูทางออกแล้วกัน",
+   "en": "Napa told her friend, let's just meet at the exit gate.",
+   "ko": "나파는 친구에게 그럼 출구 문에서 만나자고 했어요.",
+   "blank": "แล้วกัน",
+   "src": "made"
+  }
+ ],
  "w|แล้วแต่": [
   {
    "text": "จะเลี้ยงข้าวทีมที่ร้านไหนก็แล้วแต่หัวหน้าจะเลือก",
@@ -49207,6 +49671,22 @@
    "blank": "วัน"
   }
  ],
+ "w|วันก่อน": [
+  {
+   "text": "วันก่อนวิชัยลืมกุญแจบ้านไว้ที่ออฟฟิศ",
+   "en": "The other day Wichai left his house key at the office.",
+   "ko": "며칠 전에 위차이는 집 열쇠를 사무실에 두고 왔어요.",
+   "blank": "วันก่อน",
+   "src": "made"
+  },
+  {
+   "text": "วันก่อนนภาเพิ่งกดบัตรคอนเสิร์ตวงโปรดได้ทัน",
+   "en": "The other day Napa managed to grab tickets for her favorite band's concert just in time.",
+   "ko": "며칠 전에 나파는 좋아하는 밴드의 콘서트 표를 겨우 예매했어요.",
+   "blank": "วันก่อน",
+   "src": "made"
+  }
+ ],
  "w|วันเกิด": [
   {
    "text": "สุขสันต์วันเกิดนะ",
@@ -49295,6 +49775,22 @@
    "blank": "วันธรรมดา"
   }
  ],
+ "w|วันนั้น": [
+  {
+   "text": "วันนั้นวิชัยรีบออกจากบ้านจนลืมเอาร่มไปด้วย",
+   "en": "That day Wichai rushed out of the house and forgot to take his umbrella.",
+   "ko": "그날 위차이는 서둘러 집을 나서다가 우산을 깜빡했어요.",
+   "blank": "วันนั้น",
+   "src": "made"
+  },
+  {
+   "text": "นภาจำได้ว่าวันนั้นฝนตกหนักแต่ไม่มีใครยอมกลับบ้าน",
+   "en": "Napa remembers that it rained heavily that day but nobody wanted to go home.",
+   "ko": "나파는 그날 비가 많이 왔는데도 아무도 집에 가려 하지 않았던 걸 기억해요.",
+   "blank": "วันนั้น",
+   "src": "made"
+  }
+ ],
  "w|วันนี้": [
   {
    "text": "วันนี้ร้อนจัง",
@@ -49307,6 +49803,22 @@
    "en": "Today's a day off.",
    "ko": "오늘은 쉬는 날이야.",
    "blank": "วันนี้"
+  }
+ ],
+ "w|วันพรุ่งนี้": [
+  {
+   "text": "วิชัยเตรียมชุดทำงานสำหรับวันพรุ่งนี้ไว้บนเก้าอี้",
+   "en": "Wichai laid out his work clothes for tomorrow on the chair.",
+   "ko": "위차이는 내일 입을 출근복을 의자 위에 챙겨 뒀어요.",
+   "blank": "วันพรุ่งนี้",
+   "src": "made"
+  },
+  {
+   "text": "นภาต้องตื่นไปทำงานวันพรุ่งนี้แต่ก็ยังอยากอยู่จนจบ",
+   "en": "Napa has to get up for work tomorrow but still wants to stay until the end.",
+   "ko": "나파는 내일 출근해야 하지만 그래도 끝까지 있고 싶어요.",
+   "blank": "วันพรุ่งนี้",
+   "src": "made"
   }
  ],
  "w|วันพฤหัสบดี": [
@@ -49377,6 +49889,22 @@
    "en": "Are you free on Saturday?",
    "ko": "토요일 한가해?",
    "blank": "วันเสาร์"
+  }
+ ],
+ "w|วันหนึ่ง": [
+  {
+   "text": "วันหนึ่งวิชัยเจอแมวหลงทางนั่งอยู่หน้าประตูบ้าน",
+   "en": "One day Wichai found a lost cat sitting at his front door.",
+   "ko": "어느 날 위차이는 길 잃은 고양이가 현관 앞에 앉아 있는 걸 봤어요.",
+   "blank": "วันหนึ่ง",
+   "src": "made"
+  },
+  {
+   "text": "นภาฝันว่าวันหนึ่งจะได้ขึ้นไปร้องเพลงบนเวทีใหญ่แบบนี้",
+   "en": "Napa dreams that one day she'll sing on a big stage like this.",
+   "ko": "나파는 언젠가 이런 큰 무대에서 노래하는 꿈을 꿔요.",
+   "blank": "วันหนึ่ง",
+   "src": "made"
   }
  ],
  "w|วันหยุด": [
@@ -49551,6 +50079,22 @@
    "en": "Unemployed people should learn new skills.",
    "ko": "실업자는 새 기술을 익혀야 해.",
    "blank": "ว่างงาน"
+  }
+ ],
+ "w|ว่างเปล่า": [
+  {
+   "text": "ตู้เย็นของวิชัยว่างเปล่าเพราะยังไม่ได้ไปซื้อของ",
+   "en": "Wichai's fridge is empty because he hasn't gone shopping yet.",
+   "ko": "위차이는 아직 장을 안 봐서 냉장고가 텅 비어 있어요.",
+   "blank": "ว่างเปล่า",
+   "src": "made"
+  },
+  {
+   "text": "หลังคอนเสิร์ตจบ ฮอลล์ที่เคยแน่นก็ว่างเปล่าในไม่กี่นาที",
+   "en": "After the concert ended, the packed hall was empty within minutes.",
+   "ko": "콘서트가 끝나자 꽉 찼던 공연장이 몇 분 만에 텅 비었어요.",
+   "blank": "ว่างเปล่า",
+   "src": "made"
   }
  ],
  "w|วางแผน": [
@@ -50243,6 +50787,22 @@
    "en": "It's time to go.",
    "ko": "이제 갈 시간이야.",
    "blank": "เวลา"
+  }
+ ],
+ "w|เวลานี้": [
+  {
+   "text": "เวลานี้ของทุกวันวิชัยมักจะนั่งรถเมล์กลับบ้าน",
+   "en": "At this time every day Wichai usually takes the bus home.",
+   "ko": "매일 이 시간이면 위차이는 보통 버스를 타고 집에 가요.",
+   "blank": "เวลานี้",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องพูดว่าเวลานี้คือช่วงที่มีความสุขที่สุดในชีวิต",
+   "en": "The singer said this moment is the happiest time of her life.",
+   "ko": "가수는 지금 이 순간이 인생에서 가장 행복한 때라고 말했어요.",
+   "blank": "เวลานี้",
+   "src": "made"
   }
  ],
  "w|เวลาว่าง": [
@@ -53043,6 +53603,22 @@
    "src": "made"
   }
  ],
+ "w|สักวัน": [
+  {
+   "text": "วิชัยหวังว่าสักวันจะได้มีบ้านเล็กๆ ริมทะเล",
+   "en": "Wichai hopes that someday he'll have a little house by the sea.",
+   "ko": "위차이는 언젠가 바닷가에 작은 집을 갖고 싶어 해요.",
+   "blank": "สักวัน",
+   "src": "made"
+  },
+  {
+   "text": "นภาหวังว่าสักวันจะได้ถ่ายรูปคู่กับมือกลอง",
+   "en": "Napa hopes that someday she'll get a photo with the drummer.",
+   "ko": "나파는 언젠가 드러머와 함께 사진을 찍고 싶어 해요.",
+   "blank": "สักวัน",
+   "src": "made"
+  }
+ ],
  "w|สั่ง": [
   {
    "text": "สั่งข้าวผัดได้ไหม",
@@ -54931,6 +55507,22 @@
    "en": "I always think of you.",
    "ko": "난 항상 네가 생각나.",
    "blank": "เสมอ"
+  }
+ ],
+ "w|เสมอภาค": [
+  {
+   "text": "ที่ทำงานของวิชัยให้ทุกคนมีสิทธิ์ลาพักร้อนอย่างเสมอภาค",
+   "en": "Wichai's workplace gives everyone equal rights to take vacation leave.",
+   "ko": "위차이의 회사는 모두에게 휴가를 쓸 권리를 동등하게 줘요.",
+   "blank": "เสมอภาค",
+   "src": "made"
+  },
+  {
+   "text": "ผู้จัดขายบัตรด้วยระบบสุ่มเพื่อความเสมอภาคของแฟนเพลงทุกคน",
+   "en": "The organizers sold tickets by lottery so all fans would be treated equally.",
+   "ko": "주최 측은 모든 팬이 공평하도록 추첨으로 표를 팔았어요.",
+   "blank": "เสมอภาค",
+   "src": "made"
   }
  ],
  "w|เสมือน": [
@@ -58809,6 +59401,22 @@
    "src": "made"
   }
  ],
+ "w|เหยียบ": [
+  {
+   "text": "วิชัยเผลอเหยียบเท้าคนข้างๆ บนรถไฟฟ้าตอนเช้า",
+   "en": "Wichai accidentally stepped on someone's foot on the morning train.",
+   "ko": "위차이는 아침 전철에서 옆 사람 발을 실수로 밟았어요.",
+   "blank": "เหยียบ",
+   "src": "made"
+  },
+  {
+   "text": "คนดูเบียดกันจนมีคนเหยียบรองเท้าของนภาหลุด",
+   "en": "The crowd was so packed that someone stepped on Napa's shoe and it came off.",
+   "ko": "관객이 너무 붐벼서 누가 나파의 신발을 밟아 벗겨졌어요.",
+   "blank": "เหยียบ",
+   "src": "made"
+  }
+ ],
  "w|เหยื่อ": [
   {
    "text": "เขาเป็นเหยื่อของการหลอกลวง",
@@ -61355,6 +61963,22 @@
    "blank": "อีกครั้ง"
   }
  ],
+ "w|อีกต่อไป": [
+  {
+   "text": "วิชัยบอกว่าจะไม่กินกาแฟตอนบ่ายอีกต่อไปเพราะนอนไม่หลับ",
+   "en": "Wichai says he won't drink coffee in the afternoon anymore because he can't sleep.",
+   "ko": "위차이는 잠이 안 와서 더 이상 오후에 커피를 안 마시겠다고 해요.",
+   "blank": "อีกต่อไป",
+   "src": "made"
+  },
+  {
+   "text": "นักร้องนำประกาศว่าวงจะไม่ออกทัวร์อีกต่อไปหลังจากปีนี้",
+   "en": "The lead singer announced the band won't tour anymore after this year.",
+   "ko": "리드 보컬은 올해가 지나면 밴드가 더 이상 투어를 하지 않는다고 발표했어요.",
+   "blank": "อีกต่อไป",
+   "src": "made"
+  }
+ ],
  "w|อีกที": [
   {
    "text": "บรรณาธิการขอให้เอกอ่านต้นฉบับอีกทีก่อนส่งโรงพิมพ์",
@@ -61368,6 +61992,22 @@
    "en": "The chef had Fon taste the soup again before taking it out to serve.",
    "ko": "셰프는 내가기 전에 폰에게 국물을 한 번 더 맛보게 했어요.",
    "blank": "อีกที",
+   "src": "made"
+  }
+ ],
+ "w|อีกไม่นาน": [
+  {
+   "text": "อีกไม่นานวิชัยก็จะได้หยุดยาวช่วงสงกรานต์",
+   "en": "Soon Wichai will get a long break for Songkran.",
+   "ko": "머지않아 위차이는 송끄란 연휴를 길게 쉬게 돼요.",
+   "blank": "อีกไม่นาน",
+   "src": "made"
+  },
+  {
+   "text": "พิธีกรบอกว่าอีกไม่นานวงจะขึ้นเวทีแล้ว",
+   "en": "The host said the band would be on stage soon.",
+   "ko": "사회자는 곧 밴드가 무대에 오른다고 했어요.",
+   "blank": "อีกไม่นาน",
    "src": "made"
   }
  ],

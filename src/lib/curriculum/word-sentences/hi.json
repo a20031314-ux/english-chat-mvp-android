@@ -131,6 +131,22 @@
    "blank": "अक़्ल"
   }
  ],
+ "w|अक्षम": [
+  {
+   "text": "लकवे के बाद कुत्ता चलने में अक्षम हो गया, तो अमित ने उसके लिए पहियों वाली गाड़ी बनवाई।",
+   "en": "After paralysis the dog became unable to walk, so Amit had a little wheeled cart made for it.",
+   "ko": "마비 뒤 개가 걷지 못하게 되자 아미트는 바퀴 달린 수레를 만들어 줬어요.",
+   "blank": "अक्षम",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि आँखें कमज़ोर होने से वह अब छोटे अक्षर पढ़ने में अक्षम है।",
+   "en": "Neha wrote that with weak eyes she is now unable to read small print.",
+   "ko": "네하는 눈이 나빠져 이제 작은 글씨를 읽지 못한다고 썼어요.",
+   "blank": "अक्षम",
+   "src": "made"
+  }
+ ],
  "w|अक्षर": [
   {
    "text": "बच्चा नए अक्षर सीख रहा है।",
@@ -431,6 +447,22 @@
    "blank": "अचार"
   }
  ],
+ "w|अचूक": [
+  {
+   "text": "अमित का अंदाज़ा अचूक निकला, कुत्ते ने सचमुच सिक्का निगल लिया था।",
+   "en": "Amit's guess proved spot on: the dog really had swallowed a coin.",
+   "ko": "아미트의 짐작이 딱 맞았어요. 개가 정말 동전을 삼켰더라고요.",
+   "blank": "अचूक",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने लिखा कि हल्दी वाला दूध सर्दी का अचूक इलाज है।",
+   "en": "Her friend wrote that turmeric milk is a sure cure for a cold.",
+   "ko": "친구는 강황 우유가 감기에 딱 듣는 약이라고 썼어요.",
+   "blank": "अचूक",
+   "src": "made"
+  }
+ ],
  "w|अच्छा": [
   {
    "text": "आज खाना सच में अच्छा बना है।",
@@ -517,6 +549,22 @@
    "en": "He asked a strange question.",
    "ko": "그가 이상한 질문을 했어.",
    "blank": "अजीब"
+  }
+ ],
+ "w|अजीबोग़रीब": [
+  {
+   "text": "एक आदमी अपनी अजीबोग़रीब छिपकली लेकर अमित के पास आया।",
+   "en": "A man came to Amit with his very strange lizard.",
+   "ko": "한 남자가 아주 희한한 도마뱀을 데리고 아미트를 찾아왔어요.",
+   "blank": "अजीबोग़रीब",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने अपने नए पड़ोसी की अजीबोग़रीब आदतों के बारे में मज़ेदार ख़त लिखा।",
+   "en": "Her friend wrote a funny letter about her new neighbour's odd habits.",
+   "ko": "친구는 새 이웃의 희한한 버릇에 관해 재미있는 편지를 썼어요.",
+   "blank": "अजीबोग़रीब",
+   "src": "made"
   }
  ],
  "w|अज्ञात": [
@@ -2612,6 +2660,22 @@
    "en": "Seema acted on the farm officer's advice and the yield went up.",
    "ko": "시마가 농업 담당관의 조언을 따르자 수확이 늘었어요.",
    "blank": "अमल",
+   "src": "made"
+  }
+ ],
+ "w|अमल करना": [
+  {
+   "text": "अमित के बताए खान-पान पर अमल करने से बिल्ली का वज़न घट गया।",
+   "en": "By following the diet Amit prescribed, the cat lost weight.",
+   "ko": "아미트가 일러 준 식단을 지키자 고양이 체중이 줄었어요.",
+   "blank": "अमल करने",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने लिखा कि उसने नेहा की सलाह पर अमल किया और रोज़ टहलने लगी।",
+   "en": "Her friend wrote that she acted on Neha's advice and started walking every day.",
+   "ko": "친구는 네하의 조언대로 매일 산책을 시작했다고 썼어요.",
+   "blank": "अमल किया",
    "src": "made"
   }
  ],
@@ -4868,6 +4932,22 @@
    "en": "The commissioner of the hill district had the road closed because of a landslide.",
    "ko": "산악 지역 행정관이 산사태 때문에 길을 막았어요.",
    "blank": "आयुक्त",
+   "src": "made"
+  }
+ ],
+ "w|आयुर्वेद": [
+  {
+   "text": "गाँव के कुछ लोग गाय के इलाज के लिए आयुर्वेद के नुस्ख़े भी आज़माते हैं।",
+   "en": "Some villagers also try Ayurvedic remedies to treat their cows.",
+   "ko": "몇몇 마을 사람들은 소 치료에 아유르베다 처방도 써 봐요.",
+   "blank": "आयुर्वेद",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने जवाब में लिखा कि वह आजकल आयुर्वेद पढ़ रही है।",
+   "en": "In reply her friend wrote that she is studying Ayurveda these days.",
+   "ko": "친구는 답장에 요즘 아유르베다를 공부한다고 썼어요.",
+   "blank": "आयुर्वेद",
    "src": "made"
   }
  ],
@@ -8715,6 +8795,22 @@
    "blank": "औरत"
   }
  ],
+ "w|औषधि": [
+  {
+   "text": "अमित ने तोते के पानी में घोलने के लिए एक कड़वी औषधि दी।",
+   "en": "Amit gave a bitter medicine to dissolve in the parrot's water.",
+   "ko": "아미트는 앵무새 물에 타 먹일 쓴 약을 줬어요.",
+   "blank": "औषधि",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने ख़त के साथ खाँसी की एक देसी औषधि भी भेजी।",
+   "en": "Along with the letter, her friend also sent a home remedy for cough.",
+   "ko": "친구는 편지와 함께 기침에 좋은 민간 약도 보냈어요.",
+   "blank": "औषधि",
+   "src": "made"
+  }
+ ],
  "w|औसत": [
   {
    "text": "कक्षा का औसत अंक अच्छा रहा।",
@@ -10021,6 +10117,22 @@
    "en": "The young artist is putting on a first exhibition.",
    "ko": "젊은 예술가가 첫 전시를 열고 있어.",
    "blank": "कलाकार"
+  }
+ ],
+ "w|कलात्मक": [
+  {
+   "text": "अमित के क्लिनिक की दीवारों पर जानवरों की कलात्मक तस्वीरें लगी हैं।",
+   "en": "Artistic pictures of animals hang on the walls of Amit's clinic.",
+   "ko": "아미트의 병원 벽에는 동물을 그린 예술적인 그림이 걸려 있어요.",
+   "blank": "कलात्मक",
+   "src": "made"
+  },
+  {
+   "text": "नेहा की चिट्ठियाँ हमेशा कलात्मक लिखावट में होती थीं।",
+   "en": "Neha's letters were always in artistic handwriting.",
+   "ko": "네하의 편지는 늘 멋스러운 글씨체로 쓰여 있었어요.",
+   "blank": "कलात्मक",
+   "src": "made"
   }
  ],
  "w|कली": [
@@ -13165,6 +13277,22 @@
    "src": "made"
   }
  ],
+ "w|क्रमिक": [
+  {
+   "text": "इलाज के बाद कुत्ते की चाल में क्रमिक सुधार दिखने लगा।",
+   "en": "After the treatment, a gradual improvement began to show in the dog's walk.",
+   "ko": "치료 뒤 개의 걸음걸이가 조금씩 나아지기 시작했어요.",
+   "blank": "क्रमिक",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि शहर में बदलाव क्रमिक था, इसलिए किसी ने ध्यान नहीं दिया।",
+   "en": "Neha wrote that the change in the town was gradual, so no one noticed.",
+   "ko": "네하는 도시의 변화가 서서히 일어나서 아무도 눈치채지 못했다고 썼어요.",
+   "blank": "क्रमिक",
+   "src": "made"
+  }
+ ],
  "w|क्रांति": [
   {
    "text": "तकनीक ने जीवन में क्रांति ला दी।",
@@ -14801,6 +14929,22 @@
    "src": "made"
   }
  ],
+ "w|गढ़ना": [
+  {
+   "text": "अमित ने लकड़ी से तोते के लिए एक छोटा झूला गढ़ा।",
+   "en": "Amit carved a small swing out of wood for the parrot.",
+   "ko": "아미트는 앵무새를 위해 나무로 작은 그네를 깎아 만들었어요.",
+   "blank": "गढ़ा",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि बच्चों ने मिट्टी से गणेश जी की मूर्ति गढ़ी।",
+   "en": "Neha wrote that the children shaped an idol of Ganesh out of clay.",
+   "ko": "네하는 아이들이 흙으로 가네샤 상을 빚었다고 썼어요.",
+   "blank": "गढ़ी",
+   "src": "made"
+  }
+ ],
  "w|गणतंत्र": [
   {
    "text": "गणतंत्र दिवस पर टाउन हॉल की छत पर तिरंगा फहराया गया।",
@@ -15123,6 +15267,22 @@
    "en": "The baby's heartbeat was heard in the womb.",
    "ko": "자궁에서 아기 심박이 들렸어.",
    "blank": "गर्भ"
+  }
+ ],
+ "w|गर्भवती": [
+  {
+   "text": "अल्ट्रासाउंड से पता चला कि बकरी गर्भवती है।",
+   "en": "The ultrasound showed that the goat is pregnant.",
+   "ko": "초음파로 염소가 새끼를 뱄다는 걸 알았어요.",
+   "blank": "गर्भवती",
+   "src": "made"
+  },
+  {
+   "text": "ख़त में ख़ुशख़बरी थी कि नेहा की छोटी बहन गर्भवती है।",
+   "en": "The letter had the good news that Neha's younger sister is pregnant.",
+   "ko": "편지에는 네하의 여동생이 임신했다는 기쁜 소식이 있었어요.",
+   "blank": "गर्भवती",
+   "src": "made"
   }
  ],
  "w|गर्भावस्था": [
@@ -16973,6 +17133,22 @@
    "blank": "घाटी"
   }
  ],
+ "w|घातक": [
+  {
+   "text": "अमित कहता है कि कुत्तों के लिए चॉकलेट घातक हो सकती है।",
+   "en": "Amit says chocolate can be deadly for dogs.",
+   "ko": "아미트는 초콜릿이 개에게 치명적일 수 있다고 해요.",
+   "blank": "घातक",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि लापरवाही कभी-कभी घातक साबित होती है, इसलिए गाड़ी धीरे चलाना।",
+   "en": "Neha wrote that carelessness sometimes proves fatal, so drive slowly.",
+   "ko": "네하는 부주의가 때로 치명적일 수 있으니 운전을 천천히 하라고 썼어요.",
+   "blank": "घातक",
+   "src": "made"
+  }
+ ],
  "w|घायल": [
   {
    "text": "दुर्घटना में कई लोग घायल हुए।",
@@ -18393,6 +18569,22 @@
    "en": "After washing, the hair felt oily.",
    "ko": "머리를 감은 뒤 기름진 느낌이었어.",
    "blank": "चिकना"
+  }
+ ],
+ "w|चिकित्सक": [
+  {
+   "text": "अमित इस कस्बे में जानवरों का अकेला चिकित्सक है।",
+   "en": "Amit is the only animal doctor in this town.",
+   "ko": "아미트는 이 읍내에 하나뿐인 수의사예요.",
+   "blank": "चिकित्सक",
+   "src": "made"
+  },
+  {
+   "text": "चिट्ठी में नेहा ने बताया कि उसका बेटा अब गाँव में चिकित्सक बन गया है।",
+   "en": "In the letter Neha said her son has now become a doctor in the village.",
+   "ko": "네하는 편지에서 아들이 이제 마을 의사가 됐다고 전했어요.",
+   "blank": "चिकित्सक",
+   "src": "made"
   }
  ],
  "w|चिकित्सा": [
@@ -21049,6 +21241,22 @@
    "src": "made"
   }
  ],
+ "w|ज़हर": [
+  {
+   "text": "चूहे मारने का ज़हर खा लेने वाली बिल्ली को अमित ने रात भर निगरानी में रखा।",
+   "en": "Amit kept the cat that had eaten rat poison under watch all night.",
+   "ko": "쥐약을 먹은 고양이를 아미트는 밤새 지켜봤어요.",
+   "blank": "ज़हर",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि ग़ुस्सा ज़हर की तरह होता है, उसे मन में मत रखना।",
+   "en": "Neha wrote that anger is like poison, so don't keep it in your heart.",
+   "ko": "네하는 화는 독과 같으니 마음에 담아 두지 말라고 썼어요.",
+   "blank": "ज़हर",
+   "src": "made"
+  }
+ ],
  "w|ज़हरीला": [
   {
    "text": "शेफ़ ने चेताया कि कुछ जंगली मशरूम ज़हरीले होते हैं, इसलिए दुकान से ही ख़रीदें।",
@@ -21617,6 +21825,22 @@
    "src": "made"
   }
  ],
+ "w|जिम": [
+  {
+   "text": "क्लिनिक बंद करने के बाद अमित रोज़ शाम जिम जाता है।",
+   "en": "After closing the clinic, Amit goes to the gym every evening.",
+   "ko": "아미트는 병원 문을 닫고 매일 저녁 헬스장에 가요.",
+   "blank": "जिम",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने लिखा कि उसकी पोती रोज़ सुबह जिम जाती है।",
+   "en": "Her friend wrote that her granddaughter goes to the gym every morning.",
+   "ko": "친구는 손녀가 매일 아침 헬스장에 간다고 썼어요.",
+   "blank": "जिम",
+   "src": "made"
+  }
+ ],
  "w|ज़िम्मा": [
   {
    "text": "क्रेन चलाने का ज़िम्मा सबसे अनुभवी मज़दूर को दिया गया है।",
@@ -22117,6 +22341,22 @@
    "en": "Without passion, work feels incomplete.",
    "ko": "열정 없이 하는 일은 미완성처럼 느껴져.",
    "blank": "जुनून"
+  }
+ ],
+ "w|ज़ुबान": [
+  {
+   "text": "घोड़े की ज़ुबान पर छाले देखकर अमित ने उसका चारा बदलने को कहा।",
+   "en": "Seeing blisters on the horse's tongue, Amit said to change its feed.",
+   "ko": "말의 혀에 물집이 난 걸 보고 아미트는 사료를 바꾸라고 했어요.",
+   "blank": "ज़ुबान",
+   "src": "made"
+  },
+  {
+   "text": "नेहा को याद आया कि बचपन में सहेली की ज़ुबान कितनी तेज़ चलती थी।",
+   "en": "Neha remembered how sharp her friend's tongue used to be as a child.",
+   "ko": "네하는 어릴 적 친구가 얼마나 말이 빨랐는지 떠올렸어요.",
+   "blank": "ज़ुबान",
+   "src": "made"
   }
  ],
  "w|जुर्म": [
@@ -27975,6 +28215,22 @@
    "blank": "दिल"
   }
  ],
+ "w|दिल का दौरा": [
+  {
+   "text": "अमित ने पढ़ा है कि कुछ कुत्ते दिल का दौरा आने से पहले बेचैन हो जाते हैं।",
+   "en": "Amit has read that some dogs become restless before having a heart attack.",
+   "ko": "아미트는 어떤 개들은 심장마비가 오기 전에 안절부절못한다는 글을 읽었어요.",
+   "blank": "दिल का दौरा",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने दुख के साथ लिखा कि उनके पुराने मास्टर जी का दिल का दौरा पड़ने से देहांत हो गया।",
+   "en": "Neha wrote sadly that their old teacher had passed away from a heart attack.",
+   "ko": "네하는 옛 선생님이 심장마비로 돌아가셨다고 슬프게 썼어요.",
+   "blank": "दिल का दौरा",
+   "src": "made"
+  }
+ ],
  "w|दिल लगाना": [
   {
    "text": "शहर से लौटकर करण ने खेती में दिल लगाया और सेब का बाग़ लगाया।",
@@ -28733,6 +28989,22 @@
    "blank": "देखा"
   }
  ],
+ "w|देखभाल": [
+  {
+   "text": "ऑपरेशन के बाद अमित ने मालिक को समझाया कि घर पर पिल्ले की देखभाल कैसे करनी है।",
+   "en": "After the operation, Amit explained to the owner how to look after the puppy at home.",
+   "ko": "수술 뒤 아미트는 주인에게 집에서 강아지를 어떻게 돌봐야 하는지 설명했어요.",
+   "blank": "देखभाल",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि बूढ़ी माँ की देखभाल में उसका सारा दिन निकल जाता है।",
+   "en": "Neha wrote that her whole day goes in looking after her old mother.",
+   "ko": "네하는 연로한 어머니를 돌보느라 하루가 다 간다고 썼어요.",
+   "blank": "देखभाल",
+   "src": "made"
+  }
+ ],
  "w|देन": [
   {
    "text": "शहर का बड़ा पुस्तकालय एक पुराने व्यापारी परिवार की देन है।",
@@ -28877,6 +29149,22 @@
    "en": "Desi ghee makes the taste even better.",
    "ko": "데시 기를 넣으면 맛이 더 살아나.",
    "blank": "देसी"
+  }
+ ],
+ "w|देह": [
+  {
+   "text": "बूढ़े घोड़े की देह कमज़ोर हो गई थी, फिर भी वह खड़ा होने की कोशिश करता रहा।",
+   "en": "The old horse's body had grown weak, yet it kept trying to stand.",
+   "ko": "늙은 말은 몸이 약해졌는데도 계속 일어서려고 했어요.",
+   "blank": "देह",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने लिखा कि देह बूढ़ी हो गई है, पर मन अब भी स्कूल वाली लड़की का है।",
+   "en": "Her friend wrote that the body has grown old, but the heart is still a schoolgirl's.",
+   "ko": "친구는 몸은 늙었어도 마음은 아직 학창 시절 소녀라고 썼어요.",
+   "blank": "देह",
+   "src": "made"
   }
  ],
  "w|दैनिक": [
@@ -30973,6 +31261,22 @@
    "blank": "नाचना"
   }
  ],
+ "w|नाजायज़": [
+  {
+   "text": "अमित को लगा कि दवा वाले का माँगा दाम बिलकुल नाजायज़ है।",
+   "en": "Amit felt the price the medicine seller asked was completely unfair.",
+   "ko": "아미트는 약장수가 부른 값이 터무니없다고 느꼈어요.",
+   "blank": "नाजायज़",
+   "src": "made"
+  },
+  {
+   "text": "नेहा को आज भी लगता है कि उस दिन टीचर की दी हुई सज़ा नाजायज़ थी।",
+   "en": "Neha still feels the punishment the teacher gave that day was unfair.",
+   "ko": "네하는 그날 선생님이 준 벌이 부당했다고 지금도 생각해요.",
+   "blank": "नाजायज़",
+   "src": "made"
+  }
+ ],
  "w|नाज़ुक": [
   {
    "text": "यह प्याला बहुत नाज़ुक है।",
@@ -31695,6 +31999,22 @@
    "en": "It is better to settle a fight quickly.",
    "ko": "싸움을 빨리 끝내는 게 나아.",
    "blank": "निपटाना"
+  }
+ ],
+ "w|निपुण": [
+  {
+   "text": "अमित की सहायक ज़ख़्म पर पट्टी बाँधने में बहुत निपुण है।",
+   "en": "Amit's assistant is very skilled at bandaging wounds.",
+   "ko": "아미트의 조수는 상처에 붕대 감는 데 아주 능숙해요.",
+   "blank": "निपुण",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने लिखा कि उसकी बेटी सितार बजाने में निपुण हो गई है।",
+   "en": "Her friend wrote that her daughter has become skilled at playing the sitar.",
+   "ko": "친구는 딸이 시타르 연주에 능숙해졌다고 썼어요.",
+   "blank": "निपुण",
+   "src": "made"
   }
  ],
  "w|निबंध": [
@@ -32782,6 +33102,22 @@
    "en": "Before experiments on animals, Deepa's committee discusses questions of ethics.",
    "ko": "동물 실험 전에 디파의 위원회는 윤리 문제를 논의해요.",
    "blank": "नैतिकता",
+   "src": "made"
+  }
+ ],
+ "w|नोक": [
+  {
+   "text": "इंजेक्शन की सुई की नोक टूट गई, तो अमित ने नई सुई निकाली।",
+   "en": "The tip of the injection needle broke, so Amit took out a new one.",
+   "ko": "주삿바늘 끝이 부러져서 아미트는 새 바늘을 꺼냈어요.",
+   "blank": "नोक",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने याद किया कि वे दोनों पेंसिल की नोक से मेज़ पर नाम खुरचती थीं।",
+   "en": "Neha remembered how the two of them used to scratch names on the desk with a pencil tip.",
+   "ko": "네하는 둘이 연필 끝으로 책상에 이름을 새기던 걸 떠올렸어요.",
+   "blank": "नोक",
    "src": "made"
   }
  ],
@@ -35911,6 +36247,22 @@
    "en": "Place the bag properly on your back.",
    "ko": "가방을 등에 제대로 메.",
    "blank": "पीठ"
+  }
+ ],
+ "w|पीड़ा": [
+  {
+   "text": "टाँग में काँटा चुभने से कुत्ता बहुत पीड़ा में था, तो अमित ने उसे तुरंत देखा।",
+   "en": "The dog was in a lot of pain from a thorn in its leg, so Amit saw it right away.",
+   "ko": "다리에 가시가 박혀 개가 몹시 아파해서 아미트가 바로 진찰했어요.",
+   "blank": "पीड़ा",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने पुरानी सहेली को लिखा कि बिछड़ने की पीड़ा आज भी याद है।",
+   "en": "Neha wrote to her old friend that she still remembers the pain of parting.",
+   "ko": "네하는 옛 친구에게 헤어질 때의 아픔이 아직도 기억난다고 썼어요.",
+   "blank": "पीड़ा",
+   "src": "made"
   }
  ],
  "w|पीड़ित": [
@@ -39355,6 +39707,22 @@
    "blank": "फट"
   }
  ],
+ "w|फटाफट": [
+  {
+   "text": "घायल कुत्ते को देखते ही अमित ने फटाफट दस्ताने पहन लिए।",
+   "en": "As soon as he saw the injured dog, Amit quickly put on gloves.",
+   "ko": "다친 개를 보자마자 아미트는 재빨리 장갑을 꼈어요.",
+   "blank": "फटाफट",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने लिखा कि ख़त मिलते ही उसने फटाफट जवाब लिख डाला।",
+   "en": "Her friend wrote that as soon as the letter came she quickly dashed off a reply.",
+   "ko": "친구는 편지를 받자마자 후다닥 답장을 썼다고 했어요.",
+   "blank": "फटाफट",
+   "src": "made"
+  }
+ ],
  "w|फ़रमान": [
   {
    "text": "कमिश्नर के नए फ़रमान के मुताबिक़ हर सिपाही को वर्दी पर कैमरा लगाना होगा।",
@@ -40943,6 +41311,22 @@
    "en": "Bad advice can make the problem worse.",
    "ko": "잘못된 조언은 문제를 더 악화시켜.",
    "blank": "बदतर"
+  }
+ ],
+ "w|बदन": [
+  {
+   "text": "भैंस का बदन बुख़ार से तप रहा था, इसलिए अमित ने उसे इंजेक्शन लगाया।",
+   "en": "The buffalo's body was burning with fever, so Amit gave it an injection.",
+   "ko": "물소 몸이 열로 펄펄 끓어서 아미트가 주사를 놨어요.",
+   "blank": "बदन",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने मज़ाक में लिखा कि बुढ़ापे में अब बदन जवाब देने लगा है।",
+   "en": "Neha joked in her letter that in old age her body has started giving up.",
+   "ko": "네하는 나이 드니 이제 몸이 말을 안 듣는다고 농담 삼아 썼어요.",
+   "blank": "बदन",
+   "src": "made"
   }
  ],
  "w|बदनामी": [
@@ -46497,6 +46881,22 @@
    "src": "made"
   }
  ],
+ "w|मल": [
+  {
+   "text": "कीड़ों का पता लगाने के लिए अमित ने पिल्ले के मल की जाँच करवाई।",
+   "en": "To check for worms, Amit had the puppy's stool tested.",
+   "ko": "아미트는 기생충이 있는지 보려고 강아지 변 검사를 맡겼어요.",
+   "blank": "मल",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि डॉक्टर ने पिताजी के मल की जाँच करवाई और रिपोर्ट ठीक आई।",
+   "en": "Neha wrote that the doctor had her father's stool tested and the report came back fine.",
+   "ko": "네하는 의사가 아버지 변 검사를 했는데 결과가 괜찮았다고 썼어요.",
+   "blank": "मल",
+   "src": "made"
+  }
+ ],
  "w|मलहम": [
   {
    "text": "चोट पर यह मलहम लगाओ।",
@@ -46913,6 +47313,22 @@
    "en": "This great work belongs to no one alone.",
    "ko": "이 위대한 일은 한 사람 것만은 아니야.",
    "blank": "महान"
+  }
+ ],
+ "w|महामारी": [
+  {
+   "text": "अमित ने अख़बार में पढ़ा कि पिछली सदी में मवेशियों की एक महामारी ने पूरे इलाके को हिला दिया था।",
+   "en": "Amit read in the newspaper that a cattle epidemic in the last century shook the whole region.",
+   "ko": "아미트는 지난 세기에 가축 전염병이 지역 전체를 뒤흔들었다는 기사를 읽었어요.",
+   "blank": "महामारी",
+   "src": "made"
+  },
+  {
+   "text": "महामारी के दिनों में दोनों सहेलियाँ हर हफ़्ते एक-दूसरे को ख़त लिखती थीं।",
+   "en": "During the pandemic, the two friends wrote to each other every week.",
+   "ko": "전염병이 돌던 때 두 친구는 매주 서로에게 편지를 썼어요.",
+   "blank": "महामारी",
+   "src": "made"
   }
  ],
  "w|महाराज": [
@@ -47421,6 +47837,22 @@
    "en": "Mental pressure rises before exams.",
    "ko": "시험 전에 정신적 압박이 커져.",
    "blank": "मानसिक"
+  }
+ ],
+ "w|मानसिक स्वास्थ्य": [
+  {
+   "text": "अमित मानता है कि पालतू जानवर रखने से बुज़ुर्गों के मानसिक स्वास्थ्य पर अच्छा असर पड़ता है।",
+   "en": "Amit believes that keeping a pet has a good effect on elderly people's mental health.",
+   "ko": "아미트는 반려동물을 키우면 노인의 정신 건강에 좋다고 믿어요.",
+   "blank": "मानसिक स्वास्थ्य",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि अकेलेपन का असर मानसिक स्वास्थ्य पर पड़ता है, इसलिए तुम चिट्ठियाँ भेजती रहना।",
+   "en": "Neha wrote that loneliness affects mental health, so keep sending letters.",
+   "ko": "네하는 외로움이 정신 건강에 영향을 주니 계속 편지를 보내 달라고 썼어요.",
+   "blank": "मानसिक स्वास्थ्य",
+   "src": "made"
   }
  ],
  "w|मानो": [
@@ -50805,6 +51237,22 @@
    "blank": "रहस्य"
   }
  ],
+ "w|रहस्यमय": [
+  {
+   "text": "तोते की रहस्यमय बीमारी का कारण अमित को तीन दिन बाद समझ आया।",
+   "en": "Amit figured out the cause of the parrot's mysterious illness three days later.",
+   "ko": "아미트는 사흘 뒤에야 앵무새의 이상한 병의 원인을 알아냈어요.",
+   "blank": "रहस्यमय",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने स्कूल के उस रहस्यमय कमरे को याद किया जिसमें कोई नहीं जाता था।",
+   "en": "Neha recalled that mysterious room at school that nobody ever went into.",
+   "ko": "네하는 아무도 들어가지 않던 학교의 그 수수께끼 같은 방을 떠올렸어요.",
+   "blank": "रहस्यमय",
+   "src": "made"
+  }
+ ],
  "w|रहित": [
   {
    "text": "विकास चाहता है कि उसकी ख़बरें पक्षपात से रहित हों।",
@@ -51795,6 +52243,22 @@
    "blank": "रोग"
   }
  ],
+ "w|रोगी": [
+  {
+   "text": "अमित के क्लिनिक में आज सुबह से बीस से ज़्यादा रोगी जानवर आ चुके हैं।",
+   "en": "More than twenty sick animals have come to Amit's clinic since this morning.",
+   "ko": "오늘 아침부터 아미트의 병원에 아픈 동물이 스무 마리 넘게 왔어요.",
+   "blank": "रोगी",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि अस्पताल में रोगी की सेवा करते हुए उसने बहुत कुछ सीखा।",
+   "en": "Neha wrote that she learned a lot while caring for a patient in hospital.",
+   "ko": "네하는 병원에서 환자를 돌보며 많은 걸 배웠다고 썼어요.",
+   "blank": "रोगी",
+   "src": "made"
+  }
+ ],
  "w|रोचक": [
   {
    "text": "नगर निगम के इतिहास पर रोहन की प्रस्तुति काफ़ी रोचक थी।",
@@ -51910,6 +52374,22 @@
    "en": "A little tea-making robot in the office keeps everyone entertained.",
    "ko": "사무실에서 차를 끓이는 작은 로봇이 모두를 즐겁게 해요.",
    "blank": "रोबोट",
+   "src": "made"
+  }
+ ],
+ "w|रोम": [
+  {
+   "text": "बिल्ली के रोम जगह-जगह से झड़ रहे थे, इसलिए अमित ने त्वचा की जाँच की।",
+   "en": "The cat's fur was falling out in patches, so Amit examined its skin.",
+   "ko": "고양이 털이 군데군데 빠져서 아미트는 피부를 검사했어요.",
+   "blank": "रोम",
+   "src": "made"
+  },
+  {
+   "text": "सहेली का ख़त पढ़ते हुए नेहा के रोम खड़े हो गए।",
+   "en": "Reading her friend's letter, Neha got goosebumps.",
+   "ko": "친구의 편지를 읽다가 네하는 소름이 돋았어요.",
+   "blank": "रोम",
    "src": "made"
   }
  ],
@@ -53651,6 +54131,22 @@
    "src": "made"
   }
  ],
+ "w|वस्तुतः": [
+  {
+   "text": "पिल्ला देखने में स्वस्थ था, पर वस्तुतः उसके पेट में संक्रमण था।",
+   "en": "The puppy looked healthy, but in fact it had an infection in its stomach.",
+   "ko": "강아지는 겉보기엔 건강했지만 사실 배에 염증이 있었어요.",
+   "blank": "वस्तुतः",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि बरसों से मिले नहीं, पर वस्तुतः तुम हमेशा मेरे पास रही हो।",
+   "en": "Neha wrote that they hadn't met for years, but in truth her friend had always been close.",
+   "ko": "네하는 몇 년째 못 만났지만 사실 너는 늘 내 곁에 있었다고 썼어요.",
+   "blank": "वस्तुतः",
+   "src": "made"
+  }
+ ],
  "w|वह": [
   {
    "text": "वह अभी सो रही है।",
@@ -54023,6 +54519,22 @@
    "en": "I'm thinking of buying a new vehicle.",
    "ko": "새 차를 살까 생각 중이야.",
    "blank": "वाहन"
+  }
+ ],
+ "w|विकट": [
+  {
+   "text": "बाढ़ के दिनों में गाँव तक दवाइयाँ पहुँचाना अमित के लिए विकट काम था।",
+   "en": "Getting medicines to the village during the floods was a tough job for Amit.",
+   "ko": "홍수 때 마을까지 약을 나르는 건 아미트에게 힘겨운 일이었어요.",
+   "blank": "विकट",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि पिछली सर्दी बहुत विकट थी, पानी के नल तक जम गए थे।",
+   "en": "Neha wrote that last winter was very harsh; even the water taps froze.",
+   "ko": "네하는 지난겨울이 몹시 혹독해서 수도꼭지까지 얼었다고 썼어요.",
+   "blank": "विकट",
+   "src": "made"
   }
  ],
  "w|विकलांगता": [
@@ -55125,6 +55637,22 @@
    "en": "Quickly believing rumors is wrong.",
    "ko": "소문을 쉽게 믿는 건 잘못이야.",
    "blank": "विश्वास करना"
+  }
+ ],
+ "w|विष": [
+  {
+   "text": "खेत में साँप ने बछड़े को काटा, पर अमित ने समय पर विष उतार दिया।",
+   "en": "A snake bit the calf in the field, but Amit removed the venom in time.",
+   "ko": "밭에서 뱀이 송아지를 물었지만 아미트가 제때 독을 빼냈어요.",
+   "blank": "विष",
+   "src": "made"
+  },
+  {
+   "text": "सहेली ने एक पुरानी कहानी याद दिलाई जिसमें राजा के प्याले में विष मिलाया गया था।",
+   "en": "Her friend recalled an old story in which poison was mixed into the king's cup.",
+   "ko": "친구는 왕의 잔에 독을 탄 옛이야기를 떠올리게 했어요.",
+   "blank": "विष",
+   "src": "made"
   }
  ],
  "w|विषय": [
@@ -57743,6 +58271,22 @@
    "src": "made"
   }
  ],
+ "w|संकीर्ण": [
+  {
+   "text": "क्लिनिक का पिछला दरवाज़ा एक संकीर्ण गली में खुलता है।",
+   "en": "The clinic's back door opens onto a narrow lane.",
+   "ko": "병원 뒷문은 좁은 골목으로 나 있어요.",
+   "blank": "संकीर्ण",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि पुराने ज़माने की संकीर्ण सोच अब धीरे-धीरे बदल रही है।",
+   "en": "Neha wrote that the narrow thinking of old times is now slowly changing.",
+   "ko": "네하는 옛날의 편협한 생각이 이제 조금씩 바뀌고 있다고 썼어요.",
+   "blank": "संकीर्ण",
+   "src": "made"
+  }
+ ],
  "w|संकेत": [
   {
    "text": "ट्रैफ़िक संकेत लाल हो गया।",
@@ -59871,6 +60415,22 @@
    "src": "made"
   }
  ],
+ "w|समेटना": [
+  {
+   "text": "शाम को अमित ने मेज़ पर बिखरी फ़ाइलें समेटीं और घर चला गया।",
+   "en": "In the evening Amit gathered up the files scattered on the desk and went home.",
+   "ko": "저녁에 아미트는 책상에 흩어진 서류를 챙기고 집에 갔어요.",
+   "blank": "समेटीं",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने ढेर सारी यादें एक छोटे-से ख़त में समेट दीं।",
+   "en": "Neha gathered a heap of memories into one small letter.",
+   "ko": "네하는 수많은 추억을 짧은 편지 한 장에 담았어요.",
+   "blank": "समेट",
+   "src": "made"
+  }
+ ],
  "w|समेत": [
   {
    "text": "परिवार समेत सब लोग आ गए।",
@@ -60248,6 +60808,22 @@
    "en": "According to the municipal circular, keeping goods outside shops is not allowed.",
    "ko": "시청 공문에 따르면 가게 밖에 물건을 두는 건 금지예요.",
    "blank": "सर्कुलर",
+   "src": "made"
+  }
+ ],
+ "w|सर्जरी": [
+  {
+   "text": "टूटी हड्डी जोड़ने के लिए खरगोश की छोटी-सी सर्जरी करनी पड़ी।",
+   "en": "The rabbit needed a small surgery to set its broken bone.",
+   "ko": "부러진 뼈를 붙이려고 토끼에게 작은 수술을 해야 했어요.",
+   "blank": "सर्जरी",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि घुटने की सर्जरी के बाद वह फिर से टहलने लगी है।",
+   "en": "Neha wrote that after her knee surgery she has started walking again.",
+   "ko": "네하는 무릎 수술 후 다시 산책을 시작했다고 썼어요.",
+   "blank": "सर्जरी",
    "src": "made"
   }
  ],
@@ -62161,6 +62737,22 @@
    "en": "Teaching a new friend to tour the city is easy.",
    "ko": "새 친구에게 도시 안내하는 법을 가르치는 건 쉬워.",
    "blank": "सिखाना"
+  }
+ ],
+ "w|सिगरेट": [
+  {
+   "text": "अमित ने कुत्ते के मालिक से कहा कि घर में सिगरेट का धुआँ जानवरों को भी नुक़सान पहुँचाता है।",
+   "en": "Amit told the dog's owner that cigarette smoke at home harms animals too.",
+   "ko": "아미트는 개 주인에게 집 안 담배 연기는 동물에게도 해롭다고 말했어요.",
+   "blank": "सिगरेट",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने ख़ुशी से लिखा कि उसके पति ने आख़िरकार सिगरेट छोड़ दी है।",
+   "en": "Neha happily wrote that her husband has finally quit cigarettes.",
+   "ko": "네하는 남편이 드디어 담배를 끊었다고 기쁘게 썼어요.",
+   "blank": "सिगरेट",
+   "src": "made"
   }
  ],
  "w|सिग्नल": [
@@ -64471,6 +65063,22 @@
    "blank": "स्वच्छ"
   }
  ],
+ "w|स्वच्छता": [
+  {
+   "text": "अमित के क्लिनिक में स्वच्छता का पूरा ध्यान रखा जाता है।",
+   "en": "Great care is taken with cleanliness at Amit's clinic.",
+   "ko": "아미트의 병원은 위생에 철저히 신경 써요.",
+   "blank": "स्वच्छता",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि अब उनके पुराने मोहल्ले में स्वच्छता पहले से कहीं बेहतर है।",
+   "en": "Neha wrote that cleanliness in their old neighbourhood is now far better than before.",
+   "ko": "네하는 옛 동네가 이제 예전보다 훨씬 깨끗해졌다고 썼어요.",
+   "blank": "स्वच्छता",
+   "src": "made"
+  }
+ ],
  "w|स्वतः": [
   {
    "text": "सुमन का नाम पढ़ते ही राहुल के होंठों पर स्वतः मुस्कान आ गई।",
@@ -65689,6 +66297,22 @@
    "src": "made"
   }
  ],
+ "w|हानिकारक": [
+  {
+   "text": "प्लास्टिक की थैलियाँ गायों के लिए बेहद हानिकारक हैं, यह अमित सबको बताता है।",
+   "en": "Amit tells everyone that plastic bags are extremely harmful to cows.",
+   "ko": "아미트는 비닐봉지가 소에게 아주 해롭다고 모두에게 말해요.",
+   "blank": "हानिकारक",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने लिखा कि ज़्यादा चीनी सेहत के लिए हानिकारक है, मिठाई कम खाना।",
+   "en": "Neha wrote that too much sugar is harmful to health, so eat fewer sweets.",
+   "ko": "네하는 설탕을 많이 먹으면 건강에 해로우니 단것을 줄이라고 썼어요.",
+   "blank": "हानिकारक",
+   "src": "made"
+  }
+ ],
  "w|हाँफना": [
   {
    "text": "सीढ़ियाँ चढ़कर वह हाँफने लगा।",
@@ -66234,6 +66858,22 @@
    "en": "Saying goodbye to her old neighbors, Meena's heart was full.",
    "ko": "옛 이웃들과 작별하면서 미나는 가슴이 벅찼어요.",
    "blank": "हृदय",
+   "src": "made"
+  }
+ ],
+ "w|हृदय रोग": [
+  {
+   "text": "अमित ने बताया कि बड़ी नस्ल के कुत्तों में हृदय रोग ज़्यादा पाया जाता है।",
+   "en": "Amit said heart disease is found more often in large dog breeds.",
+   "ko": "아미트는 큰 개 품종에서 심장병이 더 흔하다고 했어요.",
+   "blank": "हृदय रोग",
+   "src": "made"
+  },
+  {
+   "text": "नेहा ने बताया कि पिताजी को हृदय रोग है, पर वे अब ठीक हैं।",
+   "en": "Neha told her that her father has heart disease, but he's fine now.",
+   "ko": "네하는 아버지가 심장병이 있지만 지금은 괜찮다고 알렸어요.",
+   "blank": "हृदय रोग",
    "src": "made"
   }
  ],

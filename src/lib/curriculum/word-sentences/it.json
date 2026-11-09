@@ -319,6 +319,22 @@
    "src": "made"
   }
  ],
+ "w|abusare": [
+  {
+   "text": "Andrea non vuole abusare della gentilezza del contadino che gli presta il prato.",
+   "en": "Andrea doesn't want to take advantage of the kindness of the farmer who lends him the meadow.",
+   "ko": "안드레아는 풀밭을 빌려준 농부의 호의에 기대고만 싶지 않아요.",
+   "blank": "abusare",
+   "src": "made"
+  },
+  {
+   "text": "Il medico dice a Martina di non abusare degli antidolorifici.",
+   "en": "The doctor tells Martina not to overuse painkillers.",
+   "ko": "의사가 마르티나에게 진통제를 남용하지 말라고 해요.",
+   "blank": "abusare",
+   "src": "made"
+  }
+ ],
  "w|accademia": [
   {
    "text": "Paolo ha intervistato il direttore dell'accademia di belle arti.",
@@ -2591,6 +2607,22 @@
    "blank": "ambasciatore"
   }
  ],
+ "w|ambientale": [
+  {
+   "text": "Andrea porta via tutta la spazzatura per rispetto ambientale.",
+   "en": "Andrea takes all his rubbish away out of respect for the environment.",
+   "ko": "안드레아는 환경을 생각해서 쓰레기를 모두 가져가요.",
+   "blank": "ambientale",
+   "src": "made"
+  },
+  {
+   "text": "Gli organizzatori fanno attenzione all'impatto ambientale della gara, e Martina apprezza.",
+   "en": "The organisers pay attention to the race's environmental impact, and Martina appreciates it.",
+   "ko": "주최 측이 대회의 환경 영향을 신경 써서 마르티나는 고마워해요.",
+   "blank": "ambientale",
+   "src": "made"
+  }
+ ],
  "w|ambiente": [
   {
    "text": "Dobbiamo proteggere l'ambiente.",
@@ -3779,6 +3811,22 @@
    "src": "made"
   }
  ],
+ "w|appropriato": [
+  {
+   "text": "Andrea porta scarpe appropriate per camminare sulle rocce.",
+   "en": "Andrea wears suitable shoes for walking on the rocks.",
+   "ko": "안드레아는 바위 위를 걷기에 알맞은 신발을 신어요.",
+   "blank": "appropriate",
+   "src": "made"
+  },
+  {
+   "text": "Martina sceglie un abbigliamento appropriato per la pioggia.",
+   "en": "Martina chooses clothing suitable for the rain.",
+   "ko": "마르티나는 비에 맞는 옷을 골라요.",
+   "blank": "appropriato",
+   "src": "made"
+  }
+ ],
  "w|approvare": [
   {
    "text": "Il comune deve approvare il nuovo regolamento del mercato prima dell'estate.",
@@ -3901,6 +3949,22 @@
    "src": "made"
   }
  ],
+ "w|aragosta": [
+  {
+   "text": "Un pescatore del posto vende ad Andrea un'aragosta appena pescata.",
+   "en": "A local fisherman sells Andrea a freshly caught lobster.",
+   "ko": "동네 어부가 안드레아에게 막 잡은 랍스터를 팔아요.",
+   "blank": "aragosta",
+   "src": "made"
+  },
+  {
+   "text": "Dopo la maratona Martina festeggia con un piatto di pasta all'aragosta.",
+   "en": "After the marathon Martina celebrates with a plate of lobster pasta.",
+   "ko": "마라톤이 끝나고 마르티나는 랍스터 파스타로 자축해요.",
+   "blank": "aragosta",
+   "src": "made"
+  }
+ ],
  "w|arancia": [
   {
    "text": "Spremo un'arancia fresca ogni mattina.",
@@ -3991,6 +4055,22 @@
    "src": "made"
   }
  ],
+ "w|arcobaleno": [
+  {
+   "text": "Dopo il temporale Andrea vede un arcobaleno sopra il lago.",
+   "en": "After the storm Andrea sees a rainbow over the lake.",
+   "ko": "폭풍우가 지나간 뒤 안드레아는 호수 위의 무지개를 봐요.",
+   "blank": "arcobaleno",
+   "src": "made"
+  },
+  {
+   "text": "Le amiche di Martina tengono uno striscione con un arcobaleno disegnato.",
+   "en": "Martina's friends hold a banner with a rainbow painted on it.",
+   "ko": "마르티나의 친구들이 무지개가 그려진 현수막을 들고 있어요.",
+   "blank": "arcobaleno",
+   "src": "made"
+  }
+ ],
  "w|ardente": [
   {
    "text": "Paolo è un ardente appassionato di pittura fiamminga.",
@@ -4019,6 +4099,22 @@
    "en": "The play area is closed today.",
    "ko": "놀이 구역은 오늘 닫혀 있어.",
    "blank": "area"
+  }
+ ],
+ "w|argento": [
+  {
+   "text": "All'alba il lago sembra d'argento e Andrea fa una foto.",
+   "en": "At dawn the lake looks like silver and Andrea takes a photo.",
+   "ko": "새벽에 호수가 은빛으로 빛나서 안드레아는 사진을 찍어요.",
+   "blank": "argento",
+   "src": "made"
+  },
+  {
+   "text": "Martina vince la medaglia d'argento nella sua categoria.",
+   "en": "Martina wins the silver medal in her category.",
+   "ko": "마르티나는 자기 부문에서 은메달을 따요.",
+   "blank": "argento",
+   "src": "made"
   }
  ],
  "w|argomento": [
@@ -4971,6 +5067,22 @@
    "en": "The auction starts from a very low figure.",
    "ko": "경매는 아주 낮은 금액부터 시작해.",
    "blank": "asta"
+  }
+ ],
+ "w|asteroide": [
+  {
+   "text": "Guardando le stelle, Andrea legge sul telefono di un asteroide che passa vicino alla Terra.",
+   "en": "Looking at the stars, Andrea reads on his phone about an asteroid passing close to Earth.",
+   "ko": "별을 보다가 안드레아는 지구 가까이 지나가는 소행성 소식을 휴대폰으로 읽어요.",
+   "blank": "asteroide",
+   "src": "made"
+  },
+  {
+   "text": "Il fratello di Martina, appassionato di spazio, ha chiamato la sua squadra «gli asteroidi».",
+   "en": "Martina's brother, a space enthusiast, has named his team \"the asteroids\".",
+   "ko": "우주를 좋아하는 마르티나의 오빠는 팀 이름을 \"소행성들\"이라고 지었어요.",
+   "blank": "asteroidi",
+   "src": "made"
   }
  ],
  "w|astronauta": [
@@ -6099,6 +6211,22 @@
    "src": "made"
   }
  ],
+ "w|avvoltoio": [
+  {
+   "text": "Un avvoltoio vola in cerchio sopra la valle e Andrea lo segue con lo sguardo.",
+   "en": "A vulture circles above the valley and Andrea follows it with his eyes.",
+   "ko": "독수리 한 마리가 골짜기 위를 맴돌고 안드레아는 그걸 눈으로 따라가요.",
+   "blank": "avvoltoio",
+   "src": "made"
+  },
+  {
+   "text": "Il giornalista che intervista Martina sembra un avvoltoio in cerca di lacrime.",
+   "en": "The journalist interviewing Martina looks like a vulture hunting for tears.",
+   "ko": "마르티나를 인터뷰하는 기자는 눈물을 노리는 독수리 같아요.",
+   "blank": "avvoltoio",
+   "src": "made"
+  }
+ ],
  "w|azienda": [
   {
    "text": "Lavoro in un'azienda di software da tre anni.",
@@ -6335,6 +6463,22 @@
    "en": "I'm going to take a hot bath.",
    "ko": "따뜻한 물로 목욕할게.",
    "blank": "bagno"
+  }
+ ],
+ "w|baia": [
+  {
+   "text": "Andrea pianta la tenda su una spiaggetta in fondo alla baia.",
+   "en": "Andrea pitches his tent on a little beach at the end of the bay.",
+   "ko": "안드레아는 만 안쪽 작은 해변에 텐트를 쳐요.",
+   "blank": "baia",
+   "src": "made"
+  },
+  {
+   "text": "Il percorso della maratona di Martina gira tutto intorno alla baia.",
+   "en": "The route of Martina's marathon goes all the way around the bay.",
+   "ko": "마르티나가 뛰는 마라톤 코스는 만을 한 바퀴 돌아요.",
+   "blank": "baia",
+   "src": "made"
   }
  ],
  "w|balcone": [
@@ -11951,6 +12095,22 @@
    "src": "made"
   }
  ],
+ "w|coccodrillo": [
+  {
+   "text": "Andrea scherza dicendo che nel fiume potrebbe esserci un coccodrillo.",
+   "en": "Andrea jokes that there could be a crocodile in the river.",
+   "ko": "안드레아는 강에 악어가 있을지도 모른다고 농담해요.",
+   "blank": "coccodrillo",
+   "src": "made"
+  },
+  {
+   "text": "Un uomo vestito da coccodrillo corre accanto a Martina per qualche chilometro.",
+   "en": "A man dressed as a crocodile runs next to Martina for a few kilometres.",
+   "ko": "악어 옷을 입은 남자가 몇 킬로미터 동안 마르티나 옆에서 달려요.",
+   "blank": "coccodrillo",
+   "src": "made"
+  }
+ ],
  "w|cocktail": [
   {
    "text": "Il sabato sera Stefano propone un cocktail analcolico ai clienti.",
@@ -12205,6 +12365,22 @@
    "en": "The necklace broke during the party.",
    "ko": "목걸이가 파티 중에 끊어졌어.",
    "blank": "collana"
+  }
+ ],
+ "w|collassare": [
+  {
+   "text": "Con il vento forte, la tenda di Andrea rischia di collassare.",
+   "en": "With the strong wind, Andrea's tent could collapse.",
+   "ko": "바람이 세서 안드레아의 텐트가 무너질 것 같아요.",
+   "blank": "collassare",
+   "src": "made"
+  },
+  {
+   "text": "Martina vede un corridore collassare vicino al traguardo e chiama i soccorsi.",
+   "en": "Martina sees a runner collapse near the finish line and calls for help.",
+   "ko": "마르티나는 결승선 근처에서 한 주자가 쓰러지는 걸 보고 구조를 요청해요.",
+   "blank": "collassare",
+   "src": "made"
   }
  ],
  "w|collaterale": [
@@ -12673,6 +12849,22 @@
    "blank": "come"
   }
  ],
+ "w|cometa": [
+  {
+   "text": "Di notte Andrea spera di vedere una cometa con il binocolo.",
+   "en": "At night Andrea hopes to see a comet with his binoculars.",
+   "ko": "밤에 안드레아는 쌍안경으로 혜성을 보고 싶어 해요.",
+   "blank": "cometa",
+   "src": "made"
+  },
+  {
+   "text": "Martina parte veloce come una cometa, ma poi rallenta.",
+   "en": "Martina starts off fast as a comet, but then slows down.",
+   "ko": "마르티나는 혜성처럼 빠르게 출발하지만 곧 속도를 줄여요.",
+   "blank": "cometa",
+   "src": "made"
+  }
+ ],
  "w|comico": [
   {
    "text": "Luca ha un talento comico e fa ridere tutta la classe con le sue imitazioni.",
@@ -13000,6 +13192,22 @@
    "en": "Sara tells Davide that in this office there's no need to compete with anyone.",
    "ko": "사라는 다비데에게 이 사무실에서는 누구와도 경쟁할 필요가 없다고 말해요.",
    "blank": "competere",
+   "src": "made"
+  }
+ ],
+ "w|competitivo": [
+  {
+   "text": "Andrea non è competitivo e lascia vincere gli amici a carte.",
+   "en": "Andrea isn't competitive and lets his friends win at cards.",
+   "ko": "안드레아는 승부욕이 없어서 카드놀이에서 친구들이 이기게 놔둬요.",
+   "blank": "competitivo",
+   "src": "made"
+  },
+  {
+   "text": "Martina è molto competitiva e vuole battere il suo record.",
+   "en": "Martina is very competitive and wants to beat her record.",
+   "ko": "마르티나는 승부욕이 강해서 자기 기록을 깨고 싶어 해요.",
+   "blank": "competitiva",
    "src": "made"
   }
  ],
@@ -15279,6 +15487,22 @@
    "en": "My body is sore.",
    "ko": "온몸이 뻐근해.",
    "blank": "corpo"
+  }
+ ],
+ "w|corporeo": [
+  {
+   "text": "Di notte fa freddo e Andrea sente calare la temperatura corporea.",
+   "en": "At night it's cold and Andrea feels his body temperature drop.",
+   "ko": "밤에 추워서 안드레아는 체온이 떨어지는 게 느껴져요.",
+   "blank": "corporea",
+   "src": "made"
+  },
+  {
+   "text": "L'allenatore controlla il peso corporeo di Martina ogni settimana.",
+   "en": "The coach checks Martina's body weight every week.",
+   "ko": "코치는 매주 마르티나의 체중을 확인해요.",
+   "blank": "corporeo",
+   "src": "made"
   }
  ],
  "w|correggere": [
@@ -17881,6 +18105,22 @@
    "en": "A small detail struck me.",
    "ko": "작은 세부 사항이 눈에 띄었어.",
    "blank": "dettaglio"
+  }
+ ],
+ "w|devastante": [
+  {
+   "text": "Una guardia racconta ad Andrea l'incendio devastante di qualche anno fa.",
+   "en": "A ranger tells Andrea about the devastating fire a few years ago.",
+   "ko": "관리인이 안드레아에게 몇 년 전의 참혹한 산불 이야기를 해 줘요.",
+   "blank": "devastante",
+   "src": "made"
+  },
+  {
+   "text": "Il crampo al chilometro trentacinque è stato devastante per Martina.",
+   "en": "The cramp at kilometre thirty-five was devastating for Martina.",
+   "ko": "삼십오 킬로미터 지점의 쥐가 마르티나에게는 치명적이었어요.",
+   "blank": "devastante",
+   "src": "made"
   }
  ],
  "w|devastare": [
@@ -24731,6 +24971,22 @@
    "blank": "fissava"
   }
  ],
+ "w|fisso": [
+  {
+   "text": "Andrea dorme sempre in un posto fisso vicino al ruscello.",
+   "en": "Andrea always sleeps in a fixed spot near the stream.",
+   "ko": "안드레아는 늘 개울 근처 정해진 자리에서 자요.",
+   "blank": "fisso",
+   "src": "made"
+  },
+  {
+   "text": "Martina tiene un ritmo fisso per tutta la prima metà della gara.",
+   "en": "Martina keeps a steady pace for the whole first half of the race.",
+   "ko": "마르티나는 경기 전반 내내 일정한 속도를 유지해요.",
+   "blank": "fisso",
+   "src": "made"
+  }
+ ],
  "w|fiume": [
   {
    "text": "Il fiume attraversa tutta la valle.",
@@ -24758,6 +25014,22 @@
    "en": "Two students try to flirt among the shelves, and Giulia smiles.",
    "ko": "학생 둘이 책장 사이에서 썸을 타려 하자 줄리아가 미소 지어요.",
    "blank": "flirtare",
+   "src": "made"
+  }
+ ],
+ "w|flora": [
+  {
+   "text": "Andrea studia la flora del parco con una piccola guida illustrata.",
+   "en": "Andrea studies the park's plant life with a small illustrated guide.",
+   "ko": "안드레아는 작은 그림 안내서로 공원의 식물을 공부해요.",
+   "blank": "flora",
+   "src": "made"
+  },
+  {
+   "text": "Lungo il percorso Martina nota la flora tipica della costa.",
+   "en": "Along the route Martina notices the typical plants of the coast.",
+   "ko": "코스를 달리며 마르티나는 해안 특유의 식물들을 눈여겨봐요.",
+   "blank": "flora",
    "src": "made"
   }
  ],
@@ -28489,6 +28761,22 @@
    "blank": "guidare"
   }
  ],
+ "w|guscio": [
+  {
+   "text": "Vicino al fuoco Andrea trova il guscio vuoto di una tartaruga.",
+   "en": "Near the fire Andrea finds the empty shell of a tortoise.",
+   "ko": "모닥불 근처에서 안드레아는 거북이의 빈 껍데기를 발견해요.",
+   "blank": "guscio",
+   "src": "made"
+  },
+  {
+   "text": "Al ristoro Martina mangia una noce e butta il guscio nel cestino.",
+   "en": "At the refreshment point Martina eats a walnut and throws the shell in the bin.",
+   "ko": "급수대에서 마르티나는 호두를 먹고 껍데기를 쓰레기통에 버려요.",
+   "blank": "guscio",
+   "src": "made"
+  }
+ ],
  "w|gusto": [
   {
    "text": "Questo gelato ha un gusto incredibile.",
@@ -30259,6 +30547,22 @@
    "blank": "indagine"
   }
  ],
+ "w|indebolire": [
+  {
+   "text": "Il freddo della notte rischia di indebolire Andrea, che ha la febbre.",
+   "en": "The cold of the night could weaken Andrea, who has a fever.",
+   "ko": "열이 나는 안드레아는 밤 추위에 몸이 약해질까 봐 걱정이에요.",
+   "blank": "indebolire",
+   "src": "made"
+  },
+  {
+   "text": "Il caldo comincia a indebolire Martina dopo trenta chilometri.",
+   "en": "The heat starts to weaken Martina after thirty kilometres.",
+   "ko": "삼십 킬로미터를 넘자 더위에 마르티나의 힘이 빠지기 시작해요.",
+   "blank": "indebolire",
+   "src": "made"
+  }
+ ],
  "w|indiano": [
   {
    "text": "Il ristorante indiano è sempre pieno.",
@@ -30362,6 +30666,22 @@
    "en": "Anna left her permanent job to have more independence.",
    "ko": "안나는 더 자유롭게 일하려고 정규직을 그만뒀어요.",
    "blank": "indipendenza",
+   "src": "made"
+  }
+ ],
+ "w|indirizzare": [
+  {
+   "text": "La guardia forestale riesce a indirizzare Andrea verso il sentiero giusto.",
+   "en": "The forest ranger manages to point Andrea towards the right path.",
+   "ko": "산림 감시원이 안드레아에게 맞는 길을 알려 줘요.",
+   "blank": "indirizzare",
+   "src": "made"
+  },
+  {
+   "text": "Un volontario deve indirizzare Martina verso il deposito delle borse.",
+   "en": "A volunteer has to direct Martina towards the bag drop.",
+   "ko": "자원봉사자가 마르티나에게 짐 보관소를 안내해야 해요.",
+   "blank": "indirizzare",
    "src": "made"
   }
  ],
@@ -34641,6 +34961,22 @@
    "blank": "Loro"
   }
  ],
+ "w|losco": [
+  {
+   "text": "Di notte Andrea vede un tipo losco aggirarsi vicino alle macchine.",
+   "en": "At night Andrea sees a shady character hanging around near the cars.",
+   "ko": "밤에 안드레아는 수상한 사람이 차들 근처를 서성이는 걸 봐요.",
+   "blank": "losco",
+   "src": "made"
+  },
+  {
+   "text": "Prima della gara un uomo losco offre a Martina pillole per correre più veloce, e lei rifiuta.",
+   "en": "Before the race a shady man offers Martina pills to run faster, and she refuses.",
+   "ko": "경기 전에 수상한 남자가 마르티나에게 더 빨리 뛰는 약을 권하지만 거절해요.",
+   "blank": "losco",
+   "src": "made"
+  }
+ ],
  "w|lotta": [
   {
    "text": "La lotta per la giustizia continua.",
@@ -37345,6 +37681,22 @@
    "src": "made"
   }
  ],
+ "w|meteorite": [
+  {
+   "text": "Un ranger mostra ad Andrea una pietra scura che secondo lui è un meteorite.",
+   "en": "A ranger shows Andrea a dark stone that he says is a meteorite.",
+   "ko": "공원 관리인이 안드레아에게 운석이라고 하는 검은 돌을 보여 줘요.",
+   "blank": "meteorite",
+   "src": "made"
+  },
+  {
+   "text": "All'arrivo Martina passa come un meteorite davanti al pubblico.",
+   "en": "At the finish Martina shoots past the crowd like a meteorite.",
+   "ko": "결승선에서 마르티나는 관중 앞을 운석처럼 쏜살같이 지나가요.",
+   "blank": "meteorite",
+   "src": "made"
+  }
+ ],
  "w|metodo": [
   {
    "text": "Questo metodo di studio funziona bene.",
@@ -38809,6 +39161,22 @@
    "blank": "mucchio"
   }
  ],
+ "w|mulo": [
+  {
+   "text": "Un mulo porta lo zaino di Andrea fino al rifugio.",
+   "en": "A mule carries Andrea's backpack up to the mountain hut.",
+   "ko": "노새가 안드레아의 배낭을 산장까지 날라요.",
+   "blank": "mulo",
+   "src": "made"
+  },
+  {
+   "text": "Martina è testarda come un mulo e non si ferma neanche con il dolore.",
+   "en": "Martina is as stubborn as a mule and doesn't stop even when it hurts.",
+   "ko": "마르티나는 노새처럼 고집이 세서 아파도 멈추지 않아요.",
+   "blank": "mulo",
+   "src": "made"
+  }
+ ],
  "w|multa": [
   {
    "text": "Davide è andato in comune a pagare una multa per divieto di sosta.",
@@ -40179,6 +40547,22 @@
    "en": "We received the invitation to the wedding.",
    "ko": "결혼식 초대장을 받았어.",
    "blank": "nozze"
+  }
+ ],
+ "w|nube": [
+  {
+   "text": "Una nube nera copre il sole e Andrea chiude in fretta la tenda.",
+   "en": "A black cloud covers the sun and Andrea quickly zips up the tent.",
+   "ko": "검은 구름이 해를 가리자 안드레아는 서둘러 텐트를 닫아요.",
+   "blank": "nube",
+   "src": "made"
+  },
+  {
+   "text": "Dopo il traguardo Martina è avvolta in una nube di coriandoli.",
+   "en": "After the finish line Martina is wrapped in a cloud of confetti.",
+   "ko": "결승선을 지나자 마르티나는 색종이 구름에 휩싸여요.",
+   "blank": "nube",
+   "src": "made"
   }
  ],
  "w|nucleare": [
@@ -42925,6 +43309,22 @@
    "blank": "papà"
   }
  ],
+ "w|pappagallo": [
+  {
+   "text": "Nel campeggio un bambino ha portato il suo pappagallo, e Andrea lo sente parlare.",
+   "en": "At the campsite a child has brought his parrot, and Andrea hears it talk.",
+   "ko": "야영장에 한 아이가 앵무새를 데려와서 안드레아는 앵무새가 말하는 걸 들어요.",
+   "blank": "pappagallo",
+   "src": "made"
+  },
+  {
+   "text": "Un tifoso con un pappagallo sulla spalla incoraggia Martina.",
+   "en": "A fan with a parrot on his shoulder cheers Martina on.",
+   "ko": "어깨에 앵무새를 얹은 응원객이 마르티나를 응원해요.",
+   "blank": "pappagallo",
+   "src": "made"
+  }
+ ],
  "w|paradiso": [
   {
    "text": "Questa spiaggia sembra un paradiso.",
@@ -43237,6 +43637,22 @@
    "blank": "partecipare"
   }
  ],
+ "w|partecipazione": [
+  {
+   "text": "La partecipazione al campo scout ha insegnato ad Andrea ad accendere il fuoco.",
+   "en": "Taking part in scout camp taught Andrea how to light a fire.",
+   "ko": "스카우트 캠프에 참여하면서 안드레아는 불 피우는 법을 배웠어요.",
+   "blank": "partecipazione",
+   "src": "made"
+  },
+  {
+   "text": "La partecipazione alla maratona costa a Martina quaranta euro.",
+   "en": "Taking part in the marathon costs Martina forty euros.",
+   "ko": "마라톤 참가비로 마르티나는 사십 유로를 내요.",
+   "blank": "partecipazione",
+   "src": "made"
+  }
+ ],
  "w|partenza": [
   {
    "text": "La partenza del treno è alle otto.",
@@ -43451,6 +43867,22 @@
    "en": "Going out for a walk after dinner is good for you.",
    "ko": "저녁 먹고 산책하러 나가면 좋아.",
    "blank": "passeggiare"
+  }
+ ],
+ "w|passero": [
+  {
+   "text": "Un passero si posa sulla tenda di Andrea e becca le briciole.",
+   "en": "A sparrow lands on Andrea's tent and pecks at the crumbs.",
+   "ko": "참새 한 마리가 안드레아의 텐트에 앉아 부스러기를 쪼아 먹어요.",
+   "blank": "passero",
+   "src": "made"
+  },
+  {
+   "text": "Prima della partenza Martina guarda un passero che salta sulla linea bianca.",
+   "en": "Before the start Martina watches a sparrow hopping on the white line.",
+   "ko": "출발 전에 마르티나는 하얀 선 위를 깡충거리는 참새를 바라봐요.",
+   "blank": "passero",
+   "src": "made"
   }
  ],
  "w|passione": [
@@ -45419,6 +45851,22 @@
    "en": "He dreams of becoming an airplane pilot.",
    "ko": "그는 비행기 조종사가 되는 꿈을 꿔.",
    "blank": "pilota"
+  }
+ ],
+ "w|pinguino": [
+  {
+   "text": "Il sacco a pelo di Andrea ha un pinguino disegnato sopra.",
+   "en": "Andrea's sleeping bag has a penguin drawn on it.",
+   "ko": "안드레아의 침낭에는 펭귄 그림이 그려져 있어요.",
+   "blank": "pinguino",
+   "src": "made"
+  },
+  {
+   "text": "Un corridore vestito da pinguino supera Martina al chilometro venti.",
+   "en": "A runner dressed as a penguin overtakes Martina at kilometre twenty.",
+   "ko": "이십 킬로미터 지점에서 펭귄 옷을 입은 주자가 마르티나를 앞질러요.",
+   "blank": "pinguino",
+   "src": "made"
   }
  ],
  "w|pioggia": [
@@ -48911,6 +49359,22 @@
    "blank": "pugno"
   }
  ],
+ "w|pulce": [
+  {
+   "text": "Il cane di Andrea torna dal bosco pieno di pulci.",
+   "en": "Andrea's dog comes back from the woods covered in fleas.",
+   "ko": "안드레아의 개가 벼룩투성이가 되어 숲에서 돌아와요.",
+   "blank": "pulci",
+   "src": "made"
+  },
+  {
+   "text": "Martina è così nervosa che salta come una pulce prima del via.",
+   "en": "Martina is so nervous that she jumps around like a flea before the start.",
+   "ko": "마르티나는 너무 긴장해서 출발 전에 벼룩처럼 폴짝폴짝 뛰어요.",
+   "blank": "pulce",
+   "src": "made"
+  }
+ ],
  "w|pulire": [
   {
    "text": "Devo pulire la cucina stasera.",
@@ -50533,6 +50997,22 @@
    "en": "I'm waiting for an official reaction from the government.",
    "ko": "정부의 공식 반응을 기다려.",
    "blank": "reazione"
+  }
+ ],
+ "w|recare": [
+  {
+   "text": "Ogni estate Andrea si reca in campeggio nello stesso bosco.",
+   "en": "Every summer Andrea goes camping in the same woods.",
+   "ko": "안드레아는 여름마다 같은 숲으로 캠핑을 가요.",
+   "blank": "reca",
+   "src": "made"
+  },
+  {
+   "text": "Martina si reca alla partenza con un'ora di anticipo.",
+   "en": "Martina goes to the start an hour early.",
+   "ko": "마르티나는 한 시간 일찍 출발선으로 가요.",
+   "blank": "reca",
+   "src": "made"
   }
  ],
  "w|recente": [
@@ -52433,6 +52913,22 @@
    "blank": "rimuovere"
   }
  ],
+ "w|rinascere": [
+  {
+   "text": "Dopo l'incendio di qualche anno fa, Andrea vede il bosco rinascere.",
+   "en": "After the fire a few years ago, Andrea sees the woods coming back to life.",
+   "ko": "몇 년 전 산불 이후 안드레아는 숲이 되살아나는 걸 봐요.",
+   "blank": "rinascere",
+   "src": "made"
+  },
+  {
+   "text": "Dopo un anno di infortuni, Martina si sente rinascere sulla linea di partenza.",
+   "en": "After a year of injuries, Martina feels reborn on the starting line.",
+   "ko": "일 년 동안 부상에 시달린 마르티나는 출발선에서 다시 태어난 기분이에요.",
+   "blank": "rinascere",
+   "src": "made"
+  }
+ ],
  "w|rinchiudere": [
   {
    "text": "Per sbaglio un cameriere ha rinchiuso Stefano nella dispensa per qualche minuto.",
@@ -52944,6 +53440,22 @@
    "en": "Elena found a mistake in the tie inventory.",
    "ko": "엘레나는 넥타이 재고 목록에서 오류를 발견했어요.",
    "blank": "riscontrare",
+   "src": "made"
+  }
+ ],
+ "w|riscuotere": [
+  {
+   "text": "Il custode del campeggio passa a riscuotere la quota da Andrea.",
+   "en": "The campsite keeper comes by to collect the fee from Andrea.",
+   "ko": "야영장 관리인이 안드레아에게 이용료를 받으러 와요.",
+   "blank": "riscuotere",
+   "src": "made"
+  },
+  {
+   "text": "Martina è passata in banca a riscuotere il premio della gara.",
+   "en": "Martina went to the bank to cash the race prize.",
+   "ko": "마르티나는 대회 상금을 찾으러 은행에 들렀어요.",
+   "blank": "riscuotere",
    "src": "made"
   }
  ],
@@ -56611,6 +57123,22 @@
    "blank": "selvaggio"
   }
  ],
+ "w|selvatico": [
+  {
+   "text": "Andrea raccoglie fragole selvatiche lungo il sentiero.",
+   "en": "Andrea picks wild strawberries along the path.",
+   "ko": "안드레아는 오솔길을 따라 산딸기를 따요.",
+   "blank": "selvatiche",
+   "src": "made"
+  },
+  {
+   "text": "Nel parco un coniglio selvatico attraversa la strada davanti a Martina.",
+   "en": "In the park a wild rabbit crosses the road in front of Martina.",
+   "ko": "공원에서 산토끼 한 마리가 마르티나 앞으로 길을 건너요.",
+   "blank": "selvatico",
+   "src": "made"
+  }
+ ],
  "w|semaforo": [
   {
    "text": "Fermati al semaforo rosso.",
@@ -59217,6 +59745,22 @@
    "src": "made"
   }
  ],
+ "w|sorgente": [
+  {
+   "text": "Andrea riempie la borraccia a una sorgente di acqua fresca.",
+   "en": "Andrea fills his water bottle at a spring of fresh water.",
+   "ko": "안드레아는 맑은 샘에서 물병을 채워요.",
+   "blank": "sorgente",
+   "src": "made"
+  },
+  {
+   "text": "Per Martina la corsa è una sorgente di energia per tutta la settimana.",
+   "en": "For Martina running is a source of energy for the whole week.",
+   "ko": "마르티나에게 달리기는 한 주 내내 힘이 나는 원천이에요.",
+   "blank": "sorgente",
+   "src": "made"
+  }
+ ],
  "w|sorgere": [
   {
    "text": "Andrea si sveglia presto per vedere il sole sorgere dietro gli alberi.",
@@ -60088,6 +60632,22 @@
    "en": "For her thesis, Giulia asks a specialist in ancient manuscripts for help.",
    "ko": "논문을 위해 줄리아는 고문서 전문가에게 도움을 청해요.",
    "blank": "specialista",
+   "src": "made"
+  }
+ ],
+ "w|specializzato": [
+  {
+   "text": "Andrea compra la tenda in un negozio specializzato in montagna.",
+   "en": "Andrea buys the tent in a shop that specialises in mountain gear.",
+   "ko": "안드레아는 등산 전문점에서 텐트를 사요.",
+   "blank": "specializzato",
+   "src": "made"
+  },
+  {
+   "text": "Martina si allena con un medico specializzato in sport.",
+   "en": "Martina trains with a doctor who specialises in sport.",
+   "ko": "마르티나는 스포츠 전문 의사와 함께 훈련해요.",
+   "blank": "specializzato",
    "src": "made"
   }
  ],
@@ -60987,6 +61547,22 @@
    "en": "This theater season was beautiful.",
    "ko": "이번 연극 시즌은 아름다웠어.",
    "blank": "stagione"
+  }
+ ],
+ "w|stagno": [
+  {
+   "text": "Di sera le rane cantano nello stagno vicino alla tenda di Andrea.",
+   "en": "In the evening the frogs croak in the pond near Andrea's tent.",
+   "ko": "저녁이면 안드레아의 텐트 근처 연못에서 개구리들이 울어요.",
+   "blank": "stagno",
+   "src": "made"
+  },
+  {
+   "text": "Il percorso passa accanto a uno stagno pieno di anatre, e Martina sorride.",
+   "en": "The route passes by a pond full of ducks, and Martina smiles.",
+   "ko": "코스가 오리로 가득한 연못 옆을 지나가서 마르티나가 미소 지어요.",
+   "blank": "stagno",
+   "src": "made"
   }
  ],
  "w|stalla": [
@@ -64001,6 +64577,22 @@
    "blank": "terzo"
   }
  ],
+ "w|teschio": [
+  {
+   "text": "Nel bosco Andrea trova il teschio di una volpe tra le foglie.",
+   "en": "In the woods Andrea finds the skull of a fox among the leaves.",
+   "ko": "숲에서 안드레아는 낙엽 사이에서 여우 두개골을 발견해요.",
+   "blank": "teschio",
+   "src": "made"
+  },
+  {
+   "text": "Sulla maglietta di Martina c'è un teschio con gli occhiali da sole.",
+   "en": "On Martina's T-shirt there is a skull wearing sunglasses.",
+   "ko": "마르티나의 티셔츠에는 선글라스를 낀 해골이 그려져 있어요.",
+   "blank": "teschio",
+   "src": "made"
+  }
+ ],
  "w|teso": [
   {
    "text": "A cena l'aria tra Marco ed Elena era tesa, e nessuno parlava.",
@@ -64580,6 +65172,22 @@
    "en": "For Elena the humid heat of August is torture.",
    "ko": "엘레나에게 팔월의 습한 더위는 고통이에요.",
    "blank": "tormento",
+   "src": "made"
+  }
+ ],
+ "w|tornado": [
+  {
+   "text": "Alla radio Andrea sente che un tornado ha colpito una zona lontana.",
+   "en": "On the radio Andrea hears that a tornado has hit a far-off area.",
+   "ko": "라디오에서 안드레아는 멀리 떨어진 지역에 토네이도가 닥쳤다는 소식을 들어요.",
+   "blank": "tornado",
+   "src": "made"
+  },
+  {
+   "text": "Il vento è così forte che Martina dice di correre dentro un tornado.",
+   "en": "The wind is so strong that Martina says she's running inside a tornado.",
+   "ko": "바람이 너무 세서 마르티나는 토네이도 속을 달리는 것 같다고 해요.",
+   "blank": "tornado",
    "src": "made"
   }
  ],
@@ -65237,6 +65845,22 @@
    "blank": "trascorrere"
   }
  ],
+ "w|trascurare": [
+  {
+   "text": "Andrea non vuole trascurare la sicurezza e controlla le previsioni.",
+   "en": "Andrea doesn't want to neglect safety and checks the forecast.",
+   "ko": "안드레아는 안전을 소홀히 하고 싶지 않아서 일기예보를 확인해요.",
+   "blank": "trascurare",
+   "src": "made"
+  },
+  {
+   "text": "Per allenarsi, Martina non deve trascurare il riposo.",
+   "en": "To train well, Martina mustn't neglect rest.",
+   "ko": "훈련을 위해 마르티나는 휴식을 소홀히 하면 안 돼요.",
+   "blank": "trascurare",
+   "src": "made"
+  }
+ ],
  "w|trasferimento": [
   {
    "text": "Il trasferimento in un'altra città è vicino.",
@@ -65686,6 +66310,22 @@
    "en": "Giulia won a small wooden trophy in the campsite fishing contest.",
    "ko": "줄리아는 캠핑장 낚시 대회에서 작은 나무 트로피를 받았어요.",
    "blank": "trofeo",
+   "src": "made"
+  }
+ ],
+ "w|tronco": [
+  {
+   "text": "Andrea si siede su un tronco caduto per mangiare il panino.",
+   "en": "Andrea sits on a fallen log to eat his sandwich.",
+   "ko": "안드레아는 쓰러진 통나무에 앉아 샌드위치를 먹어요.",
+   "blank": "tronco",
+   "src": "made"
+  },
+  {
+   "text": "Durante l'allenamento Martina fa stretching appoggiata al tronco di un platano.",
+   "en": "During training Martina stretches leaning against the trunk of a plane tree.",
+   "ko": "훈련 중에 마르티나는 플라타너스 줄기에 기대어 스트레칭을 해요.",
+   "blank": "tronco",
    "src": "made"
   }
  ],

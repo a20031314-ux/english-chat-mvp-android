@@ -1625,6 +1625,22 @@
    "src": "tatoeba:3461047/odexed en:3238867/CK"
   }
  ],
+ "w|безразличный": [
+  {
+   "text": "Сестре показалось, что Андрей стал безразличным к семье.",
+   "en": "It seemed to his sister that Andrey had become indifferent to the family.",
+   "ko": "누나는 안드레이가 가족에게 무관심해졌다고 느꼈어요.",
+   "blank": "безразличным",
+   "src": "made"
+  },
+  {
+   "text": "Прохожие на тротуаре смотрели на бегунов безразличным взглядом, но Ирина не обращала внимания.",
+   "en": "Passers-by on the pavement looked at the runners with indifferent eyes, but Irina paid no attention.",
+   "ko": "길가 행인들은 무심한 눈으로 주자들을 봤지만 이리나는 신경 쓰지 않았어요.",
+   "blank": "безразличным",
+   "src": "made"
+  }
+ ],
  "w|безумие": [
   {
    "text": "Закончится ли это безумие когда-нибудь?",
@@ -6287,6 +6303,22 @@
    "src": "tatoeba:13720489/marafon en:13720478/araneo"
   }
  ],
+ "w|волнение": [
+  {
+   "text": "От волнения Андрей забыл всё, что хотел сказать сестре.",
+   "en": "From nerves Andrey forgot everything he wanted to say to his sister.",
+   "ko": "긴장한 나머지 안드레이는 누나에게 하려던 말을 다 잊어버렸어요.",
+   "blank": "волнения",
+   "src": "made"
+  },
+  {
+   "text": "Перед стартом Ирина не могла скрыть волнение.",
+   "en": "Before the start Irina couldn't hide her excitement.",
+   "ko": "출발 전에 이리나는 설렘을 감추지 못했어요.",
+   "blank": "волнение",
+   "src": "made"
+  }
+ ],
  "w|волновать": [
   {
    "text": "Почему меня должны волновать твои проблемы?",
@@ -8065,6 +8097,22 @@
    "src": "made"
   }
  ],
+ "w|выдвинуть": [
+  {
+   "text": "На семейном совете Андрей выдвинул идею встречать праздники вместе.",
+   "en": "At the family meeting Andrey put forward the idea of celebrating holidays together.",
+   "ko": "가족회의에서 안드레이는 명절을 함께 보내자고 제안했어요.",
+   "blank": "выдвинул",
+   "src": "made"
+  },
+  {
+   "text": "Клуб выдвинул Ирину капитаном команды на эстафете.",
+   "en": "The club put Irina forward as team captain for the relay.",
+   "ko": "클럽은 이리나를 계주 팀 주장으로 내세웠어요.",
+   "blank": "выдвинул",
+   "src": "made"
+  }
+ ],
  "w|выдержать": [
   {
    "text": "Никита не смог выдержать полный час кардио и сошёл с дорожки.",
@@ -8142,6 +8190,22 @@
    "en": "A colleague joked that the first week for Elena is a survival course.",
    "ko": "동료는 옐레나에게 첫 주는 생존 훈련이라고 농담했어요.",
    "blank": "выживание",
+   "src": "made"
+  }
+ ],
+ "w|выживать": [
+  {
+   "text": "Андрей говорит, что в семье выживать помогает только чувство юмора.",
+   "en": "Andrey says that only a sense of humor helps you survive in a family.",
+   "ko": "안드레이는 가족 안에서 버티게 해 주는 건 유머 감각뿐이라고 말해요.",
+   "blank": "выживать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина шутит, что на последних километрах уже не бежит, а выживает.",
+   "en": "Irina jokes that on the last kilometers she's no longer running but surviving.",
+   "ko": "이리나는 마지막 몇 킬로미터에선 달리는 게 아니라 버티는 거라고 농담해요.",
+   "blank": "выживает",
    "src": "made"
   }
  ],
@@ -9847,6 +9911,22 @@
    "src": "made"
   }
  ],
+ "w|годовщина": [
+  {
+   "text": "Андрей забыл поздравить сестру с годовщиной свадьбы, и она обиделась.",
+   "en": "Andrey forgot to congratulate his sister on her wedding anniversary, and she was offended.",
+   "ko": "안드레이가 누나의 결혼기념일 축하를 잊어서 누나가 서운해했어요.",
+   "blank": "годовщиной",
+   "src": "made"
+  },
+  {
+   "text": "Ирина отметила годовщину своего первого марафона новым забегом.",
+   "en": "Irina marked the anniversary of her first marathon with a new race.",
+   "ko": "이리나는 첫 마라톤 기념일을 새 대회로 기념했어요.",
+   "blank": "годовщину",
+   "src": "made"
+  }
+ ],
  "w|голова": [
   {
    "text": "У меня болит голова.",
@@ -10096,6 +10176,22 @@
    "en": "This garden is our family's pride.",
    "ko": "이 정원은 우리 가족의 자랑이에요.",
    "blank": "гордость",
+   "src": "made"
+  }
+ ],
+ "w|гордый": [
+  {
+   "text": "Андрей слишком гордый, чтобы первым просить прощения.",
+   "en": "Andrey is too proud to be the first to ask forgiveness.",
+   "ko": "안드레이는 자존심이 세서 먼저 사과하지 못해요.",
+   "blank": "гордый",
+   "src": "made"
+  },
+  {
+   "text": "Ирина была гордой, когда повесила на стену первую медаль.",
+   "en": "Irina was proud when she hung her first medal on the wall.",
+   "ko": "이리나는 첫 메달을 벽에 걸면서 뿌듯했어요.",
+   "blank": "гордой",
    "src": "made"
   }
  ],
@@ -11053,6 +11149,22 @@
    "ko": "왜 그렇게 멀리 주차했어요?",
    "blank": "далеко",
    "src": "tatoeba:7989206/marafon en:7989201/CK"
+  }
+ ],
+ "w|дальнейший": [
+  {
+   "text": "Андрей не знал, как вести себя с сестрой при дальнейших встречах.",
+   "en": "Andrey didn't know how to behave with his sister at further meetings.",
+   "ko": "안드레이는 앞으로 누나를 만나면 어떻게 대해야 할지 몰랐어요.",
+   "blank": "дальнейших",
+   "src": "made"
+  },
+  {
+   "text": "Тренер обсудил с Ириной дальнейший план тренировок.",
+   "en": "The coach discussed the further training plan with Irina.",
+   "ko": "코치는 이리나와 앞으로의 훈련 계획을 이야기했어요.",
+   "blank": "дальнейший",
+   "src": "made"
   }
  ],
  "w|дальше": [
@@ -12251,6 +12363,22 @@
    "src": "tatoeba:8921515/marafon en:8919120/CK"
   }
  ],
+ "w|длиться": [
+  {
+   "text": "Молчание между Андреем и сестрой длилось почти месяц.",
+   "en": "The silence between Andrey and his sister lasted almost a month.",
+   "ko": "안드레이와 누나 사이의 침묵은 거의 한 달 동안 이어졌어요.",
+   "blank": "длилось",
+   "src": "made"
+  },
+  {
+   "text": "Подготовка Ирины к марафону длится уже полгода.",
+   "en": "Irina's marathon preparation has been going on for half a year.",
+   "ko": "이리나의 마라톤 준비는 벌써 반년째 이어지고 있어요.",
+   "blank": "длится",
+   "src": "made"
+  }
+ ],
  "w|для": [
   {
    "text": "Это подарок для тебя.",
@@ -12420,6 +12548,22 @@
    "en": "Natalia volunteered to help the neighbors gather hay.",
    "ko": "나탈리야는 자청해서 이웃의 건초 거두기를 도왔어요.",
    "blank": "добровольно",
+   "src": "made"
+  }
+ ],
+ "w|доброта": [
+  {
+   "text": "Сестра Андрея всегда славилась своей добротой.",
+   "en": "Andrey's sister was always known for her kindness.",
+   "ko": "안드레이의 누나는 늘 마음씨가 착하기로 유명했어요.",
+   "blank": "добротой",
+   "src": "made"
+  },
+  {
+   "text": "Ирину тронула доброта волонтёров, раздававших воду под дождём.",
+   "en": "Irina was touched by the kindness of the volunteers handing out water in the rain.",
+   "ko": "이리나는 빗속에서 물을 나눠 주는 자원봉사자들의 친절에 감동했어요.",
+   "blank": "доброта",
    "src": "made"
   }
  ],
@@ -14206,6 +14350,22 @@
    "en": "After the salty fish Tatyana was overcome by thirst and asked for a jug of water.",
    "ko": "짠 생선을 먹고 나서 타티야나는 목이 너무 말라서 물 한 병을 달라고 했어요.",
    "blank": "жажда",
+   "src": "made"
+  }
+ ],
+ "w|жаждать": [
+  {
+   "text": "Андрей жаждал объяснений, но сестра молчала.",
+   "en": "Andrey longed for an explanation, but his sister stayed silent.",
+   "ko": "안드레이는 설명을 듣고 싶었지만 누나는 아무 말도 하지 않았어요.",
+   "blank": "жаждал",
+   "src": "made"
+  },
+  {
+   "text": "На последнем километре Ирина жаждала только глотка воды.",
+   "en": "On the last kilometer Irina craved only a sip of water.",
+   "ko": "마지막 1킬로미터에서 이리나는 물 한 모금만 간절했어요.",
+   "blank": "жаждала",
    "src": "made"
   }
  ],
@@ -18035,6 +18195,22 @@
    "src": "tatoeba:5173928/marafon en:5173879/CK"
   }
  ],
+ "w|злость": [
+  {
+   "text": "Как только Андрей услышал голос сестры, вся его злость прошла.",
+   "en": "As soon as Andrey heard his sister's voice, all his anger passed.",
+   "ko": "누나 목소리를 듣자마자 안드레이의 화가 다 풀렸어요.",
+   "blank": "злость",
+   "src": "made"
+  },
+  {
+   "text": "Ирина превратила злость на мокрые кроссовки в скорость.",
+   "en": "Irina turned her anger at her wet sneakers into speed.",
+   "ko": "이리나는 젖은 운동화 때문에 난 화를 속도로 바꿨어요.",
+   "blank": "злость",
+   "src": "made"
+  }
+ ],
  "w|змея": [
   {
    "text": "Какой длины была змея, которую ты поймал?",
@@ -20645,6 +20821,22 @@
    "ko": "그 사람 앞에서는 이 얘기를 꺼내지 않는 게 좋아요.",
    "blank": "касаться",
    "src": "tatoeba:10864850/marafon en:13585741/Native77"
+  }
+ ],
+ "w|касса": [
+  {
+   "text": "Андрей встретил сестру у кассы супермаркета и не знал, поздороваться ли.",
+   "en": "Andrey ran into his sister at the supermarket checkout and didn't know whether to say hello.",
+   "ko": "안드레이는 마트 계산대에서 누나를 마주치고 인사를 해야 할지 망설였어요.",
+   "blank": "кассы",
+   "src": "made"
+  },
+  {
+   "text": "Номер участника Ирина получила в кассе у стадиона.",
+   "en": "Irina picked up her race number at the desk by the stadium.",
+   "ko": "이리나는 경기장 옆 접수 창구에서 참가 번호를 받았어요.",
+   "blank": "кассе",
+   "src": "made"
   }
  ],
  "w|кассета": [
@@ -24353,6 +24545,22 @@
    "src": "made"
   }
  ],
+ "w|лента": [
+  {
+   "text": "Андрей завязал на подарке сестре голубую ленту.",
+   "en": "Andrey tied a blue ribbon on the gift for his sister.",
+   "ko": "안드레이는 누나에게 줄 선물에 파란 리본을 묶었어요.",
+   "blank": "ленту",
+   "src": "made"
+  },
+  {
+   "text": "Ирина пересекла финишную ленту под крики болельщиков.",
+   "en": "Irina crossed the finish tape to the cheers of fans.",
+   "ko": "이리나는 응원 소리 속에 결승 테이프를 끊었어요.",
+   "blank": "ленту",
+   "src": "made"
+  }
+ ],
  "w|лес": [
   {
    "text": "Мы прошли сквозь лес и пришли к озеру.",
@@ -25211,6 +25419,22 @@
    "ko": "톰은 똑똑하고 호기심이 많아요.",
    "blank": "любопытный",
    "src": "tatoeba:6939467/Wezel en:5292163/Hybrid"
+  }
+ ],
+ "w|любопытство": [
+  {
+   "text": "Из любопытства Андрей прочитал записку сестры, и это стало началом ссоры.",
+   "en": "Out of curiosity Andrey read his sister's note, and that was the start of the quarrel.",
+   "ko": "안드레이가 호기심에 누나의 쪽지를 읽은 게 다툼의 시작이었어요.",
+   "blank": "любопытства",
+   "src": "made"
+  },
+  {
+   "text": "Ирина записалась на марафон в горах просто из любопытства.",
+   "en": "Irina signed up for the mountain marathon simply out of curiosity.",
+   "ko": "이리나는 그냥 호기심에 산악 마라톤에 신청했어요.",
+   "blank": "любопытства",
+   "src": "made"
   }
  ],
  "w|магазин": [
@@ -26687,6 +26911,22 @@
    "src": "made"
   }
  ],
+ "w|милосердие": [
+  {
+   "text": "Андрей просил у сестры не прощения, а милосердия к своей глупости.",
+   "en": "Andrey asked his sister not for forgiveness but for mercy for his foolishness.",
+   "ko": "안드레이는 누나에게 용서보다 자기 어리석음을 너그럽게 봐 달라고 했어요.",
+   "blank": "милосердия",
+   "src": "made"
+  },
+  {
+   "text": "Ирина бежит благотворительный марафон, потому что верит в милосердие.",
+   "en": "Irina is running a charity marathon because she believes in mercy.",
+   "ko": "이리나는 자비의 힘을 믿기에 자선 마라톤을 달려요.",
+   "blank": "милосердие",
+   "src": "made"
+  }
+ ],
  "w|милость": [
   {
    "text": "Ему придется отдаться на милость суда.",
@@ -27811,6 +28051,22 @@
    "src": "made"
   }
  ],
+ "w|мудрость": [
+  {
+   "text": "Мама сказала Андрею, что первым мириться — это мудрость, а не слабость.",
+   "en": "Mom told Andrey that making up first is wisdom, not weakness.",
+   "ko": "엄마는 안드레이에게 먼저 화해하는 건 약함이 아니라 지혜라고 했어요.",
+   "blank": "мудрость",
+   "src": "made"
+  },
+  {
+   "text": "Старый тренер поделился с Ириной мудростью: начинай медленно.",
+   "en": "The old coach shared some wisdom with Irina: start slowly.",
+   "ko": "나이 든 코치는 이리나에게 천천히 출발하라는 지혜를 나눠 줬어요.",
+   "blank": "мудростью",
+   "src": "made"
+  }
+ ],
  "w|мудрый": [
   {
    "text": "Старый учитель математики дал Ивану мудрый совет перед экзаменом.",
@@ -27962,6 +28218,22 @@
    "en": "A street musician was playing in the library lobby, and Anna stopped to listen.",
    "ko": "도서관 로비에서 거리 음악가가 연주하고 있어서 안나는 멈춰 서서 들었어요.",
    "blank": "музыкант",
+   "src": "made"
+  }
+ ],
+ "w|мука": [
+  {
+   "text": "Ждать ответа сестры для Андрея было настоящей мукой.",
+   "en": "Waiting for his sister's reply was real torment for Andrey.",
+   "ko": "누나의 답을 기다리는 건 안드레이에게 정말 고통이었어요.",
+   "blank": "мукой",
+   "src": "made"
+  },
+  {
+   "text": "Подъём на мост в конце дистанции был для Ирины настоящей мукой.",
+   "en": "The climb onto the bridge at the end of the course was real torment for Irina.",
+   "ko": "코스 끝의 다리 오르막은 이리나에게 정말 고문이었어요.",
+   "blank": "мукой",
    "src": "made"
   }
  ],
@@ -30611,6 +30883,22 @@
    "blank": "неделе"
   }
  ],
+ "w|недовольный": [
+  {
+   "text": "Сестра Андрея ответила коротко и недовольным голосом.",
+   "en": "Andrey's sister answered briefly and in a displeased voice.",
+   "ko": "안드레이의 누나는 짧고 언짢은 목소리로 대답했어요.",
+   "blank": "недовольным",
+   "src": "made"
+  },
+  {
+   "text": "Ирина осталась недовольной своим временем на финише.",
+   "en": "Irina was unhappy with her finishing time.",
+   "ko": "이리나는 결승 기록이 마음에 들지 않았어요.",
+   "blank": "недовольной",
+   "src": "made"
+  }
+ ],
  "w|недолгий": [
   {
    "text": "После обеда у нас недолгий перерыв.",
@@ -32745,6 +33033,22 @@
    "src": "made"
   }
  ],
+ "w|обижаться": [
+  {
+   "text": "Сестра попросила Андрея не обижаться на её шутки.",
+   "en": "His sister asked Andrey not to take offense at her jokes.",
+   "ko": "누나는 안드레이에게 자기 농담에 서운해하지 말라고 했어요.",
+   "blank": "обижаться",
+   "src": "made"
+  },
+  {
+   "text": "Ирина просит мужа не обижаться, что по выходным она пропадает на тренировках.",
+   "en": "Irina asks her husband not to be offended that she disappears to training on weekends.",
+   "ko": "이리나는 주말마다 훈련하러 사라져도 서운해하지 말라고 남편에게 부탁해요.",
+   "blank": "обижаться",
+   "src": "made"
+  }
+ ],
  "w|обладать": [
   {
    "text": "Сергей обладает удивительным умением разводить огонь под дождём.",
@@ -33846,6 +34150,22 @@
    "en": "After the vaccination Natalia put a limit on the puppy's walks.",
    "ko": "예방 접종 뒤 나탈리야는 강아지 산책을 제한했어요.",
    "blank": "ограничение",
+   "src": "made"
+  }
+ ],
+ "w|ограничить": [
+  {
+   "text": "Андрей решил ограничить разговоры с сестрой о деньгах.",
+   "en": "Andrey decided to limit conversations with his sister about money.",
+   "ko": "안드레이는 누나와 돈 이야기는 줄이기로 했어요.",
+   "blank": "ограничить",
+   "src": "made"
+  },
+  {
+   "text": "Врач посоветовал Ирине ограничить кофе перед стартом.",
+   "en": "The doctor advised Irina to limit coffee before the start.",
+   "ko": "의사는 이리나에게 출발 전 커피를 줄이라고 했어요.",
+   "blank": "ограничить",
    "src": "made"
   }
  ],
@@ -43359,6 +43679,22 @@
    "src": "tatoeba:2836232/sigavax en:16029/Swift"
   }
  ],
+ "w|польстить": [
+  {
+   "text": "Андрею польстило, что сестра попросила у него совета.",
+   "en": "Andrey was flattered that his sister asked him for advice.",
+   "ko": "누나가 조언을 구하자 안드레이는 우쭐해졌어요.",
+   "blank": "польстило",
+   "src": "made"
+  },
+  {
+   "text": "Ирине польстило, что журналист попросил у неё интервью.",
+   "en": "Irina was flattered that a journalist asked her for an interview.",
+   "ko": "기자가 인터뷰를 요청하자 이리나는 우쭐해졌어요.",
+   "blank": "польстило",
+   "src": "made"
+  }
+ ],
  "w|полюбить": [
   {
    "text": "В новом городе Андрей не сразу, но всё-таки полюбил тихие улицы.",
@@ -51139,6 +51475,22 @@
    "src": "tatoeba:7967883/marafon en:6659299/CK"
   }
  ],
+ "w|пустота": [
+  {
+   "text": "Без звонков сестры Андрей ощущал странную пустоту по вечерам.",
+   "en": "Without his sister's calls Andrey felt a strange emptiness in the evenings.",
+   "ko": "누나의 전화가 없으니 안드레이는 저녁마다 이상한 허전함을 느꼈어요.",
+   "blank": "пустоту",
+   "src": "made"
+  },
+  {
+   "text": "После финиша Ирина почувствовала усталость и приятную пустоту в голове.",
+   "en": "After the finish Irina felt tired and a pleasant emptiness in her head.",
+   "ko": "결승선을 지난 이리나는 피곤함과 함께 머릿속이 기분 좋게 텅 빈 느낌이었어요.",
+   "blank": "пустоту",
+   "src": "made"
+  }
+ ],
  "w|пустыня": [
   {
    "text": "Сергей давно мечтает о походе через пустыню на верблюдах.",
@@ -53007,6 +53359,22 @@
    "src": "tatoeba:13403303/yura en:3722173/CM"
   }
  ],
+ "w|расстраивать": [
+  {
+   "text": "Андрей не хотел расстраивать маму и скрывал ссору с сестрой.",
+   "en": "Andrey didn't want to upset his mom and hid the quarrel with his sister.",
+   "ko": "안드레이는 엄마를 속상하게 하기 싫어서 누나와 싸운 걸 숨겼어요.",
+   "blank": "расстраивать",
+   "src": "made"
+  },
+  {
+   "text": "Ирина старается не расстраивать тренера пропусками тренировок.",
+   "en": "Irina tries not to upset her coach by skipping training.",
+   "ko": "이리나는 훈련을 빠져서 코치를 실망시키지 않으려고 해요.",
+   "blank": "расстраивать",
+   "src": "made"
+  }
+ ],
  "w|расстроенный": [
   {
    "text": "У тебя голос расстроенный.",
@@ -53336,6 +53704,22 @@
    "en": "One pupil's little brother started to get jealous of her new teacher Irina.",
    "ko": "한 학생의 남동생이 새 선생님 이리나에게 누나를 빼앗길까 봐 샘을 내기 시작했어요.",
    "blank": "ревновать",
+   "src": "made"
+  }
+ ],
+ "w|ревность": [
+  {
+   "text": "В детстве Андрей испытывал ревность, когда родители хвалили сестру.",
+   "en": "As a child Andrey felt jealous when his parents praised his sister.",
+   "ko": "어릴 때 안드레이는 부모님이 누나를 칭찬하면 질투가 났어요.",
+   "blank": "ревность",
+   "src": "made"
+  },
+  {
+   "text": "Муж Ирины признался, что чувствует ревность к её беговым кроссовкам.",
+   "en": "Irina's husband admitted that he feels jealous of her running shoes.",
+   "ko": "이리나의 남편은 아내의 러닝화에 질투를 느낀다고 털어놓았어요.",
+   "blank": "ревность",
    "src": "made"
   }
  ],
@@ -54303,6 +54687,22 @@
    "blank": "рождения"
   }
  ],
+ "w|рождественский": [
+  {
+   "text": "Ссора между Андреем и сестрой началась ещё в рождественский вечер.",
+   "en": "The quarrel between Andrey and his sister started back on Christmas Eve.",
+   "ko": "안드레이와 누나의 다툼은 크리스마스 저녁에 시작됐어요.",
+   "blank": "рождественский",
+   "src": "made"
+  },
+  {
+   "text": "Ирина пробежала рождественский забег в костюме Деда Мороза.",
+   "en": "Irina ran the Christmas race in a Grandfather Frost costume.",
+   "ko": "이리나는 산타 할아버지 옷을 입고 크리스마스 달리기 대회에 나갔어요.",
+   "blank": "рождественский",
+   "src": "made"
+  }
+ ],
  "w|рождество": [
   {
    "text": "Какие подарки ты получил на Рождество?",
@@ -54429,6 +54829,22 @@
    "ko": "이 소설 누가 썼는지 알아요?",
    "blank": "роман",
    "src": "tatoeba:853096/afyodor en:276208/CK"
+  }
+ ],
+ "w|романтический": [
+  {
+   "text": "Андрей не знал, что сестра готовила романтический ужин для мужа, и пришёл без звонка.",
+   "en": "Andrey didn't know his sister was preparing a romantic dinner for her husband and came over without calling.",
+   "ko": "안드레이는 누나가 남편과 로맨틱한 저녁을 준비하는 줄 모르고 연락도 없이 찾아갔어요.",
+   "blank": "романтический",
+   "src": "made"
+  },
+  {
+   "text": "После марафона муж устроил Ирине романтический вечер с ванной и свечами.",
+   "en": "After the marathon Irina's husband arranged a romantic evening for her with a bath and candles.",
+   "ko": "마라톤이 끝나자 남편이 이리나에게 목욕과 촛불로 로맨틱한 저녁을 마련해 줬어요.",
+   "blank": "романтический",
+   "src": "made"
   }
  ],
  "w|романтичный": [
@@ -58163,6 +58579,22 @@
    "blank": "сможешь"
   }
  ],
+ "w|смущать": [
+  {
+   "text": "Андрея смущает, когда сестра при всех вспоминает его детские проделки.",
+   "en": "It embarrasses Andrey when his sister brings up his childhood pranks in front of everyone.",
+   "ko": "누나가 사람들 앞에서 어릴 적 장난을 꺼내면 안드레이는 쑥스러워해요.",
+   "blank": "смущает",
+   "src": "made"
+  },
+  {
+   "text": "Ирину смущают фотографы, которые снимают бегунов на последних метрах.",
+   "en": "The photographers who shoot runners in the last meters make Irina self-conscious.",
+   "ko": "마지막 몇 미터에서 주자들을 찍는 사진사들이 이리나는 부담스러워요.",
+   "blank": "смущают",
+   "src": "made"
+  }
+ ],
  "w|смысл": [
   {
    "text": "В этом нет смысла.",
@@ -59570,6 +60002,22 @@
    "en": "Olga recalled the hikes where she and Natasha roasted sausages over a campfire.",
    "ko": "올가는 나타샤와 캠핑 가서 모닥불에 소시지를 구워 먹던 일을 떠올렸어요.",
    "blank": "сосиски",
+   "src": "made"
+  }
+ ],
+ "w|соскучиться": [
+  {
+   "text": "Андрей признался сестре, что очень по ней соскучился.",
+   "en": "Andrey admitted to his sister that he had missed her a lot.",
+   "ko": "안드레이는 누나에게 많이 보고 싶었다고 털어놓았어요.",
+   "blank": "соскучился",
+   "src": "made"
+  },
+  {
+   "text": "За неделю без бега Ирина так соскучилась, что вышла на пробежку в метель.",
+   "en": "After a week without running Irina missed it so much she went for a run in a blizzard.",
+   "ko": "일주일 동안 못 달린 이리나는 너무 그리워서 눈보라 속에 달리러 나갔어요.",
+   "blank": "соскучилась",
    "src": "made"
   }
  ],
@@ -62037,6 +62485,38 @@
    "src": "made"
   }
  ],
+ "w|стыд": [
+  {
+   "text": "Андрей чувствовал стыд за грубые слова, сказанные сестре.",
+   "en": "Andrey felt ashamed of the rude words he had said to his sister.",
+   "ko": "안드레이는 누나에게 한 거친 말이 부끄러웠어요.",
+   "blank": "стыд",
+   "src": "made"
+  },
+  {
+   "text": "Ирина чуть не сгорела от стыда, когда упала прямо перед камерой.",
+   "en": "Irina almost died of shame when she fell right in front of the camera.",
+   "ko": "이리나는 카메라 바로 앞에서 넘어져 창피해 죽을 뻔했어요.",
+   "blank": "стыда",
+   "src": "made"
+  }
+ ],
+ "w|стыдиться": [
+  {
+   "text": "Андрей перестал стыдиться своих слёз и просто позвонил сестре.",
+   "en": "Andrey stopped being ashamed of his tears and simply called his sister.",
+   "ko": "안드레이는 우는 걸 부끄러워하지 않기로 하고 그냥 누나에게 전화했어요.",
+   "blank": "стыдиться",
+   "src": "made"
+  },
+  {
+   "text": "Ирина больше не будет стыдиться того, что бежит медленно.",
+   "en": "Irina won't be ashamed any more of running slowly.",
+   "ko": "이리나는 이제 느리게 달리는 걸 부끄러워하지 않을 거예요.",
+   "blank": "стыдиться",
+   "src": "made"
+  }
+ ],
  "w|стыдный": [
   {
    "text": "Это был очень стыдный момент для меня.",
@@ -63224,6 +63704,22 @@
    "en": "Svetlana saw in horror that some creature had got into the bag of flour.",
    "ko": "스베틀라나는 밀가루 포대에 무슨 벌레가 들어간 걸 보고 기겁했어요.",
    "blank": "тварь",
+   "src": "made"
+  }
+ ],
+ "w|твёрдый": [
+  {
+   "text": "Андрей дал сестре твёрдое обещание больше не лезть в её дела.",
+   "en": "Andrey gave his sister a firm promise not to meddle in her affairs any more.",
+   "ko": "안드레이는 누나에게 더는 누나 일에 끼어들지 않겠다고 굳게 약속했어요.",
+   "blank": "твёрдое",
+   "src": "made"
+  },
+  {
+   "text": "Ирина бегает только по твёрдому покрытию, а по песку ей тяжело.",
+   "en": "Irina runs only on hard surfaces; sand is hard for her.",
+   "ko": "이리나는 딱딱한 노면에서만 달리고 모래 위는 힘들어해요.",
+   "blank": "твёрдому",
    "src": "made"
   }
  ],
@@ -65839,6 +66335,22 @@
    "src": "made"
   }
  ],
+ "w|угодить": [
+  {
+   "text": "Андрею никак не удаётся угодить старшей сестре с подарками.",
+   "en": "Andrey just can't manage to please his older sister with presents.",
+   "ko": "안드레이는 선물로 누나 마음에 들기가 영 쉽지 않아요.",
+   "blank": "угодить",
+   "src": "made"
+  },
+  {
+   "text": "На спуске Ирина угодила ногой в лужу.",
+   "en": "On the descent Irina landed her foot in a puddle.",
+   "ko": "내리막에서 이리나는 발을 웅덩이에 빠뜨렸어요.",
+   "blank": "угодила",
+   "src": "made"
+  }
+ ],
  "w|угодно": [
   {
    "text": "Делай как угодно.",
@@ -66198,6 +66710,22 @@
    "en": "The director is surprised every time by how quickly Anna learns her lines.",
    "ko": "감독은 안나가 대사를 빨리 외우는 데 매번 놀라요.",
    "blank": "удивляет",
+   "src": "made"
+  }
+ ],
+ "w|удивляться": [
+  {
+   "text": "Андрей не перестаёт удивляться, как быстро сестра всё забыла.",
+   "en": "Andrey never ceases to be amazed at how quickly his sister forgot everything.",
+   "ko": "안드레이는 누나가 모든 걸 그렇게 빨리 잊은 게 아직도 신기해요.",
+   "blank": "удивляться",
+   "src": "made"
+  },
+  {
+   "text": "Ирина не перестаёт удивляться, сколько пожилых людей бегут марафоны.",
+   "en": "Irina never ceases to be amazed at how many elderly people run marathons.",
+   "ko": "이리나는 마라톤을 뛰는 노인이 얼마나 많은지 늘 놀라워요.",
+   "blank": "удивляться",
    "src": "made"
   }
  ],
@@ -66971,6 +67499,22 @@
    "src": "tatoeba:2833665/psykami en:1685230/Amastan"
   }
  ],
+ "w|упаковка": [
+  {
+   "text": "Андрей купил сестре конфеты в красивой упаковке, чтобы помириться.",
+   "en": "Andrey bought his sister chocolates in pretty packaging to make up.",
+   "ko": "안드레이는 화해하려고 누나에게 예쁘게 포장된 초콜릿을 샀어요.",
+   "blank": "упаковке",
+   "src": "made"
+  },
+  {
+   "text": "На пункте питания Ирина схватила упаковку изюма.",
+   "en": "At the refreshment point Irina grabbed a pack of raisins.",
+   "ko": "급수대에서 이리나는 건포도 한 봉지를 집었어요.",
+   "blank": "упаковку",
+   "src": "made"
+  }
+ ],
  "w|упасть": [
   {
    "text": "Я ухватился за верёвку, чтобы не упасть.",
@@ -67634,6 +68178,22 @@
    "en": "Elena called the workshop to confirm the window measurements.",
    "ko": "옐레나는 창문 치수를 확인하려고 공방에 전화했어요.",
    "blank": "уточнить",
+   "src": "made"
+  }
+ ],
+ "w|утренний": [
+  {
+   "text": "За утренним кофе Андрей перечитал сообщение сестры и понял, что всё не так понял.",
+   "en": "Over his morning coffee Andrey reread his sister's message and realized he had misunderstood everything.",
+   "ko": "아침 커피를 마시며 누나의 메시지를 다시 읽은 안드레이는 자기가 다 오해했다는 걸 깨달았어요.",
+   "blank": "утренним",
+   "src": "made"
+  },
+  {
+   "text": "Каждый день у Ирины начинается с утренней пробежки вдоль набережной.",
+   "en": "Every day for Irina starts with a morning run along the embankment.",
+   "ko": "이리나의 하루는 강변 아침 달리기로 시작해요.",
+   "blank": "утренней",
    "src": "made"
   }
  ],
@@ -69243,6 +69803,22 @@
    "blank": "Хотя"
   }
  ],
+ "w|храбрость": [
+  {
+   "text": "Андрею потребовалась храбрость, чтобы постучать в дверь сестры.",
+   "en": "It took courage for Andrey to knock on his sister's door.",
+   "ko": "안드레이가 누나 집 문을 두드리는 데는 용기가 필요했어요.",
+   "blank": "храбрость",
+   "src": "made"
+  },
+  {
+   "text": "Чтобы бежать марафон после травмы, Ирине нужна была храбрость.",
+   "en": "To run a marathon after an injury Irina needed courage.",
+   "ko": "부상 후 마라톤을 뛰려면 이리나에게 용기가 필요했어요.",
+   "blank": "храбрость",
+   "src": "made"
+  }
+ ],
  "w|храбрый": [
   {
    "text": "В детстве Дима казался Алексею самым храбрым мальчиком во дворе.",
@@ -69794,6 +70370,22 @@
    "en": "Olga told Natasha that the first chick had hatched at her dacha.",
    "ko": "올가는 나타샤에게 별장에서 첫 병아리가 깨어났다고 전했어요.",
    "blank": "цыплёнок",
+   "src": "made"
+  }
+ ],
+ "w|чаевые": [
+  {
+   "text": "Сестра упрекнула Андрея, что он оставил официанту слишком маленькие чаевые.",
+   "en": "His sister reproached Andrey for leaving the waiter too small a tip.",
+   "ko": "누나는 안드레이가 웨이터에게 팁을 너무 적게 줬다고 나무랐어요.",
+   "blank": "чаевые",
+   "src": "made"
+  },
+  {
+   "text": "После марафона Ирина оставила щедрые чаевые в кафе у финиша.",
+   "en": "After the marathon Irina left a generous tip at the café by the finish.",
+   "ko": "마라톤이 끝나고 이리나는 결승선 근처 카페에 팁을 넉넉히 남겼어요.",
+   "blank": "чаевые",
    "src": "made"
   }
  ],
@@ -71225,6 +71817,22 @@
    "src": "tatoeba:12009552/marafon en:321692/CK"
   }
  ],
+ "w|шокировать": [
+  {
+   "text": "Резкий тон письма сестры шокировал Андрея.",
+   "en": "The harsh tone of his sister's letter shocked Andrey.",
+   "ko": "누나 편지의 날카로운 말투에 안드레이는 충격을 받았어요.",
+   "blank": "шокировал",
+   "src": "made"
+  },
+  {
+   "text": "Ирина шокировала коллег, когда пробежала марафон босиком.",
+   "en": "Irina shocked her colleagues when she ran a marathon barefoot.",
+   "ko": "이리나가 맨발로 마라톤을 완주하자 동료들이 깜짝 놀랐어요.",
+   "blank": "шокировала",
+   "src": "made"
+  }
+ ],
  "w|шоколад": [
   {
    "text": "Вы пробовали шоколад наших конкурентов?",
@@ -71823,6 +72431,22 @@
    "src": "tatoeba:8210329/marafon en:6032147/tinowls"
   }
  ],
+ "w|эпоха": [
+  {
+   "text": "Андрей шутит, что их детские ссоры с сестрой были целой эпохой.",
+   "en": "Andrey jokes that his childhood fights with his sister were a whole era.",
+   "ko": "안드레이는 누나와의 어린 시절 싸움이 한 시대였다고 농담해요.",
+   "blank": "эпохой",
+   "src": "made"
+  },
+  {
+   "text": "Ирина говорит, что бегала ещё в эпоху кассетных плееров.",
+   "en": "Irina says she was running back in the era of cassette players.",
+   "ko": "이리나는 카세트 플레이어 시절부터 달렸다고 말해요.",
+   "blank": "эпоху",
+   "src": "made"
+  }
+ ],
  "w|этаж": [
   {
    "text": "Ты поднялся на лифте на третий этаж.",
@@ -71837,6 +72461,22 @@
    "ko": "엘리베이터를 타고 오 층으로 올라갔어요.",
    "blank": "этаж",
    "src": "tatoeba:5153933/odexed en:65243/CK"
+  }
+ ],
+ "w|этап": [
+  {
+   "text": "Психолог сказал Андрею, что обида — это лишь этап, который нужно пройти.",
+   "en": "The psychologist told Andrey that resentment is just a stage one has to go through.",
+   "ko": "심리 상담사는 안드레이에게 서운함은 지나가야 할 한 단계일 뿐이라고 했어요.",
+   "blank": "этап",
+   "src": "made"
+  },
+  {
+   "text": "Самым трудным для Ирины стал этап после тридцатого километра.",
+   "en": "The hardest stage for Irina was the one after the thirtieth kilometer.",
+   "ko": "이리나에게 가장 힘든 구간은 30킬로미터 이후였어요.",
+   "blank": "этап",
+   "src": "made"
   }
  ],
  "w|это": [
