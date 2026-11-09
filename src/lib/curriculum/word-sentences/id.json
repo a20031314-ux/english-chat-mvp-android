@@ -43,6 +43,22 @@
    "src": "made"
   }
  ],
+ "w|aborsi": [
+  {
+   "text": "Di seminar etika kedokteran, Budi mendengarkan diskusi tentang aturan hukum aborsi.",
+   "en": "At a medical ethics seminar, Budi listened to a discussion about the legal rules on abortion.",
+   "ko": "의료 윤리 세미나에서 부디는 낙태 관련 법 규정에 대한 토론을 들었어요.",
+   "blank": "aborsi",
+   "src": "made"
+  },
+  {
+   "text": "Di ruang tunggu, Siti membaca berita tentang perdebatan undang-undang aborsi di sebuah negara.",
+   "en": "In the waiting lounge, Siti read news about a debate over an abortion law in one country.",
+   "ko": "시티는 대합실에서 어느 나라의 낙태법 논쟁에 관한 기사를 읽었어요.",
+   "blank": "aborsi",
+   "src": "made"
+  }
+ ],
  "w|absen": [
   {
    "text": "Fajar tidak pernah absen dari rapat redaksi pagi.",
@@ -728,6 +744,22 @@
    "en": "The window measurements have to be accurate so the new glass fits.",
    "ko": "새 유리가 꼭 맞으려면 창문 치수가 정확해야 해요.",
    "blank": "akurat",
+   "src": "made"
+  }
+ ],
+ "w|akut": [
+  {
+   "text": "Di IGD, Budi menangani pasien dengan nyeri perut akut.",
+   "en": "In the ER, Budi treated a patient with acute abdominal pain.",
+   "ko": "응급실에서 부디는 급성 복통 환자를 맡았어요.",
+   "blank": "akut",
+   "src": "made"
+  },
+  {
+   "text": "Di tengah perjalanan, Siti terserang sakit gigi akut.",
+   "en": "Halfway through the trip, Siti was hit by acute toothache.",
+   "ko": "여행 도중에 시티는 급성 치통에 시달렸어요.",
+   "blank": "akut",
    "src": "made"
   }
  ],
@@ -1734,6 +1766,22 @@
    "en": "The hospital launched an app for booking a place in the doctor's queue.",
    "ko": "병원은 진료 대기 접수를 하는 앱을 내놓았어요.",
    "blank": "aplikasi",
+   "src": "made"
+  }
+ ],
+ "w|apotek": [
+  {
+   "text": "Budi mengantar resep ke apotek rumah sakit di lantai dasar.",
+   "en": "Budi took the prescription to the hospital pharmacy on the ground floor.",
+   "ko": "부디는 처방전을 일 층 병원 약국에 가져다줬어요.",
+   "blank": "apotek",
+   "src": "made"
+  },
+  {
+   "text": "Siti membeli obat antimabuk di apotek bandara.",
+   "en": "Siti bought motion-sickness pills at the airport pharmacy.",
+   "ko": "시티는 공항 약국에서 멀미약을 샀어요.",
+   "blank": "apotek",
    "src": "made"
   }
  ],
@@ -4757,6 +4805,22 @@
    "src": "made"
   }
  ],
+ "w|benjolan": [
+  {
+   "text": "Dokter meminta Budi menjadwalkan USG untuk benjolan di leher pasien.",
+   "en": "The doctor asked Budi to schedule an ultrasound for the lump on the patient's neck.",
+   "ko": "의사는 부디에게 환자 목에 있는 혹을 초음파로 검사하도록 일정을 잡으라고 했어요.",
+   "blank": "benjolan",
+   "src": "made"
+  },
+  {
+   "text": "Siti panik karena ada benjolan di dahi setelah terbentur rak bagasi.",
+   "en": "Siti panicked when a bump appeared on her forehead after hitting the overhead bin.",
+   "ko": "시티는 짐칸에 머리를 부딪친 뒤 이마에 혹이 나서 당황했어요.",
+   "blank": "benjolan",
+   "src": "made"
+  }
+ ],
  "w|bensin": [
   {
    "text": "Bensin di tangki hampir habis.",
@@ -6217,6 +6281,22 @@
    "en": "The two of them sat in the park.",
    "ko": "둘이는 공원에 앉아 있었어.",
    "blank": "berdua"
+  }
+ ],
+ "w|berduaan": [
+  {
+   "text": "Budi menutup pintu supaya pasangan tua itu bisa berduaan sebentar.",
+   "en": "Budi closed the door so the elderly couple could be alone together for a while.",
+   "ko": "부디는 노부부가 잠시 둘만 있을 수 있게 문을 닫아 줬어요.",
+   "blank": "berduaan",
+   "src": "made"
+  },
+  {
+   "text": "Setelah anak-anak tertidur, Siti dan suaminya akhirnya bisa berduaan di ruang tunggu.",
+   "en": "After the kids fell asleep, Siti and her husband could finally have some time alone in the lounge.",
+   "ko": "아이들이 잠든 뒤에야 시티와 남편은 대합실에서 둘만의 시간을 가질 수 있었어요.",
+   "blank": "berduaan",
+   "src": "made"
   }
  ],
  "w|berduel": [
@@ -8587,6 +8667,22 @@
    "src": "made"
   }
  ],
+ "w|berminyak": [
+  {
+   "text": "Budi menyarankan pasien jantung itu mengurangi makanan berminyak.",
+   "en": "Budi advised the heart patient to cut down on oily food.",
+   "ko": "부디는 그 심장병 환자에게 기름진 음식을 줄이라고 권했어요.",
+   "blank": "berminyak",
+   "src": "made"
+  },
+  {
+   "text": "Siti menolak gorengan berminyak yang dijual di restoran bandara.",
+   "en": "Siti turned down the greasy fried snacks sold at the airport restaurant.",
+   "ko": "시티는 공항 식당에서 파는 기름진 튀김을 거절했어요.",
+   "blank": "berminyak",
+   "src": "made"
+  }
+ ],
  "w|bermoral": [
   {
    "text": "Bayu percaya pemimpin yang baik harus jujur dan bermoral.",
@@ -8782,6 +8878,22 @@
    "en": "Rina wants her vet clinic to focus on animal welfare, not profit.",
    "ko": "리나는 자기 동물병원이 이익이 아니라 동물 복지를 중심에 두길 바라요.",
    "blank": "berorientasi",
+   "src": "made"
+  }
+ ],
+ "w|berotot": [
+  {
+   "text": "Pria berotot itu ternyata takut melihat jarum, cerita Budi sambil tertawa.",
+   "en": "That muscular man turned out to be scared of needles, Budi said with a laugh.",
+   "ko": "부디는 그 근육질 남자가 알고 보니 주삿바늘을 무서워했다며 웃었어요.",
+   "blank": "berotot",
+   "src": "made"
+  },
+  {
+   "text": "Seorang porter berotot membantu Siti mengangkat koper besar ke timbangan.",
+   "en": "A muscular porter helped Siti lift her big suitcase onto the scale.",
+   "ko": "근육질 짐꾼이 시티를 도와 큰 캐리어를 저울에 올려 줬어요.",
+   "blank": "berotot",
    "src": "made"
   }
  ],
@@ -10511,6 +10623,38 @@
    "src": "made"
   }
  ],
+ "w|bertuliskan": [
+  {
+   "text": "Budi memasang gelang bertuliskan nama pasien di pergelangan tangan.",
+   "en": "Budi put a band with the patient's name on it around the wrist.",
+   "ko": "부디는 환자 이름이 적힌 팔찌를 손목에 채웠어요.",
+   "blank": "bertuliskan",
+   "src": "made"
+  },
+  {
+   "text": "Seorang sopir memegang kertas bertuliskan nama Siti di pintu kedatangan.",
+   "en": "A driver held a sign with Siti's name on it at the arrivals door.",
+   "ko": "입국장 문 앞에서 기사 한 명이 시티의 이름이 적힌 종이를 들고 있었어요.",
+   "blank": "bertuliskan",
+   "src": "made"
+  }
+ ],
+ "w|bertumbuh": [
+  {
+   "text": "Budi senang melihat bayi prematur itu terus bertumbuh dengan baik.",
+   "en": "Budi is happy to see the premature baby keep growing well.",
+   "ko": "부디는 그 미숙아가 잘 자라는 걸 보며 기뻐해요.",
+   "blank": "bertumbuh",
+   "src": "made"
+  },
+  {
+   "text": "Setiap kali pulang, Siti melihat bandara di kota kelahirannya terus bertumbuh.",
+   "en": "Every time she goes home, Siti sees the airport in her hometown keep growing.",
+   "ko": "시티는 고향에 갈 때마다 고향 공항이 계속 커지는 걸 봐요.",
+   "blank": "bertumbuh",
+   "src": "made"
+  }
+ ],
  "w|bertunangan": [
   {
    "text": "Andi baru tahu Rina sudah bertunangan dengan teman kuliahnya.",
@@ -11711,6 +11855,22 @@
    "en": "You may go home now.",
    "ko": "지금 집에 가도 돼.",
    "blank": "boleh"
+  }
+ ],
+ "w|bolong": [
+  {
+   "text": "Kaus kaki Budi bolong di bagian jempol, tetapi tidak sempat diganti sebelum jaga.",
+   "en": "Budi's sock had a hole at the big toe, but there was no time to change it before his shift.",
+   "ko": "부디의 양말 엄지발가락 쪽에 구멍이 났지만 근무 전에 갈아 신을 틈이 없었어요.",
+   "blank": "bolong",
+   "src": "made"
+  },
+  {
+   "text": "Koper Siti bolong karena tergores ban berjalan.",
+   "en": "Siti's suitcase got a hole from being scraped on the conveyor belt.",
+   "ko": "시티의 캐리어가 컨베이어 벨트에 긁혀서 구멍이 났어요.",
+   "blank": "bolong",
+   "src": "made"
   }
  ],
  "w|boneka": [
@@ -14177,6 +14337,22 @@
    "blank": "deh"
   }
  ],
+ "w|dehidrasi": [
+  {
+   "text": "Kata Budi, anak itu dirawat karena dehidrasi setelah diare berhari-hari.",
+   "en": "According to Budi, the child was admitted for dehydration after days of diarrhea.",
+   "ko": "부디 말로는 그 아이가 며칠 동안 설사를 해서 탈수로 입원했어요.",
+   "blank": "dehidrasi",
+   "src": "made"
+  },
+  {
+   "text": "Siti minum banyak air karena udara kabin bisa menyebabkan dehidrasi.",
+   "en": "Siti drinks a lot of water because cabin air can cause dehydration.",
+   "ko": "기내 공기가 탈수를 일으킬 수 있어서 시티는 물을 많이 마셔요.",
+   "blank": "dehidrasi",
+   "src": "made"
+  }
+ ],
  "w|dekade": [
   {
    "text": "Menurut kakek Budi, iklim di desa ini banyak berubah dalam satu dekade terakhir.",
@@ -15454,6 +15630,22 @@
    "en": "This film will be shown in domestic cinemas before being taken to festivals abroad.",
    "ko": "이 영화는 해외 영화제에 가기 전에 국내 극장에서 먼저 개봉해요.",
    "blank": "domestik",
+   "src": "made"
+  }
+ ],
+ "w|dominan": [
+  {
+   "text": "Budi mencatat bahwa tangan kiri adalah tangan dominan pasien itu.",
+   "en": "Budi noted that the left hand is that patient's dominant hand.",
+   "ko": "부디는 그 환자가 왼손잡이라고 기록했어요.",
+   "blank": "dominan",
+   "src": "made"
+  },
+  {
+   "text": "Siti memperhatikan warna biru yang dominan di desain terminal baru itu.",
+   "en": "Siti noticed the blue that dominates the design of the new terminal.",
+   "ko": "시티는 새 터미널 디자인에 파란색이 두드러진다는 걸 알아챘어요.",
+   "blank": "dominan",
    "src": "made"
   }
  ],
@@ -20525,6 +20717,22 @@
    "blank": "impianmu"
   }
  ],
+ "w|implan": [
+  {
+   "text": "Budi menjelaskan bahwa implan gigi perlu dirawat seperti gigi asli.",
+   "en": "Budi explained that dental implants need to be cared for like real teeth.",
+   "ko": "부디는 임플란트도 자연 치아처럼 관리해야 한다고 설명했어요.",
+   "blank": "implan",
+   "src": "made"
+  },
+  {
+   "text": "Mesin pemindai berbunyi karena implan logam di bahu Siti.",
+   "en": "The scanner beeped because of the metal implant in Siti's shoulder.",
+   "ko": "시티 어깨에 있는 금속 보형물 때문에 검색대가 울렸어요.",
+   "blank": "implan",
+   "src": "made"
+  }
+ ],
  "w|imut": [
   {
    "text": "Anak kecil di barisan depan memakai topi kelinci yang imut.",
@@ -21776,6 +21984,22 @@
    "en": "Intan set off for the start while the crickets were still chirping in the bushes.",
    "ko": "인탄은 덤불에서 아직 귀뚜라미가 울 때 출발 장소로 나섰어요.",
    "blank": "jangkrik",
+   "src": "made"
+  }
+ ],
+ "w|janin": [
+  {
+   "text": "Dokter memperlihatkan detak jantung janin di layar, dan Budi ikut tersenyum.",
+   "en": "The doctor showed the fetus's heartbeat on the screen, and Budi smiled too.",
+   "ko": "의사가 화면으로 태아의 심장 박동을 보여 주자 부디도 따라 웃었어요.",
+   "blank": "janin",
+   "src": "made"
+  },
+  {
+   "text": "Siti membawa surat dokter yang menyatakan janin dalam kondisi sehat untuk terbang.",
+   "en": "Siti carried a doctor's letter stating the fetus was healthy enough for her to fly.",
+   "ko": "시티는 태아가 비행해도 될 만큼 건강하다는 의사 소견서를 가지고 다녔어요.",
+   "blank": "janin",
    "src": "made"
   }
  ],
@@ -23401,6 +23625,22 @@
    "en": "The farmer keeps goats behind the house.",
    "ko": "농부가 집 뒤에서 염소를 키워.",
    "blank": "kambing"
+  }
+ ],
+ "w|kambuh": [
+  {
+   "text": "Asma pasien di kamar sebelah kambuh lagi, jadi Budi segera membawa inhaler.",
+   "en": "The asthma of the patient next door flared up again, so Budi quickly brought an inhaler.",
+   "ko": "옆 병실 환자의 천식이 또 도져서 부디가 얼른 흡입기를 가져갔어요.",
+   "blank": "kambuh",
+   "src": "made"
+  },
+  {
+   "text": "Sakit kepala Siti kambuh ketika penerbangannya ditunda lagi.",
+   "en": "Siti's headache came back when her flight was delayed again.",
+   "ko": "비행기가 또 지연되자 시티의 두통이 다시 도졌어요.",
+   "blank": "kambuh",
+   "src": "made"
   }
  ],
  "w|kamera": [
@@ -25931,6 +26171,22 @@
    "src": "made"
   }
  ],
+ "w|kehausan": [
+  {
+   "text": "Pasien yang baru dioperasi itu kehausan, tetapi Budi hanya boleh memberi sedikit air.",
+   "en": "The patient who had just been operated on was thirsty, but Budi could only give a little water.",
+   "ko": "막 수술을 받은 환자가 목말라했지만 부디는 물을 조금밖에 줄 수 없었어요.",
+   "blank": "kehausan",
+   "src": "made"
+  },
+  {
+   "text": "Siti kehausan setelah berlari dari satu gerbang ke gerbang lain.",
+   "en": "Siti was parched after running from one gate to another.",
+   "ko": "시티는 탑승구에서 탑승구로 뛰어다니느라 목이 바싹 말랐어요.",
+   "blank": "kehausan",
+   "src": "made"
+  }
+ ],
  "w|kehebatan": [
   {
    "text": "Andi kagum pada kehebatan tukang kayu yang membuat ulang jendela antik itu.",
@@ -27551,6 +27807,22 @@
    "blank": "kepala"
   }
  ],
+ "w|kepalan": [
+  {
+   "text": "Sebelum mengambil darah, Budi meminta pasien membuat kepalan tangan.",
+   "en": "Before drawing blood, Budi asked the patient to make a fist.",
+   "ko": "피를 뽑기 전에 부디는 환자에게 주먹을 쥐어 달라고 했어요.",
+   "blank": "kepalan",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengetuk pintu kantor imigrasi pelan-pelan dengan kepalan tangan.",
+   "en": "Siti knocked gently on the immigration office door with her fist.",
+   "ko": "시티는 주먹으로 출입국 사무실 문을 살살 두드렸어요.",
+   "blank": "kepalan",
+   "src": "made"
+  }
+ ],
  "w|kepanasan": [
   {
    "text": "Rudi menyuruh pemilik membawa anjing yang kepanasan itu ke ruangan ber-AC.",
@@ -27643,6 +27915,22 @@
    "en": "He set aside personal interests for the team.",
    "ko": "그는 팀을 위해 개인 이익을 내려놓았어.",
    "blank": "kepentingan"
+  }
+ ],
+ "w|keperawanan": [
+  {
+   "text": "Dalam kuliah etika, Budi belajar bahwa tes keperawanan tidak punya dasar medis.",
+   "en": "In an ethics lecture, Budi learned that virginity tests have no medical basis.",
+   "ko": "윤리 강의에서 부디는 처녀성 검사에 의학적 근거가 없다는 것을 배웠어요.",
+   "blank": "keperawanan",
+   "src": "made"
+  },
+  {
+   "text": "Buku yang dibaca Siti di ruang tunggu membahas sejarah mitos keperawanan dalam berbagai budaya.",
+   "en": "The book Siti read in the lounge discusses the history of virginity myths across cultures.",
+   "ko": "시티가 대합실에서 읽은 책은 여러 문화 속 처녀성 신화의 역사를 다뤄요.",
+   "blank": "keperawanan",
+   "src": "made"
   }
  ],
  "w|kepercayaan": [
@@ -28166,6 +28454,22 @@
    "en": "The all-day rain kept Wati happily at home eating banana chips.",
    "ko": "하루 종일 비가 와서 와티는 집에서 바나나 칩을 먹으며 뒹굴었어요.",
    "blank": "keripik",
+   "src": "made"
+  }
+ ],
+ "w|keriting": [
+  {
+   "text": "Seorang anak berambut keriting melambaikan boneka kepada Budi dari ranjang.",
+   "en": "A curly-haired child waved a doll at Budi from the bed.",
+   "ko": "곱슬머리 아이가 침대에서 부디에게 인형을 흔들었어요.",
+   "blank": "keriting",
+   "src": "made"
+  },
+  {
+   "text": "Rambut keriting Siti jadi mengembang karena udara lembap di luar terminal.",
+   "en": "Siti's curly hair frizzed up in the humid air outside the terminal.",
+   "ko": "터미널 밖의 습한 공기 때문에 시티의 곱슬머리가 부스스해졌어요.",
+   "blank": "keriting",
    "src": "made"
   }
  ],
@@ -30241,6 +30545,22 @@
    "src": "made"
   }
  ],
+ "w|komplikasi": [
+  {
+   "text": "Dokter mewaspadai komplikasi, sementara Budi mencatat tekanan darah setiap jam.",
+   "en": "The doctor watched for complications while Budi recorded the blood pressure every hour.",
+   "ko": "의사는 합병증을 경계했고 부디는 매시간 혈압을 기록했어요.",
+   "blank": "komplikasi",
+   "src": "made"
+  },
+  {
+   "text": "Siti pulang lebih cepat karena ibunya mengalami komplikasi setelah operasi.",
+   "en": "Siti went home early because her mother had complications after surgery.",
+   "ko": "어머니가 수술 후 합병증을 겪어서 시티는 일찍 돌아왔어요.",
+   "blank": "komplikasi",
+   "src": "made"
+  }
+ ],
  "w|komplotan": [
   {
    "text": "Bayu menulis laporan tentang komplotan penipu yang menjual tiket konser palsu.",
@@ -31347,6 +31667,22 @@
    "blank": "kuburan"
   }
  ],
+ "w|kubus": [
+  {
+   "text": "Budi memberi pasien kecil itu mainan kubus warna-warni.",
+   "en": "Budi gave the little patient a colorful toy cube.",
+   "ko": "부디는 꼬마 환자에게 알록달록한 큐브 장난감을 줬어요.",
+   "blank": "kubus",
+   "src": "made"
+  },
+  {
+   "text": "Siti membawa kue lapis berbentuk kubus sebagai oleh-oleh.",
+   "en": "Siti brought cube-shaped layer cakes as souvenirs.",
+   "ko": "시티는 선물로 정육면체 모양의 층층 케이크를 가져왔어요.",
+   "blank": "kubus",
+   "src": "made"
+  }
+ ],
  "w|kucing": [
   {
    "text": "Kucing itu lucu.",
@@ -31508,6 +31844,22 @@
    "en": "Intan kept her packed food in the small fridge in the dining car.",
    "ko": "인탄은 싸 온 음식을 식당칸 작은 냉장고에 넣어 뒀어요.",
    "blank": "kulkas",
+   "src": "made"
+  }
+ ],
+ "w|kuman": [
+  {
+   "text": "Budi mencuci tangan sebelum masuk ruangan agar kuman tidak menyebar.",
+   "en": "Budi washes his hands before entering the room so germs don't spread.",
+   "ko": "부디는 세균이 퍼지지 않게 병실에 들어가기 전에 손을 씻어요.",
+   "blank": "kuman",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengelap sandaran tangan kursi dengan tisu antiseptik untuk membasmi kuman.",
+   "en": "Siti wiped the armrests with antiseptic tissues to kill germs.",
+   "ko": "시티는 세균을 없애려고 소독 티슈로 의자 팔걸이를 닦았어요.",
+   "blank": "kuman",
    "src": "made"
   }
  ],
@@ -33232,6 +33584,22 @@
    "en": "Rina likes the location of their new office near the station.",
    "ko": "리나는 역 가까이 있는 새 사무실 위치가 마음에 들어요.",
    "blank": "letak",
+   "src": "made"
+  }
+ ],
+ "w|letih": [
+  {
+   "text": "Setelah jaga malam yang panjang, Budi merasa sangat letih.",
+   "en": "After a long night shift, Budi felt extremely tired.",
+   "ko": "긴 야간 근무를 마친 부디는 몹시 지쳤어요.",
+   "blank": "letih",
+   "src": "made"
+  },
+  {
+   "text": "Siti tiba di bandara dalam keadaan letih setelah penerbangan panjang.",
+   "en": "Siti arrived at the airport exhausted after a long flight.",
+   "ko": "시티는 긴 비행 끝에 지친 몸으로 공항에 도착했어요.",
+   "blank": "letih",
    "src": "made"
   }
  ],
@@ -35925,6 +36293,22 @@
    "src": "made"
   }
  ],
+ "w|melambai": [
+  {
+   "text": "Pasien cilik itu melambai kepada Budi dari jendela mobil saat pulang.",
+   "en": "The young patient waved to Budi from the car window on the way home.",
+   "ko": "꼬마 환자는 퇴원하면서 차창 밖으로 부디에게 손을 흔들었어요.",
+   "blank": "melambai",
+   "src": "made"
+  },
+  {
+   "text": "Siti melambai kepada keluarganya dari balik kaca pemeriksaan.",
+   "en": "Siti waved to her family from behind the security glass.",
+   "ko": "시티는 검색대 유리 너머로 가족에게 손을 흔들었어요.",
+   "blank": "melambai",
+   "src": "made"
+  }
+ ],
  "w|melambaikan": [
   {
    "text": "Budi melambaikan tangan kepada adiknya dari jendela kelas.",
@@ -37083,6 +37467,22 @@
    "en": "I'm trying to understand her feelings.",
    "ko": "나는 그의 감정을 이해하려 해.",
    "blank": "memahami"
+  }
+ ],
+ "w|memahat": [
+  {
+   "text": "Pada hari libur, Budi suka memahat kayu untuk melepas penat.",
+   "en": "On his days off, Budi likes to carve wood to unwind.",
+   "ko": "쉬는 날이면 부디는 피로를 풀려고 나무를 조각해요.",
+   "blank": "memahat",
+   "src": "made"
+  },
+  {
+   "text": "Di terminal, seorang seniman sedang memahat patung kayu, dan Siti berhenti untuk menonton.",
+   "en": "In the terminal, an artist was carving a wooden statue, and Siti stopped to watch.",
+   "ko": "터미널에서 한 예술가가 나무 조각상을 깎고 있어서 시티는 멈춰서 구경했어요.",
+   "blank": "memahat",
+   "src": "made"
   }
  ],
  "w|memainkan": [
@@ -41199,6 +41599,22 @@
    "src": "made"
   }
  ],
+ "w|menafsirkan": [
+  {
+   "text": "Budi belajar menafsirkan hasil rekam jantung dari dokter senior.",
+   "en": "Budi is learning to interpret ECG results from a senior doctor.",
+   "ko": "부디는 선배 의사에게 심전도 결과를 해석하는 법을 배워요.",
+   "blank": "menafsirkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti kesulitan menafsirkan papan jadwal yang penuh singkatan.",
+   "en": "Siti had trouble making sense of the departure board full of abbreviations.",
+   "ko": "시티는 약어로 가득한 출발 안내판을 해석하느라 애를 먹었어요.",
+   "blank": "menafsirkan",
+   "src": "made"
+  }
+ ],
  "w|menagih": [
   {
    "text": "Pemilik lapak sebelah datang untuk menagih utang kepada Agus.",
@@ -41377,6 +41793,22 @@
    "en": "The writer added a new chapter to his novel.",
    "ko": "작가가 소설에 새 장을 추가했어.",
    "blank": "menambahkan"
+  }
+ ],
+ "w|menampakkan": [
+  {
+   "text": "Setelah seminggu dirawat, pasien itu mulai menampakkan tanda pemulihan, kata Budi.",
+   "en": "After a week in the hospital, the patient began to show signs of recovery, Budi said.",
+   "ko": "부디 말로는 그 환자가 입원 일주일 만에 회복 기미를 보이기 시작했어요.",
+   "blank": "menampakkan",
+   "src": "made"
+  },
+  {
+   "text": "Matahari mulai menampakkan diri ketika pesawat Siti mendarat.",
+   "en": "The sun began to show itself as Siti's plane landed.",
+   "ko": "시티가 탄 비행기가 착륙할 때 해가 모습을 드러내기 시작했어요.",
+   "blank": "menampakkan",
+   "src": "made"
   }
  ],
  "w|menampar": [
@@ -45111,6 +45543,22 @@
    "src": "made"
   }
  ],
+ "w|mengawali": [
+  {
+   "text": "Budi selalu mengawali shift dengan membaca catatan semua pasien.",
+   "en": "Budi always starts his shift by reading every patient's notes.",
+   "ko": "부디는 늘 모든 환자의 기록을 읽는 것으로 근무를 시작해요.",
+   "blank": "mengawali",
+   "src": "made"
+  },
+  {
+   "text": "Siti mengawali liburan dengan secangkir kopi di kafe bandara.",
+   "en": "Siti kicked off her vacation with a cup of coffee at the airport café.",
+   "ko": "시티는 공항 카페에서 커피 한 잔으로 휴가를 시작했어요.",
+   "blank": "mengawali",
+   "src": "made"
+  }
+ ],
  "w|mengawasi": [
   {
    "text": "Polisi sedang mengawasi daerah ini.",
@@ -46207,6 +46655,22 @@
    "blank": "menggantung"
   }
  ],
+ "w|menggantungkan": [
+  {
+   "text": "Budi menggantungkan kantong infus baru di tiang samping ranjang.",
+   "en": "Budi hung a new IV bag on the pole beside the bed.",
+   "ko": "부디는 침대 옆 거치대에 새 수액 주머니를 걸었어요.",
+   "blank": "menggantungkan",
+   "src": "made"
+  },
+  {
+   "text": "Siti menggantungkan tas kecil di pegangan koper agar tangan tetap bebas.",
+   "en": "Siti hung her small bag on the suitcase handle to keep her hands free.",
+   "ko": "시티는 손이 자유롭도록 작은 가방을 캐리어 손잡이에 걸었어요.",
+   "blank": "menggantungkan",
+   "src": "made"
+  }
+ ],
  "w|menggapai": [
   {
    "text": "Dimas berjinjit untuk menggapai brosur di rak paling atas.",
@@ -46412,6 +46876,22 @@
    "en": "Lestari admitted she still grumbles when she has to get up early.",
    "ko": "레스타리는 아직도 일찍 일어나야 하면 투덜댄다고 털어놨어요.",
    "blank": "menggerutu",
+   "src": "made"
+  }
+ ],
+ "w|menggigil": [
+  {
+   "text": "Pasien itu menggigil karena demam tinggi, lalu Budi menambah selimut.",
+   "en": "The patient was shivering with a high fever, so Budi added another blanket.",
+   "ko": "환자가 고열로 덜덜 떨어서 부디가 담요를 한 장 더 덮어 줬어요.",
+   "blank": "menggigil",
+   "src": "made"
+  },
+  {
+   "text": "Siti menggigil di ruang tunggu karena AC terlalu dingin.",
+   "en": "Siti was shivering in the waiting lounge because the air conditioning was too cold.",
+   "ko": "에어컨이 너무 세서 시티는 대합실에서 덜덜 떨었어요.",
+   "blank": "menggigil",
    "src": "made"
   }
  ],
@@ -51800,6 +52280,22 @@
    "en": "From the sales report, Wati concluded that white shoes sell best.",
    "ko": "판매 보고서를 보고 와티는 흰 신발이 가장 잘 팔린다고 결론 내렸어요.",
    "blank": "menyimpulkan",
+   "src": "made"
+  }
+ ],
+ "w|menyinari": [
+  {
+   "text": "Matahari pagi menyinari bangsal anak tempat Budi bertugas.",
+   "en": "The morning sun shone on the children's ward where Budi works.",
+   "ko": "아침 햇살이 부디가 근무하는 소아 병동을 비췄어요.",
+   "blank": "menyinari",
+   "src": "made"
+  },
+  {
+   "text": "Cahaya senja menyinari landasan saat Siti menunggu panggilan naik pesawat.",
+   "en": "The evening light shone on the runway as Siti waited for the boarding call.",
+   "ko": "시티가 탑승 안내를 기다리는 동안 노을빛이 활주로를 비췄어요.",
+   "blank": "menyinari",
    "src": "made"
   }
  ],
@@ -59099,6 +59595,22 @@
    "src": "made"
   }
  ],
+ "w|pembedahan": [
+  {
+   "text": "Budi menyiapkan semua alat untuk pembedahan pagi ini.",
+   "en": "Budi prepared all the instruments for this morning's surgery.",
+   "ko": "부디는 오늘 아침 수술에 쓸 기구를 모두 준비했어요.",
+   "blank": "pembedahan",
+   "src": "made"
+  },
+  {
+   "text": "Siti terbang ke kota lain untuk menemani pembedahan lutut ayahnya.",
+   "en": "Siti flew to another city to be with her father for his knee surgery.",
+   "ko": "시티는 아버지의 무릎 수술 때 곁에 있으려고 다른 도시로 날아갔어요.",
+   "blank": "pembedahan",
+   "src": "made"
+  }
+ ],
  "w|pembela": [
   {
    "text": "Di tim sepak bola sekolah, Dimas bermain sebagai pembela.",
@@ -64367,6 +64879,22 @@
    "src": "made"
   }
  ],
+ "w|peregangan": [
+  {
+   "text": "Budi mengajak pasien melakukan peregangan ringan di tempat tidur.",
+   "en": "Budi got the patient to do some light stretching in bed.",
+   "ko": "부디는 환자와 함께 침대에서 가벼운 스트레칭을 했어요.",
+   "blank": "peregangan",
+   "src": "made"
+  },
+  {
+   "text": "Siti melakukan peregangan di lorong ruang tunggu sebelum naik pesawat.",
+   "en": "Siti did some stretching in the lounge corridor before boarding.",
+   "ko": "시티는 탑승 전에 대합실 통로에서 스트레칭을 했어요.",
+   "blank": "peregangan",
+   "src": "made"
+  }
+ ],
  "w|perempuan": [
   {
    "text": "Perempuan itu pintar sekali.",
@@ -68689,6 +69217,22 @@
    "blank": "racun"
   }
  ],
+ "w|radang": [
+  {
+   "text": "Budi memberi obat kumur kepada pasien radang tenggorokan.",
+   "en": "Budi gave mouthwash to the patient with a sore throat.",
+   "ko": "부디는 인후염 환자에게 가글약을 줬어요.",
+   "blank": "radang",
+   "src": "made"
+  },
+  {
+   "text": "Siti terkena radang telinga ringan setelah pesawat turun terlalu cepat.",
+   "en": "Siti got a mild ear infection after the plane descended too quickly.",
+   "ko": "비행기가 너무 빨리 하강해서 시티는 가벼운 귀 염증이 생겼어요.",
+   "blank": "radang",
+   "src": "made"
+  }
+ ],
  "w|radiasi": [
   {
    "text": "Pak Hadi menjelaskan bahwa radiasi matahari bisa merusak kulit.",
@@ -69386,6 +69930,22 @@
    "en": "Sari asks Putri to be a reference for her job application.",
    "ko": "사리는 푸트리에게 입사 지원서의 추천인이 되어 달라고 부탁해요.",
    "blank": "referensi",
+   "src": "made"
+  }
+ ],
+ "w|refleks": [
+  {
+   "text": "Budi mengetuk lutut pasien dengan palu kecil untuk memeriksa refleks.",
+   "en": "Budi tapped the patient's knee with a small hammer to check the reflexes.",
+   "ko": "부디는 작은 망치로 환자의 무릎을 두드려 반사 반응을 확인했어요.",
+   "blank": "refleks",
+   "src": "made"
+  },
+  {
+   "text": "Berkat refleks yang cepat, Siti berhasil menangkap koper yang jatuh dari troli.",
+   "en": "Thanks to her quick reflexes, Siti caught the suitcase falling off the cart.",
+   "ko": "시티는 빠른 반사 신경 덕분에 카트에서 떨어지는 가방을 잡았어요.",
+   "blank": "refleks",
    "src": "made"
   }
  ],
@@ -73987,6 +74547,22 @@
    "blank": "sembuh"
   }
  ],
+ "w|sembunyi": [
+  {
+   "text": "Anak kecil itu sembunyi di balik tirai saat Budi datang membawa suntikan.",
+   "en": "The little child hid behind the curtain when Budi came in with a syringe.",
+   "ko": "부디가 주사기를 들고 오자 꼬마는 커튼 뒤에 숨었어요.",
+   "blank": "sembunyi",
+   "src": "made"
+  },
+  {
+   "text": "Kucing Siti sembunyi di pojok kandang selama pemeriksaan karantina.",
+   "en": "Siti's cat hid in the corner of the carrier during the quarantine check.",
+   "ko": "검역 검사 동안 시티의 고양이는 이동장 구석에 숨어 있었어요.",
+   "blank": "sembunyi",
+   "src": "made"
+  }
+ ],
  "w|semenjak": [
   {
    "text": "Semenjak pindah dia jarang pulang kampung.",
@@ -74249,6 +74825,22 @@
    "en": "That senator supports education reform.",
    "ko": "그 상원의원이 교육 개혁을 지지해.",
    "blank": "Senator"
+  }
+ ],
+ "w|sendi": [
+  {
+   "text": "Budi membantu nenek itu melatih sendi lutut setelah operasi.",
+   "en": "Budi helped the elderly woman exercise her knee joint after surgery.",
+   "ko": "부디는 수술 후 할머니의 무릎 관절 운동을 도왔어요.",
+   "blank": "sendi",
+   "src": "made"
+  },
+  {
+   "text": "Duduk terlalu lama di pesawat membuat sendi Siti terasa kaku.",
+   "en": "Sitting too long on the plane made Siti's joints feel stiff.",
+   "ko": "비행기에 너무 오래 앉아 있었더니 시티의 관절이 뻣뻣해졌어요.",
+   "blank": "sendi",
+   "src": "made"
   }
  ],
  "w|sendiri": [
@@ -75799,6 +76391,22 @@
    "src": "made"
   }
  ],
+ "w|seutuhnya": [
+  {
+   "text": "Budi percaya pasien harus dirawat seutuhnya, tubuh dan pikiran.",
+   "en": "Budi believes patients should be cared for as a whole, body and mind.",
+   "ko": "부디는 환자를 몸과 마음 모두 온전히 돌봐야 한다고 믿어요.",
+   "blank": "seutuhnya",
+   "src": "made"
+  },
+  {
+   "text": "Siti baru bisa santai seutuhnya setelah semua bagasi ditemukan.",
+   "en": "Siti could only fully relax once all her luggage had been found.",
+   "ko": "시티는 짐을 모두 찾고 나서야 완전히 마음을 놓을 수 있었어요.",
+   "blank": "seutuhnya",
+   "src": "made"
+  }
+ ],
  "w|sewaktu": [
   {
    "text": "Dimas menemukan surat lama terselip di buku sewaktu membalik halaman.",
@@ -76617,6 +77225,22 @@
    "en": "He found an old archaeological site.",
    "ko": "그는 오래된 고고학 유적을 찾았어.",
    "blank": "situs"
+  }
+ ],
+ "w|siuman": [
+  {
+   "text": "Budi lega ketika pasien itu akhirnya siuman setelah operasi.",
+   "en": "Budi was relieved when the patient finally came to after surgery.",
+   "ko": "환자가 수술 후 마침내 의식을 되찾자 부디는 안도했어요.",
+   "blank": "siuman",
+   "src": "made"
+  },
+  {
+   "text": "Sebelum naik pesawat, Siti mendapat kabar bahwa neneknya sudah siuman.",
+   "en": "Before boarding, Siti got word that her grandmother had regained consciousness.",
+   "ko": "비행기에 타기 전 시티는 할머니가 의식을 되찾았다는 소식을 들었어요.",
+   "blank": "siuman",
+   "src": "made"
   }
  ],
  "w|skala": [
@@ -78734,6 +79358,22 @@
    "en": "According to Lestari, Bu Rina's rendang is unrivaled in the whole building.",
    "ko": "레스타리 말로는 리나 씨가 만든 른당은 건물 전체에서 따라올 게 없어요.",
    "blank": "tandingan",
+   "src": "made"
+  }
+ ],
+ "w|tandu": [
+  {
+   "text": "Budi dan seorang rekan mengangkat pasien ke atas tandu.",
+   "en": "Budi and a colleague lifted the patient onto the stretcher.",
+   "ko": "부디와 동료 한 명이 환자를 들것 위로 옮겼어요.",
+   "blank": "tandu",
+   "src": "made"
+  },
+  {
+   "text": "Siti melihat petugas medis membawa tandu ke gerbang kedatangan.",
+   "en": "Siti saw medics carrying a stretcher to the arrivals gate.",
+   "ko": "시티는 구급대원들이 들것을 들고 입국장으로 가는 걸 봤어요.",
+   "blank": "tandu",
    "src": "made"
   }
  ],
